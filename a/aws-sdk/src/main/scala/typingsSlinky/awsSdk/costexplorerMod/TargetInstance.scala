@@ -34,89 +34,22 @@ trait TargetInstance extends js.Object {
 
 object TargetInstance {
   @scala.inline
-  def apply(): TargetInstance = {
+  def apply(
+    CurrencyCode: GenericString = null,
+    DefaultTargetInstance: js.UndefOr[GenericBoolean] = js.undefined,
+    EstimatedMonthlyCost: GenericString = null,
+    EstimatedMonthlySavings: GenericString = null,
+    ExpectedResourceUtilization: ResourceUtilization = null,
+    ResourceDetails: ResourceDetails = null
+  ): TargetInstance = {
     val __obj = js.Dynamic.literal()
+    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(DefaultTargetInstance)) __obj.updateDynamic("DefaultTargetInstance")(DefaultTargetInstance.get.asInstanceOf[js.Any])
+    if (EstimatedMonthlyCost != null) __obj.updateDynamic("EstimatedMonthlyCost")(EstimatedMonthlyCost.asInstanceOf[js.Any])
+    if (EstimatedMonthlySavings != null) __obj.updateDynamic("EstimatedMonthlySavings")(EstimatedMonthlySavings.asInstanceOf[js.Any])
+    if (ExpectedResourceUtilization != null) __obj.updateDynamic("ExpectedResourceUtilization")(ExpectedResourceUtilization.asInstanceOf[js.Any])
+    if (ResourceDetails != null) __obj.updateDynamic("ResourceDetails")(ResourceDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetInstance]
   }
-  @scala.inline
-  implicit class TargetInstanceOps[Self <: TargetInstance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrencyCode(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrencyCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultTargetInstance(value: GenericBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTargetInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTargetInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTargetInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedMonthlyCost(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlyCost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedMonthlyCost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlyCost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedMonthlySavings(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlySavings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedMonthlySavings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlySavings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedResourceUtilization(value: ResourceUtilization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedResourceUtilization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedResourceUtilization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedResourceUtilization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceDetails(value: ResourceDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

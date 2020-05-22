@@ -10,9 +10,9 @@ Wait for a specified number of promises to be fulfilled
 | ------------------ | :-------------: |
 | Full name          | p-some |
 | Keywords           | promise, some, resolved, wait, collection, iterable, iterator, race, fulfilled, fastest, async, await, promises, bluebird |
-| # releases         | 6 |
-| # dependents       | 8 |
-| # downloads        | 4630230 |
+| # releases         | 4 |
+| # dependents       | 9 |
+| # downloads        | 10136500 |
 | # stars            | 1 |
 
 ## Links

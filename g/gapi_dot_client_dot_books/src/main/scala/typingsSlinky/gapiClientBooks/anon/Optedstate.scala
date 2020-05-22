@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Optedstate extends js.Object {
-  var opted_state: js.UndefOr[String] = js.native
+  var opted_state: js.UndefOr[String] = js.undefined
 }
 
 object Optedstate {
   @scala.inline
-  def apply(): Optedstate = {
+  def apply(opted_state: String = null): Optedstate = {
     val __obj = js.Dynamic.literal()
+    if (opted_state != null) __obj.updateDynamic("opted_state")(opted_state.asInstanceOf[js.Any])
     __obj.asInstanceOf[Optedstate]
   }
-  @scala.inline
-  implicit class OptedstateOps[Self <: Optedstate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOpted_state(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opted_state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpted_state: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opted_state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

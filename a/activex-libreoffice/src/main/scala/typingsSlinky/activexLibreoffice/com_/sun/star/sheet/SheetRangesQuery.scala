@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides interfaces to find cells with specific properties. */
-@js.native
 trait SheetRangesQuery
   extends XCellRangesQuery
      with XFormulaQuery

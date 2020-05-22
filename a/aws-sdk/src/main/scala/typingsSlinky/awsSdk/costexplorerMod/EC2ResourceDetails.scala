@@ -46,125 +46,28 @@ trait EC2ResourceDetails extends js.Object {
 
 object EC2ResourceDetails {
   @scala.inline
-  def apply(): EC2ResourceDetails = {
+  def apply(
+    HourlyOnDemandRate: GenericString = null,
+    InstanceType: GenericString = null,
+    Memory: GenericString = null,
+    NetworkPerformance: GenericString = null,
+    Platform: GenericString = null,
+    Region: GenericString = null,
+    Sku: GenericString = null,
+    Storage: GenericString = null,
+    Vcpu: GenericString = null
+  ): EC2ResourceDetails = {
     val __obj = js.Dynamic.literal()
+    if (HourlyOnDemandRate != null) __obj.updateDynamic("HourlyOnDemandRate")(HourlyOnDemandRate.asInstanceOf[js.Any])
+    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
+    if (Memory != null) __obj.updateDynamic("Memory")(Memory.asInstanceOf[js.Any])
+    if (NetworkPerformance != null) __obj.updateDynamic("NetworkPerformance")(NetworkPerformance.asInstanceOf[js.Any])
+    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
+    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
+    if (Sku != null) __obj.updateDynamic("Sku")(Sku.asInstanceOf[js.Any])
+    if (Storage != null) __obj.updateDynamic("Storage")(Storage.asInstanceOf[js.Any])
+    if (Vcpu != null) __obj.updateDynamic("Vcpu")(Vcpu.asInstanceOf[js.Any])
     __obj.asInstanceOf[EC2ResourceDetails]
   }
-  @scala.inline
-  implicit class EC2ResourceDetailsOps[Self <: EC2ResourceDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHourlyOnDemandRate(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyOnDemandRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHourlyOnDemandRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyOnDemandRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceType(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemory(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Memory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Memory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkPerformance(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkPerformance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkPerformance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkPerformance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSku(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sku")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSku: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sku")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorage(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Storage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Storage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVcpu(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vcpu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVcpu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vcpu")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

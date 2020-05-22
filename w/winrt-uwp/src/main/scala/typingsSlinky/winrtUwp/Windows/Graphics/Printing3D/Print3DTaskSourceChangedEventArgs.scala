@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the SourceChanged event. */
-@js.native
 trait Print3DTaskSourceChangedEventArgs extends js.Object {
   /** Gets the updated 3D print package from the workflow. */
-  var source: Printing3D3MFPackage = js.native
+  var source: Printing3D3MFPackage
 }
 
 object Print3DTaskSourceChangedEventArgs {
@@ -17,19 +16,5 @@ object Print3DTaskSourceChangedEventArgs {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[Print3DTaskSourceChangedEventArgs]
   }
-  @scala.inline
-  implicit class Print3DTaskSourceChangedEventArgsOps[Self <: Print3DTaskSourceChangedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: Printing3D3MFPackage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

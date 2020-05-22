@@ -10,88 +10,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Text extends js.Object {
-  var autoEOL: js.UndefOr[Boolean] = js.native
-  var hAlign: js.UndefOr[left | middle | right] = js.native
-  var stretch: js.UndefOr[Boolean] = js.native
-  var text: js.UndefOr[String] = js.native
-  var vAlign: js.UndefOr[top | center | bottom] = js.native
+  var autoEOL: js.UndefOr[Boolean] = js.undefined
+  var hAlign: js.UndefOr[left | middle | right] = js.undefined
+  var stretch: js.UndefOr[Boolean] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
+  var vAlign: js.UndefOr[top | center | bottom] = js.undefined
 }
 
 object Text {
   @scala.inline
-  def apply(): Text = {
+  def apply(
+    autoEOL: js.UndefOr[Boolean] = js.undefined,
+    hAlign: left | middle | right = null,
+    stretch: js.UndefOr[Boolean] = js.undefined,
+    text: String = null,
+    vAlign: top | center | bottom = null
+  ): Text = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoEOL)) __obj.updateDynamic("autoEOL")(autoEOL.get.asInstanceOf[js.Any])
+    if (hAlign != null) __obj.updateDynamic("hAlign")(hAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(stretch)) __obj.updateDynamic("stretch")(stretch.get.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (vAlign != null) __obj.updateDynamic("vAlign")(vAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[Text]
   }
-  @scala.inline
-  implicit class TextOps[Self <: Text] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoEOL(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoEOL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoEOL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoEOL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHAlign(value: left | middle | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStretch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stretch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStretch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stretch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVAlign(value: top | center | bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vAlign")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

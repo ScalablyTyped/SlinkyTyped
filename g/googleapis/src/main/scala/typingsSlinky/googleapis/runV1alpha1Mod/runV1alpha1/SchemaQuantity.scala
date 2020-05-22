@@ -19,29 +19,10 @@ trait SchemaQuantity extends js.Object {
 
 object SchemaQuantity {
   @scala.inline
-  def apply(): SchemaQuantity = {
+  def apply(string: String = null): SchemaQuantity = {
     val __obj = js.Dynamic.literal()
+    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQuantity]
   }
-  @scala.inline
-  implicit class SchemaQuantityOps[Self <: SchemaQuantity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

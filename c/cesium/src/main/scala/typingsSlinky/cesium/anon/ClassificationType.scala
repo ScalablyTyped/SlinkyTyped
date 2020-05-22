@@ -1,5 +1,6 @@
 package typingsSlinky.cesium.anon
 
+import typingsSlinky.cesium.mod.Cartesian3
 import typingsSlinky.cesium.mod.ConstantProperty
 import typingsSlinky.cesium.mod.MaterialProperty
 import typingsSlinky.cesium.mod.Property
@@ -8,296 +9,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClassificationType extends js.Object {
-  var arcType: js.UndefOr[Property | typingsSlinky.cesium.mod.ArcType] = js.native
-  var classificationType: js.UndefOr[Property | typingsSlinky.cesium.mod.ClassificationType] = js.native
-  var closeBottom: js.UndefOr[Boolean] = js.native
-  var closeTop: js.UndefOr[Boolean] = js.native
-  var distanceDisplayCondition: js.UndefOr[Property] = js.native
-  var extrudedHeight: js.UndefOr[Property] = js.native
-  var extrudedHeightReference: js.UndefOr[Property] = js.native
-  var fill: js.UndefOr[Property | Boolean] = js.native
-  var granularity: js.UndefOr[Property] = js.native
-  var height: js.UndefOr[Property | Double] = js.native
-  var heightReference: js.UndefOr[Property] = js.native
-  var hierarchy: js.UndefOr[Property] = js.native
-  var material: js.UndefOr[MaterialProperty | typingsSlinky.cesium.mod.Color] = js.native
-  var outline: js.UndefOr[Property | Boolean] = js.native
-  var outlineColor: js.UndefOr[Property | typingsSlinky.cesium.mod.Color] = js.native
-  var outlineWidth: js.UndefOr[Property | Double] = js.native
-  var perPositionHeight: js.UndefOr[Property] = js.native
-  var shadows: js.UndefOr[Property | ShadowMode] = js.native
-  var show: js.UndefOr[Property | Boolean] = js.native
-  var stRotation: js.UndefOr[Property] = js.native
-  var zIndex: js.UndefOr[ConstantProperty | Double] = js.native
+  var arcType: js.UndefOr[Property | typingsSlinky.cesium.mod.ArcType] = js.undefined
+  var classificationType: js.UndefOr[Property | typingsSlinky.cesium.mod.ClassificationType] = js.undefined
+  var closeBottom: js.UndefOr[Boolean] = js.undefined
+  var closeTop: js.UndefOr[Boolean] = js.undefined
+  var distanceDisplayCondition: js.UndefOr[Property] = js.undefined
+  var extrudedHeight: js.UndefOr[Property] = js.undefined
+  var extrudedHeightReference: js.UndefOr[Property] = js.undefined
+  var fill: js.UndefOr[Property | Boolean] = js.undefined
+  var granularity: js.UndefOr[Property] = js.undefined
+  var height: js.UndefOr[Property | Double] = js.undefined
+  var heightReference: js.UndefOr[Property] = js.undefined
+  var hierarchy: js.UndefOr[Property | js.Array[Cartesian3] | typingsSlinky.cesium.mod.PolygonHierarchy] = js.undefined
+  var material: js.UndefOr[MaterialProperty | typingsSlinky.cesium.mod.Color] = js.undefined
+  var outline: js.UndefOr[Property | Boolean] = js.undefined
+  var outlineColor: js.UndefOr[Property | typingsSlinky.cesium.mod.Color] = js.undefined
+  var outlineWidth: js.UndefOr[Property | Double] = js.undefined
+  var perPositionHeight: js.UndefOr[Property] = js.undefined
+  var shadows: js.UndefOr[Property | ShadowMode] = js.undefined
+  var show: js.UndefOr[Property | Boolean] = js.undefined
+  var stRotation: js.UndefOr[Property] = js.undefined
+  var zIndex: js.UndefOr[ConstantProperty | Double] = js.undefined
 }
 
 object ClassificationType {
   @scala.inline
-  def apply(): ClassificationType = {
+  def apply(
+    arcType: Property | typingsSlinky.cesium.mod.ArcType = null,
+    classificationType: Property | typingsSlinky.cesium.mod.ClassificationType = null,
+    closeBottom: js.UndefOr[Boolean] = js.undefined,
+    closeTop: js.UndefOr[Boolean] = js.undefined,
+    distanceDisplayCondition: Property = null,
+    extrudedHeight: Property = null,
+    extrudedHeightReference: Property = null,
+    fill: Property | Boolean = null,
+    granularity: Property = null,
+    height: Property | Double = null,
+    heightReference: Property = null,
+    hierarchy: Property | js.Array[Cartesian3] | typingsSlinky.cesium.mod.PolygonHierarchy = null,
+    material: MaterialProperty | typingsSlinky.cesium.mod.Color = null,
+    outline: Property | Boolean = null,
+    outlineColor: Property | typingsSlinky.cesium.mod.Color = null,
+    outlineWidth: Property | Double = null,
+    perPositionHeight: Property = null,
+    shadows: Property | ShadowMode = null,
+    show: Property | Boolean = null,
+    stRotation: Property = null,
+    zIndex: ConstantProperty | Double = null
+  ): ClassificationType = {
     val __obj = js.Dynamic.literal()
+    if (arcType != null) __obj.updateDynamic("arcType")(arcType.asInstanceOf[js.Any])
+    if (classificationType != null) __obj.updateDynamic("classificationType")(classificationType.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeBottom)) __obj.updateDynamic("closeBottom")(closeBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeTop)) __obj.updateDynamic("closeTop")(closeTop.get.asInstanceOf[js.Any])
+    if (distanceDisplayCondition != null) __obj.updateDynamic("distanceDisplayCondition")(distanceDisplayCondition.asInstanceOf[js.Any])
+    if (extrudedHeight != null) __obj.updateDynamic("extrudedHeight")(extrudedHeight.asInstanceOf[js.Any])
+    if (extrudedHeightReference != null) __obj.updateDynamic("extrudedHeightReference")(extrudedHeightReference.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (granularity != null) __obj.updateDynamic("granularity")(granularity.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (heightReference != null) __obj.updateDynamic("heightReference")(heightReference.asInstanceOf[js.Any])
+    if (hierarchy != null) __obj.updateDynamic("hierarchy")(hierarchy.asInstanceOf[js.Any])
+    if (material != null) __obj.updateDynamic("material")(material.asInstanceOf[js.Any])
+    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
+    if (outlineColor != null) __obj.updateDynamic("outlineColor")(outlineColor.asInstanceOf[js.Any])
+    if (outlineWidth != null) __obj.updateDynamic("outlineWidth")(outlineWidth.asInstanceOf[js.Any])
+    if (perPositionHeight != null) __obj.updateDynamic("perPositionHeight")(perPositionHeight.asInstanceOf[js.Any])
+    if (shadows != null) __obj.updateDynamic("shadows")(shadows.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    if (stRotation != null) __obj.updateDynamic("stRotation")(stRotation.asInstanceOf[js.Any])
+    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassificationType]
   }
-  @scala.inline
-  implicit class ClassificationTypeOps[Self <: ClassificationType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArcType(value: Property | typingsSlinky.cesium.mod.ArcType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arcType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArcType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arcType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassificationType(value: Property | typingsSlinky.cesium.mod.ClassificationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassificationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseBottom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistanceDisplayCondition(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceDisplayCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistanceDisplayCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceDisplayCondition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtrudedHeight(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtrudedHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtrudedHeightReference(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeightReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtrudedHeightReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeightReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: Property | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGranularity(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGranularity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Property | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightReference(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHierarchy(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHierarchy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaterial(value: MaterialProperty | typingsSlinky.cesium.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaterial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutline(value: Property | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineColor(value: Property | typingsSlinky.cesium.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineWidth(value: Property | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerPositionHeight(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perPositionHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerPositionHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perPositionHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadows(value: Property | ShadowMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Property | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStRotation(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stRotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: ConstantProperty | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

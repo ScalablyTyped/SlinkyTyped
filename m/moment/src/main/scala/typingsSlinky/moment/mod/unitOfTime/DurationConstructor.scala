@@ -35,6 +35,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.moment.momentStrings.quarter
   - typingsSlinky.moment.momentStrings.quarters
   - typingsSlinky.moment.momentStrings.Q
+  - typingsSlinky.moment.momentStrings.isoWeek
+  - typingsSlinky.moment.momentStrings.isoWeeks
+  - typingsSlinky.moment.momentStrings.W
 */
 trait DurationConstructor extends js.Object
 
@@ -43,6 +46,8 @@ object DurationConstructor {
   def M: typingsSlinky.moment.momentStrings.M = "M".asInstanceOf[typingsSlinky.moment.momentStrings.M]
   @scala.inline
   def Q: typingsSlinky.moment.momentStrings.Q = "Q".asInstanceOf[typingsSlinky.moment.momentStrings.Q]
+  @scala.inline
+  def W: typingsSlinky.moment.momentStrings.W = "W".asInstanceOf[typingsSlinky.moment.momentStrings.W]
   @scala.inline
   def d: d_ = "d".asInstanceOf[d_]
   @scala.inline
@@ -55,6 +60,10 @@ object DurationConstructor {
   def hour: typingsSlinky.moment.momentStrings.hour = "hour".asInstanceOf[typingsSlinky.moment.momentStrings.hour]
   @scala.inline
   def hours: typingsSlinky.moment.momentStrings.hours = "hours".asInstanceOf[typingsSlinky.moment.momentStrings.hours]
+  @scala.inline
+  def isoWeek: typingsSlinky.moment.momentStrings.isoWeek = "isoWeek".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeek]
+  @scala.inline
+  def isoWeeks: typingsSlinky.moment.momentStrings.isoWeeks = "isoWeeks".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeeks]
   @scala.inline
   def m: m_ = "m".asInstanceOf[m_]
   @scala.inline

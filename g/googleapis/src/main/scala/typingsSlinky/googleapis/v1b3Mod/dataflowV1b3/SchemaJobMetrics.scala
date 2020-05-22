@@ -25,41 +25,11 @@ trait SchemaJobMetrics extends js.Object {
 
 object SchemaJobMetrics {
   @scala.inline
-  def apply(): SchemaJobMetrics = {
+  def apply(metricTime: String = null, metrics: js.Array[SchemaMetricUpdate] = null): SchemaJobMetrics = {
     val __obj = js.Dynamic.literal()
+    if (metricTime != null) __obj.updateDynamic("metricTime")(metricTime.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobMetrics]
   }
-  @scala.inline
-  implicit class SchemaJobMetricsOps[Self <: SchemaJobMetrics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: js.Array[SchemaMetricUpdate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

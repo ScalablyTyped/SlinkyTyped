@@ -18,41 +18,11 @@ trait SchemaGenerateAccessTokenResponse extends js.Object {
 
 object SchemaGenerateAccessTokenResponse {
   @scala.inline
-  def apply(): SchemaGenerateAccessTokenResponse = {
+  def apply(accessToken: String = null, expireTime: String = null): SchemaGenerateAccessTokenResponse = {
     val __obj = js.Dynamic.literal()
+    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
+    if (expireTime != null) __obj.updateDynamic("expireTime")(expireTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGenerateAccessTokenResponse]
   }
-  @scala.inline
-  implicit class SchemaGenerateAccessTokenResponseOps[Self <: SchemaGenerateAccessTokenResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpireTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expireTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpireTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expireTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

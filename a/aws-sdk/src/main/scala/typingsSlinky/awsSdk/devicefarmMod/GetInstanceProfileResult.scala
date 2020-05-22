@@ -14,29 +14,10 @@ trait GetInstanceProfileResult extends js.Object {
 
 object GetInstanceProfileResult {
   @scala.inline
-  def apply(): GetInstanceProfileResult = {
+  def apply(instanceProfile: InstanceProfile = null): GetInstanceProfileResult = {
     val __obj = js.Dynamic.literal()
+    if (instanceProfile != null) __obj.updateDynamic("instanceProfile")(instanceProfile.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInstanceProfileResult]
   }
-  @scala.inline
-  implicit class GetInstanceProfileResultOps[Self <: GetInstanceProfileResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceProfile(value: InstanceProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceProfile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

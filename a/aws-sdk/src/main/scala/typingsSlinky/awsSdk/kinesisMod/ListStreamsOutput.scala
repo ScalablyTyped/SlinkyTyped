@@ -22,25 +22,5 @@ object ListStreamsOutput {
     val __obj = js.Dynamic.literal(HasMoreStreams = HasMoreStreams.asInstanceOf[js.Any], StreamNames = StreamNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListStreamsOutput]
   }
-  @scala.inline
-  implicit class ListStreamsOutputOps[Self <: ListStreamsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasMoreStreams(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasMoreStreams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStreamNames(value: StreamNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

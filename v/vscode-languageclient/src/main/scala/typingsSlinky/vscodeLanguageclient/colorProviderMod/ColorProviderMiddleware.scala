@@ -11,7 +11,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColorProviderMiddleware extends js.Object {
   var provideColorPresentations: js.UndefOr[
     js.ThisFunction4[
@@ -22,7 +21,7 @@ trait ColorProviderMiddleware extends js.Object {
       /* next */ ProvideColorPresentationSignature, 
       ProviderResult[js.Array[ColorPresentation]]
     ]
-  ] = js.native
+  ] = js.undefined
   var provideDocumentColors: js.UndefOr[
     js.ThisFunction3[
       /* this */ Unit, 
@@ -31,63 +30,32 @@ trait ColorProviderMiddleware extends js.Object {
       /* next */ ProvideDocumentColorsSignature, 
       ProviderResult[js.Array[ColorInformation]]
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object ColorProviderMiddleware {
   @scala.inline
-  def apply(): ColorProviderMiddleware = {
+  def apply(
+    provideColorPresentations: js.ThisFunction4[
+      /* this */ Unit, 
+      /* color */ Color, 
+      /* context */ Document, 
+      /* token */ CancellationToken, 
+      /* next */ ProvideColorPresentationSignature, 
+      ProviderResult[js.Array[ColorPresentation]]
+    ] = null,
+    provideDocumentColors: js.ThisFunction3[
+      /* this */ Unit, 
+      /* document */ TextDocument, 
+      /* token */ CancellationToken, 
+      /* next */ ProvideDocumentColorsSignature, 
+      ProviderResult[js.Array[ColorInformation]]
+    ] = null
+  ): ColorProviderMiddleware = {
     val __obj = js.Dynamic.literal()
+    if (provideColorPresentations != null) __obj.updateDynamic("provideColorPresentations")(provideColorPresentations.asInstanceOf[js.Any])
+    if (provideDocumentColors != null) __obj.updateDynamic("provideDocumentColors")(provideDocumentColors.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorProviderMiddleware]
   }
-  @scala.inline
-  implicit class ColorProviderMiddlewareOps[Self <: ColorProviderMiddleware] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvideColorPresentations(
-      value: js.ThisFunction4[
-          /* this */ Unit, 
-          /* color */ Color, 
-          /* context */ Document, 
-          /* token */ CancellationToken, 
-          /* next */ ProvideColorPresentationSignature, 
-          ProviderResult[js.Array[ColorPresentation]]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideColorPresentations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvideColorPresentations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideColorPresentations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvideDocumentColors(
-      value: js.ThisFunction3[
-          /* this */ Unit, 
-          /* document */ TextDocument, 
-          /* token */ CancellationToken, 
-          /* next */ ProvideDocumentColorsSignature, 
-          ProviderResult[js.Array[ColorInformation]]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideDocumentColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvideDocumentColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideDocumentColors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

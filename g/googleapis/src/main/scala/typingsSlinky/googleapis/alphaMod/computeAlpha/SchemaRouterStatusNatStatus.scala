@@ -52,113 +52,26 @@ trait SchemaRouterStatusNatStatus extends js.Object {
 
 object SchemaRouterStatusNatStatus {
   @scala.inline
-  def apply(): SchemaRouterStatusNatStatus = {
+  def apply(
+    autoAllocatedNatIps: js.Array[String] = null,
+    drainAutoAllocatedNatIps: js.Array[String] = null,
+    drainUserAllocatedNatIps: js.Array[String] = null,
+    minExtraNatIpsNeeded: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    numVmEndpointsWithNatMappings: js.UndefOr[Double] = js.undefined,
+    userAllocatedNatIpResources: js.Array[String] = null,
+    userAllocatedNatIps: js.Array[String] = null
+  ): SchemaRouterStatusNatStatus = {
     val __obj = js.Dynamic.literal()
+    if (autoAllocatedNatIps != null) __obj.updateDynamic("autoAllocatedNatIps")(autoAllocatedNatIps.asInstanceOf[js.Any])
+    if (drainAutoAllocatedNatIps != null) __obj.updateDynamic("drainAutoAllocatedNatIps")(drainAutoAllocatedNatIps.asInstanceOf[js.Any])
+    if (drainUserAllocatedNatIps != null) __obj.updateDynamic("drainUserAllocatedNatIps")(drainUserAllocatedNatIps.asInstanceOf[js.Any])
+    if (!js.isUndefined(minExtraNatIpsNeeded)) __obj.updateDynamic("minExtraNatIpsNeeded")(minExtraNatIpsNeeded.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(numVmEndpointsWithNatMappings)) __obj.updateDynamic("numVmEndpointsWithNatMappings")(numVmEndpointsWithNatMappings.get.asInstanceOf[js.Any])
+    if (userAllocatedNatIpResources != null) __obj.updateDynamic("userAllocatedNatIpResources")(userAllocatedNatIpResources.asInstanceOf[js.Any])
+    if (userAllocatedNatIps != null) __obj.updateDynamic("userAllocatedNatIps")(userAllocatedNatIps.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouterStatusNatStatus]
   }
-  @scala.inline
-  implicit class SchemaRouterStatusNatStatusOps[Self <: SchemaRouterStatusNatStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoAllocatedNatIps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAllocatedNatIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAllocatedNatIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAllocatedNatIps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrainAutoAllocatedNatIps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drainAutoAllocatedNatIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrainAutoAllocatedNatIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drainAutoAllocatedNatIps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrainUserAllocatedNatIps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drainUserAllocatedNatIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrainUserAllocatedNatIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drainUserAllocatedNatIps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinExtraNatIpsNeeded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minExtraNatIpsNeeded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinExtraNatIpsNeeded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minExtraNatIpsNeeded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumVmEndpointsWithNatMappings(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numVmEndpointsWithNatMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumVmEndpointsWithNatMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numVmEndpointsWithNatMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAllocatedNatIpResources(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAllocatedNatIpResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAllocatedNatIpResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAllocatedNatIpResources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAllocatedNatIps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAllocatedNatIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAllocatedNatIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAllocatedNatIps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

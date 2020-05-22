@@ -18,41 +18,11 @@ trait DescribeRouteTablesResult extends js.Object {
 
 object DescribeRouteTablesResult {
   @scala.inline
-  def apply(): DescribeRouteTablesResult = {
+  def apply(NextToken: String = null, RouteTables: RouteTableList = null): DescribeRouteTablesResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (RouteTables != null) __obj.updateDynamic("RouteTables")(RouteTables.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRouteTablesResult]
   }
-  @scala.inline
-  implicit class DescribeRouteTablesResultOps[Self <: DescribeRouteTablesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteTables(value: RouteTableList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

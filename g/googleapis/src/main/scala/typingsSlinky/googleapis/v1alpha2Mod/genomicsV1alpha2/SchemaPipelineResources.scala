@@ -71,125 +71,28 @@ trait SchemaPipelineResources extends js.Object {
 
 object SchemaPipelineResources {
   @scala.inline
-  def apply(): SchemaPipelineResources = {
+  def apply(
+    acceleratorCount: String = null,
+    acceleratorType: String = null,
+    bootDiskSizeGb: js.UndefOr[Double] = js.undefined,
+    disks: js.Array[SchemaDisk] = null,
+    minimumCpuCores: js.UndefOr[Double] = js.undefined,
+    minimumRamGb: js.UndefOr[Double] = js.undefined,
+    noAddress: js.UndefOr[Boolean] = js.undefined,
+    preemptible: js.UndefOr[Boolean] = js.undefined,
+    zones: js.Array[String] = null
+  ): SchemaPipelineResources = {
     val __obj = js.Dynamic.literal()
+    if (acceleratorCount != null) __obj.updateDynamic("acceleratorCount")(acceleratorCount.asInstanceOf[js.Any])
+    if (acceleratorType != null) __obj.updateDynamic("acceleratorType")(acceleratorType.asInstanceOf[js.Any])
+    if (!js.isUndefined(bootDiskSizeGb)) __obj.updateDynamic("bootDiskSizeGb")(bootDiskSizeGb.get.asInstanceOf[js.Any])
+    if (disks != null) __obj.updateDynamic("disks")(disks.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumCpuCores)) __obj.updateDynamic("minimumCpuCores")(minimumCpuCores.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumRamGb)) __obj.updateDynamic("minimumRamGb")(minimumRamGb.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noAddress)) __obj.updateDynamic("noAddress")(noAddress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preemptible)) __obj.updateDynamic("preemptible")(preemptible.get.asInstanceOf[js.Any])
+    if (zones != null) __obj.updateDynamic("zones")(zones.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPipelineResources]
   }
-  @scala.inline
-  implicit class SchemaPipelineResourcesOps[Self <: SchemaPipelineResources] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceleratorCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceleratorCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAcceleratorType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceleratorType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBootDiskSizeGb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskSizeGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBootDiskSizeGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskSizeGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisks(value: js.Array[SchemaDisk]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumCpuCores(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumCpuCores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumCpuCores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumCpuCores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumRamGb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRamGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumRamGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRamGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoAddress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreemptible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreemptible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZones(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

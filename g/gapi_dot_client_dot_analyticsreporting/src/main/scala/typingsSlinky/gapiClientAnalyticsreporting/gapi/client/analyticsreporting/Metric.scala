@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Metric extends js.Object {
   /**
     * An alias for the metric expression is an alternate name for the
@@ -13,7 +12,7 @@ trait Metric extends js.Object {
     * a complex expression which cannot be used in filtering and sorting.
     * The alias is also used in the response column header.
     */
-  var alias: js.UndefOr[String] = js.native
+  var alias: js.UndefOr[String] = js.undefined
   /**
     * A metric expression in the request. An expression is constructed from one
     * or more metrics and numbers. Accepted operators include: Plus (+), Minus
@@ -24,63 +23,22 @@ trait Metric extends js.Object {
     * Adding mixed `MetricType` (E.g., `CURRENCY` + `PERCENTAGE`) metrics
     * will result in unexpected results.
     */
-  var expression: js.UndefOr[String] = js.native
+  var expression: js.UndefOr[String] = js.undefined
   /**
     * Specifies how the metric expression should be formatted, for example
     * `INTEGER`.
     */
-  var formattingType: js.UndefOr[String] = js.native
+  var formattingType: js.UndefOr[String] = js.undefined
 }
 
 object Metric {
   @scala.inline
-  def apply(): Metric = {
+  def apply(alias: String = null, expression: String = null, formattingType: String = null): Metric = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
+    if (formattingType != null) __obj.updateDynamic("formattingType")(formattingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Metric]
   }
-  @scala.inline
-  implicit class MetricOps[Self <: Metric] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormattingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormattingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattingType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

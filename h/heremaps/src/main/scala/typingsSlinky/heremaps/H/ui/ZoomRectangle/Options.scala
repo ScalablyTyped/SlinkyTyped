@@ -11,49 +11,18 @@ import scala.scalajs.js.annotation._
   * @property adjustZoom {function(number, H.Map): number=} - optional function that defines how zoom level should be changed, by default zoom level is picked to fit the
   * bounding rectangle into the view port.
   */
-@js.native
 trait Options extends js.Object {
-  var adjustZoom: js.UndefOr[js.Function2[/* n */ Double, /* m */ Map_, Double]] = js.native
-  var alignment: js.UndefOr[LayoutAlignment] = js.native
+  var adjustZoom: js.UndefOr[js.Function2[/* n */ Double, /* m */ Map_, Double]] = js.undefined
+  var alignment: js.UndefOr[LayoutAlignment] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(adjustZoom: (/* n */ Double, /* m */ Map_) => Double = null, alignment: LayoutAlignment = null): Options = {
     val __obj = js.Dynamic.literal()
+    if (adjustZoom != null) __obj.updateDynamic("adjustZoom")(js.Any.fromFunction2(adjustZoom))
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdjustZoom(value: (/* n */ Double, /* m */ Map_) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustZoom")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutAdjustZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignment(value: LayoutAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

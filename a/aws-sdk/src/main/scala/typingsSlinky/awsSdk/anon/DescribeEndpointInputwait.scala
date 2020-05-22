@@ -19,35 +19,10 @@ trait DescribeEndpointInputwait extends js.Object {
 
 object DescribeEndpointInputwait {
   @scala.inline
-  def apply(EndpointName: EndpointName): DescribeEndpointInputwait = {
+  def apply(EndpointName: EndpointName, $waiter: WaiterConfiguration = null): DescribeEndpointInputwait = {
     val __obj = js.Dynamic.literal(EndpointName = EndpointName.asInstanceOf[js.Any])
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEndpointInputwait]
   }
-  @scala.inline
-  implicit class DescribeEndpointInputwaitOps[Self <: DescribeEndpointInputwait] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpointName(value: EndpointName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

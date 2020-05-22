@@ -6,16 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BankAccount extends js.Object {
-  var bankAccount: String = js.native
-  var bankName: String = js.native
-  var companyAddress: String = js.native
-  var errMsg: String = js.native
-  var taxNumber: String = js.native
-  var telephone: String = js.native
-  var title: String = js.native
-  var `type`: `0` | `1` = js.native
+  var bankAccount: String
+  var bankName: String
+  var companyAddress: String
+  var errMsg: String
+  var taxNumber: String
+  var telephone: String
+  var title: String
+  var `type`: `0` | `1`
 }
 
 object BankAccount {
@@ -34,61 +33,5 @@ object BankAccount {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BankAccount]
   }
-  @scala.inline
-  implicit class BankAccountOps[Self <: BankAccount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBankAccount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bankAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBankName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bankName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompanyAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTaxNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taxNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTelephone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("telephone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: `0` | `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

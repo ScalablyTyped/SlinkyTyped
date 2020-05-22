@@ -13,235 +13,77 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /** Addon to webpack-serve that allows access to the Koa server instance */
   var add: js.UndefOr[
     js.Function3[/* app */ InitializedKoa, /* middleware */ Middleware, /* options */ Options, Unit]
-  ] = js.native
+  ] = js.undefined
   /** Copy the server URL to the clipboard when the server is started */
-  var clipboard: js.UndefOr[Boolean] = js.native
+  var clipboard: js.UndefOr[Boolean] = js.undefined
   /** Custom instance of a webpack compiler */
-  var compiler: js.UndefOr[Compiler_] = js.native
+  var compiler: js.UndefOr[Compiler_] = js.undefined
   /** Webpack configuration for creating a new webpack compiler instance */
-  var config: js.UndefOr[Configuration] = js.native
+  var config: js.UndefOr[Configuration] = js.undefined
   /** A path or array of paths where content will be served from */
-  var content: js.UndefOr[String | js.Array[String]] = js.native
+  var content: js.UndefOr[String | js.Array[String]] = js.undefined
   /** Options for webpack-dev-middleware */
-  var devMiddleware: js.UndefOr[typingsSlinky.webpackDevMiddleware.mod.Options] = js.native
+  var devMiddleware: js.UndefOr[typingsSlinky.webpackDevMiddleware.mod.Options] = js.undefined
   /** The host the server will listen on */
-  var host: js.UndefOr[String] = js.native
+  var host: js.UndefOr[String] = js.undefined
   /** Options for webpack-hot-client */
-  var hotClient: js.UndefOr[typingsSlinky.webpackHotClient.mod.Options | Boolean] = js.native
+  var hotClient: js.UndefOr[typingsSlinky.webpackHotClient.mod.Options | Boolean] = js.undefined
   /** Enable HTTP2 support */
-  var http2: js.UndefOr[Boolean] = js.native
+  var http2: js.UndefOr[Boolean] = js.undefined
   /** Configuration object for the server to use HTTPS */
-  var https: js.UndefOr[ServerOptions] = js.native
+  var https: js.UndefOr[ServerOptions] = js.undefined
   /** Level of information for webpack-serve to output */
-  var logLevel: js.UndefOr[trace | debug | info | warn | error | silent] = js.native
+  var logLevel: js.UndefOr[trace | debug | info | warn | error | silent] = js.undefined
   /** Prepend timestamp to each log line */
-  var logTime: js.UndefOr[Boolean] = js.native
+  var logTime: js.UndefOr[Boolean] = js.undefined
   /** Object of subscribers to webpack-serve bus events */
-  var on: js.UndefOr[OnOptions] = js.native
+  var on: js.UndefOr[OnOptions] = js.undefined
   /** Open the browser when started */
-  var open: js.UndefOr[OpenOptions | Boolean] = js.native
+  var open: js.UndefOr[OpenOptions | Boolean] = js.undefined
   /** Port that the server listens on */
-  var port: js.UndefOr[Double] = js.native
+  var port: js.UndefOr[Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    add: (/* app */ InitializedKoa, /* middleware */ Middleware, /* options */ Options) => Unit = null,
+    clipboard: js.UndefOr[Boolean] = js.undefined,
+    compiler: Compiler_ = null,
+    config: Configuration = null,
+    content: String | js.Array[String] = null,
+    devMiddleware: typingsSlinky.webpackDevMiddleware.mod.Options = null,
+    host: String = null,
+    hotClient: typingsSlinky.webpackHotClient.mod.Options | Boolean = null,
+    http2: js.UndefOr[Boolean] = js.undefined,
+    https: ServerOptions = null,
+    logLevel: trace | debug | info | warn | error | silent = null,
+    logTime: js.UndefOr[Boolean] = js.undefined,
+    on: OnOptions = null,
+    open: OpenOptions | Boolean = null,
+    port: js.UndefOr[Double] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (add != null) __obj.updateDynamic("add")(js.Any.fromFunction3(add))
+    if (!js.isUndefined(clipboard)) __obj.updateDynamic("clipboard")(clipboard.get.asInstanceOf[js.Any])
+    if (compiler != null) __obj.updateDynamic("compiler")(compiler.asInstanceOf[js.Any])
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (devMiddleware != null) __obj.updateDynamic("devMiddleware")(devMiddleware.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (hotClient != null) __obj.updateDynamic("hotClient")(hotClient.asInstanceOf[js.Any])
+    if (!js.isUndefined(http2)) __obj.updateDynamic("http2")(http2.get.asInstanceOf[js.Any])
+    if (https != null) __obj.updateDynamic("https")(https.asInstanceOf[js.Any])
+    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(logTime)) __obj.updateDynamic("logTime")(logTime.get.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+    if (open != null) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd(value: (/* app */ InitializedKoa, /* middleware */ Middleware, /* options */ Options) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClipboard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClipboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompiler(value: Compiler_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compiler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompiler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compiler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfig(value: Configuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevMiddleware(value: typingsSlinky.webpackDevMiddleware.mod.Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devMiddleware")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevMiddleware: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devMiddleware")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHotClient(value: typingsSlinky.webpackHotClient.mod.Options | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHotClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotClient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttp2(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttp2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttps(value: ServerOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: trace | debug | info | warn | error | silent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogTime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOn(value: OnOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: OpenOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

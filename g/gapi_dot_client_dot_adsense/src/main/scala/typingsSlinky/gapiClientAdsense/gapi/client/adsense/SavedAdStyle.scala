@@ -4,79 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SavedAdStyle extends js.Object {
   /** The AdStyle itself. */
-  var adStyle: js.UndefOr[AdStyle] = js.native
+  var adStyle: js.UndefOr[AdStyle] = js.undefined
   /** Unique identifier of this saved ad style. This should be considered an opaque identifier; it is not safe to rely on it being in any particular format. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Kind of resource this is, in this case adsense#savedAdStyle. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The user selected name of this SavedAdStyle. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object SavedAdStyle {
   @scala.inline
-  def apply(): SavedAdStyle = {
+  def apply(adStyle: AdStyle = null, id: String = null, kind: String = null, name: String = null): SavedAdStyle = {
     val __obj = js.Dynamic.literal()
+    if (adStyle != null) __obj.updateDynamic("adStyle")(adStyle.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavedAdStyle]
   }
-  @scala.inline
-  implicit class SavedAdStyleOps[Self <: SavedAdStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdStyle(value: AdStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

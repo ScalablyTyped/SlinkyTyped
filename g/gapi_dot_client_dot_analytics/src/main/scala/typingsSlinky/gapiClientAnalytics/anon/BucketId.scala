@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BucketId extends js.Object {
   /** Id of the bucket the file object is stored in. */
-  var bucketId: js.UndefOr[String] = js.native
+  var bucketId: js.UndefOr[String] = js.undefined
   /** Id of the file object containing the report data. */
-  var objectId: js.UndefOr[String] = js.native
+  var objectId: js.UndefOr[String] = js.undefined
 }
 
 object BucketId {
   @scala.inline
-  def apply(): BucketId = {
+  def apply(bucketId: String = null, objectId: String = null): BucketId = {
     val __obj = js.Dynamic.literal()
+    if (bucketId != null) __obj.updateDynamic("bucketId")(bucketId.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketId]
   }
-  @scala.inline
-  implicit class BucketIdOps[Self <: BucketId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

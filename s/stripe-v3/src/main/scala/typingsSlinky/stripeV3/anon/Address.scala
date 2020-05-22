@@ -5,127 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Address extends js.Object {
-  var address: OwnerAddress | Null = js.native
-  var email: String | Null = js.native
-  var name: String | Null = js.native
-  var phone: String | Null = js.native
-  var verified_address: String | Null = js.native
-  var verified_email: String | Null = js.native
-  var verified_name: String | Null = js.native
-  var verified_phone: String | Null = js.native
+  var address: OwnerAddress | Null
+  var email: String | Null
+  var name: String | Null
+  var phone: String | Null
+  var verified_address: String | Null
+  var verified_email: String | Null
+  var verified_name: String | Null
+  var verified_phone: String | Null
 }
 
 object Address {
   @scala.inline
-  def apply(): Address = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    address: OwnerAddress = null,
+    email: String = null,
+    name: String = null,
+    phone: String = null,
+    verified_address: String = null,
+    verified_email: String = null,
+    verified_name: String = null,
+    verified_phone: String = null
+  ): Address = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], verified_address = verified_address.asInstanceOf[js.Any], verified_email = verified_email.asInstanceOf[js.Any], verified_name = verified_name.asInstanceOf[js.Any], verified_phone = verified_phone.asInstanceOf[js.Any])
     __obj.asInstanceOf[Address]
   }
-  @scala.inline
-  implicit class AddressOps[Self <: Address] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: OwnerAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddressNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(null)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmailNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withPhone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhoneNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(null)
-        ret
-    }
-    @scala.inline
-    def withVerified_address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerified_addressNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_address")(null)
-        ret
-    }
-    @scala.inline
-    def withVerified_email(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerified_emailNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_email")(null)
-        ret
-    }
-    @scala.inline
-    def withVerified_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerified_nameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_name")(null)
-        ret
-    }
-    @scala.inline
-    def withVerified_phone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerified_phoneNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_phone")(null)
-        ret
-    }
-  }
-  
 }
 

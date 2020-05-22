@@ -18,19 +18,5 @@ object BatchInferenceJobInput {
     val __obj = js.Dynamic.literal(s3DataSource = s3DataSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchInferenceJobInput]
   }
-  @scala.inline
-  implicit class BatchInferenceJobInputOps[Self <: BatchInferenceJobInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3DataSource(value: S3DataConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3DataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

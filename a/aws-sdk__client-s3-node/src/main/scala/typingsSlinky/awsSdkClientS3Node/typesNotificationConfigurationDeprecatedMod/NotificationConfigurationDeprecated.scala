@@ -7,73 +7,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NotificationConfigurationDeprecated extends js.Object {
   /**
     * _CloudFunctionConfiguration shape
     */
   var CloudFunctionConfiguration: js.UndefOr[
     typingsSlinky.awsSdkClientS3Node.typesCloudFunctionConfigurationMod.CloudFunctionConfiguration
-  ] = js.native
+  ] = js.undefined
   /**
     * _QueueConfigurationDeprecated shape
     */
-  var QueueConfiguration: js.UndefOr[QueueConfigurationDeprecated] = js.native
+  var QueueConfiguration: js.UndefOr[QueueConfigurationDeprecated] = js.undefined
   /**
     * _TopicConfigurationDeprecated shape
     */
-  var TopicConfiguration: js.UndefOr[TopicConfigurationDeprecated] = js.native
+  var TopicConfiguration: js.UndefOr[TopicConfigurationDeprecated] = js.undefined
 }
 
 object NotificationConfigurationDeprecated {
   @scala.inline
-  def apply(): NotificationConfigurationDeprecated = {
+  def apply(
+    CloudFunctionConfiguration: CloudFunctionConfiguration = null,
+    QueueConfiguration: QueueConfigurationDeprecated = null,
+    TopicConfiguration: TopicConfigurationDeprecated = null
+  ): NotificationConfigurationDeprecated = {
     val __obj = js.Dynamic.literal()
+    if (CloudFunctionConfiguration != null) __obj.updateDynamic("CloudFunctionConfiguration")(CloudFunctionConfiguration.asInstanceOf[js.Any])
+    if (QueueConfiguration != null) __obj.updateDynamic("QueueConfiguration")(QueueConfiguration.asInstanceOf[js.Any])
+    if (TopicConfiguration != null) __obj.updateDynamic("TopicConfiguration")(TopicConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationConfigurationDeprecated]
   }
-  @scala.inline
-  implicit class NotificationConfigurationDeprecatedOps[Self <: NotificationConfigurationDeprecated] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudFunctionConfiguration(value: CloudFunctionConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFunctionConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudFunctionConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFunctionConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueueConfiguration(value: QueueConfigurationDeprecated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueueConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicConfiguration(value: TopicConfigurationDeprecated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

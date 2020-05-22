@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.UI.ViewManagement
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.ViewManagement.InputPaneVisibilityEventArgs")
 @js.native
 abstract class InputPaneVisibilityEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.ViewManagement.InputPaneVisibilityEventArgs
+  extends typingsSlinky.winrtUwp.Windows.UI.ViewManagement.InputPaneVisibilityEventArgs {
+  /** Identifies whether the application has taken steps to ensure that the input pane doesn't cover the UI element that has focus. */
+  /* CompleteClass */
+  override var ensuredFocusedElementInView: Boolean = js.native
+  /** Gets the region of the application's window that the input pane is covering. */
+  /* CompleteClass */
+  override var occludedRect: Rect = js.native
+}
 

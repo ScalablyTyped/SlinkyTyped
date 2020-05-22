@@ -12,70 +12,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ojMessagesSettableProperties extends JetSettableProperties {
-  var display: general | notification = js.native
-  var displayOptions: DisplayOptions = js.native
-  var messages: js.Array[Message] | Null | (DataProvider[_, Message]) = js.native
-  var position: Position | Null = js.native
-  var translations: AriaLiveRegion = js.native
+  var display: general | notification
+  var displayOptions: DisplayOptions
+  var messages: js.Array[Message] | Null | (DataProvider[_, Message])
+  var position: Position | Null
+  var translations: AriaLiveRegion
 }
 
 object ojMessagesSettableProperties {
   @scala.inline
-  def apply(display: general | notification, displayOptions: DisplayOptions, translations: AriaLiveRegion): ojMessagesSettableProperties = {
-    val __obj = js.Dynamic.literal(display = display.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
+  def apply(
+    display: general | notification,
+    displayOptions: DisplayOptions,
+    translations: AriaLiveRegion,
+    messages: js.Array[Message] | (DataProvider[_, Message]) = null,
+    position: Position = null
+  ): ojMessagesSettableProperties = {
+    val __obj = js.Dynamic.literal(display = display.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], messages = messages.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojMessagesSettableProperties]
   }
-  @scala.inline
-  implicit class ojMessagesSettablePropertiesOps[Self <: ojMessagesSettableProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplay(value: general | notification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayOptions(value: DisplayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: AriaLiveRegion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessages(value: js.Array[Message] | (DataProvider[_, Message])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessagesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(null)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPositionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(null)
-        ret
-    }
-  }
-  
 }
 

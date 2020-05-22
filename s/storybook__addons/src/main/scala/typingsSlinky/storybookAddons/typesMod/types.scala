@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-sealed trait types extends Types_
+sealed trait types extends js.Object
 
 @JSImport("@storybook/addons/dist/types", "types")
 @js.native

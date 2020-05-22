@@ -18,41 +18,11 @@ trait StatusDetailFilters extends js.Object {
 
 object StatusDetailFilters {
   @scala.inline
-  def apply(): StatusDetailFilters = {
+  def apply(AccountId: AccountId = null, MemberAccountRuleStatus: MemberAccountRuleStatus = null): StatusDetailFilters = {
     val __obj = js.Dynamic.literal()
+    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
+    if (MemberAccountRuleStatus != null) __obj.updateDynamic("MemberAccountRuleStatus")(MemberAccountRuleStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatusDetailFilters]
   }
-  @scala.inline
-  implicit class StatusDetailFiltersOps[Self <: StatusDetailFilters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemberAccountRuleStatus(value: MemberAccountRuleStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberAccountRuleStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemberAccountRuleStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberAccountRuleStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

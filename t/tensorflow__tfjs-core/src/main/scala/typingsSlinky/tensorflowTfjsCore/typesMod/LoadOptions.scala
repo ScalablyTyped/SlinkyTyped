@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoadOptions extends js.Object {
   /**
     * A function used to override the `window.fetch` function.
     */
-  var fetchFunc: js.UndefOr[js.Function] = js.native
+  var fetchFunc: js.UndefOr[js.Function] = js.undefined
   /**
     * Whether the module or model is to be loaded from TF Hub.
     *
@@ -19,11 +18,11 @@ trait LoadOptions extends js.Object {
     *
     * Default: `false`.
     */
-  var fromTFHub: js.UndefOr[Boolean] = js.native
+  var fromTFHub: js.UndefOr[Boolean] = js.undefined
   /**
     * Progress callback.
     */
-  var onProgress: js.UndefOr[OnProgressCallback] = js.native
+  var onProgress: js.UndefOr[OnProgressCallback] = js.undefined
   /**
     * RequestInit (options) for HTTP requests.
     *
@@ -31,7 +30,7 @@ trait LoadOptions extends js.Object {
     * [https://developer.mozilla.org/en-US/docs/Web/API/Request/Request](
     *     https://developer.mozilla.org/en-US/docs/Web/API/Request/Request)
     */
-  var requestInit: js.UndefOr[RequestInit] = js.native
+  var requestInit: js.UndefOr[RequestInit] = js.undefined
   /**
     * Strict loading model: whether extraneous weights or missing
     * weights should trigger an `Error`.
@@ -42,7 +41,7 @@ trait LoadOptions extends js.Object {
     *
     * Default: `true`.
     */
-  var strict: js.UndefOr[Boolean] = js.native
+  var strict: js.UndefOr[Boolean] = js.undefined
   /**
     * Path prefix for weight files, by default this is calculated from the
     * path of the model JSON file.
@@ -56,94 +55,27 @@ trait LoadOptions extends js.Object {
     * `http://localhost/foo/alt-weights`, then the weight file will be loaded
     * from the path `http://localhost/foo/alt-weights/group1-shard1of2` instead.
     */
-  var weightPathPrefix: js.UndefOr[String] = js.native
+  var weightPathPrefix: js.UndefOr[String] = js.undefined
 }
 
 object LoadOptions {
   @scala.inline
-  def apply(): LoadOptions = {
+  def apply(
+    fetchFunc: js.Function = null,
+    fromTFHub: js.UndefOr[Boolean] = js.undefined,
+    onProgress: /* fraction */ Double => Unit = null,
+    requestInit: RequestInit = null,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    weightPathPrefix: String = null
+  ): LoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (fetchFunc != null) __obj.updateDynamic("fetchFunc")(fetchFunc.asInstanceOf[js.Any])
+    if (!js.isUndefined(fromTFHub)) __obj.updateDynamic("fromTFHub")(fromTFHub.get.asInstanceOf[js.Any])
+    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+    if (requestInit != null) __obj.updateDynamic("requestInit")(requestInit.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (weightPathPrefix != null) __obj.updateDynamic("weightPathPrefix")(weightPathPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadOptions]
   }
-  @scala.inline
-  implicit class LoadOptionsOps[Self <: LoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFetchFunc(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchFunc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchFunc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchFunc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromTFHub(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromTFHub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromTFHub: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromTFHub")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnProgress(value: /* fraction */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestInit(value: RequestInit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestInit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestInit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeightPathPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weightPathPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeightPathPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weightPathPrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

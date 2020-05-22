@@ -5,46 +5,45 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** WizShellLinkA Class */
-@js.native
 trait WizShellLinkA extends js.Object {
   @JSName("AccWizObjects.WizShellLinkA_typekey")
-  var AccWizObjectsDotWizShellLinkA_typekey: WizShellLinkA = js.native
+  var AccWizObjectsDotWizShellLinkA_typekey: WizShellLinkA
   /** GetArguments */
-  def GetArguments(pszArgs: String, cchMaxPath: Double): Unit = js.native
+  def GetArguments(pszArgs: String, cchMaxPath: Double): Unit
   /** GetDescription */
-  def GetDescription(pszName: String, cchMaxName: Double): Unit = js.native
+  def GetDescription(pszName: String, cchMaxName: Double): Unit
   /** GetHotkey */
-  def GetHotkey(pwHotkey: Double): Unit = js.native
+  def GetHotkey(pwHotkey: Double): Unit
   /** GetIDList */
-  def GetIDList(ppidl: WIZ_CSIDL_FLAGS): Unit = js.native
+  def GetIDList(ppidl: WIZ_CSIDL_FLAGS): Unit
   /** GetIconLocation */
-  def GetIconLocation(pszIconPath: String, cchIconPath: Double, piIcon: Double): Unit = js.native
+  def GetIconLocation(pszIconPath: String, cchIconPath: Double, piIcon: Double): Unit
   /** GetPath */
-  def GetPath(pszFile: String, cchMaxPath: Double, pfd: WIZ_WIN32_FIND_DATA, fflags: Double): Unit = js.native
+  def GetPath(pszFile: String, cchMaxPath: Double, pfd: WIZ_WIN32_FIND_DATA, fflags: Double): Unit
   /** GetShowCmd */
-  def GetShowCmd(piShowCmd: WIZ_SW_FLAGS): Unit = js.native
+  def GetShowCmd(piShowCmd: WIZ_SW_FLAGS): Unit
   /** GetWorkingDirectory */
-  def GetWorkingDirectory(pszDir: String, cchMaxPath: Double): Unit = js.native
+  def GetWorkingDirectory(pszDir: String, cchMaxPath: Double): Unit
   /** Resolve */
-  def Resolve(hWnd: Double, fflags: Double): Unit = js.native
+  def Resolve(hWnd: Double, fflags: Double): Unit
   /** SetArguments */
-  def SetArguments(pszArgs: String): Unit = js.native
+  def SetArguments(pszArgs: String): Unit
   /** SetDescription */
-  def SetDescription(pszName: String): Unit = js.native
+  def SetDescription(pszName: String): Unit
   /** SetHotkey */
-  def SetHotkey(wHotkey: Double): Unit = js.native
+  def SetHotkey(wHotkey: Double): Unit
   /** SetIDList */
-  def SetIDList(pidl: WIZ_CSIDL_FLAGS): Unit = js.native
+  def SetIDList(pidl: WIZ_CSIDL_FLAGS): Unit
   /** SetIconLocation */
-  def SetIconLocation(pszIconPath: String, iIcon: Double): Unit = js.native
+  def SetIconLocation(pszIconPath: String, iIcon: Double): Unit
   /** SetPath */
-  def SetPath(pszFile: String): Unit = js.native
+  def SetPath(pszFile: String): Unit
   /** SetRelativePath */
-  def SetRelativePath(pszPathRel: String, dwReserved: Double): Unit = js.native
+  def SetRelativePath(pszPathRel: String, dwReserved: Double): Unit
   /** SetShowCmd */
-  def SetShowCmd(iShowCmd: WIZ_SW_FLAGS): Unit = js.native
+  def SetShowCmd(iShowCmd: WIZ_SW_FLAGS): Unit
   /** SetWorkingDirectory */
-  def SetWorkingDirectory(pszDir: String): Unit = js.native
+  def SetWorkingDirectory(pszDir: String): Unit
 }
 
 object WizShellLinkA {
@@ -74,127 +73,5 @@ object WizShellLinkA {
     __obj.updateDynamic("AccWizObjects.WizShellLinkA_typekey")(AccWizObjectsDotWizShellLinkA_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[WizShellLinkA]
   }
-  @scala.inline
-  implicit class WizShellLinkAOps[Self <: WizShellLinkA] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccWizObjectsDotWizShellLinkA_typekey(value: WizShellLinkA): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccWizObjects.WizShellLinkA_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetArguments(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetArguments")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetDescription(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDescription")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetHotkey(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHotkey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetIDList(value: WIZ_CSIDL_FLAGS => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIDList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetIconLocation(value: (String, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIconLocation")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetPath(value: (String, Double, WIZ_WIN32_FIND_DATA, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPath")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetShowCmd(value: WIZ_SW_FLAGS => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetShowCmd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetWorkingDirectory(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetWorkingDirectory")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withResolve(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resolve")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetArguments(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetArguments")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDescription(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDescription")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetHotkey(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetHotkey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIDList(value: WIZ_CSIDL_FLAGS => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIDList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIconLocation(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIconLocation")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetPath(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetPath")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetRelativePath(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetRelativePath")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetShowCmd(value: WIZ_SW_FLAGS => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetShowCmd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetWorkingDirectory(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetWorkingDirectory")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

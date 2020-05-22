@@ -18,35 +18,13 @@ trait DeleteSecurityProfileRequest extends js.Object {
 
 object DeleteSecurityProfileRequest {
   @scala.inline
-  def apply(securityProfileName: SecurityProfileName): DeleteSecurityProfileRequest = {
+  def apply(
+    securityProfileName: SecurityProfileName,
+    expectedVersion: js.UndefOr[OptionalVersion] = js.undefined
+  ): DeleteSecurityProfileRequest = {
     val __obj = js.Dynamic.literal(securityProfileName = securityProfileName.asInstanceOf[js.Any])
+    if (!js.isUndefined(expectedVersion)) __obj.updateDynamic("expectedVersion")(expectedVersion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteSecurityProfileRequest]
   }
-  @scala.inline
-  implicit class DeleteSecurityProfileRequestOps[Self <: DeleteSecurityProfileRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecurityProfileName(value: SecurityProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpectedVersion(value: OptionalVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

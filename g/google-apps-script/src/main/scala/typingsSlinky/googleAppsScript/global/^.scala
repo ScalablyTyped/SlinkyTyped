@@ -27,6 +27,7 @@ object ^ extends js.Object {
   var Charset: typingsSlinky.googleAppsScript.GoogleAppsScript.Utilities.Charset = js.native
   var Charts: typingsSlinky.googleAppsScript.GoogleAppsScript.Charts.Charts = js.native
   var Classroom: typingsSlinky.googleAppsScript.GoogleAppsScript.Classroom = js.native
+  var ConferenceDataService: typingsSlinky.googleAppsScript.GoogleAppsScript.ConferenceData.ConferenceDataService = js.native
   var ContactsApp: typingsSlinky.googleAppsScript.GoogleAppsScript.Contacts.ContactsApp = js.native
   var Content: typingsSlinky.googleAppsScript.GoogleAppsScript.Content = js.native
   var ContentService: typingsSlinky.googleAppsScript.GoogleAppsScript.Content.ContentService = js.native

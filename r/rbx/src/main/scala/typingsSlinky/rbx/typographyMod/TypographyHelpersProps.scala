@@ -41,122 +41,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypographyHelpersProps extends js.Object {
   var backgroundColor: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-  ] = js.native
-  var italic: js.UndefOr[Boolean] = js.native
-  var textAlign: js.UndefOr[centered | justified | left | right] = js.native
+  ] = js.undefined
+  var italic: js.UndefOr[Boolean] = js.undefined
+  var textAlign: js.UndefOr[centered | justified | left | right] = js.undefined
   var textColor: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-  ] = js.native
-  var textSize: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6` | `7`] = js.native
-  var textTransform: js.UndefOr[capitalized | lowercase | uppercase] = js.native
-  var textWeight: js.UndefOr[light | medium | normal | semibold | bold] = js.native
+  ] = js.undefined
+  var textSize: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6` | `7`] = js.undefined
+  var textTransform: js.UndefOr[capitalized | lowercase | uppercase] = js.undefined
+  var textWeight: js.UndefOr[light | medium | normal | semibold | bold] = js.undefined
 }
 
 object TypographyHelpersProps {
   @scala.inline
-  def apply(): TypographyHelpersProps = {
+  def apply(
+    backgroundColor: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis` = null,
+    italic: js.UndefOr[Boolean] = js.undefined,
+    textAlign: centered | justified | left | right = null,
+    textColor: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis` = null,
+    textSize: `1` | `2` | `3` | `4` | `5` | `6` | `7` = null,
+    textTransform: capitalized | lowercase | uppercase = null,
+    textWeight: light | medium | normal | semibold | bold = null
+  ): TypographyHelpersProps = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.get.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
+    if (textSize != null) __obj.updateDynamic("textSize")(textSize.asInstanceOf[js.Any])
+    if (textTransform != null) __obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
+    if (textWeight != null) __obj.updateDynamic("textWeight")(textWeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypographyHelpersProps]
   }
-  @scala.inline
-  implicit class TypographyHelpersPropsOps[Self <: TypographyHelpersProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(
-      value: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItalic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItalic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: centered | justified | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextColor(
-      value: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextSize(value: `1` | `2` | `3` | `4` | `5` | `6` | `7`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextTransform(value: capitalized | lowercase | uppercase): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextWeight(value: light | medium | normal | semibold | bold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textWeight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

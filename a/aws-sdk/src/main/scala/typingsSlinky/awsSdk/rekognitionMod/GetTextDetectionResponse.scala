@@ -31,89 +31,22 @@ trait GetTextDetectionResponse extends js.Object {
 
 object GetTextDetectionResponse {
   @scala.inline
-  def apply(): GetTextDetectionResponse = {
+  def apply(
+    JobStatus: VideoJobStatus = null,
+    NextToken: PaginationToken = null,
+    StatusMessage: StatusMessage = null,
+    TextDetections: TextDetectionResults = null,
+    TextModelVersion: String = null,
+    VideoMetadata: VideoMetadata = null
+  ): GetTextDetectionResponse = {
     val __obj = js.Dynamic.literal()
+    if (JobStatus != null) __obj.updateDynamic("JobStatus")(JobStatus.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
+    if (TextDetections != null) __obj.updateDynamic("TextDetections")(TextDetections.asInstanceOf[js.Any])
+    if (TextModelVersion != null) __obj.updateDynamic("TextModelVersion")(TextModelVersion.asInstanceOf[js.Any])
+    if (VideoMetadata != null) __obj.updateDynamic("VideoMetadata")(VideoMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTextDetectionResponse]
   }
-  @scala.inline
-  implicit class GetTextDetectionResponseOps[Self <: GetTextDetectionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobStatus(value: VideoJobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: StatusMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextDetections(value: TextDetectionResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextDetections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextDetections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextDetections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextModelVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextModelVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextModelVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextModelVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoMetadata(value: VideoMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

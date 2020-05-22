@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Api extends js.Object {
   /** Animate selection to new selection, format: [ x,y,x2,y2 ] */
-  def animateTo(selection: js.Tuple4[Double, Double, Double, Double]): Unit = js.native
+  def animateTo(selection: js.Tuple4[Double, Double, Double, Double]): Unit
   /** Disables Jcrop interactivity */
-  def disable(): Unit = js.native
+  def disable(): Unit
   /** Enables Jcrop interactivity */
-  def enable(): Unit = js.native
+  def enable(): Unit
   /** Release current selection */
-  def release(): Unit = js.native
+  def release(): Unit
   /** Remove Jcrop entirely */
-  def remove(): Unit = js.native
+  def remove(): Unit
   /** Set selection, format: [ x,y,x2,y2 ] */
-  def setSelect(selection: js.Tuple4[Double, Double, Double, Double]): Unit = js.native
+  def setSelect(selection: js.Tuple4[Double, Double, Double, Double]): Unit
   /** Query current selection values (interface)  */
-  def tellScaled(): SelectionInfo = js.native
+  def tellScaled(): SelectionInfo
   /** Query current selection values (true size) */
-  def tellSelect(): SelectionInfo = js.native
+  def tellSelect(): SelectionInfo
 }
 
 object Api {
@@ -39,61 +38,5 @@ object Api {
     val __obj = js.Dynamic.literal(animateTo = js.Any.fromFunction1(animateTo), disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), release = js.Any.fromFunction0(release), remove = js.Any.fromFunction0(remove), setSelect = js.Any.fromFunction1(setSelect), tellScaled = js.Any.fromFunction0(tellScaled), tellSelect = js.Any.fromFunction0(tellSelect))
     __obj.asInstanceOf[Api]
   }
-  @scala.inline
-  implicit class ApiOps[Self <: Api] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimateTo(value: js.Tuple4[Double, Double, Double, Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateTo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDisable(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEnable(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRelease(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("release")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetSelect(value: js.Tuple4[Double, Double, Double, Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTellScaled(value: () => SelectionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tellScaled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTellSelect(value: () => SelectionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tellSelect")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

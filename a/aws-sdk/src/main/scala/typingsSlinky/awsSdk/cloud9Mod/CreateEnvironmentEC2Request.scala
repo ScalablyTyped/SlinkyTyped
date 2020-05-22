@@ -42,101 +42,24 @@ trait CreateEnvironmentEC2Request extends js.Object {
 
 object CreateEnvironmentEC2Request {
   @scala.inline
-  def apply(instanceType: InstanceType, name: EnvironmentName): CreateEnvironmentEC2Request = {
+  def apply(
+    instanceType: InstanceType,
+    name: EnvironmentName,
+    automaticStopTimeMinutes: js.UndefOr[AutomaticStopTimeMinutes] = js.undefined,
+    clientRequestToken: ClientRequestToken = null,
+    description: EnvironmentDescription = null,
+    ownerArn: UserArn = null,
+    subnetId: SubnetId = null,
+    tags: TagList = null
+  ): CreateEnvironmentEC2Request = {
     val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(automaticStopTimeMinutes)) __obj.updateDynamic("automaticStopTimeMinutes")(automaticStopTimeMinutes.get.asInstanceOf[js.Any])
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (ownerArn != null) __obj.updateDynamic("ownerArn")(ownerArn.asInstanceOf[js.Any])
+    if (subnetId != null) __obj.updateDynamic("subnetId")(subnetId.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateEnvironmentEC2Request]
   }
-  @scala.inline
-  implicit class CreateEnvironmentEC2RequestOps[Self <: CreateEnvironmentEC2Request] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceType(value: InstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: EnvironmentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutomaticStopTimeMinutes(value: AutomaticStopTimeMinutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticStopTimeMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticStopTimeMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticStopTimeMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: EnvironmentDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerArn(value: UserArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetId(value: SubnetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

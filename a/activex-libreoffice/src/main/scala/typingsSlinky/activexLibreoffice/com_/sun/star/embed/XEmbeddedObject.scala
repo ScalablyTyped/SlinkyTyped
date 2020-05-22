@@ -13,7 +13,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents common functionality for embedded objects. */
-@js.native
 trait XEmbeddedObject
   extends XCloseable
      with XVisualObject
@@ -26,27 +25,27 @@ trait XEmbeddedObject
     * @returns a reference to related container client if any is set
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state
     */
-  var ClientSite: XEmbeddedClient = js.native
+  var ClientSite: XEmbeddedClient
   /**
     * returns the current state of the object.
     * @returns the current state of the object
     * @throws com::sun::star::embed::WrongStateException in case object is in invalid state
     */
-  val CurrentState: Double = js.native
+  val CurrentState: Double
   /**
     * returns supported states for the object.
     * @returns the sequence of states the object can be set to
     * @throws com::sun::star::embed::NeedsRunnignStateException means that the object is in loaded state now and can be switched to running state, other possib
     * @throws com::sun::star::embed::WrongStateException in case object is in invalid state
     */
-  val ReachableStates: SafeArray[Double] = js.native
+  val ReachableStates: SafeArray[Double]
   /**
     * returns supported verbs for the object.
     * @returns the sequence of verbs the object supports
     * @throws com::sun::star::embed::NeedsRunnignStateException means that the object is in loaded state now and can be switched to running state, acceptable v
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state to call the function
     */
-  val SupportedVerbs: SafeArray[VerbDescriptor] = js.native
+  val SupportedVerbs: SafeArray[VerbDescriptor]
   /**
     * changes the state of the object to the requested one.
     * @param nNewState specifies the new state, can take values from the constant set {@link com.sun.star.embed.EmbedStates}
@@ -54,7 +53,7 @@ trait XEmbeddedObject
     * @throws com::sun::star::embed::WrongStateException in case object is in invalid state
     * @throws com::sun::star::uno::Exception in case of other problems
     */
-  def changeState(nNewState: Double): Unit = js.native
+  def changeState(nNewState: Double): Unit
   /**
     * lets object perform an action referenced by nVerbID.
     * @param nVerbID specifies an action to perform, can take values from {@link EmbedVerbs}
@@ -63,63 +62,63 @@ trait XEmbeddedObject
     * @throws com::sun::star::embed::UnreachableStateException the state, required by the verb, can not be reached
     * @throws com::sun::star::uno::Exception in case of other problems
     */
-  def doVerb(nVerbID: Double): Unit = js.native
+  def doVerb(nVerbID: Double): Unit
   /**
     * provides access to the internal link to the container client.
     * @returns a reference to related container client if any is set
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state
     */
-  def getClientSite(): XEmbeddedClient = js.native
+  def getClientSite(): XEmbeddedClient
   /**
     * returns the current state of the object.
     * @returns the current state of the object
     * @throws com::sun::star::embed::WrongStateException in case object is in invalid state
     */
-  def getCurrentState(): Double = js.native
+  def getCurrentState(): Double
   /**
     * returns supported states for the object.
     * @returns the sequence of states the object can be set to
     * @throws com::sun::star::embed::NeedsRunnignStateException means that the object is in loaded state now and can be switched to running state, other possib
     * @throws com::sun::star::embed::WrongStateException in case object is in invalid state
     */
-  def getReachableStates(): SafeArray[Double] = js.native
+  def getReachableStates(): SafeArray[Double]
   /**
     * retrieves the status of the object.
     * @param nAspect the aspect specifying the form of object representation
     * @returns the value specifying the status of the object for specified aspect can take values from {@link EmbedMisc} constant set
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state
     */
-  def getStatus(nAspect: Double): Double = js.native
+  def getStatus(nAspect: Double): Double
   /**
     * returns supported verbs for the object.
     * @returns the sequence of verbs the object supports
     * @throws com::sun::star::embed::NeedsRunnignStateException means that the object is in loaded state now and can be switched to running state, acceptable v
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state to call the function
     */
-  def getSupportedVerbs(): SafeArray[VerbDescriptor] = js.native
+  def getSupportedVerbs(): SafeArray[VerbDescriptor]
   /**
     * sets a connection to the container's client.
     * @param xClient provides a reference to a client implementation
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state
     */
-  def setClientSite(xClient: XEmbeddedClient): Unit = js.native
+  def setClientSite(xClient: XEmbeddedClient): Unit
   /**
     * provides object with the name of container document.
     * @param sName name of the container document
     */
-  def setContainerName(sName: String): Unit = js.native
+  def setContainerName(sName: String): Unit
   /**
     * specifies how often the object's representation should be updated.
     * @param nMode the new update mode, can take values from EmbeddedUpdateModes
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state
     */
-  def setUpdateMode(nMode: Double): Unit = js.native
+  def setUpdateMode(nMode: Double): Unit
   /**
     * updates object's representations.
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state to call the function
     * @throws com::sun::star::uno::Exception in case problems detected
     */
-  def update(): Unit = js.native
+  def update(): Unit
 }
 
 object XEmbeddedObject {
@@ -165,103 +164,5 @@ object XEmbeddedObject {
     val __obj = js.Dynamic.literal(ClassID = ClassID.asInstanceOf[js.Any], ClassName = ClassName.asInstanceOf[js.Any], ClientSite = ClientSite.asInstanceOf[js.Any], Component = Component.asInstanceOf[js.Any], CurrentState = CurrentState.asInstanceOf[js.Any], ReachableStates = ReachableStates.asInstanceOf[js.Any], SupportedVerbs = SupportedVerbs.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addCloseListener = js.Any.fromFunction1(addCloseListener), addEventListener = js.Any.fromFunction1(addEventListener), addStateChangeListener = js.Any.fromFunction1(addStateChangeListener), changeState = js.Any.fromFunction1(changeState), close = js.Any.fromFunction1(close), doVerb = js.Any.fromFunction1(doVerb), getClassID = js.Any.fromFunction0(getClassID), getClassName = js.Any.fromFunction0(getClassName), getClientSite = js.Any.fromFunction0(getClientSite), getComponent = js.Any.fromFunction0(getComponent), getCurrentState = js.Any.fromFunction0(getCurrentState), getMapUnit = js.Any.fromFunction1(getMapUnit), getPreferredVisualRepresentation = js.Any.fromFunction1(getPreferredVisualRepresentation), getReachableStates = js.Any.fromFunction0(getReachableStates), getStatus = js.Any.fromFunction1(getStatus), getSupportedVerbs = js.Any.fromFunction0(getSupportedVerbs), getVisualAreaSize = js.Any.fromFunction1(getVisualAreaSize), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeCloseListener = js.Any.fromFunction1(removeCloseListener), removeEventListener = js.Any.fromFunction1(removeEventListener), removeStateChangeListener = js.Any.fromFunction1(removeStateChangeListener), setClassInfo = js.Any.fromFunction2(setClassInfo), setClientSite = js.Any.fromFunction1(setClientSite), setContainerName = js.Any.fromFunction1(setContainerName), setUpdateMode = js.Any.fromFunction1(setUpdateMode), setVisualAreaSize = js.Any.fromFunction2(setVisualAreaSize), update = js.Any.fromFunction0(update))
     __obj.asInstanceOf[XEmbeddedObject]
   }
-  @scala.inline
-  implicit class XEmbeddedObjectOps[Self <: XEmbeddedObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientSite(value: XEmbeddedClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientSite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentState(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReachableStates(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReachableStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedVerbs(value: SafeArray[VerbDescriptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedVerbs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangeState(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeState")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDoVerb(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doVerb")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetClientSite(value: () => XEmbeddedClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClientSite")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCurrentState(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetReachableStates(value: () => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getReachableStates")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStatus(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupportedVerbs(value: () => SafeArray[VerbDescriptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedVerbs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetClientSite(value: XEmbeddedClient => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setClientSite")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetContainerName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContainerName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetUpdateMode(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setUpdateMode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,9 @@
 package typingsSlinky.sharepoint.global.SP.UI
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.sharepoint.SP.UI.DialogReturnValueCallback
 import typingsSlinky.sharepoint.SP.UI.IDialogOptions
+import typingsSlinky.std.HTMLFrameElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +12,43 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.UI.ModalDialog")
 @js.native
 class ModalDialog ()
-  extends typingsSlinky.sharepoint.SP.UI.ModalDialog
+  extends typingsSlinky.sharepoint.SP.UI.ModalDialog {
+  /* CompleteClass */
+  override def autoSize(): Unit = js.native
+  /* CompleteClass */
+  override def autoSizeSuppressScrollbar(resizePageCallBack: js.Any): Unit = js.native
+  /** Closes the dialog using the specified dialog result. */
+  /* CompleteClass */
+  override def close(dialogResult: typingsSlinky.sharepoint.SP.UI.DialogResult): Unit = js.native
+  /* CompleteClass */
+  override def get_allowMaximize(): Boolean = js.native
+  /* CompleteClass */
+  override def get_args(): js.Any = js.native
+  /* CompleteClass */
+  override def get_closed(): Boolean = js.native
+  /* CompleteClass */
+  override def get_dialogElement(): HTMLElement = js.native
+  /* CompleteClass */
+  override def get_firstTabStop(): HTMLElement = js.native
+  /* CompleteClass */
+  override def get_frameElement(): HTMLFrameElement = js.native
+  /* CompleteClass */
+  override def get_html(): String = js.native
+  /* CompleteClass */
+  override def get_isMaximized(): Boolean = js.native
+  /* CompleteClass */
+  override def get_lastTabStop(): HTMLElement = js.native
+  /* CompleteClass */
+  override def get_returnValue(): js.Any = js.native
+  /* CompleteClass */
+  override def get_showClose(): Boolean = js.native
+  /* CompleteClass */
+  override def get_title(): String = js.native
+  /* CompleteClass */
+  override def get_url(): String = js.native
+  /* CompleteClass */
+  override def set_returnValue(value: js.Any): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("SP.UI.ModalDialog")

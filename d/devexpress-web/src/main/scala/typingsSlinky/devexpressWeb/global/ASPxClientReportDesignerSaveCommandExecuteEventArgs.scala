@@ -13,5 +13,11 @@ import scala.scalajs.js.annotation._
   * Initializes a new instance of the ASPxClientReportDesignerSaveCommandExecuteEventArgs class with the default settings.
   */
 class ASPxClientReportDesignerSaveCommandExecuteEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientReportDesignerSaveCommandExecuteEventArgs
+  extends typingsSlinky.devexpressWeb.ASPxClientReportDesignerSaveCommandExecuteEventArgs {
+  /**
+    * Specifies whether or not the event was handled.
+    */
+  /* CompleteClass */
+  override var handled: Boolean = js.native
+}
 

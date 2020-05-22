@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PluginPeerDepsExternalOptions extends js.Object {
-  var includeDependencies: js.UndefOr[Boolean] = js.native
-  var packageJsonPath: js.UndefOr[String] = js.native
+  var includeDependencies: js.UndefOr[Boolean] = js.undefined
+  var packageJsonPath: js.UndefOr[String] = js.undefined
 }
 
 object PluginPeerDepsExternalOptions {
   @scala.inline
-  def apply(): PluginPeerDepsExternalOptions = {
+  def apply(includeDependencies: js.UndefOr[Boolean] = js.undefined, packageJsonPath: String = null): PluginPeerDepsExternalOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeDependencies)) __obj.updateDynamic("includeDependencies")(includeDependencies.get.asInstanceOf[js.Any])
+    if (packageJsonPath != null) __obj.updateDynamic("packageJsonPath")(packageJsonPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginPeerDepsExternalOptions]
   }
-  @scala.inline
-  implicit class PluginPeerDepsExternalOptionsOps[Self <: PluginPeerDepsExternalOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeDependencies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageJsonPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageJsonPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageJsonPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageJsonPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -40,43 +40,5 @@ object UpdateModelVersionRequest {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], modelId = modelId.asInstanceOf[js.Any], modelType = modelType.asInstanceOf[js.Any], modelVersionNumber = modelVersionNumber.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateModelVersionRequest]
   }
-  @scala.inline
-  implicit class UpdateModelVersionRequestOps[Self <: UpdateModelVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelId(value: identifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelType(value: ModelTypeEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelVersionNumber(value: nonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVersionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ModelVersionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

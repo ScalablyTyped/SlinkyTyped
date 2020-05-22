@@ -8,76 +8,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisableStylesGeneration extends js.Object {
-  var disableStylesGeneration: Boolean = js.native
-  var jss: js.UndefOr[Jss] = js.native
-  var managers: js.UndefOr[Managers] = js.native
-  var registry: js.UndefOr[SheetsRegistry] = js.native
-  var sheetOptions: StyleSheetFactoryOptions = js.native
+  var disableStylesGeneration: Boolean
+  var jss: js.UndefOr[Jss] = js.undefined
+  var managers: js.UndefOr[Managers] = js.undefined
+  var registry: js.UndefOr[SheetsRegistry] = js.undefined
+  var sheetOptions: StyleSheetFactoryOptions
 }
 
 object DisableStylesGeneration {
   @scala.inline
-  def apply(disableStylesGeneration: Boolean, sheetOptions: StyleSheetFactoryOptions): DisableStylesGeneration = {
+  def apply(
+    disableStylesGeneration: Boolean,
+    sheetOptions: StyleSheetFactoryOptions,
+    jss: Jss = null,
+    managers: Managers = null,
+    registry: SheetsRegistry = null
+  ): DisableStylesGeneration = {
     val __obj = js.Dynamic.literal(disableStylesGeneration = disableStylesGeneration.asInstanceOf[js.Any], sheetOptions = sheetOptions.asInstanceOf[js.Any])
+    if (jss != null) __obj.updateDynamic("jss")(jss.asInstanceOf[js.Any])
+    if (managers != null) __obj.updateDynamic("managers")(managers.asInstanceOf[js.Any])
+    if (registry != null) __obj.updateDynamic("registry")(registry.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisableStylesGeneration]
   }
-  @scala.inline
-  implicit class DisableStylesGenerationOps[Self <: DisableStylesGeneration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableStylesGeneration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStylesGeneration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSheetOptions(value: StyleSheetFactoryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJss(value: Jss): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagers(value: Managers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistry(value: SheetsRegistry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

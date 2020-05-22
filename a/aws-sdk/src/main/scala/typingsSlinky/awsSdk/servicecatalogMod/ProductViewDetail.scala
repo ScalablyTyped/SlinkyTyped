@@ -26,65 +26,18 @@ trait ProductViewDetail extends js.Object {
 
 object ProductViewDetail {
   @scala.inline
-  def apply(): ProductViewDetail = {
+  def apply(
+    CreatedTime: js.Date = null,
+    ProductARN: ResourceARN = null,
+    ProductViewSummary: ProductViewSummary = null,
+    Status: Status = null
+  ): ProductViewDetail = {
     val __obj = js.Dynamic.literal()
+    if (CreatedTime != null) __obj.updateDynamic("CreatedTime")(CreatedTime.asInstanceOf[js.Any])
+    if (ProductARN != null) __obj.updateDynamic("ProductARN")(ProductARN.asInstanceOf[js.Any])
+    if (ProductViewSummary != null) __obj.updateDynamic("ProductViewSummary")(ProductViewSummary.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductViewDetail]
   }
-  @scala.inline
-  implicit class ProductViewDetailOps[Self <: ProductViewDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductARN(value: ResourceARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductViewSummary(value: ProductViewSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductViewSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

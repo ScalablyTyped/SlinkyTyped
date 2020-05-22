@@ -7,47 +7,24 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LaunchTemplateCpuOptions extends js.Object {
+  /**
+    * The number of CPU cores for the instance.
+    */
   var coreCount: js.UndefOr[Input[Double]] = js.native
+  /**
+    * The number of threads per CPU core. To disable Intel Hyper-Threading Technology for the instance, specify a value of 1.
+    * Otherwise, specify the default value of 2.
+    */
   var threadsPerCore: js.UndefOr[Input[Double]] = js.native
 }
 
 object LaunchTemplateCpuOptions {
   @scala.inline
-  def apply(): LaunchTemplateCpuOptions = {
+  def apply(coreCount: Input[Double] = null, threadsPerCore: Input[Double] = null): LaunchTemplateCpuOptions = {
     val __obj = js.Dynamic.literal()
+    if (coreCount != null) __obj.updateDynamic("coreCount")(coreCount.asInstanceOf[js.Any])
+    if (threadsPerCore != null) __obj.updateDynamic("threadsPerCore")(threadsPerCore.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateCpuOptions]
   }
-  @scala.inline
-  implicit class LaunchTemplateCpuOptionsOps[Self <: LaunchTemplateCpuOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoreCount(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coreCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoreCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coreCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreadsPerCore(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadsPerCore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreadsPerCore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadsPerCore")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

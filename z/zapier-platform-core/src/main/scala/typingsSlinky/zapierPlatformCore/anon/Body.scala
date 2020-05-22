@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Body extends js.Object {
-  var body: js.UndefOr[Boolean] = js.native
-  var params: js.UndefOr[Boolean] = js.native
+  var body: js.UndefOr[Boolean] = js.undefined
+  var params: js.UndefOr[Boolean] = js.undefined
 }
 
 object Body {
   @scala.inline
-  def apply(): Body = {
+  def apply(body: js.UndefOr[Boolean] = js.undefined, params: js.UndefOr[Boolean] = js.undefined): Body = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(body)) __obj.updateDynamic("body")(body.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(params)) __obj.updateDynamic("params")(params.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Body]
   }
-  @scala.inline
-  implicit class BodyOps[Self <: Body] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

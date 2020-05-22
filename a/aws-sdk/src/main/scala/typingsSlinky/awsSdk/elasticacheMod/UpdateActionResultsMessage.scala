@@ -18,41 +18,14 @@ trait UpdateActionResultsMessage extends js.Object {
 
 object UpdateActionResultsMessage {
   @scala.inline
-  def apply(): UpdateActionResultsMessage = {
+  def apply(
+    ProcessedUpdateActions: ProcessedUpdateActionList = null,
+    UnprocessedUpdateActions: UnprocessedUpdateActionList = null
+  ): UpdateActionResultsMessage = {
     val __obj = js.Dynamic.literal()
+    if (ProcessedUpdateActions != null) __obj.updateDynamic("ProcessedUpdateActions")(ProcessedUpdateActions.asInstanceOf[js.Any])
+    if (UnprocessedUpdateActions != null) __obj.updateDynamic("UnprocessedUpdateActions")(UnprocessedUpdateActions.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateActionResultsMessage]
   }
-  @scala.inline
-  implicit class UpdateActionResultsMessageOps[Self <: UpdateActionResultsMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProcessedUpdateActions(value: ProcessedUpdateActionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessedUpdateActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessedUpdateActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessedUpdateActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnprocessedUpdateActions(value: UnprocessedUpdateActionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedUpdateActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnprocessedUpdateActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedUpdateActions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,29 +11,10 @@ trait SchemaBooksVolumesRecommendedRateResponse extends js.Object {
 
 object SchemaBooksVolumesRecommendedRateResponse {
   @scala.inline
-  def apply(): SchemaBooksVolumesRecommendedRateResponse = {
+  def apply(consistency_token: String = null): SchemaBooksVolumesRecommendedRateResponse = {
     val __obj = js.Dynamic.literal()
+    if (consistency_token != null) __obj.updateDynamic("consistency_token")(consistency_token.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBooksVolumesRecommendedRateResponse]
   }
-  @scala.inline
-  implicit class SchemaBooksVolumesRecommendedRateResponseOps[Self <: SchemaBooksVolumesRecommendedRateResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsistency_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consistency_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsistency_token: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consistency_token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

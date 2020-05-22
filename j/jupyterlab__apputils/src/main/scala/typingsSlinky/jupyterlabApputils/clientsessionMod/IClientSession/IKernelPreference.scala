@@ -7,135 +7,57 @@ import scala.scalajs.js.annotation._
 /**
   * A kernel preference.
   */
-@js.native
 trait IKernelPreference extends js.Object {
   /**
     * Whether to auto-start the default kernel if no matching kernel is found.
     */
-  val autoStartDefault: js.UndefOr[Boolean] = js.native
+  val autoStartDefault: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether a kernel can be started.
     */
-  val canStart: js.UndefOr[Boolean] = js.native
+  val canStart: js.UndefOr[Boolean] = js.undefined
   /**
     * The id of an existing kernel.
     */
-  val id: js.UndefOr[String] = js.native
+  val id: js.UndefOr[String] = js.undefined
   /**
     * The preferred kernel language.
     */
-  val language: js.UndefOr[String] = js.native
+  val language: js.UndefOr[String] = js.undefined
   /**
     * The name of the kernel.
     */
-  val name: js.UndefOr[String] = js.native
+  val name: js.UndefOr[String] = js.undefined
   /**
     * Whether to prefer starting a kernel.
     */
-  val shouldStart: js.UndefOr[Boolean] = js.native
+  val shouldStart: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether a kernel needs to be close with the associated session
     */
-  val shutdownOnClose: js.UndefOr[Boolean] = js.native
+  val shutdownOnClose: js.UndefOr[Boolean] = js.undefined
 }
 
 object IKernelPreference {
   @scala.inline
-  def apply(): IKernelPreference = {
+  def apply(
+    autoStartDefault: js.UndefOr[Boolean] = js.undefined,
+    canStart: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    language: String = null,
+    name: String = null,
+    shouldStart: js.UndefOr[Boolean] = js.undefined,
+    shutdownOnClose: js.UndefOr[Boolean] = js.undefined
+  ): IKernelPreference = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoStartDefault)) __obj.updateDynamic("autoStartDefault")(autoStartDefault.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(canStart)) __obj.updateDynamic("canStart")(canStart.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldStart)) __obj.updateDynamic("shouldStart")(shouldStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shutdownOnClose)) __obj.updateDynamic("shutdownOnClose")(shutdownOnClose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IKernelPreference]
   }
-  @scala.inline
-  implicit class IKernelPreferenceOps[Self <: IKernelPreference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoStartDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStartDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoStartDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStartDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanStart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldStart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShutdownOnClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shutdownOnClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShutdownOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shutdownOnClose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

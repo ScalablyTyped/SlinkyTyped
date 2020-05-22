@@ -24,46 +24,45 @@ import scala.scalajs.js.annotation._
   * OnPageEnded Is fired when the page ended.
   * @see com.sun.star.document.OfficeDocument
   */
-@js.native
 trait XReportEngine
   extends XComponent
      with XPropertySet {
   /** specifies the active connection which is used to create the resulting report. */
-  var ActiveConnection: XConnection = js.native
+  var ActiveConnection: XConnection
   /**
     * defines the maximum number of rows which should be fetched for the report. If the limit is exceeded, the excess rows are silently dropped. ;  There is
     * no limitation, if set to zero.
     */
-  var MaxRows: Double = js.native
+  var MaxRows: Double
   /** specifies the report definition object which is used to create the resulting report. */
-  var ReportDefinition: XReportDefinition = js.native
+  var ReportDefinition: XReportDefinition
   /** specifies the status indicator which shows the progress of the report generation process. */
-  var StatusIndicator: XStatusIndicator = js.native
+  var StatusIndicator: XStatusIndicator
   /**
     * creates a report document.
     * @returns The URL where the new document is located.
     * @throws com::sun::star::lang::DisposedException If the report engine is already disposed.
     * @throws com::sun::star::lang::IllegalArgumentException If the report definition was not set or is `NULL` .
     */
-  def createDocument(): URL = js.native
+  def createDocument(): URL
   /**
     * creates a report document.
     * @param frame The frame must have a controller set. This controller will be set at the model.
     * @throws com::sun::star::lang::DisposedException If the report engine is already disposed.
     * @throws com::sun::star::lang::IllegalArgumentException If the report definition was not set or is `NULL` . OJ: Has to be discussed if this method is useful.
     */
-  def createDocumentAlive(frame: XFrame): XModel = js.native
+  def createDocumentAlive(frame: XFrame): XModel
   /**
     * creates a report document.
     * @throws com::sun::star::lang::DisposedException If the report engine is already disposed.
     * @throws com::sun::star::lang::IllegalArgumentException If the report definition was not set or is `NULL` .
     */
-  def createDocumentModel(): XModel = js.native
+  def createDocumentModel(): XModel
   /**
     * allows to interrupt the creation process of the report document.
     * @throws com::sun::star::lang::DisposedException If the report engine is already disposed.
     */
-  def interrupt(): Unit = js.native
+  def interrupt(): Unit
 }
 
 object XReportEngine {
@@ -95,61 +94,5 @@ object XReportEngine {
     val __obj = js.Dynamic.literal(ActiveConnection = ActiveConnection.asInstanceOf[js.Any], MaxRows = MaxRows.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], ReportDefinition = ReportDefinition.asInstanceOf[js.Any], StatusIndicator = StatusIndicator.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createDocument = js.Any.fromFunction0(createDocument), createDocumentAlive = js.Any.fromFunction1(createDocumentAlive), createDocumentModel = js.Any.fromFunction0(createDocumentModel), dispose = js.Any.fromFunction0(dispose), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), interrupt = js.Any.fromFunction0(interrupt), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[XReportEngine]
   }
-  @scala.inline
-  implicit class XReportEngineOps[Self <: XReportEngine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveConnection(value: XConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveConnection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReportDefinition(value: XReportDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusIndicator(value: XStatusIndicator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateDocument(value: () => URL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateDocumentAlive(value: XFrame => XModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDocumentAlive")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateDocumentModel(value: () => XModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDocumentModel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInterrupt(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interrupt")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

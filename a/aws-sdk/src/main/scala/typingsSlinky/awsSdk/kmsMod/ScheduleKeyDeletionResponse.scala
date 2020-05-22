@@ -18,41 +18,11 @@ trait ScheduleKeyDeletionResponse extends js.Object {
 
 object ScheduleKeyDeletionResponse {
   @scala.inline
-  def apply(): ScheduleKeyDeletionResponse = {
+  def apply(DeletionDate: js.Date = null, KeyId: KeyIdType = null): ScheduleKeyDeletionResponse = {
     val __obj = js.Dynamic.literal()
+    if (DeletionDate != null) __obj.updateDynamic("DeletionDate")(DeletionDate.asInstanceOf[js.Any])
+    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduleKeyDeletionResponse]
   }
-  @scala.inline
-  implicit class ScheduleKeyDeletionResponseOps[Self <: ScheduleKeyDeletionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletionDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletionDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyId(value: KeyIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

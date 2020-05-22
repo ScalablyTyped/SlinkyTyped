@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ItemActionStat extends js.Object {
   // The number of times the action took place. Read-only.
-  var actionCount: js.UndefOr[Double] = js.native
+  var actionCount: js.UndefOr[Double] = js.undefined
   // The number of distinct actors that performed the action. Read-only.
-  var actorCount: js.UndefOr[Double] = js.native
+  var actorCount: js.UndefOr[Double] = js.undefined
 }
 
 object ItemActionStat {
   @scala.inline
-  def apply(): ItemActionStat = {
+  def apply(actionCount: js.UndefOr[Double] = js.undefined, actorCount: js.UndefOr[Double] = js.undefined): ItemActionStat = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(actionCount)) __obj.updateDynamic("actionCount")(actionCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(actorCount)) __obj.updateDynamic("actorCount")(actorCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemActionStat]
   }
-  @scala.inline
-  implicit class ItemActionStatOps[Self <: ItemActionStat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActorCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actorCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActorCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actorCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

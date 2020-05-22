@@ -22,41 +22,10 @@ trait UpdateUsageRequest extends js.Object {
 
 object UpdateUsageRequest {
   @scala.inline
-  def apply(keyId: String, usagePlanId: String): UpdateUsageRequest = {
+  def apply(keyId: String, usagePlanId: String, patchOperations: ListOfPatchOperation = null): UpdateUsageRequest = {
     val __obj = js.Dynamic.literal(keyId = keyId.asInstanceOf[js.Any], usagePlanId = usagePlanId.asInstanceOf[js.Any])
+    if (patchOperations != null) __obj.updateDynamic("patchOperations")(patchOperations.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateUsageRequest]
   }
-  @scala.inline
-  implicit class UpdateUsageRequestOps[Self <: UpdateUsageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsagePlanId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usagePlanId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatchOperations(value: ListOfPatchOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patchOperations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatchOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patchOperations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

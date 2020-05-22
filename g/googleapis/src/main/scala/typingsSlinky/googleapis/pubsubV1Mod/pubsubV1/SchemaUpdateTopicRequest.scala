@@ -25,41 +25,11 @@ trait SchemaUpdateTopicRequest extends js.Object {
 
 object SchemaUpdateTopicRequest {
   @scala.inline
-  def apply(): SchemaUpdateTopicRequest = {
+  def apply(topic: SchemaTopic = null, updateMask: String = null): SchemaUpdateTopicRequest = {
     val __obj = js.Dynamic.literal()
+    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
+    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateTopicRequest]
   }
-  @scala.inline
-  implicit class SchemaUpdateTopicRequestOps[Self <: SchemaUpdateTopicRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTopic(value: SchemaTopic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateMask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

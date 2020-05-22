@@ -21,19 +21,18 @@ import scala.scalajs.js.annotation._
   * @see XDocumentRepository
   * @since OOo 3.2
   */
-@js.native
 trait XRepository extends js.Object {
   /**
     * gets the names of all the graphs in the repository.
     * @returns a list containing the names of the graphs in the repository
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  val GraphNames: SafeArray[XURI] = js.native
+  val GraphNames: SafeArray[XURI]
   /**
     * creates a fresh unique blank node.
     * @returns a newly generated blank node which is unique in this repository
     */
-  def createBlankNode(): XBlankNode = js.native
+  def createBlankNode(): XBlankNode
   /**
     * creates a graph with the given name.
     *
@@ -44,7 +43,7 @@ trait XRepository extends js.Object {
     * @throws com::sun::star::container::ElementExistException if a graph with the given GraphName already exists
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def createGraph(GraphName: XURI): XNamedGraph = js.native
+  def createGraph(GraphName: XURI): XNamedGraph
   /**
     * destroys the graph with the given name, and removes it from the repository.
     *
@@ -54,7 +53,7 @@ trait XRepository extends js.Object {
     * @throws com::sun::star::container::NoSuchElementException if a graph with the given GraphName does not exist
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def destroyGraph(GraphName: XURI): Unit = js.native
+  def destroyGraph(GraphName: XURI): Unit
   /**
     * exports a named graph from the repository.
     *
@@ -71,7 +70,7 @@ trait XRepository extends js.Object {
     * @throws RepositoryException if an error occurs when accessing the repository.
     * @throws com::sun::star::io::IOException if an I/O error occurs.
     */
-  def exportGraph(Format: Double, OutStream: XOutputStream, GraphName: XURI, BaseURI: XURI): Unit = js.native
+  def exportGraph(Format: Double, OutStream: XOutputStream, GraphName: XURI, BaseURI: XURI): Unit
   /**
     * gets a graph by its name.
     * @param GraphName the name of the graph that is to be returned
@@ -79,13 +78,13 @@ trait XRepository extends js.Object {
     * @throws com::sun::star::lang::IllegalArgumentException if the given GraphName is invalid
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def getGraph(GraphName: XURI): XNamedGraph = js.native
+  def getGraph(GraphName: XURI): XNamedGraph
   /**
     * gets the names of all the graphs in the repository.
     * @returns a list containing the names of the graphs in the repository
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def getGraphNames(): SafeArray[XURI] = js.native
+  def getGraphNames(): SafeArray[XURI]
   /**
     * gets matching RDF statements from the repository.
     *
@@ -98,7 +97,7 @@ trait XRepository extends js.Object {
     * @see XNamedGraph.getStatements
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def getStatements(Subject: XResource, Predicate: XURI, Object: XNode): XEnumeration = js.native
+  def getStatements(Subject: XResource, Predicate: XURI, Object: XNode): XEnumeration
   /**
     * imports a named graph into the repository.
     *
@@ -118,7 +117,7 @@ trait XRepository extends js.Object {
     * @throws RepositoryException if an error occurs when accessing the repository.
     * @throws com::sun::star::io::IOException if an I/O error occurs.
     */
-  def importGraph(Format: Double, InStream: XInputStream, GraphName: XURI, BaseURI: XURI): XNamedGraph = js.native
+  def importGraph(Format: Double, InStream: XInputStream, GraphName: XURI, BaseURI: XURI): XNamedGraph
   /**
     * executes a SPARQL "ASK" query.
     *
@@ -128,7 +127,7 @@ trait XRepository extends js.Object {
     * @throws QueryException if the query is malformed, or evaluation fails
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def queryAsk(Query: String): Boolean = js.native
+  def queryAsk(Query: String): Boolean
   /**
     * executes a SPARQL "CONSTRUCT" query.
     *
@@ -139,7 +138,7 @@ trait XRepository extends js.Object {
     * @throws QueryException if the query is malformed, or evaluation fails
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def queryConstruct(Query: String): XEnumeration = js.native
+  def queryConstruct(Query: String): XEnumeration
   /**
     * executes a SPARQL "SELECT" query.
     *
@@ -151,7 +150,7 @@ trait XRepository extends js.Object {
     * @throws QueryException if the query is malformed, or evaluation fails
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def querySelect(Query: String): XQuerySelectResult = js.native
+  def querySelect(Query: String): XQuerySelectResult
 }
 
 object XRepository {
@@ -173,85 +172,5 @@ object XRepository {
     val __obj = js.Dynamic.literal(GraphNames = GraphNames.asInstanceOf[js.Any], createBlankNode = js.Any.fromFunction0(createBlankNode), createGraph = js.Any.fromFunction1(createGraph), destroyGraph = js.Any.fromFunction1(destroyGraph), exportGraph = js.Any.fromFunction4(exportGraph), getGraph = js.Any.fromFunction1(getGraph), getGraphNames = js.Any.fromFunction0(getGraphNames), getStatements = js.Any.fromFunction3(getStatements), importGraph = js.Any.fromFunction4(importGraph), queryAsk = js.Any.fromFunction1(queryAsk), queryConstruct = js.Any.fromFunction1(queryConstruct), querySelect = js.Any.fromFunction1(querySelect))
     __obj.asInstanceOf[XRepository]
   }
-  @scala.inline
-  implicit class XRepositoryOps[Self <: XRepository] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGraphNames(value: SafeArray[XURI]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateBlankNode(value: () => XBlankNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createBlankNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateGraph(value: XURI => XNamedGraph): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createGraph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDestroyGraph(value: XURI => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyGraph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExportGraph(value: (Double, XOutputStream, XURI, XURI) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportGraph")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetGraph(value: XURI => XNamedGraph): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGraph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetGraphNames(value: () => SafeArray[XURI]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGraphNames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStatements(value: (XResource, XURI, XNode) => XEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatements")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withImportGraph(value: (Double, XInputStream, XURI, XURI) => XNamedGraph): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importGraph")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withQueryAsk(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryAsk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQueryConstruct(value: String => XEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryConstruct")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQuerySelect(value: String => XQuerySelectResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelect")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

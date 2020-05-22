@@ -17,5 +17,10 @@ package object mod {
     scala.Unit
   ]
   type NightwatchTest = js.Function1[/* browser */ typingsSlinky.nightwatch.mod.NightwatchBrowser, scala.Unit]
+  type NightwatchTestHook = (js.Function2[
+    /* browser */ typingsSlinky.nightwatch.mod.NightwatchBrowser, 
+    /* done */ js.Function1[/* err */ js.UndefOr[js.Any], scala.Unit], 
+    scala.Unit
+  ]) | (js.Function1[/* done */ js.Function1[/* err */ js.UndefOr[js.Any], scala.Unit], scala.Unit])
   type NightwatchTestSettings = org.scalablytyped.runtime.StringDictionary[typingsSlinky.nightwatch.mod.NightwatchTestSettingScreenshots]
 }

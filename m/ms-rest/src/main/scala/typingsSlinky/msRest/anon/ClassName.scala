@@ -7,50 +7,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClassName extends js.Object {
-  var className: String = js.native
-  var modelProperties: js.UndefOr[StringDictionary[Mapper]] = js.native
-  var name: MapperType = js.native
+  var className: String
+  var modelProperties: js.UndefOr[StringDictionary[Mapper]] = js.undefined
+  var name: MapperType
 }
 
 object ClassName {
   @scala.inline
-  def apply(className: String, name: MapperType): ClassName = {
+  def apply(className: String, name: MapperType, modelProperties: StringDictionary[Mapper] = null): ClassName = {
     val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (modelProperties != null) __obj.updateDynamic("modelProperties")(modelProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassName]
   }
-  @scala.inline
-  implicit class ClassNameOps[Self <: ClassName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: MapperType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelProperties(value: StringDictionary[Mapper]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

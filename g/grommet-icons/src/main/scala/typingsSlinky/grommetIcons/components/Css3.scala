@@ -12,7 +12,7 @@ object Css3 {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Css3] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Css3](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Css3.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Css3] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Css3](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Css3] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Css3](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Css3.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Css3] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Css3](js.Array(this.component, js.Dictionary.empty))()
 }
 

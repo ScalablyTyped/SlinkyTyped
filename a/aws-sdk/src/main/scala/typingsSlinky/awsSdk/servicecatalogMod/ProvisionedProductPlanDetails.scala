@@ -70,197 +70,40 @@ trait ProvisionedProductPlanDetails extends js.Object {
 
 object ProvisionedProductPlanDetails {
   @scala.inline
-  def apply(): ProvisionedProductPlanDetails = {
+  def apply(
+    CreatedTime: js.Date = null,
+    NotificationArns: NotificationArns = null,
+    PathId: Id = null,
+    PlanId: Id = null,
+    PlanName: ProvisionedProductPlanName = null,
+    PlanType: ProvisionedProductPlanType = null,
+    ProductId: Id = null,
+    ProvisionProductId: Id = null,
+    ProvisionProductName: ProvisionedProductName = null,
+    ProvisioningArtifactId: Id = null,
+    ProvisioningParameters: UpdateProvisioningParameters = null,
+    Status: ProvisionedProductPlanStatus = null,
+    StatusMessage: StatusMessage = null,
+    Tags: Tags = null,
+    UpdatedTime: js.Date = null
+  ): ProvisionedProductPlanDetails = {
     val __obj = js.Dynamic.literal()
+    if (CreatedTime != null) __obj.updateDynamic("CreatedTime")(CreatedTime.asInstanceOf[js.Any])
+    if (NotificationArns != null) __obj.updateDynamic("NotificationArns")(NotificationArns.asInstanceOf[js.Any])
+    if (PathId != null) __obj.updateDynamic("PathId")(PathId.asInstanceOf[js.Any])
+    if (PlanId != null) __obj.updateDynamic("PlanId")(PlanId.asInstanceOf[js.Any])
+    if (PlanName != null) __obj.updateDynamic("PlanName")(PlanName.asInstanceOf[js.Any])
+    if (PlanType != null) __obj.updateDynamic("PlanType")(PlanType.asInstanceOf[js.Any])
+    if (ProductId != null) __obj.updateDynamic("ProductId")(ProductId.asInstanceOf[js.Any])
+    if (ProvisionProductId != null) __obj.updateDynamic("ProvisionProductId")(ProvisionProductId.asInstanceOf[js.Any])
+    if (ProvisionProductName != null) __obj.updateDynamic("ProvisionProductName")(ProvisionProductName.asInstanceOf[js.Any])
+    if (ProvisioningArtifactId != null) __obj.updateDynamic("ProvisioningArtifactId")(ProvisioningArtifactId.asInstanceOf[js.Any])
+    if (ProvisioningParameters != null) __obj.updateDynamic("ProvisioningParameters")(ProvisioningParameters.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (UpdatedTime != null) __obj.updateDynamic("UpdatedTime")(UpdatedTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisionedProductPlanDetails]
   }
-  @scala.inline
-  implicit class ProvisionedProductPlanDetailsOps[Self <: ProvisionedProductPlanDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationArns(value: NotificationArns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PathId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PathId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlanId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlanId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlanName(value: ProvisionedProductPlanName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlanName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlanType(value: ProvisionedProductPlanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlanType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisionProductId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisionProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionProductId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisionProductName(value: ProvisionedProductName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionProductName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisionProductName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionProductName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisioningArtifactId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisioningArtifactId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisioningParameters(value: UpdateProvisioningParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisioningParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ProvisionedProductPlanStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: StatusMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Tags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

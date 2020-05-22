@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
   * The actual libraries are stored in some object - a sub folder, or a sub storage, for example - below the root location.
   * @since OOo 2.3
   */
-@js.native
 trait XPersistentLibraryContainer
   extends XLibraryContainer2
      with XModifiable {
@@ -26,7 +25,7 @@ trait XPersistentLibraryContainer
     * denotes the name of the sub location where the container elements are actually stored.
     * @see RootLocation
     */
-  var ContainerLocationName: String = js.native
+  var ContainerLocationName: String
   /**
     * denotes the root location associated with the container.
     *
@@ -37,14 +36,14 @@ trait XPersistentLibraryContainer
     * {@link ContainerLocationName} .
     * @see ContainerLocationName
     */
-  var RootLocation: js.Any = js.native
+  var RootLocation: js.Any
   /**
     * stores the libraries to the current location.
     * @see RootLocation
     * @see ContainerLocationName
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs during storing.
     */
-  def storeLibraries(): Unit = js.native
+  def storeLibraries(): Unit
 }
 
 object XPersistentLibraryContainer {
@@ -81,31 +80,5 @@ object XPersistentLibraryContainer {
     val __obj = js.Dynamic.literal(ContainerLocationName = ContainerLocationName.asInstanceOf[js.Any], ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], RootLocation = RootLocation.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addModifyListener = js.Any.fromFunction1(addModifyListener), createLibrary = js.Any.fromFunction1(createLibrary), createLibraryLink = js.Any.fromFunction3(createLibraryLink), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), getLibraryLinkURL = js.Any.fromFunction1(getLibraryLinkURL), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), isLibraryLink = js.Any.fromFunction1(isLibraryLink), isLibraryLoaded = js.Any.fromFunction1(isLibraryLoaded), isLibraryReadOnly = js.Any.fromFunction1(isLibraryReadOnly), isModified = js.Any.fromFunction0(isModified), loadLibrary = js.Any.fromFunction1(loadLibrary), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeLibrary = js.Any.fromFunction1(removeLibrary), removeModifyListener = js.Any.fromFunction1(removeModifyListener), renameLibrary = js.Any.fromFunction2(renameLibrary), setLibraryReadOnly = js.Any.fromFunction2(setLibraryReadOnly), setModified = js.Any.fromFunction1(setModified), storeLibraries = js.Any.fromFunction0(storeLibraries))
     __obj.asInstanceOf[XPersistentLibraryContainer]
   }
-  @scala.inline
-  implicit class XPersistentLibraryContainerOps[Self <: XPersistentLibraryContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerLocationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerLocationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRootLocation(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStoreLibraries(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeLibraries")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

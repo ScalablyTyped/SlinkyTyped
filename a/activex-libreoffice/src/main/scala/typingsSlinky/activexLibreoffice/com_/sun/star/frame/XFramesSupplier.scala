@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * provides access to sub frames of current one
   * @see XFrames
   */
-@js.native
 trait XFramesSupplier extends XFrame {
   /**
     * gets the current active frame of this container (not of any other available supplier)
@@ -21,12 +20,12 @@ trait XFramesSupplier extends XFrame {
     * this frame is returned.
     * @returns the {@link Frame} which is active within this frame.
     */
-  var ActiveFrame: XFrame = js.native
+  var ActiveFrame: XFrame
   /**
     * provides access to this container and to all other {@link XFramesSupplier} which are available from this node of frame tree
     * @returns the collection of frames which is represented by a {@link FramesContainer} .
     */
-  val Frames: XFrames = js.native
+  val Frames: XFrames
   /**
     * gets the current active frame of this container (not of any other available supplier)
     *
@@ -35,12 +34,12 @@ trait XFramesSupplier extends XFrame {
     * this frame is returned.
     * @returns the {@link Frame} which is active within this frame.
     */
-  def getActiveFrame(): XFrame = js.native
+  def getActiveFrame(): XFrame
   /**
     * provides access to this container and to all other {@link XFramesSupplier} which are available from this node of frame tree
     * @returns the collection of frames which is represented by a {@link FramesContainer} .
     */
-  def getFrames(): XFrames = js.native
+  def getFrames(): XFrames
   /**
     * is called on activation of a direct sub-frame.
     *
@@ -53,7 +52,7 @@ trait XFramesSupplier extends XFrame {
     * Note: Given parameter **Frame** must already exist inside the container (e.g., inserted by using {@link XFrames.append()} )
     * @param Frame the new active child frame inside this container
     */
-  def setActiveFrame(Frame: XFrame): Unit = js.native
+  def setActiveFrame(Frame: XFrame): Unit
 }
 
 object XFramesSupplier {
@@ -96,43 +95,5 @@ object XFramesSupplier {
     val __obj = js.Dynamic.literal(ActiveFrame = ActiveFrame.asInstanceOf[js.Any], ComponentWindow = ComponentWindow.asInstanceOf[js.Any], ContainerWindow = ContainerWindow.asInstanceOf[js.Any], Controller = Controller.asInstanceOf[js.Any], Creator = Creator.asInstanceOf[js.Any], Frames = Frames.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), activate = js.Any.fromFunction0(activate), addEventListener = js.Any.fromFunction1(addEventListener), addFrameActionListener = js.Any.fromFunction1(addFrameActionListener), contextChanged = js.Any.fromFunction0(contextChanged), deactivate = js.Any.fromFunction0(deactivate), dispose = js.Any.fromFunction0(dispose), findFrame = js.Any.fromFunction2(findFrame), getActiveFrame = js.Any.fromFunction0(getActiveFrame), getComponentWindow = js.Any.fromFunction0(getComponentWindow), getContainerWindow = js.Any.fromFunction0(getContainerWindow), getController = js.Any.fromFunction0(getController), getCreator = js.Any.fromFunction0(getCreator), getFrames = js.Any.fromFunction0(getFrames), getName = js.Any.fromFunction0(getName), initialize = js.Any.fromFunction1(initialize), isActive = js.Any.fromFunction0(isActive), isTop = js.Any.fromFunction0(isTop), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removeFrameActionListener = js.Any.fromFunction1(removeFrameActionListener), setActiveFrame = js.Any.fromFunction1(setActiveFrame), setComponent = js.Any.fromFunction2(setComponent), setCreator = js.Any.fromFunction1(setCreator), setName = js.Any.fromFunction1(setName))
     __obj.asInstanceOf[XFramesSupplier]
   }
-  @scala.inline
-  implicit class XFramesSupplierOps[Self <: XFramesSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveFrame(value: XFrame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveFrame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrames(value: XFrames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetActiveFrame(value: () => XFrame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveFrame")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFrames(value: () => XFrames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFrames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetActiveFrame(value: XFrame => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setActiveFrame")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

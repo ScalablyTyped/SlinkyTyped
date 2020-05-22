@@ -4,76 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BackendServiceIAP extends js.Object {
-  var enabled: js.UndefOr[Boolean] = js.native
-  var oauth2ClientId: js.UndefOr[String] = js.native
-  var oauth2ClientSecret: js.UndefOr[String] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var oauth2ClientId: js.UndefOr[String] = js.undefined
+  var oauth2ClientSecret: js.UndefOr[String] = js.undefined
   /** [Output Only] SHA256 hash value for the field oauth2_client_secret above. */
-  var oauth2ClientSecretSha256: js.UndefOr[String] = js.native
+  var oauth2ClientSecretSha256: js.UndefOr[String] = js.undefined
 }
 
 object BackendServiceIAP {
   @scala.inline
-  def apply(): BackendServiceIAP = {
+  def apply(
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    oauth2ClientId: String = null,
+    oauth2ClientSecret: String = null,
+    oauth2ClientSecretSha256: String = null
+  ): BackendServiceIAP = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (oauth2ClientId != null) __obj.updateDynamic("oauth2ClientId")(oauth2ClientId.asInstanceOf[js.Any])
+    if (oauth2ClientSecret != null) __obj.updateDynamic("oauth2ClientSecret")(oauth2ClientSecret.asInstanceOf[js.Any])
+    if (oauth2ClientSecretSha256 != null) __obj.updateDynamic("oauth2ClientSecretSha256")(oauth2ClientSecretSha256.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackendServiceIAP]
   }
-  @scala.inline
-  implicit class BackendServiceIAPOps[Self <: BackendServiceIAP] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauth2ClientId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2ClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauth2ClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2ClientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauth2ClientSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2ClientSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauth2ClientSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2ClientSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauth2ClientSecretSha256(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2ClientSecretSha256")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauth2ClientSecretSha256: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2ClientSecretSha256")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

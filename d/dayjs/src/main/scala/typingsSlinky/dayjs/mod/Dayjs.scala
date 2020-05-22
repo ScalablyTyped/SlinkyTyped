@@ -10,8 +10,9 @@ import scala.scalajs.js.annotation._
 
 @JSImport("dayjs", "Dayjs")
 @js.native
-class Dayjs () extends ConfigType {
+class Dayjs () extends js.Object {
   def this(config: ConfigType) = this()
+  def add(argument: js.Object): typingsSlinky.dayjs.objectSupportMod.dayjsAugmentingMod.Dayjs = js.native
   def add(value: Double, unit: OpUnitType): Dayjs = js.native
   def add(value: Double, unit: QUnitType): typingsSlinky.dayjs.quarterOfYearMod.dayjsAugmentingMod.Dayjs = js.native
   def calendar(): String = js.native
@@ -62,8 +63,11 @@ class Dayjs () extends ConfigType {
   def isSameOrAfter(date: ConfigType, unit: OpUnitType): Boolean = js.native
   def isSameOrBefore(date: ConfigType): Boolean = js.native
   def isSameOrBefore(date: ConfigType, unit: OpUnitType): Boolean = js.native
+  def isToday(): Boolean = js.native
+  def isTomorrow(): Boolean = js.native
   def isUTC(): Boolean = js.native
   def isValid(): Boolean = js.native
+  def isYesterday(): Boolean = js.native
   def isoWeek(): Double = js.native
   def isoWeek(value: Double): typingsSlinky.dayjs.isoWeekMod.dayjsAugmentingMod.Dayjs = js.native
   def isoWeekYear(): Double = js.native
@@ -87,10 +91,12 @@ class Dayjs () extends ConfigType {
   def quarter(quarter: Double): typingsSlinky.dayjs.quarterOfYearMod.dayjsAugmentingMod.Dayjs = js.native
   def second(): Double = js.native
   def second(value: Double): Dayjs = js.native
+  def set(argument: js.Object): typingsSlinky.dayjs.objectSupportMod.dayjsAugmentingMod.Dayjs = js.native
   def set(unit: UnitType, value: Double): Dayjs = js.native
   def startOf(unit: ISOUnitType): typingsSlinky.dayjs.isoWeekMod.dayjsAugmentingMod.Dayjs = js.native
   def startOf(unit: OpUnitType): Dayjs = js.native
   def startOf(unit: QUnitType): typingsSlinky.dayjs.quarterOfYearMod.dayjsAugmentingMod.Dayjs = js.native
+  def subtract(argument: js.Object): typingsSlinky.dayjs.objectSupportMod.dayjsAugmentingMod.Dayjs = js.native
   def subtract(value: Double, unit: OpUnitType): Dayjs = js.native
   def subtract(value: Double, unit: QUnitType): typingsSlinky.dayjs.quarterOfYearMod.dayjsAugmentingMod.Dayjs = js.native
   def to(compared: ConfigType): String = js.native

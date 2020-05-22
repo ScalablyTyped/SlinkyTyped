@@ -12,19 +12,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenDialogSyncOptions extends js.Object {
   /**
     * Custom label for the confirmation button, when left empty the default label will
     * be used.
     */
-  var buttonLabel: js.UndefOr[String] = js.native
-  var defaultPath: js.UndefOr[String] = js.native
-  var filters: js.UndefOr[js.Array[FileFilter]] = js.native
+  var buttonLabel: js.UndefOr[String] = js.undefined
+  var defaultPath: js.UndefOr[String] = js.undefined
+  var filters: js.UndefOr[js.Array[FileFilter]] = js.undefined
   /**
     * Message to display above input boxes.
     */
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String] = js.undefined
   /**
     * Contains which features the dialog should use. The following values are
     * supported:
@@ -33,115 +32,36 @@ trait OpenDialogSyncOptions extends js.Object {
     js.Array[
       openFile | openDirectory | multiSelections | showHiddenFiles | createDirectory | promptToCreate | noResolveAliases | treatPackageAsDirectory
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Create when packaged for the Mac App Store.
     */
-  var securityScopedBookmarks: js.UndefOr[Boolean] = js.native
-  var title: js.UndefOr[String] = js.native
+  var securityScopedBookmarks: js.UndefOr[Boolean] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object OpenDialogSyncOptions {
   @scala.inline
-  def apply(): OpenDialogSyncOptions = {
+  def apply(
+    buttonLabel: String = null,
+    defaultPath: String = null,
+    filters: js.Array[FileFilter] = null,
+    message: String = null,
+    properties: js.Array[
+      openFile | openDirectory | multiSelections | showHiddenFiles | createDirectory | promptToCreate | noResolveAliases | treatPackageAsDirectory
+    ] = null,
+    securityScopedBookmarks: js.UndefOr[Boolean] = js.undefined,
+    title: String = null
+  ): OpenDialogSyncOptions = {
     val __obj = js.Dynamic.literal()
+    if (buttonLabel != null) __obj.updateDynamic("buttonLabel")(buttonLabel.asInstanceOf[js.Any])
+    if (defaultPath != null) __obj.updateDynamic("defaultPath")(defaultPath.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (!js.isUndefined(securityScopedBookmarks)) __obj.updateDynamic("securityScopedBookmarks")(securityScopedBookmarks.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenDialogSyncOptions]
   }
-  @scala.inline
-  implicit class OpenDialogSyncOptionsOps[Self <: OpenDialogSyncOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withButtonLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: js.Array[FileFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(
-      value: js.Array[
-          openFile | openDirectory | multiSelections | showHiddenFiles | createDirectory | promptToCreate | noResolveAliases | treatPackageAsDirectory
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityScopedBookmarks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityScopedBookmarks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityScopedBookmarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityScopedBookmarks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -39,65 +39,18 @@ trait SchemaScheduling extends js.Object {
 
 object SchemaScheduling {
   @scala.inline
-  def apply(): SchemaScheduling = {
+  def apply(
+    automaticRestart: js.UndefOr[Boolean] = js.undefined,
+    nodeAffinities: js.Array[SchemaSchedulingNodeAffinity] = null,
+    onHostMaintenance: String = null,
+    preemptible: js.UndefOr[Boolean] = js.undefined
+  ): SchemaScheduling = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(automaticRestart)) __obj.updateDynamic("automaticRestart")(automaticRestart.get.asInstanceOf[js.Any])
+    if (nodeAffinities != null) __obj.updateDynamic("nodeAffinities")(nodeAffinities.asInstanceOf[js.Any])
+    if (onHostMaintenance != null) __obj.updateDynamic("onHostMaintenance")(onHostMaintenance.asInstanceOf[js.Any])
+    if (!js.isUndefined(preemptible)) __obj.updateDynamic("preemptible")(preemptible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScheduling]
   }
-  @scala.inline
-  implicit class SchemaSchedulingOps[Self <: SchemaScheduling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomaticRestart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticRestart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticRestart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticRestart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeAffinities(value: js.Array[SchemaSchedulingNodeAffinity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeAffinities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeAffinities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeAffinities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHostMaintenance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHostMaintenance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnHostMaintenance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHostMaintenance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreemptible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreemptible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

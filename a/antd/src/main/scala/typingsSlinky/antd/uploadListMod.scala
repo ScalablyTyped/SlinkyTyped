@@ -5,8 +5,8 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.anon.ListType
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.anon.IsImageUrl
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.uploadInterfaceMod.UploadFile
 import typingsSlinky.antd.uploadInterfaceMod.UploadListProps
 import typingsSlinky.react.mod.Component
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
 object uploadListMod extends js.Object {
   @js.native
   trait UploadList
-    extends Component[UploadListProps, js.Any, js.Any] {
+    extends Component[UploadListProps[js.Any], js.Any, js.Any] {
     @JSName("componentDidUpdate")
     def componentDidUpdate_MUploadList(): Unit = js.native
     def handleActionIconRender(customIcon: TagMod[Any], callback: js.Function0[Unit]): ReactElement = js.native
@@ -37,7 +37,7 @@ object uploadListMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: ListType = js.native
+    var defaultProps: IsImageUrl = js.native
   }
   
 }

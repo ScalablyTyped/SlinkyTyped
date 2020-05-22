@@ -12,8 +12,21 @@ trait Options extends js.Object
 
 object Options {
   @scala.inline
-  implicit def apply(value: AbsoluteOptions): Options = value.asInstanceOf[Options]
+  def AbsoluteOptions(
+    height: Double,
+    width: Double,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): Options = {
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Options]
+  }
   @scala.inline
-  implicit def apply(value: Region): Options = value.asInstanceOf[Options]
+  def Region(xmax: Double, xmin: Double, ymax: Double, ymin: Double): Options = {
+    val __obj = js.Dynamic.literal(xmax = xmax.asInstanceOf[js.Any], xmin = xmin.asInstanceOf[js.Any], ymax = ymax.asInstanceOf[js.Any], ymin = ymin.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Options]
+  }
 }
 

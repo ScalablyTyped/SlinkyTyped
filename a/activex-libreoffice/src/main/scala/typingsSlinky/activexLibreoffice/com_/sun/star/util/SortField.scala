@@ -8,14 +8,13 @@ import scala.scalajs.js.annotation._
   * describes a single field in a sort descriptor.
   * @deprecated Deprecated
   */
-@js.native
 trait SortField extends js.Object {
   /** index of the field in the table; 0-based. */
-  var Field: Double = js.native
+  var Field: Double
   /** type of contents in the field. */
-  var FieldType: SortFieldType = js.native
+  var FieldType: SortFieldType
   /** `TRUE` if data are sorted in ascending order, `FALSE` if in descending order. */
-  var SortAscending: Boolean = js.native
+  var SortAscending: Boolean
 }
 
 object SortField {
@@ -24,31 +23,5 @@ object SortField {
     val __obj = js.Dynamic.literal(Field = Field.asInstanceOf[js.Any], FieldType = FieldType.asInstanceOf[js.Any], SortAscending = SortAscending.asInstanceOf[js.Any])
     __obj.asInstanceOf[SortField]
   }
-  @scala.inline
-  implicit class SortFieldOps[Self <: SortField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldType(value: SortFieldType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortAscending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortAscending")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

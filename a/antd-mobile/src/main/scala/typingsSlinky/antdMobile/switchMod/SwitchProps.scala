@@ -6,75 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SwitchProps extends SwitchPropsType {
-  var className: js.UndefOr[String] = js.native
-  var platform: js.UndefOr[String] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var platform: js.UndefOr[String] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object SwitchProps {
   @scala.inline
-  def apply(): SwitchProps = {
+  def apply(
+    checked: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    color: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    onChange: /* checked */ Boolean => Unit = null,
+    onClick: /* checked */ js.UndefOr[Boolean] => Unit = null,
+    platform: String = null,
+    prefixCls: String = null,
+    style: CSSProperties = null
+  ): SwitchProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwitchProps]
   }
-  @scala.inline
-  implicit class SwitchPropsOps[Self <: SwitchProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

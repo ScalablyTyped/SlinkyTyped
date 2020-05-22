@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DeleteDistributionConfigurationRequest extends js.Object {
   /**
-    *  The Amazon Resource Name (ARN) of the distribution configuration to delete. 
+    * The Amazon Resource Name (ARN) of the distribution configuration to delete. 
     */
   var distributionConfigurationArn: DistributionConfigurationArn = js.native
 }
@@ -18,19 +18,5 @@ object DeleteDistributionConfigurationRequest {
     val __obj = js.Dynamic.literal(distributionConfigurationArn = distributionConfigurationArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteDistributionConfigurationRequest]
   }
-  @scala.inline
-  implicit class DeleteDistributionConfigurationRequestOps[Self <: DeleteDistributionConfigurationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDistributionConfigurationArn(value: DistributionConfigurationArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distributionConfigurationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -27,53 +27,16 @@ trait SchemaErrorSummary extends js.Object {
 
 object SchemaErrorSummary {
   @scala.inline
-  def apply(): SchemaErrorSummary = {
+  def apply(
+    errorCode: String = null,
+    errorCount: String = null,
+    errorLogEntries: js.Array[SchemaErrorLogEntry] = null
+  ): SchemaErrorSummary = {
     val __obj = js.Dynamic.literal()
+    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
+    if (errorCount != null) __obj.updateDynamic("errorCount")(errorCount.asInstanceOf[js.Any])
+    if (errorLogEntries != null) __obj.updateDynamic("errorLogEntries")(errorLogEntries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaErrorSummary]
   }
-  @scala.inline
-  implicit class SchemaErrorSummaryOps[Self <: SchemaErrorSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorLogEntries(value: js.Array[SchemaErrorLogEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorLogEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorLogEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorLogEntries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

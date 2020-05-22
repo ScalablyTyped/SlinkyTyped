@@ -30,77 +30,20 @@ trait LoadBalancerTlsCertificateDomainValidationRecord extends js.Object {
 
 object LoadBalancerTlsCertificateDomainValidationRecord {
   @scala.inline
-  def apply(): LoadBalancerTlsCertificateDomainValidationRecord = {
+  def apply(
+    domainName: DomainName = null,
+    name: NonEmptyString = null,
+    `type`: NonEmptyString = null,
+    validationStatus: LoadBalancerTlsCertificateDomainStatus = null,
+    value: NonEmptyString = null
+  ): LoadBalancerTlsCertificateDomainValidationRecord = {
     val __obj = js.Dynamic.literal()
+    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (validationStatus != null) __obj.updateDynamic("validationStatus")(validationStatus.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerTlsCertificateDomainValidationRecord]
   }
-  @scala.inline
-  implicit class LoadBalancerTlsCertificateDomainValidationRecordOps[Self <: LoadBalancerTlsCertificateDomainValidationRecord] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainName(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationStatus(value: LoadBalancerTlsCertificateDomainStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

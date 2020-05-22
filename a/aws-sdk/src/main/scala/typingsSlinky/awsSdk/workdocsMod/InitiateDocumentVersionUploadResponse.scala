@@ -18,41 +18,11 @@ trait InitiateDocumentVersionUploadResponse extends js.Object {
 
 object InitiateDocumentVersionUploadResponse {
   @scala.inline
-  def apply(): InitiateDocumentVersionUploadResponse = {
+  def apply(Metadata: DocumentMetadata = null, UploadMetadata: UploadMetadata = null): InitiateDocumentVersionUploadResponse = {
     val __obj = js.Dynamic.literal()
+    if (Metadata != null) __obj.updateDynamic("Metadata")(Metadata.asInstanceOf[js.Any])
+    if (UploadMetadata != null) __obj.updateDynamic("UploadMetadata")(UploadMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitiateDocumentVersionUploadResponse]
   }
-  @scala.inline
-  implicit class InitiateDocumentVersionUploadResponseOps[Self <: InitiateDocumentVersionUploadResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetadata(value: DocumentMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadMetadata(value: UploadMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

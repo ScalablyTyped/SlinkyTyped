@@ -81,4 +81,10 @@ package object elbMod {
   type TagValue = java.lang.String
   type UnhealthyThreshold = scala.Double
   type VPCId = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2012-06-01`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.elbMod._apiVersion | java.lang.String
 }

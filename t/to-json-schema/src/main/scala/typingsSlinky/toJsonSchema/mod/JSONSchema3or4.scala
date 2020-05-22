@@ -10,515 +10,133 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JSONSchema3or4
   extends /* k */ StringDictionary[js.Any] {
   @JSName("$ref")
-  var $ref: js.UndefOr[String] = js.native
+  var $ref: js.UndefOr[String] = js.undefined
   @JSName("$schema")
-  var $schema: js.UndefOr[JSONSchema4Version] = js.native
-  var additionalItems: js.UndefOr[Boolean | JSONSchema3or4] = js.native
-  var additionalProperties: js.UndefOr[Boolean | JSONSchema3or4] = js.native
-  var allOf: js.UndefOr[js.Array[JSONSchema4]] = js.native
-  var anyOf: js.UndefOr[js.Array[JSONSchema4]] = js.native
-  var default: js.UndefOr[JSONSchema4Type] = js.native
-  var definitions: js.UndefOr[StringDictionary[JSONSchema4]] = js.native
-  var dependencies: js.UndefOr[StringDictionary[JSONSchema3or4 | String | js.Array[String]]] = js.native
-  var description: js.UndefOr[String] = js.native
+  var $schema: js.UndefOr[JSONSchema4Version] = js.undefined
+  var additionalItems: js.UndefOr[Boolean | JSONSchema3or4] = js.undefined
+  var additionalProperties: js.UndefOr[Boolean | JSONSchema3or4] = js.undefined
+  var allOf: js.UndefOr[js.Array[JSONSchema4]] = js.undefined
+  var anyOf: js.UndefOr[js.Array[JSONSchema4]] = js.undefined
+  var default: js.UndefOr[JSONSchema4Type] = js.undefined
+  var definitions: js.UndefOr[StringDictionary[JSONSchema4]] = js.undefined
+  var dependencies: js.UndefOr[StringDictionary[JSONSchema3or4 | String | js.Array[String]]] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
   /** JSON Schema 3 only */
-  var disallow: js.UndefOr[String | (js.Array[String | JSONSchema3or4])] = js.native
+  var disallow: js.UndefOr[String | (js.Array[String | JSONSchema3or4])] = js.undefined
   /** JSON Schema 3 uses `divisibleBy` instead of `multipleOf`. */
-  var divisibleBy: js.UndefOr[Double] = js.native
-  var enum: js.UndefOr[js.Array[JSONSchema4Type]] = js.native
-  var exclusiveMaximum: js.UndefOr[Boolean] = js.native
-  var exclusiveMinimum: js.UndefOr[Boolean] = js.native
-  var `extends`: js.UndefOr[JSONSchema3or4 | js.Array[JSONSchema3or4]] = js.native
-  var format: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var items: js.UndefOr[JSONSchema3or4 | js.Array[JSONSchema3or4]] = js.native
-  var maxItems: js.UndefOr[Double] = js.native
-  var maxLength: js.UndefOr[Double] = js.native
-  var maxProperties: js.UndefOr[Double] = js.native
-  var maximum: js.UndefOr[Double] = js.native
-  var minItems: js.UndefOr[Double] = js.native
-  var minLength: js.UndefOr[Double] = js.native
-  var minProperties: js.UndefOr[Double] = js.native
-  var minimum: js.UndefOr[Double] = js.native
-  var multipleOf: js.UndefOr[Double] = js.native
-  var not: js.UndefOr[JSONSchema4] = js.native
-  var oneOf: js.UndefOr[js.Array[JSONSchema4]] = js.native
-  var pattern: js.UndefOr[String] = js.native
-  var patternProperties: js.UndefOr[StringDictionary[JSONSchema3or4]] = js.native
-  var properties: js.UndefOr[StringDictionary[JSONSchema3or4]] = js.native
-  var required: js.UndefOr[Boolean | `false` | js.Array[String]] = js.native
-  var title: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[JSONSchema4TypeName | js.Array[JSONSchema4TypeName]] = js.native
-  var uniqueItems: js.UndefOr[Boolean] = js.native
+  var divisibleBy: js.UndefOr[Double] = js.undefined
+  var enum: js.UndefOr[js.Array[JSONSchema4Type]] = js.undefined
+  var exclusiveMaximum: js.UndefOr[Boolean] = js.undefined
+  var exclusiveMinimum: js.UndefOr[Boolean] = js.undefined
+  var `extends`: js.UndefOr[JSONSchema3or4 | js.Array[JSONSchema3or4]] = js.undefined
+  var format: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var items: js.UndefOr[JSONSchema3or4 | js.Array[JSONSchema3or4]] = js.undefined
+  var maxItems: js.UndefOr[Double] = js.undefined
+  var maxLength: js.UndefOr[Double] = js.undefined
+  var maxProperties: js.UndefOr[Double] = js.undefined
+  var maximum: js.UndefOr[Double] = js.undefined
+  var minItems: js.UndefOr[Double] = js.undefined
+  var minLength: js.UndefOr[Double] = js.undefined
+  var minProperties: js.UndefOr[Double] = js.undefined
+  var minimum: js.UndefOr[Double] = js.undefined
+  var multipleOf: js.UndefOr[Double] = js.undefined
+  var not: js.UndefOr[JSONSchema4] = js.undefined
+  var oneOf: js.UndefOr[js.Array[JSONSchema4]] = js.undefined
+  var pattern: js.UndefOr[String] = js.undefined
+  var patternProperties: js.UndefOr[StringDictionary[JSONSchema3or4]] = js.undefined
+  var properties: js.UndefOr[StringDictionary[JSONSchema3or4]] = js.undefined
+  var required: js.UndefOr[Boolean | `false` | js.Array[String]] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[JSONSchema4TypeName | js.Array[JSONSchema4TypeName]] = js.undefined
+  var uniqueItems: js.UndefOr[Boolean] = js.undefined
 }
 
 object JSONSchema3or4 {
   @scala.inline
-  def apply(): JSONSchema3or4 = {
+  def apply(
+    $ref: String = null,
+    $schema: JSONSchema4Version = null,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    additionalItems: Boolean | JSONSchema3or4 = null,
+    additionalProperties: Boolean | JSONSchema3or4 = null,
+    allOf: js.Array[JSONSchema4] = null,
+    anyOf: js.Array[JSONSchema4] = null,
+    default: js.UndefOr[Null | JSONSchema4Type] = js.undefined,
+    definitions: StringDictionary[JSONSchema4] = null,
+    dependencies: StringDictionary[JSONSchema3or4 | String | js.Array[String]] = null,
+    description: String = null,
+    disallow: String | (js.Array[String | JSONSchema3or4]) = null,
+    divisibleBy: js.UndefOr[Double] = js.undefined,
+    enum: js.Array[JSONSchema4Type] = null,
+    exclusiveMaximum: js.UndefOr[Boolean] = js.undefined,
+    exclusiveMinimum: js.UndefOr[Boolean] = js.undefined,
+    `extends`: JSONSchema3or4 | js.Array[JSONSchema3or4] = null,
+    format: String = null,
+    id: String = null,
+    items: JSONSchema3or4 | js.Array[JSONSchema3or4] = null,
+    maxItems: js.UndefOr[Double] = js.undefined,
+    maxLength: js.UndefOr[Double] = js.undefined,
+    maxProperties: js.UndefOr[Double] = js.undefined,
+    maximum: js.UndefOr[Double] = js.undefined,
+    minItems: js.UndefOr[Double] = js.undefined,
+    minLength: js.UndefOr[Double] = js.undefined,
+    minProperties: js.UndefOr[Double] = js.undefined,
+    minimum: js.UndefOr[Double] = js.undefined,
+    multipleOf: js.UndefOr[Double] = js.undefined,
+    not: JSONSchema4 = null,
+    oneOf: js.Array[JSONSchema4] = null,
+    pattern: String = null,
+    patternProperties: StringDictionary[JSONSchema3or4] = null,
+    properties: StringDictionary[JSONSchema3or4] = null,
+    required: Boolean | `false` | js.Array[String] = null,
+    title: String = null,
+    `type`: JSONSchema4TypeName | js.Array[JSONSchema4TypeName] = null,
+    uniqueItems: js.UndefOr[Boolean] = js.undefined
+  ): JSONSchema3or4 = {
     val __obj = js.Dynamic.literal()
+    if ($ref != null) __obj.updateDynamic("$ref")($ref.asInstanceOf[js.Any])
+    if ($schema != null) __obj.updateDynamic("$schema")($schema.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (additionalItems != null) __obj.updateDynamic("additionalItems")(additionalItems.asInstanceOf[js.Any])
+    if (additionalProperties != null) __obj.updateDynamic("additionalProperties")(additionalProperties.asInstanceOf[js.Any])
+    if (allOf != null) __obj.updateDynamic("allOf")(allOf.asInstanceOf[js.Any])
+    if (anyOf != null) __obj.updateDynamic("anyOf")(anyOf.asInstanceOf[js.Any])
+    if (!js.isUndefined(default)) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (definitions != null) __obj.updateDynamic("definitions")(definitions.asInstanceOf[js.Any])
+    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (disallow != null) __obj.updateDynamic("disallow")(disallow.asInstanceOf[js.Any])
+    if (!js.isUndefined(divisibleBy)) __obj.updateDynamic("divisibleBy")(divisibleBy.get.asInstanceOf[js.Any])
+    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
+    if (!js.isUndefined(exclusiveMaximum)) __obj.updateDynamic("exclusiveMaximum")(exclusiveMaximum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exclusiveMinimum)) __obj.updateDynamic("exclusiveMinimum")(exclusiveMinimum.get.asInstanceOf[js.Any])
+    if (`extends` != null) __obj.updateDynamic("extends")(`extends`.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxItems)) __obj.updateDynamic("maxItems")(maxItems.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLength)) __obj.updateDynamic("maxLength")(maxLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxProperties)) __obj.updateDynamic("maxProperties")(maxProperties.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximum)) __obj.updateDynamic("maximum")(maximum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minItems)) __obj.updateDynamic("minItems")(minItems.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minLength)) __obj.updateDynamic("minLength")(minLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minProperties)) __obj.updateDynamic("minProperties")(minProperties.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimum)) __obj.updateDynamic("minimum")(minimum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multipleOf)) __obj.updateDynamic("multipleOf")(multipleOf.get.asInstanceOf[js.Any])
+    if (not != null) __obj.updateDynamic("not")(not.asInstanceOf[js.Any])
+    if (oneOf != null) __obj.updateDynamic("oneOf")(oneOf.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (patternProperties != null) __obj.updateDynamic("patternProperties")(patternProperties.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(uniqueItems)) __obj.updateDynamic("uniqueItems")(uniqueItems.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSONSchema3or4]
   }
-  @scala.inline
-  implicit class JSONSchema3or4Ops[Self <: JSONSchema3or4] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$ref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$ref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$schema(value: JSONSchema4Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$schema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$schema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalItems(value: Boolean | JSONSchema3or4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalProperties(value: Boolean | JSONSchema3or4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllOf(value: js.Array[JSONSchema4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllOf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allOf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnyOf(value: js.Array[JSONSchema4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anyOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnyOf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anyOf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: JSONSchema4Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(null)
-        ret
-    }
-    @scala.inline
-    def withDefinitions(value: StringDictionary[JSONSchema4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefinitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: StringDictionary[JSONSchema3or4 | String | js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisallow(value: String | (js.Array[String | JSONSchema3or4])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disallow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisallow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disallow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDivisibleBy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("divisibleBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDivisibleBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("divisibleBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnum(value: js.Array[JSONSchema4Type]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclusiveMaximum(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveMaximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusiveMaximum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveMaximum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclusiveMinimum(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveMinimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusiveMinimum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveMinimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtends(value: JSONSchema3or4 | js.Array[JSONSchema3or4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extends")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtends: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extends")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: JSONSchema3or4 | js.Array[JSONSchema3or4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxProperties(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinProperties(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultipleOf(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultipleOf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleOf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNot(value: JSONSchema4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOneOf(value: js.Array[JSONSchema4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOneOf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneOf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatternProperties(value: StringDictionary[JSONSchema3or4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patternProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatternProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patternProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: StringDictionary[JSONSchema3or4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean | `false` | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: JSONSchema4TypeName | js.Array[JSONSchema4TypeName]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUniqueItems(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUniqueItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -55,89 +55,22 @@ trait SchemaGoogleCloudVideointelligenceV1beta2AnnotateVideoRequest extends js.O
 
 object SchemaGoogleCloudVideointelligenceV1beta2AnnotateVideoRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1beta2AnnotateVideoRequest = {
+  def apply(
+    features: js.Array[String] = null,
+    inputContent: String = null,
+    inputUri: String = null,
+    locationId: String = null,
+    outputUri: String = null,
+    videoContext: SchemaGoogleCloudVideointelligenceV1beta2VideoContext = null
+  ): SchemaGoogleCloudVideointelligenceV1beta2AnnotateVideoRequest = {
     val __obj = js.Dynamic.literal()
+    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
+    if (inputContent != null) __obj.updateDynamic("inputContent")(inputContent.asInstanceOf[js.Any])
+    if (inputUri != null) __obj.updateDynamic("inputUri")(inputUri.asInstanceOf[js.Any])
+    if (locationId != null) __obj.updateDynamic("locationId")(locationId.asInstanceOf[js.Any])
+    if (outputUri != null) __obj.updateDynamic("outputUri")(outputUri.asInstanceOf[js.Any])
+    if (videoContext != null) __obj.updateDynamic("videoContext")(videoContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2AnnotateVideoRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1beta2AnnotateVideoRequestOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2AnnotateVideoRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeatures(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoContext(value: SchemaGoogleCloudVideointelligenceV1beta2VideoContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoContext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

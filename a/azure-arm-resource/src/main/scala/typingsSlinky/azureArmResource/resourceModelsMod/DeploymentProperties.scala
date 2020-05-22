@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeploymentProperties extends js.Object {
   /**
     * The debug setting of the deployment.
     */
-  var debugSetting: js.UndefOr[DebugSetting] = js.native
+  var debugSetting: js.UndefOr[DebugSetting] = js.undefined
   /**
     * The mode that is used to deploy resources. This value can be either Incremental or Complete.
     * In Incremental mode, resources are deployed without deleting existing resources that are not
@@ -18,127 +17,55 @@ trait DeploymentProperties extends js.Object {
     * Complete mode as you may unintentionally delete resources. Possible values include:
     * 'Incremental', 'Complete'
     */
-  var mode: String = js.native
+  var mode: String
   /**
     * The deployment on error behavior.
     */
-  var onErrorDeployment: js.UndefOr[OnErrorDeployment] = js.native
+  var onErrorDeployment: js.UndefOr[OnErrorDeployment] = js.undefined
   /**
     * Name and value pairs that define the deployment parameters for the template. You use this
     * element when you want to provide the parameter values directly in the request rather than link
     * to an existing parameter file. Use either the parametersLink property or the parameters
     * property, but not both. It can be a JObject or a well formed JSON string.
     */
-  var parameters: js.UndefOr[js.Any] = js.native
+  var parameters: js.UndefOr[js.Any] = js.undefined
   /**
     * The URI of parameters file. You use this element to link to an existing parameters file. Use
     * either the parametersLink property or the parameters property, but not both.
     */
-  var parametersLink: js.UndefOr[ParametersLink] = js.native
+  var parametersLink: js.UndefOr[ParametersLink] = js.undefined
   /**
     * The template content. You use this element when you want to pass the template syntax directly
     * in the request rather than link to an existing template. It can be a JObject or well-formed
     * JSON string. Use either the templateLink property or the template property, but not both.
     */
-  var template: js.UndefOr[js.Any] = js.native
+  var template: js.UndefOr[js.Any] = js.undefined
   /**
     * The URI of the template. Use either the templateLink property or the template property, but
     * not both.
     */
-  var templateLink: js.UndefOr[TemplateLink] = js.native
+  var templateLink: js.UndefOr[TemplateLink] = js.undefined
 }
 
 object DeploymentProperties {
   @scala.inline
-  def apply(mode: String): DeploymentProperties = {
+  def apply(
+    mode: String,
+    debugSetting: DebugSetting = null,
+    onErrorDeployment: OnErrorDeployment = null,
+    parameters: js.Any = null,
+    parametersLink: ParametersLink = null,
+    template: js.Any = null,
+    templateLink: TemplateLink = null
+  ): DeploymentProperties = {
     val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any])
+    if (debugSetting != null) __obj.updateDynamic("debugSetting")(debugSetting.asInstanceOf[js.Any])
+    if (onErrorDeployment != null) __obj.updateDynamic("onErrorDeployment")(onErrorDeployment.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (parametersLink != null) __obj.updateDynamic("parametersLink")(parametersLink.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (templateLink != null) __obj.updateDynamic("templateLink")(templateLink.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentProperties]
   }
-  @scala.inline
-  implicit class DeploymentPropertiesOps[Self <: DeploymentProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebugSetting(value: DebugSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugSetting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnErrorDeployment(value: OnErrorDeployment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onErrorDeployment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnErrorDeployment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onErrorDeployment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParametersLink(value: ParametersLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parametersLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParametersLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parametersLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateLink(value: TemplateLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateLink")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

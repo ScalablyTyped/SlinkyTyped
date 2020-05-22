@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var configName: js.UndefOr[String] = js.native
+  var configName: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(configName: String = null): Options = {
     val __obj = js.Dynamic.literal()
+    if (configName != null) __obj.updateDynamic("configName")(configName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

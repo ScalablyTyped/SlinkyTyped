@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LogEventExecuteNext extends LogEvent {
-  val name: executeDotnext = js.native
-  val response: js.Any = js.native
-  val transactionID: Double = js.native
+  val name: executeDotnext
+  val response: js.Any
+  val transactionID: Double
 }
 
 object LogEventExecuteNext {
@@ -18,31 +17,5 @@ object LogEventExecuteNext {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any], transactionID = transactionID.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogEventExecuteNext]
   }
-  @scala.inline
-  implicit class LogEventExecuteNextOps[Self <: LogEventExecuteNext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: executeDotnext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResponse(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransactionID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

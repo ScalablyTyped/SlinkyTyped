@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeParameters */
-@js.native
 trait TSTypeAliasDeclaration
   extends ASTNode
      with DeclarationKind
@@ -26,13 +25,13 @@ trait TSTypeAliasDeclaration
      with PrintableKind
      with StatementKind
      with TSHasOptionalTypeParametersKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var declare: js.UndefOr[Boolean] = js.native
-  var id: IdentifierKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSTypeAliasDeclaration = js.native
-  var typeAnnotation: TSTypeKind = js.native
-  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var declare: js.UndefOr[Boolean] = js.undefined
+  var id: IdentifierKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSTypeAliasDeclaration
+  var typeAnnotation: TSTypeKind
+  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.undefined
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSTypeAliasDeclaration")

@@ -1,185 +1,42 @@
 package typingsSlinky.vexdb.requestObjectsMod
 
-import typingsSlinky.vexdb.responseObjectsMod.ResponseObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AwardsRequestObject extends RequestObject {
-  var limit_number: js.UndefOr[Double] = js.native
-  var limit_start: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[StringRequest] = js.native
-  var order: js.UndefOr[NumberRequest] = js.native
-  var season: js.UndefOr[StringRequest] = js.native
-  var single: js.UndefOr[Boolean] = js.native
-  var sku: js.UndefOr[StringRequest] = js.native
-  var team: js.UndefOr[StringRequest] = js.native
+  var limit_number: js.UndefOr[Double] = js.undefined
+  var limit_start: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[StringRequest] = js.undefined
+  var order: js.UndefOr[NumberRequest] = js.undefined
+  var season: js.UndefOr[StringRequest] = js.undefined
+  var single: js.UndefOr[Boolean] = js.undefined
+  var sku: js.UndefOr[StringRequest] = js.undefined
+  var team: js.UndefOr[StringRequest] = js.undefined
 }
 
 object AwardsRequestObject {
   @scala.inline
-  def apply(): AwardsRequestObject = {
+  def apply(
+    limit_number: js.UndefOr[Double] = js.undefined,
+    limit_start: js.UndefOr[Double] = js.undefined,
+    name: StringRequest = null,
+    order: NumberRequest = null,
+    season: StringRequest = null,
+    single: js.UndefOr[Boolean] = js.undefined,
+    sku: StringRequest = null,
+    team: StringRequest = null
+  ): AwardsRequestObject = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(limit_number)) __obj.updateDynamic("limit_number")(limit_number.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit_start)) __obj.updateDynamic("limit_start")(limit_start.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (season != null) __obj.updateDynamic("season")(season.asInstanceOf[js.Any])
+    if (!js.isUndefined(single)) __obj.updateDynamic("single")(single.get.asInstanceOf[js.Any])
+    if (sku != null) __obj.updateDynamic("sku")(sku.asInstanceOf[js.Any])
+    if (team != null) __obj.updateDynamic("team")(team.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwardsRequestObject]
   }
-  @scala.inline
-  implicit class AwardsRequestObjectOps[Self <: AwardsRequestObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLimit_number(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit_number: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit_number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit_start(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit_start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit_start: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit_start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withNameRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOrder(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeasonFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("season")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSeasonRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("season")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeason(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("season")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("season")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkuFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sku")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSkuRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sku")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSku(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sku")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSku: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sku")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeamFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTeamRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTeam(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

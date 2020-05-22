@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableOptions extends js.Object {
   /**
     * Buttons for the Table.
     * Currently at most 1 button is supported.
     * @public
     */
-  var buttons: js.UndefOr[GoogleActionsV2UiElementsButton | js.Array[GoogleActionsV2UiElementsButton]] = js.native
+  var buttons: js.UndefOr[GoogleActionsV2UiElementsButton | js.Array[GoogleActionsV2UiElementsButton]] = js.undefined
   /**
     * Headers and alignment of columns.
     *
@@ -22,7 +21,7 @@ trait TableOptions extends js.Object {
     * When provided as string array, just the header field is set per column.
     * @public
     */
-  var columnProperties: js.UndefOr[js.Array[TableColumn | String]] = js.native
+  var columnProperties: js.UndefOr[js.Array[TableColumn | String]] = js.undefined
   /**
     * Headers and alignment of columns with shortened name.
     * Alias of `columnProperties` with the additional capability of accepting a number type.
@@ -33,18 +32,18 @@ trait TableOptions extends js.Object {
     * When provided a number, it represents the number of elements per row.
     * @public
     */
-  var columns: js.UndefOr[(js.Array[TableColumn | String]) | Double] = js.native
+  var columns: js.UndefOr[(js.Array[TableColumn | String]) | Double] = js.undefined
   /**
     * Default dividerAfter for all rows.
     * Individual rows with `dividerAfter` set will override for that specific row.
     * @public
     */
-  var dividers: js.UndefOr[Boolean] = js.native
+  var dividers: js.UndefOr[Boolean] = js.undefined
   /**
     * Image associated with the table.
     * @public
     */
-  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.native
+  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.undefined
   /**
     * Row data of the table.
     *
@@ -55,124 +54,42 @@ trait TableOptions extends js.Object {
     * a web page with more data.
     * @public
     */
-  var rows: js.Array[TableRow | js.Array[String]] = js.native
+  var rows: js.Array[TableRow | js.Array[String]]
   /**
     * Subtitle for the table.
     * @public
     */
-  var subtitle: js.UndefOr[String] = js.native
+  var subtitle: js.UndefOr[String] = js.undefined
   /**
     * Overall title of the table.
     *
     * Must be set if subtitle is set.
     * @public
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object TableOptions {
   @scala.inline
-  def apply(rows: js.Array[TableRow | js.Array[String]]): TableOptions = {
+  def apply(
+    rows: js.Array[TableRow | js.Array[String]],
+    buttons: GoogleActionsV2UiElementsButton | js.Array[GoogleActionsV2UiElementsButton] = null,
+    columnProperties: js.Array[TableColumn | String] = null,
+    columns: (js.Array[TableColumn | String]) | Double = null,
+    dividers: js.UndefOr[Boolean] = js.undefined,
+    image: GoogleActionsV2UiElementsImage = null,
+    subtitle: String = null,
+    title: String = null
+  ): TableOptions = {
     val __obj = js.Dynamic.literal(rows = rows.asInstanceOf[js.Any])
+    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
+    if (columnProperties != null) __obj.updateDynamic("columnProperties")(columnProperties.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (!js.isUndefined(dividers)) __obj.updateDynamic("dividers")(dividers.get.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableOptions]
   }
-  @scala.inline
-  implicit class TableOptionsOps[Self <: TableOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRows(value: js.Array[TableRow | js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withButtons(value: GoogleActionsV2UiElementsButton | js.Array[GoogleActionsV2UiElementsButton]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnProperties(value: js.Array[TableColumn | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: (js.Array[TableColumn | String]) | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDividers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dividers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDividers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dividers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: GoogleActionsV2UiElementsImage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

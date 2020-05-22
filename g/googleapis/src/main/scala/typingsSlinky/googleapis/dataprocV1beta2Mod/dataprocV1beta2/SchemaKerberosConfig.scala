@@ -85,185 +85,38 @@ trait SchemaKerberosConfig extends js.Object {
 
 object SchemaKerberosConfig {
   @scala.inline
-  def apply(): SchemaKerberosConfig = {
+  def apply(
+    crossRealmTrustAdminServer: String = null,
+    crossRealmTrustKdc: String = null,
+    crossRealmTrustRealm: String = null,
+    crossRealmTrustSharedPasswordUri: String = null,
+    enableKerberos: js.UndefOr[Boolean] = js.undefined,
+    kdcDbKeyUri: String = null,
+    keyPasswordUri: String = null,
+    keystorePasswordUri: String = null,
+    keystoreUri: String = null,
+    kmsKeyUri: String = null,
+    rootPrincipalPasswordUri: String = null,
+    tgtLifetimeHours: js.UndefOr[Double] = js.undefined,
+    truststorePasswordUri: String = null,
+    truststoreUri: String = null
+  ): SchemaKerberosConfig = {
     val __obj = js.Dynamic.literal()
+    if (crossRealmTrustAdminServer != null) __obj.updateDynamic("crossRealmTrustAdminServer")(crossRealmTrustAdminServer.asInstanceOf[js.Any])
+    if (crossRealmTrustKdc != null) __obj.updateDynamic("crossRealmTrustKdc")(crossRealmTrustKdc.asInstanceOf[js.Any])
+    if (crossRealmTrustRealm != null) __obj.updateDynamic("crossRealmTrustRealm")(crossRealmTrustRealm.asInstanceOf[js.Any])
+    if (crossRealmTrustSharedPasswordUri != null) __obj.updateDynamic("crossRealmTrustSharedPasswordUri")(crossRealmTrustSharedPasswordUri.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableKerberos)) __obj.updateDynamic("enableKerberos")(enableKerberos.get.asInstanceOf[js.Any])
+    if (kdcDbKeyUri != null) __obj.updateDynamic("kdcDbKeyUri")(kdcDbKeyUri.asInstanceOf[js.Any])
+    if (keyPasswordUri != null) __obj.updateDynamic("keyPasswordUri")(keyPasswordUri.asInstanceOf[js.Any])
+    if (keystorePasswordUri != null) __obj.updateDynamic("keystorePasswordUri")(keystorePasswordUri.asInstanceOf[js.Any])
+    if (keystoreUri != null) __obj.updateDynamic("keystoreUri")(keystoreUri.asInstanceOf[js.Any])
+    if (kmsKeyUri != null) __obj.updateDynamic("kmsKeyUri")(kmsKeyUri.asInstanceOf[js.Any])
+    if (rootPrincipalPasswordUri != null) __obj.updateDynamic("rootPrincipalPasswordUri")(rootPrincipalPasswordUri.asInstanceOf[js.Any])
+    if (!js.isUndefined(tgtLifetimeHours)) __obj.updateDynamic("tgtLifetimeHours")(tgtLifetimeHours.get.asInstanceOf[js.Any])
+    if (truststorePasswordUri != null) __obj.updateDynamic("truststorePasswordUri")(truststorePasswordUri.asInstanceOf[js.Any])
+    if (truststoreUri != null) __obj.updateDynamic("truststoreUri")(truststoreUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaKerberosConfig]
   }
-  @scala.inline
-  implicit class SchemaKerberosConfigOps[Self <: SchemaKerberosConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCrossRealmTrustAdminServer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossRealmTrustAdminServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossRealmTrustAdminServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossRealmTrustAdminServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossRealmTrustKdc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossRealmTrustKdc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossRealmTrustKdc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossRealmTrustKdc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossRealmTrustRealm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossRealmTrustRealm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossRealmTrustRealm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossRealmTrustRealm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossRealmTrustSharedPasswordUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossRealmTrustSharedPasswordUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossRealmTrustSharedPasswordUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossRealmTrustSharedPasswordUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableKerberos(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKerberos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableKerberos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKerberos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKdcDbKeyUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kdcDbKeyUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKdcDbKeyUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kdcDbKeyUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyPasswordUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPasswordUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyPasswordUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPasswordUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeystorePasswordUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keystorePasswordUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeystorePasswordUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keystorePasswordUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeystoreUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keystoreUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeystoreUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keystoreUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootPrincipalPasswordUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPrincipalPasswordUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootPrincipalPasswordUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPrincipalPasswordUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTgtLifetimeHours(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tgtLifetimeHours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTgtLifetimeHours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tgtLifetimeHours")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruststorePasswordUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truststorePasswordUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruststorePasswordUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truststorePasswordUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruststoreUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truststoreUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruststoreUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truststoreUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

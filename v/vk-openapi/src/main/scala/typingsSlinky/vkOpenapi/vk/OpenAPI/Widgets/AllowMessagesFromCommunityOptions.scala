@@ -7,36 +7,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AllowMessagesFromCommunityOptions extends js.Object {
-  var height: js.UndefOr[`22` | `24` | `30`] = js.native
+  var height: js.UndefOr[`22` | `24` | `30`] = js.undefined
 }
 
 object AllowMessagesFromCommunityOptions {
   @scala.inline
-  def apply(): AllowMessagesFromCommunityOptions = {
+  def apply(height: `22` | `24` | `30` = null): AllowMessagesFromCommunityOptions = {
     val __obj = js.Dynamic.literal()
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllowMessagesFromCommunityOptions]
   }
-  @scala.inline
-  implicit class AllowMessagesFromCommunityOptionsOps[Self <: AllowMessagesFromCommunityOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: `22` | `24` | `30`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

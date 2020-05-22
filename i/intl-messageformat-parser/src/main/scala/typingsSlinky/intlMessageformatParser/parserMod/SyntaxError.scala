@@ -13,6 +13,10 @@ class SyntaxError protected () extends Error {
   var expected: js.Array[Expectation] = js.native
   var found: String | Null = js.native
   var location: IFileRange = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 
 /* static members */

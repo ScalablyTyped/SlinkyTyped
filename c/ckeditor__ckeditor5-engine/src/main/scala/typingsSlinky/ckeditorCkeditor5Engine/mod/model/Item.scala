@@ -11,10 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait Item extends js.Object
 
-object Item {
-  @scala.inline
-  implicit def apply(value: Node): Item = value.asInstanceOf[Item]
-  @scala.inline
-  implicit def apply(value: TextProxy): Item = value.asInstanceOf[Item]
-}
-

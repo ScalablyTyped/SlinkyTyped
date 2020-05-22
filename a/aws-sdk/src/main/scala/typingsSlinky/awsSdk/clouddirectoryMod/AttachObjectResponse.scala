@@ -14,29 +14,10 @@ trait AttachObjectResponse extends js.Object {
 
 object AttachObjectResponse {
   @scala.inline
-  def apply(): AttachObjectResponse = {
+  def apply(AttachedObjectIdentifier: ObjectIdentifier = null): AttachObjectResponse = {
     val __obj = js.Dynamic.literal()
+    if (AttachedObjectIdentifier != null) __obj.updateDynamic("AttachedObjectIdentifier")(AttachedObjectIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachObjectResponse]
   }
-  @scala.inline
-  implicit class AttachObjectResponseOps[Self <: AttachObjectResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachedObjectIdentifier(value: ObjectIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachedObjectIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachedObjectIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachedObjectIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

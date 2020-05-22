@@ -7,15 +7,14 @@ import scala.scalajs.js.annotation._
 /**
   * EndpointPort represents a Port used by an EndpointSlice
   */
-@js.native
 trait EndpointPort extends js.Object {
   /**
     * The application protocol for this port. This field follows standard Kubernetes label
     * syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and
     * http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed
-    * names. Default is empty string.
+    * names such as mycompany.com/my-custom-protocol.
     */
-  val appProtocol: String = js.native
+  val appProtocol: String
   /**
     * The name of this port. All ports in an EndpointSlice must have a unique name. If the
     * EndpointSlice is dervied from a Kubernetes service, this corresponds to the
@@ -24,16 +23,16 @@ trait EndpointPort extends js.Object {
     * characters or '-'. * must start and end with an alphanumeric character. Default is empty
     * string.
     */
-  val name: String = js.native
+  val name: String
   /**
     * The port number of the endpoint. If this is not specified, ports are not restricted and
     * must be interpreted in the context of the specific consumer.
     */
-  val port: Double = js.native
+  val port: Double
   /**
     * The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
     */
-  val protocol: String = js.native
+  val protocol: String
 }
 
 object EndpointPort {
@@ -42,37 +41,5 @@ object EndpointPort {
     val __obj = js.Dynamic.literal(appProtocol = appProtocol.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointPort]
   }
-  @scala.inline
-  implicit class EndpointPortOps[Self <: EndpointPort] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

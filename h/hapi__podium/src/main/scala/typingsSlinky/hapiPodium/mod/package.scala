@@ -5,6 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type Criteria = java.lang.String | typingsSlinky.hapiPodium.mod.CriteriaObject
+  /* Rewritten from type alias, can be one of: 
+    - java.lang.String
+    - typingsSlinky.hapiPodium.mod.EventOptionsObject
+    - typingsSlinky.hapiPodium.mod.Podium
+  */
+  type Events = typingsSlinky.hapiPodium.mod._Events | java.lang.String
   type Listener = js.Function3[
     /* data */ js.Any, 
     /* tags */ js.UndefOr[typingsSlinky.hapiPodium.mod.Tags], 

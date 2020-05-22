@@ -46,77 +46,20 @@ trait SchemaGridRange extends js.Object {
 
 object SchemaGridRange {
   @scala.inline
-  def apply(): SchemaGridRange = {
+  def apply(
+    endColumnIndex: js.UndefOr[Double] = js.undefined,
+    endRowIndex: js.UndefOr[Double] = js.undefined,
+    sheetId: js.UndefOr[Double] = js.undefined,
+    startColumnIndex: js.UndefOr[Double] = js.undefined,
+    startRowIndex: js.UndefOr[Double] = js.undefined
+  ): SchemaGridRange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(endColumnIndex)) __obj.updateDynamic("endColumnIndex")(endColumnIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(endRowIndex)) __obj.updateDynamic("endRowIndex")(endRowIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetId)) __obj.updateDynamic("sheetId")(sheetId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startColumnIndex)) __obj.updateDynamic("startColumnIndex")(startColumnIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startRowIndex)) __obj.updateDynamic("startRowIndex")(startRowIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGridRange]
   }
-  @scala.inline
-  implicit class SchemaGridRangeOps[Self <: SchemaGridRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndColumnIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endColumnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndColumnIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endColumnIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endRowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endRowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartColumnIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startColumnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartColumnIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startColumnIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRowIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	*
-	**/
+  *
+  **/
 @JSGlobal("PlayerFramework.MediaPlayer")
 @js.native
 class MediaPlayer protected ()

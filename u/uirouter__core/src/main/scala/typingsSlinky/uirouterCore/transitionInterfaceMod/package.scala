@@ -5,6 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object transitionInterfaceMod {
+  type HookFn = typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionHookFn | typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionStateHookFn | typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionCreateHookFn
+  type HookMatchCriterion = java.lang.String | typingsSlinky.uirouterCore.transitionInterfaceMod.IStateMatch | scala.Boolean
+  type HookResult = scala.Boolean | typingsSlinky.uirouterCore.targetStateMod.TargetState | scala.Unit | (js.Promise[
+    scala.Boolean | typingsSlinky.uirouterCore.targetStateMod.TargetState | scala.Unit
+  ])
   type IHookRegistration = js.Function3[
     /* matchCriteria */ typingsSlinky.uirouterCore.transitionInterfaceMod.HookMatchCriteria, 
     /* callback */ typingsSlinky.uirouterCore.transitionInterfaceMod.HookFn, 

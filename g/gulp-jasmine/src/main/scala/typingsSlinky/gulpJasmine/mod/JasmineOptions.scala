@@ -5,122 +5,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JasmineOptions extends js.Object {
   /**
     * Passes the config to Jasmine's loadConfig method.
     */
-  var config: js.UndefOr[js.Object] = js.native
+  var config: js.UndefOr[js.Object] = js.undefined
   /**
     * Stops the stream on failed tests.
     * @default true
     */
-  var errorOnFail: js.UndefOr[Boolean] = js.native
+  var errorOnFail: js.UndefOr[Boolean] = js.undefined
   /**
     * Include stack traces in failures in default reporter.
     * @default false
     */
-  var includeStackTrace: js.UndefOr[Boolean] = js.native
+  var includeStackTrace: js.UndefOr[Boolean] = js.undefined
   /**
     * Reporter(s) to use.
     */
-  var reporter: js.UndefOr[CustomReporter | js.Array[CustomReporter]] = js.native
+  var reporter: js.UndefOr[CustomReporter | js.Array[CustomReporter]] = js.undefined
   /**
     * Time to wait in milliseconds before a test automatically fails.
     * @default 5000
     */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
   /**
     *  Display spec names in default reporter.
     */
-  var verbose: js.UndefOr[Boolean] = js.native
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object JasmineOptions {
   @scala.inline
-  def apply(): JasmineOptions = {
+  def apply(
+    config: js.Object = null,
+    errorOnFail: js.UndefOr[Boolean] = js.undefined,
+    includeStackTrace: js.UndefOr[Boolean] = js.undefined,
+    reporter: CustomReporter | js.Array[CustomReporter] = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    verbose: js.UndefOr[Boolean] = js.undefined
+  ): JasmineOptions = {
     val __obj = js.Dynamic.literal()
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorOnFail)) __obj.updateDynamic("errorOnFail")(errorOnFail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeStackTrace)) __obj.updateDynamic("includeStackTrace")(includeStackTrace.get.asInstanceOf[js.Any])
+    if (reporter != null) __obj.updateDynamic("reporter")(reporter.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[JasmineOptions]
   }
-  @scala.inline
-  implicit class JasmineOptionsOps[Self <: JasmineOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorOnFail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorOnFail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorOnFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorOnFail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeStackTrace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeStackTrace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeStackTrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeStackTrace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReporter(value: CustomReporter | js.Array[CustomReporter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReporter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

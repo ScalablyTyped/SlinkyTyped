@@ -7,55 +7,31 @@ import scala.scalajs.js.annotation._
 /**
   * Options to pass to path.intersection()
   */
-@js.native
 trait IPathIntersectionOptions extends IPathIntersectionBaseOptions {
   /**
     * Optional boolean to only return deep intersections, i.e. not on an end point or tangent.
     */
-  var path1Offset: js.UndefOr[IPoint] = js.native
+  var path1Offset: js.UndefOr[IPoint] = js.undefined
   /**
     * Optional output variable which will be set to true if the paths are overlapped.
     */
-  var path2Offset: js.UndefOr[IPoint] = js.native
+  var path2Offset: js.UndefOr[IPoint] = js.undefined
 }
 
 object IPathIntersectionOptions {
   @scala.inline
-  def apply(): IPathIntersectionOptions = {
+  def apply(
+    excludeTangents: js.UndefOr[Boolean] = js.undefined,
+    out_AreOverlapped: js.UndefOr[Boolean] = js.undefined,
+    path1Offset: IPoint = null,
+    path2Offset: IPoint = null
+  ): IPathIntersectionOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(excludeTangents)) __obj.updateDynamic("excludeTangents")(excludeTangents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(out_AreOverlapped)) __obj.updateDynamic("out_AreOverlapped")(out_AreOverlapped.get.asInstanceOf[js.Any])
+    if (path1Offset != null) __obj.updateDynamic("path1Offset")(path1Offset.asInstanceOf[js.Any])
+    if (path2Offset != null) __obj.updateDynamic("path2Offset")(path2Offset.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPathIntersectionOptions]
   }
-  @scala.inline
-  implicit class IPathIntersectionOptionsOps[Self <: IPathIntersectionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath1Offset(value: IPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path1Offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath1Offset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path1Offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath2Offset(value: IPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path2Offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath2Offset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path2Offset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

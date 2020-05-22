@@ -5,27 +5,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bridge extends js.Object {
-  var Bridge: String = js.native
-  var EndpointID: String = js.native
-  var Gateway: String = js.native
-  var GlobalIPv6Address: String = js.native
-  var GlobalIPv6PrefixLen: Double = js.native
-  var HairpinMode: Boolean = js.native
-  var IPAddress: String = js.native
-  var IPPrefixLen: Double = js.native
-  var IPv6Gateway: String = js.native
-  var LinkLocalIPv6Address: String = js.native
-  var LinkLocalIPv6PrefixLen: Double = js.native
-  var MacAddress: String = js.native
-  var Networks: StringDictionary[Aliases] = js.native
-  var Node: js.UndefOr[Addr] = js.native
-  var Ports: StringDictionary[js.Array[HostIp]] = js.native
-  var SandboxID: String = js.native
-  var SandboxKey: String = js.native
-  var SecondaryIPAddresses: js.UndefOr[js.Any] = js.native
-  var SecondaryIPv6Addresses: js.UndefOr[js.Any] = js.native
+  var Bridge: String
+  var EndpointID: String
+  var Gateway: String
+  var GlobalIPv6Address: String
+  var GlobalIPv6PrefixLen: Double
+  var HairpinMode: Boolean
+  var IPAddress: String
+  var IPPrefixLen: Double
+  var IPv6Gateway: String
+  var LinkLocalIPv6Address: String
+  var LinkLocalIPv6PrefixLen: Double
+  var MacAddress: String
+  var Networks: StringDictionary[Aliases]
+  var Node: js.UndefOr[Addr] = js.undefined
+  var Ports: StringDictionary[js.Array[HostIp]]
+  var SandboxID: String
+  var SandboxKey: String
+  var SecondaryIPAddresses: js.UndefOr[js.Any] = js.undefined
+  var SecondaryIPv6Addresses: js.UndefOr[js.Any] = js.undefined
 }
 
 object Bridge {
@@ -46,150 +45,16 @@ object Bridge {
     Networks: StringDictionary[Aliases],
     Ports: StringDictionary[js.Array[HostIp]],
     SandboxID: String,
-    SandboxKey: String
+    SandboxKey: String,
+    Node: Addr = null,
+    SecondaryIPAddresses: js.Any = null,
+    SecondaryIPv6Addresses: js.Any = null
   ): Bridge = {
     val __obj = js.Dynamic.literal(Bridge = Bridge.asInstanceOf[js.Any], EndpointID = EndpointID.asInstanceOf[js.Any], Gateway = Gateway.asInstanceOf[js.Any], GlobalIPv6Address = GlobalIPv6Address.asInstanceOf[js.Any], GlobalIPv6PrefixLen = GlobalIPv6PrefixLen.asInstanceOf[js.Any], HairpinMode = HairpinMode.asInstanceOf[js.Any], IPAddress = IPAddress.asInstanceOf[js.Any], IPPrefixLen = IPPrefixLen.asInstanceOf[js.Any], IPv6Gateway = IPv6Gateway.asInstanceOf[js.Any], LinkLocalIPv6Address = LinkLocalIPv6Address.asInstanceOf[js.Any], LinkLocalIPv6PrefixLen = LinkLocalIPv6PrefixLen.asInstanceOf[js.Any], MacAddress = MacAddress.asInstanceOf[js.Any], Networks = Networks.asInstanceOf[js.Any], Ports = Ports.asInstanceOf[js.Any], SandboxID = SandboxID.asInstanceOf[js.Any], SandboxKey = SandboxKey.asInstanceOf[js.Any])
+    if (Node != null) __obj.updateDynamic("Node")(Node.asInstanceOf[js.Any])
+    if (SecondaryIPAddresses != null) __obj.updateDynamic("SecondaryIPAddresses")(SecondaryIPAddresses.asInstanceOf[js.Any])
+    if (SecondaryIPv6Addresses != null) __obj.updateDynamic("SecondaryIPv6Addresses")(SecondaryIPv6Addresses.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bridge]
   }
-  @scala.inline
-  implicit class BridgeOps[Self <: Bridge] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBridge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bridge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndpointID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGateway(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobalIPv6Address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalIPv6Address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobalIPv6PrefixLen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalIPv6PrefixLen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHairpinMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HairpinMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIPAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIPPrefixLen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPPrefixLen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIPv6Gateway(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPv6Gateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkLocalIPv6Address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkLocalIPv6Address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkLocalIPv6PrefixLen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkLocalIPv6PrefixLen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMacAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MacAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNetworks(value: StringDictionary[Aliases]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Networks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPorts(value: StringDictionary[js.Array[HostIp]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSandboxID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SandboxID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSandboxKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SandboxKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode(value: Addr): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Node")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondaryIPAddresses(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryIPAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondaryIPAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryIPAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondaryIPv6Addresses(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryIPv6Addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondaryIPv6Addresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryIPv6Addresses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

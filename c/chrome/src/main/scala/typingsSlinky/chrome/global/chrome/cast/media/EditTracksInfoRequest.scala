@@ -19,5 +19,9 @@ class EditTracksInfoRequest ()
     activeTrackIds: js.Array[Double],
     textTrackStyle: typingsSlinky.chrome.chrome.cast.media.TextTrackStyle
   ) = this()
+  /* CompleteClass */
+  override var activeTrackIds: js.Array[Double] = js.native
+  /* CompleteClass */
+  override var textTrackStyle: typingsSlinky.chrome.chrome.cast.media.TextTrackStyle = js.native
 }
 

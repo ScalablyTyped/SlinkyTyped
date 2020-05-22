@@ -18,41 +18,11 @@ trait DeleteChapCredentialsOutput extends js.Object {
 
 object DeleteChapCredentialsOutput {
   @scala.inline
-  def apply(): DeleteChapCredentialsOutput = {
+  def apply(InitiatorName: IqnName = null, TargetARN: TargetARN = null): DeleteChapCredentialsOutput = {
     val __obj = js.Dynamic.literal()
+    if (InitiatorName != null) __obj.updateDynamic("InitiatorName")(InitiatorName.asInstanceOf[js.Any])
+    if (TargetARN != null) __obj.updateDynamic("TargetARN")(TargetARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteChapCredentialsOutput]
   }
-  @scala.inline
-  implicit class DeleteChapCredentialsOutputOps[Self <: DeleteChapCredentialsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitiatorName(value: IqnName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitiatorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitiatorName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitiatorName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetARN(value: TargetARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

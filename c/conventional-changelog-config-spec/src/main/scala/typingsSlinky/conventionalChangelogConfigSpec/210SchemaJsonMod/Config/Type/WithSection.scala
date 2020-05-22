@@ -7,35 +7,21 @@ import scala.scalajs.js.annotation._
 /**
   * An object that describes a commit type's settings in the CHANGELOG.
   */
-@js.native
 trait WithSection extends Base {
   /**
     * The section where the matched commit type will display in the CHANGELOG.
     */
   @JSName("section")
-  var section_WithSection: String = js.native
+  var section_WithSection: String
 }
 
 object WithSection {
   @scala.inline
-  def apply(section: String, `type`: String): WithSection = {
+  def apply(section: String, `type`: String, hidden: js.UndefOr[Boolean] = js.undefined): WithSection = {
     val __obj = js.Dynamic.literal(section = section.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WithSection]
   }
-  @scala.inline
-  implicit class WithSectionOps[Self <: WithSection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

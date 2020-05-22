@@ -4,71 +4,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Group[T /* <: SlickData */] extends NonDataRow {
   /***
-  		* Whether a group is collapsed.
-  		* @property collapsed
-  		* @type {Boolean}
-  		*/
-  var collapsed: Boolean = js.native
+    * Whether a group is collapsed.
+    * @property collapsed
+    * @type {Boolean}
+    */
+  var collapsed: Boolean
   /***
-  		* Number of rows in the group.
-  		* @property count
-  		* @type {Integer}
-  		*/
-  var count: Double = js.native
+    * Number of rows in the group.
+    * @property count
+    * @type {Integer}
+    */
+  var count: Double
   /**
-  		* A unique key used to identify the group.  This key can be used in calls to DataView
-  		* collapseGroup() or expandGroup().
-  		* @property groupingKey
-  		* @type {Object}
-  		*/
-  var groupingKey: js.Any = js.native
+    * A unique key used to identify the group.  This key can be used in calls to DataView
+    * collapseGroup() or expandGroup().
+    * @property groupingKey
+    * @type {Object}
+    */
+  var groupingKey: js.Any
   /**
-  		* Sub-groups that are part of the group.
-  		* @property groups
-  		* @type {Array}
-  		*/
-  var groups: js.Array[Group[T]] = js.native
+    * Sub-groups that are part of the group.
+    * @property groups
+    * @type {Array}
+    */
+  var groups: js.Array[Group[T]]
   /**
-  		* Grouping level, starting with 0.
-  		* @property level
-  		* @type {Number}
-  		*/
-  var level: Double = js.native
+    * Grouping level, starting with 0.
+    * @property level
+    * @type {Number}
+    */
+  var level: Double
   /**
-  		* Rows that are part of the group.
-  		* @property rows
-  		* @type {Array}
-  		*/
-  var rows: js.Array[T] = js.native
+    * Rows that are part of the group.
+    * @property rows
+    * @type {Array}
+    */
+  var rows: js.Array[T]
   /***
-  		* Formatted display value of the group.
-  		* @property title
-  		* @type {String}
-  		*/
-  var title: String = js.native
+    * Formatted display value of the group.
+    * @property title
+    * @type {String}
+    */
+  var title: String
   /***
-  		* GroupTotals, if any.
-  		* @property totals
-  		* @type {GroupTotals}
-  		*/
-  var totals: GroupTotals[T] = js.native
+    * GroupTotals, if any.
+    * @property totals
+    * @type {GroupTotals}
+    */
+  var totals: GroupTotals[T]
   /***
-  		* Grouping value.
-  		* @property value
-  		* @type {Object}
-  		*/
-  var value: js.Any = js.native
+    * Grouping value.
+    * @property value
+    * @type {Object}
+    */
+  var value: js.Any
   /***
-  		* Compares two Group instances.
-  		* @method equals
-  		* @return {Boolean}
-  		* @param group {Group} Group instance to compare to.
-  		* todo: this is on the prototype (NonDataRow()) instance, not Group, maybe doesn't matter?
-  		*/
-  def equals(group: Group[T]): Boolean = js.native
+    * Compares two Group instances.
+    * @method equals
+    * @return {Boolean}
+    * @param group {Group} Group instance to compare to.
+    * todo: this is on the prototype (NonDataRow()) instance, not Group, maybe doesn't matter?
+    */
+  def equals(group: Group[T]): Boolean
 }
 
 object Group {
@@ -88,73 +87,5 @@ object Group {
     val __obj = js.Dynamic.literal(collapsed = collapsed.asInstanceOf[js.Any], count = count.asInstanceOf[js.Any], equals = js.Any.fromFunction1(equals), groupingKey = groupingKey.asInstanceOf[js.Any], groups = groups.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], totals = totals.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Group[T]]
   }
-  @scala.inline
-  implicit class GroupOps[Self[t] <: Group[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withCollapsed(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEquals(value: Group[T] => Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGroupingKey(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupingKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroups(value: js.Array[Group[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotals(value: GroupTotals[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

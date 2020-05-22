@@ -4,99 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppliedConditionalAccessPolicy extends js.Object {
   // Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   /**
     * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor
     * authentication').
     */
-  var enforcedGrantControls: js.UndefOr[js.Array[String]] = js.native
+  var enforcedGrantControls: js.UndefOr[js.Array[String]] = js.undefined
   // Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
-  var enforcedSessionControls: js.UndefOr[js.Array[String]] = js.native
+  var enforcedSessionControls: js.UndefOr[js.Array[String]] = js.undefined
   // Unique GUID of the conditional access polic.y
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Indicates the result of the CA policy that was triggered. Possible values are:successfailurenotApplied - Policy isn't
     * applied because policy conditions were not met.notEnabled - This is due to the policy in disabled state.
     */
-  var result: js.UndefOr[AppliedConditionalAccessPolicyResult] = js.native
+  var result: js.UndefOr[AppliedConditionalAccessPolicyResult] = js.undefined
 }
 
 object AppliedConditionalAccessPolicy {
   @scala.inline
-  def apply(): AppliedConditionalAccessPolicy = {
+  def apply(
+    displayName: String = null,
+    enforcedGrantControls: js.Array[String] = null,
+    enforcedSessionControls: js.Array[String] = null,
+    id: String = null,
+    result: AppliedConditionalAccessPolicyResult = null
+  ): AppliedConditionalAccessPolicy = {
     val __obj = js.Dynamic.literal()
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (enforcedGrantControls != null) __obj.updateDynamic("enforcedGrantControls")(enforcedGrantControls.asInstanceOf[js.Any])
+    if (enforcedSessionControls != null) __obj.updateDynamic("enforcedSessionControls")(enforcedSessionControls.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppliedConditionalAccessPolicy]
   }
-  @scala.inline
-  implicit class AppliedConditionalAccessPolicyOps[Self <: AppliedConditionalAccessPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforcedGrantControls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcedGrantControls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforcedGrantControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcedGrantControls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforcedSessionControls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcedSessionControls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforcedSessionControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcedSessionControls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult(value: AppliedConditionalAccessPolicyResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

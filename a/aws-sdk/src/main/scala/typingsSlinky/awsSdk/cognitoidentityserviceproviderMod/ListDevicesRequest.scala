@@ -22,47 +22,15 @@ trait ListDevicesRequest extends js.Object {
 
 object ListDevicesRequest {
   @scala.inline
-  def apply(AccessToken: TokenModelType): ListDevicesRequest = {
+  def apply(
+    AccessToken: TokenModelType,
+    Limit: js.UndefOr[QueryLimitType] = js.undefined,
+    PaginationToken: SearchPaginationTokenType = null
+  ): ListDevicesRequest = {
     val __obj = js.Dynamic.literal(AccessToken = AccessToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (PaginationToken != null) __obj.updateDynamic("PaginationToken")(PaginationToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDevicesRequest]
   }
-  @scala.inline
-  implicit class ListDevicesRequestOps[Self <: ListDevicesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessToken(value: TokenModelType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLimit(value: QueryLimitType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaginationToken(value: SearchPaginationTokenType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaginationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

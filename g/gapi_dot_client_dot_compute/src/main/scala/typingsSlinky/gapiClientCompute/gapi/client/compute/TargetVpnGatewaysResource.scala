@@ -9,18 +9,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TargetVpnGatewaysResource extends js.Object {
   /** Retrieves an aggregated list of target VPN gateways. */
-  def aggregatedList(request: Alt): Request[TargetVpnGatewayAggregatedList] = js.native
+  def aggregatedList(request: Alt): Request[TargetVpnGatewayAggregatedList]
   /** Deletes the specified target VPN gateway. */
-  def delete(request: typingsSlinky.gapiClientCompute.anon.TargetVpnGateway): Request[Operation] = js.native
+  def delete(request: typingsSlinky.gapiClientCompute.anon.TargetVpnGateway): Request[Operation]
   /** Returns the specified target VPN gateway. Get a list of available target VPN gateways by making a list() request. */
-  def get(request: RegionTargetVpnGateway): Request[TargetVpnGateway] = js.native
+  def get(request: RegionTargetVpnGateway): Request[TargetVpnGateway]
   /** Creates a target VPN gateway in the specified project and region using the data included in the request. */
-  def insert(request: PrettyPrint): Request[Operation] = js.native
+  def insert(request: PrettyPrint): Request[Operation]
   /** Retrieves a list of target VPN gateways available to the specified project and region. */
-  def list(request: Filter): Request[TargetVpnGatewayList] = js.native
+  def list(request: Filter): Request[TargetVpnGatewayList]
 }
 
 object TargetVpnGatewaysResource {
@@ -35,43 +34,5 @@ object TargetVpnGatewaysResource {
     val __obj = js.Dynamic.literal(aggregatedList = js.Any.fromFunction1(aggregatedList), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[TargetVpnGatewaysResource]
   }
-  @scala.inline
-  implicit class TargetVpnGatewaysResourceOps[Self <: TargetVpnGatewaysResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregatedList(value: Alt => Request[TargetVpnGatewayAggregatedList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregatedList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: typingsSlinky.gapiClientCompute.anon.TargetVpnGateway => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: RegionTargetVpnGateway => Request[TargetVpnGateway]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: PrettyPrint => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Filter => Request[TargetVpnGatewayList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,116 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapboxStyleImageryProviderOptions extends MapboxProviderCommonOptions {
   /**
     * The public access token for the imagery.
     */
-  var accessToken: js.UndefOr[String] = js.native
+  var accessToken: js.UndefOr[String] = js.undefined
   /**
     * Determines if tiles are rendered at a @2x scale factor
     */
-  var scaleFactor: js.UndefOr[Boolean] = js.native
+  var scaleFactor: js.UndefOr[Boolean] = js.undefined
   /**
     * The Mapbox Style ID.
     */
-  var styleId: String = js.native
+  var styleId: String
   /**
     * The size of the image tiles
     * @default 512
     */
-  var tilesize: js.UndefOr[Double] = js.native
+  var tilesize: js.UndefOr[Double] = js.undefined
   /**
     * The Mapbox server url
     * @default 'https://api.mapbox.com/styles/v1/'
     */
-  var url: js.UndefOr[Resource | String] = js.native
+  var url: js.UndefOr[Resource | String] = js.undefined
   /**
     * The username of the map account.
     * @default 'mapbox'
     */
-  var username: js.UndefOr[String] = js.native
+  var username: js.UndefOr[String] = js.undefined
 }
 
 object MapboxStyleImageryProviderOptions {
   @scala.inline
-  def apply(styleId: String): MapboxStyleImageryProviderOptions = {
+  def apply(
+    styleId: String,
+    accessToken: String = null,
+    credit: Credit | String = null,
+    ellipsoid: Ellipsoid = null,
+    maximumLevel: js.UndefOr[Double] = js.undefined,
+    minimumLevel: js.UndefOr[Double] = js.undefined,
+    rectangle: Rectangle = null,
+    scaleFactor: js.UndefOr[Boolean] = js.undefined,
+    tilesize: js.UndefOr[Double] = js.undefined,
+    url: Resource | String = null,
+    username: String = null
+  ): MapboxStyleImageryProviderOptions = {
     val __obj = js.Dynamic.literal(styleId = styleId.asInstanceOf[js.Any])
+    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
+    if (credit != null) __obj.updateDynamic("credit")(credit.asInstanceOf[js.Any])
+    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumLevel)) __obj.updateDynamic("maximumLevel")(maximumLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumLevel)) __obj.updateDynamic("minimumLevel")(minimumLevel.get.asInstanceOf[js.Any])
+    if (rectangle != null) __obj.updateDynamic("rectangle")(rectangle.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleFactor)) __obj.updateDynamic("scaleFactor")(scaleFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tilesize)) __obj.updateDynamic("tilesize")(tilesize.get.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapboxStyleImageryProviderOptions]
   }
-  @scala.inline
-  implicit class MapboxStyleImageryProviderOptionsOps[Self <: MapboxStyleImageryProviderOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleFactor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTilesize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilesize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTilesize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilesize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: Resource | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

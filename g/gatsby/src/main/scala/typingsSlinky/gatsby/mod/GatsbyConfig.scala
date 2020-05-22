@@ -7,123 +7,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GatsbyConfig extends js.Object {
+  /** In some circumstances you may want to deploy assets (non-HTML resources such as JavaScript, CSS, etc.) to a separate domain. `assetPrefix` allows you to use Gatsby with assets hosted from a separate domain */
+  var assetPrefix: js.UndefOr[String] = js.undefined
   /** Sometimes you need more granular/flexible access to the development server. Gatsby exposes the Express.js development server to your site’s gatsby-config.js where you can add Express middleware as needed. */
-  var developMiddleware: js.UndefOr[js.Function1[/* app */ js.Any, Unit]] = js.native
-  var mapping: js.UndefOr[Record[String, String]] = js.native
+  var developMiddleware: js.UndefOr[js.Function1[/* app */ js.Any, Unit]] = js.undefined
+  var mapping: js.UndefOr[Record[String, String]] = js.undefined
   /** It’s common for sites to be hosted somewhere other than the root of their domain. Say we have a Gatsby site at `example.com/blog/`. In this case, we would need a prefix (`/blog`) added to all paths on the site. */
-  var pathPrefix: js.UndefOr[String] = js.native
+  var pathPrefix: js.UndefOr[String] = js.undefined
   /** Plugins are Node.js packages that implement Gatsby APIs. The config file accepts an array of plugins. Some plugins may need only to be listed by name, while others may take options. */
-  var plugins: js.UndefOr[js.Array[String | Options]] = js.native
+  var plugins: js.UndefOr[js.Array[String | Options]] = js.undefined
   /** Gatsby uses the ES6 Promise API. Because some browsers don't support this, Gatsby includes a Promise polyfill by default. If you'd like to provide your own Promise polyfill, you can set `polyfill` to false.*/
-  var polyfill: js.UndefOr[Boolean] = js.native
+  var polyfill: js.UndefOr[Boolean] = js.undefined
   /**
     * Setting the proxy config option will tell the develop server to proxy any unknown requests to your specified server.
     * @see https://www.gatsbyjs.org/docs/api-proxy/
     * */
-  var proxy: js.UndefOr[Prefix] = js.native
+  var proxy: js.UndefOr[Prefix] = js.undefined
   /** When you want to reuse common pieces of data across the site (for example, your site title), you can store that here. */
-  var siteMetadata: js.UndefOr[Record[String, _]] = js.native
+  var siteMetadata: js.UndefOr[Record[String, _]] = js.undefined
 }
 
 object GatsbyConfig {
   @scala.inline
-  def apply(): GatsbyConfig = {
+  def apply(
+    assetPrefix: String = null,
+    developMiddleware: /* app */ js.Any => Unit = null,
+    mapping: Record[String, String] = null,
+    pathPrefix: String = null,
+    plugins: js.Array[String | Options] = null,
+    polyfill: js.UndefOr[Boolean] = js.undefined,
+    proxy: Prefix = null,
+    siteMetadata: Record[String, _] = null
+  ): GatsbyConfig = {
     val __obj = js.Dynamic.literal()
+    if (assetPrefix != null) __obj.updateDynamic("assetPrefix")(assetPrefix.asInstanceOf[js.Any])
+    if (developMiddleware != null) __obj.updateDynamic("developMiddleware")(js.Any.fromFunction1(developMiddleware))
+    if (mapping != null) __obj.updateDynamic("mapping")(mapping.asInstanceOf[js.Any])
+    if (pathPrefix != null) __obj.updateDynamic("pathPrefix")(pathPrefix.asInstanceOf[js.Any])
+    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
+    if (!js.isUndefined(polyfill)) __obj.updateDynamic("polyfill")(polyfill.get.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (siteMetadata != null) __obj.updateDynamic("siteMetadata")(siteMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GatsbyConfig]
   }
-  @scala.inline
-  implicit class GatsbyConfigOps[Self <: GatsbyConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDevelopMiddleware(value: /* app */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developMiddleware")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDevelopMiddleware: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developMiddleware")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapping(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: js.Array[String | Options]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolyfill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polyfill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolyfill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polyfill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxy(value: Prefix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiteMetadata(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiteMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

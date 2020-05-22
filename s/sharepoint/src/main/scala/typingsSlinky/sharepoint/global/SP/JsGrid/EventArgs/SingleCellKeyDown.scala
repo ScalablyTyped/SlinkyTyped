@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 class SingleCellKeyDown protected ()
   extends typingsSlinky.sharepoint.SP.JsGrid.EventArgs.SingleCellKeyDown {
   def this(eventInfo: DomEvent, recordKey: Double, fieldKey: String) = this()
+  /* CompleteClass */
+  override var eventInfo: DomEvent = js.native
+  /* CompleteClass */
+  override var fieldKey: String = js.native
+  /* CompleteClass */
+  override var recordKey: Double = js.native
 }
 

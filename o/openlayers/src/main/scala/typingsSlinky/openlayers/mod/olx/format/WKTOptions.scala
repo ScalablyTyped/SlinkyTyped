@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WKTOptions extends js.Object {
-  var splitCollection: js.UndefOr[Boolean] = js.native
+  var splitCollection: js.UndefOr[Boolean] = js.undefined
 }
 
 object WKTOptions {
   @scala.inline
-  def apply(): WKTOptions = {
+  def apply(splitCollection: js.UndefOr[Boolean] = js.undefined): WKTOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(splitCollection)) __obj.updateDynamic("splitCollection")(splitCollection.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WKTOptions]
   }
-  @scala.inline
-  implicit class WKTOptionsOps[Self <: WKTOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSplitCollection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitCollection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSplitCollection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitCollection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

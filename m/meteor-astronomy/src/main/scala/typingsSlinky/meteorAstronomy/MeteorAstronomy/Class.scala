@@ -11,8 +11,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Class[T]
-  extends TypeOptions
-     with Instantiable0[Model[T]]
+  extends Instantiable0[Model[T]]
      with Instantiable1[/* data */ Partial[T], Model[T]] {
   def find(): Cursor[Model[T]] = js.native
   def find(selector: MongoQuery[T]): Cursor[Model[T]] = js.native

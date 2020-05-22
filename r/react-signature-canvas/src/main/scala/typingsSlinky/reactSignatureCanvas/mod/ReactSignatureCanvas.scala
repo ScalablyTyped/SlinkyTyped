@@ -4,7 +4,8 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactSignatureCanvas.anon.FnCall
 import typingsSlinky.reactSignatureCanvas.anon.FnCallTypeEncoderOptions
-import typingsSlinky.signaturePad.mod.SignaturePad.Point
+import typingsSlinky.signaturePad.mod.Point
+import typingsSlinky.signaturePad.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +22,7 @@ trait ReactSignatureCanvas
   var toData: js.Function0[js.Array[js.Array[Point]]] = js.native
   var toDataURL: FnCallTypeEncoderOptions = js.native
   def getCanvas(): HTMLCanvasElement = js.native
-  def getSignaturePad(): typingsSlinky.signaturePad.mod.default = js.native
+  def getSignaturePad(): ^ = js.native
   def getTrimmedCanvas(): HTMLCanvasElement = js.native
 }
 

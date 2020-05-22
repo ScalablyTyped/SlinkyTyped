@@ -1,10 +1,12 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`hide-children`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hide
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.show
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VectorTileLayerProperties
   extends LayerProperties
      with ScaleRangeLayerProperties {
@@ -13,106 +15,65 @@ trait VectorTileLayerProperties
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#portalItem)
     */
-  var portalItem: js.UndefOr[PortalItemProperties] = js.native
+  var portalItem: js.UndefOr[PortalItemProperties] = js.undefined
   /**
     * The spatial reference of the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#spatialReference)
     */
-  var spatialReference: js.UndefOr[SpatialReferenceProperties] = js.native
+  var spatialReference: js.UndefOr[SpatialReferenceProperties] = js.undefined
   /**
     * A style JSON object of vector tiles that will be used to render the layer. If initializing the layer with a style JSON object, the tiles are fetched from the tile servers specified in the style object.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#style)
     */
-  var style: js.UndefOr[js.Any] = js.native
+  var style: js.UndefOr[js.Any] = js.undefined
   /**
     * The tiling scheme information for the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#tileInfo)
     */
-  var tileInfo: js.UndefOr[TileInfoProperties] = js.native
+  var tileInfo: js.UndefOr[TileInfoProperties] = js.undefined
   /**
     * The URL to the vector tile service, or the URL to the style resource of vector tiles that will be used to render the layer. If specifying a URL to a style, the tiles are fetched from the tile servers specified in the style object.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#url)
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object VectorTileLayerProperties {
   @scala.inline
-  def apply(): VectorTileLayerProperties = {
+  def apply(
+    fullExtent: ExtentProperties = null,
+    id: String = null,
+    listMode: show | hide | `hide-children` = null,
+    maxScale: js.UndefOr[Double] = js.undefined,
+    minScale: js.UndefOr[Double] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    portalItem: PortalItemProperties = null,
+    spatialReference: SpatialReferenceProperties = null,
+    style: js.Any = null,
+    tileInfo: TileInfoProperties = null,
+    title: String = null,
+    url: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): VectorTileLayerProperties = {
     val __obj = js.Dynamic.literal()
+    if (fullExtent != null) __obj.updateDynamic("fullExtent")(fullExtent.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (listMode != null) __obj.updateDynamic("listMode")(listMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxScale)) __obj.updateDynamic("maxScale")(maxScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minScale)) __obj.updateDynamic("minScale")(minScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (portalItem != null) __obj.updateDynamic("portalItem")(portalItem.asInstanceOf[js.Any])
+    if (spatialReference != null) __obj.updateDynamic("spatialReference")(spatialReference.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (tileInfo != null) __obj.updateDynamic("tileInfo")(tileInfo.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VectorTileLayerProperties]
   }
-  @scala.inline
-  implicit class VectorTileLayerPropertiesOps[Self <: VectorTileLayerProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPortalItem(value: PortalItemProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portalItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortalItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portalItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpatialReference(value: SpatialReferenceProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpatialReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileInfo(value: TileInfoProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

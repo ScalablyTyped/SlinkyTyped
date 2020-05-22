@@ -1,748 +1,424 @@
 package typingsSlinky.senchaTouch.Ext.app
 
 import typingsSlinky.senchaTouch.Ext.Array
+import typingsSlinky.senchaTouch.Ext.IClass
+import typingsSlinky.senchaTouch.Ext.mixin.IObservable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IApplication extends IController {
   /** [Config Option] (String) */
-  var appFolder: js.UndefOr[String] = js.native
+  var appFolder: js.UndefOr[String] = js.undefined
   /** [Config Option] (Array) */
-  var controllers: js.UndefOr[Array] = js.native
+  var controllers: js.UndefOr[Array] = js.undefined
   /** [Config Option] (Ext.app.Profile) */
-  var currentProfile: js.UndefOr[IProfile] = js.native
+  var currentProfile: js.UndefOr[IProfile] = js.undefined
   /** [Method] Dispatches a given Ext app Action to the relevant Controller instance
-  		* @param action Ext.app.Action The action to dispatch.
-  		* @param addToHistory Boolean Sets the browser's url to the action's url.
-  		*/
+    * @param action Ext.app.Action The action to dispatch.
+    * @param addToHistory Boolean Sets the browser's url to the action's url.
+    */
   var dispatch: js.UndefOr[
     js.Function2[/* action */ js.UndefOr[IAction], /* addToHistory */ js.UndefOr[Boolean], Unit]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Returns the value of appFolder
-  		* @returns String
-  		*/
-  var getAppFolder: js.UndefOr[js.Function0[String]] = js.native
+    * @returns String
+    */
+  var getAppFolder: js.UndefOr[js.Function0[String]] = js.undefined
   /** [Method] Returns the Controller instance for the given controller name
-  		* @param name String The name of the Controller.
-  		* @param profileName String Optional profile name. If passed, this is the same as calling getController('profileName.controllerName').
-  		* @returns Ext.app.Controller controller instance or undefined.
-  		*/
+    * @param name String The name of the Controller.
+    * @param profileName String Optional profile name. If passed, this is the same as calling getController('profileName.controllerName').
+    * @returns Ext.app.Controller controller instance or undefined.
+    */
   @JSName("getController")
   var getController_IApplication: js.UndefOr[
     js.Function2[/* name */ js.UndefOr[String], /* profileName */ js.UndefOr[String], IController]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Returns the value of controllers
-  		* @returns Array
-  		*/
-  var getControllers: js.UndefOr[js.Function0[Array]] = js.native
+    * @returns Array
+    */
+  var getControllers: js.UndefOr[js.Function0[Array]] = js.undefined
   /** [Method] Returns the value of currentProfile
-  		* @returns Ext.app.Profile
-  		*/
-  var getCurrentProfile: js.UndefOr[js.Function0[IProfile]] = js.native
+    * @returns Ext.app.Profile
+    */
+  var getCurrentProfile: js.UndefOr[js.Function0[IProfile]] = js.undefined
   /** [Method] Returns the value of history
-  		* @returns Ext.app.History
-  		*/
-  var getHistory: js.UndefOr[js.Function0[IHistory]] = js.native
+    * @returns Ext.app.History
+    */
+  var getHistory: js.UndefOr[js.Function0[IHistory]] = js.undefined
   /** [Method] Returns the value of launch
-  		* @returns Function
-  		*/
-  var getLaunch: js.UndefOr[js.Function0[_]] = js.native
+    * @returns Function
+    */
+  var getLaunch: js.UndefOr[js.Function0[_]] = js.undefined
   /** [Method] Returns the value of name
-  		* @returns String
-  		*/
-  var getName: js.UndefOr[js.Function0[String]] = js.native
+    * @returns String
+    */
+  var getName: js.UndefOr[js.Function0[String]] = js.undefined
   /** [Method] Returns the value of profiles
-  		* @returns Array
-  		*/
-  var getProfiles: js.UndefOr[js.Function0[Array]] = js.native
+    * @returns Array
+    */
+  var getProfiles: js.UndefOr[js.Function0[Array]] = js.undefined
   /** [Method] Returns the value of requires
-  		* @returns String[]
-  		*/
-  var getRequires: js.UndefOr[js.Function0[Array]] = js.native
+    * @returns String[]
+    */
+  var getRequires: js.UndefOr[js.Function0[Array]] = js.undefined
   /** [Method] Returns the value of router
-  		* @returns Ext.app.Router
-  		*/
-  var getRouter: js.UndefOr[js.Function0[IRouter]] = js.native
+    * @returns Ext.app.Router
+    */
+  var getRouter: js.UndefOr[js.Function0[IRouter]] = js.undefined
   /** [Method] Returns the value of themeVariation
-  		* @returns String/Function
-  		*/
-  var getThemeVariation: js.UndefOr[js.Function0[_]] = js.native
+    * @returns String/Function
+    */
+  var getThemeVariation: js.UndefOr[js.Function0[_]] = js.undefined
   /** [Method] Returns the value of themeVariationPrefix
-  		* @returns String
-  		*/
-  var getThemeVariationPrefix: js.UndefOr[js.Function0[String]] = js.native
+    * @returns String
+    */
+  var getThemeVariationPrefix: js.UndefOr[js.Function0[String]] = js.undefined
   /** [Method] Returns the value of themeVariationTransitionCls
-  		* @returns String
-  		*/
-  var getThemeVariationTransitionCls: js.UndefOr[js.Function0[String]] = js.native
+    * @returns String
+    */
+  var getThemeVariationTransitionCls: js.UndefOr[js.Function0[String]] = js.undefined
   /** [Config Option] (Boolean) */
-  var glossOnIcon: js.UndefOr[Boolean] = js.native
+  var glossOnIcon: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Ext.app.History) */
-  var history: js.UndefOr[IHistory] = js.native
+  var history: js.UndefOr[IHistory] = js.undefined
   /** [Config Option] (String/Object) */
-  var icon: js.UndefOr[js.Any] = js.native
+  var icon: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Boolean) */
-  var isIconPrecomposed: js.UndefOr[Boolean] = js.native
+  var isIconPrecomposed: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (String) */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var phoneIcon: js.UndefOr[String] = js.native
+  var phoneIcon: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var phoneStartupScreen: js.UndefOr[String] = js.native
+  var phoneStartupScreen: js.UndefOr[String] = js.undefined
   /** [Config Option] (Array) */
-  var profiles: js.UndefOr[Array] = js.native
+  var profiles: js.UndefOr[Array] = js.undefined
   /** [Method] Redirects the browser to the given url
-  		* @param url String/Ext.data.Model The String url to redirect to.
-  		*/
+    * @param url String/Ext.data.Model The String url to redirect to.
+    */
   @JSName("redirectTo")
-  var redirectTo_IApplication: js.UndefOr[js.Function1[/* url */ js.UndefOr[js.Any], Unit]] = js.native
+  var redirectTo_IApplication: js.UndefOr[js.Function1[/* url */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Config Option] (String[]) */
-  var requires: js.UndefOr[Array] = js.native
+  var requires: js.UndefOr[Array] = js.undefined
   /** [Config Option] (Ext.app.Router) */
-  var router: js.UndefOr[IRouter] = js.native
+  var router: js.UndefOr[IRouter] = js.undefined
   /** [Method] Sets the value of appFolder
-  		* @param appFolder String The new value.
-  		*/
-  var setAppFolder: js.UndefOr[js.Function1[/* appFolder */ js.UndefOr[String], Unit]] = js.native
+    * @param appFolder String The new value.
+    */
+  var setAppFolder: js.UndefOr[js.Function1[/* appFolder */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Sets the value of controllers
-  		* @param controllers Array The new value.
-  		*/
-  var setControllers: js.UndefOr[js.Function1[/* controllers */ js.UndefOr[Array], Unit]] = js.native
+    * @param controllers Array The new value.
+    */
+  var setControllers: js.UndefOr[js.Function1[/* controllers */ js.UndefOr[Array], Unit]] = js.undefined
   /** [Method] Sets the value of currentProfile
-  		* @param currentProfile Ext.app.Profile The new value.
-  		*/
-  var setCurrentProfile: js.UndefOr[js.Function1[/* currentProfile */ js.UndefOr[IProfile], Unit]] = js.native
+    * @param currentProfile Ext.app.Profile The new value.
+    */
+  var setCurrentProfile: js.UndefOr[js.Function1[/* currentProfile */ js.UndefOr[IProfile], Unit]] = js.undefined
   /** [Method] Sets the value of history
-  		* @param history Ext.app.History The new value.
-  		*/
-  var setHistory: js.UndefOr[js.Function1[/* history */ js.UndefOr[IHistory], Unit]] = js.native
+    * @param history Ext.app.History The new value.
+    */
+  var setHistory: js.UndefOr[js.Function1[/* history */ js.UndefOr[IHistory], Unit]] = js.undefined
   /** [Method] Sets the value of launch
-  		* @param launch Function The new value.
-  		*/
-  var setLaunch: js.UndefOr[js.Function1[/* launch */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param launch Function The new value.
+    */
+  var setLaunch: js.UndefOr[js.Function1[/* launch */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Sets the value of name
-  		* @param name String The new value.
-  		*/
-  var setName: js.UndefOr[js.Function1[/* name */ js.UndefOr[String], Unit]] = js.native
+    * @param name String The new value.
+    */
+  var setName: js.UndefOr[js.Function1[/* name */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Sets the value of profiles
-  		* @param profiles Array The new value.
-  		*/
-  var setProfiles: js.UndefOr[js.Function1[/* profiles */ js.UndefOr[Array], Unit]] = js.native
+    * @param profiles Array The new value.
+    */
+  var setProfiles: js.UndefOr[js.Function1[/* profiles */ js.UndefOr[Array], Unit]] = js.undefined
   /** [Method] Sets the value of requires
-  		* @param requires String[] The new value.
-  		*/
-  var setRequires: js.UndefOr[js.Function1[/* requires */ js.UndefOr[Array], Unit]] = js.native
+    * @param requires String[] The new value.
+    */
+  var setRequires: js.UndefOr[js.Function1[/* requires */ js.UndefOr[Array], Unit]] = js.undefined
   /** [Method] Sets the value of router
-  		* @param router Ext.app.Router The new value.
-  		*/
-  var setRouter: js.UndefOr[js.Function1[/* router */ js.UndefOr[IRouter], Unit]] = js.native
+    * @param router Ext.app.Router The new value.
+    */
+  var setRouter: js.UndefOr[js.Function1[/* router */ js.UndefOr[IRouter], Unit]] = js.undefined
   /** [Method] Sets the value of themeVariation
-  		* @param themeVariation String/Function The new value.
-  		*/
-  var setThemeVariation: js.UndefOr[js.Function1[/* themeVariation */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param themeVariation String/Function The new value.
+    */
+  var setThemeVariation: js.UndefOr[js.Function1[/* themeVariation */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Sets the value of themeVariationPrefix
-  		* @param themeVariationPrefix String The new value.
-  		*/
-  var setThemeVariationPrefix: js.UndefOr[js.Function1[/* themeVariationPrefix */ js.UndefOr[String], Unit]] = js.native
+    * @param themeVariationPrefix String The new value.
+    */
+  var setThemeVariationPrefix: js.UndefOr[js.Function1[/* themeVariationPrefix */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Sets the value of themeVariationTransitionCls
-  		* @param themeVariationTransitionCls String The new value.
-  		*/
-  var setThemeVariationTransitionCls: js.UndefOr[js.Function1[/* themeVariationTransitionCls */ js.UndefOr[String], Unit]] = js.native
+    * @param themeVariationTransitionCls String The new value.
+    */
+  var setThemeVariationTransitionCls: js.UndefOr[js.Function1[/* themeVariationTransitionCls */ js.UndefOr[String], Unit]] = js.undefined
   /** [Config Option] (Object) */
-  var startupImage: js.UndefOr[js.Any] = js.native
+  var startupImage: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var statusBarStyle: js.UndefOr[String] = js.native
+  var statusBarStyle: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var tabletIcon: js.UndefOr[String] = js.native
+  var tabletIcon: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var tabletStartupScreen: js.UndefOr[String] = js.native
+  var tabletStartupScreen: js.UndefOr[String] = js.undefined
   /** [Config Option] (String/Function) */
-  var themeVariation: js.UndefOr[js.Any] = js.native
+  var themeVariation: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var themeVariationPrefix: js.UndefOr[String] = js.native
+  var themeVariationPrefix: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var themeVariationTransitionCls: js.UndefOr[String] = js.native
+  var themeVariationTransitionCls: js.UndefOr[String] = js.undefined
 }
 
 object IApplication {
   @scala.inline
-  def apply(): IApplication = {
+  def apply(
+    addAfterListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    addBeforeListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    addEvents: /* eventNames */ js.UndefOr[js.Any] => Unit = null,
+    addListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any], /* order */ js.UndefOr[String]) => Unit = null,
+    addManagedListener: (/* object */ js.UndefOr[js.Any], /* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    appFolder: String = null,
+    application: IApplication = null,
+    before: js.Any = null,
+    bubbleEvents: js.Any = null,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    clearListeners: () => Unit = null,
+    config: js.Any = null,
+    control: js.Any = null,
+    controllers: Array = null,
+    currentProfile: IProfile = null,
+    destroy: () => Unit = null,
+    dispatch: (/* action */ js.UndefOr[IAction], /* addToHistory */ js.UndefOr[Boolean]) => Unit = null,
+    enableBubble: /* events */ js.UndefOr[js.Any] => Unit = null,
+    extend: String = null,
+    fireAction: (/* eventName */ js.UndefOr[String], /* args */ js.UndefOr[Array], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => _ = null,
+    fireEvent: (/* eventName */ String, /* repeated */ js.Any) => Boolean = null,
+    getAppFolder: () => String = null,
+    getApplication: () => IApplication = null,
+    getBefore: () => _ = null,
+    getBubbleEvents: () => _ = null,
+    getControl: () => _ = null,
+    getController: (/* name */ js.UndefOr[String], /* profileName */ js.UndefOr[String]) => IController = null,
+    getControllers: () => Array = null,
+    getCurrentProfile: () => IProfile = null,
+    getHistory: () => IHistory = null,
+    getId: () => _ = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    getLaunch: () => _ = null,
+    getListeners: () => _ = null,
+    getModel: /* modelName */ js.UndefOr[String] => _ = null,
+    getModels: () => Array = null,
+    getName: () => String = null,
+    getProfiles: () => Array = null,
+    getRefs: () => _ = null,
+    getRequires: () => Array = null,
+    getRouter: () => IRouter = null,
+    getRoutes: () => _ = null,
+    getStores: () => Array = null,
+    getThemeVariation: () => _ = null,
+    getThemeVariationPrefix: () => String = null,
+    getThemeVariationTransitionCls: () => String = null,
+    getViews: () => Array = null,
+    glossOnIcon: js.UndefOr[Boolean] = js.undefined,
+    hasListener: /* eventName */ js.UndefOr[String] => Boolean = null,
+    history: IHistory = null,
+    icon: js.Any = null,
+    inheritableStatics: js.Any = null,
+    init: js.Any = null,
+    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
+    isIconPrecomposed: js.UndefOr[Boolean] = js.undefined,
+    launch: js.Any = null,
+    listeners: js.Any = null,
+    mixins: js.Any = null,
+    models: Array = null,
+    mon: (/* object */ js.UndefOr[js.Any], /* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    mun: (/* object */ js.UndefOr[js.Any], /* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
+    name: String = null,
+    on: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any], /* order */ js.UndefOr[String]) => Unit = null,
+    onAfter: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    onBefore: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    phoneIcon: String = null,
+    phoneStartupScreen: String = null,
+    platformConfig: js.Any = null,
+    profiles: Array = null,
+    redirectTo: /* url */ js.UndefOr[js.Any] => Unit = null,
+    refs: js.Any = null,
+    relayEvents: (/* object */ js.UndefOr[js.Any], /* events */ js.UndefOr[js.Any]) => IObservable = null,
+    removeAfterListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    removeBeforeListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    removeListener: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any], /* order */ js.UndefOr[String]) => Unit = null,
+    removeManagedListener: (/* object */ js.UndefOr[js.Any], /* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
+    requires: Array = null,
+    resumeEvents: /* discardQueuedEvents */ js.UndefOr[Boolean] => Unit = null,
+    router: IRouter = null,
+    routes: js.Any = null,
+    self: IClass = null,
+    setAppFolder: /* appFolder */ js.UndefOr[String] => Unit = null,
+    setApplication: /* application */ js.UndefOr[IApplication] => Unit = null,
+    setBefore: /* before */ js.UndefOr[js.Any] => Unit = null,
+    setBubbleEvents: /* bubbleEvents */ js.UndefOr[js.Any] => Unit = null,
+    setControl: /* control */ js.UndefOr[js.Any] => Unit = null,
+    setControllers: /* controllers */ js.UndefOr[Array] => Unit = null,
+    setCurrentProfile: /* currentProfile */ js.UndefOr[IProfile] => Unit = null,
+    setHistory: /* history */ js.UndefOr[IHistory] => Unit = null,
+    setLaunch: /* launch */ js.UndefOr[js.Any] => Unit = null,
+    setListeners: /* listeners */ js.UndefOr[js.Any] => Unit = null,
+    setModels: /* models */ js.UndefOr[Array] => Unit = null,
+    setName: /* name */ js.UndefOr[String] => Unit = null,
+    setProfiles: /* profiles */ js.UndefOr[Array] => Unit = null,
+    setRefs: /* refs */ js.UndefOr[js.Any] => Unit = null,
+    setRequires: /* requires */ js.UndefOr[Array] => Unit = null,
+    setRouter: /* router */ js.UndefOr[IRouter] => Unit = null,
+    setRoutes: /* routes */ js.UndefOr[js.Any] => Unit = null,
+    setStores: /* stores */ js.UndefOr[Array] => Unit = null,
+    setThemeVariation: /* themeVariation */ js.UndefOr[js.Any] => Unit = null,
+    setThemeVariationPrefix: /* themeVariationPrefix */ js.UndefOr[String] => Unit = null,
+    setThemeVariationTransitionCls: /* themeVariationTransitionCls */ js.UndefOr[String] => Unit = null,
+    setViews: /* views */ js.UndefOr[Array] => Unit = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    startupImage: js.Any = null,
+    statics: js.Any = null,
+    statusBarStyle: String = null,
+    stores: Array = null,
+    suspendEvents: () => Unit = null,
+    tabletIcon: String = null,
+    tabletStartupScreen: String = null,
+    themeVariation: js.Any = null,
+    themeVariationPrefix: String = null,
+    themeVariationTransitionCls: String = null,
+    un: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any], /* order */ js.UndefOr[String]) => Unit = null,
+    unAfter: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    unBefore: (/* eventName */ js.UndefOr[js.Any], /* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
+    uses: Array = null,
+    views: Array = null
+  ): IApplication = {
     val __obj = js.Dynamic.literal()
+    if (addAfterListener != null) __obj.updateDynamic("addAfterListener")(js.Any.fromFunction4(addAfterListener))
+    if (addBeforeListener != null) __obj.updateDynamic("addBeforeListener")(js.Any.fromFunction4(addBeforeListener))
+    if (addEvents != null) __obj.updateDynamic("addEvents")(js.Any.fromFunction1(addEvents))
+    if (addListener != null) __obj.updateDynamic("addListener")(js.Any.fromFunction5(addListener))
+    if (addManagedListener != null) __obj.updateDynamic("addManagedListener")(js.Any.fromFunction5(addManagedListener))
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (appFolder != null) __obj.updateDynamic("appFolder")(appFolder.asInstanceOf[js.Any])
+    if (application != null) __obj.updateDynamic("application")(application.asInstanceOf[js.Any])
+    if (before != null) __obj.updateDynamic("before")(before.asInstanceOf[js.Any])
+    if (bubbleEvents != null) __obj.updateDynamic("bubbleEvents")(bubbleEvents.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (clearListeners != null) __obj.updateDynamic("clearListeners")(js.Any.fromFunction0(clearListeners))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
+    if (controllers != null) __obj.updateDynamic("controllers")(controllers.asInstanceOf[js.Any])
+    if (currentProfile != null) __obj.updateDynamic("currentProfile")(currentProfile.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
+    if (dispatch != null) __obj.updateDynamic("dispatch")(js.Any.fromFunction2(dispatch))
+    if (enableBubble != null) __obj.updateDynamic("enableBubble")(js.Any.fromFunction1(enableBubble))
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (fireAction != null) __obj.updateDynamic("fireAction")(js.Any.fromFunction4(fireAction))
+    if (fireEvent != null) __obj.updateDynamic("fireEvent")(js.Any.fromFunction2(fireEvent))
+    if (getAppFolder != null) __obj.updateDynamic("getAppFolder")(js.Any.fromFunction0(getAppFolder))
+    if (getApplication != null) __obj.updateDynamic("getApplication")(js.Any.fromFunction0(getApplication))
+    if (getBefore != null) __obj.updateDynamic("getBefore")(js.Any.fromFunction0(getBefore))
+    if (getBubbleEvents != null) __obj.updateDynamic("getBubbleEvents")(js.Any.fromFunction0(getBubbleEvents))
+    if (getControl != null) __obj.updateDynamic("getControl")(js.Any.fromFunction0(getControl))
+    if (getController != null) __obj.updateDynamic("getController")(js.Any.fromFunction2(getController))
+    if (getControllers != null) __obj.updateDynamic("getControllers")(js.Any.fromFunction0(getControllers))
+    if (getCurrentProfile != null) __obj.updateDynamic("getCurrentProfile")(js.Any.fromFunction0(getCurrentProfile))
+    if (getHistory != null) __obj.updateDynamic("getHistory")(js.Any.fromFunction0(getHistory))
+    if (getId != null) __obj.updateDynamic("getId")(js.Any.fromFunction0(getId))
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (getLaunch != null) __obj.updateDynamic("getLaunch")(js.Any.fromFunction0(getLaunch))
+    if (getListeners != null) __obj.updateDynamic("getListeners")(js.Any.fromFunction0(getListeners))
+    if (getModel != null) __obj.updateDynamic("getModel")(js.Any.fromFunction1(getModel))
+    if (getModels != null) __obj.updateDynamic("getModels")(js.Any.fromFunction0(getModels))
+    if (getName != null) __obj.updateDynamic("getName")(js.Any.fromFunction0(getName))
+    if (getProfiles != null) __obj.updateDynamic("getProfiles")(js.Any.fromFunction0(getProfiles))
+    if (getRefs != null) __obj.updateDynamic("getRefs")(js.Any.fromFunction0(getRefs))
+    if (getRequires != null) __obj.updateDynamic("getRequires")(js.Any.fromFunction0(getRequires))
+    if (getRouter != null) __obj.updateDynamic("getRouter")(js.Any.fromFunction0(getRouter))
+    if (getRoutes != null) __obj.updateDynamic("getRoutes")(js.Any.fromFunction0(getRoutes))
+    if (getStores != null) __obj.updateDynamic("getStores")(js.Any.fromFunction0(getStores))
+    if (getThemeVariation != null) __obj.updateDynamic("getThemeVariation")(js.Any.fromFunction0(getThemeVariation))
+    if (getThemeVariationPrefix != null) __obj.updateDynamic("getThemeVariationPrefix")(js.Any.fromFunction0(getThemeVariationPrefix))
+    if (getThemeVariationTransitionCls != null) __obj.updateDynamic("getThemeVariationTransitionCls")(js.Any.fromFunction0(getThemeVariationTransitionCls))
+    if (getViews != null) __obj.updateDynamic("getViews")(js.Any.fromFunction0(getViews))
+    if (!js.isUndefined(glossOnIcon)) __obj.updateDynamic("glossOnIcon")(glossOnIcon.get.asInstanceOf[js.Any])
+    if (hasListener != null) __obj.updateDynamic("hasListener")(js.Any.fromFunction1(hasListener))
+    if (history != null) __obj.updateDynamic("history")(history.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (init != null) __obj.updateDynamic("init")(init.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (!js.isUndefined(isIconPrecomposed)) __obj.updateDynamic("isIconPrecomposed")(isIconPrecomposed.get.asInstanceOf[js.Any])
+    if (launch != null) __obj.updateDynamic("launch")(launch.asInstanceOf[js.Any])
+    if (listeners != null) __obj.updateDynamic("listeners")(listeners.asInstanceOf[js.Any])
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (models != null) __obj.updateDynamic("models")(models.asInstanceOf[js.Any])
+    if (mon != null) __obj.updateDynamic("mon")(js.Any.fromFunction5(mon))
+    if (mun != null) __obj.updateDynamic("mun")(js.Any.fromFunction4(mun))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(js.Any.fromFunction5(on))
+    if (onAfter != null) __obj.updateDynamic("onAfter")(js.Any.fromFunction4(onAfter))
+    if (onBefore != null) __obj.updateDynamic("onBefore")(js.Any.fromFunction4(onBefore))
+    if (phoneIcon != null) __obj.updateDynamic("phoneIcon")(phoneIcon.asInstanceOf[js.Any])
+    if (phoneStartupScreen != null) __obj.updateDynamic("phoneStartupScreen")(phoneStartupScreen.asInstanceOf[js.Any])
+    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
+    if (profiles != null) __obj.updateDynamic("profiles")(profiles.asInstanceOf[js.Any])
+    if (redirectTo != null) __obj.updateDynamic("redirectTo")(js.Any.fromFunction1(redirectTo))
+    if (refs != null) __obj.updateDynamic("refs")(refs.asInstanceOf[js.Any])
+    if (relayEvents != null) __obj.updateDynamic("relayEvents")(js.Any.fromFunction2(relayEvents))
+    if (removeAfterListener != null) __obj.updateDynamic("removeAfterListener")(js.Any.fromFunction4(removeAfterListener))
+    if (removeBeforeListener != null) __obj.updateDynamic("removeBeforeListener")(js.Any.fromFunction4(removeBeforeListener))
+    if (removeListener != null) __obj.updateDynamic("removeListener")(js.Any.fromFunction5(removeListener))
+    if (removeManagedListener != null) __obj.updateDynamic("removeManagedListener")(js.Any.fromFunction4(removeManagedListener))
+    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
+    if (resumeEvents != null) __obj.updateDynamic("resumeEvents")(js.Any.fromFunction1(resumeEvents))
+    if (router != null) __obj.updateDynamic("router")(router.asInstanceOf[js.Any])
+    if (routes != null) __obj.updateDynamic("routes")(routes.asInstanceOf[js.Any])
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (setAppFolder != null) __obj.updateDynamic("setAppFolder")(js.Any.fromFunction1(setAppFolder))
+    if (setApplication != null) __obj.updateDynamic("setApplication")(js.Any.fromFunction1(setApplication))
+    if (setBefore != null) __obj.updateDynamic("setBefore")(js.Any.fromFunction1(setBefore))
+    if (setBubbleEvents != null) __obj.updateDynamic("setBubbleEvents")(js.Any.fromFunction1(setBubbleEvents))
+    if (setControl != null) __obj.updateDynamic("setControl")(js.Any.fromFunction1(setControl))
+    if (setControllers != null) __obj.updateDynamic("setControllers")(js.Any.fromFunction1(setControllers))
+    if (setCurrentProfile != null) __obj.updateDynamic("setCurrentProfile")(js.Any.fromFunction1(setCurrentProfile))
+    if (setHistory != null) __obj.updateDynamic("setHistory")(js.Any.fromFunction1(setHistory))
+    if (setLaunch != null) __obj.updateDynamic("setLaunch")(js.Any.fromFunction1(setLaunch))
+    if (setListeners != null) __obj.updateDynamic("setListeners")(js.Any.fromFunction1(setListeners))
+    if (setModels != null) __obj.updateDynamic("setModels")(js.Any.fromFunction1(setModels))
+    if (setName != null) __obj.updateDynamic("setName")(js.Any.fromFunction1(setName))
+    if (setProfiles != null) __obj.updateDynamic("setProfiles")(js.Any.fromFunction1(setProfiles))
+    if (setRefs != null) __obj.updateDynamic("setRefs")(js.Any.fromFunction1(setRefs))
+    if (setRequires != null) __obj.updateDynamic("setRequires")(js.Any.fromFunction1(setRequires))
+    if (setRouter != null) __obj.updateDynamic("setRouter")(js.Any.fromFunction1(setRouter))
+    if (setRoutes != null) __obj.updateDynamic("setRoutes")(js.Any.fromFunction1(setRoutes))
+    if (setStores != null) __obj.updateDynamic("setStores")(js.Any.fromFunction1(setStores))
+    if (setThemeVariation != null) __obj.updateDynamic("setThemeVariation")(js.Any.fromFunction1(setThemeVariation))
+    if (setThemeVariationPrefix != null) __obj.updateDynamic("setThemeVariationPrefix")(js.Any.fromFunction1(setThemeVariationPrefix))
+    if (setThemeVariationTransitionCls != null) __obj.updateDynamic("setThemeVariationTransitionCls")(js.Any.fromFunction1(setThemeVariationTransitionCls))
+    if (setViews != null) __obj.updateDynamic("setViews")(js.Any.fromFunction1(setViews))
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (startupImage != null) __obj.updateDynamic("startupImage")(startupImage.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (statusBarStyle != null) __obj.updateDynamic("statusBarStyle")(statusBarStyle.asInstanceOf[js.Any])
+    if (stores != null) __obj.updateDynamic("stores")(stores.asInstanceOf[js.Any])
+    if (suspendEvents != null) __obj.updateDynamic("suspendEvents")(js.Any.fromFunction0(suspendEvents))
+    if (tabletIcon != null) __obj.updateDynamic("tabletIcon")(tabletIcon.asInstanceOf[js.Any])
+    if (tabletStartupScreen != null) __obj.updateDynamic("tabletStartupScreen")(tabletStartupScreen.asInstanceOf[js.Any])
+    if (themeVariation != null) __obj.updateDynamic("themeVariation")(themeVariation.asInstanceOf[js.Any])
+    if (themeVariationPrefix != null) __obj.updateDynamic("themeVariationPrefix")(themeVariationPrefix.asInstanceOf[js.Any])
+    if (themeVariationTransitionCls != null) __obj.updateDynamic("themeVariationTransitionCls")(themeVariationTransitionCls.asInstanceOf[js.Any])
+    if (un != null) __obj.updateDynamic("un")(js.Any.fromFunction5(un))
+    if (unAfter != null) __obj.updateDynamic("unAfter")(js.Any.fromFunction4(unAfter))
+    if (unBefore != null) __obj.updateDynamic("unBefore")(js.Any.fromFunction4(unBefore))
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
+    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[IApplication]
   }
-  @scala.inline
-  implicit class IApplicationOps[Self <: IApplication] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppFolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appFolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appFolder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControllers(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controllers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControllers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controllers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentProfile(value: IProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDispatch(value: (/* action */ js.UndefOr[IAction], /* addToHistory */ js.UndefOr[Boolean]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatch")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDispatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetAppFolder(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAppFolder")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetAppFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAppFolder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetController(value: (/* name */ js.UndefOr[String], /* profileName */ js.UndefOr[String]) => IController): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getController")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetController: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getController")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetControllers(value: () => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getControllers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetControllers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getControllers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetCurrentProfile(value: () => IProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentProfile")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetCurrentProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetHistory(value: () => IHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHistory")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetLaunch(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLaunch")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetLaunch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLaunch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetProfiles(value: () => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProfiles")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetProfiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProfiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetRequires(value: () => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRequires")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetRequires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRequires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetRouter(value: () => IRouter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRouter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetRouter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRouter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetThemeVariation(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getThemeVariation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetThemeVariation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getThemeVariation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetThemeVariationPrefix(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getThemeVariationPrefix")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetThemeVariationPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getThemeVariationPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetThemeVariationTransitionCls(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getThemeVariationTransitionCls")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetThemeVariationTransitionCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getThemeVariationTransitionCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlossOnIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glossOnIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlossOnIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glossOnIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistory(value: IHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("history")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("history")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsIconPrecomposed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIconPrecomposed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsIconPrecomposed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIconPrecomposed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneStartupScreen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneStartupScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneStartupScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneStartupScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfiles(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirectTo(value: /* url */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectTo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRedirectTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequires(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouter(value: IRouter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("router")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("router")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetAppFolder(value: /* appFolder */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAppFolder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetAppFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAppFolder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetControllers(value: /* controllers */ js.UndefOr[Array] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setControllers")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetControllers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setControllers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetCurrentProfile(value: /* currentProfile */ js.UndefOr[IProfile] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCurrentProfile")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetCurrentProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCurrentProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetHistory(value: /* history */ js.UndefOr[IHistory] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHistory")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetLaunch(value: /* launch */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLaunch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetLaunch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLaunch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetName(value: /* name */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetProfiles(value: /* profiles */ js.UndefOr[Array] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setProfiles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetProfiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setProfiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetRequires(value: /* requires */ js.UndefOr[Array] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRequires")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetRequires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRequires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetRouter(value: /* router */ js.UndefOr[IRouter] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRouter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetRouter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRouter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetThemeVariation(value: /* themeVariation */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setThemeVariation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetThemeVariation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setThemeVariation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetThemeVariationPrefix(value: /* themeVariationPrefix */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setThemeVariationPrefix")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetThemeVariationPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setThemeVariationPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetThemeVariationTransitionCls(value: /* themeVariationTransitionCls */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setThemeVariationTransitionCls")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetThemeVariationTransitionCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setThemeVariationTransitionCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartupImage(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startupImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartupImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startupImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusBarStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusBarStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusBarStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusBarStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabletIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabletIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabletIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabletIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabletStartupScreen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabletStartupScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabletStartupScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabletStartupScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThemeVariation(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeVariation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThemeVariation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeVariation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThemeVariationPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeVariationPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThemeVariationPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeVariationPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThemeVariationTransitionCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeVariationTransitionCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThemeVariationTransitionCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeVariationTransitionCls")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

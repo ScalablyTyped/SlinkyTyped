@@ -4,131 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IProgressCircularConfig extends js.Object {
-  var duration: js.UndefOr[Double] = js.native
-  var durationIndeterminate: js.UndefOr[Double] = js.native
+  var duration: js.UndefOr[Double] = js.undefined
+  var durationIndeterminate: js.UndefOr[Double] = js.undefined
   var easeFn: js.UndefOr[
     js.Function4[/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double, Double]
-  ] = js.native
+  ] = js.undefined
   var easeFnIndeterminate: js.UndefOr[
     js.Function4[/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double, Double]
-  ] = js.native
-  var endIndeterminate: js.UndefOr[Double] = js.native
-  var progressSize: js.UndefOr[Double] = js.native
-  var startIndeterminate: js.UndefOr[Double] = js.native
-  var strokeWidth: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var endIndeterminate: js.UndefOr[Double] = js.undefined
+  var progressSize: js.UndefOr[Double] = js.undefined
+  var startIndeterminate: js.UndefOr[Double] = js.undefined
+  var strokeWidth: js.UndefOr[Double] = js.undefined
 }
 
 object IProgressCircularConfig {
   @scala.inline
-  def apply(): IProgressCircularConfig = {
+  def apply(
+    duration: js.UndefOr[Double] = js.undefined,
+    durationIndeterminate: js.UndefOr[Double] = js.undefined,
+    easeFn: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Double = null,
+    easeFnIndeterminate: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Double = null,
+    endIndeterminate: js.UndefOr[Double] = js.undefined,
+    progressSize: js.UndefOr[Double] = js.undefined,
+    startIndeterminate: js.UndefOr[Double] = js.undefined,
+    strokeWidth: js.UndefOr[Double] = js.undefined
+  ): IProgressCircularConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(durationIndeterminate)) __obj.updateDynamic("durationIndeterminate")(durationIndeterminate.get.asInstanceOf[js.Any])
+    if (easeFn != null) __obj.updateDynamic("easeFn")(js.Any.fromFunction4(easeFn))
+    if (easeFnIndeterminate != null) __obj.updateDynamic("easeFnIndeterminate")(js.Any.fromFunction4(easeFnIndeterminate))
+    if (!js.isUndefined(endIndeterminate)) __obj.updateDynamic("endIndeterminate")(endIndeterminate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(progressSize)) __obj.updateDynamic("progressSize")(progressSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startIndeterminate)) __obj.updateDynamic("startIndeterminate")(startIndeterminate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeWidth)) __obj.updateDynamic("strokeWidth")(strokeWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IProgressCircularConfig]
   }
-  @scala.inline
-  implicit class IProgressCircularConfigOps[Self <: IProgressCircularConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDurationIndeterminate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationIndeterminate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationIndeterminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationIndeterminate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEaseFn(value: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeFn")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutEaseFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEaseFnIndeterminate(value: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeFnIndeterminate")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutEaseFnIndeterminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeFnIndeterminate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndIndeterminate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndeterminate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndIndeterminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndeterminate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartIndeterminate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndeterminate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartIndeterminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndeterminate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

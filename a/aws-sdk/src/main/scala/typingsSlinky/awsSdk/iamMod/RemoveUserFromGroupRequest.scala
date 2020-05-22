@@ -22,25 +22,5 @@ object RemoveUserFromGroupRequest {
     val __obj = js.Dynamic.literal(GroupName = GroupName.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoveUserFromGroupRequest]
   }
-  @scala.inline
-  implicit class RemoveUserFromGroupRequestOps[Self <: RemoveUserFromGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupName(value: groupNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserName(value: existingUserNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

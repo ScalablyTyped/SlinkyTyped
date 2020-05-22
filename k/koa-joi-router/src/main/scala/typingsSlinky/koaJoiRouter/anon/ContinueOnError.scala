@@ -11,203 +11,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContinueOnError extends js.Object {
-  var body: js.UndefOr[SchemaLike] = js.native
-  var continueOnError: js.UndefOr[Boolean] = js.native
-  var failure: js.UndefOr[Double] = js.native
-  var formOptions: js.UndefOr[Options] = js.native
-  var header: js.UndefOr[SchemaLike] = js.native
-  var jsonOptions: js.UndefOr[Options] = js.native
-  var maxBody: js.UndefOr[Double] = js.native
-  var multipartOptions: js.UndefOr[Options] = js.native
-  var output: js.UndefOr[StringDictionary[OutputValidation]] = js.native
-  var params: js.UndefOr[SchemaLike] = js.native
-  var query: js.UndefOr[SchemaLike] = js.native
-  var `type`: js.UndefOr[form | json | multipart] = js.native
+  var body: js.UndefOr[SchemaLike] = js.undefined
+  var continueOnError: js.UndefOr[Boolean] = js.undefined
+  var failure: js.UndefOr[Double] = js.undefined
+  var formOptions: js.UndefOr[Options] = js.undefined
+  var header: js.UndefOr[SchemaLike] = js.undefined
+  var jsonOptions: js.UndefOr[Options] = js.undefined
+  var maxBody: js.UndefOr[Double] = js.undefined
+  var multipartOptions: js.UndefOr[Options] = js.undefined
+  var output: js.UndefOr[StringDictionary[OutputValidation]] = js.undefined
+  var params: js.UndefOr[SchemaLike] = js.undefined
+  var query: js.UndefOr[SchemaLike] = js.undefined
+  var `type`: js.UndefOr[form | json | multipart] = js.undefined
 }
 
 object ContinueOnError {
   @scala.inline
-  def apply(): ContinueOnError = {
+  def apply(
+    body: js.UndefOr[Null | SchemaLike] = js.undefined,
+    continueOnError: js.UndefOr[Boolean] = js.undefined,
+    failure: js.UndefOr[Double] = js.undefined,
+    formOptions: Options = null,
+    header: js.UndefOr[Null | SchemaLike] = js.undefined,
+    jsonOptions: Options = null,
+    maxBody: js.UndefOr[Double] = js.undefined,
+    multipartOptions: Options = null,
+    output: StringDictionary[OutputValidation] = null,
+    params: js.UndefOr[Null | SchemaLike] = js.undefined,
+    query: js.UndefOr[Null | SchemaLike] = js.undefined,
+    `type`: form | json | multipart = null
+  ): ContinueOnError = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(body)) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(continueOnError)) __obj.updateDynamic("continueOnError")(continueOnError.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failure)) __obj.updateDynamic("failure")(failure.get.asInstanceOf[js.Any])
+    if (formOptions != null) __obj.updateDynamic("formOptions")(formOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(header)) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (jsonOptions != null) __obj.updateDynamic("jsonOptions")(jsonOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBody)) __obj.updateDynamic("maxBody")(maxBody.get.asInstanceOf[js.Any])
+    if (multipartOptions != null) __obj.updateDynamic("multipartOptions")(multipartOptions.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (!js.isUndefined(params)) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (!js.isUndefined(query)) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContinueOnError]
   }
-  @scala.inline
-  implicit class ContinueOnErrorOps[Self <: ContinueOnError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: SchemaLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(null)
-        ret
-    }
-    @scala.inline
-    def withContinueOnError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinueOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailure(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormOptions(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: SchemaLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(null)
-        ret
-    }
-    @scala.inline
-    def withJsonOptions(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsonOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBody(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultipartOptions(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipartOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultipartOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipartOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput(value: StringDictionary[OutputValidation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: SchemaLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParamsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(null)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: SchemaLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(null)
-        ret
-    }
-    @scala.inline
-    def withType(value: form | json | multipart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

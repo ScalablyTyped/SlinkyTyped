@@ -18,35 +18,10 @@ trait ArchiveGroupSettings extends js.Object {
 
 object ArchiveGroupSettings {
   @scala.inline
-  def apply(Destination: OutputLocationRef): ArchiveGroupSettings = {
+  def apply(Destination: OutputLocationRef, RolloverInterval: js.UndefOr[integerMin1] = js.undefined): ArchiveGroupSettings = {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any])
+    if (!js.isUndefined(RolloverInterval)) __obj.updateDynamic("RolloverInterval")(RolloverInterval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArchiveGroupSettings]
   }
-  @scala.inline
-  implicit class ArchiveGroupSettingsOps[Self <: ArchiveGroupSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: OutputLocationRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRolloverInterval(value: integerMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RolloverInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRolloverInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RolloverInterval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

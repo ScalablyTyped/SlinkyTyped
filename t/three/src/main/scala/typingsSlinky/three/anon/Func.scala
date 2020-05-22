@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Func extends js.Object {
-  var slices: Double = js.native
-  var stacks: Double = js.native
-  def func(u: Double, v: Double, dest: Vector3): Unit = js.native
+  var slices: Double
+  var stacks: Double
+  def func(u: Double, v: Double, dest: Vector3): Unit
 }
 
 object Func {
@@ -18,31 +17,5 @@ object Func {
     val __obj = js.Dynamic.literal(func = js.Any.fromFunction3(func), slices = slices.asInstanceOf[js.Any], stacks = stacks.asInstanceOf[js.Any])
     __obj.asInstanceOf[Func]
   }
-  @scala.inline
-  implicit class FuncOps[Self <: Func] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunc(value: (Double, Double, Vector3) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("func")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSlices(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStacks(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stacks")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

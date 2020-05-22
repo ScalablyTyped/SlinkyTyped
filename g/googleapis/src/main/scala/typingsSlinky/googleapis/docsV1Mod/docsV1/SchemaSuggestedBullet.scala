@@ -24,41 +24,11 @@ trait SchemaSuggestedBullet extends js.Object {
 
 object SchemaSuggestedBullet {
   @scala.inline
-  def apply(): SchemaSuggestedBullet = {
+  def apply(bullet: SchemaBullet = null, bulletSuggestionState: SchemaBulletSuggestionState = null): SchemaSuggestedBullet = {
     val __obj = js.Dynamic.literal()
+    if (bullet != null) __obj.updateDynamic("bullet")(bullet.asInstanceOf[js.Any])
+    if (bulletSuggestionState != null) __obj.updateDynamic("bulletSuggestionState")(bulletSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSuggestedBullet]
   }
-  @scala.inline
-  implicit class SchemaSuggestedBulletOps[Self <: SchemaSuggestedBullet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBullet(value: SchemaBullet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bullet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBullet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bullet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBulletSuggestionState(value: SchemaBulletSuggestionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletSuggestionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBulletSuggestionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletSuggestionState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

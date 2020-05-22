@@ -4,140 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndicesGetSettingsParams extends GenericParams {
-  var allowNoIndices: js.UndefOr[Boolean] = js.native
-  var expandWildcards: js.UndefOr[ExpandWildcards] = js.native
-  var flatSettings: js.UndefOr[Boolean] = js.native
-  var human: js.UndefOr[Boolean] = js.native
-  var ignoreUnavailable: js.UndefOr[Boolean] = js.native
-  var includeDefaults: js.UndefOr[Boolean] = js.native
-  var index: js.UndefOr[NameList] = js.native
-  var local: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[NameList] = js.native
+  var allowNoIndices: js.UndefOr[Boolean] = js.undefined
+  var expandWildcards: js.UndefOr[ExpandWildcards] = js.undefined
+  var flatSettings: js.UndefOr[Boolean] = js.undefined
+  var human: js.UndefOr[Boolean] = js.undefined
+  var ignoreUnavailable: js.UndefOr[Boolean] = js.undefined
+  var includeDefaults: js.UndefOr[Boolean] = js.undefined
+  var index: js.UndefOr[NameList] = js.undefined
+  var local: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[NameList] = js.undefined
 }
 
 object IndicesGetSettingsParams {
   @scala.inline
-  def apply(): IndicesGetSettingsParams = {
+  def apply(
+    allowNoIndices: js.UndefOr[Boolean] = js.undefined,
+    body: js.Any = null,
+    expandWildcards: ExpandWildcards = null,
+    filterPath: String | js.Array[String] = null,
+    flatSettings: js.UndefOr[Boolean] = js.undefined,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    ignoreUnavailable: js.UndefOr[Boolean] = js.undefined,
+    includeDefaults: js.UndefOr[Boolean] = js.undefined,
+    index: NameList = null,
+    local: js.UndefOr[Boolean] = js.undefined,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    name: NameList = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined
+  ): IndicesGetSettingsParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowNoIndices)) __obj.updateDynamic("allowNoIndices")(allowNoIndices.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (expandWildcards != null) __obj.updateDynamic("expandWildcards")(expandWildcards.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(flatSettings)) __obj.updateDynamic("flatSettings")(flatSettings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreUnavailable)) __obj.updateDynamic("ignoreUnavailable")(ignoreUnavailable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeDefaults)) __obj.updateDynamic("includeDefaults")(includeDefaults.get.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesGetSettingsParams]
   }
-  @scala.inline
-  implicit class IndicesGetSettingsParamsOps[Self <: IndicesGetSettingsParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowNoIndices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNoIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowNoIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNoIndices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandWildcards(value: ExpandWildcards): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandWildcards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandWildcards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandWildcards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlatSettings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlatSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHuman(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("human")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHuman: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("human")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreUnavailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnavailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreUnavailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnavailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeDefaults(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDefaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDefaults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

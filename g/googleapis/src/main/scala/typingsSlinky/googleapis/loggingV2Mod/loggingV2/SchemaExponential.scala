@@ -30,53 +30,16 @@ trait SchemaExponential extends js.Object {
 
 object SchemaExponential {
   @scala.inline
-  def apply(): SchemaExponential = {
+  def apply(
+    growthFactor: js.UndefOr[Double] = js.undefined,
+    numFiniteBuckets: js.UndefOr[Double] = js.undefined,
+    scale: js.UndefOr[Double] = js.undefined
+  ): SchemaExponential = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(growthFactor)) __obj.updateDynamic("growthFactor")(growthFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numFiniteBuckets)) __obj.updateDynamic("numFiniteBuckets")(numFiniteBuckets.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExponential]
   }
-  @scala.inline
-  implicit class SchemaExponentialOps[Self <: SchemaExponential] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrowthFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("growthFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrowthFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("growthFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumFiniteBuckets(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numFiniteBuckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumFiniteBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numFiniteBuckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

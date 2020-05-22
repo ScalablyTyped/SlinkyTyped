@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait KdbxObject extends js.Object
 
-object KdbxObject {
-  @scala.inline
-  implicit def apply(value: Entry): KdbxObject = value.asInstanceOf[KdbxObject]
-  @scala.inline
-  implicit def apply(value: Group): KdbxObject = value.asInstanceOf[KdbxObject]
-}
-

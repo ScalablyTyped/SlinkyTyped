@@ -69,108 +69,14 @@ object GetVolumeResult {
     snapshotId: String,
     tags: StringDictionary[js.Any],
     volumeId: String,
-    volumeType: String
+    volumeType: String,
+    filters: js.Array[GetVolumeFilter] = null,
+    mostRecent: js.UndefOr[Boolean] = js.undefined
   ): GetVolumeResult = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], availabilityZone = availabilityZone.asInstanceOf[js.Any], encrypted = encrypted.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], iops = iops.asInstanceOf[js.Any], kmsKeyId = kmsKeyId.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], snapshotId = snapshotId.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], volumeId = volumeId.asInstanceOf[js.Any], volumeType = volumeType.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(mostRecent)) __obj.updateDynamic("mostRecent")(mostRecent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetVolumeResult]
   }
-  @scala.inline
-  implicit class GetVolumeResultOps[Self <: GetVolumeResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIops(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKmsKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnapshotId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilters(value: js.Array[GetVolumeFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMostRecent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mostRecent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMostRecent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mostRecent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

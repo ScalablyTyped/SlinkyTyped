@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UsesOnChanges extends js.Object {
   /**
     * Whether the directive uses NgOnChanges.
     */
-  var usesOnChanges: Boolean = js.native
+  var usesOnChanges: Boolean
 }
 
 object UsesOnChanges {
@@ -18,19 +17,5 @@ object UsesOnChanges {
     val __obj = js.Dynamic.literal(usesOnChanges = usesOnChanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[UsesOnChanges]
   }
-  @scala.inline
-  implicit class UsesOnChangesOps[Self <: UsesOnChanges] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUsesOnChanges(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesOnChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

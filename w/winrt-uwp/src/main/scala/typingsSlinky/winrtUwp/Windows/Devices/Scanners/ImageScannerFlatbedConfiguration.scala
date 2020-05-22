@@ -7,72 +7,71 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the Flatbed scan source of the scanner. */
-@js.native
 trait ImageScannerFlatbedConfiguration extends js.Object {
   /** Gets the actual horizontal and vertical scan resolution for the Flatbed scanner, in DPI. */
-  var actualResolution: ImageScannerResolution = js.native
+  var actualResolution: ImageScannerResolution
   /** Gets or sets the automatic crop mode. */
-  var autoCroppingMode: ImageScannerAutoCroppingMode = js.native
+  var autoCroppingMode: ImageScannerAutoCroppingMode
   /** Gets or sets the current brightness level for capturing image data from the scanner's Flatbed. At the beginning of a new scan session, this property is set to the DefaultBrightness property. */
-  var brightness: Double = js.native
+  var brightness: Double
   /** Gets the step size at which the brightness levels of the data source can be increased or decreased between the minimum and maximum values. */
-  var brightnessStep: Double = js.native
+  var brightnessStep: Double
   /** Gets or sets the color mode for the Flatbed scanner. */
-  var colorMode: ImageScannerColorMode = js.native
+  var colorMode: ImageScannerColorMode
   /** Sets or gets the current contrast level for capturing image data from the scan source. At the beginning of a new scan session this property is set to the DefaultContrast property. */
-  var contrast: Double = js.native
+  var contrast: Double
   /** Gets the step size at which the contrast levels of the data source can increase or decrease between the minimum and maximum values. */
-  var contrastStep: Double = js.native
+  var contrastStep: Double
   /** Gets the default brightness level for the scanner's Flatbed. */
-  var defaultBrightness: Double = js.native
+  var defaultBrightness: Double
   /** Gets the default color mode for the scanner's Flatbed. */
-  var defaultColorMode: ImageScannerColorMode = js.native
+  var defaultColorMode: ImageScannerColorMode
   /** Gets the default contrast level for the scanner's Flatbed. */
-  var defaultContrast: Double = js.native
+  var defaultContrast: Double
   /** Gets the default file format for the scanner's Flatbed at the beginning of a new scan session. */
-  var defaultFormat: ImageScannerFormat = js.native
+  var defaultFormat: ImageScannerFormat
   /** Gets or sets the horizontal and vertical scan resolution for the scanner's Flatbed that the app requests, in DPI. */
-  var desiredResolution: ImageScannerResolution = js.native
+  var desiredResolution: ImageScannerResolution
   /** Gets or sets the current file transfer format for image data acquisition from the scanner's Flatbed to the client app. */
-  var format: ImageScannerFormat = js.native
+  var format: ImageScannerFormat
   /** Gets the maximum brightness level supported by the scanner's Flatbed. */
-  var maxBrightness: Double = js.native
+  var maxBrightness: Double
   /** Gets the maximum contrast level supported by the scanner's Flatbed. */
-  var maxContrast: Double = js.native
+  var maxContrast: Double
   /** Gets the maximum horizontal and vertical scan resolution of the scanner's Flatbed in DPI. */
-  var maxResolution: ImageScannerResolution = js.native
+  var maxResolution: ImageScannerResolution
   /** Gets the maximum scan area dimensions in inches. The maximum scan width is the widest a document can be in order for the scanner's Flatbed to scan it. */
-  var maxScanArea: Size = js.native
+  var maxScanArea: Size
   /** Gets the minimum brightness level supported by the scanner's Flatbed. */
-  var minBrightness: Double = js.native
+  var minBrightness: Double
   /** Gets the minimum contrast level supported by the scanner's Flatbed. */
-  var minContrast: Double = js.native
+  var minContrast: Double
   /** Gets the minimum horizontal and vertical scan resolution of the scanner's Flatbed in DPI. */
-  var minResolution: ImageScannerResolution = js.native
+  var minResolution: ImageScannerResolution
   /** Gets the minimum scan area in inches. The minimum scan area is the smallest size a document can have in order for a Flatbed to scan it. */
-  var minScanArea: Size = js.native
+  var minScanArea: Size
   /** Gets the optical scan resolution of the Flatbed scanner in DPI. */
-  var opticalResolution: ImageScannerResolution = js.native
+  var opticalResolution: ImageScannerResolution
   /** Gets or sets the origin coordinates (horizontal and vertical) and dimensions (width and height) of the selected scan area, in inches. This property is ignored when the AutoCroppingMode property is not Disabled. */
-  var selectedScanRegion: Rect = js.native
+  var selectedScanRegion: Rect
   /**
     * Returns whether the scanner's Flatbed supports the specified ImageScannerAutoCroppingMode .
     * @param value The auto crop mode of the image to scan.
     * @return Indicates whether the device supports value mode.
     */
-  def isAutoCroppingModeSupported(value: ImageScannerAutoCroppingMode): Boolean = js.native
+  def isAutoCroppingModeSupported(value: ImageScannerAutoCroppingMode): Boolean
   /**
     * Returns whether the scanner's Flatbed can scan and transfer images in the specified color mode.
     * @param value The color mode.
     * @return Indicates whether the scanner can scan images in value mode.
     */
-  def isColorModeSupported(value: ImageScannerColorMode): Boolean = js.native
+  def isColorModeSupported(value: ImageScannerColorMode): Boolean
   /**
     * Determines whether the scanner's Flatbed supports the specified file format or not.
     * @param value The file type.
     * @return Indicates whether the specified file type is supported.
     */
-  def isFormatSupported(value: ImageScannerFormat): Boolean = js.native
+  def isFormatSupported(value: ImageScannerFormat): Boolean
 }
 
 object ImageScannerFlatbedConfiguration {
@@ -108,169 +107,5 @@ object ImageScannerFlatbedConfiguration {
     val __obj = js.Dynamic.literal(actualResolution = actualResolution.asInstanceOf[js.Any], autoCroppingMode = autoCroppingMode.asInstanceOf[js.Any], brightness = brightness.asInstanceOf[js.Any], brightnessStep = brightnessStep.asInstanceOf[js.Any], colorMode = colorMode.asInstanceOf[js.Any], contrast = contrast.asInstanceOf[js.Any], contrastStep = contrastStep.asInstanceOf[js.Any], defaultBrightness = defaultBrightness.asInstanceOf[js.Any], defaultColorMode = defaultColorMode.asInstanceOf[js.Any], defaultContrast = defaultContrast.asInstanceOf[js.Any], defaultFormat = defaultFormat.asInstanceOf[js.Any], desiredResolution = desiredResolution.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], isAutoCroppingModeSupported = js.Any.fromFunction1(isAutoCroppingModeSupported), isColorModeSupported = js.Any.fromFunction1(isColorModeSupported), isFormatSupported = js.Any.fromFunction1(isFormatSupported), maxBrightness = maxBrightness.asInstanceOf[js.Any], maxContrast = maxContrast.asInstanceOf[js.Any], maxResolution = maxResolution.asInstanceOf[js.Any], maxScanArea = maxScanArea.asInstanceOf[js.Any], minBrightness = minBrightness.asInstanceOf[js.Any], minContrast = minContrast.asInstanceOf[js.Any], minResolution = minResolution.asInstanceOf[js.Any], minScanArea = minScanArea.asInstanceOf[js.Any], opticalResolution = opticalResolution.asInstanceOf[js.Any], selectedScanRegion = selectedScanRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageScannerFlatbedConfiguration]
   }
-  @scala.inline
-  implicit class ImageScannerFlatbedConfigurationOps[Self <: ImageScannerFlatbedConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualResolution(value: ImageScannerResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoCroppingMode(value: ImageScannerAutoCroppingMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCroppingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrightness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrightnessStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brightnessStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColorMode(value: ImageScannerColorMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContrastStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultBrightness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBrightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultColorMode(value: ImageScannerColorMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColorMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultContrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultFormat(value: ImageScannerFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDesiredResolution(value: ImageScannerResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ImageScannerFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsAutoCroppingModeSupported(value: ImageScannerAutoCroppingMode => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAutoCroppingModeSupported")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsColorModeSupported(value: ImageScannerColorMode => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColorModeSupported")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsFormatSupported(value: ImageScannerFormat => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFormatSupported")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMaxBrightness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBrightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxContrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResolution(value: ImageScannerResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxScanArea(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScanArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinBrightness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minBrightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minContrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinResolution(value: ImageScannerResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinScanArea(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScanArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpticalResolution(value: ImageScannerResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opticalResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedScanRegion(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedScanRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `0SymbolOffset` extends js.Object {
   /**
     * Data of the starting point.
@@ -12,53 +11,23 @@ trait `0SymbolOffset` extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.0
     */
-  var `0`: js.UndefOr[SymbolOffset] = js.native
+  var `0`: js.UndefOr[SymbolOffset] = js.undefined
   /**
     * Data of the ending point.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1
     */
-  var `1`: js.UndefOr[SymbolOffset] = js.native
+  var `1`: js.UndefOr[SymbolOffset] = js.undefined
 }
 
 object `0SymbolOffset` {
   @scala.inline
-  def apply(): `0SymbolOffset` = {
+  def apply(`0`: SymbolOffset = null, `1`: SymbolOffset = null): `0SymbolOffset` = {
     val __obj = js.Dynamic.literal()
+    if (`0` != null) __obj.updateDynamic("0")(`0`.asInstanceOf[js.Any])
+    if (`1` != null) __obj.updateDynamic("1")(`1`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`0SymbolOffset`]
   }
-  @scala.inline
-  implicit class `0SymbolOffsetOps`[Self <: `0SymbolOffset`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with0(value: SymbolOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without0: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with1(value: SymbolOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

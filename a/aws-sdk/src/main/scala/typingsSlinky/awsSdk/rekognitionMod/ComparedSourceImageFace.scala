@@ -18,41 +18,11 @@ trait ComparedSourceImageFace extends js.Object {
 
 object ComparedSourceImageFace {
   @scala.inline
-  def apply(): ComparedSourceImageFace = {
+  def apply(BoundingBox: BoundingBox = null, Confidence: js.UndefOr[Percent] = js.undefined): ComparedSourceImageFace = {
     val __obj = js.Dynamic.literal()
+    if (BoundingBox != null) __obj.updateDynamic("BoundingBox")(BoundingBox.asInstanceOf[js.Any])
+    if (!js.isUndefined(Confidence)) __obj.updateDynamic("Confidence")(Confidence.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComparedSourceImageFace]
   }
-  @scala.inline
-  implicit class ComparedSourceImageFaceOps[Self <: ComparedSourceImageFace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingBox(value: BoundingBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfidence(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

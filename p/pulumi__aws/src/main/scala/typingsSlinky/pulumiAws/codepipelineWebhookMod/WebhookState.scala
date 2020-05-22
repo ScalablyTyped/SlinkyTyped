@@ -46,113 +46,26 @@ trait WebhookState extends js.Object {
 
 object WebhookState {
   @scala.inline
-  def apply(): WebhookState = {
+  def apply(
+    authentication: Input[String] = null,
+    authenticationConfiguration: Input[WebhookAuthenticationConfiguration] = null,
+    filters: Input[js.Array[Input[WebhookFilter]]] = null,
+    name: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null,
+    targetAction: Input[String] = null,
+    targetPipeline: Input[String] = null,
+    url: Input[String] = null
+  ): WebhookState = {
     val __obj = js.Dynamic.literal()
+    if (authentication != null) __obj.updateDynamic("authentication")(authentication.asInstanceOf[js.Any])
+    if (authenticationConfiguration != null) __obj.updateDynamic("authenticationConfiguration")(authenticationConfiguration.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (targetAction != null) __obj.updateDynamic("targetAction")(targetAction.asInstanceOf[js.Any])
+    if (targetPipeline != null) __obj.updateDynamic("targetPipeline")(targetPipeline.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebhookState]
   }
-  @scala.inline
-  implicit class WebhookStateOps[Self <: WebhookState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthentication(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthentication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthenticationConfiguration(value: Input[WebhookAuthenticationConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: Input[js.Array[Input[WebhookFilter]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetAction(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetPipeline(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPipeline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetPipeline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPipeline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

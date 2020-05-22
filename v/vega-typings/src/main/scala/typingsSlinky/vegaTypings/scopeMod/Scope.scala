@@ -13,153 +13,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Scope extends js.Object {
-  var axes: js.UndefOr[js.Array[Axis]] = js.native
-  var data: js.UndefOr[js.Array[Data]] = js.native
-  var layout: js.UndefOr[Layout] = js.native
-  var legends: js.UndefOr[js.Array[Legend]] = js.native
-  var marks: js.UndefOr[js.Array[Mark]] = js.native
-  var projections: js.UndefOr[js.Array[Projection]] = js.native
-  var scales: js.UndefOr[js.Array[Scale]] = js.native
-  var signals: js.UndefOr[js.Array[Signal]] = js.native
-  var title: js.UndefOr[String | Title] = js.native
-  var usermeta: js.UndefOr[js.Object] = js.native
+  var axes: js.UndefOr[js.Array[Axis]] = js.undefined
+  var data: js.UndefOr[js.Array[Data]] = js.undefined
+  var layout: js.UndefOr[Layout] = js.undefined
+  var legends: js.UndefOr[js.Array[Legend]] = js.undefined
+  var marks: js.UndefOr[js.Array[Mark]] = js.undefined
+  var projections: js.UndefOr[js.Array[Projection]] = js.undefined
+  var scales: js.UndefOr[js.Array[Scale]] = js.undefined
+  var signals: js.UndefOr[js.Array[Signal]] = js.undefined
+  var title: js.UndefOr[String | Title] = js.undefined
+  var usermeta: js.UndefOr[js.Object] = js.undefined
 }
 
 object Scope {
   @scala.inline
-  def apply(): Scope = {
+  def apply(
+    axes: js.Array[Axis] = null,
+    data: js.Array[Data] = null,
+    layout: Layout = null,
+    legends: js.Array[Legend] = null,
+    marks: js.Array[Mark] = null,
+    projections: js.Array[Projection] = null,
+    scales: js.Array[Scale] = null,
+    signals: js.Array[Signal] = null,
+    title: String | Title = null,
+    usermeta: js.Object = null
+  ): Scope = {
     val __obj = js.Dynamic.literal()
+    if (axes != null) __obj.updateDynamic("axes")(axes.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
+    if (marks != null) __obj.updateDynamic("marks")(marks.asInstanceOf[js.Any])
+    if (projections != null) __obj.updateDynamic("projections")(projections.asInstanceOf[js.Any])
+    if (scales != null) __obj.updateDynamic("scales")(scales.asInstanceOf[js.Any])
+    if (signals != null) __obj.updateDynamic("signals")(signals.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (usermeta != null) __obj.updateDynamic("usermeta")(usermeta.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scope]
   }
-  @scala.inline
-  implicit class ScopeOps[Self <: Scope] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxes(value: js.Array[Axis]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[Data]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: Layout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegends(value: js.Array[Legend]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegends: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarks(value: js.Array[Mark]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjections(value: js.Array[Projection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScales(value: js.Array[Scale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scales")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScales: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scales")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignals(value: js.Array[Signal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String | Title): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsermeta(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usermeta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsermeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usermeta")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

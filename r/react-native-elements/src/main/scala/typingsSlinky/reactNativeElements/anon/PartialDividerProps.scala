@@ -5,7 +5,6 @@ import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
-import typingsSlinky.reactNative.mod.AccessibilityStates
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.Insets
@@ -32,731 +31,174 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-native-elements.react-native-elements.DividerProps> */
-@js.native
 trait PartialDividerProps extends js.Object {
-  var accessibilityActions: js.UndefOr[js.Array[AccessibilityActionInfo]] = js.native
-  var accessibilityComponentType: js.UndefOr[none | button | radiobutton_checked | radiobutton_unchecked] = js.native
-  var accessibilityElementsHidden: js.UndefOr[Boolean] = js.native
-  var accessibilityHint: js.UndefOr[String] = js.native
-  var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.native
-  var accessibilityLabel: js.UndefOr[String] = js.native
-  var accessibilityLiveRegion: js.UndefOr[none | polite | assertive] = js.native
-  var accessibilityRole: js.UndefOr[AccessibilityRole] = js.native
-  var accessibilityState: js.UndefOr[AccessibilityState] = js.native
-  var accessibilityStates: js.UndefOr[js.Array[AccessibilityStates]] = js.native
-  var accessibilityTraits: js.UndefOr[AccessibilityTrait | js.Array[AccessibilityTrait]] = js.native
-  var accessibilityValue: js.UndefOr[AccessibilityValue] = js.native
-  var accessibilityViewIsModal: js.UndefOr[Boolean] = js.native
-  var accessible: js.UndefOr[Boolean] = js.native
-  var collapsable: js.UndefOr[Boolean] = js.native
-  var hasTVPreferredFocus: js.UndefOr[Boolean] = js.native
-  var hitSlop: js.UndefOr[Insets] = js.native
-  var importantForAccessibility: js.UndefOr[auto | yes | no | `no-hide-descendants`] = js.native
-  var isTVSelectable: js.UndefOr[Boolean] = js.native
-  var nativeID: js.UndefOr[String] = js.native
-  var needsOffscreenAlphaCompositing: js.UndefOr[Boolean] = js.native
-  var onAccessibilityAction: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ReadonlyactionNamestring], Unit]] = js.native
-  var onAccessibilityEscape: js.UndefOr[js.Function0[Unit]] = js.native
-  var onAccessibilityTap: js.UndefOr[js.Function0[Unit]] = js.native
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
-  var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.native
-  var onMoveShouldSetResponder: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.native
-  var onMoveShouldSetResponderCapture: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.native
-  var onResponderEnd: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onResponderGrant: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onResponderMove: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onResponderReject: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onResponderRelease: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onResponderStart: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onResponderTerminate: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onResponderTerminationRequest: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.native
-  var onStartShouldSetResponder: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.native
-  var onStartShouldSetResponderCapture: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.native
-  var onTouchCancel: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onTouchEnd: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onTouchEndCapture: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onTouchMove: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onTouchStart: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var pointerEvents: js.UndefOr[`box-none` | none | `box-only` | auto] = js.native
-  var removeClippedSubviews: js.UndefOr[Boolean] = js.native
-  var renderToHardwareTextureAndroid: js.UndefOr[Boolean] = js.native
-  var shouldRasterizeIOS: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var testID: js.UndefOr[String] = js.native
-  var tvParallaxMagnification: js.UndefOr[Double] = js.native
-  var tvParallaxProperties: js.UndefOr[TVParallaxProperties] = js.native
-  var tvParallaxShiftDistanceX: js.UndefOr[Double] = js.native
-  var tvParallaxShiftDistanceY: js.UndefOr[Double] = js.native
-  var tvParallaxTiltAngle: js.UndefOr[Double] = js.native
+  var accessibilityActions: js.UndefOr[js.Array[AccessibilityActionInfo]] = js.undefined
+  var accessibilityComponentType: js.UndefOr[none | button | radiobutton_checked | radiobutton_unchecked] = js.undefined
+  var accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined
+  var accessibilityHint: js.UndefOr[String] = js.undefined
+  var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined
+  var accessibilityLabel: js.UndefOr[String] = js.undefined
+  var accessibilityLiveRegion: js.UndefOr[none | polite | assertive] = js.undefined
+  var accessibilityRole: js.UndefOr[AccessibilityRole] = js.undefined
+  var accessibilityState: js.UndefOr[AccessibilityState] = js.undefined
+  var accessibilityTraits: js.UndefOr[AccessibilityTrait | js.Array[AccessibilityTrait]] = js.undefined
+  var accessibilityValue: js.UndefOr[AccessibilityValue] = js.undefined
+  var accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined
+  var accessible: js.UndefOr[Boolean] = js.undefined
+  var collapsable: js.UndefOr[Boolean] = js.undefined
+  var hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined
+  var hitSlop: js.UndefOr[Insets] = js.undefined
+  var importantForAccessibility: js.UndefOr[auto | yes | no | `no-hide-descendants`] = js.undefined
+  var isTVSelectable: js.UndefOr[Boolean] = js.undefined
+  var nativeID: js.UndefOr[String] = js.undefined
+  var needsOffscreenAlphaCompositing: js.UndefOr[Boolean] = js.undefined
+  var onAccessibilityAction: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ReadonlyactionNamestring], Unit]] = js.undefined
+  var onAccessibilityEscape: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onAccessibilityTap: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.undefined
+  var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onMoveShouldSetResponder: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.undefined
+  var onMoveShouldSetResponderCapture: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.undefined
+  var onResponderEnd: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onResponderGrant: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onResponderMove: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onResponderReject: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onResponderRelease: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onResponderStart: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onResponderTerminate: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onResponderTerminationRequest: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.undefined
+  var onStartShouldSetResponder: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.undefined
+  var onStartShouldSetResponderCapture: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]] = js.undefined
+  var onTouchCancel: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onTouchEnd: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onTouchEndCapture: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onTouchMove: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onTouchStart: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var pointerEvents: js.UndefOr[`box-none` | none | `box-only` | auto] = js.undefined
+  var removeClippedSubviews: js.UndefOr[Boolean] = js.undefined
+  var renderToHardwareTextureAndroid: js.UndefOr[Boolean] = js.undefined
+  var shouldRasterizeIOS: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var testID: js.UndefOr[String] = js.undefined
+  var tvParallaxMagnification: js.UndefOr[Double] = js.undefined
+  var tvParallaxProperties: js.UndefOr[TVParallaxProperties] = js.undefined
+  var tvParallaxShiftDistanceX: js.UndefOr[Double] = js.undefined
+  var tvParallaxShiftDistanceY: js.UndefOr[Double] = js.undefined
+  var tvParallaxTiltAngle: js.UndefOr[Double] = js.undefined
 }
 
 object PartialDividerProps {
   @scala.inline
-  def apply(): PartialDividerProps = {
+  def apply(
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
+    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
+    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
+    accessibilityHint: String = null,
+    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
+    accessibilityLabel: String = null,
+    accessibilityLiveRegion: none | polite | assertive = null,
+    accessibilityRole: AccessibilityRole = null,
+    accessibilityState: AccessibilityState = null,
+    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
+    accessibilityValue: AccessibilityValue = null,
+    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
+    accessible: js.UndefOr[Boolean] = js.undefined,
+    collapsable: js.UndefOr[Boolean] = js.undefined,
+    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: Insets = null,
+    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
+    isTVSelectable: js.UndefOr[Boolean] = js.undefined,
+    nativeID: String = null,
+    needsOffscreenAlphaCompositing: js.UndefOr[Boolean] = js.undefined,
+    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
+    onAccessibilityEscape: () => Unit = null,
+    onAccessibilityTap: () => Unit = null,
+    onLayout: /* event */ LayoutChangeEvent => Unit = null,
+    onMagicTap: () => Unit = null,
+    onMoveShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onMoveShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onResponderEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderGrant: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderReject: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderRelease: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderTerminate: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderTerminationRequest: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onStartShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onStartShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onTouchCancel: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchEndCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    pointerEvents: `box-none` | none | `box-only` | auto = null,
+    removeClippedSubviews: js.UndefOr[Boolean] = js.undefined,
+    renderToHardwareTextureAndroid: js.UndefOr[Boolean] = js.undefined,
+    shouldRasterizeIOS: js.UndefOr[Boolean] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    testID: String = null,
+    tvParallaxMagnification: js.UndefOr[Double] = js.undefined,
+    tvParallaxProperties: TVParallaxProperties = null,
+    tvParallaxShiftDistanceX: js.UndefOr[Double] = js.undefined,
+    tvParallaxShiftDistanceY: js.UndefOr[Double] = js.undefined,
+    tvParallaxTiltAngle: js.UndefOr[Double] = js.undefined
+  ): PartialDividerProps = {
     val __obj = js.Dynamic.literal()
+    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
+    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
+    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
+    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
+    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
+    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
+    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
+    if (accessibilityValue != null) __obj.updateDynamic("accessibilityValue")(accessibilityValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsable)) __obj.updateDynamic("collapsable")(collapsable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
+    if (!js.isUndefined(isTVSelectable)) __obj.updateDynamic("isTVSelectable")(isTVSelectable.get.asInstanceOf[js.Any])
+    if (nativeID != null) __obj.updateDynamic("nativeID")(nativeID.asInstanceOf[js.Any])
+    if (!js.isUndefined(needsOffscreenAlphaCompositing)) __obj.updateDynamic("needsOffscreenAlphaCompositing")(needsOffscreenAlphaCompositing.get.asInstanceOf[js.Any])
+    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
+    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
+    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
+    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
+    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
+    if (onMoveShouldSetResponder != null) __obj.updateDynamic("onMoveShouldSetResponder")(js.Any.fromFunction1(onMoveShouldSetResponder))
+    if (onMoveShouldSetResponderCapture != null) __obj.updateDynamic("onMoveShouldSetResponderCapture")(js.Any.fromFunction1(onMoveShouldSetResponderCapture))
+    if (onResponderEnd != null) __obj.updateDynamic("onResponderEnd")(js.Any.fromFunction1(onResponderEnd))
+    if (onResponderGrant != null) __obj.updateDynamic("onResponderGrant")(js.Any.fromFunction1(onResponderGrant))
+    if (onResponderMove != null) __obj.updateDynamic("onResponderMove")(js.Any.fromFunction1(onResponderMove))
+    if (onResponderReject != null) __obj.updateDynamic("onResponderReject")(js.Any.fromFunction1(onResponderReject))
+    if (onResponderRelease != null) __obj.updateDynamic("onResponderRelease")(js.Any.fromFunction1(onResponderRelease))
+    if (onResponderStart != null) __obj.updateDynamic("onResponderStart")(js.Any.fromFunction1(onResponderStart))
+    if (onResponderTerminate != null) __obj.updateDynamic("onResponderTerminate")(js.Any.fromFunction1(onResponderTerminate))
+    if (onResponderTerminationRequest != null) __obj.updateDynamic("onResponderTerminationRequest")(js.Any.fromFunction1(onResponderTerminationRequest))
+    if (onStartShouldSetResponder != null) __obj.updateDynamic("onStartShouldSetResponder")(js.Any.fromFunction1(onStartShouldSetResponder))
+    if (onStartShouldSetResponderCapture != null) __obj.updateDynamic("onStartShouldSetResponderCapture")(js.Any.fromFunction1(onStartShouldSetResponderCapture))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchEndCapture != null) __obj.updateDynamic("onTouchEndCapture")(js.Any.fromFunction1(onTouchEndCapture))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeClippedSubviews)) __obj.updateDynamic("removeClippedSubviews")(removeClippedSubviews.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderToHardwareTextureAndroid)) __obj.updateDynamic("renderToHardwareTextureAndroid")(renderToHardwareTextureAndroid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldRasterizeIOS)) __obj.updateDynamic("shouldRasterizeIOS")(shouldRasterizeIOS.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxMagnification)) __obj.updateDynamic("tvParallaxMagnification")(tvParallaxMagnification.get.asInstanceOf[js.Any])
+    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxShiftDistanceX)) __obj.updateDynamic("tvParallaxShiftDistanceX")(tvParallaxShiftDistanceX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxShiftDistanceY)) __obj.updateDynamic("tvParallaxShiftDistanceY")(tvParallaxShiftDistanceY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxTiltAngle)) __obj.updateDynamic("tvParallaxTiltAngle")(tvParallaxTiltAngle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialDividerProps]
   }
-  @scala.inline
-  implicit class PartialDividerPropsOps[Self <: PartialDividerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessibilityActions(value: js.Array[AccessibilityActionInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityComponentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityComponentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityComponentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityElementsHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityElementsHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityElementsHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityElementsHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityHint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityIgnoresInvertColors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityIgnoresInvertColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityIgnoresInvertColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityIgnoresInvertColors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityLiveRegion(value: none | polite | assertive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLiveRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityLiveRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLiveRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityRole(value: AccessibilityRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityState(value: AccessibilityState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityStates(value: js.Array[AccessibilityStates]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityStates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityTraits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityTraits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityTraits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityValue(value: AccessibilityValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityViewIsModal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityViewIsModal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityViewIsModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityViewIsModal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasTVPreferredFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTVPreferredFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasTVPreferredFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTVPreferredFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHitSlop(value: Insets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHitSlop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportantForAccessibility(value: auto | yes | no | `no-hide-descendants`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importantForAccessibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportantForAccessibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importantForAccessibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTVSelectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTVSelectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTVSelectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTVSelectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNativeID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNativeID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNeedsOffscreenAlphaCompositing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needsOffscreenAlphaCompositing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNeedsOffscreenAlphaCompositing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needsOffscreenAlphaCompositing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAccessibilityAction(value: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAccessibilityAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAccessibilityEscape(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAccessibilityEscape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityEscape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAccessibilityTap(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAccessibilityTap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityTap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLayout")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMagicTap(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMagicTap")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMagicTap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMagicTap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMoveShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveShouldSetResponder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMoveShouldSetResponder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveShouldSetResponder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMoveShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveShouldSetResponderCapture")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMoveShouldSetResponderCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveShouldSetResponderCapture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponderEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponderEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponderGrant(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderGrant")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponderGrant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderGrant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponderMove(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponderMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponderReject(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderReject")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponderReject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderReject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponderRelease(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderRelease")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponderRelease: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderRelease")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponderStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponderStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponderTerminate(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderTerminate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponderTerminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderTerminate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponderTerminationRequest(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderTerminationRequest")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponderTerminationRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponderTerminationRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStartShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStartShouldSetResponder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStartShouldSetResponder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStartShouldSetResponder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStartShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStartShouldSetResponderCapture")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStartShouldSetResponderCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStartShouldSetResponderCapture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchEndCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEndCapture")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchEndCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEndCapture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchMove(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointerEvents(value: `box-none` | none | `box-only` | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointerEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveClippedSubviews(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClippedSubviews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveClippedSubviews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClippedSubviews")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderToHardwareTextureAndroid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderToHardwareTextureAndroid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderToHardwareTextureAndroid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderToHardwareTextureAndroid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldRasterizeIOS(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldRasterizeIOS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldRasterizeIOS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldRasterizeIOS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-    @scala.inline
-    def withTestID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTvParallaxMagnification(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxMagnification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTvParallaxMagnification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxMagnification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTvParallaxProperties(value: TVParallaxProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTvParallaxProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTvParallaxShiftDistanceX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxShiftDistanceX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTvParallaxShiftDistanceX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxShiftDistanceX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTvParallaxShiftDistanceY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxShiftDistanceY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTvParallaxShiftDistanceY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxShiftDistanceY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTvParallaxTiltAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxTiltAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTvParallaxTiltAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxTiltAngle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

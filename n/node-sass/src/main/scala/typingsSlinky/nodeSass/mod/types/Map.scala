@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Map
   extends Value
      with Enumerable {
-  def getKey(index: Double): Value = js.native
-  def setKey(index: Double, key: Value): Unit = js.native
+  def getKey(index: Double): Value
+  def setKey(index: Double, key: Value): Unit
 }
 
 @JSImport("node-sass", "types.Map")

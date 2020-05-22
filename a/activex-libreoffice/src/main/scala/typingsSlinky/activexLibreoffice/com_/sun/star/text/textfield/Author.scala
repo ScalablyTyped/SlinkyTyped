@@ -18,25 +18,24 @@ import scala.scalajs.js.annotation._
   * specifies service of an author text field.
   * @see com.sun.star.text.TextField
   */
-@js.native
 trait Author extends TextField_ {
   /**
     * this is the display format for this field
     * @see com.sun.star.text.AuthorDisplayFormat
     */
-  var AuthorFormat: Double = js.native
+  var AuthorFormat: Double
   /** the is the content of this field */
-  var Content: String = js.native
+  var Content: String
   /**
     * contains the current content of the text field.
     *
     * This property is especially useful for import/export purposes.
     */
-  var CurrentPresentation: String = js.native
+  var CurrentPresentation: String
   /** determines whether the full name of the author is displayed rather than the initials. */
-  var FullName: Boolean = js.native
+  var FullName: Boolean
   /** If this flag is set to false the author will be overridden by the current author each time the document is saved. */
-  var IsFixed: Boolean = js.native
+  var IsFixed: Boolean
 }
 
 object Author {
@@ -74,43 +73,5 @@ object Author {
     val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], AnchorType = AnchorType.asInstanceOf[js.Any], AnchorTypes = AnchorTypes.asInstanceOf[js.Any], AuthorFormat = AuthorFormat.asInstanceOf[js.Any], Content = Content.asInstanceOf[js.Any], CurrentPresentation = CurrentPresentation.asInstanceOf[js.Any], FullName = FullName.asInstanceOf[js.Any], IsFieldDisplayed = IsFieldDisplayed.asInstanceOf[js.Any], IsFieldUsed = IsFieldUsed.asInstanceOf[js.Any], IsFixed = IsFixed.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], TextWrap = TextWrap.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), getPresentation = js.Any.fromFunction1(getPresentation), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[Author]
   }
-  @scala.inline
-  implicit class AuthorOps[Self <: Author] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorFormat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentPresentation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentPresentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsFixed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsFixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

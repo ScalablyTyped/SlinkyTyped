@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GlDatePickerOptions extends js.Object {
-  var allowMonthSelect: js.UndefOr[Boolean] = js.native
-  var allowYearSelect: js.UndefOr[Boolean] = js.native
-  var borderSize: js.UndefOr[Double] = js.native
-  var calendarOffset: js.UndefOr[GlDatePickerOffset] = js.native
-  var cssName: js.UndefOr[String] = js.native
-  var dowNames: js.UndefOr[js.Array[String]] = js.native
-  var dowOffset: js.UndefOr[Double] = js.native
-  var hideOnClick: js.UndefOr[Boolean] = js.native
-  var monthNames: js.UndefOr[js.Array[String]] = js.native
-  var nextArrow: js.UndefOr[String] = js.native
+  var allowMonthSelect: js.UndefOr[Boolean] = js.undefined
+  var allowYearSelect: js.UndefOr[Boolean] = js.undefined
+  var borderSize: js.UndefOr[Double] = js.undefined
+  var calendarOffset: js.UndefOr[GlDatePickerOffset] = js.undefined
+  var cssName: js.UndefOr[String] = js.undefined
+  var dowNames: js.UndefOr[js.Array[String]] = js.undefined
+  var dowOffset: js.UndefOr[Double] = js.undefined
+  var hideOnClick: js.UndefOr[Boolean] = js.undefined
+  var monthNames: js.UndefOr[js.Array[String]] = js.undefined
+  var nextArrow: js.UndefOr[String] = js.undefined
   var onClick: js.UndefOr[
     js.Function4[
       /* inputElement */ JQuery, 
@@ -24,8 +23,8 @@ trait GlDatePickerOptions extends js.Object {
       /* data */ js.Any, 
       Unit
     ]
-  ] = js.native
-  var onHide: js.UndefOr[js.Function1[/* calendar */ JQuery, Unit]] = js.native
+  ] = js.undefined
+  var onHide: js.UndefOr[js.Function1[/* calendar */ JQuery, Unit]] = js.undefined
   var onHover: js.UndefOr[
     js.Function4[
       /* inputElement */ JQuery, 
@@ -34,338 +33,77 @@ trait GlDatePickerOptions extends js.Object {
       /* data */ js.Any, 
       Unit
     ]
-  ] = js.native
-  var onShow: js.UndefOr[js.Function1[/* calendar */ JQuery, Unit]] = js.native
-  var prevArrow: js.UndefOr[String] = js.native
-  var selectableDOW: js.UndefOr[js.Array[Double]] = js.native
-  var selectableDateRange: js.UndefOr[js.Array[GlDatePickerDateRange]] = js.native
-  var selectableDates: js.UndefOr[js.Array[GlDatePickerDate]] = js.native
-  var selectableMonths: js.UndefOr[js.Array[Double]] = js.native
-  var selectableYears: js.UndefOr[js.Array[Double]] = js.native
-  var selectedDate: js.UndefOr[js.Date] = js.native
-  var showAlways: js.UndefOr[Boolean] = js.native
-  var specialDates: js.UndefOr[js.Array[GlDatePickerSpecialDate]] = js.native
-  var todayDate: js.UndefOr[js.Date] = js.native
-  var zIndex: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var onShow: js.UndefOr[js.Function1[/* calendar */ JQuery, Unit]] = js.undefined
+  var prevArrow: js.UndefOr[String] = js.undefined
+  var selectableDOW: js.UndefOr[js.Array[Double]] = js.undefined
+  var selectableDateRange: js.UndefOr[js.Array[GlDatePickerDateRange]] = js.undefined
+  var selectableDates: js.UndefOr[js.Array[GlDatePickerDate]] = js.undefined
+  var selectableMonths: js.UndefOr[js.Array[Double]] = js.undefined
+  var selectableYears: js.UndefOr[js.Array[Double]] = js.undefined
+  var selectedDate: js.UndefOr[js.Date] = js.undefined
+  var showAlways: js.UndefOr[Boolean] = js.undefined
+  var specialDates: js.UndefOr[js.Array[GlDatePickerSpecialDate]] = js.undefined
+  var todayDate: js.UndefOr[js.Date] = js.undefined
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object GlDatePickerOptions {
   @scala.inline
-  def apply(): GlDatePickerOptions = {
+  def apply(
+    allowMonthSelect: js.UndefOr[Boolean] = js.undefined,
+    allowYearSelect: js.UndefOr[Boolean] = js.undefined,
+    borderSize: js.UndefOr[Double] = js.undefined,
+    calendarOffset: GlDatePickerOffset = null,
+    cssName: String = null,
+    dowNames: js.Array[String] = null,
+    dowOffset: js.UndefOr[Double] = js.undefined,
+    hideOnClick: js.UndefOr[Boolean] = js.undefined,
+    monthNames: js.Array[String] = null,
+    nextArrow: String = null,
+    onClick: (/* inputElement */ JQuery, /* cell */ JQuery, /* date */ js.Date, /* data */ js.Any) => Unit = null,
+    onHide: /* calendar */ JQuery => Unit = null,
+    onHover: (/* inputElement */ JQuery, /* cell */ JQuery, /* date */ js.Date, /* data */ js.Any) => Unit = null,
+    onShow: /* calendar */ JQuery => Unit = null,
+    prevArrow: String = null,
+    selectableDOW: js.Array[Double] = null,
+    selectableDateRange: js.Array[GlDatePickerDateRange] = null,
+    selectableDates: js.Array[GlDatePickerDate] = null,
+    selectableMonths: js.Array[Double] = null,
+    selectableYears: js.Array[Double] = null,
+    selectedDate: js.Date = null,
+    showAlways: js.UndefOr[Boolean] = js.undefined,
+    specialDates: js.Array[GlDatePickerSpecialDate] = null,
+    todayDate: js.Date = null,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): GlDatePickerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowMonthSelect)) __obj.updateDynamic("allowMonthSelect")(allowMonthSelect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowYearSelect)) __obj.updateDynamic("allowYearSelect")(allowYearSelect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderSize)) __obj.updateDynamic("borderSize")(borderSize.get.asInstanceOf[js.Any])
+    if (calendarOffset != null) __obj.updateDynamic("calendarOffset")(calendarOffset.asInstanceOf[js.Any])
+    if (cssName != null) __obj.updateDynamic("cssName")(cssName.asInstanceOf[js.Any])
+    if (dowNames != null) __obj.updateDynamic("dowNames")(dowNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(dowOffset)) __obj.updateDynamic("dowOffset")(dowOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideOnClick)) __obj.updateDynamic("hideOnClick")(hideOnClick.get.asInstanceOf[js.Any])
+    if (monthNames != null) __obj.updateDynamic("monthNames")(monthNames.asInstanceOf[js.Any])
+    if (nextArrow != null) __obj.updateDynamic("nextArrow")(nextArrow.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction4(onClick))
+    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
+    if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction4(onHover))
+    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
+    if (prevArrow != null) __obj.updateDynamic("prevArrow")(prevArrow.asInstanceOf[js.Any])
+    if (selectableDOW != null) __obj.updateDynamic("selectableDOW")(selectableDOW.asInstanceOf[js.Any])
+    if (selectableDateRange != null) __obj.updateDynamic("selectableDateRange")(selectableDateRange.asInstanceOf[js.Any])
+    if (selectableDates != null) __obj.updateDynamic("selectableDates")(selectableDates.asInstanceOf[js.Any])
+    if (selectableMonths != null) __obj.updateDynamic("selectableMonths")(selectableMonths.asInstanceOf[js.Any])
+    if (selectableYears != null) __obj.updateDynamic("selectableYears")(selectableYears.asInstanceOf[js.Any])
+    if (selectedDate != null) __obj.updateDynamic("selectedDate")(selectedDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(showAlways)) __obj.updateDynamic("showAlways")(showAlways.get.asInstanceOf[js.Any])
+    if (specialDates != null) __obj.updateDynamic("specialDates")(specialDates.asInstanceOf[js.Any])
+    if (todayDate != null) __obj.updateDynamic("todayDate")(todayDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GlDatePickerOptions]
   }
-  @scala.inline
-  implicit class GlDatePickerOptionsOps[Self <: GlDatePickerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowMonthSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMonthSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowMonthSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMonthSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowYearSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowYearSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowYearSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowYearSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendarOffset(value: GlDatePickerOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendarOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDowNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dowNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDowNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dowNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDowOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dowOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDowOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dowOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideOnClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextArrow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextArrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextArrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextArrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(
-      value: (/* inputElement */ JQuery, /* cell */ JQuery, /* date */ js.Date, /* data */ js.Any) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHide(value: /* calendar */ JQuery => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHover(
-      value: (/* inputElement */ JQuery, /* cell */ JQuery, /* date */ js.Date, /* data */ js.Any) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHover")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: /* calendar */ JQuery => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevArrow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevArrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevArrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevArrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectableDOW(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableDOW")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectableDOW: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableDOW")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectableDateRange(value: js.Array[GlDatePickerDateRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableDateRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectableDateRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableDateRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectableDates(value: js.Array[GlDatePickerDate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectableDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectableMonths(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableMonths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectableMonths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableMonths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectableYears(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableYears")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectableYears: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableYears")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAlways(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAlways")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAlways: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAlways")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpecialDates(value: js.Array[GlDatePickerSpecialDate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specialDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpecialDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specialDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTodayDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("todayDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTodayDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("todayDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

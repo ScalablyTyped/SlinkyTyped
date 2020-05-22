@@ -17,7 +17,7 @@ class WebStorageSharedClientState protected () extends SharedClientState {
     localClientId: ClientId,
     initialUser: User
   ) = this()
-  val activeClients: js.Any = js.native
+  var activeClients: js.Any = js.native
   val clientStateKeyRe: js.Any = js.native
   var currentUser: js.Any = js.native
   /**
@@ -25,6 +25,7 @@ class WebStorageSharedClientState protected () extends SharedClientState {
     * events are replayed once `WebStorageSharedClientState` is started.
     */
   var earlyEvents: js.Any = js.native
+  var extractActiveQueryTargets: js.Any = js.native
   /**
     * Parses a client state in WebStorage. Returns 'null' if the value could not
     * be parsed.

@@ -2,7 +2,7 @@ package typingsSlinky.jose.mod.JWK
 
 import typingsSlinky.jose.mod.ECCurve
 import typingsSlinky.jose.mod.OKPCurve
-import typingsSlinky.jose.mod.ProduceKeyInput
+import typingsSlinky.jose.mod._ProduceKeyInput
 import typingsSlinky.jose.mod.keyObjectTypes
 import typingsSlinky.jose.mod.keyOperation
 import typingsSlinky.jose.mod.keyType
@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Key extends ProduceKeyInput {
+trait Key extends _ProduceKeyInput {
   val alg: js.UndefOr[String] = js.native
   val crv: js.UndefOr[ECCurve | OKPCurve] = js.native
   val d: js.UndefOr[String] = js.native

@@ -24,41 +24,11 @@ trait SchemaMaintenanceWindow extends js.Object {
 
 object SchemaMaintenanceWindow {
   @scala.inline
-  def apply(): SchemaMaintenanceWindow = {
+  def apply(durationMs: String = null, startTimeAfterMidnightMs: String = null): SchemaMaintenanceWindow = {
     val __obj = js.Dynamic.literal()
+    if (durationMs != null) __obj.updateDynamic("durationMs")(durationMs.asInstanceOf[js.Any])
+    if (startTimeAfterMidnightMs != null) __obj.updateDynamic("startTimeAfterMidnightMs")(startTimeAfterMidnightMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMaintenanceWindow]
   }
-  @scala.inline
-  implicit class SchemaMaintenanceWindowOps[Self <: SchemaMaintenanceWindow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDurationMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTimeAfterMidnightMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeAfterMidnightMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTimeAfterMidnightMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeAfterMidnightMs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

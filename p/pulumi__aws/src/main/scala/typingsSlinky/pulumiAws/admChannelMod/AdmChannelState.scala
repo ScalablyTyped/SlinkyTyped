@@ -27,65 +27,18 @@ trait AdmChannelState extends js.Object {
 
 object AdmChannelState {
   @scala.inline
-  def apply(): AdmChannelState = {
+  def apply(
+    applicationId: Input[String] = null,
+    clientId: Input[String] = null,
+    clientSecret: Input[String] = null,
+    enabled: Input[Boolean] = null
+  ): AdmChannelState = {
     val __obj = js.Dynamic.literal()
+    if (applicationId != null) __obj.updateDynamic("applicationId")(applicationId.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (clientSecret != null) __obj.updateDynamic("clientSecret")(clientSecret.asInstanceOf[js.Any])
+    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdmChannelState]
   }
-  @scala.inline
-  implicit class AdmChannelStateOps[Self <: AdmChannelState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientSecret(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

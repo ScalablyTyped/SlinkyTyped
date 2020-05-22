@@ -6,26 +6,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait relationshipUpdateRendererParams extends Object {
   /**
     * The array of colors to be used by the symbols in the uniqueValueInfos of the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#updateRenderer)
     */
-  var colors: js.Array[Color_] = js.native
+  var colors: js.Array[Color_]
   /**
     * A numeric field used to explore its relationship with `field2`. In the default visualization, the values of this field are rendered along the vertical axis of the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#updateRenderer)
     */
-  var field1: relationshipUpdateRendererParamsField1 = js.native
+  var field1: relationshipUpdateRendererParamsField1
   /**
     * A numeric field used to explore its relationship with `field1`. In the default visualization, the values of this field are rendered along the horizontal axis of the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#updateRenderer)
     */
-  var field2: relationshipUpdateRendererParamsField2 = js.native
+  var field2: relationshipUpdateRendererParamsField2
   /**
     * Determines the orientation of the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html). This value does not change the renderer or symbology of any features in the layer. This affects the legend only. See the table below for a description of the possible values. See the class description at the top of this page for a more thorough explanation of how to read the legend.
     *
@@ -40,7 +39,7 @@ trait relationshipUpdateRendererParams extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#updateRenderer)
     */
-  var focus: js.UndefOr[String] = js.native
+  var focus: js.UndefOr[String] = js.undefined
   /**
     * Indicates the number of classes by which to break up the values of each field. More classes give you more detail, but more colors, making the visualization more difficult to understand. There are only three possible values.
     *
@@ -53,13 +52,13 @@ trait relationshipUpdateRendererParams extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#updateRenderer)
     */
-  var numClasses: Double = js.native
+  var numClasses: Double
   /**
     * The relationship renderer (generated from [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)) to update with the other parameters provided in this method.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#updateRenderer)
     */
-  var renderer: UniqueValueRenderer = js.native
+  var renderer: UniqueValueRenderer
 }
 
 object relationshipUpdateRendererParams {
@@ -72,60 +71,12 @@ object relationshipUpdateRendererParams {
     hasOwnProperty: PropertyKey => Boolean,
     numClasses: Double,
     propertyIsEnumerable: PropertyKey => Boolean,
-    renderer: UniqueValueRenderer
+    renderer: UniqueValueRenderer,
+    focus: String = null
   ): relationshipUpdateRendererParams = {
     val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], field1 = field1.asInstanceOf[js.Any], field2 = field2.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), numClasses = numClasses.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), renderer = renderer.asInstanceOf[js.Any])
+    if (focus != null) __obj.updateDynamic("focus")(focus.asInstanceOf[js.Any])
     __obj.asInstanceOf[relationshipUpdateRendererParams]
   }
-  @scala.inline
-  implicit class relationshipUpdateRendererParamsOps[Self <: relationshipUpdateRendererParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColors(value: js.Array[Color_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withField1(value: relationshipUpdateRendererParamsField1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withField2(value: relationshipUpdateRendererParamsField2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumClasses(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numClasses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: UniqueValueRenderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFocus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

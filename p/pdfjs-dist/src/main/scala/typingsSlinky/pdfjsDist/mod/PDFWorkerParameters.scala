@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PDFWorkerParameters extends js.Object {
-  var name: js.UndefOr[String] = js.native
-  var port: js.UndefOr[js.Any] = js.native
-  var verbosity: js.UndefOr[VerbosityLevel] = js.native
+  var name: js.UndefOr[String] = js.undefined
+  var port: js.UndefOr[js.Any] = js.undefined
+  var verbosity: js.UndefOr[VerbosityLevel] = js.undefined
 }
 
 object PDFWorkerParameters {
   @scala.inline
-  def apply(): PDFWorkerParameters = {
+  def apply(name: String = null, port: js.Any = null, verbosity: VerbosityLevel = null): PDFWorkerParameters = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (verbosity != null) __obj.updateDynamic("verbosity")(verbosity.asInstanceOf[js.Any])
     __obj.asInstanceOf[PDFWorkerParameters]
   }
-  @scala.inline
-  implicit class PDFWorkerParametersOps[Self <: PDFWorkerParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbosity(value: VerbosityLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbosity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbosity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbosity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

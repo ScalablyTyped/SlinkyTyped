@@ -52,125 +52,42 @@ trait ParamsResourceEntityusagereportsGet extends StandardParameters {
 
 object ParamsResourceEntityusagereportsGet {
   @scala.inline
-  def apply(): ParamsResourceEntityusagereportsGet = {
+  def apply(
+    alt: String = null,
+    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
+    customerId: String = null,
+    date: String = null,
+    entityKey: String = null,
+    entityType: String = null,
+    fields: String = null,
+    filters: String = null,
+    key: String = null,
+    maxResults: js.UndefOr[Double] = js.undefined,
+    oauth_token: String = null,
+    pageToken: String = null,
+    parameters: String = null,
+    prettyPrint: js.UndefOr[Boolean] = js.undefined,
+    quotaUser: String = null,
+    userIp: String = null
+  ): ParamsResourceEntityusagereportsGet = {
     val __obj = js.Dynamic.literal()
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (customerId != null) __obj.updateDynamic("customerId")(customerId.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (entityKey != null) __obj.updateDynamic("entityKey")(entityKey.asInstanceOf[js.Any])
+    if (entityType != null) __obj.updateDynamic("entityType")(entityType.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.get.asInstanceOf[js.Any])
+    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
+    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourceEntityusagereportsGet]
   }
-  @scala.inline
-  implicit class ParamsResourceEntityusagereportsGetOps[Self <: ParamsResourceEntityusagereportsGet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

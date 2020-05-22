@@ -12,17 +12,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
-@js.native
 trait AwaitExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var all: js.UndefOr[Boolean] = js.native
-  var argument: ExpressionKind | Null = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.AwaitExpression = js.native
+  var all: js.UndefOr[Boolean] = js.undefined
+  var argument: ExpressionKind | Null
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.AwaitExpression
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.AwaitExpression")

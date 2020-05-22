@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoadSubpackageTask extends js.Object {
   /**
     * 监听分包加载进度变化事件
@@ -13,7 +12,7 @@ trait LoadSubpackageTask extends js.Object {
     * @param callback.res.totalBytesWritten 已经下载的数据长度，单位 Bytes
     * @param callback.res.totalBytesExpectedToWrite 预期需要下载的数据总长度，单位 Bytes
     */
-  def onProgressUpdate(callback: js.Function1[/* res */ Progress, Unit]): Unit = js.native
+  def onProgressUpdate(callback: js.Function1[/* res */ Progress, Unit]): Unit
 }
 
 object LoadSubpackageTask {
@@ -22,19 +21,5 @@ object LoadSubpackageTask {
     val __obj = js.Dynamic.literal(onProgressUpdate = js.Any.fromFunction1(onProgressUpdate))
     __obj.asInstanceOf[LoadSubpackageTask]
   }
-  @scala.inline
-  implicit class LoadSubpackageTaskOps[Self <: LoadSubpackageTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnProgressUpdate(value: js.Function1[/* res */ Progress, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgressUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

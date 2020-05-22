@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Amount extends js.Object {
   /**
     * Amount as floating-point in a string
     */
-  var amount: String = js.native
+  var amount: String
   /**
     * Currency e.g. "BTC" (see Client#getCurrencies() for available strings)
     */
-  var base: String = js.native
+  var base: String
   /**
     * Currency e.g. "EUR" (see Client#getCurrencies() for available strings)
     */
-  var currency: String = js.native
+  var currency: String
 }
 
 object Amount {
@@ -26,31 +25,5 @@ object Amount {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], base = base.asInstanceOf[js.Any], currency = currency.asInstanceOf[js.Any])
     __obj.asInstanceOf[Amount]
   }
-  @scala.inline
-  implicit class AmountOps[Self <: Amount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

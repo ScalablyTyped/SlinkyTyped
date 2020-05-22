@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Autolinker extends js.Object {
   /**
     * @cfg {String} className
@@ -23,7 +22,7 @@ trait Autolinker extends js.Object {
     * - Mention links will have the CSS classes: "myLink myLink-mention myLink-[type]"
     *   where [type] is either "instagram", "twitter" or "soundcloud"
     */
-  val className: js.Any = js.native
+  val className: js.Any
   /**
     * After we have found all matches, we need to remove matches that overlap
     * with a previous match. This can happen for instance with URLs, where the
@@ -35,7 +34,7 @@ trait Autolinker extends js.Object {
     * @param {Autolinker.match.Match[]} matches
     * @return {Autolinker.match.Match[]}
     */
-  var compactMatches: js.Any = js.native
+  var compactMatches: js.Any
   /**
     * @cfg {Object} context
     *
@@ -43,7 +42,7 @@ trait Autolinker extends js.Object {
     *
     * Defaults to this Autolinker instance.
     */
-  val context: js.Any = js.native
+  val context: js.Any
   /**
     * Creates the return string value for a given match in the input string.
     *
@@ -56,7 +55,7 @@ trait Autolinker extends js.Object {
     *   This is usually the anchor tag string, but may be the `matchStr` itself
     *   if the match is not to be replaced.
     */
-  var createMatchReturnVal: js.Any = js.native
+  var createMatchReturnVal: js.Any
   /**
     * @cfg {Boolean} [decodePercentEncoding=true]
     *
@@ -66,14 +65,14 @@ trait Autolinker extends js.Object {
     *  Example when `true`: `https://en.wikipedia.org/wiki/San_Jos%C3%A9` will
     *  be displayed as `https://en.wikipedia.org/wiki/San_José`.
     */
-  val decodePercentEncoding: js.Any = js.native
+  val decodePercentEncoding: js.Any
   /**
     * @cfg {Boolean} [email=true]
     *
     * `true` if email addresses should be automatically linked, `false` if they
     * should not be.
     */
-  val email: js.Any = js.native
+  val email: js.Any
   /**
     * Lazily instantiates and returns the {@link Autolinker.matcher.Matcher}
     * instances for this Autolinker instance.
@@ -81,7 +80,7 @@ trait Autolinker extends js.Object {
     * @private
     * @return {Autolinker.matcher.Matcher[]}
     */
-  var getMatchers: js.Any = js.native
+  var getMatchers: js.Any
   /**
     * Returns the {@link #tagBuilder} instance for this Autolinker instance,
     * lazily instantiating it if it does not yet exist.
@@ -89,7 +88,7 @@ trait Autolinker extends js.Object {
     * @private
     * @return {Autolinker.AnchorTagBuilder}
     */
-  var getTagBuilder: js.Any = js.native
+  var getTagBuilder: js.Any
   /**
     * @cfg {Boolean/String} [hashtag=false]
     *
@@ -102,7 +101,7 @@ trait Autolinker extends js.Object {
     *
     * Pass `false` to skip auto-linking of hashtags.
     */
-  val hashtag: js.Any = js.native
+  val hashtag: js.Any
   /**
     * @private
     * @property {Autolinker.matcher.Matcher[]} matchers
@@ -112,7 +111,7 @@ trait Autolinker extends js.Object {
     *
     * This is lazily created in {@link #getMatchers}.
     */
-  var matchers: js.Any = js.native
+  var matchers: js.Any
   /**
     * @cfg {String/Boolean} [mention=false]
     *
@@ -125,13 +124,13 @@ trait Autolinker extends js.Object {
     *
     * Defaults to `false` to skip auto-linking of mentions.
     */
-  val mention: js.Any = js.native
+  val mention: js.Any
   /**
     * @cfg {Boolean} [newWindow=true]
     *
     * `true` if the links should open in a new window, `false` otherwise.
     */
-  val newWindow: js.Any = js.native
+  val newWindow: js.Any
   /**
     * Normalizes the {@link #stripPrefix} config into an Object with 2
     * properties: `scheme`, and `www` - both Booleans.
@@ -142,7 +141,7 @@ trait Autolinker extends js.Object {
     * @param {Boolean/Object} stripPrefix
     * @return {Object}
     */
-  var normalizeStripPrefixCfg: js.Any = js.native
+  var normalizeStripPrefixCfg: js.Any
   /**
     * Normalizes the {@link #truncate} config into an Object with 2 properties:
     * `length` (Number), and `location` (String).
@@ -153,7 +152,7 @@ trait Autolinker extends js.Object {
     * @param {Number/Object} truncate
     * @return {Object}
     */
-  var normalizeTruncateCfg: js.Any = js.native
+  var normalizeTruncateCfg: js.Any
   /**
     * Normalizes the {@link #urls} config into an Object with 3 properties:
     * `schemeMatches`, `wwwMatches`, and `tldMatches`, all Booleans.
@@ -164,7 +163,7 @@ trait Autolinker extends js.Object {
     * @param {Boolean/Object} urls
     * @return {Object}
     */
-  var normalizeUrlsCfg: js.Any = js.native
+  var normalizeUrlsCfg: js.Any
   /**
     * Parses the input `text` looking for URLs, email addresses, phone
     * numbers, username handles, and hashtags (depending on the configuration
@@ -186,14 +185,14 @@ trait Autolinker extends js.Object {
     * @return {Autolinker.match.Match[]} The array of Matches found in the
     *   given input `text`.
     */
-  var parseText: js.Any = js.native
+  var parseText: js.Any
   /**
     * @cfg {Boolean} [phone=true]
     *
     * `true` if Phone numbers ("(555)555-5555") should be automatically linked,
     * `false` if they should not be.
     */
-  val phone: js.Any = js.native
+  val phone: js.Any
   /**
     * Removes matches for matchers that were turned off in the options. For
     * example, if {@link #hashtag hashtags} were not to be matched, we'll
@@ -212,7 +211,7 @@ trait Autolinker extends js.Object {
     *   removals.
     * @return {Autolinker.match.Match[]} The mutated input `matches` array.
     */
-  var removeUnwantedMatches: js.Any = js.native
+  var removeUnwantedMatches: js.Any
   /**
     * @cfg {Function} replaceFn
     *
@@ -230,7 +229,22 @@ trait Autolinker extends js.Object {
     *   is currently processing. See {@link Autolinker.match.Match} subclasses
     *   for details.
     */
-  val replaceFn: js.Any = js.native
+  val replaceFn: js.Any
+  /**
+    * @cfg {Boolean} [sanitizeHtml=false]
+    *
+    * `true` to HTML-encode the start and end brackets of existing HTML tags found
+    * in the input string. This will escape `<` and `>` characters to `&lt;` and
+    * `&gt;`, respectively.
+    *
+    * Setting this to `true` will prevent XSS (Cross-site Scripting) attacks,
+    * but will remove the significance of existing HTML tags in the input string. If
+    * you would like to maintain the significance of existing HTML tags while also
+    * making the output HTML string safe, leave this option as `false` and use a
+    * tool like https://github.com/cure53/DOMPurify (or others) on the input string
+    * before running Autolinker.
+    */
+  val sanitizeHtml: js.Any
   /**
     * @cfg {Boolean/Object} [stripPrefix=true]
     *
@@ -264,7 +278,7 @@ trait Autolinker extends js.Object {
     *   `'www.google.com'` will be displayed as `'google.com'`. `false` to not
     *   strip the `'www'`.
     */
-  val stripPrefix: js.Any = js.native
+  val stripPrefix: js.Any
   /**
     * @cfg {Boolean} [stripTrailingSlash=true]
     *
@@ -274,7 +288,7 @@ trait Autolinker extends js.Object {
     *  Example when `true`: `http://google.com/` will be displayed as
     *  `http://google.com`.
     */
-  val stripTrailingSlash: js.Any = js.native
+  val stripTrailingSlash: js.Any
   /**
     * @private
     * @property {Autolinker.AnchorTagBuilder} tagBuilder
@@ -282,7 +296,7 @@ trait Autolinker extends js.Object {
     * The AnchorTagBuilder instance used to build match replacement anchor tags.
     * Note: this is lazily instantiated in the {@link #getTagBuilder} method.
     */
-  var tagBuilder: js.Any = js.native
+  var tagBuilder: js.Any
   /**
     * @cfg {Number/Object} [truncate=0]
     *
@@ -330,7 +344,7 @@ trait Autolinker extends js.Object {
     *   'yahoo.com/some..to/a/file'. For more details, see
     *   {@link Autolinker.truncate.TruncateSmart}.
     */
-  val truncate: js.Any = js.native
+  val truncate: js.Any
   /**
     * @cfg {Boolean/Object} [urls]
     *
@@ -366,13 +380,13 @@ trait Autolinker extends js.Object {
     *   in the given text. Ex: `google.com`, `asdf.org/?page=1`, etc. `false`
     *   to prevent these types of matches.
     */
-  val urls: js.Any = js.native
+  val urls: js.Any
   /**
     * The Autolinker version number exposed on the instance itself.
     *
     * Ex: 0.25.1
     */
-  val version: /* "3.13.0" */ String = js.native
+  val version: /* "3.14.1" */ String
   /**
     * Automatically links URLs, Email addresses, Phone numbers, Hashtags,
     * and Mentions (Twitter, Instagram, Soundcloud) found in the given chunk of HTML. Does not link
@@ -391,7 +405,7 @@ trait Autolinker extends js.Object {
     *   (depending on if the {@link #urls}, {@link #email}, {@link #phone}, {@link #hashtag}, and {@link #mention} options are enabled).
     * @return {String} The HTML, with matches automatically linked.
     */
-  def link(textOrHtml: String): String = js.native
+  def link(textOrHtml: String): String
   /**
     * Parses the input `textOrHtml` looking for URLs, email addresses, phone
     * numbers, username handles, and hashtags (depending on the configuration
@@ -423,7 +437,7 @@ trait Autolinker extends js.Object {
     * @return {Autolinker.match.Match[]} The array of Matches found in the
     *   given input `textOrHtml`.
     */
-  def parse(textOrHtml: String): js.Array[Match] = js.native
+  def parse(textOrHtml: String): js.Array[Match]
 }
 
 object Autolinker {
@@ -450,185 +464,16 @@ object Autolinker {
     phone: js.Any,
     removeUnwantedMatches: js.Any,
     replaceFn: js.Any,
+    sanitizeHtml: js.Any,
     stripPrefix: js.Any,
     stripTrailingSlash: js.Any,
     tagBuilder: js.Any,
     truncate: js.Any,
     urls: js.Any,
-    version: /* "3.13.0" */ String
+    version: /* "3.14.1" */ String
   ): Autolinker = {
-    val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], compactMatches = compactMatches.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], createMatchReturnVal = createMatchReturnVal.asInstanceOf[js.Any], decodePercentEncoding = decodePercentEncoding.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], getMatchers = getMatchers.asInstanceOf[js.Any], getTagBuilder = getTagBuilder.asInstanceOf[js.Any], hashtag = hashtag.asInstanceOf[js.Any], link = js.Any.fromFunction1(link), matchers = matchers.asInstanceOf[js.Any], mention = mention.asInstanceOf[js.Any], newWindow = newWindow.asInstanceOf[js.Any], normalizeStripPrefixCfg = normalizeStripPrefixCfg.asInstanceOf[js.Any], normalizeTruncateCfg = normalizeTruncateCfg.asInstanceOf[js.Any], normalizeUrlsCfg = normalizeUrlsCfg.asInstanceOf[js.Any], parse = js.Any.fromFunction1(parse), parseText = parseText.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], removeUnwantedMatches = removeUnwantedMatches.asInstanceOf[js.Any], replaceFn = replaceFn.asInstanceOf[js.Any], stripPrefix = stripPrefix.asInstanceOf[js.Any], stripTrailingSlash = stripTrailingSlash.asInstanceOf[js.Any], tagBuilder = tagBuilder.asInstanceOf[js.Any], truncate = truncate.asInstanceOf[js.Any], urls = urls.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], compactMatches = compactMatches.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], createMatchReturnVal = createMatchReturnVal.asInstanceOf[js.Any], decodePercentEncoding = decodePercentEncoding.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], getMatchers = getMatchers.asInstanceOf[js.Any], getTagBuilder = getTagBuilder.asInstanceOf[js.Any], hashtag = hashtag.asInstanceOf[js.Any], link = js.Any.fromFunction1(link), matchers = matchers.asInstanceOf[js.Any], mention = mention.asInstanceOf[js.Any], newWindow = newWindow.asInstanceOf[js.Any], normalizeStripPrefixCfg = normalizeStripPrefixCfg.asInstanceOf[js.Any], normalizeTruncateCfg = normalizeTruncateCfg.asInstanceOf[js.Any], normalizeUrlsCfg = normalizeUrlsCfg.asInstanceOf[js.Any], parse = js.Any.fromFunction1(parse), parseText = parseText.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], removeUnwantedMatches = removeUnwantedMatches.asInstanceOf[js.Any], replaceFn = replaceFn.asInstanceOf[js.Any], sanitizeHtml = sanitizeHtml.asInstanceOf[js.Any], stripPrefix = stripPrefix.asInstanceOf[js.Any], stripTrailingSlash = stripTrailingSlash.asInstanceOf[js.Any], tagBuilder = tagBuilder.asInstanceOf[js.Any], truncate = truncate.asInstanceOf[js.Any], urls = urls.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Autolinker]
   }
-  @scala.inline
-  implicit class AutolinkerOps[Self <: Autolinker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompactMatches(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactMatches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateMatchReturnVal(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createMatchReturnVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDecodePercentEncoding(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decodePercentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmail(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetMatchers(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMatchers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetTagBuilder(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTagBuilder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHashtag(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashtag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLink(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMatchers(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMention(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mention")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewWindow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormalizeStripPrefixCfg(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeStripPrefixCfg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormalizeTruncateCfg(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeTruncateCfg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormalizeUrlsCfg(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeUrlsCfg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParse(value: String => js.Array[Match]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withParseText(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhone(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoveUnwantedMatches(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeUnwantedMatches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReplaceFn(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceFn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStripPrefix(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStripTrailingSlash(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripTrailingSlash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTagBuilder(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagBuilder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTruncate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrls(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: /* "3.13.0" */ String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

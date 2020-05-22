@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Injector extends js.Object {
-  def inject(spanContext: SpanContext, carrier: js.Any): Unit = js.native
+  def inject(spanContext: SpanContext, carrier: js.Any): Unit
 }
 
 object Injector {
@@ -16,19 +15,5 @@ object Injector {
     val __obj = js.Dynamic.literal(inject = js.Any.fromFunction2(inject))
     __obj.asInstanceOf[Injector]
   }
-  @scala.inline
-  implicit class InjectorOps[Self <: Injector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInject(value: (SpanContext, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

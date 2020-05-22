@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * A {@link DragGestureEvent} is passed to the method {@link XDragGestureListener.dragGestureRecognized()} when a particular {@link
   * XDragGestureRecognizer} detects that a platform dependent drag initiating gesture has occurred on the component that it is tracking.
   */
-@js.native
 trait DragGestureEvent extends EventObject {
   /**
     * The action selected by the user.
@@ -22,20 +21,20 @@ trait DragGestureEvent extends EventObject {
     * action.
     * @see com.sun.star.datatransfer.dnd.DNDConstants
     */
-  var DragAction: Double = js.native
+  var DragAction: Double
   /** The x coordinate where the drag originated in component coordinates. */
-  var DragOriginX: Double = js.native
+  var DragOriginX: Double
   /** The y coordinate where the drag originated in component coordinates. */
-  var DragOriginY: Double = js.native
+  var DragOriginY: Double
   /** The DragSource associated with this drag action. */
-  var DragSource: XDragSource = js.native
+  var DragSource: XDragSource
   /**
     * The last event comprising the gesture.
     *
     * The initial trigger event will presumably be a {@link com.sun.star.awt.MouseEvent} event. If it is not, the implementation should either react
     * accordingly or presume that the left mouse button was clicked.
     */
-  var Event: js.Any = js.native
+  var Event: js.Any
 }
 
 object DragGestureEvent {
@@ -51,43 +50,5 @@ object DragGestureEvent {
     val __obj = js.Dynamic.literal(DragAction = DragAction.asInstanceOf[js.Any], DragOriginX = DragOriginX.asInstanceOf[js.Any], DragOriginY = DragOriginY.asInstanceOf[js.Any], DragSource = DragSource.asInstanceOf[js.Any], Event = Event.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[DragGestureEvent]
   }
-  @scala.inline
-  implicit class DragGestureEventOps[Self <: DragGestureEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDragAction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DragAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDragOriginX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DragOriginX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDragOriginY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DragOriginY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDragSource(value: XDragSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DragSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

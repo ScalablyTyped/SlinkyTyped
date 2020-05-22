@@ -18,19 +18,5 @@ object PutLoggingConfigurationRequest {
     val __obj = js.Dynamic.literal(LoggingConfiguration = LoggingConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutLoggingConfigurationRequest]
   }
-  @scala.inline
-  implicit class PutLoggingConfigurationRequestOps[Self <: PutLoggingConfigurationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoggingConfiguration(value: LoggingConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,81 +9,39 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/uploader.html](http://www.html5plus.org/doc/zh_cn/uploader.html)
   */
-@js.native
 trait PlusUploaderUploadFileOptions extends js.Object {
   /**
     * 文件键名
     * 上传文件在上传任务中的键名，默认值为为文件名称。
-    * 	上传任务中如果已经存在相同key的上传文件或数据将导致添加文件失败。
+    *     上传任务中如果已经存在相同key的上传文件或数据将导致添加文件失败。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/uploader.html](http://www.html5plus.org/doc/zh_cn/uploader.html)
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * 文件类型
     * 上传文件的类型（如图片文件为“image/jpeg”），默认值自动根据文件后缀名称生成。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/uploader.html](http://www.html5plus.org/doc/zh_cn/uploader.html)
     */
-  var mime: js.UndefOr[String] = js.native
+  var mime: js.UndefOr[String] = js.undefined
   /**
     * 文件名称
     * 上传文件的名称，默认值为上传文件路径中的名称。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/uploader.html](http://www.html5plus.org/doc/zh_cn/uploader.html)
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object PlusUploaderUploadFileOptions {
   @scala.inline
-  def apply(): PlusUploaderUploadFileOptions = {
+  def apply(key: String = null, mime: String = null, name: String = null): PlusUploaderUploadFileOptions = {
     val __obj = js.Dynamic.literal()
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (mime != null) __obj.updateDynamic("mime")(mime.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusUploaderUploadFileOptions]
   }
-  @scala.inline
-  implicit class PlusUploaderUploadFileOptionsOps[Self <: PlusUploaderUploadFileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

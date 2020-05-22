@@ -7,17 +7,16 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the user's login status.
   */
-@js.native
 trait ILoginStatus extends js.Object {
   /**
     * A JSON object that contains the properties of the current session.
     */
-  var session: ISession = js.native
+  var session: ISession
   /**
     * The sign-in status of the user. Valid values are "connected",
     * "notConnected", or "unknown".
     */
-  var status: String = js.native
+  var status: String
 }
 
 object ILoginStatus {
@@ -26,25 +25,5 @@ object ILoginStatus {
     val __obj = js.Dynamic.literal(session = session.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILoginStatus]
   }
-  @scala.inline
-  implicit class ILoginStatusOps[Self <: ILoginStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSession(value: ISession): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

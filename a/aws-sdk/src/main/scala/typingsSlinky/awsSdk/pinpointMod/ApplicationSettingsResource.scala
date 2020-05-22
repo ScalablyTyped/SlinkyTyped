@@ -11,7 +11,7 @@ trait ApplicationSettingsResource extends js.Object {
     */
   var ApplicationId: string = js.native
   /**
-    * The settings for the AWS Lambda function to use by default as a code hook for campaigns in the application.
+    * The settings for the AWS Lambda function to invoke by default as a code hook for campaigns in the application. You can use this hook to customize segments that are used by campaigns in the application.
     */
   var CampaignHook: js.UndefOr[typingsSlinky.awsSdk.pinpointMod.CampaignHook] = js.native
   /**
@@ -19,7 +19,7 @@ trait ApplicationSettingsResource extends js.Object {
     */
   var LastModifiedDate: js.UndefOr[string] = js.native
   /**
-    * The default sending limits for campaigns in the application.
+    * The default sending limits for campaigns and journeys in the application.
     */
   var Limits: js.UndefOr[CampaignLimits] = js.native
   /**
@@ -30,71 +30,19 @@ trait ApplicationSettingsResource extends js.Object {
 
 object ApplicationSettingsResource {
   @scala.inline
-  def apply(ApplicationId: string): ApplicationSettingsResource = {
+  def apply(
+    ApplicationId: string,
+    CampaignHook: CampaignHook = null,
+    LastModifiedDate: string = null,
+    Limits: CampaignLimits = null,
+    QuietTime: QuietTime = null
+  ): ApplicationSettingsResource = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any])
+    if (CampaignHook != null) __obj.updateDynamic("CampaignHook")(CampaignHook.asInstanceOf[js.Any])
+    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
+    if (Limits != null) __obj.updateDynamic("Limits")(Limits.asInstanceOf[js.Any])
+    if (QuietTime != null) __obj.updateDynamic("QuietTime")(QuietTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationSettingsResource]
   }
-  @scala.inline
-  implicit class ApplicationSettingsResourceOps[Self <: ApplicationSettingsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCampaignHook(value: CampaignHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignHook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCampaignHook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignHook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDate(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimits(value: CampaignLimits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuietTime(value: QuietTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuietTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuietTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuietTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

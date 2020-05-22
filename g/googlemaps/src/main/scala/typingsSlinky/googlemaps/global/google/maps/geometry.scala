@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** Geometry Library *****/
 @JSGlobal("google.maps.geometry")
 @js.native
 object geometry extends js.Object {

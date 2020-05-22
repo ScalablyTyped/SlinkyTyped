@@ -18,5 +18,7 @@ class Error protected ()
   def this(code: typingsSlinky.chrome.chrome.cast.ErrorCode) = this()
   def this(code: typingsSlinky.chrome.chrome.cast.ErrorCode, description: String) = this()
   def this(code: typingsSlinky.chrome.chrome.cast.ErrorCode, description: String, details: js.Object) = this()
+  /* CompleteClass */
+  override var code: typingsSlinky.chrome.chrome.cast.ErrorCode = js.native
 }
 

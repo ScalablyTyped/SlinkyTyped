@@ -12,8 +12,28 @@ trait Comment extends js.Object
 
 object Comment {
   @scala.inline
-  implicit def apply(value: CommentBlock): Comment = value.asInstanceOf[Comment]
+  def CommentBlock(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.CommentBlock,
+    value: String
+  ): Comment = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Comment]
+  }
   @scala.inline
-  implicit def apply(value: CommentLine): Comment = value.asInstanceOf[Comment]
+  def CommentLine(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.CommentLine,
+    value: String
+  ): Comment = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Comment]
+  }
 }
 

@@ -1,5 +1,9 @@
 package typingsSlinky.fridaGum
 
+import typingsSlinky.fridaGum.anon.Base
+import typingsSlinky.fridaGum.fridaGumStrings.imm
+import typingsSlinky.fridaGum.fridaGumStrings.mem
+import typingsSlinky.fridaGum.fridaGumStrings.reg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +17,22 @@ trait X86Operand extends js.Object
 
 object X86Operand {
   @scala.inline
-  implicit def apply(value: X86ImmOperand): X86Operand = value.asInstanceOf[X86Operand]
+  def X86RegOperand(size: Double, `type`: reg, value: X86Register): X86Operand = {
+    val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[X86Operand]
+  }
   @scala.inline
-  implicit def apply(value: X86MemOperand): X86Operand = value.asInstanceOf[X86Operand]
+  def X86ImmOperand(size: Double, `type`: imm, value: Double | Int64): X86Operand = {
+    val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[X86Operand]
+  }
   @scala.inline
-  implicit def apply(value: X86RegOperand): X86Operand = value.asInstanceOf[X86Operand]
+  def X86MemOperand(size: Double, `type`: mem, value: Base): X86Operand = {
+    val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[X86Operand]
+  }
 }
 

@@ -26,41 +26,11 @@ trait SchemaResourceCommitment extends js.Object {
 
 object SchemaResourceCommitment {
   @scala.inline
-  def apply(): SchemaResourceCommitment = {
+  def apply(amount: String = null, `type`: String = null): SchemaResourceCommitment = {
     val __obj = js.Dynamic.literal()
+    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourceCommitment]
   }
-  @scala.inline
-  implicit class SchemaResourceCommitmentOps[Self <: SchemaResourceCommitment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

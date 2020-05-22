@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollisionBehaviorEventMap extends ProxyEventMap {
-  var boundarycollision: CollisionBehaviorBoundarycollisionEvent = js.native
-  var itemcollision: CollisionBehaviorItemcollisionEvent = js.native
+  var boundarycollision: CollisionBehaviorBoundarycollisionEvent
+  var itemcollision: CollisionBehaviorItemcollisionEvent
 }
 
 object CollisionBehaviorEventMap {
@@ -20,25 +19,5 @@ object CollisionBehaviorEventMap {
     val __obj = js.Dynamic.literal(boundarycollision = boundarycollision.asInstanceOf[js.Any], itemcollision = itemcollision.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollisionBehaviorEventMap]
   }
-  @scala.inline
-  implicit class CollisionBehaviorEventMapOps[Self <: CollisionBehaviorEventMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundarycollision(value: CollisionBehaviorBoundarycollisionEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundarycollision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemcollision(value: CollisionBehaviorItemcollisionEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemcollision")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

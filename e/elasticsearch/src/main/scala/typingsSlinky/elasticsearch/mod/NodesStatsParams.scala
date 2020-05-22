@@ -7,166 +7,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodesStatsParams extends GenericParams {
-  var completionFields: js.UndefOr[NameList] = js.native
-  var fielddataFields: js.UndefOr[NameList] = js.native
-  var fields: js.UndefOr[NameList] = js.native
-  var groups: js.UndefOr[Boolean] = js.native
-  var human: js.UndefOr[Boolean] = js.native
-  var indexMetric: js.UndefOr[NameList] = js.native
-  var level: js.UndefOr[indices | node | shards] = js.native
-  var metric: js.UndefOr[NameList] = js.native
-  var nodeId: js.UndefOr[NameList] = js.native
-  var timeout: js.UndefOr[TimeSpan] = js.native
-  var types: js.UndefOr[NameList] = js.native
+  var completionFields: js.UndefOr[NameList] = js.undefined
+  var fielddataFields: js.UndefOr[NameList] = js.undefined
+  var fields: js.UndefOr[NameList] = js.undefined
+  var groups: js.UndefOr[Boolean] = js.undefined
+  var human: js.UndefOr[Boolean] = js.undefined
+  var indexMetric: js.UndefOr[NameList] = js.undefined
+  var level: js.UndefOr[indices | node | shards] = js.undefined
+  var metric: js.UndefOr[NameList] = js.undefined
+  var nodeId: js.UndefOr[NameList] = js.undefined
+  var timeout: js.UndefOr[TimeSpan] = js.undefined
+  var types: js.UndefOr[NameList] = js.undefined
 }
 
 object NodesStatsParams {
   @scala.inline
-  def apply(): NodesStatsParams = {
+  def apply(
+    body: js.Any = null,
+    completionFields: NameList = null,
+    fielddataFields: NameList = null,
+    fields: NameList = null,
+    filterPath: String | js.Array[String] = null,
+    groups: js.UndefOr[Boolean] = js.undefined,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    indexMetric: NameList = null,
+    level: indices | node | shards = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    metric: NameList = null,
+    nodeId: NameList = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    timeout: TimeSpan = null,
+    types: NameList = null
+  ): NodesStatsParams = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (completionFields != null) __obj.updateDynamic("completionFields")(completionFields.asInstanceOf[js.Any])
+    if (fielddataFields != null) __obj.updateDynamic("fielddataFields")(fielddataFields.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(groups)) __obj.updateDynamic("groups")(groups.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (indexMetric != null) __obj.updateDynamic("indexMetric")(indexMetric.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
+    if (nodeId != null) __obj.updateDynamic("nodeId")(nodeId.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodesStatsParams]
   }
-  @scala.inline
-  implicit class NodesStatsParamsOps[Self <: NodesStatsParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompletionFields(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletionFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFielddataFields(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fielddataFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFielddataFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fielddataFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHuman(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("human")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHuman: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("human")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexMetric(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexMetric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexMetric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: indices | node | shards): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetric(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeId(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * The main <Titanium.UI> module.
-	 */
+  * The main <Titanium.UI> module.
+  */
 @JSGlobal("Titanium.UI")
 @js.native
 class UI_ ()

@@ -5,29 +5,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Fired when the device detects a click against a preview action.
-			 */
-@js.native
+  * Fired when the device detects a click against a preview action.
+  */
 trait PreviewActionClickEvent extends PreviewActionBaseEvent {
   /**
-  				 * The index of the clicked action.
-  				 */
-  var index: Double = js.native
+    * The index of the clicked action.
+    */
+  var index: Double
   /**
-  				 * The item ID of cell, if the `previewContext` property of the <Titanium.UI.iOS.PreviewContext>
-  				 * is a <Titanium.UI.ListView>.
-  				 */
-  var itemId: String = js.native
+    * The item ID of cell, if the `previewContext` property of the <Titanium.UI.iOS.PreviewContext>
+    * is a <Titanium.UI.ListView>.
+    */
+  var itemId: String
   /**
-  				 * The index of the clicked row, if the `previewContext` property of the <Titanium.UI.iOS.PreviewContext>
-  				 * is a <Titanium.UI.ListView>.
-  				 */
-  var itemIndex: Double = js.native
+    * The index of the clicked row, if the `previewContext` property of the <Titanium.UI.iOS.PreviewContext>
+    * is a <Titanium.UI.ListView>.
+    */
+  var itemIndex: Double
   /**
-  				 * The index of the clicked section, if the `previewContext` property of the <Titanium.UI.iOS.PreviewContext>
-  				 * is a <Titanium.UI.ListView>.
-  				 */
-  var sectionIndex: Double = js.native
+    * The index of the clicked section, if the `previewContext` property of the <Titanium.UI.iOS.PreviewContext>
+    * is a <Titanium.UI.ListView>.
+    */
+  var sectionIndex: Double
 }
 
 object PreviewActionClickEvent {
@@ -36,37 +35,5 @@ object PreviewActionClickEvent {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], itemId = itemId.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any], sectionIndex = sectionIndex.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreviewActionClickEvent]
   }
-  @scala.inline
-  implicit class PreviewActionClickEventOps[Self <: PreviewActionClickEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSectionIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -25,6 +25,7 @@ package object mod {
     /* key */ java.lang.String, 
     js.UndefOr[js.Object | scala.Null]
   ]
+  type MergeFunction = typingsSlinky.webpackMerge.mod.ConfigurationMergeFunction | typingsSlinky.webpackMerge.mod.ConfigurationMergeConfigFunction
   type MultipleConfiguration = org.scalablytyped.runtime.StringDictionary[typingsSlinky.webpack.mod.Configuration]
   type MultipleConfigurationMergeFunction = js.Function1[
     /* repeated */ typingsSlinky.webpackMerge.mod.MultipleConfiguration, 

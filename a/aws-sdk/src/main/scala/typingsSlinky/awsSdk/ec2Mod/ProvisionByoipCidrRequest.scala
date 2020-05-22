@@ -30,71 +30,19 @@ trait ProvisionByoipCidrRequest extends js.Object {
 
 object ProvisionByoipCidrRequest {
   @scala.inline
-  def apply(Cidr: String): ProvisionByoipCidrRequest = {
+  def apply(
+    Cidr: String,
+    CidrAuthorizationContext: CidrAuthorizationContext = null,
+    Description: String = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    PubliclyAdvertisable: js.UndefOr[Boolean] = js.undefined
+  ): ProvisionByoipCidrRequest = {
     val __obj = js.Dynamic.literal(Cidr = Cidr.asInstanceOf[js.Any])
+    if (CidrAuthorizationContext != null) __obj.updateDynamic("CidrAuthorizationContext")(CidrAuthorizationContext.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PubliclyAdvertisable)) __obj.updateDynamic("PubliclyAdvertisable")(PubliclyAdvertisable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisionByoipCidrRequest]
   }
-  @scala.inline
-  implicit class ProvisionByoipCidrRequestOps[Self <: ProvisionByoipCidrRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCidr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCidrAuthorizationContext(value: CidrAuthorizationContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrAuthorizationContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCidrAuthorizationContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrAuthorizationContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPubliclyAdvertisable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PubliclyAdvertisable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPubliclyAdvertisable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PubliclyAdvertisable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

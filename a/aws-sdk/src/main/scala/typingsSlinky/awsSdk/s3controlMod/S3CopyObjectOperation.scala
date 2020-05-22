@@ -31,15 +31,15 @@ trait S3CopyObjectOperation extends js.Object {
     */
   var NewObjectTagging: js.UndefOr[S3TagSet] = js.native
   /**
-    * 
+    * The Legal Hold status to be applied to all objects in the Batch Operations job.
     */
   var ObjectLockLegalHoldStatus: js.UndefOr[S3ObjectLockLegalHoldStatus] = js.native
   /**
-    * 
+    * The Retention mode to be applied to all objects in the Batch Operations job.
     */
   var ObjectLockMode: js.UndefOr[S3ObjectLockMode] = js.native
   /**
-    * 
+    * The date when the applied Object Retention configuration will expire on all objects in the Batch Operations job.
     */
   var ObjectLockRetainUntilDate: js.UndefOr[js.Date] = js.native
   /**
@@ -74,209 +74,42 @@ trait S3CopyObjectOperation extends js.Object {
 
 object S3CopyObjectOperation {
   @scala.inline
-  def apply(): S3CopyObjectOperation = {
+  def apply(
+    AccessControlGrants: S3GrantList = null,
+    CannedAccessControlList: S3CannedAccessControlList = null,
+    MetadataDirective: S3MetadataDirective = null,
+    ModifiedSinceConstraint: js.Date = null,
+    NewObjectMetadata: S3ObjectMetadata = null,
+    NewObjectTagging: S3TagSet = null,
+    ObjectLockLegalHoldStatus: S3ObjectLockLegalHoldStatus = null,
+    ObjectLockMode: S3ObjectLockMode = null,
+    ObjectLockRetainUntilDate: js.Date = null,
+    RedirectLocation: NonEmptyMaxLength2048String = null,
+    RequesterPays: js.UndefOr[Boolean] = js.undefined,
+    SSEAwsKmsKeyId: KmsKeyArnString = null,
+    StorageClass: S3StorageClass = null,
+    TargetKeyPrefix: NonEmptyMaxLength1024String = null,
+    TargetResource: S3BucketArnString = null,
+    UnModifiedSinceConstraint: js.Date = null
+  ): S3CopyObjectOperation = {
     val __obj = js.Dynamic.literal()
+    if (AccessControlGrants != null) __obj.updateDynamic("AccessControlGrants")(AccessControlGrants.asInstanceOf[js.Any])
+    if (CannedAccessControlList != null) __obj.updateDynamic("CannedAccessControlList")(CannedAccessControlList.asInstanceOf[js.Any])
+    if (MetadataDirective != null) __obj.updateDynamic("MetadataDirective")(MetadataDirective.asInstanceOf[js.Any])
+    if (ModifiedSinceConstraint != null) __obj.updateDynamic("ModifiedSinceConstraint")(ModifiedSinceConstraint.asInstanceOf[js.Any])
+    if (NewObjectMetadata != null) __obj.updateDynamic("NewObjectMetadata")(NewObjectMetadata.asInstanceOf[js.Any])
+    if (NewObjectTagging != null) __obj.updateDynamic("NewObjectTagging")(NewObjectTagging.asInstanceOf[js.Any])
+    if (ObjectLockLegalHoldStatus != null) __obj.updateDynamic("ObjectLockLegalHoldStatus")(ObjectLockLegalHoldStatus.asInstanceOf[js.Any])
+    if (ObjectLockMode != null) __obj.updateDynamic("ObjectLockMode")(ObjectLockMode.asInstanceOf[js.Any])
+    if (ObjectLockRetainUntilDate != null) __obj.updateDynamic("ObjectLockRetainUntilDate")(ObjectLockRetainUntilDate.asInstanceOf[js.Any])
+    if (RedirectLocation != null) __obj.updateDynamic("RedirectLocation")(RedirectLocation.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequesterPays)) __obj.updateDynamic("RequesterPays")(RequesterPays.get.asInstanceOf[js.Any])
+    if (SSEAwsKmsKeyId != null) __obj.updateDynamic("SSEAwsKmsKeyId")(SSEAwsKmsKeyId.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
+    if (TargetKeyPrefix != null) __obj.updateDynamic("TargetKeyPrefix")(TargetKeyPrefix.asInstanceOf[js.Any])
+    if (TargetResource != null) __obj.updateDynamic("TargetResource")(TargetResource.asInstanceOf[js.Any])
+    if (UnModifiedSinceConstraint != null) __obj.updateDynamic("UnModifiedSinceConstraint")(UnModifiedSinceConstraint.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3CopyObjectOperation]
   }
-  @scala.inline
-  implicit class S3CopyObjectOperationOps[Self <: S3CopyObjectOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessControlGrants(value: S3GrantList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlGrants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessControlGrants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlGrants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCannedAccessControlList(value: S3CannedAccessControlList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CannedAccessControlList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCannedAccessControlList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CannedAccessControlList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataDirective(value: S3MetadataDirective): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataDirective")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataDirective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataDirective")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifiedSinceConstraint(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifiedSinceConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifiedSinceConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifiedSinceConstraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewObjectMetadata(value: S3ObjectMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewObjectMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewObjectMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewObjectMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewObjectTagging(value: S3TagSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewObjectTagging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewObjectTagging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewObjectTagging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLockLegalHoldStatus(value: S3ObjectLockLegalHoldStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockLegalHoldStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockLegalHoldStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockLegalHoldStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLockMode(value: S3ObjectLockMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLockRetainUntilDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockRetainUntilDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockRetainUntilDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockRetainUntilDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirectLocation(value: NonEmptyMaxLength2048String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirectLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequesterPays(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequesterPays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSEAwsKmsKeyId(value: KmsKeyArnString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEAwsKmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSEAwsKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEAwsKmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageClass(value: S3StorageClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetKeyPrefix(value: NonEmptyMaxLength1024String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetKeyPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetKeyPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetKeyPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetResource(value: S3BucketArnString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetResource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetResource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnModifiedSinceConstraint(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnModifiedSinceConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnModifiedSinceConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnModifiedSinceConstraint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -43,72 +43,14 @@ object InventoryConfiguration {
     Id: InventoryId,
     IncludedObjectVersions: InventoryIncludedObjectVersions,
     IsEnabled: IsEnabled,
-    Schedule: InventorySchedule
+    Schedule: InventorySchedule,
+    Filter: InventoryFilter = null,
+    OptionalFields: InventoryOptionalFields = null
   ): InventoryConfiguration = {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], IncludedObjectVersions = IncludedObjectVersions.asInstanceOf[js.Any], IsEnabled = IsEnabled.asInstanceOf[js.Any], Schedule = Schedule.asInstanceOf[js.Any])
+    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
+    if (OptionalFields != null) __obj.updateDynamic("OptionalFields")(OptionalFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[InventoryConfiguration]
   }
-  @scala.inline
-  implicit class InventoryConfigurationOps[Self <: InventoryConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: InventoryDestination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: InventoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludedObjectVersions(value: InventoryIncludedObjectVersions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludedObjectVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEnabled(value: IsEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: InventorySchedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: InventoryFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionalFields(value: InventoryOptionalFields): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionalFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalFields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

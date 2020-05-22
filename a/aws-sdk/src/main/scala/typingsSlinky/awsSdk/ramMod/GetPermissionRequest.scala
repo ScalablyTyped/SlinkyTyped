@@ -18,35 +18,10 @@ trait GetPermissionRequest extends js.Object {
 
 object GetPermissionRequest {
   @scala.inline
-  def apply(permissionArn: String): GetPermissionRequest = {
+  def apply(permissionArn: String, permissionVersion: js.UndefOr[Integer] = js.undefined): GetPermissionRequest = {
     val __obj = js.Dynamic.literal(permissionArn = permissionArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(permissionVersion)) __obj.updateDynamic("permissionVersion")(permissionVersion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPermissionRequest]
   }
-  @scala.inline
-  implicit class GetPermissionRequestOps[Self <: GetPermissionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermissionArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPermissionVersion(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

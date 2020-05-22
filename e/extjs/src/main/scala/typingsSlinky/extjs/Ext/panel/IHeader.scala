@@ -6,286 +6,110 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHeader extends IContainer {
   /** [Method] Add a tool to the header
-  		* @param tool Object
-  		*/
-  var addTool: js.UndefOr[js.Function1[/* tool */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param tool Object
+    */
+  var addTool: js.UndefOr[js.Function1[/* tool */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] inherit docs
-  		* @param cls Object
-  		*/
+    * @param cls Object
+    */
   @JSName("addUIClsToElement")
-  var addUIClsToElement_IHeader: js.UndefOr[js.Function1[/* cls */ js.UndefOr[js.Any], Unit]] = js.native
+  var addUIClsToElement_IHeader: js.UndefOr[js.Function1[/* cls */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Invoked after the Container has laid out and rendered if necessary its child Components  */
   @JSName("afterLayout")
-  var afterLayout_IHeader: js.UndefOr[js.Function0[Unit]] = js.native
+  var afterLayout_IHeader: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Method] Gets the tools for this header
-  		* @returns Ext.panel.Tool[] The tools
-  		*/
-  var getTools: js.UndefOr[js.Function0[Array]] = js.native
+    * @returns Ext.panel.Tool[] The tools
+    */
+  var getTools: js.UndefOr[js.Function0[Array]] = js.undefined
   /** [Config Option] (Number/String) */
-  var glyph: js.UndefOr[js.Any] = js.native
+  var glyph: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var icon: js.UndefOr[String] = js.native
+  var icon: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var iconCls: js.UndefOr[String] = js.native
+  var iconCls: js.UndefOr[String] = js.undefined
   /** [Property] (Boolean) */
-  var isHeader: js.UndefOr[Boolean] = js.native
+  var isHeader: js.UndefOr[Boolean] = js.undefined
   /** [Method] Set up the tools lt tool type gt link in the owning Panel
-  		* @param component Object
-  		* @param index Object
-  		*/
+    * @param component Object
+    * @param index Object
+    */
   @JSName("onAdd")
   var onAdd_IHeader: js.UndefOr[
     js.Function2[/* component */ js.UndefOr[js.Any], /* index */ js.UndefOr[js.Any], Unit]
-  ] = js.native
+  ] = js.undefined
   /** [Method] inherit docs
-  		* @param cls Object
-  		*/
+    * @param cls Object
+    */
   @JSName("removeUIClsFromElement")
-  var removeUIClsFromElement_IHeader: js.UndefOr[js.Function1[/* cls */ js.UndefOr[js.Any], Unit]] = js.native
+  var removeUIClsFromElement_IHeader: js.UndefOr[js.Function1[/* cls */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Sets glyph that provides the icon image for this header
-  		* @param glyph Number/String the numeric charCode or string charCode/font-family. This parameter expects a format consistent with that of glyph
-  		*/
-  var setGlyph: js.UndefOr[js.Function1[/* glyph */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param glyph Number/String the numeric charCode or string charCode/font-family. This parameter expects a format consistent with that of glyph
+    */
+  var setGlyph: js.UndefOr[js.Function1[/* glyph */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Sets the image path that provides the icon image for this header
-  		* @param icon String The new icon path
-  		*/
-  var setIcon: js.UndefOr[js.Function1[/* icon */ js.UndefOr[String], Unit]] = js.native
+    * @param icon String The new icon path
+    */
+  var setIcon: js.UndefOr[js.Function1[/* icon */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Sets the CSS class that provides the icon image for this header
-  		* @param cls String The new CSS class name
-  		*/
-  var setIconCls: js.UndefOr[js.Function1[/* cls */ js.UndefOr[String], Unit]] = js.native
+    * @param cls String The new CSS class name
+    */
+  var setIconCls: js.UndefOr[js.Function1[/* cls */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Sets the title of the header
-  		* @param title String The title to be set
-  		*/
-  var setTitle: js.UndefOr[js.Function1[/* title */ js.UndefOr[String], Unit]] = js.native
+    * @param title String The title to be set
+    */
+  var setTitle: js.UndefOr[js.Function1[/* title */ js.UndefOr[String], Unit]] = js.undefined
   /** [Config Option] (String) */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var titleAlign: js.UndefOr[String] = js.native
+  var titleAlign: js.UndefOr[String] = js.undefined
   /** [Config Option] (Number) */
-  var titlePosition: js.UndefOr[Double] = js.native
+  var titlePosition: js.UndefOr[Double] = js.undefined
 }
 
 object IHeader {
   @scala.inline
-  def apply(): IHeader = {
+  def apply(
+    IContainer: IContainer = null,
+    addTool: /* tool */ js.UndefOr[js.Any] => Unit = null,
+    addUIClsToElement: /* cls */ js.UndefOr[js.Any] => Unit = null,
+    afterLayout: () => Unit = null,
+    getTools: () => Array = null,
+    glyph: js.Any = null,
+    icon: String = null,
+    iconCls: String = null,
+    isHeader: js.UndefOr[Boolean] = js.undefined,
+    onAdd: (/* component */ js.UndefOr[js.Any], /* index */ js.UndefOr[js.Any]) => Unit = null,
+    removeUIClsFromElement: /* cls */ js.UndefOr[js.Any] => Unit = null,
+    setGlyph: /* glyph */ js.UndefOr[js.Any] => Unit = null,
+    setIcon: /* icon */ js.UndefOr[String] => Unit = null,
+    setIconCls: /* cls */ js.UndefOr[String] => Unit = null,
+    setTitle: /* title */ js.UndefOr[String] => Unit = null,
+    title: String = null,
+    titleAlign: String = null,
+    titlePosition: js.UndefOr[Double] = js.undefined
+  ): IHeader = {
     val __obj = js.Dynamic.literal()
+    if (IContainer != null) js.Dynamic.global.Object.assign(__obj, IContainer)
+    if (addTool != null) __obj.updateDynamic("addTool")(js.Any.fromFunction1(addTool))
+    if (addUIClsToElement != null) __obj.updateDynamic("addUIClsToElement")(js.Any.fromFunction1(addUIClsToElement))
+    if (afterLayout != null) __obj.updateDynamic("afterLayout")(js.Any.fromFunction0(afterLayout))
+    if (getTools != null) __obj.updateDynamic("getTools")(js.Any.fromFunction0(getTools))
+    if (glyph != null) __obj.updateDynamic("glyph")(glyph.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (iconCls != null) __obj.updateDynamic("iconCls")(iconCls.asInstanceOf[js.Any])
+    if (!js.isUndefined(isHeader)) __obj.updateDynamic("isHeader")(isHeader.get.asInstanceOf[js.Any])
+    if (onAdd != null) __obj.updateDynamic("onAdd")(js.Any.fromFunction2(onAdd))
+    if (removeUIClsFromElement != null) __obj.updateDynamic("removeUIClsFromElement")(js.Any.fromFunction1(removeUIClsFromElement))
+    if (setGlyph != null) __obj.updateDynamic("setGlyph")(js.Any.fromFunction1(setGlyph))
+    if (setIcon != null) __obj.updateDynamic("setIcon")(js.Any.fromFunction1(setIcon))
+    if (setIconCls != null) __obj.updateDynamic("setIconCls")(js.Any.fromFunction1(setIconCls))
+    if (setTitle != null) __obj.updateDynamic("setTitle")(js.Any.fromFunction1(setTitle))
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titleAlign != null) __obj.updateDynamic("titleAlign")(titleAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(titlePosition)) __obj.updateDynamic("titlePosition")(titlePosition.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHeader]
   }
-  @scala.inline
-  implicit class IHeaderOps[Self <: IHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddTool(value: /* tool */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTool")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddTool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTool")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddUIClsToElement(value: /* cls */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addUIClsToElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddUIClsToElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addUIClsToElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterLayout(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLayout")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetTools(value: () => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTools")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetTools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTools")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlyph(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glyph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlyph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glyph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAdd(value: (/* component */ js.UndefOr[js.Any], /* index */ js.UndefOr[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveUIClsFromElement(value: /* cls */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeUIClsFromElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRemoveUIClsFromElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeUIClsFromElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetGlyph(value: /* glyph */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setGlyph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetGlyph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setGlyph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetIcon(value: /* icon */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIcon")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetIconCls(value: /* cls */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIconCls")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetIconCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIconCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetTitle(value: /* title */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitlePosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titlePosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitlePosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titlePosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

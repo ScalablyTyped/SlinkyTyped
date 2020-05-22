@@ -4,183 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VoterInfoResponse extends js.Object {
   /** Contests that will appear on the voter's ballot. */
-  var contests: js.UndefOr[js.Array[Contest]] = js.native
+  var contests: js.UndefOr[js.Array[Contest]] = js.undefined
   /**
     * Locations where a voter is eligible to drop off a completed ballot. The voter must have received and completed a ballot prior to arriving at the
     * location. The location may not have ballots available on the premises. These locations could be open on or before election day as indicated in the
     * pollingHours field.
     */
-  var dropOffLocations: js.UndefOr[js.Array[PollingLocation]] = js.native
+  var dropOffLocations: js.UndefOr[js.Array[PollingLocation]] = js.undefined
   /** Locations where the voter is eligible to vote early, prior to election day. */
-  var earlyVoteSites: js.UndefOr[js.Array[PollingLocation]] = js.native
+  var earlyVoteSites: js.UndefOr[js.Array[PollingLocation]] = js.undefined
   /** The election that was queried. */
-  var election: js.UndefOr[Election] = js.native
+  var election: js.UndefOr[Election] = js.undefined
   /** Identifies what kind of resource this is. Value: the fixed string "civicinfo#voterInfoResponse". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** Specifies whether voters in the precinct vote only by mailing their ballots (with the possible option of dropping off their ballots as well). */
-  var mailOnly: js.UndefOr[Boolean] = js.native
+  var mailOnly: js.UndefOr[Boolean] = js.undefined
   /** The normalized version of the requested address */
-  var normalizedInput: js.UndefOr[SimpleAddressType] = js.native
+  var normalizedInput: js.UndefOr[SimpleAddressType] = js.undefined
   /**
     * If no election ID was specified in the query, and there was more than one election with data for the given voter, this will contain information about
     * the other elections that could apply.
     */
-  var otherElections: js.UndefOr[js.Array[Election]] = js.native
+  var otherElections: js.UndefOr[js.Array[Election]] = js.undefined
   /** Locations where the voter is eligible to vote on election day. */
-  var pollingLocations: js.UndefOr[js.Array[PollingLocation]] = js.native
-  var precinctId: js.UndefOr[String] = js.native
+  var pollingLocations: js.UndefOr[js.Array[PollingLocation]] = js.undefined
+  var precinctId: js.UndefOr[String] = js.undefined
   /** Local Election Information for the state that the voter votes in. For the US, there will only be one element in this array. */
-  var state: js.UndefOr[js.Array[AdministrationRegion]] = js.native
+  var state: js.UndefOr[js.Array[AdministrationRegion]] = js.undefined
 }
 
 object VoterInfoResponse {
   @scala.inline
-  def apply(): VoterInfoResponse = {
+  def apply(
+    contests: js.Array[Contest] = null,
+    dropOffLocations: js.Array[PollingLocation] = null,
+    earlyVoteSites: js.Array[PollingLocation] = null,
+    election: Election = null,
+    kind: String = null,
+    mailOnly: js.UndefOr[Boolean] = js.undefined,
+    normalizedInput: SimpleAddressType = null,
+    otherElections: js.Array[Election] = null,
+    pollingLocations: js.Array[PollingLocation] = null,
+    precinctId: String = null,
+    state: js.Array[AdministrationRegion] = null
+  ): VoterInfoResponse = {
     val __obj = js.Dynamic.literal()
+    if (contests != null) __obj.updateDynamic("contests")(contests.asInstanceOf[js.Any])
+    if (dropOffLocations != null) __obj.updateDynamic("dropOffLocations")(dropOffLocations.asInstanceOf[js.Any])
+    if (earlyVoteSites != null) __obj.updateDynamic("earlyVoteSites")(earlyVoteSites.asInstanceOf[js.Any])
+    if (election != null) __obj.updateDynamic("election")(election.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(mailOnly)) __obj.updateDynamic("mailOnly")(mailOnly.get.asInstanceOf[js.Any])
+    if (normalizedInput != null) __obj.updateDynamic("normalizedInput")(normalizedInput.asInstanceOf[js.Any])
+    if (otherElections != null) __obj.updateDynamic("otherElections")(otherElections.asInstanceOf[js.Any])
+    if (pollingLocations != null) __obj.updateDynamic("pollingLocations")(pollingLocations.asInstanceOf[js.Any])
+    if (precinctId != null) __obj.updateDynamic("precinctId")(precinctId.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoterInfoResponse]
   }
-  @scala.inline
-  implicit class VoterInfoResponseOps[Self <: VoterInfoResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContests(value: js.Array[Contest]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropOffLocations(value: js.Array[PollingLocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropOffLocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropOffLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropOffLocations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEarlyVoteSites(value: js.Array[PollingLocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earlyVoteSites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEarlyVoteSites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earlyVoteSites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElection(value: Election): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("election")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("election")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMailOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mailOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMailOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mailOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalizedInput(value: SimpleAddressType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizedInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalizedInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizedInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtherElections(value: js.Array[Election]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherElections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtherElections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherElections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPollingLocations(value: js.Array[PollingLocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollingLocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPollingLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollingLocations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecinctId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precinctId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecinctId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precinctId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: js.Array[AdministrationRegion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

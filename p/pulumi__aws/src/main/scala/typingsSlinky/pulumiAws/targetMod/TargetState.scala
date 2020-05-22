@@ -36,89 +36,22 @@ trait TargetState extends js.Object {
 
 object TargetState {
   @scala.inline
-  def apply(): TargetState = {
+  def apply(
+    maxCapacity: Input[Double] = null,
+    minCapacity: Input[Double] = null,
+    resourceId: Input[String] = null,
+    roleArn: Input[String] = null,
+    scalableDimension: Input[String] = null,
+    serviceNamespace: Input[String] = null
+  ): TargetState = {
     val __obj = js.Dynamic.literal()
+    if (maxCapacity != null) __obj.updateDynamic("maxCapacity")(maxCapacity.asInstanceOf[js.Any])
+    if (minCapacity != null) __obj.updateDynamic("minCapacity")(minCapacity.asInstanceOf[js.Any])
+    if (resourceId != null) __obj.updateDynamic("resourceId")(resourceId.asInstanceOf[js.Any])
+    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
+    if (scalableDimension != null) __obj.updateDynamic("scalableDimension")(scalableDimension.asInstanceOf[js.Any])
+    if (serviceNamespace != null) __obj.updateDynamic("serviceNamespace")(serviceNamespace.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetState]
   }
-  @scala.inline
-  implicit class TargetStateOps[Self <: TargetState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxCapacity(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCapacity(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScalableDimension(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalableDimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScalableDimension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalableDimension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceNamespace(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceNamespace")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,53 +26,12 @@ trait SchemaHiddenPlayer extends js.Object {
 
 object SchemaHiddenPlayer {
   @scala.inline
-  def apply(): SchemaHiddenPlayer = {
+  def apply(hiddenTimeMillis: String = null, kind: String = null, player: SchemaPlayer = null): SchemaHiddenPlayer = {
     val __obj = js.Dynamic.literal()
+    if (hiddenTimeMillis != null) __obj.updateDynamic("hiddenTimeMillis")(hiddenTimeMillis.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (player != null) __obj.updateDynamic("player")(player.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHiddenPlayer]
   }
-  @scala.inline
-  implicit class SchemaHiddenPlayerOps[Self <: SchemaHiddenPlayer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHiddenTimeMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenTimeMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenTimeMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenTimeMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayer(value: SchemaPlayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

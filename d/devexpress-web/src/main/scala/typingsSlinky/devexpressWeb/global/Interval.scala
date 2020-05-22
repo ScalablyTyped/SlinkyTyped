@@ -18,5 +18,15 @@ class Interval ()
   extends typingsSlinky.devexpressWeb.Interval {
   def this(start: Double) = this()
   def this(start: Double, length: Double) = this()
+  /**
+    * Gets the interval's character length.
+    */
+  /* CompleteClass */
+  override var length: Double = js.native
+  /**
+    * Gets the interval's start position in the document.
+    */
+  /* CompleteClass */
+  override var start: Double = js.native
 }
 

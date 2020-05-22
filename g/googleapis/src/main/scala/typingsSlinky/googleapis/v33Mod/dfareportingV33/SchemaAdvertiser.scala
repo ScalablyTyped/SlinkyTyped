@@ -96,197 +96,40 @@ trait SchemaAdvertiser extends js.Object {
 
 object SchemaAdvertiser {
   @scala.inline
-  def apply(): SchemaAdvertiser = {
+  def apply(
+    accountId: String = null,
+    advertiserGroupId: String = null,
+    clickThroughUrlSuffix: String = null,
+    defaultClickThroughEventTagId: String = null,
+    defaultEmail: String = null,
+    floodlightConfigurationId: String = null,
+    floodlightConfigurationIdDimensionValue: SchemaDimensionValue = null,
+    id: String = null,
+    idDimensionValue: SchemaDimensionValue = null,
+    kind: String = null,
+    name: String = null,
+    originalFloodlightConfigurationId: String = null,
+    status: String = null,
+    subaccountId: String = null,
+    suspended: js.UndefOr[Boolean] = js.undefined
+  ): SchemaAdvertiser = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (advertiserGroupId != null) __obj.updateDynamic("advertiserGroupId")(advertiserGroupId.asInstanceOf[js.Any])
+    if (clickThroughUrlSuffix != null) __obj.updateDynamic("clickThroughUrlSuffix")(clickThroughUrlSuffix.asInstanceOf[js.Any])
+    if (defaultClickThroughEventTagId != null) __obj.updateDynamic("defaultClickThroughEventTagId")(defaultClickThroughEventTagId.asInstanceOf[js.Any])
+    if (defaultEmail != null) __obj.updateDynamic("defaultEmail")(defaultEmail.asInstanceOf[js.Any])
+    if (floodlightConfigurationId != null) __obj.updateDynamic("floodlightConfigurationId")(floodlightConfigurationId.asInstanceOf[js.Any])
+    if (floodlightConfigurationIdDimensionValue != null) __obj.updateDynamic("floodlightConfigurationIdDimensionValue")(floodlightConfigurationIdDimensionValue.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (idDimensionValue != null) __obj.updateDynamic("idDimensionValue")(idDimensionValue.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (originalFloodlightConfigurationId != null) __obj.updateDynamic("originalFloodlightConfigurationId")(originalFloodlightConfigurationId.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (subaccountId != null) __obj.updateDynamic("subaccountId")(subaccountId.asInstanceOf[js.Any])
+    if (!js.isUndefined(suspended)) __obj.updateDynamic("suspended")(suspended.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdvertiser]
   }
-  @scala.inline
-  implicit class SchemaAdvertiserOps[Self <: SchemaAdvertiser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertiserGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickThroughUrlSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrlSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickThroughUrlSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrlSuffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultClickThroughEventTagId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultClickThroughEventTagId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultClickThroughEventTagId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultClickThroughEventTagId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightConfigurationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightConfigurationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightConfigurationIdDimensionValue(value: SchemaDimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightConfigurationIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdDimensionValue(value: SchemaDimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalFloodlightConfigurationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalFloodlightConfigurationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalFloodlightConfigurationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalFloodlightConfigurationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubaccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubaccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspended(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspended: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

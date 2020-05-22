@@ -22,47 +22,11 @@ trait Encryption extends js.Object {
 
 object Encryption {
   @scala.inline
-  def apply(EncryptionType: ServerSideEncryption): Encryption = {
+  def apply(EncryptionType: ServerSideEncryption, KMSContext: KMSContext = null, KMSKeyId: SSEKMSKeyId = null): Encryption = {
     val __obj = js.Dynamic.literal(EncryptionType = EncryptionType.asInstanceOf[js.Any])
+    if (KMSContext != null) __obj.updateDynamic("KMSContext")(KMSContext.asInstanceOf[js.Any])
+    if (KMSKeyId != null) __obj.updateDynamic("KMSKeyId")(KMSKeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Encryption]
   }
-  @scala.inline
-  implicit class EncryptionOps[Self <: Encryption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptionType(value: ServerSideEncryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKMSContext(value: KMSContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKMSContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKMSKeyId(value: SSEKMSKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKMSKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKeyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

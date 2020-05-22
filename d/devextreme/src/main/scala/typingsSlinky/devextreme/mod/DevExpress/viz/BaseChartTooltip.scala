@@ -1,6 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.anon.Blur
+import typingsSlinky.devextreme.anon.DashStyleOpacity
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
 import typingsSlinky.devextreme.mod.DevExpress.ui.format
@@ -9,102 +11,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** Configures tooltips. */
-@js.native
+/** @name BaseChart.Options.tooltip */
 trait BaseChartTooltip extends BaseWidgetTooltip {
-  /** Formats the point argument before it is displayed in the tooltip. To format the point value, use the format option. */
-  var argumentFormat: js.UndefOr[format] = js.native
-  /** Specifies a custom template for a tooltip. */
+  /** @name BaseChart.Options.tooltip.argumentFormat */
+  var argumentFormat: js.UndefOr[format] = js.undefined
+  /** @name BaseChart.Options.tooltip.contentTemplate */
   var contentTemplate: js.UndefOr[
     template | (js.Function2[/* pointInfo */ js.Any, /* element */ dxElement, String | Element | JQuery])
-  ] = js.native
-  /** Allows you to change tooltip appearance. */
-  var customizeTooltip: js.UndefOr[js.Function1[/* pointInfo */ js.Any, _]] = js.native
-  /** Specifies whether the tooltip is shared across all series points with the same argument. */
-  var shared: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  /** @name BaseChart.Options.tooltip.customizeTooltip */
+  var customizeTooltip: js.UndefOr[js.Function1[/* pointInfo */ js.Any, _]] = js.undefined
+  /** @name BaseChart.Options.tooltip.shared */
+  var shared: js.UndefOr[Boolean] = js.undefined
 }
 
 object BaseChartTooltip {
   @scala.inline
-  def apply(): BaseChartTooltip = {
+  def apply(
+    argumentFormat: format = null,
+    arrowLength: js.UndefOr[Double] = js.undefined,
+    border: DashStyleOpacity = null,
+    color: String = null,
+    container: String | Element | JQuery = null,
+    contentTemplate: template | (js.Function2[/* pointInfo */ js.Any, /* element */ dxElement, String | Element | JQuery]) = null,
+    cornerRadius: js.UndefOr[Double] = js.undefined,
+    customizeTooltip: /* pointInfo */ js.Any => _ = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    font: Font = null,
+    format: format = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    paddingLeftRight: js.UndefOr[Double] = js.undefined,
+    paddingTopBottom: js.UndefOr[Double] = js.undefined,
+    shadow: Blur = null,
+    shared: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): BaseChartTooltip = {
     val __obj = js.Dynamic.literal()
+    if (argumentFormat != null) __obj.updateDynamic("argumentFormat")(argumentFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(arrowLength)) __obj.updateDynamic("arrowLength")(arrowLength.get.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (contentTemplate != null) __obj.updateDynamic("contentTemplate")(contentTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(cornerRadius)) __obj.updateDynamic("cornerRadius")(cornerRadius.get.asInstanceOf[js.Any])
+    if (customizeTooltip != null) __obj.updateDynamic("customizeTooltip")(js.Any.fromFunction1(customizeTooltip))
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingLeftRight)) __obj.updateDynamic("paddingLeftRight")(paddingLeftRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingTopBottom)) __obj.updateDynamic("paddingTopBottom")(paddingTopBottom.get.asInstanceOf[js.Any])
+    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
+    if (!js.isUndefined(shared)) __obj.updateDynamic("shared")(shared.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseChartTooltip]
   }
-  @scala.inline
-  implicit class BaseChartTooltipOps[Self <: BaseChartTooltip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgumentFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withArgumentFormat(value: format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgumentFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentTemplateFunction2(value: (/* pointInfo */ js.Any, /* element */ dxElement) => String | Element | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withContentTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentTemplate(
-      value: template | (js.Function2[/* pointInfo */ js.Any, /* element */ dxElement, String | Element | JQuery])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeTooltip(value: /* pointInfo */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeTooltip")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShared(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

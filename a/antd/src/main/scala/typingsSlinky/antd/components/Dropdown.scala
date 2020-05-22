@@ -11,7 +11,6 @@ import typingsSlinky.antd.dropdownDropdownMod.Align
 import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
 import typingsSlinky.antd.dropdownDropdownMod.Placement
-import typingsSlinky.antd.dropdownMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +24,7 @@ object Dropdown {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def align(value: Align): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline

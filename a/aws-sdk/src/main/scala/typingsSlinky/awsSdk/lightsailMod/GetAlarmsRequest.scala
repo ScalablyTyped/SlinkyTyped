@@ -22,53 +22,16 @@ trait GetAlarmsRequest extends js.Object {
 
 object GetAlarmsRequest {
   @scala.inline
-  def apply(): GetAlarmsRequest = {
+  def apply(
+    alarmName: ResourceName = null,
+    monitoredResourceName: ResourceName = null,
+    pageToken: String = null
+  ): GetAlarmsRequest = {
     val __obj = js.Dynamic.literal()
+    if (alarmName != null) __obj.updateDynamic("alarmName")(alarmName.asInstanceOf[js.Any])
+    if (monitoredResourceName != null) __obj.updateDynamic("monitoredResourceName")(monitoredResourceName.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAlarmsRequest]
   }
-  @scala.inline
-  implicit class GetAlarmsRequestOps[Self <: GetAlarmsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlarmName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarmName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitoredResourceName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoredResourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitoredResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoredResourceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

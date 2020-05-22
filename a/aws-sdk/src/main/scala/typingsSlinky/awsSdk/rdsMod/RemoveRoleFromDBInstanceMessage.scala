@@ -26,31 +26,5 @@ object RemoveRoleFromDBInstanceMessage {
     val __obj = js.Dynamic.literal(DBInstanceIdentifier = DBInstanceIdentifier.asInstanceOf[js.Any], FeatureName = FeatureName.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoveRoleFromDBInstanceMessage]
   }
-  @scala.inline
-  implicit class RemoveRoleFromDBInstanceMessageOps[Self <: RemoveRoleFromDBInstanceMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBInstanceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeatureName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeatureName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

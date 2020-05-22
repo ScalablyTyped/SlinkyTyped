@@ -6,191 +6,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Page extends js.Object {
   /** The author of this Page. */
-  var author: js.UndefOr[DisplayName] = js.native
+  var author: js.UndefOr[DisplayName] = js.undefined
   /** Data about the blog containing this Page. */
-  var blog: js.UndefOr[Id] = js.native
+  var blog: js.UndefOr[Id] = js.undefined
   /** The body content of this Page, in HTML. */
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[String] = js.undefined
   /** Etag of the resource. */
-  var etag: js.UndefOr[String] = js.native
+  var etag: js.UndefOr[String] = js.undefined
   /** The identifier for this resource. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** The kind of this entity. Always blogger#page */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** RFC 3339 date-time when this Page was published. */
-  var published: js.UndefOr[String] = js.native
+  var published: js.UndefOr[String] = js.undefined
   /** The API REST URL to fetch this resource from. */
-  var selfLink: js.UndefOr[String] = js.native
+  var selfLink: js.UndefOr[String] = js.undefined
   /** The status of the page for admin resources (either LIVE or DRAFT). */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[String] = js.undefined
   /** The title of this entity. This is the name displayed in the Admin user interface. */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /** RFC 3339 date-time when this Page was last updated. */
-  var updated: js.UndefOr[String] = js.native
+  var updated: js.UndefOr[String] = js.undefined
   /** The URL that this Page is displayed at. */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object Page {
   @scala.inline
-  def apply(): Page = {
+  def apply(
+    author: DisplayName = null,
+    blog: Id = null,
+    content: String = null,
+    etag: String = null,
+    id: String = null,
+    kind: String = null,
+    published: String = null,
+    selfLink: String = null,
+    status: String = null,
+    title: String = null,
+    updated: String = null,
+    url: String = null
+  ): Page = {
     val __obj = js.Dynamic.literal()
+    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
+    if (blog != null) __obj.updateDynamic("blog")(blog.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (published != null) __obj.updateDynamic("published")(published.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Page]
   }
-  @scala.inline
-  implicit class PageOps[Self <: Page] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthor(value: DisplayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlog(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublished(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublished: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

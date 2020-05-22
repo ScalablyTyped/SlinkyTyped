@@ -52,6 +52,11 @@ object webXRExperienceHelperMod extends js.Object {
       */
     var state: WebXRState = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Enters XR mode (This must be done within a user interaction in most browsers eg. button click)
       * @param sessionMode options for the XR session
       * @param referenceSpaceType frame of reference of the XR session

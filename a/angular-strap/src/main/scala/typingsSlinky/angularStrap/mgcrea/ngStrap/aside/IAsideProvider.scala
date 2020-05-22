@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAsideProvider extends js.Object {
-  var defaults: IAsideOptions = js.native
+  var defaults: IAsideOptions
 }
 
 object IAsideProvider {
@@ -15,19 +14,5 @@ object IAsideProvider {
     val __obj = js.Dynamic.literal(defaults = defaults.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAsideProvider]
   }
-  @scala.inline
-  implicit class IAsideProviderOps[Self <: IAsideProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaults(value: IAsideOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

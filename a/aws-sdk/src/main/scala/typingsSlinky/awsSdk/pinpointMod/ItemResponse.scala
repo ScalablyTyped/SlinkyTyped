@@ -18,41 +18,14 @@ trait ItemResponse extends js.Object {
 
 object ItemResponse {
   @scala.inline
-  def apply(): ItemResponse = {
+  def apply(
+    EndpointItemResponse: EndpointItemResponse = null,
+    EventsItemResponse: MapOfEventItemResponse = null
+  ): ItemResponse = {
     val __obj = js.Dynamic.literal()
+    if (EndpointItemResponse != null) __obj.updateDynamic("EndpointItemResponse")(EndpointItemResponse.asInstanceOf[js.Any])
+    if (EventsItemResponse != null) __obj.updateDynamic("EventsItemResponse")(EventsItemResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemResponse]
   }
-  @scala.inline
-  implicit class ItemResponseOps[Self <: ItemResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpointItemResponse(value: EndpointItemResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointItemResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointItemResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointItemResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventsItemResponse(value: MapOfEventItemResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventsItemResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventsItemResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventsItemResponse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

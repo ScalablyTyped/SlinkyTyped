@@ -17,7 +17,7 @@ trait ActivationState extends js.Object {
     */
   val description: js.UndefOr[Input[String]] = js.native
   /**
-    * The date by which this activation request should expire. The default value is 24 hours.
+    * UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
     */
   val expirationDate: js.UndefOr[Input[String]] = js.native
   /**
@@ -48,125 +48,28 @@ trait ActivationState extends js.Object {
 
 object ActivationState {
   @scala.inline
-  def apply(): ActivationState = {
+  def apply(
+    activationCode: Input[String] = null,
+    description: Input[String] = null,
+    expirationDate: Input[String] = null,
+    expired: Input[String] = null,
+    iamRole: Input[String] = null,
+    name: Input[String] = null,
+    registrationCount: Input[Double] = null,
+    registrationLimit: Input[Double] = null,
+    tags: Input[StringDictionary[_]] = null
+  ): ActivationState = {
     val __obj = js.Dynamic.literal()
+    if (activationCode != null) __obj.updateDynamic("activationCode")(activationCode.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (expirationDate != null) __obj.updateDynamic("expirationDate")(expirationDate.asInstanceOf[js.Any])
+    if (expired != null) __obj.updateDynamic("expired")(expired.asInstanceOf[js.Any])
+    if (iamRole != null) __obj.updateDynamic("iamRole")(iamRole.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (registrationCount != null) __obj.updateDynamic("registrationCount")(registrationCount.asInstanceOf[js.Any])
+    if (registrationLimit != null) __obj.updateDynamic("registrationLimit")(registrationLimit.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivationState]
   }
-  @scala.inline
-  implicit class ActivationStateOps[Self <: ActivationState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivationCode(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activationCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivationCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activationCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationDate(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpired(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRole(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrationCount(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrationLimit(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

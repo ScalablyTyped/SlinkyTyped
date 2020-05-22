@@ -17,5 +17,6 @@ package object mod {
     /* options */ js.UndefOr[js.Any], 
     C
   ]
+  type context[I] = typingsSlinky.avvio.mod.mixedInstance[I] | typingsSlinky.avvio.mod.Avvio[I]
   type mixedInstance[I] = I with typingsSlinky.avvio.mod.Server[I]
 }

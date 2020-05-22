@@ -6,25 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Command extends js.Object {
-  def attachEvents(): Unit = js.native
-  def get_displayName(): String = js.native
-  def get_elementIDPrefix(): String = js.native
-  def get_href(): String = js.native
-  def get_isDropDownCommand(): Boolean = js.native
-  def get_isEnabled(): Boolean = js.native
-  def get_linkElement(): HTMLAnchorElement = js.native
-  def get_name(): String = js.native
-  def get_tooltip(): String = js.native
+  def attachEvents(): Unit
+  def get_displayName(): String
+  def get_elementIDPrefix(): String
+  def get_href(): String
+  def get_isDropDownCommand(): Boolean
+  def get_isEnabled(): Boolean
+  def get_linkElement(): HTMLAnchorElement
+  def get_name(): String
+  def get_tooltip(): String
   /**Should override*/
-  def onClick(): Unit = js.native
-  def render(builder: HtmlBuilder): Unit = js.native
-  def set_displayName(value: String): String = js.native
-  def set_elementIDPrefix(value: String): String = js.native
-  def set_isDropDownCommand(value: Boolean): Boolean = js.native
-  def set_isEnabled(value: Boolean): Boolean = js.native
-  def set_tooltip(value: String): String = js.native
+  def onClick(): Unit
+  def render(builder: HtmlBuilder): Unit
+  def set_displayName(value: String): String
+  def set_elementIDPrefix(value: String): String
+  def set_isDropDownCommand(value: Boolean): Boolean
+  def set_isEnabled(value: Boolean): Boolean
+  def set_tooltip(value: String): String
 }
 
 object Command {
@@ -50,109 +49,5 @@ object Command {
     val __obj = js.Dynamic.literal(attachEvents = js.Any.fromFunction0(attachEvents), get_displayName = js.Any.fromFunction0(get_displayName), get_elementIDPrefix = js.Any.fromFunction0(get_elementIDPrefix), get_href = js.Any.fromFunction0(get_href), get_isDropDownCommand = js.Any.fromFunction0(get_isDropDownCommand), get_isEnabled = js.Any.fromFunction0(get_isEnabled), get_linkElement = js.Any.fromFunction0(get_linkElement), get_name = js.Any.fromFunction0(get_name), get_tooltip = js.Any.fromFunction0(get_tooltip), onClick = js.Any.fromFunction0(onClick), render = js.Any.fromFunction1(render), set_displayName = js.Any.fromFunction1(set_displayName), set_elementIDPrefix = js.Any.fromFunction1(set_elementIDPrefix), set_isDropDownCommand = js.Any.fromFunction1(set_isDropDownCommand), set_isEnabled = js.Any.fromFunction1(set_isEnabled), set_tooltip = js.Any.fromFunction1(set_tooltip))
     __obj.asInstanceOf[Command]
   }
-  @scala.inline
-  implicit class CommandOps[Self <: Command] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachEvents(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachEvents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_displayName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_displayName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_elementIDPrefix(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_elementIDPrefix")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_href(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_href")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_isDropDownCommand(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_isDropDownCommand")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_isEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_isEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_linkElement(value: () => HTMLAnchorElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_linkElement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_name(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_name")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_tooltip(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_tooltip")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRender(value: HtmlBuilder => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_displayName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_displayName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_elementIDPrefix(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_elementIDPrefix")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_isDropDownCommand(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_isDropDownCommand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_isEnabled(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_isEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_tooltip(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_tooltip")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

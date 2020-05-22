@@ -18,41 +18,11 @@ trait ServiceActionDetail extends js.Object {
 
 object ServiceActionDetail {
   @scala.inline
-  def apply(): ServiceActionDetail = {
+  def apply(Definition: ServiceActionDefinitionMap = null, ServiceActionSummary: ServiceActionSummary = null): ServiceActionDetail = {
     val __obj = js.Dynamic.literal()
+    if (Definition != null) __obj.updateDynamic("Definition")(Definition.asInstanceOf[js.Any])
+    if (ServiceActionSummary != null) __obj.updateDynamic("ServiceActionSummary")(ServiceActionSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceActionDetail]
   }
-  @scala.inline
-  implicit class ServiceActionDetailOps[Self <: ServiceActionDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefinition(value: ServiceActionDefinitionMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Definition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Definition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceActionSummary(value: ServiceActionSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceActionSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionSummary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

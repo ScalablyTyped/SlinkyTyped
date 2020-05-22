@@ -11,84 +11,83 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@js.native
 trait ShapeLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns or sets the alternative description text for a Shape object.
+    * Specifies the alternative description text for a Shape object.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var altTextDescription: js.UndefOr[Boolean] = js.native
+  var altTextDescription: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns or sets the alternative title text for a Shape object.
+    * Specifies the alternative title text for a Shape object.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var altTextTitle: js.UndefOr[Boolean] = js.native
+  var altTextTitle: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns the number of connection sites on this shape. Read-only.
+    * Returns the number of connection sites on this shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var connectionSiteCount: js.UndefOr[Boolean] = js.native
+  var connectionSiteCount: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Returns the fill formatting of this shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var fill: js.UndefOr[ShapeFillLoadOptions] = js.native
+  var fill: js.UndefOr[ShapeFillLoadOptions] = js.undefined
   /**
     *
     * Returns the geometric shape associated with the shape. An error will be thrown if the shape type is not "GeometricShape".
     *
     * [Api set: ExcelApi 1.9]
     */
-  var geometricShape: js.UndefOr[GeometricShapeLoadOptions] = js.native
+  var geometricShape: js.UndefOr[GeometricShapeLoadOptions] = js.undefined
   /**
     *
-    * Represents the geometric shape type of this geometric shape. See Excel.GeometricShapeType for details. Returns null if the shape type is not "GeometricShape".
+    * Specifies the geometric shape type of this geometric shape. See Excel.GeometricShapeType for details. Returns null if the shape type is not "GeometricShape".
     *
     * [Api set: ExcelApi 1.9]
     */
-  var geometricShapeType: js.UndefOr[Boolean] = js.native
+  var geometricShapeType: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Returns the shape group associated with the shape. An error will be thrown if the shape type is not "GroupShape".
     *
     * [Api set: ExcelApi 1.9]
     */
-  var group: js.UndefOr[ShapeGroupLoadOptions] = js.native
+  var group: js.UndefOr[ShapeGroupLoadOptions] = js.undefined
   /**
     *
-    * Represents the height, in points, of the shape.
+    * Specifies the height, in points, of the shape.
     Throws an invalid argument exception when set with a negative value or zero as input.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var height: js.UndefOr[Boolean] = js.native
+  var height: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the shape identifier. Read-only.
+    * Specifies the shape identifier.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Returns the image associated with the shape. An error will be thrown if the shape type is not "Image".
     *
     * [Api set: ExcelApi 1.9]
     */
-  var image: js.UndefOr[ImageLoadOptions] = js.native
+  var image: js.UndefOr[ImageLoadOptions] = js.undefined
   /**
     *
     * The distance, in points, from the left side of the shape to the left side of the worksheet.
@@ -96,70 +95,70 @@ trait ShapeLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var left: js.UndefOr[Boolean] = js.native
+  var left: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the level of the specified shape. For example, a level of 0 means that the shape is not part of any groups, a level of 1 means the shape is part of a top-level group, and a level of 2 means the shape is part of a sub-group of the top level.
+    * Specifies the level of the specified shape. For example, a level of 0 means that the shape is not part of any groups, a level of 1 means the shape is part of a top-level group, and a level of 2 means the shape is part of a sub-group of the top level.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var level: js.UndefOr[Boolean] = js.native
+  var level: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Returns the line associated with the shape. An error will be thrown if the shape type is not "Line".
     *
     * [Api set: ExcelApi 1.9]
     */
-  var line: js.UndefOr[LineLoadOptions] = js.native
+  var line: js.UndefOr[LineLoadOptions] = js.undefined
   /**
     *
     * Returns the line formatting of this shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var lineFormat: js.UndefOr[ShapeLineFormatLoadOptions] = js.native
+  var lineFormat: js.UndefOr[ShapeLineFormatLoadOptions] = js.undefined
   /**
     *
-    * Specifies whether or not the aspect ratio of this shape is locked.
+    * Specifies if the aspect ratio of this shape is locked.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var lockAspectRatio: js.UndefOr[Boolean] = js.native
+  var lockAspectRatio: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the name of the shape.
+    * Specifies the name of the shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var name: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the parent group of this shape.
+    * Specifies the parent group of this shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var parentGroup: js.UndefOr[ShapeLoadOptions] = js.native
+  var parentGroup: js.UndefOr[ShapeLoadOptions] = js.undefined
   /**
     *
     * Represents how the object is attached to the cells below it.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var placement: js.UndefOr[Boolean] = js.native
+  var placement: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the rotation, in degrees, of the shape.
+    * Specifies the rotation, in degrees, of the shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var rotation: js.UndefOr[Boolean] = js.native
+  var rotation: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Returns the text frame object of this shape. Read only.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var textFrame: js.UndefOr[TextFrameLoadOptions] = js.native
+  var textFrame: js.UndefOr[TextFrameLoadOptions] = js.undefined
   /**
     *
     * The distance, in points, from the top edge of the shape to the top edge of the worksheet.
@@ -167,363 +166,96 @@ trait ShapeLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var top: js.UndefOr[Boolean] = js.native
+  var top: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns the type of this shape. See Excel.ShapeType for details. Read-only.
+    * Returns the type of this shape. See Excel.ShapeType for details.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var `type`: js.UndefOr[Boolean] = js.native
+  var `type`: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the visibility of this shape.
+    * Specifies if the shape is visible.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the width, in points, of the shape.
+    * Specifies the width, in points, of the shape.
     Throws an invalid argument exception when set with a negative value or zero as input.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var width: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns the position of the specified shape in the z-order, with 0 representing the bottom of the order stack. Read-only.
+    * Returns the position of the specified shape in the z-order, with 0 representing the bottom of the order stack.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var zOrderPosition: js.UndefOr[Boolean] = js.native
+  var zOrderPosition: js.UndefOr[Boolean] = js.undefined
 }
 
 object ShapeLoadOptions {
   @scala.inline
-  def apply(): ShapeLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    altTextDescription: js.UndefOr[Boolean] = js.undefined,
+    altTextTitle: js.UndefOr[Boolean] = js.undefined,
+    connectionSiteCount: js.UndefOr[Boolean] = js.undefined,
+    fill: ShapeFillLoadOptions = null,
+    geometricShape: GeometricShapeLoadOptions = null,
+    geometricShapeType: js.UndefOr[Boolean] = js.undefined,
+    group: ShapeGroupLoadOptions = null,
+    height: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[Boolean] = js.undefined,
+    image: ImageLoadOptions = null,
+    left: js.UndefOr[Boolean] = js.undefined,
+    level: js.UndefOr[Boolean] = js.undefined,
+    line: LineLoadOptions = null,
+    lineFormat: ShapeLineFormatLoadOptions = null,
+    lockAspectRatio: js.UndefOr[Boolean] = js.undefined,
+    name: js.UndefOr[Boolean] = js.undefined,
+    parentGroup: ShapeLoadOptions = null,
+    placement: js.UndefOr[Boolean] = js.undefined,
+    rotation: js.UndefOr[Boolean] = js.undefined,
+    textFrame: TextFrameLoadOptions = null,
+    top: js.UndefOr[Boolean] = js.undefined,
+    `type`: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Boolean] = js.undefined,
+    zOrderPosition: js.UndefOr[Boolean] = js.undefined
+  ): ShapeLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altTextDescription)) __obj.updateDynamic("altTextDescription")(altTextDescription.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altTextTitle)) __obj.updateDynamic("altTextTitle")(altTextTitle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connectionSiteCount)) __obj.updateDynamic("connectionSiteCount")(connectionSiteCount.get.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (geometricShape != null) __obj.updateDynamic("geometricShape")(geometricShape.asInstanceOf[js.Any])
+    if (!js.isUndefined(geometricShapeType)) __obj.updateDynamic("geometricShapeType")(geometricShapeType.get.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (lineFormat != null) __obj.updateDynamic("lineFormat")(lineFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockAspectRatio)) __obj.updateDynamic("lockAspectRatio")(lockAspectRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.get.asInstanceOf[js.Any])
+    if (parentGroup != null) __obj.updateDynamic("parentGroup")(parentGroup.asInstanceOf[js.Any])
+    if (!js.isUndefined(placement)) __obj.updateDynamic("placement")(placement.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (textFrame != null) __obj.updateDynamic("textFrame")(textFrame.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zOrderPosition)) __obj.updateDynamic("zOrderPosition")(zOrderPosition.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShapeLoadOptions]
   }
-  @scala.inline
-  implicit class ShapeLoadOptionsOps[Self <: ShapeLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAltTextDescription(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altTextDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltTextDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altTextDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAltTextTitle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altTextTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltTextTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altTextTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionSiteCount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionSiteCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionSiteCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionSiteCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: ShapeFillLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeometricShape(value: GeometricShapeLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometricShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometricShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometricShape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeometricShapeType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometricShapeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometricShapeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometricShapeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: ShapeGroupLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: ImageLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: LineLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineFormat(value: ShapeLineFormatLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockAspectRatio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentGroup(value: ShapeLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacement(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextFrame(value: TextFrameLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textFrame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textFrame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZOrderPosition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zOrderPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZOrderPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zOrderPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,7 +23,7 @@ trait ChartPointsCollection extends ClientObject {
   var context_ChartPointsCollection: RequestContext = js.native
   /**
     *
-    * Returns the number of chart points in the series. Read-only.
+    * Returns the number of chart points in the series.
     *
     * [Api set: ExcelApi 1.1]
     */

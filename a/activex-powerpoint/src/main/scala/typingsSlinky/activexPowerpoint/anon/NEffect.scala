@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NEffect extends js.Object {
-  val Wn: SlideShowWindow = js.native
-  val nEffect: Effect = js.native
+  val Wn: SlideShowWindow
+  val nEffect: Effect
 }
 
 object NEffect {
@@ -18,25 +17,5 @@ object NEffect {
     val __obj = js.Dynamic.literal(Wn = Wn.asInstanceOf[js.Any], nEffect = nEffect.asInstanceOf[js.Any])
     __obj.asInstanceOf[NEffect]
   }
-  @scala.inline
-  implicit class NEffectOps[Self <: NEffect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWn(value: SlideShowWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Wn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNEffect(value: Effect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nEffect")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

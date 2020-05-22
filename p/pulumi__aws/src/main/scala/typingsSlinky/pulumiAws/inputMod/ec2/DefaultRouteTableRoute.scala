@@ -47,125 +47,28 @@ trait DefaultRouteTableRoute extends js.Object {
 
 object DefaultRouteTableRoute {
   @scala.inline
-  def apply(): DefaultRouteTableRoute = {
+  def apply(
+    cidrBlock: Input[String] = null,
+    egressOnlyGatewayId: Input[String] = null,
+    gatewayId: Input[String] = null,
+    instanceId: Input[String] = null,
+    ipv6CidrBlock: Input[String] = null,
+    natGatewayId: Input[String] = null,
+    networkInterfaceId: Input[String] = null,
+    transitGatewayId: Input[String] = null,
+    vpcPeeringConnectionId: Input[String] = null
+  ): DefaultRouteTableRoute = {
     val __obj = js.Dynamic.literal()
+    if (cidrBlock != null) __obj.updateDynamic("cidrBlock")(cidrBlock.asInstanceOf[js.Any])
+    if (egressOnlyGatewayId != null) __obj.updateDynamic("egressOnlyGatewayId")(egressOnlyGatewayId.asInstanceOf[js.Any])
+    if (gatewayId != null) __obj.updateDynamic("gatewayId")(gatewayId.asInstanceOf[js.Any])
+    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
+    if (ipv6CidrBlock != null) __obj.updateDynamic("ipv6CidrBlock")(ipv6CidrBlock.asInstanceOf[js.Any])
+    if (natGatewayId != null) __obj.updateDynamic("natGatewayId")(natGatewayId.asInstanceOf[js.Any])
+    if (networkInterfaceId != null) __obj.updateDynamic("networkInterfaceId")(networkInterfaceId.asInstanceOf[js.Any])
+    if (transitGatewayId != null) __obj.updateDynamic("transitGatewayId")(transitGatewayId.asInstanceOf[js.Any])
+    if (vpcPeeringConnectionId != null) __obj.updateDynamic("vpcPeeringConnectionId")(vpcPeeringConnectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultRouteTableRoute]
   }
-  @scala.inline
-  implicit class DefaultRouteTableRouteOps[Self <: DefaultRouteTableRoute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCidrBlock(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEgressOnlyGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("egressOnlyGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEgressOnlyGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("egressOnlyGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpv6CidrBlock(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6CidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpv6CidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6CidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNatGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("natGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNatGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("natGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkInterfaceId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkInterfaceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcPeeringConnectionId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcPeeringConnectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcPeeringConnectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcPeeringConnectionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

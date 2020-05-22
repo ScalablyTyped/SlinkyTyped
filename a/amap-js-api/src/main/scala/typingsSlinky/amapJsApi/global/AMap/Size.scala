@@ -1,5 +1,6 @@
 package typingsSlinky.amapJsApi.global.AMap
 
+import typingsSlinky.amapJsApi.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,5 +15,18 @@ class Size protected ()
     * @param height 长度像素
     */
   def this(width: Double, height: Double) = this()
+  // internal
+  /* CompleteClass */
+  override def contains(size: X): Boolean = js.native
+  /**
+    * 获得高度
+    */
+  /* CompleteClass */
+  override def getHeight(): Double = js.native
+  /**
+    * 获得宽度
+    */
+  /* CompleteClass */
+  override def getWidth(): Double = js.native
 }
 

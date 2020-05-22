@@ -18,41 +18,14 @@ trait DeleteFleetsResult extends js.Object {
 
 object DeleteFleetsResult {
   @scala.inline
-  def apply(): DeleteFleetsResult = {
+  def apply(
+    SuccessfulFleetDeletions: DeleteFleetSuccessSet = null,
+    UnsuccessfulFleetDeletions: DeleteFleetErrorSet = null
+  ): DeleteFleetsResult = {
     val __obj = js.Dynamic.literal()
+    if (SuccessfulFleetDeletions != null) __obj.updateDynamic("SuccessfulFleetDeletions")(SuccessfulFleetDeletions.asInstanceOf[js.Any])
+    if (UnsuccessfulFleetDeletions != null) __obj.updateDynamic("UnsuccessfulFleetDeletions")(UnsuccessfulFleetDeletions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteFleetsResult]
   }
-  @scala.inline
-  implicit class DeleteFleetsResultOps[Self <: DeleteFleetsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccessfulFleetDeletions(value: DeleteFleetSuccessSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulFleetDeletions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfulFleetDeletions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulFleetDeletions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnsuccessfulFleetDeletions(value: DeleteFleetErrorSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnsuccessfulFleetDeletions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnsuccessfulFleetDeletions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnsuccessfulFleetDeletions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

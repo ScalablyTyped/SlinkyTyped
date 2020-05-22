@@ -86,245 +86,48 @@ trait DescribePredictorResponse extends js.Object {
 
 object DescribePredictorResponse {
   @scala.inline
-  def apply(): DescribePredictorResponse = {
+  def apply(
+    AlgorithmArn: Arn = null,
+    AutoMLAlgorithmArns: ArnList = null,
+    CreationTime: js.Date = null,
+    DatasetImportJobArns: ArnList = null,
+    EncryptionConfig: EncryptionConfig = null,
+    EvaluationParameters: EvaluationParameters = null,
+    FeaturizationConfig: FeaturizationConfig = null,
+    ForecastHorizon: js.UndefOr[Integer] = js.undefined,
+    HPOConfig: HyperParameterTuningJobConfig = null,
+    InputDataConfig: InputDataConfig = null,
+    LastModificationTime: js.Date = null,
+    Message: Message = null,
+    PerformAutoML: js.UndefOr[Boolean] = js.undefined,
+    PerformHPO: js.UndefOr[Boolean] = js.undefined,
+    PredictorArn: Name = null,
+    PredictorExecutionDetails: PredictorExecutionDetails = null,
+    PredictorName: Name = null,
+    Status: Status = null,
+    TrainingParameters: TrainingParameters = null
+  ): DescribePredictorResponse = {
     val __obj = js.Dynamic.literal()
+    if (AlgorithmArn != null) __obj.updateDynamic("AlgorithmArn")(AlgorithmArn.asInstanceOf[js.Any])
+    if (AutoMLAlgorithmArns != null) __obj.updateDynamic("AutoMLAlgorithmArns")(AutoMLAlgorithmArns.asInstanceOf[js.Any])
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (DatasetImportJobArns != null) __obj.updateDynamic("DatasetImportJobArns")(DatasetImportJobArns.asInstanceOf[js.Any])
+    if (EncryptionConfig != null) __obj.updateDynamic("EncryptionConfig")(EncryptionConfig.asInstanceOf[js.Any])
+    if (EvaluationParameters != null) __obj.updateDynamic("EvaluationParameters")(EvaluationParameters.asInstanceOf[js.Any])
+    if (FeaturizationConfig != null) __obj.updateDynamic("FeaturizationConfig")(FeaturizationConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(ForecastHorizon)) __obj.updateDynamic("ForecastHorizon")(ForecastHorizon.get.asInstanceOf[js.Any])
+    if (HPOConfig != null) __obj.updateDynamic("HPOConfig")(HPOConfig.asInstanceOf[js.Any])
+    if (InputDataConfig != null) __obj.updateDynamic("InputDataConfig")(InputDataConfig.asInstanceOf[js.Any])
+    if (LastModificationTime != null) __obj.updateDynamic("LastModificationTime")(LastModificationTime.asInstanceOf[js.Any])
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
+    if (!js.isUndefined(PerformAutoML)) __obj.updateDynamic("PerformAutoML")(PerformAutoML.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PerformHPO)) __obj.updateDynamic("PerformHPO")(PerformHPO.get.asInstanceOf[js.Any])
+    if (PredictorArn != null) __obj.updateDynamic("PredictorArn")(PredictorArn.asInstanceOf[js.Any])
+    if (PredictorExecutionDetails != null) __obj.updateDynamic("PredictorExecutionDetails")(PredictorExecutionDetails.asInstanceOf[js.Any])
+    if (PredictorName != null) __obj.updateDynamic("PredictorName")(PredictorName.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (TrainingParameters != null) __obj.updateDynamic("TrainingParameters")(TrainingParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribePredictorResponse]
   }
-  @scala.inline
-  implicit class DescribePredictorResponseOps[Self <: DescribePredictorResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithmArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithmArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoMLAlgorithmArns(value: ArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLAlgorithmArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoMLAlgorithmArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLAlgorithmArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatasetImportJobArns(value: ArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetImportJobArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetImportJobArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetImportJobArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionConfig(value: EncryptionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvaluationParameters(value: EvaluationParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeaturizationConfig(value: FeaturizationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeaturizationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeaturizationConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeaturizationConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForecastHorizon(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastHorizon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForecastHorizon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastHorizon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHPOConfig(value: HyperParameterTuningJobConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HPOConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHPOConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HPOConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputDataConfig(value: InputDataConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputDataConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModificationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModificationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModificationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModificationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformAutoML(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformAutoML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformAutoML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformAutoML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformHPO(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformHPO")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformHPO: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformHPO")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredictorArn(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictorArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredictorExecutionDetails(value: PredictorExecutionDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorExecutionDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictorExecutionDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorExecutionDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredictorName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictorName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrainingParameters(value: TrainingParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrainingParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingParameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

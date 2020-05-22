@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * GenericProperties
   */
-@js.native
 trait IGenericProperties
   extends // ?Dynamic properties?
 /* qMetaDef */ StringDictionary[js.Any] {
@@ -16,28 +15,15 @@ trait IGenericProperties
     * Identifier and type of the object.
     * >> This parameter is mandatory.
     */
-  var qInfo: INxInfo = js.native
+  var qInfo: INxInfo
 }
 
 object IGenericProperties {
   @scala.inline
-  def apply(qInfo: INxInfo): IGenericProperties = {
+  def apply(qInfo: INxInfo, StringDictionary: /* name */ StringDictionary[js.Any] = null): IGenericProperties = {
     val __obj = js.Dynamic.literal(qInfo = qInfo.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[IGenericProperties]
   }
-  @scala.inline
-  implicit class IGenericPropertiesOps[Self <: IGenericProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQInfo(value: INxInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

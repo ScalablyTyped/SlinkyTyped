@@ -73,173 +73,36 @@ trait SchemaOperation extends js.Object {
 
 object SchemaOperation {
   @scala.inline
-  def apply(): SchemaOperation = {
+  def apply(
+    clusterConditions: js.Array[SchemaStatusCondition] = null,
+    detail: String = null,
+    endTime: String = null,
+    location: String = null,
+    name: String = null,
+    nodepoolConditions: js.Array[SchemaStatusCondition] = null,
+    operationType: String = null,
+    selfLink: String = null,
+    startTime: String = null,
+    status: String = null,
+    statusMessage: String = null,
+    targetLink: String = null,
+    zone: String = null
+  ): SchemaOperation = {
     val __obj = js.Dynamic.literal()
+    if (clusterConditions != null) __obj.updateDynamic("clusterConditions")(clusterConditions.asInstanceOf[js.Any])
+    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
+    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nodepoolConditions != null) __obj.updateDynamic("nodepoolConditions")(nodepoolConditions.asInstanceOf[js.Any])
+    if (operationType != null) __obj.updateDynamic("operationType")(operationType.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (statusMessage != null) __obj.updateDynamic("statusMessage")(statusMessage.asInstanceOf[js.Any])
+    if (targetLink != null) __obj.updateDynamic("targetLink")(targetLink.asInstanceOf[js.Any])
+    if (zone != null) __obj.updateDynamic("zone")(zone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOperation]
   }
-  @scala.inline
-  implicit class SchemaOperationOps[Self <: SchemaOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterConditions(value: js.Array[SchemaStatusCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterConditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterConditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodepoolConditions(value: js.Array[SchemaStatusCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodepoolConditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodepoolConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodepoolConditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

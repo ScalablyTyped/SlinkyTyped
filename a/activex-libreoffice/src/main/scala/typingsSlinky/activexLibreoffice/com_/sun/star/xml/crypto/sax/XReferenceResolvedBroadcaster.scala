@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   *
   * This interface is used to manipulate reference resolved listener.
   */
-@js.native
 trait XReferenceResolvedBroadcaster extends XInterface {
   /**
     * Adds a new reference resolved listener for a element collector.
@@ -20,7 +19,7 @@ trait XReferenceResolvedBroadcaster extends XInterface {
     * @param referenceId the id of the element collector for which the new listener is added
     * @param listener the listener to be added
     */
-  def addReferenceResolvedListener(referenceId: Double, listener: XReferenceResolvedListener): Unit = js.native
+  def addReferenceResolvedListener(referenceId: Double, listener: XReferenceResolvedListener): Unit
   /**
     * Removes a listener from a element collector.
     *
@@ -28,7 +27,7 @@ trait XReferenceResolvedBroadcaster extends XInterface {
     * @param referenceId the id of the element collector from which the listener is removed
     * @param listener the listener to be removed
     */
-  def removeReferenceResolvedListener(referenceId: Double, listener: XReferenceResolvedListener): Unit = js.native
+  def removeReferenceResolvedListener(referenceId: Double, listener: XReferenceResolvedListener): Unit
 }
 
 object XReferenceResolvedBroadcaster {
@@ -43,25 +42,5 @@ object XReferenceResolvedBroadcaster {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addReferenceResolvedListener = js.Any.fromFunction2(addReferenceResolvedListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeReferenceResolvedListener = js.Any.fromFunction2(removeReferenceResolvedListener))
     __obj.asInstanceOf[XReferenceResolvedBroadcaster]
   }
-  @scala.inline
-  implicit class XReferenceResolvedBroadcasterOps[Self <: XReferenceResolvedBroadcaster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddReferenceResolvedListener(value: (Double, XReferenceResolvedListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addReferenceResolvedListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveReferenceResolvedListener(value: (Double, XReferenceResolvedListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeReferenceResolvedListener")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

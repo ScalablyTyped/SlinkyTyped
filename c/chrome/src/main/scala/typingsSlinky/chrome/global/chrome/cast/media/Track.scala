@@ -15,5 +15,21 @@ class Track protected ()
     * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.media.Track
     */
   def this(trackId: Double, trackType: typingsSlinky.chrome.chrome.cast.media.TrackType) = this()
+  /* CompleteClass */
+  override var customData: js.Object = js.native
+  /* CompleteClass */
+  override var language: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+  /* CompleteClass */
+  override var subtype: typingsSlinky.chrome.chrome.cast.media.TextTrackType = js.native
+  /* CompleteClass */
+  override var trackContentId: String = js.native
+  /* CompleteClass */
+  override var trackContentType: String = js.native
+  /* CompleteClass */
+  override var trackId: Double = js.native
+  /* CompleteClass */
+  override var `type`: typingsSlinky.chrome.chrome.cast.media.TrackType = js.native
 }
 

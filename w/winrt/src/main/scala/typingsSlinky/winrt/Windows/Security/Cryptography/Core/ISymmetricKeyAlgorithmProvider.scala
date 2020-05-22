@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISymmetricKeyAlgorithmProvider extends js.Object {
-  var algorithmName: String = js.native
-  var blockLength: Double = js.native
-  def createSymmetricKey(keyMaterial: IBuffer): CryptographicKey = js.native
+  var algorithmName: String
+  var blockLength: Double
+  def createSymmetricKey(keyMaterial: IBuffer): CryptographicKey
 }
 
 object ISymmetricKeyAlgorithmProvider {
@@ -18,31 +17,5 @@ object ISymmetricKeyAlgorithmProvider {
     val __obj = js.Dynamic.literal(algorithmName = algorithmName.asInstanceOf[js.Any], blockLength = blockLength.asInstanceOf[js.Any], createSymmetricKey = js.Any.fromFunction1(createSymmetricKey))
     __obj.asInstanceOf[ISymmetricKeyAlgorithmProvider]
   }
-  @scala.inline
-  implicit class ISymmetricKeyAlgorithmProviderOps[Self <: ISymmetricKeyAlgorithmProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithmName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateSymmetricKey(value: IBuffer => CryptographicKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSymmetricKey")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

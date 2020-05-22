@@ -5,115 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Id extends js.Object {
-  var id: js.UndefOr[String] = js.native
-  var onAttach: js.UndefOr[js.Function1[/* worker */ SidebarWorker, _]] = js.native
-  var onDetach: js.UndefOr[js.Function0[_]] = js.native
-  var onHide: js.UndefOr[js.Function0[_]] = js.native
-  var onReady: js.UndefOr[js.Function1[/* worker */ SidebarWorker, _]] = js.native
-  var onShow: js.UndefOr[js.Function0[_]] = js.native
-  var title: String = js.native
-  var url: String = js.native
+  var id: js.UndefOr[String] = js.undefined
+  var onAttach: js.UndefOr[js.Function1[/* worker */ SidebarWorker, _]] = js.undefined
+  var onDetach: js.UndefOr[js.Function0[_]] = js.undefined
+  var onHide: js.UndefOr[js.Function0[_]] = js.undefined
+  var onReady: js.UndefOr[js.Function1[/* worker */ SidebarWorker, _]] = js.undefined
+  var onShow: js.UndefOr[js.Function0[_]] = js.undefined
+  var title: String
+  var url: String
 }
 
 object Id {
   @scala.inline
-  def apply(title: String, url: String): Id = {
+  def apply(
+    title: String,
+    url: String,
+    id: String = null,
+    onAttach: /* worker */ SidebarWorker => _ = null,
+    onDetach: () => _ = null,
+    onHide: () => _ = null,
+    onReady: /* worker */ SidebarWorker => _ = null,
+    onShow: () => _ = null
+  ): Id = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (onAttach != null) __obj.updateDynamic("onAttach")(js.Any.fromFunction1(onAttach))
+    if (onDetach != null) __obj.updateDynamic("onDetach")(js.Any.fromFunction0(onDetach))
+    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction0(onHide))
+    if (onReady != null) __obj.updateDynamic("onReady")(js.Any.fromFunction1(onReady))
+    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
     __obj.asInstanceOf[Id]
   }
-  @scala.inline
-  implicit class IdOps[Self <: Id] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAttach(value: /* worker */ SidebarWorker => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAttach")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAttach: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAttach")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDetach(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDetach")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDetach: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDetach")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHide(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReady(value: /* worker */ SidebarWorker => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnReady: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

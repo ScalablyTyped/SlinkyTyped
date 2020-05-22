@@ -18,41 +18,11 @@ trait SecurityConfigurationEncryptionConfigurationS3Encryption extends js.Object
 
 object SecurityConfigurationEncryptionConfigurationS3Encryption {
   @scala.inline
-  def apply(): SecurityConfigurationEncryptionConfigurationS3Encryption = {
+  def apply(kmsKeyArn: String = null, s3EncryptionMode: String = null): SecurityConfigurationEncryptionConfigurationS3Encryption = {
     val __obj = js.Dynamic.literal()
+    if (kmsKeyArn != null) __obj.updateDynamic("kmsKeyArn")(kmsKeyArn.asInstanceOf[js.Any])
+    if (s3EncryptionMode != null) __obj.updateDynamic("s3EncryptionMode")(s3EncryptionMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityConfigurationEncryptionConfigurationS3Encryption]
   }
-  @scala.inline
-  implicit class SecurityConfigurationEncryptionConfigurationS3EncryptionOps[Self <: SecurityConfigurationEncryptionConfigurationS3Encryption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKmsKeyArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3EncryptionMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3EncryptionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3EncryptionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3EncryptionMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

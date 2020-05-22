@@ -18,41 +18,11 @@ trait NamespaceProperties extends js.Object {
 
 object NamespaceProperties {
   @scala.inline
-  def apply(): NamespaceProperties = {
+  def apply(DnsProperties: DnsProperties = null, HttpProperties: HttpProperties = null): NamespaceProperties = {
     val __obj = js.Dynamic.literal()
+    if (DnsProperties != null) __obj.updateDynamic("DnsProperties")(DnsProperties.asInstanceOf[js.Any])
+    if (HttpProperties != null) __obj.updateDynamic("HttpProperties")(HttpProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[NamespaceProperties]
   }
-  @scala.inline
-  implicit class NamespacePropertiesOps[Self <: NamespaceProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDnsProperties(value: DnsProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpProperties(value: HttpProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

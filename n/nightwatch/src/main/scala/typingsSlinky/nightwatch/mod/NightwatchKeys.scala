@@ -4,124 +4,123 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NightwatchKeys extends js.Object {
   /** The numpad add (+) key. */
-  var ADD: String = js.native
+  var ADD: String
   /** The alt key. */
-  var ALT: String = js.native
+  var ALT: String
   /** The down arrow. */
-  var ARROW_DOWN: String = js.native
+  var ARROW_DOWN: String
   /** The left arrow. */
-  var ARROW_LEFT: String = js.native
+  var ARROW_LEFT: String
   /** The right arrow. */
-  var ARROW_RIGHT: String = js.native
+  var ARROW_RIGHT: String
   /** The up arrow. */
-  var ARROW_UP: String = js.native
+  var ARROW_UP: String
   /** The backspace key. */
-  var BACK_SPACE: String = js.native
+  var BACK_SPACE: String
   /** OS-specific keystroke sequence that performs a cancel action. */
-  var CANCEL: String = js.native
+  var CANCEL: String
   /** The clear key. This key only appears on full-size Apple keyboards in place of Num Lock key. */
-  var CLEAR: String = js.native
+  var CLEAR: String
   /** The command (⌘) key. */
-  var COMMAND: String = js.native
+  var COMMAND: String
   /** The control key. */
-  var CONTROL: String = js.native
+  var CONTROL: String
   /** The numpad decimal (.) key. */
-  var DECIMAL: String = js.native
+  var DECIMAL: String
   /** The delete key. */
-  var DELETE: String = js.native
+  var DELETE: String
   /** The numpad divide (/) key. */
-  var DIVIDE: String = js.native
-  var DOWN_ARROW: String = js.native
+  var DIVIDE: String
+  var DOWN_ARROW: String
   /** The end key. */
-  var END: String = js.native
+  var END: String
   /** The enter (numpad) key. */
-  var ENTER: String = js.native
+  var ENTER: String
   /** The equals key. */
-  var EQUALS: String = js.native
+  var EQUALS: String
   /** The escape key. */
-  var ESCAPE: String = js.native
+  var ESCAPE: String
   /** The F1 key. */
-  var F1: String = js.native
+  var F1: String
   /** The F10 key. */
-  var F10: String = js.native
+  var F10: String
   /** The F11 key. */
-  var F11: String = js.native
+  var F11: String
   /** The F12 key. */
-  var F12: String = js.native
+  var F12: String
   /** The F2 key. */
-  var F2: String = js.native
+  var F2: String
   /** The F3 key. */
-  var F3: String = js.native
+  var F3: String
   /** The F4 key. */
-  var F4: String = js.native
+  var F4: String
   /** The F5 key. */
-  var F5: String = js.native
+  var F5: String
   /** The F6 key. */
-  var F6: String = js.native
+  var F6: String
   /** The F7 key. */
-  var F7: String = js.native
+  var F7: String
   /** The F8 key. */
-  var F8: String = js.native
+  var F8: String
   /** The F9 key. */
-  var F9: String = js.native
+  var F9: String
   /** The help key. This key only appears on older Apple keyboards in place of the Insert key. */
-  var HELP: String = js.native
+  var HELP: String
   /** The home key. */
-  var HOME: String = js.native
+  var HOME: String
   /** The insert key. */
-  var INSERT: String = js.native
-  var LEFT_ARROW: String = js.native
+  var INSERT: String
+  var LEFT_ARROW: String
   /** The meta (Windows) key. */
-  var META: String = js.native
+  var META: String
   /** The numpad multiply (*) key. */
-  var MULTIPLY: String = js.native
+  var MULTIPLY: String
   /** Releases all held modifier keys. */
-  var NULL: String = js.native
+  var NULL: String
   /** The numpad zero key. */
-  var NUMPAD0: String = js.native
+  var NUMPAD0: String
   /** The numpad one key. */
-  var NUMPAD1: String = js.native
+  var NUMPAD1: String
   /** The numpad two key. */
-  var NUMPAD2: String = js.native
+  var NUMPAD2: String
   /** The numpad three key. */
-  var NUMPAD3: String = js.native
+  var NUMPAD3: String
   /** The numpad four key. */
-  var NUMPAD4: String = js.native
+  var NUMPAD4: String
   /** The numpad five key. */
-  var NUMPAD5: String = js.native
+  var NUMPAD5: String
   /** The numpad six key. */
-  var NUMPAD6: String = js.native
+  var NUMPAD6: String
   /** The numpad seven key. */
-  var NUMPAD7: String = js.native
+  var NUMPAD7: String
   /** The numpad eight key. */
-  var NUMPAD8: String = js.native
+  var NUMPAD8: String
   /** The numpad nine key. */
-  var NUMPAD9: String = js.native
+  var NUMPAD9: String
   /** The page down key. */
-  var PAGEDOWN: String = js.native
+  var PAGEDOWN: String
   /** The page up key. */
-  var PAGEUP: String = js.native
+  var PAGEUP: String
   /** The pause key. */
-  var PAUSE: String = js.native
+  var PAUSE: String
   /** The return key. */
-  var RETURN: String = js.native
-  var RIGHT_ARROW: String = js.native
+  var RETURN: String
+  var RIGHT_ARROW: String
   /** The semicolon key. */
-  var SEMICOLON: String = js.native
+  var SEMICOLON: String
   /** The numpad separator (=) key. */
-  var SEPARATOR: String = js.native
+  var SEPARATOR: String
   /** The shift key. */
-  var SHIFT: String = js.native
+  var SHIFT: String
   /** The space bar. */
-  var SPACE: String = js.native
+  var SPACE: String
   /** The numpad subtract (-) key. */
-  var SUBTRACT: String = js.native
+  var SUBTRACT: String
   /** The tab key. */
-  var TAB: String = js.native
-  var UP_ARROW: String = js.native
+  var TAB: String
+  var UP_ARROW: String
 }
 
 object NightwatchKeys {
@@ -191,373 +190,5 @@ object NightwatchKeys {
     val __obj = js.Dynamic.literal(ADD = ADD.asInstanceOf[js.Any], ALT = ALT.asInstanceOf[js.Any], ARROW_DOWN = ARROW_DOWN.asInstanceOf[js.Any], ARROW_LEFT = ARROW_LEFT.asInstanceOf[js.Any], ARROW_RIGHT = ARROW_RIGHT.asInstanceOf[js.Any], ARROW_UP = ARROW_UP.asInstanceOf[js.Any], BACK_SPACE = BACK_SPACE.asInstanceOf[js.Any], CANCEL = CANCEL.asInstanceOf[js.Any], CLEAR = CLEAR.asInstanceOf[js.Any], COMMAND = COMMAND.asInstanceOf[js.Any], CONTROL = CONTROL.asInstanceOf[js.Any], DECIMAL = DECIMAL.asInstanceOf[js.Any], DELETE = DELETE.asInstanceOf[js.Any], DIVIDE = DIVIDE.asInstanceOf[js.Any], DOWN_ARROW = DOWN_ARROW.asInstanceOf[js.Any], END = END.asInstanceOf[js.Any], ENTER = ENTER.asInstanceOf[js.Any], EQUALS = EQUALS.asInstanceOf[js.Any], ESCAPE = ESCAPE.asInstanceOf[js.Any], F1 = F1.asInstanceOf[js.Any], F10 = F10.asInstanceOf[js.Any], F11 = F11.asInstanceOf[js.Any], F12 = F12.asInstanceOf[js.Any], F2 = F2.asInstanceOf[js.Any], F3 = F3.asInstanceOf[js.Any], F4 = F4.asInstanceOf[js.Any], F5 = F5.asInstanceOf[js.Any], F6 = F6.asInstanceOf[js.Any], F7 = F7.asInstanceOf[js.Any], F8 = F8.asInstanceOf[js.Any], F9 = F9.asInstanceOf[js.Any], HELP = HELP.asInstanceOf[js.Any], HOME = HOME.asInstanceOf[js.Any], INSERT = INSERT.asInstanceOf[js.Any], LEFT_ARROW = LEFT_ARROW.asInstanceOf[js.Any], META = META.asInstanceOf[js.Any], MULTIPLY = MULTIPLY.asInstanceOf[js.Any], NULL = NULL.asInstanceOf[js.Any], NUMPAD0 = NUMPAD0.asInstanceOf[js.Any], NUMPAD1 = NUMPAD1.asInstanceOf[js.Any], NUMPAD2 = NUMPAD2.asInstanceOf[js.Any], NUMPAD3 = NUMPAD3.asInstanceOf[js.Any], NUMPAD4 = NUMPAD4.asInstanceOf[js.Any], NUMPAD5 = NUMPAD5.asInstanceOf[js.Any], NUMPAD6 = NUMPAD6.asInstanceOf[js.Any], NUMPAD7 = NUMPAD7.asInstanceOf[js.Any], NUMPAD8 = NUMPAD8.asInstanceOf[js.Any], NUMPAD9 = NUMPAD9.asInstanceOf[js.Any], PAGEDOWN = PAGEDOWN.asInstanceOf[js.Any], PAGEUP = PAGEUP.asInstanceOf[js.Any], PAUSE = PAUSE.asInstanceOf[js.Any], RETURN = RETURN.asInstanceOf[js.Any], RIGHT_ARROW = RIGHT_ARROW.asInstanceOf[js.Any], SEMICOLON = SEMICOLON.asInstanceOf[js.Any], SEPARATOR = SEPARATOR.asInstanceOf[js.Any], SHIFT = SHIFT.asInstanceOf[js.Any], SPACE = SPACE.asInstanceOf[js.Any], SUBTRACT = SUBTRACT.asInstanceOf[js.Any], TAB = TAB.asInstanceOf[js.Any], UP_ARROW = UP_ARROW.asInstanceOf[js.Any])
     __obj.asInstanceOf[NightwatchKeys]
   }
-  @scala.inline
-  implicit class NightwatchKeysOps[Self <: NightwatchKeys] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withADD(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ADD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withALT(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ALT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withARROW_DOWN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARROW_DOWN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withARROW_LEFT(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARROW_LEFT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withARROW_RIGHT(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARROW_RIGHT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withARROW_UP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARROW_UP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBACK_SPACE(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BACK_SPACE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCANCEL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CANCEL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCLEAR(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CLEAR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCOMMAND(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("COMMAND")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCONTROL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONTROL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDECIMAL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DECIMAL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDELETE(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DELETE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDIVIDE(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DIVIDE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDOWN_ARROW(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOWN_ARROW")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEND(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("END")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withENTER(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTER")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEQUALS(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EQUALS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withESCAPE(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ESCAPE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF10(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F10")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF11(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F11")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF12(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F12")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF3(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF5(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF6(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F6")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF7(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F7")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF8(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F8")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF9(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("F9")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHELP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HELP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHOME(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HOME")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withINSERT(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INSERT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLEFT_ARROW(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LEFT_ARROW")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMETA(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("META")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMULTIPLY(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MULTIPLY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNULL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NULL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD0(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD3(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD5(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD6(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD6")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD7(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD7")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD8(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD8")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNUMPAD9(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMPAD9")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPAGEDOWN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PAGEDOWN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPAGEUP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PAGEUP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPAUSE(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PAUSE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRETURN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RETURN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRIGHT_ARROW(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RIGHT_ARROW")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSEMICOLON(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SEMICOLON")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSEPARATOR(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SEPARATOR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSHIFT(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SHIFT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSPACE(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SPACE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSUBTRACT(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SUBTRACT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTAB(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TAB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUP_ARROW(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UP_ARROW")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

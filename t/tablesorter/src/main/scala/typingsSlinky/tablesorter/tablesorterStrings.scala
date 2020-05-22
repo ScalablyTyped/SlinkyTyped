@@ -7,7 +7,6 @@ import typingsSlinky.tablesorter.emptySortingMod.EmptySorting
 import typingsSlinky.tablesorter.eventMapMod.EventMap
 import typingsSlinky.tablesorter.filterBoxMod.FilterBox
 import typingsSlinky.tablesorter.matchTypeMod.MatchType
-import typingsSlinky.tablesorter.pageSizeMod.PageSize
 import typingsSlinky.tablesorter.pagerEventMapMod.PagerEventMap
 import typingsSlinky.tablesorter.parameterlessTriggerNameMapMod.ParameterlessTriggerNameMap
 import typingsSlinky.tablesorter.parserTypeMod.ParserType
@@ -28,7 +27,7 @@ object tablesorterStrings {
   sealed trait addRows extends js.Object
   
   @js.native
-  sealed trait all extends PageSize
+  sealed trait all extends js.Object
   
   @js.native
   sealed trait altKey extends js.Object

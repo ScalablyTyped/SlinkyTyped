@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object authorizedMod {
+  type IReactComponent[P] = slinky.core.ReactComponentClass[P]
   type Secured = js.Function2[
     /* authority */ typingsSlinky.antDesignPro.authorizedRouteMod.authority, 
     /* error */ js.UndefOr[slinky.core.TagMod[scala.Any]], 

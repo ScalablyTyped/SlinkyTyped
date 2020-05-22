@@ -5,59 +5,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PasteOptions extends js.Object {
   /**
     * The default name given to pasted images
     *
     * @default `'pasted_image'`
     */
-  var defaultName: js.UndefOr[String] = js.native
+  var defaultName: js.UndefOr[String] = js.undefined
   /**
     * Enable this feature by providing any HTMLElement here
     *
     * @default `null`
     */
-  var targetElement: js.UndefOr[HTMLElement] = js.native
+  var targetElement: js.UndefOr[HTMLElement] = js.undefined
 }
 
 object PasteOptions {
   @scala.inline
-  def apply(): PasteOptions = {
+  def apply(defaultName: String = null, targetElement: HTMLElement = null): PasteOptions = {
     val __obj = js.Dynamic.literal()
+    if (defaultName != null) __obj.updateDynamic("defaultName")(defaultName.asInstanceOf[js.Any])
+    if (targetElement != null) __obj.updateDynamic("targetElement")(targetElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[PasteOptions]
   }
-  @scala.inline
-  implicit class PasteOptionsOps[Self <: PasteOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetElement")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

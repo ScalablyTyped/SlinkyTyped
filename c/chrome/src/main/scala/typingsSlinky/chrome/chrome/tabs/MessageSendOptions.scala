@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MessageSendOptions extends js.Object {
   /** Optional. Send a message to a specific frame identified by frameId instead of all frames in the tab. */
-  var frameId: js.UndefOr[Double] = js.native
+  var frameId: js.UndefOr[Double] = js.undefined
 }
 
 object MessageSendOptions {
   @scala.inline
-  def apply(): MessageSendOptions = {
+  def apply(frameId: js.UndefOr[Double] = js.undefined): MessageSendOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(frameId)) __obj.updateDynamic("frameId")(frameId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageSendOptions]
   }
-  @scala.inline
-  implicit class MessageSendOptionsOps[Self <: MessageSendOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrameId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

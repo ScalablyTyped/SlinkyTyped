@@ -26,53 +26,16 @@ trait AssociateQualificationWithWorkerRequest extends js.Object {
 
 object AssociateQualificationWithWorkerRequest {
   @scala.inline
-  def apply(QualificationTypeId: EntityId, WorkerId: CustomerId): AssociateQualificationWithWorkerRequest = {
+  def apply(
+    QualificationTypeId: EntityId,
+    WorkerId: CustomerId,
+    IntegerValue: js.UndefOr[Integer] = js.undefined,
+    SendNotification: js.UndefOr[Boolean] = js.undefined
+  ): AssociateQualificationWithWorkerRequest = {
     val __obj = js.Dynamic.literal(QualificationTypeId = QualificationTypeId.asInstanceOf[js.Any], WorkerId = WorkerId.asInstanceOf[js.Any])
+    if (!js.isUndefined(IntegerValue)) __obj.updateDynamic("IntegerValue")(IntegerValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SendNotification)) __obj.updateDynamic("SendNotification")(SendNotification.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateQualificationWithWorkerRequest]
   }
-  @scala.inline
-  implicit class AssociateQualificationWithWorkerRequestOps[Self <: AssociateQualificationWithWorkerRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQualificationTypeId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkerId(value: CustomerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntegerValue(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendNotification(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendNotification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendNotification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendNotification")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

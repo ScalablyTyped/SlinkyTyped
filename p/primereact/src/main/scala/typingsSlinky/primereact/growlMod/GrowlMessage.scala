@@ -1,7 +1,6 @@
 package typingsSlinky.primereact.growlMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.primereact.primereactStrings.error
 import typingsSlinky.primereact.primereactStrings.info
 import typingsSlinky.primereact.primereactStrings.success
@@ -10,113 +9,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GrowlMessage extends js.Object {
-  var closable: js.UndefOr[Boolean] = js.native
-  var detail: js.UndefOr[TagMod[Any]] = js.native
-  var life: js.UndefOr[Double] = js.native
-  var severity: js.UndefOr[success | info | warn | error] = js.native
-  var sticky: js.UndefOr[Boolean] = js.native
-  var summary: js.UndefOr[TagMod[Any]] = js.native
+  var closable: js.UndefOr[Boolean] = js.undefined
+  var detail: js.UndefOr[TagMod[Any]] = js.undefined
+  var life: js.UndefOr[Double] = js.undefined
+  var severity: js.UndefOr[success | info | warn | error] = js.undefined
+  var sticky: js.UndefOr[Boolean] = js.undefined
+  var summary: js.UndefOr[TagMod[Any]] = js.undefined
 }
 
 object GrowlMessage {
   @scala.inline
-  def apply(): GrowlMessage = {
+  def apply(
+    closable: js.UndefOr[Boolean] = js.undefined,
+    detail: TagMod[Any] = null,
+    life: js.UndefOr[Double] = js.undefined,
+    severity: success | info | warn | error = null,
+    sticky: js.UndefOr[Boolean] = js.undefined,
+    summary: TagMod[Any] = null
+  ): GrowlMessage = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.get.asInstanceOf[js.Any])
+    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
+    if (!js.isUndefined(life)) __obj.updateDynamic("life")(life.get.asInstanceOf[js.Any])
+    if (severity != null) __obj.updateDynamic("severity")(severity.asInstanceOf[js.Any])
+    if (!js.isUndefined(sticky)) __obj.updateDynamic("sticky")(sticky.get.asInstanceOf[js.Any])
+    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrowlMessage]
   }
-  @scala.inline
-  implicit class GrowlMessageOps[Self <: GrowlMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClosable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClosable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetail(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLife(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("life")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLife: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("life")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverity(value: success | info | warn | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSticky(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sticky")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSticky: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sticky")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaryReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummary(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

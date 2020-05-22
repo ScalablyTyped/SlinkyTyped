@@ -7,361 +7,143 @@ import scala.scalajs.js.annotation._
 /**
   * FileStore Options
   */
-@js.native
 trait Options extends js.Object {
   /**
     * Decoding function. Takes encoded data, returns object. Defaults to `JSON.parse`
     */
-  var decoder: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
+  var decoder: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.undefined
   /**
     * Encoding function. Takes object, returns encoded data. Defaults to `JSON.stringify`
     */
-  var encoder: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
+  var encoder: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.undefined
   /**
     * Object-to-text text encoding. Can be null. Defaults to `'utf8'`
     */
-  var encoding: js.UndefOr[String] = js.native
+  var encoding: js.UndefOr[String] = js.undefined
   /**
     * Encryption output encoding. Defaults to `'hex'`
     */
-  var encryptEncoding: js.UndefOr[String] = js.native
+  var encryptEncoding: js.UndefOr[String] = js.undefined
   /**
     * The exponential factor to use for retry. Defaults to `1`
     */
-  var factor: js.UndefOr[Double] = js.native
+  var factor: js.UndefOr[Double] = js.undefined
   /**
     * Returns fallback session object after all failed retries. No defaults
     */
-  var fallbackSessionFn: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
+  var fallbackSessionFn: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.undefined
   /**
     * File extension of saved files. Defaults to `'.json'`
     */
-  var fileExtension: js.UndefOr[String] = js.native
+  var fileExtension: js.UndefOr[String] = js.undefined
   /**
     * Undocumented
     */
-  var filePattern: js.UndefOr[js.RegExp] = js.native
+  var filePattern: js.UndefOr[js.RegExp] = js.undefined
   /**
     * Encryption key retrieval function. Takes secret andsession id, returns key.
     * Defaults to `function(secret, sessionId){return secret + sessionId;}`
     */
-  var keyFunction: js.UndefOr[js.Function2[/* secret */ String, /* sessionId */ String, String]] = js.native
+  var keyFunction: js.UndefOr[js.Function2[/* secret */ String, /* sessionId */ String, String]] = js.undefined
   /**
     * Log messages. Defaults to `console.log`
     */
-  var logFn: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
+  var logFn: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.undefined
   /**
     * The maximum number of milliseconds between two retries. Defaults to `100`
     */
-  var maxTimeout: js.UndefOr[Double] = js.native
+  var maxTimeout: js.UndefOr[Double] = js.undefined
   /**
     * The number of milliseconds before starting the first retry. Defaults to `50`
     */
-  var minTimeout: js.UndefOr[Double] = js.native
+  var minTimeout: js.UndefOr[Double] = js.undefined
   /**
     * The directory where the session files will be stored. Defaults to `./sessions`
     */
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.undefined
   /**
     * Use distinct worker process for removing stale sessions. Defaults to `false`
     */
-  var reapAsync: js.UndefOr[Boolean] = js.native
+  var reapAsync: js.UndefOr[Boolean] = js.undefined
   /**
     * Interval to clear expired sessions in seconds or -1 if do not need. Defaults to `1 hour`
     */
-  var reapInterval: js.UndefOr[Double] = js.native
+  var reapInterval: js.UndefOr[Double] = js.undefined
   /**
     * [OUT] Contains intervalObject if reap was scheduled
     */
-  var reapIntervalObject: js.UndefOr[js.Any] = js.native
+  var reapIntervalObject: js.UndefOr[js.Any] = js.undefined
   /**
     * Undocumented
     */
-  var reapMaxConcurrent: js.UndefOr[Double] = js.native
+  var reapMaxConcurrent: js.UndefOr[Double] = js.undefined
   /**
     * Reap stale sessions synchronously if can not do it asynchronously. Default to `false`
     */
-  var reapSyncFallback: js.UndefOr[Boolean] = js.native
+  var reapSyncFallback: js.UndefOr[Boolean] = js.undefined
   /**
     * The number of retries to get session data from a session file. Defaults to `5`
     */
-  var retries: js.UndefOr[Double] = js.native
+  var retries: js.UndefOr[Double] = js.undefined
   /**
     * If secret string is specified then enables encryption of the session before
     * writing the file and also decryption when reading it.
     */
-  var secret: js.UndefOr[String] = js.native
+  var secret: js.UndefOr[String] = js.undefined
   /**
     * Session time to live in seconds. Defaults to `3600`
     */
-  var ttl: js.UndefOr[Double] = js.native
+  var ttl: js.UndefOr[Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    decoder: /* repeated */ js.Any => Unit = null,
+    encoder: /* repeated */ js.Any => Unit = null,
+    encoding: String = null,
+    encryptEncoding: String = null,
+    factor: js.UndefOr[Double] = js.undefined,
+    fallbackSessionFn: /* repeated */ js.Any => Unit = null,
+    fileExtension: String = null,
+    filePattern: js.RegExp = null,
+    keyFunction: (/* secret */ String, /* sessionId */ String) => String = null,
+    logFn: /* repeated */ js.Any => Unit = null,
+    maxTimeout: js.UndefOr[Double] = js.undefined,
+    minTimeout: js.UndefOr[Double] = js.undefined,
+    path: String = null,
+    reapAsync: js.UndefOr[Boolean] = js.undefined,
+    reapInterval: js.UndefOr[Double] = js.undefined,
+    reapIntervalObject: js.Any = null,
+    reapMaxConcurrent: js.UndefOr[Double] = js.undefined,
+    reapSyncFallback: js.UndefOr[Boolean] = js.undefined,
+    retries: js.UndefOr[Double] = js.undefined,
+    secret: String = null,
+    ttl: js.UndefOr[Double] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (decoder != null) __obj.updateDynamic("decoder")(js.Any.fromFunction1(decoder))
+    if (encoder != null) __obj.updateDynamic("encoder")(js.Any.fromFunction1(encoder))
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (encryptEncoding != null) __obj.updateDynamic("encryptEncoding")(encryptEncoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(factor)) __obj.updateDynamic("factor")(factor.get.asInstanceOf[js.Any])
+    if (fallbackSessionFn != null) __obj.updateDynamic("fallbackSessionFn")(js.Any.fromFunction1(fallbackSessionFn))
+    if (fileExtension != null) __obj.updateDynamic("fileExtension")(fileExtension.asInstanceOf[js.Any])
+    if (filePattern != null) __obj.updateDynamic("filePattern")(filePattern.asInstanceOf[js.Any])
+    if (keyFunction != null) __obj.updateDynamic("keyFunction")(js.Any.fromFunction2(keyFunction))
+    if (logFn != null) __obj.updateDynamic("logFn")(js.Any.fromFunction1(logFn))
+    if (!js.isUndefined(maxTimeout)) __obj.updateDynamic("maxTimeout")(maxTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minTimeout)) __obj.updateDynamic("minTimeout")(minTimeout.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(reapAsync)) __obj.updateDynamic("reapAsync")(reapAsync.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reapInterval)) __obj.updateDynamic("reapInterval")(reapInterval.get.asInstanceOf[js.Any])
+    if (reapIntervalObject != null) __obj.updateDynamic("reapIntervalObject")(reapIntervalObject.asInstanceOf[js.Any])
+    if (!js.isUndefined(reapMaxConcurrent)) __obj.updateDynamic("reapMaxConcurrent")(reapMaxConcurrent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reapSyncFallback)) __obj.updateDynamic("reapSyncFallback")(reapSyncFallback.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retries)) __obj.updateDynamic("retries")(retries.get.asInstanceOf[js.Any])
+    if (secret != null) __obj.updateDynamic("secret")(secret.asInstanceOf[js.Any])
+    if (!js.isUndefined(ttl)) __obj.updateDynamic("ttl")(ttl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecoder(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decoder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDecoder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decoder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoder(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEncoder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackSessionFn(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackSessionFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFallbackSessionFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackSessionFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilePattern(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilePattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyFunction(value: (/* secret */ String, /* sessionId */ String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyFunction")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutKeyFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogFn(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLogFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReapAsync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapAsync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReapAsync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapAsync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReapInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReapInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReapIntervalObject(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapIntervalObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReapIntervalObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapIntervalObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReapMaxConcurrent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapMaxConcurrent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReapMaxConcurrent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapMaxConcurrent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReapSyncFallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapSyncFallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReapSyncFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapSyncFallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTtl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

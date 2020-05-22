@@ -55,14 +55,14 @@ trait Line extends ClientObject {
   var beginArrowheadWidth: ArrowheadWidth | Narrow | Medium | Wide = js.native
   /**
     *
-    * Represents the shape to which the beginning of the specified line is attached. Read-only.
+    * Represents the shape to which the beginning of the specified line is attached.
     *
     * [Api set: ExcelApi 1.9]
     */
   val beginConnectedShape: Shape = js.native
   /**
     *
-    * Represents the connection site to which the beginning of a connector is connected. Read-only. Returns null when the beginning of the line is not attached to any shape.
+    * Represents the connection site to which the beginning of a connector is connected. Returns null when the beginning of the line is not attached to any shape.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -100,42 +100,42 @@ trait Line extends ClientObject {
   var endArrowheadWidth: ArrowheadWidth | Narrow | Medium | Wide = js.native
   /**
     *
-    * Represents the shape to which the end of the specified line is attached. Read-only.
+    * Represents the shape to which the end of the specified line is attached.
     *
     * [Api set: ExcelApi 1.9]
     */
   val endConnectedShape: Shape = js.native
   /**
     *
-    * Represents the connection site to which the end of a connector is connected. Read-only. Returns null when the end of the line is not attached to any shape.
+    * Represents the connection site to which the end of a connector is connected. Returns null when the end of the line is not attached to any shape.
     *
     * [Api set: ExcelApi 1.9]
     */
   val endConnectedSite: Double = js.native
   /**
     *
-    * Represents the shape identifier. Read-only.
+    * Specifies the shape identifier.
     *
     * [Api set: ExcelApi 1.9]
     */
   val id: String = js.native
   /**
     *
-    * Specifies whether or not the beginning of the specified line is connected to a shape. Read-only.
+    * Specifies if the beginning of the specified line is connected to a shape.
     *
     * [Api set: ExcelApi 1.9]
     */
   val isBeginConnected: Boolean = js.native
   /**
     *
-    * Specifies whether or not the end of the specified line is connected to a shape. Read-only.
+    * Specifies if the end of the specified line is connected to a shape.
     *
     * [Api set: ExcelApi 1.9]
     */
   val isEndConnected: Boolean = js.native
   /**
     *
-    * Returns the Shape object associated with the line. Read-only.
+    * Returns the Shape object associated with the line.
     *
     * [Api set: ExcelApi 1.9]
     */

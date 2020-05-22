@@ -1,5 +1,8 @@
 package typingsSlinky.ionic.definitionsMod
 
+import typingsSlinky.ionic.anon.Args
+import typingsSlinky.ionic.ionicStrings.`update-check`
+import typingsSlinky.ionic.ionicStrings.telemetry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +15,16 @@ trait IPCMessage extends js.Object
 
 object IPCMessage {
   @scala.inline
-  implicit def apply(value: TelemetryIPCMessage): IPCMessage = value.asInstanceOf[IPCMessage]
+  def TelemetryIPCMessage(data: Args, `type`: telemetry): IPCMessage = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IPCMessage]
+  }
   @scala.inline
-  implicit def apply(value: UpdateCheckIPCMessage): IPCMessage = value.asInstanceOf[IPCMessage]
+  def UpdateCheckIPCMessage(`type`: `update-check`): IPCMessage = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IPCMessage]
+  }
 }
 

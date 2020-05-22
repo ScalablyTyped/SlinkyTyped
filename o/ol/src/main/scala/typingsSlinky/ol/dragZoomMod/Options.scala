@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var condition: js.UndefOr[Condition] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var minArea: js.UndefOr[Double] = js.native
-  var out: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var condition: js.UndefOr[Condition] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var minArea: js.UndefOr[Double] = js.undefined
+  var out: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    className: String = null,
+    condition: Condition = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    minArea: js.UndefOr[Double] = js.undefined,
+    out: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minArea)) __obj.updateDynamic("minArea")(minArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(out)) __obj.updateDynamic("out")(out.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCondition(value: Condition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinArea(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOut(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

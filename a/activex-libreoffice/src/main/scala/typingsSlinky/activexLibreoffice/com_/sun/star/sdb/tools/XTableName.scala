@@ -24,10 +24,9 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdb.DataSource.Settings
   * @since OOo 2.0.4
   */
-@js.native
 trait XTableName extends js.Object {
   /** denotes the name of the catalog which the table is a part of */
-  var CatalogName: String = js.native
+  var CatalogName: String
   /**
     * represents the table name in a form to be used in a `SELECT` statement.
     *
@@ -35,9 +34,9 @@ trait XTableName extends js.Object {
     * names in `SELECT` statements. Using this attribute, you can generate a table name which respects those settings.
     * @see com.sun.star.sdb.DataSource.Settings
     */
-  var NameForSelect: String = js.native
+  var NameForSelect: String
   /** denotes the name of the schema which the table is a part of */
-  var SchemaName: String = js.native
+  var SchemaName: String
   /**
     * is the {@link com.sun.star.sdb.Table} object specified by the current name.
     *
@@ -46,9 +45,9 @@ trait XTableName extends js.Object {
     * @throws com::sun::star::container::NoSuchElementException if, upon getting the attribute value, the current composed table name represented by this insta
     * @throws com::sun::star::lang::IllegalArgumentException if you try to set an object which does not denote a table from the underlying database.
     */
-  var Table: XPropertySet = js.native
+  var Table: XPropertySet
   /** denotes the mere, unqualified table name, excluding any catalog and schema. */
-  var TableName: String = js.native
+  var TableName: String
   /**
     * returns the composed table name, including the catalog and schema name, respecting the database's quoting requirements, plus
     * @param Type the type of name composition to be used.
@@ -56,13 +55,13 @@ trait XTableName extends js.Object {
     * @see CompositionType
     * @throws com::sun::star::IllegalArgumentException if the given Type does not denote a valid {@link CompositionType}
     */
-  def getComposedName(Type: Double, Quote: Boolean): String = js.native
+  def getComposedName(Type: Double, Quote: Boolean): String
   /**
     * sets a new composed table name
     * @param ComposedName specifies the composed table name
     * @param Type specifies the composition type which was used to create the composed table name
     */
-  def setComposedName(ComposedName: String, Type: Double): Unit = js.native
+  def setComposedName(ComposedName: String, Type: Double): Unit
 }
 
 object XTableName {
@@ -79,55 +78,5 @@ object XTableName {
     val __obj = js.Dynamic.literal(CatalogName = CatalogName.asInstanceOf[js.Any], NameForSelect = NameForSelect.asInstanceOf[js.Any], SchemaName = SchemaName.asInstanceOf[js.Any], Table = Table.asInstanceOf[js.Any], TableName = TableName.asInstanceOf[js.Any], getComposedName = js.Any.fromFunction2(getComposedName), setComposedName = js.Any.fromFunction2(setComposedName))
     __obj.asInstanceOf[XTableName]
   }
-  @scala.inline
-  implicit class XTableNameOps[Self <: XTableName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCatalogName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameForSelect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameForSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchemaName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTable(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetComposedName(value: (Double, Boolean) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getComposedName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetComposedName(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setComposedName")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

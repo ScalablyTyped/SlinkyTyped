@@ -66,185 +66,38 @@ trait DomainDeliverabilityCampaign extends js.Object {
 
 object DomainDeliverabilityCampaign {
   @scala.inline
-  def apply(): DomainDeliverabilityCampaign = {
+  def apply(
+    CampaignId: CampaignId = null,
+    DeleteRate: js.UndefOr[Percentage] = js.undefined,
+    Esps: Esps = null,
+    FirstSeenDateTime: js.Date = null,
+    FromAddress: Identity = null,
+    ImageUrl: ImageUrl = null,
+    InboxCount: js.UndefOr[Volume] = js.undefined,
+    LastSeenDateTime: js.Date = null,
+    ProjectedVolume: js.UndefOr[Volume] = js.undefined,
+    ReadDeleteRate: js.UndefOr[Percentage] = js.undefined,
+    ReadRate: js.UndefOr[Percentage] = js.undefined,
+    SendingIps: IpList = null,
+    SpamCount: js.UndefOr[Volume] = js.undefined,
+    Subject: Subject = null
+  ): DomainDeliverabilityCampaign = {
     val __obj = js.Dynamic.literal()
+    if (CampaignId != null) __obj.updateDynamic("CampaignId")(CampaignId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeleteRate)) __obj.updateDynamic("DeleteRate")(DeleteRate.get.asInstanceOf[js.Any])
+    if (Esps != null) __obj.updateDynamic("Esps")(Esps.asInstanceOf[js.Any])
+    if (FirstSeenDateTime != null) __obj.updateDynamic("FirstSeenDateTime")(FirstSeenDateTime.asInstanceOf[js.Any])
+    if (FromAddress != null) __obj.updateDynamic("FromAddress")(FromAddress.asInstanceOf[js.Any])
+    if (ImageUrl != null) __obj.updateDynamic("ImageUrl")(ImageUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(InboxCount)) __obj.updateDynamic("InboxCount")(InboxCount.get.asInstanceOf[js.Any])
+    if (LastSeenDateTime != null) __obj.updateDynamic("LastSeenDateTime")(LastSeenDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProjectedVolume)) __obj.updateDynamic("ProjectedVolume")(ProjectedVolume.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReadDeleteRate)) __obj.updateDynamic("ReadDeleteRate")(ReadDeleteRate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReadRate)) __obj.updateDynamic("ReadRate")(ReadRate.get.asInstanceOf[js.Any])
+    if (SendingIps != null) __obj.updateDynamic("SendingIps")(SendingIps.asInstanceOf[js.Any])
+    if (!js.isUndefined(SpamCount)) __obj.updateDynamic("SpamCount")(SpamCount.get.asInstanceOf[js.Any])
+    if (Subject != null) __obj.updateDynamic("Subject")(Subject.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainDeliverabilityCampaign]
   }
-  @scala.inline
-  implicit class DomainDeliverabilityCampaignOps[Self <: DomainDeliverabilityCampaign] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCampaignId(value: CampaignId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCampaignId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteRate(value: Percentage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEsps(value: Esps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Esps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEsps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Esps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstSeenDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstSeenDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstSeenDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstSeenDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromAddress(value: Identity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageUrl(value: ImageUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInboxCount(value: Volume): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInboxCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastSeenDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSeenDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastSeenDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSeenDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectedVolume(value: Volume): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectedVolume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectedVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectedVolume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadDeleteRate(value: Percentage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadDeleteRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadDeleteRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadDeleteRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadRate(value: Percentage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendingIps(value: IpList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendingIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendingIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendingIps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpamCount(value: Volume): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpamCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: Subject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,37 +7,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GCM extends /* key */ StringDictionary[Double] {
-  var CBC: `0` = js.native
-  var GCM: `1` = js.native
+  var CBC: `0`
+  var GCM: `1`
 }
 
 object GCM {
   @scala.inline
-  def apply(CBC: `0`, GCM: `1`): GCM = {
+  def apply(CBC: `0`, GCM: `1`, StringDictionary: /* index */ StringDictionary[Double] = null): GCM = {
     val __obj = js.Dynamic.literal(CBC = CBC.asInstanceOf[js.Any], GCM = GCM.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[GCM]
   }
-  @scala.inline
-  implicit class GCMOps[Self <: GCM] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCBC(value: `0`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CBC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGCM(value: `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GCM")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

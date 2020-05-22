@@ -26,9 +26,16 @@ object setIdentityPoolRolesCommandMod extends js.Object {
           Blob
         ] {
     def this(input: SetIdentityPoolRolesInput) = this()
+    /* CompleteClass */
+    override val input: SetIdentityPoolRolesInput = js.native
     val middlewareStack: MiddlewareStack[SetIdentityPoolRolesInput, SetIdentityPoolRolesOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: CognitoIdentityResolvedConfiguration
+    ): Handler[SetIdentityPoolRolesInput, SetIdentityPoolRolesOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: CognitoIdentityResolvedConfiguration
     ): Handler[SetIdentityPoolRolesInput, SetIdentityPoolRolesOutput] = js.native
   }

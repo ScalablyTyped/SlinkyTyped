@@ -18,35 +18,10 @@ trait ResetJobBookmarkRequest extends js.Object {
 
 object ResetJobBookmarkRequest {
   @scala.inline
-  def apply(JobName: JobName): ResetJobBookmarkRequest = {
+  def apply(JobName: JobName, RunId: RunId = null): ResetJobBookmarkRequest = {
     val __obj = js.Dynamic.literal(JobName = JobName.asInstanceOf[js.Any])
+    if (RunId != null) __obj.updateDynamic("RunId")(RunId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResetJobBookmarkRequest]
   }
-  @scala.inline
-  implicit class ResetJobBookmarkRequestOps[Self <: ResetJobBookmarkRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobName(value: JobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRunId(value: RunId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

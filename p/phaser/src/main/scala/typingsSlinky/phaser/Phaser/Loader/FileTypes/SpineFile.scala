@@ -8,9 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpineFile extends MultiFile {
-  def addToCache(): js.Any = js.native
+  def addToCache(): js.Any
 }
 
 object SpineFile {
@@ -37,19 +36,5 @@ object SpineFile {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpineFile]
   }
-  @scala.inline
-  implicit class SpineFileOps[Self <: SpineFile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddToCache(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addToCache")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

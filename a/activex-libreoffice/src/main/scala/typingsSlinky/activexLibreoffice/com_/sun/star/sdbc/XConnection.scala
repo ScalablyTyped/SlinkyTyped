@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdbc.XStatement
   * @see com.sun.star.sdbc.XDatabaseMetaData
   */
-@js.native
 trait XConnection extends XCloseable {
   /**
     * gets the current auto-commit state.
@@ -24,13 +23,13 @@ trait XConnection extends XCloseable {
     * @see setAutoCommit
     * @throws SQLException if a database access error occurs.
     */
-  var AutoCommit: Boolean = js.native
+  var AutoCommit: Boolean
   /**
     * returns the {@link Connection} 's current catalog name.
     * @returns the current catalog name or an empty string.
     * @throws SQLException if a database access error occurs.
     */
-  var Catalog: String = js.native
+  var Catalog: String
   /**
     * gets the metadata regarding this connection's database.
     *
@@ -39,13 +38,13 @@ trait XConnection extends XCloseable {
     * @returns a DatabaseMetaData object for this {@link Connection} .
     * @throws SQLException if a database access error occurs.
     */
-  val MetaData: XDatabaseMetaData = js.native
+  val MetaData: XDatabaseMetaData
   /**
     * gets this {@link Connection} 's current transaction isolation level.
     * @returns the current {@link TransactionIsolation} mode value.
     * @throws SQLException if a database access error occurs.
     */
-  var TransactionIsolation: Double = js.native
+  var TransactionIsolation: Double
   /**
     * gets the type map object associated with this connection. Only drivers which implement the custom type mapping facility will return an object
     * otherwise NULL could be returned.
@@ -54,14 +53,14 @@ trait XConnection extends XCloseable {
     * @returns the XNameAccess object associated with this {@link Connection} object.
     * @throws SQLException if a database access error occurs.
     */
-  var TypeMap: XNameAccess = js.native
+  var TypeMap: XNameAccess
   /**
     * makes all changes made since the previous commit/rollback permanent and releases any database locks currently held by the {@link Connection} . This
     * method should be used only when auto-commit mode has been disabled.
     * @see setAutoCommit
     * @throws SQLException if a database access error occurs.
     */
-  def commit(): Unit = js.native
+  def commit(): Unit
   /**
     * creates a new {@link com.sun.star.sdbc.Statement} object for sending SQL statements to the database.
     *
@@ -74,20 +73,20 @@ trait XConnection extends XCloseable {
     * @returns a new {@link Statement} object
     * @throws SQLException if a database access error occurs.
     */
-  def createStatement(): XStatement = js.native
+  def createStatement(): XStatement
   /**
     * gets the current auto-commit state.
     * @returns the current state of auto-commit mode.
     * @see setAutoCommit
     * @throws SQLException if a database access error occurs.
     */
-  def getAutoCommit(): Boolean = js.native
+  def getAutoCommit(): Boolean
   /**
     * returns the {@link Connection} 's current catalog name.
     * @returns the current catalog name or an empty string.
     * @throws SQLException if a database access error occurs.
     */
-  def getCatalog(): String = js.native
+  def getCatalog(): String
   /**
     * gets the metadata regarding this connection's database.
     *
@@ -96,13 +95,13 @@ trait XConnection extends XCloseable {
     * @returns a DatabaseMetaData object for this {@link Connection} .
     * @throws SQLException if a database access error occurs.
     */
-  def getMetaData(): XDatabaseMetaData = js.native
+  def getMetaData(): XDatabaseMetaData
   /**
     * gets this {@link Connection} 's current transaction isolation level.
     * @returns the current {@link TransactionIsolation} mode value.
     * @throws SQLException if a database access error occurs.
     */
-  def getTransactionIsolation(): Double = js.native
+  def getTransactionIsolation(): Double
   /**
     * gets the type map object associated with this connection. Only drivers which implement the custom type mapping facility will return an object
     * otherwise NULL could be returned.
@@ -111,7 +110,7 @@ trait XConnection extends XCloseable {
     * @returns the XNameAccess object associated with this {@link Connection} object.
     * @throws SQLException if a database access error occurs.
     */
-  def getTypeMap(): XNameAccess = js.native
+  def getTypeMap(): XNameAccess
   /**
     * tests to see if a connection is closed.
     *
@@ -120,13 +119,13 @@ trait XConnection extends XCloseable {
     * @returns `TRUE` if the connection is closed; `FALSE` if it's still open.
     * @throws SQLException if a database access error occurs.
     */
-  def isClosed(): Boolean = js.native
+  def isClosed(): Boolean
   /**
     * tests to see if the connection is in read-only mode.
     * @returns `TRUE` if connection is read-only and `FALSE` otherwise.
     * @throws SQLException if a database access error occurs.
     */
-  def isReadOnly(): Boolean = js.native
+  def isReadOnly(): Boolean
   /**
     * converts the given SQL statement into the system's native SQL grammar. A driver may convert the JDBC SQL grammar into its system's native SQL grammar
     * prior to sending it; this method returns the native form of the statement that the driver would have sent.
@@ -134,7 +133,7 @@ trait XConnection extends XCloseable {
     * @returns the native form of this statement
     * @throws SQLException if a database access error occurs.
     */
-  def nativeSQL(sql: String): String = js.native
+  def nativeSQL(sql: String): String
   /**
     * creates a {@link com.sun.star.sdbc.CallableStatement} object for calling database stored procedures.
     *
@@ -148,7 +147,7 @@ trait XConnection extends XCloseable {
     * @returns a new {@link PreparedStatement} object containing the pre-compiled statement
     * @throws SQLException if a database access error occurs.
     */
-  def prepareCall(sql: String): XPreparedStatement = js.native
+  def prepareCall(sql: String): XPreparedStatement
   /**
     * creates a {@link com.sun.star.sdbc.PreparedStatement} object for sending parameterized SQL statements to the database.
     *
@@ -167,14 +166,14 @@ trait XConnection extends XCloseable {
     * @returns a new {@link PreparedStatement} object containing the pre-compiled statement
     * @throws SQLException if a database access error occurs.
     */
-  def prepareStatement(sql: String): XPreparedStatement = js.native
+  def prepareStatement(sql: String): XPreparedStatement
   /**
     * drops all changes made since the previous commit/rollback and releases any database locks currently held by this {@link Connection} . This method
     * should be used only when auto-commit has been disabled.
     * @see setAutoCommit
     * @throws SQLException if a database access error occurs.
     */
-  def rollback(): Unit = js.native
+  def rollback(): Unit
   /**
     * sets this connection's auto-commit mode.
     *
@@ -189,14 +188,14 @@ trait XConnection extends XCloseable {
     * @param autoCommit `TRUE` enables auto-commit; `FALSE` disables auto-commit.
     * @throws SQLException if a database access error occurs.
     */
-  def setAutoCommit(autoCommit: Boolean): Unit = js.native
+  def setAutoCommit(autoCommit: Boolean): Unit
   /**
     * sets a catalog name in order to select a subspace of this {@link Connection} 's database in which to work. If the driver does not support catalogs, it
     * will silently ignore this request.
     * @param catalog the name of the catalog.
     * @throws SQLException if a database access error occurs.
     */
-  def setCatalog(catalog: String): Unit = js.native
+  def setCatalog(catalog: String): Unit
   /**
     * puts this connection in read-only mode as a hint to enable database optimizations.
     *
@@ -205,7 +204,7 @@ trait XConnection extends XCloseable {
     * @param readOnly `TRUE` enables read-only mode; `FALSE` disables read-only mode.
     * @throws SQLException if a database access error occurs.
     */
-  def setReadOnly(readOnly: Boolean): Unit = js.native
+  def setReadOnly(readOnly: Boolean): Unit
   /**
     * attempts to change the transaction isolation level to the one given.
     *
@@ -216,7 +215,7 @@ trait XConnection extends XCloseable {
     * @see com.sun.star.sdbc.XDatabaseMetaData.supportsTransactionIsolationLevel()
     * @throws SQLException if a database access error occurs.
     */
-  def setTransactionIsolation(level: Double): Unit = js.native
+  def setTransactionIsolation(level: Double): Unit
   /**
     * installs the given type map as the type map for this connection. The type map will be used for the custom mapping of SQL structured types and distinct
     * types.
@@ -225,7 +224,7 @@ trait XConnection extends XCloseable {
     * @param typeMap set the XNameAccess object associated with this {@link Connection} object.
     * @throws SQLException if a database access error occurs.
     */
-  def setTypeMap(typeMap: XNameAccess): Unit = js.native
+  def setTypeMap(typeMap: XNameAccess): Unit
 }
 
 object XConnection {
@@ -262,151 +261,5 @@ object XConnection {
     val __obj = js.Dynamic.literal(AutoCommit = AutoCommit.asInstanceOf[js.Any], Catalog = Catalog.asInstanceOf[js.Any], MetaData = MetaData.asInstanceOf[js.Any], TransactionIsolation = TransactionIsolation.asInstanceOf[js.Any], TypeMap = TypeMap.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), close = js.Any.fromFunction0(close), commit = js.Any.fromFunction0(commit), createStatement = js.Any.fromFunction0(createStatement), getAutoCommit = js.Any.fromFunction0(getAutoCommit), getCatalog = js.Any.fromFunction0(getCatalog), getMetaData = js.Any.fromFunction0(getMetaData), getTransactionIsolation = js.Any.fromFunction0(getTransactionIsolation), getTypeMap = js.Any.fromFunction0(getTypeMap), isClosed = js.Any.fromFunction0(isClosed), isReadOnly = js.Any.fromFunction0(isReadOnly), nativeSQL = js.Any.fromFunction1(nativeSQL), prepareCall = js.Any.fromFunction1(prepareCall), prepareStatement = js.Any.fromFunction1(prepareStatement), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), rollback = js.Any.fromFunction0(rollback), setAutoCommit = js.Any.fromFunction1(setAutoCommit), setCatalog = js.Any.fromFunction1(setCatalog), setReadOnly = js.Any.fromFunction1(setReadOnly), setTransactionIsolation = js.Any.fromFunction1(setTransactionIsolation), setTypeMap = js.Any.fromFunction1(setTypeMap))
     __obj.asInstanceOf[XConnection]
   }
-  @scala.inline
-  implicit class XConnectionOps[Self <: XConnection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoCommit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoCommit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalog(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Catalog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetaData(value: XDatabaseMetaData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetaData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransactionIsolation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionIsolation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeMap(value: XNameAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateStatement(value: () => XStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createStatement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAutoCommit(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoCommit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCatalog(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCatalog")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMetaData(value: () => XDatabaseMetaData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMetaData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTransactionIsolation(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTransactionIsolation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeMap(value: () => XNameAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeMap")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsClosed(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isClosed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsReadOnly(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadOnly")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNativeSQL(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeSQL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPrepareCall(value: String => XPreparedStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareCall")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPrepareStatement(value: String => XPreparedStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRollback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetAutoCommit(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoCommit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetCatalog(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCatalog")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetReadOnly(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setReadOnly")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTransactionIsolation(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTransactionIsolation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTypeMap(value: XNameAccess => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTypeMap")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

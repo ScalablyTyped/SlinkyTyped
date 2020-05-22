@@ -1,111 +1,52 @@
 package typingsSlinky.eggLogger.mod
 
+import typingsSlinky.eggLogger.eggLoggerStrings.duplicate
+import typingsSlinky.eggLogger.eggLoggerStrings.ignore
+import typingsSlinky.eggLogger.eggLoggerStrings.redirect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EggLoggerOptions extends LoggerOptions {
-  var buffer: js.UndefOr[Boolean] = js.native
-  var contextFormatter: js.UndefOr[js.Function1[/* meta */ js.UndefOr[js.Object], String]] = js.native
-  var eol: js.UndefOr[String] = js.native
-  var file: String = js.native
-  var formatter: js.UndefOr[js.Function1[/* meta */ js.UndefOr[js.Object], String]] = js.native
-  var jsonFile: js.UndefOr[String] = js.native
-  var outputJSON: js.UndefOr[Boolean] = js.native
+  var buffer: js.UndefOr[Boolean] = js.undefined
+  var concentrateError: js.UndefOr[duplicate | redirect | ignore] = js.undefined
+  var contextFormatter: js.UndefOr[js.Function1[/* meta */ js.UndefOr[js.Object], String]] = js.undefined
+  var eol: js.UndefOr[String] = js.undefined
+  var file: String
+  var formatter: js.UndefOr[js.Function1[/* meta */ js.UndefOr[js.Object], String]] = js.undefined
+  var jsonFile: js.UndefOr[String] = js.undefined
+  var outputJSON: js.UndefOr[Boolean] = js.undefined
 }
 
 object EggLoggerOptions {
   @scala.inline
-  def apply(file: String): EggLoggerOptions = {
+  def apply(
+    file: String,
+    allowDebugAtProd: js.UndefOr[Boolean] = js.undefined,
+    buffer: js.UndefOr[Boolean] = js.undefined,
+    concentrateError: duplicate | redirect | ignore = null,
+    consoleLevel: LoggerLevel = null,
+    contextFormatter: /* meta */ js.UndefOr[js.Object] => String = null,
+    encoding: String = null,
+    eol: String = null,
+    formatter: /* meta */ js.UndefOr[js.Object] => String = null,
+    jsonFile: String = null,
+    level: LoggerLevel = null,
+    outputJSON: js.UndefOr[Boolean] = js.undefined
+  ): EggLoggerOptions = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowDebugAtProd)) __obj.updateDynamic("allowDebugAtProd")(allowDebugAtProd.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(buffer)) __obj.updateDynamic("buffer")(buffer.get.asInstanceOf[js.Any])
+    if (concentrateError != null) __obj.updateDynamic("concentrateError")(concentrateError.asInstanceOf[js.Any])
+    if (consoleLevel != null) __obj.updateDynamic("consoleLevel")(consoleLevel.asInstanceOf[js.Any])
+    if (contextFormatter != null) __obj.updateDynamic("contextFormatter")(js.Any.fromFunction1(contextFormatter))
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (eol != null) __obj.updateDynamic("eol")(eol.asInstanceOf[js.Any])
+    if (formatter != null) __obj.updateDynamic("formatter")(js.Any.fromFunction1(formatter))
+    if (jsonFile != null) __obj.updateDynamic("jsonFile")(jsonFile.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputJSON)) __obj.updateDynamic("outputJSON")(outputJSON.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EggLoggerOptions]
   }
-  @scala.inline
-  implicit class EggLoggerOptionsOps[Self <: EggLoggerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuffer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextFormatter(value: /* meta */ js.UndefOr[js.Object] => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextFormatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContextFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatter(value: /* meta */ js.UndefOr[js.Object] => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsonFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsonFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputJSON(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputJSON")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputJSON: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputJSON")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

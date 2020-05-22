@@ -1,5 +1,6 @@
 package typingsSlinky.chartjsPluginAnnotation.mod
 
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.horizontal
 import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.line
 import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.vertical
@@ -7,139 +8,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LineAnnotationOptions
   extends CommonAnnotationOptions
      with AnnotationOptions {
    // value or label
   var borderColor: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Chart.ChartColor */ js.Any
-  ] = js.native
-  var borderDash: js.UndefOr[js.Array[Double]] = js.native
-  var borderDashOffset: js.UndefOr[Double] = js.native
-  var borderWidth: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var borderDash: js.UndefOr[js.Array[Double]] = js.undefined
+  var borderDashOffset: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.undefined
    // value or label
-  var endValue: js.UndefOr[Double | String] = js.native
-  var label: js.UndefOr[LineAnnotationLabel] = js.native
-  var mode: horizontal | vertical = js.native
-  var scaleID: String = js.native
+  var endValue: js.UndefOr[Double | String] = js.undefined
+  var label: js.UndefOr[LineAnnotationLabel] = js.undefined
+  var mode: horizontal | vertical
+  var scaleID: String
   @JSName("type")
-  var type_LineAnnotationOptions: line = js.native
-  var value: Double | String = js.native
+  var type_LineAnnotationOptions: line
+  var value: Double | String
 }
 
 object LineAnnotationOptions {
   @scala.inline
-  def apply(mode: horizontal | vertical, scaleID: String, `type`: line, value: Double | String): LineAnnotationOptions = {
+  def apply(
+    mode: horizontal | vertical,
+    scaleID: String,
+    `type`: line,
+    value: Double | String,
+    borderColor: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Chart.ChartColor */ js.Any = null,
+    borderDash: js.Array[Double] = null,
+    borderDashOffset: js.UndefOr[Double] = js.undefined,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    drawTime: /* keyof / * import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DrawTimeOptions * / any */ String = null,
+    endValue: Double | String = null,
+    id: String = null,
+    label: LineAnnotationLabel = null,
+    onClick: /* event */ MouseEvent => Unit = null,
+    onContextmenu: /* event */ MouseEvent => Unit = null,
+    onDblclick: /* event */ MouseEvent => Unit = null,
+    onMousedown: /* event */ MouseEvent => Unit = null,
+    onMouseenter: /* event */ MouseEvent => Unit = null,
+    onMouseleave: /* event */ MouseEvent => Unit = null,
+    onMousemove: /* event */ MouseEvent => Unit = null,
+    onMouseout: /* event */ MouseEvent => Unit = null,
+    onMouseover: /* event */ MouseEvent => Unit = null,
+    onMouseup: /* event */ MouseEvent => Unit = null,
+    onWheel: /* event */ MouseEvent => Unit = null
+  ): LineAnnotationOptions = {
     val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any], scaleID = scaleID.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (borderDash != null) __obj.updateDynamic("borderDash")(borderDash.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderDashOffset)) __obj.updateDynamic("borderDashOffset")(borderDashOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (drawTime != null) __obj.updateDynamic("drawTime")(drawTime.asInstanceOf[js.Any])
+    if (endValue != null) __obj.updateDynamic("endValue")(endValue.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onContextmenu != null) __obj.updateDynamic("onContextmenu")(js.Any.fromFunction1(onContextmenu))
+    if (onDblclick != null) __obj.updateDynamic("onDblclick")(js.Any.fromFunction1(onDblclick))
+    if (onMousedown != null) __obj.updateDynamic("onMousedown")(js.Any.fromFunction1(onMousedown))
+    if (onMouseenter != null) __obj.updateDynamic("onMouseenter")(js.Any.fromFunction1(onMouseenter))
+    if (onMouseleave != null) __obj.updateDynamic("onMouseleave")(js.Any.fromFunction1(onMouseleave))
+    if (onMousemove != null) __obj.updateDynamic("onMousemove")(js.Any.fromFunction1(onMousemove))
+    if (onMouseout != null) __obj.updateDynamic("onMouseout")(js.Any.fromFunction1(onMouseout))
+    if (onMouseover != null) __obj.updateDynamic("onMouseover")(js.Any.fromFunction1(onMouseover))
+    if (onMouseup != null) __obj.updateDynamic("onMouseup")(js.Any.fromFunction1(onMouseup))
+    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
     __obj.asInstanceOf[LineAnnotationOptions]
   }
-  @scala.inline
-  implicit class LineAnnotationOptionsOps[Self <: LineAnnotationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScaleID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: line): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderColor(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Chart.ChartColor */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderDash(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderDash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderDashOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDashOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderDashOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDashOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndValue(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: LineAnnotationLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

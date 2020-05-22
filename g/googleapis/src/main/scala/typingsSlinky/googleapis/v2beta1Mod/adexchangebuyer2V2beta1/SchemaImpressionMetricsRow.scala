@@ -44,89 +44,22 @@ trait SchemaImpressionMetricsRow extends js.Object {
 
 object SchemaImpressionMetricsRow {
   @scala.inline
-  def apply(): SchemaImpressionMetricsRow = {
+  def apply(
+    availableImpressions: SchemaMetricValue = null,
+    bidRequests: SchemaMetricValue = null,
+    inventoryMatches: SchemaMetricValue = null,
+    responsesWithBids: SchemaMetricValue = null,
+    rowDimensions: SchemaRowDimensions = null,
+    successfulResponses: SchemaMetricValue = null
+  ): SchemaImpressionMetricsRow = {
     val __obj = js.Dynamic.literal()
+    if (availableImpressions != null) __obj.updateDynamic("availableImpressions")(availableImpressions.asInstanceOf[js.Any])
+    if (bidRequests != null) __obj.updateDynamic("bidRequests")(bidRequests.asInstanceOf[js.Any])
+    if (inventoryMatches != null) __obj.updateDynamic("inventoryMatches")(inventoryMatches.asInstanceOf[js.Any])
+    if (responsesWithBids != null) __obj.updateDynamic("responsesWithBids")(responsesWithBids.asInstanceOf[js.Any])
+    if (rowDimensions != null) __obj.updateDynamic("rowDimensions")(rowDimensions.asInstanceOf[js.Any])
+    if (successfulResponses != null) __obj.updateDynamic("successfulResponses")(successfulResponses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImpressionMetricsRow]
   }
-  @scala.inline
-  implicit class SchemaImpressionMetricsRowOps[Self <: SchemaImpressionMetricsRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailableImpressions(value: SchemaMetricValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableImpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableImpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableImpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBidRequests(value: SchemaMetricValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bidRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBidRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bidRequests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInventoryMatches(value: SchemaMetricValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventoryMatches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventoryMatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventoryMatches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsesWithBids(value: SchemaMetricValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsesWithBids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsesWithBids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsesWithBids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDimensions(value: SchemaRowDimensions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessfulResponses(value: SchemaMetricValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfulResponses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfulResponses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfulResponses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

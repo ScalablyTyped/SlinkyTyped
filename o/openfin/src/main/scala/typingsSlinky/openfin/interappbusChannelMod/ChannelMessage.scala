@@ -1,7 +1,7 @@
 package typingsSlinky.openfin.interappbusChannelMod
 
-import typingsSlinky.openfin.channelChannelMod.ProviderIdentity
 import typingsSlinky.openfin.identityMod.Identity
+import typingsSlinky.openfin.shapesMod.ProviderIdentity
 import typingsSlinky.openfin.transportMod.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`

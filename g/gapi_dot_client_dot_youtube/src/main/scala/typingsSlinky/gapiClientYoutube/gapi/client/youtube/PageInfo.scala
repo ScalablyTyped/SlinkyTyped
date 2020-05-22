@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PageInfo extends js.Object {
   /** The number of results included in the API response. */
-  var resultsPerPage: js.UndefOr[Double] = js.native
+  var resultsPerPage: js.UndefOr[Double] = js.undefined
   /** The total number of results in the result set. */
-  var totalResults: js.UndefOr[Double] = js.native
+  var totalResults: js.UndefOr[Double] = js.undefined
 }
 
 object PageInfo {
   @scala.inline
-  def apply(): PageInfo = {
+  def apply(resultsPerPage: js.UndefOr[Double] = js.undefined, totalResults: js.UndefOr[Double] = js.undefined): PageInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(resultsPerPage)) __obj.updateDynamic("resultsPerPage")(resultsPerPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalResults)) __obj.updateDynamic("totalResults")(totalResults.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageInfo]
   }
-  @scala.inline
-  implicit class PageInfoOps[Self <: PageInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResultsPerPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsPerPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultsPerPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsPerPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

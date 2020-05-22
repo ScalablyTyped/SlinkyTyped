@@ -8,205 +8,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFormatNumberOptions extends js.Object {
-  var decimal: js.UndefOr[String] = js.native
-  var decimalsSeparator: js.UndefOr[String] = js.native
-  var integerSeparator: js.UndefOr[String] = js.native
-  var negativeLeftOut: js.UndefOr[Boolean] = js.native
-  var negativeLeftSymbol: js.UndefOr[String] = js.native
-  var negativeRightOut: js.UndefOr[Boolean] = js.native
-  var negativeRightSymbol: js.UndefOr[String] = js.native
-  var negativeType: js.UndefOr[right | left | brackets | none] = js.native
-  var padLeft: js.UndefOr[Double] = js.native
-  var padRight: js.UndefOr[Double] = js.native
-  var prefix: js.UndefOr[String] = js.native
-  var round: js.UndefOr[Double] = js.native
-  var suffix: js.UndefOr[String] = js.native
-  var truncate: js.UndefOr[Double] = js.native
+  var decimal: js.UndefOr[String] = js.undefined
+  var decimalsSeparator: js.UndefOr[String] = js.undefined
+  var integerSeparator: js.UndefOr[String] = js.undefined
+  var negativeLeftOut: js.UndefOr[Boolean] = js.undefined
+  var negativeLeftSymbol: js.UndefOr[String] = js.undefined
+  var negativeRightOut: js.UndefOr[Boolean] = js.undefined
+  var negativeRightSymbol: js.UndefOr[String] = js.undefined
+  var negativeType: js.UndefOr[right | left | brackets | none] = js.undefined
+  var padLeft: js.UndefOr[Double] = js.undefined
+  var padRight: js.UndefOr[Double] = js.undefined
+  var prefix: js.UndefOr[String] = js.undefined
+  var round: js.UndefOr[Double] = js.undefined
+  var suffix: js.UndefOr[String] = js.undefined
+  var truncate: js.UndefOr[Double] = js.undefined
 }
 
 object IFormatNumberOptions {
   @scala.inline
-  def apply(): IFormatNumberOptions = {
+  def apply(
+    decimal: String = null,
+    decimalsSeparator: String = null,
+    integerSeparator: String = null,
+    negativeLeftOut: js.UndefOr[Boolean] = js.undefined,
+    negativeLeftSymbol: String = null,
+    negativeRightOut: js.UndefOr[Boolean] = js.undefined,
+    negativeRightSymbol: String = null,
+    negativeType: right | left | brackets | none = null,
+    padLeft: js.UndefOr[Double] = js.undefined,
+    padRight: js.UndefOr[Double] = js.undefined,
+    prefix: String = null,
+    round: js.UndefOr[Double] = js.undefined,
+    suffix: String = null,
+    truncate: js.UndefOr[Double] = js.undefined
+  ): IFormatNumberOptions = {
     val __obj = js.Dynamic.literal()
+    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
+    if (decimalsSeparator != null) __obj.updateDynamic("decimalsSeparator")(decimalsSeparator.asInstanceOf[js.Any])
+    if (integerSeparator != null) __obj.updateDynamic("integerSeparator")(integerSeparator.asInstanceOf[js.Any])
+    if (!js.isUndefined(negativeLeftOut)) __obj.updateDynamic("negativeLeftOut")(negativeLeftOut.get.asInstanceOf[js.Any])
+    if (negativeLeftSymbol != null) __obj.updateDynamic("negativeLeftSymbol")(negativeLeftSymbol.asInstanceOf[js.Any])
+    if (!js.isUndefined(negativeRightOut)) __obj.updateDynamic("negativeRightOut")(negativeRightOut.get.asInstanceOf[js.Any])
+    if (negativeRightSymbol != null) __obj.updateDynamic("negativeRightSymbol")(negativeRightSymbol.asInstanceOf[js.Any])
+    if (negativeType != null) __obj.updateDynamic("negativeType")(negativeType.asInstanceOf[js.Any])
+    if (!js.isUndefined(padLeft)) __obj.updateDynamic("padLeft")(padLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(padRight)) __obj.updateDynamic("padRight")(padRight.get.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(round)) __obj.updateDynamic("round")(round.get.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
+    if (!js.isUndefined(truncate)) __obj.updateDynamic("truncate")(truncate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFormatNumberOptions]
   }
-  @scala.inline
-  implicit class IFormatNumberOptionsOps[Self <: IFormatNumberOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecimal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalsSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalsSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimalsSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalsSeparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegerSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerSeparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegativeLeftOut(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeLeftOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegativeLeftOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeLeftOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegativeLeftSymbol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeLeftSymbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegativeLeftSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeLeftSymbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegativeRightOut(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeRightOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegativeRightOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeRightOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegativeRightSymbol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeRightSymbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegativeRightSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeRightSymbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegativeType(value: right | left | brackets | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegativeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRound(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruncate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruncate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

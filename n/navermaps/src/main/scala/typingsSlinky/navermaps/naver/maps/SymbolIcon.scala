@@ -4,134 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SymbolIcon extends js.Object {
-  var anchor: js.UndefOr[Point | PointLiteral | Position] = js.native
-  var fillColor: js.UndefOr[String] = js.native
-  var fillOpacity: js.UndefOr[Double] = js.native
-  var path: SymbolPath | (js.Array[Point | PointLiteral]) = js.native
-  var radius: js.UndefOr[Double] = js.native
-  var strokeColor: js.UndefOr[String] = js.native
-  var strokeOpacity: js.UndefOr[Double] = js.native
-  var strokeWeight: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[SymbolStyle] = js.native
+  var anchor: js.UndefOr[Point | PointLiteral | Position] = js.undefined
+  var fillColor: js.UndefOr[String] = js.undefined
+  var fillOpacity: js.UndefOr[Double] = js.undefined
+  var path: SymbolPath | (js.Array[Point | PointLiteral])
+  var radius: js.UndefOr[Double] = js.undefined
+  var strokeColor: js.UndefOr[String] = js.undefined
+  var strokeOpacity: js.UndefOr[Double] = js.undefined
+  var strokeWeight: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[SymbolStyle] = js.undefined
 }
 
 object SymbolIcon {
   @scala.inline
-  def apply(path: SymbolPath | (js.Array[Point | PointLiteral])): SymbolIcon = {
+  def apply(
+    path: SymbolPath | (js.Array[Point | PointLiteral]),
+    anchor: Point | PointLiteral | Position = null,
+    fillColor: String = null,
+    fillOpacity: js.UndefOr[Double] = js.undefined,
+    radius: js.UndefOr[Double] = js.undefined,
+    strokeColor: String = null,
+    strokeOpacity: js.UndefOr[Double] = js.undefined,
+    strokeWeight: js.UndefOr[Double] = js.undefined,
+    style: SymbolStyle = null
+  ): SymbolIcon = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillOpacity)) __obj.updateDynamic("fillOpacity")(fillOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeOpacity)) __obj.updateDynamic("strokeOpacity")(strokeOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeWeight)) __obj.updateDynamic("strokeWeight")(strokeWeight.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[SymbolIcon]
   }
-  @scala.inline
-  implicit class SymbolIconOps[Self <: SymbolIcon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: SymbolPath | (js.Array[Point | PointLiteral])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnchor(value: Point | PointLiteral | Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: SymbolStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

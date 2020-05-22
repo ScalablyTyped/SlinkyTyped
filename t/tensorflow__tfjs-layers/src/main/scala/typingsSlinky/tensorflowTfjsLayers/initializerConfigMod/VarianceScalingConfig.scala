@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VarianceScalingConfig extends js.Object {
-  var distribution: js.UndefOr[DistributionSerialization] = js.native
-  var mode: js.UndefOr[FanModeSerialization] = js.native
-  var scale: js.UndefOr[Double] = js.native
-  var seed: js.UndefOr[Double] = js.native
+  var distribution: js.UndefOr[DistributionSerialization] = js.undefined
+  var mode: js.UndefOr[FanModeSerialization] = js.undefined
+  var scale: js.UndefOr[Double] = js.undefined
+  var seed: js.UndefOr[Double] = js.undefined
 }
 
 object VarianceScalingConfig {
   @scala.inline
-  def apply(): VarianceScalingConfig = {
+  def apply(
+    distribution: DistributionSerialization = null,
+    mode: FanModeSerialization = null,
+    scale: js.UndefOr[Double] = js.undefined,
+    seed: js.UndefOr[Double] = js.undefined
+  ): VarianceScalingConfig = {
     val __obj = js.Dynamic.literal()
+    if (distribution != null) __obj.updateDynamic("distribution")(distribution.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(seed)) __obj.updateDynamic("seed")(seed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VarianceScalingConfig]
   }
-  @scala.inline
-  implicit class VarianceScalingConfigOps[Self <: VarianceScalingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDistribution(value: DistributionSerialization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distribution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: FanModeSerialization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

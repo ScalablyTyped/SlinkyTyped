@@ -3,6 +3,7 @@ package typingsSlinky.mocha.global.Mocha_.reporters
 import typingsSlinky.mocha.Mocha.IRunner
 import typingsSlinky.mocha.Mocha.MochaOptions
 import typingsSlinky.mocha.Mocha.Runner
+import typingsSlinky.mocha.Mocha.Stats
 import typingsSlinky.mocha.Mocha.Test
 import typingsSlinky.mocha.Mocha.reporters.Base
 import typingsSlinky.mocha.Mocha.reporters.Base.ColorMap
@@ -27,6 +28,28 @@ class Base_ protected () extends Base {
   def this(runner: Runner) = this()
   def this(runner: IRunner, options: MochaOptions) = this()
   def this(runner: Runner, options: MochaOptions) = this()
+  /**
+    * Test failures
+    */
+  /* CompleteClass */
+  override var failures: js.Array[Test] = js.native
+  /**
+    * The configured runner
+    */
+  /* CompleteClass */
+  override var runner: Runner = js.native
+  /**
+    * Test run statistics
+    */
+  /* CompleteClass */
+  override var stats: Stats = js.native
+  /**
+    * Output common epilogue used by many of the bundled reporters.
+    *
+    * @see https://mochajs.org/api/Mocha.reporters.Base.html#.Base#epilogue
+    */
+  /* CompleteClass */
+  override def epilogue(): Unit = js.native
 }
 
 @JSGlobal("Mocha.reporters.Base")

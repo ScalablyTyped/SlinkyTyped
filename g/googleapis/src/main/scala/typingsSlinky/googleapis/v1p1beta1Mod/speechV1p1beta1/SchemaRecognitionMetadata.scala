@@ -59,125 +59,28 @@ trait SchemaRecognitionMetadata extends js.Object {
 
 object SchemaRecognitionMetadata {
   @scala.inline
-  def apply(): SchemaRecognitionMetadata = {
+  def apply(
+    audioTopic: String = null,
+    industryNaicsCodeOfAudio: js.UndefOr[Double] = js.undefined,
+    interactionType: String = null,
+    microphoneDistance: String = null,
+    obfuscatedId: String = null,
+    originalMediaType: String = null,
+    originalMimeType: String = null,
+    recordingDeviceName: String = null,
+    recordingDeviceType: String = null
+  ): SchemaRecognitionMetadata = {
     val __obj = js.Dynamic.literal()
+    if (audioTopic != null) __obj.updateDynamic("audioTopic")(audioTopic.asInstanceOf[js.Any])
+    if (!js.isUndefined(industryNaicsCodeOfAudio)) __obj.updateDynamic("industryNaicsCodeOfAudio")(industryNaicsCodeOfAudio.get.asInstanceOf[js.Any])
+    if (interactionType != null) __obj.updateDynamic("interactionType")(interactionType.asInstanceOf[js.Any])
+    if (microphoneDistance != null) __obj.updateDynamic("microphoneDistance")(microphoneDistance.asInstanceOf[js.Any])
+    if (obfuscatedId != null) __obj.updateDynamic("obfuscatedId")(obfuscatedId.asInstanceOf[js.Any])
+    if (originalMediaType != null) __obj.updateDynamic("originalMediaType")(originalMediaType.asInstanceOf[js.Any])
+    if (originalMimeType != null) __obj.updateDynamic("originalMimeType")(originalMimeType.asInstanceOf[js.Any])
+    if (recordingDeviceName != null) __obj.updateDynamic("recordingDeviceName")(recordingDeviceName.asInstanceOf[js.Any])
+    if (recordingDeviceType != null) __obj.updateDynamic("recordingDeviceType")(recordingDeviceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRecognitionMetadata]
   }
-  @scala.inline
-  implicit class SchemaRecognitionMetadataOps[Self <: SchemaRecognitionMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioTopic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioTopic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndustryNaicsCodeOfAudio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("industryNaicsCodeOfAudio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndustryNaicsCodeOfAudio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("industryNaicsCodeOfAudio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInteractionType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInteractionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMicrophoneDistance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("microphoneDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMicrophoneDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("microphoneDistance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObfuscatedId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obfuscatedId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObfuscatedId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obfuscatedId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalMediaType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalMediaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalMediaType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalMediaType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalMimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalMimeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordingDeviceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingDeviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordingDeviceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingDeviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordingDeviceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingDeviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordingDeviceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingDeviceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,55 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConvolverOptions extends AudioNodeOptions {
-  var buffer: js.UndefOr[org.scalajs.dom.raw.AudioBuffer | Null] = js.native
-  var disableNormalization: js.UndefOr[scala.Boolean] = js.native
+  var buffer: js.UndefOr[org.scalajs.dom.raw.AudioBuffer | Null] = js.undefined
+  var disableNormalization: js.UndefOr[scala.Boolean] = js.undefined
 }
 
 object ConvolverOptions {
   @scala.inline
-  def apply(): ConvolverOptions = {
+  def apply(
+    buffer: js.UndefOr[Null | org.scalajs.dom.raw.AudioBuffer] = js.undefined,
+    channelCount: js.UndefOr[Double] = js.undefined,
+    channelCountMode: ChannelCountMode = null,
+    channelInterpretation: ChannelInterpretation = null,
+    disableNormalization: js.UndefOr[scala.Boolean] = js.undefined
+  ): ConvolverOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(buffer)) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
+    if (!js.isUndefined(channelCount)) __obj.updateDynamic("channelCount")(channelCount.get.asInstanceOf[js.Any])
+    if (channelCountMode != null) __obj.updateDynamic("channelCountMode")(channelCountMode.asInstanceOf[js.Any])
+    if (channelInterpretation != null) __obj.updateDynamic("channelInterpretation")(channelInterpretation.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableNormalization)) __obj.updateDynamic("disableNormalization")(disableNormalization.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConvolverOptions]
   }
-  @scala.inline
-  implicit class ConvolverOptionsOps[Self <: ConvolverOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuffer(value: org.scalajs.dom.raw.AudioBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBufferNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(null)
-        ret
-    }
-    @scala.inline
-    def withDisableNormalization(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNormalization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableNormalization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNormalization")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

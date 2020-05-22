@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * name MUST be in the format <.spec.name>.<.spec.group>. Deprecated in v1.16, planned for
   * removal in v1.19. Use apiextensions.k8s.io/v1 CustomResourceDefinition instead.
   */
-@js.native
 trait CustomResourceDefinition extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -19,23 +18,23 @@ trait CustomResourceDefinition extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: apiextensionsDotk8sDotioSlashv1beta1 = js.native
+  val apiVersion: apiextensionsDotk8sDotioSlashv1beta1
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.CustomResourceDefinition = js.native
-  val metadata: ObjectMeta = js.native
+  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.CustomResourceDefinition
+  val metadata: ObjectMeta
   /**
     * spec describes how the user wants the resources to appear
     */
-  val spec: CustomResourceDefinitionSpec = js.native
+  val spec: CustomResourceDefinitionSpec
   /**
     * status indicates the actual state of the CustomResourceDefinition
     */
-  val status: CustomResourceDefinitionStatus = js.native
+  val status: CustomResourceDefinitionStatus
 }
 
 object CustomResourceDefinition {
@@ -50,43 +49,5 @@ object CustomResourceDefinition {
     val __obj = js.Dynamic.literal(apiVersion = apiVersion.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], spec = spec.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomResourceDefinition]
   }
-  @scala.inline
-  implicit class CustomResourceDefinitionOps[Self <: CustomResourceDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersion(value: apiextensionsDotk8sDotioSlashv1beta1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.CustomResourceDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: ObjectMeta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpec(value: CustomResourceDefinitionSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: CustomResourceDefinitionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

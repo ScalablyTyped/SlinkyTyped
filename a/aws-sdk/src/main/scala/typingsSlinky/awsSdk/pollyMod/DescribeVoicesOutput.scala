@@ -18,41 +18,11 @@ trait DescribeVoicesOutput extends js.Object {
 
 object DescribeVoicesOutput {
   @scala.inline
-  def apply(): DescribeVoicesOutput = {
+  def apply(NextToken: NextToken = null, Voices: VoiceList = null): DescribeVoicesOutput = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Voices != null) __obj.updateDynamic("Voices")(Voices.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVoicesOutput]
   }
-  @scala.inline
-  implicit class DescribeVoicesOutputOps[Self <: DescribeVoicesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVoices(value: VoiceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Voices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Voices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

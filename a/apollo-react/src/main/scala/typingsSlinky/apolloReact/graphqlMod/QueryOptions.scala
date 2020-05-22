@@ -6,127 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryOptions extends js.Object {
-  var forceFetch: js.UndefOr[Boolean] = js.native
-  var fragments: js.UndefOr[js.Array[js.Array[FragmentDefinition] | FragmentDefinition]] = js.native
-  var noFetch: js.UndefOr[Boolean] = js.native
-  var pollInterval: js.UndefOr[Double] = js.native
-  var returnPartialData: js.UndefOr[Boolean] = js.native
-  var skip: js.UndefOr[Boolean] = js.native
-  var ssr: js.UndefOr[Boolean] = js.native
-  var variables: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var forceFetch: js.UndefOr[Boolean] = js.undefined
+  var fragments: js.UndefOr[js.Array[js.Array[FragmentDefinition] | FragmentDefinition]] = js.undefined
+  var noFetch: js.UndefOr[Boolean] = js.undefined
+  var pollInterval: js.UndefOr[Double] = js.undefined
+  var returnPartialData: js.UndefOr[Boolean] = js.undefined
+  var skip: js.UndefOr[Boolean] = js.undefined
+  var ssr: js.UndefOr[Boolean] = js.undefined
+  var variables: js.UndefOr[StringDictionary[js.Any]] = js.undefined
 }
 
 object QueryOptions {
   @scala.inline
-  def apply(): QueryOptions = {
+  def apply(
+    forceFetch: js.UndefOr[Boolean] = js.undefined,
+    fragments: js.Array[js.Array[FragmentDefinition] | FragmentDefinition] = null,
+    noFetch: js.UndefOr[Boolean] = js.undefined,
+    pollInterval: js.UndefOr[Double] = js.undefined,
+    returnPartialData: js.UndefOr[Boolean] = js.undefined,
+    skip: js.UndefOr[Boolean] = js.undefined,
+    ssr: js.UndefOr[Boolean] = js.undefined,
+    variables: StringDictionary[js.Any] = null
+  ): QueryOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(forceFetch)) __obj.updateDynamic("forceFetch")(forceFetch.get.asInstanceOf[js.Any])
+    if (fragments != null) __obj.updateDynamic("fragments")(fragments.asInstanceOf[js.Any])
+    if (!js.isUndefined(noFetch)) __obj.updateDynamic("noFetch")(noFetch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pollInterval)) __obj.updateDynamic("pollInterval")(pollInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnPartialData)) __obj.updateDynamic("returnPartialData")(returnPartialData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skip)) __obj.updateDynamic("skip")(skip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ssr)) __obj.updateDynamic("ssr")(ssr.get.asInstanceOf[js.Any])
+    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryOptions]
   }
-  @scala.inline
-  implicit class QueryOptionsOps[Self <: QueryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForceFetch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceFetch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceFetch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceFetch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFragments(value: js.Array[js.Array[FragmentDefinition] | FragmentDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFragments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoFetch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noFetch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoFetch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noFetch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPollInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPollInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnPartialData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnPartialData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnPartialData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnPartialData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsr(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariables(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

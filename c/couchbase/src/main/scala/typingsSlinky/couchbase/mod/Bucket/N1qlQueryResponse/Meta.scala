@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * The meta-information available from a view query response.
   */
-@js.native
 trait Meta extends js.Object {
   /**
     * The identifier for this query request.
     */
-  var requestID: Double = js.native
+  var requestID: Double
 }
 
 object Meta {
@@ -21,19 +20,5 @@ object Meta {
     val __obj = js.Dynamic.literal(requestID = requestID.asInstanceOf[js.Any])
     __obj.asInstanceOf[Meta]
   }
-  @scala.inline
-  implicit class MetaOps[Self <: Meta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

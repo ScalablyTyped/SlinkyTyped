@@ -42,78 +42,16 @@ object GetServiceLastAccessedDetailsWithEntitiesResponse {
     EntityDetailsList: entityDetailsListType,
     JobCompletionDate: js.Date,
     JobCreationDate: js.Date,
-    JobStatus: jobStatusType
+    JobStatus: jobStatusType,
+    Error: ErrorDetails = null,
+    IsTruncated: js.UndefOr[booleanType] = js.undefined,
+    Marker: responseMarkerType = null
   ): GetServiceLastAccessedDetailsWithEntitiesResponse = {
     val __obj = js.Dynamic.literal(EntityDetailsList = EntityDetailsList.asInstanceOf[js.Any], JobCompletionDate = JobCompletionDate.asInstanceOf[js.Any], JobCreationDate = JobCreationDate.asInstanceOf[js.Any], JobStatus = JobStatus.asInstanceOf[js.Any])
+    if (Error != null) __obj.updateDynamic("Error")(Error.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsTruncated)) __obj.updateDynamic("IsTruncated")(IsTruncated.get.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetServiceLastAccessedDetailsWithEntitiesResponse]
   }
-  @scala.inline
-  implicit class GetServiceLastAccessedDetailsWithEntitiesResponseOps[Self <: GetServiceLastAccessedDetailsWithEntitiesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntityDetailsList(value: entityDetailsListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityDetailsList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobCompletionDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobCompletionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobCreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobStatus(value: jobStatusType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: ErrorDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTruncated(value: booleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTruncated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: responseMarkerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

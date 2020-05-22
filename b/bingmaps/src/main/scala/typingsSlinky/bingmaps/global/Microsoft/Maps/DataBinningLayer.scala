@@ -16,5 +16,8 @@ class DataBinningLayer ()
   extends typingsSlinky.bingmaps.Microsoft.Maps.DataBinningLayer {
   def this(pushpins: js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin]) = this()
   def this(pushpins: js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin], options: IDataBinningOptions) = this()
+  /** Clears all data in the layer. */
+  /* CompleteClass */
+  override def clear(): Unit = js.native
 }
 

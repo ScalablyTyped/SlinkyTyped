@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.fusiontablesV2Mod.fusiontablesV2
 
-import typingsSlinky.googleapis.AnonColumnId
+import typingsSlinky.googleapis.anon.ColumnId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait SchemaColumn extends js.Object {
     * Identifier of the base column. If present, this column is derived from
     * the specified base column.
     */
-  var baseColumn: js.UndefOr[AnonColumnId] = js.native
+  var baseColumn: js.UndefOr[ColumnId] = js.native
   /**
     * Identifier for the column.
     */
@@ -90,161 +90,34 @@ trait SchemaColumn extends js.Object {
 
 object SchemaColumn {
   @scala.inline
-  def apply(): SchemaColumn = {
+  def apply(
+    baseColumn: ColumnId = null,
+    columnId: js.UndefOr[Double] = js.undefined,
+    columnJsonSchema: String = null,
+    columnPropertiesJson: String = null,
+    description: String = null,
+    formatPattern: String = null,
+    graphPredicate: String = null,
+    kind: String = null,
+    name: String = null,
+    `type`: String = null,
+    validValues: js.Array[String] = null,
+    validateData: js.UndefOr[Boolean] = js.undefined
+  ): SchemaColumn = {
     val __obj = js.Dynamic.literal()
+    if (baseColumn != null) __obj.updateDynamic("baseColumn")(baseColumn.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnId)) __obj.updateDynamic("columnId")(columnId.get.asInstanceOf[js.Any])
+    if (columnJsonSchema != null) __obj.updateDynamic("columnJsonSchema")(columnJsonSchema.asInstanceOf[js.Any])
+    if (columnPropertiesJson != null) __obj.updateDynamic("columnPropertiesJson")(columnPropertiesJson.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (formatPattern != null) __obj.updateDynamic("formatPattern")(formatPattern.asInstanceOf[js.Any])
+    if (graphPredicate != null) __obj.updateDynamic("graphPredicate")(graphPredicate.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (validValues != null) __obj.updateDynamic("validValues")(validValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(validateData)) __obj.updateDynamic("validateData")(validateData.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaColumn]
   }
-  @scala.inline
-  implicit class SchemaColumnOps[Self <: SchemaColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseColumn(value: AnonColumnId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnJsonSchema(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnJsonSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnJsonSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnJsonSchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnPropertiesJson(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnPropertiesJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnPropertiesJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnPropertiesJson")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatPattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGraphPredicate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphPredicate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGraphPredicate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphPredicate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidValues(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidateData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidateData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

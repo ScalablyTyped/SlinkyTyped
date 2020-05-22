@@ -11,204 +11,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActionType extends js.Object {
-  var actionType: js.UndefOr[zoom | pan] = js.native
-  var axis: js.UndefOr[chartAxisObject] = js.native
-  var cancel: js.UndefOr[Boolean] = js.native
-  var component: js.UndefOr[dxChart] = js.native
-  var element: js.UndefOr[dxElement] = js.native
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
-  var model: js.UndefOr[js.Any] = js.native
-  var previousRange: js.UndefOr[VizRange] = js.native
-  var range: js.UndefOr[VizRange] = js.native
-  var rangeEnd: js.UndefOr[js.Date | Double] = js.native
-  var rangeStart: js.UndefOr[js.Date | Double] = js.native
-  var shift: js.UndefOr[Double] = js.native
-  var zoomFactor: js.UndefOr[Double] = js.native
+  var actionType: js.UndefOr[zoom | pan] = js.undefined
+  var axis: js.UndefOr[chartAxisObject] = js.undefined
+  var cancel: js.UndefOr[Boolean] = js.undefined
+  var component: js.UndefOr[dxChart] = js.undefined
+  var element: js.UndefOr[dxElement] = js.undefined
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
+  var model: js.UndefOr[js.Any] = js.undefined
+  var previousRange: js.UndefOr[VizRange] = js.undefined
+  var range: js.UndefOr[VizRange] = js.undefined
+  var rangeEnd: js.UndefOr[js.Date | Double] = js.undefined
+  var rangeStart: js.UndefOr[js.Date | Double] = js.undefined
+  var shift: js.UndefOr[Double] = js.undefined
+  var zoomFactor: js.UndefOr[Double] = js.undefined
 }
 
 object ActionType {
   @scala.inline
-  def apply(): ActionType = {
+  def apply(
+    actionType: zoom | pan = null,
+    axis: chartAxisObject = null,
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    component: dxChart = null,
+    element: dxElement = null,
+    event: event = null,
+    model: js.Any = null,
+    previousRange: VizRange = null,
+    range: VizRange = null,
+    rangeEnd: js.Date | Double = null,
+    rangeStart: js.Date | Double = null,
+    shift: js.UndefOr[Double] = js.undefined,
+    zoomFactor: js.UndefOr[Double] = js.undefined
+  ): ActionType = {
     val __obj = js.Dynamic.literal()
+    if (actionType != null) __obj.updateDynamic("actionType")(actionType.asInstanceOf[js.Any])
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (previousRange != null) __obj.updateDynamic("previousRange")(previousRange.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (rangeEnd != null) __obj.updateDynamic("rangeEnd")(rangeEnd.asInstanceOf[js.Any])
+    if (rangeStart != null) __obj.updateDynamic("rangeStart")(rangeStart.asInstanceOf[js.Any])
+    if (!js.isUndefined(shift)) __obj.updateDynamic("shift")(shift.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomFactor)) __obj.updateDynamic("zoomFactor")(zoomFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionType]
   }
-  @scala.inline
-  implicit class ActionTypeOps[Self <: ActionType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionType(value: zoom | pan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxis(value: chartAxisObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: dxChart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousRange(value: VizRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: VizRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeEndDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRangeEnd(value: js.Date | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRangeStart(value: js.Date | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShift(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShift: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomFactor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

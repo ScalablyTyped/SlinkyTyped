@@ -7,72 +7,71 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the ASPxDateEdit control.
   */
-@js.native
 trait ASPxClientDateEdit extends ASPxClientDropDownEditBase {
   /**
     * Occurs when an end user clicks a calendar date cell.
     */
-  var CalendarCellClick: ASPxClientEvent[ASPxClientCalendarCellClickEventHandler[ASPxClientDateEdit]] = js.native
+  var CalendarCellClick: ASPxClientEvent[ASPxClientCalendarCellClickEventHandler[ASPxClientDateEdit]]
   /**
     * Allows you to disable the calendar's days.
     */
-  var CalendarCustomDisabledDate: ASPxClientEvent[ASPxClientCalendarCustomDisabledDateEventHandler[ASPxClientDateEdit]] = js.native
+  var CalendarCustomDisabledDate: ASPxClientEvent[ASPxClientCalendarCustomDisabledDateEventHandler[ASPxClientDateEdit]]
   /**
     * Fires after the selected date has been changed within the date editor.
     */
-  var DateChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientDateEdit]] = js.native
+  var DateChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientDateEdit]]
   /**
     * Enables you to convert the value entered by an end user into the value that will be stored by the date editor.
     */
-  var ParseDate: ASPxClientEvent[ASPxClientParseDateEventHandler[ASPxClientDateEdit]] = js.native
+  var ParseDate: ASPxClientEvent[ASPxClientParseDateEventHandler[ASPxClientDateEdit]]
   /**
     * This event is not in effect for the ASPxClientDateEdit. Use the ASPxClientDateEdit.DateChanged event instead.
     */
   @JSName("TextChanged")
-  var TextChanged_ASPxClientDateEdit: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientDateEdit]] = js.native
+  var TextChanged_ASPxClientDateEdit: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientDateEdit]]
   /**
     * Returns the calendar of the date editor.
     */
-  def GetCalendar(): ASPxClientCalendar = js.native
+  def GetCalendar(): ASPxClientCalendar
   /**
     * Gets the date that is the editor's value.
     */
-  def GetDate(): js.Date = js.native
+  def GetDate(): js.Date
   /**
     * Gets the maximum date of the editor.
     */
-  def GetMaxDate(): js.Date = js.native
+  def GetMaxDate(): js.Date
   /**
     * Gets the minimum date of the editor.
     */
-  def GetMinDate(): js.Date = js.native
+  def GetMinDate(): js.Date
   /**
     * Returns the number of days in a range selected within a date edit.
     */
-  def GetRangeDayCount(): Double = js.native
+  def GetRangeDayCount(): Double
   /**
     * Gets the range's length.
     */
-  def GetRangeLength(): Double = js.native
+  def GetRangeLength(): Double
   /**
     * Returns the built-in time edit control.
     */
-  def GetTimeEdit(): ASPxClientTimeEdit = js.native
+  def GetTimeEdit(): ASPxClientTimeEdit
   /**
     * Specifies the date for the editor.
     * @param date The date.
     */
-  def SetDate(date: js.Date): Unit = js.native
+  def SetDate(date: js.Date): Unit
   /**
     * Sets the maximum date of the editor.
     * @param date A DateTime object representing the maximum date.
     */
-  def SetMaxDate(date: js.Date): Unit = js.native
+  def SetMaxDate(date: js.Date): Unit
   /**
     * Sets the minimum date of the editor.
     * @param date A DateTime object representing the minimum date.
     */
-  def SetMinDate(date: js.Date): Unit = js.native
+  def SetMinDate(date: js.Date): Unit
 }
 
 object ASPxClientDateEdit {
@@ -151,103 +150,5 @@ object ASPxClientDateEdit {
     val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), AdjustDropDownWindow = js.Any.fromFunction0(AdjustDropDownWindow), ButtonClick = ButtonClick.asInstanceOf[js.Any], CalendarCellClick = CalendarCellClick.asInstanceOf[js.Any], CalendarCustomDisabledDate = CalendarCustomDisabledDate.asInstanceOf[js.Any], CloseUp = CloseUp.asInstanceOf[js.Any], DateChanged = DateChanged.asInstanceOf[js.Any], DropDown = DropDown.asInstanceOf[js.Any], Focus = js.Any.fromFunction0(Focus), GetButton = js.Any.fromFunction1(GetButton), GetButtonVisible = js.Any.fromFunction1(GetButtonVisible), GetCalendar = js.Any.fromFunction0(GetCalendar), GetCaption = js.Any.fromFunction0(GetCaption), GetCaretPosition = js.Any.fromFunction0(GetCaretPosition), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetDate = js.Any.fromFunction0(GetDate), GetEnabled = js.Any.fromFunction0(GetEnabled), GetErrorText = js.Any.fromFunction0(GetErrorText), GetHeight = js.Any.fromFunction0(GetHeight), GetInputElement = js.Any.fromFunction0(GetInputElement), GetIsValid = js.Any.fromFunction0(GetIsValid), GetMainElement = js.Any.fromFunction0(GetMainElement), GetMaxDate = js.Any.fromFunction0(GetMaxDate), GetMinDate = js.Any.fromFunction0(GetMinDate), GetParentControl = js.Any.fromFunction0(GetParentControl), GetRangeDayCount = js.Any.fromFunction0(GetRangeDayCount), GetRangeLength = js.Any.fromFunction0(GetRangeLength), GetReadOnly = js.Any.fromFunction0(GetReadOnly), GetText = js.Any.fromFunction0(GetText), GetTimeEdit = js.Any.fromFunction0(GetTimeEdit), GetValue = js.Any.fromFunction0(GetValue), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), GotFocus = GotFocus.asInstanceOf[js.Any], HideDropDown = js.Any.fromFunction0(HideDropDown), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], KeyDown = KeyDown.asInstanceOf[js.Any], KeyPress = KeyPress.asInstanceOf[js.Any], KeyUp = KeyUp.asInstanceOf[js.Any], LostFocus = LostFocus.asInstanceOf[js.Any], ParseDate = ParseDate.asInstanceOf[js.Any], QueryCloseUp = QueryCloseUp.asInstanceOf[js.Any], SelectAll = js.Any.fromFunction0(SelectAll), SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetButtonVisible = js.Any.fromFunction2(SetButtonVisible), SetCaption = js.Any.fromFunction1(SetCaption), SetCaretPosition = js.Any.fromFunction1(SetCaretPosition), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetDate = js.Any.fromFunction1(SetDate), SetEnabled = js.Any.fromFunction1(SetEnabled), SetErrorText = js.Any.fromFunction1(SetErrorText), SetHeight = js.Any.fromFunction1(SetHeight), SetIsValid = js.Any.fromFunction1(SetIsValid), SetMaxDate = js.Any.fromFunction1(SetMaxDate), SetMinDate = js.Any.fromFunction1(SetMinDate), SetReadOnly = js.Any.fromFunction1(SetReadOnly), SetSelection = js.Any.fromFunction3(SetSelection), SetText = js.Any.fromFunction1(SetText), SetValue = js.Any.fromFunction1(SetValue), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), ShowDropDown = js.Any.fromFunction0(ShowDropDown), TextChanged = TextChanged.asInstanceOf[js.Any], UserInput = UserInput.asInstanceOf[js.Any], Validate = js.Any.fromFunction0(Validate), Validation = Validation.asInstanceOf[js.Any], ValueChanged = ValueChanged.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientDateEdit]
   }
-  @scala.inline
-  implicit class ASPxClientDateEditOps[Self <: ASPxClientDateEdit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalendarCellClick(value: ASPxClientEvent[ASPxClientCalendarCellClickEventHandler[ASPxClientDateEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CalendarCellClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCalendarCustomDisabledDate(value: ASPxClientEvent[ASPxClientCalendarCustomDisabledDateEventHandler[ASPxClientDateEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CalendarCustomDisabledDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateChanged(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientDateEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetCalendar(value: () => ASPxClientCalendar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCalendar")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDate(value: () => js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxDate(value: () => js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMaxDate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMinDate(value: () => js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMinDate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRangeDayCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetRangeDayCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRangeLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetRangeLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTimeEdit(value: () => ASPxClientTimeEdit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTimeEdit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParseDate(value: ASPxClientEvent[ASPxClientParseDateEventHandler[ASPxClientDateEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParseDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetDate(value: js.Date => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetMaxDate(value: js.Date => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetMaxDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetMinDate(value: js.Date => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetMinDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTextChanged(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientDateEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.actionsOnGoogle.actionssdkMod
 
 import typingsSlinky.actionsOnGoogle.carouselMod.CarouselOptions
-import typingsSlinky.actionsOnGoogle.incomingMod.IncomingMessage
+import typingsSlinky.actionsOnGoogle.incomingMod._IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Carousel protected ()
   extends typingsSlinky.actionsOnGoogle.conversationMod.Carousel
-     with IncomingMessage {
+     with _IncomingMessage {
   /**
     * @param options Carousel option
     * @public

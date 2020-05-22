@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Accept
 import typingsSlinky.antd.anon.FileList
 import typingsSlinky.antd.anon.Percent
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.uploadInterfaceMod.RcFile
 import typingsSlinky.antd.uploadInterfaceMod.UploadChangeParam
 import typingsSlinky.antd.uploadInterfaceMod.UploadFile
@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
 object uploadUploadMod extends js.Object {
   @js.native
   trait Upload
-    extends Component[UploadProps, UploadState, js.Any] {
+    extends Component[UploadProps[js.Any], UploadState[js.Any], js.Any] {
     var progressTimer: js.Any = js.native
     var recentUploadStatus: Boolean | js.Thenable[_] = js.native
     var upload: js.Any = js.native
@@ -41,12 +41,12 @@ object uploadUploadMod extends js.Object {
     def onSuccess(response: js.Any, file: UploadFile[_], xhr: js.Any): Unit = js.native
     def renderUpload(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
     def renderUploadList(locale: UploadLocale): ReactElement = js.native
-    def saveUpload(node: js.Any): Unit = js.native
+    def saveUpload(node: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof RcUpload */ js.Any): Unit = js.native
   }
   
   @js.native
   class default protected () extends Upload {
-    def this(props: UploadProps) = this()
+    def this(props: UploadProps[_]) = this()
   }
   
   /* static members */
@@ -54,7 +54,7 @@ object uploadUploadMod extends js.Object {
   object default extends js.Object {
     var Dragger: Instantiable0[typingsSlinky.antd.draggerMod.default] = js.native
     var defaultProps: Accept = js.native
-    def getDerivedStateFromProps(nextProps: UploadProps): FileList | Null = js.native
+    def getDerivedStateFromProps(nextProps: UploadProps[_]): FileList | Null = js.native
   }
   
 }

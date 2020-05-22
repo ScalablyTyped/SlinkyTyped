@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BlockUIConfig extends js.Object {
   /**
     * By default the BlockUI module will start a block whenever
@@ -16,7 +15,7 @@ trait BlockUIConfig extends js.Object {
     *
     * The default value is 'true'
     */
-  var autoBlock: js.UndefOr[Boolean] = js.native
+  var autoBlock: js.UndefOr[Boolean] = js.undefined
   /**
     * When the module is started it will inject the main block element
     * by adding the "block-ui" directive to the <body> element.
@@ -29,7 +28,7 @@ trait BlockUIConfig extends js.Object {
     *
     * The default value is 'true'
     */
-  var autoInjectBodyBlock: js.UndefOr[Boolean] = js.native
+  var autoInjectBodyBlock: js.UndefOr[Boolean] = js.undefined
   /**
     * While a user interface block is active the user can still navigate
     * away using the back and forward buttons of the browser.
@@ -47,14 +46,14 @@ trait BlockUIConfig extends js.Object {
     *
     * The default value is 'false'
     */
-  var blockBrowserNavigation: js.UndefOr[Boolean] = js.native
+  var blockBrowserNavigation: js.UndefOr[Boolean] = js.undefined
   /**
     * A string containing the default css classes (separated by spaces)
     * that should be applied to each block-ui element.
     *
     * The default value is "block-ui block-ui-anim-fade"
     */
-  var cssClass: js.UndefOr[String] = js.native
+  var cssClass: js.UndefOr[String] = js.undefined
   /**
     * Specifies the amount in milliseconds before the block
     * is visible to the user. By delaying a visible block your
@@ -62,14 +61,14 @@ trait BlockUIConfig extends js.Object {
     *
     * The default value is 250.
     */
-  var delay: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
   /**
     * Changes the default message to be used when no message
     * has been provided to the start method of the service.
     *
     * Default value is 'Loading ...'.
     */
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String] = js.undefined
   /**
     * Allows you to specify a filter function to exclude certain ajax
     * requests from blocking the user interface.
@@ -81,7 +80,7 @@ trait BlockUIConfig extends js.Object {
     * @param config the Angular request config object.
     *
     */
-  var requestFilter: js.UndefOr[js.Function1[/* config */ IRequestConfig, String | Boolean]] = js.native
+  var requestFilter: js.UndefOr[js.Function1[/* config */ IRequestConfig, String | Boolean]] = js.undefined
   /**
     * By default the BlockUI module will reset the block count and
     * hide the overlay whenever an exception has occurred.
@@ -90,11 +89,11 @@ trait BlockUIConfig extends js.Object {
     *
     * The default value is 'true'
     */
-  var resetOnException: js.UndefOr[Boolean] = js.native
+  var resetOnException: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies a custom template to use as the overlay.
     */
-  var template: js.UndefOr[String] = js.native
+  var template: js.UndefOr[String] = js.undefined
   /**
     * Specifies a url to retrieve the template from.
     * The current release only works with pre-cached templates,
@@ -104,142 +103,35 @@ trait BlockUIConfig extends js.Object {
     * If you're using the grunt with html2js or angular-templates,
     * which I highly recommend, you're already set.
     */
-  var templateUrl: js.UndefOr[String] = js.native
+  var templateUrl: js.UndefOr[String] = js.undefined
 }
 
 object BlockUIConfig {
   @scala.inline
-  def apply(): BlockUIConfig = {
+  def apply(
+    autoBlock: js.UndefOr[Boolean] = js.undefined,
+    autoInjectBodyBlock: js.UndefOr[Boolean] = js.undefined,
+    blockBrowserNavigation: js.UndefOr[Boolean] = js.undefined,
+    cssClass: String = null,
+    delay: js.UndefOr[Double] = js.undefined,
+    message: String = null,
+    requestFilter: /* config */ IRequestConfig => String | Boolean = null,
+    resetOnException: js.UndefOr[Boolean] = js.undefined,
+    template: String = null,
+    templateUrl: String = null
+  ): BlockUIConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoBlock)) __obj.updateDynamic("autoBlock")(autoBlock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoInjectBodyBlock)) __obj.updateDynamic("autoInjectBodyBlock")(autoInjectBodyBlock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(blockBrowserNavigation)) __obj.updateDynamic("blockBrowserNavigation")(blockBrowserNavigation.get.asInstanceOf[js.Any])
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (requestFilter != null) __obj.updateDynamic("requestFilter")(js.Any.fromFunction1(requestFilter))
+    if (!js.isUndefined(resetOnException)) __obj.updateDynamic("resetOnException")(resetOnException.get.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (templateUrl != null) __obj.updateDynamic("templateUrl")(templateUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockUIConfig]
   }
-  @scala.inline
-  implicit class BlockUIConfigOps[Self <: BlockUIConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoBlock(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoInjectBodyBlock(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInjectBodyBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoInjectBodyBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInjectBodyBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockBrowserNavigation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockBrowserNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockBrowserNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockBrowserNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestFilter(value: /* config */ IRequestConfig => String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRequestFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetOnException(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetOnException")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetOnException: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetOnException")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

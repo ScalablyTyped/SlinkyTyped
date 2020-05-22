@@ -17,29 +17,10 @@ trait SchemaSdsConfig extends js.Object {
 
 object SchemaSdsConfig {
   @scala.inline
-  def apply(): SchemaSdsConfig = {
+  def apply(grpcServiceConfig: SchemaGrpcServiceConfig = null): SchemaSdsConfig = {
     val __obj = js.Dynamic.literal()
+    if (grpcServiceConfig != null) __obj.updateDynamic("grpcServiceConfig")(grpcServiceConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSdsConfig]
   }
-  @scala.inline
-  implicit class SchemaSdsConfigOps[Self <: SchemaSdsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrpcServiceConfig(value: SchemaGrpcServiceConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grpcServiceConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrpcServiceConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grpcServiceConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

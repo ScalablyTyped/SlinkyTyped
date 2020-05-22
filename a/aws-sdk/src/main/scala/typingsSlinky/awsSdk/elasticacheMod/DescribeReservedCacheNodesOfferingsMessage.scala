@@ -38,101 +38,24 @@ trait DescribeReservedCacheNodesOfferingsMessage extends js.Object {
 
 object DescribeReservedCacheNodesOfferingsMessage {
   @scala.inline
-  def apply(): DescribeReservedCacheNodesOfferingsMessage = {
+  def apply(
+    CacheNodeType: String = null,
+    Duration: String = null,
+    Marker: String = null,
+    MaxRecords: js.UndefOr[IntegerOptional] = js.undefined,
+    OfferingType: String = null,
+    ProductDescription: String = null,
+    ReservedCacheNodesOfferingId: String = null
+  ): DescribeReservedCacheNodesOfferingsMessage = {
     val __obj = js.Dynamic.literal()
+    if (CacheNodeType != null) __obj.updateDynamic("CacheNodeType")(CacheNodeType.asInstanceOf[js.Any])
+    if (Duration != null) __obj.updateDynamic("Duration")(Duration.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxRecords)) __obj.updateDynamic("MaxRecords")(MaxRecords.get.asInstanceOf[js.Any])
+    if (OfferingType != null) __obj.updateDynamic("OfferingType")(OfferingType.asInstanceOf[js.Any])
+    if (ProductDescription != null) __obj.updateDynamic("ProductDescription")(ProductDescription.asInstanceOf[js.Any])
+    if (ReservedCacheNodesOfferingId != null) __obj.updateDynamic("ReservedCacheNodesOfferingId")(ReservedCacheNodesOfferingId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeReservedCacheNodesOfferingsMessage]
   }
-  @scala.inline
-  implicit class DescribeReservedCacheNodesOfferingsMessageOps[Self <: DescribeReservedCacheNodesOfferingsMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheNodeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheNodeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRecords(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedCacheNodesOfferingId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedCacheNodesOfferingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedCacheNodesOfferingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedCacheNodesOfferingId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

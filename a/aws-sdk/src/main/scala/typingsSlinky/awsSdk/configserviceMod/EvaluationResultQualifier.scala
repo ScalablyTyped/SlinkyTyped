@@ -22,53 +22,16 @@ trait EvaluationResultQualifier extends js.Object {
 
 object EvaluationResultQualifier {
   @scala.inline
-  def apply(): EvaluationResultQualifier = {
+  def apply(
+    ConfigRuleName: ConfigRuleName = null,
+    ResourceId: BaseResourceId = null,
+    ResourceType: StringWithCharLimit256 = null
+  ): EvaluationResultQualifier = {
     val __obj = js.Dynamic.literal()
+    if (ConfigRuleName != null) __obj.updateDynamic("ConfigRuleName")(ConfigRuleName.asInstanceOf[js.Any])
+    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluationResultQualifier]
   }
-  @scala.inline
-  implicit class EvaluationResultQualifierOps[Self <: EvaluationResultQualifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigRuleName(value: ConfigRuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigRuleName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceId(value: BaseResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: StringWithCharLimit256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

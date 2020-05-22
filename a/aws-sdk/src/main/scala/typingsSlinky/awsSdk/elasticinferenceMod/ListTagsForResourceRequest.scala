@@ -7,30 +7,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListTagsForResourceRequest extends js.Object {
   /**
-    * The ARN of the Elastic Inference Accelerator to list the tags for.
+    *  The ARN of the Elastic Inference Accelerator to list the tags for. 
     */
-  var resourceArn: ResourceARN = js.native
+  var resourceArn: ResourceARN_ = js.native
 }
 
 object ListTagsForResourceRequest {
   @scala.inline
-  def apply(resourceArn: ResourceARN): ListTagsForResourceRequest = {
+  def apply(resourceArn: ResourceARN_): ListTagsForResourceRequest = {
     val __obj = js.Dynamic.literal(resourceArn = resourceArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTagsForResourceRequest]
   }
-  @scala.inline
-  implicit class ListTagsForResourceRequestOps[Self <: ListTagsForResourceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceArn(value: ResourceARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

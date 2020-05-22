@@ -5,79 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LogMessageRequest extends js.Object {
   /** Map of client info, such as URL, browser navigator, browser platform, etc. */
-  var clientInfo: js.UndefOr[Record[String, String]] = js.native
+  var clientInfo: js.UndefOr[Record[String, String]] = js.undefined
   /** Details about the client message. */
-  var details: js.UndefOr[String] = js.native
+  var details: js.UndefOr[String] = js.undefined
   /** Message level of client message. */
-  var level: js.UndefOr[String] = js.native
+  var level: js.UndefOr[String] = js.undefined
   /** Current request metadata. */
-  var requestMetadata: js.UndefOr[RequestMetadata] = js.native
+  var requestMetadata: js.UndefOr[RequestMetadata] = js.undefined
 }
 
 object LogMessageRequest {
   @scala.inline
-  def apply(): LogMessageRequest = {
+  def apply(
+    clientInfo: Record[String, String] = null,
+    details: String = null,
+    level: String = null,
+    requestMetadata: RequestMetadata = null
+  ): LogMessageRequest = {
     val __obj = js.Dynamic.literal()
+    if (clientInfo != null) __obj.updateDynamic("clientInfo")(clientInfo.asInstanceOf[js.Any])
+    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (requestMetadata != null) __obj.updateDynamic("requestMetadata")(requestMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogMessageRequest]
   }
-  @scala.inline
-  implicit class LogMessageRequestOps[Self <: LogMessageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientInfo(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestMetadata(value: RequestMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

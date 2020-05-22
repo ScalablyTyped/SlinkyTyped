@@ -9,7 +9,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InnerAudioContextOnErrorCallbackResult extends js.Object {
   /**
     *
@@ -19,7 +18,7 @@ trait InnerAudioContextOnErrorCallbackResult extends js.Object {
     * - 10003: 文件错误;
     * - 10004: 格式错误;
     * - -1: 未知错误; */
-  var errCode: `10001` | `10002` | `10003` | `10004` | `-1` = js.native
+  var errCode: `10001` | `10002` | `10003` | `10004` | `-1`
 }
 
 object InnerAudioContextOnErrorCallbackResult {
@@ -28,19 +27,5 @@ object InnerAudioContextOnErrorCallbackResult {
     val __obj = js.Dynamic.literal(errCode = errCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[InnerAudioContextOnErrorCallbackResult]
   }
-  @scala.inline
-  implicit class InnerAudioContextOnErrorCallbackResultOps[Self <: InnerAudioContextOnErrorCallbackResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrCode(value: `10001` | `10002` | `10003` | `10004` | `-1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

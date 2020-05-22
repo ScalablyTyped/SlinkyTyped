@@ -38,89 +38,22 @@ trait Channel extends js.Object {
 
 object Channel {
   @scala.inline
-  def apply(ChannelName: ChannelName, DataSource: DataSource): Channel = {
+  def apply(
+    ChannelName: ChannelName,
+    DataSource: DataSource,
+    CompressionType: CompressionType = null,
+    ContentType: ContentType = null,
+    InputMode: TrainingInputMode = null,
+    RecordWrapperType: RecordWrapper = null,
+    ShuffleConfig: ShuffleConfig = null
+  ): Channel = {
     val __obj = js.Dynamic.literal(ChannelName = ChannelName.asInstanceOf[js.Any], DataSource = DataSource.asInstanceOf[js.Any])
+    if (CompressionType != null) __obj.updateDynamic("CompressionType")(CompressionType.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (InputMode != null) __obj.updateDynamic("InputMode")(InputMode.asInstanceOf[js.Any])
+    if (RecordWrapperType != null) __obj.updateDynamic("RecordWrapperType")(RecordWrapperType.asInstanceOf[js.Any])
+    if (ShuffleConfig != null) __obj.updateDynamic("ShuffleConfig")(ShuffleConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Channel]
   }
-  @scala.inline
-  implicit class ChannelOps[Self <: Channel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelName(value: ChannelName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompressionType(value: CompressionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompressionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: ContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputMode(value: TrainingInputMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordWrapperType(value: RecordWrapper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordWrapperType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordWrapperType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordWrapperType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShuffleConfig(value: ShuffleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShuffleConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShuffleConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShuffleConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

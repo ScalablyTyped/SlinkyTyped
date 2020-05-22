@@ -6,54 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TSExpressionWithTypeArguments_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSExpressionWithTypeArguments_
   extends TSType
      with BaseNode {
-  var expression: TSEntityName = js.native
-  var typeParameters: TSTypeParameterInstantiation_ | Null = js.native
+  var expression: TSEntityName
+  var typeParameters: TSTypeParameterInstantiation_ | Null
   @JSName("type")
-  var type_TSExpressionWithTypeArguments_ : TSExpressionWithTypeArguments = js.native
+  var type_TSExpressionWithTypeArguments_ : TSExpressionWithTypeArguments
 }
 
 object TSExpressionWithTypeArguments_ {
   @scala.inline
-  def apply(expression: TSEntityName, `type`: TSExpressionWithTypeArguments): TSExpressionWithTypeArguments_ = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+  def apply(
+    expression: TSEntityName,
+    `type`: TSExpressionWithTypeArguments,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TSTypeParameterInstantiation_ = null
+  ): TSExpressionWithTypeArguments_ = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSExpressionWithTypeArguments_]
   }
-  @scala.inline
-  implicit class TSExpressionWithTypeArguments_Ops[Self <: TSExpressionWithTypeArguments_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: TSEntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSExpressionWithTypeArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TSTypeParameterInstantiation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

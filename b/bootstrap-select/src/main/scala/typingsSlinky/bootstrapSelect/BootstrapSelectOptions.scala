@@ -4,413 +4,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BootstrapSelectOptions extends js.Object {
-  var actionsBox: js.UndefOr[Boolean] = js.native
-  var container: js.UndefOr[String | Boolean] = js.native
-  var countSelectedText: js.UndefOr[String | js.Function] = js.native
-  var deselectAllText: js.UndefOr[String] = js.native
-  var dropdownAlignRight: js.UndefOr[String | Boolean] = js.native
-  var dropupAuto: js.UndefOr[Boolean] = js.native
-  var header: js.UndefOr[String] = js.native
-  var hideDisabled: js.UndefOr[Boolean] = js.native
-  var iconBase: js.UndefOr[String] = js.native
-  var liveSearch: js.UndefOr[Boolean] = js.native
-  var liveSearchNormalize: js.UndefOr[Boolean] = js.native
-  var liveSearchPlaceholder: js.UndefOr[String] = js.native
-  var liveSearchStyle: js.UndefOr[String] = js.native
-  var maxOptions: js.UndefOr[Double | Boolean] = js.native
-  var maxOptionsText: js.UndefOr[String | js.Array[_] | js.Function] = js.native
-  var mobile: js.UndefOr[Boolean] = js.native
-  var multipleSeparator: js.UndefOr[String] = js.native
-  var noneSelectedText: js.UndefOr[String] = js.native
-  var selectAllText: js.UndefOr[String] = js.native
-  var selectOnTab: js.UndefOr[Boolean] = js.native
-  var selectedTextFormat: js.UndefOr[String] = js.native
-  var showContent: js.UndefOr[Boolean] = js.native
-  var showIcon: js.UndefOr[Boolean] = js.native
-  var showSubtext: js.UndefOr[Boolean] = js.native
-  var showTick: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[String | Double | Boolean] = js.native
-  var style: js.UndefOr[String] = js.native
-  var tickIcon: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var width: js.UndefOr[String | Boolean] = js.native
+  var actionsBox: js.UndefOr[Boolean] = js.undefined
+  var container: js.UndefOr[String | Boolean] = js.undefined
+  var countSelectedText: js.UndefOr[String | js.Function] = js.undefined
+  var deselectAllText: js.UndefOr[String] = js.undefined
+  var dropdownAlignRight: js.UndefOr[String | Boolean] = js.undefined
+  var dropupAuto: js.UndefOr[Boolean] = js.undefined
+  var header: js.UndefOr[String] = js.undefined
+  var hideDisabled: js.UndefOr[Boolean] = js.undefined
+  var iconBase: js.UndefOr[String] = js.undefined
+  var liveSearch: js.UndefOr[Boolean] = js.undefined
+  var liveSearchNormalize: js.UndefOr[Boolean] = js.undefined
+  var liveSearchPlaceholder: js.UndefOr[String] = js.undefined
+  var liveSearchStyle: js.UndefOr[String] = js.undefined
+  var maxOptions: js.UndefOr[Double | Boolean] = js.undefined
+  var maxOptionsText: js.UndefOr[String | js.Array[_] | js.Function] = js.undefined
+  var mobile: js.UndefOr[Boolean] = js.undefined
+  var multipleSeparator: js.UndefOr[String] = js.undefined
+  var noneSelectedText: js.UndefOr[String] = js.undefined
+  var selectAllText: js.UndefOr[String] = js.undefined
+  var selectOnTab: js.UndefOr[Boolean] = js.undefined
+  var selectedTextFormat: js.UndefOr[String] = js.undefined
+  var showContent: js.UndefOr[Boolean] = js.undefined
+  var showIcon: js.UndefOr[Boolean] = js.undefined
+  var showSubtext: js.UndefOr[Boolean] = js.undefined
+  var showTick: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[String | Double | Boolean] = js.undefined
+  var style: js.UndefOr[String] = js.undefined
+  var tickIcon: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[String | Boolean] = js.undefined
 }
 
 object BootstrapSelectOptions {
   @scala.inline
-  def apply(): BootstrapSelectOptions = {
+  def apply(
+    actionsBox: js.UndefOr[Boolean] = js.undefined,
+    container: String | Boolean = null,
+    countSelectedText: String | js.Function = null,
+    deselectAllText: String = null,
+    dropdownAlignRight: String | Boolean = null,
+    dropupAuto: js.UndefOr[Boolean] = js.undefined,
+    header: String = null,
+    hideDisabled: js.UndefOr[Boolean] = js.undefined,
+    iconBase: String = null,
+    liveSearch: js.UndefOr[Boolean] = js.undefined,
+    liveSearchNormalize: js.UndefOr[Boolean] = js.undefined,
+    liveSearchPlaceholder: String = null,
+    liveSearchStyle: String = null,
+    maxOptions: Double | Boolean = null,
+    maxOptionsText: String | js.Array[_] | js.Function = null,
+    mobile: js.UndefOr[Boolean] = js.undefined,
+    multipleSeparator: String = null,
+    noneSelectedText: String = null,
+    selectAllText: String = null,
+    selectOnTab: js.UndefOr[Boolean] = js.undefined,
+    selectedTextFormat: String = null,
+    showContent: js.UndefOr[Boolean] = js.undefined,
+    showIcon: js.UndefOr[Boolean] = js.undefined,
+    showSubtext: js.UndefOr[Boolean] = js.undefined,
+    showTick: js.UndefOr[Boolean] = js.undefined,
+    size: String | Double | Boolean = null,
+    style: String = null,
+    tickIcon: String = null,
+    title: String = null,
+    width: String | Boolean = null
+  ): BootstrapSelectOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(actionsBox)) __obj.updateDynamic("actionsBox")(actionsBox.get.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (countSelectedText != null) __obj.updateDynamic("countSelectedText")(countSelectedText.asInstanceOf[js.Any])
+    if (deselectAllText != null) __obj.updateDynamic("deselectAllText")(deselectAllText.asInstanceOf[js.Any])
+    if (dropdownAlignRight != null) __obj.updateDynamic("dropdownAlignRight")(dropdownAlignRight.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropupAuto)) __obj.updateDynamic("dropupAuto")(dropupAuto.get.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideDisabled)) __obj.updateDynamic("hideDisabled")(hideDisabled.get.asInstanceOf[js.Any])
+    if (iconBase != null) __obj.updateDynamic("iconBase")(iconBase.asInstanceOf[js.Any])
+    if (!js.isUndefined(liveSearch)) __obj.updateDynamic("liveSearch")(liveSearch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(liveSearchNormalize)) __obj.updateDynamic("liveSearchNormalize")(liveSearchNormalize.get.asInstanceOf[js.Any])
+    if (liveSearchPlaceholder != null) __obj.updateDynamic("liveSearchPlaceholder")(liveSearchPlaceholder.asInstanceOf[js.Any])
+    if (liveSearchStyle != null) __obj.updateDynamic("liveSearchStyle")(liveSearchStyle.asInstanceOf[js.Any])
+    if (maxOptions != null) __obj.updateDynamic("maxOptions")(maxOptions.asInstanceOf[js.Any])
+    if (maxOptionsText != null) __obj.updateDynamic("maxOptionsText")(maxOptionsText.asInstanceOf[js.Any])
+    if (!js.isUndefined(mobile)) __obj.updateDynamic("mobile")(mobile.get.asInstanceOf[js.Any])
+    if (multipleSeparator != null) __obj.updateDynamic("multipleSeparator")(multipleSeparator.asInstanceOf[js.Any])
+    if (noneSelectedText != null) __obj.updateDynamic("noneSelectedText")(noneSelectedText.asInstanceOf[js.Any])
+    if (selectAllText != null) __obj.updateDynamic("selectAllText")(selectAllText.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectOnTab)) __obj.updateDynamic("selectOnTab")(selectOnTab.get.asInstanceOf[js.Any])
+    if (selectedTextFormat != null) __obj.updateDynamic("selectedTextFormat")(selectedTextFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(showContent)) __obj.updateDynamic("showContent")(showContent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showIcon)) __obj.updateDynamic("showIcon")(showIcon.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSubtext)) __obj.updateDynamic("showSubtext")(showSubtext.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTick)) __obj.updateDynamic("showTick")(showTick.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (tickIcon != null) __obj.updateDynamic("tickIcon")(tickIcon.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapSelectOptions]
   }
-  @scala.inline
-  implicit class BootstrapSelectOptionsOps[Self <: BootstrapSelectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionsBox(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionsBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionsBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionsBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountSelectedText(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countSelectedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountSelectedText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countSelectedText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeselectAllText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deselectAllText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeselectAllText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deselectAllText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownAlignRight(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownAlignRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownAlignRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownAlignRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropupAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropupAuto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropupAuto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropupAuto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconBase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveSearch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveSearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveSearchNormalize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSearchNormalize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveSearchNormalize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSearchNormalize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveSearchPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSearchPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveSearchPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSearchPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveSearchStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSearchStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveSearchStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSearchStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxOptions(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxOptionsText(value: String | js.Array[_] | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOptionsText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxOptionsText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOptionsText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMobile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMobile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultipleSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultipleSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleSeparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoneSelectedText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noneSelectedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoneSelectedText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noneSelectedText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectAllText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectAllText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectOnTab(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnTab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectOnTab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnTab")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedTextFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedTextFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSubtext(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSubtext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSubtext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSubtext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: String | Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

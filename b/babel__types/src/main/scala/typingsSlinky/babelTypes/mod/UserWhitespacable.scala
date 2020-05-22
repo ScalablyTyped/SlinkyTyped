@@ -1,5 +1,16 @@
 package typingsSlinky.babelTypes.mod
 
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectMethod
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectProperty
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectTypeCallProperty
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectTypeIndexer
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectTypeInternalSlot
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectTypeProperty
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectTypeSpreadProperty
+import typingsSlinky.babelTypes.babelTypesStrings.get
+import typingsSlinky.babelTypes.babelTypesStrings.init
+import typingsSlinky.babelTypes.babelTypesStrings.method
+import typingsSlinky.babelTypes.babelTypesStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,22 +24,141 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ObjectTypeProperty_
   - typingsSlinky.babelTypes.mod.ObjectTypeSpreadProperty_
 */
-trait UserWhitespacable extends Node
+trait UserWhitespacable extends _Node
 
 object UserWhitespacable {
   @scala.inline
-  implicit def apply(value: ObjectMethod_): UserWhitespacable = value.asInstanceOf[UserWhitespacable]
+  def ObjectTypeCallProperty_(
+    static: Boolean,
+    `type`: ObjectTypeCallProperty,
+    value: FlowType,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): UserWhitespacable = {
+    val __obj = js.Dynamic.literal(static = static.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserWhitespacable]
+  }
   @scala.inline
-  implicit def apply(value: ObjectProperty_): UserWhitespacable = value.asInstanceOf[UserWhitespacable]
+  def ObjectMethod_(
+    async: Boolean,
+    body: BlockStatement_,
+    computed: Boolean,
+    generator: Boolean,
+    key: js.Any,
+    kind: method | get | set,
+    params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_],
+    `type`: ObjectMethod,
+    decorators: js.Array[Decorator_] = null,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ = null
+  ): UserWhitespacable = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], computed = computed.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], decorators = decorators.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserWhitespacable]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeCallProperty_): UserWhitespacable = value.asInstanceOf[UserWhitespacable]
+  def ObjectTypeProperty_(
+    key: Identifier_ | StringLiteral_,
+    kind: init | get | set,
+    optional: Boolean,
+    proto: Boolean,
+    static: Boolean,
+    `type`: ObjectTypeProperty,
+    value: FlowType,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    variance: Variance_ = null
+  ): UserWhitespacable = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], proto = proto.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], variance = variance.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserWhitespacable]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeIndexer_): UserWhitespacable = value.asInstanceOf[UserWhitespacable]
+  def ObjectProperty_(
+    computed: Boolean,
+    key: js.Any,
+    shorthand: js.Any,
+    `type`: ObjectProperty,
+    value: Expression | PatternLike,
+    decorators: js.Array[Decorator_] = null,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): UserWhitespacable = {
+    val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], shorthand = shorthand.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], decorators = decorators.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserWhitespacable]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeInternalSlot_): UserWhitespacable = value.asInstanceOf[UserWhitespacable]
+  def ObjectTypeInternalSlot_(
+    id: Identifier_,
+    method: Boolean,
+    optional: Boolean,
+    static: Boolean,
+    `type`: ObjectTypeInternalSlot,
+    value: FlowType,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): UserWhitespacable = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserWhitespacable]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeProperty_): UserWhitespacable = value.asInstanceOf[UserWhitespacable]
+  def ObjectTypeIndexer_(
+    key: FlowType,
+    static: Boolean,
+    `type`: ObjectTypeIndexer,
+    value: FlowType,
+    end: Double = null.asInstanceOf[Double],
+    id: Identifier_ = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    variance: Variance_ = null
+  ): UserWhitespacable = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], variance = variance.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserWhitespacable]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeSpreadProperty_): UserWhitespacable = value.asInstanceOf[UserWhitespacable]
+  def ObjectTypeSpreadProperty_(
+    argument: FlowType,
+    `type`: ObjectTypeSpreadProperty,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): UserWhitespacable = {
+    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserWhitespacable]
+  }
 }
 

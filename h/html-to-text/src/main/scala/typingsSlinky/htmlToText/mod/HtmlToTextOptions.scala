@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HtmlToTextOptions extends js.Object {
   /**
     * defines the tags whose text content will be captured from the html.
@@ -17,61 +16,61 @@ trait HtmlToTextOptions extends js.Object {
     * parameters e.g. `[p.class1.class2#id1#id2, p.class1.class2#id1#id2]`.
     * Default: `"body"`
     */
-  var baseElement: js.UndefOr[String | js.Array[String]] = js.native
+  var baseElement: js.UndefOr[String | js.Array[String]] = js.undefined
   /**
     * defines the text decoding options given to `he.decode`
     * For more information see the [he](https://github.com/mathiasbynens/he) module
     */
-  var decodeOptions: js.UndefOr[IsAttributeValue] = js.native
+  var decodeOptions: js.UndefOr[IsAttributeValue] = js.undefined
   /**
     * Customize the formatting of individual element types.
     */
-  var format: js.UndefOr[Formatters] = js.native
+  var format: js.UndefOr[Formatters] = js.undefined
   /**
     *  By default links are translated the following
     *      <a href='link'>text</a> => becomes => text [link].
     *  If this option is set to true and link and text are the same,
     *  [link] will be hidden and only text visible.
     */
-  var hideLinkHrefIfSameAsText: js.UndefOr[Boolean] = js.native
+  var hideLinkHrefIfSameAsText: js.UndefOr[Boolean] = js.undefined
   /**
     *  Ignore all document links if true.
     */
-  var ignoreHref: js.UndefOr[Boolean] = js.native
+  var ignoreHref: js.UndefOr[Boolean] = js.undefined
   /**
     *  Ignore all document images if true.
     */
-  var ignoreImage: js.UndefOr[Boolean] = js.native
+  var ignoreImage: js.UndefOr[Boolean] = js.undefined
   /**
     *  Allows you to specify the server host for href attributes, where the links start at the root (/).
     *  For example, linkHrefBaseUrl = 'http://asdf.com' and <a href='/dir/subdir'>...</a>
     *  the link in the text will be http://asdf.com/dir/subdir.
     *  Keep in mind that linkHrefBaseUrl shouldn't end with a /.
     */
-  var linkHrefBaseUrl: js.UndefOr[String] = js.native
+  var linkHrefBaseUrl: js.UndefOr[String] = js.undefined
   /**
     * describes how to wrap long words
     */
-  var longWordSplit: js.UndefOr[ForceWrapOnLimit] = js.native
+  var longWordSplit: js.UndefOr[ForceWrapOnLimit] = js.undefined
   /**
     *  Dont print brackets around the link if true
     */
-  var noLinkBrackets: js.UndefOr[Boolean] = js.native
+  var noLinkBrackets: js.UndefOr[Boolean] = js.undefined
   /**
     *  By default, any newlines \n in a block of text will be removed.
     *  If true, these newlines will not be removed.
     */
-  var preserveNewlines: js.UndefOr[Boolean] = js.native
+  var preserveNewlines: js.UndefOr[Boolean] = js.undefined
   /**
     * convert the entire document if we don't find the tag we're looking for
     * if true
     */
-  var returnDomByDefault: js.UndefOr[Boolean] = js.native
+  var returnDomByDefault: js.UndefOr[Boolean] = js.undefined
   /**
     *  By default, paragraphs are converted with two newlines (\n\n).
     *  Set to true to convert to a single newline.
     */
-  var singleNewLineParagraphs: js.UndefOr[Boolean] = js.native
+  var singleNewLineParagraphs: js.UndefOr[Boolean] = js.undefined
   /**
     *  Allows to select certain tables by the class or id attribute from the HTML
     *  document. This is necessary because the majority of HTML E-Mails uses a
@@ -79,235 +78,62 @@ trait HtmlToTextOptions extends js.Object {
     *  and with a # for the id attribute. All other tables are ignored.
     *  You can assign true to this attribute to select all tables. Default: []
     */
-  var tables: js.UndefOr[js.Array[String] | Boolean] = js.native
+  var tables: js.UndefOr[js.Array[String] | Boolean] = js.undefined
   /**
     * defines the string that is used as item prefix for unordered lists `<ol>`.
     * Default: ' * '
     */
-  var unorderedListItemPrefix: js.UndefOr[String] = js.native
+  var unorderedListItemPrefix: js.UndefOr[String] = js.undefined
   /**
     *  By default, headings (<h1>, <h2>, etc) are upper-cased.
     *  Set to false to leave headings as they are.
     */
-  var uppercaseHeadings: js.UndefOr[Boolean] = js.native
+  var uppercaseHeadings: js.UndefOr[Boolean] = js.undefined
   /**
     * Defines after how many chars a line break should follow in p elements.
     * Set to null or false to disable word-wrapping. Default: 80
     */
-  var wordwrap: js.UndefOr[Double | `false` | Null] = js.native
+  var wordwrap: js.UndefOr[Double | `false` | Null] = js.undefined
 }
 
 object HtmlToTextOptions {
   @scala.inline
-  def apply(): HtmlToTextOptions = {
+  def apply(
+    baseElement: String | js.Array[String] = null,
+    decodeOptions: IsAttributeValue = null,
+    format: Formatters = null,
+    hideLinkHrefIfSameAsText: js.UndefOr[Boolean] = js.undefined,
+    ignoreHref: js.UndefOr[Boolean] = js.undefined,
+    ignoreImage: js.UndefOr[Boolean] = js.undefined,
+    linkHrefBaseUrl: String = null,
+    longWordSplit: ForceWrapOnLimit = null,
+    noLinkBrackets: js.UndefOr[Boolean] = js.undefined,
+    preserveNewlines: js.UndefOr[Boolean] = js.undefined,
+    returnDomByDefault: js.UndefOr[Boolean] = js.undefined,
+    singleNewLineParagraphs: js.UndefOr[Boolean] = js.undefined,
+    tables: js.Array[String] | Boolean = null,
+    unorderedListItemPrefix: String = null,
+    uppercaseHeadings: js.UndefOr[Boolean] = js.undefined,
+    wordwrap: js.UndefOr[Null | Double | `false`] = js.undefined
+  ): HtmlToTextOptions = {
     val __obj = js.Dynamic.literal()
+    if (baseElement != null) __obj.updateDynamic("baseElement")(baseElement.asInstanceOf[js.Any])
+    if (decodeOptions != null) __obj.updateDynamic("decodeOptions")(decodeOptions.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideLinkHrefIfSameAsText)) __obj.updateDynamic("hideLinkHrefIfSameAsText")(hideLinkHrefIfSameAsText.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreHref)) __obj.updateDynamic("ignoreHref")(ignoreHref.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreImage)) __obj.updateDynamic("ignoreImage")(ignoreImage.get.asInstanceOf[js.Any])
+    if (linkHrefBaseUrl != null) __obj.updateDynamic("linkHrefBaseUrl")(linkHrefBaseUrl.asInstanceOf[js.Any])
+    if (longWordSplit != null) __obj.updateDynamic("longWordSplit")(longWordSplit.asInstanceOf[js.Any])
+    if (!js.isUndefined(noLinkBrackets)) __obj.updateDynamic("noLinkBrackets")(noLinkBrackets.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveNewlines)) __obj.updateDynamic("preserveNewlines")(preserveNewlines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnDomByDefault)) __obj.updateDynamic("returnDomByDefault")(returnDomByDefault.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleNewLineParagraphs)) __obj.updateDynamic("singleNewLineParagraphs")(singleNewLineParagraphs.get.asInstanceOf[js.Any])
+    if (tables != null) __obj.updateDynamic("tables")(tables.asInstanceOf[js.Any])
+    if (unorderedListItemPrefix != null) __obj.updateDynamic("unorderedListItemPrefix")(unorderedListItemPrefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(uppercaseHeadings)) __obj.updateDynamic("uppercaseHeadings")(uppercaseHeadings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wordwrap)) __obj.updateDynamic("wordwrap")(wordwrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[HtmlToTextOptions]
   }
-  @scala.inline
-  implicit class HtmlToTextOptionsOps[Self <: HtmlToTextOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseElement(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecodeOptions(value: IsAttributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecodeOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: Formatters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideLinkHrefIfSameAsText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideLinkHrefIfSameAsText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideLinkHrefIfSameAsText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideLinkHrefIfSameAsText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreHref(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreHref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreHref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreImage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkHrefBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHrefBaseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkHrefBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHrefBaseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongWordSplit(value: ForceWrapOnLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longWordSplit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongWordSplit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longWordSplit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoLinkBrackets(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noLinkBrackets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoLinkBrackets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noLinkBrackets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveNewlines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveNewlines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveNewlines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveNewlines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnDomByDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnDomByDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnDomByDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnDomByDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleNewLineParagraphs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleNewLineParagraphs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleNewLineParagraphs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleNewLineParagraphs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTables(value: js.Array[String] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnorderedListItemPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unorderedListItemPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnorderedListItemPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unorderedListItemPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUppercaseHeadings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uppercaseHeadings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUppercaseHeadings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uppercaseHeadings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWordwrap(value: Double | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordwrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWordwrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordwrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWordwrapNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordwrap")(null)
-        ret
-    }
-  }
-  
 }
 

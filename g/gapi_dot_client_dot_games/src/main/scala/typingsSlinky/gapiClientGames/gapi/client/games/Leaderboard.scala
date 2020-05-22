@@ -4,112 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Leaderboard extends js.Object {
   /** The icon for the leaderboard. */
-  var iconUrl: js.UndefOr[String] = js.native
+  var iconUrl: js.UndefOr[String] = js.undefined
   /** The leaderboard ID. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Indicates whether the icon image being returned is a default image, or is game-provided. */
-  var isIconUrlDefault: js.UndefOr[Boolean] = js.native
+  var isIconUrlDefault: js.UndefOr[Boolean] = js.undefined
   /** Uniquely identifies the type of this resource. Value is always the fixed string games#leaderboard. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The name of the leaderboard. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * How scores are ordered.
     * Possible values are:
     * - "LARGER_IS_BETTER" - Larger values are better; scores are sorted in descending order.
     * - "SMALLER_IS_BETTER" - Smaller values are better; scores are sorted in ascending order.
     */
-  var order: js.UndefOr[String] = js.native
+  var order: js.UndefOr[String] = js.undefined
 }
 
 object Leaderboard {
   @scala.inline
-  def apply(): Leaderboard = {
+  def apply(
+    iconUrl: String = null,
+    id: String = null,
+    isIconUrlDefault: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    name: String = null,
+    order: String = null
+  ): Leaderboard = {
     val __obj = js.Dynamic.literal()
+    if (iconUrl != null) __obj.updateDynamic("iconUrl")(iconUrl.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isIconUrlDefault)) __obj.updateDynamic("isIconUrlDefault")(isIconUrlDefault.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[Leaderboard]
   }
-  @scala.inline
-  implicit class LeaderboardOps[Self <: Leaderboard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIconUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsIconUrlDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIconUrlDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsIconUrlDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIconUrlDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.pdfmake.pdfmakeStrings.headerLineOnly
   - typingsSlinky.pdfmake.pdfmakeStrings.lightHorizontalLines
 */
-trait PredefinedTableLayout extends TableLayout
+trait PredefinedTableLayout extends _TableLayout
 
 object PredefinedTableLayout {
   @scala.inline

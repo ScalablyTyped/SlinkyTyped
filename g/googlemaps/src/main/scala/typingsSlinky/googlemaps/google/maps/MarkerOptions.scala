@@ -10,68 +10,67 @@ import scala.scalajs.js.annotation._
   * {@link Marker}.
   * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions Maps JavaScript API}
   */
-@js.native
 trait MarkerOptions extends js.Object {
   /**
     * The offset from the marker's position to the tip of an InfoWindow that
     * has been opened with the marker as anchor.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.anchorPoint Maps JavaScript API}
     */
-  var anchorPoint: js.UndefOr[Point] = js.native
+  var anchorPoint: js.UndefOr[Point] = js.undefined
   /**
     * Which animation to play when marker is added to a map.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.animation Maps JavaScript API}
     */
-  var animation: js.UndefOr[Animation] = js.native
+  var animation: js.UndefOr[Animation] = js.undefined
   /**
     * If `true`, the marker receives mouse and touch events.
     * @default true
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.clickable Maps JavaScript API}
     */
-  var clickable: js.UndefOr[Boolean] = js.native
+  var clickable: js.UndefOr[Boolean] = js.undefined
   /**
     * If `false`, disables cross that appears beneath the marker when dragging.
     * @default true
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.crossOnDrag Maps JavaScript API}
     */
-  var crossOnDrag: js.UndefOr[Boolean] = js.native
+  var crossOnDrag: js.UndefOr[Boolean] = js.undefined
   /**
     * Mouse cursor to show on hover.
     * @default 'pointer'
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.cursor Maps JavaScript API}
     * @see {@link CSSStyleDeclaration#cursor}
     */
-  var cursor: js.UndefOr[String] = js.native
+  var cursor: js.UndefOr[String] = js.undefined
   /**
     * If `true`, the marker can be dragged.
     * @default false
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.draggable Maps JavaScript API}
     */
-  var draggable: js.UndefOr[Boolean] = js.native
+  var draggable: js.UndefOr[Boolean] = js.undefined
   /**
     * Icon for the foreground. If a `string` is provided, it is treated as
     * though it were an {@link Icon} with the `string` as {@link Icon#url url}.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.icon Maps JavaScript API}
     */
   // tslint:disable-next-line:no-unnecessary-qualifier
-  var icon: js.UndefOr[String | Icon | Symbol] = js.native
+  var icon: js.UndefOr[String | Icon | Symbol] = js.undefined
   /**
     * Adds a label to the marker. The label can either be a `string`, or a
     * {@link MarkerLabel} object.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.label Maps JavaScript API}
     */
-  var label: js.UndefOr[String | MarkerLabel] = js.native
+  var label: js.UndefOr[String | MarkerLabel] = js.undefined
   /**
     * Map on which to display Marker.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.map Maps JavaScript API}
     */
-  var map: js.UndefOr[Map[Element] | StreetViewPanorama] = js.native
+  var map: js.UndefOr[Map[Element] | StreetViewPanorama] = js.undefined
   /**
     * The marker's opacity between 0.0 and 1.0.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.opacity Maps JavaScript API}
     * @default 1.0
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /**
     * Optimization renders many markers as a single static element. Optimized
     * rendering is enabled by default. Disable optimized rendering for animated
@@ -79,30 +78,30 @@ trait MarkerOptions extends js.Object {
     * element (advanced usage only).
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.optimized Maps JavaScript API}
     */
-  var optimized: js.UndefOr[Boolean] = js.native
+  var optimized: js.UndefOr[Boolean] = js.undefined
   /**
     * Marker position.
     * **Note that the `position` must be set for the marker to display.**
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.position Maps JavaScript API}
     */
-  var position: js.UndefOr[LatLng | LatLngLiteral] = js.native
+  var position: js.UndefOr[LatLng | LatLngLiteral] = js.undefined
   /**
     * Image map region definition used for drag/click.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.shape Maps JavaScript API}
     */
-  var shape: js.UndefOr[MarkerShape] = js.native
+  var shape: js.UndefOr[MarkerShape] = js.undefined
   /**
     * Rollover text.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.title Maps JavaScript API}
     * @see {@link HTMLElement#title}
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * If `true`, the marker is visible.
     * @default true
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.visible Maps JavaScript API}
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
   /**
     * All markers are displayed on the map in order of their `zIndex`, with
     * higher values displaying in front of markers with lower values. By
@@ -111,214 +110,47 @@ trait MarkerOptions extends js.Object {
     * screen.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions.zIndex Maps JavaScript API}
     */
-  var zIndex: js.UndefOr[Double] = js.native
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object MarkerOptions {
   @scala.inline
-  def apply(): MarkerOptions = {
+  def apply(
+    anchorPoint: Point = null,
+    animation: Animation = null,
+    clickable: js.UndefOr[Boolean] = js.undefined,
+    crossOnDrag: js.UndefOr[Boolean] = js.undefined,
+    cursor: String = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    icon: String | Icon | Symbol = null,
+    label: String | MarkerLabel = null,
+    map: Map[Element] | StreetViewPanorama = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    optimized: js.UndefOr[Boolean] = js.undefined,
+    position: LatLng | LatLngLiteral = null,
+    shape: MarkerShape = null,
+    title: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): MarkerOptions = {
     val __obj = js.Dynamic.literal()
+    if (anchorPoint != null) __obj.updateDynamic("anchorPoint")(anchorPoint.asInstanceOf[js.Any])
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(crossOnDrag)) __obj.updateDynamic("crossOnDrag")(crossOnDrag.get.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(optimized)) __obj.updateDynamic("optimized")(optimized.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MarkerOptions]
   }
-  @scala.inline
-  implicit class MarkerOptionsOps[Self <: MarkerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchorPoint(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchorPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossOnDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOnDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossOnDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOnDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String | Icon | Symbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String | MarkerLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: Map[Element] | StreetViewPanorama): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptimized(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: LatLng | LatLngLiteral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: MarkerShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

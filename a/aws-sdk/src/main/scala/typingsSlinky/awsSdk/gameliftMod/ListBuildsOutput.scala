@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListBuildsOutput extends js.Object {
   /**
-    * A collection of build records that match the request.
+    * A collection of build resources that match the request.
     */
   var Builds: js.UndefOr[BuildList] = js.native
   /**
@@ -18,41 +18,11 @@ trait ListBuildsOutput extends js.Object {
 
 object ListBuildsOutput {
   @scala.inline
-  def apply(): ListBuildsOutput = {
+  def apply(Builds: BuildList = null, NextToken: NonEmptyString = null): ListBuildsOutput = {
     val __obj = js.Dynamic.literal()
+    if (Builds != null) __obj.updateDynamic("Builds")(Builds.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBuildsOutput]
   }
-  @scala.inline
-  implicit class ListBuildsOutputOps[Self <: ListBuildsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuilds(value: BuildList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Builds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuilds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Builds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

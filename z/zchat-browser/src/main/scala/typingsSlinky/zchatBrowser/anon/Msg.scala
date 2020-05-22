@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Msg extends StructuredMessage {
-  var msg: String = js.native
-  var quick_replies: js.Array[Button] = js.native
-  var `type`: QUICK_REPLIES = js.native
+  var msg: String
+  var quick_replies: js.Array[Button]
+  var `type`: QUICK_REPLIES
 }
 
 object Msg {
@@ -21,31 +20,5 @@ object Msg {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Msg]
   }
-  @scala.inline
-  implicit class MsgOps[Self <: Msg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuick_replies(value: js.Array[Button]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quick_replies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: QUICK_REPLIES): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

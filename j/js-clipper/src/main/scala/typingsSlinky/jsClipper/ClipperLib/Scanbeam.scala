@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Scanbeam extends js.Object {
-  var Y: Double = js.native
-  var next: TEdge = js.native
+  var Y: Double
+  var next: TEdge
 }
 
 object Scanbeam {
@@ -16,25 +15,5 @@ object Scanbeam {
     val __obj = js.Dynamic.literal(Y = Y.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scanbeam]
   }
-  @scala.inline
-  implicit class ScanbeamOps[Self <: Scanbeam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNext(value: TEdge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

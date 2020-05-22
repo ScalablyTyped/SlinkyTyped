@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartColorAxis extends js.Object {
-  var colors: js.UndefOr[js.Array[String]] = js.native
-  var legend: js.UndefOr[ChartLegend] = js.native
-  var maxValue: js.UndefOr[Double] = js.native
-  var minValue: js.UndefOr[Double] = js.native
-  var values: js.UndefOr[js.Array[Double]] = js.native
+  var colors: js.UndefOr[js.Array[String]] = js.undefined
+  var legend: js.UndefOr[ChartLegend] = js.undefined
+  var maxValue: js.UndefOr[Double] = js.undefined
+  var minValue: js.UndefOr[Double] = js.undefined
+  var values: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object ChartColorAxis {
   @scala.inline
-  def apply(): ChartColorAxis = {
+  def apply(
+    colors: js.Array[String] = null,
+    legend: ChartLegend = null,
+    maxValue: js.UndefOr[Double] = js.undefined,
+    minValue: js.UndefOr[Double] = js.undefined,
+    values: js.Array[Double] = null
+  ): ChartColorAxis = {
     val __obj = js.Dynamic.literal()
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxValue)) __obj.updateDynamic("maxValue")(maxValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minValue)) __obj.updateDynamic("minValue")(minValue.get.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartColorAxis]
   }
-  @scala.inline
-  implicit class ChartColorAxisOps[Self <: ChartColorAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColors(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegend(value: ChartLegend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

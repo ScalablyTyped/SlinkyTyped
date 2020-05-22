@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FirefoxSpecificProperties extends js.Object {
-  var id: js.UndefOr[ExtensionID] = js.native
-  var strict_max_version: js.UndefOr[String] = js.native
-  var strict_min_version: js.UndefOr[String] = js.native
-  var update_url: js.UndefOr[String] = js.native
+  var id: js.UndefOr[ExtensionID] = js.undefined
+  var strict_max_version: js.UndefOr[String] = js.undefined
+  var strict_min_version: js.UndefOr[String] = js.undefined
+  var update_url: js.UndefOr[String] = js.undefined
 }
 
 object FirefoxSpecificProperties {
   @scala.inline
-  def apply(): FirefoxSpecificProperties = {
+  def apply(
+    id: ExtensionID = null,
+    strict_max_version: String = null,
+    strict_min_version: String = null,
+    update_url: String = null
+  ): FirefoxSpecificProperties = {
     val __obj = js.Dynamic.literal()
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (strict_max_version != null) __obj.updateDynamic("strict_max_version")(strict_max_version.asInstanceOf[js.Any])
+    if (strict_min_version != null) __obj.updateDynamic("strict_min_version")(strict_min_version.asInstanceOf[js.Any])
+    if (update_url != null) __obj.updateDynamic("update_url")(update_url.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirefoxSpecificProperties]
   }
-  @scala.inline
-  implicit class FirefoxSpecificPropertiesOps[Self <: FirefoxSpecificProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: ExtensionID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict_max_version(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict_max_version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict_max_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict_max_version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict_min_version(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict_min_version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict_min_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict_min_version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update_url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

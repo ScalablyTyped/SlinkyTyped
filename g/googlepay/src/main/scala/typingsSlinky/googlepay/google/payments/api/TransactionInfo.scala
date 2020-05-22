@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Detailed information about the transaction.
   */
-@js.native
 trait TransactionInfo extends js.Object {
   /**
     * Optional checkout option parameter. Whether to use the 'Continue' or
@@ -18,7 +17,7 @@ trait TransactionInfo extends js.Object {
     *
     * @default "DEFAULT"
     */
-  var checkoutOption: js.UndefOr[CheckoutOption] = js.native
+  var checkoutOption: js.UndefOr[CheckoutOption] = js.undefined
   /**
     * ISO 3166-1 alpha-2 country code for the country where the transaction
     * will be completed/processed.
@@ -28,18 +27,18 @@ trait TransactionInfo extends js.Object {
     * may need to provide extra information to you or your processor in
     * order to complete a transaction).
     */
-  var countryCode: js.UndefOr[String] = js.native
+  var countryCode: js.UndefOr[String] = js.undefined
   /**
     * ISO 4217 alphabetic currency code of the transaction.
     *
     * This is a required field.
     */
-  var currencyCode: String = js.native
+  var currencyCode: String
   /**
     * This can be used to display a high level breakdown of the total
     * price. e.g. 'subtotal', 'discount'.
     */
-  var displayItems: js.UndefOr[js.Array[DisplayItem]] = js.native
+  var displayItems: js.UndefOr[js.Array[DisplayItem]] = js.undefined
   /**
     * Total price of this transaction.
     *
@@ -53,7 +52,7 @@ trait TransactionInfo extends js.Object {
     * [[TotalPriceStatus|`ESTIMATED`]] or
     * [[TotalPriceStatus|`FINAL`]].
     */
-  var totalPrice: String = js.native
+  var totalPrice: String
   /**
     * Total price label of this transaction.
     *
@@ -64,7 +63,7 @@ trait TransactionInfo extends js.Object {
     * information. Otherwise the cart modal dialog will not be rendered
     * even if transactionInfo.displayItems is set.
     */
-  var totalPriceLabel: js.UndefOr[String] = js.native
+  var totalPriceLabel: js.UndefOr[String] = js.undefined
   /**
     * Status of this transaction's total price.
     *
@@ -74,7 +73,7 @@ trait TransactionInfo extends js.Object {
     * [[TotalPriceStatus|`FINAL`]] and that
     * the total price to be specified and final.
     */
-  var totalPriceStatus: TotalPriceStatus = js.native
+  var totalPriceStatus: TotalPriceStatus
   /**
     * Correlation ID to refer to this transaction.
     *
@@ -82,7 +81,7 @@ trait TransactionInfo extends js.Object {
     * for referring to this transaction later on (e.g. for debugging issues
     * when communicating with Google).
     */
-  var transactionId: js.UndefOr[String] = js.native
+  var transactionId: js.UndefOr[String] = js.undefined
   /**
     * Transaction note.
     *
@@ -96,112 +95,30 @@ trait TransactionInfo extends js.Object {
     *   reservation details. The maximum length allowed for this field
     *   is 80.
     */
-  var transactionNote: js.UndefOr[String] = js.native
+  var transactionNote: js.UndefOr[String] = js.undefined
 }
 
 object TransactionInfo {
   @scala.inline
-  def apply(currencyCode: String, totalPrice: String, totalPriceStatus: TotalPriceStatus): TransactionInfo = {
+  def apply(
+    currencyCode: String,
+    totalPrice: String,
+    totalPriceStatus: TotalPriceStatus,
+    checkoutOption: CheckoutOption = null,
+    countryCode: String = null,
+    displayItems: js.Array[DisplayItem] = null,
+    totalPriceLabel: String = null,
+    transactionId: String = null,
+    transactionNote: String = null
+  ): TransactionInfo = {
     val __obj = js.Dynamic.literal(currencyCode = currencyCode.asInstanceOf[js.Any], totalPrice = totalPrice.asInstanceOf[js.Any], totalPriceStatus = totalPriceStatus.asInstanceOf[js.Any])
+    if (checkoutOption != null) __obj.updateDynamic("checkoutOption")(checkoutOption.asInstanceOf[js.Any])
+    if (countryCode != null) __obj.updateDynamic("countryCode")(countryCode.asInstanceOf[js.Any])
+    if (displayItems != null) __obj.updateDynamic("displayItems")(displayItems.asInstanceOf[js.Any])
+    if (totalPriceLabel != null) __obj.updateDynamic("totalPriceLabel")(totalPriceLabel.asInstanceOf[js.Any])
+    if (transactionId != null) __obj.updateDynamic("transactionId")(transactionId.asInstanceOf[js.Any])
+    if (transactionNote != null) __obj.updateDynamic("transactionNote")(transactionNote.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactionInfo]
   }
-  @scala.inline
-  implicit class TransactionInfoOps[Self <: TransactionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrencyCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalPrice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalPriceStatus(value: TotalPriceStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPriceStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCheckoutOption(value: CheckoutOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkoutOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckoutOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkoutOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountryCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountryCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayItems(value: js.Array[DisplayItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalPriceLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPriceLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalPriceLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPriceLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionNote(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionNote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionNote")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

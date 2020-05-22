@@ -16,6 +16,18 @@ package object iotjobsdataplaneMod {
   type IncludeExecutionState = scala.Boolean
   type IncludeJobDocument = scala.Boolean
   type JobDocument = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.QUEUED
+    - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.TIMED_OUT
+    - typingsSlinky.awsSdk.awsSdkStrings.REJECTED
+    - typingsSlinky.awsSdk.awsSdkStrings.REMOVED
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELED
+    - java.lang.String
+  */
+  type JobExecutionStatus = typingsSlinky.awsSdk.iotjobsdataplaneMod._JobExecutionStatus | java.lang.String
   type JobExecutionSummaryList = js.Array[typingsSlinky.awsSdk.iotjobsdataplaneMod.JobExecutionSummary]
   type JobId = java.lang.String
   type LastUpdatedAt = scala.Double
@@ -24,4 +36,10 @@ package object iotjobsdataplaneMod {
   type StepTimeoutInMinutes = scala.Double
   type ThingName = java.lang.String
   type VersionNumber = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2017-09-29`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.iotjobsdataplaneMod._apiVersion | java.lang.String
 }

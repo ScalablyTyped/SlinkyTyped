@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Index extends js.Object {
   /**
     * Name of the index on the last-modified column.
@@ -19,52 +18,22 @@ trait Index extends js.Object {
     * not to set this component if you are sure that your application does not use any read or write operations
     * that are driven by time stamps, because creating and maintaining an index carries a cost.
     */
-  var index: js.UndefOr[String] = js.native
+  var index: js.UndefOr[String] = js.undefined
   /**
     * Name of the column that stores the last-modified time stamp of the document.
     *
     * @default LAST_MODIFIED
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object Index {
   @scala.inline
-  def apply(): Index = {
+  def apply(index: String = null, name: String = null): Index = {
     val __obj = js.Dynamic.literal()
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Index]
   }
-  @scala.inline
-  implicit class IndexOps[Self <: Index] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

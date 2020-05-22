@@ -4,33 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Title extends js.Object {
   /**
     * @default 1
     */
-  var alpha: Double = js.native
+  var alpha: Double
   /**
     * Specifies if the tile is bold or not.
     * @default false
     */
-  var bold: Boolean = js.native
+  var bold: Boolean
   /**
     * Text color of a title.
     */
-  var color: String = js.native
+  var color: String
   /**
     * Unique id of a Title. You don't need to set it, unless you want to.
     */
-  var id: String = js.native
+  var id: String
   /**
     * Text size
     */
-  var size: Double = js.native
+  var size: Double
   /**
     * Text of a label
     */
-  var text: String = js.native
+  var text: String
 }
 
 object Title {
@@ -39,49 +38,5 @@ object Title {
     val __obj = js.Dynamic.literal(alpha = alpha.asInstanceOf[js.Any], bold = bold.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Title]
   }
-  @scala.inline
-  implicit class TitleOps[Self <: Title] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBold(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

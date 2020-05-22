@@ -34,89 +34,22 @@ trait VideoMetadata extends js.Object {
 
 object VideoMetadata {
   @scala.inline
-  def apply(): VideoMetadata = {
+  def apply(
+    Codec: String = null,
+    DurationMillis: js.UndefOr[ULong] = js.undefined,
+    Format: String = null,
+    FrameHeight: js.UndefOr[ULong] = js.undefined,
+    FrameRate: js.UndefOr[Float] = js.undefined,
+    FrameWidth: js.UndefOr[ULong] = js.undefined
+  ): VideoMetadata = {
     val __obj = js.Dynamic.literal()
+    if (Codec != null) __obj.updateDynamic("Codec")(Codec.asInstanceOf[js.Any])
+    if (!js.isUndefined(DurationMillis)) __obj.updateDynamic("DurationMillis")(DurationMillis.get.asInstanceOf[js.Any])
+    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
+    if (!js.isUndefined(FrameHeight)) __obj.updateDynamic("FrameHeight")(FrameHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FrameRate)) __obj.updateDynamic("FrameRate")(FrameRate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FrameWidth)) __obj.updateDynamic("FrameWidth")(FrameWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoMetadata]
   }
-  @scala.inline
-  implicit class VideoMetadataOps[Self <: VideoMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodec(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Codec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Codec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDurationMillis(value: ULong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrameHeight(value: ULong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrameRate(value: Float): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrameWidth(value: ULong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,11 @@ trait SchemaPlayerScoreSubmissionList extends js.Object {
 
 object SchemaPlayerScoreSubmissionList {
   @scala.inline
-  def apply(): SchemaPlayerScoreSubmissionList = {
+  def apply(kind: String = null, scores: js.Array[SchemaScoreSubmission] = null): SchemaPlayerScoreSubmissionList = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (scores != null) __obj.updateDynamic("scores")(scores.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlayerScoreSubmissionList]
   }
-  @scala.inline
-  implicit class SchemaPlayerScoreSubmissionListOps[Self <: SchemaPlayerScoreSubmissionList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScores(value: js.Array[SchemaScoreSubmission]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scores")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

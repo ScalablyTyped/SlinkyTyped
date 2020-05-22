@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * @author Stephan Bergmann
   * @version 1.0
   */
-@js.native
 trait XRemoteContentProviderConnectionControl extends XInterface {
   /**
     * Enable connection control, using as a token some object implemented on the remote content provider acceptor's side.
@@ -23,7 +22,7 @@ trait XRemoteContentProviderConnectionControl extends XInterface {
     * @param Acceptor The remote content provider acceptor on the other side of the connection.
     * @param Token Some object implemented on the remote content provider acceptor's side of the connection.
     */
-  def enableConnectionControl(Acceptor: XRemoteContentProviderAcceptor, Token: XInterface): Unit = js.native
+  def enableConnectionControl(Acceptor: XRemoteContentProviderAcceptor, Token: XInterface): Unit
 }
 
 object XRemoteContentProviderConnectionControl {
@@ -37,19 +36,5 @@ object XRemoteContentProviderConnectionControl {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), enableConnectionControl = js.Any.fromFunction2(enableConnectionControl), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XRemoteContentProviderConnectionControl]
   }
-  @scala.inline
-  implicit class XRemoteContentProviderConnectionControlOps[Self <: XRemoteContentProviderConnectionControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableConnectionControl(value: (XRemoteContentProviderAcceptor, XInterface) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableConnectionControl")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

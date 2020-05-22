@@ -30,53 +30,12 @@ trait SchemaMetricDescriptorMetadata extends js.Object {
 
 object SchemaMetricDescriptorMetadata {
   @scala.inline
-  def apply(): SchemaMetricDescriptorMetadata = {
+  def apply(ingestDelay: String = null, launchStage: String = null, samplePeriod: String = null): SchemaMetricDescriptorMetadata = {
     val __obj = js.Dynamic.literal()
+    if (ingestDelay != null) __obj.updateDynamic("ingestDelay")(ingestDelay.asInstanceOf[js.Any])
+    if (launchStage != null) __obj.updateDynamic("launchStage")(launchStage.asInstanceOf[js.Any])
+    if (samplePeriod != null) __obj.updateDynamic("samplePeriod")(samplePeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMetricDescriptorMetadata]
   }
-  @scala.inline
-  implicit class SchemaMetricDescriptorMetadataOps[Self <: SchemaMetricDescriptorMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIngestDelay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIngestDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchStage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launchStage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchStage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launchStage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplePeriod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplePeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplePeriod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

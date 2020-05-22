@@ -6,10 +6,10 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipStyleProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
-import typingsSlinky.uifabricUtilities.ipointMod.IPoint
+import typingsSlinky.uifabricUtilities.pointMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ class SharedBuilder_IKeytipProps415083889[R <: js.Object] (val args: js.Array[js
   @scala.inline
   def hasMenu(value: Boolean): this.type = set("hasMenu", value.asInstanceOf[js.Any])
   @scala.inline
-  def offset(value: IPoint): this.type = set("offset", value.asInstanceOf[js.Any])
+  def offset(value: Point): this.type = set("offset", value.asInstanceOf[js.Any])
   @scala.inline
   def onExecute(value: (/* executeTarget */ HTMLElement | Null, /* target */ HTMLElement | Null) => Unit): this.type = set("onExecute", js.Any.fromFunction2(value))
   @scala.inline
@@ -35,7 +35,7 @@ class SharedBuilder_IKeytipProps415083889[R <: js.Object] (val args: js.Array[js
   @scala.inline
   def overflowSetSequence(value: js.Array[String]): this.type = set("overflowSetSequence", value.asInstanceOf[js.Any])
   @scala.inline
-  def stylesFunction1(value: IKeytipStyleProps => Partial[IKeytipStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def stylesFunction1(value: IKeytipStyleProps => DeepPartial[IKeytipStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   @scala.inline
   def styles(value: IStyleFunctionOrObject[IKeytipStyleProps, IKeytipStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   @scala.inline

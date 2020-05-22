@@ -27,53 +27,12 @@ trait SchemaLine extends js.Object {
 
 object SchemaLine {
   @scala.inline
-  def apply(): SchemaLine = {
+  def apply(lineCategory: String = null, lineProperties: SchemaLineProperties = null, lineType: String = null): SchemaLine = {
     val __obj = js.Dynamic.literal()
+    if (lineCategory != null) __obj.updateDynamic("lineCategory")(lineCategory.asInstanceOf[js.Any])
+    if (lineProperties != null) __obj.updateDynamic("lineProperties")(lineProperties.asInstanceOf[js.Any])
+    if (lineType != null) __obj.updateDynamic("lineType")(lineType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLine]
   }
-  @scala.inline
-  implicit class SchemaLineOps[Self <: SchemaLine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLineCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineProperties(value: SchemaLineProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

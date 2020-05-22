@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResultUpdateResponseModel extends js.Object {
-  var revision: Double = js.native
+  var revision: Double
 }
 
 object ResultUpdateResponseModel {
@@ -15,19 +14,5 @@ object ResultUpdateResponseModel {
     val __obj = js.Dynamic.literal(revision = revision.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultUpdateResponseModel]
   }
-  @scala.inline
-  implicit class ResultUpdateResponseModelOps[Self <: ResultUpdateResponseModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRevision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

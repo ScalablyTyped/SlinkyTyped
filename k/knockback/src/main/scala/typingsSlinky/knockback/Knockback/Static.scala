@@ -3,6 +3,7 @@ package typingsSlinky.knockback.Knockback
 import org.scalajs.dom.raw.Element
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.knockout.KnockoutObservable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,21 +16,21 @@ trait Static extends Utils {
   def applyBindings(viewModel: ViewModel): js.Any = js.native
   def applyBindings(viewModel: ViewModel, node: Element): js.Any = js.native
   def collectionObservable(): CollectionObservable = js.native
-  def collectionObservable(model: Collection[Model]): CollectionObservable = js.native
-  def collectionObservable(model: Collection[Model], options: CollectionOptions): CollectionObservable = js.native
+  def collectionObservable(model: Collection[Model[_, ModelSetOptions]]): CollectionObservable = js.native
+  def collectionObservable(model: Collection[Model[_, ModelSetOptions]], options: CollectionOptions): CollectionObservable = js.native
   def defaultObservable(targetObservable: KnockoutObservable[_], defaultValue: js.Any): KnockoutObservable[_] = js.native
   def formattedObservable(format: String, args: js.Array[_]): KnockoutObservable[_] = js.native
   def formattedObservable(format: KnockoutObservable[_], args: js.Array[_]): KnockoutObservable[_] = js.native
   def localizedObservable(data: js.Any, options: js.Any): KnockoutObservable[_] = js.native
   def observable(
     /** the model to observe (can be null) */
-  model: Model,
+  model: Model[_, ModelSetOptions],
     /** the create options. String is a single attribute name, Array is an array of attribute names. */
   options_attributeName: String
   ): KnockoutObservable[_] = js.native
   def observable(
     /** the model to observe (can be null) */
-  model: Model,
+  model: Model[_, ModelSetOptions],
     /** the create options. String is a single attribute name, Array is an array of attribute names. */
   options_attributeName: String,
     /** the viewModel */
@@ -38,13 +39,13 @@ trait Static extends Utils {
   /** Base class for observing model attributes. */
   def observable(
     /** the model to observe (can be null) */
-  model: Model,
+  model: Model[_, ModelSetOptions],
     /** the create options. String is a single attribute name, Array is an array of attribute names. */
   options: IObservableOptions
   ): KnockoutObservable[_] = js.native
   def observable(
     /** the model to observe (can be null) */
-  model: Model,
+  model: Model[_, ModelSetOptions],
     /** the create options. String is a single attribute name, Array is an array of attribute names. */
   options: IObservableOptions,
     /** the viewModel */
@@ -57,7 +58,7 @@ trait Static extends Utils {
   def renderAutoReleasedTemplate(template: String, viewModel: ViewModel, options: js.Any): js.Any = js.native
   def renderTemplate(template: String, viewModel: ViewModel, options: js.Any): js.Any = js.native
   def viewModel(): KnockoutObservable[_] = js.native
-  def viewModel(model: Model): KnockoutObservable[_] = js.native
-  def viewModel(model: Model, options: js.Any): KnockoutObservable[_] = js.native
+  def viewModel(model: Model[_, ModelSetOptions]): KnockoutObservable[_] = js.native
+  def viewModel(model: Model[_, ModelSetOptions], options: js.Any): KnockoutObservable[_] = js.native
 }
 

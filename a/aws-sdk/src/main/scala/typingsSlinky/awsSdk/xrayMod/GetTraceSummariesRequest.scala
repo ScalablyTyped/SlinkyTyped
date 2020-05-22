@@ -38,89 +38,22 @@ trait GetTraceSummariesRequest extends js.Object {
 
 object GetTraceSummariesRequest {
   @scala.inline
-  def apply(EndTime: js.Date, StartTime: js.Date): GetTraceSummariesRequest = {
+  def apply(
+    EndTime: js.Date,
+    StartTime: js.Date,
+    FilterExpression: FilterExpression = null,
+    NextToken: String = null,
+    Sampling: js.UndefOr[NullableBoolean] = js.undefined,
+    SamplingStrategy: SamplingStrategy = null,
+    TimeRangeType: TimeRangeType = null
+  ): GetTraceSummariesRequest = {
     val __obj = js.Dynamic.literal(EndTime = EndTime.asInstanceOf[js.Any], StartTime = StartTime.asInstanceOf[js.Any])
+    if (FilterExpression != null) __obj.updateDynamic("FilterExpression")(FilterExpression.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(Sampling)) __obj.updateDynamic("Sampling")(Sampling.get.asInstanceOf[js.Any])
+    if (SamplingStrategy != null) __obj.updateDynamic("SamplingStrategy")(SamplingStrategy.asInstanceOf[js.Any])
+    if (TimeRangeType != null) __obj.updateDynamic("TimeRangeType")(TimeRangeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTraceSummariesRequest]
   }
-  @scala.inline
-  implicit class GetTraceSummariesRequestOps[Self <: GetTraceSummariesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilterExpression(value: FilterExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampling(value: NullableBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sampling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sampling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplingStrategy(value: SamplingStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SamplingStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplingStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SamplingStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeRangeType(value: TimeRangeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeRangeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeRangeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeRangeType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

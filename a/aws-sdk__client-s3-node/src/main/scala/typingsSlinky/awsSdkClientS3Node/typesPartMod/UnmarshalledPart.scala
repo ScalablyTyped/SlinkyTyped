@@ -4,40 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledPart extends Part {
   /**
     * <p>Date and time at which the part was uploaded.</p>
     */
   @JSName("LastModified")
-  var LastModified_UnmarshalledPart: js.UndefOr[js.Date] = js.native
+  var LastModified_UnmarshalledPart: js.UndefOr[js.Date] = js.undefined
 }
 
 object UnmarshalledPart {
   @scala.inline
-  def apply(): UnmarshalledPart = {
+  def apply(
+    ETag: String = null,
+    LastModified: js.Date = null,
+    PartNumber: js.UndefOr[Double] = js.undefined,
+    Size: js.UndefOr[Double] = js.undefined
+  ): UnmarshalledPart = {
     val __obj = js.Dynamic.literal()
+    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
+    if (LastModified != null) __obj.updateDynamic("LastModified")(LastModified.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartNumber)) __obj.updateDynamic("PartNumber")(PartNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Size)) __obj.updateDynamic("Size")(Size.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledPart]
   }
-  @scala.inline
-  implicit class UnmarshalledPartOps[Self <: UnmarshalledPart] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastModified(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

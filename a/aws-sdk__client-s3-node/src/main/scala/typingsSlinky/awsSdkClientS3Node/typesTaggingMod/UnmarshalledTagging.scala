@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledTagging extends Tagging {
   /**
     * _TagSet shape
     */
   @JSName("TagSet")
-  var TagSet_UnmarshalledTagging: js.Array[UnmarshalledTag] = js.native
+  var TagSet_UnmarshalledTagging: js.Array[UnmarshalledTag]
 }
 
 object UnmarshalledTagging {
@@ -20,19 +19,5 @@ object UnmarshalledTagging {
     val __obj = js.Dynamic.literal(TagSet = TagSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledTagging]
   }
-  @scala.inline
-  implicit class UnmarshalledTaggingOps[Self <: UnmarshalledTagging] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTagSet(value: js.Array[UnmarshalledTag]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

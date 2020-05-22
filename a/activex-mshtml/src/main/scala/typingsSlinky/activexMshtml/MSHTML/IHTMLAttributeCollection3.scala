@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHTMLAttributeCollection3 extends js.Object {
   @JSName("MSHTML.IHTMLAttributeCollection3_typekey")
-  var MSHTMLDotIHTMLAttributeCollection3_typekey: IHTMLAttributeCollection3 = js.native
-  val length: Double = js.native
-  def getNamedItem(bstrName: String): IHTMLDOMAttribute = js.native
-  def item(index: Double): IHTMLDOMAttribute = js.native
-  def removeNamedItem(bstrName: String): IHTMLDOMAttribute = js.native
-  def setNamedItem(pNodeIn: IHTMLDOMAttribute): IHTMLDOMAttribute = js.native
+  var MSHTMLDotIHTMLAttributeCollection3_typekey: IHTMLAttributeCollection3
+  val length: Double
+  def getNamedItem(bstrName: String): IHTMLDOMAttribute
+  def item(index: Double): IHTMLDOMAttribute
+  def removeNamedItem(bstrName: String): IHTMLDOMAttribute
+  def setNamedItem(pNodeIn: IHTMLDOMAttribute): IHTMLDOMAttribute
 }
 
 object IHTMLAttributeCollection3 {
@@ -29,49 +28,5 @@ object IHTMLAttributeCollection3 {
     __obj.updateDynamic("MSHTML.IHTMLAttributeCollection3_typekey")(MSHTMLDotIHTMLAttributeCollection3_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHTMLAttributeCollection3]
   }
-  @scala.inline
-  implicit class IHTMLAttributeCollection3Ops[Self <: IHTMLAttributeCollection3] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotIHTMLAttributeCollection3_typekey(value: IHTMLAttributeCollection3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.IHTMLAttributeCollection3_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetNamedItem(value: String => IHTMLDOMAttribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNamedItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withItem(value: Double => IHTMLDOMAttribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoveNamedItem(value: String => IHTMLDOMAttribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeNamedItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetNamedItem(value: IHTMLDOMAttribute => IHTMLDOMAttribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNamedItem")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

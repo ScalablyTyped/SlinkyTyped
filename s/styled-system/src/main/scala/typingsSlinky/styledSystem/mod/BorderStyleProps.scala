@@ -9,143 +9,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BorderStyleProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Object {
   /**
     * The border-bottom-style CSS property sets the line style of an element's bottom border.
     *
     * [MDN * reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-style)
     */
-  var borderBottomStyle: js.UndefOr[ResponsiveValue[BorderBottomStyleProperty, ThemeType]] = js.native
+  var borderBottomStyle: js.UndefOr[ResponsiveValue[BorderBottomStyleProperty, ThemeType]] = js.undefined
   /**
     * The border-left-style CSS property sets the line style of an element's left border.
     *
     * [MDN * reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-left-style)
     */
-  var borderLeftStyle: js.UndefOr[ResponsiveValue[BorderLeftStyleProperty, ThemeType]] = js.native
+  var borderLeftStyle: js.UndefOr[ResponsiveValue[BorderLeftStyleProperty, ThemeType]] = js.undefined
   /**
     * The border-right-style CSS property sets the line style of an element's right border.
     *
     * [MDN * reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-right-style)
     */
-  var borderRightStyle: js.UndefOr[ResponsiveValue[BorderRightStyleProperty, ThemeType]] = js.native
+  var borderRightStyle: js.UndefOr[ResponsiveValue[BorderRightStyleProperty, ThemeType]] = js.undefined
   /**
     * The border-style shorthand CSS property sets the style of all sides of an element's border.
     *
     * [MDN * reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style)
     */
-  var borderStyle: js.UndefOr[ResponsiveValue[BorderStyleProperty, ThemeType]] = js.native
+  var borderStyle: js.UndefOr[ResponsiveValue[BorderStyleProperty, ThemeType]] = js.undefined
   /**
     * The border-top-style CSS property sets the line style of an element's top border.
     *
     * [MDN * reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style)
     */
-  var borderTopStyle: js.UndefOr[ResponsiveValue[BorderTopStyleProperty, ThemeType]] = js.native
+  var borderTopStyle: js.UndefOr[ResponsiveValue[BorderTopStyleProperty, ThemeType]] = js.undefined
 }
 
 object BorderStyleProps {
   @scala.inline
-  def apply[ThemeType](): BorderStyleProps[ThemeType] = {
+  def apply[ThemeType](
+    borderBottomStyle: js.UndefOr[Null | (ResponsiveValue[BorderBottomStyleProperty, ThemeType])] = js.undefined,
+    borderLeftStyle: js.UndefOr[Null | (ResponsiveValue[BorderLeftStyleProperty, ThemeType])] = js.undefined,
+    borderRightStyle: js.UndefOr[Null | (ResponsiveValue[BorderRightStyleProperty, ThemeType])] = js.undefined,
+    borderStyle: js.UndefOr[Null | (ResponsiveValue[BorderStyleProperty, ThemeType])] = js.undefined,
+    borderTopStyle: js.UndefOr[Null | (ResponsiveValue[BorderTopStyleProperty, ThemeType])] = js.undefined
+  ): BorderStyleProps[ThemeType] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(borderBottomStyle)) __obj.updateDynamic("borderBottomStyle")(borderBottomStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderLeftStyle)) __obj.updateDynamic("borderLeftStyle")(borderLeftStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderRightStyle)) __obj.updateDynamic("borderRightStyle")(borderRightStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderStyle)) __obj.updateDynamic("borderStyle")(borderStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderTopStyle)) __obj.updateDynamic("borderTopStyle")(borderTopStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[BorderStyleProps[ThemeType]]
   }
-  @scala.inline
-  implicit class BorderStylePropsOps[Self[themetype] <: BorderStyleProps[themetype], ThemeType] (val x: Self[ThemeType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ThemeType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[ThemeType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ThemeType] with Other]
-    @scala.inline
-    def withBorderBottomStyle(value: ResponsiveValue[BorderBottomStyleProperty, ThemeType]): Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBottomStyle: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBottomStyleNull: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withBorderLeftStyle(value: ResponsiveValue[BorderLeftStyleProperty, ThemeType]): Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderLeftStyle: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderLeftStyleNull: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withBorderRightStyle(value: ResponsiveValue[BorderRightStyleProperty, ThemeType]): Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRightStyle: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRightStyleNull: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withBorderStyle(value: ResponsiveValue[BorderStyleProperty, ThemeType]): Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderStyle: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderStyleNull: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withBorderTopStyle(value: ResponsiveValue[BorderTopStyleProperty, ThemeType]): Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderTopStyle: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderTopStyleNull: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopStyle")(null)
-        ret
-    }
-  }
-  
 }
 

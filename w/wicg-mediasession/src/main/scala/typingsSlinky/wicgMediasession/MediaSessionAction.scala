@@ -9,8 +9,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.wicgMediasession.wicgMediasessionStrings.pause
   - typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekbackward
   - typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekforward
+  - typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekto
   - typingsSlinky.wicgMediasession.wicgMediasessionStrings.previoustrack
   - typingsSlinky.wicgMediasession.wicgMediasessionStrings.nexttrack
+  - typingsSlinky.wicgMediasession.wicgMediasessionStrings.skipad
+  - typingsSlinky.wicgMediasession.wicgMediasessionStrings.stop
 */
 trait MediaSessionAction extends js.Object
 
@@ -27,5 +30,11 @@ object MediaSessionAction {
   def seekbackward: typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekbackward = "seekbackward".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekbackward]
   @scala.inline
   def seekforward: typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekforward = "seekforward".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekforward]
+  @scala.inline
+  def seekto: typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekto = "seekto".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekto]
+  @scala.inline
+  def skipad: typingsSlinky.wicgMediasession.wicgMediasessionStrings.skipad = "skipad".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.skipad]
+  @scala.inline
+  def stop: typingsSlinky.wicgMediasession.wicgMediasessionStrings.stop = "stop".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.stop]
 }
 

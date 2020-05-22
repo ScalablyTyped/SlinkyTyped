@@ -1,6 +1,12 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
+import typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus
+import typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairState
+import typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurementStatus
+import typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,12 +29,32 @@ object XboxLive extends js.Object {
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   @js.native
   abstract class XboxLiveEndpointPairCreationResult ()
-    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult
+    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult {
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var deviceAddress: typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveDeviceAddress = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var endpointPair: typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveEndpointPair = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var isExistingPathEvaluation: Boolean = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var status: XboxLiveEndpointPairCreationStatus = js.native
+  }
   
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   @js.native
   abstract class XboxLiveEndpointPairStateChangedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs {
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var newState: XboxLiveEndpointPairState = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var oldState: XboxLiveEndpointPairState = js.native
+  }
   
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   @js.native
@@ -38,23 +64,121 @@ object XboxLive extends js.Object {
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   @js.native
   abstract class XboxLiveInboundEndpointPairCreatedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs {
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var endpointPair: typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveEndpointPair = js.native
+  }
   
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   @js.native
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   class XboxLiveQualityOfServiceMeasurement ()
-    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement
+    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement {
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var deviceAddresses: IVector[typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveDeviceAddress] = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var metricResults: IVectorView[
+        typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult
+      ] = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var metrics: IVector[XboxLiveQualityOfServiceMetric] = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var numberOfProbesToAttempt: Double = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var numberOfResultsPending: Double = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var privatePayloadResults: IVectorView[
+        typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult
+      ] = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var shouldRequestPrivatePayloads: Boolean = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var timeoutInMilliseconds: Double = js.native
+    /**
+      * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @param deviceAddress This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @param metric This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      */
+    /* CompleteClass */
+    override def getMetricResult(
+      deviceAddress: typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveDeviceAddress,
+      metric: XboxLiveQualityOfServiceMetric
+    ): typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult = js.native
+    /**
+      * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @param deviceAddress This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      */
+    /* CompleteClass */
+    override def getMetricResultsForDevice(deviceAddress: typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveDeviceAddress): IVectorView[
+        typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult
+      ] = js.native
+    /**
+      * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @param metric This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      */
+    /* CompleteClass */
+    override def getMetricResultsForMetric(metric: XboxLiveQualityOfServiceMetric): IVectorView[
+        typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult
+      ] = js.native
+    /**
+      * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @param deviceAddress This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      */
+    /* CompleteClass */
+    override def getPrivatePayloadResult(deviceAddress: typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveDeviceAddress): typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult = js.native
+    /**
+      * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+      */
+    /* CompleteClass */
+    override def measureAsync(): IPromiseWithIAsyncAction = js.native
+  }
   
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   @js.native
   abstract class XboxLiveQualityOfServiceMetricResult ()
-    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult
+    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult {
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var deviceAddress: typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveDeviceAddress = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var metric: XboxLiveQualityOfServiceMetric = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var status: XboxLiveQualityOfServiceMeasurementStatus = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var value: Double = js.native
+  }
   
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   @js.native
   abstract class XboxLiveQualityOfServicePrivatePayloadResult ()
-    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult
+    extends typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult {
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var deviceAddress: typingsSlinky.winrtUwp.Windows.Networking.XboxLive.XboxLiveDeviceAddress = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var status: XboxLiveQualityOfServiceMeasurementStatus = js.native
+    /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+    /* CompleteClass */
+    override var value: IBuffer = js.native
+  }
   
   /* static members */
   @js.native

@@ -7,68 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Renderers extends js.Object {
-  var body: js.UndefOr[Row] = js.native
-  var header: js.UndefOr[Cell] = js.native
-  var table: js.UndefOr[String | js.Function0[ReactElement]] = js.native
+  var body: js.UndefOr[Row] = js.undefined
+  var header: js.UndefOr[Cell] = js.undefined
+  var table: js.UndefOr[String | js.Function0[ReactElement]] = js.undefined
 }
 
 object Renderers {
   @scala.inline
-  def apply(): Renderers = {
+  def apply(body: Row = null, header: Cell = null, table: String | js.Function0[ReactElement] = null): Renderers = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[Renderers]
   }
-  @scala.inline
-  implicit class RenderersOps[Self <: Renderers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Row): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: Cell): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableFunction0(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTable(value: String | js.Function0[ReactElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

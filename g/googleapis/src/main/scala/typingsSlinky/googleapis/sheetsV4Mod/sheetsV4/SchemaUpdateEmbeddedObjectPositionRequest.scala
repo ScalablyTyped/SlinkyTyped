@@ -33,53 +33,16 @@ trait SchemaUpdateEmbeddedObjectPositionRequest extends js.Object {
 
 object SchemaUpdateEmbeddedObjectPositionRequest {
   @scala.inline
-  def apply(): SchemaUpdateEmbeddedObjectPositionRequest = {
+  def apply(
+    fields: String = null,
+    newPosition: SchemaEmbeddedObjectPosition = null,
+    objectId: js.UndefOr[Double] = js.undefined
+  ): SchemaUpdateEmbeddedObjectPositionRequest = {
     val __obj = js.Dynamic.literal()
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (newPosition != null) __obj.updateDynamic("newPosition")(newPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(objectId)) __obj.updateDynamic("objectId")(objectId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateEmbeddedObjectPositionRequest]
   }
-  @scala.inline
-  implicit class SchemaUpdateEmbeddedObjectPositionRequestOps[Self <: SchemaUpdateEmbeddedObjectPositionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewPosition(value: SchemaEmbeddedObjectPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

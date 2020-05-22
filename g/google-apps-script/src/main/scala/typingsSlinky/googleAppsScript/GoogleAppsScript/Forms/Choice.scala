@@ -27,12 +27,11 @@ import scala.scalajs.js.annotation._
   *                choices[i].getPageNavigationType());
   *     }
   */
-@js.native
 trait Choice extends js.Object {
-  def getGotoPage(): PageBreakItem = js.native
-  def getPageNavigationType(): PageNavigationType = js.native
-  def getValue(): String = js.native
-  def isCorrectAnswer(): Boolean = js.native
+  def getGotoPage(): PageBreakItem
+  def getPageNavigationType(): PageNavigationType
+  def getValue(): String
+  def isCorrectAnswer(): Boolean
 }
 
 object Choice {
@@ -46,37 +45,5 @@ object Choice {
     val __obj = js.Dynamic.literal(getGotoPage = js.Any.fromFunction0(getGotoPage), getPageNavigationType = js.Any.fromFunction0(getPageNavigationType), getValue = js.Any.fromFunction0(getValue), isCorrectAnswer = js.Any.fromFunction0(isCorrectAnswer))
     __obj.asInstanceOf[Choice]
   }
-  @scala.inline
-  implicit class ChoiceOps[Self <: Choice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetGotoPage(value: () => PageBreakItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGotoPage")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPageNavigationType(value: () => PageNavigationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPageNavigationType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetValue(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsCorrectAnswer(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCorrectAnswer")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

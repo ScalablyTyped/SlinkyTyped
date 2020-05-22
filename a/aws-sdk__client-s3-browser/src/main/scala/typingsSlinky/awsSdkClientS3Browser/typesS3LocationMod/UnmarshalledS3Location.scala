@@ -1,5 +1,16 @@
 package typingsSlinky.awsSdkClientS3Browser.typesS3LocationMod
 
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.ONEZONE_IA
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.REDUCED_REDUNDANCY
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.STANDARD
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.STANDARD_IA
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`authenticated-read`
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`aws-exec-read`
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`bucket-owner-full-control`
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`bucket-owner-read`
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`private`
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`public-read-write`
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`public-read`
 import typingsSlinky.awsSdkClientS3Browser.typesEncryptionMod.UnmarshalledEncryption
 import typingsSlinky.awsSdkClientS3Browser.typesGrantMod.UnmarshalledGrant
 import typingsSlinky.awsSdkClientS3Browser.typesMetadataEntryMod.UnmarshalledMetadataEntry
@@ -8,91 +19,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledS3Location extends S3Location {
   /**
     * <p>A list of grants that control access to the staged results.</p>
     */
   @JSName("AccessControlList")
-  var AccessControlList_UnmarshalledS3Location: js.UndefOr[js.Array[UnmarshalledGrant]] = js.native
+  var AccessControlList_UnmarshalledS3Location: js.UndefOr[js.Array[UnmarshalledGrant]] = js.undefined
   /**
     * <p>Describes the server-side encryption that will be applied to the restore results.</p>
     */
   @JSName("Encryption")
-  var Encryption_UnmarshalledS3Location: js.UndefOr[UnmarshalledEncryption] = js.native
+  var Encryption_UnmarshalledS3Location: js.UndefOr[UnmarshalledEncryption] = js.undefined
   /**
     * <p>The tag-set that is applied to the restore results.</p>
     */
   @JSName("Tagging")
-  var Tagging_UnmarshalledS3Location: js.UndefOr[UnmarshalledTagging] = js.native
+  var Tagging_UnmarshalledS3Location: js.UndefOr[UnmarshalledTagging] = js.undefined
   /**
     * <p>A list of metadata to store with the restore results in S3.</p>
     */
   @JSName("UserMetadata")
-  var UserMetadata_UnmarshalledS3Location: js.UndefOr[js.Array[UnmarshalledMetadataEntry]] = js.native
+  var UserMetadata_UnmarshalledS3Location: js.UndefOr[js.Array[UnmarshalledMetadataEntry]] = js.undefined
 }
 
 object UnmarshalledS3Location {
   @scala.inline
-  def apply(BucketName: String, Prefix: String): UnmarshalledS3Location = {
+  def apply(
+    BucketName: String,
+    Prefix: String,
+    AccessControlList: js.Array[UnmarshalledGrant] = null,
+    CannedACL: `private` | `public-read` | `public-read-write` | `authenticated-read` | `aws-exec-read` | `bucket-owner-read` | `bucket-owner-full-control` | String = null,
+    Encryption: UnmarshalledEncryption = null,
+    StorageClass: STANDARD | REDUCED_REDUNDANCY | STANDARD_IA | ONEZONE_IA | String = null,
+    Tagging: UnmarshalledTagging = null,
+    UserMetadata: js.Array[UnmarshalledMetadataEntry] = null
+  ): UnmarshalledS3Location = {
     val __obj = js.Dynamic.literal(BucketName = BucketName.asInstanceOf[js.Any], Prefix = Prefix.asInstanceOf[js.Any])
+    if (AccessControlList != null) __obj.updateDynamic("AccessControlList")(AccessControlList.asInstanceOf[js.Any])
+    if (CannedACL != null) __obj.updateDynamic("CannedACL")(CannedACL.asInstanceOf[js.Any])
+    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
+    if (Tagging != null) __obj.updateDynamic("Tagging")(Tagging.asInstanceOf[js.Any])
+    if (UserMetadata != null) __obj.updateDynamic("UserMetadata")(UserMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledS3Location]
   }
-  @scala.inline
-  implicit class UnmarshalledS3LocationOps[Self <: UnmarshalledS3Location] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessControlList(value: js.Array[UnmarshalledGrant]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessControlList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryption(value: UnmarshalledEncryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagging(value: UnmarshalledTagging): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tagging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tagging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserMetadata(value: js.Array[UnmarshalledMetadataEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

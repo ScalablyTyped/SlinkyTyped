@@ -1,34 +1,45 @@
 package typingsSlinky.cytoscape.mod
 
+import typingsSlinky.cytoscape.mod.Css.Edge
+import typingsSlinky.cytoscape.mod.Css.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EdgeDefinition extends ElementDefinition {
   @JSName("data")
-  var data_EdgeDefinition: EdgeDataDefinition = js.native
+  var data_EdgeDefinition: EdgeDataDefinition
 }
 
 object EdgeDefinition {
   @scala.inline
-  def apply(data: EdgeDataDefinition): EdgeDefinition = {
+  def apply(
+    data: EdgeDataDefinition,
+    classes: String = null,
+    css: Node | Edge = null,
+    grabbable: js.UndefOr[Boolean] = js.undefined,
+    group: ElementGroup = null,
+    locked: js.UndefOr[Boolean] = js.undefined,
+    position: Position = null,
+    renderedPosition: Position = null,
+    scratch: Scratchpad = null,
+    selectable: js.UndefOr[Boolean] = js.undefined,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    style: CssStyleDeclaration = null
+  ): EdgeDefinition = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (!js.isUndefined(grabbable)) __obj.updateDynamic("grabbable")(grabbable.get.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (!js.isUndefined(locked)) __obj.updateDynamic("locked")(locked.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (renderedPosition != null) __obj.updateDynamic("renderedPosition")(renderedPosition.asInstanceOf[js.Any])
+    if (scratch != null) __obj.updateDynamic("scratch")(scratch.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[EdgeDefinition]
   }
-  @scala.inline
-  implicit class EdgeDefinitionOps[Self <: EdgeDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: EdgeDataDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

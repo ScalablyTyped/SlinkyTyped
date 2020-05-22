@@ -5,179 +5,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<rbx.rbx/base/helpers/variables.VariablesDefinitions> */
-@js.native
 trait PartialVariablesDefinitio extends js.Object {
-  var badgeSizes: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var breakpoints: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var breakpointsLimited: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var colors: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var displays: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var floatPulledAlignments: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var shades: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var textAlignments: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var textSizes: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var textTransforms: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var textWeights: js.UndefOr[ReadonlyArraystringnumber] = js.native
-  var tooltipPositions: js.UndefOr[ReadonlyArraystringnumber] = js.native
+  var badgeSizes: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var breakpoints: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var breakpointsLimited: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var colors: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var displays: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var floatPulledAlignments: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var shades: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var textAlignments: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var textSizes: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var textTransforms: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var textWeights: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
+  var tooltipPositions: js.UndefOr[ReadonlyArraystringnumber] = js.undefined
 }
 
 object PartialVariablesDefinitio {
   @scala.inline
-  def apply(): PartialVariablesDefinitio = {
+  def apply(
+    badgeSizes: ReadonlyArraystringnumber = null,
+    breakpoints: ReadonlyArraystringnumber = null,
+    breakpointsLimited: ReadonlyArraystringnumber = null,
+    colors: ReadonlyArraystringnumber = null,
+    displays: ReadonlyArraystringnumber = null,
+    floatPulledAlignments: ReadonlyArraystringnumber = null,
+    shades: ReadonlyArraystringnumber = null,
+    textAlignments: ReadonlyArraystringnumber = null,
+    textSizes: ReadonlyArraystringnumber = null,
+    textTransforms: ReadonlyArraystringnumber = null,
+    textWeights: ReadonlyArraystringnumber = null,
+    tooltipPositions: ReadonlyArraystringnumber = null
+  ): PartialVariablesDefinitio = {
     val __obj = js.Dynamic.literal()
+    if (badgeSizes != null) __obj.updateDynamic("badgeSizes")(badgeSizes.asInstanceOf[js.Any])
+    if (breakpoints != null) __obj.updateDynamic("breakpoints")(breakpoints.asInstanceOf[js.Any])
+    if (breakpointsLimited != null) __obj.updateDynamic("breakpointsLimited")(breakpointsLimited.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (displays != null) __obj.updateDynamic("displays")(displays.asInstanceOf[js.Any])
+    if (floatPulledAlignments != null) __obj.updateDynamic("floatPulledAlignments")(floatPulledAlignments.asInstanceOf[js.Any])
+    if (shades != null) __obj.updateDynamic("shades")(shades.asInstanceOf[js.Any])
+    if (textAlignments != null) __obj.updateDynamic("textAlignments")(textAlignments.asInstanceOf[js.Any])
+    if (textSizes != null) __obj.updateDynamic("textSizes")(textSizes.asInstanceOf[js.Any])
+    if (textTransforms != null) __obj.updateDynamic("textTransforms")(textTransforms.asInstanceOf[js.Any])
+    if (textWeights != null) __obj.updateDynamic("textWeights")(textWeights.asInstanceOf[js.Any])
+    if (tooltipPositions != null) __obj.updateDynamic("tooltipPositions")(tooltipPositions.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialVariablesDefinitio]
   }
-  @scala.inline
-  implicit class PartialVariablesDefinitioOps[Self <: PartialVariablesDefinitio] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBadgeSizes(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadgeSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreakpoints(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreakpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreakpointsLimited(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpointsLimited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreakpointsLimited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpointsLimited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColors(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplays(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatPulledAlignments(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatPulledAlignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatPulledAlignments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatPulledAlignments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShades(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shades")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShades: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shades")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAlignments(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlignments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlignments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextSizes(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextTransforms(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextTransforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransforms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextWeights(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textWeights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextWeights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textWeights")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipPositions(value: ReadonlyArraystringnumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPositions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipPositions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPositions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,29 +19,10 @@ trait SchemaResourceUtilizationReport extends js.Object {
 
 object SchemaResourceUtilizationReport {
   @scala.inline
-  def apply(): SchemaResourceUtilizationReport = {
+  def apply(cpuTime: js.Array[SchemaCPUTime] = null): SchemaResourceUtilizationReport = {
     val __obj = js.Dynamic.literal()
+    if (cpuTime != null) __obj.updateDynamic("cpuTime")(cpuTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourceUtilizationReport]
   }
-  @scala.inline
-  implicit class SchemaResourceUtilizationReportOps[Self <: SchemaResourceUtilizationReport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCpuTime(value: js.Array[SchemaCPUTime]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpuTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

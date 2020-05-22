@@ -43,113 +43,26 @@ trait GetOrganizationsAccessReportResponse extends js.Object {
 
 object GetOrganizationsAccessReportResponse {
   @scala.inline
-  def apply(JobCreationDate: js.Date, JobStatus: jobStatusType): GetOrganizationsAccessReportResponse = {
+  def apply(
+    JobCreationDate: js.Date,
+    JobStatus: jobStatusType,
+    AccessDetails: AccessDetails = null,
+    ErrorDetails: ErrorDetails = null,
+    IsTruncated: js.UndefOr[booleanType] = js.undefined,
+    JobCompletionDate: js.Date = null,
+    Marker: markerType = null,
+    NumberOfServicesAccessible: js.UndefOr[integerType] = js.undefined,
+    NumberOfServicesNotAccessed: js.UndefOr[integerType] = js.undefined
+  ): GetOrganizationsAccessReportResponse = {
     val __obj = js.Dynamic.literal(JobCreationDate = JobCreationDate.asInstanceOf[js.Any], JobStatus = JobStatus.asInstanceOf[js.Any])
+    if (AccessDetails != null) __obj.updateDynamic("AccessDetails")(AccessDetails.asInstanceOf[js.Any])
+    if (ErrorDetails != null) __obj.updateDynamic("ErrorDetails")(ErrorDetails.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsTruncated)) __obj.updateDynamic("IsTruncated")(IsTruncated.get.asInstanceOf[js.Any])
+    if (JobCompletionDate != null) __obj.updateDynamic("JobCompletionDate")(JobCompletionDate.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfServicesAccessible)) __obj.updateDynamic("NumberOfServicesAccessible")(NumberOfServicesAccessible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfServicesNotAccessed)) __obj.updateDynamic("NumberOfServicesNotAccessed")(NumberOfServicesNotAccessed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOrganizationsAccessReportResponse]
   }
-  @scala.inline
-  implicit class GetOrganizationsAccessReportResponseOps[Self <: GetOrganizationsAccessReportResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobCreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobStatus(value: jobStatusType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessDetails(value: AccessDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorDetails(value: ErrorDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTruncated(value: booleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTruncated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobCompletionDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobCompletionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobCompletionDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobCompletionDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: markerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfServicesAccessible(value: integerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfServicesAccessible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfServicesAccessible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfServicesAccessible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfServicesNotAccessed(value: integerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfServicesNotAccessed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfServicesNotAccessed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfServicesNotAccessed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

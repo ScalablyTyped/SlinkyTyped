@@ -5,79 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Parameters for the `createTokenizationDictionary` operation. */
-@js.native
 trait CreateTokenizationDictionaryParams extends js.Object {
   /** The ID of the collection. */
-  var collection_id: String = js.native
+  var collection_id: String
   /** The ID of the environment. */
-  var environment_id: String = js.native
-  var headers: js.UndefOr[js.Object] = js.native
-  var return_response: js.UndefOr[Boolean] = js.native
+  var environment_id: String
+  var headers: js.UndefOr[js.Object] = js.undefined
+  var return_response: js.UndefOr[Boolean] = js.undefined
   /** An array of tokenization rules. Each rule contains, the original `text` string, component `tokens`, any alternate character set `readings`, and which `part_of_speech` the text is from. */
-  var tokenization_rules: js.UndefOr[js.Array[TokenDictRule]] = js.native
+  var tokenization_rules: js.UndefOr[js.Array[TokenDictRule]] = js.undefined
 }
 
 object CreateTokenizationDictionaryParams {
   @scala.inline
-  def apply(collection_id: String, environment_id: String): CreateTokenizationDictionaryParams = {
+  def apply(
+    collection_id: String,
+    environment_id: String,
+    headers: js.Object = null,
+    return_response: js.UndefOr[Boolean] = js.undefined,
+    tokenization_rules: js.Array[TokenDictRule] = null
+  ): CreateTokenizationDictionaryParams = {
     val __obj = js.Dynamic.literal(collection_id = collection_id.asInstanceOf[js.Any], environment_id = environment_id.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (!js.isUndefined(return_response)) __obj.updateDynamic("return_response")(return_response.get.asInstanceOf[js.Any])
+    if (tokenization_rules != null) __obj.updateDynamic("tokenization_rules")(tokenization_rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTokenizationDictionaryParams]
   }
-  @scala.inline
-  implicit class CreateTokenizationDictionaryParamsOps[Self <: CreateTokenizationDictionaryParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollection_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturn_response(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturn_response: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenization_rules(value: js.Array[TokenDictRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenization_rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenization_rules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenization_rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

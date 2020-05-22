@@ -9,309 +9,81 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<semantic-ui-accordion.SemanticUI.AccordionSettings._Impl, keyof semantic-ui-accordion.SemanticUI.AccordionSettings._Impl>> */
-@js.native
 trait PartialPickImplkeyofImpl extends js.Object {
-  var animateChildren: js.UndefOr[Boolean] = js.native
-  var className: js.UndefOr[ClassNameSettings] = js.native
-  var closeNested: js.UndefOr[Boolean] = js.native
-  var collapsible: js.UndefOr[Boolean] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var easing: js.UndefOr[String] = js.native
-  var error: js.UndefOr[ErrorSettings] = js.native
-  var exclusive: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var namespace: js.UndefOr[String] = js.native
-  var observeChanges: js.UndefOr[Boolean] = js.native
-  var on: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onClose: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onClosing: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onOpen: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onOpening: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var performance: js.UndefOr[Boolean] = js.native
-  var selector: js.UndefOr[SelectorSettings] = js.native
-  var silent: js.UndefOr[Boolean] = js.native
-  var verbose: js.UndefOr[Boolean] = js.native
+  var animateChildren: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[ClassNameSettings] = js.undefined
+  var closeNested: js.UndefOr[Boolean] = js.undefined
+  var collapsible: js.UndefOr[Boolean] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var easing: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[ErrorSettings] = js.undefined
+  var exclusive: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var namespace: js.UndefOr[String] = js.undefined
+  var observeChanges: js.UndefOr[Boolean] = js.undefined
+  var on: js.UndefOr[String] = js.undefined
+  var onChange: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onClose: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onClosing: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onOpen: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onOpening: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var performance: js.UndefOr[Boolean] = js.undefined
+  var selector: js.UndefOr[SelectorSettings] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.undefined
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialPickImplkeyofImpl {
   @scala.inline
-  def apply(): PartialPickImplkeyofImpl = {
+  def apply(
+    animateChildren: js.UndefOr[Boolean] = js.undefined,
+    className: ClassNameSettings = null,
+    closeNested: js.UndefOr[Boolean] = js.undefined,
+    collapsible: js.UndefOr[Boolean] = js.undefined,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    easing: String = null,
+    error: ErrorSettings = null,
+    exclusive: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    namespace: String = null,
+    observeChanges: js.UndefOr[Boolean] = js.undefined,
+    on: String = null,
+    onChange: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onClose: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onClosing: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onOpen: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onOpening: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    performance: js.UndefOr[Boolean] = js.undefined,
+    selector: SelectorSettings = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    verbose: js.UndefOr[Boolean] = js.undefined
+  ): PartialPickImplkeyofImpl = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animateChildren)) __obj.updateDynamic("animateChildren")(animateChildren.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeNested)) __obj.updateDynamic("closeNested")(closeNested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsible)) __obj.updateDynamic("collapsible")(collapsible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(observeChanges)) __obj.updateDynamic("observeChanges")(observeChanges.get.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(onClose.asInstanceOf[js.Any])
+    if (onClosing != null) __obj.updateDynamic("onClosing")(onClosing.asInstanceOf[js.Any])
+    if (onOpen != null) __obj.updateDynamic("onOpen")(onOpen.asInstanceOf[js.Any])
+    if (onOpening != null) __obj.updateDynamic("onOpening")(onOpening.asInstanceOf[js.Any])
+    if (!js.isUndefined(performance)) __obj.updateDynamic("performance")(performance.get.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickImplkeyofImpl]
   }
-  @scala.inline
-  implicit class PartialPickImplkeyofImplOps[Self <: PartialPickImplkeyofImpl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimateChildren(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimateChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateChildren")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: ClassNameSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseNested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeNested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseNested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeNested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: ErrorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclusive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObserveChanges(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observeChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObserveChanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observeChanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClosing(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClosing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnClosing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClosing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpen(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpening(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpening")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnOpening: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpening")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: SelectorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -25,53 +25,12 @@ trait SchemaClusterOperation extends js.Object {
 
 object SchemaClusterOperation {
   @scala.inline
-  def apply(): SchemaClusterOperation = {
+  def apply(done: js.UndefOr[Boolean] = js.undefined, error: String = null, operationId: String = null): SchemaClusterOperation = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(done)) __obj.updateDynamic("done")(done.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClusterOperation]
   }
-  @scala.inline
-  implicit class SchemaClusterOperationOps[Self <: SchemaClusterOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

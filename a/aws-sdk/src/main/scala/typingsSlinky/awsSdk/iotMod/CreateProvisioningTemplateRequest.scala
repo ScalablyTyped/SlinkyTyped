@@ -15,6 +15,10 @@ trait CreateProvisioningTemplateRequest extends js.Object {
     */
   var enabled: js.UndefOr[Enabled] = js.native
   /**
+    * Creates a pre-provisioning hook template.
+    */
+  var preProvisioningHook: js.UndefOr[ProvisioningHook] = js.native
+  /**
     * The role ARN for the role associated with the fleet provisioning template. This IoT role grants permission to provision a device.
     */
   var provisioningRoleArn: RoleArn = js.native
@@ -34,71 +38,21 @@ trait CreateProvisioningTemplateRequest extends js.Object {
 
 object CreateProvisioningTemplateRequest {
   @scala.inline
-  def apply(provisioningRoleArn: RoleArn, templateBody: TemplateBody, templateName: TemplateName): CreateProvisioningTemplateRequest = {
+  def apply(
+    provisioningRoleArn: RoleArn,
+    templateBody: TemplateBody,
+    templateName: TemplateName,
+    description: TemplateDescription = null,
+    enabled: js.UndefOr[Enabled] = js.undefined,
+    preProvisioningHook: ProvisioningHook = null,
+    tags: TagList = null
+  ): CreateProvisioningTemplateRequest = {
     val __obj = js.Dynamic.literal(provisioningRoleArn = provisioningRoleArn.asInstanceOf[js.Any], templateBody = templateBody.asInstanceOf[js.Any], templateName = templateName.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (preProvisioningHook != null) __obj.updateDynamic("preProvisioningHook")(preProvisioningHook.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProvisioningTemplateRequest]
   }
-  @scala.inline
-  implicit class CreateProvisioningTemplateRequestOps[Self <: CreateProvisioningTemplateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvisioningRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provisioningRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplateBody(value: TemplateBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplateName(value: TemplateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: TemplateDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

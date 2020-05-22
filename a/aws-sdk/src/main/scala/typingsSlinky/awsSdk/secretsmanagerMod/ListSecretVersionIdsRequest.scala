@@ -26,59 +26,17 @@ trait ListSecretVersionIdsRequest extends js.Object {
 
 object ListSecretVersionIdsRequest {
   @scala.inline
-  def apply(SecretId: SecretIdType): ListSecretVersionIdsRequest = {
+  def apply(
+    SecretId: SecretIdType,
+    IncludeDeprecated: js.UndefOr[BooleanType] = js.undefined,
+    MaxResults: js.UndefOr[MaxResultsType] = js.undefined,
+    NextToken: NextTokenType = null
+  ): ListSecretVersionIdsRequest = {
     val __obj = js.Dynamic.literal(SecretId = SecretId.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeDeprecated)) __obj.updateDynamic("IncludeDeprecated")(IncludeDeprecated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSecretVersionIdsRequest]
   }
-  @scala.inline
-  implicit class ListSecretVersionIdsRequestOps[Self <: ListSecretVersionIdsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecretId(value: SecretIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeDeprecated(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeDeprecated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeDeprecated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeDeprecated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResultsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextTokenType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

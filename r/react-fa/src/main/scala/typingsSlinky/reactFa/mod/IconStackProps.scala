@@ -6,57 +6,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IconStackProps extends SizeOverrideHTMLProps[ReactComponentClass[IconStackProps]] {
   @JSName("children")
-  var children_IconStackProps: js.UndefOr[ReactElement | js.Array[ReactElement]] = js.native
+  var children_IconStackProps: js.UndefOr[ReactElement | js.Array[ReactElement]] = js.undefined
   @JSName("size")
-  var size_IconStackProps: js.UndefOr[IconSize] = js.native
+  var size_IconStackProps: js.UndefOr[IconSize] = js.undefined
 }
 
 object IconStackProps {
   @scala.inline
-  def apply(): IconStackProps = {
+  def apply(
+    SizeOverrideHTMLProps: SizeOverrideHTMLProps[ReactComponentClass[IconStackProps]] = null,
+    children: ReactElement | js.Array[ReactElement] = null,
+    size: IconSize = null
+  ): IconStackProps = {
     val __obj = js.Dynamic.literal()
+    if (SizeOverrideHTMLProps != null) js.Dynamic.global.Object.assign(__obj, SizeOverrideHTMLProps)
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[IconStackProps]
   }
-  @scala.inline
-  implicit class IconStackPropsOps[Self <: IconStackProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: ReactElement | js.Array[ReactElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: IconSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -33,77 +33,20 @@ trait SchemaTableCell extends js.Object {
 
 object SchemaTableCell {
   @scala.inline
-  def apply(): SchemaTableCell = {
+  def apply(
+    columnSpan: js.UndefOr[Double] = js.undefined,
+    location: SchemaTableCellLocation = null,
+    rowSpan: js.UndefOr[Double] = js.undefined,
+    tableCellProperties: SchemaTableCellProperties = null,
+    text: SchemaTextContent = null
+  ): SchemaTableCell = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(columnSpan)) __obj.updateDynamic("columnSpan")(columnSpan.get.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowSpan)) __obj.updateDynamic("rowSpan")(rowSpan.get.asInstanceOf[js.Any])
+    if (tableCellProperties != null) __obj.updateDynamic("tableCellProperties")(tableCellProperties.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableCell]
   }
-  @scala.inline
-  implicit class SchemaTableCellOps[Self <: SchemaTableCell] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnSpan(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: SchemaTableCellLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowSpan(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableCellProperties(value: SchemaTableCellProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableCellProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: SchemaTextContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

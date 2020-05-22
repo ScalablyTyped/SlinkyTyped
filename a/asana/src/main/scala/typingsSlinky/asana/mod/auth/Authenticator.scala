@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * establishing credentials and applying them to outgoing requests.
   * @constructor
   */
-@js.native
 trait Authenticator extends js.Object {
   /**
     * Establishes credentials.
@@ -19,7 +18,7 @@ trait Authenticator extends js.Object {
     *     completed and `authenticateRequest` calls can expect to succeed.
     * @return
     */
-  def establishCredentials(): typingsSlinky.bluebird.mod.^[Unit] = js.native
+  def establishCredentials(): typingsSlinky.bluebird.mod.^[Unit]
   /**
     * Attempts to refresh credentials, if possible, given the current credentials.
     *
@@ -28,7 +27,7 @@ trait Authenticator extends js.Object {
     *     resolves to `false`.
     * @return
     */
-  def refreshCredentials(): typingsSlinky.bluebird.mod.^[Boolean] = js.native
+  def refreshCredentials(): typingsSlinky.bluebird.mod.^[Boolean]
 }
 
 object Authenticator {
@@ -40,25 +39,5 @@ object Authenticator {
     val __obj = js.Dynamic.literal(establishCredentials = js.Any.fromFunction0(establishCredentials), refreshCredentials = js.Any.fromFunction0(refreshCredentials))
     __obj.asInstanceOf[Authenticator]
   }
-  @scala.inline
-  implicit class AuthenticatorOps[Self <: Authenticator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEstablishCredentials(value: () => typingsSlinky.bluebird.mod.^[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("establishCredentials")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRefreshCredentials(value: () => typingsSlinky.bluebird.mod.^[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshCredentials")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -62,173 +62,36 @@ trait ImportImageRequest extends js.Object {
 
 object ImportImageRequest {
   @scala.inline
-  def apply(): ImportImageRequest = {
+  def apply(
+    Architecture: String = null,
+    ClientData: ClientData = null,
+    ClientToken: String = null,
+    Description: String = null,
+    DiskContainers: ImageDiskContainerList = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    Encrypted: js.UndefOr[Boolean] = js.undefined,
+    Hypervisor: String = null,
+    KmsKeyId: KmsKeyId = null,
+    LicenseSpecifications: ImportImageLicenseSpecificationListRequest = null,
+    LicenseType: String = null,
+    Platform: String = null,
+    RoleName: String = null
+  ): ImportImageRequest = {
     val __obj = js.Dynamic.literal()
+    if (Architecture != null) __obj.updateDynamic("Architecture")(Architecture.asInstanceOf[js.Any])
+    if (ClientData != null) __obj.updateDynamic("ClientData")(ClientData.asInstanceOf[js.Any])
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (DiskContainers != null) __obj.updateDynamic("DiskContainers")(DiskContainers.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Encrypted)) __obj.updateDynamic("Encrypted")(Encrypted.get.asInstanceOf[js.Any])
+    if (Hypervisor != null) __obj.updateDynamic("Hypervisor")(Hypervisor.asInstanceOf[js.Any])
+    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
+    if (LicenseSpecifications != null) __obj.updateDynamic("LicenseSpecifications")(LicenseSpecifications.asInstanceOf[js.Any])
+    if (LicenseType != null) __obj.updateDynamic("LicenseType")(LicenseType.asInstanceOf[js.Any])
+    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
+    if (RoleName != null) __obj.updateDynamic("RoleName")(RoleName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportImageRequest]
   }
-  @scala.inline
-  implicit class ImportImageRequestOps[Self <: ImportImageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArchitecture(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchitecture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientData(value: ClientData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskContainers(value: ImageDiskContainerList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskContainers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskContainers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskContainers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHypervisor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hypervisor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHypervisor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hypervisor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyId(value: KmsKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseSpecifications(value: ImportImageLicenseSpecificationListRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseSpecifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseSpecifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseSpecifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

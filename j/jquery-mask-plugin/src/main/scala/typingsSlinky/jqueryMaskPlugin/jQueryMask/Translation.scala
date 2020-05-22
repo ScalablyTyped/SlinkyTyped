@@ -5,37 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Translation
   extends /* key */ StringDictionary[js.UndefOr[Pattern | js.Object]] {
-  var placeholder: js.UndefOr[String] = js.native
+  var placeholder: js.UndefOr[String] = js.undefined
 }
 
 object Translation {
   @scala.inline
-  def apply(): Translation = {
+  def apply(
+    StringDictionary: /* key */ StringDictionary[js.UndefOr[Pattern | js.Object]] = null,
+    placeholder: String = null
+  ): Translation = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     __obj.asInstanceOf[Translation]
   }
-  @scala.inline
-  implicit class TranslationOps[Self <: Translation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,12 @@
 package typingsSlinky.winrt.global.Windows.Media
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
+import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
+import typingsSlinky.winrt.Windows.Foundation.IAsyncAction
+import typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnectionError
+import typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnectionState
+import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStreamReference
+import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStreamWithContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,67 +16,221 @@ import scala.scalajs.js.annotation._
 object PlayTo extends js.Object {
   @js.native
   class CurrentTimeChangeRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs {
+    /* CompleteClass */
+    override var time: Double = js.native
+  }
   
   @js.native
   class MuteChangeRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.MuteChangeRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.MuteChangeRequestedEventArgs {
+    /* CompleteClass */
+    override var mute: Boolean = js.native
+  }
   
   @js.native
   class PlayToConnection ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnection
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnection {
+    /* CompleteClass */
+    override var onerror: js.Any = js.native
+    /* CompleteClass */
+    override var onstatechanged: js.Any = js.native
+    /* CompleteClass */
+    override var ontransferred: js.Any = js.native
+    /* CompleteClass */
+    override var state: PlayToConnectionState = js.native
+  }
   
   @js.native
   class PlayToConnectionErrorEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnectionErrorEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnectionErrorEventArgs {
+    /* CompleteClass */
+    override var code: PlayToConnectionError = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+  }
   
   @js.native
   class PlayToConnectionStateChangedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs {
+    /* CompleteClass */
+    override var currentState: PlayToConnectionState = js.native
+    /* CompleteClass */
+    override var previousState: PlayToConnectionState = js.native
+  }
   
   @js.native
   class PlayToConnectionTransferredEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs {
+    /* CompleteClass */
+    override var currentSource: typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSource = js.native
+    /* CompleteClass */
+    override var previousSource: typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSource = js.native
+  }
   
   @js.native
   class PlayToManager ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToManager
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToManager {
+    /* CompleteClass */
+    override var defaultSourceSelection: Boolean = js.native
+    /* CompleteClass */
+    override var onsourcerequested: js.Any = js.native
+    /* CompleteClass */
+    override var onsourceselected: js.Any = js.native
+  }
   
   @js.native
   class PlayToReceiver ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToReceiver
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToReceiver {
+    /* CompleteClass */
+    override var friendlyName: String = js.native
+    /* CompleteClass */
+    override var oncurrenttimechangerequested: js.Any = js.native
+    /* CompleteClass */
+    override var onmutechangerequested: js.Any = js.native
+    /* CompleteClass */
+    override var onpauserequested: js.Any = js.native
+    /* CompleteClass */
+    override var onplaybackratechangerequested: js.Any = js.native
+    /* CompleteClass */
+    override var onplayrequested: js.Any = js.native
+    /* CompleteClass */
+    override var onsourcechangerequested: js.Any = js.native
+    /* CompleteClass */
+    override var onstoprequested: js.Any = js.native
+    /* CompleteClass */
+    override var ontimeupdaterequested: js.Any = js.native
+    /* CompleteClass */
+    override var onvolumechangerequested: js.Any = js.native
+    /* CompleteClass */
+    override var properties: IPropertySet = js.native
+    /* CompleteClass */
+    override var supportsAudio: Boolean = js.native
+    /* CompleteClass */
+    override var supportsImage: Boolean = js.native
+    /* CompleteClass */
+    override var supportsVideo: Boolean = js.native
+    /* CompleteClass */
+    override def notifyDurationChange(duration: Double): Unit = js.native
+    /* CompleteClass */
+    override def notifyEnded(): Unit = js.native
+    /* CompleteClass */
+    override def notifyError(): Unit = js.native
+    /* CompleteClass */
+    override def notifyLoadedMetadata(): Unit = js.native
+    /* CompleteClass */
+    override def notifyPaused(): Unit = js.native
+    /* CompleteClass */
+    override def notifyPlaying(): Unit = js.native
+    /* CompleteClass */
+    override def notifyRateChange(rate: Double): Unit = js.native
+    /* CompleteClass */
+    override def notifySeeked(): Unit = js.native
+    /* CompleteClass */
+    override def notifySeeking(): Unit = js.native
+    /* CompleteClass */
+    override def notifyStopped(): Unit = js.native
+    /* CompleteClass */
+    override def notifyTimeUpdate(currentTime: Double): Unit = js.native
+    /* CompleteClass */
+    override def notifyVolumeChange(volume: Double, mute: Boolean): Unit = js.native
+    /* CompleteClass */
+    override def startAsync(): IAsyncAction = js.native
+    /* CompleteClass */
+    override def stopAsync(): IAsyncAction = js.native
+  }
   
   @js.native
   class PlayToSource ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSource
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSource {
+    /* CompleteClass */
+    override var connection: typingsSlinky.winrt.Windows.Media.PlayTo.PlayToConnection = js.native
+    /* CompleteClass */
+    override var next: typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSource = js.native
+    /* CompleteClass */
+    override def playNext(): Unit = js.native
+  }
   
   @js.native
   class PlayToSourceDeferral ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceDeferral
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceDeferral {
+    /* CompleteClass */
+    override def complete(): Unit = js.native
+  }
   
   @js.native
   class PlayToSourceRequest ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceRequest
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceRequest {
+    /* CompleteClass */
+    override var deadline: js.Date = js.native
+    /* CompleteClass */
+    override def displayErrorString(errorString: String): Unit = js.native
+    /* CompleteClass */
+    override def getDeferral(): typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceDeferral = js.native
+    /* CompleteClass */
+    override def setSource(value: typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSource): Unit = js.native
+  }
   
   @js.native
   class PlayToSourceRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceRequestedEventArgs {
+    /* CompleteClass */
+    override var sourceRequest: typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceRequest = js.native
+  }
   
   @js.native
   class PlayToSourceSelectedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceSelectedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlayToSourceSelectedEventArgs {
+    /* CompleteClass */
+    override var friendlyName: String = js.native
+    /* CompleteClass */
+    override var icon: IRandomAccessStreamWithContentType = js.native
+    /* CompleteClass */
+    override var supportsAudio: Boolean = js.native
+    /* CompleteClass */
+    override var supportsImage: Boolean = js.native
+    /* CompleteClass */
+    override var supportsVideo: Boolean = js.native
+  }
   
   @js.native
   class PlaybackRateChangeRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs {
+    /* CompleteClass */
+    override var rate: Double = js.native
+  }
   
   @js.native
   class SourceChangeRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.SourceChangeRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.SourceChangeRequestedEventArgs {
+    /* CompleteClass */
+    override var album: String = js.native
+    /* CompleteClass */
+    override var author: String = js.native
+    /* CompleteClass */
+    override var date: js.Date = js.native
+    /* CompleteClass */
+    override var description: String = js.native
+    /* CompleteClass */
+    override var genre: String = js.native
+    /* CompleteClass */
+    override var properties: IMapView[String, _] = js.native
+    /* CompleteClass */
+    override var rating: Double = js.native
+    /* CompleteClass */
+    override var stream: IRandomAccessStreamWithContentType = js.native
+    /* CompleteClass */
+    override var thumbnail: IRandomAccessStreamReference = js.native
+    /* CompleteClass */
+    override var title: String = js.native
+  }
   
   @js.native
   class VolumeChangeRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.PlayTo.VolumeChangeRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.PlayTo.VolumeChangeRequestedEventArgs {
+    /* CompleteClass */
+    override var volume: Double = js.native
+  }
   
   @js.native
   object PlayToConnectionError extends js.Object {

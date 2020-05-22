@@ -18,41 +18,11 @@ trait StartKeyPhrasesDetectionJobResponse extends js.Object {
 
 object StartKeyPhrasesDetectionJobResponse {
   @scala.inline
-  def apply(): StartKeyPhrasesDetectionJobResponse = {
+  def apply(JobId: JobId = null, JobStatus: JobStatus = null): StartKeyPhrasesDetectionJobResponse = {
     val __obj = js.Dynamic.literal()
+    if (JobId != null) __obj.updateDynamic("JobId")(JobId.asInstanceOf[js.Any])
+    if (JobStatus != null) __obj.updateDynamic("JobStatus")(JobStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartKeyPhrasesDetectionJobResponse]
   }
-  @scala.inline
-  implicit class StartKeyPhrasesDetectionJobResponseOps[Self <: StartKeyPhrasesDetectionJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobId(value: JobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobStatus(value: JobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

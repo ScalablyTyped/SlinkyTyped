@@ -6,17 +6,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GestureHandlerProps extends js.Object {
-  var keyboardDismissMode: String = js.native
-  var `lazy`: Boolean = js.native
-  var lazyPreloadDistance: Double = js.native
-  var removeClippedSubviews: Boolean = js.native
-  var swipeEnabled: Boolean = js.native
-  var tabBarPosition: String = js.native
-  def renderLazyPlaceholder(): Null = js.native
-  def renderPager(props: Props[_]): ReactElement = js.native
-  def renderTabBar[P /* <: typingsSlinky.reactNativeTabView.typesMod.Route */](props: typingsSlinky.reactNativeTabView.tabBarMod.Props[P]): ReactElement = js.native
+  var keyboardDismissMode: String
+  var `lazy`: Boolean
+  var lazyPreloadDistance: Double
+  var removeClippedSubviews: Boolean
+  var swipeEnabled: Boolean
+  var tabBarPosition: String
+  def renderLazyPlaceholder(): Null
+  def renderPager(props: Props[_]): ReactElement
+  def renderTabBar[P /* <: typingsSlinky.reactNativeTabView.typesMod.Route */](props: typingsSlinky.reactNativeTabView.tabBarMod.Props[P]): ReactElement
 }
 
 object GestureHandlerProps {
@@ -36,67 +35,5 @@ object GestureHandlerProps {
     __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GestureHandlerProps]
   }
-  @scala.inline
-  implicit class GestureHandlerPropsOps[Self <: GestureHandlerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyboardDismissMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardDismissMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLazy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLazyPreloadDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyPreloadDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoveClippedSubviews(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClippedSubviews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderLazyPlaceholder(value: () => Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderLazyPlaceholder")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRenderPager(value: Props[_] => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderPager")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRenderTabBar(value: typingsSlinky.reactNativeTabView.tabBarMod.Props[js.Any] => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTabBar")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSwipeEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabBarPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

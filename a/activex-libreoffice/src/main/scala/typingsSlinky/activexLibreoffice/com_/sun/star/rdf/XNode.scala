@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   * @see XLiteral
   * @since OOo 3.0
   */
-@js.native
 trait XNode extends js.Object {
-  var StringValue: String = js.native
+  var StringValue: String
 }
 
 object XNode {
@@ -29,19 +28,5 @@ object XNode {
     val __obj = js.Dynamic.literal(StringValue = StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[XNode]
   }
-  @scala.inline
-  implicit class XNodeOps[Self <: XNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStringValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

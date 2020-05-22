@@ -1,5 +1,6 @@
 package typingsSlinky.alexaSdk.mod.templateBuilders
 
+import typingsSlinky.alexaSdk.mod.ListItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,5 +12,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class ListTemplate2Builder ()
   extends TemplateBuilder[ListTemplate2Builder]
-     with SetListItems[ListTemplate2Builder]
+     with SetListItems[ListTemplate2Builder] {
+  /* CompleteClass */
+  override def setListItems(listItems: js.Array[ListItem]): ListTemplate2Builder = js.native
+}
 

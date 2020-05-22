@@ -27,25 +27,5 @@ object RedrivePolicy {
     val __obj = js.Dynamic.literal(deadLetterTargetArn = deadLetterTargetArn.asInstanceOf[js.Any], maxReceiveCount = maxReceiveCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[RedrivePolicy]
   }
-  @scala.inline
-  implicit class RedrivePolicyOps[Self <: RedrivePolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeadLetterTargetArn(value: ARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterTargetArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxReceiveCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxReceiveCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

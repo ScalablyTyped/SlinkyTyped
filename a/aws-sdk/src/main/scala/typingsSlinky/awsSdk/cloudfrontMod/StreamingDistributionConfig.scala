@@ -47,84 +47,16 @@ object StreamingDistributionConfig {
     Comment: String,
     Enabled: Boolean,
     S3Origin: S3Origin,
-    TrustedSigners: TrustedSigners
+    TrustedSigners: TrustedSigners,
+    Aliases: Aliases = null,
+    Logging: StreamingLoggingConfig = null,
+    PriceClass: PriceClass = null
   ): StreamingDistributionConfig = {
     val __obj = js.Dynamic.literal(CallerReference = CallerReference.asInstanceOf[js.Any], Comment = Comment.asInstanceOf[js.Any], Enabled = Enabled.asInstanceOf[js.Any], S3Origin = S3Origin.asInstanceOf[js.Any], TrustedSigners = TrustedSigners.asInstanceOf[js.Any])
+    if (Aliases != null) __obj.updateDynamic("Aliases")(Aliases.asInstanceOf[js.Any])
+    if (Logging != null) __obj.updateDynamic("Logging")(Logging.asInstanceOf[js.Any])
+    if (PriceClass != null) __obj.updateDynamic("PriceClass")(PriceClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamingDistributionConfig]
   }
-  @scala.inline
-  implicit class StreamingDistributionConfigOps[Self <: StreamingDistributionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerReference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS3Origin(value: S3Origin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrustedSigners(value: TrustedSigners): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustedSigners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAliases(value: Aliases): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Aliases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAliases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Aliases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogging(value: StreamingLoggingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Logging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Logging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriceClass(value: PriceClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PriceClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriceClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PriceClass")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

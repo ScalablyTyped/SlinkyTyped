@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   * @see theMacroExpander
   * @since OOo 1.1.2
   */
-@js.native
 trait BootstrapMacroExpander
   extends XMacroExpander
      with XComponent

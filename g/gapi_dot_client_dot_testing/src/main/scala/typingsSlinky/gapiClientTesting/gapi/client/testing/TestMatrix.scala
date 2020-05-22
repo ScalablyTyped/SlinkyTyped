@@ -4,194 +4,86 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestMatrix extends js.Object {
   /**
     * Information about the client which invoked the test.
     * Optional
     */
-  var clientInfo: js.UndefOr[ClientInfo] = js.native
+  var clientInfo: js.UndefOr[ClientInfo] = js.undefined
   /**
     * How the host machine(s) are configured.
     * Required
     */
-  var environmentMatrix: js.UndefOr[EnvironmentMatrix] = js.native
+  var environmentMatrix: js.UndefOr[EnvironmentMatrix] = js.undefined
   /**
     * Describes why the matrix is considered invalid.
     * Only useful for matrices in the INVALID state.
     * @OutputOnly
     */
-  var invalidMatrixDetails: js.UndefOr[String] = js.native
+  var invalidMatrixDetails: js.UndefOr[String] = js.undefined
   /**
     * The cloud project that owns the test matrix.
     * @OutputOnly
     */
-  var projectId: js.UndefOr[String] = js.native
+  var projectId: js.UndefOr[String] = js.undefined
   /**
     * Where the results for the matrix are written.
     * Required
     */
-  var resultStorage: js.UndefOr[ResultStorage] = js.native
+  var resultStorage: js.UndefOr[ResultStorage] = js.undefined
   /**
     * Indicates the current progress of the test matrix (e.g., FINISHED)
     * @OutputOnly
     */
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[String] = js.undefined
   /**
     * The list of test executions that the service creates for this matrix.
     * @OutputOnly
     */
-  var testExecutions: js.UndefOr[js.Array[TestExecution]] = js.native
+  var testExecutions: js.UndefOr[js.Array[TestExecution]] = js.undefined
   /**
     * Unique id set by the service.
     * @OutputOnly
     */
-  var testMatrixId: js.UndefOr[String] = js.native
+  var testMatrixId: js.UndefOr[String] = js.undefined
   /**
     * How to run the test.
     * Required
     */
-  var testSpecification: js.UndefOr[TestSpecification] = js.native
+  var testSpecification: js.UndefOr[TestSpecification] = js.undefined
   /**
     * The time this test matrix was initially created.
     * @OutputOnly
     */
-  var timestamp: js.UndefOr[String] = js.native
+  var timestamp: js.UndefOr[String] = js.undefined
 }
 
 object TestMatrix {
   @scala.inline
-  def apply(): TestMatrix = {
+  def apply(
+    clientInfo: ClientInfo = null,
+    environmentMatrix: EnvironmentMatrix = null,
+    invalidMatrixDetails: String = null,
+    projectId: String = null,
+    resultStorage: ResultStorage = null,
+    state: String = null,
+    testExecutions: js.Array[TestExecution] = null,
+    testMatrixId: String = null,
+    testSpecification: TestSpecification = null,
+    timestamp: String = null
+  ): TestMatrix = {
     val __obj = js.Dynamic.literal()
+    if (clientInfo != null) __obj.updateDynamic("clientInfo")(clientInfo.asInstanceOf[js.Any])
+    if (environmentMatrix != null) __obj.updateDynamic("environmentMatrix")(environmentMatrix.asInstanceOf[js.Any])
+    if (invalidMatrixDetails != null) __obj.updateDynamic("invalidMatrixDetails")(invalidMatrixDetails.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (resultStorage != null) __obj.updateDynamic("resultStorage")(resultStorage.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (testExecutions != null) __obj.updateDynamic("testExecutions")(testExecutions.asInstanceOf[js.Any])
+    if (testMatrixId != null) __obj.updateDynamic("testMatrixId")(testMatrixId.asInstanceOf[js.Any])
+    if (testSpecification != null) __obj.updateDynamic("testSpecification")(testSpecification.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestMatrix]
   }
-  @scala.inline
-  implicit class TestMatrixOps[Self <: TestMatrix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientInfo(value: ClientInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentMatrix(value: EnvironmentMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalidMatrixDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidMatrixDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidMatrixDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidMatrixDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultStorage(value: ResultStorage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestExecutions(value: js.Array[TestExecution]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestExecutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testExecutions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestMatrixId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testMatrixId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestMatrixId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testMatrixId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestSpecification(value: TestSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestSpecification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSpecification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

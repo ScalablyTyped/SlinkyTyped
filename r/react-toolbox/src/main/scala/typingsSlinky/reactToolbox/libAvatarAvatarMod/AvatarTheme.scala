@@ -4,71 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AvatarTheme extends js.Object {
   /**
     * Used for the root class of the element.
     */
-  var avatar: js.UndefOr[String] = js.native
+  var avatar: js.UndefOr[String] = js.undefined
   /**
     * Added to the root element when the component has image.
     */
-  var image: js.UndefOr[String] = js.native
+  var image: js.UndefOr[String] = js.undefined
   /**
     * Used for the root element if the component shows the letter.
     */
-  var letter: js.UndefOr[String] = js.native
+  var letter: js.UndefOr[String] = js.undefined
 }
 
 object AvatarTheme {
   @scala.inline
-  def apply(): AvatarTheme = {
+  def apply(avatar: String = null, image: String = null, letter: String = null): AvatarTheme = {
     val __obj = js.Dynamic.literal()
+    if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (letter != null) __obj.updateDynamic("letter")(letter.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvatarTheme]
   }
-  @scala.inline
-  implicit class AvatarThemeOps[Self <: AvatarTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvatar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLetter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("letter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("letter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,65 +26,18 @@ trait Protection extends js.Object {
 
 object Protection {
   @scala.inline
-  def apply(): Protection = {
+  def apply(
+    HealthCheckIds: HealthCheckIds = null,
+    Id: ProtectionId = null,
+    Name: ProtectionName = null,
+    ResourceArn: ResourceArn = null
+  ): Protection = {
     val __obj = js.Dynamic.literal()
+    if (HealthCheckIds != null) __obj.updateDynamic("HealthCheckIds")(HealthCheckIds.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (ResourceArn != null) __obj.updateDynamic("ResourceArn")(ResourceArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Protection]
   }
-  @scala.inline
-  implicit class ProtectionOps[Self <: Protection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHealthCheckIds(value: HealthCheckIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: ProtectionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ProtectionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceArn(value: ResourceArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

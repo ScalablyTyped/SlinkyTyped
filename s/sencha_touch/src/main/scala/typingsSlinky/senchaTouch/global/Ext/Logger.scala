@@ -21,10 +21,10 @@ object Logger extends js.Object {
   /** [Method] Convenience method for log with priority info */
   def info(): Unit = js.native
   /** [Method] Logs a message to help with debugging
-  		* @param message String Message to log.
-  		* @param priority Number Priority of the log message.
-  		* @returns Ext.Logger this
-  		*/
+    * @param message String Message to log.
+    * @param priority Number Priority of the log message.
+    * @returns Ext.Logger this
+    */
   def log(): ILogger = js.native
   def log(message: java.lang.String): ILogger = js.native
   def log(message: java.lang.String, priority: Double): ILogger = js.native

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnnotationsMeasureTypeLabelOptions extends js.Object {
   /**
     * (Highstock) Enable or disable the label text (min, max, average, bins
@@ -12,7 +11,7 @@ trait AnnotationsMeasureTypeLabelOptions extends js.Object {
     *
     * Defaults to true.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highstock) Formatter function for the label text.
     *
@@ -20,62 +19,25 @@ trait AnnotationsMeasureTypeLabelOptions extends js.Object {
     *
     *  (see online documentation for example)
     */
-  var formatter: js.UndefOr[js.Function] = js.native
+  var formatter: js.UndefOr[js.Function] = js.undefined
   /**
     * (Highstock) CSS styles for the measure label.
     */
-  var style: js.UndefOr[AnnotationsMeasureTypeLabelStyleOptions | CSSObject] = js.native
+  var style: js.UndefOr[AnnotationsMeasureTypeLabelStyleOptions | CSSObject] = js.undefined
 }
 
 object AnnotationsMeasureTypeLabelOptions {
   @scala.inline
-  def apply(): AnnotationsMeasureTypeLabelOptions = {
+  def apply(
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    formatter: js.Function = null,
+    style: AnnotationsMeasureTypeLabelStyleOptions | CSSObject = null
+  ): AnnotationsMeasureTypeLabelOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationsMeasureTypeLabelOptions]
   }
-  @scala.inline
-  implicit class AnnotationsMeasureTypeLabelOptionsOps[Self <: AnnotationsMeasureTypeLabelOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatter(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: AnnotationsMeasureTypeLabelStyleOptions | CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

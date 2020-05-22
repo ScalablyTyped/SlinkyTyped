@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PersonResponse extends js.Object {
   /**
     * &#42;&#42;DEPRECATED&#42;&#42; (Please use status instead)
@@ -12,9 +11,9 @@ trait PersonResponse extends js.Object {
     * [HTTP 1.1 status code]
     * (http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
     */
-  var httpStatusCode: js.UndefOr[Double] = js.native
+  var httpStatusCode: js.UndefOr[Double] = js.undefined
   /** The person. */
-  var person: js.UndefOr[Person] = js.native
+  var person: js.UndefOr[Person] = js.undefined
   /**
     * The original requested resource name. May be different than the resource
     * name on the returned person.
@@ -23,72 +22,25 @@ trait PersonResponse extends js.Object {
     * contact and profile such as a verified email, verified phone number, or a
     * profile URL.
     */
-  var requestedResourceName: js.UndefOr[String] = js.native
+  var requestedResourceName: js.UndefOr[String] = js.undefined
   /** The status of the response. */
-  var status: js.UndefOr[Status] = js.native
+  var status: js.UndefOr[Status] = js.undefined
 }
 
 object PersonResponse {
   @scala.inline
-  def apply(): PersonResponse = {
+  def apply(
+    httpStatusCode: js.UndefOr[Double] = js.undefined,
+    person: Person = null,
+    requestedResourceName: String = null,
+    status: Status = null
+  ): PersonResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(httpStatusCode)) __obj.updateDynamic("httpStatusCode")(httpStatusCode.get.asInstanceOf[js.Any])
+    if (person != null) __obj.updateDynamic("person")(person.asInstanceOf[js.Any])
+    if (requestedResourceName != null) __obj.updateDynamic("requestedResourceName")(requestedResourceName.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[PersonResponse]
   }
-  @scala.inline
-  implicit class PersonResponseOps[Self <: PersonResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpStatusCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpStatusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpStatusCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerson(value: Person): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("person")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("person")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestedResourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedResourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestedResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedResourceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

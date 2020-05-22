@@ -8,17 +8,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait NewExpression_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait NewExpression_
   extends Expression
      with BaseNode {
-  var arguments: js.Array[Expression | SpreadElement_ | JSXNamespacedName_ | ArgumentPlaceholder_] = js.native
-  var callee: Expression | V8IntrinsicIdentifier_ = js.native
-  var optional: `true` | `false` | Null = js.native
-  var typeArguments: TypeParameterInstantiation_ | Null = js.native
-  var typeParameters: TSTypeParameterInstantiation_ | Null = js.native
+  var arguments: js.Array[Expression | SpreadElement_ | JSXNamespacedName_ | ArgumentPlaceholder_]
+  var callee: Expression | V8IntrinsicIdentifier_
+  var optional: `true` | `false` | Null
+  var typeArguments: TypeParameterInstantiation_ | Null
+  var typeParameters: TSTypeParameterInstantiation_ | Null
   @JSName("type")
-  var type_NewExpression_ : NewExpression = js.native
+  var type_NewExpression_ : NewExpression
 }
 
 object NewExpression_ {
@@ -26,73 +25,20 @@ object NewExpression_ {
   def apply(
     arguments: js.Array[Expression | SpreadElement_ | JSXNamespacedName_ | ArgumentPlaceholder_],
     callee: Expression | V8IntrinsicIdentifier_,
-    `type`: NewExpression
+    `type`: NewExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    optional: `true` | `false` = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeArguments: TypeParameterInstantiation_ = null,
+    typeParameters: TSTypeParameterInstantiation_ = null
   ): NewExpression_ = {
-    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], callee = callee.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], callee = callee.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeArguments = typeArguments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewExpression_]
   }
-  @scala.inline
-  implicit class NewExpression_Ops[Self <: NewExpression_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArguments(value: js.Array[Expression | SpreadElement_ | JSXNamespacedName_ | ArgumentPlaceholder_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCallee(value: Expression | V8IntrinsicIdentifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callee")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: NewExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptional(value: `true` | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionalNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeArguments(value: TypeParameterInstantiation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeArgumentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeArguments")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TSTypeParameterInstantiation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

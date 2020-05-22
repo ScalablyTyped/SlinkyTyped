@@ -22,53 +22,12 @@ trait ModerationLabel extends js.Object {
 
 object ModerationLabel {
   @scala.inline
-  def apply(): ModerationLabel = {
+  def apply(Confidence: js.UndefOr[Percent] = js.undefined, Name: String = null, ParentName: String = null): ModerationLabel = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Confidence)) __obj.updateDynamic("Confidence")(Confidence.get.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (ParentName != null) __obj.updateDynamic("ParentName")(ParentName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModerationLabel]
   }
-  @scala.inline
-  implicit class ModerationLabelOps[Self <: ModerationLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfidence(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

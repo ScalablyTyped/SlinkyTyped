@@ -5,58 +5,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
-trait BlockContentToken extends TagToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait BlockContentToken extends TagToken {
   /**
     * This is initialized with an empty array (`[]`) and will be filled
     * with the inline parser tokens as the inline parsing rules are applied.
     */
-  var children: js.UndefOr[js.Array[Token]] = js.native
+  var children: js.UndefOr[js.Array[Token]] = js.undefined
   /**
     * The content of the block. This might include inline mardown syntax
     * which may need further processing by the inline rules.
     */
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[String] = js.undefined
 }
 
 object BlockContentToken {
   @scala.inline
-  def apply(level: Double, `type`: String): BlockContentToken = {
+  def apply(
+    level: Double,
+    `type`: String,
+    children: js.Array[Token] = null,
+    content: String = null,
+    lines: js.Tuple2[Double, Double] = null
+  ): BlockContentToken = {
     val __obj = js.Dynamic.literal(level = level.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockContentToken]
   }
-  @scala.inline
-  implicit class BlockContentTokenOps[Self <: BlockContentToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: js.Array[Token]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

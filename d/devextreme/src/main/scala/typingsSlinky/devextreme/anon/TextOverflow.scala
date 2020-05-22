@@ -7,62 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextOverflow extends js.Object {
-  var font: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.viz.Font] = js.native
-  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
+  var font: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.viz.Font] = js.undefined
+  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object TextOverflow {
   @scala.inline
-  def apply(): TextOverflow = {
+  def apply(
+    font: typingsSlinky.devextreme.mod.DevExpress.viz.Font = null,
+    textOverflow: ellipsis | hide | none = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): TextOverflow = {
     val __obj = js.Dynamic.literal()
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (textOverflow != null) __obj.updateDynamic("textOverflow")(textOverflow.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextOverflow]
   }
-  @scala.inline
-  implicit class TextOverflowOps[Self <: TextOverflow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFont(value: typingsSlinky.devextreme.mod.DevExpress.viz.Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextOverflow(value: ellipsis | hide | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -46,89 +46,22 @@ trait HTTPOptions extends js.Object {
 
 object HTTPOptions {
   @scala.inline
-  def apply(): HTTPOptions = {
+  def apply(
+    agent: Agent | typingsSlinky.node.httpsMod.Agent = null,
+    connectTimeout: js.UndefOr[Double] = js.undefined,
+    proxy: String = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    xhrAsync: js.UndefOr[Boolean] = js.undefined,
+    xhrWithCredentials: js.UndefOr[Boolean] = js.undefined
+  ): HTTPOptions = {
     val __obj = js.Dynamic.literal()
+    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
+    if (!js.isUndefined(connectTimeout)) __obj.updateDynamic("connectTimeout")(connectTimeout.get.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xhrAsync)) __obj.updateDynamic("xhrAsync")(xhrAsync.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xhrWithCredentials)) __obj.updateDynamic("xhrWithCredentials")(xhrWithCredentials.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTTPOptions]
   }
-  @scala.inline
-  implicit class HTTPOptionsOps[Self <: HTTPOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgent(value: Agent | typingsSlinky.node.httpsMod.Agent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXhrAsync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrAsync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXhrAsync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrAsync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXhrWithCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrWithCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXhrWithCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrWithCredentials")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation._
 /**
   * Represents an action that updates the email draft body.
   */
-@js.native
 trait UpdateDraftBodyAction extends js.Object {
-  def addUpdateContent(content: String, contentType: ContentType): UpdateDraftBodyAction = js.native
-  def setUpdateType(updateType: UpdateDraftBodyType): UpdateDraftBodyAction = js.native
+  def addUpdateContent(content: String, contentType: ContentType): UpdateDraftBodyAction
+  def setUpdateType(updateType: UpdateDraftBodyType): UpdateDraftBodyAction
 }
 
 object UpdateDraftBodyAction {
@@ -22,25 +21,5 @@ object UpdateDraftBodyAction {
     val __obj = js.Dynamic.literal(addUpdateContent = js.Any.fromFunction2(addUpdateContent), setUpdateType = js.Any.fromFunction1(setUpdateType))
     __obj.asInstanceOf[UpdateDraftBodyAction]
   }
-  @scala.inline
-  implicit class UpdateDraftBodyActionOps[Self <: UpdateDraftBodyAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddUpdateContent(value: (String, ContentType) => UpdateDraftBodyAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addUpdateContent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetUpdateType(value: UpdateDraftBodyType => UpdateDraftBodyAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setUpdateType")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

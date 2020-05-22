@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ViewView extends js.Object {
-  val View: typingsSlinky.activexOutlook.Outlook.View = js.native
+  val View: typingsSlinky.activexOutlook.Outlook.View
 }
 
 object ViewView {
@@ -15,19 +14,5 @@ object ViewView {
     val __obj = js.Dynamic.literal(View = View.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewView]
   }
-  @scala.inline
-  implicit class ViewViewOps[Self <: ViewView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withView(value: typingsSlinky.activexOutlook.Outlook.View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("View")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

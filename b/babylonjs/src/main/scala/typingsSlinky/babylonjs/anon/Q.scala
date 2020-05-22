@@ -5,153 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Q extends js.Object {
-  var backUVs: js.UndefOr[Vector4] = js.native
-  var frontUVs: js.UndefOr[Vector4] = js.native
-  var p: js.UndefOr[Double] = js.native
-  var q: js.UndefOr[Double] = js.native
-  var radialSegments: js.UndefOr[Double] = js.native
-  var radius: js.UndefOr[Double] = js.native
-  var sideOrientation: js.UndefOr[Double] = js.native
-  var tube: js.UndefOr[Double] = js.native
-  var tubularSegments: js.UndefOr[Double] = js.native
-  var updatable: js.UndefOr[Boolean] = js.native
+  var backUVs: js.UndefOr[Vector4] = js.undefined
+  var frontUVs: js.UndefOr[Vector4] = js.undefined
+  var p: js.UndefOr[Double] = js.undefined
+  var q: js.UndefOr[Double] = js.undefined
+  var radialSegments: js.UndefOr[Double] = js.undefined
+  var radius: js.UndefOr[Double] = js.undefined
+  var sideOrientation: js.UndefOr[Double] = js.undefined
+  var tube: js.UndefOr[Double] = js.undefined
+  var tubularSegments: js.UndefOr[Double] = js.undefined
+  var updatable: js.UndefOr[Boolean] = js.undefined
 }
 
 object Q {
   @scala.inline
-  def apply(): Q = {
+  def apply(
+    backUVs: Vector4 = null,
+    frontUVs: Vector4 = null,
+    p: js.UndefOr[Double] = js.undefined,
+    q: js.UndefOr[Double] = js.undefined,
+    radialSegments: js.UndefOr[Double] = js.undefined,
+    radius: js.UndefOr[Double] = js.undefined,
+    sideOrientation: js.UndefOr[Double] = js.undefined,
+    tube: js.UndefOr[Double] = js.undefined,
+    tubularSegments: js.UndefOr[Double] = js.undefined,
+    updatable: js.UndefOr[Boolean] = js.undefined
+  ): Q = {
     val __obj = js.Dynamic.literal()
+    if (backUVs != null) __obj.updateDynamic("backUVs")(backUVs.asInstanceOf[js.Any])
+    if (frontUVs != null) __obj.updateDynamic("frontUVs")(frontUVs.asInstanceOf[js.Any])
+    if (!js.isUndefined(p)) __obj.updateDynamic("p")(p.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(q)) __obj.updateDynamic("q")(q.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radialSegments)) __obj.updateDynamic("radialSegments")(radialSegments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sideOrientation)) __obj.updateDynamic("sideOrientation")(sideOrientation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tube)) __obj.updateDynamic("tube")(tube.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tubularSegments)) __obj.updateDynamic("tubularSegments")(tubularSegments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatable)) __obj.updateDynamic("updatable")(updatable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Q]
   }
-  @scala.inline
-  implicit class QOps[Self <: Q] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackUVs(value: Vector4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backUVs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackUVs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backUVs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrontUVs(value: Vector4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frontUVs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrontUVs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frontUVs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialSegments(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialSegments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSideOrientation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSideOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTube(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tube")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTube: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tube")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTubularSegments(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tubularSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTubularSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tubularSegments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

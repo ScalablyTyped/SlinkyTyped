@@ -1,51 +1,42 @@
 package typingsSlinky.appBuilderLib.linuxOptionsMod
 
+import typingsSlinky.appBuilderLib.coreMod.Publish
 import typingsSlinky.appBuilderLib.coreMod.TargetSpecificOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppImageOptions
   extends CommonLinuxOptions
      with TargetSpecificOptions {
   /**
     * The path to EULA license file. Defaults to `license.txt` or `eula.txt` (or uppercase variants). Only plain text is supported.
     */
-  val license: js.UndefOr[String | Null] = js.native
+  val license: js.UndefOr[String | Null] = js.undefined
 }
 
 object AppImageOptions {
   @scala.inline
-  def apply(): AppImageOptions = {
+  def apply(
+    artifactName: js.UndefOr[Null | String] = js.undefined,
+    category: js.UndefOr[Null | String] = js.undefined,
+    description: js.UndefOr[Null | String] = js.undefined,
+    desktop: js.UndefOr[Null | js.Any] = js.undefined,
+    license: js.UndefOr[Null | String] = js.undefined,
+    mimeTypes: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    publish: js.UndefOr[Null | Publish] = js.undefined,
+    synopsis: js.UndefOr[Null | String] = js.undefined
+  ): AppImageOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(artifactName)) __obj.updateDynamic("artifactName")(artifactName.asInstanceOf[js.Any])
+    if (!js.isUndefined(category)) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(desktop)) __obj.updateDynamic("desktop")(desktop.asInstanceOf[js.Any])
+    if (!js.isUndefined(license)) __obj.updateDynamic("license")(license.asInstanceOf[js.Any])
+    if (!js.isUndefined(mimeTypes)) __obj.updateDynamic("mimeTypes")(mimeTypes.asInstanceOf[js.Any])
+    if (!js.isUndefined(publish)) __obj.updateDynamic("publish")(publish.asInstanceOf[js.Any])
+    if (!js.isUndefined(synopsis)) __obj.updateDynamic("synopsis")(synopsis.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppImageOptions]
   }
-  @scala.inline
-  implicit class AppImageOptionsOps[Self <: AppImageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLicense(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("license")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("license")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("license")(null)
-        ret
-    }
-  }
-  
 }
 

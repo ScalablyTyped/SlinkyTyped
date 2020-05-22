@@ -26,31 +26,5 @@ object CreationInfo {
     val __obj = js.Dynamic.literal(OwnerGid = OwnerGid.asInstanceOf[js.Any], OwnerUid = OwnerUid.asInstanceOf[js.Any], Permissions = Permissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreationInfo]
   }
-  @scala.inline
-  implicit class CreationInfoOps[Self <: CreationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOwnerGid(value: OwnerGid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerGid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwnerUid(value: OwnerUid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerUid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: Permissions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

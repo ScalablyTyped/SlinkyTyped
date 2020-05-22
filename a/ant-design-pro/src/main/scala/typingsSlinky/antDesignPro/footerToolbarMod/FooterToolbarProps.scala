@@ -6,62 +6,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FooterToolbarProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var extra: TagMod[Any] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var extra: TagMod[Any]
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object FooterToolbarProps {
   @scala.inline
-  def apply(): FooterToolbarProps = {
+  def apply(className: String = null, extra: TagMod[Any] = null, style: CSSProperties = null): FooterToolbarProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[FooterToolbarProps]
   }
-  @scala.inline
-  implicit class FooterToolbarPropsOps[Self <: FooterToolbarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

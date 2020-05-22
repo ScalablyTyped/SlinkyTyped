@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactSlick.mod.LazyLoadTypes
 import typingsSlinky.antDesignReactSlick.mod.ResponsiveObject
 import typingsSlinky.antDesignReactSlick.mod.SwipeDirection
+import typingsSlinky.antd.anon.ClassName
 import typingsSlinky.antd.carouselMod.CarouselEffect
 import typingsSlinky.antd.carouselMod.CarouselProps
 import typingsSlinky.antd.carouselMod.DotPosition
@@ -56,9 +57,7 @@ object Carousel {
     @scala.inline
     def dotPosition(value: DotPosition): this.type = set("dotPosition", value.asInstanceOf[js.Any])
     @scala.inline
-    def dots(value: Boolean): this.type = set("dots", value.asInstanceOf[js.Any])
-    @scala.inline
-    def dotsClass(value: String): this.type = set("dotsClass", value.asInstanceOf[js.Any])
+    def dots(value: Boolean | ClassName): this.type = set("dots", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline

@@ -6,283 +6,115 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CameraConfig extends js.Object {
   /**
     * A CSS color string controlling the Camera background color.
     */
-  var backgroundColor: js.UndefOr[`false` | String] = js.native
+  var backgroundColor: js.UndefOr[`false` | String] = js.undefined
   /**
     * Defines the Camera bounds.
     */
-  var bounds: js.UndefOr[js.Object] = js.native
+  var bounds: js.UndefOr[js.Object] = js.undefined
   /**
     * The height of the Camera bounds.
     */
   @JSName("bounds.height")
-  var boundsDotheight: js.UndefOr[Double] = js.native
+  var boundsDotheight: js.UndefOr[Double] = js.undefined
   /**
     * The width of the Camera bounds.
     */
   @JSName("bounds.width")
-  var boundsDotwidth: js.UndefOr[Double] = js.native
+  var boundsDotwidth: js.UndefOr[Double] = js.undefined
   /**
     * The top-left extent of the Camera bounds.
     */
   @JSName("bounds.x")
-  var boundsDotx: js.UndefOr[Double] = js.native
+  var boundsDotx: js.UndefOr[Double] = js.undefined
   /**
     * The top-left extent of the Camera bounds.
     */
   @JSName("bounds.y")
-  var boundsDoty: js.UndefOr[Double] = js.native
+  var boundsDoty: js.UndefOr[Double] = js.undefined
   /**
     * The height of the Camera viewport.
     */
-  var height: js.UndefOr[integer] = js.native
+  var height: js.UndefOr[integer] = js.undefined
   /**
     * The name of the Camera.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The rotation of the Camera, in radians.
     */
-  var rotation: js.UndefOr[Double] = js.native
+  var rotation: js.UndefOr[Double] = js.undefined
   /**
     * Should the Camera round pixels before rendering?
     */
-  var roundPixels: js.UndefOr[Boolean] = js.native
+  var roundPixels: js.UndefOr[Boolean] = js.undefined
   /**
     * The horizontal scroll position of the Camera.
     */
-  var scrollX: js.UndefOr[Double] = js.native
+  var scrollX: js.UndefOr[Double] = js.undefined
   /**
     * The vertical scroll position of the Camera.
     */
-  var scrollY: js.UndefOr[Double] = js.native
+  var scrollY: js.UndefOr[Double] = js.undefined
   /**
     * The width of the Camera viewport.
     */
-  var width: js.UndefOr[integer] = js.native
+  var width: js.UndefOr[integer] = js.undefined
   /**
     * The horizontal position of the Camera viewport.
     */
-  var x: js.UndefOr[integer] = js.native
+  var x: js.UndefOr[integer] = js.undefined
   /**
     * The vertical position of the Camera viewport.
     */
-  var y: js.UndefOr[integer] = js.native
+  var y: js.UndefOr[integer] = js.undefined
   /**
     * The default zoom level of the Camera.
     */
-  var zoom: js.UndefOr[Double] = js.native
+  var zoom: js.UndefOr[Double] = js.undefined
 }
 
 object CameraConfig {
   @scala.inline
-  def apply(): CameraConfig = {
+  def apply(
+    backgroundColor: `false` | String = null,
+    bounds: js.Object = null,
+    boundsDotheight: js.UndefOr[Double] = js.undefined,
+    boundsDotwidth: js.UndefOr[Double] = js.undefined,
+    boundsDotx: js.UndefOr[Double] = js.undefined,
+    boundsDoty: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[integer] = js.undefined,
+    name: String = null,
+    rotation: js.UndefOr[Double] = js.undefined,
+    roundPixels: js.UndefOr[Boolean] = js.undefined,
+    scrollX: js.UndefOr[Double] = js.undefined,
+    scrollY: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[integer] = js.undefined,
+    x: js.UndefOr[integer] = js.undefined,
+    y: js.UndefOr[integer] = js.undefined,
+    zoom: js.UndefOr[Double] = js.undefined
+  ): CameraConfig = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (!js.isUndefined(boundsDotheight)) __obj.updateDynamic("bounds.height")(boundsDotheight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boundsDotwidth)) __obj.updateDynamic("bounds.width")(boundsDotwidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boundsDotx)) __obj.updateDynamic("bounds.x")(boundsDotx.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boundsDoty)) __obj.updateDynamic("bounds.y")(boundsDoty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(roundPixels)) __obj.updateDynamic("roundPixels")(roundPixels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollX)) __obj.updateDynamic("scrollX")(scrollX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollY)) __obj.updateDynamic("scrollY")(scrollY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CameraConfig]
   }
-  @scala.inline
-  implicit class CameraConfigOps[Self <: CameraConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: `false` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounds(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundsDotheight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds.height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundsDotheight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds.height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundsDotwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds.width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundsDotwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds.width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundsDotx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds.x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundsDotx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds.x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundsDoty(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds.y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundsDoty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds.y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoundPixels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundPixels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoundPixels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundPixels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

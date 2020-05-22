@@ -18,41 +18,11 @@ trait DescribeScalingPoliciesOutput extends js.Object {
 
 object DescribeScalingPoliciesOutput {
   @scala.inline
-  def apply(): DescribeScalingPoliciesOutput = {
+  def apply(NextToken: NonZeroAndMaxString = null, ScalingPolicies: ScalingPolicyList = null): DescribeScalingPoliciesOutput = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ScalingPolicies != null) __obj.updateDynamic("ScalingPolicies")(ScalingPolicies.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeScalingPoliciesOutput]
   }
-  @scala.inline
-  implicit class DescribeScalingPoliciesOutputOps[Self <: DescribeScalingPoliciesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScalingPolicies(value: ScalingPolicyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScalingPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingPolicies")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

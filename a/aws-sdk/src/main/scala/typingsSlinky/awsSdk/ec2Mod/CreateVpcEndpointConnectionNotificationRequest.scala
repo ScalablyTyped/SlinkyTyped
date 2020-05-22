@@ -34,77 +34,20 @@ trait CreateVpcEndpointConnectionNotificationRequest extends js.Object {
 
 object CreateVpcEndpointConnectionNotificationRequest {
   @scala.inline
-  def apply(ConnectionEvents: ValueStringList, ConnectionNotificationArn: String): CreateVpcEndpointConnectionNotificationRequest = {
+  def apply(
+    ConnectionEvents: ValueStringList,
+    ConnectionNotificationArn: String,
+    ClientToken: String = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    ServiceId: VpcEndpointServiceId = null,
+    VpcEndpointId: VpcEndpointId = null
+  ): CreateVpcEndpointConnectionNotificationRequest = {
     val __obj = js.Dynamic.literal(ConnectionEvents = ConnectionEvents.asInstanceOf[js.Any], ConnectionNotificationArn = ConnectionNotificationArn.asInstanceOf[js.Any])
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (ServiceId != null) __obj.updateDynamic("ServiceId")(ServiceId.asInstanceOf[js.Any])
+    if (VpcEndpointId != null) __obj.updateDynamic("VpcEndpointId")(VpcEndpointId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVpcEndpointConnectionNotificationRequest]
   }
-  @scala.inline
-  implicit class CreateVpcEndpointConnectionNotificationRequestOps[Self <: CreateVpcEndpointConnectionNotificationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionEvents(value: ValueStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnectionNotificationArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionNotificationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceId(value: VpcEndpointServiceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcEndpointId(value: VpcEndpointId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcEndpointId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

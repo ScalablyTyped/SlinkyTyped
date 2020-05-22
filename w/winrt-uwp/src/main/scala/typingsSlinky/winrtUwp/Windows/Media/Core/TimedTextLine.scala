@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a line of text that is displayed with a TimedTextCue . */
-@js.native
 trait TimedTextLine extends js.Object {
   /** Gets a list of TimedTextSubformat objects that provide formatting for substrings within the TimedTextLine . */
-  var subformats: IVector[TimedTextSubformat] = js.native
+  var subformats: IVector[TimedTextSubformat]
   /** Gets or sets the text content of the TimedTextLine . */
-  var text: String = js.native
+  var text: String
 }
 
 object TimedTextLine {
@@ -20,25 +19,5 @@ object TimedTextLine {
     val __obj = js.Dynamic.literal(subformats = subformats.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimedTextLine]
   }
-  @scala.inline
-  implicit class TimedTextLineOps[Self <: TimedTextLine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubformats(value: IVector[TimedTextSubformat]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subformats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

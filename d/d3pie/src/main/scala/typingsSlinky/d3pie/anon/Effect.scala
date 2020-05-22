@@ -6,49 +6,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Effect extends js.Object {
-  var effect: js.UndefOr[none | default] = js.native
-  var speed: js.UndefOr[Double] = js.native
+  var effect: js.UndefOr[none | default] = js.undefined
+  var speed: js.UndefOr[Double] = js.undefined
 }
 
 object Effect {
   @scala.inline
-  def apply(): Effect = {
+  def apply(effect: none | default = null, speed: js.UndefOr[Double] = js.undefined): Effect = {
     val __obj = js.Dynamic.literal()
+    if (effect != null) __obj.updateDynamic("effect")(effect.asInstanceOf[js.Any])
+    if (!js.isUndefined(speed)) __obj.updateDynamic("speed")(speed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Effect]
   }
-  @scala.inline
-  implicit class EffectOps[Self <: Effect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEffect(value: none | default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

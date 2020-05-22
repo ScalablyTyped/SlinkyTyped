@@ -10,5 +10,7 @@ import scala.scalajs.js.annotation._
 class BootstrapMode protected ()
   extends typingsSlinky.igniteUi.Infragistics.BootstrapMode {
   def this(settings: BootstrapModeSettings) = this()
+  /* CompleteClass */
+  override def isActive(): Unit = js.native
 }
 

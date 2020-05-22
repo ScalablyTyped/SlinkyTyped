@@ -18,35 +18,10 @@ trait Condition extends js.Object {
 
 object Condition {
   @scala.inline
-  def apply(ComparisonOperator: ComparisonOperator): Condition = {
+  def apply(ComparisonOperator: ComparisonOperator, AttributeValueList: AttributeValueList = null): Condition = {
     val __obj = js.Dynamic.literal(ComparisonOperator = ComparisonOperator.asInstanceOf[js.Any])
+    if (AttributeValueList != null) __obj.updateDynamic("AttributeValueList")(AttributeValueList.asInstanceOf[js.Any])
     __obj.asInstanceOf[Condition]
   }
-  @scala.inline
-  implicit class ConditionOps[Self <: Condition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparisonOperator(value: ComparisonOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeValueList(value: AttributeValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValueList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeValueList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValueList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

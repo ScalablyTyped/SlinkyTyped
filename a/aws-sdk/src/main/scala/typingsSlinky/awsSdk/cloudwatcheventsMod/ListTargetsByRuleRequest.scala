@@ -26,59 +26,17 @@ trait ListTargetsByRuleRequest extends js.Object {
 
 object ListTargetsByRuleRequest {
   @scala.inline
-  def apply(Rule: RuleName): ListTargetsByRuleRequest = {
+  def apply(
+    Rule: RuleName,
+    EventBusName: EventBusName = null,
+    Limit: js.UndefOr[LimitMax100] = js.undefined,
+    NextToken: NextToken = null
+  ): ListTargetsByRuleRequest = {
     val __obj = js.Dynamic.literal(Rule = Rule.asInstanceOf[js.Any])
+    if (EventBusName != null) __obj.updateDynamic("EventBusName")(EventBusName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTargetsByRuleRequest]
   }
-  @scala.inline
-  implicit class ListTargetsByRuleRequestOps[Self <: ListTargetsByRuleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRule(value: RuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventBusName(value: EventBusName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventBusName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventBusName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventBusName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: LimitMax100): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

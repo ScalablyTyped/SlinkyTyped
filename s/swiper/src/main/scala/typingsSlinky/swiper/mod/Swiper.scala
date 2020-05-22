@@ -313,7 +313,7 @@ trait Swiper extends js.Object {
     *
     * @example removeSlide(0); // remove first slide
     * @example removeSlide([0, 1]); // remove first and second slides
-    * @example removeAllSlides();	// Remove all slides
+    * @example removeAllSlides();    // Remove all slides
     */
   def removeSlide(slideIndex: Double): Unit = js.native
   /**

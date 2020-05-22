@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RateLimits extends js.Object {
   /**
     * Output only.
@@ -29,7 +28,7 @@ trait RateLimits extends js.Object {
     * This field has the same meaning as
     * [bucket_size in queue.yaml](/appengine/docs/standard/python/config/queueref#bucket_size).
     */
-  var maxBurstSize: js.UndefOr[Double] = js.native
+  var maxBurstSize: js.UndefOr[Double] = js.undefined
   /**
     * The maximum number of concurrent tasks that Cloud Tasks allows
     * to be dispatched for this queue. After this threshold has been
@@ -45,7 +44,7 @@ trait RateLimits extends js.Object {
     * This field has the same meaning as
     * [max_concurrent_requests in queue.yaml](/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
     */
-  var maxConcurrentTasks: js.UndefOr[Double] = js.native
+  var maxConcurrentTasks: js.UndefOr[Double] = js.undefined
   /**
     * The maximum rate at which tasks are dispatched from this
     * queue.
@@ -58,58 +57,21 @@ trait RateLimits extends js.Object {
     * This field has the same meaning as
     * [rate in queue.yaml](/appengine/docs/standard/python/config/queueref#rate).
     */
-  var maxTasksDispatchedPerSecond: js.UndefOr[Double] = js.native
+  var maxTasksDispatchedPerSecond: js.UndefOr[Double] = js.undefined
 }
 
 object RateLimits {
   @scala.inline
-  def apply(): RateLimits = {
+  def apply(
+    maxBurstSize: js.UndefOr[Double] = js.undefined,
+    maxConcurrentTasks: js.UndefOr[Double] = js.undefined,
+    maxTasksDispatchedPerSecond: js.UndefOr[Double] = js.undefined
+  ): RateLimits = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxBurstSize)) __obj.updateDynamic("maxBurstSize")(maxBurstSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxConcurrentTasks)) __obj.updateDynamic("maxConcurrentTasks")(maxConcurrentTasks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxTasksDispatchedPerSecond)) __obj.updateDynamic("maxTasksDispatchedPerSecond")(maxTasksDispatchedPerSecond.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RateLimits]
   }
-  @scala.inline
-  implicit class RateLimitsOps[Self <: RateLimits] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxBurstSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBurstSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBurstSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBurstSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxConcurrentTasks(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentTasks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrentTasks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentTasks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTasksDispatchedPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTasksDispatchedPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTasksDispatchedPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTasksDispatchedPerSecond")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

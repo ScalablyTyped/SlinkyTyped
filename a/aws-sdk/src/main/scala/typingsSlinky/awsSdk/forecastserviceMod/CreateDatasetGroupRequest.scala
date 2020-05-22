@@ -22,41 +22,10 @@ trait CreateDatasetGroupRequest extends js.Object {
 
 object CreateDatasetGroupRequest {
   @scala.inline
-  def apply(DatasetGroupName: Name, Domain: Domain): CreateDatasetGroupRequest = {
+  def apply(DatasetGroupName: Name, Domain: Domain, DatasetArns: ArnList = null): CreateDatasetGroupRequest = {
     val __obj = js.Dynamic.literal(DatasetGroupName = DatasetGroupName.asInstanceOf[js.Any], Domain = Domain.asInstanceOf[js.Any])
+    if (DatasetArns != null) __obj.updateDynamic("DatasetArns")(DatasetArns.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDatasetGroupRequest]
   }
-  @scala.inline
-  implicit class CreateDatasetGroupRequestOps[Self <: CreateDatasetGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatasetGroupName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomain(value: Domain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatasetArns(value: ArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetArns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

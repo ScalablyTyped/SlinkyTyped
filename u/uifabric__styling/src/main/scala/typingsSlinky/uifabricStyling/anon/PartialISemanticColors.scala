@@ -5,1180 +5,315 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors> */
-@js.native
 trait PartialISemanticColors extends js.Object {
-  var accentButtonBackground: js.UndefOr[String] = js.native
-  var accentButtonText: js.UndefOr[String] = js.native
-  var actionLink: js.UndefOr[String] = js.native
-  var actionLinkHovered: js.UndefOr[String] = js.native
-  var blockingBackground: js.UndefOr[String] = js.native
-  var bodyBackground: js.UndefOr[String] = js.native
-  var bodyBackgroundChecked: js.UndefOr[String] = js.native
-  var bodyBackgroundHovered: js.UndefOr[String] = js.native
-  var bodyDivider: js.UndefOr[String] = js.native
-  var bodyFrameBackground: js.UndefOr[String] = js.native
-  var bodyFrameDivider: js.UndefOr[String] = js.native
-  var bodyStandoutBackground: js.UndefOr[String] = js.native
-  var bodySubtext: js.UndefOr[String] = js.native
-  var bodyText: js.UndefOr[String] = js.native
-  var bodyTextChecked: js.UndefOr[String] = js.native
-  var buttonBackground: js.UndefOr[String] = js.native
-  var buttonBackgroundChecked: js.UndefOr[String] = js.native
-  var buttonBackgroundCheckedHovered: js.UndefOr[String] = js.native
-  var buttonBackgroundDisabled: js.UndefOr[String] = js.native
-  var buttonBackgroundHovered: js.UndefOr[String] = js.native
-  var buttonBackgroundPressed: js.UndefOr[String] = js.native
-  var buttonBorder: js.UndefOr[String] = js.native
-  var buttonBorderDisabled: js.UndefOr[String] = js.native
-  var buttonText: js.UndefOr[String] = js.native
-  var buttonTextChecked: js.UndefOr[String] = js.native
-  var buttonTextCheckedHovered: js.UndefOr[String] = js.native
-  var buttonTextDisabled: js.UndefOr[String] = js.native
-  var buttonTextHovered: js.UndefOr[String] = js.native
-  var buttonTextPressed: js.UndefOr[String] = js.native
-  var defaultStateBackground: js.UndefOr[String] = js.native
-  var disabledBackground: js.UndefOr[String] = js.native
-  var disabledBodySubtext: js.UndefOr[String] = js.native
-  var disabledBodyText: js.UndefOr[String] = js.native
-  var disabledBorder: js.UndefOr[String] = js.native
-  var disabledSubtext: js.UndefOr[String] = js.native
-  var disabledText: js.UndefOr[String] = js.native
-  var errorBackground: js.UndefOr[String] = js.native
-  var errorText: js.UndefOr[String] = js.native
-  var focusBorder: js.UndefOr[String] = js.native
-  var inputBackground: js.UndefOr[String] = js.native
-  var inputBackgroundChecked: js.UndefOr[String] = js.native
-  var inputBackgroundCheckedHovered: js.UndefOr[String] = js.native
-  var inputBorder: js.UndefOr[String] = js.native
-  var inputBorderHovered: js.UndefOr[String] = js.native
-  var inputFocusBorderAlt: js.UndefOr[String] = js.native
-  var inputForegroundChecked: js.UndefOr[String] = js.native
-  var inputIcon: js.UndefOr[String] = js.native
-  var inputIconDisabled: js.UndefOr[String] = js.native
-  var inputIconHovered: js.UndefOr[String] = js.native
-  var inputPlaceholderBackgroundChecked: js.UndefOr[String] = js.native
-  var inputPlaceholderText: js.UndefOr[String] = js.native
-  var inputText: js.UndefOr[String] = js.native
-  var inputTextHovered: js.UndefOr[String] = js.native
-  var link: js.UndefOr[String] = js.native
-  var linkHovered: js.UndefOr[String] = js.native
-  var listBackground: js.UndefOr[String] = js.native
-  var listHeaderBackgroundHovered: js.UndefOr[String] = js.native
-  var listHeaderBackgroundPressed: js.UndefOr[String] = js.native
-  var listItemBackgroundChecked: js.UndefOr[String] = js.native
-  var listItemBackgroundCheckedHovered: js.UndefOr[String] = js.native
-  var listItemBackgroundHovered: js.UndefOr[String] = js.native
-  var listText: js.UndefOr[String] = js.native
-  var listTextColor: js.UndefOr[String] = js.native
-  var menuBackground: js.UndefOr[String] = js.native
-  var menuDivider: js.UndefOr[String] = js.native
-  var menuHeader: js.UndefOr[String] = js.native
-  var menuIcon: js.UndefOr[String] = js.native
-  var menuItemBackgroundChecked: js.UndefOr[String] = js.native
-  var menuItemBackgroundHovered: js.UndefOr[String] = js.native
-  var menuItemBackgroundPressed: js.UndefOr[String] = js.native
-  var menuItemText: js.UndefOr[String] = js.native
-  var menuItemTextHovered: js.UndefOr[String] = js.native
-  var primaryButtonBackground: js.UndefOr[String] = js.native
-  var primaryButtonBackgroundDisabled: js.UndefOr[String] = js.native
-  var primaryButtonBackgroundHovered: js.UndefOr[String] = js.native
-  var primaryButtonBackgroundPressed: js.UndefOr[String] = js.native
-  var primaryButtonBorder: js.UndefOr[String] = js.native
-  var primaryButtonText: js.UndefOr[String] = js.native
-  var primaryButtonTextDisabled: js.UndefOr[String] = js.native
-  var primaryButtonTextHovered: js.UndefOr[String] = js.native
-  var primaryButtonTextPressed: js.UndefOr[String] = js.native
-  var smallInputBorder: js.UndefOr[String] = js.native
-  var successBackground: js.UndefOr[String] = js.native
-  var successText: js.UndefOr[String] = js.native
-  var variantBorder: js.UndefOr[String] = js.native
-  var variantBorderHovered: js.UndefOr[String] = js.native
-  var warningBackground: js.UndefOr[String] = js.native
-  var warningHighlight: js.UndefOr[String] = js.native
-  var warningText: js.UndefOr[String] = js.native
+  var accentButtonBackground: js.UndefOr[String] = js.undefined
+  var accentButtonText: js.UndefOr[String] = js.undefined
+  var actionLink: js.UndefOr[String] = js.undefined
+  var actionLinkHovered: js.UndefOr[String] = js.undefined
+  var blockingBackground: js.UndefOr[String] = js.undefined
+  var blockingIcon: js.UndefOr[String] = js.undefined
+  var bodyBackground: js.UndefOr[String] = js.undefined
+  var bodyBackgroundChecked: js.UndefOr[String] = js.undefined
+  var bodyBackgroundHovered: js.UndefOr[String] = js.undefined
+  var bodyDivider: js.UndefOr[String] = js.undefined
+  var bodyFrameBackground: js.UndefOr[String] = js.undefined
+  var bodyFrameDivider: js.UndefOr[String] = js.undefined
+  var bodyStandoutBackground: js.UndefOr[String] = js.undefined
+  var bodySubtext: js.UndefOr[String] = js.undefined
+  var bodyText: js.UndefOr[String] = js.undefined
+  var bodyTextChecked: js.UndefOr[String] = js.undefined
+  var buttonBackground: js.UndefOr[String] = js.undefined
+  var buttonBackgroundChecked: js.UndefOr[String] = js.undefined
+  var buttonBackgroundCheckedHovered: js.UndefOr[String] = js.undefined
+  var buttonBackgroundDisabled: js.UndefOr[String] = js.undefined
+  var buttonBackgroundHovered: js.UndefOr[String] = js.undefined
+  var buttonBackgroundPressed: js.UndefOr[String] = js.undefined
+  var buttonBorder: js.UndefOr[String] = js.undefined
+  var buttonBorderDisabled: js.UndefOr[String] = js.undefined
+  var buttonText: js.UndefOr[String] = js.undefined
+  var buttonTextChecked: js.UndefOr[String] = js.undefined
+  var buttonTextCheckedHovered: js.UndefOr[String] = js.undefined
+  var buttonTextDisabled: js.UndefOr[String] = js.undefined
+  var buttonTextHovered: js.UndefOr[String] = js.undefined
+  var buttonTextPressed: js.UndefOr[String] = js.undefined
+  var defaultStateBackground: js.UndefOr[String] = js.undefined
+  var disabledBackground: js.UndefOr[String] = js.undefined
+  var disabledBodySubtext: js.UndefOr[String] = js.undefined
+  var disabledBodyText: js.UndefOr[String] = js.undefined
+  var disabledBorder: js.UndefOr[String] = js.undefined
+  var disabledSubtext: js.UndefOr[String] = js.undefined
+  var disabledText: js.UndefOr[String] = js.undefined
+  var errorBackground: js.UndefOr[String] = js.undefined
+  var errorIcon: js.UndefOr[String] = js.undefined
+  var errorText: js.UndefOr[String] = js.undefined
+  var focusBorder: js.UndefOr[String] = js.undefined
+  var infoBackground: js.UndefOr[String] = js.undefined
+  var infoIcon: js.UndefOr[String] = js.undefined
+  var inputBackground: js.UndefOr[String] = js.undefined
+  var inputBackgroundChecked: js.UndefOr[String] = js.undefined
+  var inputBackgroundCheckedHovered: js.UndefOr[String] = js.undefined
+  var inputBorder: js.UndefOr[String] = js.undefined
+  var inputBorderHovered: js.UndefOr[String] = js.undefined
+  var inputFocusBorderAlt: js.UndefOr[String] = js.undefined
+  var inputForegroundChecked: js.UndefOr[String] = js.undefined
+  var inputIcon: js.UndefOr[String] = js.undefined
+  var inputIconDisabled: js.UndefOr[String] = js.undefined
+  var inputIconHovered: js.UndefOr[String] = js.undefined
+  var inputPlaceholderBackgroundChecked: js.UndefOr[String] = js.undefined
+  var inputPlaceholderText: js.UndefOr[String] = js.undefined
+  var inputText: js.UndefOr[String] = js.undefined
+  var inputTextHovered: js.UndefOr[String] = js.undefined
+  var link: js.UndefOr[String] = js.undefined
+  var linkHovered: js.UndefOr[String] = js.undefined
+  var listBackground: js.UndefOr[String] = js.undefined
+  var listHeaderBackgroundHovered: js.UndefOr[String] = js.undefined
+  var listHeaderBackgroundPressed: js.UndefOr[String] = js.undefined
+  var listItemBackgroundChecked: js.UndefOr[String] = js.undefined
+  var listItemBackgroundCheckedHovered: js.UndefOr[String] = js.undefined
+  var listItemBackgroundHovered: js.UndefOr[String] = js.undefined
+  var listText: js.UndefOr[String] = js.undefined
+  var listTextColor: js.UndefOr[String] = js.undefined
+  var menuBackground: js.UndefOr[String] = js.undefined
+  var menuDivider: js.UndefOr[String] = js.undefined
+  var menuHeader: js.UndefOr[String] = js.undefined
+  var menuIcon: js.UndefOr[String] = js.undefined
+  var menuItemBackgroundChecked: js.UndefOr[String] = js.undefined
+  var menuItemBackgroundHovered: js.UndefOr[String] = js.undefined
+  var menuItemBackgroundPressed: js.UndefOr[String] = js.undefined
+  var menuItemText: js.UndefOr[String] = js.undefined
+  var menuItemTextHovered: js.UndefOr[String] = js.undefined
+  var messageLink: js.UndefOr[String] = js.undefined
+  var messageLinkHovered: js.UndefOr[String] = js.undefined
+  var messageText: js.UndefOr[String] = js.undefined
+  var primaryButtonBackground: js.UndefOr[String] = js.undefined
+  var primaryButtonBackgroundDisabled: js.UndefOr[String] = js.undefined
+  var primaryButtonBackgroundHovered: js.UndefOr[String] = js.undefined
+  var primaryButtonBackgroundPressed: js.UndefOr[String] = js.undefined
+  var primaryButtonBorder: js.UndefOr[String] = js.undefined
+  var primaryButtonText: js.UndefOr[String] = js.undefined
+  var primaryButtonTextDisabled: js.UndefOr[String] = js.undefined
+  var primaryButtonTextHovered: js.UndefOr[String] = js.undefined
+  var primaryButtonTextPressed: js.UndefOr[String] = js.undefined
+  var severeWarningBackground: js.UndefOr[String] = js.undefined
+  var severeWarningIcon: js.UndefOr[String] = js.undefined
+  var smallInputBorder: js.UndefOr[String] = js.undefined
+  var successBackground: js.UndefOr[String] = js.undefined
+  var successIcon: js.UndefOr[String] = js.undefined
+  var successText: js.UndefOr[String] = js.undefined
+  var variantBorder: js.UndefOr[String] = js.undefined
+  var variantBorderHovered: js.UndefOr[String] = js.undefined
+  var warningBackground: js.UndefOr[String] = js.undefined
+  var warningHighlight: js.UndefOr[String] = js.undefined
+  var warningIcon: js.UndefOr[String] = js.undefined
+  var warningText: js.UndefOr[String] = js.undefined
 }
 
 object PartialISemanticColors {
   @scala.inline
-  def apply(): PartialISemanticColors = {
+  def apply(
+    accentButtonBackground: String = null,
+    accentButtonText: String = null,
+    actionLink: String = null,
+    actionLinkHovered: String = null,
+    blockingBackground: String = null,
+    blockingIcon: String = null,
+    bodyBackground: String = null,
+    bodyBackgroundChecked: String = null,
+    bodyBackgroundHovered: String = null,
+    bodyDivider: String = null,
+    bodyFrameBackground: String = null,
+    bodyFrameDivider: String = null,
+    bodyStandoutBackground: String = null,
+    bodySubtext: String = null,
+    bodyText: String = null,
+    bodyTextChecked: String = null,
+    buttonBackground: String = null,
+    buttonBackgroundChecked: String = null,
+    buttonBackgroundCheckedHovered: String = null,
+    buttonBackgroundDisabled: String = null,
+    buttonBackgroundHovered: String = null,
+    buttonBackgroundPressed: String = null,
+    buttonBorder: String = null,
+    buttonBorderDisabled: String = null,
+    buttonText: String = null,
+    buttonTextChecked: String = null,
+    buttonTextCheckedHovered: String = null,
+    buttonTextDisabled: String = null,
+    buttonTextHovered: String = null,
+    buttonTextPressed: String = null,
+    defaultStateBackground: String = null,
+    disabledBackground: String = null,
+    disabledBodySubtext: String = null,
+    disabledBodyText: String = null,
+    disabledBorder: String = null,
+    disabledSubtext: String = null,
+    disabledText: String = null,
+    errorBackground: String = null,
+    errorIcon: String = null,
+    errorText: String = null,
+    focusBorder: String = null,
+    infoBackground: String = null,
+    infoIcon: String = null,
+    inputBackground: String = null,
+    inputBackgroundChecked: String = null,
+    inputBackgroundCheckedHovered: String = null,
+    inputBorder: String = null,
+    inputBorderHovered: String = null,
+    inputFocusBorderAlt: String = null,
+    inputForegroundChecked: String = null,
+    inputIcon: String = null,
+    inputIconDisabled: String = null,
+    inputIconHovered: String = null,
+    inputPlaceholderBackgroundChecked: String = null,
+    inputPlaceholderText: String = null,
+    inputText: String = null,
+    inputTextHovered: String = null,
+    link: String = null,
+    linkHovered: String = null,
+    listBackground: String = null,
+    listHeaderBackgroundHovered: String = null,
+    listHeaderBackgroundPressed: String = null,
+    listItemBackgroundChecked: String = null,
+    listItemBackgroundCheckedHovered: String = null,
+    listItemBackgroundHovered: String = null,
+    listText: String = null,
+    listTextColor: String = null,
+    menuBackground: String = null,
+    menuDivider: String = null,
+    menuHeader: String = null,
+    menuIcon: String = null,
+    menuItemBackgroundChecked: String = null,
+    menuItemBackgroundHovered: String = null,
+    menuItemBackgroundPressed: String = null,
+    menuItemText: String = null,
+    menuItemTextHovered: String = null,
+    messageLink: String = null,
+    messageLinkHovered: String = null,
+    messageText: String = null,
+    primaryButtonBackground: String = null,
+    primaryButtonBackgroundDisabled: String = null,
+    primaryButtonBackgroundHovered: String = null,
+    primaryButtonBackgroundPressed: String = null,
+    primaryButtonBorder: String = null,
+    primaryButtonText: String = null,
+    primaryButtonTextDisabled: String = null,
+    primaryButtonTextHovered: String = null,
+    primaryButtonTextPressed: String = null,
+    severeWarningBackground: String = null,
+    severeWarningIcon: String = null,
+    smallInputBorder: String = null,
+    successBackground: String = null,
+    successIcon: String = null,
+    successText: String = null,
+    variantBorder: String = null,
+    variantBorderHovered: String = null,
+    warningBackground: String = null,
+    warningHighlight: String = null,
+    warningIcon: String = null,
+    warningText: String = null
+  ): PartialISemanticColors = {
     val __obj = js.Dynamic.literal()
+    if (accentButtonBackground != null) __obj.updateDynamic("accentButtonBackground")(accentButtonBackground.asInstanceOf[js.Any])
+    if (accentButtonText != null) __obj.updateDynamic("accentButtonText")(accentButtonText.asInstanceOf[js.Any])
+    if (actionLink != null) __obj.updateDynamic("actionLink")(actionLink.asInstanceOf[js.Any])
+    if (actionLinkHovered != null) __obj.updateDynamic("actionLinkHovered")(actionLinkHovered.asInstanceOf[js.Any])
+    if (blockingBackground != null) __obj.updateDynamic("blockingBackground")(blockingBackground.asInstanceOf[js.Any])
+    if (blockingIcon != null) __obj.updateDynamic("blockingIcon")(blockingIcon.asInstanceOf[js.Any])
+    if (bodyBackground != null) __obj.updateDynamic("bodyBackground")(bodyBackground.asInstanceOf[js.Any])
+    if (bodyBackgroundChecked != null) __obj.updateDynamic("bodyBackgroundChecked")(bodyBackgroundChecked.asInstanceOf[js.Any])
+    if (bodyBackgroundHovered != null) __obj.updateDynamic("bodyBackgroundHovered")(bodyBackgroundHovered.asInstanceOf[js.Any])
+    if (bodyDivider != null) __obj.updateDynamic("bodyDivider")(bodyDivider.asInstanceOf[js.Any])
+    if (bodyFrameBackground != null) __obj.updateDynamic("bodyFrameBackground")(bodyFrameBackground.asInstanceOf[js.Any])
+    if (bodyFrameDivider != null) __obj.updateDynamic("bodyFrameDivider")(bodyFrameDivider.asInstanceOf[js.Any])
+    if (bodyStandoutBackground != null) __obj.updateDynamic("bodyStandoutBackground")(bodyStandoutBackground.asInstanceOf[js.Any])
+    if (bodySubtext != null) __obj.updateDynamic("bodySubtext")(bodySubtext.asInstanceOf[js.Any])
+    if (bodyText != null) __obj.updateDynamic("bodyText")(bodyText.asInstanceOf[js.Any])
+    if (bodyTextChecked != null) __obj.updateDynamic("bodyTextChecked")(bodyTextChecked.asInstanceOf[js.Any])
+    if (buttonBackground != null) __obj.updateDynamic("buttonBackground")(buttonBackground.asInstanceOf[js.Any])
+    if (buttonBackgroundChecked != null) __obj.updateDynamic("buttonBackgroundChecked")(buttonBackgroundChecked.asInstanceOf[js.Any])
+    if (buttonBackgroundCheckedHovered != null) __obj.updateDynamic("buttonBackgroundCheckedHovered")(buttonBackgroundCheckedHovered.asInstanceOf[js.Any])
+    if (buttonBackgroundDisabled != null) __obj.updateDynamic("buttonBackgroundDisabled")(buttonBackgroundDisabled.asInstanceOf[js.Any])
+    if (buttonBackgroundHovered != null) __obj.updateDynamic("buttonBackgroundHovered")(buttonBackgroundHovered.asInstanceOf[js.Any])
+    if (buttonBackgroundPressed != null) __obj.updateDynamic("buttonBackgroundPressed")(buttonBackgroundPressed.asInstanceOf[js.Any])
+    if (buttonBorder != null) __obj.updateDynamic("buttonBorder")(buttonBorder.asInstanceOf[js.Any])
+    if (buttonBorderDisabled != null) __obj.updateDynamic("buttonBorderDisabled")(buttonBorderDisabled.asInstanceOf[js.Any])
+    if (buttonText != null) __obj.updateDynamic("buttonText")(buttonText.asInstanceOf[js.Any])
+    if (buttonTextChecked != null) __obj.updateDynamic("buttonTextChecked")(buttonTextChecked.asInstanceOf[js.Any])
+    if (buttonTextCheckedHovered != null) __obj.updateDynamic("buttonTextCheckedHovered")(buttonTextCheckedHovered.asInstanceOf[js.Any])
+    if (buttonTextDisabled != null) __obj.updateDynamic("buttonTextDisabled")(buttonTextDisabled.asInstanceOf[js.Any])
+    if (buttonTextHovered != null) __obj.updateDynamic("buttonTextHovered")(buttonTextHovered.asInstanceOf[js.Any])
+    if (buttonTextPressed != null) __obj.updateDynamic("buttonTextPressed")(buttonTextPressed.asInstanceOf[js.Any])
+    if (defaultStateBackground != null) __obj.updateDynamic("defaultStateBackground")(defaultStateBackground.asInstanceOf[js.Any])
+    if (disabledBackground != null) __obj.updateDynamic("disabledBackground")(disabledBackground.asInstanceOf[js.Any])
+    if (disabledBodySubtext != null) __obj.updateDynamic("disabledBodySubtext")(disabledBodySubtext.asInstanceOf[js.Any])
+    if (disabledBodyText != null) __obj.updateDynamic("disabledBodyText")(disabledBodyText.asInstanceOf[js.Any])
+    if (disabledBorder != null) __obj.updateDynamic("disabledBorder")(disabledBorder.asInstanceOf[js.Any])
+    if (disabledSubtext != null) __obj.updateDynamic("disabledSubtext")(disabledSubtext.asInstanceOf[js.Any])
+    if (disabledText != null) __obj.updateDynamic("disabledText")(disabledText.asInstanceOf[js.Any])
+    if (errorBackground != null) __obj.updateDynamic("errorBackground")(errorBackground.asInstanceOf[js.Any])
+    if (errorIcon != null) __obj.updateDynamic("errorIcon")(errorIcon.asInstanceOf[js.Any])
+    if (errorText != null) __obj.updateDynamic("errorText")(errorText.asInstanceOf[js.Any])
+    if (focusBorder != null) __obj.updateDynamic("focusBorder")(focusBorder.asInstanceOf[js.Any])
+    if (infoBackground != null) __obj.updateDynamic("infoBackground")(infoBackground.asInstanceOf[js.Any])
+    if (infoIcon != null) __obj.updateDynamic("infoIcon")(infoIcon.asInstanceOf[js.Any])
+    if (inputBackground != null) __obj.updateDynamic("inputBackground")(inputBackground.asInstanceOf[js.Any])
+    if (inputBackgroundChecked != null) __obj.updateDynamic("inputBackgroundChecked")(inputBackgroundChecked.asInstanceOf[js.Any])
+    if (inputBackgroundCheckedHovered != null) __obj.updateDynamic("inputBackgroundCheckedHovered")(inputBackgroundCheckedHovered.asInstanceOf[js.Any])
+    if (inputBorder != null) __obj.updateDynamic("inputBorder")(inputBorder.asInstanceOf[js.Any])
+    if (inputBorderHovered != null) __obj.updateDynamic("inputBorderHovered")(inputBorderHovered.asInstanceOf[js.Any])
+    if (inputFocusBorderAlt != null) __obj.updateDynamic("inputFocusBorderAlt")(inputFocusBorderAlt.asInstanceOf[js.Any])
+    if (inputForegroundChecked != null) __obj.updateDynamic("inputForegroundChecked")(inputForegroundChecked.asInstanceOf[js.Any])
+    if (inputIcon != null) __obj.updateDynamic("inputIcon")(inputIcon.asInstanceOf[js.Any])
+    if (inputIconDisabled != null) __obj.updateDynamic("inputIconDisabled")(inputIconDisabled.asInstanceOf[js.Any])
+    if (inputIconHovered != null) __obj.updateDynamic("inputIconHovered")(inputIconHovered.asInstanceOf[js.Any])
+    if (inputPlaceholderBackgroundChecked != null) __obj.updateDynamic("inputPlaceholderBackgroundChecked")(inputPlaceholderBackgroundChecked.asInstanceOf[js.Any])
+    if (inputPlaceholderText != null) __obj.updateDynamic("inputPlaceholderText")(inputPlaceholderText.asInstanceOf[js.Any])
+    if (inputText != null) __obj.updateDynamic("inputText")(inputText.asInstanceOf[js.Any])
+    if (inputTextHovered != null) __obj.updateDynamic("inputTextHovered")(inputTextHovered.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (linkHovered != null) __obj.updateDynamic("linkHovered")(linkHovered.asInstanceOf[js.Any])
+    if (listBackground != null) __obj.updateDynamic("listBackground")(listBackground.asInstanceOf[js.Any])
+    if (listHeaderBackgroundHovered != null) __obj.updateDynamic("listHeaderBackgroundHovered")(listHeaderBackgroundHovered.asInstanceOf[js.Any])
+    if (listHeaderBackgroundPressed != null) __obj.updateDynamic("listHeaderBackgroundPressed")(listHeaderBackgroundPressed.asInstanceOf[js.Any])
+    if (listItemBackgroundChecked != null) __obj.updateDynamic("listItemBackgroundChecked")(listItemBackgroundChecked.asInstanceOf[js.Any])
+    if (listItemBackgroundCheckedHovered != null) __obj.updateDynamic("listItemBackgroundCheckedHovered")(listItemBackgroundCheckedHovered.asInstanceOf[js.Any])
+    if (listItemBackgroundHovered != null) __obj.updateDynamic("listItemBackgroundHovered")(listItemBackgroundHovered.asInstanceOf[js.Any])
+    if (listText != null) __obj.updateDynamic("listText")(listText.asInstanceOf[js.Any])
+    if (listTextColor != null) __obj.updateDynamic("listTextColor")(listTextColor.asInstanceOf[js.Any])
+    if (menuBackground != null) __obj.updateDynamic("menuBackground")(menuBackground.asInstanceOf[js.Any])
+    if (menuDivider != null) __obj.updateDynamic("menuDivider")(menuDivider.asInstanceOf[js.Any])
+    if (menuHeader != null) __obj.updateDynamic("menuHeader")(menuHeader.asInstanceOf[js.Any])
+    if (menuIcon != null) __obj.updateDynamic("menuIcon")(menuIcon.asInstanceOf[js.Any])
+    if (menuItemBackgroundChecked != null) __obj.updateDynamic("menuItemBackgroundChecked")(menuItemBackgroundChecked.asInstanceOf[js.Any])
+    if (menuItemBackgroundHovered != null) __obj.updateDynamic("menuItemBackgroundHovered")(menuItemBackgroundHovered.asInstanceOf[js.Any])
+    if (menuItemBackgroundPressed != null) __obj.updateDynamic("menuItemBackgroundPressed")(menuItemBackgroundPressed.asInstanceOf[js.Any])
+    if (menuItemText != null) __obj.updateDynamic("menuItemText")(menuItemText.asInstanceOf[js.Any])
+    if (menuItemTextHovered != null) __obj.updateDynamic("menuItemTextHovered")(menuItemTextHovered.asInstanceOf[js.Any])
+    if (messageLink != null) __obj.updateDynamic("messageLink")(messageLink.asInstanceOf[js.Any])
+    if (messageLinkHovered != null) __obj.updateDynamic("messageLinkHovered")(messageLinkHovered.asInstanceOf[js.Any])
+    if (messageText != null) __obj.updateDynamic("messageText")(messageText.asInstanceOf[js.Any])
+    if (primaryButtonBackground != null) __obj.updateDynamic("primaryButtonBackground")(primaryButtonBackground.asInstanceOf[js.Any])
+    if (primaryButtonBackgroundDisabled != null) __obj.updateDynamic("primaryButtonBackgroundDisabled")(primaryButtonBackgroundDisabled.asInstanceOf[js.Any])
+    if (primaryButtonBackgroundHovered != null) __obj.updateDynamic("primaryButtonBackgroundHovered")(primaryButtonBackgroundHovered.asInstanceOf[js.Any])
+    if (primaryButtonBackgroundPressed != null) __obj.updateDynamic("primaryButtonBackgroundPressed")(primaryButtonBackgroundPressed.asInstanceOf[js.Any])
+    if (primaryButtonBorder != null) __obj.updateDynamic("primaryButtonBorder")(primaryButtonBorder.asInstanceOf[js.Any])
+    if (primaryButtonText != null) __obj.updateDynamic("primaryButtonText")(primaryButtonText.asInstanceOf[js.Any])
+    if (primaryButtonTextDisabled != null) __obj.updateDynamic("primaryButtonTextDisabled")(primaryButtonTextDisabled.asInstanceOf[js.Any])
+    if (primaryButtonTextHovered != null) __obj.updateDynamic("primaryButtonTextHovered")(primaryButtonTextHovered.asInstanceOf[js.Any])
+    if (primaryButtonTextPressed != null) __obj.updateDynamic("primaryButtonTextPressed")(primaryButtonTextPressed.asInstanceOf[js.Any])
+    if (severeWarningBackground != null) __obj.updateDynamic("severeWarningBackground")(severeWarningBackground.asInstanceOf[js.Any])
+    if (severeWarningIcon != null) __obj.updateDynamic("severeWarningIcon")(severeWarningIcon.asInstanceOf[js.Any])
+    if (smallInputBorder != null) __obj.updateDynamic("smallInputBorder")(smallInputBorder.asInstanceOf[js.Any])
+    if (successBackground != null) __obj.updateDynamic("successBackground")(successBackground.asInstanceOf[js.Any])
+    if (successIcon != null) __obj.updateDynamic("successIcon")(successIcon.asInstanceOf[js.Any])
+    if (successText != null) __obj.updateDynamic("successText")(successText.asInstanceOf[js.Any])
+    if (variantBorder != null) __obj.updateDynamic("variantBorder")(variantBorder.asInstanceOf[js.Any])
+    if (variantBorderHovered != null) __obj.updateDynamic("variantBorderHovered")(variantBorderHovered.asInstanceOf[js.Any])
+    if (warningBackground != null) __obj.updateDynamic("warningBackground")(warningBackground.asInstanceOf[js.Any])
+    if (warningHighlight != null) __obj.updateDynamic("warningHighlight")(warningHighlight.asInstanceOf[js.Any])
+    if (warningIcon != null) __obj.updateDynamic("warningIcon")(warningIcon.asInstanceOf[js.Any])
+    if (warningText != null) __obj.updateDynamic("warningText")(warningText.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialISemanticColors]
   }
-  @scala.inline
-  implicit class PartialISemanticColorsOps[Self <: PartialISemanticColors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccentButtonBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accentButtonBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccentButtonBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accentButtonBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccentButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accentButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccentButtonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accentButtonText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionLinkHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLinkHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionLinkHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLinkHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockingBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockingBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyBackgroundChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyBackgroundChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyBackgroundChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyBackgroundChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyBackgroundHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyBackgroundHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyBackgroundHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyBackgroundHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyDivider(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyDivider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyDivider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyDivider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyFrameBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyFrameBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyFrameBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyFrameBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyFrameDivider(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyFrameDivider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyFrameDivider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyFrameDivider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyStandoutBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStandoutBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyStandoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStandoutBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodySubtext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodySubtext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodySubtext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodySubtext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyTextChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyTextChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyTextChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyTextChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonBackgroundChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonBackgroundChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonBackgroundCheckedHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundCheckedHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonBackgroundCheckedHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundCheckedHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonBackgroundDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonBackgroundDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonBackgroundHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonBackgroundHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonBackgroundPressed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundPressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonBackgroundPressed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBackgroundPressed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonBorder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonBorderDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBorderDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonBorderDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonBorderDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonTextChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonTextChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonTextCheckedHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextCheckedHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonTextCheckedHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextCheckedHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonTextDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonTextDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonTextHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonTextHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonTextPressed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextPressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonTextPressed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextPressed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultStateBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultStateBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultStateBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultStateBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledBodySubtext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBodySubtext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledBodySubtext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBodySubtext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledBodyText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBodyText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledBodyText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBodyText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledBorder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledSubtext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSubtext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledSubtext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSubtext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusBorder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputBackgroundChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBackgroundChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputBackgroundChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBackgroundChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputBackgroundCheckedHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBackgroundCheckedHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputBackgroundCheckedHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBackgroundCheckedHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputBorder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputBorderHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBorderHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputBorderHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBorderHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputFocusBorderAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFocusBorderAlt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputFocusBorderAlt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFocusBorderAlt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputForegroundChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputForegroundChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputForegroundChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputForegroundChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputIconDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIconDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputIconDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIconDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputIconHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIconHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputIconHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIconHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputPlaceholderBackgroundChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputPlaceholderBackgroundChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputPlaceholderBackgroundChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputPlaceholderBackgroundChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputPlaceholderText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputPlaceholderText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputPlaceholderText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputPlaceholderText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputTextHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputTextHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputTextHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputTextHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListHeaderBackgroundHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listHeaderBackgroundHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListHeaderBackgroundHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listHeaderBackgroundHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListHeaderBackgroundPressed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listHeaderBackgroundPressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListHeaderBackgroundPressed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listHeaderBackgroundPressed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListItemBackgroundChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemBackgroundChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListItemBackgroundChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemBackgroundChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListItemBackgroundCheckedHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemBackgroundCheckedHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListItemBackgroundCheckedHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemBackgroundCheckedHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListItemBackgroundHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemBackgroundHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListItemBackgroundHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemBackgroundHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListTextColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listTextColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuDivider(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuDivider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuDivider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuDivider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItemBackgroundChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemBackgroundChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItemBackgroundChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemBackgroundChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItemBackgroundHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemBackgroundHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItemBackgroundHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemBackgroundHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItemBackgroundPressed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemBackgroundPressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItemBackgroundPressed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemBackgroundPressed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItemText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItemText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItemTextHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemTextHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItemTextHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemTextHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonBackgroundDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBackgroundDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonBackgroundDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBackgroundDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonBackgroundHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBackgroundHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonBackgroundHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBackgroundHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonBackgroundPressed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBackgroundPressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonBackgroundPressed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBackgroundPressed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonBorder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonTextDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonTextDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonTextHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonTextHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonTextPressed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextPressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonTextPressed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextPressed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmallInputBorder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallInputBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmallInputBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallInputBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariantBorder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variantBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariantBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variantBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariantBorderHovered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variantBorderHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariantBorderHovered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variantBorderHovered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarningBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warningBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarningBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warningBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarningHighlight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warningHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarningHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warningHighlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarningText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warningText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarningText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warningText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

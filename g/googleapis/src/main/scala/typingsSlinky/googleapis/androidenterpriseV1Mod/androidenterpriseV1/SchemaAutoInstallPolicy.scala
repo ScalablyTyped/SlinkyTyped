@@ -30,65 +30,18 @@ trait SchemaAutoInstallPolicy extends js.Object {
 
 object SchemaAutoInstallPolicy {
   @scala.inline
-  def apply(): SchemaAutoInstallPolicy = {
+  def apply(
+    autoInstallConstraint: js.Array[SchemaAutoInstallConstraint] = null,
+    autoInstallMode: String = null,
+    autoInstallPriority: js.UndefOr[Double] = js.undefined,
+    minimumVersionCode: js.UndefOr[Double] = js.undefined
+  ): SchemaAutoInstallPolicy = {
     val __obj = js.Dynamic.literal()
+    if (autoInstallConstraint != null) __obj.updateDynamic("autoInstallConstraint")(autoInstallConstraint.asInstanceOf[js.Any])
+    if (autoInstallMode != null) __obj.updateDynamic("autoInstallMode")(autoInstallMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoInstallPriority)) __obj.updateDynamic("autoInstallPriority")(autoInstallPriority.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumVersionCode)) __obj.updateDynamic("minimumVersionCode")(minimumVersionCode.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoInstallPolicy]
   }
-  @scala.inline
-  implicit class SchemaAutoInstallPolicyOps[Self <: SchemaAutoInstallPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoInstallConstraint(value: js.Array[SchemaAutoInstallConstraint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInstallConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoInstallConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInstallConstraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoInstallMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInstallMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoInstallMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInstallMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoInstallPriority(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInstallPriority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoInstallPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInstallPriority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumVersionCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumVersionCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumVersionCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumVersionCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

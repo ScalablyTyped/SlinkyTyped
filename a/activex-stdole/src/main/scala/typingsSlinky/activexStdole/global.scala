@@ -11,11 +11,57 @@ object global extends js.Object {
   object stdole extends js.Object {
     @js.native
     class StdFont protected ()
-      extends typingsSlinky.activexStdole.stdole.StdFont
+      extends typingsSlinky.activexStdole.stdole.StdFont {
+      /* CompleteClass */
+      override val Bold: Boolean = js.native
+      /* CompleteClass */
+      override val Charset: Double = js.native
+      /* CompleteClass */
+      override val Italic: Boolean = js.native
+      /* CompleteClass */
+      override val Name: String = js.native
+      /* CompleteClass */
+      override val Size: Double = js.native
+      /* CompleteClass */
+      override val Strikethrough: Boolean = js.native
+      /* CompleteClass */
+      override val Underline: Boolean = js.native
+      /* CompleteClass */
+      override val Weight: Double = js.native
+      /* CompleteClass */
+      @JSName("stdole.StdFont_typekey")
+      override var stdoleDotStdFont_typekey: typingsSlinky.activexStdole.stdole.StdFont = js.native
+    }
     
     @js.native
     class StdPicture protected ()
-      extends typingsSlinky.activexStdole.stdole.StdPicture
+      extends typingsSlinky.activexStdole.stdole.StdPicture {
+      /* CompleteClass */
+      override val Handle: Double = js.native
+      /* CompleteClass */
+      override val Height: Double = js.native
+      /* CompleteClass */
+      override val Type: Double = js.native
+      /* CompleteClass */
+      override val Width: Double = js.native
+      /* CompleteClass */
+      override val hPal: Double = js.native
+      /* CompleteClass */
+      @JSName("stdole.StdPicture_typekey")
+      override var stdoleDotStdPicture_typekey: typingsSlinky.activexStdole.stdole.StdPicture = js.native
+      /* CompleteClass */
+      override def Render(
+        hdc: Double,
+        x: Double,
+        y: Double,
+        cx: Double,
+        cy: Double,
+        xSrc: Double,
+        ySrc: Double,
+        cxSrc: Double,
+        cySrc: Double
+      ): Unit = js.native
+    }
     
   }
   

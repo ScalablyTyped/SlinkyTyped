@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ApplicationInfo extends js.Object {
   /**
+    *  Indicates whether Application Insights can listen to CloudWatch events for the application resources, such as instance terminated, failed deployment, and others. 
+    */
+  var CWEMonitorEnabled: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CWEMonitorEnabled] = js.native
+  /**
     * The lifecycle of the application. 
     */
   var LifeCycle: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.LifeCycle] = js.native
@@ -30,77 +34,22 @@ trait ApplicationInfo extends js.Object {
 
 object ApplicationInfo {
   @scala.inline
-  def apply(): ApplicationInfo = {
+  def apply(
+    CWEMonitorEnabled: js.UndefOr[CWEMonitorEnabled] = js.undefined,
+    LifeCycle: LifeCycle = null,
+    OpsCenterEnabled: js.UndefOr[OpsCenterEnabled] = js.undefined,
+    OpsItemSNSTopicArn: OpsItemSNSTopicArn = null,
+    Remarks: Remarks = null,
+    ResourceGroupName: ResourceGroupName = null
+  ): ApplicationInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CWEMonitorEnabled)) __obj.updateDynamic("CWEMonitorEnabled")(CWEMonitorEnabled.get.asInstanceOf[js.Any])
+    if (LifeCycle != null) __obj.updateDynamic("LifeCycle")(LifeCycle.asInstanceOf[js.Any])
+    if (!js.isUndefined(OpsCenterEnabled)) __obj.updateDynamic("OpsCenterEnabled")(OpsCenterEnabled.get.asInstanceOf[js.Any])
+    if (OpsItemSNSTopicArn != null) __obj.updateDynamic("OpsItemSNSTopicArn")(OpsItemSNSTopicArn.asInstanceOf[js.Any])
+    if (Remarks != null) __obj.updateDynamic("Remarks")(Remarks.asInstanceOf[js.Any])
+    if (ResourceGroupName != null) __obj.updateDynamic("ResourceGroupName")(ResourceGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationInfo]
   }
-  @scala.inline
-  implicit class ApplicationInfoOps[Self <: ApplicationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLifeCycle(value: LifeCycle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifeCycle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifeCycle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifeCycle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpsCenterEnabled(value: OpsCenterEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpsCenterEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpsCenterEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpsCenterEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpsItemSNSTopicArn(value: OpsItemSNSTopicArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpsItemSNSTopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpsItemSNSTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpsItemSNSTopicArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemarks(value: Remarks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Remarks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Remarks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceGroupName(value: ResourceGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

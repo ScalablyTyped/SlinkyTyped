@@ -1,286 +1,108 @@
 package typingsSlinky.reactResponsive.mod
 
+import typingsSlinky.reactResponsive.reactResponsiveStrings.interlace
+import typingsSlinky.reactResponsive.reactResponsiveStrings.landscape
+import typingsSlinky.reactResponsive.reactResponsiveStrings.portrait
+import typingsSlinky.reactResponsive.reactResponsiveStrings.progressive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaQueryFeatures extends MediaQueryMatchers {
-  var maxAspectRatio: js.UndefOr[String] = js.native
-  var maxColor: js.UndefOr[Double] = js.native
-  var maxColorIndex: js.UndefOr[Double] = js.native
-  var maxDeviceAspectRatio: js.UndefOr[String] = js.native
-  var maxDeviceHeight: js.UndefOr[Double | String] = js.native
-  var maxDeviceWidth: js.UndefOr[Double | String] = js.native
-  var maxHeight: js.UndefOr[Double | String] = js.native
-  var maxMonochrome: js.UndefOr[Double] = js.native
-  var maxResolution: js.UndefOr[Double | String] = js.native
-  var maxWidth: js.UndefOr[Double | String] = js.native
-  var minAspectRatio: js.UndefOr[String] = js.native
-  var minColor: js.UndefOr[Double] = js.native
-  var minColorIndex: js.UndefOr[Double] = js.native
-  var minDeviceAspectRatio: js.UndefOr[String] = js.native
-  var minDeviceHeight: js.UndefOr[Double | String] = js.native
-  var minDeviceWidth: js.UndefOr[Double | String] = js.native
-  var minHeight: js.UndefOr[Double | String] = js.native
-  var minMonochrome: js.UndefOr[Double] = js.native
-  var minResolution: js.UndefOr[Double | String] = js.native
-  var minWidth: js.UndefOr[Double | String] = js.native
+  var maxAspectRatio: js.UndefOr[String] = js.undefined
+  var maxColor: js.UndefOr[Double] = js.undefined
+  var maxColorIndex: js.UndefOr[Double] = js.undefined
+  var maxDeviceAspectRatio: js.UndefOr[String] = js.undefined
+  var maxDeviceHeight: js.UndefOr[Double | String] = js.undefined
+  var maxDeviceWidth: js.UndefOr[Double | String] = js.undefined
+  var maxHeight: js.UndefOr[Double | String] = js.undefined
+  var maxMonochrome: js.UndefOr[Double] = js.undefined
+  var maxResolution: js.UndefOr[Double | String] = js.undefined
+  var maxWidth: js.UndefOr[Double | String] = js.undefined
+  var minAspectRatio: js.UndefOr[String] = js.undefined
+  var minColor: js.UndefOr[Double] = js.undefined
+  var minColorIndex: js.UndefOr[Double] = js.undefined
+  var minDeviceAspectRatio: js.UndefOr[String] = js.undefined
+  var minDeviceHeight: js.UndefOr[Double | String] = js.undefined
+  var minDeviceWidth: js.UndefOr[Double | String] = js.undefined
+  var minHeight: js.UndefOr[Double | String] = js.undefined
+  var minMonochrome: js.UndefOr[Double] = js.undefined
+  var minResolution: js.UndefOr[Double | String] = js.undefined
+  var minWidth: js.UndefOr[Double | String] = js.undefined
 }
 
 object MediaQueryFeatures {
   @scala.inline
-  def apply(): MediaQueryFeatures = {
+  def apply(
+    aspectRatio: String = null,
+    color: js.UndefOr[Boolean] = js.undefined,
+    colorIndex: js.UndefOr[Boolean] = js.undefined,
+    deviceAspectRatio: String = null,
+    deviceHeight: Double | String = null,
+    deviceWidth: Double | String = null,
+    height: Double | String = null,
+    maxAspectRatio: String = null,
+    maxColor: js.UndefOr[Double] = js.undefined,
+    maxColorIndex: js.UndefOr[Double] = js.undefined,
+    maxDeviceAspectRatio: String = null,
+    maxDeviceHeight: Double | String = null,
+    maxDeviceWidth: Double | String = null,
+    maxHeight: Double | String = null,
+    maxMonochrome: js.UndefOr[Double] = js.undefined,
+    maxResolution: Double | String = null,
+    maxWidth: Double | String = null,
+    minAspectRatio: String = null,
+    minColor: js.UndefOr[Double] = js.undefined,
+    minColorIndex: js.UndefOr[Double] = js.undefined,
+    minDeviceAspectRatio: String = null,
+    minDeviceHeight: Double | String = null,
+    minDeviceWidth: Double | String = null,
+    minHeight: Double | String = null,
+    minMonochrome: js.UndefOr[Double] = js.undefined,
+    minResolution: Double | String = null,
+    minWidth: Double | String = null,
+    monochrome: js.UndefOr[Boolean] = js.undefined,
+    orientation: portrait | landscape = null,
+    resolution: Double | String = null,
+    scan: progressive | interlace = null,
+    `type`: MediaQueryType = null,
+    width: Double | String = null
+  ): MediaQueryFeatures = {
     val __obj = js.Dynamic.literal()
+    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
+    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorIndex)) __obj.updateDynamic("colorIndex")(colorIndex.get.asInstanceOf[js.Any])
+    if (deviceAspectRatio != null) __obj.updateDynamic("deviceAspectRatio")(deviceAspectRatio.asInstanceOf[js.Any])
+    if (deviceHeight != null) __obj.updateDynamic("deviceHeight")(deviceHeight.asInstanceOf[js.Any])
+    if (deviceWidth != null) __obj.updateDynamic("deviceWidth")(deviceWidth.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (maxAspectRatio != null) __obj.updateDynamic("maxAspectRatio")(maxAspectRatio.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxColor)) __obj.updateDynamic("maxColor")(maxColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxColorIndex)) __obj.updateDynamic("maxColorIndex")(maxColorIndex.get.asInstanceOf[js.Any])
+    if (maxDeviceAspectRatio != null) __obj.updateDynamic("maxDeviceAspectRatio")(maxDeviceAspectRatio.asInstanceOf[js.Any])
+    if (maxDeviceHeight != null) __obj.updateDynamic("maxDeviceHeight")(maxDeviceHeight.asInstanceOf[js.Any])
+    if (maxDeviceWidth != null) __obj.updateDynamic("maxDeviceWidth")(maxDeviceWidth.asInstanceOf[js.Any])
+    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxMonochrome)) __obj.updateDynamic("maxMonochrome")(maxMonochrome.get.asInstanceOf[js.Any])
+    if (maxResolution != null) __obj.updateDynamic("maxResolution")(maxResolution.asInstanceOf[js.Any])
+    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
+    if (minAspectRatio != null) __obj.updateDynamic("minAspectRatio")(minAspectRatio.asInstanceOf[js.Any])
+    if (!js.isUndefined(minColor)) __obj.updateDynamic("minColor")(minColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minColorIndex)) __obj.updateDynamic("minColorIndex")(minColorIndex.get.asInstanceOf[js.Any])
+    if (minDeviceAspectRatio != null) __obj.updateDynamic("minDeviceAspectRatio")(minDeviceAspectRatio.asInstanceOf[js.Any])
+    if (minDeviceHeight != null) __obj.updateDynamic("minDeviceHeight")(minDeviceHeight.asInstanceOf[js.Any])
+    if (minDeviceWidth != null) __obj.updateDynamic("minDeviceWidth")(minDeviceWidth.asInstanceOf[js.Any])
+    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(minMonochrome)) __obj.updateDynamic("minMonochrome")(minMonochrome.get.asInstanceOf[js.Any])
+    if (minResolution != null) __obj.updateDynamic("minResolution")(minResolution.asInstanceOf[js.Any])
+    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(monochrome)) __obj.updateDynamic("monochrome")(monochrome.get.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
+    if (scan != null) __obj.updateDynamic("scan")(scan.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaQueryFeatures]
   }
-  @scala.inline
-  implicit class MediaQueryFeaturesOps[Self <: MediaQueryFeatures] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxAspectRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxColorIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColorIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxColorIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColorIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDeviceAspectRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeviceAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDeviceAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeviceAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDeviceHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeviceHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDeviceHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeviceHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDeviceWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeviceWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDeviceWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeviceWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMonochrome(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMonochrome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMonochrome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMonochrome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResolution(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinAspectRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinColorIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColorIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinColorIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColorIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDeviceAspectRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeviceAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDeviceAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeviceAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDeviceHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeviceHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDeviceHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeviceHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDeviceWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeviceWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDeviceWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeviceWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinMonochrome(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minMonochrome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinMonochrome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minMonochrome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinResolution(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

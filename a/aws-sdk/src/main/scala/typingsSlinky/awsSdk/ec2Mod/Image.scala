@@ -114,329 +114,62 @@ trait Image extends js.Object {
 
 object Image {
   @scala.inline
-  def apply(): Image = {
+  def apply(
+    Architecture: ArchitectureValues = null,
+    BlockDeviceMappings: BlockDeviceMappingList = null,
+    CreationDate: String = null,
+    Description: String = null,
+    EnaSupport: js.UndefOr[Boolean] = js.undefined,
+    Hypervisor: HypervisorType = null,
+    ImageId: String = null,
+    ImageLocation: String = null,
+    ImageOwnerAlias: String = null,
+    ImageType: ImageTypeValues = null,
+    KernelId: String = null,
+    Name: String = null,
+    OwnerId: String = null,
+    Platform: PlatformValues = null,
+    PlatformDetails: String = null,
+    ProductCodes: ProductCodeList = null,
+    Public: js.UndefOr[Boolean] = js.undefined,
+    RamdiskId: String = null,
+    RootDeviceName: String = null,
+    RootDeviceType: DeviceType = null,
+    SriovNetSupport: String = null,
+    State: ImageState = null,
+    StateReason: StateReason = null,
+    Tags: TagList = null,
+    UsageOperation: String = null,
+    VirtualizationType: VirtualizationType = null
+  ): Image = {
     val __obj = js.Dynamic.literal()
+    if (Architecture != null) __obj.updateDynamic("Architecture")(Architecture.asInstanceOf[js.Any])
+    if (BlockDeviceMappings != null) __obj.updateDynamic("BlockDeviceMappings")(BlockDeviceMappings.asInstanceOf[js.Any])
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnaSupport)) __obj.updateDynamic("EnaSupport")(EnaSupport.get.asInstanceOf[js.Any])
+    if (Hypervisor != null) __obj.updateDynamic("Hypervisor")(Hypervisor.asInstanceOf[js.Any])
+    if (ImageId != null) __obj.updateDynamic("ImageId")(ImageId.asInstanceOf[js.Any])
+    if (ImageLocation != null) __obj.updateDynamic("ImageLocation")(ImageLocation.asInstanceOf[js.Any])
+    if (ImageOwnerAlias != null) __obj.updateDynamic("ImageOwnerAlias")(ImageOwnerAlias.asInstanceOf[js.Any])
+    if (ImageType != null) __obj.updateDynamic("ImageType")(ImageType.asInstanceOf[js.Any])
+    if (KernelId != null) __obj.updateDynamic("KernelId")(KernelId.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
+    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
+    if (PlatformDetails != null) __obj.updateDynamic("PlatformDetails")(PlatformDetails.asInstanceOf[js.Any])
+    if (ProductCodes != null) __obj.updateDynamic("ProductCodes")(ProductCodes.asInstanceOf[js.Any])
+    if (!js.isUndefined(Public)) __obj.updateDynamic("Public")(Public.get.asInstanceOf[js.Any])
+    if (RamdiskId != null) __obj.updateDynamic("RamdiskId")(RamdiskId.asInstanceOf[js.Any])
+    if (RootDeviceName != null) __obj.updateDynamic("RootDeviceName")(RootDeviceName.asInstanceOf[js.Any])
+    if (RootDeviceType != null) __obj.updateDynamic("RootDeviceType")(RootDeviceType.asInstanceOf[js.Any])
+    if (SriovNetSupport != null) __obj.updateDynamic("SriovNetSupport")(SriovNetSupport.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (StateReason != null) __obj.updateDynamic("StateReason")(StateReason.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (UsageOperation != null) __obj.updateDynamic("UsageOperation")(UsageOperation.asInstanceOf[js.Any])
+    if (VirtualizationType != null) __obj.updateDynamic("VirtualizationType")(VirtualizationType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Image]
   }
-  @scala.inline
-  implicit class ImageOps[Self <: Image] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArchitecture(value: ArchitectureValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchitecture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockDeviceMappings(value: BlockDeviceMappingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDeviceMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockDeviceMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDeviceMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnaSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnaSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnaSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnaSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHypervisor(value: HypervisorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hypervisor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHypervisor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hypervisor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageOwnerAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageOwnerAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageOwnerAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageOwnerAlias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageType(value: ImageTypeValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKernelId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKernelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: PlatformValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatformDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductCodes(value: ProductCodeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Public")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Public")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRamdiskId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RamdiskId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRamdiskId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RamdiskId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootDeviceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDeviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootDeviceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDeviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootDeviceType(value: DeviceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDeviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootDeviceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDeviceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSriovNetSupport(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SriovNetSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSriovNetSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SriovNetSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: ImageState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateReason(value: StateReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsageOperation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageOperation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsageOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageOperation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualizationType(value: VirtualizationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VirtualizationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualizationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VirtualizationType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

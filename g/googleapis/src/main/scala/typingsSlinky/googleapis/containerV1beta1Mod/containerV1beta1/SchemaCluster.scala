@@ -306,629 +306,112 @@ trait SchemaCluster extends js.Object {
 
 object SchemaCluster {
   @scala.inline
-  def apply(): SchemaCluster = {
+  def apply(
+    addonsConfig: SchemaAddonsConfig = null,
+    authenticatorGroupsConfig: SchemaAuthenticatorGroupsConfig = null,
+    autoscaling: SchemaClusterAutoscaling = null,
+    binaryAuthorization: SchemaBinaryAuthorization = null,
+    clusterIpv4Cidr: String = null,
+    conditions: js.Array[SchemaStatusCondition] = null,
+    createTime: String = null,
+    currentMasterVersion: String = null,
+    currentNodeCount: js.UndefOr[Double] = js.undefined,
+    currentNodeVersion: String = null,
+    databaseEncryption: SchemaDatabaseEncryption = null,
+    defaultMaxPodsConstraint: SchemaMaxPodsConstraint = null,
+    description: String = null,
+    enableKubernetesAlpha: js.UndefOr[Boolean] = js.undefined,
+    enableTpu: js.UndefOr[Boolean] = js.undefined,
+    endpoint: String = null,
+    expireTime: String = null,
+    initialClusterVersion: String = null,
+    initialNodeCount: js.UndefOr[Double] = js.undefined,
+    instanceGroupUrls: js.Array[String] = null,
+    ipAllocationPolicy: SchemaIPAllocationPolicy = null,
+    labelFingerprint: String = null,
+    legacyAbac: SchemaLegacyAbac = null,
+    location: String = null,
+    locations: js.Array[String] = null,
+    loggingService: String = null,
+    maintenancePolicy: SchemaMaintenancePolicy = null,
+    masterAuth: SchemaMasterAuth = null,
+    masterAuthorizedNetworksConfig: SchemaMasterAuthorizedNetworksConfig = null,
+    masterIpv4CidrBlock: String = null,
+    monitoringService: String = null,
+    name: String = null,
+    network: String = null,
+    networkConfig: SchemaNetworkConfig = null,
+    networkPolicy: SchemaNetworkPolicy = null,
+    nodeConfig: SchemaNodeConfig = null,
+    nodeIpv4CidrSize: js.UndefOr[Double] = js.undefined,
+    nodePools: js.Array[SchemaNodePool] = null,
+    podSecurityPolicyConfig: SchemaPodSecurityPolicyConfig = null,
+    privateCluster: js.UndefOr[Boolean] = js.undefined,
+    privateClusterConfig: SchemaPrivateClusterConfig = null,
+    resourceLabels: StringDictionary[String] = null,
+    resourceUsageExportConfig: SchemaResourceUsageExportConfig = null,
+    selfLink: String = null,
+    servicesIpv4Cidr: String = null,
+    status: String = null,
+    statusMessage: String = null,
+    subnetwork: String = null,
+    tpuIpv4CidrBlock: String = null,
+    verticalPodAutoscaling: SchemaVerticalPodAutoscaling = null,
+    zone: String = null
+  ): SchemaCluster = {
     val __obj = js.Dynamic.literal()
+    if (addonsConfig != null) __obj.updateDynamic("addonsConfig")(addonsConfig.asInstanceOf[js.Any])
+    if (authenticatorGroupsConfig != null) __obj.updateDynamic("authenticatorGroupsConfig")(authenticatorGroupsConfig.asInstanceOf[js.Any])
+    if (autoscaling != null) __obj.updateDynamic("autoscaling")(autoscaling.asInstanceOf[js.Any])
+    if (binaryAuthorization != null) __obj.updateDynamic("binaryAuthorization")(binaryAuthorization.asInstanceOf[js.Any])
+    if (clusterIpv4Cidr != null) __obj.updateDynamic("clusterIpv4Cidr")(clusterIpv4Cidr.asInstanceOf[js.Any])
+    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (currentMasterVersion != null) __obj.updateDynamic("currentMasterVersion")(currentMasterVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(currentNodeCount)) __obj.updateDynamic("currentNodeCount")(currentNodeCount.get.asInstanceOf[js.Any])
+    if (currentNodeVersion != null) __obj.updateDynamic("currentNodeVersion")(currentNodeVersion.asInstanceOf[js.Any])
+    if (databaseEncryption != null) __obj.updateDynamic("databaseEncryption")(databaseEncryption.asInstanceOf[js.Any])
+    if (defaultMaxPodsConstraint != null) __obj.updateDynamic("defaultMaxPodsConstraint")(defaultMaxPodsConstraint.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableKubernetesAlpha)) __obj.updateDynamic("enableKubernetesAlpha")(enableKubernetesAlpha.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableTpu)) __obj.updateDynamic("enableTpu")(enableTpu.get.asInstanceOf[js.Any])
+    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
+    if (expireTime != null) __obj.updateDynamic("expireTime")(expireTime.asInstanceOf[js.Any])
+    if (initialClusterVersion != null) __obj.updateDynamic("initialClusterVersion")(initialClusterVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialNodeCount)) __obj.updateDynamic("initialNodeCount")(initialNodeCount.get.asInstanceOf[js.Any])
+    if (instanceGroupUrls != null) __obj.updateDynamic("instanceGroupUrls")(instanceGroupUrls.asInstanceOf[js.Any])
+    if (ipAllocationPolicy != null) __obj.updateDynamic("ipAllocationPolicy")(ipAllocationPolicy.asInstanceOf[js.Any])
+    if (labelFingerprint != null) __obj.updateDynamic("labelFingerprint")(labelFingerprint.asInstanceOf[js.Any])
+    if (legacyAbac != null) __obj.updateDynamic("legacyAbac")(legacyAbac.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
+    if (loggingService != null) __obj.updateDynamic("loggingService")(loggingService.asInstanceOf[js.Any])
+    if (maintenancePolicy != null) __obj.updateDynamic("maintenancePolicy")(maintenancePolicy.asInstanceOf[js.Any])
+    if (masterAuth != null) __obj.updateDynamic("masterAuth")(masterAuth.asInstanceOf[js.Any])
+    if (masterAuthorizedNetworksConfig != null) __obj.updateDynamic("masterAuthorizedNetworksConfig")(masterAuthorizedNetworksConfig.asInstanceOf[js.Any])
+    if (masterIpv4CidrBlock != null) __obj.updateDynamic("masterIpv4CidrBlock")(masterIpv4CidrBlock.asInstanceOf[js.Any])
+    if (monitoringService != null) __obj.updateDynamic("monitoringService")(monitoringService.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (networkConfig != null) __obj.updateDynamic("networkConfig")(networkConfig.asInstanceOf[js.Any])
+    if (networkPolicy != null) __obj.updateDynamic("networkPolicy")(networkPolicy.asInstanceOf[js.Any])
+    if (nodeConfig != null) __obj.updateDynamic("nodeConfig")(nodeConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodeIpv4CidrSize)) __obj.updateDynamic("nodeIpv4CidrSize")(nodeIpv4CidrSize.get.asInstanceOf[js.Any])
+    if (nodePools != null) __obj.updateDynamic("nodePools")(nodePools.asInstanceOf[js.Any])
+    if (podSecurityPolicyConfig != null) __obj.updateDynamic("podSecurityPolicyConfig")(podSecurityPolicyConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(privateCluster)) __obj.updateDynamic("privateCluster")(privateCluster.get.asInstanceOf[js.Any])
+    if (privateClusterConfig != null) __obj.updateDynamic("privateClusterConfig")(privateClusterConfig.asInstanceOf[js.Any])
+    if (resourceLabels != null) __obj.updateDynamic("resourceLabels")(resourceLabels.asInstanceOf[js.Any])
+    if (resourceUsageExportConfig != null) __obj.updateDynamic("resourceUsageExportConfig")(resourceUsageExportConfig.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (servicesIpv4Cidr != null) __obj.updateDynamic("servicesIpv4Cidr")(servicesIpv4Cidr.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (statusMessage != null) __obj.updateDynamic("statusMessage")(statusMessage.asInstanceOf[js.Any])
+    if (subnetwork != null) __obj.updateDynamic("subnetwork")(subnetwork.asInstanceOf[js.Any])
+    if (tpuIpv4CidrBlock != null) __obj.updateDynamic("tpuIpv4CidrBlock")(tpuIpv4CidrBlock.asInstanceOf[js.Any])
+    if (verticalPodAutoscaling != null) __obj.updateDynamic("verticalPodAutoscaling")(verticalPodAutoscaling.asInstanceOf[js.Any])
+    if (zone != null) __obj.updateDynamic("zone")(zone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCluster]
   }
-  @scala.inline
-  implicit class SchemaClusterOps[Self <: SchemaCluster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddonsConfig(value: SchemaAddonsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addonsConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddonsConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addonsConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthenticatorGroupsConfig(value: SchemaAuthenticatorGroupsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticatorGroupsConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticatorGroupsConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticatorGroupsConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoscaling(value: SchemaClusterAutoscaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoscaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinaryAuthorization(value: SchemaBinaryAuthorization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryAuthorization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryAuthorization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryAuthorization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterIpv4Cidr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterIpv4Cidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterIpv4Cidr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterIpv4Cidr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: js.Array[SchemaStatusCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentMasterVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentMasterVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentMasterVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentMasterVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentNodeCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNodeCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentNodeCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNodeCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentNodeVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNodeVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentNodeVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNodeVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabaseEncryption(value: SchemaDatabaseEncryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultMaxPodsConstraint(value: SchemaMaxPodsConstraint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMaxPodsConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultMaxPodsConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMaxPodsConstraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableKubernetesAlpha(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKubernetesAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableKubernetesAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKubernetesAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableTpu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTpu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableTpu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTpu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpireTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expireTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpireTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expireTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialClusterVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialClusterVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialClusterVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialClusterVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialNodeCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialNodeCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialNodeCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialNodeCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceGroupUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceGroupUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceGroupUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceGroupUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpAllocationPolicy(value: SchemaIPAllocationPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAllocationPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAllocationPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAllocationPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegacyAbac(value: SchemaLegacyAbac): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyAbac")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegacyAbac: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyAbac")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaintenancePolicy(value: SchemaMaintenancePolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenancePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaintenancePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenancePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAuth(value: SchemaMasterAuth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAuth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAuthorizedNetworksConfig(value: SchemaMasterAuthorizedNetworksConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAuthorizedNetworksConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAuthorizedNetworksConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAuthorizedNetworksConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterIpv4CidrBlock(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterIpv4CidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterIpv4CidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterIpv4CidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitoringService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoringService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitoringService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoringService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkConfig(value: SchemaNetworkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkPolicy(value: SchemaNetworkPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeConfig(value: SchemaNodeConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeIpv4CidrSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIpv4CidrSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeIpv4CidrSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIpv4CidrSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodePools(value: js.Array[SchemaNodePool]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodePools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePools")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPodSecurityPolicyConfig(value: SchemaPodSecurityPolicyConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podSecurityPolicyConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPodSecurityPolicyConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podSecurityPolicyConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateCluster(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateCluster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateCluster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateCluster")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateClusterConfig(value: SchemaPrivateClusterConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateClusterConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateClusterConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateClusterConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceUsageExportConfig(value: SchemaResourceUsageExportConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceUsageExportConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceUsageExportConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceUsageExportConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServicesIpv4Cidr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicesIpv4Cidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServicesIpv4Cidr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicesIpv4Cidr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTpuIpv4CidrBlock(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tpuIpv4CidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTpuIpv4CidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tpuIpv4CidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalPodAutoscaling(value: SchemaVerticalPodAutoscaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalPodAutoscaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalPodAutoscaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalPodAutoscaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

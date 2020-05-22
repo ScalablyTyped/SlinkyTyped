@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("elasticsearch", "errors.HTTPToHTTPS")
 @js.native
-class HTTPToHTTPS () extends Error
+class HTTPToHTTPS () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

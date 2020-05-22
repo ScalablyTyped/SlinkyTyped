@@ -30,77 +30,20 @@ trait NodeSummary extends js.Object {
 
 object NodeSummary {
   @scala.inline
-  def apply(): NodeSummary = {
+  def apply(
+    AvailabilityZone: AvailabilityZoneString = null,
+    CreationDate: js.Date = null,
+    Id: ResourceIdString = null,
+    InstanceType: InstanceTypeString = null,
+    Status: NodeStatus = null
+  ): NodeSummary = {
     val __obj = js.Dynamic.literal()
+    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeSummary]
   }
-  @scala.inline
-  implicit class NodeSummaryOps[Self <: NodeSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZone(value: AvailabilityZoneString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: ResourceIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceType(value: InstanceTypeString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: NodeStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

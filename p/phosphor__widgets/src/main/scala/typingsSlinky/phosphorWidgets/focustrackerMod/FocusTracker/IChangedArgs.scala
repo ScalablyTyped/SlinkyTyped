@@ -8,55 +8,22 @@ import scala.scalajs.js.annotation._
 /**
   * An arguments object for the changed signals.
   */
-@js.native
 trait IChangedArgs[T /* <: Widget */] extends js.Object {
   /**
     * The new value for the widget.
     */
-  var newValue: T | Null = js.native
+  var newValue: T | Null
   /**
     * The old value for the widget.
     */
-  var oldValue: T | Null = js.native
+  var oldValue: T | Null
 }
 
 object IChangedArgs {
   @scala.inline
-  def apply[T](): IChangedArgs[T] = {
-    val __obj = js.Dynamic.literal()
+  def apply[T](newValue: T = null, oldValue: T = null): IChangedArgs[T] = {
+    val __obj = js.Dynamic.literal(newValue = newValue.asInstanceOf[js.Any], oldValue = oldValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[IChangedArgs[T]]
   }
-  @scala.inline
-  implicit class IChangedArgsOps[Self[t] <: IChangedArgs[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withNewValue(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewValueNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(null)
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldValueNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(null)
-        ret
-    }
-  }
-  
 }
 

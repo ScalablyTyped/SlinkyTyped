@@ -11,14 +11,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SessionChangedEvent extends js.Object {
   /**
     * the action that triggered this event:
     */
-  var reason: lock | unlock | `remote-connect` | `remote-disconnect` | unknown = js.native
-  var topic: system = js.native
-  var `type`: `session-changed` = js.native
+  var reason: lock | unlock | `remote-connect` | `remote-disconnect` | unknown
+  var topic: system
+  var `type`: `session-changed`
 }
 
 object SessionChangedEvent {
@@ -32,31 +31,5 @@ object SessionChangedEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SessionChangedEvent]
   }
-  @scala.inline
-  implicit class SessionChangedEventOps[Self <: SessionChangedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: lock | unlock | `remote-connect` | `remote-disconnect` | unknown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopic(value: system): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: `session-changed`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

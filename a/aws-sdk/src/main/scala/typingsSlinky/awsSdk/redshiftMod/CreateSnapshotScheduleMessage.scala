@@ -34,89 +34,22 @@ trait CreateSnapshotScheduleMessage extends js.Object {
 
 object CreateSnapshotScheduleMessage {
   @scala.inline
-  def apply(): CreateSnapshotScheduleMessage = {
+  def apply(
+    DryRun: js.UndefOr[BooleanOptional] = js.undefined,
+    NextInvocations: js.UndefOr[IntegerOptional] = js.undefined,
+    ScheduleDefinitions: ScheduleDefinitionList = null,
+    ScheduleDescription: String = null,
+    ScheduleIdentifier: String = null,
+    Tags: TagList = null
+  ): CreateSnapshotScheduleMessage = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NextInvocations)) __obj.updateDynamic("NextInvocations")(NextInvocations.get.asInstanceOf[js.Any])
+    if (ScheduleDefinitions != null) __obj.updateDynamic("ScheduleDefinitions")(ScheduleDefinitions.asInstanceOf[js.Any])
+    if (ScheduleDescription != null) __obj.updateDynamic("ScheduleDescription")(ScheduleDescription.asInstanceOf[js.Any])
+    if (ScheduleIdentifier != null) __obj.updateDynamic("ScheduleIdentifier")(ScheduleIdentifier.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSnapshotScheduleMessage]
   }
-  @scala.inline
-  implicit class CreateSnapshotScheduleMessageOps[Self <: CreateSnapshotScheduleMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDryRun(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextInvocations(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextInvocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextInvocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextInvocations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleDefinitions(value: ScheduleDefinitionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleDefinitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleDefinitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleDefinitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

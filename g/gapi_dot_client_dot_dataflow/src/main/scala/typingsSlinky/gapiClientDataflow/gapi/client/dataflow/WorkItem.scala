@@ -4,236 +4,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkItem extends js.Object {
   /** Work item-specific configuration as an opaque blob. */
-  var configuration: js.UndefOr[String] = js.native
+  var configuration: js.UndefOr[String] = js.undefined
   /** Identifies this WorkItem. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** The initial index to use when reporting the status of the WorkItem. */
-  var initialReportIndex: js.UndefOr[String] = js.native
+  var initialReportIndex: js.UndefOr[String] = js.undefined
   /** Identifies the workflow job this WorkItem belongs to. */
-  var jobId: js.UndefOr[String] = js.native
+  var jobId: js.UndefOr[String] = js.undefined
   /** Time when the lease on this Work will expire. */
-  var leaseExpireTime: js.UndefOr[String] = js.native
+  var leaseExpireTime: js.UndefOr[String] = js.undefined
   /** Additional information for MapTask WorkItems. */
-  var mapTask: js.UndefOr[MapTask] = js.native
+  var mapTask: js.UndefOr[MapTask] = js.undefined
   /**
     * Any required packages that need to be fetched in order to execute
     * this WorkItem.
     */
-  var packages: js.UndefOr[js.Array[Package]] = js.native
+  var packages: js.UndefOr[js.Array[Package]] = js.undefined
   /** Identifies the cloud project this WorkItem belongs to. */
-  var projectId: js.UndefOr[String] = js.native
+  var projectId: js.UndefOr[String] = js.undefined
   /** Recommended reporting interval. */
-  var reportStatusInterval: js.UndefOr[String] = js.native
+  var reportStatusInterval: js.UndefOr[String] = js.undefined
   /** Additional information for SeqMapTask WorkItems. */
-  var seqMapTask: js.UndefOr[SeqMapTask] = js.native
+  var seqMapTask: js.UndefOr[SeqMapTask] = js.undefined
   /** Additional information for ShellTask WorkItems. */
-  var shellTask: js.UndefOr[ShellTask] = js.native
+  var shellTask: js.UndefOr[ShellTask] = js.undefined
   /** Additional information for source operation WorkItems. */
-  var sourceOperationTask: js.UndefOr[SourceOperationRequest] = js.native
+  var sourceOperationTask: js.UndefOr[SourceOperationRequest] = js.undefined
   /** Additional information for StreamingComputationTask WorkItems. */
-  var streamingComputationTask: js.UndefOr[StreamingComputationTask] = js.native
+  var streamingComputationTask: js.UndefOr[StreamingComputationTask] = js.undefined
   /** Additional information for StreamingConfigTask WorkItems. */
-  var streamingConfigTask: js.UndefOr[StreamingConfigTask] = js.native
+  var streamingConfigTask: js.UndefOr[StreamingConfigTask] = js.undefined
   /** Additional information for StreamingSetupTask WorkItems. */
-  var streamingSetupTask: js.UndefOr[StreamingSetupTask] = js.native
+  var streamingSetupTask: js.UndefOr[StreamingSetupTask] = js.undefined
 }
 
 object WorkItem {
   @scala.inline
-  def apply(): WorkItem = {
+  def apply(
+    configuration: String = null,
+    id: String = null,
+    initialReportIndex: String = null,
+    jobId: String = null,
+    leaseExpireTime: String = null,
+    mapTask: MapTask = null,
+    packages: js.Array[Package] = null,
+    projectId: String = null,
+    reportStatusInterval: String = null,
+    seqMapTask: SeqMapTask = null,
+    shellTask: ShellTask = null,
+    sourceOperationTask: SourceOperationRequest = null,
+    streamingComputationTask: StreamingComputationTask = null,
+    streamingConfigTask: StreamingConfigTask = null,
+    streamingSetupTask: StreamingSetupTask = null
+  ): WorkItem = {
     val __obj = js.Dynamic.literal()
+    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (initialReportIndex != null) __obj.updateDynamic("initialReportIndex")(initialReportIndex.asInstanceOf[js.Any])
+    if (jobId != null) __obj.updateDynamic("jobId")(jobId.asInstanceOf[js.Any])
+    if (leaseExpireTime != null) __obj.updateDynamic("leaseExpireTime")(leaseExpireTime.asInstanceOf[js.Any])
+    if (mapTask != null) __obj.updateDynamic("mapTask")(mapTask.asInstanceOf[js.Any])
+    if (packages != null) __obj.updateDynamic("packages")(packages.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (reportStatusInterval != null) __obj.updateDynamic("reportStatusInterval")(reportStatusInterval.asInstanceOf[js.Any])
+    if (seqMapTask != null) __obj.updateDynamic("seqMapTask")(seqMapTask.asInstanceOf[js.Any])
+    if (shellTask != null) __obj.updateDynamic("shellTask")(shellTask.asInstanceOf[js.Any])
+    if (sourceOperationTask != null) __obj.updateDynamic("sourceOperationTask")(sourceOperationTask.asInstanceOf[js.Any])
+    if (streamingComputationTask != null) __obj.updateDynamic("streamingComputationTask")(streamingComputationTask.asInstanceOf[js.Any])
+    if (streamingConfigTask != null) __obj.updateDynamic("streamingConfigTask")(streamingConfigTask.asInstanceOf[js.Any])
+    if (streamingSetupTask != null) __obj.updateDynamic("streamingSetupTask")(streamingSetupTask.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkItem]
   }
-  @scala.inline
-  implicit class WorkItemOps[Self <: WorkItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfiguration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialReportIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialReportIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialReportIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialReportIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeaseExpireTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseExpireTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeaseExpireTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseExpireTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapTask(value: MapTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackages(value: js.Array[Package]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportStatusInterval(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportStatusInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportStatusInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportStatusInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeqMapTask(value: SeqMapTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seqMapTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeqMapTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seqMapTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShellTask(value: ShellTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shellTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShellTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shellTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceOperationTask(value: SourceOperationRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceOperationTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceOperationTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceOperationTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamingComputationTask(value: StreamingComputationTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingComputationTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamingComputationTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingComputationTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamingConfigTask(value: StreamingConfigTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingConfigTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamingConfigTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingConfigTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamingSetupTask(value: StreamingSetupTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingSetupTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamingSetupTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingSetupTask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

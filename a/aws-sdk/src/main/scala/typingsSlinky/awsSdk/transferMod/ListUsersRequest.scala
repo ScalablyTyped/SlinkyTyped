@@ -15,54 +15,18 @@ trait ListUsersRequest extends js.Object {
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.transferMod.NextToken] = js.native
   /**
-    * A system-assigned unique identifier for a Secure File Transfer Protocol (SFTP) server that has users assigned to it.
+    * A system-assigned unique identifier for a file transfer protocol-enabled server that has users assigned to it.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
 }
 
 object ListUsersRequest {
   @scala.inline
-  def apply(ServerId: ServerId): ListUsersRequest = {
+  def apply(ServerId: ServerId, MaxResults: js.UndefOr[MaxResults] = js.undefined, NextToken: NextToken = null): ListUsersRequest = {
     val __obj = js.Dynamic.literal(ServerId = ServerId.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListUsersRequest]
   }
-  @scala.inline
-  implicit class ListUsersRequestOps[Self <: ListUsersRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServerId(value: ServerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

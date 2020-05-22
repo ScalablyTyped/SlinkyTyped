@@ -26,65 +26,18 @@ trait PolicyTargetSummary extends js.Object {
 
 object PolicyTargetSummary {
   @scala.inline
-  def apply(): PolicyTargetSummary = {
+  def apply(
+    Arn: GenericArn = null,
+    Name: TargetName = null,
+    TargetId: PolicyTargetId = null,
+    Type: TargetType = null
+  ): PolicyTargetSummary = {
     val __obj = js.Dynamic.literal()
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (TargetId != null) __obj.updateDynamic("TargetId")(TargetId.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyTargetSummary]
   }
-  @scala.inline
-  implicit class PolicyTargetSummaryOps[Self <: PolicyTargetSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: GenericArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: TargetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetId(value: PolicyTargetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: TargetType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

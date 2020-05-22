@@ -19,79 +19,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Delay extends js.Object {
-  var delay: js.UndefOr[Double] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var size: js.UndefOr[xsmall | small | medium | large | xlarge] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var size: js.UndefOr[xsmall | small | medium | large | xlarge] = js.undefined
   var `type`: js.UndefOr[
     fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut
-  ] = js.native
+  ] = js.undefined
 }
 
 object Delay {
   @scala.inline
-  def apply(): Delay = {
+  def apply(
+    delay: js.UndefOr[Double] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    size: xsmall | small | medium | large | xlarge = null,
+    `type`: fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut = null
+  ): Delay = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Delay]
   }
-  @scala.inline
-  implicit class DelayOps[Self <: Delay] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: xsmall | small | medium | large | xlarge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(
-      value: fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

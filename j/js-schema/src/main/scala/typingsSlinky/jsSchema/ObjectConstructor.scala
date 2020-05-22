@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ObjectConstructor extends js.Object {
-  def like(obj: js.Any): ObjectConstructor = js.native
-  def reference(obj: js.Any): ObjectConstructor = js.native
+  def like(obj: js.Any): ObjectConstructor
+  def reference(obj: js.Any): ObjectConstructor
 }
 
 object ObjectConstructor {
@@ -16,25 +15,5 @@ object ObjectConstructor {
     val __obj = js.Dynamic.literal(like = js.Any.fromFunction1(like), reference = js.Any.fromFunction1(reference))
     __obj.asInstanceOf[ObjectConstructor]
   }
-  @scala.inline
-  implicit class ObjectConstructorOps[Self <: ObjectConstructor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLike(value: js.Any => ObjectConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("like")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReference(value: js.Any => ObjectConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

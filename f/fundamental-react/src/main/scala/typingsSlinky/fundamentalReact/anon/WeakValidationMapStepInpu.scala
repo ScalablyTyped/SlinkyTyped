@@ -6,127 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react.react.WeakValidationMap<fundamental-react.fundamental-react/lib/StepInput/StepInput.StepInputProps> */
-@js.native
 trait WeakValidationMapStepInpu extends js.Object {
-  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var disableStyles: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var disabled: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var localizedText: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.native
-  var placeholder: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var readOnly: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var validationState: js.UndefOr[Validator[js.UndefOr[Null | State]]] = js.native
-  var value: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
+  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var disableStyles: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var disabled: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var localizedText: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.undefined
+  var placeholder: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var readOnly: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var validationState: js.UndefOr[Validator[js.UndefOr[Null | State]]] = js.undefined
+  var value: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
 }
 
 object WeakValidationMapStepInpu {
   @scala.inline
-  def apply(): WeakValidationMapStepInpu = {
+  def apply(
+    className: Validator[js.UndefOr[Null | String]] = null,
+    disableStyles: Validator[js.UndefOr[Boolean | Null]] = null,
+    disabled: Validator[js.UndefOr[Boolean | Null]] = null,
+    localizedText: Validator[js.UndefOr[_ | Null]] = null,
+    placeholder: Validator[js.UndefOr[Null | String]] = null,
+    readOnly: Validator[js.UndefOr[Boolean | Null]] = null,
+    validationState: Validator[js.UndefOr[Null | State]] = null,
+    value: Validator[js.UndefOr[Double | Null]] = null
+  ): WeakValidationMapStepInpu = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (disableStyles != null) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
+    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (localizedText != null) __obj.updateDynamic("localizedText")(localizedText.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
+    if (validationState != null) __obj.updateDynamic("validationState")(validationState.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeakValidationMapStepInpu]
   }
-  @scala.inline
-  implicit class WeakValidationMapStepInpuOps[Self <: WeakValidationMapStepInpu] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableStyles(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizedText(value: Validator[js.UndefOr[_ | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalizedText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationState(value: Validator[js.UndefOr[Null | State]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -51,96 +51,18 @@ object MonitoringJobDefinition {
     MonitoringInputs: MonitoringInputs,
     MonitoringOutputConfig: MonitoringOutputConfig,
     MonitoringResources: MonitoringResources,
-    RoleArn: RoleArn
+    RoleArn: RoleArn,
+    BaselineConfig: MonitoringBaselineConfig = null,
+    Environment: MonitoringEnvironmentMap = null,
+    NetworkConfig: NetworkConfig = null,
+    StoppingCondition: MonitoringStoppingCondition = null
   ): MonitoringJobDefinition = {
     val __obj = js.Dynamic.literal(MonitoringAppSpecification = MonitoringAppSpecification.asInstanceOf[js.Any], MonitoringInputs = MonitoringInputs.asInstanceOf[js.Any], MonitoringOutputConfig = MonitoringOutputConfig.asInstanceOf[js.Any], MonitoringResources = MonitoringResources.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any])
+    if (BaselineConfig != null) __obj.updateDynamic("BaselineConfig")(BaselineConfig.asInstanceOf[js.Any])
+    if (Environment != null) __obj.updateDynamic("Environment")(Environment.asInstanceOf[js.Any])
+    if (NetworkConfig != null) __obj.updateDynamic("NetworkConfig")(NetworkConfig.asInstanceOf[js.Any])
+    if (StoppingCondition != null) __obj.updateDynamic("StoppingCondition")(StoppingCondition.asInstanceOf[js.Any])
     __obj.asInstanceOf[MonitoringJobDefinition]
   }
-  @scala.inline
-  implicit class MonitoringJobDefinitionOps[Self <: MonitoringJobDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMonitoringAppSpecification(value: MonitoringAppSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringAppSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonitoringInputs(value: MonitoringInputs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringInputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonitoringOutputConfig(value: MonitoringOutputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringOutputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonitoringResources(value: MonitoringResources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaselineConfig(value: MonitoringBaselineConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaselineConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: MonitoringEnvironmentMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkConfig(value: NetworkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoppingCondition(value: MonitoringStoppingCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoppingCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingCondition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type/definition", "GraphQLInputObjectType")
 @js.native
 class GraphQLInputObjectType protected ()
-  extends GraphQLInputType
-     with GraphQLNamedType
-     with GraphQLNullableType
-     with GraphQLType {
+  extends _GraphQLInputType
+     with _GraphQLNamedType
+     with _GraphQLNullableType
+     with _GraphQLType {
   def this(config: GraphQLInputObjectTypeConfig) = this()
   var astNode: Maybe[InputObjectTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

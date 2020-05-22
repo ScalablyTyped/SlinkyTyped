@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CodeParser extends js.Object {
-  def collapseNames(obj: js.Any): StringDictionary[js.Any] = js.native
-  def expandNames(obj: StringDictionary[js.Any]): js.Any = js.native
+  def collapseNames(obj: js.Any): StringDictionary[js.Any]
+  def expandNames(obj: StringDictionary[js.Any]): js.Any
 }
 
 @JSImport("webix", "CodeParser")

@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Direction extends js.Object {
-  var direction: Cartesian3 = js.native
-  var up: Cartesian3 = js.native
+  var direction: Cartesian3
+  var up: Cartesian3
 }
 
 object Direction {
@@ -17,25 +16,5 @@ object Direction {
     val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], up = up.asInstanceOf[js.Any])
     __obj.asInstanceOf[Direction]
   }
-  @scala.inline
-  implicit class DirectionOps[Self <: Direction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirection(value: Cartesian3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUp(value: Cartesian3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -30,77 +30,20 @@ trait GlobalTableDescription extends js.Object {
 
 object GlobalTableDescription {
   @scala.inline
-  def apply(): GlobalTableDescription = {
+  def apply(
+    CreationDateTime: js.Date = null,
+    GlobalTableArn: GlobalTableArnString = null,
+    GlobalTableName: TableName = null,
+    GlobalTableStatus: GlobalTableStatus = null,
+    ReplicationGroup: ReplicaDescriptionList = null
+  ): GlobalTableDescription = {
     val __obj = js.Dynamic.literal()
+    if (CreationDateTime != null) __obj.updateDynamic("CreationDateTime")(CreationDateTime.asInstanceOf[js.Any])
+    if (GlobalTableArn != null) __obj.updateDynamic("GlobalTableArn")(GlobalTableArn.asInstanceOf[js.Any])
+    if (GlobalTableName != null) __obj.updateDynamic("GlobalTableName")(GlobalTableName.asInstanceOf[js.Any])
+    if (GlobalTableStatus != null) __obj.updateDynamic("GlobalTableStatus")(GlobalTableStatus.asInstanceOf[js.Any])
+    if (ReplicationGroup != null) __obj.updateDynamic("ReplicationGroup")(ReplicationGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[GlobalTableDescription]
   }
-  @scala.inline
-  implicit class GlobalTableDescriptionOps[Self <: GlobalTableDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalTableArn(value: GlobalTableArnString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTableArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalTableName(value: TableName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalTableStatus(value: GlobalTableStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTableStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicationGroup(value: ReplicaDescriptionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

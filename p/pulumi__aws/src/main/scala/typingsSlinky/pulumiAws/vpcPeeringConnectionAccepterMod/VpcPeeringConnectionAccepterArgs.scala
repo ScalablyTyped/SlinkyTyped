@@ -36,71 +36,19 @@ trait VpcPeeringConnectionAccepterArgs extends js.Object {
 
 object VpcPeeringConnectionAccepterArgs {
   @scala.inline
-  def apply(vpcPeeringConnectionId: Input[String]): VpcPeeringConnectionAccepterArgs = {
+  def apply(
+    vpcPeeringConnectionId: Input[String],
+    accepter: Input[VpcPeeringConnectionAccepterAccepter] = null,
+    autoAccept: Input[Boolean] = null,
+    requester: Input[VpcPeeringConnectionAccepterRequester] = null,
+    tags: Input[StringDictionary[_]] = null
+  ): VpcPeeringConnectionAccepterArgs = {
     val __obj = js.Dynamic.literal(vpcPeeringConnectionId = vpcPeeringConnectionId.asInstanceOf[js.Any])
+    if (accepter != null) __obj.updateDynamic("accepter")(accepter.asInstanceOf[js.Any])
+    if (autoAccept != null) __obj.updateDynamic("autoAccept")(autoAccept.asInstanceOf[js.Any])
+    if (requester != null) __obj.updateDynamic("requester")(requester.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcPeeringConnectionAccepterArgs]
   }
-  @scala.inline
-  implicit class VpcPeeringConnectionAccepterArgsOps[Self <: VpcPeeringConnectionAccepterArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpcPeeringConnectionId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcPeeringConnectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccepter(value: Input[VpcPeeringConnectionAccepterAccepter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccepter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoAccept(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAccept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAccept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAccept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequester(value: Input[VpcPeeringConnectionAccepterRequester]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequester: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

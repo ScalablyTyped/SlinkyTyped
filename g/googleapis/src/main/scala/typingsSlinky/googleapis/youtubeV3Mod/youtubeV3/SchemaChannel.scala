@@ -80,185 +80,38 @@ trait SchemaChannel extends js.Object {
 
 object SchemaChannel {
   @scala.inline
-  def apply(): SchemaChannel = {
+  def apply(
+    auditDetails: SchemaChannelAuditDetails = null,
+    brandingSettings: SchemaChannelBrandingSettings = null,
+    contentDetails: SchemaChannelContentDetails = null,
+    contentOwnerDetails: SchemaChannelContentOwnerDetails = null,
+    conversionPings: SchemaChannelConversionPings = null,
+    etag: String = null,
+    id: String = null,
+    invideoPromotion: SchemaInvideoPromotion = null,
+    kind: String = null,
+    localizations: StringDictionary[SchemaChannelLocalization] = null,
+    snippet: SchemaChannelSnippet = null,
+    statistics: SchemaChannelStatistics = null,
+    status: SchemaChannelStatus = null,
+    topicDetails: SchemaChannelTopicDetails = null
+  ): SchemaChannel = {
     val __obj = js.Dynamic.literal()
+    if (auditDetails != null) __obj.updateDynamic("auditDetails")(auditDetails.asInstanceOf[js.Any])
+    if (brandingSettings != null) __obj.updateDynamic("brandingSettings")(brandingSettings.asInstanceOf[js.Any])
+    if (contentDetails != null) __obj.updateDynamic("contentDetails")(contentDetails.asInstanceOf[js.Any])
+    if (contentOwnerDetails != null) __obj.updateDynamic("contentOwnerDetails")(contentOwnerDetails.asInstanceOf[js.Any])
+    if (conversionPings != null) __obj.updateDynamic("conversionPings")(conversionPings.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (invideoPromotion != null) __obj.updateDynamic("invideoPromotion")(invideoPromotion.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (localizations != null) __obj.updateDynamic("localizations")(localizations.asInstanceOf[js.Any])
+    if (snippet != null) __obj.updateDynamic("snippet")(snippet.asInstanceOf[js.Any])
+    if (statistics != null) __obj.updateDynamic("statistics")(statistics.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (topicDetails != null) __obj.updateDynamic("topicDetails")(topicDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannel]
   }
-  @scala.inline
-  implicit class SchemaChannelOps[Self <: SchemaChannel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuditDetails(value: SchemaChannelAuditDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auditDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuditDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auditDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrandingSettings(value: SchemaChannelBrandingSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brandingSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrandingSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brandingSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentDetails(value: SchemaChannelContentDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentOwnerDetails(value: SchemaChannelContentOwnerDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentOwnerDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentOwnerDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentOwnerDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConversionPings(value: SchemaChannelConversionPings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionPings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversionPings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionPings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvideoPromotion(value: SchemaInvideoPromotion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invideoPromotion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvideoPromotion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invideoPromotion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizations(value: StringDictionary[SchemaChannelLocalization]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalizations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnippet(value: SchemaChannelSnippet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnippet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatistics(value: SchemaChannelStatistics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SchemaChannelStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicDetails(value: SchemaChannelTopicDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

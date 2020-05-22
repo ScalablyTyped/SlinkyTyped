@@ -4,71 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AxesRange extends js.Object {
   /** Interval of the axis range.
     * @Default {null}
     */
-  var interval: js.UndefOr[Double] = js.native
+  var interval: js.UndefOr[Double] = js.undefined
   /** Maximum value of the axis range.
     * @Default {null}
     */
-  var max: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[Double] = js.undefined
   /** Minimum value of the axis range.
     * @Default {null}
     */
-  var min: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.undefined
 }
 
 object AxesRange {
   @scala.inline
-  def apply(): AxesRange = {
+  def apply(
+    interval: js.UndefOr[Double] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined
+  ): AxesRange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxesRange]
   }
-  @scala.inline
-  implicit class AxesRangeOps[Self <: AxesRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

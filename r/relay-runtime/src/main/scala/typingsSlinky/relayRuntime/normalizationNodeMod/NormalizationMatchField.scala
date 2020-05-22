@@ -7,15 +7,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationSelection because Already inherited */ @js.native
-trait NormalizationMatchField extends NormalizationField {
+- typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationSelection because Already inherited */ trait NormalizationMatchField extends NormalizationField {
    // 'MatchField';
-  val alias: js.UndefOr[String | Null] = js.native
-  val args: js.Array[NormalizationArgument] = js.native
-  val kind: String = js.native
-  val matchesByType: StringDictionary[FragmentName] = js.native
-  val name: String = js.native
-  val storageKey: js.UndefOr[String | Null] = js.native
+  val alias: js.UndefOr[String | Null] = js.undefined
+  val args: js.Array[NormalizationArgument]
+  val kind: String
+  val matchesByType: StringDictionary[FragmentName]
+  val name: String
+  val storageKey: js.UndefOr[String | Null] = js.undefined
 }
 
 object NormalizationMatchField {
@@ -24,78 +23,14 @@ object NormalizationMatchField {
     args: js.Array[NormalizationArgument],
     kind: String,
     matchesByType: StringDictionary[FragmentName],
-    name: String
+    name: String,
+    alias: js.UndefOr[Null | String] = js.undefined,
+    storageKey: js.UndefOr[Null | String] = js.undefined
   ): NormalizationMatchField = {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], matchesByType = matchesByType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(alias)) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageKey)) __obj.updateDynamic("storageKey")(storageKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[NormalizationMatchField]
   }
-  @scala.inline
-  implicit class NormalizationMatchFieldOps[Self <: NormalizationMatchField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Array[NormalizationArgument]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatchesByType(value: StringDictionary[FragmentName]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchesByType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAliasNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(null)
-        ret
-    }
-    @scala.inline
-    def withStorageKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageKey")(null)
-        ret
-    }
-  }
-  
 }
 

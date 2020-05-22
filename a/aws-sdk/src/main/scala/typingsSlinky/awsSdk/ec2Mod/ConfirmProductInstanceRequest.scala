@@ -22,41 +22,10 @@ trait ConfirmProductInstanceRequest extends js.Object {
 
 object ConfirmProductInstanceRequest {
   @scala.inline
-  def apply(InstanceId: InstanceId, ProductCode: String): ConfirmProductInstanceRequest = {
+  def apply(InstanceId: InstanceId, ProductCode: String, DryRun: js.UndefOr[Boolean] = js.undefined): ConfirmProductInstanceRequest = {
     val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any], ProductCode = ProductCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmProductInstanceRequest]
   }
-  @scala.inline
-  implicit class ConfirmProductInstanceRequestOps[Self <: ConfirmProductInstanceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProductCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaRepositoryConfigureSidecarResponseUser extends js.Object {
-  var allowed_commenter_type: js.UndefOr[String] = js.native
-  var can_boost_post: js.UndefOr[Boolean] = js.native
-  var can_see_organic_insights: js.UndefOr[Boolean] = js.native
-  var full_name: String = js.native
-  var has_anonymous_profile_picture: js.UndefOr[Boolean] = js.native
-  var is_private: Boolean = js.native
-  var is_unpublished: js.UndefOr[Boolean] = js.native
-  var is_verified: js.UndefOr[Boolean] = js.native
-  var latest_reel_media: js.UndefOr[Null] = js.native
-  var pk: Double = js.native
-  var profile_pic_id: String = js.native
-  var profile_pic_url: String = js.native
-  var reel_auto_archive: js.UndefOr[String] = js.native
-  var show_insights_terms: js.UndefOr[Boolean] = js.native
-  var username: String = js.native
+  var allowed_commenter_type: js.UndefOr[String] = js.undefined
+  var can_boost_post: js.UndefOr[Boolean] = js.undefined
+  var can_see_organic_insights: js.UndefOr[Boolean] = js.undefined
+  var full_name: String
+  var has_anonymous_profile_picture: js.UndefOr[Boolean] = js.undefined
+  var is_private: Boolean
+  var is_unpublished: js.UndefOr[Boolean] = js.undefined
+  var is_verified: js.UndefOr[Boolean] = js.undefined
+  var latest_reel_media: js.UndefOr[Null] = js.undefined
+  var pk: Double
+  var profile_pic_id: String
+  var profile_pic_url: String
+  var reel_auto_archive: js.UndefOr[String] = js.undefined
+  var show_insights_terms: js.UndefOr[Boolean] = js.undefined
+  var username: String
 }
 
 object MediaRepositoryConfigureSidecarResponseUser {
@@ -31,150 +30,26 @@ object MediaRepositoryConfigureSidecarResponseUser {
     pk: Double,
     profile_pic_id: String,
     profile_pic_url: String,
-    username: String
+    username: String,
+    allowed_commenter_type: String = null,
+    can_boost_post: js.UndefOr[Boolean] = js.undefined,
+    can_see_organic_insights: js.UndefOr[Boolean] = js.undefined,
+    has_anonymous_profile_picture: js.UndefOr[Boolean] = js.undefined,
+    is_unpublished: js.UndefOr[Boolean] = js.undefined,
+    is_verified: js.UndefOr[Boolean] = js.undefined,
+    reel_auto_archive: String = null,
+    show_insights_terms: js.UndefOr[Boolean] = js.undefined
   ): MediaRepositoryConfigureSidecarResponseUser = {
     val __obj = js.Dynamic.literal(full_name = full_name.asInstanceOf[js.Any], is_private = is_private.asInstanceOf[js.Any], pk = pk.asInstanceOf[js.Any], profile_pic_id = profile_pic_id.asInstanceOf[js.Any], profile_pic_url = profile_pic_url.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
+    if (allowed_commenter_type != null) __obj.updateDynamic("allowed_commenter_type")(allowed_commenter_type.asInstanceOf[js.Any])
+    if (!js.isUndefined(can_boost_post)) __obj.updateDynamic("can_boost_post")(can_boost_post.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(can_see_organic_insights)) __obj.updateDynamic("can_see_organic_insights")(can_see_organic_insights.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_anonymous_profile_picture)) __obj.updateDynamic("has_anonymous_profile_picture")(has_anonymous_profile_picture.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(is_unpublished)) __obj.updateDynamic("is_unpublished")(is_unpublished.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(is_verified)) __obj.updateDynamic("is_verified")(is_verified.get.asInstanceOf[js.Any])
+    if (reel_auto_archive != null) __obj.updateDynamic("reel_auto_archive")(reel_auto_archive.asInstanceOf[js.Any])
+    if (!js.isUndefined(show_insights_terms)) __obj.updateDynamic("show_insights_terms")(show_insights_terms.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaRepositoryConfigureSidecarResponseUser]
   }
-  @scala.inline
-  implicit class MediaRepositoryConfigureSidecarResponseUserOps[Self <: MediaRepositoryConfigureSidecarResponseUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFull_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("full_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIs_private(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_private")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPk(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfile_pic_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfile_pic_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowed_commenter_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowed_commenter_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowed_commenter_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowed_commenter_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCan_boost_post(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("can_boost_post")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCan_boost_post: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("can_boost_post")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCan_see_organic_insights(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("can_see_organic_insights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCan_see_organic_insights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("can_see_organic_insights")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_anonymous_profile_picture(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_anonymous_profile_picture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_anonymous_profile_picture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_anonymous_profile_picture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs_unpublished(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_unpublished")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs_unpublished: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_unpublished")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs_verified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_verified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs_verified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_verified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReel_auto_archive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reel_auto_archive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReel_auto_archive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reel_auto_archive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow_insights_terms(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show_insights_terms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow_insights_terms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show_insights_terms")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

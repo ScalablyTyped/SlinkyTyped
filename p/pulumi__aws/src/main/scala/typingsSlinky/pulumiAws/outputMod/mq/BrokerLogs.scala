@@ -18,41 +18,11 @@ trait BrokerLogs extends js.Object {
 
 object BrokerLogs {
   @scala.inline
-  def apply(): BrokerLogs = {
+  def apply(audit: js.UndefOr[Boolean] = js.undefined, general: js.UndefOr[Boolean] = js.undefined): BrokerLogs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(audit)) __obj.updateDynamic("audit")(audit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(general)) __obj.updateDynamic("general")(general.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrokerLogs]
   }
-  @scala.inline
-  implicit class BrokerLogsOps[Self <: BrokerLogs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeneral(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("general")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeneral: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("general")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

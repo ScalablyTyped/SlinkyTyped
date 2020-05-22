@@ -19,29 +19,10 @@ trait SchemaRevertVariableResponse extends js.Object {
 
 object SchemaRevertVariableResponse {
   @scala.inline
-  def apply(): SchemaRevertVariableResponse = {
+  def apply(variable: SchemaVariable = null): SchemaRevertVariableResponse = {
     val __obj = js.Dynamic.literal()
+    if (variable != null) __obj.updateDynamic("variable")(variable.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRevertVariableResponse]
   }
-  @scala.inline
-  implicit class SchemaRevertVariableResponseOps[Self <: SchemaRevertVariableResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVariable(value: SchemaVariable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

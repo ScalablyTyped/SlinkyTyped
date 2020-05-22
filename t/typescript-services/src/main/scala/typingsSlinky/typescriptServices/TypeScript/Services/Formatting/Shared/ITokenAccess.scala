@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITokenAccess extends js.Object {
-  def Contains(token: SyntaxKind): Boolean = js.native
-  def GetTokens(): js.Array[SyntaxKind] = js.native
+  def Contains(token: SyntaxKind): Boolean
+  def GetTokens(): js.Array[SyntaxKind]
 }
 
 object ITokenAccess {
@@ -17,25 +16,5 @@ object ITokenAccess {
     val __obj = js.Dynamic.literal(Contains = js.Any.fromFunction1(Contains), GetTokens = js.Any.fromFunction0(GetTokens))
     __obj.asInstanceOf[ITokenAccess]
   }
-  @scala.inline
-  implicit class ITokenAccessOps[Self <: ITokenAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContains(value: SyntaxKind => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Contains")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTokens(value: () => js.Array[SyntaxKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTokens")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

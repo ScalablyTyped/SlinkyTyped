@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** registers listeners for specified events. */
-@js.native
 trait XEventAttacherManager extends XInterface {
   /**
     * adds an {@link XScriptListener} that will be notified when an event takes place. For that a {@link ScriptEventDescriptor} is registered at and
@@ -18,33 +17,33 @@ trait XEventAttacherManager extends XInterface {
     * It is suggested to allow multiple registration of the same listener, thus for each time a listener is added, it has to be removed.
     * @see removeScriptListener
     */
-  def addScriptListener(xListener: XScriptListener): Unit = js.native
+  def addScriptListener(xListener: XScriptListener): Unit
   /**
     * attaches all the ScriptEvents which are registered for the given index to the given object.
     *
     * Exceptions of type {@link com.sun.star.beans.IntrospectionException} and {@link com.sun.star.script.CannotCreateAdapterException} that can be thrown
     * by methods of {@link XEventAttacher} are caught and ignored.
     */
-  def attach(nIndex: Double, xObject: XInterface, aHelper: js.Any): Unit = js.native
+  def attach(nIndex: Double, xObject: XInterface, aHelper: js.Any): Unit
   /**
     * detaches all the ScriptEvents from the given object which are registered at this object for the given index.
     *
     * Exceptions of type {@link com.sun.star.beans.IntrospectionException} and {@link com.sun.star.script.CannotCreateAdapterException} that can be thrown
     * by methods of {@link XEventAttacher} are caught and ignored.
     */
-  def detach(nIndex: Double, xObject: XInterface): Unit = js.native
+  def detach(nIndex: Double, xObject: XInterface): Unit
   /**
     * @param Index an index previously inserted with the method insertEntry.
     * @returns all events registered for the given object index.
     * @throws IllegalArgumentException if Index is not valid.
     */
-  def getScriptEvents(Index: Double): SafeArray[ScriptEventDescriptor] = js.native
+  def getScriptEvents(Index: Double): SafeArray[ScriptEventDescriptor]
   /**
     * creates an empty entry at the given position.
     *
     * The index **n** of all entries with `n &gt;= nIndex` will be increased by one.
     */
-  def insertEntry(nIndex: Double): Unit = js.native
+  def insertEntry(nIndex: Double): Unit
   /**
     * registers one event for an object identified by its index.
     *
@@ -53,7 +52,7 @@ trait XEventAttacherManager extends XInterface {
     * Exceptions of type {@link com.sun.star.beans.IntrospectionException} and {@link com.sun.star.script.CannotCreateAdapterException} that can be thrown
     * by methods of {@link XEventAttacher} are caught and ignored.
     */
-  def registerScriptEvent(nIndex: Double, aScriptEvent: ScriptEventDescriptor): Unit = js.native
+  def registerScriptEvent(nIndex: Double, aScriptEvent: ScriptEventDescriptor): Unit
   /**
     * registers several events for an object identified by its index.
     *
@@ -66,7 +65,7 @@ trait XEventAttacherManager extends XInterface {
     * @see registerScriptEvent
     * @see attach
     */
-  def registerScriptEvents(nIndex: Double, aScriptEvents: SeqEquiv[ScriptEventDescriptor]): Unit = js.native
+  def registerScriptEvents(nIndex: Double, aScriptEvents: SeqEquiv[ScriptEventDescriptor]): Unit
   /**
     * removes the entry at the given position.
     *
@@ -74,7 +73,7 @@ trait XEventAttacherManager extends XInterface {
     * detached automatically. (see {@link attach()} ).
     * @see attach
     */
-  def removeEntry(nIndex: Double): Unit = js.native
+  def removeEntry(nIndex: Double): Unit
   /**
     * removes a {@link XScriptListener} from the listener list.
     *
@@ -83,7 +82,7 @@ trait XEventAttacherManager extends XInterface {
     * It is suggested to allow multiple registration of the same listener, thus for each time a listener is added, it has to be removed.
     * @see addScriptListener
     */
-  def removeScriptListener(Listener: XScriptListener): Unit = js.native
+  def removeScriptListener(Listener: XScriptListener): Unit
   /**
     * revokes the registration of an event.
     *
@@ -94,14 +93,14 @@ trait XEventAttacherManager extends XInterface {
     * by methods of {@link XEventAttacher} are caught and ignored.
     * @see attach
     */
-  def revokeScriptEvent(nIndex: Double, aListenerType: String, aEventMethod: String, aRemoveListenerParam: String): Unit = js.native
+  def revokeScriptEvent(nIndex: Double, aListenerType: String, aEventMethod: String, aRemoveListenerParam: String): Unit
   /**
     * revokes all events which are registered for the given index.
     *
     * If the events at this index have been attached to any object, they are detached automatically. (see {@link attach()} ).
     * @see attach
     */
-  def revokeScriptEvents(nIndex: Double): Unit = js.native
+  def revokeScriptEvents(nIndex: Double): Unit
 }
 
 object XEventAttacherManager {
@@ -125,79 +124,5 @@ object XEventAttacherManager {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addScriptListener = js.Any.fromFunction1(addScriptListener), attach = js.Any.fromFunction3(attach), detach = js.Any.fromFunction2(detach), getScriptEvents = js.Any.fromFunction1(getScriptEvents), insertEntry = js.Any.fromFunction1(insertEntry), queryInterface = js.Any.fromFunction1(queryInterface), registerScriptEvent = js.Any.fromFunction2(registerScriptEvent), registerScriptEvents = js.Any.fromFunction2(registerScriptEvents), release = js.Any.fromFunction0(release), removeEntry = js.Any.fromFunction1(removeEntry), removeScriptListener = js.Any.fromFunction1(removeScriptListener), revokeScriptEvent = js.Any.fromFunction4(revokeScriptEvent), revokeScriptEvents = js.Any.fromFunction1(revokeScriptEvents))
     __obj.asInstanceOf[XEventAttacherManager]
   }
-  @scala.inline
-  implicit class XEventAttacherManagerOps[Self <: XEventAttacherManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddScriptListener(value: XScriptListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addScriptListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAttach(value: (Double, XInterface, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attach")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDetach(value: (Double, XInterface) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detach")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetScriptEvents(value: Double => SafeArray[ScriptEventDescriptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScriptEvents")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsertEntry(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertEntry")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterScriptEvent(value: (Double, ScriptEventDescriptor) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerScriptEvent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterScriptEvents(value: (Double, SeqEquiv[ScriptEventDescriptor]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerScriptEvents")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveEntry(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEntry")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveScriptListener(value: XScriptListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeScriptListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRevokeScriptEvent(value: (Double, String, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revokeScriptEvent")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRevokeScriptEvents(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revokeScriptEvents")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

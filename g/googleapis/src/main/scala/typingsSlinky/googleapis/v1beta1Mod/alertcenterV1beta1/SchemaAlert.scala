@@ -65,137 +65,30 @@ trait SchemaAlert extends js.Object {
 
 object SchemaAlert {
   @scala.inline
-  def apply(): SchemaAlert = {
+  def apply(
+    alertId: String = null,
+    createTime: String = null,
+    customerId: String = null,
+    data: StringDictionary[js.Any] = null,
+    deleted: js.UndefOr[Boolean] = js.undefined,
+    endTime: String = null,
+    securityInvestigationToolLink: String = null,
+    source: String = null,
+    startTime: String = null,
+    `type`: String = null
+  ): SchemaAlert = {
     val __obj = js.Dynamic.literal()
+    if (alertId != null) __obj.updateDynamic("alertId")(alertId.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (customerId != null) __obj.updateDynamic("customerId")(customerId.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleted)) __obj.updateDynamic("deleted")(deleted.get.asInstanceOf[js.Any])
+    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
+    if (securityInvestigationToolLink != null) __obj.updateDynamic("securityInvestigationToolLink")(securityInvestigationToolLink.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAlert]
   }
-  @scala.inline
-  implicit class SchemaAlertOps[Self <: SchemaAlert] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlertId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlertId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityInvestigationToolLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityInvestigationToolLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityInvestigationToolLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityInvestigationToolLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

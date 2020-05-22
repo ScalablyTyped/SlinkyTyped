@@ -46,119 +46,27 @@ trait FilterLogEventsRequest extends js.Object {
 
 object FilterLogEventsRequest {
   @scala.inline
-  def apply(logGroupName: LogGroupName): FilterLogEventsRequest = {
+  def apply(
+    logGroupName: LogGroupName,
+    endTime: js.UndefOr[Timestamp] = js.undefined,
+    filterPattern: FilterPattern = null,
+    interleaved: js.UndefOr[Interleaved] = js.undefined,
+    limit: js.UndefOr[EventsLimit] = js.undefined,
+    logStreamNamePrefix: LogStreamName = null,
+    logStreamNames: InputLogStreamNames = null,
+    nextToken: NextToken = null,
+    startTime: js.UndefOr[Timestamp] = js.undefined
+  ): FilterLogEventsRequest = {
     val __obj = js.Dynamic.literal(logGroupName = logGroupName.asInstanceOf[js.Any])
+    if (!js.isUndefined(endTime)) __obj.updateDynamic("endTime")(endTime.get.asInstanceOf[js.Any])
+    if (filterPattern != null) __obj.updateDynamic("filterPattern")(filterPattern.asInstanceOf[js.Any])
+    if (!js.isUndefined(interleaved)) __obj.updateDynamic("interleaved")(interleaved.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (logStreamNamePrefix != null) __obj.updateDynamic("logStreamNamePrefix")(logStreamNamePrefix.asInstanceOf[js.Any])
+    if (logStreamNames != null) __obj.updateDynamic("logStreamNames")(logStreamNames.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(startTime)) __obj.updateDynamic("startTime")(startTime.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterLogEventsRequest]
   }
-  @scala.inline
-  implicit class FilterLogEventsRequestOps[Self <: FilterLogEventsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogGroupName(value: LogGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterPattern(value: FilterPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterPattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterleaved(value: Interleaved): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interleaved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterleaved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interleaved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: EventsLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogStreamNamePrefix(value: LogStreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamNamePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogStreamNamePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamNamePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogStreamNames(value: InputLogStreamNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogStreamNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

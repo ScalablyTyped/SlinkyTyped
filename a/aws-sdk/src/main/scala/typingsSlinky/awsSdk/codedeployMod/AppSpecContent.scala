@@ -18,41 +18,11 @@ trait AppSpecContent extends js.Object {
 
 object AppSpecContent {
   @scala.inline
-  def apply(): AppSpecContent = {
+  def apply(content: RawStringContent = null, sha256: RawStringSha256 = null): AppSpecContent = {
     val __obj = js.Dynamic.literal()
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (sha256 != null) __obj.updateDynamic("sha256")(sha256.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppSpecContent]
   }
-  @scala.inline
-  implicit class AppSpecContentOps[Self <: AppSpecContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: RawStringContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSha256(value: RawStringSha256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSha256: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

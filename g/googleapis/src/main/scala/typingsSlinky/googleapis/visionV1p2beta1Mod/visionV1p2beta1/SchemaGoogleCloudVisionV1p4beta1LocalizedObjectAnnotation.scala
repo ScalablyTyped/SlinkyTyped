@@ -35,77 +35,20 @@ trait SchemaGoogleCloudVisionV1p4beta1LocalizedObjectAnnotation extends js.Objec
 
 object SchemaGoogleCloudVisionV1p4beta1LocalizedObjectAnnotation {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p4beta1LocalizedObjectAnnotation = {
+  def apply(
+    boundingPoly: SchemaGoogleCloudVisionV1p4beta1BoundingPoly = null,
+    languageCode: String = null,
+    mid: String = null,
+    name: String = null,
+    score: js.UndefOr[Double] = js.undefined
+  ): SchemaGoogleCloudVisionV1p4beta1LocalizedObjectAnnotation = {
     val __obj = js.Dynamic.literal()
+    if (boundingPoly != null) __obj.updateDynamic("boundingPoly")(boundingPoly.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (mid != null) __obj.updateDynamic("mid")(mid.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(score)) __obj.updateDynamic("score")(score.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1LocalizedObjectAnnotation]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p4beta1LocalizedObjectAnnotationOps[Self <: SchemaGoogleCloudVisionV1p4beta1LocalizedObjectAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingPoly(value: SchemaGoogleCloudVisionV1p4beta1BoundingPoly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingPoly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

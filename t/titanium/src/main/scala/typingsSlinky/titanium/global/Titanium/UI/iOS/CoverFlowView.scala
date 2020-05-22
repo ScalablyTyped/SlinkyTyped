@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * The cover flow view is a container showing animated three-dimensional images in a style
-			 * consistent with the cover flow presentation style used for iPod, iTunes, and file browsing.
-			 */
+  * The cover flow view is a container showing animated three-dimensional images in a style
+  * consistent with the cover flow presentation style used for iPod, iTunes, and file browsing.
+  */
 @JSGlobal("Titanium.UI.iOS.CoverFlowView")
 @js.native
 class CoverFlowView ()

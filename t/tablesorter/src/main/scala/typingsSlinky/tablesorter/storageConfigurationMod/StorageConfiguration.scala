@@ -5,103 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StorageConfiguration extends js.Object {
   /**
     * The `data-attribute`-name to automatically get the id of the table from.
     */
-  var group: js.UndefOr[String] = js.native
+  var group: js.UndefOr[String] = js.undefined
   /**
     * The id of the storage to save to.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * The `data-attribute`-name to automatically get the url of the table from.
     */
-  var page: js.UndefOr[String] = js.native
+  var page: js.UndefOr[String] = js.undefined
   /**
     * The medium to save the storage to.
     */
-  var storageType: js.UndefOr[StorageType] = js.native
+  var storageType: js.UndefOr[StorageType] = js.undefined
   /**
     * The url to save the storage to.
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object StorageConfiguration {
   @scala.inline
-  def apply(): StorageConfiguration = {
+  def apply(
+    group: String = null,
+    id: String = null,
+    page: String = null,
+    storageType: StorageType = null,
+    url: String = null
+  ): StorageConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
+    if (storageType != null) __obj.updateDynamic("storageType")(storageType.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageConfiguration]
   }
-  @scala.inline
-  implicit class StorageConfigurationOps[Self <: StorageConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageType(value: StorageType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

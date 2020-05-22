@@ -8,13 +8,18 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.popmotionPopcorn.typesMod.Point2D
   - typingsSlinky.popmotionPopcorn.typesMod.Point3D
 */
-trait Point
-  extends typingsSlinky.popmotionPopcorn.distanceMod.Point
+trait Point extends js.Object
 
 object Point {
   @scala.inline
-  implicit def apply(value: Point2D): Point = value.asInstanceOf[Point]
+  def Point2D(x: Double, y: Double): Point = {
+    val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Point]
+  }
   @scala.inline
-  implicit def apply(value: Point3D): Point = value.asInstanceOf[Point]
+  def Point3D(x: Double, y: Double, z: Double): Point = {
+    val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], z = z.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Point]
+  }
 }
 

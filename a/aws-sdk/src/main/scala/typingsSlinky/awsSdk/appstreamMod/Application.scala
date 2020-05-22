@@ -38,101 +38,24 @@ trait Application extends js.Object {
 
 object Application {
   @scala.inline
-  def apply(): Application = {
+  def apply(
+    DisplayName: String = null,
+    Enabled: js.UndefOr[Boolean] = js.undefined,
+    IconURL: String = null,
+    LaunchParameters: String = null,
+    LaunchPath: String = null,
+    Metadata: Metadata = null,
+    Name: String = null
+  ): Application = {
     val __obj = js.Dynamic.literal()
+    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
+    if (IconURL != null) __obj.updateDynamic("IconURL")(IconURL.asInstanceOf[js.Any])
+    if (LaunchParameters != null) __obj.updateDynamic("LaunchParameters")(LaunchParameters.asInstanceOf[js.Any])
+    if (LaunchPath != null) __obj.updateDynamic("LaunchPath")(LaunchPath.asInstanceOf[js.Any])
+    if (Metadata != null) __obj.updateDynamic("Metadata")(Metadata.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Application]
   }
-  @scala.inline
-  implicit class ApplicationOps[Self <: Application] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IconURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IconURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchParameters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Metadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

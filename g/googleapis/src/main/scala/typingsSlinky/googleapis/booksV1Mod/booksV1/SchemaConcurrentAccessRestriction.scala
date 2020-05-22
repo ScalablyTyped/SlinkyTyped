@@ -56,149 +56,32 @@ trait SchemaConcurrentAccessRestriction extends js.Object {
 
 object SchemaConcurrentAccessRestriction {
   @scala.inline
-  def apply(): SchemaConcurrentAccessRestriction = {
+  def apply(
+    deviceAllowed: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    maxConcurrentDevices: js.UndefOr[Double] = js.undefined,
+    message: String = null,
+    nonce: String = null,
+    reasonCode: String = null,
+    restricted: js.UndefOr[Boolean] = js.undefined,
+    signature: String = null,
+    source: String = null,
+    timeWindowSeconds: js.UndefOr[Double] = js.undefined,
+    volumeId: String = null
+  ): SchemaConcurrentAccessRestriction = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deviceAllowed)) __obj.updateDynamic("deviceAllowed")(deviceAllowed.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxConcurrentDevices)) __obj.updateDynamic("maxConcurrentDevices")(maxConcurrentDevices.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
+    if (reasonCode != null) __obj.updateDynamic("reasonCode")(reasonCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(restricted)) __obj.updateDynamic("restricted")(restricted.get.asInstanceOf[js.Any])
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeWindowSeconds)) __obj.updateDynamic("timeWindowSeconds")(timeWindowSeconds.get.asInstanceOf[js.Any])
+    if (volumeId != null) __obj.updateDynamic("volumeId")(volumeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConcurrentAccessRestriction]
   }
-  @scala.inline
-  implicit class SchemaConcurrentAccessRestrictionOps[Self <: SchemaConcurrentAccessRestriction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxConcurrentDevices(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrentDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentDevices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestricted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestricted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeWindowSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeWindowSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeWindowSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeWindowSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

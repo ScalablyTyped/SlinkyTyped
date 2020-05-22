@@ -6,123 +6,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a DetectIntentResponse. */
-@js.native
 trait IDetectIntentResponse extends js.Object {
   /** DetectIntentResponse outputAudio */
-  var outputAudio: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var outputAudio: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
   /** DetectIntentResponse outputAudioConfig */
-  var outputAudioConfig: js.UndefOr[IOutputAudioConfig | Null] = js.native
+  var outputAudioConfig: js.UndefOr[IOutputAudioConfig | Null] = js.undefined
   /** DetectIntentResponse queryResult */
-  var queryResult: js.UndefOr[IQueryResult | Null] = js.native
+  var queryResult: js.UndefOr[IQueryResult | Null] = js.undefined
   /** DetectIntentResponse responseId */
-  var responseId: js.UndefOr[String | Null] = js.native
+  var responseId: js.UndefOr[String | Null] = js.undefined
   /** DetectIntentResponse webhookStatus */
-  var webhookStatus: js.UndefOr[IStatus | Null] = js.native
+  var webhookStatus: js.UndefOr[IStatus | Null] = js.undefined
 }
 
 object IDetectIntentResponse {
   @scala.inline
-  def apply(): IDetectIntentResponse = {
+  def apply(
+    outputAudio: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined,
+    outputAudioConfig: js.UndefOr[Null | IOutputAudioConfig] = js.undefined,
+    queryResult: js.UndefOr[Null | IQueryResult] = js.undefined,
+    responseId: js.UndefOr[Null | String] = js.undefined,
+    webhookStatus: js.UndefOr[Null | IStatus] = js.undefined
+  ): IDetectIntentResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(outputAudio)) __obj.updateDynamic("outputAudio")(outputAudio.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputAudioConfig)) __obj.updateDynamic("outputAudioConfig")(outputAudioConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(queryResult)) __obj.updateDynamic("queryResult")(queryResult.asInstanceOf[js.Any])
+    if (!js.isUndefined(responseId)) __obj.updateDynamic("responseId")(responseId.asInstanceOf[js.Any])
+    if (!js.isUndefined(webhookStatus)) __obj.updateDynamic("webhookStatus")(webhookStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDetectIntentResponse]
   }
-  @scala.inline
-  implicit class IDetectIntentResponseOps[Self <: IDetectIntentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputAudio(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputAudio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputAudioNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudio")(null)
-        ret
-    }
-    @scala.inline
-    def withOutputAudioConfig(value: IOutputAudioConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudioConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputAudioConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudioConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputAudioConfigNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudioConfig")(null)
-        ret
-    }
-    @scala.inline
-    def withQueryResult(value: IQueryResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryResultNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryResult")(null)
-        ret
-    }
-    @scala.inline
-    def withResponseId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseId")(null)
-        ret
-    }
-    @scala.inline
-    def withWebhookStatus(value: IStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebhookStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebhookStatusNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookStatus")(null)
-        ret
-    }
-  }
-  
 }
 

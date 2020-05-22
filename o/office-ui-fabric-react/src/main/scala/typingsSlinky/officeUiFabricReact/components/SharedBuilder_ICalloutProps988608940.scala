@@ -20,6 +20,7 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.officeUiFabricReact.anon.ContainsFocus
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutContentStyleProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutContentStyles
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.Target
@@ -75,7 +76,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
@@ -420,6 +421,8 @@ class SharedBuilder_ICalloutProps988608940[R <: js.Object] (val args: js.Array[j
   @scala.inline
   def onReset(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
   @scala.inline
+  def onRestoreFocus(value: /* options */ ContainsFocus => Unit): this.type = set("onRestoreFocus", js.Any.fromFunction1(value))
+  @scala.inline
   def onScroll(value: () => Unit): this.type = set("onScroll", js.Any.fromFunction0(value))
   @scala.inline
   def onSeeked(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
@@ -486,7 +489,7 @@ class SharedBuilder_ICalloutProps988608940[R <: js.Object] (val args: js.Array[j
   @scala.inline
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   @scala.inline
-  def stylesFunction1(value: ICalloutContentStyleProps => Partial[ICalloutContentStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def stylesFunction1(value: ICalloutContentStyleProps => DeepPartial[ICalloutContentStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   @scala.inline
   def styles(value: IStyleFunctionOrObject[ICalloutContentStyleProps, ICalloutContentStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   @scala.inline

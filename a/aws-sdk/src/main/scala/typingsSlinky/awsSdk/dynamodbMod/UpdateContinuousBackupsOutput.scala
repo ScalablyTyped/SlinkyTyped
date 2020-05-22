@@ -14,29 +14,10 @@ trait UpdateContinuousBackupsOutput extends js.Object {
 
 object UpdateContinuousBackupsOutput {
   @scala.inline
-  def apply(): UpdateContinuousBackupsOutput = {
+  def apply(ContinuousBackupsDescription: ContinuousBackupsDescription = null): UpdateContinuousBackupsOutput = {
     val __obj = js.Dynamic.literal()
+    if (ContinuousBackupsDescription != null) __obj.updateDynamic("ContinuousBackupsDescription")(ContinuousBackupsDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateContinuousBackupsOutput]
   }
-  @scala.inline
-  implicit class UpdateContinuousBackupsOutputOps[Self <: UpdateContinuousBackupsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContinuousBackupsDescription(value: ContinuousBackupsDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuousBackupsDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinuousBackupsDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuousBackupsDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

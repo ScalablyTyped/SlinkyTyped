@@ -5,11 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getActiveAttrib() and WebGLRenderingContext.getActiveUniform() methods. */
-@js.native
 trait WebGLActiveInfo extends js.Object {
-  val name: java.lang.String = js.native
-  val size: GLint = js.native
-  val `type`: GLenum = js.native
+  val name: java.lang.String
+  val size: GLint
+  val `type`: GLenum
 }
 
 object WebGLActiveInfo {
@@ -19,31 +18,5 @@ object WebGLActiveInfo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebGLActiveInfo]
   }
-  @scala.inline
-  implicit class WebGLActiveInfoOps[Self <: org.scalajs.dom.raw.WebGLActiveInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: GLint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: GLenum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

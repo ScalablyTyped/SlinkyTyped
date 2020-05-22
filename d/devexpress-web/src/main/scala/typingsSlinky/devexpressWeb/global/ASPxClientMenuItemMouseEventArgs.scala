@@ -17,5 +17,15 @@ class ASPxClientMenuItemMouseEventArgs protected ()
     * @param htmlElement An HTML object that contains the processed item.
     */
   def this(item: typingsSlinky.devexpressWeb.ASPxClientMenuItem, htmlElement: js.Any) = this()
+  /**
+    * Gets the HTML object that contains the processed item.
+    */
+  /* CompleteClass */
+  override var htmlElement: js.Any = js.native
+  /**
+    * Gets the menu item object related to the event.
+    */
+  /* CompleteClass */
+  override var item: typingsSlinky.devexpressWeb.ASPxClientMenuItem = js.native
 }
 

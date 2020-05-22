@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Node.typesGetObjectAclOutputMod
 
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesGrantMod.UnmarshalledGrant
 import typingsSlinky.awsSdkClientS3Node.typesOwnerMod.UnmarshalledOwner
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
@@ -10,73 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetObjectAclOutput
   extends MetadataBearer
-     with OutputTypesUnion {
+     with _OutputTypesUnion {
   /**
     * <p>A list of grants.</p>
     */
-  var Grants: js.UndefOr[js.Array[UnmarshalledGrant]] = js.native
+  var Grants: js.UndefOr[js.Array[UnmarshalledGrant]] = js.undefined
   /**
     * _Owner shape
     */
-  var Owner: js.UndefOr[UnmarshalledOwner] = js.native
+  var Owner: js.UndefOr[UnmarshalledOwner] = js.undefined
   /**
     * <p>If present, indicates that the requester was successfully charged for the request.</p>
     */
-  var RequestCharged: js.UndefOr[requester_ | String] = js.native
+  var RequestCharged: js.UndefOr[requester_ | String] = js.undefined
 }
 
 object GetObjectAclOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): GetObjectAclOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    Grants: js.Array[UnmarshalledGrant] = null,
+    Owner: UnmarshalledOwner = null,
+    RequestCharged: requester_ | String = null
+  ): GetObjectAclOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (Grants != null) __obj.updateDynamic("Grants")(Grants.asInstanceOf[js.Any])
+    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
+    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetObjectAclOutput]
   }
-  @scala.inline
-  implicit class GetObjectAclOutputOps[Self <: GetObjectAclOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrants(value: js.Array[UnmarshalledGrant]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Grants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Grants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: UnmarshalledOwner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCharged(value: requester_ | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCharged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

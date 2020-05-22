@@ -1,7 +1,5 @@
 package typingsSlinky.intercomClient.visitorMod
 
-import typingsSlinky.intercomClient.anon.Id
-import typingsSlinky.intercomClient.anon.Userid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait VisitorIdentifier extends js.Object
 
 object VisitorIdentifier {
   @scala.inline
-  implicit def apply(value: Id): VisitorIdentifier = value.asInstanceOf[VisitorIdentifier]
+  def Id(id: String): VisitorIdentifier = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VisitorIdentifier]
+  }
   @scala.inline
-  implicit def apply(value: Userid): VisitorIdentifier = value.asInstanceOf[VisitorIdentifier]
+  def Userid(user_id: String): VisitorIdentifier = {
+    val __obj = js.Dynamic.literal(user_id = user_id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VisitorIdentifier]
+  }
 }
 

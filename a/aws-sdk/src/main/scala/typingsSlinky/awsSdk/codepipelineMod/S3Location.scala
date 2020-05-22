@@ -18,41 +18,11 @@ trait S3Location extends js.Object {
 
 object S3Location {
   @scala.inline
-  def apply(): S3Location = {
+  def apply(bucket: S3Bucket = null, key: S3Key = null): S3Location = {
     val __obj = js.Dynamic.literal()
+    if (bucket != null) __obj.updateDynamic("bucket")(bucket.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3Location]
   }
-  @scala.inline
-  implicit class S3LocationOps[Self <: S3Location] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: S3Bucket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: S3Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

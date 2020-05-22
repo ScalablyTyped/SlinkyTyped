@@ -1,33 +1,33 @@
 organization := "org.scalablytyped.slinky"
 name := "koa-html-minifier"
-version := "1.0-dt-20180823Z-e83e74"
+version := "1.0-dt-20180823Z-ca85cc"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "accepts" % "1.3-dt-20180214Z-c9a3c6",
-  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-ef676c",
-  "org.scalablytyped.slinky" %%% "clean-css" % "4.2-dt-20200226Z-69bac8",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200226Z-fe7436",
-  "org.scalablytyped.slinky" %%% "content-disposition" % "0.5-dt-20200331Z-9e7955",
-  "org.scalablytyped.slinky" %%% "cookies" % "0.7-dt-20191002Z-12c299",
-  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200409Z-223215",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200415Z-cfdf0c",
-  "org.scalablytyped.slinky" %%% "html-minifier" % "3.5-dt-20200226Z-02f4da",
-  "org.scalablytyped.slinky" %%% "keygrip" % "1.0-dt-20191226Z-6b91f5",
-  "org.scalablytyped.slinky" %%% "koa" % "2.11.0-dt-20200327Z-8ac877",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20191126Z-d94a1a",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
-  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200225Z-413bcb",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-34f923",
-  "org.scalablytyped.slinky" %%% "relateurl" % "v0.2.6-dt-20200227Z-f6a145",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200227Z-51c95d",
-  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-53abfb",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
-  "org.scalablytyped.slinky" %%% "uglify-js" % "3.9-dt-20200413Z-c67f3d")
+  "org.scalablytyped.slinky" %%% "accepts" % "1.3-dt-20200515Z-0c9e7d",
+  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-3172ef",
+  "org.scalablytyped.slinky" %%% "clean-css" % "4.2-dt-20200515Z-e2d600",
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-49be3e",
+  "org.scalablytyped.slinky" %%% "content-disposition" % "0.5-dt-20200515Z-66a37c",
+  "org.scalablytyped.slinky" %%% "cookies" % "0.7-dt-20191002Z-7cfb2f",
+  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200515Z-35525e",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200515Z-f4fc10",
+  "org.scalablytyped.slinky" %%% "html-minifier" % "3.5-dt-20200515Z-d169b4",
+  "org.scalablytyped.slinky" %%% "keygrip" % "1.0-dt-20200515Z-83b29b",
+  "org.scalablytyped.slinky" %%% "koa" % "2.11.0-dt-20200515Z-aa680a",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200515Z-2900a9",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-8e6135",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-0a4f98",
+  "org.scalablytyped.slinky" %%% "relateurl" % "v0.2.6-dt-20200515Z-230246",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-85de9b",
+  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-ba4eed",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
+  "org.scalablytyped.slinky" %%% "uglify-js" % "3.9-dt-20200519Z-6f8d3e")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

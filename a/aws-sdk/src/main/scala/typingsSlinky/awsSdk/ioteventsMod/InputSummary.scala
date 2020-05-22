@@ -34,89 +34,22 @@ trait InputSummary extends js.Object {
 
 object InputSummary {
   @scala.inline
-  def apply(): InputSummary = {
+  def apply(
+    creationTime: js.Date = null,
+    inputArn: InputArn = null,
+    inputDescription: InputDescription = null,
+    inputName: InputName = null,
+    lastUpdateTime: js.Date = null,
+    status: InputStatus = null
+  ): InputSummary = {
     val __obj = js.Dynamic.literal()
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (inputArn != null) __obj.updateDynamic("inputArn")(inputArn.asInstanceOf[js.Any])
+    if (inputDescription != null) __obj.updateDynamic("inputDescription")(inputDescription.asInstanceOf[js.Any])
+    if (inputName != null) __obj.updateDynamic("inputName")(inputName.asInstanceOf[js.Any])
+    if (lastUpdateTime != null) __obj.updateDynamic("lastUpdateTime")(lastUpdateTime.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputSummary]
   }
-  @scala.inline
-  implicit class InputSummaryOps[Self <: InputSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputArn(value: InputArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputDescription(value: InputDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputName(value: InputName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: InputStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

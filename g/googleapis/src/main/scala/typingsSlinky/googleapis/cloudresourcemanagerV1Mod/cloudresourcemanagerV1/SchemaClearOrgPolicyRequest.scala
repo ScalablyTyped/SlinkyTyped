@@ -22,41 +22,11 @@ trait SchemaClearOrgPolicyRequest extends js.Object {
 
 object SchemaClearOrgPolicyRequest {
   @scala.inline
-  def apply(): SchemaClearOrgPolicyRequest = {
+  def apply(constraint: String = null, etag: String = null): SchemaClearOrgPolicyRequest = {
     val __obj = js.Dynamic.literal()
+    if (constraint != null) __obj.updateDynamic("constraint")(constraint.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClearOrgPolicyRequest]
   }
-  @scala.inline
-  implicit class SchemaClearOrgPolicyRequestOps[Self <: SchemaClearOrgPolicyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConstraint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

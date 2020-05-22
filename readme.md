@@ -5,7 +5,7 @@
 [![Join the chat at https://gitter.im/ScalablyTyped/community](https://badges.gitter.im/ScalablyTyped/community.svg)](https://gitter.im/ScalablyTyped/community)
 [![Checkout the demos at https://github.com/ScalablyTyped/ScalablyTypedDemos/](https://img.shields.io/badge/Checkout-Demo-success.svg)](https://github.com/oyvindberg/ScalablyTypedDemos/)
 
-This is the home of pre-built Scala.js typings for **8728** Javascript libraries,
+This is the home of pre-built Scala.js typings for **8867** Javascript libraries,
  which should span more or less the entire set of modern and popular libraries.
 
 ## Warning :collision: :bomb: :sunglasses:
@@ -16,7 +16,7 @@ Please see [scalablytyped.org](https://scalablytyped.org) for the shiny new sbt 
 Because of storage reasons the published libraries here **will be deleted** after a while.
 Use the plugin for stable builds.
 
-Currently all published artifacts are Scala 2.13 / Scala.js 1.0.
+Currently all published artifacts are Scala 2.13 / Scala.js 1.x .
 Use the plugin for older/newer versions of either.
 
 If you want to keep exactly what you used before, remember that this is open source.
@@ -32,12 +32,12 @@ This is one of the biggest Scala repos on the planet:
 --------------------------------------------------------------------------------
  Language             Files        Lines        Blank      Comment         Code
 --------------------------------------------------------------------------------
- Scala               402499     27758589      1811687      3963263     21983639
- Markdown              8789       312529       103985            0       208544
- Makefile                 5          100           17            0           83
+ Scala               410463     18779198      1678158      4303518     12797522
+ Markdown              8940       317635       105788            0       211847
+ Makefile                 5           69           16            0           53
  JSON                     1            1            0            0            1
 --------------------------------------------------------------------------------
- Total               411294     28071219      1915689      3963263     22192267
+ Total               419409     19096903      1783962      4303518     13009423
 --------------------------------------------------------------------------------
 
 ```
@@ -56,7 +56,7 @@ These should be the main steps you would have to follow:
 ScalablyTyped is hosted at bintray, so make sure to include the resolver
 ```scala
   resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")
-  addSbtPlugin("org.scalablytyped" % "sbt-scalablytyped" % "202005171250")
+  addSbtPlugin("org.scalablytyped" % "sbt-scalablytyped" % "202005220205")
   // If you're still on Scala.js 0.6, this is the last distribution release.
   addSbtPlugin("org.scalablytyped" % "sbt-scalablytyped" % "202004200703")
 ```

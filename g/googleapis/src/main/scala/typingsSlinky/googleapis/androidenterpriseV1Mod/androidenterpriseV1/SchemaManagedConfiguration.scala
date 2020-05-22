@@ -34,65 +34,18 @@ trait SchemaManagedConfiguration extends js.Object {
 
 object SchemaManagedConfiguration {
   @scala.inline
-  def apply(): SchemaManagedConfiguration = {
+  def apply(
+    configurationVariables: SchemaConfigurationVariables = null,
+    kind: String = null,
+    managedProperty: js.Array[SchemaManagedProperty] = null,
+    productId: String = null
+  ): SchemaManagedConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (configurationVariables != null) __obj.updateDynamic("configurationVariables")(configurationVariables.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (managedProperty != null) __obj.updateDynamic("managedProperty")(managedProperty.asInstanceOf[js.Any])
+    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedConfiguration]
   }
-  @scala.inline
-  implicit class SchemaManagedConfigurationOps[Self <: SchemaManagedConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationVariables(value: SchemaConfigurationVariables): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationVariables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagedProperty(value: js.Array[SchemaManagedProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ItemStyleLabel extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.emphasis.itemStyle
     */
-  var itemStyle: js.UndefOr[ShadowOffsetY] = js.native
+  var itemStyle: js.UndefOr[ShadowOffsetY] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.emphasis.label
     */
-  var label: js.UndefOr[BorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.undefined
 }
 
 object ItemStyleLabel {
   @scala.inline
-  def apply(): ItemStyleLabel = {
+  def apply(itemStyle: ShadowOffsetY = null, label: BorderRadius = null): ItemStyleLabel = {
     val __obj = js.Dynamic.literal()
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemStyleLabel]
   }
-  @scala.inline
-  implicit class ItemStyleLabelOps[Self <: ItemStyleLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItemStyle(value: ShadowOffsetY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: BorderRadius): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

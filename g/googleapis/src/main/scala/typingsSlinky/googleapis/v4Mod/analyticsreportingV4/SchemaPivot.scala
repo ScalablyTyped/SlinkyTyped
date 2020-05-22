@@ -57,77 +57,20 @@ trait SchemaPivot extends js.Object {
 
 object SchemaPivot {
   @scala.inline
-  def apply(): SchemaPivot = {
+  def apply(
+    dimensionFilterClauses: js.Array[SchemaDimensionFilterClause] = null,
+    dimensions: js.Array[SchemaDimension] = null,
+    maxGroupCount: js.UndefOr[Double] = js.undefined,
+    metrics: js.Array[SchemaMetric] = null,
+    startGroup: js.UndefOr[Double] = js.undefined
+  ): SchemaPivot = {
     val __obj = js.Dynamic.literal()
+    if (dimensionFilterClauses != null) __obj.updateDynamic("dimensionFilterClauses")(dimensionFilterClauses.asInstanceOf[js.Any])
+    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxGroupCount)) __obj.updateDynamic("maxGroupCount")(maxGroupCount.get.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
+    if (!js.isUndefined(startGroup)) __obj.updateDynamic("startGroup")(startGroup.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPivot]
   }
-  @scala.inline
-  implicit class SchemaPivotOps[Self <: SchemaPivot] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionFilterClauses(value: js.Array[SchemaDimensionFilterClause]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilterClauses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionFilterClauses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilterClauses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: js.Array[SchemaDimension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxGroupCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxGroupCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxGroupCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxGroupCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: js.Array[SchemaMetric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartGroup(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

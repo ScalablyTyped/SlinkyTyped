@@ -38,77 +38,20 @@ trait ActionConfigurationProperty extends js.Object {
 
 object ActionConfigurationProperty {
   @scala.inline
-  def apply(key: Boolean, name: ActionConfigurationKey, required: Boolean, secret: Boolean): ActionConfigurationProperty = {
+  def apply(
+    key: Boolean,
+    name: ActionConfigurationKey,
+    required: Boolean,
+    secret: Boolean,
+    description: Description = null,
+    queryable: js.UndefOr[Boolean] = js.undefined,
+    `type`: ActionConfigurationPropertyType = null
+  ): ActionConfigurationProperty = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], secret = secret.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(queryable)) __obj.updateDynamic("queryable")(queryable.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionConfigurationProperty]
   }
-  @scala.inline
-  implicit class ActionConfigurationPropertyOps[Self <: ActionConfigurationProperty] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: ActionConfigurationKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecret(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ActionConfigurationPropertyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

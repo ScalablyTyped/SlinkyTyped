@@ -19,29 +19,10 @@ trait SchemaToolExecutionStep extends js.Object {
 
 object SchemaToolExecutionStep {
   @scala.inline
-  def apply(): SchemaToolExecutionStep = {
+  def apply(toolExecution: SchemaToolExecution = null): SchemaToolExecutionStep = {
     val __obj = js.Dynamic.literal()
+    if (toolExecution != null) __obj.updateDynamic("toolExecution")(toolExecution.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaToolExecutionStep]
   }
-  @scala.inline
-  implicit class SchemaToolExecutionStepOps[Self <: SchemaToolExecutionStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToolExecution(value: SchemaToolExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolExecution")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

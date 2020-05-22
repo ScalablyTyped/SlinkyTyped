@@ -14,29 +14,10 @@ trait DocumentsMetadataConfiguration extends js.Object {
 
 object DocumentsMetadataConfiguration {
   @scala.inline
-  def apply(): DocumentsMetadataConfiguration = {
+  def apply(S3Prefix: S3ObjectKey = null): DocumentsMetadataConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (S3Prefix != null) __obj.updateDynamic("S3Prefix")(S3Prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentsMetadataConfiguration]
   }
-  @scala.inline
-  implicit class DocumentsMetadataConfigurationOps[Self <: DocumentsMetadataConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3Prefix(value: S3ObjectKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Prefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Prefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

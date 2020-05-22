@@ -1,6 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
 import typingsSlinky.devextreme.anon.Y
 import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.horizontal
@@ -11,175 +13,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DraggableBaseOptions[T] extends DOMComponentOptions[T] {
-  /** Enables automatic scrolling while dragging an item beyond the viewport. */
-  var autoScroll: js.UndefOr[Boolean] = js.native
-  /** Specifies a DOM element that limits the dragging area. */
-  var boundary: js.UndefOr[String | Element | JQuery] = js.native
-  /** Specifies a custom container in which the draggable item should be rendered. */
-  var container: js.UndefOr[String | Element | JQuery] = js.native
-  /** Specifies the cursor offset from the dragged item. */
-  var cursorOffset: js.UndefOr[String | Y] = js.native
-  /** A container for custom data. */
-  var data: js.UndefOr[js.Any] = js.native
-  /** Specifies the directions in which an item can be dragged. */
-  var dragDirection: js.UndefOr[both | horizontal | vertical] = js.native
-  /** Allows you to group several widgets, so that users can drag and drop items between them. */
-  var group: js.UndefOr[String] = js.native
-  /** Specifies a CSS selector (ID or class) that should act as the drag handle(s) for the item(s). */
-  var handle: js.UndefOr[String] = js.native
-  /** Specifies the distance in pixels from the edge of viewport at which scrolling should start. Applies only if autoScroll is true. */
-  var scrollSensitivity: js.UndefOr[Double] = js.native
-  /** Specifies the scrolling speed when dragging an item beyond the viewport. Applies only if autoScroll is true. */
-  var scrollSpeed: js.UndefOr[Double] = js.native
+  /** @name DraggableBase.Options.autoScroll */
+  var autoScroll: js.UndefOr[Boolean] = js.undefined
+  /** @name DraggableBase.Options.boundary */
+  var boundary: js.UndefOr[String | Element | JQuery] = js.undefined
+  /** @name DraggableBase.Options.container */
+  var container: js.UndefOr[String | Element | JQuery] = js.undefined
+  /** @name DraggableBase.Options.cursorOffset */
+  var cursorOffset: js.UndefOr[String | Y] = js.undefined
+  /** @name DraggableBase.Options.data */
+  var data: js.UndefOr[js.Any] = js.undefined
+  /** @name DraggableBase.Options.dragDirection */
+  var dragDirection: js.UndefOr[both | horizontal | vertical] = js.undefined
+  /** @name DraggableBase.Options.group */
+  var group: js.UndefOr[String] = js.undefined
+  /** @name DraggableBase.Options.handle */
+  var handle: js.UndefOr[String] = js.undefined
+  /** @name DraggableBase.Options.scrollSensitivity */
+  var scrollSensitivity: js.UndefOr[Double] = js.undefined
+  /** @name DraggableBase.Options.scrollSpeed */
+  var scrollSpeed: js.UndefOr[Double] = js.undefined
 }
 
 object DraggableBaseOptions {
   @scala.inline
-  def apply[T](): DraggableBaseOptions[T] = {
+  def apply[T](
+    autoScroll: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    boundary: String | Element | JQuery = null,
+    container: String | Element | JQuery = null,
+    cursorOffset: String | Y = null,
+    data: js.Any = null,
+    dragDirection: both | horizontal | vertical = null,
+    elementAttr: js.Any = null,
+    group: String = null,
+    handle: String = null,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    onDisposing: /* e */ Model[T] => _ = null,
+    onInitialized: /* e */ typingsSlinky.devextreme.anon.Element[T] => _ = null,
+    onOptionChanged: /* e */ Name[T] => _ = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    scrollSensitivity: js.UndefOr[Double] = js.undefined,
+    scrollSpeed: js.UndefOr[Double] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): DraggableBaseOptions[T] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoScroll)) __obj.updateDynamic("autoScroll")(autoScroll.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (boundary != null) __obj.updateDynamic("boundary")(boundary.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (cursorOffset != null) __obj.updateDynamic("cursorOffset")(cursorOffset.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dragDirection != null) __obj.updateDynamic("dragDirection")(dragDirection.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollSensitivity)) __obj.updateDynamic("scrollSensitivity")(scrollSensitivity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollSpeed)) __obj.updateDynamic("scrollSpeed")(scrollSpeed.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[DraggableBaseOptions[T]]
   }
-  @scala.inline
-  implicit class DraggableBaseOptionsOps[Self[t] <: DraggableBaseOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAutoScroll(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScroll: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundaryElement(value: Element): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoundary(value: String | Element | JQuery): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundary: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerElement(value: Element): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String | Element | JQuery): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCursorOffset(value: String | Y): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursorOffset: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragDirection(value: both | horizontal | vertical): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragDirection: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandle(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSensitivity(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSensitivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSensitivity: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSensitivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSpeed(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSpeed: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSpeed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

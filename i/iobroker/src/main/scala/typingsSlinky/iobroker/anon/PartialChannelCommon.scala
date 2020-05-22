@@ -5,76 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<iobroker.iobroker.<global>.ioBroker.ChannelCommon> */
-@js.native
 trait PartialChannelCommon extends js.Object {
-  var custom: js.UndefOr[scala.Nothing] = js.native
-  var desc: js.UndefOr[String] = js.native
-  var icon: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var role: js.UndefOr[String] = js.native
+  var custom: js.UndefOr[scala.Nothing] = js.undefined
+  var desc: js.UndefOr[String] = js.undefined
+  var icon: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var role: js.UndefOr[String] = js.undefined
 }
 
 object PartialChannelCommon {
   @scala.inline
-  def apply(): PartialChannelCommon = {
+  def apply(desc: String = null, icon: String = null, name: String = null, role: String = null): PartialChannelCommon = {
     val __obj = js.Dynamic.literal()
+    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialChannelCommon]
   }
-  @scala.inline
-  implicit class PartialChannelCommonOps[Self <: PartialChannelCommon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

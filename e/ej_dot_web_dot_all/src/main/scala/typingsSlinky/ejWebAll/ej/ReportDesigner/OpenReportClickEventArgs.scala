@@ -5,53 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenReportClickEventArgs extends js.Object {
   /** Name of selected item.
     */
-  var select: js.UndefOr[String] = js.native
+  var select: js.UndefOr[String] = js.undefined
   /** DOM of the clicked target.
     */
-  var target: js.UndefOr[JQuery] = js.native
+  var target: js.UndefOr[JQuery] = js.undefined
 }
 
 object OpenReportClickEventArgs {
   @scala.inline
-  def apply(): OpenReportClickEventArgs = {
+  def apply(select: String = null, target: JQuery = null): OpenReportClickEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenReportClickEventArgs]
   }
-  @scala.inline
-  implicit class OpenReportClickEventArgsOps[Self <: OpenReportClickEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

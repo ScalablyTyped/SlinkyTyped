@@ -10,10 +10,9 @@ import scala.scalajs.js.annotation._
   * An event used by a {@link XTabPageContainer} to notify changes in tab page activation.
   * @since OOo 3.4
   */
-@js.native
 trait TabPageActivatedEvent extends EventObject {
   /** Contains the ID of the tab page */
-  var TabPageID: Double = js.native
+  var TabPageID: Double
 }
 
 object TabPageActivatedEvent {
@@ -22,19 +21,5 @@ object TabPageActivatedEvent {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any], TabPageID = TabPageID.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabPageActivatedEvent]
   }
-  @scala.inline
-  implicit class TabPageActivatedEventOps[Self <: TabPageActivatedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTabPageID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TabPageID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

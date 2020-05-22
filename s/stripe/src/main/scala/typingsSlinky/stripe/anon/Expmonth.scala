@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Expmonth extends js.Object {
-  var exp_month: js.UndefOr[Double] = js.native
-  var exp_year: js.UndefOr[Double] = js.native
+  var exp_month: js.UndefOr[Double] = js.undefined
+  var exp_year: js.UndefOr[Double] = js.undefined
 }
 
 object Expmonth {
   @scala.inline
-  def apply(): Expmonth = {
+  def apply(exp_month: js.UndefOr[Double] = js.undefined, exp_year: js.UndefOr[Double] = js.undefined): Expmonth = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(exp_month)) __obj.updateDynamic("exp_month")(exp_month.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exp_year)) __obj.updateDynamic("exp_year")(exp_year.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expmonth]
   }
-  @scala.inline
-  implicit class ExpmonthOps[Self <: Expmonth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExp_month(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExp_month: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_month")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExp_year(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExp_year: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_year")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

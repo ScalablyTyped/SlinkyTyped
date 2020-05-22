@@ -14,29 +14,10 @@ trait InputParallelismUpdate extends js.Object {
 
 object InputParallelismUpdate {
   @scala.inline
-  def apply(): InputParallelismUpdate = {
+  def apply(CountUpdate: js.UndefOr[InputParallelismCount] = js.undefined): InputParallelismUpdate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CountUpdate)) __obj.updateDynamic("CountUpdate")(CountUpdate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputParallelismUpdate]
   }
-  @scala.inline
-  implicit class InputParallelismUpdateOps[Self <: InputParallelismUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountUpdate(value: InputParallelismCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

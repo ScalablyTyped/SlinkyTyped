@@ -10,75 +10,37 @@ import scala.scalajs.js.annotation._
   *
   * [Api set:  1.1]
   */
-@js.native
 trait DocumentLoadOptions extends js.Object {
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents a Visio application instance that contains this document.
     *
     * [Api set:  1.1]
     */
-  var application: js.UndefOr[ApplicationLoadOptions] = js.native
+  var application: js.UndefOr[ApplicationLoadOptions] = js.undefined
   /**
     *
     * Returns the DocumentView object.
     *
     * [Api set:  1.1]
     */
-  var view: js.UndefOr[DocumentViewLoadOptions] = js.native
+  var view: js.UndefOr[DocumentViewLoadOptions] = js.undefined
 }
 
 object DocumentLoadOptions {
   @scala.inline
-  def apply(): DocumentLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    application: ApplicationLoadOptions = null,
+    view: DocumentViewLoadOptions = null
+  ): DocumentLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (application != null) __obj.updateDynamic("application")(application.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentLoadOptions]
   }
-  @scala.inline
-  implicit class DocumentLoadOptionsOps[Self <: DocumentLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplication(value: ApplicationLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: DocumentViewLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

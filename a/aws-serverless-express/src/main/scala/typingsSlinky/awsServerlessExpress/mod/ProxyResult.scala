@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProxyResult extends js.Object {
-  var promise: js.Promise[Response] = js.native
+  var promise: js.Promise[Response]
 }
 
 object ProxyResult {
@@ -15,19 +14,5 @@ object ProxyResult {
     val __obj = js.Dynamic.literal(promise = promise.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProxyResult]
   }
-  @scala.inline
-  implicit class ProxyResultOps[Self <: ProxyResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPromise(value: js.Promise[Response]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

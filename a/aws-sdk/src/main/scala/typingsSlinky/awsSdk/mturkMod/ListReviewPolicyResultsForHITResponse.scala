@@ -31,89 +31,22 @@ trait ListReviewPolicyResultsForHITResponse extends js.Object {
 
 object ListReviewPolicyResultsForHITResponse {
   @scala.inline
-  def apply(): ListReviewPolicyResultsForHITResponse = {
+  def apply(
+    AssignmentReviewPolicy: ReviewPolicy = null,
+    AssignmentReviewReport: ReviewReport = null,
+    HITId: EntityId = null,
+    HITReviewPolicy: ReviewPolicy = null,
+    HITReviewReport: ReviewReport = null,
+    NextToken: PaginationToken = null
+  ): ListReviewPolicyResultsForHITResponse = {
     val __obj = js.Dynamic.literal()
+    if (AssignmentReviewPolicy != null) __obj.updateDynamic("AssignmentReviewPolicy")(AssignmentReviewPolicy.asInstanceOf[js.Any])
+    if (AssignmentReviewReport != null) __obj.updateDynamic("AssignmentReviewReport")(AssignmentReviewReport.asInstanceOf[js.Any])
+    if (HITId != null) __obj.updateDynamic("HITId")(HITId.asInstanceOf[js.Any])
+    if (HITReviewPolicy != null) __obj.updateDynamic("HITReviewPolicy")(HITReviewPolicy.asInstanceOf[js.Any])
+    if (HITReviewReport != null) __obj.updateDynamic("HITReviewReport")(HITReviewReport.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListReviewPolicyResultsForHITResponse]
   }
-  @scala.inline
-  implicit class ListReviewPolicyResultsForHITResponseOps[Self <: ListReviewPolicyResultsForHITResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssignmentReviewPolicy(value: ReviewPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentReviewPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignmentReviewPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentReviewPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignmentReviewReport(value: ReviewReport): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentReviewReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignmentReviewReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentReviewReport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHITId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHITId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHITReviewPolicy(value: ReviewPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITReviewPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHITReviewPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITReviewPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHITReviewReport(value: ReviewReport): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITReviewReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHITReviewReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITReviewReport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,38 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserProfile extends js.Object {
   /**
     * Email address of the user.
     *
     * Read-only.
     */
-  var emailAddress: js.UndefOr[String] = js.native
+  var emailAddress: js.UndefOr[String] = js.undefined
   /**
     * Identifier of the user.
     *
     * Read-only.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Name of the user.
     *
     * Read-only.
     */
-  var name: js.UndefOr[Name] = js.native
+  var name: js.UndefOr[Name] = js.undefined
   /**
     * Global permissions of the user.
     *
     * Read-only.
     */
-  var permissions: js.UndefOr[js.Array[GlobalPermission]] = js.native
+  var permissions: js.UndefOr[js.Array[GlobalPermission]] = js.undefined
   /**
     * URL of user's profile photo.
     *
     * Read-only.
     */
-  var photoUrl: js.UndefOr[String] = js.native
+  var photoUrl: js.UndefOr[String] = js.undefined
   /**
     * Represents whether a G Suite for Education user's domain administrator has
     * explicitly verified them as being a teacher. If the user is not a member of
@@ -43,94 +42,27 @@ trait UserProfile extends js.Object {
     *
     * Read-only
     */
-  var verifiedTeacher: js.UndefOr[Boolean] = js.native
+  var verifiedTeacher: js.UndefOr[Boolean] = js.undefined
 }
 
 object UserProfile {
   @scala.inline
-  def apply(): UserProfile = {
+  def apply(
+    emailAddress: String = null,
+    id: String = null,
+    name: Name = null,
+    permissions: js.Array[GlobalPermission] = null,
+    photoUrl: String = null,
+    verifiedTeacher: js.UndefOr[Boolean] = js.undefined
+  ): UserProfile = {
     val __obj = js.Dynamic.literal()
+    if (emailAddress != null) __obj.updateDynamic("emailAddress")(emailAddress.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
+    if (photoUrl != null) __obj.updateDynamic("photoUrl")(photoUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(verifiedTeacher)) __obj.updateDynamic("verifiedTeacher")(verifiedTeacher.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserProfile]
   }
-  @scala.inline
-  implicit class UserProfileOps[Self <: UserProfile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmailAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: js.Array[GlobalPermission]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhotoUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhotoUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifiedTeacher(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifiedTeacher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerifiedTeacher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifiedTeacher")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

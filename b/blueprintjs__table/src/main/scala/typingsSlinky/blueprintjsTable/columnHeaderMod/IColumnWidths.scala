@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IColumnWidths extends js.Object {
-  var defaultColumnWidth: js.UndefOr[Double] = js.native
-  var maxColumnWidth: js.UndefOr[Double] = js.native
-  var minColumnWidth: js.UndefOr[Double] = js.native
+  var defaultColumnWidth: js.UndefOr[Double] = js.undefined
+  var maxColumnWidth: js.UndefOr[Double] = js.undefined
+  var minColumnWidth: js.UndefOr[Double] = js.undefined
 }
 
 object IColumnWidths {
   @scala.inline
-  def apply(): IColumnWidths = {
+  def apply(
+    defaultColumnWidth: js.UndefOr[Double] = js.undefined,
+    maxColumnWidth: js.UndefOr[Double] = js.undefined,
+    minColumnWidth: js.UndefOr[Double] = js.undefined
+  ): IColumnWidths = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(defaultColumnWidth)) __obj.updateDynamic("defaultColumnWidth")(defaultColumnWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxColumnWidth)) __obj.updateDynamic("maxColumnWidth")(maxColumnWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minColumnWidth)) __obj.updateDynamic("minColumnWidth")(minColumnWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColumnWidths]
   }
-  @scala.inline
-  implicit class IColumnWidthsOps[Self <: IColumnWidths] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultColumnWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultColumnWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxColumnWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColumnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxColumnWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColumnWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinColumnWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColumnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinColumnWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColumnWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

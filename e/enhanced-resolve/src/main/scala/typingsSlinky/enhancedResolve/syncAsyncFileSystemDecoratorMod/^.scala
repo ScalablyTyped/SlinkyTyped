@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends SyncAsyncFileSystemDecorator {
   def this(fs: AbstractInputFileSystem) = this()
+  /* CompleteClass */
+  override var fs: AbstractInputFileSystem = js.native
 }
 

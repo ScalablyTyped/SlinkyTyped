@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReceiveMessageOptions extends BaseOptions {
   /**
   		 * *(Default: queue settings)*
@@ -14,34 +13,15 @@ trait ReceiveMessageOptions extends BaseOptions {
   		 * @type {number}
   		 * @memberof ReceiveMessageOptions
   		 */
-  var vt: js.UndefOr[Double] = js.native
+  var vt: js.UndefOr[Double] = js.undefined
 }
 
 object ReceiveMessageOptions {
   @scala.inline
-  def apply(qname: String): ReceiveMessageOptions = {
+  def apply(qname: String, vt: js.UndefOr[Double] = js.undefined): ReceiveMessageOptions = {
     val __obj = js.Dynamic.literal(qname = qname.asInstanceOf[js.Any])
+    if (!js.isUndefined(vt)) __obj.updateDynamic("vt")(vt.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReceiveMessageOptions]
   }
-  @scala.inline
-  implicit class ReceiveMessageOptionsOps[Self <: ReceiveMessageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

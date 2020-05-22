@@ -4,30 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DistributionTable extends js.Object {
   @JSName("0.005")
-  var `0Dot005`: Double = js.native
+  var `0Dot005`: Double
   @JSName("0.01")
-  var `0Dot01`: Double = js.native
+  var `0Dot01`: Double
   @JSName("0.025")
-  var `0Dot025`: Double = js.native
+  var `0Dot025`: Double
   @JSName("0.05")
-  var `0Dot05`: Double = js.native
+  var `0Dot05`: Double
   @JSName("0.1")
-  var `0Dot1`: Double = js.native
+  var `0Dot1`: Double
   @JSName("0.5")
-  var `0Dot5`: Double = js.native
+  var `0Dot5`: Double
   @JSName("0.9")
-  var `0Dot9`: Double = js.native
+  var `0Dot9`: Double
   @JSName("0.95")
-  var `0Dot95`: Double = js.native
+  var `0Dot95`: Double
   @JSName("0.975")
-  var `0Dot975`: Double = js.native
+  var `0Dot975`: Double
   @JSName("0.99")
-  var `0Dot99`: Double = js.native
+  var `0Dot99`: Double
   @JSName("0.995")
-  var `0Dot995`: Double = js.native
+  var `0Dot995`: Double
 }
 
 object DistributionTable {
@@ -59,79 +58,5 @@ object DistributionTable {
     __obj.updateDynamic("0.995")(`0Dot995`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionTable]
   }
-  @scala.inline
-  implicit class DistributionTableOps[Self <: DistributionTable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with0Dot005(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.005")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot01(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.01")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot025(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.025")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot05(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.05")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot1(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot5(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot9(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.9")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot95(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.95")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot975(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.975")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot99(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.99")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with0Dot995(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("0.995")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

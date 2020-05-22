@@ -64,173 +64,36 @@ trait SamplingRuleState extends js.Object {
 
 object SamplingRuleState {
   @scala.inline
-  def apply(): SamplingRuleState = {
+  def apply(
+    arn: Input[String] = null,
+    attributes: Input[StringDictionary[Input[String]]] = null,
+    fixedRate: Input[Double] = null,
+    host: Input[String] = null,
+    httpMethod: Input[String] = null,
+    priority: Input[Double] = null,
+    reservoirSize: Input[Double] = null,
+    resourceArn: Input[String] = null,
+    ruleName: Input[String] = null,
+    serviceName: Input[String] = null,
+    serviceType: Input[String] = null,
+    urlPath: Input[String] = null,
+    version: Input[Double] = null
+  ): SamplingRuleState = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (fixedRate != null) __obj.updateDynamic("fixedRate")(fixedRate.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (httpMethod != null) __obj.updateDynamic("httpMethod")(httpMethod.asInstanceOf[js.Any])
+    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
+    if (reservoirSize != null) __obj.updateDynamic("reservoirSize")(reservoirSize.asInstanceOf[js.Any])
+    if (resourceArn != null) __obj.updateDynamic("resourceArn")(resourceArn.asInstanceOf[js.Any])
+    if (ruleName != null) __obj.updateDynamic("ruleName")(ruleName.asInstanceOf[js.Any])
+    if (serviceName != null) __obj.updateDynamic("serviceName")(serviceName.asInstanceOf[js.Any])
+    if (serviceType != null) __obj.updateDynamic("serviceType")(serviceType.asInstanceOf[js.Any])
+    if (urlPath != null) __obj.updateDynamic("urlPath")(urlPath.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SamplingRuleState]
   }
-  @scala.inline
-  implicit class SamplingRuleStateOps[Self <: SamplingRuleState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: Input[StringDictionary[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedRate(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpMethod(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservoirSize(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservoirSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservoirSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservoirSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlPath(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

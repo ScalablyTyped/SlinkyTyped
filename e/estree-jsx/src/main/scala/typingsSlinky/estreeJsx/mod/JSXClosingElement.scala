@@ -1,40 +1,35 @@
 package typingsSlinky.estreeJsx.mod
 
+import typingsSlinky.estree.mod.Comment
+import typingsSlinky.estree.mod.SourceLocation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JSXClosingElement
   extends JSXBoundaryElement
-     with Node {
+     with _Node {
   @JSName("type")
-  var type_JSXClosingElement: typingsSlinky.estreeJsx.estreeJsxStrings.JSXClosingElement = js.native
+  var type_JSXClosingElement: typingsSlinky.estreeJsx.estreeJsxStrings.JSXClosingElement
 }
 
 object JSXClosingElement {
   @scala.inline
   def apply(
     name: JSXIdentifier | JSXMemberExpression | JSXNamespacedName,
-    `type`: typingsSlinky.estreeJsx.estreeJsxStrings.JSXClosingElement
+    `type`: typingsSlinky.estreeJsx.estreeJsxStrings.JSXClosingElement,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
   ): JSXClosingElement = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSXClosingElement]
   }
-  @scala.inline
-  implicit class JSXClosingElementOps[Self <: JSXClosingElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.estreeJsx.estreeJsxStrings.JSXClosingElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

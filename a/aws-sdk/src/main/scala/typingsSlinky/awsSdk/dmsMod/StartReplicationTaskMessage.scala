@@ -30,65 +30,18 @@ trait StartReplicationTaskMessage extends js.Object {
 
 object StartReplicationTaskMessage {
   @scala.inline
-  def apply(ReplicationTaskArn: String, StartReplicationTaskType: StartReplicationTaskTypeValue): StartReplicationTaskMessage = {
+  def apply(
+    ReplicationTaskArn: String,
+    StartReplicationTaskType: StartReplicationTaskTypeValue,
+    CdcStartPosition: String = null,
+    CdcStartTime: js.Date = null,
+    CdcStopPosition: String = null
+  ): StartReplicationTaskMessage = {
     val __obj = js.Dynamic.literal(ReplicationTaskArn = ReplicationTaskArn.asInstanceOf[js.Any], StartReplicationTaskType = StartReplicationTaskType.asInstanceOf[js.Any])
+    if (CdcStartPosition != null) __obj.updateDynamic("CdcStartPosition")(CdcStartPosition.asInstanceOf[js.Any])
+    if (CdcStartTime != null) __obj.updateDynamic("CdcStartTime")(CdcStartTime.asInstanceOf[js.Any])
+    if (CdcStopPosition != null) __obj.updateDynamic("CdcStopPosition")(CdcStopPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartReplicationTaskMessage]
   }
-  @scala.inline
-  implicit class StartReplicationTaskMessageOps[Self <: StartReplicationTaskMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplicationTaskArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartReplicationTaskType(value: StartReplicationTaskTypeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartReplicationTaskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCdcStartPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStartPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdcStartPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStartPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdcStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdcStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdcStopPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStopPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdcStopPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStopPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

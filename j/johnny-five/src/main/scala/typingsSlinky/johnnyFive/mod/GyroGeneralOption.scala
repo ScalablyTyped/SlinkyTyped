@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GyroGeneralOption extends js.Object {
-  var controller: js.UndefOr[String] = js.native
+  var controller: js.UndefOr[String] = js.undefined
 }
 
 object GyroGeneralOption {
   @scala.inline
-  def apply(): GyroGeneralOption = {
+  def apply(controller: String = null): GyroGeneralOption = {
     val __obj = js.Dynamic.literal()
+    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
     __obj.asInstanceOf[GyroGeneralOption]
   }
-  @scala.inline
-  implicit class GyroGeneralOptionOps[Self <: GyroGeneralOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withController(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutController: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

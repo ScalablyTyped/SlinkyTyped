@@ -14,90 +14,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UIkitNotificationOptions extends js.Object {
-  var group: js.UndefOr[String] = js.native
-  var message: js.UndefOr[String] = js.native
+  var group: js.UndefOr[String] = js.undefined
+  var message: js.UndefOr[String] = js.undefined
   var pos: js.UndefOr[
     `top-left` | `top-center` | `top-right` | `bottom-left` | `bottom-center` | `bottom-right`
-  ] = js.native
-  var status: js.UndefOr[primary | success | warning | danger] = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var status: js.UndefOr[primary | success | warning | danger] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object UIkitNotificationOptions {
   @scala.inline
-  def apply(): UIkitNotificationOptions = {
+  def apply(
+    group: String = null,
+    message: String = null,
+    pos: `top-left` | `top-center` | `top-right` | `bottom-left` | `bottom-center` | `bottom-right` = null,
+    status: primary | success | warning | danger = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): UIkitNotificationOptions = {
     val __obj = js.Dynamic.literal()
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (pos != null) __obj.updateDynamic("pos")(pos.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIkitNotificationOptions]
   }
-  @scala.inline
-  implicit class UIkitNotificationOptionsOps[Self <: UIkitNotificationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPos(value: `top-left` | `top-center` | `top-right` | `bottom-left` | `bottom-center` | `bottom-right`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: primary | success | warning | danger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

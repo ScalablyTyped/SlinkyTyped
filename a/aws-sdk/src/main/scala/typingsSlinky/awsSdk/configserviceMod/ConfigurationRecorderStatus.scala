@@ -42,113 +42,26 @@ trait ConfigurationRecorderStatus extends js.Object {
 
 object ConfigurationRecorderStatus {
   @scala.inline
-  def apply(): ConfigurationRecorderStatus = {
+  def apply(
+    lastErrorCode: String = null,
+    lastErrorMessage: String = null,
+    lastStartTime: js.Date = null,
+    lastStatus: RecorderStatus = null,
+    lastStatusChangeTime: js.Date = null,
+    lastStopTime: js.Date = null,
+    name: String = null,
+    recording: js.UndefOr[Boolean] = js.undefined
+  ): ConfigurationRecorderStatus = {
     val __obj = js.Dynamic.literal()
+    if (lastErrorCode != null) __obj.updateDynamic("lastErrorCode")(lastErrorCode.asInstanceOf[js.Any])
+    if (lastErrorMessage != null) __obj.updateDynamic("lastErrorMessage")(lastErrorMessage.asInstanceOf[js.Any])
+    if (lastStartTime != null) __obj.updateDynamic("lastStartTime")(lastStartTime.asInstanceOf[js.Any])
+    if (lastStatus != null) __obj.updateDynamic("lastStatus")(lastStatus.asInstanceOf[js.Any])
+    if (lastStatusChangeTime != null) __obj.updateDynamic("lastStatusChangeTime")(lastStatusChangeTime.asInstanceOf[js.Any])
+    if (lastStopTime != null) __obj.updateDynamic("lastStopTime")(lastStopTime.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(recording)) __obj.updateDynamic("recording")(recording.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationRecorderStatus]
   }
-  @scala.inline
-  implicit class ConfigurationRecorderStatusOps[Self <: ConfigurationRecorderStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastErrorCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastStatus(value: RecorderStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastStatusChangeTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatusChangeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastStatusChangeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatusChangeTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastStopTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStopTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastStopTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStopTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecording(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recording")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecording: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recording")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

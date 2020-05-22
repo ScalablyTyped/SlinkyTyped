@@ -30,59 +30,17 @@ trait GetExportRequest extends js.Object {
 
 object GetExportRequest {
   @scala.inline
-  def apply(exportType: String, restApiId: String, stageName: String): GetExportRequest = {
+  def apply(
+    exportType: String,
+    restApiId: String,
+    stageName: String,
+    accepts: String = null,
+    parameters: MapOfStringToString = null
+  ): GetExportRequest = {
     val __obj = js.Dynamic.literal(exportType = exportType.asInstanceOf[js.Any], restApiId = restApiId.asInstanceOf[js.Any], stageName = stageName.asInstanceOf[js.Any])
+    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetExportRequest]
   }
-  @scala.inline
-  implicit class GetExportRequestOps[Self <: GetExportRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRestApiId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restApiId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccepts(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccepts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: MapOfStringToString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

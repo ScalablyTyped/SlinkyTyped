@@ -34,77 +34,20 @@ trait UpdateNodegroupVersionRequest extends js.Object {
 
 object UpdateNodegroupVersionRequest {
   @scala.inline
-  def apply(clusterName: String, nodegroupName: String): UpdateNodegroupVersionRequest = {
+  def apply(
+    clusterName: String,
+    nodegroupName: String,
+    clientRequestToken: String = null,
+    force: js.UndefOr[Boolean] = js.undefined,
+    releaseVersion: String = null,
+    version: String = null
+  ): UpdateNodegroupVersionRequest = {
     val __obj = js.Dynamic.literal(clusterName = clusterName.asInstanceOf[js.Any], nodegroupName = nodegroupName.asInstanceOf[js.Any])
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (releaseVersion != null) __obj.updateDynamic("releaseVersion")(releaseVersion.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateNodegroupVersionRequest]
   }
-  @scala.inline
-  implicit class UpdateNodegroupVersionRequestOps[Self <: UpdateNodegroupVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodegroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

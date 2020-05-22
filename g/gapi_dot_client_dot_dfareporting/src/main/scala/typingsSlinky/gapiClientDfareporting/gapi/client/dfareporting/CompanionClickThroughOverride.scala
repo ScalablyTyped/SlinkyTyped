@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompanionClickThroughOverride extends js.Object {
   /** Click-through URL of this companion click-through override. */
-  var clickThroughUrl: js.UndefOr[ClickThroughUrl] = js.native
+  var clickThroughUrl: js.UndefOr[ClickThroughUrl] = js.undefined
   /** ID of the creative for this companion click-through override. */
-  var creativeId: js.UndefOr[String] = js.native
+  var creativeId: js.UndefOr[String] = js.undefined
 }
 
 object CompanionClickThroughOverride {
   @scala.inline
-  def apply(): CompanionClickThroughOverride = {
+  def apply(clickThroughUrl: ClickThroughUrl = null, creativeId: String = null): CompanionClickThroughOverride = {
     val __obj = js.Dynamic.literal()
+    if (clickThroughUrl != null) __obj.updateDynamic("clickThroughUrl")(clickThroughUrl.asInstanceOf[js.Any])
+    if (creativeId != null) __obj.updateDynamic("creativeId")(creativeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompanionClickThroughOverride]
   }
-  @scala.inline
-  implicit class CompanionClickThroughOverrideOps[Self <: CompanionClickThroughOverride] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClickThroughUrl(value: ClickThroughUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickThroughUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreativeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

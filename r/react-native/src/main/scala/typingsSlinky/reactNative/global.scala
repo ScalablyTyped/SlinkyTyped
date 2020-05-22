@@ -4,7 +4,9 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.reactNative.anon.DictoptionName
+import typingsSlinky.std.PropertyKey
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,18 +20,40 @@ object global extends js.Object {
     * Initialize this controller.
     */
   class AbortController ()
-    extends typingsSlinky.reactNative.AbortController
+    extends typingsSlinky.reactNative.AbortController {
+    /**
+      * Returns the `AbortSignal` object associated with this object.
+      */
+    /* CompleteClass */
+    override val signal: typingsSlinky.reactNative.AbortSignal = js.native
+    /**
+      * Abort and signal to any observers that the associated activity is to be aborted.
+      */
+    /* CompleteClass */
+    override def abort(): Unit = js.native
+  }
   
   @js.native
   /**
     * AbortSignal cannot be constructed directly.
     */
   class AbortSignal ()
-    extends typingsSlinky.reactNative.AbortSignal
+    extends typingsSlinky.reactNative.AbortSignal {
+    /**
+      * Returns `true` if this `AbortSignal`'s `AbortController` has signaled to abort, and `false` otherwise.
+      */
+    /* CompleteClass */
+    override val aborted: Boolean = js.native
+    /* CompleteClass */
+    override def onabort(event: AbortEvent): Unit = js.native
+  }
   
   @js.native
   class FormData ()
-    extends typingsSlinky.reactNative.FormData
+    extends typingsSlinky.reactNative.FormData {
+    /* CompleteClass */
+    override def append(name: String, value: js.Any): Unit = js.native
+  }
   
   @js.native
   class Headers ()
@@ -39,7 +63,14 @@ object global extends js.Object {
   
   @js.native
   class MessageQueue ()
-    extends typingsSlinky.reactNative.MessageQueue
+    extends typingsSlinky.reactNative.MessageQueue {
+    /* CompleteClass */
+    override def getCallableModule(name: String): js.Object = js.native
+    /* CompleteClass */
+    override def registerCallableModule(name: String, module: js.Object): Unit = js.native
+    /* CompleteClass */
+    override def registerLazyCallableModule(name: String, factory: js.Function0[js.Object]): Unit = js.native
+  }
   
   @js.native
   class Request protected ()
@@ -48,6 +79,45 @@ object global extends js.Object {
     def this(input: typingsSlinky.reactNative.Request) = this()
     def this(input: String, init: RequestInit) = this()
     def this(input: typingsSlinky.reactNative.Request, init: RequestInit) = this()
+    /* CompleteClass */
+    override val bodyUsed: Boolean = js.native
+    /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
+    /* CompleteClass */
+    override var constructor: js.Function = js.native
+    /* CompleteClass */
+    override val credentials: RequestCredentials = js.native
+    /* CompleteClass */
+    override val headers: typingsSlinky.reactNative.Headers = js.native
+    /* CompleteClass */
+    override val method: String = js.native
+    /* CompleteClass */
+    override val mode: RequestMode = js.native
+    /* CompleteClass */
+    override val referrer: String = js.native
+    /* CompleteClass */
+    override val url: String = js.native
+    /* CompleteClass */
+    override def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
+    /* CompleteClass */
+    override def blob(): js.Promise[Blob] = js.native
+    /* CompleteClass */
+    override def formData(): js.Promise[typingsSlinky.reactNative.FormData] = js.native
+    /**
+      * Determines whether an object has a property with the specified name.
+      * @param v A property name.
+      */
+    /* CompleteClass */
+    override def hasOwnProperty(v: PropertyKey): Boolean = js.native
+    /* CompleteClass */
+    override def json(): js.Promise[_] = js.native
+    /**
+      * Determines whether a specified property is enumerable.
+      * @param v A property name.
+      */
+    /* CompleteClass */
+    override def propertyIsEnumerable(v: PropertyKey): Boolean = js.native
+    /* CompleteClass */
+    override def text(): js.Promise[String] = js.native
   }
   
   @js.native
@@ -55,6 +125,47 @@ object global extends js.Object {
     extends typingsSlinky.reactNative.Response {
     def this(body: BodyInit) = this()
     def this(body: BodyInit, init: ResponseInit) = this()
+    /* CompleteClass */
+    override val bodyUsed: Boolean = js.native
+    /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
+    /* CompleteClass */
+    override var constructor: js.Function = js.native
+    /* CompleteClass */
+    override val headers: typingsSlinky.reactNative.Headers = js.native
+    /* CompleteClass */
+    override val ok: Boolean = js.native
+    /* CompleteClass */
+    override val redirected: Boolean = js.native
+    /* CompleteClass */
+    override val status: Double = js.native
+    /* CompleteClass */
+    override val statusText: String = js.native
+    /* CompleteClass */
+    override val `type`: ResponseType = js.native
+    /* CompleteClass */
+    override val url: String = js.native
+    /* CompleteClass */
+    override def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
+    /* CompleteClass */
+    override def blob(): js.Promise[Blob] = js.native
+    /* CompleteClass */
+    override def formData(): js.Promise[typingsSlinky.reactNative.FormData] = js.native
+    /**
+      * Determines whether an object has a property with the specified name.
+      * @param v A property name.
+      */
+    /* CompleteClass */
+    override def hasOwnProperty(v: PropertyKey): Boolean = js.native
+    /* CompleteClass */
+    override def json(): js.Promise[_] = js.native
+    /**
+      * Determines whether a specified property is enumerable.
+      * @param v A property name.
+      */
+    /* CompleteClass */
+    override def propertyIsEnumerable(v: PropertyKey): Boolean = js.native
+    /* CompleteClass */
+    override def text(): js.Promise[String] = js.native
   }
   
   /**

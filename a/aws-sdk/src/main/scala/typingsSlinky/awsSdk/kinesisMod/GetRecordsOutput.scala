@@ -22,47 +22,15 @@ trait GetRecordsOutput extends js.Object {
 
 object GetRecordsOutput {
   @scala.inline
-  def apply(Records: RecordList): GetRecordsOutput = {
+  def apply(
+    Records: RecordList,
+    MillisBehindLatest: js.UndefOr[MillisBehindLatest] = js.undefined,
+    NextShardIterator: ShardIterator = null
+  ): GetRecordsOutput = {
     val __obj = js.Dynamic.literal(Records = Records.asInstanceOf[js.Any])
+    if (!js.isUndefined(MillisBehindLatest)) __obj.updateDynamic("MillisBehindLatest")(MillisBehindLatest.get.asInstanceOf[js.Any])
+    if (NextShardIterator != null) __obj.updateDynamic("NextShardIterator")(NextShardIterator.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRecordsOutput]
   }
-  @scala.inline
-  implicit class GetRecordsOutputOps[Self <: GetRecordsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRecords(value: RecordList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Records")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMillisBehindLatest(value: MillisBehindLatest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MillisBehindLatest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMillisBehindLatest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MillisBehindLatest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextShardIterator(value: ShardIterator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextShardIterator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextShardIterator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextShardIterator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

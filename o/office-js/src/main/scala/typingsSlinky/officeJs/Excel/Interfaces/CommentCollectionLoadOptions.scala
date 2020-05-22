@@ -10,173 +10,94 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.10]
   */
-@js.native
 trait CommentCollectionLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the email of the comment's author.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var authorEmail: js.UndefOr[Boolean] = js.native
+  var authorEmail: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the name of the comment's author.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var authorName: js.UndefOr[Boolean] = js.native
+  var authorName: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * For EACH ITEM in the collection: Gets or sets the comment's content. The string is plain text.
+    * For EACH ITEM in the collection: The comment's content. The string is plain text.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var content: js.UndefOr[Boolean] = js.native
+  var content: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the creation time of the comment. Returns null if the comment was converted from a note, since the comment does not have a creation date.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var creationDate: js.UndefOr[Boolean] = js.native
+  var creationDate: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * For EACH ITEM in the collection: Represents the comment identifier. Read-only.
+    * For EACH ITEM in the collection: Specifies the comment identifier.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * For EACH ITEM in the collection: Gets the entities (e.g. people) that are mentioned in comments.
+    * For EACH ITEM in the collection: Gets the entities (e.g., people) that are mentioned in comments.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
     */
-  var mentions: js.UndefOr[Boolean] = js.native
+  var mentions: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * For EACH ITEM in the collection: Gets the rich comment content (e.g. mentions in comments). This string is not meant to be displayed to end-users. Your add-in should only use this to parse rich comment content.
+    * For EACH ITEM in the collection: The comment thread status. A value of "true" means the comment thread is resolved.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
     */
-  var richContent: js.UndefOr[Boolean] = js.native
+  var resolved: js.UndefOr[Boolean] = js.undefined
+  /**
+    *
+    * For EACH ITEM in the collection: Gets the rich comment content (e.g., mentions in comments). This string is not meant to be displayed to end-users. Your add-in should only use this to parse rich comment content.
+    *
+    * [Api set: ExcelApi 1.11]
+    */
+  var richContent: js.UndefOr[Boolean] = js.undefined
 }
 
 object CommentCollectionLoadOptions {
   @scala.inline
-  def apply(): CommentCollectionLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    authorEmail: js.UndefOr[Boolean] = js.undefined,
+    authorName: js.UndefOr[Boolean] = js.undefined,
+    content: js.UndefOr[Boolean] = js.undefined,
+    creationDate: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[Boolean] = js.undefined,
+    mentions: js.UndefOr[Boolean] = js.undefined,
+    resolved: js.UndefOr[Boolean] = js.undefined,
+    richContent: js.UndefOr[Boolean] = js.undefined
+  ): CommentCollectionLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(authorEmail)) __obj.updateDynamic("authorEmail")(authorEmail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(authorName)) __obj.updateDynamic("authorName")(authorName.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(content)) __obj.updateDynamic("content")(content.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(creationDate)) __obj.updateDynamic("creationDate")(creationDate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mentions)) __obj.updateDynamic("mentions")(mentions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resolved)) __obj.updateDynamic("resolved")(resolved.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(richContent)) __obj.updateDynamic("richContent")(richContent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommentCollectionLoadOptions]
   }
-  @scala.inline
-  implicit class CommentCollectionLoadOptionsOps[Self <: CommentCollectionLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorEmail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMentions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mentions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMentions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mentions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRichContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("richContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRichContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("richContent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

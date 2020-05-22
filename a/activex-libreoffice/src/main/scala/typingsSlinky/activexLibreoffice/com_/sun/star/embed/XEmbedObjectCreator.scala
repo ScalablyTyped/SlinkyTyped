@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   *
   * This interface contains methods that can help to create and initialize an embedded object.
   */
-@js.native
 trait XEmbedObjectCreator extends XInterface {
   /**
     * creates a new object that should be based on specified storage entry.
@@ -34,7 +33,7 @@ trait XEmbedObjectCreator extends XInterface {
     sEntryName: String,
     aMediaDescriptor: SeqEquiv[PropertyValue],
     aObjectArgs: SeqEquiv[PropertyValue]
-  ): XInterface = js.native
+  ): XInterface
   /**
     * creates a new object and initializes it based on {@link com.sun.star.document.MediaDescriptor} .
     *
@@ -52,7 +51,7 @@ trait XEmbedObjectCreator extends XInterface {
     sEntryName: String,
     aMediaDescriptor: SeqEquiv[PropertyValue],
     aObjectArgs: SeqEquiv[PropertyValue]
-  ): XInterface = js.native
+  ): XInterface
   /**
     * creates a new object and initializes it as a new one.
     *
@@ -72,7 +71,7 @@ trait XEmbedObjectCreator extends XInterface {
     xStorage: XStorage,
     sEntryName: String,
     aObjectArgs: SeqEquiv[PropertyValue]
-  ): XInterface = js.native
+  ): XInterface
 }
 
 object XEmbedObjectCreator {
@@ -88,31 +87,5 @@ object XEmbedObjectCreator {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createInstanceInitFromEntry = js.Any.fromFunction4(createInstanceInitFromEntry), createInstanceInitFromMediaDescriptor = js.Any.fromFunction4(createInstanceInitFromMediaDescriptor), createInstanceInitNew = js.Any.fromFunction5(createInstanceInitNew), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XEmbedObjectCreator]
   }
-  @scala.inline
-  implicit class XEmbedObjectCreatorOps[Self <: XEmbedObjectCreator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateInstanceInitFromEntry(value: (XStorage, String, SeqEquiv[PropertyValue], SeqEquiv[PropertyValue]) => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstanceInitFromEntry")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withCreateInstanceInitFromMediaDescriptor(value: (XStorage, String, SeqEquiv[PropertyValue], SeqEquiv[PropertyValue]) => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstanceInitFromMediaDescriptor")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withCreateInstanceInitNew(value: (SeqEquiv[Double], String, XStorage, String, SeqEquiv[PropertyValue]) => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstanceInitNew")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

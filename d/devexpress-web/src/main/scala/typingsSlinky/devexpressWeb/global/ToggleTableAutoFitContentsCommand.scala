@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ToggleTableAutoFitContentsCommand")
 @js.native
 class ToggleTableAutoFitContentsCommand ()
-  extends typingsSlinky.devexpressWeb.ToggleTableAutoFitContentsCommand
+  extends typingsSlinky.devexpressWeb.ToggleTableAutoFitContentsCommand {
+  /**
+    * Executes the ToggleTableAutoFitContentsCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

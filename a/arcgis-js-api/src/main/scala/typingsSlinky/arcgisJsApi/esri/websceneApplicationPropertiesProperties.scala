@@ -4,41 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait websceneApplicationPropertiesProperties extends js.Object {
   /**
     * View-specific properties of application and UI elements.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-ApplicationProperties.html#viewing)
     */
-  var viewing: js.UndefOr[ViewingProperties] = js.native
+  var viewing: js.UndefOr[ViewingProperties] = js.undefined
 }
 
 object websceneApplicationPropertiesProperties {
   @scala.inline
-  def apply(): websceneApplicationPropertiesProperties = {
+  def apply(viewing: ViewingProperties = null): websceneApplicationPropertiesProperties = {
     val __obj = js.Dynamic.literal()
+    if (viewing != null) __obj.updateDynamic("viewing")(viewing.asInstanceOf[js.Any])
     __obj.asInstanceOf[websceneApplicationPropertiesProperties]
   }
-  @scala.inline
-  implicit class websceneApplicationPropertiesPropertiesOps[Self <: websceneApplicationPropertiesProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withViewing(value: ViewingProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

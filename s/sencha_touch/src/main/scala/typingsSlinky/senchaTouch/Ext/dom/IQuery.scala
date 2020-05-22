@@ -3,87 +3,84 @@ package typingsSlinky.senchaTouch.Ext.dom
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.IBase
+import typingsSlinky.senchaTouch.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IQuery extends IBase {
   /** [Method] Returns true if the passed element s match the passed simple selector e g
-  		* @param el String/HTMLElement/Array An element id, element or array of elements
-  		* @param selector String The simple selector to test
-  		* @returns Boolean
-  		*/
+    * @param el String/HTMLElement/Array An element id, element or array of elements
+    * @param selector String The simple selector to test
+    * @returns Boolean
+    */
   var is: js.UndefOr[
     js.Function2[/* el */ js.UndefOr[js.Any], /* selector */ js.UndefOr[String], Boolean]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Selects a group of elements
-  		* @param selector String The selector/xpath query (can be a comma separated list of selectors)
-  		* @param root HTMLElement/String The start of the query (defaults to document).
-  		* @returns HTMLElement[] An Array of DOM elements which match the selector. If there are no matches, and empty Array is returned.
-  		*/
+    * @param selector String The selector/xpath query (can be a comma separated list of selectors)
+    * @param root HTMLElement/String The start of the query (defaults to document).
+    * @returns HTMLElement[] An Array of DOM elements which match the selector. If there are no matches, and empty Array is returned.
+    */
   var select: js.UndefOr[
     js.Function2[/* selector */ js.UndefOr[String], /* root */ js.UndefOr[js.Any], Array]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Selects a single element
-  		* @param selector String The selector/xpath query
-  		* @param root HTMLElement/String The start of the query (defaults to document).
-  		* @returns HTMLElement The DOM element which matched the selector.
-  		*/
+    * @param selector String The selector/xpath query
+    * @param root HTMLElement/String The start of the query (defaults to document).
+    * @returns HTMLElement The DOM element which matched the selector.
+    */
   var selectNode: js.UndefOr[
     js.Function2[/* selector */ js.UndefOr[String], /* root */ js.UndefOr[js.Any], HTMLElement]
-  ] = js.native
+  ] = js.undefined
 }
 
 object IQuery {
   @scala.inline
-  def apply(): IQuery = {
+  def apply(
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    config: js.Any = null,
+    destroy: () => Unit = null,
+    extend: String = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
+    is: (/* el */ js.UndefOr[js.Any], /* selector */ js.UndefOr[String]) => Boolean = null,
+    mixins: js.Any = null,
+    platformConfig: js.Any = null,
+    select: (/* selector */ js.UndefOr[String], /* root */ js.UndefOr[js.Any]) => Array = null,
+    selectNode: (/* selector */ js.UndefOr[String], /* root */ js.UndefOr[js.Any]) => HTMLElement = null,
+    self: IClass = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    statics: js.Any = null,
+    uses: Array = null
+  ): IQuery = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (is != null) __obj.updateDynamic("is")(js.Any.fromFunction2(is))
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
+    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction2(select))
+    if (selectNode != null) __obj.updateDynamic("selectNode")(js.Any.fromFunction2(selectNode))
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[IQuery]
   }
-  @scala.inline
-  implicit class IQueryOps[Self <: IQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIs(value: (/* el */ js.UndefOr[js.Any], /* selector */ js.UndefOr[String]) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutIs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: (/* selector */ js.UndefOr[String], /* root */ js.UndefOr[js.Any]) => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectNode(value: (/* selector */ js.UndefOr[String], /* root */ js.UndefOr[js.Any]) => HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNode")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelectNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

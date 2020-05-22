@@ -8,100 +8,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UploadFileOptions
   extends BaseOptions[js.Any, js.Any] {
   /** 文件名，即对应的 key, 开发者在服务器端通过这个 key 可以获取到文件二进制内容 */
-  var fileName: String = js.native
+  var fileName: String
   /** 要上传文件资源的本地定位符 */
-  var filePath: String = js.native
+  var filePath: String
   /**
-  		 * 文件类型
-  		 */
-  var fileType: image | video | audio = js.native
+    * 文件类型
+    */
+  var fileType: image | video | audio
   /** HTTP 请求中其他额外的 form 数据 */
-  var formData: js.UndefOr[js.Any] = js.native
+  var formData: js.UndefOr[js.Any] = js.undefined
   /** HTTP 请求 Header */
-  var header: js.UndefOr[RequestHeader] = js.native
+  var header: js.UndefOr[RequestHeader] = js.undefined
   @JSName("success")
-  var success_UploadFileOptions: js.UndefOr[js.Function1[/* res */ Data, Unit]] = js.native
+  var success_UploadFileOptions: js.UndefOr[js.Function1[/* res */ Data, Unit]] = js.undefined
   /** 开发者服务器地址 */
-  var url: String = js.native
+  var url: String
 }
 
 object UploadFileOptions {
   @scala.inline
-  def apply(fileName: String, filePath: String, fileType: image | video | audio, url: String): UploadFileOptions = {
+  def apply(
+    fileName: String,
+    filePath: String,
+    fileType: image | video | audio,
+    url: String,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    formData: js.Any = null,
+    header: RequestHeader = null,
+    success: /* res */ Data => Unit = null
+  ): UploadFileOptions = {
     val __obj = js.Dynamic.literal(fileName = fileName.asInstanceOf[js.Any], filePath = filePath.asInstanceOf[js.Any], fileType = fileType.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (formData != null) __obj.updateDynamic("formData")(formData.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[UploadFileOptions]
   }
-  @scala.inline
-  implicit class UploadFileOptionsOps[Self <: UploadFileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileType(value: image | video | audio): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: RequestHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ Data => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

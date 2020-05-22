@@ -6,41 +6,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGridTreeBaseApi[TEntity] extends js.Object {
   // Events
-  var on: RowCollapsed[TEntity] = js.native
+  var on: RowCollapsed[TEntity]
   // Methods
   /**
     * Collapse all tree rows
     */
-  def collapseAllRows(): Unit = js.native
+  def collapseAllRows(): Unit
   /**
     * collapse the specified row. When you expand the row again, all grandchildren will retain their state
     * @param {IGridRow} row The row to collapse
     */
-  def collapseRow(row: IGridRowOf[TEntity]): Unit = js.native
+  def collapseRow(row: IGridRowOf[TEntity]): Unit
   /**
     * collapse all children of the specified row. When you expand the row again, all grandchildren will be
     * collapsed
     * @param {IGridRow} row The row to collapse children of
     */
-  def collapseRowChildren(row: IGridRowOf[TEntity]): Unit = js.native
+  def collapseRowChildren(row: IGridRowOf[TEntity]): Unit
   /**
     * Expands all tree rows
     */
-  def expandAllRows(): Unit = js.native
+  def expandAllRows(): Unit
   /**
     * Expand the immediate children of the specified row
     * @param {IGridRow} row The row to expand
     */
-  def expandRow(row: IGridRowOf[TEntity]): Unit = js.native
+  def expandRow(row: IGridRowOf[TEntity]): Unit
   /**
     * Get the children of the specified row
     * @param {IGridRow} row The row you want the children of
     * @returns Array<IGridRow> Array of children rows
     */
-  def getRowChildren(row: IGridRowOf[TEntity]): js.Array[IGridRowOf[TEntity]] = js.native
+  def getRowChildren(row: IGridRowOf[TEntity]): js.Array[IGridRowOf[TEntity]]
   /**
     * Get the tree state for this grid, used by the saveState feature Returned treeState as an object
     * ```{ expandedState: { uid: 'expanded', uid: 'collapsed' } }```
@@ -48,17 +47,17 @@ trait IGridTreeBaseApi[TEntity] extends js.Object {
     * @returns {ITreeState} tree state
     * NOTE this is an incomplete feature in uiGrid
     */
-  def getTreeState(): ITreeState = js.native
+  def getTreeState(): ITreeState
   /**
     * Set the expanded states of the tree
     * @param {ITreeState} config The config you want to apply, in the format provided by getTreeState
     */
-  def setTreeState(config: ITreeState): Unit = js.native
+  def setTreeState(config: ITreeState): Unit
   /**
     * call expand if row is collapsed, and collapse if it is expanded
     * @param {IGridRow} row The row to toggle
     */
-  def toggleRowTreeState(row: IGridRowOf[TEntity]): Unit = js.native
+  def toggleRowTreeState(row: IGridRowOf[TEntity]): Unit
 }
 
 object IGridTreeBaseApi {
@@ -78,73 +77,5 @@ object IGridTreeBaseApi {
     val __obj = js.Dynamic.literal(collapseAllRows = js.Any.fromFunction0(collapseAllRows), collapseRow = js.Any.fromFunction1(collapseRow), collapseRowChildren = js.Any.fromFunction1(collapseRowChildren), expandAllRows = js.Any.fromFunction0(expandAllRows), expandRow = js.Any.fromFunction1(expandRow), getRowChildren = js.Any.fromFunction1(getRowChildren), getTreeState = js.Any.fromFunction0(getTreeState), on = on.asInstanceOf[js.Any], setTreeState = js.Any.fromFunction1(setTreeState), toggleRowTreeState = js.Any.fromFunction1(toggleRowTreeState))
     __obj.asInstanceOf[IGridTreeBaseApi[TEntity]]
   }
-  @scala.inline
-  implicit class IGridTreeBaseApiOps[Self[tentity] <: IGridTreeBaseApi[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
-    @scala.inline
-    def withCollapseAllRows(value: () => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAllRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCollapseRow(value: IGridRowOf[TEntity] => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCollapseRowChildren(value: IGridRowOf[TEntity] => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseRowChildren")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExpandAllRows(value: () => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAllRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExpandRow(value: IGridRowOf[TEntity] => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetRowChildren(value: IGridRowOf[TEntity] => js.Array[IGridRowOf[TEntity]]): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowChildren")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTreeState(value: () => ITreeState): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTreeState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOn(value: RowCollapsed[TEntity]): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetTreeState(value: ITreeState => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTreeState")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withToggleRowTreeState(value: IGridRowOf[TEntity] => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleRowTreeState")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

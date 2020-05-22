@@ -1,12 +1,12 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.horizontal
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SwipeProperties extends WidgetProperties {
   /**
     * The direction the Swipe widget moves across the view. If `"horizontal"`, the widget will move left and right and if `"vertical"`, the widget will move up and down.
@@ -20,7 +20,7 @@ trait SwipeProperties extends WidgetProperties {
     *
     * @default "horizontal"
     */
-  var direction: js.UndefOr[horizontal | vertical] = js.native
+  var direction: js.UndefOr[horizontal | vertical] = js.undefined
   /**
     * When `true`, sets the widget to a disabled state so the user cannot interact with it.
     *
@@ -28,25 +28,25 @@ trait SwipeProperties extends WidgetProperties {
     *
     * @default false
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The text that shows in a tooltip when hovering over the handle of the Swipe widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#dragLabel)
     */
-  var dragLabel: js.UndefOr[String] = js.native
+  var dragLabel: js.UndefOr[String] = js.undefined
   /**
     * The widget's default CSS icon class.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#iconClass)
     */
-  var iconClass: js.UndefOr[String] = js.native
+  var iconClass: js.UndefOr[String] = js.undefined
   /**
     * A collection of [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html)s that will show on the left or top side of the Swipe widget. See the image in the [class description](#) at the top of the page. Currently, all layers are supported except GroupLayers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#leadingLayers)
     */
-  var leadingLayers: js.UndefOr[CollectionProperties[LayerProperties]] = js.native
+  var leadingLayers: js.UndefOr[CollectionProperties[LayerProperties]] = js.undefined
   /**
     * The position of the Swipe widget. This determines what percentage of the view will be taken up by the [leadingLayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#leadingLayers).
     *
@@ -54,166 +54,67 @@ trait SwipeProperties extends WidgetProperties {
     *
     * @default 25
     */
-  var position: js.UndefOr[Double] = js.native
+  var position: js.UndefOr[Double] = js.undefined
   /**
     * A collection of [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html)s that will show on the right or bottom side of the Swipe widget. See the image in the [class description](#) at the top of the page. Currently, all layers are supported except GroupLayers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#trailingLayers)
     */
-  var trailingLayers: js.UndefOr[CollectionProperties[LayerProperties]] = js.native
+  var trailingLayers: js.UndefOr[CollectionProperties[LayerProperties]] = js.undefined
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html). Set this to link the widget to a specific view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#view)
     */
-  var view: js.UndefOr[MapViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties] = js.undefined
   /**
     * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [SwipeViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe-SwipeViewModel.html) class to access all properties and methods on the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#viewModel)
     */
-  var viewModel: js.UndefOr[SwipeViewModelProperties] = js.native
+  var viewModel: js.UndefOr[SwipeViewModelProperties] = js.undefined
   /**
     * The visible elements that are displayed within the widget. This property provides the ability change the visibility of individual elements of the widget's display.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#visibleElements)
     */
-  var visibleElements: js.UndefOr[widgetsSwipeVisibleElements] = js.native
+  var visibleElements: js.UndefOr[widgetsSwipeVisibleElements] = js.undefined
 }
 
 object SwipeProperties {
   @scala.inline
-  def apply(): SwipeProperties = {
+  def apply(
+    container: String | HTMLElement = null,
+    destroyed: js.UndefOr[Boolean] = js.undefined,
+    direction: horizontal | vertical = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    dragLabel: String = null,
+    iconClass: String = null,
+    id: String = null,
+    label: String = null,
+    leadingLayers: CollectionProperties[LayerProperties] = null,
+    position: js.UndefOr[Double] = js.undefined,
+    trailingLayers: CollectionProperties[LayerProperties] = null,
+    view: MapViewProperties = null,
+    viewModel: SwipeViewModelProperties = null,
+    visibleElements: widgetsSwipeVisibleElements = null
+  ): SwipeProperties = {
     val __obj = js.Dynamic.literal()
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyed)) __obj.updateDynamic("destroyed")(destroyed.get.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (dragLabel != null) __obj.updateDynamic("dragLabel")(dragLabel.asInstanceOf[js.Any])
+    if (iconClass != null) __obj.updateDynamic("iconClass")(iconClass.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (leadingLayers != null) __obj.updateDynamic("leadingLayers")(leadingLayers.asInstanceOf[js.Any])
+    if (!js.isUndefined(position)) __obj.updateDynamic("position")(position.get.asInstanceOf[js.Any])
+    if (trailingLayers != null) __obj.updateDynamic("trailingLayers")(trailingLayers.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])
+    if (visibleElements != null) __obj.updateDynamic("visibleElements")(visibleElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwipeProperties]
   }
-  @scala.inline
-  implicit class SwipePropertiesOps[Self <: SwipeProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirection(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeadingLayers(value: CollectionProperties[LayerProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leadingLayers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeadingLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leadingLayers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrailingLayers(value: CollectionProperties[LayerProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingLayers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrailingLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingLayers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: MapViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: SwipeViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleElements(value: widgetsSwipeVisibleElements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleElements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

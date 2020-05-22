@@ -2,10 +2,11 @@ package typingsSlinky.apolloReactHooks
 
 import typingsSlinky.apolloClient.typesMod.ApolloQueryResult
 import typingsSlinky.apolloReactCommon.typesMod.QueryResult
-import typingsSlinky.apolloReactHooks.anon.ForceUpdate
 import typingsSlinky.apolloReactHooks.anon.Lazy
+import typingsSlinky.apolloReactHooks.anon.OnNewData
 import typingsSlinky.apolloReactHooks.operationDataMod.OperationData
 import typingsSlinky.apolloReactHooks.typesMod.QueryTuple
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +17,8 @@ object queryDataMod extends js.Object {
   @js.native
   class QueryData[TData, TVariables] protected ()
     extends OperationData[js.Any] {
-    def this(hasOptionsContextForceUpdate: ForceUpdate[TData, TVariables]) = this()
+    def this(hasOptionsContextOnNewData: OnNewData[TData, TVariables]) = this()
     var currentObservable: js.Any = js.native
-    var forceUpdate: js.Any = js.native
     var getExecuteResult: js.Any = js.native
     var getExecuteSsrResult: js.Any = js.native
     var getQueryResult: js.Any = js.native
@@ -45,6 +45,8 @@ object queryDataMod extends js.Object {
     def execute(): QueryResult[TData, TVariables] = js.native
     def executeLazy(): QueryTuple[TData, TVariables] = js.native
     def fetchData(): js.Promise[ApolloQueryResult[_]] | Boolean = js.native
+    def onNewData(): Unit = js.native
+    def ssrInitiated(): js.UndefOr[Record[_, _]] = js.native
   }
   
 }

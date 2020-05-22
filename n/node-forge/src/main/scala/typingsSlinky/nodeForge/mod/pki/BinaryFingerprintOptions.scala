@@ -1,37 +1,33 @@
 package typingsSlinky.nodeForge.mod.pki
 
+import typingsSlinky.nodeForge.mod.md.MessageDigest
+import typingsSlinky.nodeForge.nodeForgeStrings.RSAPublicKey
+import typingsSlinky.nodeForge.nodeForgeStrings.SubjectPublicKeyInfo
 import typingsSlinky.nodeForge.nodeForgeStrings.binary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BinaryFingerprintOptions extends ByteBufferFingerprintOptions {
   /**
     * @description if not specified, the function will return `ByteStringBuffer`
     */
-  var encoding: binary = js.native
+  var encoding: binary
 }
 
 object BinaryFingerprintOptions {
   @scala.inline
-  def apply(encoding: binary): BinaryFingerprintOptions = {
+  def apply(
+    encoding: binary,
+    delimiter: String = null,
+    md: MessageDigest = null,
+    `type`: SubjectPublicKeyInfo | RSAPublicKey = null
+  ): BinaryFingerprintOptions = {
     val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
+    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
+    if (md != null) __obj.updateDynamic("md")(md.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BinaryFingerprintOptions]
   }
-  @scala.inline
-  implicit class BinaryFingerprintOptionsOps[Self <: BinaryFingerprintOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncoding(value: binary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

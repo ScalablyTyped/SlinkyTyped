@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Devices.ExposurePriorityVideoControl")
 @js.native
 abstract class ExposurePriorityVideoControl ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Devices.ExposurePriorityVideoControl
+  extends typingsSlinky.winrtUwp.Windows.Media.Devices.ExposurePriorityVideoControl {
+  /** Gets or sets a value that specifies if ExposurePriorityVideoControl is enabled. */
+  /* CompleteClass */
+  override var enabled: Boolean = js.native
+  /** Gets or sets a value that specifies if ExposurePriorityVideoControl is supported on the current device. */
+  /* CompleteClass */
+  override var supported: Boolean = js.native
+}
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait X11ChannelData extends js.Object {
-  var srcIP: String = js.native
-  var srcPort: Double = js.native
+  var srcIP: String
+  var srcPort: Double
 }
 
 object X11ChannelData {
@@ -16,25 +15,5 @@ object X11ChannelData {
     val __obj = js.Dynamic.literal(srcIP = srcIP.asInstanceOf[js.Any], srcPort = srcPort.asInstanceOf[js.Any])
     __obj.asInstanceOf[X11ChannelData]
   }
-  @scala.inline
-  implicit class X11ChannelDataOps[Self <: X11ChannelData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSrcIP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSrcPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

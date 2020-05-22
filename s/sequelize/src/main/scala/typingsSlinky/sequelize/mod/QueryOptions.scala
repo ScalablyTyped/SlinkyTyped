@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   *
   * @see Options
   */
-@js.native
 trait QueryOptions
   extends SearchPathOptions
      with ReturningOptions {
@@ -18,26 +17,26 @@ trait QueryOptions
     * Either an object of named bind parameter in the format `$param` or an array of unnamed
     * bind parameter to replace `$1`, `$2`, ... in your SQL.
     */
-  var bind: js.UndefOr[js.Object | js.Array[String]] = js.native
+  var bind: js.UndefOr[js.Object | js.Array[String]] = js.undefined
   // TODO: force, cascade
-  var fieldMap: js.UndefOr[StringDictionary[String]] = js.native
+  var fieldMap: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * A sequelize instance used to build the return instance
     */
-  var instance: js.UndefOr[Instance[_]] = js.native
+  var instance: js.UndefOr[Instance[_]] = js.undefined
   /**
     * A function that gets executed while running the query to log the sql.
     */
-  var logging: js.UndefOr[Boolean | js.Function] = js.native
+  var logging: js.UndefOr[Boolean | js.Function] = js.undefined
   /**
     * Map returned fields to model's fields if `options.model` or `options.instance` is present.
     * Mapping will occur before building the model instance.
     */
-  var mapToModel: js.UndefOr[Boolean] = js.native
+  var mapToModel: js.UndefOr[Boolean] = js.undefined
   /**
     * A sequelize model used to build the returned model instances (used to be called callee)
     */
-  var model: js.UndefOr[Model[_, _, _]] = js.native
+  var model: js.UndefOr[Model[_, _, _]] = js.undefined
   /**
     * If true, transforms objects with `.` separated property names into nested objects using
     * [dottie.js](https://github.com/mickhansen/dottie.js). For example { 'user.username': 'john' } becomes
@@ -46,223 +45,82 @@ trait QueryOptions
     *
     * Defaults to false
     */
-  var nest: js.UndefOr[Boolean] = js.native
+  var nest: js.UndefOr[Boolean] = js.undefined
   /**
     * Sets the query type to `SELECT` and return a single row
     */
-  var plain: js.UndefOr[Boolean] = js.native
+  var plain: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, sequelize will not try to format the results of the query, or build an instance of a model from
     * the result
     */
-  var raw: js.UndefOr[Boolean] = js.native
+  var raw: js.UndefOr[Boolean] = js.undefined
   /**
     * Either an object of named parameter replacements in the format `:param` or an array of unnamed
     * replacements to replace `?` in your SQL.
     */
-  var replacements: js.UndefOr[js.Object | js.Array[String]] = js.native
+  var replacements: js.UndefOr[js.Object | js.Array[String]] = js.undefined
   /**
     * Set of flags that control when a query is automatically retried.
     */
-  var retry: js.UndefOr[RetryOptions] = js.native
+  var retry: js.UndefOr[RetryOptions] = js.undefined
   /**
     * If false do not prepend the query with the search_path (Postgres only)
     */
-  var supportsSearchPath: js.UndefOr[Boolean] = js.native
+  var supportsSearchPath: js.UndefOr[Boolean] = js.undefined
   /**
     * The type of query you are executing. The query type affects how results are formatted before they are
     * passed back. The type is a string, but `Sequelize.QueryTypes` is provided as convenience shortcuts.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * Force the query to use the write pool, regardless of the query type.
     *
     * Defaults to false
     */
-  var useMaster: js.UndefOr[Boolean] = js.native
+  var useMaster: js.UndefOr[Boolean] = js.undefined
 }
 
 object QueryOptions {
   @scala.inline
-  def apply(): QueryOptions = {
+  def apply(
+    bind: js.Object | js.Array[String] = null,
+    fieldMap: StringDictionary[String] = null,
+    instance: Instance[_] = null,
+    logging: Boolean | js.Function = null,
+    mapToModel: js.UndefOr[Boolean] = js.undefined,
+    model: Model[_, _, _] = null,
+    nest: js.UndefOr[Boolean] = js.undefined,
+    plain: js.UndefOr[Boolean] = js.undefined,
+    raw: js.UndefOr[Boolean] = js.undefined,
+    replacements: js.Object | js.Array[String] = null,
+    retry: RetryOptions = null,
+    returning: js.UndefOr[Boolean] = js.undefined,
+    searchPath: String = null,
+    supportsSearchPath: js.UndefOr[Boolean] = js.undefined,
+    transaction: Transaction = null,
+    `type`: String = null,
+    useMaster: js.UndefOr[Boolean] = js.undefined
+  ): QueryOptions = {
     val __obj = js.Dynamic.literal()
+    if (bind != null) __obj.updateDynamic("bind")(bind.asInstanceOf[js.Any])
+    if (fieldMap != null) __obj.updateDynamic("fieldMap")(fieldMap.asInstanceOf[js.Any])
+    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (!js.isUndefined(mapToModel)) __obj.updateDynamic("mapToModel")(mapToModel.get.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (!js.isUndefined(nest)) __obj.updateDynamic("nest")(nest.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(plain)) __obj.updateDynamic("plain")(plain.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.get.asInstanceOf[js.Any])
+    if (replacements != null) __obj.updateDynamic("replacements")(replacements.asInstanceOf[js.Any])
+    if (retry != null) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
+    if (!js.isUndefined(returning)) __obj.updateDynamic("returning")(returning.get.asInstanceOf[js.Any])
+    if (searchPath != null) __obj.updateDynamic("searchPath")(searchPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(supportsSearchPath)) __obj.updateDynamic("supportsSearchPath")(supportsSearchPath.get.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(useMaster)) __obj.updateDynamic("useMaster")(useMaster.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryOptions]
   }
-  @scala.inline
-  implicit class QueryOptionsOps[Self <: QueryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBind(value: js.Object | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldMap(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstance(value: Instance[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogging(value: Boolean | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapToModel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapToModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapToModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapToModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: Model[_, _, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlain(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplacements(value: js.Object | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplacements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry(value: RetryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsSearchPath(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSearchPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsSearchPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSearchPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseMaster(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMaster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseMaster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMaster")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

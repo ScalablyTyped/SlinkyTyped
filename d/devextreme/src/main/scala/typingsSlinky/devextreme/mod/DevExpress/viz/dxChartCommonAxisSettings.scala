@@ -9,317 +9,99 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxChartCommonAxisSettings extends js.Object {
-  /** Specifies whether to allow decimal values on the axis. When false, the axis contains integer values only. */
-  var allowDecimals: js.UndefOr[Boolean] = js.native
-  /** Configures the scale breaks' appearance. */
-  var breakStyle: js.UndefOr[Line] = js.native
-  /** Specifies the color of the axis line. */
-  var color: js.UndefOr[String] = js.native
-  /** Configures the appearance of all constant lines in the widget. */
-  var constantLineStyle: js.UndefOr[dxChartCommonAxisSettingsConstantLineStyle] = js.native
-  /** Specifies whether ticks and grid lines should cross axis labels or lie between them. Applies only to the axes of the "discrete" type. */
-  var discreteAxisDivisionMode: js.UndefOr[betweenLabels | crossLabels] = js.native
-  /** Specifies whether to force the axis to start and end on ticks. */
-  var endOnTick: js.UndefOr[Boolean] = js.native
-  /** Configures the grid. */
-  var grid: js.UndefOr[ColorOpacity] = js.native
-  /** Inverts the axis. */
-  var inverted: js.UndefOr[Boolean] = js.native
-  /** Configures axis labels. */
-  var label: js.UndefOr[dxChartCommonAxisSettingsLabel] = js.native
-  /** Controls the empty space between the maximum series points and the axis. Applies only to the axes of the "continuous" and "logarithmic" type. */
-  var maxValueMargin: js.UndefOr[Double] = js.native
-  /** Controls the empty space between the minimum series points and the axis. Applies only to the axes of the "continuous" and "logarithmic" type. */
-  var minValueMargin: js.UndefOr[Double] = js.native
-  /** Configures the minor grid. */
-  var minorGrid: js.UndefOr[ColorOpacity] = js.native
-  /** Configures the appearance of minor axis ticks. */
-  var minorTick: js.UndefOr[Length] = js.native
-  /** Specifies how transparent the axis line should be. */
-  var opacity: js.UndefOr[Double] = js.native
-  /** Reserves a pixel-measured space for the axis. */
-  var placeholderSize: js.UndefOr[Double] = js.native
-  /** Configures the appearance of strips. */
-  var stripStyle: js.UndefOr[dxChartCommonAxisSettingsStripStyle] = js.native
-  /** Configures the appearance of major axis ticks. */
-  var tick: js.UndefOr[Length] = js.native
-  /** Configures axis titles. */
-  var title: js.UndefOr[dxChartCommonAxisSettingsTitle] = js.native
-  /** Adds an empty space between the axis and the minimum and maximum series points. */
-  var valueMarginsEnabled: js.UndefOr[Boolean] = js.native
-  /** Makes the axis line visible. */
-  var visible: js.UndefOr[Boolean] = js.native
-  /** Specifies the width of the axis line in pixels. */
-  var width: js.UndefOr[Double] = js.native
+  /** @name dxChart.Options.commonAxisSettings.allowDecimals */
+  var allowDecimals: js.UndefOr[Boolean] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.breakStyle */
+  var breakStyle: js.UndefOr[Line] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.color */
+  var color: js.UndefOr[String] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.constantLineStyle */
+  var constantLineStyle: js.UndefOr[dxChartCommonAxisSettingsConstantLineStyle] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.discreteAxisDivisionMode */
+  var discreteAxisDivisionMode: js.UndefOr[betweenLabels | crossLabels] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.endOnTick */
+  var endOnTick: js.UndefOr[Boolean] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.grid */
+  var grid: js.UndefOr[ColorOpacity] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.inverted */
+  var inverted: js.UndefOr[Boolean] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.label */
+  var label: js.UndefOr[dxChartCommonAxisSettingsLabel] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.maxValueMargin */
+  var maxValueMargin: js.UndefOr[Double] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.minValueMargin */
+  var minValueMargin: js.UndefOr[Double] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.minorGrid */
+  var minorGrid: js.UndefOr[ColorOpacity] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.minorTick */
+  var minorTick: js.UndefOr[Length] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.opacity */
+  var opacity: js.UndefOr[Double] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.placeholderSize */
+  var placeholderSize: js.UndefOr[Double] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.stripStyle */
+  var stripStyle: js.UndefOr[dxChartCommonAxisSettingsStripStyle] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.tick */
+  var tick: js.UndefOr[Length] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.title */
+  var title: js.UndefOr[dxChartCommonAxisSettingsTitle] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.valueMarginsEnabled */
+  var valueMarginsEnabled: js.UndefOr[Boolean] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.visible */
+  var visible: js.UndefOr[Boolean] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.width */
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object dxChartCommonAxisSettings {
   @scala.inline
-  def apply(): dxChartCommonAxisSettings = {
+  def apply(
+    allowDecimals: js.UndefOr[Boolean] = js.undefined,
+    breakStyle: Line = null,
+    color: String = null,
+    constantLineStyle: dxChartCommonAxisSettingsConstantLineStyle = null,
+    discreteAxisDivisionMode: betweenLabels | crossLabels = null,
+    endOnTick: js.UndefOr[Boolean] = js.undefined,
+    grid: ColorOpacity = null,
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    label: dxChartCommonAxisSettingsLabel = null,
+    maxValueMargin: js.UndefOr[Double] = js.undefined,
+    minValueMargin: js.UndefOr[Double] = js.undefined,
+    minorGrid: ColorOpacity = null,
+    minorTick: Length = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    placeholderSize: js.UndefOr[Double] = js.undefined,
+    stripStyle: dxChartCommonAxisSettingsStripStyle = null,
+    tick: Length = null,
+    title: dxChartCommonAxisSettingsTitle = null,
+    valueMarginsEnabled: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): dxChartCommonAxisSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.get.asInstanceOf[js.Any])
+    if (breakStyle != null) __obj.updateDynamic("breakStyle")(breakStyle.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (constantLineStyle != null) __obj.updateDynamic("constantLineStyle")(constantLineStyle.asInstanceOf[js.Any])
+    if (discreteAxisDivisionMode != null) __obj.updateDynamic("discreteAxisDivisionMode")(discreteAxisDivisionMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(endOnTick)) __obj.updateDynamic("endOnTick")(endOnTick.get.asInstanceOf[js.Any])
+    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxValueMargin)) __obj.updateDynamic("maxValueMargin")(maxValueMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minValueMargin)) __obj.updateDynamic("minValueMargin")(minValueMargin.get.asInstanceOf[js.Any])
+    if (minorGrid != null) __obj.updateDynamic("minorGrid")(minorGrid.asInstanceOf[js.Any])
+    if (minorTick != null) __obj.updateDynamic("minorTick")(minorTick.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(placeholderSize)) __obj.updateDynamic("placeholderSize")(placeholderSize.get.asInstanceOf[js.Any])
+    if (stripStyle != null) __obj.updateDynamic("stripStyle")(stripStyle.asInstanceOf[js.Any])
+    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueMarginsEnabled)) __obj.updateDynamic("valueMarginsEnabled")(valueMarginsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartCommonAxisSettings]
   }
-  @scala.inline
-  implicit class dxChartCommonAxisSettingsOps[Self <: dxChartCommonAxisSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowDecimals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDecimals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreakStyle(value: Line): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreakStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstantLineStyle(value: dxChartCommonAxisSettingsConstantLineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstantLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiscreteAxisDivisionMode(value: betweenLabels | crossLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discreteAxisDivisionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscreteAxisDivisionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discreteAxisDivisionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndOnTick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOnTick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndOnTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOnTick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrid(value: ColorOpacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: dxChartCommonAxisSettingsLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValueMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValueMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValueMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValueMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorGrid(value: ColorOpacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGrid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTick(value: Length): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholderSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripStyle(value: dxChartCommonAxisSettingsStripStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTick(value: Length): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: dxChartCommonAxisSettingsTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueMarginsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMarginsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueMarginsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMarginsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

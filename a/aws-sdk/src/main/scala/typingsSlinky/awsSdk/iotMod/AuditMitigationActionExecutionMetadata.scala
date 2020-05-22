@@ -46,125 +46,28 @@ trait AuditMitigationActionExecutionMetadata extends js.Object {
 
 object AuditMitigationActionExecutionMetadata {
   @scala.inline
-  def apply(): AuditMitigationActionExecutionMetadata = {
+  def apply(
+    actionId: MitigationActionId = null,
+    actionName: MitigationActionName = null,
+    endTime: js.Date = null,
+    errorCode: ErrorCode = null,
+    findingId: FindingId = null,
+    message: ErrorMessage = null,
+    startTime: js.Date = null,
+    status: AuditMitigationActionsExecutionStatus = null,
+    taskId: AuditMitigationActionsTaskId = null
+  ): AuditMitigationActionExecutionMetadata = {
     val __obj = js.Dynamic.literal()
+    if (actionId != null) __obj.updateDynamic("actionId")(actionId.asInstanceOf[js.Any])
+    if (actionName != null) __obj.updateDynamic("actionName")(actionName.asInstanceOf[js.Any])
+    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
+    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
+    if (findingId != null) __obj.updateDynamic("findingId")(findingId.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (taskId != null) __obj.updateDynamic("taskId")(taskId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuditMitigationActionExecutionMetadata]
   }
-  @scala.inline
-  implicit class AuditMitigationActionExecutionMetadataOps[Self <: AuditMitigationActionExecutionMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionId(value: MitigationActionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionName(value: MitigationActionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorCode(value: ErrorCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFindingId(value: FindingId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: ErrorMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: AuditMitigationActionsExecutionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskId(value: AuditMitigationActionsTaskId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,91 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PawsRegisterResponse extends js.Object {
   /**
     * A database may include the databaseChange parameter to notify a device of a change to its database URI, providing one or more alternate database URIs.
     * The device should use this information to update its list of pre-configured databases by (only) replacing its entry for the responding database with
     * the list of alternate URIs.
     */
-  var databaseChange: js.UndefOr[DbUpdateSpec] = js.native
+  var databaseChange: js.UndefOr[DbUpdateSpec] = js.undefined
   /** Identifies what kind of resource this is. Value: the fixed string "spectrum#pawsRegisterResponse". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /**
     * The message type (e.g., INIT_REQ, AVAIL_SPECTRUM_REQ, ...).
     *
     * Required field.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * The PAWS version. Must be exactly 1.0.
     *
     * Required field.
     */
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object PawsRegisterResponse {
   @scala.inline
-  def apply(): PawsRegisterResponse = {
+  def apply(
+    databaseChange: DbUpdateSpec = null,
+    kind: String = null,
+    `type`: String = null,
+    version: String = null
+  ): PawsRegisterResponse = {
     val __obj = js.Dynamic.literal()
+    if (databaseChange != null) __obj.updateDynamic("databaseChange")(databaseChange.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[PawsRegisterResponse]
   }
-  @scala.inline
-  implicit class PawsRegisterResponseOps[Self <: PawsRegisterResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseChange(value: DbUpdateSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

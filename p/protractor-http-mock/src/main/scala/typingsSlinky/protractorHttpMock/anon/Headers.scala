@@ -5,89 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Headers extends js.Object {
-  var headers: js.UndefOr[js.Object] = js.native
-  var method: GET = js.native
-  var params: js.UndefOr[js.Object] = js.native
-  var path: String = js.native
-  var queryString: js.UndefOr[js.Object] = js.native
-  var regex: js.UndefOr[Boolean] = js.native
+  var headers: js.UndefOr[js.Object] = js.undefined
+  var method: GET
+  var params: js.UndefOr[js.Object] = js.undefined
+  var path: String
+  var queryString: js.UndefOr[js.Object] = js.undefined
+  var regex: js.UndefOr[Boolean] = js.undefined
 }
 
 object Headers {
   @scala.inline
-  def apply(method: GET, path: String): Headers = {
+  def apply(
+    method: GET,
+    path: String,
+    headers: js.Object = null,
+    params: js.Object = null,
+    queryString: js.Object = null,
+    regex: js.UndefOr[Boolean] = js.undefined
+  ): Headers = {
     val __obj = js.Dynamic.literal(method = method.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (queryString != null) __obj.updateDynamic("queryString")(queryString.asInstanceOf[js.Any])
+    if (!js.isUndefined(regex)) __obj.updateDynamic("regex")(regex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Headers]
   }
-  @scala.inline
-  implicit class HeadersOps[Self <: Headers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMethod(value: GET): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryString(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

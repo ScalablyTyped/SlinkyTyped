@@ -22,47 +22,15 @@ trait PutResourcePolicyRequest extends js.Object {
 
 object PutResourcePolicyRequest {
   @scala.inline
-  def apply(PolicyInJson: PolicyJsonString): PutResourcePolicyRequest = {
+  def apply(
+    PolicyInJson: PolicyJsonString,
+    PolicyExistsCondition: ExistCondition = null,
+    PolicyHashCondition: HashString = null
+  ): PutResourcePolicyRequest = {
     val __obj = js.Dynamic.literal(PolicyInJson = PolicyInJson.asInstanceOf[js.Any])
+    if (PolicyExistsCondition != null) __obj.updateDynamic("PolicyExistsCondition")(PolicyExistsCondition.asInstanceOf[js.Any])
+    if (PolicyHashCondition != null) __obj.updateDynamic("PolicyHashCondition")(PolicyHashCondition.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutResourcePolicyRequest]
   }
-  @scala.inline
-  implicit class PutResourcePolicyRequestOps[Self <: PutResourcePolicyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyInJson(value: PolicyJsonString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyInJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicyExistsCondition(value: ExistCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyExistsCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyExistsCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyExistsCondition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyHashCondition(value: HashString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyHashCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyHashCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyHashCondition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,16 +1,16 @@
 package typingsSlinky.scheduler
 
-import typingsSlinky.scheduler.tracingMod.EnableSchedulerTracing
+import typingsSlinky.scheduler.tracingMod._EnableSchedulerTracing
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object schedulerBooleans {
   @js.native
-  sealed trait `false` extends EnableSchedulerTracing
+  sealed trait `false` extends _EnableSchedulerTracing
   
   @js.native
-  sealed trait `true` extends EnableSchedulerTracing
+  sealed trait `true` extends _EnableSchedulerTracing
   
   @scala.inline
   def `false`: `false` = false.asInstanceOf[`false`]

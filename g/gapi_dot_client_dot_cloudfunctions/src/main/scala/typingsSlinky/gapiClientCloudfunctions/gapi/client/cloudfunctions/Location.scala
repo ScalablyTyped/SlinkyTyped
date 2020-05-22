@@ -5,89 +5,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Location extends js.Object {
   /**
     * Cross-service attributes for the location. For example
     *
     * {"cloud.googleapis.com/region": "us-east1"}
     */
-  var labels: js.UndefOr[Record[String, String]] = js.native
+  var labels: js.UndefOr[Record[String, String]] = js.undefined
   /** The canonical id for this location. For example: `"us-east1"`. */
-  var locationId: js.UndefOr[String] = js.native
+  var locationId: js.UndefOr[String] = js.undefined
   /**
     * Service-specific metadata. For example the available capacity at the given
     * location.
     */
-  var metadata: js.UndefOr[Record[String, _]] = js.native
+  var metadata: js.UndefOr[Record[String, _]] = js.undefined
   /**
     * Resource name for the location, which may vary between implementations.
     * For example: `"projects/example-project/locations/us-east1"`
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object Location {
   @scala.inline
-  def apply(): Location = {
+  def apply(
+    labels: Record[String, String] = null,
+    locationId: String = null,
+    metadata: Record[String, _] = null,
+    name: String = null
+  ): Location = {
     val __obj = js.Dynamic.literal()
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (locationId != null) __obj.updateDynamic("locationId")(locationId.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Location]
   }
-  @scala.inline
-  implicit class LocationOps[Self <: Location] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabels(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

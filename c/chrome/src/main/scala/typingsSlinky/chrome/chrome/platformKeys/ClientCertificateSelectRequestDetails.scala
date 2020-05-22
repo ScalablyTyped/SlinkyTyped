@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientCertificateSelectRequestDetails extends js.Object {
   /** List of distinguished names of certificate authorities allowed by the server. Each entry must be a DER-encoded X.509 DistinguishedName. */
-  var certificateAuthorities: js.Array[js.typedarray.ArrayBuffer] = js.native
+  var certificateAuthorities: js.Array[js.typedarray.ArrayBuffer]
   /** This field is a list of the types of certificates requested, sorted in order of the server's preference. Only certificates of a type contained in this list will be retrieved. If certificateTypes is the empty list, however, certificates of any type will be returned. */
-  var certificateTypes: js.Array[String] = js.native
+  var certificateTypes: js.Array[String]
 }
 
 object ClientCertificateSelectRequestDetails {
@@ -18,25 +17,5 @@ object ClientCertificateSelectRequestDetails {
     val __obj = js.Dynamic.literal(certificateAuthorities = certificateAuthorities.asInstanceOf[js.Any], certificateTypes = certificateTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientCertificateSelectRequestDetails]
   }
-  @scala.inline
-  implicit class ClientCertificateSelectRequestDetailsOps[Self <: ClientCertificateSelectRequestDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateAuthorities(value: js.Array[js.typedarray.ArrayBuffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAuthorities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertificateTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

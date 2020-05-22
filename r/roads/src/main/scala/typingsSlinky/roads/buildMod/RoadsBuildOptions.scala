@@ -1,104 +1,38 @@
 package typingsSlinky.roads.buildMod
 
+import typingsSlinky.babelify.mod.BabelifyOptions
+import typingsSlinky.browserify.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+/**
+  * @param  {boolean} [options.use_sourcemaps] Whether or not the build process should include source maps.
+  * @param  {Object} [options.envify] An object to pass to envify. This allows you to change values between your server and client scripts.
+  * @param  {Array} [options.exclude] An array of files that should not be included in the build process.
+  * @param  {Object} [options.babelify] An object containing parameters to pass to the babelify transform
+  */
 trait RoadsBuildOptions extends js.Object {
-  var babelify: js.UndefOr[js.Any] = js.native
-  var envify: js.UndefOr[js.Any] = js.native
-  var exclude: js.UndefOr[js.Any] = js.native
-  var ignore: js.UndefOr[js.Any] = js.native
-  var ignore_missing: js.UndefOr[js.Any] = js.native
-  var use_sourcemaps: js.UndefOr[js.Any] = js.native
+  var babelifyOptions: js.UndefOr[BabelifyOptions] = js.undefined
+  var browserifyOptions: js.UndefOr[Options] = js.undefined
+  var exclude: js.UndefOr[String | js.Array[String]] = js.undefined
+  var ignore: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object RoadsBuildOptions {
   @scala.inline
-  def apply(): RoadsBuildOptions = {
+  def apply(
+    babelifyOptions: BabelifyOptions = null,
+    browserifyOptions: Options = null,
+    exclude: String | js.Array[String] = null,
+    ignore: String | js.Array[String] = null
+  ): RoadsBuildOptions = {
     val __obj = js.Dynamic.literal()
+    if (babelifyOptions != null) __obj.updateDynamic("babelifyOptions")(babelifyOptions.asInstanceOf[js.Any])
+    if (browserifyOptions != null) __obj.updateDynamic("browserifyOptions")(browserifyOptions.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoadsBuildOptions]
   }
-  @scala.inline
-  implicit class RoadsBuildOptionsOps[Self <: RoadsBuildOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBabelify(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("babelify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBabelify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("babelify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvify(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclude(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore_missing(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_missing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore_missing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_missing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse_sourcemaps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use_sourcemaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse_sourcemaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use_sourcemaps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

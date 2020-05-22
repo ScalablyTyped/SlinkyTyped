@@ -78,197 +78,40 @@ trait SchemaDocumentStyleSuggestionState extends js.Object {
 
 object SchemaDocumentStyleSuggestionState {
   @scala.inline
-  def apply(): SchemaDocumentStyleSuggestionState = {
+  def apply(
+    backgroundSuggestionState: SchemaBackgroundSuggestionState = null,
+    defaultFooterIdSuggested: js.UndefOr[Boolean] = js.undefined,
+    defaultHeaderIdSuggested: js.UndefOr[Boolean] = js.undefined,
+    evenPageFooterIdSuggested: js.UndefOr[Boolean] = js.undefined,
+    evenPageHeaderIdSuggested: js.UndefOr[Boolean] = js.undefined,
+    firstPageFooterIdSuggested: js.UndefOr[Boolean] = js.undefined,
+    firstPageHeaderIdSuggested: js.UndefOr[Boolean] = js.undefined,
+    marginBottomSuggested: js.UndefOr[Boolean] = js.undefined,
+    marginLeftSuggested: js.UndefOr[Boolean] = js.undefined,
+    marginRightSuggested: js.UndefOr[Boolean] = js.undefined,
+    marginTopSuggested: js.UndefOr[Boolean] = js.undefined,
+    pageNumberStartSuggested: js.UndefOr[Boolean] = js.undefined,
+    pageSizeSuggestionState: SchemaSizeSuggestionState = null,
+    useEvenPageHeaderFooterSuggested: js.UndefOr[Boolean] = js.undefined,
+    useFirstPageHeaderFooterSuggested: js.UndefOr[Boolean] = js.undefined
+  ): SchemaDocumentStyleSuggestionState = {
     val __obj = js.Dynamic.literal()
+    if (backgroundSuggestionState != null) __obj.updateDynamic("backgroundSuggestionState")(backgroundSuggestionState.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultFooterIdSuggested)) __obj.updateDynamic("defaultFooterIdSuggested")(defaultFooterIdSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultHeaderIdSuggested)) __obj.updateDynamic("defaultHeaderIdSuggested")(defaultHeaderIdSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(evenPageFooterIdSuggested)) __obj.updateDynamic("evenPageFooterIdSuggested")(evenPageFooterIdSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(evenPageHeaderIdSuggested)) __obj.updateDynamic("evenPageHeaderIdSuggested")(evenPageHeaderIdSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstPageFooterIdSuggested)) __obj.updateDynamic("firstPageFooterIdSuggested")(firstPageFooterIdSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstPageHeaderIdSuggested)) __obj.updateDynamic("firstPageHeaderIdSuggested")(firstPageHeaderIdSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginBottomSuggested)) __obj.updateDynamic("marginBottomSuggested")(marginBottomSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginLeftSuggested)) __obj.updateDynamic("marginLeftSuggested")(marginLeftSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginRightSuggested)) __obj.updateDynamic("marginRightSuggested")(marginRightSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginTopSuggested)) __obj.updateDynamic("marginTopSuggested")(marginTopSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageNumberStartSuggested)) __obj.updateDynamic("pageNumberStartSuggested")(pageNumberStartSuggested.get.asInstanceOf[js.Any])
+    if (pageSizeSuggestionState != null) __obj.updateDynamic("pageSizeSuggestionState")(pageSizeSuggestionState.asInstanceOf[js.Any])
+    if (!js.isUndefined(useEvenPageHeaderFooterSuggested)) __obj.updateDynamic("useEvenPageHeaderFooterSuggested")(useEvenPageHeaderFooterSuggested.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useFirstPageHeaderFooterSuggested)) __obj.updateDynamic("useFirstPageHeaderFooterSuggested")(useFirstPageHeaderFooterSuggested.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDocumentStyleSuggestionState]
   }
-  @scala.inline
-  implicit class SchemaDocumentStyleSuggestionStateOps[Self <: SchemaDocumentStyleSuggestionState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundSuggestionState(value: SchemaBackgroundSuggestionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSuggestionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundSuggestionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSuggestionState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultFooterIdSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFooterIdSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultFooterIdSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFooterIdSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultHeaderIdSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeaderIdSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultHeaderIdSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeaderIdSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvenPageFooterIdSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPageFooterIdSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvenPageFooterIdSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPageFooterIdSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvenPageHeaderIdSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPageHeaderIdSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvenPageHeaderIdSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPageHeaderIdSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstPageFooterIdSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageFooterIdSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPageFooterIdSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageFooterIdSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstPageHeaderIdSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageHeaderIdSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPageHeaderIdSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageHeaderIdSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginBottomSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottomSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginBottomSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottomSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginLeftSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeftSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginLeftSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeftSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginRightSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRightSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginRightSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRightSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginTopSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTopSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginTopSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTopSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageNumberStartSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumberStartSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageNumberStartSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumberStartSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSizeSuggestionState(value: SchemaSizeSuggestionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizeSuggestionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSizeSuggestionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizeSuggestionState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEvenPageHeaderFooterSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEvenPageHeaderFooterSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEvenPageHeaderFooterSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEvenPageHeaderFooterSuggested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseFirstPageHeaderFooterSuggested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFirstPageHeaderFooterSuggested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseFirstPageHeaderFooterSuggested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFirstPageHeaderFooterSuggested")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

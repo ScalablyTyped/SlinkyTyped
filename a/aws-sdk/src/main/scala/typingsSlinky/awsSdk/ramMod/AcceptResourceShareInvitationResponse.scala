@@ -18,41 +18,11 @@ trait AcceptResourceShareInvitationResponse extends js.Object {
 
 object AcceptResourceShareInvitationResponse {
   @scala.inline
-  def apply(): AcceptResourceShareInvitationResponse = {
+  def apply(clientToken: String = null, resourceShareInvitation: ResourceShareInvitation = null): AcceptResourceShareInvitationResponse = {
     val __obj = js.Dynamic.literal()
+    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
+    if (resourceShareInvitation != null) __obj.updateDynamic("resourceShareInvitation")(resourceShareInvitation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcceptResourceShareInvitationResponse]
   }
-  @scala.inline
-  implicit class AcceptResourceShareInvitationResponseOps[Self <: AcceptResourceShareInvitationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceShareInvitation(value: ResourceShareInvitation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareInvitation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceShareInvitation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareInvitation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

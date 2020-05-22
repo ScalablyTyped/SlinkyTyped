@@ -7,7 +7,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.alternate
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
-import typingsSlinky.antd.timelineMod.default
 import typingsSlinky.antd.timelineTimelineMod.TimelineProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -22,7 +21,7 @@ object Timeline {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

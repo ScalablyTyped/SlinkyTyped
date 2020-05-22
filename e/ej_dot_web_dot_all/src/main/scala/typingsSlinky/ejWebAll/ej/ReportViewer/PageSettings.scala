@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PageSettings extends js.Object {
   /** Specifies the print layout orientation.
     * @Default {null}
     */
-  var orientation: js.UndefOr[Orientation | String] = js.native
+  var orientation: js.UndefOr[Orientation | String] = js.undefined
   /** Specifies the paper size of print layout.
     * @Default {null}
     */
-  var paperSize: js.UndefOr[PaperSize | String] = js.native
+  var paperSize: js.UndefOr[PaperSize | String] = js.undefined
 }
 
 object PageSettings {
   @scala.inline
-  def apply(): PageSettings = {
+  def apply(orientation: Orientation | String = null, paperSize: PaperSize | String = null): PageSettings = {
     val __obj = js.Dynamic.literal()
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (paperSize != null) __obj.updateDynamic("paperSize")(paperSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageSettings]
   }
-  @scala.inline
-  implicit class PageSettingsOps[Self <: PageSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrientation(value: Orientation | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperSize(value: PaperSize | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

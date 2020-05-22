@@ -7,7 +7,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.SimpleOrientationSensor")
 @js.native
 class SimpleOrientationSensor ()
-  extends typingsSlinky.winrt.Windows.Devices.Sensors.SimpleOrientationSensor
+  extends typingsSlinky.winrt.Windows.Devices.Sensors.SimpleOrientationSensor {
+  /* CompleteClass */
+  override var onorientationchanged: js.Any = js.native
+  /* CompleteClass */
+  override def getCurrentOrientation(): typingsSlinky.winrt.Windows.Devices.Sensors.SimpleOrientation = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Devices.Sensors.SimpleOrientationSensor")

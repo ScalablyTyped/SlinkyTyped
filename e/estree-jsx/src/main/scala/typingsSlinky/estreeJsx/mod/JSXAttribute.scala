@@ -1,62 +1,40 @@
 package typingsSlinky.estreeJsx.mod
 
 import typingsSlinky.estree.mod.BaseNode
+import typingsSlinky.estree.mod.Comment
 import typingsSlinky.estree.mod.Literal
+import typingsSlinky.estree.mod.SourceLocation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JSXAttribute
   extends BaseNode
-     with Node {
-  var name: JSXIdentifier | JSXNamespacedName = js.native
+     with _Node {
+  var name: JSXIdentifier | JSXNamespacedName
   @JSName("type")
-  var type_JSXAttribute: typingsSlinky.estreeJsx.estreeJsxStrings.JSXAttribute = js.native
-  var value: Literal | JSXExpressionContainer | JSXElement | JSXFragment | Null = js.native
+  var type_JSXAttribute: typingsSlinky.estreeJsx.estreeJsxStrings.JSXAttribute
+  var value: Literal | JSXExpressionContainer | JSXElement | JSXFragment | Null
 }
 
 object JSXAttribute {
   @scala.inline
   def apply(
     name: JSXIdentifier | JSXNamespacedName,
-    `type`: typingsSlinky.estreeJsx.estreeJsxStrings.JSXAttribute
+    `type`: typingsSlinky.estreeJsx.estreeJsxStrings.JSXAttribute,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null,
+    value: Literal | JSXExpressionContainer | JSXElement | JSXFragment = null
   ): JSXAttribute = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSXAttribute]
   }
-  @scala.inline
-  implicit class JSXAttributeOps[Self <: JSXAttribute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: JSXIdentifier | JSXNamespacedName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.estreeJsx.estreeJsxStrings.JSXAttribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Literal | JSXExpressionContainer | JSXElement | JSXFragment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.antd.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.ConsumerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

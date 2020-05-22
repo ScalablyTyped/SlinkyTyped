@@ -18,41 +18,11 @@ trait AccountSharingInfo extends js.Object {
 
 object AccountSharingInfo {
   @scala.inline
-  def apply(): AccountSharingInfo = {
+  def apply(AccountId: AccountId = null, SharedDocumentVersion: SharedDocumentVersion = null): AccountSharingInfo = {
     val __obj = js.Dynamic.literal()
+    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
+    if (SharedDocumentVersion != null) __obj.updateDynamic("SharedDocumentVersion")(SharedDocumentVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountSharingInfo]
   }
-  @scala.inline
-  implicit class AccountSharingInfoOps[Self <: AccountSharingInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharedDocumentVersion(value: SharedDocumentVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDocumentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharedDocumentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDocumentVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

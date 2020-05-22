@@ -1,93 +1,51 @@
 package typingsSlinky.antdMobile.checkboxItemMod
 
+import slinky.core.TagMod
 import typingsSlinky.antdMobile.checkboxCheckboxMod.CheckboxProps
 import typingsSlinky.antdMobile.checkboxPropsTypeMod.CheckboxItemPropsType
+import typingsSlinky.antdMobile.checkboxPropsTypeMod.OnChangeParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CheckboxItemProps extends CheckboxItemPropsType {
-  var checkboxProps: js.UndefOr[CheckboxProps] = js.native
-  var className: js.UndefOr[String] = js.native
-  var listPrefixCls: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var wrapLabel: js.UndefOr[Boolean] = js.native
+  var checkboxProps: js.UndefOr[CheckboxProps] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var listPrefixCls: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var wrapLabel: js.UndefOr[Boolean] = js.undefined
 }
 
 object CheckboxItemProps {
   @scala.inline
-  def apply(): CheckboxItemProps = {
+  def apply(
+    checkboxProps: CheckboxProps = null,
+    checked: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    extra: TagMod[Any] = null,
+    listPrefixCls: String = null,
+    name: String = null,
+    onChange: /* params */ OnChangeParams => Unit = null,
+    onClick: /* e */ js.UndefOr[js.Any] => Unit = null,
+    prefixCls: String = null,
+    wrapLabel: js.UndefOr[Boolean] = js.undefined
+  ): CheckboxItemProps = {
     val __obj = js.Dynamic.literal()
+    if (checkboxProps != null) __obj.updateDynamic("checkboxProps")(checkboxProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (listPrefixCls != null) __obj.updateDynamic("listPrefixCls")(listPrefixCls.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrapLabel)) __obj.updateDynamic("wrapLabel")(wrapLabel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckboxItemProps]
   }
-  @scala.inline
-  implicit class CheckboxItemPropsOps[Self <: CheckboxItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckboxProps(value: CheckboxProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckboxProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listPrefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listPrefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapLabel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapLabel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

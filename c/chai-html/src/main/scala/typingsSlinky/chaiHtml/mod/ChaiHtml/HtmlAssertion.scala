@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HtmlAssertion extends Assertion {
-  var ignoringComments: Assertion = js.native
+  var ignoringComments: Assertion
 }
 
 object HtmlAssertion {
@@ -16,19 +15,5 @@ object HtmlAssertion {
     val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any], ignoringComments = ignoringComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[HtmlAssertion]
   }
-  @scala.inline
-  implicit class HtmlAssertionOps[Self <: HtmlAssertion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoringComments(value: Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoringComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

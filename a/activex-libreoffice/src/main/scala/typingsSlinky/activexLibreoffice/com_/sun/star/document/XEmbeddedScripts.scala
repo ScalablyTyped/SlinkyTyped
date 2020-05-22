@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * is supported by OfficeDocuments which allow to embed scripts
   * @since OOo 2.4
   */
-@js.native
 trait XEmbeddedScripts extends js.Object {
   /**
     * determines whether executing macros from this document is allowed.
@@ -18,11 +17,11 @@ trait XEmbeddedScripts extends js.Object {
     * location in relation to the trusted location, and the like.
     * @see MacroExecMode
     */
-  var AllowMacroExecution: Boolean = js.native
+  var AllowMacroExecution: Boolean
   /** is the container of `StarBasic` macro libraries contained in the document */
-  var BasicLibraries: XStorageBasedLibraryContainer = js.native
+  var BasicLibraries: XStorageBasedLibraryContainer
   /** is the container of dialogs libraries contained in the document */
-  var DialogLibraries: XStorageBasedLibraryContainer = js.native
+  var DialogLibraries: XStorageBasedLibraryContainer
 }
 
 object XEmbeddedScripts {
@@ -35,31 +34,5 @@ object XEmbeddedScripts {
     val __obj = js.Dynamic.literal(AllowMacroExecution = AllowMacroExecution.asInstanceOf[js.Any], BasicLibraries = BasicLibraries.asInstanceOf[js.Any], DialogLibraries = DialogLibraries.asInstanceOf[js.Any])
     __obj.asInstanceOf[XEmbeddedScripts]
   }
-  @scala.inline
-  implicit class XEmbeddedScriptsOps[Self <: XEmbeddedScripts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowMacroExecution(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowMacroExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasicLibraries(value: XStorageBasedLibraryContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BasicLibraries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDialogLibraries(value: XStorageBasedLibraryContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DialogLibraries")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

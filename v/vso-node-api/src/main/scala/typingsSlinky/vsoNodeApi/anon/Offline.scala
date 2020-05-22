@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Offline extends js.Object {
-  var offline: scala.Double = js.native
-  var online: scala.Double = js.native
+  var offline: scala.Double
+  var online: scala.Double
 }
 
 object Offline {
@@ -16,25 +15,5 @@ object Offline {
     val __obj = js.Dynamic.literal(offline = offline.asInstanceOf[js.Any], online = online.asInstanceOf[js.Any])
     __obj.asInstanceOf[Offline]
   }
-  @scala.inline
-  implicit class OfflineOps[Self <: Offline] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOffline(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnline(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("online")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

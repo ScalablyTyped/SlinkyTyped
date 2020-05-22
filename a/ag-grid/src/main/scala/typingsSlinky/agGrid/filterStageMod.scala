@@ -1,6 +1,7 @@
 package typingsSlinky.agGrid
 
 import typingsSlinky.agGrid.iRowNodeStageMod.IRowNodeStage
+import typingsSlinky.agGrid.iRowNodeStageMod.StageExecuteParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,8 @@ object filterStageMod extends js.Object {
     var filterService: js.Any = js.native
     var gridOptionsWrapper: js.Any = js.native
     var selectableService: js.Any = js.native
+    /* CompleteClass */
+    override def execute(params: StageExecuteParams): js.Any = js.native
   }
   
 }

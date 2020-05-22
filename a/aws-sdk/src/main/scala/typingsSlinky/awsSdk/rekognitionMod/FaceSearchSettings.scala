@@ -18,41 +18,11 @@ trait FaceSearchSettings extends js.Object {
 
 object FaceSearchSettings {
   @scala.inline
-  def apply(): FaceSearchSettings = {
+  def apply(CollectionId: CollectionId = null, FaceMatchThreshold: js.UndefOr[Percent] = js.undefined): FaceSearchSettings = {
     val __obj = js.Dynamic.literal()
+    if (CollectionId != null) __obj.updateDynamic("CollectionId")(CollectionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(FaceMatchThreshold)) __obj.updateDynamic("FaceMatchThreshold")(FaceMatchThreshold.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaceSearchSettings]
   }
-  @scala.inline
-  implicit class FaceSearchSettingsOps[Self <: FaceSearchSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollectionId(value: CollectionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CollectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CollectionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaceMatchThreshold(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceMatchThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceMatchThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceMatchThreshold")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

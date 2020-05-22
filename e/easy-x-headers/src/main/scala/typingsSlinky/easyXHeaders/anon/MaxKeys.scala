@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MaxKeys extends js.Object {
-  var maxKeys: js.UndefOr[Double] = js.native
+  var maxKeys: js.UndefOr[Double] = js.undefined
 }
 
 object MaxKeys {
   @scala.inline
-  def apply(): MaxKeys = {
+  def apply(maxKeys: js.UndefOr[Double] = js.undefined): MaxKeys = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxKeys)) __obj.updateDynamic("maxKeys")(maxKeys.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaxKeys]
   }
-  @scala.inline
-  implicit class MaxKeysOps[Self <: MaxKeys] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxKeys(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

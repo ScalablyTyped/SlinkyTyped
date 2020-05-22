@@ -4,74 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledMessageAttributeValue extends MessageAttributeValue {
   /**
     * <p>Not implemented. Reserved for future use.</p>
     */
   @JSName("BinaryListValues")
-  var BinaryListValues_UnmarshalledMessageAttributeValue: js.UndefOr[js.Array[js.typedarray.Uint8Array]] = js.native
+  var BinaryListValues_UnmarshalledMessageAttributeValue: js.UndefOr[js.Array[js.typedarray.Uint8Array]] = js.undefined
   /**
     * <p>Binary type attributes can store any binary data, such as compressed data, encrypted data, or images.</p>
     */
   @JSName("BinaryValue")
-  var BinaryValue_UnmarshalledMessageAttributeValue: js.UndefOr[js.typedarray.Uint8Array] = js.native
+  var BinaryValue_UnmarshalledMessageAttributeValue: js.UndefOr[js.typedarray.Uint8Array] = js.undefined
   /**
     * <p>Not implemented. Reserved for future use.</p>
     */
   @JSName("StringListValues")
-  var StringListValues_UnmarshalledMessageAttributeValue: js.UndefOr[js.Array[String]] = js.native
+  var StringListValues_UnmarshalledMessageAttributeValue: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object UnmarshalledMessageAttributeValue {
   @scala.inline
-  def apply(DataType: String): UnmarshalledMessageAttributeValue = {
+  def apply(
+    DataType: String,
+    BinaryListValues: js.Array[js.typedarray.Uint8Array] = null,
+    BinaryValue: js.typedarray.Uint8Array = null,
+    StringListValues: js.Array[String] = null,
+    StringValue: String = null
+  ): UnmarshalledMessageAttributeValue = {
     val __obj = js.Dynamic.literal(DataType = DataType.asInstanceOf[js.Any])
+    if (BinaryListValues != null) __obj.updateDynamic("BinaryListValues")(BinaryListValues.asInstanceOf[js.Any])
+    if (BinaryValue != null) __obj.updateDynamic("BinaryValue")(BinaryValue.asInstanceOf[js.Any])
+    if (StringListValues != null) __obj.updateDynamic("StringListValues")(StringListValues.asInstanceOf[js.Any])
+    if (StringValue != null) __obj.updateDynamic("StringValue")(StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledMessageAttributeValue]
   }
-  @scala.inline
-  implicit class UnmarshalledMessageAttributeValueOps[Self <: UnmarshalledMessageAttributeValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinaryListValues(value: js.Array[js.typedarray.Uint8Array]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryListValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryListValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryListValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinaryValue(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringListValues(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringListValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

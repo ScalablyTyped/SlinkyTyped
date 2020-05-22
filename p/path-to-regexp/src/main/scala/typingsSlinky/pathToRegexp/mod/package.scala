@@ -10,9 +10,11 @@ package object mod {
     /* options */ js.UndefOr[typingsSlinky.pathToRegexp.mod.MatchFunctionOptions], 
     typingsSlinky.pathToRegexp.mod.Match_[P]
   ]
+  type Path = java.lang.String | js.RegExp | (js.Array[java.lang.String | js.RegExp])
   type PathFunction[P /* <: js.Object */] = js.Function2[
     /* data */ js.UndefOr[P], 
     /* options */ js.UndefOr[typingsSlinky.pathToRegexp.mod.PathFunctionOptions], 
     java.lang.String
   ]
+  type Token = java.lang.String | typingsSlinky.pathToRegexp.mod.Key
 }

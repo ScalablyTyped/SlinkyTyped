@@ -1,6 +1,6 @@
 package typingsSlinky.tsutils.anon
 
-import typingsSlinky.tsutils.utilUtilMod.ImportLike
+import typingsSlinky.tsutils.utilUtilMod._ImportLike
 import typingsSlinky.typescript.mod.Decorator
 import typingsSlinky.typescript.mod.Expression
 import typingsSlinky.typescript.mod.LeftHandSideExpression
@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined typescript.typescript.CallExpression & {  expression  :typescript.typescript.Token<typescript.typescript.SyntaxKind.ImportKeyword> | typescript.typescript.Identifier & {  text  :'require'},   arguments  :[typescript.typescript.Expression]} */
 @js.native
-trait CallExpressionexpressionT extends ImportLike {
+trait CallExpressionexpressionT extends _ImportLike {
   var _declarationBrand: js.Any = js.native
   var _expressionBrand: js.Any = js.native
   var _leftHandSideExpressionBrand: js.Any = js.native

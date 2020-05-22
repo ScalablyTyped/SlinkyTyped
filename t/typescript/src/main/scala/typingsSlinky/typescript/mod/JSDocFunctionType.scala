@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.typescript.mod.JSDocType because var conflicts: decorators, end, flags, kind, modifiers, parent, pos. Inlined _jsDocTypeBrand */ @js.native
 trait JSDocFunctionType
   extends SignatureDeclarationBase
-     with HasJSDoc
-     with SignatureDeclaration {
+     with SignatureDeclaration
+     with _HasJSDoc {
   var _jsDocTypeBrand: js.Any = js.native
   var _typeNodeBrand: js.Any = js.native
   @JSName("kind")

@@ -27,41 +27,11 @@ trait SchemaAccountYouTubeChannelLink extends js.Object {
 
 object SchemaAccountYouTubeChannelLink {
   @scala.inline
-  def apply(): SchemaAccountYouTubeChannelLink = {
+  def apply(channelId: String = null, status: String = null): SchemaAccountYouTubeChannelLink = {
     val __obj = js.Dynamic.literal()
+    if (channelId != null) __obj.updateDynamic("channelId")(channelId.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountYouTubeChannelLink]
   }
-  @scala.inline
-  implicit class SchemaAccountYouTubeChannelLinkOps[Self <: SchemaAccountYouTubeChannelLink] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

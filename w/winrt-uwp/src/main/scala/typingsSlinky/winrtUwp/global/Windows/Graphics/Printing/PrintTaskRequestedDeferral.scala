@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Graphics.Printing.PrintTaskRequestedDeferral")
 @js.native
 abstract class PrintTaskRequestedDeferral ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintTaskRequestedDeferral
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintTaskRequestedDeferral {
+  /** Indicates when the deferral for the print task request is over. */
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

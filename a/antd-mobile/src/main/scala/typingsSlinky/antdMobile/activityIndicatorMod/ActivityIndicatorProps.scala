@@ -1,53 +1,35 @@
 package typingsSlinky.antdMobile.activityIndicatorMod
 
 import typingsSlinky.antdMobile.activityIndicatorPropsTypeMod.ActivityIndicatorPropTypes
+import typingsSlinky.antdMobile.antdMobileStrings.large
+import typingsSlinky.antdMobile.antdMobileStrings.small
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActivityIndicatorProps extends ActivityIndicatorPropTypes {
-  var className: js.UndefOr[String] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
 }
 
 object ActivityIndicatorProps {
   @scala.inline
-  def apply(): ActivityIndicatorProps = {
+  def apply(
+    animating: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    prefixCls: String = null,
+    size: large | small = null,
+    text: String = null,
+    toast: js.UndefOr[Boolean] = js.undefined
+  ): ActivityIndicatorProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animating)) __obj.updateDynamic("animating")(animating.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(toast)) __obj.updateDynamic("toast")(toast.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityIndicatorProps]
   }
-  @scala.inline
-  implicit class ActivityIndicatorPropsOps[Self <: ActivityIndicatorProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

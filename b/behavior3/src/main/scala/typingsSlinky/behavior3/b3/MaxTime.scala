@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * status.
   *
   */
-@js.native
 trait MaxTime extends BaseNode
 
 object MaxTime {

@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Match extends js.Object {
   /** An array holding all of the captures (full match + capturing groups) */
-  var captureIndices: js.Array[CaptureIndex] = js.native
+  var captureIndices: js.Array[CaptureIndex]
   /** The index of the best pattern match */
-  var index: Double = js.native
+  var index: Double
 }
 
 object Match {
@@ -18,25 +17,5 @@ object Match {
     val __obj = js.Dynamic.literal(captureIndices = captureIndices.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])
     __obj.asInstanceOf[Match]
   }
-  @scala.inline
-  implicit class MatchOps[Self <: Match] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptureIndices(value: js.Array[CaptureIndex]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

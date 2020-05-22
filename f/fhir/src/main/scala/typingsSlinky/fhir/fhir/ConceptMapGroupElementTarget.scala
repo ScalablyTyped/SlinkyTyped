@@ -7,183 +7,87 @@ import scala.scalajs.js.annotation._
 /**
   * Concept in target system for element
   */
-@js.native
 trait ConceptMapGroupElementTarget extends BackboneElement {
   /**
     * Contains extended information for property 'code'.
     */
-  var _code: js.UndefOr[Element] = js.native
+  var _code: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'comment'.
     */
-  var _comment: js.UndefOr[Element] = js.native
+  var _comment: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'display'.
     */
-  var _display: js.UndefOr[Element] = js.native
+  var _display: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'equivalence'.
     */
-  var _equivalence: js.UndefOr[Element] = js.native
+  var _equivalence: js.UndefOr[Element] = js.undefined
   /**
     * Code that identifies the target element
     */
-  var code: js.UndefOr[typingsSlinky.fhir.fhir.code] = js.native
+  var code: js.UndefOr[typingsSlinky.fhir.fhir.code] = js.undefined
   /**
     * Description of status/issues in mapping
     */
-  var comment: js.UndefOr[String] = js.native
+  var comment: js.UndefOr[String] = js.undefined
   /**
     * Other elements required for this mapping (from context)
     */
-  var dependsOn: js.UndefOr[js.Array[ConceptMapGroupElementTargetDependsOn]] = js.native
+  var dependsOn: js.UndefOr[js.Array[ConceptMapGroupElementTargetDependsOn]] = js.undefined
   /**
     * Display for the code
     */
-  var display: js.UndefOr[String] = js.native
+  var display: js.UndefOr[String] = js.undefined
   /**
     * relatedto | equivalent | equal | wider | subsumes | narrower | specializes | inexact | unmatched | disjoint
     */
-  var equivalence: js.UndefOr[code] = js.native
+  var equivalence: js.UndefOr[code] = js.undefined
   /**
     * Other concepts that this mapping also produces
     */
-  var product: js.UndefOr[js.Array[ConceptMapGroupElementTargetDependsOn]] = js.native
+  var product: js.UndefOr[js.Array[ConceptMapGroupElementTargetDependsOn]] = js.undefined
 }
 
 object ConceptMapGroupElementTarget {
   @scala.inline
-  def apply(): ConceptMapGroupElementTarget = {
+  def apply(
+    _code: Element = null,
+    _comment: Element = null,
+    _display: Element = null,
+    _equivalence: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    code: code = null,
+    comment: String = null,
+    dependsOn: js.Array[ConceptMapGroupElementTargetDependsOn] = null,
+    display: String = null,
+    equivalence: code = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    product: js.Array[ConceptMapGroupElementTargetDependsOn] = null
+  ): ConceptMapGroupElementTarget = {
     val __obj = js.Dynamic.literal()
+    if (_code != null) __obj.updateDynamic("_code")(_code.asInstanceOf[js.Any])
+    if (_comment != null) __obj.updateDynamic("_comment")(_comment.asInstanceOf[js.Any])
+    if (_display != null) __obj.updateDynamic("_display")(_display.asInstanceOf[js.Any])
+    if (_equivalence != null) __obj.updateDynamic("_equivalence")(_equivalence.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (dependsOn != null) __obj.updateDynamic("dependsOn")(dependsOn.asInstanceOf[js.Any])
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    if (equivalence != null) __obj.updateDynamic("equivalence")(equivalence.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConceptMapGroupElementTarget]
   }
-  @scala.inline
-  implicit class ConceptMapGroupElementTargetOps[Self <: ConceptMapGroupElementTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_code(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_comment(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_comment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_display(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_display: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_equivalence(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_equivalence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_equivalence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_equivalence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCode(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependsOn(value: js.Array[ConceptMapGroupElementTargetDependsOn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependsOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependsOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependsOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEquivalence(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equivalence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEquivalence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equivalence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduct(value: js.Array[ConceptMapGroupElementTargetDependsOn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

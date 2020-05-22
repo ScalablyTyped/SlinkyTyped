@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XLCMenu extends js.Object {
   /** This method is used to dynamically add items in the context menu.
     * @param {ej.Spreadsheet.ContextMenuType} Specifies the context menu type in which the item to be inserted.
@@ -13,43 +12,43 @@ trait XLCMenu extends js.Object {
     * @param {number} Specifies the item index
     * @returns {void}
     */
-  def addItem(target: ContextMenuType, itemColl: js.Array[_], operation: String, itemIdx: Double): Unit = js.native
+  def addItem(target: ContextMenuType, itemColl: js.Array[_], operation: String, itemIdx: Double): Unit
   /** This method is used to change data source in the context menu.
     * @param {string} Specifies the context menu type to bind the data source.
     * @param {any[]} Pass the data source to be binded
     * @returns {void}
     */
-  def changeDataSource(target: String, data: js.Array[_]): Unit = js.native
+  def changeDataSource(target: String, data: js.Array[_]): Unit
   /** This method is used to disable the items in the context menu.
     * @param {string} Specifies the context menu type in which the item to be disabled.
     * @param {any[]} Specifies the Menu Item id collection to be disabled
     * @returns {void}
     */
-  def disableItem(target: String, idxColl: js.Array[_]): Unit = js.native
+  def disableItem(target: String, idxColl: js.Array[_]): Unit
   /** This method is used to enable the items in the context menu.
     * @param {string} Specifies the context menu type in which the item to be enabled.
     * @param {any[]} Specifies the Menu Item id collection to be enabled
     * @returns {void}
     */
-  def enableItem(target: String, idxColl: js.Array[_]): Unit = js.native
+  def enableItem(target: String, idxColl: js.Array[_]): Unit
   /** This method is used to hide the items in the context menu.
     * @param {string} Specifies the context menu type in which the item to be hides.
     * @param {any[]} Specifies the Menu Item id collection to be hides
     * @returns {void}
     */
-  def hideItem(cMenuType: String, idxColl: js.Array[_]): Unit = js.native
+  def hideItem(cMenuType: String, idxColl: js.Array[_]): Unit
   /** This method is used to remove the items in the context menu.
     * @param {string} Specifies the context menu type in which the item to be removed.
     * @param {any[]} Specifies the Menu Item id collection to be removed
     * @returns {void}
     */
-  def removeItem(target: String, idxColl: js.Array[_]): Unit = js.native
+  def removeItem(target: String, idxColl: js.Array[_]): Unit
   /** This method is used to show the items in the context menu.
     * @param {string} Specifies the context menu type in which the item to be shown.
     * @param {any[]} Specifies the Menu Item id collection to be shown
     * @returns {void}
     */
-  def showItem(cMenuType: String, idxColl: js.Array[_]): Unit = js.native
+  def showItem(cMenuType: String, idxColl: js.Array[_]): Unit
 }
 
 object XLCMenu {
@@ -66,55 +65,5 @@ object XLCMenu {
     val __obj = js.Dynamic.literal(addItem = js.Any.fromFunction4(addItem), changeDataSource = js.Any.fromFunction2(changeDataSource), disableItem = js.Any.fromFunction2(disableItem), enableItem = js.Any.fromFunction2(enableItem), hideItem = js.Any.fromFunction2(hideItem), removeItem = js.Any.fromFunction2(removeItem), showItem = js.Any.fromFunction2(showItem))
     __obj.asInstanceOf[XLCMenu]
   }
-  @scala.inline
-  implicit class XLCMenuOps[Self <: XLCMenu] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddItem(value: (ContextMenuType, js.Array[_], String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addItem")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withChangeDataSource(value: (String, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeDataSource")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDisableItem(value: (String, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableItem")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withEnableItem(value: (String, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableItem")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withHideItem(value: (String, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideItem")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveItem(value: (String, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeItem")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withShowItem(value: (String, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showItem")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

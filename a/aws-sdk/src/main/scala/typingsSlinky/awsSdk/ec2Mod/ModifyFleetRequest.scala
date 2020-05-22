@@ -26,53 +26,16 @@ trait ModifyFleetRequest extends js.Object {
 
 object ModifyFleetRequest {
   @scala.inline
-  def apply(FleetId: FleetId, TargetCapacitySpecification: TargetCapacitySpecificationRequest): ModifyFleetRequest = {
+  def apply(
+    FleetId: FleetId,
+    TargetCapacitySpecification: TargetCapacitySpecificationRequest,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    ExcessCapacityTerminationPolicy: FleetExcessCapacityTerminationPolicy = null
+  ): ModifyFleetRequest = {
     val __obj = js.Dynamic.literal(FleetId = FleetId.asInstanceOf[js.Any], TargetCapacitySpecification = TargetCapacitySpecification.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (ExcessCapacityTerminationPolicy != null) __obj.updateDynamic("ExcessCapacityTerminationPolicy")(ExcessCapacityTerminationPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyFleetRequest]
   }
-  @scala.inline
-  implicit class ModifyFleetRequestOps[Self <: ModifyFleetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFleetId(value: FleetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetCapacitySpecification(value: TargetCapacitySpecificationRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetCapacitySpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcessCapacityTerminationPolicy(value: FleetExcessCapacityTerminationPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcessCapacityTerminationPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcessCapacityTerminationPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcessCapacityTerminationPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

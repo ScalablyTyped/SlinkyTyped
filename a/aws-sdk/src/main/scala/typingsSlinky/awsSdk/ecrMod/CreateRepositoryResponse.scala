@@ -14,29 +14,10 @@ trait CreateRepositoryResponse extends js.Object {
 
 object CreateRepositoryResponse {
   @scala.inline
-  def apply(): CreateRepositoryResponse = {
+  def apply(repository: Repository = null): CreateRepositoryResponse = {
     val __obj = js.Dynamic.literal()
+    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRepositoryResponse]
   }
-  @scala.inline
-  implicit class CreateRepositoryResponseOps[Self <: CreateRepositoryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRepository(value: Repository): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepository: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

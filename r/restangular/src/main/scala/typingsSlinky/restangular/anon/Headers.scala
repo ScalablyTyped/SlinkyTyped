@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Headers extends js.Object {
-  var element: js.Any = js.native
-  var headers: js.Any = js.native
-  var httpConfig: IRequestShortcutConfig = js.native
-  var params: js.Any = js.native
+  var element: js.Any
+  var headers: js.Any
+  var httpConfig: IRequestShortcutConfig
+  var params: js.Any
 }
 
 object Headers {
@@ -19,37 +18,5 @@ object Headers {
     val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], httpConfig = httpConfig.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
     __obj.asInstanceOf[Headers]
   }
-  @scala.inline
-  implicit class HeadersOps[Self <: Headers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHttpConfig(value: IRequestShortcutConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

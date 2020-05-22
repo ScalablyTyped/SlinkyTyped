@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * Fired when the device orientation changes.
-	 */
-@js.native
+  * Fired when the device orientation changes.
+  */
 trait GestureOrientationchangeEvent extends GestureBaseEvent {
   /**
-  		 * Orientation of the device.
-  		 */
-  var orientation: Double = js.native
+    * Orientation of the device.
+    */
+  var orientation: Double
 }
 
 object GestureOrientationchangeEvent {
@@ -21,19 +20,5 @@ object GestureOrientationchangeEvent {
     val __obj = js.Dynamic.literal(orientation = orientation.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[GestureOrientationchangeEvent]
   }
-  @scala.inline
-  implicit class GestureOrientationchangeEventOps[Self <: GestureOrientationchangeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrientation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

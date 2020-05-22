@@ -7,12 +7,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to access contents via a unique ID. */
-@js.native
 trait XUniqueIDAccess extends XInterface {
   /** @returns the element with the specified unique ID. */
-  def getByUniqueID(ID: String): js.Any = js.native
+  def getByUniqueID(ID: String): js.Any
   /** removes the element with the specified unique ID from this container. */
-  def removeByUniqueID(ID: String): Unit = js.native
+  def removeByUniqueID(ID: String): Unit
 }
 
 object XUniqueIDAccess {
@@ -27,25 +26,5 @@ object XUniqueIDAccess {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getByUniqueID = js.Any.fromFunction1(getByUniqueID), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByUniqueID = js.Any.fromFunction1(removeByUniqueID))
     __obj.asInstanceOf[XUniqueIDAccess]
   }
-  @scala.inline
-  implicit class XUniqueIDAccessOps[Self <: XUniqueIDAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetByUniqueID(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getByUniqueID")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByUniqueID(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByUniqueID")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

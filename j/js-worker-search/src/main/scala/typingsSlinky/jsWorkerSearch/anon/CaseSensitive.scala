@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CaseSensitive extends js.Object {
-  var caseSensitive: js.UndefOr[Boolean] = js.native
-  var indexMode: js.UndefOr[INDEX_MODES] = js.native
-  var matchAnyToken: js.UndefOr[Boolean] = js.native
-  var tokenizePattern: js.UndefOr[js.RegExp] = js.native
+  var caseSensitive: js.UndefOr[Boolean] = js.undefined
+  var indexMode: js.UndefOr[INDEX_MODES] = js.undefined
+  var matchAnyToken: js.UndefOr[Boolean] = js.undefined
+  var tokenizePattern: js.UndefOr[js.RegExp] = js.undefined
 }
 
 object CaseSensitive {
   @scala.inline
-  def apply(): CaseSensitive = {
+  def apply(
+    caseSensitive: js.UndefOr[Boolean] = js.undefined,
+    indexMode: INDEX_MODES = null,
+    matchAnyToken: js.UndefOr[Boolean] = js.undefined,
+    tokenizePattern: js.RegExp = null
+  ): CaseSensitive = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.get.asInstanceOf[js.Any])
+    if (indexMode != null) __obj.updateDynamic("indexMode")(indexMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchAnyToken)) __obj.updateDynamic("matchAnyToken")(matchAnyToken.get.asInstanceOf[js.Any])
+    if (tokenizePattern != null) __obj.updateDynamic("tokenizePattern")(tokenizePattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaseSensitive]
   }
-  @scala.inline
-  implicit class CaseSensitiveOps[Self <: CaseSensitive] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaseSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaseSensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexMode(value: INDEX_MODES): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchAnyToken(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchAnyToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchAnyToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchAnyToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenizePattern(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenizePattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenizePattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenizePattern")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,13 +1,13 @@
 package typingsSlinky.sugar
 
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.sugar.sugarjs.NativeConstructor
+import typingsSlinky.sugar.sugarjs._NativeConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ArrayConstructor extends NativeConstructor {
+trait ArrayConstructor extends _NativeConstructor {
   def construct[T](n: Double, indexMapFn: js.Function1[/* i */ Double, T]): Array[T] = js.native
   def create[T](): Array[T] = js.native
   def create[T](obj: Double): Array[T] = js.native

@@ -18,41 +18,11 @@ trait ResourceCount extends js.Object {
 
 object ResourceCount {
   @scala.inline
-  def apply(): ResourceCount = {
+  def apply(count: js.UndefOr[Long] = js.undefined, resourceType: ResourceType = null): ResourceCount = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceCount]
   }
-  @scala.inline
-  implicit class ResourceCountOps[Self <: ResourceCount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

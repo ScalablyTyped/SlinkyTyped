@@ -4,41 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AttributionViewModelProperties extends js.Object {
   /**
     * The view from which the view model will operate.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attribution-AttributionViewModel.html#view)
     */
-  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.undefined
 }
 
 object AttributionViewModelProperties {
   @scala.inline
-  def apply(): AttributionViewModelProperties = {
+  def apply(view: MapViewProperties | SceneViewProperties = null): AttributionViewModelProperties = {
     val __obj = js.Dynamic.literal()
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributionViewModelProperties]
   }
-  @scala.inline
-  implicit class AttributionViewModelPropertiesOps[Self <: AttributionViewModelProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withView(value: MapViewProperties | SceneViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

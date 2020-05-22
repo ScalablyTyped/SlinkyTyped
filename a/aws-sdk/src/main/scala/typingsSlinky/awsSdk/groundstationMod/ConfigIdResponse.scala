@@ -22,53 +22,12 @@ trait ConfigIdResponse extends js.Object {
 
 object ConfigIdResponse {
   @scala.inline
-  def apply(): ConfigIdResponse = {
+  def apply(configArn: ConfigArn = null, configId: String = null, configType: ConfigCapabilityType = null): ConfigIdResponse = {
     val __obj = js.Dynamic.literal()
+    if (configArn != null) __obj.updateDynamic("configArn")(configArn.asInstanceOf[js.Any])
+    if (configId != null) __obj.updateDynamic("configId")(configId.asInstanceOf[js.Any])
+    if (configType != null) __obj.updateDynamic("configType")(configType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigIdResponse]
   }
-  @scala.inline
-  implicit class ConfigIdResponseOps[Self <: ConfigIdResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigArn(value: ConfigArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigType(value: ConfigCapabilityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

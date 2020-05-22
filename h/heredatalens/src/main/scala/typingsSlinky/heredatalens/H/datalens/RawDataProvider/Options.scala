@@ -8,12 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /** Defines how the input data is mapped to an array of GeoJSON features */
-  var dataToFeatures: js.UndefOr[js.Function1[/* obj */ js.Any, js.Array[Feature]]] = js.native
+  var dataToFeatures: js.UndefOr[js.Function1[/* obj */ js.Any, js.Array[Feature]]] = js.undefined
   /** The data url to fetch */
-  var dataUrl: js.UndefOr[String] = js.native
+  var dataUrl: js.UndefOr[String] = js.undefined
   /** Defines how GeoJSON features on a tile should be mapped to data rows, which are inputs to layers such as ObjectLayer and HeatmapLayer */
   var featuresToRows: js.UndefOr[
     js.Function6[
@@ -25,60 +24,21 @@ trait Options extends js.Object {
       /* helpers */ Helpers, 
       js.Array[Row]
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    dataToFeatures: /* obj */ js.Any => js.Array[Feature] = null,
+    dataUrl: String = null,
+    featuresToRows: (/* features */ js.Array[Feature], /* x */ X, /* y */ Y, /* z */ Zoom, /* tileSize */ TileSize, /* helpers */ Helpers) => js.Array[Row] = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (dataToFeatures != null) __obj.updateDynamic("dataToFeatures")(js.Any.fromFunction1(dataToFeatures))
+    if (dataUrl != null) __obj.updateDynamic("dataUrl")(dataUrl.asInstanceOf[js.Any])
+    if (featuresToRows != null) __obj.updateDynamic("featuresToRows")(js.Any.fromFunction6(featuresToRows))
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataToFeatures(value: /* obj */ js.Any => js.Array[Feature]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataToFeatures")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDataToFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataToFeatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeaturesToRows(
-      value: (/* features */ js.Array[Feature], /* x */ X, /* y */ Y, /* z */ Zoom, /* tileSize */ TileSize, /* helpers */ Helpers) => js.Array[Row]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featuresToRows")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withoutFeaturesToRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featuresToRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

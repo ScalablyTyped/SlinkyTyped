@@ -4,108 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MlFlushJob[T] extends Generic {
-  var advance_time: js.UndefOr[String] = js.native
-  var body: js.UndefOr[T] = js.native
-  var calc_interim: js.UndefOr[Boolean] = js.native
-  var end: js.UndefOr[String] = js.native
-  var job_id: String = js.native
-  var skip_time: js.UndefOr[String] = js.native
-  var start: js.UndefOr[String] = js.native
+  var advance_time: js.UndefOr[String] = js.undefined
+  var body: js.UndefOr[T] = js.undefined
+  var calc_interim: js.UndefOr[Boolean] = js.undefined
+  var end: js.UndefOr[String] = js.undefined
+  var job_id: String
+  var skip_time: js.UndefOr[String] = js.undefined
+  var start: js.UndefOr[String] = js.undefined
 }
 
 object MlFlushJob {
   @scala.inline
-  def apply[T](job_id: String): MlFlushJob[T] = {
+  def apply[T](
+    job_id: String,
+    advance_time: String = null,
+    body: T = null,
+    calc_interim: js.UndefOr[Boolean] = js.undefined,
+    end: String = null,
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    filter_path: String | js.Array[String] = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    method: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    skip_time: String = null,
+    source: String = null,
+    start: String = null
+  ): MlFlushJob[T] = {
     val __obj = js.Dynamic.literal(job_id = job_id.asInstanceOf[js.Any])
+    if (advance_time != null) __obj.updateDynamic("advance_time")(advance_time.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(calc_interim)) __obj.updateDynamic("calc_interim")(calc_interim.get.asInstanceOf[js.Any])
+    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (skip_time != null) __obj.updateDynamic("skip_time")(skip_time.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[MlFlushJob[T]]
   }
-  @scala.inline
-  implicit class MlFlushJobOps[Self[t] <: MlFlushJob[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withJob_id(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdvance_time(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advance_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvance_time: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advance_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalc_interim(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calc_interim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalc_interim: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calc_interim")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip_time(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip_time: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

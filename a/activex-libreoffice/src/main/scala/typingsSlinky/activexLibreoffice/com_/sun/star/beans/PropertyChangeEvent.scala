@@ -15,22 +15,21 @@ import scala.scalajs.js.annotation._
   *
   * Void values may be provided for the old and new values if their true values are not known.
   */
-@js.native
 trait PropertyChangeEvent extends EventObject {
   /** contains `TRUE` if further events in the same transaction occur. */
-  var Further: Boolean = js.native
+  var Further: Boolean
   /** contains the new value of the property. */
-  var NewValue: js.Any = js.native
+  var NewValue: js.Any
   /** contains the old value of the property. */
-  var OldValue: js.Any = js.native
+  var OldValue: js.Any
   /**
     * contains the implementation handle for the property.
     *
     * May be -1 if the implementation has no handle. You can use this handle to get values from the {@link XFastPropertySet} .
     */
-  var PropertyHandle: Double = js.native
+  var PropertyHandle: Double
   /** contains the unique name of the property which changes its value. */
-  var PropertyName: String = js.native
+  var PropertyName: String
 }
 
 object PropertyChangeEvent {
@@ -46,43 +45,5 @@ object PropertyChangeEvent {
     val __obj = js.Dynamic.literal(Further = Further.asInstanceOf[js.Any], NewValue = NewValue.asInstanceOf[js.Any], OldValue = OldValue.asInstanceOf[js.Any], PropertyHandle = PropertyHandle.asInstanceOf[js.Any], PropertyName = PropertyName.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropertyChangeEvent]
   }
-  @scala.inline
-  implicit class PropertyChangeEventOps[Self <: PropertyChangeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFurther(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Further")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertyHandle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertyHandle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

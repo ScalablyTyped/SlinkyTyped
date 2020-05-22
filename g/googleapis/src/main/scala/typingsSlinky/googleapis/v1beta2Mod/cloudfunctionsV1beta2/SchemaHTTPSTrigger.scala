@@ -17,29 +17,10 @@ trait SchemaHTTPSTrigger extends js.Object {
 
 object SchemaHTTPSTrigger {
   @scala.inline
-  def apply(): SchemaHTTPSTrigger = {
+  def apply(url: String = null): SchemaHTTPSTrigger = {
     val __obj = js.Dynamic.literal()
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHTTPSTrigger]
   }
-  @scala.inline
-  implicit class SchemaHTTPSTriggerOps[Self <: SchemaHTTPSTrigger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

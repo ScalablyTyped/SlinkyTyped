@@ -14,29 +14,10 @@ trait SchemaRoutersPreviewResponse extends js.Object {
 
 object SchemaRoutersPreviewResponse {
   @scala.inline
-  def apply(): SchemaRoutersPreviewResponse = {
+  def apply(resource: SchemaRouter = null): SchemaRoutersPreviewResponse = {
     val __obj = js.Dynamic.literal()
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoutersPreviewResponse]
   }
-  @scala.inline
-  implicit class SchemaRoutersPreviewResponseOps[Self <: SchemaRoutersPreviewResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResource(value: SchemaRouter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

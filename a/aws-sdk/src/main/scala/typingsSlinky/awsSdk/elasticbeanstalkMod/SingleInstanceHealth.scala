@@ -50,137 +50,30 @@ trait SingleInstanceHealth extends js.Object {
 
 object SingleInstanceHealth {
   @scala.inline
-  def apply(): SingleInstanceHealth = {
+  def apply(
+    ApplicationMetrics: ApplicationMetrics = null,
+    AvailabilityZone: String = null,
+    Causes: Causes = null,
+    Color: String = null,
+    Deployment: Deployment = null,
+    HealthStatus: String = null,
+    InstanceId: InstanceId = null,
+    InstanceType: String = null,
+    LaunchedAt: js.Date = null,
+    System: SystemStatus = null
+  ): SingleInstanceHealth = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationMetrics != null) __obj.updateDynamic("ApplicationMetrics")(ApplicationMetrics.asInstanceOf[js.Any])
+    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
+    if (Causes != null) __obj.updateDynamic("Causes")(Causes.asInstanceOf[js.Any])
+    if (Color != null) __obj.updateDynamic("Color")(Color.asInstanceOf[js.Any])
+    if (Deployment != null) __obj.updateDynamic("Deployment")(Deployment.asInstanceOf[js.Any])
+    if (HealthStatus != null) __obj.updateDynamic("HealthStatus")(HealthStatus.asInstanceOf[js.Any])
+    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
+    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
+    if (LaunchedAt != null) __obj.updateDynamic("LaunchedAt")(LaunchedAt.asInstanceOf[js.Any])
+    if (System != null) __obj.updateDynamic("System")(System.asInstanceOf[js.Any])
     __obj.asInstanceOf[SingleInstanceHealth]
   }
-  @scala.inline
-  implicit class SingleInstanceHealthOps[Self <: SingleInstanceHealth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationMetrics(value: ApplicationMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCauses(value: Causes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Causes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCauses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Causes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeployment(value: Deployment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deployment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeployment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deployment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystem(value: SystemStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("System")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("System")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

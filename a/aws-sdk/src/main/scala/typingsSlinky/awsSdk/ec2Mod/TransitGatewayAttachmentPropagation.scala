@@ -18,41 +18,11 @@ trait TransitGatewayAttachmentPropagation extends js.Object {
 
 object TransitGatewayAttachmentPropagation {
   @scala.inline
-  def apply(): TransitGatewayAttachmentPropagation = {
+  def apply(State: TransitGatewayPropagationState = null, TransitGatewayRouteTableId: String = null): TransitGatewayAttachmentPropagation = {
     val __obj = js.Dynamic.literal()
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (TransitGatewayRouteTableId != null) __obj.updateDynamic("TransitGatewayRouteTableId")(TransitGatewayRouteTableId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitGatewayAttachmentPropagation]
   }
-  @scala.inline
-  implicit class TransitGatewayAttachmentPropagationOps[Self <: TransitGatewayAttachmentPropagation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withState(value: TransitGatewayPropagationState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitGatewayRouteTableId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayRouteTableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitGatewayRouteTableId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayRouteTableId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,9 @@
 package typingsSlinky.firebaseFirestore.localIndexeddbSchemaMod
 
+import org.scalajs.dom.raw.IDBDatabase
+import org.scalajs.dom.raw.IDBTransaction
 import typingsSlinky.firebaseFirestore.localLocalSerializerMod.LocalSerializer
+import typingsSlinky.firebaseFirestore.localPersistencePromiseMod.PersistencePromise
 import typingsSlinky.firebaseFirestore.localSimpleDbMod.SimpleDbSchemaConverter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +21,9 @@ class SchemaConverter protected () extends SimpleDbSchemaConverter {
     */
   var ensureSequenceNumbers: js.Any = js.native
   var removeAcknowledgedMutations: js.Any = js.native
+  var rewriteCanonicalIds: js.Any = js.native
   val serializer: js.Any = js.native
+  /* CompleteClass */
+  override def createOrUpgrade(db: IDBDatabase, txn: IDBTransaction, fromVersion: Double, toVersion: Double): PersistencePromise[Unit] = js.native
 }
 

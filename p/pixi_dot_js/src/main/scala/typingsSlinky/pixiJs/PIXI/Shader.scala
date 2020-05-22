@@ -10,20 +10,19 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@js.native
 trait Shader extends js.Object {
   /**
     * Program that the shader uses
     *
     * @member {PIXI.Program} PIXI.Shader#program
     */
-  var program: Program = js.native
+  var program: Program
   /**
     * Shader uniform values, shortcut for `uniformGroup.uniforms`
     * @readonly
     * @member {object}
     */
-  val uniforms: js.Any = js.native
+  val uniforms: js.Any
 }
 
 object Shader {
@@ -32,25 +31,5 @@ object Shader {
     val __obj = js.Dynamic.literal(program = program.asInstanceOf[js.Any], uniforms = uniforms.asInstanceOf[js.Any])
     __obj.asInstanceOf[Shader]
   }
-  @scala.inline
-  implicit class ShaderOps[Self <: Shader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProgram(value: Program): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("program")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUniforms(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

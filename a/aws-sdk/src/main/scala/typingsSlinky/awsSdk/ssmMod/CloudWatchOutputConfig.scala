@@ -18,41 +18,14 @@ trait CloudWatchOutputConfig extends js.Object {
 
 object CloudWatchOutputConfig {
   @scala.inline
-  def apply(): CloudWatchOutputConfig = {
+  def apply(
+    CloudWatchLogGroupName: CloudWatchLogGroupName = null,
+    CloudWatchOutputEnabled: js.UndefOr[CloudWatchOutputEnabled] = js.undefined
+  ): CloudWatchOutputConfig = {
     val __obj = js.Dynamic.literal()
+    if (CloudWatchLogGroupName != null) __obj.updateDynamic("CloudWatchLogGroupName")(CloudWatchLogGroupName.asInstanceOf[js.Any])
+    if (!js.isUndefined(CloudWatchOutputEnabled)) __obj.updateDynamic("CloudWatchOutputEnabled")(CloudWatchOutputEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudWatchOutputConfig]
   }
-  @scala.inline
-  implicit class CloudWatchOutputConfigOps[Self <: CloudWatchOutputConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudWatchLogGroupName(value: CloudWatchLogGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchLogGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudWatchOutputEnabled(value: CloudWatchOutputEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchOutputEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchOutputEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchOutputEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

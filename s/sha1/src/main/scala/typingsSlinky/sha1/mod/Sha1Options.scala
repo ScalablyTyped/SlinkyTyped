@@ -1,5 +1,7 @@
 package typingsSlinky.sha1.mod
 
+import typingsSlinky.sha1.sha1Booleans.`false`
+import typingsSlinky.sha1.sha1Booleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,17 @@ trait Sha1Options extends js.Object
 
 object Sha1Options {
   @scala.inline
-  implicit def apply(value: Sha1AsBytesOptions): Sha1Options = value.asInstanceOf[Sha1Options]
+  def Sha1AsStringOptions(asBytes: `false` = null, asString: js.UndefOr[Boolean] = js.undefined): Sha1Options = {
+    val __obj = js.Dynamic.literal()
+    if (asBytes != null) __obj.updateDynamic("asBytes")(asBytes.asInstanceOf[js.Any])
+    if (!js.isUndefined(asString)) __obj.updateDynamic("asString")(asString.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Sha1Options]
+  }
   @scala.inline
-  implicit def apply(value: Sha1AsStringOptions): Sha1Options = value.asInstanceOf[Sha1Options]
+  def Sha1AsBytesOptions(asBytes: `true`, asString: `false` = null): Sha1Options = {
+    val __obj = js.Dynamic.literal(asBytes = asBytes.asInstanceOf[js.Any])
+    if (asString != null) __obj.updateDynamic("asString")(asString.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Sha1Options]
+  }
 }
 

@@ -7,85 +7,42 @@ import scala.scalajs.js.annotation._
 /**
   * Interface representing the common properties of a user enrolled second factor.
   */
-@js.native
 trait MultiFactorInfo extends js.Object {
   /**
     * The optional display name of the enrolled second factor.
     */
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   /**
     * The optional date the second factor was enrolled, formatted as a UTC string.
     */
-  var enrollmentTime: js.UndefOr[String] = js.native
+  var enrollmentTime: js.UndefOr[String] = js.undefined
   /**
     * The type identifier of the second factor. For SMS second factors, this is `phone`.
     */
-  var factorId: String = js.native
+  var factorId: String
   /**
     * The ID of the enrolled second factor. This ID is unique to the user.
     */
-  var uid: String = js.native
+  var uid: String
   /**
     * @return A JSON-serializable representation of this object.
     */
-  def toJSON(): js.Object = js.native
+  def toJSON(): js.Object
 }
 
 object MultiFactorInfo {
   @scala.inline
-  def apply(factorId: String, toJSON: () => js.Object, uid: String): MultiFactorInfo = {
+  def apply(
+    factorId: String,
+    toJSON: () => js.Object,
+    uid: String,
+    displayName: String = null,
+    enrollmentTime: String = null
+  ): MultiFactorInfo = {
     val __obj = js.Dynamic.literal(factorId = factorId.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), uid = uid.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (enrollmentTime != null) __obj.updateDynamic("enrollmentTime")(enrollmentTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiFactorInfo]
   }
-  @scala.inline
-  implicit class MultiFactorInfoOps[Self <: MultiFactorInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFactorId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnrollmentTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnrollmentTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

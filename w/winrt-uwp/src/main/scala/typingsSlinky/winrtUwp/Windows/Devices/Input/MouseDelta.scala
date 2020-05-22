@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Identifies the change in screen location of the mouse pointer, relative to the location of the last mouse event. */
-@js.native
 trait MouseDelta extends js.Object {
   /** The x-coordinate of the mouse pointer, relative to the location of the last mouse event. */
-  var x: Double = js.native
+  var x: Double
   /** The y-coordinate of the mouse pointer, relative to the location of the last mouse event. */
-  var y: Double = js.native
+  var y: Double
 }
 
 object MouseDelta {
@@ -19,25 +18,5 @@ object MouseDelta {
     val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[MouseDelta]
   }
-  @scala.inline
-  implicit class MouseDeltaOps[Self <: MouseDelta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

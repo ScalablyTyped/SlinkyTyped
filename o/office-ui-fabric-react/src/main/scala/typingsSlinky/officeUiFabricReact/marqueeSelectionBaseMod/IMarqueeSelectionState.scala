@@ -1,54 +1,23 @@
 package typingsSlinky.officeUiFabricReact.marqueeSelectionBaseMod
 
-import typingsSlinky.uifabricUtilities.ipointMod.IPoint
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
+import typingsSlinky.uifabricUtilities.pointMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMarqueeSelectionState extends js.Object {
-  var dragOrigin: js.UndefOr[IPoint] = js.native
-  var dragRect: js.UndefOr[IRectangle] = js.native
+  var dragOrigin: js.UndefOr[Point] = js.undefined
+  var dragRect: js.UndefOr[IRectangle] = js.undefined
 }
 
 object IMarqueeSelectionState {
   @scala.inline
-  def apply(): IMarqueeSelectionState = {
+  def apply(dragOrigin: Point = null, dragRect: IRectangle = null): IMarqueeSelectionState = {
     val __obj = js.Dynamic.literal()
+    if (dragOrigin != null) __obj.updateDynamic("dragOrigin")(dragOrigin.asInstanceOf[js.Any])
+    if (dragRect != null) __obj.updateDynamic("dragRect")(dragRect.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMarqueeSelectionState]
   }
-  @scala.inline
-  implicit class IMarqueeSelectionStateOps[Self <: IMarqueeSelectionState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDragOrigin(value: IPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragRect(value: IRectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragRect")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

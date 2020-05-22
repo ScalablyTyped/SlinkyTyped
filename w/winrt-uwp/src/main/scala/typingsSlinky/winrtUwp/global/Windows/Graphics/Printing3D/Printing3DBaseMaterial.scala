@@ -9,7 +9,14 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Creates an instance of the Printing3DBaseMaterial class. */
 class Printing3DBaseMaterial ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3DBaseMaterial
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3DBaseMaterial {
+  /** Gets or sets the color of the base material. */
+  /* CompleteClass */
+  override var color: typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3DColorMaterial = js.native
+  /** Gets or sets the name of the base material. */
+  /* CompleteClass */
+  override var name: String = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Graphics.Printing3D.Printing3DBaseMaterial")

@@ -59,113 +59,26 @@ trait SchemaGooglePrivacyDlpV2InspectConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2InspectConfig {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2InspectConfig = {
+  def apply(
+    contentOptions: js.Array[String] = null,
+    customInfoTypes: js.Array[SchemaGooglePrivacyDlpV2CustomInfoType] = null,
+    excludeInfoTypes: js.UndefOr[Boolean] = js.undefined,
+    includeQuote: js.UndefOr[Boolean] = js.undefined,
+    infoTypes: js.Array[SchemaGooglePrivacyDlpV2InfoType] = null,
+    limits: SchemaGooglePrivacyDlpV2FindingLimits = null,
+    minLikelihood: String = null,
+    ruleSet: js.Array[SchemaGooglePrivacyDlpV2InspectionRuleSet] = null
+  ): SchemaGooglePrivacyDlpV2InspectConfig = {
     val __obj = js.Dynamic.literal()
+    if (contentOptions != null) __obj.updateDynamic("contentOptions")(contentOptions.asInstanceOf[js.Any])
+    if (customInfoTypes != null) __obj.updateDynamic("customInfoTypes")(customInfoTypes.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludeInfoTypes)) __obj.updateDynamic("excludeInfoTypes")(excludeInfoTypes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeQuote)) __obj.updateDynamic("includeQuote")(includeQuote.get.asInstanceOf[js.Any])
+    if (infoTypes != null) __obj.updateDynamic("infoTypes")(infoTypes.asInstanceOf[js.Any])
+    if (limits != null) __obj.updateDynamic("limits")(limits.asInstanceOf[js.Any])
+    if (minLikelihood != null) __obj.updateDynamic("minLikelihood")(minLikelihood.asInstanceOf[js.Any])
+    if (ruleSet != null) __obj.updateDynamic("ruleSet")(ruleSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2InspectConfig]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2InspectConfigOps[Self <: SchemaGooglePrivacyDlpV2InspectConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentOptions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomInfoTypes(value: js.Array[SchemaGooglePrivacyDlpV2CustomInfoType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customInfoTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomInfoTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customInfoTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeInfoTypes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeInfoTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeInfoTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeInfoTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeQuote(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeQuote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeQuote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeQuote")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfoTypes(value: js.Array[SchemaGooglePrivacyDlpV2InfoType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfoTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimits(value: SchemaGooglePrivacyDlpV2FindingLimits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinLikelihood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLikelihood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinLikelihood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLikelihood")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleSet(value: js.Array[SchemaGooglePrivacyDlpV2InspectionRuleSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

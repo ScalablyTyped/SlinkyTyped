@@ -7,92 +7,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodeParameters extends js.Object {
   /** the base of the node to be created. */
-  var base: js.UndefOr[Node | Null] = js.native
+  var base: js.UndefOr[Node | Null] = js.undefined
   /** the GUID of the node to be created */
-  var guid: js.UndefOr[GUID] = js.native
+  var guid: js.UndefOr[GUID] = js.undefined
   /** the parent of the node to be created. */
-  var parent: js.UndefOr[Node | Null] = js.native
+  var parent: js.UndefOr[Node | Null] = js.undefined
   /** the relative id of the node to be created 
     * (if reserved, the function returns the node behind the relative id) */
-  var relid: js.UndefOr[RelId] = js.native
+  var relid: js.UndefOr[RelId] = js.undefined
 }
 
 object NodeParameters {
   @scala.inline
-  def apply(): NodeParameters = {
+  def apply(
+    base: js.UndefOr[Null | Node] = js.undefined,
+    guid: GUID = null,
+    parent: js.UndefOr[Null | Node] = js.undefined,
+    relid: RelId = null
+  ): NodeParameters = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(base)) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
+    if (guid != null) __obj.updateDynamic("guid")(guid.asInstanceOf[js.Any])
+    if (!js.isUndefined(parent)) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (relid != null) __obj.updateDynamic("relid")(relid.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeParameters]
   }
-  @scala.inline
-  implicit class NodeParametersOps[Self <: NodeParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBase(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(null)
-        ret
-    }
-    @scala.inline
-    def withGuid(value: GUID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(null)
-        ret
-    }
-    @scala.inline
-    def withRelid(value: RelId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

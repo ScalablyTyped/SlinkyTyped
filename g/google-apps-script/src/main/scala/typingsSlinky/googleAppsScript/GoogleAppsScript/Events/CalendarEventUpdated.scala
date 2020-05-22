@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // TODO: Is there a `user` attribute?
-@js.native
 trait CalendarEventUpdated extends AppsScriptEvent {
-  var calendarId: String = js.native
+  var calendarId: String
 }
 
 object CalendarEventUpdated {
@@ -18,19 +17,5 @@ object CalendarEventUpdated {
     val __obj = js.Dynamic.literal(authMode = authMode.asInstanceOf[js.Any], calendarId = calendarId.asInstanceOf[js.Any], triggerUid = triggerUid.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarEventUpdated]
   }
-  @scala.inline
-  implicit class CalendarEventUpdatedOps[Self <: CalendarEventUpdated] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalendarId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

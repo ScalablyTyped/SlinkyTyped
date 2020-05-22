@@ -14,29 +14,10 @@ trait GetRegistrationCodeResponse extends js.Object {
 
 object GetRegistrationCodeResponse {
   @scala.inline
-  def apply(): GetRegistrationCodeResponse = {
+  def apply(registrationCode: RegistrationCode = null): GetRegistrationCodeResponse = {
     val __obj = js.Dynamic.literal()
+    if (registrationCode != null) __obj.updateDynamic("registrationCode")(registrationCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRegistrationCodeResponse]
   }
-  @scala.inline
-  implicit class GetRegistrationCodeResponseOps[Self <: GetRegistrationCodeResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegistrationCode(value: RegistrationCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

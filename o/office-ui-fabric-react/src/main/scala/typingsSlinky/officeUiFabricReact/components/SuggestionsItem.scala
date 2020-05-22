@@ -11,7 +11,7 @@ import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionsIte
 import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionsItemStyleProps
 import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionsItemStyles
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -45,7 +45,7 @@ object SuggestionsItem {
     @scala.inline
     def showRemoveButton(value: Boolean): this.type = set("showRemoveButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: ISuggestionsItemStyleProps => Partial[ISuggestionsItemStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: ISuggestionsItemStyleProps => DeepPartial[ISuggestionsItemStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[ISuggestionsItemStyleProps, ISuggestionsItemStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

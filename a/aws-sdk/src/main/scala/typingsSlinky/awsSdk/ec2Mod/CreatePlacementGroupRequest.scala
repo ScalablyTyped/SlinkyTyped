@@ -22,69 +22,28 @@ trait CreatePlacementGroupRequest extends js.Object {
     * The placement strategy.
     */
   var Strategy: js.UndefOr[PlacementStrategy] = js.native
+  /**
+    * The tags to apply to the new placement group.
+    */
+  var TagSpecifications: js.UndefOr[TagSpecificationList] = js.native
 }
 
 object CreatePlacementGroupRequest {
   @scala.inline
-  def apply(): CreatePlacementGroupRequest = {
+  def apply(
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    GroupName: String = null,
+    PartitionCount: js.UndefOr[Integer] = js.undefined,
+    Strategy: PlacementStrategy = null,
+    TagSpecifications: TagSpecificationList = null
+  ): CreatePlacementGroupRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartitionCount)) __obj.updateDynamic("PartitionCount")(PartitionCount.get.asInstanceOf[js.Any])
+    if (Strategy != null) __obj.updateDynamic("Strategy")(Strategy.asInstanceOf[js.Any])
+    if (TagSpecifications != null) __obj.updateDynamic("TagSpecifications")(TagSpecifications.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePlacementGroupRequest]
   }
-  @scala.inline
-  implicit class CreatePlacementGroupRequestOps[Self <: CreatePlacementGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrategy(value: PlacementStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Strategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Strategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

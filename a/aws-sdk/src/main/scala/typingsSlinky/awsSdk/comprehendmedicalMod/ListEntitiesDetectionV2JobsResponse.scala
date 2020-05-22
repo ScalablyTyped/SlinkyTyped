@@ -20,41 +20,14 @@ trait ListEntitiesDetectionV2JobsResponse extends js.Object {
 
 object ListEntitiesDetectionV2JobsResponse {
   @scala.inline
-  def apply(): ListEntitiesDetectionV2JobsResponse = {
+  def apply(
+    ComprehendMedicalAsyncJobPropertiesList: ComprehendMedicalAsyncJobPropertiesList = null,
+    NextToken: String = null
+  ): ListEntitiesDetectionV2JobsResponse = {
     val __obj = js.Dynamic.literal()
+    if (ComprehendMedicalAsyncJobPropertiesList != null) __obj.updateDynamic("ComprehendMedicalAsyncJobPropertiesList")(ComprehendMedicalAsyncJobPropertiesList.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListEntitiesDetectionV2JobsResponse]
   }
-  @scala.inline
-  implicit class ListEntitiesDetectionV2JobsResponseOps[Self <: ListEntitiesDetectionV2JobsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComprehendMedicalAsyncJobPropertiesList(value: ComprehendMedicalAsyncJobPropertiesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComprehendMedicalAsyncJobPropertiesList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComprehendMedicalAsyncJobPropertiesList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComprehendMedicalAsyncJobPropertiesList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

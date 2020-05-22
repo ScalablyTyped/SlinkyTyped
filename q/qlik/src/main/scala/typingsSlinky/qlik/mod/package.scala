@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type CustomPropertyOptions = js.Array[typingsSlinky.qlik.mod.CustomPropertyOption] | js.Function0[js.Array[typingsSlinky.qlik.mod.CustomPropertyOption]]
   type Global = js.Any
   type NxCellRows = js.Array[typingsSlinky.qlik.mod.NxCell]
   type NxMeasureInfo = typingsSlinky.qlik.mod.ColumnInfo
@@ -29,5 +30,6 @@ package object mod {
     scala.Boolean | (js.Function1[/* measure */ typingsSlinky.qlik.mod.NxMeasure, scala.Boolean])
   ]
   type SupportFunction = js.Function1[/* layout */ typingsSlinky.qlik.mod.Layout, scala.Boolean]
+  type SupportItem = scala.Boolean | typingsSlinky.qlik.mod.SupportFunction
   type VisualizationOptions = typingsSlinky.qlik.mod.VisualizationCommon
 }

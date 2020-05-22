@@ -5,18 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** contains a cell range address within a spreadsheet document. */
-@js.native
 trait CellRangeAddress extends js.Object {
   /** is the index of the column of the right edge of the range. */
-  var EndColumn: Double = js.native
+  var EndColumn: Double
   /** is the index of the row of the bottom edge of the range. */
-  var EndRow: Double = js.native
+  var EndRow: Double
   /** is the index of the sheet that contains the cell range. */
-  var Sheet: Double = js.native
+  var Sheet: Double
   /** is the index of the column of the left edge of the range. */
-  var StartColumn: Double = js.native
+  var StartColumn: Double
   /** is the index of the row of the top edge of the range. */
-  var StartRow: Double = js.native
+  var StartRow: Double
 }
 
 object CellRangeAddress {
@@ -25,43 +24,5 @@ object CellRangeAddress {
     val __obj = js.Dynamic.literal(EndColumn = EndColumn.asInstanceOf[js.Any], EndRow = EndRow.asInstanceOf[js.Any], Sheet = Sheet.asInstanceOf[js.Any], StartColumn = StartColumn.asInstanceOf[js.Any], StartRow = StartRow.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellRangeAddress]
   }
-  @scala.inline
-  implicit class CellRangeAddressOps[Self <: CellRangeAddress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSheet(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sheet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FadeEffectOptions extends js.Object {
-  var crossFade: js.UndefOr[Boolean] = js.native
+  var crossFade: js.UndefOr[Boolean] = js.undefined
 }
 
 object FadeEffectOptions {
   @scala.inline
-  def apply(): FadeEffectOptions = {
+  def apply(crossFade: js.UndefOr[Boolean] = js.undefined): FadeEffectOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(crossFade)) __obj.updateDynamic("crossFade")(crossFade.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FadeEffectOptions]
   }
-  @scala.inline
-  implicit class FadeEffectOptionsOps[Self <: FadeEffectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCrossFade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossFade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossFade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossFade")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

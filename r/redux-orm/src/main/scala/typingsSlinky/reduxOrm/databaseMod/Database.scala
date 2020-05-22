@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Database[I /* <: IndexedModelClasses[
 _, 
 Extract[
@@ -20,7 +19,7 @@ Extract[
     *
     * @return a {@link Table} instance matching given `tableName` or `undefined` if no such table exists.
     */
-  def describe[K /* <: /* keyof Tables */ String */](tableName: K): /* import warning: importer.ImportType#apply Failed type conversion: Tables[K] */ js.Any = js.native
+  def describe[K /* <: /* keyof Tables */ String */](tableName: K): /* import warning: importer.ImportType#apply Failed type conversion: Tables[K] */ js.Any
   /**
     * Returns the empty database state.
     *
@@ -28,7 +27,7 @@ Extract[
     *
     * @return empty state
     */
-  def getEmptyState(): OrmState[I] = js.native
+  def getEmptyState(): OrmState[I]
   /**
     * Execute a query against a given state.
     *
@@ -41,7 +40,7 @@ Extract[
     *
     * @return a {@link QueryResult} containing 0 to many {@link QueryResult.rows}.
     */
-  def query(querySpec: QuerySpec, state: OrmState[I]): QueryResult[js.Object] = js.native
+  def query(querySpec: QuerySpec, state: OrmState[I]): QueryResult[js.Object]
   /**
     * Apply an update to a given state.
     *
@@ -55,7 +54,7 @@ Extract[
     *
     * @return a {@link UpdateResult} containing 0 to many {@link QueryResult.rows}.
     */
-  def update(updateSpec: UpdateSpec[_], tx: Transaction, state: OrmState[I]): UpdateResult[I, js.Object] = js.native
+  def update(updateSpec: UpdateSpec[_], tx: Transaction, state: OrmState[I]): UpdateResult[I, js.Object]
 }
 
 object Database {
@@ -69,39 +68,5 @@ object Database {
     val __obj = js.Dynamic.literal(describe = js.Any.fromFunction1(describe), getEmptyState = js.Any.fromFunction0(getEmptyState), query = js.Any.fromFunction2(query), update = js.Any.fromFunction3(update))
     __obj.asInstanceOf[Database[I, Tables]]
   }
-  @scala.inline
-  implicit class DatabaseOps[Self[i, tables] <: Database[i, tables], I, Tables] (val x: Self[I, Tables]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[I, Tables] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[I, Tables]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[I, Tables]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[I, Tables]) with Other]
-    @scala.inline
-    def withDescribe(
-      value: js.Any => /* import warning: importer.ImportType#apply Failed type conversion: Tables[K] */ js.Any
-    ): Self[I, Tables] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describe")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetEmptyState(value: () => OrmState[I]): Self[I, Tables] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEmptyState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQuery(value: (QuerySpec, OrmState[I]) => QueryResult[js.Object]): Self[I, Tables] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: (UpdateSpec[_], Transaction, OrmState[I]) => UpdateResult[I, js.Object]): Self[I, Tables] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

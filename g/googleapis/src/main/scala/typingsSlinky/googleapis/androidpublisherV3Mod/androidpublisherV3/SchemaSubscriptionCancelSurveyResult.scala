@@ -25,41 +25,11 @@ trait SchemaSubscriptionCancelSurveyResult extends js.Object {
 
 object SchemaSubscriptionCancelSurveyResult {
   @scala.inline
-  def apply(): SchemaSubscriptionCancelSurveyResult = {
+  def apply(cancelSurveyReason: js.UndefOr[Double] = js.undefined, userInputCancelReason: String = null): SchemaSubscriptionCancelSurveyResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancelSurveyReason)) __obj.updateDynamic("cancelSurveyReason")(cancelSurveyReason.get.asInstanceOf[js.Any])
+    if (userInputCancelReason != null) __obj.updateDynamic("userInputCancelReason")(userInputCancelReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubscriptionCancelSurveyResult]
   }
-  @scala.inline
-  implicit class SchemaSubscriptionCancelSurveyResultOps[Self <: SchemaSubscriptionCancelSurveyResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancelSurveyReason(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelSurveyReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancelSurveyReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelSurveyReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserInputCancelReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInputCancelReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserInputCancelReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInputCancelReason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

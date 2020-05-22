@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccountsListResponse extends js.Object {
-  var kind: js.UndefOr[String] = js.native
-  var nextPageToken: js.UndefOr[String] = js.native
-  var resources: js.UndefOr[js.Array[Account]] = js.native
+  var kind: js.UndefOr[String] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.undefined
+  var resources: js.UndefOr[js.Array[Account]] = js.undefined
 }
 
 object AccountsListResponse {
   @scala.inline
-  def apply(): AccountsListResponse = {
+  def apply(kind: String = null, nextPageToken: String = null, resources: js.Array[Account] = null): AccountsListResponse = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountsListResponse]
   }
-  @scala.inline
-  implicit class AccountsListResponseOps[Self <: AccountsListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: js.Array[Account]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,10 +1,35 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`hide-children`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.all
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.any
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bilinear
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.cubic
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.f32
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.f64
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hide
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.jpg
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.jpgpng
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.lerc
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.majority
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.nearest
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.png
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.png24
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.png32
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.png8
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.s16
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.s32
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.s8
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.show
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.tiff
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.u16
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.u32
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.u8
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.unknown
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ImageryLayerProperties
   extends LayerProperties
      with ArcGISImageServiceProperties
@@ -19,7 +44,7 @@ trait ImageryLayerProperties
     *
     * @default true
     */
-  var legendEnabled: js.UndefOr[Boolean] = js.native
+  var legendEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether to display popups when features in the layer are clicked.
     *
@@ -27,64 +52,99 @@ trait ImageryLayerProperties
     *
     * @default true
     */
-  var popupEnabled: js.UndefOr[Boolean] = js.native
+  var popupEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The popup template for the layer. When set on the layer, the popupTemplate allows users to access attributes and display their values using text and/or charts in the [view's popup](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#popup) when a pixel is clicked. See [this sample](https://developers.arcgis.com/javascript/latest/sample-code/layers-imagery-popup/index.html) for an example of how [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) interacts with an [ImageryLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html).  A default popup template is automatically used if no `popupTemplate` has been defined when [Popup.defaultPopupTemplateEnabled](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#defaultPopupTemplateEnabled) is set to `true`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html#popupTemplate)
     */
-  var popupTemplate: js.UndefOr[PopupTemplateProperties] = js.native
+  var popupTemplate: js.UndefOr[PopupTemplateProperties] = js.undefined
 }
 
 object ImageryLayerProperties {
   @scala.inline
-  def apply(): ImageryLayerProperties = {
+  def apply(
+    compressionQuality: js.UndefOr[Double] = js.undefined,
+    compressionTolerance: js.UndefOr[Double] = js.undefined,
+    copyright: String = null,
+    definitionExpression: String = null,
+    fields: js.Array[FieldProperties] = null,
+    format: png | png8 | png24 | png32 | jpg | jpgpng | lerc | tiff = null,
+    fullExtent: ExtentProperties = null,
+    hasMultidimensions: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    imageMaxHeight: js.UndefOr[Double] = js.undefined,
+    imageMaxWidth: js.UndefOr[Double] = js.undefined,
+    interpolation: nearest | bilinear | cubic | majority = null,
+    legendEnabled: js.UndefOr[Boolean] = js.undefined,
+    listMode: show | hide | `hide-children` = null,
+    maxScale: js.UndefOr[Double] = js.undefined,
+    minScale: js.UndefOr[Double] = js.undefined,
+    mosaicRule: MosaicRuleProperties = null,
+    multidimensionalInfo: js.Any = null,
+    noData: Double | js.Array[Double] = null,
+    noDataInterpretation: any | all = null,
+    objectIdField: String = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    pixelFilter: js.Function = null,
+    pixelType: unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64 = null,
+    popupEnabled: js.UndefOr[Boolean] = js.undefined,
+    popupTemplate: PopupTemplateProperties = null,
+    portalItem: PortalItemProperties = null,
+    rasterAttributeTableFieldPrefix: String = null,
+    refreshInterval: js.UndefOr[Double] = js.undefined,
+    renderer: RendererProperties = null,
+    renderingRule: RasterFunctionProperties = null,
+    sourceJSON: js.Any = null,
+    timeExtent: TimeExtentProperties = null,
+    timeInfo: TimeInfoProperties = null,
+    timeOffset: TimeIntervalProperties = null,
+    title: String = null,
+    url: String = null,
+    useViewTime: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): ImageryLayerProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(compressionQuality)) __obj.updateDynamic("compressionQuality")(compressionQuality.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compressionTolerance)) __obj.updateDynamic("compressionTolerance")(compressionTolerance.get.asInstanceOf[js.Any])
+    if (copyright != null) __obj.updateDynamic("copyright")(copyright.asInstanceOf[js.Any])
+    if (definitionExpression != null) __obj.updateDynamic("definitionExpression")(definitionExpression.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (fullExtent != null) __obj.updateDynamic("fullExtent")(fullExtent.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasMultidimensions)) __obj.updateDynamic("hasMultidimensions")(hasMultidimensions.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(imageMaxHeight)) __obj.updateDynamic("imageMaxHeight")(imageMaxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(imageMaxWidth)) __obj.updateDynamic("imageMaxWidth")(imageMaxWidth.get.asInstanceOf[js.Any])
+    if (interpolation != null) __obj.updateDynamic("interpolation")(interpolation.asInstanceOf[js.Any])
+    if (!js.isUndefined(legendEnabled)) __obj.updateDynamic("legendEnabled")(legendEnabled.get.asInstanceOf[js.Any])
+    if (listMode != null) __obj.updateDynamic("listMode")(listMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxScale)) __obj.updateDynamic("maxScale")(maxScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minScale)) __obj.updateDynamic("minScale")(minScale.get.asInstanceOf[js.Any])
+    if (mosaicRule != null) __obj.updateDynamic("mosaicRule")(mosaicRule.asInstanceOf[js.Any])
+    if (multidimensionalInfo != null) __obj.updateDynamic("multidimensionalInfo")(multidimensionalInfo.asInstanceOf[js.Any])
+    if (noData != null) __obj.updateDynamic("noData")(noData.asInstanceOf[js.Any])
+    if (noDataInterpretation != null) __obj.updateDynamic("noDataInterpretation")(noDataInterpretation.asInstanceOf[js.Any])
+    if (objectIdField != null) __obj.updateDynamic("objectIdField")(objectIdField.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (pixelFilter != null) __obj.updateDynamic("pixelFilter")(pixelFilter.asInstanceOf[js.Any])
+    if (pixelType != null) __obj.updateDynamic("pixelType")(pixelType.asInstanceOf[js.Any])
+    if (!js.isUndefined(popupEnabled)) __obj.updateDynamic("popupEnabled")(popupEnabled.get.asInstanceOf[js.Any])
+    if (popupTemplate != null) __obj.updateDynamic("popupTemplate")(popupTemplate.asInstanceOf[js.Any])
+    if (portalItem != null) __obj.updateDynamic("portalItem")(portalItem.asInstanceOf[js.Any])
+    if (rasterAttributeTableFieldPrefix != null) __obj.updateDynamic("rasterAttributeTableFieldPrefix")(rasterAttributeTableFieldPrefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(refreshInterval)) __obj.updateDynamic("refreshInterval")(refreshInterval.get.asInstanceOf[js.Any])
+    if (renderer != null) __obj.updateDynamic("renderer")(renderer.asInstanceOf[js.Any])
+    if (renderingRule != null) __obj.updateDynamic("renderingRule")(renderingRule.asInstanceOf[js.Any])
+    if (sourceJSON != null) __obj.updateDynamic("sourceJSON")(sourceJSON.asInstanceOf[js.Any])
+    if (timeExtent != null) __obj.updateDynamic("timeExtent")(timeExtent.asInstanceOf[js.Any])
+    if (timeInfo != null) __obj.updateDynamic("timeInfo")(timeInfo.asInstanceOf[js.Any])
+    if (timeOffset != null) __obj.updateDynamic("timeOffset")(timeOffset.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(useViewTime)) __obj.updateDynamic("useViewTime")(useViewTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageryLayerProperties]
   }
-  @scala.inline
-  implicit class ImageryLayerPropertiesOps[Self <: ImageryLayerProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLegendEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupTemplate(value: PopupTemplateProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

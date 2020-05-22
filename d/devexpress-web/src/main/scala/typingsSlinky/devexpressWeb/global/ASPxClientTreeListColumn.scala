@@ -10,5 +10,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientTreeListColumn")
 @js.native
 class ASPxClientTreeListColumn ()
-  extends typingsSlinky.devexpressWeb.ASPxClientTreeListColumn
+  extends typingsSlinky.devexpressWeb.ASPxClientTreeListColumn {
+  /**
+    * Gets the name of the database field assigned to the current column.
+    */
+  /* CompleteClass */
+  override var fieldName: String = js.native
+  /**
+    * Gets the column's position within the collection.
+    */
+  /* CompleteClass */
+  override var index: Double = js.native
+  /**
+    * Gets the name that uniquely identifies the column.
+    */
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

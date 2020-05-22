@@ -26,65 +26,18 @@ trait EventTypeSummary extends js.Object {
 
 object EventTypeSummary {
   @scala.inline
-  def apply(): EventTypeSummary = {
+  def apply(
+    EventTypeId: EventTypeId = null,
+    EventTypeName: EventTypeName = null,
+    ResourceType: ResourceType = null,
+    ServiceName: ServiceName = null
+  ): EventTypeSummary = {
     val __obj = js.Dynamic.literal()
+    if (EventTypeId != null) __obj.updateDynamic("EventTypeId")(EventTypeId.asInstanceOf[js.Any])
+    if (EventTypeName != null) __obj.updateDynamic("EventTypeName")(EventTypeName.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
+    if (ServiceName != null) __obj.updateDynamic("ServiceName")(ServiceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventTypeSummary]
   }
-  @scala.inline
-  implicit class EventTypeSummaryOps[Self <: EventTypeSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventTypeId(value: EventTypeId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTypeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventTypeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTypeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventTypeName(value: EventTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTypeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceName(value: ServiceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

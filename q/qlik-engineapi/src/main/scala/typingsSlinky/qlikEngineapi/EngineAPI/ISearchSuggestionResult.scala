@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * SearchSuggestionResult...
   */
-@js.native
 trait ISearchSuggestionResult extends js.Object {
   /**
     * List of field names that contain search hits.
     */
-  var qFieldNames: js.Array[String] = js.native
+  var qFieldNames: js.Array[String]
   /**
     * List of suggestions.
     */
-  var qSuggestions: js.Array[ISearchSuggestItem] = js.native
+  var qSuggestions: js.Array[ISearchSuggestItem]
 }
 
 object ISearchSuggestionResult {
@@ -25,25 +24,5 @@ object ISearchSuggestionResult {
     val __obj = js.Dynamic.literal(qFieldNames = qFieldNames.asInstanceOf[js.Any], qSuggestions = qSuggestions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISearchSuggestionResult]
   }
-  @scala.inline
-  implicit class ISearchSuggestionResultOps[Self <: ISearchSuggestionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQFieldNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qFieldNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSuggestions(value: js.Array[ISearchSuggestItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSuggestions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

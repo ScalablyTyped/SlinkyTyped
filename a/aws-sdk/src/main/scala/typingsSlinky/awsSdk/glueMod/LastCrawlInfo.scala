@@ -34,89 +34,22 @@ trait LastCrawlInfo extends js.Object {
 
 object LastCrawlInfo {
   @scala.inline
-  def apply(): LastCrawlInfo = {
+  def apply(
+    ErrorMessage: DescriptionString = null,
+    LogGroup: LogGroup = null,
+    LogStream: LogStream = null,
+    MessagePrefix: MessagePrefix = null,
+    StartTime: js.Date = null,
+    Status: LastCrawlStatus = null
+  ): LastCrawlInfo = {
     val __obj = js.Dynamic.literal()
+    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
+    if (LogGroup != null) __obj.updateDynamic("LogGroup")(LogGroup.asInstanceOf[js.Any])
+    if (LogStream != null) __obj.updateDynamic("LogStream")(LogStream.asInstanceOf[js.Any])
+    if (MessagePrefix != null) __obj.updateDynamic("MessagePrefix")(MessagePrefix.asInstanceOf[js.Any])
+    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[LastCrawlInfo]
   }
-  @scala.inline
-  implicit class LastCrawlInfoOps[Self <: LastCrawlInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorMessage(value: DescriptionString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogGroup(value: LogGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogStream(value: LogStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessagePrefix(value: MessagePrefix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessagePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessagePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessagePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: LastCrawlStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

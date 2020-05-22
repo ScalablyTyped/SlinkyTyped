@@ -6,77 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cookie extends js.Object {
   /**
     * cookie options
     */
-  var cookie: js.UndefOr[IOptions | (js.Function1[/* ctx */ js.UndefOr[Context], IOptions])] = js.native
+  var cookie: js.UndefOr[IOptions | (js.Function1[/* ctx */ js.UndefOr[Context], IOptions])] = js.undefined
   /**
     * session cookie name and store key prefix. Default is 'koa:sess'
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * session store
     */
-  var store: js.UndefOr[js.Any] = js.native
+  var store: js.UndefOr[js.Any] = js.undefined
 }
 
 object Cookie {
   @scala.inline
-  def apply(): Cookie = {
+  def apply(
+    cookie: IOptions | (js.Function1[/* ctx */ js.UndefOr[Context], IOptions]) = null,
+    key: String = null,
+    store: js.Any = null
+  ): Cookie = {
     val __obj = js.Dynamic.literal()
+    if (cookie != null) __obj.updateDynamic("cookie")(cookie.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cookie]
   }
-  @scala.inline
-  implicit class CookieOps[Self <: Cookie] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCookieFunction1(value: /* ctx */ js.UndefOr[Context] => IOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCookie(value: IOptions | (js.Function1[/* ctx */ js.UndefOr[Context], IOptions])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStore(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

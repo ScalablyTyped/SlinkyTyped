@@ -33,9 +33,9 @@ object mod extends js.Object {
   @js.native
   object Convert extends js.Object {
     /* protected */ def Base64Padding(base64: String): String = js.native
-    def FromBase64(base64Text: String): js.typedarray.ArrayBuffer | SharedArrayBuffer = js.native
-    def FromBase64Url(base64url: String): js.typedarray.ArrayBuffer | SharedArrayBuffer = js.native
-    def FromBinary(text: String): js.typedarray.ArrayBuffer | SharedArrayBuffer = js.native
+    def FromBase64(base64Text: String): js.typedarray.ArrayBuffer = js.native
+    def FromBase64Url(base64url: String): js.typedarray.ArrayBuffer = js.native
+    def FromBinary(text: String): js.typedarray.ArrayBuffer = js.native
     /**
       * Converts HEX string to buffer
       *
@@ -45,10 +45,10 @@ object mod extends js.Object {
       *
       * @memberOf Convert
       */
-    def FromHex(hexString: String): js.typedarray.ArrayBuffer | SharedArrayBuffer = js.native
-    def FromString(str: String): js.typedarray.ArrayBuffer | SharedArrayBuffer = js.native
-    def FromString(str: String, enc: BufferEncoding): js.typedarray.ArrayBuffer | SharedArrayBuffer = js.native
-    def FromUtf8String(text: String): js.typedarray.ArrayBuffer | SharedArrayBuffer = js.native
+    def FromHex(hexString: String): js.typedarray.ArrayBuffer = js.native
+    def FromString(str: String): js.typedarray.ArrayBuffer = js.native
+    def FromString(str: String, enc: BufferEncoding): js.typedarray.ArrayBuffer = js.native
+    def FromUtf8String(text: String): js.typedarray.ArrayBuffer = js.native
     def ToBase64(buffer: BufferSource): String = js.native
     def ToBase64Url(data: BufferSource): String = js.native
     def ToBinary(buffer: BufferSource): String = js.native

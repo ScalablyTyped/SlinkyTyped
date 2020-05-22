@@ -26,7 +26,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
-@js.native
 trait ClassBody
   extends ASTNode
      with DeclarationKind
@@ -35,10 +34,10 @@ trait ClassBody
      with StatementKind {
   var body: js.Array[
     MethodDefinitionKind | VariableDeclaratorKind | ClassPropertyDefinitionKind | ClassPropertyKind | ClassPrivatePropertyKind | ClassMethodKind | ClassPrivateMethodKind | TSDeclareMethodKind | TSCallSignatureDeclarationKind | TSConstructSignatureDeclarationKind | TSIndexSignatureKind | TSMethodSignatureKind | TSPropertySignatureKind
-  ] = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassBody = js.native
+  ]
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassBody
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ClassBody")

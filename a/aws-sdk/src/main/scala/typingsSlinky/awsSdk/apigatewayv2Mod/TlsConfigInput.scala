@@ -14,29 +14,10 @@ trait TlsConfigInput extends js.Object {
 
 object TlsConfigInput {
   @scala.inline
-  def apply(): TlsConfigInput = {
+  def apply(ServerNameToVerify: StringWithLengthBetween1And512 = null): TlsConfigInput = {
     val __obj = js.Dynamic.literal()
+    if (ServerNameToVerify != null) __obj.updateDynamic("ServerNameToVerify")(ServerNameToVerify.asInstanceOf[js.Any])
     __obj.asInstanceOf[TlsConfigInput]
   }
-  @scala.inline
-  implicit class TlsConfigInputOps[Self <: TlsConfigInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServerNameToVerify(value: StringWithLengthBetween1And512): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerNameToVerify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerNameToVerify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerNameToVerify")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

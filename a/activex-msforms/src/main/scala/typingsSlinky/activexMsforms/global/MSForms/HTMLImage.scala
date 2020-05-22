@@ -7,5 +7,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSForms.HTMLImage")
 @js.native
 class HTMLImage protected ()
-  extends typingsSlinky.activexMsforms.MSForms.HTMLImage
+  extends typingsSlinky.activexMsforms.MSForms.HTMLImage {
+  /* CompleteClass */
+  override var Action: String = js.native
+  /* CompleteClass */
+  override var Encoding: String = js.native
+  /* CompleteClass */
+  override var HTMLName: String = js.native
+  /* CompleteClass */
+  override var HTMLType: String = js.native
+  /* CompleteClass */
+  @JSName("MSForms.HTMLImage_typekey")
+  override var MSFormsDotHTMLImage_typekey: typingsSlinky.activexMsforms.MSForms.HTMLImage = js.native
+  /* CompleteClass */
+  override var Method: String = js.native
+  /* CompleteClass */
+  override var Source: String = js.native
+}
 

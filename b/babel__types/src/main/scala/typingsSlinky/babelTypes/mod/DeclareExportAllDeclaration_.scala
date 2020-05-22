@@ -8,57 +8,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait DeclareExportAllDeclaration_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait DeclareExportAllDeclaration_
   extends Declaration
      with BaseNode
      with Flow
      with FlowDeclaration
      with Statement {
-  var exportKind: `type` | value | Null = js.native
-  var source: StringLiteral_ = js.native
+  var exportKind: `type` | value | Null
+  var source: StringLiteral_
   @JSName("type")
-  var type_DeclareExportAllDeclaration_ : DeclareExportAllDeclaration = js.native
+  var type_DeclareExportAllDeclaration_ : DeclareExportAllDeclaration
 }
 
 object DeclareExportAllDeclaration_ {
   @scala.inline
-  def apply(source: StringLiteral_, `type`: DeclareExportAllDeclaration): DeclareExportAllDeclaration_ = {
-    val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
+  def apply(
+    source: StringLiteral_,
+    `type`: DeclareExportAllDeclaration,
+    end: Double = null.asInstanceOf[Double],
+    exportKind: `type` | value = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): DeclareExportAllDeclaration_ = {
+    val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], exportKind = exportKind.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclareExportAllDeclaration_]
   }
-  @scala.inline
-  implicit class DeclareExportAllDeclaration_Ops[Self <: DeclareExportAllDeclaration_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: StringLiteral_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: DeclareExportAllDeclaration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExportKind(value: `type` | value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExportKindNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportKind")(null)
-        ret
-    }
-  }
-  
 }
 

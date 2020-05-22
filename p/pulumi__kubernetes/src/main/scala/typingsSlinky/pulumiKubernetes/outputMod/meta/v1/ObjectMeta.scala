@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * ObjectMeta is metadata that all persisted resources must have, which includes all objects
   * users must create.
   */
-@js.native
 trait ObjectMeta extends js.Object {
   /**
     * Annotations is an unstructured key value map stored with a resource that may be set by
@@ -17,13 +16,13 @@ trait ObjectMeta extends js.Object {
     * be preserved when modifying objects. More info:
     * http://kubernetes.io/docs/user-guide/annotations
     */
-  val annotations: StringDictionary[String] = js.native
+  val annotations: StringDictionary[String]
   /**
     * The name of the cluster which the object belongs to. This is used to distinguish resources
     * with same name and namespace in different clusters. This field is not set anywhere right
     * now and apiserver is going to ignore it if set in create or update request.
     */
-  val clusterName: String = js.native
+  val clusterName: String
   /**
     * CreationTimestamp is a timestamp representing the server time when this object was created.
     * It is not guaranteed to be set in happens-before order across separate operations. Clients
@@ -32,13 +31,13 @@ trait ObjectMeta extends js.Object {
     * Populated by the system. Read-only. Null for lists. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  val creationTimestamp: String = js.native
+  val creationTimestamp: String
   /**
     * Number of seconds allowed for this object to gracefully terminate before it will be removed
     * from the system. Only set when deletionTimestamp is also set. May only be shortened.
     * Read-only.
     */
-  val deletionGracePeriodSeconds: Double = js.native
+  val deletionGracePeriodSeconds: Double
   /**
     * DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This
     * field is set by the server when a graceful deletion is requested by the user, and is not
@@ -58,7 +57,7 @@ trait ObjectMeta extends js.Object {
     * Populated by the system when a graceful deletion is requested. Read-only. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  val deletionTimestamp: String = js.native
+  val deletionTimestamp: String
   /**
     * Must be empty before the object is deleted from the registry. Each entry is an identifier
     * for the responsible component that will remove the entry from the list. If the
@@ -72,7 +71,7 @@ trait ObjectMeta extends js.Object {
     * ordering finalizers are free to order amongst themselves and are not vulnerable to ordering
     * changes in the list.
     */
-  val finalizers: js.Array[String] = js.native
+  val finalizers: js.Array[String]
   /**
     * GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF
     * the Name field has not been provided. If this field is used, the name returned to the
@@ -88,18 +87,18 @@ trait ObjectMeta extends js.Object {
     * Applied only if Name is not specified. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
     */
-  val generateName: String = js.native
+  val generateName: String
   /**
     * A sequence number representing a specific generation of the desired state. Populated by the
     * system. Read-only.
     */
-  val generation: Double = js.native
+  val generation: Double
   /**
     * Map of string keys and values that can be used to organize and categorize (scope and
     * select) objects. May match selectors of replication controllers and services. More info:
     * http://kubernetes.io/docs/user-guide/labels
     */
-  val labels: StringDictionary[String] = js.native
+  val labels: StringDictionary[String]
   /**
     * ManagedFields maps workflow-id and version to the set of fields that are managed by that
     * workflow. This is mostly for internal housekeeping, and users typically shouldn't need to
@@ -107,7 +106,7 @@ trait ObjectMeta extends js.Object {
     * the name of a specific apply path like "ci-cd". The set of fields is always in the version
     * that the workflow used when modifying the object.
     */
-  val managedFields: js.Array[ManagedFieldsEntry] = js.native
+  val managedFields: js.Array[ManagedFieldsEntry]
   /**
     * Name must be unique within a namespace. Is required when creating resources, although some
     * resources may allow a client to request the generation of an appropriate name
@@ -115,7 +114,7 @@ trait ObjectMeta extends js.Object {
     * definition. Cannot be updated. More info:
     * http://kubernetes.io/docs/user-guide/identifiers#names
     */
-  val name: String = js.native
+  val name: String
   /**
     * Namespace defines the space within each name must be unique. An empty namespace is
     * equivalent to the "default" namespace, but "default" is the canonical representation. Not
@@ -125,14 +124,14 @@ trait ObjectMeta extends js.Object {
     * Must be a DNS_LABEL. Cannot be updated. More info:
     * http://kubernetes.io/docs/user-guide/namespaces
     */
-  val namespace: String = js.native
+  val namespace: String
   /**
     * List of objects depended by this object. If ALL objects in the list have been deleted, this
     * object will be garbage collected. If this object is managed by a controller, then an entry
     * in this list will point to this controller, with the controller field set to true. There
     * cannot be more than one managing controller.
     */
-  val ownerReferences: js.Array[OwnerReference] = js.native
+  val ownerReferences: js.Array[OwnerReference]
   /**
     * An opaque value that represents the internal version of this object that can be used by
     * clients to determine when objects have changed. May be used for optimistic concurrency,
@@ -144,14 +143,14 @@ trait ObjectMeta extends js.Object {
     * info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
     */
-  val resourceVersion: String = js.native
+  val resourceVersion: String
   /**
     * SelfLink is a URL representing this object. Populated by the system. Read-only.
     *
     * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is
     * planned to be removed in 1.21 release.
     */
-  val selfLink: String = js.native
+  val selfLink: String
   /**
     * UID is the unique in time and space value for this object. It is typically generated by the
     * server on successful creation of a resource and is not allowed to change on PUT operations.
@@ -159,7 +158,7 @@ trait ObjectMeta extends js.Object {
     * Populated by the system. Read-only. More info:
     * http://kubernetes.io/docs/user-guide/identifiers#uids
     */
-  val uid: String = js.native
+  val uid: String
 }
 
 object ObjectMeta {
@@ -185,109 +184,5 @@ object ObjectMeta {
     val __obj = js.Dynamic.literal(annotations = annotations.asInstanceOf[js.Any], clusterName = clusterName.asInstanceOf[js.Any], creationTimestamp = creationTimestamp.asInstanceOf[js.Any], deletionGracePeriodSeconds = deletionGracePeriodSeconds.asInstanceOf[js.Any], deletionTimestamp = deletionTimestamp.asInstanceOf[js.Any], finalizers = finalizers.asInstanceOf[js.Any], generateName = generateName.asInstanceOf[js.Any], generation = generation.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], managedFields = managedFields.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any], ownerReferences = ownerReferences.asInstanceOf[js.Any], resourceVersion = resourceVersion.asInstanceOf[js.Any], selfLink = selfLink.asInstanceOf[js.Any], uid = uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectMeta]
   }
-  @scala.inline
-  implicit class ObjectMetaOps[Self <: ObjectMeta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnotations(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClusterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreationTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeletionGracePeriodSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionGracePeriodSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeletionTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFinalizers(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGenerateName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeneration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManagedFields(value: js.Array[ManagedFieldsEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwnerReferences(value: js.Array[OwnerReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerReferences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

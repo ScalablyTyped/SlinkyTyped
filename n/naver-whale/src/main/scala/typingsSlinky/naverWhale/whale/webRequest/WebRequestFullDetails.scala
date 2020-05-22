@@ -7,14 +7,13 @@ import scala.scalajs.js.annotation._
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.chrome.chrome.webRequest.ResourceRequest because Already inherited
 - typingsSlinky.chrome.chrome.webRequest.WebRequestDetails because Already inherited
-- typingsSlinky.chrome.chrome.webRequest.WebRequestBodyDetails because var conflicts: frameId, initiator, method, parentFrameId, requestId, tabId, timeStamp, `type`, url. Inlined requestBody */ @js.native
-trait WebRequestFullDetails
+- typingsSlinky.chrome.chrome.webRequest.WebRequestBodyDetails because var conflicts: frameId, initiator, method, parentFrameId, requestId, tabId, timeStamp, `type`, url. Inlined requestBody */ trait WebRequestFullDetails
   extends typingsSlinky.chrome.chrome.webRequest.WebRequestHeadersDetails {
   /**
     * Contains the HTTP request body data. Only provided if extraInfoSpec contains 'requestBody'.
     * @since Chrome 23.
     */
-  var requestBody: typingsSlinky.chrome.chrome.webRequest.WebRequestBody = js.native
+  var requestBody: typingsSlinky.chrome.chrome.webRequest.WebRequestBody
 }
 
 object WebRequestFullDetails {
@@ -28,25 +27,15 @@ object WebRequestFullDetails {
     tabId: Double,
     timeStamp: Double,
     `type`: typingsSlinky.chrome.chrome.webRequest.ResourceType,
-    url: String
+    url: String,
+    initiator: String = null,
+    requestHeaders: js.Array[typingsSlinky.chrome.chrome.webRequest.HttpHeader] = null
   ): WebRequestFullDetails = {
     val __obj = js.Dynamic.literal(frameId = frameId.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], parentFrameId = parentFrameId.asInstanceOf[js.Any], requestBody = requestBody.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any], tabId = tabId.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (initiator != null) __obj.updateDynamic("initiator")(initiator.asInstanceOf[js.Any])
+    if (requestHeaders != null) __obj.updateDynamic("requestHeaders")(requestHeaders.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebRequestFullDetails]
   }
-  @scala.inline
-  implicit class WebRequestFullDetailsOps[Self <: WebRequestFullDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestBody(value: typingsSlinky.chrome.chrome.webRequest.WebRequestBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

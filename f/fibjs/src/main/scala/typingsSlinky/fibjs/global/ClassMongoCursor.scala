@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief mongodb 数据库数据游标对象
-	* @detail 
-	*/
+  * @brief mongodb 数据库数据游标对象
+  * @detail 
+  */
 @JSGlobal("Class_MongoCursor")
 @js.native
 class ClassMongoCursor ()

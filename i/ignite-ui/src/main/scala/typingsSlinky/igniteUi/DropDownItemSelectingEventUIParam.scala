@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DropDownItemSelectingEventUIParam extends js.Object {
   /**
-  	 * Gets a reference to the editor container.
-  	 */
-  var editor: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the editor container.
+    */
+  var editor: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the editable input.
-  	 */
-  var editorInput: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the editable input.
+    */
+  var editorInput: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the list item which is about to be selected.
-  	 */
-  var item: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the list item which is about to be selected.
+    */
+  var item: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the list contaier.
-  	 */
-  var list: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the list contaier.
+    */
+  var list: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the editor.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the editor.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
 }
 
 object DropDownItemSelectingEventUIParam {
   @scala.inline
-  def apply(): DropDownItemSelectingEventUIParam = {
+  def apply(
+    editor: js.Any = null,
+    editorInput: js.Any = null,
+    item: js.Any = null,
+    list: js.Any = null,
+    owner: js.Any = null
+  ): DropDownItemSelectingEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (editor != null) __obj.updateDynamic("editor")(editor.asInstanceOf[js.Any])
+    if (editorInput != null) __obj.updateDynamic("editorInput")(editorInput.asInstanceOf[js.Any])
+    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
+    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropDownItemSelectingEventUIParam]
   }
-  @scala.inline
-  implicit class DropDownItemSelectingEventUIParamOps[Self <: DropDownItemSelectingEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEditor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditorInput(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editorInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditorInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editorInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withList(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

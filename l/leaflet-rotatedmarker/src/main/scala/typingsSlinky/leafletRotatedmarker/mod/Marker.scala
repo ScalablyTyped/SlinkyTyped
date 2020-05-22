@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Marker extends js.Object {
   /*
     * Sets the rotation angle value.
     */
-  def setRotationAngle(newAngle: Double): this.type = js.native
+  def setRotationAngle(newAngle: Double): this.type
   /**
     * Sets the rotation origin value.
     */
-  def setRotationOrigin(newOrigin: String): this.type = js.native
+  def setRotationOrigin(newOrigin: String): this.type
 }
 
 object Marker {
@@ -22,25 +21,5 @@ object Marker {
     val __obj = js.Dynamic.literal(setRotationAngle = js.Any.fromFunction1(setRotationAngle), setRotationOrigin = js.Any.fromFunction1(setRotationOrigin))
     __obj.asInstanceOf[Marker]
   }
-  @scala.inline
-  implicit class MarkerOps[Self <: Marker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetRotationAngle(value: Double => Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRotationAngle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetRotationOrigin(value: String => Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRotationOrigin")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

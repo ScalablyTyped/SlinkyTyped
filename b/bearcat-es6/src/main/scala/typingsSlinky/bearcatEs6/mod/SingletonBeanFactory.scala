@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SingletonBeanFactory extends js.Object {
-  var beanFactory: BeanFactory = js.native
-  var singletonObjects: js.Object = js.native
+  var beanFactory: BeanFactory
+  var singletonObjects: js.Object
   /**
     * SingletonBeanFactory add singleton to SingletonBeanFactory.
     *
@@ -15,7 +14,7 @@ trait SingletonBeanFactory extends js.Object {
     * @param   beanObject
     * @api     public
     */
-  def addSingleton(beanName: String, beanObject: js.Object): Unit = js.native
+  def addSingleton(beanName: String, beanObject: js.Object): Unit
   /**
     * SingletonBeanFactory check SingletonBeanFactory contains singleton or not.
     *
@@ -23,7 +22,7 @@ trait SingletonBeanFactory extends js.Object {
     * @return  true | false
     * @api     public
     */
-  def containsSingleton(beanName: String): Boolean = js.native
+  def containsSingleton(beanName: String): Boolean
   /**
     * SingletonBeanFactory get singleton from SingletonBeanFactory.
     *
@@ -31,20 +30,20 @@ trait SingletonBeanFactory extends js.Object {
     * @return  singletonObject
     * @api     public
     */
-  def getSingleton(beanName: String): js.Object = js.native
+  def getSingleton(beanName: String): js.Object
   /**
     * SingletonBeanFactory get all singleton names from SingletonBeanFactory.
     *
     * @api     public
     */
-  def getSingletonNames(): js.Array[String] = js.native
+  def getSingletonNames(): js.Array[String]
   /**
     * SingletonBeanFactory remove singleton from SingletonBeanFactory.
     *
     * @param   beanName
     * @api     public
     */
-  def removeSingleton(beanName: String): Unit = js.native
+  def removeSingleton(beanName: String): Unit
 }
 
 object SingletonBeanFactory {
@@ -61,55 +60,5 @@ object SingletonBeanFactory {
     val __obj = js.Dynamic.literal(addSingleton = js.Any.fromFunction2(addSingleton), beanFactory = beanFactory.asInstanceOf[js.Any], containsSingleton = js.Any.fromFunction1(containsSingleton), getSingleton = js.Any.fromFunction1(getSingleton), getSingletonNames = js.Any.fromFunction0(getSingletonNames), removeSingleton = js.Any.fromFunction1(removeSingleton), singletonObjects = singletonObjects.asInstanceOf[js.Any])
     __obj.asInstanceOf[SingletonBeanFactory]
   }
-  @scala.inline
-  implicit class SingletonBeanFactoryOps[Self <: SingletonBeanFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddSingleton(value: (String, js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addSingleton")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withBeanFactory(value: BeanFactory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beanFactory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainsSingleton(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsSingleton")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetSingleton(value: String => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSingleton")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetSingletonNames(value: () => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSingletonNames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveSingleton(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeSingleton")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSingletonObjects(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singletonObjects")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

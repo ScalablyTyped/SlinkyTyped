@@ -21,41 +21,11 @@ trait SchemaPublishBatchRequest extends js.Object {
 
 object SchemaPublishBatchRequest {
   @scala.inline
-  def apply(): SchemaPublishBatchRequest = {
+  def apply(messages: js.Array[SchemaPubsubMessage] = null, topic: String = null): SchemaPublishBatchRequest = {
     val __obj = js.Dynamic.literal()
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPublishBatchRequest]
   }
-  @scala.inline
-  implicit class SchemaPublishBatchRequestOps[Self <: SchemaPublishBatchRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessages(value: js.Array[SchemaPubsubMessage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

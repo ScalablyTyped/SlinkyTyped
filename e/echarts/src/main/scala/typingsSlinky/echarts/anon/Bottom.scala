@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bottom extends js.Object {
   /**
     * Distance between asdf component and the bottom side of the
@@ -19,11 +18,11 @@ trait Bottom extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.bottom
     */
-  var bottom: js.UndefOr[Double | String] = js.native
+  var bottom: js.UndefOr[Double | String] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.emphasis
     */
-  var emphasis: js.UndefOr[ItemStyleTextStyle] = js.native
+  var emphasis: js.UndefOr[ItemStyleTextStyle] = js.undefined
   /**
     * When is no content in breadcrumb, this minimal width need
     * to be set up.
@@ -33,7 +32,7 @@ trait Bottom extends js.Object {
     * 25
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.emptyItemWidth
     */
-  var emptyItemWidth: js.UndefOr[Double] = js.native
+  var emptyItemWidth: js.UndefOr[Double] = js.undefined
   /**
     * The height of breadcrumb.
     *
@@ -42,7 +41,7 @@ trait Bottom extends js.Object {
     * 22
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.height
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * Graphic style of , `emphasis` is the style when it is highlighted,
     * like being hovered by mouse, or highlighted via legend connect.
@@ -50,7 +49,7 @@ trait Bottom extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.itemStyle
     */
-  var itemStyle: js.UndefOr[TextStyle] = js.native
+  var itemStyle: js.UndefOr[TextStyle] = js.undefined
   /**
     * Distance between asdf component and the left side of the
     * container.
@@ -68,7 +67,7 @@ trait Bottom extends js.Object {
     * "center"
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.left
     */
-  var left: js.UndefOr[Double | String] = js.native
+  var left: js.UndefOr[Double | String] = js.undefined
   /**
     * Distance between asdf component and the right side of the
     * container.
@@ -84,7 +83,7 @@ trait Bottom extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.right
     */
-  var right: js.UndefOr[Double | String] = js.native
+  var right: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether to show the breadcrumb.
     *
@@ -93,7 +92,7 @@ trait Bottom extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.show
     */
-  var show: js.UndefOr[Boolean] = js.native
+  var show: js.UndefOr[Boolean] = js.undefined
   /**
     * Distance between asdf component and the top side of the container.
     *
@@ -110,130 +109,33 @@ trait Bottom extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb.top
     */
-  var top: js.UndefOr[Double | String] = js.native
+  var top: js.UndefOr[Double | String] = js.undefined
 }
 
 object Bottom {
   @scala.inline
-  def apply(): Bottom = {
+  def apply(
+    bottom: Double | String = null,
+    emphasis: ItemStyleTextStyle = null,
+    emptyItemWidth: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    itemStyle: TextStyle = null,
+    left: Double | String = null,
+    right: Double | String = null,
+    show: js.UndefOr[Boolean] = js.undefined,
+    top: Double | String = null
+  ): Bottom = {
     val __obj = js.Dynamic.literal()
+    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (!js.isUndefined(emptyItemWidth)) __obj.updateDynamic("emptyItemWidth")(emptyItemWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bottom]
   }
-  @scala.inline
-  implicit class BottomOps[Self <: Bottom] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottom(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: ItemStyleTextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmptyItemWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyItemWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmptyItemWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyItemWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: TextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

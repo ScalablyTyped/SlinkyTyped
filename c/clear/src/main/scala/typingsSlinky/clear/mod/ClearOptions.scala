@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClearOptions extends js.Object {
   /**
     * Setting this to false will prevent this module from clearing the screen.
@@ -13,34 +12,15 @@ trait ClearOptions extends js.Object {
     *
     * @default true
     */
-  var fullClear: js.UndefOr[Boolean] = js.native
+  var fullClear: js.UndefOr[Boolean] = js.undefined
 }
 
 object ClearOptions {
   @scala.inline
-  def apply(): ClearOptions = {
+  def apply(fullClear: js.UndefOr[Boolean] = js.undefined): ClearOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fullClear)) __obj.updateDynamic("fullClear")(fullClear.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClearOptions]
   }
-  @scala.inline
-  implicit class ClearOptionsOps[Self <: ClearOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullClear(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullClear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullClear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullClear")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

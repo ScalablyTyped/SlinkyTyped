@@ -1,60 +1,51 @@
 package typingsSlinky.builderUtilRuntime.publishOptionsMod
 
+import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.`private`
+import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.`public-read`
 import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.spaces
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpacesOptions
   extends BaseS3Options
-     with AllPublishOptions {
+     with _AllPublishOptions {
   /**
     * The space name.
     */
-  val name: String = js.native
+  val name: String
   /**
     * The provider. Must be `spaces`.
     */
   @JSName("provider")
-  val provider_SpacesOptions: spaces = js.native
+  val provider_SpacesOptions: spaces
   /**
     * The region (e.g. `nyc3`).
     */
-  val region: String = js.native
+  val region: String
 }
 
 object SpacesOptions {
   @scala.inline
-  def apply(name: String, provider: spaces, region: String): SpacesOptions = {
+  def apply(
+    name: String,
+    provider: spaces,
+    region: String,
+    acl: js.UndefOr[Null | `private` | `public-read`] = js.undefined,
+    channel: js.UndefOr[Null | String] = js.undefined,
+    path: js.UndefOr[Null | String] = js.undefined,
+    publishAutoUpdate: js.UndefOr[Boolean] = js.undefined,
+    publisherName: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    updaterCacheDirName: js.UndefOr[Null | String] = js.undefined
+  ): SpacesOptions = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any], region = region.asInstanceOf[js.Any])
+    if (!js.isUndefined(acl)) __obj.updateDynamic("acl")(acl.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel)) __obj.updateDynamic("channel")(channel.asInstanceOf[js.Any])
+    if (!js.isUndefined(path)) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(publishAutoUpdate)) __obj.updateDynamic("publishAutoUpdate")(publishAutoUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(publisherName)) __obj.updateDynamic("publisherName")(publisherName.asInstanceOf[js.Any])
+    if (!js.isUndefined(updaterCacheDirName)) __obj.updateDynamic("updaterCacheDirName")(updaterCacheDirName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpacesOptions]
   }
-  @scala.inline
-  implicit class SpacesOptionsOps[Self <: SpacesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProvider(value: spaces): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

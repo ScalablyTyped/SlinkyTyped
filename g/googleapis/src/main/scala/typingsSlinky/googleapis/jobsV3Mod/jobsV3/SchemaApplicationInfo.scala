@@ -36,53 +36,12 @@ trait SchemaApplicationInfo extends js.Object {
 
 object SchemaApplicationInfo {
   @scala.inline
-  def apply(): SchemaApplicationInfo = {
+  def apply(emails: js.Array[String] = null, instruction: String = null, uris: js.Array[String] = null): SchemaApplicationInfo = {
     val __obj = js.Dynamic.literal()
+    if (emails != null) __obj.updateDynamic("emails")(emails.asInstanceOf[js.Any])
+    if (instruction != null) __obj.updateDynamic("instruction")(instruction.asInstanceOf[js.Any])
+    if (uris != null) __obj.updateDynamic("uris")(uris.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApplicationInfo]
   }
-  @scala.inline
-  implicit class SchemaApplicationInfoOps[Self <: SchemaApplicationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmails(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstruction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstruction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUris(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uris")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUris: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uris")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

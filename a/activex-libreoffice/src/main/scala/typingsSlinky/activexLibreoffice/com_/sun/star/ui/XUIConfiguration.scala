@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * This can be useful for UI to enable/disable some functions without actually accessing the data.
   * @since OOo 2.0
   */
-@js.native
 trait XUIConfiguration extends XInterface {
   /**
     * adds the specified listener to receive events when elements are changed, inserted or removed.
@@ -23,14 +22,14 @@ trait XUIConfiguration extends XInterface {
     * It is suggested to allow multiple registration of the same listener, thus for each time a listener is added, it has to be removed.
     * @see XUIConfigurationListener
     */
-  def addConfigurationListener(Listener: XUIConfigurationListener): Unit = js.native
+  def addConfigurationListener(Listener: XUIConfigurationListener): Unit
   /**
     * removes the specified listener so it does not receive any events from this user interface configuration manager.
     *
     * It is suggested to allow multiple registration of the same listener, thus for each time a listener is added, it has to be removed.
     * @see XUIConfigurationListener
     */
-  def removeConfigurationListener(Listener: XUIConfigurationListener): Unit = js.native
+  def removeConfigurationListener(Listener: XUIConfigurationListener): Unit
 }
 
 object XUIConfiguration {
@@ -45,25 +44,5 @@ object XUIConfiguration {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addConfigurationListener = js.Any.fromFunction1(addConfigurationListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeConfigurationListener = js.Any.fromFunction1(removeConfigurationListener))
     __obj.asInstanceOf[XUIConfiguration]
   }
-  @scala.inline
-  implicit class XUIConfigurationOps[Self <: XUIConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddConfigurationListener(value: XUIConfigurationListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addConfigurationListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveConfigurationListener(value: XUIConfigurationListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeConfigurationListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

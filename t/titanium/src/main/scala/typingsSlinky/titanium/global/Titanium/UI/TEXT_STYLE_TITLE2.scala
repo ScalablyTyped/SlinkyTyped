@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * The font used for second level hierarchical headings.
-		 */
+  * The font used for second level hierarchical headings.
+  */
 @JSGlobal("Titanium.UI.TEXT_STYLE_TITLE2")
 @js.native
 object TEXT_STYLE_TITLE2 extends TopLevel[String]

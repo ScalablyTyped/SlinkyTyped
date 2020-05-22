@@ -46,125 +46,28 @@ trait ListRecordsResponse extends js.Object {
 
 object ListRecordsResponse {
   @scala.inline
-  def apply(): ListRecordsResponse = {
+  def apply(
+    Count: js.UndefOr[Integer] = js.undefined,
+    DatasetDeletedAfterRequestedSyncCount: js.UndefOr[Boolean] = js.undefined,
+    DatasetExists: js.UndefOr[Boolean] = js.undefined,
+    DatasetSyncCount: js.UndefOr[Long] = js.undefined,
+    LastModifiedBy: String = null,
+    MergedDatasetNames: MergedDatasetNameList = null,
+    NextToken: String = null,
+    Records: RecordList = null,
+    SyncSessionToken: String = null
+  ): ListRecordsResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Count)) __obj.updateDynamic("Count")(Count.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DatasetDeletedAfterRequestedSyncCount)) __obj.updateDynamic("DatasetDeletedAfterRequestedSyncCount")(DatasetDeletedAfterRequestedSyncCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DatasetExists)) __obj.updateDynamic("DatasetExists")(DatasetExists.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DatasetSyncCount)) __obj.updateDynamic("DatasetSyncCount")(DatasetSyncCount.get.asInstanceOf[js.Any])
+    if (LastModifiedBy != null) __obj.updateDynamic("LastModifiedBy")(LastModifiedBy.asInstanceOf[js.Any])
+    if (MergedDatasetNames != null) __obj.updateDynamic("MergedDatasetNames")(MergedDatasetNames.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Records != null) __obj.updateDynamic("Records")(Records.asInstanceOf[js.Any])
+    if (SyncSessionToken != null) __obj.updateDynamic("SyncSessionToken")(SyncSessionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRecordsResponse]
   }
-  @scala.inline
-  implicit class ListRecordsResponseOps[Self <: ListRecordsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatasetDeletedAfterRequestedSyncCount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetDeletedAfterRequestedSyncCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetDeletedAfterRequestedSyncCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetDeletedAfterRequestedSyncCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatasetExists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetExists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetExists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetExists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatasetSyncCount(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetSyncCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetSyncCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetSyncCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergedDatasetNames(value: MergedDatasetNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MergedDatasetNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergedDatasetNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MergedDatasetNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecords(value: RecordList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Records")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Records")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncSessionToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyncSessionToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncSessionToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyncSessionToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

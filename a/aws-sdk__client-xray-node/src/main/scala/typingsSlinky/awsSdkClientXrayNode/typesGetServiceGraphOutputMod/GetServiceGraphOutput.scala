@@ -7,98 +7,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetServiceGraphOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */
   @JSName("$metadata")
-  var $metadata: ResponseMetadata = js.native
+  var $metadata: ResponseMetadata
   /**
     * <p>The end of the time frame for which the graph was generated.</p>
     */
-  var EndTime: js.UndefOr[js.Date] = js.native
+  var EndTime: js.UndefOr[js.Date] = js.undefined
   /**
     * <p>Pagination token. Not used.</p>
     */
-  var NextToken: js.UndefOr[String] = js.native
+  var NextToken: js.UndefOr[String] = js.undefined
   /**
     * <p>The services that have processed a traced request during the specified time frame.</p>
     */
-  var Services: js.UndefOr[js.Array[UnmarshalledService]] = js.native
+  var Services: js.UndefOr[js.Array[UnmarshalledService]] = js.undefined
   /**
     * <p>The start of the time frame for which the graph was generated.</p>
     */
-  var StartTime: js.UndefOr[js.Date] = js.native
+  var StartTime: js.UndefOr[js.Date] = js.undefined
 }
 
 object GetServiceGraphOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): GetServiceGraphOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    EndTime: js.Date = null,
+    NextToken: String = null,
+    Services: js.Array[UnmarshalledService] = null,
+    StartTime: js.Date = null
+  ): GetServiceGraphOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Services != null) __obj.updateDynamic("Services")(Services.asInstanceOf[js.Any])
+    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetServiceGraphOutput]
   }
-  @scala.inline
-  implicit class GetServiceGraphOutputOps[Self <: GetServiceGraphOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$metadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServices(value: js.Array[UnmarshalledService]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Services")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Services")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

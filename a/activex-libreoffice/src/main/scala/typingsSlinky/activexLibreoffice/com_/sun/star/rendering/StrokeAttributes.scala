@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * Path stroking is the process of drawing a polygon with a thick pen. The various attributes contained in this structure can be used to customize that
   * process.
   */
-@js.native
 trait StrokeAttributes extends js.Object {
   /**
     * Array of ink on and off lengths, measured in user coordinate space.
@@ -20,14 +19,14 @@ trait StrokeAttributes extends js.Object {
     * forth. Give zero elements here for solid strokes. This array always have an even number of elements, with zero, as usual, counting as even here.
     * Furthermore, each entry in this array must have a value that is positive (or 0.0)
     */
-  var DashArray: SafeArray[Double] = js.native
+  var DashArray: SafeArray[Double]
   /**
     * The end shape of the stroke.
     *
     * The end point is the last point of every polygon of the path poly-polygon.
     * @see PathCapType
     */
-  var EndCapType: Double = js.native
+  var EndCapType: Double
   /**
     * The join shape of the stroke.
     *
@@ -36,7 +35,7 @@ trait StrokeAttributes extends js.Object {
     * specified here.
     * @see PathJoinType
     */
-  var JoinType: Double = js.native
+  var JoinType: Double
   /**
     * Array of line widths and spacings for multiple-line strokes.
     *
@@ -45,7 +44,7 @@ trait StrokeAttributes extends js.Object {
     * path to the end point. The second element specifies the space between the first line and the second line, and so forth. If the array ends with a
     * spacing, this spacing is included in the total width of the multiple-line stroke. That is, the stroke becomes asymmetric.
     */
-  var LineArray: SafeArray[Double] = js.native
+  var LineArray: SafeArray[Double]
   /**
     * Determines the maximal length of the diagonal in mitered corners.
     *
@@ -56,20 +55,20 @@ trait StrokeAttributes extends js.Object {
     * Before performing the actual comparison, implementations will multiply the MiterLimit with the current StrokeWidth, such that, with phi being the
     * angle between the two joining segments, MiterLimit=1/sin(phi/2.0).
     */
-  var MiterLimit: Double = js.native
+  var MiterLimit: Double
   /**
     * The start shape of the stroke.
     *
     * The start point is the first point of every polygon of the path poly-polygon.
     * @see PathCapType
     */
-  var StartCapType: Double = js.native
+  var StartCapType: Double
   /**
     * Defines the width of the stroke, measured in user coordinate space.
     *
     * This value must be positive (or 0.0)
     */
-  var StrokeWidth: Double = js.native
+  var StrokeWidth: Double
 }
 
 object StrokeAttributes {
@@ -86,55 +85,5 @@ object StrokeAttributes {
     val __obj = js.Dynamic.literal(DashArray = DashArray.asInstanceOf[js.Any], EndCapType = EndCapType.asInstanceOf[js.Any], JoinType = JoinType.asInstanceOf[js.Any], LineArray = LineArray.asInstanceOf[js.Any], MiterLimit = MiterLimit.asInstanceOf[js.Any], StartCapType = StartCapType.asInstanceOf[js.Any], StrokeWidth = StrokeWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrokeAttributes]
   }
-  @scala.inline
-  implicit class StrokeAttributesOps[Self <: StrokeAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDashArray(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndCapType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndCapType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJoinType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JoinType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineArray(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMiterLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MiterLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartCapType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartCapType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrokeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StrokeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

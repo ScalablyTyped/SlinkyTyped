@@ -26,9 +26,16 @@ object createAppCommandMod extends js.Object {
           Blob
         ] {
     def this(input: CreateAppInput) = this()
+    /* CompleteClass */
+    override val input: CreateAppInput = js.native
     val middlewareStack: MiddlewareStack[CreateAppInput, CreateAppOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[CreateAppInput, CreateAppOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[CreateAppInput, CreateAppOutput] = js.native
   }

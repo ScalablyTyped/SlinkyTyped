@@ -5,62 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Auth extends js.Object {
-  val data: js.UndefOr[AuthenticationData] = js.native
-  val error: js.UndefOr[js.Error | Null] = js.native
-  val isAuth: `true` = js.native
+  val data: js.UndefOr[AuthenticationData] = js.undefined
+  val error: js.UndefOr[js.Error | Null] = js.undefined
+  val isAuth: `true`
 }
 
 object Auth {
   @scala.inline
-  def apply(isAuth: `true`): Auth = {
+  def apply(isAuth: `true`, data: AuthenticationData = null, error: js.UndefOr[Null | js.Error] = js.undefined): Auth = {
     val __obj = js.Dynamic.literal(isAuth = isAuth.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
     __obj.asInstanceOf[Auth]
   }
-  @scala.inline
-  implicit class AuthOps[Self <: Auth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsAuth(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: AuthenticationData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: js.Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(null)
-        ret
-    }
-  }
-  
 }
 

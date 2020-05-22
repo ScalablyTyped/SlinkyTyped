@@ -27,77 +27,20 @@ trait RoomMembership extends js.Object {
 
 object RoomMembership {
   @scala.inline
-  def apply(): RoomMembership = {
+  def apply(
+    InvitedBy: NonEmptyString = null,
+    Member: Member = null,
+    Role: RoomMembershipRole = null,
+    RoomId: NonEmptyString = null,
+    UpdatedTimestamp: js.Date = null
+  ): RoomMembership = {
     val __obj = js.Dynamic.literal()
+    if (InvitedBy != null) __obj.updateDynamic("InvitedBy")(InvitedBy.asInstanceOf[js.Any])
+    if (Member != null) __obj.updateDynamic("Member")(Member.asInstanceOf[js.Any])
+    if (Role != null) __obj.updateDynamic("Role")(Role.asInstanceOf[js.Any])
+    if (RoomId != null) __obj.updateDynamic("RoomId")(RoomId.asInstanceOf[js.Any])
+    if (UpdatedTimestamp != null) __obj.updateDynamic("UpdatedTimestamp")(UpdatedTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoomMembership]
   }
-  @scala.inline
-  implicit class RoomMembershipOps[Self <: RoomMembership] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvitedBy(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMember(value: Member): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Member")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMember: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Member")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: RoomMembershipRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoomId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoomId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTimestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

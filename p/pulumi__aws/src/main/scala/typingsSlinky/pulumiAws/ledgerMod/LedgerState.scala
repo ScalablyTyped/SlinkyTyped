@@ -12,7 +12,13 @@ trait LedgerState extends js.Object {
     * The ARN of the QLDB Ledger
     */
   val arn: js.UndefOr[Input[String]] = js.native
+  /**
+    * The deletion protection for the QLDB Ledger instance. By default it is `true`. To delete this resource via this provider, this value must be configured to `false` and applied first before attempting deletion.
+    */
   val deletionProtection: js.UndefOr[Input[Boolean]] = js.native
+  /**
+    * The friendly name for the QLDB Ledger instance.
+    */
   val name: js.UndefOr[Input[String]] = js.native
   /**
     * Key-value mapping of resource tags
@@ -22,65 +28,18 @@ trait LedgerState extends js.Object {
 
 object LedgerState {
   @scala.inline
-  def apply(): LedgerState = {
+  def apply(
+    arn: Input[String] = null,
+    deletionProtection: Input[Boolean] = null,
+    name: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null
+  ): LedgerState = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (deletionProtection != null) __obj.updateDynamic("deletionProtection")(deletionProtection.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[LedgerState]
   }
-  @scala.inline
-  implicit class LedgerStateOps[Self <: LedgerState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletionProtection(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionProtection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletionProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionProtection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

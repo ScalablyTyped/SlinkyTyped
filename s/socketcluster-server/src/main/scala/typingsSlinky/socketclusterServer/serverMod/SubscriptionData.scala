@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SubscriptionData extends SubscribeData {
-  var socket: typingsSlinky.socketclusterServer.serversocketMod.^ = js.native
+  var socket: typingsSlinky.socketclusterServer.serversocketMod.^
 }
 
 object SubscriptionData {
@@ -21,19 +20,5 @@ object SubscriptionData {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], socket = socket.asInstanceOf[js.Any], subscriptionOptions = subscriptionOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscriptionData]
   }
-  @scala.inline
-  implicit class SubscriptionDataOps[Self <: SubscriptionData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSocket(value: typingsSlinky.socketclusterServer.serversocketMod.^): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

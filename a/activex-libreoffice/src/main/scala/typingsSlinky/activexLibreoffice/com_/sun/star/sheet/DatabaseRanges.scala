@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * represents a collection of database ranges in a spreadsheet document.
   * @see com.sun.star.sheet.SpreadsheetDocument
   */
-@js.native
 trait DatabaseRanges
   extends XDatabaseRanges
      with XEnumerationAccess

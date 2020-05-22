@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * You should additionally implement {@link XConnection2} .
   * @see XConnection2
   */
-@js.native
 trait XConnection extends XInterface {
   /**
     * A unique string describing the connection.
@@ -21,18 +20,18 @@ trait XConnection extends XInterface {
     * This string is different from the arguments to XConnection::accept() and {@link XConnector.connect()} . In general, the string contains an additional
     * handle value. For example, "socket,host=localhost,port=2002,uniqueValue=2324".
     */
-  val Description: String = js.native
+  val Description: String
   /** Immediately terminates any ongoing read or write calls. All subsequent read or write calls() */
-  def close(): Unit = js.native
+  def close(): Unit
   /** Empties all internal buffers. */
-  def flush(): Unit = js.native
+  def flush(): Unit
   /**
     * A unique string describing the connection.
     *
     * This string is different from the arguments to XConnection::accept() and {@link XConnector.connect()} . In general, the string contains an additional
     * handle value. For example, "socket,host=localhost,port=2002,uniqueValue=2324".
     */
-  def getDescription(): String = js.native
+  def getDescription(): String
   /**
     * reads a requested number of bytes from the connection.
     *
@@ -45,14 +44,14 @@ trait XConnection extends XInterface {
     * @returns The read number of bytes. The return value and the length of the returned sequence must be identical.
     * @throws com::sun::star::io::IOException in case an error occurred during reading from the stream.
     */
-  def read(aReadBytes: js.Array[SeqEquiv[Double]], nBytesToRead: Double): Double = js.native
+  def read(aReadBytes: js.Array[SeqEquiv[Double]], nBytesToRead: Double): Double
   /**
     * writes the given bytesequence to the stream.
     *
     * The method blocks until the whole sequence is written.
     * @throws com::sun::star::io::IOException in case an error occurred during writing to the stream.
     */
-  def write(aData: SeqEquiv[Double]): Unit = js.native
+  def write(aData: SeqEquiv[Double]): Unit
 }
 
 object XConnection {
@@ -71,49 +70,5 @@ object XConnection {
     val __obj = js.Dynamic.literal(Description = Description.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), close = js.Any.fromFunction0(close), flush = js.Any.fromFunction0(flush), getDescription = js.Any.fromFunction0(getDescription), queryInterface = js.Any.fromFunction1(queryInterface), read = js.Any.fromFunction2(read), release = js.Any.fromFunction0(release), write = js.Any.fromFunction1(write))
     __obj.asInstanceOf[XConnection]
   }
-  @scala.inline
-  implicit class XConnectionOps[Self <: XConnection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFlush(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDescription(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDescription")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRead(value: (js.Array[SeqEquiv[Double]], Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withWrite(value: SeqEquiv[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

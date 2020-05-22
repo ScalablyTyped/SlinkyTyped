@@ -23,5 +23,15 @@ class GradientBlockColorStep protected ()
     */
   color: typingsSlinky.babylonjs.BABYLON.Color3
   ) = this()
+  /**
+    * Gets or sets the color associated with this step
+    */
+  /* CompleteClass */
+  override var color: typingsSlinky.babylonjs.BABYLON.Color3 = js.native
+  /**
+    * Gets or sets a value indicating which step this color is associated with (between 0 and 1)
+    */
+  /* CompleteClass */
+  override var step: Double = js.native
 }
 

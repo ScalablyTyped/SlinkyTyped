@@ -12,41 +12,14 @@ trait InstanceCountLimits extends js.Object {
 
 object InstanceCountLimits {
   @scala.inline
-  def apply(): InstanceCountLimits = {
+  def apply(
+    MaximumInstanceCount: js.UndefOr[MaximumInstanceCount] = js.undefined,
+    MinimumInstanceCount: js.UndefOr[MinimumInstanceCount] = js.undefined
+  ): InstanceCountLimits = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MaximumInstanceCount)) __obj.updateDynamic("MaximumInstanceCount")(MaximumInstanceCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinimumInstanceCount)) __obj.updateDynamic("MinimumInstanceCount")(MinimumInstanceCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceCountLimits]
   }
-  @scala.inline
-  implicit class InstanceCountLimitsOps[Self <: InstanceCountLimits] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaximumInstanceCount(value: MaximumInstanceCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumInstanceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumInstanceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumInstanceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumInstanceCount(value: MinimumInstanceCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumInstanceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumInstanceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumInstanceCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

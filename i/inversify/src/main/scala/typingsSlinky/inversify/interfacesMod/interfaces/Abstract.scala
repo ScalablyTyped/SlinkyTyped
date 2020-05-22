@@ -4,6 +4,5 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait Abstract[T] extends ServiceIdentifier[T]
+trait Abstract[T] extends _ServiceIdentifier[T]
 

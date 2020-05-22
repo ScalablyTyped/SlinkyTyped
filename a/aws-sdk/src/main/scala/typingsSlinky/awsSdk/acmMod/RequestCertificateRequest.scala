@@ -42,107 +42,25 @@ trait RequestCertificateRequest extends js.Object {
 
 object RequestCertificateRequest {
   @scala.inline
-  def apply(DomainName: DomainNameString): RequestCertificateRequest = {
+  def apply(
+    DomainName: DomainNameString,
+    CertificateAuthorityArn: Arn = null,
+    DomainValidationOptions: DomainValidationOptionList = null,
+    IdempotencyToken: IdempotencyToken = null,
+    Options: CertificateOptions = null,
+    SubjectAlternativeNames: DomainList = null,
+    Tags: TagList = null,
+    ValidationMethod: ValidationMethod = null
+  ): RequestCertificateRequest = {
     val __obj = js.Dynamic.literal(DomainName = DomainName.asInstanceOf[js.Any])
+    if (CertificateAuthorityArn != null) __obj.updateDynamic("CertificateAuthorityArn")(CertificateAuthorityArn.asInstanceOf[js.Any])
+    if (DomainValidationOptions != null) __obj.updateDynamic("DomainValidationOptions")(DomainValidationOptions.asInstanceOf[js.Any])
+    if (IdempotencyToken != null) __obj.updateDynamic("IdempotencyToken")(IdempotencyToken.asInstanceOf[js.Any])
+    if (Options != null) __obj.updateDynamic("Options")(Options.asInstanceOf[js.Any])
+    if (SubjectAlternativeNames != null) __obj.updateDynamic("SubjectAlternativeNames")(SubjectAlternativeNames.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (ValidationMethod != null) __obj.updateDynamic("ValidationMethod")(ValidationMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestCertificateRequest]
   }
-  @scala.inline
-  implicit class RequestCertificateRequestOps[Self <: RequestCertificateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainName(value: DomainNameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertificateAuthorityArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateAuthorityArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainValidationOptions(value: DomainValidationOptionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainValidationOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainValidationOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainValidationOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdempotencyToken(value: IdempotencyToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdempotencyToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: CertificateOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubjectAlternativeNames(value: DomainList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectAlternativeNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubjectAlternativeNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectAlternativeNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationMethod(value: ValidationMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationMethod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

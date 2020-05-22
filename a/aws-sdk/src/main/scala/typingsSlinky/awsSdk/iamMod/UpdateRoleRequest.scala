@@ -22,47 +22,15 @@ trait UpdateRoleRequest extends js.Object {
 
 object UpdateRoleRequest {
   @scala.inline
-  def apply(RoleName: roleNameType): UpdateRoleRequest = {
+  def apply(
+    RoleName: roleNameType,
+    Description: roleDescriptionType = null,
+    MaxSessionDuration: js.UndefOr[roleMaxSessionDurationType] = js.undefined
+  ): UpdateRoleRequest = {
     val __obj = js.Dynamic.literal(RoleName = RoleName.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxSessionDuration)) __obj.updateDynamic("MaxSessionDuration")(MaxSessionDuration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRoleRequest]
   }
-  @scala.inline
-  implicit class UpdateRoleRequestOps[Self <: UpdateRoleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleName(value: roleNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: roleDescriptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSessionDuration(value: roleMaxSessionDurationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSessionDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSessionDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSessionDuration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

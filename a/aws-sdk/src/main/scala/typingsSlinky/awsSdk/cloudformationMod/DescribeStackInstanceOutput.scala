@@ -14,29 +14,10 @@ trait DescribeStackInstanceOutput extends js.Object {
 
 object DescribeStackInstanceOutput {
   @scala.inline
-  def apply(): DescribeStackInstanceOutput = {
+  def apply(StackInstance: StackInstance = null): DescribeStackInstanceOutput = {
     val __obj = js.Dynamic.literal()
+    if (StackInstance != null) __obj.updateDynamic("StackInstance")(StackInstance.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStackInstanceOutput]
   }
-  @scala.inline
-  implicit class DescribeStackInstanceOutputOps[Self <: DescribeStackInstanceOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStackInstance(value: StackInstance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackInstance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

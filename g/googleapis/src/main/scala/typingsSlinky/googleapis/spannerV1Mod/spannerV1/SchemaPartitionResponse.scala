@@ -21,41 +21,11 @@ trait SchemaPartitionResponse extends js.Object {
 
 object SchemaPartitionResponse {
   @scala.inline
-  def apply(): SchemaPartitionResponse = {
+  def apply(partitions: js.Array[SchemaPartition] = null, transaction: SchemaTransaction = null): SchemaPartitionResponse = {
     val __obj = js.Dynamic.literal()
+    if (partitions != null) __obj.updateDynamic("partitions")(partitions.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPartitionResponse]
   }
-  @scala.inline
-  implicit class SchemaPartitionResponseOps[Self <: SchemaPartitionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPartitions(value: js.Array[SchemaPartition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: SchemaTransaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

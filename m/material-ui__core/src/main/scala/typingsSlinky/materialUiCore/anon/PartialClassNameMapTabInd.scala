@@ -14,53 +14,12 @@ trait PartialClassNameMapTabInd extends js.Object {
 
 object PartialClassNameMapTabInd {
   @scala.inline
-  def apply(): PartialClassNameMapTabInd = {
+  def apply(colorPrimary: String = null, colorSecondary: String = null, root: String = null): PartialClassNameMapTabInd = {
     val __obj = js.Dynamic.literal()
+    if (colorPrimary != null) __obj.updateDynamic("colorPrimary")(colorPrimary.asInstanceOf[js.Any])
+    if (colorSecondary != null) __obj.updateDynamic("colorSecondary")(colorSecondary.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapTabInd]
   }
-  @scala.inline
-  implicit class PartialClassNameMapTabIndOps[Self <: PartialClassNameMapTabInd] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorPrimary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSecondary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

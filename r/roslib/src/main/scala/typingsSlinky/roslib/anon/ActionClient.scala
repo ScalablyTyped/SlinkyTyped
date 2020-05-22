@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActionClient extends js.Object {
-  var actionClient: typingsSlinky.roslib.mod.ActionClient = js.native
-  var goalMessage: js.Any = js.native
+  var actionClient: typingsSlinky.roslib.mod.ActionClient
+  var goalMessage: js.Any
 }
 
 object ActionClient {
@@ -16,25 +15,5 @@ object ActionClient {
     val __obj = js.Dynamic.literal(actionClient = actionClient.asInstanceOf[js.Any], goalMessage = goalMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionClient]
   }
-  @scala.inline
-  implicit class ActionClientOps[Self <: ActionClient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionClient(value: typingsSlinky.roslib.mod.ActionClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGoalMessage(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goalMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

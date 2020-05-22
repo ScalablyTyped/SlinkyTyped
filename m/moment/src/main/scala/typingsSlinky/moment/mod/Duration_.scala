@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Duration_
-  extends DurationInputArg1
-     with LocaleSpecifier {
+  extends _DurationInputArg1
+     with _LocaleSpecifier {
   def abs(): Duration_ = js.native
   def add(): Duration_ = js.native
   def add(inp: DurationInputArg1): Duration_ = js.native
@@ -26,7 +26,9 @@ trait Duration_
   def get(units: Base): Double = js.native
   def hours(): Double = js.native
   def humanize(): String = js.native
-  def humanize(withSuffix: Boolean): String = js.native
+  def humanize(argThresholds: argThresholdOpts): String = js.native
+  def humanize(argWithSuffix: Boolean): String = js.native
+  def humanize(argWithSuffix: Boolean, argThresholds: argThresholdOpts): String = js.native
   def isValid(): Boolean = js.native
   /**
     * @deprecated since version 2.8.0

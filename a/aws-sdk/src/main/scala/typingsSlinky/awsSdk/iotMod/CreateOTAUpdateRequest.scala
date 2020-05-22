@@ -54,125 +54,28 @@ trait CreateOTAUpdateRequest extends js.Object {
 
 object CreateOTAUpdateRequest {
   @scala.inline
-  def apply(files: OTAUpdateFiles, otaUpdateId: OTAUpdateId, roleArn: RoleArn, targets: Targets): CreateOTAUpdateRequest = {
+  def apply(
+    files: OTAUpdateFiles,
+    otaUpdateId: OTAUpdateId,
+    roleArn: RoleArn,
+    targets: Targets,
+    additionalParameters: AdditionalParameterMap = null,
+    awsJobExecutionsRolloutConfig: AwsJobExecutionsRolloutConfig = null,
+    awsJobPresignedUrlConfig: AwsJobPresignedUrlConfig = null,
+    description: OTAUpdateDescription = null,
+    protocols: Protocols = null,
+    tags: TagList = null,
+    targetSelection: TargetSelection = null
+  ): CreateOTAUpdateRequest = {
     val __obj = js.Dynamic.literal(files = files.asInstanceOf[js.Any], otaUpdateId = otaUpdateId.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any], targets = targets.asInstanceOf[js.Any])
+    if (additionalParameters != null) __obj.updateDynamic("additionalParameters")(additionalParameters.asInstanceOf[js.Any])
+    if (awsJobExecutionsRolloutConfig != null) __obj.updateDynamic("awsJobExecutionsRolloutConfig")(awsJobExecutionsRolloutConfig.asInstanceOf[js.Any])
+    if (awsJobPresignedUrlConfig != null) __obj.updateDynamic("awsJobPresignedUrlConfig")(awsJobPresignedUrlConfig.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (protocols != null) __obj.updateDynamic("protocols")(protocols.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (targetSelection != null) __obj.updateDynamic("targetSelection")(targetSelection.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateOTAUpdateRequest]
   }
-  @scala.inline
-  implicit class CreateOTAUpdateRequestOps[Self <: CreateOTAUpdateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFiles(value: OTAUpdateFiles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOtaUpdateId(value: OTAUpdateId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargets(value: Targets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdditionalParameters(value: AdditionalParameterMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsJobExecutionsRolloutConfig(value: AwsJobExecutionsRolloutConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsJobExecutionsRolloutConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsJobExecutionsRolloutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsJobExecutionsRolloutConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsJobPresignedUrlConfig(value: AwsJobPresignedUrlConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsJobPresignedUrlConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsJobPresignedUrlConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsJobPresignedUrlConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: OTAUpdateDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocols(value: Protocols): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetSelection(value: TargetSelection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSelection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

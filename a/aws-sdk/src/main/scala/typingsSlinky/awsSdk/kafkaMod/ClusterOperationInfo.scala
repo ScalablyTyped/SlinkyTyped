@@ -70,137 +70,30 @@ trait ClusterOperationInfo extends js.Object {
 
 object ClusterOperationInfo {
   @scala.inline
-  def apply(): ClusterOperationInfo = {
+  def apply(
+    ClientRequestId: string = null,
+    ClusterArn: string = null,
+    CreationTime: js.Date = null,
+    EndTime: js.Date = null,
+    ErrorInfo: ErrorInfo = null,
+    OperationArn: string = null,
+    OperationState: string = null,
+    OperationType: string = null,
+    SourceClusterInfo: MutableClusterInfo = null,
+    TargetClusterInfo: MutableClusterInfo = null
+  ): ClusterOperationInfo = {
     val __obj = js.Dynamic.literal()
+    if (ClientRequestId != null) __obj.updateDynamic("ClientRequestId")(ClientRequestId.asInstanceOf[js.Any])
+    if (ClusterArn != null) __obj.updateDynamic("ClusterArn")(ClusterArn.asInstanceOf[js.Any])
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
+    if (ErrorInfo != null) __obj.updateDynamic("ErrorInfo")(ErrorInfo.asInstanceOf[js.Any])
+    if (OperationArn != null) __obj.updateDynamic("OperationArn")(OperationArn.asInstanceOf[js.Any])
+    if (OperationState != null) __obj.updateDynamic("OperationState")(OperationState.asInstanceOf[js.Any])
+    if (OperationType != null) __obj.updateDynamic("OperationType")(OperationType.asInstanceOf[js.Any])
+    if (SourceClusterInfo != null) __obj.updateDynamic("SourceClusterInfo")(SourceClusterInfo.asInstanceOf[js.Any])
+    if (TargetClusterInfo != null) __obj.updateDynamic("TargetClusterInfo")(TargetClusterInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterOperationInfo]
   }
-  @scala.inline
-  implicit class ClusterOperationInfoOps[Self <: ClusterOperationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientRequestId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorInfo(value: ErrorInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationState(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationType(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceClusterInfo(value: MutableClusterInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceClusterInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceClusterInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceClusterInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetClusterInfo(value: MutableClusterInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetClusterInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetClusterInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetClusterInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

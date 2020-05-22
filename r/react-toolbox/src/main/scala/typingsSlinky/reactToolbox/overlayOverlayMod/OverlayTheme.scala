@@ -4,87 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OverlayTheme extends js.Object {
   /**
     * Active class name.
     */
-  var active: js.UndefOr[String] = js.native
+  var active: js.UndefOr[String] = js.undefined
   /**
     * Backdrop class name.
     */
-  var backdrop: js.UndefOr[String] = js.native
+  var backdrop: js.UndefOr[String] = js.undefined
   /**
     * Invisible class name.
     */
-  var invisible: js.UndefOr[String] = js.native
+  var invisible: js.UndefOr[String] = js.undefined
   /**
     * Overlay class name.
     */
-  var overlay: js.UndefOr[String] = js.native
+  var overlay: js.UndefOr[String] = js.undefined
 }
 
 object OverlayTheme {
   @scala.inline
-  def apply(): OverlayTheme = {
+  def apply(active: String = null, backdrop: String = null, invisible: String = null, overlay: String = null): OverlayTheme = {
     val __obj = js.Dynamic.literal()
+    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+    if (backdrop != null) __obj.updateDynamic("backdrop")(backdrop.asInstanceOf[js.Any])
+    if (invisible != null) __obj.updateDynamic("invisible")(invisible.asInstanceOf[js.Any])
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
     __obj.asInstanceOf[OverlayTheme]
   }
-  @scala.inline
-  implicit class OverlayThemeOps[Self <: OverlayTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackdrop(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackdrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvisible(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait ConditionalRangeFormat extends ClientObject {
   /**
     *
-    * Collection of border objects that apply to the overall conditional format range. Read-only.
+    * Collection of border objects that apply to the overall conditional format range.
     *
     * [Api set: ExcelApi 1.6]
     */
@@ -30,14 +30,14 @@ trait ConditionalRangeFormat extends ClientObject {
   var context_ConditionalRangeFormat: RequestContext = js.native
   /**
     *
-    * Returns the fill object defined on the overall conditional format range. Read-only.
+    * Returns the fill object defined on the overall conditional format range.
     *
     * [Api set: ExcelApi 1.6]
     */
   val fill: ConditionalRangeFill = js.native
   /**
     *
-    * Returns the font object defined on the overall conditional format range. Read-only.
+    * Returns the font object defined on the overall conditional format range.
     *
     * [Api set: ExcelApi 1.6]
     */

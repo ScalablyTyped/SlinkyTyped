@@ -18,35 +18,10 @@ trait DeleteSmsTemplateRequest extends js.Object {
 
 object DeleteSmsTemplateRequest {
   @scala.inline
-  def apply(TemplateName: string): DeleteSmsTemplateRequest = {
+  def apply(TemplateName: string, Version: string = null): DeleteSmsTemplateRequest = {
     val __obj = js.Dynamic.literal(TemplateName = TemplateName.asInstanceOf[js.Any])
+    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteSmsTemplateRequest]
   }
-  @scala.inline
-  implicit class DeleteSmsTemplateRequestOps[Self <: DeleteSmsTemplateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTemplateName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

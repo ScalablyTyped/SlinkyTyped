@@ -9,13 +9,12 @@ import scala.scalajs.js.annotation._
   * associated string aliases. They can be viewed and edited via the Sheets UI under the Data >
   * Named ranges... menu.
   */
-@js.native
 trait NamedRange extends js.Object {
-  def getName(): String = js.native
-  def getRange(): Range = js.native
-  def remove(): Unit = js.native
-  def setName(name: String): NamedRange = js.native
-  def setRange(range: Range): NamedRange = js.native
+  def getName(): String
+  def getRange(): Range
+  def remove(): Unit
+  def setName(name: String): NamedRange
+  def setRange(range: Range): NamedRange
 }
 
 object NamedRange {
@@ -30,43 +29,5 @@ object NamedRange {
     val __obj = js.Dynamic.literal(getName = js.Any.fromFunction0(getName), getRange = js.Any.fromFunction0(getRange), remove = js.Any.fromFunction0(remove), setName = js.Any.fromFunction1(setName), setRange = js.Any.fromFunction1(setRange))
     __obj.asInstanceOf[NamedRange]
   }
-  @scala.inline
-  implicit class NamedRangeOps[Self <: NamedRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRange(value: () => Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetName(value: String => NamedRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetRange(value: Range => NamedRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRange")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait RegisterDBProxyTargetsResponse extends js.Object {
 
 object RegisterDBProxyTargetsResponse {
   @scala.inline
-  def apply(): RegisterDBProxyTargetsResponse = {
+  def apply(DBProxyTargets: TargetList = null): RegisterDBProxyTargetsResponse = {
     val __obj = js.Dynamic.literal()
+    if (DBProxyTargets != null) __obj.updateDynamic("DBProxyTargets")(DBProxyTargets.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterDBProxyTargetsResponse]
   }
-  @scala.inline
-  implicit class RegisterDBProxyTargetsResponseOps[Self <: RegisterDBProxyTargetsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBProxyTargets(value: TargetList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxyTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBProxyTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxyTargets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

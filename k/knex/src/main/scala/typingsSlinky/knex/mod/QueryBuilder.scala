@@ -9,10 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class QueryBuilder[TRecord /* <: js.Object */, TResult] ()
   extends ChainableInterface[ResolveResult[TResult]]
-     with QueryInterface[TRecord, TResult]
-     with ColumnDescriptor[TRecord, TResult]
-     with RawBinding
-     with TableDescriptor {
+     with QueryInterface[TRecord, TResult] {
   var and: QueryBuilder[TRecord, TResult] = js.native
   var not: QueryBuilder[TRecord, TResult] = js.native
   var or: QueryBuilder[TRecord, TResult] = js.native

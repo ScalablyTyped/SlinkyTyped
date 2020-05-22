@@ -64,20 +64,16 @@ trait PivotField extends ClientObject {
     * [Api set: ExcelApi 1.8]
     */
   var subtotals: Subtotals = js.native
-  def applyFilter(filter: PivotDateFilter): Unit = js.native
-  def applyFilter(filter: PivotFilters): Unit = js.native
-  def applyFilter(filter: PivotLabelFilter): Unit = js.native
-  def applyFilter(filter: PivotManualFilter): Unit = js.native
   /**
     * Sets one or multiple of the field's current PivotFilters and applies them to the field.
-    If the provided filter(s) are invalid or cannot be applied, an exception is thrown.
+    If the provided filters are invalid or cannot be applied, an exception is thrown.
     *
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     *
     * @param filter A configured specific PivotFilter or a PivotFilters interface containing multiple configured filters.
     */
-  def applyFilter(filter: PivotValueFilter): Unit = js.native
+  def applyFilter(filter: PivotFilters): Unit = js.native
   /**
     * Clears all criteria from all of the field's filters. This removes any active filtering on the field.
     *
@@ -170,7 +166,7 @@ trait PivotField extends ClientObject {
     *
     * [Api set: ExcelApi 1.8]
     *
-    * @param sortBy Represents whether the sorting is done in an ascending or descending order.
+    * @param sortBy Specifies if the sorting is done in ascending or descending order.
     */
   def sortByLabels(sortBy: SortBy): Unit = js.native
   /**
@@ -179,7 +175,7 @@ trait PivotField extends ClientObject {
     *
     * [Api set: ExcelApi 1.9]
     *
-    * @param sortBy Represents whether the sorting is done in an ascending or descending order.
+    * @param sortBy Specifies if the sorting is done in ascending or descending order.
     * @param valuesHierarchy Specifies the values hierarchy on the data axis to be used for sorting.
     * @param pivotItemScope The items that should be used for the scope of the sorting. These will be the
     items that make up the row or column that you want to sort on. If a string is used instead of a PivotItem,
@@ -194,7 +190,7 @@ trait PivotField extends ClientObject {
     *
     * [Api set: ExcelApi 1.9]
     *
-    * @param sortBy Represents whether the sorting is done in an ascending or descending order.
+    * @param sortBy Specifies if the sorting is done in ascending or descending order.
     * @param valuesHierarchy Specifies the values hierarchy on the data axis to be used for sorting.
     * @param pivotItemScope The items that should be used for the scope of the sorting. These will be the
     items that make up the row or column that you want to sort on. If a string is used instead of a PivotItem,

@@ -12,8 +12,14 @@ trait Volume extends js.Object
 
 object Volume {
   @scala.inline
-  implicit def apply(value: HostPathVolume): Volume = value.asInstanceOf[Volume]
+  def SharedVolume(kind: typingsSlinky.pulumiCloud.pulumiCloudStrings.SharedVolume, name: String): Volume = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Volume]
+  }
   @scala.inline
-  implicit def apply(value: SharedVolume): Volume = value.asInstanceOf[Volume]
+  def HostPathVolume(kind: typingsSlinky.pulumiCloud.pulumiCloudStrings.HostPathVolume, path: String): Volume = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Volume]
+  }
 }
 

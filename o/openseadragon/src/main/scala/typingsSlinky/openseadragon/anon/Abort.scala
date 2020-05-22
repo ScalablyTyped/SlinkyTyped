@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Abort extends js.Object {
-  var abort: js.UndefOr[js.Function0[Unit]] = js.native
-  var ajaxHeaders: js.UndefOr[String] = js.native
-  var ajaxWithCredentials: js.UndefOr[Boolean] = js.native
-  var callback: js.UndefOr[js.Function0[Unit]] = js.native
-  var crossOriginPolicy: js.UndefOr[String | Boolean] = js.native
-  var loadWithAjax: js.UndefOr[String] = js.native
-  var src: js.UndefOr[String] = js.native
+  var abort: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var ajaxHeaders: js.UndefOr[String] = js.undefined
+  var ajaxWithCredentials: js.UndefOr[Boolean] = js.undefined
+  var callback: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var crossOriginPolicy: js.UndefOr[String | Boolean] = js.undefined
+  var loadWithAjax: js.UndefOr[String] = js.undefined
+  var src: js.UndefOr[String] = js.undefined
 }
 
 object Abort {
   @scala.inline
-  def apply(): Abort = {
+  def apply(
+    abort: () => Unit = null,
+    ajaxHeaders: String = null,
+    ajaxWithCredentials: js.UndefOr[Boolean] = js.undefined,
+    callback: () => Unit = null,
+    crossOriginPolicy: String | Boolean = null,
+    loadWithAjax: String = null,
+    src: String = null
+  ): Abort = {
     val __obj = js.Dynamic.literal()
+    if (abort != null) __obj.updateDynamic("abort")(js.Any.fromFunction0(abort))
+    if (ajaxHeaders != null) __obj.updateDynamic("ajaxHeaders")(ajaxHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(ajaxWithCredentials)) __obj.updateDynamic("ajaxWithCredentials")(ajaxWithCredentials.get.asInstanceOf[js.Any])
+    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction0(callback))
+    if (crossOriginPolicy != null) __obj.updateDynamic("crossOriginPolicy")(crossOriginPolicy.asInstanceOf[js.Any])
+    if (loadWithAjax != null) __obj.updateDynamic("loadWithAjax")(loadWithAjax.asInstanceOf[js.Any])
+    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
     __obj.asInstanceOf[Abort]
   }
-  @scala.inline
-  implicit class AbortOps[Self <: Abort] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbort(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutAbort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxHeaders(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxWithCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxWithCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxWithCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxWithCredentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossOriginPolicy(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOriginPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossOriginPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOriginPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadWithAjax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadWithAjax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadWithAjax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadWithAjax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

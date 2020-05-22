@@ -23,7 +23,14 @@ trait Options extends Options_ {
   /** Attach a hook that is invoked before a vnode is diffed. */
   var _diff: js.UndefOr[js.Function1[/* vnode */ VNode[js.Object], Unit]] = js.native
   /** Attach a hook that is invoked before a hook's state is queried. */
-  var _hook: js.UndefOr[js.Function1[/* component */ Component[js.Object, js.Object], Unit]] = js.native
+  var _hook: js.UndefOr[
+    js.Function3[
+      /* component */ Component[js.Object, js.Object], 
+      /* index */ Double, 
+      /* type */ HookType, 
+      Unit
+    ]
+  ] = js.native
   /** Attach a hook that is invoked before a vnode has rendered. */
   var _render: js.UndefOr[js.Function1[/* vnode */ VNode[js.Object], Unit]] = js.native
   /** Attach a hook that is invoked before render, mainly to check the arguments. */
@@ -34,6 +41,8 @@ trait Options extends Options_ {
       Unit
     ]
   ] = js.native
+  /** Bypass effect execution. Currenty only used in devtools for hooks inspection */
+  var _skipEffects: js.UndefOr[Boolean] = js.native
   /** Attach a hook that is invoked after an error is caught in a component but before calling lifecycle hooks */
   def _catchError(error: js.Any, vnode: VNode[js.Object]): Unit = js.native
   def _catchError(error: js.Any, vnode: VNode[js.Object], oldVNode: VNode[js.Object]): Unit = js.native

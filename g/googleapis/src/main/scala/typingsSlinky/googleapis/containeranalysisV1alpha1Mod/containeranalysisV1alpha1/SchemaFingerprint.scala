@@ -29,53 +29,12 @@ trait SchemaFingerprint extends js.Object {
 
 object SchemaFingerprint {
   @scala.inline
-  def apply(): SchemaFingerprint = {
+  def apply(v1Name: String = null, v2Blob: js.Array[String] = null, v2Name: String = null): SchemaFingerprint = {
     val __obj = js.Dynamic.literal()
+    if (v1Name != null) __obj.updateDynamic("v1Name")(v1Name.asInstanceOf[js.Any])
+    if (v2Blob != null) __obj.updateDynamic("v2Blob")(v2Blob.asInstanceOf[js.Any])
+    if (v2Name != null) __obj.updateDynamic("v2Name")(v2Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFingerprint]
   }
-  @scala.inline
-  implicit class SchemaFingerprintOps[Self <: SchemaFingerprint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withV1Name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v1Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutV1Name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v1Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withV2Blob(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v2Blob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutV2Blob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v2Blob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withV2Name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v2Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutV2Name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v2Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

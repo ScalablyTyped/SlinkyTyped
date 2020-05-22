@@ -10,151 +10,73 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@js.native
 trait TableLoadOptions extends js.Object {
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets or sets whether the borders are visible or not. True if they are visible, false if they are hidden.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var borderVisible: js.UndefOr[Boolean] = js.native
+  var borderVisible: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the number of columns in the table.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var columnCount: js.UndefOr[Boolean] = js.native
+  var columnCount: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the ID of the table. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the Paragraph object that contains the Table object.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var paragraph: js.UndefOr[ParagraphLoadOptions] = js.native
+  var paragraph: js.UndefOr[ParagraphLoadOptions] = js.undefined
   /**
     *
     * Gets the number of rows in the table.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var rowCount: js.UndefOr[Boolean] = js.native
+  var rowCount: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets all of the table rows.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var rows: js.UndefOr[TableRowCollectionLoadOptions] = js.native
+  var rows: js.UndefOr[TableRowCollectionLoadOptions] = js.undefined
 }
 
 object TableLoadOptions {
   @scala.inline
-  def apply(): TableLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    borderVisible: js.UndefOr[Boolean] = js.undefined,
+    columnCount: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[Boolean] = js.undefined,
+    paragraph: ParagraphLoadOptions = null,
+    rowCount: js.UndefOr[Boolean] = js.undefined,
+    rows: TableRowCollectionLoadOptions = null
+  ): TableLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderVisible)) __obj.updateDynamic("borderVisible")(borderVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnCount)) __obj.updateDynamic("columnCount")(columnCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (paragraph != null) __obj.updateDynamic("paragraph")(paragraph.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowCount)) __obj.updateDynamic("rowCount")(rowCount.get.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableLoadOptions]
   }
-  @scala.inline
-  implicit class TableLoadOptionsOps[Self <: TableLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnCount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParagraph(value: ParagraphLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParagraph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: TableRowCollectionLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

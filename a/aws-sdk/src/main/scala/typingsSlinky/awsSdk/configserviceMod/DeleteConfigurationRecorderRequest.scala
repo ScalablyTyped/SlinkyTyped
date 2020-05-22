@@ -18,19 +18,5 @@ object DeleteConfigurationRecorderRequest {
     val __obj = js.Dynamic.literal(ConfigurationRecorderName = ConfigurationRecorderName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteConfigurationRecorderRequest]
   }
-  @scala.inline
-  implicit class DeleteConfigurationRecorderRequestOps[Self <: DeleteConfigurationRecorderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationRecorderName(value: RecorderName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationRecorderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

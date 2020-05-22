@@ -42,89 +42,22 @@ trait ApplicationSummary extends js.Object {
 
 object ApplicationSummary {
   @scala.inline
-  def apply(ApplicationId: string, Author: string, Description: string, Name: string): ApplicationSummary = {
+  def apply(
+    ApplicationId: string,
+    Author: string,
+    Description: string,
+    Name: string,
+    CreationTime: string = null,
+    HomePageUrl: string = null,
+    Labels: listOfString = null,
+    SpdxLicenseId: string = null
+  ): ApplicationSummary = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], Author = Author.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (HomePageUrl != null) __obj.updateDynamic("HomePageUrl")(HomePageUrl.asInstanceOf[js.Any])
+    if (Labels != null) __obj.updateDynamic("Labels")(Labels.asInstanceOf[js.Any])
+    if (SpdxLicenseId != null) __obj.updateDynamic("SpdxLicenseId")(SpdxLicenseId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationSummary]
   }
-  @scala.inline
-  implicit class ApplicationSummaryOps[Self <: ApplicationSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthor(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHomePageUrl(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomePageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHomePageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomePageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpdxLicenseId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpdxLicenseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpdxLicenseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpdxLicenseId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

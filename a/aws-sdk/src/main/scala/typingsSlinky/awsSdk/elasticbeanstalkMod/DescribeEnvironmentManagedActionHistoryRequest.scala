@@ -26,65 +26,18 @@ trait DescribeEnvironmentManagedActionHistoryRequest extends js.Object {
 
 object DescribeEnvironmentManagedActionHistoryRequest {
   @scala.inline
-  def apply(): DescribeEnvironmentManagedActionHistoryRequest = {
+  def apply(
+    EnvironmentId: EnvironmentId = null,
+    EnvironmentName: EnvironmentName = null,
+    MaxItems: js.UndefOr[Integer] = js.undefined,
+    NextToken: String = null
+  ): DescribeEnvironmentManagedActionHistoryRequest = {
     val __obj = js.Dynamic.literal()
+    if (EnvironmentId != null) __obj.updateDynamic("EnvironmentId")(EnvironmentId.asInstanceOf[js.Any])
+    if (EnvironmentName != null) __obj.updateDynamic("EnvironmentName")(EnvironmentName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxItems)) __obj.updateDynamic("MaxItems")(MaxItems.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEnvironmentManagedActionHistoryRequest]
   }
-  @scala.inline
-  implicit class DescribeEnvironmentManagedActionHistoryRequestOps[Self <: DescribeEnvironmentManagedActionHistoryRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnvironmentId(value: EnvironmentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentName(value: EnvironmentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

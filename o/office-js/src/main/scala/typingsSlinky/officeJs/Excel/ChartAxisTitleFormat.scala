@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait ChartAxisTitleFormat extends ClientObject {
   /**
     *
-    * Represents the border format, which includes color, linestyle, and weight.
+    * Specifies the chart axis title's border format, which includes color, linestyle, and weight.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -30,14 +30,14 @@ trait ChartAxisTitleFormat extends ClientObject {
   var context_ChartAxisTitleFormat: RequestContext = js.native
   /**
     *
-    * Represents chart fill formatting.
+    * Specifies the chart axis title's fill formatting.
     *
     * [Api set: ExcelApi 1.8]
     */
   val fill: ChartFill = js.native
   /**
     *
-    * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
+    * Specifies the chart axis title's font attributes, such as font name, font size, color, etc. of chart axis title object.
     *
     * [Api set: ExcelApi 1.1]
     */

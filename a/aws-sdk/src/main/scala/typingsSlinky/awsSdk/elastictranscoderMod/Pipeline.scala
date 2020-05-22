@@ -54,149 +54,32 @@ trait Pipeline extends js.Object {
 
 object Pipeline {
   @scala.inline
-  def apply(): Pipeline = {
+  def apply(
+    Arn: String = null,
+    AwsKmsKeyArn: KeyArn = null,
+    ContentConfig: PipelineOutputConfig = null,
+    Id: Id = null,
+    InputBucket: BucketName = null,
+    Name: Name = null,
+    Notifications: Notifications = null,
+    OutputBucket: BucketName = null,
+    Role: Role = null,
+    Status: PipelineStatus = null,
+    ThumbnailConfig: PipelineOutputConfig = null
+  ): Pipeline = {
     val __obj = js.Dynamic.literal()
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (AwsKmsKeyArn != null) __obj.updateDynamic("AwsKmsKeyArn")(AwsKmsKeyArn.asInstanceOf[js.Any])
+    if (ContentConfig != null) __obj.updateDynamic("ContentConfig")(ContentConfig.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (InputBucket != null) __obj.updateDynamic("InputBucket")(InputBucket.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Notifications != null) __obj.updateDynamic("Notifications")(Notifications.asInstanceOf[js.Any])
+    if (OutputBucket != null) __obj.updateDynamic("OutputBucket")(OutputBucket.asInstanceOf[js.Any])
+    if (Role != null) __obj.updateDynamic("Role")(Role.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (ThumbnailConfig != null) __obj.updateDynamic("ThumbnailConfig")(ThumbnailConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pipeline]
   }
-  @scala.inline
-  implicit class PipelineOps[Self <: Pipeline] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsKmsKeyArn(value: KeyArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsKmsKeyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsKmsKeyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsKmsKeyArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentConfig(value: PipelineOutputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputBucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputBucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotifications(value: Notifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Notifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Notifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputBucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputBucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: Role): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: PipelineStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailConfig(value: PipelineOutputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbnailConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbnailConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

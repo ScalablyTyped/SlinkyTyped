@@ -8,17 +8,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var chunkOverhead: `0` = js.native
-  var entryChunkMultiplicator: `1` = js.native
+  var chunkOverhead: `0`
+  var entryChunkMultiplicator: `1`
   /**
     * Size in byte.
     * maximum size prefered for each chunk.
     *
     * Default: 51200
     */
-  var maxSize: `50000` = js.native
+  var maxSize: `50000`
   /**
     * Size in byte.
     * Only chunks bigger than the specified minSize are stored in records.
@@ -27,7 +26,7 @@ trait Options extends js.Object {
     *
     * Default: 30720
     */
-  var minSize: `30000` = js.native
+  var minSize: `30000`
 }
 
 object Options {
@@ -36,37 +35,5 @@ object Options {
     val __obj = js.Dynamic.literal(chunkOverhead = chunkOverhead.asInstanceOf[js.Any], entryChunkMultiplicator = entryChunkMultiplicator.asInstanceOf[js.Any], maxSize = maxSize.asInstanceOf[js.Any], minSize = minSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChunkOverhead(value: `0`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkOverhead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntryChunkMultiplicator(value: `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryChunkMultiplicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxSize(value: `50000`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinSize(value: `30000`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

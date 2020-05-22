@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * TableRow...
   */
-@js.native
 trait ITableRow extends js.Object {
   /**
     * Array of field values [{qText, qIsNumeric, qNumber},..]
     */
-  var vqValue: js.Array[IFieldValue] = js.native
+  var vqValue: js.Array[IFieldValue]
 }
 
 object ITableRow {
@@ -21,19 +20,5 @@ object ITableRow {
     val __obj = js.Dynamic.literal(vqValue = vqValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITableRow]
   }
-  @scala.inline
-  implicit class ITableRowOps[Self <: ITableRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVqValue(value: js.Array[IFieldValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vqValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

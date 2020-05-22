@@ -22,41 +22,14 @@ trait CreateLoginProfileRequest extends js.Object {
 
 object CreateLoginProfileRequest {
   @scala.inline
-  def apply(Password: passwordType, UserName: userNameType): CreateLoginProfileRequest = {
+  def apply(
+    Password: passwordType,
+    UserName: userNameType,
+    PasswordResetRequired: js.UndefOr[booleanType] = js.undefined
+  ): CreateLoginProfileRequest = {
     val __obj = js.Dynamic.literal(Password = Password.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any])
+    if (!js.isUndefined(PasswordResetRequired)) __obj.updateDynamic("PasswordResetRequired")(PasswordResetRequired.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLoginProfileRequest]
   }
-  @scala.inline
-  implicit class CreateLoginProfileRequestOps[Self <: CreateLoginProfileRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPassword(value: passwordType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserName(value: userNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPasswordResetRequired(value: booleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PasswordResetRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordResetRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PasswordResetRequired")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

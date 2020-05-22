@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait SameType[A, B] extends js.Object
 
-object SameType {
-  @scala.inline
-  def `false`[A, B]: typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`false` = false.asInstanceOf[typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`false`]
-  @scala.inline
-  def `true`[A, B]: typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`true` = true.asInstanceOf[typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`true`]
-  @scala.inline
-  implicit def apply[A, B](value: IsNever[B]): SameType[A, B] = value.asInstanceOf[SameType[A, B]]
-}
-

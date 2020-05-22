@@ -6,36 +6,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictkey extends /* key */ StringDictionary[QualifiedAttribute | String] {
-  var Extension: js.UndefOr[String] = js.native
+  var Extension: js.UndefOr[String] = js.undefined
 }
 
 object Dictkey {
   @scala.inline
-  def apply(): Dictkey = {
+  def apply(
+    Extension: String = null,
+    StringDictionary: /* key */ StringDictionary[QualifiedAttribute | String] = null
+  ): Dictkey = {
     val __obj = js.Dynamic.literal()
+    if (Extension != null) __obj.updateDynamic("Extension")(Extension.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Dictkey]
   }
-  @scala.inline
-  implicit class DictkeyOps[Self <: Dictkey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Extension")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -39,60 +39,12 @@ object TrainingJobDefinition {
     OutputDataConfig: OutputDataConfig,
     ResourceConfig: ResourceConfig,
     StoppingCondition: StoppingCondition,
-    TrainingInputMode: TrainingInputMode
+    TrainingInputMode: TrainingInputMode,
+    HyperParameters: HyperParameters = null
   ): TrainingJobDefinition = {
     val __obj = js.Dynamic.literal(InputDataConfig = InputDataConfig.asInstanceOf[js.Any], OutputDataConfig = OutputDataConfig.asInstanceOf[js.Any], ResourceConfig = ResourceConfig.asInstanceOf[js.Any], StoppingCondition = StoppingCondition.asInstanceOf[js.Any], TrainingInputMode = TrainingInputMode.asInstanceOf[js.Any])
+    if (HyperParameters != null) __obj.updateDynamic("HyperParameters")(HyperParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrainingJobDefinition]
   }
-  @scala.inline
-  implicit class TrainingJobDefinitionOps[Self <: TrainingJobDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputDataConfig(value: InputDataConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutputDataConfig(value: OutputDataConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputDataConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceConfig(value: ResourceConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStoppingCondition(value: StoppingCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrainingInputMode(value: TrainingInputMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingInputMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHyperParameters(value: HyperParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHyperParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

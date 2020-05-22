@@ -26,65 +26,18 @@ trait TransactWriteItem extends js.Object {
 
 object TransactWriteItem {
   @scala.inline
-  def apply(): TransactWriteItem = {
+  def apply(
+    ConditionCheck: ConditionCheck = null,
+    Delete: Delete = null,
+    Put: Put = null,
+    Update: Update = null
+  ): TransactWriteItem = {
     val __obj = js.Dynamic.literal()
+    if (ConditionCheck != null) __obj.updateDynamic("ConditionCheck")(ConditionCheck.asInstanceOf[js.Any])
+    if (Delete != null) __obj.updateDynamic("Delete")(Delete.asInstanceOf[js.Any])
+    if (Put != null) __obj.updateDynamic("Put")(Put.asInstanceOf[js.Any])
+    if (Update != null) __obj.updateDynamic("Update")(Update.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactWriteItem]
   }
-  @scala.inline
-  implicit class TransactWriteItemOps[Self <: TransactWriteItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConditionCheck(value: ConditionCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditionCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Delete): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPut(value: Put): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Put")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Put")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Update): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

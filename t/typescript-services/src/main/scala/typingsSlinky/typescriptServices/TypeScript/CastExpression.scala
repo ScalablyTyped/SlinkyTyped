@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CastExpression extends AST {
-  var expression: AST = js.native
-  var `type`: AST = js.native
-  def structuralEquals(ast: CastExpression, includingPosition: Boolean): Boolean = js.native
+  var expression: AST
+  var `type`: AST
+  def structuralEquals(ast: CastExpression, includingPosition: Boolean): Boolean
 }
 
 object CastExpression {
@@ -41,31 +40,5 @@ object CastExpression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CastExpression]
   }
-  @scala.inline
-  implicit class CastExpressionOps[Self <: CastExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: AST): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStructuralEquals(value: (CastExpression, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structuralEquals")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: AST): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

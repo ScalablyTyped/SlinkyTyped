@@ -18,41 +18,11 @@ trait DescribeVpcPeeringConnectionsResult extends js.Object {
 
 object DescribeVpcPeeringConnectionsResult {
   @scala.inline
-  def apply(): DescribeVpcPeeringConnectionsResult = {
+  def apply(NextToken: String = null, VpcPeeringConnections: VpcPeeringConnectionList = null): DescribeVpcPeeringConnectionsResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (VpcPeeringConnections != null) __obj.updateDynamic("VpcPeeringConnections")(VpcPeeringConnections.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVpcPeeringConnectionsResult]
   }
-  @scala.inline
-  implicit class DescribeVpcPeeringConnectionsResultOps[Self <: DescribeVpcPeeringConnectionsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcPeeringConnections(value: VpcPeeringConnectionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcPeeringConnections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnections")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

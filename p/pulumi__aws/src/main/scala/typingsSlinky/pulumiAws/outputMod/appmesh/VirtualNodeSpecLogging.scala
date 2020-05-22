@@ -14,29 +14,10 @@ trait VirtualNodeSpecLogging extends js.Object {
 
 object VirtualNodeSpecLogging {
   @scala.inline
-  def apply(): VirtualNodeSpecLogging = {
+  def apply(accessLog: VirtualNodeSpecLoggingAccessLog = null): VirtualNodeSpecLogging = {
     val __obj = js.Dynamic.literal()
+    if (accessLog != null) __obj.updateDynamic("accessLog")(accessLog.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualNodeSpecLogging]
   }
-  @scala.inline
-  implicit class VirtualNodeSpecLoggingOps[Self <: VirtualNodeSpecLogging] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessLog(value: VirtualNodeSpecLoggingAccessLog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessLog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessLog")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

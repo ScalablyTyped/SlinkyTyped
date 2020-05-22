@@ -18,41 +18,11 @@ trait BatchDeleteImageResponse extends js.Object {
 
 object BatchDeleteImageResponse {
   @scala.inline
-  def apply(): BatchDeleteImageResponse = {
+  def apply(failures: ImageFailureList = null, imageIds: ImageIdentifierList = null): BatchDeleteImageResponse = {
     val __obj = js.Dynamic.literal()
+    if (failures != null) __obj.updateDynamic("failures")(failures.asInstanceOf[js.Any])
+    if (imageIds != null) __obj.updateDynamic("imageIds")(imageIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDeleteImageResponse]
   }
-  @scala.inline
-  implicit class BatchDeleteImageResponseOps[Self <: BatchDeleteImageResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailures(value: ImageFailureList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageIds(value: ImageIdentifierList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

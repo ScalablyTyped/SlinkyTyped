@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PaymentOption extends js.Object {
-  var paymentOption: card | paypal | paypalCredit = js.native
+  var paymentOption: card | paypal | paypalCredit
 }
 
 object PaymentOption {
@@ -18,19 +17,5 @@ object PaymentOption {
     val __obj = js.Dynamic.literal(paymentOption = paymentOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentOption]
   }
-  @scala.inline
-  implicit class PaymentOptionOps[Self <: PaymentOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPaymentOption(value: card | paypal | paypalCredit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

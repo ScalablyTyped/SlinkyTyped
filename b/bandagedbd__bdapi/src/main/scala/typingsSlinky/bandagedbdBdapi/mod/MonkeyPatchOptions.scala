@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MonkeyPatchOptions extends js.Object {
-  var after: js.UndefOr[PatchFunction] = js.native
-  var before: js.UndefOr[PatchFunction] = js.native
-  var displayName: js.UndefOr[String] = js.native
-  var instead: js.UndefOr[PatchFunction] = js.native
-  var once: js.UndefOr[Boolean] = js.native
-  var silent: js.UndefOr[Boolean] = js.native
+  var after: js.UndefOr[PatchFunction] = js.undefined
+  var before: js.UndefOr[PatchFunction] = js.undefined
+  var displayName: js.UndefOr[String] = js.undefined
+  var instead: js.UndefOr[PatchFunction] = js.undefined
+  var once: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.undefined
 }
 
 object MonkeyPatchOptions {
   @scala.inline
-  def apply(): MonkeyPatchOptions = {
+  def apply(
+    after: /* data */ PatchData => js.Any = null,
+    before: /* data */ PatchData => js.Any = null,
+    displayName: String = null,
+    instead: /* data */ PatchData => js.Any = null,
+    once: js.UndefOr[Boolean] = js.undefined,
+    silent: js.UndefOr[Boolean] = js.undefined
+  ): MonkeyPatchOptions = {
     val __obj = js.Dynamic.literal()
+    if (after != null) __obj.updateDynamic("after")(js.Any.fromFunction1(after))
+    if (before != null) __obj.updateDynamic("before")(js.Any.fromFunction1(before))
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (instead != null) __obj.updateDynamic("instead")(js.Any.fromFunction1(instead))
+    if (!js.isUndefined(once)) __obj.updateDynamic("once")(once.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MonkeyPatchOptions]
   }
-  @scala.inline
-  implicit class MonkeyPatchOptionsOps[Self <: MonkeyPatchOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfter(value: /* data */ PatchData => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBefore(value: /* data */ PatchData => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstead(value: /* data */ PatchData => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instead")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInstead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

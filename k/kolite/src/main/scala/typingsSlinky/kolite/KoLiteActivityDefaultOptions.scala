@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KoLiteActivityDefaultOptions extends js.Object {
-  var activityClass: js.UndefOr[String] = js.native
-  var container: js.UndefOr[String] = js.native
-  var inactiveClass: js.UndefOr[String] = js.native
+  var activityClass: js.UndefOr[String] = js.undefined
+  var container: js.UndefOr[String] = js.undefined
+  var inactiveClass: js.UndefOr[String] = js.undefined
 }
 
 object KoLiteActivityDefaultOptions {
   @scala.inline
-  def apply(): KoLiteActivityDefaultOptions = {
+  def apply(activityClass: String = null, container: String = null, inactiveClass: String = null): KoLiteActivityDefaultOptions = {
     val __obj = js.Dynamic.literal()
+    if (activityClass != null) __obj.updateDynamic("activityClass")(activityClass.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (inactiveClass != null) __obj.updateDynamic("inactiveClass")(inactiveClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[KoLiteActivityDefaultOptions]
   }
-  @scala.inline
-  implicit class KoLiteActivityDefaultOptionsOps[Self <: KoLiteActivityDefaultOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInactiveClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInactiveClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveClass")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

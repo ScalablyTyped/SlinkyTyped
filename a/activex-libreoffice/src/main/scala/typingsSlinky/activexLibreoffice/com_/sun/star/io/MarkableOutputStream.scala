@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * The implementation stores the data as long as marks exists and later writes these data into the output stream, that has been set previously at the
   * {@link XActiveDataSource} interface.
   */
-@js.native
 trait MarkableOutputStream
   extends XOutputStream
      with XMarkableStream

@@ -8,12 +8,10 @@ import typingsSlinky.graphqlCompose.definitionsMod.DirectiveArgs
 import typingsSlinky.graphqlCompose.definitionsMod.Extensions
 import typingsSlinky.graphqlCompose.definitionsMod.ExtensionsDirective
 import typingsSlinky.graphqlCompose.graphqlMod.GraphQLEnumType
-import typingsSlinky.graphqlCompose.inputTypeComposerMod.ComposeInputType
-import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeArgumentType
-import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeOutputType
-import typingsSlinky.graphqlCompose.schemaComposerMod.AnyComposeType
-import typingsSlinky.graphqlCompose.schemaComposerMod.AnyType
+import typingsSlinky.graphqlCompose.objectTypeComposerMod._ComposeOutputType
 import typingsSlinky.graphqlCompose.schemaComposerMod.SchemaComposer
+import typingsSlinky.graphqlCompose.schemaComposerMod._AnyComposeType
+import typingsSlinky.graphqlCompose.schemaComposerMod._AnyType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,12 +19,9 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql-compose/lib/EnumTypeComposer", "EnumTypeComposer")
 @js.native
 class EnumTypeComposer[TContext] protected ()
-  extends ComposeArgumentType
-     with AnyComposeType[TContext]
-     with AnyType[TContext]
-     with ComposeEnumType
-     with ComposeInputType
-     with ComposeOutputType[js.Any, TContext] {
+  extends _AnyComposeType[TContext]
+     with _AnyType[TContext]
+     with _ComposeOutputType[js.Any, TContext] {
   def this(gqType: GraphQLEnumType, schemaComposer: SchemaComposer[TContext]) = this()
   var gqType: GraphQLEnumTypeExtended = js.native
   var schemaComposer: SchemaComposer[TContext] = js.native

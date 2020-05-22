@@ -10,27 +10,18 @@ trait LambdaAction extends js.Object {
     * The ARN of the Lambda function that is executed.
     */
   var functionArn: AmazonResourceName = js.native
+  /**
+    * You can configure the action payload when you send a message to a Lambda function.
+    */
+  var payload: js.UndefOr[Payload] = js.native
 }
 
 object LambdaAction {
   @scala.inline
-  def apply(functionArn: AmazonResourceName): LambdaAction = {
+  def apply(functionArn: AmazonResourceName, payload: Payload = null): LambdaAction = {
     val __obj = js.Dynamic.literal(functionArn = functionArn.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
     __obj.asInstanceOf[LambdaAction]
   }
-  @scala.inline
-  implicit class LambdaActionOps[Self <: LambdaAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

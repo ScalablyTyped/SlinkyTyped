@@ -14,14 +14,13 @@ import scala.scalajs.js.annotation._
   * We're extending {@link OpenCommandArgument} even more, to provide some opening flags on to webdav.
   * @see XCommandProcessor
   */
-@js.native
 trait OpenCommandArgument3 extends OpenCommandArgument2 {
   /**
     * Flags to use for opening.
     *
     * WebDav e.g. uses "KeepAlive" to enable/disable the respective http feature.
     */
-  var OpeningFlags: SafeArray[NamedValue] = js.native
+  var OpeningFlags: SafeArray[NamedValue]
 }
 
 object OpenCommandArgument3 {
@@ -37,19 +36,5 @@ object OpenCommandArgument3 {
     val __obj = js.Dynamic.literal(Mode = Mode.asInstanceOf[js.Any], OpeningFlags = OpeningFlags.asInstanceOf[js.Any], Priority = Priority.asInstanceOf[js.Any], Properties = Properties.asInstanceOf[js.Any], Sink = Sink.asInstanceOf[js.Any], SortingInfo = SortingInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenCommandArgument3]
   }
-  @scala.inline
-  implicit class OpenCommandArgument3Ops[Self <: OpenCommandArgument3] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOpeningFlags(value: SafeArray[NamedValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpeningFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,17 +1,19 @@
 package typingsSlinky.cypress.JQuery
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.TouchList
 import org.scalajs.dom.raw.Window
 import typingsSlinky.cypress.cypressStrings.mouseout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MouseLeaveEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] extends MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] {
   // Special handling by jQuery.
   @JSName("type")
-  var type_MouseLeaveEvent: mouseout = js.native
+  var type_MouseLeaveEvent: mouseout
 }
 
 object MouseLeaveEvent {
@@ -49,25 +51,37 @@ object MouseLeaveEvent {
     toElement: Element,
     `type`: mouseout,
     view: Window,
-    which: Double
+    which: Double,
+    changedTouches: TouchList = null,
+    char: String = null,
+    charCode: js.UndefOr[Double] = js.undefined,
+    key: String = null,
+    keyCode: js.UndefOr[Double] = js.undefined,
+    namespace: String = null,
+    originalEvent: MouseEvent = null,
+    pointerId: js.UndefOr[Double] = js.undefined,
+    pointerType: String = null,
+    relatedTarget: js.UndefOr[Null | EventTarget] = js.undefined,
+    result: js.Any = null,
+    targetTouches: TouchList = null,
+    touches: TouchList = null
   ): MouseLeaveEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
     val __obj = js.Dynamic.literal(altKey = altKey.asInstanceOf[js.Any], bubbles = bubbles.asInstanceOf[js.Any], button = button.asInstanceOf[js.Any], buttons = buttons.asInstanceOf[js.Any], cancelable = cancelable.asInstanceOf[js.Any], clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], ctrlKey = ctrlKey.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], delegateTarget = delegateTarget.asInstanceOf[js.Any], detail = detail.asInstanceOf[js.Any], eventPhase = eventPhase.asInstanceOf[js.Any], isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), isImmediatePropagationStopped = js.Any.fromFunction0(isImmediatePropagationStopped), isPropagationStopped = js.Any.fromFunction0(isPropagationStopped), metaKey = metaKey.asInstanceOf[js.Any], offsetX = offsetX.asInstanceOf[js.Any], offsetY = offsetY.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), screenX = screenX.asInstanceOf[js.Any], screenY = screenY.asInstanceOf[js.Any], shiftKey = shiftKey.asInstanceOf[js.Any], stopImmediatePropagation = js.Any.fromFunction0(stopImmediatePropagation), stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], toElement = toElement.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any], which = which.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (changedTouches != null) __obj.updateDynamic("changedTouches")(changedTouches.asInstanceOf[js.Any])
+    if (char != null) __obj.updateDynamic("char")(char.asInstanceOf[js.Any])
+    if (!js.isUndefined(charCode)) __obj.updateDynamic("charCode")(charCode.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyCode)) __obj.updateDynamic("keyCode")(keyCode.get.asInstanceOf[js.Any])
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (originalEvent != null) __obj.updateDynamic("originalEvent")(originalEvent.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointerId)) __obj.updateDynamic("pointerId")(pointerId.get.asInstanceOf[js.Any])
+    if (pointerType != null) __obj.updateDynamic("pointerType")(pointerType.asInstanceOf[js.Any])
+    if (!js.isUndefined(relatedTarget)) __obj.updateDynamic("relatedTarget")(relatedTarget.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (targetTouches != null) __obj.updateDynamic("targetTouches")(targetTouches.asInstanceOf[js.Any])
+    if (touches != null) __obj.updateDynamic("touches")(touches.asInstanceOf[js.Any])
     __obj.asInstanceOf[MouseLeaveEvent[TDelegateTarget, TData, TCurrentTarget, TTarget]]
   }
-  @scala.inline
-  implicit class MouseLeaveEventOps[Self[tdelegatetarget, tdata, tcurrenttarget, ttarget] <: MouseLeaveEvent[tdelegatetarget, tdata, tcurrenttarget, ttarget], TDelegateTarget, TData, TCurrentTarget, TTarget] (val x: Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TDelegateTarget, TData, TCurrentTarget, TTarget]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) with Other]
-    @scala.inline
-    def withType(value: mouseout): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

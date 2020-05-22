@@ -22,47 +22,15 @@ trait ModelOutputConfiguration extends js.Object {
 
 object ModelOutputConfiguration {
   @scala.inline
-  def apply(format: ModelOutputDataFormat): ModelOutputConfiguration = {
+  def apply(
+    format: ModelOutputDataFormat,
+    csvIndexToVariableMap: CsvIndexToVariableMap = null,
+    jsonKeyToVariableMap: JsonKeyToVariableMap = null
+  ): ModelOutputConfiguration = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any])
+    if (csvIndexToVariableMap != null) __obj.updateDynamic("csvIndexToVariableMap")(csvIndexToVariableMap.asInstanceOf[js.Any])
+    if (jsonKeyToVariableMap != null) __obj.updateDynamic("jsonKeyToVariableMap")(jsonKeyToVariableMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelOutputConfiguration]
   }
-  @scala.inline
-  implicit class ModelOutputConfigurationOps[Self <: ModelOutputConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: ModelOutputDataFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCsvIndexToVariableMap(value: CsvIndexToVariableMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvIndexToVariableMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvIndexToVariableMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvIndexToVariableMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsonKeyToVariableMap(value: JsonKeyToVariableMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonKeyToVariableMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsonKeyToVariableMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonKeyToVariableMap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

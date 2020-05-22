@@ -6,19 +6,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ZeroClipboardErrorEvent extends ZeroClipboardEvent {
-  var actualValue: js.UndefOr[String] = js.native
-  var configuredValue: js.UndefOr[String] = js.native
-  var data: js.UndefOr[Dictionary[String]] = js.native
-  var errors: js.UndefOr[js.Array[_]] = js.native
-  var jsVersion: js.UndefOr[String] = js.native
-  var message: String = js.native
-  var minimumVersion: js.UndefOr[String] = js.native
-  var name: String = js.native
-  var property: js.UndefOr[String] = js.native
-  var swfVersion: js.UndefOr[String] = js.native
-  var version: js.UndefOr[String] = js.native
+  var actualValue: js.UndefOr[String] = js.undefined
+  var configuredValue: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[Dictionary[String]] = js.undefined
+  var errors: js.UndefOr[js.Array[_]] = js.undefined
+  var jsVersion: js.UndefOr[String] = js.undefined
+  var message: String
+  var minimumVersion: js.UndefOr[String] = js.undefined
+  var name: String
+  var property: js.UndefOr[String] = js.undefined
+  var swfVersion: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object ZeroClipboardErrorEvent {
@@ -30,139 +29,31 @@ object ZeroClipboardErrorEvent {
     relatedTarget: HTMLElement,
     target: HTMLElement,
     timeStamp: Double,
-    `type`: String
+    `type`: String,
+    actualValue: String = null,
+    client: ZeroClipboardClient = null,
+    configuredValue: String = null,
+    data: Dictionary[String] = null,
+    errors: js.Array[_] = null,
+    jsVersion: String = null,
+    minimumVersion: String = null,
+    property: String = null,
+    swfVersion: String = null,
+    version: String = null
   ): ZeroClipboardErrorEvent = {
     val __obj = js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], relatedTarget = relatedTarget.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (actualValue != null) __obj.updateDynamic("actualValue")(actualValue.asInstanceOf[js.Any])
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    if (configuredValue != null) __obj.updateDynamic("configuredValue")(configuredValue.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
+    if (jsVersion != null) __obj.updateDynamic("jsVersion")(jsVersion.asInstanceOf[js.Any])
+    if (minimumVersion != null) __obj.updateDynamic("minimumVersion")(minimumVersion.asInstanceOf[js.Any])
+    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
+    if (swfVersion != null) __obj.updateDynamic("swfVersion")(swfVersion.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZeroClipboardErrorEvent]
   }
-  @scala.inline
-  implicit class ZeroClipboardErrorEventOps[Self <: ZeroClipboardErrorEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActualValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActualValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfiguredValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuredValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfiguredValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuredValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwfVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swfVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwfVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swfVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

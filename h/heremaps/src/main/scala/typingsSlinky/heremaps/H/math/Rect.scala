@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Class defines a rectangle in 2-dimensional geometric space. It is used to represent the area in projected space.
   */
-@js.native
 trait Rect extends js.Object {
   /**
     * Method checks if provided coordinates lie within rectangle.
@@ -15,17 +14,17 @@ trait Rect extends js.Object {
     * @param y {number} - y-coordinate to check
     * @returns {boolean} - returns true if coordinates lie within rectangle, if parameters are isNaN returns false
     */
-  def containsXY(x: Double, y: Double): Boolean = js.native
+  def containsXY(x: Double, y: Double): Boolean
   /**
     * To get the rectangle's bottom-right vertex
     * @returns {H.math.Point}
     */
-  def getBottomRight(): Point = js.native
+  def getBottomRight(): Point
   /**
     * To get the rectangle's top-left vertex
     * @returns {H.math.Point}
     */
-  def getTopLeft(): Point = js.native
+  def getTopLeft(): Point
   /**
     * To set all values of the rectangle's edges
     * @param left {number} - The rectangle's left edge x value
@@ -33,7 +32,7 @@ trait Rect extends js.Object {
     * @param right {number} - The rectangle's right edge x value
     * @param bottom {number} - The rectangle's bottom edge y value
     */
-  def set(left: Double, top: Double, right: Double, bottom: Double): Unit = js.native
+  def set(left: Double, top: Double, right: Double, bottom: Double): Unit
 }
 
 object Rect {
@@ -47,37 +46,5 @@ object Rect {
     val __obj = js.Dynamic.literal(containsXY = js.Any.fromFunction2(containsXY), getBottomRight = js.Any.fromFunction0(getBottomRight), getTopLeft = js.Any.fromFunction0(getTopLeft), set = js.Any.fromFunction4(set))
     __obj.asInstanceOf[Rect]
   }
-  @scala.inline
-  implicit class RectOps[Self <: Rect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainsXY(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsXY")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetBottomRight(value: () => Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBottomRight")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTopLeft(value: () => Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTopLeft")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

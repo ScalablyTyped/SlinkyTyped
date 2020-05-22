@@ -30,59 +30,17 @@ trait DecreaseNodeGroupsInGlobalReplicationGroupMessage extends js.Object {
 
 object DecreaseNodeGroupsInGlobalReplicationGroupMessage {
   @scala.inline
-  def apply(ApplyImmediately: Boolean, GlobalReplicationGroupId: String, NodeGroupCount: Integer): DecreaseNodeGroupsInGlobalReplicationGroupMessage = {
+  def apply(
+    ApplyImmediately: Boolean,
+    GlobalReplicationGroupId: String,
+    NodeGroupCount: Integer,
+    GlobalNodeGroupsToRemove: GlobalNodeGroupIdList = null,
+    GlobalNodeGroupsToRetain: GlobalNodeGroupIdList = null
+  ): DecreaseNodeGroupsInGlobalReplicationGroupMessage = {
     val __obj = js.Dynamic.literal(ApplyImmediately = ApplyImmediately.asInstanceOf[js.Any], GlobalReplicationGroupId = GlobalReplicationGroupId.asInstanceOf[js.Any], NodeGroupCount = NodeGroupCount.asInstanceOf[js.Any])
+    if (GlobalNodeGroupsToRemove != null) __obj.updateDynamic("GlobalNodeGroupsToRemove")(GlobalNodeGroupsToRemove.asInstanceOf[js.Any])
+    if (GlobalNodeGroupsToRetain != null) __obj.updateDynamic("GlobalNodeGroupsToRetain")(GlobalNodeGroupsToRetain.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecreaseNodeGroupsInGlobalReplicationGroupMessage]
   }
-  @scala.inline
-  implicit class DecreaseNodeGroupsInGlobalReplicationGroupMessageOps[Self <: DecreaseNodeGroupsInGlobalReplicationGroupMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyImmediately(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyImmediately")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobalReplicationGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeGroupCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobalNodeGroupsToRemove(value: GlobalNodeGroupIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNodeGroupsToRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalNodeGroupsToRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNodeGroupsToRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalNodeGroupsToRetain(value: GlobalNodeGroupIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNodeGroupsToRetain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalNodeGroupsToRetain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNodeGroupsToRetain")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

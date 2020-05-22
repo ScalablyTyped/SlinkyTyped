@@ -8,244 +8,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PostCssPluginOptions extends js.Object {
-  var autoModules: js.UndefOr[Boolean] = js.native
-  var config: js.UndefOr[Boolean | Ctx] = js.native
-  var exec: js.UndefOr[Boolean] = js.native
-  var extensions: js.UndefOr[js.Array[String]] = js.native
-  var extract: js.UndefOr[Boolean | String] = js.native
-  var inject: js.UndefOr[Boolean | InsertAt] = js.native
-  var loaders: js.UndefOr[js.Array[_]] = js.native
-  var minimize: js.UndefOr[Boolean | CssNanoOptions] = js.native
-  var modules: js.UndefOr[Boolean | js.Any] = js.native
-  var name: js.UndefOr[js.Array[_ | js.Array[_]]] = js.native
-  var namedExports: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | Boolean]] = js.native
-  var onImport: js.UndefOr[js.Function1[/* id */ js.Any, Unit]] = js.native
-  var parser: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.native
-  var plugins: js.UndefOr[js.Array[_]] = js.native
-  var sourceMap: js.UndefOr[Boolean | `inline`] = js.native
-  var stringifier: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.native
-  var syntax: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.native
+  var autoModules: js.UndefOr[Boolean] = js.undefined
+  var config: js.UndefOr[Boolean | Ctx] = js.undefined
+  var exec: js.UndefOr[Boolean] = js.undefined
+  var extensions: js.UndefOr[js.Array[String]] = js.undefined
+  var extract: js.UndefOr[Boolean | String] = js.undefined
+  var inject: js.UndefOr[Boolean | InsertAt] = js.undefined
+  var loaders: js.UndefOr[js.Array[_]] = js.undefined
+  var minimize: js.UndefOr[Boolean | CssNanoOptions] = js.undefined
+  var modules: js.UndefOr[Boolean | js.Any] = js.undefined
+  var name: js.UndefOr[js.Array[_ | js.Array[_]]] = js.undefined
+  var namedExports: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | Boolean]] = js.undefined
+  var onImport: js.UndefOr[js.Function1[/* id */ js.Any, Unit]] = js.undefined
+  var parser: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.undefined
+  var plugins: js.UndefOr[js.Array[_]] = js.undefined
+  var sourceMap: js.UndefOr[Boolean | `inline`] = js.undefined
+  var stringifier: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.undefined
+  var syntax: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.undefined
 }
 
 object PostCssPluginOptions {
   @scala.inline
-  def apply(): PostCssPluginOptions = {
+  def apply(
+    autoModules: js.UndefOr[Boolean] = js.undefined,
+    config: Boolean | Ctx = null,
+    exec: js.UndefOr[Boolean] = js.undefined,
+    extensions: js.Array[String] = null,
+    extract: Boolean | String = null,
+    inject: Boolean | InsertAt = null,
+    loaders: js.Array[_] = null,
+    minimize: Boolean | CssNanoOptions = null,
+    modules: Boolean | js.Any = null,
+    name: js.Array[_ | js.Array[_]] = null,
+    namedExports: /* repeated */ js.Any => Unit | Boolean = null,
+    onImport: /* id */ js.Any => Unit = null,
+    parser: /* repeated */ js.Any => Unit | String = null,
+    plugins: js.Array[_] = null,
+    sourceMap: Boolean | `inline` = null,
+    stringifier: /* repeated */ js.Any => Unit | String = null,
+    syntax: /* repeated */ js.Any => Unit | String = null
+  ): PostCssPluginOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoModules)) __obj.updateDynamic("autoModules")(autoModules.get.asInstanceOf[js.Any])
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (!js.isUndefined(exec)) __obj.updateDynamic("exec")(exec.get.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (extract != null) __obj.updateDynamic("extract")(extract.asInstanceOf[js.Any])
+    if (inject != null) __obj.updateDynamic("inject")(inject.asInstanceOf[js.Any])
+    if (loaders != null) __obj.updateDynamic("loaders")(loaders.asInstanceOf[js.Any])
+    if (minimize != null) __obj.updateDynamic("minimize")(minimize.asInstanceOf[js.Any])
+    if (modules != null) __obj.updateDynamic("modules")(modules.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namedExports != null) __obj.updateDynamic("namedExports")(js.Any.fromFunction1(namedExports))
+    if (onImport != null) __obj.updateDynamic("onImport")(js.Any.fromFunction1(onImport))
+    if (parser != null) __obj.updateDynamic("parser")(js.Any.fromFunction1(parser))
+    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
+    if (sourceMap != null) __obj.updateDynamic("sourceMap")(sourceMap.asInstanceOf[js.Any])
+    if (stringifier != null) __obj.updateDynamic("stringifier")(js.Any.fromFunction1(stringifier))
+    if (syntax != null) __obj.updateDynamic("syntax")(js.Any.fromFunction1(syntax))
     __obj.asInstanceOf[PostCssPluginOptions]
   }
-  @scala.inline
-  implicit class PostCssPluginOptionsOps[Self <: PostCssPluginOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoModules(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoModules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoModules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfig(value: Boolean | Ctx): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExec(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtract(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extract")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtract: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extract")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInject(value: Boolean | InsertAt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoaders(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimize(value: Boolean | CssNanoOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModules(value: Boolean | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: js.Array[_ | js.Array[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamedExports(value: /* repeated */ js.Any => Unit | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namedExports")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNamedExports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namedExports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnImport(value: /* id */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onImport")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnImport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onImport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParser(value: /* repeated */ js.Any => Unit | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceMap(value: Boolean | `inline`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringifier(value: /* repeated */ js.Any => Unit | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringifier")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStringifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyntax(value: /* repeated */ js.Any => Unit | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syntax")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSyntax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syntax")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

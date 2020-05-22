@@ -22,53 +22,16 @@ trait ScheduledWindowExecution extends js.Object {
 
 object ScheduledWindowExecution {
   @scala.inline
-  def apply(): ScheduledWindowExecution = {
+  def apply(
+    ExecutionTime: MaintenanceWindowStringDateTime = null,
+    Name: MaintenanceWindowName = null,
+    WindowId: MaintenanceWindowId = null
+  ): ScheduledWindowExecution = {
     val __obj = js.Dynamic.literal()
+    if (ExecutionTime != null) __obj.updateDynamic("ExecutionTime")(ExecutionTime.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (WindowId != null) __obj.updateDynamic("WindowId")(WindowId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduledWindowExecution]
   }
-  @scala.inline
-  implicit class ScheduledWindowExecutionOps[Self <: ScheduledWindowExecution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionTime(value: MaintenanceWindowStringDateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: MaintenanceWindowName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowId(value: MaintenanceWindowId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

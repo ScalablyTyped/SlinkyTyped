@@ -30,77 +30,20 @@ trait DeleteTemplateAliasResponse extends js.Object {
 
 object DeleteTemplateAliasResponse {
   @scala.inline
-  def apply(): DeleteTemplateAliasResponse = {
+  def apply(
+    AliasName: AliasName = null,
+    Arn: Arn = null,
+    RequestId: String = null,
+    Status: js.UndefOr[StatusCode] = js.undefined,
+    TemplateId: RestrictiveResourceId = null
+  ): DeleteTemplateAliasResponse = {
     val __obj = js.Dynamic.literal()
+    if (AliasName != null) __obj.updateDynamic("AliasName")(AliasName.asInstanceOf[js.Any])
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (RequestId != null) __obj.updateDynamic("RequestId")(RequestId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Status)) __obj.updateDynamic("Status")(Status.get.asInstanceOf[js.Any])
+    if (TemplateId != null) __obj.updateDynamic("TemplateId")(TemplateId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteTemplateAliasResponse]
   }
-  @scala.inline
-  implicit class DeleteTemplateAliasResponseOps[Self <: DeleteTemplateAliasResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAliasName(value: AliasName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAliasName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: StatusCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateId(value: RestrictiveResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

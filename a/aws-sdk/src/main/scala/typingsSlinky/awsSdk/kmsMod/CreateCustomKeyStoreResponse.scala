@@ -14,29 +14,10 @@ trait CreateCustomKeyStoreResponse extends js.Object {
 
 object CreateCustomKeyStoreResponse {
   @scala.inline
-  def apply(): CreateCustomKeyStoreResponse = {
+  def apply(CustomKeyStoreId: CustomKeyStoreIdType = null): CreateCustomKeyStoreResponse = {
     val __obj = js.Dynamic.literal()
+    if (CustomKeyStoreId != null) __obj.updateDynamic("CustomKeyStoreId")(CustomKeyStoreId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCustomKeyStoreResponse]
   }
-  @scala.inline
-  implicit class CreateCustomKeyStoreResponseOps[Self <: CreateCustomKeyStoreResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomKeyStoreId(value: CustomKeyStoreIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomKeyStoreId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomKeyStoreId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomKeyStoreId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

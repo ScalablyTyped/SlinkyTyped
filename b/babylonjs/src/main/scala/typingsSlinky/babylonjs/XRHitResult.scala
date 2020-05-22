@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XRHitResult extends js.Object {
-  var hitMatrix: js.typedarray.Float32Array = js.native
+  var hitMatrix: js.typedarray.Float32Array
 }
 
 object XRHitResult {
@@ -15,19 +14,5 @@ object XRHitResult {
     val __obj = js.Dynamic.literal(hitMatrix = hitMatrix.asInstanceOf[js.Any])
     __obj.asInstanceOf[XRHitResult]
   }
-  @scala.inline
-  implicit class XRHitResultOps[Self <: XRHitResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHitMatrix(value: js.typedarray.Float32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptionsSignerRole extends js.Object {
-  var certified: js.UndefOr[js.Array[String]] = js.native
-  var claimed: js.UndefOr[js.Array[String]] = js.native
+  var certified: js.UndefOr[js.Array[String]] = js.undefined
+  var claimed: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object OptionsSignerRole {
   @scala.inline
-  def apply(): OptionsSignerRole = {
+  def apply(certified: js.Array[String] = null, claimed: js.Array[String] = null): OptionsSignerRole = {
     val __obj = js.Dynamic.literal()
+    if (certified != null) __obj.updateDynamic("certified")(certified.asInstanceOf[js.Any])
+    if (claimed != null) __obj.updateDynamic("claimed")(claimed.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsSignerRole]
   }
-  @scala.inline
-  implicit class OptionsSignerRoleOps[Self <: OptionsSignerRole] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertified(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClaimed(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

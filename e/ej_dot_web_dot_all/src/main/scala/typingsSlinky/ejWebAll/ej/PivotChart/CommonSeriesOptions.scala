@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommonSeriesOptions extends js.Object {
   /** Allows you to set the specific chart type for the pivot chart widget.
     * @Default {ej.PivotChart.ChartTypes.Column}
     */
-  var `type`: js.UndefOr[ChartTypes | String] = js.native
+  var `type`: js.UndefOr[ChartTypes | String] = js.undefined
 }
 
 object CommonSeriesOptions {
   @scala.inline
-  def apply(): CommonSeriesOptions = {
+  def apply(`type`: ChartTypes | String = null): CommonSeriesOptions = {
     val __obj = js.Dynamic.literal()
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonSeriesOptions]
   }
-  @scala.inline
-  implicit class CommonSeriesOptionsOps[Self <: CommonSeriesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: ChartTypes | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

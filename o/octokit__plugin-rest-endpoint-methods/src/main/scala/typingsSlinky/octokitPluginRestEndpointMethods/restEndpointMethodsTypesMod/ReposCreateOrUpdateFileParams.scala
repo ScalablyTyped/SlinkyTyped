@@ -4,128 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReposCreateOrUpdateFileParams extends js.Object {
   /**
     * The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
     */
-  var author: js.UndefOr[ReposCreateOrUpdateFileParamsAuthor] = js.native
+  var author: js.UndefOr[ReposCreateOrUpdateFileParamsAuthor] = js.undefined
   /**
     * The branch name. Default: the repository’s default branch (usually `master`)
     */
-  var branch: js.UndefOr[String] = js.native
+  var branch: js.UndefOr[String] = js.undefined
   /**
     * The person that committed the file. Default: the authenticated user.
     */
-  var committer: js.UndefOr[ReposCreateOrUpdateFileParamsCommitter] = js.native
+  var committer: js.UndefOr[ReposCreateOrUpdateFileParamsCommitter] = js.undefined
   /**
     * The new file content, using Base64 encoding.
     */
-  var content: String = js.native
+  var content: String
   /**
     * The commit message.
     */
-  var message: String = js.native
-  var owner: String = js.native
-  var path: String = js.native
-  var repo: String = js.native
+  var message: String
+  var owner: String
+  var path: String
+  var repo: String
   /**
     * **Required if you are updating a file**. The blob SHA of the file being replaced.
     */
-  var sha: js.UndefOr[String] = js.native
+  var sha: js.UndefOr[String] = js.undefined
 }
 
 object ReposCreateOrUpdateFileParams {
   @scala.inline
-  def apply(content: String, message: String, owner: String, path: String, repo: String): ReposCreateOrUpdateFileParams = {
+  def apply(
+    content: String,
+    message: String,
+    owner: String,
+    path: String,
+    repo: String,
+    author: ReposCreateOrUpdateFileParamsAuthor = null,
+    branch: String = null,
+    committer: ReposCreateOrUpdateFileParamsCommitter = null,
+    sha: String = null
+  ): ReposCreateOrUpdateFileParams = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
+    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
+    if (branch != null) __obj.updateDynamic("branch")(branch.asInstanceOf[js.Any])
+    if (committer != null) __obj.updateDynamic("committer")(committer.asInstanceOf[js.Any])
+    if (sha != null) __obj.updateDynamic("sha")(sha.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposCreateOrUpdateFileParams]
   }
-  @scala.inline
-  implicit class ReposCreateOrUpdateFileParamsOps[Self <: ReposCreateOrUpdateFileParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthor(value: ReposCreateOrUpdateFileParamsAuthor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBranch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommitter(value: ReposCreateOrUpdateFileParamsCommitter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("committer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("committer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSha(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

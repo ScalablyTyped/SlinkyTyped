@@ -16,83 +16,21 @@ trait SyntaxHighlighterProps extends js.Object {
 
 object SyntaxHighlighterProps {
   @scala.inline
-  def apply(language: String): SyntaxHighlighterProps = {
+  def apply(
+    language: String,
+    bordered: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    copyable: js.UndefOr[Boolean] = js.undefined,
+    format: js.UndefOr[Boolean] = js.undefined,
+    padded: js.UndefOr[Boolean] = js.undefined
+  ): SyntaxHighlighterProps = {
     val __obj = js.Dynamic.literal(language = language.asInstanceOf[js.Any])
+    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(copyable)) __obj.updateDynamic("copyable")(copyable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(format)) __obj.updateDynamic("format")(format.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(padded)) __obj.updateDynamic("padded")(padded.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyntaxHighlighterProps]
   }
-  @scala.inline
-  implicit class SyntaxHighlighterPropsOps[Self <: SyntaxHighlighterProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBordered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bordered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBordered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bordered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

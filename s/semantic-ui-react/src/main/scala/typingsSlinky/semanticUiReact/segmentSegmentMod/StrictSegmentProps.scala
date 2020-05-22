@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.segmentSegmentMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -13,371 +12,111 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StrictSegmentProps extends js.Object {
   /** An element type to render as (string or function). */
-  var as: js.UndefOr[js.Any] = js.native
+  var as: js.UndefOr[js.Any] = js.undefined
   /** Attach segment to other content, like a header. */
-  var attached: js.UndefOr[Boolean | top | bottom] = js.native
+  var attached: js.UndefOr[Boolean | top | bottom] = js.undefined
   /** A basic segment has no special formatting. */
-  var basic: js.UndefOr[Boolean] = js.native
+  var basic: js.UndefOr[Boolean] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
   /** A segment can be circular. */
-  var circular: js.UndefOr[Boolean] = js.native
+  var circular: js.UndefOr[Boolean] = js.undefined
   /** Additional classes. */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /** A segment can clear floated content. */
-  var clearing: js.UndefOr[Boolean] = js.native
+  var clearing: js.UndefOr[Boolean] = js.undefined
   /** Segment can be colored. */
-  var color: js.UndefOr[SemanticCOLORS] = js.native
+  var color: js.UndefOr[SemanticCOLORS] = js.undefined
   /** A segment may take up only as much space as is necessary. */
-  var compact: js.UndefOr[Boolean] = js.native
+  var compact: js.UndefOr[Boolean] = js.undefined
   /** Shorthand for primary content. */
-  var content: js.UndefOr[SemanticShorthandContent] = js.native
+  var content: js.UndefOr[SemanticShorthandContent] = js.undefined
   /** A segment may show its content is disabled. */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /** Segment content can be floated to the left or right. */
-  var floated: js.UndefOr[SemanticFLOATS] = js.native
+  var floated: js.UndefOr[SemanticFLOATS] = js.undefined
   /** A segment can have its colors inverted for contrast. */
-  var inverted: js.UndefOr[Boolean] = js.native
+  var inverted: js.UndefOr[Boolean] = js.undefined
   /** A segment may show its content is being loaded. */
-  var loading: js.UndefOr[Boolean] = js.native
+  var loading: js.UndefOr[Boolean] = js.undefined
   /** A segment can increase its padding. */
-  var padded: js.UndefOr[Boolean | very] = js.native
+  var padded: js.UndefOr[Boolean | very] = js.undefined
   /** Formatted to look like a pile of pages. */
-  var piled: js.UndefOr[Boolean] = js.native
+  var piled: js.UndefOr[Boolean] = js.undefined
   /** A segment can be used to reserve space for conditionally displayed content. */
-  var placeholder: js.UndefOr[Boolean] = js.native
+  var placeholder: js.UndefOr[Boolean] = js.undefined
   /** A segment may be formatted to raise above the page. */
-  var raised: js.UndefOr[Boolean] = js.native
+  var raised: js.UndefOr[Boolean] = js.undefined
   /** A segment can be formatted to appear less noticeable. */
-  var secondary: js.UndefOr[Boolean] = js.native
+  var secondary: js.UndefOr[Boolean] = js.undefined
   /** A segment can have different sizes. */
-  var size: js.UndefOr[SegmentSizeProp] = js.native
+  var size: js.UndefOr[SegmentSizeProp] = js.undefined
   /** Formatted to show it contains multiple pages. */
-  var stacked: js.UndefOr[Boolean] = js.native
+  var stacked: js.UndefOr[Boolean] = js.undefined
   /** A segment can be formatted to appear even less noticeable. */
-  var tertiary: js.UndefOr[Boolean] = js.native
+  var tertiary: js.UndefOr[Boolean] = js.undefined
   /** Formats content to be aligned as part of a vertical group. */
-  var textAlign: js.UndefOr[SemanticTEXTALIGNMENTS] = js.native
+  var textAlign: js.UndefOr[SemanticTEXTALIGNMENTS] = js.undefined
   /** Formats content to be aligned vertically. */
-  var vertical: js.UndefOr[Boolean] = js.native
+  var vertical: js.UndefOr[Boolean] = js.undefined
 }
 
 object StrictSegmentProps {
   @scala.inline
-  def apply(): StrictSegmentProps = {
+  def apply(
+    as: js.Any = null,
+    attached: Boolean | top | bottom = null,
+    basic: js.UndefOr[Boolean] = js.undefined,
+    children: TagMod[Any] = null,
+    circular: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    clearing: js.UndefOr[Boolean] = js.undefined,
+    color: SemanticCOLORS = null,
+    compact: js.UndefOr[Boolean] = js.undefined,
+    content: SemanticShorthandContent = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    floated: SemanticFLOATS = null,
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    loading: js.UndefOr[Boolean] = js.undefined,
+    padded: Boolean | very = null,
+    piled: js.UndefOr[Boolean] = js.undefined,
+    placeholder: js.UndefOr[Boolean] = js.undefined,
+    raised: js.UndefOr[Boolean] = js.undefined,
+    secondary: js.UndefOr[Boolean] = js.undefined,
+    size: SegmentSizeProp = null,
+    stacked: js.UndefOr[Boolean] = js.undefined,
+    tertiary: js.UndefOr[Boolean] = js.undefined,
+    textAlign: SemanticTEXTALIGNMENTS = null,
+    vertical: js.UndefOr[Boolean] = js.undefined
+  ): StrictSegmentProps = {
     val __obj = js.Dynamic.literal()
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (attached != null) __obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+    if (!js.isUndefined(basic)) __obj.updateDynamic("basic")(basic.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(circular)) __obj.updateDynamic("circular")(circular.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearing)) __obj.updateDynamic("clearing")(clearing.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (floated != null) __obj.updateDynamic("floated")(floated.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
+    if (padded != null) __obj.updateDynamic("padded")(padded.asInstanceOf[js.Any])
+    if (!js.isUndefined(piled)) __obj.updateDynamic("piled")(piled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(placeholder)) __obj.updateDynamic("placeholder")(placeholder.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(raised)) __obj.updateDynamic("raised")(raised.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(secondary)) __obj.updateDynamic("secondary")(secondary.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(stacked)) __obj.updateDynamic("stacked")(stacked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tertiary)) __obj.updateDynamic("tertiary")(tertiary.get.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictSegmentProps]
   }
-  @scala.inline
-  implicit class StrictSegmentPropsOps[Self <: StrictSegmentProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttached(value: Boolean | top | bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attached")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttached: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attached")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCircular(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circular")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircular: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circular")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: SemanticCOLORS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: SemanticShorthandContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloated(value: SemanticFLOATS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadded(value: Boolean | very): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPiled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("piled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPiled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("piled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaised(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raised")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaised: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raised")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: SegmentSizeProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStacked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stacked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStacked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stacked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTertiary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tertiary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTertiary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tertiary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: SemanticTEXTALIGNMENTS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

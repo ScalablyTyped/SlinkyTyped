@@ -34,89 +34,22 @@ trait ConstraintDetail extends js.Object {
 
 object ConstraintDetail {
   @scala.inline
-  def apply(): ConstraintDetail = {
+  def apply(
+    ConstraintId: Id = null,
+    Description: ConstraintDescription = null,
+    Owner: AccountId = null,
+    PortfolioId: Id = null,
+    ProductId: Id = null,
+    Type: ConstraintType = null
+  ): ConstraintDetail = {
     val __obj = js.Dynamic.literal()
+    if (ConstraintId != null) __obj.updateDynamic("ConstraintId")(ConstraintId.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
+    if (PortfolioId != null) __obj.updateDynamic("PortfolioId")(PortfolioId.asInstanceOf[js.Any])
+    if (ProductId != null) __obj.updateDynamic("ProductId")(ProductId.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConstraintDetail]
   }
-  @scala.inline
-  implicit class ConstraintDetailOps[Self <: ConstraintDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConstraintId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstraintId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraintId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstraintId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: ConstraintDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPortfolioId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortfolioId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ConstraintType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

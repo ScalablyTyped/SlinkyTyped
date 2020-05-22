@@ -18,41 +18,11 @@ trait ListAliasesResponse extends js.Object {
 
 object ListAliasesResponse {
   @scala.inline
-  def apply(): ListAliasesResponse = {
+  def apply(Aliases: AliasList = null, NextMarker: String = null): ListAliasesResponse = {
     val __obj = js.Dynamic.literal()
+    if (Aliases != null) __obj.updateDynamic("Aliases")(Aliases.asInstanceOf[js.Any])
+    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAliasesResponse]
   }
-  @scala.inline
-  implicit class ListAliasesResponseOps[Self <: ListAliasesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAliases(value: AliasList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Aliases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAliases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Aliases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -46,125 +46,28 @@ trait StaticIp extends js.Object {
 
 object StaticIp {
   @scala.inline
-  def apply(): StaticIp = {
+  def apply(
+    arn: NonEmptyString = null,
+    attachedTo: ResourceName = null,
+    createdAt: js.Date = null,
+    ipAddress: IpAddress = null,
+    isAttached: js.UndefOr[Boolean] = js.undefined,
+    location: ResourceLocation = null,
+    name: ResourceName = null,
+    resourceType: ResourceType = null,
+    supportCode: String = null
+  ): StaticIp = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (attachedTo != null) __obj.updateDynamic("attachedTo")(attachedTo.asInstanceOf[js.Any])
+    if (createdAt != null) __obj.updateDynamic("createdAt")(createdAt.asInstanceOf[js.Any])
+    if (ipAddress != null) __obj.updateDynamic("ipAddress")(ipAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(isAttached)) __obj.updateDynamic("isAttached")(isAttached.get.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (supportCode != null) __obj.updateDynamic("supportCode")(supportCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticIp]
   }
-  @scala.inline
-  implicit class StaticIpOps[Self <: StaticIp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachedTo(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachedTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachedTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachedTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpAddress(value: IpAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAttached(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAttached")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAttached: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAttached")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: ResourceLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

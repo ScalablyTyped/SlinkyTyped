@@ -8,18 +8,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MetricsResource extends js.Object {
   /** Creates a logs-based metric. */
-  def create(request: Accesstoken): Request[LogMetric] = js.native
+  def create(request: Accesstoken): Request[LogMetric]
   /** Deletes a logs-based metric. */
-  def delete(request: MetricName): Request[js.Object] = js.native
+  def delete(request: MetricName): Request[js.Object]
   /** Gets a logs-based metric. */
-  def get(request: MetricName): Request[LogMetric] = js.native
+  def get(request: MetricName): Request[LogMetric]
   /** Lists logs-based metrics. */
-  def list(request: Bearertoken): Request[ListLogMetricsResponse] = js.native
+  def list(request: Bearertoken): Request[ListLogMetricsResponse]
   /** Creates or updates a logs-based metric. */
-  def update(request: MetricName): Request[LogMetric] = js.native
+  def update(request: MetricName): Request[LogMetric]
 }
 
 object MetricsResource {
@@ -34,43 +33,5 @@ object MetricsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[MetricsResource]
   }
-  @scala.inline
-  implicit class MetricsResourceOps[Self <: MetricsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Accesstoken => Request[LogMetric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: MetricName => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: MetricName => Request[LogMetric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Bearertoken => Request[ListLogMetricsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: MetricName => Request[LogMetric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

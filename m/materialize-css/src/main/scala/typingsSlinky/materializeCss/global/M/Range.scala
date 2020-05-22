@@ -10,7 +10,23 @@ import scala.scalajs.js.annotation._
 @JSGlobal("M.Range")
 @js.native
 class Range ()
-  extends typingsSlinky.materializeCss.M.Component[js.UndefOr[scala.Nothing]]
+  extends typingsSlinky.materializeCss.M.Component[js.UndefOr[scala.Nothing]] {
+  /**
+    * The DOM element the plugin was initialized with
+    */
+  /* CompleteClass */
+  override var el: Element = js.native
+  /**
+    * The options the instance was initialized with
+    */
+  /* CompleteClass */
+  override var options: js.UndefOr[scala.Nothing] = js.native
+  /**
+    * Destroy plugin instance and teardown
+    */
+  /* CompleteClass */
+  override def destroy(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("M.Range")

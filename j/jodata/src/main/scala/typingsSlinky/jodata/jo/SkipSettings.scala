@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SkipSettings extends ISettings {
-  var DefaultSkip: Double = js.native
-  var Skip: Double = js.native
+  var DefaultSkip: Double
+  var Skip: Double
 }
 
 object SkipSettings {
@@ -16,25 +15,5 @@ object SkipSettings {
     val __obj = js.Dynamic.literal(DefaultSkip = DefaultSkip.asInstanceOf[js.Any], Skip = Skip.asInstanceOf[js.Any], isSet = js.Any.fromFunction0(isSet), reset = js.Any.fromFunction0(reset))
     __obj.asInstanceOf[SkipSettings]
   }
-  @scala.inline
-  implicit class SkipSettingsOps[Self <: SkipSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultSkip(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSkip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkip(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

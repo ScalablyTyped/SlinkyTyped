@@ -1,222 +1,73 @@
 package typingsSlinky.bizcharts.mod
 
+import slinky.core.TagMod
 import typingsSlinky.antvG2.mod.AxisGrid
 import typingsSlinky.antvG2.mod.AxisLabel
 import typingsSlinky.antvG2.mod.Styles.line
 import typingsSlinky.antvG2.mod.Styles.tickLine
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AxisProps
   extends Props[js.Any] {
-  var grid: js.UndefOr[AxisGrid | Null] = js.native
-  var label: js.UndefOr[AxisLabel | Null] = js.native
-  var line: js.UndefOr[typingsSlinky.antvG2.mod.Styles.line | Null] = js.native
-  var min: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var position: js.UndefOr[PositionType] = js.native
-  var subTickCount: js.UndefOr[Double] = js.native
-  var subTickLine: js.UndefOr[tickLine] = js.native
-  var tickLine: js.UndefOr[typingsSlinky.antvG2.mod.Styles.tickLine | Null] = js.native
+  var grid: js.UndefOr[AxisGrid | Null] = js.undefined
+  var label: js.UndefOr[AxisLabel | Null] = js.undefined
+  var line: js.UndefOr[typingsSlinky.antvG2.mod.Styles.line | Null] = js.undefined
+  var min: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[PositionType] = js.undefined
+  var subTickCount: js.UndefOr[Double] = js.undefined
+  var subTickLine: js.UndefOr[tickLine] = js.undefined
+  var tickLine: js.UndefOr[typingsSlinky.antvG2.mod.Styles.tickLine | Null] = js.undefined
   var title: js.UndefOr[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify G2.AxisTile */ js.Any) | Boolean | Null
-  ] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var zIndex: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object AxisProps {
   @scala.inline
-  def apply(): AxisProps = {
+  def apply(
+    children: TagMod[Any] = null,
+    grid: js.UndefOr[Null | AxisGrid] = js.undefined,
+    key: Key = null,
+    label: js.UndefOr[Null | AxisLabel] = js.undefined,
+    line: js.UndefOr[Null | line] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    position: PositionType = null,
+    ref: js.UndefOr[Null | LegacyRef[js.Any]] = js.undefined,
+    subTickCount: js.UndefOr[Double] = js.undefined,
+    subTickLine: tickLine = null,
+    tickLine: js.UndefOr[Null | tickLine] = js.undefined,
+    title: js.UndefOr[
+      Null | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify G2.AxisTile */ js.Any) | Boolean
+    ] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): AxisProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(grid)) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(label)) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(line)) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (!js.isUndefined(subTickCount)) __obj.updateDynamic("subTickCount")(subTickCount.get.asInstanceOf[js.Any])
+    if (subTickLine != null) __obj.updateDynamic("subTickLine")(subTickLine.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickLine)) __obj.updateDynamic("tickLine")(tickLine.asInstanceOf[js.Any])
+    if (!js.isUndefined(title)) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxisProps]
   }
-  @scala.inline
-  implicit class AxisPropsOps[Self <: AxisProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrid(value: AxisGrid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(null)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: AxisLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(null)
-        ret
-    }
-    @scala.inline
-    def withLine(value: line): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(null)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: PositionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubTickCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subTickCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubTickCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subTickCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubTickLine(value: tickLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subTickLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubTickLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subTickLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickLine(value: tickLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickLineNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLine")(null)
-        ret
-    }
-    @scala.inline
-    def withTitle(
-      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify G2.AxisTile */ js.Any) | Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(null)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

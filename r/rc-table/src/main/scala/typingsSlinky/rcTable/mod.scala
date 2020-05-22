@@ -3,7 +3,9 @@ package typingsSlinky.rcTable
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.columnGroupMod.ColumnGroupProps
 import typingsSlinky.rcTable.columnMod.ColumnProps
+import typingsSlinky.rcTable.footerCellMod.SummaryCellProps
 import typingsSlinky.rcTable.interfaceMod.DefaultRecordType
+import typingsSlinky.rcTable.rowMod.FooterRowProps
 import typingsSlinky.rcTable.tableMod.TableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,6 +26,12 @@ object mod extends js.Object {
     */
   def ColumnGroup[RecordType](_underscore: ColumnGroupProps[RecordType]): js.Any = js.native
   @js.native
+  object Summary extends js.Object {
+    var Cell: js.Function1[/* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps, ReactElement] = js.native
+    var Row: js.Function1[/* props */ FooterRowProps, ReactElement] = js.native
+  }
+  
+  @js.native
   object default extends js.Object {
     def apply[RecordType /* <: DefaultRecordType */](props: TableProps[RecordType]): ReactElement = js.native
     @js.native
@@ -34,6 +42,12 @@ object mod extends js.Object {
     @js.native
     object ColumnGroup extends js.Object {
       def apply[RecordType](_underscore: ColumnGroupProps[RecordType]): js.Any = js.native
+    }
+    
+    @js.native
+    object Summary extends js.Object {
+      var Cell: js.Function1[/* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps, ReactElement] = js.native
+      var Row: js.Function1[/* props */ FooterRowProps, ReactElement] = js.native
     }
     
     @js.native

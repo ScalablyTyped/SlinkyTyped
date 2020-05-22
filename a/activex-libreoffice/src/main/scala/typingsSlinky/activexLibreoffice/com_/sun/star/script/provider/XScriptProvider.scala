@@ -7,7 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This interface provides a factory for obtaining objects implementing the {@link XScript} interface. */
-@js.native
 trait XScriptProvider extends XInterface {
   /**
     * a factory method for the creation of {@link XScript} implementations.
@@ -15,7 +14,7 @@ trait XScriptProvider extends XInterface {
     * @returns an object implementing {@link com.sun.star.script.provider.XScript} representing the script
     * @throws com::sun::star::script::provider::ScriptFrameworkErrorException Framework error getting script for URI.
     */
-  def getScript(sScriptURI: String): XScript = js.native
+  def getScript(sScriptURI: String): XScript
 }
 
 object XScriptProvider {
@@ -29,19 +28,5 @@ object XScriptProvider {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getScript = js.Any.fromFunction1(getScript), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XScriptProvider]
   }
-  @scala.inline
-  implicit class XScriptProviderOps[Self <: XScriptProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetScript(value: String => XScript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScript")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

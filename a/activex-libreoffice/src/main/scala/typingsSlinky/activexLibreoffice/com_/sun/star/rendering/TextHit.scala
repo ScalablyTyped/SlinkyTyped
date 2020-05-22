@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * This structure is used from the {@link XTextLayout} interface to transport information regarding hit tests.
   * @since OOo 2.0
   */
-@js.native
 trait TextHit extends js.Object {
   /**
     * This contains the entry index.
@@ -19,7 +18,7 @@ trait TextHit extends js.Object {
     * in the string, and can thus have values ranging from 0 up to the number of characters in the string. Hereby, an index of 0 denotes an insertion
     * position **before** the first character, and an index containing the number of characters denotes an insertion **behind** the last character.
     */
-  var EntryIndex: Double = js.native
+  var EntryIndex: Double
   /**
     * This member denotes whether the hit was on the leading edge.
     *
@@ -27,7 +26,7 @@ trait TextHit extends js.Object {
     * text of the corresponding language (i.e. the leading edge of an Arabic glyph is the right half of it, whereas it is the left half of a Latin
     * character). If the hit was on the leading edge, this member is set to `TRUE` .
     */
-  var IsLeadingEdge: Boolean = js.native
+  var IsLeadingEdge: Boolean
 }
 
 object TextHit {
@@ -36,25 +35,5 @@ object TextHit {
     val __obj = js.Dynamic.literal(EntryIndex = EntryIndex.asInstanceOf[js.Any], IsLeadingEdge = IsLeadingEdge.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextHit]
   }
-  @scala.inline
-  implicit class TextHitOps[Self <: TextHit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntryIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntryIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsLeadingEdge(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLeadingEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

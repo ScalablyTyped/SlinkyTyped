@@ -1,5 +1,6 @@
 package typingsSlinky.amapJsApi.AMap.PathOverlay
 
+import typingsSlinky.amapJsApi.AMap.Map
 import typingsSlinky.amapJsApi.AMap.StrokeLineCap
 import typingsSlinky.amapJsApi.AMap.StrokeLineJoin
 import typingsSlinky.amapJsApi.AMap.StrokeStyle
@@ -7,168 +8,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options[ExtraData]
   extends typingsSlinky.amapJsApi.AMap.Overlay.Options[ExtraData] {
   /**
     * 折线两端线帽的绘制样式
     */
-  var lineCap: js.UndefOr[StrokeLineCap] = js.native
+  var lineCap: js.UndefOr[StrokeLineCap] = js.undefined
   /**
     * 折线拐点的绘制样式
     */
-  var lineJoin: js.UndefOr[StrokeLineJoin] = js.native
+  var lineJoin: js.UndefOr[StrokeLineJoin] = js.undefined
   /**
     * 描边线条颜色
     */
-  var strokeColor: js.UndefOr[String] = js.native
+  var strokeColor: js.UndefOr[String] = js.undefined
   /**
     * 虚线间隔
     */
-  var strokeDasharray: js.UndefOr[js.Array[Double]] = js.native
+  var strokeDasharray: js.UndefOr[js.Array[Double]] = js.undefined
   /**
     * 描边线条透明度
     */
-  var strokeOpacity: js.UndefOr[Double] = js.native
+  var strokeOpacity: js.UndefOr[Double] = js.undefined
   /**
     * 描边样式
     */
-  var strokeStyle: js.UndefOr[StrokeStyle] = js.native
+  var strokeStyle: js.UndefOr[StrokeStyle] = js.undefined
   /**
     * 描边宽度
     */
-  var strokeWeight: js.UndefOr[Double] = js.native
+  var strokeWeight: js.UndefOr[Double] = js.undefined
   /**
     * 是否可见
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
   /**
     * 覆盖物层级
     */
-  var zIndex: js.UndefOr[Double] = js.native
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply[ExtraData](): Options[ExtraData] = {
+  def apply[ExtraData](
+    bubble: js.UndefOr[Boolean] = js.undefined,
+    clickable: js.UndefOr[Boolean] = js.undefined,
+    cursor: String = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    extData: ExtraData = null,
+    lineCap: StrokeLineCap = null,
+    lineJoin: StrokeLineJoin = null,
+    map: Map = null,
+    strokeColor: String = null,
+    strokeDasharray: js.Array[Double] = null,
+    strokeOpacity: js.UndefOr[Double] = js.undefined,
+    strokeStyle: StrokeStyle = null,
+    strokeWeight: js.UndefOr[Double] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): Options[ExtraData] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bubble)) __obj.updateDynamic("bubble")(bubble.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (extData != null) __obj.updateDynamic("extData")(extData.asInstanceOf[js.Any])
+    if (lineCap != null) __obj.updateDynamic("lineCap")(lineCap.asInstanceOf[js.Any])
+    if (lineJoin != null) __obj.updateDynamic("lineJoin")(lineJoin.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeOpacity)) __obj.updateDynamic("strokeOpacity")(strokeOpacity.get.asInstanceOf[js.Any])
+    if (strokeStyle != null) __obj.updateDynamic("strokeStyle")(strokeStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeWeight)) __obj.updateDynamic("strokeWeight")(strokeWeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options[ExtraData]]
   }
-  @scala.inline
-  implicit class OptionsOps[Self[extradata] <: Options[extradata], ExtraData] (val x: Self[ExtraData]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ExtraData] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ExtraData]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[ExtraData] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ExtraData] with Other]
-    @scala.inline
-    def withLineCap(value: StrokeLineCap): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineCap: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineJoin(value: StrokeLineJoin): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineJoin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineJoin: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineJoin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeColor(value: String): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeColor: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeDasharray(value: js.Array[Double]): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDasharray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeDasharray: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDasharray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeOpacity(value: Double): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeOpacity: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeStyle(value: StrokeStyle): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeStyle: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeWeight(value: Double): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeWeight: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self[ExtraData] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

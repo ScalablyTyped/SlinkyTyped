@@ -7,49 +7,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParseOptions extends js.Object {
-  var constructorAction: js.UndefOr[error | remove] = js.native
-  var protoAction: js.UndefOr[error | remove | ignore] = js.native
+  var constructorAction: js.UndefOr[error | remove] = js.undefined
+  var protoAction: js.UndefOr[error | remove | ignore] = js.undefined
 }
 
 object ParseOptions {
   @scala.inline
-  def apply(): ParseOptions = {
+  def apply(constructorAction: error | remove = null, protoAction: error | remove | ignore = null): ParseOptions = {
     val __obj = js.Dynamic.literal()
+    if (constructorAction != null) __obj.updateDynamic("constructorAction")(constructorAction.asInstanceOf[js.Any])
+    if (protoAction != null) __obj.updateDynamic("protoAction")(protoAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseOptions]
   }
-  @scala.inline
-  implicit class ParseOptionsOps[Self <: ParseOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConstructorAction(value: error | remove): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructorAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstructorAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructorAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtoAction(value: error | remove | ignore): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protoAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtoAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protoAction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

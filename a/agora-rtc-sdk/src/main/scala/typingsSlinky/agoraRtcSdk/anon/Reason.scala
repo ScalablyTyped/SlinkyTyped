@@ -11,10 +11,9 @@ import scala.scalajs.js.annotation._
   * - "ServerTimeOut": The user drops offline.
   * - "BecomeAudience": The client role switches from `"host"` to `"audience"`.
   */
-@js.native
 trait Reason extends js.Object {
-  var reason: String = js.native
-  var uid: String = js.native
+  var reason: String
+  var uid: String
 }
 
 object Reason {
@@ -23,25 +22,5 @@ object Reason {
     val __obj = js.Dynamic.literal(reason = reason.asInstanceOf[js.Any], uid = uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Reason]
   }
-  @scala.inline
-  implicit class ReasonOps[Self <: Reason] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

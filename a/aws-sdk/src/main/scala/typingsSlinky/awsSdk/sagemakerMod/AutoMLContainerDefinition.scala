@@ -22,41 +22,10 @@ trait AutoMLContainerDefinition extends js.Object {
 
 object AutoMLContainerDefinition {
   @scala.inline
-  def apply(Image: Image, ModelDataUrl: Url): AutoMLContainerDefinition = {
+  def apply(Image: Image, ModelDataUrl: Url, Environment: EnvironmentMap = null): AutoMLContainerDefinition = {
     val __obj = js.Dynamic.literal(Image = Image.asInstanceOf[js.Any], ModelDataUrl = ModelDataUrl.asInstanceOf[js.Any])
+    if (Environment != null) __obj.updateDynamic("Environment")(Environment.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoMLContainerDefinition]
   }
-  @scala.inline
-  implicit class AutoMLContainerDefinitionOps[Self <: AutoMLContainerDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelDataUrl(value: Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelDataUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: EnvironmentMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

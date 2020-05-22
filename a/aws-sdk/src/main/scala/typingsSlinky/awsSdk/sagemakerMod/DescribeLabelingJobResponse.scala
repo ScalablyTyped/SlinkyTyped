@@ -93,168 +93,24 @@ object DescribeLabelingJobResponse {
     LabelingJobStatus: LabelingJobStatus,
     LastModifiedTime: js.Date,
     OutputConfig: LabelingJobOutputConfig,
-    RoleArn: RoleArn
+    RoleArn: RoleArn,
+    FailureReason: FailureReason = null,
+    LabelAttributeName: LabelAttributeName = null,
+    LabelCategoryConfigS3Uri: S3Uri = null,
+    LabelingJobAlgorithmsConfig: LabelingJobAlgorithmsConfig = null,
+    LabelingJobOutput: LabelingJobOutput = null,
+    StoppingConditions: LabelingJobStoppingConditions = null,
+    Tags: TagList = null
   ): DescribeLabelingJobResponse = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], HumanTaskConfig = HumanTaskConfig.asInstanceOf[js.Any], InputConfig = InputConfig.asInstanceOf[js.Any], JobReferenceCode = JobReferenceCode.asInstanceOf[js.Any], LabelCounters = LabelCounters.asInstanceOf[js.Any], LabelingJobArn = LabelingJobArn.asInstanceOf[js.Any], LabelingJobName = LabelingJobName.asInstanceOf[js.Any], LabelingJobStatus = LabelingJobStatus.asInstanceOf[js.Any], LastModifiedTime = LastModifiedTime.asInstanceOf[js.Any], OutputConfig = OutputConfig.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any])
+    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
+    if (LabelAttributeName != null) __obj.updateDynamic("LabelAttributeName")(LabelAttributeName.asInstanceOf[js.Any])
+    if (LabelCategoryConfigS3Uri != null) __obj.updateDynamic("LabelCategoryConfigS3Uri")(LabelCategoryConfigS3Uri.asInstanceOf[js.Any])
+    if (LabelingJobAlgorithmsConfig != null) __obj.updateDynamic("LabelingJobAlgorithmsConfig")(LabelingJobAlgorithmsConfig.asInstanceOf[js.Any])
+    if (LabelingJobOutput != null) __obj.updateDynamic("LabelingJobOutput")(LabelingJobOutput.asInstanceOf[js.Any])
+    if (StoppingConditions != null) __obj.updateDynamic("StoppingConditions")(StoppingConditions.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLabelingJobResponse]
   }
-  @scala.inline
-  implicit class DescribeLabelingJobResponseOps[Self <: DescribeLabelingJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHumanTaskConfig(value: HumanTaskConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanTaskConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputConfig(value: LabelingJobInputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobReferenceCode(value: JobReferenceCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobReferenceCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelCounters(value: LabelCounters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelCounters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelingJobArn(value: LabelingJobArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelingJobName(value: LabelingJobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelingJobStatus(value: LabelingJobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutputConfig(value: LabelingJobOutputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: FailureReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelAttributeName(value: LabelAttributeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelAttributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelAttributeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelAttributeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelCategoryConfigS3Uri(value: S3Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelCategoryConfigS3Uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelCategoryConfigS3Uri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelCategoryConfigS3Uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelingJobAlgorithmsConfig(value: LabelingJobAlgorithmsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobAlgorithmsConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelingJobAlgorithmsConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobAlgorithmsConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelingJobOutput(value: LabelingJobOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelingJobOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobOutput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoppingConditions(value: LabelingJobStoppingConditions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingConditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoppingConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingConditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

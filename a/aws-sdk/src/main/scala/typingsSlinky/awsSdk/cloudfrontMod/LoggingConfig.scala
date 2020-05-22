@@ -30,37 +30,5 @@ object LoggingConfig {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Enabled = Enabled.asInstanceOf[js.Any], IncludeCookies = IncludeCookies.asInstanceOf[js.Any], Prefix = Prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggingConfig]
   }
-  @scala.inline
-  implicit class LoggingConfigOps[Self <: LoggingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeCookies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeCookies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

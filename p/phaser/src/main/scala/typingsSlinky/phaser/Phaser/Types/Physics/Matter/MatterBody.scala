@@ -1,10 +1,5 @@
 package typingsSlinky.phaser.Phaser.Types.Physics.Matter
 
-import typingsSlinky.phaser.MatterJS.BodyType
-import typingsSlinky.phaser.Phaser.GameObjects.GameObject
-import typingsSlinky.phaser.Phaser.Physics.Matter.Image
-import typingsSlinky.phaser.Phaser.Physics.Matter.Sprite
-import typingsSlinky.phaser.Phaser.Physics.Matter.TileBody
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,17 +12,4 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.phaser.Phaser.Physics.Matter.TileBody
 */
 trait MatterBody extends js.Object
-
-object MatterBody {
-  @scala.inline
-  implicit def apply(value: BodyType): MatterBody = value.asInstanceOf[MatterBody]
-  @scala.inline
-  implicit def apply(value: GameObject): MatterBody = value.asInstanceOf[MatterBody]
-  @scala.inline
-  implicit def apply(value: Image): MatterBody = value.asInstanceOf[MatterBody]
-  @scala.inline
-  implicit def apply(value: Sprite): MatterBody = value.asInstanceOf[MatterBody]
-  @scala.inline
-  implicit def apply(value: TileBody): MatterBody = value.asInstanceOf[MatterBody]
-}
 

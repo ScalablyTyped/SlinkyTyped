@@ -16,6 +16,9 @@ trait GetBucketObjectArgs extends js.Object {
     */
   val key: String = js.native
   val range: js.UndefOr[String] = js.native
+  /**
+    * A mapping of tags assigned to the object.
+    */
   val tags: js.UndefOr[StringDictionary[js.Any]] = js.native
   /**
     * Specific version ID of the object returned (defaults to latest version)
@@ -25,65 +28,18 @@ trait GetBucketObjectArgs extends js.Object {
 
 object GetBucketObjectArgs {
   @scala.inline
-  def apply(bucket: String, key: String): GetBucketObjectArgs = {
+  def apply(
+    bucket: String,
+    key: String,
+    range: String = null,
+    tags: StringDictionary[js.Any] = null,
+    versionId: String = null
+  ): GetBucketObjectArgs = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (versionId != null) __obj.updateDynamic("versionId")(versionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketObjectArgs]
   }
-  @scala.inline
-  implicit class GetBucketObjectArgsOps[Self <: GetBucketObjectArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

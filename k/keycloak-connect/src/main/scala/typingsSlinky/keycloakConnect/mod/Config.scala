@@ -13,10 +13,22 @@ trait Config extends js.Object
 
 object Config {
   @scala.inline
-  implicit def apply(value: BaseConfig): Config = value.asInstanceOf[Config]
+  def StoreConfig(store: js.Any, scope: js.Any = null): Config = {
+    val __obj = js.Dynamic.literal(store = store.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Config]
+  }
   @scala.inline
-  implicit def apply(value: CookiesConfig): Config = value.asInstanceOf[Config]
+  def CookiesConfig(cookies: js.Any, scope: js.Any = null): Config = {
+    val __obj = js.Dynamic.literal(cookies = cookies.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Config]
+  }
   @scala.inline
-  implicit def apply(value: StoreConfig): Config = value.asInstanceOf[Config]
+  def BaseConfig(scope: js.Any = null): Config = {
+    val __obj = js.Dynamic.literal()
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Config]
+  }
 }
 

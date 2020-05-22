@@ -18,29 +18,10 @@ trait SchemaAsyncBatchAnnotateFilesResponse extends js.Object {
 
 object SchemaAsyncBatchAnnotateFilesResponse {
   @scala.inline
-  def apply(): SchemaAsyncBatchAnnotateFilesResponse = {
+  def apply(responses: js.Array[SchemaAsyncAnnotateFileResponse] = null): SchemaAsyncBatchAnnotateFilesResponse = {
     val __obj = js.Dynamic.literal()
+    if (responses != null) __obj.updateDynamic("responses")(responses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAsyncBatchAnnotateFilesResponse]
   }
-  @scala.inline
-  implicit class SchemaAsyncBatchAnnotateFilesResponseOps[Self <: SchemaAsyncBatchAnnotateFilesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResponses(value: js.Array[SchemaAsyncAnnotateFileResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

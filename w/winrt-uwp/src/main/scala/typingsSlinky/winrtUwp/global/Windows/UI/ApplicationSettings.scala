@@ -1,11 +1,13 @@
 package typingsSlinky.winrtUwp.global.Windows.UI
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.Windows.Security.Credentials.PasswordCredential
 import typingsSlinky.winrtUwp.Windows.Security.Credentials.WebAccount
 import typingsSlinky.winrtUwp.Windows.Security.Credentials.WebAccountProvider
 import typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler
 import typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SettingsEdgeLocation
 import typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SupportedWebAccountActions
+import typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.WebAccountAction
 import typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler
 import typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler
 import typingsSlinky.winrtUwp.Windows.UI.Popups.UICommandInvokedHandler
@@ -25,12 +27,38 @@ object ApplicationSettings extends js.Object {
   /** Provides data for the AccountCommandsRequested event. */
   @js.native
   abstract class AccountsSettingsPaneCommandsRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs {
+    /** Gets the SettingsCommand collection for the account settings pane. */
+    /* CompleteClass */
+    override var commands: IVector[typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SettingsCommand] = js.native
+    /** Gets the CredentialCommand collection for the account settings pane. */
+    /* CompleteClass */
+    override var credentialCommands: IVector[typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.CredentialCommand] = js.native
+    /** Gets or sets the header text for the account settings pane. */
+    /* CompleteClass */
+    override var headerText: String = js.native
+    /** Gets the WebAccountCommand collection for the account settings pane. */
+    /* CompleteClass */
+    override var webAccountCommands: IVector[typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.WebAccountCommand] = js.native
+    /** Gets the WebAccountProviderCommand collection for the account settings pane. */
+    /* CompleteClass */
+    override var webAccountProviderCommands: IVector[typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.WebAccountProviderCommand] = js.native
+    /**
+      * Gets the deferral object for the AccountCommandsRequested event.
+      * @return The deferral object.
+      */
+    /* CompleteClass */
+    override def getDeferral(): typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral = js.native
+  }
   
   /** Enables the app to signal when it has finished populating command collections while handling the AccountCommandsRequested event. */
   @js.native
   abstract class AccountsSettingsPaneEventDeferral ()
-    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral
+    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral {
+    /** Signals that the app has finished populating command collections while handling the AccountCommandsRequested event. */
+    /* CompleteClass */
+    override def complete(): Unit = js.native
+  }
   
   /** Deprecated. Represents a command for changing web account credentials in the account settings pane. */
   @js.native
@@ -70,12 +98,20 @@ object ApplicationSettings extends js.Object {
   /** Contains properties that are only available during the CommandsRequested event. */
   @js.native
   abstract class SettingsPaneCommandsRequest ()
-    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest
+    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest {
+    /** A vector that is available during the CommandsRequested event. Append SettingsCommand objects to it to make them available to the SettingsPane UI. */
+    /* CompleteClass */
+    override var applicationCommands: IVector[typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SettingsCommand] = js.native
+  }
   
   /** Contains arguments that are available from the event object during the CommandsRequested event. */
   @js.native
   abstract class SettingsPaneCommandsRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs {
+    /** An instance of SettingsPaneCommandsRequest that is made available during the CommandsRequested event. */
+    /* CompleteClass */
+    override var request: typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest = js.native
+  }
   
   /** Associates a command with a WebAccount in the account settings pane.. */
   @js.native
@@ -97,7 +133,11 @@ object ApplicationSettings extends js.Object {
   /** Provides data for the WebAccountCommandInvokedHandler delegate. */
   @js.native
   abstract class WebAccountInvokedArgs ()
-    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.WebAccountInvokedArgs
+    extends typingsSlinky.winrtUwp.Windows.UI.ApplicationSettings.WebAccountInvokedArgs {
+    /** Gets the action for the web account in the accounts pane. */
+    /* CompleteClass */
+    override var action: WebAccountAction = js.native
+  }
   
   /** Associates a provider command with a WebAccountProvider in the account settings pane. */
   @js.native

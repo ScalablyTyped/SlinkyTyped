@@ -4,83 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cmd extends js.Object {
-  var cmd: String = js.native
-  var gid: js.UndefOr[Double] = js.native
-  var name: String = js.native
-  var pid: Double = js.native
-  var ppid: js.UndefOr[Double] = js.native
-  var uid: js.UndefOr[Double] = js.native
+  var cmd: String
+  var gid: js.UndefOr[Double] = js.undefined
+  var name: String
+  var pid: Double
+  var ppid: js.UndefOr[Double] = js.undefined
+  var uid: js.UndefOr[Double] = js.undefined
 }
 
 object Cmd {
   @scala.inline
-  def apply(cmd: String, name: String, pid: Double): Cmd = {
+  def apply(
+    cmd: String,
+    name: String,
+    pid: Double,
+    gid: js.UndefOr[Double] = js.undefined,
+    ppid: js.UndefOr[Double] = js.undefined,
+    uid: js.UndefOr[Double] = js.undefined
+  ): Cmd = {
     val __obj = js.Dynamic.literal(cmd = cmd.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], pid = pid.asInstanceOf[js.Any])
+    if (!js.isUndefined(gid)) __obj.updateDynamic("gid")(gid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ppid)) __obj.updateDynamic("ppid")(ppid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(uid)) __obj.updateDynamic("uid")(uid.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cmd]
   }
-  @scala.inline
-  implicit class CmdOps[Self <: Cmd] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCmd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPpid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ppid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPpid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ppid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

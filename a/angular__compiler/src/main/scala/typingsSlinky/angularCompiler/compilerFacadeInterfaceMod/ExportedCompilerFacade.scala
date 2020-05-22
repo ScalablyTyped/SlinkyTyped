@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExportedCompilerFacade extends js.Object {
-  var ɵcompilerFacade: CompilerFacade = js.native
+  var ɵcompilerFacade: CompilerFacade
 }
 
 object ExportedCompilerFacade {
@@ -15,19 +14,5 @@ object ExportedCompilerFacade {
     val __obj = js.Dynamic.literal(ɵcompilerFacade = ɵcompilerFacade.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportedCompilerFacade]
   }
-  @scala.inline
-  implicit class ExportedCompilerFacadeOps[Self <: ExportedCompilerFacade] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withƟcompilerFacade(value: CompilerFacade): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("\u0275compilerFacade")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

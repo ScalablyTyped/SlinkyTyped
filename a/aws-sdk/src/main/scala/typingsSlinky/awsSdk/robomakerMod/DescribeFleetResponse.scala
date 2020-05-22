@@ -42,113 +42,26 @@ trait DescribeFleetResponse extends js.Object {
 
 object DescribeFleetResponse {
   @scala.inline
-  def apply(): DescribeFleetResponse = {
+  def apply(
+    arn: Arn = null,
+    createdAt: js.Date = null,
+    lastDeploymentJob: Arn = null,
+    lastDeploymentStatus: DeploymentStatus = null,
+    lastDeploymentTime: js.Date = null,
+    name: Name = null,
+    robots: Robots = null,
+    tags: TagMap = null
+  ): DescribeFleetResponse = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (createdAt != null) __obj.updateDynamic("createdAt")(createdAt.asInstanceOf[js.Any])
+    if (lastDeploymentJob != null) __obj.updateDynamic("lastDeploymentJob")(lastDeploymentJob.asInstanceOf[js.Any])
+    if (lastDeploymentStatus != null) __obj.updateDynamic("lastDeploymentStatus")(lastDeploymentStatus.asInstanceOf[js.Any])
+    if (lastDeploymentTime != null) __obj.updateDynamic("lastDeploymentTime")(lastDeploymentTime.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (robots != null) __obj.updateDynamic("robots")(robots.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFleetResponse]
   }
-  @scala.inline
-  implicit class DescribeFleetResponseOps[Self <: DescribeFleetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastDeploymentJob(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDeploymentJob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastDeploymentJob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDeploymentJob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastDeploymentStatus(value: DeploymentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDeploymentStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastDeploymentStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDeploymentStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastDeploymentTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDeploymentTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastDeploymentTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDeploymentTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRobots(value: Robots): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("robots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRobots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("robots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

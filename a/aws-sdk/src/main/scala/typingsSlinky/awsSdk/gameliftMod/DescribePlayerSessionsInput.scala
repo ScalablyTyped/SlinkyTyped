@@ -34,89 +34,22 @@ trait DescribePlayerSessionsInput extends js.Object {
 
 object DescribePlayerSessionsInput {
   @scala.inline
-  def apply(): DescribePlayerSessionsInput = {
+  def apply(
+    GameSessionId: ArnStringModel = null,
+    Limit: js.UndefOr[PositiveInteger] = js.undefined,
+    NextToken: NonZeroAndMaxString = null,
+    PlayerId: NonZeroAndMaxString = null,
+    PlayerSessionId: PlayerSessionId = null,
+    PlayerSessionStatusFilter: NonZeroAndMaxString = null
+  ): DescribePlayerSessionsInput = {
     val __obj = js.Dynamic.literal()
+    if (GameSessionId != null) __obj.updateDynamic("GameSessionId")(GameSessionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (PlayerId != null) __obj.updateDynamic("PlayerId")(PlayerId.asInstanceOf[js.Any])
+    if (PlayerSessionId != null) __obj.updateDynamic("PlayerSessionId")(PlayerSessionId.asInstanceOf[js.Any])
+    if (PlayerSessionStatusFilter != null) __obj.updateDynamic("PlayerSessionStatusFilter")(PlayerSessionStatusFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribePlayerSessionsInput]
   }
-  @scala.inline
-  implicit class DescribePlayerSessionsInputOps[Self <: DescribePlayerSessionsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGameSessionId(value: ArnStringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameSessionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: PositiveInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayerId(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayerSessionId(value: PlayerSessionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayerSessionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSessionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayerSessionStatusFilter(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSessionStatusFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayerSessionStatusFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSessionStatusFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

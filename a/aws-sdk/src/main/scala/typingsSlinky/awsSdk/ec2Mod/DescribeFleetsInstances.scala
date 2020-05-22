@@ -30,77 +30,20 @@ trait DescribeFleetsInstances extends js.Object {
 
 object DescribeFleetsInstances {
   @scala.inline
-  def apply(): DescribeFleetsInstances = {
+  def apply(
+    InstanceIds: InstanceIdsSet = null,
+    InstanceType: InstanceType = null,
+    LaunchTemplateAndOverrides: LaunchTemplateAndOverridesResponse = null,
+    Lifecycle: InstanceLifecycle = null,
+    Platform: PlatformValues = null
+  ): DescribeFleetsInstances = {
     val __obj = js.Dynamic.literal()
+    if (InstanceIds != null) __obj.updateDynamic("InstanceIds")(InstanceIds.asInstanceOf[js.Any])
+    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
+    if (LaunchTemplateAndOverrides != null) __obj.updateDynamic("LaunchTemplateAndOverrides")(LaunchTemplateAndOverrides.asInstanceOf[js.Any])
+    if (Lifecycle != null) __obj.updateDynamic("Lifecycle")(Lifecycle.asInstanceOf[js.Any])
+    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFleetsInstances]
   }
-  @scala.inline
-  implicit class DescribeFleetsInstancesOps[Self <: DescribeFleetsInstances] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceIds(value: InstanceIdsSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceType(value: InstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchTemplateAndOverrides(value: LaunchTemplateAndOverridesResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateAndOverrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchTemplateAndOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateAndOverrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycle(value: InstanceLifecycle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: PlatformValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

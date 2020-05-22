@@ -42,101 +42,24 @@ trait SchemaJobMetadata extends js.Object {
 
 object SchemaJobMetadata {
   @scala.inline
-  def apply(): SchemaJobMetadata = {
+  def apply(
+    bigTableDetails: js.Array[SchemaBigTableIODetails] = null,
+    bigqueryDetails: js.Array[SchemaBigQueryIODetails] = null,
+    datastoreDetails: js.Array[SchemaDatastoreIODetails] = null,
+    fileDetails: js.Array[SchemaFileIODetails] = null,
+    pubsubDetails: js.Array[SchemaPubSubIODetails] = null,
+    sdkVersion: SchemaSdkVersion = null,
+    spannerDetails: js.Array[SchemaSpannerIODetails] = null
+  ): SchemaJobMetadata = {
     val __obj = js.Dynamic.literal()
+    if (bigTableDetails != null) __obj.updateDynamic("bigTableDetails")(bigTableDetails.asInstanceOf[js.Any])
+    if (bigqueryDetails != null) __obj.updateDynamic("bigqueryDetails")(bigqueryDetails.asInstanceOf[js.Any])
+    if (datastoreDetails != null) __obj.updateDynamic("datastoreDetails")(datastoreDetails.asInstanceOf[js.Any])
+    if (fileDetails != null) __obj.updateDynamic("fileDetails")(fileDetails.asInstanceOf[js.Any])
+    if (pubsubDetails != null) __obj.updateDynamic("pubsubDetails")(pubsubDetails.asInstanceOf[js.Any])
+    if (sdkVersion != null) __obj.updateDynamic("sdkVersion")(sdkVersion.asInstanceOf[js.Any])
+    if (spannerDetails != null) __obj.updateDynamic("spannerDetails")(spannerDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobMetadata]
   }
-  @scala.inline
-  implicit class SchemaJobMetadataOps[Self <: SchemaJobMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBigTableDetails(value: js.Array[SchemaBigTableIODetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigTableDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBigTableDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigTableDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBigqueryDetails(value: js.Array[SchemaBigQueryIODetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigqueryDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBigqueryDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigqueryDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatastoreDetails(value: js.Array[SchemaDatastoreIODetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datastoreDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatastoreDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datastoreDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileDetails(value: js.Array[SchemaFileIODetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPubsubDetails(value: js.Array[SchemaPubSubIODetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPubsubDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSdkVersion(value: SchemaSdkVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSdkVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpannerDetails(value: js.Array[SchemaSpannerIODetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spannerDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpannerDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spannerDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

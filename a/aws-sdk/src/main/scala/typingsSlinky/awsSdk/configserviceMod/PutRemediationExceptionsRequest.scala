@@ -26,53 +26,16 @@ trait PutRemediationExceptionsRequest extends js.Object {
 
 object PutRemediationExceptionsRequest {
   @scala.inline
-  def apply(ConfigRuleName: ConfigRuleName, ResourceKeys: RemediationExceptionResourceKeys): PutRemediationExceptionsRequest = {
+  def apply(
+    ConfigRuleName: ConfigRuleName,
+    ResourceKeys: RemediationExceptionResourceKeys,
+    ExpirationTime: js.Date = null,
+    Message: StringWithCharLimit1024 = null
+  ): PutRemediationExceptionsRequest = {
     val __obj = js.Dynamic.literal(ConfigRuleName = ConfigRuleName.asInstanceOf[js.Any], ResourceKeys = ResourceKeys.asInstanceOf[js.Any])
+    if (ExpirationTime != null) __obj.updateDynamic("ExpirationTime")(ExpirationTime.asInstanceOf[js.Any])
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutRemediationExceptionsRequest]
   }
-  @scala.inline
-  implicit class PutRemediationExceptionsRequestOps[Self <: PutRemediationExceptionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigRuleName(value: ConfigRuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceKeys(value: RemediationExceptionResourceKeys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpirationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: StringWithCharLimit1024): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

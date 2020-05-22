@@ -1,68 +1,23 @@
 package typingsSlinky.ckeditorCkeditor5Engine.anon
 
-import typingsSlinky.ckeditorCkeditor5Engine.mod.view.Element
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.MatcherPattern
 import typingsSlinky.ckeditorCkeditor5Utils.mod.PriorityString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModelView extends js.Object {
-  var converterPriority: js.UndefOr[PriorityString] = js.native
-  var model: String | js.Function = js.native
-  var view: MatcherPattern = js.native
+  var converterPriority: js.UndefOr[PriorityString] = js.undefined
+  var model: String | js.Function
+  var view: MatcherPattern
 }
 
 object ModelView {
   @scala.inline
-  def apply(model: String | js.Function, view: MatcherPattern): ModelView = {
+  def apply(model: String | js.Function, view: MatcherPattern, converterPriority: PriorityString = null): ModelView = {
     val __obj = js.Dynamic.literal(model = model.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
+    if (converterPriority != null) __obj.updateDynamic("converterPriority")(converterPriority.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelView]
   }
-  @scala.inline
-  implicit class ModelViewOps[Self <: ModelView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModel(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewFunction1(value: /* element */ Element => Null | Attribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withViewRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withView(value: MatcherPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConverterPriority(value: PriorityString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("converterPriority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConverterPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("converterPriority")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

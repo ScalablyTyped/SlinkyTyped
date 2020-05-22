@@ -13,5 +13,5 @@ package object mod {
   type TransformedCommit[T /* <: typingsSlinky.conventionalCommitsParser.mod.Commit[java.lang.String | scala.Double | js.Symbol] */] = (typingsSlinky.conventionalChangelogWriter.mod.Omit[
     T, 
     typingsSlinky.conventionalChangelogWriter.conventionalChangelogWriterStrings.raw
-  ]) with typingsSlinky.conventionalChangelogWriter.AnonRaw[T]
+  ]) with typingsSlinky.conventionalChangelogWriter.anon.Raw[T]
 }

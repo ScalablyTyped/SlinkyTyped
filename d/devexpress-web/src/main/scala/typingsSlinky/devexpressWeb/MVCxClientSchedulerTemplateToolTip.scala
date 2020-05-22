@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * A template that is rendered to display a tooltip.
   */
-@js.native
 trait MVCxClientSchedulerTemplateToolTip extends ASPxClientToolTipBase {
   /**
     * Gets the tooltip type.
     */
-  var `type`: MVCxSchedulerToolTipType = js.native
+  var `type`: MVCxSchedulerToolTipType
 }
 
 object MVCxClientSchedulerTemplateToolTip {
@@ -32,19 +31,5 @@ object MVCxClientSchedulerTemplateToolTip {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MVCxClientSchedulerTemplateToolTip]
   }
-  @scala.inline
-  implicit class MVCxClientSchedulerTemplateToolTipOps[Self <: MVCxClientSchedulerTemplateToolTip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: MVCxSchedulerToolTipType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

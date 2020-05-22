@@ -22,25 +22,5 @@ object MultiplexProgramServiceDescriptor {
     val __obj = js.Dynamic.literal(ProviderName = ProviderName.asInstanceOf[js.Any], ServiceName = ServiceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiplexProgramServiceDescriptor]
   }
-  @scala.inline
-  implicit class MultiplexProgramServiceDescriptorOps[Self <: MultiplexProgramServiceDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProviderName(value: stringMax256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceName(value: stringMax256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

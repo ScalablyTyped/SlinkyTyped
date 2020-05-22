@@ -5,50 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait From
   extends /* key */ StringDictionary[js.Any] {
-  var _from: js.UndefOr[String] = js.native
-  var _to: js.UndefOr[String] = js.native
+  var _from: js.UndefOr[String] = js.undefined
+  var _to: js.UndefOr[String] = js.undefined
 }
 
 object From {
   @scala.inline
-  def apply(): From = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    _from: String = null,
+    _to: String = null
+  ): From = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (_from != null) __obj.updateDynamic("_from")(_from.asInstanceOf[js.Any])
+    if (_to != null) __obj.updateDynamic("_to")(_to.asInstanceOf[js.Any])
     __obj.asInstanceOf[From]
   }
-  @scala.inline
-  implicit class FromOps[Self <: From] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_from(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_from: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_to(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_to: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_to")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

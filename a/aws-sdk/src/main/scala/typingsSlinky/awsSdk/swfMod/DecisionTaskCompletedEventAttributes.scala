@@ -22,41 +22,10 @@ trait DecisionTaskCompletedEventAttributes extends js.Object {
 
 object DecisionTaskCompletedEventAttributes {
   @scala.inline
-  def apply(scheduledEventId: EventId, startedEventId: EventId): DecisionTaskCompletedEventAttributes = {
+  def apply(scheduledEventId: EventId, startedEventId: EventId, executionContext: Data = null): DecisionTaskCompletedEventAttributes = {
     val __obj = js.Dynamic.literal(scheduledEventId = scheduledEventId.asInstanceOf[js.Any], startedEventId = startedEventId.asInstanceOf[js.Any])
+    if (executionContext != null) __obj.updateDynamic("executionContext")(executionContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecisionTaskCompletedEventAttributes]
   }
-  @scala.inline
-  implicit class DecisionTaskCompletedEventAttributesOps[Self <: DecisionTaskCompletedEventAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScheduledEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartedEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startedEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecutionContext(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionContext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

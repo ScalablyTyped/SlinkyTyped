@@ -5,30 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Metadata extends /* PagesIndex */ NumberDictionary[PageInfo] {
-  var pages: Double = js.native
+  var pages: Double
 }
 
 object Metadata {
   @scala.inline
-  def apply(pages: Double): Metadata = {
+  def apply(pages: Double, NumberDictionary: /* PagesIndex */ NumberDictionary[PageInfo] = null): Metadata = {
     val __obj = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any])
+    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
     __obj.asInstanceOf[Metadata]
   }
-  @scala.inline
-  implicit class MetadataOps[Self <: Metadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPages(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

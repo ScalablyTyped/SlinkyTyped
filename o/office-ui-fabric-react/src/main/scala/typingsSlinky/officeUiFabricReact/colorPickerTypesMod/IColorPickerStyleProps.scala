@@ -1,53 +1,27 @@
 package typingsSlinky.officeUiFabricReact.colorPickerTypesMod
 
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.alpha
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.none
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.transparency
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+/* Inlined std.Required<std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/ColorPicker/ColorPicker.types.IColorPickerProps, 'theme'>> & std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/ColorPicker/ColorPicker.types.IColorPickerProps, 'className' | 'alphaType'> */
 trait IColorPickerStyleProps extends js.Object {
-  /**
-    * Additional CSS class(es) to apply to the ColorPicker.
-    */
-  var className: js.UndefOr[String] = js.native
-  /**
-    * Theme (provided through customization).
-    */
-  var theme: ITheme = js.native
+  var alphaType: js.UndefOr[alpha | transparency | none] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var theme: ITheme
 }
 
 object IColorPickerStyleProps {
   @scala.inline
-  def apply(theme: ITheme): IColorPickerStyleProps = {
+  def apply(theme: ITheme, alphaType: alpha | transparency | none = null, className: String = null): IColorPickerStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    if (alphaType != null) __obj.updateDynamic("alphaType")(alphaType.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColorPickerStyleProps]
   }
-  @scala.inline
-  implicit class IColorPickerStylePropsOps[Self <: IColorPickerStyleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

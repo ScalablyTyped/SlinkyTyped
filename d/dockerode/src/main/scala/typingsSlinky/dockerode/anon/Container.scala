@@ -16,213 +16,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Container extends js.Object {
-  var config: js.UndefOr[String] = js.native
-  var container: js.UndefOr[js.Array[String]] = js.native
-  var daemon: js.UndefOr[js.Array[String]] = js.native
-  var event: js.UndefOr[js.Array[String]] = js.native
-  var image: js.UndefOr[js.Array[String]] = js.native
-  var label: js.UndefOr[js.Array[String]] = js.native
-  var network: js.UndefOr[js.Array[String]] = js.native
-  var node: js.UndefOr[js.Array[String]] = js.native
-  var plugin: js.UndefOr[js.Array[String]] = js.native
-  var scope: js.UndefOr[js.Array[local | swarm]] = js.native
-  var secret: js.UndefOr[js.Array[String]] = js.native
-  var service: js.UndefOr[js.Array[String]] = js.native
+  var config: js.UndefOr[String] = js.undefined
+  var container: js.UndefOr[js.Array[String]] = js.undefined
+  var daemon: js.UndefOr[js.Array[String]] = js.undefined
+  var event: js.UndefOr[js.Array[String]] = js.undefined
+  var image: js.UndefOr[js.Array[String]] = js.undefined
+  var label: js.UndefOr[js.Array[String]] = js.undefined
+  var network: js.UndefOr[js.Array[String]] = js.undefined
+  var node: js.UndefOr[js.Array[String]] = js.undefined
+  var plugin: js.UndefOr[js.Array[String]] = js.undefined
+  var scope: js.UndefOr[js.Array[local | swarm]] = js.undefined
+  var secret: js.UndefOr[js.Array[String]] = js.undefined
+  var service: js.UndefOr[js.Array[String]] = js.undefined
   var `type`: js.UndefOr[
     js.Array[
       container | image | volume | network | daemon | plugin | service | node | secret | config
     ]
-  ] = js.native
-  var volume: js.UndefOr[js.Array[String]] = js.native
+  ] = js.undefined
+  var volume: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object Container {
   @scala.inline
-  def apply(): Container = {
+  def apply(
+    config: String = null,
+    container: js.Array[String] = null,
+    daemon: js.Array[String] = null,
+    event: js.Array[String] = null,
+    image: js.Array[String] = null,
+    label: js.Array[String] = null,
+    network: js.Array[String] = null,
+    node: js.Array[String] = null,
+    plugin: js.Array[String] = null,
+    scope: js.Array[local | swarm] = null,
+    secret: js.Array[String] = null,
+    service: js.Array[String] = null,
+    `type`: js.Array[
+      container | image | volume | network | daemon | plugin | service | node | secret | config
+    ] = null,
+    volume: js.Array[String] = null
+  ): Container = {
     val __obj = js.Dynamic.literal()
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (daemon != null) __obj.updateDynamic("daemon")(daemon.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
+    if (plugin != null) __obj.updateDynamic("plugin")(plugin.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (secret != null) __obj.updateDynamic("secret")(secret.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (volume != null) __obj.updateDynamic("volume")(volume.asInstanceOf[js.Any])
     __obj.asInstanceOf[Container]
   }
-  @scala.inline
-  implicit class ContainerOps[Self <: Container] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDaemon(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("daemon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDaemon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("daemon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNode(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugin(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: js.Array[local | swarm]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecret(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(
-      value: js.Array[
-          container | image | volume | network | daemon | plugin | service | node | secret | config
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolume(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

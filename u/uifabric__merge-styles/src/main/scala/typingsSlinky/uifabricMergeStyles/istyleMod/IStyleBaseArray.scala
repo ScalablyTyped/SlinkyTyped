@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IStyleBaseArray
   extends Array[IStyle]
-     with IStyle
+     with _IStyle
 

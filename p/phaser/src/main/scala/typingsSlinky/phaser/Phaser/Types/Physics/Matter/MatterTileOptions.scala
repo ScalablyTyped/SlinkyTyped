@@ -5,71 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MatterTileOptions extends js.Object {
   /**
     * Whether or not to add the newly created body (or existing body if options.body is used) to the Matter world.
     */
-  var addToWorld: js.UndefOr[Boolean] = js.native
+  var addToWorld: js.UndefOr[Boolean] = js.undefined
   /**
     * An existing Matter body to be used instead of creating a new one.
     */
-  var body: js.UndefOr[BodyType] = js.native
+  var body: js.UndefOr[BodyType] = js.undefined
   /**
     * Whether or not the newly created body should be made static. This defaults to true since typically tiles should not be moved.
     */
-  var isStatic: js.UndefOr[Boolean] = js.native
+  var isStatic: js.UndefOr[Boolean] = js.undefined
 }
 
 object MatterTileOptions {
   @scala.inline
-  def apply(): MatterTileOptions = {
+  def apply(
+    addToWorld: js.UndefOr[Boolean] = js.undefined,
+    body: BodyType = null,
+    isStatic: js.UndefOr[Boolean] = js.undefined
+  ): MatterTileOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addToWorld)) __obj.updateDynamic("addToWorld")(addToWorld.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(isStatic)) __obj.updateDynamic("isStatic")(isStatic.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatterTileOptions]
   }
-  @scala.inline
-  implicit class MatterTileOptionsOps[Self <: MatterTileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddToWorld(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addToWorld")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddToWorld: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addToWorld")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: BodyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsStatic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStatic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStatic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

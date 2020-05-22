@@ -12,142 +12,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenAPIRequestValidatorArgs extends js.Object {
-  var componentSchemas: js.UndefOr[js.Array[IJsonSchema]] = js.native
-  var customFormats: js.UndefOr[StringDictionary[FormatValidator | FormatDefinition]] = js.native
+  var componentSchemas: js.UndefOr[js.Array[IJsonSchema]] = js.undefined
+  var customFormats: js.UndefOr[StringDictionary[FormatValidator | FormatDefinition]] = js.undefined
   var errorTransformer: js.UndefOr[
     js.Function2[
       /* openAPIResponseValidatorValidationError */ OpenAPIRequestValidatorError, 
       /* ajvError */ ErrorObject, 
       _
     ]
-  ] = js.native
-  var externalSchemas: js.UndefOr[StringDictionary[IJsonSchema]] = js.native
-  var logger: js.UndefOr[Logger] = js.native
-  var loggingKey: js.UndefOr[String] = js.native
-  var parameters: Parameters = js.native
-  var requestBody: js.UndefOr[RequestBodyObject] = js.native
-  var schemas: js.UndefOr[js.Array[IJsonSchema]] = js.native
+  ] = js.undefined
+  var externalSchemas: js.UndefOr[StringDictionary[IJsonSchema]] = js.undefined
+  var logger: js.UndefOr[Logger] = js.undefined
+  var loggingKey: js.UndefOr[String] = js.undefined
+  var parameters: Parameters
+  var requestBody: js.UndefOr[RequestBodyObject] = js.undefined
+  var schemas: js.UndefOr[js.Array[IJsonSchema]] = js.undefined
 }
 
 object OpenAPIRequestValidatorArgs {
   @scala.inline
-  def apply(parameters: Parameters): OpenAPIRequestValidatorArgs = {
+  def apply(
+    parameters: Parameters,
+    componentSchemas: js.Array[IJsonSchema] = null,
+    customFormats: StringDictionary[FormatValidator | FormatDefinition] = null,
+    errorTransformer: (/* openAPIResponseValidatorValidationError */ OpenAPIRequestValidatorError, /* ajvError */ ErrorObject) => _ = null,
+    externalSchemas: StringDictionary[IJsonSchema] = null,
+    logger: Logger = null,
+    loggingKey: String = null,
+    requestBody: RequestBodyObject = null,
+    schemas: js.Array[IJsonSchema] = null
+  ): OpenAPIRequestValidatorArgs = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any])
+    if (componentSchemas != null) __obj.updateDynamic("componentSchemas")(componentSchemas.asInstanceOf[js.Any])
+    if (customFormats != null) __obj.updateDynamic("customFormats")(customFormats.asInstanceOf[js.Any])
+    if (errorTransformer != null) __obj.updateDynamic("errorTransformer")(js.Any.fromFunction2(errorTransformer))
+    if (externalSchemas != null) __obj.updateDynamic("externalSchemas")(externalSchemas.asInstanceOf[js.Any])
+    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
+    if (loggingKey != null) __obj.updateDynamic("loggingKey")(loggingKey.asInstanceOf[js.Any])
+    if (requestBody != null) __obj.updateDynamic("requestBody")(requestBody.asInstanceOf[js.Any])
+    if (schemas != null) __obj.updateDynamic("schemas")(schemas.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenAPIRequestValidatorArgs]
   }
-  @scala.inline
-  implicit class OpenAPIRequestValidatorArgsOps[Self <: OpenAPIRequestValidatorArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameters(value: Parameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentSchemas(value: js.Array[IJsonSchema]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentSchemas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentSchemas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentSchemas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomFormats(value: StringDictionary[FormatValidator | FormatDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorTransformer(
-      value: (/* openAPIResponseValidatorValidationError */ OpenAPIRequestValidatorError, /* ajvError */ ErrorObject) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTransformer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutErrorTransformer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTransformer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalSchemas(value: StringDictionary[IJsonSchema]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalSchemas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalSchemas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalSchemas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogger(value: Logger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestBody(value: RequestBodyObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemas(value: js.Array[IJsonSchema]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

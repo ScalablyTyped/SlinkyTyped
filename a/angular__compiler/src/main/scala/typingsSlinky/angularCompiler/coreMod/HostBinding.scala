@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HostBinding extends js.Object {
-  var hostPropertyName: js.UndefOr[String] = js.native
+  var hostPropertyName: js.UndefOr[String] = js.undefined
 }
 
 object HostBinding {
   @scala.inline
-  def apply(): HostBinding = {
+  def apply(hostPropertyName: String = null): HostBinding = {
     val __obj = js.Dynamic.literal()
+    if (hostPropertyName != null) __obj.updateDynamic("hostPropertyName")(hostPropertyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostBinding]
   }
-  @scala.inline
-  implicit class HostBindingOps[Self <: HostBinding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHostPropertyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPropertyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostPropertyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPropertyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

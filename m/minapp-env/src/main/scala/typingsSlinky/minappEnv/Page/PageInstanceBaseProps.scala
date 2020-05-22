@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PageInstanceBaseProps[D /* <: IAnyObject */] extends js.Object {
   /** 页面的初始数据
     * 
@@ -16,9 +15,9 @@ trait PageInstanceBaseProps[D /* <: IAnyObject */] extends js.Object {
     * 
     * 渲染层可以通过 `WXML` 对数据进行绑定。
     */
-  var data: js.UndefOr[D] = js.native
+  var data: js.UndefOr[D] = js.undefined
   /** 到当前页面的路径，类型为`String`。最低基础库： `1.2.0` */
-  var route: js.UndefOr[String] = js.native
+  var route: js.UndefOr[String] = js.undefined
   /** `setData` 函数用于将数据从逻辑层发送到视图层（异步），同时改变对应的 `this.data` 的值（同步）。
     *
     * **注意：**
@@ -34,60 +33,21 @@ trait PageInstanceBaseProps[D /* <: IAnyObject */] extends js.Object {
       /* callback */ js.UndefOr[js.Function0[Unit]], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object PageInstanceBaseProps {
   @scala.inline
-  def apply[D](): PageInstanceBaseProps[D] = {
+  def apply[D](
+    data: D = null,
+    route: String = null,
+    setData: (/* data */ D | (Pick[D, /* keyof D */ String]) | IAnyObject, /* callback */ js.UndefOr[js.Function0[Unit]]) => Unit = null
+  ): PageInstanceBaseProps[D] = {
     val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (route != null) __obj.updateDynamic("route")(route.asInstanceOf[js.Any])
+    if (setData != null) __obj.updateDynamic("setData")(js.Any.fromFunction2(setData))
     __obj.asInstanceOf[PageInstanceBaseProps[D]]
   }
-  @scala.inline
-  implicit class PageInstanceBasePropsOps[Self[d] <: PageInstanceBaseProps[d], D] (val x: Self[D]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[D]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[D] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[D] with Other]
-    @scala.inline
-    def withData(value: D): Self[D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self[D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoute(value: String): Self[D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoute: Self[D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetData(
-      value: (/* data */ D | (Pick[D, /* keyof D */ String]) | IAnyObject, /* callback */ js.UndefOr[js.Function0[Unit]]) => Unit
-    ): Self[D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetData: Self[D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

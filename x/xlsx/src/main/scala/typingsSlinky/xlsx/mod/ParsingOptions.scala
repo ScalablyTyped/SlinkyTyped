@@ -10,259 +10,113 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParsingOptions extends CommonOptions {
   /**
     * If true, parse calculation chains
     * @default false
     */
-  var bookDeps: js.UndefOr[Boolean] = js.native
+  var bookDeps: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, add raw files to book object
     * @default false
     */
-  var bookFiles: js.UndefOr[Boolean] = js.native
+  var bookFiles: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, only parse enough to get book metadata
     * @default false
     */
-  var bookProps: js.UndefOr[Boolean] = js.native
+  var bookProps: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, only parse enough to get the sheet names
     * @default false
     */
-  var bookSheets: js.UndefOr[Boolean] = js.native
+  var bookSheets: js.UndefOr[Boolean] = js.undefined
   /**
     * Save formulae to the .f field
     * @default true
     */
-  var cellFormula: js.UndefOr[Boolean] = js.native
+  var cellFormula: js.UndefOr[Boolean] = js.undefined
   /**
     * Parse rich text and save HTML to the .h field
     * @default true
     */
-  var cellHTML: js.UndefOr[Boolean] = js.native
+  var cellHTML: js.UndefOr[Boolean] = js.undefined
   /**
     * Save number format string to the .z field
     * @default false
     */
-  var cellNF: js.UndefOr[Boolean] = js.native
+  var cellNF: js.UndefOr[Boolean] = js.undefined
   /**
     * Generate formatted text to the .w field
     * @default true
     */
-  var cellText: js.UndefOr[Boolean] = js.native
+  var cellText: js.UndefOr[Boolean] = js.undefined
   /** Default codepage */
-  var codepage: js.UndefOr[Double] = js.native
+  var codepage: js.UndefOr[Double] = js.undefined
   /** Override default date format (code 14) */
-  var dateNF: js.UndefOr[String] = js.native
-  var dense: js.UndefOr[Boolean] = js.native
+  var dateNF: js.UndefOr[String] = js.undefined
+  var dense: js.UndefOr[Boolean] = js.undefined
   /* If true, plaintext parsing will not parse values */
-  var raw: js.UndefOr[Boolean] = js.native
+  var raw: js.UndefOr[Boolean] = js.undefined
   /**
     * If >0, read the first sheetRows rows
     * @default 0
     */
-  var sheetRows: js.UndefOr[Double] = js.native
+  var sheetRows: js.UndefOr[Double] = js.undefined
   /** If specified, only parse the specified sheets or sheet names */
-  var sheets: js.UndefOr[Double | String | (js.Array[Double | String])] = js.native
+  var sheets: js.UndefOr[Double | String | (js.Array[Double | String])] = js.undefined
   /** Input data encoding */
-  var `type`: js.UndefOr[base64 | binary | buffer | file | array | string] = js.native
+  var `type`: js.UndefOr[base64 | binary | buffer | file | array | string] = js.undefined
 }
 
 object ParsingOptions {
   @scala.inline
-  def apply(): ParsingOptions = {
+  def apply(
+    WTF: js.UndefOr[Boolean] = js.undefined,
+    bookDeps: js.UndefOr[Boolean] = js.undefined,
+    bookFiles: js.UndefOr[Boolean] = js.undefined,
+    bookProps: js.UndefOr[Boolean] = js.undefined,
+    bookSheets: js.UndefOr[Boolean] = js.undefined,
+    bookVBA: js.UndefOr[Boolean] = js.undefined,
+    cellDates: js.UndefOr[Boolean] = js.undefined,
+    cellFormula: js.UndefOr[Boolean] = js.undefined,
+    cellHTML: js.UndefOr[Boolean] = js.undefined,
+    cellNF: js.UndefOr[Boolean] = js.undefined,
+    cellStyles: js.UndefOr[Boolean] = js.undefined,
+    cellText: js.UndefOr[Boolean] = js.undefined,
+    codepage: js.UndefOr[Double] = js.undefined,
+    dateNF: String = null,
+    dense: js.UndefOr[Boolean] = js.undefined,
+    password: String = null,
+    raw: js.UndefOr[Boolean] = js.undefined,
+    sheetRows: js.UndefOr[Double] = js.undefined,
+    sheetStubs: js.UndefOr[Boolean] = js.undefined,
+    sheets: Double | String | (js.Array[Double | String]) = null,
+    `type`: base64 | binary | buffer | file | array | string = null
+  ): ParsingOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(WTF)) __obj.updateDynamic("WTF")(WTF.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bookDeps)) __obj.updateDynamic("bookDeps")(bookDeps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bookFiles)) __obj.updateDynamic("bookFiles")(bookFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bookProps)) __obj.updateDynamic("bookProps")(bookProps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bookSheets)) __obj.updateDynamic("bookSheets")(bookSheets.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bookVBA)) __obj.updateDynamic("bookVBA")(bookVBA.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellDates)) __obj.updateDynamic("cellDates")(cellDates.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellFormula)) __obj.updateDynamic("cellFormula")(cellFormula.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellHTML)) __obj.updateDynamic("cellHTML")(cellHTML.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellNF)) __obj.updateDynamic("cellNF")(cellNF.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellStyles)) __obj.updateDynamic("cellStyles")(cellStyles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellText)) __obj.updateDynamic("cellText")(cellText.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(codepage)) __obj.updateDynamic("codepage")(codepage.get.asInstanceOf[js.Any])
+    if (dateNF != null) __obj.updateDynamic("dateNF")(dateNF.asInstanceOf[js.Any])
+    if (!js.isUndefined(dense)) __obj.updateDynamic("dense")(dense.get.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetRows)) __obj.updateDynamic("sheetRows")(sheetRows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetStubs)) __obj.updateDynamic("sheetStubs")(sheetStubs.get.asInstanceOf[js.Any])
+    if (sheets != null) __obj.updateDynamic("sheets")(sheets.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParsingOptions]
   }
-  @scala.inline
-  implicit class ParsingOptionsOps[Self <: ParsingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBookDeps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookDeps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBookDeps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookDeps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBookFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBookFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBookProps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBookProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBookSheets(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookSheets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBookSheets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookSheets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellFormula(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellFormula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellFormula: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellFormula")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellHTML(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellNF(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellNF")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellNF: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellNF")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodepage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codepage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodepage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codepage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateNF(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateNF")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateNF: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateNF")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDense(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dense")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dense")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheets(value: Double | String | (js.Array[Double | String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: base64 | binary | buffer | file | array | string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

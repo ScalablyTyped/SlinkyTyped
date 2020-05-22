@@ -5,161 +5,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SendMoneyOpts extends js.Object {
   /**
     * Amount to be sent
     */
-  var amount: String = js.native
+  var amount: String
   /**
     * Currency for the amount (see Client#getCurrencies() for available strings)
     */
-  var currency: String = js.native
+  var currency: String
   /**
     * Notes to be included in the email that the recipient receives
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * Transaction fee in BTC/ETH/LTC if you would like to pay it. Fees can be added as a string, such as 0.0005
     */
-  var fee: js.UndefOr[String] = js.native
+  var fee: js.UndefOr[String] = js.undefined
   /**
     * The website of the financial institution or exchange. Required if to_financial_institution is true.
     */
-  var financial_institution_website: js.UndefOr[String] = js.native
+  var financial_institution_website: js.UndefOr[String] = js.undefined
   /**
     * *Recommended* A token to ensure idempotence. If a previous transaction with the same idem parameter already exists for this sender,
     * that previous transaction will be returned and a new one will not be created. Max length 100 characters
     */
-  var idem: js.UndefOr[String] = js.native
+  var idem: js.UndefOr[String] = js.undefined
   /**
     * Don’t send notification emails for small amounts (e.g. tips)
     */
-  var skip_notifications: js.UndefOr[Boolean] = js.native
+  var skip_notifications: js.UndefOr[Boolean] = js.undefined
   /**
     * A bitcoin address, litecoin address, ethereum address, or an email of the recipient
     */
-  var to: String = js.native
+  var to: String
   /**
     * Whether this send is to another financial institution or exchange. Required if this send is to an address and is valued at over USD$3000.
     */
-  var to_financial_institution: js.UndefOr[Boolean] = js.native
+  var to_financial_institution: js.UndefOr[Boolean] = js.undefined
   /**
     * Type send is required when sending money
     */
-  var `type`: send = js.native
+  var `type`: send
 }
 
 object SendMoneyOpts {
   @scala.inline
-  def apply(amount: String, currency: String, to: String, `type`: send): SendMoneyOpts = {
+  def apply(
+    amount: String,
+    currency: String,
+    to: String,
+    `type`: send,
+    description: String = null,
+    fee: String = null,
+    financial_institution_website: String = null,
+    idem: String = null,
+    skip_notifications: js.UndefOr[Boolean] = js.undefined,
+    to_financial_institution: js.UndefOr[Boolean] = js.undefined
+  ): SendMoneyOpts = {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], currency = currency.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (fee != null) __obj.updateDynamic("fee")(fee.asInstanceOf[js.Any])
+    if (financial_institution_website != null) __obj.updateDynamic("financial_institution_website")(financial_institution_website.asInstanceOf[js.Any])
+    if (idem != null) __obj.updateDynamic("idem")(idem.asInstanceOf[js.Any])
+    if (!js.isUndefined(skip_notifications)) __obj.updateDynamic("skip_notifications")(skip_notifications.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(to_financial_institution)) __obj.updateDynamic("to_financial_institution")(to_financial_institution.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendMoneyOpts]
   }
-  @scala.inline
-  implicit class SendMoneyOptsOps[Self <: SendMoneyOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: send): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFee(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fee")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFee: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fee")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinancial_institution_website(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("financial_institution_website")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinancial_institution_website: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("financial_institution_website")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip_notifications(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip_notifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip_notifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip_notifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo_financial_institution(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to_financial_institution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo_financial_institution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to_financial_institution")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

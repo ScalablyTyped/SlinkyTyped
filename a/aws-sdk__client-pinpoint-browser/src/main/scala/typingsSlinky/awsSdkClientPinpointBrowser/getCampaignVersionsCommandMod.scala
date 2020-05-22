@@ -26,9 +26,16 @@ object getCampaignVersionsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetCampaignVersionsInput) = this()
+    /* CompleteClass */
+    override val input: GetCampaignVersionsInput = js.native
     val middlewareStack: MiddlewareStack[GetCampaignVersionsInput, GetCampaignVersionsOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[GetCampaignVersionsInput, GetCampaignVersionsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetCampaignVersionsInput, GetCampaignVersionsOutput] = js.native
   }

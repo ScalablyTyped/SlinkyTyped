@@ -9,59 +9,28 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
   */
-@js.native
 trait PlusBluetoothBluetoothcharacteristic extends js.Object {
   /**
     * 设备特征值支持的操作类型
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var properties: js.UndefOr[PlusBluetoothBluetoothcharacteristicProperties] = js.native
+  var properties: js.UndefOr[PlusBluetoothBluetoothcharacteristicProperties] = js.undefined
   /**
     * 蓝牙设备特征值的uuid
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/bluetooth.html](http://www.html5plus.org/doc/zh_cn/bluetooth.html)
     */
-  var uuid: js.UndefOr[String] = js.native
+  var uuid: js.UndefOr[String] = js.undefined
 }
 
 object PlusBluetoothBluetoothcharacteristic {
   @scala.inline
-  def apply(): PlusBluetoothBluetoothcharacteristic = {
+  def apply(properties: PlusBluetoothBluetoothcharacteristicProperties = null, uuid: String = null): PlusBluetoothBluetoothcharacteristic = {
     val __obj = js.Dynamic.literal()
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusBluetoothBluetoothcharacteristic]
   }
-  @scala.inline
-  implicit class PlusBluetoothBluetoothcharacteristicOps[Self <: PlusBluetoothBluetoothcharacteristic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProperties(value: PlusBluetoothBluetoothcharacteristicProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

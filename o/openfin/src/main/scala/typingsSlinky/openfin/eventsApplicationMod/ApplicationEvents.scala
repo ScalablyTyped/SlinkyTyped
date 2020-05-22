@@ -10,7 +10,9 @@ import typingsSlinky.openfin.openfinStrings.`view-crashed`
 import typingsSlinky.openfin.openfinStrings.`view-created`
 import typingsSlinky.openfin.openfinStrings.`view-destroyed`
 import typingsSlinky.openfin.openfinStrings.`view-did-change-theme-color`
+import typingsSlinky.openfin.openfinStrings.`view-focused`
 import typingsSlinky.openfin.openfinStrings.`view-hidden`
+import typingsSlinky.openfin.openfinStrings.`view-hotkey`
 import typingsSlinky.openfin.openfinStrings.`view-navigation-rejected`
 import typingsSlinky.openfin.openfinStrings.`view-page-favicon-updated`
 import typingsSlinky.openfin.openfinStrings.`view-page-title-updated`
@@ -38,7 +40,10 @@ import typingsSlinky.openfin.openfinStrings.`window-external-process-started`
 import typingsSlinky.openfin.openfinStrings.`window-focused`
 import typingsSlinky.openfin.openfinStrings.`window-group-changed`
 import typingsSlinky.openfin.openfinStrings.`window-hidden`
+import typingsSlinky.openfin.openfinStrings.`window-hotkey`
 import typingsSlinky.openfin.openfinStrings.`window-initialized`
+import typingsSlinky.openfin.openfinStrings.`window-layout-initialized`
+import typingsSlinky.openfin.openfinStrings.`window-layout-ready`
 import typingsSlinky.openfin.openfinStrings.`window-maximized`
 import typingsSlinky.openfin.openfinStrings.`window-minimized`
 import typingsSlinky.openfin.openfinStrings.`window-navigation-rejected`
@@ -66,6 +71,8 @@ import typingsSlinky.openfin.openfinStrings.crashed
 import typingsSlinky.openfin.openfinStrings.initialized
 import typingsSlinky.openfin.openfinStrings.responding
 import typingsSlinky.openfin.openfinStrings.started
+import typingsSlinky.openfin.viewMod.InputEvent
+import typingsSlinky.openfin.viewMod.TargetChangedEvent
 import typingsSlinky.openfin.webcontentsMod.WindowResourceLoadFailedEvent
 import typingsSlinky.openfin.webcontentsMod.WindowResourceResponseReceivedEvent
 import typingsSlinky.openfin.windowMod.WillMoveOrResize
@@ -89,100 +96,104 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined openfin.openfin/_v2/api/events/window.PropagatedWindowEvents<'application'> & openfin.openfin/_v2/api/events/view.PropagatedViewEvents<'application'> & {[ Type in keyof openfin.openfin/_v2/api/events/application.ApplicationEventMapping<string, string> ]: openfin.openfin/_v2/api/events/application.ApplicationEventMapping<'application', Type>[Type]} */
-@js.native
 trait ApplicationEvents extends js.Object {
-  var closed: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.closed] = js.native
-  var connected: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.connected] = js.native
-  var crashed: CrashedEvent with (ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.crashed]) = js.native
-  var initialized: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.initialized] = js.native
-  var listenerRemoved: String = js.native
-  var `manifest-changed`: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.`manifest-changed`] = js.native
-  var newListener: String = js.native
-  var `not-responding`: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.`not-responding`] = js.native
-  var responding: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.responding] = js.native
-  var `run-requested`: RunRequestedEvent[application, typingsSlinky.openfin.openfinStrings.`run-requested`] = js.native
-  var started: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.started] = js.native
-  var `tray-icon-clicked`: TrayIconClicked[application, typingsSlinky.openfin.openfinStrings.`tray-icon-clicked`] = js.native
-  var `view-crashed`: CrashedEvent with (WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-crashed`]) = js.native
-  var `view-created`: CrashedEvent with (WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-created`]) = js.native
-  var `view-destroyed`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-destroyed`] = js.native
-  var `view-did-change-theme-color`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-did-change-theme-color`] = js.native
-  var `view-hidden`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-hidden`] = js.native
-  var `view-navigation-rejected`: WindowNavigationRejectedEvent[application, typingsSlinky.openfin.openfinStrings.`view-navigation-rejected`] = js.native
-  var `view-page-favicon-updated`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-page-favicon-updated`] = js.native
-  var `view-page-title-updated`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-page-title-updated`] = js.native
-  var `view-resource-load-failed`: WindowResourceLoadFailedEvent[application, typingsSlinky.openfin.openfinStrings.`view-resource-load-failed`] = js.native
+  var closed: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.closed]
+  var connected: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.connected]
+  var crashed: CrashedEvent with (ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.crashed])
+  var initialized: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.initialized]
+  var listenerRemoved: String
+  var `manifest-changed`: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.`manifest-changed`]
+  var newListener: String
+  var `not-responding`: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.`not-responding`]
+  var responding: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.responding]
+  var `run-requested`: RunRequestedEvent[application, typingsSlinky.openfin.openfinStrings.`run-requested`]
+  var started: ApplicationEvent[application, typingsSlinky.openfin.openfinStrings.started]
+  var `tray-icon-clicked`: TrayIconClicked[application, typingsSlinky.openfin.openfinStrings.`tray-icon-clicked`]
+  var `view-crashed`: CrashedEvent with (WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-crashed`])
+  var `view-created`: CrashedEvent with (WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-created`])
+  var `view-destroyed`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-destroyed`]
+  var `view-did-change-theme-color`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-did-change-theme-color`]
+  var `view-focused`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-focused`]
+  var `view-hidden`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-hidden`]
+  var `view-hotkey`: InputEvent with (WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-hotkey`])
+  var `view-navigation-rejected`: WindowNavigationRejectedEvent[application, typingsSlinky.openfin.openfinStrings.`view-navigation-rejected`]
+  var `view-page-favicon-updated`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-page-favicon-updated`]
+  var `view-page-title-updated`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-page-title-updated`]
+  var `view-resource-load-failed`: WindowResourceLoadFailedEvent[application, typingsSlinky.openfin.openfinStrings.`view-resource-load-failed`]
   var `view-resource-response-received`: WindowResourceResponseReceivedEvent[
     application, 
     typingsSlinky.openfin.openfinStrings.`view-resource-response-received`
-  ] = js.native
-  var `view-shown`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-shown`] = js.native
-  var `view-target-changed`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-target-changed`] = js.native
-  var `window-alert-requested`: WindowAlertRequestedEvent[application, typingsSlinky.openfin.openfinStrings.`window-alert-requested`] = js.native
-  var `window-auth-requested`: WindowAuthRequestedEvent[application, typingsSlinky.openfin.openfinStrings.`window-auth-requested`] = js.native
+  ]
+  var `view-shown`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`view-shown`]
+  var `view-target-changed`: TargetChangedEvent[application, typingsSlinky.openfin.openfinStrings.`view-target-changed`]
+  var `window-alert-requested`: WindowAlertRequestedEvent[application, typingsSlinky.openfin.openfinStrings.`window-alert-requested`]
+  var `window-auth-requested`: WindowAuthRequestedEvent[application, typingsSlinky.openfin.openfinStrings.`window-auth-requested`]
   var `window-begin-user-bounds-changing`: WindowBeginBoundsChangingEvent[
     application, 
     typingsSlinky.openfin.openfinStrings.`window-begin-user-bounds-changing`
-  ] = js.native
-  var `window-blurred`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-blurred`] = js.native
-  var `window-bounds-changed`: WindowBoundsChange[application, typingsSlinky.openfin.openfinStrings.`window-bounds-changed`] = js.native
-  var `window-bounds-changing`: WindowBoundsChange[application, typingsSlinky.openfin.openfinStrings.`window-bounds-changing`] = js.native
-  var `window-closed`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-closed`] = js.native
-  var `window-closing`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-closing`] = js.native
-  var `window-crashed`: CrashedEvent with (WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-crashed`]) = js.native
-  var `window-created`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-created`] = js.native
+  ]
+  var `window-blurred`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-blurred`]
+  var `window-bounds-changed`: WindowBoundsChange[application, typingsSlinky.openfin.openfinStrings.`window-bounds-changed`]
+  var `window-bounds-changing`: WindowBoundsChange[application, typingsSlinky.openfin.openfinStrings.`window-bounds-changing`]
+  var `window-closed`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-closed`]
+  var `window-closing`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-closing`]
+  var `window-crashed`: CrashedEvent with (WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-crashed`])
+  var `window-created`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-created`]
   var `window-disabled-movement-bounds-changed`: WindowBoundsChange[
     application, 
     typingsSlinky.openfin.openfinStrings.`window-disabled-movement-bounds-changed`
-  ] = js.native
+  ]
   var `window-disabled-movement-bounds-changing`: WindowBoundsChange[
     application, 
     typingsSlinky.openfin.openfinStrings.`window-disabled-movement-bounds-changing`
-  ] = js.native
-  var `window-embedded`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-embedded`] = js.native
-  var `window-end-load`: WindowEndLoadEvent[application, typingsSlinky.openfin.openfinStrings.`window-end-load`] = js.native
+  ]
+  var `window-embedded`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-embedded`]
+  var `window-end-load`: WindowEndLoadEvent[application, typingsSlinky.openfin.openfinStrings.`window-end-load`]
   var `window-end-user-bounds-changing`: WindowBeginBoundsChangingEvent[
     application, 
     typingsSlinky.openfin.openfinStrings.`window-end-user-bounds-changing`
-  ] = js.native
-  var `window-external-process-exited`: WindowExternalProcessExitedEvent[application, typingsSlinky.openfin.openfinStrings.`window-external-process-exited`] = js.native
+  ]
+  var `window-external-process-exited`: WindowExternalProcessExitedEvent[application, typingsSlinky.openfin.openfinStrings.`window-external-process-exited`]
   var `window-external-process-started`: WindowExternalProcessStartedEvent[
     application, 
     typingsSlinky.openfin.openfinStrings.`window-external-process-started`
-  ] = js.native
-  var `window-focused`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-focused`] = js.native
-  var `window-group-changed`: WindowGroupChanged[application, typingsSlinky.openfin.openfinStrings.`window-group-changed`] = js.native
-  var `window-hidden`: WindowHiddenEvent[application, typingsSlinky.openfin.openfinStrings.`window-hidden`] = js.native
-  var `window-initialized`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-initialized`] = js.native
-  var `window-maximized`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-maximized`] = js.native
-  var `window-minimized`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-minimized`] = js.native
-  var `window-navigation-rejected`: WindowNavigationRejectedEvent[application, typingsSlinky.openfin.openfinStrings.`window-navigation-rejected`] = js.native
-  var `window-not-responding`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-not-responding`] = js.native
-  var `window-options-changed`: WindowOptionsChangedEvent[application, typingsSlinky.openfin.openfinStrings.`window-options-changed`] = js.native
-  var `window-performance-report`: WindowPerformanceReport[application, typingsSlinky.openfin.openfinStrings.`window-performance-report`] = js.native
+  ]
+  var `window-focused`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-focused`]
+  var `window-group-changed`: WindowGroupChanged[application, typingsSlinky.openfin.openfinStrings.`window-group-changed`]
+  var `window-hidden`: WindowHiddenEvent[application, typingsSlinky.openfin.openfinStrings.`window-hidden`]
+  var `window-hotkey`: InputEvent with (WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-hotkey`])
+  var `window-initialized`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-initialized`]
+  var `window-layout-initialized`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-layout-initialized`]
+  var `window-layout-ready`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-layout-ready`]
+  var `window-maximized`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-maximized`]
+  var `window-minimized`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-minimized`]
+  var `window-navigation-rejected`: WindowNavigationRejectedEvent[application, typingsSlinky.openfin.openfinStrings.`window-navigation-rejected`]
+  var `window-not-responding`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-not-responding`]
+  var `window-options-changed`: WindowOptionsChangedEvent[application, typingsSlinky.openfin.openfinStrings.`window-options-changed`]
+  var `window-performance-report`: WindowPerformanceReport[application, typingsSlinky.openfin.openfinStrings.`window-performance-report`]
   var `window-preload-scripts-state-changed`: WindowPreloadScriptsStateChangeEvent[
     application, 
     typingsSlinky.openfin.openfinStrings.`window-preload-scripts-state-changed`
-  ] = js.native
+  ]
   var `window-preload-scripts-state-changing`: WindowPreloadScriptsStateChangedEvent[
     application, 
     typingsSlinky.openfin.openfinStrings.`window-preload-scripts-state-changing`
-  ] = js.native
-  var `window-reloaded`: WindowReloadedEvent[application, typingsSlinky.openfin.openfinStrings.`window-reloaded`] = js.native
-  var `window-resource-load-failed`: WindowResourceLoadFailedEvent[application, typingsSlinky.openfin.openfinStrings.`window-resource-load-failed`] = js.native
+  ]
+  var `window-reloaded`: WindowReloadedEvent[application, typingsSlinky.openfin.openfinStrings.`window-reloaded`]
+  var `window-resource-load-failed`: WindowResourceLoadFailedEvent[application, typingsSlinky.openfin.openfinStrings.`window-resource-load-failed`]
   var `window-resource-response-received`: WindowResourceResponseReceivedEvent[
     application, 
     typingsSlinky.openfin.openfinStrings.`window-resource-response-received`
-  ] = js.native
-  var `window-responding`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-responding`] = js.native
-  var `window-restored`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-restored`] = js.native
-  var `window-show-requested`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-show-requested`] = js.native
-  var `window-shown`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-shown`] = js.native
-  var `window-start-load`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-start-load`] = js.native
-  var `window-user-movement-disabled`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-user-movement-disabled`] = js.native
-  var `window-user-movement-enabled`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-user-movement-enabled`] = js.native
-  var `window-will-move`: WillMoveOrResize[application, typingsSlinky.openfin.openfinStrings.`window-will-move`] = js.native
-  var `window-will-resize`: WillMoveOrResize[application, typingsSlinky.openfin.openfinStrings.`window-will-resize`] = js.native
+  ]
+  var `window-responding`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-responding`]
+  var `window-restored`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-restored`]
+  var `window-show-requested`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-show-requested`]
+  var `window-shown`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-shown`]
+  var `window-start-load`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-start-load`]
+  var `window-user-movement-disabled`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-user-movement-disabled`]
+  var `window-user-movement-enabled`: WindowEvent[application, typingsSlinky.openfin.openfinStrings.`window-user-movement-enabled`]
+  var `window-will-move`: WillMoveOrResize[application, typingsSlinky.openfin.openfinStrings.`window-will-move`]
+  var `window-will-resize`: WillMoveOrResize[application, typingsSlinky.openfin.openfinStrings.`window-will-resize`]
 }
 
 object ApplicationEvents {
@@ -204,14 +215,16 @@ object ApplicationEvents {
     `view-created`: CrashedEvent with (WindowEvent[application, `view-created`]),
     `view-destroyed`: WindowEvent[application, `view-destroyed`],
     `view-did-change-theme-color`: WindowEvent[application, `view-did-change-theme-color`],
+    `view-focused`: WindowEvent[application, `view-focused`],
     `view-hidden`: WindowEvent[application, `view-hidden`],
+    `view-hotkey`: InputEvent with (WindowEvent[application, `view-hotkey`]),
     `view-navigation-rejected`: WindowNavigationRejectedEvent[application, `view-navigation-rejected`],
     `view-page-favicon-updated`: WindowEvent[application, `view-page-favicon-updated`],
     `view-page-title-updated`: WindowEvent[application, `view-page-title-updated`],
     `view-resource-load-failed`: WindowResourceLoadFailedEvent[application, `view-resource-load-failed`],
     `view-resource-response-received`: WindowResourceResponseReceivedEvent[application, `view-resource-response-received`],
     `view-shown`: WindowEvent[application, `view-shown`],
-    `view-target-changed`: WindowEvent[application, `view-target-changed`],
+    `view-target-changed`: TargetChangedEvent[application, `view-target-changed`],
     `window-alert-requested`: WindowAlertRequestedEvent[application, `window-alert-requested`],
     `window-auth-requested`: WindowAuthRequestedEvent[application, `window-auth-requested`],
     `window-begin-user-bounds-changing`: WindowBeginBoundsChangingEvent[application, `window-begin-user-bounds-changing`],
@@ -232,7 +245,10 @@ object ApplicationEvents {
     `window-focused`: WindowEvent[application, `window-focused`],
     `window-group-changed`: WindowGroupChanged[application, `window-group-changed`],
     `window-hidden`: WindowHiddenEvent[application, `window-hidden`],
+    `window-hotkey`: InputEvent with (WindowEvent[application, `window-hotkey`]),
     `window-initialized`: WindowEvent[application, `window-initialized`],
+    `window-layout-initialized`: WindowEvent[application, `window-layout-initialized`],
+    `window-layout-ready`: WindowEvent[application, `window-layout-ready`],
     `window-maximized`: WindowEvent[application, `window-maximized`],
     `window-minimized`: WindowEvent[application, `window-minimized`],
     `window-navigation-rejected`: WindowNavigationRejectedEvent[application, `window-navigation-rejected`],
@@ -263,7 +279,9 @@ object ApplicationEvents {
     __obj.updateDynamic("view-created")(`view-created`.asInstanceOf[js.Any])
     __obj.updateDynamic("view-destroyed")(`view-destroyed`.asInstanceOf[js.Any])
     __obj.updateDynamic("view-did-change-theme-color")(`view-did-change-theme-color`.asInstanceOf[js.Any])
+    __obj.updateDynamic("view-focused")(`view-focused`.asInstanceOf[js.Any])
     __obj.updateDynamic("view-hidden")(`view-hidden`.asInstanceOf[js.Any])
+    __obj.updateDynamic("view-hotkey")(`view-hotkey`.asInstanceOf[js.Any])
     __obj.updateDynamic("view-navigation-rejected")(`view-navigation-rejected`.asInstanceOf[js.Any])
     __obj.updateDynamic("view-page-favicon-updated")(`view-page-favicon-updated`.asInstanceOf[js.Any])
     __obj.updateDynamic("view-page-title-updated")(`view-page-title-updated`.asInstanceOf[js.Any])
@@ -291,7 +309,10 @@ object ApplicationEvents {
     __obj.updateDynamic("window-focused")(`window-focused`.asInstanceOf[js.Any])
     __obj.updateDynamic("window-group-changed")(`window-group-changed`.asInstanceOf[js.Any])
     __obj.updateDynamic("window-hidden")(`window-hidden`.asInstanceOf[js.Any])
+    __obj.updateDynamic("window-hotkey")(`window-hotkey`.asInstanceOf[js.Any])
     __obj.updateDynamic("window-initialized")(`window-initialized`.asInstanceOf[js.Any])
+    __obj.updateDynamic("window-layout-initialized")(`window-layout-initialized`.asInstanceOf[js.Any])
+    __obj.updateDynamic("window-layout-ready")(`window-layout-ready`.asInstanceOf[js.Any])
     __obj.updateDynamic("window-maximized")(`window-maximized`.asInstanceOf[js.Any])
     __obj.updateDynamic("window-minimized")(`window-minimized`.asInstanceOf[js.Any])
     __obj.updateDynamic("window-navigation-rejected")(`window-navigation-rejected`.asInstanceOf[js.Any])
@@ -314,403 +335,5 @@ object ApplicationEvents {
     __obj.updateDynamic("window-will-resize")(`window-will-resize`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationEvents]
   }
-  @scala.inline
-  implicit class ApplicationEventsOps[Self <: ApplicationEvents] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClosed(value: ApplicationEvent[application, closed]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnected(value: ApplicationEvent[application, connected]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCrashed(value: CrashedEvent with (ApplicationEvent[application, crashed])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crashed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialized(value: ApplicationEvent[application, initialized]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListenerRemoved(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listenerRemoved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withManifest-changed`(value: ApplicationEvent[application, `manifest-changed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewListener(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newListener")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withNot-responding`(value: ApplicationEvent[application, `not-responding`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not-responding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResponding(value: ApplicationEvent[application, responding]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRun-requested`(value: RunRequestedEvent[application, `run-requested`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run-requested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStarted(value: ApplicationEvent[application, started]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("started")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTray-icon-clicked`(value: TrayIconClicked[application, `tray-icon-clicked`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tray-icon-clicked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-crashed`(value: CrashedEvent with (WindowEvent[application, `view-crashed`])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-crashed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-created`(value: CrashedEvent with (WindowEvent[application, `view-created`])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-destroyed`(value: WindowEvent[application, `view-destroyed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-destroyed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-did-change-theme-color`(value: WindowEvent[application, `view-did-change-theme-color`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-did-change-theme-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-hidden`(value: WindowEvent[application, `view-hidden`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-navigation-rejected`(value: WindowNavigationRejectedEvent[application, `view-navigation-rejected`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-navigation-rejected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-page-favicon-updated`(value: WindowEvent[application, `view-page-favicon-updated`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-page-favicon-updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-page-title-updated`(value: WindowEvent[application, `view-page-title-updated`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-page-title-updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-resource-load-failed`(value: WindowResourceLoadFailedEvent[application, `view-resource-load-failed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-resource-load-failed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-resource-response-received`(value: WindowResourceResponseReceivedEvent[application, `view-resource-response-received`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-resource-response-received")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-shown`(value: WindowEvent[application, `view-shown`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-shown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withView-target-changed`(value: WindowEvent[application, `view-target-changed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view-target-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-alert-requested`(value: WindowAlertRequestedEvent[application, `window-alert-requested`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-alert-requested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-auth-requested`(value: WindowAuthRequestedEvent[application, `window-auth-requested`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-auth-requested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-begin-user-bounds-changing`(value: WindowBeginBoundsChangingEvent[application, `window-begin-user-bounds-changing`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-begin-user-bounds-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-blurred`(value: WindowEvent[application, `window-blurred`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-blurred")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-bounds-changed`(value: WindowBoundsChange[application, `window-bounds-changed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-bounds-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-bounds-changing`(value: WindowBoundsChange[application, `window-bounds-changing`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-bounds-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-closed`(value: WindowEvent[application, `window-closed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-closed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-closing`(value: WindowEvent[application, `window-closing`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-closing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-crashed`(value: CrashedEvent with (WindowEvent[application, `window-crashed`])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-crashed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-created`(value: WindowEvent[application, `window-created`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-disabled-movement-bounds-changed`(value: WindowBoundsChange[application, `window-disabled-movement-bounds-changed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-disabled-movement-bounds-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-disabled-movement-bounds-changing`(value: WindowBoundsChange[application, `window-disabled-movement-bounds-changing`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-disabled-movement-bounds-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-embedded`(value: WindowEvent[application, `window-embedded`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-embedded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-end-load`(value: WindowEndLoadEvent[application, `window-end-load`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-end-load")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-end-user-bounds-changing`(value: WindowBeginBoundsChangingEvent[application, `window-end-user-bounds-changing`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-end-user-bounds-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-external-process-exited`(value: WindowExternalProcessExitedEvent[application, `window-external-process-exited`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-external-process-exited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-external-process-started`(value: WindowExternalProcessStartedEvent[application, `window-external-process-started`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-external-process-started")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-focused`(value: WindowEvent[application, `window-focused`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-focused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-group-changed`(value: WindowGroupChanged[application, `window-group-changed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-group-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-hidden`(value: WindowHiddenEvent[application, `window-hidden`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-initialized`(value: WindowEvent[application, `window-initialized`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-initialized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-maximized`(value: WindowEvent[application, `window-maximized`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-maximized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-minimized`(value: WindowEvent[application, `window-minimized`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-minimized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-navigation-rejected`(value: WindowNavigationRejectedEvent[application, `window-navigation-rejected`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-navigation-rejected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-not-responding`(value: WindowEvent[application, `window-not-responding`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-not-responding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-options-changed`(value: WindowOptionsChangedEvent[application, `window-options-changed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-options-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-performance-report`(value: WindowPerformanceReport[application, `window-performance-report`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-performance-report")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-preload-scripts-state-changed`(value: WindowPreloadScriptsStateChangeEvent[application, `window-preload-scripts-state-changed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-preload-scripts-state-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-preload-scripts-state-changing`(value: WindowPreloadScriptsStateChangedEvent[application, `window-preload-scripts-state-changing`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-preload-scripts-state-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-reloaded`(value: WindowReloadedEvent[application, `window-reloaded`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-reloaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-resource-load-failed`(value: WindowResourceLoadFailedEvent[application, `window-resource-load-failed`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-resource-load-failed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-resource-response-received`(value: WindowResourceResponseReceivedEvent[application, `window-resource-response-received`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-resource-response-received")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-responding`(value: WindowEvent[application, `window-responding`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-responding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-restored`(value: WindowEvent[application, `window-restored`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-restored")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-show-requested`(value: WindowEvent[application, `window-show-requested`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-show-requested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-shown`(value: WindowEvent[application, `window-shown`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-shown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-start-load`(value: WindowEvent[application, `window-start-load`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-start-load")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-user-movement-disabled`(value: WindowEvent[application, `window-user-movement-disabled`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-user-movement-disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-user-movement-enabled`(value: WindowEvent[application, `window-user-movement-enabled`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-user-movement-enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-will-move`(value: WillMoveOrResize[application, `window-will-move`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-will-move")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-will-resize`(value: WillMoveOrResize[application, `window-will-resize`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-will-resize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

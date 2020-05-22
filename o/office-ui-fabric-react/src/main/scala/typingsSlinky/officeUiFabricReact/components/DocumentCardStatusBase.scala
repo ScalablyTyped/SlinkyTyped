@@ -7,7 +7,7 @@ import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCar
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusProps
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -38,7 +38,7 @@ object DocumentCardStatusBase {
     @scala.inline
     def statusIcon(value: String): this.type = set("statusIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDocumentCardStatusStyleProps => Partial[IDocumentCardStatusStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDocumentCardStatusStyleProps => DeepPartial[IDocumentCardStatusStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardStatusStyleProps, IDocumentCardStatusStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

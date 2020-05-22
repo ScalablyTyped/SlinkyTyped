@@ -1,6 +1,6 @@
 package typingsSlinky.cordovaPluginsDiagnostic
 
-import typingsSlinky.cordovaPluginsDiagnostic.anon.ACCESSCOARSELOCATION
+import typingsSlinky.cordovaPluginsDiagnostic.anon.ACCESSBACKGROUNDLOCATION
 import typingsSlinky.cordovaPluginsDiagnostic.anon.ALERT
 import typingsSlinky.cordovaPluginsDiagnostic.anon.ALWAYS
 import typingsSlinky.cordovaPluginsDiagnostic.anon.ARMv6
@@ -688,7 +688,7 @@ trait Diagnostic extends js.Object {
     ]
   ] = js.native
   /**
-    * iOS ONLY
+    * ANDROID and iOS ONLY
     * Location authorization mode
     * @type {Object}
     */
@@ -711,7 +711,7 @@ trait Diagnostic extends js.Object {
     * See http://developer.android.com/guide/topics/security/permissions.html#perm-groups
     * @type {Object}
     */
-  var permission: ACCESSCOARSELOCATION = js.native
+  var permission: ACCESSBACKGROUNDLOCATION = js.native
   /**
     * ANDROID ONLY
     * Permission groups indicate which associated permissions will also be requested if a given permission is requested.
@@ -845,7 +845,7 @@ trait Diagnostic extends js.Object {
     * Requests location authorization for the application.
     * @param successCallback
     * @param errorCallback
-    * @param mode - (iOS-only / optional) location authorization mode specified as a locationAuthorizationMode constant. If not specified, defaults to WHEN_IN_USE.
+    * @param mode - (optional / iOS & Android >= 10) location authorization mode specified as a locationAuthorizationMode constant. If not specified, defaults to WHEN_IN_USE.
     */
   var requestLocationAuthorization: js.UndefOr[
     js.Function3[

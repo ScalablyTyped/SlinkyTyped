@@ -72,23 +72,23 @@ object global extends js.Object {
     // tslint:disable-next-line:no-unnecessary-generics
     def select2[Result, RemoteResult](options: Options[Result, RemoteResult]): JQuery[TElement] = js.native
     /**
-    	 * Closes the dropdown
-    	 */
+      * Closes the dropdown
+      */
     @JSName("select2")
     def select2_close(method: close): JQuery[TElement] = js.native
     /**
-    	 * Get the data object of the current selection
-    	 */
+      * Get the data object of the current selection
+      */
     @JSName("select2")
     def select2_data(method: data): js.Array[OptionData] = js.native
     /**
-    	 * Reverts changes to DOM done by Select2. Any selection done via Select2 will be preserved.
-    	 */
+      * Reverts changes to DOM done by Select2. Any selection done via Select2 will be preserved.
+      */
     @JSName("select2")
     def select2_destroy(method: destroy): JQuery[TElement] = js.native
     /**
-    	 * Opens the dropdown
-    	 */
+      * Opens the dropdown
+      */
     @JSName("select2")
     def select2_open(method: open): JQuery[TElement] = js.native
     def trigger(events: Trigger): Unit = js.native

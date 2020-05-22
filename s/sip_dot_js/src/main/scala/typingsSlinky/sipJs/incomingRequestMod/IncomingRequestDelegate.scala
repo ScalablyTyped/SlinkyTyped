@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IncomingRequestDelegate extends js.Object {
   /**
     * Receive CANCEL request.
@@ -19,51 +18,24 @@ trait IncomingRequestDelegate extends js.Object {
     * receiving a "message" (as apposed to a "uas").
     * @param message - Incoming CANCEL request message.
     */
-  var onCancel: js.UndefOr[js.Function1[/* message */ IncomingRequestMessage, Unit]] = js.native
+  var onCancel: js.UndefOr[js.Function1[/* message */ IncomingRequestMessage, Unit]] = js.undefined
   /**
     * A transport error occurred attempted to send a response.
     * @param error - Transport error.
     */
-  var onTransportError: js.UndefOr[js.Function1[/* error */ TransportError, Unit]] = js.native
+  var onTransportError: js.UndefOr[js.Function1[/* error */ TransportError, Unit]] = js.undefined
 }
 
 object IncomingRequestDelegate {
   @scala.inline
-  def apply(): IncomingRequestDelegate = {
+  def apply(
+    onCancel: /* message */ IncomingRequestMessage => Unit = null,
+    onTransportError: /* error */ TransportError => Unit = null
+  ): IncomingRequestDelegate = {
     val __obj = js.Dynamic.literal()
+    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction1(onCancel))
+    if (onTransportError != null) __obj.updateDynamic("onTransportError")(js.Any.fromFunction1(onTransportError))
     __obj.asInstanceOf[IncomingRequestDelegate]
   }
-  @scala.inline
-  implicit class IncomingRequestDelegateOps[Self <: IncomingRequestDelegate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnCancel(value: /* message */ IncomingRequestMessage => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTransportError(value: /* error */ TransportError => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransportError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTransportError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransportError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

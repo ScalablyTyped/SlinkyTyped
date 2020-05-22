@@ -5,139 +5,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleActionsV2OrdersProposedOrder extends js.Object {
   /**
     * User's items.
     */
-  var cart: js.UndefOr[GoogleActionsV2OrdersCart] = js.native
+  var cart: js.UndefOr[GoogleActionsV2OrdersCart] = js.undefined
   /**
     * Extension to the proposed order based on the kind of order.
     * For example, if the order includes a location then this extension will
     * contain a OrderLocation value.
     */
-  var extension: js.UndefOr[ApiClientObjectMap[_]] = js.native
+  var extension: js.UndefOr[ApiClientObjectMap[_]] = js.undefined
   /**
     * Optional id for this ProposedOrder. Included as part of the
     * ProposedOrder returned back to the integrator at confirmation time.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Image associated with the proposed order.
     */
-  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.native
+  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.undefined
   /**
     * Fees, adjustments, subtotals, etc.
     */
-  var otherItems: js.UndefOr[js.Array[GoogleActionsV2OrdersLineItem]] = js.native
+  var otherItems: js.UndefOr[js.Array[GoogleActionsV2OrdersLineItem]] = js.undefined
   /**
     * A link to the terms of service that apply to this proposed order.
     */
-  var termsOfServiceUrl: js.UndefOr[String] = js.native
+  var termsOfServiceUrl: js.UndefOr[String] = js.undefined
   /**
     * Total price of the proposed order. If of type `ACTUAL`, this is the amount
     * the caller will charge when the user confirms the proposed order.
     */
-  var totalPrice: js.UndefOr[GoogleActionsV2OrdersPrice] = js.native
+  var totalPrice: js.UndefOr[GoogleActionsV2OrdersPrice] = js.undefined
 }
 
 object GoogleActionsV2OrdersProposedOrder {
   @scala.inline
-  def apply(): GoogleActionsV2OrdersProposedOrder = {
+  def apply(
+    cart: GoogleActionsV2OrdersCart = null,
+    extension: ApiClientObjectMap[_] = null,
+    id: String = null,
+    image: GoogleActionsV2UiElementsImage = null,
+    otherItems: js.Array[GoogleActionsV2OrdersLineItem] = null,
+    termsOfServiceUrl: String = null,
+    totalPrice: GoogleActionsV2OrdersPrice = null
+  ): GoogleActionsV2OrdersProposedOrder = {
     val __obj = js.Dynamic.literal()
+    if (cart != null) __obj.updateDynamic("cart")(cart.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (otherItems != null) __obj.updateDynamic("otherItems")(otherItems.asInstanceOf[js.Any])
+    if (termsOfServiceUrl != null) __obj.updateDynamic("termsOfServiceUrl")(termsOfServiceUrl.asInstanceOf[js.Any])
+    if (totalPrice != null) __obj.updateDynamic("totalPrice")(totalPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2OrdersProposedOrder]
   }
-  @scala.inline
-  implicit class GoogleActionsV2OrdersProposedOrderOps[Self <: GoogleActionsV2OrdersProposedOrder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCart(value: GoogleActionsV2OrdersCart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtension(value: ApiClientObjectMap[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: GoogleActionsV2UiElementsImage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtherItems(value: js.Array[GoogleActionsV2OrdersLineItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtherItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTermsOfServiceUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("termsOfServiceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTermsOfServiceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("termsOfServiceUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalPrice(value: GoogleActionsV2OrdersPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPrice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

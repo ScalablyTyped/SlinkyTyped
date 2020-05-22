@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait FormLayout extends js.Object
 
-object FormLayout {
-  @scala.inline
-  def horizontal: typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.horizontal]
-  @scala.inline
-  def `inline`: typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.`inline` = "inline".asInstanceOf[typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.`inline`]
-  @scala.inline
-  def vertical: typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.vertical = "vertical".asInstanceOf[typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.vertical]
-}
-

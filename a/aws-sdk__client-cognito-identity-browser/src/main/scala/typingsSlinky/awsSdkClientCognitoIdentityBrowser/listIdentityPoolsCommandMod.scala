@@ -26,9 +26,16 @@ object listIdentityPoolsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListIdentityPoolsInput) = this()
+    /* CompleteClass */
+    override val input: ListIdentityPoolsInput = js.native
     val middlewareStack: MiddlewareStack[ListIdentityPoolsInput, ListIdentityPoolsOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: CognitoIdentityResolvedConfiguration
+    ): Handler[ListIdentityPoolsInput, ListIdentityPoolsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: CognitoIdentityResolvedConfiguration
     ): Handler[ListIdentityPoolsInput, ListIdentityPoolsOutput] = js.native
   }

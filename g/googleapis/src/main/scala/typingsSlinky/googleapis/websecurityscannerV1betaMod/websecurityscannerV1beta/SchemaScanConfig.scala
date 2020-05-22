@@ -67,149 +67,32 @@ trait SchemaScanConfig extends js.Object {
 
 object SchemaScanConfig {
   @scala.inline
-  def apply(): SchemaScanConfig = {
+  def apply(
+    authentication: SchemaAuthentication = null,
+    blacklistPatterns: js.Array[String] = null,
+    displayName: String = null,
+    exportToSecurityCommandCenter: String = null,
+    latestRun: SchemaScanRun = null,
+    maxQps: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    schedule: SchemaSchedule = null,
+    startingUrls: js.Array[String] = null,
+    targetPlatforms: js.Array[String] = null,
+    userAgent: String = null
+  ): SchemaScanConfig = {
     val __obj = js.Dynamic.literal()
+    if (authentication != null) __obj.updateDynamic("authentication")(authentication.asInstanceOf[js.Any])
+    if (blacklistPatterns != null) __obj.updateDynamic("blacklistPatterns")(blacklistPatterns.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (exportToSecurityCommandCenter != null) __obj.updateDynamic("exportToSecurityCommandCenter")(exportToSecurityCommandCenter.asInstanceOf[js.Any])
+    if (latestRun != null) __obj.updateDynamic("latestRun")(latestRun.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxQps)) __obj.updateDynamic("maxQps")(maxQps.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (schedule != null) __obj.updateDynamic("schedule")(schedule.asInstanceOf[js.Any])
+    if (startingUrls != null) __obj.updateDynamic("startingUrls")(startingUrls.asInstanceOf[js.Any])
+    if (targetPlatforms != null) __obj.updateDynamic("targetPlatforms")(targetPlatforms.asInstanceOf[js.Any])
+    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScanConfig]
   }
-  @scala.inline
-  implicit class SchemaScanConfigOps[Self <: SchemaScanConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthentication(value: SchemaAuthentication): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthentication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlacklistPatterns(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistPatterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlacklistPatterns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistPatterns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportToSecurityCommandCenter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportToSecurityCommandCenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportToSecurityCommandCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportToSecurityCommandCenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatestRun(value: SchemaScanRun): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latestRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatestRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latestRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxQps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxQps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxQps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxQps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: SchemaSchedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartingUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startingUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartingUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startingUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetPlatforms(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPlatforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetPlatforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPlatforms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

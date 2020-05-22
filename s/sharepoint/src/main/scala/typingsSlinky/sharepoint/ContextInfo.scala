@@ -1,89 +1,91 @@
 package typingsSlinky.sharepoint
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.sharepoint.SPClientTemplates.ClientControlMode
 import typingsSlinky.sharepoint.SPClientTemplates.ListSchema
+import typingsSlinky.sharepoint.SPClientTemplates.RenderCallback
 import typingsSlinky.sharepoint.SPClientTemplates.RenderContext
+import typingsSlinky.sharepoint.SPClientTemplates.Templates
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContextInfo extends RenderContext {
-  var AllowCreateFolder: Boolean = js.native
-  var AllowGridMode: Boolean = js.native
-  var BasePermissions: js.Any = js.native
-  var CanShareLinkForNewDocument: Boolean = js.native
-  var CascadeDeleteWarningMessage: String = js.native
-  var ContentTypesEnabled: Boolean = js.native
+  var AllowCreateFolder: Boolean
+  var AllowGridMode: Boolean
+  var BasePermissions: js.Any
+  var CanShareLinkForNewDocument: Boolean
+  var CascadeDeleteWarningMessage: String
+  var ContentTypesEnabled: Boolean
   @JSName("CurrentSelectedItems")
-  var CurrentSelectedItems_ContextInfo: Boolean = js.native
-  var CurrentUserId: Double = js.native
-  var CurrentUserIsSiteAdmin: Boolean = js.native
-  var EnableMinorVersions: Boolean = js.native
-  var ExcludeFromOfflineClient: Boolean = js.native
-  var ExternalDataList: Boolean = js.native
-  var HasRelatedCascadeLists: Boolean = js.native
-  var HttpPath: String = js.native
-  var HttpRoot: String = js.native
-  var IsAppWeb: Boolean = js.native
-  var IsClientRendering: Boolean = js.native
-  var LastRowIndexSelected: Double = js.native
-  var LastSelectableRowIdx: Double = js.native
-  var LastSelectedItemIID: Double = js.native
-  var ListData: js.Any = js.native
+  var CurrentSelectedItems_ContextInfo: Boolean
+  var CurrentUserId: Double
+  var CurrentUserIsSiteAdmin: Boolean
+  var EnableMinorVersions: Boolean
+  var ExcludeFromOfflineClient: Boolean
+  var ExternalDataList: Boolean
+  var HasRelatedCascadeLists: Boolean
+  var HttpPath: String
+  var HttpRoot: String
+  var IsAppWeb: Boolean
+  var IsClientRendering: Boolean
+  var LastRowIndexSelected: Double
+  var LastSelectableRowIdx: Double
+  var LastSelectedItemIID: Double
+  var ListData: js.Any
    // SPClientTemplates.ListData_InView | SPClientTemplates.ListData_InForm
-  var ListSchema: typingsSlinky.sharepoint.SPClientTemplates.ListSchema = js.native
-  var ListTitle: String = js.native
-  var ModerationStatus: Double = js.native
-  var NewWOPIDocumentEnabled: Boolean = js.native
-  var NewWOPIDocumentUrl: String = js.native
-  var PortalUrl: String = js.native
-  var RecycleBinEnabled: Double = js.native
-  var RowFocusTimerID: Double = js.native
-  var SelectAllCbx: HTMLElement = js.native
-  var SendToLocationName: String = js.native
-  var SendToLocationUrl: String = js.native
-  var SiteTemplateId: Double = js.native
-  var SiteTitle: String = js.native
-  var StateInitDone: Boolean = js.native
-  var TotalListItems: Double = js.native
-  var WorkflowsAssociated: Boolean = js.native
-  var clvp: js.Any = js.native
-  var ctxId: Double = js.native
-  var ctxType: js.Any = js.native
-  var dictSel: js.Any = js.native
-  var displayFormUrl: String = js.native
-  var editFormUrl: String = js.native
-  var imagesPath: String = js.native
-  var inGridFullRender: Boolean = js.native
-  var inGridMode: Boolean = js.native
-  var isForceCheckout: Boolean = js.native
-  var isModerated: Boolean = js.native
-  var isPortalTemplate: Boolean = js.native
-  var isVersions: Boolean = js.native
-  var isWebEditorPreview: Boolean = js.native
-  var leavingGridMode: Boolean = js.native
-  var listBaseType: Double = js.native
-  var listName: String = js.native
-  var listTemplate: String = js.native
-  var listUrlDir: String = js.native
-  var loadingAsyncData: Boolean = js.native
-  var newFormUrl: String = js.native
-  var noGroupCollapse: Boolean = js.native
-  var overrideDeleteConfirmation: String = js.native
-  var overrideFilterQstring: String = js.native
-  var queryString: String = js.native
-  var recursiveView: Boolean = js.native
-  var rootFolder: String = js.native
-  var rootFolderForDisplay: String = js.native
-  var serverUrl: String = js.native
-  var verEnabled: Boolean = js.native
-  var view: String = js.native
-  var wpq: String = js.native
-  def TableCbxFocusHandler(instance: js.Any, eventArgs: js.Any): Unit = js.native
-  def TableMouseoverHandler(instance: js.Any, eventArgs: js.Any): Unit = js.native
+  var ListSchema: typingsSlinky.sharepoint.SPClientTemplates.ListSchema
+  var ListTitle: String
+  var ModerationStatus: Double
+  var NewWOPIDocumentEnabled: Boolean
+  var NewWOPIDocumentUrl: String
+  var PortalUrl: String
+  var RecycleBinEnabled: Double
+  var RowFocusTimerID: Double
+  var SelectAllCbx: HTMLElement
+  var SendToLocationName: String
+  var SendToLocationUrl: String
+  var SiteTemplateId: Double
+  var SiteTitle: String
+  var StateInitDone: Boolean
+  var TotalListItems: Double
+  var WorkflowsAssociated: Boolean
+  var clvp: js.Any
+  var ctxId: Double
+  var ctxType: js.Any
+  var dictSel: js.Any
+  var displayFormUrl: String
+  var editFormUrl: String
+  var imagesPath: String
+  var inGridFullRender: Boolean
+  var inGridMode: Boolean
+  var isForceCheckout: Boolean
+  var isModerated: Boolean
+  var isPortalTemplate: Boolean
+  var isVersions: Boolean
+  var isWebEditorPreview: Boolean
+  var leavingGridMode: Boolean
+  var listBaseType: Double
+  var listName: String
+  var listTemplate: String
+  var listUrlDir: String
+  var loadingAsyncData: Boolean
+  var newFormUrl: String
+  var noGroupCollapse: Boolean
+  var overrideDeleteConfirmation: String
+  var overrideFilterQstring: String
+  var queryString: String
+  var recursiveView: Boolean
+  var rootFolder: String
+  var rootFolderForDisplay: String
+  var serverUrl: String
+  var verEnabled: Boolean
+  var view: String
+  var wpq: String
+  def TableCbxFocusHandler(instance: js.Any, eventArgs: js.Any): Unit
+  def TableMouseoverHandler(instance: js.Any, eventArgs: js.Any): Unit
   @JSName("onRefreshFailed")
-  def onRefreshFailed_MContextInfo(context: js.Any, requrest: js.Any, response: js.Any): Unit = js.native
+  def onRefreshFailed_MContextInfo(context: js.Any, requrest: js.Any, response: js.Any): Unit
 }
 
 object ContextInfo {
@@ -160,450 +162,46 @@ object ContextInfo {
     serverUrl: String,
     verEnabled: Boolean,
     view: String,
-    wpq: String
+    wpq: String,
+    BaseViewID: js.UndefOr[Double] = js.undefined,
+    ControlMode: ClientControlMode = null,
+    CurrentCultureName: String = null,
+    CurrentLanguage: js.UndefOr[Double] = js.undefined,
+    CurrentUICultureName: String = null,
+    ListTemplateType: js.UndefOr[Double] = js.undefined,
+    OnPostRender: RenderCallback | js.Array[RenderCallback] = null,
+    OnPreRender: RenderCallback | js.Array[RenderCallback] = null,
+    RenderBody: ContextInfo => String = null,
+    RenderFieldByName: (ContextInfo, /* fieldName */ String) => String = null,
+    RenderFields: ContextInfo => String = null,
+    RenderFooter: ContextInfo => String = null,
+    RenderGroups: ContextInfo => String = null,
+    RenderHeader: ContextInfo => String = null,
+    RenderItems: ContextInfo => String = null,
+    RenderView: ContextInfo => String = null,
+    SiteClientTag: String = null,
+    Templates: Templates = null
   ): ContextInfo = {
     val __obj = js.Dynamic.literal(AllowCreateFolder = AllowCreateFolder.asInstanceOf[js.Any], AllowGridMode = AllowGridMode.asInstanceOf[js.Any], BasePermissions = BasePermissions.asInstanceOf[js.Any], CanShareLinkForNewDocument = CanShareLinkForNewDocument.asInstanceOf[js.Any], CascadeDeleteWarningMessage = CascadeDeleteWarningMessage.asInstanceOf[js.Any], ContentTypesEnabled = ContentTypesEnabled.asInstanceOf[js.Any], CurrentSelectedItems = CurrentSelectedItems.asInstanceOf[js.Any], CurrentUserId = CurrentUserId.asInstanceOf[js.Any], CurrentUserIsSiteAdmin = CurrentUserIsSiteAdmin.asInstanceOf[js.Any], EnableMinorVersions = EnableMinorVersions.asInstanceOf[js.Any], ExcludeFromOfflineClient = ExcludeFromOfflineClient.asInstanceOf[js.Any], ExternalDataList = ExternalDataList.asInstanceOf[js.Any], HasRelatedCascadeLists = HasRelatedCascadeLists.asInstanceOf[js.Any], HttpPath = HttpPath.asInstanceOf[js.Any], HttpRoot = HttpRoot.asInstanceOf[js.Any], IsAppWeb = IsAppWeb.asInstanceOf[js.Any], IsClientRendering = IsClientRendering.asInstanceOf[js.Any], LastRowIndexSelected = LastRowIndexSelected.asInstanceOf[js.Any], LastSelectableRowIdx = LastSelectableRowIdx.asInstanceOf[js.Any], LastSelectedItemIID = LastSelectedItemIID.asInstanceOf[js.Any], ListData = ListData.asInstanceOf[js.Any], ListSchema = ListSchema.asInstanceOf[js.Any], ListTitle = ListTitle.asInstanceOf[js.Any], ModerationStatus = ModerationStatus.asInstanceOf[js.Any], NewWOPIDocumentEnabled = NewWOPIDocumentEnabled.asInstanceOf[js.Any], NewWOPIDocumentUrl = NewWOPIDocumentUrl.asInstanceOf[js.Any], PortalUrl = PortalUrl.asInstanceOf[js.Any], RecycleBinEnabled = RecycleBinEnabled.asInstanceOf[js.Any], RowFocusTimerID = RowFocusTimerID.asInstanceOf[js.Any], SelectAllCbx = SelectAllCbx.asInstanceOf[js.Any], SendToLocationName = SendToLocationName.asInstanceOf[js.Any], SendToLocationUrl = SendToLocationUrl.asInstanceOf[js.Any], SiteTemplateId = SiteTemplateId.asInstanceOf[js.Any], SiteTitle = SiteTitle.asInstanceOf[js.Any], StateInitDone = StateInitDone.asInstanceOf[js.Any], TableCbxFocusHandler = js.Any.fromFunction2(TableCbxFocusHandler), TableMouseoverHandler = js.Any.fromFunction2(TableMouseoverHandler), TotalListItems = TotalListItems.asInstanceOf[js.Any], WorkflowsAssociated = WorkflowsAssociated.asInstanceOf[js.Any], clvp = clvp.asInstanceOf[js.Any], ctxId = ctxId.asInstanceOf[js.Any], ctxType = ctxType.asInstanceOf[js.Any], dictSel = dictSel.asInstanceOf[js.Any], displayFormUrl = displayFormUrl.asInstanceOf[js.Any], editFormUrl = editFormUrl.asInstanceOf[js.Any], imagesPath = imagesPath.asInstanceOf[js.Any], inGridFullRender = inGridFullRender.asInstanceOf[js.Any], inGridMode = inGridMode.asInstanceOf[js.Any], isForceCheckout = isForceCheckout.asInstanceOf[js.Any], isModerated = isModerated.asInstanceOf[js.Any], isPortalTemplate = isPortalTemplate.asInstanceOf[js.Any], isVersions = isVersions.asInstanceOf[js.Any], isWebEditorPreview = isWebEditorPreview.asInstanceOf[js.Any], leavingGridMode = leavingGridMode.asInstanceOf[js.Any], listBaseType = listBaseType.asInstanceOf[js.Any], listName = listName.asInstanceOf[js.Any], listTemplate = listTemplate.asInstanceOf[js.Any], listUrlDir = listUrlDir.asInstanceOf[js.Any], loadingAsyncData = loadingAsyncData.asInstanceOf[js.Any], newFormUrl = newFormUrl.asInstanceOf[js.Any], noGroupCollapse = noGroupCollapse.asInstanceOf[js.Any], onRefreshFailed = js.Any.fromFunction3(onRefreshFailed), overrideDeleteConfirmation = overrideDeleteConfirmation.asInstanceOf[js.Any], overrideFilterQstring = overrideFilterQstring.asInstanceOf[js.Any], queryString = queryString.asInstanceOf[js.Any], recursiveView = recursiveView.asInstanceOf[js.Any], rootFolder = rootFolder.asInstanceOf[js.Any], rootFolderForDisplay = rootFolderForDisplay.asInstanceOf[js.Any], serverUrl = serverUrl.asInstanceOf[js.Any], verEnabled = verEnabled.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any], wpq = wpq.asInstanceOf[js.Any])
+    if (!js.isUndefined(BaseViewID)) __obj.updateDynamic("BaseViewID")(BaseViewID.get.asInstanceOf[js.Any])
+    if (ControlMode != null) __obj.updateDynamic("ControlMode")(ControlMode.asInstanceOf[js.Any])
+    if (CurrentCultureName != null) __obj.updateDynamic("CurrentCultureName")(CurrentCultureName.asInstanceOf[js.Any])
+    if (!js.isUndefined(CurrentLanguage)) __obj.updateDynamic("CurrentLanguage")(CurrentLanguage.get.asInstanceOf[js.Any])
+    if (CurrentUICultureName != null) __obj.updateDynamic("CurrentUICultureName")(CurrentUICultureName.asInstanceOf[js.Any])
+    if (!js.isUndefined(ListTemplateType)) __obj.updateDynamic("ListTemplateType")(ListTemplateType.get.asInstanceOf[js.Any])
+    if (OnPostRender != null) __obj.updateDynamic("OnPostRender")(OnPostRender.asInstanceOf[js.Any])
+    if (OnPreRender != null) __obj.updateDynamic("OnPreRender")(OnPreRender.asInstanceOf[js.Any])
+    if (RenderBody != null) __obj.updateDynamic("RenderBody")(js.Any.fromFunction1(RenderBody))
+    if (RenderFieldByName != null) __obj.updateDynamic("RenderFieldByName")(js.Any.fromFunction2(RenderFieldByName))
+    if (RenderFields != null) __obj.updateDynamic("RenderFields")(js.Any.fromFunction1(RenderFields))
+    if (RenderFooter != null) __obj.updateDynamic("RenderFooter")(js.Any.fromFunction1(RenderFooter))
+    if (RenderGroups != null) __obj.updateDynamic("RenderGroups")(js.Any.fromFunction1(RenderGroups))
+    if (RenderHeader != null) __obj.updateDynamic("RenderHeader")(js.Any.fromFunction1(RenderHeader))
+    if (RenderItems != null) __obj.updateDynamic("RenderItems")(js.Any.fromFunction1(RenderItems))
+    if (RenderView != null) __obj.updateDynamic("RenderView")(js.Any.fromFunction1(RenderView))
+    if (SiteClientTag != null) __obj.updateDynamic("SiteClientTag")(SiteClientTag.asInstanceOf[js.Any])
+    if (Templates != null) __obj.updateDynamic("Templates")(Templates.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextInfo]
   }
-  @scala.inline
-  implicit class ContextInfoOps[Self <: ContextInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowCreateFolder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowCreateFolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowGridMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowGridMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasePermissions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BasePermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanShareLinkForNewDocument(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CanShareLinkForNewDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCascadeDeleteWarningMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CascadeDeleteWarningMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentTypesEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentTypesEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentSelectedItems(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentSelectedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentUserId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentUserIsSiteAdmin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentUserIsSiteAdmin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableMinorVersions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableMinorVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcludeFromOfflineClient(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeFromOfflineClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalDataList(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalDataList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasRelatedCascadeLists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasRelatedCascadeLists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHttpPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHttpRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsAppWeb(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAppWeb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsClientRendering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsClientRendering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastRowIndexSelected(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastRowIndexSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastSelectableRowIdx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSelectableRowIdx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastSelectedItemIID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSelectedItemIID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListSchema(value: ListSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModerationStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModerationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewWOPIDocumentEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewWOPIDocumentEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewWOPIDocumentUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewWOPIDocumentUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPortalUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortalUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecycleBinEnabled(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecycleBinEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowFocusTimerID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowFocusTimerID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectAllCbx(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectAllCbx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSendToLocationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendToLocationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSendToLocationUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendToLocationUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSiteTemplateId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SiteTemplateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSiteTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SiteTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStateInitDone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateInitDone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableCbxFocusHandler(value: (js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableCbxFocusHandler")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTableMouseoverHandler(value: (js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableMouseoverHandler")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTotalListItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalListItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkflowsAssociated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowsAssociated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClvp(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clvp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCtxId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctxId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCtxType(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctxType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDictSel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictSel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayFormUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayFormUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEditFormUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editFormUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImagesPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagesPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInGridFullRender(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inGridFullRender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInGridMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inGridMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsForceCheckout(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isForceCheckout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsModerated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isModerated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPortalTemplate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPortalTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsVersions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsWebEditorPreview(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWebEditorPreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeavingGridMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leavingGridMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListBaseType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listBaseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListUrlDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listUrlDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadingAsyncData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingAsyncData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewFormUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newFormUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoGroupCollapse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noGroupCollapse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnRefreshFailed(value: (js.Any, js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefreshFailed")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withOverrideDeleteConfirmation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideDeleteConfirmation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverrideFilterQstring(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideFilterQstring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueryString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecursiveView(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRootFolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootFolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRootFolderForDisplay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootFolderForDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withView(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWpq(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wpq")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

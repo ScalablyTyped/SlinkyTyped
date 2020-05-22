@@ -15,13 +15,12 @@ import scala.scalajs.js.annotation._
   * @see XNotifyingDispatch
   * @see XDispatchResultListener
   */
-@js.native
 trait XStatusListener extends XEventListener {
   /**
     * is called when the status of the feature changes.
     * @param State provides information about changes of the requested feature
     */
-  def statusChanged(State: FeatureStateEvent): Unit = js.native
+  def statusChanged(State: FeatureStateEvent): Unit
 }
 
 object XStatusListener {
@@ -36,19 +35,5 @@ object XStatusListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), statusChanged = js.Any.fromFunction1(statusChanged))
     __obj.asInstanceOf[XStatusListener]
   }
-  @scala.inline
-  implicit class XStatusListenerOps[Self <: XStatusListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatusChanged(value: FeatureStateEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

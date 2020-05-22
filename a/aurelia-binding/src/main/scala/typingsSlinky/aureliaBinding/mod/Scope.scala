@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Scope extends js.Object {
   /**
     * The primary aspect of the binding scope.  Typically a view-model instance.
     */
-  var bindingContext: js.Any = js.native
+  var bindingContext: js.Any
   /**
     * The "parallel" or "artificial" aspect of the binding scope. Provides access to the parent binding
     * context and stores contextual bindable members such as $event, $index, $odd, etc. Members on this
     * object take precedence over members of the bindingContext object.
     */
-  var overrideContext: OverrideContext = js.native
+  var overrideContext: OverrideContext
 }
 
 object Scope {
@@ -24,25 +23,5 @@ object Scope {
     val __obj = js.Dynamic.literal(bindingContext = bindingContext.asInstanceOf[js.Any], overrideContext = overrideContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scope]
   }
-  @scala.inline
-  implicit class ScopeOps[Self <: Scope] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBindingContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverrideContext(value: OverrideContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

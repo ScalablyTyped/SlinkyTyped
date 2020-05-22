@@ -11,6 +11,8 @@ class SkeletonDebugRenderer protected ()
   extends typingsSlinky.phaser.spine.webgl.SkeletonDebugRenderer {
   def this(context: typingsSlinky.phaser.spine.webgl.ManagedWebGLRenderingContext) = this()
   def this(context: WebGLRenderingContext) = this()
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SVGAnimatedEnumeration")
 @js.native
 class SVGAnimatedEnumeration ()
-  extends typingsSlinky.std.SVGAnimatedEnumeration
+  extends typingsSlinky.std.SVGAnimatedEnumeration {
+  /* CompleteClass */
+  override val animVal: Double = js.native
+  /* CompleteClass */
+  override var baseVal: Double = js.native
+}
 
 @JSGlobal("SVGAnimatedEnumeration")
 @js.native

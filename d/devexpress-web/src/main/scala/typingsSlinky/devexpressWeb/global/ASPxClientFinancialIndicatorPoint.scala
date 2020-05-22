@@ -10,5 +10,26 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientFinancialIndicatorPoint")
 @js.native
 class ASPxClientFinancialIndicatorPoint ()
-  extends typingsSlinky.devexpressWeb.ASPxClientFinancialIndicatorPoint
+  extends typingsSlinky.devexpressWeb.ASPxClientFinancialIndicatorPoint {
+  /**
+    * Gets the argument of the financial indicator's point.
+    */
+  /* CompleteClass */
+  override var argument: js.Any = js.native
+  /**
+    * Gets the chart that owns the current chart element.
+    */
+  /* CompleteClass */
+  override var chart: typingsSlinky.devexpressWeb.ASPxClientWebChart = js.native
+  /**
+    * Gets the financial indicator that owns the current financial indicator point.
+    */
+  /* CompleteClass */
+  override var financialIndicator: typingsSlinky.devexpressWeb.ASPxClientFinancialIndicator = js.native
+  /**
+    * Gets a value, indicating how the value of a financial indicator's point is obtained.
+    */
+  /* CompleteClass */
+  override var valueLevel: String = js.native
+}
 

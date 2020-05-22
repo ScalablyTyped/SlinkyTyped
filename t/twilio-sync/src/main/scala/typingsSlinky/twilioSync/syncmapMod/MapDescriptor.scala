@@ -5,17 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapDescriptor extends js.Object {
-  var date_expires: String = js.native
-  var date_updated: js.Date = js.native
-  var items: js.UndefOr[js.Array[MapItemDescriptor]] = js.native
-  var last_event_id: Double = js.native
-  var links: js.Any = js.native
-  var revision: String = js.native
-  var sid: String = js.native
-  var unique_name: String = js.native
-  var url: String = js.native
+  var date_expires: String
+  var date_updated: js.Date
+  var items: js.UndefOr[js.Array[MapItemDescriptor]] = js.undefined
+  var last_event_id: Double
+  var links: js.Any
+  var revision: String
+  var sid: String
+  var unique_name: String
+  var url: String
 }
 
 object MapDescriptor {
@@ -28,78 +27,12 @@ object MapDescriptor {
     revision: String,
     sid: String,
     unique_name: String,
-    url: String
+    url: String,
+    items: js.Array[MapItemDescriptor] = null
   ): MapDescriptor = {
     val __obj = js.Dynamic.literal(date_expires = date_expires.asInstanceOf[js.Any], date_updated = date_updated.asInstanceOf[js.Any], last_event_id = last_event_id.asInstanceOf[js.Any], links = links.asInstanceOf[js.Any], revision = revision.asInstanceOf[js.Any], sid = sid.asInstanceOf[js.Any], unique_name = unique_name.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapDescriptor]
   }
-  @scala.inline
-  implicit class MapDescriptorOps[Self <: MapDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate_expires(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date_expires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDate_updated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date_updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast_event_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_event_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinks(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevision(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnique_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[MapItemDescriptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

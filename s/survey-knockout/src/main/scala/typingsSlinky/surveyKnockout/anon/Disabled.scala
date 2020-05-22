@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Disabled extends js.Object {
-  var disabled: String = js.native
-  var item: String = js.native
-  var itemText: String = js.native
-  var maxText: String = js.native
-  var minText: String = js.native
-  var root: String = js.native
-  var selected: String = js.native
+  var disabled: String
+  var item: String
+  var itemText: String
+  var maxText: String
+  var minText: String
+  var root: String
+  var selected: String
 }
 
 object Disabled {
@@ -29,55 +28,5 @@ object Disabled {
     val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], itemText = itemText.asInstanceOf[js.Any], maxText = maxText.asInstanceOf[js.Any], minText = minText.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
     __obj.asInstanceOf[Disabled]
   }
-  @scala.inline
-  implicit class DisabledOps[Self <: Disabled] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelected(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

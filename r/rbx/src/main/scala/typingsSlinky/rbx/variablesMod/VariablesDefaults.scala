@@ -56,20 +56,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VariablesDefaults extends js.Object {
-  var badgeSizes: small | medium | large = js.native
-  var breakpoints: mobile | tablet | desktop | widescreen | fullhd | touch = js.native
-  var breakpointsLimited: mobile | fullhd | touch = js.native
-  var colors: primary | success | info | warning | danger | light | dark | white | black | link = js.native
-  var displays: block | flex | `inline` | `inline-block` | `inline-flex` = js.native
-  var floatPulledAlignments: left | right = js.native
-  var shades: `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis` = js.native
-  var textAlignments: centered | justified | left | right = js.native
-  var textSizes: `1` | `2` | `3` | `4` | `5` | `6` | `7` = js.native
-  var textTransforms: capitalized | lowercase | uppercase = js.native
-  var textWeights: light | medium | normal | semibold | bold = js.native
-  var tooltipPositions: top | right | bottom | left = js.native
+  var badgeSizes: small | medium | large
+  var breakpoints: mobile | tablet | desktop | widescreen | fullhd | touch
+  var breakpointsLimited: mobile | fullhd | touch
+  var colors: primary | success | info | warning | danger | light | dark | white | black | link
+  var displays: block | flex | `inline` | `inline-block` | `inline-flex`
+  var floatPulledAlignments: left | right
+  var shades: `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
+  var textAlignments: centered | justified | left | right
+  var textSizes: `1` | `2` | `3` | `4` | `5` | `6` | `7`
+  var textTransforms: capitalized | lowercase | uppercase
+  var textWeights: light | medium | normal | semibold | bold
+  var tooltipPositions: top | right | bottom | left
 }
 
 object VariablesDefaults {
@@ -91,87 +90,5 @@ object VariablesDefaults {
     val __obj = js.Dynamic.literal(badgeSizes = badgeSizes.asInstanceOf[js.Any], breakpoints = breakpoints.asInstanceOf[js.Any], breakpointsLimited = breakpointsLimited.asInstanceOf[js.Any], colors = colors.asInstanceOf[js.Any], displays = displays.asInstanceOf[js.Any], floatPulledAlignments = floatPulledAlignments.asInstanceOf[js.Any], shades = shades.asInstanceOf[js.Any], textAlignments = textAlignments.asInstanceOf[js.Any], textSizes = textSizes.asInstanceOf[js.Any], textTransforms = textTransforms.asInstanceOf[js.Any], textWeights = textWeights.asInstanceOf[js.Any], tooltipPositions = tooltipPositions.asInstanceOf[js.Any])
     __obj.asInstanceOf[VariablesDefaults]
   }
-  @scala.inline
-  implicit class VariablesDefaultsOps[Self <: VariablesDefaults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBadgeSizes(value: small | medium | large): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBreakpoints(value: mobile | tablet | desktop | widescreen | fullhd | touch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBreakpointsLimited(value: mobile | fullhd | touch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpointsLimited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColors(value: primary | success | info | warning | danger | light | dark | white | black | link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplays(value: block | flex | `inline` | `inline-block` | `inline-flex`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFloatPulledAlignments(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatPulledAlignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShades(
-      value: `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shades")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextAlignments(value: centered | justified | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextSizes(value: `1` | `2` | `3` | `4` | `5` | `6` | `7`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextTransforms(value: capitalized | lowercase | uppercase): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextWeights(value: light | medium | normal | semibold | bold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textWeights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTooltipPositions(value: top | right | bottom | left): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPositions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

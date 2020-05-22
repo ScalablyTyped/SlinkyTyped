@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("GoToPreviousDataRecordCommand")
 @js.native
 class GoToPreviousDataRecordCommand ()
-  extends typingsSlinky.devexpressWeb.GoToPreviousDataRecordCommand
+  extends typingsSlinky.devexpressWeb.GoToPreviousDataRecordCommand {
+  /**
+    * Executes the GoToPreviousDataRecordCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

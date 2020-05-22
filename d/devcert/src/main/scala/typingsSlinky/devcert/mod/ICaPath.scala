@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICaPath
   extends IReturnCaPath[js.Any] {
-  var caPath: String = js.native
+  var caPath: String
 }
 
 object ICaPath {
@@ -16,19 +15,5 @@ object ICaPath {
     val __obj = js.Dynamic.literal(caPath = caPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICaPath]
   }
-  @scala.inline
-  implicit class ICaPathOps[Self <: ICaPath] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

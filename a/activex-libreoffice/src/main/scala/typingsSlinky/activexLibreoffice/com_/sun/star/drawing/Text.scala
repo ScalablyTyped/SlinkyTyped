@@ -27,7 +27,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This abstract service specifies the general characteristics of an optional text inside a {@link Shape} . */
-@js.native
 trait Text
   extends TextProperties
      with XText

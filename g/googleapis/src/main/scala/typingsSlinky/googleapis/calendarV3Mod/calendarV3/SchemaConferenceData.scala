@@ -56,101 +56,24 @@ trait SchemaConferenceData extends js.Object {
 
 object SchemaConferenceData {
   @scala.inline
-  def apply(): SchemaConferenceData = {
+  def apply(
+    conferenceId: String = null,
+    conferenceSolution: SchemaConferenceSolution = null,
+    createRequest: SchemaCreateConferenceRequest = null,
+    entryPoints: js.Array[SchemaEntryPoint] = null,
+    notes: String = null,
+    parameters: SchemaConferenceParameters = null,
+    signature: String = null
+  ): SchemaConferenceData = {
     val __obj = js.Dynamic.literal()
+    if (conferenceId != null) __obj.updateDynamic("conferenceId")(conferenceId.asInstanceOf[js.Any])
+    if (conferenceSolution != null) __obj.updateDynamic("conferenceSolution")(conferenceSolution.asInstanceOf[js.Any])
+    if (createRequest != null) __obj.updateDynamic("createRequest")(createRequest.asInstanceOf[js.Any])
+    if (entryPoints != null) __obj.updateDynamic("entryPoints")(entryPoints.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConferenceData]
   }
-  @scala.inline
-  implicit class SchemaConferenceDataOps[Self <: SchemaConferenceData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConferenceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conferenceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConferenceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conferenceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConferenceSolution(value: SchemaConferenceSolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conferenceSolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConferenceSolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conferenceSolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateRequest(value: SchemaCreateConferenceRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntryPoints(value: js.Array[SchemaEntryPoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntryPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: SchemaConferenceParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

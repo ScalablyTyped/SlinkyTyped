@@ -18,19 +18,5 @@ object DeleteContactRequest {
     val __obj = js.Dynamic.literal(ContactArn = ContactArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteContactRequest]
   }
-  @scala.inline
-  implicit class DeleteContactRequestOps[Self <: DeleteContactRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContactArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContactArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

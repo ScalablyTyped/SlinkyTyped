@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait pellAction extends js.Object
 
-object pellAction {
-  @scala.inline
-  implicit def apply(value: pellActionConfig): pellAction = value.asInstanceOf[pellAction]
-  @scala.inline
-  implicit def apply(value: pellBuiltinAction): pellAction = value.asInstanceOf[pellAction]
-  @scala.inline
-  implicit def apply(value: pellCustomActionConfig): pellAction = value.asInstanceOf[pellAction]
-}
-

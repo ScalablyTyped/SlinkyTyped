@@ -1,5 +1,7 @@
 package typingsSlinky.eslintScope.mod
 
+import typingsSlinky.eslint.mod.Scope.Definition
+import typingsSlinky.estree.mod.Identifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,5 +9,14 @@ import scala.scalajs.js.annotation._
 @JSImport("eslint-scope", "Variable")
 @js.native
 class Variable ()
-  extends typingsSlinky.eslint.mod.Scope.Variable
+  extends typingsSlinky.eslint.mod.Scope.Variable {
+  /* CompleteClass */
+  override var defs: js.Array[Definition] = js.native
+  /* CompleteClass */
+  override var identifiers: js.Array[Identifier] = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+  /* CompleteClass */
+  override var references: js.Array[typingsSlinky.eslint.mod.Scope.Reference] = js.native
+}
 

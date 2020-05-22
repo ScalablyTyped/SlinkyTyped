@@ -23,5 +23,15 @@ class StickValues protected ()
     */
   y: Double
   ) = this()
+  /**
+    * The x component of the control stick
+    */
+  /* CompleteClass */
+  override var x: Double = js.native
+  /**
+    * The y component of the control stick
+    */
+  /* CompleteClass */
+  override var y: Double = js.native
 }
 

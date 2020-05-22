@@ -22,53 +22,16 @@ trait SavingsPlansAmortizedCommitment extends js.Object {
 
 object SavingsPlansAmortizedCommitment {
   @scala.inline
-  def apply(): SavingsPlansAmortizedCommitment = {
+  def apply(
+    AmortizedRecurringCommitment: GenericString = null,
+    AmortizedUpfrontCommitment: GenericString = null,
+    TotalAmortizedCommitment: GenericString = null
+  ): SavingsPlansAmortizedCommitment = {
     val __obj = js.Dynamic.literal()
+    if (AmortizedRecurringCommitment != null) __obj.updateDynamic("AmortizedRecurringCommitment")(AmortizedRecurringCommitment.asInstanceOf[js.Any])
+    if (AmortizedUpfrontCommitment != null) __obj.updateDynamic("AmortizedUpfrontCommitment")(AmortizedUpfrontCommitment.asInstanceOf[js.Any])
+    if (TotalAmortizedCommitment != null) __obj.updateDynamic("TotalAmortizedCommitment")(TotalAmortizedCommitment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansAmortizedCommitment]
   }
-  @scala.inline
-  implicit class SavingsPlansAmortizedCommitmentOps[Self <: SavingsPlansAmortizedCommitment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmortizedRecurringCommitment(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmortizedRecurringCommitment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmortizedRecurringCommitment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmortizedRecurringCommitment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmortizedUpfrontCommitment(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmortizedUpfrontCommitment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmortizedUpfrontCommitment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmortizedUpfrontCommitment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalAmortizedCommitment(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalAmortizedCommitment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalAmortizedCommitment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalAmortizedCommitment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

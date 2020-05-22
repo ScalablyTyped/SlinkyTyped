@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccessibilityAnnounceNewDataOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Optional formatter callback for
@@ -21,19 +20,19 @@ trait AccessibilityAnnounceNewDataOptions extends js.Object {
     * user. Return empty string to not announce anything. Return `false` to use
     * the default announcement format.
     */
-  var announcementFormatter: js.UndefOr[js.Function] = js.native
+  var announcementFormatter: js.UndefOr[js.Function] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Enable announcing new data to
     * screen reader users
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Choose whether or not the
     * announcements should interrupt the screen reader. If not enabled, the
     * user will be notified once idle. It is recommended not to enable this
     * setting unless there is a specific reason to do so.
     */
-  var interruptUser: js.UndefOr[Boolean] = js.native
+  var interruptUser: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Minimum interval between
     * announcements in milliseconds. If new data arrives before this amount of
@@ -43,70 +42,23 @@ trait AccessibilityAnnounceNewDataOptions extends js.Object {
     * all announcements, but be warned that frequent announcements are
     * disturbing to users.
     */
-  var minAnnounceInterval: js.UndefOr[Double] = js.native
+  var minAnnounceInterval: js.UndefOr[Double] = js.undefined
 }
 
 object AccessibilityAnnounceNewDataOptions {
   @scala.inline
-  def apply(): AccessibilityAnnounceNewDataOptions = {
+  def apply(
+    announcementFormatter: js.Function = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    interruptUser: js.UndefOr[Boolean] = js.undefined,
+    minAnnounceInterval: js.UndefOr[Double] = js.undefined
+  ): AccessibilityAnnounceNewDataOptions = {
     val __obj = js.Dynamic.literal()
+    if (announcementFormatter != null) __obj.updateDynamic("announcementFormatter")(announcementFormatter.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interruptUser)) __obj.updateDynamic("interruptUser")(interruptUser.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minAnnounceInterval)) __obj.updateDynamic("minAnnounceInterval")(minAnnounceInterval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessibilityAnnounceNewDataOptions]
   }
-  @scala.inline
-  implicit class AccessibilityAnnounceNewDataOptionsOps[Self <: AccessibilityAnnounceNewDataOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnouncementFormatter(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("announcementFormatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnouncementFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("announcementFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterruptUser(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interruptUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterruptUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interruptUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinAnnounceInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minAnnounceInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinAnnounceInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minAnnounceInterval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

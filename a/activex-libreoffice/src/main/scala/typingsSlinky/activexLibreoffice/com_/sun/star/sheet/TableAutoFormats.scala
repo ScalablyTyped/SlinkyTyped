@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   *
   * There is only one instance of this collection, containing all AutoFormats usable in spreadsheet and text tables.
   */
-@js.native
 trait TableAutoFormats
   extends XNameContainer
      with XIndexAccess

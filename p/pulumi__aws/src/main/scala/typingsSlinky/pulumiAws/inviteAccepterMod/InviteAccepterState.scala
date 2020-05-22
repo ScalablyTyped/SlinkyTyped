@@ -19,41 +19,11 @@ trait InviteAccepterState extends js.Object {
 
 object InviteAccepterState {
   @scala.inline
-  def apply(): InviteAccepterState = {
+  def apply(detectorId: Input[String] = null, masterAccountId: Input[String] = null): InviteAccepterState = {
     val __obj = js.Dynamic.literal()
+    if (detectorId != null) __obj.updateDynamic("detectorId")(detectorId.asInstanceOf[js.Any])
+    if (masterAccountId != null) __obj.updateDynamic("masterAccountId")(masterAccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[InviteAccepterState]
   }
-  @scala.inline
-  implicit class InviteAccepterStateOps[Self <: InviteAccepterState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectorId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAccountId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

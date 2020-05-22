@@ -106,305 +106,58 @@ trait VirtualInterface extends js.Object {
 
 object VirtualInterface {
   @scala.inline
-  def apply(): VirtualInterface = {
+  def apply(
+    addressFamily: AddressFamily = null,
+    amazonAddress: AmazonAddress = null,
+    amazonSideAsn: js.UndefOr[LongAsn] = js.undefined,
+    asn: js.UndefOr[ASN] = js.undefined,
+    authKey: BGPAuthKey = null,
+    awsDeviceV2: AwsDeviceV2 = null,
+    bgpPeers: BGPPeerList = null,
+    connectionId: ConnectionId = null,
+    customerAddress: CustomerAddress = null,
+    customerRouterConfig: RouterConfig = null,
+    directConnectGatewayId: DirectConnectGatewayId = null,
+    jumboFrameCapable: js.UndefOr[JumboFrameCapable] = js.undefined,
+    location: LocationCode = null,
+    mtu: js.UndefOr[MTU] = js.undefined,
+    ownerAccount: OwnerAccount = null,
+    region: Region = null,
+    routeFilterPrefixes: RouteFilterPrefixList = null,
+    tags: TagList = null,
+    virtualGatewayId: VirtualGatewayId = null,
+    virtualInterfaceId: VirtualInterfaceId = null,
+    virtualInterfaceName: VirtualInterfaceName = null,
+    virtualInterfaceState: VirtualInterfaceState = null,
+    virtualInterfaceType: VirtualInterfaceType = null,
+    vlan: js.UndefOr[VLAN] = js.undefined
+  ): VirtualInterface = {
     val __obj = js.Dynamic.literal()
+    if (addressFamily != null) __obj.updateDynamic("addressFamily")(addressFamily.asInstanceOf[js.Any])
+    if (amazonAddress != null) __obj.updateDynamic("amazonAddress")(amazonAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(amazonSideAsn)) __obj.updateDynamic("amazonSideAsn")(amazonSideAsn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(asn)) __obj.updateDynamic("asn")(asn.get.asInstanceOf[js.Any])
+    if (authKey != null) __obj.updateDynamic("authKey")(authKey.asInstanceOf[js.Any])
+    if (awsDeviceV2 != null) __obj.updateDynamic("awsDeviceV2")(awsDeviceV2.asInstanceOf[js.Any])
+    if (bgpPeers != null) __obj.updateDynamic("bgpPeers")(bgpPeers.asInstanceOf[js.Any])
+    if (connectionId != null) __obj.updateDynamic("connectionId")(connectionId.asInstanceOf[js.Any])
+    if (customerAddress != null) __obj.updateDynamic("customerAddress")(customerAddress.asInstanceOf[js.Any])
+    if (customerRouterConfig != null) __obj.updateDynamic("customerRouterConfig")(customerRouterConfig.asInstanceOf[js.Any])
+    if (directConnectGatewayId != null) __obj.updateDynamic("directConnectGatewayId")(directConnectGatewayId.asInstanceOf[js.Any])
+    if (!js.isUndefined(jumboFrameCapable)) __obj.updateDynamic("jumboFrameCapable")(jumboFrameCapable.get.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (!js.isUndefined(mtu)) __obj.updateDynamic("mtu")(mtu.get.asInstanceOf[js.Any])
+    if (ownerAccount != null) __obj.updateDynamic("ownerAccount")(ownerAccount.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (routeFilterPrefixes != null) __obj.updateDynamic("routeFilterPrefixes")(routeFilterPrefixes.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (virtualGatewayId != null) __obj.updateDynamic("virtualGatewayId")(virtualGatewayId.asInstanceOf[js.Any])
+    if (virtualInterfaceId != null) __obj.updateDynamic("virtualInterfaceId")(virtualInterfaceId.asInstanceOf[js.Any])
+    if (virtualInterfaceName != null) __obj.updateDynamic("virtualInterfaceName")(virtualInterfaceName.asInstanceOf[js.Any])
+    if (virtualInterfaceState != null) __obj.updateDynamic("virtualInterfaceState")(virtualInterfaceState.asInstanceOf[js.Any])
+    if (virtualInterfaceType != null) __obj.updateDynamic("virtualInterfaceType")(virtualInterfaceType.asInstanceOf[js.Any])
+    if (!js.isUndefined(vlan)) __obj.updateDynamic("vlan")(vlan.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualInterface]
   }
-  @scala.inline
-  implicit class VirtualInterfaceOps[Self <: VirtualInterface] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddressFamily(value: AddressFamily): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddressFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmazonAddress(value: AmazonAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmazonAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmazonSideAsn(value: LongAsn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonSideAsn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmazonSideAsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonSideAsn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsn(value: ASN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthKey(value: BGPAuthKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsDeviceV2(value: AwsDeviceV2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDeviceV2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsDeviceV2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDeviceV2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgpPeers(value: BGPPeerList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgpPeers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgpPeers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgpPeers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionId(value: ConnectionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerAddress(value: CustomerAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerRouterConfig(value: RouterConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerRouterConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerRouterConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerRouterConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectConnectGatewayId(value: DirectConnectGatewayId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectConnectGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJumboFrameCapable(value: JumboFrameCapable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jumboFrameCapable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJumboFrameCapable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jumboFrameCapable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: LocationCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMtu(value: MTU): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mtu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMtu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mtu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerAccount(value: OwnerAccount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: Region): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteFilterPrefixes(value: RouteFilterPrefixList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeFilterPrefixes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteFilterPrefixes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeFilterPrefixes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualGatewayId(value: VirtualGatewayId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualInterfaceId(value: VirtualInterfaceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualInterfaceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualInterfaceName(value: VirtualInterfaceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualInterfaceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualInterfaceState(value: VirtualInterfaceState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualInterfaceState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualInterfaceType(value: VirtualInterfaceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualInterfaceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVlan(value: VLAN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vlan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVlan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vlan")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

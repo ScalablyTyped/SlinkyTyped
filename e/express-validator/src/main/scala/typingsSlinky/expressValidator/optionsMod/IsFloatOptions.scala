@@ -4,36 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsFloatOptions extends MinMaxExtendedOptions {
-  var locale: js.UndefOr[AlphanumericLocale] = js.native
+  var locale: js.UndefOr[AlphanumericLocale] = js.undefined
 }
 
 object IsFloatOptions {
   @scala.inline
-  def apply(): IsFloatOptions = {
+  def apply(
+    gt: js.UndefOr[Double] = js.undefined,
+    locale: AlphanumericLocale = null,
+    lt: js.UndefOr[Double] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined
+  ): IsFloatOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(gt)) __obj.updateDynamic("gt")(gt.get.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (!js.isUndefined(lt)) __obj.updateDynamic("lt")(lt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsFloatOptions]
   }
-  @scala.inline
-  implicit class IsFloatOptionsOps[Self <: IsFloatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocale(value: AlphanumericLocale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

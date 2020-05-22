@@ -11,7 +11,7 @@ trait GetRateBasedStatementManagedKeysRequest extends js.Object {
     */
   var RuleName: EntityName = js.native
   /**
-    * Specifies whether this is for an AWS CloudFront distribution or for a regional application. A regional application can be an Application Load Balancer (ALB) or an API Gateway stage.  To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:    CLI - Specify the region when you use the CloudFront scope: --scope=CLOUDFRONT --region=us-east-1.    API and SDKs - For all calls, use the Region endpoint us-east-1.   
+    * Specifies whether this is for an AWS CloudFront distribution or for a regional application. A regional application can be an Application Load Balancer (ALB) or an API Gateway stage.  To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:    CLI - Specify the Region when you use the CloudFront scope: --scope=CLOUDFRONT --region=us-east-1.    API and SDKs - For all calls, use the Region endpoint us-east-1.   
     */
   var Scope: typingsSlinky.awsSdk.wafv2Mod.Scope = js.native
   /**
@@ -19,7 +19,7 @@ trait GetRateBasedStatementManagedKeysRequest extends js.Object {
     */
   var WebACLId: EntityId = js.native
   /**
-    * A friendly name of the Web ACL. You cannot change the name of a Web ACL after you create it.
+    * The name of the Web ACL. You cannot change the name of a Web ACL after you create it.
     */
   var WebACLName: EntityName = js.native
 }
@@ -30,37 +30,5 @@ object GetRateBasedStatementManagedKeysRequest {
     val __obj = js.Dynamic.literal(RuleName = RuleName.asInstanceOf[js.Any], Scope = Scope.asInstanceOf[js.Any], WebACLId = WebACLId.asInstanceOf[js.Any], WebACLName = WebACLName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRateBasedStatementManagedKeysRequest]
   }
-  @scala.inline
-  implicit class GetRateBasedStatementManagedKeysRequestOps[Self <: GetRateBasedStatementManagedKeysRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRuleName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScope(value: Scope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebACLId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACLId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebACLName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACLName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

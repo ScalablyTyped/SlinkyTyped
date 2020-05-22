@@ -62,167 +62,35 @@ trait UpdateNotebookInstanceInput extends js.Object {
 
 object UpdateNotebookInstanceInput {
   @scala.inline
-  def apply(NotebookInstanceName: NotebookInstanceName): UpdateNotebookInstanceInput = {
+  def apply(
+    NotebookInstanceName: NotebookInstanceName,
+    AcceleratorTypes: NotebookInstanceAcceleratorTypes = null,
+    AdditionalCodeRepositories: AdditionalCodeRepositoryNamesOrUrls = null,
+    DefaultCodeRepository: CodeRepositoryNameOrUrl = null,
+    DisassociateAcceleratorTypes: js.UndefOr[DisassociateNotebookInstanceAcceleratorTypes] = js.undefined,
+    DisassociateAdditionalCodeRepositories: js.UndefOr[DisassociateAdditionalCodeRepositories] = js.undefined,
+    DisassociateDefaultCodeRepository: js.UndefOr[DisassociateDefaultCodeRepository] = js.undefined,
+    DisassociateLifecycleConfig: js.UndefOr[DisassociateNotebookInstanceLifecycleConfig] = js.undefined,
+    InstanceType: InstanceType = null,
+    LifecycleConfigName: NotebookInstanceLifecycleConfigName = null,
+    RoleArn: RoleArn = null,
+    RootAccess: RootAccess = null,
+    VolumeSizeInGB: js.UndefOr[NotebookInstanceVolumeSizeInGB] = js.undefined
+  ): UpdateNotebookInstanceInput = {
     val __obj = js.Dynamic.literal(NotebookInstanceName = NotebookInstanceName.asInstanceOf[js.Any])
+    if (AcceleratorTypes != null) __obj.updateDynamic("AcceleratorTypes")(AcceleratorTypes.asInstanceOf[js.Any])
+    if (AdditionalCodeRepositories != null) __obj.updateDynamic("AdditionalCodeRepositories")(AdditionalCodeRepositories.asInstanceOf[js.Any])
+    if (DefaultCodeRepository != null) __obj.updateDynamic("DefaultCodeRepository")(DefaultCodeRepository.asInstanceOf[js.Any])
+    if (!js.isUndefined(DisassociateAcceleratorTypes)) __obj.updateDynamic("DisassociateAcceleratorTypes")(DisassociateAcceleratorTypes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DisassociateAdditionalCodeRepositories)) __obj.updateDynamic("DisassociateAdditionalCodeRepositories")(DisassociateAdditionalCodeRepositories.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DisassociateDefaultCodeRepository)) __obj.updateDynamic("DisassociateDefaultCodeRepository")(DisassociateDefaultCodeRepository.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DisassociateLifecycleConfig)) __obj.updateDynamic("DisassociateLifecycleConfig")(DisassociateLifecycleConfig.get.asInstanceOf[js.Any])
+    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
+    if (LifecycleConfigName != null) __obj.updateDynamic("LifecycleConfigName")(LifecycleConfigName.asInstanceOf[js.Any])
+    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
+    if (RootAccess != null) __obj.updateDynamic("RootAccess")(RootAccess.asInstanceOf[js.Any])
+    if (!js.isUndefined(VolumeSizeInGB)) __obj.updateDynamic("VolumeSizeInGB")(VolumeSizeInGB.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateNotebookInstanceInput]
   }
-  @scala.inline
-  implicit class UpdateNotebookInstanceInputOps[Self <: UpdateNotebookInstanceInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotebookInstanceName(value: NotebookInstanceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotebookInstanceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcceleratorTypes(value: NotebookInstanceAcceleratorTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceleratorTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalCodeRepositories(value: AdditionalCodeRepositoryNamesOrUrls): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalCodeRepositories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalCodeRepositories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalCodeRepositories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultCodeRepository(value: CodeRepositoryNameOrUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCodeRepository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultCodeRepository: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCodeRepository")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisassociateAcceleratorTypes(value: DisassociateNotebookInstanceAcceleratorTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisassociateAcceleratorTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisassociateAcceleratorTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisassociateAcceleratorTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisassociateAdditionalCodeRepositories(value: DisassociateAdditionalCodeRepositories): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisassociateAdditionalCodeRepositories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisassociateAdditionalCodeRepositories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisassociateAdditionalCodeRepositories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisassociateDefaultCodeRepository(value: DisassociateDefaultCodeRepository): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisassociateDefaultCodeRepository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisassociateDefaultCodeRepository: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisassociateDefaultCodeRepository")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisassociateLifecycleConfig(value: DisassociateNotebookInstanceLifecycleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisassociateLifecycleConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisassociateLifecycleConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisassociateLifecycleConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceType(value: InstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycleConfigName(value: NotebookInstanceLifecycleConfigName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleConfigName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleConfigName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleConfigName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootAccess(value: RootAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeSizeInGB(value: NotebookInstanceVolumeSizeInGB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInGB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeSizeInGB: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInGB")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

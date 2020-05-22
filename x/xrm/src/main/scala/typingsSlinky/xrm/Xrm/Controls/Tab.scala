@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * @see {@link UiElement}
   * @see {@link UiFocusable}
   */
-@js.native
 trait Tab
   extends UiStandardElement
      with UiFocusable {
@@ -21,37 +20,37 @@ trait Tab
     * A reference to the collection of form sections within this tab.
     * @see {@link https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/collections External Link: Collections (Client API reference)}
     */
-  var sections: ItemCollection[Section] = js.native
+  var sections: ItemCollection[Section]
   /**
     * Adds a function to be called when the TabStateChange event occurs.
     * @param handler The function to be executed on the TabStateChange event.
     */
-  def addTabStateChange(handler: ContextSensitiveHandler): Unit = js.native
+  def addTabStateChange(handler: ContextSensitiveHandler): Unit
   /**
     * Gets display state of the tab.
     * @returns The display state, as either "expanded" or "collapsed"
     */
-  def getDisplayState(): DisplayState = js.native
+  def getDisplayState(): DisplayState
   /**
     * Gets the name of the tab.
     * @returns The name.
     */
-  def getName(): String = js.native
+  def getName(): String
   /**
     * Gets a reference to the {@link FormContext.ui formContext.ui} parent of the tab.
     * @returns The parent.
     */
-  def getParent(): Ui = js.native
+  def getParent(): Ui
   /**
     * Removes a function to be called when the TabStateChange event occurs.
     * @param handler The function to be removed from the TabStateChange event.
     */
-  def removeTabStateChange(handler: ContextSensitiveHandler): Unit = js.native
+  def removeTabStateChange(handler: ContextSensitiveHandler): Unit
   /**
     * Sets display state of the tab.
     * @param displayState Display state of the tab, as either "expanded" or "collapsed"
     */
-  def setDisplayState(displayState: DisplayState): Unit = js.native
+  def setDisplayState(displayState: DisplayState): Unit
 }
 
 object Tab {
@@ -73,55 +72,5 @@ object Tab {
     val __obj = js.Dynamic.literal(addTabStateChange = js.Any.fromFunction1(addTabStateChange), getDisplayState = js.Any.fromFunction0(getDisplayState), getLabel = js.Any.fromFunction0(getLabel), getName = js.Any.fromFunction0(getName), getParent = js.Any.fromFunction0(getParent), getVisible = js.Any.fromFunction0(getVisible), removeTabStateChange = js.Any.fromFunction1(removeTabStateChange), sections = sections.asInstanceOf[js.Any], setDisplayState = js.Any.fromFunction1(setDisplayState), setFocus = js.Any.fromFunction0(setFocus), setLabel = js.Any.fromFunction1(setLabel), setVisible = js.Any.fromFunction1(setVisible))
     __obj.asInstanceOf[Tab]
   }
-  @scala.inline
-  implicit class TabOps[Self <: Tab] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddTabStateChange(value: ContextSensitiveHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTabStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDisplayState(value: () => DisplayState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetParent(value: () => Ui): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getParent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveTabStateChange(value: ContextSensitiveHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTabStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSections(value: ItemCollection[Section]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetDisplayState(value: DisplayState => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDisplayState")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,153 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SharedTimeProps[DateType] extends DisabledTimes {
-  var defaultValue: js.UndefOr[DateType] = js.native
-  var format: js.UndefOr[String] = js.native
-  var hideDisabledOptions: js.UndefOr[Boolean] = js.native
-  var hourStep: js.UndefOr[Double] = js.native
-  var minuteStep: js.UndefOr[Double] = js.native
-  var secondStep: js.UndefOr[Double] = js.native
-  var showHour: js.UndefOr[Boolean] = js.native
-  var showMinute: js.UndefOr[Boolean] = js.native
-  var showSecond: js.UndefOr[Boolean] = js.native
-  var use12Hours: js.UndefOr[Boolean] = js.native
+  var defaultValue: js.UndefOr[DateType] = js.undefined
+  var format: js.UndefOr[String] = js.undefined
+  var hideDisabledOptions: js.UndefOr[Boolean] = js.undefined
+  var hourStep: js.UndefOr[Double] = js.undefined
+  var minuteStep: js.UndefOr[Double] = js.undefined
+  var secondStep: js.UndefOr[Double] = js.undefined
+  var showHour: js.UndefOr[Boolean] = js.undefined
+  var showMinute: js.UndefOr[Boolean] = js.undefined
+  var showSecond: js.UndefOr[Boolean] = js.undefined
+  var use12Hours: js.UndefOr[Boolean] = js.undefined
 }
 
 object SharedTimeProps {
   @scala.inline
-  def apply[DateType](): SharedTimeProps[DateType] = {
+  def apply[DateType](
+    defaultValue: DateType = null,
+    disabledHours: () => js.Array[Double] = null,
+    disabledMinutes: /* hour */ Double => js.Array[Double] = null,
+    disabledSeconds: (/* hour */ Double, /* minute */ Double) => js.Array[Double] = null,
+    format: String = null,
+    hideDisabledOptions: js.UndefOr[Boolean] = js.undefined,
+    hourStep: js.UndefOr[Double] = js.undefined,
+    minuteStep: js.UndefOr[Double] = js.undefined,
+    secondStep: js.UndefOr[Double] = js.undefined,
+    showHour: js.UndefOr[Boolean] = js.undefined,
+    showMinute: js.UndefOr[Boolean] = js.undefined,
+    showSecond: js.UndefOr[Boolean] = js.undefined,
+    use12Hours: js.UndefOr[Boolean] = js.undefined
+  ): SharedTimeProps[DateType] = {
     val __obj = js.Dynamic.literal()
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (disabledHours != null) __obj.updateDynamic("disabledHours")(js.Any.fromFunction0(disabledHours))
+    if (disabledMinutes != null) __obj.updateDynamic("disabledMinutes")(js.Any.fromFunction1(disabledMinutes))
+    if (disabledSeconds != null) __obj.updateDynamic("disabledSeconds")(js.Any.fromFunction2(disabledSeconds))
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideDisabledOptions)) __obj.updateDynamic("hideDisabledOptions")(hideDisabledOptions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hourStep)) __obj.updateDynamic("hourStep")(hourStep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minuteStep)) __obj.updateDynamic("minuteStep")(minuteStep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(secondStep)) __obj.updateDynamic("secondStep")(secondStep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHour)) __obj.updateDynamic("showHour")(showHour.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMinute)) __obj.updateDynamic("showMinute")(showMinute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSecond)) __obj.updateDynamic("showSecond")(showSecond.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedTimeProps[DateType]]
   }
-  @scala.inline
-  implicit class SharedTimePropsOps[Self[datetype] <: SharedTimeProps[datetype], DateType] (val x: Self[DateType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[DateType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[DateType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[DateType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[DateType] with Other]
-    @scala.inline
-    def withDefaultValue(value: DateType): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDisabledOptions(value: Boolean): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDisabledOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDisabledOptions: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDisabledOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHourStep(value: Double): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHourStep: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinuteStep(value: Double): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinuteStep: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondStep(value: Double): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondStep: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHour(value: Boolean): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHour: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMinute(value: Boolean): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMinute: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSecond(value: Boolean): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSecond: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse12Hours(value: Boolean): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use12Hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse12Hours: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use12Hours")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

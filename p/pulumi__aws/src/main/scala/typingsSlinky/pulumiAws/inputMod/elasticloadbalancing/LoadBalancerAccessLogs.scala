@@ -20,66 +20,24 @@ trait LoadBalancerAccessLogs extends js.Object {
     */
   var enabled: js.UndefOr[Input[Boolean]] = js.native
   /**
-    * The interval between checks.
+    * The publishing interval in minutes. Default: 60 minutes.
     */
   var interval: js.UndefOr[Input[Double]] = js.native
 }
 
 object LoadBalancerAccessLogs {
   @scala.inline
-  def apply(bucket: Input[String]): LoadBalancerAccessLogs = {
+  def apply(
+    bucket: Input[String],
+    bucketPrefix: Input[String] = null,
+    enabled: Input[Boolean] = null,
+    interval: Input[Double] = null
+  ): LoadBalancerAccessLogs = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any])
+    if (bucketPrefix != null) __obj.updateDynamic("bucketPrefix")(bucketPrefix.asInstanceOf[js.Any])
+    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
+    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerAccessLogs]
   }
-  @scala.inline
-  implicit class LoadBalancerAccessLogsOps[Self <: LoadBalancerAccessLogs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBucketPrefix(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

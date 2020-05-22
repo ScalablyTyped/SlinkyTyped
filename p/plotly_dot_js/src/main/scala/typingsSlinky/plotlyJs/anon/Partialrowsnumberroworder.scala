@@ -17,179 +17,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  rows  :number,   roworder  :'top to bottom' | 'bottom to top',   columns  :number,   subplots  :std.Array<string>,   xaxes  :std.Array<string>,   yaxes  :std.Array<string>,   pattern  :'independent' | 'coupled',   xgap  :number,   ygap  :number,   domain  :std.Partial<{  x  :std.Array<number>,   y  :std.Array<number>}>,   xside  :'bottom' | 'bottom plot' | 'top plot' | 'top',   yside  :'left' | 'left plot' | 'right plot' | 'right'}> */
-@js.native
 trait Partialrowsnumberroworder extends js.Object {
-  var columns: js.UndefOr[Double] = js.native
-  var domain: js.UndefOr[PartialxArraynumberyArray] = js.native
-  var pattern: js.UndefOr[independent | coupled] = js.native
-  var roworder: js.UndefOr[(`top to bottom`) | (`bottom to top`)] = js.native
-  var rows: js.UndefOr[Double] = js.native
-  var subplots: js.UndefOr[js.Array[String]] = js.native
-  var xaxes: js.UndefOr[js.Array[String]] = js.native
-  var xgap: js.UndefOr[Double] = js.native
-  var xside: js.UndefOr[bottom | (`bottom plot`) | (`top plot`) | top] = js.native
-  var yaxes: js.UndefOr[js.Array[String]] = js.native
-  var ygap: js.UndefOr[Double] = js.native
-  var yside: js.UndefOr[left | (`left plot`) | (`right plot`) | right] = js.native
+  var columns: js.UndefOr[Double] = js.undefined
+  var domain: js.UndefOr[PartialxArraynumberyArray] = js.undefined
+  var pattern: js.UndefOr[independent | coupled] = js.undefined
+  var roworder: js.UndefOr[(`top to bottom`) | (`bottom to top`)] = js.undefined
+  var rows: js.UndefOr[Double] = js.undefined
+  var subplots: js.UndefOr[js.Array[String]] = js.undefined
+  var xaxes: js.UndefOr[js.Array[String]] = js.undefined
+  var xgap: js.UndefOr[Double] = js.undefined
+  var xside: js.UndefOr[bottom | (`bottom plot`) | (`top plot`) | top] = js.undefined
+  var yaxes: js.UndefOr[js.Array[String]] = js.undefined
+  var ygap: js.UndefOr[Double] = js.undefined
+  var yside: js.UndefOr[left | (`left plot`) | (`right plot`) | right] = js.undefined
 }
 
 object Partialrowsnumberroworder {
   @scala.inline
-  def apply(): Partialrowsnumberroworder = {
+  def apply(
+    columns: js.UndefOr[Double] = js.undefined,
+    domain: PartialxArraynumberyArray = null,
+    pattern: independent | coupled = null,
+    roworder: (`top to bottom`) | (`bottom to top`) = null,
+    rows: js.UndefOr[Double] = js.undefined,
+    subplots: js.Array[String] = null,
+    xaxes: js.Array[String] = null,
+    xgap: js.UndefOr[Double] = js.undefined,
+    xside: bottom | (`bottom plot`) | (`top plot`) | top = null,
+    yaxes: js.Array[String] = null,
+    ygap: js.UndefOr[Double] = js.undefined,
+    yside: left | (`left plot`) | (`right plot`) | right = null
+  ): Partialrowsnumberroworder = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(columns)) __obj.updateDynamic("columns")(columns.get.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (roworder != null) __obj.updateDynamic("roworder")(roworder.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
+    if (subplots != null) __obj.updateDynamic("subplots")(subplots.asInstanceOf[js.Any])
+    if (xaxes != null) __obj.updateDynamic("xaxes")(xaxes.asInstanceOf[js.Any])
+    if (!js.isUndefined(xgap)) __obj.updateDynamic("xgap")(xgap.get.asInstanceOf[js.Any])
+    if (xside != null) __obj.updateDynamic("xside")(xside.asInstanceOf[js.Any])
+    if (yaxes != null) __obj.updateDynamic("yaxes")(yaxes.asInstanceOf[js.Any])
+    if (!js.isUndefined(ygap)) __obj.updateDynamic("ygap")(ygap.get.asInstanceOf[js.Any])
+    if (yside != null) __obj.updateDynamic("yside")(yside.asInstanceOf[js.Any])
     __obj.asInstanceOf[Partialrowsnumberroworder]
   }
-  @scala.inline
-  implicit class PartialrowsnumberroworderOps[Self <: Partialrowsnumberroworder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: PartialxArraynumberyArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPattern(value: independent | coupled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoworder(value: (`top to bottom`) | (`bottom to top`)): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roworder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoworder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roworder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubplots(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subplots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubplots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subplots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXaxes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xaxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXaxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xaxes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXgap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xgap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXgap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xgap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXside(value: bottom | (`bottom plot`) | (`top plot`) | top): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXside: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xside")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYaxes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yaxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYaxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yaxes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYgap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ygap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYgap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ygap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYside(value: left | (`left plot`) | (`right plot`) | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYside: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yside")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

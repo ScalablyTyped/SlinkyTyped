@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Callback extends js.Object {
-  var lineNumber: Double = js.native
-  var traceLine: js.Object | js.Any = js.native
+  var lineNumber: Double
+  var traceLine: js.Object | js.Any
 }
 
 object Callback {
@@ -16,25 +15,5 @@ object Callback {
     val __obj = js.Dynamic.literal(lineNumber = lineNumber.asInstanceOf[js.Any], traceLine = traceLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[Callback]
   }
-  @scala.inline
-  implicit class CallbackOps[Self <: Callback] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLineNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTraceLine(value: js.Object | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

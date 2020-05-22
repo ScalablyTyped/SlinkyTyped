@@ -53,65 +53,18 @@ trait SchemaRequestMetadata extends js.Object {
 
 object SchemaRequestMetadata {
   @scala.inline
-  def apply(): SchemaRequestMetadata = {
+  def apply(
+    deviceInfo: SchemaDeviceInfo = null,
+    domain: String = null,
+    sessionId: String = null,
+    userId: String = null
+  ): SchemaRequestMetadata = {
     val __obj = js.Dynamic.literal()
+    if (deviceInfo != null) __obj.updateDynamic("deviceInfo")(deviceInfo.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRequestMetadata]
   }
-  @scala.inline
-  implicit class SchemaRequestMetadataOps[Self <: SchemaRequestMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceInfo(value: SchemaDeviceInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,37 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ThresholdsEach extends Threshold {
   /** @default {} */
-  val overrides: js.UndefOr[StringDictionary[Threshold]] = js.native
+  val overrides: js.UndefOr[StringDictionary[Threshold]] = js.undefined
 }
 
 object ThresholdsEach {
   @scala.inline
-  def apply(): ThresholdsEach = {
+  def apply(
+    branches: js.UndefOr[Double] = js.undefined,
+    functions: js.UndefOr[Double] = js.undefined,
+    lines: js.UndefOr[Double] = js.undefined,
+    overrides: StringDictionary[Threshold] = null,
+    statements: js.UndefOr[Double] = js.undefined
+  ): ThresholdsEach = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(branches)) __obj.updateDynamic("branches")(branches.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(functions)) __obj.updateDynamic("functions")(functions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lines)) __obj.updateDynamic("lines")(lines.get.asInstanceOf[js.Any])
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (!js.isUndefined(statements)) __obj.updateDynamic("statements")(statements.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThresholdsEach]
   }
-  @scala.inline
-  implicit class ThresholdsEachOps[Self <: ThresholdsEach] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOverrides(value: StringDictionary[Threshold]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

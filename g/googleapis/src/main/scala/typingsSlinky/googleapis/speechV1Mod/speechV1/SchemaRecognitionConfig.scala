@@ -138,173 +138,36 @@ trait SchemaRecognitionConfig extends js.Object {
 
 object SchemaRecognitionConfig {
   @scala.inline
-  def apply(): SchemaRecognitionConfig = {
+  def apply(
+    audioChannelCount: js.UndefOr[Double] = js.undefined,
+    enableAutomaticPunctuation: js.UndefOr[Boolean] = js.undefined,
+    enableSeparateRecognitionPerChannel: js.UndefOr[Boolean] = js.undefined,
+    enableWordTimeOffsets: js.UndefOr[Boolean] = js.undefined,
+    encoding: String = null,
+    languageCode: String = null,
+    maxAlternatives: js.UndefOr[Double] = js.undefined,
+    metadata: SchemaRecognitionMetadata = null,
+    model: String = null,
+    profanityFilter: js.UndefOr[Boolean] = js.undefined,
+    sampleRateHertz: js.UndefOr[Double] = js.undefined,
+    speechContexts: js.Array[SchemaSpeechContext] = null,
+    useEnhanced: js.UndefOr[Boolean] = js.undefined
+  ): SchemaRecognitionConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(audioChannelCount)) __obj.updateDynamic("audioChannelCount")(audioChannelCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAutomaticPunctuation)) __obj.updateDynamic("enableAutomaticPunctuation")(enableAutomaticPunctuation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableSeparateRecognitionPerChannel)) __obj.updateDynamic("enableSeparateRecognitionPerChannel")(enableSeparateRecognitionPerChannel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableWordTimeOffsets)) __obj.updateDynamic("enableWordTimeOffsets")(enableWordTimeOffsets.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAlternatives)) __obj.updateDynamic("maxAlternatives")(maxAlternatives.get.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (!js.isUndefined(profanityFilter)) __obj.updateDynamic("profanityFilter")(profanityFilter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sampleRateHertz)) __obj.updateDynamic("sampleRateHertz")(sampleRateHertz.get.asInstanceOf[js.Any])
+    if (speechContexts != null) __obj.updateDynamic("speechContexts")(speechContexts.asInstanceOf[js.Any])
+    if (!js.isUndefined(useEnhanced)) __obj.updateDynamic("useEnhanced")(useEnhanced.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRecognitionConfig]
   }
-  @scala.inline
-  implicit class SchemaRecognitionConfigOps[Self <: SchemaRecognitionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioChannelCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioChannelCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioChannelCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioChannelCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAutomaticPunctuation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutomaticPunctuation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAutomaticPunctuation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutomaticPunctuation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSeparateRecognitionPerChannel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSeparateRecognitionPerChannel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSeparateRecognitionPerChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSeparateRecognitionPerChannel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableWordTimeOffsets(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWordTimeOffsets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableWordTimeOffsets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWordTimeOffsets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAlternatives(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAlternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAlternatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAlternatives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: SchemaRecognitionMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfanityFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profanityFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfanityFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profanityFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleRateHertz(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRateHertz")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleRateHertz: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRateHertz")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeechContexts(value: js.Array[SchemaSpeechContext]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speechContexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeechContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speechContexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEnhanced(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEnhanced")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEnhanced: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEnhanced")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

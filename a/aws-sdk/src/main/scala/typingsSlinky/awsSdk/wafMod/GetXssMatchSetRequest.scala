@@ -18,19 +18,5 @@ object GetXssMatchSetRequest {
     val __obj = js.Dynamic.literal(XssMatchSetId = XssMatchSetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetXssMatchSetRequest]
   }
-  @scala.inline
-  implicit class GetXssMatchSetRequestOps[Self <: GetXssMatchSetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withXssMatchSetId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XssMatchSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

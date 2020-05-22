@@ -36,77 +36,20 @@ trait SchemaGoogleDatastoreAdminV1beta1CommonMetadata extends js.Object {
 
 object SchemaGoogleDatastoreAdminV1beta1CommonMetadata {
   @scala.inline
-  def apply(): SchemaGoogleDatastoreAdminV1beta1CommonMetadata = {
+  def apply(
+    endTime: String = null,
+    labels: StringDictionary[String] = null,
+    operationType: String = null,
+    startTime: String = null,
+    state: String = null
+  ): SchemaGoogleDatastoreAdminV1beta1CommonMetadata = {
     val __obj = js.Dynamic.literal()
+    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (operationType != null) __obj.updateDynamic("operationType")(operationType.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDatastoreAdminV1beta1CommonMetadata]
   }
-  @scala.inline
-  implicit class SchemaGoogleDatastoreAdminV1beta1CommonMetadataOps[Self <: SchemaGoogleDatastoreAdminV1beta1CommonMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

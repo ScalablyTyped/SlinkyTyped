@@ -388,22 +388,33 @@ trait Query extends js.Object {
     */
   def on(
     eventType: EventType,
-    callback: js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _]
+    callback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _]
   ): js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _] = js.native
   def on(
     eventType: EventType,
-    callback: js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _],
+    callback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
+    cancelCallbackOrContext: js.Function1[/* a */ js.Error, _]
+  ): js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _] = js.native
+  def on(
+    eventType: EventType,
+    callback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
+    cancelCallbackOrContext: js.Function1[/* a */ js.Error, _],
+    context: js.Object
+  ): js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _] = js.native
+  def on(
+    eventType: EventType,
+    callback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
     cancelCallbackOrContext: js.Object
   ): js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _] = js.native
   def on(
     eventType: EventType,
-    callback: js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _],
+    callback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
     cancelCallbackOrContext: js.Object,
     context: js.Object
   ): js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _] = js.native
   def on(
     eventType: EventType,
-    callback: js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _],
+    callback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
     cancelCallbackOrContext: Null,
     context: js.Object
   ): js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String], _] = js.native
@@ -441,22 +452,33 @@ trait Query extends js.Object {
   def once(eventType: EventType): js.Promise[DataSnapshot] = js.native
   def once(
     eventType: EventType,
-    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String], _]
+    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _]
   ): js.Promise[DataSnapshot] = js.native
   def once(
     eventType: EventType,
-    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String], _],
+    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
+    failureCallbackOrContext: js.Function1[/* a */ js.Error, Unit]
+  ): js.Promise[DataSnapshot] = js.native
+  def once(
+    eventType: EventType,
+    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
+    failureCallbackOrContext: js.Function1[/* a */ js.Error, Unit],
+    context: js.Object
+  ): js.Promise[DataSnapshot] = js.native
+  def once(
+    eventType: EventType,
+    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
     failureCallbackOrContext: js.Object
   ): js.Promise[DataSnapshot] = js.native
   def once(
     eventType: EventType,
-    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String], _],
+    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
     failureCallbackOrContext: js.Object,
     context: js.Object
   ): js.Promise[DataSnapshot] = js.native
   def once(
     eventType: EventType,
-    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String], _],
+    successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
     failureCallbackOrContext: Null,
     context: js.Object
   ): js.Promise[DataSnapshot] = js.native

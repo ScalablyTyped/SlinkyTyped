@@ -4,88 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArchiveOptions extends js.Object {
-  var hasAudio: js.UndefOr[Boolean] = js.native
-  var hasVideo: js.UndefOr[Boolean] = js.native
-  var layout: js.UndefOr[ArchiveLayoutOptions] = js.native
-  var name: js.UndefOr[String] = js.native
-  var outputMode: js.UndefOr[OutputMode] = js.native
+  var hasAudio: js.UndefOr[Boolean] = js.undefined
+  var hasVideo: js.UndefOr[Boolean] = js.undefined
+  var layout: js.UndefOr[ArchiveLayoutOptions] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var outputMode: js.UndefOr[OutputMode] = js.undefined
+  var resolution: js.UndefOr[String] = js.undefined
 }
 
 object ArchiveOptions {
   @scala.inline
-  def apply(): ArchiveOptions = {
+  def apply(
+    hasAudio: js.UndefOr[Boolean] = js.undefined,
+    hasVideo: js.UndefOr[Boolean] = js.undefined,
+    layout: ArchiveLayoutOptions = null,
+    name: String = null,
+    outputMode: OutputMode = null,
+    resolution: String = null
+  ): ArchiveOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hasAudio)) __obj.updateDynamic("hasAudio")(hasAudio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasVideo)) __obj.updateDynamic("hasVideo")(hasVideo.get.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (outputMode != null) __obj.updateDynamic("outputMode")(outputMode.asInstanceOf[js.Any])
+    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArchiveOptions]
   }
-  @scala.inline
-  implicit class ArchiveOptionsOps[Self <: ArchiveOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasAudio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAudio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasAudio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAudio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasVideo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasVideo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasVideo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: ArchiveLayoutOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputMode(value: OutputMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

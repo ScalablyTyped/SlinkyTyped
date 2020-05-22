@@ -10,166 +10,48 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-bootstrap-table2-filter.react-bootstrap-table2-filter.TextFilterProps<any>> */
-@js.native
 trait PartialTextFilterPropsany extends js.Object {
-  var caseSensitive: js.UndefOr[Boolean] = js.native
-  var className: js.UndefOr[String] = js.native
-  var comparator: js.UndefOr[typingsSlinky.reactBootstrapTable2Filter.mod.Comparator] = js.native
-  var defaultValue: js.UndefOr[js.Any] = js.native
-  var delay: js.UndefOr[Double] = js.native
-  var getFilter: js.UndefOr[js.Function1[/* filter */ TableColumnFilterProps[_, _], Unit]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, Element], Unit]] = js.native
-  var onFilter: js.UndefOr[js.Function1[/* filterValue */ TableColumnFilterProps[_, _], Unit | js.Array[_]]] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var caseSensitive: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var comparator: js.UndefOr[typingsSlinky.reactBootstrapTable2Filter.mod.Comparator] = js.undefined
+  var defaultValue: js.UndefOr[js.Any] = js.undefined
+  var delay: js.UndefOr[Double] = js.undefined
+  var getFilter: js.UndefOr[js.Function1[/* filter */ TableColumnFilterProps[_, _], Unit]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, Element], Unit]] = js.undefined
+  var onFilter: js.UndefOr[js.Function1[/* filterValue */ TableColumnFilterProps[_, _], Unit | js.Array[_]]] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object PartialTextFilterPropsany {
   @scala.inline
-  def apply(): PartialTextFilterPropsany = {
+  def apply(
+    caseSensitive: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    comparator: typingsSlinky.reactBootstrapTable2Filter.mod.Comparator = null,
+    defaultValue: js.Any = null,
+    delay: js.UndefOr[Double] = js.undefined,
+    getFilter: /* filter */ TableColumnFilterProps[_, _] => Unit = null,
+    id: String = null,
+    onClick: /* e */ SyntheticEvent[Event, Element] => Unit = null,
+    onFilter: /* filterValue */ TableColumnFilterProps[_, _] => Unit | js.Array[_] = null,
+    placeholder: String = null,
+    style: CSSProperties = null
+  ): PartialTextFilterPropsany = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (comparator != null) __obj.updateDynamic("comparator")(comparator.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (getFilter != null) __obj.updateDynamic("getFilter")(js.Any.fromFunction1(getFilter))
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction1(onFilter))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialTextFilterPropsany]
   }
-  @scala.inline
-  implicit class PartialTextFilterPropsanyOps[Self <: PartialTextFilterPropsany] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaseSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaseSensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparator(value: typingsSlinky.reactBootstrapTable2Filter.mod.Comparator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetFilter(value: /* filter */ TableColumnFilterProps[_, _] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* e */ SyntheticEvent[Event, Element] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFilter(value: /* filterValue */ TableColumnFilterProps[_, _] => Unit | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

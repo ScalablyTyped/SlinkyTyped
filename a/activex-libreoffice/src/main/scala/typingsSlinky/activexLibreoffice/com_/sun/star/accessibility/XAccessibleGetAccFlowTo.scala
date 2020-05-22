@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XAccessibleGetAccFlowTo extends XInterface {
-  def getAccFlowTo(aXShape: js.Any, nType: Double): SafeArray[_] = js.native
+  def getAccFlowTo(aXShape: js.Any, nType: Double): SafeArray[_]
 }
 
 object XAccessibleGetAccFlowTo {
@@ -23,19 +22,5 @@ object XAccessibleGetAccFlowTo {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getAccFlowTo = js.Any.fromFunction2(getAccFlowTo), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAccessibleGetAccFlowTo]
   }
-  @scala.inline
-  implicit class XAccessibleGetAccFlowToOps[Self <: XAccessibleGetAccFlowTo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAccFlowTo(value: (js.Any, Double) => SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccFlowTo")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

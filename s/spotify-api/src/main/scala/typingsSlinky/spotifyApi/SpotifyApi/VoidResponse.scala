@@ -12,6 +12,5 @@ import scala.scalajs.js.annotation._
 /**
   * Void Response
   */
-@js.native
 trait VoidResponse extends js.Object
 

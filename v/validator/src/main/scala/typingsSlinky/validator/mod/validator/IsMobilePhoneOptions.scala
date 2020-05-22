@@ -4,41 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsMobilePhoneOptions extends js.Object {
   /**
     * If this is set to `true`, the mobile phone number must be supplied with the country code and therefore must start with `+`.
     *
     * @default false
     */
-  var strictMode: js.UndefOr[Boolean] = js.native
+  var strictMode: js.UndefOr[Boolean] = js.undefined
 }
 
 object IsMobilePhoneOptions {
   @scala.inline
-  def apply(): IsMobilePhoneOptions = {
+  def apply(strictMode: js.UndefOr[Boolean] = js.undefined): IsMobilePhoneOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(strictMode)) __obj.updateDynamic("strictMode")(strictMode.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsMobilePhoneOptions]
   }
-  @scala.inline
-  implicit class IsMobilePhoneOptionsOps[Self <: IsMobilePhoneOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStrictMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrictMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

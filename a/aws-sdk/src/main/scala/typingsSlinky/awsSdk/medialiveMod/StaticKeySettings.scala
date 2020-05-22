@@ -18,35 +18,10 @@ trait StaticKeySettings extends js.Object {
 
 object StaticKeySettings {
   @scala.inline
-  def apply(StaticKeyValue: stringMin32Max32): StaticKeySettings = {
+  def apply(StaticKeyValue: stringMin32Max32, KeyProviderServer: InputLocation = null): StaticKeySettings = {
     val __obj = js.Dynamic.literal(StaticKeyValue = StaticKeyValue.asInstanceOf[js.Any])
+    if (KeyProviderServer != null) __obj.updateDynamic("KeyProviderServer")(KeyProviderServer.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticKeySettings]
   }
-  @scala.inline
-  implicit class StaticKeySettingsOps[Self <: StaticKeySettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStaticKeyValue(value: stringMin32Max32): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticKeyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyProviderServer(value: InputLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyProviderServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyProviderServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyProviderServer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,7 +13,7 @@ trait UpdateFleetAttributesInput extends js.Object {
   /**
     * A unique identifier for a fleet to update attribute metadata for. You can use either the fleet ID or ARN value.
     */
-  var FleetId: typingsSlinky.awsSdk.gameliftMod.FleetId = js.native
+  var FleetId: FleetIdOrArn = js.native
   /**
     * Names of metric groups to include this fleet in. Amazon CloudWatch uses a fleet metric group is to aggregate metrics from multiple fleets. Use an existing metric group name to add this fleet to the group. Or use a new name to create a new metric group. A fleet can only be included in one metric group at a time.
     */
@@ -34,83 +34,21 @@ trait UpdateFleetAttributesInput extends js.Object {
 
 object UpdateFleetAttributesInput {
   @scala.inline
-  def apply(FleetId: FleetId): UpdateFleetAttributesInput = {
+  def apply(
+    FleetId: FleetIdOrArn,
+    Description: NonZeroAndMaxString = null,
+    MetricGroups: MetricGroupList = null,
+    Name: NonZeroAndMaxString = null,
+    NewGameSessionProtectionPolicy: ProtectionPolicy = null,
+    ResourceCreationLimitPolicy: ResourceCreationLimitPolicy = null
+  ): UpdateFleetAttributesInput = {
     val __obj = js.Dynamic.literal(FleetId = FleetId.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (MetricGroups != null) __obj.updateDynamic("MetricGroups")(MetricGroups.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (NewGameSessionProtectionPolicy != null) __obj.updateDynamic("NewGameSessionProtectionPolicy")(NewGameSessionProtectionPolicy.asInstanceOf[js.Any])
+    if (ResourceCreationLimitPolicy != null) __obj.updateDynamic("ResourceCreationLimitPolicy")(ResourceCreationLimitPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFleetAttributesInput]
   }
-  @scala.inline
-  implicit class UpdateFleetAttributesInputOps[Self <: UpdateFleetAttributesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFleetId(value: FleetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricGroups(value: MetricGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewGameSessionProtectionPolicy(value: ProtectionPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewGameSessionProtectionPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewGameSessionProtectionPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewGameSessionProtectionPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceCreationLimitPolicy(value: ResourceCreationLimitPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceCreationLimitPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceCreationLimitPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceCreationLimitPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

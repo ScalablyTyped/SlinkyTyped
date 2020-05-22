@@ -25,53 +25,52 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a graphic which can be embedded in {@link Text} . */
-@js.native
 trait TextGraphicObject extends BaseFrame {
   /** contains the original size of the bitmap in the graphic object. */
-  var ActualSize: Size = js.native
+  var ActualSize: Size
   /** changes the display of the blue color channel. It contains percentage values between -100 and +100. */
-  var AdjustBlue: Double = js.native
+  var AdjustBlue: Double
   /** changes the display of contrast. It contains percentage values between -100 and +100. */
-  var AdjustContrast: Double = js.native
+  var AdjustContrast: Double
   /** changes the display of the green color channel. It contains percentage values between -100 and +100. */
-  var AdjustGreen: Double = js.native
+  var AdjustGreen: Double
   /** changes the display of the luminance. It contains percentage values between -100 and +100. */
-  var AdjustLuminance: Double = js.native
+  var AdjustLuminance: Double
   /** changes the display of the red color channel. It contains percentage values between -100 and +100. */
-  var AdjustRed: Double = js.native
+  var AdjustRed: Double
   /** the text flows only around the contour of the object. */
-  var ContourOutside: Boolean = js.native
+  var ContourOutside: Boolean
   /** contains the contour of the object as PolyPolygon. */
-  var ContourPolyPolygon: PointSequenceSequence = js.native
+  var ContourPolyPolygon: PointSequenceSequence
   /** determines the gamma value of the graphic. */
-  var Gamma: Double = js.native
+  var Gamma: Double
   /** contains the graphic. */
-  var Graphic: XGraphic = js.native
+  var Graphic: XGraphic
   /** contains the ColorMode as {@link com.sun.star.drawing.ColorMode} . */
-  var GraphicColorMode: ColorMode = js.native
+  var GraphicColorMode: ColorMode
   /**
     * contains the cropping of the object.
     * @see GraphicCrop
     */
-  var GraphicCrop: typingsSlinky.activexLibreoffice.com_.sun.star.text.GraphicCrop = js.native
+  var GraphicCrop: typingsSlinky.activexLibreoffice.com_.sun.star.text.GraphicCrop
   /** contains the name of the filter of the background graphic of the object. */
-  var GraphicFilter: String = js.native
+  var GraphicFilter: String
   /** determines if the graphic is display in inverted colors. It contains percentage values between -100 and +100. */
-  var GraphicIsInverted: Boolean = js.native
+  var GraphicIsInverted: Boolean
   /** contains the URL of the background graphic of the object */
-  var GraphicURL: String = js.native
+  var GraphicURL: String
   /** determines if the object is horizontally mirrored on even pages. */
-  var HoriMirroredOnEvenPages: Boolean = js.native
+  var HoriMirroredOnEvenPages: Boolean
   /** determines if the object is horizontally mirrored on odd pages. */
-  var HoriMirroredOnOddPages: Boolean = js.native
+  var HoriMirroredOnOddPages: Boolean
   /** returns the client-side image map if one is assigned to the object. */
-  var ImageMap: XIndexContainer = js.native
+  var ImageMap: XIndexContainer
   /** determines if the text wraps around the contour of the object. */
-  var SurroundContour: Boolean = js.native
+  var SurroundContour: Boolean
   /** contains percentage values between -100 and +100. */
-  var Transparency: Double = js.native
+  var Transparency: Double
   /** determines if the object is mirrored vertically. */
-  var VertMirrored: Boolean = js.native
+  var VertMirrored: Boolean
 }
 
 object TextGraphicObject {
@@ -191,139 +190,5 @@ object TextGraphicObject {
     val __obj = js.Dynamic.literal(ActualSize = ActualSize.asInstanceOf[js.Any], AdjustBlue = AdjustBlue.asInstanceOf[js.Any], AdjustContrast = AdjustContrast.asInstanceOf[js.Any], AdjustGreen = AdjustGreen.asInstanceOf[js.Any], AdjustLuminance = AdjustLuminance.asInstanceOf[js.Any], AdjustRed = AdjustRed.asInstanceOf[js.Any], Anchor = Anchor.asInstanceOf[js.Any], AnchorFrame = AnchorFrame.asInstanceOf[js.Any], AnchorPageNo = AnchorPageNo.asInstanceOf[js.Any], AnchorType = AnchorType.asInstanceOf[js.Any], AnchorTypes = AnchorTypes.asInstanceOf[js.Any], BackColor = BackColor.asInstanceOf[js.Any], BackGraphicFilter = BackGraphicFilter.asInstanceOf[js.Any], BackGraphicLocation = BackGraphicLocation.asInstanceOf[js.Any], BackGraphicURL = BackGraphicURL.asInstanceOf[js.Any], BackTransparent = BackTransparent.asInstanceOf[js.Any], BorderDistance = BorderDistance.asInstanceOf[js.Any], BottomBorder = BottomBorder.asInstanceOf[js.Any], BottomBorderDistance = BottomBorderDistance.asInstanceOf[js.Any], BottomMargin = BottomMargin.asInstanceOf[js.Any], ContentProtected = ContentProtected.asInstanceOf[js.Any], ContourOutside = ContourOutside.asInstanceOf[js.Any], ContourPolyPolygon = ContourPolyPolygon.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], FillGradient = FillGradient.asInstanceOf[js.Any], FillGradientName = FillGradientName.asInstanceOf[js.Any], FillStyle = FillStyle.asInstanceOf[js.Any], FrameInteropGrabBag = FrameInteropGrabBag.asInstanceOf[js.Any], FrameStyleName = FrameStyleName.asInstanceOf[js.Any], Gamma = Gamma.asInstanceOf[js.Any], Graphic = Graphic.asInstanceOf[js.Any], GraphicColorMode = GraphicColorMode.asInstanceOf[js.Any], GraphicCrop = GraphicCrop.asInstanceOf[js.Any], GraphicFilter = GraphicFilter.asInstanceOf[js.Any], GraphicIsInverted = GraphicIsInverted.asInstanceOf[js.Any], GraphicURL = GraphicURL.asInstanceOf[js.Any], Height = Height.asInstanceOf[js.Any], HoriMirroredOnEvenPages = HoriMirroredOnEvenPages.asInstanceOf[js.Any], HoriMirroredOnOddPages = HoriMirroredOnOddPages.asInstanceOf[js.Any], HoriOrient = HoriOrient.asInstanceOf[js.Any], HoriOrientPosition = HoriOrientPosition.asInstanceOf[js.Any], HoriOrientRelation = HoriOrientRelation.asInstanceOf[js.Any], HyperLinkName = HyperLinkName.asInstanceOf[js.Any], HyperLinkTarget = HyperLinkTarget.asInstanceOf[js.Any], HyperLinkURL = HyperLinkURL.asInstanceOf[js.Any], ImageMap = ImageMap.asInstanceOf[js.Any], IsSyncHeightToWidth = IsSyncHeightToWidth.asInstanceOf[js.Any], IsSyncWidthToHeight = IsSyncWidthToHeight.asInstanceOf[js.Any], LayoutSize = LayoutSize.asInstanceOf[js.Any], LeftBorder = LeftBorder.asInstanceOf[js.Any], LeftBorderDistance = LeftBorderDistance.asInstanceOf[js.Any], LeftMargin = LeftMargin.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Opaque = Opaque.asInstanceOf[js.Any], PageToggle = PageToggle.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], PositionProtected = PositionProtected.asInstanceOf[js.Any], Print = Print.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], RelativeHeight = RelativeHeight.asInstanceOf[js.Any], RelativeHeightRelation = RelativeHeightRelation.asInstanceOf[js.Any], RelativeWidth = RelativeWidth.asInstanceOf[js.Any], RelativeWidthRelation = RelativeWidthRelation.asInstanceOf[js.Any], RightBorder = RightBorder.asInstanceOf[js.Any], RightBorderDistance = RightBorderDistance.asInstanceOf[js.Any], RightMargin = RightMargin.asInstanceOf[js.Any], ServerMap = ServerMap.asInstanceOf[js.Any], ShadowFormat = ShadowFormat.asInstanceOf[js.Any], ShadowTransparence = ShadowTransparence.asInstanceOf[js.Any], ShapeType = ShapeType.asInstanceOf[js.Any], Size = Size.asInstanceOf[js.Any], SizeProtected = SizeProtected.asInstanceOf[js.Any], Surround = Surround.asInstanceOf[js.Any], SurroundAnchorOnly = SurroundAnchorOnly.asInstanceOf[js.Any], SurroundContour = SurroundContour.asInstanceOf[js.Any], TextWrap = TextWrap.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], TopBorder = TopBorder.asInstanceOf[js.Any], TopBorderDistance = TopBorderDistance.asInstanceOf[js.Any], TopMargin = TopMargin.asInstanceOf[js.Any], Transparency = Transparency.asInstanceOf[js.Any], UserDefinedAttributes = UserDefinedAttributes.asInstanceOf[js.Any], VertMirrored = VertMirrored.asInstanceOf[js.Any], VertOrient = VertOrient.asInstanceOf[js.Any], VertOrientPosition = VertOrientPosition.asInstanceOf[js.Any], VertOrientRelation = VertOrientRelation.asInstanceOf[js.Any], Width = Width.asInstanceOf[js.Any], WrapInfluenceOnPosition = WrapInfluenceOnPosition.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), getName = js.Any.fromFunction0(getName), getPosition = js.Any.fromFunction0(getPosition), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getShapeType = js.Any.fromFunction0(getShapeType), getSize = js.Any.fromFunction0(getSize), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setName = js.Any.fromFunction1(setName), setPosition = js.Any.fromFunction1(setPosition), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setSize = js.Any.fromFunction1(setSize))
     __obj.asInstanceOf[TextGraphicObject]
   }
-  @scala.inline
-  implicit class TextGraphicObjectOps[Self <: TextGraphicObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActualSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdjustBlue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustBlue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdjustContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustContrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdjustGreen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustGreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdjustLuminance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustLuminance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdjustRed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustRed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContourOutside(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContourOutside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContourPolyPolygon(value: PointSequenceSequence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContourPolyPolygon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGamma(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gamma")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphic(value: XGraphic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Graphic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphicColorMode(value: ColorMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphicColorMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphicCrop(value: GraphicCrop): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphicCrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphicFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphicFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphicIsInverted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphicIsInverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphicURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphicURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHoriMirroredOnEvenPages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HoriMirroredOnEvenPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHoriMirroredOnOddPages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HoriMirroredOnOddPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImageMap(value: XIndexContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSurroundContour(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SurroundContour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransparency(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Transparency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVertMirrored(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VertMirrored")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -81,6 +81,8 @@ object libBuildMod extends js.Object {
     def determineEngineFromCommandLine(options: CommandLineOptions): String = js.native
     def getCommandMetadata(): js.Promise[PartialCommandMetadata] = js.native
     def getPkgManagerBuildCLI(): PkgManagerBuildCLI = js.native
+    /* CompleteClass */
+    override def run(options: T): js.Promise[Unit] = js.native
   }
   
   @js.native

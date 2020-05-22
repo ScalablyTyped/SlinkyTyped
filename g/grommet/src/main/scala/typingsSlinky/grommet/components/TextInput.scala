@@ -444,9 +444,9 @@ object TextInput {
     @scala.inline
     def onSubmit(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
-    def onSuggestionsClose(value: /* repeated */ js.Any => _): this.type = set("onSuggestionsClose", js.Any.fromFunction1(value))
+    def onSuggestionsClose(value: () => Unit): this.type = set("onSuggestionsClose", js.Any.fromFunction0(value))
     @scala.inline
-    def onSuggestionsOpen(value: /* repeated */ js.Any => _): this.type = set("onSuggestionsOpen", js.Any.fromFunction1(value))
+    def onSuggestionsOpen(value: () => Unit): this.type = set("onSuggestionsOpen", js.Any.fromFunction0(value))
     @scala.inline
     def onSuspend(value: SyntheticEvent[Event, HTMLInputElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
     @scala.inline

@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OpenSpellingDialogCommand")
 @js.native
 class OpenSpellingDialogCommand ()
-  extends typingsSlinky.devexpressWeb.OpenSpellingDialogCommand
+  extends typingsSlinky.devexpressWeb.OpenSpellingDialogCommand {
+  /**
+    * Executes the OpenSpellingDialogCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

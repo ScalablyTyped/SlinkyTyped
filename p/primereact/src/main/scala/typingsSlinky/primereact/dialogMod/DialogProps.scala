@@ -6,303 +6,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DialogProps extends js.Object {
-  var appendTo: js.UndefOr[HTMLElement] = js.native
-  var ariaCloseIconLabel: js.UndefOr[String] = js.native
-  var baseZIndex: js.UndefOr[Double] = js.native
-  var blockScroll: js.UndefOr[Boolean] = js.native
-  var className: js.UndefOr[String] = js.native
-  var closable: js.UndefOr[Boolean] = js.native
-  var closeOnEscape: js.UndefOr[Boolean] = js.native
-  var contentStyle: js.UndefOr[js.Object] = js.native
-  var dismissableMask: js.UndefOr[Boolean] = js.native
-  var focusOnShow: js.UndefOr[Boolean] = js.native
-  var footer: js.UndefOr[js.Any] = js.native
-  var header: js.UndefOr[js.Any] = js.native
-  var iconsTemplate: js.UndefOr[js.Function0[js.UndefOr[ReactElement]]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var maximizable: js.UndefOr[Boolean] = js.native
-  var modal: js.UndefOr[Boolean] = js.native
-  var onShow: js.UndefOr[js.Function0[Unit]] = js.native
-  var rtl: js.UndefOr[Boolean] = js.native
-  var showHeader: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  def onHide(): Unit = js.native
+  var appendTo: js.UndefOr[HTMLElement] = js.undefined
+  var ariaCloseIconLabel: js.UndefOr[String] = js.undefined
+  var baseZIndex: js.UndefOr[Double] = js.undefined
+  var blockScroll: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var closable: js.UndefOr[Boolean] = js.undefined
+  var closeOnEscape: js.UndefOr[Boolean] = js.undefined
+  var contentStyle: js.UndefOr[js.Object] = js.undefined
+  var dismissableMask: js.UndefOr[Boolean] = js.undefined
+  var focusOnShow: js.UndefOr[Boolean] = js.undefined
+  var footer: js.UndefOr[js.Any] = js.undefined
+  var header: js.UndefOr[js.Any] = js.undefined
+  var iconsTemplate: js.UndefOr[js.Function0[js.UndefOr[ReactElement]]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var maximizable: js.UndefOr[Boolean] = js.undefined
+  var modal: js.UndefOr[Boolean] = js.undefined
+  var onShow: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var rtl: js.UndefOr[Boolean] = js.undefined
+  var showHeader: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  def onHide(): Unit
 }
 
 object DialogProps {
   @scala.inline
-  def apply(onHide: () => Unit): DialogProps = {
+  def apply(
+    onHide: () => Unit,
+    appendTo: HTMLElement = null,
+    ariaCloseIconLabel: String = null,
+    baseZIndex: js.UndefOr[Double] = js.undefined,
+    blockScroll: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    closable: js.UndefOr[Boolean] = js.undefined,
+    closeOnEscape: js.UndefOr[Boolean] = js.undefined,
+    contentStyle: js.Object = null,
+    dismissableMask: js.UndefOr[Boolean] = js.undefined,
+    focusOnShow: js.UndefOr[Boolean] = js.undefined,
+    footer: js.Any = null,
+    header: js.Any = null,
+    iconsTemplate: () => js.UndefOr[ReactElement] = null,
+    id: String = null,
+    maximizable: js.UndefOr[Boolean] = js.undefined,
+    modal: js.UndefOr[Boolean] = js.undefined,
+    onShow: () => Unit = null,
+    rtl: js.UndefOr[Boolean] = js.undefined,
+    showHeader: js.UndefOr[Boolean] = js.undefined,
+    style: js.Object = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): DialogProps = {
     val __obj = js.Dynamic.literal(onHide = js.Any.fromFunction0(onHide))
+    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
+    if (ariaCloseIconLabel != null) __obj.updateDynamic("ariaCloseIconLabel")(ariaCloseIconLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(baseZIndex)) __obj.updateDynamic("baseZIndex")(baseZIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(blockScroll)) __obj.updateDynamic("blockScroll")(blockScroll.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnEscape)) __obj.updateDynamic("closeOnEscape")(closeOnEscape.get.asInstanceOf[js.Any])
+    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(dismissableMask)) __obj.updateDynamic("dismissableMask")(dismissableMask.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusOnShow)) __obj.updateDynamic("focusOnShow")(focusOnShow.get.asInstanceOf[js.Any])
+    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (iconsTemplate != null) __obj.updateDynamic("iconsTemplate")(js.Any.fromFunction0(iconsTemplate))
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximizable)) __obj.updateDynamic("maximizable")(maximizable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.get.asInstanceOf[js.Any])
+    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
+    if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHeader)) __obj.updateDynamic("showHeader")(showHeader.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogProps]
   }
-  @scala.inline
-  implicit class DialogPropsOps[Self <: DialogProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAppendTo(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppendTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaCloseIconLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaCloseIconLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaCloseIconLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaCloseIconLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseZIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseZIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClosable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClosable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnEscape(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEscape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnEscape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEscape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDismissableMask(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissableMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDismissableMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissableMask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusOnShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusOnShow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusOnShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconsTemplate(value: () => js.UndefOr[ReactElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconsTemplate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutIconsTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconsTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximizable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximizable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRtl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rtl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object DataTables {
+  type ButtonSelectorTypes = java.lang.String | scala.Double | typingsSlinky.datatablesNet.JQuery
   /**
     * A function that will be executed upon creation of the buttons.
     */

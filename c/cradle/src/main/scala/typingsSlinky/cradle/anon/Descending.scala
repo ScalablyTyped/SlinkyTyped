@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Descending extends js.Object {
-  var descending: js.UndefOr[Boolean] = js.native
-  var endkey: js.UndefOr[js.Any] = js.native
-  var group: js.UndefOr[Boolean] = js.native
-  var include_docs: js.UndefOr[Boolean] = js.native
-  var key: js.UndefOr[String] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var reduce: js.UndefOr[Boolean] = js.native
-  var startkey: js.UndefOr[js.Any] = js.native
+  var descending: js.UndefOr[Boolean] = js.undefined
+  var endkey: js.UndefOr[js.Any] = js.undefined
+  var group: js.UndefOr[Boolean] = js.undefined
+  var include_docs: js.UndefOr[Boolean] = js.undefined
+  var key: js.UndefOr[String] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var reduce: js.UndefOr[Boolean] = js.undefined
+  var startkey: js.UndefOr[js.Any] = js.undefined
 }
 
 object Descending {
   @scala.inline
-  def apply(): Descending = {
+  def apply(
+    descending: js.UndefOr[Boolean] = js.undefined,
+    endkey: js.Any = null,
+    group: js.UndefOr[Boolean] = js.undefined,
+    include_docs: js.UndefOr[Boolean] = js.undefined,
+    key: String = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    reduce: js.UndefOr[Boolean] = js.undefined,
+    startkey: js.Any = null
+  ): Descending = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(descending)) __obj.updateDynamic("descending")(descending.get.asInstanceOf[js.Any])
+    if (endkey != null) __obj.updateDynamic("endkey")(endkey.asInstanceOf[js.Any])
+    if (!js.isUndefined(group)) __obj.updateDynamic("group")(group.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_docs)) __obj.updateDynamic("include_docs")(include_docs.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reduce)) __obj.updateDynamic("reduce")(reduce.get.asInstanceOf[js.Any])
+    if (startkey != null) __obj.updateDynamic("startkey")(startkey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Descending]
   }
-  @scala.inline
-  implicit class DescendingOps[Self <: Descending] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndkey(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endkey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndkey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endkey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_docs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_docs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_docs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_docs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReduce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reduce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReduce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reduce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartkey(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startkey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartkey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startkey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

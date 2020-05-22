@@ -130,6 +130,7 @@ import typingsSlinky.typescript.mod.IntersectionTypeNode
 import typingsSlinky.typescript.mod.JSDocAugmentsTag
 import typingsSlinky.typescript.mod.JSDocClassTag
 import typingsSlinky.typescript.mod.JSDocEnumTag
+import typingsSlinky.typescript.mod.JSDocImplementsTag
 import typingsSlinky.typescript.mod.JSDocParameterTag
 import typingsSlinky.typescript.mod.JSDocPrivateTag
 import typingsSlinky.typescript.mod.JSDocProtectedTag
@@ -192,6 +193,7 @@ import typingsSlinky.typescript.mod.NoSubstitutionTemplateLiteral
 import typingsSlinky.typescript.mod.Node
 import typingsSlinky.typescript.mod.NodeArray
 import typingsSlinky.typescript.mod.NodeFlags
+import typingsSlinky.typescript.mod.NonNullChain
 import typingsSlinky.typescript.mod.NonNullExpression
 import typingsSlinky.typescript.mod.NonRelativeModuleNameResolutionCache
 import typingsSlinky.typescript.mod.NotEmittedStatement
@@ -374,7 +376,7 @@ trait TypeoftsTypes extends js.Object {
   var unchangedTextChangeRange: TextChangeRange = js.native
   /** The version of the TypeScript compiler release */
   val version: String = js.native
-  val versionMajorMinor: /* "3.8" */ String = js.native
+  val versionMajorMinor: /* "3.9" */ String = js.native
   /**
     * Adds an EmitHelper to a node.
     */
@@ -1110,6 +1112,7 @@ trait TypeoftsTypes extends js.Object {
   def createNodeArray[T /* <: Node */](): NodeArray[T] = js.native
   def createNodeArray[T /* <: Node */](elements: js.Array[T]): NodeArray[T] = js.native
   def createNodeArray[T /* <: Node */](elements: js.Array[T], hasTrailingComma: Boolean): NodeArray[T] = js.native
+  def createNonNullChain(expression: Expression): NonNullChain = js.native
   def createNonNullExpression(expression: Expression): NonNullExpression = js.native
   /**
     * Creates a synthetic statement to act as a placeholder for a not-emitted statement in
@@ -1593,6 +1596,16 @@ trait TypeoftsTypes extends js.Object {
     reportWatchStatus: WatchStatusReporter,
     watchOptionsToExtend: WatchOptions
   ): WatchCompilerHostOfConfigFile[T] = js.native
+  def createWatchCompilerHost[T /* <: BuilderProgram */](
+    configFileName: String,
+    optionsToExtend: js.UndefOr[CompilerOptions],
+    system: System,
+    createProgram: CreateProgram_[T],
+    reportDiagnostic: DiagnosticReporter,
+    reportWatchStatus: WatchStatusReporter,
+    watchOptionsToExtend: WatchOptions,
+    extraFileExtensions: js.Array[FileExtensionInfo]
+  ): WatchCompilerHostOfConfigFile[T] = js.native
   def createWatchCompilerHost[T /* <: BuilderProgram */](rootFiles: js.Array[String], options: CompilerOptions, system: System): WatchCompilerHostOfFilesAndCompilerOptions[T] = js.native
   def createWatchCompilerHost[T /* <: BuilderProgram */](
     rootFiles: js.Array[String],
@@ -1718,7 +1731,9 @@ trait TypeoftsTypes extends js.Object {
   def formatDiagnostic(diagnostic: Diagnostic, host: FormatDiagnosticsHost): String = js.native
   def formatDiagnostics(diagnostics: js.Array[Diagnostic], host: FormatDiagnosticsHost): String = js.native
   def formatDiagnosticsWithColorAndContext(diagnostics: js.Array[Diagnostic], host: FormatDiagnosticsHost): String = js.native
-  /** Gets all JSDoc tags of a specified kind, or undefined if not present. */
+  /** Gets all JSDoc tags that match a specified predicate */
+  def getAllJSDocTags[T /* <: JSDocTag */](node: Node, predicate: js.Function1[/* tag */ JSDocTag, /* is T */ Boolean]): js.Array[T] = js.native
+  /** Gets all JSDoc tags of a specified kind */
   def getAllJSDocTagsOfKind(node: Node, kind: SyntaxKind): js.Array[JSDocTag] = js.native
   /**
     * Given a set of options, returns the set of type directive names
@@ -1771,6 +1786,8 @@ trait TypeoftsTypes extends js.Object {
   def getJSDocClassTag(node: Node): js.UndefOr[JSDocClassTag] = js.native
   /** Gets the JSDoc enum tag for the node if present */
   def getJSDocEnumTag(node: Node): js.UndefOr[JSDocEnumTag] = js.native
+  /** Gets the JSDoc implements tags for the node if present */
+  def getJSDocImplementsTags(node: Node): js.Array[JSDocImplementsTag] = js.native
   /**
     * Gets the JSDoc parameter tags for the node if present.
     *
@@ -1881,6 +1898,14 @@ trait TypeoftsTypes extends js.Object {
     extendedConfigCache: Map[ExtendedConfigCacheEntry],
     watchOptionsToExtend: WatchOptions
   ): js.UndefOr[ParsedCommandLine] = js.native
+  def getParsedCommandLineOfConfigFile(
+    configFileName: String,
+    optionsToExtend: CompilerOptions,
+    host: ParseConfigFileHost,
+    extendedConfigCache: Map[ExtendedConfigCacheEntry],
+    watchOptionsToExtend: WatchOptions,
+    extraFileExtensions: js.Array[FileExtensionInfo]
+  ): js.UndefOr[ParsedCommandLine] = js.native
   def getPositionOfLineAndCharacter(sourceFile: SourceFileLike, line: Double, character: Double): Double = js.native
   def getPreEmitDiagnostics(program: Program): js.Array[Diagnostic] = js.native
   def getPreEmitDiagnostics(program: Program, sourceFile: SourceFile): js.Array[Diagnostic] = js.native
@@ -1909,6 +1934,8 @@ trait TypeoftsTypes extends js.Object {
     */
   def hasJSDocParameterTags(node: FunctionLikeDeclaration): Boolean = js.native
   def hasJSDocParameterTags(node: SignatureDeclaration): Boolean = js.native
+  /** True if has initializer node attached to it. */
+  def hasOnlyExpressionInitializer(node: Node): /* is typescript.typescript.HasExpressionInitializer */ Boolean = js.native
   def idText(identifierOrPrivateName: Identifier): String = js.native
   def idText(identifierOrPrivateName: PrivateIdentifier): String = js.native
   def isAccessor(node: Node): /* is typescript.typescript.AccessorDeclaration */ Boolean = js.native
@@ -1985,6 +2012,7 @@ trait TypeoftsTypes extends js.Object {
   def isIdentifierOrPrivateIdentifier(node: Node): Boolean = js.native
   def isIdentifierPart(ch: Double): Boolean = js.native
   def isIdentifierPart(ch: Double, languageVersion: ScriptTarget): Boolean = js.native
+  def isIdentifierPart(ch: Double, languageVersion: ScriptTarget, identifierVariant: LanguageVariant): Boolean = js.native
   def isIdentifierStart(ch: Double): Boolean = js.native
   def isIdentifierStart(ch: Double, languageVersion: ScriptTarget): Boolean = js.native
   def isIfStatement(node: Node): /* is typescript.typescript.IfStatement */ Boolean = js.native
@@ -2012,6 +2040,7 @@ trait TypeoftsTypes extends js.Object {
   def isJSDocCommentContainingNode(node: Node): Boolean = js.native
   def isJSDocEnumTag(node: Node): /* is typescript.typescript.JSDocEnumTag */ Boolean = js.native
   def isJSDocFunctionType(node: Node): /* is typescript.typescript.JSDocFunctionType */ Boolean = js.native
+  def isJSDocImplementsTag(node: Node): /* is typescript.typescript.JSDocImplementsTag */ Boolean = js.native
   def isJSDocNonNullableType(node: Node): /* is typescript.typescript.JSDocNonNullableType */ Boolean = js.native
   def isJSDocNullableType(node: Node): /* is typescript.typescript.JSDocNullableType */ Boolean = js.native
   def isJSDocOptionalType(node: Node): /* is typescript.typescript.JSDocOptionalType */ Boolean = js.native
@@ -2065,6 +2094,7 @@ trait TypeoftsTypes extends js.Object {
   def isNamespaceImport(node: Node): /* is typescript.typescript.NamespaceImport */ Boolean = js.native
   def isNewExpression(node: Node): /* is typescript.typescript.NewExpression */ Boolean = js.native
   def isNoSubstitutionTemplateLiteral(node: Node): /* is typescript.typescript.NoSubstitutionTemplateLiteral */ Boolean = js.native
+  def isNonNullChain(node: Node): /* is typescript.typescript.NonNullChain */ Boolean = js.native
   def isNonNullExpression(node: Node): /* is typescript.typescript.NonNullExpression */ Boolean = js.native
   def isNullishCoalesce(node: Node): Boolean = js.native
   def isNumericLiteral(node: Node): /* is typescript.typescript.NumericLiteral */ Boolean = js.native
@@ -2849,6 +2879,7 @@ trait TypeoftsTypes extends js.Object {
     typeArguments: js.Array[TypeNode],
     argumentsArray: js.Array[Expression]
   ): NewExpression = js.native
+  def updateNonNullChain(node: NonNullChain, expression: Expression): NonNullChain = js.native
   def updateNonNullExpression(node: NonNullExpression, expression: Expression): NonNullExpression = js.native
   def updateObjectBindingPattern(node: ObjectBindingPattern, elements: js.Array[BindingElement]): ObjectBindingPattern = js.native
   def updateObjectLiteral(node: ObjectLiteralExpression, properties: js.Array[ObjectLiteralElementLike]): ObjectLiteralExpression = js.native
@@ -3181,15 +3212,16 @@ trait TypeoftsTypes extends js.Object {
     */
   def visitFunctionBody(node: js.UndefOr[FunctionBody], visitor: Visitor, context: TransformationContext): js.UndefOr[FunctionBody] = js.native
   /**
-    * Resumes a suspended lexical environment and visits a concise body, ending the lexical
-    * environment and merging hoisted declarations upon completion.
-    */
-  def visitFunctionBody(node: ConciseBody, visitor: Visitor, context: TransformationContext): ConciseBody = js.native
-  /**
     * Resumes a suspended lexical environment and visits a function body, ending the lexical
     * environment and merging hoisted declarations upon completion.
     */
   def visitFunctionBody(node: FunctionBody, visitor: Visitor, context: TransformationContext): FunctionBody = js.native
+  /**
+    * Resumes a suspended lexical environment and visits a concise body, ending the lexical
+    * environment and merging hoisted declarations upon completion.
+    */
+  @JSName("visitFunctionBody")
+  def visitFunctionBody_ConciseBody(node: ConciseBody, visitor: Visitor, context: TransformationContext): ConciseBody = js.native
   /**
     * Starts a new lexical environment and visits a statement list, ending the lexical environment
     * and merging hoisted declarations upon completion.
@@ -3296,20 +3328,41 @@ trait TypeoftsTypes extends js.Object {
     start: Double,
     count: Double
   ): js.UndefOr[NodeArray[T]] = js.native
-  /**
-    * Starts a new lexical environment and visits a parameter list, suspending the lexical
-    * environment upon completion.
-    */
   def visitParameterList(
     nodes: js.UndefOr[NodeArray[ParameterDeclaration]],
     visitor: Visitor,
     context: TransformationContext
-  ): NodeArray[ParameterDeclaration] = js.native
+  ): js.UndefOr[NodeArray[ParameterDeclaration]] = js.native
   def visitParameterList(
     nodes: js.UndefOr[NodeArray[ParameterDeclaration]],
     visitor: Visitor,
     context: TransformationContext,
-    nodesVisitor: FnCall
+    nodesVisitor: js.Function5[
+      /* nodes */ js.UndefOr[NodeArray[Node]], 
+      /* visitor */ Visitor, 
+      /* test */ js.UndefOr[js.Function1[/* node */ Node, Boolean]], 
+      /* start */ js.UndefOr[Double], 
+      /* count */ js.UndefOr[Double], 
+      js.UndefOr[NodeArray[Node]]
+    ]
+  ): js.UndefOr[NodeArray[ParameterDeclaration]] = js.native
+  /**
+    * Starts a new lexical environment and visits a parameter list, suspending the lexical
+    * environment upon completion.
+    */
+  def visitParameterList(nodes: NodeArray[ParameterDeclaration], visitor: Visitor, context: TransformationContext): NodeArray[ParameterDeclaration] = js.native
+  def visitParameterList(
+    nodes: NodeArray[ParameterDeclaration],
+    visitor: Visitor,
+    context: TransformationContext,
+    nodesVisitor: js.Function5[
+      /* nodes */ NodeArray[Node], 
+      /* visitor */ Visitor, 
+      /* test */ js.UndefOr[js.Function1[/* node */ Node, Boolean]], 
+      /* start */ js.UndefOr[Double], 
+      /* count */ js.UndefOr[Double], 
+      NodeArray[Node]
+    ]
   ): NodeArray[ParameterDeclaration] = js.native
   def walkUpBindingElementsAndPatterns(binding: BindingElement): VariableDeclaration | ParameterDeclaration = js.native
 }

@@ -58,89 +58,22 @@ trait SchemaAudioConfig extends js.Object {
 
 object SchemaAudioConfig {
   @scala.inline
-  def apply(): SchemaAudioConfig = {
+  def apply(
+    audioEncoding: String = null,
+    effectsProfileId: js.Array[String] = null,
+    pitch: js.UndefOr[Double] = js.undefined,
+    sampleRateHertz: js.UndefOr[Double] = js.undefined,
+    speakingRate: js.UndefOr[Double] = js.undefined,
+    volumeGainDb: js.UndefOr[Double] = js.undefined
+  ): SchemaAudioConfig = {
     val __obj = js.Dynamic.literal()
+    if (audioEncoding != null) __obj.updateDynamic("audioEncoding")(audioEncoding.asInstanceOf[js.Any])
+    if (effectsProfileId != null) __obj.updateDynamic("effectsProfileId")(effectsProfileId.asInstanceOf[js.Any])
+    if (!js.isUndefined(pitch)) __obj.updateDynamic("pitch")(pitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sampleRateHertz)) __obj.updateDynamic("sampleRateHertz")(sampleRateHertz.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(speakingRate)) __obj.updateDynamic("speakingRate")(speakingRate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(volumeGainDb)) __obj.updateDynamic("volumeGainDb")(volumeGainDb.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAudioConfig]
   }
-  @scala.inline
-  implicit class SchemaAudioConfigOps[Self <: SchemaAudioConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectsProfileId(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectsProfileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectsProfileId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectsProfileId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleRateHertz(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRateHertz")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleRateHertz: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRateHertz")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeakingRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speakingRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeakingRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speakingRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeGainDb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeGainDb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeGainDb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeGainDb")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

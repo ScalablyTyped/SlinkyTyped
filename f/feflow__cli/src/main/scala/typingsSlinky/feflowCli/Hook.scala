@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Hook extends js.Object {
   /**
     * Hook will execute befor any command
@@ -12,7 +11,7 @@ trait Hook extends js.Object {
     * @param type  Hook name eg：report
     * @param fn  Hook callback function eg：report
     */
-  def hook(`type`: String, fn: js.Function0[Unit]): Unit = js.native
+  def hook(`type`: String, fn: js.Function0[Unit]): Unit
 }
 
 object Hook {
@@ -21,19 +20,5 @@ object Hook {
     val __obj = js.Dynamic.literal(hook = js.Any.fromFunction2(hook))
     __obj.asInstanceOf[Hook]
   }
-  @scala.inline
-  implicit class HookOps[Self <: Hook] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHook(value: (String, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

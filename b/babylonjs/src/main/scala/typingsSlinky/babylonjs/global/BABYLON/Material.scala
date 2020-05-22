@@ -17,6 +17,11 @@ class Material protected ()
     */
   def this(name: String, scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
   def this(name: String, scene: typingsSlinky.babylonjs.BABYLON.Scene, doNotAdd: Boolean) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

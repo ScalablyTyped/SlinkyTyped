@@ -269,6 +269,9 @@ object tensorflowTfjsCoreStrings {
   sealed trait valid_ extends js.Object
   
   @js.native
+  sealed trait valueOf extends DataValues
+  
+  @js.native
   sealed trait values extends DataValues
   
   @scala.inline

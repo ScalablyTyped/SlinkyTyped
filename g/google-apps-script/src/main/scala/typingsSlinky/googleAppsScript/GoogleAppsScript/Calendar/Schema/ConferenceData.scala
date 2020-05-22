@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConferenceData extends js.Object {
-  var conferenceId: js.UndefOr[String] = js.native
-  var conferenceSolution: js.UndefOr[ConferenceSolution] = js.native
-  var createRequest: js.UndefOr[CreateConferenceRequest] = js.native
-  var entryPoints: js.UndefOr[js.Array[EntryPoint]] = js.native
-  var notes: js.UndefOr[String] = js.native
-  var parameters: js.UndefOr[ConferenceParameters] = js.native
-  var signature: js.UndefOr[String] = js.native
+  var conferenceId: js.UndefOr[String] = js.undefined
+  var conferenceSolution: js.UndefOr[ConferenceSolution] = js.undefined
+  var createRequest: js.UndefOr[CreateConferenceRequest] = js.undefined
+  var entryPoints: js.UndefOr[js.Array[EntryPoint]] = js.undefined
+  var notes: js.UndefOr[String] = js.undefined
+  var parameters: js.UndefOr[ConferenceParameters] = js.undefined
+  var signature: js.UndefOr[String] = js.undefined
 }
 
 object ConferenceData {
   @scala.inline
-  def apply(): ConferenceData = {
+  def apply(
+    conferenceId: String = null,
+    conferenceSolution: ConferenceSolution = null,
+    createRequest: CreateConferenceRequest = null,
+    entryPoints: js.Array[EntryPoint] = null,
+    notes: String = null,
+    parameters: ConferenceParameters = null,
+    signature: String = null
+  ): ConferenceData = {
     val __obj = js.Dynamic.literal()
+    if (conferenceId != null) __obj.updateDynamic("conferenceId")(conferenceId.asInstanceOf[js.Any])
+    if (conferenceSolution != null) __obj.updateDynamic("conferenceSolution")(conferenceSolution.asInstanceOf[js.Any])
+    if (createRequest != null) __obj.updateDynamic("createRequest")(createRequest.asInstanceOf[js.Any])
+    if (entryPoints != null) __obj.updateDynamic("entryPoints")(entryPoints.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConferenceData]
   }
-  @scala.inline
-  implicit class ConferenceDataOps[Self <: ConferenceData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConferenceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conferenceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConferenceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conferenceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConferenceSolution(value: ConferenceSolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conferenceSolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConferenceSolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conferenceSolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateRequest(value: CreateConferenceRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntryPoints(value: js.Array[EntryPoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntryPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: ConferenceParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

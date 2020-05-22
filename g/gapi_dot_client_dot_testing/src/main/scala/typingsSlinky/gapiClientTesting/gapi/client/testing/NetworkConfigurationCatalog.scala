@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NetworkConfigurationCatalog extends js.Object {
-  var configurations: js.UndefOr[js.Array[NetworkConfiguration]] = js.native
+  var configurations: js.UndefOr[js.Array[NetworkConfiguration]] = js.undefined
 }
 
 object NetworkConfigurationCatalog {
   @scala.inline
-  def apply(): NetworkConfigurationCatalog = {
+  def apply(configurations: js.Array[NetworkConfiguration] = null): NetworkConfigurationCatalog = {
     val __obj = js.Dynamic.literal()
+    if (configurations != null) __obj.updateDynamic("configurations")(configurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkConfigurationCatalog]
   }
-  @scala.inline
-  implicit class NetworkConfigurationCatalogOps[Self <: NetworkConfigurationCatalog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurations(value: js.Array[NetworkConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

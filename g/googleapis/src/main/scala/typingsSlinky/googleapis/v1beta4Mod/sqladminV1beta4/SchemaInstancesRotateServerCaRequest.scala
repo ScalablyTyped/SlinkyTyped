@@ -17,29 +17,10 @@ trait SchemaInstancesRotateServerCaRequest extends js.Object {
 
 object SchemaInstancesRotateServerCaRequest {
   @scala.inline
-  def apply(): SchemaInstancesRotateServerCaRequest = {
+  def apply(rotateServerCaContext: SchemaRotateServerCaContext = null): SchemaInstancesRotateServerCaRequest = {
     val __obj = js.Dynamic.literal()
+    if (rotateServerCaContext != null) __obj.updateDynamic("rotateServerCaContext")(rotateServerCaContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesRotateServerCaRequest]
   }
-  @scala.inline
-  implicit class SchemaInstancesRotateServerCaRequestOps[Self <: SchemaInstancesRotateServerCaRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRotateServerCaContext(value: SchemaRotateServerCaContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateServerCaContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotateServerCaContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateServerCaContext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

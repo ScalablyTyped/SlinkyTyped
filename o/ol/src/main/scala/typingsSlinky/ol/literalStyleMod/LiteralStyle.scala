@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LiteralStyle extends js.Object {
-  var filter: js.UndefOr[ExpressionValue] = js.native
-  var symbol: js.UndefOr[LiteralSymbolStyle] = js.native
-  var variables: js.UndefOr[StringDictionary[Double]] = js.native
+  var filter: js.UndefOr[ExpressionValue] = js.undefined
+  var symbol: js.UndefOr[LiteralSymbolStyle] = js.undefined
+  var variables: js.UndefOr[StringDictionary[Double]] = js.undefined
 }
 
 object LiteralStyle {
   @scala.inline
-  def apply(): LiteralStyle = {
+  def apply(
+    filter: ExpressionValue = null,
+    symbol: LiteralSymbolStyle = null,
+    variables: StringDictionary[Double] = null
+  ): LiteralStyle = {
     val __obj = js.Dynamic.literal()
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[LiteralStyle]
   }
-  @scala.inline
-  implicit class LiteralStyleOps[Self <: LiteralStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: ExpressionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: LiteralSymbolStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariables(value: StringDictionary[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

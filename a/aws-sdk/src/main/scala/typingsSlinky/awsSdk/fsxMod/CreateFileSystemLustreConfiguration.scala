@@ -23,7 +23,7 @@ trait CreateFileSystemLustreConfiguration extends js.Object {
     */
   var ImportedFileChunkSize: js.UndefOr[Megabytes] = js.native
   /**
-    *  (Optional) For the PERSISTENT_1 deployment type, describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB ﬁle system, provisioning 50 MB/s/TiB of PerUnitStorageThroughput yields 120 MB/s of ﬁle system throughput. You pay for the amount of throughput that you provision. (Default = 200 MB/s/TiB)  Valid values are 50, 100, 200.
+    *  Required for the PERSISTENT_1 deployment type, describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB ﬁle system, provisioning 50 MB/s/TiB of PerUnitStorageThroughput yields 117 MB/s of ﬁle system throughput. You pay for the amount of throughput that you provision.  Valid values are 50, 100, 200.
     */
   var PerUnitStorageThroughput: js.UndefOr[typingsSlinky.awsSdk.fsxMod.PerUnitStorageThroughput] = js.native
   /**
@@ -34,89 +34,22 @@ trait CreateFileSystemLustreConfiguration extends js.Object {
 
 object CreateFileSystemLustreConfiguration {
   @scala.inline
-  def apply(): CreateFileSystemLustreConfiguration = {
+  def apply(
+    DeploymentType: LustreDeploymentType = null,
+    ExportPath: ArchivePath = null,
+    ImportPath: ArchivePath = null,
+    ImportedFileChunkSize: js.UndefOr[Megabytes] = js.undefined,
+    PerUnitStorageThroughput: js.UndefOr[PerUnitStorageThroughput] = js.undefined,
+    WeeklyMaintenanceStartTime: WeeklyTime = null
+  ): CreateFileSystemLustreConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (DeploymentType != null) __obj.updateDynamic("DeploymentType")(DeploymentType.asInstanceOf[js.Any])
+    if (ExportPath != null) __obj.updateDynamic("ExportPath")(ExportPath.asInstanceOf[js.Any])
+    if (ImportPath != null) __obj.updateDynamic("ImportPath")(ImportPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(ImportedFileChunkSize)) __obj.updateDynamic("ImportedFileChunkSize")(ImportedFileChunkSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PerUnitStorageThroughput)) __obj.updateDynamic("PerUnitStorageThroughput")(PerUnitStorageThroughput.get.asInstanceOf[js.Any])
+    if (WeeklyMaintenanceStartTime != null) __obj.updateDynamic("WeeklyMaintenanceStartTime")(WeeklyMaintenanceStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFileSystemLustreConfiguration]
   }
-  @scala.inline
-  implicit class CreateFileSystemLustreConfigurationOps[Self <: CreateFileSystemLustreConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentType(value: LustreDeploymentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportPath(value: ArchivePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportPath(value: ArchivePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportedFileChunkSize(value: Megabytes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedFileChunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportedFileChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedFileChunkSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerUnitStorageThroughput(value: PerUnitStorageThroughput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerUnitStorageThroughput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerUnitStorageThroughput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerUnitStorageThroughput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeeklyMaintenanceStartTime(value: WeeklyTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeeklyMaintenanceStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

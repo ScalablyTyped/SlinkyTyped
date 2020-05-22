@@ -41,77 +41,20 @@ trait SchemaTranslateTextRequest extends js.Object {
 
 object SchemaTranslateTextRequest {
   @scala.inline
-  def apply(): SchemaTranslateTextRequest = {
+  def apply(
+    format: String = null,
+    model: String = null,
+    q: js.Array[String] = null,
+    source: String = null,
+    target: String = null
+  ): SchemaTranslateTextRequest = {
     val __obj = js.Dynamic.literal()
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTranslateTextRequest]
   }
-  @scala.inline
-  implicit class SchemaTranslateTextRequestOps[Self <: SchemaTranslateTextRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

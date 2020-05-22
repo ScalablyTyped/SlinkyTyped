@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 package object mod {
   type Grid = js.Tuple2[scala.Double, scala.Double]
   type RndDragCallback = typingsSlinky.reactDraggable.mod.DraggableEventHandler
+  type RndDragEvent = (slinky.web.SyntheticMouseEvent[org.scalajs.dom.raw.HTMLElement | org.scalajs.dom.raw.SVGElement]) | (slinky.web.SyntheticTouchEvent[org.scalajs.dom.raw.HTMLElement | org.scalajs.dom.raw.SVGElement]) | org.scalajs.dom.raw.MouseEvent | org.scalajs.dom.raw.TouchEvent
   type RndResizeCallback = js.Function5[
     /* e */ org.scalajs.dom.raw.MouseEvent | org.scalajs.dom.raw.TouchEvent, 
     /* dir */ typingsSlinky.reResizable.mod.ResizeDirection, 

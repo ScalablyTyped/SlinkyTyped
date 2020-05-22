@@ -1,35 +1,32 @@
 package typingsSlinky.minappEnv.DB
 
+import typingsSlinky.minappEnv.IAPIError
 import typingsSlinky.minappEnv.IAPIParam
+import typingsSlinky.minappEnv.ICloudConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISetSingleDocumentOptions
   extends IAPIParam[js.Any] {
-  var data: IUpdateCondition = js.native
+  var data: IUpdateCondition
 }
 
 object ISetSingleDocumentOptions {
   @scala.inline
-  def apply(data: IUpdateCondition): ISetSingleDocumentOptions = {
+  def apply(
+    data: IUpdateCondition,
+    complete: /* val */ js.Any | IAPIError => Unit = null,
+    config: ICloudConfig = null,
+    fail: /* err */ IAPIError => Unit = null,
+    success: js.Any => Unit = null
+  ): ISetSingleDocumentOptions = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[ISetSingleDocumentOptions]
   }
-  @scala.inline
-  implicit class ISetSingleDocumentOptionsOps[Self <: ISetSingleDocumentOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: IUpdateCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,11 @@
 package typingsSlinky.exceljs.mod
 
+import typingsSlinky.exceljs.anon.Left
+import typingsSlinky.exceljs.anon.PartialColor
+import typingsSlinky.exceljs.exceljsStrings.angle
+import typingsSlinky.exceljs.exceljsStrings.gradient
+import typingsSlinky.exceljs.exceljsStrings.path
+import typingsSlinky.exceljs.exceljsStrings.pattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +19,23 @@ trait Fill extends js.Object
 
 object Fill {
   @scala.inline
-  implicit def apply(value: FillGradientAngle): Fill = value.asInstanceOf[Fill]
+  def FillPattern(fgColor: PartialColor, pattern: FillPatterns, `type`: pattern, bgColor: PartialColor = null): Fill = {
+    val __obj = js.Dynamic.literal(fgColor = fgColor.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Fill]
+  }
   @scala.inline
-  implicit def apply(value: FillGradientPath): Fill = value.asInstanceOf[Fill]
+  def FillGradientAngle(degree: Double, gradient: angle, stops: js.Array[GradientStop], `type`: gradient): Fill = {
+    val __obj = js.Dynamic.literal(degree = degree.asInstanceOf[js.Any], gradient = gradient.asInstanceOf[js.Any], stops = stops.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Fill]
+  }
   @scala.inline
-  implicit def apply(value: FillPattern): Fill = value.asInstanceOf[Fill]
+  def FillGradientPath(center: Left, gradient: path, stops: js.Array[GradientStop], `type`: gradient): Fill = {
+    val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], gradient = gradient.asInstanceOf[js.Any], stops = stops.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Fill]
+  }
 }
 

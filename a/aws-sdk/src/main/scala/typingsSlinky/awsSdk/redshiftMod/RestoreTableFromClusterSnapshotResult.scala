@@ -11,29 +11,10 @@ trait RestoreTableFromClusterSnapshotResult extends js.Object {
 
 object RestoreTableFromClusterSnapshotResult {
   @scala.inline
-  def apply(): RestoreTableFromClusterSnapshotResult = {
+  def apply(TableRestoreStatus: TableRestoreStatus = null): RestoreTableFromClusterSnapshotResult = {
     val __obj = js.Dynamic.literal()
+    if (TableRestoreStatus != null) __obj.updateDynamic("TableRestoreStatus")(TableRestoreStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreTableFromClusterSnapshotResult]
   }
-  @scala.inline
-  implicit class RestoreTableFromClusterSnapshotResultOps[Self <: RestoreTableFromClusterSnapshotResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTableRestoreStatus(value: TableRestoreStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableRestoreStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRestoreStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableRestoreStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

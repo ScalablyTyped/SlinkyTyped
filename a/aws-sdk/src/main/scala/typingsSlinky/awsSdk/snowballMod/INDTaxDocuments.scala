@@ -14,29 +14,10 @@ trait INDTaxDocuments extends js.Object {
 
 object INDTaxDocuments {
   @scala.inline
-  def apply(): INDTaxDocuments = {
+  def apply(GSTIN: GSTIN = null): INDTaxDocuments = {
     val __obj = js.Dynamic.literal()
+    if (GSTIN != null) __obj.updateDynamic("GSTIN")(GSTIN.asInstanceOf[js.Any])
     __obj.asInstanceOf[INDTaxDocuments]
   }
-  @scala.inline
-  implicit class INDTaxDocumentsOps[Self <: INDTaxDocuments] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGSTIN(value: GSTIN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GSTIN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGSTIN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GSTIN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

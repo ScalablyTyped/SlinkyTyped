@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnderscoreEscapedMap[T] extends ReadonlyUnderscoreEscapedMap[T] {
-  def clear(): Unit = js.native
-  def delete(key: String): Boolean = js.native
-  def set(key: String, value: T): this.type = js.native
+  def clear(): Unit
+  def delete(key: String): Boolean
+  def set(key: String, value: T): this.type
 }
 
 object UnderscoreEscapedMap {
@@ -28,31 +27,5 @@ object UnderscoreEscapedMap {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), delete = js.Any.fromFunction1(delete), entries = js.Any.fromFunction0(entries), forEach = js.Any.fromFunction1(forEach), get = js.Any.fromFunction1(get), has = js.Any.fromFunction1(has), keys = js.Any.fromFunction0(keys), set = js.Any.fromFunction2(set), size = size.asInstanceOf[js.Any], values = js.Any.fromFunction0(values))
     __obj.asInstanceOf[UnderscoreEscapedMap[T]]
   }
-  @scala.inline
-  implicit class UnderscoreEscapedMapOps[Self[t] <: UnderscoreEscapedMap[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withClear(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: String => Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet(value: (String, T) => UnderscoreEscapedMap[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

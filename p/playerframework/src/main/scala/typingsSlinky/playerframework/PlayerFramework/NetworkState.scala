@@ -11,26 +11,26 @@ sealed trait NetworkState extends js.Object
 @js.native
 object NetworkState extends js.Object {
   /**
-  		* The player has not yet initialized any audio/video.
-  		**/
+    * The player has not yet initialized any audio/video.
+    **/
   @js.native
   sealed trait empty extends NetworkState
   
   /**
-  		* The player has active audio/video and has selected a resource, but is not using the network.
-  		**/
+    * The player has active audio/video and has selected a resource, but is not using the network.
+    **/
   @js.native
   sealed trait idle extends NetworkState
   
   /**
-  		* The player is downloading data.
-  		**/
+    * The player is downloading data.
+    **/
   @js.native
   sealed trait loading extends NetworkState
   
   /**
-  		* The player has no audio/video source.
-  		**/
+    * The player has no audio/video source.
+    **/
   @js.native
   sealed trait noSource extends NetworkState
   

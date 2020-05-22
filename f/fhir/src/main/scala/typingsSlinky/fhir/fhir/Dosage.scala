@@ -7,375 +7,157 @@ import scala.scalajs.js.annotation._
 /**
   * How the medication is/was taken or should be taken
   */
-@js.native
 trait Dosage extends Element {
   /**
     * Contains extended information for property 'asNeededBoolean'.
     */
-  var _asNeededBoolean: js.UndefOr[Element] = js.native
+  var _asNeededBoolean: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'patientInstruction'.
     */
-  var _patientInstruction: js.UndefOr[Element] = js.native
+  var _patientInstruction: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'sequence'.
     */
-  var _sequence: js.UndefOr[Element] = js.native
+  var _sequence: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'text'.
     */
-  var _text: js.UndefOr[Element] = js.native
+  var _text: js.UndefOr[Element] = js.undefined
   /**
     * Supplemental instruction - e.g. "with meals"
     */
-  var additionalInstruction: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var additionalInstruction: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Take "as needed" (for x)
     */
-  var asNeededBoolean: js.UndefOr[Boolean] = js.native
+  var asNeededBoolean: js.UndefOr[Boolean] = js.undefined
   /**
     * Take "as needed" (for x)
     */
-  var asNeededCodeableConcept: js.UndefOr[CodeableConcept] = js.native
+  var asNeededCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Amount of medication per dose
     */
-  var doseQuantity: js.UndefOr[Quantity] = js.native
+  var doseQuantity: js.UndefOr[Quantity] = js.undefined
   /**
     * Amount of medication per dose
     */
-  var doseRange: js.UndefOr[Range] = js.native
+  var doseRange: js.UndefOr[Range] = js.undefined
   /**
     * Upper limit on medication per administration
     */
-  var maxDosePerAdministration: js.UndefOr[Quantity] = js.native
+  var maxDosePerAdministration: js.UndefOr[Quantity] = js.undefined
   /**
     * Upper limit on medication per lifetime of the patient
     */
-  var maxDosePerLifetime: js.UndefOr[Quantity] = js.native
+  var maxDosePerLifetime: js.UndefOr[Quantity] = js.undefined
   /**
     * Upper limit on medication per unit of time
     */
-  var maxDosePerPeriod: js.UndefOr[Ratio] = js.native
+  var maxDosePerPeriod: js.UndefOr[Ratio] = js.undefined
   /**
     * Technique for administering medication
     */
-  var method: js.UndefOr[CodeableConcept] = js.native
+  var method: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Patient or consumer oriented instructions
     */
-  var patientInstruction: js.UndefOr[String] = js.native
+  var patientInstruction: js.UndefOr[String] = js.undefined
   /**
     * Amount of medication per unit of time
     */
-  var rateQuantity: js.UndefOr[Quantity] = js.native
+  var rateQuantity: js.UndefOr[Quantity] = js.undefined
   /**
     * Amount of medication per unit of time
     */
-  var rateRange: js.UndefOr[Range] = js.native
+  var rateRange: js.UndefOr[Range] = js.undefined
   /**
     * Amount of medication per unit of time
     */
-  var rateRatio: js.UndefOr[Ratio] = js.native
+  var rateRatio: js.UndefOr[Ratio] = js.undefined
   /**
     * How drug should enter body
     */
-  var route: js.UndefOr[CodeableConcept] = js.native
+  var route: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * The order of the dosage instructions
     */
-  var sequence: js.UndefOr[integer] = js.native
+  var sequence: js.UndefOr[integer] = js.undefined
   /**
     * Body site to administer to
     */
-  var site: js.UndefOr[CodeableConcept] = js.native
+  var site: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Free text dosage instructions e.g. SIG
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
   /**
     * When medication should be administered
     */
-  var timing: js.UndefOr[Timing] = js.native
+  var timing: js.UndefOr[Timing] = js.undefined
 }
 
 object Dosage {
   @scala.inline
-  def apply(): Dosage = {
+  def apply(
+    _asNeededBoolean: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _patientInstruction: Element = null,
+    _sequence: Element = null,
+    _text: Element = null,
+    additionalInstruction: js.Array[CodeableConcept] = null,
+    asNeededBoolean: js.UndefOr[Boolean] = js.undefined,
+    asNeededCodeableConcept: CodeableConcept = null,
+    doseQuantity: Quantity = null,
+    doseRange: Range = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    maxDosePerAdministration: Quantity = null,
+    maxDosePerLifetime: Quantity = null,
+    maxDosePerPeriod: Ratio = null,
+    method: CodeableConcept = null,
+    patientInstruction: String = null,
+    rateQuantity: Quantity = null,
+    rateRange: Range = null,
+    rateRatio: Ratio = null,
+    route: CodeableConcept = null,
+    sequence: js.UndefOr[integer] = js.undefined,
+    site: CodeableConcept = null,
+    text: String = null,
+    timing: Timing = null
+  ): Dosage = {
     val __obj = js.Dynamic.literal()
+    if (_asNeededBoolean != null) __obj.updateDynamic("_asNeededBoolean")(_asNeededBoolean.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_patientInstruction != null) __obj.updateDynamic("_patientInstruction")(_patientInstruction.asInstanceOf[js.Any])
+    if (_sequence != null) __obj.updateDynamic("_sequence")(_sequence.asInstanceOf[js.Any])
+    if (_text != null) __obj.updateDynamic("_text")(_text.asInstanceOf[js.Any])
+    if (additionalInstruction != null) __obj.updateDynamic("additionalInstruction")(additionalInstruction.asInstanceOf[js.Any])
+    if (!js.isUndefined(asNeededBoolean)) __obj.updateDynamic("asNeededBoolean")(asNeededBoolean.get.asInstanceOf[js.Any])
+    if (asNeededCodeableConcept != null) __obj.updateDynamic("asNeededCodeableConcept")(asNeededCodeableConcept.asInstanceOf[js.Any])
+    if (doseQuantity != null) __obj.updateDynamic("doseQuantity")(doseQuantity.asInstanceOf[js.Any])
+    if (doseRange != null) __obj.updateDynamic("doseRange")(doseRange.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (maxDosePerAdministration != null) __obj.updateDynamic("maxDosePerAdministration")(maxDosePerAdministration.asInstanceOf[js.Any])
+    if (maxDosePerLifetime != null) __obj.updateDynamic("maxDosePerLifetime")(maxDosePerLifetime.asInstanceOf[js.Any])
+    if (maxDosePerPeriod != null) __obj.updateDynamic("maxDosePerPeriod")(maxDosePerPeriod.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (patientInstruction != null) __obj.updateDynamic("patientInstruction")(patientInstruction.asInstanceOf[js.Any])
+    if (rateQuantity != null) __obj.updateDynamic("rateQuantity")(rateQuantity.asInstanceOf[js.Any])
+    if (rateRange != null) __obj.updateDynamic("rateRange")(rateRange.asInstanceOf[js.Any])
+    if (rateRatio != null) __obj.updateDynamic("rateRatio")(rateRatio.asInstanceOf[js.Any])
+    if (route != null) __obj.updateDynamic("route")(route.asInstanceOf[js.Any])
+    if (!js.isUndefined(sequence)) __obj.updateDynamic("sequence")(sequence.get.asInstanceOf[js.Any])
+    if (site != null) __obj.updateDynamic("site")(site.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (timing != null) __obj.updateDynamic("timing")(timing.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dosage]
   }
-  @scala.inline
-  implicit class DosageOps[Self <: Dosage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_asNeededBoolean(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_asNeededBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_asNeededBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_asNeededBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_patientInstruction(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_patientInstruction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_patientInstruction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_patientInstruction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sequence(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sequence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_text(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_text: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalInstruction(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalInstruction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalInstruction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalInstruction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsNeededBoolean(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asNeededBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsNeededBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asNeededBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsNeededCodeableConcept(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asNeededCodeableConcept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsNeededCodeableConcept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asNeededCodeableConcept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoseQuantity(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doseQuantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoseQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doseQuantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoseRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doseRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoseRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doseRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDosePerAdministration(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDosePerAdministration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDosePerAdministration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDosePerAdministration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDosePerLifetime(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDosePerLifetime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDosePerLifetime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDosePerLifetime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDosePerPeriod(value: Ratio): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDosePerPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDosePerPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDosePerPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatientInstruction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patientInstruction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatientInstruction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patientInstruction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateQuantity(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateQuantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateQuantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateRatio(value: Ratio): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoute(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSequence(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSequence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSite(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("site")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("site")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiming(value: Timing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

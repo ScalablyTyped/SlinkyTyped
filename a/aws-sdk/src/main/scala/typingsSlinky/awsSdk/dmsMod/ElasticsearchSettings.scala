@@ -26,53 +26,16 @@ trait ElasticsearchSettings extends js.Object {
 
 object ElasticsearchSettings {
   @scala.inline
-  def apply(EndpointUri: String, ServiceAccessRoleArn: String): ElasticsearchSettings = {
+  def apply(
+    EndpointUri: String,
+    ServiceAccessRoleArn: String,
+    ErrorRetryDuration: js.UndefOr[IntegerOptional] = js.undefined,
+    FullLoadErrorPercentage: js.UndefOr[IntegerOptional] = js.undefined
+  ): ElasticsearchSettings = {
     val __obj = js.Dynamic.literal(EndpointUri = EndpointUri.asInstanceOf[js.Any], ServiceAccessRoleArn = ServiceAccessRoleArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(ErrorRetryDuration)) __obj.updateDynamic("ErrorRetryDuration")(ErrorRetryDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FullLoadErrorPercentage)) __obj.updateDynamic("FullLoadErrorPercentage")(FullLoadErrorPercentage.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElasticsearchSettings]
   }
-  @scala.inline
-  implicit class ElasticsearchSettingsOps[Self <: ElasticsearchSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpointUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceAccessRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorRetryDuration(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorRetryDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorRetryDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorRetryDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadErrorPercentage(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadErrorPercentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadErrorPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadErrorPercentage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

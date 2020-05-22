@@ -1,6 +1,6 @@
 package typingsSlinky.googlemaps.google.maps
 
-import typingsSlinky.googlemaps.google.maps.places.LocationBias
+import typingsSlinky.googlemaps.google.maps.places._LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   * including one that crosses the 180 degrees longitudinal meridian.
   */
 @js.native
-trait LatLngBounds extends LocationBias {
+trait LatLngBounds extends _LocationBias {
   /** Returns true if the given lat/lng is in this bounds. */
   def contains(latLng: LatLng): Boolean = js.native
   def contains(latLng: LatLngLiteral): Boolean = js.native

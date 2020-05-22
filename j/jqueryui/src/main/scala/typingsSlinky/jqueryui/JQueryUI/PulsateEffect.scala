@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PulsateEffect extends js.Object {
-  var times: js.UndefOr[Double] = js.native
+  var times: js.UndefOr[Double] = js.undefined
 }
 
 object PulsateEffect {
   @scala.inline
-  def apply(): PulsateEffect = {
+  def apply(times: js.UndefOr[Double] = js.undefined): PulsateEffect = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(times)) __obj.updateDynamic("times")(times.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PulsateEffect]
   }
-  @scala.inline
-  implicit class PulsateEffectOps[Self <: PulsateEffect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTimes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("times")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("times")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

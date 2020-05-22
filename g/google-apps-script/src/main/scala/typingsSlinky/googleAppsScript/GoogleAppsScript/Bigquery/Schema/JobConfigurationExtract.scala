@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JobConfigurationExtract extends js.Object {
-  var compression: js.UndefOr[String] = js.native
-  var destinationFormat: js.UndefOr[String] = js.native
-  var destinationUri: js.UndefOr[String] = js.native
-  var destinationUris: js.UndefOr[js.Array[String]] = js.native
-  var fieldDelimiter: js.UndefOr[String] = js.native
-  var printHeader: js.UndefOr[Boolean] = js.native
-  var sourceTable: js.UndefOr[TableReference] = js.native
+  var compression: js.UndefOr[String] = js.undefined
+  var destinationFormat: js.UndefOr[String] = js.undefined
+  var destinationUri: js.UndefOr[String] = js.undefined
+  var destinationUris: js.UndefOr[js.Array[String]] = js.undefined
+  var fieldDelimiter: js.UndefOr[String] = js.undefined
+  var printHeader: js.UndefOr[Boolean] = js.undefined
+  var sourceTable: js.UndefOr[TableReference] = js.undefined
 }
 
 object JobConfigurationExtract {
   @scala.inline
-  def apply(): JobConfigurationExtract = {
+  def apply(
+    compression: String = null,
+    destinationFormat: String = null,
+    destinationUri: String = null,
+    destinationUris: js.Array[String] = null,
+    fieldDelimiter: String = null,
+    printHeader: js.UndefOr[Boolean] = js.undefined,
+    sourceTable: TableReference = null
+  ): JobConfigurationExtract = {
     val __obj = js.Dynamic.literal()
+    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
+    if (destinationFormat != null) __obj.updateDynamic("destinationFormat")(destinationFormat.asInstanceOf[js.Any])
+    if (destinationUri != null) __obj.updateDynamic("destinationUri")(destinationUri.asInstanceOf[js.Any])
+    if (destinationUris != null) __obj.updateDynamic("destinationUris")(destinationUris.asInstanceOf[js.Any])
+    if (fieldDelimiter != null) __obj.updateDynamic("fieldDelimiter")(fieldDelimiter.asInstanceOf[js.Any])
+    if (!js.isUndefined(printHeader)) __obj.updateDynamic("printHeader")(printHeader.get.asInstanceOf[js.Any])
+    if (sourceTable != null) __obj.updateDynamic("sourceTable")(sourceTable.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobConfigurationExtract]
   }
-  @scala.inline
-  implicit class JobConfigurationExtractOps[Self <: JobConfigurationExtract] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationUris(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationUris")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationUris: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationUris")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrintHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceTable(value: TableReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

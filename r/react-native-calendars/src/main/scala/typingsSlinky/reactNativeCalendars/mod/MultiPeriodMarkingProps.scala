@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait MultiPeriodMarkingProps extends CalendarMarkingProps {
-  var markedDates: StringDictionary[MultiPeriodMarking] = js.native
-  var markingType: `multi-period` = js.native
+trait MultiPeriodMarkingProps extends _CalendarMarkingProps {
+  var markedDates: StringDictionary[MultiPeriodMarking]
+  var markingType: `multi-period`
 }
 
 object MultiPeriodMarkingProps {
@@ -18,25 +17,5 @@ object MultiPeriodMarkingProps {
     val __obj = js.Dynamic.literal(markedDates = markedDates.asInstanceOf[js.Any], markingType = markingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiPeriodMarkingProps]
   }
-  @scala.inline
-  implicit class MultiPeriodMarkingPropsOps[Self <: MultiPeriodMarkingProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarkedDates(value: StringDictionary[MultiPeriodMarking]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markedDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkingType(value: `multi-period`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

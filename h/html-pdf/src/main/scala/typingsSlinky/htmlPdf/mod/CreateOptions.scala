@@ -22,307 +22,89 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateOptions extends js.Object {
   // Rendering options
-  var base: js.UndefOr[String] = js.native
+  var base: js.UndefOr[String] = js.undefined
   // Page options
-  var border: js.UndefOr[String | Bottom] = js.native
+  var border: js.UndefOr[String | Bottom] = js.undefined
   // To run Node application as Windows service
-  var childProcessOptions: js.UndefOr[Detached] = js.native
+  var childProcessOptions: js.UndefOr[Detached] = js.undefined
   // Export options
-  var directory: js.UndefOr[String] = js.native
-  var footer: js.UndefOr[Height] = js.native
-  var format: js.UndefOr[A3 | A4 | A5 | Legal | Letter | Tabloid] = js.native
-  var header: js.UndefOr[Contents] = js.native
+  var directory: js.UndefOr[String] = js.undefined
+  var footer: js.UndefOr[Height] = js.undefined
+  var format: js.UndefOr[A3 | A4 | A5 | Legal | Letter | Tabloid] = js.undefined
+  var header: js.UndefOr[Contents] = js.undefined
   // Papersize Options: http://phantomjs.org/api/webpage/property/paper-size.html
-  var height: js.UndefOr[String] = js.native
+  var height: js.UndefOr[String] = js.undefined
   // HTTP Cookies that are used for requests
-  var httpCookies: js.UndefOr[js.Array[Domain]] = js.native
+  var httpCookies: js.UndefOr[js.Array[Domain]] = js.undefined
   // HTTP Headers that are used for requests
-  var httpHeaders: js.UndefOr[StringDictionary[String]] = js.native
-  var orientation: js.UndefOr[portrait | landscape] = js.native
-  var paginationOffset: js.UndefOr[Double] = js.native
-  var phantomArgs: js.UndefOr[js.Array[String]] = js.native
+  var httpHeaders: js.UndefOr[StringDictionary[String]] = js.undefined
+  var orientation: js.UndefOr[portrait | landscape] = js.undefined
+  var paginationOffset: js.UndefOr[Double] = js.undefined
+  var phantomArgs: js.UndefOr[js.Array[String]] = js.undefined
   // Script options
-  var phantomPath: js.UndefOr[String] = js.native
-  var quality: js.UndefOr[String] = js.native
+  var phantomPath: js.UndefOr[String] = js.undefined
+  var quality: js.UndefOr[String] = js.undefined
   // Time we should wait after window load
-  var renderDelay: js.UndefOr[manual | Double] = js.native
-  var script: js.UndefOr[String] = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  var renderDelay: js.UndefOr[manual | Double] = js.undefined
+  var script: js.UndefOr[String] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
   // File options
-  var `type`: js.UndefOr[png | jpeg | pdf] = js.native
-  var width: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[png | jpeg | pdf] = js.undefined
+  var width: js.UndefOr[String] = js.undefined
   // Zooming option, can be used to scale images if `options.type` is not pdf
-  var zoomFactor: js.UndefOr[String] = js.native
+  var zoomFactor: js.UndefOr[String] = js.undefined
 }
 
 object CreateOptions {
   @scala.inline
-  def apply(): CreateOptions = {
+  def apply(
+    base: String = null,
+    border: String | Bottom = null,
+    childProcessOptions: Detached = null,
+    directory: String = null,
+    footer: Height = null,
+    format: A3 | A4 | A5 | Legal | Letter | Tabloid = null,
+    header: Contents = null,
+    height: String = null,
+    httpCookies: js.Array[Domain] = null,
+    httpHeaders: StringDictionary[String] = null,
+    orientation: portrait | landscape = null,
+    paginationOffset: js.UndefOr[Double] = js.undefined,
+    phantomArgs: js.Array[String] = null,
+    phantomPath: String = null,
+    quality: String = null,
+    renderDelay: manual | Double = null,
+    script: String = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    `type`: png | jpeg | pdf = null,
+    width: String = null,
+    zoomFactor: String = null
+  ): CreateOptions = {
     val __obj = js.Dynamic.literal()
+    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (childProcessOptions != null) __obj.updateDynamic("childProcessOptions")(childProcessOptions.asInstanceOf[js.Any])
+    if (directory != null) __obj.updateDynamic("directory")(directory.asInstanceOf[js.Any])
+    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (httpCookies != null) __obj.updateDynamic("httpCookies")(httpCookies.asInstanceOf[js.Any])
+    if (httpHeaders != null) __obj.updateDynamic("httpHeaders")(httpHeaders.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (!js.isUndefined(paginationOffset)) __obj.updateDynamic("paginationOffset")(paginationOffset.get.asInstanceOf[js.Any])
+    if (phantomArgs != null) __obj.updateDynamic("phantomArgs")(phantomArgs.asInstanceOf[js.Any])
+    if (phantomPath != null) __obj.updateDynamic("phantomPath")(phantomPath.asInstanceOf[js.Any])
+    if (quality != null) __obj.updateDynamic("quality")(quality.asInstanceOf[js.Any])
+    if (renderDelay != null) __obj.updateDynamic("renderDelay")(renderDelay.asInstanceOf[js.Any])
+    if (script != null) __obj.updateDynamic("script")(script.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (zoomFactor != null) __obj.updateDynamic("zoomFactor")(zoomFactor.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateOptions]
   }
-  @scala.inline
-  implicit class CreateOptionsOps[Self <: CreateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: String | Bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildProcessOptions(value: Detached): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childProcessOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildProcessOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childProcessOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooter(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: A3 | A4 | A5 | Legal | Letter | Tabloid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: Contents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpCookies(value: js.Array[Domain]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCookies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpCookies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCookies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpHeaders(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: portrait | landscape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaginationOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaginationOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhantomArgs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phantomArgs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhantomArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phantomArgs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhantomPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phantomPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhantomPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phantomPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderDelay(value: manual | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScript(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: png | jpeg | pdf): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomFactor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomFactor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

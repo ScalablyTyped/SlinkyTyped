@@ -7,14 +7,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActiveXObjectNameMap extends js.Object {
   @JSName("InfoPath.Application")
-  var InfoPathDotApplication: Application = js.native
+  var InfoPathDotApplication: Application
   @JSName("InfoPath.Editor")
-  var InfoPathDotEditor: InfoPathEditorObject = js.native
+  var InfoPathDotEditor: InfoPathEditorObject
   @JSName("InfoPath.ExternalApplication")
-  var InfoPathDotExternalApplication: ExternalApplication = js.native
+  var InfoPathDotExternalApplication: ExternalApplication
 }
 
 object ActiveXObjectNameMap {
@@ -30,31 +29,5 @@ object ActiveXObjectNameMap {
     __obj.updateDynamic("InfoPath.ExternalApplication")(InfoPathDotExternalApplication.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActiveXObjectNameMap]
   }
-  @scala.inline
-  implicit class ActiveXObjectNameMapOps[Self <: ActiveXObjectNameMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfoPathDotApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotEditor(value: InfoPathEditorObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.Editor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotExternalApplication(value: ExternalApplication): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.ExternalApplication")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

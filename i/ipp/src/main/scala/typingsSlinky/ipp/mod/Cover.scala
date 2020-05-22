@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cover extends js.Object {
-  var `cover-type`: js.UndefOr[CoverType] = js.native
-  var media: js.UndefOr[Media] = js.native
-  var `media-col`: js.UndefOr[js.Array[MediaInterface]] = js.native
+  var `cover-type`: js.UndefOr[CoverType] = js.undefined
+  var media: js.UndefOr[Media] = js.undefined
+  var `media-col`: js.UndefOr[js.Array[MediaInterface]] = js.undefined
 }
 
 object Cover {
   @scala.inline
-  def apply(): Cover = {
+  def apply(`cover-type`: CoverType = null, media: Media = null, `media-col`: js.Array[MediaInterface] = null): Cover = {
     val __obj = js.Dynamic.literal()
+    if (`cover-type` != null) __obj.updateDynamic("cover-type")(`cover-type`.asInstanceOf[js.Any])
+    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+    if (`media-col` != null) __obj.updateDynamic("media-col")(`media-col`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cover]
   }
-  @scala.inline
-  implicit class CoverOps[Self <: Cover] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withCover-type`(value: CoverType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cover-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCover-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cover-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia(value: Media): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMedia-col`(value: js.Array[MediaInterface]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMedia-col`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-col")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

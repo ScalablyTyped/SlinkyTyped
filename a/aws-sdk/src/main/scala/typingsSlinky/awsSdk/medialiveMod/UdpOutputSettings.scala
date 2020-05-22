@@ -23,53 +23,16 @@ trait UdpOutputSettings extends js.Object {
 
 object UdpOutputSettings {
   @scala.inline
-  def apply(ContainerSettings: UdpContainerSettings, Destination: OutputLocationRef): UdpOutputSettings = {
+  def apply(
+    ContainerSettings: UdpContainerSettings,
+    Destination: OutputLocationRef,
+    BufferMsec: js.UndefOr[integerMin0Max10000] = js.undefined,
+    FecOutputSettings: FecOutputSettings = null
+  ): UdpOutputSettings = {
     val __obj = js.Dynamic.literal(ContainerSettings = ContainerSettings.asInstanceOf[js.Any], Destination = Destination.asInstanceOf[js.Any])
+    if (!js.isUndefined(BufferMsec)) __obj.updateDynamic("BufferMsec")(BufferMsec.get.asInstanceOf[js.Any])
+    if (FecOutputSettings != null) __obj.updateDynamic("FecOutputSettings")(FecOutputSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[UdpOutputSettings]
   }
-  @scala.inline
-  implicit class UdpOutputSettingsOps[Self <: UdpOutputSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerSettings(value: UdpContainerSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestination(value: OutputLocationRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBufferMsec(value: integerMin0Max10000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferMsec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBufferMsec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferMsec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFecOutputSettings(value: FecOutputSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FecOutputSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFecOutputSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FecOutputSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

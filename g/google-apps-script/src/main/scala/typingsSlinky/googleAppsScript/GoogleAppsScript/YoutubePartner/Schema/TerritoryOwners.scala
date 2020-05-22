@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TerritoryOwners extends js.Object {
-  var owner: js.UndefOr[String] = js.native
-  var publisher: js.UndefOr[String] = js.native
-  var ratio: js.UndefOr[Double] = js.native
-  var territories: js.UndefOr[js.Array[String]] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var owner: js.UndefOr[String] = js.undefined
+  var publisher: js.UndefOr[String] = js.undefined
+  var ratio: js.UndefOr[Double] = js.undefined
+  var territories: js.UndefOr[js.Array[String]] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object TerritoryOwners {
   @scala.inline
-  def apply(): TerritoryOwners = {
+  def apply(
+    owner: String = null,
+    publisher: String = null,
+    ratio: js.UndefOr[Double] = js.undefined,
+    territories: js.Array[String] = null,
+    `type`: String = null
+  ): TerritoryOwners = {
     val __obj = js.Dynamic.literal()
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (publisher != null) __obj.updateDynamic("publisher")(publisher.asInstanceOf[js.Any])
+    if (!js.isUndefined(ratio)) __obj.updateDynamic("ratio")(ratio.get.asInstanceOf[js.Any])
+    if (territories != null) __obj.updateDynamic("territories")(territories.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TerritoryOwners]
   }
-  @scala.inline
-  implicit class TerritoryOwnersOps[Self <: TerritoryOwners] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOwner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublisher(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublisher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ratio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ratio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerritories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("territories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerritories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("territories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

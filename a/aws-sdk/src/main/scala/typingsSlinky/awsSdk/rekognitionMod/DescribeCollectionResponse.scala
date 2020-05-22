@@ -26,65 +26,18 @@ trait DescribeCollectionResponse extends js.Object {
 
 object DescribeCollectionResponse {
   @scala.inline
-  def apply(): DescribeCollectionResponse = {
+  def apply(
+    CollectionARN: String = null,
+    CreationTimestamp: js.Date = null,
+    FaceCount: js.UndefOr[ULong] = js.undefined,
+    FaceModelVersion: String = null
+  ): DescribeCollectionResponse = {
     val __obj = js.Dynamic.literal()
+    if (CollectionARN != null) __obj.updateDynamic("CollectionARN")(CollectionARN.asInstanceOf[js.Any])
+    if (CreationTimestamp != null) __obj.updateDynamic("CreationTimestamp")(CreationTimestamp.asInstanceOf[js.Any])
+    if (!js.isUndefined(FaceCount)) __obj.updateDynamic("FaceCount")(FaceCount.get.asInstanceOf[js.Any])
+    if (FaceModelVersion != null) __obj.updateDynamic("FaceModelVersion")(FaceModelVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCollectionResponse]
   }
-  @scala.inline
-  implicit class DescribeCollectionResponseOps[Self <: DescribeCollectionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollectionARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CollectionARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollectionARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CollectionARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaceCount(value: ULong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaceModelVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceModelVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceModelVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceModelVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

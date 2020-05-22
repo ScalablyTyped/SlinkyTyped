@@ -17,29 +17,10 @@ trait SchemaListAccountUsersResponse extends js.Object {
 
 object SchemaListAccountUsersResponse {
   @scala.inline
-  def apply(): SchemaListAccountUsersResponse = {
+  def apply(userAccess: js.Array[SchemaUserAccess] = null): SchemaListAccountUsersResponse = {
     val __obj = js.Dynamic.literal()
+    if (userAccess != null) __obj.updateDynamic("userAccess")(userAccess.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListAccountUsersResponse]
   }
-  @scala.inline
-  implicit class SchemaListAccountUsersResponseOps[Self <: SchemaListAccountUsersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserAccess(value: js.Array[SchemaUserAccess]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAccess")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

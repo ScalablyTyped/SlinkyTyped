@@ -55,101 +55,24 @@ trait SchemaCompensationInfo extends js.Object {
 
 object SchemaCompensationInfo {
   @scala.inline
-  def apply(): SchemaCompensationInfo = {
+  def apply(
+    amount: SchemaMoney = null,
+    annualizedBaseCompensationRange: SchemaCompensationRange = null,
+    annualizedTotalCompensationRange: SchemaCompensationRange = null,
+    entries: js.Array[SchemaCompensationEntry] = null,
+    max: SchemaMoney = null,
+    min: SchemaMoney = null,
+    `type`: String = null
+  ): SchemaCompensationInfo = {
     val __obj = js.Dynamic.literal()
+    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
+    if (annualizedBaseCompensationRange != null) __obj.updateDynamic("annualizedBaseCompensationRange")(annualizedBaseCompensationRange.asInstanceOf[js.Any])
+    if (annualizedTotalCompensationRange != null) __obj.updateDynamic("annualizedTotalCompensationRange")(annualizedTotalCompensationRange.asInstanceOf[js.Any])
+    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCompensationInfo]
   }
-  @scala.inline
-  implicit class SchemaCompensationInfoOps[Self <: SchemaCompensationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: SchemaMoney): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnnualizedBaseCompensationRange(value: SchemaCompensationRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annualizedBaseCompensationRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnualizedBaseCompensationRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annualizedBaseCompensationRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnnualizedTotalCompensationRange(value: SchemaCompensationRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annualizedTotalCompensationRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnualizedTotalCompensationRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annualizedTotalCompensationRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntries(value: js.Array[SchemaCompensationEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: SchemaMoney): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: SchemaMoney): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

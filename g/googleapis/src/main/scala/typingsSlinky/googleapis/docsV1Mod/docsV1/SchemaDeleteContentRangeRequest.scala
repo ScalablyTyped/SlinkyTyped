@@ -29,29 +29,10 @@ trait SchemaDeleteContentRangeRequest extends js.Object {
 
 object SchemaDeleteContentRangeRequest {
   @scala.inline
-  def apply(): SchemaDeleteContentRangeRequest = {
+  def apply(range: SchemaRange = null): SchemaDeleteContentRangeRequest = {
     val __obj = js.Dynamic.literal()
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteContentRangeRequest]
   }
-  @scala.inline
-  implicit class SchemaDeleteContentRangeRequestOps[Self <: SchemaDeleteContentRangeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRange(value: SchemaRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

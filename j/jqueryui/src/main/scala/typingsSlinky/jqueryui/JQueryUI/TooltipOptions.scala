@@ -1,135 +1,58 @@
 package typingsSlinky.jqueryui.JQueryUI
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.jquery.JQueryEventObject
+import typingsSlinky.jqueryui.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // Tooltip //////////////////////////////////////////////////
-@js.native
 trait TooltipOptions extends TooltipEvents {
-  var content: js.UndefOr[js.Any] = js.native
+  var classes: js.UndefOr[StringDictionary[String]] = js.undefined
+  var content: js.UndefOr[js.Any] = js.undefined
    // () or string
-  var disabled: js.UndefOr[Boolean] = js.native
-  var hide: js.UndefOr[js.Any] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var hide: js.UndefOr[js.Any] = js.undefined
    // boolean, number, string or object
-  var items: js.UndefOr[String] = js.native
-  var position: js.UndefOr[js.Any] = js.native
+  var items: js.UndefOr[String | JQuery] = js.undefined
+  var position: js.UndefOr[js.Any] = js.undefined
    // TODO
-  var show: js.UndefOr[js.Any] = js.native
+  var show: js.UndefOr[js.Any] = js.undefined
    // boolean, number, string or object
-  var tooltipClass: js.UndefOr[String] = js.native
-  var track: js.UndefOr[Boolean] = js.native
+  var tooltipClass: js.UndefOr[String] = js.undefined
+   // deprecated in jQuery UI 1.12
+  var track: js.UndefOr[Boolean] = js.undefined
 }
 
 object TooltipOptions {
   @scala.inline
-  def apply(): TooltipOptions = {
+  def apply(
+    classes: StringDictionary[String] = null,
+    close: (/* event */ JQueryEventObject, /* ui */ TooltipUIParams) => Unit = null,
+    content: js.Any = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    hide: js.Any = null,
+    items: String | JQuery = null,
+    open: (/* event */ JQueryEventObject, /* ui */ TooltipUIParams) => Unit = null,
+    position: js.Any = null,
+    show: js.Any = null,
+    tooltipClass: String = null,
+    track: js.UndefOr[Boolean] = js.undefined
+  ): TooltipOptions = {
     val __obj = js.Dynamic.literal()
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction2(close))
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (open != null) __obj.updateDynamic("open")(js.Any.fromFunction2(open))
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    if (tooltipClass != null) __obj.updateDynamic("tooltipClass")(tooltipClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(track)) __obj.updateDynamic("track")(track.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipOptions]
   }
-  @scala.inline
-  implicit class TooltipOptionsOps[Self <: TooltipOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHide(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrack(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

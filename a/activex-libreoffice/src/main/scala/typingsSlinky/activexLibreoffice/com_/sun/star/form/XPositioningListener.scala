@@ -14,10 +14,9 @@ import scala.scalajs.js.annotation._
   * service, as well as the {@link com.sun.star.sdbc.XRowSetListener} .
   * @deprecated Deprecated
   */
-@js.native
 trait XPositioningListener extends XEventListener {
   /** is invoked when the database form has been positioned on a data record. */
-  def positioned(aEvent: EventObject): Unit = js.native
+  def positioned(aEvent: EventObject): Unit
 }
 
 object XPositioningListener {
@@ -32,19 +31,5 @@ object XPositioningListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), positioned = js.Any.fromFunction1(positioned), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XPositioningListener]
   }
-  @scala.inline
-  implicit class XPositioningListenerOps[Self <: XPositioningListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPositioned(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioned")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -7,15 +7,14 @@ import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.cytoscape.mod.AbstractEventObject because Already inherited
-- typingsSlinky.cytoscape.mod.LayoutEventObject because var conflicts: cy, namespace, target, timeStamp, `type`. Inlined layout */ @js.native
-trait EventObjectCore extends InputEventObject {
+- typingsSlinky.cytoscape.mod.LayoutEventObject because var conflicts: cy, namespace, target, timeStamp, `type`. Inlined layout */ trait EventObjectCore extends InputEventObject {
   /**
     * layout : indicates the corresponding layout that triggered the event
     * (useful if running multiple layouts simultaneously)
     */
-  var layout: js.Any = js.native
+  var layout: js.Any
   @JSName("target")
-  var target_EventObjectCore: Core = js.native
+  var target_EventObjectCore: Core
 }
 
 object EventObjectCore {
@@ -41,25 +40,5 @@ object EventObjectCore {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventObjectCore]
   }
-  @scala.inline
-  implicit class EventObjectCoreOps[Self <: EventObjectCore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayout(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Core): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

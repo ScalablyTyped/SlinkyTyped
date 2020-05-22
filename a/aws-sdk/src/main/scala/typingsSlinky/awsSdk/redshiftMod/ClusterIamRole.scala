@@ -18,41 +18,11 @@ trait ClusterIamRole extends js.Object {
 
 object ClusterIamRole {
   @scala.inline
-  def apply(): ClusterIamRole = {
+  def apply(ApplyStatus: String = null, IamRoleArn: String = null): ClusterIamRole = {
     val __obj = js.Dynamic.literal()
+    if (ApplyStatus != null) __obj.updateDynamic("ApplyStatus")(ApplyStatus.asInstanceOf[js.Any])
+    if (IamRoleArn != null) __obj.updateDynamic("IamRoleArn")(IamRoleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterIamRole]
   }
-  @scala.inline
-  implicit class ClusterIamRoleOps[Self <: ClusterIamRole] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplyStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

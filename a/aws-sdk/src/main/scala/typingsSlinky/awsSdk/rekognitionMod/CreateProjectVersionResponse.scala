@@ -14,29 +14,10 @@ trait CreateProjectVersionResponse extends js.Object {
 
 object CreateProjectVersionResponse {
   @scala.inline
-  def apply(): CreateProjectVersionResponse = {
+  def apply(ProjectVersionArn: ProjectVersionArn = null): CreateProjectVersionResponse = {
     val __obj = js.Dynamic.literal()
+    if (ProjectVersionArn != null) __obj.updateDynamic("ProjectVersionArn")(ProjectVersionArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProjectVersionResponse]
   }
-  @scala.inline
-  implicit class CreateProjectVersionResponseOps[Self <: CreateProjectVersionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProjectVersionArn(value: ProjectVersionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectVersionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectVersionArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectVersionArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

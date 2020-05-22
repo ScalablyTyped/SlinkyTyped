@@ -34,89 +34,22 @@ trait OwnerDirectoryDescription extends js.Object {
 
 object OwnerDirectoryDescription {
   @scala.inline
-  def apply(): OwnerDirectoryDescription = {
+  def apply(
+    AccountId: CustomerId = null,
+    DirectoryId: DirectoryId = null,
+    DnsIpAddrs: DnsIpAddrs = null,
+    RadiusSettings: RadiusSettings = null,
+    RadiusStatus: RadiusStatus = null,
+    VpcSettings: DirectoryVpcSettingsDescription = null
+  ): OwnerDirectoryDescription = {
     val __obj = js.Dynamic.literal()
+    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
+    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
+    if (DnsIpAddrs != null) __obj.updateDynamic("DnsIpAddrs")(DnsIpAddrs.asInstanceOf[js.Any])
+    if (RadiusSettings != null) __obj.updateDynamic("RadiusSettings")(RadiusSettings.asInstanceOf[js.Any])
+    if (RadiusStatus != null) __obj.updateDynamic("RadiusStatus")(RadiusStatus.asInstanceOf[js.Any])
+    if (VpcSettings != null) __obj.updateDynamic("VpcSettings")(VpcSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[OwnerDirectoryDescription]
   }
-  @scala.inline
-  implicit class OwnerDirectoryDescriptionOps[Self <: OwnerDirectoryDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: CustomerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsIpAddrs(value: DnsIpAddrs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIpAddrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsIpAddrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIpAddrs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadiusSettings(value: RadiusSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadiusSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadiusStatus(value: RadiusStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadiusStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcSettings(value: DirectoryVpcSettingsDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

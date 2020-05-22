@@ -71,125 +71,28 @@ trait SchemaAuthorizedCertificate extends js.Object {
 
 object SchemaAuthorizedCertificate {
   @scala.inline
-  def apply(): SchemaAuthorizedCertificate = {
+  def apply(
+    certificateRawData: SchemaCertificateRawData = null,
+    displayName: String = null,
+    domainMappingsCount: js.UndefOr[Double] = js.undefined,
+    domainNames: js.Array[String] = null,
+    expireTime: String = null,
+    id: String = null,
+    managedCertificate: SchemaManagedCertificate = null,
+    name: String = null,
+    visibleDomainMappings: js.Array[String] = null
+  ): SchemaAuthorizedCertificate = {
     val __obj = js.Dynamic.literal()
+    if (certificateRawData != null) __obj.updateDynamic("certificateRawData")(certificateRawData.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(domainMappingsCount)) __obj.updateDynamic("domainMappingsCount")(domainMappingsCount.get.asInstanceOf[js.Any])
+    if (domainNames != null) __obj.updateDynamic("domainNames")(domainNames.asInstanceOf[js.Any])
+    if (expireTime != null) __obj.updateDynamic("expireTime")(expireTime.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (managedCertificate != null) __obj.updateDynamic("managedCertificate")(managedCertificate.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (visibleDomainMappings != null) __obj.updateDynamic("visibleDomainMappings")(visibleDomainMappings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuthorizedCertificate]
   }
-  @scala.inline
-  implicit class SchemaAuthorizedCertificateOps[Self <: SchemaAuthorizedCertificate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateRawData(value: SchemaCertificateRawData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateRawData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateRawData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateRawData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainMappingsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainMappingsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainMappingsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainMappingsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpireTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expireTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpireTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expireTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagedCertificate(value: SchemaManagedCertificate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedCertificate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleDomainMappings(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleDomainMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleDomainMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleDomainMappings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

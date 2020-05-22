@@ -10,18 +10,17 @@ import scala.scalajs.js.annotation._
   * matchExpressions are ANDed. An empty label selector matches all objects. A null label
   * selector matches no objects.
   */
-@js.native
 trait LabelSelector extends js.Object {
   /**
     * matchExpressions is a list of label selector requirements. The requirements are ANDed.
     */
-  val matchExpressions: js.Array[LabelSelectorRequirement] = js.native
+  val matchExpressions: js.Array[LabelSelectorRequirement]
   /**
     * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is
     * equivalent to an element of matchExpressions, whose key field is "key", the operator is
     * "In", and the values array contains only "value". The requirements are ANDed.
     */
-  val matchLabels: StringDictionary[String] = js.native
+  val matchLabels: StringDictionary[String]
 }
 
 object LabelSelector {
@@ -30,25 +29,5 @@ object LabelSelector {
     val __obj = js.Dynamic.literal(matchExpressions = matchExpressions.asInstanceOf[js.Any], matchLabels = matchLabels.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelSelector]
   }
-  @scala.inline
-  implicit class LabelSelectorOps[Self <: LabelSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMatchExpressions(value: js.Array[LabelSelectorRequirement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatchLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

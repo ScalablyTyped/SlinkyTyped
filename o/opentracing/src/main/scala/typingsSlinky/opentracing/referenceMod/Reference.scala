@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Reference extends js.Object {
-  var _referencedContext: typingsSlinky.opentracing.spanContextMod.default = js.native
-  var _type: String = js.native
+  var _referencedContext: typingsSlinky.opentracing.spanContextMod.default
+  var _type: String
   /**
     * @return {SpanContext} The SpanContext being referred to (e.g., the
     *         parent in a REFERENCE_CHILD_OF Reference).
     */
-  def referencedContext(): typingsSlinky.opentracing.spanContextMod.default = js.native
+  def referencedContext(): typingsSlinky.opentracing.spanContextMod.default
   /**
     * @return {string} The Reference type (e.g., REFERENCE_CHILD_OF or
     *         REFERENCE_FOLLOWS_FROM).
     */
-  def `type`(): String = js.native
+  def `type`(): String
 }
 
 object Reference {
@@ -32,37 +31,5 @@ object Reference {
     __obj.updateDynamic("type")(js.Any.fromFunction0(`type`))
     __obj.asInstanceOf[Reference]
   }
-  @scala.inline
-  implicit class ReferenceOps[Self <: Reference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_referencedContext(value: typingsSlinky.opentracing.spanContextMod.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_referencedContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferencedContext(value: () => typingsSlinky.opentracing.spanContextMod.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referencedContext")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

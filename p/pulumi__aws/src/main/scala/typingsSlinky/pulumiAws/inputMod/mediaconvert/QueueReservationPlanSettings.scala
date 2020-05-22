@@ -27,31 +27,5 @@ object QueueReservationPlanSettings {
     val __obj = js.Dynamic.literal(commitment = commitment.asInstanceOf[js.Any], renewalType = renewalType.asInstanceOf[js.Any], reservedSlots = reservedSlots.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueueReservationPlanSettings]
   }
-  @scala.inline
-  implicit class QueueReservationPlanSettingsOps[Self <: QueueReservationPlanSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitment(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenewalType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renewalType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReservedSlots(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservedSlots")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

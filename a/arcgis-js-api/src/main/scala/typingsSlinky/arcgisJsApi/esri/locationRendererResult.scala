@@ -6,32 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait locationRendererResult extends Object {
   /**
     * The ID of the basemap used to determine the optimal fill color of the features.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-location.html#RendererResult)
     */
-  var basemapId: String = js.native
+  var basemapId: String
   /**
     * Indicates whether the average color of the input view's basemap is `light` or `dark`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-location.html#RendererResult)
     */
-  var basemapTheme: String = js.native
+  var basemapTheme: String
   /**
     * The location scheme used by the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-location.html#RendererResult)
     */
-  var locationScheme: LocationScheme = js.native
+  var locationScheme: LocationScheme
   /**
     * A simple renderer configured with a single color best suited to match the given basemap. Set this to a layer's `renderer` property to update its visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-location.html#RendererResult)
     */
-  var renderer: SimpleRenderer = js.native
+  var renderer: SimpleRenderer
 }
 
 object locationRendererResult {
@@ -48,37 +47,5 @@ object locationRendererResult {
     val __obj = js.Dynamic.literal(basemapId = basemapId.asInstanceOf[js.Any], basemapTheme = basemapTheme.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), locationScheme = locationScheme.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), renderer = renderer.asInstanceOf[js.Any])
     __obj.asInstanceOf[locationRendererResult]
   }
-  @scala.inline
-  implicit class locationRendererResultOps[Self <: locationRendererResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBasemapId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemapId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasemapTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemapTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocationScheme(value: LocationScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: SimpleRenderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

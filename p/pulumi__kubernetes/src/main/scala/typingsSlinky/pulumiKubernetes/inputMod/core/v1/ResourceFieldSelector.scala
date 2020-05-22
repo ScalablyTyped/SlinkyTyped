@@ -8,65 +8,28 @@ import scala.scalajs.js.annotation._
 /**
   * ResourceFieldSelector represents container resources (cpu, memory) and their output format
   */
-@js.native
 trait ResourceFieldSelector extends js.Object {
   /**
     * Container name: required for volumes, optional for env vars
     */
-  var containerName: js.UndefOr[Input[String]] = js.native
+  var containerName: js.UndefOr[Input[String]] = js.undefined
   /**
     * Specifies the output format of the exposed resources, defaults to "1"
     */
-  var divisor: js.UndefOr[Input[String]] = js.native
+  var divisor: js.UndefOr[Input[String]] = js.undefined
   /**
     * Required: resource to select
     */
-  var resource: Input[String] = js.native
+  var resource: Input[String]
 }
 
 object ResourceFieldSelector {
   @scala.inline
-  def apply(resource: Input[String]): ResourceFieldSelector = {
+  def apply(resource: Input[String], containerName: Input[String] = null, divisor: Input[String] = null): ResourceFieldSelector = {
     val __obj = js.Dynamic.literal(resource = resource.asInstanceOf[js.Any])
+    if (containerName != null) __obj.updateDynamic("containerName")(containerName.asInstanceOf[js.Any])
+    if (divisor != null) __obj.updateDynamic("divisor")(divisor.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceFieldSelector]
   }
-  @scala.inline
-  implicit class ResourceFieldSelectorOps[Self <: ResourceFieldSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResource(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainerName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDivisor(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("divisor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDivisor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("divisor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

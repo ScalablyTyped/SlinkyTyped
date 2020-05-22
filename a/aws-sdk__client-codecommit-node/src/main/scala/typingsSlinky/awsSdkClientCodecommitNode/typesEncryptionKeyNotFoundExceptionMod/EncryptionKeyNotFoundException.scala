@@ -37,7 +37,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EncryptionKeyNotFoundException
   extends ServiceException[EncryptionKeyNotFoundExceptionDetails]
      with BatchGetRepositoriesExceptionsUnion
@@ -72,7 +71,7 @@ trait EncryptionKeyNotFoundException
      with UpdatePullRequestStatusExceptionsUnion
      with UpdateRepositoryDescriptionExceptionsUnion {
   @JSName("name")
-  var name_EncryptionKeyNotFoundException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionKeyNotFoundException = js.native
+  var name_EncryptionKeyNotFoundException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionKeyNotFoundException
 }
 
 object EncryptionKeyNotFoundException {
@@ -81,26 +80,12 @@ object EncryptionKeyNotFoundException {
     $metadata: ResponseMetadata,
     details: EncryptionKeyNotFoundExceptionDetails,
     message: String,
-    name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionKeyNotFoundException
+    name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionKeyNotFoundException,
+    stack: String = null
   ): EncryptionKeyNotFoundException = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptionKeyNotFoundException]
   }
-  @scala.inline
-  implicit class EncryptionKeyNotFoundExceptionOps[Self <: EncryptionKeyNotFoundException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(
-      value: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionKeyNotFoundException
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

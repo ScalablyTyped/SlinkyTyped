@@ -8,5 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends RehypeReact {
   def this(options: Options) = this()
+  /* CompleteClass */
+  override def Compiler(node: js.Any): js.Any = js.native
 }
 

@@ -8,12 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to receive events from the mouse in a certain window. */
-@js.native
 trait XMouseListener extends XEventListener {
   /** is invoked when the mouse enters a window. */
-  def mouseEntered(e: MouseEvent): Unit = js.native
+  def mouseEntered(e: MouseEvent): Unit
   /** is invoked when the mouse exits a window. */
-  def mouseExited(e: MouseEvent): Unit = js.native
+  def mouseExited(e: MouseEvent): Unit
   /**
     * is invoked when a mouse button has been pressed on a window.
     *
@@ -22,9 +21,9 @@ trait XMouseListener extends XEventListener {
     * you will receive one call to {@link mousePressed()} indicating the mouse click, and another one indicating the context menu request. For the latter,
     * the {@link MouseEvent.PopupTrigger} member of the event will be set to `TRUE` .
     */
-  def mousePressed(e: MouseEvent): Unit = js.native
+  def mousePressed(e: MouseEvent): Unit
   /** is invoked when a mouse button has been released on a window. */
-  def mouseReleased(e: MouseEvent): Unit = js.native
+  def mouseReleased(e: MouseEvent): Unit
 }
 
 object XMouseListener {
@@ -42,37 +41,5 @@ object XMouseListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), mouseEntered = js.Any.fromFunction1(mouseEntered), mouseExited = js.Any.fromFunction1(mouseExited), mousePressed = js.Any.fromFunction1(mousePressed), mouseReleased = js.Any.fromFunction1(mouseReleased), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XMouseListener]
   }
-  @scala.inline
-  implicit class XMouseListenerOps[Self <: XMouseListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMouseEntered(value: MouseEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEntered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMouseExited(value: MouseEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseExited")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMousePressed(value: MouseEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mousePressed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMouseReleased(value: MouseEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseReleased")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

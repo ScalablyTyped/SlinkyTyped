@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Defines a range of text inside a text input control. */
-@js.native
 trait CoreTextRange extends js.Object {
   /** The end position of a range in Application Character Position (ACP) terms. */
-  var endCaretPosition: Double = js.native
+  var endCaretPosition: Double
   /** The start position of a range in Application Character Position (ACP) terms. */
-  var startCaretPosition: Double = js.native
+  var startCaretPosition: Double
 }
 
 object CoreTextRange {
@@ -19,25 +18,5 @@ object CoreTextRange {
     val __obj = js.Dynamic.literal(endCaretPosition = endCaretPosition.asInstanceOf[js.Any], startCaretPosition = startCaretPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoreTextRange]
   }
-  @scala.inline
-  implicit class CoreTextRangeOps[Self <: CoreTextRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndCaretPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCaretPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartCaretPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCaretPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SymbolOptions extends js.Object {
-  var anchor: js.UndefOr[Size] = js.native
-  var fillColor: js.UndefOr[String] = js.native
-  var fillOpacity: js.UndefOr[Double] = js.native
-  var rotation: js.UndefOr[Double] = js.native
-  var scale: js.UndefOr[Double] = js.native
-  var strokeColor: js.UndefOr[String] = js.native
-  var strokeOpacity: js.UndefOr[Double] = js.native
-  var strokeWeight: js.UndefOr[Double] = js.native
+  var anchor: js.UndefOr[Size] = js.undefined
+  var fillColor: js.UndefOr[String] = js.undefined
+  var fillOpacity: js.UndefOr[Double] = js.undefined
+  var rotation: js.UndefOr[Double] = js.undefined
+  var scale: js.UndefOr[Double] = js.undefined
+  var strokeColor: js.UndefOr[String] = js.undefined
+  var strokeOpacity: js.UndefOr[Double] = js.undefined
+  var strokeWeight: js.UndefOr[Double] = js.undefined
 }
 
 object SymbolOptions {
   @scala.inline
-  def apply(): SymbolOptions = {
+  def apply(
+    anchor: Size = null,
+    fillColor: String = null,
+    fillOpacity: js.UndefOr[Double] = js.undefined,
+    rotation: js.UndefOr[Double] = js.undefined,
+    scale: js.UndefOr[Double] = js.undefined,
+    strokeColor: String = null,
+    strokeOpacity: js.UndefOr[Double] = js.undefined,
+    strokeWeight: js.UndefOr[Double] = js.undefined
+  ): SymbolOptions = {
     val __obj = js.Dynamic.literal()
+    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillOpacity)) __obj.updateDynamic("fillOpacity")(fillOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeOpacity)) __obj.updateDynamic("strokeOpacity")(strokeOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeWeight)) __obj.updateDynamic("strokeWeight")(strokeWeight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SymbolOptions]
   }
-  @scala.inline
-  implicit class SymbolOptionsOps[Self <: SymbolOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchor(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

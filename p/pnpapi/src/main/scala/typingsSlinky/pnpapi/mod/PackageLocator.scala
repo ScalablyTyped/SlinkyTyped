@@ -12,8 +12,14 @@ trait PackageLocator extends js.Object
 
 object PackageLocator {
   @scala.inline
-  implicit def apply(value: PhysicalPackageLocator): PackageLocator = value.asInstanceOf[PackageLocator]
+  def PhysicalPackageLocator(name: String, reference: String): PackageLocator = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], reference = reference.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PackageLocator]
+  }
   @scala.inline
-  implicit def apply(value: TopLevelPackageLocator): PackageLocator = value.asInstanceOf[PackageLocator]
+  def TopLevelPackageLocator(name: Null, reference: Null): PackageLocator = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], reference = reference.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PackageLocator]
+  }
 }
 

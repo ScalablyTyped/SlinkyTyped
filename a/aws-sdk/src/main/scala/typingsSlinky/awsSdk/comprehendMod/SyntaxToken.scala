@@ -30,77 +30,20 @@ trait SyntaxToken extends js.Object {
 
 object SyntaxToken {
   @scala.inline
-  def apply(): SyntaxToken = {
+  def apply(
+    BeginOffset: js.UndefOr[Integer] = js.undefined,
+    EndOffset: js.UndefOr[Integer] = js.undefined,
+    PartOfSpeech: PartOfSpeechTag = null,
+    Text: String = null,
+    TokenId: js.UndefOr[Integer] = js.undefined
+  ): SyntaxToken = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(BeginOffset)) __obj.updateDynamic("BeginOffset")(BeginOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(EndOffset)) __obj.updateDynamic("EndOffset")(EndOffset.get.asInstanceOf[js.Any])
+    if (PartOfSpeech != null) __obj.updateDynamic("PartOfSpeech")(PartOfSpeech.asInstanceOf[js.Any])
+    if (Text != null) __obj.updateDynamic("Text")(Text.asInstanceOf[js.Any])
+    if (!js.isUndefined(TokenId)) __obj.updateDynamic("TokenId")(TokenId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyntaxToken]
   }
-  @scala.inline
-  implicit class SyntaxTokenOps[Self <: SyntaxToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBeginOffset(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeginOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndOffset(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartOfSpeech(value: PartOfSpeechTag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartOfSpeech")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartOfSpeech: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartOfSpeech")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenId(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

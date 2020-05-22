@@ -18,19 +18,5 @@ object DeleteDataSourceInput {
     val __obj = js.Dynamic.literal(DataSourceId = DataSourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteDataSourceInput]
   }
-  @scala.inline
-  implicit class DeleteDataSourceInputOps[Self <: DeleteDataSourceInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSourceId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

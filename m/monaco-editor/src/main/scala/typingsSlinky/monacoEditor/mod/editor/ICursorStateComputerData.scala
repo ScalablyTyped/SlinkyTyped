@@ -5,18 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICursorStateComputerData extends js.Object {
   /**
     * Get the inverse edit operations of the added edit operations.
     */
-  def getInverseEditOperations(): js.Array[IIdentifiedSingleEditOperation] = js.native
+  def getInverseEditOperations(): js.Array[IIdentifiedSingleEditOperation]
   /**
     * Get a previously tracked selection.
     * @param id The unique identifier returned by `trackSelection`.
     * @return The selection.
     */
-  def getTrackedSelection(id: String): Selection = js.native
+  def getTrackedSelection(id: String): Selection
 }
 
 object ICursorStateComputerData {
@@ -28,25 +27,5 @@ object ICursorStateComputerData {
     val __obj = js.Dynamic.literal(getInverseEditOperations = js.Any.fromFunction0(getInverseEditOperations), getTrackedSelection = js.Any.fromFunction1(getTrackedSelection))
     __obj.asInstanceOf[ICursorStateComputerData]
   }
-  @scala.inline
-  implicit class ICursorStateComputerDataOps[Self <: ICursorStateComputerData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetInverseEditOperations(value: () => js.Array[IIdentifiedSingleEditOperation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInverseEditOperations")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTrackedSelection(value: String => Selection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTrackedSelection")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

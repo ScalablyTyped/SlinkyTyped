@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServiceOptions[TProcessor, THandler] extends js.Object {
-  var handler: js.UndefOr[THandler] = js.native
-  var processor: js.UndefOr[Instantiable[THandler, TProcessor]] = js.native
-  var protocol: js.UndefOr[TProtocolConstructor] = js.native
-  var transport: js.UndefOr[TTransportConstructor] = js.native
+  var handler: js.UndefOr[THandler] = js.undefined
+  var processor: js.UndefOr[Instantiable[THandler, TProcessor]] = js.undefined
+  var protocol: js.UndefOr[TProtocolConstructor] = js.undefined
+  var transport: js.UndefOr[TTransportConstructor] = js.undefined
 }
 
 object ServiceOptions {
   @scala.inline
-  def apply[TProcessor, THandler](): ServiceOptions[TProcessor, THandler] = {
+  def apply[TProcessor, THandler](
+    handler: THandler = null,
+    processor: Instantiable[THandler, TProcessor] = null,
+    protocol: TProtocolConstructor = null,
+    transport: TTransportConstructor = null
+  ): ServiceOptions[TProcessor, THandler] = {
     val __obj = js.Dynamic.literal()
+    if (handler != null) __obj.updateDynamic("handler")(handler.asInstanceOf[js.Any])
+    if (processor != null) __obj.updateDynamic("processor")(processor.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (transport != null) __obj.updateDynamic("transport")(transport.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceOptions[TProcessor, THandler]]
   }
-  @scala.inline
-  implicit class ServiceOptionsOps[Self[tprocessor, thandler] <: ServiceOptions[tprocessor, thandler], TProcessor, THandler] (val x: Self[TProcessor, THandler]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TProcessor, THandler] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TProcessor, THandler]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[TProcessor, THandler]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TProcessor, THandler]) with Other]
-    @scala.inline
-    def withHandler(value: THandler): Self[TProcessor, THandler] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandler: Self[TProcessor, THandler] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessor(value: Instantiable[THandler, TProcessor]): Self[TProcessor, THandler] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessor: Self[TProcessor, THandler] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: TProtocolConstructor): Self[TProcessor, THandler] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self[TProcessor, THandler] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransport(value: TTransportConstructor): Self[TProcessor, THandler] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransport: Self[TProcessor, THandler] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

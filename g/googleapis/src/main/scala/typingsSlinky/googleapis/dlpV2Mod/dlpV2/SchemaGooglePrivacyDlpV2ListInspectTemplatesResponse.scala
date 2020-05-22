@@ -22,41 +22,14 @@ trait SchemaGooglePrivacyDlpV2ListInspectTemplatesResponse extends js.Object {
 
 object SchemaGooglePrivacyDlpV2ListInspectTemplatesResponse {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2ListInspectTemplatesResponse = {
+  def apply(
+    inspectTemplates: js.Array[SchemaGooglePrivacyDlpV2InspectTemplate] = null,
+    nextPageToken: String = null
+  ): SchemaGooglePrivacyDlpV2ListInspectTemplatesResponse = {
     val __obj = js.Dynamic.literal()
+    if (inspectTemplates != null) __obj.updateDynamic("inspectTemplates")(inspectTemplates.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2ListInspectTemplatesResponse]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2ListInspectTemplatesResponseOps[Self <: SchemaGooglePrivacyDlpV2ListInspectTemplatesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInspectTemplates(value: js.Array[SchemaGooglePrivacyDlpV2InspectTemplate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectTemplates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInspectTemplates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectTemplates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -35,13 +35,12 @@ import scala.scalajs.js.annotation._
   * sd.signerInfoList[0].sign(prvP8PEM, "SHA256withRSA");
   * hex = sd.getContentInfoEncodedHex();
   */
-@js.native
 trait SignedData extends ASN1Object {
-  var signerInfoList: js.Array[SignerInfo] = js.native
-  def addCertificatesByPEM(certPEM: String): Unit = js.native
-  def getContentInfo(): ContentInfo = js.native
-  def getContentInfoEncodedHex(): String = js.native
-  def getPEM(): String = js.native
+  var signerInfoList: js.Array[SignerInfo]
+  def addCertificatesByPEM(certPEM: String): Unit
+  def getContentInfo(): ContentInfo
+  def getContentInfoEncodedHex(): String
+  def getPEM(): String
 }
 
 object SignedData {
@@ -65,43 +64,5 @@ object SignedData {
     val __obj = js.Dynamic.literal(addCertificatesByPEM = js.Any.fromFunction1(addCertificatesByPEM), getContentInfo = js.Any.fromFunction0(getContentInfo), getContentInfoEncodedHex = js.Any.fromFunction0(getContentInfoEncodedHex), getEncodedHex = js.Any.fromFunction0(getEncodedHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getPEM = js.Any.fromFunction0(getPEM), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], signerInfoList = signerInfoList.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignedData]
   }
-  @scala.inline
-  implicit class SignedDataOps[Self <: SignedData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddCertificatesByPEM(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addCertificatesByPEM")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetContentInfo(value: () => ContentInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetContentInfoEncodedHex(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentInfoEncodedHex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPEM(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPEM")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSignerInfoList(value: js.Array[SignerInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signerInfoList")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

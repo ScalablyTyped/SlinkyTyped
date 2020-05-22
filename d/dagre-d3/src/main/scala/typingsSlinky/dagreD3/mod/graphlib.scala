@@ -39,8 +39,8 @@ object graphlib extends js.Object {
     def postorder(graph: typingsSlinky.dagre.mod.graphlib.Graph[js.Object], nodeNames: js.Array[String]): js.Array[String] = js.native
     def preorder(graph: typingsSlinky.dagre.mod.graphlib.Graph[js.Object], nodeNames: String): js.Array[String] = js.native
     def preorder(graph: typingsSlinky.dagre.mod.graphlib.Graph[js.Object], nodeNames: js.Array[String]): js.Array[String] = js.native
-    def prim(graph: typingsSlinky.dagre.mod.graphlib.Graph[js.Object]): typingsSlinky.dagre.mod.graphlib.Graph[js.Object] = js.native
-    def prim(graph: typingsSlinky.dagre.mod.graphlib.Graph[js.Object], weightFn: WeightFn): typingsSlinky.dagre.mod.graphlib.Graph[js.Object] = js.native
+    def prim[T](graph: typingsSlinky.dagre.mod.graphlib.Graph[T]): typingsSlinky.dagre.mod.graphlib.Graph[T] = js.native
+    def prim[T](graph: typingsSlinky.dagre.mod.graphlib.Graph[T], weightFn: WeightFn): typingsSlinky.dagre.mod.graphlib.Graph[T] = js.native
     def tarjam(graph: typingsSlinky.dagre.mod.graphlib.Graph[js.Object]): js.Array[js.Array[String]] = js.native
     def topsort(graph: typingsSlinky.dagre.mod.graphlib.Graph[js.Object]): js.Array[String] = js.native
   }

@@ -22,41 +22,11 @@ trait SchemaGoogleCloudVisionV1p2beta1InputConfig extends js.Object {
 
 object SchemaGoogleCloudVisionV1p2beta1InputConfig {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p2beta1InputConfig = {
+  def apply(gcsSource: SchemaGoogleCloudVisionV1p2beta1GcsSource = null, mimeType: String = null): SchemaGoogleCloudVisionV1p2beta1InputConfig = {
     val __obj = js.Dynamic.literal()
+    if (gcsSource != null) __obj.updateDynamic("gcsSource")(gcsSource.asInstanceOf[js.Any])
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p2beta1InputConfig]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p2beta1InputConfigOps[Self <: SchemaGoogleCloudVisionV1p2beta1InputConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGcsSource(value: SchemaGoogleCloudVisionV1p2beta1GcsSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcsSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

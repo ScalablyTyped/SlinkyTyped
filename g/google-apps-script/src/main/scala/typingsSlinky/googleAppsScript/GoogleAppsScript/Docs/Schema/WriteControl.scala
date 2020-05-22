@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WriteControl extends js.Object {
-  var requiredRevisionId: js.UndefOr[String] = js.native
-  var targetRevisionId: js.UndefOr[String] = js.native
+  var requiredRevisionId: js.UndefOr[String] = js.undefined
+  var targetRevisionId: js.UndefOr[String] = js.undefined
 }
 
 object WriteControl {
   @scala.inline
-  def apply(): WriteControl = {
+  def apply(requiredRevisionId: String = null, targetRevisionId: String = null): WriteControl = {
     val __obj = js.Dynamic.literal()
+    if (requiredRevisionId != null) __obj.updateDynamic("requiredRevisionId")(requiredRevisionId.asInstanceOf[js.Any])
+    if (targetRevisionId != null) __obj.updateDynamic("targetRevisionId")(targetRevisionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteControl]
   }
-  @scala.inline
-  implicit class WriteControlOps[Self <: WriteControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequiredRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredRevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredRevisionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRevisionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

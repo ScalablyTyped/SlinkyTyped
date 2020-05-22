@@ -14,29 +14,10 @@ trait StartDataSourceSyncJobResponse extends js.Object {
 
 object StartDataSourceSyncJobResponse {
   @scala.inline
-  def apply(): StartDataSourceSyncJobResponse = {
+  def apply(ExecutionId: String = null): StartDataSourceSyncJobResponse = {
     val __obj = js.Dynamic.literal()
+    if (ExecutionId != null) __obj.updateDynamic("ExecutionId")(ExecutionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartDataSourceSyncJobResponse]
   }
-  @scala.inline
-  implicit class StartDataSourceSyncJobResponseOps[Self <: StartDataSourceSyncJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

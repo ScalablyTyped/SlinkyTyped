@@ -30,65 +30,18 @@ trait SchemaHealthStatusForNetworkEndpoint extends js.Object {
 
 object SchemaHealthStatusForNetworkEndpoint {
   @scala.inline
-  def apply(): SchemaHealthStatusForNetworkEndpoint = {
+  def apply(
+    backendService: SchemaBackendServiceReference = null,
+    forwardingRule: SchemaForwardingRuleReference = null,
+    healthCheck: SchemaHealthCheckReference = null,
+    healthState: String = null
+  ): SchemaHealthStatusForNetworkEndpoint = {
     val __obj = js.Dynamic.literal()
+    if (backendService != null) __obj.updateDynamic("backendService")(backendService.asInstanceOf[js.Any])
+    if (forwardingRule != null) __obj.updateDynamic("forwardingRule")(forwardingRule.asInstanceOf[js.Any])
+    if (healthCheck != null) __obj.updateDynamic("healthCheck")(healthCheck.asInstanceOf[js.Any])
+    if (healthState != null) __obj.updateDynamic("healthState")(healthState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHealthStatusForNetworkEndpoint]
   }
-  @scala.inline
-  implicit class SchemaHealthStatusForNetworkEndpointOps[Self <: SchemaHealthStatusForNetworkEndpoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackendService(value: SchemaBackendServiceReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backendService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackendService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backendService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForwardingRule(value: SchemaForwardingRuleReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardingRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForwardingRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardingRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheck(value: SchemaHealthCheckReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

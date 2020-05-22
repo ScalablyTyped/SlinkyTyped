@@ -44,89 +44,22 @@ trait SchemaUserIm extends js.Object {
 
 object SchemaUserIm {
   @scala.inline
-  def apply(): SchemaUserIm = {
+  def apply(
+    customProtocol: String = null,
+    customType: String = null,
+    im: String = null,
+    primary: js.UndefOr[Boolean] = js.undefined,
+    protocol: String = null,
+    `type`: String = null
+  ): SchemaUserIm = {
     val __obj = js.Dynamic.literal()
+    if (customProtocol != null) __obj.updateDynamic("customProtocol")(customProtocol.asInstanceOf[js.Any])
+    if (customType != null) __obj.updateDynamic("customType")(customType.asInstanceOf[js.Any])
+    if (im != null) __obj.updateDynamic("im")(im.asInstanceOf[js.Any])
+    if (!js.isUndefined(primary)) __obj.updateDynamic("primary")(primary.get.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUserIm]
   }
-  @scala.inline
-  implicit class SchemaUserImOps[Self <: SchemaUserIm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("im")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("im")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

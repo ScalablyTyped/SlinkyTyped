@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadLinkResult extends js.Object {
   /** The keypath of the source in the host instance. */
-  var keypath: String = js.native
+  var keypath: String
   /** The Ractive instance that hosts the source keypath. */
-  var ractive: Ractive[Ractive[_]] = js.native
+  var ractive: Ractive[Ractive[_]]
 }
 
 object ReadLinkResult {
@@ -18,25 +17,5 @@ object ReadLinkResult {
     val __obj = js.Dynamic.literal(keypath = keypath.asInstanceOf[js.Any], ractive = ractive.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadLinkResult]
   }
-  @scala.inline
-  implicit class ReadLinkResultOps[Self <: ReadLinkResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeypath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keypath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRactive(value: Ractive[Ractive[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ractive")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

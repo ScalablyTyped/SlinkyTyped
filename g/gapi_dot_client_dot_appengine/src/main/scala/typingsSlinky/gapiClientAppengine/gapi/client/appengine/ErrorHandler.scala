@@ -4,65 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ErrorHandler extends js.Object {
   /** Error condition this handler applies to. */
-  var errorCode: js.UndefOr[String] = js.native
+  var errorCode: js.UndefOr[String] = js.undefined
   /** MIME type of file. Defaults to text/html. */
-  var mimeType: js.UndefOr[String] = js.native
+  var mimeType: js.UndefOr[String] = js.undefined
   /** Static file content to be served for this error. */
-  var staticFile: js.UndefOr[String] = js.native
+  var staticFile: js.UndefOr[String] = js.undefined
 }
 
 object ErrorHandler {
   @scala.inline
-  def apply(): ErrorHandler = {
+  def apply(errorCode: String = null, mimeType: String = null, staticFile: String = null): ErrorHandler = {
     val __obj = js.Dynamic.literal()
+    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
+    if (staticFile != null) __obj.updateDynamic("staticFile")(staticFile.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorHandler]
   }
-  @scala.inline
-  implicit class ErrorHandlerOps[Self <: ErrorHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticFile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,7 +17,6 @@ import scala.scalajs.js.annotation._
   * represented by that interface.
   * @since OOo 1.1.2
   */
-@js.native
 trait XAccessibleEditableText extends XAccessibleText {
   /**
     * Copies the text range into the clipboard.
@@ -32,7 +31,7 @@ trait XAccessibleEditableText extends XAccessibleText {
     * @returns Returns a flag that indicates whether the operation has been executed successfully.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the indices are invalid
     */
-  def cutText(nStartIndex: Double, nEndIndex: Double): Boolean = js.native
+  def cutText(nStartIndex: Double, nEndIndex: Double): Boolean
   /**
     * Deletes a range of text.
     *
@@ -44,7 +43,7 @@ trait XAccessibleEditableText extends XAccessibleText {
     * @returns Returns a flag that indicates whether the operation has been executed successfully.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the indices are invalid
     */
-  def deleteText(nStartIndex: Double, nEndIndex: Double): Boolean = js.native
+  def deleteText(nStartIndex: Double, nEndIndex: Double): Boolean
   /**
     * Inserts text at the specified position.
     *
@@ -54,7 +53,7 @@ trait XAccessibleEditableText extends XAccessibleText {
     * @returns Returns a flag that indicates whether the operation has been executed successfully.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the indices are invalid
     */
-  def insertText(sText: String, nIndex: Double): Boolean = js.native
+  def insertText(sText: String, nIndex: Double): Boolean
   /**
     * Pastes text from the clipboard.
     *
@@ -64,7 +63,7 @@ trait XAccessibleEditableText extends XAccessibleText {
     * @returns Returns a flag that indicates whether the operation has been executed successfully.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is invalid
     */
-  def pasteText(nIndex: Double): Boolean = js.native
+  def pasteText(nIndex: Double): Boolean
   /**
     * Replaces text.
     *
@@ -79,7 +78,7 @@ trait XAccessibleEditableText extends XAccessibleText {
     * @returns Returns a flag that indicates whether the operation has been executed successfully.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the indices are invalid
     */
-  def replaceText(nStartIndex: Double, nEndIndex: Double, sReplacement: String): Boolean = js.native
+  def replaceText(nStartIndex: Double, nEndIndex: Double, sReplacement: String): Boolean
   /**
     * Replaces the attributes of a text range by the given set of attributes.
     *
@@ -93,7 +92,7 @@ trait XAccessibleEditableText extends XAccessibleText {
     * @returns Returns a flag that indicates whether the operation has been executed successfully.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the indices are invalid
     */
-  def setAttributes(nStartIndex: Double, nEndIndex: Double, aAttributeSet: SeqEquiv[PropertyValue]): Boolean = js.native
+  def setAttributes(nStartIndex: Double, nEndIndex: Double, aAttributeSet: SeqEquiv[PropertyValue]): Boolean
   /**
     * Replaces the whole text with the given text.
     *
@@ -101,7 +100,7 @@ trait XAccessibleEditableText extends XAccessibleText {
     * @param sText The new text that replaces the old text.
     * @returns Returns a flag that indicates whether the operation has been executed successfully.
     */
-  def setText(sText: String): Boolean = js.native
+  def setText(sText: String): Boolean
 }
 
 object XAccessibleEditableText {
@@ -144,55 +143,5 @@ object XAccessibleEditableText {
     val __obj = js.Dynamic.literal(CaretPosition = CaretPosition.asInstanceOf[js.Any], CharacterCount = CharacterCount.asInstanceOf[js.Any], SelectedText = SelectedText.asInstanceOf[js.Any], SelectionEnd = SelectionEnd.asInstanceOf[js.Any], SelectionStart = SelectionStart.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), copyText = js.Any.fromFunction2(copyText), cutText = js.Any.fromFunction2(cutText), deleteText = js.Any.fromFunction2(deleteText), getCaretPosition = js.Any.fromFunction0(getCaretPosition), getCharacter = js.Any.fromFunction1(getCharacter), getCharacterAttributes = js.Any.fromFunction2(getCharacterAttributes), getCharacterBounds = js.Any.fromFunction1(getCharacterBounds), getCharacterCount = js.Any.fromFunction0(getCharacterCount), getIndexAtPoint = js.Any.fromFunction1(getIndexAtPoint), getSelectedText = js.Any.fromFunction0(getSelectedText), getSelectionEnd = js.Any.fromFunction0(getSelectionEnd), getSelectionStart = js.Any.fromFunction0(getSelectionStart), getText = js.Any.fromFunction0(getText), getTextAtIndex = js.Any.fromFunction2(getTextAtIndex), getTextBeforeIndex = js.Any.fromFunction2(getTextBeforeIndex), getTextBehindIndex = js.Any.fromFunction2(getTextBehindIndex), getTextRange = js.Any.fromFunction2(getTextRange), insertText = js.Any.fromFunction2(insertText), pasteText = js.Any.fromFunction1(pasteText), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), replaceText = js.Any.fromFunction3(replaceText), setAttributes = js.Any.fromFunction3(setAttributes), setCaretPosition = js.Any.fromFunction1(setCaretPosition), setSelection = js.Any.fromFunction2(setSelection), setText = js.Any.fromFunction1(setText))
     __obj.asInstanceOf[XAccessibleEditableText]
   }
-  @scala.inline
-  implicit class XAccessibleEditableTextOps[Self <: XAccessibleEditableText] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCutText(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cutText")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteText(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteText")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInsertText(value: (String, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertText")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPasteText(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReplaceText(value: (Double, Double, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceText")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetAttributes(value: (Double, Double, SeqEquiv[PropertyValue]) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributes")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetText(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setText")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.tstl.arrayContainerMod.ArrayContainer
 import typingsSlinky.tstl.arrayIteratorMod.ArrayIterator
 import typingsSlinky.tstl.arrayReverseIteratorMod.ArrayReverseIterator
-import typingsSlinky.tstl.backInsertIteratorMod.BackInsertIterator.SourceType
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.ifrontMod.IFront
 import typingsSlinky.tstl.vectorContainerMod.VectorContainer
@@ -34,7 +33,6 @@ object vectorMod extends js.Object {
     */
   class Vector[T] ()
     extends VectorContainer[T, Vector[T], Vector[T], Iterator[T], ReverseIterator[T]]
-       with SourceType[js.Any]
        with IFront[T] {
     /**
       * Initializer Constructor.
@@ -74,24 +72,10 @@ object vectorMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, Vector[T], Iterator[T], ReverseIterator[T], T] = js.native
-    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, Vector[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
       * Erase elements in range.
       *
@@ -119,27 +103,6 @@ object vectorMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def front(`val`: T): Unit = js.native
-    /**
-      * Insert an element at the end.
-      *
-      * @param val Value to insert.
-      */
-    /* InferMemberOverrides */
-    override def push_back(`val`: T): Unit = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[T] = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[T] = js.native
     /**
       * Swap elements.
       *

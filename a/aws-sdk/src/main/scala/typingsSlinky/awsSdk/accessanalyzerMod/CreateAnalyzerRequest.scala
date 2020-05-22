@@ -30,66 +30,19 @@ trait CreateAnalyzerRequest extends js.Object {
 
 object CreateAnalyzerRequest {
   @scala.inline
-  def apply(analyzerName: Name, `type`: Type): CreateAnalyzerRequest = {
+  def apply(
+    analyzerName: Name,
+    `type`: Type,
+    archiveRules: InlineArchiveRulesList = null,
+    clientToken: String = null,
+    tags: TagsMap = null
+  ): CreateAnalyzerRequest = {
     val __obj = js.Dynamic.literal(analyzerName = analyzerName.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (archiveRules != null) __obj.updateDynamic("archiveRules")(archiveRules.asInstanceOf[js.Any])
+    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAnalyzerRequest]
   }
-  @scala.inline
-  implicit class CreateAnalyzerRequestOps[Self <: CreateAnalyzerRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalyzerName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArchiveRules(value: InlineArchiveRulesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchiveRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

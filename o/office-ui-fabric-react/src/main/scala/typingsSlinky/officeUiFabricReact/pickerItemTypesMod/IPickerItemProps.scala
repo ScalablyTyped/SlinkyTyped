@@ -1,134 +1,55 @@
 package typingsSlinky.officeUiFabricReact.pickerItemTypesMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPickerItemProps[T] extends AllHTMLAttributes[HTMLElement] {
   /**
     * Optional callback to access the IPickerItem interface. Use this instead of ref for accessing
     * the public methods and properties of the component.
     */
-  var componentRef: js.UndefOr[IRefObject[IPickerItem]] = js.native
+  var componentRef: js.UndefOr[IRefObject[IPickerItem]] = js.undefined
   /** Index number of the item in the array of picked items. */
-  var index: Double = js.native
+  var index: Double
   /** The item of Type T (Persona, Tag, or any other custom item provided). */
-  var item: T = js.native
+  var item: T
   /** Unique key for each picked item. */
-  var key: js.UndefOr[String | Double] = js.native
+  var key: js.UndefOr[String | Double] = js.undefined
   /**
     * Internal Use only, gives a callback to the renderer to call when an item has changed.
     * This allows the base picker to keep track of changes in the items.
     */
-  var onItemChange: js.UndefOr[js.Function2[/* item */ T, /* index */ Double, Unit]] = js.native
+  var onItemChange: js.UndefOr[js.Function2[/* item */ T, /* index */ Double, Unit]] = js.undefined
   /** Callback issued when the item is removed from the array of picked items. */
-  var onRemoveItem: js.UndefOr[js.Function0[Unit]] = js.native
+  var onRemoveItem: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** Aria-label for the picked item remove button. */
-  var removeButtonAriaLabel: js.UndefOr[String] = js.native
+  var removeButtonAriaLabel: js.UndefOr[String] = js.undefined
 }
 
 object IPickerItemProps {
   @scala.inline
-  def apply[T](index: Double, item: T): IPickerItemProps[T] = {
+  def apply[T](
+    index: Double,
+    item: T,
+    AllHTMLAttributes: AllHTMLAttributes[HTMLElement] = null,
+    componentRef: IRefObject[IPickerItem] = null,
+    key: String | Double = null,
+    onItemChange: (/* item */ T, /* index */ Double) => Unit = null,
+    onRemoveItem: () => Unit = null,
+    removeButtonAriaLabel: String = null
+  ): IPickerItemProps[T] = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any])
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (onItemChange != null) __obj.updateDynamic("onItemChange")(js.Any.fromFunction2(onItemChange))
+    if (onRemoveItem != null) __obj.updateDynamic("onRemoveItem")(js.Any.fromFunction0(onRemoveItem))
+    if (removeButtonAriaLabel != null) __obj.updateDynamic("removeButtonAriaLabel")(removeButtonAriaLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPickerItemProps[T]]
   }
-  @scala.inline
-  implicit class IPickerItemPropsOps[Self[t] <: IPickerItemProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withIndex(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentRefFunction1(value: /* ref */ IPickerItem | Null => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withComponentRefRefObject(value: ReactRef[IPickerItem]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentRef(value: IRefObject[IPickerItem]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentRef: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String | Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemChange(value: (/* item */ T, /* index */ Double) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemChange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRemoveItem(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemoveItem")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRemoveItem: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemoveItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveButtonAriaLabel(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeButtonAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveButtonAriaLabel: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeButtonAriaLabel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGridOptions[TEntity] extends js.Object {
   /**
     * Whether or not importer is enabled.  Automatically set
@@ -13,7 +12,7 @@ trait IGridOptions[TEntity] extends js.Object {
     * Otherwise defaults to true.
     * @default true
     */
-  var enableImporter: js.UndefOr[Boolean] = js.native
+  var enableImporter: js.UndefOr[Boolean] = js.undefined
   /**
     * A mandatory callback function that adds data to the source data array.
     * The grid generally doesn't add rows to the source data array,
@@ -23,7 +22,7 @@ trait IGridOptions[TEntity] extends js.Object {
     */
   var importerDataAddCallback: js.UndefOr[
     js.Function2[/* grid */ IGridInstanceOf[TEntity], /* newObjects */ js.Array[TEntity], Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * A callback function that provides custom error handling,
     * rather than the standard grid behaviour of an alert box and a console message.
@@ -48,7 +47,7 @@ trait IGridOptions[TEntity] extends js.Object {
       /* context */ js.Any, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * A callback function that will filter (usually translate) a single header.
     * Used when you want to match the passed in column names to the column displayName after the header filter.
@@ -56,7 +55,7 @@ trait IGridOptions[TEntity] extends js.Object {
     * @param {string} displayName The displayName to translate
     * @returns {string} The translated name
     */
-  var importerHeaderFilter: js.UndefOr[js.Function1[/* displayName */ String, String]] = js.native
+  var importerHeaderFilter: js.UndefOr[js.Function1[/* displayName */ String, String]] = js.undefined
   /**
     * An object on which we call `new` to create each new row before inserting it into
     * the data array.  Typically this would be a $resource entity, which means that if you're using
@@ -65,7 +64,7 @@ trait IGridOptions[TEntity] extends js.Object {
     * Defaults to a vanilla javascript object
     * @default {}
     */
-  var importerNewObject: js.UndefOr[js.Function] = js.native
+  var importerNewObject: js.UndefOr[js.Function] = js.undefined
   /**
     * A callback that massages the data for each object.
     * For example, you might have data stored as a code value, but display the decode.
@@ -79,7 +78,7 @@ trait IGridOptions[TEntity] extends js.Object {
     */
   var importerObjectCallback: js.UndefOr[
     js.Function2[/* grid */ IGridInstanceOf[TEntity], /* newObject */ TEntity, TEntity]
-  ] = js.native
+  ] = js.undefined
   /**
     * A callback function that will process headers using custom
     * logic.  Set this callback function if the headers that your user will provide in their
@@ -104,128 +103,37 @@ trait IGridOptions[TEntity] extends js.Object {
       /* headerArray */ js.Array[String], 
       js.Array[String]
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Whether or not to show an item in the grid menu.
     * Defaults to true.
     * @default true
     */
-  var importerShowMenu: js.UndefOr[Boolean] = js.native
+  var importerShowMenu: js.UndefOr[Boolean] = js.undefined
 }
 
 object IGridOptions {
   @scala.inline
-  def apply[TEntity](): IGridOptions[TEntity] = {
+  def apply[TEntity](
+    enableImporter: js.UndefOr[Boolean] = js.undefined,
+    importerDataAddCallback: (/* grid */ IGridInstanceOf[TEntity], /* newObjects */ js.Array[TEntity]) => Unit = null,
+    importerErrorCallback: (/* grid */ IGridInstanceOf[TEntity], /* errorKey */ String, /* consoleMessage */ String, /* context */ js.Any) => Unit = null,
+    importerHeaderFilter: /* displayName */ String => String = null,
+    importerNewObject: js.Function = null,
+    importerObjectCallback: (/* grid */ IGridInstanceOf[TEntity], /* newObject */ TEntity) => TEntity = null,
+    importerProcessHeaders: (/* grid */ IGridInstanceOf[TEntity], /* headerArray */ js.Array[String]) => js.Array[String] = null,
+    importerShowMenu: js.UndefOr[Boolean] = js.undefined
+  ): IGridOptions[TEntity] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableImporter)) __obj.updateDynamic("enableImporter")(enableImporter.get.asInstanceOf[js.Any])
+    if (importerDataAddCallback != null) __obj.updateDynamic("importerDataAddCallback")(js.Any.fromFunction2(importerDataAddCallback))
+    if (importerErrorCallback != null) __obj.updateDynamic("importerErrorCallback")(js.Any.fromFunction4(importerErrorCallback))
+    if (importerHeaderFilter != null) __obj.updateDynamic("importerHeaderFilter")(js.Any.fromFunction1(importerHeaderFilter))
+    if (importerNewObject != null) __obj.updateDynamic("importerNewObject")(importerNewObject.asInstanceOf[js.Any])
+    if (importerObjectCallback != null) __obj.updateDynamic("importerObjectCallback")(js.Any.fromFunction2(importerObjectCallback))
+    if (importerProcessHeaders != null) __obj.updateDynamic("importerProcessHeaders")(js.Any.fromFunction2(importerProcessHeaders))
+    if (!js.isUndefined(importerShowMenu)) __obj.updateDynamic("importerShowMenu")(importerShowMenu.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGridOptions[TEntity]]
   }
-  @scala.inline
-  implicit class IGridOptionsOps[Self[tentity] <: IGridOptions[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
-    @scala.inline
-    def withEnableImporter(value: Boolean): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableImporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableImporter: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableImporter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImporterDataAddCallback(value: (/* grid */ IGridInstanceOf[TEntity], /* newObjects */ js.Array[TEntity]) => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerDataAddCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutImporterDataAddCallback: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerDataAddCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImporterErrorCallback(
-      value: (/* grid */ IGridInstanceOf[TEntity], /* errorKey */ String, /* consoleMessage */ String, /* context */ js.Any) => Unit
-    ): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerErrorCallback")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutImporterErrorCallback: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerErrorCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImporterHeaderFilter(value: /* displayName */ String => String): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerHeaderFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutImporterHeaderFilter: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerHeaderFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImporterNewObject(value: js.Function): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerNewObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImporterNewObject: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerNewObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImporterObjectCallback(value: (/* grid */ IGridInstanceOf[TEntity], /* newObject */ TEntity) => TEntity): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerObjectCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutImporterObjectCallback: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerObjectCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImporterProcessHeaders(
-      value: (/* grid */ IGridInstanceOf[TEntity], /* headerArray */ js.Array[String]) => js.Array[String]
-    ): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerProcessHeaders")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutImporterProcessHeaders: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerProcessHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImporterShowMenu(value: Boolean): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerShowMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImporterShowMenu: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importerShowMenu")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

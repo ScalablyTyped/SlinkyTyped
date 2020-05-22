@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SymbolKeepAspect extends js.Object {
   /**
     * Label of this data item, which will be merged with
@@ -13,7 +12,7 @@ trait SymbolKeepAspect extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.label
     */
-  var label: js.UndefOr[Position] = js.native
+  var label: js.UndefOr[Position] = js.undefined
   /**
     * Line style of this data item, which will be merged
     * with `lineStyle` of starting point and ending point.
@@ -21,14 +20,14 @@ trait SymbolKeepAspect extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.lineStyle
     */
-  var lineStyle: js.UndefOr[ShadowOffsetX] = js.native
+  var lineStyle: js.UndefOr[ShadowOffsetX] = js.undefined
   /**
     * Name of the marker, which will display as a label.
     *
     *
     * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#series-pie.markLine.data.1.name
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Symbol of ending point.
     *
@@ -70,7 +69,7 @@ trait SymbolKeepAspect extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.symbol
     */
-  var symbol: js.UndefOr[String] = js.native
+  var symbol: js.UndefOr[String] = js.undefined
   /**
     * Whether to keep aspect for symbols in the form of
     * `path://`.
@@ -78,7 +77,7 @@ trait SymbolKeepAspect extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.symbolKeepAspect
     */
-  var symbolKeepAspect: js.UndefOr[Boolean] = js.native
+  var symbolKeepAspect: js.UndefOr[Boolean] = js.undefined
   /**
     * Offset of ending point symbol relative to original
     * position.
@@ -101,7 +100,7 @@ trait SymbolKeepAspect extends js.Object {
     * [0, 0]
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.symbolOffset
     */
-  var symbolOffset: js.UndefOr[js.Array[_]] = js.native
+  var symbolOffset: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * Rotate degree of ending point symbol.
     * Note that when `symbol` is set to be `'arrow'` in
@@ -111,7 +110,7 @@ trait SymbolKeepAspect extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.symbolRotate
     */
-  var symbolRotate: js.UndefOr[Double] = js.native
+  var symbolRotate: js.UndefOr[Double] = js.undefined
   /**
     * ending point symbol size.
     * It can be set to single numbers like `10`, or use
@@ -122,175 +121,58 @@ trait SymbolKeepAspect extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.symbolSize
     */
-  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.native
+  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.undefined
   /**
     * Label value, which can be ignored.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.value
     */
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.undefined
   /**
     * X position according to container, in pixel.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.x
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * Y position according to container, in pixel.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine.data.1.y
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object SymbolKeepAspect {
   @scala.inline
-  def apply(): SymbolKeepAspect = {
+  def apply(
+    label: Position = null,
+    lineStyle: ShadowOffsetX = null,
+    name: String = null,
+    symbol: String = null,
+    symbolKeepAspect: js.UndefOr[Boolean] = js.undefined,
+    symbolOffset: js.Array[_] = null,
+    symbolRotate: js.UndefOr[Double] = js.undefined,
+    symbolSize: js.Array[_] | Double = null,
+    value: js.UndefOr[Double] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): SymbolKeepAspect = {
     val __obj = js.Dynamic.literal()
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (!js.isUndefined(symbolKeepAspect)) __obj.updateDynamic("symbolKeepAspect")(symbolKeepAspect.get.asInstanceOf[js.Any])
+    if (symbolOffset != null) __obj.updateDynamic("symbolOffset")(symbolOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(symbolRotate)) __obj.updateDynamic("symbolRotate")(symbolRotate.get.asInstanceOf[js.Any])
+    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SymbolKeepAspect]
   }
-  @scala.inline
-  implicit class SymbolKeepAspectOps[Self <: SymbolKeepAspect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabel(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: ShadowOffsetX): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolKeepAspect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolKeepAspect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolOffset(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolRotate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolSize(value: js.Array[_] | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

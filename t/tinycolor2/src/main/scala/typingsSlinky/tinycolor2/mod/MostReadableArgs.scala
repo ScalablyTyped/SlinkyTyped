@@ -1,39 +1,29 @@
 package typingsSlinky.tinycolor2.mod
 
+import typingsSlinky.tinycolor2.tinycolor2Strings.AA
+import typingsSlinky.tinycolor2.tinycolor2Strings.AAA
+import typingsSlinky.tinycolor2.tinycolor2Strings.large
+import typingsSlinky.tinycolor2.tinycolor2Strings.small
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MostReadableArgs extends WCAG2Options {
-  var includeFallbackColors: js.UndefOr[Boolean] = js.native
+  var includeFallbackColors: js.UndefOr[Boolean] = js.undefined
 }
 
 object MostReadableArgs {
   @scala.inline
-  def apply(): MostReadableArgs = {
+  def apply(
+    includeFallbackColors: js.UndefOr[Boolean] = js.undefined,
+    level: AA | AAA = null,
+    size: large | small = null
+  ): MostReadableArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeFallbackColors)) __obj.updateDynamic("includeFallbackColors")(includeFallbackColors.get.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[MostReadableArgs]
   }
-  @scala.inline
-  implicit class MostReadableArgsOps[Self <: MostReadableArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeFallbackColors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeFallbackColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeFallbackColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeFallbackColors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

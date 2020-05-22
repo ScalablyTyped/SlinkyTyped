@@ -22,53 +22,16 @@ trait ListDeploymentGroupsOutput extends js.Object {
 
 object ListDeploymentGroupsOutput {
   @scala.inline
-  def apply(): ListDeploymentGroupsOutput = {
+  def apply(
+    applicationName: ApplicationName = null,
+    deploymentGroups: DeploymentGroupsList = null,
+    nextToken: NextToken = null
+  ): ListDeploymentGroupsOutput = {
     val __obj = js.Dynamic.literal()
+    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
+    if (deploymentGroups != null) __obj.updateDynamic("deploymentGroups")(deploymentGroups.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDeploymentGroupsOutput]
   }
-  @scala.inline
-  implicit class ListDeploymentGroupsOutputOps[Self <: ListDeploymentGroupsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentGroups(value: DeploymentGroupsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

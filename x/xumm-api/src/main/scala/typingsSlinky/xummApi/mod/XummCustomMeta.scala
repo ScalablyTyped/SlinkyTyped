@@ -5,80 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XummCustomMeta extends js.Object {
-  var blob: js.UndefOr[StringDictionary[js.Any] | Null] = js.native
-  var identifier: js.UndefOr[String | Null] = js.native
-  var instruction: js.UndefOr[String | Null] = js.native
+  var blob: js.UndefOr[StringDictionary[js.Any] | Null] = js.undefined
+  var identifier: js.UndefOr[String | Null] = js.undefined
+  var instruction: js.UndefOr[String | Null] = js.undefined
 }
 
 object XummCustomMeta {
   @scala.inline
-  def apply(): XummCustomMeta = {
+  def apply(
+    blob: js.UndefOr[Null | StringDictionary[js.Any]] = js.undefined,
+    identifier: js.UndefOr[Null | String] = js.undefined,
+    instruction: js.UndefOr[Null | String] = js.undefined
+  ): XummCustomMeta = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blob)) __obj.updateDynamic("blob")(blob.asInstanceOf[js.Any])
+    if (!js.isUndefined(identifier)) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (!js.isUndefined(instruction)) __obj.updateDynamic("instruction")(instruction.asInstanceOf[js.Any])
     __obj.asInstanceOf[XummCustomMeta]
   }
-  @scala.inline
-  implicit class XummCustomMetaOps[Self <: XummCustomMeta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlob(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlobNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blob")(null)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifierNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(null)
-        ret
-    }
-    @scala.inline
-    def withInstruction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstruction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstructionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruction")(null)
-        ret
-    }
-  }
-  
 }
 

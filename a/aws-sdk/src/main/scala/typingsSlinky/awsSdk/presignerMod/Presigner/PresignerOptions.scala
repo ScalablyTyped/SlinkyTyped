@@ -20,41 +20,11 @@ trait PresignerOptions extends js.Object {
 
 object PresignerOptions {
   @scala.inline
-  def apply(): PresignerOptions = {
+  def apply(params: StringDictionary[js.Any] = null, service: ^ = null): PresignerOptions = {
     val __obj = js.Dynamic.literal()
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
     __obj.asInstanceOf[PresignerOptions]
   }
-  @scala.inline
-  implicit class PresignerOptionsOps[Self <: PresignerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParams(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: ^): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

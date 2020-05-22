@@ -35,77 +35,20 @@ trait SchemaAndroidRoboTest extends js.Object {
 
 object SchemaAndroidRoboTest {
   @scala.inline
-  def apply(): SchemaAndroidRoboTest = {
+  def apply(
+    appInitialActivity: String = null,
+    bootstrapPackageId: String = null,
+    bootstrapRunnerClass: String = null,
+    maxDepth: js.UndefOr[Double] = js.undefined,
+    maxSteps: js.UndefOr[Double] = js.undefined
+  ): SchemaAndroidRoboTest = {
     val __obj = js.Dynamic.literal()
+    if (appInitialActivity != null) __obj.updateDynamic("appInitialActivity")(appInitialActivity.asInstanceOf[js.Any])
+    if (bootstrapPackageId != null) __obj.updateDynamic("bootstrapPackageId")(bootstrapPackageId.asInstanceOf[js.Any])
+    if (bootstrapRunnerClass != null) __obj.updateDynamic("bootstrapRunnerClass")(bootstrapRunnerClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDepth)) __obj.updateDynamic("maxDepth")(maxDepth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSteps)) __obj.updateDynamic("maxSteps")(maxSteps.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidRoboTest]
   }
-  @scala.inline
-  implicit class SchemaAndroidRoboTestOps[Self <: SchemaAndroidRoboTest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppInitialActivity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appInitialActivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppInitialActivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appInitialActivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBootstrapPackageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapPackageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBootstrapPackageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapPackageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBootstrapRunnerClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapRunnerClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBootstrapRunnerClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapRunnerClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSteps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSteps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

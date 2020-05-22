@@ -34,89 +34,22 @@ trait ConfigTypeData extends js.Object {
 
 object ConfigTypeData {
   @scala.inline
-  def apply(): ConfigTypeData = {
+  def apply(
+    antennaDownlinkConfig: AntennaDownlinkConfig = null,
+    antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfig = null,
+    antennaUplinkConfig: AntennaUplinkConfig = null,
+    dataflowEndpointConfig: DataflowEndpointConfig = null,
+    trackingConfig: TrackingConfig = null,
+    uplinkEchoConfig: UplinkEchoConfig = null
+  ): ConfigTypeData = {
     val __obj = js.Dynamic.literal()
+    if (antennaDownlinkConfig != null) __obj.updateDynamic("antennaDownlinkConfig")(antennaDownlinkConfig.asInstanceOf[js.Any])
+    if (antennaDownlinkDemodDecodeConfig != null) __obj.updateDynamic("antennaDownlinkDemodDecodeConfig")(antennaDownlinkDemodDecodeConfig.asInstanceOf[js.Any])
+    if (antennaUplinkConfig != null) __obj.updateDynamic("antennaUplinkConfig")(antennaUplinkConfig.asInstanceOf[js.Any])
+    if (dataflowEndpointConfig != null) __obj.updateDynamic("dataflowEndpointConfig")(dataflowEndpointConfig.asInstanceOf[js.Any])
+    if (trackingConfig != null) __obj.updateDynamic("trackingConfig")(trackingConfig.asInstanceOf[js.Any])
+    if (uplinkEchoConfig != null) __obj.updateDynamic("uplinkEchoConfig")(uplinkEchoConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigTypeData]
   }
-  @scala.inline
-  implicit class ConfigTypeDataOps[Self <: ConfigTypeData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAntennaDownlinkConfig(value: AntennaDownlinkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antennaDownlinkConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAntennaDownlinkConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antennaDownlinkConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAntennaDownlinkDemodDecodeConfig(value: AntennaDownlinkDemodDecodeConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antennaDownlinkDemodDecodeConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAntennaDownlinkDemodDecodeConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antennaDownlinkDemodDecodeConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAntennaUplinkConfig(value: AntennaUplinkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antennaUplinkConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAntennaUplinkConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antennaUplinkConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataflowEndpointConfig(value: DataflowEndpointConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataflowEndpointConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackingConfig(value: TrackingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUplinkEchoConfig(value: UplinkEchoConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uplinkEchoConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUplinkEchoConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uplinkEchoConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

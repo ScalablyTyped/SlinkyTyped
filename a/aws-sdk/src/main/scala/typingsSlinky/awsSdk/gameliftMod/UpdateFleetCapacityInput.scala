@@ -13,7 +13,7 @@ trait UpdateFleetCapacityInput extends js.Object {
   /**
     * A unique identifier for a fleet to update capacity for. You can use either the fleet ID or ARN value.
     */
-  var FleetId: typingsSlinky.awsSdk.gameliftMod.FleetId = js.native
+  var FleetId: FleetIdOrArn = js.native
   /**
     * The maximum value allowed for the fleet's instance count. Default if not set is 1.
     */
@@ -26,59 +26,17 @@ trait UpdateFleetCapacityInput extends js.Object {
 
 object UpdateFleetCapacityInput {
   @scala.inline
-  def apply(FleetId: FleetId): UpdateFleetCapacityInput = {
+  def apply(
+    FleetId: FleetIdOrArn,
+    DesiredInstances: js.UndefOr[WholeNumber] = js.undefined,
+    MaxSize: js.UndefOr[WholeNumber] = js.undefined,
+    MinSize: js.UndefOr[WholeNumber] = js.undefined
+  ): UpdateFleetCapacityInput = {
     val __obj = js.Dynamic.literal(FleetId = FleetId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DesiredInstances)) __obj.updateDynamic("DesiredInstances")(DesiredInstances.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxSize)) __obj.updateDynamic("MaxSize")(MaxSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinSize)) __obj.updateDynamic("MinSize")(MinSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFleetCapacityInput]
   }
-  @scala.inline
-  implicit class UpdateFleetCapacityInputOps[Self <: UpdateFleetCapacityInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFleetId(value: FleetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDesiredInstances(value: WholeNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSize(value: WholeNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSize(value: WholeNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

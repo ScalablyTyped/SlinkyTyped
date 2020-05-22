@@ -56,113 +56,26 @@ trait SchemaProduct extends js.Object {
 
 object SchemaProduct {
   @scala.inline
-  def apply(): SchemaProduct = {
+  def apply(
+    attributes: SchemaAttributes = null,
+    contentLanguage: String = null,
+    destinationStatuses: js.Array[SchemaDestinationStatus] = null,
+    issues: js.Array[SchemaIssue] = null,
+    name: String = null,
+    parent: String = null,
+    productId: String = null,
+    targetCountry: String = null
+  ): SchemaProduct = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (contentLanguage != null) __obj.updateDynamic("contentLanguage")(contentLanguage.asInstanceOf[js.Any])
+    if (destinationStatuses != null) __obj.updateDynamic("destinationStatuses")(destinationStatuses.asInstanceOf[js.Any])
+    if (issues != null) __obj.updateDynamic("issues")(issues.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
+    if (targetCountry != null) __obj.updateDynamic("targetCountry")(targetCountry.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProduct]
   }
-  @scala.inline
-  implicit class SchemaProductOps[Self <: SchemaProduct] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: SchemaAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationStatuses(value: js.Array[SchemaDestinationStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationStatuses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationStatuses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssues(value: js.Array[SchemaIssue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCountry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCountry")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

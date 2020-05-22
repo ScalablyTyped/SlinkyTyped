@@ -4,135 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JobDescriptionAttributes extends js.Object {
-  var `current-page-order`: js.UndefOr[PageOrder] = js.native
-  var `document-metadata`: js.UndefOr[js.Array[String]] = js.native
-  var `job-charge-info`: js.UndefOr[String] = js.native
+  var `current-page-order`: js.UndefOr[PageOrder] = js.undefined
+  var `document-metadata`: js.UndefOr[js.Array[String]] = js.undefined
+  var `job-charge-info`: js.UndefOr[String] = js.undefined
   var `job-mandatory-attributes`: js.UndefOr[
     js.Array[
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 86 */ js.Any
     ]
-  ] = js.native
-  var `job-message-from-operator`: js.UndefOr[String] = js.native
-  var `job-message-to-operator-actual`: js.UndefOr[js.Array[String]] = js.native
-  var `job-name`: js.UndefOr[String] = js.native
-  var `job-save-printer-make-and-model`: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var `job-message-from-operator`: js.UndefOr[String] = js.undefined
+  var `job-message-to-operator-actual`: js.UndefOr[js.Array[String]] = js.undefined
+  var `job-name`: js.UndefOr[String] = js.undefined
+  var `job-save-printer-make-and-model`: js.UndefOr[String] = js.undefined
 }
 
 object JobDescriptionAttributes {
   @scala.inline
-  def apply(): JobDescriptionAttributes = {
+  def apply(
+    `current-page-order`: PageOrder = null,
+    `document-metadata`: js.Array[String] = null,
+    `job-charge-info`: String = null,
+    `job-mandatory-attributes`: js.Array[
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 86 */ js.Any
+    ] = null,
+    `job-message-from-operator`: String = null,
+    `job-message-to-operator-actual`: js.Array[String] = null,
+    `job-name`: String = null,
+    `job-save-printer-make-and-model`: String = null
+  ): JobDescriptionAttributes = {
     val __obj = js.Dynamic.literal()
+    if (`current-page-order` != null) __obj.updateDynamic("current-page-order")(`current-page-order`.asInstanceOf[js.Any])
+    if (`document-metadata` != null) __obj.updateDynamic("document-metadata")(`document-metadata`.asInstanceOf[js.Any])
+    if (`job-charge-info` != null) __obj.updateDynamic("job-charge-info")(`job-charge-info`.asInstanceOf[js.Any])
+    if (`job-mandatory-attributes` != null) __obj.updateDynamic("job-mandatory-attributes")(`job-mandatory-attributes`.asInstanceOf[js.Any])
+    if (`job-message-from-operator` != null) __obj.updateDynamic("job-message-from-operator")(`job-message-from-operator`.asInstanceOf[js.Any])
+    if (`job-message-to-operator-actual` != null) __obj.updateDynamic("job-message-to-operator-actual")(`job-message-to-operator-actual`.asInstanceOf[js.Any])
+    if (`job-name` != null) __obj.updateDynamic("job-name")(`job-name`.asInstanceOf[js.Any])
+    if (`job-save-printer-make-and-model` != null) __obj.updateDynamic("job-save-printer-make-and-model")(`job-save-printer-make-and-model`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobDescriptionAttributes]
   }
-  @scala.inline
-  implicit class JobDescriptionAttributesOps[Self <: JobDescriptionAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withCurrent-page-order`(value: PageOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-page-order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCurrent-page-order`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-page-order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-metadata`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-metadata`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-charge-info`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-charge-info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-charge-info`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-charge-info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-mandatory-attributes`(
-      value: js.Array[
-          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 86 */ js.Any
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-mandatory-attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-mandatory-attributes`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-mandatory-attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-message-from-operator`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-message-from-operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-message-from-operator`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-message-from-operator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-message-to-operator-actual`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-message-to-operator-actual")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-message-to-operator-actual`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-message-to-operator-actual")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-save-printer-make-and-model`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-save-printer-make-and-model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-save-printer-make-and-model`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-save-printer-make-and-model")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

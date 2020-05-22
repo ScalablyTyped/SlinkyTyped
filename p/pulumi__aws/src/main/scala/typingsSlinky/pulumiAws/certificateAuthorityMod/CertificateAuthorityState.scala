@@ -70,185 +70,38 @@ trait CertificateAuthorityState extends js.Object {
 
 object CertificateAuthorityState {
   @scala.inline
-  def apply(): CertificateAuthorityState = {
+  def apply(
+    arn: Input[String] = null,
+    certificate: Input[String] = null,
+    certificateAuthorityConfiguration: Input[CertificateAuthorityCertificateAuthorityConfiguration] = null,
+    certificateChain: Input[String] = null,
+    certificateSigningRequest: Input[String] = null,
+    enabled: Input[Boolean] = null,
+    notAfter: Input[String] = null,
+    notBefore: Input[String] = null,
+    permanentDeletionTimeInDays: Input[Double] = null,
+    revocationConfiguration: Input[CertificateAuthorityRevocationConfiguration] = null,
+    serial: Input[String] = null,
+    status: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null,
+    `type`: Input[String] = null
+  ): CertificateAuthorityState = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (certificate != null) __obj.updateDynamic("certificate")(certificate.asInstanceOf[js.Any])
+    if (certificateAuthorityConfiguration != null) __obj.updateDynamic("certificateAuthorityConfiguration")(certificateAuthorityConfiguration.asInstanceOf[js.Any])
+    if (certificateChain != null) __obj.updateDynamic("certificateChain")(certificateChain.asInstanceOf[js.Any])
+    if (certificateSigningRequest != null) __obj.updateDynamic("certificateSigningRequest")(certificateSigningRequest.asInstanceOf[js.Any])
+    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
+    if (notAfter != null) __obj.updateDynamic("notAfter")(notAfter.asInstanceOf[js.Any])
+    if (notBefore != null) __obj.updateDynamic("notBefore")(notBefore.asInstanceOf[js.Any])
+    if (permanentDeletionTimeInDays != null) __obj.updateDynamic("permanentDeletionTimeInDays")(permanentDeletionTimeInDays.asInstanceOf[js.Any])
+    if (revocationConfiguration != null) __obj.updateDynamic("revocationConfiguration")(revocationConfiguration.asInstanceOf[js.Any])
+    if (serial != null) __obj.updateDynamic("serial")(serial.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateAuthorityState]
   }
-  @scala.inline
-  implicit class CertificateAuthorityStateOps[Self <: CertificateAuthorityState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificate(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateAuthorityConfiguration(value: Input[CertificateAuthorityCertificateAuthorityConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAuthorityConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateAuthorityConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAuthorityConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateChain(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateChain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateChain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateChain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateSigningRequest(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateSigningRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateSigningRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateSigningRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotAfter(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotBefore(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermanentDeletionTimeInDays(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permanentDeletionTimeInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermanentDeletionTimeInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permanentDeletionTimeInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevocationConfiguration(value: Input[CertificateAuthorityRevocationConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revocationConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevocationConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revocationConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerial(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serial")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

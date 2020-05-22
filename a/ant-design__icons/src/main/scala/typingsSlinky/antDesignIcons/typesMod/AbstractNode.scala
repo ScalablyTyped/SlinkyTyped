@@ -5,50 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AbstractNode extends js.Object {
-  var attrs: StringDictionary[String | Boolean] = js.native
-  var children: js.UndefOr[js.Array[AbstractNode]] = js.native
-  var tag: String = js.native
+  var attrs: StringDictionary[String | Boolean]
+  var children: js.UndefOr[js.Array[AbstractNode]] = js.undefined
+  var tag: String
 }
 
 object AbstractNode {
   @scala.inline
-  def apply(attrs: StringDictionary[String | Boolean], tag: String): AbstractNode = {
+  def apply(attrs: StringDictionary[String | Boolean], tag: String, children: js.Array[AbstractNode] = null): AbstractNode = {
     val __obj = js.Dynamic.literal(attrs = attrs.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbstractNode]
   }
-  @scala.inline
-  implicit class AbstractNodeOps[Self <: AbstractNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttrs(value: StringDictionary[String | Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: js.Array[AbstractNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

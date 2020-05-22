@@ -16,7 +16,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SceneLayerElevationInfo extends Object {
   /**
     * Defines how the graphic is placed with respect to the terrain surface. See the table below for a list of possible values.
@@ -31,7 +30,7 @@ trait SceneLayerElevationInfo extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-SceneLayer.html#elevationInfo)
     */
-  var mode: `on-the-ground` | `relative-to-ground` | `absolute-height` | `relative-to-scene` = js.native
+  var mode: `on-the-ground` | `relative-to-ground` | `absolute-height` | `relative-to-scene`
   /**
     * An elevation offset which is added to the vertical position of the graphic. When `mode = "on-the-ground"`, this property has no effect.
     *
@@ -39,7 +38,7 @@ trait SceneLayerElevationInfo extends Object {
     *
     * @default 0
     */
-  var offset: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
   /**
     * The unit for `offset` values.
     *
@@ -47,7 +46,7 @@ trait SceneLayerElevationInfo extends Object {
     *
     * @default meters
     */
-  var unit: js.UndefOr[feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards] = js.native
+  var unit: js.UndefOr[feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards] = js.undefined
 }
 
 object SceneLayerElevationInfo {
@@ -56,48 +55,14 @@ object SceneLayerElevationInfo {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
     mode: `on-the-ground` | `relative-to-ground` | `absolute-height` | `relative-to-scene`,
-    propertyIsEnumerable: PropertyKey => Boolean
+    propertyIsEnumerable: PropertyKey => Boolean,
+    offset: js.UndefOr[Double] = js.undefined,
+    unit: feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards = null
   ): SceneLayerElevationInfo = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), mode = mode.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[SceneLayerElevationInfo]
   }
-  @scala.inline
-  implicit class SceneLayerElevationInfoOps[Self <: SceneLayerElevationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: `on-the-ground` | `relative-to-ground` | `absolute-height` | `relative-to-scene`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

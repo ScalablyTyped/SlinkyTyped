@@ -14,29 +14,10 @@ trait OnSuccess extends js.Object {
 
 object OnSuccess {
   @scala.inline
-  def apply(): OnSuccess = {
+  def apply(Destination: DestinationArn = null): OnSuccess = {
     val __obj = js.Dynamic.literal()
+    if (Destination != null) __obj.updateDynamic("Destination")(Destination.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnSuccess]
   }
-  @scala.inline
-  implicit class OnSuccessOps[Self <: OnSuccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: DestinationArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

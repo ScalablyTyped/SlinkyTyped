@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccountPermissionsListResponse extends js.Object {
-  var accountPermissions: js.UndefOr[js.Array[AccountPermission]] = js.native
-  var kind: js.UndefOr[String] = js.native
+  var accountPermissions: js.UndefOr[js.Array[AccountPermission]] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
 }
 
 object AccountPermissionsListResponse {
   @scala.inline
-  def apply(): AccountPermissionsListResponse = {
+  def apply(accountPermissions: js.Array[AccountPermission] = null, kind: String = null): AccountPermissionsListResponse = {
     val __obj = js.Dynamic.literal()
+    if (accountPermissions != null) __obj.updateDynamic("accountPermissions")(accountPermissions.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountPermissionsListResponse]
   }
-  @scala.inline
-  implicit class AccountPermissionsListResponseOps[Self <: AccountPermissionsListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountPermissions(value: js.Array[AccountPermission]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountPermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

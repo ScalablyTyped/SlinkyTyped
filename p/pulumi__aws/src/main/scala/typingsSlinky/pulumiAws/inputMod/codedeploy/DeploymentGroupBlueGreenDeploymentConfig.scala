@@ -27,57 +27,18 @@ trait DeploymentGroupBlueGreenDeploymentConfig extends js.Object {
 
 object DeploymentGroupBlueGreenDeploymentConfig {
   @scala.inline
-  def apply(): DeploymentGroupBlueGreenDeploymentConfig = {
+  def apply(
+    deploymentReadyOption: Input[DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption] = null,
+    greenFleetProvisioningOption: Input[DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption] = null,
+    terminateBlueInstancesOnDeploymentSuccess: Input[
+      DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess
+    ] = null
+  ): DeploymentGroupBlueGreenDeploymentConfig = {
     val __obj = js.Dynamic.literal()
+    if (deploymentReadyOption != null) __obj.updateDynamic("deploymentReadyOption")(deploymentReadyOption.asInstanceOf[js.Any])
+    if (greenFleetProvisioningOption != null) __obj.updateDynamic("greenFleetProvisioningOption")(greenFleetProvisioningOption.asInstanceOf[js.Any])
+    if (terminateBlueInstancesOnDeploymentSuccess != null) __obj.updateDynamic("terminateBlueInstancesOnDeploymentSuccess")(terminateBlueInstancesOnDeploymentSuccess.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentGroupBlueGreenDeploymentConfig]
   }
-  @scala.inline
-  implicit class DeploymentGroupBlueGreenDeploymentConfigOps[Self <: DeploymentGroupBlueGreenDeploymentConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentReadyOption(value: Input[DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentReadyOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentReadyOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentReadyOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGreenFleetProvisioningOption(value: Input[DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greenFleetProvisioningOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGreenFleetProvisioningOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greenFleetProvisioningOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerminateBlueInstancesOnDeploymentSuccess(
-      value: Input[
-          DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminateBlueInstancesOnDeploymentSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerminateBlueInstancesOnDeploymentSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminateBlueInstancesOnDeploymentSuccess")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

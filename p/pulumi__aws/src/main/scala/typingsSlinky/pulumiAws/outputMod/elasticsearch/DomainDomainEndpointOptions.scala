@@ -10,6 +10,9 @@ trait DomainDomainEndpointOptions extends js.Object {
     * Whether or not to require HTTPS
     */
   var enforceHttps: Boolean = js.native
+  /**
+    * The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  `Policy-Min-TLS-1-0-2019-07` and `Policy-Min-TLS-1-2-2019-07`. This provider will only perform drift detection if a configuration value is provided.
+    */
   var tlsSecurityPolicy: String = js.native
 }
 
@@ -19,25 +22,5 @@ object DomainDomainEndpointOptions {
     val __obj = js.Dynamic.literal(enforceHttps = enforceHttps.asInstanceOf[js.Any], tlsSecurityPolicy = tlsSecurityPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainDomainEndpointOptions]
   }
-  @scala.inline
-  implicit class DomainDomainEndpointOptionsOps[Self <: DomainDomainEndpointOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnforceHttps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceHttps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTlsSecurityPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsSecurityPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

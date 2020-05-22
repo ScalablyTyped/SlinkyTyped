@@ -30,77 +30,20 @@ trait ImportVolumeTaskDetails extends js.Object {
 
 object ImportVolumeTaskDetails {
   @scala.inline
-  def apply(): ImportVolumeTaskDetails = {
+  def apply(
+    AvailabilityZone: String = null,
+    BytesConverted: js.UndefOr[Long] = js.undefined,
+    Description: String = null,
+    Image: DiskImageDescription = null,
+    Volume: DiskImageVolumeDescription = null
+  ): ImportVolumeTaskDetails = {
     val __obj = js.Dynamic.literal()
+    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
+    if (!js.isUndefined(BytesConverted)) __obj.updateDynamic("BytesConverted")(BytesConverted.get.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (Image != null) __obj.updateDynamic("Image")(Image.asInstanceOf[js.Any])
+    if (Volume != null) __obj.updateDynamic("Volume")(Volume.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportVolumeTaskDetails]
   }
-  @scala.inline
-  implicit class ImportVolumeTaskDetailsOps[Self <: ImportVolumeTaskDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBytesConverted(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesConverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBytesConverted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesConverted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: DiskImageDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolume(value: DiskImageVolumeDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Volume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Volume")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

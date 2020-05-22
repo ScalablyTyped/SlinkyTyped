@@ -6,78 +6,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NumberParams
   extends SharedEditorParams
-     with EditorParams {
-  var max: js.UndefOr[Double] = js.native
+     with _EditorParams {
+  var max: js.UndefOr[Double] = js.undefined
   // range,number
-  var min: js.UndefOr[Double] = js.native
-  var step: js.UndefOr[Double] = js.native
-  var verticalNavigation: js.UndefOr[editor | table] = js.native
+  var min: js.UndefOr[Double] = js.undefined
+  var step: js.UndefOr[Double] = js.undefined
+  var verticalNavigation: js.UndefOr[editor | table] = js.undefined
 }
 
 object NumberParams {
   @scala.inline
-  def apply(): NumberParams = {
+  def apply(
+    elementAttributes: JSONRecord = null,
+    mask: String = null,
+    maskAutoFill: js.UndefOr[Boolean] = js.undefined,
+    maskLetterChar: String = null,
+    maskNumberChar: String = null,
+    maskWildcardChar: String = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    step: js.UndefOr[Double] = js.undefined,
+    verticalNavigation: editor | table = null
+  ): NumberParams = {
     val __obj = js.Dynamic.literal()
+    if (elementAttributes != null) __obj.updateDynamic("elementAttributes")(elementAttributes.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (!js.isUndefined(maskAutoFill)) __obj.updateDynamic("maskAutoFill")(maskAutoFill.get.asInstanceOf[js.Any])
+    if (maskLetterChar != null) __obj.updateDynamic("maskLetterChar")(maskLetterChar.asInstanceOf[js.Any])
+    if (maskNumberChar != null) __obj.updateDynamic("maskNumberChar")(maskNumberChar.asInstanceOf[js.Any])
+    if (maskWildcardChar != null) __obj.updateDynamic("maskWildcardChar")(maskWildcardChar.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (verticalNavigation != null) __obj.updateDynamic("verticalNavigation")(verticalNavigation.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberParams]
   }
-  @scala.inline
-  implicit class NumberParamsOps[Self <: NumberParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalNavigation(value: editor | table): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalNavigation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

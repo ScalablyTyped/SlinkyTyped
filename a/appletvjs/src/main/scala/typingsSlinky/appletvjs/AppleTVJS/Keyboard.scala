@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Keyboard extends js.Object {
   /** The text inside of a searchField or textField element. */
-  var text: String = js.native
+  var text: String
   /**
-  		 * A callback function that is called when the text inside
-  		 * of searchField or textField element changes.
-  		 * */
-  def onTextChange(): Unit = js.native
+    * A callback function that is called when the text inside
+    * of searchField or textField element changes.
+    * */
+  def onTextChange(): Unit
 }
 
 object Keyboard {
@@ -21,25 +20,5 @@ object Keyboard {
     val __obj = js.Dynamic.literal(onTextChange = js.Any.fromFunction0(onTextChange), text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Keyboard]
   }
-  @scala.inline
-  implicit class KeyboardOps[Self <: Keyboard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnTextChange(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTextChange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

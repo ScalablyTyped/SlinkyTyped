@@ -5,8 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type PluginFunc = js.Function3[
-    /* option */ js.Any, 
+  type ConfigType = java.lang.String | scala.Double | js.Date | typingsSlinky.dayjs.mod.Dayjs
+  type OptionType = typingsSlinky.dayjs.anon.Format | java.lang.String
+  type PluginFunc[T] = js.Function3[
+    /* option */ T, 
     /* c */ org.scalablytyped.runtime.Instantiable1[
       js.UndefOr[/* config */ typingsSlinky.dayjs.mod.ConfigType], 
       typingsSlinky.dayjs.mod.Dayjs

@@ -14,4 +14,10 @@ package object CellRenderer {
     /* config */ typingsSlinky.phosphorDatagrid.cellrendererMod.CellRenderer.ICellConfig, 
     T
   ]
+  /**
+    * A type alias for a cell renderer config option.
+    *
+    * A config option can be a static value or a config function.
+    */
+  type ConfigOption[T] = T | typingsSlinky.phosphorDatagrid.cellrendererMod.CellRenderer.ConfigFunc[T]
 }

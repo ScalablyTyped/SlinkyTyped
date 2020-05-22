@@ -6,199 +6,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IonMenu extends js.Object {
   /**
     * The content's id the menu should use.
     */
-  var contentId: js.UndefOr[String] = js.native
+  var contentId: js.UndefOr[String] = js.undefined
   /**
     * If `true`, the menu is disabled.
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The edge threshold for dragging the menu open. If a drag/swipe happens over this value, the menu is not triggered.
     */
-  var maxEdgeStart: js.UndefOr[Double] = js.native
+  var maxEdgeStart: js.UndefOr[Double] = js.undefined
   /**
     * An id for the menu.
     */
-  var menuId: js.UndefOr[String] = js.native
+  var menuId: js.UndefOr[String] = js.undefined
   /**
     * Emitted when the menu is closed.
     */
-  var onIonDidClose: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonDidClose: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the menu is open.
     */
-  var onIonDidOpen: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonDidOpen: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the menu is about to be closed.
     */
-  var onIonWillClose: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonWillClose: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the menu is about to be opened.
     */
-  var onIonWillOpen: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonWillOpen: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Which side of the view the menu should be placed.
     */
-  var side: js.UndefOr[Side] = js.native
+  var side: js.UndefOr[Side] = js.undefined
   /**
     * If `true`, swiping the menu is enabled.
     */
-  var swipeGesture: js.UndefOr[Boolean] = js.native
+  var swipeGesture: js.UndefOr[Boolean] = js.undefined
   /**
     * The display type of the menu. Available options: `"overlay"`, `"reveal"`, `"push"`.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object IonMenu {
   @scala.inline
-  def apply(): IonMenu = {
+  def apply(
+    contentId: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    maxEdgeStart: js.UndefOr[Double] = js.undefined,
+    menuId: String = null,
+    onIonDidClose: /* event */ CustomEvent => Unit = null,
+    onIonDidOpen: /* event */ CustomEvent => Unit = null,
+    onIonWillClose: /* event */ CustomEvent => Unit = null,
+    onIonWillOpen: /* event */ CustomEvent => Unit = null,
+    side: Side = null,
+    swipeGesture: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null
+  ): IonMenu = {
     val __obj = js.Dynamic.literal()
+    if (contentId != null) __obj.updateDynamic("contentId")(contentId.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxEdgeStart)) __obj.updateDynamic("maxEdgeStart")(maxEdgeStart.get.asInstanceOf[js.Any])
+    if (menuId != null) __obj.updateDynamic("menuId")(menuId.asInstanceOf[js.Any])
+    if (onIonDidClose != null) __obj.updateDynamic("onIonDidClose")(js.Any.fromFunction1(onIonDidClose))
+    if (onIonDidOpen != null) __obj.updateDynamic("onIonDidOpen")(js.Any.fromFunction1(onIonDidOpen))
+    if (onIonWillClose != null) __obj.updateDynamic("onIonWillClose")(js.Any.fromFunction1(onIonWillClose))
+    if (onIonWillOpen != null) __obj.updateDynamic("onIonWillOpen")(js.Any.fromFunction1(onIonWillOpen))
+    if (side != null) __obj.updateDynamic("side")(side.asInstanceOf[js.Any])
+    if (!js.isUndefined(swipeGesture)) __obj.updateDynamic("swipeGesture")(swipeGesture.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonMenu]
   }
-  @scala.inline
-  implicit class IonMenuOps[Self <: IonMenu] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxEdgeStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEdgeStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxEdgeStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEdgeStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonDidClose(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonDidClose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonDidClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonDidClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonDidOpen(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonDidOpen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonDidOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonDidOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonWillClose(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonWillClose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonWillClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonWillClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonWillOpen(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonWillOpen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonWillOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonWillOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSide(value: Side): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwipeGesture(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeGesture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwipeGesture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeGesture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

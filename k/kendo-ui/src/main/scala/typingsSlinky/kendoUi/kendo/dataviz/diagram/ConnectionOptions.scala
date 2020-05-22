@@ -4,218 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectionOptions extends js.Object {
-  var content: js.UndefOr[ConnectionContent] = js.native
-  var endCap: js.UndefOr[String | ConnectionEndCap] = js.native
-  var fromConnector: js.UndefOr[String] = js.native
-  var fromX: js.UndefOr[Double] = js.native
-  var fromY: js.UndefOr[Double] = js.native
-  var hover: js.UndefOr[ConnectionHover] = js.native
-  var name: js.UndefOr[String] = js.native
-  var points: js.UndefOr[js.Array[ConnectionPoint]] = js.native
-  var selectable: js.UndefOr[Boolean] = js.native
-  var startCap: js.UndefOr[String | ConnectionStartCap] = js.native
-  var stroke: js.UndefOr[ConnectionStroke] = js.native
-  var toConnector: js.UndefOr[String] = js.native
-  var toX: js.UndefOr[Double] = js.native
-  var toY: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var content: js.UndefOr[ConnectionContent] = js.undefined
+  var endCap: js.UndefOr[String | ConnectionEndCap] = js.undefined
+  var fromConnector: js.UndefOr[String] = js.undefined
+  var fromX: js.UndefOr[Double] = js.undefined
+  var fromY: js.UndefOr[Double] = js.undefined
+  var hover: js.UndefOr[ConnectionHover] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var points: js.UndefOr[js.Array[ConnectionPoint]] = js.undefined
+  var selectable: js.UndefOr[Boolean] = js.undefined
+  var startCap: js.UndefOr[String | ConnectionStartCap] = js.undefined
+  var stroke: js.UndefOr[ConnectionStroke] = js.undefined
+  var toConnector: js.UndefOr[String] = js.undefined
+  var toX: js.UndefOr[Double] = js.undefined
+  var toY: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object ConnectionOptions {
   @scala.inline
-  def apply(): ConnectionOptions = {
+  def apply(
+    content: ConnectionContent = null,
+    endCap: String | ConnectionEndCap = null,
+    fromConnector: String = null,
+    fromX: js.UndefOr[Double] = js.undefined,
+    fromY: js.UndefOr[Double] = js.undefined,
+    hover: ConnectionHover = null,
+    name: String = null,
+    points: js.Array[ConnectionPoint] = null,
+    selectable: js.UndefOr[Boolean] = js.undefined,
+    startCap: String | ConnectionStartCap = null,
+    stroke: ConnectionStroke = null,
+    toConnector: String = null,
+    toX: js.UndefOr[Double] = js.undefined,
+    toY: js.UndefOr[Double] = js.undefined,
+    `type`: String = null
+  ): ConnectionOptions = {
     val __obj = js.Dynamic.literal()
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (endCap != null) __obj.updateDynamic("endCap")(endCap.asInstanceOf[js.Any])
+    if (fromConnector != null) __obj.updateDynamic("fromConnector")(fromConnector.asInstanceOf[js.Any])
+    if (!js.isUndefined(fromX)) __obj.updateDynamic("fromX")(fromX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fromY)) __obj.updateDynamic("fromY")(fromY.get.asInstanceOf[js.Any])
+    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
+    if (startCap != null) __obj.updateDynamic("startCap")(startCap.asInstanceOf[js.Any])
+    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
+    if (toConnector != null) __obj.updateDynamic("toConnector")(toConnector.asInstanceOf[js.Any])
+    if (!js.isUndefined(toX)) __obj.updateDynamic("toX")(toX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(toY)) __obj.updateDynamic("toY")(toY.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionOptions]
   }
-  @scala.inline
-  implicit class ConnectionOptionsOps[Self <: ConnectionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: ConnectionContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndCap(value: String | ConnectionEndCap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndCap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromConnector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromConnector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromConnector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromConnector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHover(value: ConnectionHover): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoints(value: js.Array[ConnectionPoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartCap(value: String | ConnectionStartCap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartCap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStroke(value: ConnectionStroke): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStroke: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToConnector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toConnector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToConnector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toConnector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

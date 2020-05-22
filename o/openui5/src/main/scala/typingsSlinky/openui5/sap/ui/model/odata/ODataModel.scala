@@ -17,10 +17,10 @@ trait ODataModel extends Model {
     * by calling the getServiceMetadata() method.
     * @param vUrl Either one URL as string or an array or URL strings
     * @returns The Promise to load the given URL(s), resolved if all URLs have been loaded, rejected if at
-    * least one fails to load.					 If this promise resolves it returns the following parameters:					
-    * annotations: The annotation object					 entitySets: An array of EntitySet objects containing the
-    * newly merged EntitySets from a $metadata requests.								 the structure is the same as in the
-    * metadata object reached by the getServiceMetadata() method.								 For non $metadata requests the
+    * least one fails to load.                     If this promise resolves it returns the following parameters:                    
+    * annotations: The annotation object                     entitySets: An array of EntitySet objects containing the
+    * newly merged EntitySets from a $metadata requests.                                 the structure is the same as in the
+    * metadata object reached by the getServiceMetadata() method.                                 For non $metadata requests the
     * array will be empty.
     */
   def addAnnotationUrl(vUrl: String): JQueryPromise[_] = js.native
@@ -103,7 +103,7 @@ trait ODataModel extends Model {
   def attachMetadataLoaded(oData: js.Any, fnFunction: js.Any, oListener: js.Any): ODataModel = js.native
   /**
     * Trigger a request to the function import odata service that was specified in the model constructor.
-    * @param sFunctionName A string containing the name of the function to call.		The name is concatenated
+    * @param sFunctionName A string containing the name of the function to call.        The name is concatenated
     * to the sServiceUrl which was specified in the model constructor.
     * @param mParameters Optional parameter map containing any of the following properties:
     * @returns an object which has an <code>abort</code> function to abort the current request.
@@ -117,8 +117,8 @@ trait ODataModel extends Model {
   /**
     * Trigger a POST request to the odata service that was specified in the model constructor. Please note
     * that deep creates are not supportedand may not work.
-    * @param sPath A string containing the path to the collection where an entry		should be created. The
-    * path is concatenated to the sServiceUrl		which was specified in the model constructor.
+    * @param sPath A string containing the path to the collection where an entry        should be created. The
+    * path is concatenated to the sServiceUrl        which was specified in the model constructor.
     * @param oData data of the entry that should be created.
     * @param mParameters Optional parameter map containing any of the following properties:
     * @returns an object which has an <code>abort</code> function to abort the current request.
@@ -128,7 +128,7 @@ trait ODataModel extends Model {
   /**
     * Creates a single batch operation (read or change operation) which can be used in a batch request.
     * @param sPath A string containing the path to the collection or entry where the batch operation
-    * should be performed.						The path is concatenated to the sServiceUrl which was specified in the
+    * should be performed.                        The path is concatenated to the sServiceUrl which was specified in the
     * model constructor.
     * @param sMethod for the batch operation. Possible values are GET, PUT, MERGE, POST, DELETE
     * @param oData optional data payload which should be created, updated, deleted in a change batch
@@ -300,8 +300,8 @@ trait ODataModel extends Model {
   /**
     * Trigger a GET request to the odata service that was specified in the model constructor.The data will
     * not be stored in the model. The requested data is returned with the response.
-    * @param sPath A string containing the path to the data which should		be retrieved. The path is
-    * concatenated to the sServiceUrl		which was specified in the model constructor.
+    * @param sPath A string containing the path to the data which should        be retrieved. The path is
+    * concatenated to the sServiceUrl        which was specified in the model constructor.
     * @param mParameters Optional parameter map containing any of the following properties:
     * @returns an object which has an <code>abort</code> function to abort the current request.
     */
@@ -314,7 +314,7 @@ trait ODataModel extends Model {
   def refreshMetadata(): Unit = js.native
   /**
     * refresh XSRF token by performing a GET request against the service root URL.
-    * @param fnSuccess a callback function which is called when the data has           					 been
+    * @param fnSuccess a callback function which is called when the data has                                been
     * successfully retrieved.
     * @param fnError a callback function which is called when the request failed. The handler can have the
     * parameter: oError which contains additional error information.
@@ -327,7 +327,7 @@ trait ODataModel extends Model {
   def refreshSecurityToken(fnSuccess: js.Any, fnError: js.Any, bAsync: Boolean): js.Any = js.native
   /**
     * Trigger a DELETE request to the odata service that was specified in the model constructor.
-    * @param sPath A string containing the path to the data that should be removed.		The path is
+    * @param sPath A string containing the path to the data that should be removed.        The path is
     * concatenated to the sServiceUrl which was specified in the model constructor.
     * @param mParameters Optional, can contain the following attributes: oContext, fnSuccess, fnError,
     * sETag:
@@ -337,8 +337,8 @@ trait ODataModel extends Model {
   def remove(sPath: String, mParameters: js.Any): js.Any = js.native
   /**
     * Resets the collected changes by the setProperty method and reloads the data from the server.
-    * @param fnSuccess a callback function which is called when the data has           					 been
-    * successfully resetted. The handler can have the           	                 following parameters:
+    * @param fnSuccess a callback function which is called when the data has                                been
+    * successfully resetted. The handler can have the                                following parameters:
     * oData and response.
     * @param fnError a callback function which is called when the request failed
     */
@@ -408,10 +408,10 @@ trait ODataModel extends Model {
     * <code>addBatchReadOperations</code> or <code>addBatchChangeOperations</code>.The batch will be
     * cleared afterwards. If the batch is empty no request will be performed and false will be
     * returned.Note: No data will be stored in the model.
-    * @param fnSuccess a callback function which is called when the batch request has           					 been
+    * @param fnSuccess a callback function which is called when the batch request has                                been
     * successfully sent. Note: There might have errors occured in the single batch operations. These
     * errors can be accessed in the           aErrorResponses parameter in the callback handler.          
-    * The handler can have the           	                 following parameters: oData, oResponse and
+    * The handler can have the                                following parameters: oData, oResponse and
     * aErrorResponses.
     * @param fnError a callback function which is called when the batch request failed. The handler can
     * have the parameter: oError which containsadditional error information.
@@ -426,8 +426,8 @@ trait ODataModel extends Model {
     * be triggered to only update the changed properties.If a URI with a $expand System Query Option was
     * used then the expand entries will be removed from the collected changes.Changes to this entries
     * should be done on the entry itself. So no deep updates are supported.
-    * @param fnSuccess a callback function which is called when the data has           					 been
-    * successfully updated. The handler can have the           	                 following parameters:
+    * @param fnSuccess a callback function which is called when the data has                                been
+    * successfully updated. The handler can have the                                following parameters:
     * oData and response.
     * @param fnError a callback function which is called when the request failed. The handler can have the
     * parameter: oError which containsadditional error information
@@ -441,8 +441,8 @@ trait ODataModel extends Model {
     * Trigger a PUT/MERGE request to the odata service that was specified in the model constructor. Please
     * note that deep updates are not supportedand may not work. These should be done seperate on the entry
     * directly.
-    * @param sPath A string containing the path to the data that should be updated.		The path is
-    * concatenated to the sServiceUrl which was specified		in the model constructor.
+    * @param sPath A string containing the path to the data that should be updated.        The path is
+    * concatenated to the sServiceUrl which was specified        in the model constructor.
     * @param oData data of the entry that should be updated.
     * @param mParameters Optional, can contain the following attributes:
     * @returns an object which has an <code>abort</code> function to abort the current request.

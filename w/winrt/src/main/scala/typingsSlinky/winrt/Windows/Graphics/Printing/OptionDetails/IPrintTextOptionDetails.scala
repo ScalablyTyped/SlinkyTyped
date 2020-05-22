@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPrintTextOptionDetails extends IPrintOptionDetails {
-  var maxCharacters: Double = js.native
+  var maxCharacters: Double
 }
 
 object IPrintTextOptionDetails {
@@ -23,19 +22,5 @@ object IPrintTextOptionDetails {
     val __obj = js.Dynamic.literal(errorText = errorText.asInstanceOf[js.Any], maxCharacters = maxCharacters.asInstanceOf[js.Any], optionId = optionId.asInstanceOf[js.Any], optionType = optionType.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], trySetValue = js.Any.fromFunction1(trySetValue), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPrintTextOptionDetails]
   }
-  @scala.inline
-  implicit class IPrintTextOptionDetailsOps[Self <: IPrintTextOptionDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxCharacters(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

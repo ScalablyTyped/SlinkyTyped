@@ -42,95 +42,23 @@ trait Account extends js.Object {
 
 object Account {
   @scala.inline
-  def apply(AccountId: String, AwsAccountId: String, Name: String): Account = {
+  def apply(
+    AccountId: String,
+    AwsAccountId: String,
+    Name: String,
+    AccountType: AccountType = null,
+    CreatedTimestamp: js.Date = null,
+    DefaultLicense: License = null,
+    SigninDelegateGroups: SigninDelegateGroupList = null,
+    SupportedLicenses: LicenseList = null
+  ): Account = {
     val __obj = js.Dynamic.literal(AccountId = AccountId.asInstanceOf[js.Any], AwsAccountId = AwsAccountId.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (AccountType != null) __obj.updateDynamic("AccountType")(AccountType.asInstanceOf[js.Any])
+    if (CreatedTimestamp != null) __obj.updateDynamic("CreatedTimestamp")(CreatedTimestamp.asInstanceOf[js.Any])
+    if (DefaultLicense != null) __obj.updateDynamic("DefaultLicense")(DefaultLicense.asInstanceOf[js.Any])
+    if (SigninDelegateGroups != null) __obj.updateDynamic("SigninDelegateGroups")(SigninDelegateGroups.asInstanceOf[js.Any])
+    if (SupportedLicenses != null) __obj.updateDynamic("SupportedLicenses")(SupportedLicenses.asInstanceOf[js.Any])
     __obj.asInstanceOf[Account]
   }
-  @scala.inline
-  implicit class AccountOps[Self <: Account] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAwsAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccountType(value: AccountType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultLicense(value: License): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultLicense")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultLicense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultLicense")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigninDelegateGroups(value: SigninDelegateGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SigninDelegateGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigninDelegateGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SigninDelegateGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedLicenses(value: LicenseList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedLicenses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedLicenses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedLicenses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

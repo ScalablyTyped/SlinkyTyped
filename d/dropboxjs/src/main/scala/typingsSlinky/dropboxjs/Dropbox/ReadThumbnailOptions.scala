@@ -4,62 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadThumbnailOptions extends ThumbnailUrlOptions {
-  var arrayBuffer: js.UndefOr[Boolean] = js.native
-  var blob: js.UndefOr[Boolean] = js.native
-  var buffer: js.UndefOr[Boolean] = js.native
+  var arrayBuffer: js.UndefOr[Boolean] = js.undefined
+  var blob: js.UndefOr[Boolean] = js.undefined
+  var buffer: js.UndefOr[Boolean] = js.undefined
 }
 
 object ReadThumbnailOptions {
   @scala.inline
-  def apply(): ReadThumbnailOptions = {
+  def apply(
+    arrayBuffer: js.UndefOr[Boolean] = js.undefined,
+    blob: js.UndefOr[Boolean] = js.undefined,
+    buffer: js.UndefOr[Boolean] = js.undefined,
+    format: String = null,
+    png: js.UndefOr[Boolean] = js.undefined,
+    size: String = null
+  ): ReadThumbnailOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arrayBuffer)) __obj.updateDynamic("arrayBuffer")(arrayBuffer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(blob)) __obj.updateDynamic("blob")(blob.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(buffer)) __obj.updateDynamic("buffer")(buffer.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(png)) __obj.updateDynamic("png")(png.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadThumbnailOptions]
   }
-  @scala.inline
-  implicit class ReadThumbnailOptionsOps[Self <: ReadThumbnailOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrayBuffer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlob(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuffer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

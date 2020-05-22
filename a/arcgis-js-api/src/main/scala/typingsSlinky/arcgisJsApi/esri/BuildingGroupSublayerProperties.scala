@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BuildingGroupSublayerProperties extends BuildingSublayerProperties {
   /**
     * Indicates how the layer should display in the [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) widget. The possible values are listed below.
@@ -23,34 +22,23 @@ trait BuildingGroupSublayerProperties extends BuildingSublayerProperties {
     *
     * @default show
     */
-  var listMode: js.UndefOr[show | hide | `hide-children`] = js.native
+  var listMode: js.UndefOr[show | hide | `hide-children`] = js.undefined
 }
 
 object BuildingGroupSublayerProperties {
   @scala.inline
-  def apply(): BuildingGroupSublayerProperties = {
+  def apply(
+    listMode: show | hide | `hide-children` = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    title: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): BuildingGroupSublayerProperties = {
     val __obj = js.Dynamic.literal()
+    if (listMode != null) __obj.updateDynamic("listMode")(listMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildingGroupSublayerProperties]
   }
-  @scala.inline
-  implicit class BuildingGroupSublayerPropertiesOps[Self <: BuildingGroupSublayerProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withListMode(value: show | hide | `hide-children`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

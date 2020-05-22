@@ -25,53 +25,16 @@ trait SchemaGeoPoint extends js.Object {
 
 object SchemaGeoPoint {
   @scala.inline
-  def apply(): SchemaGeoPoint = {
+  def apply(
+    altitude: js.UndefOr[Double] = js.undefined,
+    latitude: js.UndefOr[Double] = js.undefined,
+    longitude: js.UndefOr[Double] = js.undefined
+  ): SchemaGeoPoint = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(altitude)) __obj.updateDynamic("altitude")(altitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(latitude)) __obj.updateDynamic("latitude")(latitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(longitude)) __obj.updateDynamic("longitude")(longitude.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGeoPoint]
   }
-  @scala.inline
-  implicit class SchemaGeoPointOps[Self <: SchemaGeoPoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

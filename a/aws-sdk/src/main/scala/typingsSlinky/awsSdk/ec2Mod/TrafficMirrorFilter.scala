@@ -34,89 +34,22 @@ trait TrafficMirrorFilter extends js.Object {
 
 object TrafficMirrorFilter {
   @scala.inline
-  def apply(): TrafficMirrorFilter = {
+  def apply(
+    Description: String = null,
+    EgressFilterRules: TrafficMirrorFilterRuleList = null,
+    IngressFilterRules: TrafficMirrorFilterRuleList = null,
+    NetworkServices: TrafficMirrorNetworkServiceList = null,
+    Tags: TagList = null,
+    TrafficMirrorFilterId: String = null
+  ): TrafficMirrorFilter = {
     val __obj = js.Dynamic.literal()
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (EgressFilterRules != null) __obj.updateDynamic("EgressFilterRules")(EgressFilterRules.asInstanceOf[js.Any])
+    if (IngressFilterRules != null) __obj.updateDynamic("IngressFilterRules")(IngressFilterRules.asInstanceOf[js.Any])
+    if (NetworkServices != null) __obj.updateDynamic("NetworkServices")(NetworkServices.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (TrafficMirrorFilterId != null) __obj.updateDynamic("TrafficMirrorFilterId")(TrafficMirrorFilterId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrafficMirrorFilter]
   }
-  @scala.inline
-  implicit class TrafficMirrorFilterOps[Self <: TrafficMirrorFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEgressFilterRules(value: TrafficMirrorFilterRuleList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EgressFilterRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEgressFilterRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EgressFilterRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIngressFilterRules(value: TrafficMirrorFilterRuleList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngressFilterRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIngressFilterRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngressFilterRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkServices(value: TrafficMirrorNetworkServiceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrafficMirrorFilterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficMirrorFilterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilterId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

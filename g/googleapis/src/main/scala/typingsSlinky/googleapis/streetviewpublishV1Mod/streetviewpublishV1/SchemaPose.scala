@@ -58,101 +58,24 @@ trait SchemaPose extends js.Object {
 
 object SchemaPose {
   @scala.inline
-  def apply(): SchemaPose = {
+  def apply(
+    accuracyMeters: js.UndefOr[Double] = js.undefined,
+    altitude: js.UndefOr[Double] = js.undefined,
+    heading: js.UndefOr[Double] = js.undefined,
+    latLngPair: SchemaLatLng = null,
+    level: SchemaLevel = null,
+    pitch: js.UndefOr[Double] = js.undefined,
+    roll: js.UndefOr[Double] = js.undefined
+  ): SchemaPose = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(accuracyMeters)) __obj.updateDynamic("accuracyMeters")(accuracyMeters.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altitude)) __obj.updateDynamic("altitude")(altitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(heading)) __obj.updateDynamic("heading")(heading.get.asInstanceOf[js.Any])
+    if (latLngPair != null) __obj.updateDynamic("latLngPair")(latLngPair.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(pitch)) __obj.updateDynamic("pitch")(pitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(roll)) __obj.updateDynamic("roll")(roll.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPose]
   }
-  @scala.inline
-  implicit class SchemaPoseOps[Self <: SchemaPose] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccuracyMeters(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracyMeters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccuracyMeters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracyMeters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAltitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeading(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatLngPair(value: SchemaLatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLngPair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatLngPair: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLngPair")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: SchemaLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoll(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roll")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

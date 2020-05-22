@@ -38,83 +38,21 @@ trait VolumeConfiguration extends js.Object {
 
 object VolumeConfiguration {
   @scala.inline
-  def apply(MountPoint: String, NumberOfDisks: Integer, Size: Integer): VolumeConfiguration = {
+  def apply(
+    MountPoint: String,
+    NumberOfDisks: Integer,
+    Size: Integer,
+    Encrypted: js.UndefOr[Boolean] = js.undefined,
+    Iops: js.UndefOr[Integer] = js.undefined,
+    RaidLevel: js.UndefOr[Integer] = js.undefined,
+    VolumeType: String = null
+  ): VolumeConfiguration = {
     val __obj = js.Dynamic.literal(MountPoint = MountPoint.asInstanceOf[js.Any], NumberOfDisks = NumberOfDisks.asInstanceOf[js.Any], Size = Size.asInstanceOf[js.Any])
+    if (!js.isUndefined(Encrypted)) __obj.updateDynamic("Encrypted")(Encrypted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Iops)) __obj.updateDynamic("Iops")(Iops.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RaidLevel)) __obj.updateDynamic("RaidLevel")(RaidLevel.get.asInstanceOf[js.Any])
+    if (VolumeType != null) __obj.updateDynamic("VolumeType")(VolumeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[VolumeConfiguration]
   }
-  @scala.inline
-  implicit class VolumeConfigurationOps[Self <: VolumeConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMountPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberOfDisks(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfDisks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIops(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Iops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Iops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaidLevel(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RaidLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaidLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RaidLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

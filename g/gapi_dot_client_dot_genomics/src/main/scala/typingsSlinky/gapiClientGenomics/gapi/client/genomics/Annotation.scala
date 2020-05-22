@@ -5,214 +5,86 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Annotation extends js.Object {
   /** The annotation set to which this annotation belongs. */
-  var annotationSetId: js.UndefOr[String] = js.native
+  var annotationSetId: js.UndefOr[String] = js.undefined
   /** The end position of the range on the reference, 0-based exclusive. */
-  var end: js.UndefOr[String] = js.native
+  var end: js.UndefOr[String] = js.undefined
   /** The server-generated annotation ID, unique across all annotations. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * A map of additional read alignment information. This must be of the form
     * map<string, string[]> (string key mapping to a list of string values).
     */
-  var info: js.UndefOr[Record[String, js.Array[_]]] = js.native
+  var info: js.UndefOr[Record[String, js.Array[_]]] = js.undefined
   /** The display name of this annotation. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** The ID of the Google Genomics reference associated with this range. */
-  var referenceId: js.UndefOr[String] = js.native
+  var referenceId: js.UndefOr[String] = js.undefined
   /**
     * The display name corresponding to the reference specified by
     * `referenceId`, for example `chr1`, `1`, or `chrX`.
     */
-  var referenceName: js.UndefOr[String] = js.native
+  var referenceName: js.UndefOr[String] = js.undefined
   /**
     * Whether this range refers to the reverse strand, as opposed to the forward
     * strand. Note that regardless of this field, the start/end position of the
     * range always refer to the forward strand.
     */
-  var reverseStrand: js.UndefOr[Boolean] = js.native
+  var reverseStrand: js.UndefOr[Boolean] = js.undefined
   /** The start position of the range on the reference, 0-based inclusive. */
-  var start: js.UndefOr[String] = js.native
+  var start: js.UndefOr[String] = js.undefined
   /**
     * A transcript value represents the assertion that a particular region of
     * the reference genome may be transcribed as RNA. An alternative splicing
     * pattern would be represented as a separate transcript object. This field
     * is only set for annotations of type `TRANSCRIPT`.
     */
-  var transcript: js.UndefOr[Transcript] = js.native
+  var transcript: js.UndefOr[Transcript] = js.undefined
   /**
     * The data type for this annotation. Must match the containing annotation
     * set's type.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * A variant annotation, which describes the effect of a variant on the
     * genome, the coding sequence, and/or higher level consequences at the
     * organism level e.g. pathogenicity. This field is only set for annotations
     * of type `VARIANT`.
     */
-  var variant: js.UndefOr[VariantAnnotation] = js.native
+  var variant: js.UndefOr[VariantAnnotation] = js.undefined
 }
 
 object Annotation {
   @scala.inline
-  def apply(): Annotation = {
+  def apply(
+    annotationSetId: String = null,
+    end: String = null,
+    id: String = null,
+    info: Record[String, js.Array[_]] = null,
+    name: String = null,
+    referenceId: String = null,
+    referenceName: String = null,
+    reverseStrand: js.UndefOr[Boolean] = js.undefined,
+    start: String = null,
+    transcript: Transcript = null,
+    `type`: String = null,
+    variant: VariantAnnotation = null
+  ): Annotation = {
     val __obj = js.Dynamic.literal()
+    if (annotationSetId != null) __obj.updateDynamic("annotationSetId")(annotationSetId.asInstanceOf[js.Any])
+    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (referenceId != null) __obj.updateDynamic("referenceId")(referenceId.asInstanceOf[js.Any])
+    if (referenceName != null) __obj.updateDynamic("referenceName")(referenceName.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverseStrand)) __obj.updateDynamic("reverseStrand")(reverseStrand.get.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+    if (transcript != null) __obj.updateDynamic("transcript")(transcript.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
     __obj.asInstanceOf[Annotation]
   }
-  @scala.inline
-  implicit class AnnotationOps[Self <: Annotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnotationSetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotationSetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationSetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: Record[String, js.Array[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverseStrand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseStrand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverseStrand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseStrand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranscript(value: Transcript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transcript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranscript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transcript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariant(value: VariantAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

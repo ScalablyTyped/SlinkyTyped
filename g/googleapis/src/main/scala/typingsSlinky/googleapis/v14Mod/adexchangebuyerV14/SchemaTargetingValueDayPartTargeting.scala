@@ -12,41 +12,14 @@ trait SchemaTargetingValueDayPartTargeting extends js.Object {
 
 object SchemaTargetingValueDayPartTargeting {
   @scala.inline
-  def apply(): SchemaTargetingValueDayPartTargeting = {
+  def apply(
+    dayParts: js.Array[SchemaTargetingValueDayPartTargetingDayPart] = null,
+    timeZoneType: String = null
+  ): SchemaTargetingValueDayPartTargeting = {
     val __obj = js.Dynamic.literal()
+    if (dayParts != null) __obj.updateDynamic("dayParts")(dayParts.asInstanceOf[js.Any])
+    if (timeZoneType != null) __obj.updateDynamic("timeZoneType")(timeZoneType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetingValueDayPartTargeting]
   }
-  @scala.inline
-  implicit class SchemaTargetingValueDayPartTargetingOps[Self <: SchemaTargetingValueDayPartTargeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDayParts(value: js.Array[SchemaTargetingValueDayPartTargetingDayPart]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayParts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeZoneType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZoneType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeZoneType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZoneType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

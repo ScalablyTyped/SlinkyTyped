@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InvalidRestoreTimeException
   extends ServiceException[InvalidRestoreTimeExceptionDetails]
      with RestoreTableToPointInTimeExceptionsUnion {
   @JSName("name")
-  var name_InvalidRestoreTimeException: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InvalidRestoreTimeException = js.native
+  var name_InvalidRestoreTimeException: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InvalidRestoreTimeException
 }
 
 object InvalidRestoreTimeException {
@@ -21,26 +20,12 @@ object InvalidRestoreTimeException {
     $metadata: ResponseMetadata,
     details: InvalidRestoreTimeExceptionDetails,
     message: String,
-    name: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InvalidRestoreTimeException
+    name: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InvalidRestoreTimeException,
+    stack: String = null
   ): InvalidRestoreTimeException = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidRestoreTimeException]
   }
-  @scala.inline
-  implicit class InvalidRestoreTimeExceptionOps[Self <: InvalidRestoreTimeException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(
-      value: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InvalidRestoreTimeException
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

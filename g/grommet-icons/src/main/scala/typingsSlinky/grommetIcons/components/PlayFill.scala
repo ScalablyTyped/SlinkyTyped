@@ -12,7 +12,7 @@ object PlayFill {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.PlayFill] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.PlayFill](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PlayFill.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.PlayFill] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.PlayFill](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.PlayFill] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.PlayFill](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PlayFill.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.PlayFill] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.PlayFill](js.Array(this.component, js.Dictionary.empty))()
 }
 

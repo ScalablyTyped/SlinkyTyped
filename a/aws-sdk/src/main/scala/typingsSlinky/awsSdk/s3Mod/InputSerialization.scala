@@ -26,65 +26,18 @@ trait InputSerialization extends js.Object {
 
 object InputSerialization {
   @scala.inline
-  def apply(): InputSerialization = {
+  def apply(
+    CSV: CSVInput = null,
+    CompressionType: CompressionType = null,
+    JSON: JSONInput = null,
+    Parquet: ParquetInput = null
+  ): InputSerialization = {
     val __obj = js.Dynamic.literal()
+    if (CSV != null) __obj.updateDynamic("CSV")(CSV.asInstanceOf[js.Any])
+    if (CompressionType != null) __obj.updateDynamic("CompressionType")(CompressionType.asInstanceOf[js.Any])
+    if (JSON != null) __obj.updateDynamic("JSON")(JSON.asInstanceOf[js.Any])
+    if (Parquet != null) __obj.updateDynamic("Parquet")(Parquet.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputSerialization]
   }
-  @scala.inline
-  implicit class InputSerializationOps[Self <: InputSerialization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCSV(value: CSVInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CSV")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCSV: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CSV")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompressionType(value: CompressionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompressionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJSON(value: JSONInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JSON")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJSON: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JSON")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParquet(value: ParquetInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parquet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParquet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parquet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

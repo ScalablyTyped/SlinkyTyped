@@ -18,41 +18,11 @@ trait Relationship extends js.Object {
 
 object Relationship {
   @scala.inline
-  def apply(): Relationship = {
+  def apply(Ids: IdList = null, Type: RelationshipType = null): Relationship = {
     val __obj = js.Dynamic.literal()
+    if (Ids != null) __obj.updateDynamic("Ids")(Ids.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[Relationship]
   }
-  @scala.inline
-  implicit class RelationshipOps[Self <: Relationship] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIds(value: IdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: RelationshipType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMaths extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Count: Double = js.native
-  val Creator: Double = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Count: Double
+  val Creator: Double
+  val Parent: js.Any
   @JSName("Word.OMaths_typekey")
-  var WordDotOMaths_typekey: OMaths = js.native
-  def Add(Range: Range): Range = js.native
-  def BuildUp(): Unit = js.native
-  def Item(Index: Double): OMath = js.native
-  def Linearize(): Unit = js.native
+  var WordDotOMaths_typekey: OMaths
+  def Add(Range: Range): Range
+  def BuildUp(): Unit
+  def Item(Index: Double): OMath
+  def Linearize(): Unit
 }
 
 object OMaths {
@@ -35,67 +34,5 @@ object OMaths {
     __obj.updateDynamic("Word.OMaths_typekey")(WordDotOMaths_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMaths]
   }
-  @scala.inline
-  implicit class OMathsOps[Self <: OMaths] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd(value: Range => Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Add")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuildUp(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildUp")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: Double => OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLinearize(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Linearize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotOMaths_typekey(value: OMaths): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMaths_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

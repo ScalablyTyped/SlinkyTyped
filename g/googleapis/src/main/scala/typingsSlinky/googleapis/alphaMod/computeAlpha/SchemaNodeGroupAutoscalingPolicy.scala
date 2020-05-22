@@ -12,41 +12,11 @@ trait SchemaNodeGroupAutoscalingPolicy extends js.Object {
 
 object SchemaNodeGroupAutoscalingPolicy {
   @scala.inline
-  def apply(): SchemaNodeGroupAutoscalingPolicy = {
+  def apply(maxSize: js.UndefOr[Double] = js.undefined, minSize: js.UndefOr[Double] = js.undefined): SchemaNodeGroupAutoscalingPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxSize)) __obj.updateDynamic("maxSize")(maxSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minSize)) __obj.updateDynamic("minSize")(minSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNodeGroupAutoscalingPolicy]
   }
-  @scala.inline
-  implicit class SchemaNodeGroupAutoscalingPolicyOps[Self <: SchemaNodeGroupAutoscalingPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

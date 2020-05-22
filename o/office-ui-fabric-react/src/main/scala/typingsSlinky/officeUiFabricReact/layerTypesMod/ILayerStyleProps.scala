@@ -5,65 +5,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILayerStyleProps extends js.Object {
   /**
     * Accept custom classNames
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * Check if Host
     */
-  var isNotHost: js.UndefOr[Boolean] = js.native
+  var isNotHost: js.UndefOr[Boolean] = js.undefined
   /**
     * Accept theme prop.
     */
-  var theme: ITheme = js.native
+  var theme: ITheme
 }
 
 object ILayerStyleProps {
   @scala.inline
-  def apply(theme: ITheme): ILayerStyleProps = {
+  def apply(theme: ITheme, className: String = null, isNotHost: js.UndefOr[Boolean] = js.undefined): ILayerStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(isNotHost)) __obj.updateDynamic("isNotHost")(isNotHost.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILayerStyleProps]
   }
-  @scala.inline
-  implicit class ILayerStylePropsOps[Self <: ILayerStyleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsNotHost(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNotHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsNotHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNotHost")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

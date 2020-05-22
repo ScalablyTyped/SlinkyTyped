@@ -1,6 +1,10 @@
 package typingsSlinky.typedRestClient
 
+import typingsSlinky.node.httpMod.RequestOptions
+import typingsSlinky.typedRestClient.interfacesMod.IHttpClient
+import typingsSlinky.typedRestClient.interfacesMod.IHttpClientResponse
 import typingsSlinky.typedRestClient.interfacesMod.IRequestHandler
+import typingsSlinky.typedRestClient.interfacesMod.IRequestInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +17,13 @@ object mod extends js.Object {
     def this(username: String, password: String) = this()
     var password: String = js.native
     var username: String = js.native
+    /* CompleteClass */
+    override def canHandleAuthentication(response: IHttpClientResponse): Boolean = js.native
+    /* CompleteClass */
+    override def handleAuthentication(httpClient: IHttpClient, requestInfo: IRequestInfo, objs: js.Any): js.Promise[IHttpClientResponse] = js.native
     def prepareRequest(options: js.Any): Unit = js.native
+    /* CompleteClass */
+    override def prepareRequest(options: RequestOptions): Unit = js.native
   }
   
 }

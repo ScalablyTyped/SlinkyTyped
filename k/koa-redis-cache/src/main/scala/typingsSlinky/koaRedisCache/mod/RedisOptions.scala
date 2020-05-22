@@ -5,71 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RedisOptions extends js.Object {
   /**
     * host name of the redis server, default: 'localhost'
     */
-  var host: js.UndefOr[String] = js.native
+  var host: js.UndefOr[String] = js.undefined
   /**
     * node_redis options
     */
-  var options: js.UndefOr[ClientOpts] = js.native
+  var options: js.UndefOr[ClientOpts] = js.undefined
   /**
     * port number of the redis server, default: 6379
     */
-  var port: js.UndefOr[Double] = js.native
+  var port: js.UndefOr[Double] = js.undefined
 }
 
 object RedisOptions {
   @scala.inline
-  def apply(): RedisOptions = {
+  def apply(host: String = null, options: ClientOpts = null, port: js.UndefOr[Double] = js.undefined): RedisOptions = {
     val __obj = js.Dynamic.literal()
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RedisOptions]
   }
-  @scala.inline
-  implicit class RedisOptionsOps[Self <: RedisOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: ClientOpts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

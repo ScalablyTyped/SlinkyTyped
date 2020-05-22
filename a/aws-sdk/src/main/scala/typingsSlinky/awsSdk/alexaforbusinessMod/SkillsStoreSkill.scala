@@ -38,101 +38,24 @@ trait SkillsStoreSkill extends js.Object {
 
 object SkillsStoreSkill {
   @scala.inline
-  def apply(): SkillsStoreSkill = {
+  def apply(
+    IconUrl: IconUrl = null,
+    SampleUtterances: SampleUtterances = null,
+    ShortDescription: ShortDescription = null,
+    SkillDetails: SkillDetails = null,
+    SkillId: SkillId = null,
+    SkillName: SkillName = null,
+    SupportsLinking: js.UndefOr[scala.Boolean] = js.undefined
+  ): SkillsStoreSkill = {
     val __obj = js.Dynamic.literal()
+    if (IconUrl != null) __obj.updateDynamic("IconUrl")(IconUrl.asInstanceOf[js.Any])
+    if (SampleUtterances != null) __obj.updateDynamic("SampleUtterances")(SampleUtterances.asInstanceOf[js.Any])
+    if (ShortDescription != null) __obj.updateDynamic("ShortDescription")(ShortDescription.asInstanceOf[js.Any])
+    if (SkillDetails != null) __obj.updateDynamic("SkillDetails")(SkillDetails.asInstanceOf[js.Any])
+    if (SkillId != null) __obj.updateDynamic("SkillId")(SkillId.asInstanceOf[js.Any])
+    if (SkillName != null) __obj.updateDynamic("SkillName")(SkillName.asInstanceOf[js.Any])
+    if (!js.isUndefined(SupportsLinking)) __obj.updateDynamic("SupportsLinking")(SupportsLinking.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkillsStoreSkill]
   }
-  @scala.inline
-  implicit class SkillsStoreSkillOps[Self <: SkillsStoreSkill] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIconUrl(value: IconUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IconUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IconUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleUtterances(value: SampleUtterances): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleUtterances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleUtterances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleUtterances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortDescription(value: ShortDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkillDetails(value: SkillDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkillDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkillId(value: SkillId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkillId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkillName(value: SkillName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkillName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsLinking(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsLinking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsLinking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsLinking")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

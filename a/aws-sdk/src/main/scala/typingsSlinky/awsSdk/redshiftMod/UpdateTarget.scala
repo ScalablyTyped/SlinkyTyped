@@ -22,53 +22,16 @@ trait UpdateTarget extends js.Object {
 
 object UpdateTarget {
   @scala.inline
-  def apply(): UpdateTarget = {
+  def apply(
+    DatabaseVersion: String = null,
+    MaintenanceTrackName: String = null,
+    SupportedOperations: SupportedOperationList = null
+  ): UpdateTarget = {
     val __obj = js.Dynamic.literal()
+    if (DatabaseVersion != null) __obj.updateDynamic("DatabaseVersion")(DatabaseVersion.asInstanceOf[js.Any])
+    if (MaintenanceTrackName != null) __obj.updateDynamic("MaintenanceTrackName")(MaintenanceTrackName.asInstanceOf[js.Any])
+    if (SupportedOperations != null) __obj.updateDynamic("SupportedOperations")(SupportedOperations.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTarget]
   }
-  @scala.inline
-  implicit class UpdateTargetOps[Self <: UpdateTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaintenanceTrackName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaintenanceTrackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaintenanceTrackName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaintenanceTrackName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedOperations(value: SupportedOperationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedOperations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedOperations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

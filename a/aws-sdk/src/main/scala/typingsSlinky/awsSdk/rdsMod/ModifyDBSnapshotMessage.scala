@@ -22,47 +22,11 @@ trait ModifyDBSnapshotMessage extends js.Object {
 
 object ModifyDBSnapshotMessage {
   @scala.inline
-  def apply(DBSnapshotIdentifier: String): ModifyDBSnapshotMessage = {
+  def apply(DBSnapshotIdentifier: String, EngineVersion: String = null, OptionGroupName: String = null): ModifyDBSnapshotMessage = {
     val __obj = js.Dynamic.literal(DBSnapshotIdentifier = DBSnapshotIdentifier.asInstanceOf[js.Any])
+    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
+    if (OptionGroupName != null) __obj.updateDynamic("OptionGroupName")(OptionGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyDBSnapshotMessage]
   }
-  @scala.inline
-  implicit class ModifyDBSnapshotMessageOps[Self <: ModifyDBSnapshotMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBSnapshotIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSnapshotIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEngineVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

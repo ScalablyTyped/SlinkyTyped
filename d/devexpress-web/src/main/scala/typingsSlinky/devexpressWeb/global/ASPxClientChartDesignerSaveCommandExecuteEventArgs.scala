@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientChartDesignerSaveCommandExecuteEventArgs")
 @js.native
 class ASPxClientChartDesignerSaveCommandExecuteEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientChartDesignerSaveCommandExecuteEventArgs
+  extends typingsSlinky.devexpressWeb.ASPxClientChartDesignerSaveCommandExecuteEventArgs {
+  /* CompleteClass */
+  override var handled: Boolean = js.native
+}
 

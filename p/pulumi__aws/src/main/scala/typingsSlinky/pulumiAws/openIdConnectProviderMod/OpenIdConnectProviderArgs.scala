@@ -31,31 +31,5 @@ object OpenIdConnectProviderArgs {
     val __obj = js.Dynamic.literal(clientIdLists = clientIdLists.asInstanceOf[js.Any], thumbprintLists = thumbprintLists.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenIdConnectProviderArgs]
   }
-  @scala.inline
-  implicit class OpenIdConnectProviderArgsOps[Self <: OpenIdConnectProviderArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientIdLists(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientIdLists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThumbprintLists(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbprintLists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

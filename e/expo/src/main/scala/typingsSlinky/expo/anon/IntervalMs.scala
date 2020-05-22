@@ -10,68 +10,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IntervalMs extends js.Object {
-  var intervalMs: js.UndefOr[Double] = js.native
-  var repeat: js.UndefOr[minute | hour | day | week | month | year] = js.native
-  var time: js.UndefOr[Double | js.Date] = js.native
+  var intervalMs: js.UndefOr[Double] = js.undefined
+  var repeat: js.UndefOr[minute | hour | day | week | month | year] = js.undefined
+  var time: js.UndefOr[Double | js.Date] = js.undefined
 }
 
 object IntervalMs {
   @scala.inline
-  def apply(): IntervalMs = {
+  def apply(
+    intervalMs: js.UndefOr[Double] = js.undefined,
+    repeat: minute | hour | day | week | month | year = null,
+    time: Double | js.Date = null
+  ): IntervalMs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(intervalMs)) __obj.updateDynamic("intervalMs")(intervalMs.get.asInstanceOf[js.Any])
+    if (repeat != null) __obj.updateDynamic("repeat")(repeat.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntervalMs]
   }
-  @scala.inline
-  implicit class IntervalMsOps[Self <: IntervalMs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIntervalMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntervalMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepeat(value: minute | hour | day | week | month | year): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepeat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTime(value: Double | js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

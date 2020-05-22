@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InitializeOptions extends js.Object {
-  var alwaysSendToDefaultTracker: js.UndefOr[Boolean] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var gaAddress: js.UndefOr[String] = js.native
-  var gaOptions: js.UndefOr[GaOptions] = js.native
-  var standardImplementation: js.UndefOr[Boolean] = js.native
-  var testMode: js.UndefOr[Boolean] = js.native
-  var titleCase: js.UndefOr[Boolean] = js.native
+  var alwaysSendToDefaultTracker: js.UndefOr[Boolean] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var gaAddress: js.UndefOr[String] = js.undefined
+  var gaOptions: js.UndefOr[GaOptions] = js.undefined
+  var standardImplementation: js.UndefOr[Boolean] = js.undefined
+  var testMode: js.UndefOr[Boolean] = js.undefined
+  var titleCase: js.UndefOr[Boolean] = js.undefined
 }
 
 object InitializeOptions {
   @scala.inline
-  def apply(): InitializeOptions = {
+  def apply(
+    alwaysSendToDefaultTracker: js.UndefOr[Boolean] = js.undefined,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    gaAddress: String = null,
+    gaOptions: GaOptions = null,
+    standardImplementation: js.UndefOr[Boolean] = js.undefined,
+    testMode: js.UndefOr[Boolean] = js.undefined,
+    titleCase: js.UndefOr[Boolean] = js.undefined
+  ): InitializeOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alwaysSendToDefaultTracker)) __obj.updateDynamic("alwaysSendToDefaultTracker")(alwaysSendToDefaultTracker.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (gaAddress != null) __obj.updateDynamic("gaAddress")(gaAddress.asInstanceOf[js.Any])
+    if (gaOptions != null) __obj.updateDynamic("gaOptions")(gaOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(standardImplementation)) __obj.updateDynamic("standardImplementation")(standardImplementation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(testMode)) __obj.updateDynamic("testMode")(testMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(titleCase)) __obj.updateDynamic("titleCase")(titleCase.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitializeOptions]
   }
-  @scala.inline
-  implicit class InitializeOptionsOps[Self <: InitializeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlwaysSendToDefaultTracker(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysSendToDefaultTracker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysSendToDefaultTracker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysSendToDefaultTracker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGaAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gaAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGaAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gaAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGaOptions(value: GaOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gaOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGaOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gaOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandardImplementation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardImplementation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandardImplementation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardImplementation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleCase")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

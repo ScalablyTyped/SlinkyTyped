@@ -5,43 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IStaticViewStrategyConfig extends js.Object {
-  var dependencies: js.UndefOr[js.Array[js.Function] | js.Object] = js.native
-  var template: String | HTMLTemplateElement = js.native
+  var dependencies: js.UndefOr[js.Array[js.Function] | js.Object] = js.undefined
+  var template: String | HTMLTemplateElement
 }
 
 object IStaticViewStrategyConfig {
   @scala.inline
-  def apply(template: String | HTMLTemplateElement): IStaticViewStrategyConfig = {
+  def apply(template: String | HTMLTemplateElement, dependencies: js.Array[js.Function] | js.Object = null): IStaticViewStrategyConfig = {
     val __obj = js.Dynamic.literal(template = template.asInstanceOf[js.Any])
+    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStaticViewStrategyConfig]
   }
-  @scala.inline
-  implicit class IStaticViewStrategyConfigOps[Self <: IStaticViewStrategyConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTemplate(value: String | HTMLTemplateElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: js.Array[js.Function] | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

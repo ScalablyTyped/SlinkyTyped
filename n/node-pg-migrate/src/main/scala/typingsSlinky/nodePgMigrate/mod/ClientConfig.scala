@@ -5,36 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientConfig extends ConnectionConfig {
-  var ssl: js.UndefOr[Boolean | TlsOptions] = js.native
+  var ssl: js.UndefOr[Boolean | TlsOptions] = js.undefined
 }
 
 object ClientConfig {
   @scala.inline
-  def apply(): ClientConfig = {
+  def apply(
+    connectionString: String = null,
+    database: String = null,
+    host: String = null,
+    password: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    ssl: Boolean | TlsOptions = null,
+    user: String = null
+  ): ClientConfig = {
     val __obj = js.Dynamic.literal()
+    if (connectionString != null) __obj.updateDynamic("connectionString")(connectionString.asInstanceOf[js.Any])
+    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (ssl != null) __obj.updateDynamic("ssl")(ssl.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientConfig]
   }
-  @scala.inline
-  implicit class ClientConfigOps[Self <: ClientConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSsl(value: Boolean | TlsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

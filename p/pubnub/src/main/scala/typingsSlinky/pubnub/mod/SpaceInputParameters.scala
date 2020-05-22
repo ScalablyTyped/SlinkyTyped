@@ -5,88 +5,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpaceInputParameters extends js.Object {
-  var custom: js.UndefOr[js.Object | Null] = js.native
-  var description: js.UndefOr[String | Null] = js.native
-  var id: String = js.native
-  var include: js.UndefOr[CustomFields] = js.native
-  var name: String = js.native
+  var custom: js.UndefOr[js.Object | Null] = js.undefined
+  var description: js.UndefOr[String | Null] = js.undefined
+  var id: String
+  var include: js.UndefOr[CustomFields] = js.undefined
+  var name: String
 }
 
 object SpaceInputParameters {
   @scala.inline
-  def apply(id: String, name: String): SpaceInputParameters = {
+  def apply(
+    id: String,
+    name: String,
+    custom: js.UndefOr[Null | js.Object] = js.undefined,
+    description: js.UndefOr[Null | String] = js.undefined,
+    include: CustomFields = null
+  ): SpaceInputParameters = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(custom)) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpaceInputParameters]
   }
-  @scala.inline
-  implicit class SpaceInputParametersOps[Self <: SpaceInputParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustom(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(null)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescriptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(null)
-        ret
-    }
-    @scala.inline
-    def withInclude(value: CustomFields): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommonQueryFilters extends js.Object {
   /**
     * Number of return records requested. The server is not bound to return the number requested, but cannot return more
     */
-  var count: js.UndefOr[Double] = js.native
+  var count: js.UndefOr[Double] = js.undefined
   /**
     * Addition filters to be applied on the history query. The object will be converted into query string parameters.
     */
-  var params: js.UndefOr[DictpropName] = js.native
+  var params: js.UndefOr[DictpropName] = js.undefined
   /**
     * Only include resource versions that were created at or after the given instant in time
     *
@@ -23,58 +22,17 @@ trait CommonQueryFilters extends js.Object {
     * use date and dateTime. instant is a more constrained dateTime xs:dateTime A JSON string - an xs:dateTime
     * Note: This type is for system times, not human times (see date and dateTime below).
     */
-  var since: js.UndefOr[String] = js.native
+  var since: js.UndefOr[String] = js.undefined
 }
 
 object CommonQueryFilters {
   @scala.inline
-  def apply(): CommonQueryFilters = {
+  def apply(count: js.UndefOr[Double] = js.undefined, params: DictpropName = null, since: String = null): CommonQueryFilters = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (since != null) __obj.updateDynamic("since")(since.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonQueryFilters]
   }
-  @scala.inline
-  implicit class CommonQueryFiltersOps[Self <: CommonQueryFilters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: DictpropName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSince(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

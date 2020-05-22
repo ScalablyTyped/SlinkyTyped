@@ -1,19 +1,19 @@
 package typingsSlinky.speedMeasureWebpackPlugin
 
-import typingsSlinky.speedMeasureWebpackPlugin.mod.OutputFormat
+import typingsSlinky.speedMeasureWebpackPlugin.mod._OutputFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object speedMeasureWebpackPluginStrings {
   @js.native
-  sealed trait human extends OutputFormat
+  sealed trait human extends _OutputFormat
   
   @js.native
-  sealed trait humanVerbose extends OutputFormat
+  sealed trait humanVerbose extends _OutputFormat
   
   @js.native
-  sealed trait json extends OutputFormat
+  sealed trait json extends _OutputFormat
   
   @scala.inline
   def human: human = "human".asInstanceOf[human]

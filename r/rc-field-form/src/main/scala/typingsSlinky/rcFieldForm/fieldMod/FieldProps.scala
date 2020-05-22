@@ -2,7 +2,6 @@ package typingsSlinky.rcFieldForm.fieldMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.interfaceMod.EventArgs
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
 import typingsSlinky.rcFieldForm.interfaceMod.Meta
@@ -11,212 +10,70 @@ import typingsSlinky.rcFieldForm.interfaceMod.Rule
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.StoreValue
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+/* Inlined parent std.Omit<rc-field-form.rc-field-form/es/Field.InternalFieldProps, 'name'> */
 trait FieldProps extends js.Object {
   var children: js.UndefOr[
     ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]])
-  ] = js.native
-  /**
-    * Set up `dependencies` field.
-    * When dependencies field update and current field is touched,
-    * will trigger validate rules and render.
-    */
-  var dependencies: js.UndefOr[js.Array[NamePath]] = js.native
-  var getValueFromEvent: js.UndefOr[js.Function1[/* args */ EventArgs, StoreValue]] = js.native
-  var name: js.UndefOr[NamePath] = js.native
+  ] = js.undefined
+  var dependencies: js.UndefOr[js.Array[NamePath]] = js.undefined
+  var getValueFromEvent: js.UndefOr[js.Function1[/* args */ EventArgs, StoreValue]] = js.undefined
+  var getValueProps: js.UndefOr[js.Function1[/* value */ StoreValue, js.Object]] = js.undefined
+  var initialValue: js.UndefOr[js.Any] = js.undefined
+  var messageVariables: js.UndefOr[Record[String, String]] = js.undefined
+  var name: js.UndefOr[NamePath] = js.undefined
   var normalize: js.UndefOr[
     js.Function3[/* value */ StoreValue, /* prevValue */ StoreValue, /* allValues */ Store, StoreValue]
-  ] = js.native
-  var onReset: js.UndefOr[js.Function0[Unit]] = js.native
-  var rules: js.UndefOr[js.Array[Rule]] = js.native
-  var shouldUpdate: js.UndefOr[ShouldUpdate] = js.native
-  var trigger: js.UndefOr[String] = js.native
-  var validateFirst: js.UndefOr[Boolean] = js.native
-  var validateTrigger: js.UndefOr[String | js.Array[String] | `false`] = js.native
-  var valuePropName: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var onReset: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var rules: js.UndefOr[js.Array[Rule]] = js.undefined
+  var shouldUpdate: js.UndefOr[ShouldUpdate] = js.undefined
+  var trigger: js.UndefOr[String] = js.undefined
+  var validateFirst: js.UndefOr[Boolean] = js.undefined
+  var validateTrigger: js.UndefOr[String | js.Array[String] | `false`] = js.undefined
+  var valuePropName: js.UndefOr[String] = js.undefined
 }
 
 object FieldProps {
   @scala.inline
-  def apply(): FieldProps = {
+  def apply(
+    children: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]]) = null,
+    dependencies: js.Array[NamePath] = null,
+    getValueFromEvent: /* args */ EventArgs => StoreValue = null,
+    getValueProps: /* value */ StoreValue => js.Object = null,
+    initialValue: js.Any = null,
+    messageVariables: Record[String, String] = null,
+    name: NamePath = null,
+    normalize: (/* value */ StoreValue, /* prevValue */ StoreValue, /* allValues */ Store) => StoreValue = null,
+    onReset: () => Unit = null,
+    rules: js.Array[Rule] = null,
+    shouldUpdate: ShouldUpdate = null,
+    trigger: String = null,
+    validateFirst: js.UndefOr[Boolean] = js.undefined,
+    validateTrigger: String | js.Array[String] | `false` = null,
+    valuePropName: String = null
+  ): FieldProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
+    if (getValueFromEvent != null) __obj.updateDynamic("getValueFromEvent")(js.Any.fromFunction1(getValueFromEvent))
+    if (getValueProps != null) __obj.updateDynamic("getValueProps")(js.Any.fromFunction1(getValueProps))
+    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
+    if (messageVariables != null) __obj.updateDynamic("messageVariables")(messageVariables.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (normalize != null) __obj.updateDynamic("normalize")(js.Any.fromFunction3(normalize))
+    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction0(onReset))
+    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
+    if (shouldUpdate != null) __obj.updateDynamic("shouldUpdate")(shouldUpdate.asInstanceOf[js.Any])
+    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
+    if (!js.isUndefined(validateFirst)) __obj.updateDynamic("validateFirst")(validateFirst.get.asInstanceOf[js.Any])
+    if (validateTrigger != null) __obj.updateDynamic("validateTrigger")(validateTrigger.asInstanceOf[js.Any])
+    if (valuePropName != null) __obj.updateDynamic("valuePropName")(valuePropName.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldProps]
   }
-  @scala.inline
-  implicit class FieldPropsOps[Self <: FieldProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildrenFunction3(value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance) => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withChildren(
-      value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: js.Array[NamePath]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetValueFromEvent(value: /* args */ EventArgs => StoreValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValueFromEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetValueFromEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValueFromEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NamePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalize(value: (/* value */ StoreValue, /* prevValue */ StoreValue, /* allValues */ Store) => StoreValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutNormalize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReset(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: js.Array[Rule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ Source) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUpdate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withShouldUpdate(value: ShouldUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrigger(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidateFirst(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateFirst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidateFirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateFirst")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidateTrigger(value: String | js.Array[String] | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateTrigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidateTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateTrigger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValuePropName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePropName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValuePropName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePropName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

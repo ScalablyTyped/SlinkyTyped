@@ -17,29 +17,10 @@ trait SchemaBatchUpdateIngressRulesRequest extends js.Object {
 
 object SchemaBatchUpdateIngressRulesRequest {
   @scala.inline
-  def apply(): SchemaBatchUpdateIngressRulesRequest = {
+  def apply(ingressRules: js.Array[SchemaFirewallRule] = null): SchemaBatchUpdateIngressRulesRequest = {
     val __obj = js.Dynamic.literal()
+    if (ingressRules != null) __obj.updateDynamic("ingressRules")(ingressRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchUpdateIngressRulesRequest]
   }
-  @scala.inline
-  implicit class SchemaBatchUpdateIngressRulesRequestOps[Self <: SchemaBatchUpdateIngressRulesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIngressRules(value: js.Array[SchemaFirewallRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ingressRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIngressRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ingressRules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

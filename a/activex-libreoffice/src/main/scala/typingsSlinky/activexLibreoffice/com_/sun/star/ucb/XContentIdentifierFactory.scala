@@ -12,14 +12,13 @@ import scala.scalajs.js.annotation._
   * @see XContentIdentifier
   * @version 1.0
   */
-@js.native
 trait XContentIdentifierFactory extends XInterface {
   /**
     * creates an identifier.
     * @param ContentId the content identifier string.
     * @returns the identifier.
     */
-  def createContentIdentifier(ContentId: String): XContentIdentifier = js.native
+  def createContentIdentifier(ContentId: String): XContentIdentifier
 }
 
 object XContentIdentifierFactory {
@@ -33,19 +32,5 @@ object XContentIdentifierFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createContentIdentifier = js.Any.fromFunction1(createContentIdentifier), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XContentIdentifierFactory]
   }
-  @scala.inline
-  implicit class XContentIdentifierFactoryOps[Self <: XContentIdentifierFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateContentIdentifier(value: String => XContentIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createContentIdentifier")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

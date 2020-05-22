@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@jupyterlab/logconsole" : "1.0.2"
+      "@jupyterlab/logconsole" : "1.0.9"
     }
   ],
   "test-dependencies" : [
     {
-      "@jupyterlab/logconsole" : "1.0.2"
+      "@jupyterlab/logconsole" : "1.0.9"
     }
   ],
   "compile-devDependencies" : [

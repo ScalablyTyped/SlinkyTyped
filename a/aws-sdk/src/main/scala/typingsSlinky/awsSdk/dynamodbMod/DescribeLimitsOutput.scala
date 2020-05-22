@@ -26,65 +26,18 @@ trait DescribeLimitsOutput extends js.Object {
 
 object DescribeLimitsOutput {
   @scala.inline
-  def apply(): DescribeLimitsOutput = {
+  def apply(
+    AccountMaxReadCapacityUnits: js.UndefOr[PositiveLongObject] = js.undefined,
+    AccountMaxWriteCapacityUnits: js.UndefOr[PositiveLongObject] = js.undefined,
+    TableMaxReadCapacityUnits: js.UndefOr[PositiveLongObject] = js.undefined,
+    TableMaxWriteCapacityUnits: js.UndefOr[PositiveLongObject] = js.undefined
+  ): DescribeLimitsOutput = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AccountMaxReadCapacityUnits)) __obj.updateDynamic("AccountMaxReadCapacityUnits")(AccountMaxReadCapacityUnits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(AccountMaxWriteCapacityUnits)) __obj.updateDynamic("AccountMaxWriteCapacityUnits")(AccountMaxWriteCapacityUnits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TableMaxReadCapacityUnits)) __obj.updateDynamic("TableMaxReadCapacityUnits")(TableMaxReadCapacityUnits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TableMaxWriteCapacityUnits)) __obj.updateDynamic("TableMaxWriteCapacityUnits")(TableMaxWriteCapacityUnits.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLimitsOutput]
   }
-  @scala.inline
-  implicit class DescribeLimitsOutputOps[Self <: DescribeLimitsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountMaxReadCapacityUnits(value: PositiveLongObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountMaxReadCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountMaxReadCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountMaxReadCapacityUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccountMaxWriteCapacityUnits(value: PositiveLongObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountMaxWriteCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountMaxWriteCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountMaxWriteCapacityUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableMaxReadCapacityUnits(value: PositiveLongObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableMaxReadCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableMaxReadCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableMaxReadCapacityUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableMaxWriteCapacityUnits(value: PositiveLongObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableMaxWriteCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableMaxWriteCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableMaxWriteCapacityUnits")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

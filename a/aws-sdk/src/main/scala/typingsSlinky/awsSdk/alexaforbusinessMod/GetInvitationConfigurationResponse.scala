@@ -22,53 +22,16 @@ trait GetInvitationConfigurationResponse extends js.Object {
 
 object GetInvitationConfigurationResponse {
   @scala.inline
-  def apply(): GetInvitationConfigurationResponse = {
+  def apply(
+    ContactEmail: Email = null,
+    OrganizationName: OrganizationName = null,
+    PrivateSkillIds: ShortSkillIdList = null
+  ): GetInvitationConfigurationResponse = {
     val __obj = js.Dynamic.literal()
+    if (ContactEmail != null) __obj.updateDynamic("ContactEmail")(ContactEmail.asInstanceOf[js.Any])
+    if (OrganizationName != null) __obj.updateDynamic("OrganizationName")(OrganizationName.asInstanceOf[js.Any])
+    if (PrivateSkillIds != null) __obj.updateDynamic("PrivateSkillIds")(PrivateSkillIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInvitationConfigurationResponse]
   }
-  @scala.inline
-  implicit class GetInvitationConfigurationResponseOps[Self <: GetInvitationConfigurationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContactEmail(value: Email): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContactEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContactEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContactEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizationName(value: OrganizationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateSkillIds(value: ShortSkillIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateSkillIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateSkillIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateSkillIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

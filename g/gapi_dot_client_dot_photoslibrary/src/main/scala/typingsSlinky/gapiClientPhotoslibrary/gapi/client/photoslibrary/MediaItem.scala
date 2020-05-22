@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaItem extends js.Object {
   /**
     * A URL to the media item's bytes. This shouldn't be used as is. Parameters
@@ -14,147 +13,60 @@ trait MediaItem extends js.Object {
     * will set the dimensions of a media item of type photo to have a width of
     * 2048 px and height of 1024 px.
     */
-  var baseUrl: js.UndefOr[String] = js.native
+  var baseUrl: js.UndefOr[String] = js.undefined
   /** Information about the user who created this media item. */
-  var contributorInfo: js.UndefOr[ContributorInfo] = js.native
+  var contributorInfo: js.UndefOr[ContributorInfo] = js.undefined
   /**
     * Description of the media item. This is shown to the user in the item's
     * info section in the Google Photos app.
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * Filename of the media item. This is shown to the user in the item's info
     * section in the Google Photos app.
     */
-  var filename: js.UndefOr[String] = js.native
+  var filename: js.UndefOr[String] = js.undefined
   /**
     * Identifier for the media item. This is a persistent identifier that can be
     * used between sessions to identify this media item.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Metadata related to the media item, such as, height, width, or
     * creation time.
     */
-  var mediaMetadata: js.UndefOr[MediaMetadata] = js.native
+  var mediaMetadata: js.UndefOr[MediaMetadata] = js.undefined
   /** MIME type of the media item. For example, `image/jpeg`. */
-  var mimeType: js.UndefOr[String] = js.native
+  var mimeType: js.UndefOr[String] = js.undefined
   /**
     * Google Photos URL for the media item. This link is available to
     * the user only if they're signed in.
     */
-  var productUrl: js.UndefOr[String] = js.native
+  var productUrl: js.UndefOr[String] = js.undefined
 }
 
 object MediaItem {
   @scala.inline
-  def apply(): MediaItem = {
+  def apply(
+    baseUrl: String = null,
+    contributorInfo: ContributorInfo = null,
+    description: String = null,
+    filename: String = null,
+    id: String = null,
+    mediaMetadata: MediaMetadata = null,
+    mimeType: String = null,
+    productUrl: String = null
+  ): MediaItem = {
     val __obj = js.Dynamic.literal()
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (contributorInfo != null) __obj.updateDynamic("contributorInfo")(contributorInfo.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (mediaMetadata != null) __obj.updateDynamic("mediaMetadata")(mediaMetadata.asInstanceOf[js.Any])
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
+    if (productUrl != null) __obj.updateDynamic("productUrl")(productUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaItem]
   }
-  @scala.inline
-  implicit class MediaItemOps[Self <: MediaItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContributorInfo(value: ContributorInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contributorInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContributorInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contributorInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaMetadata(value: MediaMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

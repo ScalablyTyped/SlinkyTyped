@@ -449,7 +449,7 @@ object DataTable {
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def primaryKey(value: String): this.type = set("primaryKey", value.asInstanceOf[js.Any])
+    def primaryKey(value: String | Boolean): this.type = set("primaryKey", value.asInstanceOf[js.Any])
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
     @scala.inline

@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * The client-side equivalent of the CrosshairFreePosition class.
   */
-@js.native
 trait ASPxClientCrosshairFreePosition extends ASPxClientCrosshairPosition {
   /**
     * Gets a string containing information on a crosshair label's dock position when the crosshair cursor is in the free position mode.
     */
-  var dockPosition: String = js.native
+  var dockPosition: String
   /**
     * Gets a Pane's ID when the crosshair cursor is in the free position mode.
     */
-  var paneID: Double = js.native
+  var paneID: Double
 }
 
 object ASPxClientCrosshairFreePosition {
@@ -25,25 +24,5 @@ object ASPxClientCrosshairFreePosition {
     val __obj = js.Dynamic.literal(dockPosition = dockPosition.asInstanceOf[js.Any], offsetX = offsetX.asInstanceOf[js.Any], offsetY = offsetY.asInstanceOf[js.Any], paneID = paneID.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientCrosshairFreePosition]
   }
-  @scala.inline
-  implicit class ASPxClientCrosshairFreePositionOps[Self <: ASPxClientCrosshairFreePosition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDockPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaneID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paneID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

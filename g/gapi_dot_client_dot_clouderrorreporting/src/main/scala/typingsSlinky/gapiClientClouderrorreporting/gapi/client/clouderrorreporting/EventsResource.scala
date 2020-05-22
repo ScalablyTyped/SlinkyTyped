@@ -7,10 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventsResource extends js.Object {
   /** Lists the specified events. */
-  def list(request: Accesstoken): Request[ListEventsResponse] = js.native
+  def list(request: Accesstoken): Request[ListEventsResponse]
   /**
     * Report an individual error event.
     *
@@ -21,7 +20,7 @@ trait EventsResource extends js.Object {
     * a `key` parameter. For example:
     * <pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456</pre>
     */
-  def report(request: Alt): Request[js.Object] = js.native
+  def report(request: Alt): Request[js.Object]
 }
 
 object EventsResource {
@@ -30,25 +29,5 @@ object EventsResource {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list), report = js.Any.fromFunction1(report))
     __obj.asInstanceOf[EventsResource]
   }
-  @scala.inline
-  implicit class EventsResourceOps[Self <: EventsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withList(value: Accesstoken => Request[ListEventsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReport(value: Alt => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("report")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

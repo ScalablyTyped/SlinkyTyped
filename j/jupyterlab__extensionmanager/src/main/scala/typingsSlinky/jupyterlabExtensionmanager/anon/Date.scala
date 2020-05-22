@@ -6,44 +6,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Date extends js.Object {
   /**
     * Timestamp of release(?).
     */
-  var date: String = js.native
+  var date: String
   /**
     * Description as listed in package.json.
     */
-  var description: String = js.native
+  var description: String
   /**
     * Package keywords.
     */
-  var keywords: js.Array[String] = js.native
+  var keywords: js.Array[String]
   /**
     * Various metadata links for the package.
     */
-  var links: StringDictionary[String] = js.native
+  var links: StringDictionary[String]
   /**
     * Maintainer list per package.json.
     */
-  var maintainers: js.Array[IPerson] = js.native
+  var maintainers: js.Array[IPerson]
   /**
     * The package name.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Metadata about user who published the release.
     */
-  var publisher: IPerson = js.native
+  var publisher: IPerson
   /**
     * The scope of the package (e.g. jupyterlab for @jupyterlab/services).
     */
-  var scope: String = js.native
+  var scope: String
   /**
     * Version number.
     */
-  var version: String = js.native
+  var version: String
 }
 
 object Date {
@@ -62,67 +61,5 @@ object Date {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], keywords = keywords.asInstanceOf[js.Any], links = links.asInstanceOf[js.Any], maintainers = maintainers.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], publisher = publisher.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Date]
   }
-  @scala.inline
-  implicit class DateOps[Self <: Date] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeywords(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinks(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaintainers(value: js.Array[IPerson]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublisher(value: IPerson): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

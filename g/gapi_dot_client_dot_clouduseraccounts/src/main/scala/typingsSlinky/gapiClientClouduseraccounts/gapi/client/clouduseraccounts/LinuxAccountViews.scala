@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LinuxAccountViews extends js.Object {
   /** [Output Only] A list of all groups within a project. */
-  var groupViews: js.UndefOr[js.Array[LinuxGroupView]] = js.native
+  var groupViews: js.UndefOr[js.Array[LinuxGroupView]] = js.undefined
   /** [Output Only] Type of the resource. Always clouduseraccounts#linuxAccountViews for Linux resources. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** [Output Only] A list of all users within a project. */
-  var userViews: js.UndefOr[js.Array[LinuxUserView]] = js.native
+  var userViews: js.UndefOr[js.Array[LinuxUserView]] = js.undefined
 }
 
 object LinuxAccountViews {
   @scala.inline
-  def apply(): LinuxAccountViews = {
+  def apply(
+    groupViews: js.Array[LinuxGroupView] = null,
+    kind: String = null,
+    userViews: js.Array[LinuxUserView] = null
+  ): LinuxAccountViews = {
     val __obj = js.Dynamic.literal()
+    if (groupViews != null) __obj.updateDynamic("groupViews")(groupViews.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (userViews != null) __obj.updateDynamic("userViews")(userViews.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinuxAccountViews]
   }
-  @scala.inline
-  implicit class LinuxAccountViewsOps[Self <: LinuxAccountViews] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupViews(value: js.Array[LinuxGroupView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupViews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupViews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupViews")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserViews(value: js.Array[LinuxUserView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userViews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserViews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userViews")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

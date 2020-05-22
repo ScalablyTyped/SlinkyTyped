@@ -16,6 +16,7 @@ package object Handlebars {
     /* options */ js.UndefOr[typingsSlinky.handlebars.Handlebars.HelperOptions], 
     js.Any
   ]
+  type Template[T] = typingsSlinky.handlebars.Handlebars.TemplateDelegate[T] | java.lang.String
   type TemplateDelegate[T] = js.Function2[
     /* context */ T, 
     /* options */ js.UndefOr[typingsSlinky.handlebars.Handlebars.RuntimeOptions], 

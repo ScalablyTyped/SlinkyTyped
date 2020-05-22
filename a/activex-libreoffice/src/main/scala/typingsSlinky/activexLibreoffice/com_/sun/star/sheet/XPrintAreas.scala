@@ -10,48 +10,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents a sheet which has print areas. */
-@js.native
 trait XPrintAreas extends XInterface {
   /** returns a sequence containing all print areas of the sheet. */
-  var PrintAreas: SafeArray[CellRangeAddress] = js.native
+  var PrintAreas: SafeArray[CellRangeAddress]
   /** returns, whether the title columns are repeated on all subsequent print pages to the right. */
-  var PrintTitleColumns: Boolean = js.native
+  var PrintTitleColumns: Boolean
   /** returns, whether the title rows are repeated on all subsequent print pages to the bottom. */
-  var PrintTitleRows: Boolean = js.native
+  var PrintTitleRows: Boolean
   /**
     * returns the range that is specified as title columns range.
     *
     * Title columns can be automatically repeated on all subsequent print pages to the right, using {@link XPrintAreas.setPrintTitleColumns()} .
     * @returns the range of columns that is specified as title columns range.
     */
-  var TitleColumns: CellRangeAddress = js.native
+  var TitleColumns: CellRangeAddress
   /**
     * returns the range that is specified as title rows range.
     *
     * Title rows can be automatically repeated on all subsequent print pages to the bottom, using {@link XPrintAreas.setPrintTitleRows()} .
     * @returns the range of rows that is specified as title rows range.
     */
-  var TitleRows: CellRangeAddress = js.native
+  var TitleRows: CellRangeAddress
   /** returns a sequence containing all print areas of the sheet. */
-  def getPrintAreas(): SafeArray[CellRangeAddress] = js.native
+  def getPrintAreas(): SafeArray[CellRangeAddress]
   /** returns, whether the title columns are repeated on all subsequent print pages to the right. */
-  def getPrintTitleColumns(): Boolean = js.native
+  def getPrintTitleColumns(): Boolean
   /** returns, whether the title rows are repeated on all subsequent print pages to the bottom. */
-  def getPrintTitleRows(): Boolean = js.native
+  def getPrintTitleRows(): Boolean
   /**
     * returns the range that is specified as title columns range.
     *
     * Title columns can be automatically repeated on all subsequent print pages to the right, using {@link XPrintAreas.setPrintTitleColumns()} .
     * @returns the range of columns that is specified as title columns range.
     */
-  def getTitleColumns(): CellRangeAddress = js.native
+  def getTitleColumns(): CellRangeAddress
   /**
     * returns the range that is specified as title rows range.
     *
     * Title rows can be automatically repeated on all subsequent print pages to the bottom, using {@link XPrintAreas.setPrintTitleRows()} .
     * @returns the range of rows that is specified as title rows range.
     */
-  def getTitleRows(): CellRangeAddress = js.native
+  def getTitleRows(): CellRangeAddress
   /**
     * sets the print areas of the sheet.
     *
@@ -59,17 +58,17 @@ trait XPrintAreas extends XInterface {
     * areas are not printed.
     * @param aPrintAreas a sequence containing all print areas for this sheet.
     */
-  def setPrintAreas(aPrintAreas: SeqEquiv[CellRangeAddress]): Unit = js.native
+  def setPrintAreas(aPrintAreas: SeqEquiv[CellRangeAddress]): Unit
   /**
     * specifies whether the title columns are repeated on all subsequent print pages to the right.
     * @param bPrintTitleColumns if `TRUE` , title columns are repeated on each page.
     */
-  def setPrintTitleColumns(bPrintTitleColumns: Boolean): Unit = js.native
+  def setPrintTitleColumns(bPrintTitleColumns: Boolean): Unit
   /**
     * specifies whether the title rows are repeated on all subsequent print pages to the bottom.
     * @param bPrintTitleRows if `TRUE` , title rows are repeated on each page.
     */
-  def setPrintTitleRows(bPrintTitleRows: Boolean): Unit = js.native
+  def setPrintTitleRows(bPrintTitleRows: Boolean): Unit
   /**
     * specifies a range of columns as title columns range.
     *
@@ -78,7 +77,7 @@ trait XPrintAreas extends XInterface {
     * Title columns can be automatically repeated on all subsequent print pages to the right, using {@link XPrintAreas.setPrintTitleColumns()} .
     * @param aTitleColumns the title columns range.
     */
-  def setTitleColumns(aTitleColumns: CellRangeAddress): Unit = js.native
+  def setTitleColumns(aTitleColumns: CellRangeAddress): Unit
   /**
     * specifies a range of rows as title rows range.
     *
@@ -87,7 +86,7 @@ trait XPrintAreas extends XInterface {
     * Title rows can be automatically repeated on all subsequent print pages to the bottom, using {@link XPrintAreas.setPrintTitleRows()} .
     * @param aTitleRows the title rows range.
     */
-  def setTitleRows(aTitleRows: CellRangeAddress): Unit = js.native
+  def setTitleRows(aTitleRows: CellRangeAddress): Unit
 }
 
 object XPrintAreas {
@@ -115,103 +114,5 @@ object XPrintAreas {
     val __obj = js.Dynamic.literal(PrintAreas = PrintAreas.asInstanceOf[js.Any], PrintTitleColumns = PrintTitleColumns.asInstanceOf[js.Any], PrintTitleRows = PrintTitleRows.asInstanceOf[js.Any], TitleColumns = TitleColumns.asInstanceOf[js.Any], TitleRows = TitleRows.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getPrintAreas = js.Any.fromFunction0(getPrintAreas), getPrintTitleColumns = js.Any.fromFunction0(getPrintTitleColumns), getPrintTitleRows = js.Any.fromFunction0(getPrintTitleRows), getTitleColumns = js.Any.fromFunction0(getTitleColumns), getTitleRows = js.Any.fromFunction0(getTitleRows), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setPrintAreas = js.Any.fromFunction1(setPrintAreas), setPrintTitleColumns = js.Any.fromFunction1(setPrintTitleColumns), setPrintTitleRows = js.Any.fromFunction1(setPrintTitleRows), setTitleColumns = js.Any.fromFunction1(setTitleColumns), setTitleRows = js.Any.fromFunction1(setTitleRows))
     __obj.asInstanceOf[XPrintAreas]
   }
-  @scala.inline
-  implicit class XPrintAreasOps[Self <: XPrintAreas] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrintAreas(value: SafeArray[CellRangeAddress]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrintAreas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrintTitleColumns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrintTitleColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrintTitleRows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrintTitleRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitleColumns(value: CellRangeAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TitleColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitleRows(value: CellRangeAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TitleRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetPrintAreas(value: () => SafeArray[CellRangeAddress]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrintAreas")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPrintTitleColumns(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrintTitleColumns")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPrintTitleRows(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrintTitleRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTitleColumns(value: () => CellRangeAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitleColumns")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTitleRows(value: () => CellRangeAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitleRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetPrintAreas(value: SeqEquiv[CellRangeAddress] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrintAreas")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPrintTitleColumns(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrintTitleColumns")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPrintTitleRows(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrintTitleRows")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTitleColumns(value: CellRangeAddress => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitleColumns")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTitleRows(value: CellRangeAddress => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitleRows")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

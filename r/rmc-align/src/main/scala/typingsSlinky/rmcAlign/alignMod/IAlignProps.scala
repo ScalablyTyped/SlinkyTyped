@@ -4,95 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAlignProps extends js.Object {
-  var childrenProps: js.UndefOr[js.Object] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var monitorBufferTime: js.UndefOr[Double] = js.native
-  var monitorWindowResize: js.UndefOr[Boolean] = js.native
-  var onAlign: js.UndefOr[js.Function2[/* source */ js.Any, /* align */ js.Any, Unit]] = js.native
-  def target(): Unit = js.native
+  var childrenProps: js.UndefOr[js.Object] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var monitorBufferTime: js.UndefOr[Double] = js.undefined
+  var monitorWindowResize: js.UndefOr[Boolean] = js.undefined
+  var onAlign: js.UndefOr[js.Function2[/* source */ js.Any, /* align */ js.Any, Unit]] = js.undefined
+  def target(): Unit
 }
 
 object IAlignProps {
   @scala.inline
-  def apply(target: () => Unit): IAlignProps = {
+  def apply(
+    target: () => Unit,
+    childrenProps: js.Object = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    monitorBufferTime: js.UndefOr[Double] = js.undefined,
+    monitorWindowResize: js.UndefOr[Boolean] = js.undefined,
+    onAlign: (/* source */ js.Any, /* align */ js.Any) => Unit = null
+  ): IAlignProps = {
     val __obj = js.Dynamic.literal(target = js.Any.fromFunction0(target))
+    if (childrenProps != null) __obj.updateDynamic("childrenProps")(childrenProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(monitorBufferTime)) __obj.updateDynamic("monitorBufferTime")(monitorBufferTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(monitorWindowResize)) __obj.updateDynamic("monitorWindowResize")(monitorWindowResize.get.asInstanceOf[js.Any])
+    if (onAlign != null) __obj.updateDynamic("onAlign")(js.Any.fromFunction2(onAlign))
     __obj.asInstanceOf[IAlignProps]
   }
-  @scala.inline
-  implicit class IAlignPropsOps[Self <: IAlignProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTarget(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withChildrenProps(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildrenProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitorBufferTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorBufferTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitorBufferTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorBufferTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitorWindowResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorWindowResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitorWindowResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorWindowResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAlign(value: (/* source */ js.Any, /* align */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlign")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlign")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

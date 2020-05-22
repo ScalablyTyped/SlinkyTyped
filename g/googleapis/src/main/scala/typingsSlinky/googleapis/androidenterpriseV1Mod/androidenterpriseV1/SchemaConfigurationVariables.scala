@@ -29,53 +29,12 @@ trait SchemaConfigurationVariables extends js.Object {
 
 object SchemaConfigurationVariables {
   @scala.inline
-  def apply(): SchemaConfigurationVariables = {
+  def apply(kind: String = null, mcmId: String = null, variableSet: js.Array[SchemaVariableSet] = null): SchemaConfigurationVariables = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (mcmId != null) __obj.updateDynamic("mcmId")(mcmId.asInstanceOf[js.Any])
+    if (variableSet != null) __obj.updateDynamic("variableSet")(variableSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConfigurationVariables]
   }
-  @scala.inline
-  implicit class SchemaConfigurationVariablesOps[Self <: SchemaConfigurationVariables] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMcmId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mcmId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMcmId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mcmId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableSet(value: js.Array[SchemaVariableSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariableSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

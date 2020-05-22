@@ -25,41 +25,14 @@ trait SchemaGoogleCloudServicebrokerV1beta1ListBrokersResponse extends js.Object
 
 object SchemaGoogleCloudServicebrokerV1beta1ListBrokersResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudServicebrokerV1beta1ListBrokersResponse = {
+  def apply(
+    brokers: js.Array[SchemaGoogleCloudServicebrokerV1beta1Broker] = null,
+    nextPageToken: String = null
+  ): SchemaGoogleCloudServicebrokerV1beta1ListBrokersResponse = {
     val __obj = js.Dynamic.literal()
+    if (brokers != null) __obj.updateDynamic("brokers")(brokers.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudServicebrokerV1beta1ListBrokersResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudServicebrokerV1beta1ListBrokersResponseOps[Self <: SchemaGoogleCloudServicebrokerV1beta1ListBrokersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrokers(value: js.Array[SchemaGoogleCloudServicebrokerV1beta1Broker]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brokers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrokers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brokers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

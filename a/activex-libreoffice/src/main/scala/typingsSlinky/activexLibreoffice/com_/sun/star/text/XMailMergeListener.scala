@@ -14,13 +14,12 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.text.MailMergeEvent
   * @since OOo 1.1.2
   */
-@js.native
 trait XMailMergeListener extends XInterface {
   /**
     * Notifies the listener about mail merge events.
     * @param aEvent The Event containing the model of the document to be merged that is send to the listener.
     */
-  def notifyMailMergeEvent(aEvent: MailMergeEvent): Unit = js.native
+  def notifyMailMergeEvent(aEvent: MailMergeEvent): Unit
 }
 
 object XMailMergeListener {
@@ -34,19 +33,5 @@ object XMailMergeListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), notifyMailMergeEvent = js.Any.fromFunction1(notifyMailMergeEvent), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XMailMergeListener]
   }
-  @scala.inline
-  implicit class XMailMergeListenerOps[Self <: XMailMergeListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotifyMailMergeEvent(value: MailMergeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyMailMergeEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

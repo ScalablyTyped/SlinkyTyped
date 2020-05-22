@@ -17,65 +17,18 @@ trait SchemaManagedZoneOperationsListResponse extends js.Object {
 
 object SchemaManagedZoneOperationsListResponse {
   @scala.inline
-  def apply(): SchemaManagedZoneOperationsListResponse = {
+  def apply(
+    header: SchemaResponseHeader = null,
+    kind: String = null,
+    nextPageToken: String = null,
+    operations: js.Array[SchemaOperation] = null
+  ): SchemaManagedZoneOperationsListResponse = {
     val __obj = js.Dynamic.literal()
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (operations != null) __obj.updateDynamic("operations")(operations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedZoneOperationsListResponse]
   }
-  @scala.inline
-  implicit class SchemaManagedZoneOperationsListResponseOps[Self <: SchemaManagedZoneOperationsListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeader(value: SchemaResponseHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperations(value: js.Array[SchemaOperation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

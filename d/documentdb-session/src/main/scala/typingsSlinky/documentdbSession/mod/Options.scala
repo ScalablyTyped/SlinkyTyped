@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * The ID of the collection where the session data should be stored.
@@ -13,14 +12,14 @@ trait Options extends js.Object {
     *
     * @default `"sessions"`
     */
-  var collection: js.UndefOr[String] = js.native
+  var collection: js.UndefOr[String] = js.undefined
   /**
     * The ID of the database where the session data should be stored.
     * If the database does not exist, it will be creaed when the session store initializes.
     *
     * @default `"sessionstore"`
     */
-  var database: js.UndefOr[String] = js.native
+  var database: js.UndefOr[String] = js.undefined
   /**
     * By default, `documentdb-session` sets a `"type"` attribute on each session document with a value of `"session"`,
     * to distinguish session documents from other documents in the collection.
@@ -29,18 +28,18 @@ trait Options extends js.Object {
     *
     * @default `{ type: "session" }`
     */
-  var discriminator: js.UndefOr[js.Object] = js.native
+  var discriminator: js.UndefOr[js.Object] = js.undefined
   /**
     * The URL / hostname of your DocumentDB database account, usually of the form `https://mydbaccount.documents.azure.com:443/`.
     * You can also provide this in an environment variable, (`DOCUMENTDB_URL`) instead.
     */
-  var host: String = js.native
+  var host: String
   /**
     * The primary key for your DocumentDB account.
     * A primary key is required because `documentdb-session` may create a new database for your account, if none exists.
     * You can also provide this in an environment variable (`DOCUMENTDB_KEY`) instead.
     */
-  var key: String = js.native
+  var key: String
   /**
     * The TTL (time-to-live or expiration time) for your sessions, in seconds.
     * After this time has elapsed since the last change to the session data, the session will be deleted.
@@ -48,82 +47,25 @@ trait Options extends js.Object {
     * See more on [**Configuring TTL**](https://github.com/dwhieb/documentdb-session#configuring-ttl-time-to-live-or-expiration-time).
     * *Enabling TTL is strongly recommended.*
     */
-  var ttl: js.UndefOr[Double] = js.native
+  var ttl: js.UndefOr[Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(host: String, key: String): Options = {
+  def apply(
+    host: String,
+    key: String,
+    collection: String = null,
+    database: String = null,
+    discriminator: js.Object = null,
+    ttl: js.UndefOr[Double] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any])
+    if (collection != null) __obj.updateDynamic("collection")(collection.asInstanceOf[js.Any])
+    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
+    if (discriminator != null) __obj.updateDynamic("discriminator")(discriminator.asInstanceOf[js.Any])
+    if (!js.isUndefined(ttl)) __obj.updateDynamic("ttl")(ttl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCollection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiscriminator(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discriminator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscriminator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discriminator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTtl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

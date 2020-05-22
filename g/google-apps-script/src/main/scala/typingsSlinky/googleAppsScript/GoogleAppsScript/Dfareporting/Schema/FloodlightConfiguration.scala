@@ -4,257 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FloodlightConfiguration extends js.Object {
-  var accountId: js.UndefOr[String] = js.native
-  var advertiserId: js.UndefOr[String] = js.native
-  var advertiserIdDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var analyticsDataSharingEnabled: js.UndefOr[Boolean] = js.native
-  var customViewabilityMetric: js.UndefOr[CustomViewabilityMetric] = js.native
-  var exposureToConversionEnabled: js.UndefOr[Boolean] = js.native
-  var firstDayOfWeek: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var idDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var inAppAttributionTrackingEnabled: js.UndefOr[Boolean] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var lookbackConfiguration: js.UndefOr[LookbackConfiguration] = js.native
-  var naturalSearchConversionAttributionOption: js.UndefOr[String] = js.native
-  var omnitureSettings: js.UndefOr[OmnitureSettings] = js.native
-  var subaccountId: js.UndefOr[String] = js.native
-  var tagSettings: js.UndefOr[TagSettings] = js.native
-  var thirdPartyAuthenticationTokens: js.UndefOr[js.Array[ThirdPartyAuthenticationToken]] = js.native
-  var userDefinedVariableConfigurations: js.UndefOr[js.Array[UserDefinedVariableConfiguration]] = js.native
+  var accountId: js.UndefOr[String] = js.undefined
+  var advertiserId: js.UndefOr[String] = js.undefined
+  var advertiserIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var analyticsDataSharingEnabled: js.UndefOr[Boolean] = js.undefined
+  var customViewabilityMetric: js.UndefOr[CustomViewabilityMetric] = js.undefined
+  var exposureToConversionEnabled: js.UndefOr[Boolean] = js.undefined
+  var firstDayOfWeek: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var idDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var inAppAttributionTrackingEnabled: js.UndefOr[Boolean] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var lookbackConfiguration: js.UndefOr[LookbackConfiguration] = js.undefined
+  var naturalSearchConversionAttributionOption: js.UndefOr[String] = js.undefined
+  var omnitureSettings: js.UndefOr[OmnitureSettings] = js.undefined
+  var subaccountId: js.UndefOr[String] = js.undefined
+  var tagSettings: js.UndefOr[TagSettings] = js.undefined
+  var thirdPartyAuthenticationTokens: js.UndefOr[js.Array[ThirdPartyAuthenticationToken]] = js.undefined
+  var userDefinedVariableConfigurations: js.UndefOr[js.Array[UserDefinedVariableConfiguration]] = js.undefined
 }
 
 object FloodlightConfiguration {
   @scala.inline
-  def apply(): FloodlightConfiguration = {
+  def apply(
+    accountId: String = null,
+    advertiserId: String = null,
+    advertiserIdDimensionValue: DimensionValue = null,
+    analyticsDataSharingEnabled: js.UndefOr[Boolean] = js.undefined,
+    customViewabilityMetric: CustomViewabilityMetric = null,
+    exposureToConversionEnabled: js.UndefOr[Boolean] = js.undefined,
+    firstDayOfWeek: String = null,
+    id: String = null,
+    idDimensionValue: DimensionValue = null,
+    inAppAttributionTrackingEnabled: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    lookbackConfiguration: LookbackConfiguration = null,
+    naturalSearchConversionAttributionOption: String = null,
+    omnitureSettings: OmnitureSettings = null,
+    subaccountId: String = null,
+    tagSettings: TagSettings = null,
+    thirdPartyAuthenticationTokens: js.Array[ThirdPartyAuthenticationToken] = null,
+    userDefinedVariableConfigurations: js.Array[UserDefinedVariableConfiguration] = null
+  ): FloodlightConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (advertiserId != null) __obj.updateDynamic("advertiserId")(advertiserId.asInstanceOf[js.Any])
+    if (advertiserIdDimensionValue != null) __obj.updateDynamic("advertiserIdDimensionValue")(advertiserIdDimensionValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(analyticsDataSharingEnabled)) __obj.updateDynamic("analyticsDataSharingEnabled")(analyticsDataSharingEnabled.get.asInstanceOf[js.Any])
+    if (customViewabilityMetric != null) __obj.updateDynamic("customViewabilityMetric")(customViewabilityMetric.asInstanceOf[js.Any])
+    if (!js.isUndefined(exposureToConversionEnabled)) __obj.updateDynamic("exposureToConversionEnabled")(exposureToConversionEnabled.get.asInstanceOf[js.Any])
+    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (idDimensionValue != null) __obj.updateDynamic("idDimensionValue")(idDimensionValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(inAppAttributionTrackingEnabled)) __obj.updateDynamic("inAppAttributionTrackingEnabled")(inAppAttributionTrackingEnabled.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (lookbackConfiguration != null) __obj.updateDynamic("lookbackConfiguration")(lookbackConfiguration.asInstanceOf[js.Any])
+    if (naturalSearchConversionAttributionOption != null) __obj.updateDynamic("naturalSearchConversionAttributionOption")(naturalSearchConversionAttributionOption.asInstanceOf[js.Any])
+    if (omnitureSettings != null) __obj.updateDynamic("omnitureSettings")(omnitureSettings.asInstanceOf[js.Any])
+    if (subaccountId != null) __obj.updateDynamic("subaccountId")(subaccountId.asInstanceOf[js.Any])
+    if (tagSettings != null) __obj.updateDynamic("tagSettings")(tagSettings.asInstanceOf[js.Any])
+    if (thirdPartyAuthenticationTokens != null) __obj.updateDynamic("thirdPartyAuthenticationTokens")(thirdPartyAuthenticationTokens.asInstanceOf[js.Any])
+    if (userDefinedVariableConfigurations != null) __obj.updateDynamic("userDefinedVariableConfigurations")(userDefinedVariableConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[FloodlightConfiguration]
   }
-  @scala.inline
-  implicit class FloodlightConfigurationOps[Self <: FloodlightConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertiserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertiserIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyticsDataSharingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsDataSharingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyticsDataSharingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsDataSharingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomViewabilityMetric(value: CustomViewabilityMetric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customViewabilityMetric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomViewabilityMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customViewabilityMetric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExposureToConversionEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureToConversionEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExposureToConversionEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureToConversionEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstDayOfWeek(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstDayOfWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInAppAttributionTrackingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inAppAttributionTrackingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInAppAttributionTrackingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inAppAttributionTrackingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookbackConfiguration(value: LookbackConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookbackConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookbackConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookbackConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNaturalSearchConversionAttributionOption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("naturalSearchConversionAttributionOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNaturalSearchConversionAttributionOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("naturalSearchConversionAttributionOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOmnitureSettings(value: OmnitureSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omnitureSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOmnitureSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omnitureSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubaccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubaccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagSettings(value: TagSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThirdPartyAuthenticationTokens(value: js.Array[ThirdPartyAuthenticationToken]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyAuthenticationTokens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThirdPartyAuthenticationTokens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyAuthenticationTokens")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDefinedVariableConfigurations(value: js.Array[UserDefinedVariableConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefinedVariableConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDefinedVariableConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefinedVariableConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

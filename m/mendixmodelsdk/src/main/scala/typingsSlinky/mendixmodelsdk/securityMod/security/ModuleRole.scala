@@ -38,6 +38,14 @@ class ModuleRole protected ()
   var model_FModuleRole: IModel = js.native
   @JSName("name")
   val name_FModuleRole: String = js.native
+  /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
   def containerAsModuleSecurity: ModuleSecurity = js.native
   def description: String = js.native
   def description(newValue: String): js.Any = js.native

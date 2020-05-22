@@ -9,13 +9,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IconContext extends js.Object {
-  var attr: js.UndefOr[SVGAttributes[SVGElement]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var color: js.UndefOr[String] = js.native
-  var size: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var attr: js.UndefOr[SVGAttributes[SVGElement]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var size: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 @JSImport("react-icons/lib/esm/iconContext", "IconContext")

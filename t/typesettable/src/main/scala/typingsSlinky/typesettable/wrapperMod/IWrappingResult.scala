@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IWrappingResult extends js.Object {
-  var noBrokeWords: Double = js.native
-  var noLines: Double = js.native
-  var originalText: String = js.native
-  var truncatedText: String = js.native
-  var wrappedText: String = js.native
+  var noBrokeWords: Double
+  var noLines: Double
+  var originalText: String
+  var truncatedText: String
+  var wrappedText: String
 }
 
 object IWrappingResult {
@@ -25,43 +24,5 @@ object IWrappingResult {
     val __obj = js.Dynamic.literal(noBrokeWords = noBrokeWords.asInstanceOf[js.Any], noLines = noLines.asInstanceOf[js.Any], originalText = originalText.asInstanceOf[js.Any], truncatedText = truncatedText.asInstanceOf[js.Any], wrappedText = wrappedText.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWrappingResult]
   }
-  @scala.inline
-  implicit class IWrappingResultOps[Self <: IWrappingResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNoBrokeWords(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noBrokeWords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoLines(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOriginalText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTruncatedText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncatedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWrappedText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -15,41 +15,11 @@ trait SdkTypes extends js.Object {
 
 object SdkTypes {
   @scala.inline
-  def apply(): SdkTypes = {
+  def apply(items: ListOfSdkType = null, position: String = null): SdkTypes = {
     val __obj = js.Dynamic.literal()
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     __obj.asInstanceOf[SdkTypes]
   }
-  @scala.inline
-  implicit class SdkTypesOps[Self <: SdkTypes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: ListOfSdkType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

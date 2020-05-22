@@ -1,5 +1,6 @@
 package typingsSlinky.officeJsPreview.global.Excel
 
+import typingsSlinky.officeJsPreview.OfficeExtension.ClientRequestContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,5 +14,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ChartDataLabel")
 @js.native
 class ChartDataLabel ()
-  extends typingsSlinky.officeJsPreview.Excel.ChartDataLabel
+  extends typingsSlinky.officeJsPreview.Excel.ChartDataLabel {
+  /** The request context associated with the object */
+  /* CompleteClass */
+  override var context: ClientRequestContext = js.native
+  /**
+    *  Returns a boolean value for whether the corresponding object is a null object. You must call `context.sync()` before reading the
+    * isNullObject property.
+    */
+  /* CompleteClass */
+  override var isNullObject: Boolean = js.native
+}
 

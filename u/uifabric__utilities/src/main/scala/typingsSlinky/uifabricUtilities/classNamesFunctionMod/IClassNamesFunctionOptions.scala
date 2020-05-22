@@ -4,39 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IClassNamesFunctionOptions extends js.Object {
+  /**
+    * Size of the cache. It overwrites default cache size when defined.
+    */
+  var cacheSize: js.UndefOr[Double] = js.undefined
   /**
     * Disables class caching for scenarios where styleProp parts mutate frequently.
     */
-  var disableCaching: js.UndefOr[Boolean] = js.native
+  var disableCaching: js.UndefOr[Boolean] = js.undefined
+  /**
+    * Set to true if component base styles are implemented in scss instead of css-in-js.
+    */
+  var useStaticStyles: js.UndefOr[Boolean] = js.undefined
 }
 
 object IClassNamesFunctionOptions {
   @scala.inline
-  def apply(): IClassNamesFunctionOptions = {
+  def apply(
+    cacheSize: js.UndefOr[Double] = js.undefined,
+    disableCaching: js.UndefOr[Boolean] = js.undefined,
+    useStaticStyles: js.UndefOr[Boolean] = js.undefined
+  ): IClassNamesFunctionOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cacheSize)) __obj.updateDynamic("cacheSize")(cacheSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableCaching)) __obj.updateDynamic("disableCaching")(disableCaching.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useStaticStyles)) __obj.updateDynamic("useStaticStyles")(useStaticStyles.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IClassNamesFunctionOptions]
   }
-  @scala.inline
-  implicit class IClassNamesFunctionOptionsOps[Self <: IClassNamesFunctionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableCaching(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCaching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableCaching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCaching")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

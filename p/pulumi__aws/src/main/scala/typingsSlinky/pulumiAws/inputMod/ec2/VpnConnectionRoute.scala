@@ -14,53 +14,16 @@ trait VpnConnectionRoute extends js.Object {
 
 object VpnConnectionRoute {
   @scala.inline
-  def apply(): VpnConnectionRoute = {
+  def apply(
+    destinationCidrBlock: Input[String] = null,
+    source: Input[String] = null,
+    state: Input[String] = null
+  ): VpnConnectionRoute = {
     val __obj = js.Dynamic.literal()
+    if (destinationCidrBlock != null) __obj.updateDynamic("destinationCidrBlock")(destinationCidrBlock.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpnConnectionRoute]
   }
-  @scala.inline
-  implicit class VpnConnectionRouteOps[Self <: VpnConnectionRoute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationCidrBlock(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationCidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationCidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationCidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

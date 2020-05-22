@@ -5,41 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfirmSepaDebitPaymentData extends js.Object {
   /**
     * Pass an object to confirm using data collected by an iban Element or
     * by passing data directly and to supply additional required billing
     * details:
     */
-  var payment_method: js.UndefOr[String | Sepadebit] = js.native
+  var payment_method: js.UndefOr[String | Sepadebit] = js.undefined
 }
 
 object ConfirmSepaDebitPaymentData {
   @scala.inline
-  def apply(): ConfirmSepaDebitPaymentData = {
+  def apply(payment_method: String | Sepadebit = null): ConfirmSepaDebitPaymentData = {
     val __obj = js.Dynamic.literal()
+    if (payment_method != null) __obj.updateDynamic("payment_method")(payment_method.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmSepaDebitPaymentData]
   }
-  @scala.inline
-  implicit class ConfirmSepaDebitPaymentDataOps[Self <: ConfirmSepaDebitPaymentData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPayment_method(value: String | Sepadebit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayment_method: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_method")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

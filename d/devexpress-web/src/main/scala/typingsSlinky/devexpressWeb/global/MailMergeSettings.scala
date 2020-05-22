@@ -10,5 +10,26 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MailMergeSettings")
 @js.native
 class MailMergeSettings ()
-  extends typingsSlinky.devexpressWeb.MailMergeSettings
+  extends typingsSlinky.devexpressWeb.MailMergeSettings {
+  /**
+    * Gets or sets the index of the row from which the exported range starts.
+    */
+  /* CompleteClass */
+  override var exportFrom: Double = js.native
+  /**
+    * Gets or sets the number of data rows in the exported mail-merge range.
+    */
+  /* CompleteClass */
+  override var exportRecordsCount: Double = js.native
+  /**
+    * Gets or sets the merge mode.
+    */
+  /* CompleteClass */
+  override var mergeMode: typingsSlinky.devexpressWeb.MergeMode = js.native
+  /**
+    * Specifies which data rows should be exported into a merged document.
+    */
+  /* CompleteClass */
+  override var range: typingsSlinky.devexpressWeb.MailMergeExportRange = js.native
+}
 

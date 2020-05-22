@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait JsxTagNameExpression extends js.Object
 
-object JsxTagNameExpression {
-  @scala.inline
-  implicit def apply(value: Identifier): JsxTagNameExpression = value.asInstanceOf[JsxTagNameExpression]
-  @scala.inline
-  implicit def apply(value: JsxTagNamePropertyAccess): JsxTagNameExpression = value.asInstanceOf[JsxTagNameExpression]
-  @scala.inline
-  implicit def apply(value: ThisExpression): JsxTagNameExpression = value.asInstanceOf[JsxTagNameExpression]
-}
-

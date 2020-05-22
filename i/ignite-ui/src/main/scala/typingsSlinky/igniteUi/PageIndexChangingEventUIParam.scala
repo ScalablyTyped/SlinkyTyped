@@ -4,71 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PageIndexChangingEventUIParam extends js.Object {
   /**
-  	 * Gets current page index.
-  	 */
-  var currentPageIndex: js.UndefOr[Double] = js.native
+    * Gets current page index.
+    */
+  var currentPageIndex: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets new page index.
-  	 */
-  var newPageIndex: js.UndefOr[Double] = js.native
+    * Gets new page index.
+    */
+  var newPageIndex: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets reference to GridPaging.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets reference to GridPaging.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
 }
 
 object PageIndexChangingEventUIParam {
   @scala.inline
-  def apply(): PageIndexChangingEventUIParam = {
+  def apply(
+    currentPageIndex: js.UndefOr[Double] = js.undefined,
+    newPageIndex: js.UndefOr[Double] = js.undefined,
+    owner: js.Any = null
+  ): PageIndexChangingEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(currentPageIndex)) __obj.updateDynamic("currentPageIndex")(currentPageIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(newPageIndex)) __obj.updateDynamic("newPageIndex")(newPageIndex.get.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageIndexChangingEventUIParam]
   }
-  @scala.inline
-  implicit class PageIndexChangingEventUIParamOps[Self <: PageIndexChangingEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentPageIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPageIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentPageIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPageIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewPageIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPageIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewPageIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPageIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

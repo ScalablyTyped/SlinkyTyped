@@ -19,35 +19,10 @@ trait GetRoleRequestwaiterWaite extends js.Object {
 
 object GetRoleRequestwaiterWaite {
   @scala.inline
-  def apply(RoleName: roleNameType): GetRoleRequestwaiterWaite = {
+  def apply(RoleName: roleNameType, $waiter: WaiterConfiguration = null): GetRoleRequestwaiterWaite = {
     val __obj = js.Dynamic.literal(RoleName = RoleName.asInstanceOf[js.Any])
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRoleRequestwaiterWaite]
   }
-  @scala.inline
-  implicit class GetRoleRequestwaiterWaiteOps[Self <: GetRoleRequestwaiterWaite] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleName(value: roleNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

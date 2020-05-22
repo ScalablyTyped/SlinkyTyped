@@ -6,24 +6,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectorFormat extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val BeginConnected: MsoTriState = js.native
-  val BeginConnectedShape: Shape = js.native
-  val BeginConnectionSite: Double = js.native
-  val Creator: Double = js.native
-  val EndConnected: MsoTriState = js.native
-  val EndConnectedShape: Shape = js.native
-  val EndConnectionSite: Double = js.native
-  val Parent: js.Any = js.native
-  var Type: MsoConnectorType = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val BeginConnected: MsoTriState
+  val BeginConnectedShape: Shape
+  val BeginConnectionSite: Double
+  val Creator: Double
+  val EndConnected: MsoTriState
+  val EndConnectedShape: Shape
+  val EndConnectionSite: Double
+  val Parent: js.Any
+  var Type: MsoConnectorType
   @JSName("Word.ConnectorFormat_typekey")
-  var WordDotConnectorFormat_typekey: ConnectorFormat = js.native
-  def BeginConnect(ConnectedShape: Shape, ConnectionSite: Double): Unit = js.native
-  def BeginDisconnect(): Unit = js.native
-  def EndConnect(ConnectedShape: Shape, ConnectionSite: Double): Unit = js.native
-  def EndDisconnect(): Unit = js.native
+  var WordDotConnectorFormat_typekey: ConnectorFormat
+  def BeginConnect(ConnectedShape: Shape, ConnectionSite: Double): Unit
+  def BeginDisconnect(): Unit
+  def EndConnect(ConnectedShape: Shape, ConnectionSite: Double): Unit
+  def EndDisconnect(): Unit
 }
 
 object ConnectorFormat {
@@ -49,103 +48,5 @@ object ConnectorFormat {
     __obj.updateDynamic("Word.ConnectorFormat_typekey")(WordDotConnectorFormat_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectorFormat]
   }
-  @scala.inline
-  implicit class ConnectorFormatOps[Self <: ConnectorFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeginConnect(value: (Shape, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginConnect")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withBeginConnected(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginConnected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeginConnectedShape(value: Shape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginConnectedShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeginConnectionSite(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginConnectionSite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeginDisconnect(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginDisconnect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndConnect(value: (Shape, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndConnect")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withEndConnected(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndConnected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndConnectedShape(value: Shape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndConnectedShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndConnectionSite(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndConnectionSite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndDisconnect(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndDisconnect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: MsoConnectorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotConnectorFormat_typekey(value: ConnectorFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.ConnectorFormat_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

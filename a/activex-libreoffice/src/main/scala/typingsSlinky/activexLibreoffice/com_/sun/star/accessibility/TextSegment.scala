@@ -20,17 +20,16 @@ import scala.scalajs.js.annotation._
   * @see XAccessibleText
   * @since OOo 1.1.2
   */
-@js.native
 trait TextSegment extends js.Object {
   /** Index of the character directly behind the last character of the text segment represented by this structure. The index refers to the enclosing text. */
-  var SegmentEnd: Double = js.native
+  var SegmentEnd: Double
   /** Index of the first character of the text segment represented by this structure. The index refers to the enclosing text. */
-  var SegmentStart: Double = js.native
+  var SegmentStart: Double
   /**
     * A copy of the text segment of the enclosing text delimited by the text indices {@link TextSegment.SegmentStart} and {@link TextSegment.SegmentEnd} .
     * Modifying it does not alter the enclosing text.
     */
-  var SegmentText: String = js.native
+  var SegmentText: String
 }
 
 object TextSegment {
@@ -39,31 +38,5 @@ object TextSegment {
     val __obj = js.Dynamic.literal(SegmentEnd = SegmentEnd.asInstanceOf[js.Any], SegmentStart = SegmentStart.asInstanceOf[js.Any], SegmentText = SegmentText.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextSegment]
   }
-  @scala.inline
-  implicit class TextSegmentOps[Self <: TextSegment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSegmentEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSegmentStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSegmentText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

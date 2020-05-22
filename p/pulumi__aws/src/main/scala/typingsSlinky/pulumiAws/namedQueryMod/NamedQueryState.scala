@@ -31,77 +31,20 @@ trait NamedQueryState extends js.Object {
 
 object NamedQueryState {
   @scala.inline
-  def apply(): NamedQueryState = {
+  def apply(
+    database: Input[String] = null,
+    description: Input[String] = null,
+    name: Input[String] = null,
+    query: Input[String] = null,
+    workgroup: Input[String] = null
+  ): NamedQueryState = {
     val __obj = js.Dynamic.literal()
+    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (workgroup != null) __obj.updateDynamic("workgroup")(workgroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[NamedQueryState]
   }
-  @scala.inline
-  implicit class NamedQueryStateOps[Self <: NamedQueryState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabase(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkgroup(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkgroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workgroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

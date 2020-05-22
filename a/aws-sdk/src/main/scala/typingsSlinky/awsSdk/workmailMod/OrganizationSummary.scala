@@ -26,65 +26,18 @@ trait OrganizationSummary extends js.Object {
 
 object OrganizationSummary {
   @scala.inline
-  def apply(): OrganizationSummary = {
+  def apply(
+    Alias: OrganizationName = null,
+    ErrorMessage: String = null,
+    OrganizationId: OrganizationId = null,
+    State: String = null
+  ): OrganizationSummary = {
     val __obj = js.Dynamic.literal()
+    if (Alias != null) __obj.updateDynamic("Alias")(Alias.asInstanceOf[js.Any])
+    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
+    if (OrganizationId != null) __obj.updateDynamic("OrganizationId")(OrganizationId.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrganizationSummary]
   }
-  @scala.inline
-  implicit class OrganizationSummaryOps[Self <: OrganizationSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: OrganizationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizationId(value: OrganizationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

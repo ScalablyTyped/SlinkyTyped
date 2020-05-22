@@ -26,65 +26,18 @@ trait ActionTypeSettings extends js.Object {
 
 object ActionTypeSettings {
   @scala.inline
-  def apply(): ActionTypeSettings = {
+  def apply(
+    entityUrlTemplate: UrlTemplate = null,
+    executionUrlTemplate: UrlTemplate = null,
+    revisionUrlTemplate: UrlTemplate = null,
+    thirdPartyConfigurationUrl: Url = null
+  ): ActionTypeSettings = {
     val __obj = js.Dynamic.literal()
+    if (entityUrlTemplate != null) __obj.updateDynamic("entityUrlTemplate")(entityUrlTemplate.asInstanceOf[js.Any])
+    if (executionUrlTemplate != null) __obj.updateDynamic("executionUrlTemplate")(executionUrlTemplate.asInstanceOf[js.Any])
+    if (revisionUrlTemplate != null) __obj.updateDynamic("revisionUrlTemplate")(revisionUrlTemplate.asInstanceOf[js.Any])
+    if (thirdPartyConfigurationUrl != null) __obj.updateDynamic("thirdPartyConfigurationUrl")(thirdPartyConfigurationUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionTypeSettings]
   }
-  @scala.inline
-  implicit class ActionTypeSettingsOps[Self <: ActionTypeSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntityUrlTemplate(value: UrlTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityUrlTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityUrlTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityUrlTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionUrlTemplate(value: UrlTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionUrlTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionUrlTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionUrlTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionUrlTemplate(value: UrlTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionUrlTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionUrlTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionUrlTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThirdPartyConfigurationUrl(value: Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyConfigurationUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThirdPartyConfigurationUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyConfigurationUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

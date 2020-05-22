@@ -7,12 +7,6 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Typeoffutimes extends js.Object {
-  /**
-    * Asynchronously change file timestamps of the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    * @param atime The last access time. If a string is provided, it will be coerced to number.
-    * @param mtime The last modified time. If a string is provided, it will be coerced to number.
-    */
   def apply(fd: Double, atime: String, mtime: String, callback: NoParamCallback): Unit = js.native
   def apply(fd: Double, atime: String, mtime: Double, callback: NoParamCallback): Unit = js.native
   def apply(fd: Double, atime: String, mtime: js.Date, callback: NoParamCallback): Unit = js.native

@@ -7,16 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NextRelease extends LastRelease {
   /**
-  		 * The release notes of the next release.
-  		 */
-  var notes: String = js.native
+    * The release notes of the next release.
+    */
+  var notes: String
   /**
-  		 * The semver type of the release.
-  		 */
-  var `type`: patch | minor | major = js.native
+    * The semver type of the release.
+    */
+  var `type`: patch | minor | major
 }
 
 object NextRelease {
@@ -26,25 +25,5 @@ object NextRelease {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NextRelease]
   }
-  @scala.inline
-  implicit class NextReleaseOps[Self <: NextRelease] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: patch | minor | major): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RadioGroupState extends js.Object {
-  var prevPropValue: js.Any = js.native
-  var value: js.Any = js.native
+  var prevPropValue: js.Any
+  var value: js.Any
 }
 
 object RadioGroupState {
@@ -16,25 +15,5 @@ object RadioGroupState {
     val __obj = js.Dynamic.literal(prevPropValue = prevPropValue.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadioGroupState]
   }
-  @scala.inline
-  implicit class RadioGroupStateOps[Self <: RadioGroupState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrevPropValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevPropValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   *
   * To control the access rights of users, there is the possibility to implement objects like users and groups.
   */
-@js.native
 trait DatabaseDefinition
   extends XTablesSupplier
      with XViewsSupplier

@@ -73,8 +73,7 @@ object mod extends js.Object {
       *
       * @returns `true` if the value is a an array, `false` otherwise.
       */
-    def isArray(value: JSONValue): /* is @phosphor/coreutils.@phosphor/coreutils/lib/json.JSONArray */ Boolean = js.native
-    def isArray(value: ReadonlyJSONValue): /* is @phosphor/coreutils.@phosphor/coreutils/lib/json.ReadonlyJSONArray */ Boolean = js.native
+    def isArray(value: JSONValue | ReadonlyJSONValue): /* is @phosphor/coreutils.@phosphor/coreutils/lib/json.JSONArray */ Boolean = js.native
     /**
       * Test whether a JSON value is an object.
       *
@@ -82,8 +81,7 @@ object mod extends js.Object {
       *
       * @returns `true` if the value is a an object, `false` otherwise.
       */
-    def isObject(value: JSONValue): /* is @phosphor/coreutils.@phosphor/coreutils/lib/json.JSONObject */ Boolean = js.native
-    def isObject(value: ReadonlyJSONValue): /* is @phosphor/coreutils.@phosphor/coreutils/lib/json.ReadonlyJSONObject */ Boolean = js.native
+    def isObject(value: JSONValue | ReadonlyJSONValue): /* is @phosphor/coreutils.@phosphor/coreutils/lib/json.JSONObject */ Boolean = js.native
     /**
       * Test whether a JSON value is a primitive.
       *

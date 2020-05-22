@@ -30,77 +30,20 @@ trait VCpuInfo extends js.Object {
 
 object VCpuInfo {
   @scala.inline
-  def apply(): VCpuInfo = {
+  def apply(
+    DefaultCores: js.UndefOr[CoreCount] = js.undefined,
+    DefaultThreadsPerCore: js.UndefOr[ThreadsPerCore] = js.undefined,
+    DefaultVCpus: js.UndefOr[VCpuCount] = js.undefined,
+    ValidCores: CoreCountList = null,
+    ValidThreadsPerCore: ThreadsPerCoreList = null
+  ): VCpuInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DefaultCores)) __obj.updateDynamic("DefaultCores")(DefaultCores.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DefaultThreadsPerCore)) __obj.updateDynamic("DefaultThreadsPerCore")(DefaultThreadsPerCore.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DefaultVCpus)) __obj.updateDynamic("DefaultVCpus")(DefaultVCpus.get.asInstanceOf[js.Any])
+    if (ValidCores != null) __obj.updateDynamic("ValidCores")(ValidCores.asInstanceOf[js.Any])
+    if (ValidThreadsPerCore != null) __obj.updateDynamic("ValidThreadsPerCore")(ValidThreadsPerCore.asInstanceOf[js.Any])
     __obj.asInstanceOf[VCpuInfo]
   }
-  @scala.inline
-  implicit class VCpuInfoOps[Self <: VCpuInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultCores(value: CoreCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultCores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultThreadsPerCore(value: ThreadsPerCore): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultThreadsPerCore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultThreadsPerCore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultThreadsPerCore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultVCpus(value: VCpuCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVCpus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultVCpus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVCpus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidCores(value: CoreCountList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidCores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidCores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidCores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidThreadsPerCore(value: ThreadsPerCoreList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidThreadsPerCore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidThreadsPerCore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidThreadsPerCore")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

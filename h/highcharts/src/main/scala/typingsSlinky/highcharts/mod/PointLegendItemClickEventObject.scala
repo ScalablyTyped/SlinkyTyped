@@ -6,24 +6,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PointLegendItemClickEventObject extends js.Object {
   /**
     * Related browser event.
     */
-  var browserEvent: PointerEvent = js.native
+  var browserEvent: PointerEvent
   /**
     * Prevent the default action of toggle the visibility of the point.
     */
-  var preventDefault: js.Function = js.native
+  var preventDefault: js.Function
   /**
     * Related point.
     */
-  var target: Point = js.native
+  var target: Point
   /**
     * Event type.
     */
-  var `type`: legendItemClick = js.native
+  var `type`: legendItemClick
 }
 
 object PointLegendItemClickEventObject {
@@ -33,37 +32,5 @@ object PointLegendItemClickEventObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointLegendItemClickEventObject]
   }
-  @scala.inline
-  implicit class PointLegendItemClickEventObjectOps[Self <: PointLegendItemClickEventObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrowserEvent(value: PointerEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreventDefault(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: legendItemClick): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

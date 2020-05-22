@@ -31,65 +31,13 @@ trait SchemaReference extends js.Object {
 
 object SchemaReference {
   @scala.inline
-  def apply(): SchemaReference = {
+  def apply(kind: String = null, referenceType: String = null, referrer: String = null, target: String = null): SchemaReference = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (referenceType != null) __obj.updateDynamic("referenceType")(referenceType.asInstanceOf[js.Any])
+    if (referrer != null) __obj.updateDynamic("referrer")(referrer.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReference]
   }
-  @scala.inline
-  implicit class SchemaReferenceOps[Self <: SchemaReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferrer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferrer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

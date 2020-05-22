@@ -30,65 +30,18 @@ trait UpdateComponentConfigurationRequest extends js.Object {
 
 object UpdateComponentConfigurationRequest {
   @scala.inline
-  def apply(ComponentName: ComponentName, ResourceGroupName: ResourceGroupName): UpdateComponentConfigurationRequest = {
+  def apply(
+    ComponentName: ComponentName,
+    ResourceGroupName: ResourceGroupName,
+    ComponentConfiguration: ComponentConfiguration = null,
+    Monitor: js.UndefOr[Monitor] = js.undefined,
+    Tier: Tier = null
+  ): UpdateComponentConfigurationRequest = {
     val __obj = js.Dynamic.literal(ComponentName = ComponentName.asInstanceOf[js.Any], ResourceGroupName = ResourceGroupName.asInstanceOf[js.Any])
+    if (ComponentConfiguration != null) __obj.updateDynamic("ComponentConfiguration")(ComponentConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(Monitor)) __obj.updateDynamic("Monitor")(Monitor.get.asInstanceOf[js.Any])
+    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateComponentConfigurationRequest]
   }
-  @scala.inline
-  implicit class UpdateComponentConfigurationRequestOps[Self <: UpdateComponentConfigurationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponentName(value: ComponentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceGroupName(value: ResourceGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentConfiguration(value: ComponentConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitor(value: Monitor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTier(value: Tier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DescribeInstanceInformationRequest extends js.Object {
   /**
-    * One or more filters. Use a filter to return a more specific list of instances. You can filter on Amazon EC2 tag. Specify tags by using a key-value mapping.
+    * One or more filters. Use a filter to return a more specific list of instances. You can filter based on tags applied to EC2 instances. Use this Filters data type instead of InstanceInformationFilterList, which is deprecated.
     */
   var Filters: js.UndefOr[InstanceInformationStringFilterList] = js.native
   /**
-    * This is a legacy method. We recommend that you don't use this method. Instead, use the InstanceInformationFilter action. The InstanceInformationFilter action enables you to return instance information by using tags that are specified as a key-value mapping.  If you do use this method, then you can't use the InstanceInformationFilter action. Using this method and the InstanceInformationFilter action causes an exception error. 
+    * This is a legacy method. We recommend that you don't use this method. Instead, use the Filters data type. Filters enables you to return instance information by filtering based on tags applied to managed instances.  Attempting to use InstanceInformationFilterList and Filters leads to an exception error.  
     */
   var InstanceInformationFilterList: js.UndefOr[typingsSlinky.awsSdk.ssmMod.InstanceInformationFilterList] = js.native
   /**
@@ -26,65 +26,18 @@ trait DescribeInstanceInformationRequest extends js.Object {
 
 object DescribeInstanceInformationRequest {
   @scala.inline
-  def apply(): DescribeInstanceInformationRequest = {
+  def apply(
+    Filters: InstanceInformationStringFilterList = null,
+    InstanceInformationFilterList: InstanceInformationFilterList = null,
+    MaxResults: js.UndefOr[MaxResultsEC2Compatible] = js.undefined,
+    NextToken: NextToken = null
+  ): DescribeInstanceInformationRequest = {
     val __obj = js.Dynamic.literal()
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (InstanceInformationFilterList != null) __obj.updateDynamic("InstanceInformationFilterList")(InstanceInformationFilterList.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeInstanceInformationRequest]
   }
-  @scala.inline
-  implicit class DescribeInstanceInformationRequestOps[Self <: DescribeInstanceInformationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilters(value: InstanceInformationStringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceInformationFilterList(value: InstanceInformationFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInformationFilterList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceInformationFilterList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInformationFilterList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResultsEC2Compatible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

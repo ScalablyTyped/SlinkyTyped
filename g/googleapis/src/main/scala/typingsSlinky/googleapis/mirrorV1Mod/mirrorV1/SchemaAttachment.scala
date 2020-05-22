@@ -32,65 +32,18 @@ trait SchemaAttachment extends js.Object {
 
 object SchemaAttachment {
   @scala.inline
-  def apply(): SchemaAttachment = {
+  def apply(
+    contentType: String = null,
+    contentUrl: String = null,
+    id: String = null,
+    isProcessingContent: js.UndefOr[Boolean] = js.undefined
+  ): SchemaAttachment = {
     val __obj = js.Dynamic.literal()
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (contentUrl != null) __obj.updateDynamic("contentUrl")(contentUrl.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isProcessingContent)) __obj.updateDynamic("isProcessingContent")(isProcessingContent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttachment]
   }
-  @scala.inline
-  implicit class SchemaAttachmentOps[Self <: SchemaAttachment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsProcessingContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isProcessingContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsProcessingContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isProcessingContent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

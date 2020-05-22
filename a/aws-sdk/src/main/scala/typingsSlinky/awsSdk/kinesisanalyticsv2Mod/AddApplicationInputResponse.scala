@@ -22,53 +22,16 @@ trait AddApplicationInputResponse extends js.Object {
 
 object AddApplicationInputResponse {
   @scala.inline
-  def apply(): AddApplicationInputResponse = {
+  def apply(
+    ApplicationARN: ResourceARN = null,
+    ApplicationVersionId: js.UndefOr[ApplicationVersionId] = js.undefined,
+    InputDescriptions: InputDescriptions = null
+  ): AddApplicationInputResponse = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationARN != null) __obj.updateDynamic("ApplicationARN")(ApplicationARN.asInstanceOf[js.Any])
+    if (!js.isUndefined(ApplicationVersionId)) __obj.updateDynamic("ApplicationVersionId")(ApplicationVersionId.get.asInstanceOf[js.Any])
+    if (InputDescriptions != null) __obj.updateDynamic("InputDescriptions")(InputDescriptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddApplicationInputResponse]
   }
-  @scala.inline
-  implicit class AddApplicationInputResponseOps[Self <: AddApplicationInputResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationARN(value: ResourceARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationVersionId(value: ApplicationVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationVersionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputDescriptions(value: InputDescriptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDescriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputDescriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDescriptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.global.sap.m
 
+import typingsSlinky.openui5.sap.ui.base.Metadata
 import typingsSlinky.openui5.sap.ui.core.UIComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +19,31 @@ object routing extends js.Object {
       * true. If set to false it will just navigate without closing dialogs.
       */
     def this(router: typingsSlinky.openui5.sap.m.routing.Router, closeDialogs: Boolean) = this()
+    /**
+      * Removes the routeMatchedHandler from the Router
+      * @returns for chaining
+      */
+    /* CompleteClass */
+    override def destroy(): typingsSlinky.openui5.sap.m.routing.RouteMatchedHandler = js.native
+    /**
+      * Gets if a navigation should close dialogs
+      * @returns a flag indication if dialogs will be closed
+      */
+    /* CompleteClass */
+    override def getCloseDialogs(): Boolean = js.native
+    /**
+      * Returns a metadata object for class sap.m.routing.RouteMatchedHandler.
+      * @returns Metadata object describing this class
+      */
+    /* CompleteClass */
+    override def getMetadata(): Metadata = js.native
+    /**
+      * Sets if a navigation should close dialogs
+      * @param bCloseDialogs close dialogs if true
+      * @returns for chaining
+      */
+    /* CompleteClass */
+    override def setCloseDialogs(bCloseDialogs: Boolean): typingsSlinky.openui5.sap.m.routing.RouteMatchedHandler = js.native
   }
   
   @js.native
@@ -87,6 +113,25 @@ object routing extends js.Object {
       * true. If set to false it will just navigate without closing dialogs.
       */
     def this(closeDialogs: Boolean) = this()
+    /**
+      * Gets if a navigation should close dialogs
+      * @returns a flag indication if dialogs will be closed
+      */
+    /* CompleteClass */
+    override def getCloseDialogs(): Boolean = js.native
+    /**
+      * Returns a metadata object for class sap.m.routing.TargetHandler.
+      * @returns Metadata object describing this class
+      */
+    /* CompleteClass */
+    override def getMetadata(): Metadata = js.native
+    /**
+      * Sets if a navigation should close dialogs
+      * @param bCloseDialogs close dialogs if true
+      * @returns for chaining
+      */
+    /* CompleteClass */
+    override def setCloseDialogs(bCloseDialogs: Boolean): typingsSlinky.openui5.sap.m.routing.TargetHandler = js.native
   }
   
   @js.native

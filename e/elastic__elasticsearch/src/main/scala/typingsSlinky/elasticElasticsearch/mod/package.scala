@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type anyObject = org.scalablytyped.runtime.StringDictionary[js.Any]
-  type callbackFn[T] = js.Function2[
-    /* err */ js.Error | scala.Null, 
-    /* result */ typingsSlinky.elasticElasticsearch.transportMod.ApiResponse[T, js.Any], 
+  type callbackFn[Response, Context] = js.Function2[
+    /* err */ typingsSlinky.elasticElasticsearch.transportMod.ApiError, 
+    /* result */ typingsSlinky.elasticElasticsearch.transportMod.ApiResponse[Response, Context], 
     scala.Unit
   ]
   type extendsCallback = js.Function1[

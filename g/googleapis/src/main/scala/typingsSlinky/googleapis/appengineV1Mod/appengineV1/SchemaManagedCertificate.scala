@@ -25,41 +25,11 @@ trait SchemaManagedCertificate extends js.Object {
 
 object SchemaManagedCertificate {
   @scala.inline
-  def apply(): SchemaManagedCertificate = {
+  def apply(lastRenewalTime: String = null, status: String = null): SchemaManagedCertificate = {
     val __obj = js.Dynamic.literal()
+    if (lastRenewalTime != null) __obj.updateDynamic("lastRenewalTime")(lastRenewalTime.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedCertificate]
   }
-  @scala.inline
-  implicit class SchemaManagedCertificateOps[Self <: SchemaManagedCertificate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastRenewalTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastRenewalTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastRenewalTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastRenewalTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,35 +18,13 @@ trait PutConfigurationSetReputationOptionsRequest extends js.Object {
 
 object PutConfigurationSetReputationOptionsRequest {
   @scala.inline
-  def apply(ConfigurationSetName: ConfigurationSetName): PutConfigurationSetReputationOptionsRequest = {
+  def apply(
+    ConfigurationSetName: ConfigurationSetName,
+    ReputationMetricsEnabled: js.UndefOr[Enabled] = js.undefined
+  ): PutConfigurationSetReputationOptionsRequest = {
     val __obj = js.Dynamic.literal(ConfigurationSetName = ConfigurationSetName.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReputationMetricsEnabled)) __obj.updateDynamic("ReputationMetricsEnabled")(ReputationMetricsEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutConfigurationSetReputationOptionsRequest]
   }
-  @scala.inline
-  implicit class PutConfigurationSetReputationOptionsRequestOps[Self <: PutConfigurationSetReputationOptionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationSetName(value: ConfigurationSetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReputationMetricsEnabled(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReputationMetricsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReputationMetricsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReputationMetricsEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

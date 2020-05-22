@@ -11,6 +11,10 @@ trait Standard extends js.Object {
     */
   var Description: js.UndefOr[NonEmptyString] = js.native
   /**
+    * Whether the standard is enabled by default. When Security Hub is enabled from the console, if a standard is enabled by default, the check box for that standard is selected by default. When Security Hub is enabled using the EnableSecurityHub API operation, the standard is enabled by default unless EnableDefaultStandards is set to false.
+    */
+  var EnabledByDefault: js.UndefOr[Boolean] = js.native
+  /**
     * The name of the standard.
     */
   var Name: js.UndefOr[NonEmptyString] = js.native
@@ -22,53 +26,18 @@ trait Standard extends js.Object {
 
 object Standard {
   @scala.inline
-  def apply(): Standard = {
+  def apply(
+    Description: NonEmptyString = null,
+    EnabledByDefault: js.UndefOr[Boolean] = js.undefined,
+    Name: NonEmptyString = null,
+    StandardsArn: NonEmptyString = null
+  ): Standard = {
     val __obj = js.Dynamic.literal()
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnabledByDefault)) __obj.updateDynamic("EnabledByDefault")(EnabledByDefault.get.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (StandardsArn != null) __obj.updateDynamic("StandardsArn")(StandardsArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Standard]
   }
-  @scala.inline
-  implicit class StandardOps[Self <: Standard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandardsArn(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardsArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandardsArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardsArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -29,7 +29,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service specifies a poly-polygon Bezier shape. */
-@js.native
 trait PolyPolygonBezierShape
   extends Shape
      with LineProperties

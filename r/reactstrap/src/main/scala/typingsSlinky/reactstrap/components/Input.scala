@@ -525,6 +525,11 @@ object Input {
   }
   
   def withProps[T](p: InputProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[InputProps]))
+  }
   implicit def make[T](companion: Input.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

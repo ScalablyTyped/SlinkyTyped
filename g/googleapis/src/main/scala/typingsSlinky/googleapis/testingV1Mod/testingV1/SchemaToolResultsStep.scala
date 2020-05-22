@@ -30,65 +30,18 @@ trait SchemaToolResultsStep extends js.Object {
 
 object SchemaToolResultsStep {
   @scala.inline
-  def apply(): SchemaToolResultsStep = {
+  def apply(
+    executionId: String = null,
+    historyId: String = null,
+    projectId: String = null,
+    stepId: String = null
+  ): SchemaToolResultsStep = {
     val __obj = js.Dynamic.literal()
+    if (executionId != null) __obj.updateDynamic("executionId")(executionId.asInstanceOf[js.Any])
+    if (historyId != null) __obj.updateDynamic("historyId")(historyId.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (stepId != null) __obj.updateDynamic("stepId")(stepId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaToolResultsStep]
   }
-  @scala.inline
-  implicit class SchemaToolResultsStepOps[Self <: SchemaToolResultsStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistoryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("historyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("historyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

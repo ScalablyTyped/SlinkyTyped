@@ -22,47 +22,11 @@ trait UpdateUserRequest extends js.Object {
 
 object UpdateUserRequest {
   @scala.inline
-  def apply(UserName: existingUserNameType): UpdateUserRequest = {
+  def apply(UserName: existingUserNameType, NewPath: pathType = null, NewUserName: userNameType = null): UpdateUserRequest = {
     val __obj = js.Dynamic.literal(UserName = UserName.asInstanceOf[js.Any])
+    if (NewPath != null) __obj.updateDynamic("NewPath")(NewPath.asInstanceOf[js.Any])
+    if (NewUserName != null) __obj.updateDynamic("NewUserName")(NewUserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateUserRequest]
   }
-  @scala.inline
-  implicit class UpdateUserRequestOps[Self <: UpdateUserRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserName(value: existingUserNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewPath(value: pathType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewUserName(value: userNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewUserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewUserName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewUserName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

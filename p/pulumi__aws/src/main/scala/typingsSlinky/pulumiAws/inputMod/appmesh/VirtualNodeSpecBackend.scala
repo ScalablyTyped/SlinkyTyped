@@ -15,29 +15,10 @@ trait VirtualNodeSpecBackend extends js.Object {
 
 object VirtualNodeSpecBackend {
   @scala.inline
-  def apply(): VirtualNodeSpecBackend = {
+  def apply(virtualService: Input[VirtualNodeSpecBackendVirtualService] = null): VirtualNodeSpecBackend = {
     val __obj = js.Dynamic.literal()
+    if (virtualService != null) __obj.updateDynamic("virtualService")(virtualService.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualNodeSpecBackend]
   }
-  @scala.inline
-  implicit class VirtualNodeSpecBackendOps[Self <: VirtualNodeSpecBackend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVirtualService(value: Input[VirtualNodeSpecBackendVirtualService]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualService")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

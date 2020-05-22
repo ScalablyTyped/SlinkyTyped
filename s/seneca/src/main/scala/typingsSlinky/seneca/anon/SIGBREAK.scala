@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SIGBREAK extends js.Object {
-  var SIGBREAK: js.UndefOr[Boolean] = js.native
-  var SIGHUP: js.UndefOr[Boolean] = js.native
-  var SIGINT: js.UndefOr[Boolean] = js.native
-  var SIGTERM: js.UndefOr[Boolean] = js.native
+  var SIGBREAK: js.UndefOr[Boolean] = js.undefined
+  var SIGHUP: js.UndefOr[Boolean] = js.undefined
+  var SIGINT: js.UndefOr[Boolean] = js.undefined
+  var SIGTERM: js.UndefOr[Boolean] = js.undefined
 }
 
 object SIGBREAK {
   @scala.inline
-  def apply(): SIGBREAK = {
+  def apply(
+    SIGBREAK: js.UndefOr[Boolean] = js.undefined,
+    SIGHUP: js.UndefOr[Boolean] = js.undefined,
+    SIGINT: js.UndefOr[Boolean] = js.undefined,
+    SIGTERM: js.UndefOr[Boolean] = js.undefined
+  ): SIGBREAK = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(SIGBREAK)) __obj.updateDynamic("SIGBREAK")(SIGBREAK.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SIGHUP)) __obj.updateDynamic("SIGHUP")(SIGHUP.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SIGINT)) __obj.updateDynamic("SIGINT")(SIGINT.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SIGTERM)) __obj.updateDynamic("SIGTERM")(SIGTERM.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SIGBREAK]
   }
-  @scala.inline
-  implicit class SIGBREAKOps[Self <: SIGBREAK] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSIGBREAK(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIGBREAK")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSIGBREAK: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIGBREAK")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSIGHUP(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIGHUP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSIGHUP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIGHUP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSIGINT(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIGINT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSIGINT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIGINT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSIGTERM(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIGTERM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSIGTERM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIGTERM")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

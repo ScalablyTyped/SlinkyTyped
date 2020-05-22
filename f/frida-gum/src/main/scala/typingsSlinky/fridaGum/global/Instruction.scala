@@ -8,7 +8,38 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Instruction")
 @js.native
 class Instruction ()
-  extends typingsSlinky.fridaGum.Instruction
+  extends typingsSlinky.fridaGum.Instruction {
+  /**
+    * Address (EIP) of this instruction.
+    */
+  /* CompleteClass */
+  override var address: typingsSlinky.fridaGum.NativePointer = js.native
+  /**
+    * Group names that this instruction belongs to.
+    */
+  /* CompleteClass */
+  override var groups: js.Array[String] = js.native
+  /**
+    * Instruction mnemonic.
+    */
+  /* CompleteClass */
+  override var mnemonic: String = js.native
+  /**
+    * Pointer to the next instruction, so you can `parse()` it.
+    */
+  /* CompleteClass */
+  override var next: typingsSlinky.fridaGum.NativePointer = js.native
+  /**
+    * String representation of instruction operands.
+    */
+  /* CompleteClass */
+  override var opStr: String = js.native
+  /**
+    * Size of this instruction.
+    */
+  /* CompleteClass */
+  override var size: Double = js.native
+}
 
 /* static members */
 @JSGlobal("Instruction")

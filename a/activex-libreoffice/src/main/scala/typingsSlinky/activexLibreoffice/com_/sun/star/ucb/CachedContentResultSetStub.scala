@@ -23,7 +23,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is used on provider side to access a {@link ContentResultSet} remote optimized. */
-@js.native
 trait CachedContentResultSetStub
   extends ContentResultSet
      with XFetchProvider

@@ -22,47 +22,11 @@ trait UpdateTagOptionInput extends js.Object {
 
 object UpdateTagOptionInput {
   @scala.inline
-  def apply(Id: TagOptionId): UpdateTagOptionInput = {
+  def apply(Id: TagOptionId, Active: js.UndefOr[TagOptionActive] = js.undefined, Value: TagOptionValue = null): UpdateTagOptionInput = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
+    if (!js.isUndefined(Active)) __obj.updateDynamic("Active")(Active.get.asInstanceOf[js.Any])
+    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTagOptionInput]
   }
-  @scala.inline
-  implicit class UpdateTagOptionInputOps[Self <: UpdateTagOptionInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: TagOptionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActive(value: TagOptionActive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: TagOptionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

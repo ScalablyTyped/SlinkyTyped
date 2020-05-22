@@ -25,6 +25,11 @@ object SidebarHeader {
   }
   
   def withProps[Data](p: SidebarHeaderProps[Data]): Builder[Data] = new Builder[Data](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[Data](): Builder[Data] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Data](js.Array(this.component, __props.asInstanceOf[SidebarHeaderProps[Data]]))
+  }
   implicit def make[Data](companion: SidebarHeader.type): Builder[Data] = new Builder[Data](js.Array(this.component, js.Dictionary.empty))()
 }
 

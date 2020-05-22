@@ -1,5 +1,7 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.anon.ReadTime
+import typingsSlinky.firebaseFirestore.coreSnapshotVersionMod.SnapshotVersion
 import typingsSlinky.firebaseFirestore.localIndexManagerMod.IndexManager
 import typingsSlinky.firebaseFirestore.localIndexeddbSchemaMod.DbRemoteDocument
 import typingsSlinky.firebaseFirestore.localLocalSerializerMod.LocalSerializer
@@ -55,6 +57,16 @@ object localIndexeddbRemoteDocumentCacheMod extends js.Object {
       * cache's metadata.
       */
     var updateMetadata: js.Any = js.native
+    /**
+      * Returns the read time of the most recently read document in the cache, or
+      * SnapshotVersion.min() if not available.
+      */
+    def getLastReadTime(transaction: PersistenceTransaction): PersistencePromise[SnapshotVersion] = js.native
+    /**
+      * Returns the set of documents that have changed since the specified read
+      * time.
+      */
+    def getNewDocumentChanges(transaction: PersistenceTransaction, sinceReadTime: SnapshotVersion): PersistencePromise[ReadTime] = js.native
     /**
       * Looks up several entries in the cache.
       *

@@ -26,9 +26,16 @@ object listPartsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ListPartsInput) = this()
+    /* CompleteClass */
+    override val input: ListPartsInput = js.native
     val middlewareStack: MiddlewareStack[ListPartsInput, ListPartsOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: GlacierResolvedConfiguration
+    ): Handler[ListPartsInput, ListPartsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[ListPartsInput, ListPartsOutput] = js.native
   }

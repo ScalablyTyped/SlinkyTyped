@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait RelationOpts[TRelationSource, TSource, TContext, TArgs] extends js.Object
 
-object RelationOpts {
-  @scala.inline
-  implicit def apply[TRelationSource, TSource, TContext, TArgs](value: RelationOptsWithFieldConfig[TSource, TContext, TArgs]): RelationOpts[TRelationSource, TSource, TContext, TArgs] = value.asInstanceOf[RelationOpts[TRelationSource, TSource, TContext, TArgs]]
-  @scala.inline
-  implicit def apply[TRelationSource, TSource, TContext, TArgs](value: RelationOptsWithResolver[TRelationSource, TSource, TContext, TArgs]): RelationOpts[TRelationSource, TSource, TContext, TArgs] = value.asInstanceOf[RelationOpts[TRelationSource, TSource, TContext, TArgs]]
-}
-

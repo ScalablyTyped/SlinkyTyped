@@ -16,53 +16,16 @@ trait ResolvedAttributes extends js.Object {
 
 object ResolvedAttributes {
   @scala.inline
-  def apply(): ResolvedAttributes = {
+  def apply(
+    AutoMLJobObjective: AutoMLJobObjective = null,
+    CompletionCriteria: AutoMLJobCompletionCriteria = null,
+    ProblemType: ProblemType = null
+  ): ResolvedAttributes = {
     val __obj = js.Dynamic.literal()
+    if (AutoMLJobObjective != null) __obj.updateDynamic("AutoMLJobObjective")(AutoMLJobObjective.asInstanceOf[js.Any])
+    if (CompletionCriteria != null) __obj.updateDynamic("CompletionCriteria")(CompletionCriteria.asInstanceOf[js.Any])
+    if (ProblemType != null) __obj.updateDynamic("ProblemType")(ProblemType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolvedAttributes]
   }
-  @scala.inline
-  implicit class ResolvedAttributesOps[Self <: ResolvedAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoMLJobObjective(value: AutoMLJobObjective): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobObjective")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoMLJobObjective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobObjective")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompletionCriteria(value: AutoMLJobCompletionCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletionCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProblemType(value: ProblemType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProblemType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProblemType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProblemType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

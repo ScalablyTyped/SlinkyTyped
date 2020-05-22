@@ -1,5 +1,7 @@
 package typingsSlinky.blueimpLoadImage.mod
 
+import typingsSlinky.blueimpLoadImage.blueimpLoadImageBooleans.`false`
+import typingsSlinky.blueimpLoadImage.blueimpLoadImageBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,17 @@ trait CropOptions extends js.Object
 
 object CropOptions {
   @scala.inline
-  implicit def apply(value: CropFalseOptions): CropOptions = value.asInstanceOf[CropOptions]
+  def CropTrueOptions(aspectRatio: js.UndefOr[AspectRatio] = js.undefined, crop: `true` = null): CropOptions = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(aspectRatio)) __obj.updateDynamic("aspectRatio")(aspectRatio.get.asInstanceOf[js.Any])
+    if (crop != null) __obj.updateDynamic("crop")(crop.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CropOptions]
+  }
   @scala.inline
-  implicit def apply(value: CropTrueOptions): CropOptions = value.asInstanceOf[CropOptions]
+  def CropFalseOptions(crop: `false` = null): CropOptions = {
+    val __obj = js.Dynamic.literal()
+    if (crop != null) __obj.updateDynamic("crop")(crop.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CropOptions]
+  }
 }
 

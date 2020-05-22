@@ -50,12 +50,22 @@ object drawing extends js.Object {
   class Gradient ()
     extends typingsSlinky.kendoUi.kendo.drawing.Gradient {
     def this(options: GradientOptions) = this()
+    /* CompleteClass */
+    override var options: GradientOptions = js.native
+    /* CompleteClass */
+    override var stops: js.Any = js.native
+    /* CompleteClass */
+    override def addStop(offset: Double, color: String, opacity: Double): typingsSlinky.kendoUi.kendo.drawing.GradientStop = js.native
+    /* CompleteClass */
+    override def removeStop(stop: typingsSlinky.kendoUi.kendo.drawing.GradientStop): Unit = js.native
   }
   
   @js.native
   class GradientStop ()
     extends typingsSlinky.kendoUi.kendo.drawing.GradientStop {
     def this(options: GradientStopOptions) = this()
+    /* CompleteClass */
+    override var options: GradientStopOptions = js.native
   }
   
   @js.native
@@ -81,6 +91,14 @@ object drawing extends js.Object {
   class LinearGradient ()
     extends typingsSlinky.kendoUi.kendo.drawing.LinearGradient {
     def this(options: LinearGradientOptions) = this()
+    /* CompleteClass */
+    override var options: GradientOptions = js.native
+    /* CompleteClass */
+    override var stops: js.Any = js.native
+    /* CompleteClass */
+    override def addStop(offset: Double, color: String, opacity: Double): typingsSlinky.kendoUi.kendo.drawing.GradientStop = js.native
+    /* CompleteClass */
+    override def removeStop(stop: typingsSlinky.kendoUi.kendo.drawing.GradientStop): Unit = js.native
   }
   
   @js.native
@@ -93,6 +111,14 @@ object drawing extends js.Object {
   class OptionsStore ()
     extends typingsSlinky.kendoUi.kendo.drawing.OptionsStore {
     def this(options: OptionsStoreOptions) = this()
+    /* CompleteClass */
+    override var observer: js.Any = js.native
+    /* CompleteClass */
+    override var options: OptionsStoreOptions = js.native
+    /* CompleteClass */
+    override def get(field: String): js.Any = js.native
+    /* CompleteClass */
+    override def set(field: String, value: js.Any): Unit = js.native
   }
   
   @js.native
@@ -105,6 +131,14 @@ object drawing extends js.Object {
   class RadialGradient ()
     extends typingsSlinky.kendoUi.kendo.drawing.RadialGradient {
     def this(options: RadialGradientOptions) = this()
+    /* CompleteClass */
+    override var options: GradientOptions = js.native
+    /* CompleteClass */
+    override var stops: js.Any = js.native
+    /* CompleteClass */
+    override def addStop(offset: Double, color: String, opacity: Double): typingsSlinky.kendoUi.kendo.drawing.GradientStop = js.native
+    /* CompleteClass */
+    override def removeStop(stop: typingsSlinky.kendoUi.kendo.drawing.GradientStop): Unit = js.native
   }
   
   @js.native
@@ -135,8 +169,11 @@ object drawing extends js.Object {
   
   def align(elements: js.Any, rect: typingsSlinky.kendoUi.kendo.geometry.Rect, alignment: String): Unit = js.native
   def drawDOM(element: JQuery, options: js.Any): JQueryPromise[_] = js.native
+  def exportImage(group: typingsSlinky.kendoUi.kendo.drawing.Group): JQueryPromise[_] = js.native
   def exportImage(group: typingsSlinky.kendoUi.kendo.drawing.Group, options: js.Any): JQueryPromise[_] = js.native
+  def exportPDF(group: typingsSlinky.kendoUi.kendo.drawing.Group): JQueryPromise[_] = js.native
   def exportPDF(group: typingsSlinky.kendoUi.kendo.drawing.Group, options: PDFOptions): JQueryPromise[_] = js.native
+  def exportSVG(group: typingsSlinky.kendoUi.kendo.drawing.Group): JQueryPromise[_] = js.native
   def exportSVG(group: typingsSlinky.kendoUi.kendo.drawing.Group, options: js.Any): JQueryPromise[_] = js.native
   def fit(
     element: typingsSlinky.kendoUi.kendo.drawing.Element,

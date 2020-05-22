@@ -4,87 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PkgBackgroundOptions extends js.Object {
   /**
     * Alignment of the background image.
     * Options are: center, left, right, top, bottom, topleft, topright, bottomleft, bottomright
     * @default center
     */
-  var alignment: js.UndefOr[BackgroundAlignment | Null] = js.native
+  var alignment: js.UndefOr[BackgroundAlignment | Null] = js.undefined
   /**
     * Path to the image to use as an installer background.
     */
-  var file: js.UndefOr[String] = js.native
+  var file: js.UndefOr[String] = js.undefined
   /**
     * Scaling of the background image.
     * Options are: tofit, none, proportional
     * @default tofit
     */
-  var scaling: js.UndefOr[BackgroundScaling | Null] = js.native
+  var scaling: js.UndefOr[BackgroundScaling | Null] = js.undefined
 }
 
 object PkgBackgroundOptions {
   @scala.inline
-  def apply(): PkgBackgroundOptions = {
+  def apply(
+    alignment: js.UndefOr[Null | BackgroundAlignment] = js.undefined,
+    file: String = null,
+    scaling: js.UndefOr[Null | BackgroundScaling] = js.undefined
+  ): PkgBackgroundOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alignment)) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaling)) __obj.updateDynamic("scaling")(scaling.asInstanceOf[js.Any])
     __obj.asInstanceOf[PkgBackgroundOptions]
   }
-  @scala.inline
-  implicit class PkgBackgroundOptionsOps[Self <: PkgBackgroundOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: BackgroundAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignmentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(null)
-        ret
-    }
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaling(value: BackgroundScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScalingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(null)
-        ret
-    }
-  }
-  
 }
 

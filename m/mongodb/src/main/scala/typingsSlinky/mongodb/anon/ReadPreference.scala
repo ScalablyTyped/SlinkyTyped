@@ -6,43 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadPreference extends js.Object {
-  var readPreference: ReadPreferenceOrMode = js.native
-  var session: js.UndefOr[ClientSession] = js.native
+  var readPreference: ReadPreferenceOrMode
+  var session: js.UndefOr[ClientSession] = js.undefined
 }
 
 object ReadPreference {
   @scala.inline
-  def apply(readPreference: ReadPreferenceOrMode): ReadPreference = {
+  def apply(readPreference: ReadPreferenceOrMode, session: ClientSession = null): ReadPreference = {
     val __obj = js.Dynamic.literal(readPreference = readPreference.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadPreference]
   }
-  @scala.inline
-  implicit class ReadPreferenceOps[Self <: ReadPreference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReadPreference(value: ReadPreferenceOrMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSession(value: ClientSession): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

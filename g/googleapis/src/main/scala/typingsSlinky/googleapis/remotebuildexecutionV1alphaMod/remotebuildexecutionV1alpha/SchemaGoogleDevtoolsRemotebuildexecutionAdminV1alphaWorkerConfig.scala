@@ -43,77 +43,20 @@ trait SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig extends j
 
 object SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig = {
+  def apply(
+    diskSizeGb: String = null,
+    diskType: String = null,
+    machineType: String = null,
+    minCpuPlatform: String = null,
+    reserved: js.UndefOr[Boolean] = js.undefined
+  ): SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig = {
     val __obj = js.Dynamic.literal()
+    if (diskSizeGb != null) __obj.updateDynamic("diskSizeGb")(diskSizeGb.asInstanceOf[js.Any])
+    if (diskType != null) __obj.updateDynamic("diskType")(diskType.asInstanceOf[js.Any])
+    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
+    if (minCpuPlatform != null) __obj.updateDynamic("minCpuPlatform")(minCpuPlatform.asInstanceOf[js.Any])
+    if (!js.isUndefined(reserved)) __obj.updateDynamic("reserved")(reserved.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigOps[Self <: SchemaGoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiskSizeGb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskSizeGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMachineType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMachineType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCpuPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCpuPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReserved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reserved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReserved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reserved")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

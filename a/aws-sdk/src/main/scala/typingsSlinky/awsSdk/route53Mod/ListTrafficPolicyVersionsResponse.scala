@@ -35,37 +35,5 @@ object ListTrafficPolicyVersionsResponse {
     val __obj = js.Dynamic.literal(IsTruncated = IsTruncated.asInstanceOf[js.Any], MaxItems = MaxItems.asInstanceOf[js.Any], TrafficPolicies = TrafficPolicies.asInstanceOf[js.Any], TrafficPolicyVersionMarker = TrafficPolicyVersionMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTrafficPolicyVersionsResponse]
   }
-  @scala.inline
-  implicit class ListTrafficPolicyVersionsResponseOps[Self <: ListTrafficPolicyVersionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsTruncated(value: PageTruncated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: PageMaxItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficPolicies(value: TrafficPolicies): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficPolicyVersionMarker(value: TrafficPolicyVersionMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyVersionMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

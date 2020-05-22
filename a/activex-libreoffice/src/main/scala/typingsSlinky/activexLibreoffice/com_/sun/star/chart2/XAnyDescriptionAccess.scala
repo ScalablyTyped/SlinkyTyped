@@ -15,38 +15,37 @@ import scala.scalajs.js.annotation._
   * Can be obtained from interface {@link XChartDocument} via method {@link getData()} .
   * @since OOo 3.4
   */
-@js.native
 trait XAnyDescriptionAccess extends XComplexDescriptionAccess {
   /**
     * retrieves the descriptions for all columns.
     * @returns a sequence of sequences of anys representing the descriptions of all columns. The outer index represents different columns. The inner index repre
     */
-  val AnyColumnDescriptions: SafeArray[SafeArray[_]] = js.native
+  val AnyColumnDescriptions: SafeArray[SafeArray[_]]
   /**
     * retrieves the descriptions for all rows.
     * @returns a sequence of sequences of anys representing the descriptions of all rows. The outer index represents different rows. The inner index represents
     */
-  val AnyRowDescriptions: SafeArray[SafeArray[_]] = js.native
+  val AnyRowDescriptions: SafeArray[SafeArray[_]]
   /**
     * retrieves the descriptions for all columns.
     * @returns a sequence of sequences of anys representing the descriptions of all columns. The outer index represents different columns. The inner index repre
     */
-  def getAnyColumnDescriptions(): SafeArray[SafeArray[_]] = js.native
+  def getAnyColumnDescriptions(): SafeArray[SafeArray[_]]
   /**
     * retrieves the descriptions for all rows.
     * @returns a sequence of sequences of anys representing the descriptions of all rows. The outer index represents different rows. The inner index represents
     */
-  def getAnyRowDescriptions(): SafeArray[SafeArray[_]] = js.native
+  def getAnyRowDescriptions(): SafeArray[SafeArray[_]]
   /**
     * sets the descriptions for all columns.
     * @param rColumnDescriptions a sequence of sequences of anys which represent the descriptions of all columns. The outer index represents different columns
     */
-  def setAnyColumnDescriptions(rColumnDescriptions: SeqEquiv[SeqEquiv[_]]): Unit = js.native
+  def setAnyColumnDescriptions(rColumnDescriptions: SeqEquiv[SeqEquiv[_]]): Unit
   /**
     * sets the descriptions for all rows.
     * @param rRowDescriptions a sequence of sequences of anys representing the descriptions of all rows. The outer index represents different rows. The inner
     */
-  def setAnyRowDescriptions(rRowDescriptions: SeqEquiv[SeqEquiv[_]]): Unit = js.native
+  def setAnyRowDescriptions(rRowDescriptions: SeqEquiv[SeqEquiv[_]]): Unit
 }
 
 object XAnyDescriptionAccess {
@@ -85,49 +84,5 @@ object XAnyDescriptionAccess {
     val __obj = js.Dynamic.literal(AnyColumnDescriptions = AnyColumnDescriptions.asInstanceOf[js.Any], AnyRowDescriptions = AnyRowDescriptions.asInstanceOf[js.Any], ColumnDescriptions = ColumnDescriptions.asInstanceOf[js.Any], ComplexColumnDescriptions = ComplexColumnDescriptions.asInstanceOf[js.Any], ComplexRowDescriptions = ComplexRowDescriptions.asInstanceOf[js.Any], Data = Data.asInstanceOf[js.Any], NotANumber = NotANumber.asInstanceOf[js.Any], RowDescriptions = RowDescriptions.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addChartDataChangeEventListener = js.Any.fromFunction1(addChartDataChangeEventListener), getAnyColumnDescriptions = js.Any.fromFunction0(getAnyColumnDescriptions), getAnyRowDescriptions = js.Any.fromFunction0(getAnyRowDescriptions), getColumnDescriptions = js.Any.fromFunction0(getColumnDescriptions), getComplexColumnDescriptions = js.Any.fromFunction0(getComplexColumnDescriptions), getComplexRowDescriptions = js.Any.fromFunction0(getComplexRowDescriptions), getData = js.Any.fromFunction0(getData), getNotANumber = js.Any.fromFunction0(getNotANumber), getRowDescriptions = js.Any.fromFunction0(getRowDescriptions), isNotANumber = js.Any.fromFunction1(isNotANumber), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeChartDataChangeEventListener = js.Any.fromFunction1(removeChartDataChangeEventListener), setAnyColumnDescriptions = js.Any.fromFunction1(setAnyColumnDescriptions), setAnyRowDescriptions = js.Any.fromFunction1(setAnyRowDescriptions), setColumnDescriptions = js.Any.fromFunction1(setColumnDescriptions), setComplexColumnDescriptions = js.Any.fromFunction1(setComplexColumnDescriptions), setComplexRowDescriptions = js.Any.fromFunction1(setComplexRowDescriptions), setData = js.Any.fromFunction1(setData), setRowDescriptions = js.Any.fromFunction1(setRowDescriptions))
     __obj.asInstanceOf[XAnyDescriptionAccess]
   }
-  @scala.inline
-  implicit class XAnyDescriptionAccessOps[Self <: XAnyDescriptionAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnyColumnDescriptions(value: SafeArray[SafeArray[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnyColumnDescriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnyRowDescriptions(value: SafeArray[SafeArray[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnyRowDescriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAnyColumnDescriptions(value: () => SafeArray[SafeArray[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnyColumnDescriptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAnyRowDescriptions(value: () => SafeArray[SafeArray[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnyRowDescriptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetAnyColumnDescriptions(value: SeqEquiv[SeqEquiv[_]] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnyColumnDescriptions")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetAnyRowDescriptions(value: SeqEquiv[SeqEquiv[_]] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnyRowDescriptions")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

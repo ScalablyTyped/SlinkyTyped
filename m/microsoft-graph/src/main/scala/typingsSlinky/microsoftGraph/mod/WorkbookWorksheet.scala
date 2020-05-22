@@ -4,135 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkbookWorksheet extends Entity {
   // Returns collection of charts that are part of the worksheet. Read-only.
-  var charts: js.UndefOr[js.Array[WorkbookChart]] = js.native
+  var charts: js.UndefOr[js.Array[WorkbookChart]] = js.undefined
   // The display name of the worksheet.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   // Returns collection of names that are associated with the worksheet. Read-only.
-  var names: js.UndefOr[js.Array[WorkbookNamedItem]] = js.native
+  var names: js.UndefOr[js.Array[WorkbookNamedItem]] = js.undefined
   // Collection of PivotTables that are part of the worksheet.
-  var pivotTables: js.UndefOr[js.Array[WorkbookPivotTable]] = js.native
+  var pivotTables: js.UndefOr[js.Array[WorkbookPivotTable]] = js.undefined
   // The zero-based position of the worksheet within the workbook.
-  var position: js.UndefOr[Double] = js.native
+  var position: js.UndefOr[Double] = js.undefined
   // Returns sheet protection object for a worksheet. Read-only.
-  var protection: js.UndefOr[WorkbookWorksheetProtection] = js.native
+  var protection: js.UndefOr[WorkbookWorksheetProtection] = js.undefined
   // Collection of tables that are part of the worksheet. Read-only.
-  var tables: js.UndefOr[js.Array[WorkbookTable]] = js.native
+  var tables: js.UndefOr[js.Array[WorkbookTable]] = js.undefined
   // The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
-  var visibility: js.UndefOr[String] = js.native
+  var visibility: js.UndefOr[String] = js.undefined
 }
 
 object WorkbookWorksheet {
   @scala.inline
-  def apply(): WorkbookWorksheet = {
+  def apply(
+    charts: js.Array[WorkbookChart] = null,
+    id: String = null,
+    name: String = null,
+    names: js.Array[WorkbookNamedItem] = null,
+    pivotTables: js.Array[WorkbookPivotTable] = null,
+    position: js.UndefOr[Double] = js.undefined,
+    protection: WorkbookWorksheetProtection = null,
+    tables: js.Array[WorkbookTable] = null,
+    visibility: String = null
+  ): WorkbookWorksheet = {
     val __obj = js.Dynamic.literal()
+    if (charts != null) __obj.updateDynamic("charts")(charts.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (names != null) __obj.updateDynamic("names")(names.asInstanceOf[js.Any])
+    if (pivotTables != null) __obj.updateDynamic("pivotTables")(pivotTables.asInstanceOf[js.Any])
+    if (!js.isUndefined(position)) __obj.updateDynamic("position")(position.get.asInstanceOf[js.Any])
+    if (protection != null) __obj.updateDynamic("protection")(protection.asInstanceOf[js.Any])
+    if (tables != null) __obj.updateDynamic("tables")(tables.asInstanceOf[js.Any])
+    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookWorksheet]
   }
-  @scala.inline
-  implicit class WorkbookWorksheetOps[Self <: WorkbookWorksheet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharts(value: js.Array[WorkbookChart]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCharts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNames(value: js.Array[WorkbookNamedItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotTables(value: js.Array[WorkbookPivotTable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtection(value: WorkbookWorksheetProtection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTables(value: js.Array[WorkbookTable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

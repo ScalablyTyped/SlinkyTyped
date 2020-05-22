@@ -18,41 +18,11 @@ trait DescribeAutomationStepExecutionsResult extends js.Object {
 
 object DescribeAutomationStepExecutionsResult {
   @scala.inline
-  def apply(): DescribeAutomationStepExecutionsResult = {
+  def apply(NextToken: NextToken = null, StepExecutions: StepExecutionList = null): DescribeAutomationStepExecutionsResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (StepExecutions != null) __obj.updateDynamic("StepExecutions")(StepExecutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAutomationStepExecutionsResult]
   }
-  @scala.inline
-  implicit class DescribeAutomationStepExecutionsResultOps[Self <: DescribeAutomationStepExecutionsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepExecutions(value: StepExecutionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepExecutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepExecutions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

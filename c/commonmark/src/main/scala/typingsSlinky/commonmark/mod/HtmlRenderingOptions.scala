@@ -4,73 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HtmlRenderingOptions extends XmlRenderingOptions {
   /**
     *  if true, raw HTML will not be passed through to HTML output (it will be replaced by comments), and potentially unsafe URLs in links and images
     *  (those beginning with javascript:, vbscript:, file:, and with a few exceptions data:) will be replaced with empty strings.
     */
-  var safe: js.UndefOr[Boolean] = js.native
+  var safe: js.UndefOr[Boolean] = js.undefined
   /**
     *  if true, straight quotes will be made curly, -- will be changed to an en dash, --- will be changed to an em dash, and ... will be changed to ellipses.
     */
-  var smart: js.UndefOr[Boolean] = js.native
+  var smart: js.UndefOr[Boolean] = js.undefined
   /**
     * A raw string to be used for a softbreak.
     * For example, `{ softbreak: "<br/>" }` treats a softbreak as `<br/>`.
     */
-  var softbreak: js.UndefOr[String] = js.native
+  var softbreak: js.UndefOr[String] = js.undefined
 }
 
 object HtmlRenderingOptions {
   @scala.inline
-  def apply(): HtmlRenderingOptions = {
+  def apply(
+    safe: js.UndefOr[Boolean] = js.undefined,
+    smart: js.UndefOr[Boolean] = js.undefined,
+    softbreak: String = null,
+    sourcepos: js.UndefOr[Boolean] = js.undefined,
+    time: js.UndefOr[Boolean] = js.undefined
+  ): HtmlRenderingOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(safe)) __obj.updateDynamic("safe")(safe.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smart)) __obj.updateDynamic("smart")(smart.get.asInstanceOf[js.Any])
+    if (softbreak != null) __obj.updateDynamic("softbreak")(softbreak.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourcepos)) __obj.updateDynamic("sourcepos")(sourcepos.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(time)) __obj.updateDynamic("time")(time.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HtmlRenderingOptions]
   }
-  @scala.inline
-  implicit class HtmlRenderingOptionsOps[Self <: HtmlRenderingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSafe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSoftbreak(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softbreak")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSoftbreak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softbreak")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

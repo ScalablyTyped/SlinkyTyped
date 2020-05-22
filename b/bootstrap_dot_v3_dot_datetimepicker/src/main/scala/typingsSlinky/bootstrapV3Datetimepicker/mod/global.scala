@@ -17,8 +17,8 @@ object global extends js.Object {
     @JSName("data")
     def data_DateTimePicker(key: DateTimePicker): Datetimepicker = js.native
     /**
-    	 * JQuery plugin function.
-    	 */
+      * JQuery plugin function.
+      */
     def datetimepicker(): JQuery = js.native
     def datetimepicker(options: DatetimepickerOptions): JQuery = js.native
     def off(events: EventName): JQuery = js.native

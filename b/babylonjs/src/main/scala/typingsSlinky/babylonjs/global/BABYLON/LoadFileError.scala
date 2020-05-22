@@ -18,5 +18,9 @@ class LoadFileError protected ()
   def this(message: String) = this()
   def this(message: String, `object`: typingsSlinky.babylonjs.BABYLON.WebRequest) = this()
   def this(message: String, `object`: File) = this()
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

@@ -1,59 +1,51 @@
 package typingsSlinky.koaCompress.mod
 
+import typingsSlinky.koaCompress.koaCompressBooleans.`false`
+import typingsSlinky.node.zlibMod.BrotliOptions
 import typingsSlinky.node.zlibMod.ZlibOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait CompressOptions extends ZlibOptions {
+trait CompressOptions extends js.Object {
+  /**
+    * Options for brotli compression.
+    */
+  var br: js.UndefOr[BrotliOptions | `false`] = js.undefined
+  /**
+    * Options for deflate compression.
+    */
+  var deflate: js.UndefOr[ZlibOptions | `false`] = js.undefined
   /**
     * An optional function that checks the response content type to decide whether to compress. By default, it uses compressible.
     */
-  var filter: js.UndefOr[js.Function1[/* content_type */ String, Boolean]] = js.native
+  var filter: js.UndefOr[js.Function1[/* mimeType */ String, Boolean]] = js.undefined
+  /**
+    * Options for gzip compression.
+    */
+  var gzip: js.UndefOr[ZlibOptions | `false`] = js.undefined
   /**
     * Minimum response size in bytes to compress. Default 1024 bytes or 1kb.
     */
-  var threshold: js.UndefOr[Double] = js.native
+  var threshold: js.UndefOr[Double | String] = js.undefined
 }
 
 object CompressOptions {
   @scala.inline
-  def apply(): CompressOptions = {
+  def apply(
+    br: BrotliOptions | `false` = null,
+    deflate: ZlibOptions | `false` = null,
+    filter: /* mimeType */ String => Boolean = null,
+    gzip: ZlibOptions | `false` = null,
+    threshold: Double | String = null
+  ): CompressOptions = {
     val __obj = js.Dynamic.literal()
+    if (br != null) __obj.updateDynamic("br")(br.asInstanceOf[js.Any])
+    if (deflate != null) __obj.updateDynamic("deflate")(deflate.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
+    if (gzip != null) __obj.updateDynamic("gzip")(gzip.asInstanceOf[js.Any])
+    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompressOptions]
   }
-  @scala.inline
-  implicit class CompressOptionsOps[Self <: CompressOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: /* content_type */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

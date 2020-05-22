@@ -61,161 +61,34 @@ trait GetVpcPeeringConnectionArgs extends js.Object {
 
 object GetVpcPeeringConnectionArgs {
   @scala.inline
-  def apply(): GetVpcPeeringConnectionArgs = {
+  def apply(
+    cidrBlock: String = null,
+    filters: js.Array[GetVpcPeeringConnectionFilter] = null,
+    id: String = null,
+    ownerId: String = null,
+    peerCidrBlock: String = null,
+    peerOwnerId: String = null,
+    peerRegion: String = null,
+    peerVpcId: String = null,
+    region: String = null,
+    status: String = null,
+    tags: StringDictionary[js.Any] = null,
+    vpcId: String = null
+  ): GetVpcPeeringConnectionArgs = {
     val __obj = js.Dynamic.literal()
+    if (cidrBlock != null) __obj.updateDynamic("cidrBlock")(cidrBlock.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (ownerId != null) __obj.updateDynamic("ownerId")(ownerId.asInstanceOf[js.Any])
+    if (peerCidrBlock != null) __obj.updateDynamic("peerCidrBlock")(peerCidrBlock.asInstanceOf[js.Any])
+    if (peerOwnerId != null) __obj.updateDynamic("peerOwnerId")(peerOwnerId.asInstanceOf[js.Any])
+    if (peerRegion != null) __obj.updateDynamic("peerRegion")(peerRegion.asInstanceOf[js.Any])
+    if (peerVpcId != null) __obj.updateDynamic("peerVpcId")(peerVpcId.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (vpcId != null) __obj.updateDynamic("vpcId")(vpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetVpcPeeringConnectionArgs]
   }
-  @scala.inline
-  implicit class GetVpcPeeringConnectionArgsOps[Self <: GetVpcPeeringConnectionArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCidrBlock(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: js.Array[GetVpcPeeringConnectionFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeerCidrBlock(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerCidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeerCidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerCidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeerOwnerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerOwnerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeerOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerOwnerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeerRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeerRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeerVpcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerVpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeerVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerVpcId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait ListApiKeysResponse extends js.Object {
 
 object ListApiKeysResponse {
   @scala.inline
-  def apply(): ListApiKeysResponse = {
+  def apply(apiKeys: ApiKeys = null, nextToken: PaginationToken = null): ListApiKeysResponse = {
     val __obj = js.Dynamic.literal()
+    if (apiKeys != null) __obj.updateDynamic("apiKeys")(apiKeys.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListApiKeysResponse]
   }
-  @scala.inline
-  implicit class ListApiKeysResponseOps[Self <: ListApiKeysResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiKeys(value: ApiKeys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

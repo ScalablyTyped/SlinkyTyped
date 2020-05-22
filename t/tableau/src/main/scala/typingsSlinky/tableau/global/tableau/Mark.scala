@@ -16,5 +16,8 @@ class Mark protected ()
   extends typingsSlinky.tableau.tableau.Mark {
   /** Creates a new Mark with the specified pairs. */
   def this(pairs: js.Array[typingsSlinky.tableau.tableau.Pair]) = this()
+  /** Gets a collection of field name/value pairs associated with the mark. */
+  /* CompleteClass */
+  override def getPairs(): js.Array[typingsSlinky.tableau.tableau.Pair] = js.native
 }
 

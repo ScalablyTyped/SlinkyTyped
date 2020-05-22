@@ -18,41 +18,14 @@ trait BatchGetResourceConfigResponse extends js.Object {
 
 object BatchGetResourceConfigResponse {
   @scala.inline
-  def apply(): BatchGetResourceConfigResponse = {
+  def apply(
+    baseConfigurationItems: BaseConfigurationItems = null,
+    unprocessedResourceKeys: ResourceKeys = null
+  ): BatchGetResourceConfigResponse = {
     val __obj = js.Dynamic.literal()
+    if (baseConfigurationItems != null) __obj.updateDynamic("baseConfigurationItems")(baseConfigurationItems.asInstanceOf[js.Any])
+    if (unprocessedResourceKeys != null) __obj.updateDynamic("unprocessedResourceKeys")(unprocessedResourceKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetResourceConfigResponse]
   }
-  @scala.inline
-  implicit class BatchGetResourceConfigResponseOps[Self <: BatchGetResourceConfigResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseConfigurationItems(value: BaseConfigurationItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseConfigurationItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseConfigurationItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseConfigurationItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnprocessedResourceKeys(value: ResourceKeys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unprocessedResourceKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnprocessedResourceKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unprocessedResourceKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

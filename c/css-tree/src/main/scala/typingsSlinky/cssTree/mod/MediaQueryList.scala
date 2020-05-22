@@ -4,41 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaQueryList
   extends CssNodeCommon
      with CssNode {
-  var children: List[CssNode] = js.native
+  var children: List[CssNode]
   @JSName("type")
-  var type_MediaQueryList: typingsSlinky.cssTree.cssTreeStrings.MediaQueryList = js.native
+  var type_MediaQueryList: typingsSlinky.cssTree.cssTreeStrings.MediaQueryList
 }
 
 object MediaQueryList {
   @scala.inline
-  def apply(children: List[CssNode], `type`: typingsSlinky.cssTree.cssTreeStrings.MediaQueryList): MediaQueryList = {
+  def apply(
+    children: List[CssNode],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.MediaQueryList,
+    loc: CssLocation = null
+  ): MediaQueryList = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaQueryList]
   }
-  @scala.inline
-  implicit class MediaQueryListOps[Self <: MediaQueryList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: List[CssNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.cssTree.cssTreeStrings.MediaQueryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

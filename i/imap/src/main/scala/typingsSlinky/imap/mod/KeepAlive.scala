@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KeepAlive extends js.Object {
   /** Set to true to force use of NOOP keepalive on servers also support IDLE. Default: false */
-  var forceNoop: js.UndefOr[Boolean] = js.native
+  var forceNoop: js.UndefOr[Boolean] = js.undefined
   /** This is the interval (in milliseconds) at which an IDLE command (for servers that support IDLE) is re-sent. Default: 300000 (5 mins) */
-  var idleInterval: js.UndefOr[Double] = js.native
+  var idleInterval: js.UndefOr[Double] = js.undefined
   /** This is the interval (in milliseconds) at which NOOPs are sent and the interval at which idleInterval is checked. Default: 10000 */
-  var interval: js.UndefOr[Double] = js.native
+  var interval: js.UndefOr[Double] = js.undefined
 }
 
 object KeepAlive {
   @scala.inline
-  def apply(): KeepAlive = {
+  def apply(
+    forceNoop: js.UndefOr[Boolean] = js.undefined,
+    idleInterval: js.UndefOr[Double] = js.undefined,
+    interval: js.UndefOr[Double] = js.undefined
+  ): KeepAlive = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(forceNoop)) __obj.updateDynamic("forceNoop")(forceNoop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(idleInterval)) __obj.updateDynamic("idleInterval")(idleInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeepAlive]
   }
-  @scala.inline
-  implicit class KeepAliveOps[Self <: KeepAlive] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForceNoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceNoop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceNoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceNoop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdleInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdleInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

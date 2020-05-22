@@ -7,17 +7,16 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientReportDesigner.CustomizeElements, ASPxClientReportDesigner.PreviewCustomizeElements and ASPxClientWebDocumentViewer.CustomizeElements events.
   */
-@js.native
 trait ASPxClientCustomizeElementsEventArgs extends ASPxClientEventArgs {
   /**
     * Provides access to the collection of UI elements.
     */
-  var Elements: js.Array[ASPxReportUIElement] = js.native
+  var Elements: js.Array[ASPxReportUIElement]
   /**
     * Returns UI elements with the specified ID. An array of ASPxReportUIElement objects.
     * @param templateId A string that specifies the element ID.
     */
-  def GetById(templateId: String): js.Array[ASPxReportUIElement] = js.native
+  def GetById(templateId: String): js.Array[ASPxReportUIElement]
 }
 
 object ASPxClientCustomizeElementsEventArgs {
@@ -26,25 +25,5 @@ object ASPxClientCustomizeElementsEventArgs {
     val __obj = js.Dynamic.literal(Elements = Elements.asInstanceOf[js.Any], GetById = js.Any.fromFunction1(GetById))
     __obj.asInstanceOf[ASPxClientCustomizeElementsEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientCustomizeElementsEventArgsOps[Self <: ASPxClientCustomizeElementsEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElements(value: js.Array[ASPxReportUIElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Elements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetById(value: String => js.Array[ASPxReportUIElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetById")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

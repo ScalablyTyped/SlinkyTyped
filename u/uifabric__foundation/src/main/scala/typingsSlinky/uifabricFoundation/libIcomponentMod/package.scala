@@ -16,6 +16,12 @@ package object libIcomponentMod {
     /* tokens */ TTokens, 
     TStyleSet
   ]
+  type IStylesFunctionOrObject[TViewProps, TTokens, TStyleSet /* <: typingsSlinky.uifabricMergeStyles.istylesetMod.IStyleSet[TStyleSet] */] = (typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunction[TViewProps, TTokens, TStyleSet]) | TStyleSet
+  type IToken[TViewProps, TTokens] = (typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenBase[TViewProps, TTokens]) | (typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenBaseArray[TViewProps, TTokens])
+  type ITokenBase[TViewProps, TTokens] = js.UndefOr[
+    (typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject[TViewProps, TTokens]) | typingsSlinky.uifabricFoundation.uifabricFoundationBooleans.`false` | scala.Null
+  ]
+  type ITokenFunctionOrObject[TViewProps, TTokens] = (typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunction[TViewProps, TTokens]) | TTokens
   type IViewComponent[TViewProps] = js.Function1[
     /* props */ typingsSlinky.react.mod.PropsWithChildren[TViewProps], 
     typingsSlinky.std.ReturnType[slinky.core.ReactComponentClass[js.Object]]

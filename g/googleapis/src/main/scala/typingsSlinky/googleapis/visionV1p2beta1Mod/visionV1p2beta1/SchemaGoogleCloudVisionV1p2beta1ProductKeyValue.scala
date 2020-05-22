@@ -23,41 +23,11 @@ trait SchemaGoogleCloudVisionV1p2beta1ProductKeyValue extends js.Object {
 
 object SchemaGoogleCloudVisionV1p2beta1ProductKeyValue {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p2beta1ProductKeyValue = {
+  def apply(key: String = null, value: String = null): SchemaGoogleCloudVisionV1p2beta1ProductKeyValue = {
     val __obj = js.Dynamic.literal()
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p2beta1ProductKeyValue]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p2beta1ProductKeyValueOps[Self <: SchemaGoogleCloudVisionV1p2beta1ProductKeyValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -116,9 +116,9 @@ trait KeyboardPlugin extends EventEmitter {
     * You can also provide an array mixing both strings and key code integers.
     * @param keycode The Key Codes to enable event capture for.
     */
-  def addCapture(keycode: String): KeyboardPlugin = js.native
-  def addCapture(keycode: js.Array[_ | integer]): KeyboardPlugin = js.native
-  def addCapture(keycode: integer): KeyboardPlugin = js.native
+  def addCapture(keycode: String): this.type = js.native
+  def addCapture(keycode: js.Array[_ | integer]): this.type = js.native
+  def addCapture(keycode: integer): this.type = js.native
   def addKey(key: String): Key = js.native
   def addKey(key: String, enableCapture: Boolean): Key = js.native
   def addKey(key: String, enableCapture: Boolean, emitOnRepeat: Boolean): Key = js.native
@@ -187,7 +187,7 @@ trait KeyboardPlugin extends EventEmitter {
     * 
     * Note that this is a global change. It will clear all event captures across your game, not just for this specific Scene.
     */
-  def clearCaptures(): KeyboardPlugin = js.native
+  def clearCaptures(): this.type = js.native
   /**
     * Creates a new KeyCombo.
     * 
@@ -231,12 +231,12 @@ trait KeyboardPlugin extends EventEmitter {
     * Disables Phaser from preventing any key captures you may have defined, without actually removing them.
     * You can use this to temporarily disable event capturing if, for example, you swap to a DOM element.
     */
-  def disableGlobalCapture(): KeyboardPlugin = js.native
+  def disableGlobalCapture(): this.type = js.native
   /**
     * Allows Phaser to prevent any key captures you may have defined from bubbling up the browser.
     * You can use this to re-enable event capturing if you had paused it via `disableGlobalCapture`.
     */
-  def enableGlobalCapture(): KeyboardPlugin = js.native
+  def enableGlobalCapture(): this.type = js.native
   /**
     * Returns an array that contains all of the keyboard captures currently enabled.
     */
@@ -274,11 +274,11 @@ trait KeyboardPlugin extends EventEmitter {
     * You can also provide an array mixing both strings and key code integers.
     * @param keycode The Key Codes to disable event capture for.
     */
-  def removeCapture(keycode: String): KeyboardPlugin = js.native
-  def removeCapture(keycode: js.Array[_ | integer]): KeyboardPlugin = js.native
-  def removeCapture(keycode: integer): KeyboardPlugin = js.native
-  def removeKey(key: String): KeyboardPlugin = js.native
-  def removeKey(key: String, destroy: Boolean): KeyboardPlugin = js.native
+  def removeCapture(keycode: String): this.type = js.native
+  def removeCapture(keycode: js.Array[_ | integer]): this.type = js.native
+  def removeCapture(keycode: integer): this.type = js.native
+  def removeKey(key: String): this.type = js.native
+  def removeKey(key: String, destroy: Boolean): this.type = js.native
   /**
     * Removes a Key object from this Keyboard Plugin.
     * 
@@ -286,10 +286,10 @@ trait KeyboardPlugin extends EventEmitter {
     * @param key Either a Key object, a string, such as `A` or `SPACE`, or a key code value.
     * @param destroy Call `Key.destroy` on the removed Key object? Default false.
     */
-  def removeKey(key: Key): KeyboardPlugin = js.native
-  def removeKey(key: Key, destroy: Boolean): KeyboardPlugin = js.native
-  def removeKey(key: integer): KeyboardPlugin = js.native
-  def removeKey(key: integer, destroy: Boolean): KeyboardPlugin = js.native
+  def removeKey(key: Key): this.type = js.native
+  def removeKey(key: Key, destroy: Boolean): this.type = js.native
+  def removeKey(key: integer): this.type = js.native
+  def removeKey(key: integer, destroy: Boolean): this.type = js.native
   /**
     * Resets all Key objects created by _this_ Keyboard Plugin back to their default un-pressed states.
     * This can only reset keys created via the `addKey`, `addKeys` or `createCursorKeys` methods.
@@ -298,6 +298,6 @@ trait KeyboardPlugin extends EventEmitter {
     * This method is called automatically when the Keyboard Plugin shuts down, but can be
     * invoked directly at any time you require.
     */
-  def resetKeys(): KeyboardPlugin = js.native
+  def resetKeys(): this.type = js.native
 }
 

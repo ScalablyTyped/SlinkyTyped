@@ -2,75 +2,73 @@ package typingsSlinky.reactHotkeys.mod
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.KeyboardEvent
-import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigurationOptions extends js.Object {
   /**
     * Whether to allow combination submatches - e.g. if there is an action bound to
     * cmd, pressing shift+cmd will *not* trigger that action when
     * allowCombinationSubmatches is false.
     */
-  var allowCombinationSubmatches: js.UndefOr[Boolean] = js.native
+  var allowCombinationSubmatches: js.UndefOr[Boolean] = js.undefined
   /**
     * A mapping of custom key codes to key names that you can then use in your
     * key sequences
     */
-  var customKeyCodes: js.UndefOr[NumberDictionary[String]] = js.native
+  var customKeyCodes: js.UndefOr[NumberDictionary[String]] = js.undefined
   /**
     * The default component type to wrap HotKey components' children in, to provide
     * the required focus and keyboard event listening for HotKeys to function
     */
-  var defaultComponent: js.UndefOr[ReactComponent] = js.native
+  var defaultComponent: js.UndefOr[ReactComponent] = js.undefined
   /**
     * The default key event key maps are bound to, if left unspecified
     */
-  var defaultKeyEvent: js.UndefOr[KeyEventName] = js.native
+  var defaultKeyEvent: js.UndefOr[KeyEventName] = js.undefined
   /**
     * The default tabIndex value passed to the wrapping component used to contain
     * HotKey components' children. -1 skips focusing the element when tabbing through
     * the DOM, but allows focusing programmatically.
     */
-  var defaultTabIndex: js.UndefOr[TabIndex] = js.native
+  var defaultTabIndex: js.UndefOr[TabIndex] = js.undefined
   /**
     * Whether to allow hard sequences, or the binding of handlers to actions that have
     * names that are valid key sequences, which implicitly define actions that are
     * triggered by that key sequence
     */
-  var enableHardSequences: js.UndefOr[Boolean] = js.native
+  var enableHardSequences: js.UndefOr[Boolean] = js.undefined
   /**
     * The function used to determine whether a key event should be ignored by React
     * Hotkeys. By default, keyboard events originating elements with a tag name in
     * ignoreTags, or a isContentEditable property of true, are ignored.
     */
-  var ignoreEventsCondition: js.UndefOr[js.Function1[/* keyEvent */ KeyboardEvent, Boolean]] = js.native
+  var ignoreEventsCondition: js.UndefOr[js.Function1[/* keyEvent */ KeyboardEvent, Boolean]] = js.undefined
   /**
     * Whether to ignore changes to keyMap and handlers props by default (this reduces
     * a significant amount of unnecessarily resetting internal state)
     */
-  var ignoreKeymapAndHandlerChangesByDefault: js.UndefOr[Boolean] = js.native
+  var ignoreKeymapAndHandlerChangesByDefault: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether to ignore repeated keyboard events when a key is being held down
     */
-  var ignoreRepeatedEventsWhenKeyHeldDown: js.UndefOr[Boolean] = js.native
+  var ignoreRepeatedEventsWhenKeyHeldDown: js.UndefOr[Boolean] = js.undefined
   /**
     * The HTML tags that React HotKeys should ignore key events from. This only works
     * if you are using the default ignoreEventsCondition function.
     */
-  var ignoreTags: js.UndefOr[js.Array[String]] = js.native
+  var ignoreTags: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The level of logging of its own behaviour React HotKeys should perform. Default
     * level is 'warn'.
     */
-  var logLevel: js.UndefOr[String] = js.native
+  var logLevel: js.UndefOr[String] = js.undefined
   /**
     * Whether React HotKeys should simulate keypress events for the keys that do not
     * natively emit them.
     */
-  var simulateMissingKeyPressEvents: js.UndefOr[Boolean] = js.native
+  var simulateMissingKeyPressEvents: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether to call stopPropagation() on events after they are handled (preventing
     * the event from bubbling up any further, both within React Hotkeys and any other
@@ -80,7 +78,7 @@ trait ConfigurationOptions extends js.Object {
     * the event once React Hotkeys is done with it (whether it's allowed to propagate
     * any further through the Render tree).
     */
-  var stopEventPropagationAfterHandling: js.UndefOr[Boolean] = js.native
+  var stopEventPropagationAfterHandling: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether to call stopPropagation() on events after they are ignored (preventing
     * the event from bubbling up any further, both within React Hotkeys and any other
@@ -90,202 +88,43 @@ trait ConfigurationOptions extends js.Object {
     * the event once React Hotkeys is done with it (whether it's allowed to propagate
     * any further through the Render tree).
     */
-  var stopEventPropagationAfterIgnoring: js.UndefOr[Boolean] = js.native
+  var stopEventPropagationAfterIgnoring: js.UndefOr[Boolean] = js.undefined
 }
 
 object ConfigurationOptions {
   @scala.inline
-  def apply(): ConfigurationOptions = {
+  def apply(
+    allowCombinationSubmatches: js.UndefOr[Boolean] = js.undefined,
+    customKeyCodes: NumberDictionary[String] = null,
+    defaultComponent: ReactComponent = null,
+    defaultKeyEvent: KeyEventName = null,
+    defaultTabIndex: TabIndex = null,
+    enableHardSequences: js.UndefOr[Boolean] = js.undefined,
+    ignoreEventsCondition: /* keyEvent */ KeyboardEvent => Boolean = null,
+    ignoreKeymapAndHandlerChangesByDefault: js.UndefOr[Boolean] = js.undefined,
+    ignoreRepeatedEventsWhenKeyHeldDown: js.UndefOr[Boolean] = js.undefined,
+    ignoreTags: js.Array[String] = null,
+    logLevel: String = null,
+    simulateMissingKeyPressEvents: js.UndefOr[Boolean] = js.undefined,
+    stopEventPropagationAfterHandling: js.UndefOr[Boolean] = js.undefined,
+    stopEventPropagationAfterIgnoring: js.UndefOr[Boolean] = js.undefined
+  ): ConfigurationOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowCombinationSubmatches)) __obj.updateDynamic("allowCombinationSubmatches")(allowCombinationSubmatches.get.asInstanceOf[js.Any])
+    if (customKeyCodes != null) __obj.updateDynamic("customKeyCodes")(customKeyCodes.asInstanceOf[js.Any])
+    if (defaultComponent != null) __obj.updateDynamic("defaultComponent")(defaultComponent.asInstanceOf[js.Any])
+    if (defaultKeyEvent != null) __obj.updateDynamic("defaultKeyEvent")(defaultKeyEvent.asInstanceOf[js.Any])
+    if (defaultTabIndex != null) __obj.updateDynamic("defaultTabIndex")(defaultTabIndex.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableHardSequences)) __obj.updateDynamic("enableHardSequences")(enableHardSequences.get.asInstanceOf[js.Any])
+    if (ignoreEventsCondition != null) __obj.updateDynamic("ignoreEventsCondition")(js.Any.fromFunction1(ignoreEventsCondition))
+    if (!js.isUndefined(ignoreKeymapAndHandlerChangesByDefault)) __obj.updateDynamic("ignoreKeymapAndHandlerChangesByDefault")(ignoreKeymapAndHandlerChangesByDefault.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreRepeatedEventsWhenKeyHeldDown)) __obj.updateDynamic("ignoreRepeatedEventsWhenKeyHeldDown")(ignoreRepeatedEventsWhenKeyHeldDown.get.asInstanceOf[js.Any])
+    if (ignoreTags != null) __obj.updateDynamic("ignoreTags")(ignoreTags.asInstanceOf[js.Any])
+    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(simulateMissingKeyPressEvents)) __obj.updateDynamic("simulateMissingKeyPressEvents")(simulateMissingKeyPressEvents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stopEventPropagationAfterHandling)) __obj.updateDynamic("stopEventPropagationAfterHandling")(stopEventPropagationAfterHandling.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stopEventPropagationAfterIgnoring)) __obj.updateDynamic("stopEventPropagationAfterIgnoring")(stopEventPropagationAfterIgnoring.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationOptions]
   }
-  @scala.inline
-  implicit class ConfigurationOptionsOps[Self <: ConfigurationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowCombinationSubmatches(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCombinationSubmatches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowCombinationSubmatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCombinationSubmatches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomKeyCodes(value: NumberDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customKeyCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomKeyCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customKeyCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultComponentFunctionComponent(value: ReactComponentClass[ComponentProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultComponentComponentClass(value: ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultComponent(value: ReactComponent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultKeyEvent(value: KeyEventName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultKeyEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultKeyEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultKeyEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultTabIndex(value: TabIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTabIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTabIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableHardSequences(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHardSequences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableHardSequences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHardSequences")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreEventsCondition(value: /* keyEvent */ KeyboardEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEventsCondition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreEventsCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEventsCondition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreKeymapAndHandlerChangesByDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreKeymapAndHandlerChangesByDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreKeymapAndHandlerChangesByDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreKeymapAndHandlerChangesByDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreRepeatedEventsWhenKeyHeldDown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreRepeatedEventsWhenKeyHeldDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreRepeatedEventsWhenKeyHeldDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreRepeatedEventsWhenKeyHeldDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimulateMissingKeyPressEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simulateMissingKeyPressEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimulateMissingKeyPressEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simulateMissingKeyPressEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopEventPropagationAfterHandling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEventPropagationAfterHandling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopEventPropagationAfterHandling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEventPropagationAfterHandling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopEventPropagationAfterIgnoring(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEventPropagationAfterIgnoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopEventPropagationAfterIgnoring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEventPropagationAfterIgnoring")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

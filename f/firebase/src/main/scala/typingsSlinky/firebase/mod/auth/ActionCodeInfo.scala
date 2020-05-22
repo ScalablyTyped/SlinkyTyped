@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * A response from {@link firebase.auth.Auth.checkActionCode}.
   */
-@js.native
 trait ActionCodeInfo extends js.Object {
   /**
     * The data associated with the action code.
@@ -33,7 +32,7 @@ trait ActionCodeInfo extends js.Object {
     * `multiFactorInfo` is a {@link firebase.auth.Auth.PhoneMultiFactorInfo} object,
     * which contains the phone number.
     */
-  var data: Email = js.native
+  var data: Email
   /**
     * The type of operation that generated the action code. This could be:
     * <ul>
@@ -52,7 +51,7 @@ trait ActionCodeInfo extends js.Object {
     *     {@link firebase.User.sendEmailVerification}.</li>
     * </ul>
     */
-  var operation: String = js.native
+  var operation: String
 }
 
 @JSImport("firebase", "auth.ActionCodeInfo")

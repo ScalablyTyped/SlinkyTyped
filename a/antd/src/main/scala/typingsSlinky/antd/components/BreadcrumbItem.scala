@@ -9,6 +9,7 @@ import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.breadcrumbItemMod.BreadcrumbItemProps
 import typingsSlinky.antd.breadcrumbItemMod.default
+import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,6 +24,8 @@ object BreadcrumbItem {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def dropdownProps(value: DropDownProps): this.type = set("dropdownProps", value.asInstanceOf[js.Any])
     @scala.inline
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     @scala.inline

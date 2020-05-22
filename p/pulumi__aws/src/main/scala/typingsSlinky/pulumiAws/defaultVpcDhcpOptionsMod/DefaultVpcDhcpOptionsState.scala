@@ -31,101 +31,24 @@ trait DefaultVpcDhcpOptionsState extends js.Object {
 
 object DefaultVpcDhcpOptionsState {
   @scala.inline
-  def apply(): DefaultVpcDhcpOptionsState = {
+  def apply(
+    domainName: Input[String] = null,
+    domainNameServers: Input[String] = null,
+    netbiosNameServers: Input[js.Array[Input[String]]] = null,
+    netbiosNodeType: Input[String] = null,
+    ntpServers: Input[String] = null,
+    ownerId: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null
+  ): DefaultVpcDhcpOptionsState = {
     val __obj = js.Dynamic.literal()
+    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
+    if (domainNameServers != null) __obj.updateDynamic("domainNameServers")(domainNameServers.asInstanceOf[js.Any])
+    if (netbiosNameServers != null) __obj.updateDynamic("netbiosNameServers")(netbiosNameServers.asInstanceOf[js.Any])
+    if (netbiosNodeType != null) __obj.updateDynamic("netbiosNodeType")(netbiosNodeType.asInstanceOf[js.Any])
+    if (ntpServers != null) __obj.updateDynamic("ntpServers")(ntpServers.asInstanceOf[js.Any])
+    if (ownerId != null) __obj.updateDynamic("ownerId")(ownerId.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultVpcDhcpOptionsState]
   }
-  @scala.inline
-  implicit class DefaultVpcDhcpOptionsStateOps[Self <: DefaultVpcDhcpOptionsState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainNameServers(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainNameServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainNameServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainNameServers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetbiosNameServers(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("netbiosNameServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetbiosNameServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("netbiosNameServers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetbiosNodeType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("netbiosNodeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetbiosNodeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("netbiosNodeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNtpServers(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ntpServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNtpServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ntpServers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

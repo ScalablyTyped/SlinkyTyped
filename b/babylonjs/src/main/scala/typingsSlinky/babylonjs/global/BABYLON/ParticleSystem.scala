@@ -42,6 +42,11 @@ class ParticleSystem protected ()
     isAnimationSheetEnabled: Boolean,
     epsilon: Double
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

@@ -32,53 +32,12 @@ trait SchemaDestinationTableProperties extends js.Object {
 
 object SchemaDestinationTableProperties {
   @scala.inline
-  def apply(): SchemaDestinationTableProperties = {
+  def apply(description: String = null, friendlyName: String = null, labels: StringDictionary[String] = null): SchemaDestinationTableProperties = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (friendlyName != null) __obj.updateDynamic("friendlyName")(friendlyName.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDestinationTableProperties]
   }
-  @scala.inline
-  implicit class SchemaDestinationTablePropertiesOps[Self <: SchemaDestinationTableProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFriendlyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friendlyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriendlyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friendlyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

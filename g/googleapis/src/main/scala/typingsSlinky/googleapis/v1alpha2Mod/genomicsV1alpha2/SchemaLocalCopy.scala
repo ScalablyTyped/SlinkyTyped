@@ -26,41 +26,11 @@ trait SchemaLocalCopy extends js.Object {
 
 object SchemaLocalCopy {
   @scala.inline
-  def apply(): SchemaLocalCopy = {
+  def apply(disk: String = null, path: String = null): SchemaLocalCopy = {
     val __obj = js.Dynamic.literal()
+    if (disk != null) __obj.updateDynamic("disk")(disk.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLocalCopy]
   }
-  @scala.inline
-  implicit class SchemaLocalCopyOps[Self <: SchemaLocalCopy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisk(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,149 +1,109 @@
 package typingsSlinky.nodeSassMiddleware.mod
 
+import typingsSlinky.nodeSass.mod.FunctionDeclarations
+import typingsSlinky.nodeSass.mod.Importer
+import typingsSlinky.nodeSass.mod.SassFunction
+import typingsSlinky.nodeSass.nodeSassStrings.compact
+import typingsSlinky.nodeSass.nodeSassStrings.compressed
+import typingsSlinky.nodeSass.nodeSassStrings.expanded
+import typingsSlinky.nodeSass.nodeSassStrings.nested
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options
   extends typingsSlinky.nodeSass.mod.Options {
   /**
     * 
     */
-  var debug: js.UndefOr[Boolean] = js.native
+  var debug: js.UndefOr[Boolean] = js.undefined
   /**
     * 
     */
-  var dest: js.UndefOr[String] = js.native
+  var dest: js.UndefOr[String] = js.undefined
   /**
     * 
     */
-  var error: js.UndefOr[js.Function0[Unit]] = js.native
+  var error: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * 
     */
-  var force: js.UndefOr[Boolean] = js.native
+  var force: js.UndefOr[Boolean] = js.undefined
   /**
     * 
     */
-  var prefix: js.UndefOr[String] = js.native
+  var prefix: js.UndefOr[String] = js.undefined
   /**
     * 
     */
-  var response: js.UndefOr[Boolean] = js.native
+  var response: js.UndefOr[Boolean] = js.undefined
   /**
     * 
     */
-  var root: js.UndefOr[String] = js.native
+  var root: js.UndefOr[String] = js.undefined
   /**
     * 
     */
-  var src: String = js.native
+  var src: String
 }
 
 object Options {
   @scala.inline
-  def apply(src: String): Options = {
+  def apply(
+    src: String,
+    data: String = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    dest: String = null,
+    error: () => Unit = null,
+    file: String = null,
+    force: js.UndefOr[Boolean] = js.undefined,
+    functions: FunctionDeclarations[SassFunction] = null,
+    importer: Importer | js.Array[Importer] = null,
+    includePaths: js.Array[String] = null,
+    indentType: String = null,
+    indentWidth: js.UndefOr[Double] = js.undefined,
+    indentedSyntax: js.UndefOr[Boolean] = js.undefined,
+    linefeed: String = null,
+    omitSourceMapUrl: js.UndefOr[Boolean] = js.undefined,
+    outFile: String = null,
+    outputStyle: compact | compressed | expanded | nested = null,
+    precision: js.UndefOr[Double] = js.undefined,
+    prefix: String = null,
+    response: js.UndefOr[Boolean] = js.undefined,
+    root: String = null,
+    sourceComments: js.UndefOr[Boolean] = js.undefined,
+    sourceMap: Boolean | String = null,
+    sourceMapContents: js.UndefOr[Boolean] = js.undefined,
+    sourceMapEmbed: js.UndefOr[Boolean] = js.undefined,
+    sourceMapRoot: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (dest != null) __obj.updateDynamic("dest")(dest.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction0(error))
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (functions != null) __obj.updateDynamic("functions")(functions.asInstanceOf[js.Any])
+    if (importer != null) __obj.updateDynamic("importer")(importer.asInstanceOf[js.Any])
+    if (includePaths != null) __obj.updateDynamic("includePaths")(includePaths.asInstanceOf[js.Any])
+    if (indentType != null) __obj.updateDynamic("indentType")(indentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(indentWidth)) __obj.updateDynamic("indentWidth")(indentWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indentedSyntax)) __obj.updateDynamic("indentedSyntax")(indentedSyntax.get.asInstanceOf[js.Any])
+    if (linefeed != null) __obj.updateDynamic("linefeed")(linefeed.asInstanceOf[js.Any])
+    if (!js.isUndefined(omitSourceMapUrl)) __obj.updateDynamic("omitSourceMapUrl")(omitSourceMapUrl.get.asInstanceOf[js.Any])
+    if (outFile != null) __obj.updateDynamic("outFile")(outFile.asInstanceOf[js.Any])
+    if (outputStyle != null) __obj.updateDynamic("outputStyle")(outputStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(response)) __obj.updateDynamic("response")(response.get.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceComments)) __obj.updateDynamic("sourceComments")(sourceComments.get.asInstanceOf[js.Any])
+    if (sourceMap != null) __obj.updateDynamic("sourceMap")(sourceMap.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceMapContents)) __obj.updateDynamic("sourceMapContents")(sourceMapContents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceMapEmbed)) __obj.updateDynamic("sourceMapEmbed")(sourceMapEmbed.get.asInstanceOf[js.Any])
+    if (sourceMapRoot != null) __obj.updateDynamic("sourceMapRoot")(sourceMapRoot.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

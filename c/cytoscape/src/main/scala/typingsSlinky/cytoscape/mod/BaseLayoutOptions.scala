@@ -4,58 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseLayoutOptions extends LayoutOptions {
-  var name: String = js.native
+  var name: String
   // on layoutready event
-  var ready: js.UndefOr[LayoutHandler] = js.native
+  var ready: js.UndefOr[LayoutHandler] = js.undefined
   // on layoutstop event
-  var stop: js.UndefOr[LayoutHandler] = js.native
+  var stop: js.UndefOr[LayoutHandler] = js.undefined
 }
 
 object BaseLayoutOptions {
   @scala.inline
-  def apply(name: String): BaseLayoutOptions = {
+  def apply(
+    name: String,
+    ready: /* e */ LayoutEventObject => Unit = null,
+    stop: /* e */ LayoutEventObject => Unit = null
+  ): BaseLayoutOptions = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction1(ready))
+    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction1(stop))
     __obj.asInstanceOf[BaseLayoutOptions]
   }
-  @scala.inline
-  implicit class BaseLayoutOptionsOps[Self <: BaseLayoutOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReady(value: /* e */ LayoutEventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReady: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStop(value: /* e */ LayoutEventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

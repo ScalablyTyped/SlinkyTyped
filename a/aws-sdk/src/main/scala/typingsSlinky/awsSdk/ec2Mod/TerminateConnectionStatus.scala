@@ -22,53 +22,16 @@ trait TerminateConnectionStatus extends js.Object {
 
 object TerminateConnectionStatus {
   @scala.inline
-  def apply(): TerminateConnectionStatus = {
+  def apply(
+    ConnectionId: String = null,
+    CurrentStatus: ClientVpnConnectionStatus = null,
+    PreviousStatus: ClientVpnConnectionStatus = null
+  ): TerminateConnectionStatus = {
     val __obj = js.Dynamic.literal()
+    if (ConnectionId != null) __obj.updateDynamic("ConnectionId")(ConnectionId.asInstanceOf[js.Any])
+    if (CurrentStatus != null) __obj.updateDynamic("CurrentStatus")(CurrentStatus.asInstanceOf[js.Any])
+    if (PreviousStatus != null) __obj.updateDynamic("PreviousStatus")(PreviousStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[TerminateConnectionStatus]
   }
-  @scala.inline
-  implicit class TerminateConnectionStatusOps[Self <: TerminateConnectionStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentStatus(value: ClientVpnConnectionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousStatus(value: ClientVpnConnectionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

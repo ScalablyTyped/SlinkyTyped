@@ -755,11 +755,11 @@ object mod extends js.Object {
   def pathSatisfies[T, U](pred: js.Function1[/* val */ T, Boolean], path: Path, obj: U): Boolean = js.native
   def paths[T](paths: js.Array[Path]): js.Function1[/* obj */ js.Any, js.UndefOr[js.Array[T]]] = js.native
   def paths[T](paths: js.Array[Path], obj: js.Any): js.UndefOr[js.Array[T]] = js.native
-  def pick[K /* <: String */](names: js.Array[K]): js.Function1[
+  def pick[K /* <: String | Double | js.Symbol */](names: js.Array[K]): js.Function1[
     /* obj */ js.Any, 
     Pick[_, Exclude[/* keyof any */ String, Exclude[/* keyof any */ String, K]]]
   ] = js.native
-  def pick[T, K /* <: String */](names: js.Array[K], obj: T): Pick[T, Exclude[/* keyof T */ String, Exclude[/* keyof T */ String, K]]] = js.native
+  def pick[T, K /* <: String | Double | js.Symbol */](names: js.Array[K], obj: T): Pick[T, Exclude[/* keyof T */ String, Exclude[/* keyof T */ String, K]]] = js.native
   def pickAll(names: js.Array[String]): js.Function1[/* obj */ js.Any, _] = js.native
   def pickAll[T, U](names: js.Array[String], obj: T): U = js.native
   def pickBy(pred: ObjPred): js.Function1[/* obj */ js.Any, _] = js.native

@@ -14,29 +14,10 @@ trait GetRoleCredentialsResponse extends js.Object {
 
 object GetRoleCredentialsResponse {
   @scala.inline
-  def apply(): GetRoleCredentialsResponse = {
+  def apply(roleCredentials: RoleCredentials = null): GetRoleCredentialsResponse = {
     val __obj = js.Dynamic.literal()
+    if (roleCredentials != null) __obj.updateDynamic("roleCredentials")(roleCredentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRoleCredentialsResponse]
   }
-  @scala.inline
-  implicit class GetRoleCredentialsResponseOps[Self <: GetRoleCredentialsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleCredentials(value: RoleCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleCredentials")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

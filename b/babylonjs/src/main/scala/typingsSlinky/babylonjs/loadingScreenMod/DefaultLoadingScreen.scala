@@ -26,6 +26,26 @@ class DefaultLoadingScreen protected () extends ILoadingScreen {
   /**
     * Gets or sets the color to use for the background
     */
+  /* CompleteClass */
+  override var loadingUIBackgroundColor: String = js.native
+  /**
+    * Gets or sets the text to display while loading
+    */
+  /* CompleteClass */
+  override var loadingUIText: String = js.native
+  /**
+    * Function called to display the loading screen
+    */
+  /* CompleteClass */
+  override def displayLoadingUI(): Unit = js.native
+  /**
+    * Function called to hide the loading screen
+    */
+  /* CompleteClass */
+  override def hideLoadingUI(): Unit = js.native
+  /**
+    * Gets or sets the color to use for the background
+    */
   @JSName("loadingUIBackgroundColor")
   def loadingUIBackgroundColor_MDefaultLoadingScreen: String = js.native
   @JSName("loadingUIBackgroundColor")

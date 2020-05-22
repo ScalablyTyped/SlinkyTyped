@@ -7,16 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MultipleSelectUI extends BaseUI {
-  var clearAllUI: BaseUI = js.native
-  var items: js.Array[_] = js.native
-  var itemsBox: Core = js.native
-  var searchInput: InputUI = js.native
-  var selectAllUI: BaseUI = js.native
-  def getItems(): Unit = js.native
-  def isSelectedAllValues(): Boolean = js.native
-  def setItems(items: js.Array[_]): Unit = js.native
+  var clearAllUI: BaseUI
+  var items: js.Array[_]
+  var itemsBox: Core
+  var searchInput: InputUI
+  var selectAllUI: BaseUI
+  def getItems(): Unit
+  def isSelectedAllValues(): Boolean
+  def setItems(items: js.Array[_]): Unit
 }
 
 object MultipleSelectUI {
@@ -49,61 +48,5 @@ object MultipleSelectUI {
     val __obj = js.Dynamic.literal(build = js.Any.fromFunction0(build), buildState = buildState.asInstanceOf[js.Any], clearAllUI = clearAllUI.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), element = js.Any.fromFunction0(element), eventManager = eventManager.asInstanceOf[js.Any], focus = js.Any.fromFunction0(focus), getItems = js.Any.fromFunction0(getItems), getValue = js.Any.fromFunction0(getValue), hide = js.Any.fromFunction0(hide), hot = hot.asInstanceOf[js.Any], isBuilt = js.Any.fromFunction0(isBuilt), isSelectedAllValues = js.Any.fromFunction0(isSelectedAllValues), items = items.asInstanceOf[js.Any], itemsBox = itemsBox.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], reset = js.Any.fromFunction0(reset), searchInput = searchInput.asInstanceOf[js.Any], selectAllUI = selectAllUI.asInstanceOf[js.Any], setItems = js.Any.fromFunction1(setItems), setValue = js.Any.fromFunction1(setValue), show = js.Any.fromFunction0(show), update = js.Any.fromFunction0(update))
     __obj.asInstanceOf[MultipleSelectUI]
   }
-  @scala.inline
-  implicit class MultipleSelectUIOps[Self <: MultipleSelectUI] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearAllUI(value: BaseUI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearAllUI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetItems(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItems")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsSelectedAllValues(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelectedAllValues")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemsBox(value: Core): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSearchInput(value: InputUI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectAllUI(value: BaseUI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllUI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetItems(value: js.Array[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setItems")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

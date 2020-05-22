@@ -3,7 +3,7 @@ package typingsSlinky.antd.tabsMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

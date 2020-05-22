@@ -2,8 +2,12 @@ package typingsSlinky.winrtUwp.global.Windows.Media
 
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
+import typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus
+import typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
 import typingsSlinky.winrtUwp.Windows.Web.Http.HttpClient
+import typingsSlinky.winrtUwp.Windows.Web.Http.HttpResponseMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,47 +25,155 @@ object Streaming extends js.Object {
     
     @js.native
     abstract class AdaptiveMediaSourceAdvancedSettings ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings {
+      /* CompleteClass */
+      override var allSegmentsIndependent: js.Any = js.native
+       /* unmapped type */ /* CompleteClass */
+      override var bitrateDowngradeTriggerRatio: js.Any = js.native
+       /* unmapped type */ /* CompleteClass */
+      override var desiredBitrateHeadroomRatio: js.Any = js.native
+    }
     
     /** Represents the result of the creation of a AdaptiveMediaSource object. */
     @js.native
     abstract class AdaptiveMediaSourceCreationResult ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult {
+      /** Gets the HTTP response message, if any, returned from an attempt to create a AdaptiveMediaSource object. */
+      /* CompleteClass */
+      override var httpResponseMessage: HttpResponseMessage = js.native
+      /** Gets the AdaptiveMediaSource object that represents the source of adaptive streaming content. */
+      /* CompleteClass */
+      override var mediaSource: typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSource = js.native
+      /** Gets the status of an attempt to create a AdaptiveMediaSource object. */
+      /* CompleteClass */
+      override var status: AdaptiveMediaSourceCreationStatus = js.native
+    }
     
     /** Provides data for the DownloadBitrateChanged event. */
     @js.native
     abstract class AdaptiveMediaSourceDownloadBitrateChangedEventArgs ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs {
+      /** Gets a value indicating the new download bitrate for the media source. */
+      /* CompleteClass */
+      override var newValue: Double = js.native
+      /** Gets a value indicating the previous download bitrate for the media source. */
+      /* CompleteClass */
+      override var oldValue: Double = js.native
+    }
     
     /** Provides data for the DownloadCompleted event. */
     @js.native
     abstract class AdaptiveMediaSourceDownloadCompletedEventArgs ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs {
+      /** Gets the http response message, if any, returned from the completed media download request. */
+      /* CompleteClass */
+      override var httpResponseMessage: HttpResponseMessage = js.native
+      /** Gets the byte range length of the completed media download request. */
+      /* CompleteClass */
+      override var resourceByteRangeLength: Double = js.native
+      /** Gets the byte range offset of the completed media download request. */
+      /* CompleteClass */
+      override var resourceByteRangeOffset: Double = js.native
+      /** Gets the resource type of the completed media download request. */
+      /* CompleteClass */
+      override var resourceType: AdaptiveMediaSourceResourceType = js.native
+      /** Gets the resource URI of the completed media download request. */
+      /* CompleteClass */
+      override var resourceUri: Uri = js.native
+    }
     
     /** Provides data for the DownloadFailed event. */
     @js.native
     abstract class AdaptiveMediaSourceDownloadFailedEventArgs ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs {
+      /** Gets the http response message, if any, returned from the failed media download request. */
+      /* CompleteClass */
+      override var httpResponseMessage: HttpResponseMessage = js.native
+      /** Gets the byte range length of the failed media download request. */
+      /* CompleteClass */
+      override var resourceByteRangeLength: Double = js.native
+      /** Gets the byte range offset of the failed media download request. */
+      /* CompleteClass */
+      override var resourceByteRangeOffset: Double = js.native
+      /** Gets the resource type of the failed media download request. */
+      /* CompleteClass */
+      override var resourceType: AdaptiveMediaSourceResourceType = js.native
+      /** Gets the resource URI of the failed media download request. */
+      /* CompleteClass */
+      override var resourceUri: Uri = js.native
+    }
     
     /** Represents a deferral that can be used to defer the completion of the DownloadRequested event so that the app can asynchronously download media content. */
     @js.native
     abstract class AdaptiveMediaSourceDownloadRequestedDeferral ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral {
+      /** Informs the system that an asynchronous operation associated with a DownloadRequested event has finished. */
+      /* CompleteClass */
+      override def complete(): Unit = js.native
+    }
     
     /** Provides data for the DownloadRequested event. */
     @js.native
     abstract class AdaptiveMediaSourceDownloadRequestedEventArgs ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs {
+      /** Gets the byte range length of the media download request. */
+      /* CompleteClass */
+      override var resourceByteRangeLength: Double = js.native
+      /** Gets the byte range offset of the media download request. */
+      /* CompleteClass */
+      override var resourceByteRangeOffset: Double = js.native
+      /** Gets the resource type of the media download request. */
+      /* CompleteClass */
+      override var resourceType: AdaptiveMediaSourceResourceType = js.native
+      /** Gets the resource URI of the media download request. */
+      /* CompleteClass */
+      override var resourceUri: Uri = js.native
+      /** Gets an AdaptiveMediaSourceDownloadResult object representing the result of the media download request. */
+      /* CompleteClass */
+      override var result: typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult = js.native
+      /**
+        * Gets a deferral that can be used to defer the completion of the DownloadRequested event so that the app can asynchronously download media content.
+        * @return A deferral that can be used to defer the completion of the DownloadRequested event.
+        */
+      /* CompleteClass */
+      override def getDeferral(): typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral = js.native
+    }
     
     /** Represents the results of a resource download operation. */
     @js.native
     abstract class AdaptiveMediaSourceDownloadResult ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult {
+      /** Gets or sets a buffer containing the downloaded resource. */
+      /* CompleteClass */
+      override var buffer: IBuffer = js.native
+      /** Gets or sets a string that identifies the MIME content type of the downloaded resource. */
+      /* CompleteClass */
+      override var contentType: String = js.native
+      /** Gets or sets an integer value that represents extended status information about the resource download operation. */
+      /* CompleteClass */
+      override var extendedStatus: Double = js.native
+      /** Gets or sets an input stream containing the downloaded resource. */
+      /* CompleteClass */
+      override var inputStream: IInputStream = js.native
+      /** Gets or sets the Uniform Resource Identifier (URI) of the downloaded resource. */
+      /* CompleteClass */
+      override var resourceUri: Uri = js.native
+    }
     
     /** Provides data for the PlaybackBitrateChanged event. */
     @js.native
     abstract class AdaptiveMediaSourcePlaybackBitrateChangedEventArgs ()
-      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs
+      extends typingsSlinky.winrtUwp.Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs {
+      /** Gets a value indicating whether the media source contains only audio data. */
+      /* CompleteClass */
+      override var audioOnly: Boolean = js.native
+      /** Gets the new playback bitrate. */
+      /* CompleteClass */
+      override var newValue: Double = js.native
+      /** Gets the old playback bitrate. */
+      /* CompleteClass */
+      override var oldValue: Double = js.native
+    }
     
     /* static members */
     @js.native

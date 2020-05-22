@@ -14,29 +14,10 @@ trait InitiateVaultLockOutput extends js.Object {
 
 object InitiateVaultLockOutput {
   @scala.inline
-  def apply(): InitiateVaultLockOutput = {
+  def apply(lockId: String = null): InitiateVaultLockOutput = {
     val __obj = js.Dynamic.literal()
+    if (lockId != null) __obj.updateDynamic("lockId")(lockId.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitiateVaultLockOutput]
   }
-  @scala.inline
-  implicit class InitiateVaultLockOutputOps[Self <: InitiateVaultLockOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLockId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -27,7 +27,11 @@ class TextAttribute protected () extends Node {
   ) = this()
   var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
   var name: String = js.native
+  /* CompleteClass */
+  override var sourceSpan: ParseSourceSpan = js.native
   var value: String = js.native
   var valueSpan: js.UndefOr[ParseSourceSpan] = js.native
+  /* CompleteClass */
+  override def visit[Result](visitor: Visitor[Result]): Result = js.native
 }
 

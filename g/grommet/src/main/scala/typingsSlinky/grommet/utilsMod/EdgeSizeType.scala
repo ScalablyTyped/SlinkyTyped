@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.grommet.grommetStrings.xlarge
 */
 trait EdgeSizeType
-  extends EdgeType
-     with GapType
+  extends _EdgeType
+     with _GapType
 
 object EdgeSizeType {
   @scala.inline

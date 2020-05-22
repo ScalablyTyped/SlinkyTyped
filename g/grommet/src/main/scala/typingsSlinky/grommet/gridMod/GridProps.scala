@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.gridMod
 
-import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.anon.Column
 import typingsSlinky.grommet.anon.Count
 import typingsSlinky.grommet.anon.End
@@ -36,284 +35,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridProps extends js.Object {
-  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
-  var align: js.UndefOr[start | center | end | stretch] = js.native
-  var alignContent: js.UndefOr[AlignContentType] = js.native
-  var alignSelf: js.UndefOr[AlignSelfType] = js.native
-  var areas: js.UndefOr[js.Array[js.Array[String] | End]] = js.native
-  var as: js.UndefOr[PolymorphicType] = js.native
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.undefined
+  var align: js.UndefOr[start | center | end | stretch] = js.undefined
+  var alignContent: js.UndefOr[AlignContentType] = js.undefined
+  var alignSelf: js.UndefOr[AlignSelfType] = js.undefined
+  var areas: js.UndefOr[js.Array[js.Array[String] | End]] = js.undefined
+  var as: js.UndefOr[PolymorphicType] = js.undefined
   var columns: js.UndefOr[
     (js.Array[
       xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
     ]) | xsmall | small | medium | large | xlarge | Count | String
-  ] = js.native
-  var fill: js.UndefOr[FillType] = js.native
-  var gap: js.UndefOr[GapType | Column] = js.native
-  var gridArea: js.UndefOr[GridAreaType] = js.native
-  var justify: js.UndefOr[start | center | end | stretch] = js.native
-  var justifyContent: js.UndefOr[JustifyContentType] = js.native
-  var margin: js.UndefOr[MarginType] = js.native
-  var pad: js.UndefOr[PadType] = js.native
-  var responsive: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var fill: js.UndefOr[FillType] = js.undefined
+  var gap: js.UndefOr[GapType | Column] = js.undefined
+  var gridArea: js.UndefOr[GridAreaType] = js.undefined
+  var justify: js.UndefOr[start | center | end | stretch] = js.undefined
+  var justifyContent: js.UndefOr[JustifyContentType] = js.undefined
+  var margin: js.UndefOr[MarginType] = js.undefined
+  var pad: js.UndefOr[PadType] = js.undefined
+  var responsive: js.UndefOr[Boolean] = js.undefined
   var rows: js.UndefOr[
     (js.Array[
       xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
     ]) | xsmall | small | medium | large | xlarge | String
-  ] = js.native
-  var tag: js.UndefOr[PolymorphicType] = js.native
+  ] = js.undefined
+  var tag: js.UndefOr[PolymorphicType] = js.undefined
 }
 
 object GridProps {
   @scala.inline
-  def apply(): GridProps = {
+  def apply(
+    a11yTitle: A11yTitleType = null,
+    align: start | center | end | stretch = null,
+    alignContent: AlignContentType = null,
+    alignSelf: AlignSelfType = null,
+    areas: js.Array[js.Array[String] | End] = null,
+    as: PolymorphicType = null,
+    columns: (js.Array[
+      xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
+    ]) | xsmall | small | medium | large | xlarge | Count | String = null,
+    fill: FillType = null,
+    gap: GapType | Column = null,
+    gridArea: GridAreaType = null,
+    justify: start | center | end | stretch = null,
+    justifyContent: JustifyContentType = null,
+    margin: MarginType = null,
+    pad: PadType = null,
+    responsive: js.UndefOr[Boolean] = js.undefined,
+    rows: (js.Array[
+      xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
+    ]) | xsmall | small | medium | large | xlarge | String = null,
+    tag: PolymorphicType = null
+  ): GridProps = {
     val __obj = js.Dynamic.literal()
+    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (alignContent != null) __obj.updateDynamic("alignContent")(alignContent.asInstanceOf[js.Any])
+    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
+    if (areas != null) __obj.updateDynamic("areas")(areas.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
+    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
+    if (justify != null) __obj.updateDynamic("justify")(justify.asInstanceOf[js.Any])
+    if (justifyContent != null) __obj.updateDynamic("justifyContent")(justifyContent.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (pad != null) __obj.updateDynamic("pad")(pad.asInstanceOf[js.Any])
+    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.get.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridProps]
   }
-  @scala.inline
-  implicit class GridPropsOps[Self <: GridProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA11yTitle(value: A11yTitleType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA11yTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlign(value: start | center | end | stretch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignContent(value: AlignContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignSelf(value: AlignSelfType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignSelf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAreas(value: js.Array[js.Array[String] | End]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsFunctionComponent(value: ReactComponentClass[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAsComponentClass(value: ReactComponentClass[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAs(value: PolymorphicType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(
-      value: (js.Array[
-          xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
-        ]) | xsmall | small | medium | large | xlarge | Count | String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: FillType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGap(value: GapType | Column): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridArea(value: GridAreaType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJustify(value: start | center | end | stretch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJustify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJustifyContent(value: JustifyContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJustifyContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: MarginType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPad(value: PadType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(
-      value: (js.Array[
-          xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
-        ]) | xsmall | small | medium | large | xlarge | String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagFunctionComponent(value: ReactComponentClass[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTagComponentClass(value: ReactComponentClass[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: PolymorphicType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -181,11 +181,11 @@ trait Tile
     * Gets the world rectangle bounding box for the tile, factoring in the layers position,
     * scale and scroll.
     * @param camera The Camera to use to perform the check.
-    * @param output [description]
+    * @param output Optional Rectangle object to store the results in.
     */
   def getBounds(): Rectangle | js.Object = js.native
   def getBounds(camera: Camera): Rectangle | js.Object = js.native
-  def getBounds(camera: Camera, output: js.Object): Rectangle | js.Object = js.native
+  def getBounds(camera: Camera, output: Rectangle): Rectangle | js.Object = js.native
   /**
     * Gets the world X position of the center of the tile, factoring in the layer's position,
     * scale and scroll.

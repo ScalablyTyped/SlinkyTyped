@@ -16,5 +16,10 @@ class ASPxClientFloatingActionButtonActionExpandingEventArgs protected ()
     * @param contextName Specifies the FAB action's context name.
     */
   def this(contextName: String) = this()
+  /**
+    * Specifies the FAB action's context name.
+    */
+  /* CompleteClass */
+  override var contextName: String = js.native
 }
 

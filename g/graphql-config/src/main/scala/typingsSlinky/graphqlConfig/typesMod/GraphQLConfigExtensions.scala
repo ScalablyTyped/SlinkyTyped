@@ -6,37 +6,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GraphQLConfigExtensions
   extends /* name */ StringDictionary[js.Any] {
-  var endpoints: js.UndefOr[GraphQLConfigEnpointsData] = js.native
+  var endpoints: js.UndefOr[GraphQLConfigEnpointsData] = js.undefined
 }
 
 object GraphQLConfigExtensions {
   @scala.inline
-  def apply(): GraphQLConfigExtensions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    endpoints: GraphQLConfigEnpointsData = null
+  ): GraphQLConfigExtensions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (endpoints != null) __obj.updateDynamic("endpoints")(endpoints.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLConfigExtensions]
   }
-  @scala.inline
-  implicit class GraphQLConfigExtensionsOps[Self <: GraphQLConfigExtensions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpoints(value: GraphQLConfigEnpointsData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoints")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

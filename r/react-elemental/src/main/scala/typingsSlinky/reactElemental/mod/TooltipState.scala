@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TooltipState extends js.Object {
-  val displayTooltip: js.Any = js.native
+  val displayTooltip: js.Any
 }
 
 object TooltipState {
@@ -15,19 +14,5 @@ object TooltipState {
     val __obj = js.Dynamic.literal(displayTooltip = displayTooltip.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipState]
   }
-  @scala.inline
-  implicit class TooltipStateOps[Self <: TooltipState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayTooltip(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

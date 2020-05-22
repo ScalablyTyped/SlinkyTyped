@@ -12,9 +12,9 @@ trait InstantiableIColorMatrix
   extends Instantiable0[IColorMatrix]
      with Instantiable1[/* options */ Matrix, IColorMatrix] {
   /**
-  		 * Returns filter instance from an object representation
-  		 * @param object Object to create an instance from
-  		 */
+    * Returns filter instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): IColorMatrix = js.native
 }
 

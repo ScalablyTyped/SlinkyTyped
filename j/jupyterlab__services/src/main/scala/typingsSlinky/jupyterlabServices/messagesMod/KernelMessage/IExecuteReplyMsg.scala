@@ -15,14 +15,13 @@ import scala.scalajs.js.annotation._
   *
   * **See also:** [[IExecuteRequest]], [[IKernel.execute]]
   */
-@js.native
 trait IExecuteReplyMsg
   extends IShellMessage[execute_reply]
-     with Message {
+     with _Message {
   @JSName("content")
-  var content_IExecuteReplyMsg: ReplyContent[IExecuteReply] with IExecuteCount = js.native
+  var content_IExecuteReplyMsg: ReplyContent[IExecuteReply] with IExecuteCount
   @JSName("parent_header")
-  var parent_header_IExecuteReplyMsg: IHeader[execute_request] = js.native
+  var parent_header_IExecuteReplyMsg: IHeader[execute_request]
 }
 
 object IExecuteReplyMsg {
@@ -32,30 +31,12 @@ object IExecuteReplyMsg {
     content: ReplyContent[IExecuteReply] with IExecuteCount,
     header: IHeader[execute_reply],
     metadata: JSONObject,
-    parent_header: IHeader[execute_request]
+    parent_header: IHeader[execute_request],
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView] = null
   ): IExecuteReplyMsg = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
+    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExecuteReplyMsg]
   }
-  @scala.inline
-  implicit class IExecuteReplyMsgOps[Self <: IExecuteReplyMsg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: ReplyContent[IExecuteReply] with IExecuteCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent_header(value: IHeader[execute_request]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent_header")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FoldingRangeProvider extends js.Object {
   /**
-  		 * Returns a list of folding ranges or null and undefined if the provider
-  		 * does not want to participate or was cancelled.
-  		 * @param document The document in which the command was invoked.
-  		 * @param context Additional context information (for future use)
-  		 * @param token A cancellation token.
-  		 */
-  def provideFoldingRanges(document: TextDocument, context: FoldingContext, token: CancellationToken): ProviderResult[js.Array[FoldingRange]] = js.native
+    * Returns a list of folding ranges or null and undefined if the provider
+    * does not want to participate or was cancelled.
+    * @param document The document in which the command was invoked.
+    * @param context Additional context information (for future use)
+    * @param token A cancellation token.
+    */
+  def provideFoldingRanges(document: TextDocument, context: FoldingContext, token: CancellationToken): ProviderResult[js.Array[FoldingRange]]
 }
 
 object FoldingRangeProvider {
@@ -24,19 +23,5 @@ object FoldingRangeProvider {
     val __obj = js.Dynamic.literal(provideFoldingRanges = js.Any.fromFunction3(provideFoldingRanges))
     __obj.asInstanceOf[FoldingRangeProvider]
   }
-  @scala.inline
-  implicit class FoldingRangeProviderOps[Self <: FoldingRangeProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvideFoldingRanges(value: (TextDocument, FoldingContext, CancellationToken) => ProviderResult[js.Array[FoldingRange]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideFoldingRanges")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -94,269 +94,52 @@ trait Eac3Settings extends js.Object {
 
 object Eac3Settings {
   @scala.inline
-  def apply(): Eac3Settings = {
+  def apply(
+    AttenuationControl: Eac3AttenuationControl = null,
+    Bitrate: js.UndefOr[integerMin64000Max640000] = js.undefined,
+    BitstreamMode: Eac3BitstreamMode = null,
+    CodingMode: Eac3CodingMode = null,
+    DcFilter: Eac3DcFilter = null,
+    Dialnorm: js.UndefOr[integerMin1Max31] = js.undefined,
+    DynamicRangeCompressionLine: Eac3DynamicRangeCompressionLine = null,
+    DynamicRangeCompressionRf: Eac3DynamicRangeCompressionRf = null,
+    LfeControl: Eac3LfeControl = null,
+    LfeFilter: Eac3LfeFilter = null,
+    LoRoCenterMixLevel: js.UndefOr[doubleMinNegative60Max3] = js.undefined,
+    LoRoSurroundMixLevel: js.UndefOr[doubleMinNegative60MaxNegative1] = js.undefined,
+    LtRtCenterMixLevel: js.UndefOr[doubleMinNegative60Max3] = js.undefined,
+    LtRtSurroundMixLevel: js.UndefOr[doubleMinNegative60MaxNegative1] = js.undefined,
+    MetadataControl: Eac3MetadataControl = null,
+    PassthroughControl: Eac3PassthroughControl = null,
+    PhaseControl: Eac3PhaseControl = null,
+    SampleRate: js.UndefOr[integerMin48000Max48000] = js.undefined,
+    StereoDownmix: Eac3StereoDownmix = null,
+    SurroundExMode: Eac3SurroundExMode = null,
+    SurroundMode: Eac3SurroundMode = null
+  ): Eac3Settings = {
     val __obj = js.Dynamic.literal()
+    if (AttenuationControl != null) __obj.updateDynamic("AttenuationControl")(AttenuationControl.asInstanceOf[js.Any])
+    if (!js.isUndefined(Bitrate)) __obj.updateDynamic("Bitrate")(Bitrate.get.asInstanceOf[js.Any])
+    if (BitstreamMode != null) __obj.updateDynamic("BitstreamMode")(BitstreamMode.asInstanceOf[js.Any])
+    if (CodingMode != null) __obj.updateDynamic("CodingMode")(CodingMode.asInstanceOf[js.Any])
+    if (DcFilter != null) __obj.updateDynamic("DcFilter")(DcFilter.asInstanceOf[js.Any])
+    if (!js.isUndefined(Dialnorm)) __obj.updateDynamic("Dialnorm")(Dialnorm.get.asInstanceOf[js.Any])
+    if (DynamicRangeCompressionLine != null) __obj.updateDynamic("DynamicRangeCompressionLine")(DynamicRangeCompressionLine.asInstanceOf[js.Any])
+    if (DynamicRangeCompressionRf != null) __obj.updateDynamic("DynamicRangeCompressionRf")(DynamicRangeCompressionRf.asInstanceOf[js.Any])
+    if (LfeControl != null) __obj.updateDynamic("LfeControl")(LfeControl.asInstanceOf[js.Any])
+    if (LfeFilter != null) __obj.updateDynamic("LfeFilter")(LfeFilter.asInstanceOf[js.Any])
+    if (!js.isUndefined(LoRoCenterMixLevel)) __obj.updateDynamic("LoRoCenterMixLevel")(LoRoCenterMixLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(LoRoSurroundMixLevel)) __obj.updateDynamic("LoRoSurroundMixLevel")(LoRoSurroundMixLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(LtRtCenterMixLevel)) __obj.updateDynamic("LtRtCenterMixLevel")(LtRtCenterMixLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(LtRtSurroundMixLevel)) __obj.updateDynamic("LtRtSurroundMixLevel")(LtRtSurroundMixLevel.get.asInstanceOf[js.Any])
+    if (MetadataControl != null) __obj.updateDynamic("MetadataControl")(MetadataControl.asInstanceOf[js.Any])
+    if (PassthroughControl != null) __obj.updateDynamic("PassthroughControl")(PassthroughControl.asInstanceOf[js.Any])
+    if (PhaseControl != null) __obj.updateDynamic("PhaseControl")(PhaseControl.asInstanceOf[js.Any])
+    if (!js.isUndefined(SampleRate)) __obj.updateDynamic("SampleRate")(SampleRate.get.asInstanceOf[js.Any])
+    if (StereoDownmix != null) __obj.updateDynamic("StereoDownmix")(StereoDownmix.asInstanceOf[js.Any])
+    if (SurroundExMode != null) __obj.updateDynamic("SurroundExMode")(SurroundExMode.asInstanceOf[js.Any])
+    if (SurroundMode != null) __obj.updateDynamic("SurroundMode")(SurroundMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[Eac3Settings]
   }
-  @scala.inline
-  implicit class Eac3SettingsOps[Self <: Eac3Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttenuationControl(value: Eac3AttenuationControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttenuationControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttenuationControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttenuationControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBitrate(value: integerMin64000Max640000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBitstreamMode(value: Eac3BitstreamMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitstreamMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitstreamMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitstreamMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodingMode(value: Eac3CodingMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodingMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDcFilter(value: Eac3DcFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DcFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDcFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DcFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialnorm(value: integerMin1Max31): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialnorm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialnorm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialnorm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicRangeCompressionLine(value: Eac3DynamicRangeCompressionLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicRangeCompressionLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicRangeCompressionLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicRangeCompressionLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicRangeCompressionRf(value: Eac3DynamicRangeCompressionRf): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicRangeCompressionRf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicRangeCompressionRf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicRangeCompressionRf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLfeControl(value: Eac3LfeControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LfeControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLfeControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LfeControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLfeFilter(value: Eac3LfeFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LfeFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLfeFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LfeFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoRoCenterMixLevel(value: doubleMinNegative60Max3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoRoCenterMixLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoRoCenterMixLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoRoCenterMixLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoRoSurroundMixLevel(value: doubleMinNegative60MaxNegative1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoRoSurroundMixLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoRoSurroundMixLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoRoSurroundMixLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLtRtCenterMixLevel(value: doubleMinNegative60Max3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LtRtCenterMixLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLtRtCenterMixLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LtRtCenterMixLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLtRtSurroundMixLevel(value: doubleMinNegative60MaxNegative1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LtRtSurroundMixLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLtRtSurroundMixLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LtRtSurroundMixLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataControl(value: Eac3MetadataControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassthroughControl(value: Eac3PassthroughControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PassthroughControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassthroughControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PassthroughControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhaseControl(value: Eac3PhaseControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhaseControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhaseControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhaseControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleRate(value: integerMin48000Max48000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStereoDownmix(value: Eac3StereoDownmix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StereoDownmix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStereoDownmix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StereoDownmix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSurroundExMode(value: Eac3SurroundExMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SurroundExMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSurroundExMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SurroundExMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSurroundMode(value: Eac3SurroundMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SurroundMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSurroundMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SurroundMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

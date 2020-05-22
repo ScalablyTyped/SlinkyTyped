@@ -18,65 +18,18 @@ trait SchemaDnsKeySpec extends js.Object {
 
 object SchemaDnsKeySpec {
   @scala.inline
-  def apply(): SchemaDnsKeySpec = {
+  def apply(
+    algorithm: String = null,
+    keyLength: js.UndefOr[Double] = js.undefined,
+    keyType: String = null,
+    kind: String = null
+  ): SchemaDnsKeySpec = {
     val __obj = js.Dynamic.literal()
+    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyLength)) __obj.updateDynamic("keyLength")(keyLength.get.asInstanceOf[js.Any])
+    if (keyType != null) __obj.updateDynamic("keyType")(keyType.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDnsKeySpec]
   }
-  @scala.inline
-  implicit class SchemaDnsKeySpecOps[Self <: SchemaDnsKeySpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

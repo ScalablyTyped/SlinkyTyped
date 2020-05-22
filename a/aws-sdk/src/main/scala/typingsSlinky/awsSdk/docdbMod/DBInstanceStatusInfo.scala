@@ -26,65 +26,18 @@ trait DBInstanceStatusInfo extends js.Object {
 
 object DBInstanceStatusInfo {
   @scala.inline
-  def apply(): DBInstanceStatusInfo = {
+  def apply(
+    Message: String = null,
+    Normal: js.UndefOr[Boolean] = js.undefined,
+    Status: String = null,
+    StatusType: String = null
+  ): DBInstanceStatusInfo = {
     val __obj = js.Dynamic.literal()
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
+    if (!js.isUndefined(Normal)) __obj.updateDynamic("Normal")(Normal.get.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusType != null) __obj.updateDynamic("StatusType")(StatusType.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBInstanceStatusInfo]
   }
-  @scala.inline
-  implicit class DBInstanceStatusInfoOps[Self <: DBInstanceStatusInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Normal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Normal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

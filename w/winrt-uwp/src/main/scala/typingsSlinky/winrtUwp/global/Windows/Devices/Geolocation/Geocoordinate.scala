@@ -8,5 +8,42 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Geolocation.Geocoordinate")
 @js.native
 abstract class Geocoordinate ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Geolocation.Geocoordinate
+  extends typingsSlinky.winrtUwp.Windows.Devices.Geolocation.Geocoordinate {
+  /** The accuracy of the location in meters. */
+  /* CompleteClass */
+  override var accuracy: Double = js.native
+  /** The altitude of the location, in meters. */
+  /* CompleteClass */
+  override var altitude: Double = js.native
+  /** The accuracy of the altitude, in meters. */
+  /* CompleteClass */
+  override var altitudeAccuracy: Double = js.native
+  /** The current heading in degrees relative to true north. */
+  /* CompleteClass */
+  override var heading: Double = js.native
+  /** The latitude in degrees. */
+  /* CompleteClass */
+  override var latitude: Double = js.native
+  /** The longitude in degrees. */
+  /* CompleteClass */
+  override var longitude: Double = js.native
+  /** The location of the Geocoordinate. */
+  /* CompleteClass */
+  override var point: typingsSlinky.winrtUwp.Windows.Devices.Geolocation.Geopoint = js.native
+  /** Gets the source used to obtain a Geocoordinate. */
+  /* CompleteClass */
+  override var positionSource: typingsSlinky.winrtUwp.Windows.Devices.Geolocation.PositionSource = js.native
+  /** Gets the time at which the associated Geocoordinate position was calculated. */
+  /* CompleteClass */
+  override var positionSourceTimestamp: js.Date = js.native
+  /** Gets information about the satellites used to obtain a Geocoordinate. */
+  /* CompleteClass */
+  override var satelliteData: typingsSlinky.winrtUwp.Windows.Devices.Geolocation.GeocoordinateSatelliteData = js.native
+  /** The speed in meters per second. */
+  /* CompleteClass */
+  override var speed: Double = js.native
+  /** The system time at which the location was determined. */
+  /* CompleteClass */
+  override var timestamp: js.Date = js.native
+}
 

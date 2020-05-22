@@ -19,27 +19,26 @@ import scala.scalajs.js.annotation._
   * @param {number} [options.width] - Width of the resource
   * @param {number} [options.height] - Height of the resource
   */
-@js.native
 trait ArrayResource extends Resource {
   /**
     * Dirty IDs for each part
     * @member {Array<number>} PIXI.resources.ArrayResource#itemDirtyIds
     * @readonly
     */
-  val itemDirtyIds: js.Array[Double] = js.native
+  val itemDirtyIds: js.Array[Double]
   /**
     * Collection of resources.
     * @member {Array<PIXI.BaseTexture>} PIXI.resources.ArrayResource#items
     * @readonly
     */
-  val items: js.Array[BaseTexture] = js.native
+  val items: js.Array[BaseTexture]
   /**
     * Number of elements in array
     *
     * @member {number} PIXI.resources.ArrayResource#length
     * @readonly
     */
-  val length: Double = js.native
+  val length: Double
   /**
     * Set a resource by ID
     *
@@ -47,7 +46,7 @@ trait ArrayResource extends Resource {
     * @param {number} index - Zero-based index of resource to set
     * @return {PIXI.resources.ArrayResource} Instance for chaining
     */
-  def addResourceAt(resource: Resource, index: Double): ArrayResource = js.native
+  def addResourceAt(resource: Resource, index: Double): ArrayResource
 }
 
 object ArrayResource {
@@ -77,37 +76,5 @@ object ArrayResource {
     val __obj = js.Dynamic.literal(_height = _height.asInstanceOf[js.Any], _width = _width.asInstanceOf[js.Any], addResourceAt = js.Any.fromFunction2(addResourceAt), bind = js.Any.fromFunction1(bind), destroy = js.Any.fromFunction0(destroy), destroyed = destroyed.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), height = height.asInstanceOf[js.Any], internal = internal.asInstanceOf[js.Any], itemDirtyIds = itemDirtyIds.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], load = js.Any.fromFunction0(load), resize = js.Any.fromFunction2(resize), style = js.Any.fromFunction3(style), unbind = js.Any.fromFunction1(unbind), update = js.Any.fromFunction0(update), upload = js.Any.fromFunction3(upload), valid = valid.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayResource]
   }
-  @scala.inline
-  implicit class ArrayResourceOps[Self <: ArrayResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddResourceAt(value: (Resource, Double) => ArrayResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addResourceAt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withItemDirtyIds(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDirtyIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[BaseTexture]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

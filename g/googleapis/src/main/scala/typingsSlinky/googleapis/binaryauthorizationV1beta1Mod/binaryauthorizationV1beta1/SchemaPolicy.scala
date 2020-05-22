@@ -55,101 +55,24 @@ trait SchemaPolicy extends js.Object {
 
 object SchemaPolicy {
   @scala.inline
-  def apply(): SchemaPolicy = {
+  def apply(
+    admissionWhitelistPatterns: js.Array[SchemaAdmissionWhitelistPattern] = null,
+    clusterAdmissionRules: StringDictionary[SchemaAdmissionRule] = null,
+    defaultAdmissionRule: SchemaAdmissionRule = null,
+    description: String = null,
+    globalPolicyEvaluationMode: String = null,
+    name: String = null,
+    updateTime: String = null
+  ): SchemaPolicy = {
     val __obj = js.Dynamic.literal()
+    if (admissionWhitelistPatterns != null) __obj.updateDynamic("admissionWhitelistPatterns")(admissionWhitelistPatterns.asInstanceOf[js.Any])
+    if (clusterAdmissionRules != null) __obj.updateDynamic("clusterAdmissionRules")(clusterAdmissionRules.asInstanceOf[js.Any])
+    if (defaultAdmissionRule != null) __obj.updateDynamic("defaultAdmissionRule")(defaultAdmissionRule.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (globalPolicyEvaluationMode != null) __obj.updateDynamic("globalPolicyEvaluationMode")(globalPolicyEvaluationMode.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPolicy]
   }
-  @scala.inline
-  implicit class SchemaPolicyOps[Self <: SchemaPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdmissionWhitelistPatterns(value: js.Array[SchemaAdmissionWhitelistPattern]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("admissionWhitelistPatterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdmissionWhitelistPatterns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("admissionWhitelistPatterns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterAdmissionRules(value: StringDictionary[SchemaAdmissionRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterAdmissionRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterAdmissionRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterAdmissionRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultAdmissionRule(value: SchemaAdmissionRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAdmissionRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultAdmissionRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAdmissionRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalPolicyEvaluationMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalPolicyEvaluationMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalPolicyEvaluationMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalPolicyEvaluationMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

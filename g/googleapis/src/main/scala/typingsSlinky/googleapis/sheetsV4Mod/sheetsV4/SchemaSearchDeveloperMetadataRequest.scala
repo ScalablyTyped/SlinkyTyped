@@ -20,29 +20,10 @@ trait SchemaSearchDeveloperMetadataRequest extends js.Object {
 
 object SchemaSearchDeveloperMetadataRequest {
   @scala.inline
-  def apply(): SchemaSearchDeveloperMetadataRequest = {
+  def apply(dataFilters: js.Array[SchemaDataFilter] = null): SchemaSearchDeveloperMetadataRequest = {
     val __obj = js.Dynamic.literal()
+    if (dataFilters != null) __obj.updateDynamic("dataFilters")(dataFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSearchDeveloperMetadataRequest]
   }
-  @scala.inline
-  implicit class SchemaSearchDeveloperMetadataRequestOps[Self <: SchemaSearchDeveloperMetadataRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataFilters(value: js.Array[SchemaDataFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFilters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

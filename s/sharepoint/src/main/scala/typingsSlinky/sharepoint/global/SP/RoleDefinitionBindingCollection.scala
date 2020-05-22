@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.global.SP
 
+import typingsSlinky.sharepoint.IEnumerator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +10,8 @@ import scala.scalajs.js.annotation._
 class RoleDefinitionBindingCollection protected ()
   extends typingsSlinky.sharepoint.SP.RoleDefinitionBindingCollection {
   def this(context: typingsSlinky.sharepoint.SP.ClientRuntimeContext) = this()
+  /* CompleteClass */
+  override def getEnumerator(): IEnumerator[typingsSlinky.sharepoint.SP.RoleDefinition] = js.native
 }
 
 /* static members */

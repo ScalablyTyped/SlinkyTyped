@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JSTreeStaticDefaultsCore extends js.Object {
   /**
     * the open / close animation duration in milliseconds - set this to `false` to disable the animation (default is `200`)
     * @name $.jstree.defaults.core.animation
     */
-  var animation: js.UndefOr[js.Any] = js.native
+  var animation: js.UndefOr[js.Any] = js.undefined
   /**
     * determines what happens when a user tries to modify the structure of the tree
     * If left as `false` all operations like create, rename, delete, move or copy are prevented.
@@ -30,7 +29,7 @@ trait JSTreeStaticDefaultsCore extends js.Object {
     *
     * @name $.jstree.defaults.core.check_callback
     */
-  var check_callback: js.UndefOr[js.Any] = js.native
+  var check_callback: js.UndefOr[js.Any] = js.undefined
   /**
     * data configuration
     *
@@ -85,45 +84,45 @@ trait JSTreeStaticDefaultsCore extends js.Object {
     *
     * @name $.jstree.defaults.core.data
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /**
     * Should the node be toggled if the text is double clicked. Defaults to `true`
     * @name $.jstree.defaults.core.dblclick_toggle
     */
-  var dblclick_toggle: js.UndefOr[Boolean] = js.native
+  var dblclick_toggle: js.UndefOr[Boolean] = js.undefined
   /**
     * if left as `true` all parents of all selected nodes will be opened once the tree loads
     * (so that all selected nodes are visible to the user)
     * @name $.jstree.defaults.core.expand_selected_onload
     */
-  var expand_selected_onload: js.UndefOr[Boolean] = js.native
+  var expand_selected_onload: js.UndefOr[Boolean] = js.undefined
   /**
     * Force node text to plain text (and escape HTML). Defaults to `false`
     * @name $.jstree.defaults.core.force_text
     */
-  var force_text: js.UndefOr[Boolean] = js.native
+  var force_text: js.UndefOr[Boolean] = js.undefined
   /**
     * Default keyboard shortcuts (an object where each key is the button name or combo - like 'enter', 'ctrl-space', 'p', etc
     * and the value is the function to execute in the instance's scope)
     * @name $.jstree.defaults.core.keyboard
     */
-  var keyboard: js.UndefOr[JSTreeStaticDefaultsCoreKeyboard] = js.native
+  var keyboard: js.UndefOr[JSTreeStaticDefaultsCoreKeyboard] = js.undefined
   /**
     * Should the loaded nodes be part of the state. Defaults to `false`
     * @name $.jstree.defaults.core.dblclick_toggle
     */
-  var loaded_state: js.UndefOr[Boolean] = js.native
+  var loaded_state: js.UndefOr[Boolean] = js.undefined
   /**
     * a boolean indicating if multiple nodes can be selected
     * @name $.jstree.defaults.core.multiple
     */
-  var multiple: js.UndefOr[Boolean] = js.native
+  var multiple: js.UndefOr[Boolean] = js.undefined
   /**
     * Should the last active node be focused when the tree container is blurred and the focused again.
     * This helps working with screen readers. Defaults to `true`
     * @name $.jstree.defaults.core.restore_focus
     */
-  var restore_focus: js.UndefOr[Boolean] = js.native
+  var restore_focus: js.UndefOr[Boolean] = js.undefined
   /**
     * configure the various strings used throughout the tree
     *
@@ -143,202 +142,60 @@ trait JSTreeStaticDefaultsCore extends js.Object {
     *
     * @name $.jstree.defaults.core.strings
     */
-  var strings: js.UndefOr[js.Any] = js.native
+  var strings: js.UndefOr[js.Any] = js.undefined
   /**
     * theme configuration object
     * @name $.jstree.defaults.core.themes
     */
-  var themes: js.UndefOr[JSTreeStaticDefaultsCoreThemes] = js.native
+  var themes: js.UndefOr[JSTreeStaticDefaultsCoreThemes] = js.undefined
   /**
     * if left as `true` web workers will be used to parse incoming JSON data where possible,
     * so that the UI will not be blocked by large requests.
     * Workers are however about 30% slower. Defaults to `true`
     * @name $.jstree.defaults.core.worker
     */
-  var worker: js.UndefOr[Boolean] = js.native
+  var worker: js.UndefOr[Boolean] = js.undefined
   /**
     * a callback called with a single object parameter in the instance's scope when something goes wrong
     * (operation prevented, ajax failed, etc)
     * @name $.jstree.defaults.core.error
     */
-  def error(): js.Any = js.native
+  def error(): js.Any
 }
 
 object JSTreeStaticDefaultsCore {
   @scala.inline
-  def apply(error: () => js.Any): JSTreeStaticDefaultsCore = {
+  def apply(
+    error: () => js.Any,
+    animation: js.Any = null,
+    check_callback: js.Any = null,
+    data: js.Any = null,
+    dblclick_toggle: js.UndefOr[Boolean] = js.undefined,
+    expand_selected_onload: js.UndefOr[Boolean] = js.undefined,
+    force_text: js.UndefOr[Boolean] = js.undefined,
+    keyboard: JSTreeStaticDefaultsCoreKeyboard = null,
+    loaded_state: js.UndefOr[Boolean] = js.undefined,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    restore_focus: js.UndefOr[Boolean] = js.undefined,
+    strings: js.Any = null,
+    themes: JSTreeStaticDefaultsCoreThemes = null,
+    worker: js.UndefOr[Boolean] = js.undefined
+  ): JSTreeStaticDefaultsCore = {
     val __obj = js.Dynamic.literal(error = js.Any.fromFunction0(error))
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (check_callback != null) __obj.updateDynamic("check_callback")(check_callback.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(dblclick_toggle)) __obj.updateDynamic("dblclick_toggle")(dblclick_toggle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expand_selected_onload)) __obj.updateDynamic("expand_selected_onload")(expand_selected_onload.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(force_text)) __obj.updateDynamic("force_text")(force_text.get.asInstanceOf[js.Any])
+    if (keyboard != null) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
+    if (!js.isUndefined(loaded_state)) __obj.updateDynamic("loaded_state")(loaded_state.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restore_focus)) __obj.updateDynamic("restore_focus")(restore_focus.get.asInstanceOf[js.Any])
+    if (strings != null) __obj.updateDynamic("strings")(strings.asInstanceOf[js.Any])
+    if (themes != null) __obj.updateDynamic("themes")(themes.asInstanceOf[js.Any])
+    if (!js.isUndefined(worker)) __obj.updateDynamic("worker")(worker.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSTreeStaticDefaultsCore]
   }
-  @scala.inline
-  implicit class JSTreeStaticDefaultsCoreOps[Self <: JSTreeStaticDefaultsCore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheck_callback(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check_callback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheck_callback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check_callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDblclick_toggle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dblclick_toggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDblclick_toggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dblclick_toggle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpand_selected_onload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_selected_onload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpand_selected_onload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_selected_onload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce_text(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force_text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce_text: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force_text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboard(value: JSTreeStaticDefaultsCoreKeyboard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoaded_state(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded_state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoaded_state: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded_state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestore_focus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restore_focus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestore_focus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restore_focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrings(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThemes(value: JSTreeStaticDefaultsCoreThemes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThemes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorker(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

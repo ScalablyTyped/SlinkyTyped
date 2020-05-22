@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PawsNotifySpectrumUseRequest extends js.Object {
   /** Device descriptor information is required in the spectrum-use notification message. */
-  var deviceDesc: js.UndefOr[DeviceDescriptor] = js.native
+  var deviceDesc: js.UndefOr[DeviceDescriptor] = js.undefined
   /**
     * The geolocation of the master device (the device that is sending the spectrum-use notification) to the database is required in the spectrum-use
     * notification message.
     */
-  var location: js.UndefOr[GeoLocation] = js.native
+  var location: js.UndefOr[GeoLocation] = js.undefined
   /**
     * A spectrum list is required in the spectrum-use notification. The list specifies the spectrum that the device expects to use, which includes frequency
     * ranges and maximum power levels. The list may be empty if the device decides not to use any of spectrum. For consistency, the psdBandwidthHz value
@@ -22,94 +21,37 @@ trait PawsNotifySpectrumUseRequest extends js.Object {
     * rules express maximum power spectral density in terms of maximum power over any 100 kHz band, then the psdBandwidthHz value should be set to 100 kHz,
     * even though the actual bandwidth used can be 20 kHz.
     */
-  var spectra: js.UndefOr[js.Array[SpectrumMessage]] = js.native
+  var spectra: js.UndefOr[js.Array[SpectrumMessage]] = js.undefined
   /**
     * The message type (e.g., INIT_REQ, AVAIL_SPECTRUM_REQ, ...).
     *
     * Required field.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * The PAWS version. Must be exactly 1.0.
     *
     * Required field.
     */
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object PawsNotifySpectrumUseRequest {
   @scala.inline
-  def apply(): PawsNotifySpectrumUseRequest = {
+  def apply(
+    deviceDesc: DeviceDescriptor = null,
+    location: GeoLocation = null,
+    spectra: js.Array[SpectrumMessage] = null,
+    `type`: String = null,
+    version: String = null
+  ): PawsNotifySpectrumUseRequest = {
     val __obj = js.Dynamic.literal()
+    if (deviceDesc != null) __obj.updateDynamic("deviceDesc")(deviceDesc.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (spectra != null) __obj.updateDynamic("spectra")(spectra.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[PawsNotifySpectrumUseRequest]
   }
-  @scala.inline
-  implicit class PawsNotifySpectrumUseRequestOps[Self <: PawsNotifySpectrumUseRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceDesc(value: DeviceDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceDesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceDesc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: GeoLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpectra(value: js.Array[SpectrumMessage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spectra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpectra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spectra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,8 +11,8 @@ Koa JWT authentication middleware.
 | Full name          | koa-jwt |
 | Keywords           | auth, authn, authentication, authz, authorization, http, jwt, json, middleware, token, oauth, koa |
 | # releases         | 7 |
-| # dependents       | 118 |
-| # downloads        | 1028798 |
+| # dependents       | 119 |
+| # downloads        | 1051099 |
 | # stars            | 11 |
 
 ## Links

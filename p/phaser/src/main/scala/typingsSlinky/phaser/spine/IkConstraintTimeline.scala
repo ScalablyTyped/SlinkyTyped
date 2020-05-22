@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IkConstraintTimeline extends CurveTimeline {
-  var frames: ArrayLike[Double] = js.native
-  var ikConstraintIndex: Double = js.native
+  var frames: ArrayLike[Double]
+  var ikConstraintIndex: Double
   def setFrame(
     frameIndex: Double,
     time: Double,
@@ -16,7 +15,7 @@ trait IkConstraintTimeline extends CurveTimeline {
     bendDirection: Double,
     compress: Boolean,
     stretch: Boolean
-  ): Unit = js.native
+  ): Unit
 }
 
 object IkConstraintTimeline {
@@ -38,31 +37,5 @@ object IkConstraintTimeline {
     val __obj = js.Dynamic.literal(apply = js.Any.fromFunction7(apply), curves = curves.asInstanceOf[js.Any], frames = frames.asInstanceOf[js.Any], getCurvePercent = js.Any.fromFunction2(getCurvePercent), getCurveType = js.Any.fromFunction1(getCurveType), getFrameCount = js.Any.fromFunction0(getFrameCount), getPropertyId = js.Any.fromFunction0(getPropertyId), ikConstraintIndex = ikConstraintIndex.asInstanceOf[js.Any], setCurve = js.Any.fromFunction5(setCurve), setFrame = js.Any.fromFunction7(setFrame), setLinear = js.Any.fromFunction1(setLinear), setStepped = js.Any.fromFunction1(setStepped))
     __obj.asInstanceOf[IkConstraintTimeline]
   }
-  @scala.inline
-  implicit class IkConstraintTimelineOps[Self <: IkConstraintTimeline] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrames(value: ArrayLike[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIkConstraintIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ikConstraintIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetFrame(value: (Double, Double, Double, Double, Double, Boolean, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFrame")(js.Any.fromFunction7(value))
-        ret
-    }
-  }
-  
 }
 

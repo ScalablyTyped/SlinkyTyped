@@ -9,44 +9,43 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html)
   */
-@js.native
 trait SceneViewPerformanceInfo extends js.Object {
   /**
     * An estimate of the memory used by the [Edges3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-edges-Edges3D.html) feature when added to 3D objects in [SceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-SceneLayer.html) or to polygons with [ExtrudeSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ExtrudeSymbol3DLayer.html) symbols.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html#edgesMemory)
     */
-  var edgesMemory: Double = js.native
+  var edgesMemory: Double
   /**
     * An array representing detailed information about memory usage of most layers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html#layerPerformanceInfos)
     */
-  var layerPerformanceInfos: js.Array[LayerPerformanceInfo] = js.native
+  var layerPerformanceInfos: js.Array[LayerPerformanceInfo]
   /**
     * Quality level as a number between 0 and 1. The quality decreases when layers would need more memory than available, which reduces the level of detail, number of features and tile resolution.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html#quality)
     */
-  var quality: Double = js.native
+  var quality: Double
   /**
     * An estimate of the memory currently in use by [ElevationLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html) and [tiled layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html), in bytes.  This property also includes internal memory of the terrain subsystem, e.g., memory used to composite tiles in case multiple [tiled layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html) are added to the scene.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html#terrainMemory)
     */
-  var terrainMemory: Double = js.native
+  var terrainMemory: Double
   /**
     * The total memory available to the SceneView, in bytes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html#totalMemory)
     */
-  var totalMemory: Double = js.native
+  var totalMemory: Double
   /**
     * An estimate of the memory that is in use by the SceneView, in bytes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html#usedMemory)
     */
-  var usedMemory: Double = js.native
+  var usedMemory: Double
 }
 
 object SceneViewPerformanceInfo {
@@ -62,49 +61,5 @@ object SceneViewPerformanceInfo {
     val __obj = js.Dynamic.literal(edgesMemory = edgesMemory.asInstanceOf[js.Any], layerPerformanceInfos = layerPerformanceInfos.asInstanceOf[js.Any], quality = quality.asInstanceOf[js.Any], terrainMemory = terrainMemory.asInstanceOf[js.Any], totalMemory = totalMemory.asInstanceOf[js.Any], usedMemory = usedMemory.asInstanceOf[js.Any])
     __obj.asInstanceOf[SceneViewPerformanceInfo]
   }
-  @scala.inline
-  implicit class SceneViewPerformanceInfoOps[Self <: SceneViewPerformanceInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEdgesMemory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgesMemory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayerPerformanceInfos(value: js.Array[LayerPerformanceInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerPerformanceInfos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTerrainMemory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terrainMemory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalMemory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalMemory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsedMemory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usedMemory")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

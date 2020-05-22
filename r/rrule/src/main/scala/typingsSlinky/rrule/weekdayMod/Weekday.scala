@@ -1,13 +1,13 @@
 package typingsSlinky.rrule.weekdayMod
 
-import typingsSlinky.rrule.typesMod.ByWeekday
+import typingsSlinky.rrule.typesMod._ByWeekday
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("rrule/dist/esm/src/weekday", "Weekday")
 @js.native
-class Weekday protected () extends ByWeekday {
+class Weekday protected () extends _ByWeekday {
   def this(weekday: Double) = this()
   def this(weekday: Double, n: Double) = this()
   val n: js.UndefOr[Double] = js.native

@@ -23,41 +23,11 @@ trait SchemaCheckInfo extends js.Object {
 
 object SchemaCheckInfo {
   @scala.inline
-  def apply(): SchemaCheckInfo = {
+  def apply(consumerInfo: SchemaConsumerInfo = null, unusedArguments: js.Array[String] = null): SchemaCheckInfo = {
     val __obj = js.Dynamic.literal()
+    if (consumerInfo != null) __obj.updateDynamic("consumerInfo")(consumerInfo.asInstanceOf[js.Any])
+    if (unusedArguments != null) __obj.updateDynamic("unusedArguments")(unusedArguments.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCheckInfo]
   }
-  @scala.inline
-  implicit class SchemaCheckInfoOps[Self <: SchemaCheckInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumerInfo(value: SchemaConsumerInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumerInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnusedArguments(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unusedArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnusedArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unusedArguments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

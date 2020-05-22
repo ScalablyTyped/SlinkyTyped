@@ -2,134 +2,59 @@ package typingsSlinky.glReactDom.mod
 
 import org.scalajs.dom.raw.WebGLContextAttributes
 import org.scalajs.dom.raw.WebGLRenderingContext
+import typingsSlinky.glReact.mod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.glReactDom.glviewdomMod.GLViewDOMProps because var conflicts: style. Inlined onContextCreate, onContextFailure, onContextLost, onContextRestored, webglContextAttributes, pixelRatio, width, height, debug */ @js.native
-trait SurfaceProps
+- typingsSlinky.glReactDom.glviewdomMod.GLViewDOMProps because var conflicts: style. Inlined onContextCreate, onContextFailure, onContextLost, onContextRestored, webglContextAttributes, pixelRatio, width, height, debug */ trait SurfaceProps
   extends typingsSlinky.glReact.mod.SurfaceProps {
-  var debug: js.UndefOr[Double] = js.native
-  var height: Double = js.native
-  var onContextCreate: js.UndefOr[js.Function1[/* gl */ WebGLRenderingContext, Unit]] = js.native
-  var onContextFailure: js.UndefOr[js.Function1[/* e */ js.Error, Unit]] = js.native
-  var onContextLost: js.UndefOr[js.Function0[Unit]] = js.native
-  var onContextRestored: js.UndefOr[js.Function1[/* gl */ WebGLRenderingContext, Unit]] = js.native
-  var pixelRatio: js.UndefOr[Double] = js.native
-  var webglContextAttributes: js.UndefOr[WebGLContextAttributes] = js.native
-  var width: Double = js.native
+  var debug: js.UndefOr[Double] = js.undefined
+  var height: Double
+  var onContextCreate: js.UndefOr[js.Function1[/* gl */ WebGLRenderingContext, Unit]] = js.undefined
+  var onContextFailure: js.UndefOr[js.Function1[/* e */ js.Error, Unit]] = js.undefined
+  var onContextLost: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onContextRestored: js.UndefOr[js.Function1[/* gl */ WebGLRenderingContext, Unit]] = js.undefined
+  var pixelRatio: js.UndefOr[Double] = js.undefined
+  var webglContextAttributes: js.UndefOr[WebGLContextAttributes] = js.undefined
+  var width: Double
 }
 
 object SurfaceProps {
   @scala.inline
-  def apply(height: Double, width: Double): SurfaceProps = {
+  def apply(
+    height: Double,
+    width: Double,
+    children: js.Any = null,
+    debug: js.UndefOr[Double] = js.undefined,
+    onContextCreate: /* gl */ WebGLRenderingContext => Unit = null,
+    onContextFailure: /* e */ js.Error => Unit = null,
+    onContextLost: () => Unit = null,
+    onContextRestored: /* gl */ WebGLRenderingContext => Unit = null,
+    onLoad: () => Unit = null,
+    onLoadError: /* e */ js.Error => Unit = null,
+    pixelRatio: js.UndefOr[Double] = js.undefined,
+    preload: js.Array[_] = null,
+    style: js.Any = null,
+    visitor: Visitor = null,
+    webglContextAttributes: WebGLContextAttributes = null
+  ): SurfaceProps = {
     val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (onContextCreate != null) __obj.updateDynamic("onContextCreate")(js.Any.fromFunction1(onContextCreate))
+    if (onContextFailure != null) __obj.updateDynamic("onContextFailure")(js.Any.fromFunction1(onContextFailure))
+    if (onContextLost != null) __obj.updateDynamic("onContextLost")(js.Any.fromFunction0(onContextLost))
+    if (onContextRestored != null) __obj.updateDynamic("onContextRestored")(js.Any.fromFunction1(onContextRestored))
+    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))
+    if (onLoadError != null) __obj.updateDynamic("onLoadError")(js.Any.fromFunction1(onLoadError))
+    if (!js.isUndefined(pixelRatio)) __obj.updateDynamic("pixelRatio")(pixelRatio.get.asInstanceOf[js.Any])
+    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (visitor != null) __obj.updateDynamic("visitor")(visitor.asInstanceOf[js.Any])
+    if (webglContextAttributes != null) __obj.updateDynamic("webglContextAttributes")(webglContextAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SurfaceProps]
   }
-  @scala.inline
-  implicit class SurfacePropsOps[Self <: SurfaceProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContextCreate(value: /* gl */ WebGLRenderingContext => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextCreate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContextCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextCreate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContextFailure(value: /* e */ js.Error => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextFailure")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContextFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContextLost(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextLost")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContextLost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextLost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContextRestored(value: /* gl */ WebGLRenderingContext => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextRestored")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContextRestored: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextRestored")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPixelRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPixelRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebglContextAttributes(value: WebGLContextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webglContextAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebglContextAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webglContextAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

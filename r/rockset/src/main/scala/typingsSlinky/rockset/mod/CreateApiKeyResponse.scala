@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateApiKeyResponse extends js.Object {
   // the API key that was created
-  var data: js.UndefOr[ApiKey] = js.native
+  var data: js.UndefOr[ApiKey] = js.undefined
 }
 
 object CreateApiKeyResponse {
   @scala.inline
-  def apply(): CreateApiKeyResponse = {
+  def apply(data: ApiKey = null): CreateApiKeyResponse = {
     val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateApiKeyResponse]
   }
-  @scala.inline
-  implicit class CreateApiKeyResponseOps[Self <: CreateApiKeyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: ApiKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

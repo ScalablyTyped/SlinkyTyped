@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait New extends js.Object {
   /** Number of messages in this mailbox having the Recent flag (this IMAP session is the first to see these messages). */
-  var `new`: Double = js.native
+  var `new`: Double
   /** Total number of messages in this mailbox. */
-  var total: Double = js.native
+  var total: Double
   /** (Only available with status() calls) Number of messages in this mailbox not having the Seen flag (marked as not having been read). */
-  var unseen: Double = js.native
+  var unseen: Double
 }
 
 object New {
@@ -21,31 +20,5 @@ object New {
     __obj.updateDynamic("new")(`new`.asInstanceOf[js.Any])
     __obj.asInstanceOf[New]
   }
-  @scala.inline
-  implicit class NewOps[Self <: New] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNew(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("new")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnseen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unseen")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

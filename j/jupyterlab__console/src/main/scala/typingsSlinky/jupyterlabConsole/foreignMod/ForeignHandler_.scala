@@ -29,6 +29,14 @@ class ForeignHandler_ protected () extends IDisposable {
     */
   var enabled: Boolean = js.native
   /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
+  /**
     * The foreign handler's parent receiver.
     */
   val parent: IReceiver = js.native
@@ -36,6 +44,19 @@ class ForeignHandler_ protected () extends IDisposable {
     * The client session used by the foreign handler.
     */
   val session: IClientSession = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Handler IOPub messages.
     *

@@ -8,97 +8,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabPaneProps
   extends AllHTMLAttributes[TabPane]
      with TransitionCallbacks
      with ClassAttributes[TabPane] {
-  var animation: js.UndefOr[Boolean | ReactComponentClass[_]] = js.native
-  var bsClass: js.UndefOr[String] = js.native
-  var eventKey: js.UndefOr[js.Any] = js.native
-  var mountOnEnter: js.UndefOr[Boolean] = js.native
-  var unmountOnExit: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[Boolean | ReactComponentClass[_]] = js.undefined
+  var bsClass: js.UndefOr[String] = js.undefined
+  var eventKey: js.UndefOr[js.Any] = js.undefined
+  var mountOnEnter: js.UndefOr[Boolean] = js.undefined
+  var unmountOnExit: js.UndefOr[Boolean] = js.undefined
 }
 
 object TabPaneProps {
   @scala.inline
-  def apply(): TabPaneProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[TabPane] = null,
+    ClassAttributes: ClassAttributes[TabPane] = null,
+    TransitionCallbacks: TransitionCallbacks = null,
+    animation: Boolean | ReactComponentClass[_] = null,
+    bsClass: String = null,
+    eventKey: js.Any = null,
+    mountOnEnter: js.UndefOr[Boolean] = js.undefined,
+    unmountOnExit: js.UndefOr[Boolean] = js.undefined
+  ): TabPaneProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (TransitionCallbacks != null) js.Dynamic.global.Object.assign(__obj, TransitionCallbacks)
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
+    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(mountOnEnter)) __obj.updateDynamic("mountOnEnter")(mountOnEnter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unmountOnExit)) __obj.updateDynamic("unmountOnExit")(unmountOnExit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabPaneProps]
   }
-  @scala.inline
-  implicit class TabPanePropsOps[Self <: TabPaneProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: Boolean | ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventKey(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountOnEnter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountOnEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountOnEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountOnEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmountOnExit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountOnExit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmountOnExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountOnExit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

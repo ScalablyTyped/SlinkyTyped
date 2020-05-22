@@ -21,14 +21,14 @@ trait WorksheetProtection extends ClientObject {
   var context_WorksheetProtection: RequestContext = js.native
   /**
     *
-    * Sheet protection options. Read-only.
+    * Specifies the protection options for the worksheet.
     *
     * [Api set: ExcelApi 1.2]
     */
   val options: WorksheetProtectionOptions = js.native
   /**
     *
-    * Indicates if the worksheet is protected. Read-only.
+    * Specifies if the worksheet is protected.
     *
     * [Api set: ExcelApi 1.2]
     */

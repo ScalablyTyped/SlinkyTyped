@@ -21,41 +21,11 @@ trait SchemaStreamingApplianceSnapshotConfig extends js.Object {
 
 object SchemaStreamingApplianceSnapshotConfig {
   @scala.inline
-  def apply(): SchemaStreamingApplianceSnapshotConfig = {
+  def apply(importStateEndpoint: String = null, snapshotId: String = null): SchemaStreamingApplianceSnapshotConfig = {
     val __obj = js.Dynamic.literal()
+    if (importStateEndpoint != null) __obj.updateDynamic("importStateEndpoint")(importStateEndpoint.asInstanceOf[js.Any])
+    if (snapshotId != null) __obj.updateDynamic("snapshotId")(snapshotId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStreamingApplianceSnapshotConfig]
   }
-  @scala.inline
-  implicit class SchemaStreamingApplianceSnapshotConfigOps[Self <: SchemaStreamingApplianceSnapshotConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImportStateEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importStateEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportStateEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importStateEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

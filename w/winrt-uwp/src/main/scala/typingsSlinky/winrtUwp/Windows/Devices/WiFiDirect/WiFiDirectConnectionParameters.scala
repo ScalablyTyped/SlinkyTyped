@@ -6,14 +6,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used by an app to specify the connection parameters for a Wi-Fi Direct connect/pairing operation. */
-@js.native
 trait WiFiDirectConnectionParameters extends js.Object {
   /** The group owner intent value used for group owner negotiation in a Wi-Fi Direct connect/pairing operation. */
-  var groupOwnerIntent: Double = js.native
+  var groupOwnerIntent: Double
   /** Gets a list of supported configuration methods, in order of preference. */
-  var preferenceOrderedConfigurationMethods: IVector[WiFiDirectConfigurationMethod] = js.native
+  var preferenceOrderedConfigurationMethods: IVector[WiFiDirectConfigurationMethod]
   /** Gets or sets a value specifying a device's preferred pairing procedure. */
-  var preferredPairingProcedure: WiFiDirectPairingProcedure = js.native
+  var preferredPairingProcedure: WiFiDirectPairingProcedure
 }
 
 object WiFiDirectConnectionParameters {
@@ -26,31 +25,5 @@ object WiFiDirectConnectionParameters {
     val __obj = js.Dynamic.literal(groupOwnerIntent = groupOwnerIntent.asInstanceOf[js.Any], preferenceOrderedConfigurationMethods = preferenceOrderedConfigurationMethods.asInstanceOf[js.Any], preferredPairingProcedure = preferredPairingProcedure.asInstanceOf[js.Any])
     __obj.asInstanceOf[WiFiDirectConnectionParameters]
   }
-  @scala.inline
-  implicit class WiFiDirectConnectionParametersOps[Self <: WiFiDirectConnectionParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupOwnerIntent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOwnerIntent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreferenceOrderedConfigurationMethods(value: IVector[WiFiDirectConfigurationMethod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferenceOrderedConfigurationMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreferredPairingProcedure(value: WiFiDirectPairingProcedure): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredPairingProcedure")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

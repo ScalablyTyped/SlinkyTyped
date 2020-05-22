@@ -25,41 +25,14 @@ trait SchemaAttestation extends js.Object {
 
 object SchemaAttestation {
   @scala.inline
-  def apply(): SchemaAttestation = {
+  def apply(
+    genericSignedAttestation: SchemaGenericSignedAttestation = null,
+    pgpSignedAttestation: SchemaPgpSignedAttestation = null
+  ): SchemaAttestation = {
     val __obj = js.Dynamic.literal()
+    if (genericSignedAttestation != null) __obj.updateDynamic("genericSignedAttestation")(genericSignedAttestation.asInstanceOf[js.Any])
+    if (pgpSignedAttestation != null) __obj.updateDynamic("pgpSignedAttestation")(pgpSignedAttestation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttestation]
   }
-  @scala.inline
-  implicit class SchemaAttestationOps[Self <: SchemaAttestation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGenericSignedAttestation(value: SchemaGenericSignedAttestation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genericSignedAttestation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenericSignedAttestation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genericSignedAttestation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPgpSignedAttestation(value: SchemaPgpSignedAttestation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pgpSignedAttestation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPgpSignedAttestation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pgpSignedAttestation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

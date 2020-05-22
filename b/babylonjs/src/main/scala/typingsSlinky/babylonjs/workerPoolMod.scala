@@ -20,6 +20,11 @@ object workerPoolMod extends js.Object {
     var _pendingActions: js.Any = js.native
     var _workerInfos: js.Any = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Pushes an action to the worker pool. If all the workers are active, the action will be
       * pended until a worker has completed its action.
       * @param action The action to perform. Call onComplete when the action is complete.

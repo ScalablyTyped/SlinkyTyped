@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Template extends js.Object {
-  var htmlToXlsx: HtmlEngine = js.native
-  var recipe: `html-to-xlsx` | String = js.native
+  var htmlToXlsx: HtmlEngine
+  var recipe: `html-to-xlsx` | String
 }
 
 object Template {
@@ -18,25 +17,5 @@ object Template {
     val __obj = js.Dynamic.literal(htmlToXlsx = htmlToXlsx.asInstanceOf[js.Any], recipe = recipe.asInstanceOf[js.Any])
     __obj.asInstanceOf[Template]
   }
-  @scala.inline
-  implicit class TemplateOps[Self <: Template] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHtmlToXlsx(value: HtmlEngine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToXlsx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecipe(value: `html-to-xlsx` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipe")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

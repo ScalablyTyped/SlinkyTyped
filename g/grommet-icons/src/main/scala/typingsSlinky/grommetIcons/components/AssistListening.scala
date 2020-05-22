@@ -12,7 +12,7 @@ object AssistListening {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.AssistListening] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.AssistListening](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: AssistListening.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.AssistListening] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.AssistListening](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.AssistListening] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.AssistListening](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AssistListening.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.AssistListening] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.AssistListening](js.Array(this.component, js.Dictionary.empty))()
 }
 

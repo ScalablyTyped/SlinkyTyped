@@ -50,137 +50,30 @@ trait InstanceRecommendation extends js.Object {
 
 object InstanceRecommendation {
   @scala.inline
-  def apply(): InstanceRecommendation = {
+  def apply(
+    accountId: AccountId = null,
+    currentInstanceType: CurrentInstanceType = null,
+    finding: Finding = null,
+    instanceArn: InstanceArn = null,
+    instanceName: InstanceName = null,
+    lastRefreshTimestamp: js.Date = null,
+    lookBackPeriodInDays: js.UndefOr[LookBackPeriodInDays] = js.undefined,
+    recommendationOptions: RecommendationOptions = null,
+    recommendationSources: RecommendationSources = null,
+    utilizationMetrics: UtilizationMetrics = null
+  ): InstanceRecommendation = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (currentInstanceType != null) __obj.updateDynamic("currentInstanceType")(currentInstanceType.asInstanceOf[js.Any])
+    if (finding != null) __obj.updateDynamic("finding")(finding.asInstanceOf[js.Any])
+    if (instanceArn != null) __obj.updateDynamic("instanceArn")(instanceArn.asInstanceOf[js.Any])
+    if (instanceName != null) __obj.updateDynamic("instanceName")(instanceName.asInstanceOf[js.Any])
+    if (lastRefreshTimestamp != null) __obj.updateDynamic("lastRefreshTimestamp")(lastRefreshTimestamp.asInstanceOf[js.Any])
+    if (!js.isUndefined(lookBackPeriodInDays)) __obj.updateDynamic("lookBackPeriodInDays")(lookBackPeriodInDays.get.asInstanceOf[js.Any])
+    if (recommendationOptions != null) __obj.updateDynamic("recommendationOptions")(recommendationOptions.asInstanceOf[js.Any])
+    if (recommendationSources != null) __obj.updateDynamic("recommendationSources")(recommendationSources.asInstanceOf[js.Any])
+    if (utilizationMetrics != null) __obj.updateDynamic("utilizationMetrics")(utilizationMetrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceRecommendation]
   }
-  @scala.inline
-  implicit class InstanceRecommendationOps[Self <: InstanceRecommendation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentInstanceType(value: CurrentInstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentInstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentInstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinding(value: Finding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceArn(value: InstanceArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceName(value: InstanceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastRefreshTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastRefreshTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastRefreshTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastRefreshTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookBackPeriodInDays(value: LookBackPeriodInDays): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookBackPeriodInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookBackPeriodInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookBackPeriodInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendationOptions(value: RecommendationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendationOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendationSources(value: RecommendationSources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendationSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationSources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtilizationMetrics(value: UtilizationMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtilizationMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationMetrics")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

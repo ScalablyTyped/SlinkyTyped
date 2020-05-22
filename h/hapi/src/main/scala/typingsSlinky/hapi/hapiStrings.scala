@@ -1,6 +1,6 @@
 package typingsSlinky.hapi
 
-import typingsSlinky.hapi.mod.Lifecycle.FailAction
+import typingsSlinky.hapi.mod.Lifecycle._FailAction
 import typingsSlinky.hapi.mod.PayloadOutput
 import typingsSlinky.hapi.mod.ReferrerPolicy
 import typingsSlinky.hapi.mod.RequestEventType
@@ -107,7 +107,7 @@ object hapiStrings {
   sealed trait disconnect extends RequestEventType
   
   @js.native
-  sealed trait error extends FailAction
+  sealed trait error extends _FailAction
   
   @js.native
   sealed trait file extends PayloadOutput
@@ -143,7 +143,7 @@ object hapiStrings {
   sealed trait https extends js.Object
   
   @js.native
-  sealed trait ignore extends FailAction
+  sealed trait ignore extends _FailAction
   
   @js.native
   sealed trait internal extends js.Object
@@ -155,7 +155,7 @@ object hapiStrings {
   sealed trait latin1 extends js.Object
   
   @js.native
-  sealed trait log extends FailAction
+  sealed trait log extends _FailAction
   
   @js.native
   sealed trait `no-referrer` extends ReferrerPolicy

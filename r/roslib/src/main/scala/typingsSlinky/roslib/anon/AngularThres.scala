@@ -4,134 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AngularThres extends js.Object {
-  var angularThres: js.UndefOr[Double] = js.native
-  var fixedFrame: js.UndefOr[String] = js.native
-  var rate: js.UndefOr[Double] = js.native
-  var repubServiceName: js.UndefOr[String] = js.native
-  var ros: typingsSlinky.roslib.mod.Ros = js.native
-  var serverName: js.UndefOr[String] = js.native
-  var topicTimeout: js.UndefOr[Double] = js.native
-  var transThres: js.UndefOr[Double] = js.native
-  var updateDelay: js.UndefOr[Double] = js.native
+  var angularThres: js.UndefOr[Double] = js.undefined
+  var fixedFrame: js.UndefOr[String] = js.undefined
+  var rate: js.UndefOr[Double] = js.undefined
+  var repubServiceName: js.UndefOr[String] = js.undefined
+  var ros: typingsSlinky.roslib.mod.Ros
+  var serverName: js.UndefOr[String] = js.undefined
+  var topicTimeout: js.UndefOr[Double] = js.undefined
+  var transThres: js.UndefOr[Double] = js.undefined
+  var updateDelay: js.UndefOr[Double] = js.undefined
 }
 
 object AngularThres {
   @scala.inline
-  def apply(ros: typingsSlinky.roslib.mod.Ros): AngularThres = {
+  def apply(
+    ros: typingsSlinky.roslib.mod.Ros,
+    angularThres: js.UndefOr[Double] = js.undefined,
+    fixedFrame: String = null,
+    rate: js.UndefOr[Double] = js.undefined,
+    repubServiceName: String = null,
+    serverName: String = null,
+    topicTimeout: js.UndefOr[Double] = js.undefined,
+    transThres: js.UndefOr[Double] = js.undefined,
+    updateDelay: js.UndefOr[Double] = js.undefined
+  ): AngularThres = {
     val __obj = js.Dynamic.literal(ros = ros.asInstanceOf[js.Any])
+    if (!js.isUndefined(angularThres)) __obj.updateDynamic("angularThres")(angularThres.get.asInstanceOf[js.Any])
+    if (fixedFrame != null) __obj.updateDynamic("fixedFrame")(fixedFrame.asInstanceOf[js.Any])
+    if (!js.isUndefined(rate)) __obj.updateDynamic("rate")(rate.get.asInstanceOf[js.Any])
+    if (repubServiceName != null) __obj.updateDynamic("repubServiceName")(repubServiceName.asInstanceOf[js.Any])
+    if (serverName != null) __obj.updateDynamic("serverName")(serverName.asInstanceOf[js.Any])
+    if (!js.isUndefined(topicTimeout)) __obj.updateDynamic("topicTimeout")(topicTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transThres)) __obj.updateDynamic("transThres")(transThres.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateDelay)) __obj.updateDynamic("updateDelay")(updateDelay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AngularThres]
   }
-  @scala.inline
-  implicit class AngularThresOps[Self <: AngularThres] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRos(value: typingsSlinky.roslib.mod.Ros): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ros")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngularThres(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularThres")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngularThres: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularThres")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedFrame(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedFrame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedFrame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepubServiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repubServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepubServiceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repubServiceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransThres(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transThres")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransThres: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transThres")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDelay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

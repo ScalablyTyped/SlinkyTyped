@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Allowdifferentnesting extends js.Object {
-  var allow_different_nesting: js.UndefOr[Boolean] = js.native
-  var siblings_only: js.UndefOr[Boolean] = js.native
+  var allow_different_nesting: js.UndefOr[Boolean] = js.undefined
+  var siblings_only: js.UndefOr[Boolean] = js.undefined
 }
 
 object Allowdifferentnesting {
   @scala.inline
-  def apply(): Allowdifferentnesting = {
+  def apply(
+    allow_different_nesting: js.UndefOr[Boolean] = js.undefined,
+    siblings_only: js.UndefOr[Boolean] = js.undefined
+  ): Allowdifferentnesting = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allow_different_nesting)) __obj.updateDynamic("allow_different_nesting")(allow_different_nesting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(siblings_only)) __obj.updateDynamic("siblings_only")(siblings_only.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Allowdifferentnesting]
   }
-  @scala.inline
-  implicit class AllowdifferentnestingOps[Self <: Allowdifferentnesting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllow_different_nesting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_different_nesting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_different_nesting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_different_nesting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiblings_only(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblings_only")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiblings_only: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblings_only")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,153 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IItemLookupOptions extends js.Object {
-  var condition: js.UndefOr[String] = js.native
-  var domain: js.UndefOr[String] = js.native
-  var idType: js.UndefOr[String] = js.native
-  var includeReviewsSummary: js.UndefOr[Boolean] = js.native
-  var itemId: js.UndefOr[String | js.Array[String]] = js.native
-  var request: js.UndefOr[js.Function] = js.native
-  var responseGroup: js.UndefOr[String] = js.native
-  var searchIndex: js.UndefOr[String] = js.native
-  var truncateReviewsAt: js.UndefOr[Double] = js.native
-  var variationPage: js.UndefOr[String] = js.native
+  var condition: js.UndefOr[String] = js.undefined
+  var domain: js.UndefOr[String] = js.undefined
+  var idType: js.UndefOr[String] = js.undefined
+  var includeReviewsSummary: js.UndefOr[Boolean] = js.undefined
+  var itemId: js.UndefOr[String | js.Array[String]] = js.undefined
+  var request: js.UndefOr[js.Function] = js.undefined
+  var responseGroup: js.UndefOr[String] = js.undefined
+  var searchIndex: js.UndefOr[String] = js.undefined
+  var truncateReviewsAt: js.UndefOr[Double] = js.undefined
+  var variationPage: js.UndefOr[String] = js.undefined
 }
 
 object IItemLookupOptions {
   @scala.inline
-  def apply(): IItemLookupOptions = {
+  def apply(
+    condition: String = null,
+    domain: String = null,
+    idType: String = null,
+    includeReviewsSummary: js.UndefOr[Boolean] = js.undefined,
+    itemId: String | js.Array[String] = null,
+    request: js.Function = null,
+    responseGroup: String = null,
+    searchIndex: String = null,
+    truncateReviewsAt: js.UndefOr[Double] = js.undefined,
+    variationPage: String = null
+  ): IItemLookupOptions = {
     val __obj = js.Dynamic.literal()
+    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (idType != null) __obj.updateDynamic("idType")(idType.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeReviewsSummary)) __obj.updateDynamic("includeReviewsSummary")(includeReviewsSummary.get.asInstanceOf[js.Any])
+    if (itemId != null) __obj.updateDynamic("itemId")(itemId.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (responseGroup != null) __obj.updateDynamic("responseGroup")(responseGroup.asInstanceOf[js.Any])
+    if (searchIndex != null) __obj.updateDynamic("searchIndex")(searchIndex.asInstanceOf[js.Any])
+    if (!js.isUndefined(truncateReviewsAt)) __obj.updateDynamic("truncateReviewsAt")(truncateReviewsAt.get.asInstanceOf[js.Any])
+    if (variationPage != null) __obj.updateDynamic("variationPage")(variationPage.asInstanceOf[js.Any])
     __obj.asInstanceOf[IItemLookupOptions]
   }
-  @scala.inline
-  implicit class IItemLookupOptionsOps[Self <: IItemLookupOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCondition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeReviewsSummary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeReviewsSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeReviewsSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeReviewsSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemId(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruncateReviewsAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncateReviewsAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruncateReviewsAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncateReviewsAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariationPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variationPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariationPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variationPage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ErrorDetails extends js.Object {
-  var errorDetails: js.UndefOr[js.Any] = js.native
-  var httpStatus: js.UndefOr[Double] = js.native
-  var requestOptions: js.UndefOr[js.Any] = js.native
+  var errorDetails: js.UndefOr[js.Any] = js.undefined
+  var httpStatus: js.UndefOr[Double] = js.undefined
+  var requestOptions: js.UndefOr[js.Any] = js.undefined
 }
 
 object ErrorDetails {
   @scala.inline
-  def apply(): ErrorDetails = {
+  def apply(
+    errorDetails: js.Any = null,
+    httpStatus: js.UndefOr[Double] = js.undefined,
+    requestOptions: js.Any = null
+  ): ErrorDetails = {
     val __obj = js.Dynamic.literal()
+    if (errorDetails != null) __obj.updateDynamic("errorDetails")(errorDetails.asInstanceOf[js.Any])
+    if (!js.isUndefined(httpStatus)) __obj.updateDynamic("httpStatus")(httpStatus.get.asInstanceOf[js.Any])
+    if (requestOptions != null) __obj.updateDynamic("requestOptions")(requestOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorDetails]
   }
-  @scala.inline
-  implicit class ErrorDetailsOps[Self <: ErrorDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorDetails(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

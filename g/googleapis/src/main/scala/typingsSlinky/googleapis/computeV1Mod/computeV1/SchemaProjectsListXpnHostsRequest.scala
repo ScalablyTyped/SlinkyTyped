@@ -16,29 +16,10 @@ trait SchemaProjectsListXpnHostsRequest extends js.Object {
 
 object SchemaProjectsListXpnHostsRequest {
   @scala.inline
-  def apply(): SchemaProjectsListXpnHostsRequest = {
+  def apply(organization: String = null): SchemaProjectsListXpnHostsRequest = {
     val __obj = js.Dynamic.literal()
+    if (organization != null) __obj.updateDynamic("organization")(organization.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProjectsListXpnHostsRequest]
   }
-  @scala.inline
-  implicit class SchemaProjectsListXpnHostsRequestOps[Self <: SchemaProjectsListXpnHostsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrganization(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

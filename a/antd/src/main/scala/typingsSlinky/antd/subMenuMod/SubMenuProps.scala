@@ -1,165 +1,53 @@
 package typingsSlinky.antd.subMenuMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SubMenuProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var onTitleClick: js.UndefOr[js.Function1[/* e */ TitleEventEntity, Unit]] = js.native
-  var onTitleMouseEnter: js.UndefOr[js.Function1[/* e */ TitleEventEntity, Unit]] = js.native
-  var onTitleMouseLeave: js.UndefOr[js.Function1[/* e */ TitleEventEntity, Unit]] = js.native
-  var popupClassName: js.UndefOr[String] = js.native
-  var popupOffset: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var rootPrefixCls: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var title: js.UndefOr[TagMod[Any]] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var onTitleClick: js.UndefOr[js.Function1[/* e */ TitleEventEntity, Unit]] = js.undefined
+  var onTitleMouseEnter: js.UndefOr[js.Function1[/* e */ TitleEventEntity, Unit]] = js.undefined
+  var onTitleMouseLeave: js.UndefOr[js.Function1[/* e */ TitleEventEntity, Unit]] = js.undefined
+  var popupClassName: js.UndefOr[String] = js.undefined
+  var popupOffset: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var rootPrefixCls: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var title: js.UndefOr[TagMod[Any]] = js.undefined
 }
 
 object SubMenuProps {
   @scala.inline
-  def apply(): SubMenuProps = {
+  def apply(
+    className: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    icon: TagMod[Any] = null,
+    onTitleClick: /* e */ TitleEventEntity => Unit = null,
+    onTitleMouseEnter: /* e */ TitleEventEntity => Unit = null,
+    onTitleMouseLeave: /* e */ TitleEventEntity => Unit = null,
+    popupClassName: String = null,
+    popupOffset: js.Tuple2[Double, Double] = null,
+    rootPrefixCls: String = null,
+    style: CSSProperties = null,
+    title: TagMod[Any] = null
+  ): SubMenuProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (onTitleClick != null) __obj.updateDynamic("onTitleClick")(js.Any.fromFunction1(onTitleClick))
+    if (onTitleMouseEnter != null) __obj.updateDynamic("onTitleMouseEnter")(js.Any.fromFunction1(onTitleMouseEnter))
+    if (onTitleMouseLeave != null) __obj.updateDynamic("onTitleMouseLeave")(js.Any.fromFunction1(onTitleMouseLeave))
+    if (popupClassName != null) __obj.updateDynamic("popupClassName")(popupClassName.asInstanceOf[js.Any])
+    if (popupOffset != null) __obj.updateDynamic("popupOffset")(popupOffset.asInstanceOf[js.Any])
+    if (rootPrefixCls != null) __obj.updateDynamic("rootPrefixCls")(rootPrefixCls.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubMenuProps]
   }
-  @scala.inline
-  implicit class SubMenuPropsOps[Self <: SubMenuProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTitleClick(value: /* e */ TitleEventEntity => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTitleClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTitleMouseEnter(value: /* e */ TitleEventEntity => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleMouseEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTitleMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTitleMouseLeave(value: /* e */ TitleEventEntity => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleMouseLeave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTitleMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupOffset(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPrefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPrefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

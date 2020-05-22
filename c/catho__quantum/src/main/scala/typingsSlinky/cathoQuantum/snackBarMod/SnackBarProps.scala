@@ -14,140 +14,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SnackBarProps extends js.Object {
-  var actionTrigger: js.UndefOr[CallbackFn] = js.native
-  var closeButtonAriaLabel: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var inverted: js.UndefOr[Boolean] = js.native
-  var onClose: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.native
-  var secondsToClose: js.UndefOr[Double] = js.native
-  var skin: js.UndefOr[primary | success | error | neutral | warning] = js.native
-  var text: js.UndefOr[String] = js.native
-  var theme: js.UndefOr[BaseFontSizeBreakpoints] = js.native
+  var actionTrigger: js.UndefOr[CallbackFn] = js.undefined
+  var closeButtonAriaLabel: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var inverted: js.UndefOr[Boolean] = js.undefined
+  var onClose: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.undefined
+  var secondsToClose: js.UndefOr[Double] = js.undefined
+  var skin: js.UndefOr[primary | success | error | neutral | warning] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
+  var theme: js.UndefOr[BaseFontSizeBreakpoints] = js.undefined
 }
 
 object SnackBarProps {
   @scala.inline
-  def apply(): SnackBarProps = {
+  def apply(
+    actionTrigger: CallbackFn = null,
+    closeButtonAriaLabel: String = null,
+    id: String = null,
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    onClose: SyntheticMouseEvent[HTMLButtonElement] => Unit = null,
+    secondsToClose: js.UndefOr[Double] = js.undefined,
+    skin: primary | success | error | neutral | warning = null,
+    text: String = null,
+    theme: BaseFontSizeBreakpoints = null
+  ): SnackBarProps = {
     val __obj = js.Dynamic.literal()
+    if (actionTrigger != null) __obj.updateDynamic("actionTrigger")(actionTrigger.asInstanceOf[js.Any])
+    if (closeButtonAriaLabel != null) __obj.updateDynamic("closeButtonAriaLabel")(closeButtonAriaLabel.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
+    if (!js.isUndefined(secondsToClose)) __obj.updateDynamic("secondsToClose")(secondsToClose.get.asInstanceOf[js.Any])
+    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnackBarProps]
   }
-  @scala.inline
-  implicit class SnackBarPropsOps[Self <: SnackBarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionTrigger(value: CallbackFn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionTrigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionTrigger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseButtonAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeButtonAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseButtonAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeButtonAriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondsToClose(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondsToClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondsToClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondsToClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkin(value: primary | success | error | neutral | warning): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: BaseFontSizeBreakpoints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

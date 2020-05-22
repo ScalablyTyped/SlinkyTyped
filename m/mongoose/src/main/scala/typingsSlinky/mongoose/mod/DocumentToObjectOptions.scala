@@ -4,126 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocumentToObjectOptions extends js.Object {
   /** depopulate any populated paths, replacing them with their original refs (defaults to false) */
-  var depopulate: js.UndefOr[Boolean] = js.native
+  var depopulate: js.UndefOr[Boolean] = js.undefined
   /** whether to convert Maps to POJOs. (defaults to false) */
-  var flattenMaps: js.UndefOr[Boolean] = js.native
+  var flattenMaps: js.UndefOr[Boolean] = js.undefined
   /** apply all getters (path and virtual getters) */
-  var getters: js.UndefOr[Boolean] = js.native
+  var getters: js.UndefOr[Boolean] = js.undefined
   /** remove empty objects (defaults to true) */
-  var minimize: js.UndefOr[Boolean] = js.native
+  var minimize: js.UndefOr[Boolean] = js.undefined
   /**
     * A transform function to apply to the resulting document before returning
     * @param doc The mongoose document which is being converted
     * @param ret The plain object representation which has been converted
     * @param options The options in use (either schema options or the options passed inline)
     */
-  var transform: js.UndefOr[js.Function3[/* doc */ js.Any, /* ret */ js.Any, /* options */ js.Any, _]] = js.native
+  var transform: js.UndefOr[js.Function3[/* doc */ js.Any, /* ret */ js.Any, /* options */ js.Any, _]] = js.undefined
   /** whether to include the version key (defaults to true) */
-  var versionKey: js.UndefOr[Boolean] = js.native
+  var versionKey: js.UndefOr[Boolean] = js.undefined
   /** apply virtual getters (can override getters option) */
-  var virtuals: js.UndefOr[Boolean] = js.native
+  var virtuals: js.UndefOr[Boolean] = js.undefined
 }
 
 object DocumentToObjectOptions {
   @scala.inline
-  def apply(): DocumentToObjectOptions = {
+  def apply(
+    depopulate: js.UndefOr[Boolean] = js.undefined,
+    flattenMaps: js.UndefOr[Boolean] = js.undefined,
+    getters: js.UndefOr[Boolean] = js.undefined,
+    minimize: js.UndefOr[Boolean] = js.undefined,
+    transform: (/* doc */ js.Any, /* ret */ js.Any, /* options */ js.Any) => _ = null,
+    versionKey: js.UndefOr[Boolean] = js.undefined,
+    virtuals: js.UndefOr[Boolean] = js.undefined
+  ): DocumentToObjectOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(depopulate)) __obj.updateDynamic("depopulate")(depopulate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flattenMaps)) __obj.updateDynamic("flattenMaps")(flattenMaps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(getters)) __obj.updateDynamic("getters")(getters.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimize)) __obj.updateDynamic("minimize")(minimize.get.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction3(transform))
+    if (!js.isUndefined(versionKey)) __obj.updateDynamic("versionKey")(versionKey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtuals)) __obj.updateDynamic("virtuals")(virtuals.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentToObjectOptions]
   }
-  @scala.inline
-  implicit class DocumentToObjectOptionsOps[Self <: DocumentToObjectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDepopulate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depopulate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepopulate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depopulate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlattenMaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flattenMaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlattenMaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flattenMaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetters(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: (/* doc */ js.Any, /* ret */ js.Any, /* options */ js.Any) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionKey(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtuals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtuals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtuals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtuals")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

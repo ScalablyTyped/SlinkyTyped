@@ -1,6 +1,6 @@
 package typingsSlinky.reactPrimitives
 
-import typingsSlinky.reactPrimitives.mod.PlatformOSType
+import typingsSlinky.reactPrimitives.mod._PlatformOSType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +19,10 @@ object reactPrimitivesStrings {
   sealed trait memory extends js.Object
   
   @js.native
-  sealed trait sketch extends PlatformOSType
+  sealed trait sketch extends _PlatformOSType
   
   @js.native
-  sealed trait vr extends PlatformOSType
+  sealed trait vr extends _PlatformOSType
   
   @scala.inline
   def PlatformStatic: PlatformStatic = "PlatformStatic".asInstanceOf[PlatformStatic]

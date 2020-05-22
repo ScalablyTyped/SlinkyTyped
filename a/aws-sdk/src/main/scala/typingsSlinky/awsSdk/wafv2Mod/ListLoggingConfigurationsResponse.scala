@@ -18,41 +18,11 @@ trait ListLoggingConfigurationsResponse extends js.Object {
 
 object ListLoggingConfigurationsResponse {
   @scala.inline
-  def apply(): ListLoggingConfigurationsResponse = {
+  def apply(LoggingConfigurations: LoggingConfigurations = null, NextMarker: NextMarker = null): ListLoggingConfigurationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (LoggingConfigurations != null) __obj.updateDynamic("LoggingConfigurations")(LoggingConfigurations.asInstanceOf[js.Any])
+    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListLoggingConfigurationsResponse]
   }
-  @scala.inline
-  implicit class ListLoggingConfigurationsResponseOps[Self <: ListLoggingConfigurationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoggingConfigurations(value: LoggingConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingConfigurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextMarker(value: NextMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

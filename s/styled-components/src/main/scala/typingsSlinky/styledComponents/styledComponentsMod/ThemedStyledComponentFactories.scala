@@ -180,918 +180,917 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ TTag in keyof react.react.<global>.JSX.IntrinsicElements ]: styled-components.styled-components.ThemedStyledFunction<TTag, T, {}, never>} */
-@js.native
 trait ThemedStyledComponentFactories[T /* <: js.Object */] extends js.Object {
-  var a: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.a, T, js.Object, scala.Nothing] = js.native
+  var a: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.a, T, js.Object, scala.Nothing]
   var abbr: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.abbr, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var address: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.address, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var animate: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.animate, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var animateMotion: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.animateMotion, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var animateTransform: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.animateTransform, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var area: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.area, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var article: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.article, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var aside: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.aside, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var audio: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.audio, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var b: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.b, T, js.Object, scala.Nothing] = js.native
+  ]
+  var b: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.b, T, js.Object, scala.Nothing]
   var base: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.base, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var bdi: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.bdi, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var bdo: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.bdo, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var big: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.big, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var blockquote: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.blockquote, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var body: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.body, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var br: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.br, T, js.Object, scala.Nothing] = js.native
+  ]
+  var br: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.br, T, js.Object, scala.Nothing]
   var button: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.button, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var canvas: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.canvas, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var caption: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.caption, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var circle: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.circle, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var cite: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.cite, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var clipPath: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.clipPath, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var code: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.code, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var col: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.col, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var colgroup: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.colgroup, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var data: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.data, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var datalist: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.datalist, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var dd: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.dd, T, js.Object, scala.Nothing] = js.native
+  ]
+  var dd: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.dd, T, js.Object, scala.Nothing]
   var defs: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.defs, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var del: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.del, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var desc: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.desc, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var details: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.details, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var dfn: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.dfn, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var dialog: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.dialog, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var div: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.div, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var dl: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.dl, T, js.Object, scala.Nothing] = js.native
-  var dt: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.dt, T, js.Object, scala.Nothing] = js.native
+  ]
+  var dl: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.dl, T, js.Object, scala.Nothing]
+  var dt: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.dt, T, js.Object, scala.Nothing]
   var ellipse: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.ellipse, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var em: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.em, T, js.Object, scala.Nothing] = js.native
+  ]
+  var em: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.em, T, js.Object, scala.Nothing]
   var embed: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.embed, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feBlend: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feBlend, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feColorMatrix: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feColorMatrix, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feComponentTransfer: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feComponentTransfer, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feComposite: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feComposite, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feConvolveMatrix: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feConvolveMatrix, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feDiffuseLighting: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feDiffuseLighting, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feDisplacementMap: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feDisplacementMap, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feDistantLight: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feDistantLight, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feDropShadow: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feDropShadow, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feFlood: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feFlood, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feFuncA: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feFuncA, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feFuncB: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feFuncB, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feFuncG: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feFuncG, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feFuncR: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feFuncR, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feGaussianBlur: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feGaussianBlur, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feImage: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feImage, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feMerge: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feMerge, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feMergeNode: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feMergeNode, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feMorphology: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feMorphology, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feOffset: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feOffset, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var fePointLight: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.fePointLight, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feSpecularLighting: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feSpecularLighting, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feSpotLight: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feSpotLight, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feTile: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feTile, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var feTurbulence: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.feTurbulence, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var fieldset: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.fieldset, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var figcaption: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.figcaption, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var figure: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.figure, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var filter: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.filter, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var footer: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.footer, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var foreignObject: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.foreignObject, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var form: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.form, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var g: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.g, T, js.Object, scala.Nothing] = js.native
-  var h1: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h1, T, js.Object, scala.Nothing] = js.native
-  var h2: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h2, T, js.Object, scala.Nothing] = js.native
-  var h3: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h3, T, js.Object, scala.Nothing] = js.native
-  var h4: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h4, T, js.Object, scala.Nothing] = js.native
-  var h5: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h5, T, js.Object, scala.Nothing] = js.native
-  var h6: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h6, T, js.Object, scala.Nothing] = js.native
+  ]
+  var g: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.g, T, js.Object, scala.Nothing]
+  var h1: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h1, T, js.Object, scala.Nothing]
+  var h2: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h2, T, js.Object, scala.Nothing]
+  var h3: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h3, T, js.Object, scala.Nothing]
+  var h4: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h4, T, js.Object, scala.Nothing]
+  var h5: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h5, T, js.Object, scala.Nothing]
+  var h6: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.h6, T, js.Object, scala.Nothing]
   var head: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.head, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var header: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.header, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var hgroup: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.hgroup, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var hr: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.hr, T, js.Object, scala.Nothing] = js.native
+  ]
+  var hr: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.hr, T, js.Object, scala.Nothing]
   var html: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.html, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var i: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.i, T, js.Object, scala.Nothing] = js.native
+  ]
+  var i: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.i, T, js.Object, scala.Nothing]
   var iframe: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.iframe, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var image: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.image, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var img: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.img, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var input: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.input, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var ins: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.ins, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var kbd: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.kbd, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var keygen: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.keygen, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var label: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.label, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var legend: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.legend, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var li: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.li, T, js.Object, scala.Nothing] = js.native
+  ]
+  var li: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.li, T, js.Object, scala.Nothing]
   var line: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.line, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var linearGradient: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.linearGradient, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var link: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.link, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var main: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.main, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var map: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.map, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var mark: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.mark, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var marker: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.marker, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var mask: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.mask, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var menu: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.menu, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var menuitem: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.menuitem, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var meta: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.meta, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var metadata: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.metadata, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var meter: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.meter, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var mpath: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.mpath, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var nav: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.nav, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var noindex: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.noindex, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var noscript: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.noscript, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var `object`: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.`object`, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var ol: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.ol, T, js.Object, scala.Nothing] = js.native
+  ]
+  var ol: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.ol, T, js.Object, scala.Nothing]
   var optgroup: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.optgroup, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var option: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.option, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var output: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.output, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var p: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.p, T, js.Object, scala.Nothing] = js.native
+  ]
+  var p: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.p, T, js.Object, scala.Nothing]
   var param: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.param, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var path: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.path, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var pattern: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.pattern, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var picture: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.picture, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var polygon: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.polygon, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var polyline: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.polyline, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var pre: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.pre, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var progress: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.progress, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var q: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.q, T, js.Object, scala.Nothing] = js.native
+  ]
+  var q: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.q, T, js.Object, scala.Nothing]
   var radialGradient: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.radialGradient, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var rect: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.rect, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var rp: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.rp, T, js.Object, scala.Nothing] = js.native
-  var rt: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.rt, T, js.Object, scala.Nothing] = js.native
+  ]
+  var rp: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.rp, T, js.Object, scala.Nothing]
+  var rt: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.rt, T, js.Object, scala.Nothing]
   var ruby: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.ruby, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var s: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.s, T, js.Object, scala.Nothing] = js.native
+  ]
+  var s: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.s, T, js.Object, scala.Nothing]
   var samp: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.samp, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var script: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.script, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var section: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.section, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var select: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.select, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var slot: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.slot, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var small: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.small, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var source: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.source, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var span: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.span, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var stop: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.stop, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var strong: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.strong, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var style: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.style, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var sub: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.sub, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var summary: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.summary, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var sup: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.sup, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var svg: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.svg, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var switch: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.switch, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var symbol: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.symbol, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var table: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.table, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var tbody: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.tbody, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var td: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.td, T, js.Object, scala.Nothing] = js.native
+  ]
+  var td: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.td, T, js.Object, scala.Nothing]
   var template: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.template, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var text: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.text, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var textPath: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.textPath, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var textarea: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.textarea, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var tfoot: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.tfoot, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var th: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.th, T, js.Object, scala.Nothing] = js.native
+  ]
+  var th: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.th, T, js.Object, scala.Nothing]
   var thead: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.thead, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var time: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.time, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var title: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.title, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var tr: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.tr, T, js.Object, scala.Nothing] = js.native
+  ]
+  var tr: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.tr, T, js.Object, scala.Nothing]
   var track: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.track, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var tspan: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.tspan, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
-  var u: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.u, T, js.Object, scala.Nothing] = js.native
-  var ul: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.ul, T, js.Object, scala.Nothing] = js.native
+  ]
+  var u: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.u, T, js.Object, scala.Nothing]
+  var ul: ThemedStyledFunction[typingsSlinky.styledComponents.styledComponentsStrings.ul, T, js.Object, scala.Nothing]
   var use: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.use, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var `var`: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.`var`, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var video: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.video, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var view: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.view, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var wbr: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.wbr, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
   var webview: ThemedStyledFunction[
     typingsSlinky.styledComponents.styledComponentsStrings.webview, 
     T, 
     js.Object, 
     scala.Nothing
-  ] = js.native
+  ]
 }
 
 object ThemedStyledComponentFactories {
@@ -1278,1063 +1277,5 @@ object ThemedStyledComponentFactories {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThemedStyledComponentFactories[T]]
   }
-  @scala.inline
-  implicit class ThemedStyledComponentFactoriesOps[Self[t] <: ThemedStyledComponentFactories[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withA(value: ThemedStyledFunction[a, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbbr(value: ThemedStyledFunction[abbr, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress(value: ThemedStyledFunction[address, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimate(value: ThemedStyledFunction[animate, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimateMotion(value: ThemedStyledFunction[animateMotion, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateMotion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimateTransform(value: ThemedStyledFunction[animateTransform, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArea(value: ThemedStyledFunction[area, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArticle(value: ThemedStyledFunction[article, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAside(value: ThemedStyledFunction[aside, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudio(value: ThemedStyledFunction[audio, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withB(value: ThemedStyledFunction[b, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBase(value: ThemedStyledFunction[base, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBdi(value: ThemedStyledFunction[bdi, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bdi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBdo(value: ThemedStyledFunction[bdo, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bdo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBig(value: ThemedStyledFunction[big, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("big")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockquote(value: ThemedStyledFunction[blockquote, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: ThemedStyledFunction[body, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBr(value: ThemedStyledFunction[br, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withButton(value: ThemedStyledFunction[button, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanvas(value: ThemedStyledFunction[canvas, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: ThemedStyledFunction[caption, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCircle(value: ThemedStyledFunction[circle, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCite(value: ThemedStyledFunction[cite, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClipPath(value: ThemedStyledFunction[clipPath, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCode(value: ThemedStyledFunction[code, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCol(value: ThemedStyledFunction[col, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColgroup(value: ThemedStyledFunction[colgroup, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: ThemedStyledFunction[data, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatalist(value: ThemedStyledFunction[datalist, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datalist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDd(value: ThemedStyledFunction[dd, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefs(value: ThemedStyledFunction[defs, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDel(value: ThemedStyledFunction[del, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDesc(value: ThemedStyledFunction[desc, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetails(value: ThemedStyledFunction[details, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDfn(value: ThemedStyledFunction[dfn, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dfn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDialog(value: ThemedStyledFunction[dialog, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiv(value: ThemedStyledFunction[div, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDl(value: ThemedStyledFunction[dl, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDt(value: ThemedStyledFunction[dt, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEllipse(value: ThemedStyledFunction[ellipse, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEm(value: ThemedStyledFunction[em, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmbed(value: ThemedStyledFunction[embed, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeBlend(value: ThemedStyledFunction[feBlend, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feBlend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeColorMatrix(value: ThemedStyledFunction[feColorMatrix, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feColorMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeComponentTransfer(value: ThemedStyledFunction[feComponentTransfer, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feComponentTransfer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeComposite(value: ThemedStyledFunction[feComposite, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feComposite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeConvolveMatrix(value: ThemedStyledFunction[feConvolveMatrix, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feConvolveMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeDiffuseLighting(value: ThemedStyledFunction[feDiffuseLighting, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feDiffuseLighting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeDisplacementMap(value: ThemedStyledFunction[feDisplacementMap, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feDisplacementMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeDistantLight(value: ThemedStyledFunction[feDistantLight, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feDistantLight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeDropShadow(value: ThemedStyledFunction[feDropShadow, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feDropShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeFlood(value: ThemedStyledFunction[feFlood, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feFlood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeFuncA(value: ThemedStyledFunction[feFuncA, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feFuncA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeFuncB(value: ThemedStyledFunction[feFuncB, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feFuncB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeFuncG(value: ThemedStyledFunction[feFuncG, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feFuncG")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeFuncR(value: ThemedStyledFunction[feFuncR, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feFuncR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeGaussianBlur(value: ThemedStyledFunction[feGaussianBlur, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feGaussianBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeImage(value: ThemedStyledFunction[feImage, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeMerge(value: ThemedStyledFunction[feMerge, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feMerge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeMergeNode(value: ThemedStyledFunction[feMergeNode, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feMergeNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeMorphology(value: ThemedStyledFunction[feMorphology, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feMorphology")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeOffset(value: ThemedStyledFunction[feOffset, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFePointLight(value: ThemedStyledFunction[fePointLight, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fePointLight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeSpecularLighting(value: ThemedStyledFunction[feSpecularLighting, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feSpecularLighting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeSpotLight(value: ThemedStyledFunction[feSpotLight, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feSpotLight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeTile(value: ThemedStyledFunction[feTile, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feTile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeTurbulence(value: ThemedStyledFunction[feTurbulence, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feTurbulence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldset(value: ThemedStyledFunction[fieldset, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFigcaption(value: ThemedStyledFunction[figcaption, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("figcaption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFigure(value: ThemedStyledFunction[figure, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("figure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: ThemedStyledFunction[filter, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFooter(value: ThemedStyledFunction[footer, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeignObject(value: ThemedStyledFunction[foreignObject, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForm(value: ThemedStyledFunction[form, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withG(value: ThemedStyledFunction[g, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH1(value: ThemedStyledFunction[h1, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH2(value: ThemedStyledFunction[h2, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH3(value: ThemedStyledFunction[h3, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH4(value: ThemedStyledFunction[h4, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH5(value: ThemedStyledFunction[h5, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH6(value: ThemedStyledFunction[h6, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHead(value: ThemedStyledFunction[head, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeader(value: ThemedStyledFunction[header, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHgroup(value: ThemedStyledFunction[hgroup, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHr(value: ThemedStyledFunction[hr, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtml(value: ThemedStyledFunction[html, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withI(value: ThemedStyledFunction[i, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIframe(value: ThemedStyledFunction[iframe, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: ThemedStyledFunction[image, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImg(value: ThemedStyledFunction[img, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInput(value: ThemedStyledFunction[input, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIns(value: ThemedStyledFunction[ins, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKbd(value: ThemedStyledFunction[kbd, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kbd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeygen(value: ThemedStyledFunction[keygen, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keygen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: ThemedStyledFunction[label, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLegend(value: ThemedStyledFunction[legend, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLi(value: ThemedStyledFunction[li, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLine(value: ThemedStyledFunction[line, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinearGradient(value: ThemedStyledFunction[linearGradient, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearGradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLink(value: ThemedStyledFunction[link, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMain(value: ThemedStyledFunction[main, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMap(value: ThemedStyledFunction[map, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMark(value: ThemedStyledFunction[mark, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarker(value: ThemedStyledFunction[marker, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMask(value: ThemedStyledFunction[mask, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMenu(value: ThemedStyledFunction[menu, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMenuitem(value: ThemedStyledFunction[menuitem, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuitem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeta(value: ThemedStyledFunction[meta, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: ThemedStyledFunction[metadata, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeter(value: ThemedStyledFunction[meter, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMpath(value: ThemedStyledFunction[mpath, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNav(value: ThemedStyledFunction[nav, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoindex(value: ThemedStyledFunction[noindex, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noindex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoscript(value: ThemedStyledFunction[noscript, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noscript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: ThemedStyledFunction[`object`, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOl(value: ThemedStyledFunction[ol, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptgroup(value: ThemedStyledFunction[optgroup, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOption(value: ThemedStyledFunction[option, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutput(value: ThemedStyledFunction[output, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP(value: ThemedStyledFunction[p, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParam(value: ThemedStyledFunction[param, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: ThemedStyledFunction[path, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: ThemedStyledFunction[pattern, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPicture(value: ThemedStyledFunction[picture, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolygon(value: ThemedStyledFunction[polygon, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolyline(value: ThemedStyledFunction[polyline, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPre(value: ThemedStyledFunction[pre, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProgress(value: ThemedStyledFunction[progress, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQ(value: ThemedStyledFunction[q, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRadialGradient(value: ThemedStyledFunction[radialGradient, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialGradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRect(value: ThemedStyledFunction[rect, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRp(value: ThemedStyledFunction[rp, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRt(value: ThemedStyledFunction[rt, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuby(value: ThemedStyledFunction[ruby, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS(value: ThemedStyledFunction[s, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSamp(value: ThemedStyledFunction[samp, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScript(value: ThemedStyledFunction[script, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSection(value: ThemedStyledFunction[section, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: ThemedStyledFunction[select, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSlot(value: ThemedStyledFunction[slot, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSmall(value: ThemedStyledFunction[small, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: ThemedStyledFunction[source, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpan(value: ThemedStyledFunction[span, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStop(value: ThemedStyledFunction[stop, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrong(value: ThemedStyledFunction[strong, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyle(value: ThemedStyledFunction[style, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSub(value: ThemedStyledFunction[sub, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummary(value: ThemedStyledFunction[summary, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSup(value: ThemedStyledFunction[sup, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSvg(value: ThemedStyledFunction[svg, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwitch(value: ThemedStyledFunction[switch, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: ThemedStyledFunction[symbol, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTable(value: ThemedStyledFunction[table, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTbody(value: ThemedStyledFunction[tbody, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTd(value: ThemedStyledFunction[td, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: ThemedStyledFunction[template, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: ThemedStyledFunction[text, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextPath(value: ThemedStyledFunction[textPath, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextarea(value: ThemedStyledFunction[textarea, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTfoot(value: ThemedStyledFunction[tfoot, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tfoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTh(value: ThemedStyledFunction[th, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThead(value: ThemedStyledFunction[thead, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTime(value: ThemedStyledFunction[time, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: ThemedStyledFunction[title, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTr(value: ThemedStyledFunction[tr, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrack(value: ThemedStyledFunction[track, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTspan(value: ThemedStyledFunction[tspan, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tspan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withU(value: ThemedStyledFunction[u, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("u")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUl(value: ThemedStyledFunction[ul, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUse(value: ThemedStyledFunction[use, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVar(value: ThemedStyledFunction[`var`, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("var")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideo(value: ThemedStyledFunction[video, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withView(value: ThemedStyledFunction[view, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWbr(value: ThemedStyledFunction[wbr, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wbr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebview(value: ThemedStyledFunction[webview, T, js.Object, scala.Nothing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webview")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

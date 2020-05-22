@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * Specifies enumerated values for the `cells` property in the cellFormat parameter of 
+  * Specifies enumerated values for the `cells` property in the cellFormat parameter of
   * {@link https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-tables#format-a-table | table formatting methods}.
   */
 @JSGlobal("Office.Table")

@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   * This is the service provided by a {@link com.sun.star.drawing.DrawPage} inside a {@link PresentationDocument} .
   * @see PresentationDocument
   */
-@js.native
 trait DrawPage
   extends GenericDrawPage
      with XMasterPageTarget
@@ -36,41 +35,41 @@ trait DrawPage
     * If this is 0, the user must click to start each object animation and to change the page. If set to 1, the page is automatically switched. If it is set
     * to 2, all object effects run automatically, but the user has to click on the page to change it.
     */
-  var Change: Double = js.native
+  var Change: Double
   /** defines the format that is used to format a date and time text field on this page. This is only used if `IsDateTimeFixed` is `FALSE` . */
-  var DateTimeFormat: Double = js.native
+  var DateTimeFormat: Double
   /** defines the text that is displayed in a date and time textfield rendered on this page. This value is only used if `IsDateTimeFixed` is `TRUE` . */
-  var DateTimeText: String = js.native
+  var DateTimeText: String
   /**
     * If the property com::sun::star::drawing::DrawPage::Change is set to 1, this is the time in seconds this page is shown before switching to the next
     * page.
     */
-  var Duration: Double = js.native
+  var Duration: Double
   /** This is the effect that is used to fade in this page. */
-  var Effect: FadeEffect = js.native
+  var Effect: FadeEffect
   /** defines the text that is displayed in a footer textfield rendered on this page. */
-  var FooterText: String = js.native
+  var FooterText: String
   /** defines the text that is displayed in a header textfield rendered on this page. */
-  var HeaderText: String = js.native
+  var HeaderText: String
   /**
     * If the property com::sun::star::drawing::DrawPage::Change is set to 1, this is the time in seconds this page is shown before switching to the next
     * page, also permitting sub-second precision here.
     */
-  var HighResDuration: Double = js.native
+  var HighResDuration: Double
   /** defines if a date and time text field shows a fixed string value or the current date on this page. */
-  var IsDateTimeFixed: Boolean = js.native
+  var IsDateTimeFixed: Boolean
   /** defines if a date and time presentation shape from the master page is visible on this page. */
-  var IsDateTimeVisible: Boolean = js.native
+  var IsDateTimeVisible: Boolean
   /** defines if a footer presentation shape from the master page is visible on this page. */
-  var IsFooterVisible: Boolean = js.native
+  var IsFooterVisible: Boolean
   /** defines if a header presentation shape from the master page is visible on this page. */
-  var IsHeaderVisible: Boolean = js.native
+  var IsHeaderVisible: Boolean
   /** defines if a page number presentation shape from the master page is visible on this page. */
-  var IsPageNumberVisible: Boolean = js.native
+  var IsPageNumberVisible: Boolean
   /** If this property is not ZERO, this number specifies a presentation layout for this page. */
-  var Layout: Double = js.native
+  var Layout: Double
   /** defines the speed of the fade-in effect of this page. */
-  var Speed: AnimationSpeed = js.native
+  var Speed: AnimationSpeed
 }
 
 object DrawPage {
@@ -142,103 +141,5 @@ object DrawPage {
     val __obj = js.Dynamic.literal(BorderBottom = BorderBottom.asInstanceOf[js.Any], BorderLeft = BorderLeft.asInstanceOf[js.Any], BorderRight = BorderRight.asInstanceOf[js.Any], BorderTop = BorderTop.asInstanceOf[js.Any], Change = Change.asInstanceOf[js.Any], Count = Count.asInstanceOf[js.Any], DateTimeFormat = DateTimeFormat.asInstanceOf[js.Any], DateTimeText = DateTimeText.asInstanceOf[js.Any], Duration = Duration.asInstanceOf[js.Any], Effect = Effect.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], FooterText = FooterText.asInstanceOf[js.Any], Forms = Forms.asInstanceOf[js.Any], HeaderText = HeaderText.asInstanceOf[js.Any], Height = Height.asInstanceOf[js.Any], HighResDuration = HighResDuration.asInstanceOf[js.Any], IsBackgroundDark = IsBackgroundDark.asInstanceOf[js.Any], IsDateTimeFixed = IsDateTimeFixed.asInstanceOf[js.Any], IsDateTimeVisible = IsDateTimeVisible.asInstanceOf[js.Any], IsFooterVisible = IsFooterVisible.asInstanceOf[js.Any], IsHeaderVisible = IsHeaderVisible.asInstanceOf[js.Any], IsPageNumberVisible = IsPageNumberVisible.asInstanceOf[js.Any], Layout = Layout.asInstanceOf[js.Any], LinkDisplayName = LinkDisplayName.asInstanceOf[js.Any], Links = Links.asInstanceOf[js.Any], MasterPage = MasterPage.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], NavigationOrder = NavigationOrder.asInstanceOf[js.Any], Number = Number.asInstanceOf[js.Any], Orientation = Orientation.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], Speed = Speed.asInstanceOf[js.Any], UserDefinedAttributes = UserDefinedAttributes.asInstanceOf[js.Any], Width = Width.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), add = js.Any.fromFunction1(add), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), bind = js.Any.fromFunction1(bind), combine = js.Any.fromFunction1(combine), getByIndex = js.Any.fromFunction1(getByIndex), getCount = js.Any.fromFunction0(getCount), getElementType = js.Any.fromFunction0(getElementType), getForms = js.Any.fromFunction0(getForms), getLinks = js.Any.fromFunction0(getLinks), getMasterPage = js.Any.fromFunction0(getMasterPage), getName = js.Any.fromFunction0(getName), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), group = js.Any.fromFunction1(group), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), remove = js.Any.fromFunction1(remove), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setMasterPage = js.Any.fromFunction1(setMasterPage), setName = js.Any.fromFunction1(setName), setPropertyValue = js.Any.fromFunction2(setPropertyValue), split = js.Any.fromFunction1(split), unbind = js.Any.fromFunction1(unbind), ungroup = js.Any.fromFunction1(ungroup))
     __obj.asInstanceOf[DrawPage]
   }
-  @scala.inline
-  implicit class DrawPageOps[Self <: DrawPage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChange(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Change")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateTimeFormat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateTimeFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateTimeText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateTimeText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEffect(value: FadeEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Effect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFooterText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FooterText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HeaderText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHighResDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HighResDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDateTimeFixed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsDateTimeFixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDateTimeVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsDateTimeVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsFooterVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsFooterVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsHeaderVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsHeaderVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPageNumberVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsPageNumberVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: AnimationSpeed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

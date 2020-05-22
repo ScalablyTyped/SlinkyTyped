@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
   * Playlist Object Simplified
   * [](https://developer.spotify.com/web-api/object-model/)
   */
-@js.native
 trait PlaylistObjectSimplified extends PlaylistBaseObject {
-  var tracks: Href = js.native
+  var tracks: Href
 }
 
 object PlaylistObjectSimplified {
@@ -28,25 +27,12 @@ object PlaylistObjectSimplified {
     snapshot_id: String,
     tracks: Href,
     `type`: playlist,
-    uri: String
+    uri: String,
+    public: Boolean = null.asInstanceOf[Boolean]
   ): PlaylistObjectSimplified = {
-    val __obj = js.Dynamic.literal(collaborative = collaborative.asInstanceOf[js.Any], external_urls = external_urls.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], images = images.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], snapshot_id = snapshot_id.asInstanceOf[js.Any], tracks = tracks.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(collaborative = collaborative.asInstanceOf[js.Any], external_urls = external_urls.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], images = images.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], snapshot_id = snapshot_id.asInstanceOf[js.Any], tracks = tracks.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any], public = public.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaylistObjectSimplified]
   }
-  @scala.inline
-  implicit class PlaylistObjectSimplifiedOps[Self <: PlaylistObjectSimplified] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTracks(value: Href): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -30,59 +30,17 @@ trait CustomizedLoadMetricSpecification extends js.Object {
 
 object CustomizedLoadMetricSpecification {
   @scala.inline
-  def apply(MetricName: MetricName, Namespace: MetricNamespace, Statistic: MetricStatistic): CustomizedLoadMetricSpecification = {
+  def apply(
+    MetricName: MetricName,
+    Namespace: MetricNamespace,
+    Statistic: MetricStatistic,
+    Dimensions: MetricDimensions = null,
+    Unit: MetricUnit = null
+  ): CustomizedLoadMetricSpecification = {
     val __obj = js.Dynamic.literal(MetricName = MetricName.asInstanceOf[js.Any], Namespace = Namespace.asInstanceOf[js.Any], Statistic = Statistic.asInstanceOf[js.Any])
+    if (Dimensions != null) __obj.updateDynamic("Dimensions")(Dimensions.asInstanceOf[js.Any])
+    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomizedLoadMetricSpecification]
   }
-  @scala.inline
-  implicit class CustomizedLoadMetricSpecificationOps[Self <: CustomizedLoadMetricSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricName(value: MetricName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: MetricNamespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatistic(value: MetricStatistic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: MetricDimensions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: MetricUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

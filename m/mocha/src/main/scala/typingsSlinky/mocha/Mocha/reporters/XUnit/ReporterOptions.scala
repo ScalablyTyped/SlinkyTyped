@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReporterOptions extends js.Object {
-  var output: js.UndefOr[String] = js.native
-  var suiteName: js.UndefOr[String] = js.native
+  var output: js.UndefOr[String] = js.undefined
+  var suiteName: js.UndefOr[String] = js.undefined
 }
 
 object ReporterOptions {
   @scala.inline
-  def apply(): ReporterOptions = {
+  def apply(output: String = null, suiteName: String = null): ReporterOptions = {
     val __obj = js.Dynamic.literal()
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (suiteName != null) __obj.updateDynamic("suiteName")(suiteName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReporterOptions]
   }
-  @scala.inline
-  implicit class ReporterOptionsOps[Self <: ReporterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuiteName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suiteName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuiteName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suiteName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

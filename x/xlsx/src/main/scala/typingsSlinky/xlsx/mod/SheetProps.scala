@@ -7,51 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SheetProps extends js.Object {
   /** Name of Document Module in associated VBA Project */
-  var CodeName: js.UndefOr[String] = js.native
+  var CodeName: js.UndefOr[String] = js.undefined
   /** Sheet Visibility (0=Visible 1=Hidden 2=VeryHidden) */
-  var Hidden: js.UndefOr[`0` | `1` | `2`] = js.native
+  var Hidden: js.UndefOr[`0` | `1` | `2`] = js.undefined
 }
 
 object SheetProps {
   @scala.inline
-  def apply(): SheetProps = {
+  def apply(CodeName: String = null, Hidden: `0` | `1` | `2` = null): SheetProps = {
     val __obj = js.Dynamic.literal()
+    if (CodeName != null) __obj.updateDynamic("CodeName")(CodeName.asInstanceOf[js.Any])
+    if (Hidden != null) __obj.updateDynamic("Hidden")(Hidden.asInstanceOf[js.Any])
     __obj.asInstanceOf[SheetProps]
   }
-  @scala.inline
-  implicit class SheetPropsOps[Self <: SheetProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: `0` | `1` | `2`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hidden")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

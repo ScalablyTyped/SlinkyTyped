@@ -12,29 +12,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SettingsCollection extends js.Object {
-  var Delegates: js.UndefOr[DelegatesCollection] = js.native
-  var Filters: js.UndefOr[FiltersCollection] = js.native
-  var ForwardingAddresses: js.UndefOr[ForwardingAddressesCollection] = js.native
-  var SendAs: js.UndefOr[SendAsCollection] = js.native
+  var Delegates: js.UndefOr[DelegatesCollection] = js.undefined
+  var Filters: js.UndefOr[FiltersCollection] = js.undefined
+  var ForwardingAddresses: js.UndefOr[ForwardingAddressesCollection] = js.undefined
+  var SendAs: js.UndefOr[SendAsCollection] = js.undefined
   // Gets the auto-forwarding setting for the specified account.
-  def getAutoForwarding(userId: String): AutoForwarding = js.native
+  def getAutoForwarding(userId: String): AutoForwarding
   // Gets IMAP settings.
-  def getImap(userId: String): ImapSettings = js.native
+  def getImap(userId: String): ImapSettings
   // Gets POP settings.
-  def getPop(userId: String): PopSettings = js.native
+  def getPop(userId: String): PopSettings
   // Gets vacation responder settings.
-  def getVacation(userId: String): VacationSettings = js.native
+  def getVacation(userId: String): VacationSettings
   // Updates the auto-forwarding setting for the specified account. A verified forwarding address must be specified when auto-forwarding is enabled.
   // This method is only available to service account clients that have been delegated domain-wide authority.
-  def updateAutoForwarding(resource: AutoForwarding, userId: String): AutoForwarding = js.native
+  def updateAutoForwarding(resource: AutoForwarding, userId: String): AutoForwarding
   // Updates IMAP settings.
-  def updateImap(resource: ImapSettings, userId: String): ImapSettings = js.native
+  def updateImap(resource: ImapSettings, userId: String): ImapSettings
   // Updates POP settings.
-  def updatePop(resource: PopSettings, userId: String): PopSettings = js.native
+  def updatePop(resource: PopSettings, userId: String): PopSettings
   // Updates vacation responder settings.
-  def updateVacation(resource: VacationSettings, userId: String): VacationSettings = js.native
+  def updateVacation(resource: VacationSettings, userId: String): VacationSettings
 }
 
 object SettingsCollection {
@@ -47,114 +46,18 @@ object SettingsCollection {
     updateAutoForwarding: (AutoForwarding, String) => AutoForwarding,
     updateImap: (ImapSettings, String) => ImapSettings,
     updatePop: (PopSettings, String) => PopSettings,
-    updateVacation: (VacationSettings, String) => VacationSettings
+    updateVacation: (VacationSettings, String) => VacationSettings,
+    Delegates: DelegatesCollection = null,
+    Filters: FiltersCollection = null,
+    ForwardingAddresses: ForwardingAddressesCollection = null,
+    SendAs: SendAsCollection = null
   ): SettingsCollection = {
     val __obj = js.Dynamic.literal(getAutoForwarding = js.Any.fromFunction1(getAutoForwarding), getImap = js.Any.fromFunction1(getImap), getPop = js.Any.fromFunction1(getPop), getVacation = js.Any.fromFunction1(getVacation), updateAutoForwarding = js.Any.fromFunction2(updateAutoForwarding), updateImap = js.Any.fromFunction2(updateImap), updatePop = js.Any.fromFunction2(updatePop), updateVacation = js.Any.fromFunction2(updateVacation))
+    if (Delegates != null) __obj.updateDynamic("Delegates")(Delegates.asInstanceOf[js.Any])
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (ForwardingAddresses != null) __obj.updateDynamic("ForwardingAddresses")(ForwardingAddresses.asInstanceOf[js.Any])
+    if (SendAs != null) __obj.updateDynamic("SendAs")(SendAs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettingsCollection]
   }
-  @scala.inline
-  implicit class SettingsCollectionOps[Self <: SettingsCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAutoForwarding(value: String => AutoForwarding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoForwarding")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetImap(value: String => ImapSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getImap")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPop(value: String => PopSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetVacation(value: String => VacationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVacation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateAutoForwarding(value: (AutoForwarding, String) => AutoForwarding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateAutoForwarding")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateImap(value: (ImapSettings, String) => ImapSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateImap")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdatePop(value: (PopSettings, String) => PopSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatePop")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateVacation(value: (VacationSettings, String) => VacationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateVacation")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDelegates(value: DelegatesCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delegates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelegates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delegates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: FiltersCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForwardingAddresses(value: ForwardingAddressesCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardingAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForwardingAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardingAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendAs(value: SendAsCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendAs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

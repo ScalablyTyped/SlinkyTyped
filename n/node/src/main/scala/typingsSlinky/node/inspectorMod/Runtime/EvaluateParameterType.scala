@@ -4,162 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EvaluateParameterType extends js.Object {
   /**
     * Whether execution should <code>await</code> for resulting value and return once awaited promise is resolved.
     */
-  var awaitPromise: js.UndefOr[Boolean] = js.native
+  var awaitPromise: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies in which execution context to perform evaluation. If the parameter is omitted the evaluation will be performed in the context of the inspected page.
     */
-  var contextId: js.UndefOr[ExecutionContextId] = js.native
+  var contextId: js.UndefOr[ExecutionContextId] = js.undefined
   /**
     * Expression to evaluate.
     */
-  var expression: String = js.native
+  var expression: String
   /**
     * Whether preview should be generated for the result.
     * @experimental
     */
-  var generatePreview: js.UndefOr[Boolean] = js.native
+  var generatePreview: js.UndefOr[Boolean] = js.undefined
   /**
     * Determines whether Command Line API should be available during the evaluation.
     */
-  var includeCommandLineAPI: js.UndefOr[Boolean] = js.native
+  var includeCommandLineAPI: js.UndefOr[Boolean] = js.undefined
   /**
     * Symbolic group name that can be used to release multiple objects.
     */
-  var objectGroup: js.UndefOr[String] = js.native
+  var objectGroup: js.UndefOr[String] = js.undefined
   /**
     * Whether the result is expected to be a JSON object that should be sent by value.
     */
-  var returnByValue: js.UndefOr[Boolean] = js.native
+  var returnByValue: js.UndefOr[Boolean] = js.undefined
   /**
     * In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
     */
-  var silent: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether execution should be treated as initiated by user in the UI.
     */
-  var userGesture: js.UndefOr[Boolean] = js.native
+  var userGesture: js.UndefOr[Boolean] = js.undefined
 }
 
 object EvaluateParameterType {
   @scala.inline
-  def apply(expression: String): EvaluateParameterType = {
+  def apply(
+    expression: String,
+    awaitPromise: js.UndefOr[Boolean] = js.undefined,
+    contextId: js.UndefOr[ExecutionContextId] = js.undefined,
+    generatePreview: js.UndefOr[Boolean] = js.undefined,
+    includeCommandLineAPI: js.UndefOr[Boolean] = js.undefined,
+    objectGroup: String = null,
+    returnByValue: js.UndefOr[Boolean] = js.undefined,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    userGesture: js.UndefOr[Boolean] = js.undefined
+  ): EvaluateParameterType = {
     val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+    if (!js.isUndefined(awaitPromise)) __obj.updateDynamic("awaitPromise")(awaitPromise.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(contextId)) __obj.updateDynamic("contextId")(contextId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generatePreview)) __obj.updateDynamic("generatePreview")(generatePreview.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeCommandLineAPI)) __obj.updateDynamic("includeCommandLineAPI")(includeCommandLineAPI.get.asInstanceOf[js.Any])
+    if (objectGroup != null) __obj.updateDynamic("objectGroup")(objectGroup.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnByValue)) __obj.updateDynamic("returnByValue")(returnByValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(userGesture)) __obj.updateDynamic("userGesture")(userGesture.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluateParameterType]
   }
-  @scala.inline
-  implicit class EvaluateParameterTypeOps[Self <: EvaluateParameterType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAwaitPromise(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awaitPromise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwaitPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awaitPromise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextId(value: ExecutionContextId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeneratePreview(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generatePreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeneratePreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generatePreview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeCommandLineAPI(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCommandLineAPI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeCommandLineAPI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCommandLineAPI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnByValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnByValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnByValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnByValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserGesture(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userGesture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserGesture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userGesture")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

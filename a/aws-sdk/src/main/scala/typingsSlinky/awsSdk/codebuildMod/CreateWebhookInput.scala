@@ -22,47 +22,11 @@ trait CreateWebhookInput extends js.Object {
 
 object CreateWebhookInput {
   @scala.inline
-  def apply(projectName: ProjectName): CreateWebhookInput = {
+  def apply(projectName: ProjectName, branchFilter: String = null, filterGroups: FilterGroups = null): CreateWebhookInput = {
     val __obj = js.Dynamic.literal(projectName = projectName.asInstanceOf[js.Any])
+    if (branchFilter != null) __obj.updateDynamic("branchFilter")(branchFilter.asInstanceOf[js.Any])
+    if (filterGroups != null) __obj.updateDynamic("filterGroups")(filterGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateWebhookInput]
   }
-  @scala.inline
-  implicit class CreateWebhookInputOps[Self <: CreateWebhookInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProjectName(value: ProjectName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBranchFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranchFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterGroups(value: FilterGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

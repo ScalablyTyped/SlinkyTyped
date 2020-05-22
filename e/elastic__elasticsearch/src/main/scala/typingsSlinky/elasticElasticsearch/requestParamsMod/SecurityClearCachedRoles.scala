@@ -4,30 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SecurityClearCachedRoles extends Generic {
-  var name: String | js.Array[String] = js.native
+  var name: String | js.Array[String]
 }
 
 object SecurityClearCachedRoles {
   @scala.inline
-  def apply(name: String | js.Array[String]): SecurityClearCachedRoles = {
+  def apply(
+    name: String | js.Array[String],
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    filter_path: String | js.Array[String] = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    method: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    source: String = null
+  ): SecurityClearCachedRoles = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityClearCachedRoles]
   }
-  @scala.inline
-  implicit class SecurityClearCachedRolesOps[Self <: SecurityClearCachedRoles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

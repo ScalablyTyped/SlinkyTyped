@@ -10,230 +10,112 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@js.native
 trait ChartPlotAreaLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the formatting of a chart plotArea.
+    * Specifies the formatting of a chart plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var format: js.UndefOr[ChartPlotAreaFormatLoadOptions] = js.native
+  var format: js.UndefOr[ChartPlotAreaFormatLoadOptions] = js.undefined
   /**
     *
-    * Represents the height value of plotArea.
+    * Specifies the height value of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var height: js.UndefOr[Boolean] = js.native
+  var height: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the insideHeight value of plotArea.
+    * Specifies the insideHeight value of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var insideHeight: js.UndefOr[Boolean] = js.native
+  var insideHeight: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the insideLeft value of plotArea.
+    * Specifies the insideLeft value of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var insideLeft: js.UndefOr[Boolean] = js.native
+  var insideLeft: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the insideTop value of plotArea.
+    * Specifies the insideTop value of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var insideTop: js.UndefOr[Boolean] = js.native
+  var insideTop: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the insideWidth value of plotArea.
+    * Specifies the insideWidth value of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var insideWidth: js.UndefOr[Boolean] = js.native
+  var insideWidth: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the left value of plotArea.
+    * Specifies the left value of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var left: js.UndefOr[Boolean] = js.native
+  var left: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the position of plotArea.
+    * Specifies the position of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var position: js.UndefOr[Boolean] = js.native
+  var position: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the top value of plotArea.
+    * Specifies the top value of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var top: js.UndefOr[Boolean] = js.native
+  var top: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the width value of plotArea.
+    * Specifies the width value of plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var width: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChartPlotAreaLoadOptions {
   @scala.inline
-  def apply(): ChartPlotAreaLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    format: ChartPlotAreaFormatLoadOptions = null,
+    height: js.UndefOr[Boolean] = js.undefined,
+    insideHeight: js.UndefOr[Boolean] = js.undefined,
+    insideLeft: js.UndefOr[Boolean] = js.undefined,
+    insideTop: js.UndefOr[Boolean] = js.undefined,
+    insideWidth: js.UndefOr[Boolean] = js.undefined,
+    left: js.UndefOr[Boolean] = js.undefined,
+    position: js.UndefOr[Boolean] = js.undefined,
+    top: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Boolean] = js.undefined
+  ): ChartPlotAreaLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(insideHeight)) __obj.updateDynamic("insideHeight")(insideHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(insideLeft)) __obj.updateDynamic("insideLeft")(insideLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(insideTop)) __obj.updateDynamic("insideTop")(insideTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(insideWidth)) __obj.updateDynamic("insideWidth")(insideWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(position)) __obj.updateDynamic("position")(position.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartPlotAreaLoadOptions]
   }
-  @scala.inline
-  implicit class ChartPlotAreaLoadOptionsOps[Self <: ChartPlotAreaLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ChartPlotAreaFormatLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsideHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsideHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsideLeft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsideLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsideTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsideTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsideWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsideWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

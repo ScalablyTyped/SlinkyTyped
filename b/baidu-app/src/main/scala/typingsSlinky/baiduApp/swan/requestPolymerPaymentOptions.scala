@@ -5,69 +5,40 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * 百度收银台。
-	 * @version 1.8.5
-	 */
-@js.native
+  * 百度收银台。
+  * @version 1.8.5
+  */
 trait requestPolymerPaymentOptions
   extends BaseOptions[js.Any, js.Any] {
    // 订单信息
   /**
-  		 * bannedChannels参数说明
-  		 * Alipay	支付宝
-  		 * BDWallet	百度钱包
-  		 * WeChat	微信支付
-  		 */
-  var bannedChannels: js.UndefOr[js.Array[String]] = js.native
-  var orderInfo: orderInfoOptions = js.native
+    * bannedChannels参数说明
+    * Alipay    支付宝
+    * BDWallet    百度钱包
+    * WeChat    微信支付
+    */
+  var bannedChannels: js.UndefOr[js.Array[String]] = js.undefined
+  var orderInfo: orderInfoOptions
    // 需要隐藏的支付方式
   @JSName("success")
-  var success_requestPolymerPaymentOptions: js.UndefOr[js.Function1[/* res */ typingsSlinky.baiduApp.anon.AuthSetting, Unit]] = js.native
+  var success_requestPolymerPaymentOptions: js.UndefOr[js.Function1[/* res */ typingsSlinky.baiduApp.anon.AuthSetting, Unit]] = js.undefined
 }
 
 object requestPolymerPaymentOptions {
   @scala.inline
-  def apply(orderInfo: orderInfoOptions): requestPolymerPaymentOptions = {
+  def apply(
+    orderInfo: orderInfoOptions,
+    bannedChannels: js.Array[String] = null,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    success: /* res */ typingsSlinky.baiduApp.anon.AuthSetting => Unit = null
+  ): requestPolymerPaymentOptions = {
     val __obj = js.Dynamic.literal(orderInfo = orderInfo.asInstanceOf[js.Any])
+    if (bannedChannels != null) __obj.updateDynamic("bannedChannels")(bannedChannels.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[requestPolymerPaymentOptions]
   }
-  @scala.inline
-  implicit class requestPolymerPaymentOptionsOps[Self <: requestPolymerPaymentOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrderInfo(value: orderInfoOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBannedChannels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bannedChannels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBannedChannels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bannedChannels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ typingsSlinky.baiduApp.anon.AuthSetting => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,65 +26,18 @@ trait MetricInfo extends js.Object {
 
 object MetricInfo {
   @scala.inline
-  def apply(): MetricInfo = {
+  def apply(
+    MetricDimensions: MetricDimensionsMapDefinition = null,
+    MetricName: QuotaMetricName = null,
+    MetricNamespace: QuotaMetricNamespace = null,
+    MetricStatisticRecommendation: Statistic = null
+  ): MetricInfo = {
     val __obj = js.Dynamic.literal()
+    if (MetricDimensions != null) __obj.updateDynamic("MetricDimensions")(MetricDimensions.asInstanceOf[js.Any])
+    if (MetricName != null) __obj.updateDynamic("MetricName")(MetricName.asInstanceOf[js.Any])
+    if (MetricNamespace != null) __obj.updateDynamic("MetricNamespace")(MetricNamespace.asInstanceOf[js.Any])
+    if (MetricStatisticRecommendation != null) __obj.updateDynamic("MetricStatisticRecommendation")(MetricStatisticRecommendation.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricInfo]
   }
-  @scala.inline
-  implicit class MetricInfoOps[Self <: MetricInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricDimensions(value: MetricDimensionsMapDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricName(value: QuotaMetricName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricNamespace(value: QuotaMetricNamespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricNamespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricStatisticRecommendation(value: Statistic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricStatisticRecommendation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricStatisticRecommendation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricStatisticRecommendation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

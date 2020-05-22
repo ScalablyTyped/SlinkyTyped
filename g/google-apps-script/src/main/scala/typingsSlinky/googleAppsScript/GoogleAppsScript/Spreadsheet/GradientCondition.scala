@@ -26,17 +26,16 @@ import scala.scalajs.js.annotation._
   *         gradient.getMaxColor(), gradient.getMaxType(), gradient.getMaxValue());
   *     }
   */
-@js.native
 trait GradientCondition extends js.Object {
-  def getMaxColor(): String = js.native
-  def getMaxType(): InterpolationType | Null = js.native
-  def getMaxValue(): String = js.native
-  def getMidColor(): String = js.native
-  def getMidType(): InterpolationType | Null = js.native
-  def getMidValue(): String = js.native
-  def getMinColor(): String = js.native
-  def getMinType(): InterpolationType | Null = js.native
-  def getMinValue(): String = js.native
+  def getMaxColor(): String
+  def getMaxType(): InterpolationType | Null
+  def getMaxValue(): String
+  def getMidColor(): String
+  def getMidType(): InterpolationType | Null
+  def getMidValue(): String
+  def getMinColor(): String
+  def getMinType(): InterpolationType | Null
+  def getMinValue(): String
 }
 
 object GradientCondition {
@@ -55,67 +54,5 @@ object GradientCondition {
     val __obj = js.Dynamic.literal(getMaxColor = js.Any.fromFunction0(getMaxColor), getMaxType = js.Any.fromFunction0(getMaxType), getMaxValue = js.Any.fromFunction0(getMaxValue), getMidColor = js.Any.fromFunction0(getMidColor), getMidType = js.Any.fromFunction0(getMidType), getMidValue = js.Any.fromFunction0(getMidValue), getMinColor = js.Any.fromFunction0(getMinColor), getMinType = js.Any.fromFunction0(getMinType), getMinValue = js.Any.fromFunction0(getMinValue))
     __obj.asInstanceOf[GradientCondition]
   }
-  @scala.inline
-  implicit class GradientConditionOps[Self <: GradientCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetMaxColor(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxColor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxType(value: () => InterpolationType | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxValue(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMidColor(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMidColor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMidType(value: () => InterpolationType | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMidType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMidValue(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMidValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMinColor(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinColor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMinType(value: () => InterpolationType | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMinValue(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinValue")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -42,113 +42,26 @@ trait EndpointDemographic extends js.Object {
 
 object EndpointDemographic {
   @scala.inline
-  def apply(): EndpointDemographic = {
+  def apply(
+    AppVersion: string = null,
+    Locale: string = null,
+    Make: string = null,
+    Model: string = null,
+    ModelVersion: string = null,
+    Platform: string = null,
+    PlatformVersion: string = null,
+    Timezone: string = null
+  ): EndpointDemographic = {
     val __obj = js.Dynamic.literal()
+    if (AppVersion != null) __obj.updateDynamic("AppVersion")(AppVersion.asInstanceOf[js.Any])
+    if (Locale != null) __obj.updateDynamic("Locale")(Locale.asInstanceOf[js.Any])
+    if (Make != null) __obj.updateDynamic("Make")(Make.asInstanceOf[js.Any])
+    if (Model != null) __obj.updateDynamic("Model")(Model.asInstanceOf[js.Any])
+    if (ModelVersion != null) __obj.updateDynamic("ModelVersion")(ModelVersion.asInstanceOf[js.Any])
+    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
+    if (PlatformVersion != null) __obj.updateDynamic("PlatformVersion")(PlatformVersion.asInstanceOf[js.Any])
+    if (Timezone != null) __obj.updateDynamic("Timezone")(Timezone.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointDemographic]
   }
-  @scala.inline
-  implicit class EndpointDemographicOps[Self <: EndpointDemographic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AppVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AppVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMake(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Make")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMake: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Make")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatformVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimezone(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

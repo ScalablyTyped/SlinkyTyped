@@ -14,29 +14,10 @@ trait Timezone extends js.Object {
 
 object Timezone {
   @scala.inline
-  def apply(): Timezone = {
+  def apply(TimezoneName: String = null): Timezone = {
     val __obj = js.Dynamic.literal()
+    if (TimezoneName != null) __obj.updateDynamic("TimezoneName")(TimezoneName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Timezone]
   }
-  @scala.inline
-  implicit class TimezoneOps[Self <: Timezone] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTimezoneName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimezoneName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezoneName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimezoneName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

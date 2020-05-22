@@ -27,53 +27,16 @@ trait SchemaListVendorsResponse extends js.Object {
 
 object SchemaListVendorsResponse {
   @scala.inline
-  def apply(): SchemaListVendorsResponse = {
+  def apply(
+    nextPageToken: String = null,
+    totalSize: js.UndefOr[Double] = js.undefined,
+    vendors: js.Array[SchemaCompany] = null
+  ): SchemaListVendorsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalSize)) __obj.updateDynamic("totalSize")(totalSize.get.asInstanceOf[js.Any])
+    if (vendors != null) __obj.updateDynamic("vendors")(vendors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListVendorsResponse]
   }
-  @scala.inline
-  implicit class SchemaListVendorsResponseOps[Self <: SchemaListVendorsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVendors(value: js.Array[SchemaCompany]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVendors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

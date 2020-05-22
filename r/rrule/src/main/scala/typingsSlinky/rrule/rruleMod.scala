@@ -114,6 +114,14 @@ object rruleMod extends js.Object {
   class default () extends RRule {
     def this(options: PartialOptions) = this()
     def this(options: PartialOptions, noCache: Boolean) = this()
+    /* CompleteClass */
+    override def after(date: js.Date, inc: Boolean): js.Date = js.native
+    /* CompleteClass */
+    override def all(): js.Array[js.Date] = js.native
+    /* CompleteClass */
+    override def before(date: js.Date, inc: Boolean): js.Date = js.native
+    /* CompleteClass */
+    override def between(after: js.Date, before: js.Date, inc: Boolean): js.Array[js.Date] = js.native
   }
   
   val DEFAULT_OPTIONS: Options = js.native

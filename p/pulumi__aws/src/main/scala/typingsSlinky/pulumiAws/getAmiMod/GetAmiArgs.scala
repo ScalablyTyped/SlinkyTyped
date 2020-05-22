@@ -36,88 +36,31 @@ trait GetAmiArgs extends js.Object {
     * List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
     */
   val owners: js.Array[String] = js.native
+  /**
+    * Any tags assigned to the image.
+    * * `tags.#.key` - The key name of the tag.
+    * * `tags.#.value` - The value of the tag.
+    */
   val tags: js.UndefOr[StringDictionary[js.Any]] = js.native
 }
 
 object GetAmiArgs {
   @scala.inline
-  def apply(owners: js.Array[String]): GetAmiArgs = {
+  def apply(
+    owners: js.Array[String],
+    executableUsers: js.Array[String] = null,
+    filters: js.Array[GetAmiFilter] = null,
+    mostRecent: js.UndefOr[Boolean] = js.undefined,
+    nameRegex: String = null,
+    tags: StringDictionary[js.Any] = null
+  ): GetAmiArgs = {
     val __obj = js.Dynamic.literal(owners = owners.asInstanceOf[js.Any])
+    if (executableUsers != null) __obj.updateDynamic("executableUsers")(executableUsers.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(mostRecent)) __obj.updateDynamic("mostRecent")(mostRecent.get.asInstanceOf[js.Any])
+    if (nameRegex != null) __obj.updateDynamic("nameRegex")(nameRegex.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAmiArgs]
   }
-  @scala.inline
-  implicit class GetAmiArgsOps[Self <: GetAmiArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOwners(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecutableUsers(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executableUsers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutableUsers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executableUsers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: js.Array[GetAmiFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMostRecent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mostRecent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMostRecent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mostRecent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameRegex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRegex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

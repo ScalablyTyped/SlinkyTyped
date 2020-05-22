@@ -8,14 +8,13 @@ import typingsSlinky.node.anon.BufferFloat64ArrayBytesReadNumber
 import typingsSlinky.node.anon.BufferInt16ArrayBytesReadNumber
 import typingsSlinky.node.anon.BufferInt32ArrayBytesReadNumber
 import typingsSlinky.node.anon.BufferInt8ArrayBytesReadNumber
-import typingsSlinky.node.anon.BufferUint16Array
+import typingsSlinky.node.anon.BufferUint32ArrayBytesReadNumber
 import typingsSlinky.node.anon.BytesRead
 import typingsSlinky.node.anon.BytesReadNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-// NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
 @JSImport("graceful-fs", "read")
 @js.native
 object read extends js.Object {
@@ -227,14 +226,6 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  /**
-    * Asynchronously reads data from the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    * @param buffer The buffer that the data will be written to.
-    * @param offset The offset in the buffer at which to start writing.
-    * @param length The number of bytes to read.
-    * @param position The offset from the beginning of the file from which data should be read. If `null`, data will be read from the current position.
-    */
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -312,13 +303,13 @@ object read extends js.Object {
   @JSName("__promisify__")
   def promisify(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt8ArrayBytesReadNumber] = js.native
   @JSName("__promisify__")
-  def promisify(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[BufferUint16Array] = js.native
+  def promisify(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[BytesReadNumber] = js.native
   @JSName("__promisify__")
-  def promisify(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint16Array] = js.native
+  def promisify(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[BytesReadNumber] = js.native
   @JSName("__promisify__")
-  def promisify(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[BytesReadNumber] = js.native
+  def promisify(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[BufferUint32ArrayBytesReadNumber] = js.native
   @JSName("__promisify__")
-  def promisify(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[BytesReadNumber] = js.native
+  def promisify(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint32ArrayBytesReadNumber] = js.native
   @JSName("__promisify__")
   def promisify(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[BytesRead] = js.native
   /**

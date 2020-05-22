@@ -1,14 +1,14 @@
 package typingsSlinky.bpmnModdle.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StandardLoopCharacteristics extends BaseElement {
-  var loopCondition: Expression = js.native
-  var loopMaximum: Expression = js.native
-  var testBefore: Boolean = js.native
+  var loopCondition: Expression
+  var loopMaximum: Expression
+  var testBefore: Boolean
 }
 
 object StandardLoopCharacteristics {
@@ -19,36 +19,18 @@ object StandardLoopCharacteristics {
     id: String,
     loopCondition: Expression,
     loopMaximum: Expression,
-    testBefore: Boolean
+    testBefore: Boolean,
+    $attrs: StringDictionary[js.Any] = null,
+    documentation: js.Array[Documentation] = null,
+    extensionDefinitions: js.Array[ExtensionDefinition] = null,
+    extensionElements: ExtensionElements = null
   ): StandardLoopCharacteristics = {
     val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loopCondition = loopCondition.asInstanceOf[js.Any], loopMaximum = loopMaximum.asInstanceOf[js.Any], testBefore = testBefore.asInstanceOf[js.Any])
+    if ($attrs != null) __obj.updateDynamic("$attrs")($attrs.asInstanceOf[js.Any])
+    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
+    if (extensionDefinitions != null) __obj.updateDynamic("extensionDefinitions")(extensionDefinitions.asInstanceOf[js.Any])
+    if (extensionElements != null) __obj.updateDynamic("extensionElements")(extensionElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardLoopCharacteristics]
   }
-  @scala.inline
-  implicit class StandardLoopCharacteristicsOps[Self <: StandardLoopCharacteristics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoopCondition(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loopCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoopMaximum(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loopMaximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTestBefore(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

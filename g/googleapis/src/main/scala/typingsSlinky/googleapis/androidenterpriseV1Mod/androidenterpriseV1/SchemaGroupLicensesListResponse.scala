@@ -22,41 +22,11 @@ trait SchemaGroupLicensesListResponse extends js.Object {
 
 object SchemaGroupLicensesListResponse {
   @scala.inline
-  def apply(): SchemaGroupLicensesListResponse = {
+  def apply(groupLicense: js.Array[SchemaGroupLicense] = null, kind: String = null): SchemaGroupLicensesListResponse = {
     val __obj = js.Dynamic.literal()
+    if (groupLicense != null) __obj.updateDynamic("groupLicense")(groupLicense.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGroupLicensesListResponse]
   }
-  @scala.inline
-  implicit class SchemaGroupLicensesListResponseOps[Self <: SchemaGroupLicensesListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupLicense(value: js.Array[SchemaGroupLicense]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupLicense")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupLicense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupLicense")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

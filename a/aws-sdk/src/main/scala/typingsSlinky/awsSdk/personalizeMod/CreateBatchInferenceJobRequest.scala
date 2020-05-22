@@ -39,60 +39,12 @@ object CreateBatchInferenceJobRequest {
     jobName: Name,
     jobOutput: BatchInferenceJobOutput,
     roleArn: RoleArn,
-    solutionVersionArn: Arn
+    solutionVersionArn: Arn,
+    numResults: js.UndefOr[NumBatchResults] = js.undefined
   ): CreateBatchInferenceJobRequest = {
     val __obj = js.Dynamic.literal(jobInput = jobInput.asInstanceOf[js.Any], jobName = jobName.asInstanceOf[js.Any], jobOutput = jobOutput.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any], solutionVersionArn = solutionVersionArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(numResults)) __obj.updateDynamic("numResults")(numResults.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBatchInferenceJobRequest]
   }
-  @scala.inline
-  implicit class CreateBatchInferenceJobRequestOps[Self <: CreateBatchInferenceJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobInput(value: BatchInferenceJobInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobOutput(value: BatchInferenceJobOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSolutionVersionArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionVersionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumResults(value: NumBatchResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,65 +15,13 @@ trait PartialClassNameMapListCl extends js.Object {
 
 object PartialClassNameMapListCl {
   @scala.inline
-  def apply(): PartialClassNameMapListCl = {
+  def apply(dense: String = null, padding: String = null, root: String = null, subheader: String = null): PartialClassNameMapListCl = {
     val __obj = js.Dynamic.literal()
+    if (dense != null) __obj.updateDynamic("dense")(dense.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (subheader != null) __obj.updateDynamic("subheader")(subheader.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapListCl]
   }
-  @scala.inline
-  implicit class PartialClassNameMapListClOps[Self <: PartialClassNameMapListCl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDense(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dense")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dense")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubheader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubheader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

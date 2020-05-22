@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PageableState extends js.Object {
-  var currentPage: js.UndefOr[Double] = js.native
-  var firstPage: js.UndefOr[Double] = js.native
-  var lastPage: js.UndefOr[Double] = js.native
-  var order: js.UndefOr[Double] = js.native
-  var pageSize: js.UndefOr[Double] = js.native
-  var sortKey: js.UndefOr[String] = js.native
-  var totalPages: js.UndefOr[Double] = js.native
-  var totalRecords: js.UndefOr[Double] = js.native
+  var currentPage: js.UndefOr[Double] = js.undefined
+  var firstPage: js.UndefOr[Double] = js.undefined
+  var lastPage: js.UndefOr[Double] = js.undefined
+  var order: js.UndefOr[Double] = js.undefined
+  var pageSize: js.UndefOr[Double] = js.undefined
+  var sortKey: js.UndefOr[String] = js.undefined
+  var totalPages: js.UndefOr[Double] = js.undefined
+  var totalRecords: js.UndefOr[Double] = js.undefined
 }
 
 object PageableState {
   @scala.inline
-  def apply(): PageableState = {
+  def apply(
+    currentPage: js.UndefOr[Double] = js.undefined,
+    firstPage: js.UndefOr[Double] = js.undefined,
+    lastPage: js.UndefOr[Double] = js.undefined,
+    order: js.UndefOr[Double] = js.undefined,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    sortKey: String = null,
+    totalPages: js.UndefOr[Double] = js.undefined,
+    totalRecords: js.UndefOr[Double] = js.undefined
+  ): PageableState = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(currentPage)) __obj.updateDynamic("currentPage")(currentPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstPage)) __obj.updateDynamic("firstPage")(firstPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lastPage)) __obj.updateDynamic("lastPage")(lastPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(order)) __obj.updateDynamic("order")(order.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (sortKey != null) __obj.updateDynamic("sortKey")(sortKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalPages)) __obj.updateDynamic("totalPages")(totalPages.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalRecords)) __obj.updateDynamic("totalRecords")(totalRecords.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageableState]
   }
-  @scala.inline
-  implicit class PageableStateOps[Self <: PageableState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalPages(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalPages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalRecords(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRecords")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

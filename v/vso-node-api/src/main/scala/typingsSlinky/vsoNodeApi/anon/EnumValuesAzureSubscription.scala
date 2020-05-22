@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EnumValuesAzureSubscription extends js.Object {
-  var enumValues: AzureSubscription = js.native
+  var enumValues: AzureSubscription
 }
 
 object EnumValuesAzureSubscription {
@@ -15,19 +14,5 @@ object EnumValuesAzureSubscription {
     val __obj = js.Dynamic.literal(enumValues = enumValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnumValuesAzureSubscription]
   }
-  @scala.inline
-  implicit class EnumValuesAzureSubscriptionOps[Self <: EnumValuesAzureSubscription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnumValues(value: AzureSubscription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enumValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

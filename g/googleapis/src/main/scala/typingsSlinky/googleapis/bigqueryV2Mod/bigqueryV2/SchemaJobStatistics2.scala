@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.bigqueryV2Mod.bigqueryV2
 
-import typingsSlinky.googleapis.AnonNameSlotMs
+import typingsSlinky.googleapis.anon.NameSlotMs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -69,7 +69,7 @@ trait SchemaJobStatistics2 extends js.Object {
   /**
     * [Output-only] Job resource usage breakdown by reservation.
     */
-  var reservationUsage: js.UndefOr[js.Array[AnonNameSlotMs]] = js.native
+  var reservationUsage: js.UndefOr[js.Array[NameSlotMs]] = js.native
   /**
     * [Output-only] The schema of the results. Present only for successful dry
     * run of non-legacy SQL queries.
@@ -134,281 +134,54 @@ trait SchemaJobStatistics2 extends js.Object {
 
 object SchemaJobStatistics2 {
   @scala.inline
-  def apply(): SchemaJobStatistics2 = {
+  def apply(
+    billingTier: js.UndefOr[Double] = js.undefined,
+    cacheHit: js.UndefOr[Boolean] = js.undefined,
+    ddlOperationPerformed: String = null,
+    ddlTargetRoutine: SchemaRoutineReference = null,
+    ddlTargetTable: SchemaTableReference = null,
+    estimatedBytesProcessed: String = null,
+    modelTraining: SchemaBigQueryModelTraining = null,
+    modelTrainingCurrentIteration: js.UndefOr[Double] = js.undefined,
+    modelTrainingExpectedTotalIteration: String = null,
+    numDmlAffectedRows: String = null,
+    queryPlan: js.Array[SchemaExplainQueryStage] = null,
+    referencedTables: js.Array[SchemaTableReference] = null,
+    reservationUsage: js.Array[NameSlotMs] = null,
+    schema: SchemaTableSchema = null,
+    statementType: String = null,
+    timeline: js.Array[SchemaQueryTimelineSample] = null,
+    totalBytesBilled: String = null,
+    totalBytesProcessed: String = null,
+    totalBytesProcessedAccuracy: String = null,
+    totalPartitionsProcessed: String = null,
+    totalSlotMs: String = null,
+    undeclaredQueryParameters: js.Array[SchemaQueryParameter] = null
+  ): SchemaJobStatistics2 = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(billingTier)) __obj.updateDynamic("billingTier")(billingTier.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheHit)) __obj.updateDynamic("cacheHit")(cacheHit.get.asInstanceOf[js.Any])
+    if (ddlOperationPerformed != null) __obj.updateDynamic("ddlOperationPerformed")(ddlOperationPerformed.asInstanceOf[js.Any])
+    if (ddlTargetRoutine != null) __obj.updateDynamic("ddlTargetRoutine")(ddlTargetRoutine.asInstanceOf[js.Any])
+    if (ddlTargetTable != null) __obj.updateDynamic("ddlTargetTable")(ddlTargetTable.asInstanceOf[js.Any])
+    if (estimatedBytesProcessed != null) __obj.updateDynamic("estimatedBytesProcessed")(estimatedBytesProcessed.asInstanceOf[js.Any])
+    if (modelTraining != null) __obj.updateDynamic("modelTraining")(modelTraining.asInstanceOf[js.Any])
+    if (!js.isUndefined(modelTrainingCurrentIteration)) __obj.updateDynamic("modelTrainingCurrentIteration")(modelTrainingCurrentIteration.get.asInstanceOf[js.Any])
+    if (modelTrainingExpectedTotalIteration != null) __obj.updateDynamic("modelTrainingExpectedTotalIteration")(modelTrainingExpectedTotalIteration.asInstanceOf[js.Any])
+    if (numDmlAffectedRows != null) __obj.updateDynamic("numDmlAffectedRows")(numDmlAffectedRows.asInstanceOf[js.Any])
+    if (queryPlan != null) __obj.updateDynamic("queryPlan")(queryPlan.asInstanceOf[js.Any])
+    if (referencedTables != null) __obj.updateDynamic("referencedTables")(referencedTables.asInstanceOf[js.Any])
+    if (reservationUsage != null) __obj.updateDynamic("reservationUsage")(reservationUsage.asInstanceOf[js.Any])
+    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
+    if (statementType != null) __obj.updateDynamic("statementType")(statementType.asInstanceOf[js.Any])
+    if (timeline != null) __obj.updateDynamic("timeline")(timeline.asInstanceOf[js.Any])
+    if (totalBytesBilled != null) __obj.updateDynamic("totalBytesBilled")(totalBytesBilled.asInstanceOf[js.Any])
+    if (totalBytesProcessed != null) __obj.updateDynamic("totalBytesProcessed")(totalBytesProcessed.asInstanceOf[js.Any])
+    if (totalBytesProcessedAccuracy != null) __obj.updateDynamic("totalBytesProcessedAccuracy")(totalBytesProcessedAccuracy.asInstanceOf[js.Any])
+    if (totalPartitionsProcessed != null) __obj.updateDynamic("totalPartitionsProcessed")(totalPartitionsProcessed.asInstanceOf[js.Any])
+    if (totalSlotMs != null) __obj.updateDynamic("totalSlotMs")(totalSlotMs.asInstanceOf[js.Any])
+    if (undeclaredQueryParameters != null) __obj.updateDynamic("undeclaredQueryParameters")(undeclaredQueryParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobStatistics2]
   }
-  @scala.inline
-  implicit class SchemaJobStatistics2Ops[Self <: SchemaJobStatistics2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBillingTier(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingTier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingTier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheHit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheHit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheHit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheHit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDdlOperationPerformed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddlOperationPerformed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDdlOperationPerformed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddlOperationPerformed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDdlTargetRoutine(value: SchemaRoutineReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddlTargetRoutine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDdlTargetRoutine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddlTargetRoutine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDdlTargetTable(value: SchemaTableReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddlTargetTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDdlTargetTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddlTargetTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedBytesProcessed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedBytesProcessed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedBytesProcessed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedBytesProcessed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelTraining(value: SchemaBigQueryModelTraining): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTraining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelTraining: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTraining")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelTrainingCurrentIteration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTrainingCurrentIteration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelTrainingCurrentIteration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTrainingCurrentIteration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelTrainingExpectedTotalIteration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTrainingExpectedTotalIteration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelTrainingExpectedTotalIteration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTrainingExpectedTotalIteration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumDmlAffectedRows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numDmlAffectedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumDmlAffectedRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numDmlAffectedRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryPlan(value: js.Array[SchemaExplainQueryStage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPlan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryPlan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPlan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferencedTables(value: js.Array[SchemaTableReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referencedTables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferencedTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referencedTables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservationUsage(value: js.Array[AnonNameSlotMs]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservationUsage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservationUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservationUsage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchema(value: SchemaTableSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatementType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statementType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatementType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statementType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeline(value: js.Array[SchemaQueryTimelineSample]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalBytesBilled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesBilled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalBytesBilled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesBilled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalBytesProcessed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesProcessed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalBytesProcessed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesProcessed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalBytesProcessedAccuracy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesProcessedAccuracy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalBytesProcessedAccuracy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesProcessedAccuracy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalPartitionsProcessed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPartitionsProcessed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalPartitionsProcessed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPartitionsProcessed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalSlotMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSlotMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalSlotMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSlotMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUndeclaredQueryParameters(value: js.Array[SchemaQueryParameter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undeclaredQueryParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUndeclaredQueryParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undeclaredQueryParameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

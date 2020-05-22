@@ -16,6 +16,20 @@ class Shader ()
   extends typingsSlinky.pixiJs.PIXI.Shader {
   def this(program: typingsSlinky.pixiJs.PIXI.Program) = this()
   def this(program: typingsSlinky.pixiJs.PIXI.Program, uniforms: js.Any) = this()
+  /**
+    * Program that the shader uses
+    *
+    * @member {PIXI.Program} PIXI.Shader#program
+    */
+  /* CompleteClass */
+  override var program: typingsSlinky.pixiJs.PIXI.Program = js.native
+  /**
+    * Shader uniform values, shortcut for `uniformGroup.uniforms`
+    * @readonly
+    * @member {object}
+    */
+  /* CompleteClass */
+  override val uniforms: js.Any = js.native
 }
 
 /* static members */

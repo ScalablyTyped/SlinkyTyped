@@ -27,10 +27,17 @@ object getBucketTaggingCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetBucketTaggingInput) = this()
+    /* CompleteClass */
+    override val input: GetBucketTaggingInput = js.native
     val middlewareStack: MiddlewareStack[GetBucketTaggingInput, GetBucketTaggingOutput, Readable] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[GetBucketTaggingInput, GetBucketTaggingOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[GetBucketTaggingInput, GetBucketTaggingOutput] = js.native
   }

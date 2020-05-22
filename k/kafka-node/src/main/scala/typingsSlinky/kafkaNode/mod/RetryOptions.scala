@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RetryOptions extends js.Object {
-  var factor: js.UndefOr[Double] = js.native
-  var maxTimeout: js.UndefOr[Double] = js.native
-  var minTimeout: js.UndefOr[Double] = js.native
-  var randomize: js.UndefOr[Boolean] = js.native
-  var retries: js.UndefOr[Double] = js.native
+  var factor: js.UndefOr[Double] = js.undefined
+  var maxTimeout: js.UndefOr[Double] = js.undefined
+  var minTimeout: js.UndefOr[Double] = js.undefined
+  var randomize: js.UndefOr[Boolean] = js.undefined
+  var retries: js.UndefOr[Double] = js.undefined
 }
 
 object RetryOptions {
   @scala.inline
-  def apply(): RetryOptions = {
+  def apply(
+    factor: js.UndefOr[Double] = js.undefined,
+    maxTimeout: js.UndefOr[Double] = js.undefined,
+    minTimeout: js.UndefOr[Double] = js.undefined,
+    randomize: js.UndefOr[Boolean] = js.undefined,
+    retries: js.UndefOr[Double] = js.undefined
+  ): RetryOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(factor)) __obj.updateDynamic("factor")(factor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxTimeout)) __obj.updateDynamic("maxTimeout")(maxTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minTimeout)) __obj.updateDynamic("minTimeout")(minTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(randomize)) __obj.updateDynamic("randomize")(randomize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retries)) __obj.updateDynamic("retries")(retries.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RetryOptions]
   }
-  @scala.inline
-  implicit class RetryOptionsOps[Self <: RetryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRandomize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("randomize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRandomize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("randomize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

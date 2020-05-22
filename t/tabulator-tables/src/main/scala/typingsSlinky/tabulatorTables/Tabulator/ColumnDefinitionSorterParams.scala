@@ -11,75 +11,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnDefinitionSorterParams extends js.Object {
-  var alignEmptyValues: js.UndefOr[top | bottom] = js.native
-  var format: js.UndefOr[String] = js.native
-  var locale: js.UndefOr[String | Boolean] = js.native
-  var `type`: js.UndefOr[length | sum | max | min | avg] = js.native
+  var alignEmptyValues: js.UndefOr[top | bottom] = js.undefined
+  var format: js.UndefOr[String] = js.undefined
+  var locale: js.UndefOr[String | Boolean] = js.undefined
+  var `type`: js.UndefOr[length | sum | max | min | avg] = js.undefined
 }
 
 object ColumnDefinitionSorterParams {
   @scala.inline
-  def apply(): ColumnDefinitionSorterParams = {
+  def apply(
+    alignEmptyValues: top | bottom = null,
+    format: String = null,
+    locale: String | Boolean = null,
+    `type`: length | sum | max | min | avg = null
+  ): ColumnDefinitionSorterParams = {
     val __obj = js.Dynamic.literal()
+    if (alignEmptyValues != null) __obj.updateDynamic("alignEmptyValues")(alignEmptyValues.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnDefinitionSorterParams]
   }
-  @scala.inline
-  implicit class ColumnDefinitionSorterParamsOps[Self <: ColumnDefinitionSorterParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignEmptyValues(value: top | bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignEmptyValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignEmptyValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignEmptyValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: length | sum | max | min | avg): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

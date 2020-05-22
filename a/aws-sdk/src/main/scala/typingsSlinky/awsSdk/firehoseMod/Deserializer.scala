@@ -18,41 +18,11 @@ trait Deserializer extends js.Object {
 
 object Deserializer {
   @scala.inline
-  def apply(): Deserializer = {
+  def apply(HiveJsonSerDe: HiveJsonSerDe = null, OpenXJsonSerDe: OpenXJsonSerDe = null): Deserializer = {
     val __obj = js.Dynamic.literal()
+    if (HiveJsonSerDe != null) __obj.updateDynamic("HiveJsonSerDe")(HiveJsonSerDe.asInstanceOf[js.Any])
+    if (OpenXJsonSerDe != null) __obj.updateDynamic("OpenXJsonSerDe")(OpenXJsonSerDe.asInstanceOf[js.Any])
     __obj.asInstanceOf[Deserializer]
   }
-  @scala.inline
-  implicit class DeserializerOps[Self <: Deserializer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHiveJsonSerDe(value: HiveJsonSerDe): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HiveJsonSerDe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiveJsonSerDe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HiveJsonSerDe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenXJsonSerDe(value: OpenXJsonSerDe): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenXJsonSerDe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenXJsonSerDe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenXJsonSerDe")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

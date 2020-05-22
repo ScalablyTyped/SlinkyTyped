@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventBridgeEvent[TDetailType /* <: String */, TDetail] extends js.Object {
-  var account: String = js.native
-  var detail: TDetail = js.native
-  var `detail-type`: TDetailType = js.native
-  var id: String = js.native
-  var region: String = js.native
-  var resources: js.Array[String] = js.native
-  var source: String = js.native
-  var time: String = js.native
-  var version: String = js.native
+  var account: String
+  var detail: TDetail
+  var `detail-type`: TDetailType
+  var id: String
+  var region: String
+  var resources: js.Array[String]
+  var source: String
+  var time: String
+  var version: String
 }
 
 object EventBridgeEvent {
@@ -34,67 +33,5 @@ object EventBridgeEvent {
     __obj.updateDynamic("detail-type")(`detail-type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventBridgeEvent[TDetailType, TDetail]]
   }
-  @scala.inline
-  implicit class EventBridgeEventOps[Self[tdetailtype, tdetail] <: EventBridgeEvent[tdetailtype, tdetail], TDetailType, TDetail] (val x: Self[TDetailType, TDetail]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TDetailType, TDetail] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TDetailType, TDetail]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[TDetailType, TDetail]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TDetailType, TDetail]) with Other]
-    @scala.inline
-    def withAccount(value: String): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetail(value: TDetail): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDetail-type`(value: TDetailType): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResources(value: js.Array[String]): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTime(value: String): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self[TDetailType, TDetail] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

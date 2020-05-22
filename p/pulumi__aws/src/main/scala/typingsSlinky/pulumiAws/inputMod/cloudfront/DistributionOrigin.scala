@@ -44,77 +44,20 @@ trait DistributionOrigin extends js.Object {
 
 object DistributionOrigin {
   @scala.inline
-  def apply(domainName: Input[String], originId: Input[String]): DistributionOrigin = {
+  def apply(
+    domainName: Input[String],
+    originId: Input[String],
+    customHeaders: Input[js.Array[Input[DistributionOriginCustomHeader]]] = null,
+    customOriginConfig: Input[DistributionOriginCustomOriginConfig] = null,
+    originPath: Input[String] = null,
+    s3OriginConfig: Input[DistributionOriginS3OriginConfig] = null
+  ): DistributionOrigin = {
     val __obj = js.Dynamic.literal(domainName = domainName.asInstanceOf[js.Any], originId = originId.asInstanceOf[js.Any])
+    if (customHeaders != null) __obj.updateDynamic("customHeaders")(customHeaders.asInstanceOf[js.Any])
+    if (customOriginConfig != null) __obj.updateDynamic("customOriginConfig")(customOriginConfig.asInstanceOf[js.Any])
+    if (originPath != null) __obj.updateDynamic("originPath")(originPath.asInstanceOf[js.Any])
+    if (s3OriginConfig != null) __obj.updateDynamic("s3OriginConfig")(s3OriginConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionOrigin]
   }
-  @scala.inline
-  implicit class DistributionOriginOps[Self <: DistributionOrigin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOriginId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomHeaders(value: Input[js.Array[Input[DistributionOriginCustomHeader]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomOriginConfig(value: Input[DistributionOriginCustomOriginConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customOriginConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomOriginConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customOriginConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginPath(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3OriginConfig(value: Input[DistributionOriginS3OriginConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3OriginConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3OriginConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3OriginConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

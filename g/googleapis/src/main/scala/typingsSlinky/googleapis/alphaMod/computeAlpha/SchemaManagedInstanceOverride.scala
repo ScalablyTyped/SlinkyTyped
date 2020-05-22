@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.alphaMod.computeAlpha
 
-import typingsSlinky.googleapis.AnonKey
+import typingsSlinky.googleapis.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait SchemaManagedInstanceOverride extends js.Object {
     * Metadata overrides defined for this instance. TODO(b/69785416) validate
     * the total length is &lt;9 KB
     */
-  var metadata: js.UndefOr[js.Array[AnonKey]] = js.native
+  var metadata: js.UndefOr[js.Array[Key]] = js.native
   /**
     * [Output Only] Indicates where does the override come from.
     */
@@ -30,53 +30,16 @@ trait SchemaManagedInstanceOverride extends js.Object {
 
 object SchemaManagedInstanceOverride {
   @scala.inline
-  def apply(): SchemaManagedInstanceOverride = {
+  def apply(
+    disks: js.Array[SchemaManagedInstanceOverrideDiskOverride] = null,
+    metadata: js.Array[Key] = null,
+    origin: String = null
+  ): SchemaManagedInstanceOverride = {
     val __obj = js.Dynamic.literal()
+    if (disks != null) __obj.updateDynamic("disks")(disks.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedInstanceOverride]
   }
-  @scala.inline
-  implicit class SchemaManagedInstanceOverrideOps[Self <: SchemaManagedInstanceOverride] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisks(value: js.Array[SchemaManagedInstanceOverrideDiskOverride]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: js.Array[AnonKey]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,52 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnimationGroupMetadata extends AnimationMetadata {
   /**
     * An options object containing a delay and
     * developer-defined parameters that provide styling defaults and
     * can be overridden on invocation. Default delay is 0.
     */
-  var options: AnimationOptions | Null = js.native
+  var options: AnimationOptions | Null
   /**
     * One or more animation or style steps that form this group.
     */
-  var steps: js.Array[AnimationMetadata] = js.native
+  var steps: js.Array[AnimationMetadata]
 }
 
 object AnimationGroupMetadata {
   @scala.inline
-  def apply(steps: js.Array[AnimationMetadata], `type`: AnimationMetadataType): AnimationGroupMetadata = {
-    val __obj = js.Dynamic.literal(steps = steps.asInstanceOf[js.Any])
+  def apply(
+    steps: js.Array[AnimationMetadata],
+    `type`: AnimationMetadataType,
+    options: AnimationOptions = null
+  ): AnimationGroupMetadata = {
+    val __obj = js.Dynamic.literal(steps = steps.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationGroupMetadata]
   }
-  @scala.inline
-  implicit class AnimationGroupMetadataOps[Self <: AnimationGroupMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSteps(value: js.Array[AnimationMetadata]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptions(value: AnimationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(null)
-        ret
-    }
-  }
-  
 }
 

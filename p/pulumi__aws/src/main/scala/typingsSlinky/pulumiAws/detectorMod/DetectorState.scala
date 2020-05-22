@@ -23,53 +23,16 @@ trait DetectorState extends js.Object {
 
 object DetectorState {
   @scala.inline
-  def apply(): DetectorState = {
+  def apply(
+    accountId: Input[String] = null,
+    enable: Input[Boolean] = null,
+    findingPublishingFrequency: Input[String] = null
+  ): DetectorState = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (enable != null) __obj.updateDynamic("enable")(enable.asInstanceOf[js.Any])
+    if (findingPublishingFrequency != null) __obj.updateDynamic("findingPublishingFrequency")(findingPublishingFrequency.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectorState]
   }
-  @scala.inline
-  implicit class DetectorStateOps[Self <: DetectorState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnable(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFindingPublishingFrequency(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingPublishingFrequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindingPublishingFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingPublishingFrequency")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

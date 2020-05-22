@@ -34,71 +34,19 @@ trait HostedZone extends js.Object {
 
 object HostedZone {
   @scala.inline
-  def apply(CallerReference: Nonce, Id: ResourceId, Name: DNSName): HostedZone = {
+  def apply(
+    CallerReference: Nonce,
+    Id: ResourceId,
+    Name: DNSName,
+    Config: HostedZoneConfig = null,
+    LinkedService: LinkedService = null,
+    ResourceRecordSetCount: js.UndefOr[HostedZoneRRSetCount] = js.undefined
+  ): HostedZone = {
     val __obj = js.Dynamic.literal(CallerReference = CallerReference.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (Config != null) __obj.updateDynamic("Config")(Config.asInstanceOf[js.Any])
+    if (LinkedService != null) __obj.updateDynamic("LinkedService")(LinkedService.asInstanceOf[js.Any])
+    if (!js.isUndefined(ResourceRecordSetCount)) __obj.updateDynamic("ResourceRecordSetCount")(ResourceRecordSetCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostedZone]
   }
-  @scala.inline
-  implicit class HostedZoneOps[Self <: HostedZone] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerReference(value: Nonce): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: DNSName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfig(value: HostedZoneConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkedService(value: LinkedService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkedService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceRecordSetCount(value: HostedZoneRRSetCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRecordSetCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceRecordSetCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRecordSetCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.BarometerReading")
 @js.native
 abstract class BarometerReading ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.BarometerReading
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.BarometerReading {
+  /** Gets the barometric pressure determined by the barometer sensor. */
+  /* CompleteClass */
+  override var stationPressureInHectopascals: Double = js.native
+  /** Gets the time for the most recent barometer reading. */
+  /* CompleteClass */
+  override var timestamp: js.Date = js.native
+}
 

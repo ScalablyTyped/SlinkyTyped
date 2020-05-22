@@ -67,125 +67,50 @@ trait ParamsResourcePeopleConnectionsList extends StandardParameters {
 
 object ParamsResourcePeopleConnectionsList {
   @scala.inline
-  def apply(): ParamsResourcePeopleConnectionsList = {
+  def apply(
+    $Dotxgafv: String = null,
+    access_token: String = null,
+    alt: String = null,
+    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
+    callback: String = null,
+    fields: String = null,
+    key: String = null,
+    oauth_token: String = null,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    pageToken: String = null,
+    personFields: String = null,
+    prettyPrint: js.UndefOr[Boolean] = js.undefined,
+    quotaUser: String = null,
+    requestMaskDotincludeField: String = null,
+    requestSyncToken: js.UndefOr[Boolean] = js.undefined,
+    resourceName: String = null,
+    sortOrder: String = null,
+    syncToken: String = null,
+    uploadType: String = null,
+    upload_protocol: String = null
+  ): ParamsResourcePeopleConnectionsList = {
     val __obj = js.Dynamic.literal()
+    if ($Dotxgafv != null) __obj.updateDynamic("$.xgafv")($Dotxgafv.asInstanceOf[js.Any])
+    if (access_token != null) __obj.updateDynamic("access_token")(access_token.asInstanceOf[js.Any])
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (callback != null) __obj.updateDynamic("callback")(callback.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (personFields != null) __obj.updateDynamic("personFields")(personFields.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.get.asInstanceOf[js.Any])
+    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
+    if (requestMaskDotincludeField != null) __obj.updateDynamic("requestMask.includeField")(requestMaskDotincludeField.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestSyncToken)) __obj.updateDynamic("requestSyncToken")(requestSyncToken.get.asInstanceOf[js.Any])
+    if (resourceName != null) __obj.updateDynamic("resourceName")(resourceName.asInstanceOf[js.Any])
+    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
+    if (syncToken != null) __obj.updateDynamic("syncToken")(syncToken.asInstanceOf[js.Any])
+    if (uploadType != null) __obj.updateDynamic("uploadType")(uploadType.asInstanceOf[js.Any])
+    if (upload_protocol != null) __obj.updateDynamic("upload_protocol")(upload_protocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourcePeopleConnectionsList]
   }
-  @scala.inline
-  implicit class ParamsResourcePeopleConnectionsListOps[Self <: ParamsResourcePeopleConnectionsList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersonFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersonFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestMaskDotincludeField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMask.includeField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestMaskDotincludeField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMask.includeField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestSyncToken(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestSyncToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestSyncToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestSyncToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortOrder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

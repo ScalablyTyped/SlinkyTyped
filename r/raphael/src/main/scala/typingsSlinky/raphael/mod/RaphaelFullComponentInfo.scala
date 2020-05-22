@@ -6,20 +6,19 @@ import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.raphael.mod.RaphaelHslComponentInfo because var conflicts: h, s. Inlined l
-- typingsSlinky.raphael.mod.RaphaelHsbComponentInfo because var conflicts: b. Inlined h, s */ @js.native
-trait RaphaelFullComponentInfo extends RaphaelRgbComponentInfo {
+- typingsSlinky.raphael.mod.RaphaelHsbComponentInfo because var conflicts: b. Inlined h, s */ trait RaphaelFullComponentInfo extends RaphaelRgbComponentInfo {
   /**
     * The HSB or HSL hue channel.
     */
-  var h: Double = js.native
+  var h: Double
   /**
     * The HSL luminosity channel.
     */
-  var l: Double = js.native
+  var l: Double
   /**
     * The HSB or HSL saturation channel.
     */
-  var s: Double = js.native
+  var s: Double
 }
 
 object RaphaelFullComponentInfo {
@@ -28,31 +27,5 @@ object RaphaelFullComponentInfo {
     val __obj = js.Dynamic.literal(b = b.asInstanceOf[js.Any], g = g.asInstanceOf[js.Any], h = h.asInstanceOf[js.Any], hex = hex.asInstanceOf[js.Any], l = l.asInstanceOf[js.Any], r = r.asInstanceOf[js.Any], s = s.asInstanceOf[js.Any])
     __obj.asInstanceOf[RaphaelFullComponentInfo]
   }
-  @scala.inline
-  implicit class RaphaelFullComponentInfoOps[Self <: RaphaelFullComponentInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withH(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withL(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

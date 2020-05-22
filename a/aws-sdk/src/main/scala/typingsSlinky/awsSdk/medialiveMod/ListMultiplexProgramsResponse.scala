@@ -18,41 +18,11 @@ trait ListMultiplexProgramsResponse extends js.Object {
 
 object ListMultiplexProgramsResponse {
   @scala.inline
-  def apply(): ListMultiplexProgramsResponse = {
+  def apply(MultiplexPrograms: listOfMultiplexProgramSummary = null, NextToken: string = null): ListMultiplexProgramsResponse = {
     val __obj = js.Dynamic.literal()
+    if (MultiplexPrograms != null) __obj.updateDynamic("MultiplexPrograms")(MultiplexPrograms.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListMultiplexProgramsResponse]
   }
-  @scala.inline
-  implicit class ListMultiplexProgramsResponseOps[Self <: ListMultiplexProgramsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMultiplexPrograms(value: listOfMultiplexProgramSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiplexPrograms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiplexPrograms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiplexPrograms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

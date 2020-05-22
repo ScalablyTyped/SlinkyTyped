@@ -6,17 +6,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KeepWithinBounds extends js.Object {
-  var column: typingsSlinky.agGrid.columnMod.Column = js.native
-  var ePopup: HTMLElement = js.native
-  var eventSource: HTMLElement = js.native
-  var keepWithinBounds: js.UndefOr[Boolean] = js.native
-  var minWidth: js.UndefOr[Double] = js.native
-  var nudgeX: js.UndefOr[Double] = js.native
-  var nudgeY: js.UndefOr[Double] = js.native
-  var rowNode: RowNode = js.native
-  var `type`: String = js.native
+  var column: typingsSlinky.agGrid.columnMod.Column
+  var ePopup: HTMLElement
+  var eventSource: HTMLElement
+  var keepWithinBounds: js.UndefOr[Boolean] = js.undefined
+  var minWidth: js.UndefOr[Double] = js.undefined
+  var nudgeX: js.UndefOr[Double] = js.undefined
+  var nudgeY: js.UndefOr[Double] = js.undefined
+  var rowNode: RowNode
+  var `type`: String
 }
 
 object KeepWithinBounds {
@@ -26,97 +25,19 @@ object KeepWithinBounds {
     ePopup: HTMLElement,
     eventSource: HTMLElement,
     rowNode: RowNode,
-    `type`: String
+    `type`: String,
+    keepWithinBounds: js.UndefOr[Boolean] = js.undefined,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    nudgeX: js.UndefOr[Double] = js.undefined,
+    nudgeY: js.UndefOr[Double] = js.undefined
   ): KeepWithinBounds = {
     val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], ePopup = ePopup.asInstanceOf[js.Any], eventSource = eventSource.asInstanceOf[js.Any], rowNode = rowNode.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepWithinBounds)) __obj.updateDynamic("keepWithinBounds")(keepWithinBounds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nudgeX)) __obj.updateDynamic("nudgeX")(nudgeX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nudgeY)) __obj.updateDynamic("nudgeY")(nudgeY.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeepWithinBounds]
   }
-  @scala.inline
-  implicit class KeepWithinBoundsOps[Self <: KeepWithinBounds] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: typingsSlinky.agGrid.columnMod.Column): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEPopup(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ePopup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventSource(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowNode(value: RowNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeepWithinBounds(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepWithinBounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepWithinBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepWithinBounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNudgeX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNudgeX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNudgeY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNudgeY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeY")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

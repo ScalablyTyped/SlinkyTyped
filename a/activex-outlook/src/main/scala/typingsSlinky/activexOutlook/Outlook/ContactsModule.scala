@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContactsModule extends js.Object {
-  val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native
-  val Class: OlObjectClass = js.native
-  val Name: String = js.native
-  val NavigationGroups: typingsSlinky.activexOutlook.Outlook.NavigationGroups = js.native
-  val NavigationModuleType: OlNavigationModuleType = js.native
+  val Application: typingsSlinky.activexOutlook.Outlook.Application
+  val Class: OlObjectClass
+  val Name: String
+  val NavigationGroups: typingsSlinky.activexOutlook.Outlook.NavigationGroups
+  val NavigationModuleType: OlNavigationModuleType
   @JSName("Outlook.ContactsModule_typekey")
-  var OutlookDotContactsModule_typekey: ContactsModule = js.native
-  val Parent: js.Any = js.native
-  var Position: Double = js.native
-  val Session: NameSpace = js.native
-  var Visible: Boolean = js.native
+  var OutlookDotContactsModule_typekey: ContactsModule
+  val Parent: js.Any
+  var Position: Double
+  val Session: NameSpace
+  var Visible: Boolean
 }
 
 object ContactsModule {
@@ -37,73 +36,5 @@ object ContactsModule {
     __obj.updateDynamic("Outlook.ContactsModule_typekey")(OutlookDotContactsModule_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContactsModule]
   }
-  @scala.inline
-  implicit class ContactsModuleOps[Self <: ContactsModule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClass(value: OlObjectClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavigationGroups(value: NavigationGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NavigationGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavigationModuleType(value: OlNavigationModuleType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NavigationModuleType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotContactsModule_typekey(value: ContactsModule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.ContactsModule_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSession(value: NameSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

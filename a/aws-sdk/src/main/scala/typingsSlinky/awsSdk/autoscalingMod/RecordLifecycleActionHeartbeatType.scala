@@ -26,53 +26,16 @@ trait RecordLifecycleActionHeartbeatType extends js.Object {
 
 object RecordLifecycleActionHeartbeatType {
   @scala.inline
-  def apply(AutoScalingGroupName: ResourceName, LifecycleHookName: AsciiStringMaxLen255): RecordLifecycleActionHeartbeatType = {
+  def apply(
+    AutoScalingGroupName: ResourceName,
+    LifecycleHookName: AsciiStringMaxLen255,
+    InstanceId: XmlStringMaxLen19 = null,
+    LifecycleActionToken: LifecycleActionToken = null
+  ): RecordLifecycleActionHeartbeatType = {
     val __obj = js.Dynamic.literal(AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any], LifecycleHookName = LifecycleHookName.asInstanceOf[js.Any])
+    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
+    if (LifecycleActionToken != null) __obj.updateDynamic("LifecycleActionToken")(LifecycleActionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordLifecycleActionHeartbeatType]
   }
-  @scala.inline
-  implicit class RecordLifecycleActionHeartbeatTypeOps[Self <: RecordLifecycleActionHeartbeatType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingGroupName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLifecycleHookName(value: AsciiStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHookName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: XmlStringMaxLen19): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycleActionToken(value: LifecycleActionToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleActionToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleActionToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleActionToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

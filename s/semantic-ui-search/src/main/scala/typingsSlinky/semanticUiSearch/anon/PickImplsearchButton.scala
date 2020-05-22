@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-search.SemanticUI.Search.SelectorSettings._Impl, 'searchButton'> */
-@js.native
 trait PickImplsearchButton extends js.Object {
-  var searchButton: String = js.native
+  var searchButton: String
 }
 
 object PickImplsearchButton {
@@ -16,19 +15,5 @@ object PickImplsearchButton {
     val __obj = js.Dynamic.literal(searchButton = searchButton.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplsearchButton]
   }
-  @scala.inline
-  implicit class PickImplsearchButtonOps[Self <: PickImplsearchButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSearchButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

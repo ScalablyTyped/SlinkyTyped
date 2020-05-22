@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChildComponentProps extends Coords {
   @JSName("$hover")
-  var $hover: js.UndefOr[Boolean] = js.native
+  var $hover: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChildComponentProps {
   @scala.inline
-  def apply(lat: Double, lng: Double): ChildComponentProps = {
+  def apply(lat: Double, lng: Double, $hover: js.UndefOr[Boolean] = js.undefined): ChildComponentProps = {
     val __obj = js.Dynamic.literal(lat = lat.asInstanceOf[js.Any], lng = lng.asInstanceOf[js.Any])
+    if (!js.isUndefined($hover)) __obj.updateDynamic("$hover")($hover.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChildComponentProps]
   }
-  @scala.inline
-  implicit class ChildComponentPropsOps[Self <: ChildComponentProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$hover(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$hover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$hover")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

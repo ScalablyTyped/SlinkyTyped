@@ -4,9 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.hapiJoi.mod.SchemaLike because Already inherited
-- typingsSlinky.hapiJoi.mod.Schema because Already inherited */ @js.native
+@js.native
 trait ObjectSchema[TSchema] extends AnySchema {
   /**
     * Defines an all-or-nothing relationship between keys where if one of the peers is present, all of them are required as well.
@@ -86,6 +84,10 @@ trait ObjectSchema[TSchema] extends AnySchema {
     * Requires the object to be a Joi reference.
     */
   def ref(): this.type = js.native
+  /**
+    * Requires the object to be a `RegExp` object.
+    */
+  def regex(): this.type = js.native
   /**
     * Renames a key to another name (deletes the renamed key).
     */

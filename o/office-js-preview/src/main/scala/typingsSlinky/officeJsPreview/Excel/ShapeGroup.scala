@@ -21,21 +21,21 @@ trait ShapeGroup extends ClientObject {
   var context_ShapeGroup: RequestContext = js.native
   /**
     *
-    * Represents the shape identifier. Read-only.
+    * Specifies the shape identifier.
     *
     * [Api set: ExcelApi 1.9]
     */
   val id: String = js.native
   /**
     *
-    * Returns the Shape object associated with the group. Read-only.
+    * Returns the Shape object associated with the group.
     *
     * [Api set: ExcelApi 1.9]
     */
   val shape: Shape = js.native
   /**
     *
-    * Returns the collection of Shape objects. Read-only.
+    * Returns the collection of Shape objects.
     *
     * [Api set: ExcelApi 1.9]
     */

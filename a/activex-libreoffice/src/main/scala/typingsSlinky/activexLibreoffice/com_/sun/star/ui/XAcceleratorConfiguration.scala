@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * @see dom.sun.star.util.XFlushable
   * @since OOo 2.0
   */
-@js.native
 trait XAcceleratorConfiguration
   extends XUIConfigurationPersistence
      with XUIConfigurationStorage
@@ -35,7 +34,7 @@ trait XAcceleratorConfiguration
     * @returns A list of key events.
     * @see getCommandForKeyEvent().
     */
-  val AllKeyEvents: SafeArray[KeyEvent] = js.native
+  val AllKeyEvents: SafeArray[KeyEvent]
   /**
     * return the list of all key events, which are available at this configuration set.
     *
@@ -45,7 +44,7 @@ trait XAcceleratorConfiguration
     * @returns A list of key events.
     * @see getCommandForKeyEvent().
     */
-  def getAllKeyEvents(): SafeArray[KeyEvent] = js.native
+  def getAllKeyEvents(): SafeArray[KeyEvent]
   /**
     * return the registered command for the specified key event.
     *
@@ -55,7 +54,7 @@ trait XAcceleratorConfiguration
     * @returns The registered command for the specified key event.
     * @throws com::sun::star::container::NoSuchElementException if the key event is an invalid one or does not exists inside this configuration set.
     */
-  def getCommandByKeyEvent(aKeyEvent: KeyEvent): String = js.native
+  def getCommandByKeyEvent(aKeyEvent: KeyEvent): String
   /**
     * optimized access to the relation "command-key" instead of "key-command" which is provided normally by this interface.
     *
@@ -66,7 +65,7 @@ trait XAcceleratorConfiguration
     * @throws com::sun::star::lang::IllegalArgumentException if the specified command is empty. It can't be checked, if a command is valid - because every URL
     * @throws com::sun::star::container::NoSuchElementException if the specified command isn't empty but does not occur inside this configuration set.
     */
-  def getKeyEventsByCommand(sCommand: String): SafeArray[KeyEvent] = js.native
+  def getKeyEventsByCommand(sCommand: String): SafeArray[KeyEvent]
   /**
     * optimized function to map a list of commands to a corresponding list of key events.
     *
@@ -79,7 +78,7 @@ trait XAcceleratorConfiguration
     * @returns A (non packed!) list of key events, where every item match by index directly to a command of the specified **CommandList** . If a command does no
     * @throws com::sun::star::lang::IllegalArgumentException if at least one of the specified commands is empty. It can't be checked, if a command is valid - b
     */
-  def getPreferredKeyEventsForCommandList(lCommandList: SeqEquiv[String]): SafeArray[_] = js.native
+  def getPreferredKeyEventsForCommandList(lCommandList: SeqEquiv[String]): SafeArray[_]
   /**
     * search for an key-command-binding inside this configuration set, where the specified command is used.
     *
@@ -91,13 +90,13 @@ trait XAcceleratorConfiguration
     * @throws com::sun::star::lang::IllegalArgumentException if the specified command is empty.
     * @throws com::sun::star::container::NoSuchElementException if the specified command isn't used inside this configuration set.
     */
-  def removeCommandFromAllKeyEvents(sCommand: String): Unit = js.native
+  def removeCommandFromAllKeyEvents(sCommand: String): Unit
   /**
     * remove a key-command-binding from this configuration set.
     * @param aKeyEvent the key event, which should be removed.
     * @throws com::sun::star::container::NoSuchElementException if the key event does not exists inside this configuration set.
     */
-  def removeKeyEvent(aKeyEvent: KeyEvent): Unit = js.native
+  def removeKeyEvent(aKeyEvent: KeyEvent): Unit
   /**
     * modify or create a key - command - binding.
     *
@@ -113,7 +112,7 @@ trait XAcceleratorConfiguration
     * @see removeKeyEvent()
     * @throws com::sun::star::lang::IllegalArgumentException if the key event isn't a valid one. Commands can be checked only, if they are empty. Because every
     */
-  def setKeyEvent(aKeyEvent: KeyEvent, sCommand: String): Unit = js.native
+  def setKeyEvent(aKeyEvent: KeyEvent, sCommand: String): Unit
 }
 
 object XAcceleratorConfiguration {
@@ -143,61 +142,5 @@ object XAcceleratorConfiguration {
     val __obj = js.Dynamic.literal(AllKeyEvents = AllKeyEvents.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addConfigurationListener = js.Any.fromFunction1(addConfigurationListener), getAllKeyEvents = js.Any.fromFunction0(getAllKeyEvents), getCommandByKeyEvent = js.Any.fromFunction1(getCommandByKeyEvent), getKeyEventsByCommand = js.Any.fromFunction1(getKeyEventsByCommand), getPreferredKeyEventsForCommandList = js.Any.fromFunction1(getPreferredKeyEventsForCommandList), hasStorage = js.Any.fromFunction0(hasStorage), isModified = js.Any.fromFunction0(isModified), isReadOnly = js.Any.fromFunction0(isReadOnly), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), reload = js.Any.fromFunction0(reload), removeCommandFromAllKeyEvents = js.Any.fromFunction1(removeCommandFromAllKeyEvents), removeConfigurationListener = js.Any.fromFunction1(removeConfigurationListener), removeKeyEvent = js.Any.fromFunction1(removeKeyEvent), setKeyEvent = js.Any.fromFunction2(setKeyEvent), setStorage = js.Any.fromFunction1(setStorage), store = js.Any.fromFunction0(store), storeToStorage = js.Any.fromFunction1(storeToStorage))
     __obj.asInstanceOf[XAcceleratorConfiguration]
   }
-  @scala.inline
-  implicit class XAcceleratorConfigurationOps[Self <: XAcceleratorConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllKeyEvents(value: SafeArray[KeyEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllKeyEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAllKeyEvents(value: () => SafeArray[KeyEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllKeyEvents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCommandByKeyEvent(value: KeyEvent => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCommandByKeyEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetKeyEventsByCommand(value: String => SafeArray[KeyEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyEventsByCommand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPreferredKeyEventsForCommandList(value: SeqEquiv[String] => SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPreferredKeyEventsForCommandList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveCommandFromAllKeyEvents(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCommandFromAllKeyEvents")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveKeyEvent(value: KeyEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeKeyEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetKeyEvent(value: (KeyEvent, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setKeyEvent")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

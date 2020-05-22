@@ -19,7 +19,7 @@ trait DescribeKeyPairsRequestwa extends js.Object {
     */
   var DryRun: js.UndefOr[Boolean] = js.native
   /**
-    * The filters.    fingerprint - The fingerprint of the key pair.    key-name - The name of the key pair.  
+    * The filters.    key-pair-id - The ID of the key pair.    fingerprint - The fingerprint of the key pair.    key-name - The name of the key pair.    tag-key - The key of a tag assigned to the resource. Use this filter to find all resources assigned a tag with a specific key, regardless of the tag value.    tag:&lt;key&gt; - The key/value combination of a tag assigned to the resource. Use the tag key in the filter name and the tag value as the filter value. For example, to find all resources that have a tag with the key Owner and the value TeamA, specify tag:Owner for the filter name and TeamA for the filter value.  
     */
   var Filters: js.UndefOr[FilterList] = js.native
   /**
@@ -34,77 +34,20 @@ trait DescribeKeyPairsRequestwa extends js.Object {
 
 object DescribeKeyPairsRequestwa {
   @scala.inline
-  def apply(): DescribeKeyPairsRequestwa = {
+  def apply(
+    $waiter: WaiterConfiguration = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    Filters: FilterList = null,
+    KeyNames: KeyNameStringList = null,
+    KeyPairIds: KeyPairIdStringList = null
+  ): DescribeKeyPairsRequestwa = {
     val __obj = js.Dynamic.literal()
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (KeyNames != null) __obj.updateDynamic("KeyNames")(KeyNames.asInstanceOf[js.Any])
+    if (KeyPairIds != null) __obj.updateDynamic("KeyPairIds")(KeyPairIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeKeyPairsRequestwa]
   }
-  @scala.inline
-  implicit class DescribeKeyPairsRequestwaOps[Self <: DescribeKeyPairsRequestwa] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: FilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyNames(value: KeyNameStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyPairIds(value: KeyPairIdStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPairIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyPairIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPairIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

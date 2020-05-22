@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FontCSSElement extends js.Object {
   /**
     * A relative or absolute URL pointing to a CSS file with `@font-face` definitions
     * @example 'https://fonts.googleapis.com/css?family=Open+Sans'
     */
-  var cssSrc: String = js.native
+  var cssSrc: String
 }
 
 object FontCSSElement {
@@ -19,19 +18,5 @@ object FontCSSElement {
     val __obj = js.Dynamic.literal(cssSrc = cssSrc.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontCSSElement]
   }
-  @scala.inline
-  implicit class FontCSSElementOps[Self <: FontCSSElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCssSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssSrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -27,6 +27,8 @@ object putBucketInventoryConfigurationCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutBucketInventoryConfigurationInput) = this()
+    /* CompleteClass */
+    override val input: PutBucketInventoryConfigurationInput = js.native
     val middlewareStack: MiddlewareStack[
         PutBucketInventoryConfigurationInput, 
         PutBucketInventoryConfigurationOutput, 
@@ -35,6 +37,11 @@ object putBucketInventoryConfigurationCommandMod extends js.Object {
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[PutBucketInventoryConfigurationInput, PutBucketInventoryConfigurationOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[PutBucketInventoryConfigurationInput, PutBucketInventoryConfigurationOutput] = js.native
   }

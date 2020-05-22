@@ -155,7 +155,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.yellow
   - typingsSlinky.csstype.csstypeStrings.yellowgreen
 */
-trait NamedColor extends Color
+trait NamedColor extends _Color
 
 object NamedColor {
   @scala.inline

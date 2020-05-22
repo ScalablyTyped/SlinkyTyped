@@ -7,7 +7,7 @@ import typingsSlinky.twilioChat.memberMod.Member.Type
 import typingsSlinky.twilioChat.messageMod.Message.UpdateReason
 import typingsSlinky.twilioChat.mod.Client.ChannelSortingCriteria
 import typingsSlinky.twilioChat.mod.Client.ChannelSortingOrder
-import typingsSlinky.twilioChat.mod.Client.LogLevel
+import typingsSlinky.twilioChat.mod.Client._LogLevel
 import typingsSlinky.twilioChat.userMod.User.SubscriptionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,7 +51,7 @@ object twilioChatStrings {
        with typingsSlinky.twilioChat.memberMod.Member.UpdateReason
   
   @js.native
-  sealed trait debug extends LogLevel
+  sealed trait debug extends _LogLevel
   
   @js.native
   sealed trait default extends NotificationLevel
@@ -60,7 +60,7 @@ object twilioChatStrings {
   sealed trait descending extends ChannelSortingOrder
   
   @js.native
-  sealed trait error extends LogLevel
+  sealed trait error extends _LogLevel
   
   @js.native
   sealed trait friendlyName
@@ -69,7 +69,7 @@ object twilioChatStrings {
        with typingsSlinky.twilioChat.userMod.User.UpdateReason
   
   @js.native
-  sealed trait info extends LogLevel
+  sealed trait info extends _LogLevel
   
   @js.native
   sealed trait initializing extends SubscriptionState
@@ -132,7 +132,7 @@ object twilioChatStrings {
     extends typingsSlinky.twilioChat.memberMod.Member.UpdateReason
   
   @js.native
-  sealed trait silent extends LogLevel
+  sealed trait silent extends _LogLevel
   
   @js.native
   sealed trait sms extends Type
@@ -158,7 +158,7 @@ object twilioChatStrings {
   sealed trait timestamp extends UpdateReason
   
   @js.native
-  sealed trait trace extends LogLevel
+  sealed trait trace extends _LogLevel
   
   @js.native
   sealed trait twilioDotchannelDotadded_to_channel
@@ -188,7 +188,7 @@ object twilioChatStrings {
   sealed trait unsubscribed extends SubscriptionState
   
   @js.native
-  sealed trait warn extends LogLevel
+  sealed trait warn extends _LogLevel
   
   @js.native
   sealed trait whatsapp extends Type

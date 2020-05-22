@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Lua extends js.Object {
-  var lua: js.UndefOr[String] = js.native
-  var numberOfKeys: js.UndefOr[Double] = js.native
+  var lua: js.UndefOr[String] = js.undefined
+  var numberOfKeys: js.UndefOr[Double] = js.undefined
 }
 
 object Lua {
   @scala.inline
-  def apply(): Lua = {
+  def apply(lua: String = null, numberOfKeys: js.UndefOr[Double] = js.undefined): Lua = {
     val __obj = js.Dynamic.literal()
+    if (lua != null) __obj.updateDynamic("lua")(lua.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfKeys)) __obj.updateDynamic("numberOfKeys")(numberOfKeys.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lua]
   }
-  @scala.inline
-  implicit class LuaOps[Self <: Lua] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLua(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lua")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLua: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lua")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfKeys(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

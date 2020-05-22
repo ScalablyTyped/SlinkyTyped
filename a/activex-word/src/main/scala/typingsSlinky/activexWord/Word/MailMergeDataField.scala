@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MailMergeDataField extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  val Index: Double = js.native
-  val Name: String = js.native
-  val Parent: js.Any = js.native
-  val Value: String = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  val Index: Double
+  val Name: String
+  val Parent: js.Any
+  val Value: String
   @JSName("Word.MailMergeDataField_typekey")
-  var WordDotMailMergeDataField_typekey: MailMergeDataField = js.native
+  var WordDotMailMergeDataField_typekey: MailMergeDataField
 }
 
 object MailMergeDataField {
@@ -31,55 +30,5 @@ object MailMergeDataField {
     __obj.updateDynamic("Word.MailMergeDataField_typekey")(WordDotMailMergeDataField_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[MailMergeDataField]
   }
-  @scala.inline
-  implicit class MailMergeDataFieldOps[Self <: MailMergeDataField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotMailMergeDataField_typekey(value: MailMergeDataField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.MailMergeDataField_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PromiseQueue extends js.Object {
   /**
     * Enqueue a promise generator. When the number of running promises is less than `maxPendingPromises`,
@@ -16,15 +15,15 @@ trait PromiseQueue extends js.Object {
     * @returns A promise that forwards the resolution/rejection of the promise returned by `promiseGenerator`,
     *          or immediately rejects if `maxQueuedPromise` is exceeded.
     */
-  def add[T](promiseGenerator: js.Function0[js.Promise[T]]): js.Promise[T] = js.native
+  def add[T](promiseGenerator: js.Function0[js.Promise[T]]): js.Promise[T]
   /**
     * Returns the number of promiseGenerators waiting in queue.
     */
-  def getPendingLength(): Double = js.native
+  def getPendingLength(): Double
   /**
     * Returns the number of in-flight promises
     */
-  def getQueueLength(): Double = js.native
+  def getQueueLength(): Double
 }
 
 object PromiseQueue {
@@ -37,31 +36,5 @@ object PromiseQueue {
     val __obj = js.Dynamic.literal(add = js.Any.fromFunction1(add), getPendingLength = js.Any.fromFunction0(getPendingLength), getQueueLength = js.Any.fromFunction0(getQueueLength))
     __obj.asInstanceOf[PromiseQueue]
   }
-  @scala.inline
-  implicit class PromiseQueueOps[Self <: PromiseQueue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd(value: js.Function0[js.Promise[js.Any]] => js.Promise[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPendingLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPendingLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetQueueLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getQueueLength")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,95 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgVideoPlayerCommercialsLinkedCommercial
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Gets/Sets the link to open on linked commercial click.
-  	 *
-  	 */
-  var link: js.UndefOr[String] = js.native
+    * Gets/Sets the link to open on linked commercial click.
+    *
+    */
+  var link: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets/Sets the sources of the linked commercial video.
-  	 *
-  	 */
-  var sources: js.UndefOr[js.Array[_]] = js.native
+    * Gets/Sets the sources of the linked commercial video.
+    *
+    */
+  var sources: js.UndefOr[js.Array[_]] = js.undefined
   /**
-  	 * Gets/Sets the second in the video at which the linked commercial should play.
-  	 *
-  	 */
-  var startTime: js.UndefOr[Double] = js.native
+    * Gets/Sets the second in the video at which the linked commercial should play.
+    *
+    */
+  var startTime: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets/Sets the tooltip for the linked commercial bookmark.
-  	 *
-  	 */
-  var title: js.UndefOr[String] = js.native
+    * Gets/Sets the tooltip for the linked commercial bookmark.
+    *
+    */
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object IgVideoPlayerCommercialsLinkedCommercial {
   @scala.inline
-  def apply(): IgVideoPlayerCommercialsLinkedCommercial = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    link: String = null,
+    sources: js.Array[_] = null,
+    startTime: js.UndefOr[Double] = js.undefined,
+    title: String = null
+  ): IgVideoPlayerCommercialsLinkedCommercial = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (sources != null) __obj.updateDynamic("sources")(sources.asInstanceOf[js.Any])
+    if (!js.isUndefined(startTime)) __obj.updateDynamic("startTime")(startTime.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgVideoPlayerCommercialsLinkedCommercial]
   }
-  @scala.inline
-  implicit class IgVideoPlayerCommercialsLinkedCommercialOps[Self <: IgVideoPlayerCommercialsLinkedCommercial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSources(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

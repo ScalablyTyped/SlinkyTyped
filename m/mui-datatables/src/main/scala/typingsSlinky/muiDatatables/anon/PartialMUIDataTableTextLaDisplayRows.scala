@@ -5,75 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<mui-datatables.mui-datatables.MUIDataTableTextLabelsPagination> */
-@js.native
 trait PartialMUIDataTableTextLaDisplayRows extends js.Object {
-  var displayRows: js.UndefOr[String] = js.native
-  var next: js.UndefOr[String] = js.native
-  var previous: js.UndefOr[String] = js.native
-  var rowsPerPage: js.UndefOr[String] = js.native
+  var displayRows: js.UndefOr[String] = js.undefined
+  var next: js.UndefOr[String] = js.undefined
+  var previous: js.UndefOr[String] = js.undefined
+  var rowsPerPage: js.UndefOr[String] = js.undefined
 }
 
 object PartialMUIDataTableTextLaDisplayRows {
   @scala.inline
-  def apply(): PartialMUIDataTableTextLaDisplayRows = {
+  def apply(
+    displayRows: String = null,
+    next: String = null,
+    previous: String = null,
+    rowsPerPage: String = null
+  ): PartialMUIDataTableTextLaDisplayRows = {
     val __obj = js.Dynamic.literal()
+    if (displayRows != null) __obj.updateDynamic("displayRows")(displayRows.asInstanceOf[js.Any])
+    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
+    if (previous != null) __obj.updateDynamic("previous")(previous.asInstanceOf[js.Any])
+    if (rowsPerPage != null) __obj.updateDynamic("rowsPerPage")(rowsPerPage.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialMUIDataTableTextLaDisplayRows]
   }
-  @scala.inline
-  implicit class PartialMUIDataTableTextLaDisplayRowsOps[Self <: PartialMUIDataTableTextLaDisplayRows] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayRows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevious(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevious: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowsPerPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsPerPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowsPerPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsPerPage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

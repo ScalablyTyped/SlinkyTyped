@@ -26,47 +26,15 @@ trait CreateGrokClassifierRequest extends js.Object {
 
 object CreateGrokClassifierRequest {
   @scala.inline
-  def apply(Classification: Classification, GrokPattern: GrokPattern, Name: NameString): CreateGrokClassifierRequest = {
+  def apply(
+    Classification: Classification,
+    GrokPattern: GrokPattern,
+    Name: NameString,
+    CustomPatterns: CustomPatterns = null
+  ): CreateGrokClassifierRequest = {
     val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], GrokPattern = GrokPattern.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (CustomPatterns != null) __obj.updateDynamic("CustomPatterns")(CustomPatterns.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGrokClassifierRequest]
   }
-  @scala.inline
-  implicit class CreateGrokClassifierRequestOps[Self <: CreateGrokClassifierRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassification(value: Classification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Classification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGrokPattern(value: GrokPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrokPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomPatterns(value: CustomPatterns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomPatterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomPatterns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomPatterns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

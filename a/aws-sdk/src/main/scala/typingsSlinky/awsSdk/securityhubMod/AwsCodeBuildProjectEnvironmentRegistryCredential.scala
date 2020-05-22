@@ -18,41 +18,11 @@ trait AwsCodeBuildProjectEnvironmentRegistryCredential extends js.Object {
 
 object AwsCodeBuildProjectEnvironmentRegistryCredential {
   @scala.inline
-  def apply(): AwsCodeBuildProjectEnvironmentRegistryCredential = {
+  def apply(Credential: NonEmptyString = null, CredentialProvider: NonEmptyString = null): AwsCodeBuildProjectEnvironmentRegistryCredential = {
     val __obj = js.Dynamic.literal()
+    if (Credential != null) __obj.updateDynamic("Credential")(Credential.asInstanceOf[js.Any])
+    if (CredentialProvider != null) __obj.updateDynamic("CredentialProvider")(CredentialProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsCodeBuildProjectEnvironmentRegistryCredential]
   }
-  @scala.inline
-  implicit class AwsCodeBuildProjectEnvironmentRegistryCredentialOps[Self <: AwsCodeBuildProjectEnvironmentRegistryCredential] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredential(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentialProvider(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CredentialProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentialProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CredentialProvider")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

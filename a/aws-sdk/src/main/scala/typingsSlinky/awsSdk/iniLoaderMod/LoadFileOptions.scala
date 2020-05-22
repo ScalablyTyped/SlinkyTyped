@@ -12,41 +12,11 @@ trait LoadFileOptions extends js.Object {
 
 object LoadFileOptions {
   @scala.inline
-  def apply(): LoadFileOptions = {
+  def apply(filename: String = null, isConfig: js.UndefOr[Boolean] = js.undefined): LoadFileOptions = {
     val __obj = js.Dynamic.literal()
+    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
+    if (!js.isUndefined(isConfig)) __obj.updateDynamic("isConfig")(isConfig.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadFileOptions]
   }
-  @scala.inline
-  implicit class LoadFileOptionsOps[Self <: LoadFileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsConfig(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

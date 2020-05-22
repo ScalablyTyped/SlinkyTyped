@@ -5,101 +5,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ key in pino.pino.Level ]:? string} */
-@js.native
 trait keyinLevelstring extends js.Object {
-  var debug: js.UndefOr[String] = js.native
-  var error: js.UndefOr[String] = js.native
-  var fatal: js.UndefOr[String] = js.native
-  var info: js.UndefOr[String] = js.native
-  var trace: js.UndefOr[String] = js.native
-  var warn: js.UndefOr[String] = js.native
+  var debug: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[String] = js.undefined
+  var fatal: js.UndefOr[String] = js.undefined
+  var info: js.UndefOr[String] = js.undefined
+  var trace: js.UndefOr[String] = js.undefined
+  var warn: js.UndefOr[String] = js.undefined
 }
 
 object keyinLevelstring {
   @scala.inline
-  def apply(): keyinLevelstring = {
+  def apply(
+    debug: String = null,
+    error: String = null,
+    fatal: String = null,
+    info: String = null,
+    trace: String = null,
+    warn: String = null
+  ): keyinLevelstring = {
     val __obj = js.Dynamic.literal()
+    if (debug != null) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (fatal != null) __obj.updateDynamic("fatal")(fatal.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (trace != null) __obj.updateDynamic("trace")(trace.asInstanceOf[js.Any])
+    if (warn != null) __obj.updateDynamic("warn")(warn.asInstanceOf[js.Any])
     __obj.asInstanceOf[keyinLevelstring]
   }
-  @scala.inline
-  implicit class keyinLevelstringOps[Self <: keyinLevelstring] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebug(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFatal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFatal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

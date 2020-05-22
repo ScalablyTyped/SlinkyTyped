@@ -5,115 +5,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPaymentIntentDataShipping extends js.Object {
   /**
     * Shipping address.
     */
-  var address: IAddress = js.native
+  var address: IAddress
   /**
     * The delivery service that shipped a physical product, such as Fedex, UPS, USPS, etc. This can be unset by updating the value to null and then saving.
     */
-  var carrier: js.UndefOr[String | Null] = js.native
+  var carrier: js.UndefOr[String | Null] = js.undefined
   /**
     * Recipient name. This can be unset by updating the value to null and then saving.
     */
-  var name: String | Null = js.native
+  var name: String | Null
   /**
     * Recipient phone (including extension). This can be unset by updating the value to null and then saving.
     */
-  var phone: js.UndefOr[String | Null] = js.native
+  var phone: js.UndefOr[String | Null] = js.undefined
   /**
     * The tracking number for a physical product, obtained from the delivery service. If multiple tracking numbers were generated for this purchase, please separate them with commas. This can be unset by updating the value to null and then saving.
     */
-  var tracking_number: js.UndefOr[String | Null] = js.native
+  var tracking_number: js.UndefOr[String | Null] = js.undefined
 }
 
 object IPaymentIntentDataShipping {
   @scala.inline
-  def apply(address: IAddress): IPaymentIntentDataShipping = {
-    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any])
+  def apply(
+    address: IAddress,
+    carrier: js.UndefOr[Null | String] = js.undefined,
+    name: String = null,
+    phone: js.UndefOr[Null | String] = js.undefined,
+    tracking_number: js.UndefOr[Null | String] = js.undefined
+  ): IPaymentIntentDataShipping = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(carrier)) __obj.updateDynamic("carrier")(carrier.asInstanceOf[js.Any])
+    if (!js.isUndefined(phone)) __obj.updateDynamic("phone")(phone.asInstanceOf[js.Any])
+    if (!js.isUndefined(tracking_number)) __obj.updateDynamic("tracking_number")(tracking_number.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPaymentIntentDataShipping]
   }
-  @scala.inline
-  implicit class IPaymentIntentDataShippingOps[Self <: IPaymentIntentDataShipping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: IAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCarrier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCarrier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCarrierNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withPhone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(null)
-        ret
-    }
-    @scala.inline
-    def withTracking_number(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracking_number: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracking_numberNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_number")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -4,38 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Decorates extends js.Object {
   var decorates: js.UndefOr[
     js.Function1[/* key */ js.Any, /* is aurelia-dependency-injection.anon.Get */ Boolean]
-  ] = js.native
+  ] = js.undefined
 }
 
 object Decorates {
   @scala.inline
-  def apply(): Decorates = {
+  def apply(decorates: /* key */ js.Any => /* is aurelia-dependency-injection.anon.Get */ Boolean = null): Decorates = {
     val __obj = js.Dynamic.literal()
+    if (decorates != null) __obj.updateDynamic("decorates")(js.Any.fromFunction1(decorates))
     __obj.asInstanceOf[Decorates]
   }
-  @scala.inline
-  implicit class DecoratesOps[Self <: Decorates] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecorates(value: /* key */ js.Any => /* is aurelia-dependency-injection.anon.Get */ Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorates")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDecorates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

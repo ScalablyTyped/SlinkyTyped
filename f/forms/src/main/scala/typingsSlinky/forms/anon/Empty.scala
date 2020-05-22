@@ -6,75 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Empty extends js.Object {
-  var empty: js.UndefOr[FormHandleCallback] = js.native
-  var error: js.UndefOr[FormHandleCallback] = js.native
-  var other: js.UndefOr[FormHandleCallback] = js.native
-  var success: js.UndefOr[FormHandleCallback] = js.native
+  var empty: js.UndefOr[FormHandleCallback] = js.undefined
+  var error: js.UndefOr[FormHandleCallback] = js.undefined
+  var other: js.UndefOr[FormHandleCallback] = js.undefined
+  var success: js.UndefOr[FormHandleCallback] = js.undefined
 }
 
 object Empty {
   @scala.inline
-  def apply(): Empty = {
+  def apply(
+    empty: /* form */ Form => Unit = null,
+    error: /* form */ Form => Unit = null,
+    other: /* form */ Form => Unit = null,
+    success: /* form */ Form => Unit = null
+  ): Empty = {
     val __obj = js.Dynamic.literal()
+    if (empty != null) __obj.updateDynamic("empty")(js.Any.fromFunction1(empty))
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
+    if (other != null) __obj.updateDynamic("other")(js.Any.fromFunction1(other))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[Empty]
   }
-  @scala.inline
-  implicit class EmptyOps[Self <: Empty] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmpty(value: /* form */ Form => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: /* form */ Form => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOther(value: /* form */ Form => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOther: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* form */ Form => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

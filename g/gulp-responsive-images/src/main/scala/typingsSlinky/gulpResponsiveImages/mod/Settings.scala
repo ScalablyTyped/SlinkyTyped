@@ -2,216 +2,61 @@ package typingsSlinky.gulpResponsiveImages.mod
 
 import typingsSlinky.gm.mod.FilterType
 import typingsSlinky.gm.mod.GravityDirection
-import typingsSlinky.gulpRename.mod.ParsedPath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Settings extends js.Object {
-  var crop: js.UndefOr[Boolean] = js.native
-  var filter: js.UndefOr[FilterType] = js.native
-  var format: js.UndefOr[String] = js.native
-  var gravity: js.UndefOr[GravityDirection] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var overwrite: js.UndefOr[Boolean] = js.native
-  var percentage: js.UndefOr[Double] = js.native
-  var quality: js.UndefOr[Double] = js.native
-  var rename: js.UndefOr[Rename] = js.native
-  var samplingFactor: js.UndefOr[SamplingFactor] = js.native
-  var sharpen: js.UndefOr[Boolean] = js.native
-  var suffix: js.UndefOr[String] = js.native
-  var upscale: js.UndefOr[Boolean] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var crop: js.UndefOr[Boolean] = js.undefined
+  var filter: js.UndefOr[FilterType] = js.undefined
+  var format: js.UndefOr[String] = js.undefined
+  var gravity: js.UndefOr[GravityDirection] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var overwrite: js.UndefOr[Boolean] = js.undefined
+  var percentage: js.UndefOr[Double] = js.undefined
+  var quality: js.UndefOr[Double] = js.undefined
+  var rename: js.UndefOr[Rename] = js.undefined
+  var samplingFactor: js.UndefOr[SamplingFactor] = js.undefined
+  var sharpen: js.UndefOr[Boolean] = js.undefined
+  var suffix: js.UndefOr[String] = js.undefined
+  var upscale: js.UndefOr[Boolean] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object Settings {
   @scala.inline
-  def apply(): Settings = {
+  def apply(
+    crop: js.UndefOr[Boolean] = js.undefined,
+    filter: FilterType = null,
+    format: String = null,
+    gravity: GravityDirection = null,
+    height: js.UndefOr[Double] = js.undefined,
+    overwrite: js.UndefOr[Boolean] = js.undefined,
+    percentage: js.UndefOr[Double] = js.undefined,
+    quality: js.UndefOr[Double] = js.undefined,
+    rename: Rename = null,
+    samplingFactor: SamplingFactor = null,
+    sharpen: js.UndefOr[Boolean] = js.undefined,
+    suffix: String = null,
+    upscale: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): Settings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(crop)) __obj.updateDynamic("crop")(crop.get.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (gravity != null) __obj.updateDynamic("gravity")(gravity.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overwrite)) __obj.updateDynamic("overwrite")(overwrite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(percentage)) __obj.updateDynamic("percentage")(percentage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
+    if (rename != null) __obj.updateDynamic("rename")(rename.asInstanceOf[js.Any])
+    if (samplingFactor != null) __obj.updateDynamic("samplingFactor")(samplingFactor.asInstanceOf[js.Any])
+    if (!js.isUndefined(sharpen)) __obj.updateDynamic("sharpen")(sharpen.get.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
+    if (!js.isUndefined(upscale)) __obj.updateDynamic("upscale")(upscale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
-  @scala.inline
-  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCrop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: FilterType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravity(value: GravityDirection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercentage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenameFunction1(value: /* path */ ParsedPath => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRename(value: Rename): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplingFactor(value: SamplingFactor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplingFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpscale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

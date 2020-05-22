@@ -22,47 +22,15 @@ trait VpcConfigurationUpdate extends js.Object {
 
 object VpcConfigurationUpdate {
   @scala.inline
-  def apply(VpcConfigurationId: Id): VpcConfigurationUpdate = {
+  def apply(
+    VpcConfigurationId: Id,
+    SecurityGroupIdUpdates: SecurityGroupIds = null,
+    SubnetIdUpdates: SubnetIds = null
+  ): VpcConfigurationUpdate = {
     val __obj = js.Dynamic.literal(VpcConfigurationId = VpcConfigurationId.asInstanceOf[js.Any])
+    if (SecurityGroupIdUpdates != null) __obj.updateDynamic("SecurityGroupIdUpdates")(SecurityGroupIdUpdates.asInstanceOf[js.Any])
+    if (SubnetIdUpdates != null) __obj.updateDynamic("SubnetIdUpdates")(SubnetIdUpdates.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcConfigurationUpdate]
   }
-  @scala.inline
-  implicit class VpcConfigurationUpdateOps[Self <: VpcConfigurationUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpcConfigurationId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfigurationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupIdUpdates(value: SecurityGroupIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIdUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupIdUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIdUpdates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetIdUpdates(value: SubnetIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIdUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetIdUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIdUpdates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

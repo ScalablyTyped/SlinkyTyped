@@ -4,35 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CDO
   extends CssNodeCommon
      with CssNode
      with CssNodePlain {
   @JSName("type")
-  var type_CDO: typingsSlinky.cssTree.cssTreeStrings.CDO = js.native
+  var type_CDO: typingsSlinky.cssTree.cssTreeStrings.CDO
 }
 
 object CDO {
   @scala.inline
-  def apply(`type`: typingsSlinky.cssTree.cssTreeStrings.CDO): CDO = {
+  def apply(`type`: typingsSlinky.cssTree.cssTreeStrings.CDO, loc: CssLocation = null): CDO = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[CDO]
   }
-  @scala.inline
-  implicit class CDOOps[Self <: CDO] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.cssTree.cssTreeStrings.CDO): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

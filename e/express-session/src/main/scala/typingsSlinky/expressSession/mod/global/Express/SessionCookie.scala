@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SessionCookie extends SessionCookieData {
-  def serialize(name: String, value: String): String = js.native
+  def serialize(name: String, value: String): String
 }
 
 object SessionCookie {
@@ -16,24 +15,17 @@ object SessionCookie {
     httpOnly: Boolean,
     originalMaxAge: Double,
     path: String,
-    serialize: (String, String) => String
+    serialize: (String, String) => String,
+    domain: String = null,
+    maxAge: Double = null.asInstanceOf[Double],
+    sameSite: Boolean | String = null,
+    secure: js.UndefOr[Boolean] = js.undefined
   ): SessionCookie = {
-    val __obj = js.Dynamic.literal(expires = expires.asInstanceOf[js.Any], httpOnly = httpOnly.asInstanceOf[js.Any], originalMaxAge = originalMaxAge.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], serialize = js.Any.fromFunction2(serialize))
+    val __obj = js.Dynamic.literal(expires = expires.asInstanceOf[js.Any], httpOnly = httpOnly.asInstanceOf[js.Any], originalMaxAge = originalMaxAge.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], serialize = js.Any.fromFunction2(serialize), maxAge = maxAge.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (sameSite != null) __obj.updateDynamic("sameSite")(sameSite.asInstanceOf[js.Any])
+    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SessionCookie]
   }
-  @scala.inline
-  implicit class SessionCookieOps[Self <: SessionCookie] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSerialize(value: (String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

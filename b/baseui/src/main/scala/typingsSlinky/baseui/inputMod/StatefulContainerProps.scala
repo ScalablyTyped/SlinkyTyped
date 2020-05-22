@@ -5,88 +5,33 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.react.mod.FormEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StatefulContainerProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var initialState: js.UndefOr[State] = js.native
-  var onChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.native
-  var stateReducer: js.UndefOr[js.Function3[change_, /* nextState */ State, /* currentState */ State, State]] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var initialState: js.UndefOr[State] = js.undefined
+  var onChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.undefined
+  var stateReducer: js.UndefOr[js.Function3[change_, /* nextState */ State, /* currentState */ State, State]] = js.undefined
 }
 
 object StatefulContainerProps {
   @scala.inline
-  def apply(): StatefulContainerProps = {
+  def apply(
+    children: TagMod[Any] = null,
+    initialState: State = null,
+    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    stateReducer: (change_, /* nextState */ State, /* currentState */ State) => State = null
+  ): StatefulContainerProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (stateReducer != null) __obj.updateDynamic("stateReducer")(js.Any.fromFunction3(stateReducer))
     __obj.asInstanceOf[StatefulContainerProps]
   }
-  @scala.inline
-  implicit class StatefulContainerPropsOps[Self <: StatefulContainerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialState(value: State): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateReducer(value: (change_, /* nextState */ State, /* currentState */ State) => State): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateReducer")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutStateReducer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateReducer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

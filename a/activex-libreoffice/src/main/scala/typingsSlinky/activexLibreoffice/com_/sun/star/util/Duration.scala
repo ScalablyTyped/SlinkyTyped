@@ -13,24 +13,23 @@ import scala.scalajs.js.annotation._
   * Days is valid.
   * @since OOo 3.3
   */
-@js.native
 trait Duration extends js.Object {
   /** contains the days. */
-  var Days: Double = js.native
+  var Days: Double
   /** contains the hours. */
-  var Hours: Double = js.native
+  var Hours: Double
   /** contains the minutes. */
-  var Minutes: Double = js.native
+  var Minutes: Double
   /** contains the months. */
-  var Months: Double = js.native
+  var Months: Double
   /** contains the nanoseconds. */
-  var NanoSeconds: Double = js.native
+  var NanoSeconds: Double
   /** explicit sign bit. */
-  var Negative: Boolean = js.native
+  var Negative: Boolean
   /** contains the seconds. */
-  var Seconds: Double = js.native
+  var Seconds: Double
   /** contains the years. */
-  var Years: Double = js.native
+  var Years: Double
 }
 
 object Duration {
@@ -48,61 +47,5 @@ object Duration {
     val __obj = js.Dynamic.literal(Days = Days.asInstanceOf[js.Any], Hours = Hours.asInstanceOf[js.Any], Minutes = Minutes.asInstanceOf[js.Any], Months = Months.asInstanceOf[js.Any], NanoSeconds = NanoSeconds.asInstanceOf[js.Any], Negative = Negative.asInstanceOf[js.Any], Seconds = Seconds.asInstanceOf[js.Any], Years = Years.asInstanceOf[js.Any])
     __obj.asInstanceOf[Duration]
   }
-  @scala.inline
-  implicit class DurationOps[Self <: Duration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHours(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinutes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Minutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonths(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Months")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNanoSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NanoSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNegative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Negative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Seconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYears(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Years")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

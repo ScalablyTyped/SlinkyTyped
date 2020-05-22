@@ -3,7 +3,7 @@ package typingsSlinky.antd
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Type
 import typingsSlinky.antd.anon.TypeofRadioGroup
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.radioButtonMod.RadioButtonProps
 import typingsSlinky.antd.radioInterfaceMod.RadioChangeEvent
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupContextProps

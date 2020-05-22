@@ -16,29 +16,10 @@ trait StorageInfo extends js.Object {
 
 object StorageInfo {
   @scala.inline
-  def apply(): StorageInfo = {
+  def apply(EbsStorageInfo: EBSStorageInfo = null): StorageInfo = {
     val __obj = js.Dynamic.literal()
+    if (EbsStorageInfo != null) __obj.updateDynamic("EbsStorageInfo")(EbsStorageInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageInfo]
   }
-  @scala.inline
-  implicit class StorageInfoOps[Self <: StorageInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEbsStorageInfo(value: EBSStorageInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsStorageInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbsStorageInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsStorageInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

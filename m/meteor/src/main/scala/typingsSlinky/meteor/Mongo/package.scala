@@ -13,6 +13,8 @@ package object Mongo {
   {[ P in keyof T ]:? meteor.Mongo.OnlyElementsOfArrays<T[P]>}
     */ typingsSlinky.meteor.meteorStrings.ElementsOf with org.scalablytyped.runtime.TopLevel[T]
   type FieldSpecifier = org.scalablytyped.runtime.StringDictionary[typingsSlinky.std.Number]
+  type Flatten[T] = T | (/* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any)
+  type Modifier[T] = T | typingsSlinky.meteor.anon.CurrentDate[T]
   type OnlyArrays[T] = T
   type OnlyElementsOfArrays[T] = typingsSlinky.std.Partial[
     /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
@@ -23,4 +25,5 @@ package object Mongo {
   {[ P in keyof T ]:? meteor.Mongo.OnlyElementsOfArrays<T[P]> | {  $each? :T[P],   $position? :number,   $slice? :number,   $sort? :1 | -1 | meteor.Mongo.Dictionary<number>}}
     */ typingsSlinky.meteor.meteorStrings.PushModifier with org.scalablytyped.runtime.TopLevel[js.Any]
   type Query[T] = typingsSlinky.meteor.meteorStrings.Query with org.scalablytyped.runtime.TopLevel[js.Any] with typingsSlinky.meteor.anon.And with typingsSlinky.meteor.Mongo.Dictionary[_]
+  type Selector[T] = typingsSlinky.meteor.Mongo.Query[T] | typingsSlinky.meteor.Mongo.QueryWithModifiers[T]
 }

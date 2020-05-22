@@ -7,17 +7,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EscapeCharacterSet
   extends CharacterSet
      with NodeBase
      with CharacterClassElement {
-  var kind: digit | space | word = js.native
-  var negate: Boolean = js.native
+  var kind: digit | space | word
+  var negate: Boolean
   @JSName("parent")
-  var parent_EscapeCharacterSet: Alternative | Quantifier | CharacterClass = js.native
+  var parent_EscapeCharacterSet: Alternative | Quantifier | CharacterClass
   @JSName("type")
-  var type_EscapeCharacterSet: typingsSlinky.regexpp.regexppStrings.CharacterSet = js.native
+  var type_EscapeCharacterSet: typingsSlinky.regexpp.regexppStrings.CharacterSet
 }
 
 object EscapeCharacterSet {
@@ -35,37 +34,5 @@ object EscapeCharacterSet {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EscapeCharacterSet]
   }
-  @scala.inline
-  implicit class EscapeCharacterSetOps[Self <: EscapeCharacterSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: digit | space | word): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNegate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: Alternative | Quantifier | CharacterClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.regexpp.regexppStrings.CharacterSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

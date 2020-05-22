@@ -7,151 +7,75 @@ import scala.scalajs.js.annotation._
 /**
   * Direct container of specimen (tube/slide, etc.)
   */
-@js.native
 trait SpecimenContainer extends BackboneElement {
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.native
+  var _description: js.UndefOr[Element] = js.undefined
   /**
     * Additive associated with container
     */
-  var additiveCodeableConcept: js.UndefOr[CodeableConcept] = js.native
+  var additiveCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Additive associated with container
     */
-  var additiveReference: js.UndefOr[Reference] = js.native
+  var additiveReference: js.UndefOr[Reference] = js.undefined
   /**
     * Container volume or size
     */
-  var capacity: js.UndefOr[Quantity] = js.native
+  var capacity: js.UndefOr[Quantity] = js.undefined
   /**
     * Textual description of the container
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * Id for the container
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
   /**
     * Quantity of specimen within container
     */
-  var specimenQuantity: js.UndefOr[Quantity] = js.native
+  var specimenQuantity: js.UndefOr[Quantity] = js.undefined
   /**
     * Kind of container directly associated with specimen
     */
-  var `type`: js.UndefOr[CodeableConcept] = js.native
+  var `type`: js.UndefOr[CodeableConcept] = js.undefined
 }
 
 object SpecimenContainer {
   @scala.inline
-  def apply(): SpecimenContainer = {
+  def apply(
+    _description: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    additiveCodeableConcept: CodeableConcept = null,
+    additiveReference: Reference = null,
+    capacity: Quantity = null,
+    description: String = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    identifier: js.Array[Identifier] = null,
+    modifierExtension: js.Array[Extension] = null,
+    specimenQuantity: Quantity = null,
+    `type`: CodeableConcept = null
+  ): SpecimenContainer = {
     val __obj = js.Dynamic.literal()
+    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (additiveCodeableConcept != null) __obj.updateDynamic("additiveCodeableConcept")(additiveCodeableConcept.asInstanceOf[js.Any])
+    if (additiveReference != null) __obj.updateDynamic("additiveReference")(additiveReference.asInstanceOf[js.Any])
+    if (capacity != null) __obj.updateDynamic("capacity")(capacity.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (specimenQuantity != null) __obj.updateDynamic("specimenQuantity")(specimenQuantity.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpecimenContainer]
   }
-  @scala.inline
-  implicit class SpecimenContainerOps[Self <: SpecimenContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_description(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditiveCodeableConcept(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additiveCodeableConcept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditiveCodeableConcept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additiveCodeableConcept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditiveReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additiveReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditiveReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additiveReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapacity(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: js.Array[Identifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpecimenQuantity(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specimenQuantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpecimenQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specimenQuantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,11 @@ trait SchemaTCPSocketAction extends js.Object {
 
 object SchemaTCPSocketAction {
   @scala.inline
-  def apply(): SchemaTCPSocketAction = {
+  def apply(host: String = null, port: SchemaIntOrString = null): SchemaTCPSocketAction = {
     val __obj = js.Dynamic.literal()
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTCPSocketAction]
   }
-  @scala.inline
-  implicit class SchemaTCPSocketActionOps[Self <: SchemaTCPSocketAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: SchemaIntOrString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

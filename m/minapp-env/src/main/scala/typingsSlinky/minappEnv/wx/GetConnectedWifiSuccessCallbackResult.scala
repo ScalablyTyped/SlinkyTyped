@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetConnectedWifiSuccessCallbackResult extends js.Object {
   /** [WifiInfo](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/WifiInfo.html)
     *
     * Wi-Fi 信息 */
-  var wifi: WifiInfo = js.native
+  var wifi: WifiInfo
 }
 
 object GetConnectedWifiSuccessCallbackResult {
@@ -18,19 +17,5 @@ object GetConnectedWifiSuccessCallbackResult {
     val __obj = js.Dynamic.literal(wifi = wifi.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConnectedWifiSuccessCallbackResult]
   }
-  @scala.inline
-  implicit class GetConnectedWifiSuccessCallbackResultOps[Self <: GetConnectedWifiSuccessCallbackResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWifi(value: WifiInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifi")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

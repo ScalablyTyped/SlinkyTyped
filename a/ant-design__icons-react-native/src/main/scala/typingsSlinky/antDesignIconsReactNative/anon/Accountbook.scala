@@ -4,220 +4,219 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Accountbook extends js.Object {
-  var `account-book`: Double = js.native
-  var alert: Double = js.native
-  var `alipay-circle`: Double = js.native
-  var `alipay-square`: Double = js.native
-  var aliwangwang: Double = js.native
-  var `amazon-circle`: Double = js.native
-  var `amazon-square`: Double = js.native
-  var android: Double = js.native
-  var api: Double = js.native
-  var apple: Double = js.native
-  var appstore: Double = js.native
-  var audio: Double = js.native
-  var backward: Double = js.native
-  var bank: Double = js.native
-  var `behance-circle`: Double = js.native
-  var `behance-square`: Double = js.native
-  var bell: Double = js.native
-  var book: Double = js.native
-  var `box-plot`: Double = js.native
-  var build: Double = js.native
-  var bulb: Double = js.native
-  var calculator: Double = js.native
-  var calendar: Double = js.native
-  var camera: Double = js.native
-  var car: Double = js.native
-  var `caret-down`: Double = js.native
-  var `caret-left`: Double = js.native
-  var `caret-right`: Double = js.native
-  var `caret-up`: Double = js.native
-  var `carry-out`: Double = js.native
-  var `check-circle`: Double = js.native
-  var `check-square`: Double = js.native
-  var chrome: Double = js.native
-  var `ci-circle`: Double = js.native
-  var `clock-circle`: Double = js.native
-  var `close-circle`: Double = js.native
-  var `close-square`: Double = js.native
-  var cloud: Double = js.native
-  var code: Double = js.native
-  var `code-sandbox-circle`: Double = js.native
-  var `code-sandbox-square`: Double = js.native
-  var `codepen-circle`: Double = js.native
-  var `codepen-square`: Double = js.native
-  var compass: Double = js.native
-  var contacts: Double = js.native
-  var container: Double = js.native
-  var control: Double = js.native
-  var copy: Double = js.native
-  var `copyright-circle`: Double = js.native
-  var `credit-card`: Double = js.native
-  var crown: Double = js.native
-  var `customer-service`: Double = js.native
-  var dashboard: Double = js.native
-  var database: Double = js.native
-  var delete: Double = js.native
-  var diff: Double = js.native
-  var `dingtalk-circle`: Double = js.native
-  var `dingtalk-square`: Double = js.native
-  var dislike: Double = js.native
-  var `dollar-circle`: Double = js.native
-  var `down-circle`: Double = js.native
-  var `down-square`: Double = js.native
-  var `dribbble-circle`: Double = js.native
-  var `dribbble-square`: Double = js.native
-  var `dropbox-circle`: Double = js.native
-  var `dropbox-square`: Double = js.native
-  var edit: Double = js.native
-  var environment: Double = js.native
-  var `euro-circle`: Double = js.native
-  var `exclamation-circle`: Double = js.native
-  var experiment: Double = js.native
-  var eye: Double = js.native
-  var `eye-invisible`: Double = js.native
-  var facebook: Double = js.native
-  var `fast-backward`: Double = js.native
-  var `fast-forward`: Double = js.native
-  var file: Double = js.native
-  var `file-add`: Double = js.native
-  var `file-excel`: Double = js.native
-  var `file-exclamation`: Double = js.native
-  var `file-image`: Double = js.native
-  var `file-markdown`: Double = js.native
-  var `file-pdf`: Double = js.native
-  var `file-ppt`: Double = js.native
-  var `file-text`: Double = js.native
-  var `file-unknown`: Double = js.native
-  var `file-word`: Double = js.native
-  var `file-zip`: Double = js.native
-  var filter: Double = js.native
-  var fire: Double = js.native
-  var flag: Double = js.native
-  var folder: Double = js.native
-  var `folder-add`: Double = js.native
-  var `folder-open`: Double = js.native
-  var forward: Double = js.native
-  var frown: Double = js.native
-  var fund: Double = js.native
-  var `funnel-plot`: Double = js.native
-  var gift: Double = js.native
-  var github: Double = js.native
-  var gitlab: Double = js.native
-  var golden: Double = js.native
-  var `google-circle`: Double = js.native
-  var `google-plus-circle`: Double = js.native
-  var `google-plus-square`: Double = js.native
-  var `google-square`: Double = js.native
-  var hdd: Double = js.native
-  var heart: Double = js.native
-  var highlight: Double = js.native
-  var home: Double = js.native
-  var hourglass: Double = js.native
-  var html5: Double = js.native
-  var idcard: Double = js.native
-  var `ie-circle`: Double = js.native
-  var `ie-square`: Double = js.native
-  var `info-circle`: Double = js.native
-  var instagram: Double = js.native
-  var insurance: Double = js.native
-  var interation: Double = js.native
-  var layout: Double = js.native
-  var `left-circle`: Double = js.native
-  var `left-square`: Double = js.native
-  var like: Double = js.native
-  var linkedin: Double = js.native
-  var lock: Double = js.native
-  var mail: Double = js.native
-  var `medicine-box`: Double = js.native
-  var `medium-circle`: Double = js.native
-  var `medium-square`: Double = js.native
-  var meh: Double = js.native
-  var message: Double = js.native
-  var `minus-circle`: Double = js.native
-  var `minus-square`: Double = js.native
-  var mobile: Double = js.native
-  var `money-collect`: Double = js.native
-  var notification: Double = js.native
-  var `pause-circle`: Double = js.native
-  var `pay-circle`: Double = js.native
-  var phone: Double = js.native
-  var picture: Double = js.native
-  var `pie-chart`: Double = js.native
-  var `play-circle`: Double = js.native
-  var `play-square`: Double = js.native
-  var `plus-circle`: Double = js.native
-  var `plus-square`: Double = js.native
-  var `pound-circle`: Double = js.native
-  var printer: Double = js.native
-  var profile: Double = js.native
-  var project: Double = js.native
-  var `property-safety`: Double = js.native
-  var pushpin: Double = js.native
-  var `qq-circle`: Double = js.native
-  var `qq-square`: Double = js.native
-  var `question-circle`: Double = js.native
-  var read: Double = js.native
-  var reconciliation: Double = js.native
-  var `red-envelope`: Double = js.native
-  var `reddit-circle`: Double = js.native
-  var `reddit-square`: Double = js.native
-  var rest: Double = js.native
-  var `right-circle`: Double = js.native
-  var `right-square`: Double = js.native
-  var rocket: Double = js.native
-  var `safety-certificate`: Double = js.native
-  var save: Double = js.native
-  var schedule: Double = js.native
-  var `security-scan`: Double = js.native
-  var setting: Double = js.native
-  var shop: Double = js.native
-  var shopping: Double = js.native
-  var `sketch-circle`: Double = js.native
-  var `sketch-square`: Double = js.native
-  var skin: Double = js.native
-  var skype: Double = js.native
-  var `slack-circle`: Double = js.native
-  var `slack-square`: Double = js.native
-  var sliders: Double = js.native
-  var smile: Double = js.native
-  var snippets: Double = js.native
-  var sound: Double = js.native
-  var star: Double = js.native
-  var `step-backward`: Double = js.native
-  var `step-forward`: Double = js.native
-  var stop: Double = js.native
-  var switcher: Double = js.native
-  var tablet: Double = js.native
-  var tag: Double = js.native
-  var tags: Double = js.native
-  var `taobao-circle`: Double = js.native
-  var `taobao-square`: Double = js.native
-  var thunderbolt: Double = js.native
-  var tool: Double = js.native
-  var `trademark-circle`: Double = js.native
-  var trophy: Double = js.native
-  var `twitter-circle`: Double = js.native
-  var `twitter-square`: Double = js.native
-  var unlock: Double = js.native
-  var `up-circle`: Double = js.native
-  var `up-square`: Double = js.native
-  var usb: Double = js.native
-  var `video-camera`: Double = js.native
-  var wallet: Double = js.native
-  var warning: Double = js.native
-  var wechat: Double = js.native
-  var `weibo-circle`: Double = js.native
-  var `weibo-square`: Double = js.native
-  var windows: Double = js.native
-  var yahoo: Double = js.native
-  var youtube: Double = js.native
-  var yuque: Double = js.native
-  var `zhihu-circle`: Double = js.native
-  var `zhihu-square`: Double = js.native
+  var `account-book`: Double
+  var alert: Double
+  var `alipay-circle`: Double
+  var `alipay-square`: Double
+  var aliwangwang: Double
+  var `amazon-circle`: Double
+  var `amazon-square`: Double
+  var android: Double
+  var api: Double
+  var apple: Double
+  var appstore: Double
+  var audio: Double
+  var backward: Double
+  var bank: Double
+  var `behance-circle`: Double
+  var `behance-square`: Double
+  var bell: Double
+  var book: Double
+  var `box-plot`: Double
+  var build: Double
+  var bulb: Double
+  var calculator: Double
+  var calendar: Double
+  var camera: Double
+  var car: Double
+  var `caret-down`: Double
+  var `caret-left`: Double
+  var `caret-right`: Double
+  var `caret-up`: Double
+  var `carry-out`: Double
+  var `check-circle`: Double
+  var `check-square`: Double
+  var chrome: Double
+  var `ci-circle`: Double
+  var `clock-circle`: Double
+  var `close-circle`: Double
+  var `close-square`: Double
+  var cloud: Double
+  var code: Double
+  var `code-sandbox-circle`: Double
+  var `code-sandbox-square`: Double
+  var `codepen-circle`: Double
+  var `codepen-square`: Double
+  var compass: Double
+  var contacts: Double
+  var container: Double
+  var control: Double
+  var copy: Double
+  var `copyright-circle`: Double
+  var `credit-card`: Double
+  var crown: Double
+  var `customer-service`: Double
+  var dashboard: Double
+  var database: Double
+  var delete: Double
+  var diff: Double
+  var `dingtalk-circle`: Double
+  var `dingtalk-square`: Double
+  var dislike: Double
+  var `dollar-circle`: Double
+  var `down-circle`: Double
+  var `down-square`: Double
+  var `dribbble-circle`: Double
+  var `dribbble-square`: Double
+  var `dropbox-circle`: Double
+  var `dropbox-square`: Double
+  var edit: Double
+  var environment: Double
+  var `euro-circle`: Double
+  var `exclamation-circle`: Double
+  var experiment: Double
+  var eye: Double
+  var `eye-invisible`: Double
+  var facebook: Double
+  var `fast-backward`: Double
+  var `fast-forward`: Double
+  var file: Double
+  var `file-add`: Double
+  var `file-excel`: Double
+  var `file-exclamation`: Double
+  var `file-image`: Double
+  var `file-markdown`: Double
+  var `file-pdf`: Double
+  var `file-ppt`: Double
+  var `file-text`: Double
+  var `file-unknown`: Double
+  var `file-word`: Double
+  var `file-zip`: Double
+  var filter: Double
+  var fire: Double
+  var flag: Double
+  var folder: Double
+  var `folder-add`: Double
+  var `folder-open`: Double
+  var forward: Double
+  var frown: Double
+  var fund: Double
+  var `funnel-plot`: Double
+  var gift: Double
+  var github: Double
+  var gitlab: Double
+  var golden: Double
+  var `google-circle`: Double
+  var `google-plus-circle`: Double
+  var `google-plus-square`: Double
+  var `google-square`: Double
+  var hdd: Double
+  var heart: Double
+  var highlight: Double
+  var home: Double
+  var hourglass: Double
+  var html5: Double
+  var idcard: Double
+  var `ie-circle`: Double
+  var `ie-square`: Double
+  var `info-circle`: Double
+  var instagram: Double
+  var insurance: Double
+  var interation: Double
+  var layout: Double
+  var `left-circle`: Double
+  var `left-square`: Double
+  var like: Double
+  var linkedin: Double
+  var lock: Double
+  var mail: Double
+  var `medicine-box`: Double
+  var `medium-circle`: Double
+  var `medium-square`: Double
+  var meh: Double
+  var message: Double
+  var `minus-circle`: Double
+  var `minus-square`: Double
+  var mobile: Double
+  var `money-collect`: Double
+  var notification: Double
+  var `pause-circle`: Double
+  var `pay-circle`: Double
+  var phone: Double
+  var picture: Double
+  var `pie-chart`: Double
+  var `play-circle`: Double
+  var `play-square`: Double
+  var `plus-circle`: Double
+  var `plus-square`: Double
+  var `pound-circle`: Double
+  var printer: Double
+  var profile: Double
+  var project: Double
+  var `property-safety`: Double
+  var pushpin: Double
+  var `qq-circle`: Double
+  var `qq-square`: Double
+  var `question-circle`: Double
+  var read: Double
+  var reconciliation: Double
+  var `red-envelope`: Double
+  var `reddit-circle`: Double
+  var `reddit-square`: Double
+  var rest: Double
+  var `right-circle`: Double
+  var `right-square`: Double
+  var rocket: Double
+  var `safety-certificate`: Double
+  var save: Double
+  var schedule: Double
+  var `security-scan`: Double
+  var setting: Double
+  var shop: Double
+  var shopping: Double
+  var `sketch-circle`: Double
+  var `sketch-square`: Double
+  var skin: Double
+  var skype: Double
+  var `slack-circle`: Double
+  var `slack-square`: Double
+  var sliders: Double
+  var smile: Double
+  var snippets: Double
+  var sound: Double
+  var star: Double
+  var `step-backward`: Double
+  var `step-forward`: Double
+  var stop: Double
+  var switcher: Double
+  var tablet: Double
+  var tag: Double
+  var tags: Double
+  var `taobao-circle`: Double
+  var `taobao-square`: Double
+  var thunderbolt: Double
+  var tool: Double
+  var `trademark-circle`: Double
+  var trophy: Double
+  var `twitter-circle`: Double
+  var `twitter-square`: Double
+  var unlock: Double
+  var `up-circle`: Double
+  var `up-square`: Double
+  var usb: Double
+  var `video-camera`: Double
+  var wallet: Double
+  var warning: Double
+  var wechat: Double
+  var `weibo-circle`: Double
+  var `weibo-square`: Double
+  var windows: Double
+  var yahoo: Double
+  var youtube: Double
+  var yuque: Double
+  var `zhihu-circle`: Double
+  var `zhihu-square`: Double
 }
 
 object Accountbook {
@@ -545,1285 +544,5 @@ object Accountbook {
     __obj.updateDynamic("zhihu-square")(`zhihu-square`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Accountbook]
   }
-  @scala.inline
-  implicit class AccountbookOps[Self <: Accountbook] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAccount-book`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account-book")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlert(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAlipay-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alipay-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAlipay-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alipay-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAliwangwang(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aliwangwang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAmazon-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazon-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAmazon-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazon-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAndroid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApi(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApple(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppstore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appstore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackward(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBank(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBehance-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behance-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBehance-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behance-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBell(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBook(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("book")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBox-plot`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("box-plot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuild(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBulb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCalculator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCalendar(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCamera(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCar(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("car")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCaret-down`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caret-down")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCaret-left`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caret-left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCaret-right`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caret-right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCaret-up`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caret-up")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCarry-out`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carry-out")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCheck-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCheck-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChrome(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCi-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ci-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withClock-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clock-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withClose-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withClose-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloud(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloud")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCode-sandbox-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code-sandbox-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCode-sandbox-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code-sandbox-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCodepen-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codepen-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCodepen-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codepen-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompass(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContacts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contacts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withControl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCopy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCopyright-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCredit-card`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credit-card")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCrown(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCustomer-service`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer-service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDashboard(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatabase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiff(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDingtalk-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dingtalk-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDingtalk-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dingtalk-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDislike(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dislike")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDollar-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dollar-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDown-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("down-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDown-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("down-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDribbble-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dribbble-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDribbble-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dribbble-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDropbox-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropbox-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDropbox-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropbox-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEdit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withEuro-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("euro-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withExclamation-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclamation-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExperiment(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experiment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEye(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eye")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withEye-invisible`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eye-invisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFacebook(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFast-backward`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fast-backward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFast-forward`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fast-forward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFile(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-add`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-add")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-excel`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-excel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-exclamation`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-exclamation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-image`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-markdown`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-markdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-pdf`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-pdf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-ppt`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-ppt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-text`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-unknown`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-unknown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-word`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-word")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFile-zip`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file-zip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFire(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fire")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlag(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFolder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFolder-add`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folder-add")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFolder-open`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folder-open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForward(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrown(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFund(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fund")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFunnel-plot`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("funnel-plot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGift(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gift")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGithub(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("github")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGitlab(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gitlab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGolden(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("golden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGoogle-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("google-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGoogle-plus-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("google-plus-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGoogle-plus-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("google-plus-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGoogle-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("google-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHdd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHighlight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHome(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("home")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHourglass(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourglass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtml5(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdcard(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idcard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withIe-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ie-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withIe-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ie-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withInfo-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstagram(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInsurance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insurance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInteration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withLeft-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withLeft-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLike(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("like")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkedin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLock(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMail(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMedicine-box`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("medicine-box")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMedium-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("medium-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMedium-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("medium-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeh(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMinus-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minus-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMinus-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minus-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMobile(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMoney-collect`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("money-collect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotification(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPause-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPay-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pay-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhone(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPicture(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPie-chart`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-chart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPlay-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("play-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPlay-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("play-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPlus-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plus-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPlus-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plus-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPound-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pound-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrinter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfile(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProject(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withProperty-safety`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property-safety")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPushpin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushpin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withQq-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qq-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withQq-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qq-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withQuestion-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("question-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRead(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReconciliation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconciliation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRed-envelope`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("red-envelope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withReddit-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reddit-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withReddit-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reddit-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRest(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRight-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRight-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRocket(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rocket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSafety-certificate`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safety-certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSave(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSecurity-scan`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security-scan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetting(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShopping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shopping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSketch-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sketch-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSketch-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sketch-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkype(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSlack-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slack-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSlack-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slack-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSliders(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sliders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSmile(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnippets(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snippets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSound(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStar(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("star")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withStep-backward`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step-backward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withStep-forward`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step-forward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwitcher(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTablet(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tablet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTaobao-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taobao-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTaobao-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taobao-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThunderbolt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thunderbolt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTool(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTrademark-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trademark-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrophy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trophy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTwitter-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twitter-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTwitter-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twitter-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnlock(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withUp-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withUp-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withVideo-camera`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video-camera")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWallet(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wallet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWarning(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWechat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wechat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWeibo-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weibo-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWeibo-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weibo-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYahoo(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yahoo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYoutube(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("youtube")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYuque(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yuque")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withZhihu-circle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zhihu-circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withZhihu-square`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zhihu-square")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

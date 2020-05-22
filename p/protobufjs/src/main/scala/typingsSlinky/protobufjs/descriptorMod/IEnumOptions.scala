@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEnumOptions extends js.Object {
-  var allowAlias: js.UndefOr[Boolean] = js.native
-  var deprecated: js.UndefOr[Boolean] = js.native
+  var allowAlias: js.UndefOr[Boolean] = js.undefined
+  var deprecated: js.UndefOr[Boolean] = js.undefined
 }
 
 object IEnumOptions {
   @scala.inline
-  def apply(): IEnumOptions = {
+  def apply(allowAlias: js.UndefOr[Boolean] = js.undefined, deprecated: js.UndefOr[Boolean] = js.undefined): IEnumOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowAlias)) __obj.updateDynamic("allowAlias")(allowAlias.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deprecated)) __obj.updateDynamic("deprecated")(deprecated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEnumOptions]
   }
-  @scala.inline
-  implicit class IEnumOptionsOps[Self <: IEnumOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowAlias(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAlias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeprecated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

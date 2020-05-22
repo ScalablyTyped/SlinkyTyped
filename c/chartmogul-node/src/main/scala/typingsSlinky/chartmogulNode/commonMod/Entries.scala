@@ -4,30 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Entries[T] extends Cursor {
-  var entries: js.Array[T] = js.native
+  var entries: js.Array[T]
 }
 
 object Entries {
   @scala.inline
-  def apply[T](entries: js.Array[T]): Entries[T] = {
+  def apply[T](
+    entries: js.Array[T],
+    current_page: js.UndefOr[Double] = js.undefined,
+    has_more: js.UndefOr[Boolean] = js.undefined,
+    page: js.UndefOr[Double] = js.undefined,
+    per_page: js.UndefOr[Double] = js.undefined,
+    total_pages: js.UndefOr[Double] = js.undefined
+  ): Entries[T] = {
     val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any])
+    if (!js.isUndefined(current_page)) __obj.updateDynamic("current_page")(current_page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_more)) __obj.updateDynamic("has_more")(has_more.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(per_page)) __obj.updateDynamic("per_page")(per_page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(total_pages)) __obj.updateDynamic("total_pages")(total_pages.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Entries[T]]
   }
-  @scala.inline
-  implicit class EntriesOps[Self[t] <: Entries[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withEntries(value: js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

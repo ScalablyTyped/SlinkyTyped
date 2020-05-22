@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DropDownInsets extends js.Object {
   /** Bottom */
-  var bottom: Double = js.native
+  var bottom: Double
   /** Left */
-  var left: Double = js.native
+  var left: Double
   /** Right */
-  var right: Double = js.native
+  var right: Double
   /** Top */
-  var top: Double = js.native
+  var top: Double
 }
 
 object DropDownInsets {
@@ -22,37 +21,5 @@ object DropDownInsets {
     val __obj = js.Dynamic.literal(bottom = bottom.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropDownInsets]
   }
-  @scala.inline
-  implicit class DropDownInsetsOps[Self <: DropDownInsets] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

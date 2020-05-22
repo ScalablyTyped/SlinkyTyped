@@ -14,29 +14,10 @@ trait EnableAllFeaturesResponse extends js.Object {
 
 object EnableAllFeaturesResponse {
   @scala.inline
-  def apply(): EnableAllFeaturesResponse = {
+  def apply(Handshake: Handshake = null): EnableAllFeaturesResponse = {
     val __obj = js.Dynamic.literal()
+    if (Handshake != null) __obj.updateDynamic("Handshake")(Handshake.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnableAllFeaturesResponse]
   }
-  @scala.inline
-  implicit class EnableAllFeaturesResponseOps[Self <: EnableAllFeaturesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandshake(value: Handshake): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Handshake")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandshake: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Handshake")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

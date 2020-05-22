@@ -59,137 +59,30 @@ trait SchemaApplicationReport extends js.Object {
 
 object SchemaApplicationReport {
   @scala.inline
-  def apply(): SchemaApplicationReport = {
+  def apply(
+    applicationSource: String = null,
+    displayName: String = null,
+    events: js.Array[SchemaApplicationEvent] = null,
+    installerPackageName: String = null,
+    packageName: String = null,
+    packageSha256Hash: String = null,
+    signingKeyCertFingerprints: js.Array[String] = null,
+    state: String = null,
+    versionCode: js.UndefOr[Double] = js.undefined,
+    versionName: String = null
+  ): SchemaApplicationReport = {
     val __obj = js.Dynamic.literal()
+    if (applicationSource != null) __obj.updateDynamic("applicationSource")(applicationSource.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (installerPackageName != null) __obj.updateDynamic("installerPackageName")(installerPackageName.asInstanceOf[js.Any])
+    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
+    if (packageSha256Hash != null) __obj.updateDynamic("packageSha256Hash")(packageSha256Hash.asInstanceOf[js.Any])
+    if (signingKeyCertFingerprints != null) __obj.updateDynamic("signingKeyCertFingerprints")(signingKeyCertFingerprints.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (!js.isUndefined(versionCode)) __obj.updateDynamic("versionCode")(versionCode.get.asInstanceOf[js.Any])
+    if (versionName != null) __obj.updateDynamic("versionName")(versionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApplicationReport]
   }
-  @scala.inline
-  implicit class SchemaApplicationReportOps[Self <: SchemaApplicationReport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Array[SchemaApplicationEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallerPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installerPackageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallerPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installerPackageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageSha256Hash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageSha256Hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageSha256Hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageSha256Hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigningKeyCertFingerprints(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingKeyCertFingerprints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningKeyCertFingerprints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingKeyCertFingerprints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

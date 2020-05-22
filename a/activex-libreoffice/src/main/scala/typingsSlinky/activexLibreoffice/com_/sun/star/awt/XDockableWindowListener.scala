@@ -8,10 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to receive docking events. */
-@js.native
 trait XDockableWindowListener extends XEventListener {
   /** is invoked when the window was actively closed */
-  def closed(e: EventObject): Unit = js.native
+  def closed(e: EventObject): Unit
   /**
     * is invoked during the docking procedure when the window has been moved.
     *
@@ -20,21 +19,21 @@ trait XDockableWindowListener extends XEventListener {
     *
     * Note: the tracking rectangle indicates to the user where the window would be placed if they release the mouse.
     */
-  def docking(e: DockingEvent): DockingData = js.native
+  def docking(e: DockingEvent): DockingData
   /** is invoked when the docking procedure ends. aWindowRect contains the new position and size of the window */
-  def endDocking(e: EndDockingEvent): Unit = js.native
+  def endDocking(e: EndDockingEvent): Unit
   /** is invoked when the window currently is in pop-up mode and wants to be undocked or closed */
-  def endPopupMode(e: EndPopupModeEvent): Unit = js.native
+  def endPopupMode(e: EndPopupModeEvent): Unit
   /**
     * is invoked when the floating mode is about to be changed between floating and docked or vice versa
     *
     * if returned FALSE the floating mode will not be changed
     */
-  def prepareToggleFloatingMode(e: EventObject): Boolean = js.native
+  def prepareToggleFloatingMode(e: EventObject): Boolean
   /** is invoked when the docking procedure starts. */
-  def startDocking(e: DockingEvent): Unit = js.native
+  def startDocking(e: DockingEvent): Unit
   /** is invoked when the floating mode is changed between floating and docked or vice versa */
-  def toggleFloatingMode(e: EventObject): Unit = js.native
+  def toggleFloatingMode(e: EventObject): Unit
 }
 
 object XDockableWindowListener {
@@ -55,55 +54,5 @@ object XDockableWindowListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), closed = js.Any.fromFunction1(closed), disposing = js.Any.fromFunction1(disposing), docking = js.Any.fromFunction1(docking), endDocking = js.Any.fromFunction1(endDocking), endPopupMode = js.Any.fromFunction1(endPopupMode), prepareToggleFloatingMode = js.Any.fromFunction1(prepareToggleFloatingMode), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), startDocking = js.Any.fromFunction1(startDocking), toggleFloatingMode = js.Any.fromFunction1(toggleFloatingMode))
     __obj.asInstanceOf[XDockableWindowListener]
   }
-  @scala.inline
-  implicit class XDockableWindowListenerOps[Self <: XDockableWindowListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClosed(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDocking(value: DockingEvent => DockingData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docking")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEndDocking(value: EndDockingEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDocking")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEndPopupMode(value: EndPopupModeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endPopupMode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPrepareToggleFloatingMode(value: EventObject => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareToggleFloatingMode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartDocking(value: DockingEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDocking")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withToggleFloatingMode(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleFloatingMode")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

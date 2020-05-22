@@ -19,53 +19,16 @@ trait Limits extends js.Object {
 
 object Limits {
   @scala.inline
-  def apply(): Limits = {
+  def apply(
+    AdditionalLimits: AdditionalLimitList = null,
+    InstanceLimits: InstanceLimits = null,
+    StorageTypes: StorageTypeList = null
+  ): Limits = {
     val __obj = js.Dynamic.literal()
+    if (AdditionalLimits != null) __obj.updateDynamic("AdditionalLimits")(AdditionalLimits.asInstanceOf[js.Any])
+    if (InstanceLimits != null) __obj.updateDynamic("InstanceLimits")(InstanceLimits.asInstanceOf[js.Any])
+    if (StorageTypes != null) __obj.updateDynamic("StorageTypes")(StorageTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[Limits]
   }
-  @scala.inline
-  implicit class LimitsOps[Self <: Limits] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalLimits(value: AdditionalLimitList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalLimits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalLimits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceLimits(value: InstanceLimits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceLimits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceLimits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageTypes(value: StorageTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

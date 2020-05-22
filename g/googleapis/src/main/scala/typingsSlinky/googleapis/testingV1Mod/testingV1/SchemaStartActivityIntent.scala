@@ -25,53 +25,12 @@ trait SchemaStartActivityIntent extends js.Object {
 
 object SchemaStartActivityIntent {
   @scala.inline
-  def apply(): SchemaStartActivityIntent = {
+  def apply(action: String = null, categories: js.Array[String] = null, uri: String = null): SchemaStartActivityIntent = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStartActivityIntent]
   }
-  @scala.inline
-  implicit class SchemaStartActivityIntentOps[Self <: SchemaStartActivityIntent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

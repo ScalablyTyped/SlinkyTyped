@@ -7,38 +7,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISourceCreationOptions extends js.Object {
   /**
     * The name of the person or business that owns the bank
     * account. This field is required when attaching the bank
     * account to a customer object.
     */
-  var account_holder_name: js.UndefOr[String] = js.native
+  var account_holder_name: js.UndefOr[String] = js.undefined
   /**
     * The type of entity that holds the account. This can be either
     * "individual" or "company". This field is required when
     * attaching the bank account to a customer object.
     */
-  var account_holder_type: js.UndefOr[individual | company] = js.native
+  var account_holder_type: js.UndefOr[individual | company] = js.undefined
   /**
     * The account number for the bank account in string form.
     * Must be a checking account.
     */
-  var account_number: String = js.native
+  var account_number: String
   /**
     * The country the bank account is in.
     */
-  var country: String = js.native
+  var country: String
   /**
     * The currency the bank account is in. This must be a
     * country/currency pairing that Stripe supports.
     */
-  var currency: String = js.native
+  var currency: String
   /**
     * The type of payment source. Should be "bank_account".
     */
-  var `object`: bank_account = js.native
+  var `object`: bank_account
   /**
     * The routing number, sort code, or other country-appropriate
     * institution number for the bank account. For US bank
@@ -46,83 +45,26 @@ trait ISourceCreationOptions extends js.Object {
     * number, not the wire routing number. If you are providing an
     * IBAN for account_number, this field is not required.
     */
-  var routing_number: js.UndefOr[String] = js.native
+  var routing_number: js.UndefOr[String] = js.undefined
 }
 
 object ISourceCreationOptions {
   @scala.inline
-  def apply(account_number: String, country: String, currency: String, `object`: bank_account): ISourceCreationOptions = {
+  def apply(
+    account_number: String,
+    country: String,
+    currency: String,
+    `object`: bank_account,
+    account_holder_name: String = null,
+    account_holder_type: individual | company = null,
+    routing_number: String = null
+  ): ISourceCreationOptions = {
     val __obj = js.Dynamic.literal(account_number = account_number.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], currency = currency.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    if (account_holder_name != null) __obj.updateDynamic("account_holder_name")(account_holder_name.asInstanceOf[js.Any])
+    if (account_holder_type != null) __obj.updateDynamic("account_holder_type")(account_holder_type.asInstanceOf[js.Any])
+    if (routing_number != null) __obj.updateDynamic("routing_number")(routing_number.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISourceCreationOptions]
   }
-  @scala.inline
-  implicit class ISourceCreationOptionsOps[Self <: ISourceCreationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccount_number(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: bank_account): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccount_holder_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account_holder_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccount_holder_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account_holder_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccount_holder_type(value: individual | company): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account_holder_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccount_holder_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account_holder_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouting_number(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouting_number: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing_number")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

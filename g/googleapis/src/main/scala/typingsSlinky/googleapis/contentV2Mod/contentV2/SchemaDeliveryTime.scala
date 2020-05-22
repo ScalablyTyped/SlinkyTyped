@@ -49,101 +49,24 @@ trait SchemaDeliveryTime extends js.Object {
 
 object SchemaDeliveryTime {
   @scala.inline
-  def apply(): SchemaDeliveryTime = {
+  def apply(
+    cutoffTime: SchemaCutoffTime = null,
+    holidayCutoffs: js.Array[SchemaHolidayCutoff] = null,
+    maxHandlingTimeInDays: js.UndefOr[Double] = js.undefined,
+    maxTransitTimeInDays: js.UndefOr[Double] = js.undefined,
+    minHandlingTimeInDays: js.UndefOr[Double] = js.undefined,
+    minTransitTimeInDays: js.UndefOr[Double] = js.undefined,
+    transitTimeTable: SchemaTransitTable = null
+  ): SchemaDeliveryTime = {
     val __obj = js.Dynamic.literal()
+    if (cutoffTime != null) __obj.updateDynamic("cutoffTime")(cutoffTime.asInstanceOf[js.Any])
+    if (holidayCutoffs != null) __obj.updateDynamic("holidayCutoffs")(holidayCutoffs.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHandlingTimeInDays)) __obj.updateDynamic("maxHandlingTimeInDays")(maxHandlingTimeInDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxTransitTimeInDays)) __obj.updateDynamic("maxTransitTimeInDays")(maxTransitTimeInDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minHandlingTimeInDays)) __obj.updateDynamic("minHandlingTimeInDays")(minHandlingTimeInDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minTransitTimeInDays)) __obj.updateDynamic("minTransitTimeInDays")(minTransitTimeInDays.get.asInstanceOf[js.Any])
+    if (transitTimeTable != null) __obj.updateDynamic("transitTimeTable")(transitTimeTable.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeliveryTime]
   }
-  @scala.inline
-  implicit class SchemaDeliveryTimeOps[Self <: SchemaDeliveryTime] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCutoffTime(value: SchemaCutoffTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cutoffTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCutoffTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cutoffTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHolidayCutoffs(value: js.Array[SchemaHolidayCutoff]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holidayCutoffs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHolidayCutoffs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holidayCutoffs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHandlingTimeInDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHandlingTimeInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHandlingTimeInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHandlingTimeInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTransitTimeInDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTransitTimeInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTransitTimeInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTransitTimeInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHandlingTimeInDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHandlingTimeInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHandlingTimeInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHandlingTimeInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinTransitTimeInDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTransitTimeInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinTransitTimeInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTransitTimeInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitTimeTable(value: SchemaTransitTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitTimeTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitTimeTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitTimeTable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

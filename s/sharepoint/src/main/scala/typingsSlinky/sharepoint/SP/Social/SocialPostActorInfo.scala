@@ -8,13 +8,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies a set of users, documents, sites, and tags by an index into the SocialThreadActors array  */
-@js.native
 trait SocialPostActorInfo extends ClientValueObject {
-  def get_includesCurrentUser(): Boolean = js.native
+  def get_includesCurrentUser(): Boolean
   /** Specifies an array of indexes into the SocialThreadActors array.
     The server can choose to return a limited set of actors. For example, the server can choose to return a subset of the users that like a post. */
-  def get_indexes(): js.Array[Double] = js.native
-  def get_totalCount(): Double = js.native
+  def get_indexes(): js.Array[Double]
+  def get_totalCount(): Double
 }
 
 object SocialPostActorInfo {
@@ -32,31 +31,5 @@ object SocialPostActorInfo {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_includesCurrentUser = js.Any.fromFunction0(get_includesCurrentUser), get_indexes = js.Any.fromFunction0(get_indexes), get_totalCount = js.Any.fromFunction0(get_totalCount), get_typeId = js.Any.fromFunction0(get_typeId), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[SocialPostActorInfo]
   }
-  @scala.inline
-  implicit class SocialPostActorInfoOps[Self <: SocialPostActorInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_includesCurrentUser(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_includesCurrentUser")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_indexes(value: () => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_indexes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_totalCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_totalCount")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

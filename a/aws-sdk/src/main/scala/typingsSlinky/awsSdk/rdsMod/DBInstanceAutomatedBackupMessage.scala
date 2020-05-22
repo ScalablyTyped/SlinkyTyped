@@ -18,41 +18,11 @@ trait DBInstanceAutomatedBackupMessage extends js.Object {
 
 object DBInstanceAutomatedBackupMessage {
   @scala.inline
-  def apply(): DBInstanceAutomatedBackupMessage = {
+  def apply(DBInstanceAutomatedBackups: DBInstanceAutomatedBackupList = null, Marker: String = null): DBInstanceAutomatedBackupMessage = {
     val __obj = js.Dynamic.literal()
+    if (DBInstanceAutomatedBackups != null) __obj.updateDynamic("DBInstanceAutomatedBackups")(DBInstanceAutomatedBackups.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBInstanceAutomatedBackupMessage]
   }
-  @scala.inline
-  implicit class DBInstanceAutomatedBackupMessageOps[Self <: DBInstanceAutomatedBackupMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBInstanceAutomatedBackups(value: DBInstanceAutomatedBackupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceAutomatedBackups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBInstanceAutomatedBackups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceAutomatedBackups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

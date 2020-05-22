@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * Contains several options to describe which information is being
   * requested and how it will be transferred.
   */
-@js.native
 trait PaymentDataRequest extends js.Object {
   /**
     * List of allowed payment methods.
@@ -20,7 +19,7 @@ trait PaymentDataRequest extends js.Object {
     * This field is required and must contain at least one
     * [[PaymentMethodSpecification|`PaymentMethodSpecification`]].
     */
-  var allowedPaymentMethods: js.Array[PaymentMethodSpecification] = js.native
+  var allowedPaymentMethods: js.Array[PaymentMethodSpecification]
   /**
     * Major API version.
     *
@@ -28,7 +27,7 @@ trait PaymentDataRequest extends js.Object {
     *
     * This field is required.
     */
-  var apiVersion: Double = js.native
+  var apiVersion: Double
   /**
     * Minor API version.
     *
@@ -36,7 +35,7 @@ trait PaymentDataRequest extends js.Object {
     *
     * This field is required.
     */
-  var apiVersionMinor: Double = js.native
+  var apiVersionMinor: Double
   /**
     * List of callbacks that the developer intents to handle.
     * Upon selection by the user, these intents can be used to update the
@@ -46,7 +45,7 @@ trait PaymentDataRequest extends js.Object {
     *
     * Note: This  functionality is only available for web.
     */
-  var callbackIntents: js.UndefOr[js.Array[CallbackIntent]] = js.native
+  var callbackIntents: js.UndefOr[js.Array[CallbackIntent]] = js.undefined
   /**
     * Whether to collect the email from the buyer.
     *
@@ -57,13 +56,13 @@ trait PaymentDataRequest extends js.Object {
     *
     * @default false
     */
-  var emailRequired: js.UndefOr[`false` | `true`] = js.native
+  var emailRequired: js.UndefOr[`false` | `true`] = js.undefined
   /**
     * Detailed merchant information.
     *
     * This field is required.
     */
-  var merchantInfo: MerchantInfo = js.native
+  var merchantInfo: MerchantInfo
   /**
     * Optional shipping address parameters.
     *
@@ -71,7 +70,7 @@ trait PaymentDataRequest extends js.Object {
     * [[ShippingAddressParameters|`ShippingAddressParameters`]] will be
     * assumed.
     */
-  var shippingAddressParameters: js.UndefOr[ShippingAddressParameters] = js.native
+  var shippingAddressParameters: js.UndefOr[ShippingAddressParameters] = js.undefined
   /**
     * Whether a shipping address is required from the buyer.
     *
@@ -82,7 +81,7 @@ trait PaymentDataRequest extends js.Object {
     *
     * @default false
     */
-  var shippingAddressRequired: js.UndefOr[`false` | `true`] = js.native
+  var shippingAddressRequired: js.UndefOr[`false` | `true`] = js.undefined
   /**
     * Parameters for shipping option that can be used in this request.
     *
@@ -92,7 +91,7 @@ trait PaymentDataRequest extends js.Object {
     *
     * Note: This field is currently only for web only.
     */
-  var shippingOptionParameters: js.UndefOr[ShippingOptionParameters] = js.native
+  var shippingOptionParameters: js.UndefOr[ShippingOptionParameters] = js.undefined
   /**
     * Whether a shipping option is required from the buyer.
     *
@@ -101,13 +100,13 @@ trait PaymentDataRequest extends js.Object {
     *
     * @default false
     */
-  var shippingOptionRequired: js.UndefOr[`false` | `true`] = js.native
+  var shippingOptionRequired: js.UndefOr[`false` | `true`] = js.undefined
   /**
     * Detailed information about the transaction.
     *
     * This field is required.
     */
-  var transactionInfo: TransactionInfo = js.native
+  var transactionInfo: TransactionInfo
 }
 
 object PaymentDataRequest {
@@ -117,120 +116,22 @@ object PaymentDataRequest {
     apiVersion: Double,
     apiVersionMinor: Double,
     merchantInfo: MerchantInfo,
-    transactionInfo: TransactionInfo
+    transactionInfo: TransactionInfo,
+    callbackIntents: js.Array[CallbackIntent] = null,
+    emailRequired: `false` | `true` = null,
+    shippingAddressParameters: ShippingAddressParameters = null,
+    shippingAddressRequired: `false` | `true` = null,
+    shippingOptionParameters: ShippingOptionParameters = null,
+    shippingOptionRequired: `false` | `true` = null
   ): PaymentDataRequest = {
     val __obj = js.Dynamic.literal(allowedPaymentMethods = allowedPaymentMethods.asInstanceOf[js.Any], apiVersion = apiVersion.asInstanceOf[js.Any], apiVersionMinor = apiVersionMinor.asInstanceOf[js.Any], merchantInfo = merchantInfo.asInstanceOf[js.Any], transactionInfo = transactionInfo.asInstanceOf[js.Any])
+    if (callbackIntents != null) __obj.updateDynamic("callbackIntents")(callbackIntents.asInstanceOf[js.Any])
+    if (emailRequired != null) __obj.updateDynamic("emailRequired")(emailRequired.asInstanceOf[js.Any])
+    if (shippingAddressParameters != null) __obj.updateDynamic("shippingAddressParameters")(shippingAddressParameters.asInstanceOf[js.Any])
+    if (shippingAddressRequired != null) __obj.updateDynamic("shippingAddressRequired")(shippingAddressRequired.asInstanceOf[js.Any])
+    if (shippingOptionParameters != null) __obj.updateDynamic("shippingOptionParameters")(shippingOptionParameters.asInstanceOf[js.Any])
+    if (shippingOptionRequired != null) __obj.updateDynamic("shippingOptionRequired")(shippingOptionRequired.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentDataRequest]
   }
-  @scala.inline
-  implicit class PaymentDataRequestOps[Self <: PaymentDataRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedPaymentMethods(value: js.Array[PaymentMethodSpecification]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedPaymentMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApiVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApiVersionMinor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersionMinor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMerchantInfo(value: MerchantInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransactionInfo(value: TransactionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCallbackIntents(value: js.Array[CallbackIntent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackIntents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackIntents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackIntents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailRequired(value: `false` | `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingAddressParameters(value: ShippingAddressParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingAddressParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingAddressParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingAddressParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingAddressRequired(value: `false` | `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingAddressRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingAddressRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingAddressRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingOptionParameters(value: ShippingOptionParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingOptionParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingOptionParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingOptionParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingOptionRequired(value: `false` | `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingOptionRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingOptionRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingOptionRequired")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

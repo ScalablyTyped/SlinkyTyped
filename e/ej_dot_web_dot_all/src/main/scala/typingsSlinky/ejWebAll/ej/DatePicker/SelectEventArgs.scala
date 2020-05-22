@@ -4,113 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SelectEventArgs extends js.Object {
   /** returns the selected date object.
     */
-  var date: js.UndefOr[js.Any] = js.native
+  var date: js.UndefOr[js.Any] = js.undefined
   /** returns whether the  currently selected date is special date or not.
     */
-  var isSpecialDay: js.UndefOr[String] = js.native
+  var isSpecialDay: js.UndefOr[String] = js.undefined
   /** returns the DatePicker model.
     */
-  var model: js.UndefOr[Model] = js.native
+  var model: js.UndefOr[Model] = js.undefined
   /** returns the previously selected value.
     */
-  var prevDate: js.UndefOr[String] = js.native
+  var prevDate: js.UndefOr[String] = js.undefined
   /** returns the name of the event.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /** returns the current date value.
     */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object SelectEventArgs {
   @scala.inline
-  def apply(): SelectEventArgs = {
+  def apply(
+    date: js.Any = null,
+    isSpecialDay: String = null,
+    model: Model = null,
+    prevDate: String = null,
+    `type`: String = null,
+    value: String = null
+  ): SelectEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (isSpecialDay != null) __obj.updateDynamic("isSpecialDay")(isSpecialDay.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (prevDate != null) __obj.updateDynamic("prevDate")(prevDate.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectEventArgs]
   }
-  @scala.inline
-  implicit class SelectEventArgsOps[Self <: SelectEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSpecialDay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSpecialDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSpecialDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSpecialDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: Model): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

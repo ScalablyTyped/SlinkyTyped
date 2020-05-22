@@ -6,114 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeInputProps extends js.Object {
-  var id: js.UndefOr[String] = js.native
-  var max: js.UndefOr[Double | String] = js.native
-  var min: js.UndefOr[Double | String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[/* event */ ChangeEvent[Element], Unit]] = js.native
-  var step: js.UndefOr[Double] = js.native
-  var value: js.UndefOr[Double | String] = js.native
+  var id: js.UndefOr[String] = js.undefined
+  var max: js.UndefOr[Double | String] = js.undefined
+  var min: js.UndefOr[Double | String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* event */ ChangeEvent[Element], Unit]] = js.undefined
+  var step: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[Double | String] = js.undefined
 }
 
 object RangeInputProps {
   @scala.inline
-  def apply(): RangeInputProps = {
+  def apply(
+    id: String = null,
+    max: Double | String = null,
+    min: Double | String = null,
+    name: String = null,
+    onChange: /* event */ ChangeEvent[Element] => Unit = null,
+    step: js.UndefOr[Double] = js.undefined,
+    value: Double | String = null
+  ): RangeInputProps = {
     val __obj = js.Dynamic.literal()
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeInputProps]
   }
-  @scala.inline
-  implicit class RangeInputPropsOps[Self <: RangeInputProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* event */ ChangeEvent[Element] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

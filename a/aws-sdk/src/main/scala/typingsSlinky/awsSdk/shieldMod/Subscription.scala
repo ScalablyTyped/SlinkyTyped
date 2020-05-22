@@ -30,77 +30,20 @@ trait Subscription extends js.Object {
 
 object Subscription {
   @scala.inline
-  def apply(): Subscription = {
+  def apply(
+    AutoRenew: AutoRenew = null,
+    EndTime: js.Date = null,
+    Limits: Limits = null,
+    StartTime: js.Date = null,
+    TimeCommitmentInSeconds: js.UndefOr[DurationInSeconds] = js.undefined
+  ): Subscription = {
     val __obj = js.Dynamic.literal()
+    if (AutoRenew != null) __obj.updateDynamic("AutoRenew")(AutoRenew.asInstanceOf[js.Any])
+    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
+    if (Limits != null) __obj.updateDynamic("Limits")(Limits.asInstanceOf[js.Any])
+    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(TimeCommitmentInSeconds)) __obj.updateDynamic("TimeCommitmentInSeconds")(TimeCommitmentInSeconds.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Subscription]
   }
-  @scala.inline
-  implicit class SubscriptionOps[Self <: Subscription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoRenew(value: AutoRenew): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRenew")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRenew: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRenew")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimits(value: Limits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeCommitmentInSeconds(value: DurationInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeCommitmentInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeCommitmentInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeCommitmentInSeconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,25 +22,5 @@ object SendTestEventNotificationRequest {
     val __obj = js.Dynamic.literal(Notification = Notification.asInstanceOf[js.Any], TestEventType = TestEventType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendTestEventNotificationRequest]
   }
-  @scala.inline
-  implicit class SendTestEventNotificationRequestOps[Self <: SendTestEventNotificationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotification(value: NotificationSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTestEventType(value: EventType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TestEventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

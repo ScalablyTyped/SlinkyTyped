@@ -1,7 +1,7 @@
 package typingsSlinky.xadesjs.mod
 
 import typingsSlinky.std.BufferSource
-import typingsSlinky.xmlCore.mod.XmlBufferEncoding
+import typingsSlinky.xmlCore.typesMod.XmlBufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

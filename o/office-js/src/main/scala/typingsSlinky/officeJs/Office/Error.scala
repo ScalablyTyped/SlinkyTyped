@@ -12,20 +12,19 @@ import scala.scalajs.js.annotation._
   * The Error object is accessed from the AsyncResult object that is returned in the function passed as the callback argument of an asynchronous 
   * data operation, such as the `setSelectedDataAsync` method of the Document object.
   */
-@js.native
 trait Error extends js.Object {
   /**
     * Gets the numeric code of the error. For a list of error codes, see {@link https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office-error-codes | JavaScript API for Office error codes}.
     */
-  var code: Double = js.native
+  var code: Double
   /**
     * Gets the name of the error.
     */
-  var message: String = js.native
+  var message: String
   /**
     * Gets a detailed description of the error.
     */
-  var name: String = js.native
+  var name: String
 }
 
 object Error {
@@ -34,31 +33,5 @@ object Error {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Error]
   }
-  @scala.inline
-  implicit class ErrorOps[Self <: Error] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

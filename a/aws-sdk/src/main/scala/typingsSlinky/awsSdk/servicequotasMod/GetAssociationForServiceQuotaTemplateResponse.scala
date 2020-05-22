@@ -14,29 +14,10 @@ trait GetAssociationForServiceQuotaTemplateResponse extends js.Object {
 
 object GetAssociationForServiceQuotaTemplateResponse {
   @scala.inline
-  def apply(): GetAssociationForServiceQuotaTemplateResponse = {
+  def apply(ServiceQuotaTemplateAssociationStatus: ServiceQuotaTemplateAssociationStatus = null): GetAssociationForServiceQuotaTemplateResponse = {
     val __obj = js.Dynamic.literal()
+    if (ServiceQuotaTemplateAssociationStatus != null) __obj.updateDynamic("ServiceQuotaTemplateAssociationStatus")(ServiceQuotaTemplateAssociationStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAssociationForServiceQuotaTemplateResponse]
   }
-  @scala.inline
-  implicit class GetAssociationForServiceQuotaTemplateResponseOps[Self <: GetAssociationForServiceQuotaTemplateResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceQuotaTemplateAssociationStatus(value: ServiceQuotaTemplateAssociationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceQuotaTemplateAssociationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceQuotaTemplateAssociationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceQuotaTemplateAssociationStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

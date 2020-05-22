@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Contains up to 2,000 resource units. Can be constructed in neutral rooms. Decays for 5,000 hits per 100 ticks.
   */
-@js.native
 trait StructureContainer
   extends Structure[STRUCTURE_CONTAINER]
      with AnyStoreStructure
@@ -17,16 +16,16 @@ trait StructureContainer
     * An object with the structure contents. Each object key is one of the RESOURCE_* constants, values are resources
     * amounts. Use _.sum(structure.store) to get the total amount of contents
     */
-  var store: StoreDefinition = js.native
+  var store: StoreDefinition
   /**
     * The total amount of resources the structure can contain.
     * @deprecated An alias for .store.getCapacity().
     */
-  var storeCapacity: Double = js.native
+  var storeCapacity: Double
   /**
     * The amount of game ticks when this container will lose some hit points.
     */
-  var ticksToDecay: Double = js.native
+  var ticksToDecay: Double
 }
 
 object StructureContainer {
@@ -49,31 +48,5 @@ object StructureContainer {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], storeCapacity = storeCapacity.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any], ticksToDecay = ticksToDecay.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructureContainer]
   }
-  @scala.inline
-  implicit class StructureContainerOps[Self <: StructureContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStore(value: StoreDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStoreCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicksToDecay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksToDecay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

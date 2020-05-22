@@ -33,60 +33,14 @@ object CreateDirectConnectGatewayAssociationProposalRequest {
   def apply(
     directConnectGatewayId: DirectConnectGatewayId,
     directConnectGatewayOwnerAccount: OwnerAccount,
-    gatewayId: GatewayIdToAssociate
+    gatewayId: GatewayIdToAssociate,
+    addAllowedPrefixesToDirectConnectGateway: RouteFilterPrefixList = null,
+    removeAllowedPrefixesToDirectConnectGateway: RouteFilterPrefixList = null
   ): CreateDirectConnectGatewayAssociationProposalRequest = {
     val __obj = js.Dynamic.literal(directConnectGatewayId = directConnectGatewayId.asInstanceOf[js.Any], directConnectGatewayOwnerAccount = directConnectGatewayOwnerAccount.asInstanceOf[js.Any], gatewayId = gatewayId.asInstanceOf[js.Any])
+    if (addAllowedPrefixesToDirectConnectGateway != null) __obj.updateDynamic("addAllowedPrefixesToDirectConnectGateway")(addAllowedPrefixesToDirectConnectGateway.asInstanceOf[js.Any])
+    if (removeAllowedPrefixesToDirectConnectGateway != null) __obj.updateDynamic("removeAllowedPrefixesToDirectConnectGateway")(removeAllowedPrefixesToDirectConnectGateway.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDirectConnectGatewayAssociationProposalRequest]
   }
-  @scala.inline
-  implicit class CreateDirectConnectGatewayAssociationProposalRequestOps[Self <: CreateDirectConnectGatewayAssociationProposalRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectConnectGatewayId(value: DirectConnectGatewayId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirectConnectGatewayOwnerAccount(value: OwnerAccount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayOwnerAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGatewayId(value: GatewayIdToAssociate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddAllowedPrefixesToDirectConnectGateway(value: RouteFilterPrefixList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addAllowedPrefixesToDirectConnectGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddAllowedPrefixesToDirectConnectGateway: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addAllowedPrefixesToDirectConnectGateway")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveAllowedPrefixesToDirectConnectGateway(value: RouteFilterPrefixList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllowedPrefixesToDirectConnectGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveAllowedPrefixesToDirectConnectGateway: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllowedPrefixesToDirectConnectGateway")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

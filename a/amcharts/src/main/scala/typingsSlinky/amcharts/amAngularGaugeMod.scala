@@ -118,8 +118,8 @@ object amAngularGaugeMod extends js.Object {
     /**
       * Gauge face image-pattern.
       * Example: {"url":"../amcharts/patterns/black/pattern1.png", "width":4, "height":4}
-      * fontFamily	String	Verdana	Font family.
-      * fontSize	Number	11	Font size.
+      * fontFamily    String    Verdana    Font family.
+      * fontSize    Number    11    Font size.
       */
     var facePattern: js.Object = js.native
     /**

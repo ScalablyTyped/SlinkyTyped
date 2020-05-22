@@ -84,7 +84,7 @@ object MenuItem {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def _ref(value: /* node */ HTMLElement => Unit): this.type = set("_ref", js.Any.fromFunction1(value))
     @scala.inline

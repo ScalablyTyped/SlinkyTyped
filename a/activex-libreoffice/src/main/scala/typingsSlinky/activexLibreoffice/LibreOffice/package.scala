@@ -6,4 +6,5 @@ import scala.scalajs.js.annotation._
 
 package object LibreOffice {
   type InstantiableNameMap = typingsSlinky.activexLibreoffice.LibreOffice.ServicesNameMap with typingsSlinky.activexLibreoffice.LibreOffice.StructNameMap
+  type SeqEquiv[T] = typingsSlinky.std.SafeArray[T] | typingsSlinky.activexLibreoffice.sequence[T] | js.Array[T]
 }

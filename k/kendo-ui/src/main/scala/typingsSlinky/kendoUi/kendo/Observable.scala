@@ -19,6 +19,7 @@ trait Observable extends Class {
   def one(events: js.Array[String], handlers: StringDictionary[js.Function]): Observable = js.native
   def trigger(eventName: String): Boolean = js.native
   def trigger(eventName: String, e: js.Any): Boolean = js.native
+  def unbind(): Observable = js.native
   def unbind(eventName: String): Observable = js.native
   def unbind(eventName: String, handler: js.Any): Observable = js.native
 }

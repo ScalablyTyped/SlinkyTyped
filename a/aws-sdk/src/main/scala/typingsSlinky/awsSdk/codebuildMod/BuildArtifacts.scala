@@ -34,89 +34,22 @@ trait BuildArtifacts extends js.Object {
 
 object BuildArtifacts {
   @scala.inline
-  def apply(): BuildArtifacts = {
+  def apply(
+    artifactIdentifier: String = null,
+    encryptionDisabled: js.UndefOr[WrapperBoolean] = js.undefined,
+    location: String = null,
+    md5sum: String = null,
+    overrideArtifactName: js.UndefOr[WrapperBoolean] = js.undefined,
+    sha256sum: String = null
+  ): BuildArtifacts = {
     val __obj = js.Dynamic.literal()
+    if (artifactIdentifier != null) __obj.updateDynamic("artifactIdentifier")(artifactIdentifier.asInstanceOf[js.Any])
+    if (!js.isUndefined(encryptionDisabled)) __obj.updateDynamic("encryptionDisabled")(encryptionDisabled.get.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (md5sum != null) __obj.updateDynamic("md5sum")(md5sum.asInstanceOf[js.Any])
+    if (!js.isUndefined(overrideArtifactName)) __obj.updateDynamic("overrideArtifactName")(overrideArtifactName.get.asInstanceOf[js.Any])
+    if (sha256sum != null) __obj.updateDynamic("sha256sum")(sha256sum.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildArtifacts]
   }
-  @scala.inline
-  implicit class BuildArtifactsOps[Self <: BuildArtifacts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArtifactIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtifactIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionDisabled(value: WrapperBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd5sum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5sum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd5sum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5sum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrideArtifactName(value: WrapperBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideArtifactName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrideArtifactName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideArtifactName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSha256sum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256sum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSha256sum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256sum")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

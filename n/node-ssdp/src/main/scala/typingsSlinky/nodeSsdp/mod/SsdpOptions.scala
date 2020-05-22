@@ -4,133 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SsdpOptions extends js.Object {
   /** A logger function to use instead of the default. The first argument to the function can contain a format string. */
-  var customLogger: js.UndefOr[js.Function2[/* format */ String, /* repeated */ js.Any, Unit]] = js.native
+  var customLogger: js.UndefOr[js.Function2[/* format */ String, /* repeated */ js.Any, Unit]] = js.undefined
   /** Path to SSDP description file */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /** Additional headers */
-  var headers: js.UndefOr[SsdpHeaders] = js.native
+  var headers: js.UndefOr[SsdpHeaders] = js.undefined
   /**
-  	 * SSDP multicast group
-  	 * @default '239.255.255.250'
-  	 */
-  var ssdpIp: js.UndefOr[String] = js.native
+    * SSDP multicast group
+    * @default '239.255.255.250'
+    */
+  var ssdpIp: js.UndefOr[String] = js.undefined
   /**
-  	 * SSDP port
-  	 * @default 1900
-  	 */
-  var ssdpPort: js.UndefOr[Double] = js.native
+    * SSDP port
+    * @default 1900
+    */
+  var ssdpPort: js.UndefOr[Double] = js.undefined
   /**
-  	 * SSDP signature
-  	 * @default 'node.js/NODE_VERSION UPnP/1.1 node-ssdp/PACKAGE_VERSION'
-  	 */
-  var ssdpSig: js.UndefOr[String] = js.native
+    * SSDP signature
+    * @default 'node.js/NODE_VERSION UPnP/1.1 node-ssdp/PACKAGE_VERSION'
+    */
+  var ssdpSig: js.UndefOr[String] = js.undefined
   /**
-  	 * Multicast TTL
-  	 * @default 4
-  	 */
-  var ssdpTtl: js.UndefOr[Double] = js.native
+    * Multicast TTL
+    * @default 4
+    */
+  var ssdpTtl: js.UndefOr[Double] = js.undefined
 }
 
 object SsdpOptions {
   @scala.inline
-  def apply(): SsdpOptions = {
+  def apply(
+    customLogger: (/* format */ String, /* repeated */ js.Any) => Unit = null,
+    description: String = null,
+    headers: SsdpHeaders = null,
+    ssdpIp: String = null,
+    ssdpPort: js.UndefOr[Double] = js.undefined,
+    ssdpSig: String = null,
+    ssdpTtl: js.UndefOr[Double] = js.undefined
+  ): SsdpOptions = {
     val __obj = js.Dynamic.literal()
+    if (customLogger != null) __obj.updateDynamic("customLogger")(js.Any.fromFunction2(customLogger))
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (ssdpIp != null) __obj.updateDynamic("ssdpIp")(ssdpIp.asInstanceOf[js.Any])
+    if (!js.isUndefined(ssdpPort)) __obj.updateDynamic("ssdpPort")(ssdpPort.get.asInstanceOf[js.Any])
+    if (ssdpSig != null) __obj.updateDynamic("ssdpSig")(ssdpSig.asInstanceOf[js.Any])
+    if (!js.isUndefined(ssdpTtl)) __obj.updateDynamic("ssdpTtl")(ssdpTtl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SsdpOptions]
   }
-  @scala.inline
-  implicit class SsdpOptionsOps[Self <: SsdpOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomLogger(value: (/* format */ String, /* repeated */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLogger")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLogger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: SsdpHeaders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsdpIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssdpIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsdpIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssdpIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsdpPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssdpPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsdpPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssdpPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsdpSig(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssdpSig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsdpSig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssdpSig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsdpTtl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssdpTtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsdpTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssdpTtl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

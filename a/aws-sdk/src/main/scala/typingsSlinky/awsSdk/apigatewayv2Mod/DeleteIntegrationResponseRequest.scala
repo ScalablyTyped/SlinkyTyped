@@ -26,31 +26,5 @@ object DeleteIntegrationResponseRequest {
     val __obj = js.Dynamic.literal(ApiId = ApiId.asInstanceOf[js.Any], IntegrationId = IntegrationId.asInstanceOf[js.Any], IntegrationResponseId = IntegrationResponseId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteIntegrationResponseRequest]
   }
-  @scala.inline
-  implicit class DeleteIntegrationResponseRequestOps[Self <: DeleteIntegrationResponseRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntegrationId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntegrationResponseId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationResponseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

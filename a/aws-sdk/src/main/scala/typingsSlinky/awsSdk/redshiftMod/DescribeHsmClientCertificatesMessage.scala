@@ -30,77 +30,20 @@ trait DescribeHsmClientCertificatesMessage extends js.Object {
 
 object DescribeHsmClientCertificatesMessage {
   @scala.inline
-  def apply(): DescribeHsmClientCertificatesMessage = {
+  def apply(
+    HsmClientCertificateIdentifier: String = null,
+    Marker: String = null,
+    MaxRecords: js.UndefOr[IntegerOptional] = js.undefined,
+    TagKeys: TagKeyList = null,
+    TagValues: TagValueList = null
+  ): DescribeHsmClientCertificatesMessage = {
     val __obj = js.Dynamic.literal()
+    if (HsmClientCertificateIdentifier != null) __obj.updateDynamic("HsmClientCertificateIdentifier")(HsmClientCertificateIdentifier.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxRecords)) __obj.updateDynamic("MaxRecords")(MaxRecords.get.asInstanceOf[js.Any])
+    if (TagKeys != null) __obj.updateDynamic("TagKeys")(TagKeys.asInstanceOf[js.Any])
+    if (TagValues != null) __obj.updateDynamic("TagValues")(TagValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHsmClientCertificatesMessage]
   }
-  @scala.inline
-  implicit class DescribeHsmClientCertificatesMessageOps[Self <: DescribeHsmClientCertificatesMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHsmClientCertificateIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmClientCertificateIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHsmClientCertificateIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmClientCertificateIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRecords(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagKeys(value: TagKeyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagValues(value: TagValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

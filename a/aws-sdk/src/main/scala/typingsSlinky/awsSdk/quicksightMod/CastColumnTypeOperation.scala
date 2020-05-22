@@ -22,41 +22,10 @@ trait CastColumnTypeOperation extends js.Object {
 
 object CastColumnTypeOperation {
   @scala.inline
-  def apply(ColumnName: ColumnName, NewColumnType: ColumnDataType): CastColumnTypeOperation = {
+  def apply(ColumnName: ColumnName, NewColumnType: ColumnDataType, Format: TypeCastFormat = null): CastColumnTypeOperation = {
     val __obj = js.Dynamic.literal(ColumnName = ColumnName.asInstanceOf[js.Any], NewColumnType = NewColumnType.asInstanceOf[js.Any])
+    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
     __obj.asInstanceOf[CastColumnTypeOperation]
   }
-  @scala.inline
-  implicit class CastColumnTypeOperationOps[Self <: CastColumnTypeOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnName(value: ColumnName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewColumnType(value: ColumnDataType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewColumnType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: TypeCastFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

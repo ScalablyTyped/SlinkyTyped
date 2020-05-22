@@ -4,7 +4,7 @@ import typingsSlinky.googleAuthLibrary.mod.Compute
 import typingsSlinky.googleAuthLibrary.mod.JWT
 import typingsSlinky.googleAuthLibrary.mod.OAuth2Client
 import typingsSlinky.googleAuthLibrary.mod.UserRefreshClient
-import typingsSlinky.googleapis.AnonBody
+import typingsSlinky.googleapis.anon.Body
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +61,7 @@ trait ParamsResourceObjectsInsert extends StandardParameters {
   /**
     * Media metadata
     */
-  var media: js.UndefOr[AnonBody] = js.native
+  var media: js.UndefOr[Body] = js.native
   /**
     * Name of the object. Required when the object metadata is not otherwise
     * provided. Overrides the object metadata's name value, if any. For
@@ -91,185 +91,52 @@ trait ParamsResourceObjectsInsert extends StandardParameters {
 
 object ParamsResourceObjectsInsert {
   @scala.inline
-  def apply(): ParamsResourceObjectsInsert = {
+  def apply(
+    alt: String = null,
+    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
+    bucket: String = null,
+    contentEncoding: String = null,
+    fields: String = null,
+    ifGenerationMatch: String = null,
+    ifGenerationNotMatch: String = null,
+    ifMetagenerationMatch: String = null,
+    ifMetagenerationNotMatch: String = null,
+    key: String = null,
+    kmsKeyName: String = null,
+    media: Body = null,
+    name: String = null,
+    oauth_token: String = null,
+    predefinedAcl: String = null,
+    prettyPrint: js.UndefOr[Boolean] = js.undefined,
+    projection: String = null,
+    quotaUser: String = null,
+    requestBody: SchemaObject = null,
+    userIp: String = null,
+    userProject: String = null
+  ): ParamsResourceObjectsInsert = {
     val __obj = js.Dynamic.literal()
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (bucket != null) __obj.updateDynamic("bucket")(bucket.asInstanceOf[js.Any])
+    if (contentEncoding != null) __obj.updateDynamic("contentEncoding")(contentEncoding.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (ifGenerationMatch != null) __obj.updateDynamic("ifGenerationMatch")(ifGenerationMatch.asInstanceOf[js.Any])
+    if (ifGenerationNotMatch != null) __obj.updateDynamic("ifGenerationNotMatch")(ifGenerationNotMatch.asInstanceOf[js.Any])
+    if (ifMetagenerationMatch != null) __obj.updateDynamic("ifMetagenerationMatch")(ifMetagenerationMatch.asInstanceOf[js.Any])
+    if (ifMetagenerationNotMatch != null) __obj.updateDynamic("ifMetagenerationNotMatch")(ifMetagenerationNotMatch.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (kmsKeyName != null) __obj.updateDynamic("kmsKeyName")(kmsKeyName.asInstanceOf[js.Any])
+    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
+    if (predefinedAcl != null) __obj.updateDynamic("predefinedAcl")(predefinedAcl.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.get.asInstanceOf[js.Any])
+    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
+    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
+    if (requestBody != null) __obj.updateDynamic("requestBody")(requestBody.asInstanceOf[js.Any])
+    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
+    if (userProject != null) __obj.updateDynamic("userProject")(userProject.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourceObjectsInsert]
   }
-  @scala.inline
-  implicit class ParamsResourceObjectsInsertOps[Self <: ParamsResourceObjectsInsert] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfGenerationMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifGenerationMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfGenerationMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifGenerationMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfGenerationNotMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifGenerationNotMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfGenerationNotMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifGenerationNotMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfMetagenerationMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifMetagenerationMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfMetagenerationMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifMetagenerationMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfMetagenerationNotMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifMetagenerationNotMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfMetagenerationNotMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifMetagenerationNotMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia(value: AnonBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredefinedAcl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predefinedAcl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredefinedAcl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predefinedAcl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestBody(value: SchemaObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserProject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

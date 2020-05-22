@@ -1,54 +1,38 @@
 package typingsSlinky.reactNativeElements.mod
 
+import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TextStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HeaderIcon
   extends IconObject
-     with HeaderSubComponent {
-  var icon: js.UndefOr[String] = js.native
-  var text: js.UndefOr[String] = js.native
+     with _HeaderSubComponent {
+  var icon: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
 }
 
 object HeaderIcon {
   @scala.inline
-  def apply(): HeaderIcon = {
+  def apply(
+    color: String = null,
+    icon: String = null,
+    name: String = null,
+    size: js.UndefOr[Double] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    text: String = null,
+    `type`: IconType = null
+  ): HeaderIcon = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderIcon]
   }
-  @scala.inline
-  implicit class HeaderIconOps[Self <: HeaderIcon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

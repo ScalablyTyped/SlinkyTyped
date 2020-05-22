@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A struct to keep information of an element's attribute. */
-@js.native
 trait Attribute extends js.Object {
   /** the attribute name */
-  var Name: String = js.native
+  var Name: String
   /** the attribute namespace URL */
-  var NamespaceURL: String = js.native
+  var NamespaceURL: String
   /** the attribute value */
-  var Value: String = js.native
+  var Value: String
 }
 
 object Attribute {
@@ -21,31 +20,5 @@ object Attribute {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], NamespaceURL = NamespaceURL.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Attribute]
   }
-  @scala.inline
-  implicit class AttributeOps[Self <: Attribute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespaceURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NamespaceURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -15,15 +15,18 @@ trait ListenerTls extends js.Object {
     
     
     
-    STRICT – Listener only accepts connections with TLS enabled. 
+    STRICT – Listener only accepts connections with TLS
+    enabled. 
     
     
     
-    PERMISSIVE – Listener accepts connections with or without TLS enabled.
+    PERMISSIVE – Listener accepts connections with or
+    without TLS enabled.
     
     
     
-    DISABLED –  Listener only accepts connections without TLS. 
+    DISABLED – Listener only accepts connections without
+    TLS. 
     
     
     */
@@ -36,25 +39,5 @@ object ListenerTls {
     val __obj = js.Dynamic.literal(certificate = certificate.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerTls]
   }
-  @scala.inline
-  implicit class ListenerTlsOps[Self <: ListenerTls] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificate(value: ListenerTlsCertificate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMode(value: ListenerTlsMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

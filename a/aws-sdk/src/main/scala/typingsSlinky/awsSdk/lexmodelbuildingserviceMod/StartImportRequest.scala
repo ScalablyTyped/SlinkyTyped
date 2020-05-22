@@ -26,53 +26,10 @@ trait StartImportRequest extends js.Object {
 
 object StartImportRequest {
   @scala.inline
-  def apply(mergeStrategy: MergeStrategy, payload: _Blob, resourceType: ResourceType): StartImportRequest = {
+  def apply(mergeStrategy: MergeStrategy, payload: _Blob, resourceType: ResourceType, tags: TagList = null): StartImportRequest = {
     val __obj = js.Dynamic.literal(mergeStrategy = mergeStrategy.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartImportRequest]
   }
-  @scala.inline
-  implicit class StartImportRequestOps[Self <: StartImportRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMergeStrategy(value: MergeStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayloadUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayload(value: _Blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

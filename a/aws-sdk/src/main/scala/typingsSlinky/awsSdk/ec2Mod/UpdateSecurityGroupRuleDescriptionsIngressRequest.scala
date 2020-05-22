@@ -26,59 +26,17 @@ trait UpdateSecurityGroupRuleDescriptionsIngressRequest extends js.Object {
 
 object UpdateSecurityGroupRuleDescriptionsIngressRequest {
   @scala.inline
-  def apply(IpPermissions: IpPermissionList): UpdateSecurityGroupRuleDescriptionsIngressRequest = {
+  def apply(
+    IpPermissions: IpPermissionList,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    GroupId: SecurityGroupId = null,
+    GroupName: SecurityGroupName = null
+  ): UpdateSecurityGroupRuleDescriptionsIngressRequest = {
     val __obj = js.Dynamic.literal(IpPermissions = IpPermissions.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (GroupId != null) __obj.updateDynamic("GroupId")(GroupId.asInstanceOf[js.Any])
+    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSecurityGroupRuleDescriptionsIngressRequest]
   }
-  @scala.inline
-  implicit class UpdateSecurityGroupRuleDescriptionsIngressRequestOps[Self <: UpdateSecurityGroupRuleDescriptionsIngressRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIpPermissions(value: IpPermissionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupId(value: SecurityGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: SecurityGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

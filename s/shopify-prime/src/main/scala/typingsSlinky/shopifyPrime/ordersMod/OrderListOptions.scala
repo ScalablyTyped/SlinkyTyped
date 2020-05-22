@@ -1,13 +1,15 @@
 package typingsSlinky.shopifyPrime.ordersMod
 
+import typingsSlinky.shopifyPrime.financialStatusMod.FinancialStatus
+import typingsSlinky.shopifyPrime.fulfillmentStatusMod.FulfillmentStatus
 import typingsSlinky.shopifyPrime.optionsBaseMod.FieldOptions
 import typingsSlinky.shopifyPrime.optionsBaseMod.ListOptions
 import typingsSlinky.shopifyPrime.optionsBaseMod.ProcessedOptions
+import typingsSlinky.shopifyPrime.orderStatusMod.OrderStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrderListOptions
   extends ListOptions
      with FieldOptions
@@ -16,34 +18,43 @@ trait OrderListOptions
   /**
     * A comma-separated list of order ids.
     */
-  var ids: js.UndefOr[String] = js.native
+  var ids: js.UndefOr[String] = js.undefined
 }
 
 object OrderListOptions {
   @scala.inline
-  def apply(): OrderListOptions = {
+  def apply(
+    created_at_max: String = null,
+    created_at_min: String = null,
+    fields: String = null,
+    financial_status: FinancialStatus = null,
+    fulfillment_status: FulfillmentStatus = null,
+    ids: String = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    page: js.UndefOr[Double] = js.undefined,
+    processed_at_max: String = null,
+    processed_at_min: String = null,
+    since_id: js.UndefOr[Double] = js.undefined,
+    status: OrderStatus = null,
+    updated_at_max: String = null,
+    updated_at_min: String = null
+  ): OrderListOptions = {
     val __obj = js.Dynamic.literal()
+    if (created_at_max != null) __obj.updateDynamic("created_at_max")(created_at_max.asInstanceOf[js.Any])
+    if (created_at_min != null) __obj.updateDynamic("created_at_min")(created_at_min.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (financial_status != null) __obj.updateDynamic("financial_status")(financial_status.asInstanceOf[js.Any])
+    if (fulfillment_status != null) __obj.updateDynamic("fulfillment_status")(fulfillment_status.asInstanceOf[js.Any])
+    if (ids != null) __obj.updateDynamic("ids")(ids.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (processed_at_max != null) __obj.updateDynamic("processed_at_max")(processed_at_max.asInstanceOf[js.Any])
+    if (processed_at_min != null) __obj.updateDynamic("processed_at_min")(processed_at_min.asInstanceOf[js.Any])
+    if (!js.isUndefined(since_id)) __obj.updateDynamic("since_id")(since_id.get.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (updated_at_max != null) __obj.updateDynamic("updated_at_max")(updated_at_max.asInstanceOf[js.Any])
+    if (updated_at_min != null) __obj.updateDynamic("updated_at_min")(updated_at_min.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderListOptions]
   }
-  @scala.inline
-  implicit class OrderListOptionsOps[Self <: OrderListOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,32 +9,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SocketTask extends js.Object {
   /**
     * 关闭WebSocket连接
     */
-  def close(param: SocketCloseParams): Unit = js.native
+  def close(param: SocketCloseParams): Unit
   /**
     * 监听WebSocket 连接关闭事件
     */
-  def onClose(callback: js.Function0[Unit]): Unit = js.native
+  def onClose(callback: js.Function0[Unit]): Unit
   /**
     * 监听WebSocket 错误事件
     */
-  def onError(callback: SocketErrorCallback): Unit = js.native
+  def onError(callback: SocketErrorCallback): Unit
   /**
     * 监听WebSocket 接受到服务器的消息事件
     */
-  def onMessage(callback: SocketMessageCallback): Unit = js.native
+  def onMessage(callback: SocketMessageCallback): Unit
   /**
     * 监听WebSocket 连接打开事件
     */
-  def onOpen(callback: SocketOpenCallback): Unit = js.native
+  def onOpen(callback: SocketOpenCallback): Unit
   /**
     * 通过WebSocket发送数据
     */
-  def send(param: SocketSendParams): Unit = js.native
+  def send(param: SocketSendParams): Unit
 }
 
 object SocketTask {
@@ -50,49 +49,5 @@ object SocketTask {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction1(close), onClose = js.Any.fromFunction1(onClose), onError = js.Any.fromFunction1(onError), onMessage = js.Any.fromFunction1(onMessage), onOpen = js.Any.fromFunction1(onOpen), send = js.Any.fromFunction1(send))
     __obj.asInstanceOf[SocketTask]
   }
-  @scala.inline
-  implicit class SocketTaskOps[Self <: SocketTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: SocketCloseParams => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnError(value: SocketErrorCallback => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnMessage(value: SocketMessageCallback => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnOpen(value: SocketOpenCallback => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSend(value: SocketSendParams => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,10 @@ trait ADMChannelRequest extends js.Object {
 
 object ADMChannelRequest {
   @scala.inline
-  def apply(ClientId: string, ClientSecret: string): ADMChannelRequest = {
+  def apply(ClientId: string, ClientSecret: string, Enabled: js.UndefOr[boolean] = js.undefined): ADMChannelRequest = {
     val __obj = js.Dynamic.literal(ClientId = ClientId.asInstanceOf[js.Any], ClientSecret = ClientSecret.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ADMChannelRequest]
   }
-  @scala.inline
-  implicit class ADMChannelRequestOps[Self <: ADMChannelRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientSecret(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

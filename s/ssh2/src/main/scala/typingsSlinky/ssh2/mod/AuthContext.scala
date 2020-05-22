@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait AuthContext extends js.Object
 
-object AuthContext {
-  @scala.inline
-  implicit def apply(value: HostbasedAuthContext): AuthContext = value.asInstanceOf[AuthContext]
-  @scala.inline
-  implicit def apply(value: KeyboardAuthContext): AuthContext = value.asInstanceOf[AuthContext]
-  @scala.inline
-  implicit def apply(value: NoneAuthContext): AuthContext = value.asInstanceOf[AuthContext]
-  @scala.inline
-  implicit def apply(value: PasswordAuthContext): AuthContext = value.asInstanceOf[AuthContext]
-  @scala.inline
-  implicit def apply(value: PublicKeyAuthContext): AuthContext = value.asInstanceOf[AuthContext]
-}
-

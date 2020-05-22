@@ -7,243 +7,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IOpDef extends js.Object {
   /** OpDef allowsUninitializedInput */
-  var allowsUninitializedInput: js.UndefOr[Boolean | Null] = js.native
+  var allowsUninitializedInput: js.UndefOr[Boolean | Null] = js.undefined
   /** OpDef attr */
-  var attr: js.UndefOr[js.Array[IAttrDef] | Null] = js.native
+  var attr: js.UndefOr[js.Array[IAttrDef] | Null] = js.undefined
   /** OpDef deprecation */
-  var deprecation: js.UndefOr[IOpDeprecation | Null] = js.native
+  var deprecation: js.UndefOr[IOpDeprecation | Null] = js.undefined
   /** OpDef description */
-  var description: js.UndefOr[String | Null] = js.native
+  var description: js.UndefOr[String | Null] = js.undefined
   /** OpDef inputArg */
-  var inputArg: js.UndefOr[js.Array[IArgDef] | Null] = js.native
+  var inputArg: js.UndefOr[js.Array[IArgDef] | Null] = js.undefined
   /** OpDef isAggregate */
-  var isAggregate: js.UndefOr[Boolean | Null] = js.native
+  var isAggregate: js.UndefOr[Boolean | Null] = js.undefined
   /** OpDef isCommutative */
-  var isCommutative: js.UndefOr[Boolean | Null] = js.native
+  var isCommutative: js.UndefOr[Boolean | Null] = js.undefined
   /** OpDef isStateful */
-  var isStateful: js.UndefOr[Boolean | Null] = js.native
+  var isStateful: js.UndefOr[Boolean | Null] = js.undefined
   /** OpDef name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
   /** OpDef outputArg */
-  var outputArg: js.UndefOr[js.Array[IArgDef] | Null] = js.native
+  var outputArg: js.UndefOr[js.Array[IArgDef] | Null] = js.undefined
   /** OpDef summary */
-  var summary: js.UndefOr[String | Null] = js.native
+  var summary: js.UndefOr[String | Null] = js.undefined
 }
 
 object IOpDef {
   @scala.inline
-  def apply(): IOpDef = {
+  def apply(
+    allowsUninitializedInput: js.UndefOr[Null | Boolean] = js.undefined,
+    attr: js.UndefOr[Null | js.Array[IAttrDef]] = js.undefined,
+    deprecation: js.UndefOr[Null | IOpDeprecation] = js.undefined,
+    description: js.UndefOr[Null | String] = js.undefined,
+    inputArg: js.UndefOr[Null | js.Array[IArgDef]] = js.undefined,
+    isAggregate: js.UndefOr[Null | Boolean] = js.undefined,
+    isCommutative: js.UndefOr[Null | Boolean] = js.undefined,
+    isStateful: js.UndefOr[Null | Boolean] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined,
+    outputArg: js.UndefOr[Null | js.Array[IArgDef]] = js.undefined,
+    summary: js.UndefOr[Null | String] = js.undefined
+  ): IOpDef = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowsUninitializedInput)) __obj.updateDynamic("allowsUninitializedInput")(allowsUninitializedInput.asInstanceOf[js.Any])
+    if (!js.isUndefined(attr)) __obj.updateDynamic("attr")(attr.asInstanceOf[js.Any])
+    if (!js.isUndefined(deprecation)) __obj.updateDynamic("deprecation")(deprecation.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputArg)) __obj.updateDynamic("inputArg")(inputArg.asInstanceOf[js.Any])
+    if (!js.isUndefined(isAggregate)) __obj.updateDynamic("isAggregate")(isAggregate.asInstanceOf[js.Any])
+    if (!js.isUndefined(isCommutative)) __obj.updateDynamic("isCommutative")(isCommutative.asInstanceOf[js.Any])
+    if (!js.isUndefined(isStateful)) __obj.updateDynamic("isStateful")(isStateful.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputArg)) __obj.updateDynamic("outputArg")(outputArg.asInstanceOf[js.Any])
+    if (!js.isUndefined(summary)) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOpDef]
   }
-  @scala.inline
-  implicit class IOpDefOps[Self <: IOpDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowsUninitializedInput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowsUninitializedInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowsUninitializedInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowsUninitializedInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowsUninitializedInputNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowsUninitializedInput")(null)
-        ret
-    }
-    @scala.inline
-    def withAttr(value: js.Array[IAttrDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttrNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(null)
-        ret
-    }
-    @scala.inline
-    def withDeprecation(value: IOpDeprecation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeprecationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecation")(null)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescriptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(null)
-        ret
-    }
-    @scala.inline
-    def withInputArg(value: js.Array[IArgDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputArg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputArg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputArg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputArgNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputArg")(null)
-        ret
-    }
-    @scala.inline
-    def withIsAggregate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAggregate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAggregate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAggregate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAggregateNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAggregate")(null)
-        ret
-    }
-    @scala.inline
-    def withIsCommutative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCommutative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCommutative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCommutative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCommutativeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCommutative")(null)
-        ret
-    }
-    @scala.inline
-    def withIsStateful(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStateful")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsStateful: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStateful")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsStatefulNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStateful")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withOutputArg(value: js.Array[IArgDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputArg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputArgNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArg")(null)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(null)
-        ret
-    }
-  }
-  
 }
 

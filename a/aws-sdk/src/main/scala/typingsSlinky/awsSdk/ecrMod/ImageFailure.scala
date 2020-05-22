@@ -22,53 +22,16 @@ trait ImageFailure extends js.Object {
 
 object ImageFailure {
   @scala.inline
-  def apply(): ImageFailure = {
+  def apply(
+    failureCode: ImageFailureCode = null,
+    failureReason: ImageFailureReason = null,
+    imageId: ImageIdentifier = null
+  ): ImageFailure = {
     val __obj = js.Dynamic.literal()
+    if (failureCode != null) __obj.updateDynamic("failureCode")(failureCode.asInstanceOf[js.Any])
+    if (failureReason != null) __obj.updateDynamic("failureReason")(failureReason.asInstanceOf[js.Any])
+    if (imageId != null) __obj.updateDynamic("imageId")(imageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageFailure]
   }
-  @scala.inline
-  implicit class ImageFailureOps[Self <: ImageFailure] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailureCode(value: ImageFailureCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: ImageFailureReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageId(value: ImageIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

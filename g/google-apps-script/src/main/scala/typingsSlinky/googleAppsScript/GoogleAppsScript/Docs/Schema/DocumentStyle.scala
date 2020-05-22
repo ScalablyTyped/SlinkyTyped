@@ -4,218 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocumentStyle extends js.Object {
-  var background: js.UndefOr[Background] = js.native
-  var defaultFooterId: js.UndefOr[String] = js.native
-  var defaultHeaderId: js.UndefOr[String] = js.native
-  var evenPageFooterId: js.UndefOr[String] = js.native
-  var evenPageHeaderId: js.UndefOr[String] = js.native
-  var firstPageFooterId: js.UndefOr[String] = js.native
-  var firstPageHeaderId: js.UndefOr[String] = js.native
-  var marginBottom: js.UndefOr[Dimension] = js.native
-  var marginLeft: js.UndefOr[Dimension] = js.native
-  var marginRight: js.UndefOr[Dimension] = js.native
-  var marginTop: js.UndefOr[Dimension] = js.native
-  var pageNumberStart: js.UndefOr[Double] = js.native
-  var pageSize: js.UndefOr[Size] = js.native
-  var useEvenPageHeaderFooter: js.UndefOr[Boolean] = js.native
-  var useFirstPageHeaderFooter: js.UndefOr[Boolean] = js.native
+  var background: js.UndefOr[Background] = js.undefined
+  var defaultFooterId: js.UndefOr[String] = js.undefined
+  var defaultHeaderId: js.UndefOr[String] = js.undefined
+  var evenPageFooterId: js.UndefOr[String] = js.undefined
+  var evenPageHeaderId: js.UndefOr[String] = js.undefined
+  var firstPageFooterId: js.UndefOr[String] = js.undefined
+  var firstPageHeaderId: js.UndefOr[String] = js.undefined
+  var marginBottom: js.UndefOr[Dimension] = js.undefined
+  var marginLeft: js.UndefOr[Dimension] = js.undefined
+  var marginRight: js.UndefOr[Dimension] = js.undefined
+  var marginTop: js.UndefOr[Dimension] = js.undefined
+  var pageNumberStart: js.UndefOr[Double] = js.undefined
+  var pageSize: js.UndefOr[Size] = js.undefined
+  var useEvenPageHeaderFooter: js.UndefOr[Boolean] = js.undefined
+  var useFirstPageHeaderFooter: js.UndefOr[Boolean] = js.undefined
 }
 
 object DocumentStyle {
   @scala.inline
-  def apply(): DocumentStyle = {
+  def apply(
+    background: Background = null,
+    defaultFooterId: String = null,
+    defaultHeaderId: String = null,
+    evenPageFooterId: String = null,
+    evenPageHeaderId: String = null,
+    firstPageFooterId: String = null,
+    firstPageHeaderId: String = null,
+    marginBottom: Dimension = null,
+    marginLeft: Dimension = null,
+    marginRight: Dimension = null,
+    marginTop: Dimension = null,
+    pageNumberStart: js.UndefOr[Double] = js.undefined,
+    pageSize: Size = null,
+    useEvenPageHeaderFooter: js.UndefOr[Boolean] = js.undefined,
+    useFirstPageHeaderFooter: js.UndefOr[Boolean] = js.undefined
+  ): DocumentStyle = {
     val __obj = js.Dynamic.literal()
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (defaultFooterId != null) __obj.updateDynamic("defaultFooterId")(defaultFooterId.asInstanceOf[js.Any])
+    if (defaultHeaderId != null) __obj.updateDynamic("defaultHeaderId")(defaultHeaderId.asInstanceOf[js.Any])
+    if (evenPageFooterId != null) __obj.updateDynamic("evenPageFooterId")(evenPageFooterId.asInstanceOf[js.Any])
+    if (evenPageHeaderId != null) __obj.updateDynamic("evenPageHeaderId")(evenPageHeaderId.asInstanceOf[js.Any])
+    if (firstPageFooterId != null) __obj.updateDynamic("firstPageFooterId")(firstPageFooterId.asInstanceOf[js.Any])
+    if (firstPageHeaderId != null) __obj.updateDynamic("firstPageHeaderId")(firstPageHeaderId.asInstanceOf[js.Any])
+    if (marginBottom != null) __obj.updateDynamic("marginBottom")(marginBottom.asInstanceOf[js.Any])
+    if (marginLeft != null) __obj.updateDynamic("marginLeft")(marginLeft.asInstanceOf[js.Any])
+    if (marginRight != null) __obj.updateDynamic("marginRight")(marginRight.asInstanceOf[js.Any])
+    if (marginTop != null) __obj.updateDynamic("marginTop")(marginTop.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageNumberStart)) __obj.updateDynamic("pageNumberStart")(pageNumberStart.get.asInstanceOf[js.Any])
+    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(useEvenPageHeaderFooter)) __obj.updateDynamic("useEvenPageHeaderFooter")(useEvenPageHeaderFooter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useFirstPageHeaderFooter)) __obj.updateDynamic("useFirstPageHeaderFooter")(useFirstPageHeaderFooter.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentStyle]
   }
-  @scala.inline
-  implicit class DocumentStyleOps[Self <: DocumentStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackground(value: Background): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultFooterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFooterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultFooterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFooterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultHeaderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeaderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultHeaderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeaderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvenPageFooterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPageFooterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvenPageFooterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPageFooterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvenPageHeaderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPageHeaderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvenPageHeaderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPageHeaderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstPageFooterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageFooterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPageFooterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageFooterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstPageHeaderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageHeaderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPageHeaderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageHeaderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginBottom(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginLeft(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginRight(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginTop(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageNumberStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumberStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageNumberStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumberStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEvenPageHeaderFooter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEvenPageHeaderFooter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEvenPageHeaderFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEvenPageHeaderFooter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseFirstPageHeaderFooter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFirstPageHeaderFooter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseFirstPageHeaderFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFirstPageHeaderFooter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

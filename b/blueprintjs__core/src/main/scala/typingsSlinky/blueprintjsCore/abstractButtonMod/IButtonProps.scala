@@ -1,26 +1,29 @@
 package typingsSlinky.blueprintjsCore.abstractButtonMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.facade.ReactElement
+import slinky.core.TagMod
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.blueprintjsCore.alignmentMod.Alignment
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.button
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.reset
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.submit
+import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.IActionProps
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefCallback
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IButtonProps extends IActionProps {
   /**
     * If set to `true`, the button will display in an active state.
     * This is equivalent to setting `className={Classes.ACTIVE}`.
     * @default false
     */
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /**
     * Text alignment within button. By default, icons and text will be centered
     * within the button. Passing `"left"` or `"right"` will align the button
@@ -28,192 +31,75 @@ trait IButtonProps extends IActionProps {
     * `"center"` will center the text and icons together.
     * @default Alignment.CENTER
     */
-  var alignText: js.UndefOr[Alignment] = js.native
-  /** A ref handler that receives the native HTML element backing this component. */
-  var elementRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, _]] = js.native
+  var alignText: js.UndefOr[Alignment] = js.undefined
+  /** A ref handler or a ref object that receives the native HTML element backing this component. */
+  var elementRef: js.UndefOr[IRefCallback[HTMLElement] | IRefObject[HTMLElement]] = js.undefined
   /** Whether this button should expand to fill its container. */
-  var fill: js.UndefOr[Boolean] = js.native
+  var fill: js.UndefOr[Boolean] = js.undefined
   /** Whether this button should use large styles. */
-  var large: js.UndefOr[Boolean] = js.native
+  var large: js.UndefOr[Boolean] = js.undefined
   /**
     * If set to `true`, the button will display a centered loading spinner instead of its contents.
     * The width of the button is not affected by the value of this prop.
     * @default false
     */
-  var loading: js.UndefOr[Boolean] = js.native
+  var loading: js.UndefOr[Boolean] = js.undefined
   /** Whether this button should use minimal styles. */
-  var minimal: js.UndefOr[Boolean] = js.native
+  var minimal: js.UndefOr[Boolean] = js.undefined
   /** Whether this button should use outlined styles. */
-  var outlined: js.UndefOr[Boolean] = js.native
+  var outlined: js.UndefOr[Boolean] = js.undefined
   /** Name of a Blueprint UI icon (or an icon element) to render after the text. */
-  var rightIcon: js.UndefOr[IconName | MaybeElement] = js.native
+  var rightIcon: js.UndefOr[IconName | MaybeElement] = js.undefined
   /** Whether this button should use small styles. */
-  var small: js.UndefOr[Boolean] = js.native
+  var small: js.UndefOr[Boolean] = js.undefined
   /**
     * HTML `type` attribute of button. Accepted values are `"button"`, `"submit"`, and `"reset"`.
     * Note that this prop has no effect on `AnchorButton`; it only affects `Button`.
     * @default "button"
     */
-  var `type`: js.UndefOr[submit | reset | button] = js.native
+  var `type`: js.UndefOr[submit | reset | button] = js.undefined
 }
 
 object IButtonProps {
   @scala.inline
-  def apply(): IButtonProps = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    alignText: Alignment = null,
+    className: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementRef: IRefCallback[HTMLElement] | IRefObject[HTMLElement] = null,
+    fill: js.UndefOr[Boolean] = js.undefined,
+    icon: js.UndefOr[Null | IconName | MaybeElement] = js.undefined,
+    intent: Intent = null,
+    large: js.UndefOr[Boolean] = js.undefined,
+    loading: js.UndefOr[Boolean] = js.undefined,
+    minimal: js.UndefOr[Boolean] = js.undefined,
+    onClick: /* event */ SyntheticMouseEvent[HTMLElement] => Unit = null,
+    outlined: js.UndefOr[Boolean] = js.undefined,
+    rightIcon: js.UndefOr[Null | IconName | MaybeElement] = js.undefined,
+    small: js.UndefOr[Boolean] = js.undefined,
+    text: TagMod[Any] = null,
+    `type`: submit | reset | button = null
+  ): IButtonProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (alignText != null) __obj.updateDynamic("alignText")(alignText.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementRef != null) __obj.updateDynamic("elementRef")(elementRef.asInstanceOf[js.Any])
+    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(icon)) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
+    if (!js.isUndefined(large)) __obj.updateDynamic("large")(large.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimal)) __obj.updateDynamic("minimal")(minimal.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (!js.isUndefined(outlined)) __obj.updateDynamic("outlined")(outlined.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rightIcon)) __obj.updateDynamic("rightIcon")(rightIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(small)) __obj.updateDynamic("small")(small.get.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IButtonProps]
   }
-  @scala.inline
-  implicit class IButtonPropsOps[Self <: IButtonProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignText(value: Alignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementRef(value: /* ref */ HTMLElement | Null => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutElementRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLarge(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLarge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlined(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlined")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlined: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlined")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRightIcon(value: IconName | MaybeElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightIconNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(null)
-        ret
-    }
-    @scala.inline
-    def withSmall(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: submit | reset | button): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

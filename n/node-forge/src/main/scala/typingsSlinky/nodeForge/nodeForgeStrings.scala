@@ -2,8 +2,8 @@ package typingsSlinky.nodeForge
 
 import typingsSlinky.nodeForge.mod.Encoding
 import typingsSlinky.nodeForge.mod.cipher.Algorithm
-import typingsSlinky.nodeForge.mod.pki.rsa.EncryptionScheme
-import typingsSlinky.nodeForge.mod.pki.rsa.SignatureScheme
+import typingsSlinky.nodeForge.mod.pki.rsa._EncryptionScheme
+import typingsSlinky.nodeForge.mod.pki.rsa._SignatureScheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,23 +44,23 @@ object nodeForgeStrings {
   
   @js.native
   sealed trait NONE
-    extends EncryptionScheme
-       with SignatureScheme
+    extends _EncryptionScheme
+       with _SignatureScheme
   
   @js.native
-  sealed trait RAW extends EncryptionScheme
+  sealed trait RAW extends _EncryptionScheme
   
   @js.native
-  sealed trait `RSA-OAEP` extends EncryptionScheme
+  sealed trait `RSA-OAEP` extends _EncryptionScheme
   
   @js.native
-  sealed trait `RSAES-PKCS1-V1_5` extends EncryptionScheme
+  sealed trait `RSAES-PKCS1-V1_5` extends _EncryptionScheme
   
   @js.native
   sealed trait RSAPublicKey extends js.Object
   
   @js.native
-  sealed trait `RSASSA-PKCS1-V1_5` extends SignatureScheme
+  sealed trait `RSASSA-PKCS1-V1_5` extends _SignatureScheme
   
   @js.native
   sealed trait SubjectPublicKeyInfo extends js.Object

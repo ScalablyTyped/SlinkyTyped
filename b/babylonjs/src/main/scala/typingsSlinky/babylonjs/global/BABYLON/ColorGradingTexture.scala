@@ -16,6 +16,11 @@ class ColorGradingTexture protected ()
     * @param scene The scene the texture will be used in
     */
   def this(url: String, scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

@@ -4,173 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RowDragEventArgs extends js.Object {
   /** Returns that we can drop over that record or not.
     */
-  var canDrop: js.UndefOr[Boolean] = js.native
+  var canDrop: js.UndefOr[Boolean] = js.undefined
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Returns the row which we start to drag.
     */
-  var draggedRow: js.UndefOr[js.Any] = js.native
+  var draggedRow: js.UndefOr[js.Any] = js.undefined
   /** Returns the row index which we start to drag.
     */
-  var draggedRowIndex: js.UndefOr[Double] = js.native
+  var draggedRowIndex: js.UndefOr[Double] = js.undefined
   /** Returns the drop position details such as insertAbove,insertBelow,insertAsChild and invalidPosition
     */
-  var dropPosition: js.UndefOr[String] = js.native
+  var dropPosition: js.UndefOr[String] = js.undefined
   /** Returns the TreeGrid model.
     */
-  var model: js.UndefOr[js.Any] = js.native
+  var model: js.UndefOr[js.Any] = js.undefined
   /** Returns request type.
     */
-  var requestType: js.UndefOr[String] = js.native
+  var requestType: js.UndefOr[String] = js.undefined
   /** Returns the row on which we are dragging.
     */
-  var targetRow: js.UndefOr[js.Any] = js.native
+  var targetRow: js.UndefOr[js.Any] = js.undefined
   /** Returns the row index on which we are dragging.
     */
-  var targetRowIndex: js.UndefOr[Double] = js.native
+  var targetRowIndex: js.UndefOr[Double] = js.undefined
   /** Returns the name of the event.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object RowDragEventArgs {
   @scala.inline
-  def apply(): RowDragEventArgs = {
+  def apply(
+    canDrop: js.UndefOr[Boolean] = js.undefined,
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    draggedRow: js.Any = null,
+    draggedRowIndex: js.UndefOr[Double] = js.undefined,
+    dropPosition: String = null,
+    model: js.Any = null,
+    requestType: String = null,
+    targetRow: js.Any = null,
+    targetRowIndex: js.UndefOr[Double] = js.undefined,
+    `type`: String = null
+  ): RowDragEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(canDrop)) __obj.updateDynamic("canDrop")(canDrop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (draggedRow != null) __obj.updateDynamic("draggedRow")(draggedRow.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggedRowIndex)) __obj.updateDynamic("draggedRowIndex")(draggedRowIndex.get.asInstanceOf[js.Any])
+    if (dropPosition != null) __obj.updateDynamic("dropPosition")(dropPosition.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (requestType != null) __obj.updateDynamic("requestType")(requestType.asInstanceOf[js.Any])
+    if (targetRow != null) __obj.updateDynamic("targetRow")(targetRow.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetRowIndex)) __obj.updateDynamic("targetRowIndex")(targetRowIndex.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowDragEventArgs]
   }
-  @scala.inline
-  implicit class RowDragEventArgsOps[Self <: RowDragEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanDrop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggedRow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggedRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggedRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedRowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggedRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedRowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetRow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

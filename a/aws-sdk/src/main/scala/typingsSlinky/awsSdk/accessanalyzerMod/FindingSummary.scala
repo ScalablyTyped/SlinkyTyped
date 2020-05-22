@@ -43,9 +43,17 @@ trait FindingSummary extends js.Object {
     */
   var resource: js.UndefOr[String] = js.native
   /**
+    * The AWS account ID that owns the resource.
+    */
+  var resourceOwnerAccount: String = js.native
+  /**
     * The type of the resource that the external principal has access to.
     */
   var resourceType: ResourceType = js.native
+  /**
+    * The sources of the finding. This indicates how the access that generated the finding is granted. It is populated for Amazon S3 bucket findings.
+    */
+  var sources: js.UndefOr[FindingSourceList] = js.native
   /**
     * The status of the finding.
     */
@@ -63,122 +71,25 @@ object FindingSummary {
     condition: ConditionKeyMap,
     createdAt: js.Date,
     id: FindingId,
+    resourceOwnerAccount: String,
     resourceType: ResourceType,
     status: FindingStatus,
-    updatedAt: js.Date
+    updatedAt: js.Date,
+    action: ActionList = null,
+    error: String = null,
+    isPublic: js.UndefOr[Boolean] = js.undefined,
+    principal: PrincipalMap = null,
+    resource: String = null,
+    sources: FindingSourceList = null
   ): FindingSummary = {
-    val __obj = js.Dynamic.literal(analyzedAt = analyzedAt.asInstanceOf[js.Any], condition = condition.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], updatedAt = updatedAt.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(analyzedAt = analyzedAt.asInstanceOf[js.Any], condition = condition.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], resourceOwnerAccount = resourceOwnerAccount.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], updatedAt = updatedAt.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPublic)) __obj.updateDynamic("isPublic")(isPublic.get.asInstanceOf[js.Any])
+    if (principal != null) __obj.updateDynamic("principal")(principal.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (sources != null) __obj.updateDynamic("sources")(sources.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindingSummary]
   }
-  @scala.inline
-  implicit class FindingSummaryOps[Self <: FindingSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalyzedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCondition(value: ConditionKeyMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: FindingId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: FindingStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAction(value: ActionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPublic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPublic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPublic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPublic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrincipal(value: PrincipalMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

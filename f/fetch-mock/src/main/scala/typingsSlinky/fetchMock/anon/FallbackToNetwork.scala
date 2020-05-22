@@ -12,13 +12,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FallbackToNetwork extends js.Object {
   /**
     * Reference to the Headers constructor of a custom fetch
     * implementation.
     */
-  var Headers: js.UndefOr[Instantiable0[org.scalajs.dom.experimental.Headers]] = js.native
+  var Headers: js.UndefOr[Instantiable0[org.scalajs.dom.experimental.Headers]] = js.undefined
   /**
     * Reference to the Promise constructor of a custom Promise
     * implementation.
@@ -28,7 +27,7 @@ trait FallbackToNetwork extends js.Object {
       /* executor */ js.Function2[/* resolve */ js.Function0[Unit], /* reject */ js.Function0[Unit], Unit], 
       js.Promise[Response]
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Reference to the Request constructor of a custom fetch
     * implementation.
@@ -39,12 +38,12 @@ trait FallbackToNetwork extends js.Object {
       js.UndefOr[/* init */ RequestInit], 
       org.scalajs.dom.experimental.Request
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Reference to the Response constructor of a custom fetch
     * implementation.
     */
-  var Response: js.UndefOr[Instantiable0[org.scalajs.dom.experimental.Response]] = js.native
+  var Response: js.UndefOr[Instantiable0[org.scalajs.dom.experimental.Response]] = js.undefined
   /**
     * - true: Unhandled calls fall through to the network
     * - false: Unhandled calls throw an error
@@ -52,7 +51,7 @@ trait FallbackToNetwork extends js.Object {
     * disabling fetch-mock.
     * @default false
     */
-  var fallbackToNetwork: js.UndefOr[Boolean | always] = js.native
+  var fallbackToNetwork: js.UndefOr[Boolean | always] = js.undefined
   /**
     * Reference to a custom fetch implementation.
     */
@@ -62,12 +61,12 @@ trait FallbackToNetwork extends js.Object {
       /* init */ js.UndefOr[RequestInit], 
       js.Promise[Response]
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Automatically sets a content-length header on each response.
     * @default true
     */
-  var includeContentLength: js.UndefOr[Boolean] = js.native
+  var includeContentLength: js.UndefOr[Boolean] = js.undefined
   /**
     * Determines behaviour if a new route has the same name (or
     * inferred name) as an existing one
@@ -76,7 +75,7 @@ trait FallbackToNetwork extends js.Object {
     * - false: Appends the new route to the list of routes
     * @default undefined
     */
-  var overwriteRoutes: js.UndefOr[Boolean] = js.native
+  var overwriteRoutes: js.UndefOr[Boolean] = js.undefined
   /**
     * Convert objects into JSON before delivering as stub responses.
     * Can be useful to set to false globally if e.g. dealing with a
@@ -84,155 +83,44 @@ trait FallbackToNetwork extends js.Object {
     * content-type: application/json header.
     * @default true
     */
-  var sendAsJson: js.UndefOr[Boolean] = js.native
+  var sendAsJson: js.UndefOr[Boolean] = js.undefined
   /**
     * Print a warning if any call is caught by a fallback handler (set
     * using the fallbackToNetwork option or catch())
     * @default true
     */
-  var warnOnFallback: js.UndefOr[Boolean] = js.native
+  var warnOnFallback: js.UndefOr[Boolean] = js.undefined
 }
 
 object FallbackToNetwork {
   @scala.inline
-  def apply(): FallbackToNetwork = {
+  def apply(
+    Headers: Instantiable0[Headers] = null,
+    Promise: Instantiable1[
+      /* executor */ js.Function2[/* resolve */ js.Function0[Unit], /* reject */ js.Function0[Unit], Unit], 
+      js.Promise[Response]
+    ] = null,
+    Request: Instantiable2[/* input */ String | Request, js.UndefOr[/* init */ RequestInit], Request] = null,
+    Response: Instantiable0[Response] = null,
+    fallbackToNetwork: Boolean | always = null,
+    fetch: (/* input */ js.UndefOr[String | Request], /* init */ js.UndefOr[RequestInit]) => js.Promise[Response] = null,
+    includeContentLength: js.UndefOr[Boolean] = js.undefined,
+    overwriteRoutes: js.UndefOr[Boolean] = js.undefined,
+    sendAsJson: js.UndefOr[Boolean] = js.undefined,
+    warnOnFallback: js.UndefOr[Boolean] = js.undefined
+  ): FallbackToNetwork = {
     val __obj = js.Dynamic.literal()
+    if (Headers != null) __obj.updateDynamic("Headers")(Headers.asInstanceOf[js.Any])
+    if (Promise != null) __obj.updateDynamic("Promise")(Promise.asInstanceOf[js.Any])
+    if (Request != null) __obj.updateDynamic("Request")(Request.asInstanceOf[js.Any])
+    if (Response != null) __obj.updateDynamic("Response")(Response.asInstanceOf[js.Any])
+    if (fallbackToNetwork != null) __obj.updateDynamic("fallbackToNetwork")(fallbackToNetwork.asInstanceOf[js.Any])
+    if (fetch != null) __obj.updateDynamic("fetch")(js.Any.fromFunction2(fetch))
+    if (!js.isUndefined(includeContentLength)) __obj.updateDynamic("includeContentLength")(includeContentLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overwriteRoutes)) __obj.updateDynamic("overwriteRoutes")(overwriteRoutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sendAsJson)) __obj.updateDynamic("sendAsJson")(sendAsJson.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(warnOnFallback)) __obj.updateDynamic("warnOnFallback")(warnOnFallback.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FallbackToNetwork]
   }
-  @scala.inline
-  implicit class FallbackToNetworkOps[Self <: FallbackToNetwork] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeaders(value: Instantiable0[Headers]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromise(
-      value: Instantiable1[
-          /* executor */ js.Function2[/* resolve */ js.Function0[Unit], /* reject */ js.Function0[Unit], Unit], 
-          js.Promise[Response]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: Instantiable2[/* input */ String | Request, js.UndefOr[/* init */ RequestInit], Request]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse(value: Instantiable0[Response]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackToNetwork(value: Boolean | always): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackToNetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallbackToNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackToNetwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetch(
-      value: (/* input */ js.UndefOr[String | Request], /* init */ js.UndefOr[RequestInit]) => js.Promise[Response]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFetch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeContentLength(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeContentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwriteRoutes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwriteRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteRoutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendAsJson(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendAsJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendAsJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendAsJson")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnOnFallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnOnFallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnOnFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnOnFallback")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

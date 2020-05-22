@@ -26,59 +26,17 @@ trait ListPolicyPrincipalsRequest extends js.Object {
 
 object ListPolicyPrincipalsRequest {
   @scala.inline
-  def apply(policyName: PolicyName): ListPolicyPrincipalsRequest = {
+  def apply(
+    policyName: PolicyName,
+    ascendingOrder: js.UndefOr[AscendingOrder] = js.undefined,
+    marker: Marker = null,
+    pageSize: js.UndefOr[PageSize] = js.undefined
+  ): ListPolicyPrincipalsRequest = {
     val __obj = js.Dynamic.literal(policyName = policyName.asInstanceOf[js.Any])
+    if (!js.isUndefined(ascendingOrder)) __obj.updateDynamic("ascendingOrder")(ascendingOrder.get.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPolicyPrincipalsRequest]
   }
-  @scala.inline
-  implicit class ListPolicyPrincipalsRequestOps[Self <: ListPolicyPrincipalsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyName(value: PolicyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAscendingOrder(value: AscendingOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ascendingOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAscendingOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ascendingOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: PageSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

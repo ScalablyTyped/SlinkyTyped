@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NamespaceDatastore[Value] extends KeytransformDatastore[Value] {
-  var prefix: Key = js.native
+  var prefix: Key
 }
 
 @JSImport("datastore-core", "NamespaceDatastore")

@@ -69,6 +69,13 @@ trait Vector2 extends js.Object {
     */
   def equals(v: Vector2): Boolean = js.native
   /**
+    * Check whether this Vector is approximately equal to a given Vector.
+    * @param v The vector to compare with this Vector.
+    * @param epsilon The tolerance value. Default 0.0001.
+    */
+  def fuzzyEquals(v: Vector2): Boolean = js.native
+  def fuzzyEquals(v: Vector2, epsilon: Double): Boolean = js.native
+  /**
     * Calculate the length (or magnitude) of this Vector.
     */
   def length(): Double = js.native
@@ -85,6 +92,16 @@ trait Vector2 extends js.Object {
     */
   def lerp(src: Vector2): Vector2 = js.native
   def lerp(src: Vector2, t: Double): Vector2 = js.native
+  /**
+    * Limit the length (or magnitude) of this Vector.
+    * @param max The maximum length.
+    */
+  def limit(max: Double): Vector2 = js.native
+  /**
+    * Reflect this Vector across another.
+    * @param axis A vector to reflect across.
+    */
+  def mirror(axis: Vector2): Vector2 = js.native
   /**
     * Perform a component-wise multiplication between this Vector and the given Vector.
     * 
@@ -103,13 +120,27 @@ trait Vector2 extends js.Object {
     */
   def normalize(): Vector2 = js.native
   /**
-    * Right-hand normalize (make unit length) this Vector.
+    * Rotate this Vector to its perpendicular, in the negative direction.
+    */
+  def normalizeLeftHand(): Vector2 = js.native
+  /**
+    * Rotate this Vector to its perpendicular, in the positive direction.
     */
   def normalizeRightHand(): Vector2 = js.native
+  /**
+    * Reflect this Vector off a line defined by a normal.
+    * @param normal A vector perpendicular to the line.
+    */
+  def reflect(normal: Vector2): Vector2 = js.native
   /**
     * Make this Vector the zero vector (0, 0).
     */
   def reset(): Vector2 = js.native
+  /**
+    * Rotate this Vector by an angle amount.
+    * @param delta The angle to rotate by, in radians.
+    */
+  def rotate(delta: Double): Vector2 = js.native
   /**
     * Scale this Vector by the given value.
     * @param value The value to scale this Vector by.
@@ -123,10 +154,19 @@ trait Vector2 extends js.Object {
   def set(x: Double): Vector2 = js.native
   def set(x: Double, y: Double): Vector2 = js.native
   /**
+    * Set the angle of this Vector.
+    * @param angle The angle, in radians.
+    */
+  def setAngle(angle: Double): Vector2 = js.native
+  /**
     * Set the component values of this Vector from a given Vector2Like object.
     * @param obj The object containing the component values to set for this Vector.
     */
   def setFromObject(obj: Vector2Like): Vector2 = js.native
+  /**
+    * Set the length (or magnitude) of this Vector.
+    */
+  def setLength(length: Double): Vector2 = js.native
   /**
     * This method is an alias for `Vector2.set`.
     * @param x The x value to set for this Vector.

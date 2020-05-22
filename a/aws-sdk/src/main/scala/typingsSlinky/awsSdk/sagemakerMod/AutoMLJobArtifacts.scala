@@ -18,41 +18,14 @@ trait AutoMLJobArtifacts extends js.Object {
 
 object AutoMLJobArtifacts {
   @scala.inline
-  def apply(): AutoMLJobArtifacts = {
+  def apply(
+    CandidateDefinitionNotebookLocation: CandidateDefinitionNotebookLocation = null,
+    DataExplorationNotebookLocation: DataExplorationNotebookLocation = null
+  ): AutoMLJobArtifacts = {
     val __obj = js.Dynamic.literal()
+    if (CandidateDefinitionNotebookLocation != null) __obj.updateDynamic("CandidateDefinitionNotebookLocation")(CandidateDefinitionNotebookLocation.asInstanceOf[js.Any])
+    if (DataExplorationNotebookLocation != null) __obj.updateDynamic("DataExplorationNotebookLocation")(DataExplorationNotebookLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoMLJobArtifacts]
   }
-  @scala.inline
-  implicit class AutoMLJobArtifactsOps[Self <: AutoMLJobArtifacts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCandidateDefinitionNotebookLocation(value: CandidateDefinitionNotebookLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CandidateDefinitionNotebookLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCandidateDefinitionNotebookLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CandidateDefinitionNotebookLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataExplorationNotebookLocation(value: DataExplorationNotebookLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataExplorationNotebookLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataExplorationNotebookLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataExplorationNotebookLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

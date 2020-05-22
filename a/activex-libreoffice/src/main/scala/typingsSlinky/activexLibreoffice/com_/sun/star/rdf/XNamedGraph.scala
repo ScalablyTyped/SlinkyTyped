@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @see XRepository
   * @since OOo 3.2
   */
-@js.native
 trait XNamedGraph extends XURI {
   /**
     * returns the name of the graph.
@@ -24,7 +23,7 @@ trait XNamedGraph extends XURI {
     * The name is unique within the repository.
     * @returns the name of the graph
     */
-  val Name: XURI = js.native
+  val Name: XURI
   /**
     * adds a RDF statement to the graph.
     *
@@ -37,20 +36,20 @@ trait XNamedGraph extends XURI {
     * @throws com::sun::star::container::NoSuchElementException if this graph does not exist in the repository any more
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def addStatement(Subject: XResource, Predicate: XURI, Object: XNode): Unit = js.native
+  def addStatement(Subject: XResource, Predicate: XURI, Object: XNode): Unit
   /**
     * removes all statements from the graph.
     * @throws com::sun::star::container::NoSuchElementException if this graph does not exist in the repository any more
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def clear(): Unit = js.native
+  def clear(): Unit
   /**
     * returns the name of the graph.
     *
     * The name is unique within the repository.
     * @returns the name of the graph
     */
-  def getName(): XURI = js.native
+  def getName(): XURI
   /**
     * gets matching RDF statements from a graph.
     *
@@ -66,7 +65,7 @@ trait XNamedGraph extends XURI {
     * @throws com::sun::star::container::NoSuchElementException if this graph does not exist in the repository any more
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def getStatements(Subject: XResource, Predicate: XURI, Object: XNode): XEnumeration = js.native
+  def getStatements(Subject: XResource, Predicate: XURI, Object: XNode): XEnumeration
   /**
     * removes matching RDF statements from the graph.
     *
@@ -80,7 +79,7 @@ trait XNamedGraph extends XURI {
     * @throws com::sun::star::container::NoSuchElementException if this graph does not exist in the repository any more
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def removeStatements(Subject: XResource, Predicate: XURI, Object: XNode): Unit = js.native
+  def removeStatements(Subject: XResource, Predicate: XURI, Object: XNode): Unit
 }
 
 object XNamedGraph {
@@ -99,49 +98,5 @@ object XNamedGraph {
     val __obj = js.Dynamic.literal(LocalName = LocalName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Namespace = Namespace.asInstanceOf[js.Any], StringValue = StringValue.asInstanceOf[js.Any], addStatement = js.Any.fromFunction3(addStatement), clear = js.Any.fromFunction0(clear), getName = js.Any.fromFunction0(getName), getStatements = js.Any.fromFunction3(getStatements), removeStatements = js.Any.fromFunction3(removeStatements))
     __obj.asInstanceOf[XNamedGraph]
   }
-  @scala.inline
-  implicit class XNamedGraphOps[Self <: XNamedGraph] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: XURI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddStatement(value: (XResource, XURI, XNode) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addStatement")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => XURI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStatements(value: (XResource, XURI, XNode) => XEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatements")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveStatements(value: (XResource, XURI, XNode) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeStatements")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

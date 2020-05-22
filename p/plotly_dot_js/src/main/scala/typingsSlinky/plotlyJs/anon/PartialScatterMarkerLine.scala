@@ -6,127 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.ScatterMarkerLine> */
-@js.native
 trait PartialScatterMarkerLine extends js.Object {
-  var autocolorscale: js.UndefOr[Boolean] = js.native
-  var cauto: js.UndefOr[Boolean] = js.native
-  var cmax: js.UndefOr[Double] = js.native
-  var cmin: js.UndefOr[Double] = js.native
-  var color: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
-  var colorscale: js.UndefOr[ColorScale] = js.native
-  var reversescale: js.UndefOr[Boolean] = js.native
-  var width: js.UndefOr[Double | js.Array[Double]] = js.native
+  var autocolorscale: js.UndefOr[Boolean] = js.undefined
+  var cauto: js.UndefOr[Boolean] = js.undefined
+  var cmax: js.UndefOr[Double] = js.undefined
+  var cmin: js.UndefOr[Double] = js.undefined
+  var color: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.undefined
+  var colorscale: js.UndefOr[ColorScale] = js.undefined
+  var reversescale: js.UndefOr[Boolean] = js.undefined
+  var width: js.UndefOr[Double | js.Array[Double]] = js.undefined
 }
 
 object PartialScatterMarkerLine {
   @scala.inline
-  def apply(): PartialScatterMarkerLine = {
+  def apply(
+    autocolorscale: js.UndefOr[Boolean] = js.undefined,
+    cauto: js.UndefOr[Boolean] = js.undefined,
+    cmax: js.UndefOr[Double] = js.undefined,
+    cmin: js.UndefOr[Double] = js.undefined,
+    color: typingsSlinky.plotlyJs.mod.Color = null,
+    colorscale: ColorScale = null,
+    reversescale: js.UndefOr[Boolean] = js.undefined,
+    width: Double | js.Array[Double] = null
+  ): PartialScatterMarkerLine = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autocolorscale)) __obj.updateDynamic("autocolorscale")(autocolorscale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cauto)) __obj.updateDynamic("cauto")(cauto.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cmax)) __obj.updateDynamic("cmax")(cmax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cmin)) __obj.updateDynamic("cmin")(cmin.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (colorscale != null) __obj.updateDynamic("colorscale")(colorscale.asInstanceOf[js.Any])
+    if (!js.isUndefined(reversescale)) __obj.updateDynamic("reversescale")(reversescale.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialScatterMarkerLine]
   }
-  @scala.inline
-  implicit class PartialScatterMarkerLineOps[Self <: PartialScatterMarkerLine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutocolorscale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocolorscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutocolorscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocolorscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCauto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cauto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCauto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cauto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCmax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCmax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCmin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCmin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorscale(value: ColorScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReversescale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversescale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReversescale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversescale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

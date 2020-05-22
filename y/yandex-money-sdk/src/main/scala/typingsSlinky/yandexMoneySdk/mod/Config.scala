@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
-  var MONEY_URL: String = js.native
-  var SP_MONEY_URL: String = js.native
+  var MONEY_URL: String
+  var SP_MONEY_URL: String
 }
 
 @JSImport("yandex-money-sdk", "Config")

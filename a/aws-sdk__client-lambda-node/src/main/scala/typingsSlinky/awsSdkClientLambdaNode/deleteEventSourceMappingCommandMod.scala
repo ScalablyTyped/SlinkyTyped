@@ -26,9 +26,16 @@ object deleteEventSourceMappingCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteEventSourceMappingInput) = this()
+    /* CompleteClass */
+    override val input: DeleteEventSourceMappingInput = js.native
     val middlewareStack: MiddlewareStack[DeleteEventSourceMappingInput, DeleteEventSourceMappingOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: LambdaResolvedConfiguration
+    ): Handler[DeleteEventSourceMappingInput, DeleteEventSourceMappingOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[DeleteEventSourceMappingInput, DeleteEventSourceMappingOutput] = js.native
   }

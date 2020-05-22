@@ -4,25 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Ap extends js.Object {
   def ap[A, B, E1, E2](
     obsF: typingsSlinky.kefir.mod.Observable[js.Function1[/* x */ A, B], E1],
     obsV: typingsSlinky.kefir.mod.Observable[A, E2]
-  ): typingsSlinky.kefir.mod.Observable[B, E1 | E2] = js.native
+  ): typingsSlinky.kefir.mod.Observable[B, E1 | E2]
   def bimap[V1, E1, V2, E2](
     fnE: js.Function1[/* x */ E1, E2],
     fnV: js.Function1[/* x */ V1, V2],
     obs: typingsSlinky.kefir.mod.Observable[V1, E1]
-  ): typingsSlinky.kefir.mod.Observable[V2, E2] = js.native
+  ): typingsSlinky.kefir.mod.Observable[V2, E2]
   def chain[V, V2, E, E2](
     cb: js.Function1[/* value */ V, typingsSlinky.kefir.mod.Observable[V2, E2]],
     s: typingsSlinky.kefir.mod.Observable[V, E]
-  ): typingsSlinky.kefir.mod.Observable[V2, E | E2] = js.native
-  def concat[V1, E1, V2, E2](obs1: typingsSlinky.kefir.mod.Observable[V1, E1], obs2: typingsSlinky.kefir.mod.Observable[V2, E2]): typingsSlinky.kefir.mod.Observable[V1 | V2, E1 | E2] = js.native
-  def empty(): typingsSlinky.kefir.mod.Observable[scala.Nothing, scala.Nothing] = js.native
-  def map[V, V2, E](cb: js.Function1[/* value */ V, V2], s: typingsSlinky.kefir.mod.Observable[V, E]): typingsSlinky.kefir.mod.Observable[V2, E] = js.native
-  def of[V](value: V): typingsSlinky.kefir.mod.Observable[V, scala.Nothing] = js.native
+  ): typingsSlinky.kefir.mod.Observable[V2, E | E2]
+  def concat[V1, E1, V2, E2](obs1: typingsSlinky.kefir.mod.Observable[V1, E1], obs2: typingsSlinky.kefir.mod.Observable[V2, E2]): typingsSlinky.kefir.mod.Observable[V1 | V2, E1 | E2]
+  def empty(): typingsSlinky.kefir.mod.Observable[scala.Nothing, scala.Nothing]
+  def map[V, V2, E](cb: js.Function1[/* value */ V, V2], s: typingsSlinky.kefir.mod.Observable[V, E]): typingsSlinky.kefir.mod.Observable[V2, E]
+  def of[V](value: V): typingsSlinky.kefir.mod.Observable[V, scala.Nothing]
 }
 
 object Ap {
@@ -39,65 +38,5 @@ object Ap {
     val __obj = js.Dynamic.literal(ap = js.Any.fromFunction2(ap), bimap = js.Any.fromFunction3(bimap), chain = js.Any.fromFunction2(chain), concat = js.Any.fromFunction2(concat), empty = js.Any.fromFunction0(empty), map = js.Any.fromFunction2(map), of = js.Any.fromFunction1(of))
     __obj.asInstanceOf[Ap]
   }
-  @scala.inline
-  implicit class ApOps[Self <: Ap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAp(
-      value: (typingsSlinky.kefir.mod.Observable[js.Function1[js.Any, js.Any], js.Any], typingsSlinky.kefir.mod.Observable[js.Any, js.Any]) => typingsSlinky.kefir.mod.Observable[js.Any, js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ap")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withBimap(
-      value: (js.Function1[js.Any, js.Any], js.Function1[js.Any, js.Any], typingsSlinky.kefir.mod.Observable[js.Any, js.Any]) => typingsSlinky.kefir.mod.Observable[js.Any, js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bimap")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withChain(
-      value: (js.Function1[js.Any, typingsSlinky.kefir.mod.Observable[js.Any, js.Any]], typingsSlinky.kefir.mod.Observable[js.Any, js.Any]) => typingsSlinky.kefir.mod.Observable[js.Any, js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chain")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withConcat(
-      value: (typingsSlinky.kefir.mod.Observable[js.Any, js.Any], typingsSlinky.kefir.mod.Observable[js.Any, js.Any]) => typingsSlinky.kefir.mod.Observable[js.Any, js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("concat")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withEmpty(value: () => typingsSlinky.kefir.mod.Observable[scala.Nothing, scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMap(
-      value: (js.Function1[js.Any, js.Any], typingsSlinky.kefir.mod.Observable[js.Any, js.Any]) => typingsSlinky.kefir.mod.Observable[js.Any, js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOf(value: js.Any => typingsSlinky.kefir.mod.Observable[js.Any, scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("of")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

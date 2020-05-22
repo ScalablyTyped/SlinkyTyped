@@ -22,53 +22,16 @@ trait UpdateEndOfMeetingReminder extends js.Object {
 
 object UpdateEndOfMeetingReminder {
   @scala.inline
-  def apply(): UpdateEndOfMeetingReminder = {
+  def apply(
+    Enabled: js.UndefOr[Boolean] = js.undefined,
+    ReminderAtMinutes: EndOfMeetingReminderMinutesList = null,
+    ReminderType: EndOfMeetingReminderType = null
+  ): UpdateEndOfMeetingReminder = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
+    if (ReminderAtMinutes != null) __obj.updateDynamic("ReminderAtMinutes")(ReminderAtMinutes.asInstanceOf[js.Any])
+    if (ReminderType != null) __obj.updateDynamic("ReminderType")(ReminderType.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateEndOfMeetingReminder]
   }
-  @scala.inline
-  implicit class UpdateEndOfMeetingReminderOps[Self <: UpdateEndOfMeetingReminder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReminderAtMinutes(value: EndOfMeetingReminderMinutesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReminderAtMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReminderAtMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReminderAtMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReminderType(value: EndOfMeetingReminderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReminderType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReminderType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReminderType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

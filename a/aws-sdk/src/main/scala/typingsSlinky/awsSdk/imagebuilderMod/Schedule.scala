@@ -7,52 +7,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Schedule extends js.Object {
   /**
-    *  The condition configures when the pipeline should trigger a new image build. When the pipelineExecutionStartCondition is set to EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE, EC2 Image Builder will build a new image only when there are known changes pending. When it is set to EXPRESSION_MATCH_ONLY, it will build a new image every time the CRON expression matches the current time.
+    * The condition configures when the pipeline should trigger a new image build. When the pipelineExecutionStartCondition is set to EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE, EC2 Image Builder will build a new image only when there are known changes pending. When it is set to EXPRESSION_MATCH_ONLY, it will build a new image every time the CRON expression matches the current time.
     */
   var pipelineExecutionStartCondition: js.UndefOr[PipelineExecutionStartCondition] = js.native
   /**
-    *  The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
+    * The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
     */
   var scheduleExpression: js.UndefOr[NonEmptyString] = js.native
 }
 
 object Schedule {
   @scala.inline
-  def apply(): Schedule = {
+  def apply(
+    pipelineExecutionStartCondition: PipelineExecutionStartCondition = null,
+    scheduleExpression: NonEmptyString = null
+  ): Schedule = {
     val __obj = js.Dynamic.literal()
+    if (pipelineExecutionStartCondition != null) __obj.updateDynamic("pipelineExecutionStartCondition")(pipelineExecutionStartCondition.asInstanceOf[js.Any])
+    if (scheduleExpression != null) __obj.updateDynamic("scheduleExpression")(scheduleExpression.asInstanceOf[js.Any])
     __obj.asInstanceOf[Schedule]
   }
-  @scala.inline
-  implicit class ScheduleOps[Self <: Schedule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPipelineExecutionStartCondition(value: PipelineExecutionStartCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineExecutionStartCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineExecutionStartCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineExecutionStartCondition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleExpression(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleExpression")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

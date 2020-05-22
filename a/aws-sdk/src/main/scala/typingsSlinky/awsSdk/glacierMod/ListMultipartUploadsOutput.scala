@@ -18,41 +18,11 @@ trait ListMultipartUploadsOutput extends js.Object {
 
 object ListMultipartUploadsOutput {
   @scala.inline
-  def apply(): ListMultipartUploadsOutput = {
+  def apply(Marker: String = null, UploadsList: UploadsList = null): ListMultipartUploadsOutput = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (UploadsList != null) __obj.updateDynamic("UploadsList")(UploadsList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListMultipartUploadsOutput]
   }
-  @scala.inline
-  implicit class ListMultipartUploadsOutputOps[Self <: ListMultipartUploadsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadsList(value: UploadsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadsList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadsList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadsList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

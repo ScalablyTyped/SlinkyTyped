@@ -12,18 +12,17 @@ import scala.scalajs.js.annotation._
   * @see DocumentProperties
   * @since OOo 3.0
   */
-@js.native
 trait XDocumentPropertiesSupplier extends js.Object {
   /**
     * provides the document properties object.
     * @returns an object of type {@link XDocumentProperties}
     */
-  val DocumentProperties: XDocumentProperties = js.native
+  val DocumentProperties: XDocumentProperties
   /**
     * provides the document properties object.
     * @returns an object of type {@link XDocumentProperties}
     */
-  def getDocumentProperties(): XDocumentProperties = js.native
+  def getDocumentProperties(): XDocumentProperties
 }
 
 object XDocumentPropertiesSupplier {
@@ -32,25 +31,5 @@ object XDocumentPropertiesSupplier {
     val __obj = js.Dynamic.literal(DocumentProperties = DocumentProperties.asInstanceOf[js.Any], getDocumentProperties = js.Any.fromFunction0(getDocumentProperties))
     __obj.asInstanceOf[XDocumentPropertiesSupplier]
   }
-  @scala.inline
-  implicit class XDocumentPropertiesSupplierOps[Self <: XDocumentPropertiesSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentProperties(value: XDocumentProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDocumentProperties(value: () => XDocumentProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocumentProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -33,41 +33,11 @@ trait SchemaDeviceCredential extends js.Object {
 
 object SchemaDeviceCredential {
   @scala.inline
-  def apply(): SchemaDeviceCredential = {
+  def apply(expirationTime: String = null, publicKey: SchemaPublicKeyCredential = null): SchemaDeviceCredential = {
     val __obj = js.Dynamic.literal()
+    if (expirationTime != null) __obj.updateDynamic("expirationTime")(expirationTime.asInstanceOf[js.Any])
+    if (publicKey != null) __obj.updateDynamic("publicKey")(publicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceCredential]
   }
-  @scala.inline
-  implicit class SchemaDeviceCredentialOps[Self <: SchemaDeviceCredential] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpirationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKey(value: SchemaPublicKeyCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

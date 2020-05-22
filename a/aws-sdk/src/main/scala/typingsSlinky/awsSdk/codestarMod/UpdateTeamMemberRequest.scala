@@ -26,53 +26,16 @@ trait UpdateTeamMemberRequest extends js.Object {
 
 object UpdateTeamMemberRequest {
   @scala.inline
-  def apply(projectId: ProjectId, userArn: UserArn): UpdateTeamMemberRequest = {
+  def apply(
+    projectId: ProjectId,
+    userArn: UserArn,
+    projectRole: Role = null,
+    remoteAccessAllowed: js.UndefOr[RemoteAccessAllowed] = js.undefined
+  ): UpdateTeamMemberRequest = {
     val __obj = js.Dynamic.literal(projectId = projectId.asInstanceOf[js.Any], userArn = userArn.asInstanceOf[js.Any])
+    if (projectRole != null) __obj.updateDynamic("projectRole")(projectRole.asInstanceOf[js.Any])
+    if (!js.isUndefined(remoteAccessAllowed)) __obj.updateDynamic("remoteAccessAllowed")(remoteAccessAllowed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTeamMemberRequest]
   }
-  @scala.inline
-  implicit class UpdateTeamMemberRequestOps[Self <: UpdateTeamMemberRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProjectId(value: ProjectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserArn(value: UserArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjectRole(value: Role): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteAccessAllowed(value: RemoteAccessAllowed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAccessAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteAccessAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAccessAllowed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,37 +5,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccessTokenAuthorizeOptions extends AuthorizeOptions {
   @JSName("response_type")
-  var response_type_AccessTokenAuthorizeOptions: js.UndefOr[token] = js.native
+  var response_type_AccessTokenAuthorizeOptions: js.UndefOr[token] = js.undefined
 }
 
 object AccessTokenAuthorizeOptions {
   @scala.inline
-  def apply(scope: AuthorizeScope): AccessTokenAuthorizeOptions = {
+  def apply(
+    scope: AuthorizeScope,
+    interactive: AuthorizeInteractiveOption = null,
+    popup: js.UndefOr[Boolean] = js.undefined,
+    response_type: token = null,
+    scope_data: AuthorizeScopeData = null,
+    state: String = null
+  ): AccessTokenAuthorizeOptions = {
     val __obj = js.Dynamic.literal(scope = scope.asInstanceOf[js.Any])
+    if (interactive != null) __obj.updateDynamic("interactive")(interactive.asInstanceOf[js.Any])
+    if (!js.isUndefined(popup)) __obj.updateDynamic("popup")(popup.get.asInstanceOf[js.Any])
+    if (response_type != null) __obj.updateDynamic("response_type")(response_type.asInstanceOf[js.Any])
+    if (scope_data != null) __obj.updateDynamic("scope_data")(scope_data.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessTokenAuthorizeOptions]
   }
-  @scala.inline
-  implicit class AccessTokenAuthorizeOptionsOps[Self <: AccessTokenAuthorizeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResponse_type(value: token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response_type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,37 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DictpropNameSilent
   extends /* key */ StringDictionary[js.Any] {
-  var silent: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.undefined
 }
 
 object DictpropNameSilent {
   @scala.inline
-  def apply(): DictpropNameSilent = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    silent: js.UndefOr[Boolean] = js.undefined
+  ): DictpropNameSilent = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DictpropNameSilent]
   }
-  @scala.inline
-  implicit class DictpropNameSilentOps[Self <: DictpropNameSilent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

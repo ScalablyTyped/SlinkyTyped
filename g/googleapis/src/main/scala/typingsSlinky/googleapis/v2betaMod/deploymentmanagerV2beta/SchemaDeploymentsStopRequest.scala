@@ -22,29 +22,10 @@ trait SchemaDeploymentsStopRequest extends js.Object {
 
 object SchemaDeploymentsStopRequest {
   @scala.inline
-  def apply(): SchemaDeploymentsStopRequest = {
+  def apply(fingerprint: String = null): SchemaDeploymentsStopRequest = {
     val __obj = js.Dynamic.literal()
+    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeploymentsStopRequest]
   }
-  @scala.inline
-  implicit class SchemaDeploymentsStopRequestOps[Self <: SchemaDeploymentsStopRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

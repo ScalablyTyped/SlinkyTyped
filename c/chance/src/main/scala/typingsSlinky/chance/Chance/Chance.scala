@@ -120,6 +120,9 @@ trait Chance extends Seeded {
   def exp_month(opts: Options): String = js.native
   def exp_year(): String = js.native
   def exp_year(opts: Options): String = js.native
+  /** https://chancejs.com/basics/falsy.html */
+  def falsy(): FalsyType = js.native
+  def falsy(ops: FalsyOptions): FalsyType = js.native
   def fbid(): String = js.native
   def first(): String = js.native
   def first(opts: PartialFirstNameOptions): String = js.native
@@ -249,6 +252,7 @@ trait Chance extends Seeded {
   def suffix(opts: SuffixOptions): String = js.native
   def syllable(): String = js.native
   def syllable(opts: Options): String = js.native
+  def template(template: String): String = js.native
   def timestamp(): Double = js.native
   def timezone(): Timezone = js.native
   def tld(): String = js.native

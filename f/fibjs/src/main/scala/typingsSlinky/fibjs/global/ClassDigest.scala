@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief 信息摘要对象
-	* @detail 
-	*/
+  * @brief 信息摘要对象
+  * @detail 
+  */
 @JSGlobal("Class_Digest")
 @js.native
 class ClassDigest ()

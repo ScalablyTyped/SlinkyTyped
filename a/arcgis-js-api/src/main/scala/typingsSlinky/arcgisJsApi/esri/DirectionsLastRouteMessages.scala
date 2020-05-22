@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectionsLastRouteMessages extends Object {
   /**
     * A descriptive message of the returned mesage.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#lastRoute)
     */
-  var description: String = js.native
+  var description: String
   /**
     * Number indicating the message type returned from the service. This number correlates to one of the possible values listed below.
     *
@@ -31,7 +30,7 @@ trait DirectionsLastRouteMessages extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#lastRoute)
     */
-  var `type`: Double = js.native
+  var `type`: Double
 }
 
 object DirectionsLastRouteMessages {
@@ -47,25 +46,5 @@ object DirectionsLastRouteMessages {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionsLastRouteMessages]
   }
-  @scala.inline
-  implicit class DirectionsLastRouteMessagesOps[Self <: DirectionsLastRouteMessages] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

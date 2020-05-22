@@ -37,53 +37,16 @@ trait SchemaNetwork extends js.Object {
 
 object SchemaNetwork {
   @scala.inline
-  def apply(): SchemaNetwork = {
+  def apply(
+    name: String = null,
+    subnetwork: String = null,
+    usePrivateAddress: js.UndefOr[Boolean] = js.undefined
+  ): SchemaNetwork = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (subnetwork != null) __obj.updateDynamic("subnetwork")(subnetwork.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePrivateAddress)) __obj.updateDynamic("usePrivateAddress")(usePrivateAddress.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetwork]
   }
-  @scala.inline
-  implicit class SchemaNetworkOps[Self <: SchemaNetwork] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsePrivateAddress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrivateAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsePrivateAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrivateAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

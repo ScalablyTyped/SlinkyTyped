@@ -64,162 +64,32 @@ object CreateFleetRequest {
   @scala.inline
   def apply(
     LaunchTemplateConfigs: FleetLaunchTemplateConfigListRequest,
-    TargetCapacitySpecification: TargetCapacitySpecificationRequest
+    TargetCapacitySpecification: TargetCapacitySpecificationRequest,
+    ClientToken: String = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    ExcessCapacityTerminationPolicy: FleetExcessCapacityTerminationPolicy = null,
+    OnDemandOptions: OnDemandOptionsRequest = null,
+    ReplaceUnhealthyInstances: js.UndefOr[Boolean] = js.undefined,
+    SpotOptions: SpotOptionsRequest = null,
+    TagSpecifications: TagSpecificationList = null,
+    TerminateInstancesWithExpiration: js.UndefOr[Boolean] = js.undefined,
+    Type: FleetType = null,
+    ValidFrom: js.Date = null,
+    ValidUntil: js.Date = null
   ): CreateFleetRequest = {
     val __obj = js.Dynamic.literal(LaunchTemplateConfigs = LaunchTemplateConfigs.asInstanceOf[js.Any], TargetCapacitySpecification = TargetCapacitySpecification.asInstanceOf[js.Any])
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (ExcessCapacityTerminationPolicy != null) __obj.updateDynamic("ExcessCapacityTerminationPolicy")(ExcessCapacityTerminationPolicy.asInstanceOf[js.Any])
+    if (OnDemandOptions != null) __obj.updateDynamic("OnDemandOptions")(OnDemandOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReplaceUnhealthyInstances)) __obj.updateDynamic("ReplaceUnhealthyInstances")(ReplaceUnhealthyInstances.get.asInstanceOf[js.Any])
+    if (SpotOptions != null) __obj.updateDynamic("SpotOptions")(SpotOptions.asInstanceOf[js.Any])
+    if (TagSpecifications != null) __obj.updateDynamic("TagSpecifications")(TagSpecifications.asInstanceOf[js.Any])
+    if (!js.isUndefined(TerminateInstancesWithExpiration)) __obj.updateDynamic("TerminateInstancesWithExpiration")(TerminateInstancesWithExpiration.get.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
+    if (ValidFrom != null) __obj.updateDynamic("ValidFrom")(ValidFrom.asInstanceOf[js.Any])
+    if (ValidUntil != null) __obj.updateDynamic("ValidUntil")(ValidUntil.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFleetRequest]
   }
-  @scala.inline
-  implicit class CreateFleetRequestOps[Self <: CreateFleetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLaunchTemplateConfigs(value: FleetLaunchTemplateConfigListRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateConfigs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetCapacitySpecification(value: TargetCapacitySpecificationRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetCapacitySpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcessCapacityTerminationPolicy(value: FleetExcessCapacityTerminationPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcessCapacityTerminationPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcessCapacityTerminationPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcessCapacityTerminationPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDemandOptions(value: OnDemandOptionsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDemandOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceUnhealthyInstances(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplaceUnhealthyInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceUnhealthyInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplaceUnhealthyInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotOptions(value: SpotOptionsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagSpecifications(value: TagSpecificationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagSpecifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerminateInstancesWithExpiration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminateInstancesWithExpiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerminateInstancesWithExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminateInstancesWithExpiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: FleetType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidFrom(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidFrom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidUntil(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUntil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUntil")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

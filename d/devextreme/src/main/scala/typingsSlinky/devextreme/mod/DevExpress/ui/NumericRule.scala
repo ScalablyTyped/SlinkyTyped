@@ -13,67 +13,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NumericRule extends js.Object {
-  /** If set to true, empty values are valid. */
-  var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
-  /** Specifies the message that is shown if the rule is broken. */
-  var message: js.UndefOr[String] = js.native
-  /** Specifies the rule type. Set it to "numeric" to use the NumericRule. */
+  /** @name NumericRule.ignoreEmptyValue */
+  var ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined
+  /** @name NumericRule.message */
+  var message: js.UndefOr[String] = js.undefined
+  /** @name NumericRule.type */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
-  ] = js.native
+  ] = js.undefined
 }
 
 object NumericRule {
   @scala.inline
-  def apply(): NumericRule = {
+  def apply(
+    ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined,
+    message: String = null,
+    `type`: required | numeric | range | stringLength | custom | compare | pattern | email | async = null
+  ): NumericRule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ignoreEmptyValue)) __obj.updateDynamic("ignoreEmptyValue")(ignoreEmptyValue.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumericRule]
   }
-  @scala.inline
-  implicit class NumericRuleOps[Self <: NumericRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoreEmptyValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreEmptyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: required | numeric | range | stringLength | custom | compare | pattern | email | async): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,5 +16,20 @@ class ScheduledTileNotification protected ()
     * @param deliveryTime The time at which the tile should be updated with the notification information.
     */
   def this(content: XmlDocument, deliveryTime: js.Date) = this()
+  /** Gets the XML description of the content of the scheduled tile update. */
+  /* CompleteClass */
+  override var content: XmlDocument = js.native
+  /** Gets the time at which the tile is scheduled to be updated. */
+  /* CompleteClass */
+  override var deliveryTime: js.Date = js.native
+  /** Gets or sets the time after which the tile notification should no longer be shown. By default, a tile notification does not expire. It is a best practice to explicitly set an expiration time to avoid stale content. */
+  /* CompleteClass */
+  override var expirationTime: js.Date = js.native
+  /** Gets or sets the unique ID that is used to identify the scheduled tile in the schedule. */
+  /* CompleteClass */
+  override var id: String = js.native
+  /** Gets or sets a string that Windows can use to prevent duplicate notification content from appearing in the queue. */
+  /* CompleteClass */
+  override var tag: String = js.native
 }
 

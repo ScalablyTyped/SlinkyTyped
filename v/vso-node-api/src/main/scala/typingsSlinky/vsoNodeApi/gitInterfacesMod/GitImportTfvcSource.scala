@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GitImportTfvcSource extends js.Object {
   /**
     * Set true to import History, false otherwise
     */
-  var importHistory: Boolean = js.native
+  var importHistory: Boolean
   /**
     * Get history for last n days (max allowed value is 180 days)
     */
-  var importHistoryDurationInDays: Double = js.native
+  var importHistoryDurationInDays: Double
   /**
     * Path which we want to import (this can be copied from Path Control in Explorer)
     */
-  var path: String = js.native
+  var path: String
 }
 
 object GitImportTfvcSource {
@@ -26,31 +25,5 @@ object GitImportTfvcSource {
     val __obj = js.Dynamic.literal(importHistory = importHistory.asInstanceOf[js.Any], importHistoryDurationInDays = importHistoryDurationInDays.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitImportTfvcSource]
   }
-  @scala.inline
-  implicit class GitImportTfvcSourceOps[Self <: GitImportTfvcSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImportHistory(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImportHistoryDurationInDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importHistoryDurationInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("slonik", "UnexpectedStateError")
 @js.native
-class UnexpectedStateError () extends Error
+class UnexpectedStateError () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

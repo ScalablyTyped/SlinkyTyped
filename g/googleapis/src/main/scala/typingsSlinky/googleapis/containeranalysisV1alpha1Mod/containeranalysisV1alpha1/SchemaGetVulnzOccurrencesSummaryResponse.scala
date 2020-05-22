@@ -18,29 +18,10 @@ trait SchemaGetVulnzOccurrencesSummaryResponse extends js.Object {
 
 object SchemaGetVulnzOccurrencesSummaryResponse {
   @scala.inline
-  def apply(): SchemaGetVulnzOccurrencesSummaryResponse = {
+  def apply(counts: js.Array[SchemaSeverityCount] = null): SchemaGetVulnzOccurrencesSummaryResponse = {
     val __obj = js.Dynamic.literal()
+    if (counts != null) __obj.updateDynamic("counts")(counts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetVulnzOccurrencesSummaryResponse]
   }
-  @scala.inline
-  implicit class SchemaGetVulnzOccurrencesSummaryResponseOps[Self <: SchemaGetVulnzOccurrencesSummaryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCounts(value: js.Array[SchemaSeverityCount]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

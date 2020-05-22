@@ -1,6 +1,7 @@
 package typingsSlinky.node.cryptoMod
 
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.streamMod.Transform
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Decipher protected () extends Transform {
   def `final`(): Buffer = js.native
-  def `final`(output_encoding: String): String = js.native
+  def `final`(output_encoding: BufferEncoding): String = js.native
   def setAutoPadding(): this.type = js.native
   def setAutoPadding(auto_padding: Boolean): this.type = js.native
   def update(

@@ -1,5 +1,6 @@
 package typingsSlinky.pusherChatkitClient.messageMod
 
+import org.scalajs.dom.raw.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +14,24 @@ trait SendMessagePayload extends js.Object
 
 object SendMessagePayload {
   @scala.inline
-  implicit def apply(value: FilePayload): SendMessagePayload = value.asInstanceOf[SendMessagePayload]
+  def InlinePayload(content: String, `type`: String): SendMessagePayload = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SendMessagePayload]
+  }
   @scala.inline
-  implicit def apply(value: InlinePayload): SendMessagePayload = value.asInstanceOf[SendMessagePayload]
+  def UrlPayload(`type`: String, url: String): SendMessagePayload = {
+    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SendMessagePayload]
+  }
   @scala.inline
-  implicit def apply(value: UrlPayload): SendMessagePayload = value.asInstanceOf[SendMessagePayload]
+  def FilePayload(file: Blob, customData: js.Any = null, name: String = null, `type`: String = null): SendMessagePayload = {
+    val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    if (customData != null) __obj.updateDynamic("customData")(customData.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SendMessagePayload]
+  }
 }
 

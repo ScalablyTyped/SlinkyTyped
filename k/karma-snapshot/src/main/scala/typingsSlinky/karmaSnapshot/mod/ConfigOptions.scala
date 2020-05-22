@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigOptions extends js.Object {
   /**
     * See {@link https://github.com/localvoid/karma-snapshot#config}
     */
-  var snapshot: js.UndefOr[SnapshotOptions] = js.native
+  var snapshot: js.UndefOr[SnapshotOptions] = js.undefined
 }
 
 object ConfigOptions {
   @scala.inline
-  def apply(): ConfigOptions = {
+  def apply(snapshot: SnapshotOptions = null): ConfigOptions = {
     val __obj = js.Dynamic.literal()
+    if (snapshot != null) __obj.updateDynamic("snapshot")(snapshot.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigOptions]
   }
-  @scala.inline
-  implicit class ConfigOptionsOps[Self <: ConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSnapshot(value: SnapshotOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

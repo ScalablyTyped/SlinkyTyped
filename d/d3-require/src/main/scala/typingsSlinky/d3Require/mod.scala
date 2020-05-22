@@ -11,7 +11,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  class RequireError () extends Error
+  class RequireError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   @js.native
   trait require extends js.Object {

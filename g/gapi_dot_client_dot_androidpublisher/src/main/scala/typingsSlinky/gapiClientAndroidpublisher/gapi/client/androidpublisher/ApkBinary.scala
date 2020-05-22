@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ApkBinary extends js.Object {
   /** A sha1 hash of the APK payload, encoded as a hex string and matching the output of the sha1sum command. */
-  var sha1: js.UndefOr[String] = js.native
+  var sha1: js.UndefOr[String] = js.undefined
   /** A sha256 hash of the APK payload, encoded as a hex string and matching the output of the sha256sum command. */
-  var sha256: js.UndefOr[String] = js.native
+  var sha256: js.UndefOr[String] = js.undefined
 }
 
 object ApkBinary {
   @scala.inline
-  def apply(): ApkBinary = {
+  def apply(sha1: String = null, sha256: String = null): ApkBinary = {
     val __obj = js.Dynamic.literal()
+    if (sha1 != null) __obj.updateDynamic("sha1")(sha1.asInstanceOf[js.Any])
+    if (sha256 != null) __obj.updateDynamic("sha256")(sha256.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApkBinary]
   }
-  @scala.inline
-  implicit class ApkBinaryOps[Self <: ApkBinary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSha1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSha1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSha256(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSha256: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

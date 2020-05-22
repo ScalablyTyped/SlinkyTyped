@@ -4,180 +4,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IShepherdTourStepOptions extends js.Object {
-  var advanceOn: js.UndefOr[js.Any] = js.native
-  var attachTo: js.UndefOr[js.Any] = js.native
-  var beforeShowPromise: js.UndefOr[js.Any] = js.native
-  var buttons: js.UndefOr[js.Array[IShepherdTourButton]] = js.native
-  var classes: js.UndefOr[String] = js.native
-  var scrollTo: js.UndefOr[Boolean] = js.native
-  var showCancelLink: js.UndefOr[Boolean] = js.native
-  var showOn: js.UndefOr[js.Function0[Boolean]] = js.native
+  var advanceOn: js.UndefOr[js.Any] = js.undefined
+  var attachTo: js.UndefOr[js.Any] = js.undefined
+  var beforeShowPromise: js.UndefOr[js.Any] = js.undefined
+  var buttons: js.UndefOr[js.Array[IShepherdTourButton]] = js.undefined
+  var classes: js.UndefOr[String] = js.undefined
+  var scrollTo: js.UndefOr[Boolean] = js.undefined
+  var showCancelLink: js.UndefOr[Boolean] = js.undefined
+  var showOn: js.UndefOr[js.Function0[Boolean]] = js.undefined
   // TODO: Tie this in with the tether.d.ts
-  var tetherOptions: js.UndefOr[js.Any] = js.native
-  var text: js.UndefOr[js.Any] = js.native
-  var title: js.UndefOr[String] = js.native
-  var when: js.UndefOr[js.Any] = js.native
+  var tetherOptions: js.UndefOr[js.Any] = js.undefined
+  var text: js.UndefOr[js.Any] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var when: js.UndefOr[js.Any] = js.undefined
 }
 
 object IShepherdTourStepOptions {
   @scala.inline
-  def apply(): IShepherdTourStepOptions = {
+  def apply(
+    advanceOn: js.Any = null,
+    attachTo: js.Any = null,
+    beforeShowPromise: js.Any = null,
+    buttons: js.Array[IShepherdTourButton] = null,
+    classes: String = null,
+    scrollTo: js.UndefOr[Boolean] = js.undefined,
+    showCancelLink: js.UndefOr[Boolean] = js.undefined,
+    showOn: () => Boolean = null,
+    tetherOptions: js.Any = null,
+    text: js.Any = null,
+    title: String = null,
+    when: js.Any = null
+  ): IShepherdTourStepOptions = {
     val __obj = js.Dynamic.literal()
+    if (advanceOn != null) __obj.updateDynamic("advanceOn")(advanceOn.asInstanceOf[js.Any])
+    if (attachTo != null) __obj.updateDynamic("attachTo")(attachTo.asInstanceOf[js.Any])
+    if (beforeShowPromise != null) __obj.updateDynamic("beforeShowPromise")(beforeShowPromise.asInstanceOf[js.Any])
+    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollTo)) __obj.updateDynamic("scrollTo")(scrollTo.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCancelLink)) __obj.updateDynamic("showCancelLink")(showCancelLink.get.asInstanceOf[js.Any])
+    if (showOn != null) __obj.updateDynamic("showOn")(js.Any.fromFunction0(showOn))
+    if (tetherOptions != null) __obj.updateDynamic("tetherOptions")(tetherOptions.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[IShepherdTourStepOptions]
   }
-  @scala.inline
-  implicit class IShepherdTourStepOptionsOps[Self <: IShepherdTourStepOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvanceOn(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advanceOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvanceOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advanceOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachTo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeShowPromise(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeShowPromise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeforeShowPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeShowPromise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtons(value: js.Array[IShepherdTourButton]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClasses(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollTo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCancelLink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCancelLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCancelLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCancelLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowOn(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOn")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutShowOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTetherOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tetherOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTetherOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tetherOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhen(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

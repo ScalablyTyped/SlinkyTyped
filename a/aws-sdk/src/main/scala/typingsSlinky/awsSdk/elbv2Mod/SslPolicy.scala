@@ -22,53 +22,12 @@ trait SslPolicy extends js.Object {
 
 object SslPolicy {
   @scala.inline
-  def apply(): SslPolicy = {
+  def apply(Ciphers: Ciphers = null, Name: SslPolicyName = null, SslProtocols: SslProtocols = null): SslPolicy = {
     val __obj = js.Dynamic.literal()
+    if (Ciphers != null) __obj.updateDynamic("Ciphers")(Ciphers.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (SslProtocols != null) __obj.updateDynamic("SslProtocols")(SslProtocols.asInstanceOf[js.Any])
     __obj.asInstanceOf[SslPolicy]
   }
-  @scala.inline
-  implicit class SslPolicyOps[Self <: SslPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCiphers(value: Ciphers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ciphers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCiphers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ciphers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: SslPolicyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSslProtocols(value: SslProtocols): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SslProtocols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSslProtocols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SslProtocols")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

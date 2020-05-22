@@ -31,65 +31,18 @@ trait Params extends js.Object {
 
 object Params {
   @scala.inline
-  def apply(): Params = {
+  def apply(
+    Bucket: String = null,
+    Conditions: js.Array[StringDictionary[_] | (js.Tuple3[String, _, _])] = null,
+    Expires: js.UndefOr[Double] = js.undefined,
+    Fields: StringDictionary[js.Any] = null
+  ): Params = {
     val __obj = js.Dynamic.literal()
+    if (Bucket != null) __obj.updateDynamic("Bucket")(Bucket.asInstanceOf[js.Any])
+    if (Conditions != null) __obj.updateDynamic("Conditions")(Conditions.asInstanceOf[js.Any])
+    if (!js.isUndefined(Expires)) __obj.updateDynamic("Expires")(Expires.get.asInstanceOf[js.Any])
+    if (Fields != null) __obj.updateDynamic("Fields")(Fields.asInstanceOf[js.Any])
     __obj.asInstanceOf[Params]
   }
-  @scala.inline
-  implicit class ParamsOps[Self <: Params] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: js.Array[StringDictionary[_] | (js.Tuple3[String, _, _])]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpires(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

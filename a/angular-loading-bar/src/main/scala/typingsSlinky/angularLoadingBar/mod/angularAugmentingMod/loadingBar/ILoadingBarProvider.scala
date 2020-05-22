@@ -4,62 +4,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILoadingBarProvider extends js.Object {
   /**
     * Give illusion that there's always progress
     */
-  var autoIncrement: js.UndefOr[Boolean] = js.native
+  var autoIncrement: js.UndefOr[Boolean] = js.undefined
   /**
     * Turn the loading bar on or off
     */
-  var includeBar: js.UndefOr[Boolean] = js.native
+  var includeBar: js.UndefOr[Boolean] = js.undefined
   /**
     * Turn the spinner on or off
     */
-  var includeSpinner: js.UndefOr[Boolean] = js.native
+  var includeSpinner: js.UndefOr[Boolean] = js.undefined
   /**
     * Latency Threshold
     */
-  var latencyThreshold: js.UndefOr[Double] = js.native
+  var latencyThreshold: js.UndefOr[Double] = js.undefined
   /**
     * Loading bar template
     */
-  var loadingBarTemplate: js.UndefOr[String] = js.native
+  var loadingBarTemplate: js.UndefOr[String] = js.undefined
   /**
     * HTML element selector of parent
     */
-  var parentSelector: js.UndefOr[String] = js.native
+  var parentSelector: js.UndefOr[String] = js.undefined
   /**
     * HTML template
     */
-  var spinnerTemplate: js.UndefOr[String] = js.native
+  var spinnerTemplate: js.UndefOr[String] = js.undefined
   /**
     * Starting size
     */
-  var startSize: js.UndefOr[Double] = js.native
+  var startSize: js.UndefOr[Double] = js.undefined
   /**
     * Complete the loading bar
     */
-  def complete(): Unit = js.native
+  def complete(): Unit
   /**
     * Increment the loading bar
     */
-  def inc(): Unit = js.native
+  def inc(): Unit
   /**
     * Set the percentage completed
     * @param {number} n - number between 0 and 1
     */
-  def set(n: Double): Unit = js.native
+  def set(n: Double): Unit
   /**
     * Broadcast the start event
     */
-  def start(): Unit = js.native
+  def start(): Unit
   /**
     * Get the percentage completed
     * @returns {number}
     */
-  def status(): Double = js.native
+  def status(): Double
 }
 
 object ILoadingBarProvider {
@@ -69,144 +68,26 @@ object ILoadingBarProvider {
     inc: () => Unit,
     set: Double => Unit,
     start: () => Unit,
-    status: () => Double
+    status: () => Double,
+    autoIncrement: js.UndefOr[Boolean] = js.undefined,
+    includeBar: js.UndefOr[Boolean] = js.undefined,
+    includeSpinner: js.UndefOr[Boolean] = js.undefined,
+    latencyThreshold: js.UndefOr[Double] = js.undefined,
+    loadingBarTemplate: String = null,
+    parentSelector: String = null,
+    spinnerTemplate: String = null,
+    startSize: js.UndefOr[Double] = js.undefined
   ): ILoadingBarProvider = {
     val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete), inc = js.Any.fromFunction0(inc), set = js.Any.fromFunction1(set), start = js.Any.fromFunction0(start), status = js.Any.fromFunction0(status))
+    if (!js.isUndefined(autoIncrement)) __obj.updateDynamic("autoIncrement")(autoIncrement.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeBar)) __obj.updateDynamic("includeBar")(includeBar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeSpinner)) __obj.updateDynamic("includeSpinner")(includeSpinner.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(latencyThreshold)) __obj.updateDynamic("latencyThreshold")(latencyThreshold.get.asInstanceOf[js.Any])
+    if (loadingBarTemplate != null) __obj.updateDynamic("loadingBarTemplate")(loadingBarTemplate.asInstanceOf[js.Any])
+    if (parentSelector != null) __obj.updateDynamic("parentSelector")(parentSelector.asInstanceOf[js.Any])
+    if (spinnerTemplate != null) __obj.updateDynamic("spinnerTemplate")(spinnerTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(startSize)) __obj.updateDynamic("startSize")(startSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILoadingBarProvider]
   }
-  @scala.inline
-  implicit class ILoadingBarProviderOps[Self <: ILoadingBarProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInc(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inc")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStatus(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAutoIncrement(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoIncrement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIncrement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeBar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeSpinner(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeSpinner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeSpinner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeSpinner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatencyThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatencyThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingBarTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingBarTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadingBarTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingBarTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpinnerTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinnerTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpinnerTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinnerTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

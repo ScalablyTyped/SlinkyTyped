@@ -1,25 +1,25 @@
 organization := "org.scalablytyped.slinky"
 name := "ant-design__icons-angular"
-version := "8.1.1-09d4aa"
+version := "8.1.1-8a3850"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "angular__animations" % "8.2.14-cc7957",
-  "org.scalablytyped.slinky" %%% "angular__common" % "8.2.14-068fa9",
-  "org.scalablytyped.slinky" %%% "angular__compiler" % "8.2.14-479697",
-  "org.scalablytyped.slinky" %%% "angular__core" % "8.2.14-06fd0b",
-  "org.scalablytyped.slinky" %%% "angular__platform-browser" % "8.2.14-8dacce",
-  "org.scalablytyped.slinky" %%% "inquirer" % "6.5-dt-20200226Z-0a5fbb",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
-  "org.scalablytyped.slinky" %%% "rxjs" % "6.5.4-e2a094",
-  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.4-86bf9e",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
-  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200225Z-7a8959",
-  "org.scalablytyped.slinky" %%% "typescript" % "3.8.3-472acc")
+  "org.scalablytyped.slinky" %%% "angular__animations" % "8.2.14-99f950",
+  "org.scalablytyped.slinky" %%% "angular__common" % "8.2.14-ee831b",
+  "org.scalablytyped.slinky" %%% "angular__compiler" % "8.2.14-6598c3",
+  "org.scalablytyped.slinky" %%% "angular__core" % "8.2.14-26b013",
+  "org.scalablytyped.slinky" %%% "angular__platform-browser" % "8.2.14-69e359",
+  "org.scalablytyped.slinky" %%% "inquirer" % "6.5-dt-20200226Z-3eadc9",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
+  "org.scalablytyped.slinky" %%% "rxjs" % "6.5.5-a158f0",
+  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.5-1d035b",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
+  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200515Z-1c0109",
+  "org.scalablytyped.slinky" %%% "typescript" % "3.9.3-dd6c61")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -49,89 +49,22 @@ trait SchemaMasterAuth extends js.Object {
 
 object SchemaMasterAuth {
   @scala.inline
-  def apply(): SchemaMasterAuth = {
+  def apply(
+    clientCertificate: String = null,
+    clientCertificateConfig: SchemaClientCertificateConfig = null,
+    clientKey: String = null,
+    clusterCaCertificate: String = null,
+    password: String = null,
+    username: String = null
+  ): SchemaMasterAuth = {
     val __obj = js.Dynamic.literal()
+    if (clientCertificate != null) __obj.updateDynamic("clientCertificate")(clientCertificate.asInstanceOf[js.Any])
+    if (clientCertificateConfig != null) __obj.updateDynamic("clientCertificateConfig")(clientCertificateConfig.asInstanceOf[js.Any])
+    if (clientKey != null) __obj.updateDynamic("clientKey")(clientKey.asInstanceOf[js.Any])
+    if (clusterCaCertificate != null) __obj.updateDynamic("clusterCaCertificate")(clusterCaCertificate.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMasterAuth]
   }
-  @scala.inline
-  implicit class SchemaMasterAuthOps[Self <: SchemaMasterAuth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientCertificate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCertificate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientCertificateConfig(value: SchemaClientCertificateConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCertificateConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientCertificateConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCertificateConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterCaCertificate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterCaCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterCaCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterCaCertificate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

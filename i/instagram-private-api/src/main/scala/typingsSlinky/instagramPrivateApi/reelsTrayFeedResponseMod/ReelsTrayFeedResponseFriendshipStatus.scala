@@ -4,129 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReelsTrayFeedResponseFriendshipStatus extends js.Object {
-  var blocking: js.UndefOr[Boolean] = js.native
-  var followed_by: js.UndefOr[Boolean] = js.native
-  var following: Boolean = js.native
-  var incoming_request: js.UndefOr[Boolean] = js.native
-  var is_bestie: js.UndefOr[Boolean] = js.native
-  var is_muting_reel: Boolean = js.native
-  var is_private: js.UndefOr[Boolean] = js.native
-  var is_restricted: js.UndefOr[Boolean] = js.native
-  var muting: Boolean = js.native
-  var outgoing_request: Boolean = js.native
+  var blocking: js.UndefOr[Boolean] = js.undefined
+  var followed_by: js.UndefOr[Boolean] = js.undefined
+  var following: Boolean
+  var incoming_request: js.UndefOr[Boolean] = js.undefined
+  var is_bestie: js.UndefOr[Boolean] = js.undefined
+  var is_muting_reel: Boolean
+  var is_private: js.UndefOr[Boolean] = js.undefined
+  var is_restricted: js.UndefOr[Boolean] = js.undefined
+  var muting: Boolean
+  var outgoing_request: Boolean
 }
 
 object ReelsTrayFeedResponseFriendshipStatus {
   @scala.inline
-  def apply(following: Boolean, is_muting_reel: Boolean, muting: Boolean, outgoing_request: Boolean): ReelsTrayFeedResponseFriendshipStatus = {
+  def apply(
+    following: Boolean,
+    is_muting_reel: Boolean,
+    muting: Boolean,
+    outgoing_request: Boolean,
+    blocking: js.UndefOr[Boolean] = js.undefined,
+    followed_by: js.UndefOr[Boolean] = js.undefined,
+    incoming_request: js.UndefOr[Boolean] = js.undefined,
+    is_bestie: js.UndefOr[Boolean] = js.undefined,
+    is_private: js.UndefOr[Boolean] = js.undefined,
+    is_restricted: js.UndefOr[Boolean] = js.undefined
+  ): ReelsTrayFeedResponseFriendshipStatus = {
     val __obj = js.Dynamic.literal(following = following.asInstanceOf[js.Any], is_muting_reel = is_muting_reel.asInstanceOf[js.Any], muting = muting.asInstanceOf[js.Any], outgoing_request = outgoing_request.asInstanceOf[js.Any])
+    if (!js.isUndefined(blocking)) __obj.updateDynamic("blocking")(blocking.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(followed_by)) __obj.updateDynamic("followed_by")(followed_by.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(incoming_request)) __obj.updateDynamic("incoming_request")(incoming_request.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(is_bestie)) __obj.updateDynamic("is_bestie")(is_bestie.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(is_private)) __obj.updateDynamic("is_private")(is_private.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(is_restricted)) __obj.updateDynamic("is_restricted")(is_restricted.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReelsTrayFeedResponseFriendshipStatus]
   }
-  @scala.inline
-  implicit class ReelsTrayFeedResponseFriendshipStatusOps[Self <: ReelsTrayFeedResponseFriendshipStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFollowing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("following")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIs_muting_reel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_muting_reel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMuting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutgoing_request(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoing_request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlocking(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlocking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowed_by(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followed_by")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowed_by: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followed_by")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncoming_request(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incoming_request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncoming_request: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incoming_request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs_bestie(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_bestie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs_bestie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_bestie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs_private(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_private")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs_private: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_private")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs_restricted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_restricted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs_restricted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_restricted")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

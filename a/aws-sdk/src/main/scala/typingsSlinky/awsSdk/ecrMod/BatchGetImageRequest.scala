@@ -26,53 +26,16 @@ trait BatchGetImageRequest extends js.Object {
 
 object BatchGetImageRequest {
   @scala.inline
-  def apply(imageIds: ImageIdentifierList, repositoryName: RepositoryName): BatchGetImageRequest = {
+  def apply(
+    imageIds: ImageIdentifierList,
+    repositoryName: RepositoryName,
+    acceptedMediaTypes: MediaTypeList = null,
+    registryId: RegistryId = null
+  ): BatchGetImageRequest = {
     val __obj = js.Dynamic.literal(imageIds = imageIds.asInstanceOf[js.Any], repositoryName = repositoryName.asInstanceOf[js.Any])
+    if (acceptedMediaTypes != null) __obj.updateDynamic("acceptedMediaTypes")(acceptedMediaTypes.asInstanceOf[js.Any])
+    if (registryId != null) __obj.updateDynamic("registryId")(registryId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetImageRequest]
   }
-  @scala.inline
-  implicit class BatchGetImageRequestOps[Self <: BatchGetImageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageIds(value: ImageIdentifierList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcceptedMediaTypes(value: MediaTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedMediaTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptedMediaTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedMediaTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistryId(value: RegistryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,6 +14,23 @@ object mutexMod extends js.Object {
     */
   class Mutex () extends ILockable {
     var mutex_ : js.Any = js.native
+    /**
+      * Lock until be unlocked.
+      */
+    /* CompleteClass */
+    override def lock(): js.Promise[Unit] = js.native
+    /**
+      * Try {@link lock}.
+      *
+      * @return Whether succeeded to lock or not.
+      */
+    /* CompleteClass */
+    override def try_lock(): js.Promise[Boolean] = js.native
+    /**
+      * Unlock.
+      */
+    /* CompleteClass */
+    override def unlock(): js.Promise[Unit] = js.native
   }
   
 }

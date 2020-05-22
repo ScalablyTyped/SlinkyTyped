@@ -11,7 +11,7 @@ import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayer
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerProps
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerStyleProps
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
@@ -46,7 +46,7 @@ object KeytipLayerBase {
       value: /* ev */ js.UndefOr[SyntheticKeyboardEvent[HTMLElement] | SyntheticMouseEvent[HTMLElement]] => Unit
     ): this.type = set("onExitKeytipMode", js.Any.fromFunction1(value))
     @scala.inline
-    def stylesFunction1(value: IKeytipLayerStyleProps => Partial[IKeytipLayerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IKeytipLayerStyleProps => DeepPartial[IKeytipLayerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IKeytipLayerStyleProps, IKeytipLayerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   }

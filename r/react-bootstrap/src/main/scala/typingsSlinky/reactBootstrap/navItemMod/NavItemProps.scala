@@ -9,274 +9,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavItemProps
   extends AllHTMLAttributes[NavItem]
      with ClassAttributes[NavItem] {
-  var active: js.UndefOr[Boolean] = js.native
-  var brand: js.UndefOr[js.Any] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
+  var brand: js.UndefOr[js.Any] = js.undefined
    // TODO: Add more specific type
-  var bsSize: js.UndefOr[Sizes] = js.native
-  var bsStyle: js.UndefOr[String] = js.native
-  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.native
-  var defaultNavExpanded: js.UndefOr[Boolean] = js.native
-  var eventKey: js.UndefOr[js.Any] = js.native
-  var fixedBottom: js.UndefOr[Boolean] = js.native
-  var fixedTop: js.UndefOr[Boolean] = js.native
-  var fluid: js.UndefOr[Boolean] = js.native
-  var inverse: js.UndefOr[Boolean] = js.native
-  var linkId: js.UndefOr[String] = js.native
-  var navExpanded: js.UndefOr[Boolean] = js.native
+  var bsSize: js.UndefOr[Sizes] = js.undefined
+  var bsStyle: js.UndefOr[String] = js.undefined
+  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var defaultNavExpanded: js.UndefOr[Boolean] = js.undefined
+  var eventKey: js.UndefOr[js.Any] = js.undefined
+  var fixedBottom: js.UndefOr[Boolean] = js.undefined
+  var fixedTop: js.UndefOr[Boolean] = js.undefined
+  var fluid: js.UndefOr[Boolean] = js.undefined
+  var inverse: js.UndefOr[Boolean] = js.undefined
+  var linkId: js.UndefOr[String] = js.undefined
+  var navExpanded: js.UndefOr[Boolean] = js.undefined
   @JSName("onSelect")
-  var onSelect_NavItemProps: js.UndefOr[SelectCallback] = js.native
-  var onToggle: js.UndefOr[js.Function] = js.native
-  var staticTop: js.UndefOr[Boolean] = js.native
-  var toggleButton: js.UndefOr[js.Any] = js.native
+  var onSelect_NavItemProps: js.UndefOr[SelectCallback] = js.undefined
+  var onToggle: js.UndefOr[js.Function] = js.undefined
+  var staticTop: js.UndefOr[Boolean] = js.undefined
+  var toggleButton: js.UndefOr[js.Any] = js.undefined
    // TODO: Add more specific type
-  var toggleNavKey: js.UndefOr[String | Double] = js.native
+  var toggleNavKey: js.UndefOr[String | Double] = js.undefined
 }
 
 object NavItemProps {
   @scala.inline
-  def apply(): NavItemProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[NavItem] = null,
+    ClassAttributes: ClassAttributes[NavItem] = null,
+    active: js.UndefOr[Boolean] = js.undefined,
+    brand: js.Any = null,
+    bsSize: Sizes = null,
+    bsStyle: String = null,
+    componentClass: ReactComponentClass[_] = null,
+    defaultNavExpanded: js.UndefOr[Boolean] = js.undefined,
+    eventKey: js.Any = null,
+    fixedBottom: js.UndefOr[Boolean] = js.undefined,
+    fixedTop: js.UndefOr[Boolean] = js.undefined,
+    fluid: js.UndefOr[Boolean] = js.undefined,
+    inverse: js.UndefOr[Boolean] = js.undefined,
+    linkId: String = null,
+    navExpanded: js.UndefOr[Boolean] = js.undefined,
+    onSelect: SelectCallback = null,
+    onToggle: js.Function = null,
+    staticTop: js.UndefOr[Boolean] = js.undefined,
+    toggleButton: js.Any = null,
+    toggleNavKey: String | Double = null
+  ): NavItemProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (brand != null) __obj.updateDynamic("brand")(brand.asInstanceOf[js.Any])
+    if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
+    if (bsStyle != null) __obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
+    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultNavExpanded)) __obj.updateDynamic("defaultNavExpanded")(defaultNavExpanded.get.asInstanceOf[js.Any])
+    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedBottom)) __obj.updateDynamic("fixedBottom")(fixedBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedTop)) __obj.updateDynamic("fixedTop")(fixedTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverse)) __obj.updateDynamic("inverse")(inverse.get.asInstanceOf[js.Any])
+    if (linkId != null) __obj.updateDynamic("linkId")(linkId.asInstanceOf[js.Any])
+    if (!js.isUndefined(navExpanded)) __obj.updateDynamic("navExpanded")(navExpanded.get.asInstanceOf[js.Any])
+    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
+    if (onToggle != null) __obj.updateDynamic("onToggle")(onToggle.asInstanceOf[js.Any])
+    if (!js.isUndefined(staticTop)) __obj.updateDynamic("staticTop")(staticTop.get.asInstanceOf[js.Any])
+    if (toggleButton != null) __obj.updateDynamic("toggleButton")(toggleButton.asInstanceOf[js.Any])
+    if (toggleNavKey != null) __obj.updateDynamic("toggleNavKey")(toggleNavKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavItemProps]
   }
-  @scala.inline
-  implicit class NavItemPropsOps[Self <: NavItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrand(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsSize(value: Sizes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentClassFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentClassComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultNavExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultNavExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultNavExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultNavExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventKey(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedBottom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFluid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fluid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFluid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fluid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: SelectCallback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnToggle(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnToggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggleButton(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggleButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggleNavKey(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleNavKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggleNavKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleNavKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DescribeEndpointTypesResponse extends js.Object {
 
 object DescribeEndpointTypesResponse {
   @scala.inline
-  def apply(): DescribeEndpointTypesResponse = {
+  def apply(Marker: String = null, SupportedEndpointTypes: SupportedEndpointTypeList = null): DescribeEndpointTypesResponse = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (SupportedEndpointTypes != null) __obj.updateDynamic("SupportedEndpointTypes")(SupportedEndpointTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEndpointTypesResponse]
   }
-  @scala.inline
-  implicit class DescribeEndpointTypesResponseOps[Self <: DescribeEndpointTypesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedEndpointTypes(value: SupportedEndpointTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedEndpointTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedEndpointTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedEndpointTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.Usb
 
+import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +10,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Usb.UsbBulkOutPipe")
 @js.native
 abstract class UsbBulkOutPipe ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbBulkOutPipe
+  extends typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbBulkOutPipe {
+  /** Gets the object that represents the endpoint descriptor associated with the USB bulk OUT endpoint. */
+  /* CompleteClass */
+  override var endpointDescriptor: typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbBulkOutEndpointDescriptor = js.native
+  /** Gets an output stream to which the app can write data to send to the endpoint. */
+  /* CompleteClass */
+  override var outputStream: IOutputStream = js.native
+  /** Gets or sets configuration flags that controls the behavior of the pipe that writes data to a USB bulk IN endpoint. */
+  /* CompleteClass */
+  override var writeOptions: typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbWriteOptions = js.native
+  /**
+    * Starts an asynchronous operation to clear a stall condition (endpoint halt) on the USB bulk OUT endpoint that is associated with the pipe.
+    * @return An IAsyncAction object that is used to control the asynchronous operation.
+    */
+  /* CompleteClass */
+  override def clearStallAsync(): IPromiseWithIAsyncAction = js.native
+}
 

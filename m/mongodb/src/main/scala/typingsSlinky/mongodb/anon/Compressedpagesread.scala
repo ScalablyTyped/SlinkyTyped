@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Compressedpagesread extends js.Object {
-  var `compressed pages read`: Double = js.native
-  var `compressed pages written`: Double = js.native
-  var `page written failed to compress`: Double = js.native
-  var `page written was too small to compress`: Double = js.native
+  var `compressed pages read`: Double
+  var `compressed pages written`: Double
+  var `page written failed to compress`: Double
+  var `page written was too small to compress`: Double
   @JSName("raw compression call failed, additional data available")
-  var `raw compression call failedComma additional data available`: Double = js.native
+  var `raw compression call failedComma additional data available`: Double
   @JSName("raw compression call failed, no additional data available")
-  var `raw compression call failedComma no additional data available`: Double = js.native
-  var `raw compression call succeeded`: Double = js.native
+  var `raw compression call failedComma no additional data available`: Double
+  var `raw compression call succeeded`: Double
 }
 
 object Compressedpagesread {
@@ -38,55 +37,5 @@ object Compressedpagesread {
     __obj.updateDynamic("raw compression call succeeded")((`raw compression call succeeded`).asInstanceOf[js.Any])
     __obj.asInstanceOf[Compressedpagesread]
   }
-  @scala.inline
-  implicit class CompressedpagesreadOps[Self <: Compressedpagesread] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withCompressed pages read`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compressed pages read")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCompressed pages written`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compressed pages written")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPage written failed to compress`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page written failed to compress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPage written was too small to compress`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page written was too small to compress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRaw compression call failedComma additional data available`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw compression call failed, additional data available")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRaw compression call failedComma no additional data available`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw compression call failed, no additional data available")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRaw compression call succeeded`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw compression call succeeded")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

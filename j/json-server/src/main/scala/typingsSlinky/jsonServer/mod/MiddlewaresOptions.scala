@@ -4,125 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MiddlewaresOptions extends js.Object {
   /**
     * Enable body-parser middleware
     * @default true
     */
-  var bodyParser: js.UndefOr[Boolean] = js.native
+  var bodyParser: js.UndefOr[Boolean] = js.undefined
   /**
     * Enable logger middleware
     * @default true
     */
-  var logger: js.UndefOr[Boolean] = js.native
+  var logger: js.UndefOr[Boolean] = js.undefined
   /**
     * Disable CORS
     * @default false
     */
-  var noCors: js.UndefOr[Boolean] = js.native
+  var noCors: js.UndefOr[Boolean] = js.undefined
   /**
     * Disable compression
     * @default false
     */
-  var noGzip: js.UndefOr[Boolean] = js.native
+  var noGzip: js.UndefOr[Boolean] = js.undefined
   /**
     * Accept only GET requests
     * @default false
     */
-  var readOnly: js.UndefOr[Boolean] = js.native
+  var readOnly: js.UndefOr[Boolean] = js.undefined
   /**
     * Path to static files
     * @default "public" (if folder exists)
     */
-  var static: js.UndefOr[String] = js.native
+  var static: js.UndefOr[String] = js.undefined
 }
 
 object MiddlewaresOptions {
   @scala.inline
-  def apply(): MiddlewaresOptions = {
+  def apply(
+    bodyParser: js.UndefOr[Boolean] = js.undefined,
+    logger: js.UndefOr[Boolean] = js.undefined,
+    noCors: js.UndefOr[Boolean] = js.undefined,
+    noGzip: js.UndefOr[Boolean] = js.undefined,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    static: String = null
+  ): MiddlewaresOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bodyParser)) __obj.updateDynamic("bodyParser")(bodyParser.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logger)) __obj.updateDynamic("logger")(logger.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noCors)) __obj.updateDynamic("noCors")(noCors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noGzip)) __obj.updateDynamic("noGzip")(noGzip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (static != null) __obj.updateDynamic("static")(static.asInstanceOf[js.Any])
     __obj.asInstanceOf[MiddlewaresOptions]
   }
-  @scala.inline
-  implicit class MiddlewaresOptionsOps[Self <: MiddlewaresOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyParser(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyParser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyParser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoCors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoCors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoGzip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noGzip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoGzip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noGzip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

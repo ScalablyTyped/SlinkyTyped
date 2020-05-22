@@ -1,36 +1,16 @@
 package typingsSlinky.gapiClientCalendar.gapi.client.calendar
 
 import typingsSlinky.gapiClient.gapi.client.Request
-import typingsSlinky.gapiClientCalendar.anon.QuotaUser
+import typingsSlinky.gapiClientCalendar.anon.FieldsKey
+import typingsSlinky.gapiClientCalendar.anon.KeyOauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ChannelsResource extends js.Object {
+  def stop(request: FieldsKey, body: Channel): Request[Unit] = js.native
   /** Stop watching resources through this channel */
-  def stop(request: QuotaUser): Request[Unit] = js.native
-}
-
-object ChannelsResource {
-  @scala.inline
-  def apply(stop: QuotaUser => Request[Unit]): ChannelsResource = {
-    val __obj = js.Dynamic.literal(stop = js.Any.fromFunction1(stop))
-    __obj.asInstanceOf[ChannelsResource]
-  }
-  @scala.inline
-  implicit class ChannelsResourceOps[Self <: ChannelsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStop(value: QuotaUser => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
+  def stop(request: KeyOauthtoken): Request[Unit] = js.native
 }
 

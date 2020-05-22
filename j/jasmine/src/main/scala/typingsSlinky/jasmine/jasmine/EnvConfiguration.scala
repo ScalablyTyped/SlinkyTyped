@@ -7,127 +7,39 @@ import scala.scalajs.js.annotation._
 /**
   * Configuration that can be used when configuring Jasmine via {@link jasmine.Env.configure}
   */
-@js.native
 trait EnvConfiguration extends js.Object {
-  var Promise: js.UndefOr[js.Function] = js.native
-  var failFast: js.UndefOr[Boolean] = js.native
-  var failSpecWithNoExpectations: js.UndefOr[Boolean] = js.native
-  var hideDisabled: js.UndefOr[Boolean] = js.native
-  var oneFailurePerSpec: js.UndefOr[Boolean] = js.native
-  var random: js.UndefOr[Boolean] = js.native
-  var seed: js.UndefOr[Double] = js.native
-  var specFilter: js.UndefOr[js.Function] = js.native
+  var Promise: js.UndefOr[js.Function] = js.undefined
+  var failFast: js.UndefOr[Boolean] = js.undefined
+  var failSpecWithNoExpectations: js.UndefOr[Boolean] = js.undefined
+  var hideDisabled: js.UndefOr[Boolean] = js.undefined
+  var oneFailurePerSpec: js.UndefOr[Boolean] = js.undefined
+  var random: js.UndefOr[Boolean] = js.undefined
+  var seed: js.UndefOr[Double] = js.undefined
+  var specFilter: js.UndefOr[js.Function] = js.undefined
 }
 
 object EnvConfiguration {
   @scala.inline
-  def apply(): EnvConfiguration = {
+  def apply(
+    Promise: js.Function = null,
+    failFast: js.UndefOr[Boolean] = js.undefined,
+    failSpecWithNoExpectations: js.UndefOr[Boolean] = js.undefined,
+    hideDisabled: js.UndefOr[Boolean] = js.undefined,
+    oneFailurePerSpec: js.UndefOr[Boolean] = js.undefined,
+    random: js.UndefOr[Boolean] = js.undefined,
+    seed: js.UndefOr[Double] = js.undefined,
+    specFilter: js.Function = null
+  ): EnvConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (Promise != null) __obj.updateDynamic("Promise")(Promise.asInstanceOf[js.Any])
+    if (!js.isUndefined(failFast)) __obj.updateDynamic("failFast")(failFast.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failSpecWithNoExpectations)) __obj.updateDynamic("failSpecWithNoExpectations")(failSpecWithNoExpectations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideDisabled)) __obj.updateDynamic("hideDisabled")(hideDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(oneFailurePerSpec)) __obj.updateDynamic("oneFailurePerSpec")(oneFailurePerSpec.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(random)) __obj.updateDynamic("random")(random.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(seed)) __obj.updateDynamic("seed")(seed.get.asInstanceOf[js.Any])
+    if (specFilter != null) __obj.updateDynamic("specFilter")(specFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvConfiguration]
   }
-  @scala.inline
-  implicit class EnvConfigurationOps[Self <: EnvConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPromise(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailFast(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failFast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailFast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failFast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailSpecWithNoExpectations(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failSpecWithNoExpectations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailSpecWithNoExpectations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failSpecWithNoExpectations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOneFailurePerSpec(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneFailurePerSpec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOneFailurePerSpec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneFailurePerSpec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRandom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("random")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRandom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("random")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpecFilter(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpecFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

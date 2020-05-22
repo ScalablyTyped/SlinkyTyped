@@ -22,35 +22,10 @@ trait FinalizeDeviceClaimRequest extends js.Object {
 
 object FinalizeDeviceClaimRequest {
   @scala.inline
-  def apply(DeviceId: string): FinalizeDeviceClaimRequest = {
+  def apply(DeviceId: string, Tags: mapOfString = null): FinalizeDeviceClaimRequest = {
     val __obj = js.Dynamic.literal(DeviceId = DeviceId.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[FinalizeDeviceClaimRequest]
   }
-  @scala.inline
-  implicit class FinalizeDeviceClaimRequestOps[Self <: FinalizeDeviceClaimRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: mapOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

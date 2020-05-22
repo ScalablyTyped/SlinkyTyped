@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5
   */
-@js.native
 trait Link extends js.Object {
   /**
     * The "deprecation" property is OPTIONAL.
@@ -26,7 +25,7 @@ trait Link extends js.Object {
     *
     * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5.4
     */
-  var deprecation: js.UndefOr[String] = js.native
+  var deprecation: js.UndefOr[String] = js.undefined
   /**
     * The "href" property is REQUIRED.
     *
@@ -37,7 +36,7 @@ trait Link extends js.Object {
     *
     * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5.1
     */
-  var href: String = js.native
+  var href: String
   /**
     * The "hreflang" property is OPTIONAL.
     *
@@ -46,7 +45,7 @@ trait Link extends js.Object {
     *
     * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5.8
     */
-  var hreflang: js.UndefOr[String] = js.native
+  var hreflang: js.UndefOr[String] = js.undefined
   /**
     * The "name" property is OPTIONAL.
     *
@@ -55,7 +54,7 @@ trait Link extends js.Object {
     *
     * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5.5
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The "profile" property is OPTIONAL.
     *
@@ -64,7 +63,7 @@ trait Link extends js.Object {
     *
     * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5.6
     */
-  var profile: js.UndefOr[String] = js.native
+  var profile: js.UndefOr[String] = js.undefined
   /**
     * The "templated" property is OPTIONAL.
     *
@@ -76,7 +75,7 @@ trait Link extends js.Object {
     *
     * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5.2
     */
-  var templated: js.UndefOr[Boolean] = js.native
+  var templated: js.UndefOr[Boolean] = js.undefined
   /**
     * The "title" property is OPTIONAL.
     *
@@ -85,7 +84,7 @@ trait Link extends js.Object {
     *
     * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5.7
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * The "type" property is OPTIONAL.
     *
@@ -94,112 +93,30 @@ trait Link extends js.Object {
     *
     * @see https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5.3
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object Link {
   @scala.inline
-  def apply(href: String): Link = {
+  def apply(
+    href: String,
+    deprecation: String = null,
+    hreflang: String = null,
+    name: String = null,
+    profile: String = null,
+    templated: js.UndefOr[Boolean] = js.undefined,
+    title: String = null,
+    `type`: String = null
+  ): Link = {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
+    if (deprecation != null) __obj.updateDynamic("deprecation")(deprecation.asInstanceOf[js.Any])
+    if (hreflang != null) __obj.updateDynamic("hreflang")(hreflang.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (profile != null) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
+    if (!js.isUndefined(templated)) __obj.updateDynamic("templated")(templated.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Link]
   }
-  @scala.inline
-  implicit class LinkOps[Self <: Link] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeprecation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHreflang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hreflang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHreflang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hreflang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

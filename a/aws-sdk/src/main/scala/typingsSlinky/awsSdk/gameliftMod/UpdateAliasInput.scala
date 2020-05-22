@@ -9,7 +9,7 @@ trait UpdateAliasInput extends js.Object {
   /**
     * A unique identifier for the alias that you want to update. You can use either the alias ID or ARN value.
     */
-  var AliasId: typingsSlinky.awsSdk.gameliftMod.AliasId = js.native
+  var AliasId: AliasIdOrArn = js.native
   /**
     * A human-readable description of the alias.
     */
@@ -26,59 +26,17 @@ trait UpdateAliasInput extends js.Object {
 
 object UpdateAliasInput {
   @scala.inline
-  def apply(AliasId: AliasId): UpdateAliasInput = {
+  def apply(
+    AliasId: AliasIdOrArn,
+    Description: NonZeroAndMaxString = null,
+    Name: NonBlankAndLengthConstraintString = null,
+    RoutingStrategy: RoutingStrategy = null
+  ): UpdateAliasInput = {
     val __obj = js.Dynamic.literal(AliasId = AliasId.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (RoutingStrategy != null) __obj.updateDynamic("RoutingStrategy")(RoutingStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAliasInput]
   }
-  @scala.inline
-  implicit class UpdateAliasInputOps[Self <: UpdateAliasInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAliasId(value: AliasId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NonBlankAndLengthConstraintString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoutingStrategy(value: RoutingStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoutingStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutingStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoutingStrategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

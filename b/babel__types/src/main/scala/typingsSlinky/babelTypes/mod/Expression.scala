@@ -1,5 +1,84 @@
 package typingsSlinky.babelTypes.mod
 
+import typingsSlinky.babelTypes.babelTypesBooleans.`false`
+import typingsSlinky.babelTypes.babelTypesBooleans.`true`
+import typingsSlinky.babelTypes.babelTypesStrings.Ampersand
+import typingsSlinky.babelTypes.babelTypesStrings.AmpersandAmpersand
+import typingsSlinky.babelTypes.babelTypesStrings.ArrayExpression
+import typingsSlinky.babelTypes.babelTypesStrings.ArrowFunctionExpression
+import typingsSlinky.babelTypes.babelTypesStrings.AssignmentExpression
+import typingsSlinky.babelTypes.babelTypesStrings.Asterisk
+import typingsSlinky.babelTypes.babelTypesStrings.AsteriskAsterisk
+import typingsSlinky.babelTypes.babelTypesStrings.AwaitExpression
+import typingsSlinky.babelTypes.babelTypesStrings.BigIntLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.BinaryExpression
+import typingsSlinky.babelTypes.babelTypesStrings.BindExpression
+import typingsSlinky.babelTypes.babelTypesStrings.BooleanLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.CallExpression
+import typingsSlinky.babelTypes.babelTypesStrings.ClassExpression
+import typingsSlinky.babelTypes.babelTypesStrings.ConditionalExpression
+import typingsSlinky.babelTypes.babelTypesStrings.DoExpression
+import typingsSlinky.babelTypes.babelTypesStrings.EqualssignEqualssign
+import typingsSlinky.babelTypes.babelTypesStrings.EqualssignEqualssignEqualssign
+import typingsSlinky.babelTypes.babelTypesStrings.Exclamationmark
+import typingsSlinky.babelTypes.babelTypesStrings.ExclamationmarkEqualssign
+import typingsSlinky.babelTypes.babelTypesStrings.ExclamationmarkEqualssignEqualssign
+import typingsSlinky.babelTypes.babelTypesStrings.FunctionExpression
+import typingsSlinky.babelTypes.babelTypesStrings.Greaterthansign
+import typingsSlinky.babelTypes.babelTypesStrings.GreaterthansignEqualssign
+import typingsSlinky.babelTypes.babelTypesStrings.GreaterthansignGreaterthansign
+import typingsSlinky.babelTypes.babelTypesStrings.GreaterthansignGreaterthansignGreaterthansign
+import typingsSlinky.babelTypes.babelTypesStrings.Identifier
+import typingsSlinky.babelTypes.babelTypesStrings.Import
+import typingsSlinky.babelTypes.babelTypesStrings.JSXElement
+import typingsSlinky.babelTypes.babelTypesStrings.JSXFragment
+import typingsSlinky.babelTypes.babelTypesStrings.Lessthansign
+import typingsSlinky.babelTypes.babelTypesStrings.LessthansignEqualssign
+import typingsSlinky.babelTypes.babelTypesStrings.LessthansignLessthansign
+import typingsSlinky.babelTypes.babelTypesStrings.LogicalExpression
+import typingsSlinky.babelTypes.babelTypesStrings.MemberExpression
+import typingsSlinky.babelTypes.babelTypesStrings.MetaProperty
+import typingsSlinky.babelTypes.babelTypesStrings.NewExpression
+import typingsSlinky.babelTypes.babelTypesStrings.NullLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.NumericLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectExpression
+import typingsSlinky.babelTypes.babelTypesStrings.OptionalCallExpression
+import typingsSlinky.babelTypes.babelTypesStrings.OptionalMemberExpression
+import typingsSlinky.babelTypes.babelTypesStrings.ParenthesizedExpression
+import typingsSlinky.babelTypes.babelTypesStrings.Percentsign
+import typingsSlinky.babelTypes.babelTypesStrings.PipelinePrimaryTopicReference
+import typingsSlinky.babelTypes.babelTypesStrings.Plussign
+import typingsSlinky.babelTypes.babelTypesStrings.PlussignPlussign
+import typingsSlinky.babelTypes.babelTypesStrings.QuestionmarkQuestionmark
+import typingsSlinky.babelTypes.babelTypesStrings.RecordExpression
+import typingsSlinky.babelTypes.babelTypesStrings.RegExpLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.SequenceExpression
+import typingsSlinky.babelTypes.babelTypesStrings.Slash
+import typingsSlinky.babelTypes.babelTypesStrings.StringLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.Super
+import typingsSlinky.babelTypes.babelTypesStrings.TSAsExpression
+import typingsSlinky.babelTypes.babelTypesStrings.TSNonNullExpression
+import typingsSlinky.babelTypes.babelTypesStrings.TSTypeAssertion
+import typingsSlinky.babelTypes.babelTypesStrings.TaggedTemplateExpression
+import typingsSlinky.babelTypes.babelTypesStrings.TemplateLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.ThisExpression
+import typingsSlinky.babelTypes.babelTypesStrings.Tilde
+import typingsSlinky.babelTypes.babelTypesStrings.TupleExpression
+import typingsSlinky.babelTypes.babelTypesStrings.TypeCastExpression
+import typingsSlinky.babelTypes.babelTypesStrings.UnaryExpression
+import typingsSlinky.babelTypes.babelTypesStrings.UpdateExpression
+import typingsSlinky.babelTypes.babelTypesStrings.Verticalline
+import typingsSlinky.babelTypes.babelTypesStrings.VerticallineVerticalline
+import typingsSlinky.babelTypes.babelTypesStrings.YieldExpression
+import typingsSlinky.babelTypes.babelTypesStrings.^
+import typingsSlinky.babelTypes.babelTypesStrings.`--`
+import typingsSlinky.babelTypes.babelTypesStrings.`-_`
+import typingsSlinky.babelTypes.babelTypesStrings.`throw`
+import typingsSlinky.babelTypes.babelTypesStrings.delete
+import typingsSlinky.babelTypes.babelTypesStrings.in
+import typingsSlinky.babelTypes.babelTypesStrings.instanceof
+import typingsSlinky.babelTypes.babelTypesStrings.typeof
+import typingsSlinky.babelTypes.babelTypesStrings.void
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,96 +129,737 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.TSTypeAssertion_
   - typingsSlinky.babelTypes.mod.TSNonNullExpression_
 */
-trait Expression extends Node
+trait Expression extends _Node
 
 object Expression {
   @scala.inline
-  implicit def apply(value: ArrayExpression_): Expression = value.asInstanceOf[Expression]
+  def YieldExpression_(
+    delegate: js.Any,
+    `type`: YieldExpression,
+    argument: Expression = null,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(delegate = delegate.asInstanceOf[js.Any], argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: ArrowFunctionExpression_): Expression = value.asInstanceOf[Expression]
+  def Import_(
+    `type`: Import,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: AssignmentExpression_): Expression = value.asInstanceOf[Expression]
+  def LogicalExpression_(
+    left: Expression,
+    operator: VerticallineVerticalline | AmpersandAmpersand | QuestionmarkQuestionmark,
+    right: Expression,
+    `type`: LogicalExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: AwaitExpression_): Expression = value.asInstanceOf[Expression]
+  def UnaryExpression_(
+    argument: Expression,
+    operator: void | `throw` | delete | Exclamationmark | Plussign | `-_` | Tilde | typeof,
+    prefix: Boolean,
+    `type`: UnaryExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: BigIntLiteral_): Expression = value.asInstanceOf[Expression]
+  def Identifier_(
+    name: js.Any,
+    `type`: Identifier,
+    decorators: js.Array[Decorator_] = null,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    optional: Boolean = null.asInstanceOf[Boolean],
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], decorators = decorators.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: BinaryExpression_): Expression = value.asInstanceOf[Expression]
+  def OptionalCallExpression_(
+    arguments: js.Array[Expression | SpreadElement_ | JSXNamespacedName_],
+    callee: Expression,
+    optional: Boolean,
+    `type`: OptionalCallExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeArguments: TypeParameterInstantiation_ = null,
+    typeParameters: TSTypeParameterInstantiation_ = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], callee = callee.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeArguments = typeArguments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: BindExpression_): Expression = value.asInstanceOf[Expression]
+  def ClassExpression_(
+    body: ClassBody_,
+    mixins: js.Any,
+    `type`: ClassExpression,
+    decorators: js.Array[Decorator_] = null,
+    end: Double = null.asInstanceOf[Double],
+    id: Identifier_ = null,
+    implements: js.Array[TSExpressionWithTypeArguments_ | ClassImplements_] = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    superClass: Expression = null,
+    superTypeParameters: TypeParameterInstantiation_ | TSTypeParameterInstantiation_ = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], mixins = mixins.asInstanceOf[js.Any], decorators = decorators.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], implements = implements.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], superClass = superClass.asInstanceOf[js.Any], superTypeParameters = superTypeParameters.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: BooleanLiteral_): Expression = value.asInstanceOf[Expression]
+  def MetaProperty_(
+    meta: js.Any,
+    property: Identifier_,
+    `type`: MetaProperty,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: CallExpression_): Expression = value.asInstanceOf[Expression]
+  def NullLiteral_(
+    `type`: NullLiteral,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: ClassExpression_): Expression = value.asInstanceOf[Expression]
+  def TSTypeAssertion_(
+    expression: Expression,
+    `type`: TSTypeAssertion,
+    typeAnnotation: TSType,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: ConditionalExpression_): Expression = value.asInstanceOf[Expression]
+  def MemberExpression_(
+    computed: Boolean,
+    `object`: Expression,
+    property: js.Any,
+    `type`: MemberExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    optional: `true` | `false` = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: DoExpression_): Expression = value.asInstanceOf[Expression]
+  def Super_(
+    `type`: Super,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: FunctionExpression_): Expression = value.asInstanceOf[Expression]
+  def ArrayExpression_(
+    elements: js.Array[Null | Expression | SpreadElement_],
+    `type`: ArrayExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: Identifier_): Expression = value.asInstanceOf[Expression]
+  def StringLiteral_(
+    `type`: StringLiteral,
+    value: String,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: Import_): Expression = value.asInstanceOf[Expression]
+  def JSXFragment_(
+    children: js.Array[
+      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | typingsSlinky.babelTypes.mod.JSXFragment_
+    ],
+    closingFragment: JSXClosingFragment_,
+    openingFragment: JSXOpeningFragment_,
+    `type`: JSXFragment,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: JSXElement_): Expression = value.asInstanceOf[Expression]
+  def BooleanLiteral_(
+    `type`: BooleanLiteral,
+    value: Boolean,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: JSXFragment_): Expression = value.asInstanceOf[Expression]
+  def BinaryExpression_(
+    left: Expression,
+    operator: Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign,
+    right: Expression,
+    `type`: BinaryExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: LogicalExpression_): Expression = value.asInstanceOf[Expression]
+  def FunctionExpression_(
+    async: Boolean,
+    body: BlockStatement_,
+    generator: Boolean,
+    params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_],
+    `type`: FunctionExpression,
+    end: Double = null.asInstanceOf[Double],
+    id: Identifier_ = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: MemberExpression_): Expression = value.asInstanceOf[Expression]
+  def AssignmentExpression_(
+    left: LVal,
+    operator: String,
+    right: Expression,
+    `type`: AssignmentExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: MetaProperty_): Expression = value.asInstanceOf[Expression]
+  def CallExpression_(
+    arguments: js.Array[Expression | SpreadElement_ | JSXNamespacedName_ | ArgumentPlaceholder_],
+    callee: Expression | V8IntrinsicIdentifier_,
+    `type`: CallExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    optional: `true` | `false` = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeArguments: TypeParameterInstantiation_ = null,
+    typeParameters: TSTypeParameterInstantiation_ = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], callee = callee.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeArguments = typeArguments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: NewExpression_): Expression = value.asInstanceOf[Expression]
+  def TSAsExpression_(
+    expression: Expression,
+    `type`: TSAsExpression,
+    typeAnnotation: TSType,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: NullLiteral_): Expression = value.asInstanceOf[Expression]
+  def TupleExpression_(
+    elements: js.Array[Null | Expression | SpreadElement_],
+    `type`: TupleExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: NumericLiteral_): Expression = value.asInstanceOf[Expression]
+  def BigIntLiteral_(
+    `type`: BigIntLiteral,
+    value: String,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: ObjectExpression_): Expression = value.asInstanceOf[Expression]
+  def NumericLiteral_(
+    `type`: NumericLiteral,
+    value: Double,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: OptionalCallExpression_): Expression = value.asInstanceOf[Expression]
+  def ObjectExpression_(
+    properties: js.Array[ObjectMethod_ | ObjectProperty_ | SpreadElement_],
+    `type`: ObjectExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(properties = properties.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: OptionalMemberExpression_): Expression = value.asInstanceOf[Expression]
+  def TSNonNullExpression_(
+    expression: Expression,
+    `type`: TSNonNullExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: ParenthesizedExpression_): Expression = value.asInstanceOf[Expression]
+  def OptionalMemberExpression_(
+    computed: Boolean,
+    `object`: Expression,
+    optional: Boolean,
+    property: js.Any,
+    `type`: OptionalMemberExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: PipelinePrimaryTopicReference_): Expression = value.asInstanceOf[Expression]
+  def TemplateLiteral_(
+    expressions: js.Array[Expression],
+    quasis: js.Array[TemplateElement_],
+    `type`: TemplateLiteral,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any], quasis = quasis.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: RecordExpression_): Expression = value.asInstanceOf[Expression]
+  def BindExpression_(
+    callee: js.Any,
+    `object`: js.Any,
+    `type`: BindExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(callee = callee.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: RegExpLiteral_): Expression = value.asInstanceOf[Expression]
+  def AwaitExpression_(
+    argument: Expression,
+    `type`: AwaitExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: SequenceExpression_): Expression = value.asInstanceOf[Expression]
+  def DoExpression_(
+    body: BlockStatement_,
+    `type`: DoExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: StringLiteral_): Expression = value.asInstanceOf[Expression]
+  def ConditionalExpression_(
+    alternate: Expression,
+    consequent: Expression,
+    test: Expression,
+    `type`: ConditionalExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(alternate = alternate.asInstanceOf[js.Any], consequent = consequent.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: Super_): Expression = value.asInstanceOf[Expression]
+  def ParenthesizedExpression_(
+    expression: Expression,
+    `type`: ParenthesizedExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: TSAsExpression_): Expression = value.asInstanceOf[Expression]
+  def PipelinePrimaryTopicReference_(
+    `type`: PipelinePrimaryTopicReference,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: TSNonNullExpression_): Expression = value.asInstanceOf[Expression]
+  def NewExpression_(
+    arguments: js.Array[Expression | SpreadElement_ | JSXNamespacedName_ | ArgumentPlaceholder_],
+    callee: Expression | V8IntrinsicIdentifier_,
+    `type`: NewExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    optional: `true` | `false` = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeArguments: TypeParameterInstantiation_ = null,
+    typeParameters: TSTypeParameterInstantiation_ = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], callee = callee.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeArguments = typeArguments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: TSTypeAssertion_): Expression = value.asInstanceOf[Expression]
+  def RegExpLiteral_(
+    flags: js.Any,
+    pattern: String,
+    `type`: RegExpLiteral,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: TaggedTemplateExpression_): Expression = value.asInstanceOf[Expression]
+  def ArrowFunctionExpression_(
+    async: Boolean,
+    body: BlockStatement_ | Expression,
+    expression: Boolean,
+    generator: Boolean,
+    params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_],
+    `type`: ArrowFunctionExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: TemplateLiteral_): Expression = value.asInstanceOf[Expression]
+  def ThisExpression_(
+    `type`: ThisExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: ThisExpression_): Expression = value.asInstanceOf[Expression]
+  def TypeCastExpression_(
+    expression: Expression,
+    `type`: TypeCastExpression,
+    typeAnnotation: TypeAnnotation_,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: TupleExpression_): Expression = value.asInstanceOf[Expression]
+  def SequenceExpression_(
+    expressions: js.Array[Expression],
+    `type`: SequenceExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: TypeCastExpression_): Expression = value.asInstanceOf[Expression]
+  def UpdateExpression_(
+    argument: Expression,
+    operator: PlussignPlussign | `--`,
+    prefix: Boolean,
+    `type`: UpdateExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: UnaryExpression_): Expression = value.asInstanceOf[Expression]
+  def JSXElement_(
+    children: js.Array[
+      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | typingsSlinky.babelTypes.mod.JSXElement_ | JSXFragment_
+    ],
+    openingElement: JSXOpeningElement_,
+    selfClosing: js.Any,
+    `type`: JSXElement,
+    closingElement: JSXClosingElement_ = null,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], openingElement = openingElement.asInstanceOf[js.Any], selfClosing = selfClosing.asInstanceOf[js.Any], closingElement = closingElement.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: UpdateExpression_): Expression = value.asInstanceOf[Expression]
+  def TaggedTemplateExpression_(
+    quasi: TemplateLiteral_,
+    tag: Expression,
+    `type`: TaggedTemplateExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterInstantiation_ | TSTypeParameterInstantiation_ = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(quasi = quasi.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
   @scala.inline
-  implicit def apply(value: YieldExpression_): Expression = value.asInstanceOf[Expression]
+  def RecordExpression_(
+    properties: js.Array[ObjectProperty_ | ObjectMethod_ | SpreadElement_],
+    `type`: RecordExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Expression = {
+    val __obj = js.Dynamic.literal(properties = properties.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Expression]
+  }
 }
 

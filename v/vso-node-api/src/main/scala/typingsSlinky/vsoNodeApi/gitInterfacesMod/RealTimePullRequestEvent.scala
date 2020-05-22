@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RealTimePullRequestEvent extends js.Object {
   /**
     * The id of this event. Can be used to track send/receive state between client and server.
     */
-  var eventId: String = js.native
+  var eventId: String
   /**
     * The id of the pull request this event was generated for.
     */
-  var pullRequestId: Double = js.native
+  var pullRequestId: Double
 }
 
 object RealTimePullRequestEvent {
@@ -22,25 +21,5 @@ object RealTimePullRequestEvent {
     val __obj = js.Dynamic.literal(eventId = eventId.asInstanceOf[js.Any], pullRequestId = pullRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RealTimePullRequestEvent]
   }
-  @scala.inline
-  implicit class RealTimePullRequestEventOps[Self <: RealTimePullRequestEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPullRequestId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

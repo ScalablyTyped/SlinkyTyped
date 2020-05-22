@@ -4,68 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BeforeBatchSaveEventArgs extends js.Object {
   /** Returns the changed record object.
     */
-  var batchChanges: js.UndefOr[js.Any] = js.native
+  var batchChanges: js.UndefOr[js.Any] = js.undefined
   /** Returns the query, primary key,batch changes for the data Source.
     */
-  var dataSetting: js.UndefOr[js.Any] = js.native
+  var dataSetting: js.UndefOr[js.Any] = js.undefined
   /** Returns the sheet index.
     */
-  var sheetIdx: js.UndefOr[Double] = js.native
+  var sheetIdx: js.UndefOr[Double] = js.undefined
 }
 
 object BeforeBatchSaveEventArgs {
   @scala.inline
-  def apply(): BeforeBatchSaveEventArgs = {
+  def apply(
+    batchChanges: js.Any = null,
+    dataSetting: js.Any = null,
+    sheetIdx: js.UndefOr[Double] = js.undefined
+  ): BeforeBatchSaveEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (batchChanges != null) __obj.updateDynamic("batchChanges")(batchChanges.asInstanceOf[js.Any])
+    if (dataSetting != null) __obj.updateDynamic("dataSetting")(dataSetting.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetIdx)) __obj.updateDynamic("sheetIdx")(sheetIdx.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeforeBatchSaveEventArgs]
   }
-  @scala.inline
-  implicit class BeforeBatchSaveEventArgsOps[Self <: BeforeBatchSaveEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchChanges(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchChanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchChanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSetting(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSetting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetIdx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetIdx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetIdx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetIdx")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

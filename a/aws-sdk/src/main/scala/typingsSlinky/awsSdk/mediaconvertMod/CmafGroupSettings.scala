@@ -86,245 +86,48 @@ trait CmafGroupSettings extends js.Object {
 
 object CmafGroupSettings {
   @scala.inline
-  def apply(): CmafGroupSettings = {
+  def apply(
+    AdditionalManifests: listOfCmafAdditionalManifest = null,
+    BaseUrl: string = null,
+    ClientCache: CmafClientCache = null,
+    CodecSpecification: CmafCodecSpecification = null,
+    Destination: stringPatternS3 = null,
+    DestinationSettings: DestinationSettings = null,
+    Encryption: CmafEncryptionSettings = null,
+    FragmentLength: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    ManifestCompression: CmafManifestCompression = null,
+    ManifestDurationFormat: CmafManifestDurationFormat = null,
+    MinBufferTime: js.UndefOr[integerMin0Max2147483647] = js.undefined,
+    MinFinalSegmentLength: js.UndefOr[doubleMin0Max2147483647] = js.undefined,
+    MpdProfile: CmafMpdProfile = null,
+    SegmentControl: CmafSegmentControl = null,
+    SegmentLength: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    StreamInfResolution: CmafStreamInfResolution = null,
+    WriteDashManifest: CmafWriteDASHManifest = null,
+    WriteHlsManifest: CmafWriteHLSManifest = null,
+    WriteSegmentTimelineInRepresentation: CmafWriteSegmentTimelineInRepresentation = null
+  ): CmafGroupSettings = {
     val __obj = js.Dynamic.literal()
+    if (AdditionalManifests != null) __obj.updateDynamic("AdditionalManifests")(AdditionalManifests.asInstanceOf[js.Any])
+    if (BaseUrl != null) __obj.updateDynamic("BaseUrl")(BaseUrl.asInstanceOf[js.Any])
+    if (ClientCache != null) __obj.updateDynamic("ClientCache")(ClientCache.asInstanceOf[js.Any])
+    if (CodecSpecification != null) __obj.updateDynamic("CodecSpecification")(CodecSpecification.asInstanceOf[js.Any])
+    if (Destination != null) __obj.updateDynamic("Destination")(Destination.asInstanceOf[js.Any])
+    if (DestinationSettings != null) __obj.updateDynamic("DestinationSettings")(DestinationSettings.asInstanceOf[js.Any])
+    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
+    if (!js.isUndefined(FragmentLength)) __obj.updateDynamic("FragmentLength")(FragmentLength.get.asInstanceOf[js.Any])
+    if (ManifestCompression != null) __obj.updateDynamic("ManifestCompression")(ManifestCompression.asInstanceOf[js.Any])
+    if (ManifestDurationFormat != null) __obj.updateDynamic("ManifestDurationFormat")(ManifestDurationFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinBufferTime)) __obj.updateDynamic("MinBufferTime")(MinBufferTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinFinalSegmentLength)) __obj.updateDynamic("MinFinalSegmentLength")(MinFinalSegmentLength.get.asInstanceOf[js.Any])
+    if (MpdProfile != null) __obj.updateDynamic("MpdProfile")(MpdProfile.asInstanceOf[js.Any])
+    if (SegmentControl != null) __obj.updateDynamic("SegmentControl")(SegmentControl.asInstanceOf[js.Any])
+    if (!js.isUndefined(SegmentLength)) __obj.updateDynamic("SegmentLength")(SegmentLength.get.asInstanceOf[js.Any])
+    if (StreamInfResolution != null) __obj.updateDynamic("StreamInfResolution")(StreamInfResolution.asInstanceOf[js.Any])
+    if (WriteDashManifest != null) __obj.updateDynamic("WriteDashManifest")(WriteDashManifest.asInstanceOf[js.Any])
+    if (WriteHlsManifest != null) __obj.updateDynamic("WriteHlsManifest")(WriteHlsManifest.asInstanceOf[js.Any])
+    if (WriteSegmentTimelineInRepresentation != null) __obj.updateDynamic("WriteSegmentTimelineInRepresentation")(WriteSegmentTimelineInRepresentation.asInstanceOf[js.Any])
     __obj.asInstanceOf[CmafGroupSettings]
   }
-  @scala.inline
-  implicit class CmafGroupSettingsOps[Self <: CmafGroupSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalManifests(value: listOfCmafAdditionalManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalManifests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalManifests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalManifests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrl(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientCache(value: CmafClientCache): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodecSpecification(value: CmafCodecSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodecSpecification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecSpecification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestination(value: stringPatternS3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationSettings(value: DestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryption(value: CmafEncryptionSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFragmentLength(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFragmentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifestCompression(value: CmafManifestCompression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestCompression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifestCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestCompression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifestDurationFormat(value: CmafManifestDurationFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestDurationFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifestDurationFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestDurationFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinBufferTime(value: integerMin0Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinBufferTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinBufferTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinBufferTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinFinalSegmentLength(value: doubleMin0Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinFinalSegmentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinFinalSegmentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinFinalSegmentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMpdProfile(value: CmafMpdProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MpdProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMpdProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MpdProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentControl(value: CmafSegmentControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentLength(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamInfResolution(value: CmafStreamInfResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamInfResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamInfResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamInfResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteDashManifest(value: CmafWriteDASHManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteDashManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteDashManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteDashManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteHlsManifest(value: CmafWriteHLSManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteHlsManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteHlsManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteHlsManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteSegmentTimelineInRepresentation(value: CmafWriteSegmentTimelineInRepresentation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteSegmentTimelineInRepresentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteSegmentTimelineInRepresentation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteSegmentTimelineInRepresentation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IRunnerOptions extends js.Object {
   /**
     * A `Number` that specifies the time step between updates in milliseconds.
@@ -15,14 +14,14 @@ trait IRunnerOptions extends js.Object {
     * @type number
     * @default 1000 / 60
     */
-  var delta: js.UndefOr[Double] = js.native
+  var delta: js.UndefOr[Double] = js.undefined
   /**
     * A flag that specifies whether the runner is running or not.
     * @property enabled
     * @type boolean
     * @default true
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * A `Boolean` that specifies if the runner should use a fixed timestep (otherwise it is variable).
     * If timing is fixed, then the apparent simulation speed will change depending on the frame rate (but behaviour will be deterministic).
@@ -32,58 +31,21 @@ trait IRunnerOptions extends js.Object {
     * @type boolean
     * @default false
     */
-  var isFixed: js.UndefOr[Boolean] = js.native
+  var isFixed: js.UndefOr[Boolean] = js.undefined
 }
 
 object IRunnerOptions {
   @scala.inline
-  def apply(): IRunnerOptions = {
+  def apply(
+    delta: js.UndefOr[Double] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    isFixed: js.UndefOr[Boolean] = js.undefined
+  ): IRunnerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delta)) __obj.updateDynamic("delta")(delta.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFixed)) __obj.updateDynamic("isFixed")(isFixed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRunnerOptions]
   }
-  @scala.inline
-  implicit class IRunnerOptionsOps[Self <: IRunnerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFixed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFixed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

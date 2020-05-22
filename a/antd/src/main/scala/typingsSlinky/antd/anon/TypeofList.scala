@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TypeofList extends Instantiable1[/* props */ TransferListProps, default] {
-  var defaultProps: ShowSearch = js.native
+  var defaultProps: DataSource = js.native
 }
 

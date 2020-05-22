@@ -18,41 +18,11 @@ trait ListInvitationsResponse extends js.Object {
 
 object ListInvitationsResponse {
   @scala.inline
-  def apply(): ListInvitationsResponse = {
+  def apply(Invitations: MemberDetailList = null, NextToken: PaginationToken = null): ListInvitationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (Invitations != null) __obj.updateDynamic("Invitations")(Invitations.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListInvitationsResponse]
   }
-  @scala.inline
-  implicit class ListInvitationsResponseOps[Self <: ListInvitationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvitations(value: MemberDetailList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Invitations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Invitations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

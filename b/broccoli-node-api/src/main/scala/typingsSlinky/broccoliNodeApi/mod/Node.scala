@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.__broccoliFeatures__
   - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.__broccoliGetInfo__
 */
-trait Node extends InputNode
+trait Node extends js.Object
 
 object Node {
   @scala.inline

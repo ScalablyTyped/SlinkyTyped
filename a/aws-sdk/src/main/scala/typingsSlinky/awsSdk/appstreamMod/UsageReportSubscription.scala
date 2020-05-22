@@ -26,65 +26,18 @@ trait UsageReportSubscription extends js.Object {
 
 object UsageReportSubscription {
   @scala.inline
-  def apply(): UsageReportSubscription = {
+  def apply(
+    LastGeneratedReportDate: js.Date = null,
+    S3BucketName: String = null,
+    Schedule: UsageReportSchedule = null,
+    SubscriptionErrors: LastReportGenerationExecutionErrors = null
+  ): UsageReportSubscription = {
     val __obj = js.Dynamic.literal()
+    if (LastGeneratedReportDate != null) __obj.updateDynamic("LastGeneratedReportDate")(LastGeneratedReportDate.asInstanceOf[js.Any])
+    if (S3BucketName != null) __obj.updateDynamic("S3BucketName")(S3BucketName.asInstanceOf[js.Any])
+    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
+    if (SubscriptionErrors != null) __obj.updateDynamic("SubscriptionErrors")(SubscriptionErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[UsageReportSubscription]
   }
-  @scala.inline
-  implicit class UsageReportSubscriptionOps[Self <: UsageReportSubscription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastGeneratedReportDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastGeneratedReportDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastGeneratedReportDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastGeneratedReportDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3BucketName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3BucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: UsageReportSchedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscriptionErrors(value: LastReportGenerationExecutionErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscriptionErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionErrors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

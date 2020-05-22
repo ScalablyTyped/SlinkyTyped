@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.linguistic2.XDictionaryListEventListener
   * @see com.sun.star.lang.EventObject
   */
-@js.native
 trait DictionaryListEvent extends EventObject {
   /**
     * list of accumulated dictionary events.
@@ -27,14 +26,14 @@ trait DictionaryListEvent extends EventObject {
     * com.sun.star.linguistic2.DictionaryListEvent.nCondensedEvent()} .
     * @see com.sun.star.linguistic2.DictionaryEvent
     */
-  var aDictionaryEvents: SafeArray[DictionaryEvent] = js.native
+  var aDictionaryEvents: SafeArray[DictionaryEvent]
   /**
     * the combined type of the accumulated events.
     *
     * The value can be the combination of multiple {@link com.sun.star.linguistic2.DictionaryListEventFlags} by applying the logical OR to them.
     * @see com.sun.star.linguistic2.DictionaryListEventFlags
     */
-  var nCondensedEvent: Double = js.native
+  var nCondensedEvent: Double
 }
 
 object DictionaryListEvent {
@@ -43,25 +42,5 @@ object DictionaryListEvent {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any], aDictionaryEvents = aDictionaryEvents.asInstanceOf[js.Any], nCondensedEvent = nCondensedEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[DictionaryListEvent]
   }
-  @scala.inline
-  implicit class DictionaryListEventOps[Self <: DictionaryListEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withADictionaryEvents(value: SafeArray[DictionaryEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aDictionaryEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNCondensedEvent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nCondensedEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

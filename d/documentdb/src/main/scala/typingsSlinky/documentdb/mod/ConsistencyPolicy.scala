@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConsistencyPolicy extends js.Object {
-  var defaultConsistencyLevel: ConsistencyLevel = js.native
-  var maxStalenessIntervalInSeconds: Double = js.native
-  var maxStalenessPrefix: Double = js.native
+  var defaultConsistencyLevel: ConsistencyLevel
+  var maxStalenessIntervalInSeconds: Double
+  var maxStalenessPrefix: Double
 }
 
 object ConsistencyPolicy {
@@ -21,31 +20,5 @@ object ConsistencyPolicy {
     val __obj = js.Dynamic.literal(defaultConsistencyLevel = defaultConsistencyLevel.asInstanceOf[js.Any], maxStalenessIntervalInSeconds = maxStalenessIntervalInSeconds.asInstanceOf[js.Any], maxStalenessPrefix = maxStalenessPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConsistencyPolicy]
   }
-  @scala.inline
-  implicit class ConsistencyPolicyOps[Self <: ConsistencyPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultConsistencyLevel(value: ConsistencyLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultConsistencyLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxStalenessIntervalInSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStalenessIntervalInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxStalenessPrefix(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStalenessPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

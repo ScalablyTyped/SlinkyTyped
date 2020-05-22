@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StockChartNavigatorCategoryAxisPlotBand extends js.Object {
-  var color: js.UndefOr[String] = js.native
-  var from: js.UndefOr[Double] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var to: js.UndefOr[Double] = js.native
+  var color: js.UndefOr[String] = js.undefined
+  var from: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var to: js.UndefOr[Double] = js.undefined
 }
 
 object StockChartNavigatorCategoryAxisPlotBand {
   @scala.inline
-  def apply(): StockChartNavigatorCategoryAxisPlotBand = {
+  def apply(
+    color: String = null,
+    from: js.UndefOr[Double] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    to: js.UndefOr[Double] = js.undefined
+  ): StockChartNavigatorCategoryAxisPlotBand = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(from)) __obj.updateDynamic("from")(from.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(to)) __obj.updateDynamic("to")(to.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StockChartNavigatorCategoryAxisPlotBand]
   }
-  @scala.inline
-  implicit class StockChartNavigatorCategoryAxisPlotBandOps[Self <: StockChartNavigatorCategoryAxisPlotBand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

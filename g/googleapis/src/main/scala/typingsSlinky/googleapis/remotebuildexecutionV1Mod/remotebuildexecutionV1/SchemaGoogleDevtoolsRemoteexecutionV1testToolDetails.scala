@@ -21,41 +21,11 @@ trait SchemaGoogleDevtoolsRemoteexecutionV1testToolDetails extends js.Object {
 
 object SchemaGoogleDevtoolsRemoteexecutionV1testToolDetails {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteexecutionV1testToolDetails = {
+  def apply(toolName: String = null, toolVersion: String = null): SchemaGoogleDevtoolsRemoteexecutionV1testToolDetails = {
     val __obj = js.Dynamic.literal()
+    if (toolName != null) __obj.updateDynamic("toolName")(toolName.asInstanceOf[js.Any])
+    if (toolVersion != null) __obj.updateDynamic("toolVersion")(toolVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteexecutionV1testToolDetails]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteexecutionV1testToolDetailsOps[Self <: SchemaGoogleDevtoolsRemoteexecutionV1testToolDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToolName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

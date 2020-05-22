@@ -50,125 +50,28 @@ trait Slot extends js.Object {
 
 object Slot {
   @scala.inline
-  def apply(name: SlotName, slotConstraint: SlotConstraint): Slot = {
+  def apply(
+    name: SlotName,
+    slotConstraint: SlotConstraint,
+    description: Description = null,
+    obfuscationSetting: ObfuscationSetting = null,
+    priority: js.UndefOr[Priority] = js.undefined,
+    responseCard: ResponseCard = null,
+    sampleUtterances: SlotUtteranceList = null,
+    slotType: CustomOrBuiltinSlotTypeName = null,
+    slotTypeVersion: Version = null,
+    valueElicitationPrompt: Prompt = null
+  ): Slot = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], slotConstraint = slotConstraint.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (obfuscationSetting != null) __obj.updateDynamic("obfuscationSetting")(obfuscationSetting.asInstanceOf[js.Any])
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
+    if (responseCard != null) __obj.updateDynamic("responseCard")(responseCard.asInstanceOf[js.Any])
+    if (sampleUtterances != null) __obj.updateDynamic("sampleUtterances")(sampleUtterances.asInstanceOf[js.Any])
+    if (slotType != null) __obj.updateDynamic("slotType")(slotType.asInstanceOf[js.Any])
+    if (slotTypeVersion != null) __obj.updateDynamic("slotTypeVersion")(slotTypeVersion.asInstanceOf[js.Any])
+    if (valueElicitationPrompt != null) __obj.updateDynamic("valueElicitationPrompt")(valueElicitationPrompt.asInstanceOf[js.Any])
     __obj.asInstanceOf[Slot]
   }
-  @scala.inline
-  implicit class SlotOps[Self <: Slot] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: SlotName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSlotConstraint(value: SlotConstraint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObfuscationSetting(value: ObfuscationSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obfuscationSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObfuscationSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obfuscationSetting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Priority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseCard(value: ResponseCard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleUtterances(value: SlotUtteranceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleUtterances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleUtterances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleUtterances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlotType(value: CustomOrBuiltinSlotTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlotType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlotTypeVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotTypeVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlotTypeVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotTypeVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueElicitationPrompt(value: Prompt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueElicitationPrompt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueElicitationPrompt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueElicitationPrompt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

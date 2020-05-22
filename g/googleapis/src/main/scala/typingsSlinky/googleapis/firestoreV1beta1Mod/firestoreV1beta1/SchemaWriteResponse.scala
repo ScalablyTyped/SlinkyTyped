@@ -33,65 +33,18 @@ trait SchemaWriteResponse extends js.Object {
 
 object SchemaWriteResponse {
   @scala.inline
-  def apply(): SchemaWriteResponse = {
+  def apply(
+    commitTime: String = null,
+    streamId: String = null,
+    streamToken: String = null,
+    writeResults: js.Array[SchemaWriteResult] = null
+  ): SchemaWriteResponse = {
     val __obj = js.Dynamic.literal()
+    if (commitTime != null) __obj.updateDynamic("commitTime")(commitTime.asInstanceOf[js.Any])
+    if (streamId != null) __obj.updateDynamic("streamId")(streamId.asInstanceOf[js.Any])
+    if (streamToken != null) __obj.updateDynamic("streamToken")(streamToken.asInstanceOf[js.Any])
+    if (writeResults != null) __obj.updateDynamic("writeResults")(writeResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWriteResponse]
   }
-  @scala.inline
-  implicit class SchemaWriteResponseOps[Self <: SchemaWriteResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteResults(value: js.Array[SchemaWriteResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

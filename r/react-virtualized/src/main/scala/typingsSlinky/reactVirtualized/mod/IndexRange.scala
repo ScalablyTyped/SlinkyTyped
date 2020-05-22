@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndexRange extends js.Object {
-  var startIndex: Double = js.native
-  var stopIndex: Double = js.native
+  var startIndex: Double
+  var stopIndex: Double
 }
 
 object IndexRange {
@@ -16,25 +15,5 @@ object IndexRange {
     val __obj = js.Dynamic.literal(startIndex = startIndex.asInstanceOf[js.Any], stopIndex = stopIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexRange]
   }
-  @scala.inline
-  implicit class IndexRangeOps[Self <: IndexRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStartIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStopIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

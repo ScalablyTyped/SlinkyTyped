@@ -22,53 +22,16 @@ trait DescribeCustomerGatewaysRequest extends js.Object {
 
 object DescribeCustomerGatewaysRequest {
   @scala.inline
-  def apply(): DescribeCustomerGatewaysRequest = {
+  def apply(
+    CustomerGatewayIds: CustomerGatewayIdStringList = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    Filters: FilterList = null
+  ): DescribeCustomerGatewaysRequest = {
     val __obj = js.Dynamic.literal()
+    if (CustomerGatewayIds != null) __obj.updateDynamic("CustomerGatewayIds")(CustomerGatewayIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCustomerGatewaysRequest]
   }
-  @scala.inline
-  implicit class DescribeCustomerGatewaysRequestOps[Self <: DescribeCustomerGatewaysRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomerGatewayIds(value: CustomerGatewayIdStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerGatewayIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerGatewayIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerGatewayIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: FilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

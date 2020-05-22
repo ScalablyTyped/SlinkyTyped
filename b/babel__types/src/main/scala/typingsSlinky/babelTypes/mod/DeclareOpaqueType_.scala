@@ -6,70 +6,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait DeclareOpaqueType_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait DeclareOpaqueType_
   extends Declaration
      with BaseNode
      with Flow
      with FlowDeclaration
      with Statement {
-  var id: Identifier_ = js.native
-  var supertype: FlowType | Null = js.native
-  var typeParameters: TypeParameterDeclaration_ | Null = js.native
+  var id: Identifier_
+  var supertype: FlowType | Null
+  var typeParameters: TypeParameterDeclaration_ | Null
   @JSName("type")
-  var type_DeclareOpaqueType_ : DeclareOpaqueType = js.native
+  var type_DeclareOpaqueType_ : DeclareOpaqueType
 }
 
 object DeclareOpaqueType_ {
   @scala.inline
-  def apply(id: Identifier_, `type`: DeclareOpaqueType): DeclareOpaqueType_ = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+  def apply(
+    id: Identifier_,
+    `type`: DeclareOpaqueType,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    supertype: FlowType = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ = null
+  ): DeclareOpaqueType_ = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], supertype = supertype.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclareOpaqueType_]
   }
-  @scala.inline
-  implicit class DeclareOpaqueType_Ops[Self <: DeclareOpaqueType_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Identifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: DeclareOpaqueType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupertype(value: FlowType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supertype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupertypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supertype")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TypeParameterDeclaration_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

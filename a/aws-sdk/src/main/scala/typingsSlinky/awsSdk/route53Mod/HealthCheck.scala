@@ -38,66 +38,14 @@ object HealthCheck {
     CallerReference: HealthCheckNonce,
     HealthCheckConfig: HealthCheckConfig,
     HealthCheckVersion: HealthCheckVersion,
-    Id: HealthCheckId
+    Id: HealthCheckId,
+    CloudWatchAlarmConfiguration: CloudWatchAlarmConfiguration = null,
+    LinkedService: LinkedService = null
   ): HealthCheck = {
     val __obj = js.Dynamic.literal(CallerReference = CallerReference.asInstanceOf[js.Any], HealthCheckConfig = HealthCheckConfig.asInstanceOf[js.Any], HealthCheckVersion = HealthCheckVersion.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any])
+    if (CloudWatchAlarmConfiguration != null) __obj.updateDynamic("CloudWatchAlarmConfiguration")(CloudWatchAlarmConfiguration.asInstanceOf[js.Any])
+    if (LinkedService != null) __obj.updateDynamic("LinkedService")(LinkedService.asInstanceOf[js.Any])
     __obj.asInstanceOf[HealthCheck]
   }
-  @scala.inline
-  implicit class HealthCheckOps[Self <: HealthCheck] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerReference(value: HealthCheckNonce): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealthCheckConfig(value: HealthCheckConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealthCheckVersion(value: HealthCheckVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: HealthCheckId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloudWatchAlarmConfiguration(value: CloudWatchAlarmConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchAlarmConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchAlarmConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchAlarmConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkedService(value: LinkedService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkedService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedService")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

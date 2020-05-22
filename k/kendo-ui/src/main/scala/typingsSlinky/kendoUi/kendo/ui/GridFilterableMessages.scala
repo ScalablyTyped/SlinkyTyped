@@ -4,218 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridFilterableMessages extends js.Object {
-  var and: js.UndefOr[String] = js.native
-  var cancel: js.UndefOr[String] = js.native
-  var checkAll: js.UndefOr[String] = js.native
-  var clear: js.UndefOr[String] = js.native
-  var filter: js.UndefOr[String] = js.native
-  var info: js.UndefOr[String] = js.native
-  var isFalse: js.UndefOr[String] = js.native
-  var isTrue: js.UndefOr[String] = js.native
-  var operator: js.UndefOr[String] = js.native
-  var or: js.UndefOr[String] = js.native
-  var search: js.UndefOr[String] = js.native
-  var selectValue: js.UndefOr[String] = js.native
-  var selectedItemsFormat: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var value: js.UndefOr[String] = js.native
+  var and: js.UndefOr[String] = js.undefined
+  var cancel: js.UndefOr[String] = js.undefined
+  var checkAll: js.UndefOr[String] = js.undefined
+  var clear: js.UndefOr[String] = js.undefined
+  var filter: js.UndefOr[String] = js.undefined
+  var info: js.UndefOr[String] = js.undefined
+  var isFalse: js.UndefOr[String] = js.undefined
+  var isTrue: js.UndefOr[String] = js.undefined
+  var operator: js.UndefOr[String] = js.undefined
+  var or: js.UndefOr[String] = js.undefined
+  var search: js.UndefOr[String] = js.undefined
+  var selectValue: js.UndefOr[String] = js.undefined
+  var selectedItemsFormat: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object GridFilterableMessages {
   @scala.inline
-  def apply(): GridFilterableMessages = {
+  def apply(
+    and: String = null,
+    cancel: String = null,
+    checkAll: String = null,
+    clear: String = null,
+    filter: String = null,
+    info: String = null,
+    isFalse: String = null,
+    isTrue: String = null,
+    operator: String = null,
+    or: String = null,
+    search: String = null,
+    selectValue: String = null,
+    selectedItemsFormat: String = null,
+    title: String = null,
+    value: String = null
+  ): GridFilterableMessages = {
     val __obj = js.Dynamic.literal()
+    if (and != null) __obj.updateDynamic("and")(and.asInstanceOf[js.Any])
+    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
+    if (checkAll != null) __obj.updateDynamic("checkAll")(checkAll.asInstanceOf[js.Any])
+    if (clear != null) __obj.updateDynamic("clear")(clear.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (isFalse != null) __obj.updateDynamic("isFalse")(isFalse.asInstanceOf[js.Any])
+    if (isTrue != null) __obj.updateDynamic("isTrue")(isTrue.asInstanceOf[js.Any])
+    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
+    if (or != null) __obj.updateDynamic("or")(or.asInstanceOf[js.Any])
+    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
+    if (selectValue != null) __obj.updateDynamic("selectValue")(selectValue.asInstanceOf[js.Any])
+    if (selectedItemsFormat != null) __obj.updateDynamic("selectedItemsFormat")(selectedItemsFormat.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridFilterableMessages]
   }
-  @scala.inline
-  implicit class GridFilterableMessagesOps[Self <: GridFilterableMessages] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("and")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("and")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckAll(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFalse(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFalse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFalse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFalse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTrue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTrue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("or")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("or")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedItemsFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemsFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItemsFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemsFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

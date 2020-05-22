@@ -4,119 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MenuItemTheme extends js.Object {
   /**
     * Used for the caption inside the item.
     */
-  var caption: js.UndefOr[String] = js.native
+  var caption: js.UndefOr[String] = js.undefined
   /**
     * Added to the root element if it's disabled.
     */
-  var disabled: js.UndefOr[String] = js.native
+  var disabled: js.UndefOr[String] = js.undefined
   /**
     * Used for the icon element if exists.
     */
-  var icon: js.UndefOr[String] = js.native
+  var icon: js.UndefOr[String] = js.undefined
   /**
     * Used as the root class for the component.
     */
-  var menuItem: js.UndefOr[String] = js.native
+  var menuItem: js.UndefOr[String] = js.undefined
   /**
     * Added to the root element in case it's selected.
     */
-  var selected: js.UndefOr[String] = js.native
+  var selected: js.UndefOr[String] = js.undefined
   /**
     * Used for the shortcut element if exists.
     */
-  var shortcut: js.UndefOr[String] = js.native
+  var shortcut: js.UndefOr[String] = js.undefined
 }
 
 object MenuItemTheme {
   @scala.inline
-  def apply(): MenuItemTheme = {
+  def apply(
+    caption: String = null,
+    disabled: String = null,
+    icon: String = null,
+    menuItem: String = null,
+    selected: String = null,
+    shortcut: String = null
+  ): MenuItemTheme = {
     val __obj = js.Dynamic.literal()
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (menuItem != null) __obj.updateDynamic("menuItem")(menuItem.asInstanceOf[js.Any])
+    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
+    if (shortcut != null) __obj.updateDynamic("shortcut")(shortcut.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuItemTheme]
   }
-  @scala.inline
-  implicit class MenuItemThemeOps[Self <: MenuItemTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortcut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortcut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcut")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,11 @@ trait SchemaVideoFormatsListResponse extends js.Object {
 
 object SchemaVideoFormatsListResponse {
   @scala.inline
-  def apply(): SchemaVideoFormatsListResponse = {
+  def apply(kind: String = null, videoFormats: js.Array[SchemaVideoFormat] = null): SchemaVideoFormatsListResponse = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (videoFormats != null) __obj.updateDynamic("videoFormats")(videoFormats.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVideoFormatsListResponse]
   }
-  @scala.inline
-  implicit class SchemaVideoFormatsListResponseOps[Self <: SchemaVideoFormatsListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoFormats(value: js.Array[SchemaVideoFormat]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoFormats")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

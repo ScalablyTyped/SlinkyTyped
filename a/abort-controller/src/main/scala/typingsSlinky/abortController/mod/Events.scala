@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Events extends js.Object {
-  var abort: js.Any = js.native
+  var abort: js.Any
 }
 
 object Events {
@@ -15,19 +14,5 @@ object Events {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any])
     __obj.asInstanceOf[Events]
   }
-  @scala.inline
-  implicit class EventsOps[Self <: Events] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbort(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,64 +6,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Usersettings extends js.Object {
   /** Resource type. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** User settings in sub-objects, each for different purposes. */
-  var notesExport: js.UndefOr[FolderName] = js.native
-  var notification: js.UndefOr[MoreFromAuthors] = js.native
+  var notesExport: js.UndefOr[FolderName] = js.undefined
+  var notification: js.UndefOr[MoreFromAuthors] = js.undefined
 }
 
 object Usersettings {
   @scala.inline
-  def apply(): Usersettings = {
+  def apply(kind: String = null, notesExport: FolderName = null, notification: MoreFromAuthors = null): Usersettings = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (notesExport != null) __obj.updateDynamic("notesExport")(notesExport.asInstanceOf[js.Any])
+    if (notification != null) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
     __obj.asInstanceOf[Usersettings]
   }
-  @scala.inline
-  implicit class UsersettingsOps[Self <: Usersettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotesExport(value: FolderName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notesExport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotesExport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notesExport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotification(value: MoreFromAuthors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

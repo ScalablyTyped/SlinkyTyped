@@ -6,159 +6,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgTreeGridResizing
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Resize the column to the size of the longest currently visible cell value.
-  	 *
-  	 */
-  var allowDoubleClickToResize: js.UndefOr[Boolean] = js.native
+    * Resize the column to the size of the longest currently visible cell value.
+    *
+    */
+  var allowDoubleClickToResize: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Event fired after the resizing has been executed and results are rendered
-  	 */
-  var columnResized: js.UndefOr[ColumnResizedEvent] = js.native
+    * Event fired after the resizing has been executed and results are rendered
+    */
+  var columnResized: js.UndefOr[ColumnResizedEvent] = js.undefined
   /**
-  	 * Event fired before a resizing operation is executed.
-  	 */
-  var columnResizing: js.UndefOr[ColumnResizingEvent] = js.native
+    * Event fired before a resizing operation is executed.
+    */
+  var columnResizing: js.UndefOr[ColumnResizingEvent] = js.undefined
   /**
-  	 * Event fired(only when columnFixing is enabled) when trying to resize column in fixed area so total width of unfixed area to be less than minimalVisibleAreaWidth(option defined in columnFixing)
-  	 */
-  var columnResizingRefused: js.UndefOr[ColumnResizingRefusedEvent] = js.native
+    * Event fired(only when columnFixing is enabled) when trying to resize column in fixed area so total width of unfixed area to be less than minimalVisibleAreaWidth(option defined in columnFixing)
+    */
+  var columnResizingRefused: js.UndefOr[ColumnResizingRefusedEvent] = js.undefined
   /**
-  	 * A list of column settings that specifies resizing options on a per column basis.
-  	 *
-  	 */
-  var columnSettings: js.UndefOr[js.Array[IgGridResizingColumnSetting]] = js.native
+    * A list of column settings that specifies resizing options on a per column basis.
+    *
+    */
+  var columnSettings: js.UndefOr[js.Array[IgGridResizingColumnSetting]] = js.undefined
   /**
-  	 * Specifies whether the resizing should be deferred until the user finishes resizing or applied immediately.
-  	 *
-  	 */
-  var deferredResizing: js.UndefOr[Boolean] = js.native
+    * Specifies whether the resizing should be deferred until the user finishes resizing or applied immediately.
+    *
+    */
+  var deferredResizing: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * The width in pixels of the resizing handle which is position at the right side of each resizeable column header.
-  	 *
-  	 */
-  var handleThreshold: js.UndefOr[Double] = js.native
+    * The width in pixels of the resizing handle which is position at the right side of each resizeable column header.
+    *
+    */
+  var handleThreshold: js.UndefOr[Double] = js.undefined
   /**
-  	 * This option is inherited from a parent widget and it's not applicable for the igTreeGrid.
-  	 */
-  var inherit: js.UndefOr[Boolean] = js.native
+    * This option is inherited from a parent widget and it's not applicable for the igTreeGrid.
+    */
+  var inherit: js.UndefOr[Boolean] = js.undefined
 }
 
 object IgTreeGridResizing {
   @scala.inline
-  def apply(): IgTreeGridResizing = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    allowDoubleClickToResize: js.UndefOr[Boolean] = js.undefined,
+    columnResized: (/* event */ Event, /* ui */ ColumnResizedEventUIParam) => Unit = null,
+    columnResizing: (/* event */ Event, /* ui */ ColumnResizingEventUIParam) => Unit = null,
+    columnResizingRefused: (/* event */ Event, /* ui */ ColumnResizingRefusedEventUIParam) => Unit = null,
+    columnSettings: js.Array[IgGridResizingColumnSetting] = null,
+    deferredResizing: js.UndefOr[Boolean] = js.undefined,
+    handleThreshold: js.UndefOr[Double] = js.undefined,
+    inherit: js.UndefOr[Boolean] = js.undefined
+  ): IgTreeGridResizing = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(allowDoubleClickToResize)) __obj.updateDynamic("allowDoubleClickToResize")(allowDoubleClickToResize.get.asInstanceOf[js.Any])
+    if (columnResized != null) __obj.updateDynamic("columnResized")(js.Any.fromFunction2(columnResized))
+    if (columnResizing != null) __obj.updateDynamic("columnResizing")(js.Any.fromFunction2(columnResizing))
+    if (columnResizingRefused != null) __obj.updateDynamic("columnResizingRefused")(js.Any.fromFunction2(columnResizingRefused))
+    if (columnSettings != null) __obj.updateDynamic("columnSettings")(columnSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(deferredResizing)) __obj.updateDynamic("deferredResizing")(deferredResizing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleThreshold)) __obj.updateDynamic("handleThreshold")(handleThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inherit)) __obj.updateDynamic("inherit")(inherit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgTreeGridResizing]
   }
-  @scala.inline
-  implicit class IgTreeGridResizingOps[Self <: IgTreeGridResizing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowDoubleClickToResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDoubleClickToResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDoubleClickToResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDoubleClickToResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnResized(value: (/* event */ Event, /* ui */ ColumnResizedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResized")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnResized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnResizing(value: (/* event */ Event, /* ui */ ColumnResizingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizing")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnResizing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnResizingRefused(value: (/* event */ Event, /* ui */ ColumnResizingRefusedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizingRefused")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnResizingRefused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizingRefused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnSettings(value: js.Array[IgGridResizingColumnSetting]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferredResizing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredResizing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferredResizing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredResizing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInherit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInherit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

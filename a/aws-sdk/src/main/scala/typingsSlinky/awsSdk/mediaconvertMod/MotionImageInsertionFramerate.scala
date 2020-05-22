@@ -18,41 +18,14 @@ trait MotionImageInsertionFramerate extends js.Object {
 
 object MotionImageInsertionFramerate {
   @scala.inline
-  def apply(): MotionImageInsertionFramerate = {
+  def apply(
+    FramerateDenominator: js.UndefOr[integerMin1Max17895697] = js.undefined,
+    FramerateNumerator: js.UndefOr[integerMin1Max2147483640] = js.undefined
+  ): MotionImageInsertionFramerate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(FramerateDenominator)) __obj.updateDynamic("FramerateDenominator")(FramerateDenominator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FramerateNumerator)) __obj.updateDynamic("FramerateNumerator")(FramerateNumerator.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MotionImageInsertionFramerate]
   }
-  @scala.inline
-  implicit class MotionImageInsertionFramerateOps[Self <: MotionImageInsertionFramerate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFramerateDenominator(value: integerMin1Max17895697): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateDenominator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateNumerator(value: integerMin1Max2147483640): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateNumerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

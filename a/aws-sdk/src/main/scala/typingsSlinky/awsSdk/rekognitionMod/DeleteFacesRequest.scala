@@ -22,25 +22,5 @@ object DeleteFacesRequest {
     val __obj = js.Dynamic.literal(CollectionId = CollectionId.asInstanceOf[js.Any], FaceIds = FaceIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteFacesRequest]
   }
-  @scala.inline
-  implicit class DeleteFacesRequestOps[Self <: DeleteFacesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollectionId(value: CollectionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CollectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFaceIds(value: FaceIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

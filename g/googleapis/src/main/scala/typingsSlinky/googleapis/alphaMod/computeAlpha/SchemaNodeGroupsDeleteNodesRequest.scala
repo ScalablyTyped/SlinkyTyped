@@ -11,29 +11,10 @@ trait SchemaNodeGroupsDeleteNodesRequest extends js.Object {
 
 object SchemaNodeGroupsDeleteNodesRequest {
   @scala.inline
-  def apply(): SchemaNodeGroupsDeleteNodesRequest = {
+  def apply(nodes: js.Array[String] = null): SchemaNodeGroupsDeleteNodesRequest = {
     val __obj = js.Dynamic.literal()
+    if (nodes != null) __obj.updateDynamic("nodes")(nodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNodeGroupsDeleteNodesRequest]
   }
-  @scala.inline
-  implicit class SchemaNodeGroupsDeleteNodesRequestOps[Self <: SchemaNodeGroupsDeleteNodesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

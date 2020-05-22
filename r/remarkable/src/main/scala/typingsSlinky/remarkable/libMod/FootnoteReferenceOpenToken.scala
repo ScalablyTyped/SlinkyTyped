@@ -6,39 +6,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
-trait FootnoteReferenceOpenToken extends FootnoteGenericToken {
-  var label: String = js.native
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait FootnoteReferenceOpenToken extends FootnoteGenericToken {
+  var label: String
   @JSName("type")
-  var type_FootnoteReferenceOpenToken: footnote_reference_open = js.native
+  var type_FootnoteReferenceOpenToken: footnote_reference_open
 }
 
 object FootnoteReferenceOpenToken {
   @scala.inline
-  def apply(id: Double, label: String, level: Double, `type`: footnote_reference_open): FootnoteReferenceOpenToken = {
+  def apply(
+    id: Double,
+    label: String,
+    level: Double,
+    `type`: footnote_reference_open,
+    lines: js.Tuple2[Double, Double] = null,
+    subId: js.UndefOr[Double] = js.undefined
+  ): FootnoteReferenceOpenToken = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
+    if (!js.isUndefined(subId)) __obj.updateDynamic("subId")(subId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FootnoteReferenceOpenToken]
   }
-  @scala.inline
-  implicit class FootnoteReferenceOpenTokenOps[Self <: FootnoteReferenceOpenToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: footnote_reference_open): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

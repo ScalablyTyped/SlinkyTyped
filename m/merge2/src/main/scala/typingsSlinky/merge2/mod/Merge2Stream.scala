@@ -1,17 +1,13 @@
 package typingsSlinky.merge2.mod
 
 import typingsSlinky.merge2.merge2Strings.queueDrain
-import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.node.anon.End
 import typingsSlinky.node.streamMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Merge2Stream
-  extends Transform
-     with StreamType {
+trait Merge2Stream extends Transform {
   /**
     * @summary    Add more streams to an existing merged stream
     *
@@ -33,9 +29,5 @@ trait Merge2Stream
   def on_queueDrain(event: queueDrain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_queueDrain(event: queueDrain, listener: js.Function0[Unit]): this.type = js.native
-  /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T): T = js.native
-  /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
 }
 

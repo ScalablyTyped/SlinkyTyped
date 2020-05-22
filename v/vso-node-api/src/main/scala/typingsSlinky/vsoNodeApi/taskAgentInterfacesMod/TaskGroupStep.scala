@@ -5,15 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TaskGroupStep extends js.Object {
-  var alwaysRun: Boolean = js.native
-  var continueOnError: Boolean = js.native
-  var displayName: String = js.native
-  var enabled: Boolean = js.native
-  var inputs: StringDictionary[String] = js.native
-  var task: TaskDefinitionReference = js.native
-  var timeoutInMinutes: Double = js.native
+  var alwaysRun: Boolean
+  var continueOnError: Boolean
+  var displayName: String
+  var enabled: Boolean
+  var inputs: StringDictionary[String]
+  var task: TaskDefinitionReference
+  var timeoutInMinutes: Double
 }
 
 object TaskGroupStep {
@@ -30,55 +29,5 @@ object TaskGroupStep {
     val __obj = js.Dynamic.literal(alwaysRun = alwaysRun.asInstanceOf[js.Any], continueOnError = continueOnError.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], task = task.asInstanceOf[js.Any], timeoutInMinutes = timeoutInMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskGroupStep]
   }
-  @scala.inline
-  implicit class TaskGroupStepOps[Self <: TaskGroupStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlwaysRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContinueOnError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputs(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTask(value: TaskDefinitionReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeoutInMinutes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

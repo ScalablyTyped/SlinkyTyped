@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Draw extends js.Object {
-  var draw: Double = js.native
-  var lost: Double = js.native
-  var played: Double = js.native
-  var win_rate: Double = js.native
-  var won: Double = js.native
+  var draw: Double
+  var lost: Double
+  var played: Double
+  var win_rate: Double
+  var won: Double
 }
 
 object Draw {
@@ -19,43 +18,5 @@ object Draw {
     val __obj = js.Dynamic.literal(draw = draw.asInstanceOf[js.Any], lost = lost.asInstanceOf[js.Any], played = played.asInstanceOf[js.Any], win_rate = win_rate.asInstanceOf[js.Any], won = won.asInstanceOf[js.Any])
     __obj.asInstanceOf[Draw]
   }
-  @scala.inline
-  implicit class DrawOps[Self <: Draw] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDraw(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLost(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlayed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("played")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWin_rate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("win_rate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWon(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("won")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,401 +4,108 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EndpointOptions extends js.Object {
-  var anchor: js.UndefOr[AnchorSpec] = js.native
-  var connectionType: js.UndefOr[String] = js.native
-  var connectionsDetachable: js.UndefOr[Boolean] = js.native
-  var connector: js.UndefOr[ConnectorSpec] = js.native
-  var `connector-pointer-events`: js.UndefOr[String] = js.native
-  var connectorClass: js.UndefOr[String] = js.native
-  var connectorHoverClass: js.UndefOr[String] = js.native
-  var connectorHoverStyle: js.UndefOr[PaintStyle] = js.native
-  var connectorOverlays: js.UndefOr[js.Array[OverlaySpec]] = js.native
-  var connectorStyle: js.UndefOr[PaintStyle] = js.native
-  var cssClass: js.UndefOr[String] = js.native
+  var anchor: js.UndefOr[AnchorSpec] = js.undefined
+  var connectionType: js.UndefOr[String] = js.undefined
+  var connectionsDetachable: js.UndefOr[Boolean] = js.undefined
+  var connector: js.UndefOr[ConnectorSpec] = js.undefined
+  var `connector-pointer-events`: js.UndefOr[String] = js.undefined
+  var connectorClass: js.UndefOr[String] = js.undefined
+  var connectorHoverClass: js.UndefOr[String] = js.undefined
+  var connectorHoverStyle: js.UndefOr[PaintStyle] = js.undefined
+  var connectorOverlays: js.UndefOr[js.Array[OverlaySpec]] = js.undefined
+  var connectorStyle: js.UndefOr[PaintStyle] = js.undefined
+  var cssClass: js.UndefOr[String] = js.undefined
   //= 1?
-  var dragOptions: js.UndefOr[DragOptions] = js.native
-  var dragProxy: js.UndefOr[String | js.Array[String]] = js.native
-  var dropOptions: js.UndefOr[DropOptions] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
-  var endpoint: js.UndefOr[EndpointSpec] = js.native
-  var hoverClass: js.UndefOr[String] = js.native
-  var hoverPaintStyle: js.UndefOr[PaintStyle] = js.native
-  var id: js.UndefOr[String] = js.native
+  var dragOptions: js.UndefOr[DragOptions] = js.undefined
+  var dragProxy: js.UndefOr[String | js.Array[String]] = js.undefined
+  var dropOptions: js.UndefOr[DropOptions] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var endpoint: js.UndefOr[EndpointSpec] = js.undefined
+  var hoverClass: js.UndefOr[String] = js.undefined
+  var hoverPaintStyle: js.UndefOr[PaintStyle] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
   //= true
-  var isSource: js.UndefOr[Boolean] = js.native
+  var isSource: js.UndefOr[Boolean] = js.undefined
   //= false
-  var isTarget: js.UndefOr[Boolean] = js.native
-  var maxConnections: Double = js.native
+  var isTarget: js.UndefOr[Boolean] = js.undefined
+  var maxConnections: Double
    // "Dot", etc.
-  var overlays: js.UndefOr[js.Array[OverlaySpec]] = js.native
+  var overlays: js.UndefOr[js.Array[OverlaySpec]] = js.undefined
   //= true
-  var paintStyle: js.UndefOr[PaintStyle] = js.native
+  var paintStyle: js.UndefOr[PaintStyle] = js.undefined
   //= false
-  var parameters: js.UndefOr[js.Object] = js.native
+  var parameters: js.UndefOr[js.Object] = js.undefined
   //= false
-  var reattach: js.UndefOr[Boolean] = js.native
-  var reattachConnections: js.UndefOr[Boolean] = js.native
-  var scope: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var reattach: js.UndefOr[Boolean] = js.undefined
+  var reattachConnections: js.UndefOr[Boolean] = js.undefined
+  var scope: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object EndpointOptions {
   @scala.inline
-  def apply(maxConnections: Double): EndpointOptions = {
+  def apply(
+    maxConnections: Double,
+    anchor: AnchorSpec = null,
+    connectionType: String = null,
+    connectionsDetachable: js.UndefOr[Boolean] = js.undefined,
+    connector: ConnectorSpec = null,
+    `connector-pointer-events`: String = null,
+    connectorClass: String = null,
+    connectorHoverClass: String = null,
+    connectorHoverStyle: PaintStyle = null,
+    connectorOverlays: js.Array[OverlaySpec] = null,
+    connectorStyle: PaintStyle = null,
+    cssClass: String = null,
+    dragOptions: DragOptions = null,
+    dragProxy: String | js.Array[String] = null,
+    dropOptions: DropOptions = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    endpoint: EndpointSpec = null,
+    hoverClass: String = null,
+    hoverPaintStyle: PaintStyle = null,
+    id: String = null,
+    isSource: js.UndefOr[Boolean] = js.undefined,
+    isTarget: js.UndefOr[Boolean] = js.undefined,
+    overlays: js.Array[OverlaySpec] = null,
+    paintStyle: PaintStyle = null,
+    parameters: js.Object = null,
+    reattach: js.UndefOr[Boolean] = js.undefined,
+    reattachConnections: js.UndefOr[Boolean] = js.undefined,
+    scope: String = null,
+    `type`: String = null
+  ): EndpointOptions = {
     val __obj = js.Dynamic.literal(maxConnections = maxConnections.asInstanceOf[js.Any])
+    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
+    if (connectionType != null) __obj.updateDynamic("connectionType")(connectionType.asInstanceOf[js.Any])
+    if (!js.isUndefined(connectionsDetachable)) __obj.updateDynamic("connectionsDetachable")(connectionsDetachable.get.asInstanceOf[js.Any])
+    if (connector != null) __obj.updateDynamic("connector")(connector.asInstanceOf[js.Any])
+    if (`connector-pointer-events` != null) __obj.updateDynamic("connector-pointer-events")(`connector-pointer-events`.asInstanceOf[js.Any])
+    if (connectorClass != null) __obj.updateDynamic("connectorClass")(connectorClass.asInstanceOf[js.Any])
+    if (connectorHoverClass != null) __obj.updateDynamic("connectorHoverClass")(connectorHoverClass.asInstanceOf[js.Any])
+    if (connectorHoverStyle != null) __obj.updateDynamic("connectorHoverStyle")(connectorHoverStyle.asInstanceOf[js.Any])
+    if (connectorOverlays != null) __obj.updateDynamic("connectorOverlays")(connectorOverlays.asInstanceOf[js.Any])
+    if (connectorStyle != null) __obj.updateDynamic("connectorStyle")(connectorStyle.asInstanceOf[js.Any])
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (dragOptions != null) __obj.updateDynamic("dragOptions")(dragOptions.asInstanceOf[js.Any])
+    if (dragProxy != null) __obj.updateDynamic("dragProxy")(dragProxy.asInstanceOf[js.Any])
+    if (dropOptions != null) __obj.updateDynamic("dropOptions")(dropOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
+    if (hoverClass != null) __obj.updateDynamic("hoverClass")(hoverClass.asInstanceOf[js.Any])
+    if (hoverPaintStyle != null) __obj.updateDynamic("hoverPaintStyle")(hoverPaintStyle.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSource)) __obj.updateDynamic("isSource")(isSource.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isTarget)) __obj.updateDynamic("isTarget")(isTarget.get.asInstanceOf[js.Any])
+    if (overlays != null) __obj.updateDynamic("overlays")(overlays.asInstanceOf[js.Any])
+    if (paintStyle != null) __obj.updateDynamic("paintStyle")(paintStyle.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (!js.isUndefined(reattach)) __obj.updateDynamic("reattach")(reattach.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reattachConnections)) __obj.updateDynamic("reattachConnections")(reattachConnections.get.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointOptions]
   }
-  @scala.inline
-  implicit class EndpointOptionsOps[Self <: EndpointOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxConnections(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnchor(value: AnchorSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionsDetachable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionsDetachable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionsDetachable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionsDetachable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnector(value: ConnectorSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withConnector-pointer-events`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector-pointer-events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutConnector-pointer-events`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector-pointer-events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectorClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectorHoverClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorHoverClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorHoverClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorHoverClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectorHoverStyle(value: PaintStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorHoverStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorHoverStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorHoverStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectorOverlays(value: js.Array[OverlaySpec]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorOverlays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorOverlays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorOverlays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectorStyle(value: PaintStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragOptions(value: DragOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragProxy(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragProxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragProxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropOptions(value: DropOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpoint(value: EndpointSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverPaintStyle(value: PaintStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverPaintStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverPaintStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverPaintStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSource(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTarget(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlays(value: js.Array[OverlaySpec]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaintStyle(value: PaintStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paintStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaintStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paintStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReattach(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reattach")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReattach: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reattach")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReattachConnections(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reattachConnections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReattachConnections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reattachConnections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

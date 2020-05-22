@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Shape extends js.Object {
-  var placeholder: js.UndefOr[Placeholder] = js.native
-  var shapeProperties: js.UndefOr[ShapeProperties] = js.native
-  var shapeType: js.UndefOr[String] = js.native
-  var text: js.UndefOr[TextContent] = js.native
+  var placeholder: js.UndefOr[Placeholder] = js.undefined
+  var shapeProperties: js.UndefOr[ShapeProperties] = js.undefined
+  var shapeType: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[TextContent] = js.undefined
 }
 
 object Shape {
   @scala.inline
-  def apply(): Shape = {
+  def apply(
+    placeholder: Placeholder = null,
+    shapeProperties: ShapeProperties = null,
+    shapeType: String = null,
+    text: TextContent = null
+  ): Shape = {
     val __obj = js.Dynamic.literal()
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (shapeProperties != null) __obj.updateDynamic("shapeProperties")(shapeProperties.asInstanceOf[js.Any])
+    if (shapeType != null) __obj.updateDynamic("shapeType")(shapeType.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Shape]
   }
-  @scala.inline
-  implicit class ShapeOps[Self <: Shape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlaceholder(value: Placeholder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapeProperties(value: ShapeProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapeProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: TextContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

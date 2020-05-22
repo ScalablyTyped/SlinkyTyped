@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MatchBare extends js.Object {
-  var matchBare: Boolean = js.native
+  var matchBare: Boolean
 }
 
 object MatchBare {
@@ -15,19 +14,5 @@ object MatchBare {
     val __obj = js.Dynamic.literal(matchBare = matchBare.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchBare]
   }
-  @scala.inline
-  implicit class MatchBareOps[Self <: MatchBare] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMatchBare(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchBare")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

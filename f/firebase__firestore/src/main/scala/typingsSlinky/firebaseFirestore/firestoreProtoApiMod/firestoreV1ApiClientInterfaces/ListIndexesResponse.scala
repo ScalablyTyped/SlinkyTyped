@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListIndexesResponse extends js.Object {
-  var indexes: js.UndefOr[js.Array[Index]] = js.native
-  var nextPageToken: js.UndefOr[String] = js.native
+  var indexes: js.UndefOr[js.Array[Index]] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.undefined
 }
 
 object ListIndexesResponse {
   @scala.inline
-  def apply(): ListIndexesResponse = {
+  def apply(indexes: js.Array[Index] = null, nextPageToken: String = null): ListIndexesResponse = {
     val __obj = js.Dynamic.literal()
+    if (indexes != null) __obj.updateDynamic("indexes")(indexes.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListIndexesResponse]
   }
-  @scala.inline
-  implicit class ListIndexesResponseOps[Self <: ListIndexesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexes(value: js.Array[Index]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

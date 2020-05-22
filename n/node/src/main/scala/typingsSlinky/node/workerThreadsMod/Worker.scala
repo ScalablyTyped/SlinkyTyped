@@ -8,7 +8,6 @@ import typingsSlinky.node.nodeStrings.online
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.node.urlMod.URL_
-import typingsSlinky.node.vmMod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,21 +54,6 @@ class Worker protected () extends EventEmitter {
     * immediately with an [`ERR_WORKER_NOT_RUNNING`][] error
     */
   def getHeapSnapshot(): js.Promise[Readable] = js.native
-  /**
-    * Transfer a `MessagePort` to a different `vm` Context. The original `port`
-    * object will be rendered unusable, and the returned `MessagePort` instance will
-    * take its place.
-    *
-    * The returned `MessagePort` will be an object in the target context, and will
-    * inherit from its global `Object` class. Objects passed to the
-    * `port.onmessage()` listener will also be created in the target context
-    * and inherit from its global `Object` class.
-    *
-    * However, the created `MessagePort` will no longer inherit from
-    * `EventEmitter`, and only `port.onmessage()` can be used to receive
-    * events using it.
-    */
-  def moveMessagePortToContext(port: MessagePort, context: Context): MessagePort = js.native
   @JSName("off")
   def off_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("off")
@@ -112,13 +96,6 @@ class Worker protected () extends EventEmitter {
   def prependOnceListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
-  /**
-    * Receive a single message from a given `MessagePort`. If no message is available,
-    * `undefined` is returned, otherwise an object with a single `message` property
-    * that contains the message payload, corresponding to the oldest message in the
-    * `MessagePort`’s queue.
-    */
-  def receiveMessageOnPort(port: MessagePort): js.UndefOr[js.Object] = js.native
   def ref(): Unit = js.native
   @JSName("removeListener")
   def removeListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native

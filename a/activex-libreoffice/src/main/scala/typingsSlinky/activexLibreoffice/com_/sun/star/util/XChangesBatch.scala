@@ -17,20 +17,19 @@ import scala.scalajs.js.annotation._
   * @see XChangesSet
   * @see XCancellable
   */
-@js.native
 trait XChangesBatch extends XInterface {
   /** queries for any pending changes that can be committed. */
-  val PendingChanges: ChangesSet = js.native
+  val PendingChanges: ChangesSet
   /**
     * commits any pending changes.
     *
     * The exact action depends on the concrete service.
     */
-  def commitChanges(): Unit = js.native
+  def commitChanges(): Unit
   /** queries for any pending changes that can be committed. */
-  def getPendingChanges(): ChangesSet = js.native
+  def getPendingChanges(): ChangesSet
   /** checks whether this object has any pending changes that can be committed. */
-  def hasPendingChanges(): Boolean = js.native
+  def hasPendingChanges(): Boolean
 }
 
 object XChangesBatch {
@@ -47,37 +46,5 @@ object XChangesBatch {
     val __obj = js.Dynamic.literal(PendingChanges = PendingChanges.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), commitChanges = js.Any.fromFunction0(commitChanges), getPendingChanges = js.Any.fromFunction0(getPendingChanges), hasPendingChanges = js.Any.fromFunction0(hasPendingChanges), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XChangesBatch]
   }
-  @scala.inline
-  implicit class XChangesBatchOps[Self <: XChangesBatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPendingChanges(value: ChangesSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommitChanges(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitChanges")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPendingChanges(value: () => ChangesSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPendingChanges")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasPendingChanges(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasPendingChanges")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

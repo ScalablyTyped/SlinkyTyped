@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XLExport extends js.Object {
   /** This method is used to save the sheet data as Excel ,CSV or PDF document (.xls, .xlsx .csv, .pdf) in Spreadsheet.
     * @param {string} Pass the export type that you want.
     * @param {ej.Spreadsheet.ExportType} Pass the export filename that you want.
     * @returns {void}
     */
-  def export(`type`: String, fileName: ExportType): Unit = js.native
+  def export(`type`: String, fileName: ExportType): Unit
   /** This method is used to get the export properties in the Spreadsheet.
     * @returns {any}
     */
-  def getExportProps(): js.Any = js.native
+  def getExportProps(): js.Any
 }
 
 object XLExport {
@@ -24,25 +23,5 @@ object XLExport {
     val __obj = js.Dynamic.literal(export = js.Any.fromFunction2(export), getExportProps = js.Any.fromFunction0(getExportProps))
     __obj.asInstanceOf[XLExport]
   }
-  @scala.inline
-  implicit class XLExportOps[Self <: XLExport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExport(value: (String, ExportType) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetExportProps(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExportProps")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait GetConnectionOutput extends js.Object {
 
 object GetConnectionOutput {
   @scala.inline
-  def apply(): GetConnectionOutput = {
+  def apply(Connection: Connection = null): GetConnectionOutput = {
     val __obj = js.Dynamic.literal()
+    if (Connection != null) __obj.updateDynamic("Connection")(Connection.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConnectionOutput]
   }
-  @scala.inline
-  implicit class GetConnectionOutputOps[Self <: GetConnectionOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnection(value: Connection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Connection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Connection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

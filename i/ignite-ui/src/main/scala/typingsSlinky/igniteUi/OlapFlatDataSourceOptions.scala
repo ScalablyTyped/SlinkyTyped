@@ -5,187 +5,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OlapFlatDataSourceOptions
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * A list of hierarchy names separated by comma (,). These will be the hierarchies in the columns of the data source.
-  	 */
-  var columns: js.UndefOr[String] = js.native
+    * A list of hierarchy names separated by comma (,). These will be the hierarchies in the columns of the data source.
+    */
+  var columns: js.UndefOr[String] = js.undefined
   /**
-  	 * Optional="true" Specifies any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself.
-  	 */
-  var dataSource: js.UndefOr[js.Any] = js.native
+    * Optional="true" Specifies any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself.
+    */
+  var dataSource: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Optional="true" Explicitly set data source type (such as "json"). Please refer to the documentation of $.ig.DataSource and its type property.
-  	 */
-  var dataSourceType: js.UndefOr[String] = js.native
+    * Optional="true" Explicitly set data source type (such as "json"). Please refer to the documentation of $.ig.DataSource and its type property.
+    */
+  var dataSourceType: js.UndefOr[String] = js.undefined
   /**
-  	 * Optional="true" Specifies a remote URL accepted by $.ig.DataSource in order to request data from it.
-  	 */
-  var dataSourceUrl: js.UndefOr[String] = js.native
+    * Optional="true" Specifies a remote URL accepted by $.ig.DataSource in order to request data from it.
+    */
+  var dataSourceUrl: js.UndefOr[String] = js.undefined
   /**
-  	 * A list of hierarchy names separated by comma (,). These will be hierarchies in the filters of the data source.
-  	 */
-  var filters: js.UndefOr[String] = js.native
+    * A list of hierarchy names separated by comma (,). These will be hierarchies in the filters of the data source.
+    */
+  var filters: js.UndefOr[String] = js.undefined
   /**
-  	 * A list of measure names separated by comma (,). These will be the measures of the data source.
-  	 */
-  var measures: js.UndefOr[String] = js.native
+    * A list of measure names separated by comma (,). These will be the measures of the data source.
+    */
+  var measures: js.UndefOr[String] = js.undefined
   /**
-  	 * Optional="false" An object containing processing instructions for the $.ig.DataSource data.
-  	 */
-  var metadata: js.UndefOr[OlapFlatDataSourceOptionsMetadata] = js.native
+    * Optional="false" An object containing processing instructions for the $.ig.DataSource data.
+    */
+  var metadata: js.UndefOr[OlapFlatDataSourceOptionsMetadata] = js.undefined
   /**
-  	 * Optional="true" Specifies the name of the property in which data records are held if the response is wrapped.
-  	 */
-  var responseDataKey: js.UndefOr[String] = js.native
+    * Optional="true" Specifies the name of the property in which data records are held if the response is wrapped.
+    */
+  var responseDataKey: js.UndefOr[String] = js.undefined
   /**
-  	 * Optional="true" Explicitly set data source type (such as "json"). Please refer to the documentation of $.ig.DataSource and its type property.
-  	 */
-  var responseDataType: js.UndefOr[String] = js.native
+    * Optional="true" Explicitly set data source type (such as "json"). Please refer to the documentation of $.ig.DataSource and its type property.
+    */
+  var responseDataType: js.UndefOr[String] = js.undefined
   /**
-  	 * A list of hierarchy names separated by comma (,). These will be the hierarchies in the rows of the data source.
-  	 */
-  var rows: js.UndefOr[String] = js.native
+    * A list of hierarchy names separated by comma (,). These will be the hierarchies in the rows of the data source.
+    */
+  var rows: js.UndefOr[String] = js.undefined
 }
 
 object OlapFlatDataSourceOptions {
   @scala.inline
-  def apply(): OlapFlatDataSourceOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    columns: String = null,
+    dataSource: js.Any = null,
+    dataSourceType: String = null,
+    dataSourceUrl: String = null,
+    filters: String = null,
+    measures: String = null,
+    metadata: OlapFlatDataSourceOptionsMetadata = null,
+    responseDataKey: String = null,
+    responseDataType: String = null,
+    rows: String = null
+  ): OlapFlatDataSourceOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (dataSourceType != null) __obj.updateDynamic("dataSourceType")(dataSourceType.asInstanceOf[js.Any])
+    if (dataSourceUrl != null) __obj.updateDynamic("dataSourceUrl")(dataSourceUrl.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (measures != null) __obj.updateDynamic("measures")(measures.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (responseDataKey != null) __obj.updateDynamic("responseDataKey")(responseDataKey.asInstanceOf[js.Any])
+    if (responseDataType != null) __obj.updateDynamic("responseDataType")(responseDataType.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[OlapFlatDataSourceOptions]
   }
-  @scala.inline
-  implicit class OlapFlatDataSourceOptionsOps[Self <: OlapFlatDataSourceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSourceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSourceUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSourceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasures(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: OlapFlatDataSourceOptionsMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseDataKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseDataKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseDataType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseDataType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

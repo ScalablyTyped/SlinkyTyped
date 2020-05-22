@@ -10,19 +10,18 @@ import scala.scalajs.js.annotation._
   * If enabled, only a number of items with the highest or lowest result values are shown. The other items are hidden automatically.
   * @see com.sun.star.sheet.DataPilotField
   */
-@js.native
 trait DataPilotFieldAutoShowInfo extends js.Object {
   /** specifies the field where the values to show and select are taken from. */
-  var DataField: String = js.native
+  var DataField: String
   /** specifies whether the AutoShow feature is enabled or not. */
-  var IsEnabled: Boolean = js.native
+  var IsEnabled: Boolean
   /** specifies the number of the items to show. */
-  var ItemCount: Double = js.native
+  var ItemCount: Double
   /**
     * specifies the mode which items have to be shown.
     * @see com.sun.star.sheet.DataPilotFieldShowItemsMode
     */
-  var ShowItemsMode: Double = js.native
+  var ShowItemsMode: Double
 }
 
 object DataPilotFieldAutoShowInfo {
@@ -31,37 +30,5 @@ object DataPilotFieldAutoShowInfo {
     val __obj = js.Dynamic.literal(DataField = DataField.asInstanceOf[js.Any], IsEnabled = IsEnabled.asInstanceOf[js.Any], ItemCount = ItemCount.asInstanceOf[js.Any], ShowItemsMode = ShowItemsMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataPilotFieldAutoShowInfo]
   }
-  @scala.inline
-  implicit class DataPilotFieldAutoShowInfoOps[Self <: DataPilotFieldAutoShowInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowItemsMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowItemsMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

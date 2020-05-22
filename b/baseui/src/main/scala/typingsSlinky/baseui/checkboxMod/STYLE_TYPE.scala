@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait STYLE_TYPE extends js.Object {
-  var default: default_ = js.native
-  var toggle: typingsSlinky.baseui.baseuiStrings.toggle = js.native
-  var toggle_round: typingsSlinky.baseui.baseuiStrings.toggle_round = js.native
+  var default: default_
+  var toggle: typingsSlinky.baseui.baseuiStrings.toggle
+  var toggle_round: typingsSlinky.baseui.baseuiStrings.toggle_round
 }
 
 @JSImport("baseui/checkbox", "STYLE_TYPE")

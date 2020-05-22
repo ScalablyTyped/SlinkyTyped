@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * The accessible view of pages.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessiblePageView
   extends XAccessibleContext
      with XAccessibleComponent

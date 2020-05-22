@@ -38,101 +38,24 @@ trait ConsumedCapacity extends js.Object {
 
 object ConsumedCapacity {
   @scala.inline
-  def apply(): ConsumedCapacity = {
+  def apply(
+    CapacityUnits: js.UndefOr[ConsumedCapacityUnits] = js.undefined,
+    GlobalSecondaryIndexes: SecondaryIndexesCapacityMap = null,
+    LocalSecondaryIndexes: SecondaryIndexesCapacityMap = null,
+    ReadCapacityUnits: js.UndefOr[ConsumedCapacityUnits] = js.undefined,
+    Table: Capacity = null,
+    TableName: TableName = null,
+    WriteCapacityUnits: js.UndefOr[ConsumedCapacityUnits] = js.undefined
+  ): ConsumedCapacity = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CapacityUnits)) __obj.updateDynamic("CapacityUnits")(CapacityUnits.get.asInstanceOf[js.Any])
+    if (GlobalSecondaryIndexes != null) __obj.updateDynamic("GlobalSecondaryIndexes")(GlobalSecondaryIndexes.asInstanceOf[js.Any])
+    if (LocalSecondaryIndexes != null) __obj.updateDynamic("LocalSecondaryIndexes")(LocalSecondaryIndexes.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReadCapacityUnits)) __obj.updateDynamic("ReadCapacityUnits")(ReadCapacityUnits.get.asInstanceOf[js.Any])
+    if (Table != null) __obj.updateDynamic("Table")(Table.asInstanceOf[js.Any])
+    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
+    if (!js.isUndefined(WriteCapacityUnits)) __obj.updateDynamic("WriteCapacityUnits")(WriteCapacityUnits.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConsumedCapacity]
   }
-  @scala.inline
-  implicit class ConsumedCapacityOps[Self <: ConsumedCapacity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacityUnits(value: ConsumedCapacityUnits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalSecondaryIndexes(value: SecondaryIndexesCapacityMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalSecondaryIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalSecondaryIndexes(value: SecondaryIndexesCapacityMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalSecondaryIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadCapacityUnits(value: ConsumedCapacityUnits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadCapacityUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: Capacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableName(value: TableName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteCapacityUnits(value: ConsumedCapacityUnits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteCapacityUnits")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

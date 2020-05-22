@@ -32,53 +32,12 @@ trait SchemaUpdateParagraphStyleRequest extends js.Object {
 
 object SchemaUpdateParagraphStyleRequest {
   @scala.inline
-  def apply(): SchemaUpdateParagraphStyleRequest = {
+  def apply(fields: String = null, paragraphStyle: SchemaParagraphStyle = null, range: SchemaRange = null): SchemaUpdateParagraphStyleRequest = {
     val __obj = js.Dynamic.literal()
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (paragraphStyle != null) __obj.updateDynamic("paragraphStyle")(paragraphStyle.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateParagraphStyleRequest]
   }
-  @scala.inline
-  implicit class SchemaUpdateParagraphStyleRequestOps[Self <: SchemaUpdateParagraphStyleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParagraphStyle(value: SchemaParagraphStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParagraphStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: SchemaRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Set the return key text to "Yahoo".
-		 */
+  * Set the return key text to "Yahoo".
+  */
 @JSGlobal("Titanium.UI.RETURNKEY_YAHOO")
 @js.native
 object RETURNKEY_YAHOO extends TopLevel[Double]

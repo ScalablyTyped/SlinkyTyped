@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events related to client widgets used to visualize data in dashboard items.
   */
-@js.native
 trait ASPxClientDashboardItemWidgetEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the component name of the dashboard item for which the event was raised.
     */
-  var ItemName: String = js.native
+  var ItemName: String
   /**
     * Returns an underlying widget corresponding to the current dashboard item.
     */
-  def GetWidget(): js.Any = js.native
+  def GetWidget(): js.Any
 }
 
 object ASPxClientDashboardItemWidgetEventArgs {
@@ -25,25 +24,5 @@ object ASPxClientDashboardItemWidgetEventArgs {
     val __obj = js.Dynamic.literal(GetWidget = js.Any.fromFunction0(GetWidget), ItemName = ItemName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientDashboardItemWidgetEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientDashboardItemWidgetEventArgsOps[Self <: ASPxClientDashboardItemWidgetEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetWidget(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetWidget")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withItemName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

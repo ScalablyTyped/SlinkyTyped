@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IResourceContextStatics extends js.Object {
-  def createMatchingContext(result: IIterable[ResourceQualifier]): ResourceContext = js.native
+  def createMatchingContext(result: IIterable[ResourceQualifier]): ResourceContext
 }
 
 object IResourceContextStatics {
@@ -16,19 +15,5 @@ object IResourceContextStatics {
     val __obj = js.Dynamic.literal(createMatchingContext = js.Any.fromFunction1(createMatchingContext))
     __obj.asInstanceOf[IResourceContextStatics]
   }
-  @scala.inline
-  implicit class IResourceContextStaticsOps[Self <: IResourceContextStatics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateMatchingContext(value: IIterable[ResourceQualifier] => ResourceContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createMatchingContext")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

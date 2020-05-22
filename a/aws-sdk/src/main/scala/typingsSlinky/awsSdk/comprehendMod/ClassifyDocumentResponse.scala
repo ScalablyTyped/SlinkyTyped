@@ -18,41 +18,11 @@ trait ClassifyDocumentResponse extends js.Object {
 
 object ClassifyDocumentResponse {
   @scala.inline
-  def apply(): ClassifyDocumentResponse = {
+  def apply(Classes: ListOfClasses = null, Labels: ListOfLabels = null): ClassifyDocumentResponse = {
     val __obj = js.Dynamic.literal()
+    if (Classes != null) __obj.updateDynamic("Classes")(Classes.asInstanceOf[js.Any])
+    if (Labels != null) __obj.updateDynamic("Labels")(Labels.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassifyDocumentResponse]
   }
-  @scala.inline
-  implicit class ClassifyDocumentResponseOps[Self <: ClassifyDocumentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClasses(value: ListOfClasses): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: ListOfLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

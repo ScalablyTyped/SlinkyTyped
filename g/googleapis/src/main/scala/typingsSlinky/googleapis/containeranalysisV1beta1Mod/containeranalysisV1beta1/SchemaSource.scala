@@ -39,65 +39,18 @@ trait SchemaSource extends js.Object {
 
 object SchemaSource {
   @scala.inline
-  def apply(): SchemaSource = {
+  def apply(
+    additionalContexts: js.Array[SchemaSourceContext] = null,
+    artifactStorageSourceUri: String = null,
+    context: SchemaSourceContext = null,
+    fileHashes: StringDictionary[SchemaFileHashes] = null
+  ): SchemaSource = {
     val __obj = js.Dynamic.literal()
+    if (additionalContexts != null) __obj.updateDynamic("additionalContexts")(additionalContexts.asInstanceOf[js.Any])
+    if (artifactStorageSourceUri != null) __obj.updateDynamic("artifactStorageSourceUri")(artifactStorageSourceUri.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (fileHashes != null) __obj.updateDynamic("fileHashes")(fileHashes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSource]
   }
-  @scala.inline
-  implicit class SchemaSourceOps[Self <: SchemaSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalContexts(value: js.Array[SchemaSourceContext]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalContexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalContexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArtifactStorageSourceUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactStorageSourceUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtifactStorageSourceUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactStorageSourceUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: SchemaSourceContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileHashes(value: StringDictionary[SchemaFileHashes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileHashes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileHashes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileHashes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

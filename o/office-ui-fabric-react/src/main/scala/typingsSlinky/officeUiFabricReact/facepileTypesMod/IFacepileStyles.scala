@@ -5,216 +5,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFacepileStyles extends js.Object {
-  var addButton: IStyle = js.native
-  var descriptiveOverflowButton: IStyle = js.native
-  var itemButton: IStyle = js.native
-  var itemContainer: IStyle = js.native
-  var member: IStyle = js.native
-  var members: IStyle = js.native
-  var overflowButton: IStyle = js.native
-  var overflowInitialsIcon: IStyle = js.native
+  var addButton: IStyle
+  var descriptiveOverflowButton: IStyle
+  var itemButton: IStyle
+  var itemContainer: IStyle
+  var member: IStyle
+  var members: IStyle
+  var overflowButton: IStyle
+  var overflowInitialsIcon: IStyle
   /**
     * Style for the root element.
     */
-  var root: IStyle = js.native
-  var screenReaderOnly: IStyle = js.native
+  var root: IStyle
+  var screenReaderOnly: IStyle
 }
 
 object IFacepileStyles {
   @scala.inline
-  def apply(): IFacepileStyles = {
+  def apply(
+    addButton: js.UndefOr[Null | IStyle] = js.undefined,
+    descriptiveOverflowButton: js.UndefOr[Null | IStyle] = js.undefined,
+    itemButton: js.UndefOr[Null | IStyle] = js.undefined,
+    itemContainer: js.UndefOr[Null | IStyle] = js.undefined,
+    member: js.UndefOr[Null | IStyle] = js.undefined,
+    members: js.UndefOr[Null | IStyle] = js.undefined,
+    overflowButton: js.UndefOr[Null | IStyle] = js.undefined,
+    overflowInitialsIcon: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined,
+    screenReaderOnly: js.UndefOr[Null | IStyle] = js.undefined
+  ): IFacepileStyles = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addButton)) __obj.updateDynamic("addButton")(addButton.asInstanceOf[js.Any])
+    if (!js.isUndefined(descriptiveOverflowButton)) __obj.updateDynamic("descriptiveOverflowButton")(descriptiveOverflowButton.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemButton)) __obj.updateDynamic("itemButton")(itemButton.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemContainer)) __obj.updateDynamic("itemContainer")(itemContainer.asInstanceOf[js.Any])
+    if (!js.isUndefined(member)) __obj.updateDynamic("member")(member.asInstanceOf[js.Any])
+    if (!js.isUndefined(members)) __obj.updateDynamic("members")(members.asInstanceOf[js.Any])
+    if (!js.isUndefined(overflowButton)) __obj.updateDynamic("overflowButton")(overflowButton.asInstanceOf[js.Any])
+    if (!js.isUndefined(overflowInitialsIcon)) __obj.updateDynamic("overflowInitialsIcon")(overflowInitialsIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(screenReaderOnly)) __obj.updateDynamic("screenReaderOnly")(screenReaderOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFacepileStyles]
   }
-  @scala.inline
-  implicit class IFacepileStylesOps[Self <: IFacepileStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddButton(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddButtonNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addButton")(null)
-        ret
-    }
-    @scala.inline
-    def withDescriptiveOverflowButton(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptiveOverflowButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescriptiveOverflowButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptiveOverflowButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescriptiveOverflowButtonNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptiveOverflowButton")(null)
-        ret
-    }
-    @scala.inline
-    def withItemButton(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemButtonNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemButton")(null)
-        ret
-    }
-    @scala.inline
-    def withItemContainer(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemContainer")(null)
-        ret
-    }
-    @scala.inline
-    def withMember(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMember: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemberNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(null)
-        ret
-    }
-    @scala.inline
-    def withMembers(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMembers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMembersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(null)
-        ret
-    }
-    @scala.inline
-    def withOverflowButton(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflowButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverflowButtonNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowButton")(null)
-        ret
-    }
-    @scala.inline
-    def withOverflowInitialsIcon(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowInitialsIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflowInitialsIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowInitialsIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverflowInitialsIconNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowInitialsIcon")(null)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withScreenReaderOnly(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenReaderOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenReaderOnlyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderOnly")(null)
-        ret
-    }
-  }
-  
 }
 

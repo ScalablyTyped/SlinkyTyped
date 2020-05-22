@@ -4,45 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigShorthands extends js.Object {
-  var B: js.Array[_] = js.native
-  var C: js.Array[_] = js.native
-  var D: js.Array[_] = js.native
-  var E: js.Array[_] = js.native
-  var H: js.Array[_] = js.native
-  var N: js.Array[_] = js.native
-  var O: js.Array[_] = js.native
+  var B: js.Array[_]
+  var C: js.Array[_]
+  var D: js.Array[_]
+  var E: js.Array[_]
+  var H: js.Array[_]
+  var N: js.Array[_]
+  var O: js.Array[_]
   @JSName("?")
-  var Questionmark: js.Array[_] = js.native
-  var S: js.Array[_] = js.native
-  var d: js.Array[_] = js.native
-  var dd: js.Array[_] = js.native
-  var ddd: js.Array[_] = js.native
-  var desc: js.Array[_] = js.native
-  var f: js.Array[_] = js.native
-  var g: js.Array[_] = js.native
-  var gangsta: js.Array[_] = js.native
-  var gangster: js.Array[_] = js.native
-  var h: js.Array[_] = js.native
-  var help: js.Array[_] = js.native
-  var l: js.Array[_] = js.native
-  var local: js.Array[_] = js.native
-  var m: js.Array[_] = js.native
-  var n: js.Array[_] = js.native
-  var `no-desc`: js.Array[_] = js.native
-  var `no-reg`: js.Array[_] = js.native
-  var noreg: js.Array[_] = js.native
-  var p: js.Array[_] = js.native
-  var porcelain: js.Array[_] = js.native
-  var q: js.Array[_] = js.native
-  var quiet: js.Array[_] = js.native
-  var reg: js.Array[_] = js.native
-  var s: js.Array[_] = js.native
-  var silent: js.Array[_] = js.native
-  var v: js.Array[_] = js.native
-  var verbose: js.Array[_] = js.native
-  var y: js.Array[_] = js.native
+  var Questionmark: js.Array[_]
+  var S: js.Array[_]
+  var d: js.Array[_]
+  var dd: js.Array[_]
+  var ddd: js.Array[_]
+  var desc: js.Array[_]
+  var f: js.Array[_]
+  var g: js.Array[_]
+  var gangsta: js.Array[_]
+  var gangster: js.Array[_]
+  var h: js.Array[_]
+  var help: js.Array[_]
+  var l: js.Array[_]
+  var local: js.Array[_]
+  var m: js.Array[_]
+  var n: js.Array[_]
+  var `no-desc`: js.Array[_]
+  var `no-reg`: js.Array[_]
+  var noreg: js.Array[_]
+  var p: js.Array[_]
+  var porcelain: js.Array[_]
+  var q: js.Array[_]
+  var quiet: js.Array[_]
+  var reg: js.Array[_]
+  var s: js.Array[_]
+  var silent: js.Array[_]
+  var v: js.Array[_]
+  var verbose: js.Array[_]
+  var y: js.Array[_]
 }
 
 object ConfigShorthands {
@@ -91,205 +90,5 @@ object ConfigShorthands {
     __obj.updateDynamic("no-reg")(`no-reg`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigShorthands]
   }
-  @scala.inline
-  implicit class ConfigShorthandsOps[Self <: ConfigShorthands] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withB(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("B")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withC(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("C")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withD(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withE(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("H")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withN(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("N")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withO(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("O")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuestionmark(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("?")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDd(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDdd(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDesc(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withG(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGangsta(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gangsta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGangster(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gangster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelp(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withL(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocal(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withM(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withNo-desc`(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no-desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withNo-reg`(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no-reg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoreg(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noreg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPorcelain(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("porcelain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQ(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuiet(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quiet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReg(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSilent(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withV(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

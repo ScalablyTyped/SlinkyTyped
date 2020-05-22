@@ -11,39 +11,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IOrderItem extends IObject {
   /**
     * A positive integer in the smallest currency unit (that is, 100 cents for $1.00, or 1 for ¥1, Japanese Yen being a 0-decimal currency)
     * representing the total amount for the line item.
     */
-  var amount: Double = js.native
+  var amount: Double
   /**
     * 3-letter ISO code representing the currency of the line item.
     */
-  var currency: String = js.native
+  var currency: String
   /**
     * Description of the line item, meant to be displayable to the user (e.g., "Express shipping").
     */
-  var description: String = js.native
+  var description: String
   /**
     * value is "order_item"
     */
   @JSName("object")
-  var object_IOrderItem: order_item = js.native
+  var object_IOrderItem: order_item
   /**
     * The ID of the associated object for this line item. Expandable if not null (e.g., expandable to a SKU). [Expandable]
     */
-  var parent: String | ISku = js.native
+  var parent: String | ISku
   /**
     * A positive integer representing the number of instances of parent that are included in this order item.
     * Applicable/present only if type is sku.
     */
-  var quantity: Double = js.native
+  var quantity: Double
   /**
     * The type of line item. One of "sku", "tax", "shipping", or "discount".
     */
-  var `type`: sku | tax | shipping | discount = js.native
+  var `type`: sku | tax | shipping | discount
 }
 
 object IOrderItem {
@@ -62,55 +61,5 @@ object IOrderItem {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOrderItem]
   }
-  @scala.inline
-  implicit class IOrderItemOps[Self <: IOrderItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: order_item): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: String | ISku): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: sku | tax | shipping | discount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

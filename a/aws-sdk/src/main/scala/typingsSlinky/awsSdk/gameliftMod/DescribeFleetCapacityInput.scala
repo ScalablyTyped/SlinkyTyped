@@ -9,7 +9,7 @@ trait DescribeFleetCapacityInput extends js.Object {
   /**
     * A unique identifier for a fleet(s) to retrieve capacity information for. You can use either the fleet ID or ARN value.
     */
-  var FleetIds: js.UndefOr[FleetIdList] = js.native
+  var FleetIds: js.UndefOr[FleetIdOrArnList] = js.native
   /**
     * The maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages. This parameter is ignored when the request specifies one or a list of fleet IDs.
     */
@@ -22,53 +22,16 @@ trait DescribeFleetCapacityInput extends js.Object {
 
 object DescribeFleetCapacityInput {
   @scala.inline
-  def apply(): DescribeFleetCapacityInput = {
+  def apply(
+    FleetIds: FleetIdOrArnList = null,
+    Limit: js.UndefOr[PositiveInteger] = js.undefined,
+    NextToken: NonZeroAndMaxString = null
+  ): DescribeFleetCapacityInput = {
     val __obj = js.Dynamic.literal()
+    if (FleetIds != null) __obj.updateDynamic("FleetIds")(FleetIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFleetCapacityInput]
   }
-  @scala.inline
-  implicit class DescribeFleetCapacityInputOps[Self <: DescribeFleetCapacityInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFleetIds(value: FleetIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFleetIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: PositiveInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

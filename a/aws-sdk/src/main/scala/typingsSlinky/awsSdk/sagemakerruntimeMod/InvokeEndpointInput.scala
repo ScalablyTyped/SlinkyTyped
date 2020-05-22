@@ -34,83 +34,20 @@ trait InvokeEndpointInput extends js.Object {
 
 object InvokeEndpointInput {
   @scala.inline
-  def apply(Body: BodyBlob, EndpointName: EndpointName): InvokeEndpointInput = {
+  def apply(
+    Body: BodyBlob,
+    EndpointName: EndpointName,
+    Accept: Header = null,
+    ContentType: Header = null,
+    CustomAttributes: CustomAttributesHeader = null,
+    TargetModel: TargetModelHeader = null
+  ): InvokeEndpointInput = {
     val __obj = js.Dynamic.literal(Body = Body.asInstanceOf[js.Any], EndpointName = EndpointName.asInstanceOf[js.Any])
+    if (Accept != null) __obj.updateDynamic("Accept")(Accept.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (CustomAttributes != null) __obj.updateDynamic("CustomAttributes")(CustomAttributes.asInstanceOf[js.Any])
+    if (TargetModel != null) __obj.updateDynamic("TargetModel")(TargetModel.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvokeEndpointInput]
   }
-  @scala.inline
-  implicit class InvokeEndpointInputOps[Self <: InvokeEndpointInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: BodyBlob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndpointName(value: EndpointName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccept(value: Header): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Accept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Accept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: Header): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomAttributes(value: CustomAttributesHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetModel(value: TargetModelHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetModel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

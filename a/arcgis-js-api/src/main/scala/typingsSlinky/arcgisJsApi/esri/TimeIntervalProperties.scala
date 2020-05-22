@@ -14,7 +14,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimeIntervalProperties extends js.Object {
   /**
     * Temporal units.
@@ -25,7 +24,7 @@ trait TimeIntervalProperties extends js.Object {
     */
   var unit: js.UndefOr[
     milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries
-  ] = js.native
+  ] = js.undefined
   /**
     * The numerical value of the time extent.
     *
@@ -33,48 +32,19 @@ trait TimeIntervalProperties extends js.Object {
     *
     * @default 0
     */
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object TimeIntervalProperties {
   @scala.inline
-  def apply(): TimeIntervalProperties = {
+  def apply(
+    unit: milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): TimeIntervalProperties = {
     val __obj = js.Dynamic.literal()
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeIntervalProperties]
   }
-  @scala.inline
-  implicit class TimeIntervalPropertiesOps[Self <: TimeIntervalProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUnit(
-      value: milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

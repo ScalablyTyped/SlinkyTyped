@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EmptyUpdate extends js.Object {
-  var emptyUpdate: js.UndefOr[js.Any] = js.native
-  var tableAlias: js.UndefOr[String] = js.native
-  var valueAlias: js.UndefOr[String] = js.native
+  var emptyUpdate: js.UndefOr[js.Any] = js.undefined
+  var tableAlias: js.UndefOr[String] = js.undefined
+  var valueAlias: js.UndefOr[String] = js.undefined
 }
 
 object EmptyUpdate {
   @scala.inline
-  def apply(): EmptyUpdate = {
+  def apply(emptyUpdate: js.Any = null, tableAlias: String = null, valueAlias: String = null): EmptyUpdate = {
     val __obj = js.Dynamic.literal()
+    if (emptyUpdate != null) __obj.updateDynamic("emptyUpdate")(emptyUpdate.asInstanceOf[js.Any])
+    if (tableAlias != null) __obj.updateDynamic("tableAlias")(tableAlias.asInstanceOf[js.Any])
+    if (valueAlias != null) __obj.updateDynamic("valueAlias")(valueAlias.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmptyUpdate]
   }
-  @scala.inline
-  implicit class EmptyUpdateOps[Self <: EmptyUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmptyUpdate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmptyUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableAlias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAlias")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,15 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProcessEvent extends Event {
-  var content: String = js.native
-  var forced_root_block: String = js.native
-  var format: String = js.native
-  var get: Boolean = js.native
-  var get_inner: Boolean = js.native
-  var node: Node = js.native
-  var selection: `true` = js.native
+  var content: String
+  var forced_root_block: String
+  var format: String
+  var get: Boolean
+  var get_inner: Boolean
+  var node: Node
+  var selection: `true`
 }
 
 object ProcessEvent {
@@ -40,55 +39,5 @@ object ProcessEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessEvent]
   }
-  @scala.inline
-  implicit class ProcessEventOps[Self <: ProcessEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForced_root_block(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forced_root_block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGet_inner(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_inner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelection(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

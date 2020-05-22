@@ -30,53 +30,16 @@ trait SchemaListAppProfilesResponse extends js.Object {
 
 object SchemaListAppProfilesResponse {
   @scala.inline
-  def apply(): SchemaListAppProfilesResponse = {
+  def apply(
+    appProfiles: js.Array[SchemaAppProfile] = null,
+    failedLocations: js.Array[String] = null,
+    nextPageToken: String = null
+  ): SchemaListAppProfilesResponse = {
     val __obj = js.Dynamic.literal()
+    if (appProfiles != null) __obj.updateDynamic("appProfiles")(appProfiles.asInstanceOf[js.Any])
+    if (failedLocations != null) __obj.updateDynamic("failedLocations")(failedLocations.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListAppProfilesResponse]
   }
-  @scala.inline
-  implicit class SchemaListAppProfilesResponseOps[Self <: SchemaListAppProfilesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppProfiles(value: js.Array[SchemaAppProfile]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appProfiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppProfiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appProfiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailedLocations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedLocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedLocations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

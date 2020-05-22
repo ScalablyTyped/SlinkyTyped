@@ -18,35 +18,10 @@ trait ModifyMountTargetSecurityGroupsRequest extends js.Object {
 
 object ModifyMountTargetSecurityGroupsRequest {
   @scala.inline
-  def apply(MountTargetId: MountTargetId): ModifyMountTargetSecurityGroupsRequest = {
+  def apply(MountTargetId: MountTargetId, SecurityGroups: SecurityGroups = null): ModifyMountTargetSecurityGroupsRequest = {
     val __obj = js.Dynamic.literal(MountTargetId = MountTargetId.asInstanceOf[js.Any])
+    if (SecurityGroups != null) __obj.updateDynamic("SecurityGroups")(SecurityGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyMountTargetSecurityGroupsRequest]
   }
-  @scala.inline
-  implicit class ModifyMountTargetSecurityGroupsRequestOps[Self <: ModifyMountTargetSecurityGroupsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMountTargetId(value: MountTargetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountTargetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurityGroups(value: SecurityGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

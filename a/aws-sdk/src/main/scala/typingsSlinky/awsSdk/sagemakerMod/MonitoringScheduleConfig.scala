@@ -18,35 +18,10 @@ trait MonitoringScheduleConfig extends js.Object {
 
 object MonitoringScheduleConfig {
   @scala.inline
-  def apply(MonitoringJobDefinition: MonitoringJobDefinition): MonitoringScheduleConfig = {
+  def apply(MonitoringJobDefinition: MonitoringJobDefinition, ScheduleConfig: ScheduleConfig = null): MonitoringScheduleConfig = {
     val __obj = js.Dynamic.literal(MonitoringJobDefinition = MonitoringJobDefinition.asInstanceOf[js.Any])
+    if (ScheduleConfig != null) __obj.updateDynamic("ScheduleConfig")(ScheduleConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[MonitoringScheduleConfig]
   }
-  @scala.inline
-  implicit class MonitoringScheduleConfigOps[Self <: MonitoringScheduleConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMonitoringJobDefinition(value: MonitoringJobDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringJobDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScheduleConfig(value: ScheduleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait CreateGeoMatchSetResponse extends js.Object {
 
 object CreateGeoMatchSetResponse {
   @scala.inline
-  def apply(): CreateGeoMatchSetResponse = {
+  def apply(ChangeToken: ChangeToken = null, GeoMatchSet: GeoMatchSet = null): CreateGeoMatchSetResponse = {
     val __obj = js.Dynamic.literal()
+    if (ChangeToken != null) __obj.updateDynamic("ChangeToken")(ChangeToken.asInstanceOf[js.Any])
+    if (GeoMatchSet != null) __obj.updateDynamic("GeoMatchSet")(GeoMatchSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGeoMatchSetResponse]
   }
-  @scala.inline
-  implicit class CreateGeoMatchSetResponseOps[Self <: CreateGeoMatchSetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangeToken(value: ChangeToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangeToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeoMatchSet(value: GeoMatchSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoMatchSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoMatchSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoMatchSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PBRBRDFConfiguration extends js.Object {
   /** @hidden */
-  var _internalMarkAllSubMeshesAsMiscDirty: js.Any = js.native
-  var _useEnergyConservation: js.Any = js.native
-  var _useSmithVisibilityHeightCorrelated: js.Any = js.native
-  var _useSpecularGlossinessInputEnergyConservation: js.Any = js.native
-  var _useSphericalHarmonics: js.Any = js.native
+  var _internalMarkAllSubMeshesAsMiscDirty: js.Any
+  var _useEnergyConservation: js.Any
+  var _useSmithVisibilityHeightCorrelated: js.Any
+  var _useSpecularGlossinessInputEnergyConservation: js.Any
+  var _useSphericalHarmonics: js.Any
   /**
     * Defines if the material uses energy conservation.
     */
-  var useEnergyConservation: Boolean = js.native
+  var useEnergyConservation: Boolean
   /**
     * LEGACY Mode set to false
     * Defines if the material uses height smith correlated visibility term.
@@ -24,14 +23,14 @@ trait PBRBRDFConfiguration extends js.Object {
     * or https://assets.babylonjs.com/environments/uncorrelatedBRDF.dds to have more precision
     * Not relying on height correlated will also disable energy conservation.
     */
-  var useSmithVisibilityHeightCorrelated: Boolean = js.native
+  var useSmithVisibilityHeightCorrelated: Boolean
   /**
     * Defines if the material uses energy conservation, when the specular workflow is active.
     * If activated, the albedo color is multiplied with (1. - maxChannel(specular color)).
     * If deactivated, a material is only physically plausible, when (albedo color + specular color) < 1.
     * In the deactivated case, the material author has to ensure energy conservation, for a physically plausible rendering.
     */
-  var useSpecularGlossinessInputEnergyConservation: Boolean = js.native
+  var useSpecularGlossinessInputEnergyConservation: Boolean
   /**
     * LEGACY Mode set to false
     * Defines if the material uses spherical harmonics vs spherical polynomials for the
@@ -39,36 +38,36 @@ trait PBRBRDFConfiguration extends js.Object {
     * The harmonics despite a tiny bigger cost has been proven to provide closer results
     * to the ground truth.
     */
-  var useSphericalHarmonics: Boolean = js.native
+  var useSphericalHarmonics: Boolean
   /** @hidden */
-  def _markAllSubMeshesAsMiscDirty(): Unit = js.native
+  def _markAllSubMeshesAsMiscDirty(): Unit
   /**
     * Makes a duplicate of the current configuration into another one.
     * @param brdfConfiguration define the config where to copy the info
     */
-  def copyTo(brdfConfiguration: PBRBRDFConfiguration): Unit = js.native
+  def copyTo(brdfConfiguration: PBRBRDFConfiguration): Unit
   /**
     * Get the current class name of the texture useful for serialization or dynamic coding.
     * @returns "PBRClearCoatConfiguration"
     */
-  def getClassName(): String = js.native
+  def getClassName(): String
   /**
     * Parses a anisotropy Configuration from a serialized object.
     * @param source - Serialized object.
     * @param scene Defines the scene we are parsing for
     * @param rootUrl Defines the rootUrl to load from
     */
-  def parse(source: js.Any, scene: Scene, rootUrl: String): Unit = js.native
+  def parse(source: js.Any, scene: Scene, rootUrl: String): Unit
   /**
     * Checks to see if a texture is used in the material.
     * @param defines the list of "defines" to update.
     */
-  def prepareDefines(defines: IMaterialBRDFDefines): Unit = js.native
+  def prepareDefines(defines: IMaterialBRDFDefines): Unit
   /**
     * Serializes this BRDF configuration.
     * @returns - An object with the serialized config.
     */
-  def serialize(): js.Any = js.native
+  def serialize(): js.Any
 }
 
 object PBRBRDFConfiguration {
@@ -93,103 +92,5 @@ object PBRBRDFConfiguration {
     val __obj = js.Dynamic.literal(_internalMarkAllSubMeshesAsMiscDirty = _internalMarkAllSubMeshesAsMiscDirty.asInstanceOf[js.Any], _markAllSubMeshesAsMiscDirty = js.Any.fromFunction0(_markAllSubMeshesAsMiscDirty), _useEnergyConservation = _useEnergyConservation.asInstanceOf[js.Any], _useSmithVisibilityHeightCorrelated = _useSmithVisibilityHeightCorrelated.asInstanceOf[js.Any], _useSpecularGlossinessInputEnergyConservation = _useSpecularGlossinessInputEnergyConservation.asInstanceOf[js.Any], _useSphericalHarmonics = _useSphericalHarmonics.asInstanceOf[js.Any], copyTo = js.Any.fromFunction1(copyTo), getClassName = js.Any.fromFunction0(getClassName), parse = js.Any.fromFunction3(parse), prepareDefines = js.Any.fromFunction1(prepareDefines), serialize = js.Any.fromFunction0(serialize), useEnergyConservation = useEnergyConservation.asInstanceOf[js.Any], useSmithVisibilityHeightCorrelated = useSmithVisibilityHeightCorrelated.asInstanceOf[js.Any], useSpecularGlossinessInputEnergyConservation = useSpecularGlossinessInputEnergyConservation.asInstanceOf[js.Any], useSphericalHarmonics = useSphericalHarmonics.asInstanceOf[js.Any])
     __obj.asInstanceOf[PBRBRDFConfiguration]
   }
-  @scala.inline
-  implicit class PBRBRDFConfigurationOps[Self <: PBRBRDFConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_internalMarkAllSubMeshesAsMiscDirty(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_internalMarkAllSubMeshesAsMiscDirty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_markAllSubMeshesAsMiscDirty(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_markAllSubMeshesAsMiscDirty")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def with_useEnergyConservation(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_useEnergyConservation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_useSmithVisibilityHeightCorrelated(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_useSmithVisibilityHeightCorrelated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_useSpecularGlossinessInputEnergyConservation(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_useSpecularGlossinessInputEnergyConservation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_useSphericalHarmonics(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_useSphericalHarmonics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCopyTo(value: PBRBRDFConfiguration => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyTo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetClassName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParse(value: (js.Any, Scene, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withPrepareDefines(value: IMaterialBRDFDefines => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareDefines")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSerialize(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUseEnergyConservation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEnergyConservation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseSmithVisibilityHeightCorrelated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSmithVisibilityHeightCorrelated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseSpecularGlossinessInputEnergyConservation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSpecularGlossinessInputEnergyConservation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseSphericalHarmonics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSphericalHarmonics")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

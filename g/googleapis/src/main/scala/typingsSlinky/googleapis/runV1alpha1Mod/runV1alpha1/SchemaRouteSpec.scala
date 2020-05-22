@@ -25,41 +25,11 @@ trait SchemaRouteSpec extends js.Object {
 
 object SchemaRouteSpec {
   @scala.inline
-  def apply(): SchemaRouteSpec = {
+  def apply(generation: js.UndefOr[Double] = js.undefined, traffic: js.Array[SchemaTrafficTarget] = null): SchemaRouteSpec = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(generation)) __obj.updateDynamic("generation")(generation.get.asInstanceOf[js.Any])
+    if (traffic != null) __obj.updateDynamic("traffic")(traffic.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouteSpec]
   }
-  @scala.inline
-  implicit class SchemaRouteSpecOps[Self <: SchemaRouteSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeneration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeneration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTraffic(value: js.Array[SchemaTrafficTarget]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traffic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTraffic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traffic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

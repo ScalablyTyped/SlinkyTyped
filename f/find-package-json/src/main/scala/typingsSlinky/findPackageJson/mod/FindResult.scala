@@ -1,5 +1,7 @@
 package typingsSlinky.findPackageJson.mod
 
+import typingsSlinky.findPackageJson.findPackageJsonBooleans.`false`
+import typingsSlinky.findPackageJson.findPackageJsonBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,14 @@ trait FindResult extends js.Object
 
 object FindResult {
   @scala.inline
-  implicit def apply(value: Done): FindResult = value.asInstanceOf[FindResult]
+  def FoundPackage(done: `false`, filename: String, value: Package): FindResult = {
+    val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any], filename = filename.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FindResult]
+  }
   @scala.inline
-  implicit def apply(value: FoundPackage): FindResult = value.asInstanceOf[FindResult]
+  def Done(done: `true`): FindResult = {
+    val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FindResult]
+  }
 }
 

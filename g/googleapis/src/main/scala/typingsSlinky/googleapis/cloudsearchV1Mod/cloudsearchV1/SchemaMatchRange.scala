@@ -21,41 +21,11 @@ trait SchemaMatchRange extends js.Object {
 
 object SchemaMatchRange {
   @scala.inline
-  def apply(): SchemaMatchRange = {
+  def apply(end: js.UndefOr[Double] = js.undefined, start: js.UndefOr[Double] = js.undefined): SchemaMatchRange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(end)) __obj.updateDynamic("end")(end.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(start)) __obj.updateDynamic("start")(start.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMatchRange]
   }
-  @scala.inline
-  implicit class SchemaMatchRangeOps[Self <: SchemaMatchRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

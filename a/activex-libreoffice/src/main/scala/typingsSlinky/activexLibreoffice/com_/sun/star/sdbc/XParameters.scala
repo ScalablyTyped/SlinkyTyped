@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
   * {{program example here, see documentation}}
   * @see com.sun.star.sdbc.XPreparedStatement
   */
-@js.native
 trait XParameters extends XInterface {
   /**
     * clears the current parameter values immediately.
@@ -33,14 +32,14 @@ trait XParameters extends XInterface {
     * clearParameters.
     * @throws SQLException if a database access error occurs.
     */
-  def clearParameters(): Unit = js.native
+  def clearParameters(): Unit
   /**
     * sets an Array parameter.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setArray(parameterIndex: Double, x: XArray): Unit = js.native
+  def setArray(parameterIndex: Double, x: XArray): Unit
   /**
     * sets the designated parameter to the given input stream, which will have the specified number of bytes. When a very large binary value is input to a
     * LONGVARBINARY or LONGVARCHAR parameter, it may be more practical to send it via an {@link com.sun.star.io.XInputStream} . SDBC will read the data from
@@ -50,28 +49,28 @@ trait XParameters extends XInterface {
     * @param length the number of bytes in the stream
     * @throws SQLException if a database access error occurs.
     */
-  def setBinaryStream(parameterIndex: Double, x: XInputStream, length: Double): Unit = js.native
+  def setBinaryStream(parameterIndex: Double, x: XInputStream, length: Double): Unit
   /**
     * sets a BLOB parameter.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setBlob(parameterIndex: Double, x: XBlob): Unit = js.native
+  def setBlob(parameterIndex: Double, x: XBlob): Unit
   /**
     * sets the designated parameter to a boolean value. The driver converts this to a SQL BIT value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setBoolean(parameterIndex: Double, x: Boolean): Unit = js.native
+  def setBoolean(parameterIndex: Double, x: Boolean): Unit
   /**
     * sets the designated parameter to a byte value. The driver converts this to a SQL TINYINT value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setByte(parameterIndex: Double, x: Double): Unit = js.native
+  def setByte(parameterIndex: Double, x: Double): Unit
   /**
     * sets the designated parameter to a sequence of bytes. The driver converts this to a SQL VARBINARY or LONGVARBINARY (depending on the argument's size
     * relative to the driver's limits on VARBINARYs) when it sends it to the database.
@@ -79,7 +78,7 @@ trait XParameters extends XInterface {
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setBytes(parameterIndex: Double, x: SeqEquiv[Double]): Unit = js.native
+  def setBytes(parameterIndex: Double, x: SeqEquiv[Double]): Unit
   /**
     * sets the designated parameter to the given input stream, which will have the specified number of bytes. When a very large binary value is input to a
     * LONGVARCHAR parameter, it may be more practical to send it via a {@link com.sun.star.io.XInputStream} . SDBC will read the data from the stream as
@@ -89,51 +88,51 @@ trait XParameters extends XInterface {
     * @param length the number of characters in the stream
     * @throws SQLException if a database access error occurs.
     */
-  def setCharacterStream(parameterIndex: Double, x: XInputStream, length: Double): Unit = js.native
+  def setCharacterStream(parameterIndex: Double, x: XInputStream, length: Double): Unit
   /**
     * sets a CLOB parameter.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setClob(parameterIndex: Double, x: XClob): Unit = js.native
+  def setClob(parameterIndex: Double, x: XClob): Unit
   /**
     * sets the designated parameter to a date value. The driver converts this to a SQL DATE value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setDate(parameterIndex: Double, x: Date): Unit = js.native
+  def setDate(parameterIndex: Double, x: Date): Unit
   /**
     * sets the designated parameter to a double value. The driver converts this to a SQL DOUBLE value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setDouble(parameterIndex: Double, x: Double): Unit = js.native
+  def setDouble(parameterIndex: Double, x: Double): Unit
   /**
     * sets the designated parameter to a float value. The driver converts this to a SQL FLOAT value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setFloat(parameterIndex: Double, x: Double): Unit = js.native
+  def setFloat(parameterIndex: Double, x: Double): Unit
   /**
     * sets the designated parameter to a long value. The driver converts this to a SQL INTEGER value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setInt(parameterIndex: Double, x: Double): Unit = js.native
+  def setInt(parameterIndex: Double, x: Double): Unit
   /**
     * sets the designated parameter to a hyper value. The driver converts this to a SQL BIGINT value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setLong(parameterIndex: Double, x: Double): Unit = js.native
+  def setLong(parameterIndex: Double, x: Double): Unit
   /** sets the designated parameter to SQL NULL. */
-  def setNull(parameterIndex: Double, sqlType: Double): Unit = js.native
+  def setNull(parameterIndex: Double, sqlType: Double): Unit
   /**
     * sets the value of a parameter using an any.
     *
@@ -146,7 +145,7 @@ trait XParameters extends XInterface {
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setObject(parameterIndex: Double, x: js.Any): Unit = js.native
+  def setObject(parameterIndex: Double, x: js.Any): Unit
   /**
     * sets the designated parameter to SQL NULL. This version of setNull should be used for user-named types and REF type parameters. Examples of user-named
     * types include: STRUCT, DISTINCT, OBJECT, and named array types.
@@ -161,7 +160,7 @@ trait XParameters extends XInterface {
     * @param typeName the name of the type
     * @throws SQLException if a database access error occurs.
     */
-  def setObjectNull(parameterIndex: Double, sqlType: Double, typeName: String): Unit = js.native
+  def setObjectNull(parameterIndex: Double, sqlType: Double, typeName: String): Unit
   /**
     * set a value from the Datatype ANY for a parameter.
     *
@@ -176,21 +175,21 @@ trait XParameters extends XInterface {
     * @param scale for {@link com.sun.star.sdbc.DataType.DECIMAL} or {@link com.sun.star.sdbc.DataType.NUMERIC} types, this is the number of digits after the
     * @throws SQLException if a database access error occurs.
     */
-  def setObjectWithInfo(parameterIndex: Double, x: js.Any, targetSqlType: Double, scale: Double): Unit = js.native
+  def setObjectWithInfo(parameterIndex: Double, x: js.Any, targetSqlType: Double, scale: Double): Unit
   /**
     * sets a REF(&lt;structured-type&gt;) parameter.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setRef(parameterIndex: Double, x: XRef): Unit = js.native
+  def setRef(parameterIndex: Double, x: XRef): Unit
   /**
     * sets the designated parameter to a short value. The driver converts this to a SQL SMALLINT value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setShort(parameterIndex: Double, x: Double): Unit = js.native
+  def setShort(parameterIndex: Double, x: Double): Unit
   /**
     * sets the designated parameter to a string value. The driver converts this to a SQL VARCHAR or LONGVARCHAR value (depending on the argument's size
     * relative to the driver's limits on VARCHARs) when it sends it to the database.
@@ -198,21 +197,21 @@ trait XParameters extends XInterface {
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setString(parameterIndex: Double, x: String): Unit = js.native
+  def setString(parameterIndex: Double, x: String): Unit
   /**
     * sets the designated parameter to a time value. The driver converts this to a SQL TIME value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setTime(parameterIndex: Double, x: Time): Unit = js.native
+  def setTime(parameterIndex: Double, x: Time): Unit
   /**
     * sets the designated parameter to a datetime value. The driver converts this to a SQL TIMESTAMP value when it sends it to the database.
     * @param parameterIndex the first parameter is 1, the second is 2, ...
     * @param x the parameter value
     * @throws SQLException if a database access error occurs.
     */
-  def setTimestamp(parameterIndex: Double, x: DateTime): Unit = js.native
+  def setTimestamp(parameterIndex: Double, x: DateTime): Unit
 }
 
 object XParameters {
@@ -248,151 +247,5 @@ object XParameters {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), clearParameters = js.Any.fromFunction0(clearParameters), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setArray = js.Any.fromFunction2(setArray), setBinaryStream = js.Any.fromFunction3(setBinaryStream), setBlob = js.Any.fromFunction2(setBlob), setBoolean = js.Any.fromFunction2(setBoolean), setByte = js.Any.fromFunction2(setByte), setBytes = js.Any.fromFunction2(setBytes), setCharacterStream = js.Any.fromFunction3(setCharacterStream), setClob = js.Any.fromFunction2(setClob), setDate = js.Any.fromFunction2(setDate), setDouble = js.Any.fromFunction2(setDouble), setFloat = js.Any.fromFunction2(setFloat), setInt = js.Any.fromFunction2(setInt), setLong = js.Any.fromFunction2(setLong), setNull = js.Any.fromFunction2(setNull), setObject = js.Any.fromFunction2(setObject), setObjectNull = js.Any.fromFunction3(setObjectNull), setObjectWithInfo = js.Any.fromFunction4(setObjectWithInfo), setRef = js.Any.fromFunction2(setRef), setShort = js.Any.fromFunction2(setShort), setString = js.Any.fromFunction2(setString), setTime = js.Any.fromFunction2(setTime), setTimestamp = js.Any.fromFunction2(setTimestamp))
     __obj.asInstanceOf[XParameters]
   }
-  @scala.inline
-  implicit class XParametersOps[Self <: XParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearParameters(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearParameters")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetArray(value: (Double, XArray) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setArray")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetBinaryStream(value: (Double, XInputStream, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBinaryStream")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetBlob(value: (Double, XBlob) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBlob")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetBoolean(value: (Double, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBoolean")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetByte(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setByte")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetBytes(value: (Double, SeqEquiv[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBytes")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetCharacterStream(value: (Double, XInputStream, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCharacterStream")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetClob(value: (Double, XClob) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setClob")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetDate(value: (Double, Date) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetDouble(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDouble")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetFloat(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetInt(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setInt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetLong(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLong")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetNull(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNull")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetObject(value: (Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setObject")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetObjectNull(value: (Double, Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setObjectNull")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetObjectWithInfo(value: (Double, js.Any, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setObjectWithInfo")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withSetRef(value: (Double, XRef) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRef")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetShort(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setShort")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetString(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setString")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetTime(value: (Double, Time) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTime")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetTimestamp(value: (Double, DateTime) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTimestamp")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -11,29 +11,10 @@ trait GetBucketEncryptionOutput extends js.Object {
 
 object GetBucketEncryptionOutput {
   @scala.inline
-  def apply(): GetBucketEncryptionOutput = {
+  def apply(ServerSideEncryptionConfiguration: ServerSideEncryptionConfiguration = null): GetBucketEncryptionOutput = {
     val __obj = js.Dynamic.literal()
+    if (ServerSideEncryptionConfiguration != null) __obj.updateDynamic("ServerSideEncryptionConfiguration")(ServerSideEncryptionConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketEncryptionOutput]
   }
-  @scala.inline
-  implicit class GetBucketEncryptionOutputOps[Self <: GetBucketEncryptionOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServerSideEncryptionConfiguration(value: ServerSideEncryptionConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryptionConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideEncryptionConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryptionConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

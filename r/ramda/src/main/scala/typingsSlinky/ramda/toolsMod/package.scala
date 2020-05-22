@@ -8,6 +8,67 @@ package object toolsMod {
   type Arity0Fn = js.Function0[js.Any]
   type Arity1Fn = js.Function1[/* a */ js.Any, js.Any]
   type Arity2Fn = js.Function2[/* a */ js.Any, /* b */ js.Any, js.Any]
+  type ComposeWithFns[V0, R] = (js.Array[js.Function1[/* x0 */ V0, R]]) | (js.Tuple2[js.Function1[/* x */ js.Any, R], js.Function1[/* x */ V0, js.Any]]) | (js.Tuple3[
+    js.Function1[/* x */ js.Any, R], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ V0, js.Any]
+  ]) | (js.Tuple4[
+    js.Function1[/* x */ js.Any, R], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ V0, js.Any]
+  ]) | (js.Tuple5[
+    js.Function1[/* x */ js.Any, R], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ V0, js.Any]
+  ]) | (js.Tuple6[
+    js.Function1[/* x */ js.Any, R], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ V0, js.Any]
+  ]) | (js.Tuple7[
+    js.Function1[/* x */ js.Any, R], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ V0, js.Any]
+  ]) | (js.Tuple8[
+    js.Function1[/* x */ js.Any, R], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ V0, js.Any]
+  ]) | (js.Tuple9[
+    js.Function1[/* x */ js.Any, R], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ V0, js.Any]
+  ]) | (js.Tuple10[
+    js.Function1[/* x */ js.Any, R], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ V0, js.Any]
+  ])
   type Dictionary[A] = org.scalablytyped.runtime.StringDictionary[A]
   type Evolvable[E /* <: typingsSlinky.ramda.toolsMod.Evolver[_] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof E ]:? ramda.ramda/tools.Evolved<E[P]>}
@@ -21,6 +82,12 @@ package object toolsMod {
     * @param E
     */
   type EvolveNestedValue[O, E /* <: typingsSlinky.ramda.toolsMod.Evolver[_] */] = typingsSlinky.ramda.toolsMod.Evolve[O, E]
+  /**
+    * <needs description>
+    * @param V
+    * @param E
+    */
+  type EvolveValue[V, E] = (typingsSlinky.ramda.toolsMod.EvolveNestedValue[V, E]) | typingsSlinky.std.ReturnType[E]
   /**
     * <needs description>
     * @param A
@@ -41,7 +108,69 @@ package object toolsMod {
   type Merge[O1 /* <: js.Object */, O2 /* <: js.Object */, Depth /* <: typingsSlinky.ramda.ramdaStrings.flat | typingsSlinky.ramda.ramdaStrings.deep */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify O.MergeUp<T.ObjectOf<O1>, T.ObjectOf<O2>, Depth> */ js.Any
   type MergeAll[Os /* <: js.Array[js.Object] */] = js.Any
   type ObjPred = js.Function2[/* value */ js.Any, /* key */ java.lang.String, scala.Boolean]
+  type Ord = scala.Double | java.lang.String | scala.Boolean | js.Date
   type Path = js.Array[scala.Double | java.lang.String]
+  type PipeWithFns[V0, R] = (js.Array[js.Function1[/* x0 */ V0, R]]) | (js.Tuple2[js.Function1[/* x0 */ V0, js.Any], js.Function1[/* x */ js.Any, R]]) | (js.Tuple3[
+    js.Function1[/* x0 */ V0, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, R]
+  ]) | (js.Tuple4[
+    js.Function1[/* x0 */ V0, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, R]
+  ]) | (js.Tuple5[
+    js.Function1[/* x0 */ V0, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, R]
+  ]) | (js.Tuple6[
+    js.Function1[/* x0 */ V0, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, R]
+  ]) | (js.Tuple7[
+    js.Function1[/* x0 */ V0, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, R]
+  ]) | (js.Tuple8[
+    js.Function1[/* x0 */ V0, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, R]
+  ]) | (js.Tuple9[
+    js.Function1[/* x0 */ V0, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, R]
+  ]) | (js.Tuple10[
+    js.Function1[/* x0 */ V0, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, js.Any], 
+    js.Function1[/* x */ js.Any, R]
+  ])
   type Placeholder = (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify A.x */ js.Any) with typingsSlinky.ramda.anon.Functionalplaceholder
   type Pred = js.Function1[/* repeated */ js.Any, scala.Boolean]
   type SafePred[A] = js.Function1[/* repeated */ A, scala.Boolean]

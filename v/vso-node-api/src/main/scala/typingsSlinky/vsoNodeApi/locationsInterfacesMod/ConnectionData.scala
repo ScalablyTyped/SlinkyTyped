@@ -5,36 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectionData extends js.Object {
   /**
     * The Id of the authenticated user who made this request. More information about the user can be obtained by passing this Id to the Identity service
     */
-  var authenticatedUser: Identity = js.native
+  var authenticatedUser: Identity
   /**
     * The Id of the authorized user who made this request. More information about the user can be obtained by passing this Id to the Identity service
     */
-  var authorizedUser: Identity = js.native
+  var authorizedUser: Identity
   /**
     * The id for the server.
     */
-  var deploymentId: String = js.native
+  var deploymentId: String
   /**
     * The instance id for this host.
     */
-  var instanceId: String = js.native
+  var instanceId: String
   /**
     * The last user access for this instance.  Null if not requested specifically.
     */
-  var lastUserAccess: js.Date = js.native
+  var lastUserAccess: js.Date
   /**
     * Data that the location service holds.
     */
-  var locationServiceData: LocationServiceData = js.native
+  var locationServiceData: LocationServiceData
   /**
     * The virtual directory of the host we are talking to.
     */
-  var webApplicationRelativeDirectory: String = js.native
+  var webApplicationRelativeDirectory: String
 }
 
 object ConnectionData {
@@ -51,55 +50,5 @@ object ConnectionData {
     val __obj = js.Dynamic.literal(authenticatedUser = authenticatedUser.asInstanceOf[js.Any], authorizedUser = authorizedUser.asInstanceOf[js.Any], deploymentId = deploymentId.asInstanceOf[js.Any], instanceId = instanceId.asInstanceOf[js.Any], lastUserAccess = lastUserAccess.asInstanceOf[js.Any], locationServiceData = locationServiceData.asInstanceOf[js.Any], webApplicationRelativeDirectory = webApplicationRelativeDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionData]
   }
-  @scala.inline
-  implicit class ConnectionDataOps[Self <: ConnectionData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticatedUser(value: Identity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticatedUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthorizedUser(value: Identity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizedUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeploymentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastUserAccess(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUserAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocationServiceData(value: LocationServiceData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationServiceData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebApplicationRelativeDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webApplicationRelativeDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

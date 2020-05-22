@@ -12,7 +12,7 @@ object LinkNext {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.LinkNext] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.LinkNext](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: LinkNext.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.LinkNext] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.LinkNext](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.LinkNext] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.LinkNext](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LinkNext.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.LinkNext] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.LinkNext](js.Array(this.component, js.Dictionary.empty))()
 }
 

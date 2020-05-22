@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Extractor extends js.Object {
-  def extract(carrier: js.Any): SpanContext | Null = js.native
+  def extract(carrier: js.Any): SpanContext | Null
 }
 
 object Extractor {
@@ -16,19 +15,5 @@ object Extractor {
     val __obj = js.Dynamic.literal(extract = js.Any.fromFunction1(extract))
     __obj.asInstanceOf[Extractor]
   }
-  @scala.inline
-  implicit class ExtractorOps[Self <: Extractor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtract(value: js.Any => SpanContext | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extract")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

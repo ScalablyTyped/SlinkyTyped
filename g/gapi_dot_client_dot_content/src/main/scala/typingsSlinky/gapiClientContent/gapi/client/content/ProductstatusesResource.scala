@@ -8,14 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProductstatusesResource extends js.Object {
   /** Gets the statuses of multiple products in a single request. This method can only be called for non-multi-client accounts. */
-  def custombatch(request: IncludeAttributes): Request[ProductstatusesCustomBatchResponse] = js.native
+  def custombatch(request: IncludeAttributes): Request[ProductstatusesCustomBatchResponse]
   /** Gets the status of a product from your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def get(request: FieldsIncludeAttributes): Request[ProductStatus] = js.native
+  def get(request: FieldsIncludeAttributes): Request[ProductStatus]
   /** Lists the statuses of the products in your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def list(request: PageToken): Request[ProductstatusesListResponse] = js.native
+  def list(request: PageToken): Request[ProductstatusesListResponse]
 }
 
 object ProductstatusesResource {
@@ -28,31 +27,5 @@ object ProductstatusesResource {
     val __obj = js.Dynamic.literal(custombatch = js.Any.fromFunction1(custombatch), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ProductstatusesResource]
   }
-  @scala.inline
-  implicit class ProductstatusesResourceOps[Self <: ProductstatusesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustombatch(value: IncludeAttributes => Request[ProductstatusesCustomBatchResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custombatch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: FieldsIncludeAttributes => Request[ProductStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: PageToken => Request[ProductstatusesListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

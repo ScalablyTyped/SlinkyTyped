@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FoldingRangeClientCapabilities extends js.Object {
   /**
     * The text document client capabilities
     */
-  var textDocument: js.UndefOr[typingsSlinky.vscodeLanguageserverProtocol.anon.FoldingRange] = js.native
+  var textDocument: js.UndefOr[typingsSlinky.vscodeLanguageserverProtocol.anon.FoldingRange] = js.undefined
 }
 
 object FoldingRangeClientCapabilities {
   @scala.inline
-  def apply(): FoldingRangeClientCapabilities = {
+  def apply(textDocument: typingsSlinky.vscodeLanguageserverProtocol.anon.FoldingRange = null): FoldingRangeClientCapabilities = {
     val __obj = js.Dynamic.literal()
+    if (textDocument != null) __obj.updateDynamic("textDocument")(textDocument.asInstanceOf[js.Any])
     __obj.asInstanceOf[FoldingRangeClientCapabilities]
   }
-  @scala.inline
-  implicit class FoldingRangeClientCapabilitiesOps[Self <: FoldingRangeClientCapabilities] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTextDocument(value: typingsSlinky.vscodeLanguageserverProtocol.anon.FoldingRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDocument")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

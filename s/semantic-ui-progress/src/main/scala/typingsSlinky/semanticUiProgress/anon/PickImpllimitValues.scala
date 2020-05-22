@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-progress.SemanticUI.ProgressSettings._Impl, 'limitValues'> */
-@js.native
 trait PickImpllimitValues extends js.Object {
-  var limitValues: Boolean = js.native
+  var limitValues: Boolean
 }
 
 object PickImpllimitValues {
@@ -16,19 +15,5 @@ object PickImpllimitValues {
     val __obj = js.Dynamic.literal(limitValues = limitValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImpllimitValues]
   }
-  @scala.inline
-  implicit class PickImpllimitValuesOps[Self <: PickImpllimitValues] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLimitValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limitValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

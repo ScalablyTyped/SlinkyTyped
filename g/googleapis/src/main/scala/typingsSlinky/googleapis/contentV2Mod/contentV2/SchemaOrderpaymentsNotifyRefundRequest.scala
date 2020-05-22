@@ -22,53 +22,12 @@ trait SchemaOrderpaymentsNotifyRefundRequest extends js.Object {
 
 object SchemaOrderpaymentsNotifyRefundRequest {
   @scala.inline
-  def apply(): SchemaOrderpaymentsNotifyRefundRequest = {
+  def apply(invoiceId: String = null, invoiceIds: js.Array[String] = null, refundState: String = null): SchemaOrderpaymentsNotifyRefundRequest = {
     val __obj = js.Dynamic.literal()
+    if (invoiceId != null) __obj.updateDynamic("invoiceId")(invoiceId.asInstanceOf[js.Any])
+    if (invoiceIds != null) __obj.updateDynamic("invoiceIds")(invoiceIds.asInstanceOf[js.Any])
+    if (refundState != null) __obj.updateDynamic("refundState")(refundState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderpaymentsNotifyRefundRequest]
   }
-  @scala.inline
-  implicit class SchemaOrderpaymentsNotifyRefundRequestOps[Self <: SchemaOrderpaymentsNotifyRefundRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvoiceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoiceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvoiceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoiceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvoiceIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoiceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvoiceIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoiceIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefundState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refundState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefundState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refundState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-accordion.SemanticUI.Accordion.SelectorSettings._Impl, 'accordion'> */
-@js.native
 trait PickImplaccordion extends js.Object {
-  var accordion: String = js.native
+  var accordion: String
 }
 
 object PickImplaccordion {
@@ -16,19 +15,5 @@ object PickImplaccordion {
     val __obj = js.Dynamic.literal(accordion = accordion.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplaccordion]
   }
-  @scala.inline
-  implicit class PickImplaccordionOps[Self <: PickImplaccordion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccordion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accordion")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

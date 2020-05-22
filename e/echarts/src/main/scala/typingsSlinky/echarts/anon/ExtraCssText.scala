@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExtraCssText extends js.Object {
   /**
     *
@@ -19,7 +18,7 @@ trait ExtraCssText extends js.Object {
     * "rgba(50,50,50,0.7)"
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip.backgroundColor
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
   /**
     *
     * > **Notice：**series.tooltip only works when
@@ -33,7 +32,7 @@ trait ExtraCssText extends js.Object {
     * '#333'
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip.borderColor
     */
-  var borderColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[String] = js.undefined
   /**
     *
     * > **Notice：**series.tooltip only works when
@@ -45,7 +44,7 @@ trait ExtraCssText extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip.borderWidth
     */
-  var borderWidth: js.UndefOr[Double] = js.native
+  var borderWidth: js.UndefOr[Double] = js.undefined
   /**
     *
     * > **Notice：**series.tooltip only works when
@@ -63,7 +62,7 @@ trait ExtraCssText extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip.extraCssText
     */
-  var extraCssText: js.UndefOr[String] = js.native
+  var extraCssText: js.UndefOr[String] = js.undefined
   /**
     *
     * > **Notice：**series.tooltip only works when
@@ -147,7 +146,7 @@ trait ExtraCssText extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip.formatter
     */
-  var formatter: js.UndefOr[js.Function | String] = js.native
+  var formatter: js.UndefOr[js.Function | String] = js.undefined
   /**
     *
     * > **Notice：**series.tooltip only works when
@@ -169,7 +168,7 @@ trait ExtraCssText extends js.Object {
     * 5
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip.padding
     */
-  var padding: js.UndefOr[Double] = js.native
+  var padding: js.UndefOr[Double] = js.undefined
   /**
     *
     * > **Notice：**series.tooltip only works when
@@ -259,7 +258,7 @@ trait ExtraCssText extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip.position
     */
-  var position: js.UndefOr[js.Array[_] | String] = js.native
+  var position: js.UndefOr[js.Array[_] | String] = js.undefined
   /**
     *
     * > **Notice：**series.tooltip only works when
@@ -271,118 +270,31 @@ trait ExtraCssText extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip.textStyle
     */
-  var textStyle: js.UndefOr[FontSize] = js.native
+  var textStyle: js.UndefOr[FontSize] = js.undefined
 }
 
 object ExtraCssText {
   @scala.inline
-  def apply(): ExtraCssText = {
+  def apply(
+    backgroundColor: String = null,
+    borderColor: String = null,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    extraCssText: String = null,
+    formatter: js.Function | String = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    position: js.Array[_] | String = null,
+    textStyle: FontSize = null
+  ): ExtraCssText = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (extraCssText != null) __obj.updateDynamic("extraCssText")(extraCssText.asInstanceOf[js.Any])
+    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtraCssText]
   }
-  @scala.inline
-  implicit class ExtraCssTextOps[Self <: ExtraCssText] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtraCssText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraCssText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtraCssText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraCssText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatter(value: js.Function | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: js.Array[_] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyle(value: FontSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

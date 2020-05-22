@@ -102,221 +102,44 @@ trait ClusterInfo extends js.Object {
 
 object ClusterInfo {
   @scala.inline
-  def apply(): ClusterInfo = {
+  def apply(
+    ActiveOperationArn: string = null,
+    BrokerNodeGroupInfo: BrokerNodeGroupInfo = null,
+    ClientAuthentication: ClientAuthentication = null,
+    ClusterArn: string = null,
+    ClusterName: string = null,
+    CreationTime: js.Date = null,
+    CurrentBrokerSoftwareInfo: BrokerSoftwareInfo = null,
+    CurrentVersion: string = null,
+    EncryptionInfo: EncryptionInfo = null,
+    EnhancedMonitoring: EnhancedMonitoring = null,
+    LoggingInfo: LoggingInfo = null,
+    NumberOfBrokerNodes: js.UndefOr[integer] = js.undefined,
+    OpenMonitoring: OpenMonitoring = null,
+    State: ClusterState = null,
+    StateInfo: StateInfo = null,
+    Tags: mapOfString = null,
+    ZookeeperConnectString: string = null
+  ): ClusterInfo = {
     val __obj = js.Dynamic.literal()
+    if (ActiveOperationArn != null) __obj.updateDynamic("ActiveOperationArn")(ActiveOperationArn.asInstanceOf[js.Any])
+    if (BrokerNodeGroupInfo != null) __obj.updateDynamic("BrokerNodeGroupInfo")(BrokerNodeGroupInfo.asInstanceOf[js.Any])
+    if (ClientAuthentication != null) __obj.updateDynamic("ClientAuthentication")(ClientAuthentication.asInstanceOf[js.Any])
+    if (ClusterArn != null) __obj.updateDynamic("ClusterArn")(ClusterArn.asInstanceOf[js.Any])
+    if (ClusterName != null) __obj.updateDynamic("ClusterName")(ClusterName.asInstanceOf[js.Any])
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (CurrentBrokerSoftwareInfo != null) __obj.updateDynamic("CurrentBrokerSoftwareInfo")(CurrentBrokerSoftwareInfo.asInstanceOf[js.Any])
+    if (CurrentVersion != null) __obj.updateDynamic("CurrentVersion")(CurrentVersion.asInstanceOf[js.Any])
+    if (EncryptionInfo != null) __obj.updateDynamic("EncryptionInfo")(EncryptionInfo.asInstanceOf[js.Any])
+    if (EnhancedMonitoring != null) __obj.updateDynamic("EnhancedMonitoring")(EnhancedMonitoring.asInstanceOf[js.Any])
+    if (LoggingInfo != null) __obj.updateDynamic("LoggingInfo")(LoggingInfo.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfBrokerNodes)) __obj.updateDynamic("NumberOfBrokerNodes")(NumberOfBrokerNodes.get.asInstanceOf[js.Any])
+    if (OpenMonitoring != null) __obj.updateDynamic("OpenMonitoring")(OpenMonitoring.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (StateInfo != null) __obj.updateDynamic("StateInfo")(StateInfo.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (ZookeeperConnectString != null) __obj.updateDynamic("ZookeeperConnectString")(ZookeeperConnectString.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterInfo]
   }
-  @scala.inline
-  implicit class ClusterInfoOps[Self <: ClusterInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveOperationArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveOperationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveOperationArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveOperationArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrokerNodeGroupInfo(value: BrokerNodeGroupInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerNodeGroupInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrokerNodeGroupInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerNodeGroupInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientAuthentication(value: ClientAuthentication): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientAuthentication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientAuthentication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientAuthentication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentBrokerSoftwareInfo(value: BrokerSoftwareInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentBrokerSoftwareInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentBrokerSoftwareInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentBrokerSoftwareInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionInfo(value: EncryptionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnhancedMonitoring(value: EnhancedMonitoring): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnhancedMonitoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnhancedMonitoring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnhancedMonitoring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingInfo(value: LoggingInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfBrokerNodes(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfBrokerNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfBrokerNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfBrokerNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenMonitoring(value: OpenMonitoring): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenMonitoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenMonitoring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenMonitoring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: ClusterState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateInfo(value: StateInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: mapOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZookeeperConnectString(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZookeeperConnectString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZookeeperConnectString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZookeeperConnectString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

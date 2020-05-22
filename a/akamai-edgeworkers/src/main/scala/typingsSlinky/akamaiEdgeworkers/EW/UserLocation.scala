@@ -12,28 +12,27 @@ import scala.scalajs.js.annotation._
   * * If user location properties can not be supplied for any reason,
   *   undefined is returned for that property
   */
-@js.native
 trait UserLocation extends js.Object {
   /**
     * The city value is the city (within a 50-mile radius) that the IP
     * address maps to.
     */
-  val city: js.UndefOr[String] = js.native
+  val city: js.UndefOr[String] = js.undefined
   /**
     * The continent value is a two-letter code for the continent that
     * the IP address maps to.
     */
-  val continent: js.UndefOr[String] = js.native
+  val continent: js.UndefOr[String] = js.undefined
   /**
     * The country value is an ISO-3166, two-letter code for the country
     * where the IP address maps to.
     */
-  val country: js.UndefOr[String] = js.native
+  val country: js.UndefOr[String] = js.undefined
   /**
     * The region value is an ISO-3166, two-letter code for the state,
     * province, or region where the IP address maps to.
     */
-  val region: js.UndefOr[String] = js.native
+  val region: js.UndefOr[String] = js.undefined
   /**
     * The zipCode value is the zipcode that the IP address maps to
     * (multiple values possible).
@@ -58,82 +57,25 @@ trait UserLocation extends js.Object {
     *
     * See the EdgeScape Users Guide for more details.
     */
-  val zipCode: js.UndefOr[String] = js.native
+  val zipCode: js.UndefOr[String] = js.undefined
 }
 
 object UserLocation {
   @scala.inline
-  def apply(): UserLocation = {
+  def apply(
+    city: String = null,
+    continent: String = null,
+    country: String = null,
+    region: String = null,
+    zipCode: String = null
+  ): UserLocation = {
     val __obj = js.Dynamic.literal()
+    if (city != null) __obj.updateDynamic("city")(city.asInstanceOf[js.Any])
+    if (continent != null) __obj.updateDynamic("continent")(continent.asInstanceOf[js.Any])
+    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (zipCode != null) __obj.updateDynamic("zipCode")(zipCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserLocation]
   }
-  @scala.inline
-  implicit class UserLocationOps[Self <: UserLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContinent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZipCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zipCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZipCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zipCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

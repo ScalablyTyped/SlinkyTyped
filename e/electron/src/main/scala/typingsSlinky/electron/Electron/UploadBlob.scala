@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UploadBlob extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/upload-blob
   /**
     * UUID of blob data to upload.
     */
-  var blobUUID: String = js.native
+  var blobUUID: String
   /**
     * blob.
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object UploadBlob {
@@ -24,25 +23,5 @@ object UploadBlob {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadBlob]
   }
-  @scala.inline
-  implicit class UploadBlobOps[Self <: UploadBlob] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlobUUID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobUUID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

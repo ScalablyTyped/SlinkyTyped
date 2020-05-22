@@ -32,6 +32,32 @@ class AsyncLoop protected ()
     successCallback: js.Function0[Unit],
     offset: Double
   ) = this()
+  /* CompleteClass */
+  override var _done: js.Any = js.native
+  /* CompleteClass */
+  override var _fn: js.Any = js.native
+  /* CompleteClass */
+  override var _successCallback: js.Any = js.native
+  /**
+    * Defines the current index of the loop.
+    */
+  /* CompleteClass */
+  override var index: Double = js.native
+  /**
+    * Defines the number of iterations for the loop
+    */
+  /* CompleteClass */
+  override var iterations: Double = js.native
+  /**
+    * Break the loop and run the success callback.
+    */
+  /* CompleteClass */
+  override def breakLoop(): Unit = js.native
+  /**
+    * Execute the next iteration. Must be called after the last iteration was finished.
+    */
+  /* CompleteClass */
+  override def executeNext(): Unit = js.native
 }
 
 /* static members */

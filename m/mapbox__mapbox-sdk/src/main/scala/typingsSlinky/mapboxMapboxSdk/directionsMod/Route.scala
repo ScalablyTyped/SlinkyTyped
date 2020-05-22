@@ -6,39 +6,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Route extends js.Object {
   /**
     * Float indicating the distance traveled in meters.
     */
-  var distance: Double = js.native
+  var distance: Double
   /**
     * Float indicating the estimated travel time in seconds.
     */
-  var duration: Double = js.native
+  var duration: Double
   /**
     * Depending on the geometries parameter this is a GeoJSON LineString or a Polyline string.
     * Depending on the overview parameter this is the complete route geometry (full), a simplified geometry
     * to the zoom level at which the route can be displayed in full (simplified), or is not included (false)
     */
-  var geometry: LineString | MultiLineString = js.native
+  var geometry: LineString | MultiLineString
   /**
     * Array of RouteLeg objects.
     */
-  var legs: js.Array[Leg] = js.native
+  var legs: js.Array[Leg]
   /**
     * String of the locale used for voice instructions. Defaults to en, and can be any accepted instruction language.
     */
-  var voiceLocale: js.UndefOr[String] = js.native
+  var voiceLocale: js.UndefOr[String] = js.undefined
   /**
     * Float indicating the weight in units described by weight_name
     */
-  var weight: Double = js.native
+  var weight: Double
   /**
     * String indicating which weight was used. The default is routability which is duration-based,
     * with additional penalties for less desirable maneuvers.
     */
-  var weight_name: String = js.native
+  var weight_name: String
 }
 
 object Route {
@@ -49,66 +48,12 @@ object Route {
     geometry: LineString | MultiLineString,
     legs: js.Array[Leg],
     weight: Double,
-    weight_name: String
+    weight_name: String,
+    voiceLocale: String = null
   ): Route = {
     val __obj = js.Dynamic.literal(distance = distance.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], geometry = geometry.asInstanceOf[js.Any], legs = legs.asInstanceOf[js.Any], weight = weight.asInstanceOf[js.Any], weight_name = weight_name.asInstanceOf[js.Any])
+    if (voiceLocale != null) __obj.updateDynamic("voiceLocale")(voiceLocale.asInstanceOf[js.Any])
     __obj.asInstanceOf[Route]
   }
-  @scala.inline
-  implicit class RouteOps[Self <: Route] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeometry(value: LineString | MultiLineString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLegs(value: js.Array[Leg]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeight_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVoiceLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceLocale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoiceLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceLocale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

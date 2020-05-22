@@ -6,21 +6,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ K in keyof jest.jest.jest.Expect ]: jest.jest.jest.Expect[K]} */
-@js.native
 trait ExpectProperties extends js.Object {
-  var addSnapshotSerializer: js.Function1[/* serializer */ SnapshotSerializerPlugin, Unit] = js.native
-  var any: js.Function1[/* classType */ js.Any, _] = js.native
-  var anything: js.Function0[_] = js.native
-  var arrayContaining: js.Function1[/* arr */ js.Array[_], _] = js.native
-  var assertions: js.Function1[/* num */ Double, Unit] = js.native
-  var extend: js.Function1[/* obj */ ExpectExtendMap, Unit] = js.native
-  var getState: js.Function0[MatcherState with (Record[String, _])] = js.native
-  var hasAssertions: js.Function0[Unit] = js.native
-  var not: InverseAsymmetricMatchers = js.native
-  var objectContaining: js.Function1[/* obj */ js.Object, _] = js.native
-  var setState: js.Function1[/* state */ js.Object, Unit] = js.native
-  var stringContaining: js.Function1[/* str */ String, _] = js.native
-  var stringMatching: js.Function1[/* str */ String | js.RegExp, _] = js.native
+  var addSnapshotSerializer: js.Function1[/* serializer */ SnapshotSerializerPlugin, Unit]
+  var any: js.Function1[/* classType */ js.Any, _]
+  var anything: js.Function0[_]
+  var arrayContaining: js.Function1[/* arr */ js.Array[_], _]
+  var assertions: js.Function1[/* num */ Double, Unit]
+  var extend: js.Function1[/* obj */ ExpectExtendMap, Unit]
+  var getState: js.Function0[MatcherState with (Record[String, _])]
+  var hasAssertions: js.Function0[Unit]
+  var not: InverseAsymmetricMatchers
+  var objectContaining: js.Function1[/* obj */ js.Object, _]
+  var setState: js.Function1[/* state */ js.Object, Unit]
+  var stringContaining: js.Function1[/* str */ String, _]
+  var stringMatching: js.Function1[/* str */ String | js.RegExp, _]
 }
 
 object ExpectProperties {
@@ -43,91 +42,5 @@ object ExpectProperties {
     val __obj = js.Dynamic.literal(addSnapshotSerializer = js.Any.fromFunction1(addSnapshotSerializer), any = js.Any.fromFunction1(any), anything = js.Any.fromFunction0(anything), arrayContaining = js.Any.fromFunction1(arrayContaining), assertions = js.Any.fromFunction1(assertions), extend = js.Any.fromFunction1(extend), getState = js.Any.fromFunction0(getState), hasAssertions = js.Any.fromFunction0(hasAssertions), not = not.asInstanceOf[js.Any], objectContaining = js.Any.fromFunction1(objectContaining), setState = js.Any.fromFunction1(setState), stringContaining = js.Any.fromFunction1(stringContaining), stringMatching = js.Any.fromFunction1(stringMatching))
     __obj.asInstanceOf[ExpectProperties]
   }
-  @scala.inline
-  implicit class ExpectPropertiesOps[Self <: ExpectProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddSnapshotSerializer(value: /* serializer */ SnapshotSerializerPlugin => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addSnapshotSerializer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAny(value: /* classType */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("any")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAnything(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anything")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withArrayContaining(value: /* arr */ js.Array[_] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayContaining")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAssertions(value: /* num */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assertions")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExtend(value: /* obj */ ExpectExtendMap => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetState(value: () => MatcherState with (Record[String, _])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasAssertions(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAssertions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNot(value: InverseAsymmetricMatchers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectContaining(value: /* obj */ js.Object => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectContaining")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetState(value: /* state */ js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setState")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStringContaining(value: /* str */ String => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringContaining")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStringMatching(value: /* str */ String | js.RegExp => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringMatching")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

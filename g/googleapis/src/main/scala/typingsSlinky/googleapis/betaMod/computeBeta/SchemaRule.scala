@@ -48,101 +48,24 @@ trait SchemaRule extends js.Object {
 
 object SchemaRule {
   @scala.inline
-  def apply(): SchemaRule = {
+  def apply(
+    action: String = null,
+    conditions: js.Array[SchemaCondition] = null,
+    description: String = null,
+    ins: js.Array[String] = null,
+    logConfigs: js.Array[SchemaLogConfig] = null,
+    notIns: js.Array[String] = null,
+    permissions: js.Array[String] = null
+  ): SchemaRule = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (ins != null) __obj.updateDynamic("ins")(ins.asInstanceOf[js.Any])
+    if (logConfigs != null) __obj.updateDynamic("logConfigs")(logConfigs.asInstanceOf[js.Any])
+    if (notIns != null) __obj.updateDynamic("notIns")(notIns.asInstanceOf[js.Any])
+    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRule]
   }
-  @scala.inline
-  implicit class SchemaRuleOps[Self <: SchemaRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: js.Array[SchemaCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIns(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogConfigs(value: js.Array[SchemaLogConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfigs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogConfigs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfigs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotIns(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notIns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotIns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notIns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

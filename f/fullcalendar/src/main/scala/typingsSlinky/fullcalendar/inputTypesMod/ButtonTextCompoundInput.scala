@@ -5,128 +5,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ButtonTextCompoundInput
   extends /* viewId */ StringDictionary[js.UndefOr[String]] {
-  var day: js.UndefOr[String] = js.native
-  var month: js.UndefOr[String] = js.native
-  var next: js.UndefOr[String] = js.native
-  var nextYear: js.UndefOr[String] = js.native
-  var prev: js.UndefOr[String] = js.native
-  var prevYear: js.UndefOr[String] = js.native
-  var today: js.UndefOr[String] = js.native
-  var week: js.UndefOr[String] = js.native
+  var day: js.UndefOr[String] = js.undefined
+  var month: js.UndefOr[String] = js.undefined
+  var next: js.UndefOr[String] = js.undefined
+  var nextYear: js.UndefOr[String] = js.undefined
+  var prev: js.UndefOr[String] = js.undefined
+  var prevYear: js.UndefOr[String] = js.undefined
+  var today: js.UndefOr[String] = js.undefined
+  var week: js.UndefOr[String] = js.undefined
 }
 
 object ButtonTextCompoundInput {
   @scala.inline
-  def apply(): ButtonTextCompoundInput = {
+  def apply(
+    StringDictionary: /* header */ StringDictionary[js.UndefOr[String]] = null,
+    day: String = null,
+    month: String = null,
+    next: String = null,
+    nextYear: String = null,
+    prev: String = null,
+    prevYear: String = null,
+    today: String = null,
+    week: String = null
+  ): ButtonTextCompoundInput = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (day != null) __obj.updateDynamic("day")(day.asInstanceOf[js.Any])
+    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
+    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
+    if (nextYear != null) __obj.updateDynamic("nextYear")(nextYear.asInstanceOf[js.Any])
+    if (prev != null) __obj.updateDynamic("prev")(prev.asInstanceOf[js.Any])
+    if (prevYear != null) __obj.updateDynamic("prevYear")(prevYear.asInstanceOf[js.Any])
+    if (today != null) __obj.updateDynamic("today")(today.asInstanceOf[js.Any])
+    if (week != null) __obj.updateDynamic("week")(week.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonTextCompoundInput]
   }
-  @scala.inline
-  implicit class ButtonTextCompoundInputOps[Self <: ButtonTextCompoundInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrev(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrev: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToday(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeek(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

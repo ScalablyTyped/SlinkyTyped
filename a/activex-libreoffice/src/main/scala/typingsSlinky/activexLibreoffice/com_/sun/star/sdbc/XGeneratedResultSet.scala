@@ -15,20 +15,19 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdbc.PreparedStatement
   * @since OOo 1.1.2
   */
-@js.native
 trait XGeneratedResultSet extends XInterface {
   /**
     * gives access to automatically generated values after a new row was inserted.
     * @returns a result set that contains the data produced by the query
     * @throws SQLException if a database access error occurs.
     */
-  val GeneratedValues: XResultSet = js.native
+  val GeneratedValues: XResultSet
   /**
     * gives access to automatically generated values after a new row was inserted.
     * @returns a result set that contains the data produced by the query
     * @throws SQLException if a database access error occurs.
     */
-  def getGeneratedValues(): XResultSet = js.native
+  def getGeneratedValues(): XResultSet
 }
 
 object XGeneratedResultSet {
@@ -43,25 +42,5 @@ object XGeneratedResultSet {
     val __obj = js.Dynamic.literal(GeneratedValues = GeneratedValues.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getGeneratedValues = js.Any.fromFunction0(getGeneratedValues), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XGeneratedResultSet]
   }
-  @scala.inline
-  implicit class XGeneratedResultSetOps[Self <: XGeneratedResultSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeneratedValues(value: XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeneratedValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetGeneratedValues(value: () => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGeneratedValues")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

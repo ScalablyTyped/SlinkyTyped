@@ -36,77 +36,20 @@ trait SchemaScoreSubmission extends js.Object {
 
 object SchemaScoreSubmission {
   @scala.inline
-  def apply(): SchemaScoreSubmission = {
+  def apply(
+    kind: String = null,
+    leaderboardId: String = null,
+    score: String = null,
+    scoreTag: String = null,
+    signature: String = null
+  ): SchemaScoreSubmission = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (leaderboardId != null) __obj.updateDynamic("leaderboardId")(leaderboardId.asInstanceOf[js.Any])
+    if (score != null) __obj.updateDynamic("score")(score.asInstanceOf[js.Any])
+    if (scoreTag != null) __obj.updateDynamic("scoreTag")(scoreTag.asInstanceOf[js.Any])
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScoreSubmission]
   }
-  @scala.inline
-  implicit class SchemaScoreSubmissionOps[Self <: SchemaScoreSubmission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeaderboardId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaderboardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeaderboardId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaderboardId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScore(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScoreTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScoreTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

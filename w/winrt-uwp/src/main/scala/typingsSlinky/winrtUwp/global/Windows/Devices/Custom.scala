@@ -2,9 +2,13 @@ package typingsSlinky.winrtUwp.global.Windows.Devices
 
 import typingsSlinky.winrtUwp.Windows.Devices.Custom.DeviceAccessMode
 import typingsSlinky.winrtUwp.Windows.Devices.Custom.DeviceSharingMode
+import typingsSlinky.winrtUwp.Windows.Devices.Custom.IIOControlCode
 import typingsSlinky.winrtUwp.Windows.Devices.Custom.IOControlAccessMode
 import typingsSlinky.winrtUwp.Windows.Devices.Custom.IOControlBufferingMethod
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +20,32 @@ object Custom extends js.Object {
   /** Represents a custom device. */
   @js.native
   abstract class CustomDevice ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.Custom.CustomDevice
+    extends typingsSlinky.winrtUwp.Windows.Devices.Custom.CustomDevice {
+    /** The input stream. */
+    /* CompleteClass */
+    override var inputStream: IInputStream = js.native
+    /** The output stream. */
+    /* CompleteClass */
+    override var outputStream: IOutputStream = js.native
+    /**
+      * Sends an IO control code.
+      * @param ioControlCode The IO control code.
+      * @param inputBuffer The input buffer.
+      * @param outputBuffer The output buffer.
+      * @return The result of the async operation.
+      */
+    /* CompleteClass */
+    override def sendIOControlAsync(ioControlCode: IIOControlCode, inputBuffer: IBuffer, outputBuffer: IBuffer): IPromiseWithIAsyncOperation[Double] = js.native
+    /**
+      * Sends an IO control code. A return value indicates whether the operation succeeded.
+      * @param ioControlCode The IO control code.
+      * @param inputBuffer The input buffer.
+      * @param outputBuffer The output buffer.
+      * @return true if the operation is successful; otherwise, false.
+      */
+    /* CompleteClass */
+    override def trySendIOControlAsync(ioControlCode: IIOControlCode, inputBuffer: IBuffer, outputBuffer: IBuffer): IPromiseWithIAsyncOperation[Boolean] = js.native
+  }
   
   /** Represents the control code. */
   @js.native
@@ -35,6 +64,21 @@ object Custom extends js.Object {
       accessMode: IOControlAccessMode,
       bufferingMethod: IOControlBufferingMethod
     ) = this()
+    /** The access mode. */
+    /* CompleteClass */
+    override var accessMode: IOControlAccessMode = js.native
+    /** The buffering method. */
+    /* CompleteClass */
+    override var bufferingMethod: IOControlBufferingMethod = js.native
+    /** The control code. */
+    /* CompleteClass */
+    override var controlCode: Double = js.native
+    /** The device type. */
+    /* CompleteClass */
+    override var deviceType: Double = js.native
+    /** The function. */
+    /* CompleteClass */
+    override var function: Double = js.native
   }
   
   /** Represents know device types. */

@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Observer extends js.Object {
-  def fireEvent(eventName: String, args: js.Any*): Unit = js.native
-  def on(eventName: String, callback: js.Function1[/* repeated */ js.Any, Unit]): ListenerDescriptor = js.native
-  def once(eventName: String, callback: js.Function1[/* repeated */ js.Any, Unit]): ListenerDescriptor = js.native
-  def un(eventName: String, callback: js.Function1[/* repeated */ js.Any, Unit]): Unit = js.native
-  def unAll(): Unit = js.native
+  def fireEvent(eventName: String, args: js.Any*): Unit
+  def on(eventName: String, callback: js.Function1[/* repeated */ js.Any, Unit]): ListenerDescriptor
+  def once(eventName: String, callback: js.Function1[/* repeated */ js.Any, Unit]): ListenerDescriptor
+  def un(eventName: String, callback: js.Function1[/* repeated */ js.Any, Unit]): Unit
+  def unAll(): Unit
 }
 
 object Observer {
@@ -25,43 +24,5 @@ object Observer {
     val __obj = js.Dynamic.literal(fireEvent = js.Any.fromFunction2(fireEvent), on = js.Any.fromFunction2(on), once = js.Any.fromFunction2(once), un = js.Any.fromFunction2(un), unAll = js.Any.fromFunction0(unAll))
     __obj.asInstanceOf[Observer]
   }
-  @scala.inline
-  implicit class ObserverOps[Self <: Observer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFireEvent(value: (String, /* repeated */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fireEvent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOn(value: (String, js.Function1[/* repeated */ js.Any, Unit]) => ListenerDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOnce(value: (String, js.Function1[/* repeated */ js.Any, Unit]) => ListenerDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUn(value: (String, js.Function1[/* repeated */ js.Any, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("un")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUnAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unAll")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

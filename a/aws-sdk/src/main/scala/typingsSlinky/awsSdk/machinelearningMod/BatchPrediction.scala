@@ -59,209 +59,42 @@ trait BatchPrediction extends js.Object {
 
 object BatchPrediction {
   @scala.inline
-  def apply(): BatchPrediction = {
+  def apply(
+    BatchPredictionDataSourceId: EntityId = null,
+    BatchPredictionId: EntityId = null,
+    ComputeTime: js.UndefOr[LongType] = js.undefined,
+    CreatedAt: js.Date = null,
+    CreatedByIamUser: AwsUserArn = null,
+    FinishedAt: js.Date = null,
+    InputDataLocationS3: S3Url = null,
+    InvalidRecordCount: js.UndefOr[LongType] = js.undefined,
+    LastUpdatedAt: js.Date = null,
+    MLModelId: EntityId = null,
+    Message: Message = null,
+    Name: EntityName = null,
+    OutputUri: S3Url = null,
+    StartedAt: js.Date = null,
+    Status: EntityStatus = null,
+    TotalRecordCount: js.UndefOr[LongType] = js.undefined
+  ): BatchPrediction = {
     val __obj = js.Dynamic.literal()
+    if (BatchPredictionDataSourceId != null) __obj.updateDynamic("BatchPredictionDataSourceId")(BatchPredictionDataSourceId.asInstanceOf[js.Any])
+    if (BatchPredictionId != null) __obj.updateDynamic("BatchPredictionId")(BatchPredictionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(ComputeTime)) __obj.updateDynamic("ComputeTime")(ComputeTime.get.asInstanceOf[js.Any])
+    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
+    if (CreatedByIamUser != null) __obj.updateDynamic("CreatedByIamUser")(CreatedByIamUser.asInstanceOf[js.Any])
+    if (FinishedAt != null) __obj.updateDynamic("FinishedAt")(FinishedAt.asInstanceOf[js.Any])
+    if (InputDataLocationS3 != null) __obj.updateDynamic("InputDataLocationS3")(InputDataLocationS3.asInstanceOf[js.Any])
+    if (!js.isUndefined(InvalidRecordCount)) __obj.updateDynamic("InvalidRecordCount")(InvalidRecordCount.get.asInstanceOf[js.Any])
+    if (LastUpdatedAt != null) __obj.updateDynamic("LastUpdatedAt")(LastUpdatedAt.asInstanceOf[js.Any])
+    if (MLModelId != null) __obj.updateDynamic("MLModelId")(MLModelId.asInstanceOf[js.Any])
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (OutputUri != null) __obj.updateDynamic("OutputUri")(OutputUri.asInstanceOf[js.Any])
+    if (StartedAt != null) __obj.updateDynamic("StartedAt")(StartedAt.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalRecordCount)) __obj.updateDynamic("TotalRecordCount")(TotalRecordCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchPrediction]
   }
-  @scala.inline
-  implicit class BatchPredictionOps[Self <: BatchPrediction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchPredictionDataSourceId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionDataSourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchPredictionDataSourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionDataSourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatchPredictionId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchPredictionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeTime(value: LongType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputeTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedByIamUser(value: AwsUserArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedByIamUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedByIamUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedByIamUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinishedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FinishedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinishedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FinishedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputDataLocationS3(value: S3Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataLocationS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputDataLocationS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataLocationS3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalidRecordCount(value: LongType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidRecordCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidRecordCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidRecordCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMLModelId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMLModelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputUri(value: S3Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: EntityStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalRecordCount(value: LongType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalRecordCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalRecordCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalRecordCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

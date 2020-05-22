@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisplayPropertiesInfo extends js.Object {
   /**
     * If set, updates the display's logical bounds origin along x-axis.
@@ -20,17 +19,17 @@ trait DisplayPropertiesInfo extends js.Object {
     * Note that is also invalid to set bounds origin values if isPrimary is also set
     * (as isPrimary parameter is applied first).
     */
-  var boundsOriginX: js.UndefOr[Double] = js.native
+  var boundsOriginX: js.UndefOr[Double] = js.undefined
   /**
     * If set, updates the display's logical bounds origin along y-axis.
     * @see[See documentation for boundsOriginX parameter.]
     */
-  var boundsOriginY: Double = js.native
+  var boundsOriginY: js.UndefOr[Double] = js.undefined
   /**
     * If set, updates the display mode to the mode matching this value.
     * @since Chrome 52
     */
-  var displayMode: js.UndefOr[DisplayMode] = js.native
+  var displayMode: js.UndefOr[DisplayMode] = js.undefined
   /**
     * @since Chrome 65.
     * @description
@@ -39,12 +38,12 @@ trait DisplayPropertiesInfo extends js.Object {
     * in a better quality zoom than just performing
     * a pixel by pixel stretch enlargement.
     */
-  var displayZoomFactor: js.UndefOr[Double] = js.native
+  var displayZoomFactor: js.UndefOr[Double] = js.undefined
   /**
     * If set to true, makes the display primary.
     * No-op if set to false.
     */
-  var isPrimary: js.UndefOr[Boolean] = js.native
+  var isPrimary: js.UndefOr[Boolean] = js.undefined
   /**
     * @requires(CrOS) Chrome OS only.
     * @description
@@ -56,7 +55,7 @@ trait DisplayPropertiesInfo extends js.Object {
     * @see(See `enableUnifiedDesktop` for details).
     * @since Chrome 59
     * */
-  var isUnified: js.UndefOr[Boolean] = js.native
+  var isUnified: js.UndefOr[Boolean] = js.undefined
   /**
     * @requires(CrOS) Chrome OS only.
     * @deprecated Deprecated since Chrome 68. Use ´setMirrorMode´
@@ -68,137 +67,46 @@ trait DisplayPropertiesInfo extends js.Object {
     * which must not be the same as the id passed to setDisplayProperties.
     * If set, no other property may be set.
     */
-  var mirroringSourceId: js.UndefOr[String] = js.native
+  var mirroringSourceId: js.UndefOr[String] = js.undefined
   /**
     * If set, sets the display's overscan insets to the provided values.
     * Note that overscan values may not be negative or larger than a half of the screen's size.
     * Overscan cannot be changed on the internal monitor. It's applied after isPrimary parameter.
     */
-  var overscan: js.UndefOr[Insets] = js.native
+  var overscan: js.UndefOr[Insets] = js.undefined
   /**
     * If set, updates the display's rotation.
     * Legal values are [0, 90, 180, 270].
     * The rotation is set clockwise, relative to the display's vertical position.
     * It's applied after overscan parameter.
     */
-  var rotation: js.UndefOr[`0` | `90` | `180` | `270`] = js.native
+  var rotation: js.UndefOr[`0` | `90` | `180` | `270`] = js.undefined
 }
 
 object DisplayPropertiesInfo {
   @scala.inline
-  def apply(boundsOriginY: Double): DisplayPropertiesInfo = {
-    val __obj = js.Dynamic.literal(boundsOriginY = boundsOriginY.asInstanceOf[js.Any])
+  def apply(
+    boundsOriginX: js.UndefOr[Double] = js.undefined,
+    boundsOriginY: js.UndefOr[Double] = js.undefined,
+    displayMode: DisplayMode = null,
+    displayZoomFactor: js.UndefOr[Double] = js.undefined,
+    isPrimary: js.UndefOr[Boolean] = js.undefined,
+    isUnified: js.UndefOr[Boolean] = js.undefined,
+    mirroringSourceId: String = null,
+    overscan: Insets = null,
+    rotation: `0` | `90` | `180` | `270` = null
+  ): DisplayPropertiesInfo = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(boundsOriginX)) __obj.updateDynamic("boundsOriginX")(boundsOriginX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boundsOriginY)) __obj.updateDynamic("boundsOriginY")(boundsOriginY.get.asInstanceOf[js.Any])
+    if (displayMode != null) __obj.updateDynamic("displayMode")(displayMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayZoomFactor)) __obj.updateDynamic("displayZoomFactor")(displayZoomFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPrimary)) __obj.updateDynamic("isPrimary")(isPrimary.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isUnified)) __obj.updateDynamic("isUnified")(isUnified.get.asInstanceOf[js.Any])
+    if (mirroringSourceId != null) __obj.updateDynamic("mirroringSourceId")(mirroringSourceId.asInstanceOf[js.Any])
+    if (overscan != null) __obj.updateDynamic("overscan")(overscan.asInstanceOf[js.Any])
+    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisplayPropertiesInfo]
   }
-  @scala.inline
-  implicit class DisplayPropertiesInfoOps[Self <: DisplayPropertiesInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundsOriginY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundsOriginY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoundsOriginX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundsOriginX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundsOriginX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundsOriginX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayMode(value: DisplayMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayZoomFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayZoomFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayZoomFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayZoomFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPrimary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsUnified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUnified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsUnified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUnified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMirroringSourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirroringSourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMirroringSourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirroringSourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverscan(value: Insets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverscan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: `0` | `90` | `180` | `270`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

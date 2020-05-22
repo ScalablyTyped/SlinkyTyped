@@ -18,35 +18,10 @@ trait DeleteTransitGatewayPeeringAttachmentRequest extends js.Object {
 
 object DeleteTransitGatewayPeeringAttachmentRequest {
   @scala.inline
-  def apply(TransitGatewayAttachmentId: TransitGatewayAttachmentId): DeleteTransitGatewayPeeringAttachmentRequest = {
+  def apply(TransitGatewayAttachmentId: TransitGatewayAttachmentId, DryRun: js.UndefOr[Boolean] = js.undefined): DeleteTransitGatewayPeeringAttachmentRequest = {
     val __obj = js.Dynamic.literal(TransitGatewayAttachmentId = TransitGatewayAttachmentId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteTransitGatewayPeeringAttachmentRequest]
   }
-  @scala.inline
-  implicit class DeleteTransitGatewayPeeringAttachmentRequestOps[Self <: DeleteTransitGatewayPeeringAttachmentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransitGatewayAttachmentId(value: TransitGatewayAttachmentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayAttachmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

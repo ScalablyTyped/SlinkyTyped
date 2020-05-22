@@ -14,7 +14,7 @@ import typingsSlinky.officeUiFabricReact.facepileTypesMod.OverflowButtonType
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaSharedProps
 import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -30,7 +30,7 @@ object Facepile {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def addButtonProps(value: IButtonProps): this.type = set("addButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -70,7 +70,7 @@ object Facepile {
     @scala.inline
     def showAddButton(value: Boolean): this.type = set("showAddButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IFacepileStyleProps => Partial[IFacepileStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IFacepileStyleProps => DeepPartial[IFacepileStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IFacepileStyleProps, IFacepileStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

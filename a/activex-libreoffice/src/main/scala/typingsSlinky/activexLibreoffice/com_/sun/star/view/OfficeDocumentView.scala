@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a view of a standard office document. */
-@js.native
 trait OfficeDocumentView
   extends XSelectionSupplier
      with XViewSettingsSupplier

@@ -4,245 +4,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SeriesBoxplotDataDragDropOptions extends js.Object {
   /**
     * (Highcharts) Options for the drag handles.
     */
-  var dragHandle: js.UndefOr[SeriesBoxplotDataDragDropDragHandleOptions] = js.native
+  var dragHandle: js.UndefOr[SeriesBoxplotDataDragDropDragHandleOptions] = js.undefined
   /**
     * (Highcharts) Set the maximum X value the points can be moved to.
     */
-  var dragMaxX: js.UndefOr[Double] = js.native
+  var dragMaxX: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Set the maximum Y value the points can be moved to.
     */
-  var dragMaxY: js.UndefOr[Double] = js.native
+  var dragMaxY: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Set the minimum X value the points can be moved to.
     */
-  var dragMinX: js.UndefOr[Double] = js.native
+  var dragMinX: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Set the minimum Y value the points can be moved to.
     */
-  var dragMinY: js.UndefOr[Double] = js.native
+  var dragMinY: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) The X precision value to drag to for this series. Set to 0
     * to disable. By default this is disabled, except for category axes, where
     * the default is 1.
     */
-  var dragPrecisionX: js.UndefOr[Double] = js.native
+  var dragPrecisionX: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) The Y precision value to drag to for this series. Set to 0
     * to disable. By default this is disabled, except for category axes, where
     * the default is 1.
     */
-  var dragPrecisionY: js.UndefOr[Double] = js.native
+  var dragPrecisionY: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) The amount of pixels to drag the pointer before it counts as
     * a drag operation. This prevents drag/drop to fire when just clicking or
     * selecting points.
     */
-  var dragSensitivity: js.UndefOr[Double] = js.native
+  var dragSensitivity: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Enable dragging in the X dimension.
     */
-  var draggableX: js.UndefOr[Boolean] = js.native
+  var draggableX: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts) Enable dragging in the Y dimension. Note that this is not
     * supported for TreeGrid axes (the default axis type in Gantt charts).
     */
-  var draggableY: js.UndefOr[Boolean] = js.native
+  var draggableY: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts) Group the points by a property. Points with the same
     * property value will be grouped together when moving.
     */
-  var groupBy: js.UndefOr[String] = js.native
+  var groupBy: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts) Style options for the guide box. The guide box has one state
     * by default, the `default` state.
     */
   var guideBox: js.UndefOr[
     SeriesBoxplotDataDragDropGuideBoxOptions | Dictionary[PlotSeriesDragDropGuideBoxDefaultOptions]
-  ] = js.native
+  ] = js.undefined
   /**
     * (Highcharts) Update points as they are dragged. If false, a guide box is
     * drawn to illustrate the new point size.
     */
-  var liveRedraw: js.UndefOr[Boolean] = js.native
+  var liveRedraw: js.UndefOr[Boolean] = js.undefined
 }
 
 object SeriesBoxplotDataDragDropOptions {
   @scala.inline
-  def apply(): SeriesBoxplotDataDragDropOptions = {
+  def apply(
+    dragHandle: SeriesBoxplotDataDragDropDragHandleOptions = null,
+    dragMaxX: js.UndefOr[Double] = js.undefined,
+    dragMaxY: js.UndefOr[Double] = js.undefined,
+    dragMinX: js.UndefOr[Double] = js.undefined,
+    dragMinY: js.UndefOr[Double] = js.undefined,
+    dragPrecisionX: js.UndefOr[Double] = js.undefined,
+    dragPrecisionY: js.UndefOr[Double] = js.undefined,
+    dragSensitivity: js.UndefOr[Double] = js.undefined,
+    draggableX: js.UndefOr[Boolean] = js.undefined,
+    draggableY: js.UndefOr[Boolean] = js.undefined,
+    groupBy: String = null,
+    guideBox: SeriesBoxplotDataDragDropGuideBoxOptions | Dictionary[PlotSeriesDragDropGuideBoxDefaultOptions] = null,
+    liveRedraw: js.UndefOr[Boolean] = js.undefined
+  ): SeriesBoxplotDataDragDropOptions = {
     val __obj = js.Dynamic.literal()
+    if (dragHandle != null) __obj.updateDynamic("dragHandle")(dragHandle.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragMaxX)) __obj.updateDynamic("dragMaxX")(dragMaxX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragMaxY)) __obj.updateDynamic("dragMaxY")(dragMaxY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragMinX)) __obj.updateDynamic("dragMinX")(dragMinX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragMinY)) __obj.updateDynamic("dragMinY")(dragMinY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragPrecisionX)) __obj.updateDynamic("dragPrecisionX")(dragPrecisionX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragPrecisionY)) __obj.updateDynamic("dragPrecisionY")(dragPrecisionY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragSensitivity)) __obj.updateDynamic("dragSensitivity")(dragSensitivity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggableX)) __obj.updateDynamic("draggableX")(draggableX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggableY)) __obj.updateDynamic("draggableY")(draggableY.get.asInstanceOf[js.Any])
+    if (groupBy != null) __obj.updateDynamic("groupBy")(groupBy.asInstanceOf[js.Any])
+    if (guideBox != null) __obj.updateDynamic("guideBox")(guideBox.asInstanceOf[js.Any])
+    if (!js.isUndefined(liveRedraw)) __obj.updateDynamic("liveRedraw")(liveRedraw.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesBoxplotDataDragDropOptions]
   }
-  @scala.inline
-  implicit class SeriesBoxplotDataDragDropOptionsOps[Self <: SeriesBoxplotDataDragDropOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDragHandle(value: SeriesBoxplotDataDragDropDragHandleOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragHandle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragHandle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragHandle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragMaxX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMaxX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragMaxX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMaxX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragMaxY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMaxY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragMaxY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMaxY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragMinX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMinX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragMinX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMinX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragMinY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMinY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragMinY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMinY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragPrecisionX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPrecisionX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragPrecisionX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPrecisionX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragPrecisionY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPrecisionY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragPrecisionY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPrecisionY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragSensitivity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragSensitivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragSensitivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragSensitivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggableX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggableX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggableX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggableX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggableY(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggableY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggableY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggableY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuideBox(
-      value: SeriesBoxplotDataDragDropGuideBoxOptions | Dictionary[PlotSeriesDragDropGuideBoxDefaultOptions]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guideBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuideBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guideBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveRedraw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveRedraw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveRedraw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveRedraw")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

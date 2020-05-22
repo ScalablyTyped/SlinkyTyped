@@ -4,90 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndexDescription[T] extends js.Object {
-  var deduplicate: js.UndefOr[Boolean] = js.native
-  var expireAfter: js.UndefOr[Double] = js.native
-  var fields: js.Array[/* keyof T */ String] = js.native
-  var sparse: js.UndefOr[Boolean] = js.native
-  var `type`: IndexType = js.native
-  var unique: js.UndefOr[Boolean] = js.native
+  var deduplicate: js.UndefOr[Boolean] = js.undefined
+  var expireAfter: js.UndefOr[Double] = js.undefined
+  var fields: js.Array[/* keyof T */ String]
+  var minLength: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var sparse: js.UndefOr[Boolean] = js.undefined
+  var `type`: IndexType
+  var unique: js.UndefOr[Boolean] = js.undefined
 }
 
 object IndexDescription {
   @scala.inline
-  def apply[T](fields: js.Array[/* keyof T */ String], `type`: IndexType): IndexDescription[T] = {
+  def apply[T](
+    fields: js.Array[/* keyof T */ String],
+    `type`: IndexType,
+    deduplicate: js.UndefOr[Boolean] = js.undefined,
+    expireAfter: js.UndefOr[Double] = js.undefined,
+    minLength: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    sparse: js.UndefOr[Boolean] = js.undefined,
+    unique: js.UndefOr[Boolean] = js.undefined
+  ): IndexDescription[T] = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(deduplicate)) __obj.updateDynamic("deduplicate")(deduplicate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expireAfter)) __obj.updateDynamic("expireAfter")(expireAfter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minLength)) __obj.updateDynamic("minLength")(minLength.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(sparse)) __obj.updateDynamic("sparse")(sparse.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unique)) __obj.updateDynamic("unique")(unique.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexDescription[T]]
   }
-  @scala.inline
-  implicit class IndexDescriptionOps[Self[t] <: IndexDescription[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withFields(value: js.Array[/* keyof T */ String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: IndexType): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeduplicate(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deduplicate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeduplicate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deduplicate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpireAfter(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expireAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpireAfter: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expireAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSparse(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sparse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSparse: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sparse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnique(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnique: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

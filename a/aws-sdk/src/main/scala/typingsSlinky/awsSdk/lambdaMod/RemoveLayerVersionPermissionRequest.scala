@@ -26,47 +26,15 @@ trait RemoveLayerVersionPermissionRequest extends js.Object {
 
 object RemoveLayerVersionPermissionRequest {
   @scala.inline
-  def apply(LayerName: LayerName, StatementId: StatementId, VersionNumber: LayerVersionNumber): RemoveLayerVersionPermissionRequest = {
+  def apply(
+    LayerName: LayerName,
+    StatementId: StatementId,
+    VersionNumber: LayerVersionNumber,
+    RevisionId: String = null
+  ): RemoveLayerVersionPermissionRequest = {
     val __obj = js.Dynamic.literal(LayerName = LayerName.asInstanceOf[js.Any], StatementId = StatementId.asInstanceOf[js.Any], VersionNumber = VersionNumber.asInstanceOf[js.Any])
+    if (RevisionId != null) __obj.updateDynamic("RevisionId")(RevisionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoveLayerVersionPermissionRequest]
   }
-  @scala.inline
-  implicit class RemoveLayerVersionPermissionRequestOps[Self <: RemoveLayerVersionPermissionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayerName(value: LayerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatementId(value: StatementId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatementId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersionNumber(value: LayerVersionNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,17 +8,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SiteHealthResult extends ClientValueObject {
-  def get_messageAsText(): String = js.native
-  def get_ruleHelpLink(): String = js.native
-  def get_ruleId(): Guid = js.native
-  def get_ruleIsRepairable(): Boolean = js.native
-  def get_ruleName(): String = js.native
-  def get_status(): SiteHealthStatusType = js.native
-  def get_timeStamp(): js.Date = js.native
-  def set_status(value: SiteHealthStatusType): Unit = js.native
-  def set_timeStamp(value: js.Date): Unit = js.native
+  def get_messageAsText(): String
+  def get_ruleHelpLink(): String
+  def get_ruleId(): Guid
+  def get_ruleIsRepairable(): Boolean
+  def get_ruleName(): String
+  def get_status(): SiteHealthStatusType
+  def get_timeStamp(): js.Date
+  def set_status(value: SiteHealthStatusType): Unit
+  def set_timeStamp(value: js.Date): Unit
 }
 
 object SiteHealthResult {
@@ -42,67 +41,5 @@ object SiteHealthResult {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_messageAsText = js.Any.fromFunction0(get_messageAsText), get_ruleHelpLink = js.Any.fromFunction0(get_ruleHelpLink), get_ruleId = js.Any.fromFunction0(get_ruleId), get_ruleIsRepairable = js.Any.fromFunction0(get_ruleIsRepairable), get_ruleName = js.Any.fromFunction0(get_ruleName), get_status = js.Any.fromFunction0(get_status), get_timeStamp = js.Any.fromFunction0(get_timeStamp), get_typeId = js.Any.fromFunction0(get_typeId), set_status = js.Any.fromFunction1(set_status), set_timeStamp = js.Any.fromFunction1(set_timeStamp), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[SiteHealthResult]
   }
-  @scala.inline
-  implicit class SiteHealthResultOps[Self <: SiteHealthResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_messageAsText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_messageAsText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_ruleHelpLink(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_ruleHelpLink")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_ruleId(value: () => Guid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_ruleId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_ruleIsRepairable(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_ruleIsRepairable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_ruleName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_ruleName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_status(value: () => SiteHealthStatusType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_status")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_timeStamp(value: () => js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_timeStamp")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_status(value: SiteHealthStatusType => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_status")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_timeStamp(value: js.Date => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_timeStamp")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

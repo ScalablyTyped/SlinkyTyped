@@ -30,71 +30,19 @@ trait UpdateFolderRequest extends js.Object {
 
 object UpdateFolderRequest {
   @scala.inline
-  def apply(FolderId: ResourceIdType): UpdateFolderRequest = {
+  def apply(
+    FolderId: ResourceIdType,
+    AuthenticationToken: AuthenticationHeaderType = null,
+    Name: ResourceNameType = null,
+    ParentFolderId: ResourceIdType = null,
+    ResourceState: ResourceStateType = null
+  ): UpdateFolderRequest = {
     val __obj = js.Dynamic.literal(FolderId = FolderId.asInstanceOf[js.Any])
+    if (AuthenticationToken != null) __obj.updateDynamic("AuthenticationToken")(AuthenticationToken.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (ParentFolderId != null) __obj.updateDynamic("ParentFolderId")(ParentFolderId.asInstanceOf[js.Any])
+    if (ResourceState != null) __obj.updateDynamic("ResourceState")(ResourceState.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFolderRequest]
   }
-  @scala.inline
-  implicit class UpdateFolderRequestOps[Self <: UpdateFolderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFolderId(value: ResourceIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FolderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthenticationToken(value: AuthenticationHeaderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ResourceNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentFolderId(value: ResourceIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentFolderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentFolderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentFolderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceState(value: ResourceStateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

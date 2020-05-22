@@ -10,12 +10,11 @@ import scala.scalajs.js.annotation._
   * The argument for the command "post".
   * @see XCommandProcessor
   */
-@js.native
 trait PostCommandArgument extends js.Object {
   /** The data sink receiving the returned contents (supporting either {@link com.sun.star.io.XActiveDataSink} or {@link com.sun.star.io.XOutputStream} ). */
-  var Sink: XInterface = js.native
+  var Sink: XInterface
   /** The data source containing the data to post. */
-  var Source: XInputStream = js.native
+  var Source: XInputStream
 }
 
 object PostCommandArgument {
@@ -24,25 +23,5 @@ object PostCommandArgument {
     val __obj = js.Dynamic.literal(Sink = Sink.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostCommandArgument]
   }
-  @scala.inline
-  implicit class PostCommandArgumentOps[Self <: PostCommandArgument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSink(value: XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

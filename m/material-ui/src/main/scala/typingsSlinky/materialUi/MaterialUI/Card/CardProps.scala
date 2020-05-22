@@ -5,140 +5,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CardProps extends js.Object {
-  var actAsExpander: js.UndefOr[Boolean] = js.native
-  var className: js.UndefOr[String] = js.native
-  var containerStyle: js.UndefOr[CSSProperties] = js.native
-  var expandable: js.UndefOr[Boolean] = js.native
-  var expanded: js.UndefOr[Boolean] = js.native
-  var initiallyExpanded: js.UndefOr[Boolean] = js.native
-  var onExpandChange: js.UndefOr[js.Function1[/* isExpanded */ Boolean, Unit]] = js.native
-  var showExpandableButton: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var actAsExpander: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var containerStyle: js.UndefOr[CSSProperties] = js.undefined
+  var expandable: js.UndefOr[Boolean] = js.undefined
+  var expanded: js.UndefOr[Boolean] = js.undefined
+  var initiallyExpanded: js.UndefOr[Boolean] = js.undefined
+  var onExpandChange: js.UndefOr[js.Function1[/* isExpanded */ Boolean, Unit]] = js.undefined
+  var showExpandableButton: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object CardProps {
   @scala.inline
-  def apply(): CardProps = {
+  def apply(
+    actAsExpander: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    containerStyle: CSSProperties = null,
+    expandable: js.UndefOr[Boolean] = js.undefined,
+    expanded: js.UndefOr[Boolean] = js.undefined,
+    initiallyExpanded: js.UndefOr[Boolean] = js.undefined,
+    onExpandChange: /* isExpanded */ Boolean => Unit = null,
+    showExpandableButton: js.UndefOr[Boolean] = js.undefined,
+    style: CSSProperties = null
+  ): CardProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(actAsExpander)) __obj.updateDynamic("actAsExpander")(actAsExpander.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(expandable)) __obj.updateDynamic("expandable")(expandable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expanded)) __obj.updateDynamic("expanded")(expanded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initiallyExpanded)) __obj.updateDynamic("initiallyExpanded")(initiallyExpanded.get.asInstanceOf[js.Any])
+    if (onExpandChange != null) __obj.updateDynamic("onExpandChange")(js.Any.fromFunction1(onExpandChange))
+    if (!js.isUndefined(showExpandableButton)) __obj.updateDynamic("showExpandableButton")(showExpandableButton.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardProps]
   }
-  @scala.inline
-  implicit class CardPropsOps[Self <: CardProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActAsExpander(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actAsExpander")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActAsExpander: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actAsExpander")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitiallyExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiallyExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitiallyExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiallyExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExpandChange(value: /* isExpanded */ Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpandChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExpandChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpandChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowExpandableButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showExpandableButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowExpandableButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showExpandableButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

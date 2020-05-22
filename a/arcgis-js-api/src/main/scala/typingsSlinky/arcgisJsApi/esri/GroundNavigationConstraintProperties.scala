@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GroundNavigationConstraintProperties extends Object {
   /**
     * The type of the constraint. It can be one of the following:
@@ -22,7 +21,7 @@ trait GroundNavigationConstraintProperties extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html#navigationConstraint)
     */
-  var `type`: js.UndefOr[`stay-above` | none] = js.native
+  var `type`: js.UndefOr[`stay-above` | none] = js.undefined
 }
 
 object GroundNavigationConstraintProperties {
@@ -30,30 +29,12 @@ object GroundNavigationConstraintProperties {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean
+    propertyIsEnumerable: PropertyKey => Boolean,
+    `type`: `stay-above` | none = null
   ): GroundNavigationConstraintProperties = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroundNavigationConstraintProperties]
   }
-  @scala.inline
-  implicit class GroundNavigationConstraintPropertiesOps[Self <: GroundNavigationConstraintProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: `stay-above` | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

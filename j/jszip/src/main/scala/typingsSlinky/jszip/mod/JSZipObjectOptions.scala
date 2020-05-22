@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JSZipObjectOptions extends js.Object {
-  var compression: Compression = js.native
+  var compression: Compression
 }
 
 object JSZipObjectOptions {
@@ -15,19 +14,5 @@ object JSZipObjectOptions {
     val __obj = js.Dynamic.literal(compression = compression.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSZipObjectOptions]
   }
-  @scala.inline
-  implicit class JSZipObjectOptionsOps[Self <: JSZipObjectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompression(value: Compression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

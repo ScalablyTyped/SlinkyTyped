@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDetailsHeader extends js.Object {
   /** sets focus into the header */
-  def focus(): Boolean = js.native
+  def focus(): Boolean
 }
 
 object IDetailsHeader {
@@ -16,19 +15,5 @@ object IDetailsHeader {
     val __obj = js.Dynamic.literal(focus = js.Any.fromFunction0(focus))
     __obj.asInstanceOf[IDetailsHeader]
   }
-  @scala.inline
-  implicit class IDetailsHeaderOps[Self <: IDetailsHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocus(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

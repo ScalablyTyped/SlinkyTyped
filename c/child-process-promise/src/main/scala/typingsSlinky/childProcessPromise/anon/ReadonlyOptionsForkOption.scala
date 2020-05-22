@@ -10,194 +10,56 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Readonly<child-process-promise.child-process-promise.Options & node.child_process.ForkOptions> */
-@js.native
 trait ReadonlyOptionsForkOption extends js.Object {
   val capture: js.UndefOr[
     (js.Array[stdout | stderr | js.Any]) | (js.Tuple2[stdout | stderr, stderr | stdout])
-  ] = js.native
-  val cwd: js.UndefOr[String] = js.native
-  val detached: js.UndefOr[Boolean] = js.native
-  val env: js.UndefOr[ProcessEnv] = js.native
-  val execArgv: js.UndefOr[js.Array[String]] = js.native
-  val execPath: js.UndefOr[String] = js.native
-  val gid: js.UndefOr[Double] = js.native
-  val serialization: js.UndefOr[SerializationType] = js.native
-  val silent: js.UndefOr[Boolean] = js.native
-  val stdio: js.UndefOr[StdioOptions] = js.native
-  val successfulExitCodes: js.UndefOr[js.Array[Double]] = js.native
-  val uid: js.UndefOr[Double] = js.native
-  val windowsVerbatimArguments: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  val cwd: js.UndefOr[String] = js.undefined
+  val detached: js.UndefOr[Boolean] = js.undefined
+  val env: js.UndefOr[ProcessEnv] = js.undefined
+  val execArgv: js.UndefOr[js.Array[String]] = js.undefined
+  val execPath: js.UndefOr[String] = js.undefined
+  val gid: js.UndefOr[Double] = js.undefined
+  val serialization: js.UndefOr[SerializationType] = js.undefined
+  val silent: js.UndefOr[Boolean] = js.undefined
+  val stdio: js.UndefOr[StdioOptions] = js.undefined
+  val successfulExitCodes: js.UndefOr[js.Array[Double]] = js.undefined
+  val uid: js.UndefOr[Double] = js.undefined
+  val windowsVerbatimArguments: js.UndefOr[Boolean] = js.undefined
 }
 
 object ReadonlyOptionsForkOption {
   @scala.inline
-  def apply(): ReadonlyOptionsForkOption = {
+  def apply(
+    capture: (js.Array[stdout | stderr | js.Any]) | (js.Tuple2[stdout | stderr, stderr | stdout]) = null,
+    cwd: String = null,
+    detached: js.UndefOr[Boolean] = js.undefined,
+    env: ProcessEnv = null,
+    execArgv: js.Array[String] = null,
+    execPath: String = null,
+    gid: js.UndefOr[Double] = js.undefined,
+    serialization: SerializationType = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    stdio: StdioOptions = null,
+    successfulExitCodes: js.Array[Double] = null,
+    uid: js.UndefOr[Double] = js.undefined,
+    windowsVerbatimArguments: js.UndefOr[Boolean] = js.undefined
+  ): ReadonlyOptionsForkOption = {
     val __obj = js.Dynamic.literal()
+    if (capture != null) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (!js.isUndefined(detached)) __obj.updateDynamic("detached")(detached.get.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (execArgv != null) __obj.updateDynamic("execArgv")(execArgv.asInstanceOf[js.Any])
+    if (execPath != null) __obj.updateDynamic("execPath")(execPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(gid)) __obj.updateDynamic("gid")(gid.get.asInstanceOf[js.Any])
+    if (serialization != null) __obj.updateDynamic("serialization")(serialization.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (stdio != null) __obj.updateDynamic("stdio")(stdio.asInstanceOf[js.Any])
+    if (successfulExitCodes != null) __obj.updateDynamic("successfulExitCodes")(successfulExitCodes.asInstanceOf[js.Any])
+    if (!js.isUndefined(uid)) __obj.updateDynamic("uid")(uid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsVerbatimArguments)) __obj.updateDynamic("windowsVerbatimArguments")(windowsVerbatimArguments.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadonlyOptionsForkOption]
   }
-  @scala.inline
-  implicit class ReadonlyOptionsForkOptionOps[Self <: ReadonlyOptionsForkOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapture(value: (js.Array[stdout | stderr | js.Any]) | (js.Tuple2[stdout | stderr, stderr | stdout])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCwd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetached(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detached")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetached: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detached")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: ProcessEnv): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecArgv(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execArgv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecArgv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execArgv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerialization(value: SerializationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerialization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStdio(value: StdioOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStdio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessfulExitCodes(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfulExitCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfulExitCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfulExitCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsVerbatimArguments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsVerbatimArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsVerbatimArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsVerbatimArguments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

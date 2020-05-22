@@ -5,43 +5,42 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides text manipulation methods that are used by several objects. */
-@js.native
 trait IXmlCharacterData extends IXmlNode {
   /** Gets or sets the node data depending on the node type. */
-  var data: String = js.native
+  var data: String
   /** Gets the length of the data, in Unicode characters. */
-  var length: Double = js.native
+  var length: Double
   /**
     * Appends the supplied string to the existing string data.
     * @param data The data to be appended to the existing string.
     */
-  def appendData(data: String): Unit = js.native
+  def appendData(data: String): Unit
   /**
     * Deletes specified data.
     * @param offset The offset, in characters, at which to start deleting the string data.
     * @param count The number of characters to delete.
     */
-  def deleteData(offset: Double, count: Double): Unit = js.native
+  def deleteData(offset: Double, count: Double): Unit
   /**
     * Inserts a string at the specified offset.
     * @param offset The offset, in characters, at which to insert the supplied string data.
     * @param data The data to be inserted into the existing string.
     */
-  def insertData(offset: Double, data: String): Unit = js.native
+  def insertData(offset: Double, data: String): Unit
   /**
     * Replaces the specified number of characters with the supplied string.
     * @param offset The offset, in characters, at which to start replacing string data.
     * @param count The number of characters to replace.
     * @param data The new data that replaces the old string data.
     */
-  def replaceData(offset: Double, count: Double, data: String): Unit = js.native
+  def replaceData(offset: Double, count: Double, data: String): Unit
   /**
     * Retrieves a substring of the full string from the specified range.
     * @param offset Specifies the offset, in characters, from the beginning of the string. An offset of zero indicates copying from the start of the data.
     * @param count Specifies the number of characters to retrieve from the specified offset.
     * @return The returned substring.
     */
-  def substringData(offset: Double, count: Double): String = js.native
+  def substringData(offset: Double, count: Double): String
 }
 
 object IXmlCharacterData {
@@ -85,55 +84,5 @@ object IXmlCharacterData {
     val __obj = js.Dynamic.literal(appendChild = js.Any.fromFunction1(appendChild), appendData = js.Any.fromFunction1(appendData), attributes = attributes.asInstanceOf[js.Any], childNodes = childNodes.asInstanceOf[js.Any], cloneNode = js.Any.fromFunction1(cloneNode), data = data.asInstanceOf[js.Any], deleteData = js.Any.fromFunction2(deleteData), firstChild = firstChild.asInstanceOf[js.Any], getXml = js.Any.fromFunction0(getXml), hasChildNodes = js.Any.fromFunction0(hasChildNodes), innerText = innerText.asInstanceOf[js.Any], insertBefore = js.Any.fromFunction2(insertBefore), insertData = js.Any.fromFunction2(insertData), lastChild = lastChild.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], localName = localName.asInstanceOf[js.Any], namespaceUri = namespaceUri.asInstanceOf[js.Any], nextSibling = nextSibling.asInstanceOf[js.Any], nodeName = nodeName.asInstanceOf[js.Any], nodeType = nodeType.asInstanceOf[js.Any], nodeValue = nodeValue.asInstanceOf[js.Any], normalize = js.Any.fromFunction0(normalize), ownerDocument = ownerDocument.asInstanceOf[js.Any], parentNode = parentNode.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any], previousSibling = previousSibling.asInstanceOf[js.Any], removeChild = js.Any.fromFunction1(removeChild), replaceChild = js.Any.fromFunction2(replaceChild), replaceData = js.Any.fromFunction3(replaceData), selectNodes = js.Any.fromFunction1(selectNodes), selectNodesNS = js.Any.fromFunction2(selectNodesNS), selectSingleNode = js.Any.fromFunction1(selectSingleNode), selectSingleNodeNS = js.Any.fromFunction2(selectSingleNodeNS), substringData = js.Any.fromFunction2(substringData))
     __obj.asInstanceOf[IXmlCharacterData]
   }
-  @scala.inline
-  implicit class IXmlCharacterDataOps[Self <: IXmlCharacterData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppendData(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendData")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteData(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInsertData(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReplaceData(value: (Double, Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceData")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSubstringData(value: (Double, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("substringData")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

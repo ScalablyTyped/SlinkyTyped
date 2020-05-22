@@ -14,29 +14,10 @@ trait DeleteTransitGatewayMulticastDomainResult extends js.Object {
 
 object DeleteTransitGatewayMulticastDomainResult {
   @scala.inline
-  def apply(): DeleteTransitGatewayMulticastDomainResult = {
+  def apply(TransitGatewayMulticastDomain: TransitGatewayMulticastDomain = null): DeleteTransitGatewayMulticastDomainResult = {
     val __obj = js.Dynamic.literal()
+    if (TransitGatewayMulticastDomain != null) __obj.updateDynamic("TransitGatewayMulticastDomain")(TransitGatewayMulticastDomain.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteTransitGatewayMulticastDomainResult]
   }
-  @scala.inline
-  implicit class DeleteTransitGatewayMulticastDomainResultOps[Self <: DeleteTransitGatewayMulticastDomainResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransitGatewayMulticastDomain(value: TransitGatewayMulticastDomain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayMulticastDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitGatewayMulticastDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayMulticastDomain")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

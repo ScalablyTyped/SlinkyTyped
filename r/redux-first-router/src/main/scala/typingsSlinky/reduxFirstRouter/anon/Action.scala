@@ -6,49 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Action extends js.Object {
-  var action: js.Object = js.native
-  var navigationAction: Nullable[NavigationAction] = js.native
+  var action: js.Object
+  var navigationAction: Nullable[NavigationAction]
 }
 
 object Action {
   @scala.inline
-  def apply(action: js.Object): Action = {
+  def apply(action: js.Object, navigationAction: js.UndefOr[Null | Nullable[NavigationAction]] = js.undefined): Action = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any])
+    if (!js.isUndefined(navigationAction)) __obj.updateDynamic("navigationAction")(navigationAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[Action]
   }
-  @scala.inline
-  implicit class ActionOps[Self <: Action] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavigationAction(value: Nullable[NavigationAction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigationAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigationActionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationAction")(null)
-        ret
-    }
-  }
-  
 }
 

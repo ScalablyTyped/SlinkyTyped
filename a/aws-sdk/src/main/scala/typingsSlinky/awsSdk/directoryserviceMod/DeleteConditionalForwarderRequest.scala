@@ -22,25 +22,5 @@ object DeleteConditionalForwarderRequest {
     val __obj = js.Dynamic.literal(DirectoryId = DirectoryId.asInstanceOf[js.Any], RemoteDomainName = RemoteDomainName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteConditionalForwarderRequest]
   }
-  @scala.inline
-  implicit class DeleteConditionalForwarderRequestOps[Self <: DeleteConditionalForwarderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoteDomainName(value: RemoteDomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteDomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

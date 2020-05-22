@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClusterBillboards extends js.Object {
-  var clusterBillboards: js.UndefOr[Boolean] = js.native
-  var clusterLabels: js.UndefOr[Boolean] = js.native
-  var clusterPoints: js.UndefOr[Boolean] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
-  var minimumClusterSize: js.UndefOr[Double] = js.native
-  var pixelRange: js.UndefOr[Double] = js.native
+  var clusterBillboards: js.UndefOr[Boolean] = js.undefined
+  var clusterLabels: js.UndefOr[Boolean] = js.undefined
+  var clusterPoints: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var minimumClusterSize: js.UndefOr[Double] = js.undefined
+  var pixelRange: js.UndefOr[Double] = js.undefined
 }
 
 object ClusterBillboards {
   @scala.inline
-  def apply(): ClusterBillboards = {
+  def apply(
+    clusterBillboards: js.UndefOr[Boolean] = js.undefined,
+    clusterLabels: js.UndefOr[Boolean] = js.undefined,
+    clusterPoints: js.UndefOr[Boolean] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    minimumClusterSize: js.UndefOr[Double] = js.undefined,
+    pixelRange: js.UndefOr[Double] = js.undefined
+  ): ClusterBillboards = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clusterBillboards)) __obj.updateDynamic("clusterBillboards")(clusterBillboards.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clusterLabels)) __obj.updateDynamic("clusterLabels")(clusterLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clusterPoints)) __obj.updateDynamic("clusterPoints")(clusterPoints.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumClusterSize)) __obj.updateDynamic("minimumClusterSize")(minimumClusterSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pixelRange)) __obj.updateDynamic("pixelRange")(pixelRange.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterBillboards]
   }
-  @scala.inline
-  implicit class ClusterBillboardsOps[Self <: ClusterBillboards] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterBillboards(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterBillboards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterBillboards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterBillboards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterPoints(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumClusterSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumClusterSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumClusterSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumClusterSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPixelRange(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPixelRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

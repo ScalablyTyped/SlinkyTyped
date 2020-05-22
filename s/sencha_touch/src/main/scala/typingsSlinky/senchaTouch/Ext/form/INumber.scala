@@ -4,162 +4,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INumber
   extends typingsSlinky.senchaTouch.Ext.field.IText {
   /** [Method] Returns the value of maxValue
-  		* @returns Number
-  		*/
-  var getMaxValue: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getMaxValue: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Returns the value of minValue
-  		* @returns Number
-  		*/
-  var getMinValue: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getMinValue: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Returns the value of stepValue
-  		* @returns Number
-  		*/
-  var getStepValue: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getStepValue: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Config Option] (Number) */
-  var maxValue: js.UndefOr[Double] = js.native
+  var maxValue: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Number) */
-  var minValue: js.UndefOr[Double] = js.native
+  var minValue: js.UndefOr[Double] = js.undefined
   /** [Method] Sets the value of maxValue
-  		* @param maxValue Number The new value.
-  		*/
-  var setMaxValue: js.UndefOr[js.Function1[/* maxValue */ js.UndefOr[Double], Unit]] = js.native
+    * @param maxValue Number The new value.
+    */
+  var setMaxValue: js.UndefOr[js.Function1[/* maxValue */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Method] Sets the value of minValue
-  		* @param minValue Number The new value.
-  		*/
-  var setMinValue: js.UndefOr[js.Function1[/* minValue */ js.UndefOr[Double], Unit]] = js.native
+    * @param minValue Number The new value.
+    */
+  var setMinValue: js.UndefOr[js.Function1[/* minValue */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Method] Sets the value of stepValue
-  		* @param stepValue Number The new value.
-  		*/
-  var setStepValue: js.UndefOr[js.Function1[/* stepValue */ js.UndefOr[Double], Unit]] = js.native
+    * @param stepValue Number The new value.
+    */
+  var setStepValue: js.UndefOr[js.Function1[/* stepValue */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Config Option] (Number) */
-  var stepValue: js.UndefOr[Double] = js.native
+  var stepValue: js.UndefOr[Double] = js.undefined
 }
 
 object INumber {
   @scala.inline
-  def apply(): INumber = {
+  def apply(
+    IText: typingsSlinky.senchaTouch.Ext.field.IText = null,
+    getMaxValue: () => Double = null,
+    getMinValue: () => Double = null,
+    getStepValue: () => Double = null,
+    maxValue: js.UndefOr[Double] = js.undefined,
+    minValue: js.UndefOr[Double] = js.undefined,
+    setMaxValue: /* maxValue */ js.UndefOr[Double] => Unit = null,
+    setMinValue: /* minValue */ js.UndefOr[Double] => Unit = null,
+    setStepValue: /* stepValue */ js.UndefOr[Double] => Unit = null,
+    stepValue: js.UndefOr[Double] = js.undefined
+  ): INumber = {
     val __obj = js.Dynamic.literal()
+    if (IText != null) js.Dynamic.global.Object.assign(__obj, IText)
+    if (getMaxValue != null) __obj.updateDynamic("getMaxValue")(js.Any.fromFunction0(getMaxValue))
+    if (getMinValue != null) __obj.updateDynamic("getMinValue")(js.Any.fromFunction0(getMinValue))
+    if (getStepValue != null) __obj.updateDynamic("getStepValue")(js.Any.fromFunction0(getStepValue))
+    if (!js.isUndefined(maxValue)) __obj.updateDynamic("maxValue")(maxValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minValue)) __obj.updateDynamic("minValue")(minValue.get.asInstanceOf[js.Any])
+    if (setMaxValue != null) __obj.updateDynamic("setMaxValue")(js.Any.fromFunction1(setMaxValue))
+    if (setMinValue != null) __obj.updateDynamic("setMinValue")(js.Any.fromFunction1(setMinValue))
+    if (setStepValue != null) __obj.updateDynamic("setStepValue")(js.Any.fromFunction1(setStepValue))
+    if (!js.isUndefined(stepValue)) __obj.updateDynamic("stepValue")(stepValue.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[INumber]
   }
-  @scala.inline
-  implicit class INumberOps[Self <: INumber] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetMaxValue(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetMinValue(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetStepValue(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStepValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetStepValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStepValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetMaxValue(value: /* maxValue */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetMinValue(value: /* minValue */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetStepValue(value: /* stepValue */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStepValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetStepValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStepValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

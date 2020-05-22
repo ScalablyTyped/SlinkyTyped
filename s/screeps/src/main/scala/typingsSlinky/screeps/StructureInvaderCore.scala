@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * A structure which is a control center of NPC Strongholds, and also rules all invaders in the sector.
   */
-@js.native
 trait StructureInvaderCore
   extends OwnedStructure[STRUCTURE_INVADER_CORE]
      with AnyOwnedStructure
@@ -15,11 +14,11 @@ trait StructureInvaderCore
   /**
     * The level of the stronghold. The amount and quality of the loot depends on the level.
     */
-  var level: Double = js.native
+  var level: Double
   /**
     * Shows the timer for a not yet deployed stronghold, undefined otherwise.
     */
-  var ticksToDeploy: Double = js.native
+  var ticksToDeploy: Double
 }
 
 object StructureInvaderCore {
@@ -32,34 +31,17 @@ object StructureInvaderCore {
     id: Id[StructureInvaderCore],
     isActive: () => Boolean,
     level: Double,
+    my: Boolean,
     notifyWhenAttacked: Boolean => ScreepsReturnCode,
     pos: RoomPosition,
     room: Room,
     structureType: STRUCTURE_INVADER_CORE,
-    ticksToDeploy: Double
+    ticksToDeploy: Double,
+    owner: Owner = null
   ): StructureInvaderCore = {
-    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), level = level.asInstanceOf[js.Any], notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any], ticksToDeploy = ticksToDeploy.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), level = level.asInstanceOf[js.Any], my = my.asInstanceOf[js.Any], notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any], ticksToDeploy = ticksToDeploy.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructureInvaderCore]
   }
-  @scala.inline
-  implicit class StructureInvaderCoreOps[Self <: StructureInvaderCore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicksToDeploy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksToDeploy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

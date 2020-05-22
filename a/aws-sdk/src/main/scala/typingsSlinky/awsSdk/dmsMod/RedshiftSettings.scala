@@ -110,317 +110,60 @@ trait RedshiftSettings extends js.Object {
 
 object RedshiftSettings {
   @scala.inline
-  def apply(): RedshiftSettings = {
+  def apply(
+    AcceptAnyDate: js.UndefOr[BooleanOptional] = js.undefined,
+    AfterConnectScript: String = null,
+    BucketFolder: String = null,
+    BucketName: String = null,
+    ConnectionTimeout: js.UndefOr[IntegerOptional] = js.undefined,
+    DatabaseName: String = null,
+    DateFormat: String = null,
+    EmptyAsNull: js.UndefOr[BooleanOptional] = js.undefined,
+    EncryptionMode: EncryptionModeValue = null,
+    FileTransferUploadStreams: js.UndefOr[IntegerOptional] = js.undefined,
+    LoadTimeout: js.UndefOr[IntegerOptional] = js.undefined,
+    MaxFileSize: js.UndefOr[IntegerOptional] = js.undefined,
+    Password: SecretString = null,
+    Port: js.UndefOr[IntegerOptional] = js.undefined,
+    RemoveQuotes: js.UndefOr[BooleanOptional] = js.undefined,
+    ReplaceChars: String = null,
+    ReplaceInvalidChars: String = null,
+    ServerName: String = null,
+    ServerSideEncryptionKmsKeyId: String = null,
+    ServiceAccessRoleArn: String = null,
+    TimeFormat: String = null,
+    TrimBlanks: js.UndefOr[BooleanOptional] = js.undefined,
+    TruncateColumns: js.UndefOr[BooleanOptional] = js.undefined,
+    Username: String = null,
+    WriteBufferSize: js.UndefOr[IntegerOptional] = js.undefined
+  ): RedshiftSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AcceptAnyDate)) __obj.updateDynamic("AcceptAnyDate")(AcceptAnyDate.get.asInstanceOf[js.Any])
+    if (AfterConnectScript != null) __obj.updateDynamic("AfterConnectScript")(AfterConnectScript.asInstanceOf[js.Any])
+    if (BucketFolder != null) __obj.updateDynamic("BucketFolder")(BucketFolder.asInstanceOf[js.Any])
+    if (BucketName != null) __obj.updateDynamic("BucketName")(BucketName.asInstanceOf[js.Any])
+    if (!js.isUndefined(ConnectionTimeout)) __obj.updateDynamic("ConnectionTimeout")(ConnectionTimeout.get.asInstanceOf[js.Any])
+    if (DatabaseName != null) __obj.updateDynamic("DatabaseName")(DatabaseName.asInstanceOf[js.Any])
+    if (DateFormat != null) __obj.updateDynamic("DateFormat")(DateFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(EmptyAsNull)) __obj.updateDynamic("EmptyAsNull")(EmptyAsNull.get.asInstanceOf[js.Any])
+    if (EncryptionMode != null) __obj.updateDynamic("EncryptionMode")(EncryptionMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(FileTransferUploadStreams)) __obj.updateDynamic("FileTransferUploadStreams")(FileTransferUploadStreams.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(LoadTimeout)) __obj.updateDynamic("LoadTimeout")(LoadTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxFileSize)) __obj.updateDynamic("MaxFileSize")(MaxFileSize.get.asInstanceOf[js.Any])
+    if (Password != null) __obj.updateDynamic("Password")(Password.asInstanceOf[js.Any])
+    if (!js.isUndefined(Port)) __obj.updateDynamic("Port")(Port.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RemoveQuotes)) __obj.updateDynamic("RemoveQuotes")(RemoveQuotes.get.asInstanceOf[js.Any])
+    if (ReplaceChars != null) __obj.updateDynamic("ReplaceChars")(ReplaceChars.asInstanceOf[js.Any])
+    if (ReplaceInvalidChars != null) __obj.updateDynamic("ReplaceInvalidChars")(ReplaceInvalidChars.asInstanceOf[js.Any])
+    if (ServerName != null) __obj.updateDynamic("ServerName")(ServerName.asInstanceOf[js.Any])
+    if (ServerSideEncryptionKmsKeyId != null) __obj.updateDynamic("ServerSideEncryptionKmsKeyId")(ServerSideEncryptionKmsKeyId.asInstanceOf[js.Any])
+    if (ServiceAccessRoleArn != null) __obj.updateDynamic("ServiceAccessRoleArn")(ServiceAccessRoleArn.asInstanceOf[js.Any])
+    if (TimeFormat != null) __obj.updateDynamic("TimeFormat")(TimeFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(TrimBlanks)) __obj.updateDynamic("TrimBlanks")(TrimBlanks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TruncateColumns)) __obj.updateDynamic("TruncateColumns")(TruncateColumns.get.asInstanceOf[js.Any])
+    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
+    if (!js.isUndefined(WriteBufferSize)) __obj.updateDynamic("WriteBufferSize")(WriteBufferSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RedshiftSettings]
   }
-  @scala.inline
-  implicit class RedshiftSettingsOps[Self <: RedshiftSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptAnyDate(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptAnyDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptAnyDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptAnyDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterConnectScript(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AfterConnectScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterConnectScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AfterConnectScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucketFolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketFolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketFolder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucketName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionTimeout(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabaseName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmptyAsNull(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmptyAsNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmptyAsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmptyAsNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionMode(value: EncryptionModeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileTransferUploadStreams(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileTransferUploadStreams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileTransferUploadStreams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileTransferUploadStreams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadTimeout(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFileSize(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxFileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxFileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: SecretString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveQuotes(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveQuotes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveQuotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveQuotes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceChars(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplaceChars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceChars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplaceChars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceInvalidChars(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplaceInvalidChars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceInvalidChars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplaceInvalidChars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerSideEncryptionKmsKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryptionKmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideEncryptionKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryptionKmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceAccessRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceAccessRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrimBlanks(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrimBlanks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrimBlanks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrimBlanks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruncateColumns(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TruncateColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruncateColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TruncateColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteBufferSize(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteBufferSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteBufferSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteBufferSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
-  var config: js.UndefOr[js.Any] = js.native
-  var error: js.UndefOr[Diagnostic] = js.native
+  var config: js.UndefOr[js.Any] = js.undefined
+  var error: js.UndefOr[Diagnostic] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(config: js.Any = null, error: Diagnostic = null): Config = {
     val __obj = js.Dynamic.literal()
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: Diagnostic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

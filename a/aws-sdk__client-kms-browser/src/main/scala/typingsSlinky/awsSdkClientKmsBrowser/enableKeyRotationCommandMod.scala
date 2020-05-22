@@ -26,9 +26,16 @@ object enableKeyRotationCommandMod extends js.Object {
           Blob
         ] {
     def this(input: EnableKeyRotationInput) = this()
+    /* CompleteClass */
+    override val input: EnableKeyRotationInput = js.native
     val middlewareStack: MiddlewareStack[EnableKeyRotationInput, EnableKeyRotationOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: KMSResolvedConfiguration
+    ): Handler[EnableKeyRotationInput, EnableKeyRotationOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[EnableKeyRotationInput, EnableKeyRotationOutput] = js.native
   }

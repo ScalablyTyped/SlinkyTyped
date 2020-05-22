@@ -1,6 +1,6 @@
 package typingsSlinky.esfxTypeModel
 
-import typingsSlinky.esfxTypeModel.distMod.Falsey
+import typingsSlinky.esfxTypeModel.distMod._Falsey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ object esfxTypeModelStrings {
   sealed trait Mutable extends js.Object
   
   @js.native
-  sealed trait _empty extends Falsey
+  sealed trait _empty extends _Falsey
   
   @scala.inline
   def Conjoin: Conjoin = "Conjoin".asInstanceOf[Conjoin]

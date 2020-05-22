@@ -35,89 +35,22 @@ trait UserLoginProfileState extends js.Object {
 
 object UserLoginProfileState {
   @scala.inline
-  def apply(): UserLoginProfileState = {
+  def apply(
+    encryptedPassword: Input[String] = null,
+    keyFingerprint: Input[String] = null,
+    passwordLength: Input[Double] = null,
+    passwordResetRequired: Input[Boolean] = null,
+    pgpKey: Input[String] = null,
+    user: Input[String] = null
+  ): UserLoginProfileState = {
     val __obj = js.Dynamic.literal()
+    if (encryptedPassword != null) __obj.updateDynamic("encryptedPassword")(encryptedPassword.asInstanceOf[js.Any])
+    if (keyFingerprint != null) __obj.updateDynamic("keyFingerprint")(keyFingerprint.asInstanceOf[js.Any])
+    if (passwordLength != null) __obj.updateDynamic("passwordLength")(passwordLength.asInstanceOf[js.Any])
+    if (passwordResetRequired != null) __obj.updateDynamic("passwordResetRequired")(passwordResetRequired.asInstanceOf[js.Any])
+    if (pgpKey != null) __obj.updateDynamic("pgpKey")(pgpKey.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserLoginProfileState]
   }
-  @scala.inline
-  implicit class UserLoginProfileStateOps[Self <: UserLoginProfileState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptedPassword(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedPassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptedPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedPassword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyFingerprint(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyFingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyFingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordLength(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordResetRequired(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordResetRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordResetRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordResetRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPgpKey(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pgpKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPgpKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pgpKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

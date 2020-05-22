@@ -4,12 +4,10 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.antdStrings.error
-import typingsSlinky.antd.antdStrings.processing
-import typingsSlinky.antd.antdStrings.success
-import typingsSlinky.antd.antdStrings.warning
 import typingsSlinky.antd.badgeMod.BadgeProps
-import typingsSlinky.antd.badgeMod.default
+import typingsSlinky.antd.colorsMod.PresetColorType
+import typingsSlinky.antd.colorsMod.PresetStatusColorType
+import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,11 +21,11 @@ object Badge {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: LiteralUnion[PresetColorType, String]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def countReactElement(value: ReactElement): this.type = set("count", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,7 +43,7 @@ object Badge {
     @scala.inline
     def showZero(value: Boolean): this.type = set("showZero", value.asInstanceOf[js.Any])
     @scala.inline
-    def status(value: success | processing | typingsSlinky.antd.antdStrings.default | error | warning): this.type = set("status", value.asInstanceOf[js.Any])
+    def status(value: PresetStatusColorType): this.type = set("status", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

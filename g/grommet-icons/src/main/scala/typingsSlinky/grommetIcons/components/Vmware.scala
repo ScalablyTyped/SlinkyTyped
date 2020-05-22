@@ -12,7 +12,7 @@ object Vmware {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Vmware] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Vmware](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Vmware.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Vmware] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Vmware](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Vmware] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Vmware](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Vmware.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Vmware] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Vmware](js.Array(this.component, js.Dictionary.empty))()
 }
 

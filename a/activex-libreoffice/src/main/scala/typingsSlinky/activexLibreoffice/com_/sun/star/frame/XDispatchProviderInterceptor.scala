@@ -14,45 +14,44 @@ import scala.scalajs.js.annotation._
   * Can be registered as an interceptor by using interface {@link XDispatchProviderInterception} .
   * @see XDispatchProviderInterception
   */
-@js.native
 trait XDispatchProviderInterceptor extends XDispatchProvider {
   /**
     * access to the master {@link XDispatchProvider} of this interceptor
     * @returns the master of this interceptor
     * @see XDispatchProviderInterceptor.setMasterDispatchProvider()
     */
-  var MasterDispatchProvider: XDispatchProvider = js.native
+  var MasterDispatchProvider: XDispatchProvider
   /**
     * access to the slave {@link XDispatchProvider} of this interceptor
     * @returns the slave of this interceptor
     * @see XDispatchProviderInterceptor.setSlaveDispatchProvider()
     */
-  var SlaveDispatchProvider: XDispatchProvider = js.native
+  var SlaveDispatchProvider: XDispatchProvider
   /**
     * access to the master {@link XDispatchProvider} of this interceptor
     * @returns the master of this interceptor
     * @see XDispatchProviderInterceptor.setMasterDispatchProvider()
     */
-  def getMasterDispatchProvider(): XDispatchProvider = js.native
+  def getMasterDispatchProvider(): XDispatchProvider
   /**
     * access to the slave {@link XDispatchProvider} of this interceptor
     * @returns the slave of this interceptor
     * @see XDispatchProviderInterceptor.setSlaveDispatchProvider()
     */
-  def getSlaveDispatchProvider(): XDispatchProvider = js.native
+  def getSlaveDispatchProvider(): XDispatchProvider
   /**
     * sets the master {@link XDispatchProvider} , which may forward calls to its {@link XDispatchProvider.queryDispatch()} to this dispatch provider.
     * @param NewSupplier the master of this interceptor
     * @see XDispatchProviderInterceptor.getMasterDispatchProvider()
     */
-  def setMasterDispatchProvider(NewSupplier: XDispatchProvider): Unit = js.native
+  def setMasterDispatchProvider(NewSupplier: XDispatchProvider): Unit
   /**
     * sets the slave {@link XDispatchProvider} to which calls to {@link XDispatchProvider.queryDispatch()} can be forwarded under control of this dispatch
     * provider.
     * @param NewDispatchProvider the new slave of this interceptor
     * @see XDispatchProviderInterceptor.getSlaveDispatchProvider()
     */
-  def setSlaveDispatchProvider(NewDispatchProvider: XDispatchProvider): Unit = js.native
+  def setSlaveDispatchProvider(NewDispatchProvider: XDispatchProvider): Unit
 }
 
 object XDispatchProviderInterceptor {
@@ -73,49 +72,5 @@ object XDispatchProviderInterceptor {
     val __obj = js.Dynamic.literal(MasterDispatchProvider = MasterDispatchProvider.asInstanceOf[js.Any], SlaveDispatchProvider = SlaveDispatchProvider.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getMasterDispatchProvider = js.Any.fromFunction0(getMasterDispatchProvider), getSlaveDispatchProvider = js.Any.fromFunction0(getSlaveDispatchProvider), queryDispatch = js.Any.fromFunction3(queryDispatch), queryDispatches = js.Any.fromFunction1(queryDispatches), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setMasterDispatchProvider = js.Any.fromFunction1(setMasterDispatchProvider), setSlaveDispatchProvider = js.Any.fromFunction1(setSlaveDispatchProvider))
     __obj.asInstanceOf[XDispatchProviderInterceptor]
   }
-  @scala.inline
-  implicit class XDispatchProviderInterceptorOps[Self <: XDispatchProviderInterceptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMasterDispatchProvider(value: XDispatchProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterDispatchProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSlaveDispatchProvider(value: XDispatchProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SlaveDispatchProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetMasterDispatchProvider(value: () => XDispatchProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMasterDispatchProvider")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSlaveDispatchProvider(value: () => XDispatchProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSlaveDispatchProvider")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetMasterDispatchProvider(value: XDispatchProvider => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMasterDispatchProvider")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSlaveDispatchProvider(value: XDispatchProvider => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSlaveDispatchProvider")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

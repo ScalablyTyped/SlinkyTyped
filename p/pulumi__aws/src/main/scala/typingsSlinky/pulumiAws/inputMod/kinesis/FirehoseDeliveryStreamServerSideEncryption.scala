@@ -8,36 +8,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FirehoseDeliveryStreamServerSideEncryption extends js.Object {
   /**
-    * Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+    * Whether to enable encryption at rest. Default is `false`.
     */
   var enabled: js.UndefOr[Input[Boolean]] = js.native
 }
 
 object FirehoseDeliveryStreamServerSideEncryption {
   @scala.inline
-  def apply(): FirehoseDeliveryStreamServerSideEncryption = {
+  def apply(enabled: Input[Boolean] = null): FirehoseDeliveryStreamServerSideEncryption = {
     val __obj = js.Dynamic.literal()
+    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirehoseDeliveryStreamServerSideEncryption]
   }
-  @scala.inline
-  implicit class FirehoseDeliveryStreamServerSideEncryptionOps[Self <: FirehoseDeliveryStreamServerSideEncryption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

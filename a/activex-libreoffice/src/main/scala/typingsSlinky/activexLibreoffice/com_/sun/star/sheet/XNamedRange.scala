@@ -11,49 +11,48 @@ import scala.scalajs.js.annotation._
   * provides access to the settings of a named range in a spreadsheet document.
   * @see com.sun.star.sheet.NamedRange
   */
-@js.native
 trait XNamedRange extends XNamed {
   /**
     * returns the content of the named range.
     *
     * The content can be a reference to a cell or cell range or any formula expression.
     */
-  var Content: String = js.native
+  var Content: String
   /** returns the position in the document which is used as a base for relative references in the content. */
-  var ReferencePosition: CellAddress = js.native
+  var ReferencePosition: CellAddress
   /**
     * returns the type of the named range.
     *
     * This is a combination of flags as defined in {@link NamedRangeFlag} .
     */
-  var Type: Double = js.native
+  var Type: Double
   /**
     * returns the content of the named range.
     *
     * The content can be a reference to a cell or cell range or any formula expression.
     */
-  def getContent(): String = js.native
+  def getContent(): String
   /** returns the position in the document which is used as a base for relative references in the content. */
-  def getReferencePosition(): CellAddress = js.native
+  def getReferencePosition(): CellAddress
   /**
     * returns the type of the named range.
     *
     * This is a combination of flags as defined in {@link NamedRangeFlag} .
     */
-  def getType(): Double = js.native
+  def getType(): Double
   /**
     * sets the content of the named range.
     *
     * The content can be a reference to a cell or cell range or any formula expression.
     */
-  def setContent(aContent: String): Unit = js.native
+  def setContent(aContent: String): Unit
   /** sets the position in the document which is used as a base for relative references in the content. */
-  def setReferencePosition(aReferencePosition: CellAddress): Unit = js.native
+  def setReferencePosition(aReferencePosition: CellAddress): Unit
   /**
     * sets the type of the named range.
     * @param nType a combination of flags that specify the type of a named range, as defined in {@link NamedRangeFlag} .
     */
-  def setType(nType: Double): Unit = js.native
+  def setType(nType: Double): Unit
 }
 
 object XNamedRange {
@@ -78,67 +77,5 @@ object XNamedRange {
     val __obj = js.Dynamic.literal(Content = Content.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], ReferencePosition = ReferencePosition.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getContent = js.Any.fromFunction0(getContent), getName = js.Any.fromFunction0(getName), getReferencePosition = js.Any.fromFunction0(getReferencePosition), getType = js.Any.fromFunction0(getType), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setContent = js.Any.fromFunction1(setContent), setName = js.Any.fromFunction1(setName), setReferencePosition = js.Any.fromFunction1(setReferencePosition), setType = js.Any.fromFunction1(setType))
     __obj.asInstanceOf[XNamedRange]
   }
-  @scala.inline
-  implicit class XNamedRangeOps[Self <: XNamedRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferencePosition(value: CellAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferencePosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetContent(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetReferencePosition(value: () => CellAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getReferencePosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetType(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetContent(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetReferencePosition(value: CellAddress => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setReferencePosition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetType(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setType")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

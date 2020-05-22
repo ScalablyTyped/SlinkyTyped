@@ -26,9 +26,16 @@ object putTelemetryRecordsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutTelemetryRecordsInput) = this()
+    /* CompleteClass */
+    override val input: PutTelemetryRecordsInput = js.native
     val middlewareStack: MiddlewareStack[PutTelemetryRecordsInput, PutTelemetryRecordsOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: XRayResolvedConfiguration
+    ): Handler[PutTelemetryRecordsInput, PutTelemetryRecordsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[PutTelemetryRecordsInput, PutTelemetryRecordsOutput] = js.native
   }

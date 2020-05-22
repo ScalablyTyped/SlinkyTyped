@@ -34,41 +34,11 @@ trait SchemaLiveBroadcastStatistics extends js.Object {
 
 object SchemaLiveBroadcastStatistics {
   @scala.inline
-  def apply(): SchemaLiveBroadcastStatistics = {
+  def apply(concurrentViewers: String = null, totalChatCount: String = null): SchemaLiveBroadcastStatistics = {
     val __obj = js.Dynamic.literal()
+    if (concurrentViewers != null) __obj.updateDynamic("concurrentViewers")(concurrentViewers.asInstanceOf[js.Any])
+    if (totalChatCount != null) __obj.updateDynamic("totalChatCount")(totalChatCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiveBroadcastStatistics]
   }
-  @scala.inline
-  implicit class SchemaLiveBroadcastStatisticsOps[Self <: SchemaLiveBroadcastStatistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConcurrentViewers(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrentViewers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConcurrentViewers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrentViewers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalChatCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalChatCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalChatCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalChatCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

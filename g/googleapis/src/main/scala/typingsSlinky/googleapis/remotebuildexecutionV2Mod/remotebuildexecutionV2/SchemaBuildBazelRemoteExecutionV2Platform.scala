@@ -23,29 +23,10 @@ trait SchemaBuildBazelRemoteExecutionV2Platform extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2Platform {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2Platform = {
+  def apply(properties: js.Array[SchemaBuildBazelRemoteExecutionV2PlatformProperty] = null): SchemaBuildBazelRemoteExecutionV2Platform = {
     val __obj = js.Dynamic.literal()
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2Platform]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2PlatformOps[Self <: SchemaBuildBazelRemoteExecutionV2Platform] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProperties(value: js.Array[SchemaBuildBazelRemoteExecutionV2PlatformProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

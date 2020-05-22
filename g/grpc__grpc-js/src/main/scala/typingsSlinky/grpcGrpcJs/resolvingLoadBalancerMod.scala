@@ -3,6 +3,7 @@ package typingsSlinky.grpcGrpcJs
 import typingsSlinky.grpcGrpcJs.loadBalancerMod.ChannelControlHelper
 import typingsSlinky.grpcGrpcJs.loadBalancerMod.LoadBalancer
 import typingsSlinky.grpcGrpcJs.serviceConfigMod.ServiceConfig
+import typingsSlinky.grpcGrpcJs.uriParserMod.GrpcUri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation._
 object resolvingLoadBalancerMod extends js.Object {
   @js.native
   class ResolvingLoadBalancer protected () extends LoadBalancer {
-    def this(target: String, channelControlHelper: ChannelControlHelper) = this()
+    def this(target: GrpcUri, channelControlHelper: ChannelControlHelper) = this()
     /**
       * Wrapper class that behaves like a `LoadBalancer` and also handles name
       * resolution internally.
@@ -25,7 +26,7 @@ object resolvingLoadBalancerMod extends js.Object {
       *     In practice, that means using the "pick first" load balancer
       *     implmentation
       */
-    def this(target: String, channelControlHelper: ChannelControlHelper, defaultServiceConfig: ServiceConfig) = this()
+    def this(target: GrpcUri, channelControlHelper: ChannelControlHelper, defaultServiceConfig: ServiceConfig) = this()
     /**
       * The backoff timer for handling name resolution failures.
       */

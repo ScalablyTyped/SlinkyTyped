@@ -1,9 +1,12 @@
 package typingsSlinky.winrt.global.Windows.Security
 
+import typingsSlinky.winrt.Windows.Foundation.AsyncStatus
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.Collections.ValueSet
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Foundation.Uri
 import typingsSlinky.winrt.Windows.Security.Authentication.Web.WebAuthenticationOptions
+import typingsSlinky.winrt.Windows.Security.Authentication.Web.WebAuthenticationStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,26 +22,78 @@ object Authentication extends js.Object {
     
     @js.native
     class OnlineIdServiceTicket ()
-      extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket
+      extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket {
+      /* CompleteClass */
+      override var errorCode: Double = js.native
+      /* CompleteClass */
+      override var request: typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest = js.native
+      /* CompleteClass */
+      override var value: String = js.native
+    }
     
     @js.native
     class OnlineIdServiceTicketRequest protected ()
       extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest {
       def this(service: String) = this()
       def this(service: String, policy: String) = this()
+      /* CompleteClass */
+      override var policy: String = js.native
+      /* CompleteClass */
+      override var service: String = js.native
     }
     
     @js.native
     class SignOutUserOperation ()
-      extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.SignOutUserOperation
+      extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.SignOutUserOperation {
+      /* CompleteClass */
+      override var errorCode: Double = js.native
+      /* CompleteClass */
+      override var id: Double = js.native
+      /* CompleteClass */
+      override var status: AsyncStatus = js.native
+      /* CompleteClass */
+      override def cancel(): Unit = js.native
+      /* CompleteClass */
+      override def close(): Unit = js.native
+    }
     
     @js.native
     class UserAuthenticationOperation ()
-      extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.UserAuthenticationOperation
+      extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.UserAuthenticationOperation {
+      /* CompleteClass */
+      override var errorCode: Double = js.native
+      /* CompleteClass */
+      override var id: Double = js.native
+      /* CompleteClass */
+      override var status: AsyncStatus = js.native
+      /* CompleteClass */
+      override def cancel(): Unit = js.native
+      /* CompleteClass */
+      override def close(): Unit = js.native
+    }
     
     @js.native
     class UserIdentity ()
-      extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.UserIdentity
+      extends typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.UserIdentity {
+      /* CompleteClass */
+      override var firstName: String = js.native
+      /* CompleteClass */
+      override var id: String = js.native
+      /* CompleteClass */
+      override var isBetaAccount: Boolean = js.native
+      /* CompleteClass */
+      override var isConfirmedPC: Boolean = js.native
+      /* CompleteClass */
+      override var lastName: String = js.native
+      /* CompleteClass */
+      override var safeCustomerId: String = js.native
+      /* CompleteClass */
+      override var signInName: String = js.native
+      /* CompleteClass */
+      override var tickets: IVectorView[
+            typingsSlinky.winrt.Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket
+          ] = js.native
+    }
     
     @js.native
     object CredentialPromptType extends js.Object {
@@ -61,7 +116,14 @@ object Authentication extends js.Object {
     
     @js.native
     class WebAuthenticationResult ()
-      extends typingsSlinky.winrt.Windows.Security.Authentication.Web.WebAuthenticationResult
+      extends typingsSlinky.winrt.Windows.Security.Authentication.Web.WebAuthenticationResult {
+      /* CompleteClass */
+      override var responseData: String = js.native
+      /* CompleteClass */
+      override var responseErrorDetail: Double = js.native
+      /* CompleteClass */
+      override var responseStatus: WebAuthenticationStatus = js.native
+    }
     
     /* static members */
     @js.native

@@ -10,33 +10,19 @@ trait CreateLaunchTemplateVersionResult extends js.Object {
     * Information about the launch template version.
     */
   var LaunchTemplateVersion: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.LaunchTemplateVersion] = js.native
+  /**
+    * If the new version of the launch template contains parameters or parameter combinations that are not valid, an error code and an error message are returned for each issue that's found.
+    */
+  var Warning: js.UndefOr[ValidationWarning] = js.native
 }
 
 object CreateLaunchTemplateVersionResult {
   @scala.inline
-  def apply(): CreateLaunchTemplateVersionResult = {
+  def apply(LaunchTemplateVersion: LaunchTemplateVersion = null, Warning: ValidationWarning = null): CreateLaunchTemplateVersionResult = {
     val __obj = js.Dynamic.literal()
+    if (LaunchTemplateVersion != null) __obj.updateDynamic("LaunchTemplateVersion")(LaunchTemplateVersion.asInstanceOf[js.Any])
+    if (Warning != null) __obj.updateDynamic("Warning")(Warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLaunchTemplateVersionResult]
   }
-  @scala.inline
-  implicit class CreateLaunchTemplateVersionResultOps[Self <: CreateLaunchTemplateVersionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLaunchTemplateVersion(value: LaunchTemplateVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchTemplateVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

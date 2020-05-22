@@ -5,13 +5,14 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderCheckboxProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderStyleProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderStyles
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroup
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -44,6 +45,8 @@ object GroupHeader {
     @scala.inline
     def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     @scala.inline
+    def expandButtonIcon(value: String): this.type = set("expandButtonIcon", value.asInstanceOf[js.Any])
+    @scala.inline
     def expandButtonProps(value: HTMLAttributes[HTMLButtonElement]): this.type = set("expandButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
     def footerText(value: String): this.type = set("footerText", value.asInstanceOf[js.Any])
@@ -70,6 +73,12 @@ object GroupHeader {
     @scala.inline
     def onGroupHeaderClick(value: /* group */ IGroup => Unit): this.type = set("onGroupHeaderClick", js.Any.fromFunction1(value))
     @scala.inline
+    def onRenderGroupHeaderCheckbox(
+      value: (/* props */ js.UndefOr[IGroupHeaderCheckboxProps], /* defaultRender */ js.UndefOr[
+          js.Function1[/* props */ js.UndefOr[IGroupHeaderCheckboxProps], ReactElement | Null]
+        ]) => ReactElement | Null
+    ): this.type = set("onRenderGroupHeaderCheckbox", js.Any.fromFunction2(value))
+    @scala.inline
     def onRenderTitle(
       value: (/* props */ js.UndefOr[IGroupHeaderProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IGroupHeaderProps], ReactElement | Null]]) => ReactElement | Null
     ): this.type = set("onRenderTitle", js.Any.fromFunction2(value))
@@ -88,11 +97,13 @@ object GroupHeader {
     @scala.inline
     def showAllLinkText(value: String): this.type = set("showAllLinkText", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IGroupHeaderStyleProps => Partial[IGroupHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IGroupHeaderStyleProps => DeepPartial[IGroupHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IGroupHeaderStyleProps, IGroupHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useFastIcons(value: Boolean): this.type = set("useFastIcons", value.asInstanceOf[js.Any])
     @scala.inline
     def viewport(value: IViewport): this.type = set("viewport", value.asInstanceOf[js.Any])
   }

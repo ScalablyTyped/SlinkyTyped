@@ -30,65 +30,18 @@ trait UpdateIdentityProviderRequest extends js.Object {
 
 object UpdateIdentityProviderRequest {
   @scala.inline
-  def apply(ProviderName: ProviderNameType, UserPoolId: UserPoolIdType): UpdateIdentityProviderRequest = {
+  def apply(
+    ProviderName: ProviderNameType,
+    UserPoolId: UserPoolIdType,
+    AttributeMapping: AttributeMappingType = null,
+    IdpIdentifiers: IdpIdentifiersListType = null,
+    ProviderDetails: ProviderDetailsType = null
+  ): UpdateIdentityProviderRequest = {
     val __obj = js.Dynamic.literal(ProviderName = ProviderName.asInstanceOf[js.Any], UserPoolId = UserPoolId.asInstanceOf[js.Any])
+    if (AttributeMapping != null) __obj.updateDynamic("AttributeMapping")(AttributeMapping.asInstanceOf[js.Any])
+    if (IdpIdentifiers != null) __obj.updateDynamic("IdpIdentifiers")(IdpIdentifiers.asInstanceOf[js.Any])
+    if (ProviderDetails != null) __obj.updateDynamic("ProviderDetails")(ProviderDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateIdentityProviderRequest]
   }
-  @scala.inline
-  implicit class UpdateIdentityProviderRequestOps[Self <: UpdateIdentityProviderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProviderName(value: ProviderNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserPoolId(value: UserPoolIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeMapping(value: AttributeMappingType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdpIdentifiers(value: IdpIdentifiersListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdpIdentifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdpIdentifiers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdpIdentifiers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProviderDetails(value: ProviderDetailsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProviderDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

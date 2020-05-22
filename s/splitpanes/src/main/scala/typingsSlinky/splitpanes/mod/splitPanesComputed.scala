@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait splitPanesComputed extends js.Object {
-  def defaultWidth(): Double = js.native
+  def defaultWidth(): Double
 }
 
 object splitPanesComputed {
@@ -15,19 +14,5 @@ object splitPanesComputed {
     val __obj = js.Dynamic.literal(defaultWidth = js.Any.fromFunction0(defaultWidth))
     __obj.asInstanceOf[splitPanesComputed]
   }
-  @scala.inline
-  implicit class splitPanesComputedOps[Self <: splitPanesComputed] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultWidth")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

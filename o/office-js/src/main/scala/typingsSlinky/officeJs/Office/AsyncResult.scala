@@ -11,14 +11,13 @@ import scala.scalajs.js.annotation._
   * When the function you pass to the `callback` parameter of an "Async" method executes, it receives an AsyncResult object that you can access 
   * from the `callback` function's only parameter.
   */
-@js.native
 trait AsyncResult[T] extends js.Object {
   /**
     * Gets the user-defined item passed to the optional `asyncContext` parameter of the invoked method in the same state as it was passed in. 
     * This returns the user-defined item (which can be of any JavaScript type: String, Number, Boolean, Object, Array, Null, or Undefined) passed 
     * to the optional `asyncContext` parameter of the invoked method. Returns Undefined, if you didn't pass anything to the asyncContext parameter.
     */
-  var asyncContext: js.Any = js.native
+  var asyncContext: js.Any
   /**
     * Gets an object that may provide additional information if an {@link Office.Error | error} occurred.
     *
@@ -37,15 +36,15 @@ trait AsyncResult[T] extends js.Object {
     *   <tr><td><strong>InternalServerError</strong></td><td>The Exchange server returned an error. Please look at the diagnostics object for more information.</td><td>The error message from the Exchange server in a JSON object e.g., `{"ErrorText": "The mailbox database is temporarily unavailable"}`</td></tr>
     * </table>
     */
-  var diagnostics: js.Any = js.native
+  var diagnostics: js.Any
   /**
     * Gets an {@link Office.Error} object that provides a description of the error, if any error occurred.
     */
-  var error: Error = js.native
+  var error: Error
   /**
     * Gets the {@link Office.AsyncResultStatus} of the asynchronous operation.
     */
-  var status: AsyncResultStatus = js.native
+  var status: AsyncResultStatus
   /**
     * Gets the payload or content of this asynchronous operation, if any.
     * 
@@ -57,7 +56,7 @@ trait AsyncResult[T] extends js.Object {
     * **Note**: What the value property returns for a particular "Async" method varies depending on the purpose and context of that method. 
     * To determine what is returned by the value property for an "Async" method, refer to the "Callback value" section of the method's topic.
     */
-  var value: T = js.native
+  var value: T
 }
 
 object AsyncResult {
@@ -66,43 +65,5 @@ object AsyncResult {
     val __obj = js.Dynamic.literal(asyncContext = asyncContext.asInstanceOf[js.Any], diagnostics = diagnostics.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[AsyncResult[T]]
   }
-  @scala.inline
-  implicit class AsyncResultOps[Self[t] <: AsyncResult[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAsyncContext(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiagnostics(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnostics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: Error): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: AsyncResultStatus): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

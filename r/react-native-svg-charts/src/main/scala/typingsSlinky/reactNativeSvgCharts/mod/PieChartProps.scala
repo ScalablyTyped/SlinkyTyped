@@ -1,104 +1,85 @@
 package typingsSlinky.reactNativeSvgCharts.mod
 
+import org.scalajs.dom.raw.CanvasRenderingContext2D
+import typingsSlinky.d3Path.mod.Path_
+import typingsSlinky.d3Scale.mod.ScaleBand_
+import typingsSlinky.d3Shape.mod.CurveGenerator
+import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNativeSvgCharts.anon.Bottom
+import typingsSlinky.reactNativeSvgCharts.anon.PartialPathProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PieChartProps[T /* <: PieChartData */] extends ChartProps[T] {
-  var innerRadius: js.UndefOr[Double | String] = js.native
-  var labelRadius: js.UndefOr[Double | String] = js.native
-  var outerRadius: js.UndefOr[Double | String] = js.native
-  var padAngle: js.UndefOr[Double] = js.native
-  var sort: js.UndefOr[SortFunction[T]] = js.native
-  var valueAccessor: js.UndefOr[AccessorFunction[T, Double]] = js.native
+  var innerRadius: js.UndefOr[Double | String] = js.undefined
+  var labelRadius: js.UndefOr[Double | String] = js.undefined
+  var outerRadius: js.UndefOr[Double | String] = js.undefined
+  var padAngle: js.UndefOr[Double] = js.undefined
+  var sort: js.UndefOr[SortFunction[T]] = js.undefined
+  var valueAccessor: js.UndefOr[AccessorFunction[T, Double]] = js.undefined
 }
 
 object PieChartProps {
   @scala.inline
-  def apply[T](data: js.Array[T]): PieChartProps[T] = {
+  def apply[T](
+    data: js.Array[T],
+    animate: js.UndefOr[Boolean] = js.undefined,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    contentInset: Bottom = null,
+    curve: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator = null,
+    gridMax: js.UndefOr[Double] = js.undefined,
+    gridMin: js.UndefOr[Double] = js.undefined,
+    gridProps: GridProps[_] = null,
+    height: js.UndefOr[Double] = js.undefined,
+    innerRadius: Double | String = null,
+    labelRadius: Double | String = null,
+    numberOfTicks: js.UndefOr[Double] = js.undefined,
+    outerRadius: Double | String = null,
+    padAngle: js.UndefOr[Double] = js.undefined,
+    sort: (T, T) => Double = null,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    svg: PartialPathProps = null,
+    valueAccessor: /* props */ AccessorFunctionProps[T] => Double = null,
+    width: js.UndefOr[Double] = js.undefined,
+    xAccessor: /* props */ AccessorFunctionProps[T] => Double = null,
+    xMax: js.UndefOr[Double] = js.undefined,
+    xMin: js.UndefOr[Double] = js.undefined,
+    xScale: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any] = null,
+    yAccessor: /* props */ AccessorFunctionProps[T] => Double = null,
+    yMax: js.UndefOr[Double] = js.undefined,
+    yMin: js.UndefOr[Double] = js.undefined,
+    yScale: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any] = null
+  ): PieChartProps[T] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (contentInset != null) __obj.updateDynamic("contentInset")(contentInset.asInstanceOf[js.Any])
+    if (curve != null) __obj.updateDynamic("curve")(js.Any.fromFunction1(curve))
+    if (!js.isUndefined(gridMax)) __obj.updateDynamic("gridMax")(gridMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gridMin)) __obj.updateDynamic("gridMin")(gridMin.get.asInstanceOf[js.Any])
+    if (gridProps != null) __obj.updateDynamic("gridProps")(gridProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
+    if (labelRadius != null) __obj.updateDynamic("labelRadius")(labelRadius.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfTicks)) __obj.updateDynamic("numberOfTicks")(numberOfTicks.get.asInstanceOf[js.Any])
+    if (outerRadius != null) __obj.updateDynamic("outerRadius")(outerRadius.asInstanceOf[js.Any])
+    if (!js.isUndefined(padAngle)) __obj.updateDynamic("padAngle")(padAngle.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(js.Any.fromFunction2(sort))
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (svg != null) __obj.updateDynamic("svg")(svg.asInstanceOf[js.Any])
+    if (valueAccessor != null) __obj.updateDynamic("valueAccessor")(js.Any.fromFunction1(valueAccessor))
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (xAccessor != null) __obj.updateDynamic("xAccessor")(js.Any.fromFunction1(xAccessor))
+    if (!js.isUndefined(xMax)) __obj.updateDynamic("xMax")(xMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xMin)) __obj.updateDynamic("xMin")(xMin.get.asInstanceOf[js.Any])
+    if (xScale != null) __obj.updateDynamic("xScale")(js.Any.fromFunction0(xScale))
+    if (yAccessor != null) __obj.updateDynamic("yAccessor")(js.Any.fromFunction1(yAccessor))
+    if (!js.isUndefined(yMax)) __obj.updateDynamic("yMax")(yMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yMin)) __obj.updateDynamic("yMin")(yMin.get.asInstanceOf[js.Any])
+    if (yScale != null) __obj.updateDynamic("yScale")(js.Any.fromFunction0(yScale))
     __obj.asInstanceOf[PieChartProps[T]]
   }
-  @scala.inline
-  implicit class PieChartPropsOps[Self[t] <: PieChartProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withInnerRadius(value: Double | String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerRadius: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelRadius(value: Double | String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelRadius: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuterRadius(value: Double | String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuterRadius: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadAngle(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadAngle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: (T, T) => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueAccessor(value: /* props */ AccessorFunctionProps[T] => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAccessor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutValueAccessor: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAccessor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

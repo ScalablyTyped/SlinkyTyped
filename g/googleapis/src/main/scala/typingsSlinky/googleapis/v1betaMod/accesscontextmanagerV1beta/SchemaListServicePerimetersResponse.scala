@@ -22,41 +22,11 @@ trait SchemaListServicePerimetersResponse extends js.Object {
 
 object SchemaListServicePerimetersResponse {
   @scala.inline
-  def apply(): SchemaListServicePerimetersResponse = {
+  def apply(nextPageToken: String = null, servicePerimeters: js.Array[SchemaServicePerimeter] = null): SchemaListServicePerimetersResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (servicePerimeters != null) __obj.updateDynamic("servicePerimeters")(servicePerimeters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListServicePerimetersResponse]
   }
-  @scala.inline
-  implicit class SchemaListServicePerimetersResponseOps[Self <: SchemaListServicePerimetersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServicePerimeters(value: js.Array[SchemaServicePerimeter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePerimeters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServicePerimeters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePerimeters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

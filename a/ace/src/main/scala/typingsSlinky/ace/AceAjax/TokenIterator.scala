@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TokenIterator extends js.Object {
   /**
     * Returns the current tokenized string.
     **/
-  def getCurrentToken(): TokenInfo = js.native
+  def getCurrentToken(): TokenInfo
   /**
     * Returns the current column.
     **/
-  def getCurrentTokenColumn(): Double = js.native
+  def getCurrentTokenColumn(): Double
   /**
     * Returns the current row.
     **/
-  def getCurrentTokenRow(): Double = js.native
+  def getCurrentTokenRow(): Double
   /**
     * Tokenizes all the items from the current point to the row prior in the document.
     **/
-  def stepBackward(): js.Array[String] = js.native
+  def stepBackward(): js.Array[String]
   /**
     * Tokenizes all the items from the current point until the next row in the document. If the current point is at the end of the file, this function returns `null`. Otherwise, it returns the tokenized string.
     **/
-  def stepForward(): String = js.native
+  def stepForward(): String
 }
 
 object TokenIterator {
@@ -40,43 +39,5 @@ object TokenIterator {
     val __obj = js.Dynamic.literal(getCurrentToken = js.Any.fromFunction0(getCurrentToken), getCurrentTokenColumn = js.Any.fromFunction0(getCurrentTokenColumn), getCurrentTokenRow = js.Any.fromFunction0(getCurrentTokenRow), stepBackward = js.Any.fromFunction0(stepBackward), stepForward = js.Any.fromFunction0(stepForward))
     __obj.asInstanceOf[TokenIterator]
   }
-  @scala.inline
-  implicit class TokenIteratorOps[Self <: TokenIterator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCurrentToken(value: () => TokenInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentToken")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCurrentTokenColumn(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentTokenColumn")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCurrentTokenRow(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentTokenRow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStepBackward(value: () => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepBackward")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStepForward(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepForward")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

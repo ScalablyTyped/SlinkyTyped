@@ -13,32 +13,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<ali-app.my.PageOptions & ali-app.my.Page> */
-@js.native
 trait PartialPageOptionsPage extends js.Object {
   var createIntersectionObserver: js.UndefOr[
     js.Function1[/* options */ js.UndefOr[CreateIntersectionObserverOption], IntersectionObserver]
-  ] = js.native
-  var createSelectorQuery: js.UndefOr[js.Function0[SelectorQuery]] = js.native
-  var data: js.UndefOr[js.Any] = js.native
-  var dataset: js.UndefOr[String] = js.native
-  var forceUpdate: js.UndefOr[js.Function0[Unit]] = js.native
-  var getRelationNodes: js.UndefOr[js.Function1[/* relationKey */ String, js.Array[ComponentRelation]]] = js.native
-  var hasBehavior: js.UndefOr[js.Function1[/* behavior */ js.Any, Boolean]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var is: js.UndefOr[String] = js.native
-  var onError: js.UndefOr[js.ThisFunction0[/* this */ Page, Unit]] = js.native
-  var onHide: js.UndefOr[js.ThisFunction0[/* this */ Page, Unit]] = js.native
-  var onLaunch: js.UndefOr[js.ThisFunction1[/* this */ Page, /* options */ Options, Unit]] = js.native
-  var onPullDownRefresh: js.UndefOr[js.ThisFunction0[/* this */ Page, Unit]] = js.native
-  var onShow: js.UndefOr[js.ThisFunction1[/* this */ Page, /* options */ Options, Unit]] = js.native
-  var pageScrollTo: js.UndefOr[js.Function1[/* option */ js.UndefOr[PageScrollToOptions], Unit]] = js.native
-  var properties: js.UndefOr[js.Any] = js.native
-  var route: js.UndefOr[js.Function0[Unit]] = js.native
-  var selectAllComponents: js.UndefOr[js.Function1[/* selector */ String, js.Array[Component]]] = js.native
-  var selectComponent: js.UndefOr[js.Function1[/* selector */ String, Component]] = js.native
+  ] = js.undefined
+  var createSelectorQuery: js.UndefOr[js.Function0[SelectorQuery]] = js.undefined
+  var data: js.UndefOr[js.Any] = js.undefined
+  var dataset: js.UndefOr[String] = js.undefined
+  var forceUpdate: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var getRelationNodes: js.UndefOr[js.Function1[/* relationKey */ String, js.Array[ComponentRelation]]] = js.undefined
+  var hasBehavior: js.UndefOr[js.Function1[/* behavior */ js.Any, Boolean]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var is: js.UndefOr[String] = js.undefined
+  var onError: js.UndefOr[js.ThisFunction0[/* this */ Page, Unit]] = js.undefined
+  var onHide: js.UndefOr[js.ThisFunction0[/* this */ Page, Unit]] = js.undefined
+  var onLaunch: js.UndefOr[js.ThisFunction1[/* this */ Page, /* options */ Options, Unit]] = js.undefined
+  var onPullDownRefresh: js.UndefOr[js.ThisFunction0[/* this */ Page, Unit]] = js.undefined
+  var onShow: js.UndefOr[js.ThisFunction1[/* this */ Page, /* options */ Options, Unit]] = js.undefined
+  var pageScrollTo: js.UndefOr[js.Function1[/* option */ js.UndefOr[PageScrollToOptions], Unit]] = js.undefined
+  var properties: js.UndefOr[js.Any] = js.undefined
+  var route: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var selectAllComponents: js.UndefOr[js.Function1[/* selector */ String, js.Array[Component]]] = js.undefined
+  var selectComponent: js.UndefOr[js.Function1[/* selector */ String, Component]] = js.undefined
   var setData: js.UndefOr[
     js.Function2[/* data */ js.Any, /* callback */ js.UndefOr[js.Function0[Unit]], Unit]
-  ] = js.native
+  ] = js.undefined
   var triggerEvent: js.UndefOr[
     js.Function3[
       /* name */ String, 
@@ -46,289 +45,60 @@ trait PartialPageOptionsPage extends js.Object {
       /* options */ js.UndefOr[Partialbubblesbooleancomp], 
       Unit
     ]
-  ] = js.native
-  var update: js.UndefOr[js.Function0[Unit]] = js.native
+  ] = js.undefined
+  var update: js.UndefOr[js.Function0[Unit]] = js.undefined
 }
 
 object PartialPageOptionsPage {
   @scala.inline
-  def apply(): PartialPageOptionsPage = {
+  def apply(
+    createIntersectionObserver: /* options */ js.UndefOr[CreateIntersectionObserverOption] => IntersectionObserver = null,
+    createSelectorQuery: () => SelectorQuery = null,
+    data: js.Any = null,
+    dataset: String = null,
+    forceUpdate: () => Unit = null,
+    getRelationNodes: /* relationKey */ String => js.Array[ComponentRelation] = null,
+    hasBehavior: /* behavior */ js.Any => Boolean = null,
+    id: String = null,
+    is: String = null,
+    onError: js.ThisFunction0[/* this */ Page, Unit] = null,
+    onHide: js.ThisFunction0[/* this */ Page, Unit] = null,
+    onLaunch: js.ThisFunction1[/* this */ Page, /* options */ Options, Unit] = null,
+    onPullDownRefresh: js.ThisFunction0[/* this */ Page, Unit] = null,
+    onShow: js.ThisFunction1[/* this */ Page, /* options */ Options, Unit] = null,
+    pageScrollTo: /* option */ js.UndefOr[PageScrollToOptions] => Unit = null,
+    properties: js.Any = null,
+    route: () => Unit = null,
+    selectAllComponents: /* selector */ String => js.Array[Component] = null,
+    selectComponent: /* selector */ String => Component = null,
+    setData: (/* data */ js.Any, /* callback */ js.UndefOr[js.Function0[Unit]]) => Unit = null,
+    triggerEvent: (/* name */ String, /* details */ js.UndefOr[js.Any], /* options */ js.UndefOr[Partialbubblesbooleancomp]) => Unit = null,
+    update: () => Unit = null
+  ): PartialPageOptionsPage = {
     val __obj = js.Dynamic.literal()
+    if (createIntersectionObserver != null) __obj.updateDynamic("createIntersectionObserver")(js.Any.fromFunction1(createIntersectionObserver))
+    if (createSelectorQuery != null) __obj.updateDynamic("createSelectorQuery")(js.Any.fromFunction0(createSelectorQuery))
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
+    if (forceUpdate != null) __obj.updateDynamic("forceUpdate")(js.Any.fromFunction0(forceUpdate))
+    if (getRelationNodes != null) __obj.updateDynamic("getRelationNodes")(js.Any.fromFunction1(getRelationNodes))
+    if (hasBehavior != null) __obj.updateDynamic("hasBehavior")(js.Any.fromFunction1(hasBehavior))
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(onError.asInstanceOf[js.Any])
+    if (onHide != null) __obj.updateDynamic("onHide")(onHide.asInstanceOf[js.Any])
+    if (onLaunch != null) __obj.updateDynamic("onLaunch")(onLaunch.asInstanceOf[js.Any])
+    if (onPullDownRefresh != null) __obj.updateDynamic("onPullDownRefresh")(onPullDownRefresh.asInstanceOf[js.Any])
+    if (onShow != null) __obj.updateDynamic("onShow")(onShow.asInstanceOf[js.Any])
+    if (pageScrollTo != null) __obj.updateDynamic("pageScrollTo")(js.Any.fromFunction1(pageScrollTo))
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (route != null) __obj.updateDynamic("route")(js.Any.fromFunction0(route))
+    if (selectAllComponents != null) __obj.updateDynamic("selectAllComponents")(js.Any.fromFunction1(selectAllComponents))
+    if (selectComponent != null) __obj.updateDynamic("selectComponent")(js.Any.fromFunction1(selectComponent))
+    if (setData != null) __obj.updateDynamic("setData")(js.Any.fromFunction2(setData))
+    if (triggerEvent != null) __obj.updateDynamic("triggerEvent")(js.Any.fromFunction3(triggerEvent))
+    if (update != null) __obj.updateDynamic("update")(js.Any.fromFunction0(update))
     __obj.asInstanceOf[PartialPageOptionsPage]
   }
-  @scala.inline
-  implicit class PartialPageOptionsPageOps[Self <: PartialPageOptionsPage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateIntersectionObserver(value: /* options */ js.UndefOr[CreateIntersectionObserverOption] => IntersectionObserver): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createIntersectionObserver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateIntersectionObserver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createIntersectionObserver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateSelectorQuery(value: () => SelectorQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSelectorQuery")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateSelectorQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSelectorQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceUpdate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceUpdate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutForceUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetRelationNodes(value: /* relationKey */ String => js.Array[ComponentRelation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRelationNodes")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetRelationNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRelationNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasBehavior(value: /* behavior */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasBehavior")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutHasBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: js.ThisFunction0[/* this */ Page, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHide(value: js.ThisFunction0[/* this */ Page, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLaunch(value: js.ThisFunction1[/* this */ Page, /* options */ Options, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLaunch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLaunch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLaunch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPullDownRefresh(value: js.ThisFunction0[/* this */ Page, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPullDownRefresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPullDownRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPullDownRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: js.ThisFunction1[/* this */ Page, /* options */ Options, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageScrollTo(value: /* option */ js.UndefOr[PageScrollToOptions] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageScrollTo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPageScrollTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageScrollTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoute(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectAllComponents(value: /* selector */ String => js.Array[Component]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllComponents")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelectAllComponents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllComponents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectComponent(value: /* selector */ String => Component): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectComponent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelectComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetData(value: (/* data */ js.Any, /* callback */ js.UndefOr[js.Function0[Unit]]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerEvent(
-      value: (/* name */ String, /* details */ js.UndefOr[js.Any], /* options */ js.UndefOr[Partialbubblesbooleancomp]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerEvent")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutTriggerEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

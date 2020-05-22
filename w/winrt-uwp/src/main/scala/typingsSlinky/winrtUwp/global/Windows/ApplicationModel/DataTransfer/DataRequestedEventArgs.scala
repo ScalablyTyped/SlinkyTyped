@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs")
 @js.native
 abstract class DataRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs {
+  /** Enables you to get the DataRequest object and either give it data or a failure message. */
+  /* CompleteClass */
+  override var request: typingsSlinky.winrtUwp.Windows.ApplicationModel.DataTransfer.DataRequest = js.native
+}
 

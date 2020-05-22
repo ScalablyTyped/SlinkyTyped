@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * Provides unified interface for {@link XMLOasisBasicExporter} and {@link XMLBasicExporter} services.
   * @since LibreOffice 4.1
   */
-@js.native
 trait XXMLBasicExporter
   extends XExporter
      with XFilter

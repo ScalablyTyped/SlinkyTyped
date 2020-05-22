@@ -18,41 +18,11 @@ trait OverrideAction extends js.Object {
 
 object OverrideAction {
   @scala.inline
-  def apply(): OverrideAction = {
+  def apply(Count: CountAction = null, None: NoneAction = null): OverrideAction = {
     val __obj = js.Dynamic.literal()
+    if (Count != null) __obj.updateDynamic("Count")(Count.asInstanceOf[js.Any])
+    if (None != null) __obj.updateDynamic("None")(None.asInstanceOf[js.Any])
     __obj.asInstanceOf[OverrideAction]
   }
-  @scala.inline
-  implicit class OverrideActionOps[Self <: OverrideAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: CountAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNone(value: NoneAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("None")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("None")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

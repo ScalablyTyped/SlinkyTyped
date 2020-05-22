@@ -5,112 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPersonaStyleProps extends js.Object {
   /**
     * Custom class name.
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * Optional custom persona coin size in pixel.
     */
-  var coinSize: js.UndefOr[Double] = js.native
+  var coinSize: js.UndefOr[Double] = js.undefined
   /**
     * Presence of the person to display - will not display presence if undefined.
     * @defaultvalue PersonaPresence.none
     */
-  var presence: js.UndefOr[PersonaPresence] = js.native
-  var showSecondaryText: js.UndefOr[Boolean] = js.native
+  var presence: js.UndefOr[PersonaPresence] = js.undefined
+  var showSecondaryText: js.UndefOr[Boolean] = js.undefined
   /**
     * Decides the size of the control.
     * @defaultvalue PersonaSize.size48
     */
-  var size: js.UndefOr[PersonaSize] = js.native
+  var size: js.UndefOr[PersonaSize] = js.undefined
   /**
     * Theme provided by High-Order Component.
     */
-  var theme: ITheme = js.native
+  var theme: ITheme
 }
 
 object IPersonaStyleProps {
   @scala.inline
-  def apply(theme: ITheme): IPersonaStyleProps = {
+  def apply(
+    theme: ITheme,
+    className: String = null,
+    coinSize: js.UndefOr[Double] = js.undefined,
+    presence: PersonaPresence = null,
+    showSecondaryText: js.UndefOr[Boolean] = js.undefined,
+    size: PersonaSize = null
+  ): IPersonaStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(coinSize)) __obj.updateDynamic("coinSize")(coinSize.get.asInstanceOf[js.Any])
+    if (presence != null) __obj.updateDynamic("presence")(presence.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSecondaryText)) __obj.updateDynamic("showSecondaryText")(showSecondaryText.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPersonaStyleProps]
   }
-  @scala.inline
-  implicit class IPersonaStylePropsOps[Self <: IPersonaStyleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoinSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coinSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoinSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coinSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPresence(value: PersonaPresence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("presence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPresence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("presence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSecondaryText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSecondaryText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSecondaryText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSecondaryText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: PersonaSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies an interface which can be used to call back an implementation */
-@js.native
 trait XRequestCallback extends js.Object {
   /**
     * adds a callback request to the implementation
     * @param aData any private data which will be provided to the callback implementation.
     * @param xCallback a reference to the callback which should be called by the implementation of this interface.
     */
-  def addCallback(xCallback: XCallback, aData: js.Any): Unit = js.native
+  def addCallback(xCallback: XCallback, aData: js.Any): Unit
 }
 
 object XRequestCallback {
@@ -21,19 +20,5 @@ object XRequestCallback {
     val __obj = js.Dynamic.literal(addCallback = js.Any.fromFunction2(addCallback))
     __obj.asInstanceOf[XRequestCallback]
   }
-  @scala.inline
-  implicit class XRequestCallbackOps[Self <: XRequestCallback] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddCallback(value: (XCallback, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,16 @@ trait GetCipherTextResult extends js.Object {
 
 object GetCipherTextResult {
   @scala.inline
-  def apply(ciphertextBlob: String, id: String, keyId: String, plaintext: String): GetCipherTextResult = {
+  def apply(
+    ciphertextBlob: String,
+    id: String,
+    keyId: String,
+    plaintext: String,
+    context: StringDictionary[String] = null
+  ): GetCipherTextResult = {
     val __obj = js.Dynamic.literal(ciphertextBlob = ciphertextBlob.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], keyId = keyId.asInstanceOf[js.Any], plaintext = plaintext.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCipherTextResult]
   }
-  @scala.inline
-  implicit class GetCipherTextResultOps[Self <: GetCipherTextResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCiphertextBlob(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphertextBlob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlaintext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plaintext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContext(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

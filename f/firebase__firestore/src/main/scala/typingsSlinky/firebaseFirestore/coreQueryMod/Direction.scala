@@ -1,20 +1,21 @@
 package typingsSlinky.firebaseFirestore.coreQueryMod
 
+import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.asc
+import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.desc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@firebase/firestore/dist/src/core/query", "Direction")
-@js.native
-class Direction protected () extends js.Object {
-  var name: String = js.native
-}
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.asc
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.desc
+*/
+trait Direction extends js.Object
 
-/* static members */
-@JSImport("@firebase/firestore/dist/src/core/query", "Direction")
-@js.native
-object Direction extends js.Object {
-  var ASCENDING: Direction = js.native
-  var DESCENDING: Direction = js.native
+object Direction {
+  @scala.inline
+  def ASCENDING: asc = "asc".asInstanceOf[asc]
+  @scala.inline
+  def DESCENDING: desc = "desc".asInstanceOf[desc]
 }
 

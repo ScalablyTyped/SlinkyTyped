@@ -29,48 +29,12 @@ object ApplySecurityGroupsToClientVpnTargetNetworkRequest {
   def apply(
     ClientVpnEndpointId: ClientVpnEndpointId,
     SecurityGroupIds: ClientVpnSecurityGroupIdSet,
-    VpcId: VpcId
+    VpcId: VpcId,
+    DryRun: js.UndefOr[Boolean] = js.undefined
   ): ApplySecurityGroupsToClientVpnTargetNetworkRequest = {
     val __obj = js.Dynamic.literal(ClientVpnEndpointId = ClientVpnEndpointId.asInstanceOf[js.Any], SecurityGroupIds = SecurityGroupIds.asInstanceOf[js.Any], VpcId = VpcId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplySecurityGroupsToClientVpnTargetNetworkRequest]
   }
-  @scala.inline
-  implicit class ApplySecurityGroupsToClientVpnTargetNetworkRequestOps[Self <: ApplySecurityGroupsToClientVpnTargetNetworkRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientVpnEndpointId(value: ClientVpnEndpointId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnEndpointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupIds(value: ClientVpnSecurityGroupIdSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: VpcId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

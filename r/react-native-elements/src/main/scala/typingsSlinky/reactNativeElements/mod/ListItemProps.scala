@@ -1,623 +1,234 @@
 package typingsSlinky.reactNativeElements.mod
 
 import slinky.core.ReactComponentClass
+import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.mod.AccessibilityActionInfo
+import typingsSlinky.reactNative.mod.AccessibilityRole
+import typingsSlinky.reactNative.mod.AccessibilityState
+import typingsSlinky.reactNative.mod.AccessibilityTrait
+import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.Insets
+import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NativeTouchEvent
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.SwitchProperties
+import typingsSlinky.reactNative.mod.TVParallaxProperties
+import typingsSlinky.reactNative.mod.TargetedEvent
 import typingsSlinky.reactNative.mod.TextProperties
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.TouchableHighlightProps
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
+import typingsSlinky.reactNative.reactNativeStrings.assertive
+import typingsSlinky.reactNative.reactNativeStrings.auto
+import typingsSlinky.reactNative.reactNativeStrings.button
+import typingsSlinky.reactNative.reactNativeStrings.no
+import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.polite
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
+import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeElements.anon.PartialAvatarProps
 import typingsSlinky.reactNativeElements.anon.PartialIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListItemProps extends TouchableHighlightProps {
-  var Component: js.UndefOr[ReactComponentClass[js.Object]] = js.native
-  var ViewComponent: js.UndefOr[ReactComponentClass[js.Object]] = js.native
-  var badge: js.UndefOr[BadgeProps] = js.native
-  var bottomDivider: js.UndefOr[Boolean] = js.native
-  var buttonGroup: js.UndefOr[ButtonGroupProps] = js.native
-  var checkBox: js.UndefOr[CheckBoxProps] = js.native
-  var checkmark: js.UndefOr[Boolean | PartialIconProps | ReactElement] = js.native
-  var chevron: js.UndefOr[Boolean | PartialIconProps | ReactElement] = js.native
-  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var contentContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var disabledStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var input: js.UndefOr[InputProps] = js.native
-  var leftAvatar: js.UndefOr[PartialAvatarProps | ReactElement] = js.native
-  var leftElement: js.UndefOr[ReactElement] = js.native
-  var leftIcon: js.UndefOr[PartialIconProps | ReactElement] = js.native
-  var pad: js.UndefOr[Double] = js.native
-  var rightAvatar: js.UndefOr[PartialAvatarProps | ReactElement] = js.native
-  var rightContentContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var rightElement: js.UndefOr[ReactElement] = js.native
-  var rightIcon: js.UndefOr[PartialIconProps | ReactElement] = js.native
-  var rightSubtitle: js.UndefOr[String | ReactElement] = js.native
-  var rightSubtitleProps: js.UndefOr[TextProperties] = js.native
-  var rightSubtitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
-  var rightTitle: js.UndefOr[String | ReactElement] = js.native
-  var rightTitleProps: js.UndefOr[TextProperties] = js.native
-  var rightTitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
-  var scaleProps: js.UndefOr[ScaleProps] = js.native
-  var subtitle: js.UndefOr[String | ReactElement] = js.native
-  var subtitleProps: js.UndefOr[TextProperties] = js.native
-  var subtitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
-  var switch: js.UndefOr[SwitchProperties] = js.native
-  var title: js.UndefOr[String | ReactElement] = js.native
-  var titleProps: js.UndefOr[TextProperties] = js.native
-  var titleStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
-  var topDivider: js.UndefOr[Boolean] = js.native
+  var Component: js.UndefOr[ReactComponentClass[js.Object]] = js.undefined
+  var ViewComponent: js.UndefOr[ReactComponentClass[js.Object]] = js.undefined
+  var badge: js.UndefOr[BadgeProps] = js.undefined
+  var bottomDivider: js.UndefOr[Boolean] = js.undefined
+  var buttonGroup: js.UndefOr[ButtonGroupProps] = js.undefined
+  var checkBox: js.UndefOr[CheckBoxProps] = js.undefined
+  var checkmark: js.UndefOr[Boolean | PartialIconProps | ReactElement] = js.undefined
+  var chevron: js.UndefOr[Boolean | PartialIconProps | ReactElement] = js.undefined
+  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var contentContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var disabledStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var input: js.UndefOr[InputProps] = js.undefined
+  var leftAvatar: js.UndefOr[PartialAvatarProps | ReactElement] = js.undefined
+  var leftElement: js.UndefOr[ReactElement] = js.undefined
+  var leftIcon: js.UndefOr[PartialIconProps | ReactElement] = js.undefined
+  var pad: js.UndefOr[Double] = js.undefined
+  var rightAvatar: js.UndefOr[PartialAvatarProps | ReactElement] = js.undefined
+  var rightContentContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var rightElement: js.UndefOr[ReactElement] = js.undefined
+  var rightIcon: js.UndefOr[PartialIconProps | ReactElement] = js.undefined
+  var rightSubtitle: js.UndefOr[String | ReactElement] = js.undefined
+  var rightSubtitleProps: js.UndefOr[TextProperties] = js.undefined
+  var rightSubtitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
+  var rightTitle: js.UndefOr[String | ReactElement] = js.undefined
+  var rightTitleProps: js.UndefOr[TextProperties] = js.undefined
+  var rightTitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
+  var scaleProps: js.UndefOr[ScaleProps] = js.undefined
+  var subtitle: js.UndefOr[String | ReactElement] = js.undefined
+  var subtitleProps: js.UndefOr[TextProperties] = js.undefined
+  var subtitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
+  var switch: js.UndefOr[SwitchProperties] = js.undefined
+  var title: js.UndefOr[String | ReactElement] = js.undefined
+  var titleProps: js.UndefOr[TextProperties] = js.undefined
+  var titleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
+  var topDivider: js.UndefOr[Boolean] = js.undefined
 }
 
 object ListItemProps {
   @scala.inline
-  def apply(): ListItemProps = {
+  def apply(
+    Component: ReactComponentClass[js.Object] = null,
+    ViewComponent: ReactComponentClass[js.Object] = null,
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
+    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
+    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
+    accessibilityHint: String = null,
+    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
+    accessibilityLabel: String = null,
+    accessibilityLiveRegion: none | polite | assertive = null,
+    accessibilityRole: AccessibilityRole = null,
+    accessibilityState: AccessibilityState = null,
+    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
+    accessibilityValue: AccessibilityValue = null,
+    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
+    accessible: js.UndefOr[Boolean] = js.undefined,
+    activeOpacity: js.UndefOr[Double] = js.undefined,
+    badge: BadgeProps = null,
+    bottomDivider: js.UndefOr[Boolean] = js.undefined,
+    buttonGroup: ButtonGroupProps = null,
+    checkBox: CheckBoxProps = null,
+    checkmark: Boolean | PartialIconProps | ReactElement = null,
+    chevron: Boolean | PartialIconProps | ReactElement = null,
+    containerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    contentContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    delayLongPress: js.UndefOr[Double] = js.undefined,
+    delayPressIn: js.UndefOr[Double] = js.undefined,
+    delayPressOut: js.UndefOr[Double] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    disabledStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: Insets = null,
+    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
+    input: InputProps = null,
+    leftAvatar: PartialAvatarProps | ReactElement = null,
+    leftElement: ReactElement = null,
+    leftIcon: PartialIconProps | ReactElement = null,
+    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
+    onAccessibilityEscape: () => Unit = null,
+    onAccessibilityTap: () => Unit = null,
+    onBlur: SyntheticEvent[NodeHandle, TargetedEvent] => Unit = null,
+    onFocus: SyntheticEvent[NodeHandle, TargetedEvent] => Unit = null,
+    onHideUnderlay: () => Unit = null,
+    onLayout: /* event */ LayoutChangeEvent => Unit = null,
+    onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onMagicTap: () => Unit = null,
+    onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onPressIn: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onPressOut: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onShowUnderlay: () => Unit = null,
+    pad: js.UndefOr[Double] = js.undefined,
+    pressRetentionOffset: Insets = null,
+    rightAvatar: PartialAvatarProps | ReactElement = null,
+    rightContentContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    rightElement: ReactElement = null,
+    rightIcon: PartialIconProps | ReactElement = null,
+    rightSubtitle: String | ReactElement = null,
+    rightSubtitleProps: TextProperties = null,
+    rightSubtitleStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    rightTitle: String | ReactElement = null,
+    rightTitleProps: TextProperties = null,
+    rightTitleStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    scaleProps: ScaleProps = null,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    subtitle: String | ReactElement = null,
+    subtitleProps: TextProperties = null,
+    subtitleStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    switch: SwitchProperties = null,
+    testID: String = null,
+    title: String | ReactElement = null,
+    titleProps: TextProperties = null,
+    titleStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    topDivider: js.UndefOr[Boolean] = js.undefined,
+    tvParallaxProperties: TVParallaxProperties = null,
+    underlayColor: String = null
+  ): ListItemProps = {
     val __obj = js.Dynamic.literal()
+    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
+    if (ViewComponent != null) __obj.updateDynamic("ViewComponent")(ViewComponent.asInstanceOf[js.Any])
+    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
+    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
+    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
+    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
+    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
+    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
+    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
+    if (accessibilityValue != null) __obj.updateDynamic("accessibilityValue")(accessibilityValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeOpacity)) __obj.updateDynamic("activeOpacity")(activeOpacity.get.asInstanceOf[js.Any])
+    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
+    if (!js.isUndefined(bottomDivider)) __obj.updateDynamic("bottomDivider")(bottomDivider.get.asInstanceOf[js.Any])
+    if (buttonGroup != null) __obj.updateDynamic("buttonGroup")(buttonGroup.asInstanceOf[js.Any])
+    if (checkBox != null) __obj.updateDynamic("checkBox")(checkBox.asInstanceOf[js.Any])
+    if (checkmark != null) __obj.updateDynamic("checkmark")(checkmark.asInstanceOf[js.Any])
+    if (chevron != null) __obj.updateDynamic("chevron")(chevron.asInstanceOf[js.Any])
+    if (!js.isUndefined(containerStyle)) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentContainerStyle)) __obj.updateDynamic("contentContainerStyle")(contentContainerStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayLongPress)) __obj.updateDynamic("delayLongPress")(delayLongPress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayPressIn)) __obj.updateDynamic("delayPressIn")(delayPressIn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayPressOut)) __obj.updateDynamic("delayPressOut")(delayPressOut.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabledStyle)) __obj.updateDynamic("disabledStyle")(disabledStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (leftAvatar != null) __obj.updateDynamic("leftAvatar")(leftAvatar.asInstanceOf[js.Any])
+    if (leftElement != null) __obj.updateDynamic("leftElement")(leftElement.asInstanceOf[js.Any])
+    if (leftIcon != null) __obj.updateDynamic("leftIcon")(leftIcon.asInstanceOf[js.Any])
+    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
+    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
+    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onHideUnderlay != null) __obj.updateDynamic("onHideUnderlay")(js.Any.fromFunction0(onHideUnderlay))
+    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
+    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
+    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
+    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction1(onPressIn))
+    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction1(onPressOut))
+    if (onShowUnderlay != null) __obj.updateDynamic("onShowUnderlay")(js.Any.fromFunction0(onShowUnderlay))
+    if (!js.isUndefined(pad)) __obj.updateDynamic("pad")(pad.get.asInstanceOf[js.Any])
+    if (pressRetentionOffset != null) __obj.updateDynamic("pressRetentionOffset")(pressRetentionOffset.asInstanceOf[js.Any])
+    if (rightAvatar != null) __obj.updateDynamic("rightAvatar")(rightAvatar.asInstanceOf[js.Any])
+    if (!js.isUndefined(rightContentContainerStyle)) __obj.updateDynamic("rightContentContainerStyle")(rightContentContainerStyle.asInstanceOf[js.Any])
+    if (rightElement != null) __obj.updateDynamic("rightElement")(rightElement.asInstanceOf[js.Any])
+    if (rightIcon != null) __obj.updateDynamic("rightIcon")(rightIcon.asInstanceOf[js.Any])
+    if (rightSubtitle != null) __obj.updateDynamic("rightSubtitle")(rightSubtitle.asInstanceOf[js.Any])
+    if (rightSubtitleProps != null) __obj.updateDynamic("rightSubtitleProps")(rightSubtitleProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(rightSubtitleStyle)) __obj.updateDynamic("rightSubtitleStyle")(rightSubtitleStyle.asInstanceOf[js.Any])
+    if (rightTitle != null) __obj.updateDynamic("rightTitle")(rightTitle.asInstanceOf[js.Any])
+    if (rightTitleProps != null) __obj.updateDynamic("rightTitleProps")(rightTitleProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(rightTitleStyle)) __obj.updateDynamic("rightTitleStyle")(rightTitleStyle.asInstanceOf[js.Any])
+    if (scaleProps != null) __obj.updateDynamic("scaleProps")(scaleProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
+    if (subtitleProps != null) __obj.updateDynamic("subtitleProps")(subtitleProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(subtitleStyle)) __obj.updateDynamic("subtitleStyle")(subtitleStyle.asInstanceOf[js.Any])
+    if (switch != null) __obj.updateDynamic("switch")(switch.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titleProps != null) __obj.updateDynamic("titleProps")(titleProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(titleStyle)) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(topDivider)) __obj.updateDynamic("topDivider")(topDivider.get.asInstanceOf[js.Any])
+    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
+    if (underlayColor != null) __obj.updateDynamic("underlayColor")(underlayColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItemProps]
   }
-  @scala.inline
-  implicit class ListItemPropsOps[Self <: ListItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponentFunctionComponent(value: ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentComponentClass(value: ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponent(value: ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewComponentFunctionComponent(value: ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewComponentComponentClass(value: ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewComponent(value: ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadge(value: BadgeProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottomDivider(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomDivider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottomDivider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomDivider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonGroup(value: ButtonGroupProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckBox(value: CheckBoxProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckmarkReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkmark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCheckmark(value: Boolean | PartialIconProps | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkmark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckmark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkmark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChevronReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chevron")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChevron(value: Boolean | PartialIconProps | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chevron")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChevron: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chevron")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withContentContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withDisabledStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withInput(value: InputProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftAvatarReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftAvatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeftAvatar(value: PartialAvatarProps | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftAvatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftAvatar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftAvatar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeftIcon(value: PartialIconProps | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPad(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightAvatarReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightAvatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRightAvatar(value: PartialAvatarProps | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightAvatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightAvatar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightAvatar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightContentContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentContainerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightContentContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentContainerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightContentContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentContainerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withRightElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRightIcon(value: PartialIconProps | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightSubtitleReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightSubtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRightSubtitle(value: String | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightSubtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightSubtitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightSubtitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightSubtitleProps(value: TextProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightSubtitleProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightSubtitleProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightSubtitleProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightSubtitleStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightSubtitleStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightSubtitleStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightSubtitleStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightSubtitleStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightSubtitleStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withRightTitleReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRightTitle(value: String | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightTitleProps(value: TextProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTitleProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightTitleProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTitleProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightTitleStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTitleStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightTitleStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTitleStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightTitleStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTitleStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withScaleProps(value: ScaleProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubtitle(value: String | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleProps(value: TextProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withSwitch(value: SwitchProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleProps(value: TextProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withTopDivider(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topDivider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopDivider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topDivider")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

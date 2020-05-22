@@ -30,7 +30,7 @@ trait MaintenanceWindowTaskState extends js.Object {
     */
   val maxErrors: js.UndefOr[Input[String]] = js.native
   /**
-    * The parameter name.
+    * The name of the maintenance window task.
     */
   val name: js.UndefOr[Input[String]] = js.native
   /**
@@ -38,7 +38,7 @@ trait MaintenanceWindowTaskState extends js.Object {
     */
   val priority: js.UndefOr[Input[Double]] = js.native
   /**
-    * The IAM service role to assume during task execution.
+    * The role that should be assumed when executing the task.
     */
   val serviceRoleArn: js.UndefOr[Input[String]] = js.native
   /**
@@ -71,173 +71,36 @@ trait MaintenanceWindowTaskState extends js.Object {
 
 object MaintenanceWindowTaskState {
   @scala.inline
-  def apply(): MaintenanceWindowTaskState = {
+  def apply(
+    description: Input[String] = null,
+    loggingInfo: Input[MaintenanceWindowTaskLoggingInfo] = null,
+    maxConcurrency: Input[String] = null,
+    maxErrors: Input[String] = null,
+    name: Input[String] = null,
+    priority: Input[Double] = null,
+    serviceRoleArn: Input[String] = null,
+    targets: Input[js.Array[Input[MaintenanceWindowTaskTarget]]] = null,
+    taskArn: Input[String] = null,
+    taskInvocationParameters: Input[MaintenanceWindowTaskTaskInvocationParameters] = null,
+    taskParameters: Input[js.Array[Input[MaintenanceWindowTaskTaskParameter]]] = null,
+    taskType: Input[String] = null,
+    windowId: Input[String] = null
+  ): MaintenanceWindowTaskState = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (loggingInfo != null) __obj.updateDynamic("loggingInfo")(loggingInfo.asInstanceOf[js.Any])
+    if (maxConcurrency != null) __obj.updateDynamic("maxConcurrency")(maxConcurrency.asInstanceOf[js.Any])
+    if (maxErrors != null) __obj.updateDynamic("maxErrors")(maxErrors.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
+    if (serviceRoleArn != null) __obj.updateDynamic("serviceRoleArn")(serviceRoleArn.asInstanceOf[js.Any])
+    if (targets != null) __obj.updateDynamic("targets")(targets.asInstanceOf[js.Any])
+    if (taskArn != null) __obj.updateDynamic("taskArn")(taskArn.asInstanceOf[js.Any])
+    if (taskInvocationParameters != null) __obj.updateDynamic("taskInvocationParameters")(taskInvocationParameters.asInstanceOf[js.Any])
+    if (taskParameters != null) __obj.updateDynamic("taskParameters")(taskParameters.asInstanceOf[js.Any])
+    if (taskType != null) __obj.updateDynamic("taskType")(taskType.asInstanceOf[js.Any])
+    if (windowId != null) __obj.updateDynamic("windowId")(windowId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaintenanceWindowTaskState]
   }
-  @scala.inline
-  implicit class MaintenanceWindowTaskStateOps[Self <: MaintenanceWindowTaskState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingInfo(value: Input[MaintenanceWindowTaskLoggingInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxConcurrency(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxErrors(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceRoleArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargets(value: Input[js.Array[Input[MaintenanceWindowTaskTarget]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskInvocationParameters(value: Input[MaintenanceWindowTaskTaskInvocationParameters]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskInvocationParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskInvocationParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskInvocationParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskParameters(value: Input[js.Array[Input[MaintenanceWindowTaskTaskParameter]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

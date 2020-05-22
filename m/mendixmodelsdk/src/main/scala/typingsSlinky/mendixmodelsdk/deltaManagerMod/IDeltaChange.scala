@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDeltaChange extends js.Object {
-  var delta: Delta = js.native
-  var reverseDelta: Delta | js.Error = js.native
+  var delta: Delta
+  var reverseDelta: Delta | js.Error
 }
 
 object IDeltaChange {
@@ -17,31 +16,5 @@ object IDeltaChange {
     val __obj = js.Dynamic.literal(delta = delta.asInstanceOf[js.Any], reverseDelta = reverseDelta.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDeltaChange]
   }
-  @scala.inline
-  implicit class IDeltaChangeOps[Self <: IDeltaChange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelta(value: Delta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReverseDeltaError(value: js.Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReverseDelta(value: Delta | js.Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

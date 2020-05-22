@@ -30,7 +30,7 @@ import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroup
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -199,7 +199,7 @@ object DetailsListBase {
     @scala.inline
     def skipViewportMeasures(value: Boolean): this.type = set("skipViewportMeasures", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDetailsListStyleProps => Partial[IDetailsListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDetailsListStyleProps => DeepPartial[IDetailsListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDetailsListStyleProps, IDetailsListStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

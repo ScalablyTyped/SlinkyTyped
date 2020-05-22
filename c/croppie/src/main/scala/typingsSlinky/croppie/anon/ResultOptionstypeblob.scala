@@ -9,88 +9,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined croppie.croppie.ResultOptions & {  type  :'blob'} */
-@js.native
 trait ResultOptionstypeblob extends js.Object {
-  var circle: js.UndefOr[Boolean] = js.native
-  var format: js.UndefOr[Format] = js.native
-  var quality: js.UndefOr[Double] = js.native
-  var size: js.UndefOr[viewport | original | Height] = js.native
-  var `type`: js.UndefOr[typingsSlinky.croppie.mod.Type with blob] = js.native
+  var circle: js.UndefOr[Boolean] = js.undefined
+  var format: js.UndefOr[Format] = js.undefined
+  var quality: js.UndefOr[Double] = js.undefined
+  var size: js.UndefOr[viewport | original | Height] = js.undefined
+  var `type`: js.UndefOr[typingsSlinky.croppie.mod.Type with blob] = js.undefined
 }
 
 object ResultOptionstypeblob {
   @scala.inline
-  def apply(): ResultOptionstypeblob = {
+  def apply(
+    circle: js.UndefOr[Boolean] = js.undefined,
+    format: Format = null,
+    quality: js.UndefOr[Double] = js.undefined,
+    size: viewport | original | Height = null,
+    `type`: typingsSlinky.croppie.mod.Type with blob = null
+  ): ResultOptionstypeblob = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(circle)) __obj.updateDynamic("circle")(circle.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultOptionstypeblob]
   }
-  @scala.inline
-  implicit class ResultOptionstypeblobOps[Self <: ResultOptionstypeblob] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCircle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: Format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: viewport | original | Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.croppie.mod.Type with blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

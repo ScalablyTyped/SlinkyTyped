@@ -18,14 +18,13 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.awt.XWindowPeer
   * @see com.sun.star.form.component.GridControl
   */
-@js.native
 trait XGridPeer extends XInterface {
   /** retrieves the currently used column definitions of the peer. */
-  var Columns: XIndexContainer = js.native
+  var Columns: XIndexContainer
   /** retrieves the currently used column definitions of the peer. */
-  def getColumns(): XIndexContainer = js.native
+  def getColumns(): XIndexContainer
   /** sets the column definition for the peer. */
-  def setColumns(aColumns: XIndexContainer): Unit = js.native
+  def setColumns(aColumns: XIndexContainer): Unit
 }
 
 object XGridPeer {
@@ -41,31 +40,5 @@ object XGridPeer {
     val __obj = js.Dynamic.literal(Columns = Columns.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getColumns = js.Any.fromFunction0(getColumns), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setColumns = js.Any.fromFunction1(setColumns))
     __obj.asInstanceOf[XGridPeer]
   }
-  @scala.inline
-  implicit class XGridPeerOps[Self <: XGridPeer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: XIndexContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetColumns(value: () => XIndexContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumns")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetColumns(value: XIndexContainer => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setColumns")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

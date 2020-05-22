@@ -11,18 +11,17 @@ import scala.scalajs.js.annotation._
   *
   * If you want to allow control from outside, also implement the {@link XActiveDataControl} interface.
   */
-@js.native
 trait XActiveDataSink extends XInterface {
   /** @returns the plugged stream. */
-  var InputStream: XInputStream = js.native
+  var InputStream: XInputStream
   /** @returns the plugged stream. */
-  def getInputStream(): XInputStream = js.native
+  def getInputStream(): XInputStream
   /**
     * plugs the input stream.
     *
     * If {@link XConnectable} is also implemented, this method should query **aStream** for an {@link XConnectable} and connect both.
     */
-  def setInputStream(aStream: XInputStream): Unit = js.native
+  def setInputStream(aStream: XInputStream): Unit
 }
 
 object XActiveDataSink {
@@ -38,31 +37,5 @@ object XActiveDataSink {
     val __obj = js.Dynamic.literal(InputStream = InputStream.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getInputStream = js.Any.fromFunction0(getInputStream), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setInputStream = js.Any.fromFunction1(setInputStream))
     __obj.asInstanceOf[XActiveDataSink]
   }
-  @scala.inline
-  implicit class XActiveDataSinkOps[Self <: XActiveDataSink] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputStream(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetInputStream(value: () => XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInputStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetInputStream(value: XInputStream => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setInputStream")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

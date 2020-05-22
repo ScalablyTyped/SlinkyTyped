@@ -18,29 +18,10 @@ trait SchemaOperationMetadata extends js.Object {
 
 object SchemaOperationMetadata {
   @scala.inline
-  def apply(): SchemaOperationMetadata = {
+  def apply(resourceNames: js.Array[String] = null): SchemaOperationMetadata = {
     val __obj = js.Dynamic.literal()
+    if (resourceNames != null) __obj.updateDynamic("resourceNames")(resourceNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOperationMetadata]
   }
-  @scala.inline
-  implicit class SchemaOperationMetadataOps[Self <: SchemaOperationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

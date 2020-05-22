@@ -156,6 +156,11 @@ object sceneInstrumentationMod extends js.Object {
       */
     def captureSpritesRenderTime(value: Boolean): js.Any = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Gets the perf counter used for draw calls
       */
     def drawCallsCounter: PerfCounter = js.native

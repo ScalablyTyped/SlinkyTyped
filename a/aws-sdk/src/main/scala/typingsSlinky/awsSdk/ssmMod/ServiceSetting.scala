@@ -34,89 +34,22 @@ trait ServiceSetting extends js.Object {
 
 object ServiceSetting {
   @scala.inline
-  def apply(): ServiceSetting = {
+  def apply(
+    ARN: String = null,
+    LastModifiedDate: js.Date = null,
+    LastModifiedUser: String = null,
+    SettingId: ServiceSettingId = null,
+    SettingValue: ServiceSettingValue = null,
+    Status: String = null
+  ): ServiceSetting = {
     val __obj = js.Dynamic.literal()
+    if (ARN != null) __obj.updateDynamic("ARN")(ARN.asInstanceOf[js.Any])
+    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
+    if (LastModifiedUser != null) __obj.updateDynamic("LastModifiedUser")(LastModifiedUser.asInstanceOf[js.Any])
+    if (SettingId != null) __obj.updateDynamic("SettingId")(SettingId.asInstanceOf[js.Any])
+    if (SettingValue != null) __obj.updateDynamic("SettingValue")(SettingValue.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceSetting]
   }
-  @scala.inline
-  implicit class ServiceSettingOps[Self <: ServiceSetting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingId(value: ServiceSettingId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingValue(value: ServiceSettingValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

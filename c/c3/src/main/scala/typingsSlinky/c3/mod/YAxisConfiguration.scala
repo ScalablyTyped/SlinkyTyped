@@ -1,116 +1,57 @@
 package typingsSlinky.c3.mod
 
+import typingsSlinky.c3.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait YAxisConfiguration extends AxisConfiguration {
   /**
     * Set center value of y axis.
     */
-  var center: js.UndefOr[Double] = js.native
+  var center: js.UndefOr[Double] = js.undefined
   /**
     * Set default range of y axis. This option set the default value for y axis when there is no data on init.
     */
-  var default: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var default: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
   /**
     * Change the direction of y axis.
     * If true set, the direction will be from the top to the bottom.
     */
-  var inverted: js.UndefOr[Boolean] = js.native
+  var inverted: js.UndefOr[Boolean] = js.undefined
   @JSName("max")
-  var max_YAxisConfiguration: js.UndefOr[Double] = js.native
+  var max_YAxisConfiguration: js.UndefOr[Double] = js.undefined
   @JSName("min")
-  var min_YAxisConfiguration: js.UndefOr[Double] = js.native
-  var tick: js.UndefOr[YTickConfiguration] = js.native
+  var min_YAxisConfiguration: js.UndefOr[Double] = js.undefined
+  var tick: js.UndefOr[YTickConfiguration] = js.undefined
 }
 
 object YAxisConfiguration {
   @scala.inline
-  def apply(): YAxisConfiguration = {
+  def apply(
+    center: js.UndefOr[Double] = js.undefined,
+    default: js.Tuple2[Double, Double] = null,
+    inner: js.UndefOr[Boolean] = js.undefined,
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    label: String | Position = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    padding: Padding = null,
+    show: js.UndefOr[Boolean] = js.undefined,
+    tick: YTickConfiguration = null
+  ): YAxisConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.get.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (!js.isUndefined(inner)) __obj.updateDynamic("inner")(inner.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
     __obj.asInstanceOf[YAxisConfiguration]
   }
-  @scala.inline
-  implicit class YAxisConfigurationOps[Self <: YAxisConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCenter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTick(value: YTickConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

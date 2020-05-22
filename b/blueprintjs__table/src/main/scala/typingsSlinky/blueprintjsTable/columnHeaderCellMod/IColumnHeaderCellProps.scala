@@ -3,26 +3,27 @@ package typingsSlinky.blueprintjsTable.columnHeaderCellMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.blueprintjsTable.headerCellMod.IHeaderCellProps
+import typingsSlinky.blueprintjsTable.resizeHandleMod.ResizeHandle
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.blueprintjsTable.columnHeaderCellMod.IColumnNameProps because var conflicts: name. Inlined nameRenderer */ @js.native
-trait IColumnHeaderCellProps extends IHeaderCellProps {
+- typingsSlinky.blueprintjsTable.columnHeaderCellMod.IColumnNameProps because var conflicts: name. Inlined nameRenderer */ trait IColumnHeaderCellProps extends IHeaderCellProps {
   /**
     * Specifies if the column is reorderable.
     */
-  var enableColumnReordering: js.UndefOr[Boolean] = js.native
+  var enableColumnReordering: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies if the full column is part of a selection.
     */
-  var isColumnSelected: js.UndefOr[Boolean] = js.native
+  var isColumnSelected: js.UndefOr[Boolean] = js.undefined
   /**
     * The icon name or element for the header's menu button.
     * @default "chevron-down"
     */
-  var menuIcon: js.UndefOr[IconName | ReactElement] = js.native
+  var menuIcon: js.UndefOr[IconName | ReactElement] = js.undefined
   /**
     * A callback to override the default name rendering behavior. The default
     * behavior is to simply use the `ColumnHeaderCell`s name prop.
@@ -36,76 +37,41 @@ trait IColumnHeaderCellProps extends IHeaderCellProps {
     * The callback will also receive the column index if an `index` was originally
     * provided via props.
     */
-  var nameRenderer: js.UndefOr[js.Function2[/* name */ String, /* index */ js.UndefOr[Double], ReactElement]] = js.native
+  var nameRenderer: js.UndefOr[js.Function2[/* name */ String, /* index */ js.UndefOr[Double], ReactElement]] = js.undefined
 }
 
 object IColumnHeaderCellProps {
   @scala.inline
-  def apply(): IColumnHeaderCellProps = {
+  def apply(
+    className: String = null,
+    enableColumnReordering: js.UndefOr[Boolean] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    isActive: js.UndefOr[Boolean] = js.undefined,
+    isColumnSelected: js.UndefOr[Boolean] = js.undefined,
+    loading: js.UndefOr[Boolean] = js.undefined,
+    menuIcon: IconName | ReactElement = null,
+    menuRenderer: /* index */ js.UndefOr[Double] => ReactElement = null,
+    name: String = null,
+    nameRenderer: (/* name */ String, /* index */ js.UndefOr[Double]) => ReactElement = null,
+    reorderHandle: ReactElement = null,
+    resizeHandle: ResizeHandle = null,
+    style: CSSProperties = null
+  ): IColumnHeaderCellProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableColumnReordering)) __obj.updateDynamic("enableColumnReordering")(enableColumnReordering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isActive)) __obj.updateDynamic("isActive")(isActive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isColumnSelected)) __obj.updateDynamic("isColumnSelected")(isColumnSelected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
+    if (menuIcon != null) __obj.updateDynamic("menuIcon")(menuIcon.asInstanceOf[js.Any])
+    if (menuRenderer != null) __obj.updateDynamic("menuRenderer")(js.Any.fromFunction1(menuRenderer))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nameRenderer != null) __obj.updateDynamic("nameRenderer")(js.Any.fromFunction2(nameRenderer))
+    if (reorderHandle != null) __obj.updateDynamic("reorderHandle")(reorderHandle.asInstanceOf[js.Any])
+    if (resizeHandle != null) __obj.updateDynamic("resizeHandle")(resizeHandle.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColumnHeaderCellProps]
   }
-  @scala.inline
-  implicit class IColumnHeaderCellPropsOps[Self <: IColumnHeaderCellProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableColumnReordering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableColumnReordering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableColumnReordering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableColumnReordering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsColumnSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumnSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsColumnSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumnSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMenuIcon(value: IconName | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameRenderer(value: (/* name */ String, /* index */ js.UndefOr[Double]) => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRenderer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutNameRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRenderer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

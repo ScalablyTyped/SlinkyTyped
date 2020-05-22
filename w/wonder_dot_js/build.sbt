@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "wonder_dot_js"
-version := "0.1.0-dt-20200225Z-f3b48f"
+version := "0.1.0-dt-20200515Z-95dbb1"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
-  "org.scalablytyped.slinky" %%% "wonder-frp" % "0.1.26-69aa3a")
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
+  "org.scalablytyped.slinky" %%% "wonder-frp" % "0.1.26-a3259d")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

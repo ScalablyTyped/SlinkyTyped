@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JobAssignedEvent extends JobEvent {
-  var request: TaskAgentJobRequest = js.native
+  var request: TaskAgentJobRequest
 }
 
 object JobAssignedEvent {
@@ -15,19 +14,5 @@ object JobAssignedEvent {
     val __obj = js.Dynamic.literal(jobId = jobId.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobAssignedEvent]
   }
-  @scala.inline
-  implicit class JobAssignedEventOps[Self <: JobAssignedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequest(value: TaskAgentJobRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

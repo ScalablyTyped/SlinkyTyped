@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Window extends js.Object {
-  var PrefixFree: typingsSlinky.prefixfree.PrefixFree = js.native
-  var StyleFix: typingsSlinky.prefixfree.StyleFix = js.native
+  var PrefixFree: typingsSlinky.prefixfree.PrefixFree
+  var StyleFix: typingsSlinky.prefixfree.StyleFix
 }
 
 object Window {
@@ -16,25 +15,5 @@ object Window {
     val __obj = js.Dynamic.literal(PrefixFree = PrefixFree.asInstanceOf[js.Any], StyleFix = StyleFix.asInstanceOf[js.Any])
     __obj.asInstanceOf[Window]
   }
-  @scala.inline
-  implicit class WindowOps[Self <: Window] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrefixFree(value: PrefixFree): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixFree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyleFix(value: StyleFix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StyleFix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

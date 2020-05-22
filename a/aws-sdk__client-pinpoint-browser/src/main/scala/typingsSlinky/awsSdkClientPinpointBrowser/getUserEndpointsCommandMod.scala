@@ -26,9 +26,16 @@ object getUserEndpointsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetUserEndpointsInput) = this()
+    /* CompleteClass */
+    override val input: GetUserEndpointsInput = js.native
     val middlewareStack: MiddlewareStack[GetUserEndpointsInput, GetUserEndpointsOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[GetUserEndpointsInput, GetUserEndpointsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetUserEndpointsInput, GetUserEndpointsOutput] = js.native
   }

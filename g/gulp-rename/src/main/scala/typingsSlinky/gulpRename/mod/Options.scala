@@ -4,49 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends ParsedPath {
-  var prefix: js.UndefOr[String] = js.native
-  var suffix: js.UndefOr[String] = js.native
+  var prefix: js.UndefOr[String] = js.undefined
+  var suffix: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    basename: String = null,
+    dirname: String = null,
+    extname: String = null,
+    prefix: String = null,
+    suffix: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (basename != null) __obj.updateDynamic("basename")(basename.asInstanceOf[js.Any])
+    if (dirname != null) __obj.updateDynamic("dirname")(dirname.asInstanceOf[js.Any])
+    if (extname != null) __obj.updateDynamic("extname")(extname.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

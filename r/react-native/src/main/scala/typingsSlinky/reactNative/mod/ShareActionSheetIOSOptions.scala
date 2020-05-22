@@ -4,78 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShareActionSheetIOSOptions extends js.Object {
   /** The activities to exclude from the ActionSheet.
     * For example: ['com.apple.UIKit.activity.PostToTwitter']
     */
-  var excludedActivityTypes: js.UndefOr[js.Array[String]] = js.native
-  var message: js.UndefOr[String] = js.native
-  var subject: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
+  var excludedActivityTypes: js.UndefOr[js.Array[String]] = js.undefined
+  var message: js.UndefOr[String] = js.undefined
+  var subject: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object ShareActionSheetIOSOptions {
   @scala.inline
-  def apply(): ShareActionSheetIOSOptions = {
+  def apply(
+    excludedActivityTypes: js.Array[String] = null,
+    message: String = null,
+    subject: String = null,
+    url: String = null
+  ): ShareActionSheetIOSOptions = {
     val __obj = js.Dynamic.literal()
+    if (excludedActivityTypes != null) __obj.updateDynamic("excludedActivityTypes")(excludedActivityTypes.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareActionSheetIOSOptions]
   }
-  @scala.inline
-  implicit class ShareActionSheetIOSOptionsOps[Self <: ShareActionSheetIOSOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExcludedActivityTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedActivityTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedActivityTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedActivityTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

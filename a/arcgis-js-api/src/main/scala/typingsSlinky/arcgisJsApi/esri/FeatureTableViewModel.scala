@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FeatureTableViewModel extends js.Object {
   /**
     * Indicates whether to display the `Attachments` field in the table. This is only applicable if the feature layer supports attachments. Currently, this field only displays the count of attachments per feature.  ![featuretable attachmentenabled](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/featuretable/attachments-enabled.png)
@@ -13,7 +12,7 @@ trait FeatureTableViewModel extends js.Object {
     *
     * @default false
     */
-  var attachmentsEnabled: Boolean = js.native
+  var attachmentsEnabled: Boolean
   /**
     * An array of individual configuration objects.  This is where you can specify what fields to display and how you wish to display them.  When not set, all fields except for `CreationDate`, `Creator`, `EditDate`, `Editor`, and `GlobalID` will be included. Otherwise, it is up to the developer to set the right field(s) to override and display.
     *
@@ -21,19 +20,19 @@ trait FeatureTableViewModel extends js.Object {
     *
     * @default null
     */
-  var fieldConfigs: js.Array[FieldColumnConfig] = js.native
+  var fieldConfigs: js.Array[FieldColumnConfig]
   /**
     * A collection of fields to remain hidden within the table.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-FeatureTableViewModel.html#hiddenFields)
     */
-  var hiddenFields: Collection[String] = js.native
+  var hiddenFields: Collection[String]
   /**
     * The associated [FeatureLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html) containing the fields and attributes to display within the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-FeatureTableViewModel.html#layer)
     */
-  var layer: FeatureLayer = js.native
+  var layer: FeatureLayer
 }
 
 object FeatureTableViewModel {
@@ -47,37 +46,5 @@ object FeatureTableViewModel {
     val __obj = js.Dynamic.literal(attachmentsEnabled = attachmentsEnabled.asInstanceOf[js.Any], fieldConfigs = fieldConfigs.asInstanceOf[js.Any], hiddenFields = hiddenFields.asInstanceOf[js.Any], layer = layer.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeatureTableViewModel]
   }
-  @scala.inline
-  implicit class FeatureTableViewModelOps[Self <: FeatureTableViewModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachmentsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldConfigs(value: js.Array[FieldColumnConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldConfigs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHiddenFields(value: Collection[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayer(value: FeatureLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,98 +7,45 @@ import scala.scalajs.js.annotation._
 /**
   * Template that represents a view subcomponent of an <ItemTemplate>.
   */
-@js.native
 trait ViewTemplate extends js.Object {
   /**
-  	 * View's ID (or set of IDs) used for data binding. This value must be unique.
-  	 */
-  var bindId: js.UndefOr[java.lang.String] = js.native
+    * View's ID (or set of IDs) used for data binding. This value must be unique.
+    */
+  var bindId: js.UndefOr[java.lang.String] = js.undefined
   /**
-  	 * Contains an array of subview templates to be added (in order) as children to this view.
-  	 */
-  var childTemplates: js.UndefOr[js.Array[ViewTemplate]] = js.native
+    * Contains an array of subview templates to be added (in order) as children to this view.
+    */
+  var childTemplates: js.UndefOr[js.Array[ViewTemplate]] = js.undefined
   /**
-  	 * Contains key-value pairs of view events and their listeners that are applied to this view component.
-  	 */
-  var events: js.UndefOr[js.Any] = js.native
+    * Contains key-value pairs of view events and their listeners that are applied to this view component.
+    */
+  var events: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Contains key-value pairs of view properties and their values that are applied to this view component.
-  	 */
-  var properties: js.UndefOr[js.Any] = js.native
+    * Contains key-value pairs of view properties and their values that are applied to this view component.
+    */
+  var properties: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * View's class name, for example, `Ti.UI.Button`.
-  	 */
-  var `type`: java.lang.String = js.native
+    * View's class name, for example, `Ti.UI.Button`.
+    */
+  var `type`: java.lang.String
 }
 
 object ViewTemplate {
   @scala.inline
-  def apply(`type`: java.lang.String): ViewTemplate = {
+  def apply(
+    `type`: java.lang.String,
+    bindId: java.lang.String = null,
+    childTemplates: js.Array[ViewTemplate] = null,
+    events: js.Any = null,
+    properties: js.Any = null
+  ): ViewTemplate = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bindId != null) __obj.updateDynamic("bindId")(bindId.asInstanceOf[js.Any])
+    if (childTemplates != null) __obj.updateDynamic("childTemplates")(childTemplates.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewTemplate]
   }
-  @scala.inline
-  implicit class ViewTemplateOps[Self <: ViewTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBindId(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildTemplates(value: js.Array[ViewTemplate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childTemplates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildTemplates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childTemplates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,29 +17,10 @@ trait SchemaListTriggersResponse extends js.Object {
 
 object SchemaListTriggersResponse {
   @scala.inline
-  def apply(): SchemaListTriggersResponse = {
+  def apply(triggers: js.Array[SchemaTrigger] = null): SchemaListTriggersResponse = {
     val __obj = js.Dynamic.literal()
+    if (triggers != null) __obj.updateDynamic("triggers")(triggers.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListTriggersResponse]
   }
-  @scala.inline
-  implicit class SchemaListTriggersResponseOps[Self <: SchemaListTriggersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTriggers(value: js.Array[SchemaTrigger]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

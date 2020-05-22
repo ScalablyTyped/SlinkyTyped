@@ -76,9 +76,9 @@ trait Integration extends js.Object {
     */
   var TemplateSelectionExpression: js.UndefOr[SelectionExpression] = js.native
   /**
-    * Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds for WebSocket APIs. The default value is 5,000 milliseconds, or 5 seconds for HTTP APIs.
+    * Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs. The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
     */
-  var TimeoutInMillis: js.UndefOr[IntegerWithLengthBetween50And29000] = js.native
+  var TimeoutInMillis: js.UndefOr[IntegerWithLengthBetween50And30000] = js.native
   /**
     * The TLS configuration for a private integration. If you specify a TLS configuration, private integration traffic uses the HTTPS protocol. Supported only for HTTP APIs.
     */
@@ -87,233 +87,46 @@ trait Integration extends js.Object {
 
 object Integration {
   @scala.inline
-  def apply(): Integration = {
+  def apply(
+    ApiGatewayManaged: js.UndefOr[boolean] = js.undefined,
+    ConnectionId: StringWithLengthBetween1And1024 = null,
+    ConnectionType: ConnectionType = null,
+    ContentHandlingStrategy: ContentHandlingStrategy = null,
+    CredentialsArn: Arn = null,
+    Description: StringWithLengthBetween0And1024 = null,
+    IntegrationId: Id = null,
+    IntegrationMethod: StringWithLengthBetween1And64 = null,
+    IntegrationResponseSelectionExpression: SelectionExpression = null,
+    IntegrationType: IntegrationType = null,
+    IntegrationUri: UriWithLengthBetween1And2048 = null,
+    PassthroughBehavior: PassthroughBehavior = null,
+    PayloadFormatVersion: StringWithLengthBetween1And64 = null,
+    RequestParameters: IntegrationParameters = null,
+    RequestTemplates: TemplateMap = null,
+    TemplateSelectionExpression: SelectionExpression = null,
+    TimeoutInMillis: js.UndefOr[IntegerWithLengthBetween50And30000] = js.undefined,
+    TlsConfig: TlsConfig = null
+  ): Integration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ApiGatewayManaged)) __obj.updateDynamic("ApiGatewayManaged")(ApiGatewayManaged.get.asInstanceOf[js.Any])
+    if (ConnectionId != null) __obj.updateDynamic("ConnectionId")(ConnectionId.asInstanceOf[js.Any])
+    if (ConnectionType != null) __obj.updateDynamic("ConnectionType")(ConnectionType.asInstanceOf[js.Any])
+    if (ContentHandlingStrategy != null) __obj.updateDynamic("ContentHandlingStrategy")(ContentHandlingStrategy.asInstanceOf[js.Any])
+    if (CredentialsArn != null) __obj.updateDynamic("CredentialsArn")(CredentialsArn.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (IntegrationId != null) __obj.updateDynamic("IntegrationId")(IntegrationId.asInstanceOf[js.Any])
+    if (IntegrationMethod != null) __obj.updateDynamic("IntegrationMethod")(IntegrationMethod.asInstanceOf[js.Any])
+    if (IntegrationResponseSelectionExpression != null) __obj.updateDynamic("IntegrationResponseSelectionExpression")(IntegrationResponseSelectionExpression.asInstanceOf[js.Any])
+    if (IntegrationType != null) __obj.updateDynamic("IntegrationType")(IntegrationType.asInstanceOf[js.Any])
+    if (IntegrationUri != null) __obj.updateDynamic("IntegrationUri")(IntegrationUri.asInstanceOf[js.Any])
+    if (PassthroughBehavior != null) __obj.updateDynamic("PassthroughBehavior")(PassthroughBehavior.asInstanceOf[js.Any])
+    if (PayloadFormatVersion != null) __obj.updateDynamic("PayloadFormatVersion")(PayloadFormatVersion.asInstanceOf[js.Any])
+    if (RequestParameters != null) __obj.updateDynamic("RequestParameters")(RequestParameters.asInstanceOf[js.Any])
+    if (RequestTemplates != null) __obj.updateDynamic("RequestTemplates")(RequestTemplates.asInstanceOf[js.Any])
+    if (TemplateSelectionExpression != null) __obj.updateDynamic("TemplateSelectionExpression")(TemplateSelectionExpression.asInstanceOf[js.Any])
+    if (!js.isUndefined(TimeoutInMillis)) __obj.updateDynamic("TimeoutInMillis")(TimeoutInMillis.get.asInstanceOf[js.Any])
+    if (TlsConfig != null) __obj.updateDynamic("TlsConfig")(TlsConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Integration]
   }
-  @scala.inline
-  implicit class IntegrationOps[Self <: Integration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiGatewayManaged(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiGatewayManaged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiGatewayManaged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiGatewayManaged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionId(value: StringWithLengthBetween1And1024): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionType(value: ConnectionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentHandlingStrategy(value: ContentHandlingStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentHandlingStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentHandlingStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentHandlingStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentialsArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CredentialsArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentialsArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CredentialsArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: StringWithLengthBetween0And1024): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrationId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrationMethod(value: StringWithLengthBetween1And64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrationResponseSelectionExpression(value: SelectionExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationResponseSelectionExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrationResponseSelectionExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationResponseSelectionExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrationType(value: IntegrationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrationUri(value: UriWithLengthBetween1And2048): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrationUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassthroughBehavior(value: PassthroughBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PassthroughBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassthroughBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PassthroughBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadFormatVersion(value: StringWithLengthBetween1And64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PayloadFormatVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadFormatVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PayloadFormatVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestParameters(value: IntegrationParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestTemplates(value: TemplateMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestTemplates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestTemplates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestTemplates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateSelectionExpression(value: SelectionExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSelectionExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateSelectionExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSelectionExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeoutInMillis(value: IntegerWithLengthBetween50And29000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutInMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsConfig(value: TlsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TlsConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TlsConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -31,10 +31,9 @@ import scala.scalajs.js.annotation._
   *
   * See [Messaging in Jupyter](https://jupyter-client.readthedocs.io/en/latest/messaging.html#kernel-info).
   */
-@js.native
 trait IInfoRequestMsg
   extends IShellMessage[kernel_info_request]
-     with Message
+     with _Message
 
 object IInfoRequestMsg {
   @scala.inline
@@ -45,9 +44,11 @@ object IInfoRequestMsg {
     ]) | Target | Data | Code | Metadata | Ename | Executioncount | (ReplyContent[IExecuteReply] with IExecuteCount) | Allowstdin | Transient | IHistoryRequestRange | IHistoryRequestSearch | IHistoryRequestTail | js.Object | Password | Cursorpos | CodeString | Executionstate | Name | ((/* import warning: importer.ImportType#apply Failed type conversion: @jupyterlab/services.@jupyterlab/services/lib/kernel/messages.KernelMessage.IDisplayDataMsg['content'] */ js.Any) with TransientDisplayidString) | Arguments | Body | Event,
     header: IHeader[kernel_info_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object
+    parent_header: IHeader[MessageType] | js.Object,
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView] = null
   ): IInfoRequestMsg = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
+    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInfoRequestMsg]
   }
 }

@@ -18,35 +18,10 @@ trait Delete extends js.Object {
 
 object Delete {
   @scala.inline
-  def apply(Objects: ObjectIdentifierList): Delete = {
+  def apply(Objects: ObjectIdentifierList, Quiet: js.UndefOr[Quiet] = js.undefined): Delete = {
     val __obj = js.Dynamic.literal(Objects = Objects.asInstanceOf[js.Any])
+    if (!js.isUndefined(Quiet)) __obj.updateDynamic("Quiet")(Quiet.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Delete]
   }
-  @scala.inline
-  implicit class DeleteOps[Self <: Delete] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjects(value: ObjectIdentifierList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Objects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuiet(value: Quiet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Quiet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuiet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Quiet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

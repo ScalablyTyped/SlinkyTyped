@@ -7,72 +7,32 @@ import scala.scalajs.js.annotation._
 /**
   * Options for when doing recursive matching.
   */
-@js.native
 trait MatchRecursiveOptions extends js.Object {
   /**
     * The escape character to use.
     *
     * **Must be exactly one character long.**
     */
-  var escapeChar: js.UndefOr[String | Null] = js.native
+  var escapeChar: js.UndefOr[String | Null] = js.undefined
   /**
     * The value names to associate with the matches.
     *
     * Specifying a value here will cause the `XRegExp.matchRecursive` method to
     * return and array of `XRegExp.MatchRecursiveValueNameMatch`
     */
-  var valueNames: js.UndefOr[MatchRecursiveValueNames | Null] = js.native
+  var valueNames: js.UndefOr[MatchRecursiveValueNames | Null] = js.undefined
 }
 
 object MatchRecursiveOptions {
   @scala.inline
-  def apply(): MatchRecursiveOptions = {
+  def apply(
+    escapeChar: js.UndefOr[Null | String] = js.undefined,
+    valueNames: js.UndefOr[Null | MatchRecursiveValueNames] = js.undefined
+  ): MatchRecursiveOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(escapeChar)) __obj.updateDynamic("escapeChar")(escapeChar.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueNames)) __obj.updateDynamic("valueNames")(valueNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchRecursiveOptions]
   }
-  @scala.inline
-  implicit class MatchRecursiveOptionsOps[Self <: MatchRecursiveOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEscapeChar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeChar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEscapeChar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeChar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEscapeCharNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeChar")(null)
-        ret
-    }
-    @scala.inline
-    def withValueNames(value: MatchRecursiveValueNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueNamesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueNames")(null)
-        ret
-    }
-  }
-  
 }
 

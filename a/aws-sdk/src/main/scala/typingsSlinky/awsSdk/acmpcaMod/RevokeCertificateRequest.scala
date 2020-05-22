@@ -26,31 +26,5 @@ object RevokeCertificateRequest {
     val __obj = js.Dynamic.literal(CertificateAuthorityArn = CertificateAuthorityArn.asInstanceOf[js.Any], CertificateSerial = CertificateSerial.asInstanceOf[js.Any], RevocationReason = RevocationReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevokeCertificateRequest]
   }
-  @scala.inline
-  implicit class RevokeCertificateRequestOps[Self <: RevokeCertificateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateAuthorityArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertificateSerial(value: String128): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateSerial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevocationReason(value: RevocationReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevocationReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

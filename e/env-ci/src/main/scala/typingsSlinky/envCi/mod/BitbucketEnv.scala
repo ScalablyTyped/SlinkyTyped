@@ -7,19 +7,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BitbucketEnv
   extends KnownCiEnv
      with CiEnvBase {
-  var branch: String = js.native
-  var build: String = js.native
-  var buildUrl: String = js.native
-  var commit: String = js.native
-  var name: `Bitbucket Pipelines` = js.native
-  var root: String = js.native
-  var service: bitbucket = js.native
-  var slug: String = js.native
-  var tag: js.UndefOr[String] = js.native
+  var branch: String
+  var build: String
+  var buildUrl: String
+  var commit: String
+  var name: `Bitbucket Pipelines`
+  var root: String
+  var service: bitbucket
+  var slug: String
+  var tag: js.UndefOr[String] = js.undefined
 }
 
 object BitbucketEnv {
@@ -33,78 +32,12 @@ object BitbucketEnv {
     name: `Bitbucket Pipelines`,
     root: String,
     service: bitbucket,
-    slug: String
+    slug: String,
+    tag: String = null
   ): BitbucketEnv = {
     val __obj = js.Dynamic.literal(branch = branch.asInstanceOf[js.Any], build = build.asInstanceOf[js.Any], buildUrl = buildUrl.asInstanceOf[js.Any], commit = commit.asInstanceOf[js.Any], isCi = isCi.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any], service = service.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
+    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[BitbucketEnv]
   }
-  @scala.inline
-  implicit class BitbucketEnvOps[Self <: BitbucketEnv] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBranch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuild(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuildUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: `Bitbucket Pipelines`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withService(value: bitbucket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSlug(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

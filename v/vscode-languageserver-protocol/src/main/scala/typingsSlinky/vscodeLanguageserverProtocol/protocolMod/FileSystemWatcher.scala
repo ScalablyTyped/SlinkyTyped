@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileSystemWatcher extends js.Object {
   /**
     * The  glob pattern to watch. Glob patterns can have the following syntax:
@@ -15,46 +14,21 @@ trait FileSystemWatcher extends js.Object {
     * - `[]` to declare a range of characters to match in a path segment (e.g., `example.[0-9]` to match on `example.0`, `example.1`, …)
     * - `[!...]` to negate a range of characters to match in a path segment (e.g., `example.[!0-9]` to match on `example.a`, `example.b`, but not `example.0`)
     */
-  var globPattern: String = js.native
+  var globPattern: String
   /**
     * The kind of events of interest. If omitted it defaults
     * to WatchKind.Create | WatchKind.Change | WatchKind.Delete
     * which is 7.
     */
-  var kind: js.UndefOr[Double] = js.native
+  var kind: js.UndefOr[Double] = js.undefined
 }
 
 object FileSystemWatcher {
   @scala.inline
-  def apply(globPattern: String): FileSystemWatcher = {
+  def apply(globPattern: String, kind: js.UndefOr[Double] = js.undefined): FileSystemWatcher = {
     val __obj = js.Dynamic.literal(globPattern = globPattern.asInstanceOf[js.Any])
+    if (!js.isUndefined(kind)) __obj.updateDynamic("kind")(kind.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileSystemWatcher]
   }
-  @scala.inline
-  implicit class FileSystemWatcherOps[Self <: FileSystemWatcher] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

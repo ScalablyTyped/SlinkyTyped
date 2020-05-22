@@ -4,110 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Data extends js.Object {
   /** The aircraft that is flying between an origin and destination. */
-  var aircraft: js.UndefOr[js.Array[AircraftData]] = js.native
+  var aircraft: js.UndefOr[js.Array[AircraftData]] = js.undefined
   /** The airport of an origin or destination. */
-  var airport: js.UndefOr[js.Array[AirportData]] = js.native
+  var airport: js.UndefOr[js.Array[AirportData]] = js.undefined
   /** The airline carrier of the aircraft flying between an origin and destination. Allowed values are IATA carrier codes. */
-  var carrier: js.UndefOr[js.Array[CarrierData]] = js.native
+  var carrier: js.UndefOr[js.Array[CarrierData]] = js.undefined
   /** The city that is either the origin or destination of part of a trip. */
-  var city: js.UndefOr[js.Array[CityData]] = js.native
+  var city: js.UndefOr[js.Array[CityData]] = js.undefined
   /**
     * Identifies this as QPX Express response resource, including a trip's airport, city, taxes, airline, and aircraft. Value: the fixed string
     * qpxexpress#data.
     */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The taxes due for flying between an origin and a destination. */
-  var tax: js.UndefOr[js.Array[TaxData]] = js.native
+  var tax: js.UndefOr[js.Array[TaxData]] = js.undefined
 }
 
 object Data {
   @scala.inline
-  def apply(): Data = {
+  def apply(
+    aircraft: js.Array[AircraftData] = null,
+    airport: js.Array[AirportData] = null,
+    carrier: js.Array[CarrierData] = null,
+    city: js.Array[CityData] = null,
+    kind: String = null,
+    tax: js.Array[TaxData] = null
+  ): Data = {
     val __obj = js.Dynamic.literal()
+    if (aircraft != null) __obj.updateDynamic("aircraft")(aircraft.asInstanceOf[js.Any])
+    if (airport != null) __obj.updateDynamic("airport")(airport.asInstanceOf[js.Any])
+    if (carrier != null) __obj.updateDynamic("carrier")(carrier.asInstanceOf[js.Any])
+    if (city != null) __obj.updateDynamic("city")(city.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (tax != null) __obj.updateDynamic("tax")(tax.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }
-  @scala.inline
-  implicit class DataOps[Self <: Data] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAircraft(value: js.Array[AircraftData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aircraft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAircraft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aircraft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAirport(value: js.Array[AirportData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("airport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAirport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("airport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCarrier(value: js.Array[CarrierData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCarrier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCity(value: js.Array[CityData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTax(value: js.Array[TaxData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

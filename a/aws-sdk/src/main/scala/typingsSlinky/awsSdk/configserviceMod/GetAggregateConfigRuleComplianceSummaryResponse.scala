@@ -22,53 +22,16 @@ trait GetAggregateConfigRuleComplianceSummaryResponse extends js.Object {
 
 object GetAggregateConfigRuleComplianceSummaryResponse {
   @scala.inline
-  def apply(): GetAggregateConfigRuleComplianceSummaryResponse = {
+  def apply(
+    AggregateComplianceCounts: AggregateComplianceCountList = null,
+    GroupByKey: StringWithCharLimit256 = null,
+    NextToken: NextToken = null
+  ): GetAggregateConfigRuleComplianceSummaryResponse = {
     val __obj = js.Dynamic.literal()
+    if (AggregateComplianceCounts != null) __obj.updateDynamic("AggregateComplianceCounts")(AggregateComplianceCounts.asInstanceOf[js.Any])
+    if (GroupByKey != null) __obj.updateDynamic("GroupByKey")(GroupByKey.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAggregateConfigRuleComplianceSummaryResponse]
   }
-  @scala.inline
-  implicit class GetAggregateConfigRuleComplianceSummaryResponseOps[Self <: GetAggregateConfigRuleComplianceSummaryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregateComplianceCounts(value: AggregateComplianceCountList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregateComplianceCounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregateComplianceCounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregateComplianceCounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupByKey(value: StringWithCharLimit256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupByKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupByKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupByKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

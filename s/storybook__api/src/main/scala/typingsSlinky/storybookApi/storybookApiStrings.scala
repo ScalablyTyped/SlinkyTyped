@@ -2,7 +2,7 @@ package typingsSlinky.storybookApi
 
 import typingsSlinky.storybookApi.layoutMod.PanelPositions
 import typingsSlinky.storybookApi.shortcutsMod.Action
-import typingsSlinky.storybookApi.storiesMod.ViewMode
+import typingsSlinky.storybookApi.storiesMod._ViewMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,7 @@ object storybookApiStrings {
   sealed trait fullScreen extends Action
   
   @js.native
-  sealed trait info extends ViewMode
+  sealed trait info extends _ViewMode
   
   @js.native
   sealed trait meta extends js.Object
@@ -90,13 +90,13 @@ object storybookApiStrings {
   sealed trait session extends js.Object
   
   @js.native
-  sealed trait settings extends ViewMode
+  sealed trait settings extends _ViewMode
   
   @js.native
   sealed trait shortcutsPage extends Action
   
   @js.native
-  sealed trait story extends ViewMode
+  sealed trait story extends _ViewMode
   
   @js.native
   sealed trait toggleNav extends Action

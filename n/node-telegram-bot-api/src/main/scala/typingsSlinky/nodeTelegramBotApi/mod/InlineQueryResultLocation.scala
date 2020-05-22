@@ -5,33 +5,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InlineQueryResultLocation
   extends InlineQueryResultLocationBase
      with InlineQueryResult {
-  var `type`: location = js.native
+  var `type`: location
 }
 
 object InlineQueryResultLocation {
   @scala.inline
-  def apply(id: String, latitude: Double, longitude: Double, title: String, `type`: location): InlineQueryResultLocation = {
+  def apply(
+    id: String,
+    latitude: Double,
+    longitude: Double,
+    title: String,
+    `type`: location,
+    input_message_content: InputMessageContent = null,
+    reply_markup: InlineKeyboardMarkup = null,
+    thumb_height: js.UndefOr[Double] = js.undefined,
+    thumb_url: String = null,
+    thumb_width: js.UndefOr[Double] = js.undefined
+  ): InlineQueryResultLocation = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (input_message_content != null) __obj.updateDynamic("input_message_content")(input_message_content.asInstanceOf[js.Any])
+    if (reply_markup != null) __obj.updateDynamic("reply_markup")(reply_markup.asInstanceOf[js.Any])
+    if (!js.isUndefined(thumb_height)) __obj.updateDynamic("thumb_height")(thumb_height.get.asInstanceOf[js.Any])
+    if (thumb_url != null) __obj.updateDynamic("thumb_url")(thumb_url.asInstanceOf[js.Any])
+    if (!js.isUndefined(thumb_width)) __obj.updateDynamic("thumb_width")(thumb_width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InlineQueryResultLocation]
   }
-  @scala.inline
-  implicit class InlineQueryResultLocationOps[Self <: InlineQueryResultLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

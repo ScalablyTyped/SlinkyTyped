@@ -177,12 +177,10 @@ object Extension {
   def ino: typingsSlinky.sloc.slocStrings.ino = "ino".asInstanceOf[typingsSlinky.sloc.slocStrings.ino]
   @scala.inline
   def jade: typingsSlinky.sloc.slocStrings.jade = "jade".asInstanceOf[typingsSlinky.sloc.slocStrings.jade]
-  @JSName("java")
   @scala.inline
   def java_ : typingsSlinky.sloc.slocStrings.java_ = "java".asInstanceOf[typingsSlinky.sloc.slocStrings.java_]
   @scala.inline
   def jl: typingsSlinky.sloc.slocStrings.jl = "jl".asInstanceOf[typingsSlinky.sloc.slocStrings.jl]
-  @JSName("js")
   @scala.inline
   def js_ : typingsSlinky.sloc.slocStrings.js_ = "js".asInstanceOf[typingsSlinky.sloc.slocStrings.js_]
   @scala.inline
@@ -241,7 +239,6 @@ object Extension {
   def rs: typingsSlinky.sloc.slocStrings.rs = "rs".asInstanceOf[typingsSlinky.sloc.slocStrings.rs]
   @scala.inline
   def sass: typingsSlinky.sloc.slocStrings.sass = "sass".asInstanceOf[typingsSlinky.sloc.slocStrings.sass]
-  @JSName("scala")
   @scala.inline
   def scala_ : typingsSlinky.sloc.slocStrings.scala_ = "scala".asInstanceOf[typingsSlinky.sloc.slocStrings.scala_]
   @scala.inline

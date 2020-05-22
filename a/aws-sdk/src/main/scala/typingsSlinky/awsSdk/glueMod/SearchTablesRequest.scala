@@ -34,89 +34,22 @@ trait SearchTablesRequest extends js.Object {
 
 object SearchTablesRequest {
   @scala.inline
-  def apply(): SearchTablesRequest = {
+  def apply(
+    CatalogId: CatalogIdString = null,
+    Filters: SearchPropertyPredicates = null,
+    MaxResults: js.UndefOr[PageSize] = js.undefined,
+    NextToken: Token = null,
+    SearchText: ValueString = null,
+    SortCriteria: SortCriteria = null
+  ): SearchTablesRequest = {
     val __obj = js.Dynamic.literal()
+    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (SearchText != null) __obj.updateDynamic("SearchText")(SearchText.asInstanceOf[js.Any])
+    if (SortCriteria != null) __obj.updateDynamic("SortCriteria")(SortCriteria.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchTablesRequest]
   }
-  @scala.inline
-  implicit class SearchTablesRequestOps[Self <: SearchTablesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCatalogId(value: CatalogIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: SearchPropertyPredicates): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: PageSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchText(value: ValueString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortCriteria(value: SortCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortCriteria")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

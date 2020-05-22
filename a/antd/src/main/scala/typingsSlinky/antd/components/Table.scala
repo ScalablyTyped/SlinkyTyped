@@ -9,7 +9,6 @@ import typingsSlinky.antd.anon.ScrollToFirstRowOnChange
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
-import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.spinMod.SpinProps
 import typingsSlinky.antd.tableInterfaceMod.ColumnsType
@@ -101,7 +100,7 @@ object Table {
     def locale(value: TableLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(
-      value: (/* pagination */ PaginationConfig, /* filters */ Record[String, js.Array[typingsSlinky.antd.tableInterfaceMod.Key] | Null], /* sorter */ SorterResult[RecordType] | js.Array[SorterResult[RecordType]], /* extra */ TableCurrentDataSource[RecordType]) => Unit
+      value: (/* pagination */ TablePaginationConfig, /* filters */ Record[String, js.Array[typingsSlinky.antd.tableInterfaceMod.Key] | Null], /* sorter */ SorterResult[RecordType] | js.Array[SorterResult[RecordType]], /* extra */ TableCurrentDataSource[RecordType]) => Unit
     ): this.type = set("onChange", js.Any.fromFunction4(value))
     @scala.inline
     def onExpand(value: (/* expanded */ Boolean, RecordType) => Unit): this.type = set("onExpand", js.Any.fromFunction2(value))
@@ -132,6 +131,8 @@ object Table {
     @scala.inline
     def showHeader(value: Boolean): this.type = set("showHeader", value.asInstanceOf[js.Any])
     @scala.inline
+    def showSorterTooltip(value: Boolean): this.type = set("showSorterTooltip", value.asInstanceOf[js.Any])
+    @scala.inline
     def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def sortDirections(value: js.Array[SortOrder]): this.type = set("sortDirections", value.asInstanceOf[js.Any])
@@ -146,6 +147,11 @@ object Table {
   }
   
   def withProps[RecordType <: js.Object](p: TableProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[RecordType <: js.Object](): Builder[RecordType] = {
+    val __props = js.Dynamic.literal()
+    new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[TableProps[RecordType]]))
+  }
   implicit def make[RecordType <: js.Object](companion: Table.type): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, js.Dictionary.empty))()
 }
 

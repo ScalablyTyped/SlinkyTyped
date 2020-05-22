@@ -18,41 +18,11 @@ trait CreateWorkspacesResult extends js.Object {
 
 object CreateWorkspacesResult {
   @scala.inline
-  def apply(): CreateWorkspacesResult = {
+  def apply(FailedRequests: FailedCreateWorkspaceRequests = null, PendingRequests: WorkspaceList = null): CreateWorkspacesResult = {
     val __obj = js.Dynamic.literal()
+    if (FailedRequests != null) __obj.updateDynamic("FailedRequests")(FailedRequests.asInstanceOf[js.Any])
+    if (PendingRequests != null) __obj.updateDynamic("PendingRequests")(PendingRequests.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateWorkspacesResult]
   }
-  @scala.inline
-  implicit class CreateWorkspacesResultOps[Self <: CreateWorkspacesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedRequests(value: FailedCreateWorkspaceRequests): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedRequests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPendingRequests(value: WorkspaceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingRequests")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

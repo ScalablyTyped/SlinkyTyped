@@ -54,78 +54,12 @@ object Distribution {
     Id: String,
     InProgressInvalidationBatches: integer,
     LastModifiedTime: js.Date,
-    Status: String
+    Status: String,
+    AliasICPRecordals: AliasICPRecordals = null
   ): Distribution = {
     val __obj = js.Dynamic.literal(ARN = ARN.asInstanceOf[js.Any], ActiveTrustedSigners = ActiveTrustedSigners.asInstanceOf[js.Any], DistributionConfig = DistributionConfig.asInstanceOf[js.Any], DomainName = DomainName.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], InProgressInvalidationBatches = InProgressInvalidationBatches.asInstanceOf[js.Any], LastModifiedTime = LastModifiedTime.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
+    if (AliasICPRecordals != null) __obj.updateDynamic("AliasICPRecordals")(AliasICPRecordals.asInstanceOf[js.Any])
     __obj.asInstanceOf[Distribution]
   }
-  @scala.inline
-  implicit class DistributionOps[Self <: Distribution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActiveTrustedSigners(value: ActiveTrustedSigners): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveTrustedSigners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDistributionConfig(value: DistributionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DistributionConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomainName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInProgressInvalidationBatches(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InProgressInvalidationBatches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAliasICPRecordals(value: AliasICPRecordals): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasICPRecordals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAliasICPRecordals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasICPRecordals")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

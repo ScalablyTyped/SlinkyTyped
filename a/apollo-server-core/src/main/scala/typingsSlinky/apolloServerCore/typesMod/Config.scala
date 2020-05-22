@@ -1,16 +1,28 @@
 package typingsSlinky.apolloServerCore.typesMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloCacheControl.mod.CacheControlExtensionOptions
 import typingsSlinky.apolloEngineReporting.agentMod.EngineReportingOptions
+import typingsSlinky.apolloServerCaching.keyValueCacheMod.KeyValueCache
 import typingsSlinky.apolloServerCore.anon.PartialSubscriptionServer
 import typingsSlinky.apolloServerCore.anon.TypeofSchemaDirectiveVisi
 import typingsSlinky.apolloServerCore.apolloServerCoreBooleans.`false`
+import typingsSlinky.apolloServerCore.graphqlOptionsMod.DataSources
 import typingsSlinky.apolloServerCore.graphqlOptionsMod.PersistedQueryOptions
 import typingsSlinky.apolloServerCore.playgroundMod.PlaygroundConfig
+import typingsSlinky.apolloServerTypes.mod.GraphQLExecutionResult
+import typingsSlinky.apolloServerTypes.mod.GraphQLRequestContext
+import typingsSlinky.apolloServerTypes.mod.GraphQLRequestContextExecutionDidStart
+import typingsSlinky.apolloServerTypes.mod.GraphQLResponse
+import typingsSlinky.apolloServerTypes.mod.Logger
 import typingsSlinky.apolloServerTypes.mod.ValueOrPromise
 import typingsSlinky.apollographqlApolloTools.buildServiceDefinitionMod.GraphQLSchemaModule
 import typingsSlinky.graphql.astMod.DocumentNode
+import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
+import typingsSlinky.graphql.formatErrorMod.GraphQLFormattedError
+import typingsSlinky.graphql.mod.GraphQLError
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphql.mod.ValidationContext
 import typingsSlinky.graphqlTools.interfacesMod.GraphQLParseOptions
 import typingsSlinky.graphqlTools.interfacesMod.IMocks
 import typingsSlinky.graphqlTools.interfacesMod.IResolvers
@@ -19,289 +31,97 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends BaseConfig {
-  var cacheControl: js.UndefOr[CacheControlExtensionOptions | Boolean] = js.native
-  var context: js.UndefOr[Context[js.Object] | (ContextFunction[_, js.Object])] = js.native
-  var engine: js.UndefOr[Boolean | EngineReportingOptions[Context[js.Object]]] = js.native
-  var experimental_approximateDocumentStoreMiB: js.UndefOr[Double] = js.native
-  var extensions: js.UndefOr[js.Array[js.Function0[typingsSlinky.graphqlExtensions.mod.GraphQLExtension[_]]]] = js.native
-  var gateway: js.UndefOr[GraphQLService] = js.native
-  var introspection: js.UndefOr[Boolean] = js.native
-  var mockEntireSchema: js.UndefOr[Boolean] = js.native
-  var mocks: js.UndefOr[Boolean | IMocks] = js.native
-  var modules: js.UndefOr[js.Array[GraphQLSchemaModule]] = js.native
-  var parseOptions: js.UndefOr[GraphQLParseOptions] = js.native
-  var persistedQueries: js.UndefOr[PersistedQueryOptions | `false`] = js.native
-  var playground: js.UndefOr[PlaygroundConfig] = js.native
-  var plugins: js.UndefOr[js.Array[PluginDefinition]] = js.native
-  var resolvers: js.UndefOr[(IResolvers[_, _]) | (js.Array[IResolvers[_, _]])] = js.native
-  var schema: js.UndefOr[GraphQLSchema] = js.native
-  var schemaDirectives: js.UndefOr[Record[String, TypeofSchemaDirectiveVisi]] = js.native
-  var subscriptions: js.UndefOr[PartialSubscriptionServer | String | `false`] = js.native
-  var typeDefs: js.UndefOr[DocumentNode | (js.Array[DocumentNode | String]) | String] = js.native
-  var uploads: js.UndefOr[Boolean | FileUploadOptions] = js.native
+  var cacheControl: js.UndefOr[CacheControlExtensionOptions | Boolean] = js.undefined
+  var context: js.UndefOr[Context[js.Object] | (ContextFunction[_, js.Object])] = js.undefined
+  var engine: js.UndefOr[Boolean | EngineReportingOptions[Context[js.Object]]] = js.undefined
+  var experimental_approximateDocumentStoreMiB: js.UndefOr[Double] = js.undefined
+  var extensions: js.UndefOr[js.Array[js.Function0[typingsSlinky.graphqlExtensions.mod.GraphQLExtension[_]]]] = js.undefined
+  var gateway: js.UndefOr[GraphQLService] = js.undefined
+  var introspection: js.UndefOr[Boolean] = js.undefined
+  var mockEntireSchema: js.UndefOr[Boolean] = js.undefined
+  var mocks: js.UndefOr[Boolean | IMocks] = js.undefined
+  var modules: js.UndefOr[js.Array[GraphQLSchemaModule]] = js.undefined
+  var parseOptions: js.UndefOr[GraphQLParseOptions] = js.undefined
+  var persistedQueries: js.UndefOr[PersistedQueryOptions | `false`] = js.undefined
+  var playground: js.UndefOr[PlaygroundConfig] = js.undefined
+  var plugins: js.UndefOr[js.Array[PluginDefinition]] = js.undefined
+  var resolvers: js.UndefOr[(IResolvers[_, _]) | (js.Array[IResolvers[_, _]])] = js.undefined
+  var schema: js.UndefOr[GraphQLSchema] = js.undefined
+  var schemaDirectives: js.UndefOr[Record[String, TypeofSchemaDirectiveVisi]] = js.undefined
+  var subscriptions: js.UndefOr[PartialSubscriptionServer | String | `false`] = js.undefined
+  var typeDefs: js.UndefOr[DocumentNode | (js.Array[DocumentNode | String]) | String] = js.undefined
+  var uploads: js.UndefOr[Boolean | FileUploadOptions] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    cache: KeyValueCache[String] = null,
+    cacheControl: CacheControlExtensionOptions | Boolean = null,
+    context: Context[js.Object] | (ContextFunction[_, js.Object]) = null,
+    dataSources: () => DataSources[Context[js.Object]] = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    engine: Boolean | EngineReportingOptions[Context[js.Object]] = null,
+    executor: /* requestContext */ GraphQLRequestContextExecutionDidStart[Record[String, _]] => ValueOrPromise[GraphQLExecutionResult] = null,
+    experimental_approximateDocumentStoreMiB: js.UndefOr[Double] = js.undefined,
+    extensions: js.Array[js.Function0[typingsSlinky.graphqlExtensions.mod.GraphQLExtension[_]]] = null,
+    fieldResolver: (_, StringDictionary[_], Context[js.Object], /* info */ GraphQLResolveInfo) => js.Any = null,
+    formatError: /* error */ GraphQLError => GraphQLFormattedError[Record[String, _]] = null,
+    formatResponse: (/* response */ GraphQLResponse | Null, /* requestContext */ GraphQLRequestContext[Context[js.Object]]) => GraphQLResponse = null,
+    gateway: GraphQLService = null,
+    introspection: js.UndefOr[Boolean] = js.undefined,
+    logger: Logger = null,
+    mockEntireSchema: js.UndefOr[Boolean] = js.undefined,
+    mocks: Boolean | IMocks = null,
+    modules: js.Array[GraphQLSchemaModule] = null,
+    parseOptions: GraphQLParseOptions = null,
+    persistedQueries: PersistedQueryOptions | `false` = null,
+    playground: PlaygroundConfig = null,
+    plugins: js.Array[PluginDefinition] = null,
+    resolvers: (IResolvers[_, _]) | (js.Array[IResolvers[_, _]]) = null,
+    rootValue: (js.Function1[/* parsedQuery */ DocumentNode, _]) | js.Any = null,
+    schema: GraphQLSchema = null,
+    schemaDirectives: Record[String, TypeofSchemaDirectiveVisi] = null,
+    subscriptions: PartialSubscriptionServer | String | `false` = null,
+    tracing: js.UndefOr[Boolean] = js.undefined,
+    typeDefs: DocumentNode | (js.Array[DocumentNode | String]) | String = null,
+    uploads: Boolean | FileUploadOptions = null,
+    validationRules: js.Array[js.Function1[/* context */ ValidationContext, _]] = null
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
+    if (cacheControl != null) __obj.updateDynamic("cacheControl")(cacheControl.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (dataSources != null) __obj.updateDynamic("dataSources")(js.Any.fromFunction0(dataSources))
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (engine != null) __obj.updateDynamic("engine")(engine.asInstanceOf[js.Any])
+    if (executor != null) __obj.updateDynamic("executor")(js.Any.fromFunction1(executor))
+    if (!js.isUndefined(experimental_approximateDocumentStoreMiB)) __obj.updateDynamic("experimental_approximateDocumentStoreMiB")(experimental_approximateDocumentStoreMiB.get.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (fieldResolver != null) __obj.updateDynamic("fieldResolver")(js.Any.fromFunction4(fieldResolver))
+    if (formatError != null) __obj.updateDynamic("formatError")(js.Any.fromFunction1(formatError))
+    if (formatResponse != null) __obj.updateDynamic("formatResponse")(js.Any.fromFunction2(formatResponse))
+    if (gateway != null) __obj.updateDynamic("gateway")(gateway.asInstanceOf[js.Any])
+    if (!js.isUndefined(introspection)) __obj.updateDynamic("introspection")(introspection.get.asInstanceOf[js.Any])
+    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
+    if (!js.isUndefined(mockEntireSchema)) __obj.updateDynamic("mockEntireSchema")(mockEntireSchema.get.asInstanceOf[js.Any])
+    if (mocks != null) __obj.updateDynamic("mocks")(mocks.asInstanceOf[js.Any])
+    if (modules != null) __obj.updateDynamic("modules")(modules.asInstanceOf[js.Any])
+    if (parseOptions != null) __obj.updateDynamic("parseOptions")(parseOptions.asInstanceOf[js.Any])
+    if (persistedQueries != null) __obj.updateDynamic("persistedQueries")(persistedQueries.asInstanceOf[js.Any])
+    if (playground != null) __obj.updateDynamic("playground")(playground.asInstanceOf[js.Any])
+    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
+    if (resolvers != null) __obj.updateDynamic("resolvers")(resolvers.asInstanceOf[js.Any])
+    if (rootValue != null) __obj.updateDynamic("rootValue")(rootValue.asInstanceOf[js.Any])
+    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
+    if (schemaDirectives != null) __obj.updateDynamic("schemaDirectives")(schemaDirectives.asInstanceOf[js.Any])
+    if (subscriptions != null) __obj.updateDynamic("subscriptions")(subscriptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(tracing)) __obj.updateDynamic("tracing")(tracing.get.asInstanceOf[js.Any])
+    if (typeDefs != null) __obj.updateDynamic("typeDefs")(typeDefs.asInstanceOf[js.Any])
+    if (uploads != null) __obj.updateDynamic("uploads")(uploads.asInstanceOf[js.Any])
+    if (validationRules != null) __obj.updateDynamic("validationRules")(validationRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheControl(value: CacheControlExtensionOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextFunction1(value: _ => ValueOrPromise[Context[js.Object]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withContext(value: Context[js.Object] | (ContextFunction[_, js.Object])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngine(value: Boolean | EngineReportingOptions[Context[js.Object]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperimental_approximateDocumentStoreMiB(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental_approximateDocumentStoreMiB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimental_approximateDocumentStoreMiB: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental_approximateDocumentStoreMiB")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: js.Array[js.Function0[typingsSlinky.graphqlExtensions.mod.GraphQLExtension[_]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGateway(value: GraphQLService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGateway: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gateway")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntrospection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("introspection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntrospection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("introspection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMockEntireSchema(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mockEntireSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMockEntireSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mockEntireSchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMocks(value: Boolean | IMocks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mocks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMocks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mocks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModules(value: js.Array[GraphQLSchemaModule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParseOptions(value: GraphQLParseOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParseOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistedQueries(value: PersistedQueryOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistedQueries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayground(value: PlaygroundConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: js.Array[PluginDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolvers(value: (IResolvers[_, _]) | (js.Array[IResolvers[_, _]])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolvers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchema(value: GraphQLSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaDirectives(value: Record[String, TypeofSchemaDirectiveVisi]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaDirectives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaDirectives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaDirectives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscriptions(value: PartialSubscriptionServer | String | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeDefs(value: DocumentNode | (js.Array[DocumentNode | String]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeDefs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeDefs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeDefs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploads(value: Boolean | FileUploadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploads: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploads")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

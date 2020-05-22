@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListCreationInformation extends ClientValueObject {
-  def get_customSchemaXml(): String = js.native
-  def get_dataSourceProperties(): js.Any = js.native
-  def get_description(): String = js.native
-  def get_documentTemplateType(): Double = js.native
-  def get_quickLaunchOption(): QuickLaunchOptions = js.native
-  def get_templateFeatureId(): Guid = js.native
-  def get_templateType(): Double = js.native
-  def get_title(): String = js.native
-  def get_url(): String = js.native
-  def set_customSchemaXml(value: String): Unit = js.native
-  def set_dataSourceProperties(value: js.Any): Unit = js.native
-  def set_description(value: String): Unit = js.native
-  def set_documentTemplateType(value: Double): Unit = js.native
-  def set_quickLaunchOption(value: QuickLaunchOptions): Unit = js.native
-  def set_templateFeatureId(value: Guid): Unit = js.native
-  def set_templateType(value: Double): Unit = js.native
-  def set_title(value: String): Unit = js.native
-  def set_url(value: String): Unit = js.native
+  def get_customSchemaXml(): String
+  def get_dataSourceProperties(): js.Any
+  def get_description(): String
+  def get_documentTemplateType(): Double
+  def get_quickLaunchOption(): QuickLaunchOptions
+  def get_templateFeatureId(): Guid
+  def get_templateType(): Double
+  def get_title(): String
+  def get_url(): String
+  def set_customSchemaXml(value: String): Unit
+  def set_dataSourceProperties(value: js.Any): Unit
+  def set_description(value: String): Unit
+  def set_documentTemplateType(value: Double): Unit
+  def set_quickLaunchOption(value: QuickLaunchOptions): Unit
+  def set_templateFeatureId(value: Guid): Unit
+  def set_templateType(value: Double): Unit
+  def set_title(value: String): Unit
+  def set_url(value: String): Unit
 }
 
 object ListCreationInformation {
@@ -56,121 +55,5 @@ object ListCreationInformation {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_customSchemaXml = js.Any.fromFunction0(get_customSchemaXml), get_dataSourceProperties = js.Any.fromFunction0(get_dataSourceProperties), get_description = js.Any.fromFunction0(get_description), get_documentTemplateType = js.Any.fromFunction0(get_documentTemplateType), get_quickLaunchOption = js.Any.fromFunction0(get_quickLaunchOption), get_templateFeatureId = js.Any.fromFunction0(get_templateFeatureId), get_templateType = js.Any.fromFunction0(get_templateType), get_title = js.Any.fromFunction0(get_title), get_typeId = js.Any.fromFunction0(get_typeId), get_url = js.Any.fromFunction0(get_url), set_customSchemaXml = js.Any.fromFunction1(set_customSchemaXml), set_dataSourceProperties = js.Any.fromFunction1(set_dataSourceProperties), set_description = js.Any.fromFunction1(set_description), set_documentTemplateType = js.Any.fromFunction1(set_documentTemplateType), set_quickLaunchOption = js.Any.fromFunction1(set_quickLaunchOption), set_templateFeatureId = js.Any.fromFunction1(set_templateFeatureId), set_templateType = js.Any.fromFunction1(set_templateType), set_title = js.Any.fromFunction1(set_title), set_url = js.Any.fromFunction1(set_url), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[ListCreationInformation]
   }
-  @scala.inline
-  implicit class ListCreationInformationOps[Self <: ListCreationInformation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_customSchemaXml(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_customSchemaXml")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_dataSourceProperties(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_dataSourceProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_description(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_description")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_documentTemplateType(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_documentTemplateType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_quickLaunchOption(value: () => QuickLaunchOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_quickLaunchOption")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_templateFeatureId(value: () => Guid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_templateFeatureId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_templateType(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_templateType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_title(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_title")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_url(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_url")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_customSchemaXml(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_customSchemaXml")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_dataSourceProperties(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_dataSourceProperties")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_description(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_description")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_documentTemplateType(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_documentTemplateType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_quickLaunchOption(value: QuickLaunchOptions => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_quickLaunchOption")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_templateFeatureId(value: Guid => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_templateFeatureId")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_templateType(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_templateType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_title(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_title")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_url(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_url")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

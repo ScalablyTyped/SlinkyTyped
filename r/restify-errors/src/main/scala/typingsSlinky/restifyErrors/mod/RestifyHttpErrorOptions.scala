@@ -1,79 +1,42 @@
 package typingsSlinky.restifyErrors.mod
 
+import typingsSlinky.verror.mod.Info
 import typingsSlinky.verror.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RestifyHttpErrorOptions extends Options {
-  var code: js.UndefOr[String] = js.native
-  var context: js.UndefOr[js.Any] = js.native
-  var message: js.UndefOr[String] = js.native
-  var statusCode: js.UndefOr[Double] = js.native
+  var code: js.UndefOr[String] = js.undefined
+  var context: js.UndefOr[js.Any] = js.undefined
+  var message: js.UndefOr[String] = js.undefined
+  var statusCode: js.UndefOr[Double] = js.undefined
 }
 
 object RestifyHttpErrorOptions {
   @scala.inline
-  def apply(): RestifyHttpErrorOptions = {
+  def apply(
+    cause: js.UndefOr[Null | js.Error] = js.undefined,
+    code: String = null,
+    constructorOpt: /* repeated */ js.Any => Unit = null,
+    context: js.Any = null,
+    info: Info = null,
+    message: String = null,
+    name: String = null,
+    statusCode: js.UndefOr[Double] = js.undefined,
+    strict: js.UndefOr[Boolean] = js.undefined
+  ): RestifyHttpErrorOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cause)) __obj.updateDynamic("cause")(cause.asInstanceOf[js.Any])
+    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
+    if (constructorOpt != null) __obj.updateDynamic("constructorOpt")(js.Any.fromFunction1(constructorOpt))
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(statusCode)) __obj.updateDynamic("statusCode")(statusCode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestifyHttpErrorOptions]
   }
-  @scala.inline
-  implicit class RestifyHttpErrorOptionsOps[Self <: RestifyHttpErrorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

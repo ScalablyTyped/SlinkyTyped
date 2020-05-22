@@ -30,53 +30,12 @@ trait SchemaHostRule extends js.Object {
 
 object SchemaHostRule {
   @scala.inline
-  def apply(): SchemaHostRule = {
+  def apply(description: String = null, hosts: js.Array[String] = null, pathMatcher: String = null): SchemaHostRule = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (hosts != null) __obj.updateDynamic("hosts")(hosts.asInstanceOf[js.Any])
+    if (pathMatcher != null) __obj.updateDynamic("pathMatcher")(pathMatcher.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHostRule]
   }
-  @scala.inline
-  implicit class SchemaHostRuleOps[Self <: SchemaHostRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHosts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathMatcher(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathMatcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathMatcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathMatcher")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

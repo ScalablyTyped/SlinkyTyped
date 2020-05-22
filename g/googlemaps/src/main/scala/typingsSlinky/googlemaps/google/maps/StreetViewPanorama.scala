@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** Street View *****/
 @js.native
 trait StreetViewPanorama extends MVCObject {
   var controls: js.Array[MVCArray[Node]] = js.native

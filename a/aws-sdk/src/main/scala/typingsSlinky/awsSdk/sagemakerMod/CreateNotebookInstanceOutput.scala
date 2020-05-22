@@ -14,29 +14,10 @@ trait CreateNotebookInstanceOutput extends js.Object {
 
 object CreateNotebookInstanceOutput {
   @scala.inline
-  def apply(): CreateNotebookInstanceOutput = {
+  def apply(NotebookInstanceArn: NotebookInstanceArn = null): CreateNotebookInstanceOutput = {
     val __obj = js.Dynamic.literal()
+    if (NotebookInstanceArn != null) __obj.updateDynamic("NotebookInstanceArn")(NotebookInstanceArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNotebookInstanceOutput]
   }
-  @scala.inline
-  implicit class CreateNotebookInstanceOutputOps[Self <: CreateNotebookInstanceOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotebookInstanceArn(value: NotebookInstanceArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotebookInstanceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotebookInstanceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotebookInstanceArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

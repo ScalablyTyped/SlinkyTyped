@@ -22,53 +22,12 @@ trait SpotPlacement extends js.Object {
 
 object SpotPlacement {
   @scala.inline
-  def apply(): SpotPlacement = {
+  def apply(AvailabilityZone: String = null, GroupName: String = null, Tenancy: Tenancy = null): SpotPlacement = {
     val __obj = js.Dynamic.literal()
+    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
+    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
+    if (Tenancy != null) __obj.updateDynamic("Tenancy")(Tenancy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpotPlacement]
   }
-  @scala.inline
-  implicit class SpotPlacementOps[Self <: SpotPlacement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenancy(value: Tenancy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenancy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

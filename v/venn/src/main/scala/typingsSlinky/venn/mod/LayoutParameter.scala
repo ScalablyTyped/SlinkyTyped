@@ -5,51 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LayoutParameter extends js.Object {
   var lossFunction: js.UndefOr[
     js.Function2[/* sets */ StringDictionary[Circle], /* overlaps */ js.Array[Overlap], Double]
-  ] = js.native
-  var restarts: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var restarts: js.UndefOr[Double] = js.undefined
 }
 
 object LayoutParameter {
   @scala.inline
-  def apply(): LayoutParameter = {
+  def apply(
+    lossFunction: (/* sets */ StringDictionary[Circle], /* overlaps */ js.Array[Overlap]) => Double = null,
+    restarts: js.UndefOr[Double] = js.undefined
+  ): LayoutParameter = {
     val __obj = js.Dynamic.literal()
+    if (lossFunction != null) __obj.updateDynamic("lossFunction")(js.Any.fromFunction2(lossFunction))
+    if (!js.isUndefined(restarts)) __obj.updateDynamic("restarts")(restarts.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayoutParameter]
   }
-  @scala.inline
-  implicit class LayoutParameterOps[Self <: LayoutParameter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLossFunction(value: (/* sets */ StringDictionary[Circle], /* overlaps */ js.Array[Overlap]) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lossFunction")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutLossFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lossFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestarts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restarts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestarts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restarts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

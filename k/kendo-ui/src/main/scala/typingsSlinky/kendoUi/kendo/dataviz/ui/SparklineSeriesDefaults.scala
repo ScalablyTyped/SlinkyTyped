@@ -4,192 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SparklineSeriesDefaults extends js.Object {
-  var area: js.UndefOr[js.Any] = js.native
-  var bar: js.UndefOr[js.Any] = js.native
-  var border: js.UndefOr[SparklineSeriesDefaultsBorder] = js.native
-  var column: js.UndefOr[js.Any] = js.native
-  var gap: js.UndefOr[Double] = js.native
-  var labels: js.UndefOr[SparklineSeriesDefaultsLabels] = js.native
-  var line: js.UndefOr[js.Any] = js.native
-  var overlay: js.UndefOr[js.Any] = js.native
-  var pie: js.UndefOr[js.Any] = js.native
-  var spacing: js.UndefOr[Double] = js.native
-  var stack: js.UndefOr[Boolean | SparklineSeriesDefaultsStack] = js.native
-  var tooltip: js.UndefOr[SparklineSeriesDefaultsTooltip] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var area: js.UndefOr[js.Any] = js.undefined
+  var bar: js.UndefOr[js.Any] = js.undefined
+  var border: js.UndefOr[SparklineSeriesDefaultsBorder] = js.undefined
+  var column: js.UndefOr[js.Any] = js.undefined
+  var gap: js.UndefOr[Double] = js.undefined
+  var labels: js.UndefOr[SparklineSeriesDefaultsLabels] = js.undefined
+  var line: js.UndefOr[js.Any] = js.undefined
+  var overlay: js.UndefOr[js.Any] = js.undefined
+  var pie: js.UndefOr[js.Any] = js.undefined
+  var spacing: js.UndefOr[Double] = js.undefined
+  var stack: js.UndefOr[Boolean | SparklineSeriesDefaultsStack] = js.undefined
+  var tooltip: js.UndefOr[SparklineSeriesDefaultsTooltip] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object SparklineSeriesDefaults {
   @scala.inline
-  def apply(): SparklineSeriesDefaults = {
+  def apply(
+    area: js.Any = null,
+    bar: js.Any = null,
+    border: SparklineSeriesDefaultsBorder = null,
+    column: js.Any = null,
+    gap: js.UndefOr[Double] = js.undefined,
+    labels: SparklineSeriesDefaultsLabels = null,
+    line: js.Any = null,
+    overlay: js.Any = null,
+    pie: js.Any = null,
+    spacing: js.UndefOr[Double] = js.undefined,
+    stack: Boolean | SparklineSeriesDefaultsStack = null,
+    tooltip: SparklineSeriesDefaultsTooltip = null,
+    `type`: String = null
+  ): SparklineSeriesDefaults = {
     val __obj = js.Dynamic.literal()
+    if (area != null) __obj.updateDynamic("area")(area.asInstanceOf[js.Any])
+    if (bar != null) __obj.updateDynamic("bar")(bar.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
+    if (!js.isUndefined(gap)) __obj.updateDynamic("gap")(gap.get.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
+    if (pie != null) __obj.updateDynamic("pie")(pie.asInstanceOf[js.Any])
+    if (!js.isUndefined(spacing)) __obj.updateDynamic("spacing")(spacing.get.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SparklineSeriesDefaults]
   }
-  @scala.inline
-  implicit class SparklineSeriesDefaultsOps[Self <: SparklineSeriesDefaults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArea(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBar(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: SparklineSeriesDefaultsBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumn(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: SparklineSeriesDefaultsLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPie(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStack(value: Boolean | SparklineSeriesDefaultsStack): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: SparklineSeriesDefaultsTooltip): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

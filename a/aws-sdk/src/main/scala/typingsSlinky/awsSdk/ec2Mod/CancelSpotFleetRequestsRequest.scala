@@ -22,41 +22,14 @@ trait CancelSpotFleetRequestsRequest extends js.Object {
 
 object CancelSpotFleetRequestsRequest {
   @scala.inline
-  def apply(SpotFleetRequestIds: SpotFleetRequestIdList, TerminateInstances: Boolean): CancelSpotFleetRequestsRequest = {
+  def apply(
+    SpotFleetRequestIds: SpotFleetRequestIdList,
+    TerminateInstances: Boolean,
+    DryRun: js.UndefOr[Boolean] = js.undefined
+  ): CancelSpotFleetRequestsRequest = {
     val __obj = js.Dynamic.literal(SpotFleetRequestIds = SpotFleetRequestIds.asInstanceOf[js.Any], TerminateInstances = TerminateInstances.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelSpotFleetRequestsRequest]
   }
-  @scala.inline
-  implicit class CancelSpotFleetRequestsRequestOps[Self <: CancelSpotFleetRequestsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSpotFleetRequestIds(value: SpotFleetRequestIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTerminateInstances(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminateInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

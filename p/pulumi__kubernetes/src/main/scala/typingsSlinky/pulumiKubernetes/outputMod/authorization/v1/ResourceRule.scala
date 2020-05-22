@@ -8,31 +8,30 @@ import scala.scalajs.js.annotation._
   * ResourceRule is the list of actions the subject is allowed to perform on resources. The list
   * ordering isn't significant, may contain duplicates, and possibly be incomplete.
   */
-@js.native
 trait ResourceRule extends js.Object {
   /**
     * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups
     * are specified, any action requested against one of the enumerated resources in any API
     * group will be allowed.  "*" means all.
     */
-  val apiGroups: js.Array[String] = js.native
+  val apiGroups: js.Array[String]
   /**
     * ResourceNames is an optional white list of names that the rule applies to.  An empty set
     * means that everything is allowed.  "*" means all.
     */
-  val resourceNames: js.Array[String] = js.native
+  val resourceNames: js.Array[String]
   /**
     * Resources is a list of resources this rule applies to.  "*" means all in the specified
     * apiGroups.
     *  "*&#8205;/foo" represents the subresource 'foo' for all resources in the specified
     * apiGroups.
     */
-  val resources: js.Array[String] = js.native
+  val resources: js.Array[String]
   /**
     * Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update,
     * delete, proxy.  "*" means all.
     */
-  val verbs: js.Array[String] = js.native
+  val verbs: js.Array[String]
 }
 
 object ResourceRule {
@@ -46,37 +45,5 @@ object ResourceRule {
     val __obj = js.Dynamic.literal(apiGroups = apiGroups.asInstanceOf[js.Any], resourceNames = resourceNames.asInstanceOf[js.Any], resources = resources.asInstanceOf[js.Any], verbs = verbs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceRule]
   }
-  @scala.inline
-  implicit class ResourceRuleOps[Self <: ResourceRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiGroups(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResources(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerbs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbs")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

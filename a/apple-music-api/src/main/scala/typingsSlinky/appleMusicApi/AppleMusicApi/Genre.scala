@@ -7,39 +7,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // https://developer.apple.com/documentation/applemusicapi/genre
-@js.native
 trait Genre extends Resource {
-  var attributes: Name = js.native
+  var attributes: Name
   @JSName("type")
-  var type_Genre: genres = js.native
+  var type_Genre: genres
 }
 
 object Genre {
   @scala.inline
-  def apply(attributes: Name, id: String, `type`: genres): Genre = {
+  def apply(attributes: Name, id: String, `type`: genres, href: String = null): Genre = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
     __obj.asInstanceOf[Genre]
   }
-  @scala.inline
-  implicit class GenreOps[Self <: Genre] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: genres): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

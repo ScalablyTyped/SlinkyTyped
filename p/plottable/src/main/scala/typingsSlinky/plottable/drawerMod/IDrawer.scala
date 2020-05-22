@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDrawer extends js.Object {
   /**
     * Mutate the surface to reflect the data being passed in. This method is responsible
@@ -14,20 +13,20 @@ trait IDrawer extends js.Object {
     * @param data The data to be drawn.
     * @param drawSteps The draw steps that the data go through.
     */
-  def draw(data: js.Array[_], drawSteps: js.Array[AppliedDrawStep]): Unit = js.native
+  def draw(data: js.Array[_], drawSteps: js.Array[AppliedDrawStep]): Unit
   /**
     * Get the visual primitive for the given *data* index.
     */
-  def getVisualPrimitiveAtIndex(index: Double): Element = js.native
+  def getVisualPrimitiveAtIndex(index: Double): Element
   /**
     * Get the the last drawn visual primitives.
     */
-  def getVisualPrimitives(): js.Array[Element] = js.native
+  def getVisualPrimitives(): js.Array[Element]
   /**
     * Called when the Drawer is no longer needed - implementors may use this to cleanup
     * any resources they've created
     */
-  def remove(): Unit = js.native
+  def remove(): Unit
 }
 
 object IDrawer {
@@ -41,37 +40,5 @@ object IDrawer {
     val __obj = js.Dynamic.literal(draw = js.Any.fromFunction2(draw), getVisualPrimitiveAtIndex = js.Any.fromFunction1(getVisualPrimitiveAtIndex), getVisualPrimitives = js.Any.fromFunction0(getVisualPrimitives), remove = js.Any.fromFunction0(remove))
     __obj.asInstanceOf[IDrawer]
   }
-  @scala.inline
-  implicit class IDrawerOps[Self <: IDrawer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDraw(value: (js.Array[_], js.Array[AppliedDrawStep]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetVisualPrimitiveAtIndex(value: Double => Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVisualPrimitiveAtIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetVisualPrimitives(value: () => js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVisualPrimitives")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

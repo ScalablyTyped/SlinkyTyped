@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Static extends js.Object {
-  def nfc(str: String): String = js.native
-  def nfd(str: String): String = js.native
-  def nfkc(str: String): String = js.native
-  def nfkd(str: String): String = js.native
+  def nfc(str: String): String
+  def nfd(str: String): String
+  def nfkc(str: String): String
+  def nfkd(str: String): String
 }
 
 object Static {
@@ -18,37 +17,5 @@ object Static {
     val __obj = js.Dynamic.literal(nfc = js.Any.fromFunction1(nfc), nfd = js.Any.fromFunction1(nfd), nfkc = js.Any.fromFunction1(nfkc), nfkd = js.Any.fromFunction1(nfkd))
     __obj.asInstanceOf[Static]
   }
-  @scala.inline
-  implicit class StaticOps[Self <: Static] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNfc(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nfc")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNfd(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nfd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNfkc(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nfkc")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNfkd(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nfkd")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

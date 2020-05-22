@@ -14,57 +14,56 @@ import scala.scalajs.js.annotation._
   * A coupon contains information about a percent-off or amount-off discount you might want to apply to a customer.
   * Coupons only apply to invoices; they do not apply to one-off charges.
   */
-@js.native
 trait ICoupon extends IResourceObject {
   /**
     * Amount (in the currency specified) that will be taken off the subtotal of any invoices for this customer.
     */
-  var amount_off: Double = js.native
-  var created: Double = js.native
+  var amount_off: Double
+  var created: Double
   /**
     * If amount_off has been set, the currency of the amount to take off.
     */
-  var currency: String = js.native
+  var currency: String
   /**
     * One of "forever", "once", and "repeating". Describes how long a customer who applies this coupon will get the discount.
     */
-  var duration: forever | once | repeating = js.native
+  var duration: forever | once | repeating
   /**
     * If duration is repeating, the number of months the coupon applies. Null if coupon duration is forever or once.
     */
-  var duration_in_months: Double = js.native
-  var livemode: Boolean = js.native
+  var duration_in_months: Double
+  var livemode: Boolean
   /**
     * Maximum number of times this coupon can be redeemed, in total, before it is no longer valid.
     */
-  var max_redemptions: Double = js.native
-  var metadata: IMetadata = js.native
+  var max_redemptions: Double
+  var metadata: IMetadata
   /**
     * Name of the coupon displayed to customers on for instance invoices or receipts.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Value is 'coupon'
     */
   @JSName("object")
-  var object_ICoupon: coupon = js.native
+  var object_ICoupon: coupon
   /**
     * Percent that will be taken off the subtotal of any invoices for this customer for the duration
     * of the coupon. For example, a coupon with percent_off of 50 will make a $100 invoice $50 instead.
     */
-  var percent_off: Double = js.native
+  var percent_off: Double
   /**
     * Date after which the coupon can no longer be redeemed
     */
-  var redeem_by: Double = js.native
+  var redeem_by: Double
   /**
     * Number of times this coupon has been applied to a customer.
     */
-  var times_redeemed: Double = js.native
+  var times_redeemed: Double
   /**
     * Taking account of the above properties, whether this coupon can still be applied to a customer
     */
-  var valid: Boolean = js.native
+  var valid: Boolean
 }
 
 object ICoupon {
@@ -90,97 +89,5 @@ object ICoupon {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICoupon]
   }
-  @scala.inline
-  implicit class ICouponOps[Self <: ICoupon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount_off(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount_off")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: forever | once | repeating): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration_in_months(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration_in_months")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLivemode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax_redemptions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_redemptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: IMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: coupon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPercent_off(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percent_off")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRedeem_by(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redeem_by")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimes_redeemed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("times_redeemed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -13,41 +13,11 @@ trait PartialClassNameMapBackdr extends js.Object {
 
 object PartialClassNameMapBackdr {
   @scala.inline
-  def apply(): PartialClassNameMapBackdr = {
+  def apply(invisible: String = null, root: String = null): PartialClassNameMapBackdr = {
     val __obj = js.Dynamic.literal()
+    if (invisible != null) __obj.updateDynamic("invisible")(invisible.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapBackdr]
   }
-  @scala.inline
-  implicit class PartialClassNameMapBackdrOps[Self <: PartialClassNameMapBackdr] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvisible(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

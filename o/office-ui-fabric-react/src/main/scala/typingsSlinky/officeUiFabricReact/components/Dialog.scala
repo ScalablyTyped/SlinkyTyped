@@ -17,7 +17,7 @@ import typingsSlinky.officeUiFabricReact.dialogTypesMod.IDialogStyles
 import typingsSlinky.officeUiFabricReact.modalTypesMod.IModalProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.ICSSPixelUnitRule
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.ICSSRule
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
@@ -35,7 +35,7 @@ object Dialog {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def ariaDescribedById(value: String): this.type = set("ariaDescribedById", value.asInstanceOf[js.Any])
     @scala.inline
@@ -93,7 +93,7 @@ object Dialog {
     @scala.inline
     def responsiveMode(value: ResponsiveMode): this.type = set("responsiveMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDialogStyleProps => Partial[IDialogStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDialogStyleProps => DeepPartial[IDialogStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDialogStyleProps, IDialogStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

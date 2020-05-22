@@ -4,83 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignedTransaction extends js.Object {
-  var messageHash: js.UndefOr[String] = js.native
-  var r: String = js.native
-  var rawTransaction: js.UndefOr[String] = js.native
-  var s: String = js.native
-  var transactionHash: js.UndefOr[String] = js.native
-  var v: String = js.native
+  var messageHash: js.UndefOr[String] = js.undefined
+  var r: String
+  var rawTransaction: js.UndefOr[String] = js.undefined
+  var s: String
+  var transactionHash: js.UndefOr[String] = js.undefined
+  var v: String
 }
 
 object SignedTransaction {
   @scala.inline
-  def apply(r: String, s: String, v: String): SignedTransaction = {
+  def apply(
+    r: String,
+    s: String,
+    v: String,
+    messageHash: String = null,
+    rawTransaction: String = null,
+    transactionHash: String = null
+  ): SignedTransaction = {
     val __obj = js.Dynamic.literal(r = r.asInstanceOf[js.Any], s = s.asInstanceOf[js.Any], v = v.asInstanceOf[js.Any])
+    if (messageHash != null) __obj.updateDynamic("messageHash")(messageHash.asInstanceOf[js.Any])
+    if (rawTransaction != null) __obj.updateDynamic("rawTransaction")(rawTransaction.asInstanceOf[js.Any])
+    if (transactionHash != null) __obj.updateDynamic("transactionHash")(transactionHash.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignedTransaction]
   }
-  @scala.inline
-  implicit class SignedTransactionOps[Self <: SignedTransaction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withR(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withV(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessageHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawTransaction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTransaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTransaction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionHash")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

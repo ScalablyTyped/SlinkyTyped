@@ -31,89 +31,22 @@ trait DescribeMaintenanceStartTimeOutput extends js.Object {
 
 object DescribeMaintenanceStartTimeOutput {
   @scala.inline
-  def apply(): DescribeMaintenanceStartTimeOutput = {
+  def apply(
+    DayOfMonth: js.UndefOr[DayOfMonth] = js.undefined,
+    DayOfWeek: js.UndefOr[DayOfWeek] = js.undefined,
+    GatewayARN: GatewayARN = null,
+    HourOfDay: js.UndefOr[HourOfDay] = js.undefined,
+    MinuteOfHour: js.UndefOr[MinuteOfHour] = js.undefined,
+    Timezone: GatewayTimezone = null
+  ): DescribeMaintenanceStartTimeOutput = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DayOfMonth)) __obj.updateDynamic("DayOfMonth")(DayOfMonth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DayOfWeek)) __obj.updateDynamic("DayOfWeek")(DayOfWeek.get.asInstanceOf[js.Any])
+    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
+    if (!js.isUndefined(HourOfDay)) __obj.updateDynamic("HourOfDay")(HourOfDay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinuteOfHour)) __obj.updateDynamic("MinuteOfHour")(MinuteOfHour.get.asInstanceOf[js.Any])
+    if (Timezone != null) __obj.updateDynamic("Timezone")(Timezone.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeMaintenanceStartTimeOutput]
   }
-  @scala.inline
-  implicit class DescribeMaintenanceStartTimeOutputOps[Self <: DescribeMaintenanceStartTimeOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDayOfMonth(value: DayOfMonth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DayOfMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayOfMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DayOfMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayOfWeek(value: DayOfWeek): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DayOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayOfWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DayOfWeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGatewayARN(value: GatewayARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHourOfDay(value: HourOfDay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HourOfDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHourOfDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HourOfDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinuteOfHour(value: MinuteOfHour): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinuteOfHour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinuteOfHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinuteOfHour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimezone(value: GatewayTimezone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

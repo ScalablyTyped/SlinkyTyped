@@ -7,62 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectThreadBroadcastStoryOptions extends js.Object {
-  var replyType: js.UndefOr[story | String] = js.native
-  var uploadId: js.UndefOr[Double] = js.native
-  var viewMode: js.UndefOr[replayable | once | String] = js.native
+  var replyType: js.UndefOr[story | String] = js.undefined
+  var uploadId: js.UndefOr[Double] = js.undefined
+  var viewMode: js.UndefOr[replayable | once | String] = js.undefined
 }
 
 object DirectThreadBroadcastStoryOptions {
   @scala.inline
-  def apply(): DirectThreadBroadcastStoryOptions = {
+  def apply(
+    replyType: story | String = null,
+    uploadId: js.UndefOr[Double] = js.undefined,
+    viewMode: replayable | once | String = null
+  ): DirectThreadBroadcastStoryOptions = {
     val __obj = js.Dynamic.literal()
+    if (replyType != null) __obj.updateDynamic("replyType")(replyType.asInstanceOf[js.Any])
+    if (!js.isUndefined(uploadId)) __obj.updateDynamic("uploadId")(uploadId.get.asInstanceOf[js.Any])
+    if (viewMode != null) __obj.updateDynamic("viewMode")(viewMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectThreadBroadcastStoryOptions]
   }
-  @scala.inline
-  implicit class DirectThreadBroadcastStoryOptionsOps[Self <: DirectThreadBroadcastStoryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplyType(value: story | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewMode(value: replayable | once | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

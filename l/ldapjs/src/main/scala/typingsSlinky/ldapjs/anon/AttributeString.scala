@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AttributeString extends js.Object {
-  var attribute: String = js.native
+  var attribute: String
 }
 
 object AttributeString {
@@ -15,19 +14,5 @@ object AttributeString {
     val __obj = js.Dynamic.literal(attribute = attribute.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeString]
   }
-  @scala.inline
-  implicit class AttributeStringOps[Self <: AttributeString] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttribute(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

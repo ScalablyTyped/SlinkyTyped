@@ -10,35 +10,34 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@js.native
 trait DataBarConditionalFormatLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * HTML color code representing the color of the Axis line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
+    * HTML color code representing the color of the Axis line, of the form #RRGGBB (e.g., "FFA500") or as a named HTML color (e.g., "orange").
     "" (empty string) if no axis is present or set.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var axisColor: js.UndefOr[Boolean] = js.native
+  var axisColor: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Representation of how the axis is determined for an Excel data bar.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var axisFormat: js.UndefOr[Boolean] = js.native
+  var axisFormat: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the direction that the data bar graphic should be based on.
+    * Specifies the direction that the data bar graphic should be based on.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var barDirection: js.UndefOr[Boolean] = js.native
+  var barDirection: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * The rule for what consistutes the lower bound (and how to calculate it, if applicable) for a data bar.
@@ -46,28 +45,28 @@ trait DataBarConditionalFormatLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var lowerBoundRule: js.UndefOr[Boolean] = js.native
+  var lowerBoundRule: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Representation of all values to the left of the axis in an Excel data bar.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var negativeFormat: js.UndefOr[ConditionalDataBarNegativeFormatLoadOptions] = js.native
+  var negativeFormat: js.UndefOr[ConditionalDataBarNegativeFormatLoadOptions] = js.undefined
   /**
     *
     * Representation of all values to the right of the axis in an Excel data bar.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var positiveFormat: js.UndefOr[ConditionalDataBarPositiveFormatLoadOptions] = js.native
+  var positiveFormat: js.UndefOr[ConditionalDataBarPositiveFormatLoadOptions] = js.undefined
   /**
     *
     * If true, hides the values from the cells where the data bar is applied.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var showDataBarOnly: js.UndefOr[Boolean] = js.native
+  var showDataBarOnly: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * The rule for what constitutes the upper bound (and how to calculate it, if applicable) for a data bar.
@@ -75,130 +74,33 @@ trait DataBarConditionalFormatLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var upperBoundRule: js.UndefOr[Boolean] = js.native
+  var upperBoundRule: js.UndefOr[Boolean] = js.undefined
 }
 
 object DataBarConditionalFormatLoadOptions {
   @scala.inline
-  def apply(): DataBarConditionalFormatLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    axisColor: js.UndefOr[Boolean] = js.undefined,
+    axisFormat: js.UndefOr[Boolean] = js.undefined,
+    barDirection: js.UndefOr[Boolean] = js.undefined,
+    lowerBoundRule: js.UndefOr[Boolean] = js.undefined,
+    negativeFormat: ConditionalDataBarNegativeFormatLoadOptions = null,
+    positiveFormat: ConditionalDataBarPositiveFormatLoadOptions = null,
+    showDataBarOnly: js.UndefOr[Boolean] = js.undefined,
+    upperBoundRule: js.UndefOr[Boolean] = js.undefined
+  ): DataBarConditionalFormatLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisColor)) __obj.updateDynamic("axisColor")(axisColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisFormat)) __obj.updateDynamic("axisFormat")(axisFormat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(barDirection)) __obj.updateDynamic("barDirection")(barDirection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lowerBoundRule)) __obj.updateDynamic("lowerBoundRule")(lowerBoundRule.get.asInstanceOf[js.Any])
+    if (negativeFormat != null) __obj.updateDynamic("negativeFormat")(negativeFormat.asInstanceOf[js.Any])
+    if (positiveFormat != null) __obj.updateDynamic("positiveFormat")(positiveFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(showDataBarOnly)) __obj.updateDynamic("showDataBarOnly")(showDataBarOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(upperBoundRule)) __obj.updateDynamic("upperBoundRule")(upperBoundRule.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataBarConditionalFormatLoadOptions]
   }
-  @scala.inline
-  implicit class DataBarConditionalFormatLoadOptionsOps[Self <: DataBarConditionalFormatLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarDirection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowerBoundRule(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBoundRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowerBoundRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBoundRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegativeFormat(value: ConditionalDataBarNegativeFormatLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegativeFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositiveFormat(value: ConditionalDataBarPositiveFormatLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positiveFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositiveFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positiveFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDataBarOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDataBarOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDataBarOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDataBarOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperBoundRule(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBoundRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperBoundRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBoundRule")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

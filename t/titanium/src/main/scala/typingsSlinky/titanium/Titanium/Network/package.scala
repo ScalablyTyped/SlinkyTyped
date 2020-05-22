@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object Network {
   /**
-  		 * Socket module, used for creating sockets.
-  		 */
+    * Socket module, used for creating sockets.
+    */
   type Socket = typingsSlinky.titanium.Titanium.Module
 }

@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait WatchChange extends js.Object
 
-object WatchChange {
-  @scala.inline
-  implicit def apply(value: DocumentWatchChange): WatchChange = value.asInstanceOf[WatchChange]
-  @scala.inline
-  implicit def apply(value: ExistenceFilterChange): WatchChange = value.asInstanceOf[WatchChange]
-  @scala.inline
-  implicit def apply(value: WatchTargetChange): WatchChange = value.asInstanceOf[WatchChange]
-}
-

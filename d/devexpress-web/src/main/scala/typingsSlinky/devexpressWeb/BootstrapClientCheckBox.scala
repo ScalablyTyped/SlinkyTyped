@@ -7,39 +7,38 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the BootstrapCheckBox control.
   */
-@js.native
 trait BootstrapClientCheckBox extends ASPxClientEdit {
   /**
     * Occurs on the client side when the editor's checked state has been changed.
     */
-  var CheckedChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[BootstrapClientCheckBox]] = js.native
+  var CheckedChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[BootstrapClientCheckBox]]
   /**
     * Returns a value which specifies a check box checked state.
     */
-  def GetCheckState(): String = js.native
+  def GetCheckState(): String
   /**
     * Returns a value indicating whether the check box editor is checked.
     */
-  def GetChecked(): Boolean = js.native
+  def GetChecked(): Boolean
   /**
     * Returns the text displayed within the editor.
     */
-  def GetText(): String = js.native
+  def GetText(): String
   /**
     * Sets a value specifying the state of a check box.
     * @param checkState A string value matches one of the CheckState enumeration values.
     */
-  def SetCheckState(checkState: String): Unit = js.native
+  def SetCheckState(checkState: String): Unit
   /**
     * Sets a value which specifies the checked status of the check box editor.
     * @param isChecked true if the check box editor is checked; otherwise, false.
     */
-  def SetChecked(isChecked: Boolean): Unit = js.native
+  def SetChecked(isChecked: Boolean): Unit
   /**
     * Sets the text to be displayed within the editor.
     * @param text A string value specifying the text to be displayed within the editor.
     */
-  def SetText(text: String): Unit = js.native
+  def SetText(text: String): Unit
 }
 
 object BootstrapClientCheckBox {
@@ -90,55 +89,5 @@ object BootstrapClientCheckBox {
     val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), CheckedChanged = CheckedChanged.asInstanceOf[js.Any], Focus = js.Any.fromFunction0(Focus), GetCaption = js.Any.fromFunction0(GetCaption), GetCheckState = js.Any.fromFunction0(GetCheckState), GetChecked = js.Any.fromFunction0(GetChecked), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEnabled = js.Any.fromFunction0(GetEnabled), GetErrorText = js.Any.fromFunction0(GetErrorText), GetHeight = js.Any.fromFunction0(GetHeight), GetInputElement = js.Any.fromFunction0(GetInputElement), GetIsValid = js.Any.fromFunction0(GetIsValid), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetReadOnly = js.Any.fromFunction0(GetReadOnly), GetText = js.Any.fromFunction0(GetText), GetValue = js.Any.fromFunction0(GetValue), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), GotFocus = GotFocus.asInstanceOf[js.Any], InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], LostFocus = LostFocus.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetCaption = js.Any.fromFunction1(SetCaption), SetCheckState = js.Any.fromFunction1(SetCheckState), SetChecked = js.Any.fromFunction1(SetChecked), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetEnabled = js.Any.fromFunction1(SetEnabled), SetErrorText = js.Any.fromFunction1(SetErrorText), SetHeight = js.Any.fromFunction1(SetHeight), SetIsValid = js.Any.fromFunction1(SetIsValid), SetReadOnly = js.Any.fromFunction1(SetReadOnly), SetText = js.Any.fromFunction1(SetText), SetValue = js.Any.fromFunction1(SetValue), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), Validate = js.Any.fromFunction0(Validate), Validation = Validation.asInstanceOf[js.Any], ValueChanged = ValueChanged.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapClientCheckBox]
   }
-  @scala.inline
-  implicit class BootstrapClientCheckBoxOps[Self <: BootstrapClientCheckBox] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckedChanged(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[BootstrapClientCheckBox]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckedChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetCheckState(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCheckState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetChecked(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetChecked")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetCheckState(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetCheckState")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetChecked(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetChecked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetText(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetText")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

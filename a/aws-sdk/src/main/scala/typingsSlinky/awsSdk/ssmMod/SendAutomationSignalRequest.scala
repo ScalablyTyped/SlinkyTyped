@@ -22,41 +22,14 @@ trait SendAutomationSignalRequest extends js.Object {
 
 object SendAutomationSignalRequest {
   @scala.inline
-  def apply(AutomationExecutionId: AutomationExecutionId, SignalType: SignalType): SendAutomationSignalRequest = {
+  def apply(
+    AutomationExecutionId: AutomationExecutionId,
+    SignalType: SignalType,
+    Payload: AutomationParameterMap = null
+  ): SendAutomationSignalRequest = {
     val __obj = js.Dynamic.literal(AutomationExecutionId = AutomationExecutionId.asInstanceOf[js.Any], SignalType = SignalType.asInstanceOf[js.Any])
+    if (Payload != null) __obj.updateDynamic("Payload")(Payload.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendAutomationSignalRequest]
   }
-  @scala.inline
-  implicit class SendAutomationSignalRequestOps[Self <: SendAutomationSignalRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomationExecutionId(value: AutomationExecutionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSignalType(value: SignalType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayload(value: AutomationParameterMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Payload")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

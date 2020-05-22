@@ -86,245 +86,48 @@ trait SpotInstanceRequest extends js.Object {
 
 object SpotInstanceRequest {
   @scala.inline
-  def apply(): SpotInstanceRequest = {
+  def apply(
+    ActualBlockHourlyPrice: String = null,
+    AvailabilityZoneGroup: String = null,
+    BlockDurationMinutes: js.UndefOr[Integer] = js.undefined,
+    CreateTime: js.Date = null,
+    Fault: SpotInstanceStateFault = null,
+    InstanceId: InstanceId = null,
+    InstanceInterruptionBehavior: InstanceInterruptionBehavior = null,
+    LaunchGroup: String = null,
+    LaunchSpecification: LaunchSpecification = null,
+    LaunchedAvailabilityZone: String = null,
+    ProductDescription: RIProductDescription = null,
+    SpotInstanceRequestId: String = null,
+    SpotPrice: String = null,
+    State: SpotInstanceState = null,
+    Status: SpotInstanceStatus = null,
+    Tags: TagList = null,
+    Type: SpotInstanceType = null,
+    ValidFrom: js.Date = null,
+    ValidUntil: js.Date = null
+  ): SpotInstanceRequest = {
     val __obj = js.Dynamic.literal()
+    if (ActualBlockHourlyPrice != null) __obj.updateDynamic("ActualBlockHourlyPrice")(ActualBlockHourlyPrice.asInstanceOf[js.Any])
+    if (AvailabilityZoneGroup != null) __obj.updateDynamic("AvailabilityZoneGroup")(AvailabilityZoneGroup.asInstanceOf[js.Any])
+    if (!js.isUndefined(BlockDurationMinutes)) __obj.updateDynamic("BlockDurationMinutes")(BlockDurationMinutes.get.asInstanceOf[js.Any])
+    if (CreateTime != null) __obj.updateDynamic("CreateTime")(CreateTime.asInstanceOf[js.Any])
+    if (Fault != null) __obj.updateDynamic("Fault")(Fault.asInstanceOf[js.Any])
+    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
+    if (InstanceInterruptionBehavior != null) __obj.updateDynamic("InstanceInterruptionBehavior")(InstanceInterruptionBehavior.asInstanceOf[js.Any])
+    if (LaunchGroup != null) __obj.updateDynamic("LaunchGroup")(LaunchGroup.asInstanceOf[js.Any])
+    if (LaunchSpecification != null) __obj.updateDynamic("LaunchSpecification")(LaunchSpecification.asInstanceOf[js.Any])
+    if (LaunchedAvailabilityZone != null) __obj.updateDynamic("LaunchedAvailabilityZone")(LaunchedAvailabilityZone.asInstanceOf[js.Any])
+    if (ProductDescription != null) __obj.updateDynamic("ProductDescription")(ProductDescription.asInstanceOf[js.Any])
+    if (SpotInstanceRequestId != null) __obj.updateDynamic("SpotInstanceRequestId")(SpotInstanceRequestId.asInstanceOf[js.Any])
+    if (SpotPrice != null) __obj.updateDynamic("SpotPrice")(SpotPrice.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
+    if (ValidFrom != null) __obj.updateDynamic("ValidFrom")(ValidFrom.asInstanceOf[js.Any])
+    if (ValidUntil != null) __obj.updateDynamic("ValidUntil")(ValidUntil.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpotInstanceRequest]
   }
-  @scala.inline
-  implicit class SpotInstanceRequestOps[Self <: SpotInstanceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualBlockHourlyPrice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActualBlockHourlyPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActualBlockHourlyPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActualBlockHourlyPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailabilityZoneGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZoneGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZoneGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZoneGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockDurationMinutes(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDurationMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockDurationMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDurationMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFault(value: SpotInstanceStateFault): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceInterruptionBehavior(value: InstanceInterruptionBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInterruptionBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceInterruptionBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInterruptionBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchSpecification(value: LaunchSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchSpecification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchSpecification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchedAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchedAvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchedAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchedAvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductDescription(value: RIProductDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotInstanceRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotInstanceRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotInstanceRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotInstanceRequestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotPrice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: SpotInstanceState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SpotInstanceStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: SpotInstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidFrom(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidFrom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidUntil(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUntil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUntil")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,5 +11,30 @@ import scala.scalajs.js.annotation._
   * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.media.TextTrackStyle
   */
 class TextTrackStyle ()
-  extends typingsSlinky.chrome.chrome.cast.media.TextTrackStyle
+  extends typingsSlinky.chrome.chrome.cast.media.TextTrackStyle {
+  /* CompleteClass */
+  override var backgroundColor: String = js.native
+  /* CompleteClass */
+  override var customData: js.Object = js.native
+  /* CompleteClass */
+  override var edgeColor: String = js.native
+  /* CompleteClass */
+  override var edgeType: typingsSlinky.chrome.chrome.cast.media.TextTrackEdgeType = js.native
+  /* CompleteClass */
+  override var fontFamily: String = js.native
+  /* CompleteClass */
+  override var fontGenericFamily: typingsSlinky.chrome.chrome.cast.media.TextTrackFontGenericFamily = js.native
+  /* CompleteClass */
+  override var fontScale: Double = js.native
+  /* CompleteClass */
+  override var fontStyle: typingsSlinky.chrome.chrome.cast.media.TextTrackFontStyle = js.native
+  /* CompleteClass */
+  override var foregroundColor: String = js.native
+  /* CompleteClass */
+  override var windowColor: String = js.native
+  /* CompleteClass */
+  override var windowRoundedCornerRadius: Double = js.native
+  /* CompleteClass */
+  override var windowType: typingsSlinky.chrome.chrome.cast.media.TextTrackWindowType = js.native
+}
 

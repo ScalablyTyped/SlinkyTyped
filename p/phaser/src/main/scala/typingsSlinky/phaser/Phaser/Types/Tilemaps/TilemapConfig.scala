@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TilemapConfig extends js.Object {
   /**
     * Instead of loading from the cache, you can also load directly from a 2D array of tile indexes.
     */
-  var data: js.UndefOr[js.Array[js.Array[integer]]] = js.native
+  var data: js.UndefOr[js.Array[js.Array[integer]]] = js.undefined
   /**
     * The height of the map in tiles.
     */
-  var height: js.UndefOr[integer] = js.native
+  var height: js.UndefOr[integer] = js.undefined
   /**
     * Controls how empty tiles, tiles with an index of -1,
     * in the map data are handled. If `true`, empty locations will get a value of `null`. If `false`,
@@ -23,122 +22,45 @@ trait TilemapConfig extends js.Object {
     * memory consumption. However if your map is small or you need to update the tiles dynamically,
     * then leave the default value set.
     */
-  var insertNull: js.UndefOr[Boolean] = js.native
+  var insertNull: js.UndefOr[Boolean] = js.undefined
   /**
     * The key in the Phaser cache that corresponds to the loaded tilemap data.
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * The height of a tile in pixels.
     */
-  var tileHeight: js.UndefOr[integer] = js.native
+  var tileHeight: js.UndefOr[integer] = js.undefined
   /**
     * The width of a tile in pixels.
     */
-  var tileWidth: js.UndefOr[integer] = js.native
+  var tileWidth: js.UndefOr[integer] = js.undefined
   /**
     * The width of the map in tiles.
     */
-  var width: js.UndefOr[integer] = js.native
+  var width: js.UndefOr[integer] = js.undefined
 }
 
 object TilemapConfig {
   @scala.inline
-  def apply(): TilemapConfig = {
+  def apply(
+    data: js.Array[js.Array[integer]] = null,
+    height: js.UndefOr[integer] = js.undefined,
+    insertNull: js.UndefOr[Boolean] = js.undefined,
+    key: String = null,
+    tileHeight: js.UndefOr[integer] = js.undefined,
+    tileWidth: js.UndefOr[integer] = js.undefined,
+    width: js.UndefOr[integer] = js.undefined
+  ): TilemapConfig = {
     val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(insertNull)) __obj.updateDynamic("insertNull")(insertNull.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileHeight)) __obj.updateDynamic("tileHeight")(tileHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileWidth)) __obj.updateDynamic("tileWidth")(tileWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TilemapConfig]
   }
-  @scala.inline
-  implicit class TilemapConfigOps[Self <: TilemapConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Array[js.Array[integer]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertNull(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileHeight(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileWidth(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

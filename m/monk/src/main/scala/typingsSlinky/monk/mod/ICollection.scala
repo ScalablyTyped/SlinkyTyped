@@ -7,6 +7,7 @@ import typingsSlinky.monk.anon.Each
 import typingsSlinky.monk.anon.Msg
 import typingsSlinky.monk.anon.NIndexesWas
 import typingsSlinky.monk.anon.NModified
+import typingsSlinky.monk.anon.`0`
 import typingsSlinky.monk.monkBooleans.`true`
 import typingsSlinky.monk.monkNumbers.`-1`
 import typingsSlinky.monk.monkNumbers.`1`
@@ -83,21 +84,21 @@ class ICollection[T] () extends js.Object {
   def createIndex_Promise(fields: TFields): js.Promise[String] = js.native
   @JSName("createIndex")
   def createIndex_Promise(fields: TFields, options: js.Object): js.Promise[String] = js.native
-  def distinct(field: String): Unit = js.native
-  def distinct(field: String, query: TQuery): Unit = js.native
-  def distinct(field: String, query: TQuery, options: js.Object): Unit = js.native
-  def distinct(
+  def distinct[U](field: String): js.Promise[js.Array[U]] = js.native
+  def distinct[U](field: String, query: TQuery): js.Promise[js.Array[U]] = js.native
+  def distinct[U](field: String, query: TQuery, options: js.Object): js.Promise[js.Array[U]] = js.native
+  def distinct[U](
     field: String,
     query: TQuery,
     options: js.Object,
-    callback: js.Function2[/* err */ js.Error | Null, /* data */ Double, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Array[U], Unit]
   ): Unit = js.native
   @JSName("distinct")
-  def distinct_Promise(field: String): js.Promise[Double] = js.native
+  def distinct_U_Unit[U](field: String): Unit = js.native
   @JSName("distinct")
-  def distinct_Promise(field: String, query: TQuery): js.Promise[Double] = js.native
+  def distinct_U_Unit[U](field: String, query: TQuery): Unit = js.native
   @JSName("distinct")
-  def distinct_Promise(field: String, query: TQuery, options: js.Object): js.Promise[Double] = js.native
+  def distinct_U_Unit[U](field: String, query: TQuery, options: js.Object): Unit = js.native
   def drop(): Unit = js.native
   def drop(callback: js.Function2[/* err */ js.Error | Null, /* data */ (`ns not found`) | `true`, Unit]): Unit = js.native
   def dropIndex(): Unit = js.native
@@ -126,7 +127,7 @@ class ICollection[T] () extends js.Object {
   def find[U](
     query: TQuery,
     options: js.Object,
-    callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Array[U] with Each[U], Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Array[U] with `0`[U], Unit]
   ): Unit = js.native
   def findOne[U](): js.Promise[js.UndefOr[U]] = js.native
   def findOne[U](query: TQuery): js.Promise[js.UndefOr[U]] = js.native

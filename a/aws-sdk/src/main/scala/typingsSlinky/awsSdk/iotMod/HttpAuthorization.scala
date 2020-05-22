@@ -14,29 +14,10 @@ trait HttpAuthorization extends js.Object {
 
 object HttpAuthorization {
   @scala.inline
-  def apply(): HttpAuthorization = {
+  def apply(sigv4: SigV4Authorization = null): HttpAuthorization = {
     val __obj = js.Dynamic.literal()
+    if (sigv4 != null) __obj.updateDynamic("sigv4")(sigv4.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpAuthorization]
   }
-  @scala.inline
-  implicit class HttpAuthorizationOps[Self <: HttpAuthorization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSigv4(value: SigV4Authorization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sigv4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigv4: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sigv4")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

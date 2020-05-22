@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IToggle extends js.Object {
-  def focus(): Unit = js.native
+  def focus(): Unit
 }
 
 object IToggle {
@@ -15,19 +14,5 @@ object IToggle {
     val __obj = js.Dynamic.literal(focus = js.Any.fromFunction0(focus))
     __obj.asInstanceOf[IToggle]
   }
-  @scala.inline
-  implicit class IToggleOps[Self <: IToggle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocus(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

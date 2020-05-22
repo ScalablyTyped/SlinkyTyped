@@ -22,53 +22,16 @@ trait VpcPeeringConnectionOptionsDescription extends js.Object {
 
 object VpcPeeringConnectionOptionsDescription {
   @scala.inline
-  def apply(): VpcPeeringConnectionOptionsDescription = {
+  def apply(
+    AllowDnsResolutionFromRemoteVpc: js.UndefOr[Boolean] = js.undefined,
+    AllowEgressFromLocalClassicLinkToRemoteVpc: js.UndefOr[Boolean] = js.undefined,
+    AllowEgressFromLocalVpcToRemoteClassicLink: js.UndefOr[Boolean] = js.undefined
+  ): VpcPeeringConnectionOptionsDescription = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AllowDnsResolutionFromRemoteVpc)) __obj.updateDynamic("AllowDnsResolutionFromRemoteVpc")(AllowDnsResolutionFromRemoteVpc.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(AllowEgressFromLocalClassicLinkToRemoteVpc)) __obj.updateDynamic("AllowEgressFromLocalClassicLinkToRemoteVpc")(AllowEgressFromLocalClassicLinkToRemoteVpc.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(AllowEgressFromLocalVpcToRemoteClassicLink)) __obj.updateDynamic("AllowEgressFromLocalVpcToRemoteClassicLink")(AllowEgressFromLocalVpcToRemoteClassicLink.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcPeeringConnectionOptionsDescription]
   }
-  @scala.inline
-  implicit class VpcPeeringConnectionOptionsDescriptionOps[Self <: VpcPeeringConnectionOptionsDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowDnsResolutionFromRemoteVpc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowDnsResolutionFromRemoteVpc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDnsResolutionFromRemoteVpc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowDnsResolutionFromRemoteVpc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowEgressFromLocalClassicLinkToRemoteVpc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowEgressFromLocalClassicLinkToRemoteVpc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowEgressFromLocalClassicLinkToRemoteVpc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowEgressFromLocalClassicLinkToRemoteVpc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowEgressFromLocalVpcToRemoteClassicLink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowEgressFromLocalVpcToRemoteClassicLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowEgressFromLocalVpcToRemoteClassicLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowEgressFromLocalVpcToRemoteClassicLink")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

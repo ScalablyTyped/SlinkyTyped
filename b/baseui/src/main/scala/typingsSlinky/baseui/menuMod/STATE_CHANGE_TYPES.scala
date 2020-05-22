@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait STATE_CHANGE_TYPES extends js.Object {
-  var click: typingsSlinky.baseui.baseuiStrings.click = js.native
-  var focus: typingsSlinky.baseui.baseuiStrings.focus = js.native
-  var mouseEnter: typingsSlinky.baseui.baseuiStrings.mouseEnter = js.native
-  var moveDown: typingsSlinky.baseui.baseuiStrings.moveDown = js.native
-  var moveUp: typingsSlinky.baseui.baseuiStrings.moveUp = js.native
-  var reset: typingsSlinky.baseui.baseuiStrings.reset = js.native
+  var click: typingsSlinky.baseui.baseuiStrings.click
+  var focus: typingsSlinky.baseui.baseuiStrings.focus
+  var mouseEnter: typingsSlinky.baseui.baseuiStrings.mouseEnter
+  var moveDown: typingsSlinky.baseui.baseuiStrings.moveDown
+  var moveUp: typingsSlinky.baseui.baseuiStrings.moveUp
+  var reset: typingsSlinky.baseui.baseuiStrings.reset
 }
 
 @JSImport("baseui/menu", "STATE_CHANGE_TYPES")

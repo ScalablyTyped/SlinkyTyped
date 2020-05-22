@@ -5,21 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BufferChangedEvent extends js.Object {
   /**
     *  An array of objects summarizing the aggregated changes that occurred
     *  during the transaction.
     */
-  var changes: js.Array[NewRange] = js.native
+  var changes: js.Array[NewRange]
   /** Range of the new text. */
-  var newRange: Range = js.native
+  var newRange: Range
   /** String containing the text that was inserted. */
-  var newText: String = js.native
+  var newText: String
   /** Range of the old text. */
-  var oldRange: Range = js.native
+  var oldRange: Range
   /** String containing the text that was replaced. */
-  var oldText: String = js.native
+  var oldText: String
 }
 
 object BufferChangedEvent {
@@ -28,43 +27,5 @@ object BufferChangedEvent {
     val __obj = js.Dynamic.literal(changes = changes.asInstanceOf[js.Any], newRange = newRange.asInstanceOf[js.Any], newText = newText.asInstanceOf[js.Any], oldRange = oldRange.asInstanceOf[js.Any], oldText = oldText.asInstanceOf[js.Any])
     __obj.asInstanceOf[BufferChangedEvent]
   }
-  @scala.inline
-  implicit class BufferChangedEventOps[Self <: BufferChangedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChanges(value: js.Array[NewRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

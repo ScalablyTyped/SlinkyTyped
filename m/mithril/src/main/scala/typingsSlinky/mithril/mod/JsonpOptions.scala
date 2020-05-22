@@ -6,107 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JsonpOptions extends js.Object {
   /** If false, redraws mounted components upon completion of the request. If true, it does not. */
-  var background: js.UndefOr[Boolean] = js.native
+  var background: js.UndefOr[Boolean] = js.undefined
   /** The data to be serialized into the request body. */
-  var body: js.UndefOr[js.Any] = js.native
+  var body: js.UndefOr[js.Any] = js.undefined
   /** The name of the querystring parameter name that specifies the callback name. */
-  var callbackKey: js.UndefOr[String] = js.native
+  var callbackKey: js.UndefOr[String] = js.undefined
   /** The name of the function that will be called as the callback. */
-  var callbackName: js.UndefOr[String] = js.native
+  var callbackName: js.UndefOr[String] = js.undefined
   /** The data to be interpolated into the URL and serialized into the querystring. */
-  var params: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var params: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   /** A constructor to be applied to each object in the response. */
-  var `type`: js.UndefOr[Instantiable1[/* o */ js.Any, js.Any]] = js.native
+  var `type`: js.UndefOr[Instantiable1[/* o */ js.Any, js.Any]] = js.undefined
 }
 
 object JsonpOptions {
   @scala.inline
-  def apply(): JsonpOptions = {
+  def apply(
+    background: js.UndefOr[Boolean] = js.undefined,
+    body: js.Any = null,
+    callbackKey: String = null,
+    callbackName: String = null,
+    params: StringDictionary[js.Any] = null,
+    `type`: Instantiable1[/* o */ js.Any, js.Any] = null
+  ): JsonpOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(background)) __obj.updateDynamic("background")(background.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (callbackKey != null) __obj.updateDynamic("callbackKey")(callbackKey.asInstanceOf[js.Any])
+    if (callbackName != null) __obj.updateDynamic("callbackName")(callbackName.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsonpOptions]
   }
-  @scala.inline
-  implicit class JsonpOptionsOps[Self <: JsonpOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackground(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbackKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbackName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Instantiable1[/* o */ js.Any, js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

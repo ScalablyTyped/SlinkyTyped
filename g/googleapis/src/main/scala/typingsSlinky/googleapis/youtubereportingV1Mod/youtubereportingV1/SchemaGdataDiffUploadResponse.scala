@@ -21,41 +21,11 @@ trait SchemaGdataDiffUploadResponse extends js.Object {
 
 object SchemaGdataDiffUploadResponse {
   @scala.inline
-  def apply(): SchemaGdataDiffUploadResponse = {
+  def apply(objectVersion: String = null, originalObject: SchemaGdataCompositeMedia = null): SchemaGdataDiffUploadResponse = {
     val __obj = js.Dynamic.literal()
+    if (objectVersion != null) __obj.updateDynamic("objectVersion")(objectVersion.asInstanceOf[js.Any])
+    if (originalObject != null) __obj.updateDynamic("originalObject")(originalObject.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGdataDiffUploadResponse]
   }
-  @scala.inline
-  implicit class SchemaGdataDiffUploadResponseOps[Self <: SchemaGdataDiffUploadResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjectVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalObject(value: SchemaGdataCompositeMedia): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalObject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

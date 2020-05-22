@@ -16,5 +16,10 @@ class ASPxClientTabControlTabEventArgs protected ()
     * @param tab An ASPxClientTab object representing the tab related to the event.
     */
   def this(tab: typingsSlinky.devexpressWeb.ASPxClientTab) = this()
+  /**
+    * Gets the tab object related to the event.
+    */
+  /* CompleteClass */
+  override var tab: typingsSlinky.devexpressWeb.ASPxClientTab = js.native
 }
 

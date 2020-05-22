@@ -7,103 +7,57 @@ import scala.scalajs.js.annotation._
 /**
   * Population results in this stratum
   */
-@js.native
 trait MeasureReportGroupStratifierStratumPopulation extends BackboneElement {
   /**
     * Contains extended information for property 'count'.
     */
-  var _count: js.UndefOr[Element] = js.native
+  var _count: js.UndefOr[Element] = js.undefined
   /**
     * initial-population | numerator | numerator-exclusion | denominator | denominator-exclusion | denominator-exception | measure-population | measure-population-exclusion | measure-score
     */
-  var code: js.UndefOr[CodeableConcept] = js.native
+  var code: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Size of the population
     */
-  var count: js.UndefOr[integer] = js.native
+  var count: js.UndefOr[integer] = js.undefined
   /**
     * Population identifier as defined in the measure
     */
-  var identifier: js.UndefOr[Identifier] = js.native
+  var identifier: js.UndefOr[Identifier] = js.undefined
   /**
     * For patient-list reports, the patients in this population
     */
-  var patients: js.UndefOr[Reference] = js.native
+  var patients: js.UndefOr[Reference] = js.undefined
 }
 
 object MeasureReportGroupStratifierStratumPopulation {
   @scala.inline
-  def apply(): MeasureReportGroupStratifierStratumPopulation = {
+  def apply(
+    _count: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    code: CodeableConcept = null,
+    count: js.UndefOr[integer] = js.undefined,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    identifier: Identifier = null,
+    modifierExtension: js.Array[Extension] = null,
+    patients: Reference = null
+  ): MeasureReportGroupStratifierStratumPopulation = {
     val __obj = js.Dynamic.literal()
+    if (_count != null) __obj.updateDynamic("_count")(_count.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (patients != null) __obj.updateDynamic("patients")(patients.asInstanceOf[js.Any])
     __obj.asInstanceOf[MeasureReportGroupStratifierStratumPopulation]
   }
-  @scala.inline
-  implicit class MeasureReportGroupStratifierStratumPopulationOps[Self <: MeasureReportGroupStratifierStratumPopulation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_count(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_count: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCode(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: Identifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatients(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatients: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patients")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

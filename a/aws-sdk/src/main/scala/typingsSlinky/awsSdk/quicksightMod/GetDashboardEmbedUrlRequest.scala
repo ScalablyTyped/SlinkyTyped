@@ -38,83 +38,21 @@ trait GetDashboardEmbedUrlRequest extends js.Object {
 
 object GetDashboardEmbedUrlRequest {
   @scala.inline
-  def apply(AwsAccountId: AwsAccountId, DashboardId: RestrictiveResourceId, IdentityType: IdentityType): GetDashboardEmbedUrlRequest = {
+  def apply(
+    AwsAccountId: AwsAccountId,
+    DashboardId: RestrictiveResourceId,
+    IdentityType: IdentityType,
+    ResetDisabled: js.UndefOr[scala.Boolean] = js.undefined,
+    SessionLifetimeInMinutes: js.UndefOr[SessionLifetimeInMinutes] = js.undefined,
+    UndoRedoDisabled: js.UndefOr[scala.Boolean] = js.undefined,
+    UserArn: Arn = null
+  ): GetDashboardEmbedUrlRequest = {
     val __obj = js.Dynamic.literal(AwsAccountId = AwsAccountId.asInstanceOf[js.Any], DashboardId = DashboardId.asInstanceOf[js.Any], IdentityType = IdentityType.asInstanceOf[js.Any])
+    if (!js.isUndefined(ResetDisabled)) __obj.updateDynamic("ResetDisabled")(ResetDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SessionLifetimeInMinutes)) __obj.updateDynamic("SessionLifetimeInMinutes")(SessionLifetimeInMinutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UndoRedoDisabled)) __obj.updateDynamic("UndoRedoDisabled")(UndoRedoDisabled.get.asInstanceOf[js.Any])
+    if (UserArn != null) __obj.updateDynamic("UserArn")(UserArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDashboardEmbedUrlRequest]
   }
-  @scala.inline
-  implicit class GetDashboardEmbedUrlRequestOps[Self <: GetDashboardEmbedUrlRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsAccountId(value: AwsAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDashboardId(value: RestrictiveResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentityType(value: IdentityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResetDisabled(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionLifetimeInMinutes(value: SessionLifetimeInMinutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionLifetimeInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionLifetimeInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionLifetimeInMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUndoRedoDisabled(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UndoRedoDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUndoRedoDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UndoRedoDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

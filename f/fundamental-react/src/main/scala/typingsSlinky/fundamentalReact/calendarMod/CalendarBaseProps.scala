@@ -5,153 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CalendarBaseProps extends js.Object {
-  var blockedDates: js.UndefOr[js.Array[js.Date]] = js.native
-  var disableAfterDate: js.UndefOr[js.Date] = js.native
-  var disableBeforeDate: js.UndefOr[js.Date] = js.native
-  var disableFutureDates: js.UndefOr[Boolean] = js.native
-  var disablePastDates: js.UndefOr[Boolean] = js.native
-  var disableStyles: js.UndefOr[Boolean] = js.native
-  var disableWeekday: js.UndefOr[js.Array[String]] = js.native
-  var disableWeekends: js.UndefOr[Boolean] = js.native
-  var disabledDates: js.UndefOr[js.Array[js.Date]] = js.native
-  var localizedText: js.UndefOr[NextMonth] = js.native
+  var blockedDates: js.UndefOr[js.Array[js.Date]] = js.undefined
+  var disableAfterDate: js.UndefOr[js.Date] = js.undefined
+  var disableBeforeDate: js.UndefOr[js.Date] = js.undefined
+  var disableFutureDates: js.UndefOr[Boolean] = js.undefined
+  var disablePastDates: js.UndefOr[Boolean] = js.undefined
+  var disableStyles: js.UndefOr[Boolean] = js.undefined
+  var disableWeekday: js.UndefOr[js.Array[String]] = js.undefined
+  var disableWeekends: js.UndefOr[Boolean] = js.undefined
+  var disabledDates: js.UndefOr[js.Array[js.Date]] = js.undefined
+  var localizedText: js.UndefOr[NextMonth] = js.undefined
 }
 
 object CalendarBaseProps {
   @scala.inline
-  def apply(): CalendarBaseProps = {
+  def apply(
+    blockedDates: js.Array[js.Date] = null,
+    disableAfterDate: js.Date = null,
+    disableBeforeDate: js.Date = null,
+    disableFutureDates: js.UndefOr[Boolean] = js.undefined,
+    disablePastDates: js.UndefOr[Boolean] = js.undefined,
+    disableStyles: js.UndefOr[Boolean] = js.undefined,
+    disableWeekday: js.Array[String] = null,
+    disableWeekends: js.UndefOr[Boolean] = js.undefined,
+    disabledDates: js.Array[js.Date] = null,
+    localizedText: NextMonth = null
+  ): CalendarBaseProps = {
     val __obj = js.Dynamic.literal()
+    if (blockedDates != null) __obj.updateDynamic("blockedDates")(blockedDates.asInstanceOf[js.Any])
+    if (disableAfterDate != null) __obj.updateDynamic("disableAfterDate")(disableAfterDate.asInstanceOf[js.Any])
+    if (disableBeforeDate != null) __obj.updateDynamic("disableBeforeDate")(disableBeforeDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableFutureDates)) __obj.updateDynamic("disableFutureDates")(disableFutureDates.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePastDates)) __obj.updateDynamic("disablePastDates")(disablePastDates.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.get.asInstanceOf[js.Any])
+    if (disableWeekday != null) __obj.updateDynamic("disableWeekday")(disableWeekday.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableWeekends)) __obj.updateDynamic("disableWeekends")(disableWeekends.get.asInstanceOf[js.Any])
+    if (disabledDates != null) __obj.updateDynamic("disabledDates")(disabledDates.asInstanceOf[js.Any])
+    if (localizedText != null) __obj.updateDynamic("localizedText")(localizedText.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarBaseProps]
   }
-  @scala.inline
-  implicit class CalendarBasePropsOps[Self <: CalendarBaseProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockedDates(value: js.Array[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockedDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockedDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockedDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAfterDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAfterDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAfterDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAfterDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableBeforeDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableBeforeDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableBeforeDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableBeforeDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableFutureDates(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFutureDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableFutureDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFutureDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePastDates(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePastDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePastDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePastDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableStyles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableWeekday(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWeekday")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableWeekday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWeekday")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableWeekends(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWeekends")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableWeekends: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWeekends")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledDates(value: js.Array[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizedText(value: NextMonth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalizedText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

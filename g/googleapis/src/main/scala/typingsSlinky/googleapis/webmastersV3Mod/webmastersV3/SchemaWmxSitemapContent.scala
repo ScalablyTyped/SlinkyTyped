@@ -26,53 +26,12 @@ trait SchemaWmxSitemapContent extends js.Object {
 
 object SchemaWmxSitemapContent {
   @scala.inline
-  def apply(): SchemaWmxSitemapContent = {
+  def apply(indexed: String = null, submitted: String = null, `type`: String = null): SchemaWmxSitemapContent = {
     val __obj = js.Dynamic.literal()
+    if (indexed != null) __obj.updateDynamic("indexed")(indexed.asInstanceOf[js.Any])
+    if (submitted != null) __obj.updateDynamic("submitted")(submitted.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWmxSitemapContent]
   }
-  @scala.inline
-  implicit class SchemaWmxSitemapContentOps[Self <: SchemaWmxSitemapContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmitted(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmitted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

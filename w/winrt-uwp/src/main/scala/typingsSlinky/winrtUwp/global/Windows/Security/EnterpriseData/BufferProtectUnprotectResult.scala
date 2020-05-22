@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Security.EnterpriseData
 
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Security.EnterpriseData.BufferProtectUnprotectResult")
 @js.native
 abstract class BufferProtectUnprotectResult ()
-  extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.BufferProtectUnprotectResult
+  extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.BufferProtectUnprotectResult {
+  /** Gets the enterprise protected buffer that has been protected or unprotected. */
+  /* CompleteClass */
+  override var buffer: IBuffer = js.native
+  /** Gets the DataProtectionInfo object concerning the enterprise protected buffer that has been protected or unprotected. */
+  /* CompleteClass */
+  override var protectionInfo: typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.DataProtectionInfo = js.native
+}
 

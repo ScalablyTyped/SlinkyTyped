@@ -60,89 +60,22 @@ trait SchemaQuotaOperation extends js.Object {
 
 object SchemaQuotaOperation {
   @scala.inline
-  def apply(): SchemaQuotaOperation = {
+  def apply(
+    consumerId: String = null,
+    labels: StringDictionary[String] = null,
+    methodName: String = null,
+    operationId: String = null,
+    quotaMetrics: js.Array[SchemaMetricValueSet] = null,
+    quotaMode: String = null
+  ): SchemaQuotaOperation = {
     val __obj = js.Dynamic.literal()
+    if (consumerId != null) __obj.updateDynamic("consumerId")(consumerId.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (methodName != null) __obj.updateDynamic("methodName")(methodName.asInstanceOf[js.Any])
+    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
+    if (quotaMetrics != null) __obj.updateDynamic("quotaMetrics")(quotaMetrics.asInstanceOf[js.Any])
+    if (quotaMode != null) __obj.updateDynamic("quotaMode")(quotaMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQuotaOperation]
   }
-  @scala.inline
-  implicit class SchemaQuotaOperationOps[Self <: SchemaQuotaOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethodName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methodName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethodName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methodName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaMetrics(value: js.Array[SchemaMetricValueSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

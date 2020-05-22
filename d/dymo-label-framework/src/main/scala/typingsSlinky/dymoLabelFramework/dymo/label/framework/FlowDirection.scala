@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 sealed trait FlowDirection extends js.Object
 
 /**
-	 * Emuneration that specifies the direction in which objects and object text are laid out on the label.
-	 * For Middle East labels/content specify "RightToLeft", otherwise specify "LeftToRight" (default).
-	 */
+  * Emuneration that specifies the direction in which objects and object text are laid out on the label.
+  * For Middle East labels/content specify "RightToLeft", otherwise specify "LeftToRight" (default).
+  */
 @JSGlobal("dymo.label.framework.FlowDirection")
 @js.native
 object FlowDirection extends js.Object {

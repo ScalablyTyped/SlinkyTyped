@@ -1,17 +1,17 @@
 package typingsSlinky.nodemailer.smtpPoolMod
 
 import typingsSlinky.nodemailer.mimeNodeMod.Envelope
+import typingsSlinky.nodemailer.smtpConnectionMod.SMTPError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SentMessageInfo
   extends typingsSlinky.nodemailer.smtpConnectionMod.SentMessageInfo {
   /** includes the envelope object for the message */
-  var envelope: Envelope = js.native
+  var envelope: Envelope
   /** most transports should return the final Message-Id value used with this property */
-  var messageId: String = js.native
+  var messageId: String
 }
 
 object SentMessageInfo {
@@ -24,30 +24,12 @@ object SentMessageInfo {
     messageSize: Double,
     messageTime: Double,
     rejected: js.Array[String],
-    response: String
+    response: String,
+    rejectedErrors: js.Array[SMTPError] = null
   ): SentMessageInfo = {
     val __obj = js.Dynamic.literal(accepted = accepted.asInstanceOf[js.Any], envelope = envelope.asInstanceOf[js.Any], envelopeTime = envelopeTime.asInstanceOf[js.Any], messageId = messageId.asInstanceOf[js.Any], messageSize = messageSize.asInstanceOf[js.Any], messageTime = messageTime.asInstanceOf[js.Any], rejected = rejected.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
+    if (rejectedErrors != null) __obj.updateDynamic("rejectedErrors")(rejectedErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SentMessageInfo]
   }
-  @scala.inline
-  implicit class SentMessageInfoOps[Self <: SentMessageInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnvelope(value: Envelope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envelope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

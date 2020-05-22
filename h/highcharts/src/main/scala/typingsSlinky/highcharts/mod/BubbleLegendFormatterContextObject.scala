@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BubbleLegendFormatterContextObject extends js.Object {
   /**
     * The center y position of the range.
     */
-  var center: Double = js.native
+  var center: Double
   /**
     * The radius of the bubble range.
     */
-  var radius: Double = js.native
+  var radius: Double
   /**
     * The bubble value.
     */
-  var value: Double = js.native
+  var value: Double
 }
 
 object BubbleLegendFormatterContextObject {
@@ -26,31 +25,5 @@ object BubbleLegendFormatterContextObject {
     val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], radius = radius.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[BubbleLegendFormatterContextObject]
   }
-  @scala.inline
-  implicit class BubbleLegendFormatterContextObjectOps[Self <: BubbleLegendFormatterContextObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCenter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

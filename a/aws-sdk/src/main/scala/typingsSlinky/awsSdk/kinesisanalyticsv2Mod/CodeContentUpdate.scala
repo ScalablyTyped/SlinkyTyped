@@ -22,59 +22,16 @@ trait CodeContentUpdate extends js.Object {
 
 object CodeContentUpdate {
   @scala.inline
-  def apply(): CodeContentUpdate = {
+  def apply(
+    S3ContentLocationUpdate: S3ContentLocationUpdate = null,
+    TextContentUpdate: TextContent = null,
+    ZipFileContentUpdate: ZipFileContent = null
+  ): CodeContentUpdate = {
     val __obj = js.Dynamic.literal()
+    if (S3ContentLocationUpdate != null) __obj.updateDynamic("S3ContentLocationUpdate")(S3ContentLocationUpdate.asInstanceOf[js.Any])
+    if (TextContentUpdate != null) __obj.updateDynamic("TextContentUpdate")(TextContentUpdate.asInstanceOf[js.Any])
+    if (ZipFileContentUpdate != null) __obj.updateDynamic("ZipFileContentUpdate")(ZipFileContentUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeContentUpdate]
   }
-  @scala.inline
-  implicit class CodeContentUpdateOps[Self <: CodeContentUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3ContentLocationUpdate(value: S3ContentLocationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ContentLocationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3ContentLocationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ContentLocationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextContentUpdate(value: TextContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextContentUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextContentUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextContentUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZipFileContentUpdateUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZipFileContentUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZipFileContentUpdate(value: ZipFileContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZipFileContentUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZipFileContentUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZipFileContentUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

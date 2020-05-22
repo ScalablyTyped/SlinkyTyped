@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation._
 /**
   * A collection of enums used by DirectionFinder.
   */
-@js.native
 trait DirectionFinderEnums extends js.Object {
-  var Avoid: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Avoid */ js.Any = js.native
-  var Mode: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Mode */ js.Any = js.native
+  var Avoid: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Avoid */ js.Any
+  var Mode: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Mode */ js.Any
 }
 
 object DirectionFinderEnums {
@@ -22,25 +21,5 @@ object DirectionFinderEnums {
     val __obj = js.Dynamic.literal(Avoid = Avoid.asInstanceOf[js.Any], Mode = Mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionFinderEnums]
   }
-  @scala.inline
-  implicit class DirectionFinderEnumsOps[Self <: DirectionFinderEnums] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvoid(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Avoid */ js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Avoid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMode(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Mode */ js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

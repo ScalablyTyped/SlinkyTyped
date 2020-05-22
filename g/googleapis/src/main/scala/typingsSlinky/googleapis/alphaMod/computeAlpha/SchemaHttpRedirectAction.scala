@@ -56,89 +56,22 @@ trait SchemaHttpRedirectAction extends js.Object {
 
 object SchemaHttpRedirectAction {
   @scala.inline
-  def apply(): SchemaHttpRedirectAction = {
+  def apply(
+    hostRedirect: String = null,
+    httpsRedirect: js.UndefOr[Boolean] = js.undefined,
+    pathRedirect: String = null,
+    prefixRedirect: String = null,
+    redirectResponseCode: String = null,
+    stripQuery: js.UndefOr[Boolean] = js.undefined
+  ): SchemaHttpRedirectAction = {
     val __obj = js.Dynamic.literal()
+    if (hostRedirect != null) __obj.updateDynamic("hostRedirect")(hostRedirect.asInstanceOf[js.Any])
+    if (!js.isUndefined(httpsRedirect)) __obj.updateDynamic("httpsRedirect")(httpsRedirect.get.asInstanceOf[js.Any])
+    if (pathRedirect != null) __obj.updateDynamic("pathRedirect")(pathRedirect.asInstanceOf[js.Any])
+    if (prefixRedirect != null) __obj.updateDynamic("prefixRedirect")(prefixRedirect.asInstanceOf[js.Any])
+    if (redirectResponseCode != null) __obj.updateDynamic("redirectResponseCode")(redirectResponseCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripQuery)) __obj.updateDynamic("stripQuery")(stripQuery.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpRedirectAction]
   }
-  @scala.inline
-  implicit class SchemaHttpRedirectActionOps[Self <: SchemaHttpRedirectAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHostRedirect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostRedirect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpsRedirect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpsRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsRedirect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathRedirect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathRedirect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixRedirect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixRedirect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirectResponseCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectResponseCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirectResponseCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectResponseCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripQuery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripQuery")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

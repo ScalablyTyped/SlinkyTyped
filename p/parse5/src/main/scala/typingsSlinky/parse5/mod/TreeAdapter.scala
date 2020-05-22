@@ -104,6 +104,12 @@ trait TreeAdapter extends js.Object {
     */
   def getNamespaceURI(element: Element): String = js.native
   /**
+    * Returns the given node's source code location information.
+    *
+    * @param node - Node.
+    */
+  def getNodeSourceCodeLocation(node: Node): Location | StartTagLocation | ElementLocation = js.native
+  /**
     * Returns the given node's parent.
     *
     * @param node - Node.
@@ -195,6 +201,14 @@ trait TreeAdapter extends js.Object {
     * @param systemId - Document type system identifier.
     */
   def setDocumentType(document: Document, name: String, publicId: String, systemId: String): Unit = js.native
+  def setNodeSourceCodeLocation(node: Node, location: ElementLocation): Unit = js.native
+  /**
+    * Attaches source code location information to the node.
+    *
+    * @param node - Node.
+    */
+  def setNodeSourceCodeLocation(node: Node, location: Location): Unit = js.native
+  def setNodeSourceCodeLocation(node: Node, location: StartTagLocation): Unit = js.native
   /**
     * Sets the `<template>` element content element.
     *
@@ -202,232 +216,5 @@ trait TreeAdapter extends js.Object {
     * @param contentElement -  Content element.
     */
   def setTemplateContent(templateElement: Element, contentElement: DocumentFragment): Unit = js.native
-}
-
-object TreeAdapter {
-  @scala.inline
-  def apply(
-    adoptAttributes: (Element, js.Array[Attribute]) => Unit,
-    appendChild: (ParentNode, Node) => Unit,
-    createCommentNode: String => CommentNode,
-    createDocument: () => Document,
-    createDocumentFragment: () => DocumentFragment,
-    createElement: (String, String, js.Array[Attribute]) => Element,
-    detachNode: Node => Unit,
-    getAttrList: Element => js.Array[Attribute],
-    getChildNodes: ParentNode => js.Array[Node],
-    getCommentNodeContent: CommentNode => String,
-    getDocumentMode: Document => DocumentMode,
-    getDocumentTypeNodeName: DocumentType => String,
-    getDocumentTypeNodePublicId: DocumentType => String,
-    getDocumentTypeNodeSystemId: DocumentType => String,
-    getFirstChild: ParentNode => Node,
-    getNamespaceURI: Element => String,
-    getParentNode: ChildNode => ParentNode,
-    getTagName: Element => String,
-    getTemplateContent: Element => DocumentFragment,
-    getTextNodeContent: TextNode => String,
-    insertBefore: (ParentNode, Node, Node) => Unit,
-    insertText: (ParentNode, String) => Unit,
-    insertTextBefore: (ParentNode, String, Node) => Unit,
-    isCommentNode: Node => Boolean,
-    isDocumentTypeNode: Node => Boolean,
-    isElementNode: Node => Boolean,
-    isTextNode: Node => Boolean,
-    setDocumentMode: (Document, DocumentMode) => Unit,
-    setDocumentType: (Document, String, String, String) => Unit,
-    setTemplateContent: (Element, DocumentFragment) => Unit
-  ): TreeAdapter = {
-    val __obj = js.Dynamic.literal(adoptAttributes = js.Any.fromFunction2(adoptAttributes), appendChild = js.Any.fromFunction2(appendChild), createCommentNode = js.Any.fromFunction1(createCommentNode), createDocument = js.Any.fromFunction0(createDocument), createDocumentFragment = js.Any.fromFunction0(createDocumentFragment), createElement = js.Any.fromFunction3(createElement), detachNode = js.Any.fromFunction1(detachNode), getAttrList = js.Any.fromFunction1(getAttrList), getChildNodes = js.Any.fromFunction1(getChildNodes), getCommentNodeContent = js.Any.fromFunction1(getCommentNodeContent), getDocumentMode = js.Any.fromFunction1(getDocumentMode), getDocumentTypeNodeName = js.Any.fromFunction1(getDocumentTypeNodeName), getDocumentTypeNodePublicId = js.Any.fromFunction1(getDocumentTypeNodePublicId), getDocumentTypeNodeSystemId = js.Any.fromFunction1(getDocumentTypeNodeSystemId), getFirstChild = js.Any.fromFunction1(getFirstChild), getNamespaceURI = js.Any.fromFunction1(getNamespaceURI), getParentNode = js.Any.fromFunction1(getParentNode), getTagName = js.Any.fromFunction1(getTagName), getTemplateContent = js.Any.fromFunction1(getTemplateContent), getTextNodeContent = js.Any.fromFunction1(getTextNodeContent), insertBefore = js.Any.fromFunction3(insertBefore), insertText = js.Any.fromFunction2(insertText), insertTextBefore = js.Any.fromFunction3(insertTextBefore), isCommentNode = js.Any.fromFunction1(isCommentNode), isDocumentTypeNode = js.Any.fromFunction1(isDocumentTypeNode), isElementNode = js.Any.fromFunction1(isElementNode), isTextNode = js.Any.fromFunction1(isTextNode), setDocumentMode = js.Any.fromFunction2(setDocumentMode), setDocumentType = js.Any.fromFunction4(setDocumentType), setTemplateContent = js.Any.fromFunction2(setTemplateContent))
-    __obj.asInstanceOf[TreeAdapter]
-  }
-  @scala.inline
-  implicit class TreeAdapterOps[Self <: TreeAdapter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdoptAttributes(value: (Element, js.Array[Attribute]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adoptAttributes")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAppendChild(value: (ParentNode, Node) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateCommentNode(value: String => CommentNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCommentNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateDocument(value: () => Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateDocumentFragment(value: () => DocumentFragment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDocumentFragment")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateElement(value: (String, String, js.Array[Attribute]) => Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createElement")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDetachNode(value: Node => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detachNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAttrList(value: Element => js.Array[Attribute]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttrList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetChildNodes(value: ParentNode => js.Array[Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildNodes")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCommentNodeContent(value: CommentNode => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCommentNodeContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDocumentMode(value: Document => DocumentMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocumentMode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDocumentTypeNodeName(value: DocumentType => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocumentTypeNodeName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDocumentTypeNodePublicId(value: DocumentType => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocumentTypeNodePublicId")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDocumentTypeNodeSystemId(value: DocumentType => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocumentTypeNodeSystemId")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetFirstChild(value: ParentNode => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFirstChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetNamespaceURI(value: Element => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNamespaceURI")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetParentNode(value: ChildNode => ParentNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getParentNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTagName(value: Element => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTagName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTemplateContent(value: Element => DocumentFragment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTemplateContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextNodeContent(value: TextNode => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextNodeContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsertBefore(value: (ParentNode, Node, Node) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withInsertText(value: (ParentNode, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertText")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInsertTextBefore(value: (ParentNode, String, Node) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTextBefore")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withIsCommentNode(value: Node => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCommentNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsDocumentTypeNode(value: Node => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDocumentTypeNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsElementNode(value: Node => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isElementNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsTextNode(value: Node => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTextNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDocumentMode(value: (Document, DocumentMode) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDocumentMode")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetDocumentType(value: (Document, String, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDocumentType")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withSetTemplateContent(value: (Element, DocumentFragment) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTemplateContent")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

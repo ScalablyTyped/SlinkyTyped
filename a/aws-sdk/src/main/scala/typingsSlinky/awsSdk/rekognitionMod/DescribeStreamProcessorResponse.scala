@@ -50,137 +50,30 @@ trait DescribeStreamProcessorResponse extends js.Object {
 
 object DescribeStreamProcessorResponse {
   @scala.inline
-  def apply(): DescribeStreamProcessorResponse = {
+  def apply(
+    CreationTimestamp: js.Date = null,
+    Input: StreamProcessorInput = null,
+    LastUpdateTimestamp: js.Date = null,
+    Name: StreamProcessorName = null,
+    Output: StreamProcessorOutput = null,
+    RoleArn: RoleArn = null,
+    Settings: StreamProcessorSettings = null,
+    Status: StreamProcessorStatus = null,
+    StatusMessage: String = null,
+    StreamProcessorArn: StreamProcessorArn = null
+  ): DescribeStreamProcessorResponse = {
     val __obj = js.Dynamic.literal()
+    if (CreationTimestamp != null) __obj.updateDynamic("CreationTimestamp")(CreationTimestamp.asInstanceOf[js.Any])
+    if (Input != null) __obj.updateDynamic("Input")(Input.asInstanceOf[js.Any])
+    if (LastUpdateTimestamp != null) __obj.updateDynamic("LastUpdateTimestamp")(LastUpdateTimestamp.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Output != null) __obj.updateDynamic("Output")(Output.asInstanceOf[js.Any])
+    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
+    if (Settings != null) __obj.updateDynamic("Settings")(Settings.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
+    if (StreamProcessorArn != null) __obj.updateDynamic("StreamProcessorArn")(StreamProcessorArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStreamProcessorResponse]
   }
-  @scala.inline
-  implicit class DescribeStreamProcessorResponseOps[Self <: DescribeStreamProcessorResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: StreamProcessorInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: StreamProcessorName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput(value: StreamProcessorOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettings(value: StreamProcessorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: StreamProcessorStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamProcessorArn(value: StreamProcessorArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamProcessorArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamProcessorArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamProcessorArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

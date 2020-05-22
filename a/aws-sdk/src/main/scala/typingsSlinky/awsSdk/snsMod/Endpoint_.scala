@@ -18,41 +18,11 @@ trait Endpoint_ extends js.Object {
 
 object Endpoint_ {
   @scala.inline
-  def apply(): Endpoint_ = {
+  def apply(Attributes: MapStringToString = null, EndpointArn: String = null): Endpoint_ = {
     val __obj = js.Dynamic.literal()
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
+    if (EndpointArn != null) __obj.updateDynamic("EndpointArn")(EndpointArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Endpoint_]
   }
-  @scala.inline
-  implicit class Endpoint_Ops[Self <: Endpoint_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: MapStringToString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpointArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

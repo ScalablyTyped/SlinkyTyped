@@ -19,118 +19,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MinecraftFilter extends js.Object {
-  var all_of: js.UndefOr[js.Array[MinecraftFilter]] = js.native
-  var any_of: js.UndefOr[js.Array[MinecraftFilter]] = js.native
-  var domain: js.UndefOr[String] = js.native
+  var all_of: js.UndefOr[js.Array[MinecraftFilter]] = js.undefined
+  var any_of: js.UndefOr[js.Array[MinecraftFilter]] = js.undefined
+  var domain: js.UndefOr[String] = js.undefined
   var operator: js.UndefOr[
     ExclamationmarkEqualssign | Lessthansign | LessthansignEqualssign | LessthansignGreaterthansign | Equalssign | EqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign | equals | not
-  ] = js.native
-  var subject: js.UndefOr[other | parent | player | self | target] = js.native
-  var test: js.UndefOr[String] = js.native
-  var value: js.UndefOr[js.Any] = js.native
+  ] = js.undefined
+  var subject: js.UndefOr[other | parent | player | self | target] = js.undefined
+  var test: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[js.Any] = js.undefined
 }
 
 object MinecraftFilter {
   @scala.inline
-  def apply(): MinecraftFilter = {
+  def apply(
+    all_of: js.Array[MinecraftFilter] = null,
+    any_of: js.Array[MinecraftFilter] = null,
+    domain: String = null,
+    operator: ExclamationmarkEqualssign | Lessthansign | LessthansignEqualssign | LessthansignGreaterthansign | Equalssign | EqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign | equals | not = null,
+    subject: other | parent | player | self | target = null,
+    test: String = null,
+    value: js.Any = null
+  ): MinecraftFilter = {
     val __obj = js.Dynamic.literal()
+    if (all_of != null) __obj.updateDynamic("all_of")(all_of.asInstanceOf[js.Any])
+    if (any_of != null) __obj.updateDynamic("any_of")(any_of.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[MinecraftFilter]
   }
-  @scala.inline
-  implicit class MinecraftFilterOps[Self <: MinecraftFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAll_of(value: js.Array[MinecraftFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all_of")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAll_of: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all_of")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAny_of(value: js.Array[MinecraftFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("any_of")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAny_of: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("any_of")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperator(
-      value: ExclamationmarkEqualssign | Lessthansign | LessthansignEqualssign | LessthansignGreaterthansign | Equalssign | EqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign | equals | not
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: other | parent | player | self | target): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

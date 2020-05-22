@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_payment_info
+  - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_shipping_info
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_to_cart
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_to_wishlist
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.begin_checkout
@@ -20,10 +21,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.screen_view
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.search
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_content
+  - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_item
+  - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_promotion
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.set_checkout_option
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.share
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.sign_up
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.timing_complete
+  - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.view_cart
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.view_item
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.view_item_list
   - typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.view_promotion
@@ -34,6 +38,8 @@ trait EventNameString extends js.Object
 object EventNameString {
   @scala.inline
   def add_payment_info: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_payment_info = "add_payment_info".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_payment_info]
+  @scala.inline
+  def add_shipping_info: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_shipping_info = "add_shipping_info".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_shipping_info]
   @scala.inline
   def add_to_cart: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_to_cart = "add_to_cart".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.add_to_cart]
   @scala.inline
@@ -63,6 +69,10 @@ object EventNameString {
   @scala.inline
   def select_content: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_content = "select_content".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_content]
   @scala.inline
+  def select_item: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_item = "select_item".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_item]
+  @scala.inline
+  def select_promotion: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_promotion = "select_promotion".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.select_promotion]
+  @scala.inline
   def set_checkout_option: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.set_checkout_option = "set_checkout_option".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.set_checkout_option]
   @scala.inline
   def share: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.share = "share".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.share]
@@ -70,6 +80,8 @@ object EventNameString {
   def sign_up: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.sign_up = "sign_up".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.sign_up]
   @scala.inline
   def timing_complete: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.timing_complete = "timing_complete".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.timing_complete]
+  @scala.inline
+  def view_cart: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.view_cart = "view_cart".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.view_cart]
   @scala.inline
   def view_item: typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.view_item = "view_item".asInstanceOf[typingsSlinky.firebaseAnalyticsTypes.firebaseAnalyticsTypesStrings.view_item]
   @scala.inline

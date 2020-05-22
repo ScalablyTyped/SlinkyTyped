@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SocketHost extends Host {
-  var ipc: String = js.native
+  var ipc: String
 }
 
 object SocketHost {
@@ -15,19 +14,5 @@ object SocketHost {
     val __obj = js.Dynamic.literal(ipc = ipc.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketHost]
   }
-  @scala.inline
-  implicit class SocketHostOps[Self <: SocketHost] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIpc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -8,12 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is used to receive callbacks from an importer or exporter. */
-@js.native
 trait XDataTransferEventListener extends XEventListener {
   /** is called when an import or export process has been cancelled. */
-  def cancelled(aEvent: DataTransferEvent): Unit = js.native
+  def cancelled(aEvent: DataTransferEvent): Unit
   /** is called when an import or export process has finished. */
-  def finished(aEvent: DataTransferEvent): Unit = js.native
+  def finished(aEvent: DataTransferEvent): Unit
 }
 
 object XDataTransferEventListener {
@@ -29,25 +28,5 @@ object XDataTransferEventListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), cancelled = js.Any.fromFunction1(cancelled), disposing = js.Any.fromFunction1(disposing), finished = js.Any.fromFunction1(finished), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDataTransferEventListener]
   }
-  @scala.inline
-  implicit class XDataTransferEventListenerOps[Self <: XDataTransferEventListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancelled(value: DataTransferEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFinished(value: DataTransferEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finished")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

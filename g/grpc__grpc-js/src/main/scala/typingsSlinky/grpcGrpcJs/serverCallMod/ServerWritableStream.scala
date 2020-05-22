@@ -8,6 +8,7 @@ import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.pipe
 import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.unpipe
 import typingsSlinky.grpcGrpcJs.metadataMod.Metadata
 import typingsSlinky.grpcGrpcJs.objectStreamMod.WriteCallback
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.anon.Chunk
 import typingsSlinky.node.anon.End
@@ -31,6 +32,7 @@ trait ServerWritableStream[RequestType, ResponseType] extends js.Object {
   ] = js.native
   var cancelled: Boolean = js.native
   var destroyed: Boolean = js.native
+  val metadata: Metadata = js.native
   var request: RequestType | Null = js.native
   val writable: Boolean = js.native
   val writableCorked: Double = js.native
@@ -46,7 +48,7 @@ trait ServerWritableStream[RequestType, ResponseType] extends js.Object {
   def _write(chunk: js.Any with ResponseType, encoding: String, callback: js.Function): Unit = js.native
   def _write(
     chunk: js.Any,
-    encoding: String,
+    encoding: BufferEncoding,
     callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
   ): Unit = js.native
   def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
@@ -101,14 +103,14 @@ trait ServerWritableStream[RequestType, ResponseType] extends js.Object {
   def end(chunk: js.Any with ResponseType, encoding: js.Any, cb: js.Function): Unit = js.native
   def end(chunk: (js.Any with ResponseType) | js.Any): Unit = js.native
   def end(chunk: js.Any, cb: js.Function0[Unit]): Unit = js.native
-  def end(chunk: js.Any, encoding: String): Unit = js.native
-  def end(chunk: js.Any, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   def end(data: String): Unit = js.native
   def end(data: String, cb: js.Function0[Unit]): Unit = js.native
   def end(data: js.typedarray.Uint8Array): Unit = js.native
   def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: String, encoding: String): Unit = js.native
-  def end(str: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(str: String, encoding: BufferEncoding): Unit = js.native
+  def end(str: String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   def eventNames(): js.Array[String | js.Symbol] = js.native
   def getMaxListeners(): Double = js.native
   def getPeer(): String = js.native
@@ -198,6 +200,7 @@ trait ServerWritableStream[RequestType, ResponseType] extends js.Object {
   def removeListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def sendMetadata(responseMetadata: Metadata): Unit = js.native
   def setDefaultEncoding(encoding: String): this.type = js.native
+  def setDefaultEncoding(encoding: BufferEncoding): this.type = js.native
   def setMaxListeners(n: Double): this.type = js.native
   def uncork(): Unit = js.native
   def write(buffer: String): Boolean = js.native
@@ -215,9 +218,17 @@ trait ServerWritableStream[RequestType, ResponseType] extends js.Object {
     chunk: (js.Any with ResponseType) | js.Any,
     cb: (js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]) | WriteCallback
   ): Boolean = js.native
-  def write(chunk: js.Any, encoding: String): Boolean = js.native
-  def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
-  def write(str: String, encoding: String): Boolean = js.native
-  def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
+  def write(
+    chunk: js.Any,
+    encoding: BufferEncoding,
+    cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
+  ): Boolean = js.native
+  def write(str: String, encoding: BufferEncoding): Boolean = js.native
+  def write(
+    str: String,
+    encoding: BufferEncoding,
+    cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
+  ): Boolean = js.native
 }
 

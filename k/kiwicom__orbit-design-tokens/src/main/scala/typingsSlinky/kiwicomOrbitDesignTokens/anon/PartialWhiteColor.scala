@@ -5,62 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@kiwicom/orbit-design-tokens.@kiwicom/orbit-design-tokens.WhiteColor> */
-@js.native
 trait PartialWhiteColor extends js.Object {
-  var normal: js.UndefOr[String] = js.native
-  var normalActive: js.UndefOr[String] = js.native
-  var normalHover: js.UndefOr[String] = js.native
+  var normal: js.UndefOr[String] = js.undefined
+  var normalActive: js.UndefOr[String] = js.undefined
+  var normalHover: js.UndefOr[String] = js.undefined
 }
 
 object PartialWhiteColor {
   @scala.inline
-  def apply(): PartialWhiteColor = {
+  def apply(normal: String = null, normalActive: String = null, normalHover: String = null): PartialWhiteColor = {
     val __obj = js.Dynamic.literal()
+    if (normal != null) __obj.updateDynamic("normal")(normal.asInstanceOf[js.Any])
+    if (normalActive != null) __obj.updateDynamic("normalActive")(normalActive.asInstanceOf[js.Any])
+    if (normalHover != null) __obj.updateDynamic("normalHover")(normalHover.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialWhiteColor]
   }
-  @scala.inline
-  implicit class PartialWhiteColorOps[Self <: PartialWhiteColor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNormal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalActive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalHover(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalHover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalHover")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

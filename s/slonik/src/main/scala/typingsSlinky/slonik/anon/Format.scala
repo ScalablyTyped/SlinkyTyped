@@ -5,43 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Format extends js.Object {
-  var format: String = js.native
-  var test: js.UndefOr[js.Function1[/* field */ FieldType, Boolean]] = js.native
+  var format: String
+  var test: js.UndefOr[js.Function1[/* field */ FieldType, Boolean]] = js.undefined
 }
 
 object Format {
   @scala.inline
-  def apply(format: String): Format = {
+  def apply(format: String, test: /* field */ FieldType => Boolean = null): Format = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any])
+    if (test != null) __obj.updateDynamic("test")(js.Any.fromFunction1(test))
     __obj.asInstanceOf[Format]
   }
-  @scala.inline
-  implicit class FormatOps[Self <: Format] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTest(value: /* field */ FieldType => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

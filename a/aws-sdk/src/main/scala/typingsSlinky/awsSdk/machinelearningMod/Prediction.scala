@@ -20,65 +20,18 @@ trait Prediction extends js.Object {
 
 object Prediction {
   @scala.inline
-  def apply(): Prediction = {
+  def apply(
+    details: DetailsMap = null,
+    predictedLabel: Label = null,
+    predictedScores: ScoreValuePerLabelMap = null,
+    predictedValue: js.UndefOr[floatLabel] = js.undefined
+  ): Prediction = {
     val __obj = js.Dynamic.literal()
+    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
+    if (predictedLabel != null) __obj.updateDynamic("predictedLabel")(predictedLabel.asInstanceOf[js.Any])
+    if (predictedScores != null) __obj.updateDynamic("predictedScores")(predictedScores.asInstanceOf[js.Any])
+    if (!js.isUndefined(predictedValue)) __obj.updateDynamic("predictedValue")(predictedValue.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Prediction]
   }
-  @scala.inline
-  implicit class PredictionOps[Self <: Prediction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetails(value: DetailsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredictedLabel(value: Label): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictedLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictedLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictedLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredictedScores(value: ScoreValuePerLabelMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictedScores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictedScores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictedScores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredictedValue(value: floatLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictedValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictedValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictedValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

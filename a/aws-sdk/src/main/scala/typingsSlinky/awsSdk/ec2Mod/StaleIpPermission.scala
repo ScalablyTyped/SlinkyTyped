@@ -34,89 +34,22 @@ trait StaleIpPermission extends js.Object {
 
 object StaleIpPermission {
   @scala.inline
-  def apply(): StaleIpPermission = {
+  def apply(
+    FromPort: js.UndefOr[Integer] = js.undefined,
+    IpProtocol: String = null,
+    IpRanges: IpRanges = null,
+    PrefixListIds: PrefixListIdSet = null,
+    ToPort: js.UndefOr[Integer] = js.undefined,
+    UserIdGroupPairs: UserIdGroupPairSet = null
+  ): StaleIpPermission = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(FromPort)) __obj.updateDynamic("FromPort")(FromPort.get.asInstanceOf[js.Any])
+    if (IpProtocol != null) __obj.updateDynamic("IpProtocol")(IpProtocol.asInstanceOf[js.Any])
+    if (IpRanges != null) __obj.updateDynamic("IpRanges")(IpRanges.asInstanceOf[js.Any])
+    if (PrefixListIds != null) __obj.updateDynamic("PrefixListIds")(PrefixListIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(ToPort)) __obj.updateDynamic("ToPort")(ToPort.get.asInstanceOf[js.Any])
+    if (UserIdGroupPairs != null) __obj.updateDynamic("UserIdGroupPairs")(UserIdGroupPairs.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaleIpPermission]
   }
-  @scala.inline
-  implicit class StaleIpPermissionOps[Self <: StaleIpPermission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFromPort(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpRanges(value: IpRanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixListIds(value: PrefixListIdSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixListIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToPort(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserIdGroupPairs(value: UserIdGroupPairSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIdGroupPairs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserIdGroupPairs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIdGroupPairs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

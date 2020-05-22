@@ -18,41 +18,11 @@ trait GetAccessControlEffectResponse extends js.Object {
 
 object GetAccessControlEffectResponse {
   @scala.inline
-  def apply(): GetAccessControlEffectResponse = {
+  def apply(Effect: AccessControlRuleEffect = null, MatchedRules: AccessControlRuleNameList = null): GetAccessControlEffectResponse = {
     val __obj = js.Dynamic.literal()
+    if (Effect != null) __obj.updateDynamic("Effect")(Effect.asInstanceOf[js.Any])
+    if (MatchedRules != null) __obj.updateDynamic("MatchedRules")(MatchedRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAccessControlEffectResponse]
   }
-  @scala.inline
-  implicit class GetAccessControlEffectResponseOps[Self <: GetAccessControlEffectResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEffect(value: AccessControlRuleEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Effect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Effect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchedRules(value: AccessControlRuleNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchedRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedRules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

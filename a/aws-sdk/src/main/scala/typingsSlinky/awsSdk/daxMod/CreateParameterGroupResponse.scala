@@ -14,29 +14,10 @@ trait CreateParameterGroupResponse extends js.Object {
 
 object CreateParameterGroupResponse {
   @scala.inline
-  def apply(): CreateParameterGroupResponse = {
+  def apply(ParameterGroup: ParameterGroup = null): CreateParameterGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (ParameterGroup != null) __obj.updateDynamic("ParameterGroup")(ParameterGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateParameterGroupResponse]
   }
-  @scala.inline
-  implicit class CreateParameterGroupResponseOps[Self <: CreateParameterGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameterGroup(value: ParameterGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

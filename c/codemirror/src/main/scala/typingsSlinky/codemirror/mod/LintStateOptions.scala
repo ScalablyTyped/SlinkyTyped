@@ -9,10 +9,9 @@ import scala.scalajs.js.annotation._
   * gutter, note that you must use this in conjunction with [ "CodeMirror-lint-markers" ] as an element in the gutters argument on
   * initialization of the CodeMirror instance.
   */
-@js.native
 trait LintStateOptions extends js.Object {
-  var async: js.UndefOr[Boolean] = js.native
-  var hasGutters: js.UndefOr[Boolean] = js.native
+  var async: js.UndefOr[Boolean] = js.undefined
+  var hasGutters: js.UndefOr[Boolean] = js.undefined
   var onUpdateLinting: js.UndefOr[
     js.Function3[
       /* annotationsNotSorted */ js.Array[Annotation], 
@@ -20,60 +19,21 @@ trait LintStateOptions extends js.Object {
       /* codeMirror */ Editor, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object LintStateOptions {
   @scala.inline
-  def apply(): LintStateOptions = {
+  def apply(
+    async: js.UndefOr[Boolean] = js.undefined,
+    hasGutters: js.UndefOr[Boolean] = js.undefined,
+    onUpdateLinting: (/* annotationsNotSorted */ js.Array[Annotation], /* annotations */ js.Array[Annotation], /* codeMirror */ Editor) => Unit = null
+  ): LintStateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasGutters)) __obj.updateDynamic("hasGutters")(hasGutters.get.asInstanceOf[js.Any])
+    if (onUpdateLinting != null) __obj.updateDynamic("onUpdateLinting")(js.Any.fromFunction3(onUpdateLinting))
     __obj.asInstanceOf[LintStateOptions]
   }
-  @scala.inline
-  implicit class LintStateOptionsOps[Self <: LintStateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasGutters(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasGutters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasGutters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasGutters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdateLinting(
-      value: (/* annotationsNotSorted */ js.Array[Annotation], /* annotations */ js.Array[Annotation], /* codeMirror */ Editor) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdateLinting")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdateLinting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdateLinting")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

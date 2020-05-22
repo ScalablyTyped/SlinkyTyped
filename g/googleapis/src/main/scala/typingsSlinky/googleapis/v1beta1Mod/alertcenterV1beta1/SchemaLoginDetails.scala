@@ -23,41 +23,11 @@ trait SchemaLoginDetails extends js.Object {
 
 object SchemaLoginDetails {
   @scala.inline
-  def apply(): SchemaLoginDetails = {
+  def apply(ipAddress: String = null, loginTime: String = null): SchemaLoginDetails = {
     val __obj = js.Dynamic.literal()
+    if (ipAddress != null) __obj.updateDynamic("ipAddress")(ipAddress.asInstanceOf[js.Any])
+    if (loginTime != null) __obj.updateDynamic("loginTime")(loginTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLoginDetails]
   }
-  @scala.inline
-  implicit class SchemaLoginDetailsOps[Self <: SchemaLoginDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIpAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoginTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loginTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoginTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loginTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

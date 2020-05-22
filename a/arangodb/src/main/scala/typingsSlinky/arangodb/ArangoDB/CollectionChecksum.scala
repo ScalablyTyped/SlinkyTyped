@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollectionChecksum extends js.Object {
-  var checksum: String = js.native
-  var revision: String = js.native
+  var checksum: String
+  var revision: String
 }
 
 object CollectionChecksum {
@@ -16,25 +15,5 @@ object CollectionChecksum {
     val __obj = js.Dynamic.literal(checksum = checksum.asInstanceOf[js.Any], revision = revision.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionChecksum]
   }
-  @scala.inline
-  implicit class CollectionChecksumOps[Self <: CollectionChecksum] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChecksum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevision(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

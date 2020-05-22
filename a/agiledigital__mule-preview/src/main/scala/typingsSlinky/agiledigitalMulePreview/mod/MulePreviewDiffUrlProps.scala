@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MulePreviewDiffUrlProps extends js.Object {
-  val contentRoot: String = js.native
-  val contentUrls: js.Tuple2[js.UndefOr[String], js.UndefOr[String]] = js.native
+  val contentRoot: String
+  val contentUrls: js.Tuple2[js.UndefOr[String], js.UndefOr[String]]
 }
 
 object MulePreviewDiffUrlProps {
@@ -16,25 +15,5 @@ object MulePreviewDiffUrlProps {
     val __obj = js.Dynamic.literal(contentRoot = contentRoot.asInstanceOf[js.Any], contentUrls = contentUrls.asInstanceOf[js.Any])
     __obj.asInstanceOf[MulePreviewDiffUrlProps]
   }
-  @scala.inline
-  implicit class MulePreviewDiffUrlPropsOps[Self <: MulePreviewDiffUrlProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentUrls(value: js.Tuple2[js.UndefOr[String], js.UndefOr[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,24 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
-  var acquireConnectionTimeout: js.UndefOr[Double] = js.native
-  var asyncStackTraces: js.UndefOr[Boolean] = js.native
-  var client: js.UndefOr[String | (Instantiable1[/* config */ Config, Client])] = js.native
+  var acquireConnectionTimeout: js.UndefOr[Double] = js.undefined
+  var asyncStackTraces: js.UndefOr[Boolean] = js.undefined
+  var client: js.UndefOr[String | (Instantiable1[/* config */ Config, Client])] = js.undefined
   var connection: js.UndefOr[
     String | ConnectionConfig | MariaSqlConnectionConfig | MySqlConnectionConfig | MsSqlConnectionConfig | OracleDbConnectionConfig | Sqlite3ConnectionConfig | SocketConnectionConfig
-  ] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var dialect: js.UndefOr[String] = js.native
-  var log: js.UndefOr[Logger] = js.native
-  var migrations: js.UndefOr[MigratorConfig] = js.native
-  var pool: js.UndefOr[PoolConfig] = js.native
-  var postProcessResponse: js.UndefOr[js.Function2[/* result */ js.Any, /* queryContext */ js.Any, _]] = js.native
-  var searchPath: js.UndefOr[String | js.Array[String]] = js.native
-  var seeds: js.UndefOr[SeedsConfig] = js.native
-  var useNullAsDefault: js.UndefOr[Boolean] = js.native
-  var version: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var dialect: js.UndefOr[String] = js.undefined
+  var log: js.UndefOr[Logger] = js.undefined
+  var migrations: js.UndefOr[MigratorConfig] = js.undefined
+  var pool: js.UndefOr[PoolConfig] = js.undefined
+  var postProcessResponse: js.UndefOr[js.Function2[/* result */ js.Any, /* queryContext */ js.Any, _]] = js.undefined
+  var searchPath: js.UndefOr[String | js.Array[String]] = js.undefined
+  var seeds: js.UndefOr[SeedsConfig] = js.undefined
+  var useNullAsDefault: js.UndefOr[Boolean] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
   var wrapIdentifier: js.UndefOr[
     js.Function3[
       /* value */ String, 
@@ -30,206 +29,45 @@ trait Config extends js.Object {
       /* queryContext */ js.Any, 
       String
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    acquireConnectionTimeout: js.UndefOr[Double] = js.undefined,
+    asyncStackTraces: js.UndefOr[Boolean] = js.undefined,
+    client: String | (Instantiable1[/* config */ Config, Client]) = null,
+    connection: String | ConnectionConfig | MariaSqlConnectionConfig | MySqlConnectionConfig | MsSqlConnectionConfig | OracleDbConnectionConfig | Sqlite3ConnectionConfig | SocketConnectionConfig = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    dialect: String = null,
+    log: Logger = null,
+    migrations: MigratorConfig = null,
+    pool: PoolConfig = null,
+    postProcessResponse: (/* result */ js.Any, /* queryContext */ js.Any) => _ = null,
+    searchPath: String | js.Array[String] = null,
+    seeds: SeedsConfig = null,
+    useNullAsDefault: js.UndefOr[Boolean] = js.undefined,
+    version: String = null,
+    wrapIdentifier: (/* value */ String, /* origImpl */ js.Function1[/* value */ String, String], /* queryContext */ js.Any) => String = null
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(acquireConnectionTimeout)) __obj.updateDynamic("acquireConnectionTimeout")(acquireConnectionTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(asyncStackTraces)) __obj.updateDynamic("asyncStackTraces")(asyncStackTraces.get.asInstanceOf[js.Any])
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    if (connection != null) __obj.updateDynamic("connection")(connection.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (dialect != null) __obj.updateDynamic("dialect")(dialect.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
+    if (migrations != null) __obj.updateDynamic("migrations")(migrations.asInstanceOf[js.Any])
+    if (pool != null) __obj.updateDynamic("pool")(pool.asInstanceOf[js.Any])
+    if (postProcessResponse != null) __obj.updateDynamic("postProcessResponse")(js.Any.fromFunction2(postProcessResponse))
+    if (searchPath != null) __obj.updateDynamic("searchPath")(searchPath.asInstanceOf[js.Any])
+    if (seeds != null) __obj.updateDynamic("seeds")(seeds.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNullAsDefault)) __obj.updateDynamic("useNullAsDefault")(useNullAsDefault.get.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (wrapIdentifier != null) __obj.updateDynamic("wrapIdentifier")(js.Any.fromFunction3(wrapIdentifier))
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcquireConnectionTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquireConnectionTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcquireConnectionTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquireConnectionTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsyncStackTraces(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncStackTraces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsyncStackTraces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncStackTraces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient(value: String | (Instantiable1[/* config */ Config, Client])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection(
-      value: String | ConnectionConfig | MariaSqlConnectionConfig | MySqlConnectionConfig | MsSqlConnectionConfig | OracleDbConnectionConfig | Sqlite3ConnectionConfig | SocketConnectionConfig
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: Logger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMigrations(value: MigratorConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("migrations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMigrations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("migrations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPool(value: PoolConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostProcessResponse(value: (/* result */ js.Any, /* queryContext */ js.Any) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postProcessResponse")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPostProcessResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postProcessResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchPath(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeeds(value: SeedsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seeds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeeds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seeds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseNullAsDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNullAsDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNullAsDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNullAsDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapIdentifier(
-      value: (/* value */ String, /* origImpl */ js.Function1[/* value */ String, String], /* queryContext */ js.Any) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapIdentifier")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutWrapIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

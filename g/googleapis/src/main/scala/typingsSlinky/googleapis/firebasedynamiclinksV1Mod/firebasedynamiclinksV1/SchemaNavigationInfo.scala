@@ -18,29 +18,10 @@ trait SchemaNavigationInfo extends js.Object {
 
 object SchemaNavigationInfo {
   @scala.inline
-  def apply(): SchemaNavigationInfo = {
+  def apply(enableForcedRedirect: js.UndefOr[Boolean] = js.undefined): SchemaNavigationInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableForcedRedirect)) __obj.updateDynamic("enableForcedRedirect")(enableForcedRedirect.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNavigationInfo]
   }
-  @scala.inline
-  implicit class SchemaNavigationInfoOps[Self <: SchemaNavigationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableForcedRedirect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableForcedRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableForcedRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableForcedRedirect")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

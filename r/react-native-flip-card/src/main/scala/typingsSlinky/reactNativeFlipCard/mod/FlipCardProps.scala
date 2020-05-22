@@ -6,185 +6,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FlipCardProps extends js.Object {
-  var alignHeight: js.UndefOr[Boolean] = js.native
-  var alignWidth: js.UndefOr[Boolean] = js.native
-  var clickable: js.UndefOr[Boolean] = js.native
-  var flip: js.UndefOr[Boolean] = js.native
-  var flipHorizontal: js.UndefOr[Boolean] = js.native
-  var flipVertical: js.UndefOr[Boolean] = js.native
-  var friction: js.UndefOr[Double] = js.native
-  var onFlipEnd: js.UndefOr[js.Function0[Unit]] = js.native
-  var onFlipStart: js.UndefOr[js.Function0[Unit]] = js.native
-  var perspective: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var useNativeDriver: js.UndefOr[Boolean] = js.native
+  var alignHeight: js.UndefOr[Boolean] = js.undefined
+  var alignWidth: js.UndefOr[Boolean] = js.undefined
+  var clickable: js.UndefOr[Boolean] = js.undefined
+  var flip: js.UndefOr[Boolean] = js.undefined
+  var flipHorizontal: js.UndefOr[Boolean] = js.undefined
+  var flipVertical: js.UndefOr[Boolean] = js.undefined
+  var friction: js.UndefOr[Double] = js.undefined
+  var onFlipEnd: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onFlipStart: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var perspective: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var useNativeDriver: js.UndefOr[Boolean] = js.undefined
 }
 
 object FlipCardProps {
   @scala.inline
-  def apply(): FlipCardProps = {
+  def apply(
+    alignHeight: js.UndefOr[Boolean] = js.undefined,
+    alignWidth: js.UndefOr[Boolean] = js.undefined,
+    clickable: js.UndefOr[Boolean] = js.undefined,
+    flip: js.UndefOr[Boolean] = js.undefined,
+    flipHorizontal: js.UndefOr[Boolean] = js.undefined,
+    flipVertical: js.UndefOr[Boolean] = js.undefined,
+    friction: js.UndefOr[Double] = js.undefined,
+    onFlipEnd: () => Unit = null,
+    onFlipStart: () => Unit = null,
+    perspective: js.UndefOr[Double] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    useNativeDriver: js.UndefOr[Boolean] = js.undefined
+  ): FlipCardProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alignHeight)) __obj.updateDynamic("alignHeight")(alignHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(alignWidth)) __obj.updateDynamic("alignWidth")(alignWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flip)) __obj.updateDynamic("flip")(flip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flipHorizontal)) __obj.updateDynamic("flipHorizontal")(flipHorizontal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flipVertical)) __obj.updateDynamic("flipVertical")(flipVertical.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(friction)) __obj.updateDynamic("friction")(friction.get.asInstanceOf[js.Any])
+    if (onFlipEnd != null) __obj.updateDynamic("onFlipEnd")(js.Any.fromFunction0(onFlipEnd))
+    if (onFlipStart != null) __obj.updateDynamic("onFlipStart")(js.Any.fromFunction0(onFlipStart))
+    if (!js.isUndefined(perspective)) __obj.updateDynamic("perspective")(perspective.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNativeDriver)) __obj.updateDynamic("useNativeDriver")(useNativeDriver.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlipCardProps]
   }
-  @scala.inline
-  implicit class FlipCardPropsOps[Self <: FlipCardProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlipHorizontal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipHorizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlipHorizontal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipHorizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlipVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipVertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlipVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipVertical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFriction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFlipEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFlipEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFlipEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFlipEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFlipStart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFlipStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFlipStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFlipStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerspective(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perspective")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerspective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perspective")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-    @scala.inline
-    def withUseNativeDriver(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeDriver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNativeDriver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeDriver")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

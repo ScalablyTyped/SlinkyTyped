@@ -492,18 +492,32 @@ object pbrBaseMaterialMod extends js.Object {
     var CLIPPLANE4: Boolean = js.native
     var CLIPPLANE5: Boolean = js.native
     var CLIPPLANE6: Boolean = js.native
+    /* CompleteClass */
+    override var COLORCURVES: Boolean = js.native
+    /* CompleteClass */
+    override var COLORGRADING: Boolean = js.native
+    /* CompleteClass */
+    override var COLORGRADING3D: Boolean = js.native
+    /* CompleteClass */
+    override var CONTRAST: Boolean = js.native
     var DEBUGMODE: Double = js.native
     var DEPTHPREPASS: Boolean = js.native
     var EMISSIVE: Boolean = js.native
     var EMISSIVEDIRECTUV: Double = js.native
     var ENVIRONMENTBRDF: Boolean = js.native
     var ENVIRONMENTBRDF_RGBD: Boolean = js.native
+    /* CompleteClass */
+    override var EXPOSURE: Boolean = js.native
     var FOG: Boolean = js.native
     var FORCENORMALFORWARD: Boolean = js.native
     var GAMMAALBEDO: Boolean = js.native
     var GAMMALIGHTMAP: Boolean = js.native
     var GAMMAREFLECTION: Boolean = js.native
     var HORIZONOCCLUSION: Boolean = js.native
+    /* CompleteClass */
+    override var IMAGEPROCESSING: Boolean = js.native
+    /* CompleteClass */
+    override var IMAGEPROCESSINGPOSTPROCESS: Boolean = js.native
     var INSTANCES: Boolean = js.native
     var INVERTCUBICMAP: Boolean = js.native
     var LIGHTMAP: Boolean = js.native
@@ -562,6 +576,10 @@ object pbrBaseMaterialMod extends js.Object {
     var RGBDREFLECTION: Boolean = js.native
     var ROUGHNESSSTOREINMETALMAPALPHA: Boolean = js.native
     var ROUGHNESSSTOREINMETALMAPGREEN: Boolean = js.native
+    /* CompleteClass */
+    override var SAMPLER3DBGRMAP: Boolean = js.native
+    /* CompleteClass */
+    override var SAMPLER3DGREENDEPTH: Boolean = js.native
     var SHADOWFLOAT: Boolean = js.native
     var SHEEN: Boolean = js.native
     var SHEEN_LINKWITHALBEDO: Boolean = js.native
@@ -587,6 +605,10 @@ object pbrBaseMaterialMod extends js.Object {
     var SS_TRANSLUCENCY: Boolean = js.native
     var SUBSURFACE: Boolean = js.native
     var TANGENT: Boolean = js.native
+    /* CompleteClass */
+    override var TONEMAPPING: Boolean = js.native
+    /* CompleteClass */
+    override var TONEMAPPING_ACES: Boolean = js.native
     var TWOSIDEDLIGHTING: Boolean = js.native
     var UNLIT: Boolean = js.native
     var USEGLTFLIGHTFALLOFF: Boolean = js.native
@@ -600,6 +622,12 @@ object pbrBaseMaterialMod extends js.Object {
     var UV2: Boolean = js.native
     var VERTEXALPHA: Boolean = js.native
     var VERTEXCOLOR: Boolean = js.native
+    /* CompleteClass */
+    override var VIGNETTE: Boolean = js.native
+    /* CompleteClass */
+    override var VIGNETTEBLENDMODEMULTIPLY: Boolean = js.native
+    /* CompleteClass */
+    override var VIGNETTEBLENDMODEOPAQUE: Boolean = js.native
   }
   
   /* static members */

@@ -31,65 +31,18 @@ trait SchemaTrainingRun extends js.Object {
 
 object SchemaTrainingRun {
   @scala.inline
-  def apply(): SchemaTrainingRun = {
+  def apply(
+    evaluationMetrics: SchemaEvaluationMetrics = null,
+    results: js.Array[SchemaIterationResult] = null,
+    startTime: String = null,
+    trainingOptions: SchemaTrainingOptions = null
+  ): SchemaTrainingRun = {
     val __obj = js.Dynamic.literal()
+    if (evaluationMetrics != null) __obj.updateDynamic("evaluationMetrics")(evaluationMetrics.asInstanceOf[js.Any])
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
+    if (trainingOptions != null) __obj.updateDynamic("trainingOptions")(trainingOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTrainingRun]
   }
-  @scala.inline
-  implicit class SchemaTrainingRunOps[Self <: SchemaTrainingRun] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvaluationMetrics(value: SchemaEvaluationMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: js.Array[SchemaIterationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrainingOptions(value: SchemaTrainingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrainingOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

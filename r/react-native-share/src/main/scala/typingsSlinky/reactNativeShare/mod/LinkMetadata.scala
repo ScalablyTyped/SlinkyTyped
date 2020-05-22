@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LinkMetadata extends js.Object {
-  var icon: js.UndefOr[String] = js.native
-  var image: js.UndefOr[String] = js.native
-  var originalUrl: js.UndefOr[String] = js.native
-  var remoteVideoUrl: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
-  var video: js.UndefOr[String] = js.native
+  var icon: js.UndefOr[String] = js.undefined
+  var image: js.UndefOr[String] = js.undefined
+  var originalUrl: js.UndefOr[String] = js.undefined
+  var remoteVideoUrl: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
+  var video: js.UndefOr[String] = js.undefined
 }
 
 object LinkMetadata {
   @scala.inline
-  def apply(): LinkMetadata = {
+  def apply(
+    icon: String = null,
+    image: String = null,
+    originalUrl: String = null,
+    remoteVideoUrl: String = null,
+    title: String = null,
+    url: String = null,
+    video: String = null
+  ): LinkMetadata = {
     val __obj = js.Dynamic.literal()
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (originalUrl != null) __obj.updateDynamic("originalUrl")(originalUrl.asInstanceOf[js.Any])
+    if (remoteVideoUrl != null) __obj.updateDynamic("remoteVideoUrl")(remoteVideoUrl.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (video != null) __obj.updateDynamic("video")(video.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkMetadata]
   }
-  @scala.inline
-  implicit class LinkMetadataOps[Self <: LinkMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteVideoUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteVideoUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteVideoUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteVideoUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

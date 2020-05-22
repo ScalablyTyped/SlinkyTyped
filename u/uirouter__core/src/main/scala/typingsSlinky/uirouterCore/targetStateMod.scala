@@ -1,12 +1,11 @@
 package typingsSlinky.uirouterCore
 
 import typingsSlinky.uirouterCore.paramsInterfaceMod.RawParams
-import typingsSlinky.uirouterCore.stateInterfaceMod.RedirectToResult
 import typingsSlinky.uirouterCore.stateInterfaceMod.StateDeclaration
 import typingsSlinky.uirouterCore.stateInterfaceMod.StateOrName
+import typingsSlinky.uirouterCore.stateInterfaceMod._RedirectToResult
 import typingsSlinky.uirouterCore.stateObjectMod.StateObject
 import typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry
-import typingsSlinky.uirouterCore.transitionInterfaceMod.HookResult
 import typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object targetStateMod extends js.Object {
   @js.native
-  class TargetState protected ()
-    extends HookResult
-       with RedirectToResult {
+  class TargetState protected () extends _RedirectToResult {
     /**
       * The TargetState constructor
       *

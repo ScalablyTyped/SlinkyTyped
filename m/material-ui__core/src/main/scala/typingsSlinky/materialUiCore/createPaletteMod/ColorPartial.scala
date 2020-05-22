@@ -25,185 +25,38 @@ trait ColorPartial extends PaletteColorOptions {
 
 object ColorPartial {
   @scala.inline
-  def apply(): ColorPartial = {
+  def apply(
+    `100`: String = null,
+    `200`: String = null,
+    `300`: String = null,
+    `400`: String = null,
+    `50`: String = null,
+    `500`: String = null,
+    `600`: String = null,
+    `700`: String = null,
+    `800`: String = null,
+    `900`: String = null,
+    A100: String = null,
+    A200: String = null,
+    A400: String = null,
+    A700: String = null
+  ): ColorPartial = {
     val __obj = js.Dynamic.literal()
+    if (`100` != null) __obj.updateDynamic("100")(`100`.asInstanceOf[js.Any])
+    if (`200` != null) __obj.updateDynamic("200")(`200`.asInstanceOf[js.Any])
+    if (`300` != null) __obj.updateDynamic("300")(`300`.asInstanceOf[js.Any])
+    if (`400` != null) __obj.updateDynamic("400")(`400`.asInstanceOf[js.Any])
+    if (`50` != null) __obj.updateDynamic("50")(`50`.asInstanceOf[js.Any])
+    if (`500` != null) __obj.updateDynamic("500")(`500`.asInstanceOf[js.Any])
+    if (`600` != null) __obj.updateDynamic("600")(`600`.asInstanceOf[js.Any])
+    if (`700` != null) __obj.updateDynamic("700")(`700`.asInstanceOf[js.Any])
+    if (`800` != null) __obj.updateDynamic("800")(`800`.asInstanceOf[js.Any])
+    if (`900` != null) __obj.updateDynamic("900")(`900`.asInstanceOf[js.Any])
+    if (A100 != null) __obj.updateDynamic("A100")(A100.asInstanceOf[js.Any])
+    if (A200 != null) __obj.updateDynamic("A200")(A200.asInstanceOf[js.Any])
+    if (A400 != null) __obj.updateDynamic("A400")(A400.asInstanceOf[js.Any])
+    if (A700 != null) __obj.updateDynamic("A700")(A700.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorPartial]
   }
-  @scala.inline
-  implicit class ColorPartialOps[Self <: ColorPartial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with100(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("100")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without100: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("100")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with200(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("200")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without200: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("200")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with300(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("300")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without300: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("300")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with400(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("400")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without400: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("400")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with50(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("50")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without50: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("50")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with500(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("500")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without500: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("500")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with600(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("600")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without600: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("600")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with700(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("700")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without700: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("700")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with800(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("800")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without800: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("800")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with900(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("900")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without900: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("900")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withA100(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A100")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA100: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A100")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withA200(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A200")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA200: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A200")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withA400(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A400")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA400: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A400")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withA700(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A700")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA700: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A700")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

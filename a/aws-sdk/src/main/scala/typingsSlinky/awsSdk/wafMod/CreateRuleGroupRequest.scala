@@ -18,52 +18,18 @@ trait CreateRuleGroupRequest extends js.Object {
     * A friendly name or description of the RuleGroup. You can't change Name after you create a RuleGroup.
     */
   var Name: ResourceName = js.native
+  /**
+    * 
+    */
   var Tags: js.UndefOr[TagList] = js.native
 }
 
 object CreateRuleGroupRequest {
   @scala.inline
-  def apply(ChangeToken: ChangeToken, MetricName: MetricName, Name: ResourceName): CreateRuleGroupRequest = {
+  def apply(ChangeToken: ChangeToken, MetricName: MetricName, Name: ResourceName, Tags: TagList = null): CreateRuleGroupRequest = {
     val __obj = js.Dynamic.literal(ChangeToken = ChangeToken.asInstanceOf[js.Any], MetricName = MetricName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRuleGroupRequest]
   }
-  @scala.inline
-  implicit class CreateRuleGroupRequestOps[Self <: CreateRuleGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangeToken(value: ChangeToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetricName(value: MetricName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

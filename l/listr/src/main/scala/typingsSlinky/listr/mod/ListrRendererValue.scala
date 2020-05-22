@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait ListrRendererValue[Ctx] extends js.Object
 
-object ListrRendererValue {
-  @scala.inline
-  def silent[Ctx]: typingsSlinky.listr.listrStrings.silent = "silent".asInstanceOf[typingsSlinky.listr.listrStrings.silent]
-  @scala.inline
-  def default[Ctx]: typingsSlinky.listr.listrStrings.default = "default".asInstanceOf[typingsSlinky.listr.listrStrings.default]
-  @scala.inline
-  def verbose[Ctx]: typingsSlinky.listr.listrStrings.verbose = "verbose".asInstanceOf[typingsSlinky.listr.listrStrings.verbose]
-  @scala.inline
-  implicit def apply[Ctx](value: ListrRendererClass[Ctx]): ListrRendererValue[Ctx] = value.asInstanceOf[ListrRendererValue[Ctx]]
-}
-

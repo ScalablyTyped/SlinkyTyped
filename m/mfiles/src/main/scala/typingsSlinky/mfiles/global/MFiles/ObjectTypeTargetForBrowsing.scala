@@ -8,7 +8,14 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.ObjectTypeTargetForBrowsing")
 @js.native
-class ObjectTypeTargetForBrowsing () extends IObjectTypeTargetForBrowsing
+class ObjectTypeTargetForBrowsing () extends IObjectTypeTargetForBrowsing {
+  /* CompleteClass */
+  override var TargetObjectType: Double = js.native
+  /* CompleteClass */
+  override var ViewCollection: Double = js.native
+  /* CompleteClass */
+  override def Clone(): IObjectTypeTargetForBrowsing = js.native
+}
 
 @JSGlobal("MFiles.ObjectTypeTargetForBrowsing")
 @js.native

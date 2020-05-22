@@ -22,47 +22,11 @@ trait CreateApplicationInput extends js.Object {
 
 object CreateApplicationInput {
   @scala.inline
-  def apply(applicationName: ApplicationName): CreateApplicationInput = {
+  def apply(applicationName: ApplicationName, computePlatform: ComputePlatform = null, tags: TagList = null): CreateApplicationInput = {
     val __obj = js.Dynamic.literal(applicationName = applicationName.asInstanceOf[js.Any])
+    if (computePlatform != null) __obj.updateDynamic("computePlatform")(computePlatform.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateApplicationInput]
   }
-  @scala.inline
-  implicit class CreateApplicationInputOps[Self <: CreateApplicationInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComputePlatform(value: ComputePlatform): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computePlatform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputePlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computePlatform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

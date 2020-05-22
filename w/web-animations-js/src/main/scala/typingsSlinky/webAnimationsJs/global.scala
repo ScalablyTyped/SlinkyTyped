@@ -25,6 +25,26 @@ object global extends js.Object {
     extends typingsSlinky.webAnimationsJs.AnimationPlaybackEvent {
     def this(`type`: String) = this()
     def this(`type`: String, eventInitDict: AnimationPlaybackEventInit) = this()
+    /* CompleteClass */
+    override var bubbles: Boolean = js.native
+    /* CompleteClass */
+    override var cancelable: Boolean = js.native
+    /* CompleteClass */
+    override var currentTarget: typingsSlinky.webAnimationsJs.Animation = js.native
+    /* CompleteClass */
+    override val currentTime: Double | Null = js.native
+    /* CompleteClass */
+    override var defaultPrevented: Boolean = js.native
+    /* CompleteClass */
+    override var eventPhase: Double = js.native
+    /* CompleteClass */
+    override var target: typingsSlinky.webAnimationsJs.Animation = js.native
+    /* CompleteClass */
+    override var timeStamp: Double = js.native
+    /* CompleteClass */
+    override val timelineTime: Double | Null = js.native
+    /* CompleteClass */
+    override var `type`: String = js.native
   }
   
   @js.native

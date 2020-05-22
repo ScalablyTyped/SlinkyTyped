@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Break extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  val PageIndex: Double = js.native
-  val Parent: js.Any = js.native
-  val Range: typingsSlinky.activexWord.Word.Range = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  val PageIndex: Double
+  val Parent: js.Any
+  val Range: typingsSlinky.activexWord.Word.Range
   @JSName("Word.Break_typekey")
-  var WordDotBreak_typekey: Break = js.native
+  var WordDotBreak_typekey: Break
 }
 
 object Break {
@@ -29,49 +28,5 @@ object Break {
     __obj.updateDynamic("Word.Break_typekey")(WordDotBreak_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Break]
   }
-  @scala.inline
-  implicit class BreakOps[Self <: Break] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotBreak_typekey(value: Break): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.Break_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

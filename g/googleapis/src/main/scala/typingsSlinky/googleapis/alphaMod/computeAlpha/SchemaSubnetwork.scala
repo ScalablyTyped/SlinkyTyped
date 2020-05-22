@@ -198,341 +198,64 @@ trait SchemaSubnetwork extends js.Object {
 
 object SchemaSubnetwork {
   @scala.inline
-  def apply(): SchemaSubnetwork = {
+  def apply(
+    aggregationInterval: String = null,
+    allowSubnetCidrRoutesOverlap: js.UndefOr[Boolean] = js.undefined,
+    creationTimestamp: String = null,
+    description: String = null,
+    enableFlowLogs: js.UndefOr[Boolean] = js.undefined,
+    enablePrivateV6Access: js.UndefOr[Boolean] = js.undefined,
+    fingerprint: String = null,
+    flowSampling: js.UndefOr[Double] = js.undefined,
+    gatewayAddress: String = null,
+    id: String = null,
+    ipCidrRange: String = null,
+    ipv6CidrRange: String = null,
+    kind: String = null,
+    logConfig: SchemaSubnetworkLogConfig = null,
+    metadata: String = null,
+    name: String = null,
+    network: String = null,
+    privateIpGoogleAccess: js.UndefOr[Boolean] = js.undefined,
+    privateIpv6GoogleAccess: String = null,
+    purpose: String = null,
+    rangeType: String = null,
+    region: String = null,
+    role: String = null,
+    secondaryIpRanges: js.Array[SchemaSubnetworkSecondaryRange] = null,
+    selfLink: String = null,
+    selfLinkWithId: String = null,
+    state: String = null
+  ): SchemaSubnetwork = {
     val __obj = js.Dynamic.literal()
+    if (aggregationInterval != null) __obj.updateDynamic("aggregationInterval")(aggregationInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSubnetCidrRoutesOverlap)) __obj.updateDynamic("allowSubnetCidrRoutesOverlap")(allowSubnetCidrRoutesOverlap.get.asInstanceOf[js.Any])
+    if (creationTimestamp != null) __obj.updateDynamic("creationTimestamp")(creationTimestamp.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableFlowLogs)) __obj.updateDynamic("enableFlowLogs")(enableFlowLogs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enablePrivateV6Access)) __obj.updateDynamic("enablePrivateV6Access")(enablePrivateV6Access.get.asInstanceOf[js.Any])
+    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
+    if (!js.isUndefined(flowSampling)) __obj.updateDynamic("flowSampling")(flowSampling.get.asInstanceOf[js.Any])
+    if (gatewayAddress != null) __obj.updateDynamic("gatewayAddress")(gatewayAddress.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (ipCidrRange != null) __obj.updateDynamic("ipCidrRange")(ipCidrRange.asInstanceOf[js.Any])
+    if (ipv6CidrRange != null) __obj.updateDynamic("ipv6CidrRange")(ipv6CidrRange.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (logConfig != null) __obj.updateDynamic("logConfig")(logConfig.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (!js.isUndefined(privateIpGoogleAccess)) __obj.updateDynamic("privateIpGoogleAccess")(privateIpGoogleAccess.get.asInstanceOf[js.Any])
+    if (privateIpv6GoogleAccess != null) __obj.updateDynamic("privateIpv6GoogleAccess")(privateIpv6GoogleAccess.asInstanceOf[js.Any])
+    if (purpose != null) __obj.updateDynamic("purpose")(purpose.asInstanceOf[js.Any])
+    if (rangeType != null) __obj.updateDynamic("rangeType")(rangeType.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (secondaryIpRanges != null) __obj.updateDynamic("secondaryIpRanges")(secondaryIpRanges.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (selfLinkWithId != null) __obj.updateDynamic("selfLinkWithId")(selfLinkWithId.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubnetwork]
   }
-  @scala.inline
-  implicit class SchemaSubnetworkOps[Self <: SchemaSubnetwork] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregationInterval(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregationInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSubnetCidrRoutesOverlap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSubnetCidrRoutesOverlap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSubnetCidrRoutesOverlap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSubnetCidrRoutesOverlap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableFlowLogs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFlowLogs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableFlowLogs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFlowLogs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnablePrivateV6Access(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePrivateV6Access")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnablePrivateV6Access: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePrivateV6Access")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlowSampling(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flowSampling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlowSampling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flowSampling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGatewayAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpCidrRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipCidrRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpCidrRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipCidrRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpv6CidrRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6CidrRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpv6CidrRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6CidrRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogConfig(value: SchemaSubnetworkLogConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateIpGoogleAccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateIpGoogleAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateIpGoogleAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateIpGoogleAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateIpv6GoogleAccess(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateIpv6GoogleAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateIpv6GoogleAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateIpv6GoogleAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurpose(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurpose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondaryIpRanges(value: js.Array[SchemaSubnetworkSecondaryRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryIpRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondaryIpRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryIpRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLinkWithId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLinkWithId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLinkWithId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLinkWithId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,9 +23,8 @@ import scala.scalajs.js.annotation._
   *     // 0 <= 2 * x <= 5
   *     constraint.setCoefficient('x', 2);
   */
-@js.native
 trait LinearOptimizationConstraint extends js.Object {
-  def setCoefficient(variableName: String, coefficient: Double): LinearOptimizationConstraint = js.native
+  def setCoefficient(variableName: String, coefficient: Double): LinearOptimizationConstraint
 }
 
 object LinearOptimizationConstraint {
@@ -34,19 +33,5 @@ object LinearOptimizationConstraint {
     val __obj = js.Dynamic.literal(setCoefficient = js.Any.fromFunction2(setCoefficient))
     __obj.asInstanceOf[LinearOptimizationConstraint]
   }
-  @scala.inline
-  implicit class LinearOptimizationConstraintOps[Self <: LinearOptimizationConstraint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetCoefficient(value: (String, Double) => LinearOptimizationConstraint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCoefficient")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

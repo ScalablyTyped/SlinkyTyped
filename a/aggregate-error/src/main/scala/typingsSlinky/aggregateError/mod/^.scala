@@ -42,5 +42,9 @@ class ^ protected () extends AggregateError {
   	```
   	*/
   def this(errors: js.Array[js.Error | StringDictionary[_] | String]) = this()
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

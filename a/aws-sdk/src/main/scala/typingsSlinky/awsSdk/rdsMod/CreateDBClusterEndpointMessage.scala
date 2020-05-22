@@ -34,71 +34,19 @@ trait CreateDBClusterEndpointMessage extends js.Object {
 
 object CreateDBClusterEndpointMessage {
   @scala.inline
-  def apply(DBClusterEndpointIdentifier: String, DBClusterIdentifier: String, EndpointType: String): CreateDBClusterEndpointMessage = {
+  def apply(
+    DBClusterEndpointIdentifier: String,
+    DBClusterIdentifier: String,
+    EndpointType: String,
+    ExcludedMembers: StringList = null,
+    StaticMembers: StringList = null,
+    Tags: TagList = null
+  ): CreateDBClusterEndpointMessage = {
     val __obj = js.Dynamic.literal(DBClusterEndpointIdentifier = DBClusterEndpointIdentifier.asInstanceOf[js.Any], DBClusterIdentifier = DBClusterIdentifier.asInstanceOf[js.Any], EndpointType = EndpointType.asInstanceOf[js.Any])
+    if (ExcludedMembers != null) __obj.updateDynamic("ExcludedMembers")(ExcludedMembers.asInstanceOf[js.Any])
+    if (StaticMembers != null) __obj.updateDynamic("StaticMembers")(StaticMembers.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDBClusterEndpointMessage]
   }
-  @scala.inline
-  implicit class CreateDBClusterEndpointMessageOps[Self <: CreateDBClusterEndpointMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBClusterEndpointIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterEndpointIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDBClusterIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndpointType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcludedMembers(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedMembers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedMembers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedMembers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticMembers(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticMembers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticMembers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticMembers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

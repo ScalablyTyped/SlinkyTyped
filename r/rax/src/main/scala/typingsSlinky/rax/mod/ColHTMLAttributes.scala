@@ -4,49 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColHTMLAttributes[T] extends HTMLAttributes[T] {
-  var span: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[Double | String] = js.native
+  var span: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double | String] = js.undefined
 }
 
 object ColHTMLAttributes {
   @scala.inline
-  def apply[T](): ColHTMLAttributes[T] = {
+  def apply[T](
+    HTMLAttributes: HTMLAttributes[T] = null,
+    span: js.UndefOr[Double] = js.undefined,
+    width: Double | String = null
+  ): ColHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (HTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, HTMLAttributes)
+    if (!js.isUndefined(span)) __obj.updateDynamic("span")(span.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColHTMLAttributes[T]]
   }
-  @scala.inline
-  implicit class ColHTMLAttributesOps[Self[t] <: ColHTMLAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withSpan(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpan: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

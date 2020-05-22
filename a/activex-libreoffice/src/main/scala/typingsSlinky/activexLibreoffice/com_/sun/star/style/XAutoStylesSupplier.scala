@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This interface provides access to the style families within the container document. */
-@js.native
 trait XAutoStylesSupplier extends XInterface {
   /**
     * This method returns the collection of automatic style families available in the container document.
     * @see AutoStyles
     */
-  val AutoStyles: XAutoStyles = js.native
+  val AutoStyles: XAutoStyles
   /**
     * This method returns the collection of automatic style families available in the container document.
     * @see AutoStyles
     */
-  def getAutoStyles(): XAutoStyles = js.native
+  def getAutoStyles(): XAutoStyles
 }
 
 object XAutoStylesSupplier {
@@ -33,25 +32,5 @@ object XAutoStylesSupplier {
     val __obj = js.Dynamic.literal(AutoStyles = AutoStyles.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getAutoStyles = js.Any.fromFunction0(getAutoStyles), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAutoStylesSupplier]
   }
-  @scala.inline
-  implicit class XAutoStylesSupplierOps[Self <: XAutoStylesSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoStyles(value: XAutoStyles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAutoStyles(value: () => XAutoStyles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoStyles")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

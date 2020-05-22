@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class Parser () extends SparqlParser {
   def this(options: BaseIRI) = this()
+  /* CompleteClass */
+  override def parse(query: String): SparqlQuery = js.native
 }
 
 @JSImport("sparqljs", "Parser")

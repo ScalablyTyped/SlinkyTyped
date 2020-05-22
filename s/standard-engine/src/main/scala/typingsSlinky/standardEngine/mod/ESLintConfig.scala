@@ -4,148 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ESLintConfig extends js.Object {
   /** @default true */
-  var cache: js.UndefOr[Boolean] = js.native
+  var cache: js.UndefOr[Boolean] = js.undefined
   /** @default  path.join(HOME_OR_TMP, `.${this.cmd}-v${majorVersion}-cache/` */
-  var cacheLocation: js.UndefOr[String] = js.native
-  var configFile: js.UndefOr[String] = js.native
+  var cacheLocation: js.UndefOr[String] = js.undefined
+  var configFile: js.UndefOr[String] = js.undefined
   /** @default [] */
-  var envs: js.UndefOr[js.Array[String]] = js.native
+  var envs: js.UndefOr[js.Array[String]] = js.undefined
   /** @default false */
-  var fix: js.UndefOr[Boolean] = js.native
+  var fix: js.UndefOr[Boolean] = js.undefined
   /** @default [] */
-  var globals: js.UndefOr[js.Array[String]] = js.native
+  var globals: js.UndefOr[js.Array[String]] = js.undefined
   /** @default false */
-  var ignore: js.UndefOr[Boolean] = js.native
+  var ignore: js.UndefOr[Boolean] = js.undefined
   /** @default [] */
-  var plugins: js.UndefOr[js.Array[String]] = js.native
+  var plugins: js.UndefOr[js.Array[String]] = js.undefined
   /** @default false */
-  var useEslintrc: js.UndefOr[Boolean] = js.native
+  var useEslintrc: js.UndefOr[Boolean] = js.undefined
 }
 
 object ESLintConfig {
   @scala.inline
-  def apply(): ESLintConfig = {
+  def apply(
+    cache: js.UndefOr[Boolean] = js.undefined,
+    cacheLocation: String = null,
+    configFile: String = null,
+    envs: js.Array[String] = null,
+    fix: js.UndefOr[Boolean] = js.undefined,
+    globals: js.Array[String] = null,
+    ignore: js.UndefOr[Boolean] = js.undefined,
+    plugins: js.Array[String] = null,
+    useEslintrc: js.UndefOr[Boolean] = js.undefined
+  ): ESLintConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
+    if (cacheLocation != null) __obj.updateDynamic("cacheLocation")(cacheLocation.asInstanceOf[js.Any])
+    if (configFile != null) __obj.updateDynamic("configFile")(configFile.asInstanceOf[js.Any])
+    if (envs != null) __obj.updateDynamic("envs")(envs.asInstanceOf[js.Any])
+    if (!js.isUndefined(fix)) __obj.updateDynamic("fix")(fix.get.asInstanceOf[js.Any])
+    if (globals != null) __obj.updateDynamic("globals")(globals.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignore)) __obj.updateDynamic("ignore")(ignore.get.asInstanceOf[js.Any])
+    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
+    if (!js.isUndefined(useEslintrc)) __obj.updateDynamic("useEslintrc")(useEslintrc.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ESLintConfig]
   }
-  @scala.inline
-  implicit class ESLintConfigOps[Self <: ESLintConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFix(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobals(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEslintrc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEslintrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEslintrc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEslintrc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

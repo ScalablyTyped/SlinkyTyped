@@ -15,14 +15,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/nodes.Expression, 'type'> */
-@js.native
 trait UnaryExpression extends ASTNode {
-  var argument: ExpressionKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var operator: `-_` | Plussign | Exclamationmark | Tilde | typeof | void | delete = js.native
-  var prefix: Boolean = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.UnaryExpression = js.native
+  var argument: ExpressionKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var operator: `-_` | Plussign | Exclamationmark | Tilde | typeof | void | delete
+  var prefix: Boolean
+  var `type`: typingsSlinky.astTypes.astTypesStrings.UnaryExpression
 }
 
 object UnaryExpression {
@@ -31,67 +30,15 @@ object UnaryExpression {
     argument: ExpressionKind,
     operator: `-_` | Plussign | Exclamationmark | Tilde | typeof | void | delete,
     prefix: Boolean,
-    `type`: typingsSlinky.astTypes.astTypesStrings.UnaryExpression
+    `type`: typingsSlinky.astTypes.astTypesStrings.UnaryExpression,
+    comments: js.Array[CommentKind] = null,
+    loc: SourceLocationKind = null
   ): UnaryExpression = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnaryExpression]
   }
-  @scala.inline
-  implicit class UnaryExpressionOps[Self <: UnaryExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgument(value: ExpressionKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperator(value: `-_` | Plussign | Exclamationmark | Tilde | typeof | void | delete): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.astTypes.astTypesStrings.UnaryExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoc(value: SourceLocationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

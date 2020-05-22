@@ -30,77 +30,20 @@ trait QueryOutput extends js.Object {
 
 object QueryOutput {
   @scala.inline
-  def apply(): QueryOutput = {
+  def apply(
+    ConsumedCapacity: ConsumedCapacity = null,
+    Count: js.UndefOr[Integer] = js.undefined,
+    Items: ItemList = null,
+    LastEvaluatedKey: Key = null,
+    ScannedCount: js.UndefOr[Integer] = js.undefined
+  ): QueryOutput = {
     val __obj = js.Dynamic.literal()
+    if (ConsumedCapacity != null) __obj.updateDynamic("ConsumedCapacity")(ConsumedCapacity.asInstanceOf[js.Any])
+    if (!js.isUndefined(Count)) __obj.updateDynamic("Count")(Count.get.asInstanceOf[js.Any])
+    if (Items != null) __obj.updateDynamic("Items")(Items.asInstanceOf[js.Any])
+    if (LastEvaluatedKey != null) __obj.updateDynamic("LastEvaluatedKey")(LastEvaluatedKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(ScannedCount)) __obj.updateDynamic("ScannedCount")(ScannedCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryOutput]
   }
-  @scala.inline
-  implicit class QueryOutputOps[Self <: QueryOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumedCapacity(value: ConsumedCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumedCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: ItemList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastEvaluatedKey(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastEvaluatedKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScannedCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScannedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScannedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScannedCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

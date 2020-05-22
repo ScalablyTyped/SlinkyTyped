@@ -7,152 +7,65 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CreateCaseRequest extends js.Object {
   /**
-    * The ID of a set of one or more attachments for the case. Create the set by using AddAttachmentsToSet.
+    * The ID of a set of one or more attachments for the case. Create the set by using the AddAttachmentsToSet operation.
     */
   var attachmentSetId: js.UndefOr[AttachmentSetId] = js.native
   /**
-    * The category of problem for the AWS Support case.
+    * The category of problem for the AWS Support case. You also use the DescribeServices operation to get the category code for a service. Each AWS service defines its own set of category codes.
     */
   var categoryCode: js.UndefOr[CategoryCode] = js.native
   /**
-    * A list of email addresses that AWS Support copies on case correspondence.
+    * A list of email addresses that AWS Support copies on case correspondence. AWS Support identifies the account that creates the case when you specify your AWS credentials in an HTTP POST method or use the AWS SDKs. 
     */
   var ccEmailAddresses: js.UndefOr[CcEmailAddressList] = js.native
   /**
-    * The communication body text when you create an AWS Support case by calling CreateCase.
+    * The communication body text that describes the issue. This text appears in the Description field on the AWS Support Center Create Case page.
     */
   var communicationBody: CommunicationBody = js.native
   /**
-    * The type of issue for the case. You can specify either "customer-service" or "technical." If you do not indicate a value, the default is "technical."  Service limit increases are not supported by the Support API; you must submit service limit increase requests in Support Center. 
+    * The type of issue for the case. You can specify customer-service or technical. If you don't specify a value, the default is technical.
     */
   var issueType: js.UndefOr[IssueType] = js.native
   /**
-    * The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.
+    * The language in which AWS Support handles the case. You must specify the ISO 639-1 code for the language parameter if you want support in that language. Currently, English ("en") and Japanese ("ja") are supported.
     */
   var language: js.UndefOr[Language] = js.native
   /**
-    * The code for the AWS service returned by the call to DescribeServices.
+    * The code for the AWS service. You can use the DescribeServices operation to get the possible serviceCode values.
     */
   var serviceCode: js.UndefOr[ServiceCode] = js.native
   /**
-    * The code for the severity level returned by the call to DescribeSeverityLevels.  The availability of severity levels depends on the support plan for the account. 
+    * A value that indicates the urgency of the case. This value determines the response time according to your service level agreement with AWS Support. You can use the DescribeSeverityLevels operation to get the possible values for severityCode.  For more information, see SeverityLevel and Choosing a Severity in the AWS Support User Guide.  The availability of severity levels depends on the support plan for the AWS account. 
     */
   var severityCode: js.UndefOr[SeverityCode] = js.native
   /**
-    * The title of the AWS Support case.
+    * The title of the AWS Support case. The title appears in the Subject field on the AWS Support Center Create Case page.
     */
   var subject: Subject = js.native
 }
 
 object CreateCaseRequest {
   @scala.inline
-  def apply(communicationBody: CommunicationBody, subject: Subject): CreateCaseRequest = {
+  def apply(
+    communicationBody: CommunicationBody,
+    subject: Subject,
+    attachmentSetId: AttachmentSetId = null,
+    categoryCode: CategoryCode = null,
+    ccEmailAddresses: CcEmailAddressList = null,
+    issueType: IssueType = null,
+    language: Language = null,
+    serviceCode: ServiceCode = null,
+    severityCode: SeverityCode = null
+  ): CreateCaseRequest = {
     val __obj = js.Dynamic.literal(communicationBody = communicationBody.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
+    if (attachmentSetId != null) __obj.updateDynamic("attachmentSetId")(attachmentSetId.asInstanceOf[js.Any])
+    if (categoryCode != null) __obj.updateDynamic("categoryCode")(categoryCode.asInstanceOf[js.Any])
+    if (ccEmailAddresses != null) __obj.updateDynamic("ccEmailAddresses")(ccEmailAddresses.asInstanceOf[js.Any])
+    if (issueType != null) __obj.updateDynamic("issueType")(issueType.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (serviceCode != null) __obj.updateDynamic("serviceCode")(serviceCode.asInstanceOf[js.Any])
+    if (severityCode != null) __obj.updateDynamic("severityCode")(severityCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCaseRequest]
   }
-  @scala.inline
-  implicit class CreateCaseRequestOps[Self <: CreateCaseRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommunicationBody(value: CommunicationBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("communicationBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubject(value: Subject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttachmentSetId(value: AttachmentSetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachmentSetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategoryCode(value: CategoryCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategoryCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCcEmailAddresses(value: CcEmailAddressList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccEmailAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCcEmailAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccEmailAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssueType(value: IssueType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issueType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssueType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issueType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: Language): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceCode(value: ServiceCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverityCode(value: SeverityCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severityCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverityCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severityCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

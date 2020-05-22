@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Crop extends js.Object {
-  var crop: js.UndefOr[Boolean] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var preserve_headers: js.UndefOr[Boolean] = js.native
-  var quuality: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var crop: js.UndefOr[Boolean] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var preserve_headers: js.UndefOr[Boolean] = js.undefined
+  var quuality: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object Crop {
   @scala.inline
-  def apply(): Crop = {
+  def apply(
+    crop: js.UndefOr[Boolean] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    preserve_headers: js.UndefOr[Boolean] = js.undefined,
+    quuality: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): Crop = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(crop)) __obj.updateDynamic("crop")(crop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserve_headers)) __obj.updateDynamic("preserve_headers")(preserve_headers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quuality)) __obj.updateDynamic("quuality")(quuality.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Crop]
   }
-  @scala.inline
-  implicit class CropOps[Self <: Crop] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCrop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserve_headers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserve_headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserve_headers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserve_headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quuality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quuality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

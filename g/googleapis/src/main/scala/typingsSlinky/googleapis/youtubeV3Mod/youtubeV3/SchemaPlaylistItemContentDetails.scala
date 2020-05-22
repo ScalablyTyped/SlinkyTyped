@@ -40,77 +40,20 @@ trait SchemaPlaylistItemContentDetails extends js.Object {
 
 object SchemaPlaylistItemContentDetails {
   @scala.inline
-  def apply(): SchemaPlaylistItemContentDetails = {
+  def apply(
+    endAt: String = null,
+    note: String = null,
+    startAt: String = null,
+    videoId: String = null,
+    videoPublishedAt: String = null
+  ): SchemaPlaylistItemContentDetails = {
     val __obj = js.Dynamic.literal()
+    if (endAt != null) __obj.updateDynamic("endAt")(endAt.asInstanceOf[js.Any])
+    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
+    if (startAt != null) __obj.updateDynamic("startAt")(startAt.asInstanceOf[js.Any])
+    if (videoId != null) __obj.updateDynamic("videoId")(videoId.asInstanceOf[js.Any])
+    if (videoPublishedAt != null) __obj.updateDynamic("videoPublishedAt")(videoPublishedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlaylistItemContentDetails]
   }
-  @scala.inline
-  implicit class SchemaPlaylistItemContentDetailsOps[Self <: SchemaPlaylistItemContentDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndAt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNote(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoPublishedAt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoPublishedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoPublishedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoPublishedAt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

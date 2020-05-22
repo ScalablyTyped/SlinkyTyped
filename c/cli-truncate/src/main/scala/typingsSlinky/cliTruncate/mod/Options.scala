@@ -7,13 +7,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
   		Position to truncate the string.
   		@default 'end'
   		*/
-  val position: js.UndefOr[start | middle | end] = js.native
+  val position: js.UndefOr[start | middle | end] = js.undefined
   /**
   		Truncate the string from a whitespace if it is within 3 characters from the actual breaking point.
   		@default false
@@ -27,7 +26,7 @@ trait Options extends js.Object {
   		//=> 'unico…'
   		````
   		*/
-  val preferTruncationOnSpace: js.UndefOr[Boolean] = js.native
+  val preferTruncationOnSpace: js.UndefOr[Boolean] = js.undefined
   /**
   		Add a space between the text and the ellipsis.
   		@default false
@@ -43,58 +42,21 @@ trait Options extends js.Object {
   		//=> 'uni … s'
   		```
   		*/
-  val space: js.UndefOr[Boolean] = js.native
+  val space: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    position: start | middle | end = null,
+    preferTruncationOnSpace: js.UndefOr[Boolean] = js.undefined,
+    space: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(preferTruncationOnSpace)) __obj.updateDynamic("preferTruncationOnSpace")(preferTruncationOnSpace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(space)) __obj.updateDynamic("space")(space.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPosition(value: start | middle | end): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferTruncationOnSpace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferTruncationOnSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferTruncationOnSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferTruncationOnSpace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

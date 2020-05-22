@@ -70,5 +70,10 @@ class SpriteManager protected ()
     fromPacked: Boolean,
     spriteJSON: js.Any
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

@@ -15,22 +15,21 @@ import scala.scalajs.js.annotation._
   * This interface is a poor IDL version of the Java interface **org.xml.sax.AttributeList** . For example in getValueByName, it does not allow to
   * distinguish a missing value (for which the Java interface returns null) from an empty string value.
   */
-@js.native
 trait XAttributeList extends XInterface {
   /** @returns the number of attributes in this list. */
-  val Length: Double = js.native
+  val Length: Double
   /** @returns the number of attributes in this list. */
-  def getLength(): Double = js.native
+  def getLength(): Double
   /** @returns the name of an attribute in this list (by position). */
-  def getNameByIndex(i: Double): String = js.native
+  def getNameByIndex(i: Double): String
   /** @returns the type of an attribute in the list (by position). Non-validating parsers may return CDATA only. */
-  def getTypeByIndex(i: Double): String = js.native
+  def getTypeByIndex(i: Double): String
   /** @returns the type of an attribute in the list (by name). Non-validating parsers may return CDATA only. */
-  def getTypeByName(aName: String): String = js.native
+  def getTypeByName(aName: String): String
   /** @returns the value of an attribute in the list (by position). */
-  def getValueByIndex(i: Double): String = js.native
+  def getValueByIndex(i: Double): String
   /** @returns the value of an attribute in the list (by name). */
-  def getValueByName(aName: String): String = js.native
+  def getValueByName(aName: String): String
 }
 
 object XAttributeList {
@@ -50,55 +49,5 @@ object XAttributeList {
     val __obj = js.Dynamic.literal(Length = Length.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getLength = js.Any.fromFunction0(getLength), getNameByIndex = js.Any.fromFunction1(getNameByIndex), getTypeByIndex = js.Any.fromFunction1(getTypeByIndex), getTypeByName = js.Any.fromFunction1(getTypeByName), getValueByIndex = js.Any.fromFunction1(getValueByIndex), getValueByName = js.Any.fromFunction1(getValueByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAttributeList]
   }
-  @scala.inline
-  implicit class XAttributeListOps[Self <: XAttributeList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNameByIndex(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNameByIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeByIndex(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeByIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeByName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeByName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetValueByIndex(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValueByIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetValueByName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValueByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

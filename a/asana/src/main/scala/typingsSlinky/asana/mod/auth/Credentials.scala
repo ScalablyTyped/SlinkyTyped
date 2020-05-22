@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Credentials extends js.Object {
-  var access_token: js.UndefOr[String] = js.native
-  var refresh_token: js.UndefOr[String] = js.native
+  var access_token: js.UndefOr[String] = js.undefined
+  var refresh_token: js.UndefOr[String] = js.undefined
 }
 
 object Credentials {
   @scala.inline
-  def apply(): Credentials = {
+  def apply(access_token: String = null, refresh_token: String = null): Credentials = {
     val __obj = js.Dynamic.literal()
+    if (access_token != null) __obj.updateDynamic("access_token")(access_token.asInstanceOf[js.Any])
+    if (refresh_token != null) __obj.updateDynamic("refresh_token")(refresh_token.asInstanceOf[js.Any])
     __obj.asInstanceOf[Credentials]
   }
-  @scala.inline
-  implicit class CredentialsOps[Self <: Credentials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccess_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccess_token: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefresh_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefresh_token: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh_token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

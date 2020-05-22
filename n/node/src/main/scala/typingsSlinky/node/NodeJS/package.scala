@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object NodeJS {
+  type ArrayBufferView = typingsSlinky.node.NodeJS.TypedArray | js.typedarray.DataView
   type BeforeExitListener = js.Function1[/* code */ scala.Double, scala.Unit]
   type Dict[T] = org.scalablytyped.runtime.StringDictionary[js.UndefOr[T]]
   type DisconnectListener = js.Function0[scala.Unit]
@@ -35,6 +36,7 @@ package object NodeJS {
     scala.Unit
   ]
   type SignalsListener = js.Function1[/* signal */ typingsSlinky.node.NodeJS.Signals, scala.Unit]
+  type TypedArray = js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Float32Array | js.typedarray.Float64Array
   type UncaughtExceptionListener = js.Function1[/* error */ js.Error, scala.Unit]
   type UnhandledRejectionListener = js.Function2[
     /* reason */ js.UndefOr[js.Object | scala.Null], 

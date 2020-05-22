@@ -43,72 +43,14 @@ object AssessmentRunAgent {
     agentHealthCode: AgentHealthCode,
     agentId: AgentId,
     assessmentRunArn: Arn,
-    telemetryMetadata: TelemetryMetadataList
+    telemetryMetadata: TelemetryMetadataList,
+    agentHealthDetails: Message = null,
+    autoScalingGroup: AutoScalingGroup = null
   ): AssessmentRunAgent = {
     val __obj = js.Dynamic.literal(agentHealth = agentHealth.asInstanceOf[js.Any], agentHealthCode = agentHealthCode.asInstanceOf[js.Any], agentId = agentId.asInstanceOf[js.Any], assessmentRunArn = assessmentRunArn.asInstanceOf[js.Any], telemetryMetadata = telemetryMetadata.asInstanceOf[js.Any])
+    if (agentHealthDetails != null) __obj.updateDynamic("agentHealthDetails")(agentHealthDetails.asInstanceOf[js.Any])
+    if (autoScalingGroup != null) __obj.updateDynamic("autoScalingGroup")(autoScalingGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssessmentRunAgent]
   }
-  @scala.inline
-  implicit class AssessmentRunAgentOps[Self <: AssessmentRunAgent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentHealth(value: AgentHealth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHealth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAgentHealthCode(value: AgentHealthCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHealthCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAgentId(value: AgentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssessmentRunArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentRunArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTelemetryMetadata(value: TelemetryMetadataList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("telemetryMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAgentHealthDetails(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHealthDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentHealthDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHealthDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScalingGroup(value: AutoScalingGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

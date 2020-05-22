@@ -11,54 +11,23 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#eles.betweennessCentrality
   */
-@js.native
 trait SearchBetweennessOptions extends js.Object {
   /**
     * A boolean indicating whether the directed indegree and outdegree centrality is calculated (true) or
     * whether the undirected centrality is calculated (false, default).
     */
-  var directed: js.UndefOr[Boolean] = js.native
+  var directed: js.UndefOr[Boolean] = js.undefined
   /**  A function that returns the weight for the edge. */
-  var weight: js.UndefOr[js.Function1[/* edge */ EdgeSingular, Double]] = js.native
+  var weight: js.UndefOr[js.Function1[/* edge */ EdgeSingular, Double]] = js.undefined
 }
 
 object SearchBetweennessOptions {
   @scala.inline
-  def apply(): SearchBetweennessOptions = {
+  def apply(directed: js.UndefOr[Boolean] = js.undefined, weight: /* edge */ EdgeSingular => Double = null): SearchBetweennessOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(directed)) __obj.updateDynamic("directed")(directed.get.asInstanceOf[js.Any])
+    if (weight != null) __obj.updateDynamic("weight")(js.Any.fromFunction1(weight))
     __obj.asInstanceOf[SearchBetweennessOptions]
   }
-  @scala.inline
-  implicit class SearchBetweennessOptionsOps[Self <: SearchBetweennessOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: /* edge */ EdgeSingular => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * Used to control statement execution.
   */
-@js.native
 trait ExecuteManyOptions extends js.Object {
   /**
     * If true, the transaction in the current connection is automatically committed at the end of statement execution.
@@ -19,7 +18,7 @@ trait ExecuteManyOptions extends js.Object {
     *
     * @default false
     */
-  var autoCommit: js.UndefOr[Boolean] = js.native
+  var autoCommit: js.UndefOr[Boolean] = js.undefined
   /**
     * This optional property allows invalid data records to be rejected while still letting valid data be processed.
     * It can only be set true for INSERT, UPDATE, DELETE or MERGE statements.
@@ -37,13 +36,13 @@ trait ExecuteManyOptions extends js.Object {
     *
     * @default false
     */
-  var batchErrors: js.UndefOr[Boolean] = js.native
+  var batchErrors: js.UndefOr[Boolean] = js.undefined
   /**
     * Defines the bind variable types, sizes and directions. This object is optional in some cases but it is more efficient to set it.
     *
     * It should be an array or an object, depending on the structure of the binds parameter.
     */
-  var bindDefs: js.UndefOr[(Record[String, BindDefinition]) | js.Array[BindDefinition]] = js.native
+  var bindDefs: js.UndefOr[(Record[String, BindDefinition]) | js.Array[BindDefinition]] = js.undefined
   /**
     * When true, this optional property enables output of the number of rows affected by each input data record.
     * It can only be set true for INSERT, UPDATE, DELETE or MERGE statements.
@@ -52,70 +51,23 @@ trait ExecuteManyOptions extends js.Object {
     *
     * @default false
     */
-  var dmlRowCounts: js.UndefOr[Boolean] = js.native
+  var dmlRowCounts: js.UndefOr[Boolean] = js.undefined
 }
 
 object ExecuteManyOptions {
   @scala.inline
-  def apply(): ExecuteManyOptions = {
+  def apply(
+    autoCommit: js.UndefOr[Boolean] = js.undefined,
+    batchErrors: js.UndefOr[Boolean] = js.undefined,
+    bindDefs: (Record[String, BindDefinition]) | js.Array[BindDefinition] = null,
+    dmlRowCounts: js.UndefOr[Boolean] = js.undefined
+  ): ExecuteManyOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoCommit)) __obj.updateDynamic("autoCommit")(autoCommit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(batchErrors)) __obj.updateDynamic("batchErrors")(batchErrors.get.asInstanceOf[js.Any])
+    if (bindDefs != null) __obj.updateDynamic("bindDefs")(bindDefs.asInstanceOf[js.Any])
+    if (!js.isUndefined(dmlRowCounts)) __obj.updateDynamic("dmlRowCounts")(dmlRowCounts.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteManyOptions]
   }
-  @scala.inline
-  implicit class ExecuteManyOptionsOps[Self <: ExecuteManyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoCommit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCommit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCommit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCommit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatchErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBindDefs(value: (Record[String, BindDefinition]) | js.Array[BindDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindDefs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindDefs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindDefs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDmlRowCounts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dmlRowCounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDmlRowCounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dmlRowCounts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

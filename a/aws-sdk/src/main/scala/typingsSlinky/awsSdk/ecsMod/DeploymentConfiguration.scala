@@ -18,41 +18,14 @@ trait DeploymentConfiguration extends js.Object {
 
 object DeploymentConfiguration {
   @scala.inline
-  def apply(): DeploymentConfiguration = {
+  def apply(
+    maximumPercent: js.UndefOr[BoxedInteger] = js.undefined,
+    minimumHealthyPercent: js.UndefOr[BoxedInteger] = js.undefined
+  ): DeploymentConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maximumPercent)) __obj.updateDynamic("maximumPercent")(maximumPercent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumHealthyPercent)) __obj.updateDynamic("minimumHealthyPercent")(minimumHealthyPercent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentConfiguration]
   }
-  @scala.inline
-  implicit class DeploymentConfigurationOps[Self <: DeploymentConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaximumPercent(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumHealthyPercent(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHealthyPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumHealthyPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHealthyPercent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

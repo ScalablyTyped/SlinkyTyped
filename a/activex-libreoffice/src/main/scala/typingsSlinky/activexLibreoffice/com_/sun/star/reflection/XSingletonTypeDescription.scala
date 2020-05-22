@@ -15,18 +15,17 @@ import scala.scalajs.js.annotation._
   * The type class of this type is com::sun::star::uno::TypeClass::SINGLETON.
   * @since OOo 1.1.2
   */
-@js.native
 trait XSingletonTypeDescription extends XTypeDescription {
   /**
     * Returns the service associated with the singleton.
     * @returns the reflection of the service associated with the singleton, for an obsolete, service-based singleton; for an interface-based singleton, `NULL` i
     */
-  val Service: XServiceTypeDescription = js.native
+  val Service: XServiceTypeDescription
   /**
     * Returns the service associated with the singleton.
     * @returns the reflection of the service associated with the singleton, for an obsolete, service-based singleton; for an interface-based singleton, `NULL` i
     */
-  def getService(): XServiceTypeDescription = js.native
+  def getService(): XServiceTypeDescription
 }
 
 object XSingletonTypeDescription {
@@ -45,25 +44,5 @@ object XSingletonTypeDescription {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Service = Service.asInstanceOf[js.Any], TypeClass = TypeClass.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getName = js.Any.fromFunction0(getName), getService = js.Any.fromFunction0(getService), getTypeClass = js.Any.fromFunction0(getTypeClass), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSingletonTypeDescription]
   }
-  @scala.inline
-  implicit class XSingletonTypeDescriptionOps[Self <: XSingletonTypeDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withService(value: XServiceTypeDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetService(value: () => XServiceTypeDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getService")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

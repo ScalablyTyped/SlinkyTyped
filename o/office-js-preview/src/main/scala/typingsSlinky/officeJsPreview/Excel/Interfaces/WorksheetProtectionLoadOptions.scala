@@ -10,78 +10,40 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.2]
   */
-@js.native
 trait WorksheetProtectionLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Sheet protection options. Read-only.
+    * Specifies the protection options for the worksheet.
     *
     * [Api set: ExcelApi 1.2]
     */
-  var options: js.UndefOr[Boolean] = js.native
+  var options: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates if the worksheet is protected. Read-only.
+    * Specifies if the worksheet is protected.
     *
     * [Api set: ExcelApi 1.2]
     */
-  var `protected`: js.UndefOr[Boolean] = js.native
+  var `protected`: js.UndefOr[Boolean] = js.undefined
 }
 
 object WorksheetProtectionLoadOptions {
   @scala.inline
-  def apply(): WorksheetProtectionLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    options: js.UndefOr[Boolean] = js.undefined,
+    `protected`: js.UndefOr[Boolean] = js.undefined
+  ): WorksheetProtectionLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(options)) __obj.updateDynamic("options")(options.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`protected`)) __obj.updateDynamic("protected")(`protected`.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorksheetProtectionLoadOptions]
   }
-  @scala.inline
-  implicit class WorksheetProtectionLoadOptionsOps[Self <: WorksheetProtectionLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protected")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

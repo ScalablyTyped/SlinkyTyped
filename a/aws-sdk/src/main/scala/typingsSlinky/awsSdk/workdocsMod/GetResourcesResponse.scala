@@ -22,53 +22,16 @@ trait GetResourcesResponse extends js.Object {
 
 object GetResourcesResponse {
   @scala.inline
-  def apply(): GetResourcesResponse = {
+  def apply(
+    Documents: DocumentMetadataList = null,
+    Folders: FolderMetadataList = null,
+    Marker: PageMarkerType = null
+  ): GetResourcesResponse = {
     val __obj = js.Dynamic.literal()
+    if (Documents != null) __obj.updateDynamic("Documents")(Documents.asInstanceOf[js.Any])
+    if (Folders != null) __obj.updateDynamic("Folders")(Folders.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourcesResponse]
   }
-  @scala.inline
-  implicit class GetResourcesResponseOps[Self <: GetResourcesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocuments(value: DocumentMetadataList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Documents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocuments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Documents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFolders(value: FolderMetadataList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Folders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Folders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: PageMarkerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

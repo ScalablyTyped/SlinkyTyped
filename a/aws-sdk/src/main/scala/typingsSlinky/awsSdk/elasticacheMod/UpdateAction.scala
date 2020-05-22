@@ -78,221 +78,44 @@ trait UpdateAction extends js.Object {
 
 object UpdateAction {
   @scala.inline
-  def apply(): UpdateAction = {
+  def apply(
+    CacheClusterId: String = null,
+    CacheNodeUpdateStatus: CacheNodeUpdateStatusList = null,
+    Engine: String = null,
+    EstimatedUpdateTime: String = null,
+    NodeGroupUpdateStatus: NodeGroupUpdateStatusList = null,
+    NodesUpdated: String = null,
+    ReplicationGroupId: String = null,
+    ServiceUpdateName: String = null,
+    ServiceUpdateRecommendedApplyByDate: js.Date = null,
+    ServiceUpdateReleaseDate: js.Date = null,
+    ServiceUpdateSeverity: ServiceUpdateSeverity = null,
+    ServiceUpdateStatus: ServiceUpdateStatus = null,
+    ServiceUpdateType: ServiceUpdateType = null,
+    SlaMet: SlaMet = null,
+    UpdateActionAvailableDate: js.Date = null,
+    UpdateActionStatus: UpdateActionStatus = null,
+    UpdateActionStatusModifiedDate: js.Date = null
+  ): UpdateAction = {
     val __obj = js.Dynamic.literal()
+    if (CacheClusterId != null) __obj.updateDynamic("CacheClusterId")(CacheClusterId.asInstanceOf[js.Any])
+    if (CacheNodeUpdateStatus != null) __obj.updateDynamic("CacheNodeUpdateStatus")(CacheNodeUpdateStatus.asInstanceOf[js.Any])
+    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
+    if (EstimatedUpdateTime != null) __obj.updateDynamic("EstimatedUpdateTime")(EstimatedUpdateTime.asInstanceOf[js.Any])
+    if (NodeGroupUpdateStatus != null) __obj.updateDynamic("NodeGroupUpdateStatus")(NodeGroupUpdateStatus.asInstanceOf[js.Any])
+    if (NodesUpdated != null) __obj.updateDynamic("NodesUpdated")(NodesUpdated.asInstanceOf[js.Any])
+    if (ReplicationGroupId != null) __obj.updateDynamic("ReplicationGroupId")(ReplicationGroupId.asInstanceOf[js.Any])
+    if (ServiceUpdateName != null) __obj.updateDynamic("ServiceUpdateName")(ServiceUpdateName.asInstanceOf[js.Any])
+    if (ServiceUpdateRecommendedApplyByDate != null) __obj.updateDynamic("ServiceUpdateRecommendedApplyByDate")(ServiceUpdateRecommendedApplyByDate.asInstanceOf[js.Any])
+    if (ServiceUpdateReleaseDate != null) __obj.updateDynamic("ServiceUpdateReleaseDate")(ServiceUpdateReleaseDate.asInstanceOf[js.Any])
+    if (ServiceUpdateSeverity != null) __obj.updateDynamic("ServiceUpdateSeverity")(ServiceUpdateSeverity.asInstanceOf[js.Any])
+    if (ServiceUpdateStatus != null) __obj.updateDynamic("ServiceUpdateStatus")(ServiceUpdateStatus.asInstanceOf[js.Any])
+    if (ServiceUpdateType != null) __obj.updateDynamic("ServiceUpdateType")(ServiceUpdateType.asInstanceOf[js.Any])
+    if (SlaMet != null) __obj.updateDynamic("SlaMet")(SlaMet.asInstanceOf[js.Any])
+    if (UpdateActionAvailableDate != null) __obj.updateDynamic("UpdateActionAvailableDate")(UpdateActionAvailableDate.asInstanceOf[js.Any])
+    if (UpdateActionStatus != null) __obj.updateDynamic("UpdateActionStatus")(UpdateActionStatus.asInstanceOf[js.Any])
+    if (UpdateActionStatusModifiedDate != null) __obj.updateDynamic("UpdateActionStatusModifiedDate")(UpdateActionStatusModifiedDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAction]
   }
-  @scala.inline
-  implicit class UpdateActionOps[Self <: UpdateAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheClusterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheClusterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheClusterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheNodeUpdateStatus(value: CacheNodeUpdateStatusList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeUpdateStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheNodeUpdateStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeUpdateStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedUpdateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedUpdateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedUpdateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeGroupUpdateStatus(value: NodeGroupUpdateStatusList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupUpdateStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeGroupUpdateStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupUpdateStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodesUpdated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodesUpdated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodesUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodesUpdated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicationGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceUpdateName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceUpdateName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceUpdateRecommendedApplyByDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateRecommendedApplyByDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceUpdateRecommendedApplyByDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateRecommendedApplyByDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceUpdateReleaseDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateReleaseDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceUpdateReleaseDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateReleaseDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceUpdateSeverity(value: ServiceUpdateSeverity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateSeverity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceUpdateSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateSeverity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceUpdateStatus(value: ServiceUpdateStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceUpdateStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceUpdateType(value: ServiceUpdateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceUpdateType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdateType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlaMet(value: SlaMet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SlaMet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlaMet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SlaMet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateActionAvailableDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateActionAvailableDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateActionAvailableDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateActionAvailableDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateActionStatus(value: UpdateActionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateActionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateActionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateActionStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateActionStatusModifiedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateActionStatusModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateActionStatusModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateActionStatusModifiedDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

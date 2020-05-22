@@ -6,61 +6,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `worksheetProtection.toJSON()`. */
-@js.native
 trait WorksheetProtectionData extends js.Object {
   /**
     *
-    * Sheet protection options. Read-only.
+    * Specifies the protection options for the worksheet.
     *
     * [Api set: ExcelApi 1.2]
     */
-  var options: js.UndefOr[WorksheetProtectionOptions] = js.native
+  var options: js.UndefOr[WorksheetProtectionOptions] = js.undefined
   /**
     *
-    * Indicates if the worksheet is protected. Read-only.
+    * Specifies if the worksheet is protected.
     *
     * [Api set: ExcelApi 1.2]
     */
-  var `protected`: js.UndefOr[Boolean] = js.native
+  var `protected`: js.UndefOr[Boolean] = js.undefined
 }
 
 object WorksheetProtectionData {
   @scala.inline
-  def apply(): WorksheetProtectionData = {
+  def apply(options: WorksheetProtectionOptions = null, `protected`: js.UndefOr[Boolean] = js.undefined): WorksheetProtectionData = {
     val __obj = js.Dynamic.literal()
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (!js.isUndefined(`protected`)) __obj.updateDynamic("protected")(`protected`.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorksheetProtectionData]
   }
-  @scala.inline
-  implicit class WorksheetProtectionDataOps[Self <: WorksheetProtectionData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOptions(value: WorksheetProtectionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protected")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.tern.ternMod
 
 import typingsSlinky.tern.ternStrings.`type`
+import typingsSlinky.tern.ternStrings.full
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeQuery
   extends BaseQueryWithFile
      with Query {
@@ -15,84 +15,42 @@ trait TypeQuery
     * and be represented by their type name or a representation showing
     * only property names below it. Default `0`
     */
-  var depth: js.UndefOr[Double] = js.native
+  var depth: js.UndefOr[Double] = js.undefined
   /** Specify the location of the expression. */
-  var end: Double | Position = js.native
+  var end: Double | Position
   /**
     * Set to `true` when you are interested in a function type.
     * This will cause function types to win when something has multiple types.
     * Default `false`
     */
-  var preferFunction: js.UndefOr[Boolean] = js.native
+  var preferFunction: js.UndefOr[Boolean] = js.undefined
   /** Specify the location of the expression. */
-  var start: js.UndefOr[Double | Position] = js.native
+  var start: js.UndefOr[Double | Position] = js.undefined
   /** Query the type of something. */
   @JSName("type")
-  var type_TypeQuery: `type` = js.native
+  var type_TypeQuery: `type`
 }
 
 object TypeQuery {
   @scala.inline
-  def apply(end: Double | Position, file: String, `type`: `type`): TypeQuery = {
+  def apply(
+    end: Double | Position,
+    file: String,
+    `type`: `type`,
+    depth: js.UndefOr[Double] = js.undefined,
+    docFormat: full = null,
+    lineCharPositions: js.UndefOr[Boolean] = js.undefined,
+    preferFunction: js.UndefOr[Boolean] = js.undefined,
+    start: Double | Position = null
+  ): TypeQuery = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], file = file.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(depth)) __obj.updateDynamic("depth")(depth.get.asInstanceOf[js.Any])
+    if (docFormat != null) __obj.updateDynamic("docFormat")(docFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineCharPositions)) __obj.updateDynamic("lineCharPositions")(lineCharPositions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preferFunction)) __obj.updateDynamic("preferFunction")(preferFunction.get.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeQuery]
   }
-  @scala.inline
-  implicit class TypeQueryOps[Self <: TypeQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: Double | Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: `type`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferFunction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double | Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

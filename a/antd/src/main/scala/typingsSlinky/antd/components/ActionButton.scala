@@ -4,8 +4,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.actionButtonMod.ActionButtonProps
 import typingsSlinky.antd.actionButtonMod.default
-import typingsSlinky.antd.buttonButtonMod.ButtonType
-import typingsSlinky.antd.buttonButtonMod.NativeButtonProps
+import typingsSlinky.antd.buttonButtonMod.ButtonProps
+import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,9 +24,9 @@ object ActionButton {
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     @scala.inline
-    def buttonProps(value: NativeButtonProps): this.type = set("buttonProps", value.asInstanceOf[js.Any])
+    def buttonProps(value: ButtonProps): this.type = set("buttonProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def `type`(value: ButtonType): this.type = set("type", value.asInstanceOf[js.Any])
+    def `type`(value: LegacyButtonType): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ActionButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

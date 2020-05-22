@@ -12,11 +12,11 @@ trait TriggerAction extends js.Object {
     */
   var arguments: js.UndefOr[StringDictionary[js.Any]] = js.native
   /**
-    * The name of the crawler to watch. If this is specified, `crawlState` must also be specified. Conflicts with `jobName`.
+    * The name of the crawler to be executed. Conflicts with `jobName`.
     */
   var crawlerName: js.UndefOr[String] = js.native
   /**
-    * The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawlerName`.
+    * The name of a job to be executed. Conflicts with `crawlerName`.
     */
   var jobName: js.UndefOr[String] = js.native
   /**
@@ -27,65 +27,18 @@ trait TriggerAction extends js.Object {
 
 object TriggerAction {
   @scala.inline
-  def apply(): TriggerAction = {
+  def apply(
+    arguments: StringDictionary[js.Any] = null,
+    crawlerName: String = null,
+    jobName: String = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): TriggerAction = {
     val __obj = js.Dynamic.literal()
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (crawlerName != null) __obj.updateDynamic("crawlerName")(crawlerName.asInstanceOf[js.Any])
+    if (jobName != null) __obj.updateDynamic("jobName")(jobName.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggerAction]
   }
-  @scala.inline
-  implicit class TriggerActionOps[Self <: TriggerAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArguments(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrawlerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crawlerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrawlerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crawlerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

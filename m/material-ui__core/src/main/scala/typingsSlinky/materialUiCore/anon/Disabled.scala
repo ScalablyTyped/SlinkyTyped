@@ -1,7 +1,6 @@
 package typingsSlinky.materialUiCore.anon
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dense
 import typingsSlinky.materialUiCore.materialUiCoreStrings.none
 import typingsSlinky.materialUiCore.materialUiCoreStrings.normal
@@ -22,107 +21,24 @@ trait Disabled extends js.Object {
 
 object Disabled {
   @scala.inline
-  def apply(): Disabled = {
+  def apply(
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    error: js.UndefOr[Boolean] = js.undefined,
+    filled: js.UndefOr[Boolean] = js.undefined,
+    focused: js.UndefOr[Boolean] = js.undefined,
+    margin: dense | none | normal = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    startAdornment: TagMod[Any] = null
+  ): Disabled = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(filled)) __obj.updateDynamic("filled")(filled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(focused)) __obj.updateDynamic("focused")(focused.get.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (startAdornment != null) __obj.updateDynamic("startAdornment")(startAdornment.asInstanceOf[js.Any])
     __obj.asInstanceOf[Disabled]
   }
-  @scala.inline
-  implicit class DisabledOps[Self <: Disabled] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocused(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: dense | none | normal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAdornmentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAdornment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartAdornment(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAdornment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAdornment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAdornment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

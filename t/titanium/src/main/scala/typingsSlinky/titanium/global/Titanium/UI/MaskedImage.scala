@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * A control that displays an image composited with a background image or color.
-		 */
+  * A control that displays an image composited with a background image or color.
+  */
 @JSGlobal("Titanium.UI.MaskedImage")
 @js.native
 class MaskedImage ()

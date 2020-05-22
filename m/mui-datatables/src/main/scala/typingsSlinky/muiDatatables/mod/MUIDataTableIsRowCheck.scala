@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MUIDataTableIsRowCheck extends js.Object {
-  var data: js.Array[Index] = js.native
-  var lookup: DataIndex = js.native
+  var data: js.Array[Index]
+  var lookup: DataIndex
 }
 
 object MUIDataTableIsRowCheck {
@@ -18,25 +17,5 @@ object MUIDataTableIsRowCheck {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], lookup = lookup.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableIsRowCheck]
   }
-  @scala.inline
-  implicit class MUIDataTableIsRowCheckOps[Self <: MUIDataTableIsRowCheck] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Array[Index]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLookup(value: DataIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

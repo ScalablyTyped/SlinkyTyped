@@ -20,7 +20,7 @@ object OWAView extends js.Object {
   sealed trait OneColumn extends OWAView
   
   /**
-    Three-column view. Displayed when the screen is wide. For example, Outlook on the web uses this view in a full screen window on a desktop 
+    Three-column view. Displayed when the screen is wide. For example, Outlook on the web uses this view in a full screen window on a desktop
     computer.
     */
   @js.native

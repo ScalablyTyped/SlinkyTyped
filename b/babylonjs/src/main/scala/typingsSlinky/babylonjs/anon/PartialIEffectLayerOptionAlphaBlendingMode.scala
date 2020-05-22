@@ -7,94 +7,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<babylonjs.BABYLON.IEffectLayerOptions> */
-@js.native
 trait PartialIEffectLayerOptionAlphaBlendingMode extends js.Object {
-  var alphaBlendingMode: js.UndefOr[Double] = js.native
-  var camera: js.UndefOr[Nullable[Camera]] = js.native
-  var mainTextureFixedSize: js.UndefOr[Double] = js.native
-  var mainTextureRatio: js.UndefOr[Double] = js.native
-  var renderingGroupId: js.UndefOr[Double] = js.native
+  var alphaBlendingMode: js.UndefOr[Double] = js.undefined
+  var camera: js.UndefOr[Nullable[Camera]] = js.undefined
+  var mainTextureFixedSize: js.UndefOr[Double] = js.undefined
+  var mainTextureRatio: js.UndefOr[Double] = js.undefined
+  var renderingGroupId: js.UndefOr[Double] = js.undefined
 }
 
 object PartialIEffectLayerOptionAlphaBlendingMode {
   @scala.inline
-  def apply(): PartialIEffectLayerOptionAlphaBlendingMode = {
+  def apply(
+    alphaBlendingMode: js.UndefOr[Double] = js.undefined,
+    camera: js.UndefOr[Null | Nullable[Camera]] = js.undefined,
+    mainTextureFixedSize: js.UndefOr[Double] = js.undefined,
+    mainTextureRatio: js.UndefOr[Double] = js.undefined,
+    renderingGroupId: js.UndefOr[Double] = js.undefined
+  ): PartialIEffectLayerOptionAlphaBlendingMode = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alphaBlendingMode)) __obj.updateDynamic("alphaBlendingMode")(alphaBlendingMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(camera)) __obj.updateDynamic("camera")(camera.asInstanceOf[js.Any])
+    if (!js.isUndefined(mainTextureFixedSize)) __obj.updateDynamic("mainTextureFixedSize")(mainTextureFixedSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mainTextureRatio)) __obj.updateDynamic("mainTextureRatio")(mainTextureRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderingGroupId)) __obj.updateDynamic("renderingGroupId")(renderingGroupId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIEffectLayerOptionAlphaBlendingMode]
   }
-  @scala.inline
-  implicit class PartialIEffectLayerOptionAlphaBlendingModeOps[Self <: PartialIEffectLayerOptionAlphaBlendingMode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlphaBlendingMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaBlendingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlphaBlendingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaBlendingMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCamera(value: Nullable[Camera]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCamera: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCameraNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(null)
-        ret
-    }
-    @scala.inline
-    def withMainTextureFixedSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureFixedSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainTextureFixedSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureFixedSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMainTextureRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainTextureRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderingGroupId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderingGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingGroupId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

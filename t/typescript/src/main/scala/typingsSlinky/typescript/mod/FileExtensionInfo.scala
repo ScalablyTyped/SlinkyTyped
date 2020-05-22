@@ -4,50 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileExtensionInfo extends js.Object {
-  var extension: java.lang.String = js.native
-  var isMixedContent: Boolean = js.native
-  var scriptKind: js.UndefOr[ScriptKind] = js.native
+  var extension: java.lang.String
+  var isMixedContent: Boolean
+  var scriptKind: js.UndefOr[ScriptKind] = js.undefined
 }
 
 object FileExtensionInfo {
   @scala.inline
-  def apply(extension: java.lang.String, isMixedContent: Boolean): FileExtensionInfo = {
+  def apply(extension: java.lang.String, isMixedContent: Boolean, scriptKind: ScriptKind = null): FileExtensionInfo = {
     val __obj = js.Dynamic.literal(extension = extension.asInstanceOf[js.Any], isMixedContent = isMixedContent.asInstanceOf[js.Any])
+    if (scriptKind != null) __obj.updateDynamic("scriptKind")(scriptKind.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileExtensionInfo]
   }
-  @scala.inline
-  implicit class FileExtensionInfoOps[Self <: FileExtensionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtension(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsMixedContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMixedContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScriptKind(value: ScriptKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptKind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

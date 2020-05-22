@@ -24,6 +24,11 @@ object retryingClientMod extends js.Object {
       * @throws any non-retriable errors.
       */
     def attemptFetch(request: FetchRequest, hasThrottleEndTimeMillisBackoffCount: ThrottleMetadata): js.Promise[FetchResponse] = js.native
+    /**
+      * @throws if response status is not 200 or 304.
+      */
+    /* CompleteClass */
+    override def fetch(request: FetchRequest): js.Promise[FetchResponse] = js.native
   }
   
   def setAbortableTimeout(signal: RemoteConfigAbortSignal, throttleEndTimeMillis: Double): js.Promise[Unit] = js.native

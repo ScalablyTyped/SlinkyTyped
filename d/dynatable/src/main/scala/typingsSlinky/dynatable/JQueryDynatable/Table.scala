@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Table extends js.Object {
   /**
     * Selector used by dynatable in order to find the table body rows
     *
     * @default 'tbody tr'
     */
-  var bodyRowSelector: js.UndefOr[String] = js.native
+  var bodyRowSelector: js.UndefOr[String] = js.undefined
   /** Generated internally by the plugin, will be reset by the DomColumns at init */
-  var columns: js.UndefOr[js.Array[Column]] = js.native
+  var columns: js.UndefOr[js.Array[Column]] = js.undefined
   /**
     * By default, dynatable converts headings to JSON attribute names using:
     *
@@ -29,94 +28,37 @@ trait Table extends js.Object {
     * // `underscore` would translate it to id `favorite_music`
     * // `lowercase` would translate it to id `favorite music`
     */
-  var defaultColumnIdStyle: js.UndefOr[String] = js.native
+  var defaultColumnIdStyle: js.UndefOr[String] = js.undefined
   /**
     * Optional classname that can be added by dynatable to the header cells
     *
     * @default null
     */
-  var headRowClass: js.UndefOr[String] = js.native
+  var headRowClass: js.UndefOr[String] = js.undefined
   /**
     * Selector used by dynatable in order to find the table header row
     *
     * @default 'thead tr'
     */
-  var headRowSelector: js.UndefOr[String] = js.native
+  var headRowSelector: js.UndefOr[String] = js.undefined
 }
 
 object Table {
   @scala.inline
-  def apply(): Table = {
+  def apply(
+    bodyRowSelector: String = null,
+    columns: js.Array[Column] = null,
+    defaultColumnIdStyle: String = null,
+    headRowClass: String = null,
+    headRowSelector: String = null
+  ): Table = {
     val __obj = js.Dynamic.literal()
+    if (bodyRowSelector != null) __obj.updateDynamic("bodyRowSelector")(bodyRowSelector.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (defaultColumnIdStyle != null) __obj.updateDynamic("defaultColumnIdStyle")(defaultColumnIdStyle.asInstanceOf[js.Any])
+    if (headRowClass != null) __obj.updateDynamic("headRowClass")(headRowClass.asInstanceOf[js.Any])
+    if (headRowSelector != null) __obj.updateDynamic("headRowSelector")(headRowSelector.asInstanceOf[js.Any])
     __obj.asInstanceOf[Table]
   }
-  @scala.inline
-  implicit class TableOps[Self <: Table] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyRowSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyRowSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyRowSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyRowSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: js.Array[Column]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultColumnIdStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnIdStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultColumnIdStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnIdStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadRowClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headRowClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeadRowClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headRowClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadRowSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headRowSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeadRowSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headRowSelector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

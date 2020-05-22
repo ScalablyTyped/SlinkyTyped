@@ -13,16 +13,15 @@ import scala.scalajs.js.annotation._
   * Component events are provided **only** for notification purposes. Moves and resizes will be handled internally by the window component, so that GUI
   * layout works properly regardless of whether a program registers such a listener or not.
   */
-@js.native
 trait XWindowListener extends XEventListener {
   /** is invoked when the window has been hidden. */
-  def windowHidden(e: EventObject): Unit = js.native
+  def windowHidden(e: EventObject): Unit
   /** is invoked when the window has been moved. */
-  def windowMoved(e: WindowEvent): Unit = js.native
+  def windowMoved(e: WindowEvent): Unit
   /** is invoked when the window has been resized. */
-  def windowResized(e: WindowEvent): Unit = js.native
+  def windowResized(e: WindowEvent): Unit
   /** is invoked when the window has been shown. */
-  def windowShown(e: EventObject): Unit = js.native
+  def windowShown(e: EventObject): Unit
 }
 
 object XWindowListener {
@@ -40,37 +39,5 @@ object XWindowListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), windowHidden = js.Any.fromFunction1(windowHidden), windowMoved = js.Any.fromFunction1(windowMoved), windowResized = js.Any.fromFunction1(windowResized), windowShown = js.Any.fromFunction1(windowShown))
     __obj.asInstanceOf[XWindowListener]
   }
-  @scala.inline
-  implicit class XWindowListenerOps[Self <: XWindowListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWindowHidden(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowHidden")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWindowMoved(value: WindowEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowMoved")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWindowResized(value: WindowEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowResized")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWindowShown(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowShown")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

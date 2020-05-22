@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AssignToCategoryRuleAction extends js.Object {
-  val ActionType: OlRuleActionType = js.native
-  val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native
-  var Categories: js.Any = js.native
-  val Class: OlObjectClass = js.native
-  var Enabled: Boolean = js.native
+  val ActionType: OlRuleActionType
+  val Application: typingsSlinky.activexOutlook.Outlook.Application
+  var Categories: js.Any
+  val Class: OlObjectClass
+  var Enabled: Boolean
   @JSName("Outlook.AssignToCategoryRuleAction_typekey")
-  var OutlookDotAssignToCategoryRuleAction_typekey: AssignToCategoryRuleAction = js.native
-  val Parent: js.Any = js.native
-  val Session: NameSpace = js.native
+  var OutlookDotAssignToCategoryRuleAction_typekey: AssignToCategoryRuleAction
+  val Parent: js.Any
+  val Session: NameSpace
 }
 
 object AssignToCategoryRuleAction {
@@ -33,61 +32,5 @@ object AssignToCategoryRuleAction {
     __obj.updateDynamic("Outlook.AssignToCategoryRuleAction_typekey")(OutlookDotAssignToCategoryRuleAction_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssignToCategoryRuleAction]
   }
-  @scala.inline
-  implicit class AssignToCategoryRuleActionOps[Self <: AssignToCategoryRuleAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionType(value: OlRuleActionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategories(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClass(value: OlObjectClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotAssignToCategoryRuleAction_typekey(value: AssignToCategoryRuleAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.AssignToCategoryRuleAction_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSession(value: NameSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

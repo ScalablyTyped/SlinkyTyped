@@ -22,25 +22,5 @@ object ModifySnapshotScheduleMessage {
     val __obj = js.Dynamic.literal(ScheduleDefinitions = ScheduleDefinitions.asInstanceOf[js.Any], ScheduleIdentifier = ScheduleIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifySnapshotScheduleMessage]
   }
-  @scala.inline
-  implicit class ModifySnapshotScheduleMessageOps[Self <: ModifySnapshotScheduleMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScheduleDefinitions(value: ScheduleDefinitionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleDefinitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScheduleIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,52 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RetroFontConfig extends js.Object {
   /**
     * The characters used in the font set, in display order. You can use the TEXT_SET consts for common font set arrangements.
     */
-  var chars: String = js.native
+  var chars: String
   /**
     * The number of characters per row in the font set. If not given charsPerRow will be the image width / characterWidth.
     */
-  var charsPerRow: Double = js.native
+  var charsPerRow: Double
   /**
     * The height of each character in the font set.
     */
-  var height: Double = js.native
+  var height: Double
   /**
     * The key of the image containing the font.
     */
-  var image: String = js.native
+  var image: String
   /**
     * The amount of vertical space to add to the line height of the font.
     */
-  var lineSpacing: Double = js.native
+  var lineSpacing: Double
   /**
     * If the font set doesn't start at the top left of the given image, specify the X coordinate offset here.
     */
   @JSName("offset.x")
-  var offsetDotx: Double = js.native
+  var offsetDotx: Double
   /**
     * If the font set doesn't start at the top left of the given image, specify the Y coordinate offset here.
     */
   @JSName("offset.y")
-  var offsetDoty: Double = js.native
+  var offsetDoty: Double
   /**
     * If the characters in the font set have horizontal spacing between them set the required amount here.
     */
   @JSName("spacing.x")
-  var spacingDotx: Double = js.native
+  var spacingDotx: Double
   /**
     * If the characters in the font set have vertical spacing between them set the required amount here.
     */
   @JSName("spacing.y")
-  var spacingDoty: Double = js.native
+  var spacingDoty: Double
   /**
     * The width of each character in the font set.
     */
-  var width: Double = js.native
+  var width: Double
 }
 
 object RetroFontConfig {
@@ -73,73 +72,5 @@ object RetroFontConfig {
     __obj.updateDynamic("spacing.y")(spacingDoty.asInstanceOf[js.Any])
     __obj.asInstanceOf[RetroFontConfig]
   }
-  @scala.inline
-  implicit class RetroFontConfigOps[Self <: RetroFontConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChars(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharsPerRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charsPerRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOffsetDotx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset.x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOffsetDoty(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset.y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpacingDotx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing.x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpacingDoty(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing.y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

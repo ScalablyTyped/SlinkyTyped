@@ -71,14 +71,14 @@ trait DataPivotHierarchy extends ClientObject {
   var position: Double = js.native
   /**
     *
-    * Determines whether the data should be shown as a specific summary calculation or not.
+    * Specifies if the data should be shown as a specific summary calculation.
     *
     * [Api set: ExcelApi 1.8]
     */
   var showAs: ShowAsRule = js.native
   /**
     *
-    * Determines whether to show all items of the DataPivotHierarchy.
+    * Specifies if all items of the DataPivotHierarchy are shown.
     *
     * [Api set: ExcelApi 1.8]
     */

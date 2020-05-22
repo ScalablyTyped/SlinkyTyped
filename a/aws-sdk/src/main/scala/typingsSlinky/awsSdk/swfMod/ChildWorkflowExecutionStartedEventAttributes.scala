@@ -26,31 +26,5 @@ object ChildWorkflowExecutionStartedEventAttributes {
     val __obj = js.Dynamic.literal(initiatedEventId = initiatedEventId.asInstanceOf[js.Any], workflowExecution = workflowExecution.asInstanceOf[js.Any], workflowType = workflowType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChildWorkflowExecutionStartedEventAttributes]
   }
-  @scala.inline
-  implicit class ChildWorkflowExecutionStartedEventAttributesOps[Self <: ChildWorkflowExecutionStartedEventAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitiatedEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiatedEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkflowExecution(value: WorkflowExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkflowType(value: WorkflowType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

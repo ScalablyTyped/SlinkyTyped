@@ -4,236 +4,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpRequest extends js.Object {
   /** The number of HTTP response bytes inserted into cache. Set only when a cache fill was attempted. */
-  var cacheFillBytes: js.UndefOr[String] = js.native
+  var cacheFillBytes: js.UndefOr[String] = js.undefined
   /** Whether or not an entity was served from cache (with or without validation). */
-  var cacheHit: js.UndefOr[Boolean] = js.native
+  var cacheHit: js.UndefOr[Boolean] = js.undefined
   /** Whether or not a cache lookup was attempted. */
-  var cacheLookup: js.UndefOr[Boolean] = js.native
+  var cacheLookup: js.UndefOr[Boolean] = js.undefined
   /** Whether or not the response was validated with the origin server before being served from cache. This field is only meaningful if cache_hit is True. */
-  var cacheValidatedWithOriginServer: js.UndefOr[Boolean] = js.native
+  var cacheValidatedWithOriginServer: js.UndefOr[Boolean] = js.undefined
   /** The request processing latency on the server, from the time the request was received until the response was sent. */
-  var latency: js.UndefOr[String] = js.native
+  var latency: js.UndefOr[String] = js.undefined
   /** Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket" */
-  var protocol: js.UndefOr[String] = js.native
+  var protocol: js.UndefOr[String] = js.undefined
   /** The referer URL of the request, as defined in HTTP/1.1 Header Field Definitions (http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html). */
-  var referer: js.UndefOr[String] = js.native
+  var referer: js.UndefOr[String] = js.undefined
   /** The IP address (IPv4 or IPv6) of the client that issued the HTTP request. Examples: "192.168.1.1", "FE80::0202:B3FF:FE1E:8329". */
-  var remoteIp: js.UndefOr[String] = js.native
+  var remoteIp: js.UndefOr[String] = js.undefined
   /** The request method. Examples: "GET", "HEAD", "PUT", "POST". */
-  var requestMethod: js.UndefOr[String] = js.native
+  var requestMethod: js.UndefOr[String] = js.undefined
   /** The size of the HTTP request message in bytes, including the request headers and the request body. */
-  var requestSize: js.UndefOr[String] = js.native
+  var requestSize: js.UndefOr[String] = js.undefined
   /**
     * The scheme (http, https), the host name, the path and the query portion of the URL that was requested. Example:
     * "http://example.com/some/info?color=red".
     */
-  var requestUrl: js.UndefOr[String] = js.native
+  var requestUrl: js.UndefOr[String] = js.undefined
   /** The size of the HTTP response message sent back to the client, in bytes, including the response headers and the response body. */
-  var responseSize: js.UndefOr[String] = js.native
+  var responseSize: js.UndefOr[String] = js.undefined
   /** The IP address (IPv4 or IPv6) of the origin server that the request was sent to. */
-  var serverIp: js.UndefOr[String] = js.native
+  var serverIp: js.UndefOr[String] = js.undefined
   /** The response code indicating the status of response. Examples: 200, 404. */
-  var status: js.UndefOr[Double] = js.native
+  var status: js.UndefOr[Double] = js.undefined
   /** The user agent sent by the client. Example: "Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Q312461; .NET CLR 1.0.3705)". */
-  var userAgent: js.UndefOr[String] = js.native
+  var userAgent: js.UndefOr[String] = js.undefined
 }
 
 object HttpRequest {
   @scala.inline
-  def apply(): HttpRequest = {
+  def apply(
+    cacheFillBytes: String = null,
+    cacheHit: js.UndefOr[Boolean] = js.undefined,
+    cacheLookup: js.UndefOr[Boolean] = js.undefined,
+    cacheValidatedWithOriginServer: js.UndefOr[Boolean] = js.undefined,
+    latency: String = null,
+    protocol: String = null,
+    referer: String = null,
+    remoteIp: String = null,
+    requestMethod: String = null,
+    requestSize: String = null,
+    requestUrl: String = null,
+    responseSize: String = null,
+    serverIp: String = null,
+    status: js.UndefOr[Double] = js.undefined,
+    userAgent: String = null
+  ): HttpRequest = {
     val __obj = js.Dynamic.literal()
+    if (cacheFillBytes != null) __obj.updateDynamic("cacheFillBytes")(cacheFillBytes.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheHit)) __obj.updateDynamic("cacheHit")(cacheHit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheLookup)) __obj.updateDynamic("cacheLookup")(cacheLookup.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheValidatedWithOriginServer)) __obj.updateDynamic("cacheValidatedWithOriginServer")(cacheValidatedWithOriginServer.get.asInstanceOf[js.Any])
+    if (latency != null) __obj.updateDynamic("latency")(latency.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (referer != null) __obj.updateDynamic("referer")(referer.asInstanceOf[js.Any])
+    if (remoteIp != null) __obj.updateDynamic("remoteIp")(remoteIp.asInstanceOf[js.Any])
+    if (requestMethod != null) __obj.updateDynamic("requestMethod")(requestMethod.asInstanceOf[js.Any])
+    if (requestSize != null) __obj.updateDynamic("requestSize")(requestSize.asInstanceOf[js.Any])
+    if (requestUrl != null) __obj.updateDynamic("requestUrl")(requestUrl.asInstanceOf[js.Any])
+    if (responseSize != null) __obj.updateDynamic("responseSize")(responseSize.asInstanceOf[js.Any])
+    if (serverIp != null) __obj.updateDynamic("serverIp")(serverIp.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.get.asInstanceOf[js.Any])
+    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpRequest]
   }
-  @scala.inline
-  implicit class HttpRequestOps[Self <: HttpRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheFillBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheFillBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheFillBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheFillBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheHit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheHit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheHit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheHit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheLookup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheLookup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheLookup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheLookup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheValidatedWithOriginServer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheValidatedWithOriginServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheValidatedWithOriginServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheValidatedWithOriginServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

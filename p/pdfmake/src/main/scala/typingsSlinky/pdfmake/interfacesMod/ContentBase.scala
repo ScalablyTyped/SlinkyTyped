@@ -1,105 +1,82 @@
 package typingsSlinky.pdfmake.interfacesMod
 
+import typingsSlinky.pdfkit.PDFKit.Mixins.OpenTypeFeatures
 import typingsSlinky.pdfmake.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContentBase extends Style {
-  var absolutePosition: js.UndefOr[X] = js.native
-  var headlineLevel: js.UndefOr[Double] = js.native
-  var pageBreak: js.UndefOr[PageBreak] = js.native
-  var pageOrientation: js.UndefOr[PageOrientation] = js.native
-  var relativePosition: js.UndefOr[X] = js.native
-  var style: js.UndefOr[String | js.Array[String] | Style] = js.native
+  var absolutePosition: js.UndefOr[X] = js.undefined
+  var headlineLevel: js.UndefOr[Double] = js.undefined
+  var pageBreak: js.UndefOr[PageBreak] = js.undefined
+  var pageOrientation: js.UndefOr[PageOrientation] = js.undefined
+  var relativePosition: js.UndefOr[X] = js.undefined
+  var style: js.UndefOr[String | js.Array[String] | Style] = js.undefined
 }
 
 object ContentBase {
   @scala.inline
-  def apply(): ContentBase = {
+  def apply(
+    absolutePosition: X = null,
+    alignment: Alignment = null,
+    background: String = null,
+    bold: js.UndefOr[Boolean] = js.undefined,
+    characterSpacing: js.UndefOr[Double] = js.undefined,
+    color: String = null,
+    columnGap: Size = null,
+    decoration: Decoration = null,
+    decorationColor: String = null,
+    decorationStyle: DecorationStyle = null,
+    fillColor: String = null,
+    fillOpacity: js.UndefOr[Double] = js.undefined,
+    font: String = null,
+    fontFeatures: js.Array[OpenTypeFeatures] = null,
+    fontSize: js.UndefOr[Double] = js.undefined,
+    headlineLevel: js.UndefOr[Double] = js.undefined,
+    italics: js.UndefOr[Boolean] = js.undefined,
+    leadingIndent: js.UndefOr[Double] = js.undefined,
+    lineHeight: js.UndefOr[Double] = js.undefined,
+    margin: Margins = null,
+    markerColor: String = null,
+    noWrap: js.UndefOr[Boolean] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    pageBreak: PageBreak = null,
+    pageOrientation: PageOrientation = null,
+    preserveLeadingSpaces: js.UndefOr[Boolean] = js.undefined,
+    relativePosition: X = null,
+    style: String | js.Array[String] | Style = null
+  ): ContentBase = {
     val __obj = js.Dynamic.literal()
+    if (absolutePosition != null) __obj.updateDynamic("absolutePosition")(absolutePosition.asInstanceOf[js.Any])
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(characterSpacing)) __obj.updateDynamic("characterSpacing")(characterSpacing.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (columnGap != null) __obj.updateDynamic("columnGap")(columnGap.asInstanceOf[js.Any])
+    if (decoration != null) __obj.updateDynamic("decoration")(decoration.asInstanceOf[js.Any])
+    if (decorationColor != null) __obj.updateDynamic("decorationColor")(decorationColor.asInstanceOf[js.Any])
+    if (decorationStyle != null) __obj.updateDynamic("decorationStyle")(decorationStyle.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillOpacity)) __obj.updateDynamic("fillOpacity")(fillOpacity.get.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (fontFeatures != null) __obj.updateDynamic("fontFeatures")(fontFeatures.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headlineLevel)) __obj.updateDynamic("headlineLevel")(headlineLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(italics)) __obj.updateDynamic("italics")(italics.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(leadingIndent)) __obj.updateDynamic("leadingIndent")(leadingIndent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineHeight)) __obj.updateDynamic("lineHeight")(lineHeight.get.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (markerColor != null) __obj.updateDynamic("markerColor")(markerColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(noWrap)) __obj.updateDynamic("noWrap")(noWrap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (pageBreak != null) __obj.updateDynamic("pageBreak")(pageBreak.asInstanceOf[js.Any])
+    if (pageOrientation != null) __obj.updateDynamic("pageOrientation")(pageOrientation.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveLeadingSpaces)) __obj.updateDynamic("preserveLeadingSpaces")(preserveLeadingSpaces.get.asInstanceOf[js.Any])
+    if (relativePosition != null) __obj.updateDynamic("relativePosition")(relativePosition.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentBase]
   }
-  @scala.inline
-  implicit class ContentBaseOps[Self <: ContentBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbsolutePosition(value: X): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolutePosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsolutePosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolutePosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadlineLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headlineLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeadlineLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headlineLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageBreak(value: PageBreak): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBreak")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageBreak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBreak")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageOrientation(value: PageOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelativePosition(value: X): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativePosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelativePosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativePosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String | js.Array[String] | Style): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

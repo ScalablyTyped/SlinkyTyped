@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GcpServiceAccount extends js.Object {
   // Contents of JSON Service Account key file
-  var service_account_key_file_json: String = js.native
+  var service_account_key_file_json: String
 }
 
 object GcpServiceAccount {
@@ -16,19 +15,5 @@ object GcpServiceAccount {
     val __obj = js.Dynamic.literal(service_account_key_file_json = service_account_key_file_json.asInstanceOf[js.Any])
     __obj.asInstanceOf[GcpServiceAccount]
   }
-  @scala.inline
-  implicit class GcpServiceAccountOps[Self <: GcpServiceAccount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withService_account_key_file_json(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service_account_key_file_json")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait EventTargetSqsTarget extends js.Object {
 
 object EventTargetSqsTarget {
   @scala.inline
-  def apply(): EventTargetSqsTarget = {
+  def apply(messageGroupId: String = null): EventTargetSqsTarget = {
     val __obj = js.Dynamic.literal()
+    if (messageGroupId != null) __obj.updateDynamic("messageGroupId")(messageGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventTargetSqsTarget]
   }
-  @scala.inline
-  implicit class EventTargetSqsTargetOps[Self <: EventTargetSqsTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessageGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageGroupId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

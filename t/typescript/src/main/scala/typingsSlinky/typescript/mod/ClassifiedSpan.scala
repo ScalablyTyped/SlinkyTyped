@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClassifiedSpan extends js.Object {
-  var classificationType: ClassificationTypeNames = js.native
-  var textSpan: TextSpan = js.native
+  var classificationType: ClassificationTypeNames
+  var textSpan: TextSpan
 }
 
 object ClassifiedSpan {
@@ -16,25 +15,5 @@ object ClassifiedSpan {
     val __obj = js.Dynamic.literal(classificationType = classificationType.asInstanceOf[js.Any], textSpan = textSpan.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassifiedSpan]
   }
-  @scala.inline
-  implicit class ClassifiedSpanOps[Self <: ClassifiedSpan] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassificationType(value: ClassificationTypeNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextSpan(value: TextSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

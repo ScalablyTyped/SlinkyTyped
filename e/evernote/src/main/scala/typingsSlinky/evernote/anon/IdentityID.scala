@@ -7,75 +7,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IdentityID extends js.Object {
-  var identityID: js.UndefOr[typingsSlinky.evernote.mod.Types.IdentityID] = js.native
-  var notFoundException: js.UndefOr[EDAMNotFoundException] = js.native
-  var userException: js.UndefOr[EDAMUserException] = js.native
-  var userID: js.UndefOr[UserID] = js.native
+  var identityID: js.UndefOr[typingsSlinky.evernote.mod.Types.IdentityID] = js.undefined
+  var notFoundException: js.UndefOr[EDAMNotFoundException] = js.undefined
+  var userException: js.UndefOr[EDAMUserException] = js.undefined
+  var userID: js.UndefOr[UserID] = js.undefined
 }
 
 object IdentityID {
   @scala.inline
-  def apply(): IdentityID = {
+  def apply(
+    identityID: js.UndefOr[typingsSlinky.evernote.mod.Types.IdentityID] = js.undefined,
+    notFoundException: EDAMNotFoundException = null,
+    userException: EDAMUserException = null,
+    userID: js.UndefOr[UserID] = js.undefined
+  ): IdentityID = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(identityID)) __obj.updateDynamic("identityID")(identityID.get.asInstanceOf[js.Any])
+    if (notFoundException != null) __obj.updateDynamic("notFoundException")(notFoundException.asInstanceOf[js.Any])
+    if (userException != null) __obj.updateDynamic("userException")(userException.asInstanceOf[js.Any])
+    if (!js.isUndefined(userID)) __obj.updateDynamic("userID")(userID.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityID]
   }
-  @scala.inline
-  implicit class IdentityIDOps[Self <: IdentityID] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentityID(value: typingsSlinky.evernote.mod.Types.IdentityID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identityID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identityID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotFoundException(value: EDAMNotFoundException): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundException")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotFoundException: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundException")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserException(value: EDAMUserException): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userException")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserException: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userException")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserID(value: UserID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userID")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

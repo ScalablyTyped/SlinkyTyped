@@ -33,53 +33,16 @@ trait SchemaFixedOrPercent extends js.Object {
 
 object SchemaFixedOrPercent {
   @scala.inline
-  def apply(): SchemaFixedOrPercent = {
+  def apply(
+    calculated: js.UndefOr[Double] = js.undefined,
+    fixed: js.UndefOr[Double] = js.undefined,
+    percent: js.UndefOr[Double] = js.undefined
+  ): SchemaFixedOrPercent = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(calculated)) __obj.updateDynamic("calculated")(calculated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(percent)) __obj.updateDynamic("percent")(percent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFixedOrPercent]
   }
-  @scala.inline
-  implicit class SchemaFixedOrPercentOps[Self <: SchemaFixedOrPercent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalculated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalculated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,101 +38,24 @@ trait DatasetImportJobSummary extends js.Object {
 
 object DatasetImportJobSummary {
   @scala.inline
-  def apply(): DatasetImportJobSummary = {
+  def apply(
+    CreationTime: js.Date = null,
+    DataSource: DataSource = null,
+    DatasetImportJobArn: Arn = null,
+    DatasetImportJobName: Name = null,
+    LastModificationTime: js.Date = null,
+    Message: ErrorMessage = null,
+    Status: Status = null
+  ): DatasetImportJobSummary = {
     val __obj = js.Dynamic.literal()
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (DataSource != null) __obj.updateDynamic("DataSource")(DataSource.asInstanceOf[js.Any])
+    if (DatasetImportJobArn != null) __obj.updateDynamic("DatasetImportJobArn")(DatasetImportJobArn.asInstanceOf[js.Any])
+    if (DatasetImportJobName != null) __obj.updateDynamic("DatasetImportJobName")(DatasetImportJobName.asInstanceOf[js.Any])
+    if (LastModificationTime != null) __obj.updateDynamic("LastModificationTime")(LastModificationTime.asInstanceOf[js.Any])
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatasetImportJobSummary]
   }
-  @scala.inline
-  implicit class DatasetImportJobSummaryOps[Self <: DatasetImportJobSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatasetImportJobArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetImportJobArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetImportJobArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetImportJobArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatasetImportJobName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetImportJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetImportJobName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetImportJobName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModificationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModificationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModificationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModificationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: ErrorMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

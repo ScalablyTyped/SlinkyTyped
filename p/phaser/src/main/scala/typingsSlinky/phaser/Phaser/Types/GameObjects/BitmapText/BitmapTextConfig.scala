@@ -6,311 +6,123 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined phaser.Phaser.Types.GameObjects.GameObjectConfig & {  font ? :string,   text ? :string,   size ? :number | false} */
-@js.native
 trait BitmapTextConfig extends js.Object {
   /**
     * Add the GameObject to the scene.
     */
-  var add: js.UndefOr[Boolean] = js.native
+  var add: js.UndefOr[Boolean] = js.undefined
   /**
     * The alpha (opacity) of the Game Object.
     */
-  var alpha: js.UndefOr[Double] = js.native
+  var alpha: js.UndefOr[Double] = js.undefined
   /**
     * The rotation angle of the Game Object, in degrees.
     */
-  var angle: js.UndefOr[Double] = js.native
+  var angle: js.UndefOr[Double] = js.undefined
   /**
     * The blend mode of the GameObject.
     */
-  var blendMode: js.UndefOr[Double] = js.native
+  var blendMode: js.UndefOr[Double] = js.undefined
   /**
     * The depth of the GameObject.
     */
-  var depth: js.UndefOr[Double] = js.native
+  var depth: js.UndefOr[Double] = js.undefined
   /**
     * The horizontally flipped state of the Game Object.
     */
-  var flipX: js.UndefOr[Boolean] = js.native
+  var flipX: js.UndefOr[Boolean] = js.undefined
   /**
     * The vertically flipped state of the Game Object.
     */
-  var flipY: js.UndefOr[Boolean] = js.native
+  var flipY: js.UndefOr[Boolean] = js.undefined
   /**
     * The key of the font to use from the BitmapFont cache.
     */
-  var font: js.UndefOr[String] = js.native
+  var font: js.UndefOr[String] = js.undefined
   /**
     * The origin of the Game Object.
     */
-  var origin: js.UndefOr[Double | js.Object] = js.native
+  var origin: js.UndefOr[Double | js.Object] = js.undefined
   /**
     * The rotation angle of the Game Object, in radians.
     */
-  var rotation: js.UndefOr[Double] = js.native
+  var rotation: js.UndefOr[Double] = js.undefined
   /**
     * The scale of the GameObject.
     */
-  var scale: js.UndefOr[Double | js.Object] = js.native
+  var scale: js.UndefOr[Double | js.Object] = js.undefined
   /**
     * The scale mode of the GameObject.
     */
-  var scaleMode: js.UndefOr[Double] = js.native
+  var scaleMode: js.UndefOr[Double] = js.undefined
   /**
     * The scroll factor of the GameObject.
     */
-  var scrollFactor: js.UndefOr[Double | js.Object] = js.native
+  var scrollFactor: js.UndefOr[Double | js.Object] = js.undefined
   /**
     * The font size to set.
     */
-  var size: js.UndefOr[Double | `false`] = js.native
+  var size: js.UndefOr[Double | `false`] = js.undefined
   /**
     * The string, or array of strings, to be set as the content of this Bitmap Text.
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
   /**
     * The visible state of the Game Object.
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
   /**
     * The x position of the Game Object.
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * The y position of the Game Object.
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object BitmapTextConfig {
   @scala.inline
-  def apply(): BitmapTextConfig = {
+  def apply(
+    add: js.UndefOr[Boolean] = js.undefined,
+    alpha: js.UndefOr[Double] = js.undefined,
+    angle: js.UndefOr[Double] = js.undefined,
+    blendMode: js.UndefOr[Double] = js.undefined,
+    depth: js.UndefOr[Double] = js.undefined,
+    flipX: js.UndefOr[Boolean] = js.undefined,
+    flipY: js.UndefOr[Boolean] = js.undefined,
+    font: String = null,
+    origin: Double | js.Object = null,
+    rotation: js.UndefOr[Double] = js.undefined,
+    scale: Double | js.Object = null,
+    scaleMode: js.UndefOr[Double] = js.undefined,
+    scrollFactor: Double | js.Object = null,
+    size: Double | `false` = null,
+    text: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): BitmapTextConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(add)) __obj.updateDynamic("add")(add.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(alpha)) __obj.updateDynamic("alpha")(alpha.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(angle)) __obj.updateDynamic("angle")(angle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(blendMode)) __obj.updateDynamic("blendMode")(blendMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(depth)) __obj.updateDynamic("depth")(depth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flipX)) __obj.updateDynamic("flipX")(flipX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flipY)) __obj.updateDynamic("flipY")(flipY.get.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleMode)) __obj.updateDynamic("scaleMode")(scaleMode.get.asInstanceOf[js.Any])
+    if (scrollFactor != null) __obj.updateDynamic("scrollFactor")(scrollFactor.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BitmapTextConfig]
   }
-  @scala.inline
-  implicit class BitmapTextConfigOps[Self <: BitmapTextConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlendMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlendMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlipX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlipX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlipY(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlipY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: Double | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollFactor(value: Double | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

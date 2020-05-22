@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var dataSize: js.UndefOr[Double] = js.native
-  var maxDataSize: js.UndefOr[Double] = js.native
-  var pauseStreams: js.UndefOr[Boolean] = js.native
-  var readable: js.UndefOr[Boolean] = js.native
-  var writable: js.UndefOr[Boolean] = js.native
+  var dataSize: js.UndefOr[Double] = js.undefined
+  var maxDataSize: js.UndefOr[Double] = js.undefined
+  var pauseStreams: js.UndefOr[Boolean] = js.undefined
+  var readable: js.UndefOr[Boolean] = js.undefined
+  var writable: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    dataSize: js.UndefOr[Double] = js.undefined,
+    maxDataSize: js.UndefOr[Double] = js.undefined,
+    pauseStreams: js.UndefOr[Boolean] = js.undefined,
+    readable: js.UndefOr[Boolean] = js.undefined,
+    writable: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dataSize)) __obj.updateDynamic("dataSize")(dataSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDataSize)) __obj.updateDynamic("maxDataSize")(maxDataSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pauseStreams)) __obj.updateDynamic("pauseStreams")(pauseStreams.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readable)) __obj.updateDynamic("readable")(readable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(writable)) __obj.updateDynamic("writable")(writable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDataSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDataSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDataSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDataSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPauseStreams(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseStreams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPauseStreams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseStreams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWritable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWritable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

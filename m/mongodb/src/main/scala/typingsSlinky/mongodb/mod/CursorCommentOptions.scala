@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CursorCommentOptions extends js.Object {
-  var hint: js.UndefOr[String] = js.native
-  var limit: js.UndefOr[scala.Double] = js.native
-  var maxTimeMS: js.UndefOr[scala.Double] = js.native
-  var readPreference: js.UndefOr[ReadPreferenceOrMode] = js.native
-  var skip: js.UndefOr[scala.Double] = js.native
+  var hint: js.UndefOr[String] = js.undefined
+  var limit: js.UndefOr[scala.Double] = js.undefined
+  var maxTimeMS: js.UndefOr[scala.Double] = js.undefined
+  var readPreference: js.UndefOr[ReadPreferenceOrMode] = js.undefined
+  var skip: js.UndefOr[scala.Double] = js.undefined
 }
 
 object CursorCommentOptions {
   @scala.inline
-  def apply(): CursorCommentOptions = {
+  def apply(
+    hint: String = null,
+    limit: js.UndefOr[scala.Double] = js.undefined,
+    maxTimeMS: js.UndefOr[scala.Double] = js.undefined,
+    readPreference: ReadPreferenceOrMode = null,
+    skip: js.UndefOr[scala.Double] = js.undefined
+  ): CursorCommentOptions = {
     val __obj = js.Dynamic.literal()
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxTimeMS)) __obj.updateDynamic("maxTimeMS")(maxTimeMS.get.asInstanceOf[js.Any])
+    if (readPreference != null) __obj.updateDynamic("readPreference")(readPreference.asInstanceOf[js.Any])
+    if (!js.isUndefined(skip)) __obj.updateDynamic("skip")(skip.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CursorCommentOptions]
   }
-  @scala.inline
-  implicit class CursorCommentOptionsOps[Self <: CursorCommentOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTimeMS(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeMS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTimeMS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeMS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadPreference(value: ReadPreferenceOrMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

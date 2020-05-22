@@ -11,68 +11,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Person extends js.Object {
   /** A short biography for this person. */
-  var aboutMe: js.UndefOr[String] = js.native
+  var aboutMe: js.UndefOr[String] = js.undefined
   /** The person's date of birth, represented as YYYY-MM-DD. */
-  var birthday: js.UndefOr[String] = js.native
+  var birthday: js.UndefOr[String] = js.undefined
   /** The "bragging rights" line of this person. */
-  var braggingRights: js.UndefOr[String] = js.native
+  var braggingRights: js.UndefOr[String] = js.undefined
   /** For followers who are visible, the number of people who have added this person or page to a circle. */
-  var circledByCount: js.UndefOr[Double] = js.native
+  var circledByCount: js.UndefOr[Double] = js.undefined
   /** The cover photo content. */
-  var cover: js.UndefOr[CoverInfo] = js.native
+  var cover: js.UndefOr[CoverInfo] = js.undefined
   /** (this field is not currently used) */
-  var currentLocation: js.UndefOr[String] = js.native
+  var currentLocation: js.UndefOr[String] = js.undefined
   /** The name of this person, which is suitable for display. */
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   /**
     * The hosted domain name for the user's Google Apps account. For instance, example.com. The plus.profile.emails.read or email scope is needed to get this
     * domain name.
     */
-  var domain: js.UndefOr[String] = js.native
+  var domain: js.UndefOr[String] = js.undefined
   /**
     * A list of email addresses that this person has, including their Google account email address, and the public verified email addresses on their Google+
     * profile. The plus.profile.emails.read scope is needed to retrieve these email addresses, or the email scope can be used to retrieve just the Google
     * account email address.
     */
-  var emails: js.UndefOr[js.Array[Value]] = js.native
+  var emails: js.UndefOr[js.Array[Value]] = js.undefined
   /** ETag of this response for caching purposes. */
-  var etag: js.UndefOr[String] = js.native
+  var etag: js.UndefOr[String] = js.undefined
   /**
     * The person's gender. Possible values include, but are not limited to, the following values:
     * - "male" - Male gender.
     * - "female" - Female gender.
     * - "other" - Other.
     */
-  var gender: js.UndefOr[String] = js.native
+  var gender: js.UndefOr[String] = js.undefined
   /** The ID of this person. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** The representation of the person's profile photo. */
-  var image: js.UndefOr[IsDefault] = js.native
+  var image: js.UndefOr[IsDefault] = js.undefined
   /** Whether this user has signed up for Google+. */
-  var isPlusUser: js.UndefOr[Boolean] = js.native
+  var isPlusUser: js.UndefOr[Boolean] = js.undefined
   /** Identifies this resource as a person. Value: "plus#person". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** An object representation of the individual components of a person's name. */
-  var name: js.UndefOr[Formatted] = js.native
+  var name: js.UndefOr[Formatted] = js.undefined
   /** The nickname of this person. */
-  var nickname: js.UndefOr[String] = js.native
+  var nickname: js.UndefOr[String] = js.undefined
   /**
     * Type of person within Google+. Possible values include, but are not limited to, the following values:
     * - "person" - represents an actual person.
     * - "page" - represents a page.
     */
-  var objectType: js.UndefOr[String] = js.native
+  var objectType: js.UndefOr[String] = js.undefined
   /** The occupation of this person. */
-  var occupation: js.UndefOr[String] = js.native
+  var occupation: js.UndefOr[String] = js.undefined
   /** A list of current or past organizations with which this person is associated. */
-  var organizations: js.UndefOr[js.Array[Department]] = js.native
+  var organizations: js.UndefOr[js.Array[Department]] = js.undefined
   /** A list of places where this person has lived. */
-  var placesLived: js.UndefOr[js.Array[Primary]] = js.native
+  var placesLived: js.UndefOr[js.Array[Primary]] = js.undefined
   /** If a Google+ Page, the number of people who have +1'd this page. */
-  var plusOneCount: js.UndefOr[Double] = js.native
+  var plusOneCount: js.UndefOr[Double] = js.undefined
   /**
     * The person's relationship status. Possible values include, but are not limited to, the following values:
     * - "single" - Person is single.
@@ -85,368 +84,81 @@ trait Person extends js.Object {
     * - "in_domestic_partnership" - Person is in a domestic partnership.
     * - "in_civil_union" - Person is in a civil union.
     */
-  var relationshipStatus: js.UndefOr[String] = js.native
+  var relationshipStatus: js.UndefOr[String] = js.undefined
   /** The person's skills. */
-  var skills: js.UndefOr[String] = js.native
+  var skills: js.UndefOr[String] = js.undefined
   /** The brief description (tagline) of this person. */
-  var tagline: js.UndefOr[String] = js.native
+  var tagline: js.UndefOr[String] = js.undefined
   /** The URL of this person's profile. */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
   /** A list of URLs for this person. */
-  var urls: js.UndefOr[js.Array[Label]] = js.native
+  var urls: js.UndefOr[js.Array[Label]] = js.undefined
   /** Whether the person or Google+ Page has been verified. */
-  var verified: js.UndefOr[Boolean] = js.native
+  var verified: js.UndefOr[Boolean] = js.undefined
 }
 
 object Person {
   @scala.inline
-  def apply(): Person = {
+  def apply(
+    aboutMe: String = null,
+    birthday: String = null,
+    braggingRights: String = null,
+    circledByCount: js.UndefOr[Double] = js.undefined,
+    cover: CoverInfo = null,
+    currentLocation: String = null,
+    displayName: String = null,
+    domain: String = null,
+    emails: js.Array[Value] = null,
+    etag: String = null,
+    gender: String = null,
+    id: String = null,
+    image: IsDefault = null,
+    isPlusUser: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    name: Formatted = null,
+    nickname: String = null,
+    objectType: String = null,
+    occupation: String = null,
+    organizations: js.Array[Department] = null,
+    placesLived: js.Array[Primary] = null,
+    plusOneCount: js.UndefOr[Double] = js.undefined,
+    relationshipStatus: String = null,
+    skills: String = null,
+    tagline: String = null,
+    url: String = null,
+    urls: js.Array[Label] = null,
+    verified: js.UndefOr[Boolean] = js.undefined
+  ): Person = {
     val __obj = js.Dynamic.literal()
+    if (aboutMe != null) __obj.updateDynamic("aboutMe")(aboutMe.asInstanceOf[js.Any])
+    if (birthday != null) __obj.updateDynamic("birthday")(birthday.asInstanceOf[js.Any])
+    if (braggingRights != null) __obj.updateDynamic("braggingRights")(braggingRights.asInstanceOf[js.Any])
+    if (!js.isUndefined(circledByCount)) __obj.updateDynamic("circledByCount")(circledByCount.get.asInstanceOf[js.Any])
+    if (cover != null) __obj.updateDynamic("cover")(cover.asInstanceOf[js.Any])
+    if (currentLocation != null) __obj.updateDynamic("currentLocation")(currentLocation.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (emails != null) __obj.updateDynamic("emails")(emails.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPlusUser)) __obj.updateDynamic("isPlusUser")(isPlusUser.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nickname != null) __obj.updateDynamic("nickname")(nickname.asInstanceOf[js.Any])
+    if (objectType != null) __obj.updateDynamic("objectType")(objectType.asInstanceOf[js.Any])
+    if (occupation != null) __obj.updateDynamic("occupation")(occupation.asInstanceOf[js.Any])
+    if (organizations != null) __obj.updateDynamic("organizations")(organizations.asInstanceOf[js.Any])
+    if (placesLived != null) __obj.updateDynamic("placesLived")(placesLived.asInstanceOf[js.Any])
+    if (!js.isUndefined(plusOneCount)) __obj.updateDynamic("plusOneCount")(plusOneCount.get.asInstanceOf[js.Any])
+    if (relationshipStatus != null) __obj.updateDynamic("relationshipStatus")(relationshipStatus.asInstanceOf[js.Any])
+    if (skills != null) __obj.updateDynamic("skills")(skills.asInstanceOf[js.Any])
+    if (tagline != null) __obj.updateDynamic("tagline")(tagline.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (urls != null) __obj.updateDynamic("urls")(urls.asInstanceOf[js.Any])
+    if (!js.isUndefined(verified)) __obj.updateDynamic("verified")(verified.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Person]
   }
-  @scala.inline
-  implicit class PersonOps[Self <: Person] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAboutMe(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aboutMe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAboutMe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aboutMe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBirthday(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("birthday")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBirthday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("birthday")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBraggingRights(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("braggingRights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBraggingRights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("braggingRights")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCircledByCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circledByCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircledByCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circledByCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCover(value: CoverInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmails(value: js.Array[Value]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGender(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: IsDefault): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPlusUser(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPlusUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPlusUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPlusUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Formatted): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNickname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNickname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccupation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occupation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccupation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occupation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizations(value: js.Array[Department]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacesLived(value: js.Array[Primary]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placesLived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacesLived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placesLived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlusOneCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plusOneCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlusOneCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plusOneCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelationshipStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelationshipStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkills(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skills")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkills: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skills")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrls(value: js.Array[Label]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

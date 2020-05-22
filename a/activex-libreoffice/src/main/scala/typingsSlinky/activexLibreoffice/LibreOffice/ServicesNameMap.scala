@@ -1291,2736 +1291,2735 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServicesNameMap extends js.Object {
   @JSName("com.sun.star.accessibility.Accessible")
-  var comDotsunDotstarDotaccessibilityDotAccessible: Accessible = js.native
+  var comDotsunDotstarDotaccessibilityDotAccessible: Accessible
   @JSName("com.sun.star.accessibility.AccessibleContext")
-  var comDotsunDotstarDotaccessibilityDotAccessibleContext: AccessibleContext = js.native
+  var comDotsunDotstarDotaccessibilityDotAccessibleContext: AccessibleContext
   @JSName("com.sun.star.accessibility.MSAAService")
-  var comDotsunDotstarDotaccessibilityDotMSAAService: MSAAService = js.native
+  var comDotsunDotstarDotaccessibilityDotMSAAService: MSAAService
   @JSName("com.sun.star.animations.AnimateColor")
-  var comDotsunDotstarDotanimationsDotAnimateColor: AnimateColor = js.native
+  var comDotsunDotstarDotanimationsDotAnimateColor: AnimateColor
   @JSName("com.sun.star.animations.AnimateMotion")
-  var comDotsunDotstarDotanimationsDotAnimateMotion: AnimateMotion = js.native
+  var comDotsunDotstarDotanimationsDotAnimateMotion: AnimateMotion
   @JSName("com.sun.star.animations.AnimateSet")
-  var comDotsunDotstarDotanimationsDotAnimateSet: AnimateSet = js.native
+  var comDotsunDotstarDotanimationsDotAnimateSet: AnimateSet
   @JSName("com.sun.star.animations.Audio")
-  var comDotsunDotstarDotanimationsDotAudio: Audio = js.native
+  var comDotsunDotstarDotanimationsDotAudio: Audio
   @JSName("com.sun.star.animations.Command")
-  var comDotsunDotstarDotanimationsDotCommand: Command = js.native
+  var comDotsunDotstarDotanimationsDotCommand: Command
   @JSName("com.sun.star.animations.IterateContainer")
-  var comDotsunDotstarDotanimationsDotIterateContainer: IterateContainer = js.native
+  var comDotsunDotstarDotanimationsDotIterateContainer: IterateContainer
   @JSName("com.sun.star.animations.ParallelTimeContainer")
-  var comDotsunDotstarDotanimationsDotParallelTimeContainer: ParallelTimeContainer = js.native
+  var comDotsunDotstarDotanimationsDotParallelTimeContainer: ParallelTimeContainer
   @JSName("com.sun.star.animations.SequenceTimeContainer")
-  var comDotsunDotstarDotanimationsDotSequenceTimeContainer: SequenceTimeContainer = js.native
+  var comDotsunDotstarDotanimationsDotSequenceTimeContainer: SequenceTimeContainer
   @JSName("com.sun.star.auth.SSOManagerFactory")
-  var comDotsunDotstarDotauthDotSSOManagerFactory: SSOManagerFactory = js.native
+  var comDotsunDotstarDotauthDotSSOManagerFactory: SSOManagerFactory
   @JSName("com.sun.star.auth.SSOPasswordCache")
-  var comDotsunDotstarDotauthDotSSOPasswordCache: SSOPasswordCache = js.native
+  var comDotsunDotstarDotauthDotSSOPasswordCache: SSOPasswordCache
   @JSName("com.sun.star.awt.AccessibleButton")
-  var comDotsunDotstarDotawtDotAccessibleButton: AccessibleButton = js.native
+  var comDotsunDotstarDotawtDotAccessibleButton: AccessibleButton
   @JSName("com.sun.star.awt.AccessibleCheckBox")
-  var comDotsunDotstarDotawtDotAccessibleCheckBox: AccessibleCheckBox = js.native
+  var comDotsunDotstarDotawtDotAccessibleCheckBox: AccessibleCheckBox
   @JSName("com.sun.star.awt.AccessibleComboBox")
-  var comDotsunDotstarDotawtDotAccessibleComboBox: AccessibleComboBox = js.native
+  var comDotsunDotstarDotawtDotAccessibleComboBox: AccessibleComboBox
   @JSName("com.sun.star.awt.AccessibleDropDownComboBox")
-  var comDotsunDotstarDotawtDotAccessibleDropDownComboBox: AccessibleDropDownComboBox = js.native
+  var comDotsunDotstarDotawtDotAccessibleDropDownComboBox: AccessibleDropDownComboBox
   @JSName("com.sun.star.awt.AccessibleDropDownListBox")
-  var comDotsunDotstarDotawtDotAccessibleDropDownListBox: AccessibleDropDownListBox = js.native
+  var comDotsunDotstarDotawtDotAccessibleDropDownListBox: AccessibleDropDownListBox
   @JSName("com.sun.star.awt.AccessibleEdit")
-  var comDotsunDotstarDotawtDotAccessibleEdit: AccessibleEdit = js.native
+  var comDotsunDotstarDotawtDotAccessibleEdit: AccessibleEdit
   @JSName("com.sun.star.awt.AccessibleFixedText")
-  var comDotsunDotstarDotawtDotAccessibleFixedText: AccessibleFixedText = js.native
+  var comDotsunDotstarDotawtDotAccessibleFixedText: AccessibleFixedText
   @JSName("com.sun.star.awt.AccessibleIconChoiceControl")
-  var comDotsunDotstarDotawtDotAccessibleIconChoiceControl: AccessibleIconChoiceControl = js.native
+  var comDotsunDotstarDotawtDotAccessibleIconChoiceControl: AccessibleIconChoiceControl
   @JSName("com.sun.star.awt.AccessibleIconChoiceControlEntry")
-  var comDotsunDotstarDotawtDotAccessibleIconChoiceControlEntry: AccessibleIconChoiceControlEntry = js.native
+  var comDotsunDotstarDotawtDotAccessibleIconChoiceControlEntry: AccessibleIconChoiceControlEntry
   @JSName("com.sun.star.awt.AccessibleList")
-  var comDotsunDotstarDotawtDotAccessibleList: AccessibleList = js.native
+  var comDotsunDotstarDotawtDotAccessibleList: AccessibleList
   @JSName("com.sun.star.awt.AccessibleListBox")
-  var comDotsunDotstarDotawtDotAccessibleListBox: AccessibleListBox = js.native
+  var comDotsunDotstarDotawtDotAccessibleListBox: AccessibleListBox
   @JSName("com.sun.star.awt.AccessibleListBoxList")
-  var comDotsunDotstarDotawtDotAccessibleListBoxList: AccessibleListBoxList = js.native
+  var comDotsunDotstarDotawtDotAccessibleListBoxList: AccessibleListBoxList
   @JSName("com.sun.star.awt.AccessibleListItem")
-  var comDotsunDotstarDotawtDotAccessibleListItem: AccessibleListItem = js.native
+  var comDotsunDotstarDotawtDotAccessibleListItem: AccessibleListItem
   @JSName("com.sun.star.awt.AccessibleMenu")
-  var comDotsunDotstarDotawtDotAccessibleMenu: AccessibleMenu = js.native
+  var comDotsunDotstarDotawtDotAccessibleMenu: AccessibleMenu
   @JSName("com.sun.star.awt.AccessibleMenuBar")
-  var comDotsunDotstarDotawtDotAccessibleMenuBar: AccessibleMenuBar = js.native
+  var comDotsunDotstarDotawtDotAccessibleMenuBar: AccessibleMenuBar
   @JSName("com.sun.star.awt.AccessibleMenuItem")
-  var comDotsunDotstarDotawtDotAccessibleMenuItem: AccessibleMenuItem = js.native
+  var comDotsunDotstarDotawtDotAccessibleMenuItem: AccessibleMenuItem
   @JSName("com.sun.star.awt.AccessibleMenuSeparator")
-  var comDotsunDotstarDotawtDotAccessibleMenuSeparator: AccessibleMenuSeparator = js.native
+  var comDotsunDotstarDotawtDotAccessibleMenuSeparator: AccessibleMenuSeparator
   @JSName("com.sun.star.awt.AccessiblePopupMenu")
-  var comDotsunDotstarDotawtDotAccessiblePopupMenu: AccessiblePopupMenu = js.native
+  var comDotsunDotstarDotawtDotAccessiblePopupMenu: AccessiblePopupMenu
   @JSName("com.sun.star.awt.AccessibleRadioButton")
-  var comDotsunDotstarDotawtDotAccessibleRadioButton: AccessibleRadioButton = js.native
+  var comDotsunDotstarDotawtDotAccessibleRadioButton: AccessibleRadioButton
   @JSName("com.sun.star.awt.AccessibleScrollBar")
-  var comDotsunDotstarDotawtDotAccessibleScrollBar: AccessibleScrollBar = js.native
+  var comDotsunDotstarDotawtDotAccessibleScrollBar: AccessibleScrollBar
   @JSName("com.sun.star.awt.AccessibleStatusBar")
-  var comDotsunDotstarDotawtDotAccessibleStatusBar: AccessibleStatusBar = js.native
+  var comDotsunDotstarDotawtDotAccessibleStatusBar: AccessibleStatusBar
   @JSName("com.sun.star.awt.AccessibleStatusBarItem")
-  var comDotsunDotstarDotawtDotAccessibleStatusBarItem: AccessibleStatusBarItem = js.native
+  var comDotsunDotstarDotawtDotAccessibleStatusBarItem: AccessibleStatusBarItem
   @JSName("com.sun.star.awt.AccessibleTabBar")
-  var comDotsunDotstarDotawtDotAccessibleTabBar: AccessibleTabBar = js.native
+  var comDotsunDotstarDotawtDotAccessibleTabBar: AccessibleTabBar
   @JSName("com.sun.star.awt.AccessibleTabBarPage")
-  var comDotsunDotstarDotawtDotAccessibleTabBarPage: AccessibleTabBarPage = js.native
+  var comDotsunDotstarDotawtDotAccessibleTabBarPage: AccessibleTabBarPage
   @JSName("com.sun.star.awt.AccessibleTabBarPageList")
-  var comDotsunDotstarDotawtDotAccessibleTabBarPageList: AccessibleTabBarPageList = js.native
+  var comDotsunDotstarDotawtDotAccessibleTabBarPageList: AccessibleTabBarPageList
   @JSName("com.sun.star.awt.AccessibleTabControl")
-  var comDotsunDotstarDotawtDotAccessibleTabControl: AccessibleTabControl = js.native
+  var comDotsunDotstarDotawtDotAccessibleTabControl: AccessibleTabControl
   @JSName("com.sun.star.awt.AccessibleTabPage")
-  var comDotsunDotstarDotawtDotAccessibleTabPage: AccessibleTabPage = js.native
+  var comDotsunDotstarDotawtDotAccessibleTabPage: AccessibleTabPage
   @JSName("com.sun.star.awt.AccessibleTextField")
-  var comDotsunDotstarDotawtDotAccessibleTextField: AccessibleTextField = js.native
+  var comDotsunDotstarDotawtDotAccessibleTextField: AccessibleTextField
   @JSName("com.sun.star.awt.AccessibleToolBox")
-  var comDotsunDotstarDotawtDotAccessibleToolBox: AccessibleToolBox = js.native
+  var comDotsunDotstarDotawtDotAccessibleToolBox: AccessibleToolBox
   @JSName("com.sun.star.awt.AccessibleToolBoxItem")
-  var comDotsunDotstarDotawtDotAccessibleToolBoxItem: AccessibleToolBoxItem = js.native
+  var comDotsunDotstarDotawtDotAccessibleToolBoxItem: AccessibleToolBoxItem
   @JSName("com.sun.star.awt.AccessibleTreeListBox")
-  var comDotsunDotstarDotawtDotAccessibleTreeListBox: AccessibleTreeListBox = js.native
+  var comDotsunDotstarDotawtDotAccessibleTreeListBox: AccessibleTreeListBox
   @JSName("com.sun.star.awt.AccessibleTreeListBoxEntry")
-  var comDotsunDotstarDotawtDotAccessibleTreeListBoxEntry: AccessibleTreeListBoxEntry = js.native
+  var comDotsunDotstarDotawtDotAccessibleTreeListBoxEntry: AccessibleTreeListBoxEntry
   @JSName("com.sun.star.awt.AccessibleWindow")
-  var comDotsunDotstarDotawtDotAccessibleWindow: AccessibleWindow = js.native
+  var comDotsunDotstarDotawtDotAccessibleWindow: AccessibleWindow
   @JSName("com.sun.star.awt.AnimatedImagesControl")
-  var comDotsunDotstarDotawtDotAnimatedImagesControl: AnimatedImagesControl = js.native
+  var comDotsunDotstarDotawtDotAnimatedImagesControl: AnimatedImagesControl
   @JSName("com.sun.star.awt.AnimatedImagesControlModel")
-  var comDotsunDotstarDotawtDotAnimatedImagesControlModel: AnimatedImagesControlModel = js.native
+  var comDotsunDotstarDotawtDotAnimatedImagesControlModel: AnimatedImagesControlModel
   @JSName("com.sun.star.awt.AsyncCallback")
-  var comDotsunDotstarDotawtDotAsyncCallback: AsyncCallback = js.native
+  var comDotsunDotstarDotawtDotAsyncCallback: AsyncCallback
   @JSName("com.sun.star.awt.ContainerWindowProvider")
-  var comDotsunDotstarDotawtDotContainerWindowProvider: ContainerWindowProvider = js.native
+  var comDotsunDotstarDotawtDotContainerWindowProvider: ContainerWindowProvider
   @JSName("com.sun.star.awt.DialogProvider")
-  var comDotsunDotstarDotawtDotDialogProvider: DialogProvider = js.native
+  var comDotsunDotstarDotawtDotDialogProvider: DialogProvider
   @JSName("com.sun.star.awt.DialogProvider2")
-  var comDotsunDotstarDotawtDotDialogProvider2: DialogProvider2 = js.native
+  var comDotsunDotstarDotawtDotDialogProvider2: DialogProvider2
   @JSName("com.sun.star.awt.MenuBar")
-  var comDotsunDotstarDotawtDotMenuBar: MenuBar = js.native
+  var comDotsunDotstarDotawtDotMenuBar: MenuBar
   @JSName("com.sun.star.awt.Pointer")
-  var comDotsunDotstarDotawtDotPointer: Pointer = js.native
+  var comDotsunDotstarDotawtDotPointer: Pointer
   @JSName("com.sun.star.awt.PopupMenu")
-  var comDotsunDotstarDotawtDotPopupMenu: PopupMenu = js.native
+  var comDotsunDotstarDotawtDotPopupMenu: PopupMenu
   @JSName("com.sun.star.awt.PrinterServer")
-  var comDotsunDotstarDotawtDotPrinterServer: PrinterServer = js.native
+  var comDotsunDotstarDotawtDotPrinterServer: PrinterServer
   @JSName("com.sun.star.awt.RoadmapItem")
-  var comDotsunDotstarDotawtDotRoadmapItem: RoadmapItem = js.native
+  var comDotsunDotstarDotawtDotRoadmapItem: RoadmapItem
   @JSName("com.sun.star.awt.SpinningProgressControlModel")
-  var comDotsunDotstarDotawtDotSpinningProgressControlModel: SpinningProgressControlModel = js.native
+  var comDotsunDotstarDotawtDotSpinningProgressControlModel: SpinningProgressControlModel
   @JSName("com.sun.star.awt.TabController")
-  var comDotsunDotstarDotawtDotTabController: TabController = js.native
+  var comDotsunDotstarDotawtDotTabController: TabController
   @JSName("com.sun.star.awt.TabControllerModel")
-  var comDotsunDotstarDotawtDotTabControllerModel: TabControllerModel = js.native
+  var comDotsunDotstarDotawtDotTabControllerModel: TabControllerModel
   @JSName("com.sun.star.awt.Toolkit")
-  var comDotsunDotstarDotawtDotToolkit: Toolkit = js.native
+  var comDotsunDotstarDotawtDotToolkit: Toolkit
   @JSName("com.sun.star.awt.UnoControl")
-  var comDotsunDotstarDotawtDotUnoControl: UnoControl = js.native
+  var comDotsunDotstarDotawtDotUnoControl: UnoControl
   @JSName("com.sun.star.awt.UnoControlButton")
-  var comDotsunDotstarDotawtDotUnoControlButton: UnoControlButton = js.native
+  var comDotsunDotstarDotawtDotUnoControlButton: UnoControlButton
   @JSName("com.sun.star.awt.UnoControlButtonModel")
-  var comDotsunDotstarDotawtDotUnoControlButtonModel: UnoControlButtonModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlButtonModel: UnoControlButtonModel
   @JSName("com.sun.star.awt.UnoControlCheckBox")
-  var comDotsunDotstarDotawtDotUnoControlCheckBox: UnoControlCheckBox = js.native
+  var comDotsunDotstarDotawtDotUnoControlCheckBox: UnoControlCheckBox
   @JSName("com.sun.star.awt.UnoControlCheckBoxModel")
-  var comDotsunDotstarDotawtDotUnoControlCheckBoxModel: UnoControlCheckBoxModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlCheckBoxModel: UnoControlCheckBoxModel
   @JSName("com.sun.star.awt.UnoControlComboBox")
-  var comDotsunDotstarDotawtDotUnoControlComboBox: UnoControlComboBox = js.native
+  var comDotsunDotstarDotawtDotUnoControlComboBox: UnoControlComboBox
   @JSName("com.sun.star.awt.UnoControlComboBoxModel")
-  var comDotsunDotstarDotawtDotUnoControlComboBoxModel: UnoControlComboBoxModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlComboBoxModel: UnoControlComboBoxModel
   @JSName("com.sun.star.awt.UnoControlContainer")
-  var comDotsunDotstarDotawtDotUnoControlContainer: UnoControlContainer = js.native
+  var comDotsunDotstarDotawtDotUnoControlContainer: UnoControlContainer
   @JSName("com.sun.star.awt.UnoControlContainerModel")
-  var comDotsunDotstarDotawtDotUnoControlContainerModel: UnoControlContainerModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlContainerModel: UnoControlContainerModel
   @JSName("com.sun.star.awt.UnoControlCurrencyField")
-  var comDotsunDotstarDotawtDotUnoControlCurrencyField: UnoControlCurrencyField = js.native
+  var comDotsunDotstarDotawtDotUnoControlCurrencyField: UnoControlCurrencyField
   @JSName("com.sun.star.awt.UnoControlCurrencyFieldModel")
-  var comDotsunDotstarDotawtDotUnoControlCurrencyFieldModel: UnoControlCurrencyFieldModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlCurrencyFieldModel: UnoControlCurrencyFieldModel
   @JSName("com.sun.star.awt.UnoControlDateField")
-  var comDotsunDotstarDotawtDotUnoControlDateField: UnoControlDateField = js.native
+  var comDotsunDotstarDotawtDotUnoControlDateField: UnoControlDateField
   @JSName("com.sun.star.awt.UnoControlDateFieldModel")
-  var comDotsunDotstarDotawtDotUnoControlDateFieldModel: UnoControlDateFieldModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlDateFieldModel: UnoControlDateFieldModel
   @JSName("com.sun.star.awt.UnoControlDialog")
-  var comDotsunDotstarDotawtDotUnoControlDialog: UnoControlDialog = js.native
+  var comDotsunDotstarDotawtDotUnoControlDialog: UnoControlDialog
   @JSName("com.sun.star.awt.UnoControlDialogElement")
-  var comDotsunDotstarDotawtDotUnoControlDialogElement: UnoControlDialogElement = js.native
+  var comDotsunDotstarDotawtDotUnoControlDialogElement: UnoControlDialogElement
   @JSName("com.sun.star.awt.UnoControlDialogModel")
-  var comDotsunDotstarDotawtDotUnoControlDialogModel: UnoControlDialogModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlDialogModel: UnoControlDialogModel
   @JSName("com.sun.star.awt.UnoControlDialogModelProvider")
-  var comDotsunDotstarDotawtDotUnoControlDialogModelProvider: UnoControlDialogModelProvider = js.native
+  var comDotsunDotstarDotawtDotUnoControlDialogModelProvider: UnoControlDialogModelProvider
   @JSName("com.sun.star.awt.UnoControlEdit")
-  var comDotsunDotstarDotawtDotUnoControlEdit: UnoControlEdit = js.native
+  var comDotsunDotstarDotawtDotUnoControlEdit: UnoControlEdit
   @JSName("com.sun.star.awt.UnoControlEditModel")
-  var comDotsunDotstarDotawtDotUnoControlEditModel: UnoControlEditModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlEditModel: UnoControlEditModel
   @JSName("com.sun.star.awt.UnoControlFileControl")
-  var comDotsunDotstarDotawtDotUnoControlFileControl: UnoControlFileControl = js.native
+  var comDotsunDotstarDotawtDotUnoControlFileControl: UnoControlFileControl
   @JSName("com.sun.star.awt.UnoControlFileControlModel")
-  var comDotsunDotstarDotawtDotUnoControlFileControlModel: UnoControlFileControlModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlFileControlModel: UnoControlFileControlModel
   @JSName("com.sun.star.awt.UnoControlFixedHyperlink")
-  var comDotsunDotstarDotawtDotUnoControlFixedHyperlink: UnoControlFixedHyperlink = js.native
+  var comDotsunDotstarDotawtDotUnoControlFixedHyperlink: UnoControlFixedHyperlink
   @JSName("com.sun.star.awt.UnoControlFixedHyperlinkModel")
-  var comDotsunDotstarDotawtDotUnoControlFixedHyperlinkModel: UnoControlFixedHyperlinkModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlFixedHyperlinkModel: UnoControlFixedHyperlinkModel
   @JSName("com.sun.star.awt.UnoControlFixedLine")
-  var comDotsunDotstarDotawtDotUnoControlFixedLine: UnoControlFixedLine = js.native
+  var comDotsunDotstarDotawtDotUnoControlFixedLine: UnoControlFixedLine
   @JSName("com.sun.star.awt.UnoControlFixedLineModel")
-  var comDotsunDotstarDotawtDotUnoControlFixedLineModel: UnoControlFixedLineModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlFixedLineModel: UnoControlFixedLineModel
   @JSName("com.sun.star.awt.UnoControlFixedText")
-  var comDotsunDotstarDotawtDotUnoControlFixedText: UnoControlFixedText = js.native
+  var comDotsunDotstarDotawtDotUnoControlFixedText: UnoControlFixedText
   @JSName("com.sun.star.awt.UnoControlFixedTextModel")
-  var comDotsunDotstarDotawtDotUnoControlFixedTextModel: UnoControlFixedTextModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlFixedTextModel: UnoControlFixedTextModel
   @JSName("com.sun.star.awt.UnoControlFormattedField")
-  var comDotsunDotstarDotawtDotUnoControlFormattedField: UnoControlFormattedField = js.native
+  var comDotsunDotstarDotawtDotUnoControlFormattedField: UnoControlFormattedField
   @JSName("com.sun.star.awt.UnoControlFormattedFieldModel")
-  var comDotsunDotstarDotawtDotUnoControlFormattedFieldModel: UnoControlFormattedFieldModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlFormattedFieldModel: UnoControlFormattedFieldModel
   @JSName("com.sun.star.awt.UnoControlGroupBox")
-  var comDotsunDotstarDotawtDotUnoControlGroupBox: UnoControlGroupBox = js.native
+  var comDotsunDotstarDotawtDotUnoControlGroupBox: UnoControlGroupBox
   @JSName("com.sun.star.awt.UnoControlGroupBoxModel")
-  var comDotsunDotstarDotawtDotUnoControlGroupBoxModel: UnoControlGroupBoxModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlGroupBoxModel: UnoControlGroupBoxModel
   @JSName("com.sun.star.awt.UnoControlImageControl")
-  var comDotsunDotstarDotawtDotUnoControlImageControl: UnoControlImageControl = js.native
+  var comDotsunDotstarDotawtDotUnoControlImageControl: UnoControlImageControl
   @JSName("com.sun.star.awt.UnoControlImageControlModel")
-  var comDotsunDotstarDotawtDotUnoControlImageControlModel: UnoControlImageControlModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlImageControlModel: UnoControlImageControlModel
   @JSName("com.sun.star.awt.UnoControlListBox")
-  var comDotsunDotstarDotawtDotUnoControlListBox: UnoControlListBox = js.native
+  var comDotsunDotstarDotawtDotUnoControlListBox: UnoControlListBox
   @JSName("com.sun.star.awt.UnoControlListBoxModel")
-  var comDotsunDotstarDotawtDotUnoControlListBoxModel: UnoControlListBoxModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlListBoxModel: UnoControlListBoxModel
   @JSName("com.sun.star.awt.UnoControlModel")
-  var comDotsunDotstarDotawtDotUnoControlModel: UnoControlModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlModel: UnoControlModel
   @JSName("com.sun.star.awt.UnoControlNumericField")
-  var comDotsunDotstarDotawtDotUnoControlNumericField: UnoControlNumericField = js.native
+  var comDotsunDotstarDotawtDotUnoControlNumericField: UnoControlNumericField
   @JSName("com.sun.star.awt.UnoControlNumericFieldModel")
-  var comDotsunDotstarDotawtDotUnoControlNumericFieldModel: UnoControlNumericFieldModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlNumericFieldModel: UnoControlNumericFieldModel
   @JSName("com.sun.star.awt.UnoControlPatternField")
-  var comDotsunDotstarDotawtDotUnoControlPatternField: UnoControlPatternField = js.native
+  var comDotsunDotstarDotawtDotUnoControlPatternField: UnoControlPatternField
   @JSName("com.sun.star.awt.UnoControlPatternFieldModel")
-  var comDotsunDotstarDotawtDotUnoControlPatternFieldModel: UnoControlPatternFieldModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlPatternFieldModel: UnoControlPatternFieldModel
   @JSName("com.sun.star.awt.UnoControlProgressBar")
-  var comDotsunDotstarDotawtDotUnoControlProgressBar: UnoControlProgressBar = js.native
+  var comDotsunDotstarDotawtDotUnoControlProgressBar: UnoControlProgressBar
   @JSName("com.sun.star.awt.UnoControlProgressBarModel")
-  var comDotsunDotstarDotawtDotUnoControlProgressBarModel: UnoControlProgressBarModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlProgressBarModel: UnoControlProgressBarModel
   @JSName("com.sun.star.awt.UnoControlRadioButton")
-  var comDotsunDotstarDotawtDotUnoControlRadioButton: UnoControlRadioButton = js.native
+  var comDotsunDotstarDotawtDotUnoControlRadioButton: UnoControlRadioButton
   @JSName("com.sun.star.awt.UnoControlRadioButtonModel")
-  var comDotsunDotstarDotawtDotUnoControlRadioButtonModel: UnoControlRadioButtonModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlRadioButtonModel: UnoControlRadioButtonModel
   @JSName("com.sun.star.awt.UnoControlRoadmap")
-  var comDotsunDotstarDotawtDotUnoControlRoadmap: UnoControlRoadmap = js.native
+  var comDotsunDotstarDotawtDotUnoControlRoadmap: UnoControlRoadmap
   @JSName("com.sun.star.awt.UnoControlRoadmapModel")
-  var comDotsunDotstarDotawtDotUnoControlRoadmapModel: UnoControlRoadmapModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlRoadmapModel: UnoControlRoadmapModel
   @JSName("com.sun.star.awt.UnoControlScrollBar")
-  var comDotsunDotstarDotawtDotUnoControlScrollBar: UnoControlScrollBar = js.native
+  var comDotsunDotstarDotawtDotUnoControlScrollBar: UnoControlScrollBar
   @JSName("com.sun.star.awt.UnoControlScrollBarModel")
-  var comDotsunDotstarDotawtDotUnoControlScrollBarModel: UnoControlScrollBarModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlScrollBarModel: UnoControlScrollBarModel
   @JSName("com.sun.star.awt.UnoControlSpinButton")
-  var comDotsunDotstarDotawtDotUnoControlSpinButton: UnoControlSpinButton = js.native
+  var comDotsunDotstarDotawtDotUnoControlSpinButton: UnoControlSpinButton
   @JSName("com.sun.star.awt.UnoControlSpinButtonModel")
-  var comDotsunDotstarDotawtDotUnoControlSpinButtonModel: UnoControlSpinButtonModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlSpinButtonModel: UnoControlSpinButtonModel
   @JSName("com.sun.star.awt.UnoControlTimeField")
-  var comDotsunDotstarDotawtDotUnoControlTimeField: UnoControlTimeField = js.native
+  var comDotsunDotstarDotawtDotUnoControlTimeField: UnoControlTimeField
   @JSName("com.sun.star.awt.UnoControlTimeFieldModel")
-  var comDotsunDotstarDotawtDotUnoControlTimeFieldModel: UnoControlTimeFieldModel = js.native
+  var comDotsunDotstarDotawtDotUnoControlTimeFieldModel: UnoControlTimeFieldModel
   @JSName("com.sun.star.awt.grid.DefaultGridColumnModel")
-  var comDotsunDotstarDotawtDotgridDotDefaultGridColumnModel: DefaultGridColumnModel = js.native
+  var comDotsunDotstarDotawtDotgridDotDefaultGridColumnModel: DefaultGridColumnModel
   @JSName("com.sun.star.awt.grid.DefaultGridDataModel")
-  var comDotsunDotstarDotawtDotgridDotDefaultGridDataModel: DefaultGridDataModel = js.native
+  var comDotsunDotstarDotawtDotgridDotDefaultGridDataModel: DefaultGridDataModel
   @JSName("com.sun.star.awt.grid.GridColumn")
-  var comDotsunDotstarDotawtDotgridDotGridColumn: GridColumn = js.native
+  var comDotsunDotstarDotawtDotgridDotGridColumn: GridColumn
   @JSName("com.sun.star.awt.grid.SortableGridDataModel")
-  var comDotsunDotstarDotawtDotgridDotSortableGridDataModel: SortableGridDataModel = js.native
+  var comDotsunDotstarDotawtDotgridDotSortableGridDataModel: SortableGridDataModel
   @JSName("com.sun.star.awt.grid.UnoControlGrid")
-  var comDotsunDotstarDotawtDotgridDotUnoControlGrid: UnoControlGrid = js.native
+  var comDotsunDotstarDotawtDotgridDotUnoControlGrid: UnoControlGrid
   @JSName("com.sun.star.awt.grid.UnoControlGridModel")
-  var comDotsunDotstarDotawtDotgridDotUnoControlGridModel: UnoControlGridModel = js.native
+  var comDotsunDotstarDotawtDotgridDotUnoControlGridModel: UnoControlGridModel
   @JSName("com.sun.star.awt.tab.UnoControlTabPage")
-  var comDotsunDotstarDotawtDottabDotUnoControlTabPage: UnoControlTabPage = js.native
+  var comDotsunDotstarDotawtDottabDotUnoControlTabPage: UnoControlTabPage
   @JSName("com.sun.star.awt.tab.UnoControlTabPageContainer")
-  var comDotsunDotstarDotawtDottabDotUnoControlTabPageContainer: UnoControlTabPageContainer = js.native
+  var comDotsunDotstarDotawtDottabDotUnoControlTabPageContainer: UnoControlTabPageContainer
   @JSName("com.sun.star.awt.tab.UnoControlTabPageContainerModel")
-  var comDotsunDotstarDotawtDottabDotUnoControlTabPageContainerModel: UnoControlTabPageContainerModel = js.native
+  var comDotsunDotstarDotawtDottabDotUnoControlTabPageContainerModel: UnoControlTabPageContainerModel
   @JSName("com.sun.star.awt.tab.UnoControlTabPageModel")
-  var comDotsunDotstarDotawtDottabDotUnoControlTabPageModel: UnoControlTabPageModel = js.native
+  var comDotsunDotstarDotawtDottabDotUnoControlTabPageModel: UnoControlTabPageModel
   @JSName("com.sun.star.awt.tree.MutableTreeDataModel")
-  var comDotsunDotstarDotawtDottreeDotMutableTreeDataModel: MutableTreeDataModel = js.native
+  var comDotsunDotstarDotawtDottreeDotMutableTreeDataModel: MutableTreeDataModel
   @JSName("com.sun.star.awt.tree.MutableTreeNode")
-  var comDotsunDotstarDotawtDottreeDotMutableTreeNode: MutableTreeNode = js.native
+  var comDotsunDotstarDotawtDottreeDotMutableTreeNode: MutableTreeNode
   @JSName("com.sun.star.awt.tree.TreeControl")
-  var comDotsunDotstarDotawtDottreeDotTreeControl: TreeControl = js.native
+  var comDotsunDotstarDotawtDottreeDotTreeControl: TreeControl
   @JSName("com.sun.star.awt.tree.TreeControlModel")
-  var comDotsunDotstarDotawtDottreeDotTreeControlModel: TreeControlModel = js.native
+  var comDotsunDotstarDotawtDottreeDotTreeControlModel: TreeControlModel
   @JSName("com.sun.star.beans.Introspection")
-  var comDotsunDotstarDotbeansDotIntrospection: Introspection = js.native
+  var comDotsunDotstarDotbeansDotIntrospection: Introspection
   @JSName("com.sun.star.beans.PropertyBag")
-  var comDotsunDotstarDotbeansDotPropertyBag: PropertyBag = js.native
+  var comDotsunDotstarDotbeansDotPropertyBag: PropertyBag
   @JSName("com.sun.star.beans.PropertySet")
-  var comDotsunDotstarDotbeansDotPropertySet: PropertySet = js.native
+  var comDotsunDotstarDotbeansDotPropertySet: PropertySet
   @JSName("com.sun.star.bridge.Bridge")
-  var comDotsunDotstarDotbridgeDotBridge: Bridge = js.native
+  var comDotsunDotstarDotbridgeDotBridge: Bridge
   @JSName("com.sun.star.bridge.BridgeFactory")
-  var comDotsunDotstarDotbridgeDotBridgeFactory: BridgeFactory = js.native
+  var comDotsunDotstarDotbridgeDotBridgeFactory: BridgeFactory
   @JSName("com.sun.star.bridge.IiopBridge")
-  var comDotsunDotstarDotbridgeDotIiopBridge: IiopBridge = js.native
+  var comDotsunDotstarDotbridgeDotIiopBridge: IiopBridge
   @JSName("com.sun.star.bridge.OleApplicationRegistration")
-  var comDotsunDotstarDotbridgeDotOleApplicationRegistration: OleApplicationRegistration = js.native
+  var comDotsunDotstarDotbridgeDotOleApplicationRegistration: OleApplicationRegistration
   @JSName("com.sun.star.bridge.OleBridgeSupplier")
-  var comDotsunDotstarDotbridgeDotOleBridgeSupplier: OleBridgeSupplier = js.native
+  var comDotsunDotstarDotbridgeDotOleBridgeSupplier: OleBridgeSupplier
   @JSName("com.sun.star.bridge.OleBridgeSupplier2")
-  var comDotsunDotstarDotbridgeDotOleBridgeSupplier2: OleBridgeSupplier2 = js.native
+  var comDotsunDotstarDotbridgeDotOleBridgeSupplier2: OleBridgeSupplier2
   @JSName("com.sun.star.bridge.OleBridgeSupplierVar1")
-  var comDotsunDotstarDotbridgeDotOleBridgeSupplierVar1: OleBridgeSupplierVar1 = js.native
+  var comDotsunDotstarDotbridgeDotOleBridgeSupplierVar1: OleBridgeSupplierVar1
   @JSName("com.sun.star.bridge.OleObjectFactory")
-  var comDotsunDotstarDotbridgeDotOleObjectFactory: OleObjectFactory = js.native
+  var comDotsunDotstarDotbridgeDotOleObjectFactory: OleObjectFactory
   @JSName("com.sun.star.bridge.UnoUrlResolver")
-  var comDotsunDotstarDotbridgeDotUnoUrlResolver: UnoUrlResolver = js.native
+  var comDotsunDotstarDotbridgeDotUnoUrlResolver: UnoUrlResolver
   @JSName("com.sun.star.bridge.UrpBridge")
-  var comDotsunDotstarDotbridgeDotUrpBridge: UrpBridge = js.native
+  var comDotsunDotstarDotbridgeDotUrpBridge: UrpBridge
   @JSName("com.sun.star.bridge.oleautomation.ApplicationRegistration")
-  var comDotsunDotstarDotbridgeDotoleautomationDotApplicationRegistration: ApplicationRegistration = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotApplicationRegistration: ApplicationRegistration
   @JSName("com.sun.star.bridge.oleautomation.BridgeSupplier")
-  var comDotsunDotstarDotbridgeDotoleautomationDotBridgeSupplier: BridgeSupplier = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotBridgeSupplier: BridgeSupplier
   @JSName("com.sun.star.bridge.oleautomation.Factory")
-  var comDotsunDotstarDotbridgeDotoleautomationDotFactory: Factory = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotFactory: Factory
   @JSName("com.sun.star.chart2.Axis")
-  var comDotsunDotstarDotchart2DotAxis: Axis = js.native
+  var comDotsunDotstarDotchart2DotAxis: Axis
   @JSName("com.sun.star.chart2.CandleStickChartType")
-  var comDotsunDotstarDotchart2DotCandleStickChartType: CandleStickChartType = js.native
+  var comDotsunDotstarDotchart2DotCandleStickChartType: CandleStickChartType
   @JSName("com.sun.star.chart2.CartesianCoordinateSystem2d")
-  var comDotsunDotstarDotchart2DotCartesianCoordinateSystem2d: CartesianCoordinateSystem2d = js.native
+  var comDotsunDotstarDotchart2DotCartesianCoordinateSystem2d: CartesianCoordinateSystem2d
   @JSName("com.sun.star.chart2.CartesianCoordinateSystem3d")
-  var comDotsunDotstarDotchart2DotCartesianCoordinateSystem3d: CartesianCoordinateSystem3d = js.native
+  var comDotsunDotstarDotchart2DotCartesianCoordinateSystem3d: CartesianCoordinateSystem3d
   @JSName("com.sun.star.chart2.ChartDocument")
-  var comDotsunDotstarDotchart2DotChartDocument: ChartDocument = js.native
+  var comDotsunDotstarDotchart2DotChartDocument: ChartDocument
   @JSName("com.sun.star.chart2.ChartDocumentWrapper")
-  var comDotsunDotstarDotchart2DotChartDocumentWrapper: ChartDocumentWrapper = js.native
+  var comDotsunDotstarDotchart2DotChartDocumentWrapper: ChartDocumentWrapper
   @JSName("com.sun.star.chart2.ChartType")
-  var comDotsunDotstarDotchart2DotChartType: ChartType = js.native
+  var comDotsunDotstarDotchart2DotChartType: ChartType
   @JSName("com.sun.star.chart2.ChartTypeManager")
-  var comDotsunDotstarDotchart2DotChartTypeManager: ChartTypeManager = js.native
+  var comDotsunDotstarDotchart2DotChartTypeManager: ChartTypeManager
   @JSName("com.sun.star.chart2.ChartTypeTemplate")
-  var comDotsunDotstarDotchart2DotChartTypeTemplate: ChartTypeTemplate = js.native
+  var comDotsunDotstarDotchart2DotChartTypeTemplate: ChartTypeTemplate
   @JSName("com.sun.star.chart2.CoordinateSystem")
-  var comDotsunDotstarDotchart2DotCoordinateSystem: CoordinateSystem = js.native
+  var comDotsunDotstarDotchart2DotCoordinateSystem: CoordinateSystem
   @JSName("com.sun.star.chart2.CoordinateSystemType")
-  var comDotsunDotstarDotchart2DotCoordinateSystemType: CoordinateSystemType = js.native
+  var comDotsunDotstarDotchart2DotCoordinateSystemType: CoordinateSystemType
   @JSName("com.sun.star.chart2.DataPoint")
-  var comDotsunDotstarDotchart2DotDataPoint: DataPoint = js.native
+  var comDotsunDotstarDotchart2DotDataPoint: DataPoint
   @JSName("com.sun.star.chart2.DataPointProperties")
-  var comDotsunDotstarDotchart2DotDataPointProperties: DataPointProperties = js.native
+  var comDotsunDotstarDotchart2DotDataPointProperties: DataPointProperties
   @JSName("com.sun.star.chart2.DataSeries")
-  var comDotsunDotstarDotchart2DotDataSeries: DataSeries = js.native
+  var comDotsunDotstarDotchart2DotDataSeries: DataSeries
   @JSName("com.sun.star.chart2.Diagram")
-  var comDotsunDotstarDotchart2DotDiagram: Diagram = js.native
+  var comDotsunDotstarDotchart2DotDiagram: Diagram
   @JSName("com.sun.star.chart2.ErrorBar")
-  var comDotsunDotstarDotchart2DotErrorBar: ErrorBar = js.native
+  var comDotsunDotstarDotchart2DotErrorBar: ErrorBar
   @JSName("com.sun.star.chart2.ExponentialRegressionCurve")
-  var comDotsunDotstarDotchart2DotExponentialRegressionCurve: ExponentialRegressionCurve = js.native
+  var comDotsunDotstarDotchart2DotExponentialRegressionCurve: ExponentialRegressionCurve
   @JSName("com.sun.star.chart2.ExponentialScaling")
-  var comDotsunDotstarDotchart2DotExponentialScaling: ExponentialScaling = js.native
+  var comDotsunDotstarDotchart2DotExponentialScaling: ExponentialScaling
   @JSName("com.sun.star.chart2.FormattedString")
-  var comDotsunDotstarDotchart2DotFormattedString: FormattedString = js.native
+  var comDotsunDotstarDotchart2DotFormattedString: FormattedString
   @JSName("com.sun.star.chart2.GridProperties")
-  var comDotsunDotstarDotchart2DotGridProperties: GridProperties = js.native
+  var comDotsunDotstarDotchart2DotGridProperties: GridProperties
   @JSName("com.sun.star.chart2.Legend")
-  var comDotsunDotstarDotchart2DotLegend: Legend = js.native
+  var comDotsunDotstarDotchart2DotLegend: Legend
   @JSName("com.sun.star.chart2.LinearRegressionCurve")
-  var comDotsunDotstarDotchart2DotLinearRegressionCurve: LinearRegressionCurve = js.native
+  var comDotsunDotstarDotchart2DotLinearRegressionCurve: LinearRegressionCurve
   @JSName("com.sun.star.chart2.LinearScaling")
-  var comDotsunDotstarDotchart2DotLinearScaling: LinearScaling = js.native
+  var comDotsunDotstarDotchart2DotLinearScaling: LinearScaling
   @JSName("com.sun.star.chart2.LogarithmicRegressionCurve")
-  var comDotsunDotstarDotchart2DotLogarithmicRegressionCurve: LogarithmicRegressionCurve = js.native
+  var comDotsunDotstarDotchart2DotLogarithmicRegressionCurve: LogarithmicRegressionCurve
   @JSName("com.sun.star.chart2.LogarithmicScaling")
-  var comDotsunDotstarDotchart2DotLogarithmicScaling: LogarithmicScaling = js.native
+  var comDotsunDotstarDotchart2DotLogarithmicScaling: LogarithmicScaling
   @JSName("com.sun.star.chart2.LogicTargetModel")
-  var comDotsunDotstarDotchart2DotLogicTargetModel: LogicTargetModel = js.native
+  var comDotsunDotstarDotchart2DotLogicTargetModel: LogicTargetModel
   @JSName("com.sun.star.chart2.MovingAverageRegressionCurve")
-  var comDotsunDotstarDotchart2DotMovingAverageRegressionCurve: MovingAverageRegressionCurve = js.native
+  var comDotsunDotstarDotchart2DotMovingAverageRegressionCurve: MovingAverageRegressionCurve
   @JSName("com.sun.star.chart2.PolarCoordinateSystem2d")
-  var comDotsunDotstarDotchart2DotPolarCoordinateSystem2d: PolarCoordinateSystem2d = js.native
+  var comDotsunDotstarDotchart2DotPolarCoordinateSystem2d: PolarCoordinateSystem2d
   @JSName("com.sun.star.chart2.PolarCoordinateSystem3d")
-  var comDotsunDotstarDotchart2DotPolarCoordinateSystem3d: PolarCoordinateSystem3d = js.native
+  var comDotsunDotstarDotchart2DotPolarCoordinateSystem3d: PolarCoordinateSystem3d
   @JSName("com.sun.star.chart2.PolynomialRegressionCurve")
-  var comDotsunDotstarDotchart2DotPolynomialRegressionCurve: PolynomialRegressionCurve = js.native
+  var comDotsunDotstarDotchart2DotPolynomialRegressionCurve: PolynomialRegressionCurve
   @JSName("com.sun.star.chart2.PotentialRegressionCurve")
-  var comDotsunDotstarDotchart2DotPotentialRegressionCurve: PotentialRegressionCurve = js.native
+  var comDotsunDotstarDotchart2DotPotentialRegressionCurve: PotentialRegressionCurve
   @JSName("com.sun.star.chart2.PowerScaling")
-  var comDotsunDotstarDotchart2DotPowerScaling: PowerScaling = js.native
+  var comDotsunDotstarDotchart2DotPowerScaling: PowerScaling
   @JSName("com.sun.star.chart2.PropertyPool")
-  var comDotsunDotstarDotchart2DotPropertyPool: PropertyPool = js.native
+  var comDotsunDotstarDotchart2DotPropertyPool: PropertyPool
   @JSName("com.sun.star.chart2.RegressionCurve")
-  var comDotsunDotstarDotchart2DotRegressionCurve: RegressionCurve = js.native
+  var comDotsunDotstarDotchart2DotRegressionCurve: RegressionCurve
   @JSName("com.sun.star.chart2.RegressionCurveEquation")
-  var comDotsunDotstarDotchart2DotRegressionCurveEquation: RegressionCurveEquation = js.native
+  var comDotsunDotstarDotchart2DotRegressionCurveEquation: RegressionCurveEquation
   @JSName("com.sun.star.chart2.RegressionEquation")
-  var comDotsunDotstarDotchart2DotRegressionEquation: RegressionEquation = js.native
+  var comDotsunDotstarDotchart2DotRegressionEquation: RegressionEquation
   @JSName("com.sun.star.chart2.Scaling")
-  var comDotsunDotstarDotchart2DotScaling: Scaling = js.native
+  var comDotsunDotstarDotchart2DotScaling: Scaling
   @JSName("com.sun.star.chart2.StandardDiagramCreationParameters")
-  var comDotsunDotstarDotchart2DotStandardDiagramCreationParameters: StandardDiagramCreationParameters = js.native
+  var comDotsunDotstarDotchart2DotStandardDiagramCreationParameters: StandardDiagramCreationParameters
   @JSName("com.sun.star.chart2.Title")
-  var comDotsunDotstarDotchart2DotTitle: Title = js.native
+  var comDotsunDotstarDotchart2DotTitle: Title
   @JSName("com.sun.star.chart2.data.DataFilter")
-  var comDotsunDotstarDotchart2DotdataDotDataFilter: DataFilter = js.native
+  var comDotsunDotstarDotchart2DotdataDotDataFilter: DataFilter
   @JSName("com.sun.star.chart2.data.DataProvider")
-  var comDotsunDotstarDotchart2DotdataDotDataProvider: DataProvider = js.native
+  var comDotsunDotstarDotchart2DotdataDotDataProvider: DataProvider
   @JSName("com.sun.star.chart2.data.DataSequence")
-  var comDotsunDotstarDotchart2DotdataDotDataSequence: DataSequence = js.native
+  var comDotsunDotstarDotchart2DotdataDotDataSequence: DataSequence
   @JSName("com.sun.star.chart2.data.DataSink")
-  var comDotsunDotstarDotchart2DotdataDotDataSink: DataSink = js.native
+  var comDotsunDotstarDotchart2DotdataDotDataSink: DataSink
   @JSName("com.sun.star.chart2.data.DataSource")
-  var comDotsunDotstarDotchart2DotdataDotDataSource: DataSource = js.native
+  var comDotsunDotstarDotchart2DotdataDotDataSource: DataSource
   @JSName("com.sun.star.chart2.data.DatabaseDataProvider")
-  var comDotsunDotstarDotchart2DotdataDotDatabaseDataProvider: DatabaseDataProvider = js.native
+  var comDotsunDotstarDotchart2DotdataDotDatabaseDataProvider: DatabaseDataProvider
   @JSName("com.sun.star.chart2.data.LabeledDataSequence")
-  var comDotsunDotstarDotchart2DotdataDotLabeledDataSequence: LabeledDataSequence = js.native
+  var comDotsunDotstarDotchart2DotdataDotLabeledDataSequence: LabeledDataSequence
   @JSName("com.sun.star.chart2.data.RangeHighlightListener")
-  var comDotsunDotstarDotchart2DotdataDotRangeHighlightListener: RangeHighlightListener = js.native
+  var comDotsunDotstarDotchart2DotdataDotRangeHighlightListener: RangeHighlightListener
   @JSName("com.sun.star.chart2.data.RangeHighlighter")
-  var comDotsunDotstarDotchart2DotdataDotRangeHighlighter: RangeHighlighter = js.native
+  var comDotsunDotstarDotchart2DotdataDotRangeHighlighter: RangeHighlighter
   @JSName("com.sun.star.chart2.data.TabularDataProviderArguments")
-  var comDotsunDotstarDotchart2DotdataDotTabularDataProviderArguments: TabularDataProviderArguments = js.native
+  var comDotsunDotstarDotchart2DotdataDotTabularDataProviderArguments: TabularDataProviderArguments
   @JSName("com.sun.star.chart.AccessibleChartDocumentView")
-  var comDotsunDotstarDotchartDotAccessibleChartDocumentView: AccessibleChartDocumentView = js.native
+  var comDotsunDotstarDotchartDotAccessibleChartDocumentView: AccessibleChartDocumentView
   @JSName("com.sun.star.chart.AccessibleChartElement")
-  var comDotsunDotstarDotchartDotAccessibleChartElement: AccessibleChartElement = js.native
+  var comDotsunDotstarDotchartDotAccessibleChartElement: AccessibleChartElement
   @JSName("com.sun.star.chart.AreaDiagram")
-  var comDotsunDotstarDotchartDotAreaDiagram: AreaDiagram = js.native
+  var comDotsunDotstarDotchartDotAreaDiagram: AreaDiagram
   @JSName("com.sun.star.chart.BarDiagram")
-  var comDotsunDotstarDotchartDotBarDiagram: BarDiagram = js.native
+  var comDotsunDotstarDotchartDotBarDiagram: BarDiagram
   @JSName("com.sun.star.chart.BubbleDiagram")
-  var comDotsunDotstarDotchartDotBubbleDiagram: BubbleDiagram = js.native
+  var comDotsunDotstarDotchartDotBubbleDiagram: BubbleDiagram
   @JSName("com.sun.star.chart.Chart3DBarProperties")
-  var comDotsunDotstarDotchartDotChart3DBarProperties: Chart3DBarProperties = js.native
+  var comDotsunDotstarDotchartDotChart3DBarProperties: Chart3DBarProperties
   @JSName("com.sun.star.chart.ChartArea")
-  var comDotsunDotstarDotchartDotChartArea: ChartArea = js.native
+  var comDotsunDotstarDotchartDotChartArea: ChartArea
   @JSName("com.sun.star.chart.ChartAxis")
-  var comDotsunDotstarDotchartDotChartAxis: ChartAxis = js.native
+  var comDotsunDotstarDotchartDotChartAxis: ChartAxis
   @JSName("com.sun.star.chart.ChartAxisXSupplier")
-  var comDotsunDotstarDotchartDotChartAxisXSupplier: ChartAxisXSupplier = js.native
+  var comDotsunDotstarDotchartDotChartAxisXSupplier: ChartAxisXSupplier
   @JSName("com.sun.star.chart.ChartAxisYSupplier")
-  var comDotsunDotstarDotchartDotChartAxisYSupplier: ChartAxisYSupplier = js.native
+  var comDotsunDotstarDotchartDotChartAxisYSupplier: ChartAxisYSupplier
   @JSName("com.sun.star.chart.ChartAxisZSupplier")
-  var comDotsunDotstarDotchartDotChartAxisZSupplier: ChartAxisZSupplier = js.native
+  var comDotsunDotstarDotchartDotChartAxisZSupplier: ChartAxisZSupplier
   @JSName("com.sun.star.chart.ChartData")
-  var comDotsunDotstarDotchartDotChartData: ChartData = js.native
+  var comDotsunDotstarDotchartDotChartData: ChartData
   @JSName("com.sun.star.chart.ChartDataArray")
-  var comDotsunDotstarDotchartDotChartDataArray: ChartDataArray = js.native
+  var comDotsunDotstarDotchartDotChartDataArray: ChartDataArray
   @JSName("com.sun.star.chart.ChartDataPointProperties")
-  var comDotsunDotstarDotchartDotChartDataPointProperties: ChartDataPointProperties = js.native
+  var comDotsunDotstarDotchartDotChartDataPointProperties: ChartDataPointProperties
   @JSName("com.sun.star.chart.ChartDataRowProperties")
-  var comDotsunDotstarDotchartDotChartDataRowProperties: ChartDataRowProperties = js.native
+  var comDotsunDotstarDotchartDotChartDataRowProperties: ChartDataRowProperties
   @JSName("com.sun.star.chart.ChartDocument")
-  var comDotsunDotstarDotchartDotChartDocument: typingsSlinky.activexLibreoffice.com_.sun.star.chart.ChartDocument = js.native
+  var comDotsunDotstarDotchartDotChartDocument: typingsSlinky.activexLibreoffice.com_.sun.star.chart.ChartDocument
   @JSName("com.sun.star.chart.ChartGrid")
-  var comDotsunDotstarDotchartDotChartGrid: ChartGrid = js.native
+  var comDotsunDotstarDotchartDotChartGrid: ChartGrid
   @JSName("com.sun.star.chart.ChartLegend")
-  var comDotsunDotstarDotchartDotChartLegend: ChartLegend = js.native
+  var comDotsunDotstarDotchartDotChartLegend: ChartLegend
   @JSName("com.sun.star.chart.ChartLine")
-  var comDotsunDotstarDotchartDotChartLine: ChartLine = js.native
+  var comDotsunDotstarDotchartDotChartLine: ChartLine
   @JSName("com.sun.star.chart.ChartPieSegmentProperties")
-  var comDotsunDotstarDotchartDotChartPieSegmentProperties: ChartPieSegmentProperties = js.native
+  var comDotsunDotstarDotchartDotChartPieSegmentProperties: ChartPieSegmentProperties
   @JSName("com.sun.star.chart.ChartStatistics")
-  var comDotsunDotstarDotchartDotChartStatistics: ChartStatistics = js.native
+  var comDotsunDotstarDotchartDotChartStatistics: ChartStatistics
   @JSName("com.sun.star.chart.ChartTableAddressSupplier")
-  var comDotsunDotstarDotchartDotChartTableAddressSupplier: ChartTableAddressSupplier = js.native
+  var comDotsunDotstarDotchartDotChartTableAddressSupplier: ChartTableAddressSupplier
   @JSName("com.sun.star.chart.ChartTitle")
-  var comDotsunDotstarDotchartDotChartTitle: ChartTitle = js.native
+  var comDotsunDotstarDotchartDotChartTitle: ChartTitle
   @JSName("com.sun.star.chart.ChartTwoAxisXSupplier")
-  var comDotsunDotstarDotchartDotChartTwoAxisXSupplier: ChartTwoAxisXSupplier = js.native
+  var comDotsunDotstarDotchartDotChartTwoAxisXSupplier: ChartTwoAxisXSupplier
   @JSName("com.sun.star.chart.ChartTwoAxisYSupplier")
-  var comDotsunDotstarDotchartDotChartTwoAxisYSupplier: ChartTwoAxisYSupplier = js.native
+  var comDotsunDotstarDotchartDotChartTwoAxisYSupplier: ChartTwoAxisYSupplier
   @JSName("com.sun.star.chart.Diagram")
-  var comDotsunDotstarDotchartDotDiagram: typingsSlinky.activexLibreoffice.com_.sun.star.chart.Diagram = js.native
+  var comDotsunDotstarDotchartDotDiagram: typingsSlinky.activexLibreoffice.com_.sun.star.chart.Diagram
   @JSName("com.sun.star.chart.Dim3DDiagram")
-  var comDotsunDotstarDotchartDotDim3DDiagram: Dim3DDiagram = js.native
+  var comDotsunDotstarDotchartDotDim3DDiagram: Dim3DDiagram
   @JSName("com.sun.star.chart.DonutDiagram")
-  var comDotsunDotstarDotchartDotDonutDiagram: DonutDiagram = js.native
+  var comDotsunDotstarDotchartDotDonutDiagram: DonutDiagram
   @JSName("com.sun.star.chart.FilledNetDiagram")
-  var comDotsunDotstarDotchartDotFilledNetDiagram: FilledNetDiagram = js.native
+  var comDotsunDotstarDotchartDotFilledNetDiagram: FilledNetDiagram
   @JSName("com.sun.star.chart.LineDiagram")
-  var comDotsunDotstarDotchartDotLineDiagram: LineDiagram = js.native
+  var comDotsunDotstarDotchartDotLineDiagram: LineDiagram
   @JSName("com.sun.star.chart.NetDiagram")
-  var comDotsunDotstarDotchartDotNetDiagram: NetDiagram = js.native
+  var comDotsunDotstarDotchartDotNetDiagram: NetDiagram
   @JSName("com.sun.star.chart.PieDiagram")
-  var comDotsunDotstarDotchartDotPieDiagram: PieDiagram = js.native
+  var comDotsunDotstarDotchartDotPieDiagram: PieDiagram
   @JSName("com.sun.star.chart.StackableDiagram")
-  var comDotsunDotstarDotchartDotStackableDiagram: StackableDiagram = js.native
+  var comDotsunDotstarDotchartDotStackableDiagram: StackableDiagram
   @JSName("com.sun.star.chart.StockDiagram")
-  var comDotsunDotstarDotchartDotStockDiagram: StockDiagram = js.native
+  var comDotsunDotstarDotchartDotStockDiagram: StockDiagram
   @JSName("com.sun.star.chart.XYDiagram")
-  var comDotsunDotstarDotchartDotXYDiagram: XYDiagram = js.native
+  var comDotsunDotstarDotchartDotXYDiagram: XYDiagram
   @JSName("com.sun.star.configuration.AccessRootElement")
-  var comDotsunDotstarDotconfigurationDotAccessRootElement: AccessRootElement = js.native
+  var comDotsunDotstarDotconfigurationDotAccessRootElement: AccessRootElement
   @JSName("com.sun.star.configuration.AdministrationProvider")
-  var comDotsunDotstarDotconfigurationDotAdministrationProvider: AdministrationProvider = js.native
+  var comDotsunDotstarDotconfigurationDotAdministrationProvider: AdministrationProvider
   @JSName("com.sun.star.configuration.ConfigurationAccess")
-  var comDotsunDotstarDotconfigurationDotConfigurationAccess: ConfigurationAccess = js.native
+  var comDotsunDotstarDotconfigurationDotConfigurationAccess: ConfigurationAccess
   @JSName("com.sun.star.configuration.ConfigurationProvider")
-  var comDotsunDotstarDotconfigurationDotConfigurationProvider: ConfigurationProvider = js.native
+  var comDotsunDotstarDotconfigurationDotConfigurationProvider: ConfigurationProvider
   @JSName("com.sun.star.configuration.ConfigurationRegistry")
-  var comDotsunDotstarDotconfigurationDotConfigurationRegistry: ConfigurationRegistry = js.native
+  var comDotsunDotstarDotconfigurationDotConfigurationRegistry: ConfigurationRegistry
   @JSName("com.sun.star.configuration.ConfigurationUpdateAccess")
-  var comDotsunDotstarDotconfigurationDotConfigurationUpdateAccess: ConfigurationUpdateAccess = js.native
+  var comDotsunDotstarDotconfigurationDotConfigurationUpdateAccess: ConfigurationUpdateAccess
   @JSName("com.sun.star.configuration.DefaultProvider")
-  var comDotsunDotstarDotconfigurationDotDefaultProvider: DefaultProvider = js.native
+  var comDotsunDotstarDotconfigurationDotDefaultProvider: DefaultProvider
   @JSName("com.sun.star.configuration.GroupAccess")
-  var comDotsunDotstarDotconfigurationDotGroupAccess: GroupAccess = js.native
+  var comDotsunDotstarDotconfigurationDotGroupAccess: GroupAccess
   @JSName("com.sun.star.configuration.GroupElement")
-  var comDotsunDotstarDotconfigurationDotGroupElement: GroupElement = js.native
+  var comDotsunDotstarDotconfigurationDotGroupElement: GroupElement
   @JSName("com.sun.star.configuration.GroupUpdate")
-  var comDotsunDotstarDotconfigurationDotGroupUpdate: GroupUpdate = js.native
+  var comDotsunDotstarDotconfigurationDotGroupUpdate: GroupUpdate
   @JSName("com.sun.star.configuration.HierarchyAccess")
-  var comDotsunDotstarDotconfigurationDotHierarchyAccess: HierarchyAccess = js.native
+  var comDotsunDotstarDotconfigurationDotHierarchyAccess: HierarchyAccess
   @JSName("com.sun.star.configuration.HierarchyElement")
-  var comDotsunDotstarDotconfigurationDotHierarchyElement: HierarchyElement = js.native
+  var comDotsunDotstarDotconfigurationDotHierarchyElement: HierarchyElement
   @JSName("com.sun.star.configuration.PropertyHierarchy")
-  var comDotsunDotstarDotconfigurationDotPropertyHierarchy: PropertyHierarchy = js.native
+  var comDotsunDotstarDotconfigurationDotPropertyHierarchy: PropertyHierarchy
   @JSName("com.sun.star.configuration.ReadOnlyAccess")
-  var comDotsunDotstarDotconfigurationDotReadOnlyAccess: ReadOnlyAccess = js.native
+  var comDotsunDotstarDotconfigurationDotReadOnlyAccess: ReadOnlyAccess
   @JSName("com.sun.star.configuration.ReadWriteAccess")
-  var comDotsunDotstarDotconfigurationDotReadWriteAccess: ReadWriteAccess = js.native
+  var comDotsunDotstarDotconfigurationDotReadWriteAccess: ReadWriteAccess
   @JSName("com.sun.star.configuration.SetAccess")
-  var comDotsunDotstarDotconfigurationDotSetAccess: SetAccess = js.native
+  var comDotsunDotstarDotconfigurationDotSetAccess: SetAccess
   @JSName("com.sun.star.configuration.SetElement")
-  var comDotsunDotstarDotconfigurationDotSetElement: SetElement = js.native
+  var comDotsunDotstarDotconfigurationDotSetElement: SetElement
   @JSName("com.sun.star.configuration.SetUpdate")
-  var comDotsunDotstarDotconfigurationDotSetUpdate: SetUpdate = js.native
+  var comDotsunDotstarDotconfigurationDotSetUpdate: SetUpdate
   @JSName("com.sun.star.configuration.SimpleSetAccess")
-  var comDotsunDotstarDotconfigurationDotSimpleSetAccess: SimpleSetAccess = js.native
+  var comDotsunDotstarDotconfigurationDotSimpleSetAccess: SimpleSetAccess
   @JSName("com.sun.star.configuration.SimpleSetUpdate")
-  var comDotsunDotstarDotconfigurationDotSimpleSetUpdate: SimpleSetUpdate = js.native
+  var comDotsunDotstarDotconfigurationDotSimpleSetUpdate: SimpleSetUpdate
   @JSName("com.sun.star.configuration.UpdateRootElement")
-  var comDotsunDotstarDotconfigurationDotUpdateRootElement: UpdateRootElement = js.native
+  var comDotsunDotstarDotconfigurationDotUpdateRootElement: UpdateRootElement
   @JSName("com.sun.star.configuration.backend.Backend")
-  var comDotsunDotstarDotconfigurationDotbackendDotBackend: Backend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotBackend: Backend
   @JSName("com.sun.star.configuration.backend.BackendAdapter")
-  var comDotsunDotstarDotconfigurationDotbackendDotBackendAdapter: BackendAdapter = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotBackendAdapter: BackendAdapter
   @JSName("com.sun.star.configuration.backend.CopyImporter")
-  var comDotsunDotstarDotconfigurationDotbackendDotCopyImporter: CopyImporter = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotCopyImporter: CopyImporter
   @JSName("com.sun.star.configuration.backend.DataImporter")
-  var comDotsunDotstarDotconfigurationDotbackendDotDataImporter: DataImporter = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotDataImporter: DataImporter
   @JSName("com.sun.star.configuration.backend.DefaultBackend")
-  var comDotsunDotstarDotconfigurationDotbackendDotDefaultBackend: DefaultBackend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotDefaultBackend: DefaultBackend
   @JSName("com.sun.star.configuration.backend.HierarchyBrowser")
-  var comDotsunDotstarDotconfigurationDotbackendDotHierarchyBrowser: HierarchyBrowser = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotHierarchyBrowser: HierarchyBrowser
   @JSName("com.sun.star.configuration.backend.Importer")
-  var comDotsunDotstarDotconfigurationDotbackendDotImporter: Importer = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotImporter: Importer
   @JSName("com.sun.star.configuration.backend.InteractionHandler")
-  var comDotsunDotstarDotconfigurationDotbackendDotInteractionHandler: InteractionHandler = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotInteractionHandler: InteractionHandler
   @JSName("com.sun.star.configuration.backend.Layer")
-  var comDotsunDotstarDotconfigurationDotbackendDotLayer: Layer = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLayer: Layer
   @JSName("com.sun.star.configuration.backend.LayerDescriber")
-  var comDotsunDotstarDotconfigurationDotbackendDotLayerDescriber: LayerDescriber = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLayerDescriber: LayerDescriber
   @JSName("com.sun.star.configuration.backend.LayerFilter")
-  var comDotsunDotstarDotconfigurationDotbackendDotLayerFilter: LayerFilter = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLayerFilter: LayerFilter
   @JSName("com.sun.star.configuration.backend.LayerUpdateMerger")
-  var comDotsunDotstarDotconfigurationDotbackendDotLayerUpdateMerger: LayerUpdateMerger = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLayerUpdateMerger: LayerUpdateMerger
   @JSName("com.sun.star.configuration.backend.LdapMultiLayerStratum")
-  var comDotsunDotstarDotconfigurationDotbackendDotLdapMultiLayerStratum: LdapMultiLayerStratum = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLdapMultiLayerStratum: LdapMultiLayerStratum
   @JSName("com.sun.star.configuration.backend.LdapSingleBackend")
-  var comDotsunDotstarDotconfigurationDotbackendDotLdapSingleBackend: LdapSingleBackend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLdapSingleBackend: LdapSingleBackend
   @JSName("com.sun.star.configuration.backend.LdapSingleStratum")
-  var comDotsunDotstarDotconfigurationDotbackendDotLdapSingleStratum: LdapSingleStratum = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLdapSingleStratum: LdapSingleStratum
   @JSName("com.sun.star.configuration.backend.LocalDataImporter")
-  var comDotsunDotstarDotconfigurationDotbackendDotLocalDataImporter: LocalDataImporter = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLocalDataImporter: LocalDataImporter
   @JSName("com.sun.star.configuration.backend.LocalHierarchyBrowser")
-  var comDotsunDotstarDotconfigurationDotbackendDotLocalHierarchyBrowser: LocalHierarchyBrowser = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLocalHierarchyBrowser: LocalHierarchyBrowser
   @JSName("com.sun.star.configuration.backend.LocalSchemaSupplier")
-  var comDotsunDotstarDotconfigurationDotbackendDotLocalSchemaSupplier: LocalSchemaSupplier = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLocalSchemaSupplier: LocalSchemaSupplier
   @JSName("com.sun.star.configuration.backend.LocalSingleBackend")
-  var comDotsunDotstarDotconfigurationDotbackendDotLocalSingleBackend: LocalSingleBackend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLocalSingleBackend: LocalSingleBackend
   @JSName("com.sun.star.configuration.backend.LocalSingleStratum")
-  var comDotsunDotstarDotconfigurationDotbackendDotLocalSingleStratum: LocalSingleStratum = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotLocalSingleStratum: LocalSingleStratum
   @JSName("com.sun.star.configuration.backend.MergeImporter")
-  var comDotsunDotstarDotconfigurationDotbackendDotMergeImporter: MergeImporter = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotMergeImporter: MergeImporter
   @JSName("com.sun.star.configuration.backend.MultiLayerStratum")
-  var comDotsunDotstarDotconfigurationDotbackendDotMultiLayerStratum: MultiLayerStratum = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotMultiLayerStratum: MultiLayerStratum
   @JSName("com.sun.star.configuration.backend.MultiStratumBackend")
-  var comDotsunDotstarDotconfigurationDotbackendDotMultiStratumBackend: MultiStratumBackend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotMultiStratumBackend: MultiStratumBackend
   @JSName("com.sun.star.configuration.backend.OfflineBackend")
-  var comDotsunDotstarDotconfigurationDotbackendDotOfflineBackend: OfflineBackend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotOfflineBackend: OfflineBackend
   @JSName("com.sun.star.configuration.backend.OnlineBackend")
-  var comDotsunDotstarDotconfigurationDotbackendDotOnlineBackend: OnlineBackend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotOnlineBackend: OnlineBackend
   @JSName("com.sun.star.configuration.backend.PlatformBackend")
-  var comDotsunDotstarDotconfigurationDotbackendDotPlatformBackend: PlatformBackend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotPlatformBackend: PlatformBackend
   @JSName("com.sun.star.configuration.backend.Schema")
-  var comDotsunDotstarDotconfigurationDotbackendDotSchema: Schema = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotSchema: Schema
   @JSName("com.sun.star.configuration.backend.SchemaSupplier")
-  var comDotsunDotstarDotconfigurationDotbackendDotSchemaSupplier: SchemaSupplier = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotSchemaSupplier: SchemaSupplier
   @JSName("com.sun.star.configuration.backend.SingleBackend")
-  var comDotsunDotstarDotconfigurationDotbackendDotSingleBackend: SingleBackend = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotSingleBackend: SingleBackend
   @JSName("com.sun.star.configuration.backend.SingleBackendAdapter")
-  var comDotsunDotstarDotconfigurationDotbackendDotSingleBackendAdapter: SingleBackendAdapter = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotSingleBackendAdapter: SingleBackendAdapter
   @JSName("com.sun.star.configuration.backend.SingleLayerStratum")
-  var comDotsunDotstarDotconfigurationDotbackendDotSingleLayerStratum: SingleLayerStratum = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotSingleLayerStratum: SingleLayerStratum
   @JSName("com.sun.star.configuration.backend.SystemIntegration")
-  var comDotsunDotstarDotconfigurationDotbackendDotSystemIntegration: SystemIntegration = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotSystemIntegration: SystemIntegration
   @JSName("com.sun.star.configuration.backend.UpdatableLayer")
-  var comDotsunDotstarDotconfigurationDotbackendDotUpdatableLayer: UpdatableLayer = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotUpdatableLayer: UpdatableLayer
   @JSName("com.sun.star.configuration.backend.xml.LayerParser")
-  var comDotsunDotstarDotconfigurationDotbackendDotxmlDotLayerParser: LayerParser = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotxmlDotLayerParser: LayerParser
   @JSName("com.sun.star.configuration.backend.xml.LayerWriter")
-  var comDotsunDotstarDotconfigurationDotbackendDotxmlDotLayerWriter: LayerWriter = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotxmlDotLayerWriter: LayerWriter
   @JSName("com.sun.star.configuration.backend.xml.SchemaParser")
-  var comDotsunDotstarDotconfigurationDotbackendDotxmlDotSchemaParser: SchemaParser = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotxmlDotSchemaParser: SchemaParser
   @JSName("com.sun.star.configuration.bootstrap.BootstrapContext")
-  var comDotsunDotstarDotconfigurationDotbootstrapDotBootstrapContext: BootstrapContext = js.native
+  var comDotsunDotstarDotconfigurationDotbootstrapDotBootstrapContext: BootstrapContext
   @JSName("com.sun.star.connection.Acceptor")
-  var comDotsunDotstarDotconnectionDotAcceptor: Acceptor = js.native
+  var comDotsunDotstarDotconnectionDotAcceptor: Acceptor
   @JSName("com.sun.star.connection.Connector")
-  var comDotsunDotstarDotconnectionDotConnector: Connector = js.native
+  var comDotsunDotstarDotconnectionDotConnector: Connector
   @JSName("com.sun.star.container.EnumerableMap")
-  var comDotsunDotstarDotcontainerDotEnumerableMap: EnumerableMap = js.native
+  var comDotsunDotstarDotcontainerDotEnumerableMap: EnumerableMap
   @JSName("com.sun.star.cui.ColorPicker")
-  var comDotsunDotstarDotcuiDotColorPicker: ColorPicker = js.native
+  var comDotsunDotstarDotcuiDotColorPicker: ColorPicker
   @JSName("com.sun.star.datatransfer.DataFormatTranslator")
-  var comDotsunDotstarDotdatatransferDotDataFormatTranslator: DataFormatTranslator = js.native
+  var comDotsunDotstarDotdatatransferDotDataFormatTranslator: DataFormatTranslator
   @JSName("com.sun.star.datatransfer.MimeContentTypeFactory")
-  var comDotsunDotstarDotdatatransferDotMimeContentTypeFactory: MimeContentTypeFactory = js.native
+  var comDotsunDotstarDotdatatransferDotMimeContentTypeFactory: MimeContentTypeFactory
   @JSName("com.sun.star.datatransfer.clipboard.ClipboardManager")
-  var comDotsunDotstarDotdatatransferDotclipboardDotClipboardManager: ClipboardManager = js.native
+  var comDotsunDotstarDotdatatransferDotclipboardDotClipboardManager: ClipboardManager
   @JSName("com.sun.star.datatransfer.clipboard.GenericClipboard")
-  var comDotsunDotstarDotdatatransferDotclipboardDotGenericClipboard: GenericClipboard = js.native
+  var comDotsunDotstarDotdatatransferDotclipboardDotGenericClipboard: GenericClipboard
   @JSName("com.sun.star.datatransfer.clipboard.SystemClipboard")
-  var comDotsunDotstarDotdatatransferDotclipboardDotSystemClipboard: SystemClipboard = js.native
+  var comDotsunDotstarDotdatatransferDotclipboardDotSystemClipboard: SystemClipboard
   @JSName("com.sun.star.datatransfer.dnd.OleDragSource")
-  var comDotsunDotstarDotdatatransferDotdndDotOleDragSource: OleDragSource = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotOleDragSource: OleDragSource
   @JSName("com.sun.star.datatransfer.dnd.OleDropTarget")
-  var comDotsunDotstarDotdatatransferDotdndDotOleDropTarget: OleDropTarget = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotOleDropTarget: OleDropTarget
   @JSName("com.sun.star.datatransfer.dnd.X11DragSource")
-  var comDotsunDotstarDotdatatransferDotdndDotX11DragSource: X11DragSource = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotX11DragSource: X11DragSource
   @JSName("com.sun.star.datatransfer.dnd.X11DropTarget")
-  var comDotsunDotstarDotdatatransferDotdndDotX11DropTarget: X11DropTarget = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotX11DropTarget: X11DropTarget
   @JSName("com.sun.star.deployment.PackageRegistryBackend")
-  var comDotsunDotstarDotdeploymentDotPackageRegistryBackend: PackageRegistryBackend = js.native
+  var comDotsunDotstarDotdeploymentDotPackageRegistryBackend: PackageRegistryBackend
   @JSName("com.sun.star.deployment.UpdateInformationProvider")
-  var comDotsunDotstarDotdeploymentDotUpdateInformationProvider: UpdateInformationProvider = js.native
+  var comDotsunDotstarDotdeploymentDotUpdateInformationProvider: UpdateInformationProvider
   @JSName("com.sun.star.deployment.test.SmoketestCommandEnvironment")
-  var comDotsunDotstarDotdeploymentDottestDotSmoketestCommandEnvironment: SmoketestCommandEnvironment = js.native
+  var comDotsunDotstarDotdeploymentDottestDotSmoketestCommandEnvironment: SmoketestCommandEnvironment
   @JSName("com.sun.star.deployment.ui.LicenseDialog")
-  var comDotsunDotstarDotdeploymentDotuiDotLicenseDialog: LicenseDialog = js.native
+  var comDotsunDotstarDotdeploymentDotuiDotLicenseDialog: LicenseDialog
   @JSName("com.sun.star.deployment.ui.PackageManagerDialog")
-  var comDotsunDotstarDotdeploymentDotuiDotPackageManagerDialog: PackageManagerDialog = js.native
+  var comDotsunDotstarDotdeploymentDotuiDotPackageManagerDialog: PackageManagerDialog
   @JSName("com.sun.star.deployment.ui.UpdateRequiredDialog")
-  var comDotsunDotstarDotdeploymentDotuiDotUpdateRequiredDialog: UpdateRequiredDialog = js.native
+  var comDotsunDotstarDotdeploymentDotuiDotUpdateRequiredDialog: UpdateRequiredDialog
   @JSName("com.sun.star.document.DocumentProperties")
-  var comDotsunDotstarDotdocumentDotDocumentProperties: DocumentProperties = js.native
+  var comDotsunDotstarDotdocumentDotDocumentProperties: DocumentProperties
   @JSName("com.sun.star.document.DocumentRevisionListPersistence")
-  var comDotsunDotstarDotdocumentDotDocumentRevisionListPersistence: DocumentRevisionListPersistence = js.native
+  var comDotsunDotstarDotdocumentDotDocumentRevisionListPersistence: DocumentRevisionListPersistence
   @JSName("com.sun.star.document.EventDescriptor")
-  var comDotsunDotstarDotdocumentDotEventDescriptor: EventDescriptor = js.native
+  var comDotsunDotstarDotdocumentDotEventDescriptor: EventDescriptor
   @JSName("com.sun.star.document.Events")
-  var comDotsunDotstarDotdocumentDotEvents: Events = js.native
+  var comDotsunDotstarDotdocumentDotEvents: Events
   @JSName("com.sun.star.document.ExportFilter")
-  var comDotsunDotstarDotdocumentDotExportFilter: ExportFilter = js.native
+  var comDotsunDotstarDotdocumentDotExportFilter: ExportFilter
   @JSName("com.sun.star.document.ExtendedTypeDetection")
-  var comDotsunDotstarDotdocumentDotExtendedTypeDetection: ExtendedTypeDetection = js.native
+  var comDotsunDotstarDotdocumentDotExtendedTypeDetection: ExtendedTypeDetection
   @JSName("com.sun.star.document.ExtendedTypeDetectionFactory")
-  var comDotsunDotstarDotdocumentDotExtendedTypeDetectionFactory: ExtendedTypeDetectionFactory = js.native
+  var comDotsunDotstarDotdocumentDotExtendedTypeDetectionFactory: ExtendedTypeDetectionFactory
   @JSName("com.sun.star.document.FilterAdapter")
-  var comDotsunDotstarDotdocumentDotFilterAdapter: FilterAdapter = js.native
+  var comDotsunDotstarDotdocumentDotFilterAdapter: FilterAdapter
   @JSName("com.sun.star.document.FilterConfigRefresh")
-  var comDotsunDotstarDotdocumentDotFilterConfigRefresh: FilterConfigRefresh = js.native
+  var comDotsunDotstarDotdocumentDotFilterConfigRefresh: FilterConfigRefresh
   @JSName("com.sun.star.document.FilterFactory")
-  var comDotsunDotstarDotdocumentDotFilterFactory: FilterFactory = js.native
+  var comDotsunDotstarDotdocumentDotFilterFactory: FilterFactory
   @JSName("com.sun.star.document.GraphicObjectResolver")
-  var comDotsunDotstarDotdocumentDotGraphicObjectResolver: GraphicObjectResolver = js.native
+  var comDotsunDotstarDotdocumentDotGraphicObjectResolver: GraphicObjectResolver
   @JSName("com.sun.star.document.HeaderFooterSettings")
-  var comDotsunDotstarDotdocumentDotHeaderFooterSettings: HeaderFooterSettings = js.native
+  var comDotsunDotstarDotdocumentDotHeaderFooterSettings: HeaderFooterSettings
   @JSName("com.sun.star.document.ImportFilter")
-  var comDotsunDotstarDotdocumentDotImportFilter: ImportFilter = js.native
+  var comDotsunDotstarDotdocumentDotImportFilter: ImportFilter
   @JSName("com.sun.star.document.IndexedPropertyValues")
-  var comDotsunDotstarDotdocumentDotIndexedPropertyValues: IndexedPropertyValues = js.native
+  var comDotsunDotstarDotdocumentDotIndexedPropertyValues: IndexedPropertyValues
   @JSName("com.sun.star.document.LinkTarget")
-  var comDotsunDotstarDotdocumentDotLinkTarget: LinkTarget = js.native
+  var comDotsunDotstarDotdocumentDotLinkTarget: LinkTarget
   @JSName("com.sun.star.document.LinkTargets")
-  var comDotsunDotstarDotdocumentDotLinkTargets: LinkTargets = js.native
+  var comDotsunDotstarDotdocumentDotLinkTargets: LinkTargets
   @JSName("com.sun.star.document.MediaDescriptor")
-  var comDotsunDotstarDotdocumentDotMediaDescriptor: MediaDescriptor = js.native
+  var comDotsunDotstarDotdocumentDotMediaDescriptor: MediaDescriptor
   @JSName("com.sun.star.document.NamedPropertyValues")
-  var comDotsunDotstarDotdocumentDotNamedPropertyValues: NamedPropertyValues = js.native
+  var comDotsunDotstarDotdocumentDotNamedPropertyValues: NamedPropertyValues
   @JSName("com.sun.star.document.OOXMLDocumentPropertiesImporter")
-  var comDotsunDotstarDotdocumentDotOOXMLDocumentPropertiesImporter: OOXMLDocumentPropertiesImporter = js.native
+  var comDotsunDotstarDotdocumentDotOOXMLDocumentPropertiesImporter: OOXMLDocumentPropertiesImporter
   @JSName("com.sun.star.document.OfficeDocument")
-  var comDotsunDotstarDotdocumentDotOfficeDocument: OfficeDocument = js.native
+  var comDotsunDotstarDotdocumentDotOfficeDocument: OfficeDocument
   @JSName("com.sun.star.document.OleEmbeddedServerRegistration")
-  var comDotsunDotstarDotdocumentDotOleEmbeddedServerRegistration: OleEmbeddedServerRegistration = js.native
+  var comDotsunDotstarDotdocumentDotOleEmbeddedServerRegistration: OleEmbeddedServerRegistration
   @JSName("com.sun.star.document.PDFDialog")
-  var comDotsunDotstarDotdocumentDotPDFDialog: PDFDialog = js.native
+  var comDotsunDotstarDotdocumentDotPDFDialog: PDFDialog
   @JSName("com.sun.star.document.Settings")
-  var comDotsunDotstarDotdocumentDotSettings: Settings = js.native
+  var comDotsunDotstarDotdocumentDotSettings: Settings
   @JSName("com.sun.star.document.TypeDetection")
-  var comDotsunDotstarDotdocumentDotTypeDetection: TypeDetection = js.native
+  var comDotsunDotstarDotdocumentDotTypeDetection: TypeDetection
   @JSName("com.sun.star.document.XMLBasicExporter")
-  var comDotsunDotstarDotdocumentDotXMLBasicExporter: XMLBasicExporter = js.native
+  var comDotsunDotstarDotdocumentDotXMLBasicExporter: XMLBasicExporter
   @JSName("com.sun.star.document.XMLBasicImporter")
-  var comDotsunDotstarDotdocumentDotXMLBasicImporter: XMLBasicImporter = js.native
+  var comDotsunDotstarDotdocumentDotXMLBasicImporter: XMLBasicImporter
   @JSName("com.sun.star.document.XMLOasisBasicExporter")
-  var comDotsunDotstarDotdocumentDotXMLOasisBasicExporter: XMLOasisBasicExporter = js.native
+  var comDotsunDotstarDotdocumentDotXMLOasisBasicExporter: XMLOasisBasicExporter
   @JSName("com.sun.star.document.XMLOasisBasicImporter")
-  var comDotsunDotstarDotdocumentDotXMLOasisBasicImporter: XMLOasisBasicImporter = js.native
+  var comDotsunDotstarDotdocumentDotXMLOasisBasicImporter: XMLOasisBasicImporter
   @JSName("com.sun.star.drawing.AccessibleDrawDocumentView")
-  var comDotsunDotstarDotdrawingDotAccessibleDrawDocumentView: AccessibleDrawDocumentView = js.native
+  var comDotsunDotstarDotdrawingDotAccessibleDrawDocumentView: AccessibleDrawDocumentView
   @JSName("com.sun.star.drawing.AccessibleGraphControl")
-  var comDotsunDotstarDotdrawingDotAccessibleGraphControl: AccessibleGraphControl = js.native
+  var comDotsunDotstarDotdrawingDotAccessibleGraphControl: AccessibleGraphControl
   @JSName("com.sun.star.drawing.AccessibleGraphicShape")
-  var comDotsunDotstarDotdrawingDotAccessibleGraphicShape: AccessibleGraphicShape = js.native
+  var comDotsunDotstarDotdrawingDotAccessibleGraphicShape: AccessibleGraphicShape
   @JSName("com.sun.star.drawing.AccessibleImageBullet")
-  var comDotsunDotstarDotdrawingDotAccessibleImageBullet: AccessibleImageBullet = js.native
+  var comDotsunDotstarDotdrawingDotAccessibleImageBullet: AccessibleImageBullet
   @JSName("com.sun.star.drawing.AccessibleOLEShape")
-  var comDotsunDotstarDotdrawingDotAccessibleOLEShape: AccessibleOLEShape = js.native
+  var comDotsunDotstarDotdrawingDotAccessibleOLEShape: AccessibleOLEShape
   @JSName("com.sun.star.drawing.AccessibleShape")
-  var comDotsunDotstarDotdrawingDotAccessibleShape: AccessibleShape = js.native
+  var comDotsunDotstarDotdrawingDotAccessibleShape: AccessibleShape
   @JSName("com.sun.star.drawing.AccessibleSlideView")
-  var comDotsunDotstarDotdrawingDotAccessibleSlideView: AccessibleSlideView = js.native
+  var comDotsunDotstarDotdrawingDotAccessibleSlideView: AccessibleSlideView
   @JSName("com.sun.star.drawing.AccessibleSlideViewObject")
-  var comDotsunDotstarDotdrawingDotAccessibleSlideViewObject: AccessibleSlideViewObject = js.native
+  var comDotsunDotstarDotdrawingDotAccessibleSlideViewObject: AccessibleSlideViewObject
   @JSName("com.sun.star.drawing.AppletShape")
-  var comDotsunDotstarDotdrawingDotAppletShape: AppletShape = js.native
+  var comDotsunDotstarDotdrawingDotAppletShape: AppletShape
   @JSName("com.sun.star.drawing.Background")
-  var comDotsunDotstarDotdrawingDotBackground: Background = js.native
+  var comDotsunDotstarDotdrawingDotBackground: Background
   @JSName("com.sun.star.drawing.BitmapTable")
-  var comDotsunDotstarDotdrawingDotBitmapTable: BitmapTable = js.native
+  var comDotsunDotstarDotdrawingDotBitmapTable: BitmapTable
   @JSName("com.sun.star.drawing.CaptionShape")
-  var comDotsunDotstarDotdrawingDotCaptionShape: CaptionShape = js.native
+  var comDotsunDotstarDotdrawingDotCaptionShape: CaptionShape
   @JSName("com.sun.star.drawing.ClosedBezierShape")
-  var comDotsunDotstarDotdrawingDotClosedBezierShape: ClosedBezierShape = js.native
+  var comDotsunDotstarDotdrawingDotClosedBezierShape: ClosedBezierShape
   @JSName("com.sun.star.drawing.ColorTable")
-  var comDotsunDotstarDotdrawingDotColorTable: ColorTable = js.native
+  var comDotsunDotstarDotdrawingDotColorTable: ColorTable
   @JSName("com.sun.star.drawing.ConnectorProperties")
-  var comDotsunDotstarDotdrawingDotConnectorProperties: ConnectorProperties = js.native
+  var comDotsunDotstarDotdrawingDotConnectorProperties: ConnectorProperties
   @JSName("com.sun.star.drawing.ConnectorShape")
-  var comDotsunDotstarDotdrawingDotConnectorShape: ConnectorShape = js.native
+  var comDotsunDotstarDotdrawingDotConnectorShape: ConnectorShape
   @JSName("com.sun.star.drawing.ControlShape")
-  var comDotsunDotstarDotdrawingDotControlShape: ControlShape = js.native
+  var comDotsunDotstarDotdrawingDotControlShape: ControlShape
   @JSName("com.sun.star.drawing.CustomShape")
-  var comDotsunDotstarDotdrawingDotCustomShape: CustomShape = js.native
+  var comDotsunDotstarDotdrawingDotCustomShape: CustomShape
   @JSName("com.sun.star.drawing.CustomShapeEngine")
-  var comDotsunDotstarDotdrawingDotCustomShapeEngine: CustomShapeEngine = js.native
+  var comDotsunDotstarDotdrawingDotCustomShapeEngine: CustomShapeEngine
   @JSName("com.sun.star.drawing.DashTable")
-  var comDotsunDotstarDotdrawingDotDashTable: DashTable = js.native
+  var comDotsunDotstarDotdrawingDotDashTable: DashTable
   @JSName("com.sun.star.drawing.Defaults")
-  var comDotsunDotstarDotdrawingDotDefaults: Defaults = js.native
+  var comDotsunDotstarDotdrawingDotDefaults: Defaults
   @JSName("com.sun.star.drawing.DocumentSettings")
-  var comDotsunDotstarDotdrawingDotDocumentSettings: DocumentSettings = js.native
+  var comDotsunDotstarDotdrawingDotDocumentSettings: DocumentSettings
   @JSName("com.sun.star.drawing.DrawPage")
-  var comDotsunDotstarDotdrawingDotDrawPage: DrawPage = js.native
+  var comDotsunDotstarDotdrawingDotDrawPage: DrawPage
   @JSName("com.sun.star.drawing.DrawPages")
-  var comDotsunDotstarDotdrawingDotDrawPages: DrawPages = js.native
+  var comDotsunDotstarDotdrawingDotDrawPages: DrawPages
   @JSName("com.sun.star.drawing.DrawingDocument")
-  var comDotsunDotstarDotdrawingDotDrawingDocument: DrawingDocument = js.native
+  var comDotsunDotstarDotdrawingDotDrawingDocument: DrawingDocument
   @JSName("com.sun.star.drawing.DrawingDocumentDrawView")
-  var comDotsunDotstarDotdrawingDotDrawingDocumentDrawView: DrawingDocumentDrawView = js.native
+  var comDotsunDotstarDotdrawingDotDrawingDocumentDrawView: DrawingDocumentDrawView
   @JSName("com.sun.star.drawing.DrawingDocumentFactory")
-  var comDotsunDotstarDotdrawingDotDrawingDocumentFactory: DrawingDocumentFactory = js.native
+  var comDotsunDotstarDotdrawingDotDrawingDocumentFactory: DrawingDocumentFactory
   @JSName("com.sun.star.drawing.EllipseShape")
-  var comDotsunDotstarDotdrawingDotEllipseShape: EllipseShape = js.native
+  var comDotsunDotstarDotdrawingDotEllipseShape: EllipseShape
   @JSName("com.sun.star.drawing.EnhancedCustomShapeExtrusion")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeExtrusion: EnhancedCustomShapeExtrusion = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeExtrusion: EnhancedCustomShapeExtrusion
   @JSName("com.sun.star.drawing.EnhancedCustomShapeGeometry")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeGeometry: EnhancedCustomShapeGeometry = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeGeometry: EnhancedCustomShapeGeometry
   @JSName("com.sun.star.drawing.EnhancedCustomShapeHandle")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeHandle: EnhancedCustomShapeHandle = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeHandle: EnhancedCustomShapeHandle
   @JSName("com.sun.star.drawing.EnhancedCustomShapePath")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapePath: EnhancedCustomShapePath = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapePath: EnhancedCustomShapePath
   @JSName("com.sun.star.drawing.EnhancedCustomShapeTextPath")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeTextPath: EnhancedCustomShapeTextPath = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeTextPath: EnhancedCustomShapeTextPath
   @JSName("com.sun.star.drawing.FillProperties")
-  var comDotsunDotstarDotdrawingDotFillProperties: FillProperties = js.native
+  var comDotsunDotstarDotdrawingDotFillProperties: FillProperties
   @JSName("com.sun.star.drawing.GenericDrawPage")
-  var comDotsunDotstarDotdrawingDotGenericDrawPage: GenericDrawPage = js.native
+  var comDotsunDotstarDotdrawingDotGenericDrawPage: GenericDrawPage
   @JSName("com.sun.star.drawing.GenericDrawingDocument")
-  var comDotsunDotstarDotdrawingDotGenericDrawingDocument: GenericDrawingDocument = js.native
+  var comDotsunDotstarDotdrawingDotGenericDrawingDocument: GenericDrawingDocument
   @JSName("com.sun.star.drawing.GradientTable")
-  var comDotsunDotstarDotdrawingDotGradientTable: GradientTable = js.native
+  var comDotsunDotstarDotdrawingDotGradientTable: GradientTable
   @JSName("com.sun.star.drawing.GraphicExportFilter")
-  var comDotsunDotstarDotdrawingDotGraphicExportFilter: GraphicExportFilter = js.native
+  var comDotsunDotstarDotdrawingDotGraphicExportFilter: GraphicExportFilter
   @JSName("com.sun.star.drawing.GraphicObjectShape")
-  var comDotsunDotstarDotdrawingDotGraphicObjectShape: GraphicObjectShape = js.native
+  var comDotsunDotstarDotdrawingDotGraphicObjectShape: GraphicObjectShape
   @JSName("com.sun.star.drawing.GroupShape")
-  var comDotsunDotstarDotdrawingDotGroupShape: GroupShape = js.native
+  var comDotsunDotstarDotdrawingDotGroupShape: GroupShape
   @JSName("com.sun.star.drawing.HatchTable")
-  var comDotsunDotstarDotdrawingDotHatchTable: HatchTable = js.native
+  var comDotsunDotstarDotdrawingDotHatchTable: HatchTable
   @JSName("com.sun.star.drawing.Layer")
-  var comDotsunDotstarDotdrawingDotLayer: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.Layer = js.native
+  var comDotsunDotstarDotdrawingDotLayer: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.Layer
   @JSName("com.sun.star.drawing.LayerManager")
-  var comDotsunDotstarDotdrawingDotLayerManager: LayerManager = js.native
+  var comDotsunDotstarDotdrawingDotLayerManager: LayerManager
   @JSName("com.sun.star.drawing.LineProperties")
-  var comDotsunDotstarDotdrawingDotLineProperties: LineProperties = js.native
+  var comDotsunDotstarDotdrawingDotLineProperties: LineProperties
   @JSName("com.sun.star.drawing.LineShape")
-  var comDotsunDotstarDotdrawingDotLineShape: LineShape = js.native
+  var comDotsunDotstarDotdrawingDotLineShape: LineShape
   @JSName("com.sun.star.drawing.MarkerTable")
-  var comDotsunDotstarDotdrawingDotMarkerTable: MarkerTable = js.native
+  var comDotsunDotstarDotdrawingDotMarkerTable: MarkerTable
   @JSName("com.sun.star.drawing.MasterPage")
-  var comDotsunDotstarDotdrawingDotMasterPage: MasterPage = js.native
+  var comDotsunDotstarDotdrawingDotMasterPage: MasterPage
   @JSName("com.sun.star.drawing.MasterPages")
-  var comDotsunDotstarDotdrawingDotMasterPages: MasterPages = js.native
+  var comDotsunDotstarDotdrawingDotMasterPages: MasterPages
   @JSName("com.sun.star.drawing.MeasureProperties")
-  var comDotsunDotstarDotdrawingDotMeasureProperties: MeasureProperties = js.native
+  var comDotsunDotstarDotdrawingDotMeasureProperties: MeasureProperties
   @JSName("com.sun.star.drawing.MeasureShape")
-  var comDotsunDotstarDotdrawingDotMeasureShape: MeasureShape = js.native
+  var comDotsunDotstarDotdrawingDotMeasureShape: MeasureShape
   @JSName("com.sun.star.drawing.ModuleDispatcher")
-  var comDotsunDotstarDotdrawingDotModuleDispatcher: ModuleDispatcher = js.native
+  var comDotsunDotstarDotdrawingDotModuleDispatcher: ModuleDispatcher
   @JSName("com.sun.star.drawing.OLE2Shape")
-  var comDotsunDotstarDotdrawingDotOLE2Shape: OLE2Shape = js.native
+  var comDotsunDotstarDotdrawingDotOLE2Shape: OLE2Shape
   @JSName("com.sun.star.drawing.OpenBezierShape")
-  var comDotsunDotstarDotdrawingDotOpenBezierShape: OpenBezierShape = js.native
+  var comDotsunDotstarDotdrawingDotOpenBezierShape: OpenBezierShape
   @JSName("com.sun.star.drawing.PageShape")
-  var comDotsunDotstarDotdrawingDotPageShape: PageShape = js.native
+  var comDotsunDotstarDotdrawingDotPageShape: PageShape
   @JSName("com.sun.star.drawing.PluginShape")
-  var comDotsunDotstarDotdrawingDotPluginShape: PluginShape = js.native
+  var comDotsunDotstarDotdrawingDotPluginShape: PluginShape
   @JSName("com.sun.star.drawing.PolyLineShape")
-  var comDotsunDotstarDotdrawingDotPolyLineShape: PolyLineShape = js.native
+  var comDotsunDotstarDotdrawingDotPolyLineShape: PolyLineShape
   @JSName("com.sun.star.drawing.PolyPolygonBezierDescriptor")
-  var comDotsunDotstarDotdrawingDotPolyPolygonBezierDescriptor: PolyPolygonBezierDescriptor = js.native
+  var comDotsunDotstarDotdrawingDotPolyPolygonBezierDescriptor: PolyPolygonBezierDescriptor
   @JSName("com.sun.star.drawing.PolyPolygonBezierShape")
-  var comDotsunDotstarDotdrawingDotPolyPolygonBezierShape: PolyPolygonBezierShape = js.native
+  var comDotsunDotstarDotdrawingDotPolyPolygonBezierShape: PolyPolygonBezierShape
   @JSName("com.sun.star.drawing.PolyPolygonDescriptor")
-  var comDotsunDotstarDotdrawingDotPolyPolygonDescriptor: PolyPolygonDescriptor = js.native
+  var comDotsunDotstarDotdrawingDotPolyPolygonDescriptor: PolyPolygonDescriptor
   @JSName("com.sun.star.drawing.PolyPolygonShape")
-  var comDotsunDotstarDotdrawingDotPolyPolygonShape: PolyPolygonShape = js.native
+  var comDotsunDotstarDotdrawingDotPolyPolygonShape: PolyPolygonShape
   @JSName("com.sun.star.drawing.RectangleShape")
-  var comDotsunDotstarDotdrawingDotRectangleShape: RectangleShape = js.native
+  var comDotsunDotstarDotdrawingDotRectangleShape: RectangleShape
   @JSName("com.sun.star.drawing.RotationDescriptor")
-  var comDotsunDotstarDotdrawingDotRotationDescriptor: RotationDescriptor = js.native
+  var comDotsunDotstarDotdrawingDotRotationDescriptor: RotationDescriptor
   @JSName("com.sun.star.drawing.ShadowProperties")
-  var comDotsunDotstarDotdrawingDotShadowProperties: ShadowProperties = js.native
+  var comDotsunDotstarDotdrawingDotShadowProperties: ShadowProperties
   @JSName("com.sun.star.drawing.Shape")
-  var comDotsunDotstarDotdrawingDotShape: Shape = js.native
+  var comDotsunDotstarDotdrawingDotShape: Shape
   @JSName("com.sun.star.drawing.ShapeCollection")
-  var comDotsunDotstarDotdrawingDotShapeCollection: ShapeCollection = js.native
+  var comDotsunDotstarDotdrawingDotShapeCollection: ShapeCollection
   @JSName("com.sun.star.drawing.Shapes")
-  var comDotsunDotstarDotdrawingDotShapes: Shapes = js.native
+  var comDotsunDotstarDotdrawingDotShapes: Shapes
   @JSName("com.sun.star.drawing.SlideRenderer")
-  var comDotsunDotstarDotdrawingDotSlideRenderer: SlideRenderer = js.native
+  var comDotsunDotstarDotdrawingDotSlideRenderer: SlideRenderer
   @JSName("com.sun.star.drawing.SlideSorter")
-  var comDotsunDotstarDotdrawingDotSlideSorter: SlideSorter = js.native
+  var comDotsunDotstarDotdrawingDotSlideSorter: SlideSorter
   @JSName("com.sun.star.drawing.Text")
-  var comDotsunDotstarDotdrawingDotText: Text = js.native
+  var comDotsunDotstarDotdrawingDotText: Text
   @JSName("com.sun.star.drawing.TextProperties")
-  var comDotsunDotstarDotdrawingDotTextProperties: TextProperties = js.native
+  var comDotsunDotstarDotdrawingDotTextProperties: TextProperties
   @JSName("com.sun.star.drawing.TextShape")
-  var comDotsunDotstarDotdrawingDotTextShape: TextShape = js.native
+  var comDotsunDotstarDotdrawingDotTextShape: TextShape
   @JSName("com.sun.star.drawing.TransparencyGradientTable")
-  var comDotsunDotstarDotdrawingDotTransparencyGradientTable: TransparencyGradientTable = js.native
+  var comDotsunDotstarDotdrawingDotTransparencyGradientTable: TransparencyGradientTable
   @JSName("com.sun.star.drawing.framework.BasicPaneFactory")
-  var comDotsunDotstarDotdrawingDotframeworkDotBasicPaneFactory: BasicPaneFactory = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotBasicPaneFactory: BasicPaneFactory
   @JSName("com.sun.star.drawing.framework.BasicToolBarFactory")
-  var comDotsunDotstarDotdrawingDotframeworkDotBasicToolBarFactory: BasicToolBarFactory = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotBasicToolBarFactory: BasicToolBarFactory
   @JSName("com.sun.star.drawing.framework.BasicViewFactory")
-  var comDotsunDotstarDotdrawingDotframeworkDotBasicViewFactory: BasicViewFactory = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotBasicViewFactory: BasicViewFactory
   @JSName("com.sun.star.drawing.framework.Configuration")
-  var comDotsunDotstarDotdrawingDotframeworkDotConfiguration: Configuration = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotConfiguration: Configuration
   @JSName("com.sun.star.drawing.framework.ConfigurationController")
-  var comDotsunDotstarDotdrawingDotframeworkDotConfigurationController: ConfigurationController = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotConfigurationController: ConfigurationController
   @JSName("com.sun.star.drawing.framework.ModuleController")
-  var comDotsunDotstarDotdrawingDotframeworkDotModuleController: ModuleController = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotModuleController: ModuleController
   @JSName("com.sun.star.drawing.framework.ResourceId")
-  var comDotsunDotstarDotdrawingDotframeworkDotResourceId: ResourceId = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotResourceId: ResourceId
   @JSName("com.sun.star.embed.BaseStorage")
-  var comDotsunDotstarDotembedDotBaseStorage: BaseStorage = js.native
+  var comDotsunDotstarDotembedDotBaseStorage: BaseStorage
   @JSName("com.sun.star.embed.DocumentCloser")
-  var comDotsunDotstarDotembedDotDocumentCloser: DocumentCloser = js.native
+  var comDotsunDotstarDotembedDotDocumentCloser: DocumentCloser
   @JSName("com.sun.star.embed.EmbeddedObjectCreator")
-  var comDotsunDotstarDotembedDotEmbeddedObjectCreator: EmbeddedObjectCreator = js.native
+  var comDotsunDotstarDotembedDotEmbeddedObjectCreator: EmbeddedObjectCreator
   @JSName("com.sun.star.embed.EmbeddedObjectDescriptor")
-  var comDotsunDotstarDotembedDotEmbeddedObjectDescriptor: EmbeddedObjectDescriptor = js.native
+  var comDotsunDotstarDotembedDotEmbeddedObjectDescriptor: EmbeddedObjectDescriptor
   @JSName("com.sun.star.embed.FileSystemStorage")
-  var comDotsunDotstarDotembedDotFileSystemStorage: FileSystemStorage = js.native
+  var comDotsunDotstarDotembedDotFileSystemStorage: FileSystemStorage
   @JSName("com.sun.star.embed.FileSystemStorageFactory")
-  var comDotsunDotstarDotembedDotFileSystemStorageFactory: FileSystemStorageFactory = js.native
+  var comDotsunDotstarDotembedDotFileSystemStorageFactory: FileSystemStorageFactory
   @JSName("com.sun.star.embed.HatchWindowFactory")
-  var comDotsunDotstarDotembedDotHatchWindowFactory: HatchWindowFactory = js.native
+  var comDotsunDotstarDotembedDotHatchWindowFactory: HatchWindowFactory
   @JSName("com.sun.star.embed.InstanceLocker")
-  var comDotsunDotstarDotembedDotInstanceLocker: InstanceLocker = js.native
+  var comDotsunDotstarDotembedDotInstanceLocker: InstanceLocker
   @JSName("com.sun.star.embed.MSOLEObjectSystemCreator")
-  var comDotsunDotstarDotembedDotMSOLEObjectSystemCreator: MSOLEObjectSystemCreator = js.native
+  var comDotsunDotstarDotembedDotMSOLEObjectSystemCreator: MSOLEObjectSystemCreator
   @JSName("com.sun.star.embed.OLEEmbeddedObjectFactory")
-  var comDotsunDotstarDotembedDotOLEEmbeddedObjectFactory: OLEEmbeddedObjectFactory = js.native
+  var comDotsunDotstarDotembedDotOLEEmbeddedObjectFactory: OLEEmbeddedObjectFactory
   @JSName("com.sun.star.embed.OLESimpleStorage")
-  var comDotsunDotstarDotembedDotOLESimpleStorage: OLESimpleStorage = js.native
+  var comDotsunDotstarDotembedDotOLESimpleStorage: OLESimpleStorage
   @JSName("com.sun.star.embed.OOoEmbeddedObjectFactory")
-  var comDotsunDotstarDotembedDotOOoEmbeddedObjectFactory: OOoEmbeddedObjectFactory = js.native
+  var comDotsunDotstarDotembedDotOOoEmbeddedObjectFactory: OOoEmbeddedObjectFactory
   @JSName("com.sun.star.embed.Storage")
-  var comDotsunDotstarDotembedDotStorage: Storage = js.native
+  var comDotsunDotstarDotembedDotStorage: Storage
   @JSName("com.sun.star.embed.StorageFactory")
-  var comDotsunDotstarDotembedDotStorageFactory: StorageFactory = js.native
+  var comDotsunDotstarDotembedDotStorageFactory: StorageFactory
   @JSName("com.sun.star.embed.StorageStream")
-  var comDotsunDotstarDotembedDotStorageStream: StorageStream = js.native
+  var comDotsunDotstarDotembedDotStorageStream: StorageStream
   @JSName("com.sun.star.form.ControlFontDialog")
-  var comDotsunDotstarDotformDotControlFontDialog: ControlFontDialog = js.native
+  var comDotsunDotstarDotformDotControlFontDialog: ControlFontDialog
   @JSName("com.sun.star.form.DataAwareControlModel")
-  var comDotsunDotstarDotformDotDataAwareControlModel: DataAwareControlModel = js.native
+  var comDotsunDotstarDotformDotDataAwareControlModel: DataAwareControlModel
   @JSName("com.sun.star.form.FormComponent")
-  var comDotsunDotstarDotformDotFormComponent: FormComponent = js.native
+  var comDotsunDotstarDotformDotFormComponent: FormComponent
   @JSName("com.sun.star.form.FormComponents")
-  var comDotsunDotstarDotformDotFormComponents: FormComponents = js.native
+  var comDotsunDotstarDotformDotFormComponents: FormComponents
   @JSName("com.sun.star.form.FormControlModel")
-  var comDotsunDotstarDotformDotFormControlModel: FormControlModel = js.native
+  var comDotsunDotstarDotformDotFormControlModel: FormControlModel
   @JSName("com.sun.star.form.FormController")
-  var comDotsunDotstarDotformDotFormController: FormController = js.native
+  var comDotsunDotstarDotformDotFormController: FormController
   @JSName("com.sun.star.form.FormControllerDispatcher")
-  var comDotsunDotstarDotformDotFormControllerDispatcher: FormControllerDispatcher = js.native
+  var comDotsunDotstarDotformDotFormControllerDispatcher: FormControllerDispatcher
   @JSName("com.sun.star.form.Forms")
-  var comDotsunDotstarDotformDotForms: Forms = js.native
+  var comDotsunDotstarDotformDotForms: Forms
   @JSName("com.sun.star.form.PropertyBrowserController")
-  var comDotsunDotstarDotformDotPropertyBrowserController: PropertyBrowserController = js.native
+  var comDotsunDotstarDotformDotPropertyBrowserController: PropertyBrowserController
   @JSName("com.sun.star.form.TabOrderDialog")
-  var comDotsunDotstarDotformDotTabOrderDialog: TabOrderDialog = js.native
+  var comDotsunDotstarDotformDotTabOrderDialog: TabOrderDialog
   @JSName("com.sun.star.form.binding.BindableControlModel")
-  var comDotsunDotstarDotformDotbindingDotBindableControlModel: BindableControlModel = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableControlModel: BindableControlModel
   @JSName("com.sun.star.form.binding.BindableDataAwareControlModel")
-  var comDotsunDotstarDotformDotbindingDotBindableDataAwareControlModel: BindableDataAwareControlModel = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDataAwareControlModel: BindableDataAwareControlModel
   @JSName("com.sun.star.form.binding.BindableDatabaseCheckBox")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseCheckBox: BindableDatabaseCheckBox = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseCheckBox: BindableDatabaseCheckBox
   @JSName("com.sun.star.form.binding.BindableDatabaseComboBox")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseComboBox: BindableDatabaseComboBox = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseComboBox: BindableDatabaseComboBox
   @JSName("com.sun.star.form.binding.BindableDatabaseDateField")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseDateField: BindableDatabaseDateField = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseDateField: BindableDatabaseDateField
   @JSName("com.sun.star.form.binding.BindableDatabaseFormattedField")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseFormattedField: BindableDatabaseFormattedField = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseFormattedField: BindableDatabaseFormattedField
   @JSName("com.sun.star.form.binding.BindableDatabaseListBox")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseListBox: BindableDatabaseListBox = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseListBox: BindableDatabaseListBox
   @JSName("com.sun.star.form.binding.BindableDatabaseNumericField")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseNumericField: BindableDatabaseNumericField = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseNumericField: BindableDatabaseNumericField
   @JSName("com.sun.star.form.binding.BindableDatabaseRadioButton")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseRadioButton: BindableDatabaseRadioButton = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseRadioButton: BindableDatabaseRadioButton
   @JSName("com.sun.star.form.binding.BindableDatabaseTextField")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseTextField: BindableDatabaseTextField = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseTextField: BindableDatabaseTextField
   @JSName("com.sun.star.form.binding.BindableDatabaseTimeField")
-  var comDotsunDotstarDotformDotbindingDotBindableDatabaseTimeField: BindableDatabaseTimeField = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableDatabaseTimeField: BindableDatabaseTimeField
   @JSName("com.sun.star.form.binding.BindableIntegerValueRange")
-  var comDotsunDotstarDotformDotbindingDotBindableIntegerValueRange: BindableIntegerValueRange = js.native
+  var comDotsunDotstarDotformDotbindingDotBindableIntegerValueRange: BindableIntegerValueRange
   @JSName("com.sun.star.form.binding.ListEntrySource")
-  var comDotsunDotstarDotformDotbindingDotListEntrySource: ListEntrySource = js.native
+  var comDotsunDotstarDotformDotbindingDotListEntrySource: ListEntrySource
   @JSName("com.sun.star.form.binding.ValueBinding")
-  var comDotsunDotstarDotformDotbindingDotValueBinding: ValueBinding = js.native
+  var comDotsunDotstarDotformDotbindingDotValueBinding: ValueBinding
   @JSName("com.sun.star.form.component.CheckBox")
-  var comDotsunDotstarDotformDotcomponentDotCheckBox: CheckBox = js.native
+  var comDotsunDotstarDotformDotcomponentDotCheckBox: CheckBox
   @JSName("com.sun.star.form.component.ComboBox")
-  var comDotsunDotstarDotformDotcomponentDotComboBox: ComboBox = js.native
+  var comDotsunDotstarDotformDotcomponentDotComboBox: ComboBox
   @JSName("com.sun.star.form.component.CommandButton")
-  var comDotsunDotstarDotformDotcomponentDotCommandButton: CommandButton = js.native
+  var comDotsunDotstarDotformDotcomponentDotCommandButton: CommandButton
   @JSName("com.sun.star.form.component.CurrencyField")
-  var comDotsunDotstarDotformDotcomponentDotCurrencyField: CurrencyField = js.native
+  var comDotsunDotstarDotformDotcomponentDotCurrencyField: CurrencyField
   @JSName("com.sun.star.form.component.DataForm")
-  var comDotsunDotstarDotformDotcomponentDotDataForm: DataForm = js.native
+  var comDotsunDotstarDotformDotcomponentDotDataForm: DataForm
   @JSName("com.sun.star.form.component.DatabaseCheckBox")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseCheckBox: DatabaseCheckBox = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseCheckBox: DatabaseCheckBox
   @JSName("com.sun.star.form.component.DatabaseComboBox")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseComboBox: DatabaseComboBox = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseComboBox: DatabaseComboBox
   @JSName("com.sun.star.form.component.DatabaseCurrencyField")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseCurrencyField: DatabaseCurrencyField = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseCurrencyField: DatabaseCurrencyField
   @JSName("com.sun.star.form.component.DatabaseDateField")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseDateField: DatabaseDateField = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseDateField: DatabaseDateField
   @JSName("com.sun.star.form.component.DatabaseFormattedField")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseFormattedField: DatabaseFormattedField = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseFormattedField: DatabaseFormattedField
   @JSName("com.sun.star.form.component.DatabaseImageControl")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseImageControl: DatabaseImageControl = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseImageControl: DatabaseImageControl
   @JSName("com.sun.star.form.component.DatabaseListBox")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseListBox: DatabaseListBox = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseListBox: DatabaseListBox
   @JSName("com.sun.star.form.component.DatabaseNumericField")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseNumericField: DatabaseNumericField = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseNumericField: DatabaseNumericField
   @JSName("com.sun.star.form.component.DatabasePatternField")
-  var comDotsunDotstarDotformDotcomponentDotDatabasePatternField: DatabasePatternField = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabasePatternField: DatabasePatternField
   @JSName("com.sun.star.form.component.DatabaseRadioButton")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseRadioButton: DatabaseRadioButton = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseRadioButton: DatabaseRadioButton
   @JSName("com.sun.star.form.component.DatabaseTextField")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseTextField: DatabaseTextField = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseTextField: DatabaseTextField
   @JSName("com.sun.star.form.component.DatabaseTimeField")
-  var comDotsunDotstarDotformDotcomponentDotDatabaseTimeField: DatabaseTimeField = js.native
+  var comDotsunDotstarDotformDotcomponentDotDatabaseTimeField: DatabaseTimeField
   @JSName("com.sun.star.form.component.DateField")
-  var comDotsunDotstarDotformDotcomponentDotDateField: DateField = js.native
+  var comDotsunDotstarDotformDotcomponentDotDateField: DateField
   @JSName("com.sun.star.form.component.FileControl")
-  var comDotsunDotstarDotformDotcomponentDotFileControl: FileControl = js.native
+  var comDotsunDotstarDotformDotcomponentDotFileControl: FileControl
   @JSName("com.sun.star.form.component.FixedText")
-  var comDotsunDotstarDotformDotcomponentDotFixedText: FixedText = js.native
+  var comDotsunDotstarDotformDotcomponentDotFixedText: FixedText
   @JSName("com.sun.star.form.component.Form")
-  var comDotsunDotstarDotformDotcomponentDotForm: Form = js.native
+  var comDotsunDotstarDotformDotcomponentDotForm: Form
   @JSName("com.sun.star.form.component.FormattedField")
-  var comDotsunDotstarDotformDotcomponentDotFormattedField: FormattedField = js.native
+  var comDotsunDotstarDotformDotcomponentDotFormattedField: FormattedField
   @JSName("com.sun.star.form.component.GridControl")
-  var comDotsunDotstarDotformDotcomponentDotGridControl: GridControl = js.native
+  var comDotsunDotstarDotformDotcomponentDotGridControl: GridControl
   @JSName("com.sun.star.form.component.GroupBox")
-  var comDotsunDotstarDotformDotcomponentDotGroupBox: GroupBox = js.native
+  var comDotsunDotstarDotformDotcomponentDotGroupBox: GroupBox
   @JSName("com.sun.star.form.component.HTMLForm")
-  var comDotsunDotstarDotformDotcomponentDotHTMLForm: HTMLForm = js.native
+  var comDotsunDotstarDotformDotcomponentDotHTMLForm: HTMLForm
   @JSName("com.sun.star.form.component.HiddenControl")
-  var comDotsunDotstarDotformDotcomponentDotHiddenControl: HiddenControl = js.native
+  var comDotsunDotstarDotformDotcomponentDotHiddenControl: HiddenControl
   @JSName("com.sun.star.form.component.ImageButton")
-  var comDotsunDotstarDotformDotcomponentDotImageButton: ImageButton = js.native
+  var comDotsunDotstarDotformDotcomponentDotImageButton: ImageButton
   @JSName("com.sun.star.form.component.ListBox")
-  var comDotsunDotstarDotformDotcomponentDotListBox: ListBox = js.native
+  var comDotsunDotstarDotformDotcomponentDotListBox: ListBox
   @JSName("com.sun.star.form.component.NavigationToolBar")
-  var comDotsunDotstarDotformDotcomponentDotNavigationToolBar: NavigationToolBar = js.native
+  var comDotsunDotstarDotformDotcomponentDotNavigationToolBar: NavigationToolBar
   @JSName("com.sun.star.form.component.NumericField")
-  var comDotsunDotstarDotformDotcomponentDotNumericField: NumericField = js.native
+  var comDotsunDotstarDotformDotcomponentDotNumericField: NumericField
   @JSName("com.sun.star.form.component.PatternField")
-  var comDotsunDotstarDotformDotcomponentDotPatternField: PatternField = js.native
+  var comDotsunDotstarDotformDotcomponentDotPatternField: PatternField
   @JSName("com.sun.star.form.component.RadioButton")
-  var comDotsunDotstarDotformDotcomponentDotRadioButton: RadioButton = js.native
+  var comDotsunDotstarDotformDotcomponentDotRadioButton: RadioButton
   @JSName("com.sun.star.form.component.RichTextControl")
-  var comDotsunDotstarDotformDotcomponentDotRichTextControl: RichTextControl = js.native
+  var comDotsunDotstarDotformDotcomponentDotRichTextControl: RichTextControl
   @JSName("com.sun.star.form.component.ScrollBar")
-  var comDotsunDotstarDotformDotcomponentDotScrollBar: ScrollBar = js.native
+  var comDotsunDotstarDotformDotcomponentDotScrollBar: ScrollBar
   @JSName("com.sun.star.form.component.SpinButton")
-  var comDotsunDotstarDotformDotcomponentDotSpinButton: SpinButton = js.native
+  var comDotsunDotstarDotformDotcomponentDotSpinButton: SpinButton
   @JSName("com.sun.star.form.component.SubmitButton")
-  var comDotsunDotstarDotformDotcomponentDotSubmitButton: SubmitButton = js.native
+  var comDotsunDotstarDotformDotcomponentDotSubmitButton: SubmitButton
   @JSName("com.sun.star.form.component.TextField")
-  var comDotsunDotstarDotformDotcomponentDotTextField: TextField = js.native
+  var comDotsunDotstarDotformDotcomponentDotTextField: TextField
   @JSName("com.sun.star.form.component.TimeField")
-  var comDotsunDotstarDotformDotcomponentDotTimeField: TimeField = js.native
+  var comDotsunDotstarDotformDotcomponentDotTimeField: TimeField
   @JSName("com.sun.star.form.control.CheckBox")
-  var comDotsunDotstarDotformDotcontrolDotCheckBox: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.CheckBox = js.native
+  var comDotsunDotstarDotformDotcontrolDotCheckBox: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.CheckBox
   @JSName("com.sun.star.form.control.ComboBox")
-  var comDotsunDotstarDotformDotcontrolDotComboBox: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.ComboBox = js.native
+  var comDotsunDotstarDotformDotcontrolDotComboBox: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.ComboBox
   @JSName("com.sun.star.form.control.CommandButton")
-  var comDotsunDotstarDotformDotcontrolDotCommandButton: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.CommandButton = js.native
+  var comDotsunDotstarDotformDotcontrolDotCommandButton: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.CommandButton
   @JSName("com.sun.star.form.control.CurrencyField")
-  var comDotsunDotstarDotformDotcontrolDotCurrencyField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.CurrencyField = js.native
+  var comDotsunDotstarDotformDotcontrolDotCurrencyField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.CurrencyField
   @JSName("com.sun.star.form.control.DateField")
-  var comDotsunDotstarDotformDotcontrolDotDateField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.DateField = js.native
+  var comDotsunDotstarDotformDotcontrolDotDateField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.DateField
   @JSName("com.sun.star.form.control.FilterControl")
-  var comDotsunDotstarDotformDotcontrolDotFilterControl: FilterControl = js.native
+  var comDotsunDotstarDotformDotcontrolDotFilterControl: FilterControl
   @JSName("com.sun.star.form.control.FormattedField")
-  var comDotsunDotstarDotformDotcontrolDotFormattedField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.FormattedField = js.native
+  var comDotsunDotstarDotformDotcontrolDotFormattedField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.FormattedField
   @JSName("com.sun.star.form.control.GridControl")
-  var comDotsunDotstarDotformDotcontrolDotGridControl: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.GridControl = js.native
+  var comDotsunDotstarDotformDotcontrolDotGridControl: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.GridControl
   @JSName("com.sun.star.form.control.GroupBox")
-  var comDotsunDotstarDotformDotcontrolDotGroupBox: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.GroupBox = js.native
+  var comDotsunDotstarDotformDotcontrolDotGroupBox: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.GroupBox
   @JSName("com.sun.star.form.control.ImageButton")
-  var comDotsunDotstarDotformDotcontrolDotImageButton: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.ImageButton = js.native
+  var comDotsunDotstarDotformDotcontrolDotImageButton: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.ImageButton
   @JSName("com.sun.star.form.control.ImageControl")
-  var comDotsunDotstarDotformDotcontrolDotImageControl: ImageControl = js.native
+  var comDotsunDotstarDotformDotcontrolDotImageControl: ImageControl
   @JSName("com.sun.star.form.control.InteractionGridControl")
-  var comDotsunDotstarDotformDotcontrolDotInteractionGridControl: InteractionGridControl = js.native
+  var comDotsunDotstarDotformDotcontrolDotInteractionGridControl: InteractionGridControl
   @JSName("com.sun.star.form.control.ListBox")
-  var comDotsunDotstarDotformDotcontrolDotListBox: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.ListBox = js.native
+  var comDotsunDotstarDotformDotcontrolDotListBox: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.ListBox
   @JSName("com.sun.star.form.control.NavigationToolBar")
-  var comDotsunDotstarDotformDotcontrolDotNavigationToolBar: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.NavigationToolBar = js.native
+  var comDotsunDotstarDotformDotcontrolDotNavigationToolBar: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.NavigationToolBar
   @JSName("com.sun.star.form.control.NumericField")
-  var comDotsunDotstarDotformDotcontrolDotNumericField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.NumericField = js.native
+  var comDotsunDotstarDotformDotcontrolDotNumericField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.NumericField
   @JSName("com.sun.star.form.control.PatternField")
-  var comDotsunDotstarDotformDotcontrolDotPatternField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.PatternField = js.native
+  var comDotsunDotstarDotformDotcontrolDotPatternField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.PatternField
   @JSName("com.sun.star.form.control.RadioButton")
-  var comDotsunDotstarDotformDotcontrolDotRadioButton: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.RadioButton = js.native
+  var comDotsunDotstarDotformDotcontrolDotRadioButton: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.RadioButton
   @JSName("com.sun.star.form.control.SubmitButton")
-  var comDotsunDotstarDotformDotcontrolDotSubmitButton: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.SubmitButton = js.native
+  var comDotsunDotstarDotformDotcontrolDotSubmitButton: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.SubmitButton
   @JSName("com.sun.star.form.control.TextField")
-  var comDotsunDotstarDotformDotcontrolDotTextField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.TextField = js.native
+  var comDotsunDotstarDotformDotcontrolDotTextField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.TextField
   @JSName("com.sun.star.form.control.TimeField")
-  var comDotsunDotstarDotformDotcontrolDotTimeField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.TimeField = js.native
+  var comDotsunDotstarDotformDotcontrolDotTimeField: typingsSlinky.activexLibreoffice.com_.sun.star.form.control.TimeField
   @JSName("com.sun.star.form.inspection.ButtonNavigationHandler")
-  var comDotsunDotstarDotformDotinspectionDotButtonNavigationHandler: ButtonNavigationHandler = js.native
+  var comDotsunDotstarDotformDotinspectionDotButtonNavigationHandler: ButtonNavigationHandler
   @JSName("com.sun.star.form.inspection.CellBindingPropertyHandler")
-  var comDotsunDotstarDotformDotinspectionDotCellBindingPropertyHandler: CellBindingPropertyHandler = js.native
+  var comDotsunDotstarDotformDotinspectionDotCellBindingPropertyHandler: CellBindingPropertyHandler
   @JSName("com.sun.star.form.inspection.DefaultFormComponentInspectorModel")
-  var comDotsunDotstarDotformDotinspectionDotDefaultFormComponentInspectorModel: DefaultFormComponentInspectorModel = js.native
+  var comDotsunDotstarDotformDotinspectionDotDefaultFormComponentInspectorModel: DefaultFormComponentInspectorModel
   @JSName("com.sun.star.form.inspection.EditPropertyHandler")
-  var comDotsunDotstarDotformDotinspectionDotEditPropertyHandler: EditPropertyHandler = js.native
+  var comDotsunDotstarDotformDotinspectionDotEditPropertyHandler: EditPropertyHandler
   @JSName("com.sun.star.form.inspection.EventHandler")
-  var comDotsunDotstarDotformDotinspectionDotEventHandler: EventHandler = js.native
+  var comDotsunDotstarDotformDotinspectionDotEventHandler: EventHandler
   @JSName("com.sun.star.form.inspection.FormComponentPropertyHandler")
-  var comDotsunDotstarDotformDotinspectionDotFormComponentPropertyHandler: FormComponentPropertyHandler = js.native
+  var comDotsunDotstarDotformDotinspectionDotFormComponentPropertyHandler: FormComponentPropertyHandler
   @JSName("com.sun.star.form.inspection.SubmissionPropertyHandler")
-  var comDotsunDotstarDotformDotinspectionDotSubmissionPropertyHandler: SubmissionPropertyHandler = js.native
+  var comDotsunDotstarDotformDotinspectionDotSubmissionPropertyHandler: SubmissionPropertyHandler
   @JSName("com.sun.star.form.inspection.XMLFormsPropertyHandler")
-  var comDotsunDotstarDotformDotinspectionDotXMLFormsPropertyHandler: XMLFormsPropertyHandler = js.native
+  var comDotsunDotstarDotformDotinspectionDotXMLFormsPropertyHandler: XMLFormsPropertyHandler
   @JSName("com.sun.star.form.inspection.XSDValidationPropertyHandler")
-  var comDotsunDotstarDotformDotinspectionDotXSDValidationPropertyHandler: XSDValidationPropertyHandler = js.native
+  var comDotsunDotstarDotformDotinspectionDotXSDValidationPropertyHandler: XSDValidationPropertyHandler
   @JSName("com.sun.star.form.runtime.FormController")
-  var comDotsunDotstarDotformDotruntimeDotFormController: typingsSlinky.activexLibreoffice.com_.sun.star.form.runtime.FormController = js.native
+  var comDotsunDotstarDotformDotruntimeDotFormController: typingsSlinky.activexLibreoffice.com_.sun.star.form.runtime.FormController
   @JSName("com.sun.star.form.runtime.FormOperations")
-  var comDotsunDotstarDotformDotruntimeDotFormOperations: FormOperations = js.native
+  var comDotsunDotstarDotformDotruntimeDotFormOperations: FormOperations
   @JSName("com.sun.star.form.validation.ValidatableBindableControlModel")
-  var comDotsunDotstarDotformDotvalidationDotValidatableBindableControlModel: ValidatableBindableControlModel = js.native
+  var comDotsunDotstarDotformDotvalidationDotValidatableBindableControlModel: ValidatableBindableControlModel
   @JSName("com.sun.star.form.validation.ValidatableControlModel")
-  var comDotsunDotstarDotformDotvalidationDotValidatableControlModel: ValidatableControlModel = js.native
+  var comDotsunDotstarDotformDotvalidationDotValidatableControlModel: ValidatableControlModel
   @JSName("com.sun.star.formula.AccessibleFormulaText")
-  var comDotsunDotstarDotformulaDotAccessibleFormulaText: AccessibleFormulaText = js.native
+  var comDotsunDotstarDotformulaDotAccessibleFormulaText: AccessibleFormulaText
   @JSName("com.sun.star.formula.AccessibleFormulaView")
-  var comDotsunDotstarDotformulaDotAccessibleFormulaView: AccessibleFormulaView = js.native
+  var comDotsunDotstarDotformulaDotAccessibleFormulaView: AccessibleFormulaView
   @JSName("com.sun.star.formula.FormulaProperties")
-  var comDotsunDotstarDotformulaDotFormulaProperties: FormulaProperties = js.native
+  var comDotsunDotstarDotformulaDotFormulaProperties: FormulaProperties
   @JSName("com.sun.star.frame.AppDispatchProvider")
-  var comDotsunDotstarDotframeDotAppDispatchProvider: AppDispatchProvider = js.native
+  var comDotsunDotstarDotframeDotAppDispatchProvider: AppDispatchProvider
   @JSName("com.sun.star.frame.AutoRecovery")
-  var comDotsunDotstarDotframeDotAutoRecovery: AutoRecovery = js.native
+  var comDotsunDotstarDotframeDotAutoRecovery: AutoRecovery
   @JSName("com.sun.star.frame.Bibliography")
-  var comDotsunDotstarDotframeDotBibliography: Bibliography = js.native
+  var comDotsunDotstarDotframeDotBibliography: Bibliography
   @JSName("com.sun.star.frame.Components")
-  var comDotsunDotstarDotframeDotComponents: Components = js.native
+  var comDotsunDotstarDotframeDotComponents: Components
   @JSName("com.sun.star.frame.ContentHandler")
-  var comDotsunDotstarDotframeDotContentHandler: ContentHandler = js.native
+  var comDotsunDotstarDotframeDotContentHandler: ContentHandler
   @JSName("com.sun.star.frame.ContentHandlerFactory")
-  var comDotsunDotstarDotframeDotContentHandlerFactory: ContentHandlerFactory = js.native
+  var comDotsunDotstarDotframeDotContentHandlerFactory: ContentHandlerFactory
   @JSName("com.sun.star.frame.Controller")
-  var comDotsunDotstarDotframeDotController: Controller = js.native
+  var comDotsunDotstarDotframeDotController: Controller
   @JSName("com.sun.star.frame.Desktop")
-  var comDotsunDotstarDotframeDotDesktop: Desktop = js.native
+  var comDotsunDotstarDotframeDotDesktop: Desktop
   @JSName("com.sun.star.frame.DesktopTask")
-  var comDotsunDotstarDotframeDotDesktopTask: DesktopTask = js.native
+  var comDotsunDotstarDotframeDotDesktopTask: DesktopTask
   @JSName("com.sun.star.frame.DesktopTasks")
-  var comDotsunDotstarDotframeDotDesktopTasks: DesktopTasks = js.native
+  var comDotsunDotstarDotframeDotDesktopTasks: DesktopTasks
   @JSName("com.sun.star.frame.DispatchHelper")
-  var comDotsunDotstarDotframeDotDispatchHelper: DispatchHelper = js.native
+  var comDotsunDotstarDotframeDotDispatchHelper: DispatchHelper
   @JSName("com.sun.star.frame.DispatchProvider")
-  var comDotsunDotstarDotframeDotDispatchProvider: DispatchProvider = js.native
+  var comDotsunDotstarDotframeDotDispatchProvider: DispatchProvider
   @JSName("com.sun.star.frame.DispatchRecorder")
-  var comDotsunDotstarDotframeDotDispatchRecorder: DispatchRecorder = js.native
+  var comDotsunDotstarDotframeDotDispatchRecorder: DispatchRecorder
   @JSName("com.sun.star.frame.DispatchRecorderSupplier")
-  var comDotsunDotstarDotframeDotDispatchRecorderSupplier: DispatchRecorderSupplier = js.native
+  var comDotsunDotstarDotframeDotDispatchRecorderSupplier: DispatchRecorderSupplier
   @JSName("com.sun.star.frame.DocumentTemplates")
-  var comDotsunDotstarDotframeDotDocumentTemplates: DocumentTemplates = js.native
+  var comDotsunDotstarDotframeDotDocumentTemplates: DocumentTemplates
   @JSName("com.sun.star.frame.Frame")
-  var comDotsunDotstarDotframeDotFrame: Frame = js.native
+  var comDotsunDotstarDotframeDotFrame: Frame
   @JSName("com.sun.star.frame.FrameControl")
-  var comDotsunDotstarDotframeDotFrameControl: FrameControl = js.native
+  var comDotsunDotstarDotframeDotFrameControl: FrameControl
   @JSName("com.sun.star.frame.FrameLoader")
-  var comDotsunDotstarDotframeDotFrameLoader: FrameLoader = js.native
+  var comDotsunDotstarDotframeDotFrameLoader: FrameLoader
   @JSName("com.sun.star.frame.FrameLoaderFactory")
-  var comDotsunDotstarDotframeDotFrameLoaderFactory: FrameLoaderFactory = js.native
+  var comDotsunDotstarDotframeDotFrameLoaderFactory: FrameLoaderFactory
   @JSName("com.sun.star.frame.FramesContainer")
-  var comDotsunDotstarDotframeDotFramesContainer: FramesContainer = js.native
+  var comDotsunDotstarDotframeDotFramesContainer: FramesContainer
   @JSName("com.sun.star.frame.GlobalEventBroadcaster")
-  var comDotsunDotstarDotframeDotGlobalEventBroadcaster: GlobalEventBroadcaster = js.native
+  var comDotsunDotstarDotframeDotGlobalEventBroadcaster: GlobalEventBroadcaster
   @JSName("com.sun.star.frame.LayoutManager")
-  var comDotsunDotstarDotframeDotLayoutManager: LayoutManager = js.native
+  var comDotsunDotstarDotframeDotLayoutManager: LayoutManager
   @JSName("com.sun.star.frame.MediaTypeDetectionHelper")
-  var comDotsunDotstarDotframeDotMediaTypeDetectionHelper: MediaTypeDetectionHelper = js.native
+  var comDotsunDotstarDotframeDotMediaTypeDetectionHelper: MediaTypeDetectionHelper
   @JSName("com.sun.star.frame.ModuleManager")
-  var comDotsunDotstarDotframeDotModuleManager: ModuleManager = js.native
+  var comDotsunDotstarDotframeDotModuleManager: ModuleManager
   @JSName("com.sun.star.frame.OfficeFrameLoader")
-  var comDotsunDotstarDotframeDotOfficeFrameLoader: OfficeFrameLoader = js.native
+  var comDotsunDotstarDotframeDotOfficeFrameLoader: OfficeFrameLoader
   @JSName("com.sun.star.frame.PopupMenuController")
-  var comDotsunDotstarDotframeDotPopupMenuController: PopupMenuController = js.native
+  var comDotsunDotstarDotframeDotPopupMenuController: PopupMenuController
   @JSName("com.sun.star.frame.PopupMenuControllerFactory")
-  var comDotsunDotstarDotframeDotPopupMenuControllerFactory: PopupMenuControllerFactory = js.native
+  var comDotsunDotstarDotframeDotPopupMenuControllerFactory: PopupMenuControllerFactory
   @JSName("com.sun.star.frame.ProtocolHandler")
-  var comDotsunDotstarDotframeDotProtocolHandler: ProtocolHandler = js.native
+  var comDotsunDotstarDotframeDotProtocolHandler: ProtocolHandler
   @JSName("com.sun.star.frame.SessionListener")
-  var comDotsunDotstarDotframeDotSessionListener: SessionListener = js.native
+  var comDotsunDotstarDotframeDotSessionListener: SessionListener
   @JSName("com.sun.star.frame.SessionManager")
-  var comDotsunDotstarDotframeDotSessionManager: SessionManager = js.native
+  var comDotsunDotstarDotframeDotSessionManager: SessionManager
   @JSName("com.sun.star.frame.Settings")
-  var comDotsunDotstarDotframeDotSettings: typingsSlinky.activexLibreoffice.com_.sun.star.frame.Settings = js.native
+  var comDotsunDotstarDotframeDotSettings: typingsSlinky.activexLibreoffice.com_.sun.star.frame.Settings
   @JSName("com.sun.star.frame.StartModule")
-  var comDotsunDotstarDotframeDotStartModule: StartModule = js.native
+  var comDotsunDotstarDotframeDotStartModule: StartModule
   @JSName("com.sun.star.frame.StatusbarController")
-  var comDotsunDotstarDotframeDotStatusbarController: StatusbarController = js.native
+  var comDotsunDotstarDotframeDotStatusbarController: StatusbarController
   @JSName("com.sun.star.frame.StatusbarControllerFactory")
-  var comDotsunDotstarDotframeDotStatusbarControllerFactory: StatusbarControllerFactory = js.native
+  var comDotsunDotstarDotframeDotStatusbarControllerFactory: StatusbarControllerFactory
   @JSName("com.sun.star.frame.SynchronousFrameLoader")
-  var comDotsunDotstarDotframeDotSynchronousFrameLoader: SynchronousFrameLoader = js.native
+  var comDotsunDotstarDotframeDotSynchronousFrameLoader: SynchronousFrameLoader
   @JSName("com.sun.star.frame.Task")
-  var comDotsunDotstarDotframeDotTask: Task = js.native
+  var comDotsunDotstarDotframeDotTask: Task
   @JSName("com.sun.star.frame.TaskCreator")
-  var comDotsunDotstarDotframeDotTaskCreator: TaskCreator = js.native
+  var comDotsunDotstarDotframeDotTaskCreator: TaskCreator
   @JSName("com.sun.star.frame.TemplateAccess")
-  var comDotsunDotstarDotframeDotTemplateAccess: TemplateAccess = js.native
+  var comDotsunDotstarDotframeDotTemplateAccess: TemplateAccess
   @JSName("com.sun.star.frame.ToolbarController")
-  var comDotsunDotstarDotframeDotToolbarController: ToolbarController = js.native
+  var comDotsunDotstarDotframeDotToolbarController: ToolbarController
   @JSName("com.sun.star.frame.ToolbarControllerFactory")
-  var comDotsunDotstarDotframeDotToolbarControllerFactory: ToolbarControllerFactory = js.native
+  var comDotsunDotstarDotframeDotToolbarControllerFactory: ToolbarControllerFactory
   @JSName("com.sun.star.frame.TransientDocumentsDocumentContentFactory")
-  var comDotsunDotstarDotframeDotTransientDocumentsDocumentContentFactory: TransientDocumentsDocumentContentFactory = js.native
+  var comDotsunDotstarDotframeDotTransientDocumentsDocumentContentFactory: TransientDocumentsDocumentContentFactory
   @JSName("com.sun.star.frame.UICommandDescription")
-  var comDotsunDotstarDotframeDotUICommandDescription: UICommandDescription = js.native
+  var comDotsunDotstarDotframeDotUICommandDescription: UICommandDescription
   @JSName("com.sun.star.gallery.GalleryItem")
-  var comDotsunDotstarDotgalleryDotGalleryItem: GalleryItem = js.native
+  var comDotsunDotstarDotgalleryDotGalleryItem: GalleryItem
   @JSName("com.sun.star.gallery.GalleryTheme")
-  var comDotsunDotstarDotgalleryDotGalleryTheme: GalleryTheme = js.native
+  var comDotsunDotstarDotgalleryDotGalleryTheme: GalleryTheme
   @JSName("com.sun.star.gallery.GalleryThemeProvider")
-  var comDotsunDotstarDotgalleryDotGalleryThemeProvider: GalleryThemeProvider = js.native
+  var comDotsunDotstarDotgalleryDotGalleryThemeProvider: GalleryThemeProvider
   @JSName("com.sun.star.graphic.Graphic")
-  var comDotsunDotstarDotgraphicDotGraphic: Graphic = js.native
+  var comDotsunDotstarDotgraphicDotGraphic: Graphic
   @JSName("com.sun.star.graphic.GraphicDescriptor")
-  var comDotsunDotstarDotgraphicDotGraphicDescriptor: GraphicDescriptor = js.native
+  var comDotsunDotstarDotgraphicDotGraphicDescriptor: GraphicDescriptor
   @JSName("com.sun.star.graphic.GraphicObject")
-  var comDotsunDotstarDotgraphicDotGraphicObject: GraphicObject = js.native
+  var comDotsunDotstarDotgraphicDotGraphicObject: GraphicObject
   @JSName("com.sun.star.graphic.GraphicProvider")
-  var comDotsunDotstarDotgraphicDotGraphicProvider: GraphicProvider = js.native
+  var comDotsunDotstarDotgraphicDotGraphicProvider: GraphicProvider
   @JSName("com.sun.star.graphic.GraphicRasterizer")
-  var comDotsunDotstarDotgraphicDotGraphicRasterizer: GraphicRasterizer = js.native
+  var comDotsunDotstarDotgraphicDotGraphicRasterizer: GraphicRasterizer
   @JSName("com.sun.star.graphic.GraphicRendererVCL")
-  var comDotsunDotstarDotgraphicDotGraphicRendererVCL: GraphicRendererVCL = js.native
+  var comDotsunDotstarDotgraphicDotGraphicRendererVCL: GraphicRendererVCL
   @JSName("com.sun.star.graphic.MediaProperties")
-  var comDotsunDotstarDotgraphicDotMediaProperties: MediaProperties = js.native
+  var comDotsunDotstarDotgraphicDotMediaProperties: MediaProperties
   @JSName("com.sun.star.graphic.Primitive2DTools")
-  var comDotsunDotstarDotgraphicDotPrimitive2DTools: Primitive2DTools = js.native
+  var comDotsunDotstarDotgraphicDotPrimitive2DTools: Primitive2DTools
   @JSName("com.sun.star.graphic.PrimitiveFactory2D")
-  var comDotsunDotstarDotgraphicDotPrimitiveFactory2D: PrimitiveFactory2D = js.native
+  var comDotsunDotstarDotgraphicDotPrimitiveFactory2D: PrimitiveFactory2D
   @JSName("com.sun.star.graphic.SvgTools")
-  var comDotsunDotstarDotgraphicDotSvgTools: SvgTools = js.native
+  var comDotsunDotstarDotgraphicDotSvgTools: SvgTools
   @JSName("com.sun.star.i18n.BreakIterator")
-  var comDotsunDotstarDoti18nDotBreakIterator: BreakIterator = js.native
+  var comDotsunDotstarDoti18nDotBreakIterator: BreakIterator
   @JSName("com.sun.star.i18n.ChapterCollator")
-  var comDotsunDotstarDoti18nDotChapterCollator: ChapterCollator = js.native
+  var comDotsunDotstarDoti18nDotChapterCollator: ChapterCollator
   @JSName("com.sun.star.i18n.CharacterClassification")
-  var comDotsunDotstarDoti18nDotCharacterClassification: CharacterClassification = js.native
+  var comDotsunDotstarDoti18nDotCharacterClassification: CharacterClassification
   @JSName("com.sun.star.i18n.Collator")
-  var comDotsunDotstarDoti18nDotCollator: Collator = js.native
+  var comDotsunDotstarDoti18nDotCollator: Collator
   @JSName("com.sun.star.i18n.IndexEntrySupplier")
-  var comDotsunDotstarDoti18nDotIndexEntrySupplier: IndexEntrySupplier = js.native
+  var comDotsunDotstarDoti18nDotIndexEntrySupplier: IndexEntrySupplier
   @JSName("com.sun.star.i18n.InputSequenceChecker")
-  var comDotsunDotstarDoti18nDotInputSequenceChecker: InputSequenceChecker = js.native
+  var comDotsunDotstarDoti18nDotInputSequenceChecker: InputSequenceChecker
   @JSName("com.sun.star.i18n.LocaleCalendar")
-  var comDotsunDotstarDoti18nDotLocaleCalendar: LocaleCalendar = js.native
+  var comDotsunDotstarDoti18nDotLocaleCalendar: LocaleCalendar
   @JSName("com.sun.star.i18n.LocaleCalendar2")
-  var comDotsunDotstarDoti18nDotLocaleCalendar2: LocaleCalendar2 = js.native
+  var comDotsunDotstarDoti18nDotLocaleCalendar2: LocaleCalendar2
   @JSName("com.sun.star.i18n.LocaleData")
-  var comDotsunDotstarDoti18nDotLocaleData: LocaleData = js.native
+  var comDotsunDotstarDoti18nDotLocaleData: LocaleData
   @JSName("com.sun.star.i18n.NativeNumberSupplier")
-  var comDotsunDotstarDoti18nDotNativeNumberSupplier: NativeNumberSupplier = js.native
+  var comDotsunDotstarDoti18nDotNativeNumberSupplier: NativeNumberSupplier
   @JSName("com.sun.star.i18n.NumberFormatMapper")
-  var comDotsunDotstarDoti18nDotNumberFormatMapper: NumberFormatMapper = js.native
+  var comDotsunDotstarDoti18nDotNumberFormatMapper: NumberFormatMapper
   @JSName("com.sun.star.i18n.OrdinalSuffix")
-  var comDotsunDotstarDoti18nDotOrdinalSuffix: OrdinalSuffix = js.native
+  var comDotsunDotstarDoti18nDotOrdinalSuffix: OrdinalSuffix
   @JSName("com.sun.star.i18n.TextConversion")
-  var comDotsunDotstarDoti18nDotTextConversion: TextConversion = js.native
+  var comDotsunDotstarDoti18nDotTextConversion: TextConversion
   @JSName("com.sun.star.i18n.Transliteration")
-  var comDotsunDotstarDoti18nDotTransliteration: Transliteration = js.native
+  var comDotsunDotstarDoti18nDotTransliteration: Transliteration
   @JSName("com.sun.star.image.ImageMap")
-  var comDotsunDotstarDotimageDotImageMap: ImageMap = js.native
+  var comDotsunDotstarDotimageDotImageMap: ImageMap
   @JSName("com.sun.star.image.ImageMapCircleObject")
-  var comDotsunDotstarDotimageDotImageMapCircleObject: ImageMapCircleObject = js.native
+  var comDotsunDotstarDotimageDotImageMapCircleObject: ImageMapCircleObject
   @JSName("com.sun.star.image.ImageMapObject")
-  var comDotsunDotstarDotimageDotImageMapObject: ImageMapObject = js.native
+  var comDotsunDotstarDotimageDotImageMapObject: ImageMapObject
   @JSName("com.sun.star.image.ImageMapPolygonObject")
-  var comDotsunDotstarDotimageDotImageMapPolygonObject: ImageMapPolygonObject = js.native
+  var comDotsunDotstarDotimageDotImageMapPolygonObject: ImageMapPolygonObject
   @JSName("com.sun.star.image.ImageMapRectangleObject")
-  var comDotsunDotstarDotimageDotImageMapRectangleObject: ImageMapRectangleObject = js.native
+  var comDotsunDotstarDotimageDotImageMapRectangleObject: ImageMapRectangleObject
   @JSName("com.sun.star.inspection.DefaultHelpProvider")
-  var comDotsunDotstarDotinspectionDotDefaultHelpProvider: DefaultHelpProvider = js.native
+  var comDotsunDotstarDotinspectionDotDefaultHelpProvider: DefaultHelpProvider
   @JSName("com.sun.star.inspection.GenericPropertyHandler")
-  var comDotsunDotstarDotinspectionDotGenericPropertyHandler: GenericPropertyHandler = js.native
+  var comDotsunDotstarDotinspectionDotGenericPropertyHandler: GenericPropertyHandler
   @JSName("com.sun.star.inspection.ObjectInspector")
-  var comDotsunDotstarDotinspectionDotObjectInspector: ObjectInspector = js.native
+  var comDotsunDotstarDotinspectionDotObjectInspector: ObjectInspector
   @JSName("com.sun.star.inspection.ObjectInspectorModel")
-  var comDotsunDotstarDotinspectionDotObjectInspectorModel: ObjectInspectorModel = js.native
+  var comDotsunDotstarDotinspectionDotObjectInspectorModel: ObjectInspectorModel
   @JSName("com.sun.star.inspection.StringRepresentation")
-  var comDotsunDotstarDotinspectionDotStringRepresentation: StringRepresentation = js.native
+  var comDotsunDotstarDotinspectionDotStringRepresentation: StringRepresentation
   @JSName("com.sun.star.io.DataInputStream")
-  var comDotsunDotstarDotioDotDataInputStream: DataInputStream = js.native
+  var comDotsunDotstarDotioDotDataInputStream: DataInputStream
   @JSName("com.sun.star.io.DataOutputStream")
-  var comDotsunDotstarDotioDotDataOutputStream: DataOutputStream = js.native
+  var comDotsunDotstarDotioDotDataOutputStream: DataOutputStream
   @JSName("com.sun.star.io.MarkableInputStream")
-  var comDotsunDotstarDotioDotMarkableInputStream: MarkableInputStream = js.native
+  var comDotsunDotstarDotioDotMarkableInputStream: MarkableInputStream
   @JSName("com.sun.star.io.MarkableOutputStream")
-  var comDotsunDotstarDotioDotMarkableOutputStream: MarkableOutputStream = js.native
+  var comDotsunDotstarDotioDotMarkableOutputStream: MarkableOutputStream
   @JSName("com.sun.star.io.ObjectInputStream")
-  var comDotsunDotstarDotioDotObjectInputStream: ObjectInputStream = js.native
+  var comDotsunDotstarDotioDotObjectInputStream: ObjectInputStream
   @JSName("com.sun.star.io.ObjectOutputStream")
-  var comDotsunDotstarDotioDotObjectOutputStream: ObjectOutputStream = js.native
+  var comDotsunDotstarDotioDotObjectOutputStream: ObjectOutputStream
   @JSName("com.sun.star.io.Pipe")
-  var comDotsunDotstarDotioDotPipe: Pipe = js.native
+  var comDotsunDotstarDotioDotPipe: Pipe
   @JSName("com.sun.star.io.Pump")
-  var comDotsunDotstarDotioDotPump: Pump = js.native
+  var comDotsunDotstarDotioDotPump: Pump
   @JSName("com.sun.star.io.SequenceInputStream")
-  var comDotsunDotstarDotioDotSequenceInputStream: SequenceInputStream = js.native
+  var comDotsunDotstarDotioDotSequenceInputStream: SequenceInputStream
   @JSName("com.sun.star.io.SequenceOutputStream")
-  var comDotsunDotstarDotioDotSequenceOutputStream: SequenceOutputStream = js.native
+  var comDotsunDotstarDotioDotSequenceOutputStream: SequenceOutputStream
   @JSName("com.sun.star.io.TempFile")
-  var comDotsunDotstarDotioDotTempFile: TempFile = js.native
+  var comDotsunDotstarDotioDotTempFile: TempFile
   @JSName("com.sun.star.io.TextInputStream")
-  var comDotsunDotstarDotioDotTextInputStream: TextInputStream = js.native
+  var comDotsunDotstarDotioDotTextInputStream: TextInputStream
   @JSName("com.sun.star.io.TextOutputStream")
-  var comDotsunDotstarDotioDotTextOutputStream: TextOutputStream = js.native
+  var comDotsunDotstarDotioDotTextOutputStream: TextOutputStream
   @JSName("com.sun.star.java.JavaVirtualMachine")
-  var comDotsunDotstarDotjavaDotJavaVirtualMachine: JavaVirtualMachine = js.native
+  var comDotsunDotstarDotjavaDotJavaVirtualMachine: JavaVirtualMachine
   @JSName("com.sun.star.lang.MultiServiceFactory")
-  var comDotsunDotstarDotlangDotMultiServiceFactory: MultiServiceFactory = js.native
+  var comDotsunDotstarDotlangDotMultiServiceFactory: MultiServiceFactory
   @JSName("com.sun.star.lang.RegistryServiceManager")
-  var comDotsunDotstarDotlangDotRegistryServiceManager: RegistryServiceManager = js.native
+  var comDotsunDotstarDotlangDotRegistryServiceManager: RegistryServiceManager
   @JSName("com.sun.star.lang.ServiceManager")
-  var comDotsunDotstarDotlangDotServiceManager: ServiceManager = js.native
+  var comDotsunDotstarDotlangDotServiceManager: ServiceManager
   @JSName("com.sun.star.linguistic2.ConversionDictionary")
-  var comDotsunDotstarDotlinguistic2DotConversionDictionary: ConversionDictionary = js.native
+  var comDotsunDotstarDotlinguistic2DotConversionDictionary: ConversionDictionary
   @JSName("com.sun.star.linguistic2.ConversionDictionaryList")
-  var comDotsunDotstarDotlinguistic2DotConversionDictionaryList: ConversionDictionaryList = js.native
+  var comDotsunDotstarDotlinguistic2DotConversionDictionaryList: ConversionDictionaryList
   @JSName("com.sun.star.linguistic2.Dictionary")
-  var comDotsunDotstarDotlinguistic2DotDictionary: Dictionary = js.native
+  var comDotsunDotstarDotlinguistic2DotDictionary: Dictionary
   @JSName("com.sun.star.linguistic2.DictionaryList")
-  var comDotsunDotstarDotlinguistic2DotDictionaryList: DictionaryList = js.native
+  var comDotsunDotstarDotlinguistic2DotDictionaryList: DictionaryList
   @JSName("com.sun.star.linguistic2.HangulHanjaConversionDictionary")
-  var comDotsunDotstarDotlinguistic2DotHangulHanjaConversionDictionary: HangulHanjaConversionDictionary = js.native
+  var comDotsunDotstarDotlinguistic2DotHangulHanjaConversionDictionary: HangulHanjaConversionDictionary
   @JSName("com.sun.star.linguistic2.Hyphenator")
-  var comDotsunDotstarDotlinguistic2DotHyphenator: Hyphenator = js.native
+  var comDotsunDotstarDotlinguistic2DotHyphenator: Hyphenator
   @JSName("com.sun.star.linguistic2.LanguageGuessing")
-  var comDotsunDotstarDotlinguistic2DotLanguageGuessing: LanguageGuessing = js.native
+  var comDotsunDotstarDotlinguistic2DotLanguageGuessing: LanguageGuessing
   @JSName("com.sun.star.linguistic2.LinguProperties")
-  var comDotsunDotstarDotlinguistic2DotLinguProperties: LinguProperties = js.native
+  var comDotsunDotstarDotlinguistic2DotLinguProperties: LinguProperties
   @JSName("com.sun.star.linguistic2.LinguServiceManager")
-  var comDotsunDotstarDotlinguistic2DotLinguServiceManager: LinguServiceManager = js.native
+  var comDotsunDotstarDotlinguistic2DotLinguServiceManager: LinguServiceManager
   @JSName("com.sun.star.linguistic2.Proofreader")
-  var comDotsunDotstarDotlinguistic2DotProofreader: Proofreader = js.native
+  var comDotsunDotstarDotlinguistic2DotProofreader: Proofreader
   @JSName("com.sun.star.linguistic2.ProofreadingIterator")
-  var comDotsunDotstarDotlinguistic2DotProofreadingIterator: ProofreadingIterator = js.native
+  var comDotsunDotstarDotlinguistic2DotProofreadingIterator: ProofreadingIterator
   @JSName("com.sun.star.linguistic2.SpellChecker")
-  var comDotsunDotstarDotlinguistic2DotSpellChecker: SpellChecker = js.native
+  var comDotsunDotstarDotlinguistic2DotSpellChecker: SpellChecker
   @JSName("com.sun.star.linguistic2.Thesaurus")
-  var comDotsunDotstarDotlinguistic2DotThesaurus: Thesaurus = js.native
+  var comDotsunDotstarDotlinguistic2DotThesaurus: Thesaurus
   @JSName("com.sun.star.loader.Dynamic")
-  var comDotsunDotstarDotloaderDotDynamic: Dynamic = js.native
+  var comDotsunDotstarDotloaderDotDynamic: Dynamic
   @JSName("com.sun.star.loader.Java")
-  var comDotsunDotstarDotloaderDotJava: Java = js.native
+  var comDotsunDotstarDotloaderDotJava: Java
   @JSName("com.sun.star.loader.Java2")
-  var comDotsunDotstarDotloaderDotJava2: Java2 = js.native
+  var comDotsunDotstarDotloaderDotJava2: Java2
   @JSName("com.sun.star.loader.SharedLibrary")
-  var comDotsunDotstarDotloaderDotSharedLibrary: SharedLibrary = js.native
+  var comDotsunDotstarDotloaderDotSharedLibrary: SharedLibrary
   @JSName("com.sun.star.logging.ConsoleHandler")
-  var comDotsunDotstarDotloggingDotConsoleHandler: ConsoleHandler = js.native
+  var comDotsunDotstarDotloggingDotConsoleHandler: ConsoleHandler
   @JSName("com.sun.star.logging.CsvLogFormatter")
-  var comDotsunDotstarDotloggingDotCsvLogFormatter: CsvLogFormatter = js.native
+  var comDotsunDotstarDotloggingDotCsvLogFormatter: CsvLogFormatter
   @JSName("com.sun.star.logging.FileHandler")
-  var comDotsunDotstarDotloggingDotFileHandler: FileHandler = js.native
+  var comDotsunDotstarDotloggingDotFileHandler: FileHandler
   @JSName("com.sun.star.logging.PlainTextFormatter")
-  var comDotsunDotstarDotloggingDotPlainTextFormatter: PlainTextFormatter = js.native
+  var comDotsunDotstarDotloggingDotPlainTextFormatter: PlainTextFormatter
   @JSName("com.sun.star.logging.SimpleLogRing")
-  var comDotsunDotstarDotloggingDotSimpleLogRing: SimpleLogRing = js.native
+  var comDotsunDotstarDotloggingDotSimpleLogRing: SimpleLogRing
   @JSName("com.sun.star.mail.MailMessage")
-  var comDotsunDotstarDotmailDotMailMessage: MailMessage = js.native
+  var comDotsunDotstarDotmailDotMailMessage: MailMessage
   @JSName("com.sun.star.mail.MailServiceProvider")
-  var comDotsunDotstarDotmailDotMailServiceProvider: MailServiceProvider = js.native
+  var comDotsunDotstarDotmailDotMailServiceProvider: MailServiceProvider
   @JSName("com.sun.star.media.Manager")
-  var comDotsunDotstarDotmediaDotManager: Manager = js.native
+  var comDotsunDotstarDotmediaDotManager: Manager
   @JSName("com.sun.star.mozilla.MenuProxy")
-  var comDotsunDotstarDotmozillaDotMenuProxy: MenuProxy = js.native
+  var comDotsunDotstarDotmozillaDotMenuProxy: MenuProxy
   @JSName("com.sun.star.mozilla.MenuProxyListener")
-  var comDotsunDotstarDotmozillaDotMenuProxyListener: MenuProxyListener = js.native
+  var comDotsunDotstarDotmozillaDotMenuProxyListener: MenuProxyListener
   @JSName("com.sun.star.mozilla.MozillaBootstrap")
-  var comDotsunDotstarDotmozillaDotMozillaBootstrap: MozillaBootstrap = js.native
+  var comDotsunDotstarDotmozillaDotMozillaBootstrap: MozillaBootstrap
   @JSName("com.sun.star.office.Quickstart")
-  var comDotsunDotstarDotofficeDotQuickstart: Quickstart = js.native
+  var comDotsunDotstarDotofficeDotQuickstart: Quickstart
   @JSName("com.sun.star.packages.Package")
-  var comDotsunDotstarDotpackagesDotPackage: Package = js.native
+  var comDotsunDotstarDotpackagesDotPackage: Package
   @JSName("com.sun.star.packages.PackageFolder")
-  var comDotsunDotstarDotpackagesDotPackageFolder: PackageFolder = js.native
+  var comDotsunDotstarDotpackagesDotPackageFolder: PackageFolder
   @JSName("com.sun.star.packages.PackageFolderEnumeration")
-  var comDotsunDotstarDotpackagesDotPackageFolderEnumeration: PackageFolderEnumeration = js.native
+  var comDotsunDotstarDotpackagesDotPackageFolderEnumeration: PackageFolderEnumeration
   @JSName("com.sun.star.packages.PackageStream")
-  var comDotsunDotstarDotpackagesDotPackageStream: PackageStream = js.native
+  var comDotsunDotstarDotpackagesDotPackageStream: PackageStream
   @JSName("com.sun.star.packages.manifest.ManifestReader")
-  var comDotsunDotstarDotpackagesDotmanifestDotManifestReader: ManifestReader = js.native
+  var comDotsunDotstarDotpackagesDotmanifestDotManifestReader: ManifestReader
   @JSName("com.sun.star.packages.manifest.ManifestWriter")
-  var comDotsunDotstarDotpackagesDotmanifestDotManifestWriter: ManifestWriter = js.native
+  var comDotsunDotstarDotpackagesDotmanifestDotManifestWriter: ManifestWriter
   @JSName("com.sun.star.packages.zip.ZipFileAccess")
-  var comDotsunDotstarDotpackagesDotzipDotZipFileAccess: ZipFileAccess = js.native
+  var comDotsunDotstarDotpackagesDotzipDotZipFileAccess: ZipFileAccess
   @JSName("com.sun.star.presentation.ChartShape")
-  var comDotsunDotstarDotpresentationDotChartShape: ChartShape = js.native
+  var comDotsunDotstarDotpresentationDotChartShape: ChartShape
   @JSName("com.sun.star.presentation.CustomPresentation")
-  var comDotsunDotstarDotpresentationDotCustomPresentation: CustomPresentation = js.native
+  var comDotsunDotstarDotpresentationDotCustomPresentation: CustomPresentation
   @JSName("com.sun.star.presentation.CustomPresentationAccess")
-  var comDotsunDotstarDotpresentationDotCustomPresentationAccess: CustomPresentationAccess = js.native
+  var comDotsunDotstarDotpresentationDotCustomPresentationAccess: CustomPresentationAccess
   @JSName("com.sun.star.presentation.DateTimeShape")
-  var comDotsunDotstarDotpresentationDotDateTimeShape: DateTimeShape = js.native
+  var comDotsunDotstarDotpresentationDotDateTimeShape: DateTimeShape
   @JSName("com.sun.star.presentation.DocumentSettings")
-  var comDotsunDotstarDotpresentationDotDocumentSettings: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.DocumentSettings = js.native
+  var comDotsunDotstarDotpresentationDotDocumentSettings: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.DocumentSettings
   @JSName("com.sun.star.presentation.DrawPage")
-  var comDotsunDotstarDotpresentationDotDrawPage: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.DrawPage = js.native
+  var comDotsunDotstarDotpresentationDotDrawPage: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.DrawPage
   @JSName("com.sun.star.presentation.FooterShape")
-  var comDotsunDotstarDotpresentationDotFooterShape: FooterShape = js.native
+  var comDotsunDotstarDotpresentationDotFooterShape: FooterShape
   @JSName("com.sun.star.presentation.GraphicObjectShape")
-  var comDotsunDotstarDotpresentationDotGraphicObjectShape: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.GraphicObjectShape = js.native
+  var comDotsunDotstarDotpresentationDotGraphicObjectShape: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.GraphicObjectShape
   @JSName("com.sun.star.presentation.HandoutShape")
-  var comDotsunDotstarDotpresentationDotHandoutShape: HandoutShape = js.native
+  var comDotsunDotstarDotpresentationDotHandoutShape: HandoutShape
   @JSName("com.sun.star.presentation.HandoutView")
-  var comDotsunDotstarDotpresentationDotHandoutView: HandoutView = js.native
+  var comDotsunDotstarDotpresentationDotHandoutView: HandoutView
   @JSName("com.sun.star.presentation.HeaderShape")
-  var comDotsunDotstarDotpresentationDotHeaderShape: HeaderShape = js.native
+  var comDotsunDotstarDotpresentationDotHeaderShape: HeaderShape
   @JSName("com.sun.star.presentation.NotesShape")
-  var comDotsunDotstarDotpresentationDotNotesShape: NotesShape = js.native
+  var comDotsunDotstarDotpresentationDotNotesShape: NotesShape
   @JSName("com.sun.star.presentation.NotesView")
-  var comDotsunDotstarDotpresentationDotNotesView: NotesView = js.native
+  var comDotsunDotstarDotpresentationDotNotesView: NotesView
   @JSName("com.sun.star.presentation.OLE2Shape")
-  var comDotsunDotstarDotpresentationDotOLE2Shape: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.OLE2Shape = js.native
+  var comDotsunDotstarDotpresentationDotOLE2Shape: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.OLE2Shape
   @JSName("com.sun.star.presentation.OutlineView")
-  var comDotsunDotstarDotpresentationDotOutlineView: OutlineView = js.native
+  var comDotsunDotstarDotpresentationDotOutlineView: OutlineView
   @JSName("com.sun.star.presentation.OutlinerShape")
-  var comDotsunDotstarDotpresentationDotOutlinerShape: OutlinerShape = js.native
+  var comDotsunDotstarDotpresentationDotOutlinerShape: OutlinerShape
   @JSName("com.sun.star.presentation.PageShape")
-  var comDotsunDotstarDotpresentationDotPageShape: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.PageShape = js.native
+  var comDotsunDotstarDotpresentationDotPageShape: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.PageShape
   @JSName("com.sun.star.presentation.Presentation")
-  var comDotsunDotstarDotpresentationDotPresentation: Presentation = js.native
+  var comDotsunDotstarDotpresentationDotPresentation: Presentation
   @JSName("com.sun.star.presentation.Presentation2")
-  var comDotsunDotstarDotpresentationDotPresentation2: Presentation2 = js.native
+  var comDotsunDotstarDotpresentationDotPresentation2: Presentation2
   @JSName("com.sun.star.presentation.PresentationDocument")
-  var comDotsunDotstarDotpresentationDotPresentationDocument: PresentationDocument = js.native
+  var comDotsunDotstarDotpresentationDotPresentationDocument: PresentationDocument
   @JSName("com.sun.star.presentation.PresentationView")
-  var comDotsunDotstarDotpresentationDotPresentationView: PresentationView = js.native
+  var comDotsunDotstarDotpresentationDotPresentationView: PresentationView
   @JSName("com.sun.star.presentation.PreviewView")
-  var comDotsunDotstarDotpresentationDotPreviewView: PreviewView = js.native
+  var comDotsunDotstarDotpresentationDotPreviewView: PreviewView
   @JSName("com.sun.star.presentation.Shape")
-  var comDotsunDotstarDotpresentationDotShape: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.Shape = js.native
+  var comDotsunDotstarDotpresentationDotShape: typingsSlinky.activexLibreoffice.com_.sun.star.presentation.Shape
   @JSName("com.sun.star.presentation.SlideNumberShape")
-  var comDotsunDotstarDotpresentationDotSlideNumberShape: SlideNumberShape = js.native
+  var comDotsunDotstarDotpresentationDotSlideNumberShape: SlideNumberShape
   @JSName("com.sun.star.presentation.SlideShow")
-  var comDotsunDotstarDotpresentationDotSlideShow: SlideShow = js.native
+  var comDotsunDotstarDotpresentationDotSlideShow: SlideShow
   @JSName("com.sun.star.presentation.SlidesView")
-  var comDotsunDotstarDotpresentationDotSlidesView: SlidesView = js.native
+  var comDotsunDotstarDotpresentationDotSlidesView: SlidesView
   @JSName("com.sun.star.presentation.SubtitleShape")
-  var comDotsunDotstarDotpresentationDotSubtitleShape: SubtitleShape = js.native
+  var comDotsunDotstarDotpresentationDotSubtitleShape: SubtitleShape
   @JSName("com.sun.star.presentation.TitleTextShape")
-  var comDotsunDotstarDotpresentationDotTitleTextShape: TitleTextShape = js.native
+  var comDotsunDotstarDotpresentationDotTitleTextShape: TitleTextShape
   @JSName("com.sun.star.presentation.TransitionFactory")
-  var comDotsunDotstarDotpresentationDotTransitionFactory: TransitionFactory = js.native
+  var comDotsunDotstarDotpresentationDotTransitionFactory: TransitionFactory
   @JSName("com.sun.star.presentation.textfield.DateTime")
-  var comDotsunDotstarDotpresentationDottextfieldDotDateTime: DateTime = js.native
+  var comDotsunDotstarDotpresentationDottextfieldDotDateTime: DateTime
   @JSName("com.sun.star.presentation.textfield.Footer")
-  var comDotsunDotstarDotpresentationDottextfieldDotFooter: Footer = js.native
+  var comDotsunDotstarDotpresentationDottextfieldDotFooter: Footer
   @JSName("com.sun.star.presentation.textfield.Header")
-  var comDotsunDotstarDotpresentationDottextfieldDotHeader: Header = js.native
+  var comDotsunDotstarDotpresentationDottextfieldDotHeader: Header
   @JSName("com.sun.star.rdf.BlankNode")
-  var comDotsunDotstarDotrdfDotBlankNode: BlankNode = js.native
+  var comDotsunDotstarDotrdfDotBlankNode: BlankNode
   @JSName("com.sun.star.rdf.Literal")
-  var comDotsunDotstarDotrdfDotLiteral: Literal = js.native
+  var comDotsunDotstarDotrdfDotLiteral: Literal
   @JSName("com.sun.star.rdf.Repository")
-  var comDotsunDotstarDotrdfDotRepository: Repository = js.native
+  var comDotsunDotstarDotrdfDotRepository: Repository
   @JSName("com.sun.star.rdf.URI")
-  var comDotsunDotstarDotrdfDotURI: URI = js.native
+  var comDotsunDotstarDotrdfDotURI: URI
   @JSName("com.sun.star.reflection.CoreReflection")
-  var comDotsunDotstarDotreflectionDotCoreReflection: CoreReflection = js.native
+  var comDotsunDotstarDotreflectionDotCoreReflection: CoreReflection
   @JSName("com.sun.star.reflection.ProxyFactory")
-  var comDotsunDotstarDotreflectionDotProxyFactory: ProxyFactory = js.native
+  var comDotsunDotstarDotreflectionDotProxyFactory: ProxyFactory
   @JSName("com.sun.star.reflection.TypeDescriptionManager")
-  var comDotsunDotstarDotreflectionDotTypeDescriptionManager: TypeDescriptionManager = js.native
+  var comDotsunDotstarDotreflectionDotTypeDescriptionManager: TypeDescriptionManager
   @JSName("com.sun.star.reflection.TypeDescriptionProvider")
-  var comDotsunDotstarDotreflectionDotTypeDescriptionProvider: TypeDescriptionProvider = js.native
+  var comDotsunDotstarDotreflectionDotTypeDescriptionProvider: TypeDescriptionProvider
   @JSName("com.sun.star.registry.DefaultRegistry")
-  var comDotsunDotstarDotregistryDotDefaultRegistry: DefaultRegistry = js.native
+  var comDotsunDotstarDotregistryDotDefaultRegistry: DefaultRegistry
   @JSName("com.sun.star.registry.ImplementationRegistration")
-  var comDotsunDotstarDotregistryDotImplementationRegistration: ImplementationRegistration = js.native
+  var comDotsunDotstarDotregistryDotImplementationRegistration: ImplementationRegistration
   @JSName("com.sun.star.registry.NestedRegistry")
-  var comDotsunDotstarDotregistryDotNestedRegistry: NestedRegistry = js.native
+  var comDotsunDotstarDotregistryDotNestedRegistry: NestedRegistry
   @JSName("com.sun.star.registry.SimpleRegistry")
-  var comDotsunDotstarDotregistryDotSimpleRegistry: SimpleRegistry = js.native
+  var comDotsunDotstarDotregistryDotSimpleRegistry: SimpleRegistry
   @JSName("com.sun.star.rendering.BitmapCanvas")
-  var comDotsunDotstarDotrenderingDotBitmapCanvas: BitmapCanvas = js.native
+  var comDotsunDotstarDotrenderingDotBitmapCanvas: BitmapCanvas
   @JSName("com.sun.star.rendering.Canvas")
-  var comDotsunDotstarDotrenderingDotCanvas: Canvas = js.native
+  var comDotsunDotstarDotrenderingDotCanvas: Canvas
   @JSName("com.sun.star.rendering.CanvasFactory")
-  var comDotsunDotstarDotrenderingDotCanvasFactory: CanvasFactory = js.native
+  var comDotsunDotstarDotrenderingDotCanvasFactory: CanvasFactory
   @JSName("com.sun.star.rendering.MtfRenderer")
-  var comDotsunDotstarDotrenderingDotMtfRenderer: MtfRenderer = js.native
+  var comDotsunDotstarDotrenderingDotMtfRenderer: MtfRenderer
   @JSName("com.sun.star.report.FixedLine")
-  var comDotsunDotstarDotreportDotFixedLine: FixedLine = js.native
+  var comDotsunDotstarDotreportDotFixedLine: FixedLine
   @JSName("com.sun.star.report.FixedText")
-  var comDotsunDotstarDotreportDotFixedText: typingsSlinky.activexLibreoffice.com_.sun.star.report.FixedText = js.native
+  var comDotsunDotstarDotreportDotFixedText: typingsSlinky.activexLibreoffice.com_.sun.star.report.FixedText
   @JSName("com.sun.star.report.FormatCondition")
-  var comDotsunDotstarDotreportDotFormatCondition: FormatCondition = js.native
+  var comDotsunDotstarDotreportDotFormatCondition: FormatCondition
   @JSName("com.sun.star.report.FormattedField")
-  var comDotsunDotstarDotreportDotFormattedField: typingsSlinky.activexLibreoffice.com_.sun.star.report.FormattedField = js.native
+  var comDotsunDotstarDotreportDotFormattedField: typingsSlinky.activexLibreoffice.com_.sun.star.report.FormattedField
   @JSName("com.sun.star.report.Function")
-  var comDotsunDotstarDotreportDotFunction: Function = js.native
+  var comDotsunDotstarDotreportDotFunction: Function
   @JSName("com.sun.star.report.Group")
-  var comDotsunDotstarDotreportDotGroup: Group = js.native
+  var comDotsunDotstarDotreportDotGroup: Group
   @JSName("com.sun.star.report.Groups")
-  var comDotsunDotstarDotreportDotGroups: Groups = js.native
+  var comDotsunDotstarDotreportDotGroups: Groups
   @JSName("com.sun.star.report.ImageControl")
-  var comDotsunDotstarDotreportDotImageControl: typingsSlinky.activexLibreoffice.com_.sun.star.report.ImageControl = js.native
+  var comDotsunDotstarDotreportDotImageControl: typingsSlinky.activexLibreoffice.com_.sun.star.report.ImageControl
   @JSName("com.sun.star.report.ReportControlFormat")
-  var comDotsunDotstarDotreportDotReportControlFormat: ReportControlFormat = js.native
+  var comDotsunDotstarDotreportDotReportControlFormat: ReportControlFormat
   @JSName("com.sun.star.report.ReportControlModel")
-  var comDotsunDotstarDotreportDotReportControlModel: ReportControlModel = js.native
+  var comDotsunDotstarDotreportDotReportControlModel: ReportControlModel
   @JSName("com.sun.star.report.ReportDefinition")
-  var comDotsunDotstarDotreportDotReportDefinition: ReportDefinition = js.native
+  var comDotsunDotstarDotreportDotReportDefinition: ReportDefinition
   @JSName("com.sun.star.report.ReportEngine")
-  var comDotsunDotstarDotreportDotReportEngine: ReportEngine = js.native
+  var comDotsunDotstarDotreportDotReportEngine: ReportEngine
   @JSName("com.sun.star.report.Section")
-  var comDotsunDotstarDotreportDotSection: Section = js.native
+  var comDotsunDotstarDotreportDotSection: Section
   @JSName("com.sun.star.report.Shape")
-  var comDotsunDotstarDotreportDotShape: typingsSlinky.activexLibreoffice.com_.sun.star.report.Shape = js.native
+  var comDotsunDotstarDotreportDotShape: typingsSlinky.activexLibreoffice.com_.sun.star.report.Shape
   @JSName("com.sun.star.report.inspection.DataProviderHandler")
-  var comDotsunDotstarDotreportDotinspectionDotDataProviderHandler: DataProviderHandler = js.native
+  var comDotsunDotstarDotreportDotinspectionDotDataProviderHandler: DataProviderHandler
   @JSName("com.sun.star.report.inspection.DefaultComponentInspectorModel")
-  var comDotsunDotstarDotreportDotinspectionDotDefaultComponentInspectorModel: DefaultComponentInspectorModel = js.native
+  var comDotsunDotstarDotreportDotinspectionDotDefaultComponentInspectorModel: DefaultComponentInspectorModel
   @JSName("com.sun.star.report.inspection.ReportComponentHandler")
-  var comDotsunDotstarDotreportDotinspectionDotReportComponentHandler: ReportComponentHandler = js.native
+  var comDotsunDotstarDotreportDotinspectionDotReportComponentHandler: ReportComponentHandler
   @JSName("com.sun.star.resource.StringResource")
-  var comDotsunDotstarDotresourceDotStringResource: StringResource = js.native
+  var comDotsunDotstarDotresourceDotStringResource: StringResource
   @JSName("com.sun.star.resource.StringResourceWithLocation")
-  var comDotsunDotstarDotresourceDotStringResourceWithLocation: StringResourceWithLocation = js.native
+  var comDotsunDotstarDotresourceDotStringResourceWithLocation: StringResourceWithLocation
   @JSName("com.sun.star.resource.StringResourceWithStorage")
-  var comDotsunDotstarDotresourceDotStringResourceWithStorage: StringResourceWithStorage = js.native
+  var comDotsunDotstarDotresourceDotStringResourceWithStorage: StringResourceWithStorage
   @JSName("com.sun.star.scanner.ScannerManager")
-  var comDotsunDotstarDotscannerDotScannerManager: ScannerManager = js.native
+  var comDotsunDotstarDotscannerDotScannerManager: ScannerManager
   @JSName("com.sun.star.script.AllListenerAdapter")
-  var comDotsunDotstarDotscriptDotAllListenerAdapter: AllListenerAdapter = js.native
+  var comDotsunDotstarDotscriptDotAllListenerAdapter: AllListenerAdapter
   @JSName("com.sun.star.script.Converter")
-  var comDotsunDotstarDotscriptDotConverter: Converter = js.native
+  var comDotsunDotstarDotscriptDotConverter: Converter
   @JSName("com.sun.star.script.DocumentDialogLibraryContainer")
-  var comDotsunDotstarDotscriptDotDocumentDialogLibraryContainer: DocumentDialogLibraryContainer = js.native
+  var comDotsunDotstarDotscriptDotDocumentDialogLibraryContainer: DocumentDialogLibraryContainer
   @JSName("com.sun.star.script.DocumentScriptLibraryContainer")
-  var comDotsunDotstarDotscriptDotDocumentScriptLibraryContainer: DocumentScriptLibraryContainer = js.native
+  var comDotsunDotstarDotscriptDotDocumentScriptLibraryContainer: DocumentScriptLibraryContainer
   @JSName("com.sun.star.script.Engine")
-  var comDotsunDotstarDotscriptDotEngine: Engine = js.native
+  var comDotsunDotstarDotscriptDotEngine: Engine
   @JSName("com.sun.star.script.Invocation")
-  var comDotsunDotstarDotscriptDotInvocation: Invocation = js.native
+  var comDotsunDotstarDotscriptDotInvocation: Invocation
   @JSName("com.sun.star.script.InvocationAdapterFactory")
-  var comDotsunDotstarDotscriptDotInvocationAdapterFactory: InvocationAdapterFactory = js.native
+  var comDotsunDotstarDotscriptDotInvocationAdapterFactory: InvocationAdapterFactory
   @JSName("com.sun.star.script.JavaScript")
-  var comDotsunDotstarDotscriptDotJavaScript: JavaScript = js.native
+  var comDotsunDotstarDotscriptDotJavaScript: JavaScript
   @JSName("com.sun.star.script.browse.BrowseNode")
-  var comDotsunDotstarDotscriptDotbrowseDotBrowseNode: BrowseNode = js.native
+  var comDotsunDotstarDotscriptDotbrowseDotBrowseNode: BrowseNode
   @JSName("com.sun.star.script.browse.BrowseNodeFactory")
-  var comDotsunDotstarDotscriptDotbrowseDotBrowseNodeFactory: BrowseNodeFactory = js.native
+  var comDotsunDotstarDotscriptDotbrowseDotBrowseNodeFactory: BrowseNodeFactory
   @JSName("com.sun.star.script.provider.LanguageScriptProvider")
-  var comDotsunDotstarDotscriptDotproviderDotLanguageScriptProvider: LanguageScriptProvider = js.native
+  var comDotsunDotstarDotscriptDotproviderDotLanguageScriptProvider: LanguageScriptProvider
   @JSName("com.sun.star.script.provider.MasterScriptProvider")
-  var comDotsunDotstarDotscriptDotproviderDotMasterScriptProvider: MasterScriptProvider = js.native
+  var comDotsunDotstarDotscriptDotproviderDotMasterScriptProvider: MasterScriptProvider
   @JSName("com.sun.star.script.provider.MasterScriptProviderFactory")
-  var comDotsunDotstarDotscriptDotproviderDotMasterScriptProviderFactory: MasterScriptProviderFactory = js.native
+  var comDotsunDotstarDotscriptDotproviderDotMasterScriptProviderFactory: MasterScriptProviderFactory
   @JSName("com.sun.star.script.provider.ScriptProvider")
-  var comDotsunDotstarDotscriptDotproviderDotScriptProvider: ScriptProvider = js.native
+  var comDotsunDotstarDotscriptDotproviderDotScriptProvider: ScriptProvider
   @JSName("com.sun.star.script.provider.ScriptProviderForBasic")
-  var comDotsunDotstarDotscriptDotproviderDotScriptProviderForBasic: ScriptProviderForBasic = js.native
+  var comDotsunDotstarDotscriptDotproviderDotScriptProviderForBasic: ScriptProviderForBasic
   @JSName("com.sun.star.script.provider.ScriptProviderForBeanShell")
-  var comDotsunDotstarDotscriptDotproviderDotScriptProviderForBeanShell: ScriptProviderForBeanShell = js.native
+  var comDotsunDotstarDotscriptDotproviderDotScriptProviderForBeanShell: ScriptProviderForBeanShell
   @JSName("com.sun.star.script.provider.ScriptProviderForJava")
-  var comDotsunDotstarDotscriptDotproviderDotScriptProviderForJava: ScriptProviderForJava = js.native
+  var comDotsunDotstarDotscriptDotproviderDotScriptProviderForJava: ScriptProviderForJava
   @JSName("com.sun.star.script.provider.ScriptProviderForJavaScript")
-  var comDotsunDotstarDotscriptDotproviderDotScriptProviderForJavaScript: ScriptProviderForJavaScript = js.native
+  var comDotsunDotstarDotscriptDotproviderDotScriptProviderForJavaScript: ScriptProviderForJavaScript
   @JSName("com.sun.star.script.provider.ScriptURIHelper")
-  var comDotsunDotstarDotscriptDotproviderDotScriptURIHelper: ScriptURIHelper = js.native
+  var comDotsunDotstarDotscriptDotproviderDotScriptURIHelper: ScriptURIHelper
   @JSName("com.sun.star.script.vba.VBAEventProcessor")
-  var comDotsunDotstarDotscriptDotvbaDotVBAEventProcessor: VBAEventProcessor = js.native
+  var comDotsunDotstarDotscriptDotvbaDotVBAEventProcessor: VBAEventProcessor
   @JSName("com.sun.star.script.vba.VBAMacroResolver")
-  var comDotsunDotstarDotscriptDotvbaDotVBAMacroResolver: VBAMacroResolver = js.native
+  var comDotsunDotstarDotscriptDotvbaDotVBAMacroResolver: VBAMacroResolver
   @JSName("com.sun.star.script.vba.VBASpreadsheetEventProcessor")
-  var comDotsunDotstarDotscriptDotvbaDotVBASpreadsheetEventProcessor: VBASpreadsheetEventProcessor = js.native
+  var comDotsunDotstarDotscriptDotvbaDotVBASpreadsheetEventProcessor: VBASpreadsheetEventProcessor
   @JSName("com.sun.star.script.vba.VBATextEventProcessor")
-  var comDotsunDotstarDotscriptDotvbaDotVBATextEventProcessor: VBATextEventProcessor = js.native
+  var comDotsunDotstarDotscriptDotvbaDotVBATextEventProcessor: VBATextEventProcessor
   @JSName("com.sun.star.sdb.CallableStatement")
-  var comDotsunDotstarDotsdbDotCallableStatement: CallableStatement = js.native
+  var comDotsunDotstarDotsdbDotCallableStatement: CallableStatement
   @JSName("com.sun.star.sdb.Column")
-  var comDotsunDotstarDotsdbDotColumn: Column = js.native
+  var comDotsunDotstarDotsdbDotColumn: Column
   @JSName("com.sun.star.sdb.ColumnDescriptorControl")
-  var comDotsunDotstarDotsdbDotColumnDescriptorControl: ColumnDescriptorControl = js.native
+  var comDotsunDotstarDotsdbDotColumnDescriptorControl: ColumnDescriptorControl
   @JSName("com.sun.star.sdb.ColumnDescriptorControlModel")
-  var comDotsunDotstarDotsdbDotColumnDescriptorControlModel: ColumnDescriptorControlModel = js.native
+  var comDotsunDotstarDotsdbDotColumnDescriptorControlModel: ColumnDescriptorControlModel
   @JSName("com.sun.star.sdb.ColumnSettings")
-  var comDotsunDotstarDotsdbDotColumnSettings: ColumnSettings = js.native
+  var comDotsunDotstarDotsdbDotColumnSettings: ColumnSettings
   @JSName("com.sun.star.sdb.CommandDefinition")
-  var comDotsunDotstarDotsdbDotCommandDefinition: CommandDefinition = js.native
+  var comDotsunDotstarDotsdbDotCommandDefinition: CommandDefinition
   @JSName("com.sun.star.sdb.Connection")
-  var comDotsunDotstarDotsdbDotConnection: Connection = js.native
+  var comDotsunDotstarDotsdbDotConnection: Connection
   @JSName("com.sun.star.sdb.ContentLoader")
-  var comDotsunDotstarDotsdbDotContentLoader: ContentLoader = js.native
+  var comDotsunDotstarDotsdbDotContentLoader: ContentLoader
   @JSName("com.sun.star.sdb.DataAccessDescriptor")
-  var comDotsunDotstarDotsdbDotDataAccessDescriptor: DataAccessDescriptor = js.native
+  var comDotsunDotstarDotsdbDotDataAccessDescriptor: DataAccessDescriptor
   @JSName("com.sun.star.sdb.DataColumn")
-  var comDotsunDotstarDotsdbDotDataColumn: DataColumn = js.native
+  var comDotsunDotstarDotsdbDotDataColumn: DataColumn
   @JSName("com.sun.star.sdb.DataSettings")
-  var comDotsunDotstarDotsdbDotDataSettings: DataSettings = js.native
+  var comDotsunDotstarDotsdbDotDataSettings: DataSettings
   @JSName("com.sun.star.sdb.DataSource")
-  var comDotsunDotstarDotsdbDotDataSource: typingsSlinky.activexLibreoffice.com_.sun.star.sdb.DataSource = js.native
+  var comDotsunDotstarDotsdbDotDataSource: typingsSlinky.activexLibreoffice.com_.sun.star.sdb.DataSource
   @JSName("com.sun.star.sdb.DataSourceBrowser")
-  var comDotsunDotstarDotsdbDotDataSourceBrowser: DataSourceBrowser = js.native
+  var comDotsunDotstarDotsdbDotDataSourceBrowser: DataSourceBrowser
   @JSName("com.sun.star.sdb.DatabaseAccess")
-  var comDotsunDotstarDotsdbDotDatabaseAccess: DatabaseAccess = js.native
+  var comDotsunDotstarDotsdbDotDatabaseAccess: DatabaseAccess
   @JSName("com.sun.star.sdb.DatabaseAccessConnection")
-  var comDotsunDotstarDotsdbDotDatabaseAccessConnection: DatabaseAccessConnection = js.native
+  var comDotsunDotstarDotsdbDotDatabaseAccessConnection: DatabaseAccessConnection
   @JSName("com.sun.star.sdb.DatabaseAccessContext")
-  var comDotsunDotstarDotsdbDotDatabaseAccessContext: DatabaseAccessContext = js.native
+  var comDotsunDotstarDotsdbDotDatabaseAccessContext: DatabaseAccessContext
   @JSName("com.sun.star.sdb.DatabaseAccessDataSource")
-  var comDotsunDotstarDotsdbDotDatabaseAccessDataSource: DatabaseAccessDataSource = js.native
+  var comDotsunDotstarDotsdbDotDatabaseAccessDataSource: DatabaseAccessDataSource
   @JSName("com.sun.star.sdb.DatabaseContext")
-  var comDotsunDotstarDotsdbDotDatabaseContext: DatabaseContext = js.native
+  var comDotsunDotstarDotsdbDotDatabaseContext: DatabaseContext
   @JSName("com.sun.star.sdb.DatabaseDocument")
-  var comDotsunDotstarDotsdbDotDatabaseDocument: DatabaseDocument = js.native
+  var comDotsunDotstarDotsdbDotDatabaseDocument: DatabaseDocument
   @JSName("com.sun.star.sdb.DatabaseEnvironment")
-  var comDotsunDotstarDotsdbDotDatabaseEnvironment: DatabaseEnvironment = js.native
+  var comDotsunDotstarDotsdbDotDatabaseEnvironment: DatabaseEnvironment
   @JSName("com.sun.star.sdb.DatabaseInteractionHandler")
-  var comDotsunDotstarDotsdbDotDatabaseInteractionHandler: DatabaseInteractionHandler = js.native
+  var comDotsunDotstarDotsdbDotDatabaseInteractionHandler: DatabaseInteractionHandler
   @JSName("com.sun.star.sdb.DatasourceAdministrationDialog")
-  var comDotsunDotstarDotsdbDotDatasourceAdministrationDialog: DatasourceAdministrationDialog = js.native
+  var comDotsunDotstarDotsdbDotDatasourceAdministrationDialog: DatasourceAdministrationDialog
   @JSName("com.sun.star.sdb.DefinitionContainer")
-  var comDotsunDotstarDotsdbDotDefinitionContainer: DefinitionContainer = js.native
+  var comDotsunDotstarDotsdbDotDefinitionContainer: DefinitionContainer
   @JSName("com.sun.star.sdb.DefinitionContent")
-  var comDotsunDotstarDotsdbDotDefinitionContent: DefinitionContent = js.native
+  var comDotsunDotstarDotsdbDotDefinitionContent: DefinitionContent
   @JSName("com.sun.star.sdb.Document")
-  var comDotsunDotstarDotsdbDotDocument: Document = js.native
+  var comDotsunDotstarDotsdbDotDocument: Document
   @JSName("com.sun.star.sdb.DocumentContainer")
-  var comDotsunDotstarDotsdbDotDocumentContainer: DocumentContainer = js.native
+  var comDotsunDotstarDotsdbDotDocumentContainer: DocumentContainer
   @JSName("com.sun.star.sdb.DocumentDataSource")
-  var comDotsunDotstarDotsdbDotDocumentDataSource: DocumentDataSource = js.native
+  var comDotsunDotstarDotsdbDotDocumentDataSource: DocumentDataSource
   @JSName("com.sun.star.sdb.DocumentDefinition")
-  var comDotsunDotstarDotsdbDotDocumentDefinition: DocumentDefinition = js.native
+  var comDotsunDotstarDotsdbDotDocumentDefinition: DocumentDefinition
   @JSName("com.sun.star.sdb.ErrorMessageDialog")
-  var comDotsunDotstarDotsdbDotErrorMessageDialog: ErrorMessageDialog = js.native
+  var comDotsunDotstarDotsdbDotErrorMessageDialog: ErrorMessageDialog
   @JSName("com.sun.star.sdb.FilterDialog")
-  var comDotsunDotstarDotsdbDotFilterDialog: FilterDialog = js.native
+  var comDotsunDotstarDotsdbDotFilterDialog: FilterDialog
   @JSName("com.sun.star.sdb.Forms")
-  var comDotsunDotstarDotsdbDotForms: typingsSlinky.activexLibreoffice.com_.sun.star.sdb.Forms = js.native
+  var comDotsunDotstarDotsdbDotForms: typingsSlinky.activexLibreoffice.com_.sun.star.sdb.Forms
   @JSName("com.sun.star.sdb.InteractionHandler")
-  var comDotsunDotstarDotsdbDotInteractionHandler: typingsSlinky.activexLibreoffice.com_.sun.star.sdb.InteractionHandler = js.native
+  var comDotsunDotstarDotsdbDotInteractionHandler: typingsSlinky.activexLibreoffice.com_.sun.star.sdb.InteractionHandler
   @JSName("com.sun.star.sdb.OfficeDatabaseDocument")
-  var comDotsunDotstarDotsdbDotOfficeDatabaseDocument: OfficeDatabaseDocument = js.native
+  var comDotsunDotstarDotsdbDotOfficeDatabaseDocument: OfficeDatabaseDocument
   @JSName("com.sun.star.sdb.OrderColumn")
-  var comDotsunDotstarDotsdbDotOrderColumn: OrderColumn = js.native
+  var comDotsunDotstarDotsdbDotOrderColumn: OrderColumn
   @JSName("com.sun.star.sdb.OrderDialog")
-  var comDotsunDotstarDotsdbDotOrderDialog: OrderDialog = js.native
+  var comDotsunDotstarDotsdbDotOrderDialog: OrderDialog
   @JSName("com.sun.star.sdb.PreparedStatement")
-  var comDotsunDotstarDotsdbDotPreparedStatement: PreparedStatement = js.native
+  var comDotsunDotstarDotsdbDotPreparedStatement: PreparedStatement
   @JSName("com.sun.star.sdb.Query")
-  var comDotsunDotstarDotsdbDotQuery: Query = js.native
+  var comDotsunDotstarDotsdbDotQuery: Query
   @JSName("com.sun.star.sdb.QueryDefinition")
-  var comDotsunDotstarDotsdbDotQueryDefinition: QueryDefinition = js.native
+  var comDotsunDotstarDotsdbDotQueryDefinition: QueryDefinition
   @JSName("com.sun.star.sdb.QueryDescriptor")
-  var comDotsunDotstarDotsdbDotQueryDescriptor: QueryDescriptor = js.native
+  var comDotsunDotstarDotsdbDotQueryDescriptor: QueryDescriptor
   @JSName("com.sun.star.sdb.QueryDesign")
-  var comDotsunDotstarDotsdbDotQueryDesign: QueryDesign = js.native
+  var comDotsunDotstarDotsdbDotQueryDesign: QueryDesign
   @JSName("com.sun.star.sdb.RelationDesign")
-  var comDotsunDotstarDotsdbDotRelationDesign: RelationDesign = js.native
+  var comDotsunDotstarDotsdbDotRelationDesign: RelationDesign
   @JSName("com.sun.star.sdb.ReportDesign")
-  var comDotsunDotstarDotsdbDotReportDesign: ReportDesign = js.native
+  var comDotsunDotstarDotsdbDotReportDesign: ReportDesign
   @JSName("com.sun.star.sdb.Reports")
-  var comDotsunDotstarDotsdbDotReports: Reports = js.native
+  var comDotsunDotstarDotsdbDotReports: Reports
   @JSName("com.sun.star.sdb.ResultColumn")
-  var comDotsunDotstarDotsdbDotResultColumn: ResultColumn = js.native
+  var comDotsunDotstarDotsdbDotResultColumn: ResultColumn
   @JSName("com.sun.star.sdb.ResultSet")
-  var comDotsunDotstarDotsdbDotResultSet: ResultSet = js.native
+  var comDotsunDotstarDotsdbDotResultSet: ResultSet
   @JSName("com.sun.star.sdb.RowSet")
-  var comDotsunDotstarDotsdbDotRowSet: RowSet = js.native
+  var comDotsunDotstarDotsdbDotRowSet: RowSet
   @JSName("com.sun.star.sdb.SQLQueryComposer")
-  var comDotsunDotstarDotsdbDotSQLQueryComposer: SQLQueryComposer = js.native
+  var comDotsunDotstarDotsdbDotSQLQueryComposer: SQLQueryComposer
   @JSName("com.sun.star.sdb.SingleSelectQueryAnalyzer")
-  var comDotsunDotstarDotsdbDotSingleSelectQueryAnalyzer: SingleSelectQueryAnalyzer = js.native
+  var comDotsunDotstarDotsdbDotSingleSelectQueryAnalyzer: SingleSelectQueryAnalyzer
   @JSName("com.sun.star.sdb.SingleSelectQueryComposer")
-  var comDotsunDotstarDotsdbDotSingleSelectQueryComposer: SingleSelectQueryComposer = js.native
+  var comDotsunDotstarDotsdbDotSingleSelectQueryComposer: SingleSelectQueryComposer
   @JSName("com.sun.star.sdb.Table")
-  var comDotsunDotstarDotsdbDotTable: Table = js.native
+  var comDotsunDotstarDotsdbDotTable: Table
   @JSName("com.sun.star.sdb.TableDefinition")
-  var comDotsunDotstarDotsdbDotTableDefinition: TableDefinition = js.native
+  var comDotsunDotstarDotsdbDotTableDefinition: TableDefinition
   @JSName("com.sun.star.sdb.TableDescriptor")
-  var comDotsunDotstarDotsdbDotTableDescriptor: TableDescriptor = js.native
+  var comDotsunDotstarDotsdbDotTableDescriptor: TableDescriptor
   @JSName("com.sun.star.sdb.TableDesign")
-  var comDotsunDotstarDotsdbDotTableDesign: TableDesign = js.native
+  var comDotsunDotstarDotsdbDotTableDesign: TableDesign
   @JSName("com.sun.star.sdb.TextConnectionSettings")
-  var comDotsunDotstarDotsdbDotTextConnectionSettings: TextConnectionSettings = js.native
+  var comDotsunDotstarDotsdbDotTextConnectionSettings: TextConnectionSettings
   @JSName("com.sun.star.sdb.application.CopyTableWizard")
-  var comDotsunDotstarDotsdbDotapplicationDotCopyTableWizard: CopyTableWizard = js.native
+  var comDotsunDotstarDotsdbDotapplicationDotCopyTableWizard: CopyTableWizard
   @JSName("com.sun.star.sdb.application.DefaultViewController")
-  var comDotsunDotstarDotsdbDotapplicationDotDefaultViewController: DefaultViewController = js.native
+  var comDotsunDotstarDotsdbDotapplicationDotDefaultViewController: DefaultViewController
   @JSName("com.sun.star.sdb.application.MacroMigrationWizard")
-  var comDotsunDotstarDotsdbDotapplicationDotMacroMigrationWizard: MacroMigrationWizard = js.native
+  var comDotsunDotstarDotsdbDotapplicationDotMacroMigrationWizard: MacroMigrationWizard
   @JSName("com.sun.star.sdb.tools.ConnectionTools")
-  var comDotsunDotstarDotsdbDottoolsDotConnectionTools: ConnectionTools = js.native
+  var comDotsunDotstarDotsdbDottoolsDotConnectionTools: ConnectionTools
   @JSName("com.sun.star.sdbc.CallableStatement")
-  var comDotsunDotstarDotsdbcDotCallableStatement: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.CallableStatement = js.native
+  var comDotsunDotstarDotsdbcDotCallableStatement: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.CallableStatement
   @JSName("com.sun.star.sdbc.Connection")
-  var comDotsunDotstarDotsdbcDotConnection: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.Connection = js.native
+  var comDotsunDotstarDotsdbcDotConnection: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.Connection
   @JSName("com.sun.star.sdbc.ConnectionPool")
-  var comDotsunDotstarDotsdbcDotConnectionPool: ConnectionPool = js.native
+  var comDotsunDotstarDotsdbcDotConnectionPool: ConnectionPool
   @JSName("com.sun.star.sdbc.ConnectionProperties")
-  var comDotsunDotstarDotsdbcDotConnectionProperties: ConnectionProperties = js.native
+  var comDotsunDotstarDotsdbcDotConnectionProperties: ConnectionProperties
   @JSName("com.sun.star.sdbc.DBASEConnectionProperties")
-  var comDotsunDotstarDotsdbcDotDBASEConnectionProperties: DBASEConnectionProperties = js.native
+  var comDotsunDotstarDotsdbcDotDBASEConnectionProperties: DBASEConnectionProperties
   @JSName("com.sun.star.sdbc.Driver")
-  var comDotsunDotstarDotsdbcDotDriver: Driver = js.native
+  var comDotsunDotstarDotsdbcDotDriver: Driver
   @JSName("com.sun.star.sdbc.DriverManager")
-  var comDotsunDotstarDotsdbcDotDriverManager: DriverManager = js.native
+  var comDotsunDotstarDotsdbcDotDriverManager: DriverManager
   @JSName("com.sun.star.sdbc.FILEConnectionProperties")
-  var comDotsunDotstarDotsdbcDotFILEConnectionProperties: FILEConnectionProperties = js.native
+  var comDotsunDotstarDotsdbcDotFILEConnectionProperties: FILEConnectionProperties
   @JSName("com.sun.star.sdbc.FLATConnectionProperties")
-  var comDotsunDotstarDotsdbcDotFLATConnectionProperties: FLATConnectionProperties = js.native
+  var comDotsunDotstarDotsdbcDotFLATConnectionProperties: FLATConnectionProperties
   @JSName("com.sun.star.sdbc.JDBCConnectionProperties")
-  var comDotsunDotstarDotsdbcDotJDBCConnectionProperties: JDBCConnectionProperties = js.native
+  var comDotsunDotstarDotsdbcDotJDBCConnectionProperties: JDBCConnectionProperties
   @JSName("com.sun.star.sdbc.ODBCConnectionProperties")
-  var comDotsunDotstarDotsdbcDotODBCConnectionProperties: ODBCConnectionProperties = js.native
+  var comDotsunDotstarDotsdbcDotODBCConnectionProperties: ODBCConnectionProperties
   @JSName("com.sun.star.sdbc.PreparedStatement")
-  var comDotsunDotstarDotsdbcDotPreparedStatement: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.PreparedStatement = js.native
+  var comDotsunDotstarDotsdbcDotPreparedStatement: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.PreparedStatement
   @JSName("com.sun.star.sdbc.ResultSet")
-  var comDotsunDotstarDotsdbcDotResultSet: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.ResultSet = js.native
+  var comDotsunDotstarDotsdbcDotResultSet: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.ResultSet
   @JSName("com.sun.star.sdbc.RowSet")
-  var comDotsunDotstarDotsdbcDotRowSet: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.RowSet = js.native
+  var comDotsunDotstarDotsdbcDotRowSet: typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.RowSet
   @JSName("com.sun.star.sdbc.Statement")
-  var comDotsunDotstarDotsdbcDotStatement: Statement = js.native
+  var comDotsunDotstarDotsdbcDotStatement: Statement
   @JSName("com.sun.star.sdbcx.Column")
-  var comDotsunDotstarDotsdbcxDotColumn: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Column = js.native
+  var comDotsunDotstarDotsdbcxDotColumn: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Column
   @JSName("com.sun.star.sdbcx.ColumnDescriptor")
-  var comDotsunDotstarDotsdbcxDotColumnDescriptor: ColumnDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotColumnDescriptor: ColumnDescriptor
   @JSName("com.sun.star.sdbcx.Container")
-  var comDotsunDotstarDotsdbcxDotContainer: Container = js.native
+  var comDotsunDotstarDotsdbcxDotContainer: Container
   @JSName("com.sun.star.sdbcx.DatabaseDefinition")
-  var comDotsunDotstarDotsdbcxDotDatabaseDefinition: DatabaseDefinition = js.native
+  var comDotsunDotstarDotsdbcxDotDatabaseDefinition: DatabaseDefinition
   @JSName("com.sun.star.sdbcx.Descriptor")
-  var comDotsunDotstarDotsdbcxDotDescriptor: Descriptor = js.native
+  var comDotsunDotstarDotsdbcxDotDescriptor: Descriptor
   @JSName("com.sun.star.sdbcx.Driver")
-  var comDotsunDotstarDotsdbcxDotDriver: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Driver = js.native
+  var comDotsunDotstarDotsdbcxDotDriver: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Driver
   @JSName("com.sun.star.sdbcx.Group")
-  var comDotsunDotstarDotsdbcxDotGroup: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Group = js.native
+  var comDotsunDotstarDotsdbcxDotGroup: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Group
   @JSName("com.sun.star.sdbcx.GroupDescriptor")
-  var comDotsunDotstarDotsdbcxDotGroupDescriptor: GroupDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotGroupDescriptor: GroupDescriptor
   @JSName("com.sun.star.sdbcx.Index")
-  var comDotsunDotstarDotsdbcxDotIndex: Index = js.native
+  var comDotsunDotstarDotsdbcxDotIndex: Index
   @JSName("com.sun.star.sdbcx.IndexColumn")
-  var comDotsunDotstarDotsdbcxDotIndexColumn: IndexColumn = js.native
+  var comDotsunDotstarDotsdbcxDotIndexColumn: IndexColumn
   @JSName("com.sun.star.sdbcx.IndexColumnDescriptor")
-  var comDotsunDotstarDotsdbcxDotIndexColumnDescriptor: IndexColumnDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotIndexColumnDescriptor: IndexColumnDescriptor
   @JSName("com.sun.star.sdbcx.IndexDescriptor")
-  var comDotsunDotstarDotsdbcxDotIndexDescriptor: IndexDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotIndexDescriptor: IndexDescriptor
   @JSName("com.sun.star.sdbcx.Key")
-  var comDotsunDotstarDotsdbcxDotKey: Key = js.native
+  var comDotsunDotstarDotsdbcxDotKey: Key
   @JSName("com.sun.star.sdbcx.KeyColumn")
-  var comDotsunDotstarDotsdbcxDotKeyColumn: KeyColumn = js.native
+  var comDotsunDotstarDotsdbcxDotKeyColumn: KeyColumn
   @JSName("com.sun.star.sdbcx.KeyColumnDescriptor")
-  var comDotsunDotstarDotsdbcxDotKeyColumnDescriptor: KeyColumnDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotKeyColumnDescriptor: KeyColumnDescriptor
   @JSName("com.sun.star.sdbcx.KeyDescriptor")
-  var comDotsunDotstarDotsdbcxDotKeyDescriptor: KeyDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotKeyDescriptor: KeyDescriptor
   @JSName("com.sun.star.sdbcx.PreparedStatement")
-  var comDotsunDotstarDotsdbcxDotPreparedStatement: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.PreparedStatement = js.native
+  var comDotsunDotstarDotsdbcxDotPreparedStatement: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.PreparedStatement
   @JSName("com.sun.star.sdbcx.ReferenceColumn")
-  var comDotsunDotstarDotsdbcxDotReferenceColumn: ReferenceColumn = js.native
+  var comDotsunDotstarDotsdbcxDotReferenceColumn: ReferenceColumn
   @JSName("com.sun.star.sdbcx.ResultSet")
-  var comDotsunDotstarDotsdbcxDotResultSet: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.ResultSet = js.native
+  var comDotsunDotstarDotsdbcxDotResultSet: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.ResultSet
   @JSName("com.sun.star.sdbcx.Statement")
-  var comDotsunDotstarDotsdbcxDotStatement: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Statement = js.native
+  var comDotsunDotstarDotsdbcxDotStatement: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Statement
   @JSName("com.sun.star.sdbcx.Table")
-  var comDotsunDotstarDotsdbcxDotTable: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Table = js.native
+  var comDotsunDotstarDotsdbcxDotTable: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.Table
   @JSName("com.sun.star.sdbcx.TableDescriptor")
-  var comDotsunDotstarDotsdbcxDotTableDescriptor: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.TableDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotTableDescriptor: typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.TableDescriptor
   @JSName("com.sun.star.sdbcx.User")
-  var comDotsunDotstarDotsdbcxDotUser: User = js.native
+  var comDotsunDotstarDotsdbcxDotUser: User
   @JSName("com.sun.star.sdbcx.UserDescriptor")
-  var comDotsunDotstarDotsdbcxDotUserDescriptor: UserDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotUserDescriptor: UserDescriptor
   @JSName("com.sun.star.sdbcx.View")
-  var comDotsunDotstarDotsdbcxDotView: View = js.native
+  var comDotsunDotstarDotsdbcxDotView: View
   @JSName("com.sun.star.sdbcx.ViewDescriptor")
-  var comDotsunDotstarDotsdbcxDotViewDescriptor: ViewDescriptor = js.native
+  var comDotsunDotstarDotsdbcxDotViewDescriptor: ViewDescriptor
   @JSName("com.sun.star.security.AccessController")
-  var comDotsunDotstarDotsecurityDotAccessController: AccessController = js.native
+  var comDotsunDotstarDotsecurityDotAccessController: AccessController
   @JSName("com.sun.star.security.CertificateContainer")
-  var comDotsunDotstarDotsecurityDotCertificateContainer: CertificateContainer = js.native
+  var comDotsunDotstarDotsecurityDotCertificateContainer: CertificateContainer
   @JSName("com.sun.star.security.DocumentDigitalSignatures")
-  var comDotsunDotstarDotsecurityDotDocumentDigitalSignatures: DocumentDigitalSignatures = js.native
+  var comDotsunDotstarDotsecurityDotDocumentDigitalSignatures: DocumentDigitalSignatures
   @JSName("com.sun.star.security.Policy")
-  var comDotsunDotstarDotsecurityDotPolicy: Policy = js.native
+  var comDotsunDotstarDotsecurityDotPolicy: Policy
   @JSName("com.sun.star.security.SerialNumberAdapter")
-  var comDotsunDotstarDotsecurityDotSerialNumberAdapter: SerialNumberAdapter = js.native
+  var comDotsunDotstarDotsecurityDotSerialNumberAdapter: SerialNumberAdapter
   @JSName("com.sun.star.setup.UpdateCheck")
-  var comDotsunDotstarDotsetupDotUpdateCheck: UpdateCheck = js.native
+  var comDotsunDotstarDotsetupDotUpdateCheck: UpdateCheck
   @JSName("com.sun.star.setup.UpdateCheckConfig")
-  var comDotsunDotstarDotsetupDotUpdateCheckConfig: UpdateCheckConfig = js.native
+  var comDotsunDotstarDotsetupDotUpdateCheckConfig: UpdateCheckConfig
   @JSName("com.sun.star.sheet.AccessibleCell")
-  var comDotsunDotstarDotsheetDotAccessibleCell: AccessibleCell = js.native
+  var comDotsunDotstarDotsheetDotAccessibleCell: AccessibleCell
   @JSName("com.sun.star.sheet.AccessibleCsvCell")
-  var comDotsunDotstarDotsheetDotAccessibleCsvCell: AccessibleCsvCell = js.native
+  var comDotsunDotstarDotsheetDotAccessibleCsvCell: AccessibleCsvCell
   @JSName("com.sun.star.sheet.AccessibleCsvRuler")
-  var comDotsunDotstarDotsheetDotAccessibleCsvRuler: AccessibleCsvRuler = js.native
+  var comDotsunDotstarDotsheetDotAccessibleCsvRuler: AccessibleCsvRuler
   @JSName("com.sun.star.sheet.AccessibleCsvTable")
-  var comDotsunDotstarDotsheetDotAccessibleCsvTable: AccessibleCsvTable = js.native
+  var comDotsunDotstarDotsheetDotAccessibleCsvTable: AccessibleCsvTable
   @JSName("com.sun.star.sheet.AccessiblePageHeaderFooterAreasView")
-  var comDotsunDotstarDotsheetDotAccessiblePageHeaderFooterAreasView: AccessiblePageHeaderFooterAreasView = js.native
+  var comDotsunDotstarDotsheetDotAccessiblePageHeaderFooterAreasView: AccessiblePageHeaderFooterAreasView
   @JSName("com.sun.star.sheet.AccessibleSpreadsheet")
-  var comDotsunDotstarDotsheetDotAccessibleSpreadsheet: AccessibleSpreadsheet = js.native
+  var comDotsunDotstarDotsheetDotAccessibleSpreadsheet: AccessibleSpreadsheet
   @JSName("com.sun.star.sheet.AccessibleSpreadsheetDocumentView")
-  var comDotsunDotstarDotsheetDotAccessibleSpreadsheetDocumentView: AccessibleSpreadsheetDocumentView = js.native
+  var comDotsunDotstarDotsheetDotAccessibleSpreadsheetDocumentView: AccessibleSpreadsheetDocumentView
   @JSName("com.sun.star.sheet.AccessibleSpreadsheetPageView")
-  var comDotsunDotstarDotsheetDotAccessibleSpreadsheetPageView: AccessibleSpreadsheetPageView = js.native
+  var comDotsunDotstarDotsheetDotAccessibleSpreadsheetPageView: AccessibleSpreadsheetPageView
   @JSName("com.sun.star.sheet.AddIn")
-  var comDotsunDotstarDotsheetDotAddIn: AddIn = js.native
+  var comDotsunDotstarDotsheetDotAddIn: AddIn
   @JSName("com.sun.star.sheet.CellAnnotation")
-  var comDotsunDotstarDotsheetDotCellAnnotation: CellAnnotation = js.native
+  var comDotsunDotstarDotsheetDotCellAnnotation: CellAnnotation
   @JSName("com.sun.star.sheet.CellAnnotationShape")
-  var comDotsunDotstarDotsheetDotCellAnnotationShape: CellAnnotationShape = js.native
+  var comDotsunDotstarDotsheetDotCellAnnotationShape: CellAnnotationShape
   @JSName("com.sun.star.sheet.CellAnnotations")
-  var comDotsunDotstarDotsheetDotCellAnnotations: CellAnnotations = js.native
+  var comDotsunDotstarDotsheetDotCellAnnotations: CellAnnotations
   @JSName("com.sun.star.sheet.CellAnnotationsEnumeration")
-  var comDotsunDotstarDotsheetDotCellAnnotationsEnumeration: CellAnnotationsEnumeration = js.native
+  var comDotsunDotstarDotsheetDotCellAnnotationsEnumeration: CellAnnotationsEnumeration
   @JSName("com.sun.star.sheet.CellAreaLink")
-  var comDotsunDotstarDotsheetDotCellAreaLink: CellAreaLink = js.native
+  var comDotsunDotstarDotsheetDotCellAreaLink: CellAreaLink
   @JSName("com.sun.star.sheet.CellAreaLinks")
-  var comDotsunDotstarDotsheetDotCellAreaLinks: CellAreaLinks = js.native
+  var comDotsunDotstarDotsheetDotCellAreaLinks: CellAreaLinks
   @JSName("com.sun.star.sheet.CellAreaLinksEnumeration")
-  var comDotsunDotstarDotsheetDotCellAreaLinksEnumeration: CellAreaLinksEnumeration = js.native
+  var comDotsunDotstarDotsheetDotCellAreaLinksEnumeration: CellAreaLinksEnumeration
   @JSName("com.sun.star.sheet.CellFormatRanges")
-  var comDotsunDotstarDotsheetDotCellFormatRanges: CellFormatRanges = js.native
+  var comDotsunDotstarDotsheetDotCellFormatRanges: CellFormatRanges
   @JSName("com.sun.star.sheet.CellFormatRangesEnumeration")
-  var comDotsunDotstarDotsheetDotCellFormatRangesEnumeration: CellFormatRangesEnumeration = js.native
+  var comDotsunDotstarDotsheetDotCellFormatRangesEnumeration: CellFormatRangesEnumeration
   @JSName("com.sun.star.sheet.Cells")
-  var comDotsunDotstarDotsheetDotCells: Cells = js.native
+  var comDotsunDotstarDotsheetDotCells: Cells
   @JSName("com.sun.star.sheet.CellsEnumeration")
-  var comDotsunDotstarDotsheetDotCellsEnumeration: CellsEnumeration = js.native
+  var comDotsunDotstarDotsheetDotCellsEnumeration: CellsEnumeration
   @JSName("com.sun.star.sheet.ColorScale")
-  var comDotsunDotstarDotsheetDotColorScale: ColorScale = js.native
+  var comDotsunDotstarDotsheetDotColorScale: ColorScale
   @JSName("com.sun.star.sheet.ConditionFormatEntry")
-  var comDotsunDotstarDotsheetDotConditionFormatEntry: ConditionFormatEntry = js.native
+  var comDotsunDotstarDotsheetDotConditionFormatEntry: ConditionFormatEntry
   @JSName("com.sun.star.sheet.ConditionalFormat")
-  var comDotsunDotstarDotsheetDotConditionalFormat: ConditionalFormat = js.native
+  var comDotsunDotstarDotsheetDotConditionalFormat: ConditionalFormat
   @JSName("com.sun.star.sheet.ConsolidationDescriptor")
-  var comDotsunDotstarDotsheetDotConsolidationDescriptor: ConsolidationDescriptor = js.native
+  var comDotsunDotstarDotsheetDotConsolidationDescriptor: ConsolidationDescriptor
   @JSName("com.sun.star.sheet.DDELink")
-  var comDotsunDotstarDotsheetDotDDELink: DDELink = js.native
+  var comDotsunDotstarDotsheetDotDDELink: DDELink
   @JSName("com.sun.star.sheet.DDELinks")
-  var comDotsunDotstarDotsheetDotDDELinks: DDELinks = js.native
+  var comDotsunDotstarDotsheetDotDDELinks: DDELinks
   @JSName("com.sun.star.sheet.DDELinksEnumeration")
-  var comDotsunDotstarDotsheetDotDDELinksEnumeration: DDELinksEnumeration = js.native
+  var comDotsunDotstarDotsheetDotDDELinksEnumeration: DDELinksEnumeration
   @JSName("com.sun.star.sheet.DataBar")
-  var comDotsunDotstarDotsheetDotDataBar: DataBar = js.native
+  var comDotsunDotstarDotsheetDotDataBar: DataBar
   @JSName("com.sun.star.sheet.DataPilotDescriptor")
-  var comDotsunDotstarDotsheetDotDataPilotDescriptor: DataPilotDescriptor = js.native
+  var comDotsunDotstarDotsheetDotDataPilotDescriptor: DataPilotDescriptor
   @JSName("com.sun.star.sheet.DataPilotField")
-  var comDotsunDotstarDotsheetDotDataPilotField: DataPilotField = js.native
+  var comDotsunDotstarDotsheetDotDataPilotField: DataPilotField
   @JSName("com.sun.star.sheet.DataPilotFieldGroup")
-  var comDotsunDotstarDotsheetDotDataPilotFieldGroup: DataPilotFieldGroup = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldGroup: DataPilotFieldGroup
   @JSName("com.sun.star.sheet.DataPilotFieldGroupEnumeration")
-  var comDotsunDotstarDotsheetDotDataPilotFieldGroupEnumeration: DataPilotFieldGroupEnumeration = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldGroupEnumeration: DataPilotFieldGroupEnumeration
   @JSName("com.sun.star.sheet.DataPilotFieldGroupItem")
-  var comDotsunDotstarDotsheetDotDataPilotFieldGroupItem: DataPilotFieldGroupItem = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldGroupItem: DataPilotFieldGroupItem
   @JSName("com.sun.star.sheet.DataPilotFieldGroups")
-  var comDotsunDotstarDotsheetDotDataPilotFieldGroups: DataPilotFieldGroups = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldGroups: DataPilotFieldGroups
   @JSName("com.sun.star.sheet.DataPilotFieldGroupsEnumeration")
-  var comDotsunDotstarDotsheetDotDataPilotFieldGroupsEnumeration: DataPilotFieldGroupsEnumeration = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldGroupsEnumeration: DataPilotFieldGroupsEnumeration
   @JSName("com.sun.star.sheet.DataPilotFields")
-  var comDotsunDotstarDotsheetDotDataPilotFields: DataPilotFields = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFields: DataPilotFields
   @JSName("com.sun.star.sheet.DataPilotFieldsEnumeration")
-  var comDotsunDotstarDotsheetDotDataPilotFieldsEnumeration: DataPilotFieldsEnumeration = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldsEnumeration: DataPilotFieldsEnumeration
   @JSName("com.sun.star.sheet.DataPilotItem")
-  var comDotsunDotstarDotsheetDotDataPilotItem: DataPilotItem = js.native
+  var comDotsunDotstarDotsheetDotDataPilotItem: DataPilotItem
   @JSName("com.sun.star.sheet.DataPilotItems")
-  var comDotsunDotstarDotsheetDotDataPilotItems: DataPilotItems = js.native
+  var comDotsunDotstarDotsheetDotDataPilotItems: DataPilotItems
   @JSName("com.sun.star.sheet.DataPilotItemsEnumeration")
-  var comDotsunDotstarDotsheetDotDataPilotItemsEnumeration: DataPilotItemsEnumeration = js.native
+  var comDotsunDotstarDotsheetDotDataPilotItemsEnumeration: DataPilotItemsEnumeration
   @JSName("com.sun.star.sheet.DataPilotSource")
-  var comDotsunDotstarDotsheetDotDataPilotSource: DataPilotSource = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSource: DataPilotSource
   @JSName("com.sun.star.sheet.DataPilotSourceDimension")
-  var comDotsunDotstarDotsheetDotDataPilotSourceDimension: DataPilotSourceDimension = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSourceDimension: DataPilotSourceDimension
   @JSName("com.sun.star.sheet.DataPilotSourceDimensions")
-  var comDotsunDotstarDotsheetDotDataPilotSourceDimensions: DataPilotSourceDimensions = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSourceDimensions: DataPilotSourceDimensions
   @JSName("com.sun.star.sheet.DataPilotSourceHierarchies")
-  var comDotsunDotstarDotsheetDotDataPilotSourceHierarchies: DataPilotSourceHierarchies = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSourceHierarchies: DataPilotSourceHierarchies
   @JSName("com.sun.star.sheet.DataPilotSourceHierarchy")
-  var comDotsunDotstarDotsheetDotDataPilotSourceHierarchy: DataPilotSourceHierarchy = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSourceHierarchy: DataPilotSourceHierarchy
   @JSName("com.sun.star.sheet.DataPilotSourceLevel")
-  var comDotsunDotstarDotsheetDotDataPilotSourceLevel: DataPilotSourceLevel = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSourceLevel: DataPilotSourceLevel
   @JSName("com.sun.star.sheet.DataPilotSourceLevels")
-  var comDotsunDotstarDotsheetDotDataPilotSourceLevels: DataPilotSourceLevels = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSourceLevels: DataPilotSourceLevels
   @JSName("com.sun.star.sheet.DataPilotSourceMember")
-  var comDotsunDotstarDotsheetDotDataPilotSourceMember: DataPilotSourceMember = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSourceMember: DataPilotSourceMember
   @JSName("com.sun.star.sheet.DataPilotSourceMembers")
-  var comDotsunDotstarDotsheetDotDataPilotSourceMembers: DataPilotSourceMembers = js.native
+  var comDotsunDotstarDotsheetDotDataPilotSourceMembers: DataPilotSourceMembers
   @JSName("com.sun.star.sheet.DataPilotTable")
-  var comDotsunDotstarDotsheetDotDataPilotTable: DataPilotTable = js.native
+  var comDotsunDotstarDotsheetDotDataPilotTable: DataPilotTable
   @JSName("com.sun.star.sheet.DataPilotTables")
-  var comDotsunDotstarDotsheetDotDataPilotTables: DataPilotTables = js.native
+  var comDotsunDotstarDotsheetDotDataPilotTables: DataPilotTables
   @JSName("com.sun.star.sheet.DataPilotTablesEnumeration")
-  var comDotsunDotstarDotsheetDotDataPilotTablesEnumeration: DataPilotTablesEnumeration = js.native
+  var comDotsunDotstarDotsheetDotDataPilotTablesEnumeration: DataPilotTablesEnumeration
   @JSName("com.sun.star.sheet.DatabaseImportDescriptor")
-  var comDotsunDotstarDotsheetDotDatabaseImportDescriptor: DatabaseImportDescriptor = js.native
+  var comDotsunDotstarDotsheetDotDatabaseImportDescriptor: DatabaseImportDescriptor
   @JSName("com.sun.star.sheet.DatabaseRange")
-  var comDotsunDotstarDotsheetDotDatabaseRange: DatabaseRange = js.native
+  var comDotsunDotstarDotsheetDotDatabaseRange: DatabaseRange
   @JSName("com.sun.star.sheet.DatabaseRanges")
-  var comDotsunDotstarDotsheetDotDatabaseRanges: DatabaseRanges = js.native
+  var comDotsunDotstarDotsheetDotDatabaseRanges: DatabaseRanges
   @JSName("com.sun.star.sheet.DatabaseRangesEnumeration")
-  var comDotsunDotstarDotsheetDotDatabaseRangesEnumeration: DatabaseRangesEnumeration = js.native
+  var comDotsunDotstarDotsheetDotDatabaseRangesEnumeration: DatabaseRangesEnumeration
   @JSName("com.sun.star.sheet.DateCondition")
-  var comDotsunDotstarDotsheetDotDateCondition: DateCondition = js.native
+  var comDotsunDotstarDotsheetDotDateCondition: DateCondition
   @JSName("com.sun.star.sheet.DocumentSettings")
-  var comDotsunDotstarDotsheetDotDocumentSettings: typingsSlinky.activexLibreoffice.com_.sun.star.sheet.DocumentSettings = js.native
+  var comDotsunDotstarDotsheetDotDocumentSettings: typingsSlinky.activexLibreoffice.com_.sun.star.sheet.DocumentSettings
   @JSName("com.sun.star.sheet.ExternalDocLink")
-  var comDotsunDotstarDotsheetDotExternalDocLink: ExternalDocLink = js.native
+  var comDotsunDotstarDotsheetDotExternalDocLink: ExternalDocLink
   @JSName("com.sun.star.sheet.ExternalDocLinks")
-  var comDotsunDotstarDotsheetDotExternalDocLinks: ExternalDocLinks = js.native
+  var comDotsunDotstarDotsheetDotExternalDocLinks: ExternalDocLinks
   @JSName("com.sun.star.sheet.ExternalSheetCache")
-  var comDotsunDotstarDotsheetDotExternalSheetCache: ExternalSheetCache = js.native
+  var comDotsunDotstarDotsheetDotExternalSheetCache: ExternalSheetCache
   @JSName("com.sun.star.sheet.FilterFormulaParser")
-  var comDotsunDotstarDotsheetDotFilterFormulaParser: FilterFormulaParser = js.native
+  var comDotsunDotstarDotsheetDotFilterFormulaParser: FilterFormulaParser
   @JSName("com.sun.star.sheet.FormulaOpCodeMapper")
-  var comDotsunDotstarDotsheetDotFormulaOpCodeMapper: FormulaOpCodeMapper = js.native
+  var comDotsunDotstarDotsheetDotFormulaOpCodeMapper: FormulaOpCodeMapper
   @JSName("com.sun.star.sheet.FormulaParser")
-  var comDotsunDotstarDotsheetDotFormulaParser: FormulaParser = js.native
+  var comDotsunDotstarDotsheetDotFormulaParser: FormulaParser
   @JSName("com.sun.star.sheet.FunctionAccess")
-  var comDotsunDotstarDotsheetDotFunctionAccess: FunctionAccess = js.native
+  var comDotsunDotstarDotsheetDotFunctionAccess: FunctionAccess
   @JSName("com.sun.star.sheet.FunctionDescription")
-  var comDotsunDotstarDotsheetDotFunctionDescription: FunctionDescription = js.native
+  var comDotsunDotstarDotsheetDotFunctionDescription: FunctionDescription
   @JSName("com.sun.star.sheet.FunctionDescriptionEnumeration")
-  var comDotsunDotstarDotsheetDotFunctionDescriptionEnumeration: FunctionDescriptionEnumeration = js.native
+  var comDotsunDotstarDotsheetDotFunctionDescriptionEnumeration: FunctionDescriptionEnumeration
   @JSName("com.sun.star.sheet.FunctionDescriptions")
-  var comDotsunDotstarDotsheetDotFunctionDescriptions: FunctionDescriptions = js.native
+  var comDotsunDotstarDotsheetDotFunctionDescriptions: FunctionDescriptions
   @JSName("com.sun.star.sheet.GlobalSheetSettings")
-  var comDotsunDotstarDotsheetDotGlobalSheetSettings: GlobalSheetSettings = js.native
+  var comDotsunDotstarDotsheetDotGlobalSheetSettings: GlobalSheetSettings
   @JSName("com.sun.star.sheet.HeaderFooterContent")
-  var comDotsunDotstarDotsheetDotHeaderFooterContent: HeaderFooterContent = js.native
+  var comDotsunDotstarDotsheetDotHeaderFooterContent: HeaderFooterContent
   @JSName("com.sun.star.sheet.IconSet")
-  var comDotsunDotstarDotsheetDotIconSet: IconSet = js.native
+  var comDotsunDotstarDotsheetDotIconSet: IconSet
   @JSName("com.sun.star.sheet.LabelRange")
-  var comDotsunDotstarDotsheetDotLabelRange: LabelRange = js.native
+  var comDotsunDotstarDotsheetDotLabelRange: LabelRange
   @JSName("com.sun.star.sheet.LabelRanges")
-  var comDotsunDotstarDotsheetDotLabelRanges: LabelRanges = js.native
+  var comDotsunDotstarDotsheetDotLabelRanges: LabelRanges
   @JSName("com.sun.star.sheet.LabelRangesEnumeration")
-  var comDotsunDotstarDotsheetDotLabelRangesEnumeration: LabelRangesEnumeration = js.native
+  var comDotsunDotstarDotsheetDotLabelRangesEnumeration: LabelRangesEnumeration
   @JSName("com.sun.star.sheet.NamedRange")
-  var comDotsunDotstarDotsheetDotNamedRange: NamedRange = js.native
+  var comDotsunDotstarDotsheetDotNamedRange: NamedRange
   @JSName("com.sun.star.sheet.NamedRanges")
-  var comDotsunDotstarDotsheetDotNamedRanges: NamedRanges = js.native
+  var comDotsunDotstarDotsheetDotNamedRanges: NamedRanges
   @JSName("com.sun.star.sheet.NamedRangesEnumeration")
-  var comDotsunDotstarDotsheetDotNamedRangesEnumeration: NamedRangesEnumeration = js.native
+  var comDotsunDotstarDotsheetDotNamedRangesEnumeration: NamedRangesEnumeration
   @JSName("com.sun.star.sheet.RangeSelectionArguments")
-  var comDotsunDotstarDotsheetDotRangeSelectionArguments: RangeSelectionArguments = js.native
+  var comDotsunDotstarDotsheetDotRangeSelectionArguments: RangeSelectionArguments
   @JSName("com.sun.star.sheet.RecentFunctions")
-  var comDotsunDotstarDotsheetDotRecentFunctions: RecentFunctions = js.native
+  var comDotsunDotstarDotsheetDotRecentFunctions: RecentFunctions
   @JSName("com.sun.star.sheet.Scenario")
-  var comDotsunDotstarDotsheetDotScenario: Scenario = js.native
+  var comDotsunDotstarDotsheetDotScenario: Scenario
   @JSName("com.sun.star.sheet.Scenarios")
-  var comDotsunDotstarDotsheetDotScenarios: Scenarios = js.native
+  var comDotsunDotstarDotsheetDotScenarios: Scenarios
   @JSName("com.sun.star.sheet.ScenariosEnumeration")
-  var comDotsunDotstarDotsheetDotScenariosEnumeration: ScenariosEnumeration = js.native
+  var comDotsunDotstarDotsheetDotScenariosEnumeration: ScenariosEnumeration
   @JSName("com.sun.star.sheet.Shape")
-  var comDotsunDotstarDotsheetDotShape: typingsSlinky.activexLibreoffice.com_.sun.star.sheet.Shape = js.native
+  var comDotsunDotstarDotsheetDotShape: typingsSlinky.activexLibreoffice.com_.sun.star.sheet.Shape
   @JSName("com.sun.star.sheet.SheetCell")
-  var comDotsunDotstarDotsheetDotSheetCell: SheetCell = js.native
+  var comDotsunDotstarDotsheetDotSheetCell: SheetCell
   @JSName("com.sun.star.sheet.SheetCellCursor")
-  var comDotsunDotstarDotsheetDotSheetCellCursor: SheetCellCursor = js.native
+  var comDotsunDotstarDotsheetDotSheetCellCursor: SheetCellCursor
   @JSName("com.sun.star.sheet.SheetCellRange")
-  var comDotsunDotstarDotsheetDotSheetCellRange: SheetCellRange = js.native
+  var comDotsunDotstarDotsheetDotSheetCellRange: SheetCellRange
   @JSName("com.sun.star.sheet.SheetCellRanges")
-  var comDotsunDotstarDotsheetDotSheetCellRanges: SheetCellRanges = js.native
+  var comDotsunDotstarDotsheetDotSheetCellRanges: SheetCellRanges
   @JSName("com.sun.star.sheet.SheetCellRangesEnumeration")
-  var comDotsunDotstarDotsheetDotSheetCellRangesEnumeration: SheetCellRangesEnumeration = js.native
+  var comDotsunDotstarDotsheetDotSheetCellRangesEnumeration: SheetCellRangesEnumeration
   @JSName("com.sun.star.sheet.SheetFilterDescriptor")
-  var comDotsunDotstarDotsheetDotSheetFilterDescriptor: SheetFilterDescriptor = js.native
+  var comDotsunDotstarDotsheetDotSheetFilterDescriptor: SheetFilterDescriptor
   @JSName("com.sun.star.sheet.SheetLink")
-  var comDotsunDotstarDotsheetDotSheetLink: SheetLink = js.native
+  var comDotsunDotstarDotsheetDotSheetLink: SheetLink
   @JSName("com.sun.star.sheet.SheetLinks")
-  var comDotsunDotstarDotsheetDotSheetLinks: SheetLinks = js.native
+  var comDotsunDotstarDotsheetDotSheetLinks: SheetLinks
   @JSName("com.sun.star.sheet.SheetLinksEnumeration")
-  var comDotsunDotstarDotsheetDotSheetLinksEnumeration: SheetLinksEnumeration = js.native
+  var comDotsunDotstarDotsheetDotSheetLinksEnumeration: SheetLinksEnumeration
   @JSName("com.sun.star.sheet.SheetRangesQuery")
-  var comDotsunDotstarDotsheetDotSheetRangesQuery: SheetRangesQuery = js.native
+  var comDotsunDotstarDotsheetDotSheetRangesQuery: SheetRangesQuery
   @JSName("com.sun.star.sheet.SheetSortDescriptor")
-  var comDotsunDotstarDotsheetDotSheetSortDescriptor: SheetSortDescriptor = js.native
+  var comDotsunDotstarDotsheetDotSheetSortDescriptor: SheetSortDescriptor
   @JSName("com.sun.star.sheet.SheetSortDescriptor2")
-  var comDotsunDotstarDotsheetDotSheetSortDescriptor2: SheetSortDescriptor2 = js.native
+  var comDotsunDotstarDotsheetDotSheetSortDescriptor2: SheetSortDescriptor2
   @JSName("com.sun.star.sheet.Solver")
-  var comDotsunDotstarDotsheetDotSolver: Solver = js.native
+  var comDotsunDotstarDotsheetDotSolver: Solver
   @JSName("com.sun.star.sheet.Spreadsheet")
-  var comDotsunDotstarDotsheetDotSpreadsheet: Spreadsheet = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheet: Spreadsheet
   @JSName("com.sun.star.sheet.SpreadsheetDocument")
-  var comDotsunDotstarDotsheetDotSpreadsheetDocument: SpreadsheetDocument = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheetDocument: SpreadsheetDocument
   @JSName("com.sun.star.sheet.SpreadsheetDocumentSettings")
-  var comDotsunDotstarDotsheetDotSpreadsheetDocumentSettings: SpreadsheetDocumentSettings = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheetDocumentSettings: SpreadsheetDocumentSettings
   @JSName("com.sun.star.sheet.SpreadsheetDrawPage")
-  var comDotsunDotstarDotsheetDotSpreadsheetDrawPage: SpreadsheetDrawPage = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheetDrawPage: SpreadsheetDrawPage
   @JSName("com.sun.star.sheet.SpreadsheetView")
-  var comDotsunDotstarDotsheetDotSpreadsheetView: SpreadsheetView = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheetView: SpreadsheetView
   @JSName("com.sun.star.sheet.SpreadsheetViewPane")
-  var comDotsunDotstarDotsheetDotSpreadsheetViewPane: SpreadsheetViewPane = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheetViewPane: SpreadsheetViewPane
   @JSName("com.sun.star.sheet.SpreadsheetViewPanesEnumeration")
-  var comDotsunDotstarDotsheetDotSpreadsheetViewPanesEnumeration: SpreadsheetViewPanesEnumeration = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheetViewPanesEnumeration: SpreadsheetViewPanesEnumeration
   @JSName("com.sun.star.sheet.SpreadsheetViewSettings")
-  var comDotsunDotstarDotsheetDotSpreadsheetViewSettings: SpreadsheetViewSettings = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheetViewSettings: SpreadsheetViewSettings
   @JSName("com.sun.star.sheet.Spreadsheets")
-  var comDotsunDotstarDotsheetDotSpreadsheets: Spreadsheets = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheets: Spreadsheets
   @JSName("com.sun.star.sheet.SpreadsheetsEnumeration")
-  var comDotsunDotstarDotsheetDotSpreadsheetsEnumeration: SpreadsheetsEnumeration = js.native
+  var comDotsunDotstarDotsheetDotSpreadsheetsEnumeration: SpreadsheetsEnumeration
   @JSName("com.sun.star.sheet.SubTotalDescriptor")
-  var comDotsunDotstarDotsheetDotSubTotalDescriptor: SubTotalDescriptor = js.native
+  var comDotsunDotstarDotsheetDotSubTotalDescriptor: SubTotalDescriptor
   @JSName("com.sun.star.sheet.SubTotalField")
-  var comDotsunDotstarDotsheetDotSubTotalField: SubTotalField = js.native
+  var comDotsunDotstarDotsheetDotSubTotalField: SubTotalField
   @JSName("com.sun.star.sheet.SubTotalFieldsEnumeration")
-  var comDotsunDotstarDotsheetDotSubTotalFieldsEnumeration: SubTotalFieldsEnumeration = js.native
+  var comDotsunDotstarDotsheetDotSubTotalFieldsEnumeration: SubTotalFieldsEnumeration
   @JSName("com.sun.star.sheet.TableAutoFormat")
-  var comDotsunDotstarDotsheetDotTableAutoFormat: TableAutoFormat = js.native
+  var comDotsunDotstarDotsheetDotTableAutoFormat: TableAutoFormat
   @JSName("com.sun.star.sheet.TableAutoFormatEnumeration")
-  var comDotsunDotstarDotsheetDotTableAutoFormatEnumeration: TableAutoFormatEnumeration = js.native
+  var comDotsunDotstarDotsheetDotTableAutoFormatEnumeration: TableAutoFormatEnumeration
   @JSName("com.sun.star.sheet.TableAutoFormatField")
-  var comDotsunDotstarDotsheetDotTableAutoFormatField: TableAutoFormatField = js.native
+  var comDotsunDotstarDotsheetDotTableAutoFormatField: TableAutoFormatField
   @JSName("com.sun.star.sheet.TableAutoFormats")
-  var comDotsunDotstarDotsheetDotTableAutoFormats: TableAutoFormats = js.native
+  var comDotsunDotstarDotsheetDotTableAutoFormats: TableAutoFormats
   @JSName("com.sun.star.sheet.TableAutoFormatsEnumeration")
-  var comDotsunDotstarDotsheetDotTableAutoFormatsEnumeration: TableAutoFormatsEnumeration = js.native
+  var comDotsunDotstarDotsheetDotTableAutoFormatsEnumeration: TableAutoFormatsEnumeration
   @JSName("com.sun.star.sheet.TableCellStyle")
-  var comDotsunDotstarDotsheetDotTableCellStyle: TableCellStyle = js.native
+  var comDotsunDotstarDotsheetDotTableCellStyle: TableCellStyle
   @JSName("com.sun.star.sheet.TableConditionalEntry")
-  var comDotsunDotstarDotsheetDotTableConditionalEntry: TableConditionalEntry = js.native
+  var comDotsunDotstarDotsheetDotTableConditionalEntry: TableConditionalEntry
   @JSName("com.sun.star.sheet.TableConditionalEntryEnumeration")
-  var comDotsunDotstarDotsheetDotTableConditionalEntryEnumeration: TableConditionalEntryEnumeration = js.native
+  var comDotsunDotstarDotsheetDotTableConditionalEntryEnumeration: TableConditionalEntryEnumeration
   @JSName("com.sun.star.sheet.TableConditionalFormat")
-  var comDotsunDotstarDotsheetDotTableConditionalFormat: TableConditionalFormat = js.native
+  var comDotsunDotstarDotsheetDotTableConditionalFormat: TableConditionalFormat
   @JSName("com.sun.star.sheet.TablePageStyle")
-  var comDotsunDotstarDotsheetDotTablePageStyle: TablePageStyle = js.native
+  var comDotsunDotstarDotsheetDotTablePageStyle: TablePageStyle
   @JSName("com.sun.star.sheet.TableValidation")
-  var comDotsunDotstarDotsheetDotTableValidation: TableValidation = js.native
+  var comDotsunDotstarDotsheetDotTableValidation: TableValidation
   @JSName("com.sun.star.sheet.UniqueCellFormatRanges")
-  var comDotsunDotstarDotsheetDotUniqueCellFormatRanges: UniqueCellFormatRanges = js.native
+  var comDotsunDotstarDotsheetDotUniqueCellFormatRanges: UniqueCellFormatRanges
   @JSName("com.sun.star.sheet.UniqueCellFormatRangesEnumeration")
-  var comDotsunDotstarDotsheetDotUniqueCellFormatRangesEnumeration: UniqueCellFormatRangesEnumeration = js.native
+  var comDotsunDotstarDotsheetDotUniqueCellFormatRangesEnumeration: UniqueCellFormatRangesEnumeration
   @JSName("com.sun.star.sheet.VolatileResult")
-  var comDotsunDotstarDotsheetDotVolatileResult: VolatileResult = js.native
+  var comDotsunDotstarDotsheetDotVolatileResult: VolatileResult
   @JSName("com.sun.star.smarttags.SmartTagAction")
-  var comDotsunDotstarDotsmarttagsDotSmartTagAction: SmartTagAction = js.native
+  var comDotsunDotstarDotsmarttagsDotSmartTagAction: SmartTagAction
   @JSName("com.sun.star.smarttags.SmartTagRecognizer")
-  var comDotsunDotstarDotsmarttagsDotSmartTagRecognizer: SmartTagRecognizer = js.native
+  var comDotsunDotstarDotsmarttagsDotSmartTagRecognizer: SmartTagRecognizer
   @JSName("com.sun.star.style.CellStyle")
-  var comDotsunDotstarDotstyleDotCellStyle: CellStyle = js.native
+  var comDotsunDotstarDotstyleDotCellStyle: CellStyle
   @JSName("com.sun.star.style.CharacterProperties")
-  var comDotsunDotstarDotstyleDotCharacterProperties: CharacterProperties = js.native
+  var comDotsunDotstarDotstyleDotCharacterProperties: CharacterProperties
   @JSName("com.sun.star.style.CharacterPropertiesAsian")
-  var comDotsunDotstarDotstyleDotCharacterPropertiesAsian: CharacterPropertiesAsian = js.native
+  var comDotsunDotstarDotstyleDotCharacterPropertiesAsian: CharacterPropertiesAsian
   @JSName("com.sun.star.style.CharacterPropertiesComplex")
-  var comDotsunDotstarDotstyleDotCharacterPropertiesComplex: CharacterPropertiesComplex = js.native
+  var comDotsunDotstarDotstyleDotCharacterPropertiesComplex: CharacterPropertiesComplex
   @JSName("com.sun.star.style.CharacterStyle")
-  var comDotsunDotstarDotstyleDotCharacterStyle: CharacterStyle = js.native
+  var comDotsunDotstarDotstyleDotCharacterStyle: CharacterStyle
   @JSName("com.sun.star.style.NumberingAlignment")
-  var comDotsunDotstarDotstyleDotNumberingAlignment: NumberingAlignment = js.native
+  var comDotsunDotstarDotstyleDotNumberingAlignment: NumberingAlignment
   @JSName("com.sun.star.style.NumberingLevel")
-  var comDotsunDotstarDotstyleDotNumberingLevel: NumberingLevel = js.native
+  var comDotsunDotstarDotstyleDotNumberingLevel: NumberingLevel
   @JSName("com.sun.star.style.NumberingRule")
-  var comDotsunDotstarDotstyleDotNumberingRule: NumberingRule = js.native
+  var comDotsunDotstarDotstyleDotNumberingRule: NumberingRule
   @JSName("com.sun.star.style.PageProperties")
-  var comDotsunDotstarDotstyleDotPageProperties: PageProperties = js.native
+  var comDotsunDotstarDotstyleDotPageProperties: PageProperties
   @JSName("com.sun.star.style.PageStyle")
-  var comDotsunDotstarDotstyleDotPageStyle: PageStyle = js.native
+  var comDotsunDotstarDotstyleDotPageStyle: PageStyle
   @JSName("com.sun.star.style.ParagraphProperties")
-  var comDotsunDotstarDotstyleDotParagraphProperties: ParagraphProperties = js.native
+  var comDotsunDotstarDotstyleDotParagraphProperties: ParagraphProperties
   @JSName("com.sun.star.style.ParagraphPropertiesAsian")
-  var comDotsunDotstarDotstyleDotParagraphPropertiesAsian: ParagraphPropertiesAsian = js.native
+  var comDotsunDotstarDotstyleDotParagraphPropertiesAsian: ParagraphPropertiesAsian
   @JSName("com.sun.star.style.ParagraphPropertiesComplex")
-  var comDotsunDotstarDotstyleDotParagraphPropertiesComplex: ParagraphPropertiesComplex = js.native
+  var comDotsunDotstarDotstyleDotParagraphPropertiesComplex: ParagraphPropertiesComplex
   @JSName("com.sun.star.style.ParagraphStyle")
-  var comDotsunDotstarDotstyleDotParagraphStyle: ParagraphStyle = js.native
+  var comDotsunDotstarDotstyleDotParagraphStyle: ParagraphStyle
   @JSName("com.sun.star.style.Style")
-  var comDotsunDotstarDotstyleDotStyle: Style = js.native
+  var comDotsunDotstarDotstyleDotStyle: Style
   @JSName("com.sun.star.style.StyleFamilies")
-  var comDotsunDotstarDotstyleDotStyleFamilies: StyleFamilies = js.native
+  var comDotsunDotstarDotstyleDotStyleFamilies: StyleFamilies
   @JSName("com.sun.star.style.StyleFamily")
-  var comDotsunDotstarDotstyleDotStyleFamily: StyleFamily = js.native
+  var comDotsunDotstarDotstyleDotStyleFamily: StyleFamily
   @JSName("com.sun.star.system.SimpleCommandMail")
-  var comDotsunDotstarDotsystemDotSimpleCommandMail: SimpleCommandMail = js.native
+  var comDotsunDotstarDotsystemDotSimpleCommandMail: SimpleCommandMail
   @JSName("com.sun.star.system.SimpleSystemMail")
-  var comDotsunDotstarDotsystemDotSimpleSystemMail: SimpleSystemMail = js.native
+  var comDotsunDotstarDotsystemDotSimpleSystemMail: SimpleSystemMail
   @JSName("com.sun.star.system.SystemShellExecute")
-  var comDotsunDotstarDotsystemDotSystemShellExecute: SystemShellExecute = js.native
+  var comDotsunDotstarDotsystemDotSystemShellExecute: SystemShellExecute
   @JSName("com.sun.star.table.AccessibleCellView")
-  var comDotsunDotstarDottableDotAccessibleCellView: AccessibleCellView = js.native
+  var comDotsunDotstarDottableDotAccessibleCellView: AccessibleCellView
   @JSName("com.sun.star.table.AccessibleTableView")
-  var comDotsunDotstarDottableDotAccessibleTableView: AccessibleTableView = js.native
+  var comDotsunDotstarDottableDotAccessibleTableView: AccessibleTableView
   @JSName("com.sun.star.table.Cell")
-  var comDotsunDotstarDottableDotCell: Cell = js.native
+  var comDotsunDotstarDottableDotCell: Cell
   @JSName("com.sun.star.table.CellCursor")
-  var comDotsunDotstarDottableDotCellCursor: CellCursor = js.native
+  var comDotsunDotstarDottableDotCellCursor: CellCursor
   @JSName("com.sun.star.table.CellProperties")
-  var comDotsunDotstarDottableDotCellProperties: CellProperties = js.native
+  var comDotsunDotstarDottableDotCellProperties: CellProperties
   @JSName("com.sun.star.table.CellRange")
-  var comDotsunDotstarDottableDotCellRange: CellRange = js.native
+  var comDotsunDotstarDottableDotCellRange: CellRange
   @JSName("com.sun.star.table.CellRangeListSource")
-  var comDotsunDotstarDottableDotCellRangeListSource: CellRangeListSource = js.native
+  var comDotsunDotstarDottableDotCellRangeListSource: CellRangeListSource
   @JSName("com.sun.star.table.CellValueBinding")
-  var comDotsunDotstarDottableDotCellValueBinding: CellValueBinding = js.native
+  var comDotsunDotstarDottableDotCellValueBinding: CellValueBinding
   @JSName("com.sun.star.table.ListPositionCellBinding")
-  var comDotsunDotstarDottableDotListPositionCellBinding: ListPositionCellBinding = js.native
+  var comDotsunDotstarDottableDotListPositionCellBinding: ListPositionCellBinding
   @JSName("com.sun.star.table.TableChart")
-  var comDotsunDotstarDottableDotTableChart: TableChart = js.native
+  var comDotsunDotstarDottableDotTableChart: TableChart
   @JSName("com.sun.star.table.TableCharts")
-  var comDotsunDotstarDottableDotTableCharts: TableCharts = js.native
+  var comDotsunDotstarDottableDotTableCharts: TableCharts
   @JSName("com.sun.star.table.TableChartsEnumeration")
-  var comDotsunDotstarDottableDotTableChartsEnumeration: TableChartsEnumeration = js.native
+  var comDotsunDotstarDottableDotTableChartsEnumeration: TableChartsEnumeration
   @JSName("com.sun.star.table.TableColumn")
-  var comDotsunDotstarDottableDotTableColumn: TableColumn = js.native
+  var comDotsunDotstarDottableDotTableColumn: TableColumn
   @JSName("com.sun.star.table.TableColumns")
-  var comDotsunDotstarDottableDotTableColumns: TableColumns = js.native
+  var comDotsunDotstarDottableDotTableColumns: TableColumns
   @JSName("com.sun.star.table.TableColumnsEnumeration")
-  var comDotsunDotstarDottableDotTableColumnsEnumeration: TableColumnsEnumeration = js.native
+  var comDotsunDotstarDottableDotTableColumnsEnumeration: TableColumnsEnumeration
   @JSName("com.sun.star.table.TableRow")
-  var comDotsunDotstarDottableDotTableRow: TableRow = js.native
+  var comDotsunDotstarDottableDotTableRow: TableRow
   @JSName("com.sun.star.table.TableRows")
-  var comDotsunDotstarDottableDotTableRows: TableRows = js.native
+  var comDotsunDotstarDottableDotTableRows: TableRows
   @JSName("com.sun.star.table.TableRowsEnumeration")
-  var comDotsunDotstarDottableDotTableRowsEnumeration: TableRowsEnumeration = js.native
+  var comDotsunDotstarDottableDotTableRowsEnumeration: TableRowsEnumeration
   @JSName("com.sun.star.table.TableSortDescriptor")
-  var comDotsunDotstarDottableDotTableSortDescriptor: TableSortDescriptor = js.native
+  var comDotsunDotstarDottableDotTableSortDescriptor: TableSortDescriptor
   @JSName("com.sun.star.table.TableSortDescriptor2")
-  var comDotsunDotstarDottableDotTableSortDescriptor2: TableSortDescriptor2 = js.native
+  var comDotsunDotstarDottableDotTableSortDescriptor2: TableSortDescriptor2
   @JSName("com.sun.star.task.AsyncJob")
-  var comDotsunDotstarDottaskDotAsyncJob: AsyncJob = js.native
+  var comDotsunDotstarDottaskDotAsyncJob: AsyncJob
   @JSName("com.sun.star.task.InteractionHandler")
-  var comDotsunDotstarDottaskDotInteractionHandler: typingsSlinky.activexLibreoffice.com_.sun.star.task.InteractionHandler = js.native
+  var comDotsunDotstarDottaskDotInteractionHandler: typingsSlinky.activexLibreoffice.com_.sun.star.task.InteractionHandler
   @JSName("com.sun.star.task.InteractionRequestStringResolver")
-  var comDotsunDotstarDottaskDotInteractionRequestStringResolver: InteractionRequestStringResolver = js.native
+  var comDotsunDotstarDottaskDotInteractionRequestStringResolver: InteractionRequestStringResolver
   @JSName("com.sun.star.task.Job")
-  var comDotsunDotstarDottaskDotJob: Job = js.native
+  var comDotsunDotstarDottaskDotJob: Job
   @JSName("com.sun.star.task.JobExecutor")
-  var comDotsunDotstarDottaskDotJobExecutor: JobExecutor = js.native
+  var comDotsunDotstarDottaskDotJobExecutor: JobExecutor
   @JSName("com.sun.star.task.PasswordContainer")
-  var comDotsunDotstarDottaskDotPasswordContainer: PasswordContainer = js.native
+  var comDotsunDotstarDottaskDotPasswordContainer: PasswordContainer
   @JSName("com.sun.star.task.PasswordContainerInteractionHandler")
-  var comDotsunDotstarDottaskDotPasswordContainerInteractionHandler: PasswordContainerInteractionHandler = js.native
+  var comDotsunDotstarDottaskDotPasswordContainerInteractionHandler: PasswordContainerInteractionHandler
   @JSName("com.sun.star.task.StatusIndicatorFactory")
-  var comDotsunDotstarDottaskDotStatusIndicatorFactory: StatusIndicatorFactory = js.native
+  var comDotsunDotstarDottaskDotStatusIndicatorFactory: StatusIndicatorFactory
   @JSName("com.sun.star.text.AccessibleEndnoteView")
-  var comDotsunDotstarDottextDotAccessibleEndnoteView: AccessibleEndnoteView = js.native
+  var comDotsunDotstarDottextDotAccessibleEndnoteView: AccessibleEndnoteView
   @JSName("com.sun.star.text.AccessibleFootnoteView")
-  var comDotsunDotstarDottextDotAccessibleFootnoteView: AccessibleFootnoteView = js.native
+  var comDotsunDotstarDottextDotAccessibleFootnoteView: AccessibleFootnoteView
   @JSName("com.sun.star.text.AccessibleHeaderFooterView")
-  var comDotsunDotstarDottextDotAccessibleHeaderFooterView: AccessibleHeaderFooterView = js.native
+  var comDotsunDotstarDottextDotAccessibleHeaderFooterView: AccessibleHeaderFooterView
   @JSName("com.sun.star.text.AccessiblePageView")
-  var comDotsunDotstarDottextDotAccessiblePageView: AccessiblePageView = js.native
+  var comDotsunDotstarDottextDotAccessiblePageView: AccessiblePageView
   @JSName("com.sun.star.text.AccessibleParagraphView")
-  var comDotsunDotstarDottextDotAccessibleParagraphView: AccessibleParagraphView = js.native
+  var comDotsunDotstarDottextDotAccessibleParagraphView: AccessibleParagraphView
   @JSName("com.sun.star.text.AccessibleTextDocumentPageView")
-  var comDotsunDotstarDottextDotAccessibleTextDocumentPageView: AccessibleTextDocumentPageView = js.native
+  var comDotsunDotstarDottextDotAccessibleTextDocumentPageView: AccessibleTextDocumentPageView
   @JSName("com.sun.star.text.AccessibleTextDocumentView")
-  var comDotsunDotstarDottextDotAccessibleTextDocumentView: AccessibleTextDocumentView = js.native
+  var comDotsunDotstarDottextDotAccessibleTextDocumentView: AccessibleTextDocumentView
   @JSName("com.sun.star.text.AccessibleTextEmbeddedObject")
-  var comDotsunDotstarDottextDotAccessibleTextEmbeddedObject: AccessibleTextEmbeddedObject = js.native
+  var comDotsunDotstarDottextDotAccessibleTextEmbeddedObject: AccessibleTextEmbeddedObject
   @JSName("com.sun.star.text.AccessibleTextFrameView")
-  var comDotsunDotstarDottextDotAccessibleTextFrameView: AccessibleTextFrameView = js.native
+  var comDotsunDotstarDottextDotAccessibleTextFrameView: AccessibleTextFrameView
   @JSName("com.sun.star.text.AccessibleTextGraphicObject")
-  var comDotsunDotstarDottextDotAccessibleTextGraphicObject: AccessibleTextGraphicObject = js.native
+  var comDotsunDotstarDottextDotAccessibleTextGraphicObject: AccessibleTextGraphicObject
   @JSName("com.sun.star.text.AutoTextContainer")
-  var comDotsunDotstarDottextDotAutoTextContainer: AutoTextContainer = js.native
+  var comDotsunDotstarDottextDotAutoTextContainer: AutoTextContainer
   @JSName("com.sun.star.text.AutoTextEntry")
-  var comDotsunDotstarDottextDotAutoTextEntry: AutoTextEntry = js.native
+  var comDotsunDotstarDottextDotAutoTextEntry: AutoTextEntry
   @JSName("com.sun.star.text.AutoTextGroup")
-  var comDotsunDotstarDottextDotAutoTextGroup: AutoTextGroup = js.native
+  var comDotsunDotstarDottextDotAutoTextGroup: AutoTextGroup
   @JSName("com.sun.star.text.BaseFrame")
-  var comDotsunDotstarDottextDotBaseFrame: BaseFrame = js.native
+  var comDotsunDotstarDottextDotBaseFrame: BaseFrame
   @JSName("com.sun.star.text.BaseFrameProperties")
-  var comDotsunDotstarDottextDotBaseFrameProperties: BaseFrameProperties = js.native
+  var comDotsunDotstarDottextDotBaseFrameProperties: BaseFrameProperties
   @JSName("com.sun.star.text.BaseIndex")
-  var comDotsunDotstarDottextDotBaseIndex: BaseIndex = js.native
+  var comDotsunDotstarDottextDotBaseIndex: BaseIndex
   @JSName("com.sun.star.text.BaseIndexMark")
-  var comDotsunDotstarDottextDotBaseIndexMark: BaseIndexMark = js.native
+  var comDotsunDotstarDottextDotBaseIndexMark: BaseIndexMark
   @JSName("com.sun.star.text.Bibliography")
-  var comDotsunDotstarDottextDotBibliography: typingsSlinky.activexLibreoffice.com_.sun.star.text.Bibliography = js.native
+  var comDotsunDotstarDottextDotBibliography: typingsSlinky.activexLibreoffice.com_.sun.star.text.Bibliography
   @JSName("com.sun.star.text.Bookmark")
-  var comDotsunDotstarDottextDotBookmark: Bookmark = js.native
+  var comDotsunDotstarDottextDotBookmark: Bookmark
   @JSName("com.sun.star.text.Bookmarks")
-  var comDotsunDotstarDottextDotBookmarks: Bookmarks = js.native
+  var comDotsunDotstarDottextDotBookmarks: Bookmarks
   @JSName("com.sun.star.text.Cell")
-  var comDotsunDotstarDottextDotCell: typingsSlinky.activexLibreoffice.com_.sun.star.text.Cell = js.native
+  var comDotsunDotstarDottextDotCell: typingsSlinky.activexLibreoffice.com_.sun.star.text.Cell
   @JSName("com.sun.star.text.CellProperties")
-  var comDotsunDotstarDottextDotCellProperties: typingsSlinky.activexLibreoffice.com_.sun.star.text.CellProperties = js.native
+  var comDotsunDotstarDottextDotCellProperties: typingsSlinky.activexLibreoffice.com_.sun.star.text.CellProperties
   @JSName("com.sun.star.text.CellRange")
-  var comDotsunDotstarDottextDotCellRange: typingsSlinky.activexLibreoffice.com_.sun.star.text.CellRange = js.native
+  var comDotsunDotstarDottextDotCellRange: typingsSlinky.activexLibreoffice.com_.sun.star.text.CellRange
   @JSName("com.sun.star.text.ChainedTextFrame")
-  var comDotsunDotstarDottextDotChainedTextFrame: ChainedTextFrame = js.native
+  var comDotsunDotstarDottextDotChainedTextFrame: ChainedTextFrame
   @JSName("com.sun.star.text.ChapterNumberingRule")
-  var comDotsunDotstarDottextDotChapterNumberingRule: ChapterNumberingRule = js.native
+  var comDotsunDotstarDottextDotChapterNumberingRule: ChapterNumberingRule
   @JSName("com.sun.star.text.ContentIndex")
-  var comDotsunDotstarDottextDotContentIndex: ContentIndex = js.native
+  var comDotsunDotstarDottextDotContentIndex: ContentIndex
   @JSName("com.sun.star.text.ContentIndexMark")
-  var comDotsunDotstarDottextDotContentIndexMark: ContentIndexMark = js.native
+  var comDotsunDotstarDottextDotContentIndexMark: ContentIndexMark
   @JSName("com.sun.star.text.DefaultNumberingProvider")
-  var comDotsunDotstarDottextDotDefaultNumberingProvider: DefaultNumberingProvider = js.native
+  var comDotsunDotstarDottextDotDefaultNumberingProvider: DefaultNumberingProvider
   @JSName("com.sun.star.text.Defaults")
-  var comDotsunDotstarDottextDotDefaults: typingsSlinky.activexLibreoffice.com_.sun.star.text.Defaults = js.native
+  var comDotsunDotstarDottextDotDefaults: typingsSlinky.activexLibreoffice.com_.sun.star.text.Defaults
   @JSName("com.sun.star.text.DependentTextField")
-  var comDotsunDotstarDottextDotDependentTextField: DependentTextField = js.native
+  var comDotsunDotstarDottextDotDependentTextField: DependentTextField
   @JSName("com.sun.star.text.DocumentIndex")
-  var comDotsunDotstarDottextDotDocumentIndex: DocumentIndex = js.native
+  var comDotsunDotstarDottextDotDocumentIndex: DocumentIndex
   @JSName("com.sun.star.text.DocumentIndexLevelFormat")
-  var comDotsunDotstarDottextDotDocumentIndexLevelFormat: DocumentIndexLevelFormat = js.native
+  var comDotsunDotstarDottextDotDocumentIndexLevelFormat: DocumentIndexLevelFormat
   @JSName("com.sun.star.text.DocumentIndexMark")
-  var comDotsunDotstarDottextDotDocumentIndexMark: DocumentIndexMark = js.native
+  var comDotsunDotstarDottextDotDocumentIndexMark: DocumentIndexMark
   @JSName("com.sun.star.text.DocumentIndexMarkAsian")
-  var comDotsunDotstarDottextDotDocumentIndexMarkAsian: DocumentIndexMarkAsian = js.native
+  var comDotsunDotstarDottextDotDocumentIndexMarkAsian: DocumentIndexMarkAsian
   @JSName("com.sun.star.text.DocumentIndexParagraphStyles")
-  var comDotsunDotstarDottextDotDocumentIndexParagraphStyles: DocumentIndexParagraphStyles = js.native
+  var comDotsunDotstarDottextDotDocumentIndexParagraphStyles: DocumentIndexParagraphStyles
   @JSName("com.sun.star.text.DocumentIndexes")
-  var comDotsunDotstarDottextDotDocumentIndexes: DocumentIndexes = js.native
+  var comDotsunDotstarDottextDotDocumentIndexes: DocumentIndexes
   @JSName("com.sun.star.text.DocumentSettings")
-  var comDotsunDotstarDottextDotDocumentSettings: typingsSlinky.activexLibreoffice.com_.sun.star.text.DocumentSettings = js.native
+  var comDotsunDotstarDottextDotDocumentSettings: typingsSlinky.activexLibreoffice.com_.sun.star.text.DocumentSettings
   @JSName("com.sun.star.text.Endnote")
-  var comDotsunDotstarDottextDotEndnote: Endnote = js.native
+  var comDotsunDotstarDottextDotEndnote: Endnote
   @JSName("com.sun.star.text.EndnoteSettings")
-  var comDotsunDotstarDottextDotEndnoteSettings: EndnoteSettings = js.native
+  var comDotsunDotstarDottextDotEndnoteSettings: EndnoteSettings
   @JSName("com.sun.star.text.Footnote")
-  var comDotsunDotstarDottextDotFootnote: Footnote = js.native
+  var comDotsunDotstarDottextDotFootnote: Footnote
   @JSName("com.sun.star.text.FootnoteSettings")
-  var comDotsunDotstarDottextDotFootnoteSettings: FootnoteSettings = js.native
+  var comDotsunDotstarDottextDotFootnoteSettings: FootnoteSettings
   @JSName("com.sun.star.text.Footnotes")
-  var comDotsunDotstarDottextDotFootnotes: Footnotes = js.native
+  var comDotsunDotstarDottextDotFootnotes: Footnotes
   @JSName("com.sun.star.text.GenericTextDocument")
-  var comDotsunDotstarDottextDotGenericTextDocument: GenericTextDocument = js.native
+  var comDotsunDotstarDottextDotGenericTextDocument: GenericTextDocument
   @JSName("com.sun.star.text.GlobalDocument")
-  var comDotsunDotstarDottextDotGlobalDocument: GlobalDocument = js.native
+  var comDotsunDotstarDottextDotGlobalDocument: GlobalDocument
   @JSName("com.sun.star.text.GlobalSettings")
-  var comDotsunDotstarDottextDotGlobalSettings: GlobalSettings = js.native
+  var comDotsunDotstarDottextDotGlobalSettings: GlobalSettings
   @JSName("com.sun.star.text.IllustrationsIndex")
-  var comDotsunDotstarDottextDotIllustrationsIndex: IllustrationsIndex = js.native
+  var comDotsunDotstarDottextDotIllustrationsIndex: IllustrationsIndex
   @JSName("com.sun.star.text.InContentMetadata")
-  var comDotsunDotstarDottextDotInContentMetadata: InContentMetadata = js.native
+  var comDotsunDotstarDottextDotInContentMetadata: InContentMetadata
   @JSName("com.sun.star.text.LineNumberingProperties")
-  var comDotsunDotstarDottextDotLineNumberingProperties: LineNumberingProperties = js.native
+  var comDotsunDotstarDottextDotLineNumberingProperties: LineNumberingProperties
   @JSName("com.sun.star.text.MailMerge")
-  var comDotsunDotstarDottextDotMailMerge: MailMerge = js.native
+  var comDotsunDotstarDottextDotMailMerge: MailMerge
   @JSName("com.sun.star.text.ModuleDispatcher")
-  var comDotsunDotstarDottextDotModuleDispatcher: typingsSlinky.activexLibreoffice.com_.sun.star.text.ModuleDispatcher = js.native
+  var comDotsunDotstarDottextDotModuleDispatcher: typingsSlinky.activexLibreoffice.com_.sun.star.text.ModuleDispatcher
   @JSName("com.sun.star.text.NumberingLevel")
-  var comDotsunDotstarDottextDotNumberingLevel: typingsSlinky.activexLibreoffice.com_.sun.star.text.NumberingLevel = js.native
+  var comDotsunDotstarDottextDotNumberingLevel: typingsSlinky.activexLibreoffice.com_.sun.star.text.NumberingLevel
   @JSName("com.sun.star.text.NumberingRules")
-  var comDotsunDotstarDottextDotNumberingRules: NumberingRules = js.native
+  var comDotsunDotstarDottextDotNumberingRules: NumberingRules
   @JSName("com.sun.star.text.NumberingStyle")
-  var comDotsunDotstarDottextDotNumberingStyle: NumberingStyle = js.native
+  var comDotsunDotstarDottextDotNumberingStyle: NumberingStyle
   @JSName("com.sun.star.text.ObjectIndex")
-  var comDotsunDotstarDottextDotObjectIndex: ObjectIndex = js.native
+  var comDotsunDotstarDottextDotObjectIndex: ObjectIndex
   @JSName("com.sun.star.text.PageFootnoteInfo")
-  var comDotsunDotstarDottextDotPageFootnoteInfo: PageFootnoteInfo = js.native
+  var comDotsunDotstarDottextDotPageFootnoteInfo: PageFootnoteInfo
   @JSName("com.sun.star.text.PagePrintSettings")
-  var comDotsunDotstarDottextDotPagePrintSettings: PagePrintSettings = js.native
+  var comDotsunDotstarDottextDotPagePrintSettings: PagePrintSettings
   @JSName("com.sun.star.text.Paragraph")
-  var comDotsunDotstarDottextDotParagraph: Paragraph = js.native
+  var comDotsunDotstarDottextDotParagraph: Paragraph
   @JSName("com.sun.star.text.ParagraphEnumeration")
-  var comDotsunDotstarDottextDotParagraphEnumeration: ParagraphEnumeration = js.native
+  var comDotsunDotstarDottextDotParagraphEnumeration: ParagraphEnumeration
   @JSName("com.sun.star.text.PrintSettings")
-  var comDotsunDotstarDottextDotPrintSettings: PrintSettings = js.native
+  var comDotsunDotstarDottextDotPrintSettings: PrintSettings
   @JSName("com.sun.star.text.RedlinePortion")
-  var comDotsunDotstarDottextDotRedlinePortion: RedlinePortion = js.native
+  var comDotsunDotstarDottextDotRedlinePortion: RedlinePortion
   @JSName("com.sun.star.text.ReferenceMark")
-  var comDotsunDotstarDottextDotReferenceMark: ReferenceMark = js.native
+  var comDotsunDotstarDottextDotReferenceMark: ReferenceMark
   @JSName("com.sun.star.text.ReferenceMarks")
-  var comDotsunDotstarDottextDotReferenceMarks: ReferenceMarks = js.native
+  var comDotsunDotstarDottextDotReferenceMarks: ReferenceMarks
   @JSName("com.sun.star.text.Shape")
-  var comDotsunDotstarDottextDotShape: typingsSlinky.activexLibreoffice.com_.sun.star.text.Shape = js.native
+  var comDotsunDotstarDottextDotShape: typingsSlinky.activexLibreoffice.com_.sun.star.text.Shape
   @JSName("com.sun.star.text.TableColumns")
-  var comDotsunDotstarDottextDotTableColumns: typingsSlinky.activexLibreoffice.com_.sun.star.text.TableColumns = js.native
+  var comDotsunDotstarDottextDotTableColumns: typingsSlinky.activexLibreoffice.com_.sun.star.text.TableColumns
   @JSName("com.sun.star.text.TableIndex")
-  var comDotsunDotstarDottextDotTableIndex: TableIndex = js.native
+  var comDotsunDotstarDottextDotTableIndex: TableIndex
   @JSName("com.sun.star.text.TableRows")
-  var comDotsunDotstarDottextDotTableRows: typingsSlinky.activexLibreoffice.com_.sun.star.text.TableRows = js.native
+  var comDotsunDotstarDottextDotTableRows: typingsSlinky.activexLibreoffice.com_.sun.star.text.TableRows
   @JSName("com.sun.star.text.Text")
-  var comDotsunDotstarDottextDotText: typingsSlinky.activexLibreoffice.com_.sun.star.text.Text = js.native
+  var comDotsunDotstarDottextDotText: typingsSlinky.activexLibreoffice.com_.sun.star.text.Text
   @JSName("com.sun.star.text.TextColumns")
-  var comDotsunDotstarDottextDotTextColumns: TextColumns = js.native
+  var comDotsunDotstarDottextDotTextColumns: TextColumns
   @JSName("com.sun.star.text.TextContent")
-  var comDotsunDotstarDottextDotTextContent: TextContent = js.native
+  var comDotsunDotstarDottextDotTextContent: TextContent
   @JSName("com.sun.star.text.TextContentCollection")
-  var comDotsunDotstarDottextDotTextContentCollection: TextContentCollection = js.native
+  var comDotsunDotstarDottextDotTextContentCollection: TextContentCollection
   @JSName("com.sun.star.text.TextCursor")
-  var comDotsunDotstarDottextDotTextCursor: TextCursor = js.native
+  var comDotsunDotstarDottextDotTextCursor: TextCursor
   @JSName("com.sun.star.text.TextDocument")
-  var comDotsunDotstarDottextDotTextDocument: TextDocument = js.native
+  var comDotsunDotstarDottextDotTextDocument: TextDocument
   @JSName("com.sun.star.text.TextDocumentView")
-  var comDotsunDotstarDottextDotTextDocumentView: TextDocumentView = js.native
+  var comDotsunDotstarDottextDotTextDocumentView: TextDocumentView
   @JSName("com.sun.star.text.TextEmbeddedObject")
-  var comDotsunDotstarDottextDotTextEmbeddedObject: TextEmbeddedObject = js.native
+  var comDotsunDotstarDottextDotTextEmbeddedObject: TextEmbeddedObject
   @JSName("com.sun.star.text.TextEmbeddedObjects")
-  var comDotsunDotstarDottextDotTextEmbeddedObjects: TextEmbeddedObjects = js.native
+  var comDotsunDotstarDottextDotTextEmbeddedObjects: TextEmbeddedObjects
   @JSName("com.sun.star.text.TextField")
-  var comDotsunDotstarDottextDotTextField: TextField_ = js.native
+  var comDotsunDotstarDottextDotTextField: TextField_
   @JSName("com.sun.star.text.TextFieldEnumeration")
-  var comDotsunDotstarDottextDotTextFieldEnumeration: TextFieldEnumeration = js.native
+  var comDotsunDotstarDottextDotTextFieldEnumeration: TextFieldEnumeration
   @JSName("com.sun.star.text.TextFieldMaster")
-  var comDotsunDotstarDottextDotTextFieldMaster: TextFieldMaster = js.native
+  var comDotsunDotstarDottextDotTextFieldMaster: TextFieldMaster
   @JSName("com.sun.star.text.TextFieldMasters")
-  var comDotsunDotstarDottextDotTextFieldMasters: TextFieldMasters = js.native
+  var comDotsunDotstarDottextDotTextFieldMasters: TextFieldMasters
   @JSName("com.sun.star.text.TextFields")
-  var comDotsunDotstarDottextDotTextFields: TextFields = js.native
+  var comDotsunDotstarDottextDotTextFields: TextFields
   @JSName("com.sun.star.text.TextFrame")
-  var comDotsunDotstarDottextDotTextFrame: TextFrame = js.native
+  var comDotsunDotstarDottextDotTextFrame: TextFrame
   @JSName("com.sun.star.text.TextFrames")
-  var comDotsunDotstarDottextDotTextFrames: TextFrames = js.native
+  var comDotsunDotstarDottextDotTextFrames: TextFrames
   @JSName("com.sun.star.text.TextGraphicObject")
-  var comDotsunDotstarDottextDotTextGraphicObject: TextGraphicObject = js.native
+  var comDotsunDotstarDottextDotTextGraphicObject: TextGraphicObject
   @JSName("com.sun.star.text.TextGraphicObjects")
-  var comDotsunDotstarDottextDotTextGraphicObjects: TextGraphicObjects = js.native
+  var comDotsunDotstarDottextDotTextGraphicObjects: TextGraphicObjects
   @JSName("com.sun.star.text.TextLayoutCursor")
-  var comDotsunDotstarDottextDotTextLayoutCursor: TextLayoutCursor = js.native
+  var comDotsunDotstarDottextDotTextLayoutCursor: TextLayoutCursor
   @JSName("com.sun.star.text.TextPageStyle")
-  var comDotsunDotstarDottextDotTextPageStyle: TextPageStyle = js.native
+  var comDotsunDotstarDottextDotTextPageStyle: TextPageStyle
   @JSName("com.sun.star.text.TextPortion")
-  var comDotsunDotstarDottextDotTextPortion: TextPortion = js.native
+  var comDotsunDotstarDottextDotTextPortion: TextPortion
   @JSName("com.sun.star.text.TextPortionEnumeration")
-  var comDotsunDotstarDottextDotTextPortionEnumeration: TextPortionEnumeration = js.native
+  var comDotsunDotstarDottextDotTextPortionEnumeration: TextPortionEnumeration
   @JSName("com.sun.star.text.TextRange")
-  var comDotsunDotstarDottextDotTextRange: TextRange = js.native
+  var comDotsunDotstarDottextDotTextRange: TextRange
   @JSName("com.sun.star.text.TextRangeContentProperties")
-  var comDotsunDotstarDottextDotTextRangeContentProperties: TextRangeContentProperties = js.native
+  var comDotsunDotstarDottextDotTextRangeContentProperties: TextRangeContentProperties
   @JSName("com.sun.star.text.TextRanges")
-  var comDotsunDotstarDottextDotTextRanges: TextRanges = js.native
+  var comDotsunDotstarDottextDotTextRanges: TextRanges
   @JSName("com.sun.star.text.TextSection")
-  var comDotsunDotstarDottextDotTextSection: TextSection = js.native
+  var comDotsunDotstarDottextDotTextSection: TextSection
   @JSName("com.sun.star.text.TextSections")
-  var comDotsunDotstarDottextDotTextSections: TextSections = js.native
+  var comDotsunDotstarDottextDotTextSections: TextSections
   @JSName("com.sun.star.text.TextSortDescriptor")
-  var comDotsunDotstarDottextDotTextSortDescriptor: TextSortDescriptor = js.native
+  var comDotsunDotstarDottextDotTextSortDescriptor: TextSortDescriptor
   @JSName("com.sun.star.text.TextSortDescriptor2")
-  var comDotsunDotstarDottextDotTextSortDescriptor2: TextSortDescriptor2 = js.native
+  var comDotsunDotstarDottextDotTextSortDescriptor2: TextSortDescriptor2
   @JSName("com.sun.star.text.TextSortable")
-  var comDotsunDotstarDottextDotTextSortable: TextSortable = js.native
+  var comDotsunDotstarDottextDotTextSortable: TextSortable
   @JSName("com.sun.star.text.TextTable")
-  var comDotsunDotstarDottextDotTextTable: TextTable = js.native
+  var comDotsunDotstarDottextDotTextTable: TextTable
   @JSName("com.sun.star.text.TextTableCursor")
-  var comDotsunDotstarDottextDotTextTableCursor: TextTableCursor = js.native
+  var comDotsunDotstarDottextDotTextTableCursor: TextTableCursor
   @JSName("com.sun.star.text.TextTableRow")
-  var comDotsunDotstarDottextDotTextTableRow: TextTableRow = js.native
+  var comDotsunDotstarDottextDotTextTableRow: TextTableRow
   @JSName("com.sun.star.text.TextTables")
-  var comDotsunDotstarDottextDotTextTables: TextTables = js.native
+  var comDotsunDotstarDottextDotTextTables: TextTables
   @JSName("com.sun.star.text.TextViewCursor")
-  var comDotsunDotstarDottextDotTextViewCursor: TextViewCursor = js.native
+  var comDotsunDotstarDottextDotTextViewCursor: TextViewCursor
   @JSName("com.sun.star.text.UserDefinedIndex")
-  var comDotsunDotstarDottextDotUserDefinedIndex: UserDefinedIndex = js.native
+  var comDotsunDotstarDottextDotUserDefinedIndex: UserDefinedIndex
   @JSName("com.sun.star.text.UserIndex")
-  var comDotsunDotstarDottextDotUserIndex: UserIndex = js.native
+  var comDotsunDotstarDottextDotUserIndex: UserIndex
   @JSName("com.sun.star.text.UserIndexMark")
-  var comDotsunDotstarDottextDotUserIndexMark: UserIndexMark = js.native
+  var comDotsunDotstarDottextDotUserIndexMark: UserIndexMark
   @JSName("com.sun.star.text.ViewSettings")
-  var comDotsunDotstarDottextDotViewSettings: ViewSettings = js.native
+  var comDotsunDotstarDottextDotViewSettings: ViewSettings
   @JSName("com.sun.star.text.WebDocument")
-  var comDotsunDotstarDottextDotWebDocument: WebDocument = js.native
+  var comDotsunDotstarDottextDotWebDocument: WebDocument
   @JSName("com.sun.star.text.fieldmaster.Bibliography")
-  var comDotsunDotstarDottextDotfieldmasterDotBibliography: typingsSlinky.activexLibreoffice.com_.sun.star.text.fieldmaster.Bibliography = js.native
+  var comDotsunDotstarDottextDotfieldmasterDotBibliography: typingsSlinky.activexLibreoffice.com_.sun.star.text.fieldmaster.Bibliography
   @JSName("com.sun.star.text.fieldmaster.DDE")
-  var comDotsunDotstarDottextDotfieldmasterDotDDE: DDE = js.native
+  var comDotsunDotstarDottextDotfieldmasterDotDDE: DDE
   @JSName("com.sun.star.text.fieldmaster.Database")
-  var comDotsunDotstarDottextDotfieldmasterDotDatabase: Database = js.native
+  var comDotsunDotstarDottextDotfieldmasterDotDatabase: Database
   @JSName("com.sun.star.text.fieldmaster.SetExpression")
-  var comDotsunDotstarDottextDotfieldmasterDotSetExpression: SetExpression = js.native
+  var comDotsunDotstarDottextDotfieldmasterDotSetExpression: SetExpression
   @JSName("com.sun.star.text.fieldmaster.User")
-  var comDotsunDotstarDottextDotfieldmasterDotUser: typingsSlinky.activexLibreoffice.com_.sun.star.text.fieldmaster.User = js.native
+  var comDotsunDotstarDottextDotfieldmasterDotUser: typingsSlinky.activexLibreoffice.com_.sun.star.text.fieldmaster.User
   @JSName("com.sun.star.text.textfield.Annotation")
-  var comDotsunDotstarDottextDottextfieldDotAnnotation: Annotation = js.native
+  var comDotsunDotstarDottextDottextfieldDotAnnotation: Annotation
   @JSName("com.sun.star.text.textfield.Author")
-  var comDotsunDotstarDottextDottextfieldDotAuthor: Author = js.native
+  var comDotsunDotstarDottextDottextfieldDotAuthor: Author
   @JSName("com.sun.star.text.textfield.Bibliography")
-  var comDotsunDotstarDottextDottextfieldDotBibliography: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.Bibliography = js.native
+  var comDotsunDotstarDottextDottextfieldDotBibliography: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.Bibliography
   @JSName("com.sun.star.text.textfield.Chapter")
-  var comDotsunDotstarDottextDottextfieldDotChapter: Chapter = js.native
+  var comDotsunDotstarDottextDottextfieldDotChapter: Chapter
   @JSName("com.sun.star.text.textfield.CharacterCount")
-  var comDotsunDotstarDottextDottextfieldDotCharacterCount: CharacterCount = js.native
+  var comDotsunDotstarDottextDottextfieldDotCharacterCount: CharacterCount
   @JSName("com.sun.star.text.textfield.CombinedCharacters")
-  var comDotsunDotstarDottextDottextfieldDotCombinedCharacters: CombinedCharacters = js.native
+  var comDotsunDotstarDottextDottextfieldDotCombinedCharacters: CombinedCharacters
   @JSName("com.sun.star.text.textfield.ConditionalText")
-  var comDotsunDotstarDottextDottextfieldDotConditionalText: ConditionalText = js.native
+  var comDotsunDotstarDottextDottextfieldDotConditionalText: ConditionalText
   @JSName("com.sun.star.text.textfield.DDE")
-  var comDotsunDotstarDottextDottextfieldDotDDE: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.DDE = js.native
+  var comDotsunDotstarDottextDottextfieldDotDDE: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.DDE
   @JSName("com.sun.star.text.textfield.Database")
-  var comDotsunDotstarDottextDottextfieldDotDatabase: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.Database = js.native
+  var comDotsunDotstarDottextDottextfieldDotDatabase: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.Database
   @JSName("com.sun.star.text.textfield.DatabaseName")
-  var comDotsunDotstarDottextDottextfieldDotDatabaseName: DatabaseName = js.native
+  var comDotsunDotstarDottextDottextfieldDotDatabaseName: DatabaseName
   @JSName("com.sun.star.text.textfield.DatabaseNextSet")
-  var comDotsunDotstarDottextDottextfieldDotDatabaseNextSet: DatabaseNextSet = js.native
+  var comDotsunDotstarDottextDottextfieldDotDatabaseNextSet: DatabaseNextSet
   @JSName("com.sun.star.text.textfield.DatabaseNumberOfSet")
-  var comDotsunDotstarDottextDottextfieldDotDatabaseNumberOfSet: DatabaseNumberOfSet = js.native
+  var comDotsunDotstarDottextDottextfieldDotDatabaseNumberOfSet: DatabaseNumberOfSet
   @JSName("com.sun.star.text.textfield.DatabaseSetNumber")
-  var comDotsunDotstarDottextDottextfieldDotDatabaseSetNumber: DatabaseSetNumber = js.native
+  var comDotsunDotstarDottextDottextfieldDotDatabaseSetNumber: DatabaseSetNumber
   @JSName("com.sun.star.text.textfield.DateTime")
-  var comDotsunDotstarDottextDottextfieldDotDateTime: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.DateTime = js.native
+  var comDotsunDotstarDottextDottextfieldDotDateTime: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.DateTime
   @JSName("com.sun.star.text.textfield.DropDown")
-  var comDotsunDotstarDottextDottextfieldDotDropDown: DropDown = js.native
+  var comDotsunDotstarDottextDottextfieldDotDropDown: DropDown
   @JSName("com.sun.star.text.textfield.EmbeddedObjectCount")
-  var comDotsunDotstarDottextDottextfieldDotEmbeddedObjectCount: EmbeddedObjectCount = js.native
+  var comDotsunDotstarDottextDottextfieldDotEmbeddedObjectCount: EmbeddedObjectCount
   @JSName("com.sun.star.text.textfield.ExtendedUser")
-  var comDotsunDotstarDottextDottextfieldDotExtendedUser: ExtendedUser = js.native
+  var comDotsunDotstarDottextDottextfieldDotExtendedUser: ExtendedUser
   @JSName("com.sun.star.text.textfield.FileName")
-  var comDotsunDotstarDottextDottextfieldDotFileName: FileName = js.native
+  var comDotsunDotstarDottextDottextfieldDotFileName: FileName
   @JSName("com.sun.star.text.textfield.GetExpression")
-  var comDotsunDotstarDottextDottextfieldDotGetExpression: GetExpression = js.native
+  var comDotsunDotstarDottextDottextfieldDotGetExpression: GetExpression
   @JSName("com.sun.star.text.textfield.GetReference")
-  var comDotsunDotstarDottextDottextfieldDotGetReference: GetReference = js.native
+  var comDotsunDotstarDottextDottextfieldDotGetReference: GetReference
   @JSName("com.sun.star.text.textfield.GraphicObjectCount")
-  var comDotsunDotstarDottextDottextfieldDotGraphicObjectCount: GraphicObjectCount = js.native
+  var comDotsunDotstarDottextDottextfieldDotGraphicObjectCount: GraphicObjectCount
   @JSName("com.sun.star.text.textfield.HiddenParagraph")
-  var comDotsunDotstarDottextDottextfieldDotHiddenParagraph: HiddenParagraph = js.native
+  var comDotsunDotstarDottextDottextfieldDotHiddenParagraph: HiddenParagraph
   @JSName("com.sun.star.text.textfield.HiddenText")
-  var comDotsunDotstarDottextDottextfieldDotHiddenText: HiddenText = js.native
+  var comDotsunDotstarDottextDottextfieldDotHiddenText: HiddenText
   @JSName("com.sun.star.text.textfield.Input")
-  var comDotsunDotstarDottextDottextfieldDotInput: Input = js.native
+  var comDotsunDotstarDottextDottextfieldDotInput: Input
   @JSName("com.sun.star.text.textfield.InputUser")
-  var comDotsunDotstarDottextDottextfieldDotInputUser: InputUser = js.native
+  var comDotsunDotstarDottextDottextfieldDotInputUser: InputUser
   @JSName("com.sun.star.text.textfield.JumpEdit")
-  var comDotsunDotstarDottextDottextfieldDotJumpEdit: JumpEdit = js.native
+  var comDotsunDotstarDottextDottextfieldDotJumpEdit: JumpEdit
   @JSName("com.sun.star.text.textfield.Macro")
-  var comDotsunDotstarDottextDottextfieldDotMacro: Macro = js.native
+  var comDotsunDotstarDottextDottextfieldDotMacro: Macro
   @JSName("com.sun.star.text.textfield.MetadataField")
-  var comDotsunDotstarDottextDottextfieldDotMetadataField: MetadataField = js.native
+  var comDotsunDotstarDottextDottextfieldDotMetadataField: MetadataField
   @JSName("com.sun.star.text.textfield.PageCount")
-  var comDotsunDotstarDottextDottextfieldDotPageCount: PageCount = js.native
+  var comDotsunDotstarDottextDottextfieldDotPageCount: PageCount
   @JSName("com.sun.star.text.textfield.PageNumber")
-  var comDotsunDotstarDottextDottextfieldDotPageNumber: PageNumber = js.native
+  var comDotsunDotstarDottextDottextfieldDotPageNumber: PageNumber
   @JSName("com.sun.star.text.textfield.ParagraphCount")
-  var comDotsunDotstarDottextDottextfieldDotParagraphCount: ParagraphCount = js.native
+  var comDotsunDotstarDottextDottextfieldDotParagraphCount: ParagraphCount
   @JSName("com.sun.star.text.textfield.ReferencePageGet")
-  var comDotsunDotstarDottextDottextfieldDotReferencePageGet: ReferencePageGet = js.native
+  var comDotsunDotstarDottextDottextfieldDotReferencePageGet: ReferencePageGet
   @JSName("com.sun.star.text.textfield.ReferencePageSet")
-  var comDotsunDotstarDottextDottextfieldDotReferencePageSet: ReferencePageSet = js.native
+  var comDotsunDotstarDottextDottextfieldDotReferencePageSet: ReferencePageSet
   @JSName("com.sun.star.text.textfield.Script")
-  var comDotsunDotstarDottextDottextfieldDotScript: Script = js.native
+  var comDotsunDotstarDottextDottextfieldDotScript: Script
   @JSName("com.sun.star.text.textfield.SetExpression")
-  var comDotsunDotstarDottextDottextfieldDotSetExpression: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.SetExpression = js.native
+  var comDotsunDotstarDottextDottextfieldDotSetExpression: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.SetExpression
   @JSName("com.sun.star.text.textfield.TableCount")
-  var comDotsunDotstarDottextDottextfieldDotTableCount: TableCount = js.native
+  var comDotsunDotstarDottextDottextfieldDotTableCount: TableCount
   @JSName("com.sun.star.text.textfield.TableFormula")
-  var comDotsunDotstarDottextDottextfieldDotTableFormula: TableFormula = js.native
+  var comDotsunDotstarDottextDottextfieldDotTableFormula: TableFormula
   @JSName("com.sun.star.text.textfield.TemplateName")
-  var comDotsunDotstarDottextDottextfieldDotTemplateName: TemplateName = js.native
+  var comDotsunDotstarDottextDottextfieldDotTemplateName: TemplateName
   @JSName("com.sun.star.text.textfield.URL")
-  var comDotsunDotstarDottextDottextfieldDotURL: URL = js.native
+  var comDotsunDotstarDottextDottextfieldDotURL: URL
   @JSName("com.sun.star.text.textfield.User")
-  var comDotsunDotstarDottextDottextfieldDotUser: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.User = js.native
+  var comDotsunDotstarDottextDottextfieldDotUser: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.User
   @JSName("com.sun.star.text.textfield.WordCount")
-  var comDotsunDotstarDottextDottextfieldDotWordCount: WordCount = js.native
+  var comDotsunDotstarDottextDottextfieldDotWordCount: WordCount
   @JSName("com.sun.star.text.textfield.docinfo.ChangeAuthor")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotChangeAuthor: ChangeAuthor = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotChangeAuthor: ChangeAuthor
   @JSName("com.sun.star.text.textfield.docinfo.ChangeDateTime")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotChangeDateTime: ChangeDateTime = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotChangeDateTime: ChangeDateTime
   @JSName("com.sun.star.text.textfield.docinfo.CreateAuthor")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotCreateAuthor: CreateAuthor = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotCreateAuthor: CreateAuthor
   @JSName("com.sun.star.text.textfield.docinfo.CreateDateTime")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotCreateDateTime: CreateDateTime = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotCreateDateTime: CreateDateTime
   @JSName("com.sun.star.text.textfield.docinfo.Custom")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotCustom: Custom = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotCustom: Custom
   @JSName("com.sun.star.text.textfield.docinfo.Description")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotDescription: Description = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotDescription: Description
   @JSName("com.sun.star.text.textfield.docinfo.EditTime")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotEditTime: EditTime = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotEditTime: EditTime
   @JSName("com.sun.star.text.textfield.docinfo.Keywords")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotKeywords: Keywords = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotKeywords: Keywords
   @JSName("com.sun.star.text.textfield.docinfo.PrintAuthor")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotPrintAuthor: PrintAuthor = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotPrintAuthor: PrintAuthor
   @JSName("com.sun.star.text.textfield.docinfo.PrintDateTime")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotPrintDateTime: PrintDateTime = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotPrintDateTime: PrintDateTime
   @JSName("com.sun.star.text.textfield.docinfo.Revision")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotRevision: Revision = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotRevision: Revision
   @JSName("com.sun.star.text.textfield.docinfo.Subject")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotSubject: Subject = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotSubject: Subject
   @JSName("com.sun.star.text.textfield.docinfo.Title")
-  var comDotsunDotstarDottextDottextfieldDotdocinfoDotTitle: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.docinfo.Title = js.native
+  var comDotsunDotstarDottextDottextfieldDotdocinfoDotTitle: typingsSlinky.activexLibreoffice.com_.sun.star.text.textfield.docinfo.Title
   @JSName("com.sun.star.ucb.AnyCompareFactory")
-  var comDotsunDotstarDotucbDotAnyCompareFactory: AnyCompareFactory = js.native
+  var comDotsunDotstarDotucbDotAnyCompareFactory: AnyCompareFactory
   @JSName("com.sun.star.ucb.CachedContentResultSet")
-  var comDotsunDotstarDotucbDotCachedContentResultSet: CachedContentResultSet = js.native
+  var comDotsunDotstarDotucbDotCachedContentResultSet: CachedContentResultSet
   @JSName("com.sun.star.ucb.CachedContentResultSetFactory")
-  var comDotsunDotstarDotucbDotCachedContentResultSetFactory: CachedContentResultSetFactory = js.native
+  var comDotsunDotstarDotucbDotCachedContentResultSetFactory: CachedContentResultSetFactory
   @JSName("com.sun.star.ucb.CachedContentResultSetStub")
-  var comDotsunDotstarDotucbDotCachedContentResultSetStub: CachedContentResultSetStub = js.native
+  var comDotsunDotstarDotucbDotCachedContentResultSetStub: CachedContentResultSetStub
   @JSName("com.sun.star.ucb.CachedContentResultSetStubFactory")
-  var comDotsunDotstarDotucbDotCachedContentResultSetStubFactory: CachedContentResultSetStubFactory = js.native
+  var comDotsunDotstarDotucbDotCachedContentResultSetStubFactory: CachedContentResultSetStubFactory
   @JSName("com.sun.star.ucb.CachedDynamicResultSet")
-  var comDotsunDotstarDotucbDotCachedDynamicResultSet: CachedDynamicResultSet = js.native
+  var comDotsunDotstarDotucbDotCachedDynamicResultSet: CachedDynamicResultSet
   @JSName("com.sun.star.ucb.CachedDynamicResultSetFactory")
-  var comDotsunDotstarDotucbDotCachedDynamicResultSetFactory: CachedDynamicResultSetFactory = js.native
+  var comDotsunDotstarDotucbDotCachedDynamicResultSetFactory: CachedDynamicResultSetFactory
   @JSName("com.sun.star.ucb.CachedDynamicResultSetStub")
-  var comDotsunDotstarDotucbDotCachedDynamicResultSetStub: CachedDynamicResultSetStub = js.native
+  var comDotsunDotstarDotucbDotCachedDynamicResultSetStub: CachedDynamicResultSetStub
   @JSName("com.sun.star.ucb.CachedDynamicResultSetStubFactory")
-  var comDotsunDotstarDotucbDotCachedDynamicResultSetStubFactory: CachedDynamicResultSetStubFactory = js.native
+  var comDotsunDotstarDotucbDotCachedDynamicResultSetStubFactory: CachedDynamicResultSetStubFactory
   @JSName("com.sun.star.ucb.CmisContentProvider")
-  var comDotsunDotstarDotucbDotCmisContentProvider: CmisContentProvider = js.native
+  var comDotsunDotstarDotucbDotCmisContentProvider: CmisContentProvider
   @JSName("com.sun.star.ucb.CommandEnvironment")
-  var comDotsunDotstarDotucbDotCommandEnvironment: CommandEnvironment = js.native
+  var comDotsunDotstarDotucbDotCommandEnvironment: CommandEnvironment
   @JSName("com.sun.star.ucb.Content")
-  var comDotsunDotstarDotucbDotContent: Content = js.native
+  var comDotsunDotstarDotucbDotContent: Content
   @JSName("com.sun.star.ucb.ContentProvider")
-  var comDotsunDotstarDotucbDotContentProvider: ContentProvider = js.native
+  var comDotsunDotstarDotucbDotContentProvider: ContentProvider
   @JSName("com.sun.star.ucb.ContentProviderProxy")
-  var comDotsunDotstarDotucbDotContentProviderProxy: ContentProviderProxy = js.native
+  var comDotsunDotstarDotucbDotContentProviderProxy: ContentProviderProxy
   @JSName("com.sun.star.ucb.ContentProviderProxyFactory")
-  var comDotsunDotstarDotucbDotContentProviderProxyFactory: ContentProviderProxyFactory = js.native
+  var comDotsunDotstarDotucbDotContentProviderProxyFactory: ContentProviderProxyFactory
   @JSName("com.sun.star.ucb.ContentResultSet")
-  var comDotsunDotstarDotucbDotContentResultSet: ContentResultSet = js.native
+  var comDotsunDotstarDotucbDotContentResultSet: ContentResultSet
   @JSName("com.sun.star.ucb.ContentTransmitter")
-  var comDotsunDotstarDotucbDotContentTransmitter: ContentTransmitter = js.native
+  var comDotsunDotstarDotucbDotContentTransmitter: ContentTransmitter
   @JSName("com.sun.star.ucb.DefaultHierarchyDataSource")
-  var comDotsunDotstarDotucbDotDefaultHierarchyDataSource: DefaultHierarchyDataSource = js.native
+  var comDotsunDotstarDotucbDotDefaultHierarchyDataSource: DefaultHierarchyDataSource
   @JSName("com.sun.star.ucb.DynamicResultSet")
-  var comDotsunDotstarDotucbDotDynamicResultSet: DynamicResultSet = js.native
+  var comDotsunDotstarDotucbDotDynamicResultSet: DynamicResultSet
   @JSName("com.sun.star.ucb.ExpandContentProvider")
-  var comDotsunDotstarDotucbDotExpandContentProvider: ExpandContentProvider = js.native
+  var comDotsunDotstarDotucbDotExpandContentProvider: ExpandContentProvider
   @JSName("com.sun.star.ucb.FTPContent")
-  var comDotsunDotstarDotucbDotFTPContent: FTPContent = js.native
+  var comDotsunDotstarDotucbDotFTPContent: FTPContent
   @JSName("com.sun.star.ucb.FTPContentProvider")
-  var comDotsunDotstarDotucbDotFTPContentProvider: FTPContentProvider = js.native
+  var comDotsunDotstarDotucbDotFTPContentProvider: FTPContentProvider
   @JSName("com.sun.star.ucb.FileContent")
-  var comDotsunDotstarDotucbDotFileContent: FileContent = js.native
+  var comDotsunDotstarDotucbDotFileContent: FileContent
   @JSName("com.sun.star.ucb.FileContentProvider")
-  var comDotsunDotstarDotucbDotFileContentProvider: FileContentProvider = js.native
+  var comDotsunDotstarDotucbDotFileContentProvider: FileContentProvider
   @JSName("com.sun.star.ucb.GIOContentProvider")
-  var comDotsunDotstarDotucbDotGIOContentProvider: GIOContentProvider = js.native
+  var comDotsunDotstarDotucbDotGIOContentProvider: GIOContentProvider
   @JSName("com.sun.star.ucb.GnomeVFSContentProvider")
-  var comDotsunDotstarDotucbDotGnomeVFSContentProvider: GnomeVFSContentProvider = js.native
+  var comDotsunDotstarDotucbDotGnomeVFSContentProvider: GnomeVFSContentProvider
   @JSName("com.sun.star.ucb.GnomeVFSDocumentContent")
-  var comDotsunDotstarDotucbDotGnomeVFSDocumentContent: GnomeVFSDocumentContent = js.native
+  var comDotsunDotstarDotucbDotGnomeVFSDocumentContent: GnomeVFSDocumentContent
   @JSName("com.sun.star.ucb.GnomeVFSFolderContent")
-  var comDotsunDotstarDotucbDotGnomeVFSFolderContent: GnomeVFSFolderContent = js.native
+  var comDotsunDotstarDotucbDotGnomeVFSFolderContent: GnomeVFSFolderContent
   @JSName("com.sun.star.ucb.HelpContent")
-  var comDotsunDotstarDotucbDotHelpContent: HelpContent = js.native
+  var comDotsunDotstarDotucbDotHelpContent: HelpContent
   @JSName("com.sun.star.ucb.HelpContentProvider")
-  var comDotsunDotstarDotucbDotHelpContentProvider: HelpContentProvider = js.native
+  var comDotsunDotstarDotucbDotHelpContentProvider: HelpContentProvider
   @JSName("com.sun.star.ucb.HierarchyContentProvider")
-  var comDotsunDotstarDotucbDotHierarchyContentProvider: HierarchyContentProvider = js.native
+  var comDotsunDotstarDotucbDotHierarchyContentProvider: HierarchyContentProvider
   @JSName("com.sun.star.ucb.HierarchyDataReadAccess")
-  var comDotsunDotstarDotucbDotHierarchyDataReadAccess: HierarchyDataReadAccess = js.native
+  var comDotsunDotstarDotucbDotHierarchyDataReadAccess: HierarchyDataReadAccess
   @JSName("com.sun.star.ucb.HierarchyDataReadWriteAccess")
-  var comDotsunDotstarDotucbDotHierarchyDataReadWriteAccess: HierarchyDataReadWriteAccess = js.native
+  var comDotsunDotstarDotucbDotHierarchyDataReadWriteAccess: HierarchyDataReadWriteAccess
   @JSName("com.sun.star.ucb.HierarchyDataSource")
-  var comDotsunDotstarDotucbDotHierarchyDataSource: HierarchyDataSource = js.native
+  var comDotsunDotstarDotucbDotHierarchyDataSource: HierarchyDataSource
   @JSName("com.sun.star.ucb.HierarchyFolderContent")
-  var comDotsunDotstarDotucbDotHierarchyFolderContent: HierarchyFolderContent = js.native
+  var comDotsunDotstarDotucbDotHierarchyFolderContent: HierarchyFolderContent
   @JSName("com.sun.star.ucb.HierarchyLinkContent")
-  var comDotsunDotstarDotucbDotHierarchyLinkContent: HierarchyLinkContent = js.native
+  var comDotsunDotstarDotucbDotHierarchyLinkContent: HierarchyLinkContent
   @JSName("com.sun.star.ucb.HierarchyRootFolderContent")
-  var comDotsunDotstarDotucbDotHierarchyRootFolderContent: HierarchyRootFolderContent = js.native
+  var comDotsunDotstarDotucbDotHierarchyRootFolderContent: HierarchyRootFolderContent
   @JSName("com.sun.star.ucb.ODMAContent")
-  var comDotsunDotstarDotucbDotODMAContent: ODMAContent = js.native
+  var comDotsunDotstarDotucbDotODMAContent: ODMAContent
   @JSName("com.sun.star.ucb.ODMAContentProvider")
-  var comDotsunDotstarDotucbDotODMAContentProvider: ODMAContentProvider = js.native
+  var comDotsunDotstarDotucbDotODMAContentProvider: ODMAContentProvider
   @JSName("com.sun.star.ucb.PackageContentProvider")
-  var comDotsunDotstarDotucbDotPackageContentProvider: PackageContentProvider = js.native
+  var comDotsunDotstarDotucbDotPackageContentProvider: PackageContentProvider
   @JSName("com.sun.star.ucb.PackageFolderContent")
-  var comDotsunDotstarDotucbDotPackageFolderContent: PackageFolderContent = js.native
+  var comDotsunDotstarDotucbDotPackageFolderContent: PackageFolderContent
   @JSName("com.sun.star.ucb.PackageStreamContent")
-  var comDotsunDotstarDotucbDotPackageStreamContent: PackageStreamContent = js.native
+  var comDotsunDotstarDotucbDotPackageStreamContent: PackageStreamContent
   @JSName("com.sun.star.ucb.PersistentPropertySet")
-  var comDotsunDotstarDotucbDotPersistentPropertySet: PersistentPropertySet = js.native
+  var comDotsunDotstarDotucbDotPersistentPropertySet: PersistentPropertySet
   @JSName("com.sun.star.ucb.PropertiesManager")
-  var comDotsunDotstarDotucbDotPropertiesManager: PropertiesManager = js.native
+  var comDotsunDotstarDotucbDotPropertiesManager: PropertiesManager
   @JSName("com.sun.star.ucb.PropertySetRegistry")
-  var comDotsunDotstarDotucbDotPropertySetRegistry: PropertySetRegistry = js.native
+  var comDotsunDotstarDotucbDotPropertySetRegistry: PropertySetRegistry
   @JSName("com.sun.star.ucb.RemoteAccessContentProvider")
-  var comDotsunDotstarDotucbDotRemoteAccessContentProvider: RemoteAccessContentProvider = js.native
+  var comDotsunDotstarDotucbDotRemoteAccessContentProvider: RemoteAccessContentProvider
   @JSName("com.sun.star.ucb.RemoteContentProviderAcceptor")
-  var comDotsunDotstarDotucbDotRemoteContentProviderAcceptor: RemoteContentProviderAcceptor = js.native
+  var comDotsunDotstarDotucbDotRemoteContentProviderAcceptor: RemoteContentProviderAcceptor
   @JSName("com.sun.star.ucb.RemoteProxyContentProvider")
-  var comDotsunDotstarDotucbDotRemoteProxyContentProvider: RemoteProxyContentProvider = js.native
+  var comDotsunDotstarDotucbDotRemoteProxyContentProvider: RemoteProxyContentProvider
   @JSName("com.sun.star.ucb.SimpleFileAccess")
-  var comDotsunDotstarDotucbDotSimpleFileAccess: SimpleFileAccess = js.native
+  var comDotsunDotstarDotucbDotSimpleFileAccess: SimpleFileAccess
   @JSName("com.sun.star.ucb.SortedDynamicResultSetFactory")
-  var comDotsunDotstarDotucbDotSortedDynamicResultSetFactory: SortedDynamicResultSetFactory = js.native
+  var comDotsunDotstarDotucbDotSortedDynamicResultSetFactory: SortedDynamicResultSetFactory
   @JSName("com.sun.star.ucb.Store")
-  var comDotsunDotstarDotucbDotStore: Store = js.native
+  var comDotsunDotstarDotucbDotStore: Store
   @JSName("com.sun.star.ucb.TransientDocumentsContentProvider")
-  var comDotsunDotstarDotucbDotTransientDocumentsContentProvider: TransientDocumentsContentProvider = js.native
+  var comDotsunDotstarDotucbDotTransientDocumentsContentProvider: TransientDocumentsContentProvider
   @JSName("com.sun.star.ucb.TransientDocumentsDocumentContent")
-  var comDotsunDotstarDotucbDotTransientDocumentsDocumentContent: TransientDocumentsDocumentContent = js.native
+  var comDotsunDotstarDotucbDotTransientDocumentsDocumentContent: TransientDocumentsDocumentContent
   @JSName("com.sun.star.ucb.TransientDocumentsFolderContent")
-  var comDotsunDotstarDotucbDotTransientDocumentsFolderContent: TransientDocumentsFolderContent = js.native
+  var comDotsunDotstarDotucbDotTransientDocumentsFolderContent: TransientDocumentsFolderContent
   @JSName("com.sun.star.ucb.TransientDocumentsRootContent")
-  var comDotsunDotstarDotucbDotTransientDocumentsRootContent: TransientDocumentsRootContent = js.native
+  var comDotsunDotstarDotucbDotTransientDocumentsRootContent: TransientDocumentsRootContent
   @JSName("com.sun.star.ucb.TransientDocumentsStreamContent")
-  var comDotsunDotstarDotucbDotTransientDocumentsStreamContent: TransientDocumentsStreamContent = js.native
+  var comDotsunDotstarDotucbDotTransientDocumentsStreamContent: TransientDocumentsStreamContent
   @JSName("com.sun.star.ucb.UniversalContentBroker")
-  var comDotsunDotstarDotucbDotUniversalContentBroker: UniversalContentBroker = js.native
+  var comDotsunDotstarDotucbDotUniversalContentBroker: UniversalContentBroker
   @JSName("com.sun.star.ucb.WebDAVContentProvider")
-  var comDotsunDotstarDotucbDotWebDAVContentProvider: WebDAVContentProvider = js.native
+  var comDotsunDotstarDotucbDotWebDAVContentProvider: WebDAVContentProvider
   @JSName("com.sun.star.ucb.WebDAVDocumentContent")
-  var comDotsunDotstarDotucbDotWebDAVDocumentContent: WebDAVDocumentContent = js.native
+  var comDotsunDotstarDotucbDotWebDAVDocumentContent: WebDAVDocumentContent
   @JSName("com.sun.star.ucb.WebDAVFolderContent")
-  var comDotsunDotstarDotucbDotWebDAVFolderContent: WebDAVFolderContent = js.native
+  var comDotsunDotstarDotucbDotWebDAVFolderContent: WebDAVFolderContent
   @JSName("com.sun.star.ui.ActionTrigger")
-  var comDotsunDotstarDotuiDotActionTrigger: ActionTrigger = js.native
+  var comDotsunDotstarDotuiDotActionTrigger: ActionTrigger
   @JSName("com.sun.star.ui.ActionTriggerContainer")
-  var comDotsunDotstarDotuiDotActionTriggerContainer: ActionTriggerContainer = js.native
+  var comDotsunDotstarDotuiDotActionTriggerContainer: ActionTriggerContainer
   @JSName("com.sun.star.ui.ActionTriggerSeparator")
-  var comDotsunDotstarDotuiDotActionTriggerSeparator: ActionTriggerSeparator = js.native
+  var comDotsunDotstarDotuiDotActionTriggerSeparator: ActionTriggerSeparator
   @JSName("com.sun.star.ui.AddressBookSourceDialog")
-  var comDotsunDotstarDotuiDotAddressBookSourceDialog: AddressBookSourceDialog = js.native
+  var comDotsunDotstarDotuiDotAddressBookSourceDialog: AddressBookSourceDialog
   @JSName("com.sun.star.ui.ConfigurableUIElement")
-  var comDotsunDotstarDotuiDotConfigurableUIElement: ConfigurableUIElement = js.native
+  var comDotsunDotstarDotuiDotConfigurableUIElement: ConfigurableUIElement
   @JSName("com.sun.star.ui.DocumentAcceleratorConfiguration")
-  var comDotsunDotstarDotuiDotDocumentAcceleratorConfiguration: DocumentAcceleratorConfiguration = js.native
+  var comDotsunDotstarDotuiDotDocumentAcceleratorConfiguration: DocumentAcceleratorConfiguration
   @JSName("com.sun.star.ui.GlobalAcceleratorConfiguration")
-  var comDotsunDotstarDotuiDotGlobalAcceleratorConfiguration: GlobalAcceleratorConfiguration = js.native
+  var comDotsunDotstarDotuiDotGlobalAcceleratorConfiguration: GlobalAcceleratorConfiguration
   @JSName("com.sun.star.ui.ImageManager")
-  var comDotsunDotstarDotuiDotImageManager: ImageManager = js.native
+  var comDotsunDotstarDotuiDotImageManager: ImageManager
   @JSName("com.sun.star.ui.ItemDescriptor")
-  var comDotsunDotstarDotuiDotItemDescriptor: ItemDescriptor = js.native
+  var comDotsunDotstarDotuiDotItemDescriptor: ItemDescriptor
   @JSName("com.sun.star.ui.ModuleAcceleratorConfiguration")
-  var comDotsunDotstarDotuiDotModuleAcceleratorConfiguration: ModuleAcceleratorConfiguration = js.native
+  var comDotsunDotstarDotuiDotModuleAcceleratorConfiguration: ModuleAcceleratorConfiguration
   @JSName("com.sun.star.ui.ModuleUICategoryDescription")
-  var comDotsunDotstarDotuiDotModuleUICategoryDescription: ModuleUICategoryDescription = js.native
+  var comDotsunDotstarDotuiDotModuleUICategoryDescription: ModuleUICategoryDescription
   @JSName("com.sun.star.ui.ModuleUICommandDescription")
-  var comDotsunDotstarDotuiDotModuleUICommandDescription: ModuleUICommandDescription = js.native
+  var comDotsunDotstarDotuiDotModuleUICommandDescription: ModuleUICommandDescription
   @JSName("com.sun.star.ui.ModuleUIConfigurationManager")
-  var comDotsunDotstarDotuiDotModuleUIConfigurationManager: ModuleUIConfigurationManager = js.native
+  var comDotsunDotstarDotuiDotModuleUIConfigurationManager: ModuleUIConfigurationManager
   @JSName("com.sun.star.ui.ModuleWindowStateConfiguration")
-  var comDotsunDotstarDotuiDotModuleWindowStateConfiguration: ModuleWindowStateConfiguration = js.native
+  var comDotsunDotstarDotuiDotModuleWindowStateConfiguration: ModuleWindowStateConfiguration
   @JSName("com.sun.star.ui.UICategoryDescription")
-  var comDotsunDotstarDotuiDotUICategoryDescription: UICategoryDescription = js.native
+  var comDotsunDotstarDotuiDotUICategoryDescription: UICategoryDescription
   @JSName("com.sun.star.ui.UIConfigurationManager")
-  var comDotsunDotstarDotuiDotUIConfigurationManager: UIConfigurationManager = js.native
+  var comDotsunDotstarDotuiDotUIConfigurationManager: UIConfigurationManager
   @JSName("com.sun.star.ui.UIElement")
-  var comDotsunDotstarDotuiDotUIElement: UIElement = js.native
+  var comDotsunDotstarDotuiDotUIElement: UIElement
   @JSName("com.sun.star.ui.UIElementFactory")
-  var comDotsunDotstarDotuiDotUIElementFactory: UIElementFactory = js.native
+  var comDotsunDotstarDotuiDotUIElementFactory: UIElementFactory
   @JSName("com.sun.star.ui.UIElementFactoryManager")
-  var comDotsunDotstarDotuiDotUIElementFactoryManager: UIElementFactoryManager = js.native
+  var comDotsunDotstarDotuiDotUIElementFactoryManager: UIElementFactoryManager
   @JSName("com.sun.star.ui.UIElementSettings")
-  var comDotsunDotstarDotuiDotUIElementSettings: UIElementSettings = js.native
+  var comDotsunDotstarDotuiDotUIElementSettings: UIElementSettings
   @JSName("com.sun.star.ui.WindowContentFactory")
-  var comDotsunDotstarDotuiDotWindowContentFactory: WindowContentFactory = js.native
+  var comDotsunDotstarDotuiDotWindowContentFactory: WindowContentFactory
   @JSName("com.sun.star.ui.WindowContentFactoryManager")
-  var comDotsunDotstarDotuiDotWindowContentFactoryManager: WindowContentFactoryManager = js.native
+  var comDotsunDotstarDotuiDotWindowContentFactoryManager: WindowContentFactoryManager
   @JSName("com.sun.star.ui.WindowStateConfiguration")
-  var comDotsunDotstarDotuiDotWindowStateConfiguration: WindowStateConfiguration = js.native
+  var comDotsunDotstarDotuiDotWindowStateConfiguration: WindowStateConfiguration
   @JSName("com.sun.star.ui.dialogs.AddressBookSourcePilot")
-  var comDotsunDotstarDotuiDotdialogsDotAddressBookSourcePilot: AddressBookSourcePilot = js.native
+  var comDotsunDotstarDotuiDotdialogsDotAddressBookSourcePilot: AddressBookSourcePilot
   @JSName("com.sun.star.ui.dialogs.FilePicker")
-  var comDotsunDotstarDotuiDotdialogsDotFilePicker: FilePicker = js.native
+  var comDotsunDotstarDotuiDotdialogsDotFilePicker: FilePicker
   @JSName("com.sun.star.ui.dialogs.FilterOptionsDialog")
-  var comDotsunDotstarDotuiDotdialogsDotFilterOptionsDialog: FilterOptionsDialog = js.native
+  var comDotsunDotstarDotuiDotdialogsDotFilterOptionsDialog: FilterOptionsDialog
   @JSName("com.sun.star.ui.dialogs.FolderPicker")
-  var comDotsunDotstarDotuiDotdialogsDotFolderPicker: FolderPicker = js.native
+  var comDotsunDotstarDotuiDotdialogsDotFolderPicker: FolderPicker
   @JSName("com.sun.star.ui.dialogs.Wizard")
-  var comDotsunDotstarDotuiDotdialogsDotWizard: Wizard = js.native
+  var comDotsunDotstarDotuiDotdialogsDotWizard: Wizard
   @JSName("com.sun.star.ui.dialogs.XSLTFilterDialog")
-  var comDotsunDotstarDotuiDotdialogsDotXSLTFilterDialog: XSLTFilterDialog = js.native
+  var comDotsunDotstarDotuiDotdialogsDotXSLTFilterDialog: XSLTFilterDialog
   @JSName("com.sun.star.ui.test.UITest")
-  var comDotsunDotstarDotuiDottestDotUITest: UITest = js.native
+  var comDotsunDotstarDotuiDottestDotUITest: UITest
   @JSName("com.sun.star.uno.NamingService")
-  var comDotsunDotstarDotunoDotNamingService: NamingService = js.native
+  var comDotsunDotstarDotunoDotNamingService: NamingService
   @JSName("com.sun.star.uri.ExternalUriReferenceTranslator")
-  var comDotsunDotstarDoturiDotExternalUriReferenceTranslator: ExternalUriReferenceTranslator = js.native
+  var comDotsunDotstarDoturiDotExternalUriReferenceTranslator: ExternalUriReferenceTranslator
   @JSName("com.sun.star.uri.UriReferenceFactory")
-  var comDotsunDotstarDoturiDotUriReferenceFactory: UriReferenceFactory = js.native
+  var comDotsunDotstarDoturiDotUriReferenceFactory: UriReferenceFactory
   @JSName("com.sun.star.uri.UriSchemeParser_vndDOTsunDOTstarDOTexpand")
-  var comDotsunDotstarDoturiDotUriSchemeParser_vndDOTsunDOTstarDOTexpand: UriSchemeParserVndDOTsunDOTstarDOTexpand = js.native
+  var comDotsunDotstarDoturiDotUriSchemeParser_vndDOTsunDOTstarDOTexpand: UriSchemeParserVndDOTsunDOTstarDOTexpand
   @JSName("com.sun.star.uri.UriSchemeParser_vndDOTsunDOTstarDOTscript")
-  var comDotsunDotstarDoturiDotUriSchemeParser_vndDOTsunDOTstarDOTscript: UriSchemeParserVndDOTsunDOTstarDOTscript = js.native
+  var comDotsunDotstarDoturiDotUriSchemeParser_vndDOTsunDOTstarDOTscript: UriSchemeParserVndDOTsunDOTstarDOTscript
   @JSName("com.sun.star.uri.VndSunStarPkgUrlReferenceFactory")
-  var comDotsunDotstarDoturiDotVndSunStarPkgUrlReferenceFactory: VndSunStarPkgUrlReferenceFactory = js.native
+  var comDotsunDotstarDoturiDotVndSunStarPkgUrlReferenceFactory: VndSunStarPkgUrlReferenceFactory
   @JSName("com.sun.star.util.BootstrapMacroExpander")
-  var comDotsunDotstarDotutilDotBootstrapMacroExpander: BootstrapMacroExpander = js.native
+  var comDotsunDotstarDotutilDotBootstrapMacroExpander: BootstrapMacroExpander
   @JSName("com.sun.star.util.JobManager")
-  var comDotsunDotstarDotutilDotJobManager: JobManager = js.native
+  var comDotsunDotstarDotutilDotJobManager: JobManager
   @JSName("com.sun.star.util.MacroExpander")
-  var comDotsunDotstarDotutilDotMacroExpander: MacroExpander = js.native
+  var comDotsunDotstarDotutilDotMacroExpander: MacroExpander
   @JSName("com.sun.star.util.NumberFormatProperties")
-  var comDotsunDotstarDotutilDotNumberFormatProperties: NumberFormatProperties = js.native
+  var comDotsunDotstarDotutilDotNumberFormatProperties: NumberFormatProperties
   @JSName("com.sun.star.util.NumberFormatSettings")
-  var comDotsunDotstarDotutilDotNumberFormatSettings: NumberFormatSettings = js.native
+  var comDotsunDotstarDotutilDotNumberFormatSettings: NumberFormatSettings
   @JSName("com.sun.star.util.NumberFormats")
-  var comDotsunDotstarDotutilDotNumberFormats: NumberFormats = js.native
+  var comDotsunDotstarDotutilDotNumberFormats: NumberFormats
   @JSName("com.sun.star.util.NumberFormatsSupplier")
-  var comDotsunDotstarDotutilDotNumberFormatsSupplier: NumberFormatsSupplier = js.native
+  var comDotsunDotstarDotutilDotNumberFormatsSupplier: NumberFormatsSupplier
   @JSName("com.sun.star.util.NumberFormatter")
-  var comDotsunDotstarDotutilDotNumberFormatter: NumberFormatter = js.native
+  var comDotsunDotstarDotutilDotNumberFormatter: NumberFormatter
   @JSName("com.sun.star.util.OfficeInstallationDirectories")
-  var comDotsunDotstarDotutilDotOfficeInstallationDirectories: OfficeInstallationDirectories = js.native
+  var comDotsunDotstarDotutilDotOfficeInstallationDirectories: OfficeInstallationDirectories
   @JSName("com.sun.star.util.PathSettings")
-  var comDotsunDotstarDotutilDotPathSettings: PathSettings = js.native
+  var comDotsunDotstarDotutilDotPathSettings: PathSettings
   @JSName("com.sun.star.util.PathSubstitution")
-  var comDotsunDotstarDotutilDotPathSubstitution: PathSubstitution = js.native
+  var comDotsunDotstarDotutilDotPathSubstitution: PathSubstitution
   @JSName("com.sun.star.util.ReplaceDescriptor")
-  var comDotsunDotstarDotutilDotReplaceDescriptor: ReplaceDescriptor = js.native
+  var comDotsunDotstarDotutilDotReplaceDescriptor: ReplaceDescriptor
   @JSName("com.sun.star.util.SearchDescriptor")
-  var comDotsunDotstarDotutilDotSearchDescriptor: SearchDescriptor = js.native
+  var comDotsunDotstarDotutilDotSearchDescriptor: SearchDescriptor
   @JSName("com.sun.star.util.SortDescriptor")
-  var comDotsunDotstarDotutilDotSortDescriptor: SortDescriptor = js.native
+  var comDotsunDotstarDotutilDotSortDescriptor: SortDescriptor
   @JSName("com.sun.star.util.SortDescriptor2")
-  var comDotsunDotstarDotutilDotSortDescriptor2: SortDescriptor2 = js.native
+  var comDotsunDotstarDotutilDotSortDescriptor2: SortDescriptor2
   @JSName("com.sun.star.util.Sortable")
-  var comDotsunDotstarDotutilDotSortable: Sortable = js.native
+  var comDotsunDotstarDotutilDotSortable: Sortable
   @JSName("com.sun.star.util.TextSearch")
-  var comDotsunDotstarDotutilDotTextSearch: TextSearch = js.native
+  var comDotsunDotstarDotutilDotTextSearch: TextSearch
   @JSName("com.sun.star.util.TextSearch2")
-  var comDotsunDotstarDotutilDotTextSearch2: TextSearch2 = js.native
+  var comDotsunDotstarDotutilDotTextSearch2: TextSearch2
   @JSName("com.sun.star.util.URLTransformer")
-  var comDotsunDotstarDotutilDotURLTransformer: URLTransformer = js.native
+  var comDotsunDotstarDotutilDotURLTransformer: URLTransformer
   @JSName("com.sun.star.util.UriAbbreviation")
-  var comDotsunDotstarDotutilDotUriAbbreviation: UriAbbreviation = js.native
+  var comDotsunDotstarDotutilDotUriAbbreviation: UriAbbreviation
   @JSName("com.sun.star.view.OfficeDocumentView")
-  var comDotsunDotstarDotviewDotOfficeDocumentView: OfficeDocumentView = js.native
+  var comDotsunDotstarDotviewDotOfficeDocumentView: OfficeDocumentView
   @JSName("com.sun.star.view.PrintOptions")
-  var comDotsunDotstarDotviewDotPrintOptions: PrintOptions = js.native
+  var comDotsunDotstarDotviewDotPrintOptions: PrintOptions
   @JSName("com.sun.star.view.PrintSettings")
-  var comDotsunDotstarDotviewDotPrintSettings: typingsSlinky.activexLibreoffice.com_.sun.star.view.PrintSettings = js.native
+  var comDotsunDotstarDotviewDotPrintSettings: typingsSlinky.activexLibreoffice.com_.sun.star.view.PrintSettings
   @JSName("com.sun.star.view.PrinterDescriptor")
-  var comDotsunDotstarDotviewDotPrinterDescriptor: PrinterDescriptor = js.native
+  var comDotsunDotstarDotviewDotPrinterDescriptor: PrinterDescriptor
   @JSName("com.sun.star.view.RenderDescriptor")
-  var comDotsunDotstarDotviewDotRenderDescriptor: RenderDescriptor = js.native
+  var comDotsunDotstarDotviewDotRenderDescriptor: RenderDescriptor
   @JSName("com.sun.star.view.RenderOptions")
-  var comDotsunDotstarDotviewDotRenderOptions: RenderOptions = js.native
+  var comDotsunDotstarDotviewDotRenderOptions: RenderOptions
   @JSName("com.sun.star.view.ViewSettings")
-  var comDotsunDotstarDotviewDotViewSettings: typingsSlinky.activexLibreoffice.com_.sun.star.view.ViewSettings = js.native
+  var comDotsunDotstarDotviewDotViewSettings: typingsSlinky.activexLibreoffice.com_.sun.star.view.ViewSettings
   @JSName("com.sun.star.xforms.Binding")
-  var comDotsunDotstarDotxformsDotBinding: Binding = js.native
+  var comDotsunDotstarDotxformsDotBinding: Binding
   @JSName("com.sun.star.xforms.Model")
-  var comDotsunDotstarDotxformsDotModel: Model = js.native
+  var comDotsunDotstarDotxformsDotModel: Model
   @JSName("com.sun.star.xforms.XForms")
-  var comDotsunDotstarDotxformsDotXForms: XForms = js.native
+  var comDotsunDotstarDotxformsDotXForms: XForms
   @JSName("com.sun.star.xml.AttributeContainer")
-  var comDotsunDotstarDotxmlDotAttributeContainer: AttributeContainer = js.native
+  var comDotsunDotstarDotxmlDotAttributeContainer: AttributeContainer
   @JSName("com.sun.star.xml.ExportFilter")
-  var comDotsunDotstarDotxmlDotExportFilter: typingsSlinky.activexLibreoffice.com_.sun.star.xml.ExportFilter = js.native
+  var comDotsunDotstarDotxmlDotExportFilter: typingsSlinky.activexLibreoffice.com_.sun.star.xml.ExportFilter
   @JSName("com.sun.star.xml.ImportFilter")
-  var comDotsunDotstarDotxmlDotImportFilter: typingsSlinky.activexLibreoffice.com_.sun.star.xml.ImportFilter = js.native
+  var comDotsunDotstarDotxmlDotImportFilter: typingsSlinky.activexLibreoffice.com_.sun.star.xml.ImportFilter
   @JSName("com.sun.star.xml.NamespaceContainer")
-  var comDotsunDotstarDotxmlDotNamespaceContainer: NamespaceContainer = js.native
+  var comDotsunDotstarDotxmlDotNamespaceContainer: NamespaceContainer
   @JSName("com.sun.star.xml.ParaUserDefinedAttributesSupplier")
-  var comDotsunDotstarDotxmlDotParaUserDefinedAttributesSupplier: ParaUserDefinedAttributesSupplier = js.native
+  var comDotsunDotstarDotxmlDotParaUserDefinedAttributesSupplier: ParaUserDefinedAttributesSupplier
   @JSName("com.sun.star.xml.TextUserDefinedAttributesSupplier")
-  var comDotsunDotstarDotxmlDotTextUserDefinedAttributesSupplier: TextUserDefinedAttributesSupplier = js.native
+  var comDotsunDotstarDotxmlDotTextUserDefinedAttributesSupplier: TextUserDefinedAttributesSupplier
   @JSName("com.sun.star.xml.UserDefinedAttributesSupplier")
-  var comDotsunDotstarDotxmlDotUserDefinedAttributesSupplier: UserDefinedAttributesSupplier = js.native
+  var comDotsunDotstarDotxmlDotUserDefinedAttributesSupplier: UserDefinedAttributesSupplier
   @JSName("com.sun.star.xml.XMLExportFilter")
-  var comDotsunDotstarDotxmlDotXMLExportFilter: XMLExportFilter = js.native
+  var comDotsunDotstarDotxmlDotXMLExportFilter: XMLExportFilter
   @JSName("com.sun.star.xml.XMLImportFilter")
-  var comDotsunDotstarDotxmlDotXMLImportFilter: XMLImportFilter = js.native
+  var comDotsunDotstarDotxmlDotXMLImportFilter: XMLImportFilter
   @JSName("com.sun.star.xml.crypto.NSSInitializer")
-  var comDotsunDotstarDotxmlDotcryptoDotNSSInitializer: NSSInitializer = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotNSSInitializer: NSSInitializer
   @JSName("com.sun.star.xml.crypto.SEInitializer")
-  var comDotsunDotstarDotxmlDotcryptoDotSEInitializer: SEInitializer = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotSEInitializer: SEInitializer
   @JSName("com.sun.star.xml.crypto.SecurityEnvironment")
-  var comDotsunDotstarDotxmlDotcryptoDotSecurityEnvironment: SecurityEnvironment = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotSecurityEnvironment: SecurityEnvironment
   @JSName("com.sun.star.xml.crypto.XMLEncryption")
-  var comDotsunDotstarDotxmlDotcryptoDotXMLEncryption: XMLEncryption = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotXMLEncryption: XMLEncryption
   @JSName("com.sun.star.xml.crypto.XMLEncryptionTemplate")
-  var comDotsunDotstarDotxmlDotcryptoDotXMLEncryptionTemplate: XMLEncryptionTemplate = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotXMLEncryptionTemplate: XMLEncryptionTemplate
   @JSName("com.sun.star.xml.crypto.XMLSecurityContext")
-  var comDotsunDotstarDotxmlDotcryptoDotXMLSecurityContext: XMLSecurityContext = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotXMLSecurityContext: XMLSecurityContext
   @JSName("com.sun.star.xml.crypto.XMLSignature")
-  var comDotsunDotstarDotxmlDotcryptoDotXMLSignature: XMLSignature = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotXMLSignature: XMLSignature
   @JSName("com.sun.star.xml.crypto.XMLSignatureTemplate")
-  var comDotsunDotstarDotxmlDotcryptoDotXMLSignatureTemplate: XMLSignatureTemplate = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotXMLSignatureTemplate: XMLSignatureTemplate
   @JSName("com.sun.star.xml.crypto.sax.Decryptor")
-  var comDotsunDotstarDotxmlDotcryptoDotsaxDotDecryptor: Decryptor = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotsaxDotDecryptor: Decryptor
   @JSName("com.sun.star.xml.crypto.sax.Encryptor")
-  var comDotsunDotstarDotxmlDotcryptoDotsaxDotEncryptor: Encryptor = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotsaxDotEncryptor: Encryptor
   @JSName("com.sun.star.xml.crypto.sax.SAXEventKeeper")
-  var comDotsunDotstarDotxmlDotcryptoDotsaxDotSAXEventKeeper: SAXEventKeeper = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotsaxDotSAXEventKeeper: SAXEventKeeper
   @JSName("com.sun.star.xml.crypto.sax.SignatureCreator")
-  var comDotsunDotstarDotxmlDotcryptoDotsaxDotSignatureCreator: SignatureCreator = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotsaxDotSignatureCreator: SignatureCreator
   @JSName("com.sun.star.xml.crypto.sax.SignatureVerifier")
-  var comDotsunDotstarDotxmlDotcryptoDotsaxDotSignatureVerifier: SignatureVerifier = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotsaxDotSignatureVerifier: SignatureVerifier
   @JSName("com.sun.star.xml.dom.DocumentBuilder")
-  var comDotsunDotstarDotxmlDotdomDotDocumentBuilder: DocumentBuilder = js.native
+  var comDotsunDotstarDotxmlDotdomDotDocumentBuilder: DocumentBuilder
   @JSName("com.sun.star.xml.dom.SAXDocumentBuilder")
-  var comDotsunDotstarDotxmlDotdomDotSAXDocumentBuilder: SAXDocumentBuilder = js.native
+  var comDotsunDotstarDotxmlDotdomDotSAXDocumentBuilder: SAXDocumentBuilder
   @JSName("com.sun.star.xml.input.SaxDocumentHandler")
-  var comDotsunDotstarDotxmlDotinputDotSaxDocumentHandler: SaxDocumentHandler = js.native
+  var comDotsunDotstarDotxmlDotinputDotSaxDocumentHandler: SaxDocumentHandler
   @JSName("com.sun.star.xml.sax.FastParser")
-  var comDotsunDotstarDotxmlDotsaxDotFastParser: FastParser = js.native
+  var comDotsunDotstarDotxmlDotsaxDotFastParser: FastParser
   @JSName("com.sun.star.xml.sax.FastShapeContextHandler")
-  var comDotsunDotstarDotxmlDotsaxDotFastShapeContextHandler: FastShapeContextHandler = js.native
+  var comDotsunDotstarDotxmlDotsaxDotFastShapeContextHandler: FastShapeContextHandler
   @JSName("com.sun.star.xml.sax.FastTokenHandler")
-  var comDotsunDotstarDotxmlDotsaxDotFastTokenHandler: FastTokenHandler = js.native
+  var comDotsunDotstarDotxmlDotsaxDotFastTokenHandler: FastTokenHandler
   @JSName("com.sun.star.xml.sax.Parser")
-  var comDotsunDotstarDotxmlDotsaxDotParser: Parser = js.native
+  var comDotsunDotstarDotxmlDotsaxDotParser: Parser
   @JSName("com.sun.star.xml.sax.Writer")
-  var comDotsunDotstarDotxmlDotsaxDotWriter: Writer = js.native
+  var comDotsunDotstarDotxmlDotsaxDotWriter: Writer
   @JSName("com.sun.star.xml.wrapper.XMLDocumentWrapper")
-  var comDotsunDotstarDotxmlDotwrapperDotXMLDocumentWrapper: XMLDocumentWrapper = js.native
+  var comDotsunDotstarDotxmlDotwrapperDotXMLDocumentWrapper: XMLDocumentWrapper
   @JSName("com.sun.star.xml.wrapper.XMLElementWrapper")
-  var comDotsunDotstarDotxmlDotwrapperDotXMLElementWrapper: XMLElementWrapper = js.native
+  var comDotsunDotstarDotxmlDotwrapperDotXMLElementWrapper: XMLElementWrapper
   @JSName("com.sun.star.xml.xpath.XPathAPI")
-  var comDotsunDotstarDotxmlDotxpathDotXPathAPI: XPathAPI = js.native
+  var comDotsunDotstarDotxmlDotxpathDotXPathAPI: XPathAPI
   @JSName("com.sun.star.xml.xpath.XPathExtension")
-  var comDotsunDotstarDotxmlDotxpathDotXPathExtension: XPathExtension = js.native
+  var comDotsunDotstarDotxmlDotxpathDotXPathExtension: XPathExtension
   @JSName("com.sun.star.xml.xslt.XSLT2Transformer")
-  var comDotsunDotstarDotxmlDotxsltDotXSLT2Transformer: XSLT2Transformer = js.native
+  var comDotsunDotstarDotxmlDotxsltDotXSLT2Transformer: XSLT2Transformer
   @JSName("com.sun.star.xml.xslt.XSLTTransformer")
-  var comDotsunDotstarDotxmlDotxsltDotXSLTTransformer: XSLTTransformer = js.native
+  var comDotsunDotstarDotxmlDotxsltDotXSLTTransformer: XSLTTransformer
   @JSName("com.sun.star.xsd.Boolean")
-  var comDotsunDotstarDotxsdDotBoolean: Boolean = js.native
+  var comDotsunDotstarDotxsdDotBoolean: Boolean
   @JSName("com.sun.star.xsd.Date")
-  var comDotsunDotstarDotxsdDotDate: Date = js.native
+  var comDotsunDotstarDotxsdDotDate: Date
   @JSName("com.sun.star.xsd.DateTime")
-  var comDotsunDotstarDotxsdDotDateTime: typingsSlinky.activexLibreoffice.com_.sun.star.xsd.DateTime = js.native
+  var comDotsunDotstarDotxsdDotDateTime: typingsSlinky.activexLibreoffice.com_.sun.star.xsd.DateTime
   @JSName("com.sun.star.xsd.Day")
-  var comDotsunDotstarDotxsdDotDay: Day = js.native
+  var comDotsunDotstarDotxsdDotDay: Day
   @JSName("com.sun.star.xsd.Decimal")
-  var comDotsunDotstarDotxsdDotDecimal: Decimal = js.native
+  var comDotsunDotstarDotxsdDotDecimal: Decimal
   @JSName("com.sun.star.xsd.Month")
-  var comDotsunDotstarDotxsdDotMonth: Month = js.native
+  var comDotsunDotstarDotxsdDotMonth: Month
   @JSName("com.sun.star.xsd.String")
-  var comDotsunDotstarDotxsdDotString: String = js.native
+  var comDotsunDotstarDotxsdDotString: String
   @JSName("com.sun.star.xsd.Time")
-  var comDotsunDotstarDotxsdDotTime: Time = js.native
+  var comDotsunDotstarDotxsdDotTime: Time
   @JSName("com.sun.star.xsd.Year")
-  var comDotsunDotstarDotxsdDotYear: Year = js.native
+  var comDotsunDotstarDotxsdDotYear: Year
   @JSName("org.freedesktop.PackageKit.SyncDbusSessionHelper")
-  var orgDotfreedesktopDotPackageKitDotSyncDbusSessionHelper: SyncDbusSessionHelper = js.native
+  var orgDotfreedesktopDotPackageKitDotSyncDbusSessionHelper: SyncDbusSessionHelper
 }
 
 object ServicesNameMap {
@@ -4538,1537 +4537,5 @@ object ServicesNameMap {
     __obj.updateDynamic("com.sun.star.configuration.backend.HierarchyBrowser")(comDotsunDotstarDotconfigurationDotbackendDotHierarchyBrowser.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServicesNameMap]
   }
-  @scala.inline
-  implicit class ServicesNameMapOps[Self <: ServicesNameMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComDotsunDotstarDotaccessibilityDotAccessible(value: Accessible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.accessibility.Accessible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotaccessibilityDotAccessibleContext(value: AccessibleContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.accessibility.AccessibleContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotaccessibilityDotMSAAService(value: MSAAService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.accessibility.MSAAService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotAnimateColor(value: AnimateColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.AnimateColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotAnimateMotion(value: AnimateMotion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.AnimateMotion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotAnimateSet(value: AnimateSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.AnimateSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotAudio(value: Audio): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.Audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotCommand(value: Command): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.Command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotIterateContainer(value: IterateContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.IterateContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotParallelTimeContainer(value: ParallelTimeContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.ParallelTimeContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotSequenceTimeContainer(value: SequenceTimeContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.SequenceTimeContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotauthDotSSOManagerFactory(value: SSOManagerFactory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.auth.SSOManagerFactory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotauthDotSSOPasswordCache(value: SSOPasswordCache): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.auth.SSOPasswordCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleButton(value: AccessibleButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleCheckBox(value: AccessibleCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleCheckBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleComboBox(value: AccessibleComboBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleComboBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleDropDownComboBox(value: AccessibleDropDownComboBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleDropDownComboBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleDropDownListBox(value: AccessibleDropDownListBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleDropDownListBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleEdit(value: AccessibleEdit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleEdit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleFixedText(value: AccessibleFixedText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleFixedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleIconChoiceControl(value: AccessibleIconChoiceControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleIconChoiceControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleIconChoiceControlEntry(value: AccessibleIconChoiceControlEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleIconChoiceControlEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleList(value: AccessibleList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleListBox(value: AccessibleListBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleListBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleListBoxList(value: AccessibleListBoxList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleListBoxList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleListItem(value: AccessibleListItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleListItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleMenu(value: AccessibleMenu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleMenuBar(value: AccessibleMenuBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleMenuBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleMenuItem(value: AccessibleMenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleMenuItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleMenuSeparator(value: AccessibleMenuSeparator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleMenuSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessiblePopupMenu(value: AccessiblePopupMenu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessiblePopupMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleRadioButton(value: AccessibleRadioButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleRadioButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleScrollBar(value: AccessibleScrollBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleScrollBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleStatusBar(value: AccessibleStatusBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleStatusBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleStatusBarItem(value: AccessibleStatusBarItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleStatusBarItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleTabBar(value: AccessibleTabBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleTabBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleTabBarPage(value: AccessibleTabBarPage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleTabBarPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleTabBarPageList(value: AccessibleTabBarPageList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleTabBarPageList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleTabControl(value: AccessibleTabControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleTabControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleTabPage(value: AccessibleTabPage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleTabPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleTextField(value: AccessibleTextField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleTextField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleToolBox(value: AccessibleToolBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleToolBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleToolBoxItem(value: AccessibleToolBoxItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleToolBoxItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleTreeListBox(value: AccessibleTreeListBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleTreeListBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleTreeListBoxEntry(value: AccessibleTreeListBoxEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleTreeListBoxEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAccessibleWindow(value: AccessibleWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AccessibleWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAnimatedImagesControl(value: AnimatedImagesControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AnimatedImagesControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAnimatedImagesControlModel(value: AnimatedImagesControlModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AnimatedImagesControlModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAsyncCallback(value: AsyncCallback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AsyncCallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotContainerWindowProvider(value: ContainerWindowProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.ContainerWindowProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotDialogProvider(value: DialogProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.DialogProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotDialogProvider2(value: DialogProvider2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.DialogProvider2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotMenuBar(value: MenuBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.MenuBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotPointer(value: Pointer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.Pointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotPopupMenu(value: PopupMenu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.PopupMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotPrinterServer(value: PrinterServer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.PrinterServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotRoadmapItem(value: RoadmapItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.RoadmapItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotSpinningProgressControlModel(value: SpinningProgressControlModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.SpinningProgressControlModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotTabController(value: TabController): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.TabController")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotTabControllerModel(value: TabControllerModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.TabControllerModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotToolkit(value: Toolkit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.Toolkit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControl(value: UnoControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlButton(value: UnoControlButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlButtonModel(value: UnoControlButtonModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlButtonModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlCheckBox(value: UnoControlCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlCheckBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlCheckBoxModel(value: UnoControlCheckBoxModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlCheckBoxModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlComboBox(value: UnoControlComboBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlComboBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlComboBoxModel(value: UnoControlComboBoxModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlComboBoxModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlContainer(value: UnoControlContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlContainerModel(value: UnoControlContainerModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlContainerModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlCurrencyField(value: UnoControlCurrencyField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlCurrencyField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlCurrencyFieldModel(value: UnoControlCurrencyFieldModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlCurrencyFieldModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlDateField(value: UnoControlDateField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlDateField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlDateFieldModel(value: UnoControlDateFieldModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlDateFieldModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlDialog(value: UnoControlDialog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlDialog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlDialogElement(value: UnoControlDialogElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlDialogElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlDialogModel(value: UnoControlDialogModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlDialogModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlDialogModelProvider(value: UnoControlDialogModelProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlDialogModelProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlEdit(value: UnoControlEdit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlEdit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlEditModel(value: UnoControlEditModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlEditModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFileControl(value: UnoControlFileControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFileControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFileControlModel(value: UnoControlFileControlModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFileControlModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFixedHyperlink(value: UnoControlFixedHyperlink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFixedHyperlink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFixedHyperlinkModel(value: UnoControlFixedHyperlinkModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFixedHyperlinkModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFixedLine(value: UnoControlFixedLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFixedLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFixedLineModel(value: UnoControlFixedLineModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFixedLineModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFixedText(value: UnoControlFixedText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFixedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFixedTextModel(value: UnoControlFixedTextModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFixedTextModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFormattedField(value: UnoControlFormattedField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFormattedField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlFormattedFieldModel(value: UnoControlFormattedFieldModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlFormattedFieldModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlGroupBox(value: UnoControlGroupBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlGroupBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlGroupBoxModel(value: UnoControlGroupBoxModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlGroupBoxModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlImageControl(value: UnoControlImageControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlImageControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlImageControlModel(value: UnoControlImageControlModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlImageControlModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlListBox(value: UnoControlListBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlListBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlListBoxModel(value: UnoControlListBoxModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlListBoxModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlModel(value: UnoControlModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlNumericField(value: UnoControlNumericField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlNumericField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlNumericFieldModel(value: UnoControlNumericFieldModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlNumericFieldModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlPatternField(value: UnoControlPatternField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlPatternField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlPatternFieldModel(value: UnoControlPatternFieldModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlPatternFieldModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlProgressBar(value: UnoControlProgressBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlProgressBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlProgressBarModel(value: UnoControlProgressBarModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlProgressBarModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlRadioButton(value: UnoControlRadioButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlRadioButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlRadioButtonModel(value: UnoControlRadioButtonModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlRadioButtonModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlRoadmap(value: UnoControlRoadmap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlRoadmap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlRoadmapModel(value: UnoControlRoadmapModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlRoadmapModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlScrollBar(value: UnoControlScrollBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlScrollBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlScrollBarModel(value: UnoControlScrollBarModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlScrollBarModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlSpinButton(value: UnoControlSpinButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlSpinButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlSpinButtonModel(value: UnoControlSpinButtonModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlSpinButtonModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlTimeField(value: UnoControlTimeField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlTimeField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotUnoControlTimeFieldModel(value: UnoControlTimeFieldModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.UnoControlTimeFieldModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotDefaultGridColumnModel(value: DefaultGridColumnModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.DefaultGridColumnModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotDefaultGridDataModel(value: DefaultGridDataModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.DefaultGridDataModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotGridColumn(value: GridColumn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.GridColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotSortableGridDataModel(value: SortableGridDataModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.SortableGridDataModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotUnoControlGrid(value: UnoControlGrid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.UnoControlGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotUnoControlGridModel(value: UnoControlGridModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.UnoControlGridModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottabDotUnoControlTabPage(value: UnoControlTabPage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tab.UnoControlTabPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottabDotUnoControlTabPageContainer(value: UnoControlTabPageContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tab.UnoControlTabPageContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottabDotUnoControlTabPageContainerModel(value: UnoControlTabPageContainerModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tab.UnoControlTabPageContainerModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottabDotUnoControlTabPageModel(value: UnoControlTabPageModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tab.UnoControlTabPageModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottreeDotMutableTreeDataModel(value: MutableTreeDataModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tree.MutableTreeDataModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottreeDotMutableTreeNode(value: MutableTreeNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tree.MutableTreeNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottreeDotTreeControl(value: TreeControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tree.TreeControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottreeDotTreeControlModel(value: TreeControlModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tree.TreeControlModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotIntrospection(value: Introspection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.Introspection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotPropertyBag(value: PropertyBag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.PropertyBag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotPropertySet(value: PropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.PropertySet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotBridge(value: Bridge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.Bridge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotBridgeFactory(value: BridgeFactory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.BridgeFactory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotIiopBridge(value: IiopBridge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.IiopBridge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotOleApplicationRegistration(value: OleApplicationRegistration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.OleApplicationRegistration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotOleBridgeSupplier(value: OleBridgeSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.OleBridgeSupplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotOleBridgeSupplier2(value: OleBridgeSupplier2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.OleBridgeSupplier2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotOleBridgeSupplierVar1(value: OleBridgeSupplierVar1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.OleBridgeSupplierVar1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotOleObjectFactory(value: OleObjectFactory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.OleObjectFactory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotUnoUrlResolver(value: UnoUrlResolver): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.UnoUrlResolver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotUrpBridge(value: UrpBridge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.UrpBridge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotApplicationRegistration(value: ApplicationRegistration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.ApplicationRegistration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotBridgeSupplier(value: BridgeSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.BridgeSupplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotFactory(value: Factory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.Factory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotAxis(value: Axis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.Axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotCandleStickChartType(value: CandleStickChartType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.CandleStickChartType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotCartesianCoordinateSystem2d(value: CartesianCoordinateSystem2d): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.CartesianCoordinateSystem2d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotCartesianCoordinateSystem3d(value: CartesianCoordinateSystem3d): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.CartesianCoordinateSystem3d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotChartDocument(value: ChartDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ChartDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotChartDocumentWrapper(value: ChartDocumentWrapper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ChartDocumentWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotChartType(value: ChartType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ChartType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotChartTypeManager(value: ChartTypeManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ChartTypeManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotChartTypeTemplate(value: ChartTypeTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ChartTypeTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotCoordinateSystem(value: CoordinateSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.CoordinateSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotCoordinateSystemType(value: CoordinateSystemType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.CoordinateSystemType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotDataPoint(value: DataPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.DataPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotDataPointProperties(value: DataPointProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.DataPointProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotDataSeries(value: DataSeries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.DataSeries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotDiagram(value: Diagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.Diagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotErrorBar(value: ErrorBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ErrorBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotExponentialRegressionCurve(value: ExponentialRegressionCurve): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ExponentialRegressionCurve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotExponentialScaling(value: ExponentialScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ExponentialScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotFormattedString(value: FormattedString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.FormattedString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotGridProperties(value: GridProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.GridProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotLegend(value: Legend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.Legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotLinearRegressionCurve(value: LinearRegressionCurve): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.LinearRegressionCurve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotLinearScaling(value: LinearScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.LinearScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotLogarithmicRegressionCurve(value: LogarithmicRegressionCurve): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.LogarithmicRegressionCurve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotLogarithmicScaling(value: LogarithmicScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.LogarithmicScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotLogicTargetModel(value: LogicTargetModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.LogicTargetModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotMovingAverageRegressionCurve(value: MovingAverageRegressionCurve): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.MovingAverageRegressionCurve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotPolarCoordinateSystem2d(value: PolarCoordinateSystem2d): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.PolarCoordinateSystem2d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotPolarCoordinateSystem3d(value: PolarCoordinateSystem3d): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.PolarCoordinateSystem3d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotPolynomialRegressionCurve(value: PolynomialRegressionCurve): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.PolynomialRegressionCurve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotPotentialRegressionCurve(value: PotentialRegressionCurve): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.PotentialRegressionCurve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotPowerScaling(value: PowerScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.PowerScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotPropertyPool(value: PropertyPool): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.PropertyPool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotRegressionCurve(value: RegressionCurve): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.RegressionCurve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotRegressionCurveEquation(value: RegressionCurveEquation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.RegressionCurveEquation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotRegressionEquation(value: RegressionEquation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.RegressionEquation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotScaling(value: Scaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.Scaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotStandardDiagramCreationParameters(value: StandardDiagramCreationParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.StandardDiagramCreationParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotTitle(value: Title): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotDataFilter(value: DataFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.DataFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotDataProvider(value: DataProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.DataProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotDataSequence(value: DataSequence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.DataSequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotDataSink(value: DataSink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.DataSink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotDataSource(value: DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.DataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotDatabaseDataProvider(value: DatabaseDataProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.DatabaseDataProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotLabeledDataSequence(value: LabeledDataSequence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.LabeledDataSequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotRangeHighlightListener(value: RangeHighlightListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.RangeHighlightListener")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotRangeHighlighter(value: RangeHighlighter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.RangeHighlighter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotTabularDataProviderArguments(value: TabularDataProviderArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.TabularDataProviderArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotAccessibleChartDocumentView(value: AccessibleChartDocumentView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.AccessibleChartDocumentView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotAccessibleChartElement(value: AccessibleChartElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.AccessibleChartElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotAreaDiagram(value: AreaDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.AreaDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotBarDiagram(value: BarDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.BarDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotBubbleDiagram(value: BubbleDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.BubbleDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChart3DBarProperties(value: Chart3DBarProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.Chart3DBarProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartArea(value: ChartArea): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartAxis(value: ChartAxis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartAxisXSupplier(value: ChartAxisXSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartAxisXSupplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartAxisYSupplier(value: ChartAxisYSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartAxisYSupplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartAxisZSupplier(value: ChartAxisZSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartAxisZSupplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartData(value: ChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartDataArray(value: ChartDataArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartDataArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartDataPointProperties(value: ChartDataPointProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartDataPointProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartDataRowProperties(value: ChartDataRowProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartDataRowProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartDocument(value: typingsSlinky.activexLibreoffice.com_.sun.star.chart.ChartDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartGrid(value: ChartGrid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartLegend(value: ChartLegend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartLegend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartLine(value: ChartLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartPieSegmentProperties(value: ChartPieSegmentProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartPieSegmentProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartStatistics(value: ChartStatistics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartStatistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartTableAddressSupplier(value: ChartTableAddressSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartTableAddressSupplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartTitle(value: ChartTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartTwoAxisXSupplier(value: ChartTwoAxisXSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartTwoAxisXSupplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartTwoAxisYSupplier(value: ChartTwoAxisYSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartTwoAxisYSupplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotDiagram(value: typingsSlinky.activexLibreoffice.com_.sun.star.chart.Diagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.Diagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotDim3DDiagram(value: Dim3DDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.Dim3DDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotDonutDiagram(value: DonutDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.DonutDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotFilledNetDiagram(value: FilledNetDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.FilledNetDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotLineDiagram(value: LineDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.LineDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotNetDiagram(value: NetDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.NetDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotPieDiagram(value: PieDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.PieDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotStackableDiagram(value: StackableDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.StackableDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotStockDiagram(value: StockDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.StockDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotXYDiagram(value: XYDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.XYDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotAccessRootElement(value: AccessRootElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.AccessRootElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotAdministrationProvider(value: AdministrationProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.AdministrationProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotConfigurationAccess(value: ConfigurationAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.ConfigurationAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotConfigurationProvider(value: ConfigurationProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.ConfigurationProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotConfigurationRegistry(value: ConfigurationRegistry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.ConfigurationRegistry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotConfigurationUpdateAccess(value: ConfigurationUpdateAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.ConfigurationUpdateAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotDefaultProvider(value: DefaultProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.DefaultProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotGroupAccess(value: GroupAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.GroupAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotGroupElement(value: GroupElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.GroupElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotGroupUpdate(value: GroupUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.GroupUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotHierarchyAccess(value: HierarchyAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.HierarchyAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotHierarchyElement(value: HierarchyElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.HierarchyElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotPropertyHierarchy(value: PropertyHierarchy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.PropertyHierarchy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotReadOnlyAccess(value: ReadOnlyAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.ReadOnlyAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotReadWriteAccess(value: ReadWriteAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.ReadWriteAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotSetAccess(value: SetAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.SetAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotSetElement(value: SetElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.SetElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotSetUpdate(value: SetUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.SetUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotSimpleSetAccess(value: SimpleSetAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.SimpleSetAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotSimpleSetUpdate(value: SimpleSetUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.SimpleSetUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotUpdateRootElement(value: UpdateRootElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.UpdateRootElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotBackend(value: Backend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.Backend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotBackendAdapter(value: BackendAdapter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.BackendAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotCopyImporter(value: CopyImporter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.CopyImporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotDataImporter(value: DataImporter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.DataImporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotDefaultBackend(value: DefaultBackend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.DefaultBackend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotHierarchyBrowser(value: HierarchyBrowser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.HierarchyBrowser")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

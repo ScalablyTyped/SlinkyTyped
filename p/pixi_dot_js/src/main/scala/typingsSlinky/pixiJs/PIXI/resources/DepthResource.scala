@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.resources.BufferResource
   * @memberof PIXI.resources
   */
-@js.native
 trait DepthResource extends BufferResource
 
 object DepthResource {

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Atmosphere extends js.Object {
-  var AtmosphereRequest: js.UndefOr[typingsSlinky.atmosphereJs.Atmosphere.AtmosphereRequest] = js.native
+  var AtmosphereRequest: js.UndefOr[typingsSlinky.atmosphereJs.Atmosphere.AtmosphereRequest] = js.undefined
   /**
     * The atmosphere API is a little bit special here: the first parameter can either be
     * a URL string or a Request object. If it is a URL string, then the additional parameters are expected.
@@ -18,61 +17,22 @@ trait Atmosphere extends js.Object {
       /* request */ js.UndefOr[Request], 
       Request
     ]
-  ] = js.native
-  var unsubscribe: js.UndefOr[js.Function0[Unit]] = js.native
+  ] = js.undefined
+  var unsubscribe: js.UndefOr[js.Function0[Unit]] = js.undefined
 }
 
 object Atmosphere {
   @scala.inline
-  def apply(): Atmosphere = {
+  def apply(
+    AtmosphereRequest: AtmosphereRequest = null,
+    subscribe: (/* requestOrUrl */ js.Any, /* callback */ js.UndefOr[js.Function], /* request */ js.UndefOr[Request]) => Request = null,
+    unsubscribe: () => Unit = null
+  ): Atmosphere = {
     val __obj = js.Dynamic.literal()
+    if (AtmosphereRequest != null) __obj.updateDynamic("AtmosphereRequest")(AtmosphereRequest.asInstanceOf[js.Any])
+    if (subscribe != null) __obj.updateDynamic("subscribe")(js.Any.fromFunction3(subscribe))
+    if (unsubscribe != null) __obj.updateDynamic("unsubscribe")(js.Any.fromFunction0(unsubscribe))
     __obj.asInstanceOf[Atmosphere]
   }
-  @scala.inline
-  implicit class AtmosphereOps[Self <: typingsSlinky.atmosphereJs.Atmosphere.Atmosphere] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAtmosphereRequest(value: AtmosphereRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AtmosphereRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAtmosphereRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AtmosphereRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscribe(
-      value: (/* requestOrUrl */ js.Any, /* callback */ js.UndefOr[js.Function], /* request */ js.UndefOr[Request]) => Request
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscribe")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutSubscribe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscribe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnsubscribe(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribe")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutUnsubscribe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribe")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

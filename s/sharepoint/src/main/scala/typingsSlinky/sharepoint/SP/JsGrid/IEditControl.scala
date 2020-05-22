@@ -7,24 +7,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line: interface-name
-@js.native
 trait IEditControl extends js.Object {
-  var Focus: js.UndefOr[js.Function1[/* eventInfo */ DomEvent, Unit]] = js.native
-  var GetCellContext: js.UndefOr[js.Function0[IEditControlCellContext]] = js.native
-  var GetInputElement: js.UndefOr[js.Function0[HTMLElement]] = js.native
-  var GetOriginalValue: js.UndefOr[js.Function0[IValue]] = js.native
-  var IsCurrentlyUsingGridTextInputElement: js.UndefOr[js.Function0[Boolean]] = js.native
-  var OnCellMove: js.UndefOr[js.Function0[Unit]] = js.native
-  var OnValueChanged: js.UndefOr[js.Function1[/* newValue */ IValue, Unit]] = js.native
-  var SetSize: js.UndefOr[js.Function2[/* width */ Double, /* height */ Double, Unit]] = js.native
-  var SetValue: js.UndefOr[js.Function1[/* value */ IValue, Unit]] = js.native
-  var SupportedReadMode: js.UndefOr[EditActorReadType] = js.native
-  var SupportedWriteMode: js.UndefOr[EditActorWriteType] = js.native
-  def BindToCell(cellContext: IEditControlCellContext): Unit = js.native
-  def Dispose(): Unit = js.native
-  def OnBeginEdit(eventInfo: DomEvent): Unit = js.native
-  def OnEndEdit(): Unit = js.native
-  def Unbind(): Unit = js.native
+  var Focus: js.UndefOr[js.Function1[/* eventInfo */ DomEvent, Unit]] = js.undefined
+  var GetCellContext: js.UndefOr[js.Function0[IEditControlCellContext]] = js.undefined
+  var GetInputElement: js.UndefOr[js.Function0[HTMLElement]] = js.undefined
+  var GetOriginalValue: js.UndefOr[js.Function0[IValue]] = js.undefined
+  var IsCurrentlyUsingGridTextInputElement: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var OnCellMove: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var OnValueChanged: js.UndefOr[js.Function1[/* newValue */ IValue, Unit]] = js.undefined
+  var SetSize: js.UndefOr[js.Function2[/* width */ Double, /* height */ Double, Unit]] = js.undefined
+  var SetValue: js.UndefOr[js.Function1[/* value */ IValue, Unit]] = js.undefined
+  var SupportedReadMode: js.UndefOr[EditActorReadType] = js.undefined
+  var SupportedWriteMode: js.UndefOr[EditActorWriteType] = js.undefined
+  def BindToCell(cellContext: IEditControlCellContext): Unit
+  def Dispose(): Unit
+  def OnBeginEdit(eventInfo: DomEvent): Unit
+  def OnEndEdit(): Unit
+  def Unbind(): Unit
 }
 
 object IEditControl {
@@ -34,180 +33,32 @@ object IEditControl {
     Dispose: () => Unit,
     OnBeginEdit: DomEvent => Unit,
     OnEndEdit: () => Unit,
-    Unbind: () => Unit
+    Unbind: () => Unit,
+    Focus: /* eventInfo */ DomEvent => Unit = null,
+    GetCellContext: () => IEditControlCellContext = null,
+    GetInputElement: () => HTMLElement = null,
+    GetOriginalValue: () => IValue = null,
+    IsCurrentlyUsingGridTextInputElement: () => Boolean = null,
+    OnCellMove: () => Unit = null,
+    OnValueChanged: /* newValue */ IValue => Unit = null,
+    SetSize: (/* width */ Double, /* height */ Double) => Unit = null,
+    SetValue: /* value */ IValue => Unit = null,
+    SupportedReadMode: EditActorReadType = null,
+    SupportedWriteMode: EditActorWriteType = null
   ): IEditControl = {
     val __obj = js.Dynamic.literal(BindToCell = js.Any.fromFunction1(BindToCell), Dispose = js.Any.fromFunction0(Dispose), OnBeginEdit = js.Any.fromFunction1(OnBeginEdit), OnEndEdit = js.Any.fromFunction0(OnEndEdit), Unbind = js.Any.fromFunction0(Unbind))
+    if (Focus != null) __obj.updateDynamic("Focus")(js.Any.fromFunction1(Focus))
+    if (GetCellContext != null) __obj.updateDynamic("GetCellContext")(js.Any.fromFunction0(GetCellContext))
+    if (GetInputElement != null) __obj.updateDynamic("GetInputElement")(js.Any.fromFunction0(GetInputElement))
+    if (GetOriginalValue != null) __obj.updateDynamic("GetOriginalValue")(js.Any.fromFunction0(GetOriginalValue))
+    if (IsCurrentlyUsingGridTextInputElement != null) __obj.updateDynamic("IsCurrentlyUsingGridTextInputElement")(js.Any.fromFunction0(IsCurrentlyUsingGridTextInputElement))
+    if (OnCellMove != null) __obj.updateDynamic("OnCellMove")(js.Any.fromFunction0(OnCellMove))
+    if (OnValueChanged != null) __obj.updateDynamic("OnValueChanged")(js.Any.fromFunction1(OnValueChanged))
+    if (SetSize != null) __obj.updateDynamic("SetSize")(js.Any.fromFunction2(SetSize))
+    if (SetValue != null) __obj.updateDynamic("SetValue")(js.Any.fromFunction1(SetValue))
+    if (SupportedReadMode != null) __obj.updateDynamic("SupportedReadMode")(SupportedReadMode.asInstanceOf[js.Any])
+    if (SupportedWriteMode != null) __obj.updateDynamic("SupportedWriteMode")(SupportedWriteMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEditControl]
   }
-  @scala.inline
-  implicit class IEditControlOps[Self <: IEditControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBindToCell(value: IEditControlCellContext => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BindToCell")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDispose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dispose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnBeginEdit(value: DomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnBeginEdit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnEndEdit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnEndEdit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUnbind(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unbind")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFocus(value: /* eventInfo */ DomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Focus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetCellContext(value: () => IEditControlCellContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCellContext")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetCellContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCellContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetInputElement(value: () => HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetInputElement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetInputElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetInputElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetOriginalValue(value: () => IValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetOriginalValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetOriginalValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetOriginalValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCurrentlyUsingGridTextInputElement(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsCurrentlyUsingGridTextInputElement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsCurrentlyUsingGridTextInputElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsCurrentlyUsingGridTextInputElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellMove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCellMove")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCellMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnValueChanged(value: /* newValue */ IValue => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnValueChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnValueChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnValueChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetSize(value: (/* width */ Double, /* height */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetSize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetValue(value: /* value */ IValue => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedReadMode(value: EditActorReadType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedReadMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedReadMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedReadMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedWriteMode(value: EditActorWriteType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedWriteMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedWriteMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedWriteMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

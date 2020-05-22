@@ -11,62 +11,24 @@ import scala.scalajs.js.annotation._
   * @property entries {Array<H.ui.MapSettingsControl.MapTypeEntry>=} - the map type entries to be shown in this map settings control
   * @property incidents {H.map.layer.Layer} - the traffic incidents layer to be activated by the map settings control
   */
-@js.native
 trait Options extends js.Object {
-  var alignment: js.UndefOr[LayoutAlignment] = js.native
-  var baseLayers: js.UndefOr[js.Array[Entry]] = js.native
-  var layers: js.UndefOr[js.Array[Entry]] = js.native
+  var alignment: js.UndefOr[LayoutAlignment] = js.undefined
+  var baseLayers: js.UndefOr[js.Array[Entry]] = js.undefined
+  var layers: js.UndefOr[js.Array[Entry]] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    alignment: LayoutAlignment = null,
+    baseLayers: js.Array[Entry] = null,
+    layers: js.Array[Entry] = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (baseLayers != null) __obj.updateDynamic("baseLayers")(baseLayers.asInstanceOf[js.Any])
+    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: LayoutAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseLayers(value: js.Array[Entry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseLayers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseLayers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayers(value: js.Array[Entry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

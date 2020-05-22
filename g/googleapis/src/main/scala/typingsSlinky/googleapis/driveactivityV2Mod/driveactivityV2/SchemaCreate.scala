@@ -28,53 +28,12 @@ trait SchemaCreate extends js.Object {
 
 object SchemaCreate {
   @scala.inline
-  def apply(): SchemaCreate = {
+  def apply(copy: SchemaCopy = null, `new`: SchemaNew = null, upload: SchemaUpload = null): SchemaCreate = {
     val __obj = js.Dynamic.literal()
+    if (copy != null) __obj.updateDynamic("copy")(copy.asInstanceOf[js.Any])
+    if (`new` != null) __obj.updateDynamic("new")(`new`.asInstanceOf[js.Any])
+    if (upload != null) __obj.updateDynamic("upload")(upload.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreate]
   }
-  @scala.inline
-  implicit class SchemaCreateOps[Self <: SchemaCreate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopy(value: SchemaCopy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNew(value: SchemaNew): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("new")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNew: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("new")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload(value: SchemaUpload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

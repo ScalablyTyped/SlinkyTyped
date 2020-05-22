@@ -30,59 +30,17 @@ trait CreateLocationNfsRequest extends js.Object {
 
 object CreateLocationNfsRequest {
   @scala.inline
-  def apply(OnPremConfig: OnPremConfig, ServerHostname: ServerHostname, Subdirectory: NfsSubdirectory): CreateLocationNfsRequest = {
+  def apply(
+    OnPremConfig: OnPremConfig,
+    ServerHostname: ServerHostname,
+    Subdirectory: NfsSubdirectory,
+    MountOptions: NfsMountOptions = null,
+    Tags: TagList = null
+  ): CreateLocationNfsRequest = {
     val __obj = js.Dynamic.literal(OnPremConfig = OnPremConfig.asInstanceOf[js.Any], ServerHostname = ServerHostname.asInstanceOf[js.Any], Subdirectory = Subdirectory.asInstanceOf[js.Any])
+    if (MountOptions != null) __obj.updateDynamic("MountOptions")(MountOptions.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLocationNfsRequest]
   }
-  @scala.inline
-  implicit class CreateLocationNfsRequestOps[Self <: CreateLocationNfsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnPremConfig(value: OnPremConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnPremConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerHostname(value: ServerHostname): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerHostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubdirectory(value: NfsSubdirectory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subdirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMountOptions(value: NfsMountOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

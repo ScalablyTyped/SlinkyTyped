@@ -42,78 +42,16 @@ object DescribeStackDriftDetectionStatusOutput {
     DetectionStatus: StackDriftDetectionStatus,
     StackDriftDetectionId: StackDriftDetectionId,
     StackId: StackId,
-    Timestamp: js.Date
+    Timestamp: js.Date,
+    DetectionStatusReason: StackDriftDetectionStatusReason = null,
+    DriftedStackResourceCount: js.UndefOr[BoxedInteger] = js.undefined,
+    StackDriftStatus: StackDriftStatus = null
   ): DescribeStackDriftDetectionStatusOutput = {
     val __obj = js.Dynamic.literal(DetectionStatus = DetectionStatus.asInstanceOf[js.Any], StackDriftDetectionId = StackDriftDetectionId.asInstanceOf[js.Any], StackId = StackId.asInstanceOf[js.Any], Timestamp = Timestamp.asInstanceOf[js.Any])
+    if (DetectionStatusReason != null) __obj.updateDynamic("DetectionStatusReason")(DetectionStatusReason.asInstanceOf[js.Any])
+    if (!js.isUndefined(DriftedStackResourceCount)) __obj.updateDynamic("DriftedStackResourceCount")(DriftedStackResourceCount.get.asInstanceOf[js.Any])
+    if (StackDriftStatus != null) __obj.updateDynamic("StackDriftStatus")(StackDriftStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStackDriftDetectionStatusOutput]
   }
-  @scala.inline
-  implicit class DescribeStackDriftDetectionStatusOutputOps[Self <: DescribeStackDriftDetectionStatusOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectionStatus(value: StackDriftDetectionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStackDriftDetectionId(value: StackDriftDetectionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackDriftDetectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStackId(value: StackId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetectionStatusReason(value: StackDriftDetectionStatusReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectionStatusReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectionStatusReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectionStatusReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriftedStackResourceCount(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftedStackResourceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriftedStackResourceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftedStackResourceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackDriftStatus(value: StackDriftStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackDriftStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackDriftStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackDriftStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

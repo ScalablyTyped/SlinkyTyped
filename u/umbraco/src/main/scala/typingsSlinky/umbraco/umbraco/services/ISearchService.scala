@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * Service for handling the main application search, can currently search content, media and members
   *
   */
-@js.native
 trait ISearchService extends js.Object {
   /**
     * @ngdoc method
@@ -27,7 +26,7 @@ trait ISearchService extends js.Object {
     * @param {String} args.term seach term
     * @returns {Promise} returns promise containing all matching items
     */
-  def searchAll(args: ISearchArgs): IPromise[_] = js.native
+  def searchAll(args: ISearchArgs): IPromise[_]
   /**
     * @ngdoc method
     * @name umbraco.services.searchService#searchContent
@@ -39,7 +38,7 @@ trait ISearchService extends js.Object {
     * @param {String} args.term seach term
     * @returns {Promise} returns promise containing all matching content items
     */
-  def searchContent(args: ISearchArgs): IPromise[js.Array[ISearchContent]] = js.native
+  def searchContent(args: ISearchArgs): IPromise[js.Array[ISearchContent]]
   /**
     * @ngdoc method
     * @name umbraco.services.searchService#searchMedia
@@ -51,7 +50,7 @@ trait ISearchService extends js.Object {
     * @param {String} args.term seach term
     * @returns {Promise} returns promise containing all matching media items
     */
-  def searchMedia(args: ISearchArgs): IPromise[js.Array[ISearchMedia]] = js.native
+  def searchMedia(args: ISearchArgs): IPromise[js.Array[ISearchMedia]]
   /**
     * @ngdoc method
     * @name umbraco.services.searchService#searchMembers
@@ -63,7 +62,7 @@ trait ISearchService extends js.Object {
     * @param {String} args.term seach term
     * @returns {Promise} returns promise containing all matching members
     */
-  def searchMembers(args: ISearchArgs): IPromise[js.Array[ISearchMember]] = js.native
+  def searchMembers(args: ISearchArgs): IPromise[js.Array[ISearchMember]]
 }
 
 object ISearchService {
@@ -77,37 +76,5 @@ object ISearchService {
     val __obj = js.Dynamic.literal(searchAll = js.Any.fromFunction1(searchAll), searchContent = js.Any.fromFunction1(searchContent), searchMedia = js.Any.fromFunction1(searchMedia), searchMembers = js.Any.fromFunction1(searchMembers))
     __obj.asInstanceOf[ISearchService]
   }
-  @scala.inline
-  implicit class ISearchServiceOps[Self <: ISearchService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSearchAll(value: ISearchArgs => IPromise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchAll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSearchContent(value: ISearchArgs => IPromise[js.Array[ISearchContent]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSearchMedia(value: ISearchArgs => IPromise[js.Array[ISearchMedia]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchMedia")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSearchMembers(value: ISearchArgs => IPromise[js.Array[ISearchMember]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchMembers")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -24,7 +24,7 @@ import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuS
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuStyles
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -135,7 +135,7 @@ object ContextualMenu {
     @scala.inline
     def shouldUpdateWhenHidden(value: Boolean): this.type = set("shouldUpdateWhenHidden", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IContextualMenuStyleProps => Partial[IContextualMenuStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IContextualMenuStyleProps => DeepPartial[IContextualMenuStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IContextualMenuStyleProps, IContextualMenuStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

@@ -2,6 +2,7 @@ package typingsSlinky.intercomClient.mod
 
 import typingsSlinky.intercomClient.anon.AppApiKey
 import typingsSlinky.intercomClient.anon.Token
+import typingsSlinky.request.mod.CoreOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,5 +21,11 @@ class Client protected () extends js.Object {
   var tags: Tags = js.native
   var users: Users = js.native
   var visitors: Visitors = js.native
+  /**
+    * client library also supports passing in `request` options
+    * Note that certain request options (such as `json`, and certain `headers` names cannot be overridden).
+    */
+  def useRequestOpts(): this.type = js.native
+  def useRequestOpts(options: CoreOptions): this.type = js.native
 }
 

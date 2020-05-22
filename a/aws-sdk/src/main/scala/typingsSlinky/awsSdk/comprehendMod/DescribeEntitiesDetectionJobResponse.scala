@@ -14,29 +14,10 @@ trait DescribeEntitiesDetectionJobResponse extends js.Object {
 
 object DescribeEntitiesDetectionJobResponse {
   @scala.inline
-  def apply(): DescribeEntitiesDetectionJobResponse = {
+  def apply(EntitiesDetectionJobProperties: EntitiesDetectionJobProperties = null): DescribeEntitiesDetectionJobResponse = {
     val __obj = js.Dynamic.literal()
+    if (EntitiesDetectionJobProperties != null) __obj.updateDynamic("EntitiesDetectionJobProperties")(EntitiesDetectionJobProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEntitiesDetectionJobResponse]
   }
-  @scala.inline
-  implicit class DescribeEntitiesDetectionJobResponseOps[Self <: DescribeEntitiesDetectionJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntitiesDetectionJobProperties(value: EntitiesDetectionJobProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitiesDetectionJobProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntitiesDetectionJobProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitiesDetectionJobProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

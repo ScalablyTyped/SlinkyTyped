@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridFSBucketFindOptions extends js.Object {
-  var batchSize: js.UndefOr[scala.Double] = js.native
-  var limit: js.UndefOr[scala.Double] = js.native
-  var maxTimeMS: js.UndefOr[scala.Double] = js.native
-  var noCursorTimeout: js.UndefOr[Boolean] = js.native
-  var skip: js.UndefOr[scala.Double] = js.native
-  var sort: js.UndefOr[js.Object] = js.native
+  var batchSize: js.UndefOr[scala.Double] = js.undefined
+  var limit: js.UndefOr[scala.Double] = js.undefined
+  var maxTimeMS: js.UndefOr[scala.Double] = js.undefined
+  var noCursorTimeout: js.UndefOr[Boolean] = js.undefined
+  var skip: js.UndefOr[scala.Double] = js.undefined
+  var sort: js.UndefOr[js.Object] = js.undefined
 }
 
 object GridFSBucketFindOptions {
   @scala.inline
-  def apply(): GridFSBucketFindOptions = {
+  def apply(
+    batchSize: js.UndefOr[scala.Double] = js.undefined,
+    limit: js.UndefOr[scala.Double] = js.undefined,
+    maxTimeMS: js.UndefOr[scala.Double] = js.undefined,
+    noCursorTimeout: js.UndefOr[Boolean] = js.undefined,
+    skip: js.UndefOr[scala.Double] = js.undefined,
+    sort: js.Object = null
+  ): GridFSBucketFindOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batchSize)) __obj.updateDynamic("batchSize")(batchSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxTimeMS)) __obj.updateDynamic("maxTimeMS")(maxTimeMS.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noCursorTimeout)) __obj.updateDynamic("noCursorTimeout")(noCursorTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skip)) __obj.updateDynamic("skip")(skip.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridFSBucketFindOptions]
   }
-  @scala.inline
-  implicit class GridFSBucketFindOptionsOps[Self <: GridFSBucketFindOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchSize(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTimeMS(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeMS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTimeMS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeMS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoCursorTimeout(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCursorTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoCursorTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCursorTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

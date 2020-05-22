@@ -11,7 +11,7 @@ trait GetExportJobsRequest extends js.Object {
     */
   var ApplicationId: string = js.native
   /**
-    * The maximum number of items to include in each page of a paginated response. This parameter is currently not supported for application, campaign, and journey metrics.
+    * The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
     */
   var PageSize: js.UndefOr[string] = js.native
   /**
@@ -22,47 +22,11 @@ trait GetExportJobsRequest extends js.Object {
 
 object GetExportJobsRequest {
   @scala.inline
-  def apply(ApplicationId: string): GetExportJobsRequest = {
+  def apply(ApplicationId: string, PageSize: string = null, Token: string = null): GetExportJobsRequest = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any])
+    if (PageSize != null) __obj.updateDynamic("PageSize")(PageSize.asInstanceOf[js.Any])
+    if (Token != null) __obj.updateDynamic("Token")(Token.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetExportJobsRequest]
   }
-  @scala.inline
-  implicit class GetExportJobsRequestOps[Self <: GetExportJobsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

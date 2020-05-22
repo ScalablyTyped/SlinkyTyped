@@ -30,77 +30,20 @@ trait ThingGroupDocument extends js.Object {
 
 object ThingGroupDocument {
   @scala.inline
-  def apply(): ThingGroupDocument = {
+  def apply(
+    attributes: Attributes = null,
+    parentGroupNames: ThingGroupNameList = null,
+    thingGroupDescription: ThingGroupDescription = null,
+    thingGroupId: ThingGroupId = null,
+    thingGroupName: ThingGroupName = null
+  ): ThingGroupDocument = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (parentGroupNames != null) __obj.updateDynamic("parentGroupNames")(parentGroupNames.asInstanceOf[js.Any])
+    if (thingGroupDescription != null) __obj.updateDynamic("thingGroupDescription")(thingGroupDescription.asInstanceOf[js.Any])
+    if (thingGroupId != null) __obj.updateDynamic("thingGroupId")(thingGroupId.asInstanceOf[js.Any])
+    if (thingGroupName != null) __obj.updateDynamic("thingGroupName")(thingGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThingGroupDocument]
   }
-  @scala.inline
-  implicit class ThingGroupDocumentOps[Self <: ThingGroupDocument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: Attributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentGroupNames(value: ThingGroupNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentGroupNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentGroupNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentGroupNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingGroupDescription(value: ThingGroupDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingGroupDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingGroupId(value: ThingGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingGroupName(value: ThingGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

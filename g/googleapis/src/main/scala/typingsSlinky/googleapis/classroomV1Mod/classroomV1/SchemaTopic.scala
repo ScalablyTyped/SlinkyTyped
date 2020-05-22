@@ -33,65 +33,13 @@ trait SchemaTopic extends js.Object {
 
 object SchemaTopic {
   @scala.inline
-  def apply(): SchemaTopic = {
+  def apply(courseId: String = null, name: String = null, topicId: String = null, updateTime: String = null): SchemaTopic = {
     val __obj = js.Dynamic.literal()
+    if (courseId != null) __obj.updateDynamic("courseId")(courseId.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (topicId != null) __obj.updateDynamic("topicId")(topicId.asInstanceOf[js.Any])
+    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTopic]
   }
-  @scala.inline
-  implicit class SchemaTopicOps[Self <: SchemaTopic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCourseId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("courseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCourseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("courseId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

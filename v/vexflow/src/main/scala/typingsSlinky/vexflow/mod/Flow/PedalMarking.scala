@@ -25,5 +25,14 @@ object PedalMarking extends js.Object {
   @js.native
   object GLYPHS extends /* name */ StringDictionary[Xshift]
   
+  @js.native
+  object Styles extends js.Object {
+    /* 0 */ val BRACKET: typingsSlinky.vexflow.Vex.Flow.PedalMarking.Styles.BRACKET with Double = js.native
+    /* 1 */ val MIXED: typingsSlinky.vexflow.Vex.Flow.PedalMarking.Styles.MIXED with Double = js.native
+    /* 1 */ val TEXT: typingsSlinky.vexflow.Vex.Flow.PedalMarking.Styles.TEXT with Double = js.native
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.vexflow.Vex.Flow.PedalMarking.Styles with Double] = js.native
+  }
+  
 }
 

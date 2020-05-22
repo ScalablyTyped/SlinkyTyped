@@ -1,239 +1,115 @@
 package typingsSlinky.extjs.Ext.chart
 
+import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
+import typingsSlinky.extjs.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILegend extends IBase {
   /** [Config Option] (String) */
-  var boxFill: js.UndefOr[String] = js.native
+  var boxFill: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var boxStroke: js.UndefOr[String] = js.native
+  var boxStroke: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var boxStrokeWidth: js.UndefOr[String] = js.native
+  var boxStrokeWidth: js.UndefOr[String] = js.undefined
   /** [Config Option] (Number) */
-  var boxZIndex: js.UndefOr[Double] = js.native
+  var boxZIndex: js.UndefOr[Double] = js.undefined
   /** [Property] (Boolean) */
-  var isVertical: js.UndefOr[Boolean] = js.native
+  var isVertical: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Number) */
-  var itemSpacing: js.UndefOr[Double] = js.native
+  var itemSpacing: js.UndefOr[Double] = js.undefined
   /** [Config Option] (String) */
-  var labelColor: js.UndefOr[String] = js.native
+  var labelColor: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var labelFont: js.UndefOr[String] = js.native
+  var labelFont: js.UndefOr[String] = js.undefined
   /** [Config Option] (Number) */
-  var padding: js.UndefOr[Double] = js.native
+  var padding: js.UndefOr[Double] = js.undefined
   /** [Config Option] (String) */
-  var position: js.UndefOr[String] = js.native
+  var position: js.UndefOr[String] = js.undefined
   /** [Method] toggle
-  		* @param show Boolean Whether to show or hide the legend.
-  		*/
-  var toggle: js.UndefOr[js.Function1[/* show */ js.UndefOr[Boolean], Unit]] = js.native
+    * @param show Boolean Whether to show or hide the legend.
+    */
+  var toggle: js.UndefOr[js.Function1[/* show */ js.UndefOr[Boolean], Unit]] = js.undefined
   /** [Config Option] (Boolean) */
-  var update: js.UndefOr[Boolean] = js.native
+  var update: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Number) */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Number) */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object ILegend {
   @scala.inline
-  def apply(): ILegend = {
+  def apply(
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    boxFill: String = null,
+    boxStroke: String = null,
+    boxStrokeWidth: String = null,
+    boxZIndex: js.UndefOr[Double] = js.undefined,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    config: js.Any = null,
+    extend: String = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* config */ js.UndefOr[js.Any] => ILegend = null,
+    isVertical: js.UndefOr[Boolean] = js.undefined,
+    itemSpacing: js.UndefOr[Double] = js.undefined,
+    labelColor: String = null,
+    labelFont: String = null,
+    mixins: js.Any = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    position: String = null,
+    requires: Array = null,
+    self: IClass = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    statics: js.Any = null,
+    toggle: /* show */ js.UndefOr[Boolean] => Unit = null,
+    update: js.UndefOr[Boolean] = js.undefined,
+    uses: Array = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): ILegend = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (boxFill != null) __obj.updateDynamic("boxFill")(boxFill.asInstanceOf[js.Any])
+    if (boxStroke != null) __obj.updateDynamic("boxStroke")(boxStroke.asInstanceOf[js.Any])
+    if (boxStrokeWidth != null) __obj.updateDynamic("boxStrokeWidth")(boxStrokeWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(boxZIndex)) __obj.updateDynamic("boxZIndex")(boxZIndex.get.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (!js.isUndefined(isVertical)) __obj.updateDynamic("isVertical")(isVertical.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemSpacing)) __obj.updateDynamic("itemSpacing")(itemSpacing.get.asInstanceOf[js.Any])
+    if (labelColor != null) __obj.updateDynamic("labelColor")(labelColor.asInstanceOf[js.Any])
+    if (labelFont != null) __obj.updateDynamic("labelFont")(labelFont.asInstanceOf[js.Any])
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (toggle != null) __obj.updateDynamic("toggle")(js.Any.fromFunction1(toggle))
+    if (!js.isUndefined(update)) __obj.updateDynamic("update")(update.get.asInstanceOf[js.Any])
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILegend]
   }
-  @scala.inline
-  implicit class ILegendOps[Self <: ILegend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoxFill(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxFill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxFill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxStroke(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxStroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxStroke: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxStroke")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxStrokeWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxStrokeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxStrokeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxStrokeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxZIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxZIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVertical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSpacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFont(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFont")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggle(value: /* show */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutToggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

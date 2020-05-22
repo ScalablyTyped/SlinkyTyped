@@ -35,89 +35,22 @@ trait PublicKeyState extends js.Object {
 
 object PublicKeyState {
   @scala.inline
-  def apply(): PublicKeyState = {
+  def apply(
+    callerReference: Input[String] = null,
+    comment: Input[String] = null,
+    encodedKey: Input[String] = null,
+    etag: Input[String] = null,
+    name: Input[String] = null,
+    namePrefix: Input[String] = null
+  ): PublicKeyState = {
     val __obj = js.Dynamic.literal()
+    if (callerReference != null) __obj.updateDynamic("callerReference")(callerReference.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (encodedKey != null) __obj.updateDynamic("encodedKey")(encodedKey.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namePrefix != null) __obj.updateDynamic("namePrefix")(namePrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublicKeyState]
   }
-  @scala.inline
-  implicit class PublicKeyStateOps[Self <: PublicKeyState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerReference(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallerReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodedKey(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodedKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodedKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodedKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamePrefix(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

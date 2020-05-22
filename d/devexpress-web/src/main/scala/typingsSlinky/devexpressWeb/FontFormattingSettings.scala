@@ -7,60 +7,59 @@ import scala.scalajs.js.annotation._
 /**
   * Contains settings to define the font formatting.
   */
-@js.native
 trait FontFormattingSettings extends js.Object {
   /**
     * Gets or sets a value indicating whether all characters are capital letters.
     */
-  var allCaps: Boolean = js.native
+  var allCaps: Boolean
   /**
     * Gets or sets the character background color.
     */
-  var backColor: String = js.native
+  var backColor: String
   /**
     * Gets or sets whether the character formatting is bold.
     */
-  var bold: Boolean = js.native
+  var bold: Boolean
   /**
     * Gets or sets the character(s) font name.
     */
-  var fontName: String = js.native
+  var fontName: String
   /**
     * Gets or sets the foreground color of characters.
     */
-  var foreColor: String = js.native
+  var foreColor: String
   /**
     * Gets or sets a value indicating whether a character(s) is hidden.
     */
-  var hidden: Boolean = js.native
+  var hidden: Boolean
   /**
     * Gets or sets a value indicating whether a character(s) is italicized.
     */
-  var italic: Boolean = js.native
+  var italic: Boolean
   /**
     * Gets or sets a value specifying character script formatting.
     */
-  var script: CharacterFormattingScript = js.native
+  var script: CharacterFormattingScript
   /**
     * Gets or sets the character(s) font size (in points).
     */
-  var size: Double = js.native
+  var size: Double
   /**
     * Gets or sets a value specifying whether the strikeout formatting is applied to a character(s).
     */
-  var strikeout: Boolean = js.native
+  var strikeout: Boolean
   /**
     * Gets or sets the type of underline applied to the character(s).
     */
-  var underline: Boolean = js.native
+  var underline: Boolean
   /**
     * Gets or sets the color of the underline for the specified characters.
     */
-  var underlineColor: String = js.native
+  var underlineColor: String
   /**
     * Gets or sets whether only word characters are underlined.
     */
-  var underlineWordsOnly: Boolean = js.native
+  var underlineWordsOnly: Boolean
 }
 
 object FontFormattingSettings {
@@ -83,91 +82,5 @@ object FontFormattingSettings {
     val __obj = js.Dynamic.literal(allCaps = allCaps.asInstanceOf[js.Any], backColor = backColor.asInstanceOf[js.Any], bold = bold.asInstanceOf[js.Any], fontName = fontName.asInstanceOf[js.Any], foreColor = foreColor.asInstanceOf[js.Any], hidden = hidden.asInstanceOf[js.Any], italic = italic.asInstanceOf[js.Any], script = script.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], strikeout = strikeout.asInstanceOf[js.Any], underline = underline.asInstanceOf[js.Any], underlineColor = underlineColor.asInstanceOf[js.Any], underlineWordsOnly = underlineWordsOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontFormattingSettings]
   }
-  @scala.inline
-  implicit class FontFormattingSettingsOps[Self <: FontFormattingSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllCaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allCaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBold(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItalic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScript(value: CharacterFormattingScript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrikeout(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strikeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnderline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnderlineColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underlineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnderlineWordsOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underlineWordsOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

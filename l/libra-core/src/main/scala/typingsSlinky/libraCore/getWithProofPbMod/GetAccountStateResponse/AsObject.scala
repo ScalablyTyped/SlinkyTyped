@@ -4,36 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AsObject extends js.Object {
-  var accountStateWithProof: js.UndefOr[typingsSlinky.libraCore.accountStateBlobPbMod.AccountStateWithProof.AsObject] = js.native
+  var accountStateWithProof: js.UndefOr[typingsSlinky.libraCore.accountStateBlobPbMod.AccountStateWithProof.AsObject] = js.undefined
 }
 
 object AsObject {
   @scala.inline
-  def apply(): AsObject = {
+  def apply(
+    accountStateWithProof: typingsSlinky.libraCore.accountStateBlobPbMod.AccountStateWithProof.AsObject = null
+  ): AsObject = {
     val __obj = js.Dynamic.literal()
+    if (accountStateWithProof != null) __obj.updateDynamic("accountStateWithProof")(accountStateWithProof.asInstanceOf[js.Any])
     __obj.asInstanceOf[AsObject]
   }
-  @scala.inline
-  implicit class AsObjectOps[Self <: AsObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountStateWithProof(value: typingsSlinky.libraCore.accountStateBlobPbMod.AccountStateWithProof.AsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountStateWithProof")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountStateWithProof: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountStateWithProof")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

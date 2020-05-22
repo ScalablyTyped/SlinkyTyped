@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PaymentRequestEventMap extends js.Object {
-  var shippingaddresschange: org.scalajs.dom.raw.Event = js.native
-  var shippingoptionchange: org.scalajs.dom.raw.Event = js.native
+  var shippingaddresschange: org.scalajs.dom.raw.Event
+  var shippingoptionchange: org.scalajs.dom.raw.Event
 }
 
 object PaymentRequestEventMap {
@@ -16,25 +15,5 @@ object PaymentRequestEventMap {
     val __obj = js.Dynamic.literal(shippingaddresschange = shippingaddresschange.asInstanceOf[js.Any], shippingoptionchange = shippingoptionchange.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentRequestEventMap]
   }
-  @scala.inline
-  implicit class PaymentRequestEventMapOps[Self <: PaymentRequestEventMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShippingaddresschange(value: org.scalajs.dom.raw.Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingaddresschange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShippingoptionchange(value: org.scalajs.dom.raw.Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingoptionchange")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

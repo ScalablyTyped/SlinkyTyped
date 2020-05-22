@@ -4,233 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrderLineItem extends js.Object {
   /** Cancellations of the line item. */
-  var cancellations: js.UndefOr[js.Array[OrderCancellation]] = js.native
+  var cancellations: js.UndefOr[js.Array[OrderCancellation]] = js.undefined
   /** The channel type of the order: "purchaseOnGoogle" or "googleExpress". */
-  var channelType: js.UndefOr[String] = js.native
+  var channelType: js.UndefOr[String] = js.undefined
   /** The id of the line item. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Total price for the line item. For example, if two items for $10 are purchased, the total price will be $20. */
-  var price: js.UndefOr[Price] = js.native
+  var price: js.UndefOr[Price] = js.undefined
   /** Product data from the time of the order placement. */
-  var product: js.UndefOr[OrderLineItemProduct] = js.native
+  var product: js.UndefOr[OrderLineItemProduct] = js.undefined
   /** Number of items canceled. */
-  var quantityCanceled: js.UndefOr[Double] = js.native
+  var quantityCanceled: js.UndefOr[Double] = js.undefined
   /** Number of items delivered. */
-  var quantityDelivered: js.UndefOr[Double] = js.native
+  var quantityDelivered: js.UndefOr[Double] = js.undefined
   /** Number of items ordered. */
-  var quantityOrdered: js.UndefOr[Double] = js.native
+  var quantityOrdered: js.UndefOr[Double] = js.undefined
   /** Number of items pending. */
-  var quantityPending: js.UndefOr[Double] = js.native
+  var quantityPending: js.UndefOr[Double] = js.undefined
   /** Number of items returned. */
-  var quantityReturned: js.UndefOr[Double] = js.native
+  var quantityReturned: js.UndefOr[Double] = js.undefined
   /** Number of items shipped. */
-  var quantityShipped: js.UndefOr[Double] = js.native
+  var quantityShipped: js.UndefOr[Double] = js.undefined
   /** Details of the return policy for the line item. */
-  var returnInfo: js.UndefOr[OrderLineItemReturnInfo] = js.native
+  var returnInfo: js.UndefOr[OrderLineItemReturnInfo] = js.undefined
   /** Returns of the line item. */
-  var returns: js.UndefOr[js.Array[OrderReturn]] = js.native
+  var returns: js.UndefOr[js.Array[OrderReturn]] = js.undefined
   /** Details of the requested shipping for the line item. */
-  var shippingDetails: js.UndefOr[OrderLineItemShippingDetails] = js.native
+  var shippingDetails: js.UndefOr[OrderLineItemShippingDetails] = js.undefined
   /** Total tax amount for the line item. For example, if two items are purchased, and each have a cost tax of $2, the total tax amount will be $4. */
-  var tax: js.UndefOr[Price] = js.native
+  var tax: js.UndefOr[Price] = js.undefined
 }
 
 object OrderLineItem {
   @scala.inline
-  def apply(): OrderLineItem = {
+  def apply(
+    cancellations: js.Array[OrderCancellation] = null,
+    channelType: String = null,
+    id: String = null,
+    price: Price = null,
+    product: OrderLineItemProduct = null,
+    quantityCanceled: js.UndefOr[Double] = js.undefined,
+    quantityDelivered: js.UndefOr[Double] = js.undefined,
+    quantityOrdered: js.UndefOr[Double] = js.undefined,
+    quantityPending: js.UndefOr[Double] = js.undefined,
+    quantityReturned: js.UndefOr[Double] = js.undefined,
+    quantityShipped: js.UndefOr[Double] = js.undefined,
+    returnInfo: OrderLineItemReturnInfo = null,
+    returns: js.Array[OrderReturn] = null,
+    shippingDetails: OrderLineItemShippingDetails = null,
+    tax: Price = null
+  ): OrderLineItem = {
     val __obj = js.Dynamic.literal()
+    if (cancellations != null) __obj.updateDynamic("cancellations")(cancellations.asInstanceOf[js.Any])
+    if (channelType != null) __obj.updateDynamic("channelType")(channelType.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
+    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantityCanceled)) __obj.updateDynamic("quantityCanceled")(quantityCanceled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantityDelivered)) __obj.updateDynamic("quantityDelivered")(quantityDelivered.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantityOrdered)) __obj.updateDynamic("quantityOrdered")(quantityOrdered.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantityPending)) __obj.updateDynamic("quantityPending")(quantityPending.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantityReturned)) __obj.updateDynamic("quantityReturned")(quantityReturned.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantityShipped)) __obj.updateDynamic("quantityShipped")(quantityShipped.get.asInstanceOf[js.Any])
+    if (returnInfo != null) __obj.updateDynamic("returnInfo")(returnInfo.asInstanceOf[js.Any])
+    if (returns != null) __obj.updateDynamic("returns")(returns.asInstanceOf[js.Any])
+    if (shippingDetails != null) __obj.updateDynamic("shippingDetails")(shippingDetails.asInstanceOf[js.Any])
+    if (tax != null) __obj.updateDynamic("tax")(tax.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderLineItem]
   }
-  @scala.inline
-  implicit class OrderLineItemOps[Self <: OrderLineItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancellations(value: js.Array[OrderCancellation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancellations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancellations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancellations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrice(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduct(value: OrderLineItemProduct): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantityCanceled(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityCanceled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantityCanceled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityCanceled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantityDelivered(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityDelivered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantityDelivered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityDelivered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantityOrdered(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityOrdered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantityOrdered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityOrdered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantityPending(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityPending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantityPending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityPending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantityReturned(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityReturned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantityReturned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityReturned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantityShipped(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityShipped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantityShipped: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityShipped")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnInfo(value: OrderLineItemReturnInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturns(value: js.Array[OrderReturn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingDetails(value: OrderLineItemShippingDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTax(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

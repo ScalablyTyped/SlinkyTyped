@@ -23,350 +23,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AbstractAccess extends js.Object {
-  var `abstract`: js.UndefOr[Boolean | Null] = js.native
-  var access: js.UndefOr[public | `private` | `protected` | Null] = js.native
-  var accessibility: js.UndefOr[public | `private` | `protected` | Null] = js.native
-  var async: js.UndefOr[Boolean] = js.native
-  var body: BlockStatementKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
-  var computed: js.UndefOr[Boolean] = js.native
-  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.native
-  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.native
-  var expression: js.UndefOr[Boolean] = js.native
-  var generator: js.UndefOr[Boolean] = js.native
-  var id: js.UndefOr[IdentifierKind | Null] = js.native
-  var key: PrivateNameKind = js.native
-  var kind: js.UndefOr[get | set | method | constructor] = js.native
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
-  var optional: js.UndefOr[Boolean | Null] = js.native
-  var params: js.Array[PatternKind] = js.native
-  var rest: js.UndefOr[IdentifierKind | Null] = js.native
-  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.native
-  var static: js.UndefOr[Boolean | Null] = js.native
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind | Null] = js.native
+  var `abstract`: js.UndefOr[Boolean | Null] = js.undefined
+  var access: js.UndefOr[public | `private` | `protected` | Null] = js.undefined
+  var accessibility: js.UndefOr[public | `private` | `protected` | Null] = js.undefined
+  var async: js.UndefOr[Boolean] = js.undefined
+  var body: BlockStatementKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
+  var computed: js.UndefOr[Boolean] = js.undefined
+  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.undefined
+  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.undefined
+  var expression: js.UndefOr[Boolean] = js.undefined
+  var generator: js.UndefOr[Boolean] = js.undefined
+  var id: js.UndefOr[IdentifierKind | Null] = js.undefined
+  var key: PrivateNameKind
+  var kind: js.UndefOr[get | set | method | constructor] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
+  var optional: js.UndefOr[Boolean | Null] = js.undefined
+  var params: js.Array[PatternKind]
+  var rest: js.UndefOr[IdentifierKind | Null] = js.undefined
+  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.undefined
+  var static: js.UndefOr[Boolean | Null] = js.undefined
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind | Null] = js.undefined
 }
 
 object AbstractAccess {
   @scala.inline
-  def apply(body: BlockStatementKind, key: PrivateNameKind, params: js.Array[PatternKind]): AbstractAccess = {
+  def apply(
+    body: BlockStatementKind,
+    key: PrivateNameKind,
+    params: js.Array[PatternKind],
+    `abstract`: js.UndefOr[Null | Boolean] = js.undefined,
+    access: js.UndefOr[Null | public | `private` | `protected`] = js.undefined,
+    accessibility: js.UndefOr[Null | public | `private` | `protected`] = js.undefined,
+    async: js.UndefOr[Boolean] = js.undefined,
+    comments: js.UndefOr[Null | js.Array[CommentKind]] = js.undefined,
+    computed: js.UndefOr[Boolean] = js.undefined,
+    decorators: js.UndefOr[Null | js.Array[DecoratorKind]] = js.undefined,
+    defaults: js.Array[ExpressionKind | Null] = null,
+    expression: js.UndefOr[Boolean] = js.undefined,
+    generator: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[Null | IdentifierKind] = js.undefined,
+    kind: get | set | method | constructor = null,
+    loc: js.UndefOr[Null | SourceLocationKind] = js.undefined,
+    optional: js.UndefOr[Null | Boolean] = js.undefined,
+    rest: js.UndefOr[Null | IdentifierKind] = js.undefined,
+    returnType: js.UndefOr[Null | TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined,
+    static: js.UndefOr[Null | Boolean] = js.undefined,
+    typeParameters: js.UndefOr[Null | TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.undefined
+  ): AbstractAccess = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+    if (!js.isUndefined(`abstract`)) __obj.updateDynamic("abstract")(`abstract`.asInstanceOf[js.Any])
+    if (!js.isUndefined(access)) __obj.updateDynamic("access")(access.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibility)) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
+    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (!js.isUndefined(computed)) __obj.updateDynamic("computed")(computed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(decorators)) __obj.updateDynamic("decorators")(decorators.asInstanceOf[js.Any])
+    if (defaults != null) __obj.updateDynamic("defaults")(defaults.asInstanceOf[js.Any])
+    if (!js.isUndefined(expression)) __obj.updateDynamic("expression")(expression.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generator)) __obj.updateDynamic("generator")(generator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (!js.isUndefined(optional)) __obj.updateDynamic("optional")(optional.asInstanceOf[js.Any])
+    if (!js.isUndefined(rest)) __obj.updateDynamic("rest")(rest.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnType)) __obj.updateDynamic("returnType")(returnType.asInstanceOf[js.Any])
+    if (!js.isUndefined(static)) __obj.updateDynamic("static")(static.asInstanceOf[js.Any])
+    if (!js.isUndefined(typeParameters)) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbstractAccess]
   }
-  @scala.inline
-  implicit class AbstractAccessOps[Self <: AbstractAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: BlockStatementKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: PrivateNameKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Array[PatternKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbstract(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbstract: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbstractNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(null)
-        ret
-    }
-    @scala.inline
-    def withAccess(value: public | `private` | `protected`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(null)
-        ret
-    }
-    @scala.inline
-    def withAccessibility(value: public | `private` | `protected`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessibilityNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(null)
-        ret
-    }
-    @scala.inline
-    def withAsync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
-        ret
-    }
-    @scala.inline
-    def withComputed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecorators(value: js.Array[DecoratorKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecorators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecoratorsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(null)
-        ret
-    }
-    @scala.inline
-    def withDefaults(value: js.Array[ExpressionKind | Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: IdentifierKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(null)
-        ret
-    }
-    @scala.inline
-    def withKind(value: get | set | method | constructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoc(value: SourceLocationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
-        ret
-    }
-    @scala.inline
-    def withOptional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionalNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(null)
-        ret
-    }
-    @scala.inline
-    def withRest(value: IdentifierKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(null)
-        ret
-    }
-    @scala.inline
-    def withReturnType(value: TypeAnnotationKind | TSTypeAnnotationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(null)
-        ret
-    }
-    @scala.inline
-    def withStatic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TypeParameterDeclarationKind | TSTypeParameterDeclarationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

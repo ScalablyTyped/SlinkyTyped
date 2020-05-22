@@ -7,23 +7,22 @@ import scala.scalajs.js.annotation._
 /**
   * A client-side equivalent of the DevExpress.Web.ASPxGantt control.
   */
-@js.native
 trait ASPxClientGantt extends ASPxClientControl {
   /**
     * Sets the task's title position.
     * @param position The task position.
     */
-  def SetTaskTitlePosition(position: ASPxClientGanttTaskTitlePosition): Unit = js.native
+  def SetTaskTitlePosition(position: ASPxClientGanttTaskTitlePosition): Unit
   /**
     * Specifies the view type.
     * @param viewType The control's view type.
     */
-  def SetViewType(viewType: ASPxClientGanttViewType): Unit = js.native
+  def SetViewType(viewType: ASPxClientGanttViewType): Unit
   /**
     * Specifies whether the resources are visible in the Gantt.
     * @param value true, to show resources in the Gantt; otherwise, false.
     */
-  def ShowResources(value: Boolean): Unit = js.native
+  def ShowResources(value: Boolean): Unit
 }
 
 object ASPxClientGantt {
@@ -51,31 +50,5 @@ object ASPxClientGantt {
     val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetHeight = js.Any.fromFunction1(SetHeight), SetTaskTitlePosition = js.Any.fromFunction1(SetTaskTitlePosition), SetViewType = js.Any.fromFunction1(SetViewType), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), ShowResources = js.Any.fromFunction1(ShowResources), name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientGantt]
   }
-  @scala.inline
-  implicit class ASPxClientGanttOps[Self <: ASPxClientGantt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetTaskTitlePosition(value: ASPxClientGanttTaskTitlePosition => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetTaskTitlePosition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetViewType(value: ASPxClientGanttViewType => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetViewType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withShowResources(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowResources")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -43,101 +43,38 @@ trait ParamsResourceMyconfigRequestaccess extends StandardParameters {
 
 object ParamsResourceMyconfigRequestaccess {
   @scala.inline
-  def apply(): ParamsResourceMyconfigRequestaccess = {
+  def apply(
+    alt: String = null,
+    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
+    cpksver: String = null,
+    fields: String = null,
+    key: String = null,
+    licenseTypes: String = null,
+    locale: String = null,
+    nonce: String = null,
+    oauth_token: String = null,
+    prettyPrint: js.UndefOr[Boolean] = js.undefined,
+    quotaUser: String = null,
+    source: String = null,
+    userIp: String = null,
+    volumeId: String = null
+  ): ParamsResourceMyconfigRequestaccess = {
     val __obj = js.Dynamic.literal()
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (cpksver != null) __obj.updateDynamic("cpksver")(cpksver.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (licenseTypes != null) __obj.updateDynamic("licenseTypes")(licenseTypes.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
+    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.get.asInstanceOf[js.Any])
+    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
+    if (volumeId != null) __obj.updateDynamic("volumeId")(volumeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourceMyconfigRequestaccess]
   }
-  @scala.inline
-  implicit class ParamsResourceMyconfigRequestaccessOps[Self <: ParamsResourceMyconfigRequestaccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpksver(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpksver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpksver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpksver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseTypes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

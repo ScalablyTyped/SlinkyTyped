@@ -34,6 +34,81 @@ class ValueCondition protected ()
     /** the conditional operator, default ValueCondition.IsEqual */
   operator: Double
   ) = this()
+  /**
+    * Internal only - manager for action
+    * @hidden
+    */
+  /* CompleteClass */
+  override var _actionManager: typingsSlinky.babylonjs.BABYLON.ActionManager = js.native
+  /**
+    * Internal only
+    * @hidden
+    */
+  /* CompleteClass */
+  override var _currentResult: Boolean = js.native
+  /**
+    * Internal only
+    * @hidden
+    */
+  /* CompleteClass */
+  override var _effectiveTarget: js.Any = js.native
+  /**
+    * Internal only
+    * @hidden
+    */
+  /* CompleteClass */
+  override var _evaluationId: Double = js.native
+  /**
+    * Internal only
+    * @hidden
+    */
+  /* CompleteClass */
+  override var _property: js.Any = js.native
+  /**
+    * Internal only
+    * @hidden
+    */
+  /* CompleteClass */
+  override var _target: js.Any = js.native
+  /** the conditional operator, default ValueCondition.IsEqual */
+  /* CompleteClass */
+  override var operator: Double = js.native
+  /** path to specify the property of the target the conditional operator uses  */
+  /* CompleteClass */
+  override var propertyPath: String = js.native
+  /** the value compared by the conditional operator against the current value of the property */
+  /* CompleteClass */
+  override var value: js.Any = js.native
+  /**
+    * Internal only
+    * @hidden
+    */
+  /* CompleteClass */
+  override def _getEffectiveTarget(target: js.Any, propertyPath: String): js.Any = js.native
+  /**
+    * Internal only
+    * @hidden
+    */
+  /* CompleteClass */
+  override def _getProperty(propertyPath: String): String = js.native
+  /**
+    * Internal only
+    * @hidden
+    */
+  /* CompleteClass */
+  /* protected */ override def _serialize(serializedCondition: js.Any): js.Any = js.native
+  /**
+    * Check if the current condition is valid
+    * @returns a boolean
+    */
+  /* CompleteClass */
+  override def isValid(): Boolean = js.native
+  /**
+    * Serialize placeholder for child classes
+    * @returns the serialized object
+    */
+  /* CompleteClass */
+  override def serialize(): js.Any = js.native
 }
 
 /* static members */

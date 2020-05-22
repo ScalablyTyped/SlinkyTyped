@@ -18,41 +18,11 @@ trait ListStreamProcessorsResponse extends js.Object {
 
 object ListStreamProcessorsResponse {
   @scala.inline
-  def apply(): ListStreamProcessorsResponse = {
+  def apply(NextToken: PaginationToken = null, StreamProcessors: StreamProcessorList = null): ListStreamProcessorsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (StreamProcessors != null) __obj.updateDynamic("StreamProcessors")(StreamProcessors.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListStreamProcessorsResponse]
   }
-  @scala.inline
-  implicit class ListStreamProcessorsResponseOps[Self <: ListStreamProcessorsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamProcessors(value: StreamProcessorList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamProcessors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamProcessors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamProcessors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

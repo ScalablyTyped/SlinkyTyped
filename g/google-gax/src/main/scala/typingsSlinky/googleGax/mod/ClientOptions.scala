@@ -1,96 +1,70 @@
 package typingsSlinky.googleGax.mod
 
+import typingsSlinky.googleAuthLibrary.credentialsMod.CredentialBody
+import typingsSlinky.googleAuthLibrary.jwtclientMod.JWTOptions
+import typingsSlinky.googleAuthLibrary.oauth2clientMod.OAuth2ClientOptions
+import typingsSlinky.googleAuthLibrary.refreshclientMod.UserRefreshClientOptions
 import typingsSlinky.googleGax.gaxMod.ClientConfig
 import typingsSlinky.googleGax.grpcMod.ClientStubOptions
 import typingsSlinky.googleGax.grpcMod.GrpcClientOptions
+import typingsSlinky.googleGax.grpcMod.GrpcModule
+import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientOptions
   extends GrpcClientOptions
      with ClientStubOptions {
-  var apiEndpoint: js.UndefOr[String] = js.native
-  var clientConfig: js.UndefOr[ClientConfig] = js.native
-  var fallback: js.UndefOr[Boolean] = js.native
-  var libName: js.UndefOr[String] = js.native
-  var libVersion: js.UndefOr[String] = js.native
+  var apiEndpoint: js.UndefOr[String] = js.undefined
+  var clientConfig: js.UndefOr[ClientConfig] = js.undefined
+  var fallback: js.UndefOr[Boolean] = js.undefined
+  var libName: js.UndefOr[String] = js.undefined
+  var libVersion: js.UndefOr[String] = js.undefined
 }
 
 object ClientOptions {
   @scala.inline
-  def apply(): ClientOptions = {
+  def apply(
+    apiEndpoint: String = null,
+    auth: typingsSlinky.googleAuthLibrary.mod.GoogleAuth = null,
+    clientConfig: ClientConfig = null,
+    clientOptions: JWTOptions | OAuth2ClientOptions | UserRefreshClientOptions = null,
+    credentials: CredentialBody = null,
+    fallback: js.UndefOr[Boolean] = js.undefined,
+    grpc: GrpcModule = null,
+    keyFile: String = null,
+    keyFilename: String = null,
+    libName: String = null,
+    libVersion: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    projectId: String = null,
+    promise: PromiseConstructor = null,
+    protocol: String = null,
+    scopes: String | js.Array[String] = null,
+    servicePath: String = null,
+    sslCreds: js.Any = null
+  ): ClientOptions = {
     val __obj = js.Dynamic.literal()
+    if (apiEndpoint != null) __obj.updateDynamic("apiEndpoint")(apiEndpoint.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (clientConfig != null) __obj.updateDynamic("clientConfig")(clientConfig.asInstanceOf[js.Any])
+    if (clientOptions != null) __obj.updateDynamic("clientOptions")(clientOptions.asInstanceOf[js.Any])
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (!js.isUndefined(fallback)) __obj.updateDynamic("fallback")(fallback.get.asInstanceOf[js.Any])
+    if (grpc != null) __obj.updateDynamic("grpc")(grpc.asInstanceOf[js.Any])
+    if (keyFile != null) __obj.updateDynamic("keyFile")(keyFile.asInstanceOf[js.Any])
+    if (keyFilename != null) __obj.updateDynamic("keyFilename")(keyFilename.asInstanceOf[js.Any])
+    if (libName != null) __obj.updateDynamic("libName")(libName.asInstanceOf[js.Any])
+    if (libVersion != null) __obj.updateDynamic("libVersion")(libVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (promise != null) __obj.updateDynamic("promise")(promise.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
+    if (servicePath != null) __obj.updateDynamic("servicePath")(servicePath.asInstanceOf[js.Any])
+    if (sslCreds != null) __obj.updateDynamic("sslCreds")(sslCreds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientOptions]
   }
-  @scala.inline
-  implicit class ClientOptionsOps[Self <: ClientOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientConfig(value: ClientConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLibName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLibName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLibVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLibVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

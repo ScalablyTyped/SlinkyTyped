@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InterpolationAlgorithm extends js.Object {
-  var interpolationAlgorithm: js.UndefOr[typingsSlinky.cesium.mod.InterpolationAlgorithm] = js.native
-  var interpolationDegree: js.UndefOr[Double] = js.native
+  var interpolationAlgorithm: js.UndefOr[typingsSlinky.cesium.mod.InterpolationAlgorithm] = js.undefined
+  var interpolationDegree: js.UndefOr[Double] = js.undefined
 }
 
 object InterpolationAlgorithm {
   @scala.inline
-  def apply(): InterpolationAlgorithm = {
+  def apply(
+    interpolationAlgorithm: typingsSlinky.cesium.mod.InterpolationAlgorithm = null,
+    interpolationDegree: js.UndefOr[Double] = js.undefined
+  ): InterpolationAlgorithm = {
     val __obj = js.Dynamic.literal()
+    if (interpolationAlgorithm != null) __obj.updateDynamic("interpolationAlgorithm")(interpolationAlgorithm.asInstanceOf[js.Any])
+    if (!js.isUndefined(interpolationDegree)) __obj.updateDynamic("interpolationDegree")(interpolationDegree.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InterpolationAlgorithm]
   }
-  @scala.inline
-  implicit class InterpolationAlgorithmOps[Self <: InterpolationAlgorithm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInterpolationAlgorithm(value: typingsSlinky.cesium.mod.InterpolationAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolationAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterpolationAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolationAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterpolationDegree(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolationDegree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterpolationDegree: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolationDegree")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

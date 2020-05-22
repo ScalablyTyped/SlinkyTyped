@@ -3,13 +3,13 @@ package typingsSlinky.meteor.global
 import typingsSlinky.meteor.Accounts.LoginMethodOptions
 import typingsSlinky.meteor.Accounts.Password
 import typingsSlinky.meteor.EmailTemplates
-import typingsSlinky.meteor.Meteor.Connection
 import typingsSlinky.meteor.Meteor.Error
 import typingsSlinky.meteor.Meteor.TypedError
 import typingsSlinky.meteor.Meteor.User
 import typingsSlinky.meteor.URLS
 import typingsSlinky.meteor.anon.Algorithm
 import typingsSlinky.meteor.anon.AmbiguousErrorMessages
+import typingsSlinky.meteor.anon.Connection
 import typingsSlinky.meteor.anon.EmailString
 import typingsSlinky.meteor.anon.ForceApprovalPrompt
 import typingsSlinky.meteor.anon.Logout
@@ -97,7 +97,7 @@ object Accounts extends js.Object {
   def onLogin(func: js.Function): Stop = js.native
   def onLoginFailure(func: js.Function): Stop = js.native
   def onLogout(func: js.Function): Unit = js.native
-  def onLogout(func: js.Function2[/* user */ User, /* connection */ Connection, Unit]): Unit = js.native
+  def onLogout(func: js.Function1[/* options */ Connection, Unit]): Unit = js.native
   def onPageLoadLogin(func: js.Function): Unit = js.native
   def onResetPasswordLink(callback: js.Function): Unit = js.native
   /**

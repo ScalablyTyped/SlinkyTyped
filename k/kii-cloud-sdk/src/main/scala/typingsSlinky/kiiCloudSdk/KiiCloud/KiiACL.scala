@@ -36,13 +36,13 @@ trait KiiACL extends js.Object {
     *     // example to use callbacks directly
     *     var acl = . . .; // a KiiACL object
     *     acl.listACLEntries({
-    *     	success: function(theACL, theEntries) {
-    *     		// do something
-    *     	},
+    *         success: function(theACL, theEntries) {
+    *             // do something
+    *         },
     *
-    *     	failure: function(theACL, anErrorString) {
-    *     		// do something with the error response
-    *     	}
+    *         failure: function(theACL, anErrorString) {
+    *             // do something with the error response
+    *         }
     *     });
     *
     *     // example to use Promise
@@ -56,7 +56,7 @@ trait KiiACL extends js.Object {
     *         function(error) { // reject callback function
     *             var theACL = error.target;
     *             var anErrorString = error.message;
-    *         		// do something with the error response
+    *                 // do something with the error response
     *     });
     */
   def listACLEntries(): js.Promise[js.Tuple2[KiiACL, js.Array[KiiACLEntry]]] = js.native

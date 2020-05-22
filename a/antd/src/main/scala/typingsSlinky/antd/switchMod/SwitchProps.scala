@@ -2,223 +2,62 @@ package typingsSlinky.antd.switchMod
 
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SwitchProps extends js.Object {
-  var autoFocus: js.UndefOr[Boolean] = js.native
-  var checked: js.UndefOr[Boolean] = js.native
-  var checkedChildren: js.UndefOr[TagMod[Any]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var defaultChecked: js.UndefOr[Boolean] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var loading: js.UndefOr[Boolean] = js.native
-  var onChange: js.UndefOr[SwitchChangeEventHandler] = js.native
-  var onClick: js.UndefOr[SwitchClickEventHandler] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var size: js.UndefOr[SwitchSize] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var title: js.UndefOr[String] = js.native
-  var unCheckedChildren: js.UndefOr[TagMod[Any]] = js.native
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var checked: js.UndefOr[Boolean] = js.undefined
+  var checkedChildren: js.UndefOr[TagMod[Any]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var defaultChecked: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var loading: js.UndefOr[Boolean] = js.undefined
+  var onChange: js.UndefOr[SwitchChangeEventHandler] = js.undefined
+  var onClick: js.UndefOr[SwitchClickEventHandler] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var size: js.UndefOr[SwitchSize] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var unCheckedChildren: js.UndefOr[TagMod[Any]] = js.undefined
 }
 
 object SwitchProps {
   @scala.inline
-  def apply(): SwitchProps = {
+  def apply(
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    checked: js.UndefOr[Boolean] = js.undefined,
+    checkedChildren: TagMod[Any] = null,
+    className: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    loading: js.UndefOr[Boolean] = js.undefined,
+    onChange: (/* checked */ Boolean, /* event */ MouseEvent) => Unit = null,
+    onClick: (/* checked */ Boolean, /* event */ MouseEvent) => Unit = null,
+    prefixCls: String = null,
+    size: SwitchSize = null,
+    style: CSSProperties = null,
+    title: String = null,
+    unCheckedChildren: TagMod[Any] = null
+  ): SwitchProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
+    if (checkedChildren != null) __obj.updateDynamic("checkedChildren")(checkedChildren.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (unCheckedChildren != null) __obj.updateDynamic("unCheckedChildren")(unCheckedChildren.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwitchProps]
   }
-  @scala.inline
-  implicit class SwitchPropsOps[Self <: SwitchProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChecked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckedChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCheckedChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckedChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedChildren")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultChecked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: (/* checked */ Boolean, /* event */ MouseEvent) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: (/* checked */ Boolean, /* event */ MouseEvent) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: SwitchSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnCheckedChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unCheckedChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnCheckedChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unCheckedChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnCheckedChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unCheckedChildren")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

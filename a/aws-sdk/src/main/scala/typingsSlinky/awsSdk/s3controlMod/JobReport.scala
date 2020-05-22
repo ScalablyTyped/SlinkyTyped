@@ -30,71 +30,19 @@ trait JobReport extends js.Object {
 
 object JobReport {
   @scala.inline
-  def apply(Enabled: Boolean): JobReport = {
+  def apply(
+    Enabled: Boolean,
+    Bucket: S3BucketArnString = null,
+    Format: JobReportFormat = null,
+    Prefix: ReportPrefixString = null,
+    ReportScope: JobReportScope = null
+  ): JobReport = {
     val __obj = js.Dynamic.literal(Enabled = Enabled.asInstanceOf[js.Any])
+    if (Bucket != null) __obj.updateDynamic("Bucket")(Bucket.asInstanceOf[js.Any])
+    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
+    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
+    if (ReportScope != null) __obj.updateDynamic("ReportScope")(ReportScope.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobReport]
   }
-  @scala.inline
-  implicit class JobReportOps[Self <: JobReport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBucket(value: S3BucketArnString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: JobReportFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: ReportPrefixString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportScope(value: JobReportScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportScope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -91,197 +91,54 @@ trait ParamsResourceFloodlightactivitiesList extends StandardParameters {
 
 object ParamsResourceFloodlightactivitiesList {
   @scala.inline
-  def apply(): ParamsResourceFloodlightactivitiesList = {
+  def apply(
+    advertiserId: String = null,
+    alt: String = null,
+    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
+    fields: String = null,
+    floodlightActivityGroupIds: js.Array[String] = null,
+    floodlightActivityGroupName: String = null,
+    floodlightActivityGroupTagString: String = null,
+    floodlightActivityGroupType: String = null,
+    floodlightConfigurationId: String = null,
+    ids: js.Array[String] = null,
+    key: String = null,
+    maxResults: js.UndefOr[Double] = js.undefined,
+    oauth_token: String = null,
+    pageToken: String = null,
+    prettyPrint: js.UndefOr[Boolean] = js.undefined,
+    profileId: String = null,
+    quotaUser: String = null,
+    searchString: String = null,
+    sortField: String = null,
+    sortOrder: String = null,
+    tagString: String = null,
+    userIp: String = null
+  ): ParamsResourceFloodlightactivitiesList = {
     val __obj = js.Dynamic.literal()
+    if (advertiserId != null) __obj.updateDynamic("advertiserId")(advertiserId.asInstanceOf[js.Any])
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (floodlightActivityGroupIds != null) __obj.updateDynamic("floodlightActivityGroupIds")(floodlightActivityGroupIds.asInstanceOf[js.Any])
+    if (floodlightActivityGroupName != null) __obj.updateDynamic("floodlightActivityGroupName")(floodlightActivityGroupName.asInstanceOf[js.Any])
+    if (floodlightActivityGroupTagString != null) __obj.updateDynamic("floodlightActivityGroupTagString")(floodlightActivityGroupTagString.asInstanceOf[js.Any])
+    if (floodlightActivityGroupType != null) __obj.updateDynamic("floodlightActivityGroupType")(floodlightActivityGroupType.asInstanceOf[js.Any])
+    if (floodlightConfigurationId != null) __obj.updateDynamic("floodlightConfigurationId")(floodlightConfigurationId.asInstanceOf[js.Any])
+    if (ids != null) __obj.updateDynamic("ids")(ids.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.get.asInstanceOf[js.Any])
+    if (profileId != null) __obj.updateDynamic("profileId")(profileId.asInstanceOf[js.Any])
+    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
+    if (searchString != null) __obj.updateDynamic("searchString")(searchString.asInstanceOf[js.Any])
+    if (sortField != null) __obj.updateDynamic("sortField")(sortField.asInstanceOf[js.Any])
+    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
+    if (tagString != null) __obj.updateDynamic("tagString")(tagString.asInstanceOf[js.Any])
+    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourceFloodlightactivitiesList]
   }
-  @scala.inline
-  implicit class ParamsResourceFloodlightactivitiesListOps[Self <: ParamsResourceFloodlightactivitiesList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvertiserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightActivityGroupIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightActivityGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightActivityGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightActivityGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightActivityGroupTagString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupTagString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightActivityGroupTagString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupTagString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightActivityGroupType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightActivityGroupType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightConfigurationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightConfigurationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortOrder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

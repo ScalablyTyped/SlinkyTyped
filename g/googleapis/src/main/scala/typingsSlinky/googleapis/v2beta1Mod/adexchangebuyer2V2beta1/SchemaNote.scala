@@ -35,77 +35,20 @@ trait SchemaNote extends js.Object {
 
 object SchemaNote {
   @scala.inline
-  def apply(): SchemaNote = {
+  def apply(
+    createTime: String = null,
+    creatorRole: String = null,
+    note: String = null,
+    noteId: String = null,
+    proposalRevision: String = null
+  ): SchemaNote = {
     val __obj = js.Dynamic.literal()
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (creatorRole != null) __obj.updateDynamic("creatorRole")(creatorRole.asInstanceOf[js.Any])
+    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
+    if (noteId != null) __obj.updateDynamic("noteId")(noteId.asInstanceOf[js.Any])
+    if (proposalRevision != null) __obj.updateDynamic("proposalRevision")(proposalRevision.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNote]
   }
-  @scala.inline
-  implicit class SchemaNoteOps[Self <: SchemaNote] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatorRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creatorRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatorRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creatorRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNote(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoteId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoteId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProposalRevision(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProposalRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalRevision")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

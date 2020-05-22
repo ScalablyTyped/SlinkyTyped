@@ -6,93 +6,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * Determines how to handle gzipped payloads.
     *
     * @default false
     */
-  val gunzip: js.UndefOr[Boolean | force] = js.native
+  val gunzip: js.UndefOr[Boolean | force] = js.undefined
   /**
     * Determines how to parse the payload as JSON.
     */
-  val json: js.UndefOr[Boolean | strict | force] = js.native
+  val json: js.UndefOr[Boolean | strict | force] = js.undefined
   /**
     * The maximum allowed response payload size.
     * 
     * @default 0
     */
-  val maxBytes: js.UndefOr[Double] = js.native
+  val maxBytes: js.UndefOr[Double] = js.undefined
   /**
     * The number of milliseconds to wait while reading data before aborting handling of the response.
     * 
     * @default 0
     */
-  val timeout: js.UndefOr[Double] = js.native
+  val timeout: js.UndefOr[Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    gunzip: Boolean | force = null,
+    json: Boolean | strict | force = null,
+    maxBytes: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (gunzip != null) __obj.updateDynamic("gunzip")(gunzip.asInstanceOf[js.Any])
+    if (json != null) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBytes)) __obj.updateDynamic("maxBytes")(maxBytes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGunzip(value: Boolean | force): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gunzip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGunzip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gunzip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJson(value: Boolean | strict | force): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

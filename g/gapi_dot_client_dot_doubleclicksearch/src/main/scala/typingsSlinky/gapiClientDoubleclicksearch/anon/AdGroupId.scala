@@ -4,121 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AdGroupId extends js.Object {
   /** DS ad group ID. */
-  var adGroupId: js.UndefOr[String] = js.native
+  var adGroupId: js.UndefOr[String] = js.undefined
   /** DS ad ID. */
-  var adId: js.UndefOr[String] = js.native
+  var adId: js.UndefOr[String] = js.undefined
   /** DS advertiser ID. */
-  var advertiserId: js.UndefOr[String] = js.native
+  var advertiserId: js.UndefOr[String] = js.undefined
   /** DS agency ID. */
-  var agencyId: js.UndefOr[String] = js.native
+  var agencyId: js.UndefOr[String] = js.undefined
   /** DS campaign ID. */
-  var campaignId: js.UndefOr[String] = js.native
+  var campaignId: js.UndefOr[String] = js.undefined
   /** DS engine account ID. */
-  var engineAccountId: js.UndefOr[String] = js.native
+  var engineAccountId: js.UndefOr[String] = js.undefined
   /** DS keyword ID. */
-  var keywordId: js.UndefOr[String] = js.native
+  var keywordId: js.UndefOr[String] = js.undefined
 }
 
 object AdGroupId {
   @scala.inline
-  def apply(): AdGroupId = {
+  def apply(
+    adGroupId: String = null,
+    adId: String = null,
+    advertiserId: String = null,
+    agencyId: String = null,
+    campaignId: String = null,
+    engineAccountId: String = null,
+    keywordId: String = null
+  ): AdGroupId = {
     val __obj = js.Dynamic.literal()
+    if (adGroupId != null) __obj.updateDynamic("adGroupId")(adGroupId.asInstanceOf[js.Any])
+    if (adId != null) __obj.updateDynamic("adId")(adId.asInstanceOf[js.Any])
+    if (advertiserId != null) __obj.updateDynamic("advertiserId")(advertiserId.asInstanceOf[js.Any])
+    if (agencyId != null) __obj.updateDynamic("agencyId")(agencyId.asInstanceOf[js.Any])
+    if (campaignId != null) __obj.updateDynamic("campaignId")(campaignId.asInstanceOf[js.Any])
+    if (engineAccountId != null) __obj.updateDynamic("engineAccountId")(engineAccountId.asInstanceOf[js.Any])
+    if (keywordId != null) __obj.updateDynamic("keywordId")(keywordId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdGroupId]
   }
-  @scala.inline
-  implicit class AdGroupIdOps[Self <: AdGroupId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertiserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgencyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agencyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgencyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agencyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCampaignId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCampaignId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeywordId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywordId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeywordId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywordId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

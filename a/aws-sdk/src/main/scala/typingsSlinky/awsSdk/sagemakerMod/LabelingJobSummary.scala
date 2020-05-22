@@ -66,114 +66,18 @@ object LabelingJobSummary {
     LabelingJobStatus: LabelingJobStatus,
     LastModifiedTime: js.Date,
     PreHumanTaskLambdaArn: LambdaFunctionArn,
-    WorkteamArn: WorkteamArn
+    WorkteamArn: WorkteamArn,
+    AnnotationConsolidationLambdaArn: LambdaFunctionArn = null,
+    FailureReason: FailureReason = null,
+    InputConfig: LabelingJobInputConfig = null,
+    LabelingJobOutput: LabelingJobOutput = null
   ): LabelingJobSummary = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], LabelCounters = LabelCounters.asInstanceOf[js.Any], LabelingJobArn = LabelingJobArn.asInstanceOf[js.Any], LabelingJobName = LabelingJobName.asInstanceOf[js.Any], LabelingJobStatus = LabelingJobStatus.asInstanceOf[js.Any], LastModifiedTime = LastModifiedTime.asInstanceOf[js.Any], PreHumanTaskLambdaArn = PreHumanTaskLambdaArn.asInstanceOf[js.Any], WorkteamArn = WorkteamArn.asInstanceOf[js.Any])
+    if (AnnotationConsolidationLambdaArn != null) __obj.updateDynamic("AnnotationConsolidationLambdaArn")(AnnotationConsolidationLambdaArn.asInstanceOf[js.Any])
+    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
+    if (InputConfig != null) __obj.updateDynamic("InputConfig")(InputConfig.asInstanceOf[js.Any])
+    if (LabelingJobOutput != null) __obj.updateDynamic("LabelingJobOutput")(LabelingJobOutput.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelingJobSummary]
   }
-  @scala.inline
-  implicit class LabelingJobSummaryOps[Self <: LabelingJobSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelCounters(value: LabelCounters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelCounters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelingJobArn(value: LabelingJobArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelingJobName(value: LabelingJobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelingJobStatus(value: LabelingJobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreHumanTaskLambdaArn(value: LambdaFunctionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreHumanTaskLambdaArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkteamArn(value: WorkteamArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkteamArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnnotationConsolidationLambdaArn(value: LambdaFunctionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnnotationConsolidationLambdaArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotationConsolidationLambdaArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnnotationConsolidationLambdaArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: FailureReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputConfig(value: LabelingJobInputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelingJobOutput(value: LabelingJobOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelingJobOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobOutput")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

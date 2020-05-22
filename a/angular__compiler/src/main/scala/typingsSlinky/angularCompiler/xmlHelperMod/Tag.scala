@@ -14,5 +14,7 @@ class Tag protected () extends Node {
   var attrs: StringDictionary[String] = js.native
   var children: js.Array[Node] = js.native
   var name: String = js.native
+  /* CompleteClass */
+  override def visit(visitor: IVisitor): js.Any = js.native
 }
 

@@ -44,54 +44,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Axis extends js.Object {
-  var autorange: `true` | `false` | reversed = js.native
-  var calendar: Calendar = js.native
-  var categoryarray: js.Array[_] = js.native
-  var categoryorder: trace | (`category ascending`) | (`category descending`) | array | (`total ascending`) | (`total descending`) | (`min ascending`) | (`min descending`) | (`max ascending`) | (`max descending`) | (`sum ascending`) | (`sum descending`) | (`mean ascending`) | (`mean descending`) | (`median ascending`) | (`median descending`) = js.native
-  var color: Color = js.native
-  var dtick: Double | String = js.native
-  var exponentformat: none | e_ | E | power | SI | B = js.native
-  var gridcolor: Color = js.native
-  var gridwidth: Double = js.native
-  var hoverformat: String = js.native
-  var linecolor: Color = js.native
-  var linewidth: Double = js.native
-  var mirror: `true` | ticks | `false` | all | allticks = js.native
-  var nticks: Double = js.native
-  var range: js.Array[_] = js.native
-  var rangemode: normal | tozero | nonnegative = js.native
-  var separatethousands: Boolean = js.native
-  var showexponent: all | first | last | none = js.native
-  var showgrid: Boolean = js.native
-  var showline: Boolean = js.native
-  var showspikes: Boolean = js.native
-  var showticklabels: Boolean = js.native
-  var showtickprefix: all | first | last | none = js.native
-  var showticksuffix: all | first | last | none = js.native
-  var spikecolor: Color = js.native
-  var spikethickness: Double = js.native
-  var tick0: Double | String = js.native
-  var tickangle: Double = js.native
-  var tickcolor: Color = js.native
-  var tickfont: PartialFont = js.native
-  var tickformat: String = js.native
-  var ticklen: Double = js.native
-  var tickmode: auto | linear | array = js.native
-  var tickprefix: String = js.native
-  var ticks: outside | inside | _empty = js.native
-  var ticksuffix: String = js.native
-  var ticktext: js.Array[String] = js.native
-  var tickvals: js.Array[_] = js.native
-  var tickwidth: Double = js.native
-  var title: String | PartialDataTitle = js.native
-  var titlefont: PartialFont = js.native
-  var `type`: AxisType = js.native
-  var visible: Boolean = js.native
-  var zeroline: Boolean = js.native
-  var zerolinecolor: Color = js.native
-  var zerolinewidth: Double = js.native
+  var autorange: `true` | `false` | reversed
+  var calendar: Calendar
+  var categoryarray: js.Array[_]
+  var categoryorder: trace | (`category ascending`) | (`category descending`) | array | (`total ascending`) | (`total descending`) | (`min ascending`) | (`min descending`) | (`max ascending`) | (`max descending`) | (`sum ascending`) | (`sum descending`) | (`mean ascending`) | (`mean descending`) | (`median ascending`) | (`median descending`)
+  var color: Color
+  var dtick: Double | String
+  var exponentformat: none | e_ | E | power | SI | B
+  var gridcolor: Color
+  var gridwidth: Double
+  var hoverformat: String
+  var linecolor: Color
+  var linewidth: Double
+  var mirror: `true` | ticks | `false` | all | allticks
+  var nticks: Double
+  var range: js.Array[_]
+  var rangemode: normal | tozero | nonnegative
+  var separatethousands: Boolean
+  var showexponent: all | first | last | none
+  var showgrid: Boolean
+  var showline: Boolean
+  var showspikes: Boolean
+  var showticklabels: Boolean
+  var showtickprefix: all | first | last | none
+  var showticksuffix: all | first | last | none
+  var spikecolor: Color
+  var spikethickness: Double
+  var tick0: Double | String
+  var tickangle: Double
+  var tickcolor: Color
+  var tickfont: PartialFont
+  var tickformat: String
+  var ticklen: Double
+  var tickmode: auto | linear | array
+  var tickprefix: String
+  var ticks: outside | inside | _empty
+  var ticksuffix: String
+  var ticktext: js.Array[String]
+  var tickvals: js.Array[_]
+  var tickwidth: Double
+  var title: String | PartialDataTitle
+  var titlefont: PartialFont
+  var `type`: AxisType
+  var visible: Boolean
+  var zeroline: Boolean
+  var zerolinecolor: Color
+  var zerolinewidth: Double
 }
 
 object Axis {
@@ -148,291 +147,5 @@ object Axis {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Axis]
   }
-  @scala.inline
-  implicit class AxisOps[Self <: Axis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutorange(value: `true` | `false` | reversed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autorange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCalendar(value: Calendar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategoryarray(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryarray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategoryorder(
-      value: trace | (`category ascending`) | (`category descending`) | array | (`total ascending`) | (`total descending`) | (`min ascending`) | (`min descending`) | (`max ascending`) | (`max descending`) | (`sum ascending`) | (`sum descending`) | (`mean ascending`) | (`mean descending`) | (`median ascending`) | (`median descending`)
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDtick(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExponentformat(value: none | e_ | E | power | SI | B): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exponentformat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridcolor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHoverformat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverformat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinecolor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linecolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinewidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linewidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMirror(value: `true` | ticks | `false` | all | allticks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirror")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNticks(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nticks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRange(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRangemode(value: normal | tozero | nonnegative): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeparatethousands(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separatethousands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowexponent(value: all | first | last | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showexponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowgrid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showgrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowspikes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showspikes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowticklabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showticklabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowtickprefix(value: all | first | last | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showtickprefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowticksuffix(value: all | first | last | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showticksuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpikecolor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spikecolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpikethickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spikethickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTick0(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickangle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickangle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickcolor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickfont(value: PartialFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickfont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickformat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickformat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicklen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticklen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickmode(value: auto | linear | array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickprefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickprefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicks(value: outside | inside | _empty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicksuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicktext(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticktext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickvals(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickvals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String | PartialDataTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitlefont(value: PartialFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titlefont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: AxisType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZeroline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZerolinecolor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zerolinecolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZerolinewidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zerolinewidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

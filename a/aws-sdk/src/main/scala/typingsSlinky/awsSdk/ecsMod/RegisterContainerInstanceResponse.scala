@@ -14,29 +14,10 @@ trait RegisterContainerInstanceResponse extends js.Object {
 
 object RegisterContainerInstanceResponse {
   @scala.inline
-  def apply(): RegisterContainerInstanceResponse = {
+  def apply(containerInstance: ContainerInstance = null): RegisterContainerInstanceResponse = {
     val __obj = js.Dynamic.literal()
+    if (containerInstance != null) __obj.updateDynamic("containerInstance")(containerInstance.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterContainerInstanceResponse]
   }
-  @scala.inline
-  implicit class RegisterContainerInstanceResponseOps[Self <: RegisterContainerInstanceResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerInstance(value: ContainerInstance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

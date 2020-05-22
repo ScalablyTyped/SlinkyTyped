@@ -83,113 +83,26 @@ trait SchemaExecuteSqlRequest extends js.Object {
 
 object SchemaExecuteSqlRequest {
   @scala.inline
-  def apply(): SchemaExecuteSqlRequest = {
+  def apply(
+    paramTypes: StringDictionary[SchemaType] = null,
+    params: StringDictionary[js.Any] = null,
+    partitionToken: String = null,
+    queryMode: String = null,
+    resumeToken: String = null,
+    seqno: String = null,
+    sql: String = null,
+    transaction: SchemaTransactionSelector = null
+  ): SchemaExecuteSqlRequest = {
     val __obj = js.Dynamic.literal()
+    if (paramTypes != null) __obj.updateDynamic("paramTypes")(paramTypes.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (partitionToken != null) __obj.updateDynamic("partitionToken")(partitionToken.asInstanceOf[js.Any])
+    if (queryMode != null) __obj.updateDynamic("queryMode")(queryMode.asInstanceOf[js.Any])
+    if (resumeToken != null) __obj.updateDynamic("resumeToken")(resumeToken.asInstanceOf[js.Any])
+    if (seqno != null) __obj.updateDynamic("seqno")(seqno.asInstanceOf[js.Any])
+    if (sql != null) __obj.updateDynamic("sql")(sql.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExecuteSqlRequest]
   }
-  @scala.inline
-  implicit class SchemaExecuteSqlRequestOps[Self <: SchemaExecuteSqlRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParamTypes(value: StringDictionary[SchemaType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParamTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResumeToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResumeToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeqno(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seqno")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeqno: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seqno")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSql(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSql: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: SchemaTransactionSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,36 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TreeViewDragstartEvent extends TreeViewEvent {
-  var sourceNode: js.UndefOr[Element] = js.native
+  var sourceNode: js.UndefOr[Element] = js.undefined
 }
 
 object TreeViewDragstartEvent {
   @scala.inline
-  def apply(isDefaultPrevented: () => Boolean, preventDefault: js.Function, sender: TreeView): TreeViewDragstartEvent = {
+  def apply(
+    isDefaultPrevented: () => Boolean,
+    preventDefault: js.Function,
+    sender: TreeView,
+    sourceNode: Element = null
+  ): TreeViewDragstartEvent = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), preventDefault = preventDefault.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
+    if (sourceNode != null) __obj.updateDynamic("sourceNode")(sourceNode.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeViewDragstartEvent]
   }
-  @scala.inline
-  implicit class TreeViewDragstartEventOps[Self <: TreeViewDragstartEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceNode(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceNode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

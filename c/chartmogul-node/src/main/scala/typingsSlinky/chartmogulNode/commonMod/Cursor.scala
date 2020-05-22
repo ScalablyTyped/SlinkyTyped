@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cursor extends js.Object {
-  var current_page: js.UndefOr[Double] = js.native
-  var has_more: js.UndefOr[Boolean] = js.native
-  var page: js.UndefOr[Double] = js.native
-  var per_page: js.UndefOr[Double] = js.native
-  var total_pages: js.UndefOr[Double] = js.native
+  var current_page: js.UndefOr[Double] = js.undefined
+  var has_more: js.UndefOr[Boolean] = js.undefined
+  var page: js.UndefOr[Double] = js.undefined
+  var per_page: js.UndefOr[Double] = js.undefined
+  var total_pages: js.UndefOr[Double] = js.undefined
 }
 
 object Cursor {
   @scala.inline
-  def apply(): Cursor = {
+  def apply(
+    current_page: js.UndefOr[Double] = js.undefined,
+    has_more: js.UndefOr[Boolean] = js.undefined,
+    page: js.UndefOr[Double] = js.undefined,
+    per_page: js.UndefOr[Double] = js.undefined,
+    total_pages: js.UndefOr[Double] = js.undefined
+  ): Cursor = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(current_page)) __obj.updateDynamic("current_page")(current_page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_more)) __obj.updateDynamic("has_more")(has_more.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(per_page)) __obj.updateDynamic("per_page")(per_page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(total_pages)) __obj.updateDynamic("total_pages")(total_pages.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cursor]
   }
-  @scala.inline
-  implicit class CursorOps[Self <: Cursor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrent_page(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current_page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrent_page: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current_page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_more(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_more")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_more: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_more")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPer_page(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPer_page: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal_pages(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_pages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal_pages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_pages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

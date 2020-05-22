@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RoxFlagOptions extends js.Object {
-  var freeze: js.UndefOr[FreezeOptions] = js.native
+  var freeze: js.UndefOr[FreezeOptions] = js.undefined
 }
 
 object RoxFlagOptions {
   @scala.inline
-  def apply(): RoxFlagOptions = {
+  def apply(freeze: FreezeOptions = null): RoxFlagOptions = {
     val __obj = js.Dynamic.literal()
+    if (freeze != null) __obj.updateDynamic("freeze")(freeze.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoxFlagOptions]
   }
-  @scala.inline
-  implicit class RoxFlagOptionsOps[Self <: RoxFlagOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFreeze(value: FreezeOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeze")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreeze: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeze")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,108 +9,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledSelectObjectContentEventStream extends SelectObjectContentEventStream {
   /**
     * <p>The Continuation Event.</p>
     */
   @JSName("Cont")
-  var Cont_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledContinuationEvent] = js.native
+  var Cont_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledContinuationEvent] = js.undefined
   /**
     * <p>The End Event.</p>
     */
   @JSName("End")
-  var End_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledEndEvent] = js.native
+  var End_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledEndEvent] = js.undefined
   /**
     * <p>The Progress Event.</p>
     */
   @JSName("Progress")
-  var Progress_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledProgressEvent] = js.native
+  var Progress_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledProgressEvent] = js.undefined
   /**
     * <p>The Records Event.</p>
     */
   @JSName("Records")
-  var Records_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledRecordsEvent] = js.native
+  var Records_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledRecordsEvent] = js.undefined
   /**
     * <p>The Stats Event.</p>
     */
   @JSName("Stats")
-  var Stats_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledStatsEvent] = js.native
+  var Stats_UnmarshalledSelectObjectContentEventStream: js.UndefOr[UnmarshalledStatsEvent] = js.undefined
 }
 
 object UnmarshalledSelectObjectContentEventStream {
   @scala.inline
-  def apply(): UnmarshalledSelectObjectContentEventStream = {
+  def apply(
+    Cont: UnmarshalledContinuationEvent = null,
+    End: UnmarshalledEndEvent = null,
+    Progress: UnmarshalledProgressEvent = null,
+    Records: UnmarshalledRecordsEvent = null,
+    Stats: UnmarshalledStatsEvent = null
+  ): UnmarshalledSelectObjectContentEventStream = {
     val __obj = js.Dynamic.literal()
+    if (Cont != null) __obj.updateDynamic("Cont")(Cont.asInstanceOf[js.Any])
+    if (End != null) __obj.updateDynamic("End")(End.asInstanceOf[js.Any])
+    if (Progress != null) __obj.updateDynamic("Progress")(Progress.asInstanceOf[js.Any])
+    if (Records != null) __obj.updateDynamic("Records")(Records.asInstanceOf[js.Any])
+    if (Stats != null) __obj.updateDynamic("Stats")(Stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledSelectObjectContentEventStream]
   }
-  @scala.inline
-  implicit class UnmarshalledSelectObjectContentEventStreamOps[Self <: UnmarshalledSelectObjectContentEventStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCont(value: UnmarshalledContinuationEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cont")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: UnmarshalledEndEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgress(value: UnmarshalledProgressEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Progress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecords(value: UnmarshalledRecordsEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Records")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Records")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStats(value: UnmarshalledStatsEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stats")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

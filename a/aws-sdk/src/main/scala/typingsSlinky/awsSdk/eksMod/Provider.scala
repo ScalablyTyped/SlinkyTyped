@@ -14,29 +14,10 @@ trait Provider extends js.Object {
 
 object Provider {
   @scala.inline
-  def apply(): Provider = {
+  def apply(keyArn: String = null): Provider = {
     val __obj = js.Dynamic.literal()
+    if (keyArn != null) __obj.updateDynamic("keyArn")(keyArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Provider]
   }
-  @scala.inline
-  implicit class ProviderOps[Self <: Provider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

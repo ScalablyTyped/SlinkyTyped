@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VoterInfoRequest extends js.Object {
-  var contextParams: js.UndefOr[ContextParams] = js.native
-  var voterInfoSegmentResult: js.UndefOr[VoterInfoSegmentResult] = js.native
+  var contextParams: js.UndefOr[ContextParams] = js.undefined
+  var voterInfoSegmentResult: js.UndefOr[VoterInfoSegmentResult] = js.undefined
 }
 
 object VoterInfoRequest {
   @scala.inline
-  def apply(): VoterInfoRequest = {
+  def apply(contextParams: ContextParams = null, voterInfoSegmentResult: VoterInfoSegmentResult = null): VoterInfoRequest = {
     val __obj = js.Dynamic.literal()
+    if (contextParams != null) __obj.updateDynamic("contextParams")(contextParams.asInstanceOf[js.Any])
+    if (voterInfoSegmentResult != null) __obj.updateDynamic("voterInfoSegmentResult")(voterInfoSegmentResult.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoterInfoRequest]
   }
-  @scala.inline
-  implicit class VoterInfoRequestOps[Self <: VoterInfoRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContextParams(value: ContextParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVoterInfoSegmentResult(value: VoterInfoSegmentResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voterInfoSegmentResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoterInfoSegmentResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voterInfoSegmentResult")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

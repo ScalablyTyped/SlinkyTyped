@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignBlobRequest extends js.Object {
   /** The bytes to sign. */
-  var bytesToSign: js.UndefOr[String] = js.native
+  var bytesToSign: js.UndefOr[String] = js.undefined
 }
 
 object SignBlobRequest {
   @scala.inline
-  def apply(): SignBlobRequest = {
+  def apply(bytesToSign: String = null): SignBlobRequest = {
     val __obj = js.Dynamic.literal()
+    if (bytesToSign != null) __obj.updateDynamic("bytesToSign")(bytesToSign.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignBlobRequest]
   }
-  @scala.inline
-  implicit class SignBlobRequestOps[Self <: SignBlobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBytesToSign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesToSign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBytesToSign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesToSign")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

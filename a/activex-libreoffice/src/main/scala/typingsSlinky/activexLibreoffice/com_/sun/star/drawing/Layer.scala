@@ -18,16 +18,15 @@ import scala.scalajs.js.annotation._
   * @see DrawingDocument
   * @see LayerManager
   */
-@js.native
 trait Layer extends XPropertySet {
   /** If a {@link Layer} is locked, the objects in this {@link Layer} cannot be edited in the user interface. */
-  var IsLocked: Boolean = js.native
+  var IsLocked: Boolean
   /** If a {@link Layer} is not printable, the objects in this {@link Layer} are not printed. */
-  var IsPrintable: Boolean = js.native
+  var IsPrintable: Boolean
   /** If a {@link Layer} is not visible, the objects in this {@link Layer} are not shown in the user interface. */
-  var IsVisible: Boolean = js.native
+  var IsVisible: Boolean
   /** The name of a {@link Layer} is used to identify the {@link Layer} in the user interface. */
-  var Name: String = js.native
+  var Name: String
 }
 
 object Layer {
@@ -52,37 +51,5 @@ object Layer {
     val __obj = js.Dynamic.literal(IsLocked = IsLocked.asInstanceOf[js.Any], IsPrintable = IsPrintable.asInstanceOf[js.Any], IsVisible = IsVisible.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[Layer]
   }
-  @scala.inline
-  implicit class LayerOps[Self <: Layer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsLocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPrintable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsPrintable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

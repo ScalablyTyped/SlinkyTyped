@@ -5,97 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OlapTableViewOptionsViewSettings
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Optional="false" value indicating wheter the column headers should be arranged for compact header layout - each hieararchy is in a single row.
-  	 */
-  var compactColumnHeaders: js.UndefOr[Boolean] = js.native
+    * Optional="false" value indicating wheter the column headers should be arranged for compact header layout - each hieararchy is in a single row.
+    */
+  var compactColumnHeaders: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Optional="false" value indicating wheter the row headers should be arranged for compact header layout - each hieararchy is in a single row.
-  	 */
-  var compactRowHeaders: js.UndefOr[Boolean] = js.native
+    * Optional="false" value indicating wheter the row headers should be arranged for compact header layout - each hieararchy is in a single row.
+    */
+  var compactRowHeaders: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Optional="false" a value indicating whether parent for columns is in front of its children.
-  	 *                 If set to true the query set sorts members in a level in their natural order. Their natural order is the default ordering of the members along the hierarchy when no other sort conditions are specified.
-  	 *                 Child members immediately follow their parent members.
-  	 *                 If set to false the query set sorts the members in a level using a post-natural order. In other words, child members precede their parents.
-  	 */
-  var isParentInFrontForColumns: js.UndefOr[Boolean] = js.native
+    * Optional="false" a value indicating whether parent for columns is in front of its children.
+    *                 If set to true the query set sorts members in a level in their natural order. Their natural order is the default ordering of the members along the hierarchy when no other sort conditions are specified.
+    *                 Child members immediately follow their parent members.
+    *                 If set to false the query set sorts the members in a level using a post-natural order. In other words, child members precede their parents.
+    */
+  var isParentInFrontForColumns: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Optional="false" a value indicating whether parent for rows is in front of its children.
-  	 *                 If set to true the query set sorts members in a level in their natural order. Their natural order is the default ordering of the members along the hierarchy when no other sort conditions are specified.
-  	 *                 Child members immediately follow their parent members.
-  	 *                 If set to false the query set sorts the members in a level using a post-natural order. In other words, child members precede their parents.
-  	 */
-  var isParentInFrontForRows: js.UndefOr[Boolean] = js.native
+    * Optional="false" a value indicating whether parent for rows is in front of its children.
+    *                 If set to true the query set sorts members in a level in their natural order. Their natural order is the default ordering of the members along the hierarchy when no other sort conditions are specified.
+    *                 Child members immediately follow their parent members.
+    *                 If set to false the query set sorts the members in a level using a post-natural order. In other words, child members precede their parents.
+    */
+  var isParentInFrontForRows: js.UndefOr[Boolean] = js.undefined
 }
 
 object OlapTableViewOptionsViewSettings {
   @scala.inline
-  def apply(): OlapTableViewOptionsViewSettings = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    compactColumnHeaders: js.UndefOr[Boolean] = js.undefined,
+    compactRowHeaders: js.UndefOr[Boolean] = js.undefined,
+    isParentInFrontForColumns: js.UndefOr[Boolean] = js.undefined,
+    isParentInFrontForRows: js.UndefOr[Boolean] = js.undefined
+  ): OlapTableViewOptionsViewSettings = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(compactColumnHeaders)) __obj.updateDynamic("compactColumnHeaders")(compactColumnHeaders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compactRowHeaders)) __obj.updateDynamic("compactRowHeaders")(compactRowHeaders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isParentInFrontForColumns)) __obj.updateDynamic("isParentInFrontForColumns")(isParentInFrontForColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isParentInFrontForRows)) __obj.updateDynamic("isParentInFrontForRows")(isParentInFrontForRows.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OlapTableViewOptionsViewSettings]
   }
-  @scala.inline
-  implicit class OlapTableViewOptionsViewSettingsOps[Self <: OlapTableViewOptionsViewSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompactColumnHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactColumnHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompactColumnHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactColumnHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompactRowHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactRowHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompactRowHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactRowHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsParentInFrontForColumns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isParentInFrontForColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsParentInFrontForColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isParentInFrontForColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsParentInFrontForRows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isParentInFrontForRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsParentInFrontForRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isParentInFrontForRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

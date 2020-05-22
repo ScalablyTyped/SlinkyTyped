@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CloseSocketOptions extends js.Object {
   /**
     * 一个数字值表示关闭连接的状态号，表示连接被关闭的原因。如果这个参数没有被指定，默认的取值是1000 （表示正常连接关闭）
     */
-  var code: js.UndefOr[Double] = js.native
+  var code: js.UndefOr[Double] = js.undefined
   /**
     * 接口调用结束的回调函数（调用成功、失败都会执行）
     */
-  var complete: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.native
+  var complete: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.undefined
   /**
     * 接口调用失败的回调函数
     */
-  var fail: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.native
+  var fail: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.undefined
   /**
     * 一个可读的字符串，表示连接被关闭的原因。这个字符串必须是不长于123字节的UTF-8 文本（不是字符）
     */
-  var reason: js.UndefOr[String] = js.native
+  var reason: js.UndefOr[String] = js.undefined
   /**
     * 接口调用成功的回调函数
     */
-  var success: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.undefined
 }
 
 object CloseSocketOptions {
   @scala.inline
-  def apply(): CloseSocketOptions = {
+  def apply(
+    code: js.UndefOr[Double] = js.undefined,
+    complete: /* result */ GeneralCallbackResult => Unit = null,
+    fail: /* result */ GeneralCallbackResult => Unit = null,
+    reason: String = null,
+    success: /* result */ GeneralCallbackResult => Unit = null
+  ): CloseSocketOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(code)) __obj.updateDynamic("code")(code.get.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[CloseSocketOptions]
   }
-  @scala.inline
-  implicit class CloseSocketOptionsOps[Self <: CloseSocketOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* result */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* result */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* result */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

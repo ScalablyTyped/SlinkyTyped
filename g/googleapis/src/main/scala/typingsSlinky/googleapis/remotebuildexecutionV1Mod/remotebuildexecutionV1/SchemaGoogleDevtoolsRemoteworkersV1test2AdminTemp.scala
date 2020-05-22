@@ -30,41 +30,11 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2AdminTemp extends js.Object {
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2AdminTemp {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2AdminTemp = {
+  def apply(arg: String = null, command: String = null): SchemaGoogleDevtoolsRemoteworkersV1test2AdminTemp = {
     val __obj = js.Dynamic.literal()
+    if (arg != null) __obj.updateDynamic("arg")(arg.asInstanceOf[js.Any])
+    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2AdminTemp]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2AdminTempOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2AdminTemp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,65 +30,18 @@ trait PurchaseReservedInstancesOfferingRequest extends js.Object {
 
 object PurchaseReservedInstancesOfferingRequest {
   @scala.inline
-  def apply(InstanceCount: Integer, ReservedInstancesOfferingId: ReservedInstancesOfferingId): PurchaseReservedInstancesOfferingRequest = {
+  def apply(
+    InstanceCount: Integer,
+    ReservedInstancesOfferingId: ReservedInstancesOfferingId,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    LimitPrice: ReservedInstanceLimitPrice = null,
+    PurchaseTime: js.Date = null
+  ): PurchaseReservedInstancesOfferingRequest = {
     val __obj = js.Dynamic.literal(InstanceCount = InstanceCount.asInstanceOf[js.Any], ReservedInstancesOfferingId = ReservedInstancesOfferingId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (LimitPrice != null) __obj.updateDynamic("LimitPrice")(LimitPrice.asInstanceOf[js.Any])
+    if (PurchaseTime != null) __obj.updateDynamic("PurchaseTime")(PurchaseTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurchaseReservedInstancesOfferingRequest]
   }
-  @scala.inline
-  implicit class PurchaseReservedInstancesOfferingRequestOps[Self <: PurchaseReservedInstancesOfferingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReservedInstancesOfferingId(value: ReservedInstancesOfferingId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesOfferingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimitPrice(value: ReservedInstanceLimitPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LimitPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimitPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LimitPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurchaseTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PurchaseTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurchaseTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PurchaseTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

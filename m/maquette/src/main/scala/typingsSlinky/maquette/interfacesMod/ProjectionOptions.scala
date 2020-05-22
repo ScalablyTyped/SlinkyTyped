@@ -1,11 +1,12 @@
 package typingsSlinky.maquette.interfacesMod
 
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectionOptions extends ProjectorOptions {
   /**
     * May be used to intercept registration of event-handlers.
@@ -18,52 +19,27 @@ trait ProjectionOptions extends ProjectorOptions {
     * @param properties               The whole set of properties that was put on the VNode
     * @returns                        The function that is to be placed on the DOM node as the event handler, instead of `eventHandler`.
     */
-  var eventHandlerInterceptor: js.UndefOr[EventHandlerInterceptor] = js.native
+  var eventHandlerInterceptor: js.UndefOr[EventHandlerInterceptor] = js.undefined
   /**
     * Only for internal use. Used for rendering SVG Nodes.
     */
-  val namespace: js.UndefOr[String] = js.native
+  val namespace: js.UndefOr[String] = js.undefined
 }
 
 object ProjectionOptions {
   @scala.inline
-  def apply(): ProjectionOptions = {
+  def apply(
+    eventHandlerInterceptor: (/* propertyName */ String, /* eventHandler */ js.Function, /* domNode */ Node, /* properties */ VNodeProperties) => js.UndefOr[js.Function] = null,
+    namespace: String = null,
+    performanceLogger: (/* eventType */ PerformanceLoggerEvent, /* trigger */ js.UndefOr[Event]) => Unit = null,
+    styleApplyer: (/* domNode */ HTMLElement, /* styleName */ String, /* value */ String) => Unit = null
+  ): ProjectionOptions = {
     val __obj = js.Dynamic.literal()
+    if (eventHandlerInterceptor != null) __obj.updateDynamic("eventHandlerInterceptor")(js.Any.fromFunction4(eventHandlerInterceptor))
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (performanceLogger != null) __obj.updateDynamic("performanceLogger")(js.Any.fromFunction2(performanceLogger))
+    if (styleApplyer != null) __obj.updateDynamic("styleApplyer")(js.Any.fromFunction3(styleApplyer))
     __obj.asInstanceOf[ProjectionOptions]
   }
-  @scala.inline
-  implicit class ProjectionOptionsOps[Self <: ProjectionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventHandlerInterceptor(
-      value: (/* propertyName */ String, /* eventHandler */ js.Function, /* domNode */ Node, /* properties */ VNodeProperties) => js.UndefOr[js.Function]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventHandlerInterceptor")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutEventHandlerInterceptor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventHandlerInterceptor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

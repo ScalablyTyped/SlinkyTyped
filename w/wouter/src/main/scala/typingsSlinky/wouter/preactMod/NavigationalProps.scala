@@ -1,7 +1,5 @@
 package typingsSlinky.wouter.preactMod
 
-import typingsSlinky.wouter.anon.HrefPath
-import typingsSlinky.wouter.anon.ToPath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait NavigationalProps extends js.Object
 
 object NavigationalProps {
   @scala.inline
-  implicit def apply(value: HrefPath): NavigationalProps = value.asInstanceOf[NavigationalProps]
+  def ToPath(to: Path): NavigationalProps = {
+    val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationalProps]
+  }
   @scala.inline
-  implicit def apply(value: ToPath): NavigationalProps = value.asInstanceOf[NavigationalProps]
+  def HrefPath(href: Path): NavigationalProps = {
+    val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationalProps]
+  }
 }
 

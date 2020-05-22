@@ -1,7 +1,7 @@
 
 # Scala.js typings for jupyterlab__launcher-extension
 
-Typings are for version 1.2.1
+Typings are for version 1.2.8
 
 ## Library description:
 JupyterLab - Launcher Page Extension

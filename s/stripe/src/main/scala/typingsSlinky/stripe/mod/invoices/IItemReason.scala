@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IItemReason extends js.Object {
   /**
     * The IDs of the line items that triggered the threshold invoice.
     */
-  var line_item_ids: js.Array[String] = js.native
+  var line_item_ids: js.Array[String]
   /**
     * The quantity threshold boundary that applied to the given line item.
     */
-  var usage_gte: Double = js.native
+  var usage_gte: Double
 }
 
 object IItemReason {
@@ -22,25 +21,5 @@ object IItemReason {
     val __obj = js.Dynamic.literal(line_item_ids = line_item_ids.asInstanceOf[js.Any], usage_gte = usage_gte.asInstanceOf[js.Any])
     __obj.asInstanceOf[IItemReason]
   }
-  @scala.inline
-  implicit class IItemReasonOps[Self <: IItemReason] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLine_item_ids(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line_item_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsage_gte(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage_gte")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

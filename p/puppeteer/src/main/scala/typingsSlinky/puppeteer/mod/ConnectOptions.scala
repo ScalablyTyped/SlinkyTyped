@@ -1,73 +1,42 @@
 package typingsSlinky.puppeteer.mod
 
+import typingsSlinky.puppeteer.anon.DeviceScaleFactor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectOptions extends BrowserOptions {
   /**
     * A browser url to connect to, in format `http://${host}:${port}`.
     * Use interchangeably with browserWSEndpoint to let Puppeteer fetch it from metadata endpoint.
     */
-  var browserURL: js.UndefOr[String] = js.native
+  var browserURL: js.UndefOr[String] = js.undefined
   /** A browser websocket endpoint to connect to. */
-  var browserWSEndpoint: js.UndefOr[String] = js.native
+  var browserWSEndpoint: js.UndefOr[String] = js.undefined
   /**
     * **Experimental** Specify a custom transport object for Puppeteer to use.
     */
-  var transport: js.UndefOr[ConnectionTransport] = js.native
+  var transport: js.UndefOr[ConnectionTransport] = js.undefined
 }
 
 object ConnectOptions {
   @scala.inline
-  def apply(): ConnectOptions = {
+  def apply(
+    browserURL: String = null,
+    browserWSEndpoint: String = null,
+    defaultViewport: js.UndefOr[Null | DeviceScaleFactor] = js.undefined,
+    ignoreHTTPSErrors: js.UndefOr[Boolean] = js.undefined,
+    slowMo: js.UndefOr[Double] = js.undefined,
+    transport: ConnectionTransport = null
+  ): ConnectOptions = {
     val __obj = js.Dynamic.literal()
+    if (browserURL != null) __obj.updateDynamic("browserURL")(browserURL.asInstanceOf[js.Any])
+    if (browserWSEndpoint != null) __obj.updateDynamic("browserWSEndpoint")(browserWSEndpoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultViewport)) __obj.updateDynamic("defaultViewport")(defaultViewport.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreHTTPSErrors)) __obj.updateDynamic("ignoreHTTPSErrors")(ignoreHTTPSErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(slowMo)) __obj.updateDynamic("slowMo")(slowMo.get.asInstanceOf[js.Any])
+    if (transport != null) __obj.updateDynamic("transport")(transport.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectOptions]
   }
-  @scala.inline
-  implicit class ConnectOptionsOps[Self <: ConnectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrowserURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserWSEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserWSEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserWSEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserWSEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransport(value: ConnectionTransport): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

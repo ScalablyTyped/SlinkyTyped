@@ -18,19 +18,5 @@ object UsernameConfigurationType {
     val __obj = js.Dynamic.literal(CaseSensitive = CaseSensitive.asInstanceOf[js.Any])
     __obj.asInstanceOf[UsernameConfigurationType]
   }
-  @scala.inline
-  implicit class UsernameConfigurationTypeOps[Self <: UsernameConfigurationType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaseSensitive(value: WrappedBooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

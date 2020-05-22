@@ -6,6 +6,7 @@ import typingsSlinky.angularCore.mod.OnChanges
 import typingsSlinky.angularCore.mod.OnDestroy
 import typingsSlinky.angularCore.mod.QueryList
 import typingsSlinky.angularCore.mod.Renderer2
+import typingsSlinky.angularCore.mod.SimpleChanges
 import typingsSlinky.angularRouter.anon.Exact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -41,5 +42,28 @@ class RouterLinkActive protected ()
   var routerLinkActiveOptions: Exact = js.native
   var subscription: js.Any = js.native
   var update: js.Any = js.native
+  /**
+    * A callback method that is invoked immediately after
+    * Angular has completed initialization of all of the directive's
+    * content.
+    * It is invoked only once when the directive is instantiated.
+    */
+  /* CompleteClass */
+  override def ngAfterContentInit(): Unit = js.native
+  /**
+    * A callback method that is invoked immediately after the
+    * default change detector has checked data-bound properties
+    * if at least one has changed, and before the view and content
+    * children are checked.
+    * @param changes The changed properties.
+    */
+  /* CompleteClass */
+  override def ngOnChanges(changes: SimpleChanges): Unit = js.native
+  /**
+    * A callback method that performs custom clean-up, invoked immediately
+    * after a directive, pipe, or service instance is destroyed.
+    */
+  /* CompleteClass */
+  override def ngOnDestroy(): Unit = js.native
 }
 

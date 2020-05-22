@@ -1,5 +1,12 @@
 package typingsSlinky.activexFaxcomexlib.global.FAXCOMEXLib
 
+import typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FAX_JOB_EXTENDED_STATUS_ENUM
+import typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FAX_JOB_OPERATIONS_ENUM
+import typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FAX_JOB_STATUS_ENUM
+import typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FAX_PRIORITY_TYPE_ENUM
+import typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FAX_RECEIPT_TYPE_ENUM
+import typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FAX_SCHEDULE_TYPE_ENUM
+import typingsSlinky.std.VarDate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +15,111 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FAXCOMEXLib.FaxOutgoingJob")
 @js.native
 class FaxOutgoingJob protected ()
-  extends typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxOutgoingJob
+  extends typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxOutgoingJob {
+  /** Available operations, a bit-wise combination of FAX_JOB_OPERATIONS values */
+  /* CompleteClass */
+  override val AvailableOperations: FAX_JOB_OPERATIONS_ENUM = js.native
+  /** Called Station ID */
+  /* CompleteClass */
+  override val CSID: String = js.native
+  /** Page currently in transmision */
+  /* CompleteClass */
+  override val CurrentPage: Double = js.native
+  /** Device ID that transmits the job */
+  /* CompleteClass */
+  override val DeviceId: Double = js.native
+  /** Document's friendly name */
+  /* CompleteClass */
+  override val DocumentName: String = js.native
+  /** Extended status description */
+  /* CompleteClass */
+  override val ExtendedStatus: String = js.native
+  /** Code of the job's extended status */
+  /* CompleteClass */
+  override val ExtendedStatusCode: FAX_JOB_EXTENDED_STATUS_ENUM = js.native
+  /* CompleteClass */
+  @JSName("FAXCOMEXLib.FaxOutgoingJob_typekey")
+  override var FAXCOMEXLibDotFaxOutgoingJob_typekey: typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxOutgoingJob = js.native
+  /** Whether to group broadcast receipts */
+  /* CompleteClass */
+  override val GroupBroadcastReceipts: Boolean = js.native
+  /** Has Cover page */
+  /* CompleteClass */
+  override val HasCoverPage: Boolean = js.native
+  /** Unique job ID */
+  /* CompleteClass */
+  override val Id: String = js.native
+  /** Time the job was originally scheduled to be transmitted */
+  /* CompleteClass */
+  override val OriginalScheduledTime: VarDate = js.native
+  /** Total number of pages */
+  /* CompleteClass */
+  override val Pages: Double = js.native
+  /** Priority of the fax */
+  /* CompleteClass */
+  override val Priority: FAX_PRIORITY_TYPE_ENUM = js.native
+  /** Address of the receipt */
+  /* CompleteClass */
+  override val ReceiptAddress: String = js.native
+  /** Type of receipt */
+  /* CompleteClass */
+  override val ReceiptType: FAX_RECEIPT_TYPE_ENUM = js.native
+  /** Recipient information object */
+  /* CompleteClass */
+  override val Recipient: typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxRecipient = js.native
+  /** Number of failed transmission retries */
+  /* CompleteClass */
+  override val Retries: Double = js.native
+  /** When to send the fax */
+  /* CompleteClass */
+  override val ScheduleType: FAX_SCHEDULE_TYPE_ENUM = js.native
+  /** The time the fax job is scheduled to be transmitted */
+  /* CompleteClass */
+  override val ScheduledTime: VarDate = js.native
+  /** Sender information object */
+  /* CompleteClass */
+  override val Sender: typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxSender = js.native
+  /** Size in bytes of TIFF file */
+  /* CompleteClass */
+  override val Size: Double = js.native
+  /** Current queue status of the job */
+  /* CompleteClass */
+  override val Status: FAX_JOB_STATUS_ENUM = js.native
+  /** Cover page's subject field */
+  /* CompleteClass */
+  override val Subject: String = js.native
+  /** Unique ID the submission process created for the Job */
+  /* CompleteClass */
+  override val SubmissionId: String = js.native
+  /** Time the job was submitted */
+  /* CompleteClass */
+  override val SubmissionTime: VarDate = js.native
+  /** Transmitting Station ID */
+  /* CompleteClass */
+  override val TSID: String = js.native
+  /** The time the fax job finished its transmission */
+  /* CompleteClass */
+  override val TransmissionEnd: VarDate = js.native
+  /** The time the fax job started its transmission */
+  /* CompleteClass */
+  override val TransmissionStart: VarDate = js.native
+  /** Cancel the outbound job */
+  /* CompleteClass */
+  override def Cancel(): Unit = js.native
+  /** Copy the job's TIFF image */
+  /* CompleteClass */
+  override def CopyTiff(bstrTiffPath: String): Unit = js.native
+  /** Pause the outbound job */
+  /* CompleteClass */
+  override def Pause(): Unit = js.native
+  /** Refresh the object */
+  /* CompleteClass */
+  override def Refresh(): Unit = js.native
+  /** Restart the outbound job */
+  /* CompleteClass */
+  override def Restart(): Unit = js.native
+  /** Resume the outbound job */
+  /* CompleteClass */
+  override def Resume(): Unit = js.native
+}
 

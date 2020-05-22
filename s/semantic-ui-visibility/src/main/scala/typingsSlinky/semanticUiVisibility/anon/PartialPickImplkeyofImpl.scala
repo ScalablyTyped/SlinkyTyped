@@ -12,558 +12,140 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<semantic-ui-visibility.SemanticUI.VisibilitySettings._Impl, keyof semantic-ui-visibility.SemanticUI.VisibilitySettings._Impl>> */
-@js.native
 trait PartialPickImplkeyofImpl extends js.Object {
-  var checkOnRefresh: js.UndefOr[Boolean] = js.native
-  var className: js.UndefOr[ClassNameSettings] = js.native
-  var context: js.UndefOr[String | JQuery] = js.native
-  var continuous: js.UndefOr[Boolean] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var error: js.UndefOr[ErrorSettings] = js.native
-  var includeMargin: js.UndefOr[Boolean] = js.native
-  var initialCheck: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var namespace: js.UndefOr[String] = js.native
-  var observeChanges: js.UndefOr[Boolean] = js.native
-  var offset: js.UndefOr[Double] = js.native
-  var onAllLoaded: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onBottomPassed: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onBottomPassedReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onBottomVisible: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onBottomVisibleReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onFixed: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onLoad: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onOffScreen: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onOnScreen: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onPassing: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onPassingReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onRefresh: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onTopPassed: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onTopPassedReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onTopVisible: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onTopVisibleReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onUnfixed: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
+  var checkOnRefresh: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[ClassNameSettings] = js.undefined
+  var context: js.UndefOr[String | JQuery] = js.undefined
+  var continuous: js.UndefOr[Boolean] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var error: js.UndefOr[ErrorSettings] = js.undefined
+  var includeMargin: js.UndefOr[Boolean] = js.undefined
+  var initialCheck: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var namespace: js.UndefOr[String] = js.undefined
+  var observeChanges: js.UndefOr[Boolean] = js.undefined
+  var offset: js.UndefOr[Double] = js.undefined
+  var onAllLoaded: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onBottomPassed: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onBottomPassedReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onBottomVisible: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onBottomVisibleReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onFixed: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onLoad: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onOffScreen: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onOnScreen: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onPassing: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onPassingReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onRefresh: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onTopPassed: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onTopPassedReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onTopVisible: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onTopVisibleReverse: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onUnfixed: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
   var onUpdate: js.UndefOr[
     js.ThisFunction1[/* this */ JQuery, /* calculations */ ElementCalculations, Unit]
-  ] = js.native
-  var once: js.UndefOr[Boolean] = js.native
-  var performance: js.UndefOr[Boolean] = js.native
-  var refreshOnLoad: js.UndefOr[Boolean] = js.native
-  var refreshOnResize: js.UndefOr[Boolean] = js.native
-  var silent: js.UndefOr[Boolean] = js.native
-  var throttle: js.UndefOr[`false` | Double] = js.native
-  var transition: js.UndefOr[`false` | String] = js.native
-  var `type`: js.UndefOr[`false` | image | fixed] = js.native
-  var verbose: js.UndefOr[Boolean] = js.native
-  var zIndex: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var once: js.UndefOr[Boolean] = js.undefined
+  var performance: js.UndefOr[Boolean] = js.undefined
+  var refreshOnLoad: js.UndefOr[Boolean] = js.undefined
+  var refreshOnResize: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.undefined
+  var throttle: js.UndefOr[`false` | Double] = js.undefined
+  var transition: js.UndefOr[`false` | String] = js.undefined
+  var `type`: js.UndefOr[`false` | image | fixed] = js.undefined
+  var verbose: js.UndefOr[Boolean] = js.undefined
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object PartialPickImplkeyofImpl {
   @scala.inline
-  def apply(): PartialPickImplkeyofImpl = {
+  def apply(
+    checkOnRefresh: js.UndefOr[Boolean] = js.undefined,
+    className: ClassNameSettings = null,
+    context: String | JQuery = null,
+    continuous: js.UndefOr[Boolean] = js.undefined,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    error: ErrorSettings = null,
+    includeMargin: js.UndefOr[Boolean] = js.undefined,
+    initialCheck: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    namespace: String = null,
+    observeChanges: js.UndefOr[Boolean] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    onAllLoaded: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onBottomPassed: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onBottomPassedReverse: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onBottomVisible: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onBottomVisibleReverse: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onFixed: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onLoad: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onOffScreen: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onOnScreen: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onPassing: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onPassingReverse: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onRefresh: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onTopPassed: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onTopPassedReverse: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onTopVisible: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onTopVisibleReverse: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onUnfixed: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onUpdate: js.ThisFunction1[/* this */ JQuery, /* calculations */ ElementCalculations, Unit] = null,
+    once: js.UndefOr[Boolean] = js.undefined,
+    performance: js.UndefOr[Boolean] = js.undefined,
+    refreshOnLoad: js.UndefOr[Boolean] = js.undefined,
+    refreshOnResize: js.UndefOr[Boolean] = js.undefined,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    throttle: `false` | Double = null,
+    transition: `false` | String = null,
+    `type`: `false` | image | fixed = null,
+    verbose: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): PartialPickImplkeyofImpl = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(checkOnRefresh)) __obj.updateDynamic("checkOnRefresh")(checkOnRefresh.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(continuous)) __obj.updateDynamic("continuous")(continuous.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeMargin)) __obj.updateDynamic("includeMargin")(includeMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialCheck)) __obj.updateDynamic("initialCheck")(initialCheck.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(observeChanges)) __obj.updateDynamic("observeChanges")(observeChanges.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (onAllLoaded != null) __obj.updateDynamic("onAllLoaded")(onAllLoaded.asInstanceOf[js.Any])
+    if (onBottomPassed != null) __obj.updateDynamic("onBottomPassed")(onBottomPassed.asInstanceOf[js.Any])
+    if (onBottomPassedReverse != null) __obj.updateDynamic("onBottomPassedReverse")(onBottomPassedReverse.asInstanceOf[js.Any])
+    if (onBottomVisible != null) __obj.updateDynamic("onBottomVisible")(onBottomVisible.asInstanceOf[js.Any])
+    if (onBottomVisibleReverse != null) __obj.updateDynamic("onBottomVisibleReverse")(onBottomVisibleReverse.asInstanceOf[js.Any])
+    if (onFixed != null) __obj.updateDynamic("onFixed")(onFixed.asInstanceOf[js.Any])
+    if (onLoad != null) __obj.updateDynamic("onLoad")(onLoad.asInstanceOf[js.Any])
+    if (onOffScreen != null) __obj.updateDynamic("onOffScreen")(onOffScreen.asInstanceOf[js.Any])
+    if (onOnScreen != null) __obj.updateDynamic("onOnScreen")(onOnScreen.asInstanceOf[js.Any])
+    if (onPassing != null) __obj.updateDynamic("onPassing")(onPassing.asInstanceOf[js.Any])
+    if (onPassingReverse != null) __obj.updateDynamic("onPassingReverse")(onPassingReverse.asInstanceOf[js.Any])
+    if (onRefresh != null) __obj.updateDynamic("onRefresh")(onRefresh.asInstanceOf[js.Any])
+    if (onTopPassed != null) __obj.updateDynamic("onTopPassed")(onTopPassed.asInstanceOf[js.Any])
+    if (onTopPassedReverse != null) __obj.updateDynamic("onTopPassedReverse")(onTopPassedReverse.asInstanceOf[js.Any])
+    if (onTopVisible != null) __obj.updateDynamic("onTopVisible")(onTopVisible.asInstanceOf[js.Any])
+    if (onTopVisibleReverse != null) __obj.updateDynamic("onTopVisibleReverse")(onTopVisibleReverse.asInstanceOf[js.Any])
+    if (onUnfixed != null) __obj.updateDynamic("onUnfixed")(onUnfixed.asInstanceOf[js.Any])
+    if (onUpdate != null) __obj.updateDynamic("onUpdate")(onUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(once)) __obj.updateDynamic("once")(once.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(performance)) __obj.updateDynamic("performance")(performance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refreshOnLoad)) __obj.updateDynamic("refreshOnLoad")(refreshOnLoad.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refreshOnResize)) __obj.updateDynamic("refreshOnResize")(refreshOnResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (throttle != null) __obj.updateDynamic("throttle")(throttle.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickImplkeyofImpl]
   }
-  @scala.inline
-  implicit class PartialPickImplkeyofImplOps[Self <: PartialPickImplkeyofImpl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckOnRefresh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOnRefresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckOnRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOnRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: ClassNameSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: String | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContinuous(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continuous")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinuous: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continuous")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: ErrorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeMargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialCheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObserveChanges(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observeChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObserveChanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observeChanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAllLoaded(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAllLoaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnAllLoaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAllLoaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBottomPassed(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomPassed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBottomPassed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomPassed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBottomPassedReverse(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomPassedReverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBottomPassedReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomPassedReverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBottomVisible(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBottomVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBottomVisibleReverse(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomVisibleReverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBottomVisibleReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomVisibleReverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFixed(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnFixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFixed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoad(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOffScreen(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOffScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnOffScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOffScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOnScreen(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOnScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnOnScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOnScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPassing(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPassing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPassing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPassing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPassingReverse(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPassingReverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPassingReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPassingReverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRefresh(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTopPassed(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopPassed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTopPassed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopPassed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTopPassedReverse(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopPassedReverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTopPassedReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopPassedReverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTopVisible(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTopVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTopVisibleReverse(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopVisibleReverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTopVisibleReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopVisibleReverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUnfixed(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnfixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnUnfixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnfixed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdate(value: js.ThisFunction1[/* this */ JQuery, /* calculations */ ElementCalculations, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshOnLoad(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshOnLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshOnLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshOnLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshOnResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshOnResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshOnResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshOnResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottle(value: `false` | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: `false` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: `false` | image | fixed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

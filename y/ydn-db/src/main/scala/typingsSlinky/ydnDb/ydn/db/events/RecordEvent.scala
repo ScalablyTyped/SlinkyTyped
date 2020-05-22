@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RecordEvent extends Event {
-  def getKey(): js.Any = js.native
-  def getStoreName(): String = js.native
-  def getValue(): js.Any = js.native
+  def getKey(): js.Any
+  def getStoreName(): String
+  def getValue(): js.Any
 }
 
 object RecordEvent {
@@ -25,31 +24,5 @@ object RecordEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordEvent]
   }
-  @scala.inline
-  implicit class RecordEventOps[Self <: RecordEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetKey(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getKey")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStoreName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStoreName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetValue(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

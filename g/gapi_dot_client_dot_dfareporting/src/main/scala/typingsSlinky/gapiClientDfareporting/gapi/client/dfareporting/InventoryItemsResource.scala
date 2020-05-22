@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InventoryItemsResource extends js.Object {
   /** Gets one inventory item by ID. */
-  def get(request: Id): Request[InventoryItem] = js.native
+  def get(request: Id): Request[InventoryItem]
   /** Retrieves a list of inventory items, possibly filtered. This method supports paging. */
-  def list(request: InPlan): Request[InventoryItemsListResponse] = js.native
+  def list(request: InPlan): Request[InventoryItemsListResponse]
 }
 
 object InventoryItemsResource {
@@ -21,25 +20,5 @@ object InventoryItemsResource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[InventoryItemsResource]
   }
-  @scala.inline
-  implicit class InventoryItemsResourceOps[Self <: InventoryItemsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: Id => Request[InventoryItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: InPlan => Request[InventoryItemsListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

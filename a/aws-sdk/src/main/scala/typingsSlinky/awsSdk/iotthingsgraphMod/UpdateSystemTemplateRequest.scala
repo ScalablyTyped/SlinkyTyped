@@ -22,41 +22,14 @@ trait UpdateSystemTemplateRequest extends js.Object {
 
 object UpdateSystemTemplateRequest {
   @scala.inline
-  def apply(definition: DefinitionDocument, id: Urn): UpdateSystemTemplateRequest = {
+  def apply(
+    definition: DefinitionDocument,
+    id: Urn,
+    compatibleNamespaceVersion: js.UndefOr[Version] = js.undefined
+  ): UpdateSystemTemplateRequest = {
     val __obj = js.Dynamic.literal(definition = definition.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    if (!js.isUndefined(compatibleNamespaceVersion)) __obj.updateDynamic("compatibleNamespaceVersion")(compatibleNamespaceVersion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSystemTemplateRequest]
   }
-  @scala.inline
-  implicit class UpdateSystemTemplateRequestOps[Self <: UpdateSystemTemplateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefinition(value: DefinitionDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Urn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompatibleNamespaceVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibleNamespaceVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompatibleNamespaceVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibleNamespaceVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

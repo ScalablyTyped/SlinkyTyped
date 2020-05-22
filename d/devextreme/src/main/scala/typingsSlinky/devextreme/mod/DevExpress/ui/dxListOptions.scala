@@ -2,19 +2,26 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.Action
+import typingsSlinky.devextreme.anon.AddedItems
 import typingsSlinky.devextreme.anon.ComponentDxList
+import typingsSlinky.devextreme.anon.ComponentElement
 import typingsSlinky.devextreme.anon.ComponentElementItemData
 import typingsSlinky.devextreme.anon.Direction
 import typingsSlinky.devextreme.anon.ElementItemData
 import typingsSlinky.devextreme.anon.GroupData
+import typingsSlinky.devextreme.anon.ItemElement
 import typingsSlinky.devextreme.anon.ItemIndexJQueryEvent
+import typingsSlinky.devextreme.anon.Model
 import typingsSlinky.devextreme.anon.ModelValue
+import typingsSlinky.devextreme.anon.Name
 import typingsSlinky.devextreme.anon.ReachedBottom
 import typingsSlinky.devextreme.anon.ToIndex
 import typingsSlinky.devextreme.devextremeStrings.all
 import typingsSlinky.devextreme.devextremeStrings.allPages
 import typingsSlinky.devextreme.devextremeStrings.always
+import typingsSlinky.devextreme.devextremeStrings.contains
 import typingsSlinky.devextreme.devextremeStrings.context
+import typingsSlinky.devextreme.devextremeStrings.equals
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.never
 import typingsSlinky.devextreme.devextremeStrings.nextButton
@@ -27,6 +34,7 @@ import typingsSlinky.devextreme.devextremeStrings.single_
 import typingsSlinky.devextreme.devextremeStrings.slide
 import typingsSlinky.devextreme.devextremeStrings.slideButton
 import typingsSlinky.devextreme.devextremeStrings.slideItem
+import typingsSlinky.devextreme.devextremeStrings.startswith
 import typingsSlinky.devextreme.devextremeStrings.static
 import typingsSlinky.devextreme.devextremeStrings.swipe
 import typingsSlinky.devextreme.devextremeStrings.toggle
@@ -38,25 +46,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxListOptions
   extends CollectionWidgetOptions[dxList]
      with SearchBoxMixinOptions[dxList] {
-  /** Specifies whether or not an end user can delete list items. */
-  var allowItemDeleting: js.UndefOr[Boolean] = js.native
-  /** @deprecated Use the itemDragging option instead. */
-  /** Specifies whether a user can reorder list items. Grouped items cannot be moved from one group to another. */
-  var allowItemReordering: js.UndefOr[Boolean] = js.native
-  /** A Boolean value specifying whether to enable or disable the bounce-back effect. */
-  var bounceEnabled: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not an end-user can collapse groups. */
-  var collapsibleGroups: js.UndefOr[Boolean] = js.native
-  /** Binds the widget to data. */
+  /** @name dxList.Options.allowItemDeleting */
+  var allowItemDeleting: js.UndefOr[Boolean] = js.undefined
+  /** @deprecated */
+  /** @name dxList.Options.allowItemReordering */
+  var allowItemReordering: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.bounceEnabled */
+  var bounceEnabled: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.collapsibleGroups */
+  var collapsibleGroups: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.dataSource */
   @JSName("dataSource")
-  var dataSource_dxListOptions: js.UndefOr[String | (js.Array[String | dxListItem | _]) | DataSource | DataSourceOptions] = js.native
-  /** Specifies the data field whose values should be displayed. Defaults to "text" when the data source contains objects. */
-  var displayExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String])] = js.native
-  /** Specifies a custom template for group captions. */
+  var dataSource_dxListOptions: js.UndefOr[String | (js.Array[String | dxListItem | _]) | DataSource | DataSourceOptions] = js.undefined
+  /** @name dxList.Options.displayExpr */
+  var displayExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String])] = js.undefined
+  /** @name dxList.Options.groupTemplate */
   var groupTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* groupData */ js.Any, 
@@ -64,633 +71,249 @@ trait dxListOptions
       /* groupElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.native
-  /** Specifies whether data items should be grouped. */
-  var grouped: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not to show the loading panel when the DataSource bound to the widget is loading data. */
-  var indicateLoading: js.UndefOr[Boolean] = js.native
-  /** Specifies the way a user can delete items from the list. */
-  var itemDeleteMode: js.UndefOr[context | slideButton | slideItem | static | swipe | toggle] = js.native
-  /** Configures item reordering using drag and drop gestures. */
-  var itemDragging: js.UndefOr[dxSortableOptions] = js.native
-  /** An array of items displayed by the widget. */
+  ] = js.undefined
+  /** @name dxList.Options.grouped */
+  var grouped: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.indicateLoading */
+  var indicateLoading: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.itemDeleteMode */
+  var itemDeleteMode: js.UndefOr[context | slideButton | slideItem | static | swipe | toggle] = js.undefined
+  /** @name dxList.Options.itemDragging */
+  var itemDragging: js.UndefOr[dxSortableOptions] = js.undefined
+  /** @name dxList.Options.items */
   @JSName("items")
-  var items_dxListOptions: js.UndefOr[js.Array[String | dxListItem | _]] = js.native
-  /** Specifies the array of items for a context menu called for a list item. */
-  var menuItems: js.UndefOr[js.Array[Action]] = js.native
-  /** Specifies whether an item context menu is shown when a user holds or swipes an item. */
-  var menuMode: js.UndefOr[context | slide] = js.native
-  /** The text displayed on the button used to load the next page from the data source. */
-  var nextButtonText: js.UndefOr[String] = js.native
-  /** A function that is executed when a group element is rendered. */
-  var onGroupRendered: js.UndefOr[js.Function1[/* e */ GroupData, _]] = js.native
-  /** A function that is executed when a collection item is clicked or tapped. */
+  var items_dxListOptions: js.UndefOr[js.Array[String | dxListItem | _]] = js.undefined
+  /** @name dxList.Options.menuItems */
+  var menuItems: js.UndefOr[js.Array[Action]] = js.undefined
+  /** @name dxList.Options.menuMode */
+  var menuMode: js.UndefOr[context | slide] = js.undefined
+  /** @name dxList.Options.nextButtonText */
+  var nextButtonText: js.UndefOr[String] = js.undefined
+  /** @name dxList.Options.onGroupRendered */
+  var onGroupRendered: js.UndefOr[js.Function1[/* e */ GroupData, _]] = js.undefined
+  /** @name dxList.Options.onItemClick */
   @JSName("onItemClick")
-  var onItemClick_dxListOptions: js.UndefOr[(js.Function1[/* e */ ItemIndexJQueryEvent, _]) | String] = js.native
-  /** A function that is executed when a collection item is right-clicked or pressed. */
+  var onItemClick_dxListOptions: js.UndefOr[(js.Function1[/* e */ ItemIndexJQueryEvent, _]) | String] = js.undefined
+  /** @name dxList.Options.onItemContextMenu */
   @JSName("onItemContextMenu")
-  var onItemContextMenu_dxListOptions: js.UndefOr[js.Function1[/* e */ ItemIndexJQueryEvent, _]] = js.native
-  /** A function that is executed after a list item is deleted from the data source. */
-  var onItemDeleted: js.UndefOr[js.Function1[/* e */ ElementItemData, _]] = js.native
-  /** A function that is executed before a collection item is deleted from the data source. */
-  var onItemDeleting: js.UndefOr[js.Function1[/* e */ ComponentElementItemData, _]] = js.native
-  /** A function that is executed when a collection item has been held for a specified period. */
+  var onItemContextMenu_dxListOptions: js.UndefOr[js.Function1[/* e */ ItemIndexJQueryEvent, _]] = js.undefined
+  /** @name dxList.Options.onItemDeleted */
+  var onItemDeleted: js.UndefOr[js.Function1[/* e */ ElementItemData, _]] = js.undefined
+  /** @name dxList.Options.onItemDeleting */
+  var onItemDeleting: js.UndefOr[js.Function1[/* e */ ComponentElementItemData, _]] = js.undefined
+  /** @name dxList.Options.onItemHold */
   @JSName("onItemHold")
-  var onItemHold_dxListOptions: js.UndefOr[js.Function1[/* e */ ItemIndexJQueryEvent, _]] = js.native
-  /** A function that is executed after a list item is moved to another position. */
-  var onItemReordered: js.UndefOr[js.Function1[/* e */ ToIndex, _]] = js.native
-  /** A function that is executed when a list item is swiped. */
-  var onItemSwipe: js.UndefOr[js.Function1[/* e */ Direction, _]] = js.native
-  /** A function that is executed before the next page is loaded. */
-  var onPageLoading: js.UndefOr[js.Function1[/* e */ ComponentDxList, _]] = js.native
-  /** A function that is executed when the "pull to refresh" gesture is performed. Supported in mobile themes only. */
-  var onPullRefresh: js.UndefOr[js.Function1[/* e */ ComponentDxList, _]] = js.native
-  /** A function that is executed on each scroll gesture. */
-  var onScroll: js.UndefOr[js.Function1[/* e */ ReachedBottom, _]] = js.native
-  /** A function that is executed when the "Select All" check box value is changed. Applies only if the selectionMode is "all". */
-  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ModelValue, _]] = js.native
-  /** Specifies whether the next page is loaded when a user scrolls the widget to the bottom or when the "next" button is clicked. */
-  var pageLoadMode: js.UndefOr[nextButton | scrollBottom] = js.native
-  /** Specifies the text shown in the pullDown panel, which is displayed when the list is scrolled to the bottom. */
-  var pageLoadingText: js.UndefOr[String] = js.native
-  /** A Boolean value specifying whether or not the widget supports the "pull down to refresh" gesture. */
-  var pullRefreshEnabled: js.UndefOr[Boolean] = js.native
-  /** Specifies the text displayed in the pullDown panel when the list is pulled below the refresh threshold. */
-  var pulledDownText: js.UndefOr[String] = js.native
-  /** Specifies the text shown in the pullDown panel while the list is being pulled down to the refresh threshold. */
-  var pullingDownText: js.UndefOr[String] = js.native
-  /** Specifies the text displayed in the pullDown panel while the list is being refreshed. */
-  var refreshingText: js.UndefOr[String] = js.native
-  /** Specifies whether to repaint only those elements whose data changed. */
-  var repaintChangesOnly: js.UndefOr[Boolean] = js.native
-  /** A Boolean value specifying if the list is scrolled by content. */
-  var scrollByContent: js.UndefOr[Boolean] = js.native
-  /** A Boolean value specifying if the list is scrolled using the scrollbar. */
-  var scrollByThumb: js.UndefOr[Boolean] = js.native
-  /** A Boolean value specifying whether to enable or disable list scrolling. */
-  var scrollingEnabled: js.UndefOr[Boolean] = js.native
-  /** Specifies the mode in which all items are selected. */
-  var selectAllMode: js.UndefOr[allPages | page] = js.native
-  /** Specifies item selection mode. */
-  var selectionMode: js.UndefOr[all | multiple | none | single_] = js.native
-  /** Specifies when the widget shows the scrollbar. */
-  var showScrollbar: js.UndefOr[always | never | onHover | onScroll] = js.native
-  /** Specifies whether or not to display controls used to select list items. */
-  var showSelectionControls: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not the widget uses native scrolling. */
-  var useNativeScrolling: js.UndefOr[Boolean] = js.native
+  var onItemHold_dxListOptions: js.UndefOr[js.Function1[/* e */ ItemIndexJQueryEvent, _]] = js.undefined
+  /** @name dxList.Options.onItemReordered */
+  var onItemReordered: js.UndefOr[js.Function1[/* e */ ToIndex, _]] = js.undefined
+  /** @name dxList.Options.onItemSwipe */
+  var onItemSwipe: js.UndefOr[js.Function1[/* e */ Direction, _]] = js.undefined
+  /** @name dxList.Options.onPageLoading */
+  var onPageLoading: js.UndefOr[js.Function1[/* e */ ComponentDxList, _]] = js.undefined
+  /** @name dxList.Options.onPullRefresh */
+  var onPullRefresh: js.UndefOr[js.Function1[/* e */ ComponentDxList, _]] = js.undefined
+  /** @name dxList.Options.onScroll */
+  var onScroll: js.UndefOr[js.Function1[/* e */ ReachedBottom, _]] = js.undefined
+  /** @name dxList.Options.onSelectAllValueChanged */
+  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ModelValue, _]] = js.undefined
+  /** @name dxList.Options.pageLoadMode */
+  var pageLoadMode: js.UndefOr[nextButton | scrollBottom] = js.undefined
+  /** @name dxList.Options.pageLoadingText */
+  var pageLoadingText: js.UndefOr[String] = js.undefined
+  /** @name dxList.Options.pullRefreshEnabled */
+  var pullRefreshEnabled: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.pulledDownText */
+  var pulledDownText: js.UndefOr[String] = js.undefined
+  /** @name dxList.Options.pullingDownText */
+  var pullingDownText: js.UndefOr[String] = js.undefined
+  /** @name dxList.Options.refreshingText */
+  var refreshingText: js.UndefOr[String] = js.undefined
+  /** @name dxList.Options.repaintChangesOnly */
+  var repaintChangesOnly: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.scrollByContent */
+  var scrollByContent: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.scrollByThumb */
+  var scrollByThumb: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.scrollingEnabled */
+  var scrollingEnabled: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.selectAllMode */
+  var selectAllMode: js.UndefOr[allPages | page] = js.undefined
+  /** @name dxList.Options.selectionMode */
+  var selectionMode: js.UndefOr[all | multiple | none | single_] = js.undefined
+  /** @name dxList.Options.showScrollbar */
+  var showScrollbar: js.UndefOr[always | never | onHover | onScroll] = js.undefined
+  /** @name dxList.Options.showSelectionControls */
+  var showSelectionControls: js.UndefOr[Boolean] = js.undefined
+  /** @name dxList.Options.useNativeScrolling */
+  var useNativeScrolling: js.UndefOr[Boolean] = js.undefined
 }
 
 object dxListOptions {
   @scala.inline
-  def apply(): dxListOptions = {
+  def apply(
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    allowItemDeleting: js.UndefOr[Boolean] = js.undefined,
+    allowItemReordering: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    bounceEnabled: js.UndefOr[Boolean] = js.undefined,
+    collapsibleGroups: js.UndefOr[Boolean] = js.undefined,
+    dataSource: String | (js.Array[String | dxListItem | _]) | DataSource | DataSourceOptions = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    displayExpr: String | (js.Function1[/* item */ js.Any, String]) = null,
+    elementAttr: js.Any = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    groupTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
+      /* groupData */ js.Any, 
+      /* groupIndex */ Double, 
+      /* groupElement */ dxElement, 
+      String | Element | JQuery
+    ]) = null,
+    grouped: js.UndefOr[Boolean] = js.undefined,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    indicateLoading: js.UndefOr[Boolean] = js.undefined,
+    itemDeleteMode: context | slideButton | slideItem | static | swipe | toggle = null,
+    itemDragging: dxSortableOptions = null,
+    itemHoldTimeout: js.UndefOr[Double] = js.undefined,
+    itemTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
+      /* itemData */ js.Any, 
+      /* itemIndex */ Double, 
+      /* itemElement */ dxElement, 
+      String | Element | JQuery
+    ]) = null,
+    items: js.Array[String | dxListItem | _] = null,
+    keyExpr: String | js.Function = null,
+    menuItems: js.Array[Action] = null,
+    menuMode: context | slide = null,
+    nextButtonText: String = null,
+    noDataText: String = null,
+    onContentReady: /* e */ ComponentElement[dxList] => _ = null,
+    onDisposing: /* e */ Model[dxList] => _ = null,
+    onGroupRendered: /* e */ GroupData => _ = null,
+    onInitialized: /* e */ typingsSlinky.devextreme.anon.Element[dxList] => _ = null,
+    onItemClick: (js.Function1[/* e */ ItemIndexJQueryEvent, _]) | String = null,
+    onItemContextMenu: /* e */ ItemIndexJQueryEvent => _ = null,
+    onItemDeleted: /* e */ ElementItemData => _ = null,
+    onItemDeleting: /* e */ ComponentElementItemData => _ = null,
+    onItemHold: /* e */ ItemIndexJQueryEvent => _ = null,
+    onItemRendered: /* e */ ItemElement[dxList] => _ = null,
+    onItemReordered: /* e */ ToIndex => _ = null,
+    onItemSwipe: /* e */ Direction => _ = null,
+    onOptionChanged: /* e */ Name[dxList] => _ = null,
+    onPageLoading: /* e */ ComponentDxList => _ = null,
+    onPullRefresh: /* e */ ComponentDxList => _ = null,
+    onScroll: /* e */ ReachedBottom => _ = null,
+    onSelectAllValueChanged: /* e */ ModelValue => _ = null,
+    onSelectionChanged: /* e */ AddedItems[dxList] => _ = null,
+    pageLoadMode: nextButton | scrollBottom = null,
+    pageLoadingText: String = null,
+    pullRefreshEnabled: js.UndefOr[Boolean] = js.undefined,
+    pulledDownText: String = null,
+    pullingDownText: String = null,
+    refreshingText: String = null,
+    repaintChangesOnly: js.UndefOr[Boolean] = js.undefined,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    scrollByContent: js.UndefOr[Boolean] = js.undefined,
+    scrollByThumb: js.UndefOr[Boolean] = js.undefined,
+    scrollingEnabled: js.UndefOr[Boolean] = js.undefined,
+    searchEditorOptions: dxTextBoxOptions[dxTextBox] = null,
+    searchEnabled: js.UndefOr[Boolean] = js.undefined,
+    searchExpr: String | js.Function | (js.Array[String | js.Function]) = null,
+    searchMode: contains | startswith | equals = null,
+    searchTimeout: js.UndefOr[Double] = js.undefined,
+    searchValue: String = null,
+    selectAllMode: allPages | page = null,
+    selectedIndex: js.UndefOr[Double] = js.undefined,
+    selectedItem: js.Any = null,
+    selectedItemKeys: js.Array[_] = null,
+    selectedItems: js.Array[_] = null,
+    selectionMode: all | multiple | none | single_ = null,
+    showScrollbar: always | never | onHover | onScroll = null,
+    showSelectionControls: js.UndefOr[Boolean] = js.undefined,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    useNativeScrolling: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxListOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowItemDeleting)) __obj.updateDynamic("allowItemDeleting")(allowItemDeleting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowItemReordering)) __obj.updateDynamic("allowItemReordering")(allowItemReordering.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(bounceEnabled)) __obj.updateDynamic("bounceEnabled")(bounceEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsibleGroups)) __obj.updateDynamic("collapsibleGroups")(collapsibleGroups.get.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (displayExpr != null) __obj.updateDynamic("displayExpr")(displayExpr.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (groupTemplate != null) __obj.updateDynamic("groupTemplate")(groupTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(grouped)) __obj.updateDynamic("grouped")(grouped.get.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indicateLoading)) __obj.updateDynamic("indicateLoading")(indicateLoading.get.asInstanceOf[js.Any])
+    if (itemDeleteMode != null) __obj.updateDynamic("itemDeleteMode")(itemDeleteMode.asInstanceOf[js.Any])
+    if (itemDragging != null) __obj.updateDynamic("itemDragging")(itemDragging.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemHoldTimeout)) __obj.updateDynamic("itemHoldTimeout")(itemHoldTimeout.get.asInstanceOf[js.Any])
+    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(itemTemplate.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (keyExpr != null) __obj.updateDynamic("keyExpr")(keyExpr.asInstanceOf[js.Any])
+    if (menuItems != null) __obj.updateDynamic("menuItems")(menuItems.asInstanceOf[js.Any])
+    if (menuMode != null) __obj.updateDynamic("menuMode")(menuMode.asInstanceOf[js.Any])
+    if (nextButtonText != null) __obj.updateDynamic("nextButtonText")(nextButtonText.asInstanceOf[js.Any])
+    if (noDataText != null) __obj.updateDynamic("noDataText")(noDataText.asInstanceOf[js.Any])
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onGroupRendered != null) __obj.updateDynamic("onGroupRendered")(js.Any.fromFunction1(onGroupRendered))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onItemClick != null) __obj.updateDynamic("onItemClick")(onItemClick.asInstanceOf[js.Any])
+    if (onItemContextMenu != null) __obj.updateDynamic("onItemContextMenu")(js.Any.fromFunction1(onItemContextMenu))
+    if (onItemDeleted != null) __obj.updateDynamic("onItemDeleted")(js.Any.fromFunction1(onItemDeleted))
+    if (onItemDeleting != null) __obj.updateDynamic("onItemDeleting")(js.Any.fromFunction1(onItemDeleting))
+    if (onItemHold != null) __obj.updateDynamic("onItemHold")(js.Any.fromFunction1(onItemHold))
+    if (onItemRendered != null) __obj.updateDynamic("onItemRendered")(js.Any.fromFunction1(onItemRendered))
+    if (onItemReordered != null) __obj.updateDynamic("onItemReordered")(js.Any.fromFunction1(onItemReordered))
+    if (onItemSwipe != null) __obj.updateDynamic("onItemSwipe")(js.Any.fromFunction1(onItemSwipe))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (onPageLoading != null) __obj.updateDynamic("onPageLoading")(js.Any.fromFunction1(onPageLoading))
+    if (onPullRefresh != null) __obj.updateDynamic("onPullRefresh")(js.Any.fromFunction1(onPullRefresh))
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (onSelectAllValueChanged != null) __obj.updateDynamic("onSelectAllValueChanged")(js.Any.fromFunction1(onSelectAllValueChanged))
+    if (onSelectionChanged != null) __obj.updateDynamic("onSelectionChanged")(js.Any.fromFunction1(onSelectionChanged))
+    if (pageLoadMode != null) __obj.updateDynamic("pageLoadMode")(pageLoadMode.asInstanceOf[js.Any])
+    if (pageLoadingText != null) __obj.updateDynamic("pageLoadingText")(pageLoadingText.asInstanceOf[js.Any])
+    if (!js.isUndefined(pullRefreshEnabled)) __obj.updateDynamic("pullRefreshEnabled")(pullRefreshEnabled.get.asInstanceOf[js.Any])
+    if (pulledDownText != null) __obj.updateDynamic("pulledDownText")(pulledDownText.asInstanceOf[js.Any])
+    if (pullingDownText != null) __obj.updateDynamic("pullingDownText")(pullingDownText.asInstanceOf[js.Any])
+    if (refreshingText != null) __obj.updateDynamic("refreshingText")(refreshingText.asInstanceOf[js.Any])
+    if (!js.isUndefined(repaintChangesOnly)) __obj.updateDynamic("repaintChangesOnly")(repaintChangesOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollByContent)) __obj.updateDynamic("scrollByContent")(scrollByContent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollByThumb)) __obj.updateDynamic("scrollByThumb")(scrollByThumb.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollingEnabled)) __obj.updateDynamic("scrollingEnabled")(scrollingEnabled.get.asInstanceOf[js.Any])
+    if (searchEditorOptions != null) __obj.updateDynamic("searchEditorOptions")(searchEditorOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchEnabled)) __obj.updateDynamic("searchEnabled")(searchEnabled.get.asInstanceOf[js.Any])
+    if (searchExpr != null) __obj.updateDynamic("searchExpr")(searchExpr.asInstanceOf[js.Any])
+    if (searchMode != null) __obj.updateDynamic("searchMode")(searchMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchTimeout)) __obj.updateDynamic("searchTimeout")(searchTimeout.get.asInstanceOf[js.Any])
+    if (searchValue != null) __obj.updateDynamic("searchValue")(searchValue.asInstanceOf[js.Any])
+    if (selectAllMode != null) __obj.updateDynamic("selectAllMode")(selectAllMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectedIndex)) __obj.updateDynamic("selectedIndex")(selectedIndex.get.asInstanceOf[js.Any])
+    if (selectedItem != null) __obj.updateDynamic("selectedItem")(selectedItem.asInstanceOf[js.Any])
+    if (selectedItemKeys != null) __obj.updateDynamic("selectedItemKeys")(selectedItemKeys.asInstanceOf[js.Any])
+    if (selectedItems != null) __obj.updateDynamic("selectedItems")(selectedItems.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (showScrollbar != null) __obj.updateDynamic("showScrollbar")(showScrollbar.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSelectionControls)) __obj.updateDynamic("showSelectionControls")(showSelectionControls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNativeScrolling)) __obj.updateDynamic("useNativeScrolling")(useNativeScrolling.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxListOptions]
   }
-  @scala.inline
-  implicit class dxListOptionsOps[Self <: dxListOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowItemDeleting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowItemDeleting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowItemDeleting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowItemDeleting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowItemReordering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowItemReordering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowItemReordering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowItemReordering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounceEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounceEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsibleGroups(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsibleGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsibleGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsibleGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: String | (js.Array[String | dxListItem | _]) | DataSource | DataSourceOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayExprFunction1(value: /* item */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayExpr")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDisplayExpr(value: String | (js.Function1[/* item */ js.Any, String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayExpr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupTemplateFunction3(
-      value: (/* groupData */ js.Any, /* groupIndex */ Double, /* groupElement */ dxElement) => String | Element | JQuery
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGroupTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-          /* groupData */ js.Any, 
-          /* groupIndex */ Double, 
-          /* groupElement */ dxElement, 
-          String | Element | JQuery
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrouped(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrouped: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouped")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndicateLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicateLoading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndicateLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicateLoading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemDeleteMode(value: context | slideButton | slideItem | static | swipe | toggle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDeleteMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemDeleteMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDeleteMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemDragging(value: dxSortableOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDragging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemDragging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDragging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[String | dxListItem | _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItems(value: js.Array[Action]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuMode(value: context | slide): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextButtonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButtonText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnGroupRendered(value: /* e */ GroupData => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupRendered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGroupRendered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupRendered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemClickFunction1(value: /* e */ ItemIndexJQueryEvent => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnItemClick(value: (js.Function1[/* e */ ItemIndexJQueryEvent, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnItemClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemContextMenu(value: /* e */ ItemIndexJQueryEvent => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemDeleted(value: /* e */ ElementItemData => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDeleted")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDeleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemDeleting(value: /* e */ ComponentElementItemData => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDeleting")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemDeleting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDeleting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemHold(value: /* e */ ItemIndexJQueryEvent => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemHold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemReordered(value: /* e */ ToIndex => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemReordered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemReordered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemReordered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemSwipe(value: /* e */ Direction => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSwipe")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemSwipe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSwipe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPageLoading(value: /* e */ ComponentDxList => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPageLoading")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPageLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPageLoading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPullRefresh(value: /* e */ ComponentDxList => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPullRefresh")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPullRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPullRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScroll(value: /* e */ ReachedBottom => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectAllValueChanged(value: /* e */ ModelValue => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectAllValueChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectAllValueChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectAllValueChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageLoadMode(value: nextButton | scrollBottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLoadMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageLoadMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLoadMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageLoadingText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLoadingText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageLoadingText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLoadingText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPullRefreshEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRefreshEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPullRefreshEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRefreshEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPulledDownText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pulledDownText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPulledDownText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pulledDownText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPullingDownText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullingDownText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPullingDownText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullingDownText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshingText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshingText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshingText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshingText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepaintChangesOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repaintChangesOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepaintChangesOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repaintChangesOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollByContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollByContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollByContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollByContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollByThumb(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollByThumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollByThumb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollByThumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectAllMode(value: allPages | page): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectAllMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: all | multiple | none | single_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowScrollbar(value: always | never | onHover | onScroll): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScrollbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowScrollbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScrollbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSelectionControls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSelectionControls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSelectionControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSelectionControls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseNativeScrolling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeScrolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNativeScrolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeScrolling")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

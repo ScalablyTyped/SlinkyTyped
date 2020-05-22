@@ -18,6 +18,8 @@ class SerialPortPrinter protected () extends IClientPrinter {
     dataBits: Double,
     flowControl: Handshake
   ) = this()
+  /* CompleteClass */
+  override var Id: js.Any = js.native
   @JSName("Id")
   var Id_SerialPortPrinter: String = js.native
   var _serialPortBaudRate: js.Any = js.native
@@ -32,5 +34,7 @@ class SerialPortPrinter protected () extends IClientPrinter {
   var parity: Parity = js.native
   var portName: String = js.native
   var stopBits: StopBits = js.native
+  /* CompleteClass */
+  override def serialize(): js.Any = js.native
 }
 

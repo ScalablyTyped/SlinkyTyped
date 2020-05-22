@@ -6,49 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptionsSync extends OptionsBase {
-  var loaders: js.UndefOr[LoadersSync] = js.native
-  var transform: js.UndefOr[TransformSync] = js.native
+  var loaders: js.UndefOr[LoadersSync] = js.undefined
+  var transform: js.UndefOr[TransformSync] = js.undefined
 }
 
 object OptionsSync {
   @scala.inline
-  def apply(): OptionsSync = {
+  def apply(
+    cache: js.UndefOr[Boolean] = js.undefined,
+    ignoreEmptySearchPlaces: js.UndefOr[Boolean] = js.undefined,
+    loaders: LoadersSync = null,
+    packageProp: String = null,
+    searchPlaces: js.Array[String] = null,
+    stopDir: String = null,
+    transform: /* CosmiconfigResult */ CosmiconfigResult => CosmiconfigResult = null
+  ): OptionsSync = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreEmptySearchPlaces)) __obj.updateDynamic("ignoreEmptySearchPlaces")(ignoreEmptySearchPlaces.get.asInstanceOf[js.Any])
+    if (loaders != null) __obj.updateDynamic("loaders")(loaders.asInstanceOf[js.Any])
+    if (packageProp != null) __obj.updateDynamic("packageProp")(packageProp.asInstanceOf[js.Any])
+    if (searchPlaces != null) __obj.updateDynamic("searchPlaces")(searchPlaces.asInstanceOf[js.Any])
+    if (stopDir != null) __obj.updateDynamic("stopDir")(stopDir.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
     __obj.asInstanceOf[OptionsSync]
   }
-  @scala.inline
-  implicit class OptionsSyncOps[Self <: OptionsSync] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoaders(value: LoadersSync): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: /* CosmiconfigResult */ CosmiconfigResult => CosmiconfigResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

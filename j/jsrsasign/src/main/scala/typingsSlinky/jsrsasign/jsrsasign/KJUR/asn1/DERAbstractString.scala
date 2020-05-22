@@ -17,25 +17,24 @@ import scala.scalajs.js.annotation._
   *
   * NOTE: 'params' can be omitted.
   */
-@js.native
 trait DERAbstractString extends js.Object {
-  var s: String = js.native
-  def getFreshValueHex(): String = js.native
+  var s: String
+  def getFreshValueHex(): String
   /**
     * get string value of this string object
     * @return string value of this string object
     */
-  def getString(): String = js.native
+  def getString(): String
   /**
     * set value by a string
     * @param newS value by a string to set
     */
-  def setString(newS: String): Unit = js.native
+  def setString(newS: String): Unit
   /**
     * set value by a hexadecimal string
     * @param newHexString value by a hexadecimal string to set
     */
-  def setStringHex(newHexString: String): Unit = js.native
+  def setStringHex(newHexString: String): Unit
 }
 
 object DERAbstractString {
@@ -50,43 +49,5 @@ object DERAbstractString {
     val __obj = js.Dynamic.literal(getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getString = js.Any.fromFunction0(getString), s = s.asInstanceOf[js.Any], setString = js.Any.fromFunction1(setString), setStringHex = js.Any.fromFunction1(setStringHex))
     __obj.asInstanceOf[DERAbstractString]
   }
-  @scala.inline
-  implicit class DERAbstractStringOps[Self <: DERAbstractString] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetFreshValueHex(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFreshValueHex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetString(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withS(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setString")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetStringHex(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStringHex")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

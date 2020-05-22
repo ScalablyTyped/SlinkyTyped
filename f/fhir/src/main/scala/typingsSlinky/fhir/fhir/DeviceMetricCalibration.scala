@@ -7,119 +7,63 @@ import scala.scalajs.js.annotation._
 /**
   * Describes the calibrations that have been performed or that are required to be performed
   */
-@js.native
 trait DeviceMetricCalibration extends BackboneElement {
   /**
     * Contains extended information for property 'state'.
     */
-  var _state: js.UndefOr[Element] = js.native
+  var _state: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'time'.
     */
-  var _time: js.UndefOr[Element] = js.native
+  var _time: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'type'.
     */
-  var _type: js.UndefOr[Element] = js.native
+  var _type: js.UndefOr[Element] = js.undefined
   /**
     * not-calibrated | calibration-required | calibrated | unspecified
     */
-  var state: js.UndefOr[code] = js.native
+  var state: js.UndefOr[code] = js.undefined
   /**
     * Describes the time last calibration has been performed
     */
-  var time: js.UndefOr[instant] = js.native
+  var time: js.UndefOr[instant] = js.undefined
   /**
     * unspecified | offset | gain | two-point
     */
-  var `type`: js.UndefOr[code] = js.native
+  var `type`: js.UndefOr[code] = js.undefined
 }
 
 object DeviceMetricCalibration {
   @scala.inline
-  def apply(): DeviceMetricCalibration = {
+  def apply(
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _state: Element = null,
+    _time: Element = null,
+    _type: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    state: code = null,
+    time: instant = null,
+    `type`: code = null
+  ): DeviceMetricCalibration = {
     val __obj = js.Dynamic.literal()
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_state != null) __obj.updateDynamic("_state")(_state.asInstanceOf[js.Any])
+    if (_time != null) __obj.updateDynamic("_time")(_time.asInstanceOf[js.Any])
+    if (_type != null) __obj.updateDynamic("_type")(_type.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceMetricCalibration]
   }
-  @scala.inline
-  implicit class DeviceMetricCalibrationOps[Self <: DeviceMetricCalibration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_state(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_state: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_time(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_type(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: instant): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

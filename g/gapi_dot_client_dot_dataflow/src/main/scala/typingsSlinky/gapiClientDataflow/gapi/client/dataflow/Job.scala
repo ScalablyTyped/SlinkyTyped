@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Job extends js.Object {
   /**
     * The client's unique identifier of the job, re-used across retried attempts.
@@ -16,12 +15,12 @@ trait Job extends js.Object {
     * creation across retried attempts to create a job.
     * By default, the field is empty and, in that case, the service ignores it.
     */
-  var clientRequestId: js.UndefOr[String] = js.native
+  var clientRequestId: js.UndefOr[String] = js.undefined
   /**
     * The timestamp when the job was initially created. Immutable and set by the
     * Cloud Dataflow service.
     */
-  var createTime: js.UndefOr[String] = js.native
+  var createTime: js.UndefOr[String] = js.undefined
   /**
     * The current state of the job.
     *
@@ -35,20 +34,20 @@ trait Job extends js.Object {
     * This field may be mutated by the Cloud Dataflow service;
     * callers cannot mutate it.
     */
-  var currentState: js.UndefOr[String] = js.native
+  var currentState: js.UndefOr[String] = js.undefined
   /** The timestamp associated with the current state. */
-  var currentStateTime: js.UndefOr[String] = js.native
+  var currentStateTime: js.UndefOr[String] = js.undefined
   /** The environment for the job. */
-  var environment: js.UndefOr[Environment] = js.native
+  var environment: js.UndefOr[Environment] = js.undefined
   /** Deprecated. */
-  var executionInfo: js.UndefOr[JobExecutionInfo] = js.native
+  var executionInfo: js.UndefOr[JobExecutionInfo] = js.undefined
   /**
     * The unique ID of this job.
     *
     * This field is set by the Cloud Dataflow service when the Job is
     * created, and is immutable for the life of the job.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * User-defined labels for this job.
     *
@@ -60,9 +59,9 @@ trait Job extends js.Object {
     * &#42; Both keys and values are additionally constrained to be <= 128 bytes in
     * size.
     */
-  var labels: js.UndefOr[Record[String, String]] = js.native
+  var labels: js.UndefOr[Record[String, String]] = js.undefined
   /** The location that contains this job. */
-  var location: js.UndefOr[String] = js.native
+  var location: js.UndefOr[String] = js.undefined
   /**
     * The user-specified Cloud Dataflow job name.
     *
@@ -74,16 +73,16 @@ trait Job extends js.Object {
     * The name must match the regular expression
     * `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Preliminary field: The format of this data may change at any time.
     * A description of the user pipeline and stages through which it is executed.
     * Created by Cloud Dataflow service.  Only retrieved with
     * JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
     */
-  var pipelineDescription: js.UndefOr[PipelineDescription] = js.native
+  var pipelineDescription: js.UndefOr[PipelineDescription] = js.undefined
   /** The ID of the Cloud Platform project that the job belongs to. */
-  var projectId: js.UndefOr[String] = js.native
+  var projectId: js.UndefOr[String] = js.undefined
   /**
     * If this job is an update of an existing job, this field is the job ID
     * of the job it replaced.
@@ -92,12 +91,12 @@ trait Job extends js.Object {
     * here. The job named here is stopped, and its intermediate state is
     * transferred to this job.
     */
-  var replaceJobId: js.UndefOr[String] = js.native
+  var replaceJobId: js.UndefOr[String] = js.undefined
   /**
     * If another job is an update of this job (and thus, this job is in
     * `JOB_STATE_UPDATED`), this field contains the ID of that job.
     */
-  var replacedByJobId: js.UndefOr[String] = js.native
+  var replacedByJobId: js.UndefOr[String] = js.undefined
   /**
     * The job's requested state.
     *
@@ -107,14 +106,14 @@ trait Job extends js.Object {
     * `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the
     * job if it has not already reached a terminal state.
     */
-  var requestedState: js.UndefOr[String] = js.native
+  var requestedState: js.UndefOr[String] = js.undefined
   /**
     * This field may be mutated by the Cloud Dataflow service;
     * callers cannot mutate it.
     */
-  var stageStates: js.UndefOr[js.Array[ExecutionStageState]] = js.native
+  var stageStates: js.UndefOr[js.Array[ExecutionStageState]] = js.undefined
   /** The top-level steps that constitute the entire job. */
-  var steps: js.UndefOr[js.Array[Step]] = js.native
+  var steps: js.UndefOr[js.Array[Step]] = js.undefined
   /**
     * A set of files the system should be aware of that are used
     * for temporary storage. These temporary files will be
@@ -129,269 +128,62 @@ trait Job extends js.Object {
     * storage.googleapis.com/{bucket}/{object}
     * bucket.storage.googleapis.com/{object}
     */
-  var tempFiles: js.UndefOr[js.Array[String]] = js.native
+  var tempFiles: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The map of transform name prefixes of the job to be replaced to the
     * corresponding name prefixes of the new job.
     */
-  var transformNameMapping: js.UndefOr[Record[String, String]] = js.native
+  var transformNameMapping: js.UndefOr[Record[String, String]] = js.undefined
   /** The type of Cloud Dataflow job. */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object Job {
   @scala.inline
-  def apply(): Job = {
+  def apply(
+    clientRequestId: String = null,
+    createTime: String = null,
+    currentState: String = null,
+    currentStateTime: String = null,
+    environment: Environment = null,
+    executionInfo: JobExecutionInfo = null,
+    id: String = null,
+    labels: Record[String, String] = null,
+    location: String = null,
+    name: String = null,
+    pipelineDescription: PipelineDescription = null,
+    projectId: String = null,
+    replaceJobId: String = null,
+    replacedByJobId: String = null,
+    requestedState: String = null,
+    stageStates: js.Array[ExecutionStageState] = null,
+    steps: js.Array[Step] = null,
+    tempFiles: js.Array[String] = null,
+    transformNameMapping: Record[String, String] = null,
+    `type`: String = null
+  ): Job = {
     val __obj = js.Dynamic.literal()
+    if (clientRequestId != null) __obj.updateDynamic("clientRequestId")(clientRequestId.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (currentState != null) __obj.updateDynamic("currentState")(currentState.asInstanceOf[js.Any])
+    if (currentStateTime != null) __obj.updateDynamic("currentStateTime")(currentStateTime.asInstanceOf[js.Any])
+    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
+    if (executionInfo != null) __obj.updateDynamic("executionInfo")(executionInfo.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (pipelineDescription != null) __obj.updateDynamic("pipelineDescription")(pipelineDescription.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (replaceJobId != null) __obj.updateDynamic("replaceJobId")(replaceJobId.asInstanceOf[js.Any])
+    if (replacedByJobId != null) __obj.updateDynamic("replacedByJobId")(replacedByJobId.asInstanceOf[js.Any])
+    if (requestedState != null) __obj.updateDynamic("requestedState")(requestedState.asInstanceOf[js.Any])
+    if (stageStates != null) __obj.updateDynamic("stageStates")(stageStates.asInstanceOf[js.Any])
+    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
+    if (tempFiles != null) __obj.updateDynamic("tempFiles")(tempFiles.asInstanceOf[js.Any])
+    if (transformNameMapping != null) __obj.updateDynamic("transformNameMapping")(transformNameMapping.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Job]
   }
-  @scala.inline
-  implicit class JobOps[Self <: Job] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentStateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentStateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentStateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentStateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: Environment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionInfo(value: JobExecutionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipelineDescription(value: PipelineDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceJobId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceJobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceJobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplacedByJobId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacedByJobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplacedByJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacedByJobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestedState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestedState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageStates(value: js.Array[ExecutionStageState]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageStates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSteps(value: js.Array[Step]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTempFiles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tempFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTempFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tempFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformNameMapping(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformNameMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformNameMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformNameMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

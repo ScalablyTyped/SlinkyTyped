@@ -30,71 +30,19 @@ trait UpdateStreamInput extends js.Object {
 
 object UpdateStreamInput {
   @scala.inline
-  def apply(CurrentVersion: Version): UpdateStreamInput = {
+  def apply(
+    CurrentVersion: Version,
+    DeviceName: DeviceName = null,
+    MediaType: MediaType = null,
+    StreamARN: ResourceARN = null,
+    StreamName: StreamName = null
+  ): UpdateStreamInput = {
     val __obj = js.Dynamic.literal(CurrentVersion = CurrentVersion.asInstanceOf[js.Any])
+    if (DeviceName != null) __obj.updateDynamic("DeviceName")(DeviceName.asInstanceOf[js.Any])
+    if (MediaType != null) __obj.updateDynamic("MediaType")(MediaType.asInstanceOf[js.Any])
+    if (StreamARN != null) __obj.updateDynamic("StreamARN")(StreamARN.asInstanceOf[js.Any])
+    if (StreamName != null) __obj.updateDynamic("StreamName")(StreamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateStreamInput]
   }
-  @scala.inline
-  implicit class UpdateStreamInputOps[Self <: UpdateStreamInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceName(value: DeviceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaType(value: MediaType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamARN(value: ResourceARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamName(value: StreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

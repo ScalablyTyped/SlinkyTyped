@@ -32,7 +32,6 @@ import scala.scalajs.js.annotation._
   * KJUR.crypto.MessageDigest.HASHLENGTH['sha1'] → 20
   * KJUR.crypto.MessageDigest.HASHLENGTH['sha512'] → 64
   */
-@js.native
 trait MessageDigest extends js.Object {
   /**
     * completes hash calculation and returns hash result
@@ -40,7 +39,7 @@ trait MessageDigest extends js.Object {
     * @example
     * md.digest()
     */
-  def digest(): Unit = js.native
+  def digest(): Unit
   /**
     * performs final update on the digest using hexadecimal string, then completes the digest computation
     * @param hex hexadecimal string to final update
@@ -48,7 +47,7 @@ trait MessageDigest extends js.Object {
     * @example
     * md.digestHex('0f2abd')
     */
-  def digestHex(hex: String): Unit = js.native
+  def digestHex(hex: String): Unit
   /**
     * performs final update on the digest using string, then completes the digest computation
     * @param str string to final update
@@ -56,7 +55,7 @@ trait MessageDigest extends js.Object {
     * @example
     * md.digestString('aaa')
     */
-  def digestString(str: String): Unit = js.native
+  def digestString(str: String): Unit
   /**
     * set hash algorithm and provider
     * @param alg hash algorithm name
@@ -81,7 +80,7 @@ trait MessageDigest extends js.Object {
     * // for RIPEMD160
     * md.setAlgAndProvider('ripemd160', 'cryptojs');
     */
-  def setAlgAndProvider(alg: String, prov: String): Unit = js.native
+  def setAlgAndProvider(alg: String, prov: String): Unit
   /**
     * update digest by specified hexadecimal string
     * @param hex hexadecimal string to update
@@ -89,7 +88,7 @@ trait MessageDigest extends js.Object {
     * @example
     * md.updateHex('0afe36');
     */
-  def updateHex(hex: String): Unit = js.native
+  def updateHex(hex: String): Unit
   /**
     * update digest by specified string
     * @param str string to update
@@ -97,7 +96,7 @@ trait MessageDigest extends js.Object {
     * @example
     * md.updateString('New York');
     */
-  def updateString(str: String): Unit = js.native
+  def updateString(str: String): Unit
 }
 
 object MessageDigest {
@@ -113,49 +112,5 @@ object MessageDigest {
     val __obj = js.Dynamic.literal(digest = js.Any.fromFunction0(digest), digestHex = js.Any.fromFunction1(digestHex), digestString = js.Any.fromFunction1(digestString), setAlgAndProvider = js.Any.fromFunction2(setAlgAndProvider), updateHex = js.Any.fromFunction1(updateHex), updateString = js.Any.fromFunction1(updateString))
     __obj.asInstanceOf[MessageDigest]
   }
-  @scala.inline
-  implicit class MessageDigestOps[Self <: MessageDigest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDigest(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDigestHex(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digestHex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDigestString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digestString")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetAlgAndProvider(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAlgAndProvider")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateHex(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateHex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateString")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

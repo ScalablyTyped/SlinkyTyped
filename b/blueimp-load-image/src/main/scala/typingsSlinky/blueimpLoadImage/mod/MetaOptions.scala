@@ -1,5 +1,7 @@
 package typingsSlinky.blueimpLoadImage.mod
 
+import typingsSlinky.blueimpLoadImage.blueimpLoadImageBooleans.`false`
+import typingsSlinky.blueimpLoadImage.blueimpLoadImageBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,16 @@ trait MetaOptions extends js.Object
 
 object MetaOptions {
   @scala.inline
-  implicit def apply(value: MetaFalseOptions): MetaOptions = value.asInstanceOf[MetaOptions]
+  def MetaTrueOptions(orientation: Orientation, meta: `true` = null): MetaOptions = {
+    val __obj = js.Dynamic.literal(orientation = orientation.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MetaOptions]
+  }
   @scala.inline
-  implicit def apply(value: MetaTrueOptions): MetaOptions = value.asInstanceOf[MetaOptions]
+  def MetaFalseOptions(meta: `false` = null): MetaOptions = {
+    val __obj = js.Dynamic.literal()
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MetaOptions]
+  }
 }
 

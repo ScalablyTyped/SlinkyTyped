@@ -2,7 +2,6 @@ package typingsSlinky.openlayers.mod.proj
 
 import typingsSlinky.openlayers.mod.Coordinate_
 import typingsSlinky.openlayers.mod.Extent_
-import typingsSlinky.openlayers.mod.ProjectionLike
 import typingsSlinky.openlayers.mod.olx.ProjectionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +38,7 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("openlayers", "proj.Projection")
 @js.native
-class Projection protected () extends ProjectionLike {
+class Projection protected () extends js.Object {
   /**
     * @classdesc
     * Projection definition class. One of these is created for each projection

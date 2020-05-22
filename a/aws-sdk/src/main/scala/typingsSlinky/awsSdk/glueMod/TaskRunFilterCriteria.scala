@@ -26,65 +26,18 @@ trait TaskRunFilterCriteria extends js.Object {
 
 object TaskRunFilterCriteria {
   @scala.inline
-  def apply(): TaskRunFilterCriteria = {
+  def apply(
+    StartedAfter: js.Date = null,
+    StartedBefore: js.Date = null,
+    Status: TaskStatusType = null,
+    TaskRunType: TaskType = null
+  ): TaskRunFilterCriteria = {
     val __obj = js.Dynamic.literal()
+    if (StartedAfter != null) __obj.updateDynamic("StartedAfter")(StartedAfter.asInstanceOf[js.Any])
+    if (StartedBefore != null) __obj.updateDynamic("StartedBefore")(StartedBefore.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (TaskRunType != null) __obj.updateDynamic("TaskRunType")(TaskRunType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskRunFilterCriteria]
   }
-  @scala.inline
-  implicit class TaskRunFilterCriteriaOps[Self <: TaskRunFilterCriteria] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStartedAfter(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartedAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartedBefore(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartedBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: TaskStatusType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskRunType(value: TaskType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskRunType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskRunType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskRunType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

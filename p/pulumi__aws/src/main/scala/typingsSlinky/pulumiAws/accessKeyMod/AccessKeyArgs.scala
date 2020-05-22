@@ -26,47 +26,11 @@ trait AccessKeyArgs extends js.Object {
 
 object AccessKeyArgs {
   @scala.inline
-  def apply(user: Input[String]): AccessKeyArgs = {
+  def apply(user: Input[String], pgpKey: Input[String] = null, status: Input[String] = null): AccessKeyArgs = {
     val __obj = js.Dynamic.literal(user = user.asInstanceOf[js.Any])
+    if (pgpKey != null) __obj.updateDynamic("pgpKey")(pgpKey.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessKeyArgs]
   }
-  @scala.inline
-  implicit class AccessKeyArgsOps[Self <: AccessKeyArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUser(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPgpKey(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pgpKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPgpKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pgpKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable
 
+import typingsSlinky.handsontable.mod.Handsontable.comments.CommentObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,14 +8,13 @@ import scala.scalajs.js.annotation._
 /**
   * A rendered cell object with computed properties.
   */
-@js.native
 trait CellProperties extends CellMeta {
-  var col: Double = js.native
-  var instance: typingsSlinky.handsontable.mod.Handsontable = js.native
-  var prop: String | Double = js.native
-  var row: Double = js.native
-  var visualCol: Double = js.native
-  var visualRow: Double = js.native
+  var col: Double
+  var instance: typingsSlinky.handsontable.mod.Handsontable
+  var prop: String | Double
+  var row: Double
+  var visualCol: Double
+  var visualRow: Double
 }
 
 object CellProperties {
@@ -25,54 +25,22 @@ object CellProperties {
     prop: String | Double,
     row: Double,
     visualCol: Double,
-    visualRow: Double
+    visualRow: Double,
+    comment: CommentObject = null,
+    data: String | Double | ColumnDataGetterSetterFunction = null,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    isSearchResult: js.UndefOr[Boolean] = js.undefined,
+    skipRowOnPaste: js.UndefOr[Boolean] = js.undefined,
+    valid: js.UndefOr[Boolean] = js.undefined
   ): CellProperties = {
     val __obj = js.Dynamic.literal(col = col.asInstanceOf[js.Any], instance = instance.asInstanceOf[js.Any], prop = prop.asInstanceOf[js.Any], row = row.asInstanceOf[js.Any], visualCol = visualCol.asInstanceOf[js.Any], visualRow = visualRow.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSearchResult)) __obj.updateDynamic("isSearchResult")(isSearchResult.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipRowOnPaste)) __obj.updateDynamic("skipRowOnPaste")(skipRowOnPaste.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(valid)) __obj.updateDynamic("valid")(valid.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellProperties]
   }
-  @scala.inline
-  implicit class CellPropertiesOps[Self <: CellProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCol(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstance(value: typingsSlinky.handsontable.mod.Handsontable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProp(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisualCol(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualCol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisualRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

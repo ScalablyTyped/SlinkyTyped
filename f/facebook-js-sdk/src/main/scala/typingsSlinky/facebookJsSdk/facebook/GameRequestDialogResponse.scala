@@ -4,37 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GameRequestDialogResponse extends DialogResponse {
-  var request: String = js.native
-  var to: js.Array[String] = js.native
+  var request: String
+  var to: js.Array[String]
 }
 
 object GameRequestDialogResponse {
   @scala.inline
-  def apply(request: String, to: js.Array[String]): GameRequestDialogResponse = {
+  def apply(
+    request: String,
+    to: js.Array[String],
+    error_code: js.UndefOr[Double] = js.undefined,
+    error_message: String = null
+  ): GameRequestDialogResponse = {
     val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_code)) __obj.updateDynamic("error_code")(error_code.get.asInstanceOf[js.Any])
+    if (error_message != null) __obj.updateDynamic("error_message")(error_message.asInstanceOf[js.Any])
     __obj.asInstanceOf[GameRequestDialogResponse]
   }
-  @scala.inline
-  implicit class GameRequestDialogResponseOps[Self <: GameRequestDialogResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTo(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

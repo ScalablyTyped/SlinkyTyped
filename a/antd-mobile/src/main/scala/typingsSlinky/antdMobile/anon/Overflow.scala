@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Overflow extends js.Object {
-  var overflow: AdjustX = js.native
+  var overflow: AdjustX
 }
 
 object Overflow {
@@ -15,19 +14,5 @@ object Overflow {
     val __obj = js.Dynamic.literal(overflow = overflow.asInstanceOf[js.Any])
     __obj.asInstanceOf[Overflow]
   }
-  @scala.inline
-  implicit class OverflowOps[Self <: Overflow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOverflow(value: AdjustX): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

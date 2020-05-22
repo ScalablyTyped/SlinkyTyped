@@ -5,6 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object interfaceTypeComposerMod {
+  type ComposeInterfaceType = (typingsSlinky.graphqlCompose.interfaceTypeComposerMod.InterfaceTypeComposer[js.Any, js.Any]) | typingsSlinky.graphql.mod.GraphQLInterfaceType | typingsSlinky.graphqlCompose.typeMapperMod.TypeDefinitionString | typingsSlinky.graphqlCompose.typeMapperMod.TypeAsString
+  type InterfaceTypeComposeDefinition[TSource, TContext] = typingsSlinky.graphqlCompose.typeMapperMod.TypeAsString | (typingsSlinky.graphqlCompose.interfaceTypeComposerMod.ComposeInterfaceTypeConfig[TSource, TContext])
   type InterfaceTypeResolverCheckFn[TSource, TContext] = js.Function3[
     /* value */ TSource, 
     /* context */ TContext, 

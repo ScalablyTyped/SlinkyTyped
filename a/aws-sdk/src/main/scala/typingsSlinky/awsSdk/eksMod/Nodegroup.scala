@@ -86,245 +86,48 @@ trait Nodegroup extends js.Object {
 
 object Nodegroup {
   @scala.inline
-  def apply(): Nodegroup = {
+  def apply(
+    amiType: AMITypes = null,
+    clusterName: String = null,
+    createdAt: js.Date = null,
+    diskSize: js.UndefOr[BoxedInteger] = js.undefined,
+    health: NodegroupHealth = null,
+    instanceTypes: StringList = null,
+    labels: labelsMap = null,
+    modifiedAt: js.Date = null,
+    nodeRole: String = null,
+    nodegroupArn: String = null,
+    nodegroupName: String = null,
+    releaseVersion: String = null,
+    remoteAccess: RemoteAccessConfig = null,
+    resources: NodegroupResources = null,
+    scalingConfig: NodegroupScalingConfig = null,
+    status: NodegroupStatus = null,
+    subnets: StringList = null,
+    tags: TagMap = null,
+    version: String = null
+  ): Nodegroup = {
     val __obj = js.Dynamic.literal()
+    if (amiType != null) __obj.updateDynamic("amiType")(amiType.asInstanceOf[js.Any])
+    if (clusterName != null) __obj.updateDynamic("clusterName")(clusterName.asInstanceOf[js.Any])
+    if (createdAt != null) __obj.updateDynamic("createdAt")(createdAt.asInstanceOf[js.Any])
+    if (!js.isUndefined(diskSize)) __obj.updateDynamic("diskSize")(diskSize.get.asInstanceOf[js.Any])
+    if (health != null) __obj.updateDynamic("health")(health.asInstanceOf[js.Any])
+    if (instanceTypes != null) __obj.updateDynamic("instanceTypes")(instanceTypes.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (modifiedAt != null) __obj.updateDynamic("modifiedAt")(modifiedAt.asInstanceOf[js.Any])
+    if (nodeRole != null) __obj.updateDynamic("nodeRole")(nodeRole.asInstanceOf[js.Any])
+    if (nodegroupArn != null) __obj.updateDynamic("nodegroupArn")(nodegroupArn.asInstanceOf[js.Any])
+    if (nodegroupName != null) __obj.updateDynamic("nodegroupName")(nodegroupName.asInstanceOf[js.Any])
+    if (releaseVersion != null) __obj.updateDynamic("releaseVersion")(releaseVersion.asInstanceOf[js.Any])
+    if (remoteAccess != null) __obj.updateDynamic("remoteAccess")(remoteAccess.asInstanceOf[js.Any])
+    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
+    if (scalingConfig != null) __obj.updateDynamic("scalingConfig")(scalingConfig.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (subnets != null) __obj.updateDynamic("subnets")(subnets.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Nodegroup]
   }
-  @scala.inline
-  implicit class NodegroupOps[Self <: Nodegroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmiType(value: AMITypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amiType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmiType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amiType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskSize(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealth(value: NodegroupHealth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("health")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("health")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceTypes(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: labelsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifiedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifiedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodegroupArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodegroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroupArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodegroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodegroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteAccess(value: RemoteAccessConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: NodegroupResources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScalingConfig(value: NodegroupScalingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScalingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: NodegroupStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnets(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

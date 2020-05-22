@@ -4,33 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Trendline extends js.Object {
-  val Application: typingsSlinky.activexExcel.Excel.Application = js.native
-  var Backward: Double = js.native
-  var Backward2: Double = js.native
-  val Border: typingsSlinky.activexExcel.Excel.Border = js.native
-  val Creator: XlCreator = js.native
-  val DataLabel: typingsSlinky.activexExcel.Excel.DataLabel = js.native
-  var DisplayEquation: Boolean = js.native
-  var DisplayRSquared: Boolean = js.native
+  val Application: typingsSlinky.activexExcel.Excel.Application
+  var Backward: Double
+  var Backward2: Double
+  val Border: typingsSlinky.activexExcel.Excel.Border
+  val Creator: XlCreator
+  val DataLabel: typingsSlinky.activexExcel.Excel.DataLabel
+  var DisplayEquation: Boolean
+  var DisplayRSquared: Boolean
   @JSName("Excel.Trendline_typekey")
-  var ExcelDotTrendline_typekey: Trendline = js.native
-  val Format: ChartFormat = js.native
-  var Forward: Double = js.native
-  var Forward2: Double = js.native
-  val Index: Double = js.native
-  var Intercept: Double = js.native
-  var InterceptIsAuto: Boolean = js.native
-  var Name: String = js.native
-  var NameIsAuto: Boolean = js.native
-  var Order: Double = js.native
-  val Parent: js.Any = js.native
-  var Period: Double = js.native
-  var Type: XlTrendlineType = js.native
-  def ClearFormats(): js.Any = js.native
-  def Delete(): js.Any = js.native
-  def Select(): js.Any = js.native
+  var ExcelDotTrendline_typekey: Trendline
+  val Format: ChartFormat
+  var Forward: Double
+  var Forward2: Double
+  val Index: Double
+  var Intercept: Double
+  var InterceptIsAuto: Boolean
+  var Name: String
+  var NameIsAuto: Boolean
+  var Order: Double
+  val Parent: js.Any
+  var Period: Double
+  var Type: XlTrendlineType
+  def ClearFormats(): js.Any
+  def Delete(): js.Any
+  def Select(): js.Any
 }
 
 object Trendline {
@@ -65,157 +64,5 @@ object Trendline {
     __obj.updateDynamic("Excel.Trendline_typekey")(ExcelDotTrendline_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Trendline]
   }
-  @scala.inline
-  implicit class TrendlineOps[Self <: Trendline] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackward(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Backward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackward2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Backward2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorder(value: Border): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClearFormats(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearFormats")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreator(value: XlCreator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataLabel(value: DataLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDisplayEquation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayEquation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayRSquared(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayRSquared")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcelDotTrendline_typekey(value: Trendline): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.Trendline_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ChartFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForward(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Forward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForward2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Forward2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntercept(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Intercept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInterceptIsAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InterceptIsAuto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameIsAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameIsAuto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: XlTrendlineType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

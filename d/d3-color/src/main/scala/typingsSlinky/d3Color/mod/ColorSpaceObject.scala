@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait ColorSpaceObject extends js.Object
 
-object ColorSpaceObject {
-  @scala.inline
-  implicit def apply(value: CubehelixColor): ColorSpaceObject = value.asInstanceOf[ColorSpaceObject]
-  @scala.inline
-  implicit def apply(value: HCLColor): ColorSpaceObject = value.asInstanceOf[ColorSpaceObject]
-  @scala.inline
-  implicit def apply(value: HSLColor): ColorSpaceObject = value.asInstanceOf[ColorSpaceObject]
-  @scala.inline
-  implicit def apply(value: LabColor): ColorSpaceObject = value.asInstanceOf[ColorSpaceObject]
-  @scala.inline
-  implicit def apply(value: RGBColor): ColorSpaceObject = value.asInstanceOf[ColorSpaceObject]
-}
-

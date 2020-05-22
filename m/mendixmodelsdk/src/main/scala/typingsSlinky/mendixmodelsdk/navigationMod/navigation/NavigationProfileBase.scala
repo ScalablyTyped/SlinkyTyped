@@ -39,6 +39,14 @@ abstract class NavigationProfileBase protected ()
     */
   @JSName("name")
   val name_FNavigationProfileBase: String = js.native
+  /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
   def containerAsNavigationDocument: NavigationDocument = js.native
   /**
     * In version 7.2.0: introduced

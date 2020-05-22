@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Defines a TimedTextStyle for a substring in a TimedTextLine . of the cue, which defines the style of the rendered text. */
-@js.native
 trait TimedTextSubformat extends js.Object {
   /** Gets or sets the length of the substring to which the SubformatStyle applies. */
-  var length: Double = js.native
+  var length: Double
   /** Gets or sets the staring index of the substring to which the SubformatStyle applies. */
-  var startIndex: Double = js.native
+  var startIndex: Double
   /** Gets or sets the TimedTextStyle object that conveys the formatting of a substring in a TimedTextLine . */
-  var subformatStyle: TimedTextStyle = js.native
+  var subformatStyle: TimedTextStyle
 }
 
 object TimedTextSubformat {
@@ -21,31 +20,5 @@ object TimedTextSubformat {
     val __obj = js.Dynamic.literal(length = length.asInstanceOf[js.Any], startIndex = startIndex.asInstanceOf[js.Any], subformatStyle = subformatStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimedTextSubformat]
   }
-  @scala.inline
-  implicit class TimedTextSubformatOps[Self <: TimedTextSubformat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubformatStyle(value: TimedTextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subformatStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

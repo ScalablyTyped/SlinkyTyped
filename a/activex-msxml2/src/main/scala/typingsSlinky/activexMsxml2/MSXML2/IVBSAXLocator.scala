@@ -5,18 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** IVBSAXLocator interface */
-@js.native
 trait IVBSAXLocator extends js.Object {
   @JSName("MSXML2.IVBSAXLocator_typekey")
-  var MSXML2DotIVBSAXLocator_typekey: IVBSAXLocator = js.native
+  var MSXML2DotIVBSAXLocator_typekey: IVBSAXLocator
   /** Get the column number where the current document event ends. */
-  val columnNumber: Double = js.native
+  val columnNumber: Double
   /** Get the line number where the current document event ends. */
-  val lineNumber: Double = js.native
+  val lineNumber: Double
   /** Get the public identifier for the current document event. */
-  val publicId: String = js.native
+  val publicId: String
   /** Get the system identifier for the current document event. */
-  val systemId: String = js.native
+  val systemId: String
 }
 
 object IVBSAXLocator {
@@ -32,43 +31,5 @@ object IVBSAXLocator {
     __obj.updateDynamic("MSXML2.IVBSAXLocator_typekey")(MSXML2DotIVBSAXLocator_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IVBSAXLocator]
   }
-  @scala.inline
-  implicit class IVBSAXLocatorOps[Self <: IVBSAXLocator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSXML2DotIVBSAXLocator_typekey(value: IVBSAXLocator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSXML2.IVBSAXLocator_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublicId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSystemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,9 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.victory.anon.XBoolean
 import typingsSlinky.victory.anon.Y
+import typingsSlinky.victory.anon.`1`
 import typingsSlinky.victory.victoryStrings.bottom
 import typingsSlinky.victory.victoryStrings.left
 import typingsSlinky.victory.victoryStrings.right
@@ -10,389 +12,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FlyoutProps extends VictoryCommonProps {
   /**
     * a flag signifying whether the component is active
     */
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /**
     * the center coordinates of the flyout
     */
-  var center: js.UndefOr[Y] = js.native
+  var center: js.UndefOr[Y] = js.undefined
   /**
     * the class name that will be applied to the rendered element
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * the corner radius of the flyout
     */
-  var cornerRadius: js.UndefOr[Double] = js.native
+  var cornerRadius: js.UndefOr[Double] = js.undefined
   /**
     * the entire dataset if applicable
     */
-  var data: js.UndefOr[js.Array[_]] = js.native
+  var data: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * the data point corresponding to this flyout if applicable
     */
-  var datum: js.UndefOr[js.Object] = js.native
+  var datum: js.UndefOr[js.Object] = js.undefined
   /**
     * offset in the x dimension.
     */
-  var dx: js.UndefOr[Double] = js.native
+  var dx: js.UndefOr[Double] = js.undefined
   /**
     * offset in the y dimension.
     */
-  var dy: js.UndefOr[Double] = js.native
+  var dy: js.UndefOr[Double] = js.undefined
   /**
     * events to attach to the rendered element
     */
-  var events: js.UndefOr[js.Object] = js.native
+  var events: js.UndefOr[js.Object] = js.undefined
   /**
     * an id to apply to the rendered component
     */
-  var id: js.UndefOr[String | Double] = js.native
+  var id: js.UndefOr[String | Double] = js.undefined
   /**
     * the index of this flyout within the dataset
     */
-  var index: js.UndefOr[Double] = js.native
-  var orientation: js.UndefOr[top | bottom | left | right] = js.native
+  var index: js.UndefOr[Double] = js.undefined
+  var orientation: js.UndefOr[top | bottom | left | right] = js.undefined
   /**
     * the svg coordinates of the center point of a polar chart
     */
-  var origin: js.UndefOr[js.Object] = js.native
+  var origin: js.UndefOr[js.Object] = js.undefined
   /**
     * the rendered path element
     * @default pathComponent={<Path/>}
     */
-  var pathComponent: js.UndefOr[ReactElement] = js.native
+  var pathComponent: js.UndefOr[ReactElement] = js.undefined
   /**
     * the length of the triangular pointer
     */
-  var pointerLength: js.UndefOr[Double] = js.native
+  var pointerLength: js.UndefOr[Double] = js.undefined
   /**
     * the width of the base of the triangular pointer
     */
-  var pointerWidth: js.UndefOr[Double] = js.native
+  var pointerWidth: js.UndefOr[Double] = js.undefined
   /**
     * a flag specifying whether the component is part of a polar chart
     */
-  var polar: js.UndefOr[Boolean] = js.native
+  var polar: js.UndefOr[Boolean] = js.undefined
   /**
     * the aria role to assign to the element
     */
-  var role: js.UndefOr[String] = js.native
+  var role: js.UndefOr[String] = js.undefined
   /**
     * the shape rendering attribute to apply to the rendered elements
     */
-  var shapeRendering: js.UndefOr[String] = js.native
+  var shapeRendering: js.UndefOr[String] = js.undefined
   /**
     * the styles to apply to the rendered element
     */
-  var style: js.UndefOr[VictoryStyleObject] = js.native
+  var style: js.UndefOr[VictoryStyleObject] = js.undefined
   /**
     * a transform that will be supplied to elements this component renders
     */
-  var transform: js.UndefOr[String] = js.native
+  var transform: js.UndefOr[String] = js.undefined
   /**
     * the x coordinate of data point associated with this flyout
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * the y coordinate of data point associated with this flyout
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object FlyoutProps {
   @scala.inline
-  def apply(): FlyoutProps = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    animate: Boolean | AnimatePropTypeInterface = null,
+    center: Y = null,
+    className: String = null,
+    containerComponent: ReactElement = null,
+    cornerRadius: js.UndefOr[Double] = js.undefined,
+    data: js.Array[_] = null,
+    datum: js.Object = null,
+    dx: js.UndefOr[Double] = js.undefined,
+    dy: js.UndefOr[Double] = js.undefined,
+    events: js.Object = null,
+    groupComponent: ReactElement = null,
+    height: js.UndefOr[Double] = js.undefined,
+    horizontal: js.UndefOr[Boolean] = js.undefined,
+    id: String | Double = null,
+    index: js.UndefOr[Double] = js.undefined,
+    maxDomain: Double | Y = null,
+    minDomain: Double | Y = null,
+    name: String = null,
+    orientation: top | bottom | left | right = null,
+    origin: js.Object = null,
+    padding: PaddingProps = null,
+    pathComponent: ReactElement = null,
+    pointerLength: js.UndefOr[Double] = js.undefined,
+    pointerWidth: js.UndefOr[Double] = js.undefined,
+    polar: js.UndefOr[Boolean] = js.undefined,
+    role: String = null,
+    scale: ScalePropType | D3Scale | `1` = null,
+    shapeRendering: String = null,
+    singleQuadrantDomainPadding: Boolean | XBoolean = null,
+    standalone: js.UndefOr[Boolean] = js.undefined,
+    style: VictoryStyleObject = null,
+    theme: VictoryThemeDefinition = null,
+    transform: String = null,
+    width: js.UndefOr[Double] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): FlyoutProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(cornerRadius)) __obj.updateDynamic("cornerRadius")(cornerRadius.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (datum != null) __obj.updateDynamic("datum")(datum.asInstanceOf[js.Any])
+    if (!js.isUndefined(dx)) __obj.updateDynamic("dx")(dx.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dy)) __obj.updateDynamic("dy")(dy.get.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
+    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (pathComponent != null) __obj.updateDynamic("pathComponent")(pathComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointerLength)) __obj.updateDynamic("pointerLength")(pointerLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointerWidth)) __obj.updateDynamic("pointerWidth")(pointerWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(polar)) __obj.updateDynamic("polar")(polar.get.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (shapeRendering != null) __obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
+    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlyoutProps]
   }
-  @scala.inline
-  implicit class FlyoutPropsOps[Self <: FlyoutProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenter(value: Y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCornerRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCornerRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatum(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: top | bottom | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathComponent(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointerLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointerLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointerWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointerWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapeRendering(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeRendering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapeRendering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeRendering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: VictoryStyleObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

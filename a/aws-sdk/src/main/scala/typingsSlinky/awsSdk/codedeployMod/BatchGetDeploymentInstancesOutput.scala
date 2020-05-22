@@ -18,41 +18,11 @@ trait BatchGetDeploymentInstancesOutput extends js.Object {
 
 object BatchGetDeploymentInstancesOutput {
   @scala.inline
-  def apply(): BatchGetDeploymentInstancesOutput = {
+  def apply(errorMessage: ErrorMessage = null, instancesSummary: InstanceSummaryList = null): BatchGetDeploymentInstancesOutput = {
     val __obj = js.Dynamic.literal()
+    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
+    if (instancesSummary != null) __obj.updateDynamic("instancesSummary")(instancesSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetDeploymentInstancesOutput]
   }
-  @scala.inline
-  implicit class BatchGetDeploymentInstancesOutputOps[Self <: BatchGetDeploymentInstancesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorMessage(value: ErrorMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstancesSummary(value: InstanceSummaryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancesSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancesSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancesSummary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

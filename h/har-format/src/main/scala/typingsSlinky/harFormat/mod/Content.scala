@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Content extends js.Object {
   /**  A comment provided by the user or the application */
-  var comment: js.UndefOr[String] = js.native
+  var comment: js.UndefOr[String] = js.undefined
   /**
     * Number of bytes saved. Leave out this field if the information is not
     * available.
     */
-  var compression: js.UndefOr[Double] = js.native
+  var compression: js.UndefOr[Double] = js.undefined
   /**
     * Encoding used for response text field e.g `base64`.
     *
@@ -20,21 +19,21 @@ trait Content extends js.Object {
     * (decompressed & unchunked), than trans-coded from its original character
     * set into UTF-8.
     */
-  var encoding: js.UndefOr[String] = js.native
+  var encoding: js.UndefOr[String] = js.undefined
   /**
     * MIME type of the response text (value of the Content-Type response
     * header).
     *
     * The charset attribute of the MIME type is included (if available).
     */
-  var mimeType: String = js.native
+  var mimeType: String
   /**
     * Length of the returned content in bytes.
     *
     * Should be equal to `response.bodySize` if there is no compression and
     * bigger when the content has been compressed.
     */
-  var size: Double = js.native
+  var size: Double
   /**
     * Response body sent from the server or loaded from the browser cache.
     *
@@ -45,82 +44,25 @@ trait Content extends js.Object {
     *
     * Leave out this field if the information is not available.
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
 }
 
 object Content {
   @scala.inline
-  def apply(mimeType: String, size: Double): Content = {
+  def apply(
+    mimeType: String,
+    size: Double,
+    comment: String = null,
+    compression: js.UndefOr[Double] = js.undefined,
+    encoding: String = null,
+    text: String = null
+  ): Content = {
     val __obj = js.Dynamic.literal(mimeType = mimeType.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (!js.isUndefined(compression)) __obj.updateDynamic("compression")(compression.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Content]
   }
-  @scala.inline
-  implicit class ContentOps[Self <: Content] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompression(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,18 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an in-progress photo import operation. */
-@js.native
 trait PhotoImportOperation extends js.Object {
   /** Causes in-progress delete from source operations to continue. */
-  var continueDeletingImportedItemsFromSourceAsync: IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, Double] = js.native
+  var continueDeletingImportedItemsFromSourceAsync: IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, Double]
   /** Causes in-progress find operations to continue. */
-  var continueFindingItemsAsync: IAsyncOperationWithProgress[PhotoImportFindItemsResult, Double] = js.native
+  var continueFindingItemsAsync: IAsyncOperationWithProgress[PhotoImportFindItemsResult, Double]
   /** Causes in-progress import items operations to continue. */
-  var continueImportingItemsAsync: IAsyncOperationWithProgress[PhotoImportImportItemsResult, PhotoImportProgress] = js.native
+  var continueImportingItemsAsync: IAsyncOperationWithProgress[PhotoImportImportItemsResult, PhotoImportProgress]
   /** Gets the photo import session associated with the operation. */
-  var session: PhotoImportSession = js.native
+  var session: PhotoImportSession
   /** Gets the current stage of the in-progress operation. */
-  var stage: PhotoImportStage = js.native
+  var stage: PhotoImportStage
 }
 
 object PhotoImportOperation {
@@ -32,43 +31,5 @@ object PhotoImportOperation {
     val __obj = js.Dynamic.literal(continueDeletingImportedItemsFromSourceAsync = continueDeletingImportedItemsFromSourceAsync.asInstanceOf[js.Any], continueFindingItemsAsync = continueFindingItemsAsync.asInstanceOf[js.Any], continueImportingItemsAsync = continueImportingItemsAsync.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any], stage = stage.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhotoImportOperation]
   }
-  @scala.inline
-  implicit class PhotoImportOperationOps[Self <: PhotoImportOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContinueDeletingImportedItemsFromSourceAsync(value: IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueDeletingImportedItemsFromSourceAsync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContinueFindingItemsAsync(value: IAsyncOperationWithProgress[PhotoImportFindItemsResult, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueFindingItemsAsync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContinueImportingItemsAsync(value: IAsyncOperationWithProgress[PhotoImportImportItemsResult, PhotoImportProgress]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueImportingItemsAsync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSession(value: PhotoImportSession): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStage(value: PhotoImportStage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

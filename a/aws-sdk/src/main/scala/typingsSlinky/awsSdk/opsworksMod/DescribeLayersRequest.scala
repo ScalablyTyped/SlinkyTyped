@@ -18,41 +18,11 @@ trait DescribeLayersRequest extends js.Object {
 
 object DescribeLayersRequest {
   @scala.inline
-  def apply(): DescribeLayersRequest = {
+  def apply(LayerIds: Strings = null, StackId: String = null): DescribeLayersRequest = {
     val __obj = js.Dynamic.literal()
+    if (LayerIds != null) __obj.updateDynamic("LayerIds")(LayerIds.asInstanceOf[js.Any])
+    if (StackId != null) __obj.updateDynamic("StackId")(StackId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLayersRequest]
   }
-  @scala.inline
-  implicit class DescribeLayersRequestOps[Self <: DescribeLayersRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayerIds(value: Strings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayerIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

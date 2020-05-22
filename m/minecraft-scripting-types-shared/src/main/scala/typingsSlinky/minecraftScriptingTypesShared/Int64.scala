@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Int64 extends js.Object {
-  var `64bit_high`: Double = js.native
-  var `64bit_low`: Double = js.native
+  var `64bit_high`: Double
+  var `64bit_low`: Double
 }
 
 object Int64 {
@@ -18,25 +17,5 @@ object Int64 {
     __obj.updateDynamic("64bit_low")(`64bit_low`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Int64]
   }
-  @scala.inline
-  implicit class Int64Ops[Self <: Int64] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with64bit_high(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("64bit_high")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with64bit_low(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("64bit_low")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

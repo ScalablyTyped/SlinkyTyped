@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TField extends js.Object {
-  var fid: Double = js.native
-  var fname: String = js.native
-  var ftype: Type = js.native
+  var fid: Double
+  var fname: String
+  var ftype: Type
 }
 
 object TField {
@@ -18,31 +17,5 @@ object TField {
     val __obj = js.Dynamic.literal(fid = fid.asInstanceOf[js.Any], fname = fname.asInstanceOf[js.Any], ftype = ftype.asInstanceOf[js.Any])
     __obj.asInstanceOf[TField]
   }
-  @scala.inline
-  implicit class TFieldOps[Self <: TField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFtype(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ftype")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

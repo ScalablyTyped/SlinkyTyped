@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ionicCliFrameworkPrompts.ionicCliFrameworkPromptsStrings.password
   - typingsSlinky.ionicCliFrameworkPrompts.ionicCliFrameworkPromptsStrings.list
 */
-trait PromptTypeOther extends PromptType
+trait PromptTypeOther extends js.Object
 
 object PromptTypeOther {
   @scala.inline

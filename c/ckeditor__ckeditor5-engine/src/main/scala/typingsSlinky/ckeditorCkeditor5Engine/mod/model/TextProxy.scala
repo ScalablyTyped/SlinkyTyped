@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TextProxy protected ()
   extends Item
-     with NodeSet {
+     with _NodeSet {
   protected def this(textNode: Text, offsetInText: Double, length: Double) = this()
   val data: String = js.native
   val document: Document | Null = js.native

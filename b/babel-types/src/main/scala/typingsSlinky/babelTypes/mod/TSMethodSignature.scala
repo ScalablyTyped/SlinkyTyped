@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSMethodSignature
   extends Node
      with TSTypeElement {
-  var computed: Boolean | Null = js.native
-  var key: Expression = js.native
-  var optional: Boolean | Null = js.native
-  var parameters: (js.Array[Identifier_ | RestElement_]) | Null = js.native
-  var typeAnnotation: TSTypeAnnotation | Null = js.native
-  var typeParameters: TypeParameterDeclaration_ | Null = js.native
+  var computed: Boolean | Null
+  var key: Expression
+  var optional: Boolean | Null
+  var parameters: (js.Array[Identifier_ | RestElement_]) | Null
+  var typeAnnotation: TSTypeAnnotation | Null
+  var typeParameters: TypeParameterDeclaration_ | Null
   @JSName("type")
-  var type_TSMethodSignature: typingsSlinky.babelTypes.babelTypesStrings.TSMethodSignature = js.native
+  var type_TSMethodSignature: typingsSlinky.babelTypes.babelTypesStrings.TSMethodSignature
 }
 
 @JSImport("babel-types", "TSMethodSignature")

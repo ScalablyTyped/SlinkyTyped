@@ -18,41 +18,11 @@ trait AutoScalingInstancesType extends js.Object {
 
 object AutoScalingInstancesType {
   @scala.inline
-  def apply(): AutoScalingInstancesType = {
+  def apply(AutoScalingInstances: AutoScalingInstances = null, NextToken: XmlString = null): AutoScalingInstancesType = {
     val __obj = js.Dynamic.literal()
+    if (AutoScalingInstances != null) __obj.updateDynamic("AutoScalingInstances")(AutoScalingInstances.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoScalingInstancesType]
   }
-  @scala.inline
-  implicit class AutoScalingInstancesTypeOps[Self <: AutoScalingInstancesType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingInstances(value: AutoScalingInstances): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

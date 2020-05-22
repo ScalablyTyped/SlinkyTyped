@@ -4,193 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectsDatabasesIndexesCreateNamedParameters extends js.Object {
   @JSName("$Xgafv")
-  var $Xgafv: js.UndefOr[ProjectsDatabasesIndexesApiClientXgafv] = js.native
-  var access_token: js.UndefOr[String] = js.native
-  var alt: js.UndefOr[ProjectsDatabasesIndexesApiClientAlt] = js.native
-  var bearer_token: js.UndefOr[String] = js.native
-  var callback: js.UndefOr[String] = js.native
-  var fields: js.UndefOr[String] = js.native
-  var key: js.UndefOr[String] = js.native
-  var oauth_token: js.UndefOr[String] = js.native
-  var pp: js.UndefOr[Boolean] = js.native
-  var prettyPrint: js.UndefOr[Boolean] = js.native
-  var quotaUser: js.UndefOr[String] = js.native
-  var uploadType: js.UndefOr[String] = js.native
-  var upload_protocol: js.UndefOr[String] = js.native
+  var $Xgafv: js.UndefOr[ProjectsDatabasesIndexesApiClientXgafv] = js.undefined
+  var access_token: js.UndefOr[String] = js.undefined
+  var alt: js.UndefOr[ProjectsDatabasesIndexesApiClientAlt] = js.undefined
+  var bearer_token: js.UndefOr[String] = js.undefined
+  var callback: js.UndefOr[String] = js.undefined
+  var fields: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String] = js.undefined
+  var oauth_token: js.UndefOr[String] = js.undefined
+  var pp: js.UndefOr[Boolean] = js.undefined
+  var prettyPrint: js.UndefOr[Boolean] = js.undefined
+  var quotaUser: js.UndefOr[String] = js.undefined
+  var uploadType: js.UndefOr[String] = js.undefined
+  var upload_protocol: js.UndefOr[String] = js.undefined
 }
 
 object ProjectsDatabasesIndexesCreateNamedParameters {
   @scala.inline
-  def apply(): ProjectsDatabasesIndexesCreateNamedParameters = {
+  def apply(
+    $Xgafv: ProjectsDatabasesIndexesApiClientXgafv = null,
+    access_token: String = null,
+    alt: ProjectsDatabasesIndexesApiClientAlt = null,
+    bearer_token: String = null,
+    callback: String = null,
+    fields: String = null,
+    key: String = null,
+    oauth_token: String = null,
+    pp: js.UndefOr[Boolean] = js.undefined,
+    prettyPrint: js.UndefOr[Boolean] = js.undefined,
+    quotaUser: String = null,
+    uploadType: String = null,
+    upload_protocol: String = null
+  ): ProjectsDatabasesIndexesCreateNamedParameters = {
     val __obj = js.Dynamic.literal()
+    if ($Xgafv != null) __obj.updateDynamic("$Xgafv")($Xgafv.asInstanceOf[js.Any])
+    if (access_token != null) __obj.updateDynamic("access_token")(access_token.asInstanceOf[js.Any])
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (bearer_token != null) __obj.updateDynamic("bearer_token")(bearer_token.asInstanceOf[js.Any])
+    if (callback != null) __obj.updateDynamic("callback")(callback.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
+    if (!js.isUndefined(pp)) __obj.updateDynamic("pp")(pp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.get.asInstanceOf[js.Any])
+    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
+    if (uploadType != null) __obj.updateDynamic("uploadType")(uploadType.asInstanceOf[js.Any])
+    if (upload_protocol != null) __obj.updateDynamic("upload_protocol")(upload_protocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsDatabasesIndexesCreateNamedParameters]
   }
-  @scala.inline
-  implicit class ProjectsDatabasesIndexesCreateNamedParametersOps[Self <: ProjectsDatabasesIndexesCreateNamedParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$Xgafv(value: ProjectsDatabasesIndexesApiClientXgafv): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$Xgafv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$Xgafv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$Xgafv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccess_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccess_token: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlt(value: ProjectsDatabasesIndexesApiClientAlt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBearer_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bearer_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBearer_token: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bearer_token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallback(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauth_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauth_token: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth_token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrettyPrint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrettyPrint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload_protocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload_protocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_protocol")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

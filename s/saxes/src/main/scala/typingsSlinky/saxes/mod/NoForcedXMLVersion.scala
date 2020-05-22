@@ -1,41 +1,24 @@
 package typingsSlinky.saxes.mod
 
 import typingsSlinky.saxes.saxesBooleans.`false`
+import typingsSlinky.saxes.saxesStrings.`1Dot0`
+import typingsSlinky.saxes.saxesStrings.`1Dot1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NoForcedXMLVersion extends XMLVersionOptions {
   @JSName("forceXMLVersion")
-  var forceXMLVersion_NoForcedXMLVersion: js.UndefOr[`false`] = js.native
+  var forceXMLVersion_NoForcedXMLVersion: js.UndefOr[`false`] = js.undefined
 }
 
 object NoForcedXMLVersion {
   @scala.inline
-  def apply(): NoForcedXMLVersion = {
+  def apply(defaultXMLVersion: `1Dot0` | `1Dot1` = null, forceXMLVersion: `false` = null): NoForcedXMLVersion = {
     val __obj = js.Dynamic.literal()
+    if (defaultXMLVersion != null) __obj.updateDynamic("defaultXMLVersion")(defaultXMLVersion.asInstanceOf[js.Any])
+    if (forceXMLVersion != null) __obj.updateDynamic("forceXMLVersion")(forceXMLVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoForcedXMLVersion]
   }
-  @scala.inline
-  implicit class NoForcedXMLVersionOps[Self <: NoForcedXMLVersion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForceXMLVersion(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceXMLVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceXMLVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceXMLVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

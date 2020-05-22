@@ -26,41 +26,11 @@ trait SchemaGetInfoForObservedBeaconsRequest extends js.Object {
 
 object SchemaGetInfoForObservedBeaconsRequest {
   @scala.inline
-  def apply(): SchemaGetInfoForObservedBeaconsRequest = {
+  def apply(namespacedTypes: js.Array[String] = null, observations: js.Array[SchemaObservation] = null): SchemaGetInfoForObservedBeaconsRequest = {
     val __obj = js.Dynamic.literal()
+    if (namespacedTypes != null) __obj.updateDynamic("namespacedTypes")(namespacedTypes.asInstanceOf[js.Any])
+    if (observations != null) __obj.updateDynamic("observations")(observations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetInfoForObservedBeaconsRequest]
   }
-  @scala.inline
-  implicit class SchemaGetInfoForObservedBeaconsRequestOps[Self <: SchemaGetInfoForObservedBeaconsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNamespacedTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespacedTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespacedTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespacedTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObservations(value: js.Array[SchemaObservation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObservations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

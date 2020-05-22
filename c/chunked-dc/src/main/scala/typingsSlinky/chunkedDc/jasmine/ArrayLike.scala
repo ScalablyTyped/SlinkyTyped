@@ -6,30 +6,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // taken from TypeScript lib.core.es6.d.ts, applicable to CustomMatchers.contains()
-@js.native
 trait ArrayLike[T] extends /* n */ NumberDictionary[T] {
-  var length: Double = js.native
+  var length: Double
 }
 
 object ArrayLike {
   @scala.inline
-  def apply[T](length: Double): ArrayLike[T] = {
+  def apply[T](length: Double, NumberDictionary: /* n */ NumberDictionary[T] = null): ArrayLike[T] = {
     val __obj = js.Dynamic.literal(length = length.asInstanceOf[js.Any])
+    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
     __obj.asInstanceOf[ArrayLike[T]]
   }
-  @scala.inline
-  implicit class ArrayLikeOps[Self[t] <: ArrayLike[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withLength(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

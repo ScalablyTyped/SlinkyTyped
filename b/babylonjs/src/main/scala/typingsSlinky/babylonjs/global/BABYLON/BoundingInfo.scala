@@ -24,6 +24,21 @@ class BoundingInfo protected ()
     maximum: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3],
     worldMatrix: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Matrix]
   ) = this()
+  /**
+    * Checks if a cullable object (mesh...) is in the camera frustum
+    * Unlike isInFrustum this cheks the full bounding box
+    * @param frustumPlanes Camera near/planes
+    * @returns true if the object is in frustum otherwise false
+    */
+  /* CompleteClass */
+  override def isCompletelyInFrustum(frustumPlanes: js.Array[typingsSlinky.babylonjs.BABYLON.Plane]): Boolean = js.native
+  /**
+    * Checks if the object or part of the object is in the frustum
+    * @param frustumPlanes Camera near/planes
+    * @returns true if the object is in frustum otherwise false
+    */
+  /* CompleteClass */
+  override def isInFrustum(frustumPlanes: js.Array[typingsSlinky.babylonjs.BABYLON.Plane]): Boolean = js.native
 }
 
 /* static members */

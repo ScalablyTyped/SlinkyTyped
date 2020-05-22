@@ -8,30 +8,29 @@ import scala.scalajs.js.annotation._
 /**
   * Interface for a CRM Business Process Flow instance.
   */
-@js.native
 trait Process extends js.Object {
   /**
     * Returns the unique identifier of the process.
     * @returns The identifier for this process, in GUID format.
     * @example Example: "{825CB223-A651-DF11-AA8B-00155DBA3804}".
     */
-  def getId(): String = js.native
+  def getId(): String
   /**
     * Returns the name of the process.
     * @returns The name.
     */
-  def getName(): String = js.native
+  def getName(): String
   /**
     * Returns an collection of stages in the process.
     * @returns The stages.
     * @see {@link https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/collections External Link: Collections (Client API reference)}
     */
-  def getStages(): ItemCollection[Stage] = js.native
+  def getStages(): ItemCollection[Stage]
   /**
     * Returns a boolean value to indicate if the process is rendered.
     * @returns true if the process is rendered, false if not.
     */
-  def isRendered(): Boolean = js.native
+  def isRendered(): Boolean
 }
 
 object Process {
@@ -45,37 +44,5 @@ object Process {
     val __obj = js.Dynamic.literal(getId = js.Any.fromFunction0(getId), getName = js.Any.fromFunction0(getName), getStages = js.Any.fromFunction0(getStages), isRendered = js.Any.fromFunction0(isRendered))
     __obj.asInstanceOf[Process]
   }
-  @scala.inline
-  implicit class ProcessOps[Self <: Process] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetId(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStages(value: () => ItemCollection[Stage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStages")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsRendered(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRendered")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

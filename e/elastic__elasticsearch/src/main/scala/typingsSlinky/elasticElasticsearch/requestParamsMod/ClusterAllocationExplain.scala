@@ -4,62 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClusterAllocationExplain[T] extends Generic {
-  var body: js.UndefOr[T] = js.native
-  var include_disk_info: js.UndefOr[Boolean] = js.native
-  var include_yes_decisions: js.UndefOr[Boolean] = js.native
+  var body: js.UndefOr[T] = js.undefined
+  var include_disk_info: js.UndefOr[Boolean] = js.undefined
+  var include_yes_decisions: js.UndefOr[Boolean] = js.undefined
 }
 
 object ClusterAllocationExplain {
   @scala.inline
-  def apply[T](): ClusterAllocationExplain[T] = {
+  def apply[T](
+    body: T = null,
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    filter_path: String | js.Array[String] = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    include_disk_info: js.UndefOr[Boolean] = js.undefined,
+    include_yes_decisions: js.UndefOr[Boolean] = js.undefined,
+    method: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    source: String = null
+  ): ClusterAllocationExplain[T] = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_disk_info)) __obj.updateDynamic("include_disk_info")(include_disk_info.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_yes_decisions)) __obj.updateDynamic("include_yes_decisions")(include_yes_decisions.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterAllocationExplain[T]]
   }
-  @scala.inline
-  implicit class ClusterAllocationExplainOps[Self[t] <: ClusterAllocationExplain[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withBody(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_disk_info(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_disk_info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_disk_info: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_disk_info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_yes_decisions(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_yes_decisions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_yes_decisions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_yes_decisions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

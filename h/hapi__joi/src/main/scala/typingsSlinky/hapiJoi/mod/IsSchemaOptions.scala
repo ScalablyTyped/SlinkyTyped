@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsSchemaOptions extends js.Object {
   /**
     * If true, will identify schemas from older versions of joi, otherwise will throw an error.
     *
     * @default false
     */
-  var legacy: Boolean = js.native
+  var legacy: Boolean
 }
 
 object IsSchemaOptions {
@@ -20,19 +19,5 @@ object IsSchemaOptions {
     val __obj = js.Dynamic.literal(legacy = legacy.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsSchemaOptions]
   }
-  @scala.inline
-  implicit class IsSchemaOptionsOps[Self <: IsSchemaOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLegacy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legacy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

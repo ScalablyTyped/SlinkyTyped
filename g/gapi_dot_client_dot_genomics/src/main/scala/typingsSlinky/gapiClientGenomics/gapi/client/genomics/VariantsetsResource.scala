@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VariantsetsResource extends js.Object {
   /**
     * Creates a new variant set.
@@ -21,7 +20,7 @@ trait VariantsetsResource extends js.Object {
     * fields are optional. Note that the `id` field will be ignored, as this is
     * assigned by the server.
     */
-  def create(request: Accesstoken): Request[VariantSet] = js.native
+  def create(request: Accesstoken): Request[VariantSet]
   /**
     * Deletes a variant set including all variants, call sets, and calls within.
     * This is not reversible.
@@ -30,7 +29,7 @@ trait VariantsetsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def delete(request: Uploadprotocol): Request[js.Object] = js.native
+  def delete(request: Uploadprotocol): Request[js.Object]
   /**
     * Exports variant set data to an external destination.
     *
@@ -38,7 +37,7 @@ trait VariantsetsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def export(request: Uploadprotocol): Request[Operation] = js.native
+  def export(request: Uploadprotocol): Request[Operation]
   /**
     * Gets a variant set by ID.
     *
@@ -46,7 +45,7 @@ trait VariantsetsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def get(request: Uploadprotocol): Request[VariantSet] = js.native
+  def get(request: Uploadprotocol): Request[VariantSet]
   /**
     * Updates a variant set using patch semantics.
     *
@@ -54,7 +53,7 @@ trait VariantsetsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def patch(request: VariantSetId): Request[VariantSet] = js.native
+  def patch(request: VariantSetId): Request[VariantSet]
   /**
     * Returns a list of all variant sets matching search criteria.
     *
@@ -65,7 +64,7 @@ trait VariantsetsResource extends js.Object {
     * Implements
     * [GlobalAllianceApi.searchVariantSets](https://github.com/ga4gh/schemas/blob/v0.5.1/src/main/resources/avro/variantmethods.avdl#L49).
     */
-  def search(request: Accesstoken): Request[SearchVariantSetsResponse] = js.native
+  def search(request: Accesstoken): Request[SearchVariantSetsResponse]
 }
 
 object VariantsetsResource {
@@ -81,49 +80,5 @@ object VariantsetsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), export = js.Any.fromFunction1(export), get = js.Any.fromFunction1(get), patch = js.Any.fromFunction1(patch), search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[VariantsetsResource]
   }
-  @scala.inline
-  implicit class VariantsetsResourceOps[Self <: VariantsetsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Accesstoken => Request[VariantSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Uploadprotocol => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExport(value: Uploadprotocol => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Uploadprotocol => Request[VariantSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: VariantSetId => Request[VariantSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSearch(value: Accesstoken => Request[SearchVariantSetsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

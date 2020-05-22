@@ -18,41 +18,14 @@ trait ModifyAccountRequest extends js.Object {
 
 object ModifyAccountRequest {
   @scala.inline
-  def apply(): ModifyAccountRequest = {
+  def apply(
+    DedicatedTenancyManagementCidrRange: DedicatedTenancyManagementCidrRange = null,
+    DedicatedTenancySupport: DedicatedTenancySupportEnum = null
+  ): ModifyAccountRequest = {
     val __obj = js.Dynamic.literal()
+    if (DedicatedTenancyManagementCidrRange != null) __obj.updateDynamic("DedicatedTenancyManagementCidrRange")(DedicatedTenancyManagementCidrRange.asInstanceOf[js.Any])
+    if (DedicatedTenancySupport != null) __obj.updateDynamic("DedicatedTenancySupport")(DedicatedTenancySupport.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyAccountRequest]
   }
-  @scala.inline
-  implicit class ModifyAccountRequestOps[Self <: ModifyAccountRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDedicatedTenancyManagementCidrRange(value: DedicatedTenancyManagementCidrRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedTenancyManagementCidrRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDedicatedTenancyManagementCidrRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedTenancyManagementCidrRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDedicatedTenancySupport(value: DedicatedTenancySupportEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedTenancySupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDedicatedTenancySupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedTenancySupport")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

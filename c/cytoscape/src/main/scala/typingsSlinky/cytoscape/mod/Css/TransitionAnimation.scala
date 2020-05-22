@@ -7,24 +7,23 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#style/transition-animation
   */
-@js.native
 trait TransitionAnimation extends js.Object {
   /**
     * The length of the delay in seconds before the transition occurs (e.g. 250ms).
     */
-  var `transition-delay`: Double = js.native
+  var `transition-delay`: Double
   /**
     * The length of the transition in seconds(e.g. 0.5s).
     */
-  var `transition-duration`: Double = js.native
+  var `transition-duration`: Double
   /**
     * A comma separated list of style properties to animate in this state.
     */
-  var `transition-property`: String = js.native
+  var `transition-property`: String
   /**
     * An easing function that controls the animation progress curve (a visualisation of easings serves as a reference).
     */
-  var `transition-timing-function`: TransitionTimingFunction = js.native
+  var `transition-timing-function`: TransitionTimingFunction
 }
 
 object TransitionAnimation {
@@ -42,37 +41,5 @@ object TransitionAnimation {
     __obj.updateDynamic("transition-timing-function")(`transition-timing-function`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitionAnimation]
   }
-  @scala.inline
-  implicit class TransitionAnimationOps[Self <: TransitionAnimation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withTransition-delay`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition-delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTransition-duration`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition-duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTransition-property`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition-property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTransition-timing-function`(value: TransitionTimingFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition-timing-function")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

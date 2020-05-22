@@ -11,81 +11,80 @@ import scala.scalajs.js.annotation._
 /**
   * You can create physical or virtual cards that are issued to cardholders.
   */
-@js.native
 trait IIssuingCard extends IResourceObject {
   /**
     * Spending rules that give you some control over how your cards can be used. Refer to our authorizations documentation for more details.
     */
-  var authorization_controls: ICardAuthorizationControls = js.native
+  var authorization_controls: ICardAuthorizationControls
   /**
     * The brand of the card.
     */
-  var brand: String = js.native
+  var brand: String
   /**
     * The Cardholder object to which the card belongs.
     */
-  var cardholder: ICardholder = js.native
+  var cardholder: ICardholder
   /**
     * Time at which the object was created. Measured in seconds since the Unix epoch.
     */
-  var created: Double = js.native
+  var created: Double
   /**
     * Three-letter ISO currency code, in lowercase. Must be a supported currency.
     */
-  var currency: String = js.native
+  var currency: String
   /**
     * The expiration month of the card.
     */
-  var exp_month: Double = js.native
+  var exp_month: Double
   /**
     * The expiration year of the card.
     */
-  var exp_year: Double = js.native
+  var exp_year: Double
   /**
     * The last 4 digits of the card number.
     */
-  var last4: String = js.native
+  var last4: String
   /**
     * Has the value true if the object exists in live mode or the value false if the object exists in test mode.
     */
-  var livemode: Boolean = js.native
+  var livemode: Boolean
   /**
     * Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
     */
-  var metadata: IMetadata = js.native
+  var metadata: IMetadata
   /**
     * The name of the cardholder, printed on the card.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Value is "issuing.card"
     */
   @JSName("object")
-  var object_IIssuingCard: issuingDotcard = js.native
+  var object_IIssuingCard: issuingDotcard
   /**
     * Metadata about the PIN on the card.
     */
-  var pin: IIssuingCardPin = js.native
+  var pin: IIssuingCardPin
   /**
     * The card this card replaces, if any.
     */
-  var replacement_for: String | IIssuingCard = js.native
+  var replacement_for: String | IIssuingCard
   /**
     * Why the card that this card replaces (if any) needed to be replaced. One of damage, expiration, loss, or theft.
     */
-  var replacement_reason: IssuingCardReplacementReason = js.native
+  var replacement_reason: IssuingCardReplacementReason
   /**
     * Where and how the card will be shipped.
     */
-  var shipping: IIssuingCardShippingDetails = js.native
+  var shipping: IIssuingCardShippingDetails
   /**
     * One of active, inactive, canceled, lost, or stolen.
     */
-  var status: IssuingCardStatus = js.native
+  var status: IssuingCardStatus
   /**
     * One of virtual or physical.
     */
-  var `type`: IssuingCardType = js.native
+  var `type`: IssuingCardType
 }
 
 object IIssuingCard {
@@ -116,121 +115,5 @@ object IIssuingCard {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIssuingCard]
   }
-  @scala.inline
-  implicit class IIssuingCardOps[Self <: IIssuingCard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorization_controls(value: ICardAuthorizationControls): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorization_controls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCardholder(value: ICardholder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExp_month(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExp_year(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLivemode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: IMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: issuingDotcard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPin(value: IIssuingCardPin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReplacement_for(value: String | IIssuingCard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacement_for")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReplacement_reason(value: IssuingCardReplacementReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacement_reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShipping(value: IIssuingCardShippingDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: IssuingCardStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: IssuingCardType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

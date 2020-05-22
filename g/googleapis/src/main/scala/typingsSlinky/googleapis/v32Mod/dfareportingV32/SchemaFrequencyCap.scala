@@ -23,41 +23,11 @@ trait SchemaFrequencyCap extends js.Object {
 
 object SchemaFrequencyCap {
   @scala.inline
-  def apply(): SchemaFrequencyCap = {
+  def apply(duration: String = null, impressions: String = null): SchemaFrequencyCap = {
     val __obj = js.Dynamic.literal()
+    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+    if (impressions != null) __obj.updateDynamic("impressions")(impressions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFrequencyCap]
   }
-  @scala.inline
-  implicit class SchemaFrequencyCapOps[Self <: SchemaFrequencyCap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImpressions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

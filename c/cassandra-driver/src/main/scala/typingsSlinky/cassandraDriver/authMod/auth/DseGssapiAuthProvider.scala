@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class DseGssapiAuthProvider () extends AuthProvider {
   def this(gssOptions: AuthorizationId) = this()
+  /* CompleteClass */
+  override def newAuthenticator(endpoint: String, name: String): Authenticator = js.native
 }
 

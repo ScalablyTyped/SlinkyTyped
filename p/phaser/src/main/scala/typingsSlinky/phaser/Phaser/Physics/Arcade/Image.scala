@@ -23,7 +23,7 @@ import scala.scalajs.js.annotation._
   * The main difference between an Arcade Image and an Arcade Sprite is that you cannot animate an Arcade Image.
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType because Already inherited
+- typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited
 - typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @js.native
 trait Image
   extends typingsSlinky.phaser.Phaser.GameObjects.Image

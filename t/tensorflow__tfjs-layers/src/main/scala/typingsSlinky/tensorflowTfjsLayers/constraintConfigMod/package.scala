@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object constraintConfigMod {
+  type ConstraintSerialization = typingsSlinky.tensorflowTfjsLayers.constraintConfigMod.MaxNormSerialization | typingsSlinky.tensorflowTfjsLayers.constraintConfigMod.NonNegSerialization | typingsSlinky.tensorflowTfjsLayers.constraintConfigMod.UnitNormSerialization | typingsSlinky.tensorflowTfjsLayers.constraintConfigMod.MinMaxNormSerialization
   type MaxNormSerialization = typingsSlinky.tensorflowTfjsLayers.typesMod.BaseSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.MaxNorm, 
     typingsSlinky.tensorflowTfjsLayers.constraintConfigMod.MaxNormConfig

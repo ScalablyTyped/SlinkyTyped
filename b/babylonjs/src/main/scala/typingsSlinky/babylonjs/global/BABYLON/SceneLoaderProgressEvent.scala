@@ -23,6 +23,15 @@ class SceneLoaderProgressEvent protected ()
     /** defines the data length to load */
   total: Double
   ) = this()
+  /** defines if data length to load can be evaluated */
+  /* CompleteClass */
+  override val lengthComputable: Boolean = js.native
+  /** defines the loaded data length */
+  /* CompleteClass */
+  override val loaded: Double = js.native
+  /** defines the data length to load */
+  /* CompleteClass */
+  override val total: Double = js.native
 }
 
 /* static members */

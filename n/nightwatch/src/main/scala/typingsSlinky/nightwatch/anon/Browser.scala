@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Browser extends js.Object {
-  var browser: js.UndefOr[String] = js.native
-  var driver: js.UndefOr[String] = js.native
-  var server: js.UndefOr[String] = js.native
+  var browser: js.UndefOr[String] = js.undefined
+  var driver: js.UndefOr[String] = js.undefined
+  var server: js.UndefOr[String] = js.undefined
 }
 
 object Browser {
   @scala.inline
-  def apply(): Browser = {
+  def apply(browser: String = null, driver: String = null, server: String = null): Browser = {
     val __obj = js.Dynamic.literal()
+    if (browser != null) __obj.updateDynamic("browser")(browser.asInstanceOf[js.Any])
+    if (driver != null) __obj.updateDynamic("driver")(driver.asInstanceOf[js.Any])
+    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
     __obj.asInstanceOf[Browser]
   }
-  @scala.inline
-  implicit class BrowserOps[Self <: Browser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrowser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriver(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

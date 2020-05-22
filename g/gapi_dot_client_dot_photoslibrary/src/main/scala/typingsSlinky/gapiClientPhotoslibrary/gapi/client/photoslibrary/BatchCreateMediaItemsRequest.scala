@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BatchCreateMediaItemsRequest extends js.Object {
   /**
     * Identifier of the album where the media items are added. The media items
     * are also added to the user's library. This is an optional field.
     */
-  var albumId: js.UndefOr[String] = js.native
+  var albumId: js.UndefOr[String] = js.undefined
   /**
     * Position in the album where the media items are added. If not
     * specified, the media items are added to the end of the album (as per
@@ -18,60 +17,23 @@ trait BatchCreateMediaItemsRequest extends js.Object {
     * field is set and the `albumId` is not specified. The request will also fail
     * if you set the field and are not the owner of the shared album.
     */
-  var albumPosition: js.UndefOr[AlbumPosition] = js.native
+  var albumPosition: js.UndefOr[AlbumPosition] = js.undefined
   /** List of media items to be created. */
-  var newMediaItems: js.UndefOr[js.Array[NewMediaItem]] = js.native
+  var newMediaItems: js.UndefOr[js.Array[NewMediaItem]] = js.undefined
 }
 
 object BatchCreateMediaItemsRequest {
   @scala.inline
-  def apply(): BatchCreateMediaItemsRequest = {
+  def apply(
+    albumId: String = null,
+    albumPosition: AlbumPosition = null,
+    newMediaItems: js.Array[NewMediaItem] = null
+  ): BatchCreateMediaItemsRequest = {
     val __obj = js.Dynamic.literal()
+    if (albumId != null) __obj.updateDynamic("albumId")(albumId.asInstanceOf[js.Any])
+    if (albumPosition != null) __obj.updateDynamic("albumPosition")(albumPosition.asInstanceOf[js.Any])
+    if (newMediaItems != null) __obj.updateDynamic("newMediaItems")(newMediaItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchCreateMediaItemsRequest]
   }
-  @scala.inline
-  implicit class BatchCreateMediaItemsRequestOps[Self <: BatchCreateMediaItemsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlbumId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbumId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlbumPosition(value: AlbumPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbumPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewMediaItems(value: js.Array[NewMediaItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMediaItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewMediaItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMediaItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

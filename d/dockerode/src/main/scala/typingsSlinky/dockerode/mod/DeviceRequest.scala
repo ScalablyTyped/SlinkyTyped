@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeviceRequest extends js.Object {
-  var Capabilities: js.UndefOr[js.Array[js.Array[String]]] = js.native
-  var Count: js.UndefOr[Double] = js.native
-  var DeviceIDs: js.UndefOr[js.Array[String]] = js.native
-  var Driver: js.UndefOr[String] = js.native
-  var Options: js.UndefOr[StringDictionary[String]] = js.native
+  var Capabilities: js.UndefOr[js.Array[js.Array[String]]] = js.undefined
+  var Count: js.UndefOr[Double] = js.undefined
+  var DeviceIDs: js.UndefOr[js.Array[String]] = js.undefined
+  var Driver: js.UndefOr[String] = js.undefined
+  var Options: js.UndefOr[StringDictionary[String]] = js.undefined
 }
 
 object DeviceRequest {
   @scala.inline
-  def apply(): DeviceRequest = {
+  def apply(
+    Capabilities: js.Array[js.Array[String]] = null,
+    Count: js.UndefOr[Double] = js.undefined,
+    DeviceIDs: js.Array[String] = null,
+    Driver: String = null,
+    Options: StringDictionary[String] = null
+  ): DeviceRequest = {
     val __obj = js.Dynamic.literal()
+    if (Capabilities != null) __obj.updateDynamic("Capabilities")(Capabilities.asInstanceOf[js.Any])
+    if (!js.isUndefined(Count)) __obj.updateDynamic("Count")(Count.get.asInstanceOf[js.Any])
+    if (DeviceIDs != null) __obj.updateDynamic("DeviceIDs")(DeviceIDs.asInstanceOf[js.Any])
+    if (Driver != null) __obj.updateDynamic("Driver")(Driver.asInstanceOf[js.Any])
+    if (Options != null) __obj.updateDynamic("Options")(Options.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceRequest]
   }
-  @scala.inline
-  implicit class DeviceRequestOps[Self <: DeviceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapabilities(value: js.Array[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapabilities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceIDs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceIDs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceIDs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceIDs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriver(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Driver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Driver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

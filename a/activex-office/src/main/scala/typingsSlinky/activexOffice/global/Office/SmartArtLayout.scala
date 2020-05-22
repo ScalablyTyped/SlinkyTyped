@@ -7,5 +7,23 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Office.SmartArtLayout")
 @js.native
 class SmartArtLayout protected ()
-  extends typingsSlinky.activexOffice.Office.SmartArtLayout
+  extends typingsSlinky.activexOffice.Office.SmartArtLayout {
+  /* CompleteClass */
+  override val Application: js.Any = js.native
+  /* CompleteClass */
+  override val Category: String = js.native
+  /* CompleteClass */
+  override val Creator: Double = js.native
+  /* CompleteClass */
+  override val Description: String = js.native
+  /* CompleteClass */
+  override val Id: String = js.native
+  /* CompleteClass */
+  override val Name: String = js.native
+  /* CompleteClass */
+  @JSName("Office.SmartArtLayout_typekey")
+  override var OfficeDotSmartArtLayout_typekey: typingsSlinky.activexOffice.Office.SmartArtLayout = js.native
+  /* CompleteClass */
+  override val Parent: js.Any = js.native
+}
 

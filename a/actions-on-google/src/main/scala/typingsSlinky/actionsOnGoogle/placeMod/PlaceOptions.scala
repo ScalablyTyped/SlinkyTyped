@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlaceOptions extends js.Object {
   /**
     * This is the context for seeking permissions.
@@ -13,13 +12,13 @@ trait PlaceOptions extends js.Object {
     *     Can I get that from Google?".
     * @public
     */
-  var context: String = js.native
+  var context: String
   /**
     * This is the initial response by location sub-dialog.
     * For example: "Where do you want to get picked up?"
     * @public
     */
-  var prompt: String = js.native
+  var prompt: String
 }
 
 object PlaceOptions {
@@ -28,25 +27,5 @@ object PlaceOptions {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], prompt = prompt.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaceOptions]
   }
-  @scala.inline
-  implicit class PlaceOptionsOps[Self <: PlaceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrompt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prompt")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

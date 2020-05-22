@@ -5,75 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<qiniu-js.qiniu-js.CompressOptions> */
-@js.native
 trait PartialCompressOptions extends js.Object {
-  var maxHeight: js.UndefOr[Double] = js.native
-  var maxWidh: js.UndefOr[Double] = js.native
-  var noCompressIfLarger: js.UndefOr[Boolean] = js.native
-  var quality: js.UndefOr[Double] = js.native
+  var maxHeight: js.UndefOr[Double] = js.undefined
+  var maxWidh: js.UndefOr[Double] = js.undefined
+  var noCompressIfLarger: js.UndefOr[Boolean] = js.undefined
+  var quality: js.UndefOr[Double] = js.undefined
 }
 
 object PartialCompressOptions {
   @scala.inline
-  def apply(): PartialCompressOptions = {
+  def apply(
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    maxWidh: js.UndefOr[Double] = js.undefined,
+    noCompressIfLarger: js.UndefOr[Boolean] = js.undefined,
+    quality: js.UndefOr[Double] = js.undefined
+  ): PartialCompressOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidh)) __obj.updateDynamic("maxWidh")(maxWidh.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noCompressIfLarger)) __obj.updateDynamic("noCompressIfLarger")(noCompressIfLarger.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialCompressOptions]
   }
-  @scala.inline
-  implicit class PartialCompressOptionsOps[Self <: PartialCompressOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidh(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoCompressIfLarger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCompressIfLarger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoCompressIfLarger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCompressIfLarger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

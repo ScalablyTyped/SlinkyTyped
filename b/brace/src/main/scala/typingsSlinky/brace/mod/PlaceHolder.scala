@@ -6,44 +6,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlaceHolder extends js.Object {
   /**
     * PlaceHolder.cancel()
     * TODO
     **/
-  def cancel(): Unit = js.native
+  def cancel(): Unit
   /**
     * PlaceHolder.detach()
     * TODO
     **/
-  def detach(): Unit = js.native
+  def detach(): Unit
   /**
     * PlaceHolder.hideOtherMarkers()
     * Hides all over markers in the [[EditSession `EditSession`]] that are not the currently selected one.
     **/
-  def hideOtherMarkers(): Unit = js.native
-  def on(event: String, fn: js.Function1[/* e */ js.Any, _]): Unit = js.native
+  def hideOtherMarkers(): Unit
+  def on(event: String, fn: js.Function1[/* e */ js.Any, _]): Unit
   /**
     * PlaceHolder@onCursorChange(e)
     * Emitted when the cursor changes.
     **/
-  def onCursorChange(): Unit = js.native
+  def onCursorChange(): Unit
   /**
     * PlaceHolder@onUpdate(e)
     * Emitted when the place holder updates.
     **/
-  def onUpdate(): Unit = js.native
+  def onUpdate(): Unit
   /**
     * PlaceHolder.setup()
     * TODO
     **/
-  def setup(): Unit = js.native
+  def setup(): Unit
   /**
     * PlaceHolder.showOtherMarkers()
     * TODO
     **/
-  def showOtherMarkers(): Unit = js.native
+  def showOtherMarkers(): Unit
 }
 
 @JSImport("brace", "PlaceHolder")

@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotWindbarbDataGroupingOptions extends js.Object {
   /**
     * (Highcharts, Highstock) Approximation function for the data grouping. The
     * default returns an average of wind speed and a vector average direction
     * weighted by wind speed.
     */
-  var approximation: js.UndefOr[String | js.Function] = js.native
+  var approximation: js.UndefOr[String | js.Function] = js.undefined
   /**
     * (Highstock) Datetime formats for the header of the tooltip in a stock
     * chart. The format can vary within a chart depending on the currently
@@ -29,17 +28,17 @@ trait PlotWindbarbDataGroupingOptions extends js.Object {
     * and third item of the week array are used, and applied to the start and
     * end date of the time span.
     */
-  var dateTimeLabelFormats: js.UndefOr[js.Object] = js.native
+  var dateTimeLabelFormats: js.UndefOr[js.Object] = js.undefined
   /**
     * (Highcharts, Highstock) Whether to enable data grouping.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highstock) When data grouping is forced, it runs no matter how small the
     * intervals are. This can be handy for example when the sum should be
     * calculated for values appearing at random times within each hour.
     */
-  var forced: js.UndefOr[Boolean] = js.native
+  var forced: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highstock) By default only points within the visible range are grouped.
     * Enabling this option will force data grouping to calculate all grouped
@@ -47,11 +46,11 @@ trait PlotWindbarbDataGroupingOptions extends js.Object {
     * series from calculating a grouped point partially. The effect is similar
     * to Series.getExtremesFromAll but does not affect yAxis extremes.
     */
-  var groupAll: js.UndefOr[Boolean] = js.native
+  var groupAll: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock) The approximate data group width.
     */
-  var groupPixelWidth: js.UndefOr[Double] = js.native
+  var groupPixelWidth: js.UndefOr[Double] = js.undefined
   /**
     * (Highstock) Normally, a group is indexed by the start of that group, so
     * for example when 30 daily values are grouped into one month, that month's
@@ -60,7 +59,7 @@ trait PlotWindbarbDataGroupingOptions extends js.Object {
     * data is shifted to the middle of the group, and min and max values are
     * preserved. Internally, this is used in the Navigator series.
     */
-  var smoothed: js.UndefOr[Boolean] = js.native
+  var smoothed: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highstock) An array determining what time intervals the data is allowed
     * to be grouped to. Each array item is an array where the first value is
@@ -69,118 +68,31 @@ trait PlotWindbarbDataGroupingOptions extends js.Object {
     *
     *  (see online documentation for example)
     */
-  var units: js.UndefOr[js.Array[js.Tuple2[String, js.Array[Double] | Null]]] = js.native
+  var units: js.UndefOr[js.Array[js.Tuple2[String, js.Array[Double] | Null]]] = js.undefined
 }
 
 object PlotWindbarbDataGroupingOptions {
   @scala.inline
-  def apply(): PlotWindbarbDataGroupingOptions = {
+  def apply(
+    approximation: String | js.Function = null,
+    dateTimeLabelFormats: js.Object = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    forced: js.UndefOr[Boolean] = js.undefined,
+    groupAll: js.UndefOr[Boolean] = js.undefined,
+    groupPixelWidth: js.UndefOr[Double] = js.undefined,
+    smoothed: js.UndefOr[Boolean] = js.undefined,
+    units: js.Array[js.Tuple2[String, js.Array[Double] | Null]] = null
+  ): PlotWindbarbDataGroupingOptions = {
     val __obj = js.Dynamic.literal()
+    if (approximation != null) __obj.updateDynamic("approximation")(approximation.asInstanceOf[js.Any])
+    if (dateTimeLabelFormats != null) __obj.updateDynamic("dateTimeLabelFormats")(dateTimeLabelFormats.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forced)) __obj.updateDynamic("forced")(forced.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupAll)) __obj.updateDynamic("groupAll")(groupAll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupPixelWidth)) __obj.updateDynamic("groupPixelWidth")(groupPixelWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smoothed)) __obj.updateDynamic("smoothed")(smoothed.get.asInstanceOf[js.Any])
+    if (units != null) __obj.updateDynamic("units")(units.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotWindbarbDataGroupingOptions]
   }
-  @scala.inline
-  implicit class PlotWindbarbDataGroupingOptionsOps[Self <: PlotWindbarbDataGroupingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApproximation(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approximation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApproximation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approximation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateTimeLabelFormats(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeLabelFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateTimeLabelFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeLabelFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForced(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forced")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForced: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forced")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupPixelWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPixelWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupPixelWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPixelWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmoothed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smoothed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmoothed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smoothed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnits(value: js.Array[js.Tuple2[String, js.Array[Double] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

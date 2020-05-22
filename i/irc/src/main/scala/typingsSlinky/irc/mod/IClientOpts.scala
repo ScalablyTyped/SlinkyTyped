@@ -5,365 +5,157 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IClientOpts extends js.Object {
   /**
     * Should we auto-reconnect to networks?
     * @default true
     */
-  var autoConnect: js.UndefOr[Boolean] = js.native
+  var autoConnect: js.UndefOr[Boolean] = js.undefined
   /**
     * Should we auto-rejoin channels?
     * @default false
     */
-  var autoRejoin: js.UndefOr[Boolean] = js.native
+  var autoRejoin: js.UndefOr[Boolean] = js.undefined
   /**
     * Should we accept expired certificates?
     * @default false
     */
-  var certExpired: js.UndefOr[Boolean] = js.native
+  var certExpired: js.UndefOr[Boolean] = js.undefined
   /**
     * Channel prefix
     * @default '&#'
     */
-  var channelPrefixes: js.UndefOr[String] = js.native
+  var channelPrefixes: js.UndefOr[String] = js.undefined
   /**
     * Channels to join
     * @default []
     */
-  var channels: js.UndefOr[js.Array[String]] = js.native
+  var channels: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Should we output debug messages to STDOUT?
     * @default false
     */
-  var debug: js.UndefOr[Boolean] = js.native
+  var debug: js.UndefOr[Boolean] = js.undefined
   /**
     * Encoding to use. See
     * https://nodejs.org/api/stream.html#stream_readable_setencoding_encoding
     * @default 'utf-8'
     */
-  var encoding: js.UndefOr[String] = js.native
+  var encoding: js.UndefOr[String] = js.undefined
   /**
     * Should we queue our messages to ensure we don't get kicked?
     * @default false
     */
-  var floodProtection: js.UndefOr[Boolean] = js.native
+  var floodProtection: js.UndefOr[Boolean] = js.undefined
   /**
     * Delay between messages when flood protection is active
     * @default 1000
     */
-  var floodProtectionDelay: js.UndefOr[Double] = js.native
+  var floodProtectionDelay: js.UndefOr[Double] = js.undefined
   /**
     * Local interface to bind to for network connections. See
     * https://nodejs.org/api/net.html#net_socket_localaddress
     */
-  var localAddress: js.UndefOr[String] = js.native
+  var localAddress: js.UndefOr[String] = js.undefined
   /**
     * Characters to split a message at.
     * @default 512
     */
-  var messageSplit: js.UndefOr[Double] = js.native
+  var messageSplit: js.UndefOr[Double] = js.undefined
   /**
     * IRC username
     * @default ''
     */
-  var password: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String] = js.undefined
   /**
     * IRC connection port. See
     * https://nodejs.org/api/net.html#net_socket_remoteport
     * @default 6667
     */
-  var port: js.UndefOr[Double] = js.native
+  var port: js.UndefOr[Double] = js.undefined
   /**
     * IRC "real name"
     * @default 'nodeJS IRC client'
     */
-  var realName: js.UndefOr[String] = js.native
+  var realName: js.UndefOr[String] = js.undefined
   /**
     * Should we use SASL authentication?
     * @default false
     */
-  var sasl: js.UndefOr[Boolean] = js.native
+  var sasl: js.UndefOr[Boolean] = js.undefined
   /**
     * Should SSL be used? Can either be true or crypto credentials.
     * @default false
     */
-  var secure: js.UndefOr[Boolean | SecureContext] = js.native
+  var secure: js.UndefOr[Boolean | SecureContext] = js.undefined
   /**
     * Should we accept self-signed certificates?
     * @default false
     */
-  var selfSigned: js.UndefOr[Boolean] = js.native
+  var selfSigned: js.UndefOr[Boolean] = js.undefined
   /**
     * Should we output IRC errors?
     * @default false
     */
-  var showErrors: js.UndefOr[Boolean] = js.native
+  var showErrors: js.UndefOr[Boolean] = js.undefined
   /**
     * Should we strip mIRC colors from the output messages?
     * @default false
     */
-  var stripColors: js.UndefOr[Boolean] = js.native
+  var stripColors: js.UndefOr[Boolean] = js.undefined
   /**
     * IRC username
     * @default 'nodebot'
     */
-  var userName: js.UndefOr[String] = js.native
+  var userName: js.UndefOr[String] = js.undefined
 }
 
 object IClientOpts {
   @scala.inline
-  def apply(): IClientOpts = {
+  def apply(
+    autoConnect: js.UndefOr[Boolean] = js.undefined,
+    autoRejoin: js.UndefOr[Boolean] = js.undefined,
+    certExpired: js.UndefOr[Boolean] = js.undefined,
+    channelPrefixes: String = null,
+    channels: js.Array[String] = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    encoding: String = null,
+    floodProtection: js.UndefOr[Boolean] = js.undefined,
+    floodProtectionDelay: js.UndefOr[Double] = js.undefined,
+    localAddress: String = null,
+    messageSplit: js.UndefOr[Double] = js.undefined,
+    password: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    realName: String = null,
+    sasl: js.UndefOr[Boolean] = js.undefined,
+    secure: Boolean | SecureContext = null,
+    selfSigned: js.UndefOr[Boolean] = js.undefined,
+    showErrors: js.UndefOr[Boolean] = js.undefined,
+    stripColors: js.UndefOr[Boolean] = js.undefined,
+    userName: String = null
+  ): IClientOpts = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoConnect)) __obj.updateDynamic("autoConnect")(autoConnect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoRejoin)) __obj.updateDynamic("autoRejoin")(autoRejoin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(certExpired)) __obj.updateDynamic("certExpired")(certExpired.get.asInstanceOf[js.Any])
+    if (channelPrefixes != null) __obj.updateDynamic("channelPrefixes")(channelPrefixes.asInstanceOf[js.Any])
+    if (channels != null) __obj.updateDynamic("channels")(channels.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(floodProtection)) __obj.updateDynamic("floodProtection")(floodProtection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(floodProtectionDelay)) __obj.updateDynamic("floodProtectionDelay")(floodProtectionDelay.get.asInstanceOf[js.Any])
+    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageSplit)) __obj.updateDynamic("messageSplit")(messageSplit.get.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (realName != null) __obj.updateDynamic("realName")(realName.asInstanceOf[js.Any])
+    if (!js.isUndefined(sasl)) __obj.updateDynamic("sasl")(sasl.get.asInstanceOf[js.Any])
+    if (secure != null) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
+    if (!js.isUndefined(selfSigned)) __obj.updateDynamic("selfSigned")(selfSigned.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showErrors)) __obj.updateDynamic("showErrors")(showErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripColors)) __obj.updateDynamic("stripColors")(stripColors.get.asInstanceOf[js.Any])
+    if (userName != null) __obj.updateDynamic("userName")(userName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IClientOpts]
   }
-  @scala.inline
-  implicit class IClientOptsOps[Self <: IClientOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoConnect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoConnect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoConnect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoRejoin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRejoin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRejoin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRejoin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertExpired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certExpired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertExpired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certExpired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelPrefixes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelPrefixes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelPrefixes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelPrefixes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodProtection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodProtection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodProtection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodProtectionDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodProtectionDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodProtectionDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodProtectionDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageSplit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSplit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageSplit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSplit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRealName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRealName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSasl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sasl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSasl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sasl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecure(value: Boolean | SecureContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfSigned(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfSigned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfSigned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfSigned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripColors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripColors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

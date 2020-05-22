@@ -23,41 +23,11 @@ trait SchemaGoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguage extends js.
 
 object SchemaGoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguage {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguage = {
+  def apply(confidence: js.UndefOr[Double] = js.undefined, languageCode: String = null): SchemaGoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguage = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(confidence)) __obj.updateDynamic("confidence")(confidence.get.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguage]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguageOps[Self <: SchemaGoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

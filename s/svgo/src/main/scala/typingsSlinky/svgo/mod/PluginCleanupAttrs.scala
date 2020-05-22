@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PluginCleanupAttrs extends PluginConfig {
-  var cleanupAttrs: Boolean | js.Object = js.native
+  var cleanupAttrs: Boolean | js.Object
 }
 
 object PluginCleanupAttrs {
@@ -15,19 +14,5 @@ object PluginCleanupAttrs {
     val __obj = js.Dynamic.literal(cleanupAttrs = cleanupAttrs.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginCleanupAttrs]
   }
-  @scala.inline
-  implicit class PluginCleanupAttrsOps[Self <: PluginCleanupAttrs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCleanupAttrs(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanupAttrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

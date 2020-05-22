@@ -4,25 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignatureHelpProvider extends js.Object {
   /**
-  		 * Provide help for the signature at the given position and document.
-  		 *
-  		 * @param document The document in which the command was invoked.
-  		 * @param position The position at which the command was invoked.
-  		 * @param token A cancellation token.
-  		 * @param context Information about how signature help was triggered.
-  		 *
-  		 * @return Signature help or a thenable that resolves to such. The lack of a result can be
-  		 * signaled by returning `undefined` or `null`.
-  		 */
+    * Provide help for the signature at the given position and document.
+    *
+    * @param document The document in which the command was invoked.
+    * @param position The position at which the command was invoked.
+    * @param token A cancellation token.
+    * @param context Information about how signature help was triggered.
+    *
+    * @return Signature help or a thenable that resolves to such. The lack of a result can be
+    * signaled by returning `undefined` or `null`.
+    */
   def provideSignatureHelp(
     document: TextDocument,
     position: Position,
     token: CancellationToken,
     context: SignatureHelpContext
-  ): ProviderResult[SignatureHelp] = js.native
+  ): ProviderResult[SignatureHelp]
 }
 
 object SignatureHelpProvider {
@@ -33,21 +32,5 @@ object SignatureHelpProvider {
     val __obj = js.Dynamic.literal(provideSignatureHelp = js.Any.fromFunction4(provideSignatureHelp))
     __obj.asInstanceOf[SignatureHelpProvider]
   }
-  @scala.inline
-  implicit class SignatureHelpProviderOps[Self <: SignatureHelpProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvideSignatureHelp(
-      value: (TextDocument, Position, CancellationToken, SignatureHelpContext) => ProviderResult[SignatureHelp]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideSignatureHelp")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

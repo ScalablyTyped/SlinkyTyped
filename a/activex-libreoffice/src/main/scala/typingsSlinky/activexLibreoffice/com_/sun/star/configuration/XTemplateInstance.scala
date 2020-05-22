@@ -15,18 +15,17 @@ import scala.scalajs.js.annotation._
   * kinds of objects dynamically.
   * @see XTemplateContainer
   */
-@js.native
 trait XTemplateInstance extends XInterface {
   /**
     * retrieves the name of the template
     * @returns the name of the template this object was built from or conforms to.
     */
-  val TemplateName: String = js.native
+  val TemplateName: String
   /**
     * retrieves the name of the template
     * @returns the name of the template this object was built from or conforms to.
     */
-  def getTemplateName(): String = js.native
+  def getTemplateName(): String
 }
 
 object XTemplateInstance {
@@ -41,25 +40,5 @@ object XTemplateInstance {
     val __obj = js.Dynamic.literal(TemplateName = TemplateName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getTemplateName = js.Any.fromFunction0(getTemplateName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTemplateInstance]
   }
-  @scala.inline
-  implicit class XTemplateInstanceOps[Self <: XTemplateInstance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTemplateName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetTemplateName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTemplateName")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

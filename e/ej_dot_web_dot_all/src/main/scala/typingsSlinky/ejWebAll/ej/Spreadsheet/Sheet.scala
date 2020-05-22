@@ -4,390 +4,152 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Sheet extends js.Object {
   /** Specifies the border for the cell in the Spreadsheet.
     * @Default {[]}
     */
-  var border: js.UndefOr[js.Array[SheetsBorder]] = js.native
+  var border: js.UndefOr[js.Array[SheetsBorder]] = js.undefined
   /** Specifies the conditional formatting for the range of cell in Spreadsheet.
     * @Default {[]}
     */
-  var cFormatRule: js.UndefOr[js.Array[SheetsCFormatRule]] = js.native
+  var cFormatRule: js.UndefOr[js.Array[SheetsCFormatRule]] = js.undefined
   /** Specifies the cell types for a cell or range in Spreadsheet.
     * @Default {[]}
     */
-  var cellTypes: js.UndefOr[js.Array[_]] = js.native
+  var cellTypes: js.UndefOr[js.Array[_]] = js.undefined
   /** Gets or sets a value that indicates to define column count in the Spreadsheet.
     * @Default {21}
     */
-  var colCount: js.UndefOr[Double] = js.native
+  var colCount: js.UndefOr[Double] = js.undefined
   /** Gets or sets a value that indicates to define column width in the Spreadsheet.
     * @Default {64}
     */
-  var columnWidth: js.UndefOr[Double] = js.native
+  var columnWidth: js.UndefOr[Double] = js.undefined
   /** Gets or sets the data to render the Spreadsheet.
     * @Default {null}
     */
-  var dataSource: js.UndefOr[js.Any] = js.native
+  var dataSource: js.UndefOr[js.Any] = js.undefined
   /** Gets or sets a value that indicates whether to enable or disable field as column header in the Spreadsheet.
     * @Default {false}
     */
-  var fieldAsColumnHeader: js.UndefOr[Boolean] = js.native
+  var fieldAsColumnHeader: js.UndefOr[Boolean] = js.undefined
   /** Gets or sets a value to freeze columns in the Spreadsheet.
     * @Default {0}
     */
-  var frozenColumns: js.UndefOr[Double] = js.native
+  var frozenColumns: js.UndefOr[Double] = js.undefined
   /** Gets or sets a value to freeze rows in the Spreadsheet.
     * @Default {0}
     */
-  var frozenRows: js.UndefOr[Double] = js.native
+  var frozenRows: js.UndefOr[Double] = js.undefined
   /** Specifies the header styles for the headers in datasource range.
     * @Default {null}
     */
-  var headerStyles: js.UndefOr[js.Any] = js.native
+  var headerStyles: js.UndefOr[js.Any] = js.undefined
   /** To hide the specified columns in Spreadsheet.
     * @Default {[]}
     */
-  var hideColumns: js.UndefOr[js.Array[_]] = js.native
+  var hideColumns: js.UndefOr[js.Array[_]] = js.undefined
   /** To hide the specified rows in Spreadsheet.
     * @Default {[]}
     */
-  var hideRows: js.UndefOr[js.Array[_]] = js.native
+  var hideRows: js.UndefOr[js.Array[_]] = js.undefined
   /** To merge specified ranges in Spreadsheet.
     * @Default {[]}
     */
-  var mergeCells: js.UndefOr[js.Array[_]] = js.native
+  var mergeCells: js.UndefOr[js.Array[_]] = js.undefined
   /** Specifies the primary key for the datasource in Spreadsheet.
     */
-  var primaryKey: js.UndefOr[String] = js.native
+  var primaryKey: js.UndefOr[String] = js.undefined
   /** Specifies the query for the dataSource in Spreadsheet.
     * @Default {null}
     */
-  var query: js.UndefOr[js.Any] = js.native
+  var query: js.UndefOr[js.Any] = js.undefined
   /** Specifies single range or multiple range settings for a sheet in Spreadsheet.
     * @Default {[]}
     */
-  var rangeSettings: js.UndefOr[js.Array[SheetsRangeSetting]] = js.native
+  var rangeSettings: js.UndefOr[js.Array[SheetsRangeSetting]] = js.undefined
   /** Gets or sets a value that indicates to define row count in the Spreadsheet.
     * @Default {20}
     */
-  var rowCount: js.UndefOr[Double] = js.native
+  var rowCount: js.UndefOr[Double] = js.undefined
   /** Specifies the rows for a sheet in Spreadsheet.
     * @Default {[]}
     */
-  var rows: js.UndefOr[js.Array[SheetsRow]] = js.native
+  var rows: js.UndefOr[js.Array[SheetsRow]] = js.undefined
   /** Specifies the name for sheet in the Spreadsheet.
     * @Default {string}
     */
-  var sheetName: js.UndefOr[String] = js.native
+  var sheetName: js.UndefOr[String] = js.undefined
   /** Gets or sets a value that indicates whether to show or hide grid lines in the Spreadsheet.
     * @Default {true}
     */
-  var showGridlines: js.UndefOr[Boolean] = js.native
+  var showGridlines: js.UndefOr[Boolean] = js.undefined
   /** Gets or sets a value that indicates whether to enable or disable the datasource header in Spreadsheet.
     * @Default {true}
     */
-  var showHeader: js.UndefOr[Boolean] = js.native
+  var showHeader: js.UndefOr[Boolean] = js.undefined
   /** Gets or sets a value that indicates whether to show or hide headings in the Spreadsheet.
     * @Default {true}
     */
-  var showHeadings: js.UndefOr[Boolean] = js.native
+  var showHeadings: js.UndefOr[Boolean] = js.undefined
   /** Specifies the start cell for the datasource range in Spreadsheet.
     * @Default {A1}
     */
-  var startCell: js.UndefOr[String] = js.native
+  var startCell: js.UndefOr[String] = js.undefined
 }
 
 object Sheet {
   @scala.inline
-  def apply(): Sheet = {
+  def apply(
+    border: js.Array[SheetsBorder] = null,
+    cFormatRule: js.Array[SheetsCFormatRule] = null,
+    cellTypes: js.Array[_] = null,
+    colCount: js.UndefOr[Double] = js.undefined,
+    columnWidth: js.UndefOr[Double] = js.undefined,
+    dataSource: js.Any = null,
+    fieldAsColumnHeader: js.UndefOr[Boolean] = js.undefined,
+    frozenColumns: js.UndefOr[Double] = js.undefined,
+    frozenRows: js.UndefOr[Double] = js.undefined,
+    headerStyles: js.Any = null,
+    hideColumns: js.Array[_] = null,
+    hideRows: js.Array[_] = null,
+    mergeCells: js.Array[_] = null,
+    primaryKey: String = null,
+    query: js.Any = null,
+    rangeSettings: js.Array[SheetsRangeSetting] = null,
+    rowCount: js.UndefOr[Double] = js.undefined,
+    rows: js.Array[SheetsRow] = null,
+    sheetName: String = null,
+    showGridlines: js.UndefOr[Boolean] = js.undefined,
+    showHeader: js.UndefOr[Boolean] = js.undefined,
+    showHeadings: js.UndefOr[Boolean] = js.undefined,
+    startCell: String = null
+  ): Sheet = {
     val __obj = js.Dynamic.literal()
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (cFormatRule != null) __obj.updateDynamic("cFormatRule")(cFormatRule.asInstanceOf[js.Any])
+    if (cellTypes != null) __obj.updateDynamic("cellTypes")(cellTypes.asInstanceOf[js.Any])
+    if (!js.isUndefined(colCount)) __obj.updateDynamic("colCount")(colCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnWidth)) __obj.updateDynamic("columnWidth")(columnWidth.get.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(fieldAsColumnHeader)) __obj.updateDynamic("fieldAsColumnHeader")(fieldAsColumnHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frozenColumns)) __obj.updateDynamic("frozenColumns")(frozenColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frozenRows)) __obj.updateDynamic("frozenRows")(frozenRows.get.asInstanceOf[js.Any])
+    if (headerStyles != null) __obj.updateDynamic("headerStyles")(headerStyles.asInstanceOf[js.Any])
+    if (hideColumns != null) __obj.updateDynamic("hideColumns")(hideColumns.asInstanceOf[js.Any])
+    if (hideRows != null) __obj.updateDynamic("hideRows")(hideRows.asInstanceOf[js.Any])
+    if (mergeCells != null) __obj.updateDynamic("mergeCells")(mergeCells.asInstanceOf[js.Any])
+    if (primaryKey != null) __obj.updateDynamic("primaryKey")(primaryKey.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (rangeSettings != null) __obj.updateDynamic("rangeSettings")(rangeSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowCount)) __obj.updateDynamic("rowCount")(rowCount.get.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (sheetName != null) __obj.updateDynamic("sheetName")(sheetName.asInstanceOf[js.Any])
+    if (!js.isUndefined(showGridlines)) __obj.updateDynamic("showGridlines")(showGridlines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHeader)) __obj.updateDynamic("showHeader")(showHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHeadings)) __obj.updateDynamic("showHeadings")(showHeadings.get.asInstanceOf[js.Any])
+    if (startCell != null) __obj.updateDynamic("startCell")(startCell.asInstanceOf[js.Any])
     __obj.asInstanceOf[Sheet]
   }
-  @scala.inline
-  implicit class SheetOps[Self <: Sheet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorder(value: js.Array[SheetsBorder]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCFormatRule(value: js.Array[SheetsCFormatRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cFormatRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCFormatRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cFormatRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellTypes(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldAsColumnHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldAsColumnHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldAsColumnHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldAsColumnHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrozenColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrozenColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrozenRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrozenRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderStyles(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideColumns(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideRows(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergeCells(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeCells")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeSettings(value: js.Array[SheetsRangeSetting]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[SheetsRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowGridlines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridlines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowGridlines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridlines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHeadings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeadings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHeadings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeadings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartCell(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCell")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

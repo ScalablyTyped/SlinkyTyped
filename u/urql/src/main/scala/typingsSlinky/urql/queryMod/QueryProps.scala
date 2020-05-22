@@ -1,0 +1,36 @@
+package typingsSlinky.urql.queryMod
+
+import slinky.core.facade.ReactElement
+import typingsSlinky.graphql.astMod.DocumentNode
+import typingsSlinky.urql.anon.PartialOperationContext
+import typingsSlinky.urql.useQueryMod.UseQueryArgs
+import typingsSlinky.urqlCore.typesMod.RequestPolicy
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait QueryProps[T, V] extends UseQueryArgs[V] {
+  def children(arg: QueryState[T]): ReactElement
+}
+
+object QueryProps {
+  @scala.inline
+  def apply[T, V](
+    children: QueryState[T] => ReactElement,
+    query: String | DocumentNode,
+    context: PartialOperationContext = null,
+    pause: js.UndefOr[Boolean] = js.undefined,
+    pollInterval: js.UndefOr[Double] = js.undefined,
+    requestPolicy: RequestPolicy = null,
+    variables: V = null
+  ): QueryProps[T, V] = {
+    val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), query = query.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(pause)) __obj.updateDynamic("pause")(pause.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pollInterval)) __obj.updateDynamic("pollInterval")(pollInterval.get.asInstanceOf[js.Any])
+    if (requestPolicy != null) __obj.updateDynamic("requestPolicy")(requestPolicy.asInstanceOf[js.Any])
+    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
+    __obj.asInstanceOf[QueryProps[T, V]]
+  }
+}
+

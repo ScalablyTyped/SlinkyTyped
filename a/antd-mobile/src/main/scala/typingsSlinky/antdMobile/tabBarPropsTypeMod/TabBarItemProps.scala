@@ -1,151 +1,45 @@
 package typingsSlinky.antdMobile.tabBarPropsTypeMod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabBarItemProps extends js.Object {
-  var badge: js.UndefOr[String | Double] = js.native
-  var dot: js.UndefOr[Boolean] = js.native
-  var icon: js.UndefOr[TabIcon] = js.native
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var selected: js.UndefOr[Boolean] = js.native
-  var selectedIcon: js.UndefOr[TabIcon] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var title: String = js.native
+  var badge: js.UndefOr[String | Double] = js.undefined
+  var dot: js.UndefOr[Boolean] = js.undefined
+  var icon: js.UndefOr[TabIcon] = js.undefined
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var selected: js.UndefOr[Boolean] = js.undefined
+  var selectedIcon: js.UndefOr[TabIcon] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var title: String
 }
 
 object TabBarItemProps {
   @scala.inline
-  def apply(title: String): TabBarItemProps = {
+  def apply(
+    title: String,
+    badge: String | Double = null,
+    dot: js.UndefOr[Boolean] = js.undefined,
+    icon: TabIcon = null,
+    onPress: () => Unit = null,
+    prefixCls: String = null,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    selectedIcon: TabIcon = null,
+    style: CSSProperties = null
+  ): TabBarItemProps = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
+    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (selectedIcon != null) __obj.updateDynamic("selectedIcon")(selectedIcon.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabBarItemProps]
   }
-  @scala.inline
-  implicit class TabBarItemPropsOps[Self <: TabBarItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBadge(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIcon(value: TabIcon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPress(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedIcon(value: TabIcon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

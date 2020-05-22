@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyleJson extends MapStyleV2 {
-  var styleJson: js.Array[MapStyleItem] = js.native
+  var styleJson: js.Array[MapStyleItem]
 }
 
 object StyleJson {
@@ -17,19 +16,5 @@ object StyleJson {
     val __obj = js.Dynamic.literal(styleJson = styleJson.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleJson]
   }
-  @scala.inline
-  implicit class StyleJsonOps[Self <: StyleJson] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyleJson(value: js.Array[MapStyleItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -36,77 +36,20 @@ trait SchemaInstallFailureEvent extends js.Object {
 
 object SchemaInstallFailureEvent {
   @scala.inline
-  def apply(): SchemaInstallFailureEvent = {
+  def apply(
+    deviceId: String = null,
+    failureDetails: String = null,
+    failureReason: String = null,
+    productId: String = null,
+    userId: String = null
+  ): SchemaInstallFailureEvent = {
     val __obj = js.Dynamic.literal()
+    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
+    if (failureDetails != null) __obj.updateDynamic("failureDetails")(failureDetails.asInstanceOf[js.Any])
+    if (failureReason != null) __obj.updateDynamic("failureReason")(failureReason.asInstanceOf[js.Any])
+    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstallFailureEvent]
   }
-  @scala.inline
-  implicit class SchemaInstallFailureEventOps[Self <: SchemaInstallFailureEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SpreadElement
   extends Expression
-     with BindingOrAssignmentElement
-     with BindingOrAssignmentElementRestIndicator {
+     with _BindingOrAssignmentElement
+     with _BindingOrAssignmentElementRestIndicator {
   var expression: Expression = js.native
   @JSName("kind")
   var kind_SpreadElement: typingsSlinky.typescript.mod.SyntaxKind.SpreadElement = js.native

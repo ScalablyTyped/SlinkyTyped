@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INodeMaterialOptions extends js.Object {
   /**
     * Defines if blocks should emit comments
     */
-  var emitComments: Boolean = js.native
+  var emitComments: Boolean
 }
 
 object INodeMaterialOptions {
@@ -18,19 +17,5 @@ object INodeMaterialOptions {
     val __obj = js.Dynamic.literal(emitComments = emitComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[INodeMaterialOptions]
   }
-  @scala.inline
-  implicit class INodeMaterialOptionsOps[Self <: INodeMaterialOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmitComments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

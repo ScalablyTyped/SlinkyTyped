@@ -4,7 +4,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsDatetime.datePickerNavbarMod.IDatePickerNavbarProps
 import typingsSlinky.reactDayPicker.anon.NextMonth
-import typingsSlinky.reactDayPicker.commonMod.ClassNames
+import typingsSlinky.reactDayPicker.classNamesMod.ClassNames
+import typingsSlinky.reactDayPicker.localeUtilsMod.LocaleUtils
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +34,7 @@ object DatePickerNavbar {
     classNames: ClassNames,
     labels: NextMonth,
     locale: String,
-    localeUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any,
+    localeUtils: LocaleUtils,
     maxDate: js.Date,
     minDate: js.Date,
     month: js.Date,

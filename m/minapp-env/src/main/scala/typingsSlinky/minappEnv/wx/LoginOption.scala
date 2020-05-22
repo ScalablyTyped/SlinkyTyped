@@ -4,81 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoginOption extends js.Object {
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[LoginCompleteCallback] = js.native
+  var complete: js.UndefOr[LoginCompleteCallback] = js.undefined
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[LoginFailCallback] = js.native
+  var fail: js.UndefOr[LoginFailCallback] = js.undefined
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[LoginSuccessCallback] = js.native
+  var success: js.UndefOr[LoginSuccessCallback] = js.undefined
   /** 超时时间，单位ms
     *
     * 最低基础库： `1.9.90` */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object LoginOption {
   @scala.inline
-  def apply(): LoginOption = {
+  def apply(
+    complete: /* res */ GeneralCallbackResult => Unit = null,
+    fail: /* res */ GeneralCallbackResult => Unit = null,
+    success: /* result */ LoginSuccessCallbackResult => Unit = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): LoginOption = {
     val __obj = js.Dynamic.literal()
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoginOption]
   }
-  @scala.inline
-  implicit class LoginOptionOps[Self <: LoginOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplete(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* result */ LoginSuccessCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,53 +26,16 @@ trait SchemaDatafeedstatusesCustomBatchResponseEntry extends js.Object {
 
 object SchemaDatafeedstatusesCustomBatchResponseEntry {
   @scala.inline
-  def apply(): SchemaDatafeedstatusesCustomBatchResponseEntry = {
+  def apply(
+    batchId: js.UndefOr[Double] = js.undefined,
+    datafeedStatus: SchemaDatafeedStatus = null,
+    errors: SchemaErrors = null
+  ): SchemaDatafeedstatusesCustomBatchResponseEntry = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batchId)) __obj.updateDynamic("batchId")(batchId.get.asInstanceOf[js.Any])
+    if (datafeedStatus != null) __obj.updateDynamic("datafeedStatus")(datafeedStatus.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDatafeedstatusesCustomBatchResponseEntry]
   }
-  @scala.inline
-  implicit class SchemaDatafeedstatusesCustomBatchResponseEntryOps[Self <: SchemaDatafeedstatusesCustomBatchResponseEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatafeedStatus(value: SchemaDatafeedStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeedStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatafeedStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeedStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: SchemaErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

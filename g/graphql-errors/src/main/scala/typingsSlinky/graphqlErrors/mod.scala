@@ -12,6 +12,10 @@ object mod extends js.Object {
   @js.native
   class UserError protected () extends Error {
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   def maskErrors(schema: GraphQLSchema): Unit = js.native

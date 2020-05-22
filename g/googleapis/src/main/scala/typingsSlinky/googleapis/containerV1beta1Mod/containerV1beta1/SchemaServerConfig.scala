@@ -33,77 +33,20 @@ trait SchemaServerConfig extends js.Object {
 
 object SchemaServerConfig {
   @scala.inline
-  def apply(): SchemaServerConfig = {
+  def apply(
+    defaultClusterVersion: String = null,
+    defaultImageType: String = null,
+    validImageTypes: js.Array[String] = null,
+    validMasterVersions: js.Array[String] = null,
+    validNodeVersions: js.Array[String] = null
+  ): SchemaServerConfig = {
     val __obj = js.Dynamic.literal()
+    if (defaultClusterVersion != null) __obj.updateDynamic("defaultClusterVersion")(defaultClusterVersion.asInstanceOf[js.Any])
+    if (defaultImageType != null) __obj.updateDynamic("defaultImageType")(defaultImageType.asInstanceOf[js.Any])
+    if (validImageTypes != null) __obj.updateDynamic("validImageTypes")(validImageTypes.asInstanceOf[js.Any])
+    if (validMasterVersions != null) __obj.updateDynamic("validMasterVersions")(validMasterVersions.asInstanceOf[js.Any])
+    if (validNodeVersions != null) __obj.updateDynamic("validNodeVersions")(validNodeVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServerConfig]
   }
-  @scala.inline
-  implicit class SchemaServerConfigOps[Self <: SchemaServerConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultClusterVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultClusterVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultClusterVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultClusterVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultImageType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultImageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultImageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultImageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidImageTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validImageTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidImageTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validImageTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidMasterVersions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validMasterVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidMasterVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validMasterVersions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidNodeVersions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validNodeVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidNodeVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validNodeVersions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,27 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResourceRequest extends js.Object {
   /** The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab. */
-  var frameId: Double = js.native
+  var frameId: Double
   /** The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     * @since Since Chrome 63.
     */
-  var initiator: js.UndefOr[String] = js.native
+  var initiator: js.UndefOr[String] = js.undefined
   /** ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists. */
-  var parentFrameId: Double = js.native
+  var parentFrameId: Double
   /** The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request. */
-  var requestId: String = js.native
+  var requestId: String
   /** The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab. */
-  var tabId: Double = js.native
+  var tabId: Double
   /** The time when this signal is triggered, in milliseconds since the epoch. */
-  var timeStamp: Double = js.native
+  var timeStamp: Double
   /**
     * How the requested resource will be used.
     */
-  var `type`: typingsSlinky.chrome.chrome.webRequest.ResourceType = js.native
-  var url: String = js.native
+  var `type`: typingsSlinky.chrome.chrome.webRequest.ResourceType
+  var url: String
 }
 
 object ResourceRequest {
@@ -36,73 +35,13 @@ object ResourceRequest {
     tabId: Double,
     timeStamp: Double,
     `type`: typingsSlinky.chrome.chrome.webRequest.ResourceType,
-    url: String
+    url: String,
+    initiator: String = null
   ): ResourceRequest = {
     val __obj = js.Dynamic.literal(frameId = frameId.asInstanceOf[js.Any], parentFrameId = parentFrameId.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any], tabId = tabId.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (initiator != null) __obj.updateDynamic("initiator")(initiator.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceRequest]
   }
-  @scala.inline
-  implicit class ResourceRequestOps[Self <: ResourceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrameId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentFrameId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFrameId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.chrome.chrome.webRequest.ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitiator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitiator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

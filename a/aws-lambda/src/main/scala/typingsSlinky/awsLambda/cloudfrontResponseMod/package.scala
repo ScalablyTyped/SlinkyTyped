@@ -10,4 +10,5 @@ package object cloudfrontResponseMod {
     typingsSlinky.awsLambda.cloudfrontResponseMod.CloudFrontResponseEvent, 
     typingsSlinky.awsLambda.cloudfrontResponseMod.CloudFrontResponseResult
   ]
+  type CloudFrontResponseResult = js.UndefOr[scala.Null | typingsSlinky.awsLambda.cloudfrontMod.CloudFrontResultResponse]
 }

@@ -18,7 +18,7 @@ import typingsSlinky.grommet.anon.DisabledExtend
 import typingsSlinky.grommet.anon.Edge
 import typingsSlinky.grommet.anon.Extend
 import typingsSlinky.grommet.anon.ExtendFont
-import typingsSlinky.grommet.anon.FontWeight
+import typingsSlinky.grommet.anon.ExtendFontWeight
 import typingsSlinky.grommet.anon.Gap
 import typingsSlinky.grommet.anon.GroupEnd
 import typingsSlinky.grommet.anon.Heading
@@ -33,6 +33,7 @@ import typingsSlinky.grommet.anon.ResponsiveBreakpoint
 import typingsSlinky.grommet.anon.Row
 import typingsSlinky.grommet.anon.SizeDictxLarge
 import typingsSlinky.grommet.anon.Small
+import typingsSlinky.grommet.anon.Text
 import typingsSlinky.grommet.anon.Thumb
 import typingsSlinky.grommet.anon.Xxlarge
 import typingsSlinky.grommet.baseMod.ThemeType
@@ -52,7 +53,8 @@ object themesMod extends js.Object {
   @js.native
   object base extends js.Object {
     val accordion: js.UndefOr[BorderHeading | DeepReadonly[js.UndefOr[BorderHeading]]] = js.native
-    val anchor: js.UndefOr[FontWeight | DeepReadonly[js.UndefOr[FontWeight]]] = js.native
+    val anchor: js.UndefOr[ExtendFontWeight | DeepReadonly[js.UndefOr[ExtendFontWeight]]] = js.native
+    val avatar: js.UndefOr[Text | DeepReadonly[js.UndefOr[Text]]] = js.native
     val box: js.UndefOr[ResponsiveBreakpoint | DeepReadonly[js.UndefOr[ResponsiveBreakpoint]]] = js.native
     val button: js.UndefOr[MinWidth | DeepReadonly[js.UndefOr[MinWidth]]] = js.native
     val calendar: js.UndefOr[Heading | DeepReadonly[js.UndefOr[Heading]]] = js.native

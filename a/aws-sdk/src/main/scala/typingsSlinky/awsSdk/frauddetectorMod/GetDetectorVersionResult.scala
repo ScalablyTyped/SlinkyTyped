@@ -35,6 +35,10 @@ trait GetDetectorVersionResult extends js.Object {
     */
   var modelVersions: js.UndefOr[ListOfModelVersions] = js.native
   /**
+    * The execution mode of the rule in the dectector  FIRST_MATCHED indicates that Amazon Fraud Detector evaluates rules sequentially, first to last, stopping at the first matched rule. Amazon Fraud dectector then provides the outcomes for that single rule.  ALL_MATCHED indicates that Amazon Fraud Detector evaluates all rules and returns the outcomes for all matched rules. You can define and edit the rule mode at the detector version level, when it is in draft status.
+    */
+  var ruleExecutionMode: js.UndefOr[RuleExecutionMode] = js.native
+  /**
     * The rules included in the detector version.
     */
   var rules: js.UndefOr[RuleList] = js.native
@@ -46,125 +50,30 @@ trait GetDetectorVersionResult extends js.Object {
 
 object GetDetectorVersionResult {
   @scala.inline
-  def apply(): GetDetectorVersionResult = {
+  def apply(
+    createdTime: time = null,
+    description: description = null,
+    detectorId: identifier = null,
+    detectorVersionId: nonEmptyString = null,
+    externalModelEndpoints: ListOfStrings = null,
+    lastUpdatedTime: time = null,
+    modelVersions: ListOfModelVersions = null,
+    ruleExecutionMode: RuleExecutionMode = null,
+    rules: RuleList = null,
+    status: DetectorVersionStatus = null
+  ): GetDetectorVersionResult = {
     val __obj = js.Dynamic.literal()
+    if (createdTime != null) __obj.updateDynamic("createdTime")(createdTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (detectorId != null) __obj.updateDynamic("detectorId")(detectorId.asInstanceOf[js.Any])
+    if (detectorVersionId != null) __obj.updateDynamic("detectorVersionId")(detectorVersionId.asInstanceOf[js.Any])
+    if (externalModelEndpoints != null) __obj.updateDynamic("externalModelEndpoints")(externalModelEndpoints.asInstanceOf[js.Any])
+    if (lastUpdatedTime != null) __obj.updateDynamic("lastUpdatedTime")(lastUpdatedTime.asInstanceOf[js.Any])
+    if (modelVersions != null) __obj.updateDynamic("modelVersions")(modelVersions.asInstanceOf[js.Any])
+    if (ruleExecutionMode != null) __obj.updateDynamic("ruleExecutionMode")(ruleExecutionMode.asInstanceOf[js.Any])
+    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDetectorVersionResult]
   }
-  @scala.inline
-  implicit class GetDetectorVersionResultOps[Self <: GetDetectorVersionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedTime(value: time): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetectorId(value: identifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetectorVersionId(value: nonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectorVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorVersionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalModelEndpoints(value: ListOfStrings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalModelEndpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalModelEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalModelEndpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedTime(value: time): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelVersions(value: ListOfModelVersions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVersions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: RuleList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: DetectorVersionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

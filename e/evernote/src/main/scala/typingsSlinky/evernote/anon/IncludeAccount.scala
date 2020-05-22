@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IncludeAccount extends js.Object {
-  var includeAccount: js.UndefOr[Boolean] = js.native
-  var includeBusinessLinkedNotebooks: js.UndefOr[Boolean] = js.native
-  var includePersonalLinkedNotebooks: js.UndefOr[Boolean] = js.native
+  var includeAccount: js.UndefOr[Boolean] = js.undefined
+  var includeBusinessLinkedNotebooks: js.UndefOr[Boolean] = js.undefined
+  var includePersonalLinkedNotebooks: js.UndefOr[Boolean] = js.undefined
 }
 
 object IncludeAccount {
   @scala.inline
-  def apply(): IncludeAccount = {
+  def apply(
+    includeAccount: js.UndefOr[Boolean] = js.undefined,
+    includeBusinessLinkedNotebooks: js.UndefOr[Boolean] = js.undefined,
+    includePersonalLinkedNotebooks: js.UndefOr[Boolean] = js.undefined
+  ): IncludeAccount = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeAccount)) __obj.updateDynamic("includeAccount")(includeAccount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeBusinessLinkedNotebooks)) __obj.updateDynamic("includeBusinessLinkedNotebooks")(includeBusinessLinkedNotebooks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includePersonalLinkedNotebooks)) __obj.updateDynamic("includePersonalLinkedNotebooks")(includePersonalLinkedNotebooks.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncludeAccount]
   }
-  @scala.inline
-  implicit class IncludeAccountOps[Self <: IncludeAccount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeAccount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeBusinessLinkedNotebooks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeBusinessLinkedNotebooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeBusinessLinkedNotebooks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeBusinessLinkedNotebooks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludePersonalLinkedNotebooks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includePersonalLinkedNotebooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludePersonalLinkedNotebooks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includePersonalLinkedNotebooks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

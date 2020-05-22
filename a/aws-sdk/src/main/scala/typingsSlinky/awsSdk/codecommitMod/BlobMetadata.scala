@@ -22,53 +22,12 @@ trait BlobMetadata extends js.Object {
 
 object BlobMetadata {
   @scala.inline
-  def apply(): BlobMetadata = {
+  def apply(blobId: ObjectId = null, mode: Mode = null, path: Path = null): BlobMetadata = {
     val __obj = js.Dynamic.literal()
+    if (blobId != null) __obj.updateDynamic("blobId")(blobId.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlobMetadata]
   }
-  @scala.inline
-  implicit class BlobMetadataOps[Self <: BlobMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlobId(value: ObjectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: Mode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,82 +13,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<react-outside-click-handler.react-outside-click-handler.DefaultProps> */
-@js.native
 trait Props extends js.Object {
-  var children: TagMod[Any] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var display: js.UndefOr[block | flex | `inline` | `inline-block` | contents] = js.native
-  var useCapture: js.UndefOr[Boolean] = js.native
-  def onOutsideClick(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
+  var children: TagMod[Any]
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var display: js.UndefOr[block | flex | `inline` | `inline-block` | contents] = js.undefined
+  var useCapture: js.UndefOr[Boolean] = js.undefined
+  def onOutsideClick(e: SyntheticMouseEvent[HTMLElement]): Unit
 }
 
 object Props {
   @scala.inline
-  def apply(onOutsideClick: SyntheticMouseEvent[HTMLElement] => Unit): Props = {
+  def apply(
+    onOutsideClick: SyntheticMouseEvent[HTMLElement] => Unit,
+    children: TagMod[Any] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    display: block | flex | `inline` | `inline-block` | contents = null,
+    useCapture: js.UndefOr[Boolean] = js.undefined
+  ): Props = {
     val __obj = js.Dynamic.literal(onOutsideClick = js.Any.fromFunction1(onOutsideClick))
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    if (!js.isUndefined(useCapture)) __obj.updateDynamic("useCapture")(useCapture.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnOutsideClick(value: SyntheticMouseEvent[HTMLElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOutsideClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplay(value: block | flex | `inline` | `inline-block` | contents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseCapture(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCapture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCapture")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

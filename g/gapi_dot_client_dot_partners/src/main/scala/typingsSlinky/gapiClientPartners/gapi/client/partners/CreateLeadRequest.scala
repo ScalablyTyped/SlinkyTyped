@@ -4,68 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateLeadRequest extends js.Object {
   /**
     * The lead resource. The `LeadType` must not be `LEAD_TYPE_UNSPECIFIED`
     * and either `email` or `phone_number` must be provided.
     */
-  var lead: js.UndefOr[Lead] = js.native
+  var lead: js.UndefOr[Lead] = js.undefined
   /** <a href="https://www.google.com/recaptcha/">reCaptcha</a> challenge info. */
-  var recaptchaChallenge: js.UndefOr[RecaptchaChallenge] = js.native
+  var recaptchaChallenge: js.UndefOr[RecaptchaChallenge] = js.undefined
   /** Current request metadata. */
-  var requestMetadata: js.UndefOr[RequestMetadata] = js.native
+  var requestMetadata: js.UndefOr[RequestMetadata] = js.undefined
 }
 
 object CreateLeadRequest {
   @scala.inline
-  def apply(): CreateLeadRequest = {
+  def apply(
+    lead: Lead = null,
+    recaptchaChallenge: RecaptchaChallenge = null,
+    requestMetadata: RequestMetadata = null
+  ): CreateLeadRequest = {
     val __obj = js.Dynamic.literal()
+    if (lead != null) __obj.updateDynamic("lead")(lead.asInstanceOf[js.Any])
+    if (recaptchaChallenge != null) __obj.updateDynamic("recaptchaChallenge")(recaptchaChallenge.asInstanceOf[js.Any])
+    if (requestMetadata != null) __obj.updateDynamic("requestMetadata")(requestMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLeadRequest]
   }
-  @scala.inline
-  implicit class CreateLeadRequestOps[Self <: CreateLeadRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLead(value: Lead): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecaptchaChallenge(value: RecaptchaChallenge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recaptchaChallenge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecaptchaChallenge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recaptchaChallenge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestMetadata(value: RequestMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

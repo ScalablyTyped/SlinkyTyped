@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Is the layout for GenericVariableProperties.
   */
-@js.native
 trait IGenericVariableLayout extends IGenericBaseLayout {
   /**
     * If set to true, it means that the variable was defined via script.
     */
-  var qIsScriptCreated: Boolean = js.native
+  var qIsScriptCreated: Boolean
   /**
     * A value.
     */
-  var qNum: Double = js.native
+  var qNum: Double
   /**
     * Some text.
     */
-  var qText: String = js.native
+  var qText: String
 }
 
 object IGenericVariableLayout {
@@ -29,31 +28,5 @@ object IGenericVariableLayout {
     val __obj = js.Dynamic.literal(qInfo = qInfo.asInstanceOf[js.Any], qIsScriptCreated = qIsScriptCreated.asInstanceOf[js.Any], qMeta = qMeta.asInstanceOf[js.Any], qNum = qNum.asInstanceOf[js.Any], qText = qText.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGenericVariableLayout]
   }
-  @scala.inline
-  implicit class IGenericVariableLayoutOps[Self <: IGenericVariableLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQIsScriptCreated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qIsScriptCreated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQNum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

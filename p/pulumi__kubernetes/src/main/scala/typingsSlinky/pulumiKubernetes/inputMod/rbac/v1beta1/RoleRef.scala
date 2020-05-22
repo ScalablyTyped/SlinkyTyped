@@ -8,20 +8,19 @@ import scala.scalajs.js.annotation._
 /**
   * RoleRef contains information that points to the role being used
   */
-@js.native
 trait RoleRef extends js.Object {
   /**
     * APIGroup is the group for the resource being referenced
     */
-  var apiGroup: Input[String] = js.native
+  var apiGroup: Input[String]
   /**
     * Kind is the type of resource being referenced
     */
-  var kind: Input[String] = js.native
+  var kind: Input[String]
   /**
     * Name is the name of resource being referenced
     */
-  var name: Input[String] = js.native
+  var name: Input[String]
 }
 
 object RoleRef {
@@ -30,31 +29,5 @@ object RoleRef {
     val __obj = js.Dynamic.literal(apiGroup = apiGroup.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoleRef]
   }
-  @scala.inline
-  implicit class RoleRefOps[Self <: RoleRef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiGroup(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

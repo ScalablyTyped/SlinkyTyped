@@ -20,41 +20,11 @@ trait SchemaFetchThreatListUpdatesResponse extends js.Object {
 
 object SchemaFetchThreatListUpdatesResponse {
   @scala.inline
-  def apply(): SchemaFetchThreatListUpdatesResponse = {
+  def apply(listUpdateResponses: js.Array[SchemaListUpdateResponse] = null, minimumWaitDuration: String = null): SchemaFetchThreatListUpdatesResponse = {
     val __obj = js.Dynamic.literal()
+    if (listUpdateResponses != null) __obj.updateDynamic("listUpdateResponses")(listUpdateResponses.asInstanceOf[js.Any])
+    if (minimumWaitDuration != null) __obj.updateDynamic("minimumWaitDuration")(minimumWaitDuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFetchThreatListUpdatesResponse]
   }
-  @scala.inline
-  implicit class SchemaFetchThreatListUpdatesResponseOps[Self <: SchemaFetchThreatListUpdatesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withListUpdateResponses(value: js.Array[SchemaListUpdateResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listUpdateResponses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListUpdateResponses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listUpdateResponses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumWaitDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumWaitDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumWaitDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumWaitDuration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

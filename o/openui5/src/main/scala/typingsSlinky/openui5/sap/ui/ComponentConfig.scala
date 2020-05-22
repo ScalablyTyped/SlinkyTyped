@@ -128,87 +128,34 @@ import scala.scalajs.js.annotation._
   * @param vFactory the module value or a function that calculates the value
   * @param bExport whether an export to global names is required - should be used by SAP-owned code only
   */
-@js.native
 trait ComponentConfig extends js.Object {
-  // 	initial data of the Component (@see sap.ui.core.Component#getComponentData)
-  var componentData: js.UndefOr[js.Any] = js.native
-  // 	the sId of the new Component
-  var id: js.UndefOr[String] = js.native
-  // 	the name of the Component to load
-  var name: String = js.native
-  //	the mSettings of the new Component
-  var settings: js.UndefOr[js.Any] = js.native
-  // 	an alternate location from where to load the Component
-  var url: js.UndefOr[String] = js.native
+  //     initial data of the Component (@see sap.ui.core.Component#getComponentData)
+  var componentData: js.UndefOr[js.Any] = js.undefined
+  //     the sId of the new Component
+  var id: js.UndefOr[String] = js.undefined
+  //     the name of the Component to load
+  var name: String
+  //    the mSettings of the new Component
+  var settings: js.UndefOr[js.Any] = js.undefined
+  //     an alternate location from where to load the Component
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object ComponentConfig {
   @scala.inline
-  def apply(name: String): ComponentConfig = {
+  def apply(
+    name: String,
+    componentData: js.Any = null,
+    id: String = null,
+    settings: js.Any = null,
+    url: String = null
+  ): ComponentConfig = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (componentData != null) __obj.updateDynamic("componentData")(componentData.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComponentConfig]
   }
-  @scala.inline
-  implicit class ComponentConfigOps[Self <: ComponentConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettings(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

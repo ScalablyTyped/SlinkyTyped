@@ -23,7 +23,7 @@ trait ChartTrendlineFormat extends ClientObject {
   var context_ChartTrendlineFormat: RequestContext = js.native
   /**
     *
-    * Represents chart line formatting. Read-only.
+    * Represents chart line formatting.
     *
     * [Api set: ExcelApi 1.7]
     */

@@ -7,257 +7,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArgumentsInColorFunction extends js.Object {
-  val argumentsInColorFunction: js.UndefOr[ignore | warning | error] = js.native
-  val boxModel: js.UndefOr[ignore | warning | error] = js.native
-  val compatibleVendorPrefixes: js.UndefOr[ignore | warning | error] = js.native
-  val duplicateProperties: js.UndefOr[ignore | warning | error] = js.native
-  val emptyRules: js.UndefOr[ignore | warning | error] = js.native
-  val float: js.UndefOr[ignore | warning | error] = js.native
-  val fontFaceProperties: js.UndefOr[ignore | warning | error] = js.native
-  val hexColorLength: js.UndefOr[ignore | warning | error] = js.native
-  val idSelector: js.UndefOr[ignore | warning | error] = js.native
-  val ieHack: js.UndefOr[ignore | warning | error] = js.native
-  val importStatement: js.UndefOr[ignore | warning | error] = js.native
-  val important: js.UndefOr[ignore | warning | error] = js.native
-  val propertyIgnoredDueToDisplay: js.UndefOr[ignore | warning | error] = js.native
-  val universalSelector: js.UndefOr[ignore | warning | error] = js.native
-  val unknownProperties: js.UndefOr[ignore | warning | error] = js.native
-  val unknownVendorSpecificProperties: js.UndefOr[ignore | warning | error] = js.native
-  val vendorPrefix: js.UndefOr[ignore | warning | error] = js.native
-  val zeroUnits: js.UndefOr[ignore | warning | error] = js.native
+  val argumentsInColorFunction: js.UndefOr[ignore | warning | error] = js.undefined
+  val boxModel: js.UndefOr[ignore | warning | error] = js.undefined
+  val compatibleVendorPrefixes: js.UndefOr[ignore | warning | error] = js.undefined
+  val duplicateProperties: js.UndefOr[ignore | warning | error] = js.undefined
+  val emptyRules: js.UndefOr[ignore | warning | error] = js.undefined
+  val float: js.UndefOr[ignore | warning | error] = js.undefined
+  val fontFaceProperties: js.UndefOr[ignore | warning | error] = js.undefined
+  val hexColorLength: js.UndefOr[ignore | warning | error] = js.undefined
+  val idSelector: js.UndefOr[ignore | warning | error] = js.undefined
+  val ieHack: js.UndefOr[ignore | warning | error] = js.undefined
+  val importStatement: js.UndefOr[ignore | warning | error] = js.undefined
+  val important: js.UndefOr[ignore | warning | error] = js.undefined
+  val propertyIgnoredDueToDisplay: js.UndefOr[ignore | warning | error] = js.undefined
+  val universalSelector: js.UndefOr[ignore | warning | error] = js.undefined
+  val unknownProperties: js.UndefOr[ignore | warning | error] = js.undefined
+  val unknownVendorSpecificProperties: js.UndefOr[ignore | warning | error] = js.undefined
+  val vendorPrefix: js.UndefOr[ignore | warning | error] = js.undefined
+  val zeroUnits: js.UndefOr[ignore | warning | error] = js.undefined
 }
 
 object ArgumentsInColorFunction {
   @scala.inline
-  def apply(): ArgumentsInColorFunction = {
+  def apply(
+    argumentsInColorFunction: ignore | warning | error = null,
+    boxModel: ignore | warning | error = null,
+    compatibleVendorPrefixes: ignore | warning | error = null,
+    duplicateProperties: ignore | warning | error = null,
+    emptyRules: ignore | warning | error = null,
+    float: ignore | warning | error = null,
+    fontFaceProperties: ignore | warning | error = null,
+    hexColorLength: ignore | warning | error = null,
+    idSelector: ignore | warning | error = null,
+    ieHack: ignore | warning | error = null,
+    importStatement: ignore | warning | error = null,
+    important: ignore | warning | error = null,
+    propertyIgnoredDueToDisplay: ignore | warning | error = null,
+    universalSelector: ignore | warning | error = null,
+    unknownProperties: ignore | warning | error = null,
+    unknownVendorSpecificProperties: ignore | warning | error = null,
+    vendorPrefix: ignore | warning | error = null,
+    zeroUnits: ignore | warning | error = null
+  ): ArgumentsInColorFunction = {
     val __obj = js.Dynamic.literal()
+    if (argumentsInColorFunction != null) __obj.updateDynamic("argumentsInColorFunction")(argumentsInColorFunction.asInstanceOf[js.Any])
+    if (boxModel != null) __obj.updateDynamic("boxModel")(boxModel.asInstanceOf[js.Any])
+    if (compatibleVendorPrefixes != null) __obj.updateDynamic("compatibleVendorPrefixes")(compatibleVendorPrefixes.asInstanceOf[js.Any])
+    if (duplicateProperties != null) __obj.updateDynamic("duplicateProperties")(duplicateProperties.asInstanceOf[js.Any])
+    if (emptyRules != null) __obj.updateDynamic("emptyRules")(emptyRules.asInstanceOf[js.Any])
+    if (float != null) __obj.updateDynamic("float")(float.asInstanceOf[js.Any])
+    if (fontFaceProperties != null) __obj.updateDynamic("fontFaceProperties")(fontFaceProperties.asInstanceOf[js.Any])
+    if (hexColorLength != null) __obj.updateDynamic("hexColorLength")(hexColorLength.asInstanceOf[js.Any])
+    if (idSelector != null) __obj.updateDynamic("idSelector")(idSelector.asInstanceOf[js.Any])
+    if (ieHack != null) __obj.updateDynamic("ieHack")(ieHack.asInstanceOf[js.Any])
+    if (importStatement != null) __obj.updateDynamic("importStatement")(importStatement.asInstanceOf[js.Any])
+    if (important != null) __obj.updateDynamic("important")(important.asInstanceOf[js.Any])
+    if (propertyIgnoredDueToDisplay != null) __obj.updateDynamic("propertyIgnoredDueToDisplay")(propertyIgnoredDueToDisplay.asInstanceOf[js.Any])
+    if (universalSelector != null) __obj.updateDynamic("universalSelector")(universalSelector.asInstanceOf[js.Any])
+    if (unknownProperties != null) __obj.updateDynamic("unknownProperties")(unknownProperties.asInstanceOf[js.Any])
+    if (unknownVendorSpecificProperties != null) __obj.updateDynamic("unknownVendorSpecificProperties")(unknownVendorSpecificProperties.asInstanceOf[js.Any])
+    if (vendorPrefix != null) __obj.updateDynamic("vendorPrefix")(vendorPrefix.asInstanceOf[js.Any])
+    if (zeroUnits != null) __obj.updateDynamic("zeroUnits")(zeroUnits.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArgumentsInColorFunction]
   }
-  @scala.inline
-  implicit class ArgumentsInColorFunctionOps[Self <: ArgumentsInColorFunction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgumentsInColorFunction(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentsInColorFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgumentsInColorFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentsInColorFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxModel(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompatibleVendorPrefixes(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibleVendorPrefixes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompatibleVendorPrefixes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibleVendorPrefixes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuplicateProperties(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuplicateProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmptyRules(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmptyRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloat(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFaceProperties(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFaceProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFaceProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFaceProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHexColorLength(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexColorLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHexColorLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexColorLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdSelector(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIeHack(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ieHack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIeHack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ieHack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportStatement(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importStatement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportant(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("important")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("important")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPropertyIgnoredDueToDisplay(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyIgnoredDueToDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPropertyIgnoredDueToDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyIgnoredDueToDisplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUniversalSelector(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("universalSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUniversalSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("universalSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknownProperties(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnknownProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknownVendorSpecificProperties(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownVendorSpecificProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnknownVendorSpecificProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownVendorSpecificProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVendorPrefix(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVendorPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZeroUnits(value: ignore | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZeroUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroUnits")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

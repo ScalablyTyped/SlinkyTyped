@@ -4,257 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InputAttributes extends js.Object {
-  var `input-auto-scaling`: js.UndefOr[Boolean] = js.native
-  var `input-auto-skew-correction`: js.UndefOr[Boolean] = js.native
-  var `input-brightness`: js.UndefOr[Double] = js.native
-  var `input-color-mode`: js.UndefOr[InputColorMode] = js.native
-  var `input-content-type`: js.UndefOr[InputContentType] = js.native
-  var `input-contrast`: js.UndefOr[Double] = js.native
-  var `input-film-scan-mode`: js.UndefOr[InputFilmScanMode] = js.native
-  var `input-images-to-transfer`: js.UndefOr[Double] = js.native
-  var `input-media`: js.UndefOr[MediaName | MediaSizeName] = js.native
-  var `input-orientation-requested`: js.UndefOr[OrientationRequested] = js.native
-  var `input-quality`: js.UndefOr[PrintQuality] = js.native
-  var `input-resolution`: js.UndefOr[Resolution] = js.native
-  var `input-scaling-height`: js.UndefOr[Double] = js.native
-  var `input-scaling-width`: js.UndefOr[Double] = js.native
-  var `input-scan-regions`: js.UndefOr[js.Array[PPScanRegions]] = js.native
-  var `input-sharpness`: js.UndefOr[Double] = js.native
-  var `input-sides`: js.UndefOr[Sides] = js.native
-  var `input-source`: js.UndefOr[InputSource] = js.native
+  var `input-auto-scaling`: js.UndefOr[Boolean] = js.undefined
+  var `input-auto-skew-correction`: js.UndefOr[Boolean] = js.undefined
+  var `input-brightness`: js.UndefOr[Double] = js.undefined
+  var `input-color-mode`: js.UndefOr[InputColorMode] = js.undefined
+  var `input-content-type`: js.UndefOr[InputContentType] = js.undefined
+  var `input-contrast`: js.UndefOr[Double] = js.undefined
+  var `input-film-scan-mode`: js.UndefOr[InputFilmScanMode] = js.undefined
+  var `input-images-to-transfer`: js.UndefOr[Double] = js.undefined
+  var `input-media`: js.UndefOr[MediaName | MediaSizeName] = js.undefined
+  var `input-orientation-requested`: js.UndefOr[OrientationRequested] = js.undefined
+  var `input-quality`: js.UndefOr[PrintQuality] = js.undefined
+  var `input-resolution`: js.UndefOr[Resolution] = js.undefined
+  var `input-scaling-height`: js.UndefOr[Double] = js.undefined
+  var `input-scaling-width`: js.UndefOr[Double] = js.undefined
+  var `input-scan-regions`: js.UndefOr[js.Array[PPScanRegions]] = js.undefined
+  var `input-sharpness`: js.UndefOr[Double] = js.undefined
+  var `input-sides`: js.UndefOr[Sides] = js.undefined
+  var `input-source`: js.UndefOr[InputSource] = js.undefined
 }
 
 object InputAttributes {
   @scala.inline
-  def apply(): InputAttributes = {
+  def apply(
+    `input-auto-scaling`: js.UndefOr[Boolean] = js.undefined,
+    `input-auto-skew-correction`: js.UndefOr[Boolean] = js.undefined,
+    `input-brightness`: js.UndefOr[Double] = js.undefined,
+    `input-color-mode`: InputColorMode = null,
+    `input-content-type`: InputContentType = null,
+    `input-contrast`: js.UndefOr[Double] = js.undefined,
+    `input-film-scan-mode`: InputFilmScanMode = null,
+    `input-images-to-transfer`: js.UndefOr[Double] = js.undefined,
+    `input-media`: MediaName | MediaSizeName = null,
+    `input-orientation-requested`: OrientationRequested = null,
+    `input-quality`: PrintQuality = null,
+    `input-resolution`: Resolution = null,
+    `input-scaling-height`: js.UndefOr[Double] = js.undefined,
+    `input-scaling-width`: js.UndefOr[Double] = js.undefined,
+    `input-scan-regions`: js.Array[PPScanRegions] = null,
+    `input-sharpness`: js.UndefOr[Double] = js.undefined,
+    `input-sides`: Sides = null,
+    `input-source`: InputSource = null
+  ): InputAttributes = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(`input-auto-scaling`)) __obj.updateDynamic("input-auto-scaling")(`input-auto-scaling`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`input-auto-skew-correction`)) __obj.updateDynamic("input-auto-skew-correction")(`input-auto-skew-correction`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`input-brightness`)) __obj.updateDynamic("input-brightness")(`input-brightness`.get.asInstanceOf[js.Any])
+    if (`input-color-mode` != null) __obj.updateDynamic("input-color-mode")(`input-color-mode`.asInstanceOf[js.Any])
+    if (`input-content-type` != null) __obj.updateDynamic("input-content-type")(`input-content-type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`input-contrast`)) __obj.updateDynamic("input-contrast")(`input-contrast`.get.asInstanceOf[js.Any])
+    if (`input-film-scan-mode` != null) __obj.updateDynamic("input-film-scan-mode")(`input-film-scan-mode`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`input-images-to-transfer`)) __obj.updateDynamic("input-images-to-transfer")(`input-images-to-transfer`.get.asInstanceOf[js.Any])
+    if (`input-media` != null) __obj.updateDynamic("input-media")(`input-media`.asInstanceOf[js.Any])
+    if (`input-orientation-requested` != null) __obj.updateDynamic("input-orientation-requested")(`input-orientation-requested`.asInstanceOf[js.Any])
+    if (`input-quality` != null) __obj.updateDynamic("input-quality")(`input-quality`.asInstanceOf[js.Any])
+    if (`input-resolution` != null) __obj.updateDynamic("input-resolution")(`input-resolution`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`input-scaling-height`)) __obj.updateDynamic("input-scaling-height")(`input-scaling-height`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`input-scaling-width`)) __obj.updateDynamic("input-scaling-width")(`input-scaling-width`.get.asInstanceOf[js.Any])
+    if (`input-scan-regions` != null) __obj.updateDynamic("input-scan-regions")(`input-scan-regions`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`input-sharpness`)) __obj.updateDynamic("input-sharpness")(`input-sharpness`.get.asInstanceOf[js.Any])
+    if (`input-sides` != null) __obj.updateDynamic("input-sides")(`input-sides`.asInstanceOf[js.Any])
+    if (`input-source` != null) __obj.updateDynamic("input-source")(`input-source`.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputAttributes]
   }
-  @scala.inline
-  implicit class InputAttributesOps[Self <: InputAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withInput-auto-scaling`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-auto-scaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-auto-scaling`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-auto-scaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-auto-skew-correction`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-auto-skew-correction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-auto-skew-correction`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-auto-skew-correction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-brightness`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-brightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-brightness`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-brightness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-color-mode`(value: InputColorMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-color-mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-color-mode`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-color-mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-content-type`(value: InputContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-content-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-content-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-content-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-contrast`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-contrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-contrast`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-contrast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-film-scan-mode`(value: InputFilmScanMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-film-scan-mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-film-scan-mode`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-film-scan-mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-images-to-transfer`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-images-to-transfer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-images-to-transfer`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-images-to-transfer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-media`(value: MediaName | MediaSizeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-media`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-orientation-requested`(value: OrientationRequested): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-orientation-requested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-orientation-requested`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-orientation-requested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-quality`(value: PrintQuality): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-quality`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-resolution`(value: Resolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-resolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-resolution`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-resolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-scaling-height`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-scaling-height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-scaling-height`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-scaling-height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-scaling-width`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-scaling-width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-scaling-width`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-scaling-width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-scan-regions`(value: js.Array[PPScanRegions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-scan-regions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-scan-regions`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-scan-regions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-sharpness`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-sharpness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-sharpness`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-sharpness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-sides`(value: Sides): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-sides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-sides`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-sides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInput-source`(value: InputSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInput-source`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input-source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

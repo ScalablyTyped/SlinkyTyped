@@ -22,53 +22,16 @@ trait AwsCodeBuildProjectVpcConfig extends js.Object {
 
 object AwsCodeBuildProjectVpcConfig {
   @scala.inline
-  def apply(): AwsCodeBuildProjectVpcConfig = {
+  def apply(
+    SecurityGroupIds: NonEmptyStringList = null,
+    Subnets: NonEmptyStringList = null,
+    VpcId: NonEmptyString = null
+  ): AwsCodeBuildProjectVpcConfig = {
     val __obj = js.Dynamic.literal()
+    if (SecurityGroupIds != null) __obj.updateDynamic("SecurityGroupIds")(SecurityGroupIds.asInstanceOf[js.Any])
+    if (Subnets != null) __obj.updateDynamic("Subnets")(Subnets.asInstanceOf[js.Any])
+    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsCodeBuildProjectVpcConfig]
   }
-  @scala.inline
-  implicit class AwsCodeBuildProjectVpcConfigOps[Self <: AwsCodeBuildProjectVpcConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecurityGroupIds(value: NonEmptyStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnets(value: NonEmptyStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

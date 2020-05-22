@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ValidationOptions extends js.Object {
-  var comment: js.UndefOr[String] = js.native
-  var condition: js.UndefOr[js.Function2[/* option */ js.Any, /* validOption */ js.Any, Boolean]] = js.native
+  var comment: js.UndefOr[String] = js.undefined
+  var condition: js.UndefOr[js.Function2[/* option */ js.Any, /* validOption */ js.Any, Boolean]] = js.undefined
   var deprecate: js.UndefOr[
     js.Function4[
       /* config */ Record[String, _], 
@@ -17,8 +16,8 @@ trait ValidationOptions extends js.Object {
       /* options */ ValidationOptions, 
       Boolean
     ]
-  ] = js.native
-  var deprecatedConfig: js.UndefOr[DeprecatedOptions] = js.native
+  ] = js.undefined
+  var deprecatedConfig: js.UndefOr[DeprecatedOptions] = js.undefined
   var error: js.UndefOr[
     js.Function5[
       /* option */ String, 
@@ -28,11 +27,11 @@ trait ValidationOptions extends js.Object {
       /* path */ js.UndefOr[js.Array[String]], 
       Unit
     ]
-  ] = js.native
-  var exampleConfig: Record[String, _] = js.native
-  var recursive: js.UndefOr[Boolean] = js.native
-  var recursiveBlacklist: js.UndefOr[js.Array[String]] = js.native
-  var title: js.UndefOr[Title] = js.native
+  ] = js.undefined
+  var exampleConfig: Record[String, _]
+  var recursive: js.UndefOr[Boolean] = js.undefined
+  var recursiveBlacklist: js.UndefOr[js.Array[String]] = js.undefined
+  var title: js.UndefOr[Title] = js.undefined
   var unknown: js.UndefOr[
     js.Function5[
       /* config */ Record[String, _], 
@@ -42,142 +41,34 @@ trait ValidationOptions extends js.Object {
       /* path */ js.UndefOr[js.Array[String]], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object ValidationOptions {
   @scala.inline
-  def apply(exampleConfig: Record[String, _]): ValidationOptions = {
+  def apply(
+    exampleConfig: Record[String, _],
+    comment: String = null,
+    condition: (/* option */ js.Any, /* validOption */ js.Any) => Boolean = null,
+    deprecate: (/* config */ Record[String, _], /* option */ String, /* deprecatedOptions */ DeprecatedOptions, /* options */ ValidationOptions) => Boolean = null,
+    deprecatedConfig: DeprecatedOptions = null,
+    error: (/* option */ String, /* received */ js.Any, /* defaultValue */ js.Any, /* options */ ValidationOptions, /* path */ js.UndefOr[js.Array[String]]) => Unit = null,
+    recursive: js.UndefOr[Boolean] = js.undefined,
+    recursiveBlacklist: js.Array[String] = null,
+    title: Title = null,
+    unknown: (/* config */ Record[String, _], /* exampleConfig */ Record[String, _], /* option */ String, /* options */ ValidationOptions, /* path */ js.UndefOr[js.Array[String]]) => Unit = null
+  ): ValidationOptions = {
     val __obj = js.Dynamic.literal(exampleConfig = exampleConfig.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (condition != null) __obj.updateDynamic("condition")(js.Any.fromFunction2(condition))
+    if (deprecate != null) __obj.updateDynamic("deprecate")(js.Any.fromFunction4(deprecate))
+    if (deprecatedConfig != null) __obj.updateDynamic("deprecatedConfig")(deprecatedConfig.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction5(error))
+    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.get.asInstanceOf[js.Any])
+    if (recursiveBlacklist != null) __obj.updateDynamic("recursiveBlacklist")(recursiveBlacklist.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (unknown != null) __obj.updateDynamic("unknown")(js.Any.fromFunction5(unknown))
     __obj.asInstanceOf[ValidationOptions]
   }
-  @scala.inline
-  implicit class ValidationOptionsOps[Self <: ValidationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExampleConfig(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exampleConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCondition(value: (/* option */ js.Any, /* validOption */ js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeprecate(
-      value: (/* config */ Record[String, _], /* option */ String, /* deprecatedOptions */ DeprecatedOptions, /* options */ ValidationOptions) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecate")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutDeprecate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeprecatedConfig(value: DeprecatedOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecatedConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(
-      value: (/* option */ String, /* received */ js.Any, /* defaultValue */ js.Any, /* options */ ValidationOptions, /* path */ js.UndefOr[js.Array[String]]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursiveBlacklist(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveBlacklist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursiveBlacklist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveBlacklist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: Title): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknown(
-      value: (/* config */ Record[String, _], /* exampleConfig */ Record[String, _], /* option */ String, /* options */ ValidationOptions, /* path */ js.UndefOr[js.Array[String]]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutUnknown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGridOptions[TEntity] extends js.Object {
   /**
     * If set to true, show the expand/collapse button even if there are no children of a node.
@@ -13,13 +12,13 @@ trait IGridOptions[TEntity] extends js.Object {
     * Defaults to true, grouping overrides to false
     * @default true
     */
-  var showTreeExpandNoChildren: js.UndefOr[Boolean] = js.native
+  var showTreeExpandNoChildren: js.UndefOr[Boolean] = js.undefined
   /**
     * If set to false, don't create the row header. Youll need to programatically control the expand states
     * Defaults to true
     * @default true
     */
-  var showTreeRowHeader: js.UndefOr[Boolean] = js.native
+  var showTreeRowHeader: js.UndefOr[Boolean] = js.undefined
   /**
     * Define custom aggregation functions.
     * The properties of this object will be aggregation types available for use on columnDef
@@ -35,7 +34,7 @@ trait IGridOptions[TEntity] extends js.Object {
     * Defaults to {}
     * @default {}
     */
-  var treeCustomAggregations: js.UndefOr[StringDictionary[IGridTreeBaseCustomAggregation[TEntity]]] = js.native
+  var treeCustomAggregations: js.UndefOr[StringDictionary[IGridTreeBaseCustomAggregation[TEntity]]] = js.undefined
   /**
     * Number of pixels of indent for the icon at each tree level, wider indents are visually more pleasing,
     * but will make the tree row header wider
@@ -43,11 +42,11 @@ trait IGridOptions[TEntity] extends js.Object {
     *
     * @default 10
     */
-  var treeIndent: js.UndefOr[Double] = js.native
+  var treeIndent: js.UndefOr[Double] = js.undefined
   /**
     * If set to true, row header even if there are no tree nodes
     */
-  var treeRowHeaderAlwaysVisible: js.UndefOr[Boolean] = js.native
+  var treeRowHeaderAlwaysVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * Base width of the tree header, provides for a single level of tree.
     * This is incremented by treeIndent for each extra level
@@ -55,94 +54,27 @@ trait IGridOptions[TEntity] extends js.Object {
     *
     * @default 30
     */
-  var treeRowHeaderBaseWidth: js.UndefOr[Double] = js.native
+  var treeRowHeaderBaseWidth: js.UndefOr[Double] = js.undefined
 }
 
 object IGridOptions {
   @scala.inline
-  def apply[TEntity](): IGridOptions[TEntity] = {
+  def apply[TEntity](
+    showTreeExpandNoChildren: js.UndefOr[Boolean] = js.undefined,
+    showTreeRowHeader: js.UndefOr[Boolean] = js.undefined,
+    treeCustomAggregations: StringDictionary[IGridTreeBaseCustomAggregation[TEntity]] = null,
+    treeIndent: js.UndefOr[Double] = js.undefined,
+    treeRowHeaderAlwaysVisible: js.UndefOr[Boolean] = js.undefined,
+    treeRowHeaderBaseWidth: js.UndefOr[Double] = js.undefined
+  ): IGridOptions[TEntity] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(showTreeExpandNoChildren)) __obj.updateDynamic("showTreeExpandNoChildren")(showTreeExpandNoChildren.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTreeRowHeader)) __obj.updateDynamic("showTreeRowHeader")(showTreeRowHeader.get.asInstanceOf[js.Any])
+    if (treeCustomAggregations != null) __obj.updateDynamic("treeCustomAggregations")(treeCustomAggregations.asInstanceOf[js.Any])
+    if (!js.isUndefined(treeIndent)) __obj.updateDynamic("treeIndent")(treeIndent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(treeRowHeaderAlwaysVisible)) __obj.updateDynamic("treeRowHeaderAlwaysVisible")(treeRowHeaderAlwaysVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(treeRowHeaderBaseWidth)) __obj.updateDynamic("treeRowHeaderBaseWidth")(treeRowHeaderBaseWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGridOptions[TEntity]]
   }
-  @scala.inline
-  implicit class IGridOptionsOps[Self[tentity] <: IGridOptions[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
-    @scala.inline
-    def withShowTreeExpandNoChildren(value: Boolean): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTreeExpandNoChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTreeExpandNoChildren: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTreeExpandNoChildren")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTreeRowHeader(value: Boolean): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTreeRowHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTreeRowHeader: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTreeRowHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeCustomAggregations(value: StringDictionary[IGridTreeBaseCustomAggregation[TEntity]]): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCustomAggregations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeCustomAggregations: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCustomAggregations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeIndent(value: Double): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeIndent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeIndent: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeIndent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeRowHeaderAlwaysVisible(value: Boolean): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeRowHeaderAlwaysVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeRowHeaderAlwaysVisible: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeRowHeaderAlwaysVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeRowHeaderBaseWidth(value: Double): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeRowHeaderBaseWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeRowHeaderBaseWidth: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeRowHeaderBaseWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

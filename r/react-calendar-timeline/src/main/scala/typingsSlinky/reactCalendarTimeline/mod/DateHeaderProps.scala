@@ -8,13 +8,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DateHeaderProps[Data] extends js.Object {
-  var children: js.UndefOr[js.Function1[/* props */ SidebarHeaderChildrenFnProps[Data], TagMod[Any]]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var headerData: js.UndefOr[Data] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var intervalRenderer: js.UndefOr[js.Function1[/* props */ js.UndefOr[IntervalRenderer[Data]], TagMod[Any]]] = js.native
+  var children: js.UndefOr[js.Function1[/* props */ SidebarHeaderChildrenFnProps[Data], TagMod[Any]]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var headerData: js.UndefOr[Data] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var intervalRenderer: js.UndefOr[js.Function1[/* props */ js.UndefOr[IntervalRenderer[Data]], TagMod[Any]]] = js.undefined
   var labelFormat: js.UndefOr[
     String | (js.Function3[
       /* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], 
@@ -22,135 +21,38 @@ trait DateHeaderProps[Data] extends js.Object {
       /* labelWidth */ Double, 
       String
     ])
-  ] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var unit: js.UndefOr[Unit | primaryHeader] = js.native
+  ] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var unit: js.UndefOr[Unit | primaryHeader] = js.undefined
 }
 
 object DateHeaderProps {
   @scala.inline
-  def apply[Data](): DateHeaderProps[Data] = {
+  def apply[Data](
+    children: /* props */ SidebarHeaderChildrenFnProps[Data] => TagMod[Any] = null,
+    className: String = null,
+    headerData: Data = null,
+    height: js.UndefOr[Double] = js.undefined,
+    intervalRenderer: /* props */ js.UndefOr[IntervalRenderer[Data]] => TagMod[Any] = null,
+    labelFormat: String | (js.Function3[
+      /* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], 
+      /* unit */ Unit, 
+      /* labelWidth */ Double, 
+      String
+    ]) = null,
+    style: CSSProperties = null,
+    unit: Unit | primaryHeader = null
+  ): DateHeaderProps[Data] = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(js.Any.fromFunction1(children))
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (headerData != null) __obj.updateDynamic("headerData")(headerData.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (intervalRenderer != null) __obj.updateDynamic("intervalRenderer")(js.Any.fromFunction1(intervalRenderer))
+    if (labelFormat != null) __obj.updateDynamic("labelFormat")(labelFormat.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateHeaderProps[Data]]
   }
-  @scala.inline
-  implicit class DateHeaderPropsOps[Self[data] <: DateHeaderProps[data], Data] (val x: Self[Data]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Data] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Data]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[Data] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Data] with Other]
-    @scala.inline
-    def withChildren(value: /* props */ SidebarHeaderChildrenFnProps[Data] => TagMod[Any]): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderData(value: Data): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderData: Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntervalRenderer(value: /* props */ js.UndefOr[IntervalRenderer[Data]] => TagMod[Any]): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIntervalRenderer: Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFormatFunction3(
-      value: (/* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], /* unit */ Unit, /* labelWidth */ Double) => String
-    ): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormat")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withLabelFormat(
-      value: String | (js.Function3[
-          /* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], 
-          /* unit */ Unit, 
-          /* labelWidth */ Double, 
-          String
-        ])
-    ): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFormat: Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: Unit | primaryHeader): Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self[Data] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

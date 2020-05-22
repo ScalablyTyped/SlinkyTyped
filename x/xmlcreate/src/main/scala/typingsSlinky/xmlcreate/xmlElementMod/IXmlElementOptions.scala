@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IXmlElementOptions extends js.Object {
   /**
     * The name of the element.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Whether to replace any invalid characters in the name of the element
     * with the Unicode replacement character. By default, this is disabled.
     */
-  var replaceInvalidCharsInName: js.UndefOr[Boolean] = js.native
+  var replaceInvalidCharsInName: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether to use a self-closing tag if this element is empty.
     *
@@ -29,52 +28,20 @@ trait IXmlElementOptions extends js.Object {
     *
     * By default, this is enabled.
     */
-  var useSelfClosingTagIfEmpty: js.UndefOr[Boolean] = js.native
+  var useSelfClosingTagIfEmpty: js.UndefOr[Boolean] = js.undefined
 }
 
 object IXmlElementOptions {
   @scala.inline
-  def apply(name: String): IXmlElementOptions = {
+  def apply(
+    name: String,
+    replaceInvalidCharsInName: js.UndefOr[Boolean] = js.undefined,
+    useSelfClosingTagIfEmpty: js.UndefOr[Boolean] = js.undefined
+  ): IXmlElementOptions = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(replaceInvalidCharsInName)) __obj.updateDynamic("replaceInvalidCharsInName")(replaceInvalidCharsInName.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useSelfClosingTagIfEmpty)) __obj.updateDynamic("useSelfClosingTagIfEmpty")(useSelfClosingTagIfEmpty.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IXmlElementOptions]
   }
-  @scala.inline
-  implicit class IXmlElementOptionsOps[Self <: IXmlElementOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReplaceInvalidCharsInName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceInvalidCharsInName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceInvalidCharsInName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceInvalidCharsInName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseSelfClosingTagIfEmpty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSelfClosingTagIfEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseSelfClosingTagIfEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSelfClosingTagIfEmpty")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

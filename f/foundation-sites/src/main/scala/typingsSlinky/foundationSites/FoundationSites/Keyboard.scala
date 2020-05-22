@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Keyboard extends js.Object {
-  def findFocusable($element: js.Object): js.Object = js.native
-  def handleKey(event: js.Any, component: js.Any, functions: js.Any): Unit = js.native
-  def parseKey(event: js.Any): String = js.native
+  def findFocusable($element: js.Object): js.Object
+  def handleKey(event: js.Any, component: js.Any, functions: js.Any): Unit
+  def parseKey(event: js.Any): String
 }
 
 object Keyboard {
@@ -21,31 +20,5 @@ object Keyboard {
     val __obj = js.Dynamic.literal(findFocusable = js.Any.fromFunction1(findFocusable), handleKey = js.Any.fromFunction3(handleKey), parseKey = js.Any.fromFunction1(parseKey))
     __obj.asInstanceOf[Keyboard]
   }
-  @scala.inline
-  implicit class KeyboardOps[Self <: Keyboard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFindFocusable(value: js.Object => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findFocusable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHandleKey(value: (js.Any, js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleKey")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withParseKey(value: js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseKey")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

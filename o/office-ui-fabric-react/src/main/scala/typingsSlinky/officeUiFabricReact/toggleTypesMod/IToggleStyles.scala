@@ -5,153 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IToggleStyles extends js.Object {
   /**
     * Container for the toggle pill and the text next to it.
     */
-  var container: IStyle = js.native
+  var container: IStyle
   /**
     * Label element above the toggle.
     */
-  var label: IStyle = js.native
+  var label: IStyle
   /**
     * Pill, rendered as a button.
     */
-  var pill: IStyle = js.native
+  var pill: IStyle
   /** Root element. */
-  var root: IStyle = js.native
+  var root: IStyle
   /**
     * Text next to the pill.
     */
-  var text: IStyle = js.native
+  var text: IStyle
   /**
     * Thumb inside of the pill.
     */
-  var thumb: IStyle = js.native
+  var thumb: IStyle
 }
 
 object IToggleStyles {
   @scala.inline
-  def apply(): IToggleStyles = {
+  def apply(
+    container: js.UndefOr[Null | IStyle] = js.undefined,
+    label: js.UndefOr[Null | IStyle] = js.undefined,
+    pill: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined,
+    text: js.UndefOr[Null | IStyle] = js.undefined,
+    thumb: js.UndefOr[Null | IStyle] = js.undefined
+  ): IToggleStyles = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(container)) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(label)) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(pill)) __obj.updateDynamic("pill")(pill.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(text)) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(thumb)) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
     __obj.asInstanceOf[IToggleStyles]
   }
-  @scala.inline
-  implicit class IToggleStylesOps[Self <: IToggleStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainer(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(null)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(null)
-        ret
-    }
-    @scala.inline
-    def withPill(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPillNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pill")(null)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withText(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(null)
-        ret
-    }
-    @scala.inline
-    def withThumb(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -28,53 +28,12 @@ trait SchemaInterconnectCircuitInfo extends js.Object {
 
 object SchemaInterconnectCircuitInfo {
   @scala.inline
-  def apply(): SchemaInterconnectCircuitInfo = {
+  def apply(customerDemarcId: String = null, googleCircuitId: String = null, googleDemarcId: String = null): SchemaInterconnectCircuitInfo = {
     val __obj = js.Dynamic.literal()
+    if (customerDemarcId != null) __obj.updateDynamic("customerDemarcId")(customerDemarcId.asInstanceOf[js.Any])
+    if (googleCircuitId != null) __obj.updateDynamic("googleCircuitId")(googleCircuitId.asInstanceOf[js.Any])
+    if (googleDemarcId != null) __obj.updateDynamic("googleDemarcId")(googleDemarcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInterconnectCircuitInfo]
   }
-  @scala.inline
-  implicit class SchemaInterconnectCircuitInfoOps[Self <: SchemaInterconnectCircuitInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomerDemarcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerDemarcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerDemarcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerDemarcId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleCircuitId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleCircuitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleCircuitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleCircuitId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleDemarcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleDemarcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleDemarcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleDemarcId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

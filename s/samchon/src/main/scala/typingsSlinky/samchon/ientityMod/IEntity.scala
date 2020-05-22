@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEntity extends js.Object {
   /**
     * A tag name when represented by XML.
     *
     * <code> <TAG {...properties} /> </code>
     */
-  def TAG(): String = js.native
+  def TAG(): String
   /**
     * Construct data of the Entity from a XML object.
     *
@@ -23,7 +22,7 @@ trait IEntity extends js.Object {
     *
     * @param xml An xml used to contruct data of entity.
     */
-  def construct(xml: XML): Unit = js.native
+  def construct(xml: XML): Unit
   /**
     * Get a key that can identify the Entity uniquely.
     *
@@ -43,7 +42,7 @@ trait IEntity extends js.Object {
     * }
     * </code>
     */
-  def key(): js.Any = js.native
+  def key(): js.Any
   /**
     * Get a XML object represents the Entity.
     *
@@ -80,7 +79,7 @@ trait IEntity extends js.Object {
     *
     * @return An XML object representing the Entity.
     */
-  def toXML(): XML = js.native
+  def toXML(): XML
 }
 
 @JSImport("samchon/protocol/entity/IEntity", "IEntity")

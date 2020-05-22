@@ -4,199 +4,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Locale extends js.Object {
   /**
     * Text for apply label.
     */
-  var applyLabel: js.UndefOr[String] = js.native
+  var applyLabel: js.UndefOr[String] = js.undefined
   /**
     * Text for cancel label.
     */
-  var cancelLabel: js.UndefOr[String] = js.native
+  var cancelLabel: js.UndefOr[String] = js.undefined
   /**
     * Text for the custom range label.
     */
-  var customRangeLabel: js.UndefOr[String] = js.native
+  var customRangeLabel: js.UndefOr[String] = js.undefined
   /**
     * Weekday names displayed in the header of calendar.
     */
-  var daysOfWeek: js.UndefOr[js.Array[String]] = js.native
+  var daysOfWeek: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The first day of the week (0-6, Sunday to Saturday).
     */
-  var firstDay: js.UndefOr[Double] = js.native
+  var firstDay: js.UndefOr[Double] = js.undefined
   /**
     * Format of the date string. example: 'YYYY-MM-DD'
     */
-  var format: js.UndefOr[String] = js.native
+  var format: js.UndefOr[String] = js.undefined
   /**
     * Text for fromLabel label.
     */
-  var fromLabel: js.UndefOr[String] = js.native
+  var fromLabel: js.UndefOr[String] = js.undefined
   /**
     * Month names used in the month select boxes.
     */
-  var monthNames: js.UndefOr[js.Array[String]] = js.native
+  var monthNames: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Separator between the startDate and endDate in the attached input element. Example: ' - '
     */
-  var separator: js.UndefOr[String] = js.native
+  var separator: js.UndefOr[String] = js.undefined
   /**
     * Text for toLabel label.
     */
-  var toLabel: js.UndefOr[String] = js.native
+  var toLabel: js.UndefOr[String] = js.undefined
   /**
     * Text for the week label.
     */
-  var weekLabel: js.UndefOr[String] = js.native
+  var weekLabel: js.UndefOr[String] = js.undefined
 }
 
 object Locale {
   @scala.inline
-  def apply(): Locale = {
+  def apply(
+    applyLabel: String = null,
+    cancelLabel: String = null,
+    customRangeLabel: String = null,
+    daysOfWeek: js.Array[String] = null,
+    firstDay: js.UndefOr[Double] = js.undefined,
+    format: String = null,
+    fromLabel: String = null,
+    monthNames: js.Array[String] = null,
+    separator: String = null,
+    toLabel: String = null,
+    weekLabel: String = null
+  ): Locale = {
     val __obj = js.Dynamic.literal()
+    if (applyLabel != null) __obj.updateDynamic("applyLabel")(applyLabel.asInstanceOf[js.Any])
+    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
+    if (customRangeLabel != null) __obj.updateDynamic("customRangeLabel")(customRangeLabel.asInstanceOf[js.Any])
+    if (daysOfWeek != null) __obj.updateDynamic("daysOfWeek")(daysOfWeek.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstDay)) __obj.updateDynamic("firstDay")(firstDay.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (fromLabel != null) __obj.updateDynamic("fromLabel")(fromLabel.asInstanceOf[js.Any])
+    if (monthNames != null) __obj.updateDynamic("monthNames")(monthNames.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
+    if (toLabel != null) __obj.updateDynamic("toLabel")(toLabel.asInstanceOf[js.Any])
+    if (weekLabel != null) __obj.updateDynamic("weekLabel")(weekLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Locale]
   }
-  @scala.inline
-  implicit class LocaleOps[Self <: Locale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplyLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancelLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancelLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomRangeLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRangeLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomRangeLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRangeLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDaysOfWeek(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("daysOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDaysOfWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("daysOfWeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstDay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeekLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeekLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekLabel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

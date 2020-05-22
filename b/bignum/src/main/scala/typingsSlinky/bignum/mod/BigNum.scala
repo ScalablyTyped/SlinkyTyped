@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BigNum extends BigNumCompatible {
+trait BigNum extends js.Object {
   /** Return a new BigNum with the absolute value of the instance. */
   def abs(): BigNum = js.native
   /** Return a new BigNum containing the instance value plus n. */

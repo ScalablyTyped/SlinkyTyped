@@ -4,151 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AbstractColDef extends js.Object {
   /** Whether to show the column when the group is open / closed. */
-  var columnGroupShow: js.UndefOr[String] = js.native
+  var columnGroupShow: js.UndefOr[String] = js.undefined
   /** CSS class for the header */
   var headerClass: js.UndefOr[
     String | js.Array[String] | (js.Function1[/* params */ js.Any, String | js.Array[String]])
-  ] = js.native
+  ] = js.undefined
   /** The name to render in the column header */
-  var headerName: js.UndefOr[String] = js.native
+  var headerName: js.UndefOr[String] = js.undefined
   /** Tooltip for the column header */
-  var headerTooltip: js.UndefOr[String] = js.native
+  var headerTooltip: js.UndefOr[String] = js.undefined
   /** Expression or function to get the cells value. */
-  var headerValueGetter: js.UndefOr[String | js.Function] = js.native
+  var headerValueGetter: js.UndefOr[String | js.Function] = js.undefined
   /** Never set this, it is used internally by grid when doing in-grid pivoting */
-  var pivotKeys: js.UndefOr[js.Array[String]] = js.native
+  var pivotKeys: js.UndefOr[js.Array[String]] = js.undefined
   /** Set to true to not include this column in the toolpanel */
-  var suppressToolPanel: js.UndefOr[Boolean] = js.native
+  var suppressToolPanel: js.UndefOr[Boolean] = js.undefined
   /** CSS class for the header */
   var toolPanelClass: js.UndefOr[
     String | js.Array[String] | (js.Function1[/* params */ js.Any, String | js.Array[String]])
-  ] = js.native
+  ] = js.undefined
 }
 
 object AbstractColDef {
   @scala.inline
-  def apply(): AbstractColDef = {
+  def apply(
+    columnGroupShow: String = null,
+    headerClass: String | js.Array[String] | (js.Function1[/* params */ js.Any, String | js.Array[String]]) = null,
+    headerName: String = null,
+    headerTooltip: String = null,
+    headerValueGetter: String | js.Function = null,
+    pivotKeys: js.Array[String] = null,
+    suppressToolPanel: js.UndefOr[Boolean] = js.undefined,
+    toolPanelClass: String | js.Array[String] | (js.Function1[/* params */ js.Any, String | js.Array[String]]) = null
+  ): AbstractColDef = {
     val __obj = js.Dynamic.literal()
+    if (columnGroupShow != null) __obj.updateDynamic("columnGroupShow")(columnGroupShow.asInstanceOf[js.Any])
+    if (headerClass != null) __obj.updateDynamic("headerClass")(headerClass.asInstanceOf[js.Any])
+    if (headerName != null) __obj.updateDynamic("headerName")(headerName.asInstanceOf[js.Any])
+    if (headerTooltip != null) __obj.updateDynamic("headerTooltip")(headerTooltip.asInstanceOf[js.Any])
+    if (headerValueGetter != null) __obj.updateDynamic("headerValueGetter")(headerValueGetter.asInstanceOf[js.Any])
+    if (pivotKeys != null) __obj.updateDynamic("pivotKeys")(pivotKeys.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressToolPanel)) __obj.updateDynamic("suppressToolPanel")(suppressToolPanel.get.asInstanceOf[js.Any])
+    if (toolPanelClass != null) __obj.updateDynamic("toolPanelClass")(toolPanelClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbstractColDef]
   }
-  @scala.inline
-  implicit class AbstractColDefOps[Self <: AbstractColDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnGroupShow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGroupShow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnGroupShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGroupShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderClassFunction1(value: /* params */ js.Any => String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHeaderClass(value: String | js.Array[String] | (js.Function1[/* params */ js.Any, String | js.Array[String]])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderTooltip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderValueGetter(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerValueGetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderValueGetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerValueGetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressToolPanel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressToolPanel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressToolPanel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressToolPanel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolPanelClassFunction1(value: /* params */ js.Any => String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolPanelClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withToolPanelClass(value: String | js.Array[String] | (js.Function1[/* params */ js.Any, String | js.Array[String]])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolPanelClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolPanelClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolPanelClass")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

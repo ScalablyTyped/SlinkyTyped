@@ -11,48 +11,18 @@ trait ApplicationResourceLifecycleConfig extends js.Object {
     */
   var ServiceRole: js.UndefOr[String] = js.native
   /**
-    * The application version lifecycle configuration.
+    * Defines lifecycle settings for application versions.
     */
   var VersionLifecycleConfig: js.UndefOr[ApplicationVersionLifecycleConfig] = js.native
 }
 
 object ApplicationResourceLifecycleConfig {
   @scala.inline
-  def apply(): ApplicationResourceLifecycleConfig = {
+  def apply(ServiceRole: String = null, VersionLifecycleConfig: ApplicationVersionLifecycleConfig = null): ApplicationResourceLifecycleConfig = {
     val __obj = js.Dynamic.literal()
+    if (ServiceRole != null) __obj.updateDynamic("ServiceRole")(ServiceRole.asInstanceOf[js.Any])
+    if (VersionLifecycleConfig != null) __obj.updateDynamic("VersionLifecycleConfig")(VersionLifecycleConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationResourceLifecycleConfig]
   }
-  @scala.inline
-  implicit class ApplicationResourceLifecycleConfigOps[Self <: ApplicationResourceLifecycleConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionLifecycleConfig(value: ApplicationVersionLifecycleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionLifecycleConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionLifecycleConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionLifecycleConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

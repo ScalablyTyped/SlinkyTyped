@@ -1,161 +1,51 @@
 package typingsSlinky.baseui.layoutGridMod
 
-import slinky.core.facade.ReactElement
+import slinky.core.TagMod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridProps extends js.Object {
-  var align: js.UndefOr[Responsive[ALIGNMENT]] = js.native
-  var behavior: js.UndefOr[BEHAVIOR] = js.native
-  var children: ReactElement | js.Array[ReactElement] = js.native
-  var gridColumns: js.UndefOr[Responsive[Double]] = js.native
-  var gridGaps: js.UndefOr[Responsive[Double]] = js.native
-  var gridGutters: js.UndefOr[Responsive[Double]] = js.native
-  var gridMargins: js.UndefOr[Responsive[Double]] = js.native
-  var gridMaxWidth: js.UndefOr[Double] = js.native
+  var align: js.UndefOr[Responsive[ALIGNMENT]] = js.undefined
+  var behavior: js.UndefOr[BEHAVIOR] = js.undefined
+  var children: TagMod[Any]
+  var gridColumns: js.UndefOr[Responsive[Double]] = js.undefined
+  var gridGaps: js.UndefOr[Responsive[Double]] = js.undefined
+  var gridGutters: js.UndefOr[Responsive[Double]] = js.undefined
+  var gridMargins: js.UndefOr[Responsive[Double]] = js.undefined
+  var gridMaxWidth: js.UndefOr[Double] = js.undefined
   var gridUnit: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
-  ] = js.native
-  var overrides: js.UndefOr[typingsSlinky.baseui.anon.Grid] = js.native
+  ] = js.undefined
+  var overrides: js.UndefOr[typingsSlinky.baseui.anon.Grid] = js.undefined
 }
 
 object GridProps {
   @scala.inline
-  def apply(children: ReactElement | js.Array[ReactElement]): GridProps = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+  def apply(
+    align: Responsive[ALIGNMENT] = null,
+    behavior: BEHAVIOR = null,
+    children: TagMod[Any] = null,
+    gridColumns: Responsive[Double] = null,
+    gridGaps: Responsive[Double] = null,
+    gridGutters: Responsive[Double] = null,
+    gridMargins: Responsive[Double] = null,
+    gridMaxWidth: js.UndefOr[Double] = js.undefined,
+    gridUnit: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any = null,
+    overrides: typingsSlinky.baseui.anon.Grid = null
+  ): GridProps = {
+    val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (gridColumns != null) __obj.updateDynamic("gridColumns")(gridColumns.asInstanceOf[js.Any])
+    if (gridGaps != null) __obj.updateDynamic("gridGaps")(gridGaps.asInstanceOf[js.Any])
+    if (gridGutters != null) __obj.updateDynamic("gridGutters")(gridGutters.asInstanceOf[js.Any])
+    if (gridMargins != null) __obj.updateDynamic("gridMargins")(gridMargins.asInstanceOf[js.Any])
+    if (!js.isUndefined(gridMaxWidth)) __obj.updateDynamic("gridMaxWidth")(gridMaxWidth.get.asInstanceOf[js.Any])
+    if (gridUnit != null) __obj.updateDynamic("gridUnit")(gridUnit.asInstanceOf[js.Any])
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridProps]
   }
-  @scala.inline
-  implicit class GridPropsOps[Self <: GridProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: ReactElement | js.Array[ReactElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlign(value: Responsive[ALIGNMENT]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBehavior(value: BEHAVIOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridColumns(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridGaps(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridGaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridGaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridGaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridGutters(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridGutters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridGutters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridGutters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridMargins(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridMargins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridMargins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridMargins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridUnit(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrides(value: typingsSlinky.baseui.anon.Grid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

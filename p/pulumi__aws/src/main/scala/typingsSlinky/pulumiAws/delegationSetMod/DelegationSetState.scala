@@ -21,41 +21,11 @@ trait DelegationSetState extends js.Object {
 
 object DelegationSetState {
   @scala.inline
-  def apply(): DelegationSetState = {
+  def apply(nameServers: Input[js.Array[Input[String]]] = null, referenceName: Input[String] = null): DelegationSetState = {
     val __obj = js.Dynamic.literal()
+    if (nameServers != null) __obj.updateDynamic("nameServers")(nameServers.asInstanceOf[js.Any])
+    if (referenceName != null) __obj.updateDynamic("referenceName")(referenceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DelegationSetState]
   }
-  @scala.inline
-  implicit class DelegationSetStateOps[Self <: DelegationSetState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNameServers(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameServers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

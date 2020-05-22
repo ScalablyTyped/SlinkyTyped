@@ -12,12 +12,11 @@ import scala.scalajs.js.annotation._
   *
   * A reference mark is used to refer to text positions in a text document.
   */
-@js.native
 trait XReferenceMarksSupplier extends XInterface {
   /** @returns the collection of reference marks. */
-  val ReferenceMarks: XNameAccess = js.native
+  val ReferenceMarks: XNameAccess
   /** @returns the collection of reference marks. */
-  def getReferenceMarks(): XNameAccess = js.native
+  def getReferenceMarks(): XNameAccess
 }
 
 object XReferenceMarksSupplier {
@@ -32,25 +31,5 @@ object XReferenceMarksSupplier {
     val __obj = js.Dynamic.literal(ReferenceMarks = ReferenceMarks.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getReferenceMarks = js.Any.fromFunction0(getReferenceMarks), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XReferenceMarksSupplier]
   }
-  @scala.inline
-  implicit class XReferenceMarksSupplierOps[Self <: XReferenceMarksSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReferenceMarks(value: XNameAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferenceMarks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetReferenceMarks(value: () => XNameAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getReferenceMarks")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

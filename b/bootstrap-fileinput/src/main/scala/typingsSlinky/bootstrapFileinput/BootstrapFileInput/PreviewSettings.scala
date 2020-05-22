@@ -5,127 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PreviewSettings extends js.Object {
-  var audio: js.UndefOr[Height] = js.native
-  var flash: js.UndefOr[Height] = js.native
-  var html: js.UndefOr[Height] = js.native
-  var image: js.UndefOr[Height] = js.native
-  var `object`: js.UndefOr[Height] = js.native
-  var other: js.UndefOr[Height] = js.native
-  var text: js.UndefOr[Height] = js.native
-  var video: js.UndefOr[Height] = js.native
+  var audio: js.UndefOr[Height] = js.undefined
+  var flash: js.UndefOr[Height] = js.undefined
+  var html: js.UndefOr[Height] = js.undefined
+  var image: js.UndefOr[Height] = js.undefined
+  var `object`: js.UndefOr[Height] = js.undefined
+  var other: js.UndefOr[Height] = js.undefined
+  var text: js.UndefOr[Height] = js.undefined
+  var video: js.UndefOr[Height] = js.undefined
 }
 
 object PreviewSettings {
   @scala.inline
-  def apply(): PreviewSettings = {
+  def apply(
+    audio: Height = null,
+    flash: Height = null,
+    html: Height = null,
+    image: Height = null,
+    `object`: Height = null,
+    other: Height = null,
+    text: Height = null,
+    video: Height = null
+  ): PreviewSettings = {
     val __obj = js.Dynamic.literal()
+    if (audio != null) __obj.updateDynamic("audio")(audio.asInstanceOf[js.Any])
+    if (flash != null) __obj.updateDynamic("flash")(flash.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (`object` != null) __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    if (other != null) __obj.updateDynamic("other")(other.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (video != null) __obj.updateDynamic("video")(video.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreviewSettings]
   }
-  @scala.inline
-  implicit class PreviewSettingsOps[Self <: PreviewSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudio(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlash(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObject(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOther(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOther: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideo(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

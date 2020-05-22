@@ -4,143 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoFillCompleteEventArgs extends js.Object {
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Returns auto fill begin cell range.
     */
-  var dataRange: js.UndefOr[js.Array[_]] = js.native
+  var dataRange: js.UndefOr[js.Array[_]] = js.undefined
   /** Returns which direction to drag the auto fill.
     */
-  var direction: js.UndefOr[String] = js.native
+  var direction: js.UndefOr[String] = js.undefined
   /** Returns fill cells range.
     */
-  var fillRange: js.UndefOr[js.Array[_]] = js.native
+  var fillRange: js.UndefOr[js.Array[_]] = js.undefined
   /** Returns the auto fill type.
     */
-  var fillType: js.UndefOr[String] = js.native
+  var fillType: js.UndefOr[String] = js.undefined
   /** Returns the Spreadsheet model.
     */
-  var model: js.UndefOr[Model] = js.native
+  var model: js.UndefOr[Model] = js.undefined
   /** Returns the sheet index.
     */
-  var sheetIdx: js.UndefOr[Double] = js.native
+  var sheetIdx: js.UndefOr[Double] = js.undefined
   /** Returns the name of the event.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object AutoFillCompleteEventArgs {
   @scala.inline
-  def apply(): AutoFillCompleteEventArgs = {
+  def apply(
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    dataRange: js.Array[_] = null,
+    direction: String = null,
+    fillRange: js.Array[_] = null,
+    fillType: String = null,
+    model: Model = null,
+    sheetIdx: js.UndefOr[Double] = js.undefined,
+    `type`: String = null
+  ): AutoFillCompleteEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (dataRange != null) __obj.updateDynamic("dataRange")(dataRange.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (fillRange != null) __obj.updateDynamic("fillRange")(fillRange.asInstanceOf[js.Any])
+    if (fillType != null) __obj.updateDynamic("fillType")(fillType.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetIdx)) __obj.updateDynamic("sheetIdx")(sheetIdx.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoFillCompleteEventArgs]
   }
-  @scala.inline
-  implicit class AutoFillCompleteEventArgsOps[Self <: AutoFillCompleteEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataRange(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillRange(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: Model): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetIdx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetIdx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetIdx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetIdx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,13 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EntityState extends IEnum {
-  var Added: EntityStateSymbol = js.native
-  var Deleted: EntityStateSymbol = js.native
-  var Detached: EntityStateSymbol = js.native
-  var Modified: EntityStateSymbol = js.native
-  var Unchanged: EntityStateSymbol = js.native
+  var Added: EntityStateSymbol
+  var Deleted: EntityStateSymbol
+  var Detached: EntityStateSymbol
+  var Modified: EntityStateSymbol
+  var Unchanged: EntityStateSymbol
 }
 
 object EntityState {
@@ -31,43 +30,5 @@ object EntityState {
     val __obj = js.Dynamic.literal(Added = Added.asInstanceOf[js.Any], Deleted = Deleted.asInstanceOf[js.Any], Detached = Detached.asInstanceOf[js.Any], Modified = Modified.asInstanceOf[js.Any], Unchanged = Unchanged.asInstanceOf[js.Any], contains = js.Any.fromFunction1(contains), fromName = js.Any.fromFunction1(fromName), getNames = js.Any.fromFunction0(getNames), getSymbols = js.Any.fromFunction0(getSymbols))
     __obj.asInstanceOf[EntityState]
   }
-  @scala.inline
-  implicit class EntityStateOps[Self <: EntityState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdded(value: EntityStateSymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Added")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleted(value: EntityStateSymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetached(value: EntityStateSymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Detached")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModified(value: EntityStateSymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Modified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnchanged(value: EntityStateSymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unchanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

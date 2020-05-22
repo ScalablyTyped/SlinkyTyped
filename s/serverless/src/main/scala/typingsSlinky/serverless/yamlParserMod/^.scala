@@ -8,5 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends YamlParser {
   def this(serverless: typingsSlinky.serverless.mod.^) = this()
+  /* CompleteClass */
+  override def parse(yamlFilePath: String): js.Promise[_] = js.native
 }
 

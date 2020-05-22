@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IApplication extends js.Object {
   /**
     * The application build version.
     */
-  var build: String = js.native
+  var build: String
   /**
     * The application version.
     */
-  var ver: String = js.native
+  var ver: String
 }
 
 object IApplication {
@@ -22,25 +21,5 @@ object IApplication {
     val __obj = js.Dynamic.literal(build = build.asInstanceOf[js.Any], ver = ver.asInstanceOf[js.Any])
     __obj.asInstanceOf[IApplication]
   }
-  @scala.inline
-  implicit class IApplicationOps[Self <: IApplication] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuild(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ver")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

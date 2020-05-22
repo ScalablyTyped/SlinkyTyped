@@ -1,12 +1,13 @@
 package typingsSlinky.styledSystem.mod
 
+import typingsSlinky.csstype.mod.BackgroundImageProperty
 import typingsSlinky.csstype.mod.BackgroundPositionProperty
+import typingsSlinky.csstype.mod.BackgroundRepeatProperty
 import typingsSlinky.csstype.mod.BackgroundSizeProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BackgroundProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal]
   extends BackgroundImageProps[ThemeType]
      with BackgroundSizeProps[ThemeType, BackgroundSizeProperty[TLengthStyledSystem]]
@@ -18,40 +19,27 @@ trait BackgroundProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal]
     *
     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
     */
-  var background: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
+  var background: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
 }
 
 object BackgroundProps {
   @scala.inline
-  def apply[ThemeType, TVal](): BackgroundProps[ThemeType, TVal] = {
+  def apply[ThemeType, TVal](
+    background: js.UndefOr[Null | (ResponsiveValue[TVal, ThemeType])] = js.undefined,
+    backgroundImage: js.UndefOr[Null | (ResponsiveValue[BackgroundImageProperty, ThemeType])] = js.undefined,
+    backgroundPosition: js.UndefOr[
+      Null | (ResponsiveValue[BackgroundPositionProperty[TLengthStyledSystem], ThemeType])
+    ] = js.undefined,
+    backgroundRepeat: js.UndefOr[Null | (ResponsiveValue[BackgroundRepeatProperty, ThemeType])] = js.undefined,
+    backgroundSize: js.UndefOr[Null | (ResponsiveValue[BackgroundSizeProperty[TLengthStyledSystem], ThemeType])] = js.undefined
+  ): BackgroundProps[ThemeType, TVal] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(background)) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (!js.isUndefined(backgroundImage)) __obj.updateDynamic("backgroundImage")(backgroundImage.asInstanceOf[js.Any])
+    if (!js.isUndefined(backgroundPosition)) __obj.updateDynamic("backgroundPosition")(backgroundPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(backgroundRepeat)) __obj.updateDynamic("backgroundRepeat")(backgroundRepeat.asInstanceOf[js.Any])
+    if (!js.isUndefined(backgroundSize)) __obj.updateDynamic("backgroundSize")(backgroundSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackgroundProps[ThemeType, TVal]]
   }
-  @scala.inline
-  implicit class BackgroundPropsOps[Self[themetype, tval] <: BackgroundProps[themetype, tval], ThemeType, TVal] (val x: Self[ThemeType, TVal]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ThemeType, TVal] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType, TVal]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[ThemeType, TVal]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[ThemeType, TVal]) with Other]
-    @scala.inline
-    def withBackground(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundNull: Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(null)
-        ret
-    }
-  }
-  
 }
 

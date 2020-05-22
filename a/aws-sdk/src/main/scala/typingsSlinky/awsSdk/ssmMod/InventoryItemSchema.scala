@@ -26,53 +26,16 @@ trait InventoryItemSchema extends js.Object {
 
 object InventoryItemSchema {
   @scala.inline
-  def apply(Attributes: InventoryItemAttributeList, TypeName: InventoryItemTypeName): InventoryItemSchema = {
+  def apply(
+    Attributes: InventoryItemAttributeList,
+    TypeName: InventoryItemTypeName,
+    DisplayName: InventoryTypeDisplayName = null,
+    Version: InventoryItemSchemaVersion = null
+  ): InventoryItemSchema = {
     val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any], TypeName = TypeName.asInstanceOf[js.Any])
+    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
+    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
     __obj.asInstanceOf[InventoryItemSchema]
   }
-  @scala.inline
-  implicit class InventoryItemSchemaOps[Self <: InventoryItemSchema] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: InventoryItemAttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeName(value: InventoryItemTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: InventoryTypeDisplayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: InventoryItemSchemaVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

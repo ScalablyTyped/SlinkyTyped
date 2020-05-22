@@ -10,24 +10,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PagesResource extends js.Object {
   /** Delete a page by ID. */
-  def delete(request: PageId): Request[Unit] = js.native
+  def delete(request: PageId): Request[Unit]
   /** Gets one blog page by ID. */
-  def get(request: PrettyPrint): Request[Page] = js.native
+  def get(request: PrettyPrint): Request[Page]
   /** Add a page. */
-  def insert(request: IsDraft): Request[Page] = js.native
+  def insert(request: IsDraft): Request[Page]
   /** Retrieves the pages for a blog, optionally including non-LIVE statuses. */
-  def list(request: MaxResults): Request[PageList] = js.native
+  def list(request: MaxResults): Request[PageList]
   /** Update a page. This method supports patch semantics. */
-  def patch(request: Publish): Request[Page] = js.native
+  def patch(request: Publish): Request[Page]
   /** Publishes a draft page. */
-  def publish(request: PageId): Request[Page] = js.native
+  def publish(request: PageId): Request[Page]
   /** Revert a published or scheduled page to draft state. */
-  def revert(request: PageId): Request[Page] = js.native
+  def revert(request: PageId): Request[Page]
   /** Update a page. */
-  def update(request: Publish): Request[Page] = js.native
+  def update(request: Publish): Request[Page]
 }
 
 object PagesResource {
@@ -45,61 +44,5 @@ object PagesResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), publish = js.Any.fromFunction1(publish), revert = js.Any.fromFunction1(revert), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[PagesResource]
   }
-  @scala.inline
-  implicit class PagesResourceOps[Self <: PagesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: PageId => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: PrettyPrint => Request[Page]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: IsDraft => Request[Page]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: MaxResults => Request[PageList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Publish => Request[Page]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPublish(value: PageId => Request[Page]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publish")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRevert(value: PageId => Request[Page]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Publish => Request[Page]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

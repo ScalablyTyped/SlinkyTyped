@@ -5,85 +5,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GenericServerOptions
-  extends AllPublishOptions
-     with PublishConfiguration {
+  extends PublishConfiguration
+     with _AllPublishOptions {
   /**
     * The channel.
     * @default latest
     */
-  val channel: js.UndefOr[String | Null] = js.native
+  val channel: js.UndefOr[String | Null] = js.undefined
   /**
     * The provider. Must be `generic`.
     */
   @JSName("provider")
-  val provider_GenericServerOptions: generic = js.native
+  val provider_GenericServerOptions: generic
   /**
     * The base url. e.g. `https://bucket_name.s3.amazonaws.com`.
     */
-  val url: String = js.native
+  val url: String
   /**
     * Whether to use multiple range requests for differential update. Defaults to `true` if `url` doesn't contain `s3.amazonaws.com`.
     */
-  val useMultipleRangeRequest: js.UndefOr[Boolean] = js.native
+  val useMultipleRangeRequest: js.UndefOr[Boolean] = js.undefined
 }
 
 object GenericServerOptions {
   @scala.inline
-  def apply(provider: generic, url: String): GenericServerOptions = {
+  def apply(
+    provider: generic,
+    url: String,
+    channel: js.UndefOr[Null | String] = js.undefined,
+    publishAutoUpdate: js.UndefOr[Boolean] = js.undefined,
+    publisherName: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    updaterCacheDirName: js.UndefOr[Null | String] = js.undefined,
+    useMultipleRangeRequest: js.UndefOr[Boolean] = js.undefined
+  ): GenericServerOptions = {
     val __obj = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel)) __obj.updateDynamic("channel")(channel.asInstanceOf[js.Any])
+    if (!js.isUndefined(publishAutoUpdate)) __obj.updateDynamic("publishAutoUpdate")(publishAutoUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(publisherName)) __obj.updateDynamic("publisherName")(publisherName.asInstanceOf[js.Any])
+    if (!js.isUndefined(updaterCacheDirName)) __obj.updateDynamic("updaterCacheDirName")(updaterCacheDirName.asInstanceOf[js.Any])
+    if (!js.isUndefined(useMultipleRangeRequest)) __obj.updateDynamic("useMultipleRangeRequest")(useMultipleRangeRequest.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenericServerOptions]
   }
-  @scala.inline
-  implicit class GenericServerOptionsOps[Self <: GenericServerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvider(value: generic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChannel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(null)
-        ret
-    }
-    @scala.inline
-    def withUseMultipleRangeRequest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMultipleRangeRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseMultipleRangeRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMultipleRangeRequest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

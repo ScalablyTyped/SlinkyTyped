@@ -1,10 +1,10 @@
 package typingsSlinky.keycloakJs
 
-import typingsSlinky.keycloakJs.mod.KeycloakAdapterName
 import typingsSlinky.keycloakJs.mod.KeycloakFlow
 import typingsSlinky.keycloakJs.mod.KeycloakOnLoad
 import typingsSlinky.keycloakJs.mod.KeycloakResponseMode
 import typingsSlinky.keycloakJs.mod.KeycloakResponseType
+import typingsSlinky.keycloakJs.mod._KeycloakAdapterName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,13 +23,13 @@ object keycloakJsStrings {
   sealed trait `code id_token token` extends KeycloakResponseType
   
   @js.native
-  sealed trait cordova extends KeycloakAdapterName
+  sealed trait cordova extends _KeycloakAdapterName
   
   @js.native
-  sealed trait `cordova-native` extends KeycloakAdapterName
+  sealed trait `cordova-native` extends _KeycloakAdapterName
   
   @js.native
-  sealed trait default extends KeycloakAdapterName
+  sealed trait default extends _KeycloakAdapterName
   
   @js.native
   sealed trait fragment extends KeycloakResponseMode

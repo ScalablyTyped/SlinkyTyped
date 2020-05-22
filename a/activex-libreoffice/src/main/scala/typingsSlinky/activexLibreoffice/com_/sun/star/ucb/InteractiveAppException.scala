@@ -11,10 +11,9 @@ import scala.scalajs.js.annotation._
   * An application error.
   * @since OOo 1.1.2
   */
-@js.native
 trait InteractiveAppException extends ClassifiedInteractionRequest {
   /** The type of application error. */
-  var Code: Double = js.native
+  var Code: Double
 }
 
 object InteractiveAppException {
@@ -23,19 +22,5 @@ object InteractiveAppException {
     val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], Code = Code.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[InteractiveAppException]
   }
-  @scala.inline
-  implicit class InteractiveAppExceptionOps[Self <: InteractiveAppException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

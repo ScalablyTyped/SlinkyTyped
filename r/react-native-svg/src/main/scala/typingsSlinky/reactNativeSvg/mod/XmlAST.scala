@@ -2,16 +2,16 @@ package typingsSlinky.reactNativeSvg.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
+import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XmlAST extends AST {
   @JSName("children")
-  var children_XmlAST: js.Array[XmlAST | String] = js.native
+  var children_XmlAST: js.Array[XmlAST | String]
   @JSName("parent")
-  var parent_XmlAST: XmlAST | Null = js.native
+  var parent_XmlAST: XmlAST | Null
 }
 
 object XmlAST {
@@ -20,36 +20,17 @@ object XmlAST {
     Tag: ReactComponentClass[js.Object],
     children: js.Array[XmlAST | String],
     props: StringDictionary[js.UndefOr[Styles | String]],
-    tag: String
+    tag: String,
+    parent: XmlAST = null,
+    priority: Map[String, js.UndefOr[Boolean]] = null,
+    style: Styles = null,
+    styles: String = null
   ): XmlAST = {
-    val __obj = js.Dynamic.literal(Tag = Tag.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(Tag = Tag.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
+    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[XmlAST]
   }
-  @scala.inline
-  implicit class XmlASTOps[Self <: XmlAST] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: js.Array[XmlAST | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: XmlAST): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(null)
-        ret
-    }
-  }
-  
 }
 

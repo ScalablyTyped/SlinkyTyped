@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TreeTablePaste extends js.Object {
-  def insert(data: js.Array[_]): Unit = js.native
+  def insert(data: js.Array[_]): Unit
 }
 
 @JSImport("webix", "TreeTablePaste")

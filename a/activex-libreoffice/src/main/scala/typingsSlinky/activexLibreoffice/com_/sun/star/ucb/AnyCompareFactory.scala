@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
   * is a factory to get {@link XAnyCompare} service implementations.
   * @since OOo 1.1.2
   */
-@js.native
 trait AnyCompareFactory extends XAnyCompareFactory {
-  def createWithLocale(aLocale: Locale): Unit = js.native
+  def createWithLocale(aLocale: Locale): Unit
 }
 
 object AnyCompareFactory {
@@ -27,19 +26,5 @@ object AnyCompareFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createAnyCompareByName = js.Any.fromFunction1(createAnyCompareByName), createWithLocale = js.Any.fromFunction1(createWithLocale), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[AnyCompareFactory]
   }
-  @scala.inline
-  implicit class AnyCompareFactoryOps[Self <: AnyCompareFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateWithLocale(value: Locale => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithLocale")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

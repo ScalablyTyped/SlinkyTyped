@@ -6,173 +6,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaConfigureSidecarOptions extends js.Object {
-  var _csrftoken: js.UndefOr[String] = js.native
-  var _uid: js.UndefOr[String] = js.native
-  var _uuid: js.UndefOr[String] = js.native
-  var caption: js.UndefOr[String] = js.native
-  var children_metadata: js.Array[MediaConfigureSidecarItem] = js.native
-  var client_sidecar_id: js.UndefOr[String] = js.native
-  var device: js.UndefOr[Androidversion] = js.native
-  var device_id: js.UndefOr[String] = js.native
-  var location: js.UndefOr[MediaLocation | String] = js.native
-  var source_type: js.UndefOr[String] = js.native
-  var timezone_offset: js.UndefOr[String] = js.native
-  var upload_id: js.UndefOr[String] = js.native
+  var _csrftoken: js.UndefOr[String] = js.undefined
+  var _uid: js.UndefOr[String] = js.undefined
+  var _uuid: js.UndefOr[String] = js.undefined
+  var caption: js.UndefOr[String] = js.undefined
+  var children_metadata: js.Array[MediaConfigureSidecarItem]
+  var client_sidecar_id: js.UndefOr[String] = js.undefined
+  var device: js.UndefOr[Androidversion] = js.undefined
+  var device_id: js.UndefOr[String] = js.undefined
+  var location: js.UndefOr[MediaLocation | String] = js.undefined
+  var source_type: js.UndefOr[String] = js.undefined
+  var timezone_offset: js.UndefOr[String] = js.undefined
+  var upload_id: js.UndefOr[String] = js.undefined
 }
 
 object MediaConfigureSidecarOptions {
   @scala.inline
-  def apply(children_metadata: js.Array[MediaConfigureSidecarItem]): MediaConfigureSidecarOptions = {
+  def apply(
+    children_metadata: js.Array[MediaConfigureSidecarItem],
+    _csrftoken: String = null,
+    _uid: String = null,
+    _uuid: String = null,
+    caption: String = null,
+    client_sidecar_id: String = null,
+    device: Androidversion = null,
+    device_id: String = null,
+    location: MediaLocation | String = null,
+    source_type: String = null,
+    timezone_offset: String = null,
+    upload_id: String = null
+  ): MediaConfigureSidecarOptions = {
     val __obj = js.Dynamic.literal(children_metadata = children_metadata.asInstanceOf[js.Any])
+    if (_csrftoken != null) __obj.updateDynamic("_csrftoken")(_csrftoken.asInstanceOf[js.Any])
+    if (_uid != null) __obj.updateDynamic("_uid")(_uid.asInstanceOf[js.Any])
+    if (_uuid != null) __obj.updateDynamic("_uuid")(_uuid.asInstanceOf[js.Any])
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (client_sidecar_id != null) __obj.updateDynamic("client_sidecar_id")(client_sidecar_id.asInstanceOf[js.Any])
+    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
+    if (device_id != null) __obj.updateDynamic("device_id")(device_id.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (source_type != null) __obj.updateDynamic("source_type")(source_type.asInstanceOf[js.Any])
+    if (timezone_offset != null) __obj.updateDynamic("timezone_offset")(timezone_offset.asInstanceOf[js.Any])
+    if (upload_id != null) __obj.updateDynamic("upload_id")(upload_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaConfigureSidecarOptions]
   }
-  @scala.inline
-  implicit class MediaConfigureSidecarOptionsOps[Self <: MediaConfigureSidecarOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren_metadata(value: js.Array[MediaConfigureSidecarItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children_metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_csrftoken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_csrftoken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_csrftoken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_csrftoken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_uid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_uid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_uid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_uuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_uuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_uuid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_sidecar_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_sidecar_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_sidecar_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_sidecar_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevice(value: Androidversion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevice_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevice_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: MediaLocation | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimezone_offset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone_offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezone_offset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone_offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

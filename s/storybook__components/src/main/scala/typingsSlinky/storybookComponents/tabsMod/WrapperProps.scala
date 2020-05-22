@@ -12,41 +12,11 @@ trait WrapperProps extends js.Object {
 
 object WrapperProps {
   @scala.inline
-  def apply(): WrapperProps = {
+  def apply(absolute: js.UndefOr[Boolean] = js.undefined, bordered: js.UndefOr[Boolean] = js.undefined): WrapperProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(absolute)) __obj.updateDynamic("absolute")(absolute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WrapperProps]
   }
-  @scala.inline
-  implicit class WrapperPropsOps[Self <: WrapperProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbsolute(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsolute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBordered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bordered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBordered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bordered")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

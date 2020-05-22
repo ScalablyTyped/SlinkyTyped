@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppInitialProps extends js.Object {
-  var pageProps: js.Any = js.native
+  var pageProps: js.Any
 }
 
 object AppInitialProps {
@@ -15,19 +14,5 @@ object AppInitialProps {
     val __obj = js.Dynamic.literal(pageProps = pageProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppInitialProps]
   }
-  @scala.inline
-  implicit class AppInitialPropsOps[Self <: AppInitialProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPageProps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

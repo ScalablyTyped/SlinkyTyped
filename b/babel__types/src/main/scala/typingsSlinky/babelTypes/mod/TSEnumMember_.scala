@@ -5,54 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSEnumMember_
   extends BaseNode
-     with Node {
-  var id: Identifier_ | StringLiteral_ = js.native
-  var initializer: Expression | Null = js.native
+     with _Node {
+  var id: Identifier_ | StringLiteral_
+  var initializer: Expression | Null
   @JSName("type")
-  var type_TSEnumMember_ : TSEnumMember = js.native
+  var type_TSEnumMember_ : TSEnumMember
 }
 
 object TSEnumMember_ {
   @scala.inline
-  def apply(id: Identifier_ | StringLiteral_, `type`: TSEnumMember): TSEnumMember_ = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+  def apply(
+    id: Identifier_ | StringLiteral_,
+    `type`: TSEnumMember,
+    end: Double = null.asInstanceOf[Double],
+    initializer: Expression = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): TSEnumMember_ = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], initializer = initializer.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSEnumMember_]
   }
-  @scala.inline
-  implicit class TSEnumMember_Ops[Self <: TSEnumMember_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Identifier_ | StringLiteral_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSEnumMember): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitializer(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitializerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(null)
-        ret
-    }
-  }
-  
 }
 

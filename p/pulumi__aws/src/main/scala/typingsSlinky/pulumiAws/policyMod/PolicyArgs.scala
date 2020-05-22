@@ -41,83 +41,21 @@ trait PolicyArgs extends js.Object {
 
 object PolicyArgs {
   @scala.inline
-  def apply(resourceId: Input[String], scalableDimension: Input[String], serviceNamespace: Input[String]): PolicyArgs = {
+  def apply(
+    resourceId: Input[String],
+    scalableDimension: Input[String],
+    serviceNamespace: Input[String],
+    name: Input[String] = null,
+    policyType: Input[String] = null,
+    stepScalingPolicyConfiguration: Input[PolicyStepScalingPolicyConfiguration] = null,
+    targetTrackingScalingPolicyConfiguration: Input[PolicyTargetTrackingScalingPolicyConfiguration] = null
+  ): PolicyArgs = {
     val __obj = js.Dynamic.literal(resourceId = resourceId.asInstanceOf[js.Any], scalableDimension = scalableDimension.asInstanceOf[js.Any], serviceNamespace = serviceNamespace.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (policyType != null) __obj.updateDynamic("policyType")(policyType.asInstanceOf[js.Any])
+    if (stepScalingPolicyConfiguration != null) __obj.updateDynamic("stepScalingPolicyConfiguration")(stepScalingPolicyConfiguration.asInstanceOf[js.Any])
+    if (targetTrackingScalingPolicyConfiguration != null) __obj.updateDynamic("targetTrackingScalingPolicyConfiguration")(targetTrackingScalingPolicyConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyArgs]
   }
-  @scala.inline
-  implicit class PolicyArgsOps[Self <: PolicyArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScalableDimension(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalableDimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceNamespace(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepScalingPolicyConfiguration(value: Input[PolicyStepScalingPolicyConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepScalingPolicyConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepScalingPolicyConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepScalingPolicyConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetTrackingScalingPolicyConfiguration(value: Input[PolicyTargetTrackingScalingPolicyConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetTrackingScalingPolicyConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetTrackingScalingPolicyConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetTrackingScalingPolicyConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

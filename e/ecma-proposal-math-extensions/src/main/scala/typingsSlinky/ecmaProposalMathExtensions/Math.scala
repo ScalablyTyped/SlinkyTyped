@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Math extends js.Object {
   /** This is the number of how many degrees are one radian. */
-  val DEG_PER_RAD: Double = js.native
+  val DEG_PER_RAD: Double
   /** This is the number of how many radians are one degree. */
-  val RAD_PER_DEG: Double = js.native
+  val RAD_PER_DEG: Double
   /**
     * Clamps an incoming value `x` to a range between `lower` and `upper`.
     * @param x The value to clamp.
@@ -17,13 +16,13 @@ trait Math extends js.Object {
     * @param upper The upper bound of the range to clamp `x` to.
     * @return The input value clamped to the given range.
     */
-  def clamp(x: Double, lower: Double, upper: Double): Double = js.native
+  def clamp(x: Double, lower: Double, upper: Double): Double
   /**
     * Converts an angle given in radians to an angle given in degrees.
     * @param radians The input angle in radians.
     * @return The output angle in degrees.
     */
-  def degrees(radians: Double): Double = js.native
+  def degrees(radians: Double): Double
   /**
     * Scales a floating point value between `inLow` and `inHigh` to the range of `outLow` to `outHigh`.
     * @param x The numeric value in the input range to scale.
@@ -33,13 +32,13 @@ trait Math extends js.Object {
     * @param outHigh The upper bound of the output range.
     * @return The input value scaled to the output range.
     */
-  def fscale(x: Double, inLow: Double, inHigh: Double, outLow: Double, outHigh: Double): Double = js.native
+  def fscale(x: Double, inLow: Double, inHigh: Double, outLow: Double, outHigh: Double): Double
   /**
     * Converts an angle given in degrees to an angle given in radians.
     * @param degrees The input angle in degrees.
     * @return The output angle in radians.
     */
-  def radians(degrees: Double): Double = js.native
+  def radians(degrees: Double): Double
   /**
     * Scales a value between `inLow` and `inHigh` to the range of `outLow` to `outHigh`.
     * @param x The numeric value in the input range to scale.
@@ -49,7 +48,7 @@ trait Math extends js.Object {
     * @param outHigh The upper bound of the output range.
     * @return The input value scaled to the output range.
     */
-  def scale(x: Double, inLow: Double, inHigh: Double, outLow: Double, outHigh: Double): Double = js.native
+  def scale(x: Double, inLow: Double, inHigh: Double, outLow: Double, outHigh: Double): Double
 }
 
 object Math {
@@ -66,55 +65,5 @@ object Math {
     val __obj = js.Dynamic.literal(DEG_PER_RAD = DEG_PER_RAD.asInstanceOf[js.Any], RAD_PER_DEG = RAD_PER_DEG.asInstanceOf[js.Any], clamp = js.Any.fromFunction3(clamp), degrees = js.Any.fromFunction1(degrees), fscale = js.Any.fromFunction5(fscale), radians = js.Any.fromFunction1(radians), scale = js.Any.fromFunction5(scale))
     __obj.asInstanceOf[Math]
   }
-  @scala.inline
-  implicit class MathOps[Self <: Math] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDEG_PER_RAD(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DEG_PER_RAD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRAD_PER_DEG(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RAD_PER_DEG")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClamp(value: (Double, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clamp")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDegrees(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("degrees")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFscale(value: (Double, Double, Double, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fscale")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withRadians(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radians")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withScale(value: (Double, Double, Double, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestHandleWithPromise[T] extends RequestHandle[T] {
   /**
     * Returns the response as a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
     * This method is only available if you supplied the `Promise` constructor to the `createClient()` method when you constructed
     * the client object.
     */
-  def asPromise(): js.Promise[ClientResponse[T]] = js.native
+  def asPromise(): js.Promise[ClientResponse[T]]
 }
 
 object RequestHandleWithPromise {
@@ -25,19 +24,5 @@ object RequestHandleWithPromise {
     __obj.updateDynamic("finally")(js.Any.fromFunction1(`finally`))
     __obj.asInstanceOf[RequestHandleWithPromise[T]]
   }
-  @scala.inline
-  implicit class RequestHandleWithPromiseOps[Self[t] <: RequestHandleWithPromise[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAsPromise(value: () => js.Promise[ClientResponse[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asPromise")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

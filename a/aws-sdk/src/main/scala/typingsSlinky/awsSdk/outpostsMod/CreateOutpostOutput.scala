@@ -11,29 +11,10 @@ trait CreateOutpostOutput extends js.Object {
 
 object CreateOutpostOutput {
   @scala.inline
-  def apply(): CreateOutpostOutput = {
+  def apply(Outpost: Outpost = null): CreateOutpostOutput = {
     val __obj = js.Dynamic.literal()
+    if (Outpost != null) __obj.updateDynamic("Outpost")(Outpost.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateOutpostOutput]
   }
-  @scala.inline
-  implicit class CreateOutpostOutputOps[Self <: CreateOutpostOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutpost(value: Outpost): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outpost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutpost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outpost")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

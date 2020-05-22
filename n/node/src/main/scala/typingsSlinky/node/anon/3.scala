@@ -1,45 +1,19 @@
 package typingsSlinky.node.anon
 
+import typingsSlinky.node.BufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `3` extends js.Object {
-  var encoding: js.UndefOr[String | Null] = js.native
+  var encoding: BufferEncoding
 }
 
 object `3` {
   @scala.inline
-  def apply(): `3` = {
-    val __obj = js.Dynamic.literal()
+  def apply(encoding: BufferEncoding): `3` = {
+    val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[`3`]
   }
-  @scala.inline
-  implicit class `3Ops`[Self <: `3`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(null)
-        ret
-    }
-  }
-  
 }
 

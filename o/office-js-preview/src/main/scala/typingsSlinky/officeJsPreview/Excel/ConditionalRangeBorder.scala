@@ -30,7 +30,7 @@ import scala.scalajs.js.annotation._
 trait ConditionalRangeBorder extends ClientObject {
   /**
     *
-    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
+    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g., "FFA500") or as a named HTML color (e.g., "orange").
     *
     * [Api set: ExcelApi 1.6]
     */
@@ -40,7 +40,7 @@ trait ConditionalRangeBorder extends ClientObject {
   var context_ConditionalRangeBorder: RequestContext = js.native
   /**
     *
-    * Constant value that indicates the specific side of the border. See Excel.ConditionalRangeBorderIndex for details. Read-only.
+    * Constant value that indicates the specific side of the border. See Excel.ConditionalRangeBorderIndex for details.
     *
     * [Api set: ExcelApi 1.6]
     */

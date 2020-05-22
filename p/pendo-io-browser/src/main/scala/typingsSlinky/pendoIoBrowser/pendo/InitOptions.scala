@@ -5,101 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InitOptions extends Identity {
-  var apiKey: js.UndefOr[String] = js.native
-  var disablePersistence: js.UndefOr[Boolean] = js.native
-  var events: js.UndefOr[EventCallbacks] = js.native
-  var excludeAllText: js.UndefOr[Boolean] = js.native
-  var excludeTitle: js.UndefOr[Boolean] = js.native
-  var guides: js.UndefOr[Delay] = js.native
+  var apiKey: js.UndefOr[String] = js.undefined
+  var disablePersistence: js.UndefOr[Boolean] = js.undefined
+  var events: js.UndefOr[EventCallbacks] = js.undefined
+  var excludeAllText: js.UndefOr[Boolean] = js.undefined
+  var excludeTitle: js.UndefOr[Boolean] = js.undefined
+  var guides: js.UndefOr[Delay] = js.undefined
 }
 
 object InitOptions {
   @scala.inline
-  def apply(): InitOptions = {
+  def apply(
+    account: IdentityMetadata = null,
+    apiKey: String = null,
+    disablePersistence: js.UndefOr[Boolean] = js.undefined,
+    events: EventCallbacks = null,
+    excludeAllText: js.UndefOr[Boolean] = js.undefined,
+    excludeTitle: js.UndefOr[Boolean] = js.undefined,
+    guides: Delay = null,
+    visitor: IdentityMetadata = null
+  ): InitOptions = {
     val __obj = js.Dynamic.literal()
+    if (account != null) __obj.updateDynamic("account")(account.asInstanceOf[js.Any])
+    if (apiKey != null) __obj.updateDynamic("apiKey")(apiKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePersistence)) __obj.updateDynamic("disablePersistence")(disablePersistence.get.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludeAllText)) __obj.updateDynamic("excludeAllText")(excludeAllText.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludeTitle)) __obj.updateDynamic("excludeTitle")(excludeTitle.get.asInstanceOf[js.Any])
+    if (guides != null) __obj.updateDynamic("guides")(guides.asInstanceOf[js.Any])
+    if (visitor != null) __obj.updateDynamic("visitor")(visitor.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitOptions]
   }
-  @scala.inline
-  implicit class InitOptionsOps[Self <: InitOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePersistence(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePersistence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePersistence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePersistence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: EventCallbacks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeAllText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAllText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeAllText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAllText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeTitle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuides(value: Delay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guides")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

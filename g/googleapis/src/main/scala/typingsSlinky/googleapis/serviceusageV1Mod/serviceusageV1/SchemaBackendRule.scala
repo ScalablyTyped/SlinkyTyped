@@ -43,101 +43,24 @@ trait SchemaBackendRule extends js.Object {
 
 object SchemaBackendRule {
   @scala.inline
-  def apply(): SchemaBackendRule = {
+  def apply(
+    address: String = null,
+    deadline: js.UndefOr[Double] = js.undefined,
+    jwtAudience: String = null,
+    minDeadline: js.UndefOr[Double] = js.undefined,
+    operationDeadline: js.UndefOr[Double] = js.undefined,
+    pathTranslation: String = null,
+    selector: String = null
+  ): SchemaBackendRule = {
     val __obj = js.Dynamic.literal()
+    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (!js.isUndefined(deadline)) __obj.updateDynamic("deadline")(deadline.get.asInstanceOf[js.Any])
+    if (jwtAudience != null) __obj.updateDynamic("jwtAudience")(jwtAudience.asInstanceOf[js.Any])
+    if (!js.isUndefined(minDeadline)) __obj.updateDynamic("minDeadline")(minDeadline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(operationDeadline)) __obj.updateDynamic("operationDeadline")(operationDeadline.get.asInstanceOf[js.Any])
+    if (pathTranslation != null) __obj.updateDynamic("pathTranslation")(pathTranslation.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBackendRule]
   }
-  @scala.inline
-  implicit class SchemaBackendRuleOps[Self <: SchemaBackendRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadline(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJwtAudience(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwtAudience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJwtAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwtAudience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDeadline(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationDeadline(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationDeadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationDeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationDeadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathTranslation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathTranslation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathTranslation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathTranslation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

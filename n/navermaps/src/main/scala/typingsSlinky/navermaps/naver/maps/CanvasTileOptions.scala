@@ -6,114 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CanvasTileOptions extends js.Object {
-  var imageData: js.UndefOr[ImageData] = js.native
-  var offset: js.UndefOr[Point] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var pane: js.UndefOr[HTMLElement] = js.native
-  var size: js.UndefOr[Size] = js.native
-  var transition: js.UndefOr[Boolean] = js.native
-  var zIndex: js.UndefOr[Double] = js.native
+  var imageData: js.UndefOr[ImageData] = js.undefined
+  var offset: js.UndefOr[Point] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var pane: js.UndefOr[HTMLElement] = js.undefined
+  var size: js.UndefOr[Size] = js.undefined
+  var transition: js.UndefOr[Boolean] = js.undefined
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object CanvasTileOptions {
   @scala.inline
-  def apply(): CanvasTileOptions = {
+  def apply(
+    imageData: ImageData = null,
+    offset: Point = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    pane: HTMLElement = null,
+    size: Size = null,
+    transition: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): CanvasTileOptions = {
     val __obj = js.Dynamic.literal()
+    if (imageData != null) __obj.updateDynamic("imageData")(imageData.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(transition)) __obj.updateDynamic("transition")(transition.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CanvasTileOptions]
   }
-  @scala.inline
-  implicit class CanvasTileOptionsOps[Self <: CanvasTileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageData(value: ImageData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPane(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPane: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

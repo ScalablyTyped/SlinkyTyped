@@ -18,19 +18,5 @@ object GetDevEndpointRequest {
     val __obj = js.Dynamic.literal(EndpointName = EndpointName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDevEndpointRequest]
   }
-  @scala.inline
-  implicit class GetDevEndpointRequestOps[Self <: GetDevEndpointRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpointName(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

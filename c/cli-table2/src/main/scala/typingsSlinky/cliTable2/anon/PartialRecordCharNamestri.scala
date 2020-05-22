@@ -5,218 +5,60 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Record<cli-table2.cli-table2.CharName, string>> */
-@js.native
 trait PartialRecordCharNamestri extends js.Object {
-  var bottom: js.UndefOr[String] = js.native
-  var `bottom-left`: js.UndefOr[String] = js.native
-  var `bottom-mid`: js.UndefOr[String] = js.native
-  var `bottom-right`: js.UndefOr[String] = js.native
-  var left: js.UndefOr[String] = js.native
-  var `left-mid`: js.UndefOr[String] = js.native
-  var mid: js.UndefOr[String] = js.native
-  var `mid-mid`: js.UndefOr[String] = js.native
-  var middle: js.UndefOr[String] = js.native
-  var right: js.UndefOr[String] = js.native
-  var `right-mid`: js.UndefOr[String] = js.native
-  var top: js.UndefOr[String] = js.native
-  var `top-left`: js.UndefOr[String] = js.native
-  var `top-mid`: js.UndefOr[String] = js.native
-  var `top-right`: js.UndefOr[String] = js.native
+  var bottom: js.UndefOr[String] = js.undefined
+  var `bottom-left`: js.UndefOr[String] = js.undefined
+  var `bottom-mid`: js.UndefOr[String] = js.undefined
+  var `bottom-right`: js.UndefOr[String] = js.undefined
+  var left: js.UndefOr[String] = js.undefined
+  var `left-mid`: js.UndefOr[String] = js.undefined
+  var mid: js.UndefOr[String] = js.undefined
+  var `mid-mid`: js.UndefOr[String] = js.undefined
+  var middle: js.UndefOr[String] = js.undefined
+  var right: js.UndefOr[String] = js.undefined
+  var `right-mid`: js.UndefOr[String] = js.undefined
+  var top: js.UndefOr[String] = js.undefined
+  var `top-left`: js.UndefOr[String] = js.undefined
+  var `top-mid`: js.UndefOr[String] = js.undefined
+  var `top-right`: js.UndefOr[String] = js.undefined
 }
 
 object PartialRecordCharNamestri {
   @scala.inline
-  def apply(): PartialRecordCharNamestri = {
+  def apply(
+    bottom: String = null,
+    `bottom-left`: String = null,
+    `bottom-mid`: String = null,
+    `bottom-right`: String = null,
+    left: String = null,
+    `left-mid`: String = null,
+    mid: String = null,
+    `mid-mid`: String = null,
+    middle: String = null,
+    right: String = null,
+    `right-mid`: String = null,
+    top: String = null,
+    `top-left`: String = null,
+    `top-mid`: String = null,
+    `top-right`: String = null
+  ): PartialRecordCharNamestri = {
     val __obj = js.Dynamic.literal()
+    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
+    if (`bottom-left` != null) __obj.updateDynamic("bottom-left")(`bottom-left`.asInstanceOf[js.Any])
+    if (`bottom-mid` != null) __obj.updateDynamic("bottom-mid")(`bottom-mid`.asInstanceOf[js.Any])
+    if (`bottom-right` != null) __obj.updateDynamic("bottom-right")(`bottom-right`.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (`left-mid` != null) __obj.updateDynamic("left-mid")(`left-mid`.asInstanceOf[js.Any])
+    if (mid != null) __obj.updateDynamic("mid")(mid.asInstanceOf[js.Any])
+    if (`mid-mid` != null) __obj.updateDynamic("mid-mid")(`mid-mid`.asInstanceOf[js.Any])
+    if (middle != null) __obj.updateDynamic("middle")(middle.asInstanceOf[js.Any])
+    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
+    if (`right-mid` != null) __obj.updateDynamic("right-mid")(`right-mid`.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
+    if (`top-left` != null) __obj.updateDynamic("top-left")(`top-left`.asInstanceOf[js.Any])
+    if (`top-mid` != null) __obj.updateDynamic("top-mid")(`top-mid`.asInstanceOf[js.Any])
+    if (`top-right` != null) __obj.updateDynamic("top-right")(`top-right`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRecordCharNamestri]
   }
-  @scala.inline
-  implicit class PartialRecordCharNamestriOps[Self <: PartialRecordCharNamestri] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withBottom-left`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutBottom-left`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withBottom-mid`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-mid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutBottom-mid`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-mid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withBottom-right`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutBottom-right`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLeft-mid`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left-mid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLeft-mid`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left-mid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMid-mid`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-mid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMid-mid`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-mid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMiddle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMiddle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withRight-mid`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right-mid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutRight-mid`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right-mid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTop-left`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTop-left`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTop-mid`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-mid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTop-mid`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-mid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTop-right`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTop-right`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-right")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

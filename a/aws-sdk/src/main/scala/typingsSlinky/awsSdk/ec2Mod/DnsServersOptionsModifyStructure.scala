@@ -18,41 +18,11 @@ trait DnsServersOptionsModifyStructure extends js.Object {
 
 object DnsServersOptionsModifyStructure {
   @scala.inline
-  def apply(): DnsServersOptionsModifyStructure = {
+  def apply(CustomDnsServers: ValueStringList = null, Enabled: js.UndefOr[Boolean] = js.undefined): DnsServersOptionsModifyStructure = {
     val __obj = js.Dynamic.literal()
+    if (CustomDnsServers != null) __obj.updateDynamic("CustomDnsServers")(CustomDnsServers.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DnsServersOptionsModifyStructure]
   }
-  @scala.inline
-  implicit class DnsServersOptionsModifyStructureOps[Self <: DnsServersOptionsModifyStructure] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomDnsServers(value: ValueStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomDnsServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomDnsServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomDnsServers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

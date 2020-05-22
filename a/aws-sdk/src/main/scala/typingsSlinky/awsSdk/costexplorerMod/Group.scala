@@ -18,41 +18,11 @@ trait Group extends js.Object {
 
 object Group {
   @scala.inline
-  def apply(): Group = {
+  def apply(Keys: Keys = null, Metrics: Metrics = null): Group = {
     val __obj = js.Dynamic.literal()
+    if (Keys != null) __obj.updateDynamic("Keys")(Keys.asInstanceOf[js.Any])
+    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[Group]
   }
-  @scala.inline
-  implicit class GroupOps[Self <: Group] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeys(value: Keys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: Metrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

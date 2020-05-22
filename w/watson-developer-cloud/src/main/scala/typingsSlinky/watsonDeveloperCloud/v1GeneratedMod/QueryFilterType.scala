@@ -5,51 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** QueryFilterType. */
-@js.native
 trait QueryFilterType extends js.Object {
   /** A comma-separated list of types to exclude. */
-  var exclude: js.UndefOr[js.Array[String]] = js.native
+  var exclude: js.UndefOr[js.Array[String]] = js.undefined
   /** A comma-separated list of types to include. All other types are excluded. */
-  var include: js.UndefOr[js.Array[String]] = js.native
+  var include: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object QueryFilterType {
   @scala.inline
-  def apply(): QueryFilterType = {
+  def apply(exclude: js.Array[String] = null, include: js.Array[String] = null): QueryFilterType = {
     val __obj = js.Dynamic.literal()
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryFilterType]
   }
-  @scala.inline
-  implicit class QueryFilterTypeOps[Self <: QueryFilterType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

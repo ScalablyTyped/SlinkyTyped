@@ -16,10 +16,9 @@ import scala.scalajs.js.annotation._
   *
   * Slides are referenced via their index in an XIndexAccess container in order to allow multiple references to a single slide (custom presentations).
   */
-@js.native
 trait XSlidePreviewCache extends js.Object {
   /** Register a listener that is called when a preview has been created asynchronously. */
-  def addPreviewCreationNotifyListener(xListener: XSlidePreviewCacheListener): Unit = js.native
+  def addPreviewCreationNotifyListener(xListener: XSlidePreviewCacheListener): Unit
   /**
     * Return a preview for the given slide index. The returned bitmap may be the requested preview, a preview of the preview, i.e. a scaled up or down
     * version, or an empty reference when the preview is not yet present.
@@ -27,26 +26,26 @@ trait XSlidePreviewCache extends js.Object {
     * This call may lead to the asynchronous creation of the requested preview. In that case all registered listeners are notified when the preview has been
     * created.
     */
-  def getSlidePreview(nSlideIndex: Double, xCanvas: XCanvas): XBitmap = js.native
+  def getSlidePreview(nSlideIndex: Double, xCanvas: XCanvas): XBitmap
   /** Stop the asynchronous creation of previews temporarily. Call {@link resume()} to restart it. */
-  def pause(): Unit = js.native
+  def pause(): Unit
   /** Remove a previously registered listener for preview creations. */
-  def removePreviewCreationNotifyListener(xListener: XSlidePreviewCacheListener): Unit = js.native
+  def removePreviewCreationNotifyListener(xListener: XSlidePreviewCacheListener): Unit
   /** Resume the asynchronous creation of slide previews. */
-  def resume(): Unit = js.native
+  def resume(): Unit
   /**
     * Set the set of slides for which the cache will provide the previews. All slides in the given XIndexAccess are required to come from the given model.
     * @param xSlides The set of slides for which the called cache will provide the previews. This container defines the indices that are used to look up slides.
     * @param xDocument The model that contains the slides reference by the xSlides argument.
     */
-  def setDocumentSlides(xSlides: XIndexAccess, xDocument: XInterface): Unit = js.native
+  def setDocumentSlides(xSlides: XIndexAccess, xDocument: XInterface): Unit
   /** Define the size of the previews that are managed by the called cache. */
-  def setPreviewSize(aSize: IntegerSize2D): Unit = js.native
+  def setPreviewSize(aSize: IntegerSize2D): Unit
   /**
     * Define which slides are currently visible on the screen and which are not. This information is used for give preview creation for visible slides a
     * higher priority than for those slides that are not visible.
     */
-  def setVisibleRange(nFirstVisibleSlideIndex: Double, nLastVisibleSlideIndex: Double): Unit = js.native
+  def setVisibleRange(nFirstVisibleSlideIndex: Double, nLastVisibleSlideIndex: Double): Unit
 }
 
 object XSlidePreviewCache {
@@ -64,61 +63,5 @@ object XSlidePreviewCache {
     val __obj = js.Dynamic.literal(addPreviewCreationNotifyListener = js.Any.fromFunction1(addPreviewCreationNotifyListener), getSlidePreview = js.Any.fromFunction2(getSlidePreview), pause = js.Any.fromFunction0(pause), removePreviewCreationNotifyListener = js.Any.fromFunction1(removePreviewCreationNotifyListener), resume = js.Any.fromFunction0(resume), setDocumentSlides = js.Any.fromFunction2(setDocumentSlides), setPreviewSize = js.Any.fromFunction1(setPreviewSize), setVisibleRange = js.Any.fromFunction2(setVisibleRange))
     __obj.asInstanceOf[XSlidePreviewCache]
   }
-  @scala.inline
-  implicit class XSlidePreviewCacheOps[Self <: XSlidePreviewCache] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddPreviewCreationNotifyListener(value: XSlidePreviewCacheListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPreviewCreationNotifyListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetSlidePreview(value: (Double, XCanvas) => XBitmap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSlidePreview")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPause(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePreviewCreationNotifyListener(value: XSlidePreviewCacheListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePreviewCreationNotifyListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withResume(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resume")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetDocumentSlides(value: (XIndexAccess, XInterface) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDocumentSlides")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetPreviewSize(value: IntegerSize2D => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPreviewSize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetVisibleRange(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisibleRange")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

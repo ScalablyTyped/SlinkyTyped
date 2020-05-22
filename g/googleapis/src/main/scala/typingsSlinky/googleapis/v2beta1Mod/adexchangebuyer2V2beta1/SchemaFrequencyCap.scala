@@ -28,53 +28,16 @@ trait SchemaFrequencyCap extends js.Object {
 
 object SchemaFrequencyCap {
   @scala.inline
-  def apply(): SchemaFrequencyCap = {
+  def apply(
+    maxImpressions: js.UndefOr[Double] = js.undefined,
+    numTimeUnits: js.UndefOr[Double] = js.undefined,
+    timeUnitType: String = null
+  ): SchemaFrequencyCap = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxImpressions)) __obj.updateDynamic("maxImpressions")(maxImpressions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numTimeUnits)) __obj.updateDynamic("numTimeUnits")(numTimeUnits.get.asInstanceOf[js.Any])
+    if (timeUnitType != null) __obj.updateDynamic("timeUnitType")(timeUnitType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFrequencyCap]
   }
-  @scala.inline
-  implicit class SchemaFrequencyCapOps[Self <: SchemaFrequencyCap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxImpressions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxImpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumTimeUnits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numTimeUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumTimeUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numTimeUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeUnitType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeUnitType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeUnitType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeUnitType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

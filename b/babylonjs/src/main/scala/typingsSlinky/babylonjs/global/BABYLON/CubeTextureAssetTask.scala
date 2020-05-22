@@ -80,5 +80,10 @@ class CubeTextureAssetTask protected ()
     */
   files: js.Array[String]
   ) = this()
+  /**
+    * Gets the loaded texture
+    */
+  /* CompleteClass */
+  override var texture: typingsSlinky.babylonjs.BABYLON.CubeTexture = js.native
 }
 

@@ -95,6 +95,11 @@ class CubeTextureAssetTask protected ()
     */
   var noMipmap: js.UndefOr[Boolean] = js.native
   /**
+    * Gets the loaded texture
+    */
+  /* CompleteClass */
+  override var texture: CubeTexture = js.native
+  /**
     * Defines the location of the files to load (You have to specify the folder where the files are + filename with no extension)
     */
   var url: String = js.native

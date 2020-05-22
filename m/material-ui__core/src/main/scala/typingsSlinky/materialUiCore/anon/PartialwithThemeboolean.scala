@@ -12,29 +12,10 @@ trait PartialwithThemeboolean extends js.Object {
 
 object PartialwithThemeboolean {
   @scala.inline
-  def apply(): PartialwithThemeboolean = {
+  def apply(withTheme: js.UndefOr[Boolean] = js.undefined): PartialwithThemeboolean = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(withTheme)) __obj.updateDynamic("withTheme")(withTheme.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialwithThemeboolean]
   }
-  @scala.inline
-  implicit class PartialwithThemebooleanOps[Self <: PartialwithThemeboolean] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWithTheme(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withTheme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

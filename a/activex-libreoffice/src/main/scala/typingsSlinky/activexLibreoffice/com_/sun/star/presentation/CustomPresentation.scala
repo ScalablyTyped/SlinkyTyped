@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   *
   * Such a presentation can use certain pages more than once, but it does not necessarily use all of the pages.
   */
-@js.native
 trait CustomPresentation
   extends XIndexContainer
      with XNamed

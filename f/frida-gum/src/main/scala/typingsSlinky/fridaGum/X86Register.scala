@@ -49,7 +49,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fridaGum.fridaGumStrings.eip
   - typingsSlinky.fridaGum.fridaGumStrings.rip
 */
-trait X86Register extends X86CallArgument
+trait X86Register extends _X86CallArgument
 
 object X86Register {
   @scala.inline

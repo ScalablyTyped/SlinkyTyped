@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
-import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.firebaseFirestore.utilByteStringMod.ByteString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,30 +10,16 @@ import scala.scalajs.js.annotation._
 object apiBlobMod extends js.Object {
   @js.native
   class Blob protected () extends js.Object {
-    var _binaryString: js.Any = js.native
-    def _approximateByteSize(): Double = js.native
-    /**
-      * Actually private to JS consumers of our API, so this function is prefixed
-      * with an underscore.
-      */
-    def _compareTo(other: Blob): Double = js.native
+    def this(byteString: ByteString) = this()
+    var _byteString: ByteString = js.native
     def isEqual(other: Blob): Boolean = js.native
     def toBase64(): String = js.native
     def toUint8Array(): js.typedarray.Uint8Array = js.native
   }
   
-  @js.native
-  class PublicBlob () extends Blob
-  
   /* static members */
   @js.native
   object Blob extends js.Object {
-    def fromBase64String(base64: String): Blob = js.native
-    def fromUint8Array(array: js.typedarray.Uint8Array): Blob = js.native
-  }
-  
-  @js.native
-  object PublicBlob extends Instantiable0[Blob] {
     def fromBase64String(base64: String): Blob = js.native
     def fromUint8Array(array: js.typedarray.Uint8Array): Blob = js.native
   }

@@ -5,123 +5,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShareVideoContent extends ShareContent {
   /**
     * Common parameters for share content;
     */
-  var commonParameters: js.UndefOr[ShareContentCommonParameters] = js.native
+  var commonParameters: js.UndefOr[ShareContentCommonParameters] = js.undefined
   /**
     *  Description of the video.
     */
-  var contentDescription: js.UndefOr[String] = js.native
+  var contentDescription: js.UndefOr[String] = js.undefined
   /**
     * Title of the video.
     */
-  var contentTitle: js.UndefOr[String] = js.native
+  var contentTitle: js.UndefOr[String] = js.undefined
   /**
     * The type of content to be shared is photo.
     */
-  var contentType: video = js.native
+  var contentType: video
   /**
     * URL for the content being shared.
     */
-  var contentUrl: js.UndefOr[String] = js.native
+  var contentUrl: js.UndefOr[String] = js.undefined
   /**
     * The photo that represents the video.
     */
-  var previewPhoto: js.UndefOr[SharePhoto] = js.native
+  var previewPhoto: js.UndefOr[SharePhoto] = js.undefined
   /**
     * Video to be shared.
     */
-  var video: ShareVideo = js.native
+  var video: ShareVideo
 }
 
 object ShareVideoContent {
   @scala.inline
-  def apply(contentType: video, video: ShareVideo): ShareVideoContent = {
+  def apply(
+    contentType: video,
+    video: ShareVideo,
+    commonParameters: ShareContentCommonParameters = null,
+    contentDescription: String = null,
+    contentTitle: String = null,
+    contentUrl: String = null,
+    previewPhoto: SharePhoto = null
+  ): ShareVideoContent = {
     val __obj = js.Dynamic.literal(contentType = contentType.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any])
+    if (commonParameters != null) __obj.updateDynamic("commonParameters")(commonParameters.asInstanceOf[js.Any])
+    if (contentDescription != null) __obj.updateDynamic("contentDescription")(contentDescription.asInstanceOf[js.Any])
+    if (contentTitle != null) __obj.updateDynamic("contentTitle")(contentTitle.asInstanceOf[js.Any])
+    if (contentUrl != null) __obj.updateDynamic("contentUrl")(contentUrl.asInstanceOf[js.Any])
+    if (previewPhoto != null) __obj.updateDynamic("previewPhoto")(previewPhoto.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareVideoContent]
   }
-  @scala.inline
-  implicit class ShareVideoContentOps[Self <: ShareVideoContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentType(value: video): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideo(value: ShareVideo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommonParameters(value: ShareContentCommonParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommonParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviewPhoto(value: SharePhoto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previewPhoto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviewPhoto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previewPhoto")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -7,8 +8,9 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.switchMod.SwitchProps
 import typingsSlinky.antd.switchMod.SwitchSize
-import typingsSlinky.antd.switchMod.default
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +23,7 @@ object Switch {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     @scala.inline
@@ -56,7 +58,7 @@ object Switch {
     def unCheckedChildren(value: TagMod[Any]): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SwitchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: SwitchProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Switch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

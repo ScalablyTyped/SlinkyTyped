@@ -25,53 +25,12 @@ trait SchemaStateHistory extends js.Object {
 
 object SchemaStateHistory {
   @scala.inline
-  def apply(): SchemaStateHistory = {
+  def apply(actorUserId: String = null, state: String = null, stateTimestamp: String = null): SchemaStateHistory = {
     val __obj = js.Dynamic.literal()
+    if (actorUserId != null) __obj.updateDynamic("actorUserId")(actorUserId.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (stateTimestamp != null) __obj.updateDynamic("stateTimestamp")(stateTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStateHistory]
   }
-  @scala.inline
-  implicit class SchemaStateHistoryOps[Self <: SchemaStateHistory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActorUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actorUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActorUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actorUserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateTimestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.useResizeObserver.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,16 @@ trait ObserverDefaults[TElement /* <: HTMLElement */] extends js.Object
 
 object ObserverDefaults {
   @scala.inline
-  implicit def apply[TElement](value: DefaultsWithResizeHandler[TElement]): ObserverDefaults[TElement] = value.asInstanceOf[ObserverDefaults[TElement]]
+  def DefaultsWithoutResizeHandler[TElement](ref: ReactRef[TElement] = null): ObserverDefaults[TElement] = {
+    val __obj = js.Dynamic.literal()
+    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ObserverDefaults[TElement]]
+  }
   @scala.inline
-  implicit def apply[TElement](value: DefaultsWithoutResizeHandler[TElement]): ObserverDefaults[TElement] = value.asInstanceOf[ObserverDefaults[TElement]]
+  def DefaultsWithResizeHandler[TElement](onResize: /* newSize */ RefSize => Unit, ref: ReactRef[TElement] = null): ObserverDefaults[TElement] = {
+    val __obj = js.Dynamic.literal(onResize = js.Any.fromFunction1(onResize))
+    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ObserverDefaults[TElement]]
+  }
 }
 

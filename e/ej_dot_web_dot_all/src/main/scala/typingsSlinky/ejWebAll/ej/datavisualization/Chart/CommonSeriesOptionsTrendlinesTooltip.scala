@@ -4,150 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommonSeriesOptionsTrendlinesTooltip extends js.Object {
   /** Options for customizing the border of the  trendline tooltip.
     */
-  var border: js.UndefOr[CommonSeriesOptionsTrendlinesTooltipBorder] = js.native
+  var border: js.UndefOr[CommonSeriesOptionsTrendlinesTooltipBorder] = js.undefined
   /** Specifies the duration, the tooltip has to be displayed.
     * @Default {500ms}
     */
-  var duration: js.UndefOr[String] = js.native
+  var duration: js.UndefOr[String] = js.undefined
   /** Enables/disables the animation of the trendline tooltip when moving from one point to other.
     * @Default {true}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.native
+  var enableAnimation: js.UndefOr[Boolean] = js.undefined
   /** Background color of the trendline tooltip.
     * @Default {null}
     */
-  var fill: js.UndefOr[String] = js.native
+  var fill: js.UndefOr[String] = js.undefined
   /** Format of the tooltip content displayed in the trendlines.
     * @Default {#point.x# : #point.y#}
     */
-  var format: js.UndefOr[String] = js.native
+  var format: js.UndefOr[String] = js.undefined
   /** Opacity of the trendline tooltip.
     * @Default {0.5}
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /** Customize the corner radius of the trendline tooltip rectangle.
     * @Default {0}
     */
-  var rx: js.UndefOr[Double] = js.native
+  var rx: js.UndefOr[Double] = js.undefined
   /** Customize the corner radius of the trendline tooltip rectangle.
     * @Default {0}
     */
-  var ry: js.UndefOr[Double] = js.native
+  var ry: js.UndefOr[Double] = js.undefined
 }
 
 object CommonSeriesOptionsTrendlinesTooltip {
   @scala.inline
-  def apply(): CommonSeriesOptionsTrendlinesTooltip = {
+  def apply(
+    border: CommonSeriesOptionsTrendlinesTooltipBorder = null,
+    duration: String = null,
+    enableAnimation: js.UndefOr[Boolean] = js.undefined,
+    fill: String = null,
+    format: String = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    rx: js.UndefOr[Double] = js.undefined,
+    ry: js.UndefOr[Double] = js.undefined
+  ): CommonSeriesOptionsTrendlinesTooltip = {
     val __obj = js.Dynamic.literal()
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.get.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rx)) __obj.updateDynamic("rx")(rx.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ry)) __obj.updateDynamic("ry")(ry.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonSeriesOptionsTrendlinesTooltip]
   }
-  @scala.inline
-  implicit class CommonSeriesOptionsTrendlinesTooltipOps[Self <: CommonSeriesOptionsTrendlinesTooltip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorder(value: CommonSeriesOptionsTrendlinesTooltipBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ry")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

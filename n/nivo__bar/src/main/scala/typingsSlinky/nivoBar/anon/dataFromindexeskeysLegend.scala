@@ -17,32 +17,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  dataFrom  :'indexes' | 'keys'} & @nivo/legends.@nivo/legends.LegendProps */
-@js.native
 trait dataFromindexeskeysLegend extends js.Object {
-  var anchor: LegendAnchor = js.native
-  var data: js.UndefOr[js.Array[Color]] = js.native
-  var dataFrom: indexes | keys = js.native
-  var direction: LegendDirection = js.native
-  var effects: js.UndefOr[js.Array[LegendEffect]] = js.native
-  var itemBackground: js.UndefOr[String] = js.native
-  var itemDirection: js.UndefOr[LegendItemDirection] = js.native
-  var itemHeight: Double = js.native
-  var itemOpacity: js.UndefOr[Double] = js.native
-  var itemTextColor: js.UndefOr[String] = js.native
-  var itemWidth: Double = js.native
-  var itemsSpacing: js.UndefOr[Double] = js.native
-  var justify: js.UndefOr[Boolean] = js.native
-  var onClick: js.UndefOr[LegendMouseHandler] = js.native
-  var onMouseEnter: js.UndefOr[LegendMouseHandler] = js.native
-  var onMouseLeave: js.UndefOr[LegendMouseHandler] = js.native
-  var padding: js.UndefOr[Double | Box] = js.native
-  var symbolBorderColor: js.UndefOr[String] = js.native
-  var symbolShape: js.UndefOr[LegendSymbolShape | js.Any] = js.native
-  var symbolSize: js.UndefOr[Double] = js.native
-  var symbolSpacing: js.UndefOr[Double] = js.native
-  var textColor: js.UndefOr[String] = js.native
-  var translateX: js.UndefOr[Double] = js.native
-  var translateY: js.UndefOr[Double] = js.native
+  var anchor: LegendAnchor
+  var data: js.UndefOr[js.Array[Color]] = js.undefined
+  var dataFrom: indexes | keys
+  var direction: LegendDirection
+  var effects: js.UndefOr[js.Array[LegendEffect]] = js.undefined
+  var itemBackground: js.UndefOr[String] = js.undefined
+  var itemDirection: js.UndefOr[LegendItemDirection] = js.undefined
+  var itemHeight: Double
+  var itemOpacity: js.UndefOr[Double] = js.undefined
+  var itemTextColor: js.UndefOr[String] = js.undefined
+  var itemWidth: Double
+  var itemsSpacing: js.UndefOr[Double] = js.undefined
+  var justify: js.UndefOr[Boolean] = js.undefined
+  var onClick: js.UndefOr[LegendMouseHandler] = js.undefined
+  var onMouseEnter: js.UndefOr[LegendMouseHandler] = js.undefined
+  var onMouseLeave: js.UndefOr[LegendMouseHandler] = js.undefined
+  var padding: js.UndefOr[Double | Box] = js.undefined
+  var symbolBorderColor: js.UndefOr[String] = js.undefined
+  var symbolShape: js.UndefOr[LegendSymbolShape | js.Any] = js.undefined
+  var symbolSize: js.UndefOr[Double] = js.undefined
+  var symbolSpacing: js.UndefOr[Double] = js.undefined
+  var textColor: js.UndefOr[String] = js.undefined
+  var translateX: js.UndefOr[Double] = js.undefined
+  var translateY: js.UndefOr[Double] = js.undefined
 }
 
 object dataFromindexeskeysLegend {
@@ -52,276 +51,48 @@ object dataFromindexeskeysLegend {
     dataFrom: indexes | keys,
     direction: LegendDirection,
     itemHeight: Double,
-    itemWidth: Double
+    itemWidth: Double,
+    data: js.Array[Color] = null,
+    effects: js.Array[LegendEffect] = null,
+    itemBackground: String = null,
+    itemDirection: LegendItemDirection = null,
+    itemOpacity: js.UndefOr[Double] = js.undefined,
+    itemTextColor: String = null,
+    itemsSpacing: js.UndefOr[Double] = js.undefined,
+    justify: js.UndefOr[Boolean] = js.undefined,
+    onClick: (/* data */ LegendMouseHandlerData, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
+    onMouseEnter: (/* data */ LegendMouseHandlerData, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
+    onMouseLeave: (/* data */ LegendMouseHandlerData, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
+    padding: Double | Box = null,
+    symbolBorderColor: String = null,
+    symbolShape: LegendSymbolShape | js.Any = null,
+    symbolSize: js.UndefOr[Double] = js.undefined,
+    symbolSpacing: js.UndefOr[Double] = js.undefined,
+    textColor: String = null,
+    translateX: js.UndefOr[Double] = js.undefined,
+    translateY: js.UndefOr[Double] = js.undefined
   ): dataFromindexeskeysLegend = {
     val __obj = js.Dynamic.literal(anchor = anchor.asInstanceOf[js.Any], dataFrom = dataFrom.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], itemHeight = itemHeight.asInstanceOf[js.Any], itemWidth = itemWidth.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (effects != null) __obj.updateDynamic("effects")(effects.asInstanceOf[js.Any])
+    if (itemBackground != null) __obj.updateDynamic("itemBackground")(itemBackground.asInstanceOf[js.Any])
+    if (itemDirection != null) __obj.updateDynamic("itemDirection")(itemDirection.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemOpacity)) __obj.updateDynamic("itemOpacity")(itemOpacity.get.asInstanceOf[js.Any])
+    if (itemTextColor != null) __obj.updateDynamic("itemTextColor")(itemTextColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemsSpacing)) __obj.updateDynamic("itemsSpacing")(itemsSpacing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(justify)) __obj.updateDynamic("justify")(justify.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction2(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction2(onMouseLeave))
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (symbolBorderColor != null) __obj.updateDynamic("symbolBorderColor")(symbolBorderColor.asInstanceOf[js.Any])
+    if (symbolShape != null) __obj.updateDynamic("symbolShape")(symbolShape.asInstanceOf[js.Any])
+    if (!js.isUndefined(symbolSize)) __obj.updateDynamic("symbolSize")(symbolSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(symbolSpacing)) __obj.updateDynamic("symbolSpacing")(symbolSpacing.get.asInstanceOf[js.Any])
+    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(translateX)) __obj.updateDynamic("translateX")(translateX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(translateY)) __obj.updateDynamic("translateY")(translateY.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dataFromindexeskeysLegend]
   }
-  @scala.inline
-  implicit class dataFromindexeskeysLegendOps[Self <: dataFromindexeskeysLegend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchor(value: LegendAnchor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataFrom(value: indexes | keys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirection(value: LegendDirection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[Color]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffects(value: js.Array[LegendEffect]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemDirection(value: LegendItemDirection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemTextColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTextColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemsSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemsSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsSpacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJustify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJustify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: (/* data */ LegendMouseHandlerData, /* event */ SyntheticMouseEvent[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseEnter(value: (/* data */ LegendMouseHandlerData, /* event */ SyntheticMouseEvent[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseLeave(value: (/* data */ LegendMouseHandlerData, /* event */ SyntheticMouseEvent[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double | Box): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolBorderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolBorderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolShape(value: LegendSymbolShape | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolShape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSpacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslateX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslateX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslateY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslateY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeclReferenceCompletionEntry extends CachedCompletionEntryDetails {
-  var decl: PullDecl = js.native
-  var hasBeenResolved: js.Any = js.native
-  def resolve(`type`: String, fullSymbolName: String, docComments: String): Unit = js.native
+  var decl: PullDecl
+  var hasBeenResolved: js.Any
+  def resolve(`type`: String, fullSymbolName: String, docComments: String): Unit
 }
 
 object DeclReferenceCompletionEntry {
@@ -30,31 +29,5 @@ object DeclReferenceCompletionEntry {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclReferenceCompletionEntry]
   }
-  @scala.inline
-  implicit class DeclReferenceCompletionEntryOps[Self <: DeclReferenceCompletionEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecl(value: PullDecl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasBeenResolved(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasBeenResolved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResolve(value: (String, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SortsFunctions extends js.Object {
   /**
     * Sorting between 2 numbers
@@ -15,7 +14,7 @@ trait SortsFunctions extends js.Object {
     * @param direction The number describingthe order: ASC (+1), DESC (-1) or none (0)
     * @return The number (-1, 0 or +1) representing the comparison
     */
-  def number(a: js.Any, b: js.Any, attr: String, direction: Double): Double = js.native
+  def number(a: js.Any, b: js.Any, attr: String, direction: Double): Double
   /**
     * Restores the original order we had...
     *
@@ -23,7 +22,7 @@ trait SortsFunctions extends js.Object {
     * @param b The second record
     * @return The number (-1, 0 or +1) representing the comparison
     */
-  def originalPlacement(a: js.Any, b: js.Any): Double = js.native
+  def originalPlacement(a: js.Any, b: js.Any): Double
   /**
     * Sorting between 2 strings
     *
@@ -33,7 +32,7 @@ trait SortsFunctions extends js.Object {
     * @param direction The number describingthe order: ASC (+1), DESC (-1) or none (0)
     * @return The number (-1, 0 or +1) representing the comparison
     */
-  def string(a: js.Any, b: js.Any, attr: String, direction: Double): Double = js.native
+  def string(a: js.Any, b: js.Any, attr: String, direction: Double): Double
 }
 
 object SortsFunctions {
@@ -46,31 +45,5 @@ object SortsFunctions {
     val __obj = js.Dynamic.literal(number = js.Any.fromFunction4(number), originalPlacement = js.Any.fromFunction2(originalPlacement), string = js.Any.fromFunction4(string))
     __obj.asInstanceOf[SortsFunctions]
   }
-  @scala.inline
-  implicit class SortsFunctionsOps[Self <: SortsFunctions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumber(value: (js.Any, js.Any, String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withOriginalPlacement(value: (js.Any, js.Any) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPlacement")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withString(value: (js.Any, js.Any, String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

@@ -26,65 +26,18 @@ trait ApplicationComponent extends js.Object {
 
 object ApplicationComponent {
   @scala.inline
-  def apply(): ApplicationComponent = {
+  def apply(
+    ComponentName: ComponentName = null,
+    Monitor: js.UndefOr[Monitor] = js.undefined,
+    ResourceType: ResourceType = null,
+    Tier: Tier = null
+  ): ApplicationComponent = {
     val __obj = js.Dynamic.literal()
+    if (ComponentName != null) __obj.updateDynamic("ComponentName")(ComponentName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Monitor)) __obj.updateDynamic("Monitor")(Monitor.get.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
+    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationComponent]
   }
-  @scala.inline
-  implicit class ApplicationComponentOps[Self <: ApplicationComponent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponentName(value: ComponentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitor(value: Monitor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTier(value: Tier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

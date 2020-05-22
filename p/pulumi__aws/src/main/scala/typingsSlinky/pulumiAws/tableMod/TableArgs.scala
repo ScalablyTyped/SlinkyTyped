@@ -83,185 +83,38 @@ trait TableArgs extends js.Object {
 
 object TableArgs {
   @scala.inline
-  def apply(attributes: Input[js.Array[Input[TableAttribute]]], hashKey: Input[String]): TableArgs = {
+  def apply(
+    attributes: Input[js.Array[Input[TableAttribute]]],
+    hashKey: Input[String],
+    billingMode: Input[String] = null,
+    globalSecondaryIndexes: Input[js.Array[Input[TableGlobalSecondaryIndex]]] = null,
+    localSecondaryIndexes: Input[js.Array[Input[TableLocalSecondaryIndex]]] = null,
+    name: Input[String] = null,
+    pointInTimeRecovery: Input[TablePointInTimeRecovery] = null,
+    rangeKey: Input[String] = null,
+    readCapacity: Input[Double] = null,
+    serverSideEncryption: Input[TableServerSideEncryption] = null,
+    streamEnabled: Input[Boolean] = null,
+    streamViewType: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null,
+    ttl: Input[TableTtl] = null,
+    writeCapacity: Input[Double] = null
+  ): TableArgs = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], hashKey = hashKey.asInstanceOf[js.Any])
+    if (billingMode != null) __obj.updateDynamic("billingMode")(billingMode.asInstanceOf[js.Any])
+    if (globalSecondaryIndexes != null) __obj.updateDynamic("globalSecondaryIndexes")(globalSecondaryIndexes.asInstanceOf[js.Any])
+    if (localSecondaryIndexes != null) __obj.updateDynamic("localSecondaryIndexes")(localSecondaryIndexes.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (pointInTimeRecovery != null) __obj.updateDynamic("pointInTimeRecovery")(pointInTimeRecovery.asInstanceOf[js.Any])
+    if (rangeKey != null) __obj.updateDynamic("rangeKey")(rangeKey.asInstanceOf[js.Any])
+    if (readCapacity != null) __obj.updateDynamic("readCapacity")(readCapacity.asInstanceOf[js.Any])
+    if (serverSideEncryption != null) __obj.updateDynamic("serverSideEncryption")(serverSideEncryption.asInstanceOf[js.Any])
+    if (streamEnabled != null) __obj.updateDynamic("streamEnabled")(streamEnabled.asInstanceOf[js.Any])
+    if (streamViewType != null) __obj.updateDynamic("streamViewType")(streamViewType.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (ttl != null) __obj.updateDynamic("ttl")(ttl.asInstanceOf[js.Any])
+    if (writeCapacity != null) __obj.updateDynamic("writeCapacity")(writeCapacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableArgs]
   }
-  @scala.inline
-  implicit class TableArgsOps[Self <: TableArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: Input[js.Array[Input[TableAttribute]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHashKey(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBillingMode(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalSecondaryIndexes(value: Input[js.Array[Input[TableGlobalSecondaryIndex]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalSecondaryIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalSecondaryIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalSecondaryIndexes(value: Input[js.Array[Input[TableLocalSecondaryIndex]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalSecondaryIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localSecondaryIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointInTimeRecovery(value: Input[TablePointInTimeRecovery]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointInTimeRecovery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointInTimeRecovery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointInTimeRecovery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeKey(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadCapacity(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerSideEncryption(value: Input[TableServerSideEncryption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSideEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSideEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamViewType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamViewType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamViewType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamViewType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTtl(value: Input[TableTtl]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteCapacity(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeCapacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

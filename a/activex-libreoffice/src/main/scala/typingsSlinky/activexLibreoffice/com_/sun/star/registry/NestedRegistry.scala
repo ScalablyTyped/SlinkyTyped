@@ -49,7 +49,6 @@ import scala.scalajs.js.annotation._
   *
   * Guarantees: -thread safe
   */
-@js.native
 trait NestedRegistry
   extends XSimpleRegistry
      with XInitialization

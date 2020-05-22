@@ -50,137 +50,30 @@ trait ReservedDBInstancesOffering extends js.Object {
 
 object ReservedDBInstancesOffering {
   @scala.inline
-  def apply(): ReservedDBInstancesOffering = {
+  def apply(
+    CurrencyCode: String = null,
+    DBInstanceClass: String = null,
+    Duration: js.UndefOr[Integer] = js.undefined,
+    FixedPrice: js.UndefOr[Double] = js.undefined,
+    MultiAZ: js.UndefOr[Boolean] = js.undefined,
+    OfferingType: String = null,
+    ProductDescription: String = null,
+    RecurringCharges: RecurringChargeList = null,
+    ReservedDBInstancesOfferingId: String = null,
+    UsagePrice: js.UndefOr[Double] = js.undefined
+  ): ReservedDBInstancesOffering = {
     val __obj = js.Dynamic.literal()
+    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
+    if (DBInstanceClass != null) __obj.updateDynamic("DBInstanceClass")(DBInstanceClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(Duration)) __obj.updateDynamic("Duration")(Duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FixedPrice)) __obj.updateDynamic("FixedPrice")(FixedPrice.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MultiAZ)) __obj.updateDynamic("MultiAZ")(MultiAZ.get.asInstanceOf[js.Any])
+    if (OfferingType != null) __obj.updateDynamic("OfferingType")(OfferingType.asInstanceOf[js.Any])
+    if (ProductDescription != null) __obj.updateDynamic("ProductDescription")(ProductDescription.asInstanceOf[js.Any])
+    if (RecurringCharges != null) __obj.updateDynamic("RecurringCharges")(RecurringCharges.asInstanceOf[js.Any])
+    if (ReservedDBInstancesOfferingId != null) __obj.updateDynamic("ReservedDBInstancesOfferingId")(ReservedDBInstancesOfferingId.asInstanceOf[js.Any])
+    if (!js.isUndefined(UsagePrice)) __obj.updateDynamic("UsagePrice")(UsagePrice.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservedDBInstancesOffering]
   }
-  @scala.inline
-  implicit class ReservedDBInstancesOfferingOps[Self <: ReservedDBInstancesOffering] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrencyCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrencyCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBInstanceClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBInstanceClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedPrice(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiAZ(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAZ")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiAZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAZ")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecurringCharges(value: RecurringChargeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecurringCharges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecurringCharges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecurringCharges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedDBInstancesOfferingId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedDBInstancesOfferingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedDBInstancesOfferingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedDBInstancesOfferingId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsagePrice(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsagePrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsagePrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsagePrice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

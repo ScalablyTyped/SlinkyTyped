@@ -12,7 +12,7 @@ import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkStyles
 import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioningContainerProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -28,7 +28,7 @@ object Coachmark {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def ariaAlertText(value: String): this.type = set("ariaAlertText", value.asInstanceOf[js.Any])
     @scala.inline
@@ -88,7 +88,7 @@ object Coachmark {
     @scala.inline
     def preventFocusOnMount(value: Boolean): this.type = set("preventFocusOnMount", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: ICoachmarkStyleProps => Partial[ICoachmarkStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: ICoachmarkStyleProps => DeepPartial[ICoachmarkStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[ICoachmarkStyleProps, ICoachmarkStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

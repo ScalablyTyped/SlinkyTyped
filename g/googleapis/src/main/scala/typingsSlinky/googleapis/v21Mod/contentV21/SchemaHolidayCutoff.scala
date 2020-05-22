@@ -36,77 +36,20 @@ trait SchemaHolidayCutoff extends js.Object {
 
 object SchemaHolidayCutoff {
   @scala.inline
-  def apply(): SchemaHolidayCutoff = {
+  def apply(
+    deadlineDate: String = null,
+    deadlineHour: js.UndefOr[Double] = js.undefined,
+    deadlineTimezone: String = null,
+    holidayId: String = null,
+    visibleFromDate: String = null
+  ): SchemaHolidayCutoff = {
     val __obj = js.Dynamic.literal()
+    if (deadlineDate != null) __obj.updateDynamic("deadlineDate")(deadlineDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(deadlineHour)) __obj.updateDynamic("deadlineHour")(deadlineHour.get.asInstanceOf[js.Any])
+    if (deadlineTimezone != null) __obj.updateDynamic("deadlineTimezone")(deadlineTimezone.asInstanceOf[js.Any])
+    if (holidayId != null) __obj.updateDynamic("holidayId")(holidayId.asInstanceOf[js.Any])
+    if (visibleFromDate != null) __obj.updateDynamic("visibleFromDate")(visibleFromDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHolidayCutoff]
   }
-  @scala.inline
-  implicit class SchemaHolidayCutoffOps[Self <: SchemaHolidayCutoff] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeadlineDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadlineDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadlineDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadlineDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadlineHour(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadlineHour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadlineHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadlineHour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadlineTimezone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadlineTimezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadlineTimezone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadlineTimezone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHolidayId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holidayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHolidayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holidayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleFromDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleFromDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleFromDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleFromDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

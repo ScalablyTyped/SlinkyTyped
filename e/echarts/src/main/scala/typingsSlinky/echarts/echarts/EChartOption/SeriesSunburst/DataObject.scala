@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataObject extends js.Object {
   /**
     * Children nodes, which is recursively defined.
@@ -18,7 +17,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.children
     */
-  var children: js.UndefOr[js.Array[DataObject]] = js.native
+  var children: js.UndefOr[js.Array[DataObject]] = js.undefined
   /**
     * Item style when mouse is hovering unrelated items. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -27,7 +26,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.downplay
     */
-  var downplay: js.UndefOr[LabelMinAngle] = js.native
+  var downplay: js.UndefOr[LabelMinAngle] = js.undefined
   /**
     * Item style when mouse is hovering. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -36,7 +35,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.emphasis
     */
-  var emphasis: js.UndefOr[LabelMinAngle] = js.native
+  var emphasis: js.UndefOr[LabelMinAngle] = js.undefined
   /**
     * Item style when mouse is hovering related items. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -45,7 +44,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.highlight
     */
-  var highlight: js.UndefOr[LabelMinAngle] = js.native
+  var highlight: js.UndefOr[LabelMinAngle] = js.undefined
   /**
     * Style of Sunburst sectors.
     *
@@ -81,7 +80,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.undefined
   /**
     * `label` sets the text style for every sectors.
     *
@@ -103,7 +102,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.label
     */
-  var label: js.UndefOr[MinAngle] = js.native
+  var label: js.UndefOr[MinAngle] = js.undefined
   /**
     * Link address that redirects to when this sector is clicked.
     * Only useful when
@@ -117,14 +116,14 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.link
     */
-  var link: js.UndefOr[String] = js.native
+  var link: js.UndefOr[String] = js.undefined
   /**
     * Name displayed in each sector.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.name
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Like `target` attribute of HTML `<a>`, which can either be
     * `'blank'` or `'self'`. See
@@ -136,7 +135,7 @@ trait DataObject extends js.Object {
     * "blank"
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.target
     */
-  var target: js.UndefOr[String] = js.native
+  var target: js.UndefOr[String] = js.undefined
   /**
     * Value for each item.
     * If contains children, value can be left unset, and sum of
@@ -145,142 +144,35 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.value
     */
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object DataObject {
   @scala.inline
-  def apply(): DataObject = {
+  def apply(
+    children: js.Array[DataObject] = null,
+    downplay: LabelMinAngle = null,
+    emphasis: LabelMinAngle = null,
+    highlight: LabelMinAngle = null,
+    itemStyle: BorderType = null,
+    label: MinAngle = null,
+    link: String = null,
+    name: String = null,
+    target: String = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): DataObject = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (downplay != null) __obj.updateDynamic("downplay")(downplay.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (highlight != null) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataObject]
   }
-  @scala.inline
-  implicit class DataObjectOps[Self <: DataObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: js.Array[DataObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownplay(value: LabelMinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: LabelMinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlight(value: LabelMinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: BorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: MinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

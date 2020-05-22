@@ -22,47 +22,11 @@ trait GetSavingsPlansUtilizationRequest extends js.Object {
 
 object GetSavingsPlansUtilizationRequest {
   @scala.inline
-  def apply(TimePeriod: DateInterval): GetSavingsPlansUtilizationRequest = {
+  def apply(TimePeriod: DateInterval, Filter: Expression = null, Granularity: Granularity = null): GetSavingsPlansUtilizationRequest = {
     val __obj = js.Dynamic.literal(TimePeriod = TimePeriod.asInstanceOf[js.Any])
+    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
+    if (Granularity != null) __obj.updateDynamic("Granularity")(Granularity.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSavingsPlansUtilizationRequest]
   }
-  @scala.inline
-  implicit class GetSavingsPlansUtilizationRequestOps[Self <: GetSavingsPlansUtilizationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTimePeriod(value: DateInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGranularity(value: Granularity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Granularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGranularity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Granularity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

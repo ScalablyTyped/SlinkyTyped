@@ -6,101 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EdgeColor extends js.Object {
-  var edgeColor: js.UndefOr[typingsSlinky.cesium.mod.Color] = js.native
-  var edgeWidth: js.UndefOr[Double] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
-  var modelMatrix: js.UndefOr[Matrix4] = js.native
-  var planes: js.UndefOr[ClippingPlane] = js.native
-  var unionClippingRegions: js.UndefOr[Boolean] = js.native
+  var edgeColor: js.UndefOr[typingsSlinky.cesium.mod.Color] = js.undefined
+  var edgeWidth: js.UndefOr[Double] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var modelMatrix: js.UndefOr[Matrix4] = js.undefined
+  var planes: js.UndefOr[js.Array[ClippingPlane]] = js.undefined
+  var unionClippingRegions: js.UndefOr[Boolean] = js.undefined
 }
 
 object EdgeColor {
   @scala.inline
-  def apply(): EdgeColor = {
+  def apply(
+    edgeColor: typingsSlinky.cesium.mod.Color = null,
+    edgeWidth: js.UndefOr[Double] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    modelMatrix: Matrix4 = null,
+    planes: js.Array[ClippingPlane] = null,
+    unionClippingRegions: js.UndefOr[Boolean] = js.undefined
+  ): EdgeColor = {
     val __obj = js.Dynamic.literal()
+    if (edgeColor != null) __obj.updateDynamic("edgeColor")(edgeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeWidth)) __obj.updateDynamic("edgeWidth")(edgeWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (modelMatrix != null) __obj.updateDynamic("modelMatrix")(modelMatrix.asInstanceOf[js.Any])
+    if (planes != null) __obj.updateDynamic("planes")(planes.asInstanceOf[js.Any])
+    if (!js.isUndefined(unionClippingRegions)) __obj.updateDynamic("unionClippingRegions")(unionClippingRegions.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EdgeColor]
   }
-  @scala.inline
-  implicit class EdgeColorOps[Self <: EdgeColor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEdgeColor(value: typingsSlinky.cesium.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelMatrix(value: Matrix4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlanes(value: ClippingPlane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlanes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnionClippingRegions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unionClippingRegions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnionClippingRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unionClippingRegions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

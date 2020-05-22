@@ -26,65 +26,18 @@ trait DescribeEcsClustersRequest extends js.Object {
 
 object DescribeEcsClustersRequest {
   @scala.inline
-  def apply(): DescribeEcsClustersRequest = {
+  def apply(
+    EcsClusterArns: Strings = null,
+    MaxResults: js.UndefOr[Integer] = js.undefined,
+    NextToken: String = null,
+    StackId: String = null
+  ): DescribeEcsClustersRequest = {
     val __obj = js.Dynamic.literal()
+    if (EcsClusterArns != null) __obj.updateDynamic("EcsClusterArns")(EcsClusterArns.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (StackId != null) __obj.updateDynamic("StackId")(StackId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEcsClustersRequest]
   }
-  @scala.inline
-  implicit class DescribeEcsClustersRequestOps[Self <: DescribeEcsClustersRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEcsClusterArns(value: Strings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsClusterArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcsClusterArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsClusterArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

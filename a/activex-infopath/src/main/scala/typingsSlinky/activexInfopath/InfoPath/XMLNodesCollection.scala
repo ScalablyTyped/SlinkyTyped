@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XMLNodesCollection extends js.Object {
-  val Count: Double = js.native
+  val Count: Double
   @JSName("InfoPath.XMLNodesCollection_typekey")
-  var InfoPathDotXMLNodesCollection_typekey: XMLNodesCollection = js.native
-  def Item(varIndex: js.Any): IXMLDOMNode = js.native
+  var InfoPathDotXMLNodesCollection_typekey: XMLNodesCollection
+  def Item(varIndex: js.Any): IXMLDOMNode
 }
 
 object XMLNodesCollection {
@@ -24,31 +23,5 @@ object XMLNodesCollection {
     __obj.updateDynamic("InfoPath.XMLNodesCollection_typekey")(InfoPathDotXMLNodesCollection_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[XMLNodesCollection]
   }
-  @scala.inline
-  implicit class XMLNodesCollectionOps[Self <: XMLNodesCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotXMLNodesCollection_typekey(value: XMLNodesCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.XMLNodesCollection_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: js.Any => IXMLDOMNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

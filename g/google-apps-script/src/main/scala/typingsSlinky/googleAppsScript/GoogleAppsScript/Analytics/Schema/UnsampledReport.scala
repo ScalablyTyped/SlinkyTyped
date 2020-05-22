@@ -4,270 +4,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnsampledReport extends js.Object {
-  var accountId: js.UndefOr[String] = js.native
-  var cloudStorageDownloadDetails: js.UndefOr[UnsampledReportCloudStorageDownloadDetails] = js.native
-  var created: js.UndefOr[String] = js.native
-  var dimensions: js.UndefOr[String] = js.native
-  var downloadType: js.UndefOr[String] = js.native
-  var driveDownloadDetails: js.UndefOr[UnsampledReportDriveDownloadDetails] = js.native
-  var end_date: js.UndefOr[String] = js.native
-  var filters: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var metrics: js.UndefOr[String] = js.native
-  var profileId: js.UndefOr[String] = js.native
-  var segment: js.UndefOr[String] = js.native
-  var selfLink: js.UndefOr[String] = js.native
-  var start_date: js.UndefOr[String] = js.native
-  var status: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var updated: js.UndefOr[String] = js.native
-  var webPropertyId: js.UndefOr[String] = js.native
+  var accountId: js.UndefOr[String] = js.undefined
+  var cloudStorageDownloadDetails: js.UndefOr[UnsampledReportCloudStorageDownloadDetails] = js.undefined
+  var created: js.UndefOr[String] = js.undefined
+  var dimensions: js.UndefOr[String] = js.undefined
+  var downloadType: js.UndefOr[String] = js.undefined
+  var driveDownloadDetails: js.UndefOr[UnsampledReportDriveDownloadDetails] = js.undefined
+  var end_date: js.UndefOr[String] = js.undefined
+  var filters: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var metrics: js.UndefOr[String] = js.undefined
+  var profileId: js.UndefOr[String] = js.undefined
+  var segment: js.UndefOr[String] = js.undefined
+  var selfLink: js.UndefOr[String] = js.undefined
+  var start_date: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var updated: js.UndefOr[String] = js.undefined
+  var webPropertyId: js.UndefOr[String] = js.undefined
 }
 
 object UnsampledReport {
   @scala.inline
-  def apply(): UnsampledReport = {
+  def apply(
+    accountId: String = null,
+    cloudStorageDownloadDetails: UnsampledReportCloudStorageDownloadDetails = null,
+    created: String = null,
+    dimensions: String = null,
+    downloadType: String = null,
+    driveDownloadDetails: UnsampledReportDriveDownloadDetails = null,
+    end_date: String = null,
+    filters: String = null,
+    id: String = null,
+    kind: String = null,
+    metrics: String = null,
+    profileId: String = null,
+    segment: String = null,
+    selfLink: String = null,
+    start_date: String = null,
+    status: String = null,
+    title: String = null,
+    updated: String = null,
+    webPropertyId: String = null
+  ): UnsampledReport = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (cloudStorageDownloadDetails != null) __obj.updateDynamic("cloudStorageDownloadDetails")(cloudStorageDownloadDetails.asInstanceOf[js.Any])
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
+    if (downloadType != null) __obj.updateDynamic("downloadType")(downloadType.asInstanceOf[js.Any])
+    if (driveDownloadDetails != null) __obj.updateDynamic("driveDownloadDetails")(driveDownloadDetails.asInstanceOf[js.Any])
+    if (end_date != null) __obj.updateDynamic("end_date")(end_date.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
+    if (profileId != null) __obj.updateDynamic("profileId")(profileId.asInstanceOf[js.Any])
+    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (start_date != null) __obj.updateDynamic("start_date")(start_date.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
+    if (webPropertyId != null) __obj.updateDynamic("webPropertyId")(webPropertyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnsampledReport]
   }
-  @scala.inline
-  implicit class UnsampledReportOps[Self <: UnsampledReport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudStorageDownloadDetails(value: UnsampledReportCloudStorageDownloadDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudStorageDownloadDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudStorageDownloadDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudStorageDownloadDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownloadType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriveDownloadDetails(value: UnsampledReportDriveDownloadDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveDownloadDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriveDownloadDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveDownloadDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebPropertyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebPropertyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

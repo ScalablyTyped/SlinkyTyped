@@ -31,53 +31,12 @@ trait SchemaIngestionInfo extends js.Object {
 
 object SchemaIngestionInfo {
   @scala.inline
-  def apply(): SchemaIngestionInfo = {
+  def apply(backupIngestionAddress: String = null, ingestionAddress: String = null, streamName: String = null): SchemaIngestionInfo = {
     val __obj = js.Dynamic.literal()
+    if (backupIngestionAddress != null) __obj.updateDynamic("backupIngestionAddress")(backupIngestionAddress.asInstanceOf[js.Any])
+    if (ingestionAddress != null) __obj.updateDynamic("ingestionAddress")(ingestionAddress.asInstanceOf[js.Any])
+    if (streamName != null) __obj.updateDynamic("streamName")(streamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIngestionInfo]
   }
-  @scala.inline
-  implicit class SchemaIngestionInfoOps[Self <: SchemaIngestionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackupIngestionAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backupIngestionAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupIngestionAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backupIngestionAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIngestionAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestionAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIngestionAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestionAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

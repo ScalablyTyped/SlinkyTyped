@@ -5,6 +5,7 @@ import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAttributeType because Already inherited
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.INumericAttributeTypeBase because Already inherited
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IDecimalAttributeTypeBase because Already inherited
-- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IFloatAttributeTypeBase because var conflicts: containerAsAttribute, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.FloatAttributeTypeBase")
+- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IFloatAttributeTypeBase because var conflicts: containerAsAttribute, containerAsEntityKeyPart, containerAsODataKeyPart, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.FloatAttributeTypeBase")
 @js.native
 abstract class FloatAttributeTypeBase protected () extends DecimalAttributeTypeBase {
   def this(
@@ -32,6 +33,10 @@ abstract class FloatAttributeTypeBase protected () extends DecimalAttributeTypeB
   var model_FFloatAttributeTypeBase: IModel = js.native
   @JSName("containerAsAttribute")
   def containerAsAttribute_MFloatAttributeTypeBase: Attribute = js.native
+  @JSName("containerAsEntityKeyPart")
+  def containerAsEntityKeyPart_MFloatAttributeTypeBase: EntityKeyPart = js.native
+  @JSName("containerAsODataKeyPart")
+  def containerAsODataKeyPart_MFloatAttributeTypeBase: ODataKeyPart = js.native
 }
 
 /* static members */

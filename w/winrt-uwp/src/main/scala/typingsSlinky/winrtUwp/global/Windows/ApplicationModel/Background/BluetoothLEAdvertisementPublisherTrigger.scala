@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Background
 
+import typingsSlinky.winrtUwp.Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Creates a new instance of the BluetoothLEAdvertisementPublisherTrigger class. */
 class BluetoothLEAdvertisementPublisherTrigger ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger {
+  /** Gets the Bluetooth LE advertisement to configure and publish in the background. */
+  /* CompleteClass */
+  override var advertisement: BluetoothLEAdvertisement = js.native
+}
 

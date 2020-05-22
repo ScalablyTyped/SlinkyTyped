@@ -11,7 +11,7 @@ trait BatchResponseCollector extends js.Object {
     * BatchResponseCollector.TYPE_ERROR.Keeps track of all collected responses and fires the necessary
     * events after all responses for therequests, given in the constructor, have returned.
     * @param oResponse the response which should be collected
-    * @param sResponseType the type of the response, either BatchResponseCollector.TYPE_SUCCESS									or
+    * @param sResponseType the type of the response, either BatchResponseCollector.TYPE_SUCCESS                                    or
     * BatchResponseCollector.TYPE_ERROR
     */
   def collect(oResponse: js.Any): Unit = js.native

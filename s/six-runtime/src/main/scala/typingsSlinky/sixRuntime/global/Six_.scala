@@ -13,7 +13,12 @@ object Six_ extends js.Object {
     object dataProvider extends js.Object {
       @js.native
       abstract class DataProvider ()
-        extends typingsSlinky.sixRuntime.Six.plugins.dataProvider.DataProvider
+        extends typingsSlinky.sixRuntime.Six.plugins.dataProvider.DataProvider {
+        /* CompleteClass */
+        override def execute(ctx: js.Object, args: js.Any): js.Any = js.native
+        /* CompleteClass */
+        override def prepare(ctx: js.Object, depsRes: js.Object): js.Any = js.native
+      }
       
       /* static members */
       @js.native

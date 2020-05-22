@@ -30,77 +30,20 @@ trait PatchBaselineIdentity extends js.Object {
 
 object PatchBaselineIdentity {
   @scala.inline
-  def apply(): PatchBaselineIdentity = {
+  def apply(
+    BaselineDescription: BaselineDescription = null,
+    BaselineId: BaselineId = null,
+    BaselineName: BaselineName = null,
+    DefaultBaseline: js.UndefOr[DefaultBaseline] = js.undefined,
+    OperatingSystem: OperatingSystem = null
+  ): PatchBaselineIdentity = {
     val __obj = js.Dynamic.literal()
+    if (BaselineDescription != null) __obj.updateDynamic("BaselineDescription")(BaselineDescription.asInstanceOf[js.Any])
+    if (BaselineId != null) __obj.updateDynamic("BaselineId")(BaselineId.asInstanceOf[js.Any])
+    if (BaselineName != null) __obj.updateDynamic("BaselineName")(BaselineName.asInstanceOf[js.Any])
+    if (!js.isUndefined(DefaultBaseline)) __obj.updateDynamic("DefaultBaseline")(DefaultBaseline.get.asInstanceOf[js.Any])
+    if (OperatingSystem != null) __obj.updateDynamic("OperatingSystem")(OperatingSystem.asInstanceOf[js.Any])
     __obj.asInstanceOf[PatchBaselineIdentity]
   }
-  @scala.inline
-  implicit class PatchBaselineIdentityOps[Self <: PatchBaselineIdentity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaselineDescription(value: BaselineDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaselineDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaselineId(value: BaselineId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaselineId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaselineName(value: BaselineName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaselineName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultBaseline(value: DefaultBaseline): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultBaseline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultBaseline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultBaseline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperatingSystem(value: OperatingSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperatingSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

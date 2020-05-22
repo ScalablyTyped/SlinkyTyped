@@ -10,83 +10,45 @@ trait AnalyticsApplicationOutput extends js.Object {
     * The ARN of the Kinesis Analytics Application.
     */
   var id: String = js.native
+  /**
+    * The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesisStream`.
+    * See Kinesis Firehose below for more details.
+    */
   var kinesisFirehose: js.UndefOr[AnalyticsApplicationOutputKinesisFirehose] = js.native
+  /**
+    * The Kinesis Stream configuration for the destination stream. Conflicts with `kinesisFirehose`.
+    * See Kinesis Stream below for more details.
+    */
   var kinesisStream: js.UndefOr[AnalyticsApplicationOutputKinesisStream] = js.native
+  /**
+    * The Lambda function destination. See Lambda below for more details.
+    */
   var lambda: js.UndefOr[AnalyticsApplicationOutputLambda] = js.native
   /**
-    * Name of the Kinesis Analytics Application.
+    * The Name of the in-application stream.
     */
   var name: String = js.native
+  /**
+    * The Schema format of the data written to the destination. See Destination Schema below for more details.
+    */
   var schema: AnalyticsApplicationOutputSchema = js.native
 }
 
 object AnalyticsApplicationOutput {
   @scala.inline
-  def apply(id: String, name: String, schema: AnalyticsApplicationOutputSchema): AnalyticsApplicationOutput = {
+  def apply(
+    id: String,
+    name: String,
+    schema: AnalyticsApplicationOutputSchema,
+    kinesisFirehose: AnalyticsApplicationOutputKinesisFirehose = null,
+    kinesisStream: AnalyticsApplicationOutputKinesisStream = null,
+    lambda: AnalyticsApplicationOutputLambda = null
+  ): AnalyticsApplicationOutput = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any])
+    if (kinesisFirehose != null) __obj.updateDynamic("kinesisFirehose")(kinesisFirehose.asInstanceOf[js.Any])
+    if (kinesisStream != null) __obj.updateDynamic("kinesisStream")(kinesisStream.asInstanceOf[js.Any])
+    if (lambda != null) __obj.updateDynamic("lambda")(lambda.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsApplicationOutput]
   }
-  @scala.inline
-  implicit class AnalyticsApplicationOutputOps[Self <: AnalyticsApplicationOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchema(value: AnalyticsApplicationOutputSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKinesisFirehose(value: AnalyticsApplicationOutputKinesisFirehose): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisFirehose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisFirehose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisFirehose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKinesisStream(value: AnalyticsApplicationOutputKinesisStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambda(value: AnalyticsApplicationOutputLambda): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambda: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

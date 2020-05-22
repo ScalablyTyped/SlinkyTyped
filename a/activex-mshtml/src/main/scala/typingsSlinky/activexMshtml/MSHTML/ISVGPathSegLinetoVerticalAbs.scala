@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISVGPathSegLinetoVerticalAbs extends js.Object {
   @JSName("MSHTML.ISVGPathSegLinetoVerticalAbs_typekey")
-  var MSHTMLDotISVGPathSegLinetoVerticalAbs_typekey: ISVGPathSegLinetoVerticalAbs = js.native
-  var y: Double = js.native
+  var MSHTMLDotISVGPathSegLinetoVerticalAbs_typekey: ISVGPathSegLinetoVerticalAbs
+  var y: Double
 }
 
 object ISVGPathSegLinetoVerticalAbs {
@@ -18,25 +17,5 @@ object ISVGPathSegLinetoVerticalAbs {
     __obj.updateDynamic("MSHTML.ISVGPathSegLinetoVerticalAbs_typekey")(MSHTMLDotISVGPathSegLinetoVerticalAbs_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISVGPathSegLinetoVerticalAbs]
   }
-  @scala.inline
-  implicit class ISVGPathSegLinetoVerticalAbsOps[Self <: ISVGPathSegLinetoVerticalAbs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotISVGPathSegLinetoVerticalAbs_typekey(value: ISVGPathSegLinetoVerticalAbs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.ISVGPathSegLinetoVerticalAbs_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

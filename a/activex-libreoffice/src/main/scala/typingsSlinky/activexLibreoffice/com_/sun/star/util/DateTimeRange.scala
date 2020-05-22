@@ -5,41 +5,40 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents a range of date+time values. */
-@js.native
 trait DateTimeRange extends js.Object {
   /** contains the end day of month (1-31 or 0 for a void date) for the range. */
-  var EndDay: Double = js.native
+  var EndDay: Double
   /** contains the end hour (0-23) for the range. */
-  var EndHours: Double = js.native
+  var EndHours: Double
   /** contains the end minutes (0-59) for the range. */
-  var EndMinutes: Double = js.native
+  var EndMinutes: Double
   /** contains the end month of year (1-12 or 0 for a void date) for the range. */
-  var EndMonth: Double = js.native
+  var EndMonth: Double
   /** contains the end nanoseconds (0 - 999 999 999) for the range. */
-  var EndNanoSeconds: Double = js.native
+  var EndNanoSeconds: Double
   /** contains the end seconds (0-59) for the range. */
-  var EndSeconds: Double = js.native
+  var EndSeconds: Double
   /** contains the end year for the range. */
-  var EndYear: Double = js.native
+  var EndYear: Double
   /**
     * true: time zone is UTC false: unknown time zone.
     * @since LibreOffice 4.1
     */
-  var IsUTC: Boolean = js.native
+  var IsUTC: Boolean
   /** contains the start day of month (1-31 or 0 for a void date) for the range. */
-  var StartDay: Double = js.native
+  var StartDay: Double
   /** contains the start hour (0-23) for the range. */
-  var StartHours: Double = js.native
+  var StartHours: Double
   /** contains the start minutes (0-59) for the range. */
-  var StartMinutes: Double = js.native
+  var StartMinutes: Double
   /** contains the start month of year (1-12 or 0 for a void date) for the range. */
-  var StartMonth: Double = js.native
+  var StartMonth: Double
   /** contains the start nanoseconds (0 - 999 999 999) for the range. */
-  var StartNanoSeconds: Double = js.native
+  var StartNanoSeconds: Double
   /** contains the start seconds (0-59) for the range. */
-  var StartSeconds: Double = js.native
+  var StartSeconds: Double
   /** contains the start year for the range. */
-  var StartYear: Double = js.native
+  var StartYear: Double
 }
 
 object DateTimeRange {
@@ -64,103 +63,5 @@ object DateTimeRange {
     val __obj = js.Dynamic.literal(EndDay = EndDay.asInstanceOf[js.Any], EndHours = EndHours.asInstanceOf[js.Any], EndMinutes = EndMinutes.asInstanceOf[js.Any], EndMonth = EndMonth.asInstanceOf[js.Any], EndNanoSeconds = EndNanoSeconds.asInstanceOf[js.Any], EndSeconds = EndSeconds.asInstanceOf[js.Any], EndYear = EndYear.asInstanceOf[js.Any], IsUTC = IsUTC.asInstanceOf[js.Any], StartDay = StartDay.asInstanceOf[js.Any], StartHours = StartHours.asInstanceOf[js.Any], StartMinutes = StartMinutes.asInstanceOf[js.Any], StartMonth = StartMonth.asInstanceOf[js.Any], StartNanoSeconds = StartNanoSeconds.asInstanceOf[js.Any], StartSeconds = StartSeconds.asInstanceOf[js.Any], StartYear = StartYear.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateTimeRange]
   }
-  @scala.inline
-  implicit class DateTimeRangeOps[Self <: DateTimeRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndDay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndHours(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndHours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndMinutes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndMonth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndNanoSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndNanoSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndYear(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsUTC(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsUTC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartDay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartHours(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartHours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartMinutes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartMonth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartNanoSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartNanoSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartYear(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

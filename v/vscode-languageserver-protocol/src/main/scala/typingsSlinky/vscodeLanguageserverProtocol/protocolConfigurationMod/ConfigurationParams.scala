@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigurationParams extends js.Object {
-  var items: js.Array[ConfigurationItem] = js.native
+  var items: js.Array[ConfigurationItem]
 }
 
 object ConfigurationParams {
@@ -15,19 +14,5 @@ object ConfigurationParams {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationParams]
   }
-  @scala.inline
-  implicit class ConfigurationParamsOps[Self <: ConfigurationParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[ConfigurationItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

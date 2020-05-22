@@ -1,37 +1,31 @@
 package typingsSlinky.apolloProtobufjs.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IExtensionField
   extends AnyExtensionField
      with IField {
   /** Extended type */
-  var extend: String = js.native
+  var extend: String
 }
 
 object IExtensionField {
   @scala.inline
-  def apply(extend: String, id: Double, `type`: String): IExtensionField = {
+  def apply(
+    extend: String,
+    id: Double,
+    `type`: String,
+    options: StringDictionary[js.Any] = null,
+    rule: String = null
+  ): IExtensionField = {
     val __obj = js.Dynamic.literal(extend = extend.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExtensionField]
   }
-  @scala.inline
-  implicit class IExtensionFieldOps[Self <: IExtensionField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtend(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

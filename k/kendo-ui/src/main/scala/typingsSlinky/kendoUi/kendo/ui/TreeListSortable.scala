@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TreeListSortable extends js.Object {
-  var allowUnsort: js.UndefOr[Boolean] = js.native
-  var mode: js.UndefOr[String] = js.native
+  var allowUnsort: js.UndefOr[Boolean] = js.undefined
+  var mode: js.UndefOr[String] = js.undefined
 }
 
 object TreeListSortable {
   @scala.inline
-  def apply(): TreeListSortable = {
+  def apply(allowUnsort: js.UndefOr[Boolean] = js.undefined, mode: String = null): TreeListSortable = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowUnsort)) __obj.updateDynamic("allowUnsort")(allowUnsort.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeListSortable]
   }
-  @scala.inline
-  implicit class TreeListSortableOps[Self <: TreeListSortable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowUnsort(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnsort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUnsort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnsort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

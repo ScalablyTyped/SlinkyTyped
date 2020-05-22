@@ -26,53 +26,16 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2CommandTask extends js.Object {
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2CommandTask {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2CommandTask = {
+  def apply(
+    expectedOutputs: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputs = null,
+    inputs: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputs = null,
+    timeouts: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeouts = null
+  ): SchemaGoogleDevtoolsRemoteworkersV1test2CommandTask = {
     val __obj = js.Dynamic.literal()
+    if (expectedOutputs != null) __obj.updateDynamic("expectedOutputs")(expectedOutputs.asInstanceOf[js.Any])
+    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
+    if (timeouts != null) __obj.updateDynamic("timeouts")(timeouts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2CommandTask]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpectedOutputs(value: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedOutputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedOutputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedOutputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputs(value: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeouts(value: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeouts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeouts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeouts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeouts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,47 +22,15 @@ trait CreateDeploymentRequest extends js.Object {
 
 object CreateDeploymentRequest {
   @scala.inline
-  def apply(ApiId: string): CreateDeploymentRequest = {
+  def apply(
+    ApiId: string,
+    Description: StringWithLengthBetween0And1024 = null,
+    StageName: StringWithLengthBetween1And128 = null
+  ): CreateDeploymentRequest = {
     val __obj = js.Dynamic.literal(ApiId = ApiId.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (StageName != null) __obj.updateDynamic("StageName")(StageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDeploymentRequest]
   }
-  @scala.inline
-  implicit class CreateDeploymentRequestOps[Self <: CreateDeploymentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: StringWithLengthBetween0And1024): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageName(value: StringWithLengthBetween1And128): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StageName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

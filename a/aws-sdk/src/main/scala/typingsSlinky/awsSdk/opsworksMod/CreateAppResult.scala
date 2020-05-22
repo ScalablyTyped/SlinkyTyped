@@ -14,29 +14,10 @@ trait CreateAppResult extends js.Object {
 
 object CreateAppResult {
   @scala.inline
-  def apply(): CreateAppResult = {
+  def apply(AppId: String = null): CreateAppResult = {
     val __obj = js.Dynamic.literal()
+    if (AppId != null) __obj.updateDynamic("AppId")(AppId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAppResult]
   }
-  @scala.inline
-  implicit class CreateAppResultOps[Self <: CreateAppResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AppId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AppId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

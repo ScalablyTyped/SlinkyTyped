@@ -33,53 +33,16 @@ trait SchemaExecutionError extends js.Object {
 
 object SchemaExecutionError {
   @scala.inline
-  def apply(): SchemaExecutionError = {
+  def apply(
+    errorMessage: String = null,
+    errorType: String = null,
+    scriptStackTraceElements: js.Array[SchemaScriptStackTraceElement] = null
+  ): SchemaExecutionError = {
     val __obj = js.Dynamic.literal()
+    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
+    if (errorType != null) __obj.updateDynamic("errorType")(errorType.asInstanceOf[js.Any])
+    if (scriptStackTraceElements != null) __obj.updateDynamic("scriptStackTraceElements")(scriptStackTraceElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExecutionError]
   }
-  @scala.inline
-  implicit class SchemaExecutionErrorOps[Self <: SchemaExecutionError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptStackTraceElements(value: js.Array[SchemaScriptStackTraceElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptStackTraceElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptStackTraceElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptStackTraceElements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

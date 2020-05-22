@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the InkAnalysisWord object, for use in "inkAnalysisWord.set({ ... })". */
-@js.native
 trait InkAnalysisWordUpdateData extends js.Object {
   /**
     *
@@ -13,34 +12,15 @@ trait InkAnalysisWordUpdateData extends js.Object {
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var line: js.UndefOr[InkAnalysisLineUpdateData] = js.native
+  var line: js.UndefOr[InkAnalysisLineUpdateData] = js.undefined
 }
 
 object InkAnalysisWordUpdateData {
   @scala.inline
-  def apply(): InkAnalysisWordUpdateData = {
+  def apply(line: InkAnalysisLineUpdateData = null): InkAnalysisWordUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
     __obj.asInstanceOf[InkAnalysisWordUpdateData]
   }
-  @scala.inline
-  implicit class InkAnalysisWordUpdateDataOps[Self <: InkAnalysisWordUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLine(value: InkAnalysisLineUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FinderOptions extends Heuristic {
-  var diagonalMovement: js.UndefOr[DiagonalMovement] = js.native
-  var weight: js.UndefOr[Double] = js.native
+  var diagonalMovement: js.UndefOr[DiagonalMovement] = js.undefined
+  var weight: js.UndefOr[Double] = js.undefined
 }
 
 object FinderOptions {
   @scala.inline
-  def apply(): FinderOptions = {
+  def apply(
+    diagonalMovement: DiagonalMovement = null,
+    heuristic: (/* dx */ Double, /* dy */ Double) => Double = null,
+    weight: js.UndefOr[Double] = js.undefined
+  ): FinderOptions = {
     val __obj = js.Dynamic.literal()
+    if (diagonalMovement != null) __obj.updateDynamic("diagonalMovement")(diagonalMovement.asInstanceOf[js.Any])
+    if (heuristic != null) __obj.updateDynamic("heuristic")(js.Any.fromFunction2(heuristic))
+    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FinderOptions]
   }
-  @scala.inline
-  implicit class FinderOptionsOps[Self <: FinderOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiagonalMovement(value: DiagonalMovement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagonalMovement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiagonalMovement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagonalMovement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

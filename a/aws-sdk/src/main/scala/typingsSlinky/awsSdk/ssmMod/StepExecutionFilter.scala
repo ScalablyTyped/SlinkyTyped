@@ -22,25 +22,5 @@ object StepExecutionFilter {
     val __obj = js.Dynamic.literal(Key = Key.asInstanceOf[js.Any], Values = Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepExecutionFilter]
   }
-  @scala.inline
-  implicit class StepExecutionFilterOps[Self <: StepExecutionFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: StepExecutionFilterKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValues(value: StepExecutionFilterValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

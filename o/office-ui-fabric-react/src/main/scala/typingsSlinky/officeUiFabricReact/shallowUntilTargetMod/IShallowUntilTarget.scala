@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IShallowUntilTarget extends js.Object {
-  var maxTries: Double = js.native
-  var shallowOptions: IShallowRendererProps = js.native
+  var maxTries: Double
+  var shallowOptions: IShallowRendererProps
 }
 
 object IShallowUntilTarget {
@@ -16,25 +15,5 @@ object IShallowUntilTarget {
     val __obj = js.Dynamic.literal(maxTries = maxTries.asInstanceOf[js.Any], shallowOptions = shallowOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[IShallowUntilTarget]
   }
-  @scala.inline
-  implicit class IShallowUntilTargetOps[Self <: IShallowUntilTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxTries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShallowOptions(value: IShallowRendererProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shallowOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

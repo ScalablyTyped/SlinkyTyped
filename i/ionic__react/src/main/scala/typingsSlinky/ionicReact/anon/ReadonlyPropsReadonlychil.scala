@@ -2,7 +2,6 @@ package typingsSlinky.ionicReact.anon
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonBackButtonElement
 import typingsSlinky.ionicCore.mod.Color
@@ -16,185 +15,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Readonly<@ionic/react.@ionic/react/dist/types/components/navigation/IonBackButton.Props> & std.Readonly<{  children ? :react.react.ReactNode}> */
-@js.native
 trait ReadonlyPropsReadonlychil extends js.Object {
-  val children: js.UndefOr[TagMod[Any]] = js.native
-  val `class`: js.UndefOr[String] = js.native
-  val className: js.UndefOr[String] = js.native
-  val color: js.UndefOr[Color] = js.native
-  val defaultHref: js.UndefOr[String] = js.native
-  val disabled: js.UndefOr[Boolean] = js.native
-  val icon: js.UndefOr[Ios | String] = js.native
-  val mode: js.UndefOr[ios | md] = js.native
-  val ref: js.UndefOr[ReactRef[HTMLIonBackButtonElement]] = js.native
-  val style: js.UndefOr[StringDictionary[js.Any]] = js.native
-  val text: js.UndefOr[String] = js.native
-  val `type`: js.UndefOr[submit | reset | button] = js.native
+  val children: js.UndefOr[TagMod[Any]] = js.undefined
+  val `class`: js.UndefOr[String] = js.undefined
+  val className: js.UndefOr[String] = js.undefined
+  val color: js.UndefOr[Color] = js.undefined
+  val defaultHref: js.UndefOr[String] = js.undefined
+  val disabled: js.UndefOr[Boolean] = js.undefined
+  val icon: js.UndefOr[Ios | String] = js.undefined
+  val mode: js.UndefOr[ios | md] = js.undefined
+  val ref: js.UndefOr[ReactRef[HTMLIonBackButtonElement]] = js.undefined
+  val style: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  val text: js.UndefOr[String] = js.undefined
+  val `type`: js.UndefOr[submit | reset | button] = js.undefined
 }
 
 object ReadonlyPropsReadonlychil {
   @scala.inline
-  def apply(): ReadonlyPropsReadonlychil = {
+  def apply(
+    children: TagMod[Any] = null,
+    `class`: String = null,
+    className: String = null,
+    color: Color = null,
+    defaultHref: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    icon: Ios | String = null,
+    mode: ios | md = null,
+    ref: ReactRef[HTMLIonBackButtonElement] = null,
+    style: StringDictionary[js.Any] = null,
+    text: String = null,
+    `type`: submit | reset | button = null
+  ): ReadonlyPropsReadonlychil = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (`class` != null) __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (defaultHref != null) __obj.updateDynamic("defaultHref")(defaultHref.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadonlyPropsReadonlychil]
   }
-  @scala.inline
-  implicit class ReadonlyPropsReadonlychilOps[Self <: ReadonlyPropsReadonlychil] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: Ios | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ios | md): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRef(value: ReactRef[HTMLIonBackButtonElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: submit | reset | button): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

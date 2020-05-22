@@ -22,53 +22,12 @@ trait DeployedImage extends js.Object {
 
 object DeployedImage {
   @scala.inline
-  def apply(): DeployedImage = {
+  def apply(ResolutionTime: js.Date = null, ResolvedImage: Image = null, SpecifiedImage: Image = null): DeployedImage = {
     val __obj = js.Dynamic.literal()
+    if (ResolutionTime != null) __obj.updateDynamic("ResolutionTime")(ResolutionTime.asInstanceOf[js.Any])
+    if (ResolvedImage != null) __obj.updateDynamic("ResolvedImage")(ResolvedImage.asInstanceOf[js.Any])
+    if (SpecifiedImage != null) __obj.updateDynamic("SpecifiedImage")(SpecifiedImage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeployedImage]
   }
-  @scala.inline
-  implicit class DeployedImageOps[Self <: DeployedImage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResolutionTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolutionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolutionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolutionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolvedImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolvedImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolvedImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolvedImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpecifiedImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpecifiedImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpecifiedImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpecifiedImage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,19 +18,5 @@ object CreateContainerOutput {
     val __obj = js.Dynamic.literal(Container = Container.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateContainerOutput]
   }
-  @scala.inline
-  implicit class CreateContainerOutputOps[Self <: CreateContainerOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainer(value: Container): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Container")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

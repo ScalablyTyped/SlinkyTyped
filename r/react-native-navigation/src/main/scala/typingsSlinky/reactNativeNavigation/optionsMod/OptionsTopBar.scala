@@ -6,461 +6,183 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptionsTopBar extends js.Object {
   /**
     * Controls whether TopBar visibility changes should be animated
     */
-  var animate: js.UndefOr[Boolean] = js.native
+  var animate: js.UndefOr[Boolean] = js.undefined
   /**
     * Back button configuration
     */
-  var backButton: js.UndefOr[OptionsTopBarBackButton] = js.native
+  var backButton: js.UndefOr[OptionsTopBarBackButton] = js.undefined
   /**
     * Background configuration
     */
-  var background: js.UndefOr[OptionsTopBarBackground] = js.native
+  var background: js.UndefOr[OptionsTopBarBackground] = js.undefined
   /**
     * Control the NavBar blur style
     * #### (iOS specific)
     * @requires translucent: true
     * @default 'default'
     */
-  var barStyle: js.UndefOr[default | black] = js.native
+  var barStyle: js.UndefOr[default | black] = js.undefined
   /**
     * Change the navbar border color
     * #### (Android specific)
     */
-  var borderColor: js.UndefOr[Color] = js.native
+  var borderColor: js.UndefOr[Color] = js.undefined
   /**
     * Set the border height of the navbar in dp
     * #### (Android specific)
     */
-  var borderHeight: js.UndefOr[AndroidDensityNumber] = js.native
+  var borderHeight: js.UndefOr[AndroidDensityNumber] = js.undefined
   /**
     * Draw behind the navbar
     */
-  var drawBehind: js.UndefOr[Boolean] = js.native
+  var drawBehind: js.UndefOr[Boolean] = js.undefined
   /**
     * Set the elevation of the navbar in dp
     * #### (Android specific)
     */
-  var elevation: js.UndefOr[AndroidDensityNumber] = js.native
+  var elevation: js.UndefOr[AndroidDensityNumber] = js.undefined
   /**
     * Set the height of the navbar in dp
     * #### (Android specific)
     */
-  var height: js.UndefOr[AndroidDensityNumber] = js.native
+  var height: js.UndefOr[AndroidDensityNumber] = js.undefined
   /**
     * Controls Hiding NavBar on focus UISearchBar
     * #### (iOS 11+ specific)
     */
-  var hideNavBarOnFocusSearchBar: js.UndefOr[Boolean] = js.native
+  var hideNavBarOnFocusSearchBar: js.UndefOr[Boolean] = js.undefined
   /**
     * Top bar will hide and show based on users scroll direction
     */
-  var hideOnScroll: js.UndefOr[Boolean] = js.native
+  var hideOnScroll: js.UndefOr[Boolean] = js.undefined
   /**
     * Control the Large Title configuration
     * #### (iOS 11+ specific)
     */
-  var largeTitle: js.UndefOr[OptionsTopBarLargeTitle] = js.native
+  var largeTitle: js.UndefOr[OptionsTopBarLargeTitle] = js.undefined
   /**
     * Change button colors in the top bar
     */
-  var leftButtonColor: js.UndefOr[Color] = js.native
-  var leftButtonDisabledColor: js.UndefOr[Color] = js.native
+  var leftButtonColor: js.UndefOr[Color] = js.undefined
+  var leftButtonDisabledColor: js.UndefOr[Color] = js.undefined
   /**
     * List of buttons to the left
     */
-  var leftButtons: js.UndefOr[js.Array[OptionsTopBarButton]] = js.native
+  var leftButtons: js.UndefOr[js.Array[OptionsTopBarButton]] = js.undefined
   /**
     * Disable the border on bottom of the navbar
     * #### (iOS specific)
     * @default false
     */
-  var noBorder: js.UndefOr[Boolean] = js.native
-  var rightButtonColor: js.UndefOr[Color] = js.native
-  var rightButtonDisabledColor: js.UndefOr[Color] = js.native
+  var noBorder: js.UndefOr[Boolean] = js.undefined
+  var rightButtonColor: js.UndefOr[Color] = js.undefined
+  var rightButtonDisabledColor: js.UndefOr[Color] = js.undefined
   /**
     * List of buttons to the right
     */
-  var rightButtons: js.UndefOr[js.Array[OptionsTopBarButton]] = js.native
+  var rightButtons: js.UndefOr[js.Array[OptionsTopBarButton]] = js.undefined
   /**
     * Show a UISearchBar in the Top Bar
     * #### (iOS 11+ specific)
     */
-  var searchBar: js.UndefOr[Boolean] = js.native
+  var searchBar: js.UndefOr[Boolean] = js.undefined
   /**
     * Hides the UISearchBar when scrolling
     * #### (iOS 11+ specific)
     */
-  var searchBarHiddenWhenScrolling: js.UndefOr[Boolean] = js.native
+  var searchBarHiddenWhenScrolling: js.UndefOr[Boolean] = js.undefined
   /**
     * The placeholder value in the UISearchBar
     * #### (iOS 11+ specific)
     */
-  var searchBarPlaceholder: js.UndefOr[String] = js.native
+  var searchBarPlaceholder: js.UndefOr[String] = js.undefined
   /**
     * Subtitle configuration
     */
-  var subtitle: js.UndefOr[OptionsTopBarSubtitle] = js.native
+  var subtitle: js.UndefOr[OptionsTopBarSubtitle] = js.undefined
   /**
     * Can be used to reference the top bar in E2E tests
     */
-  var testID: js.UndefOr[String] = js.native
+  var testID: js.UndefOr[String] = js.undefined
   /**
     * Title configuration
     */
-  var title: js.UndefOr[OptionsTopBarTitle] = js.native
+  var title: js.UndefOr[OptionsTopBarTitle] = js.undefined
   /**
     * Layout top margin
     * #### (Android specific)
     */
-  var topMargin: js.UndefOr[Double] = js.native
+  var topMargin: js.UndefOr[Double] = js.undefined
   /**
     * Show or hide the top bar
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object OptionsTopBar {
   @scala.inline
-  def apply(): OptionsTopBar = {
+  def apply(
+    animate: js.UndefOr[Boolean] = js.undefined,
+    backButton: OptionsTopBarBackButton = null,
+    background: OptionsTopBarBackground = null,
+    barStyle: default | black = null,
+    borderColor: Color = null,
+    borderHeight: js.UndefOr[AndroidDensityNumber] = js.undefined,
+    drawBehind: js.UndefOr[Boolean] = js.undefined,
+    elevation: js.UndefOr[AndroidDensityNumber] = js.undefined,
+    height: js.UndefOr[AndroidDensityNumber] = js.undefined,
+    hideNavBarOnFocusSearchBar: js.UndefOr[Boolean] = js.undefined,
+    hideOnScroll: js.UndefOr[Boolean] = js.undefined,
+    largeTitle: OptionsTopBarLargeTitle = null,
+    leftButtonColor: Color = null,
+    leftButtonDisabledColor: Color = null,
+    leftButtons: js.Array[OptionsTopBarButton] = null,
+    noBorder: js.UndefOr[Boolean] = js.undefined,
+    rightButtonColor: Color = null,
+    rightButtonDisabledColor: Color = null,
+    rightButtons: js.Array[OptionsTopBarButton] = null,
+    searchBar: js.UndefOr[Boolean] = js.undefined,
+    searchBarHiddenWhenScrolling: js.UndefOr[Boolean] = js.undefined,
+    searchBarPlaceholder: String = null,
+    subtitle: OptionsTopBarSubtitle = null,
+    testID: String = null,
+    title: OptionsTopBarTitle = null,
+    topMargin: js.UndefOr[Double] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): OptionsTopBar = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.get.asInstanceOf[js.Any])
+    if (backButton != null) __obj.updateDynamic("backButton")(backButton.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (barStyle != null) __obj.updateDynamic("barStyle")(barStyle.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderHeight)) __obj.updateDynamic("borderHeight")(borderHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(drawBehind)) __obj.updateDynamic("drawBehind")(drawBehind.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(elevation)) __obj.updateDynamic("elevation")(elevation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideNavBarOnFocusSearchBar)) __obj.updateDynamic("hideNavBarOnFocusSearchBar")(hideNavBarOnFocusSearchBar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideOnScroll)) __obj.updateDynamic("hideOnScroll")(hideOnScroll.get.asInstanceOf[js.Any])
+    if (largeTitle != null) __obj.updateDynamic("largeTitle")(largeTitle.asInstanceOf[js.Any])
+    if (leftButtonColor != null) __obj.updateDynamic("leftButtonColor")(leftButtonColor.asInstanceOf[js.Any])
+    if (leftButtonDisabledColor != null) __obj.updateDynamic("leftButtonDisabledColor")(leftButtonDisabledColor.asInstanceOf[js.Any])
+    if (leftButtons != null) __obj.updateDynamic("leftButtons")(leftButtons.asInstanceOf[js.Any])
+    if (!js.isUndefined(noBorder)) __obj.updateDynamic("noBorder")(noBorder.get.asInstanceOf[js.Any])
+    if (rightButtonColor != null) __obj.updateDynamic("rightButtonColor")(rightButtonColor.asInstanceOf[js.Any])
+    if (rightButtonDisabledColor != null) __obj.updateDynamic("rightButtonDisabledColor")(rightButtonDisabledColor.asInstanceOf[js.Any])
+    if (rightButtons != null) __obj.updateDynamic("rightButtons")(rightButtons.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchBar)) __obj.updateDynamic("searchBar")(searchBar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchBarHiddenWhenScrolling)) __obj.updateDynamic("searchBarHiddenWhenScrolling")(searchBarHiddenWhenScrolling.get.asInstanceOf[js.Any])
+    if (searchBarPlaceholder != null) __obj.updateDynamic("searchBarPlaceholder")(searchBarPlaceholder.asInstanceOf[js.Any])
+    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(topMargin)) __obj.updateDynamic("topMargin")(topMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsTopBar]
   }
-  @scala.inline
-  implicit class OptionsTopBarOps[Self <: OptionsTopBar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackButton(value: OptionsTopBarBackButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: OptionsTopBarBackground): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarStyle(value: default | black): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderHeight(value: AndroidDensityNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawBehind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBehind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawBehind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBehind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElevation(value: AndroidDensityNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElevation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: AndroidDensityNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideNavBarOnFocusSearchBar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideNavBarOnFocusSearchBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideNavBarOnFocusSearchBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideNavBarOnFocusSearchBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideOnScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideOnScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLargeTitle(value: OptionsTopBarLargeTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLargeTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftButtonColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftButtonColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftButtonColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftButtonColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftButtonDisabledColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftButtonDisabledColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftButtonDisabledColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftButtonDisabledColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftButtons(value: js.Array[OptionsTopBarButton]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftButtons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftButtons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoBorder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightButtonColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightButtonColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightButtonColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightButtonColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightButtonDisabledColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightButtonDisabledColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightButtonDisabledColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightButtonDisabledColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightButtons(value: js.Array[OptionsTopBarButton]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightButtons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightButtons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchBar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchBarHiddenWhenScrolling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBarHiddenWhenScrolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchBarHiddenWhenScrolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBarHiddenWhenScrolling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchBarPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBarPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchBarPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBarPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitle(value: OptionsTopBarSubtitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: OptionsTopBarTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

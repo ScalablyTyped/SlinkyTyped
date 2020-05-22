@@ -29,53 +29,16 @@ trait SchemaInstanceGroupAutoscalingPolicyConfig extends js.Object {
 
 object SchemaInstanceGroupAutoscalingPolicyConfig {
   @scala.inline
-  def apply(): SchemaInstanceGroupAutoscalingPolicyConfig = {
+  def apply(
+    maxInstances: js.UndefOr[Double] = js.undefined,
+    minInstances: js.UndefOr[Double] = js.undefined,
+    weight: js.UndefOr[Double] = js.undefined
+  ): SchemaInstanceGroupAutoscalingPolicyConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxInstances)) __obj.updateDynamic("maxInstances")(maxInstances.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minInstances)) __obj.updateDynamic("minInstances")(minInstances.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupAutoscalingPolicyConfig]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupAutoscalingPolicyConfigOps[Self <: SchemaInstanceGroupAutoscalingPolicyConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxInstances(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinInstances(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

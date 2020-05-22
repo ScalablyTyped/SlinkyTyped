@@ -15,5 +15,21 @@ import scala.scalajs.js.annotation._
 class BatchGeometry ()
   extends typingsSlinky.pixiJs.PIXI.BatchGeometry {
   def this(_static: Boolean) = this()
+  /**
+    * Buffer used for position, color, texture IDs
+    *
+    * @member {PIXI.Buffer} PIXI.BatchGeometry#_buffer
+    * @protected
+    */
+  /* CompleteClass */
+  override var _buffer: typingsSlinky.pixiJs.PIXI.Buffer = js.native
+  /**
+    * Index buffer data
+    *
+    * @member {PIXI.Buffer} PIXI.BatchGeometry#_indexBuffer
+    * @protected
+    */
+  /* CompleteClass */
+  override var _indexBuffer: typingsSlinky.pixiJs.PIXI.Buffer = js.native
 }
 

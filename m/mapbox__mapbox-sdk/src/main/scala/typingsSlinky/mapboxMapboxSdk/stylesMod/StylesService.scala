@@ -13,20 +13,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StylesService extends js.Object {
   /**
     * Create a style.
     * @param style
     * @param ownerId
     */
-  def createStyle(config: typingsSlinky.mapboxMapboxSdk.anon.Style): MapiRequest = js.native
+  def createStyle(config: typingsSlinky.mapboxMapboxSdk.anon.Style): MapiRequest
   /**
     * Delete a style.
     * @param style
     * @param ownerId
     */
-  def deleteStyle(config: typingsSlinky.mapboxMapboxSdk.anon.Style): MapiRequest = js.native
+  def deleteStyle(config: typingsSlinky.mapboxMapboxSdk.anon.Style): MapiRequest
   /**
     * Remove an icon from a style.
     * @param styleId
@@ -34,7 +33,7 @@ trait StylesService extends js.Object {
     * @param ownerId
     */
   // implicit any
-  def deleteStyleIcon(config: IconId): Unit = js.native
+  def deleteStyleIcon(config: IconId): Unit
   /**
     * Get embeddable HTML displaying a map.
     * @param config
@@ -43,7 +42,7 @@ trait StylesService extends js.Object {
     * @param title
     * @param ownerId
     */
-  def getEmbeddableHtml(config: Config): MapiRequest = js.native
+  def getEmbeddableHtml(config: Config): MapiRequest
   /**
     * Get a font glyph range.
     * @param fonts
@@ -51,13 +50,13 @@ trait StylesService extends js.Object {
     * @param end
     * @param ownerId
     */
-  def getFontGlyphRange(config: End): MapiRequest = js.native
+  def getFontGlyphRange(config: End): MapiRequest
   /**
     * Get a style.
     * @param styleId
     * @param ownerId
     */
-  def getStyle(config: OwnerId): MapiRequest = js.native
+  def getStyle(config: OwnerId): MapiRequest
   /**
     * Get a style sprite's image or JSON document.
     * @param styleId
@@ -65,13 +64,13 @@ trait StylesService extends js.Object {
     * @param highRes
     * @param ownerId
     */
-  def getStyleSprite(config: Format): MapiRequest = js.native
+  def getStyleSprite(config: Format): MapiRequest
   /**
     * List styles in your account.
     * @param start
     * @param ownerId
     */
-  def listStyles(config: Start): MapiRequest = js.native
+  def listStyles(config: Start): MapiRequest
   /**
     * Add an icon to a style, or update an existing one.
     * @param styleId
@@ -79,7 +78,7 @@ trait StylesService extends js.Object {
     * @param file
     * @param ownerId
     */
-  def putStyleIcon(config: File): MapiRequest = js.native
+  def putStyleIcon(config: File): MapiRequest
   /**
     * Update a style.
     * @param styleId
@@ -88,7 +87,7 @@ trait StylesService extends js.Object {
     * @param ownerId
     */
   // implicit any
-  def updateStyle(config: LastKnownModification): Unit = js.native
+  def updateStyle(config: LastKnownModification): Unit
 }
 
 object StylesService {
@@ -108,73 +107,5 @@ object StylesService {
     val __obj = js.Dynamic.literal(createStyle = js.Any.fromFunction1(createStyle), deleteStyle = js.Any.fromFunction1(deleteStyle), deleteStyleIcon = js.Any.fromFunction1(deleteStyleIcon), getEmbeddableHtml = js.Any.fromFunction1(getEmbeddableHtml), getFontGlyphRange = js.Any.fromFunction1(getFontGlyphRange), getStyle = js.Any.fromFunction1(getStyle), getStyleSprite = js.Any.fromFunction1(getStyleSprite), listStyles = js.Any.fromFunction1(listStyles), putStyleIcon = js.Any.fromFunction1(putStyleIcon), updateStyle = js.Any.fromFunction1(updateStyle))
     __obj.asInstanceOf[StylesService]
   }
-  @scala.inline
-  implicit class StylesServiceOps[Self <: StylesService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateStyle(value: typingsSlinky.mapboxMapboxSdk.anon.Style => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createStyle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteStyle(value: typingsSlinky.mapboxMapboxSdk.anon.Style => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteStyle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteStyleIcon(value: IconId => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteStyleIcon")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetEmbeddableHtml(value: Config => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEmbeddableHtml")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetFontGlyphRange(value: End => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFontGlyphRange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetStyle(value: OwnerId => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStyle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetStyleSprite(value: Format => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStyleSprite")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListStyles(value: Start => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPutStyleIcon(value: File => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("putStyleIcon")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateStyle(value: LastKnownModification => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateStyle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("RedoCommand")
 @js.native
 class RedoCommand ()
-  extends typingsSlinky.devexpressWeb.RedoCommand
+  extends typingsSlinky.devexpressWeb.RedoCommand {
+  /**
+    * Executes the RedoCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

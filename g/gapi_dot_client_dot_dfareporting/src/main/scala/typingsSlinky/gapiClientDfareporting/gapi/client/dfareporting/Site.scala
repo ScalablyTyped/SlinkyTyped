@@ -4,194 +4,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Site extends js.Object {
   /** Account ID of this site. This is a read-only field that can be left blank. */
-  var accountId: js.UndefOr[String] = js.native
+  var accountId: js.UndefOr[String] = js.undefined
   /** Whether this site is approved. */
-  var approved: js.UndefOr[Boolean] = js.native
+  var approved: js.UndefOr[Boolean] = js.undefined
   /** Directory site associated with this site. This is a required field that is read-only after insertion. */
-  var directorySiteId: js.UndefOr[String] = js.native
+  var directorySiteId: js.UndefOr[String] = js.undefined
   /** Dimension value for the ID of the directory site. This is a read-only, auto-generated field. */
-  var directorySiteIdDimensionValue: js.UndefOr[DimensionValue] = js.native
+  var directorySiteIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
   /** ID of this site. This is a read-only, auto-generated field. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Dimension value for the ID of this site. This is a read-only, auto-generated field. */
-  var idDimensionValue: js.UndefOr[DimensionValue] = js.native
+  var idDimensionValue: js.UndefOr[DimensionValue] = js.undefined
   /** Key name of this site. This is a read-only, auto-generated field. */
-  var keyName: js.UndefOr[String] = js.native
+  var keyName: js.UndefOr[String] = js.undefined
   /** Identifies what kind of resource this is. Value: the fixed string "dfareporting#site". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /**
     * Name of this site.This is a required field. Must be less than 128 characters long. If this site is under a subaccount, the name must be unique among
     * sites of the same subaccount. Otherwise, this site is a top-level site, and the name must be unique among top-level sites of the same account.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** Site contacts. */
-  var siteContacts: js.UndefOr[js.Array[SiteContact]] = js.native
+  var siteContacts: js.UndefOr[js.Array[SiteContact]] = js.undefined
   /** Site-wide settings. */
-  var siteSettings: js.UndefOr[SiteSettings] = js.native
+  var siteSettings: js.UndefOr[SiteSettings] = js.undefined
   /** Subaccount ID of this site. This is a read-only field that can be left blank. */
-  var subaccountId: js.UndefOr[String] = js.native
+  var subaccountId: js.UndefOr[String] = js.undefined
 }
 
 object Site {
   @scala.inline
-  def apply(): Site = {
+  def apply(
+    accountId: String = null,
+    approved: js.UndefOr[Boolean] = js.undefined,
+    directorySiteId: String = null,
+    directorySiteIdDimensionValue: DimensionValue = null,
+    id: String = null,
+    idDimensionValue: DimensionValue = null,
+    keyName: String = null,
+    kind: String = null,
+    name: String = null,
+    siteContacts: js.Array[SiteContact] = null,
+    siteSettings: SiteSettings = null,
+    subaccountId: String = null
+  ): Site = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (!js.isUndefined(approved)) __obj.updateDynamic("approved")(approved.get.asInstanceOf[js.Any])
+    if (directorySiteId != null) __obj.updateDynamic("directorySiteId")(directorySiteId.asInstanceOf[js.Any])
+    if (directorySiteIdDimensionValue != null) __obj.updateDynamic("directorySiteIdDimensionValue")(directorySiteIdDimensionValue.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (idDimensionValue != null) __obj.updateDynamic("idDimensionValue")(idDimensionValue.asInstanceOf[js.Any])
+    if (keyName != null) __obj.updateDynamic("keyName")(keyName.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (siteContacts != null) __obj.updateDynamic("siteContacts")(siteContacts.asInstanceOf[js.Any])
+    if (siteSettings != null) __obj.updateDynamic("siteSettings")(siteSettings.asInstanceOf[js.Any])
+    if (subaccountId != null) __obj.updateDynamic("subaccountId")(subaccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Site]
   }
-  @scala.inline
-  implicit class SiteOps[Self <: Site] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApproved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApproved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectorySiteId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectorySiteId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectorySiteIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectorySiteIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiteContacts(value: js.Array[SiteContact]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteContacts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiteContacts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteContacts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiteSettings(value: SiteSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiteSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubaccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubaccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

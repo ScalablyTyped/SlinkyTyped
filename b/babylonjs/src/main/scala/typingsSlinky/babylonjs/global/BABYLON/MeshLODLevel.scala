@@ -20,5 +20,11 @@ class MeshLODLevel protected ()
     /** Defines the mesh to use to render this level */
   mesh: Nullable[typingsSlinky.babylonjs.BABYLON.Mesh]
   ) = this()
+  /** Defines the distance where this level should start being displayed */
+  /* CompleteClass */
+  override var distance: Double = js.native
+  /** Defines the mesh to use to render this level */
+  /* CompleteClass */
+  override var mesh: Nullable[typingsSlinky.babylonjs.BABYLON.Mesh] = js.native
 }
 

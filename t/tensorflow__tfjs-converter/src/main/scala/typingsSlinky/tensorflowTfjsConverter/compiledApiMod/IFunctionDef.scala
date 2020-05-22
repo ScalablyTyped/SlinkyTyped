@@ -5,103 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFunctionDef extends js.Object {
   /** FunctionDef attr */
-  var attr: js.UndefOr[StringDictionary[IAttrValue] | Null] = js.native
+  var attr: js.UndefOr[StringDictionary[IAttrValue] | Null] = js.undefined
   /** FunctionDef nodeDef */
-  var nodeDef: js.UndefOr[js.Array[INodeDef] | Null] = js.native
+  var nodeDef: js.UndefOr[js.Array[INodeDef] | Null] = js.undefined
   /** FunctionDef ret */
-  var ret: js.UndefOr[StringDictionary[String] | Null] = js.native
+  var ret: js.UndefOr[StringDictionary[String] | Null] = js.undefined
   /** FunctionDef signature */
-  var signature: js.UndefOr[IOpDef | Null] = js.native
+  var signature: js.UndefOr[IOpDef | Null] = js.undefined
 }
 
 object IFunctionDef {
   @scala.inline
-  def apply(): IFunctionDef = {
+  def apply(
+    attr: js.UndefOr[Null | StringDictionary[IAttrValue]] = js.undefined,
+    nodeDef: js.UndefOr[Null | js.Array[INodeDef]] = js.undefined,
+    ret: js.UndefOr[Null | StringDictionary[String]] = js.undefined,
+    signature: js.UndefOr[Null | IOpDef] = js.undefined
+  ): IFunctionDef = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(attr)) __obj.updateDynamic("attr")(attr.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodeDef)) __obj.updateDynamic("nodeDef")(nodeDef.asInstanceOf[js.Any])
+    if (!js.isUndefined(ret)) __obj.updateDynamic("ret")(ret.asInstanceOf[js.Any])
+    if (!js.isUndefined(signature)) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFunctionDef]
   }
-  @scala.inline
-  implicit class IFunctionDefOps[Self <: IFunctionDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttr(value: StringDictionary[IAttrValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttrNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(null)
-        ret
-    }
-    @scala.inline
-    def withNodeDef(value: js.Array[INodeDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeDef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeDefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDef")(null)
-        ret
-    }
-    @scala.inline
-    def withRet(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ret")(null)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: IOpDef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignatureNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(null)
-        ret
-    }
-  }
-  
 }
 

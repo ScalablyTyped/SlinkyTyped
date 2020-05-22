@@ -25,6 +25,11 @@ object Select {
   }
   
   def withProps[ValueType <: SelectValue](p: SelectProps[ValueType]): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[ValueType <: SelectValue](): Builder[ValueType] = {
+    val __props = js.Dynamic.literal()
+    new Builder[ValueType](js.Array(this.component, __props.asInstanceOf[SelectProps[ValueType]]))
+  }
   implicit def make[ValueType <: SelectValue](companion: Select.type): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, js.Dictionary.empty))()
 }
 

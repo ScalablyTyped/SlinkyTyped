@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InstanceGroupManagersListManagedInstancesResponse extends js.Object {
   /** [Output Only] The list of instances in the managed instance group. */
-  var managedInstances: js.UndefOr[js.Array[ManagedInstance]] = js.native
+  var managedInstances: js.UndefOr[js.Array[ManagedInstance]] = js.undefined
 }
 
 object InstanceGroupManagersListManagedInstancesResponse {
   @scala.inline
-  def apply(): InstanceGroupManagersListManagedInstancesResponse = {
+  def apply(managedInstances: js.Array[ManagedInstance] = null): InstanceGroupManagersListManagedInstancesResponse = {
     val __obj = js.Dynamic.literal()
+    if (managedInstances != null) __obj.updateDynamic("managedInstances")(managedInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceGroupManagersListManagedInstancesResponse]
   }
-  @scala.inline
-  implicit class InstanceGroupManagersListManagedInstancesResponseOps[Self <: InstanceGroupManagersListManagedInstancesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManagedInstances(value: js.Array[ManagedInstance]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

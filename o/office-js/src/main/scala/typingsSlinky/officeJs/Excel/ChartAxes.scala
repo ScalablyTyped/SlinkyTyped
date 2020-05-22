@@ -26,7 +26,7 @@ import scala.scalajs.js.annotation._
 trait ChartAxes extends ClientObject {
   /**
     *
-    * Represents the category axis in a chart. Read-only.
+    * Represents the category axis in a chart.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -36,14 +36,14 @@ trait ChartAxes extends ClientObject {
   var context_ChartAxes: RequestContext = js.native
   /**
     *
-    * Represents the series axis of a 3-dimensional chart. Read-only.
+    * Represents the series axis of a 3-dimensional chart.
     *
     * [Api set: ExcelApi 1.1]
     */
   val seriesAxis: ChartAxis = js.native
   /**
     *
-    * Represents the value axis in an axis. Read-only.
+    * Represents the value axis in an axis.
     *
     * [Api set: ExcelApi 1.1]
     */

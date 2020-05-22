@@ -4,38 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INumberColumn
   extends typingsSlinky.extjs.Ext.grid.column.IColumn {
   /** [Config Option] (String) */
-  var format: js.UndefOr[String] = js.native
+  var format: js.UndefOr[String] = js.undefined
 }
 
 object INumberColumn {
   @scala.inline
-  def apply(): INumberColumn = {
+  def apply(IColumn: typingsSlinky.extjs.Ext.grid.column.IColumn = null, format: String = null): INumberColumn = {
     val __obj = js.Dynamic.literal()
+    if (IColumn != null) js.Dynamic.global.Object.assign(__obj, IColumn)
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
     __obj.asInstanceOf[INumberColumn]
   }
-  @scala.inline
-  implicit class INumberColumnOps[Self <: INumberColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

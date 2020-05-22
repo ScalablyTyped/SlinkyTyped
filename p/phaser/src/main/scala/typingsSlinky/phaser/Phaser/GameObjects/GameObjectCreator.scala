@@ -144,6 +144,15 @@ trait GameObjectCreator extends js.Object {
   def renderTexture(config: RenderTextureConfig): RenderTexture = js.native
   def renderTexture(config: RenderTextureConfig, addToScene: Boolean): RenderTexture = js.native
   /**
+    * Creates a new Rope Game Object and returns it.
+    * 
+    * Note: This method will only be available if the Rope Game Object and WebGL support have been built into Phaser.
+    * @param config The configuration object this Game Object will use to create itself.
+    * @param addToScene Add this Game Object to the Scene after creating it? If set this argument overrides the `add` property in the config object.
+    */
+  def rope(config: js.Object): Rope = js.native
+  def rope(config: js.Object, addToScene: Boolean): Rope = js.native
+  /**
     * Creates a new Shader Game Object and returns it.
     * 
     * Note: This method will only be available if the Shader Game Object and WebGL support have been built into Phaser.

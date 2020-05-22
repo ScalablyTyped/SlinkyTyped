@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientDashboard.DynamicLookUpValuesLoaded event.
   */
-@js.native
 trait ASPxClientDynamicLookUpValuesLoadedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the dashboard parameter name whose values have been loaded.
     */
-  var ParameterName: String = js.native
+  var ParameterName: String
 }
 
 object ASPxClientDynamicLookUpValuesLoadedEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientDynamicLookUpValuesLoadedEventArgs {
     val __obj = js.Dynamic.literal(ParameterName = ParameterName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientDynamicLookUpValuesLoadedEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientDynamicLookUpValuesLoadedEventArgsOps[Self <: ASPxClientDynamicLookUpValuesLoadedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

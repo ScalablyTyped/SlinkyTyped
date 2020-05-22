@@ -17,494 +17,114 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  indexBy  :string | @nivo/bar.@nivo/bar.IndexByFunc,   keys  :std.Array<string>,   groupMode  :'stacked' | 'grouped',   layout  :'horizontal' | 'vertical',   reverse  :boolean,   innerPadding  :number,   minValue  :number | 'auto',   margin  :@nivo/core.@nivo/core.Box,   maxValue  :number | 'auto',   padding  :number,   axisBottom  :@nivo/bar.@nivo/bar.Axis | null,   axisLeft  :@nivo/bar.@nivo/bar.Axis | null,   axisRight  :@nivo/bar.@nivo/bar.Axis | null,   axisTop  :@nivo/bar.@nivo/bar.Axis | null,   enableGridX  :boolean,   enableGridY  :boolean,   barComponent  :react.react.StatelessComponent<@nivo/bar.@nivo/bar.BarItemProps>,   enableLabel  :boolean,   label  :string | @nivo/bar.@nivo/bar.AccessorFunc,   labelFormat  :string | @nivo/bar.@nivo/bar.LabelFormatter,   labelLinkColor  :@nivo/colors.@nivo/colors.InheritedColorProp<@nivo/bar.@nivo/bar.BarDatumWithColor>,   labelSkipWidth  :number,   labelSkipHeight  :number,   labelTextColor  :@nivo/colors.@nivo/colors.InheritedColorProp<@nivo/bar.@nivo/bar.BarDatumWithColor>,   colors  :@nivo/colors.@nivo/colors.OrdinalColorsInstruction<any>,   borderRadius  :number,   borderWidth  :number,   theme  :@nivo/core.@nivo/core.Theme,   isInteractive  :boolean,   tooltipFormat  :string | @nivo/bar.@nivo/bar.ValueFormatter,   tooltip  :@nivo/bar.@nivo/bar.TooltipProp,   legends  :std.Array<{  dataFrom  :'indexes' | 'keys'} & @nivo/legends.@nivo/legends.LegendProps>,   markers  :std.Array<@nivo/core.@nivo/core.CartesianMarkerProps>}> */
-@js.native
 trait BarProps extends js.Object {
-  var axisBottom: js.UndefOr[Axis] = js.native
-  var axisLeft: js.UndefOr[Axis] = js.native
-  var axisRight: js.UndefOr[Axis] = js.native
-  var axisTop: js.UndefOr[Axis] = js.native
-  var barComponent: js.UndefOr[ReactComponentClass[BarItemProps]] = js.native
-  var borderRadius: js.UndefOr[Double] = js.native
-  var borderWidth: js.UndefOr[Double] = js.native
-  var colors: js.UndefOr[OrdinalColorsInstruction[_]] = js.native
-  var enableGridX: js.UndefOr[Boolean] = js.native
-  var enableGridY: js.UndefOr[Boolean] = js.native
-  var enableLabel: js.UndefOr[Boolean] = js.native
-  var groupMode: js.UndefOr[stacked | grouped] = js.native
-  var indexBy: js.UndefOr[String | IndexByFunc] = js.native
-  var innerPadding: js.UndefOr[Double] = js.native
-  var isInteractive: js.UndefOr[Boolean] = js.native
-  var keys: js.UndefOr[js.Array[String]] = js.native
-  var label: js.UndefOr[String | AccessorFunc] = js.native
-  var labelFormat: js.UndefOr[String | LabelFormatter] = js.native
-  var labelLinkColor: js.UndefOr[InheritedColorProp[BarDatumWithColor]] = js.native
-  var labelSkipHeight: js.UndefOr[Double] = js.native
-  var labelSkipWidth: js.UndefOr[Double] = js.native
-  var labelTextColor: js.UndefOr[InheritedColorProp[BarDatumWithColor]] = js.native
-  var layout: js.UndefOr[horizontal | vertical] = js.native
-  var legends: js.UndefOr[js.Array[dataFromindexeskeysLegend]] = js.native
-  var margin: js.UndefOr[Box] = js.native
-  var markers: js.UndefOr[js.Array[CartesianMarkerProps]] = js.native
-  var maxValue: js.UndefOr[Double | auto] = js.native
-  var minValue: js.UndefOr[Double | auto] = js.native
-  var padding: js.UndefOr[Double] = js.native
-  var reverse: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[Theme] = js.native
-  var tooltip: js.UndefOr[ReactComponentClass[BarExtendedDatum]] = js.native
-  var tooltipFormat: js.UndefOr[String | ValueFormatter] = js.native
+  var axisBottom: js.UndefOr[Axis] = js.undefined
+  var axisLeft: js.UndefOr[Axis] = js.undefined
+  var axisRight: js.UndefOr[Axis] = js.undefined
+  var axisTop: js.UndefOr[Axis] = js.undefined
+  var barComponent: js.UndefOr[ReactComponentClass[BarItemProps]] = js.undefined
+  var borderRadius: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.undefined
+  var colors: js.UndefOr[OrdinalColorsInstruction[_]] = js.undefined
+  var enableGridX: js.UndefOr[Boolean] = js.undefined
+  var enableGridY: js.UndefOr[Boolean] = js.undefined
+  var enableLabel: js.UndefOr[Boolean] = js.undefined
+  var groupMode: js.UndefOr[stacked | grouped] = js.undefined
+  var indexBy: js.UndefOr[String | IndexByFunc] = js.undefined
+  var innerPadding: js.UndefOr[Double] = js.undefined
+  var isInteractive: js.UndefOr[Boolean] = js.undefined
+  var keys: js.UndefOr[js.Array[String]] = js.undefined
+  var label: js.UndefOr[String | AccessorFunc] = js.undefined
+  var labelFormat: js.UndefOr[String | LabelFormatter] = js.undefined
+  var labelLinkColor: js.UndefOr[InheritedColorProp[BarDatumWithColor]] = js.undefined
+  var labelSkipHeight: js.UndefOr[Double] = js.undefined
+  var labelSkipWidth: js.UndefOr[Double] = js.undefined
+  var labelTextColor: js.UndefOr[InheritedColorProp[BarDatumWithColor]] = js.undefined
+  var layout: js.UndefOr[horizontal | vertical] = js.undefined
+  var legends: js.UndefOr[js.Array[dataFromindexeskeysLegend]] = js.undefined
+  var margin: js.UndefOr[Box] = js.undefined
+  var markers: js.UndefOr[js.Array[CartesianMarkerProps]] = js.undefined
+  var maxValue: js.UndefOr[Double | auto] = js.undefined
+  var minValue: js.UndefOr[Double | auto] = js.undefined
+  var padding: js.UndefOr[Double] = js.undefined
+  var reverse: js.UndefOr[Boolean] = js.undefined
+  var theme: js.UndefOr[Theme] = js.undefined
+  var tooltip: js.UndefOr[ReactComponentClass[BarExtendedDatum]] = js.undefined
+  var tooltipFormat: js.UndefOr[String | ValueFormatter] = js.undefined
 }
 
 object BarProps {
   @scala.inline
-  def apply(): BarProps = {
+  def apply(
+    axisBottom: Axis = null,
+    axisLeft: Axis = null,
+    axisRight: Axis = null,
+    axisTop: Axis = null,
+    barComponent: ReactComponentClass[BarItemProps] = null,
+    borderRadius: js.UndefOr[Double] = js.undefined,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    colors: OrdinalColorsInstruction[_] = null,
+    enableGridX: js.UndefOr[Boolean] = js.undefined,
+    enableGridY: js.UndefOr[Boolean] = js.undefined,
+    enableLabel: js.UndefOr[Boolean] = js.undefined,
+    groupMode: stacked | grouped = null,
+    indexBy: String | IndexByFunc = null,
+    innerPadding: js.UndefOr[Double] = js.undefined,
+    isInteractive: js.UndefOr[Boolean] = js.undefined,
+    keys: js.Array[String] = null,
+    label: String | AccessorFunc = null,
+    labelFormat: String | LabelFormatter = null,
+    labelLinkColor: InheritedColorProp[BarDatumWithColor] = null,
+    labelSkipHeight: js.UndefOr[Double] = js.undefined,
+    labelSkipWidth: js.UndefOr[Double] = js.undefined,
+    labelTextColor: InheritedColorProp[BarDatumWithColor] = null,
+    layout: horizontal | vertical = null,
+    legends: js.Array[dataFromindexeskeysLegend] = null,
+    margin: Box = null,
+    markers: js.Array[CartesianMarkerProps] = null,
+    maxValue: Double | auto = null,
+    minValue: Double | auto = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    reverse: js.UndefOr[Boolean] = js.undefined,
+    theme: Theme = null,
+    tooltip: ReactComponentClass[BarExtendedDatum] = null,
+    tooltipFormat: String | ValueFormatter = null
+  ): BarProps = {
     val __obj = js.Dynamic.literal()
+    if (axisBottom != null) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
+    if (axisLeft != null) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
+    if (axisRight != null) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
+    if (axisTop != null) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
+    if (barComponent != null) __obj.updateDynamic("barComponent")(barComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderRadius)) __obj.updateDynamic("borderRadius")(borderRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableGridX)) __obj.updateDynamic("enableGridX")(enableGridX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableGridY)) __obj.updateDynamic("enableGridY")(enableGridY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableLabel)) __obj.updateDynamic("enableLabel")(enableLabel.get.asInstanceOf[js.Any])
+    if (groupMode != null) __obj.updateDynamic("groupMode")(groupMode.asInstanceOf[js.Any])
+    if (indexBy != null) __obj.updateDynamic("indexBy")(indexBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerPadding)) __obj.updateDynamic("innerPadding")(innerPadding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.get.asInstanceOf[js.Any])
+    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (labelFormat != null) __obj.updateDynamic("labelFormat")(labelFormat.asInstanceOf[js.Any])
+    if (labelLinkColor != null) __obj.updateDynamic("labelLinkColor")(labelLinkColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelSkipHeight)) __obj.updateDynamic("labelSkipHeight")(labelSkipHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelSkipWidth)) __obj.updateDynamic("labelSkipWidth")(labelSkipWidth.get.asInstanceOf[js.Any])
+    if (labelTextColor != null) __obj.updateDynamic("labelTextColor")(labelTextColor.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (markers != null) __obj.updateDynamic("markers")(markers.asInstanceOf[js.Any])
+    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
+    if (minValue != null) __obj.updateDynamic("minValue")(minValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[BarProps]
   }
-  @scala.inline
-  implicit class BarPropsOps[Self <: BarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxisBottom(value: Axis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisLeft(value: Axis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisRight(value: Axis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisTop(value: Axis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarComponent(value: ReactComponentClass[BarItemProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorsFunction1(value: _ => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withColors(value: OrdinalColorsInstruction[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableGridX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableGridX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableGridY(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableGridY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableLabel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupMode(value: stacked | grouped): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexByFunction1(value: /* datum */ BarDatum => String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexBy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIndexBy(value: String | IndexByFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsInteractive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsInteractive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFunction1(value: /* datum */ BarDatum => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String | AccessorFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFormatFunction1(value: /* label */ String | Double => String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLabelFormat(value: String | LabelFormatter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelLinkColorFunction1(value: BarDatumWithColor => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLinkColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLabelLinkColor(value: InheritedColorProp[BarDatumWithColor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLinkColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelLinkColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLinkColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelSkipHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSkipHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelSkipHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSkipHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelSkipWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSkipWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelSkipWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSkipWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelTextColorFunction1(value: BarDatumWithColor => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLabelTextColor(value: InheritedColorProp[BarDatumWithColor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegends(value: js.Array[dataFromindexeskeysLegend]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegends: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Box): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkers(value: js.Array[CartesianMarkerProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: Double | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: Double | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: Theme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: ReactComponentClass[BarExtendedDatum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipFormatFunction1(value: /* value */ Double => String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTooltipFormat(value: String | ValueFormatter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

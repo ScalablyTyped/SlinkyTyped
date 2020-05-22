@@ -18,35 +18,10 @@ trait DeleteDocumentRequest extends js.Object {
 
 object DeleteDocumentRequest {
   @scala.inline
-  def apply(DocumentId: ResourceIdType): DeleteDocumentRequest = {
+  def apply(DocumentId: ResourceIdType, AuthenticationToken: AuthenticationHeaderType = null): DeleteDocumentRequest = {
     val __obj = js.Dynamic.literal(DocumentId = DocumentId.asInstanceOf[js.Any])
+    if (AuthenticationToken != null) __obj.updateDynamic("AuthenticationToken")(AuthenticationToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteDocumentRequest]
   }
-  @scala.inline
-  implicit class DeleteDocumentRequestOps[Self <: DeleteDocumentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentId(value: ResourceIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthenticationToken(value: AuthenticationHeaderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

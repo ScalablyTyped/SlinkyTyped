@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   * @see XDispatch
   * @since OOo 1.1.2
   */
-@js.native
 trait XRecordableDispatch extends XInterface {
   /**
     * dispatch and record it
@@ -32,7 +31,7 @@ trait XRecordableDispatch extends XInterface {
     * @param Arguments optional arguments for this request (see {@link com.sun.star.document.MediaDescriptor} for details)
     * @param Recorder object which can be used to record the request (available on {@link XDispatchRecorderSupplier.getDispatchRecorder()} )
     */
-  def dispatchAndRecord(URL: URL, Arguments: SeqEquiv[PropertyValue], Recorder: XDispatchRecorder): Unit = js.native
+  def dispatchAndRecord(URL: URL, Arguments: SeqEquiv[PropertyValue], Recorder: XDispatchRecorder): Unit
 }
 
 object XRecordableDispatch {
@@ -46,19 +45,5 @@ object XRecordableDispatch {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), dispatchAndRecord = js.Any.fromFunction3(dispatchAndRecord), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XRecordableDispatch]
   }
-  @scala.inline
-  implicit class XRecordableDispatchOps[Self <: XRecordableDispatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDispatchAndRecord(value: (URL, SeqEquiv[PropertyValue], XDispatchRecorder) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchAndRecord")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

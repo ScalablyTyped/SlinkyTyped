@@ -30,77 +30,20 @@ trait DescribeDashboardPermissionsResponse extends js.Object {
 
 object DescribeDashboardPermissionsResponse {
   @scala.inline
-  def apply(): DescribeDashboardPermissionsResponse = {
+  def apply(
+    DashboardArn: Arn = null,
+    DashboardId: RestrictiveResourceId = null,
+    Permissions: ResourcePermissionList = null,
+    RequestId: String = null,
+    Status: js.UndefOr[StatusCode] = js.undefined
+  ): DescribeDashboardPermissionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (DashboardArn != null) __obj.updateDynamic("DashboardArn")(DashboardArn.asInstanceOf[js.Any])
+    if (DashboardId != null) __obj.updateDynamic("DashboardId")(DashboardId.asInstanceOf[js.Any])
+    if (Permissions != null) __obj.updateDynamic("Permissions")(Permissions.asInstanceOf[js.Any])
+    if (RequestId != null) __obj.updateDynamic("RequestId")(RequestId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Status)) __obj.updateDynamic("Status")(Status.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDashboardPermissionsResponse]
   }
-  @scala.inline
-  implicit class DescribeDashboardPermissionsResponseOps[Self <: DescribeDashboardPermissionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDashboardArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashboardArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDashboardId(value: RestrictiveResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashboardId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: ResourcePermissionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Permissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: StatusCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

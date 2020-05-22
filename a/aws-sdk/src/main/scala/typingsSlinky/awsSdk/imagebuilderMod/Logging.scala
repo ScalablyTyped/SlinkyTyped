@@ -14,29 +14,10 @@ trait Logging extends js.Object {
 
 object Logging {
   @scala.inline
-  def apply(): Logging = {
+  def apply(s3Logs: S3Logs = null): Logging = {
     val __obj = js.Dynamic.literal()
+    if (s3Logs != null) __obj.updateDynamic("s3Logs")(s3Logs.asInstanceOf[js.Any])
     __obj.asInstanceOf[Logging]
   }
-  @scala.inline
-  implicit class LoggingOps[Self <: Logging] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3Logs(value: S3Logs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Logs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Logs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Logs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

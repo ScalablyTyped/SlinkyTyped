@@ -38,77 +38,20 @@ trait SchemaExtendedCompensationFilter extends js.Object {
 
 object SchemaExtendedCompensationFilter {
   @scala.inline
-  def apply(): SchemaExtendedCompensationFilter = {
+  def apply(
+    compensationRange: SchemaExtendedCompensationInfoCompensationRange = null,
+    compensationUnits: js.Array[String] = null,
+    currency: String = null,
+    includeJobWithUnspecifiedCompensationRange: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null
+  ): SchemaExtendedCompensationFilter = {
     val __obj = js.Dynamic.literal()
+    if (compensationRange != null) __obj.updateDynamic("compensationRange")(compensationRange.asInstanceOf[js.Any])
+    if (compensationUnits != null) __obj.updateDynamic("compensationUnits")(compensationUnits.asInstanceOf[js.Any])
+    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeJobWithUnspecifiedCompensationRange)) __obj.updateDynamic("includeJobWithUnspecifiedCompensationRange")(includeJobWithUnspecifiedCompensationRange.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExtendedCompensationFilter]
   }
-  @scala.inline
-  implicit class SchemaExtendedCompensationFilterOps[Self <: SchemaExtendedCompensationFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompensationRange(value: SchemaExtendedCompensationInfoCompensationRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensationRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompensationRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensationRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompensationUnits(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensationUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompensationUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensationUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeJobWithUnspecifiedCompensationRange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeJobWithUnspecifiedCompensationRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeJobWithUnspecifiedCompensationRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeJobWithUnspecifiedCompensationRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

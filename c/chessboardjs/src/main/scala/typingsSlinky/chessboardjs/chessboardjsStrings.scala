@@ -2,7 +2,6 @@ package typingsSlinky.chessboardjs
 
 import typingsSlinky.chessboardjs.mod.DropOffBoardType
 import typingsSlinky.chessboardjs.mod.OrientationType
-import typingsSlinky.chessboardjs.mod.PositionType
 import typingsSlinky.chessboardjs.mod.SpeedType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,7 +30,7 @@ object chessboardjsStrings {
   sealed trait snapback extends DropOffBoardType
   
   @js.native
-  sealed trait start extends PositionType
+  sealed trait start extends js.Object
   
   @js.native
   sealed trait trash extends DropOffBoardType

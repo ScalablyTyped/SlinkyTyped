@@ -45,6 +45,14 @@ class DocumentTemplateParameter protected ()
   @JSName("parameterType")
   val parameterType_FDocumentTemplateParameter: IDataType = js.native
   /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
+  /**
     * The value of this property is conceptually of type dataTypes.LegacyDataType.
     *
     * In version 7.9.0: deleted

@@ -25,41 +25,14 @@ trait SchemaPositionedObjectPropertiesSuggestionState extends js.Object {
 
 object SchemaPositionedObjectPropertiesSuggestionState {
   @scala.inline
-  def apply(): SchemaPositionedObjectPropertiesSuggestionState = {
+  def apply(
+    embeddedObjectSuggestionState: SchemaEmbeddedObjectSuggestionState = null,
+    positioningSuggestionState: SchemaPositionedObjectPositioningSuggestionState = null
+  ): SchemaPositionedObjectPropertiesSuggestionState = {
     val __obj = js.Dynamic.literal()
+    if (embeddedObjectSuggestionState != null) __obj.updateDynamic("embeddedObjectSuggestionState")(embeddedObjectSuggestionState.asInstanceOf[js.Any])
+    if (positioningSuggestionState != null) __obj.updateDynamic("positioningSuggestionState")(positioningSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPositionedObjectPropertiesSuggestionState]
   }
-  @scala.inline
-  implicit class SchemaPositionedObjectPropertiesSuggestionStateOps[Self <: SchemaPositionedObjectPropertiesSuggestionState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmbeddedObjectSuggestionState(value: SchemaEmbeddedObjectSuggestionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedObjectSuggestionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmbeddedObjectSuggestionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedObjectSuggestionState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositioningSuggestionState(value: SchemaPositionedObjectPositioningSuggestionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioningSuggestionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositioningSuggestionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioningSuggestionState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,142 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FTInitUpload extends js.Object {
-  var clientftfid: Double = js.native
+  var clientftfid: Double
   /** exists when file is uploadable */
-  var ftkey: js.UndefOr[String] = js.native
+  var ftkey: js.UndefOr[String] = js.undefined
   /** exists when an error occured */
-  var msg: js.UndefOr[String] = js.native
+  var msg: js.UndefOr[String] = js.undefined
   /** exists when file is uploadable */
-  var port: js.UndefOr[Double] = js.native
+  var port: js.UndefOr[Double] = js.undefined
   /** exists when file is uploadable */
-  var proto: js.UndefOr[Double] = js.native
+  var proto: js.UndefOr[Double] = js.undefined
   /** exists when file is uploadable */
-  var seekpos: js.UndefOr[Double] = js.native
+  var seekpos: js.UndefOr[Double] = js.undefined
   /** exists when file is uploadable */
-  var serverftfid: js.UndefOr[Double] = js.native
+  var serverftfid: js.UndefOr[Double] = js.undefined
   /** exists when an error occured */
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.undefined
   /** exists when an error occured */
-  var status: js.UndefOr[Double] = js.native
+  var status: js.UndefOr[Double] = js.undefined
 }
 
 object FTInitUpload {
   @scala.inline
-  def apply(clientftfid: Double): FTInitUpload = {
+  def apply(
+    clientftfid: Double,
+    ftkey: String = null,
+    msg: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    proto: js.UndefOr[Double] = js.undefined,
+    seekpos: js.UndefOr[Double] = js.undefined,
+    serverftfid: js.UndefOr[Double] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    status: js.UndefOr[Double] = js.undefined
+  ): FTInitUpload = {
     val __obj = js.Dynamic.literal(clientftfid = clientftfid.asInstanceOf[js.Any])
+    if (ftkey != null) __obj.updateDynamic("ftkey")(ftkey.asInstanceOf[js.Any])
+    if (msg != null) __obj.updateDynamic("msg")(msg.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(proto)) __obj.updateDynamic("proto")(proto.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(seekpos)) __obj.updateDynamic("seekpos")(seekpos.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverftfid)) __obj.updateDynamic("serverftfid")(serverftfid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FTInitUpload]
   }
-  @scala.inline
-  implicit class FTInitUploadOps[Self <: FTInitUpload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientftfid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientftfid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFtkey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ftkey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFtkey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ftkey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProto(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeekpos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seekpos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeekpos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seekpos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerftfid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverftfid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerftfid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverftfid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

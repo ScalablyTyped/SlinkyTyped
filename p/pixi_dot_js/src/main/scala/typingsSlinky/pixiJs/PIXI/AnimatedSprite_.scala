@@ -47,6 +47,12 @@ trait AnimatedSprite_ extends Sprite {
     */
   var animationSpeed: Double = js.native
   /**
+    * Whether to use PIXI.Ticker.shared to auto update animation time
+    *
+    * @member {boolean}
+    */
+  var autoUpdate: Boolean = js.native
+  /**
     * The AnimatedSprites current frame index.
     *
     * @member {number}
@@ -63,7 +69,7 @@ trait AnimatedSprite_ extends Sprite {
   /**
     * Indicates if the AnimatedSprite is currently playing.
     *
-    * @member {boolean} PIXI.AnimatedSprite#playing
+    * @member {boolean}
     * @readonly
     */
   val playing: Boolean = js.native
@@ -135,5 +141,11 @@ trait AnimatedSprite_ extends Sprite {
     *
     */
   def stop(): Unit = js.native
+  /**
+    * Updates the object transform for rendering.
+    *
+    * @param {number} deltaTime - Time since last tick.
+    */
+  def update(deltaTime: Double): Unit = js.native
 }
 

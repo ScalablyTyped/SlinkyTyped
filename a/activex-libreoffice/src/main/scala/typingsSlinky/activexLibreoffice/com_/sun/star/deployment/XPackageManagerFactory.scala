@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * @deprecated DeprecatedUse XExtensionManager.
   * @since OOo 2.0
   */
-@js.native
 trait XPackageManagerFactory extends js.Object {
   /**
     * Method to create (or reusing and already existing) {@link XPackageManager} object to add or remove UNO packages persistently.
@@ -23,7 +22,7 @@ trait XPackageManagerFactory extends js.Object {
     * @returns {@link XPackageManager} object
     * @throws com::sun::star::lang::IllegalArgumentException in case of an invalid context
     */
-  def getPackageManager(context: String): XPackageManager = js.native
+  def getPackageManager(context: String): XPackageManager
 }
 
 object XPackageManagerFactory {
@@ -32,19 +31,5 @@ object XPackageManagerFactory {
     val __obj = js.Dynamic.literal(getPackageManager = js.Any.fromFunction1(getPackageManager))
     __obj.asInstanceOf[XPackageManagerFactory]
   }
-  @scala.inline
-  implicit class XPackageManagerFactoryOps[Self <: XPackageManagerFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetPackageManager(value: String => XPackageManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPackageManager")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

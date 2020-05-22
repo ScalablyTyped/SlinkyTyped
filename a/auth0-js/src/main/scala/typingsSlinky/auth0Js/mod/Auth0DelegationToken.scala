@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Auth0DelegationToken extends js.Object {
   /** The length of time in seconds the token is valid for. */
-  var expiresIn: Double = js.native
+  var expiresIn: Double
   /** The JWT for delegated access.  */
-  var idToken: String = js.native
+  var idToken: String
   /** The type of token being returned. Possible values: "Bearer"  */
-  var tokenType: String = js.native
+  var tokenType: String
 }
 
 object Auth0DelegationToken {
@@ -20,31 +19,5 @@ object Auth0DelegationToken {
     val __obj = js.Dynamic.literal(expiresIn = expiresIn.asInstanceOf[js.Any], idToken = idToken.asInstanceOf[js.Any], tokenType = tokenType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Auth0DelegationToken]
   }
-  @scala.inline
-  implicit class Auth0DelegationTokenOps[Self <: Auth0DelegationToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpiresIn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTokenType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,52 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotVbpVolumeDivisionOptions extends js.Object {
   /**
     * (Highstock) Option to control if volume is divided.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
-  var styles: js.UndefOr[PlotVbpVolumeDivisionStylesOptions] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var styles: js.UndefOr[PlotVbpVolumeDivisionStylesOptions] = js.undefined
 }
 
 object PlotVbpVolumeDivisionOptions {
   @scala.inline
-  def apply(): PlotVbpVolumeDivisionOptions = {
+  def apply(enabled: js.UndefOr[Boolean] = js.undefined, styles: PlotVbpVolumeDivisionStylesOptions = null): PlotVbpVolumeDivisionOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotVbpVolumeDivisionOptions]
   }
-  @scala.inline
-  implicit class PlotVbpVolumeDivisionOptionsOps[Self <: PlotVbpVolumeDivisionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: PlotVbpVolumeDivisionStylesOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

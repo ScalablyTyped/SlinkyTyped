@@ -26,9 +26,16 @@ object getSamplingTargetsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetSamplingTargetsInput) = this()
+    /* CompleteClass */
+    override val input: GetSamplingTargetsInput = js.native
     val middlewareStack: MiddlewareStack[GetSamplingTargetsInput, GetSamplingTargetsOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: XRayResolvedConfiguration
+    ): Handler[GetSamplingTargetsInput, GetSamplingTargetsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[GetSamplingTargetsInput, GetSamplingTargetsOutput] = js.native
   }

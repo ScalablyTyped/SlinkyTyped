@@ -44,89 +44,22 @@ trait SchemaCreativeSize extends js.Object {
 
 object SchemaCreativeSize {
   @scala.inline
-  def apply(): SchemaCreativeSize = {
+  def apply(
+    allowedFormats: js.Array[String] = null,
+    companionSizes: js.Array[SchemaSize] = null,
+    creativeSizeType: String = null,
+    nativeTemplate: String = null,
+    size: SchemaSize = null,
+    skippableAdType: String = null
+  ): SchemaCreativeSize = {
     val __obj = js.Dynamic.literal()
+    if (allowedFormats != null) __obj.updateDynamic("allowedFormats")(allowedFormats.asInstanceOf[js.Any])
+    if (companionSizes != null) __obj.updateDynamic("companionSizes")(companionSizes.asInstanceOf[js.Any])
+    if (creativeSizeType != null) __obj.updateDynamic("creativeSizeType")(creativeSizeType.asInstanceOf[js.Any])
+    if (nativeTemplate != null) __obj.updateDynamic("nativeTemplate")(nativeTemplate.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (skippableAdType != null) __obj.updateDynamic("skippableAdType")(skippableAdType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreativeSize]
   }
-  @scala.inline
-  implicit class SchemaCreativeSizeOps[Self <: SchemaCreativeSize] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedFormats(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompanionSizes(value: js.Array[SchemaSize]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companionSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanionSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companionSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreativeSizeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeSizeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeSizeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeSizeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNativeTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNativeTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: SchemaSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippableAdType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippableAdType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippableAdType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippableAdType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

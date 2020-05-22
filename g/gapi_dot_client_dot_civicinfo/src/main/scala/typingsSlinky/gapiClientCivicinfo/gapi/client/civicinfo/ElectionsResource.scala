@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ElectionsResource extends js.Object {
   /** List of available elections to query. */
-  def electionQuery(request: Fields): Request[ElectionsQueryResponse] = js.native
+  def electionQuery(request: Fields): Request[ElectionsQueryResponse]
   /** Looks up information relevant to a voter based on the voter's registered address. */
-  def voterInfoQuery(request: Address): Request[VoterInfoResponse] = js.native
+  def voterInfoQuery(request: Address): Request[VoterInfoResponse]
 }
 
 object ElectionsResource {
@@ -24,25 +23,5 @@ object ElectionsResource {
     val __obj = js.Dynamic.literal(electionQuery = js.Any.fromFunction1(electionQuery), voterInfoQuery = js.Any.fromFunction1(voterInfoQuery))
     __obj.asInstanceOf[ElectionsResource]
   }
-  @scala.inline
-  implicit class ElectionsResourceOps[Self <: ElectionsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElectionQuery(value: Fields => Request[ElectionsQueryResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("electionQuery")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withVoterInfoQuery(value: Address => Request[VoterInfoResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voterInfoQuery")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

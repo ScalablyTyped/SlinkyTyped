@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SVGAnimatedLength extends js.Object {
   @JSName("MSHTML.SVGAnimatedLength_typekey")
-  var MSHTMLDotSVGAnimatedLength_typekey: SVGAnimatedLength = js.native
-  var animVal: SVGLength = js.native
-  var baseVal: SVGLength = js.native
+  var MSHTMLDotSVGAnimatedLength_typekey: SVGAnimatedLength
+  var animVal: SVGLength
+  var baseVal: SVGLength
 }
 
 object SVGAnimatedLength {
@@ -19,31 +18,5 @@ object SVGAnimatedLength {
     __obj.updateDynamic("MSHTML.SVGAnimatedLength_typekey")(MSHTMLDotSVGAnimatedLength_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGAnimatedLength]
   }
-  @scala.inline
-  implicit class SVGAnimatedLengthOps[Self <: SVGAnimatedLength] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotSVGAnimatedLength_typekey(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.SVGAnimatedLength_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimVal(value: SVGLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseVal(value: SVGLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

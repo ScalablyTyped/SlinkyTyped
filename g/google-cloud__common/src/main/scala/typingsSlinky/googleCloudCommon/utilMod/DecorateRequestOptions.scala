@@ -2,112 +2,63 @@ package typingsSlinky.googleCloudCommon.utilMod
 
 import typingsSlinky.googleCloudCommon.serviceObjectMod.Interceptor
 import typingsSlinky.teenyRequest.mod.CoreOptions
+import typingsSlinky.teenyRequest.mod.Headers
+import typingsSlinky.teenyRequest.mod.RequestPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DecorateRequestOptions extends CoreOptions {
-  var autoPaginate: js.UndefOr[Boolean] = js.native
-  var autoPaginateVal: js.UndefOr[Boolean] = js.native
-  var interceptors_ : js.UndefOr[js.Array[Interceptor]] = js.native
-  var maxRetries: js.UndefOr[Double] = js.native
-  var objectMode: js.UndefOr[Boolean] = js.native
-  var shouldReturnStream: js.UndefOr[Boolean] = js.native
-  var uri: String = js.native
+  var autoPaginate: js.UndefOr[Boolean] = js.undefined
+  var autoPaginateVal: js.UndefOr[Boolean] = js.undefined
+  var interceptors_ : js.UndefOr[js.Array[Interceptor]] = js.undefined
+  var maxRetries: js.UndefOr[Double] = js.undefined
+  var objectMode: js.UndefOr[Boolean] = js.undefined
+  var shouldReturnStream: js.UndefOr[Boolean] = js.undefined
+  var uri: String
 }
 
 object DecorateRequestOptions {
   @scala.inline
-  def apply(uri: String): DecorateRequestOptions = {
+  def apply(
+    uri: String,
+    autoPaginate: js.UndefOr[Boolean] = js.undefined,
+    autoPaginateVal: js.UndefOr[Boolean] = js.undefined,
+    body: String | js.Object = null,
+    forever: js.UndefOr[Boolean] = js.undefined,
+    gzip: js.UndefOr[Boolean] = js.undefined,
+    headers: Headers = null,
+    interceptors_ : js.Array[Interceptor] = null,
+    json: js.Any = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    multipart: js.Array[RequestPart] = null,
+    objectMode: js.UndefOr[Boolean] = js.undefined,
+    proxy: String = null,
+    qs: js.Any = null,
+    shouldReturnStream: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    useQuerystring: js.UndefOr[Boolean] = js.undefined
+  ): DecorateRequestOptions = {
     val __obj = js.Dynamic.literal(uri = uri.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoPaginate)) __obj.updateDynamic("autoPaginate")(autoPaginate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoPaginateVal)) __obj.updateDynamic("autoPaginateVal")(autoPaginateVal.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(forever)) __obj.updateDynamic("forever")(forever.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gzip)) __obj.updateDynamic("gzip")(gzip.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (interceptors_ != null) __obj.updateDynamic("interceptors_")(interceptors_.asInstanceOf[js.Any])
+    if (json != null) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (multipart != null) __obj.updateDynamic("multipart")(multipart.asInstanceOf[js.Any])
+    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.get.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (qs != null) __obj.updateDynamic("qs")(qs.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldReturnStream)) __obj.updateDynamic("shouldReturnStream")(shouldReturnStream.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useQuerystring)) __obj.updateDynamic("useQuerystring")(useQuerystring.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecorateRequestOptions]
   }
-  @scala.inline
-  implicit class DecorateRequestOptionsOps[Self <: DecorateRequestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoPaginate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoPaginate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoPaginateVal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginateVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoPaginateVal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginateVal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterceptors_(value: js.Array[Interceptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interceptors_")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterceptors_ : Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interceptors_")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldReturnStream(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldReturnStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldReturnStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldReturnStream")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

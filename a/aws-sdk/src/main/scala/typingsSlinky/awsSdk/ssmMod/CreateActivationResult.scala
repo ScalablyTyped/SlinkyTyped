@@ -18,41 +18,11 @@ trait CreateActivationResult extends js.Object {
 
 object CreateActivationResult {
   @scala.inline
-  def apply(): CreateActivationResult = {
+  def apply(ActivationCode: ActivationCode = null, ActivationId: ActivationId = null): CreateActivationResult = {
     val __obj = js.Dynamic.literal()
+    if (ActivationCode != null) __obj.updateDynamic("ActivationCode")(ActivationCode.asInstanceOf[js.Any])
+    if (ActivationId != null) __obj.updateDynamic("ActivationId")(ActivationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateActivationResult]
   }
-  @scala.inline
-  implicit class CreateActivationResultOps[Self <: CreateActivationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivationCode(value: ActivationCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivationCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivationId(value: ActivationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

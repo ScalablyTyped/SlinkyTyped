@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Geometry3D_ extends js.Object {
-  val vertexColors: js.Array[Double] = js.native
-  val vertexUVs: js.Array[Double] = js.native
-  val vertices: js.Array[Double] = js.native
+  val vertexColors: js.Array[Double]
+  val vertexUVs: js.Array[Double]
+  val vertices: js.Array[Double]
 }
 
 object Geometry3D_ {
@@ -17,31 +16,5 @@ object Geometry3D_ {
     val __obj = js.Dynamic.literal(vertexColors = vertexColors.asInstanceOf[js.Any], vertexUVs = vertexUVs.asInstanceOf[js.Any], vertices = vertices.asInstanceOf[js.Any])
     __obj.asInstanceOf[Geometry3D_]
   }
-  @scala.inline
-  implicit class Geometry3D_Ops[Self <: Geometry3D_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVertexColors(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVertexUVs(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexUVs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVertices(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertices")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

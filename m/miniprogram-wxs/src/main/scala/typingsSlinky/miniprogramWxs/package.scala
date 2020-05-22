@@ -39,6 +39,10 @@ package object miniprogramWxs {
     * Construct a type with the properties of T except for those in type K.
     */
   type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.miniprogramWxs.Pick[T, typingsSlinky.miniprogramWxs.Exclude[/* keyof T */ java.lang.String, K]]
+  /**
+    * Removes the 'this' parameter from a function type.
+    */
+  type OmitThisParameter[T] = T | (js.Function1[/* args */ js.Any, js.Any])
   type ParameterDecorator = js.Function3[
     /* target */ typingsSlinky.miniprogramWxs.Object, 
     /* propertyKey */ java.lang.String | js.Symbol, 
@@ -78,6 +82,7 @@ package object miniprogramWxs {
     scala.Unit
   ]
   type PropertyDescriptorMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.miniprogramWxs.PropertyDescriptor]
+  type PropertyKey = java.lang.String | scala.Double | js.Symbol
   /**
     * Make all properties in T readonly
     */

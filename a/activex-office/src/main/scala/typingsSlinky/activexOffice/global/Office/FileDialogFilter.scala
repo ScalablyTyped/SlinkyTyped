@@ -7,5 +7,19 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Office.FileDialogFilter")
 @js.native
 class FileDialogFilter protected ()
-  extends typingsSlinky.activexOffice.Office.FileDialogFilter
+  extends typingsSlinky.activexOffice.Office.FileDialogFilter {
+  /* CompleteClass */
+  override val Application: js.Any = js.native
+  /* CompleteClass */
+  override val Creator: Double = js.native
+  /* CompleteClass */
+  override val Description: String = js.native
+  /* CompleteClass */
+  override val Extensions: String = js.native
+  /* CompleteClass */
+  @JSName("Office.FileDialogFilter_typekey")
+  override var OfficeDotFileDialogFilter_typekey: typingsSlinky.activexOffice.Office.FileDialogFilter = js.native
+  /* CompleteClass */
+  override val Parent: js.Any = js.native
+}
 

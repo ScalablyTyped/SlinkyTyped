@@ -4,56 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotPyramid3dStatesInactiveOptions extends js.Object {
   /**
     * (Highcharts) The animation for entering the inactive state.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject | PlotPyramid3dStatesInactiveAnimationOptions] = js.native
+  var animation: js.UndefOr[Boolean | AnimationOptionsObject | PlotPyramid3dStatesInactiveAnimationOptions] = js.undefined
   /**
     * (Highcharts) Opacity of series elements (dataLabels, line, area). Set to
     * 1 to disable inactive state.
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
 }
 
 object PlotPyramid3dStatesInactiveOptions {
   @scala.inline
-  def apply(): PlotPyramid3dStatesInactiveOptions = {
+  def apply(
+    animation: Boolean | AnimationOptionsObject | PlotPyramid3dStatesInactiveAnimationOptions = null,
+    opacity: js.UndefOr[Double] = js.undefined
+  ): PlotPyramid3dStatesInactiveOptions = {
     val __obj = js.Dynamic.literal()
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotPyramid3dStatesInactiveOptions]
   }
-  @scala.inline
-  implicit class PlotPyramid3dStatesInactiveOptionsOps[Self <: PlotPyramid3dStatesInactiveOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: Boolean | AnimationOptionsObject | PlotPyramid3dStatesInactiveAnimationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateNotificationOptions extends js.Object {
-  var customAttributes: js.UndefOr[StringDictionary[String]] = js.native
-  var eventTypes: js.UndefOr[js.Array[String]] = js.native
-  var objectNamePrefix: js.UndefOr[String] = js.native
-  var payloadFormat: js.UndefOr[String] = js.native
-  var userProject: js.UndefOr[String] = js.native
+  var customAttributes: js.UndefOr[StringDictionary[String]] = js.undefined
+  var eventTypes: js.UndefOr[js.Array[String]] = js.undefined
+  var objectNamePrefix: js.UndefOr[String] = js.undefined
+  var payloadFormat: js.UndefOr[String] = js.undefined
+  var userProject: js.UndefOr[String] = js.undefined
 }
 
 object CreateNotificationOptions {
   @scala.inline
-  def apply(): CreateNotificationOptions = {
+  def apply(
+    customAttributes: StringDictionary[String] = null,
+    eventTypes: js.Array[String] = null,
+    objectNamePrefix: String = null,
+    payloadFormat: String = null,
+    userProject: String = null
+  ): CreateNotificationOptions = {
     val __obj = js.Dynamic.literal()
+    if (customAttributes != null) __obj.updateDynamic("customAttributes")(customAttributes.asInstanceOf[js.Any])
+    if (eventTypes != null) __obj.updateDynamic("eventTypes")(eventTypes.asInstanceOf[js.Any])
+    if (objectNamePrefix != null) __obj.updateDynamic("objectNamePrefix")(objectNamePrefix.asInstanceOf[js.Any])
+    if (payloadFormat != null) __obj.updateDynamic("payloadFormat")(payloadFormat.asInstanceOf[js.Any])
+    if (userProject != null) __obj.updateDynamic("userProject")(userProject.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNotificationOptions]
   }
-  @scala.inline
-  implicit class CreateNotificationOptionsOps[Self <: CreateNotificationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomAttributes(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectNamePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectNamePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectNamePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectNamePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserProject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

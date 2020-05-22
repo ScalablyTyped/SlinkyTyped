@@ -18,6 +18,7 @@ object Diagnostics extends js.Object {
   var Invalid_character: Code = js.native
   var Invalid_escape_sequence: Code = js.native
   var Obsolete_0_ : Message = js.native
+  var Parameter_0_is_unused: Code = js.native
   var Production_0_does_not_have_a_parameter_named_1_ : Code = js.native
   var Production_0_is_missing_parameter_1_All_definitions_of_production_0_must_specify_the_same_formal_parameters: Code = js.native
   var Production_expected: Code = js.native

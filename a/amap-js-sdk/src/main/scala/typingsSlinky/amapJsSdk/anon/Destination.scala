@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Destination extends js.Object {
-  var destination: js.UndefOr[LngLat] = js.native
-  var destinationName: js.UndefOr[String] = js.native
-  var origin: js.UndefOr[LngLat] = js.native
-  var originName: js.UndefOr[String] = js.native
+  var destination: js.UndefOr[LngLat] = js.undefined
+  var destinationName: js.UndefOr[String] = js.undefined
+  var origin: js.UndefOr[LngLat] = js.undefined
+  var originName: js.UndefOr[String] = js.undefined
 }
 
 object Destination {
   @scala.inline
-  def apply(): Destination = {
+  def apply(
+    destination: LngLat = null,
+    destinationName: String = null,
+    origin: LngLat = null,
+    originName: String = null
+  ): Destination = {
     val __obj = js.Dynamic.literal()
+    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
+    if (destinationName != null) __obj.updateDynamic("destinationName")(destinationName.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+    if (originName != null) __obj.updateDynamic("originName")(originName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Destination]
   }
-  @scala.inline
-  implicit class DestinationOps[Self <: Destination] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: LngLat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: LngLat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -180,7 +180,8 @@ object mod extends js.Object {
   def panPow(domain: js.Array[Double], delta: Double, exponent: Double): js.Array[Double] = js.native
   def panSymlog(domain: js.Array[Double], delta: Double, constant: Double): js.Array[Double] = js.native
   def parse(spec: Spec): Runtime = js.native
-  def parse(spec: Spec, opt: js.Any): Runtime = js.native
+  def parse(spec: Spec, config: js.Any): Runtime = js.native
+  def parse(spec: Spec, config: js.Any, opt: js.Object): Runtime = js.native
   def peek(array: js.Array[_]): js.Any = js.native
   def projection(`type`: String, projection: js.Any): typingsSlinky.vegaTypings.runtimeMod.View = js.native
   def quarter(date: Double): Double = js.native

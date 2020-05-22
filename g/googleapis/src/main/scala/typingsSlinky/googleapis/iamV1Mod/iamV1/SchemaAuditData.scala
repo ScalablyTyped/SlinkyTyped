@@ -18,29 +18,10 @@ trait SchemaAuditData extends js.Object {
 
 object SchemaAuditData {
   @scala.inline
-  def apply(): SchemaAuditData = {
+  def apply(policyDelta: SchemaPolicyDelta = null): SchemaAuditData = {
     val __obj = js.Dynamic.literal()
+    if (policyDelta != null) __obj.updateDynamic("policyDelta")(policyDelta.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuditData]
   }
-  @scala.inline
-  implicit class SchemaAuditDataOps[Self <: SchemaAuditData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyDelta(value: SchemaPolicyDelta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDelta")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

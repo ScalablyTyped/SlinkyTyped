@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Heightfield extends Shape {
-  var cacheEnabled: Boolean = js.native
-  var data: js.Array[js.Array[Double]] = js.native
-  var elementSize: Double = js.native
-  var maxValue: Double = js.native
-  var minValue: Double = js.native
-  var pillarConvex: ConvexPolyhedron = js.native
-  var pillarOffset: Vec3 = js.native
-  def getConvexTrianglePillar(xi: Double, yi: Double, getUpperTriangle: Boolean): Unit = js.native
-  def getIndexOfPosition(x: Double, y: Double, result: js.Array[_], clamp: Boolean): Boolean = js.native
-  def getRectMinMax(iMinX: Double, iMinY: Double, iMaxX: Double, iMaxY: Double, result: js.Array[_]): Unit = js.native
-  def setHeightValueAtIndex(xi: Double, yi: Double, value: Double): Unit = js.native
-  def update(): Unit = js.native
-  def updateMaxValue(): Unit = js.native
-  def updateMinValue(): Unit = js.native
+  var cacheEnabled: Boolean
+  var data: js.Array[js.Array[Double]]
+  var elementSize: Double
+  var maxValue: Double
+  var minValue: Double
+  var pillarConvex: ConvexPolyhedron
+  var pillarOffset: Vec3
+  def getConvexTrianglePillar(xi: Double, yi: Double, getUpperTriangle: Boolean): Unit
+  def getIndexOfPosition(x: Double, y: Double, result: js.Array[_], clamp: Boolean): Boolean
+  def getRectMinMax(iMinX: Double, iMinY: Double, iMaxX: Double, iMaxY: Double, result: js.Array[_]): Unit
+  def setHeightValueAtIndex(xi: Double, yi: Double, value: Double): Unit
+  def update(): Unit
+  def updateMaxValue(): Unit
+  def updateMinValue(): Unit
 }
 
 object Heightfield {
@@ -50,97 +49,5 @@ object Heightfield {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Heightfield]
   }
-  @scala.inline
-  implicit class HeightfieldOps[Self <: Heightfield] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElementSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetConvexTrianglePillar(value: (Double, Double, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConvexTrianglePillar")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetIndexOfPosition(value: (Double, Double, js.Array[_], Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndexOfPosition")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetRectMinMax(value: (Double, Double, Double, Double, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRectMinMax")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPillarConvex(value: ConvexPolyhedron): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pillarConvex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPillarOffset(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pillarOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetHeightValueAtIndex(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeightValueAtIndex")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateMaxValue(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMaxValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateMinValue(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMinValue")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

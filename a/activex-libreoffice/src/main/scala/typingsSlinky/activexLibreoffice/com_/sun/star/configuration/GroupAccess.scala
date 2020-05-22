@@ -33,7 +33,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.configuration.GroupElement Child objects of this service generally implement service GroupElement.
   * @see com.sun.star.configuration.SetAccess A complementary service providing for dynamic homogeneous sets of elements.
   */
-@js.native
 trait GroupAccess
   extends HierarchyAccess
      with XPropertySet
@@ -47,32 +46,32 @@ trait GroupAccess
     * @see XHierarchicalPropertySet.getHierarchicalPropertySetInfo
     */
   /* InferMemberOverrides */
-  override val HierarchicalPropertySetInfo: XHierarchicalPropertySetInfo = js.native
+  override val HierarchicalPropertySetInfo: XHierarchicalPropertySetInfo
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object to which this interface belongs. NULL is returned if the obj
     * @see XPropertySet.getPropertySetInfo
     */
   /* InferMemberOverrides */
-  override val PropertySetInfo: XPropertySetInfo = js.native
+  override val PropertySetInfo: XPropertySetInfo
   /**
     * retrieve information about the hierarchy of properties
     * @returns the {@link XHierarchicalPropertySetInfo} interface, which describes the property hierarchy of the object which supplies this interface.
     * @returns `NULL` if the implementation cannot or will not provide information about the properties; otherwise the interface {@link XHierarchicalPropertySet
     */
   /* InferMemberOverrides */
-  override def getHierarchicalPropertySetInfo(): XHierarchicalPropertySetInfo = js.native
+  override def getHierarchicalPropertySetInfo(): XHierarchicalPropertySetInfo
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object which supplies this interface.
     * @returns NULL if the implementation cannot or will not provide information about the properties; otherwise the interface {@link XPropertySetInfo} is returned.
     */
   /* InferMemberOverrides */
-  override def getPropertySetInfo(): XPropertySetInfo = js.native
+  override def getPropertySetInfo(): XPropertySetInfo
   /**
     * @param aPropertyName specifies the names of the properties. All names must be unique. This sequence must be alphabetically sorted.
     * @returns a sequence of the states of the properties which are specified by their names.  The order of the states is correlating to the order of the given
     */
   /* InferMemberOverrides */
-  override def getPropertyStates(aPropertyName: SeqEquiv[String]): SafeArray[PropertyState] = js.native
+  override def getPropertyStates(aPropertyName: SeqEquiv[String]): SafeArray[PropertyState]
 }
 
 object GroupAccess {
@@ -127,43 +126,5 @@ object GroupAccess {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], HierarchicalPropertySetInfo = HierarchicalPropertySetInfo.asInstanceOf[js.Any], Properties = Properties.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addContainerListener = js.Any.fromFunction1(addContainerListener), addPropertiesChangeListener = js.Any.fromFunction2(addPropertiesChangeListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), firePropertiesChangeEvent = js.Any.fromFunction2(firePropertiesChangeEvent), getByHierarchicalName = js.Any.fromFunction1(getByHierarchicalName), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), getExactName = js.Any.fromFunction1(getExactName), getHierarchicalPropertySetInfo = js.Any.fromFunction0(getHierarchicalPropertySetInfo), getHierarchicalPropertyValue = js.Any.fromFunction1(getHierarchicalPropertyValue), getHierarchicalPropertyValues = js.Any.fromFunction1(getHierarchicalPropertyValues), getProperties = js.Any.fromFunction0(getProperties), getPropertyByName = js.Any.fromFunction1(getPropertyByName), getPropertyDefault = js.Any.fromFunction1(getPropertyDefault), getPropertyDefaults = js.Any.fromFunction1(getPropertyDefaults), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyState = js.Any.fromFunction1(getPropertyState), getPropertyStates = js.Any.fromFunction1(getPropertyStates), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getPropertyValues = js.Any.fromFunction1(getPropertyValues), hasByHierarchicalName = js.Any.fromFunction1(hasByHierarchicalName), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), hasPropertyByName = js.Any.fromFunction1(hasPropertyByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeContainerListener = js.Any.fromFunction1(removeContainerListener), removePropertiesChangeListener = js.Any.fromFunction1(removePropertiesChangeListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setAllPropertiesToDefault = js.Any.fromFunction0(setAllPropertiesToDefault), setHierarchicalPropertyValue = js.Any.fromFunction2(setHierarchicalPropertyValue), setHierarchicalPropertyValues = js.Any.fromFunction2(setHierarchicalPropertyValues), setPropertiesToDefault = js.Any.fromFunction1(setPropertiesToDefault), setPropertyToDefault = js.Any.fromFunction1(setPropertyToDefault), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setPropertyValues = js.Any.fromFunction2(setPropertyValues))
     __obj.asInstanceOf[GroupAccess]
   }
-  @scala.inline
-  implicit class GroupAccessOps[Self <: GroupAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHierarchicalPropertySetInfo(value: XHierarchicalPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HierarchicalPropertySetInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertySetInfo(value: XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertySetInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetHierarchicalPropertySetInfo(value: () => XHierarchicalPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHierarchicalPropertySetInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertySetInfo(value: () => XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertySetInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertyStates(value: SeqEquiv[String] => SafeArray[PropertyState]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertyStates")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

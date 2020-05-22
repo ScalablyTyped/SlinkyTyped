@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@js.native
 trait TableSelectionChangedEventArgs extends js.Object {
   /**
     *
@@ -19,35 +18,35 @@ trait TableSelectionChangedEventArgs extends js.Object {
     *
     * [Api set: ExcelApi 1.7]
     */
-  var address: String = js.native
+  var address: String
   /**
     *
-    * Indicates if the selection is inside a table, address will be useless if IsInsideTable is false.
+    * Specifies if the selection is inside a table, address will be useless if IsInsideTable is false.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var isInsideTable: Boolean = js.native
+  var isInsideTable: Boolean
   /**
     *
     * Gets the id of the table in which the selection changed.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var tableId: String = js.native
+  var tableId: String
   /**
     *
-    * Gets the type of the event. See Excel.EventType for details. Read-only.
+    * Gets the type of the event. See Excel.EventType for details.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var `type`: TableSelectionChanged = js.native
+  var `type`: TableSelectionChanged
   /**
     *
     * Gets the id of the worksheet in which the selection changed.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var worksheetId: String = js.native
+  var worksheetId: String
 }
 
 object TableSelectionChangedEventArgs {
@@ -63,43 +62,5 @@ object TableSelectionChangedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableSelectionChangedEventArgs]
   }
-  @scala.inline
-  implicit class TableSelectionChangedEventArgsOps[Self <: TableSelectionChangedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsInsideTable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInsideTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TableSelectionChanged): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorksheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

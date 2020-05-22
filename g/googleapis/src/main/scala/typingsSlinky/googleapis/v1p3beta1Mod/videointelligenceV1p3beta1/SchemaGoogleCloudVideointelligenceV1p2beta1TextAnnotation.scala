@@ -23,41 +23,14 @@ trait SchemaGoogleCloudVideointelligenceV1p2beta1TextAnnotation extends js.Objec
 
 object SchemaGoogleCloudVideointelligenceV1p2beta1TextAnnotation {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1p2beta1TextAnnotation = {
+  def apply(
+    segments: js.Array[SchemaGoogleCloudVideointelligenceV1p2beta1TextSegment] = null,
+    text: String = null
+  ): SchemaGoogleCloudVideointelligenceV1p2beta1TextAnnotation = {
     val __obj = js.Dynamic.literal()
+    if (segments != null) __obj.updateDynamic("segments")(segments.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p2beta1TextAnnotation]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1p2beta1TextAnnotationOps[Self <: SchemaGoogleCloudVideointelligenceV1p2beta1TextAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSegments(value: js.Array[SchemaGoogleCloudVideointelligenceV1p2beta1TextSegment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

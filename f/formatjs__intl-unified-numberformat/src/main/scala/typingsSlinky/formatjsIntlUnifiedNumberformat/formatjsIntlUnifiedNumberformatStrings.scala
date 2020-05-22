@@ -1,7 +1,7 @@
 package typingsSlinky.formatjsIntlUnifiedNumberformat
 
-import typingsSlinky.formatjsIntlUnifiedNumberformat.mod.UnifiedNumberFormatPartTypes
 import typingsSlinky.formatjsIntlUnifiedNumberformat.mod.Unit
+import typingsSlinky.formatjsIntlUnifiedNumberformat.mod._UnifiedNumberFormatPartTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,8 +43,8 @@ object formatjsIntlUnifiedNumberformatStrings {
   
   @js.native
   sealed trait compact
-    extends UnifiedNumberFormatPartTypes
-       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod.UnifiedNumberFormatPartTypes
+    extends _UnifiedNumberFormatPartTypes
+       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod._UnifiedNumberFormatPartTypes
   
   @js.native
   sealed trait compactLong extends js.Object
@@ -67,18 +67,18 @@ object formatjsIntlUnifiedNumberformatStrings {
   
   @js.native
   sealed trait exponentInteger
-    extends UnifiedNumberFormatPartTypes
-       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod.UnifiedNumberFormatPartTypes
+    extends _UnifiedNumberFormatPartTypes
+       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod._UnifiedNumberFormatPartTypes
   
   @js.native
   sealed trait exponentMinusSign
-    extends UnifiedNumberFormatPartTypes
-       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod.UnifiedNumberFormatPartTypes
+    extends _UnifiedNumberFormatPartTypes
+       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod._UnifiedNumberFormatPartTypes
   
   @js.native
   sealed trait exponentSeparator
-    extends UnifiedNumberFormatPartTypes
-       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod.UnifiedNumberFormatPartTypes
+    extends _UnifiedNumberFormatPartTypes
+       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod._UnifiedNumberFormatPartTypes
   
   @js.native
   sealed trait fahrenheit
@@ -157,8 +157,8 @@ object formatjsIntlUnifiedNumberformatStrings {
   
   @js.native
   sealed trait literal
-    extends UnifiedNumberFormatPartTypes
-       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod.UnifiedNumberFormatPartTypes
+    extends _UnifiedNumberFormatPartTypes
+       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod._UnifiedNumberFormatPartTypes
   
   @js.native
   sealed trait megabit
@@ -258,8 +258,8 @@ object formatjsIntlUnifiedNumberformatStrings {
   
   @js.native
   sealed trait unit
-    extends UnifiedNumberFormatPartTypes
-       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod.UnifiedNumberFormatPartTypes
+    extends _UnifiedNumberFormatPartTypes
+       with typingsSlinky.formatjsIntlUnifiedNumberformat.coreMod._UnifiedNumberFormatPartTypes
   
   @js.native
   sealed trait week

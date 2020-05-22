@@ -70,197 +70,40 @@ trait ModifyVpnTunnelOptionsSpecification extends js.Object {
 
 object ModifyVpnTunnelOptionsSpecification {
   @scala.inline
-  def apply(): ModifyVpnTunnelOptionsSpecification = {
+  def apply(
+    DPDTimeoutSeconds: js.UndefOr[Integer] = js.undefined,
+    IKEVersions: IKEVersionsRequestList = null,
+    Phase1DHGroupNumbers: Phase1DHGroupNumbersRequestList = null,
+    Phase1EncryptionAlgorithms: Phase1EncryptionAlgorithmsRequestList = null,
+    Phase1IntegrityAlgorithms: Phase1IntegrityAlgorithmsRequestList = null,
+    Phase1LifetimeSeconds: js.UndefOr[Integer] = js.undefined,
+    Phase2DHGroupNumbers: Phase2DHGroupNumbersRequestList = null,
+    Phase2EncryptionAlgorithms: Phase2EncryptionAlgorithmsRequestList = null,
+    Phase2IntegrityAlgorithms: Phase2IntegrityAlgorithmsRequestList = null,
+    Phase2LifetimeSeconds: js.UndefOr[Integer] = js.undefined,
+    PreSharedKey: String = null,
+    RekeyFuzzPercentage: js.UndefOr[Integer] = js.undefined,
+    RekeyMarginTimeSeconds: js.UndefOr[Integer] = js.undefined,
+    ReplayWindowSize: js.UndefOr[Integer] = js.undefined,
+    TunnelInsideCidr: String = null
+  ): ModifyVpnTunnelOptionsSpecification = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DPDTimeoutSeconds)) __obj.updateDynamic("DPDTimeoutSeconds")(DPDTimeoutSeconds.get.asInstanceOf[js.Any])
+    if (IKEVersions != null) __obj.updateDynamic("IKEVersions")(IKEVersions.asInstanceOf[js.Any])
+    if (Phase1DHGroupNumbers != null) __obj.updateDynamic("Phase1DHGroupNumbers")(Phase1DHGroupNumbers.asInstanceOf[js.Any])
+    if (Phase1EncryptionAlgorithms != null) __obj.updateDynamic("Phase1EncryptionAlgorithms")(Phase1EncryptionAlgorithms.asInstanceOf[js.Any])
+    if (Phase1IntegrityAlgorithms != null) __obj.updateDynamic("Phase1IntegrityAlgorithms")(Phase1IntegrityAlgorithms.asInstanceOf[js.Any])
+    if (!js.isUndefined(Phase1LifetimeSeconds)) __obj.updateDynamic("Phase1LifetimeSeconds")(Phase1LifetimeSeconds.get.asInstanceOf[js.Any])
+    if (Phase2DHGroupNumbers != null) __obj.updateDynamic("Phase2DHGroupNumbers")(Phase2DHGroupNumbers.asInstanceOf[js.Any])
+    if (Phase2EncryptionAlgorithms != null) __obj.updateDynamic("Phase2EncryptionAlgorithms")(Phase2EncryptionAlgorithms.asInstanceOf[js.Any])
+    if (Phase2IntegrityAlgorithms != null) __obj.updateDynamic("Phase2IntegrityAlgorithms")(Phase2IntegrityAlgorithms.asInstanceOf[js.Any])
+    if (!js.isUndefined(Phase2LifetimeSeconds)) __obj.updateDynamic("Phase2LifetimeSeconds")(Phase2LifetimeSeconds.get.asInstanceOf[js.Any])
+    if (PreSharedKey != null) __obj.updateDynamic("PreSharedKey")(PreSharedKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(RekeyFuzzPercentage)) __obj.updateDynamic("RekeyFuzzPercentage")(RekeyFuzzPercentage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RekeyMarginTimeSeconds)) __obj.updateDynamic("RekeyMarginTimeSeconds")(RekeyMarginTimeSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReplayWindowSize)) __obj.updateDynamic("ReplayWindowSize")(ReplayWindowSize.get.asInstanceOf[js.Any])
+    if (TunnelInsideCidr != null) __obj.updateDynamic("TunnelInsideCidr")(TunnelInsideCidr.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyVpnTunnelOptionsSpecification]
   }
-  @scala.inline
-  implicit class ModifyVpnTunnelOptionsSpecificationOps[Self <: ModifyVpnTunnelOptionsSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDPDTimeoutSeconds(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DPDTimeoutSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDPDTimeoutSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DPDTimeoutSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIKEVersions(value: IKEVersionsRequestList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IKEVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIKEVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IKEVersions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase1DHGroupNumbers(value: Phase1DHGroupNumbersRequestList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase1DHGroupNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase1DHGroupNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase1DHGroupNumbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase1EncryptionAlgorithms(value: Phase1EncryptionAlgorithmsRequestList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase1EncryptionAlgorithms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase1EncryptionAlgorithms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase1EncryptionAlgorithms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase1IntegrityAlgorithms(value: Phase1IntegrityAlgorithmsRequestList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase1IntegrityAlgorithms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase1IntegrityAlgorithms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase1IntegrityAlgorithms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase1LifetimeSeconds(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase1LifetimeSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase1LifetimeSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase1LifetimeSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase2DHGroupNumbers(value: Phase2DHGroupNumbersRequestList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase2DHGroupNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase2DHGroupNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase2DHGroupNumbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase2EncryptionAlgorithms(value: Phase2EncryptionAlgorithmsRequestList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase2EncryptionAlgorithms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase2EncryptionAlgorithms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase2EncryptionAlgorithms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase2IntegrityAlgorithms(value: Phase2IntegrityAlgorithmsRequestList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase2IntegrityAlgorithms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase2IntegrityAlgorithms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase2IntegrityAlgorithms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase2LifetimeSeconds(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase2LifetimeSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase2LifetimeSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Phase2LifetimeSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreSharedKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSharedKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreSharedKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSharedKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRekeyFuzzPercentage(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RekeyFuzzPercentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRekeyFuzzPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RekeyFuzzPercentage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRekeyMarginTimeSeconds(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RekeyMarginTimeSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRekeyMarginTimeSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RekeyMarginTimeSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplayWindowSize(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplayWindowSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplayWindowSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplayWindowSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTunnelInsideCidr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TunnelInsideCidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTunnelInsideCidr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TunnelInsideCidr")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -25,53 +25,16 @@ trait SchemaFilterAction extends js.Object {
 
 object SchemaFilterAction {
   @scala.inline
-  def apply(): SchemaFilterAction = {
+  def apply(
+    addLabelIds: js.Array[String] = null,
+    forward: String = null,
+    removeLabelIds: js.Array[String] = null
+  ): SchemaFilterAction = {
     val __obj = js.Dynamic.literal()
+    if (addLabelIds != null) __obj.updateDynamic("addLabelIds")(addLabelIds.asInstanceOf[js.Any])
+    if (forward != null) __obj.updateDynamic("forward")(forward.asInstanceOf[js.Any])
+    if (removeLabelIds != null) __obj.updateDynamic("removeLabelIds")(removeLabelIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFilterAction]
   }
-  @scala.inline
-  implicit class SchemaFilterActionOps[Self <: SchemaFilterAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddLabelIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addLabelIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddLabelIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addLabelIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForward(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForward: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveLabelIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLabelIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveLabelIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLabelIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

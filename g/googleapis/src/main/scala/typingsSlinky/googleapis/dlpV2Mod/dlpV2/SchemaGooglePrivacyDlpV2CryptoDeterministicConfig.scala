@@ -59,53 +59,16 @@ trait SchemaGooglePrivacyDlpV2CryptoDeterministicConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2CryptoDeterministicConfig {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2CryptoDeterministicConfig = {
+  def apply(
+    context: SchemaGooglePrivacyDlpV2FieldId = null,
+    cryptoKey: SchemaGooglePrivacyDlpV2CryptoKey = null,
+    surrogateInfoType: SchemaGooglePrivacyDlpV2InfoType = null
+  ): SchemaGooglePrivacyDlpV2CryptoDeterministicConfig = {
     val __obj = js.Dynamic.literal()
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (cryptoKey != null) __obj.updateDynamic("cryptoKey")(cryptoKey.asInstanceOf[js.Any])
+    if (surrogateInfoType != null) __obj.updateDynamic("surrogateInfoType")(surrogateInfoType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CryptoDeterministicConfig]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2CryptoDeterministicConfigOps[Self <: SchemaGooglePrivacyDlpV2CryptoDeterministicConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: SchemaGooglePrivacyDlpV2FieldId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCryptoKey(value: SchemaGooglePrivacyDlpV2CryptoKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCryptoKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSurrogateInfoType(value: SchemaGooglePrivacyDlpV2InfoType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surrogateInfoType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSurrogateInfoType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surrogateInfoType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

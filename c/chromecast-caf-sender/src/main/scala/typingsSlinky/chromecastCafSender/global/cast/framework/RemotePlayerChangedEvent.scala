@@ -13,5 +13,11 @@ class RemotePlayerChangedEvent[T] protected ()
     field: String,
     value: T
   ) = this()
+  /* CompleteClass */
+  override var field: String = js.native
+  /* CompleteClass */
+  override var `type`: String = js.native
+  /* CompleteClass */
+  override var value: T = js.native
 }
 

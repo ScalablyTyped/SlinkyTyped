@@ -6,6 +6,8 @@ import typingsSlinky.intercomClient.anon.Segmentid
 import typingsSlinky.intercomClient.scrollMod.Scroll
 import typingsSlinky.intercomClient.userMod.List
 import typingsSlinky.intercomClient.userMod.User
+import typingsSlinky.intercomClient.userMod.UserEmailIdentifier
+import typingsSlinky.intercomClient.userMod.UserIdIdentifier
 import typingsSlinky.intercomClient.userMod.UserIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,8 +21,12 @@ class Users () extends js.Object {
   def archive(identifier: UserIdentifier, cb: callback[ApiResponse[User]]): Unit = js.native
   def create(user: PartialCreateUpdateUser): js.Promise[ApiResponse[User]] = js.native
   def create(user: PartialCreateUpdateUser, cb: callback[ApiResponse[User]]): Unit = js.native
-  def find(identifier: UserIdentifier): js.Promise[ApiResponse[User]] = js.native
-  def find(identifier: UserIdentifier, cb: callback[ApiResponse[User]]): Unit = js.native
+  def find(identifier: UserEmailIdentifier): js.Promise[ApiResponse[List]] = js.native
+  def find(identifier: UserEmailIdentifier, cb: callback[ApiResponse[List]]): Unit = js.native
+  def find(identifier: UserIdIdentifier): js.Promise[ApiResponse[User]] = js.native
+  def find(identifier: UserIdIdentifier, cb: callback[ApiResponse[User]]): Unit = js.native
+  def find(identifier: UserIdentifier): js.Promise[ApiResponse[User | List]] = js.native
+  def find(identifier: UserIdentifier, cb: callback[ApiResponse[User | List]]): Unit = js.native
   def list(): js.Promise[ApiResponse[List]] = js.native
   def list(cb: callback[ApiResponse[List]]): Unit = js.native
   def listBy(params: Segmentid): js.Promise[ApiResponse[List]] = js.native

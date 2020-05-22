@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgnoreCase extends js.Object {
-  var ignoreCase: Boolean = js.native
+  var ignoreCase: Boolean
 }
 
 object IgnoreCase {
@@ -15,19 +14,5 @@ object IgnoreCase {
     val __obj = js.Dynamic.literal(ignoreCase = ignoreCase.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgnoreCase]
   }
-  @scala.inline
-  implicit class IgnoreCaseOps[Self <: IgnoreCase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoreCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

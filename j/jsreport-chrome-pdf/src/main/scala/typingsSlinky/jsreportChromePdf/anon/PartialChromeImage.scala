@@ -9,114 +9,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<jsreport-chrome-pdf.jsreport-chrome-pdf.ChromeImage> */
-@js.native
 trait PartialChromeImage extends js.Object {
-  var clip: js.UndefOr[Height] = js.native
-  var encoding: js.UndefOr[base64 | binary] = js.native
-  var fullPage: js.UndefOr[Boolean] = js.native
-  var omitBackground: js.UndefOr[Boolean] = js.native
-  var path: js.UndefOr[String] = js.native
-  var quality: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[jpeg | png] = js.native
+  var clip: js.UndefOr[Height] = js.undefined
+  var encoding: js.UndefOr[base64 | binary] = js.undefined
+  var fullPage: js.UndefOr[Boolean] = js.undefined
+  var omitBackground: js.UndefOr[Boolean] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var quality: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[jpeg | png] = js.undefined
 }
 
 object PartialChromeImage {
   @scala.inline
-  def apply(): PartialChromeImage = {
+  def apply(
+    clip: Height = null,
+    encoding: base64 | binary = null,
+    fullPage: js.UndefOr[Boolean] = js.undefined,
+    omitBackground: js.UndefOr[Boolean] = js.undefined,
+    path: String = null,
+    quality: js.UndefOr[Double] = js.undefined,
+    `type`: jpeg | png = null
+  ): PartialChromeImage = {
     val __obj = js.Dynamic.literal()
+    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(fullPage)) __obj.updateDynamic("fullPage")(fullPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(omitBackground)) __obj.updateDynamic("omitBackground")(omitBackground.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialChromeImage]
   }
-  @scala.inline
-  implicit class PartialChromeImageOps[Self <: PartialChromeImage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClip(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: base64 | binary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOmitBackground(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omitBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOmitBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omitBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: jpeg | png): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

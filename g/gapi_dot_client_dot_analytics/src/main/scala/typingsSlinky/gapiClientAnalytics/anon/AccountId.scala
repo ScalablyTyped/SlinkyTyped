@@ -4,107 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccountId extends js.Object {
   /** Account ID to which this view (profile) belongs. */
-  var accountId: js.UndefOr[String] = js.native
+  var accountId: js.UndefOr[String] = js.undefined
   /** Internal ID for the web property to which this view (profile) belongs. */
-  var internalWebPropertyId: js.UndefOr[String] = js.native
+  var internalWebPropertyId: js.UndefOr[String] = js.undefined
   /** View (Profile) ID. */
-  var profileId: js.UndefOr[String] = js.native
+  var profileId: js.UndefOr[String] = js.undefined
   /** View (Profile) name. */
-  var profileName: js.UndefOr[String] = js.native
+  var profileName: js.UndefOr[String] = js.undefined
   /** Table ID for view (profile). */
-  var tableId: js.UndefOr[String] = js.native
+  var tableId: js.UndefOr[String] = js.undefined
   /** Web Property ID to which this view (profile) belongs. */
-  var webPropertyId: js.UndefOr[String] = js.native
+  var webPropertyId: js.UndefOr[String] = js.undefined
 }
 
 object AccountId {
   @scala.inline
-  def apply(): AccountId = {
+  def apply(
+    accountId: String = null,
+    internalWebPropertyId: String = null,
+    profileId: String = null,
+    profileName: String = null,
+    tableId: String = null,
+    webPropertyId: String = null
+  ): AccountId = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (internalWebPropertyId != null) __obj.updateDynamic("internalWebPropertyId")(internalWebPropertyId.asInstanceOf[js.Any])
+    if (profileId != null) __obj.updateDynamic("profileId")(profileId.asInstanceOf[js.Any])
+    if (profileName != null) __obj.updateDynamic("profileName")(profileName.asInstanceOf[js.Any])
+    if (tableId != null) __obj.updateDynamic("tableId")(tableId.asInstanceOf[js.Any])
+    if (webPropertyId != null) __obj.updateDynamic("webPropertyId")(webPropertyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountId]
   }
-  @scala.inline
-  implicit class AccountIdOps[Self <: AccountId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInternalWebPropertyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internalWebPropertyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInternalWebPropertyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internalWebPropertyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebPropertyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebPropertyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

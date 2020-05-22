@@ -6,7 +6,7 @@ import typingsSlinky.grammarkdown.coreMod.Range
 import typingsSlinky.grammarkdown.nodesMod.Node
 import typingsSlinky.grammarkdown.nodesMod.SourceFile
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind
-import typingsSlinky.std.IterableIterator
+import typingsSlinky.std.Generator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +28,9 @@ class DiagnosticMessages () extends js.Object {
   var getDiagnosticPos: js.Any = js.native
   var getSortedAndDeduplicatedDiagnosticIndices: js.Any = js.native
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[js.UndefOr[DiagnosticInfo]]] = js.native
+  var iterator: js.Function0[Generator[js.UndefOr[DiagnosticInfo], Unit, _]] = js.native
   var reportDiagnostic: js.Any = js.native
   var simpleDiagnosticMessages: js.Any = js.native
-  val size: Double = js.native
   var sortDiagnostics: js.Any = js.native
   var sortedAndDeduplicatedDiagnosticIndices: js.Any = js.native
   var sourceFiles: js.Any = js.native
@@ -55,6 +54,7 @@ class DiagnosticMessages () extends js.Object {
   def report(pos: Double, message: Diagnostic, args: js.Any*): Unit = js.native
   def reportNode(sourceFile: js.UndefOr[SourceFile], node: Node[SyntaxKind], message: Diagnostic, args: js.Any*): Unit = js.native
   def setSourceFile(sourceFile: SourceFile): Unit = js.native
-  def values(): IterableIterator[js.UndefOr[DiagnosticInfo]] = js.native
+  def size: Double = js.native
+  def values(): Generator[js.UndefOr[DiagnosticInfo], Unit, _] = js.native
 }
 

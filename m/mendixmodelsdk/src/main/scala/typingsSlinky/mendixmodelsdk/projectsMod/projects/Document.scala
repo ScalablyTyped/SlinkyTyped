@@ -31,6 +31,14 @@ abstract class Document protected ()
   var model_FDocument: IModel = js.native
   @JSName("name")
   val name_FDocument: String = js.native
+  /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MDocument: FolderBase = js.native
   def documentation: String = js.native

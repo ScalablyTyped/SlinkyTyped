@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Hosts extends js.Object {
-  var hosts: js.UndefOr[js.Array[String]] = js.native
-  var interval: js.UndefOr[Double] = js.native
-  var `multiple-clients`: js.UndefOr[Boolean] = js.native
-  var reconnect: js.UndefOr[ReconnectAdvice] = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  var hosts: js.UndefOr[js.Array[String]] = js.undefined
+  var interval: js.UndefOr[Double] = js.undefined
+  var `multiple-clients`: js.UndefOr[Boolean] = js.undefined
+  var reconnect: js.UndefOr[ReconnectAdvice] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object Hosts {
   @scala.inline
-  def apply(): Hosts = {
+  def apply(
+    hosts: js.Array[String] = null,
+    interval: js.UndefOr[Double] = js.undefined,
+    `multiple-clients`: js.UndefOr[Boolean] = js.undefined,
+    reconnect: ReconnectAdvice = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): Hosts = {
     val __obj = js.Dynamic.literal()
+    if (hosts != null) __obj.updateDynamic("hosts")(hosts.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`multiple-clients`)) __obj.updateDynamic("multiple-clients")(`multiple-clients`.get.asInstanceOf[js.Any])
+    if (reconnect != null) __obj.updateDynamic("reconnect")(reconnect.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Hosts]
   }
-  @scala.inline
-  implicit class HostsOps[Self <: Hosts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHosts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMultiple-clients`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple-clients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMultiple-clients`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple-clients")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReconnect(value: ReconnectAdvice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReconnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

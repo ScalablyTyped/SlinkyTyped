@@ -30,235 +30,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICheckoutCreationOptions extends js.Object {
   /**
     * Whether to collect shipping info.
     * If 'required', info will always be collected.
     * When 'auto' or not specified, info will be collected when required
     */
-  var billing_address_collection: js.UndefOr[required | auto] = js.native
+  var billing_address_collection: js.UndefOr[required | auto] = js.undefined
   /**
     * The URL to return the customer to if they cancel payment
     */
-  var cancel_url: String = js.native
+  var cancel_url: String
   /**
     * An optional unique ID to associate with the checkout
     */
-  var client_reference_id: js.UndefOr[String] = js.native
+  var client_reference_id: js.UndefOr[String] = js.undefined
   /**
     * Must be used with @param line_items
     * ID of existing customer to use
     */
-  var customer: js.UndefOr[String] = js.native
+  var customer: js.UndefOr[String] = js.undefined
   /**
     * Email of the customer
     */
-  var customer_email: js.UndefOr[String] = js.native
+  var customer_email: js.UndefOr[String] = js.undefined
   /**
     * A list of items the customer is purchasing. One-time.
     */
-  var line_items: js.UndefOr[js.Array[ICheckoutLineItems]] = js.native
+  var line_items: js.UndefOr[js.Array[ICheckoutLineItems]] = js.undefined
   /**
     * Language to use. If 'auto' or not specified, browser default is used
     */
-  var locale: js.UndefOr[auto | da | de | en | es | fi | fr | it | ja | nb | nl | pl | pt | sv | zh] = js.native
+  var locale: js.UndefOr[auto | da | de | en | es | fi | fr | it | ja | nb | nl | pl | pt | sv | zh] = js.undefined
   /**
     * The mode of the Checkout Session, one of payment, setup, or subscription.
     */
-  var mode: js.UndefOr[payment | setup | subscription] = js.native
+  var mode: js.UndefOr[payment | setup | subscription] = js.undefined
   /**
     * Details for creation of payment intent
     */
-  var payment_intent_data: js.UndefOr[IPaymentIntentSessionSubset | IPaymentIntentData] = js.native
+  var payment_intent_data: js.UndefOr[IPaymentIntentSessionSubset | IPaymentIntentData] = js.undefined
   /**
     * A list of accepted payment types.
     * 'card' is currently the only supported options
     */
-  var payment_method_types: js.Array[String] = js.native
+  var payment_method_types: js.Array[String]
   /**
     * A subset of parameters to be passed to SetupIntent creation.
     */
-  var setup_intent_data: js.UndefOr[ISetupIntentSessionSubset] = js.native
+  var setup_intent_data: js.UndefOr[ISetupIntentSessionSubset] = js.undefined
   /**
     * Describes the type of transaction being performed by Checkout in order to customize relevant text on the page, such as the submit button.
     * submit_type can only be specified on Checkout Sessions using line items or a SKU, but not Checkout Sessions for subscriptions.
     * Supported values are auto, book, donate, or pay.
     */
-  var submit_type: js.UndefOr[auto | book | donate | pay] = js.native
+  var submit_type: js.UndefOr[auto | book | donate | pay] = js.undefined
   /**
     * Use instead of @param line_items when using a subscription
     */
-  var subscription_data: js.UndefOr[ICheckOutCreationSubscriptionData | ISubscriptionCustCreationOptions] = js.native
+  var subscription_data: js.UndefOr[ICheckOutCreationSubscriptionData | ISubscriptionCustCreationOptions] = js.undefined
   /**
     * The url to return to upon successful payment
     */
-  var success_url: String = js.native
+  var success_url: String
 }
 
 object ICheckoutCreationOptions {
   @scala.inline
-  def apply(cancel_url: String, payment_method_types: js.Array[String], success_url: String): ICheckoutCreationOptions = {
+  def apply(
+    cancel_url: String,
+    payment_method_types: js.Array[String],
+    success_url: String,
+    billing_address_collection: required | auto = null,
+    client_reference_id: String = null,
+    customer: String = null,
+    customer_email: String = null,
+    line_items: js.Array[ICheckoutLineItems] = null,
+    locale: auto | da | de | en | es | fi | fr | it | ja | nb | nl | pl | pt | sv | zh = null,
+    mode: payment | setup | subscription = null,
+    payment_intent_data: IPaymentIntentSessionSubset | IPaymentIntentData = null,
+    setup_intent_data: ISetupIntentSessionSubset = null,
+    submit_type: auto | book | donate | pay = null,
+    subscription_data: ICheckOutCreationSubscriptionData | ISubscriptionCustCreationOptions = null
+  ): ICheckoutCreationOptions = {
     val __obj = js.Dynamic.literal(cancel_url = cancel_url.asInstanceOf[js.Any], payment_method_types = payment_method_types.asInstanceOf[js.Any], success_url = success_url.asInstanceOf[js.Any])
+    if (billing_address_collection != null) __obj.updateDynamic("billing_address_collection")(billing_address_collection.asInstanceOf[js.Any])
+    if (client_reference_id != null) __obj.updateDynamic("client_reference_id")(client_reference_id.asInstanceOf[js.Any])
+    if (customer != null) __obj.updateDynamic("customer")(customer.asInstanceOf[js.Any])
+    if (customer_email != null) __obj.updateDynamic("customer_email")(customer_email.asInstanceOf[js.Any])
+    if (line_items != null) __obj.updateDynamic("line_items")(line_items.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (payment_intent_data != null) __obj.updateDynamic("payment_intent_data")(payment_intent_data.asInstanceOf[js.Any])
+    if (setup_intent_data != null) __obj.updateDynamic("setup_intent_data")(setup_intent_data.asInstanceOf[js.Any])
+    if (submit_type != null) __obj.updateDynamic("submit_type")(submit_type.asInstanceOf[js.Any])
+    if (subscription_data != null) __obj.updateDynamic("subscription_data")(subscription_data.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICheckoutCreationOptions]
   }
-  @scala.inline
-  implicit class ICheckoutCreationOptionsOps[Self <: ICheckoutCreationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayment_method_types(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_method_types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuccess_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBilling_address_collection(value: required | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing_address_collection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBilling_address_collection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing_address_collection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_reference_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_reference_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_reference_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_reference_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomer_email(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomer_email: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine_items(value: js.Array[ICheckoutLineItems]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line_items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine_items: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line_items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: auto | da | de | en | es | fi | fr | it | ja | nb | nl | pl | pt | sv | zh): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: payment | setup | subscription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayment_intent_data(value: IPaymentIntentSessionSubset | IPaymentIntentData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_intent_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayment_intent_data: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_intent_data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetup_intent_data(value: ISetupIntentSessionSubset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setup_intent_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetup_intent_data: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setup_intent_data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmit_type(value: auto | book | donate | pay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmit_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription_data(value: ICheckOutCreationSubscriptionData | ISubscriptionCustCreationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription_data: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_data")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

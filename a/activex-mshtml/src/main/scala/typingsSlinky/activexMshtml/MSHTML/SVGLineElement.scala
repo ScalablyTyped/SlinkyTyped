@@ -4,33 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SVGLineElement extends js.Object {
   @JSName("MSHTML.SVGLineElement_typekey")
-  var MSHTMLDotSVGLineElement_typekey: SVGLineElement = js.native
-  val className: SVGAnimatedString = js.native
-  val externalResourcesRequired: SVGAnimatedBoolean = js.native
-  val farthestViewportElement: ISVGElement = js.native
-  var focusable: SVGAnimatedEnumeration = js.native
-  val nearestViewportElement: ISVGElement = js.native
-  var ownerSVGElement: ISVGSVGElement = js.native
-  val requiredExtensions: SVGStringList = js.native
-  val requiredFeatures: SVGStringList = js.native
-  val systemLanguage: SVGStringList = js.native
-  val transform: SVGAnimatedTransformList = js.native
-  var viewportElement: ISVGElement = js.native
-  var x1: SVGAnimatedLength = js.native
-  var x2: SVGAnimatedLength = js.native
-  var xmlbase: String = js.native
-  var xmllang: String = js.native
-  var xmlspace: String = js.native
-  var y1: SVGAnimatedLength = js.native
-  var y2: SVGAnimatedLength = js.native
-  def getBBox(): SVGRect = js.native
-  def getCTM(): SVGMatrix = js.native
-  def getScreenCTM(): SVGMatrix = js.native
-  def getTransformToElement(pElement: ISVGElement): SVGMatrix = js.native
-  def hasExtension(extension: String): Boolean = js.native
+  var MSHTMLDotSVGLineElement_typekey: SVGLineElement
+  val className: SVGAnimatedString
+  val externalResourcesRequired: SVGAnimatedBoolean
+  val farthestViewportElement: ISVGElement
+  var focusable: SVGAnimatedEnumeration
+  val nearestViewportElement: ISVGElement
+  var ownerSVGElement: ISVGSVGElement
+  val requiredExtensions: SVGStringList
+  val requiredFeatures: SVGStringList
+  val systemLanguage: SVGStringList
+  val transform: SVGAnimatedTransformList
+  var viewportElement: ISVGElement
+  var x1: SVGAnimatedLength
+  var x2: SVGAnimatedLength
+  var xmlbase: String
+  var xmllang: String
+  var xmlspace: String
+  var y1: SVGAnimatedLength
+  var y2: SVGAnimatedLength
+  def getBBox(): SVGRect
+  def getCTM(): SVGMatrix
+  def getScreenCTM(): SVGMatrix
+  def getTransformToElement(pElement: ISVGElement): SVGMatrix
+  def hasExtension(extension: String): Boolean
 }
 
 object SVGLineElement {
@@ -65,157 +64,5 @@ object SVGLineElement {
     __obj.updateDynamic("MSHTML.SVGLineElement_typekey")(MSHTMLDotSVGLineElement_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGLineElement]
   }
-  @scala.inline
-  implicit class SVGLineElementOps[Self <: SVGLineElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotSVGLineElement_typekey(value: SVGLineElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.SVGLineElement_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: SVGAnimatedString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalResourcesRequired(value: SVGAnimatedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalResourcesRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFarthestViewportElement(value: ISVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("farthestViewportElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFocusable(value: SVGAnimatedEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetBBox(value: () => SVGRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBBox")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCTM(value: () => SVGMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCTM")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetScreenCTM(value: () => SVGMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScreenCTM")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTransformToElement(value: ISVGElement => SVGMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTransformToElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHasExtension(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasExtension")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNearestViewportElement(value: ISVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nearestViewportElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwnerSVGElement(value: ISVGSVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerSVGElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequiredExtensions(value: SVGStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredExtensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequiredFeatures(value: SVGStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredFeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSystemLanguage(value: SVGStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransform(value: SVGAnimatedTransformList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewportElement(value: ISVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX1(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX2(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXmlbase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlbase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXmllang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmllang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXmlspace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlspace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY1(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY2(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y2")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

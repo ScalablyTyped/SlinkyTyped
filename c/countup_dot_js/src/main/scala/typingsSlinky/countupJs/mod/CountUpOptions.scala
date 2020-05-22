@@ -4,207 +4,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CountUpOptions extends js.Object {
-  var decimal: js.UndefOr[String] = js.native
-  var decimalPlaces: js.UndefOr[Double] = js.native
-  var duration: js.UndefOr[Double] = js.native
+  var decimal: js.UndefOr[String] = js.undefined
+  var decimalPlaces: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
   var easingFn: js.UndefOr[
     js.Function4[/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double, Double]
-  ] = js.native
-  var formattingFn: js.UndefOr[js.Function1[/* n */ Double, String]] = js.native
-  var numerals: js.UndefOr[js.Array[String]] = js.native
-  var prefix: js.UndefOr[String] = js.native
-  var separator: js.UndefOr[String] = js.native
-  var smartEasingAmount: js.UndefOr[Double] = js.native
-  var smartEasingThreshold: js.UndefOr[Double] = js.native
-  var startVal: js.UndefOr[Double] = js.native
-  var suffix: js.UndefOr[String] = js.native
-  var useEasing: js.UndefOr[Boolean] = js.native
-  var useGrouping: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var formattingFn: js.UndefOr[js.Function1[/* n */ Double, String]] = js.undefined
+  var numerals: js.UndefOr[js.Array[String]] = js.undefined
+  var prefix: js.UndefOr[String] = js.undefined
+  var separator: js.UndefOr[String] = js.undefined
+  var smartEasingAmount: js.UndefOr[Double] = js.undefined
+  var smartEasingThreshold: js.UndefOr[Double] = js.undefined
+  var startVal: js.UndefOr[Double] = js.undefined
+  var suffix: js.UndefOr[String] = js.undefined
+  var useEasing: js.UndefOr[Boolean] = js.undefined
+  var useGrouping: js.UndefOr[Boolean] = js.undefined
 }
 
 object CountUpOptions {
   @scala.inline
-  def apply(): CountUpOptions = {
+  def apply(
+    decimal: String = null,
+    decimalPlaces: js.UndefOr[Double] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    easingFn: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Double = null,
+    formattingFn: /* n */ Double => String = null,
+    numerals: js.Array[String] = null,
+    prefix: String = null,
+    separator: String = null,
+    smartEasingAmount: js.UndefOr[Double] = js.undefined,
+    smartEasingThreshold: js.UndefOr[Double] = js.undefined,
+    startVal: js.UndefOr[Double] = js.undefined,
+    suffix: String = null,
+    useEasing: js.UndefOr[Boolean] = js.undefined,
+    useGrouping: js.UndefOr[Boolean] = js.undefined
+  ): CountUpOptions = {
     val __obj = js.Dynamic.literal()
+    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
+    if (!js.isUndefined(decimalPlaces)) __obj.updateDynamic("decimalPlaces")(decimalPlaces.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (easingFn != null) __obj.updateDynamic("easingFn")(js.Any.fromFunction4(easingFn))
+    if (formattingFn != null) __obj.updateDynamic("formattingFn")(js.Any.fromFunction1(formattingFn))
+    if (numerals != null) __obj.updateDynamic("numerals")(numerals.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
+    if (!js.isUndefined(smartEasingAmount)) __obj.updateDynamic("smartEasingAmount")(smartEasingAmount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smartEasingThreshold)) __obj.updateDynamic("smartEasingThreshold")(smartEasingThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startVal)) __obj.updateDynamic("startVal")(startVal.get.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
+    if (!js.isUndefined(useEasing)) __obj.updateDynamic("useEasing")(useEasing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useGrouping)) __obj.updateDynamic("useGrouping")(useGrouping.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CountUpOptions]
   }
-  @scala.inline
-  implicit class CountUpOptionsOps[Self <: CountUpOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecimal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalPlaces(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPlaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimalPlaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPlaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasingFn(value: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easingFn")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutEasingFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easingFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormattingFn(value: /* n */ Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattingFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormattingFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattingFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumerals(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numerals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumerals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numerals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartEasingAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartEasingAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartEasingAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartEasingAmount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartEasingThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartEasingThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartEasingThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartEasingThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartVal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartVal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startVal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEasing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseGrouping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useGrouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useGrouping")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

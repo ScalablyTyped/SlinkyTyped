@@ -25,53 +25,16 @@ trait SchemaTechnologyTargeting extends js.Object {
 
 object SchemaTechnologyTargeting {
   @scala.inline
-  def apply(): SchemaTechnologyTargeting = {
+  def apply(
+    deviceCapabilityTargeting: SchemaCriteriaTargeting = null,
+    deviceCategoryTargeting: SchemaCriteriaTargeting = null,
+    operatingSystemTargeting: SchemaOperatingSystemTargeting = null
+  ): SchemaTechnologyTargeting = {
     val __obj = js.Dynamic.literal()
+    if (deviceCapabilityTargeting != null) __obj.updateDynamic("deviceCapabilityTargeting")(deviceCapabilityTargeting.asInstanceOf[js.Any])
+    if (deviceCategoryTargeting != null) __obj.updateDynamic("deviceCategoryTargeting")(deviceCategoryTargeting.asInstanceOf[js.Any])
+    if (operatingSystemTargeting != null) __obj.updateDynamic("operatingSystemTargeting")(operatingSystemTargeting.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTechnologyTargeting]
   }
-  @scala.inline
-  implicit class SchemaTechnologyTargetingOps[Self <: SchemaTechnologyTargeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceCapabilityTargeting(value: SchemaCriteriaTargeting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCapabilityTargeting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceCapabilityTargeting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCapabilityTargeting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceCategoryTargeting(value: SchemaCriteriaTargeting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCategoryTargeting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceCategoryTargeting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCategoryTargeting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperatingSystemTargeting(value: SchemaOperatingSystemTargeting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemTargeting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperatingSystemTargeting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemTargeting")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,34 +14,10 @@ import scala.scalajs.js.annotation._
 @JSImport("tslint/lib/rules/completedDocsRule", JSImport.Namespace)
 @js.native
 object completedDocsRuleMod extends js.Object {
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.tslint.completedDocsRuleMod.All
-    - / * "classes" * / java.lang.String
-  */
-  trait DocType extends IInputExclusionDescriptors
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.tslint.completedDocsRuleMod.All
-    - / * "instance" * / java.lang.String
-  */
-  trait Location extends js.Object
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.tslint.completedDocsRuleMod.All
-    - / * "private" * / java.lang.String
-  */
-  trait Privacy extends js.Object
-  
   @js.native
   class Rule () extends AbstractRule {
     var getExclusionsMap: js.Any = js.native
   }
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.tslint.completedDocsRuleMod.All
-    - / * "exported" * / java.lang.String
-  */
-  trait Visibility extends js.Object
   
   @JSName("ALL")
   val ALL_ : /* "all" */ String = js.native
@@ -82,5 +58,9 @@ object completedDocsRuleMod extends js.Object {
   }
   
   type All = /* "all" */ String
+  type DocType = All | (/* "classes" */ String)
+  type Location = All | (/* "instance" */ String)
+  type Privacy = All | (/* "private" */ String)
+  type Visibility = All | (/* "exported" */ String)
 }
 

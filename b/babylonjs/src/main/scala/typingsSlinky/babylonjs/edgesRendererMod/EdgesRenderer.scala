@@ -52,6 +52,11 @@ class EdgesRenderer protected () extends IEdgesRenderer {
     */
   var edgesWidthScalerForPerspective: Double = js.native
   /**
+    * Gets or sets a boolean indicating if the edgesRenderer is active
+    */
+  /* CompleteClass */
+  override var isEnabled: Boolean = js.native
+  /**
     * Checks if the pair of p0 and p1 is en edge
     * @param faceIndex
     * @param edge
@@ -76,5 +81,21 @@ class EdgesRenderer protected () extends IEdgesRenderer {
     * @protected
     */
   /* protected */ def createLine(p0: Vector3, p1: Vector3, offset: Double): Unit = js.native
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
+    * Checks wether or not the edges renderer is ready to render.
+    * @return true if ready, otherwise false.
+    */
+  /* CompleteClass */
+  override def isReady(): Boolean = js.native
+  /**
+    * Renders the edges of the attached mesh,
+    */
+  /* CompleteClass */
+  override def render(): Unit = js.native
 }
 

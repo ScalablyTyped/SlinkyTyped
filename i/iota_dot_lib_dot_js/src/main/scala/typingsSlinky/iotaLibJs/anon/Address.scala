@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Address extends js.Object {
-  var address: js.UndefOr[String] = js.native
-  var inputs: js.UndefOr[js.Array[String]] = js.native
-  var security: js.UndefOr[typingsSlinky.iotaLibJs.mod.Security] = js.native
+  var address: js.UndefOr[String] = js.undefined
+  var inputs: js.UndefOr[js.Array[String]] = js.undefined
+  var security: js.UndefOr[typingsSlinky.iotaLibJs.mod.Security] = js.undefined
 }
 
 object Address {
   @scala.inline
-  def apply(): Address = {
+  def apply(
+    address: String = null,
+    inputs: js.Array[String] = null,
+    security: typingsSlinky.iotaLibJs.mod.Security = null
+  ): Address = {
     val __obj = js.Dynamic.literal()
+    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
+    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     __obj.asInstanceOf[Address]
   }
-  @scala.inline
-  implicit class AddressOps[Self <: Address] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurity(value: typingsSlinky.iotaLibJs.mod.Security): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

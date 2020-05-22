@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `2` extends js.Object {
   /**
     * Specify the delay time before animation start.
@@ -22,7 +21,7 @@ trait `2` extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.animationEasingUpdate.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.native
+  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Specify the delay time before update animation.
     * Callback function can be used, where different delay time
@@ -39,46 +38,16 @@ trait `2` extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.animationEasingUpdate.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
 }
 
 object `2` {
   @scala.inline
-  def apply(): `2` = {
+  def apply(animationDelay: js.Function | Double = null, animationDelayUpdate: js.Function | Double = null): `2` = {
     val __obj = js.Dynamic.literal()
+    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
+    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[`2`]
   }
-  @scala.inline
-  implicit class `2Ops`[Self <: `2`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationDelay(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelayUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

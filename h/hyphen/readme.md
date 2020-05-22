@@ -1,7 +1,7 @@
 
 # Scala.js typings for hyphen
 
-Typings are for version 1.5
+Typings are for version 1.6
 
 ## Library description:
 Text hyphenation in Javascript.

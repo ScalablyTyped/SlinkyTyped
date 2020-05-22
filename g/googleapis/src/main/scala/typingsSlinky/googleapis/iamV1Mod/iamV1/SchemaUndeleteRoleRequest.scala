@@ -17,29 +17,10 @@ trait SchemaUndeleteRoleRequest extends js.Object {
 
 object SchemaUndeleteRoleRequest {
   @scala.inline
-  def apply(): SchemaUndeleteRoleRequest = {
+  def apply(etag: String = null): SchemaUndeleteRoleRequest = {
     val __obj = js.Dynamic.literal()
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUndeleteRoleRequest]
   }
-  @scala.inline
-  implicit class SchemaUndeleteRoleRequestOps[Self <: SchemaUndeleteRoleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

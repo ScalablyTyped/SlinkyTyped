@@ -27,31 +27,5 @@ object ClusterLogging {
     val __obj = js.Dynamic.literal(bucketName = bucketName.asInstanceOf[js.Any], enable = enable.asInstanceOf[js.Any], s3KeyPrefix = s3KeyPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterLogging]
   }
-  @scala.inline
-  implicit class ClusterLoggingOps[Self <: ClusterLogging] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS3KeyPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3KeyPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

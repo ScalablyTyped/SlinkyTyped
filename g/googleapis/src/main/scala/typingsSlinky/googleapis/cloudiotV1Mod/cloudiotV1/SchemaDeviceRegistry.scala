@@ -70,113 +70,26 @@ trait SchemaDeviceRegistry extends js.Object {
 
 object SchemaDeviceRegistry {
   @scala.inline
-  def apply(): SchemaDeviceRegistry = {
+  def apply(
+    credentials: js.Array[SchemaRegistryCredential] = null,
+    eventNotificationConfigs: js.Array[SchemaEventNotificationConfig] = null,
+    httpConfig: SchemaHttpConfig = null,
+    id: String = null,
+    logLevel: String = null,
+    mqttConfig: SchemaMqttConfig = null,
+    name: String = null,
+    stateNotificationConfig: SchemaStateNotificationConfig = null
+  ): SchemaDeviceRegistry = {
     val __obj = js.Dynamic.literal()
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (eventNotificationConfigs != null) __obj.updateDynamic("eventNotificationConfigs")(eventNotificationConfigs.asInstanceOf[js.Any])
+    if (httpConfig != null) __obj.updateDynamic("httpConfig")(httpConfig.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
+    if (mqttConfig != null) __obj.updateDynamic("mqttConfig")(mqttConfig.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (stateNotificationConfig != null) __obj.updateDynamic("stateNotificationConfig")(stateNotificationConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceRegistry]
   }
-  @scala.inline
-  implicit class SchemaDeviceRegistryOps[Self <: SchemaDeviceRegistry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredentials(value: js.Array[SchemaRegistryCredential]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventNotificationConfigs(value: js.Array[SchemaEventNotificationConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventNotificationConfigs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventNotificationConfigs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventNotificationConfigs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpConfig(value: SchemaHttpConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMqttConfig(value: SchemaMqttConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mqttConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMqttConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mqttConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateNotificationConfig(value: SchemaStateNotificationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateNotificationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateNotificationConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateNotificationConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

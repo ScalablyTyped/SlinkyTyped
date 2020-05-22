@@ -32,6 +32,8 @@ object mersenneTwister19937Mod extends js.Object {
       * seed, bringing it to the exact point that was left off.
       */
     def getUseCount(): Double = js.native
+    /* CompleteClass */
+    override def next(): Double = js.native
   }
   
   /* static members */

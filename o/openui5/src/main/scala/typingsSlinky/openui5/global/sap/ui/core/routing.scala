@@ -24,6 +24,28 @@ object routing extends js.Object {
       * aware of the hash-changes.
       */
     def this(oHashChanger: typingsSlinky.openui5.sap.ui.core.routing.HashChanger) = this()
+    /**
+      * Determines what the navigation direction for a newly given hash would beIt will say Unknown if there
+      * is a history foo - bar (current history) - fooIf you now ask for the direction of the hash "foo" you
+      * get Unknown because it might be backwards or forwards.For hash replacements, the history stack will
+      * be replaced at this position for the history.
+      * @param sNewHash optional, if this parameter is not passed the last hashChange is taken.
+      * @returns or undefined, if no navigation has taken place yet.
+      */
+    /* CompleteClass */
+    override def getDirection(sNewHash: String): js.Any = js.native
+    /**
+      * @returns a global singleton that gets created as soon as the sap.ui.core.routing.History is required
+      */
+    /* CompleteClass */
+    override def getInstance(): typingsSlinky.openui5.sap.ui.core.routing.History = js.native
+    /**
+      * gets the previous hash in the history - if the last direction was Unknown or there was no navigation
+      * yet, undefined will be returned
+      * @returns or undefined
+      */
+    /* CompleteClass */
+    override def getPreviousHash(): String = js.native
   }
   
   @js.native

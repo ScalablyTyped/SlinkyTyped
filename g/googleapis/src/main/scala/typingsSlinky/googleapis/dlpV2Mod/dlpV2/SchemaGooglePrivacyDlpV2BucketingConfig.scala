@@ -24,29 +24,10 @@ trait SchemaGooglePrivacyDlpV2BucketingConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2BucketingConfig {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2BucketingConfig = {
+  def apply(buckets: js.Array[SchemaGooglePrivacyDlpV2Bucket] = null): SchemaGooglePrivacyDlpV2BucketingConfig = {
     val __obj = js.Dynamic.literal()
+    if (buckets != null) __obj.updateDynamic("buckets")(buckets.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2BucketingConfig]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2BucketingConfigOps[Self <: SchemaGooglePrivacyDlpV2BucketingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuckets(value: js.Array[SchemaGooglePrivacyDlpV2Bucket]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buckets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

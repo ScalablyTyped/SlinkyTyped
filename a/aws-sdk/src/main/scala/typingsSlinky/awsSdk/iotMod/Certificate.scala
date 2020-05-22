@@ -15,6 +15,10 @@ trait Certificate extends js.Object {
     */
   var certificateId: js.UndefOr[CertificateId] = js.native
   /**
+    * The mode of the certificate.
+    */
+  var certificateMode: js.UndefOr[CertificateMode] = js.native
+  /**
     * The date and time the certificate was created.
     */
   var creationDate: js.UndefOr[js.Date] = js.native
@@ -26,65 +30,20 @@ trait Certificate extends js.Object {
 
 object Certificate {
   @scala.inline
-  def apply(): Certificate = {
+  def apply(
+    certificateArn: CertificateArn = null,
+    certificateId: CertificateId = null,
+    certificateMode: CertificateMode = null,
+    creationDate: js.Date = null,
+    status: CertificateStatus = null
+  ): Certificate = {
     val __obj = js.Dynamic.literal()
+    if (certificateArn != null) __obj.updateDynamic("certificateArn")(certificateArn.asInstanceOf[js.Any])
+    if (certificateId != null) __obj.updateDynamic("certificateId")(certificateId.asInstanceOf[js.Any])
+    if (certificateMode != null) __obj.updateDynamic("certificateMode")(certificateMode.asInstanceOf[js.Any])
+    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[Certificate]
   }
-  @scala.inline
-  implicit class CertificateOps[Self <: Certificate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateArn(value: CertificateArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateId(value: CertificateId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: CertificateStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

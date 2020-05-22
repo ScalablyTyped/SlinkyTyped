@@ -98,281 +98,54 @@ trait Stack extends js.Object {
 
 object Stack {
   @scala.inline
-  def apply(): Stack = {
+  def apply(
+    AgentVersion: String = null,
+    Arn: String = null,
+    Attributes: StackAttributes = null,
+    ChefConfiguration: ChefConfiguration = null,
+    ConfigurationManager: StackConfigurationManager = null,
+    CreatedAt: DateTime = null,
+    CustomCookbooksSource: Source = null,
+    CustomJson: String = null,
+    DefaultAvailabilityZone: String = null,
+    DefaultInstanceProfileArn: String = null,
+    DefaultOs: String = null,
+    DefaultRootDeviceType: RootDeviceType = null,
+    DefaultSshKeyName: String = null,
+    DefaultSubnetId: String = null,
+    HostnameTheme: String = null,
+    Name: String = null,
+    Region: String = null,
+    ServiceRoleArn: String = null,
+    StackId: String = null,
+    UseCustomCookbooks: js.UndefOr[Boolean] = js.undefined,
+    UseOpsworksSecurityGroups: js.UndefOr[Boolean] = js.undefined,
+    VpcId: String = null
+  ): Stack = {
     val __obj = js.Dynamic.literal()
+    if (AgentVersion != null) __obj.updateDynamic("AgentVersion")(AgentVersion.asInstanceOf[js.Any])
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
+    if (ChefConfiguration != null) __obj.updateDynamic("ChefConfiguration")(ChefConfiguration.asInstanceOf[js.Any])
+    if (ConfigurationManager != null) __obj.updateDynamic("ConfigurationManager")(ConfigurationManager.asInstanceOf[js.Any])
+    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
+    if (CustomCookbooksSource != null) __obj.updateDynamic("CustomCookbooksSource")(CustomCookbooksSource.asInstanceOf[js.Any])
+    if (CustomJson != null) __obj.updateDynamic("CustomJson")(CustomJson.asInstanceOf[js.Any])
+    if (DefaultAvailabilityZone != null) __obj.updateDynamic("DefaultAvailabilityZone")(DefaultAvailabilityZone.asInstanceOf[js.Any])
+    if (DefaultInstanceProfileArn != null) __obj.updateDynamic("DefaultInstanceProfileArn")(DefaultInstanceProfileArn.asInstanceOf[js.Any])
+    if (DefaultOs != null) __obj.updateDynamic("DefaultOs")(DefaultOs.asInstanceOf[js.Any])
+    if (DefaultRootDeviceType != null) __obj.updateDynamic("DefaultRootDeviceType")(DefaultRootDeviceType.asInstanceOf[js.Any])
+    if (DefaultSshKeyName != null) __obj.updateDynamic("DefaultSshKeyName")(DefaultSshKeyName.asInstanceOf[js.Any])
+    if (DefaultSubnetId != null) __obj.updateDynamic("DefaultSubnetId")(DefaultSubnetId.asInstanceOf[js.Any])
+    if (HostnameTheme != null) __obj.updateDynamic("HostnameTheme")(HostnameTheme.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
+    if (ServiceRoleArn != null) __obj.updateDynamic("ServiceRoleArn")(ServiceRoleArn.asInstanceOf[js.Any])
+    if (StackId != null) __obj.updateDynamic("StackId")(StackId.asInstanceOf[js.Any])
+    if (!js.isUndefined(UseCustomCookbooks)) __obj.updateDynamic("UseCustomCookbooks")(UseCustomCookbooks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UseOpsworksSecurityGroups)) __obj.updateDynamic("UseOpsworksSecurityGroups")(UseOpsworksSecurityGroups.get.asInstanceOf[js.Any])
+    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stack]
   }
-  @scala.inline
-  implicit class StackOps[Self <: Stack] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: StackAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChefConfiguration(value: ChefConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChefConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChefConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChefConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigurationManager(value: StackConfigurationManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationManager")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: DateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomCookbooksSource(value: Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomCookbooksSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomCookbooksSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomCookbooksSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomJson(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomJson")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultAvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultAvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultInstanceProfileArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultInstanceProfileArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultInstanceProfileArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultInstanceProfileArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultOs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultOs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultRootDeviceType(value: RootDeviceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRootDeviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRootDeviceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRootDeviceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSshKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSshKeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSshKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSshKeyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSubnetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSubnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSubnetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSubnetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostnameTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostnameTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostnameTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostnameTheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseCustomCookbooks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseCustomCookbooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseCustomCookbooks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseCustomCookbooks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseOpsworksSecurityGroups(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseOpsworksSecurityGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseOpsworksSecurityGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseOpsworksSecurityGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,8 +1,12 @@
 package typingsSlinky.typedGithubApi
 
+import typingsSlinky.moment.mod.Moment
 import typingsSlinky.typedGithubApi.githubRefMod.GitHubRef
 import typingsSlinky.typedGithubApi.githubRefMod.OptionsOrRef
 import typingsSlinky.typedGithubApi.interfacesMilestoneMod.Milestone
+import typingsSlinky.typedGithubApi.interfacesUserMod.UserSummary
+import typingsSlinky.typedGithubApi.typedGithubApiStrings.closed
+import typingsSlinky.typedGithubApi.typedGithubApiStrings.open
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +19,30 @@ object distMilestoneMod extends js.Object {
     extends GitHubRef
        with Milestone {
     def this(data: typingsSlinky.typedGithubApi.milestoneMod.Milestone, options: OptionsOrRef) = this()
+    /* CompleteClass */
+    override var closedIssueCount: Double = js.native
+    /* CompleteClass */
+    override var created: Moment = js.native
+    /* CompleteClass */
+    override var creator: UserSummary = js.native
+    /* CompleteClass */
+    override var description: String = js.native
+    /* CompleteClass */
+    override var due: Moment = js.native
+    /* CompleteClass */
+    override var htmlUri: String = js.native
+    /* CompleteClass */
+    override var id: Double = js.native
+    /* CompleteClass */
+    override var number: Double = js.native
+    /* CompleteClass */
+    override var openIssueCount: Double = js.native
+    /* CompleteClass */
+    override var state: open | closed = js.native
+    /* CompleteClass */
+    override var title: String = js.native
+    /* CompleteClass */
+    override var updated: Moment = js.native
   }
   
 }

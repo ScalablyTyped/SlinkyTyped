@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PDispWindow extends js.Object {
-  val pDispWindow: js.Any = js.native
+  val pDispWindow: js.Any
 }
 
 object PDispWindow {
@@ -15,19 +14,5 @@ object PDispWindow {
     val __obj = js.Dynamic.literal(pDispWindow = pDispWindow.asInstanceOf[js.Any])
     __obj.asInstanceOf[PDispWindow]
   }
-  @scala.inline
-  implicit class PDispWindowOps[Self <: PDispWindow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPDispWindow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pDispWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

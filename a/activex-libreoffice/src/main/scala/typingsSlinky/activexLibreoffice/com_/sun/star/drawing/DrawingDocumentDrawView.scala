@@ -43,7 +43,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This component integrates a view to a {@link DrawPages} or {@link MasterPage} from a {@link DrawingDocument} . */
-@js.native
 trait DrawingDocumentDrawView
   extends XController
      with XDispatchProvider
@@ -56,27 +55,27 @@ trait DrawingDocumentDrawView
      with XDrawView
      with XPropertySet {
   /** If the view is in layer mode, the user can modify the layer of the model of this view in the user interface. */
-  var IsLayerMode: Boolean = js.native
+  var IsLayerMode: Boolean
   /** If the view is in master page mode, the view shows the master pages of this model. */
-  var IsMasterPageMode: Boolean = js.native
+  var IsMasterPageMode: Boolean
   /**
     * defines the offset from the top left position of the displayed page to the top left position of the view area in 100th/mm.
     * @since OOo 1.1.2
     */
-  var ViewOffset: Point = js.native
+  var ViewOffset: Point
   /** This is the area that is currently visible. */
-  var VisibleArea: Rectangle = js.native
+  var VisibleArea: Rectangle
   /**
     * This property defines the zoom type for the document.
     * @see com.sun.star.view.DocumentZoomType Note: After setting other types then {@link com.sun.star.view.DocumentZoomType.BY_VALUE} , implementations may
     * @since OOo 1.1.2
     */
-  var ZoomType: Double = js.native
+  var ZoomType: Double
   /**
     * Defines the zoom value to use. Valid only if the ZoomType is set to {@link com.sun.star.view.DocumentZoomType.BY_VALUE} .
     * @since OOo 1.1.2
     */
-  var ZoomValue: Double = js.native
+  var ZoomValue: Double
 }
 
 object DrawingDocumentDrawView {
@@ -157,49 +156,5 @@ object DrawingDocumentDrawView {
     val __obj = js.Dynamic.literal(CurrentPage = CurrentPage.asInstanceOf[js.Any], Frame = Frame.asInstanceOf[js.Any], IsLayerMode = IsLayerMode.asInstanceOf[js.Any], IsMasterPageMode = IsMasterPageMode.asInstanceOf[js.Any], Model = Model.asInstanceOf[js.Any], PosSize = PosSize.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], Selection = Selection.asInstanceOf[js.Any], Transferable = Transferable.asInstanceOf[js.Any], ViewData = ViewData.asInstanceOf[js.Any], ViewOffset = ViewOffset.asInstanceOf[js.Any], VisibleArea = VisibleArea.asInstanceOf[js.Any], ZoomType = ZoomType.asInstanceOf[js.Any], ZoomValue = ZoomValue.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addFocusListener = js.Any.fromFunction1(addFocusListener), addKeyHandler = js.Any.fromFunction1(addKeyHandler), addKeyListener = js.Any.fromFunction1(addKeyListener), addMouseClickHandler = js.Any.fromFunction1(addMouseClickHandler), addMouseListener = js.Any.fromFunction1(addMouseListener), addMouseMotionListener = js.Any.fromFunction1(addMouseMotionListener), addPaintListener = js.Any.fromFunction1(addPaintListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addSelectionChangeListener = js.Any.fromFunction1(addSelectionChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), addWindowListener = js.Any.fromFunction1(addWindowListener), attachFrame = js.Any.fromFunction1(attachFrame), attachModel = js.Any.fromFunction1(attachModel), dispose = js.Any.fromFunction0(dispose), getControl = js.Any.fromFunction1(getControl), getCurrentPage = js.Any.fromFunction0(getCurrentPage), getFormController = js.Any.fromFunction1(getFormController), getFrame = js.Any.fromFunction0(getFrame), getModel = js.Any.fromFunction0(getModel), getPosSize = js.Any.fromFunction0(getPosSize), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getSelection = js.Any.fromFunction0(getSelection), getTransferable = js.Any.fromFunction0(getTransferable), getViewData = js.Any.fromFunction0(getViewData), insertTransferable = js.Any.fromFunction1(insertTransferable), isFormDesignMode = js.Any.fromFunction0(isFormDesignMode), queryDispatch = js.Any.fromFunction3(queryDispatch), queryDispatches = js.Any.fromFunction1(queryDispatches), queryInterface = js.Any.fromFunction1(queryInterface), registerContextMenuInterceptor = js.Any.fromFunction1(registerContextMenuInterceptor), release = js.Any.fromFunction0(release), releaseContextMenuInterceptor = js.Any.fromFunction1(releaseContextMenuInterceptor), removeEventListener = js.Any.fromFunction1(removeEventListener), removeFocusListener = js.Any.fromFunction1(removeFocusListener), removeKeyHandler = js.Any.fromFunction1(removeKeyHandler), removeKeyListener = js.Any.fromFunction1(removeKeyListener), removeMouseClickHandler = js.Any.fromFunction1(removeMouseClickHandler), removeMouseListener = js.Any.fromFunction1(removeMouseListener), removeMouseMotionListener = js.Any.fromFunction1(removeMouseMotionListener), removePaintListener = js.Any.fromFunction1(removePaintListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeSelectionChangeListener = js.Any.fromFunction1(removeSelectionChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), removeWindowListener = js.Any.fromFunction1(removeWindowListener), restoreViewData = js.Any.fromFunction1(restoreViewData), select = js.Any.fromFunction1(select), setCurrentPage = js.Any.fromFunction1(setCurrentPage), setEnable = js.Any.fromFunction1(setEnable), setFocus = js.Any.fromFunction0(setFocus), setFormDesignMode = js.Any.fromFunction1(setFormDesignMode), setPosSize = js.Any.fromFunction5(setPosSize), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setVisible = js.Any.fromFunction1(setVisible), suspend = js.Any.fromFunction1(suspend))
     __obj.asInstanceOf[DrawingDocumentDrawView]
   }
-  @scala.inline
-  implicit class DrawingDocumentDrawViewOps[Self <: DrawingDocumentDrawView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsLayerMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLayerMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsMasterPageMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMasterPageMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewOffset(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisibleArea(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibleArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZoomType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoomType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZoomValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoomValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

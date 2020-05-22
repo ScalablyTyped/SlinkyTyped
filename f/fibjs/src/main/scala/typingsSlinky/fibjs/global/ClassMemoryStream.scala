@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Class_MemoryStream")
 @js.native
 /**
-	 * 
-	 * @brief MemoryStream 构造函数
-	 * 
-	 * 
-	 */
+  * 
+  * @brief MemoryStream 构造函数
+  * 
+  * 
+  */
 class ClassMemoryStream ()
   extends typingsSlinky.fibjs.ClassMemoryStream
 

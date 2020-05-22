@@ -11,6 +11,7 @@ package object System {
     typingsSlinky.systemjs.System.Declare
   ]
   type ExecuteFn = js.Function0[js.Any]
+  type GetFn = typingsSlinky.systemjs.System.GetFnModule | typingsSlinky.systemjs.System.GetFnGeneric
   // tslint:disable-next-line no-unnecessary-generics
   type GetFnGeneric = js.Function1[/* moduleId */ java.lang.String, js.Any]
   type GetFnModule = js.Function1[/* moduleId */ java.lang.String, typingsSlinky.systemjs.System.Module]

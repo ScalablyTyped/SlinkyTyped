@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props[P, S] extends js.Object {
-  var props: P = js.native
-  var state: S = js.native
+  var props: P
+  var state: S
 }
 
 object Props {
@@ -16,25 +15,5 @@ object Props {
     val __obj = js.Dynamic.literal(props = props.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props[P, S]]
   }
-  @scala.inline
-  implicit class PropsOps[Self[p, s] <: Props[p, s], P, S] (val x: Self[P, S]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[P, S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[P, S]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[P, S]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[P, S]) with Other]
-    @scala.inline
-    def withProps(value: P): Self[P, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withState(value: S): Self[P, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

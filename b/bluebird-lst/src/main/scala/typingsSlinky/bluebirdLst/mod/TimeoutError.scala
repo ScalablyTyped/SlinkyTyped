@@ -10,5 +10,10 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("bluebird-lst", "TimeoutError")
 @js.native
-class TimeoutError () extends Error
+class TimeoutError () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

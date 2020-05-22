@@ -21,113 +21,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompareRule extends js.Object {
-  /** Specifies the function whose return value is used for comparison with the validated value. */
-  var comparisonTarget: js.UndefOr[js.Function0[_]] = js.native
-  /** Specifies the operator to be used for comparing the validated value with the target. */
+  /** @name CompareRule.comparisonTarget */
+  var comparisonTarget: js.UndefOr[js.Function0[_]] = js.undefined
+  /** @name CompareRule.comparisonType */
   var comparisonType: js.UndefOr[
     ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | Lessthansign | LessthansignEqualssign | EqualssignEqualssign | EqualssignEqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign
-  ] = js.native
-  /** If set to true, empty values are valid. */
-  var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
-  /** Specifies the message that is shown if the rule is broken. */
-  var message: js.UndefOr[String] = js.native
-  /** Indicates whether or not the rule should be always checked for the target value or only when the target value changes. */
-  var reevaluate: js.UndefOr[Boolean] = js.native
-  /** Specifies the rule type. Set it to "compare" to use the CompareRule. */
+  ] = js.undefined
+  /** @name CompareRule.ignoreEmptyValue */
+  var ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined
+  /** @name CompareRule.message */
+  var message: js.UndefOr[String] = js.undefined
+  /** @name CompareRule.reevaluate */
+  var reevaluate: js.UndefOr[Boolean] = js.undefined
+  /** @name CompareRule.type */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
-  ] = js.native
+  ] = js.undefined
 }
 
 object CompareRule {
   @scala.inline
-  def apply(): CompareRule = {
+  def apply(
+    comparisonTarget: () => _ = null,
+    comparisonType: ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | Lessthansign | LessthansignEqualssign | EqualssignEqualssign | EqualssignEqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign = null,
+    ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined,
+    message: String = null,
+    reevaluate: js.UndefOr[Boolean] = js.undefined,
+    `type`: required | numeric | range | stringLength | custom | compare | pattern | email | async = null
+  ): CompareRule = {
     val __obj = js.Dynamic.literal()
+    if (comparisonTarget != null) __obj.updateDynamic("comparisonTarget")(js.Any.fromFunction0(comparisonTarget))
+    if (comparisonType != null) __obj.updateDynamic("comparisonType")(comparisonType.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreEmptyValue)) __obj.updateDynamic("ignoreEmptyValue")(ignoreEmptyValue.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(reevaluate)) __obj.updateDynamic("reevaluate")(reevaluate.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompareRule]
   }
-  @scala.inline
-  implicit class CompareRuleOps[Self <: CompareRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparisonTarget(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonTarget")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComparisonTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparisonType(
-      value: ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | Lessthansign | LessthansignEqualssign | EqualssignEqualssign | EqualssignEqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparisonType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreEmptyValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreEmptyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReevaluate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reevaluate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReevaluate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reevaluate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: required | numeric | range | stringLength | custom | compare | pattern | email | async): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

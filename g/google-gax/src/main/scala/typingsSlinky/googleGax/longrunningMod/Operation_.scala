@@ -1,7 +1,6 @@
 package typingsSlinky.googleGax.longrunningMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleGax.apitypesMod.RawResponseType
 import typingsSlinky.googleGax.apitypesMod.ResponseType
 import typingsSlinky.googleGax.apitypesMod.ResultTuple
 import typingsSlinky.googleGax.callMod.CancellablePromise
@@ -17,9 +16,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("google-gax/build/src/longRunningCalls/longrunning", "Operation")
 @js.native
-class Operation_ protected ()
-  extends EventEmitter
-     with RawResponseType {
+class Operation_ protected () extends EventEmitter {
   /**
     * Wrapper for a google.longrunnung.Operation.
     *

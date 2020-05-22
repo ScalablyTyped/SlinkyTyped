@@ -4,30 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnTypeFormattingEditProvider extends js.Object {
   /**
-  		 * Provide formatting edits after a character has been typed.
-  		 *
-  		 * The given position and character should hint to the provider
-  		 * what range the position to expand to, like find the matching `{`
-  		 * when `}` has been entered.
-  		 *
-  		 * @param document The document in which the command was invoked.
-  		 * @param position The position at which the command was invoked.
-  		 * @param ch The character that has been typed.
-  		 * @param options Options controlling formatting.
-  		 * @param token A cancellation token.
-  		 * @return A set of text edits or a thenable that resolves to such. The lack of a result can be
-  		 * signaled by returning `undefined`, `null`, or an empty array.
-  		 */
+    * Provide formatting edits after a character has been typed.
+    *
+    * The given position and character should hint to the provider
+    * what range the position to expand to, like find the matching `{`
+    * when `}` has been entered.
+    *
+    * @param document The document in which the command was invoked.
+    * @param position The position at which the command was invoked.
+    * @param ch The character that has been typed.
+    * @param options Options controlling formatting.
+    * @param token A cancellation token.
+    * @return A set of text edits or a thenable that resolves to such. The lack of a result can be
+    * signaled by returning `undefined`, `null`, or an empty array.
+    */
   def provideOnTypeFormattingEdits(
     document: TextDocument,
     position: Position,
     ch: String,
     options: FormattingOptions,
     token: CancellationToken
-  ): ProviderResult[js.Array[TextEdit]] = js.native
+  ): ProviderResult[js.Array[TextEdit]]
 }
 
 object OnTypeFormattingEditProvider {
@@ -38,21 +37,5 @@ object OnTypeFormattingEditProvider {
     val __obj = js.Dynamic.literal(provideOnTypeFormattingEdits = js.Any.fromFunction5(provideOnTypeFormattingEdits))
     __obj.asInstanceOf[OnTypeFormattingEditProvider]
   }
-  @scala.inline
-  implicit class OnTypeFormattingEditProviderOps[Self <: OnTypeFormattingEditProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvideOnTypeFormattingEdits(
-      value: (TextDocument, Position, String, FormattingOptions, CancellationToken) => ProviderResult[js.Array[TextEdit]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideOnTypeFormattingEdits")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

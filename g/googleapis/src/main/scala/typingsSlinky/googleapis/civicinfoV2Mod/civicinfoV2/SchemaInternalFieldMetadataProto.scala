@@ -12,41 +12,11 @@ trait SchemaInternalFieldMetadataProto extends js.Object {
 
 object SchemaInternalFieldMetadataProto {
   @scala.inline
-  def apply(): SchemaInternalFieldMetadataProto = {
+  def apply(isAuto: js.UndefOr[Boolean] = js.undefined, sourceSummary: SchemaInternalSourceSummaryProto = null): SchemaInternalFieldMetadataProto = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isAuto)) __obj.updateDynamic("isAuto")(isAuto.get.asInstanceOf[js.Any])
+    if (sourceSummary != null) __obj.updateDynamic("sourceSummary")(sourceSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInternalFieldMetadataProto]
   }
-  @scala.inline
-  implicit class SchemaInternalFieldMetadataProtoOps[Self <: SchemaInternalFieldMetadataProto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAuto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAuto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAuto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSummary(value: SchemaInternalSourceSummaryProto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSummary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

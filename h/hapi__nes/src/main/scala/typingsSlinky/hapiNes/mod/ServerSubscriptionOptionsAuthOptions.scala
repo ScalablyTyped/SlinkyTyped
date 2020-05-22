@@ -9,75 +9,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServerSubscriptionOptionsAuthOptions extends js.Object {
-  var entity: js.UndefOr[user | app | any] = js.native
-  var index: js.UndefOr[Boolean] = js.native
-  var mode: js.UndefOr[required | optional] = js.native
-  var scope: js.UndefOr[String | js.Array[String]] = js.native
+  var entity: js.UndefOr[user | app | any] = js.undefined
+  var index: js.UndefOr[Boolean] = js.undefined
+  var mode: js.UndefOr[required | optional] = js.undefined
+  var scope: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object ServerSubscriptionOptionsAuthOptions {
   @scala.inline
-  def apply(): ServerSubscriptionOptionsAuthOptions = {
+  def apply(
+    entity: user | app | any = null,
+    index: js.UndefOr[Boolean] = js.undefined,
+    mode: required | optional = null,
+    scope: String | js.Array[String] = null
+  ): ServerSubscriptionOptionsAuthOptions = {
     val __obj = js.Dynamic.literal()
+    if (entity != null) __obj.updateDynamic("entity")(entity.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerSubscriptionOptionsAuthOptions]
   }
-  @scala.inline
-  implicit class ServerSubscriptionOptionsAuthOptionsOps[Self <: ServerSubscriptionOptionsAuthOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntity(value: user | app | any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: required | optional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

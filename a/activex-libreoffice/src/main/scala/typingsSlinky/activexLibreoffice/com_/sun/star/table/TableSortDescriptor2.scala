@@ -10,8 +10,7 @@ import scala.scalajs.js.annotation._
   * @since OOo 1.1.2
   */
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped any */ @js.native
-trait TableSortDescriptor2 extends js.Object {
+- Dropped any */ trait TableSortDescriptor2 extends js.Object {
   /**
     * specifies if the columns or rows are to be sorted.
     *
@@ -19,15 +18,15 @@ trait TableSortDescriptor2 extends js.Object {
     *
     * **FALSE**: The rows are to be sorted.
     */
-  var IsSortColumns: Boolean = js.native
+  var IsSortColumns: Boolean
   /** contains the maximum number of sort fields the descriptor can hold. */
-  var MaxSortFieldsCount: Double = js.native
+  var MaxSortFieldsCount: Double
   /**
     * specifies a list of individual sort fields.
     *
     * Each entry specifies properties that state the row/column to be sorted and how that should be done.
     */
-  var SortFields: SafeArray[TableSortField] = js.native
+  var SortFields: SafeArray[TableSortField]
 }
 
 object TableSortDescriptor2 {
@@ -36,31 +35,5 @@ object TableSortDescriptor2 {
     val __obj = js.Dynamic.literal(IsSortColumns = IsSortColumns.asInstanceOf[js.Any], MaxSortFieldsCount = MaxSortFieldsCount.asInstanceOf[js.Any], SortFields = SortFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableSortDescriptor2]
   }
-  @scala.inline
-  implicit class TableSortDescriptor2Ops[Self <: TableSortDescriptor2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsSortColumns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsSortColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxSortFieldsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSortFieldsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortFields(value: SafeArray[TableSortField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

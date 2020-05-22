@@ -5,9 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SinonStub
-  extends SinonSpy
-     with SinonStubbedMember[js.Any] {
+trait SinonStub extends SinonSpy {
   /**
     * Causes the original method wrapped into the stub to be called when none of the conditional stubs are matched.
     */

@@ -46,101 +46,24 @@ trait ApplicationConfigurationDescription extends js.Object {
 
 object ApplicationConfigurationDescription {
   @scala.inline
-  def apply(): ApplicationConfigurationDescription = {
+  def apply(
+    ApplicationCodeConfigurationDescription: ApplicationCodeConfigurationDescription = null,
+    ApplicationSnapshotConfigurationDescription: ApplicationSnapshotConfigurationDescription = null,
+    EnvironmentPropertyDescriptions: EnvironmentPropertyDescriptions = null,
+    FlinkApplicationConfigurationDescription: FlinkApplicationConfigurationDescription = null,
+    RunConfigurationDescription: RunConfigurationDescription = null,
+    SqlApplicationConfigurationDescription: SqlApplicationConfigurationDescription = null,
+    VpcConfigurationDescriptions: VpcConfigurationDescriptions = null
+  ): ApplicationConfigurationDescription = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationCodeConfigurationDescription != null) __obj.updateDynamic("ApplicationCodeConfigurationDescription")(ApplicationCodeConfigurationDescription.asInstanceOf[js.Any])
+    if (ApplicationSnapshotConfigurationDescription != null) __obj.updateDynamic("ApplicationSnapshotConfigurationDescription")(ApplicationSnapshotConfigurationDescription.asInstanceOf[js.Any])
+    if (EnvironmentPropertyDescriptions != null) __obj.updateDynamic("EnvironmentPropertyDescriptions")(EnvironmentPropertyDescriptions.asInstanceOf[js.Any])
+    if (FlinkApplicationConfigurationDescription != null) __obj.updateDynamic("FlinkApplicationConfigurationDescription")(FlinkApplicationConfigurationDescription.asInstanceOf[js.Any])
+    if (RunConfigurationDescription != null) __obj.updateDynamic("RunConfigurationDescription")(RunConfigurationDescription.asInstanceOf[js.Any])
+    if (SqlApplicationConfigurationDescription != null) __obj.updateDynamic("SqlApplicationConfigurationDescription")(SqlApplicationConfigurationDescription.asInstanceOf[js.Any])
+    if (VpcConfigurationDescriptions != null) __obj.updateDynamic("VpcConfigurationDescriptions")(VpcConfigurationDescriptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationConfigurationDescription]
   }
-  @scala.inline
-  implicit class ApplicationConfigurationDescriptionOps[Self <: ApplicationConfigurationDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationCodeConfigurationDescription(value: ApplicationCodeConfigurationDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationCodeConfigurationDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationCodeConfigurationDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationCodeConfigurationDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationSnapshotConfigurationDescription(value: ApplicationSnapshotConfigurationDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationSnapshotConfigurationDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationSnapshotConfigurationDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationSnapshotConfigurationDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentPropertyDescriptions(value: EnvironmentPropertyDescriptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentPropertyDescriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentPropertyDescriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentPropertyDescriptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlinkApplicationConfigurationDescription(value: FlinkApplicationConfigurationDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlinkApplicationConfigurationDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlinkApplicationConfigurationDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlinkApplicationConfigurationDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunConfigurationDescription(value: RunConfigurationDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunConfigurationDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunConfigurationDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunConfigurationDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSqlApplicationConfigurationDescription(value: SqlApplicationConfigurationDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlApplicationConfigurationDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSqlApplicationConfigurationDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlApplicationConfigurationDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcConfigurationDescriptions(value: VpcConfigurationDescriptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfigurationDescriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcConfigurationDescriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfigurationDescriptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

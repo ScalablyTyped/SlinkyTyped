@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Separator extends ItemMenuSeparator {
-  var parentMenu: Menu = js.native
-  def destroy(): Unit = js.native
+  var parentMenu: Menu
+  def destroy(): Unit
 }
 
 @JSImport("sdk/context-menu", "Separator")

@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AnySchema
-  extends Schema
-     with SchemaInternals {
+  extends SchemaInternals
+     with _Schema {
   /**
     * Starts a ruleset in order to apply multiple rule options. The set ends when `rule()`, `keep()`, `message()`, or `warn()` is called.
     */
@@ -71,25 +71,25 @@ trait AnySchema
   def custom(fn: CustomValidator[_]): this.type = js.native
   def custom(fn: CustomValidator[_], description: String): this.type = js.native
   /**
-    * Sets a default value if the original value is undefined.
-    * @param value - the value.
-    *   value supports references.
-    *   value may also be a function which returns the default value.
-    *   If value is specified as a function that accepts a single parameter, that parameter will be a context
-    *    object that can be used to derive the resulting value. This clones the object however, which incurs some
-    *    overhead so if you don't need access to the context define your method so that it does not accept any
-    *    parameters.
-    *   Without any value, default has no effect, except for object that will then create nested defaults
-    *    (applying inner defaults of that object).
+    * Sets a default value if the original value is `undefined` where:
+    * @param value - the default value. One of:
+    *    - a literal value (string, number, object, etc.)
+    *    - a [references](#refkey-options)
+    *    - a function which returns the default value using the signature `function(parent, helpers)` where:
+    *        - `parent` - a clone of the object containing the value being validated. Note that since specifying a
+    *          `parent` ragument performs cloning, do not declare format arguments if you are not using them.
+    *        - `helpers` - same as thsoe described in [`any.custom()`](anycustomermethod_description)
+    *
+    * When called without any `value` on an object schema type, a default value will be automatically generated
+    * based on the default values of the object keys.
     *
     * Note that if value is an object, any changes to the object after `default()` is called will change the
     *  reference and any future assignment.
-    *
-    * Additionally, when specifying a method you must either have a description property on your method or the
-    *  second parameter is required.
     */
   def default(): this.type = js.native
-  def default(value: js.Any): this.type = js.native
+  def default(value: js.Function2[/* parent */ js.Any, /* helpers */ CustomHelpers[_], BasicType | Reference]): this.type = js.native
+  def default(value: BasicType): this.type = js.native
+  def default(value: Reference): this.type = js.native
   /**
     * Returns a plain object representing the schema's rules and properties
     */

@@ -4,57 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsISSNOptions extends js.Object {
   /**
     * If `case_sensitive` is `true`, ISSNs with a lowercase `x` as the check digit are rejected.
     *
     * @default false
     */
-  var case_sensitive: js.UndefOr[Boolean] = js.native
+  var case_sensitive: js.UndefOr[Boolean] = js.undefined
   /**
     * @default false
     */
-  var require_hyphen: js.UndefOr[Boolean] = js.native
+  var require_hyphen: js.UndefOr[Boolean] = js.undefined
 }
 
 object IsISSNOptions {
   @scala.inline
-  def apply(): IsISSNOptions = {
+  def apply(
+    case_sensitive: js.UndefOr[Boolean] = js.undefined,
+    require_hyphen: js.UndefOr[Boolean] = js.undefined
+  ): IsISSNOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(case_sensitive)) __obj.updateDynamic("case_sensitive")(case_sensitive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(require_hyphen)) __obj.updateDynamic("require_hyphen")(require_hyphen.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsISSNOptions]
   }
-  @scala.inline
-  implicit class IsISSNOptionsOps[Self <: IsISSNOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCase_sensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("case_sensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCase_sensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("case_sensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequire_hyphen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require_hyphen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequire_hyphen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require_hyphen")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

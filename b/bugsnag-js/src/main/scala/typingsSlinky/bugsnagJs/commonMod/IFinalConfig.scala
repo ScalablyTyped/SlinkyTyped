@@ -1,42 +1,42 @@
 package typingsSlinky.bugsnagJs.commonMod
 
 import typingsSlinky.bugsnagJs.anon.Notify
+import typingsSlinky.bugsnagJs.clientMod.ILogger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFinalConfig extends IConfig {
   @JSName("autoBreadcrumbs")
-  var autoBreadcrumbs_IFinalConfig: Boolean = js.native
+  var autoBreadcrumbs_IFinalConfig: Boolean
   @JSName("autoCaptureSessions")
-  var autoCaptureSessions_IFinalConfig: Boolean = js.native
+  var autoCaptureSessions_IFinalConfig: Boolean
   @JSName("autoNotify")
-  var autoNotify_IFinalConfig: Boolean = js.native
+  var autoNotify_IFinalConfig: Boolean
   @JSName("beforeSend")
-  var beforeSend_IFinalConfig: js.Array[BeforeSend] = js.native
+  var beforeSend_IFinalConfig: js.Array[BeforeSend]
   @JSName("collectUserIp")
-  var collectUserIp_IFinalConfig: Boolean = js.native
+  var collectUserIp_IFinalConfig: Boolean
   @JSName("consoleBreadcrumbsEnabled")
-  var consoleBreadcrumbsEnabled_IFinalConfig: Boolean = js.native
+  var consoleBreadcrumbsEnabled_IFinalConfig: Boolean
   @JSName("endpoints")
-  var endpoints_IFinalConfig: Notify = js.native
+  var endpoints_IFinalConfig: Notify
   @JSName("interactionBreadcrumbsEnabled")
-  var interactionBreadcrumbsEnabled_IFinalConfig: Boolean = js.native
+  var interactionBreadcrumbsEnabled_IFinalConfig: Boolean
   @JSName("maxBreadcrumbs")
-  var maxBreadcrumbs_IFinalConfig: Double = js.native
+  var maxBreadcrumbs_IFinalConfig: Double
   @JSName("maxEvents")
-  var maxEvents_IFinalConfig: Double = js.native
+  var maxEvents_IFinalConfig: Double
   @JSName("metaData")
-  var metaData_IFinalConfig: js.Object | Null = js.native
+  var metaData_IFinalConfig: js.Object | Null
   @JSName("navigationBreadcrumbsEnabled")
-  var navigationBreadcrumbsEnabled_IFinalConfig: Boolean = js.native
+  var navigationBreadcrumbsEnabled_IFinalConfig: Boolean
   @JSName("notifyReleaseStages")
-  var notifyReleaseStages_IFinalConfig: js.Array[String] = js.native
+  var notifyReleaseStages_IFinalConfig: js.Array[String]
   @JSName("releaseStage")
-  var releaseStage_IFinalConfig: String = js.native
+  var releaseStage_IFinalConfig: String
   @JSName("user")
-  var user_IFinalConfig: js.Object | Null = js.native
+  var user_IFinalConfig: js.Object | Null
 }
 
 object IFinalConfig {
@@ -55,120 +55,22 @@ object IFinalConfig {
     maxEvents: Double,
     navigationBreadcrumbsEnabled: Boolean,
     notifyReleaseStages: js.Array[String],
-    releaseStage: String
+    releaseStage: String,
+    appVersion: String = null,
+    endpoint: String = null,
+    logger: js.UndefOr[Null | ILogger] = js.undefined,
+    metaData: js.Object = null,
+    networkBreadcrumbsEnabled: js.UndefOr[Boolean] = js.undefined,
+    sessionEndpoint: String = null,
+    user: js.Object = null
   ): IFinalConfig = {
-    val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any], autoBreadcrumbs = autoBreadcrumbs.asInstanceOf[js.Any], autoCaptureSessions = autoCaptureSessions.asInstanceOf[js.Any], autoNotify = autoNotify.asInstanceOf[js.Any], beforeSend = beforeSend.asInstanceOf[js.Any], collectUserIp = collectUserIp.asInstanceOf[js.Any], consoleBreadcrumbsEnabled = consoleBreadcrumbsEnabled.asInstanceOf[js.Any], endpoints = endpoints.asInstanceOf[js.Any], interactionBreadcrumbsEnabled = interactionBreadcrumbsEnabled.asInstanceOf[js.Any], maxBreadcrumbs = maxBreadcrumbs.asInstanceOf[js.Any], maxEvents = maxEvents.asInstanceOf[js.Any], navigationBreadcrumbsEnabled = navigationBreadcrumbsEnabled.asInstanceOf[js.Any], notifyReleaseStages = notifyReleaseStages.asInstanceOf[js.Any], releaseStage = releaseStage.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any], autoBreadcrumbs = autoBreadcrumbs.asInstanceOf[js.Any], autoCaptureSessions = autoCaptureSessions.asInstanceOf[js.Any], autoNotify = autoNotify.asInstanceOf[js.Any], beforeSend = beforeSend.asInstanceOf[js.Any], collectUserIp = collectUserIp.asInstanceOf[js.Any], consoleBreadcrumbsEnabled = consoleBreadcrumbsEnabled.asInstanceOf[js.Any], endpoints = endpoints.asInstanceOf[js.Any], interactionBreadcrumbsEnabled = interactionBreadcrumbsEnabled.asInstanceOf[js.Any], maxBreadcrumbs = maxBreadcrumbs.asInstanceOf[js.Any], maxEvents = maxEvents.asInstanceOf[js.Any], navigationBreadcrumbsEnabled = navigationBreadcrumbsEnabled.asInstanceOf[js.Any], notifyReleaseStages = notifyReleaseStages.asInstanceOf[js.Any], releaseStage = releaseStage.asInstanceOf[js.Any], metaData = metaData.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
+    if (appVersion != null) __obj.updateDynamic("appVersion")(appVersion.asInstanceOf[js.Any])
+    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(logger)) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
+    if (!js.isUndefined(networkBreadcrumbsEnabled)) __obj.updateDynamic("networkBreadcrumbsEnabled")(networkBreadcrumbsEnabled.get.asInstanceOf[js.Any])
+    if (sessionEndpoint != null) __obj.updateDynamic("sessionEndpoint")(sessionEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFinalConfig]
   }
-  @scala.inline
-  implicit class IFinalConfigOps[Self <: IFinalConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoBreadcrumbs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBreadcrumbs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoCaptureSessions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCaptureSessions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoNotify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoNotify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeforeSend(value: js.Array[BeforeSend]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCollectUserIp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectUserIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConsoleBreadcrumbsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consoleBreadcrumbsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndpoints(value: Notify): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInteractionBreadcrumbsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionBreadcrumbsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxBreadcrumbs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBreadcrumbs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxEvents(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavigationBreadcrumbsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationBreadcrumbsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotifyReleaseStages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyReleaseStages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleaseStage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseStage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetaData(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metaData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetaDataNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metaData")(null)
-        ret
-    }
-    @scala.inline
-    def withUser(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(null)
-        ret
-    }
-  }
-  
 }
 

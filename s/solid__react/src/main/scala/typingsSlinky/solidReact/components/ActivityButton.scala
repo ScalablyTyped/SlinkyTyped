@@ -12,7 +12,7 @@ object ActivityButton {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ActivityButtonProps with HTMLAttributes[HTMLButtonElement]): `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.ActivityButton] = new `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.ActivityButton](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ActivityButton.type): `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.ActivityButton] = new `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.ActivityButton](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: ActivityButtonProps with HTMLAttributes[HTMLButtonElement]): SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.ActivityButton] = new SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.ActivityButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ActivityButton.type): SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.ActivityButton] = new SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.ActivityButton](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -6,140 +6,42 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line interface-over-type-literal
-@js.native
 trait Converters extends js.Object {
-  var days: js.UndefOr[Converter[String]] = js.native
-  var default: js.UndefOr[Converter[String]] = js.native
-  var hours: js.UndefOr[Converter[String]] = js.native
-  var minutes: js.UndefOr[Converter[String]] = js.native
-  var months: js.UndefOr[Converter[String]] = js.native
-  var quarters: js.UndefOr[Converter[String]] = js.native
-  var seconds: js.UndefOr[Converter[String]] = js.native
-  var weeks: js.UndefOr[Converter[String]] = js.native
-  var years: js.UndefOr[Converter[String]] = js.native
+  var days: js.UndefOr[Converter[String]] = js.undefined
+  var default: js.UndefOr[Converter[String]] = js.undefined
+  var hours: js.UndefOr[Converter[String]] = js.undefined
+  var minutes: js.UndefOr[Converter[String]] = js.undefined
+  var months: js.UndefOr[Converter[String]] = js.undefined
+  var quarters: js.UndefOr[Converter[String]] = js.undefined
+  var seconds: js.UndefOr[Converter[String]] = js.undefined
+  var weeks: js.UndefOr[Converter[String]] = js.undefined
+  var years: js.UndefOr[Converter[String]] = js.undefined
 }
 
 object Converters {
   @scala.inline
-  def apply(): Converters = {
+  def apply(
+    days: Converter[String] = null,
+    default: Converter[String] = null,
+    hours: Converter[String] = null,
+    minutes: Converter[String] = null,
+    months: Converter[String] = null,
+    quarters: Converter[String] = null,
+    seconds: Converter[String] = null,
+    weeks: Converter[String] = null,
+    years: Converter[String] = null
+  ): Converters = {
     val __obj = js.Dynamic.literal()
+    if (days != null) __obj.updateDynamic("days")(days.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (hours != null) __obj.updateDynamic("hours")(hours.asInstanceOf[js.Any])
+    if (minutes != null) __obj.updateDynamic("minutes")(minutes.asInstanceOf[js.Any])
+    if (months != null) __obj.updateDynamic("months")(months.asInstanceOf[js.Any])
+    if (quarters != null) __obj.updateDynamic("quarters")(quarters.asInstanceOf[js.Any])
+    if (seconds != null) __obj.updateDynamic("seconds")(seconds.asInstanceOf[js.Any])
+    if (weeks != null) __obj.updateDynamic("weeks")(weeks.asInstanceOf[js.Any])
+    if (years != null) __obj.updateDynamic("years")(years.asInstanceOf[js.Any])
     __obj.asInstanceOf[Converters]
   }
-  @scala.inline
-  implicit class ConvertersOps[Self <: Converters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDays(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("days")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("days")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHours(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hours")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinutes(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonths(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("months")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("months")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuarters(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quarters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuarters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quarters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeconds(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeeks(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weeks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeeks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weeks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYears(value: Converter[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("years")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYears: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("years")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

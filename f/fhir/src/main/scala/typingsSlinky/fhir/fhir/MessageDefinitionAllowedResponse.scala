@@ -7,65 +7,44 @@ import scala.scalajs.js.annotation._
 /**
   * Responses to this message
   */
-@js.native
 trait MessageDefinitionAllowedResponse extends BackboneElement {
   /**
     * Contains extended information for property 'situation'.
     */
-  var _situation: js.UndefOr[Element] = js.native
+  var _situation: js.UndefOr[Element] = js.undefined
   /**
     * Reference to allowed message definition response
     */
-  var message: Reference = js.native
+  var message: Reference
   /**
     * When should this response be used
     */
-  var situation: js.UndefOr[markdown] = js.native
+  var situation: js.UndefOr[markdown] = js.undefined
 }
 
 object MessageDefinitionAllowedResponse {
   @scala.inline
-  def apply(message: Reference): MessageDefinitionAllowedResponse = {
+  def apply(
+    message: Reference,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _situation: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    situation: markdown = null
+  ): MessageDefinitionAllowedResponse = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_situation != null) __obj.updateDynamic("_situation")(_situation.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (situation != null) __obj.updateDynamic("situation")(situation.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageDefinitionAllowedResponse]
   }
-  @scala.inline
-  implicit class MessageDefinitionAllowedResponseOps[Self <: MessageDefinitionAllowedResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_situation(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_situation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_situation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_situation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSituation(value: markdown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("situation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSituation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("situation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -54,131 +54,29 @@ trait SendBulkTemplatedEmailRequest extends js.Object {
 
 object SendBulkTemplatedEmailRequest {
   @scala.inline
-  def apply(Destinations: BulkEmailDestinationList, Source: Address, Template: TemplateName): SendBulkTemplatedEmailRequest = {
+  def apply(
+    Destinations: BulkEmailDestinationList,
+    Source: Address,
+    Template: TemplateName,
+    ConfigurationSetName: ConfigurationSetName = null,
+    DefaultTags: MessageTagList = null,
+    DefaultTemplateData: TemplateData = null,
+    ReplyToAddresses: AddressList = null,
+    ReturnPath: Address = null,
+    ReturnPathArn: AmazonResourceName = null,
+    SourceArn: AmazonResourceName = null,
+    TemplateArn: AmazonResourceName = null
+  ): SendBulkTemplatedEmailRequest = {
     val __obj = js.Dynamic.literal(Destinations = Destinations.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any], Template = Template.asInstanceOf[js.Any])
+    if (ConfigurationSetName != null) __obj.updateDynamic("ConfigurationSetName")(ConfigurationSetName.asInstanceOf[js.Any])
+    if (DefaultTags != null) __obj.updateDynamic("DefaultTags")(DefaultTags.asInstanceOf[js.Any])
+    if (DefaultTemplateData != null) __obj.updateDynamic("DefaultTemplateData")(DefaultTemplateData.asInstanceOf[js.Any])
+    if (ReplyToAddresses != null) __obj.updateDynamic("ReplyToAddresses")(ReplyToAddresses.asInstanceOf[js.Any])
+    if (ReturnPath != null) __obj.updateDynamic("ReturnPath")(ReturnPath.asInstanceOf[js.Any])
+    if (ReturnPathArn != null) __obj.updateDynamic("ReturnPathArn")(ReturnPathArn.asInstanceOf[js.Any])
+    if (SourceArn != null) __obj.updateDynamic("SourceArn")(SourceArn.asInstanceOf[js.Any])
+    if (TemplateArn != null) __obj.updateDynamic("TemplateArn")(TemplateArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendBulkTemplatedEmailRequest]
   }
-  @scala.inline
-  implicit class SendBulkTemplatedEmailRequestOps[Self <: SendBulkTemplatedEmailRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinations(value: BulkEmailDestinationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destinations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: TemplateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfigurationSetName(value: ConfigurationSetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationSetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultTags(value: MessageTagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultTemplateData(value: TemplateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTemplateData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTemplateData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTemplateData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplyToAddresses(value: AddressList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplyToAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyToAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplyToAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnPath(value: Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnPathArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnPathArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnPathArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnPathArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

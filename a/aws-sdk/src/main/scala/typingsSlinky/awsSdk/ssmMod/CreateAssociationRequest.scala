@@ -39,7 +39,7 @@ trait CreateAssociationRequest extends js.Object {
     */
   var Name: DocumentARN = js.native
   /**
-    * An Amazon S3 bucket where you want to store the output details of the request.
+    * An S3 bucket where you want to store the output details of the request.
     */
   var OutputLocation: js.UndefOr[InstanceAssociationOutputLocation] = js.native
   /**
@@ -51,162 +51,46 @@ trait CreateAssociationRequest extends js.Object {
     */
   var ScheduleExpression: js.UndefOr[typingsSlinky.awsSdk.ssmMod.ScheduleExpression] = js.native
   /**
-    * The targets (either instances or tags) for the association. You must specify a value for Targets if you don't specify a value for InstanceId.
+    * The mode for generating association compliance. You can specify AUTO or MANUAL. In AUTO mode, the system uses the status of the association execution to determine the compliance status. If the association execution runs successfully, then the association is COMPLIANT. If the association execution doesn't run successfully, the association is NON-COMPLIANT. In MANUAL mode, you must specify the AssociationId as a parameter for the PutComplianceItems API action. In this case, compliance data is not managed by State Manager. It is managed by your direct call to the PutComplianceItems API action. By default, all associations use AUTO mode.
+    */
+  var SyncCompliance: js.UndefOr[AssociationSyncCompliance] = js.native
+  /**
+    * The targets for the association. You can target instances by using tags, AWS Resource Groups, all instances in an AWS account, or individual instance IDs. For more information about choosing targets for an association, see Using targets and rate controls with State Manager associations in the AWS Systems Manager User Guide.
     */
   var Targets: js.UndefOr[typingsSlinky.awsSdk.ssmMod.Targets] = js.native
 }
 
 object CreateAssociationRequest {
   @scala.inline
-  def apply(Name: DocumentARN): CreateAssociationRequest = {
+  def apply(
+    Name: DocumentARN,
+    AssociationName: AssociationName = null,
+    AutomationTargetParameterName: AutomationTargetParameterName = null,
+    ComplianceSeverity: AssociationComplianceSeverity = null,
+    DocumentVersion: DocumentVersion = null,
+    InstanceId: InstanceId = null,
+    MaxConcurrency: MaxConcurrency = null,
+    MaxErrors: MaxErrors = null,
+    OutputLocation: InstanceAssociationOutputLocation = null,
+    Parameters: Parameters = null,
+    ScheduleExpression: ScheduleExpression = null,
+    SyncCompliance: AssociationSyncCompliance = null,
+    Targets: Targets = null
+  ): CreateAssociationRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (AssociationName != null) __obj.updateDynamic("AssociationName")(AssociationName.asInstanceOf[js.Any])
+    if (AutomationTargetParameterName != null) __obj.updateDynamic("AutomationTargetParameterName")(AutomationTargetParameterName.asInstanceOf[js.Any])
+    if (ComplianceSeverity != null) __obj.updateDynamic("ComplianceSeverity")(ComplianceSeverity.asInstanceOf[js.Any])
+    if (DocumentVersion != null) __obj.updateDynamic("DocumentVersion")(DocumentVersion.asInstanceOf[js.Any])
+    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
+    if (MaxConcurrency != null) __obj.updateDynamic("MaxConcurrency")(MaxConcurrency.asInstanceOf[js.Any])
+    if (MaxErrors != null) __obj.updateDynamic("MaxErrors")(MaxErrors.asInstanceOf[js.Any])
+    if (OutputLocation != null) __obj.updateDynamic("OutputLocation")(OutputLocation.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
+    if (ScheduleExpression != null) __obj.updateDynamic("ScheduleExpression")(ScheduleExpression.asInstanceOf[js.Any])
+    if (SyncCompliance != null) __obj.updateDynamic("SyncCompliance")(SyncCompliance.asInstanceOf[js.Any])
+    if (Targets != null) __obj.updateDynamic("Targets")(Targets.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAssociationRequest]
   }
-  @scala.inline
-  implicit class CreateAssociationRequestOps[Self <: CreateAssociationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: DocumentARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssociationName(value: AssociationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomationTargetParameterName(value: AutomationTargetParameterName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationTargetParameterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomationTargetParameterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationTargetParameterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplianceSeverity(value: AssociationComplianceSeverity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSeverity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSeverity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentVersion(value: DocumentVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxConcurrency(value: MaxConcurrency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxErrors(value: MaxErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputLocation(value: InstanceAssociationOutputLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: Parameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleExpression(value: ScheduleExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargets(value: Targets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

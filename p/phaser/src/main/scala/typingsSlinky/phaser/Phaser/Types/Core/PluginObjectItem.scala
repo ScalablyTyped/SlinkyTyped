@@ -4,135 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PluginObjectItem extends js.Object {
   /**
     * Arbitrary data passed to the plugin's init() method.
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /**
     * A key to identify the plugin in the Plugin Manager.
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * If this plugin is to be injected into the Scene Systems, this is the property key map used.
     */
-  var mapping: js.UndefOr[String] = js.native
+  var mapping: js.UndefOr[String] = js.undefined
   /**
     * The plugin itself. Usually a class/constructor.
     */
-  var plugin: js.UndefOr[js.Any] = js.native
+  var plugin: js.UndefOr[js.Any] = js.undefined
   /**
     * For a scene plugin, add the plugin to the scene object under this key (`this.KEY`, from the scene).
     */
-  var sceneKey: js.UndefOr[String] = js.native
+  var sceneKey: js.UndefOr[String] = js.undefined
   /**
     * Whether the plugin should be started automatically.
     */
-  var start: js.UndefOr[Boolean] = js.native
+  var start: js.UndefOr[Boolean] = js.undefined
   /**
     * For a scene plugin, add the plugin to the scene's systems object under this key (`this.sys.KEY`, from the scene).
     */
-  var systemKey: js.UndefOr[String] = js.native
+  var systemKey: js.UndefOr[String] = js.undefined
 }
 
 object PluginObjectItem {
   @scala.inline
-  def apply(): PluginObjectItem = {
+  def apply(
+    data: js.Any = null,
+    key: String = null,
+    mapping: String = null,
+    plugin: js.Any = null,
+    sceneKey: String = null,
+    start: js.UndefOr[Boolean] = js.undefined,
+    systemKey: String = null
+  ): PluginObjectItem = {
     val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (mapping != null) __obj.updateDynamic("mapping")(mapping.asInstanceOf[js.Any])
+    if (plugin != null) __obj.updateDynamic("plugin")(plugin.asInstanceOf[js.Any])
+    if (sceneKey != null) __obj.updateDynamic("sceneKey")(sceneKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(start)) __obj.updateDynamic("start")(start.get.asInstanceOf[js.Any])
+    if (systemKey != null) __obj.updateDynamic("systemKey")(systemKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginObjectItem]
   }
-  @scala.inline
-  implicit class PluginObjectItemOps[Self <: PluginObjectItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapping(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSceneKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sceneKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSceneKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sceneKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

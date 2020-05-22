@@ -18,24 +18,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Rewritten from type alias, can be one of: 
-  - typingsSlinky.stellarBase.mod.OperationType.CreateAccount
-  - typingsSlinky.stellarBase.mod.OperationType.Payment
-  - typingsSlinky.stellarBase.mod.OperationType.PathPaymentStrictReceive
-  - typingsSlinky.stellarBase.mod.OperationType.PathPaymentStrictSend
-  - typingsSlinky.stellarBase.mod.OperationType.CreatePassiveSellOffer
-  - typingsSlinky.stellarBase.mod.OperationType.ManageSellOffer
-  - typingsSlinky.stellarBase.mod.OperationType.ManageBuyOffer
-  - typingsSlinky.stellarBase.mod.OperationType.SetOptions
-  - typingsSlinky.stellarBase.mod.OperationType.ChangeTrust
-  - typingsSlinky.stellarBase.mod.OperationType.AllowTrust
-  - typingsSlinky.stellarBase.mod.OperationType.AccountMerge
-  - typingsSlinky.stellarBase.mod.OperationType.Inflation
-  - typingsSlinky.stellarBase.mod.OperationType.ManageData
-  - typingsSlinky.stellarBase.mod.OperationType.BumpSequence
-*/
-trait OperationType extends js.Object
-
 @JSImport("stellar-base", "OperationType")
 @js.native
 object OperationType extends js.Object {

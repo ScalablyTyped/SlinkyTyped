@@ -14,29 +14,10 @@ trait BatchRetryStrategy extends js.Object {
 
 object BatchRetryStrategy {
   @scala.inline
-  def apply(): BatchRetryStrategy = {
+  def apply(Attempts: js.UndefOr[Integer] = js.undefined): BatchRetryStrategy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Attempts)) __obj.updateDynamic("Attempts")(Attempts.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchRetryStrategy]
   }
-  @scala.inline
-  implicit class BatchRetryStrategyOps[Self <: BatchRetryStrategy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttempts(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttempts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attempts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

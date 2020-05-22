@@ -4,114 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RefundResource extends Resource {
-  val capture_id: js.UndefOr[String] = js.native
-  var description: js.UndefOr[String] = js.native
-  var invoice_number: js.UndefOr[String] = js.native
-  var reason: js.UndefOr[String] = js.native
-  val refund_funding_type: js.UndefOr[String] = js.native
-  val refund_reason_code: js.UndefOr[String] = js.native
-  val sale_id: js.UndefOr[String] = js.native
+  val capture_id: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var invoice_number: js.UndefOr[String] = js.undefined
+  var reason: js.UndefOr[String] = js.undefined
+  val refund_funding_type: js.UndefOr[String] = js.undefined
+  val refund_reason_code: js.UndefOr[String] = js.undefined
+  val sale_id: js.UndefOr[String] = js.undefined
 }
 
 object RefundResource {
   @scala.inline
-  def apply(amount: Amount, id: String): RefundResource = {
+  def apply(
+    amount: Amount,
+    id: String,
+    capture_id: String = null,
+    create_time: String = null,
+    description: String = null,
+    fmf_details: FraudManagementFiltersDetails = null,
+    invoice_number: String = null,
+    links: js.Array[Link] = null,
+    parent_payment: String = null,
+    payment_mode: String = null,
+    processor_response: js.Any = null,
+    protection_eligibility: String = null,
+    protection_eligibility_type: String = null,
+    reason: String = null,
+    reason_code: String = null,
+    receipt_id: String = null,
+    refund_funding_type: String = null,
+    refund_reason_code: String = null,
+    sale_id: String = null,
+    state: String = null,
+    update_time: String = null
+  ): RefundResource = {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    if (capture_id != null) __obj.updateDynamic("capture_id")(capture_id.asInstanceOf[js.Any])
+    if (create_time != null) __obj.updateDynamic("create_time")(create_time.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (fmf_details != null) __obj.updateDynamic("fmf_details")(fmf_details.asInstanceOf[js.Any])
+    if (invoice_number != null) __obj.updateDynamic("invoice_number")(invoice_number.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (parent_payment != null) __obj.updateDynamic("parent_payment")(parent_payment.asInstanceOf[js.Any])
+    if (payment_mode != null) __obj.updateDynamic("payment_mode")(payment_mode.asInstanceOf[js.Any])
+    if (processor_response != null) __obj.updateDynamic("processor_response")(processor_response.asInstanceOf[js.Any])
+    if (protection_eligibility != null) __obj.updateDynamic("protection_eligibility")(protection_eligibility.asInstanceOf[js.Any])
+    if (protection_eligibility_type != null) __obj.updateDynamic("protection_eligibility_type")(protection_eligibility_type.asInstanceOf[js.Any])
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
+    if (reason_code != null) __obj.updateDynamic("reason_code")(reason_code.asInstanceOf[js.Any])
+    if (receipt_id != null) __obj.updateDynamic("receipt_id")(receipt_id.asInstanceOf[js.Any])
+    if (refund_funding_type != null) __obj.updateDynamic("refund_funding_type")(refund_funding_type.asInstanceOf[js.Any])
+    if (refund_reason_code != null) __obj.updateDynamic("refund_reason_code")(refund_reason_code.asInstanceOf[js.Any])
+    if (sale_id != null) __obj.updateDynamic("sale_id")(sale_id.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (update_time != null) __obj.updateDynamic("update_time")(update_time.asInstanceOf[js.Any])
     __obj.asInstanceOf[RefundResource]
   }
-  @scala.inline
-  implicit class RefundResourceOps[Self <: RefundResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapture_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capture_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapture_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capture_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvoice_number(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoice_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvoice_number: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoice_number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefund_funding_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refund_funding_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefund_funding_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refund_funding_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefund_reason_code(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refund_reason_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefund_reason_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refund_reason_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSale_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sale_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSale_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sale_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,89 +38,22 @@ trait SchemaManagedShortLink extends js.Object {
 
 object SchemaManagedShortLink {
   @scala.inline
-  def apply(): SchemaManagedShortLink = {
+  def apply(
+    creationTime: String = null,
+    flaggedAttribute: js.Array[String] = null,
+    info: SchemaDynamicLinkInfo = null,
+    link: String = null,
+    linkName: String = null,
+    visibility: String = null
+  ): SchemaManagedShortLink = {
     val __obj = js.Dynamic.literal()
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (flaggedAttribute != null) __obj.updateDynamic("flaggedAttribute")(flaggedAttribute.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (linkName != null) __obj.updateDynamic("linkName")(linkName.asInstanceOf[js.Any])
+    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedShortLink]
   }
-  @scala.inline
-  implicit class SchemaManagedShortLinkOps[Self <: SchemaManagedShortLink] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlaggedAttribute(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flaggedAttribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlaggedAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flaggedAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: SchemaDynamicLinkInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

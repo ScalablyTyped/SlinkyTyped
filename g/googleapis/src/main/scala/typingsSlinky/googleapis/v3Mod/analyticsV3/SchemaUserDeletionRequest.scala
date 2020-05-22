@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.v3Mod.analyticsV3
 
-import typingsSlinky.googleapis.AnonType
+import typingsSlinky.googleapis.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait SchemaUserDeletionRequest extends js.Object {
   /**
     * User ID.
     */
-  var id: js.UndefOr[AnonType] = js.native
+  var id: js.UndefOr[Type] = js.native
   /**
     * Value is &quot;analytics#userDeletionRequest&quot;.
     */
@@ -35,77 +35,20 @@ trait SchemaUserDeletionRequest extends js.Object {
 
 object SchemaUserDeletionRequest {
   @scala.inline
-  def apply(): SchemaUserDeletionRequest = {
+  def apply(
+    deletionRequestTime: String = null,
+    firebaseProjectId: String = null,
+    id: Type = null,
+    kind: String = null,
+    webPropertyId: String = null
+  ): SchemaUserDeletionRequest = {
     val __obj = js.Dynamic.literal()
+    if (deletionRequestTime != null) __obj.updateDynamic("deletionRequestTime")(deletionRequestTime.asInstanceOf[js.Any])
+    if (firebaseProjectId != null) __obj.updateDynamic("firebaseProjectId")(firebaseProjectId.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (webPropertyId != null) __obj.updateDynamic("webPropertyId")(webPropertyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUserDeletionRequest]
   }
-  @scala.inline
-  implicit class SchemaUserDeletionRequestOps[Self <: SchemaUserDeletionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletionRequestTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionRequestTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletionRequestTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionRequestTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirebaseProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firebaseProjectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirebaseProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firebaseProjectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: AnonType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebPropertyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebPropertyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

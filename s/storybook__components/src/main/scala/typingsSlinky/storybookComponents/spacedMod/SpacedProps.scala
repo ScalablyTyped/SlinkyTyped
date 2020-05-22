@@ -13,53 +13,16 @@ trait SpacedProps extends js.Object {
 
 object SpacedProps {
   @scala.inline
-  def apply(): SpacedProps = {
+  def apply(
+    col: js.UndefOr[Double] = js.undefined,
+    outer: Double | Boolean = null,
+    row: js.UndefOr[Double] = js.undefined
+  ): SpacedProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(col)) __obj.updateDynamic("col")(col.get.asInstanceOf[js.Any])
+    if (outer != null) __obj.updateDynamic("outer")(outer.asInstanceOf[js.Any])
+    if (!js.isUndefined(row)) __obj.updateDynamic("row")(row.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpacedProps]
   }
-  @scala.inline
-  implicit class SpacedPropsOps[Self <: SpacedProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCol(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuter(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

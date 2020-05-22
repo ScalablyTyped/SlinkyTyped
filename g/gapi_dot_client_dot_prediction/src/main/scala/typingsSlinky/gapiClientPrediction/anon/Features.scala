@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Features extends js.Object {
   /** Description of the input features in the data set. */
-  var features: js.UndefOr[js.Array[Categorical]] = js.native
+  var features: js.UndefOr[js.Array[Categorical]] = js.undefined
   /** Description of the output value or label. */
-  var outputFeature: js.UndefOr[Numeric] = js.native
+  var outputFeature: js.UndefOr[Numeric] = js.undefined
 }
 
 object Features {
   @scala.inline
-  def apply(): Features = {
+  def apply(features: js.Array[Categorical] = null, outputFeature: Numeric = null): Features = {
     val __obj = js.Dynamic.literal()
+    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
+    if (outputFeature != null) __obj.updateDynamic("outputFeature")(outputFeature.asInstanceOf[js.Any])
     __obj.asInstanceOf[Features]
   }
-  @scala.inline
-  implicit class FeaturesOps[Self <: Features] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeatures(value: js.Array[Categorical]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputFeature(value: Numeric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputFeature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputFeature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputFeature")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

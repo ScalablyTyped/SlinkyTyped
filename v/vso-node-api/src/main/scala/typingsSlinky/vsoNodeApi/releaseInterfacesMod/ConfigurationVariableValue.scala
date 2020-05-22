@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigurationVariableValue extends js.Object {
   /**
     * Gets or sets as variable is secret or not.
     */
-  var isSecret: Boolean = js.native
+  var isSecret: Boolean
   /**
     * Gets or sets value of the configuration variable.
     */
-  var value: String = js.native
+  var value: String
 }
 
 object ConfigurationVariableValue {
@@ -22,25 +21,5 @@ object ConfigurationVariableValue {
     val __obj = js.Dynamic.literal(isSecret = isSecret.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationVariableValue]
   }
-  @scala.inline
-  implicit class ConfigurationVariableValueOps[Self <: ConfigurationVariableValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsSecret(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

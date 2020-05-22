@@ -44,6 +44,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.settingsMod.StructureVersionInfo because Inheritance from two classes. Inlined 
 - typingsSlinky.mendixmodelsdk.textsMod.StructureVersionInfo because Inheritance from two classes. Inlined 
 - typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo because Inheritance from two classes. Inlined 
+- typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo because Inheritance from two classes. Inlined 
 - typingsSlinky.mendixmodelsdk.xmlschemasMod.StructureVersionInfo because Inheritance from two classes. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "StructureVersionInfo")
 @js.native
 class StructureVersionInfo protected ()

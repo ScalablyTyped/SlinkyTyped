@@ -6,107 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Parameters for the `createCollection` operation. */
-@js.native
 trait CreateCollectionParams extends js.Object {
   /** The ID of the configuration in which the collection is to be created. */
-  var configuration_id: js.UndefOr[String] = js.native
+  var configuration_id: js.UndefOr[String] = js.undefined
   /** A description of the collection. */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /** The ID of the environment. */
-  var environment_id: String = js.native
-  var headers: js.UndefOr[js.Object] = js.native
+  var environment_id: String
+  var headers: js.UndefOr[js.Object] = js.undefined
   /** The language of the documents stored in the collection, in the form of an ISO 639-1 language code. */
-  var language: js.UndefOr[Language | String] = js.native
+  var language: js.UndefOr[Language | String] = js.undefined
   /** The name of the collection to be created. */
-  var name: String = js.native
-  var return_response: js.UndefOr[Boolean] = js.native
+  var name: String
+  var return_response: js.UndefOr[Boolean] = js.undefined
 }
 
 object CreateCollectionParams {
   @scala.inline
-  def apply(environment_id: String, name: String): CreateCollectionParams = {
+  def apply(
+    environment_id: String,
+    name: String,
+    configuration_id: String = null,
+    description: String = null,
+    headers: js.Object = null,
+    language: Language | String = null,
+    return_response: js.UndefOr[Boolean] = js.undefined
+  ): CreateCollectionParams = {
     val __obj = js.Dynamic.literal(environment_id = environment_id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (configuration_id != null) __obj.updateDynamic("configuration_id")(configuration_id.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (!js.isUndefined(return_response)) __obj.updateDynamic("return_response")(return_response.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCollectionParams]
   }
-  @scala.inline
-  implicit class CreateCollectionParamsOps[Self <: CreateCollectionParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnvironment_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfiguration_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfiguration_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: Language | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturn_response(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturn_response: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

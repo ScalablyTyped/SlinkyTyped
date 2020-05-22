@@ -22,41 +22,10 @@ trait AlgorithmStatusItem extends js.Object {
 
 object AlgorithmStatusItem {
   @scala.inline
-  def apply(Name: EntityName, Status: DetailedAlgorithmStatus): AlgorithmStatusItem = {
+  def apply(Name: EntityName, Status: DetailedAlgorithmStatus, FailureReason: String = null): AlgorithmStatusItem = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
+    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlgorithmStatusItem]
   }
-  @scala.inline
-  implicit class AlgorithmStatusItemOps[Self <: AlgorithmStatusItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: DetailedAlgorithmStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

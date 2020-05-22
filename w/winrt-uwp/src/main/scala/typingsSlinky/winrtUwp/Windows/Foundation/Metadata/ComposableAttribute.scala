@@ -5,6 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Indicates how a programming element is composed. */
-@js.native
 trait ComposableAttribute extends js.Object
 

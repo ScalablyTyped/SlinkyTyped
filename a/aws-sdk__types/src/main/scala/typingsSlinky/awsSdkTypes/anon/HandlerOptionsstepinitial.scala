@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined @aws-sdk/types.@aws-sdk/types/build/middleware.HandlerOptions & {  step ? :'initialize'} */
-@js.native
 trait HandlerOptionsstepinitial extends js.Object {
   /**
     * A number that specifies how early in a given step of the middleware stack
@@ -20,7 +19,7 @@ trait HandlerOptionsstepinitial extends js.Object {
     *
     * @default 0
     */
-  var priority: js.UndefOr[Double] = js.native
+  var priority: js.UndefOr[Double] = js.undefined
   /**
     * Handlers are ordered using a "step" that describes the stage of command
     * execution at which the handler will be executed. The available steps are:
@@ -48,63 +47,26 @@ trait HandlerOptionsstepinitial extends js.Object {
     *
     * @default 'initialize'
     */
-  var step: js.UndefOr[Step with initialize] = js.native
+  var step: js.UndefOr[Step with initialize] = js.undefined
   /**
     * A map of strings to any that identify the general purpose or important
     * characteristics of a given handler.
     */
-  var tags: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var tags: js.UndefOr[StringDictionary[js.Any]] = js.undefined
 }
 
 object HandlerOptionsstepinitial {
   @scala.inline
-  def apply(): HandlerOptionsstepinitial = {
+  def apply(
+    priority: js.UndefOr[Double] = js.undefined,
+    step: Step with initialize = null,
+    tags: StringDictionary[js.Any] = null
+  ): HandlerOptionsstepinitial = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
+    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[HandlerOptionsstepinitial]
   }
-  @scala.inline
-  implicit class HandlerOptionsstepinitialOps[Self <: HandlerOptionsstepinitial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPriority(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Step with initialize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

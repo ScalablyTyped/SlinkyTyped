@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.hostMod
 
+import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.grammarkdown.nodesMod.SourceFile
 import typingsSlinky.prex.mod.CancellationToken
 import scala.scalajs.js
@@ -13,11 +14,14 @@ class AsyncHost () extends HostBase {
   var readFileCallback: js.UndefOr[js.Any] = js.native
   var writeFileCallback: js.UndefOr[js.Any] = js.native
   def getSourceFile(file: String): js.Promise[js.UndefOr[SourceFile]] = js.native
-  def getSourceFile(file: String, cancellationToken: CancellationToken): js.Promise[js.UndefOr[SourceFile]] = js.native
+  def getSourceFile(file: String, cancelable: Cancelable): js.Promise[js.UndefOr[SourceFile]] = js.native
+  def getSourceFile(file: String, cancelable: CancellationToken): js.Promise[js.UndefOr[SourceFile]] = js.native
   def readFile(file: String): js.Promise[js.UndefOr[String]] = js.native
-  def readFile(file: String, cancellationToken: CancellationToken): js.Promise[js.UndefOr[String]] = js.native
+  def readFile(file: String, cancelable: Cancelable): js.Promise[js.UndefOr[String]] = js.native
+  def readFile(file: String, cancelable: CancellationToken): js.Promise[js.UndefOr[String]] = js.native
   def writeFile(file: String, text: String): js.Promise[Unit] = js.native
-  def writeFile(file: String, text: String, cancellationToken: CancellationToken): js.Promise[Unit] = js.native
+  def writeFile(file: String, text: String, cancelable: Cancelable): js.Promise[Unit] = js.native
+  def writeFile(file: String, text: String, cancelable: CancellationToken): js.Promise[Unit] = js.native
 }
 
 /* static members */

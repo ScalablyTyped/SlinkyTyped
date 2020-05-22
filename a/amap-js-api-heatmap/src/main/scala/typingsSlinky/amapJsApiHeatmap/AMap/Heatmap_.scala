@@ -27,7 +27,7 @@ trait Heatmap_ extends js.Object {
     */
   def getMap(): Map = js.native
   /**
-    * 	获取热力图的属性信息
+    *     获取热力图的属性信息
     */
   def getOptions(): Options = js.native
   def getzIndex(): Double = js.native

@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SVGStringList extends js.Object {
   @JSName("MSHTML.SVGStringList_typekey")
-  var MSHTMLDotSVGStringList_typekey: SVGStringList = js.native
-  var numberOfItems: Double = js.native
-  def appendItem(newItem: String): String = js.native
-  def clear(): Unit = js.native
-  def getItem(index: Double): String = js.native
-  def initialize(newItem: String): String = js.native
-  def insertItemBefore(newItem: String, index: Double): String = js.native
-  def removeItem(index: Double): String = js.native
-  def replaceItem(newItem: String, index: Double): String = js.native
+  var MSHTMLDotSVGStringList_typekey: SVGStringList
+  var numberOfItems: Double
+  def appendItem(newItem: String): String
+  def clear(): Unit
+  def getItem(index: Double): String
+  def initialize(newItem: String): String
+  def insertItemBefore(newItem: String, index: Double): String
+  def removeItem(index: Double): String
+  def replaceItem(newItem: String, index: Double): String
 }
 
 object SVGStringList {
@@ -35,67 +34,5 @@ object SVGStringList {
     __obj.updateDynamic("MSHTML.SVGStringList_typekey")(MSHTMLDotSVGStringList_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGStringList]
   }
-  @scala.inline
-  implicit class SVGStringListOps[Self <: SVGStringList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotSVGStringList_typekey(value: SVGStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.SVGStringList_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppendItem(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetItem(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInitialize(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsertItemBefore(value: (String, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertItemBefore")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withNumberOfItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoveItem(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReplaceItem(value: (String, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceItem")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

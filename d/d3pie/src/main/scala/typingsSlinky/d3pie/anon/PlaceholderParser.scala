@@ -6,88 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlaceholderParser extends js.Object {
-  var enabled: js.UndefOr[Boolean] = js.native
-  var placeholderParser: js.UndefOr[js.Function2[/* index */ Double, /* data */ Percentage, Unit]] = js.native
-  var string: js.UndefOr[String] = js.native
-  var styles: js.UndefOr[BackgroundColor] = js.native
-  var `type`: js.UndefOr[placeholder | caption] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var placeholderParser: js.UndefOr[js.Function2[/* index */ Double, /* data */ Percentage, Unit]] = js.undefined
+  var string: js.UndefOr[String] = js.undefined
+  var styles: js.UndefOr[BackgroundColor] = js.undefined
+  var `type`: js.UndefOr[placeholder | caption] = js.undefined
 }
 
 object PlaceholderParser {
   @scala.inline
-  def apply(): PlaceholderParser = {
+  def apply(
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    placeholderParser: (/* index */ Double, /* data */ Percentage) => Unit = null,
+    string: String = null,
+    styles: BackgroundColor = null,
+    `type`: placeholder | caption = null
+  ): PlaceholderParser = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (placeholderParser != null) __obj.updateDynamic("placeholderParser")(js.Any.fromFunction2(placeholderParser))
+    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaceholderParser]
   }
-  @scala.inline
-  implicit class PlaceholderParserOps[Self <: PlaceholderParser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderParser(value: (/* index */ Double, /* data */ Percentage) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderParser")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholderParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderParser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: BackgroundColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: placeholder | caption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

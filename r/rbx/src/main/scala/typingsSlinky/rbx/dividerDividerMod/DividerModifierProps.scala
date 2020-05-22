@@ -14,64 +14,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DividerModifierProps extends js.Object {
-  var children: js.UndefOr[String | Double] = js.native
+  var children: js.UndefOr[String | Double] = js.undefined
   var color: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link
-  ] = js.native
-  var vertical: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var vertical: js.UndefOr[Boolean] = js.undefined
 }
 
 object DividerModifierProps {
   @scala.inline
-  def apply(): DividerModifierProps = {
+  def apply(
+    children: String | Double = null,
+    color: primary | success | info | warning | danger | light | dark | white | black | link = null,
+    vertical: js.UndefOr[Boolean] = js.undefined
+  ): DividerModifierProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DividerModifierProps]
   }
-  @scala.inline
-  implicit class DividerModifierPropsOps[Self <: DividerModifierProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: primary | success | info | warning | danger | light | dark | white | black | link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

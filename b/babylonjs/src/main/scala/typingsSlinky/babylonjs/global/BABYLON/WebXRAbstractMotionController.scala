@@ -44,5 +44,10 @@ abstract class WebXRAbstractMotionController protected ()
   handness: MotionControllerHandness,
     _doNotLoadControllerMesh: Boolean
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

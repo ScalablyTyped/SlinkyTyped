@@ -20,29 +20,10 @@ trait SchemaDocumentsTarget extends js.Object {
 
 object SchemaDocumentsTarget {
   @scala.inline
-  def apply(): SchemaDocumentsTarget = {
+  def apply(documents: js.Array[String] = null): SchemaDocumentsTarget = {
     val __obj = js.Dynamic.literal()
+    if (documents != null) __obj.updateDynamic("documents")(documents.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDocumentsTarget]
   }
-  @scala.inline
-  implicit class SchemaDocumentsTargetOps[Self <: SchemaDocumentsTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocuments(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocuments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documents")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

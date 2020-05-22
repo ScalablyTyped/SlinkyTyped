@@ -22,53 +22,16 @@ trait QueryStatistics extends js.Object {
 
 object QueryStatistics {
   @scala.inline
-  def apply(): QueryStatistics = {
+  def apply(
+    bytesScanned: js.UndefOr[StatsValue] = js.undefined,
+    recordsMatched: js.UndefOr[StatsValue] = js.undefined,
+    recordsScanned: js.UndefOr[StatsValue] = js.undefined
+  ): QueryStatistics = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bytesScanned)) __obj.updateDynamic("bytesScanned")(bytesScanned.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recordsMatched)) __obj.updateDynamic("recordsMatched")(recordsMatched.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recordsScanned)) __obj.updateDynamic("recordsScanned")(recordsScanned.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryStatistics]
   }
-  @scala.inline
-  implicit class QueryStatisticsOps[Self <: QueryStatistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBytesScanned(value: StatsValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesScanned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBytesScanned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesScanned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordsMatched(value: StatsValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsMatched")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordsMatched: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsMatched")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordsScanned(value: StatsValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsScanned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordsScanned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsScanned")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

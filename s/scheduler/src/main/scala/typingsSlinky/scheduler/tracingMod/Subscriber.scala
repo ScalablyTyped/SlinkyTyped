@@ -5,21 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Subscriber extends js.Object {
   /**
     * All scheduled async work for an interaction has finished.
     */
-  def onInteractionScheduledWorkCompleted(interaction: Interaction): Unit = js.native
+  def onInteractionScheduledWorkCompleted(interaction: Interaction): Unit
   /**
     * A new interaction has been created via the trace() method.
     */
-  def onInteractionTraced(interaction: Interaction): Unit = js.native
+  def onInteractionTraced(interaction: Interaction): Unit
   /**
     * A batch of scheduled work has been canceled.
     * Work is done by a "thread" which is identified by a unique ID.
     */
-  def onWorkCanceled(interactions: Set[Interaction], threadID: Double): Unit = js.native
+  def onWorkCanceled(interactions: Set[Interaction], threadID: Double): Unit
   /**
     * New async work has been scheduled for a set of interactions.
     * When this work is later run, onWorkStarted/onWorkStopped will be called.
@@ -27,7 +26,7 @@ trait Subscriber extends js.Object {
     * In that case, onWorkScheduled may be called more than once before onWorkStopped.
     * Work is scheduled by a "thread" which is identified by a unique ID.
     */
-  def onWorkScheduled(interactions: Set[Interaction], threadID: Double): Unit = js.native
+  def onWorkScheduled(interactions: Set[Interaction], threadID: Double): Unit
   /**
     * A batch of work has started for a set of interactions.
     * When this work is complete, onWorkStopped will be called.
@@ -36,12 +35,12 @@ trait Subscriber extends js.Object {
     * In that case, onWorkStarted may be called more than once before onWorkStopped.
     * Work is done by a "thread" which is identified by a unique ID.
     */
-  def onWorkStarted(interactions: Set[Interaction], threadID: Double): Unit = js.native
+  def onWorkStarted(interactions: Set[Interaction], threadID: Double): Unit
   /**
     * A batch of work has completed for a set of interactions.
     * Work is done by a "thread" which is identified by a unique ID.
     */
-  def onWorkStopped(interactions: Set[Interaction], threadID: Double): Unit = js.native
+  def onWorkStopped(interactions: Set[Interaction], threadID: Double): Unit
 }
 
 object Subscriber {
@@ -57,49 +56,5 @@ object Subscriber {
     val __obj = js.Dynamic.literal(onInteractionScheduledWorkCompleted = js.Any.fromFunction1(onInteractionScheduledWorkCompleted), onInteractionTraced = js.Any.fromFunction1(onInteractionTraced), onWorkCanceled = js.Any.fromFunction2(onWorkCanceled), onWorkScheduled = js.Any.fromFunction2(onWorkScheduled), onWorkStarted = js.Any.fromFunction2(onWorkStarted), onWorkStopped = js.Any.fromFunction2(onWorkStopped))
     __obj.asInstanceOf[Subscriber]
   }
-  @scala.inline
-  implicit class SubscriberOps[Self <: Subscriber] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnInteractionScheduledWorkCompleted(value: Interaction => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInteractionScheduledWorkCompleted")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnInteractionTraced(value: Interaction => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInteractionTraced")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnWorkCanceled(value: (Set[Interaction], Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWorkCanceled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOnWorkScheduled(value: (Set[Interaction], Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWorkScheduled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOnWorkStarted(value: (Set[Interaction], Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWorkStarted")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOnWorkStopped(value: (Set[Interaction], Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWorkStopped")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

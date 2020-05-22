@@ -4,100 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ApiKey extends js.Object {
   /**
     * The API Key to use.
     */
-  var apiKey: js.UndefOr[String] = js.native
+  var apiKey: js.UndefOr[String] = js.undefined
   /**
     * The app's client ID, found and created in the Google Developers Console.
     */
-  var clientId: js.UndefOr[String] = js.native
+  var clientId: js.UndefOr[String] = js.undefined
   /**
     * An array of discovery doc URLs or discovery doc JSON objects.
     */
-  var discoveryDocs: js.UndefOr[js.Array[String]] = js.native
-  var hosted_domain: js.UndefOr[String] = js.native
+  var discoveryDocs: js.UndefOr[js.Array[String]] = js.undefined
+  var hosted_domain: js.UndefOr[String] = js.undefined
   /**
     * The scopes to request, as a space-delimited string.
     */
-  var scope: js.UndefOr[String] = js.native
+  var scope: js.UndefOr[String] = js.undefined
 }
 
 object ApiKey {
   @scala.inline
-  def apply(): ApiKey = {
+  def apply(
+    apiKey: String = null,
+    clientId: String = null,
+    discoveryDocs: js.Array[String] = null,
+    hosted_domain: String = null,
+    scope: String = null
+  ): ApiKey = {
     val __obj = js.Dynamic.literal()
+    if (apiKey != null) __obj.updateDynamic("apiKey")(apiKey.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (discoveryDocs != null) __obj.updateDynamic("discoveryDocs")(discoveryDocs.asInstanceOf[js.Any])
+    if (hosted_domain != null) __obj.updateDynamic("hosted_domain")(hosted_domain.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiKey]
   }
-  @scala.inline
-  implicit class ApiKeyOps[Self <: ApiKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiscoveryDocs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discoveryDocs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscoveryDocs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discoveryDocs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHosted_domain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hosted_domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHosted_domain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hosted_domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

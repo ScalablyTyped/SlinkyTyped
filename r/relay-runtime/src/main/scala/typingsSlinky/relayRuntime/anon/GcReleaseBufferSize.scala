@@ -6,80 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GcReleaseBufferSize extends js.Object {
-  var gcReleaseBufferSize: js.UndefOr[Double | Null] = js.native
-  var gcScheduler: js.UndefOr[Scheduler | Null] = js.native
-  var operationLoader: js.UndefOr[OperationLoader | Null] = js.native
+  var gcReleaseBufferSize: js.UndefOr[Double | Null] = js.undefined
+  var gcScheduler: js.UndefOr[Scheduler | Null] = js.undefined
+  var operationLoader: js.UndefOr[OperationLoader | Null] = js.undefined
 }
 
 object GcReleaseBufferSize {
   @scala.inline
-  def apply(): GcReleaseBufferSize = {
+  def apply(
+    gcReleaseBufferSize: js.UndefOr[Null | Double] = js.undefined,
+    gcScheduler: js.UndefOr[Null | (/* callback */ js.Function0[Unit] => Unit)] = js.undefined,
+    operationLoader: js.UndefOr[Null | OperationLoader] = js.undefined
+  ): GcReleaseBufferSize = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(gcReleaseBufferSize)) __obj.updateDynamic("gcReleaseBufferSize")(gcReleaseBufferSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(gcScheduler)) __obj.updateDynamic("gcScheduler")(if (gcScheduler != null) js.Any.fromFunction1(gcScheduler.asInstanceOf[/* callback */ js.Function0[Unit] => Unit]) else null)
+    if (!js.isUndefined(operationLoader)) __obj.updateDynamic("operationLoader")(operationLoader.asInstanceOf[js.Any])
     __obj.asInstanceOf[GcReleaseBufferSize]
   }
-  @scala.inline
-  implicit class GcReleaseBufferSizeOps[Self <: GcReleaseBufferSize] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGcReleaseBufferSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcReleaseBufferSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcReleaseBufferSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcReleaseBufferSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcReleaseBufferSizeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcReleaseBufferSize")(null)
-        ret
-    }
-    @scala.inline
-    def withGcScheduler(value: /* callback */ js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcScheduler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGcScheduler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcScheduler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcSchedulerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcScheduler")(null)
-        ret
-    }
-    @scala.inline
-    def withOperationLoader(value: OperationLoader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationLoader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationLoader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationLoader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationLoaderNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationLoader")(null)
-        ret
-    }
-  }
-  
 }
 

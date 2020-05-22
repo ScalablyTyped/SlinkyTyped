@@ -37,6 +37,11 @@ object Message {
   }
   
   def withProps[V <: Record[String, js.Any]](p: Props[V]): Builder[V] = new Builder[V](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[V <: Record[String, js.Any]](): Builder[V] = {
+    val __props = js.Dynamic.literal()
+    new Builder[V](js.Array(this.component, __props.asInstanceOf[Props[V]]))
+  }
   implicit def make[V <: Record[String, js.Any]](companion: Message.type): Builder[V] = new Builder[V](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -22,41 +22,11 @@ trait SchemaFirstPartyPrincipal extends js.Object {
 
 object SchemaFirstPartyPrincipal {
   @scala.inline
-  def apply(): SchemaFirstPartyPrincipal = {
+  def apply(principalEmail: String = null, serviceMetadata: StringDictionary[js.Any] = null): SchemaFirstPartyPrincipal = {
     val __obj = js.Dynamic.literal()
+    if (principalEmail != null) __obj.updateDynamic("principalEmail")(principalEmail.asInstanceOf[js.Any])
+    if (serviceMetadata != null) __obj.updateDynamic("serviceMetadata")(serviceMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFirstPartyPrincipal]
   }
-  @scala.inline
-  implicit class SchemaFirstPartyPrincipalOps[Self <: SchemaFirstPartyPrincipal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrincipalEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principalEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipalEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principalEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceMetadata(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

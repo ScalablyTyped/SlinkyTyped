@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RevertTagResponse extends js.Object {
   /**
     * Tag as it appears in the latest container version since the last workspace synchronization operation. If no tag is present, that means the tag was
     * deleted in the latest container version.
     */
-  var tag: js.UndefOr[Tag] = js.native
+  var tag: js.UndefOr[Tag] = js.undefined
 }
 
 object RevertTagResponse {
   @scala.inline
-  def apply(): RevertTagResponse = {
+  def apply(tag: Tag = null): RevertTagResponse = {
     val __obj = js.Dynamic.literal()
+    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevertTagResponse]
   }
-  @scala.inline
-  implicit class RevertTagResponseOps[Self <: RevertTagResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTag(value: Tag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

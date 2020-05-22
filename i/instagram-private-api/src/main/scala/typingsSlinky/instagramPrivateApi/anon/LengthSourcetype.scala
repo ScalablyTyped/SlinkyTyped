@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LengthSourcetype extends js.Object {
-  var length: Double = js.native
-  var source_type: `3` | `4` = js.native
+  var length: Double
+  var source_type: `3` | `4`
 }
 
 object LengthSourcetype {
@@ -18,25 +17,5 @@ object LengthSourcetype {
     val __obj = js.Dynamic.literal(length = length.asInstanceOf[js.Any], source_type = source_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[LengthSourcetype]
   }
-  @scala.inline
-  implicit class LengthSourcetypeOps[Self <: LengthSourcetype] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource_type(value: `3` | `4`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

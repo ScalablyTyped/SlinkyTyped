@@ -5,88 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  container  :std.Partial<react.react.CSSProperties>,   basic  :std.Partial<react.react.CSSProperties>,   chip  :std.Partial<react.react.CSSProperties>,   table  :std.Partial<react.react.CSSProperties>,   tableCell  :std.Partial<react.react.CSSProperties>}> */
-@js.native
 trait PartialcontainerPartialCS extends js.Object {
-  var basic: js.UndefOr[PartialCSSProperties] = js.native
-  var chip: js.UndefOr[PartialCSSProperties] = js.native
-  var container: js.UndefOr[PartialCSSProperties] = js.native
-  var table: js.UndefOr[PartialCSSProperties] = js.native
-  var tableCell: js.UndefOr[PartialCSSProperties] = js.native
+  var basic: js.UndefOr[PartialCSSProperties] = js.undefined
+  var chip: js.UndefOr[PartialCSSProperties] = js.undefined
+  var container: js.UndefOr[PartialCSSProperties] = js.undefined
+  var table: js.UndefOr[PartialCSSProperties] = js.undefined
+  var tableCell: js.UndefOr[PartialCSSProperties] = js.undefined
 }
 
 object PartialcontainerPartialCS {
   @scala.inline
-  def apply(): PartialcontainerPartialCS = {
+  def apply(
+    basic: PartialCSSProperties = null,
+    chip: PartialCSSProperties = null,
+    container: PartialCSSProperties = null,
+    table: PartialCSSProperties = null,
+    tableCell: PartialCSSProperties = null
+  ): PartialcontainerPartialCS = {
     val __obj = js.Dynamic.literal()
+    if (basic != null) __obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
+    if (chip != null) __obj.updateDynamic("chip")(chip.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
+    if (tableCell != null) __obj.updateDynamic("tableCell")(tableCell.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialcontainerPartialCS]
   }
-  @scala.inline
-  implicit class PartialcontainerPartialCSOps[Self <: PartialcontainerPartialCS] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBasic(value: PartialCSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChip(value: PartialCSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: PartialCSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: PartialCSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableCell(value: PartialCSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCell")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

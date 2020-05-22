@@ -4,79 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TryStatement
   extends BaseNode
      with Statement {
-  var block: BlockStatement = js.native
-  var finalizer: js.UndefOr[BlockStatement | Null] = js.native
-  var handler: js.UndefOr[CatchClause | Null] = js.native
+  var block: BlockStatement
+  var finalizer: js.UndefOr[BlockStatement | Null] = js.undefined
+  var handler: js.UndefOr[CatchClause | Null] = js.undefined
   @JSName("type")
-  var type_TryStatement: typingsSlinky.estree.estreeStrings.TryStatement = js.native
+  var type_TryStatement: typingsSlinky.estree.estreeStrings.TryStatement
 }
 
 object TryStatement {
   @scala.inline
-  def apply(block: BlockStatement, `type`: typingsSlinky.estree.estreeStrings.TryStatement): TryStatement = {
+  def apply(
+    block: BlockStatement,
+    `type`: typingsSlinky.estree.estreeStrings.TryStatement,
+    finalizer: js.UndefOr[Null | BlockStatement] = js.undefined,
+    handler: js.UndefOr[Null | CatchClause] = js.undefined,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TryStatement = {
     val __obj = js.Dynamic.literal(block = block.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(finalizer)) __obj.updateDynamic("finalizer")(finalizer.asInstanceOf[js.Any])
+    if (!js.isUndefined(handler)) __obj.updateDynamic("handler")(handler.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[TryStatement]
   }
-  @scala.inline
-  implicit class TryStatementOps[Self <: TryStatement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlock(value: BlockStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.estree.estreeStrings.TryStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFinalizer(value: BlockStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalizerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizer")(null)
-        ret
-    }
-    @scala.inline
-    def withHandler(value: CatchClause): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandlerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -47,7 +47,6 @@ import scala.scalajs.js.annotation._
   * implementations of this service.
   * @see Text
   */
-@js.native
 trait TextRange
   extends XTextRange
      with XPropertySet

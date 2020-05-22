@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KiiGcmInstallationResponse extends js.Object {
-  var installationID: String = js.native
+  var installationID: String
 }
 
 object KiiGcmInstallationResponse {
@@ -15,19 +14,5 @@ object KiiGcmInstallationResponse {
     val __obj = js.Dynamic.literal(installationID = installationID.asInstanceOf[js.Any])
     __obj.asInstanceOf[KiiGcmInstallationResponse]
   }
-  @scala.inline
-  implicit class KiiGcmInstallationResponseOps[Self <: KiiGcmInstallationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstallationID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installationID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

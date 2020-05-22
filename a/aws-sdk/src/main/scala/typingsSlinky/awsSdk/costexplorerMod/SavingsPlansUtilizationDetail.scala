@@ -30,77 +30,20 @@ trait SavingsPlansUtilizationDetail extends js.Object {
 
 object SavingsPlansUtilizationDetail {
   @scala.inline
-  def apply(): SavingsPlansUtilizationDetail = {
+  def apply(
+    AmortizedCommitment: SavingsPlansAmortizedCommitment = null,
+    Attributes: Attributes = null,
+    Savings: SavingsPlansSavings = null,
+    SavingsPlanArn: SavingsPlanArn = null,
+    Utilization: SavingsPlansUtilization = null
+  ): SavingsPlansUtilizationDetail = {
     val __obj = js.Dynamic.literal()
+    if (AmortizedCommitment != null) __obj.updateDynamic("AmortizedCommitment")(AmortizedCommitment.asInstanceOf[js.Any])
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
+    if (Savings != null) __obj.updateDynamic("Savings")(Savings.asInstanceOf[js.Any])
+    if (SavingsPlanArn != null) __obj.updateDynamic("SavingsPlanArn")(SavingsPlanArn.asInstanceOf[js.Any])
+    if (Utilization != null) __obj.updateDynamic("Utilization")(Utilization.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansUtilizationDetail]
   }
-  @scala.inline
-  implicit class SavingsPlansUtilizationDetailOps[Self <: SavingsPlansUtilizationDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmortizedCommitment(value: SavingsPlansAmortizedCommitment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmortizedCommitment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmortizedCommitment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmortizedCommitment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: Attributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSavings(value: SavingsPlansSavings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Savings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSavings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Savings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSavingsPlanArn(value: SavingsPlanArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlanArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSavingsPlanArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlanArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtilization(value: SavingsPlansUtilization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Utilization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtilization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Utilization")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

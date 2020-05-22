@@ -13,13 +13,12 @@ import scala.scalajs.js.annotation._
   * Factory interface for creating component instances giving a context from which to retrieve deployment values.
   * @see XInitialization
   */
-@js.native
 trait XMultiComponentFactory extends XInterface {
   /**
     * Gets the names of all supported services.
     * @returns sequence of all service names
     */
-  val AvailableServiceNames: SafeArray[String] = js.native
+  val AvailableServiceNames: SafeArray[String]
   /**
     * Creates an instance of a component which supports the services specified by the factory, and initializes the new instance with the given arguments and
     * context.
@@ -28,19 +27,19 @@ trait XMultiComponentFactory extends XInterface {
     * @param Context context the component instance gets its deployment values from
     * @returns component instance
     */
-  def createInstanceWithArgumentsAndContext(ServiceSpecifier: String, Arguments: SeqEquiv[_], Context: XComponentContext): XInterface = js.native
+  def createInstanceWithArgumentsAndContext(ServiceSpecifier: String, Arguments: SeqEquiv[_], Context: XComponentContext): XInterface
   /**
     * Creates an instance of a component which supports the services specified by the factory.
     * @param aServiceSpecifier service name
     * @param Context context the component instance gets its deployment values from
     * @returns component instance
     */
-  def createInstanceWithContext(aServiceSpecifier: String, Context: XComponentContext): XInterface = js.native
+  def createInstanceWithContext(aServiceSpecifier: String, Context: XComponentContext): XInterface
   /**
     * Gets the names of all supported services.
     * @returns sequence of all service names
     */
-  def getAvailableServiceNames(): SafeArray[String] = js.native
+  def getAvailableServiceNames(): SafeArray[String]
 }
 
 object XMultiComponentFactory {
@@ -57,37 +56,5 @@ object XMultiComponentFactory {
     val __obj = js.Dynamic.literal(AvailableServiceNames = AvailableServiceNames.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), createInstanceWithArgumentsAndContext = js.Any.fromFunction3(createInstanceWithArgumentsAndContext), createInstanceWithContext = js.Any.fromFunction2(createInstanceWithContext), getAvailableServiceNames = js.Any.fromFunction0(getAvailableServiceNames), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XMultiComponentFactory]
   }
-  @scala.inline
-  implicit class XMultiComponentFactoryOps[Self <: XMultiComponentFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailableServiceNames(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableServiceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateInstanceWithArgumentsAndContext(value: (String, SeqEquiv[_], XComponentContext) => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstanceWithArgumentsAndContext")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withCreateInstanceWithContext(value: (String, XComponentContext) => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstanceWithContext")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetAvailableServiceNames(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAvailableServiceNames")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

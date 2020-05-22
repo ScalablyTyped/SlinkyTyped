@@ -14,29 +14,10 @@ trait Remediation extends js.Object {
 
 object Remediation {
   @scala.inline
-  def apply(): Remediation = {
+  def apply(Recommendation: Recommendation = null): Remediation = {
     val __obj = js.Dynamic.literal()
+    if (Recommendation != null) __obj.updateDynamic("Recommendation")(Recommendation.asInstanceOf[js.Any])
     __obj.asInstanceOf[Remediation]
   }
-  @scala.inline
-  implicit class RemediationOps[Self <: Remediation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRecommendation(value: Recommendation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recommendation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recommendation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

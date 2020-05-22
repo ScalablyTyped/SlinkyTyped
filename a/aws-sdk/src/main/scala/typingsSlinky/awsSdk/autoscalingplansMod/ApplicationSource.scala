@@ -18,41 +18,11 @@ trait ApplicationSource extends js.Object {
 
 object ApplicationSource {
   @scala.inline
-  def apply(): ApplicationSource = {
+  def apply(CloudFormationStackARN: XmlString = null, TagFilters: TagFilters = null): ApplicationSource = {
     val __obj = js.Dynamic.literal()
+    if (CloudFormationStackARN != null) __obj.updateDynamic("CloudFormationStackARN")(CloudFormationStackARN.asInstanceOf[js.Any])
+    if (TagFilters != null) __obj.updateDynamic("TagFilters")(TagFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationSource]
   }
-  @scala.inline
-  implicit class ApplicationSourceOps[Self <: ApplicationSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudFormationStackARN(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFormationStackARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudFormationStackARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFormationStackARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagFilters(value: TagFilters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagFilters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

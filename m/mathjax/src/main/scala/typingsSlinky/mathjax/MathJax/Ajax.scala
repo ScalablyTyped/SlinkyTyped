@@ -4,36 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Ajax extends js.Object {
-  var STATUS: typingsSlinky.mathjax.MathJax.STATUS = js.native
+  var STATUS: typingsSlinky.mathjax.MathJax.STATUS
   /*An object containing the load hooks for the various files, set up by the LoadHook() method, or by the
     * MathJax.Hub.Register.LoadHook() method.
     */
-  var loadHooks: js.Any = js.native
+  var loadHooks: js.Any
   /*An object containing the names of the files that have been loaded (or requested) so far.
     * MathJax.Ajax.loaded["file"] will be non-null when the file has been loaded, with the value being the
     * MathJax.Ajax.STATUS value of the load attempt.
     */
-  var loaded: js.Any = js.native
+  var loaded: js.Any
   /*An object containing the files that are currently loading, the callbacks that are to be run when they load or
     * timeout, and additional internal data.*/
-  var loading: Boolean = js.native
+  var loading: Boolean
   /*Number of milliseconds to wait for a file to load before it is considered to have failed to load.*/
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
   /*Used internally to load a given file without checking if it already has been loaded, or where it is to
     * be found.
     */
-  def Load(file: String, callBack: js.Any): js.Any = js.native
+  def Load(file: String, callBack: js.Any): js.Any
   /*Registers a callback to be executed when the given file is loaded. The file load operation needs to be started
     * when this method is called, so it can be used to register a hook for a file that may be loaded in the future.
     */
-  def LoadHook(file: String, callBack: js.Any): js.Any = js.native
+  def LoadHook(file: String, callBack: js.Any): js.Any
   /*Used with combined configuration files to indicate what files are in the configuration file. Marks the files
     * as loading (since there will never be an explicit Load() or Require() call for them), so that load-hooks and
     * other load-related events can be properly processed when the loadComplete() occurs.
     */
-  def Preloading(args: js.Any*): Unit = js.native
+  def Preloading(args: js.Any*): Unit
   /*Loads the given file if it hasn’t been already. The file must be a JavaScript file or a CSS stylesheet; i.e.,
     * it must end in .js or .css. Alternatively, it can be an object with a single key:value pair where the key is
     * one of js or css and the value is the file of that type to be loaded (this makes it possible to have the file
@@ -46,29 +45,29 @@ trait Ajax extends js.Object {
     * MathJax.Ajax.STATUS.OK. If the file is already loaded, the callback will be called immediately and the file
     * will not be loaded again.
     */
-  def Require(file: String, callBack: js.Any): js.Any = js.native
+  def Require(file: String, callBack: js.Any): js.Any
   /*Creates a stylesheet from the given style data. styles can either be a string containing a stylesheet
     * definition, or an object containing a CSS Style Object.
     */
-  def Styles(styles: js.Any, callback: js.Any): js.Any = js.native
+  def Styles(styles: js.Any, callback: js.Any): js.Any
   /*Returns a complete URL to a file (replacing [MathJax] with the actual root URL location).*/
-  def fileURL(file: String): String = js.native
+  def fileURL(file: String): String
   /*Called from within the loaded files to inform MathJax that the file has been completely loaded and
     * initialized. The file parameter is the name of the file that has been loaded. This routine will cause any
     * callback functions registered for the file or included in the MathJax.Ajax.Require() calls to be executed,
     * passing them the status of the load (MathJax.Ajax.STATUS.OK or MathJax.Ajax.STATUS.ERROR) as their
     * last parameter.
     */
-  def loadComplete(file: String): Unit = js.native
+  def loadComplete(file: String): Unit
   /*The default error handler called when a file fails to load. It puts a warning message into the MathJax message
     * box on screen.
     */
-  def loadError(file: String): Unit = js.native
+  def loadError(file: String): Unit
   /*Called when the timeout period is over and the file hasn’t loaded. This indicates an error condition, and the
     * MathJax.Ajax.loadError() method will be executed, then the file’s callback will be run with
     * MathJax.Ajax.STATUS.ERROR as its parameter.
     */
-  def loadTimeout(file: String): Unit = js.native
+  def loadTimeout(file: String): Unit
 }
 
 object Ajax {
@@ -86,108 +85,12 @@ object Ajax {
     loadHooks: js.Any,
     loadTimeout: String => Unit,
     loaded: js.Any,
-    loading: Boolean
+    loading: Boolean,
+    timeout: js.UndefOr[Double] = js.undefined
   ): Ajax = {
     val __obj = js.Dynamic.literal(Load = js.Any.fromFunction2(Load), LoadHook = js.Any.fromFunction2(LoadHook), Preloading = js.Any.fromFunction1(Preloading), Require = js.Any.fromFunction2(Require), STATUS = STATUS.asInstanceOf[js.Any], Styles = js.Any.fromFunction2(Styles), fileURL = js.Any.fromFunction1(fileURL), loadComplete = js.Any.fromFunction1(loadComplete), loadError = js.Any.fromFunction1(loadError), loadHooks = loadHooks.asInstanceOf[js.Any], loadTimeout = js.Any.fromFunction1(loadTimeout), loaded = loaded.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ajax]
   }
-  @scala.inline
-  implicit class AjaxOps[Self <: Ajax] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoad(value: (String, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Load")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLoadHook(value: (String, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadHook")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPreloading(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Preloading")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRequire(value: (String, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Require")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSTATUS(value: STATUS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("STATUS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyles(value: (js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Styles")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFileURL(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileURL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadComplete(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadComplete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadError(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadHooks(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadHooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadTimeout(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadTimeout")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoaded(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

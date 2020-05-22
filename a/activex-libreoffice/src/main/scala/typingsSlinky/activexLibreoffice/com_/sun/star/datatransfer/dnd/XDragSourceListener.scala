@@ -12,37 +12,36 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.datatransfer.dnd.XDragGestureRecognizer
   * @see com.sun.star.datatransfer.dnd.XDragSource
   */
-@js.native
 trait XDragSourceListener extends XEventListener {
   /**
     * This method is invoked to signify that the Drag and Drop operation is complete.
     * @param dsde The {@link DragSourceDropEvent}
     */
-  def dragDropEnd(dsde: DragSourceDropEvent): Unit = js.native
+  def dragDropEnd(dsde: DragSourceDropEvent): Unit
   /**
     * Called as the hotspot enters a platform dependent drop site.
     *
     * **NOTE:** currently this notification can not be ensured by all implementations. Do not rely on it !
     * @param dsde The {@link DragSourceDragEvent} .
     */
-  def dragEnter(dsde: DragSourceDragEvent): Unit = js.native
+  def dragEnter(dsde: DragSourceDragEvent): Unit
   /**
     * Called as the hotspot exits a platform dependent drop site.
     *
     * **NOTE:** Currently this notification can not be ensured by all implementations. Do not rely on it !
     * @param dse The {@link DragSourceEvent} .
     */
-  def dragExit(dse: DragSourceEvent): Unit = js.native
+  def dragExit(dse: DragSourceEvent): Unit
   /**
     * Called as the hotspot moves over a platform dependent drop site.
     * @param dsde The {@link DragSourceEvent}
     */
-  def dragOver(dsde: DragSourceDragEvent): Unit = js.native
+  def dragOver(dsde: DragSourceDragEvent): Unit
   /**
     * Called when the user has modified the drop gesture.
     * @param dsde The {@link DragSourceEvent} .
     */
-  def dropActionChanged(dsde: DragSourceDragEvent): Unit = js.native
+  def dropActionChanged(dsde: DragSourceDragEvent): Unit
 }
 
 object XDragSourceListener {
@@ -61,43 +60,5 @@ object XDragSourceListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), dragDropEnd = js.Any.fromFunction1(dragDropEnd), dragEnter = js.Any.fromFunction1(dragEnter), dragExit = js.Any.fromFunction1(dragExit), dragOver = js.Any.fromFunction1(dragOver), dropActionChanged = js.Any.fromFunction1(dropActionChanged), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDragSourceListener]
   }
-  @scala.inline
-  implicit class XDragSourceListenerOps[Self <: XDragSourceListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDragDropEnd(value: DragSourceDropEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDropEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDragEnter(value: DragSourceDragEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDragExit(value: DragSourceEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragExit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDragOver(value: DragSourceDragEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDropActionChanged(value: DragSourceDragEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropActionChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DescribeFileSystemsResponse extends js.Object {
 
 object DescribeFileSystemsResponse {
   @scala.inline
-  def apply(): DescribeFileSystemsResponse = {
+  def apply(FileSystems: FileSystems = null, NextToken: NextToken = null): DescribeFileSystemsResponse = {
     val __obj = js.Dynamic.literal()
+    if (FileSystems != null) __obj.updateDynamic("FileSystems")(FileSystems.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFileSystemsResponse]
   }
-  @scala.inline
-  implicit class DescribeFileSystemsResponseOps[Self <: DescribeFileSystemsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileSystems(value: FileSystems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSystems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

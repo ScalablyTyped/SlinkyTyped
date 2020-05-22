@@ -13,10 +13,43 @@ trait PartialObserver[T] extends js.Object
 
 object PartialObserver {
   @scala.inline
-  implicit def apply[T](value: CompletionObserver[T]): PartialObserver[T] = value.asInstanceOf[PartialObserver[T]]
+  def NextObserver[T](
+    next: T => Unit,
+    closed: js.UndefOr[Boolean] = js.undefined,
+    complete: () => Unit = null,
+    error: /* err */ js.Any => Unit = null
+  ): PartialObserver[T] = {
+    val __obj = js.Dynamic.literal(next = js.Any.fromFunction1(next))
+    if (!js.isUndefined(closed)) __obj.updateDynamic("closed")(closed.get.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
+    __obj.asInstanceOf[PartialObserver[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: ErrorObserver[T]): PartialObserver[T] = value.asInstanceOf[PartialObserver[T]]
+  def ErrorObserver[T](
+    error: js.Any => Unit,
+    closed: js.UndefOr[Boolean] = js.undefined,
+    complete: () => Unit = null,
+    next: T => Unit = null
+  ): PartialObserver[T] = {
+    val __obj = js.Dynamic.literal(error = js.Any.fromFunction1(error))
+    if (!js.isUndefined(closed)) __obj.updateDynamic("closed")(closed.get.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+    if (next != null) __obj.updateDynamic("next")(js.Any.fromFunction1(next))
+    __obj.asInstanceOf[PartialObserver[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: NextObserver[T]): PartialObserver[T] = value.asInstanceOf[PartialObserver[T]]
+  def CompletionObserver[T](
+    complete: () => Unit,
+    closed: js.UndefOr[Boolean] = js.undefined,
+    error: /* err */ js.Any => Unit = null,
+    next: T => Unit = null
+  ): PartialObserver[T] = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete))
+    if (!js.isUndefined(closed)) __obj.updateDynamic("closed")(closed.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
+    if (next != null) __obj.updateDynamic("next")(js.Any.fromFunction1(next))
+    __obj.asInstanceOf[PartialObserver[T]]
+  }
 }
 

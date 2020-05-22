@@ -12,8 +12,14 @@ trait SystemFunctionResult extends js.Object
 
 object SystemFunctionResult {
   @scala.inline
-  implicit def apply(value: UnixSystemFunctionResult): SystemFunctionResult = value.asInstanceOf[SystemFunctionResult]
+  def WindowsSystemFunctionResult(lastError: Double, value: NativeReturnValue): SystemFunctionResult = {
+    val __obj = js.Dynamic.literal(lastError = lastError.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SystemFunctionResult]
+  }
   @scala.inline
-  implicit def apply(value: WindowsSystemFunctionResult): SystemFunctionResult = value.asInstanceOf[SystemFunctionResult]
+  def UnixSystemFunctionResult(errno: Double, value: NativeReturnValue): SystemFunctionResult = {
+    val __obj = js.Dynamic.literal(errno = errno.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SystemFunctionResult]
+  }
 }
 

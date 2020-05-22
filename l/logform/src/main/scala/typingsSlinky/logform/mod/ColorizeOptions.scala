@@ -5,87 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColorizeOptions extends js.Object {
   /**
     * If set to `true` the color will be applied to the `message` and `level`.
     */
-  var all: js.UndefOr[Boolean] = js.native
+  var all: js.UndefOr[Boolean] = js.undefined
   /**
     * An object containing the colors for the log levels. For example: `{ info: 'blue', error: 'red' }`.
     */
-  var colors: js.UndefOr[Record[String, String]] = js.native
+  var colors: js.UndefOr[Record[String, String]] = js.undefined
   /**
     * If set to `true` the color will be applied to the `level`.
     */
-  var level: js.UndefOr[Boolean] = js.native
+  var level: js.UndefOr[Boolean] = js.undefined
   /**
     * If set to `true` the color will be applied to the `message`.
     */
-  var message: js.UndefOr[Boolean] = js.native
+  var message: js.UndefOr[Boolean] = js.undefined
 }
 
 object ColorizeOptions {
   @scala.inline
-  def apply(): ColorizeOptions = {
+  def apply(
+    all: js.UndefOr[Boolean] = js.undefined,
+    colors: Record[String, String] = null,
+    level: js.UndefOr[Boolean] = js.undefined,
+    message: js.UndefOr[Boolean] = js.undefined
+  ): ColorizeOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(all)) __obj.updateDynamic("all")(all.get.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(message)) __obj.updateDynamic("message")(message.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorizeOptions]
   }
-  @scala.inline
-  implicit class ColorizeOptionsOps[Self <: ColorizeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColors(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,120 +7,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DarkModeConfig extends js.Object {
-  var classNameDark: js.UndefOr[String] = js.native
+  var classNameDark: js.UndefOr[String] = js.undefined
    // A className to set "dark mode". Default = "dark-mode".
-  var classNameLight: js.UndefOr[String] = js.native
+  var classNameLight: js.UndefOr[String] = js.undefined
    // A className to set "light mode". Default = "light-mode".
-  var element: js.UndefOr[HTMLElement] = js.native
+  var element: js.UndefOr[HTMLElement] = js.undefined
    // A storage provider. Default = `localStorage`.
-  var global: js.UndefOr[Window] = js.native
+  var global: js.UndefOr[Window] = js.undefined
    // The element to apply the className. Default = `document.body`
-  var onChange: js.UndefOr[js.Function1[/* val */ js.UndefOr[Boolean], Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* val */ js.UndefOr[Boolean], Unit]] = js.undefined
    // Overide the default className handler with a custom callback.
-  var storageKey: js.UndefOr[String] = js.native
+  var storageKey: js.UndefOr[String] = js.undefined
    // Specify the `localStorage` key. Default = "darkMode". Sewt to `null` to disable persistent storage.
-  var storageProvider: js.UndefOr[WindowLocalStorage] = js.native
+  var storageProvider: js.UndefOr[WindowLocalStorage] = js.undefined
 }
 
 object DarkModeConfig {
   @scala.inline
-  def apply(): DarkModeConfig = {
+  def apply(
+    classNameDark: String = null,
+    classNameLight: String = null,
+    element: HTMLElement = null,
+    global: Window = null,
+    onChange: /* val */ js.UndefOr[Boolean] => Unit = null,
+    storageKey: String = null,
+    storageProvider: WindowLocalStorage = null
+  ): DarkModeConfig = {
     val __obj = js.Dynamic.literal()
+    if (classNameDark != null) __obj.updateDynamic("classNameDark")(classNameDark.asInstanceOf[js.Any])
+    if (classNameLight != null) __obj.updateDynamic("classNameLight")(classNameLight.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (global != null) __obj.updateDynamic("global")(global.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (storageKey != null) __obj.updateDynamic("storageKey")(storageKey.asInstanceOf[js.Any])
+    if (storageProvider != null) __obj.updateDynamic("storageProvider")(storageProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[DarkModeConfig]
   }
-  @scala.inline
-  implicit class DarkModeConfigOps[Self <: DarkModeConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassNameDark(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNameDark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassNameDark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNameDark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassNameLight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNameLight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassNameLight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNameLight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobal(value: Window): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* val */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageProvider(value: WindowLocalStorage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageProvider")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

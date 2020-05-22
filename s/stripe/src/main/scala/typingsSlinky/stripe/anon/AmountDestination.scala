@@ -4,50 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AmountDestination extends js.Object {
   /**
     * The amount transferred to the destination account, if specified.
     * By default, the entire charge amount is transferred to the destination account.
     */
-  var amount: js.UndefOr[Double] = js.native
+  var amount: js.UndefOr[Double] = js.undefined
   /**
     * ID of an existing, connected Stripe account.
     */
-  var destination: String = js.native
+  var destination: String
 }
 
 object AmountDestination {
   @scala.inline
-  def apply(destination: String): AmountDestination = {
+  def apply(destination: String, amount: js.UndefOr[Double] = js.undefined): AmountDestination = {
     val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any])
+    if (!js.isUndefined(amount)) __obj.updateDynamic("amount")(amount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AmountDestination]
   }
-  @scala.inline
-  implicit class AmountDestinationOps[Self <: AmountDestination] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

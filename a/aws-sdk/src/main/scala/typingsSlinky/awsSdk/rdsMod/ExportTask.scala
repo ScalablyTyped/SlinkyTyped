@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ExportTask extends js.Object {
   /**
-    * The data exported from the snapshot. Valid values are the following:    database - Export all the data of the snapshot.    database.table [table-name] - Export a table of the snapshot.    database.schema [schema-name] - Export a database schema of the snapshot. This value isn't valid for RDS for MySQL, RDS for MariaDB, or Aurora MySQL.    database.schema.table [table-name] - Export a table of the database schema. This value isn't valid for RDS for MySQL, RDS for MariaDB, or Aurora MySQL.  
+    * The data exported from the snapshot. Valid values are the following:    database - Export all the data from a specified database.    database.table table-name - Export a table of the snapshot. This format is valid only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.    database.schema schema-name - Export a database schema of the snapshot. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.    database.schema.table table-name - Export a table of the database schema. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.  
     */
   var ExportOnly: js.UndefOr[StringList] = js.native
   /**
@@ -70,197 +70,40 @@ trait ExportTask extends js.Object {
 
 object ExportTask {
   @scala.inline
-  def apply(): ExportTask = {
+  def apply(
+    ExportOnly: StringList = null,
+    ExportTaskIdentifier: String = null,
+    FailureCause: String = null,
+    IamRoleArn: String = null,
+    KmsKeyId: String = null,
+    PercentProgress: js.UndefOr[Integer] = js.undefined,
+    S3Bucket: String = null,
+    S3Prefix: String = null,
+    SnapshotTime: js.Date = null,
+    SourceArn: String = null,
+    Status: String = null,
+    TaskEndTime: js.Date = null,
+    TaskStartTime: js.Date = null,
+    TotalExtractedDataInGB: js.UndefOr[Integer] = js.undefined,
+    WarningMessage: String = null
+  ): ExportTask = {
     val __obj = js.Dynamic.literal()
+    if (ExportOnly != null) __obj.updateDynamic("ExportOnly")(ExportOnly.asInstanceOf[js.Any])
+    if (ExportTaskIdentifier != null) __obj.updateDynamic("ExportTaskIdentifier")(ExportTaskIdentifier.asInstanceOf[js.Any])
+    if (FailureCause != null) __obj.updateDynamic("FailureCause")(FailureCause.asInstanceOf[js.Any])
+    if (IamRoleArn != null) __obj.updateDynamic("IamRoleArn")(IamRoleArn.asInstanceOf[js.Any])
+    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
+    if (!js.isUndefined(PercentProgress)) __obj.updateDynamic("PercentProgress")(PercentProgress.get.asInstanceOf[js.Any])
+    if (S3Bucket != null) __obj.updateDynamic("S3Bucket")(S3Bucket.asInstanceOf[js.Any])
+    if (S3Prefix != null) __obj.updateDynamic("S3Prefix")(S3Prefix.asInstanceOf[js.Any])
+    if (SnapshotTime != null) __obj.updateDynamic("SnapshotTime")(SnapshotTime.asInstanceOf[js.Any])
+    if (SourceArn != null) __obj.updateDynamic("SourceArn")(SourceArn.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (TaskEndTime != null) __obj.updateDynamic("TaskEndTime")(TaskEndTime.asInstanceOf[js.Any])
+    if (TaskStartTime != null) __obj.updateDynamic("TaskStartTime")(TaskStartTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalExtractedDataInGB)) __obj.updateDynamic("TotalExtractedDataInGB")(TotalExtractedDataInGB.get.asInstanceOf[js.Any])
+    if (WarningMessage != null) __obj.updateDynamic("WarningMessage")(WarningMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportTask]
   }
-  @scala.inline
-  implicit class ExportTaskOps[Self <: ExportTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportOnly(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportTaskIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportTaskIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportTaskIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportTaskIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureCause(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureCause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureCause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureCause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercentProgress(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PercentProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PercentProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3Bucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Bucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3Prefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Prefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskEndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskEndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskStartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalExtractedDataInGB(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalExtractedDataInGB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalExtractedDataInGB: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalExtractedDataInGB")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarningMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WarningMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarningMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WarningMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

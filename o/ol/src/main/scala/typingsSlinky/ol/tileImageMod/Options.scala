@@ -3,7 +3,6 @@ package typingsSlinky.ol.tileImageMod
 import typingsSlinky.ol.olTileMod.LoadFunction
 import typingsSlinky.ol.olTileMod.Tile
 import typingsSlinky.ol.olTileMod.UrlFunction
-import typingsSlinky.ol.pluggableMapMod.FrameState
 import typingsSlinky.ol.projMod.ProjectionLike
 import typingsSlinky.ol.sourceSourceMod.AttributionLike
 import typingsSlinky.ol.stateMod.State
@@ -12,278 +11,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var attributions: js.UndefOr[AttributionLike] = js.native
-  var attributionsCollapsible: js.UndefOr[Boolean] = js.native
-  var cacheSize: js.UndefOr[Double] = js.native
-  var crossOrigin: js.UndefOr[String] = js.native
-  var key: js.UndefOr[String] = js.native
-  var opaque: js.UndefOr[Boolean] = js.native
-  var projection: js.UndefOr[ProjectionLike] = js.native
-  var reprojectionErrorThreshold: js.UndefOr[Double] = js.native
-  var state: js.UndefOr[State] = js.native
-  var tileClass: js.UndefOr[typingsSlinky.ol.imageTileMod.default] = js.native
-  var tileGrid: js.UndefOr[typingsSlinky.ol.tilegridTileGridMod.default] = js.native
-  var tileLoadFunction: js.UndefOr[LoadFunction] = js.native
-  var tilePixelRatio: js.UndefOr[Double] = js.native
-  var tileUrlFunction: js.UndefOr[UrlFunction] = js.native
-  var transition: js.UndefOr[Double] = js.native
-  var url: js.UndefOr[String] = js.native
-  var urls: js.UndefOr[js.Array[String]] = js.native
-  var wrapX: js.UndefOr[Boolean] = js.native
-  var zDirection: js.UndefOr[Double] = js.native
+  var attributions: js.UndefOr[AttributionLike] = js.undefined
+  var attributionsCollapsible: js.UndefOr[Boolean] = js.undefined
+  var cacheSize: js.UndefOr[Double] = js.undefined
+  var crossOrigin: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String] = js.undefined
+  var opaque: js.UndefOr[Boolean] = js.undefined
+  var projection: js.UndefOr[ProjectionLike] = js.undefined
+  var reprojectionErrorThreshold: js.UndefOr[Double] = js.undefined
+  var state: js.UndefOr[State] = js.undefined
+  var tileClass: js.UndefOr[typingsSlinky.ol.imageTileMod.default] = js.undefined
+  var tileGrid: js.UndefOr[typingsSlinky.ol.tilegridTileGridMod.default] = js.undefined
+  var tileLoadFunction: js.UndefOr[LoadFunction] = js.undefined
+  var tilePixelRatio: js.UndefOr[Double] = js.undefined
+  var tileUrlFunction: js.UndefOr[UrlFunction] = js.undefined
+  var transition: js.UndefOr[Double] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
+  var urls: js.UndefOr[js.Array[String]] = js.undefined
+  var wrapX: js.UndefOr[Boolean] = js.undefined
+  var zDirection: js.UndefOr[Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    attributions: AttributionLike = null,
+    attributionsCollapsible: js.UndefOr[Boolean] = js.undefined,
+    cacheSize: js.UndefOr[Double] = js.undefined,
+    crossOrigin: String = null,
+    key: String = null,
+    opaque: js.UndefOr[Boolean] = js.undefined,
+    projection: ProjectionLike = null,
+    reprojectionErrorThreshold: js.UndefOr[Double] = js.undefined,
+    state: State = null,
+    tileClass: typingsSlinky.ol.imageTileMod.default = null,
+    tileGrid: typingsSlinky.ol.tilegridTileGridMod.default = null,
+    tileLoadFunction: (/* p0 */ Tile, /* p1 */ String) => Unit = null,
+    tilePixelRatio: js.UndefOr[Double] = js.undefined,
+    tileUrlFunction: (/* p0 */ TileCoord, /* p1 */ Double, /* p2 */ typingsSlinky.ol.projectionMod.default) => String = null,
+    transition: js.UndefOr[Double] = js.undefined,
+    url: String = null,
+    urls: js.Array[String] = null,
+    wrapX: js.UndefOr[Boolean] = js.undefined,
+    zDirection: js.UndefOr[Double] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (attributions != null) __obj.updateDynamic("attributions")(attributions.asInstanceOf[js.Any])
+    if (!js.isUndefined(attributionsCollapsible)) __obj.updateDynamic("attributionsCollapsible")(attributionsCollapsible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheSize)) __obj.updateDynamic("cacheSize")(cacheSize.get.asInstanceOf[js.Any])
+    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(opaque)) __obj.updateDynamic("opaque")(opaque.get.asInstanceOf[js.Any])
+    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
+    if (!js.isUndefined(reprojectionErrorThreshold)) __obj.updateDynamic("reprojectionErrorThreshold")(reprojectionErrorThreshold.get.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (tileClass != null) __obj.updateDynamic("tileClass")(tileClass.asInstanceOf[js.Any])
+    if (tileGrid != null) __obj.updateDynamic("tileGrid")(tileGrid.asInstanceOf[js.Any])
+    if (tileLoadFunction != null) __obj.updateDynamic("tileLoadFunction")(js.Any.fromFunction2(tileLoadFunction))
+    if (!js.isUndefined(tilePixelRatio)) __obj.updateDynamic("tilePixelRatio")(tilePixelRatio.get.asInstanceOf[js.Any])
+    if (tileUrlFunction != null) __obj.updateDynamic("tileUrlFunction")(js.Any.fromFunction3(tileUrlFunction))
+    if (!js.isUndefined(transition)) __obj.updateDynamic("transition")(transition.get.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (urls != null) __obj.updateDynamic("urls")(urls.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrapX)) __obj.updateDynamic("wrapX")(wrapX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zDirection)) __obj.updateDynamic("zDirection")(zDirection.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributionsFunction1(value: /* p0 */ FrameState => String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributions")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAttributions(value: AttributionLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributionsCollapsible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionsCollapsible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributionsCollapsible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionsCollapsible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpaque(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opaque")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpaque: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opaque")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: ProjectionLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReprojectionErrorThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reprojectionErrorThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReprojectionErrorThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reprojectionErrorThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: State): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileClass(value: typingsSlinky.ol.imageTileMod.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileGrid(value: typingsSlinky.ol.tilegridTileGridMod.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileGrid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileLoadFunction(value: (/* p0 */ Tile, /* p1 */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileLoadFunction")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutTileLoadFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileLoadFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTilePixelRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilePixelRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTilePixelRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilePixelRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileUrlFunction(
-      value: (/* p0 */ TileCoord, /* p1 */ Double, /* p2 */ typingsSlinky.ol.projectionMod.default) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileUrlFunction")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutTileUrlFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileUrlFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZDirection(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zDirection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

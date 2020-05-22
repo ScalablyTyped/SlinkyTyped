@@ -56,11 +56,10 @@ import scala.scalajs.js.annotation._
   *       Logger.log('Value of y: ' + solution.getVariableValue('y'));
   *     }
   */
-@js.native
 trait LinearOptimizationService extends js.Object {
-  var Status: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Status */ js.Any = js.native
-  var VariableType: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof VariableType */ js.Any = js.native
-  def createEngine(): LinearOptimizationEngine = js.native
+  var Status: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Status */ js.Any
+  var VariableType: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof VariableType */ js.Any
+  def createEngine(): LinearOptimizationEngine
 }
 
 object LinearOptimizationService {
@@ -73,33 +72,5 @@ object LinearOptimizationService {
     val __obj = js.Dynamic.literal(Status = Status.asInstanceOf[js.Any], VariableType = VariableType.asInstanceOf[js.Any], createEngine = js.Any.fromFunction0(createEngine))
     __obj.asInstanceOf[LinearOptimizationService]
   }
-  @scala.inline
-  implicit class LinearOptimizationServiceOps[Self <: LinearOptimizationService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Status */ js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVariableType(
-      value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof VariableType */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateEngine(value: () => LinearOptimizationEngine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createEngine")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

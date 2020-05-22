@@ -17,7 +17,7 @@ trait ListFragmentsInput extends js.Object {
   /**
     * A token to specify where to start paginating. This is the ListFragmentsOutput$NextToken from a previously truncated response.
     */
-  var NextToken: js.UndefOr[String] = js.native
+  var NextToken: js.UndefOr[typingsSlinky.awsSdk.kinesisvideoarchivedmediaMod.NextToken] = js.native
   /**
     * The name of the stream from which to retrieve a fragment list.
     */
@@ -26,59 +26,17 @@ trait ListFragmentsInput extends js.Object {
 
 object ListFragmentsInput {
   @scala.inline
-  def apply(StreamName: StreamName): ListFragmentsInput = {
+  def apply(
+    StreamName: StreamName,
+    FragmentSelector: FragmentSelector = null,
+    MaxResults: js.UndefOr[PageLimit] = js.undefined,
+    NextToken: NextToken = null
+  ): ListFragmentsInput = {
     val __obj = js.Dynamic.literal(StreamName = StreamName.asInstanceOf[js.Any])
+    if (FragmentSelector != null) __obj.updateDynamic("FragmentSelector")(FragmentSelector.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListFragmentsInput]
   }
-  @scala.inline
-  implicit class ListFragmentsInputOps[Self <: ListFragmentsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStreamName(value: StreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFragmentSelector(value: FragmentSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFragmentSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: PageLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

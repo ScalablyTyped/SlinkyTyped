@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * AuditSinkSpec holds the spec for the audit sink
   */
-@js.native
 trait AuditSinkSpec extends js.Object {
   /**
     * Policy defines the policy for selecting which events should be sent to the webhook required
     */
-  val policy: Policy = js.native
+  val policy: Policy
   /**
     * Webhook to send events required
     */
-  val webhook: Webhook = js.native
+  val webhook: Webhook
 }
 
 object AuditSinkSpec {
@@ -25,25 +24,5 @@ object AuditSinkSpec {
     val __obj = js.Dynamic.literal(policy = policy.asInstanceOf[js.Any], webhook = webhook.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuditSinkSpec]
   }
-  @scala.inline
-  implicit class AuditSinkSpecOps[Self <: AuditSinkSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicy(value: Policy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebhook(value: Webhook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhook")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

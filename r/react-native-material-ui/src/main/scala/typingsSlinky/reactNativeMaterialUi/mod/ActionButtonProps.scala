@@ -8,114 +8,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActionButtonProps extends js.Object {
-  var actions: js.UndefOr[js.Array[ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String]] = js.native
-  var hidden: js.UndefOr[Boolean] = js.native
-  var icon: js.UndefOr[String] = js.native
-  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var style: js.UndefOr[Container] = js.native
-  var transition: js.UndefOr[toolbar | speedDial] = js.native
+  var actions: js.UndefOr[js.Array[ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String]] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
+  var icon: js.UndefOr[String] = js.undefined
+  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var style: js.UndefOr[Container] = js.undefined
+  var transition: js.UndefOr[toolbar | speedDial] = js.undefined
 }
 
 object ActionButtonProps {
   @scala.inline
-  def apply(): ActionButtonProps = {
+  def apply(
+    actions: js.Array[ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String] = null,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    icon: String = null,
+    onLongPress: () => Unit = null,
+    onPress: () => Unit = null,
+    style: Container = null,
+    transition: toolbar | speedDial = null
+  ): ActionButtonProps = {
     val __obj = js.Dynamic.literal()
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction0(onLongPress))
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionButtonProps]
   }
-  @scala.inline
-  implicit class ActionButtonPropsOps[Self <: ActionButtonProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: js.Array[ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLongPress(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLongPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPress(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Container): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: toolbar | speedDial): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

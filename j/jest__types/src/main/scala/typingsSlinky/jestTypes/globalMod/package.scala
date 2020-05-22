@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object globalMod {
+  type ArrayTable = typingsSlinky.jestTypes.globalMod.Table | typingsSlinky.jestTypes.globalMod.Row
   type BlockFn = js.Function0[scala.Unit]
   type BlockName = java.lang.String
   type Col = js.Any
@@ -19,6 +20,7 @@ package object globalMod {
       scala.Unit
     ]
   ]
+  type EachTable = typingsSlinky.jestTypes.globalMod.ArrayTable | typingsSlinky.jestTypes.globalMod.TemplateTable
   type EachTestFn = js.Function1[/* repeated */ js.Any, js.UndefOr[js.Promise[js.Any] | scala.Unit]]
   type ItConcurrentBase = js.Function3[
     /* testName */ java.lang.String, 

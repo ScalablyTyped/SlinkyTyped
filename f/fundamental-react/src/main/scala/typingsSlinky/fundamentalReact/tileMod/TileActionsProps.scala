@@ -5,37 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TileActionsProps
   extends /* x */ StringDictionary[js.Any] {
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
 }
 
 object TileActionsProps {
   @scala.inline
-  def apply(): TileActionsProps = {
+  def apply(StringDictionary: /* name */ StringDictionary[js.Any] = null, className: String = null): TileActionsProps = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     __obj.asInstanceOf[TileActionsProps]
   }
-  @scala.inline
-  implicit class TileActionsPropsOps[Self <: TileActionsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

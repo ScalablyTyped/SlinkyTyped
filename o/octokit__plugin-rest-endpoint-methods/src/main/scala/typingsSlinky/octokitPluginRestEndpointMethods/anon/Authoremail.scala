@@ -4,25 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Authoremail extends js.Object {
-  var author: Type = js.native
+  var author: Type
   @JSName("author.email")
-  var authorDotemail: Required = js.native
+  var authorDotemail: Required
   @JSName("author.name")
-  var authorDotname: Required = js.native
-  var branch: Type = js.native
-  var committer: Type = js.native
+  var authorDotname: Required
+  var branch: Type
+  var committer: Type
   @JSName("committer.email")
-  var committerDotemail: Required = js.native
+  var committerDotemail: Required
   @JSName("committer.name")
-  var committerDotname: Required = js.native
-  var content: Required = js.native
-  var message: Required = js.native
-  var owner: Required = js.native
-  var path: Required = js.native
-  var repo: Required = js.native
-  var sha: Type = js.native
+  var committerDotname: Required
+  var content: Required
+  var message: Required
+  var owner: Required
+  var path: Required
+  var repo: Required
+  var sha: Type
 }
 
 object Authoremail {
@@ -49,91 +48,5 @@ object Authoremail {
     __obj.updateDynamic("committer.name")(committerDotname.asInstanceOf[js.Any])
     __obj.asInstanceOf[Authoremail]
   }
-  @scala.inline
-  implicit class AuthoremailOps[Self <: Authoremail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthor(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthorDotemail(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author.email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthorDotname(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author.name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBranch(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommitter(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("committer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommitterDotemail(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("committer.email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommitterDotname(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("committer.name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwner(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepo(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSha(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,73 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetLocationOptions extends js.Object {
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[ResponseCallback] = js.native
+  var complete: js.UndefOr[ResponseCallback] = js.undefined
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[ResponseCallback] = js.native
+  var fail: js.UndefOr[ResponseCallback] = js.undefined
   /** 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于wx.openLocation的坐标 */
-  var `type`: js.UndefOr[wgs84 | gcj02] = js.native
+  var `type`: js.UndefOr[wgs84 | gcj02] = js.undefined
   /** 接口调用成功的回调函数，返回内容详见返回参数说明。 */
-  def success(res: LocationData): Unit = js.native
+  def success(res: LocationData): Unit
 }
 
 object GetLocationOptions {
   @scala.inline
-  def apply(success: LocationData => Unit): GetLocationOptions = {
+  def apply(
+    success: LocationData => Unit,
+    complete: /* res */ js.Any => Unit = null,
+    fail: /* res */ js.Any => Unit = null,
+    `type`: wgs84 | gcj02 = null
+  ): GetLocationOptions = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLocationOptions]
   }
-  @scala.inline
-  implicit class GetLocationOptionsOps[Self <: GetLocationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccess(value: LocationData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* res */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* res */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: wgs84 | gcj02): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

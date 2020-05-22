@@ -6,23 +6,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options[TKeys, TState] extends js.Object {
   /**
     * A prefix that will be prepended to the URL. For example, using a basename of '/playground',
     * a route with the path '/home' would correspond to the URL path '/playground/home'.
     */
-  var basename: js.UndefOr[String] = js.native
+  var basename: js.UndefOr[String] = js.undefined
   /**
     * A function returning a history object compatible with the popular `history` package.
     */
-  var createHistory: js.UndefOr[js.Function0[History[typingsSlinky.history.mod.LocationState]]] = js.native
+  var createHistory: js.UndefOr[js.Function0[History[typingsSlinky.history.mod.LocationState]]] = js.undefined
   /**
     * A function receiving `message` and `callback` when navigation is blocked with `confirmLeave`.
     * The message is the return value from `confirmLeave`.
     * The callback can be called with `true` to unblock the navigation, or with `false` to cancel the navigation.
     */
-  var displayConfirmLeave: js.UndefOr[DisplayConfirmLeave] = js.native
+  var displayConfirmLeave: js.UndefOr[DisplayConfirmLeave] = js.undefined
   /**
     * An optional value that will be passed as part of the third `bag` argument to all options callbacks and routes thunk.
     * It works much like the `withExtraArgument` feature of `redux-thunk` or the `context` argument of GraphQL resolvers.
@@ -30,30 +29,30 @@ trait Options[TKeys, TState] extends js.Object {
     * For example, you could pass an instance of an API client initialised with authentication cookies,
     * or a function `addReducer` to inject new code split reducers into the store.
     */
-  var extra: js.UndefOr[js.Any] = js.native
+  var extra: js.UndefOr[js.Any] = js.undefined
   /**
     * Can be set to false to bypass the initial dispatch, so you can do it manually, perhaps after running sagas.
     */
-  var initialDispatch: js.UndefOr[Boolean] = js.native
+  var initialDispatch: js.UndefOr[Boolean] = js.undefined
   /**
     * An array of entries to initialise history object. Useful for server side rendering and tests.
     */
-  var initialEntries: js.UndefOr[HistoryEntries] = js.native
+  var initialEntries: js.UndefOr[HistoryEntries] = js.undefined
   /**
     * The name of the state key or a selector function to specify where in your Redux state tree
     * Redux First Router should expect your page location reducer to be attached to.
     */
-  var location: js.UndefOr[String | (SelectLocationState_[TKeys, TState])] = js.native
+  var location: js.UndefOr[String | (SelectLocationState_[TKeys, TState])] = js.undefined
   /**
     * A map of of your Redux state keys to _React Navigation_ navigators.
     */
-  var navigators: js.UndefOr[NavigatorsConfig[TKeys, TState]] = js.native
+  var navigators: js.UndefOr[NavigatorsConfig[TKeys, TState]] = js.undefined
   /**
     * The path where users may be redirected in 2 situations: when you dispatch an action with no matching path,
     *  or if you manually call dispatch(redirect({ type: NOT_FOUND })), where NOT_FOUND is an export from this package.
     *  The type in actions and state will be NOT_FOUND, which you can use to show a 404 page.
     */
-  var notFoundPath: js.UndefOr[String] = js.native
+  var notFoundPath: js.UndefOr[String] = js.undefined
   /**
     * A simple function that will be called after the routes change.
     * It's passed your standard `dispatch` and `getState` arguments like a thunk,
@@ -61,7 +60,7 @@ trait Options[TKeys, TState] extends js.Object {
     */
   var onAfterChange: js.UndefOr[
     js.Function3[/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag, Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * A simple function that will be called whenever the user uses the browser back/next buttons.
     * It's passed your standard `dispatch` and `getState` arguments like a thunk,
@@ -70,7 +69,7 @@ trait Options[TKeys, TState] extends js.Object {
     */
   var onBackNext: js.UndefOr[
     js.Function3[/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag, Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * A simple function that will be called before the routes change.
     * It's passed your standard `dispatch` and `getState` arguments like a thunk,
@@ -78,263 +77,74 @@ trait Options[TKeys, TState] extends js.Object {
     */
   var onBeforeChange: js.UndefOr[
     js.Function3[/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag, Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * An object with parse and stringify methods, such as the `query-string` or `qs` libraries (or anything handmade).
     * This will be used to handle querystrings. Without this option, query strings are ignored silently.
     */
-  var querySerializer: js.UndefOr[QuerySerializer] = js.native
+  var querySerializer: js.UndefOr[QuerySerializer] = js.undefined
   /**
     * A function to update window/elements scroll position.
     */
   var restoreScroll: js.UndefOr[
     js.Function1[/* history */ History[typingsSlinky.history.mod.LocationState], ScrollBehavior_]
-  ] = js.native
+  ] = js.undefined
   /**
     * Whether or not window.scrollTo(0, 0) should be run on route changes so the user starts each page at the top.
     */
-  var scrollTop: js.UndefOr[Boolean] = js.native
+  var scrollTop: js.UndefOr[Boolean] = js.undefined
   /**
     *  Whether or not a trailing delimiter is allowed when matching path.
     */
-  var strict: js.UndefOr[Boolean] = js.native
+  var strict: js.UndefOr[Boolean] = js.undefined
   /**
     * The name of the state key or a selector function to specify where in your Redux state tree
     * Redux First Router should expect your page title reducer to be attached to.
     * This can be omitted if you attach the reducer at state.title.
     */
-  var title: js.UndefOr[String | SelectTitleState[TState]] = js.native
+  var title: js.UndefOr[String | SelectTitleState[TState]] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply[TKeys, TState](): Options[TKeys, TState] = {
+  def apply[TKeys, TState](
+    basename: String = null,
+    createHistory: () => History[typingsSlinky.history.mod.LocationState] = null,
+    displayConfirmLeave: (/* message */ String, /* callback */ js.Function1[/* unblock */ Boolean, Unit]) => Unit = null,
+    extra: js.Any = null,
+    initialDispatch: js.UndefOr[Boolean] = js.undefined,
+    initialEntries: HistoryEntries = null,
+    location: String | (SelectLocationState_[TKeys, TState]) = null,
+    navigators: NavigatorsConfig[TKeys, TState] = null,
+    notFoundPath: String = null,
+    onAfterChange: (/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag) => Unit = null,
+    onBackNext: (/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag) => Unit = null,
+    onBeforeChange: (/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag) => Unit = null,
+    querySerializer: QuerySerializer = null,
+    restoreScroll: /* history */ History[typingsSlinky.history.mod.LocationState] => ScrollBehavior_ = null,
+    scrollTop: js.UndefOr[Boolean] = js.undefined,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    title: String | SelectTitleState[TState] = null
+  ): Options[TKeys, TState] = {
     val __obj = js.Dynamic.literal()
+    if (basename != null) __obj.updateDynamic("basename")(basename.asInstanceOf[js.Any])
+    if (createHistory != null) __obj.updateDynamic("createHistory")(js.Any.fromFunction0(createHistory))
+    if (displayConfirmLeave != null) __obj.updateDynamic("displayConfirmLeave")(js.Any.fromFunction2(displayConfirmLeave))
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialDispatch)) __obj.updateDynamic("initialDispatch")(initialDispatch.get.asInstanceOf[js.Any])
+    if (initialEntries != null) __obj.updateDynamic("initialEntries")(initialEntries.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (navigators != null) __obj.updateDynamic("navigators")(navigators.asInstanceOf[js.Any])
+    if (notFoundPath != null) __obj.updateDynamic("notFoundPath")(notFoundPath.asInstanceOf[js.Any])
+    if (onAfterChange != null) __obj.updateDynamic("onAfterChange")(js.Any.fromFunction3(onAfterChange))
+    if (onBackNext != null) __obj.updateDynamic("onBackNext")(js.Any.fromFunction3(onBackNext))
+    if (onBeforeChange != null) __obj.updateDynamic("onBeforeChange")(js.Any.fromFunction3(onBeforeChange))
+    if (querySerializer != null) __obj.updateDynamic("querySerializer")(querySerializer.asInstanceOf[js.Any])
+    if (restoreScroll != null) __obj.updateDynamic("restoreScroll")(js.Any.fromFunction1(restoreScroll))
+    if (!js.isUndefined(scrollTop)) __obj.updateDynamic("scrollTop")(scrollTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options[TKeys, TState]]
   }
-  @scala.inline
-  implicit class OptionsOps[Self[tkeys, tstate] <: Options[tkeys, tstate], TKeys, TState] (val x: Self[TKeys, TState]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TKeys, TState] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TKeys, TState]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[TKeys, TState]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TKeys, TState]) with Other]
-    @scala.inline
-    def withBasename(value: String): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasename: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateHistory(value: () => History[typingsSlinky.history.mod.LocationState]): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createHistory")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateHistory: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayConfirmLeave(value: (/* message */ String, /* callback */ js.Function1[/* unblock */ Boolean, Unit]) => Unit): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayConfirmLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDisplayConfirmLeave: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayConfirmLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra(value: js.Any): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialDispatch(value: Boolean): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDispatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialDispatch: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDispatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialEntries(value: HistoryEntries): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialEntries: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialEntries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationFunction1(value: TState => LocationState[TKeys, TState]): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String | (SelectLocationState_[TKeys, TState])): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigators(value: NavigatorsConfig[TKeys, TState]): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigators: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotFoundPath(value: String): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotFoundPath: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAfterChange(value: (/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag) => Unit): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAfterChange")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAfterChange: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAfterChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBackNext(value: (/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag) => Unit): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBackNext")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBackNext: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBackNext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeChange(value: (/* dispatch */ Dispatch[_], /* getState */ StateGetter[TState], /* bag */ Bag) => Unit): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeChange")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeChange: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuerySerializer(value: QuerySerializer): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySerializer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuerySerializer: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySerializer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestoreScroll(value: /* history */ History[typingsSlinky.history.mod.LocationState] => ScrollBehavior_): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRestoreScroll: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollTop(value: Boolean): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollTop: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleFunction1(value: TState => String): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String | SelectTitleState[TState]): Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self[TKeys, TState] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserAccess extends js.Object {
-  var AllowEdit: Boolean = js.native
+  var AllowEdit: Boolean
   @JSName("Excel.UserAccess_typekey")
-  var ExcelDotUserAccess_typekey: UserAccess = js.native
-  val Name: String = js.native
-  def Delete(): Unit = js.native
+  var ExcelDotUserAccess_typekey: UserAccess
+  val Name: String
+  def Delete(): Unit
 }
 
 object UserAccess {
@@ -20,37 +19,5 @@ object UserAccess {
     __obj.updateDynamic("Excel.UserAccess_typekey")(ExcelDotUserAccess_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserAccess]
   }
-  @scala.inline
-  implicit class UserAccessOps[Self <: UserAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowEdit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowEdit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExcelDotUserAccess_typekey(value: UserAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.UserAccess_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

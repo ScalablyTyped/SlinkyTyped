@@ -9,34 +9,45 @@ import scala.scalajs.js.annotation._
   * fields can be set on creation, other fields are derived by Kubernetes and cannot be modified
   * by users.
   */
-@js.native
 trait CertificateSigningRequestSpec extends js.Object {
   /**
     * Extra information about the requesting user. See user.Info interface for details.
     */
-  val extra: js.Object = js.native
+  val extra: js.Object
   /**
     * Group information about the requesting user. See user.Info interface for details.
     */
-  val groups: js.Array[String] = js.native
+  val groups: js.Array[String]
   /**
     * Base64-encoded PKCS#10 CSR data
     */
-  val request: String = js.native
+  val request: String
+  /**
+    * Requested signer for the request. It is a qualified name in the form:
+    * `scope-hostname.io/name`. If empty, it will be defaulted:
+    *  1. If it's a kubelet client certificate, it is assigned
+    *     "kubernetes.io/kube-apiserver-client-kubelet".
+    *  2. If it's a kubelet serving certificate, it is assigned
+    *     "kubernetes.io/kubelet-serving".
+    *  3. Otherwise, it is assigned "kubernetes.io/legacy-unknown".
+    * Distribution of trust for signers happens out of band. You can select on this field using
+    * `spec.signerName`.
+    */
+  val signerName: String
   /**
     * UID information about the requesting user. See user.Info interface for details.
     */
-  val uid: String = js.native
+  val uid: String
   /**
     * allowedUsages specifies a set of usage contexts the key will be valid for. See:
     * https://tools.ietf.org/html/rfc5280#section-4.2.1.3
     *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
     */
-  val usages: js.Array[String] = js.native
+  val usages: js.Array[String]
   /**
     * Information about the requesting user. See user.Info interface for details.
     */
-  val username: String = js.native
+  val username: String
 }
 
 object CertificateSigningRequestSpec {
@@ -45,56 +56,13 @@ object CertificateSigningRequestSpec {
     extra: js.Object,
     groups: js.Array[String],
     request: String,
+    signerName: String,
     uid: String,
     usages: js.Array[String],
     username: String
   ): CertificateSigningRequestSpec = {
-    val __obj = js.Dynamic.literal(extra = extra.asInstanceOf[js.Any], groups = groups.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], uid = uid.asInstanceOf[js.Any], usages = usages.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(extra = extra.asInstanceOf[js.Any], groups = groups.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], signerName = signerName.asInstanceOf[js.Any], uid = uid.asInstanceOf[js.Any], usages = usages.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateSigningRequestSpec]
   }
-  @scala.inline
-  implicit class CertificateSigningRequestSpecOps[Self <: CertificateSigningRequestSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtra(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroups(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,32 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TfvcBranchRef extends TfvcShallowBranchRef {
   /**
     * A collection of REST reference links.
     */
-  var _links: js.Any = js.native
+  var _links: js.Any
   /**
     * Creation date of the branch.
     */
-  var createdDate: js.Date = js.native
+  var createdDate: js.Date
   /**
     * Description of the branch.
     */
-  var description: String = js.native
+  var description: String
   /**
     * Is the branch deleted?
     */
-  var isDeleted: Boolean = js.native
+  var isDeleted: Boolean
   /**
     * Alias or display name of user
     */
-  var owner: IdentityRef = js.native
+  var owner: IdentityRef
   /**
     * URL to retrieve the item.
     */
-  var url: String = js.native
+  var url: String
 }
 
 object TfvcBranchRef {
@@ -47,49 +46,5 @@ object TfvcBranchRef {
     val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], createdDate = createdDate.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], isDeleted = isDeleted.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[TfvcBranchRef]
   }
-  @scala.inline
-  implicit class TfvcBranchRefOps[Self <: TfvcBranchRef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_links(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDeleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwner(value: IdentityRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

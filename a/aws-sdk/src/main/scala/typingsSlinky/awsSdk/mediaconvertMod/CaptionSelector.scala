@@ -22,53 +22,16 @@ trait CaptionSelector extends js.Object {
 
 object CaptionSelector {
   @scala.inline
-  def apply(): CaptionSelector = {
+  def apply(
+    CustomLanguageCode: stringMin3Max3PatternAZaZ3 = null,
+    LanguageCode: LanguageCode = null,
+    SourceSettings: CaptionSourceSettings = null
+  ): CaptionSelector = {
     val __obj = js.Dynamic.literal()
+    if (CustomLanguageCode != null) __obj.updateDynamic("CustomLanguageCode")(CustomLanguageCode.asInstanceOf[js.Any])
+    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
+    if (SourceSettings != null) __obj.updateDynamic("SourceSettings")(SourceSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionSelector]
   }
-  @scala.inline
-  implicit class CaptionSelectorOps[Self <: CaptionSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomLanguageCode(value: stringMin3Max3PatternAZaZ3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: LanguageCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSettings(value: CaptionSourceSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

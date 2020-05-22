@@ -10,14 +10,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorldAtlas extends Topology[Objects[Properties]] {
   @JSName("bbox")
-  var bbox_WorldAtlas: js.Tuple4[Double, Double, Double, Double] = js.native
+  var bbox_WorldAtlas: js.Tuple4[Double, Double, Double, Double]
   @JSName("objects")
-  var objects_WorldAtlas: Countries = js.native
+  var objects_WorldAtlas: Countries
   @JSName("transform")
-  var transform_WorldAtlas: Transform = js.native
+  var transform_WorldAtlas: Transform
 }
 
 object WorldAtlas {
@@ -33,31 +32,5 @@ object WorldAtlas {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorldAtlas]
   }
-  @scala.inline
-  implicit class WorldAtlasOps[Self <: WorldAtlas] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBbox(value: js.Tuple4[Double, Double, Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjects(value: Countries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransform(value: Transform): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeveloperUserAlreadyRegisteredException
   extends ServiceException[DeveloperUserAlreadyRegisteredExceptionDetails]
      with GetOpenIdTokenForDeveloperIdentityExceptionsUnion {
   @JSName("name")
-  var name_DeveloperUserAlreadyRegisteredException: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.DeveloperUserAlreadyRegisteredException = js.native
+  var name_DeveloperUserAlreadyRegisteredException: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.DeveloperUserAlreadyRegisteredException
 }
 
 object DeveloperUserAlreadyRegisteredException {
@@ -21,26 +20,12 @@ object DeveloperUserAlreadyRegisteredException {
     $metadata: ResponseMetadata,
     details: DeveloperUserAlreadyRegisteredExceptionDetails,
     message: String,
-    name: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.DeveloperUserAlreadyRegisteredException
+    name: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.DeveloperUserAlreadyRegisteredException,
+    stack: String = null
   ): DeveloperUserAlreadyRegisteredException = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeveloperUserAlreadyRegisteredException]
   }
-  @scala.inline
-  implicit class DeveloperUserAlreadyRegisteredExceptionOps[Self <: DeveloperUserAlreadyRegisteredException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(
-      value: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.DeveloperUserAlreadyRegisteredException
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -34,89 +34,22 @@ trait DescribeVaultOutput extends js.Object {
 
 object DescribeVaultOutput {
   @scala.inline
-  def apply(): DescribeVaultOutput = {
+  def apply(
+    CreationDate: String = null,
+    LastInventoryDate: String = null,
+    NumberOfArchives: js.UndefOr[long] = js.undefined,
+    SizeInBytes: js.UndefOr[long] = js.undefined,
+    VaultARN: String = null,
+    VaultName: String = null
+  ): DescribeVaultOutput = {
     val __obj = js.Dynamic.literal()
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (LastInventoryDate != null) __obj.updateDynamic("LastInventoryDate")(LastInventoryDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfArchives)) __obj.updateDynamic("NumberOfArchives")(NumberOfArchives.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SizeInBytes)) __obj.updateDynamic("SizeInBytes")(SizeInBytes.get.asInstanceOf[js.Any])
+    if (VaultARN != null) __obj.updateDynamic("VaultARN")(VaultARN.asInstanceOf[js.Any])
+    if (VaultName != null) __obj.updateDynamic("VaultName")(VaultName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVaultOutput]
   }
-  @scala.inline
-  implicit class DescribeVaultOutputOps[Self <: DescribeVaultOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastInventoryDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastInventoryDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastInventoryDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastInventoryDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfArchives(value: long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfArchives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfArchives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfArchives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeInBytes(value: long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVaultARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVaultARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVaultName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVaultName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

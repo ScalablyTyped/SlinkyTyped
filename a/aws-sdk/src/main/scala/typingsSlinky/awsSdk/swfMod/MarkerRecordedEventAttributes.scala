@@ -22,41 +22,10 @@ trait MarkerRecordedEventAttributes extends js.Object {
 
 object MarkerRecordedEventAttributes {
   @scala.inline
-  def apply(decisionTaskCompletedEventId: EventId, markerName: MarkerName): MarkerRecordedEventAttributes = {
+  def apply(decisionTaskCompletedEventId: EventId, markerName: MarkerName, details: Data = null): MarkerRecordedEventAttributes = {
     val __obj = js.Dynamic.literal(decisionTaskCompletedEventId = decisionTaskCompletedEventId.asInstanceOf[js.Any], markerName = markerName.asInstanceOf[js.Any])
+    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
     __obj.asInstanceOf[MarkerRecordedEventAttributes]
   }
-  @scala.inline
-  implicit class MarkerRecordedEventAttributesOps[Self <: MarkerRecordedEventAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecisionTaskCompletedEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskCompletedEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerName(value: MarkerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetails(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

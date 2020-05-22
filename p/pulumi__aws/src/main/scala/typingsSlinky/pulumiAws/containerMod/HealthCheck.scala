@@ -46,77 +46,20 @@ trait HealthCheck extends js.Object {
 
 object HealthCheck {
   @scala.inline
-  def apply(): HealthCheck = {
+  def apply(
+    command: js.Array[String] = null,
+    interval: js.UndefOr[Double] = js.undefined,
+    retries: js.UndefOr[Double] = js.undefined,
+    startPeriod: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): HealthCheck = {
     val __obj = js.Dynamic.literal()
+    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retries)) __obj.updateDynamic("retries")(retries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startPeriod)) __obj.updateDynamic("startPeriod")(startPeriod.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HealthCheck]
   }
-  @scala.inline
-  implicit class HealthCheckOps[Self <: HealthCheck] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommand(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,5 +7,14 @@ import scala.scalajs.js.annotation._
 @JSImport("matter", "PairsFactory")
 @js.native
 class PairsFactory ()
-  extends typingsSlinky.phaser.MatterJS.PairsFactory
+  extends typingsSlinky.phaser.MatterJS.PairsFactory {
+  /**
+    * Clears the given pairs structure.
+    * @method clear
+    * @param {pairs} pairs
+    * @return {pairs} pairs
+    */
+  /* CompleteClass */
+  override def clear(pairs: js.Any): js.Any = js.native
+}
 

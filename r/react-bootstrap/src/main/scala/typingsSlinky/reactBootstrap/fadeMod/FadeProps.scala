@@ -7,91 +7,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FadeProps
   extends AllHTMLAttributes[Fade]
      with TransitionCallbacks
      with ClassAttributes[Fade] {
-  var appear: js.UndefOr[Boolean] = js.native
-  var in: js.UndefOr[Boolean] = js.native
-  var mountOnEnter: js.UndefOr[Boolean] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var unmountOnExit: js.UndefOr[Boolean] = js.native
+  var appear: js.UndefOr[Boolean] = js.undefined
+  var in: js.UndefOr[Boolean] = js.undefined
+  var mountOnEnter: js.UndefOr[Boolean] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var unmountOnExit: js.UndefOr[Boolean] = js.undefined
 }
 
 object FadeProps {
   @scala.inline
-  def apply(): FadeProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[Fade] = null,
+    ClassAttributes: ClassAttributes[Fade] = null,
+    TransitionCallbacks: TransitionCallbacks = null,
+    appear: js.UndefOr[Boolean] = js.undefined,
+    in: js.UndefOr[Boolean] = js.undefined,
+    mountOnEnter: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    unmountOnExit: js.UndefOr[Boolean] = js.undefined
+  ): FadeProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (TransitionCallbacks != null) js.Dynamic.global.Object.assign(__obj, TransitionCallbacks)
+    if (!js.isUndefined(appear)) __obj.updateDynamic("appear")(appear.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(in)) __obj.updateDynamic("in")(in.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mountOnEnter)) __obj.updateDynamic("mountOnEnter")(mountOnEnter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unmountOnExit)) __obj.updateDynamic("unmountOnExit")(unmountOnExit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FadeProps]
   }
-  @scala.inline
-  implicit class FadePropsOps[Self <: FadeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppear(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountOnEnter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountOnEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountOnEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountOnEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmountOnExit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountOnExit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmountOnExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountOnExit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

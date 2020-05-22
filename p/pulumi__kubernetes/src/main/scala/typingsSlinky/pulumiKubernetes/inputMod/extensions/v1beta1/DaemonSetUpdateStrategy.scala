@@ -8,55 +8,24 @@ import scala.scalajs.js.annotation._
 /**
   *
   */
-@js.native
 trait DaemonSetUpdateStrategy extends js.Object {
   /**
     * Rolling update config params. Present only if type = "RollingUpdate".
     */
-  var rollingUpdate: js.UndefOr[Input[RollingUpdateDaemonSet]] = js.native
+  var rollingUpdate: js.UndefOr[Input[RollingUpdateDaemonSet]] = js.undefined
   /**
     * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is OnDelete.
     */
-  var `type`: js.UndefOr[Input[String]] = js.native
+  var `type`: js.UndefOr[Input[String]] = js.undefined
 }
 
 object DaemonSetUpdateStrategy {
   @scala.inline
-  def apply(): DaemonSetUpdateStrategy = {
+  def apply(rollingUpdate: Input[RollingUpdateDaemonSet] = null, `type`: Input[String] = null): DaemonSetUpdateStrategy = {
     val __obj = js.Dynamic.literal()
+    if (rollingUpdate != null) __obj.updateDynamic("rollingUpdate")(rollingUpdate.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DaemonSetUpdateStrategy]
   }
-  @scala.inline
-  implicit class DaemonSetUpdateStrategyOps[Self <: DaemonSetUpdateStrategy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRollingUpdate(value: Input[RollingUpdateDaemonSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollingUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRollingUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollingUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

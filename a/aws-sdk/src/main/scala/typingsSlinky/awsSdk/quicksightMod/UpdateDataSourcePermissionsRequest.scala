@@ -26,53 +26,16 @@ trait UpdateDataSourcePermissionsRequest extends js.Object {
 
 object UpdateDataSourcePermissionsRequest {
   @scala.inline
-  def apply(AwsAccountId: AwsAccountId, DataSourceId: ResourceId): UpdateDataSourcePermissionsRequest = {
+  def apply(
+    AwsAccountId: AwsAccountId,
+    DataSourceId: ResourceId,
+    GrantPermissions: ResourcePermissionList = null,
+    RevokePermissions: ResourcePermissionList = null
+  ): UpdateDataSourcePermissionsRequest = {
     val __obj = js.Dynamic.literal(AwsAccountId = AwsAccountId.asInstanceOf[js.Any], DataSourceId = DataSourceId.asInstanceOf[js.Any])
+    if (GrantPermissions != null) __obj.updateDynamic("GrantPermissions")(GrantPermissions.asInstanceOf[js.Any])
+    if (RevokePermissions != null) __obj.updateDynamic("RevokePermissions")(RevokePermissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDataSourcePermissionsRequest]
   }
-  @scala.inline
-  implicit class UpdateDataSourcePermissionsRequestOps[Self <: UpdateDataSourcePermissionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsAccountId(value: AwsAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataSourceId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGrantPermissions(value: ResourcePermissionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantPermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevokePermissions(value: ResourcePermissionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevokePermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevokePermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevokePermissions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

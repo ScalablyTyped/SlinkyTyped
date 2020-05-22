@@ -23,28 +23,28 @@ trait TableColumn extends ClientObject {
   var context_TableColumn: RequestContext = js.native
   /**
     *
-    * Retrieve the filter applied to the column. Read-only.
+    * Retrieve the filter applied to the column.
     *
     * [Api set: ExcelApi 1.2]
     */
   val filter: Filter = js.native
   /**
     *
-    * Returns a unique key that identifies the column within the table. Read-only.
+    * Returns a unique key that identifies the column within the table.
     *
     * [Api set: ExcelApi 1.1]
     */
   val id: Double = js.native
   /**
     *
-    * Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
+    * Returns the index number of the column within the columns collection of the table. Zero-indexed.
     *
     * [Api set: ExcelApi 1.1]
     */
   val index: Double = js.native
   /**
     *
-    * Represents the name of the table column.
+    * Specifies the name of the table column.
     *
     * [Api set: ExcelApi 1.1 for getting the name; 1.4 for setting it.]
     */

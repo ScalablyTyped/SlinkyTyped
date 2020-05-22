@@ -38,83 +38,21 @@ trait AdminInitiateAuthRequest extends js.Object {
 
 object AdminInitiateAuthRequest {
   @scala.inline
-  def apply(AuthFlow: AuthFlowType, ClientId: ClientIdType, UserPoolId: UserPoolIdType): AdminInitiateAuthRequest = {
+  def apply(
+    AuthFlow: AuthFlowType,
+    ClientId: ClientIdType,
+    UserPoolId: UserPoolIdType,
+    AnalyticsMetadata: AnalyticsMetadataType = null,
+    AuthParameters: AuthParametersType = null,
+    ClientMetadata: ClientMetadataType = null,
+    ContextData: ContextDataType = null
+  ): AdminInitiateAuthRequest = {
     val __obj = js.Dynamic.literal(AuthFlow = AuthFlow.asInstanceOf[js.Any], ClientId = ClientId.asInstanceOf[js.Any], UserPoolId = UserPoolId.asInstanceOf[js.Any])
+    if (AnalyticsMetadata != null) __obj.updateDynamic("AnalyticsMetadata")(AnalyticsMetadata.asInstanceOf[js.Any])
+    if (AuthParameters != null) __obj.updateDynamic("AuthParameters")(AuthParameters.asInstanceOf[js.Any])
+    if (ClientMetadata != null) __obj.updateDynamic("ClientMetadata")(ClientMetadata.asInstanceOf[js.Any])
+    if (ContextData != null) __obj.updateDynamic("ContextData")(ContextData.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdminInitiateAuthRequest]
   }
-  @scala.inline
-  implicit class AdminInitiateAuthRequestOps[Self <: AdminInitiateAuthRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthFlow(value: AuthFlowType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthFlow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientId(value: ClientIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserPoolId(value: UserPoolIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnalyticsMetadata(value: AnalyticsMetadataType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyticsMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyticsMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyticsMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthParameters(value: AuthParametersType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientMetadata(value: ClientMetadataType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextData(value: ContextDataType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

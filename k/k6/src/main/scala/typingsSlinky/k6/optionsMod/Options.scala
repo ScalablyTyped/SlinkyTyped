@@ -7,72 +7,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /** Maximum parallel `http.batch()` connections per VU. */
-  var batch: Double = js.native
+  var batch: Double
   /** Maximum parallel `http.batch()` host connections per VU. */
-  var batchPerHost: Double = js.native
+  var batchPerHost: Double
   /** Blacklist IP ranges from being called. */
-  var blacklistIPs: js.Array[String] = js.native
+  var blacklistIPs: js.Array[String]
   /** Discard response bodies. */
-  var discardResponseBodies: Boolean = js.native
+  var discardResponseBodies: Boolean
   /** Test duration. */
-  var duration: String = js.native
+  var duration: String
   /** Third party collector configuration. */
-  var ext: StringDictionary[CollectorOptions] = js.native
+  var ext: StringDictionary[CollectorOptions]
   /** Static hostname mapping. */
-  var hosts: StringDictionary[String] = js.native
+  var hosts: StringDictionary[String]
   /** Log all HTTP requests and responses. */
-  var httpDebug: String = js.native
+  var httpDebug: String
   /** Disable TLS verification. Insecure. */
-  var insecureSkipTLSVerify: Boolean = js.native
+  var insecureSkipTLSVerify: Boolean
   /** Iterations to execute. */
-  var iterations: Double = js.native
+  var iterations: Double
   /** Persist the k6 process after test completion. */
-  var linger: Boolean = js.native
+  var linger: Boolean
   /** Maximum HTTP redirects to follow. */
-  var maxRedirects: Double = js.native
+  var maxRedirects: Double
   /** Minimum test iteration duration. */
-  var minIterationDuration: String = js.native
+  var minIterationDuration: String
   /** Disable keepalive connections. */
-  var noConnectionReuse: Boolean = js.native
+  var noConnectionReuse: Boolean
   /** Disable usage reports. */
-  var noUsageReport: Boolean = js.native
+  var noUsageReport: Boolean
   /** Disable cross-VU TCP connection reuse. */
-  var noVUConnectionReuse: Boolean = js.native
+  var noVUConnectionReuse: Boolean
   /** Start test in paused state. */
-  var paused: Boolean = js.native
+  var paused: Boolean
   /** Maximum requests per second across all VUs. */
-  var rps: Double = js.native
+  var rps: Double
   /** Setup function timeout. */
-  var setupTimeout: String = js.native
+  var setupTimeout: String
   /** Test stage specifications. Program of target VU stages. */
-  var stages: js.Array[Stage] = js.native
+  var stages: js.Array[Stage]
   /** Define stats for trend metrics. */
-  var summaryTrendStats: js.Array[String] = js.native
+  var summaryTrendStats: js.Array[String]
   /** Which system tags to include in collected metrics. */
-  var systemTags: js.Array[String] = js.native
+  var systemTags: js.Array[String]
   /** Tags to set test wide across all metrics. */
-  var tags: StringDictionary[String] = js.native
+  var tags: StringDictionary[String]
   /** Teardown function timeout. */
-  var teardownTimeout: String = js.native
+  var teardownTimeout: String
   /** Threshold specifications. Defines pass and fail conditions. */
-  var thresholds: StringDictionary[js.Array[Threshold]] = js.native
+  var thresholds: StringDictionary[js.Array[Threshold]]
   /** Throw error on failed HTTP request. */
-  var `throw`: Boolean = js.native
+  var `throw`: Boolean
   /** TLS client certificates. */
-  var tlsAuth: js.Array[Certificate] = js.native
+  var tlsAuth: js.Array[Certificate]
   /** Allowed TLS cipher suites. */
-  var tlsCipherSuites: js.Array[CipherSuite] = js.native
+  var tlsCipherSuites: js.Array[CipherSuite]
   /** Allowed TLS version. Use `http.SSL_*` `http.TLS_*` constants. */
-  var tlsVersion: String | Max = js.native
+  var tlsVersion: String | Max
   /** User agent string to include in HTTP requests. */
-  var userAgent: String = js.native
+  var userAgent: String
   /** Number of VUs to run concurrently. */
-  var vus: Double = js.native
+  var vus: Double
   /** Maximum VUs. Preallocates VUs to enable faster scaling. */
-  var vusMax: Double = js.native
+  var vusMax: Double
 }
 
 object Options {
@@ -115,205 +114,5 @@ object Options {
     __obj.updateDynamic("throw")(`throw`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBatchPerHost(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchPerHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlacklistIPs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistIPs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiscardResponseBodies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discardResponseBodies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExt(value: StringDictionary[CollectorOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHosts(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHttpDebug(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpDebug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInsecureSkipTLSVerify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insecureSkipTLSVerify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxRedirects(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinIterationDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minIterationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoConnectionReuse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noConnectionReuse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoUsageReport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUsageReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoVUConnectionReuse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noVUConnectionReuse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaused(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetupTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStages(value: js.Array[Stage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummaryTrendStats(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryTrendStats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSystemTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTeardownTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teardownTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThresholds(value: StringDictionary[js.Array[Threshold]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThrow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTlsAuth(value: js.Array[Certificate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsAuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTlsCipherSuites(value: js.Array[CipherSuite]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCipherSuites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTlsVersion(value: String | Max): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVusMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vusMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

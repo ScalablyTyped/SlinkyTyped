@@ -2,13 +2,12 @@ package typingsSlinky.hapiHapi.mod
 
 import typingsSlinky.hapiHapi.anon.Etag
 import typingsSlinky.hapiHapi.anon.ReadonlyRequest
-import typingsSlinky.hapiHapi.mod.Lifecycle.ReturnValueTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ResponseToolkit extends ReturnValueTypes {
+trait ResponseToolkit extends js.Object {
   /**
     * A response symbol. When returned by a lifecycle method, the request lifecycle skips to the finalizing step
     * without further interaction with the node response stream. It is the developer's responsibility to write

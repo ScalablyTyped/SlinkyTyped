@@ -49,6 +49,8 @@ object RcCheckbox {
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def tabIndex(value: String | Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])

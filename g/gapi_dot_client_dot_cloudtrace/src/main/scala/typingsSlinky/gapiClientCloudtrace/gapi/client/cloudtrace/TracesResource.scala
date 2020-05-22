@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TracesResource extends js.Object {
-  var spans: SpansResource = js.native
+  var spans: SpansResource
   /**
     * Sends new spans to Stackdriver Trace or updates existing traces. If the
     * name of a trace that you send matches that of an existing trace, new spans
@@ -16,7 +15,7 @@ trait TracesResource extends js.Object {
     * undefined behavior. If the name does not match, a new trace is created
     * with given set of spans.
     */
-  def batchWrite(request: Accesstoken): Request[js.Object] = js.native
+  def batchWrite(request: Accesstoken): Request[js.Object]
 }
 
 object TracesResource {
@@ -25,25 +24,5 @@ object TracesResource {
     val __obj = js.Dynamic.literal(batchWrite = js.Any.fromFunction1(batchWrite), spans = spans.asInstanceOf[js.Any])
     __obj.asInstanceOf[TracesResource]
   }
-  @scala.inline
-  implicit class TracesResourceOps[Self <: TracesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchWrite(value: Accesstoken => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchWrite")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSpans(value: SpansResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spans")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,13 +7,12 @@ import scala.scalajs.js.annotation._
 /**
   * Options for sonifying a chart.
   */
-@js.native
 trait SonifyChartOptionsObject extends js.Object {
   /**
     * Milliseconds of silent waiting to add between series. Note that
     * waiting time is considered part of the sonify duration.
     */
-  var afterSeriesWait: js.UndefOr[Double] = js.native
+  var afterSeriesWait: js.UndefOr[Double] = js.undefined
   /**
     * Optionally provide the minimum/maximum data values for the points. If
     * this is not supplied, it is calculated from all points in the chart
@@ -21,7 +20,7 @@ trait SonifyChartOptionsObject extends js.Object {
     * of point data properties to objects with min/max values: (see online
     * documentation for example)
     */
-  var dataExtremes: js.UndefOr[js.Object] = js.native
+  var dataExtremes: js.UndefOr[js.Object] = js.undefined
   /**
     * Duration for sonifying the entire chart. The duration is distributed
     * across the different series intelligently, but does not take earcons
@@ -29,28 +28,28 @@ trait SonifyChartOptionsObject extends js.Object {
     * series, using `seriesOptions`. Note that points may continue to play
     * after the duration has passed, but no new points will start playing.
     */
-  var duration: Double = js.native
+  var duration: Double
   /**
     * Earcons to add to the chart. Note that earcons can also be added per
     * series using `seriesOptions`.
     */
-  var earcons: js.UndefOr[js.Array[EarconConfiguration]] = js.native
+  var earcons: js.UndefOr[js.Array[EarconConfiguration]] = js.undefined
   /**
     * The instrument definitions for the points in this chart.
     */
-  var instruments: js.UndefOr[js.Array[PointInstrumentObject]] = js.native
+  var instruments: js.UndefOr[js.Array[PointInstrumentObject]] = js.undefined
   /**
     * Callback after the chart has played.
     */
-  var onEnd: js.UndefOr[js.Function] = js.native
+  var onEnd: js.UndefOr[js.Function] = js.undefined
   /**
     * Callback after a series has finished playing.
     */
-  var onSeriesEnd: js.UndefOr[js.Function] = js.native
+  var onSeriesEnd: js.UndefOr[js.Function] = js.undefined
   /**
     * Callback before a series is played.
     */
-  var onSeriesStart: js.UndefOr[js.Function] = js.native
+  var onSeriesStart: js.UndefOr[js.Function] = js.undefined
   /**
     * Define the order to play the series in. This can be given as a
     * string, or an array specifying a custom ordering. If given as a
@@ -63,7 +62,7 @@ trait SonifyChartOptionsObject extends js.Object {
     * array will be played in order. To play elements simultaneously, group
     * the elements in an array.
     */
-  var order: String | (js.Array[String | Earcon | (js.Array[String | Earcon])]) = js.native
+  var order: String | (js.Array[String | Earcon | (js.Array[String | Earcon])])
   /**
     * The axis to use for when to play the points. Can be a string with a
     * data property (e.g. `x`), or a function. If it is a function, this
@@ -73,7 +72,7 @@ trait SonifyChartOptionsObject extends js.Object {
     * distance between the numeric values. This option can not be
     * overridden per series.
     */
-  var pointPlayTime: String | js.Function = js.native
+  var pointPlayTime: String | js.Function
   /**
     * Options as given to `series.sonify` to override options per series.
     * If the option is supplied as an array of options objects, the `id`
@@ -81,7 +80,7 @@ trait SonifyChartOptionsObject extends js.Object {
     * option is supplied as a single object, the options apply to all
     * series.
     */
-  var seriesOptions: js.UndefOr[js.Object | js.Array[js.Object]] = js.native
+  var seriesOptions: js.UndefOr[js.Object | js.Array[js.Object]] = js.undefined
 }
 
 object SonifyChartOptionsObject {
@@ -89,132 +88,26 @@ object SonifyChartOptionsObject {
   def apply(
     duration: Double,
     order: String | (js.Array[String | Earcon | (js.Array[String | Earcon])]),
-    pointPlayTime: String | js.Function
+    pointPlayTime: String | js.Function,
+    afterSeriesWait: js.UndefOr[Double] = js.undefined,
+    dataExtremes: js.Object = null,
+    earcons: js.Array[EarconConfiguration] = null,
+    instruments: js.Array[PointInstrumentObject] = null,
+    onEnd: js.Function = null,
+    onSeriesEnd: js.Function = null,
+    onSeriesStart: js.Function = null,
+    seriesOptions: js.Object | js.Array[js.Object] = null
   ): SonifyChartOptionsObject = {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], order = order.asInstanceOf[js.Any], pointPlayTime = pointPlayTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(afterSeriesWait)) __obj.updateDynamic("afterSeriesWait")(afterSeriesWait.get.asInstanceOf[js.Any])
+    if (dataExtremes != null) __obj.updateDynamic("dataExtremes")(dataExtremes.asInstanceOf[js.Any])
+    if (earcons != null) __obj.updateDynamic("earcons")(earcons.asInstanceOf[js.Any])
+    if (instruments != null) __obj.updateDynamic("instruments")(instruments.asInstanceOf[js.Any])
+    if (onEnd != null) __obj.updateDynamic("onEnd")(onEnd.asInstanceOf[js.Any])
+    if (onSeriesEnd != null) __obj.updateDynamic("onSeriesEnd")(onSeriesEnd.asInstanceOf[js.Any])
+    if (onSeriesStart != null) __obj.updateDynamic("onSeriesStart")(onSeriesStart.asInstanceOf[js.Any])
+    if (seriesOptions != null) __obj.updateDynamic("seriesOptions")(seriesOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SonifyChartOptionsObject]
   }
-  @scala.inline
-  implicit class SonifyChartOptionsObjectOps[Self <: SonifyChartOptionsObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrder(value: String | (js.Array[String | Earcon | (js.Array[String | Earcon])])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointPlayTime(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPlayTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAfterSeriesWait(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterSeriesWait")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterSeriesWait: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterSeriesWait")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataExtremes(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataExtremes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataExtremes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataExtremes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEarcons(value: js.Array[EarconConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earcons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEarcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earcons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstruments(value: js.Array[PointInstrumentObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstruments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnd(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSeriesEnd(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSeriesEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSeriesStart(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSeriesStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeriesOptions(value: js.Object | js.Array[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeriesOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

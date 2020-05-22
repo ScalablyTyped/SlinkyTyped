@@ -1,6 +1,7 @@
 package typingsSlinky.graphqlTools.filterToSchemaMod
 
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlTools.interfacesMod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends FilterToSchema {
   def this(targetSchema: GraphQLSchema) = this()
+  /* CompleteClass */
+  override var targetSchema: js.Any = js.native
+  /* CompleteClass */
+  @JSName("transformRequest")
+  override def transformRequest_MFilterToSchema(originalRequest: Request): Request = js.native
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetSunPositionResult extends js.Object {
-  var altitude: Double = js.native
-  var azimuth: Double = js.native
+  var altitude: Double
+  var azimuth: Double
 }
 
 object GetSunPositionResult {
@@ -16,25 +15,5 @@ object GetSunPositionResult {
     val __obj = js.Dynamic.literal(altitude = altitude.asInstanceOf[js.Any], azimuth = azimuth.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSunPositionResult]
   }
-  @scala.inline
-  implicit class GetSunPositionResultOps[Self <: GetSunPositionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAzimuth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("azimuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

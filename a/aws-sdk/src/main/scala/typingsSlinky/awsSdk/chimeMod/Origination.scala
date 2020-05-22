@@ -18,41 +18,11 @@ trait Origination extends js.Object {
 
 object Origination {
   @scala.inline
-  def apply(): Origination = {
+  def apply(Disabled: js.UndefOr[Boolean] = js.undefined, Routes: OriginationRouteList = null): Origination = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Disabled)) __obj.updateDynamic("Disabled")(Disabled.get.asInstanceOf[js.Any])
+    if (Routes != null) __obj.updateDynamic("Routes")(Routes.asInstanceOf[js.Any])
     __obj.asInstanceOf[Origination]
   }
-  @scala.inline
-  implicit class OriginationOps[Self <: Origination] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoutes(value: OriginationRouteList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Routes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Routes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

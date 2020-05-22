@@ -11,29 +11,10 @@ trait SchemaMessageSet extends js.Object {
 
 object SchemaMessageSet {
   @scala.inline
-  def apply(): SchemaMessageSet = {
+  def apply(recordMessageSetExt: SchemaLivegraphBacktraceRecordInfo = null): SchemaMessageSet = {
     val __obj = js.Dynamic.literal()
+    if (recordMessageSetExt != null) __obj.updateDynamic("recordMessageSetExt")(recordMessageSetExt.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMessageSet]
   }
-  @scala.inline
-  implicit class SchemaMessageSetOps[Self <: SchemaMessageSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRecordMessageSetExt(value: SchemaLivegraphBacktraceRecordInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordMessageSetExt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordMessageSetExt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordMessageSetExt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

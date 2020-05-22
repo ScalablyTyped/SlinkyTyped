@@ -11,29 +11,10 @@ trait ApplyPendingMaintenanceActionResult extends js.Object {
 
 object ApplyPendingMaintenanceActionResult {
   @scala.inline
-  def apply(): ApplyPendingMaintenanceActionResult = {
+  def apply(ResourcePendingMaintenanceActions: ResourcePendingMaintenanceActions = null): ApplyPendingMaintenanceActionResult = {
     val __obj = js.Dynamic.literal()
+    if (ResourcePendingMaintenanceActions != null) __obj.updateDynamic("ResourcePendingMaintenanceActions")(ResourcePendingMaintenanceActions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplyPendingMaintenanceActionResult]
   }
-  @scala.inline
-  implicit class ApplyPendingMaintenanceActionResultOps[Self <: ApplyPendingMaintenanceActionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourcePendingMaintenanceActions(value: ResourcePendingMaintenanceActions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePendingMaintenanceActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourcePendingMaintenanceActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePendingMaintenanceActions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait DescribeLifecycleHooksAnswer extends js.Object {
 
 object DescribeLifecycleHooksAnswer {
   @scala.inline
-  def apply(): DescribeLifecycleHooksAnswer = {
+  def apply(LifecycleHooks: LifecycleHooks = null): DescribeLifecycleHooksAnswer = {
     val __obj = js.Dynamic.literal()
+    if (LifecycleHooks != null) __obj.updateDynamic("LifecycleHooks")(LifecycleHooks.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLifecycleHooksAnswer]
   }
-  @scala.inline
-  implicit class DescribeLifecycleHooksAnswerOps[Self <: DescribeLifecycleHooksAnswer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLifecycleHooks(value: LifecycleHooks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleHooks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHooks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

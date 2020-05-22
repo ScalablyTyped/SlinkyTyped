@@ -22,53 +22,12 @@ trait Command extends js.Object {
 
 object Command {
   @scala.inline
-  def apply(): Command = {
+  def apply(Args: StringList = null, Name: String = null, ScriptPath: String = null): Command = {
     val __obj = js.Dynamic.literal()
+    if (Args != null) __obj.updateDynamic("Args")(Args.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (ScriptPath != null) __obj.updateDynamic("ScriptPath")(ScriptPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[Command]
   }
-  @scala.inline
-  implicit class CommandOps[Self <: Command] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScriptPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScriptPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

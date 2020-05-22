@@ -15,29 +15,10 @@ trait SchemaReviewsReplyRequest extends js.Object {
 
 object SchemaReviewsReplyRequest {
   @scala.inline
-  def apply(): SchemaReviewsReplyRequest = {
+  def apply(replyText: String = null): SchemaReviewsReplyRequest = {
     val __obj = js.Dynamic.literal()
+    if (replyText != null) __obj.updateDynamic("replyText")(replyText.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReviewsReplyRequest]
   }
-  @scala.inline
-  implicit class SchemaReviewsReplyRequestOps[Self <: SchemaReviewsReplyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplyText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.agentkeepalive.mod
 
 import typingsSlinky.node.httpMod.IncomingMessage
+import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.node.httpsMod.Agent
-import typingsSlinky.node.httpsMod.RequestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("agentkeepalive", "HttpsAgent")
 @js.native
 class HttpsAgent () extends Agent {
-  def this(opts: HttpsOptions) = this()
+  def this(opts: HttpOptions) = this()
   val statusChanged: Boolean = js.native
   def createSocket(req: IncomingMessage, options: RequestOptions, cb: js.Function): Unit = js.native
   def getCurrentStatus(): AgentStatus = js.native

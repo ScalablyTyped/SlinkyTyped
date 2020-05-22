@@ -228,413 +228,76 @@ trait SchemaBackendService extends js.Object {
 
 object SchemaBackendService {
   @scala.inline
-  def apply(): SchemaBackendService = {
+  def apply(
+    affinityCookieTtlSec: js.UndefOr[Double] = js.undefined,
+    appEngineBackend: SchemaBackendServiceAppEngineBackend = null,
+    backends: js.Array[SchemaBackend] = null,
+    cdnPolicy: SchemaBackendServiceCdnPolicy = null,
+    circuitBreakers: SchemaCircuitBreakers = null,
+    cloudFunctionBackend: SchemaBackendServiceCloudFunctionBackend = null,
+    connectionDraining: SchemaConnectionDraining = null,
+    consistentHash: SchemaConsistentHashLoadBalancerSettings = null,
+    creationTimestamp: String = null,
+    customRequestHeaders: js.Array[String] = null,
+    description: String = null,
+    enableCDN: js.UndefOr[Boolean] = js.undefined,
+    failoverPolicy: SchemaBackendServiceFailoverPolicy = null,
+    fingerprint: String = null,
+    healthChecks: js.Array[String] = null,
+    iap: SchemaBackendServiceIAP = null,
+    id: String = null,
+    kind: String = null,
+    loadBalancingScheme: String = null,
+    localityLbPolicy: String = null,
+    logConfig: SchemaBackendServiceLogConfig = null,
+    name: String = null,
+    outlierDetection: SchemaOutlierDetection = null,
+    port: js.UndefOr[Double] = js.undefined,
+    portName: String = null,
+    protocol: String = null,
+    region: String = null,
+    securityPolicy: String = null,
+    securitySettings: SchemaSecuritySettings = null,
+    selfLink: String = null,
+    selfLinkWithId: String = null,
+    sessionAffinity: String = null,
+    timeoutSec: js.UndefOr[Double] = js.undefined
+  ): SchemaBackendService = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(affinityCookieTtlSec)) __obj.updateDynamic("affinityCookieTtlSec")(affinityCookieTtlSec.get.asInstanceOf[js.Any])
+    if (appEngineBackend != null) __obj.updateDynamic("appEngineBackend")(appEngineBackend.asInstanceOf[js.Any])
+    if (backends != null) __obj.updateDynamic("backends")(backends.asInstanceOf[js.Any])
+    if (cdnPolicy != null) __obj.updateDynamic("cdnPolicy")(cdnPolicy.asInstanceOf[js.Any])
+    if (circuitBreakers != null) __obj.updateDynamic("circuitBreakers")(circuitBreakers.asInstanceOf[js.Any])
+    if (cloudFunctionBackend != null) __obj.updateDynamic("cloudFunctionBackend")(cloudFunctionBackend.asInstanceOf[js.Any])
+    if (connectionDraining != null) __obj.updateDynamic("connectionDraining")(connectionDraining.asInstanceOf[js.Any])
+    if (consistentHash != null) __obj.updateDynamic("consistentHash")(consistentHash.asInstanceOf[js.Any])
+    if (creationTimestamp != null) __obj.updateDynamic("creationTimestamp")(creationTimestamp.asInstanceOf[js.Any])
+    if (customRequestHeaders != null) __obj.updateDynamic("customRequestHeaders")(customRequestHeaders.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableCDN)) __obj.updateDynamic("enableCDN")(enableCDN.get.asInstanceOf[js.Any])
+    if (failoverPolicy != null) __obj.updateDynamic("failoverPolicy")(failoverPolicy.asInstanceOf[js.Any])
+    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
+    if (healthChecks != null) __obj.updateDynamic("healthChecks")(healthChecks.asInstanceOf[js.Any])
+    if (iap != null) __obj.updateDynamic("iap")(iap.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (loadBalancingScheme != null) __obj.updateDynamic("loadBalancingScheme")(loadBalancingScheme.asInstanceOf[js.Any])
+    if (localityLbPolicy != null) __obj.updateDynamic("localityLbPolicy")(localityLbPolicy.asInstanceOf[js.Any])
+    if (logConfig != null) __obj.updateDynamic("logConfig")(logConfig.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (outlierDetection != null) __obj.updateDynamic("outlierDetection")(outlierDetection.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (portName != null) __obj.updateDynamic("portName")(portName.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (securityPolicy != null) __obj.updateDynamic("securityPolicy")(securityPolicy.asInstanceOf[js.Any])
+    if (securitySettings != null) __obj.updateDynamic("securitySettings")(securitySettings.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (selfLinkWithId != null) __obj.updateDynamic("selfLinkWithId")(selfLinkWithId.asInstanceOf[js.Any])
+    if (sessionAffinity != null) __obj.updateDynamic("sessionAffinity")(sessionAffinity.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutSec)) __obj.updateDynamic("timeoutSec")(timeoutSec.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBackendService]
   }
-  @scala.inline
-  implicit class SchemaBackendServiceOps[Self <: SchemaBackendService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAffinityCookieTtlSec(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affinityCookieTtlSec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAffinityCookieTtlSec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affinityCookieTtlSec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppEngineBackend(value: SchemaBackendServiceAppEngineBackend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineBackend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppEngineBackend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineBackend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackends(value: js.Array[SchemaBackend]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backends")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackends: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backends")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdnPolicy(value: SchemaBackendServiceCdnPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdnPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdnPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdnPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCircuitBreakers(value: SchemaCircuitBreakers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circuitBreakers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircuitBreakers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circuitBreakers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudFunctionBackend(value: SchemaBackendServiceCloudFunctionBackend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudFunctionBackend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudFunctionBackend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudFunctionBackend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionDraining(value: SchemaConnectionDraining): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionDraining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionDraining: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionDraining")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsistentHash(value: SchemaConsistentHashLoadBalancerSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consistentHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsistentHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consistentHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomRequestHeaders(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRequestHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomRequestHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRequestHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableCDN(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCDN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableCDN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCDN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailoverPolicy(value: SchemaBackendServiceFailoverPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailoverPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthChecks(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIap(value: SchemaBackendServiceIAP): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadBalancingScheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancingScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancingScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancingScheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalityLbPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localityLbPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalityLbPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localityLbPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogConfig(value: SchemaBackendServiceLogConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlierDetection(value: SchemaOutlierDetection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlierDetection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlierDetection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlierDetection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPortName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecuritySettings(value: SchemaSecuritySettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securitySettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecuritySettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securitySettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLinkWithId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLinkWithId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLinkWithId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLinkWithId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionAffinity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAffinity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionAffinity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAffinity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeoutSec(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutSec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSec")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

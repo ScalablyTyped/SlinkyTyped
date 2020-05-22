@@ -30,59 +30,17 @@ trait GetCostForecastRequest extends js.Object {
 
 object GetCostForecastRequest {
   @scala.inline
-  def apply(Granularity: Granularity, Metric: Metric, TimePeriod: DateInterval): GetCostForecastRequest = {
+  def apply(
+    Granularity: Granularity,
+    Metric: Metric,
+    TimePeriod: DateInterval,
+    Filter: Expression = null,
+    PredictionIntervalLevel: js.UndefOr[PredictionIntervalLevel] = js.undefined
+  ): GetCostForecastRequest = {
     val __obj = js.Dynamic.literal(Granularity = Granularity.asInstanceOf[js.Any], Metric = Metric.asInstanceOf[js.Any], TimePeriod = TimePeriod.asInstanceOf[js.Any])
+    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
+    if (!js.isUndefined(PredictionIntervalLevel)) __obj.updateDynamic("PredictionIntervalLevel")(PredictionIntervalLevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCostForecastRequest]
   }
-  @scala.inline
-  implicit class GetCostForecastRequestOps[Self <: GetCostForecastRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGranularity(value: Granularity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Granularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetric(value: Metric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimePeriod(value: DateInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredictionIntervalLevel(value: PredictionIntervalLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictionIntervalLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictionIntervalLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictionIntervalLevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

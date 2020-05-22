@@ -1,7 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import typingsSlinky.devextreme.anon.ComponentDataField
+import typingsSlinky.devextreme.anon.ComponentElement
 import typingsSlinky.devextreme.anon.DataFieldElement
+import typingsSlinky.devextreme.anon.Element
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.left
 import typingsSlinky.devextreme.devextremeStrings.right
@@ -10,346 +14,148 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxFormOptions extends WidgetOptions[dxForm] {
-  /** Specifies whether or not all root item labels are aligned. */
-  var alignItemLabels: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not item labels in all groups are aligned. */
-  var alignItemLabelsInAllGroups: js.UndefOr[Boolean] = js.native
-  /** The count of columns in the form layout. */
-  var colCount: js.UndefOr[Double | auto] = js.native
-  /** Specifies dependency between the screen factor and the count of columns in the form layout. */
-  var colCountByScreen: js.UndefOr[js.Any] = js.native
-  /** Specifies a function that customizes a form item after it has been created. */
+  /** @name dxForm.Options.alignItemLabels */
+  var alignItemLabels: js.UndefOr[Boolean] = js.undefined
+  /** @name dxForm.Options.alignItemLabelsInAllGroups */
+  var alignItemLabelsInAllGroups: js.UndefOr[Boolean] = js.undefined
+  /** @name dxForm.Options.colCount */
+  var colCount: js.UndefOr[Double | auto] = js.undefined
+  /** @name dxForm.Options.colCountByScreen */
+  var colCountByScreen: js.UndefOr[js.Any] = js.undefined
+  /** @name dxForm.Options.customizeItem */
   var customizeItem: js.UndefOr[
     js.Function1[
       /* item */ dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem, 
       _
     ]
-  ] = js.native
-  /** Provides the Form's data. Gets updated every time form fields change. */
-  var formData: js.UndefOr[js.Any] = js.native
-  /** Holds an array of form items. */
+  ] = js.undefined
+  /** @name dxForm.Options.formData */
+  var formData: js.UndefOr[js.Any] = js.undefined
+  /** @name dxForm.Options.items */
   var items: js.UndefOr[
     js.Array[
       dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem
     ]
-  ] = js.native
-  /** Specifies the location of a label against the editor. */
-  var labelLocation: js.UndefOr[left | right | top] = js.native
-  /** The minimum column width used for calculating column count in the form layout. */
-  var minColWidth: js.UndefOr[Double] = js.native
-  /** A function that is executed when the Enter key has been pressed while an editor is focused. */
-  var onEditorEnterKey: js.UndefOr[js.Function1[/* e */ ComponentDataField, _]] = js.native
-  /** A function that is executed when the value of a formData object field is changed. */
-  var onFieldDataChanged: js.UndefOr[js.Function1[/* e */ DataFieldElement, _]] = js.native
-  /** The text displayed for optional fields. */
-  var optionalMark: js.UndefOr[String] = js.native
-  /** Specifies whether all editors on the form are read-only. Applies only to non-templated items. */
-  var readOnly: js.UndefOr[Boolean] = js.native
-  /** The text displayed for required fields. */
-  var requiredMark: js.UndefOr[String] = js.native
-  /** Specifies the message that is shown for end-users if a required field value is not specified. */
-  var requiredMessage: js.UndefOr[String] = js.native
-  /** Specifies a function that categorizes screens by their width. */
-  var screenByWidth: js.UndefOr[js.Function] = js.native
-  /** A Boolean value specifying whether to enable or disable form scrolling. */
-  var scrollingEnabled: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not a colon is displayed at the end of form labels. */
-  var showColonAfterLabel: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not the optional mark is displayed for optional fields. */
-  var showOptionalMark: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not the required mark is displayed for required fields. */
-  var showRequiredMark: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not the total validation summary is displayed on the form. */
-  var showValidationSummary: js.UndefOr[Boolean] = js.native
-  /** Gives a name to the internal validation group. */
-  var validationGroup: js.UndefOr[String] = js.native
+  ] = js.undefined
+  /** @name dxForm.Options.labelLocation */
+  var labelLocation: js.UndefOr[left | right | top] = js.undefined
+  /** @name dxForm.Options.minColWidth */
+  var minColWidth: js.UndefOr[Double] = js.undefined
+  /** @name dxForm.Options.onEditorEnterKey */
+  var onEditorEnterKey: js.UndefOr[js.Function1[/* e */ ComponentDataField, _]] = js.undefined
+  /** @name dxForm.Options.onFieldDataChanged */
+  var onFieldDataChanged: js.UndefOr[js.Function1[/* e */ DataFieldElement, _]] = js.undefined
+  /** @name dxForm.Options.optionalMark */
+  var optionalMark: js.UndefOr[String] = js.undefined
+  /** @name dxForm.Options.readOnly */
+  var readOnly: js.UndefOr[Boolean] = js.undefined
+  /** @name dxForm.Options.requiredMark */
+  var requiredMark: js.UndefOr[String] = js.undefined
+  /** @name dxForm.Options.requiredMessage */
+  var requiredMessage: js.UndefOr[String] = js.undefined
+  /** @name dxForm.Options.screenByWidth */
+  var screenByWidth: js.UndefOr[js.Function] = js.undefined
+  /** @name dxForm.Options.scrollingEnabled */
+  var scrollingEnabled: js.UndefOr[Boolean] = js.undefined
+  /** @name dxForm.Options.showColonAfterLabel */
+  var showColonAfterLabel: js.UndefOr[Boolean] = js.undefined
+  /** @name dxForm.Options.showOptionalMark */
+  var showOptionalMark: js.UndefOr[Boolean] = js.undefined
+  /** @name dxForm.Options.showRequiredMark */
+  var showRequiredMark: js.UndefOr[Boolean] = js.undefined
+  /** @name dxForm.Options.showValidationSummary */
+  var showValidationSummary: js.UndefOr[Boolean] = js.undefined
+  /** @name dxForm.Options.validationGroup */
+  var validationGroup: js.UndefOr[String] = js.undefined
 }
 
 object dxFormOptions {
   @scala.inline
-  def apply(): dxFormOptions = {
+  def apply(
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    alignItemLabels: js.UndefOr[Boolean] = js.undefined,
+    alignItemLabelsInAllGroups: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    colCount: Double | auto = null,
+    colCountByScreen: js.Any = null,
+    customizeItem: /* item */ dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem => _ = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementAttr: js.Any = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    formData: js.Any = null,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    items: js.Array[
+      dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem
+    ] = null,
+    labelLocation: left | right | top = null,
+    minColWidth: js.UndefOr[Double] = js.undefined,
+    onContentReady: /* e */ ComponentElement[dxForm] => _ = null,
+    onDisposing: /* e */ Model[dxForm] => _ = null,
+    onEditorEnterKey: /* e */ ComponentDataField => _ = null,
+    onFieldDataChanged: /* e */ DataFieldElement => _ = null,
+    onInitialized: /* e */ Element[dxForm] => _ = null,
+    onOptionChanged: /* e */ Name[dxForm] => _ = null,
+    optionalMark: String = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    requiredMark: String = null,
+    requiredMessage: String = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    screenByWidth: js.Function = null,
+    scrollingEnabled: js.UndefOr[Boolean] = js.undefined,
+    showColonAfterLabel: js.UndefOr[Boolean] = js.undefined,
+    showOptionalMark: js.UndefOr[Boolean] = js.undefined,
+    showRequiredMark: js.UndefOr[Boolean] = js.undefined,
+    showValidationSummary: js.UndefOr[Boolean] = js.undefined,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    validationGroup: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxFormOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(alignItemLabels)) __obj.updateDynamic("alignItemLabels")(alignItemLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(alignItemLabelsInAllGroups)) __obj.updateDynamic("alignItemLabelsInAllGroups")(alignItemLabelsInAllGroups.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (colCount != null) __obj.updateDynamic("colCount")(colCount.asInstanceOf[js.Any])
+    if (colCountByScreen != null) __obj.updateDynamic("colCountByScreen")(colCountByScreen.asInstanceOf[js.Any])
+    if (customizeItem != null) __obj.updateDynamic("customizeItem")(js.Any.fromFunction1(customizeItem))
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (formData != null) __obj.updateDynamic("formData")(formData.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (labelLocation != null) __obj.updateDynamic("labelLocation")(labelLocation.asInstanceOf[js.Any])
+    if (!js.isUndefined(minColWidth)) __obj.updateDynamic("minColWidth")(minColWidth.get.asInstanceOf[js.Any])
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onEditorEnterKey != null) __obj.updateDynamic("onEditorEnterKey")(js.Any.fromFunction1(onEditorEnterKey))
+    if (onFieldDataChanged != null) __obj.updateDynamic("onFieldDataChanged")(js.Any.fromFunction1(onFieldDataChanged))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (optionalMark != null) __obj.updateDynamic("optionalMark")(optionalMark.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (requiredMark != null) __obj.updateDynamic("requiredMark")(requiredMark.asInstanceOf[js.Any])
+    if (requiredMessage != null) __obj.updateDynamic("requiredMessage")(requiredMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (screenByWidth != null) __obj.updateDynamic("screenByWidth")(screenByWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollingEnabled)) __obj.updateDynamic("scrollingEnabled")(scrollingEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showColonAfterLabel)) __obj.updateDynamic("showColonAfterLabel")(showColonAfterLabel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showOptionalMark)) __obj.updateDynamic("showOptionalMark")(showOptionalMark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRequiredMark)) __obj.updateDynamic("showRequiredMark")(showRequiredMark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showValidationSummary)) __obj.updateDynamic("showValidationSummary")(showValidationSummary.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (validationGroup != null) __obj.updateDynamic("validationGroup")(validationGroup.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxFormOptions]
   }
-  @scala.inline
-  implicit class dxFormOptionsOps[Self <: dxFormOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignItemLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItemLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignItemLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItemLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignItemLabelsInAllGroups(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItemLabelsInAllGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignItemLabelsInAllGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItemLabelsInAllGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColCount(value: Double | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColCountByScreen(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colCountByScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColCountByScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colCountByScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeItem(
-      value: /* item */ dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(
-      value: js.Array[
-          dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelLocation(value: left | right | top): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinColWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinColWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEditorEnterKey(value: /* e */ ComponentDataField => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorEnterKey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEditorEnterKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorEnterKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFieldDataChanged(value: /* e */ DataFieldElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFieldDataChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFieldDataChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFieldDataChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionalMark(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionalMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalMark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequiredMark(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredMark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequiredMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenByWidth(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenByWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenByWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenByWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowColonAfterLabel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColonAfterLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowColonAfterLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColonAfterLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowOptionalMark(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOptionalMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowOptionalMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOptionalMark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRequiredMark(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRequiredMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRequiredMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRequiredMark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowValidationSummary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showValidationSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowValidationSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showValidationSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

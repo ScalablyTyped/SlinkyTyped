@@ -23,41 +23,11 @@ trait SchemaListFilterSetsResponse extends js.Object {
 
 object SchemaListFilterSetsResponse {
   @scala.inline
-  def apply(): SchemaListFilterSetsResponse = {
+  def apply(filterSets: js.Array[SchemaFilterSet] = null, nextPageToken: String = null): SchemaListFilterSetsResponse = {
     val __obj = js.Dynamic.literal()
+    if (filterSets != null) __obj.updateDynamic("filterSets")(filterSets.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListFilterSetsResponse]
   }
-  @scala.inline
-  implicit class SchemaListFilterSetsResponseOps[Self <: SchemaListFilterSetsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilterSets(value: js.Array[SchemaFilterSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterSets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

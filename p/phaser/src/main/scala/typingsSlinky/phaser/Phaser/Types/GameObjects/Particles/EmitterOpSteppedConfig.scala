@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Defines an operation yielding a value incremented by steps across a range.
   */
-@js.native
-trait EmitterOpSteppedConfig extends EmitterOpOnEmitType {
+trait EmitterOpSteppedConfig extends _EmitterOpOnEmitType {
   /**
     * The ending value.
     */
-  var end: Double = js.native
+  var end: Double
   /**
     * The starting value.
     */
-  var start: Double = js.native
+  var start: Double
   /**
     * The number of steps between start and end.
     */
-  var steps: Double = js.native
+  var steps: Double
 }
 
 object EmitterOpSteppedConfig {
@@ -29,31 +28,5 @@ object EmitterOpSteppedConfig {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], steps = steps.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmitterOpSteppedConfig]
   }
-  @scala.inline
-  implicit class EmitterOpSteppedConfigOps[Self <: EmitterOpSteppedConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSteps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

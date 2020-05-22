@@ -7,139 +7,73 @@ import scala.scalajs.js.annotation._
 /**
   * A single SOP instance from the series
   */
-@js.native
 trait ImagingStudySeriesInstance extends BackboneElement {
   /**
     * Contains extended information for property 'number'.
     */
-  var _number: js.UndefOr[Element] = js.native
+  var _number: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'sopClass'.
     */
-  var _sopClass: js.UndefOr[Element] = js.native
+  var _sopClass: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'title'.
     */
-  var _title: js.UndefOr[Element] = js.native
+  var _title: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'uid'.
     */
-  var _uid: js.UndefOr[Element] = js.native
+  var _uid: js.UndefOr[Element] = js.undefined
   /**
     * The number of this instance in the series
     */
-  var number: js.UndefOr[unsignedInt] = js.native
+  var number: js.UndefOr[unsignedInt] = js.undefined
   /**
     * DICOM class type
     */
-  var sopClass: oid = js.native
+  var sopClass: oid
   /**
     * Description of instance
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * Formal DICOM identifier for this instance
     */
-  var uid: oid = js.native
+  var uid: oid
 }
 
 object ImagingStudySeriesInstance {
   @scala.inline
-  def apply(sopClass: oid, uid: oid): ImagingStudySeriesInstance = {
+  def apply(
+    sopClass: oid,
+    uid: oid,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _number: Element = null,
+    _sopClass: Element = null,
+    _title: Element = null,
+    _uid: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    number: js.UndefOr[unsignedInt] = js.undefined,
+    title: String = null
+  ): ImagingStudySeriesInstance = {
     val __obj = js.Dynamic.literal(sopClass = sopClass.asInstanceOf[js.Any], uid = uid.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_number != null) __obj.updateDynamic("_number")(_number.asInstanceOf[js.Any])
+    if (_sopClass != null) __obj.updateDynamic("_sopClass")(_sopClass.asInstanceOf[js.Any])
+    if (_title != null) __obj.updateDynamic("_title")(_title.asInstanceOf[js.Any])
+    if (_uid != null) __obj.updateDynamic("_uid")(_uid.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (!js.isUndefined(number)) __obj.updateDynamic("number")(number.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImagingStudySeriesInstance]
   }
-  @scala.inline
-  implicit class ImagingStudySeriesInstanceOps[Self <: ImagingStudySeriesInstance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSopClass(value: oid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sopClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUid(value: oid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_number(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_number: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sopClass(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sopClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sopClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sopClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_title(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_title: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_uid(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_uid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_uid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: unsignedInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

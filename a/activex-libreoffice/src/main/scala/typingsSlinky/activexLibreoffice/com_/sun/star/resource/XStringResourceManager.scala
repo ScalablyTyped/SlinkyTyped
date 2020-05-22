@@ -17,7 +17,6 @@ import scala.scalajs.js.annotation._
   * It's designed to be used in the context of creating a string table, e.g. from a string table editor or from a Dialog Editor designing localized
   * dialogs.
   */
-@js.native
 trait XStringResourceManager extends XStringResourceResolver {
   /**
     * Provides a numeric id that is unique within all Resource IDs used in the string table.
@@ -36,7 +35,7 @@ trait XStringResourceManager extends XStringResourceResolver {
     * implementation to load all locale data that may not have been loaded so far.
     * @throws com::sun::star::lang::NoSupportException if the next available id exceeds the range of type long. So it's not recommended to use own Resource IDs
     */
-  val UniqueNumericId: Double = js.native
+  val UniqueNumericId: Double
   /**
     * Provides a numeric id that is unique within all Resource IDs used in the string table.
     *
@@ -54,12 +53,12 @@ trait XStringResourceManager extends XStringResourceResolver {
     * implementation to load all locale data that may not have been loaded so far.
     * @throws com::sun::star::lang::NoSupportException if the next available id exceeds the range of type long. So it's not recommended to use own Resource IDs
     */
-  def getUniqueNumericId(): Double = js.native
+  def getUniqueNumericId(): Double
   /**
     * Returns the resource's read only state
     * @returns `TRUE` if the resource is read only, otherwise `FALSE`
     */
-  def isReadOnly(): Boolean = js.native
+  def isReadOnly(): Boolean
   /**
     * Creates a new locale.
     *
@@ -69,14 +68,14 @@ trait XStringResourceManager extends XStringResourceResolver {
     * @throws com::sun::star::lang::IllegalArgumentException if the Locale is not valid.
     * @throws com::sun::star::lang::NoSupportException if the resource is read only, see {@link isReadOnly()}
     */
-  def newLocale(locale: Locale): Unit = js.native
+  def newLocale(locale: Locale): Unit
   /**
     * Removes a Resource ID including the corresponding string for the current locale.
     * @param ResourceID The Resource ID to be removed for the current locale.
     * @throws com::sun::star::resource::MissingResourceException if the Resource ID is not valid.
     * @throws com::sun::star::lang::NoSupportException if the resource is read only, see {@link isReadOnly()}
     */
-  def removeId(ResourceID: String): Unit = js.native
+  def removeId(ResourceID: String): Unit
   /**
     * Removes a Resource ID including the corresponding string for s specific locale.
     * @param ResourceID The Resource ID to be removed.
@@ -84,25 +83,25 @@ trait XStringResourceManager extends XStringResourceResolver {
     * @throws com::sun::star::resource::MissingResourceException if the Resource ID is not valid.
     * @throws com::sun::star::lang::NoSupportException if the resource is read only, see {@link isReadOnly()}
     */
-  def removeIdForLocale(ResourceID: String, locale: Locale): Unit = js.native
+  def removeIdForLocale(ResourceID: String, locale: Locale): Unit
   /**
     * Removes a locale completely including the corresponding strings for each locale.
     * @throws com::sun::star::lang::IllegalArgumentException if the Locale to be removed is not supported.
     * @throws com::sun::star::lang::NoSupportException if the resource is read only, see {@link isReadOnly()}
     */
-  def removeLocale(locale: Locale): Unit = js.native
+  def removeLocale(locale: Locale): Unit
   /**
     * Sets the locale to be used
     * @param Locale Specifies the current locale to be used.
     * @param FindClosestMatch  If true: If the exact locale that should be set is not available the method tries to find the closest match. E.g. if en_US is r
     */
-  def setCurrentLocale(Locale: Locale, FindClosestMatch: Boolean): Unit = js.native
+  def setCurrentLocale(Locale: Locale, FindClosestMatch: Boolean): Unit
   /**
     * Sets the default locale to be used
     * @param Locale Specifies the default locale to be used. If this locale is not available a {@link com.sun.star.lang.IllegalArgumentException} is thrown.
     * @throws com::sun::star::lang::NoSupportException if the resource is read only, see {@link isReadOnly()}
     */
-  def setDefaultLocale(Locale: Locale): Unit = js.native
+  def setDefaultLocale(Locale: Locale): Unit
   /**
     * Associates a String to a Resource ID for the current locale. If an entry for the Resource ID already exists, the string associated with it will be
     * overwritten, otherwise a new entry will be created.
@@ -110,7 +109,7 @@ trait XStringResourceManager extends XStringResourceResolver {
     * @param Str String to be associated with the Resource ID.
     * @throws com::sun::star::lang::NoSupportException if the resource is read only, see {@link isReadOnly()}
     */
-  def setString(ResourceID: String, Str: String): Unit = js.native
+  def setString(ResourceID: String, Str: String): Unit
   /**
     * Associates a String to a Resource ID for a specific locale. If an entry for the Resource ID already exists, the string associated with it will be
     * overwritten, otherwise a new entry will be created.
@@ -121,7 +120,7 @@ trait XStringResourceManager extends XStringResourceResolver {
     * @param locale The locale the string should be set for. The locale has to match exactly with one of the locales provided by {@link getLocales()} . A clos
     * @throws com::sun::star::lang::NoSupportException if the resource is read only, see {@link isReadOnly()}
     */
-  def setStringForLocale(ResourceID: String, Str: String, locale: Locale): Unit = js.native
+  def setStringForLocale(ResourceID: String, Str: String, locale: Locale): Unit
 }
 
 object XStringResourceManager {
@@ -160,79 +159,5 @@ object XStringResourceManager {
     val __obj = js.Dynamic.literal(CurrentLocale = CurrentLocale.asInstanceOf[js.Any], DefaultLocale = DefaultLocale.asInstanceOf[js.Any], Locales = Locales.asInstanceOf[js.Any], ResourceIDs = ResourceIDs.asInstanceOf[js.Any], UniqueNumericId = UniqueNumericId.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addModifyListener = js.Any.fromFunction1(addModifyListener), getCurrentLocale = js.Any.fromFunction0(getCurrentLocale), getDefaultLocale = js.Any.fromFunction0(getDefaultLocale), getLocales = js.Any.fromFunction0(getLocales), getResourceIDs = js.Any.fromFunction0(getResourceIDs), getResourceIDsForLocale = js.Any.fromFunction1(getResourceIDsForLocale), getUniqueNumericId = js.Any.fromFunction0(getUniqueNumericId), hasEntryForId = js.Any.fromFunction1(hasEntryForId), hasEntryForIdAndLocale = js.Any.fromFunction2(hasEntryForIdAndLocale), isReadOnly = js.Any.fromFunction0(isReadOnly), newLocale = js.Any.fromFunction1(newLocale), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeId = js.Any.fromFunction1(removeId), removeIdForLocale = js.Any.fromFunction2(removeIdForLocale), removeLocale = js.Any.fromFunction1(removeLocale), removeModifyListener = js.Any.fromFunction1(removeModifyListener), resolveString = js.Any.fromFunction1(resolveString), resolveStringForLocale = js.Any.fromFunction2(resolveStringForLocale), setCurrentLocale = js.Any.fromFunction2(setCurrentLocale), setDefaultLocale = js.Any.fromFunction1(setDefaultLocale), setString = js.Any.fromFunction2(setString), setStringForLocale = js.Any.fromFunction3(setStringForLocale))
     __obj.asInstanceOf[XStringResourceManager]
   }
-  @scala.inline
-  implicit class XStringResourceManagerOps[Self <: XStringResourceManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUniqueNumericId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueNumericId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetUniqueNumericId(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUniqueNumericId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsReadOnly(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadOnly")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewLocale(value: Locale => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newLocale")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveId(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeId")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveIdForLocale(value: (String, Locale) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeIdForLocale")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveLocale(value: Locale => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLocale")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetCurrentLocale(value: (Locale, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCurrentLocale")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetDefaultLocale(value: Locale => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultLocale")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetString(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setString")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetStringForLocale(value: (String, String, Locale) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStringForLocale")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,69 +5,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectTreadBroadcastBaseOptions extends js.Object {
-  var form: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var item: String = js.native
-  var qs: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var signed: js.UndefOr[Boolean] = js.native
+  var form: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var item: String
+  var qs: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var signed: js.UndefOr[Boolean] = js.undefined
 }
 
 object DirectTreadBroadcastBaseOptions {
   @scala.inline
-  def apply(item: String): DirectTreadBroadcastBaseOptions = {
+  def apply(
+    item: String,
+    form: StringDictionary[js.Any] = null,
+    qs: StringDictionary[js.Any] = null,
+    signed: js.UndefOr[Boolean] = js.undefined
+  ): DirectTreadBroadcastBaseOptions = {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (qs != null) __obj.updateDynamic("qs")(qs.asInstanceOf[js.Any])
+    if (!js.isUndefined(signed)) __obj.updateDynamic("signed")(signed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectTreadBroadcastBaseOptions]
   }
-  @scala.inline
-  implicit class DirectTreadBroadcastBaseOptionsOps[Self <: DirectTreadBroadcastBaseOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForm(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQs(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigned(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

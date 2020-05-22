@@ -23,41 +23,14 @@ trait SchemaGooglePrivacyDlpV2RecordTransformations extends js.Object {
 
 object SchemaGooglePrivacyDlpV2RecordTransformations {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2RecordTransformations = {
+  def apply(
+    fieldTransformations: js.Array[SchemaGooglePrivacyDlpV2FieldTransformation] = null,
+    recordSuppressions: js.Array[SchemaGooglePrivacyDlpV2RecordSuppression] = null
+  ): SchemaGooglePrivacyDlpV2RecordTransformations = {
     val __obj = js.Dynamic.literal()
+    if (fieldTransformations != null) __obj.updateDynamic("fieldTransformations")(fieldTransformations.asInstanceOf[js.Any])
+    if (recordSuppressions != null) __obj.updateDynamic("recordSuppressions")(recordSuppressions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2RecordTransformations]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2RecordTransformationsOps[Self <: SchemaGooglePrivacyDlpV2RecordTransformations] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFieldTransformations(value: js.Array[SchemaGooglePrivacyDlpV2FieldTransformation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldTransformations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldTransformations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldTransformations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordSuppressions(value: js.Array[SchemaGooglePrivacyDlpV2RecordSuppression]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordSuppressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordSuppressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordSuppressions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

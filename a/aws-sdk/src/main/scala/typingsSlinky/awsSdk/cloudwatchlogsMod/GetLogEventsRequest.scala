@@ -38,89 +38,22 @@ trait GetLogEventsRequest extends js.Object {
 
 object GetLogEventsRequest {
   @scala.inline
-  def apply(logGroupName: LogGroupName, logStreamName: LogStreamName): GetLogEventsRequest = {
+  def apply(
+    logGroupName: LogGroupName,
+    logStreamName: LogStreamName,
+    endTime: js.UndefOr[Timestamp] = js.undefined,
+    limit: js.UndefOr[EventsLimit] = js.undefined,
+    nextToken: NextToken = null,
+    startFromHead: js.UndefOr[StartFromHead] = js.undefined,
+    startTime: js.UndefOr[Timestamp] = js.undefined
+  ): GetLogEventsRequest = {
     val __obj = js.Dynamic.literal(logGroupName = logGroupName.asInstanceOf[js.Any], logStreamName = logStreamName.asInstanceOf[js.Any])
+    if (!js.isUndefined(endTime)) __obj.updateDynamic("endTime")(endTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(startFromHead)) __obj.updateDynamic("startFromHead")(startFromHead.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startTime)) __obj.updateDynamic("startTime")(startTime.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLogEventsRequest]
   }
-  @scala.inline
-  implicit class GetLogEventsRequestOps[Self <: GetLogEventsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogGroupName(value: LogGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLogStreamName(value: LogStreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: EventsLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartFromHead(value: StartFromHead): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startFromHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartFromHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startFromHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait QueryResultItem extends js.Object {
   /**
-    * 
+    * One or more additional attribues associated with the query result.
     */
   var AdditionalAttributes: js.UndefOr[AdditionalResultAttributeList] = js.native
   /**
@@ -42,113 +42,26 @@ trait QueryResultItem extends js.Object {
 
 object QueryResultItem {
   @scala.inline
-  def apply(): QueryResultItem = {
+  def apply(
+    AdditionalAttributes: AdditionalResultAttributeList = null,
+    DocumentAttributes: DocumentAttributeList = null,
+    DocumentExcerpt: TextWithHighlights = null,
+    DocumentId: DocumentId = null,
+    DocumentTitle: TextWithHighlights = null,
+    DocumentURI: Url = null,
+    Id: ResultId = null,
+    Type: QueryResultType = null
+  ): QueryResultItem = {
     val __obj = js.Dynamic.literal()
+    if (AdditionalAttributes != null) __obj.updateDynamic("AdditionalAttributes")(AdditionalAttributes.asInstanceOf[js.Any])
+    if (DocumentAttributes != null) __obj.updateDynamic("DocumentAttributes")(DocumentAttributes.asInstanceOf[js.Any])
+    if (DocumentExcerpt != null) __obj.updateDynamic("DocumentExcerpt")(DocumentExcerpt.asInstanceOf[js.Any])
+    if (DocumentId != null) __obj.updateDynamic("DocumentId")(DocumentId.asInstanceOf[js.Any])
+    if (DocumentTitle != null) __obj.updateDynamic("DocumentTitle")(DocumentTitle.asInstanceOf[js.Any])
+    if (DocumentURI != null) __obj.updateDynamic("DocumentURI")(DocumentURI.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryResultItem]
   }
-  @scala.inline
-  implicit class QueryResultItemOps[Self <: QueryResultItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalAttributes(value: AdditionalResultAttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentAttributes(value: DocumentAttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentExcerpt(value: TextWithHighlights): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentExcerpt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentExcerpt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentExcerpt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentId(value: DocumentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentTitle(value: TextWithHighlights): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentURI(value: Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentURI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentURI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentURI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: ResultId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: QueryResultType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

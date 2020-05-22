@@ -171,395 +171,74 @@ trait ConfigurationOptionskeyst
 
 object ConfigurationOptionskeyst {
   @scala.inline
-  def apply(): ConfigurationOptionskeyst = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    accessKeyId: String = null,
+    computeChecksums: js.UndefOr[Boolean] = js.undefined,
+    convertResponseTypes: js.UndefOr[Boolean] = js.undefined,
+    correctClockSkew: js.UndefOr[Boolean] = js.undefined,
+    credentialProvider: CredentialProviderChain = null,
+    credentials: js.UndefOr[Null | Credentials | CredentialsOptions] = js.undefined,
+    customUserAgent: String = null,
+    dynamoDbCrc32: js.UndefOr[Boolean] = js.undefined,
+    endpointCacheSize: js.UndefOr[Double] = js.undefined,
+    endpointDiscoveryEnabled: js.UndefOr[Boolean] = js.undefined,
+    hostPrefixEnabled: js.UndefOr[Boolean] = js.undefined,
+    httpOptions: HTTPOptions = null,
+    logger: Logger = null,
+    maxRedirects: js.UndefOr[Double] = js.undefined,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    paramValidation: ParamValidation | Boolean = null,
+    region: String = null,
+    retryDelayOptions: RetryDelayOptions = null,
+    s3BucketEndpoint: js.UndefOr[Boolean] = js.undefined,
+    s3DisableBodySigning: js.UndefOr[Boolean] = js.undefined,
+    s3ForcePathStyle: js.UndefOr[Boolean] = js.undefined,
+    s3UsEast1RegionalEndpoint: regional_ | legacy_ = null,
+    s3UseArnRegion: js.UndefOr[Boolean] = js.undefined,
+    secretAccessKey: String = null,
+    sessionToken: String = null,
+    signatureCache: js.UndefOr[Boolean] = js.undefined,
+    signatureVersion: v2_ | v3 | v4 | String = null,
+    sslEnabled: js.UndefOr[Boolean] = js.undefined,
+    stsRegionalEndpoints: legacy_ | regional_ = null,
+    systemClockOffset: js.UndefOr[Double] = js.undefined,
+    useAccelerateEndpoint: js.UndefOr[Boolean] = js.undefined
+  ): ConfigurationOptionskeyst = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (accessKeyId != null) __obj.updateDynamic("accessKeyId")(accessKeyId.asInstanceOf[js.Any])
+    if (!js.isUndefined(computeChecksums)) __obj.updateDynamic("computeChecksums")(computeChecksums.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(convertResponseTypes)) __obj.updateDynamic("convertResponseTypes")(convertResponseTypes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(correctClockSkew)) __obj.updateDynamic("correctClockSkew")(correctClockSkew.get.asInstanceOf[js.Any])
+    if (credentialProvider != null) __obj.updateDynamic("credentialProvider")(credentialProvider.asInstanceOf[js.Any])
+    if (!js.isUndefined(credentials)) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (customUserAgent != null) __obj.updateDynamic("customUserAgent")(customUserAgent.asInstanceOf[js.Any])
+    if (!js.isUndefined(dynamoDbCrc32)) __obj.updateDynamic("dynamoDbCrc32")(dynamoDbCrc32.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(endpointCacheSize)) __obj.updateDynamic("endpointCacheSize")(endpointCacheSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(endpointDiscoveryEnabled)) __obj.updateDynamic("endpointDiscoveryEnabled")(endpointDiscoveryEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hostPrefixEnabled)) __obj.updateDynamic("hostPrefixEnabled")(hostPrefixEnabled.get.asInstanceOf[js.Any])
+    if (httpOptions != null) __obj.updateDynamic("httpOptions")(httpOptions.asInstanceOf[js.Any])
+    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRedirects)) __obj.updateDynamic("maxRedirects")(maxRedirects.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (paramValidation != null) __obj.updateDynamic("paramValidation")(paramValidation.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (retryDelayOptions != null) __obj.updateDynamic("retryDelayOptions")(retryDelayOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(s3BucketEndpoint)) __obj.updateDynamic("s3BucketEndpoint")(s3BucketEndpoint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(s3DisableBodySigning)) __obj.updateDynamic("s3DisableBodySigning")(s3DisableBodySigning.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(s3ForcePathStyle)) __obj.updateDynamic("s3ForcePathStyle")(s3ForcePathStyle.get.asInstanceOf[js.Any])
+    if (s3UsEast1RegionalEndpoint != null) __obj.updateDynamic("s3UsEast1RegionalEndpoint")(s3UsEast1RegionalEndpoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(s3UseArnRegion)) __obj.updateDynamic("s3UseArnRegion")(s3UseArnRegion.get.asInstanceOf[js.Any])
+    if (secretAccessKey != null) __obj.updateDynamic("secretAccessKey")(secretAccessKey.asInstanceOf[js.Any])
+    if (sessionToken != null) __obj.updateDynamic("sessionToken")(sessionToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(signatureCache)) __obj.updateDynamic("signatureCache")(signatureCache.get.asInstanceOf[js.Any])
+    if (signatureVersion != null) __obj.updateDynamic("signatureVersion")(signatureVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(sslEnabled)) __obj.updateDynamic("sslEnabled")(sslEnabled.get.asInstanceOf[js.Any])
+    if (stsRegionalEndpoints != null) __obj.updateDynamic("stsRegionalEndpoints")(stsRegionalEndpoints.asInstanceOf[js.Any])
+    if (!js.isUndefined(systemClockOffset)) __obj.updateDynamic("systemClockOffset")(systemClockOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useAccelerateEndpoint)) __obj.updateDynamic("useAccelerateEndpoint")(useAccelerateEndpoint.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationOptionskeyst]
   }
-  @scala.inline
-  implicit class ConfigurationOptionskeystOps[Self <: ConfigurationOptionskeyst] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeChecksums(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeChecksums")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputeChecksums: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeChecksums")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConvertResponseTypes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertResponseTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConvertResponseTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertResponseTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCorrectClockSkew(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correctClockSkew")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCorrectClockSkew: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correctClockSkew")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentialProvider(value: CredentialProviderChain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentialProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentials(value: Credentials | CredentialsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentialsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(null)
-        ret
-    }
-    @scala.inline
-    def withCustomUserAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customUserAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomUserAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customUserAgent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamoDbCrc32(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamoDbCrc32")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamoDbCrc32: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamoDbCrc32")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpointCacheSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointCacheSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointCacheSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointCacheSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpointDiscoveryEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointDiscoveryEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointDiscoveryEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointDiscoveryEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostPrefixEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPrefixEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostPrefixEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPrefixEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpOptions(value: HTTPOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogger(value: Logger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRedirects(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRedirects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParamValidation(value: ParamValidation | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramValidation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParamValidation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramValidation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryDelayOptions(value: RetryDelayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDelayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryDelayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDelayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3BucketEndpoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3BucketEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3DisableBodySigning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3DisableBodySigning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3DisableBodySigning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3DisableBodySigning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3ForcePathStyle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3ForcePathStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3ForcePathStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3ForcePathStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3UsEast1RegionalEndpoint(value: regional_ | legacy_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3UsEast1RegionalEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3UsEast1RegionalEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3UsEast1RegionalEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3UseArnRegion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3UseArnRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3UseArnRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3UseArnRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecretAccessKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretAccessKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecretAccessKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretAccessKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignatureCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignatureCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignatureVersion(value: v2_ | v3 | v4 | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignatureVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSslEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sslEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSslEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sslEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStsRegionalEndpoints(value: legacy_ | regional_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stsRegionalEndpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStsRegionalEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stsRegionalEndpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemClockOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemClockOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemClockOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemClockOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseAccelerateEndpoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAccelerateEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseAccelerateEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAccelerateEndpoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

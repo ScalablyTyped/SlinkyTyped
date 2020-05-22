@@ -22,53 +22,16 @@ trait AttachmentsSource extends js.Object {
 
 object AttachmentsSource {
   @scala.inline
-  def apply(): AttachmentsSource = {
+  def apply(
+    Key: AttachmentsSourceKey = null,
+    Name: AttachmentIdentifier = null,
+    Values: AttachmentsSourceValues = null
+  ): AttachmentsSource = {
     val __obj = js.Dynamic.literal()
+    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Values != null) __obj.updateDynamic("Values")(Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentsSource]
   }
-  @scala.inline
-  implicit class AttachmentsSourceOps[Self <: AttachmentsSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: AttachmentsSourceKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: AttachmentIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: AttachmentsSourceValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

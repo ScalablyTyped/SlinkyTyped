@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Day extends js.Object {
-  def day(args: js.Any*): js.Any = js.native
-  def dayPeriod(args: js.Any*): js.Any = js.native
-  def era(args: js.Any*): js.Any = js.native
-  def month(args: js.Any*): js.Any = js.native
-  def ordinalNumber(args: js.Any*): js.Any = js.native
-  def quarter(args: js.Any*): js.Any = js.native
+  def day(args: js.Any*): js.Any
+  def dayPeriod(args: js.Any*): js.Any
+  def era(args: js.Any*): js.Any
+  def month(args: js.Any*): js.Any
+  def ordinalNumber(args: js.Any*): js.Any
+  def quarter(args: js.Any*): js.Any
 }
 
 object Day {
@@ -27,49 +26,5 @@ object Day {
     val __obj = js.Dynamic.literal(day = js.Any.fromFunction1(day), dayPeriod = js.Any.fromFunction1(dayPeriod), era = js.Any.fromFunction1(era), month = js.Any.fromFunction1(month), ordinalNumber = js.Any.fromFunction1(ordinalNumber), quarter = js.Any.fromFunction1(quarter))
     __obj.asInstanceOf[Day]
   }
-  @scala.inline
-  implicit class DayOps[Self <: Day] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDay(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDayPeriod(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPeriod")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEra(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("era")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMonth(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOrdinalNumber(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinalNumber")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQuarter(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

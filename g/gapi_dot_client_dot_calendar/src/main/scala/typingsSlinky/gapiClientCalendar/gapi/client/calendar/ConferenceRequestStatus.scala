@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConferenceRequestStatus extends js.Object {
   /**
     * The current status of the conference create request. Read-only.
@@ -13,34 +12,15 @@ trait ConferenceRequestStatus extends js.Object {
     * - "success": the conference create request succeeded, the entry points are populated.
     * - "failure": the conference create request failed, there are no entry points.
     */
-  var statusCode: js.UndefOr[String] = js.native
+  var statusCode: js.UndefOr[String] = js.undefined
 }
 
 object ConferenceRequestStatus {
   @scala.inline
-  def apply(): ConferenceRequestStatus = {
+  def apply(statusCode: String = null): ConferenceRequestStatus = {
     val __obj = js.Dynamic.literal()
+    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConferenceRequestStatus]
   }
-  @scala.inline
-  implicit class ConferenceRequestStatusOps[Self <: ConferenceRequestStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatusCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

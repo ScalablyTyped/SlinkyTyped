@@ -8,12 +8,18 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jsonquery.mod.OrQueryCondition[T]
   - typingsSlinky.jsonquery.mod.AndQueryCondition[T]
 */
-trait BinaryQueryCondition[T] extends Query[T]
+trait BinaryQueryCondition[T] extends js.Object
 
 object BinaryQueryCondition {
   @scala.inline
-  implicit def apply[T](value: AndQueryCondition[T]): BinaryQueryCondition[T] = value.asInstanceOf[BinaryQueryCondition[T]]
+  def OrQueryCondition[T]($or: js.Array[Query[T]]): BinaryQueryCondition[T] = {
+    val __obj = js.Dynamic.literal($or = $or.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BinaryQueryCondition[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: OrQueryCondition[T]): BinaryQueryCondition[T] = value.asInstanceOf[BinaryQueryCondition[T]]
+  def AndQueryCondition[T]($and: js.Array[Query[T]]): BinaryQueryCondition[T] = {
+    val __obj = js.Dynamic.literal($and = $and.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BinaryQueryCondition[T]]
+  }
 }
 

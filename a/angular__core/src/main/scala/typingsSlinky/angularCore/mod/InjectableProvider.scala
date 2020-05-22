@@ -16,16 +16,36 @@ trait InjectableProvider extends js.Object
 
 object InjectableProvider {
   @scala.inline
-  implicit def apply(value: ClassSansProvider): InjectableProvider = value.asInstanceOf[InjectableProvider]
+  def ClassSansProvider(useClass: Type[_]): InjectableProvider = {
+    val __obj = js.Dynamic.literal(useClass = useClass.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InjectableProvider]
+  }
   @scala.inline
-  implicit def apply(value: ConstructorSansProvider): InjectableProvider = value.asInstanceOf[InjectableProvider]
+  def ConstructorSansProvider(deps: js.Array[_] = null): InjectableProvider = {
+    val __obj = js.Dynamic.literal()
+    if (deps != null) __obj.updateDynamic("deps")(deps.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InjectableProvider]
+  }
   @scala.inline
-  implicit def apply(value: ExistingSansProvider): InjectableProvider = value.asInstanceOf[InjectableProvider]
+  def ExistingSansProvider(useExisting: js.Any): InjectableProvider = {
+    val __obj = js.Dynamic.literal(useExisting = useExisting.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InjectableProvider]
+  }
   @scala.inline
-  implicit def apply(value: FactorySansProvider): InjectableProvider = value.asInstanceOf[InjectableProvider]
+  def FactorySansProvider(useFactory: js.Function, deps: js.Array[_] = null): InjectableProvider = {
+    val __obj = js.Dynamic.literal(useFactory = useFactory.asInstanceOf[js.Any])
+    if (deps != null) __obj.updateDynamic("deps")(deps.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InjectableProvider]
+  }
   @scala.inline
-  implicit def apply(value: StaticClassSansProvider): InjectableProvider = value.asInstanceOf[InjectableProvider]
+  def ValueSansProvider(useValue: js.Any): InjectableProvider = {
+    val __obj = js.Dynamic.literal(useValue = useValue.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InjectableProvider]
+  }
   @scala.inline
-  implicit def apply(value: ValueSansProvider): InjectableProvider = value.asInstanceOf[InjectableProvider]
+  def StaticClassSansProvider(deps: js.Array[_], useClass: Type[_]): InjectableProvider = {
+    val __obj = js.Dynamic.literal(deps = deps.asInstanceOf[js.Any], useClass = useClass.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InjectableProvider]
+  }
 }
 

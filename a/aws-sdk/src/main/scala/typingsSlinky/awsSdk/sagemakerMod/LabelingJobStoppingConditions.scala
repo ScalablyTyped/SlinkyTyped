@@ -18,41 +18,14 @@ trait LabelingJobStoppingConditions extends js.Object {
 
 object LabelingJobStoppingConditions {
   @scala.inline
-  def apply(): LabelingJobStoppingConditions = {
+  def apply(
+    MaxHumanLabeledObjectCount: js.UndefOr[MaxHumanLabeledObjectCount] = js.undefined,
+    MaxPercentageOfInputDatasetLabeled: js.UndefOr[MaxPercentageOfInputDatasetLabeled] = js.undefined
+  ): LabelingJobStoppingConditions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MaxHumanLabeledObjectCount)) __obj.updateDynamic("MaxHumanLabeledObjectCount")(MaxHumanLabeledObjectCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxPercentageOfInputDatasetLabeled)) __obj.updateDynamic("MaxPercentageOfInputDatasetLabeled")(MaxPercentageOfInputDatasetLabeled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelingJobStoppingConditions]
   }
-  @scala.inline
-  implicit class LabelingJobStoppingConditionsOps[Self <: LabelingJobStoppingConditions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxHumanLabeledObjectCount(value: MaxHumanLabeledObjectCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxHumanLabeledObjectCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHumanLabeledObjectCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxHumanLabeledObjectCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPercentageOfInputDatasetLabeled(value: MaxPercentageOfInputDatasetLabeled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxPercentageOfInputDatasetLabeled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPercentageOfInputDatasetLabeled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxPercentageOfInputDatasetLabeled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

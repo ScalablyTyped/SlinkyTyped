@@ -5,75 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<hoxy.hoxy.Slow> */
-@js.native
 trait PartialSlow extends js.Object {
-  var down: js.UndefOr[Double] = js.native
-  var latency: js.UndefOr[Double] = js.native
-  var rate: js.UndefOr[Double] = js.native
-  var up: js.UndefOr[Double] = js.native
+  var down: js.UndefOr[Double] = js.undefined
+  var latency: js.UndefOr[Double] = js.undefined
+  var rate: js.UndefOr[Double] = js.undefined
+  var up: js.UndefOr[Double] = js.undefined
 }
 
 object PartialSlow {
   @scala.inline
-  def apply(): PartialSlow = {
+  def apply(
+    down: js.UndefOr[Double] = js.undefined,
+    latency: js.UndefOr[Double] = js.undefined,
+    rate: js.UndefOr[Double] = js.undefined,
+    up: js.UndefOr[Double] = js.undefined
+  ): PartialSlow = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(down)) __obj.updateDynamic("down")(down.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(latency)) __obj.updateDynamic("latency")(latency.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rate)) __obj.updateDynamic("rate")(rate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(up)) __obj.updateDynamic("up")(up.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialSlow]
   }
-  @scala.inline
-  implicit class PartialSlowOps[Self <: PartialSlow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDown(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("down")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("down")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatency(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

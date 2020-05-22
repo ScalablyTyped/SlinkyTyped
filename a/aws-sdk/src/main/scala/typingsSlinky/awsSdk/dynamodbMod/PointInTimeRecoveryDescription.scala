@@ -22,53 +22,16 @@ trait PointInTimeRecoveryDescription extends js.Object {
 
 object PointInTimeRecoveryDescription {
   @scala.inline
-  def apply(): PointInTimeRecoveryDescription = {
+  def apply(
+    EarliestRestorableDateTime: js.Date = null,
+    LatestRestorableDateTime: js.Date = null,
+    PointInTimeRecoveryStatus: PointInTimeRecoveryStatus = null
+  ): PointInTimeRecoveryDescription = {
     val __obj = js.Dynamic.literal()
+    if (EarliestRestorableDateTime != null) __obj.updateDynamic("EarliestRestorableDateTime")(EarliestRestorableDateTime.asInstanceOf[js.Any])
+    if (LatestRestorableDateTime != null) __obj.updateDynamic("LatestRestorableDateTime")(LatestRestorableDateTime.asInstanceOf[js.Any])
+    if (PointInTimeRecoveryStatus != null) __obj.updateDynamic("PointInTimeRecoveryStatus")(PointInTimeRecoveryStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointInTimeRecoveryDescription]
   }
-  @scala.inline
-  implicit class PointInTimeRecoveryDescriptionOps[Self <: PointInTimeRecoveryDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEarliestRestorableDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EarliestRestorableDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEarliestRestorableDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EarliestRestorableDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatestRestorableDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestRestorableDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatestRestorableDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestRestorableDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointInTimeRecoveryStatus(value: PointInTimeRecoveryStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PointInTimeRecoveryStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointInTimeRecoveryStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PointInTimeRecoveryStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

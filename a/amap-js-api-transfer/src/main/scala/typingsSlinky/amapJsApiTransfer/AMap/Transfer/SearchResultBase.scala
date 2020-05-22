@@ -5,18 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchResultBase
   extends SearchResultCommon
      with SearchResult {
   /**
     * 公交换乘终点
     */
-  var end: js.UndefOr[Poi] = js.native
+  var end: js.UndefOr[Poi] = js.undefined
   /**
     * 公交换乘起点
     */
-  var start: js.UndefOr[Poi] = js.native
+  var start: js.UndefOr[Poi] = js.undefined
 }
 
 object SearchResultBase {
@@ -26,42 +25,14 @@ object SearchResultBase {
     info: String,
     origin: LngLat,
     plans: js.Array[TransferPlan],
-    taxi_cost: Double
+    taxi_cost: Double,
+    end: Poi = null,
+    start: Poi = null
   ): SearchResultBase = {
     val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], plans = plans.asInstanceOf[js.Any], taxi_cost = taxi_cost.asInstanceOf[js.Any])
+    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchResultBase]
   }
-  @scala.inline
-  implicit class SearchResultBaseOps[Self <: SearchResultBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: Poi): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Poi): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

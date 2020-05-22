@@ -26,53 +26,16 @@ trait SchemaApplicationDataTransfer extends js.Object {
 
 object SchemaApplicationDataTransfer {
   @scala.inline
-  def apply(): SchemaApplicationDataTransfer = {
+  def apply(
+    applicationId: String = null,
+    applicationTransferParams: js.Array[SchemaApplicationTransferParam] = null,
+    applicationTransferStatus: String = null
+  ): SchemaApplicationDataTransfer = {
     val __obj = js.Dynamic.literal()
+    if (applicationId != null) __obj.updateDynamic("applicationId")(applicationId.asInstanceOf[js.Any])
+    if (applicationTransferParams != null) __obj.updateDynamic("applicationTransferParams")(applicationTransferParams.asInstanceOf[js.Any])
+    if (applicationTransferStatus != null) __obj.updateDynamic("applicationTransferStatus")(applicationTransferStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApplicationDataTransfer]
   }
-  @scala.inline
-  implicit class SchemaApplicationDataTransferOps[Self <: SchemaApplicationDataTransfer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationTransferParams(value: js.Array[SchemaApplicationTransferParam]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationTransferParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationTransferParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationTransferParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationTransferStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationTransferStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationTransferStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationTransferStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

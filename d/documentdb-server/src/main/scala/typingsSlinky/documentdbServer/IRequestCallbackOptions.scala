@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Information associated with the response to the operation. */
-@js.native
 trait IRequestCallbackOptions extends js.Object {
   /** Comma delimited string containing the collection's current quota metrics (storage, number of stored procedure, triggers and UDFs) after completion of the operation. */
-  var currentCollectionSizeInMB: String = js.native
+  var currentCollectionSizeInMB: String
   /** Comma delimited string containing the collection's maximum quota metrics (storage, number of stored procedure, triggers and UDFs). */
-  var maxCollectionSizeInMB: String = js.native
+  var maxCollectionSizeInMB: String
   /** Set to true if the requested resource has not been modified compared to the provided ETag in the ifNoneMatch parameter for a read request. */
-  var notModified: Boolean = js.native
+  var notModified: Boolean
 }
 
 object IRequestCallbackOptions {
@@ -21,31 +20,5 @@ object IRequestCallbackOptions {
     val __obj = js.Dynamic.literal(currentCollectionSizeInMB = currentCollectionSizeInMB.asInstanceOf[js.Any], maxCollectionSizeInMB = maxCollectionSizeInMB.asInstanceOf[js.Any], notModified = notModified.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRequestCallbackOptions]
   }
-  @scala.inline
-  implicit class IRequestCallbackOptionsOps[Self <: IRequestCallbackOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentCollectionSizeInMB(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentCollectionSizeInMB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxCollectionSizeInMB(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCollectionSizeInMB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotModified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

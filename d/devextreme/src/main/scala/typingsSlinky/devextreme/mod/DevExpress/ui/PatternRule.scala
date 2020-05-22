@@ -13,87 +13,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PatternRule extends js.Object {
-  /** If set to true, empty values are valid. */
-  var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
-  /** Specifies the message that is shown if the rule is broken. */
-  var message: js.UndefOr[String] = js.native
-  /** Specifies the regular expression that the validated value must match. */
-  var pattern: js.UndefOr[js.RegExp | String] = js.native
-  /** Specifies the rule type. Set it to "pattern" to use the PatternRule. */
+  /** @name PatternRule.ignoreEmptyValue */
+  var ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined
+  /** @name PatternRule.message */
+  var message: js.UndefOr[String] = js.undefined
+  /** @name PatternRule.pattern */
+  var pattern: js.UndefOr[js.RegExp | String] = js.undefined
+  /** @name PatternRule.type */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
-  ] = js.native
+  ] = js.undefined
 }
 
 object PatternRule {
   @scala.inline
-  def apply(): PatternRule = {
+  def apply(
+    ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined,
+    message: String = null,
+    pattern: js.RegExp | String = null,
+    `type`: required | numeric | range | stringLength | custom | compare | pattern | email | async = null
+  ): PatternRule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ignoreEmptyValue)) __obj.updateDynamic("ignoreEmptyValue")(ignoreEmptyValue.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PatternRule]
   }
-  @scala.inline
-  implicit class PatternRuleOps[Self <: PatternRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoreEmptyValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreEmptyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatternRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: js.RegExp | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: required | numeric | range | stringLength | custom | compare | pattern | email | async): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

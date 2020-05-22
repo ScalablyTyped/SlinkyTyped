@@ -6,530 +6,132 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnProps extends js.Object {
-  var body: js.UndefOr[js.Any] = js.native
-  var bodyClassName: js.UndefOr[String] = js.native
-  var bodyStyle: js.UndefOr[js.Object] = js.native
-  var className: js.UndefOr[String] = js.native
-  var colSpan: js.UndefOr[Double] = js.native
-  var columnKey: js.UndefOr[String] = js.native
-  var editor: js.UndefOr[js.Function1[/* props */ js.Any, js.UndefOr[ReactElement]]] = js.native
-  var editorValidator: js.UndefOr[js.Function1[/* props */ js.Any, Boolean]] = js.native
-  var editorValidatorEvent: js.UndefOr[String] = js.native
-  var excludeGlobalFilter: js.UndefOr[Boolean] = js.native
-  var expander: js.UndefOr[Boolean] = js.native
-  var exportable: js.UndefOr[Boolean] = js.native
-  var field: js.UndefOr[String] = js.native
-  var filter: js.UndefOr[Boolean] = js.native
-  var filterElement: js.UndefOr[js.Object] = js.native
-  var filterFunction: js.UndefOr[js.Function2[/* value */ js.Any, /* filter */ js.Any, Unit]] = js.native
-  var filterMatchMode: js.UndefOr[String] = js.native
-  var filterMaxLength: js.UndefOr[Double] = js.native
-  var filterPlaceholder: js.UndefOr[String] = js.native
-  var filterType: js.UndefOr[String] = js.native
-  var footer: js.UndefOr[js.Any] = js.native
-  var footerClassName: js.UndefOr[String] = js.native
-  var footerStyle: js.UndefOr[js.Object] = js.native
-  var frozen: js.UndefOr[Boolean] = js.native
-  var header: js.UndefOr[js.Any] = js.native
-  var headerClassName: js.UndefOr[String] = js.native
-  var headerStyle: js.UndefOr[js.Object] = js.native
-  var loadingBody: js.UndefOr[js.Any] = js.native
-  var onEditorCancel: js.UndefOr[js.Function1[/* props */ js.Any, Unit]] = js.native
-  var onEditorSubmit: js.UndefOr[js.Function1[/* props */ js.Any, Unit]] = js.native
-  var rowEditor: js.UndefOr[Boolean] = js.native
-  var rowReorder: js.UndefOr[Boolean] = js.native
-  var rowReorderIcon: js.UndefOr[String] = js.native
-  var rowSpan: js.UndefOr[Double] = js.native
-  var selectionMode: js.UndefOr[String] = js.native
-  var sortField: js.UndefOr[String] = js.native
-  var sortFunction: js.UndefOr[js.Function1[/* e */ Field, Unit]] = js.native
-  var sortable: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[js.Object] = js.native
+  var body: js.UndefOr[js.Any] = js.undefined
+  var bodyClassName: js.UndefOr[String] = js.undefined
+  var bodyStyle: js.UndefOr[js.Object] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var colSpan: js.UndefOr[Double] = js.undefined
+  var columnKey: js.UndefOr[String] = js.undefined
+  var editor: js.UndefOr[js.Function1[/* props */ js.Any, js.UndefOr[ReactElement]]] = js.undefined
+  var editorValidator: js.UndefOr[js.Function1[/* props */ js.Any, Boolean]] = js.undefined
+  var editorValidatorEvent: js.UndefOr[String] = js.undefined
+  var excludeGlobalFilter: js.UndefOr[Boolean] = js.undefined
+  var expander: js.UndefOr[Boolean] = js.undefined
+  var exportable: js.UndefOr[Boolean] = js.undefined
+  var field: js.UndefOr[String] = js.undefined
+  var filter: js.UndefOr[Boolean] = js.undefined
+  var filterElement: js.UndefOr[js.Object] = js.undefined
+  var filterFunction: js.UndefOr[js.Function2[/* value */ js.Any, /* filter */ js.Any, Unit]] = js.undefined
+  var filterMatchMode: js.UndefOr[String] = js.undefined
+  var filterMaxLength: js.UndefOr[Double] = js.undefined
+  var filterPlaceholder: js.UndefOr[String] = js.undefined
+  var filterType: js.UndefOr[String] = js.undefined
+  var footer: js.UndefOr[js.Any] = js.undefined
+  var footerClassName: js.UndefOr[String] = js.undefined
+  var footerStyle: js.UndefOr[js.Object] = js.undefined
+  var frozen: js.UndefOr[Boolean] = js.undefined
+  var header: js.UndefOr[js.Any] = js.undefined
+  var headerClassName: js.UndefOr[String] = js.undefined
+  var headerStyle: js.UndefOr[js.Object] = js.undefined
+  var loadingBody: js.UndefOr[js.Any] = js.undefined
+  var onEditorCancel: js.UndefOr[js.Function1[/* props */ js.Any, Unit]] = js.undefined
+  var onEditorSubmit: js.UndefOr[js.Function1[/* props */ js.Any, Unit]] = js.undefined
+  var rowEditor: js.UndefOr[Boolean] = js.undefined
+  var rowReorder: js.UndefOr[Boolean] = js.undefined
+  var rowReorderIcon: js.UndefOr[String] = js.undefined
+  var rowSpan: js.UndefOr[Double] = js.undefined
+  var selectionMode: js.UndefOr[String] = js.undefined
+  var sortField: js.UndefOr[String] = js.undefined
+  var sortFunction: js.UndefOr[js.Function1[/* e */ Field, Unit]] = js.undefined
+  var sortable: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
 }
 
 object ColumnProps {
   @scala.inline
-  def apply(): ColumnProps = {
+  def apply(
+    body: js.Any = null,
+    bodyClassName: String = null,
+    bodyStyle: js.Object = null,
+    className: String = null,
+    colSpan: js.UndefOr[Double] = js.undefined,
+    columnKey: String = null,
+    editor: /* props */ js.Any => js.UndefOr[ReactElement] = null,
+    editorValidator: /* props */ js.Any => Boolean = null,
+    editorValidatorEvent: String = null,
+    excludeGlobalFilter: js.UndefOr[Boolean] = js.undefined,
+    expander: js.UndefOr[Boolean] = js.undefined,
+    exportable: js.UndefOr[Boolean] = js.undefined,
+    field: String = null,
+    filter: js.UndefOr[Boolean] = js.undefined,
+    filterElement: js.Object = null,
+    filterFunction: (/* value */ js.Any, /* filter */ js.Any) => Unit = null,
+    filterMatchMode: String = null,
+    filterMaxLength: js.UndefOr[Double] = js.undefined,
+    filterPlaceholder: String = null,
+    filterType: String = null,
+    footer: js.Any = null,
+    footerClassName: String = null,
+    footerStyle: js.Object = null,
+    frozen: js.UndefOr[Boolean] = js.undefined,
+    header: js.Any = null,
+    headerClassName: String = null,
+    headerStyle: js.Object = null,
+    loadingBody: js.Any = null,
+    onEditorCancel: /* props */ js.Any => Unit = null,
+    onEditorSubmit: /* props */ js.Any => Unit = null,
+    rowEditor: js.UndefOr[Boolean] = js.undefined,
+    rowReorder: js.UndefOr[Boolean] = js.undefined,
+    rowReorderIcon: String = null,
+    rowSpan: js.UndefOr[Double] = js.undefined,
+    selectionMode: String = null,
+    sortField: String = null,
+    sortFunction: /* e */ Field => Unit = null,
+    sortable: js.UndefOr[Boolean] = js.undefined,
+    style: js.Object = null
+  ): ColumnProps = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (bodyClassName != null) __obj.updateDynamic("bodyClassName")(bodyClassName.asInstanceOf[js.Any])
+    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(colSpan)) __obj.updateDynamic("colSpan")(colSpan.get.asInstanceOf[js.Any])
+    if (columnKey != null) __obj.updateDynamic("columnKey")(columnKey.asInstanceOf[js.Any])
+    if (editor != null) __obj.updateDynamic("editor")(js.Any.fromFunction1(editor))
+    if (editorValidator != null) __obj.updateDynamic("editorValidator")(js.Any.fromFunction1(editorValidator))
+    if (editorValidatorEvent != null) __obj.updateDynamic("editorValidatorEvent")(editorValidatorEvent.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludeGlobalFilter)) __obj.updateDynamic("excludeGlobalFilter")(excludeGlobalFilter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expander)) __obj.updateDynamic("expander")(expander.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exportable)) __obj.updateDynamic("exportable")(exportable.get.asInstanceOf[js.Any])
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.get.asInstanceOf[js.Any])
+    if (filterElement != null) __obj.updateDynamic("filterElement")(filterElement.asInstanceOf[js.Any])
+    if (filterFunction != null) __obj.updateDynamic("filterFunction")(js.Any.fromFunction2(filterFunction))
+    if (filterMatchMode != null) __obj.updateDynamic("filterMatchMode")(filterMatchMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(filterMaxLength)) __obj.updateDynamic("filterMaxLength")(filterMaxLength.get.asInstanceOf[js.Any])
+    if (filterPlaceholder != null) __obj.updateDynamic("filterPlaceholder")(filterPlaceholder.asInstanceOf[js.Any])
+    if (filterType != null) __obj.updateDynamic("filterType")(filterType.asInstanceOf[js.Any])
+    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (footerClassName != null) __obj.updateDynamic("footerClassName")(footerClassName.asInstanceOf[js.Any])
+    if (footerStyle != null) __obj.updateDynamic("footerStyle")(footerStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(frozen)) __obj.updateDynamic("frozen")(frozen.get.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (headerClassName != null) __obj.updateDynamic("headerClassName")(headerClassName.asInstanceOf[js.Any])
+    if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
+    if (loadingBody != null) __obj.updateDynamic("loadingBody")(loadingBody.asInstanceOf[js.Any])
+    if (onEditorCancel != null) __obj.updateDynamic("onEditorCancel")(js.Any.fromFunction1(onEditorCancel))
+    if (onEditorSubmit != null) __obj.updateDynamic("onEditorSubmit")(js.Any.fromFunction1(onEditorSubmit))
+    if (!js.isUndefined(rowEditor)) __obj.updateDynamic("rowEditor")(rowEditor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowReorder)) __obj.updateDynamic("rowReorder")(rowReorder.get.asInstanceOf[js.Any])
+    if (rowReorderIcon != null) __obj.updateDynamic("rowReorderIcon")(rowReorderIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowSpan)) __obj.updateDynamic("rowSpan")(rowSpan.get.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (sortField != null) __obj.updateDynamic("sortField")(sortField.asInstanceOf[js.Any])
+    if (sortFunction != null) __obj.updateDynamic("sortFunction")(js.Any.fromFunction1(sortFunction))
+    if (!js.isUndefined(sortable)) __obj.updateDynamic("sortable")(sortable.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnProps]
   }
-  @scala.inline
-  implicit class ColumnPropsOps[Self <: ColumnProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColSpan(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditor(value: /* props */ js.Any => js.UndefOr[ReactElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEditor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditorValidator(value: /* props */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editorValidator")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEditorValidator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editorValidator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditorValidatorEvent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editorValidatorEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditorValidatorEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editorValidatorEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeGlobalFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeGlobalFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeGlobalFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeGlobalFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpander(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expander")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpander: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expander")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterElement(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterFunction(value: (/* value */ js.Any, /* filter */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterFunction")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilterFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterMatchMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMatchMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterMatchMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMatchMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterMaxLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMaxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterMaxLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMaxLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrozen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrozen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingBody(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadingBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEditorCancel(value: /* props */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorCancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEditorCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorCancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEditorSubmit(value: /* props */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorSubmit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEditorSubmit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorSubmit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowEditor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowEditor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowEditor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowEditor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowReorder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowReorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowReorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowReorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowReorderIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowReorderIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowReorderIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowReorderIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowSpan(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortFunction(value: /* e */ Field => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortFunction")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSortFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

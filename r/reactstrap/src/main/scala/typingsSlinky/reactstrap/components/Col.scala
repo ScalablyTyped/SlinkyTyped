@@ -657,6 +657,11 @@ object Col {
   }
   
   def withProps[T](p: ColProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ColProps]))
+  }
   implicit def make[T](companion: Col.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WindowPerformanceReport[Topic, Type] extends WindowEvent[Topic, Type] {
-  var navigation: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.navigation */ js.Any = js.native
-  var timeOrigin: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.timeOrigin */ js.Any = js.native
-  var timing: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.timing */ js.Any = js.native
+  var navigation: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.navigation */ js.Any
+  var timeOrigin: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.timeOrigin */ js.Any
+  var timing: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.timing */ js.Any
 }
 
 object WindowPerformanceReport {
@@ -27,37 +26,5 @@ object WindowPerformanceReport {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowPerformanceReport[Topic, Type]]
   }
-  @scala.inline
-  implicit class WindowPerformanceReportOps[Self[topic, `type`] <: WindowPerformanceReport[topic, `type`], Topic, Type] (val x: Self[Topic, Type]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Topic, Type] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Topic, Type]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[Topic, Type]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Topic, Type]) with Other]
-    @scala.inline
-    def withNavigation(
-      value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.navigation */ js.Any
-    ): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeOrigin(
-      value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.timeOrigin */ js.Any
-    ): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTiming(
-      value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.performance.timing */ js.Any
-    ): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

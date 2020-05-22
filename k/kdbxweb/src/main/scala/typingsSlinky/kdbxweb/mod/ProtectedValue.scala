@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("kdbxweb", "ProtectedValue")
 @js.native
-class ProtectedValue protected () extends StringProtected {
+class ProtectedValue protected () extends js.Object {
   def this(value: js.typedarray.ArrayBuffer, salt: js.typedarray.ArrayBuffer) = this()
   def getBinary(): js.typedarray.Uint8Array = js.native
   def getHash(): js.Promise[js.typedarray.ArrayBuffer] = js.native

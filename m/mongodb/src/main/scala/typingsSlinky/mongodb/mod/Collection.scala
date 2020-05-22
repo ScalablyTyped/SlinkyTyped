@@ -130,22 +130,26 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     callback: MongoCallback[js.Array[_]]
   ): Unit = js.native
   @JSName("distinct")
-  def distinct_id(key: _id): js.Promise[js.Array[ExtractIdType[TSchema]]] = js.native
+  def distinct_id(key: _id): js.Promise[js.Array[FlattenIfArray[ExtractIdType[TSchema]]]] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#distinct */
   @JSName("distinct")
-  def distinct_id(key: _id, callback: MongoCallback[js.Array[ExtractIdType[TSchema]]]): Unit = js.native
+  def distinct_id(key: _id, callback: MongoCallback[js.Array[FlattenIfArray[ExtractIdType[TSchema]]]]): Unit = js.native
   @JSName("distinct")
-  def distinct_id(key: _id, query: FilterQuery[TSchema]): js.Promise[js.Array[ExtractIdType[TSchema]]] = js.native
+  def distinct_id(key: _id, query: FilterQuery[TSchema]): js.Promise[js.Array[FlattenIfArray[ExtractIdType[TSchema]]]] = js.native
   @JSName("distinct")
-  def distinct_id(key: _id, query: FilterQuery[TSchema], callback: MongoCallback[js.Array[ExtractIdType[TSchema]]]): Unit = js.native
+  def distinct_id(
+    key: _id,
+    query: FilterQuery[TSchema],
+    callback: MongoCallback[js.Array[FlattenIfArray[ExtractIdType[TSchema]]]]
+  ): Unit = js.native
   @JSName("distinct")
-  def distinct_id(key: _id, query: FilterQuery[TSchema], options: MongoDistinctPreferences): js.Promise[js.Array[ExtractIdType[TSchema]]] = js.native
+  def distinct_id(key: _id, query: FilterQuery[TSchema], options: MongoDistinctPreferences): js.Promise[js.Array[FlattenIfArray[ExtractIdType[TSchema]]]] = js.native
   @JSName("distinct")
   def distinct_id(
     key: _id,
     query: FilterQuery[TSchema],
     options: MongoDistinctPreferences,
-    callback: MongoCallback[js.Array[ExtractIdType[TSchema]]]
+    callback: MongoCallback[js.Array[FlattenIfArray[ExtractIdType[TSchema]]]]
   ): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#drop */
   def drop(): js.Promise[_] = js.native

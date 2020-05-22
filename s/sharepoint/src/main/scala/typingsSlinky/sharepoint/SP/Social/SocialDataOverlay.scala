@@ -11,20 +11,19 @@ import scala.scalajs.js.annotation._
   An overlay is a substring in a post that represents a user, document, site, tag, or link.
   The SocialPost class contains an array of SocialDataOverlay objects.
   Each of the SocialDataOverlay objects specifies a link or one or more actors. */
-@js.native
 trait SocialDataOverlay extends ClientValueObject {
   /** Specifies one or more actors as an array of integers where each integer specifies an index into the SocialThreadActors array.
     This property is only available if the get_overlayType() has a value of SocialDataOverlayType.actors. */
-  def get_actorIndexes(): js.Array[Double] = js.native
+  def get_actorIndexes(): js.Array[Double]
   /** The Index property specifies the starting position of the overlay in the SocialPostText string  */
-  def get_index(): Double = js.native
+  def get_index(): Double
   /** The Length property specifies the number of characters in the overlay.  */
-  def get_length(): Double = js.native
+  def get_length(): Double
   /** The LinkUri property specifies the URI of the link.
     This property is only available if the get_overlayType() has a value of SocialDataOverlayType.link.  */
-  def get_linkUri(): String = js.native
+  def get_linkUri(): String
   /** Specifies whether the overlay is a link or one or more actors. */
-  def get_overlayType(): SocialDataOverlayType = js.native
+  def get_overlayType(): SocialDataOverlayType
 }
 
 object SocialDataOverlay {
@@ -44,43 +43,5 @@ object SocialDataOverlay {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_actorIndexes = js.Any.fromFunction0(get_actorIndexes), get_index = js.Any.fromFunction0(get_index), get_length = js.Any.fromFunction0(get_length), get_linkUri = js.Any.fromFunction0(get_linkUri), get_overlayType = js.Any.fromFunction0(get_overlayType), get_typeId = js.Any.fromFunction0(get_typeId), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[SocialDataOverlay]
   }
-  @scala.inline
-  implicit class SocialDataOverlayOps[Self <: SocialDataOverlay] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_actorIndexes(value: () => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_actorIndexes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_index(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_index")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_length(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_length")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_linkUri(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_linkUri")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_overlayType(value: () => SocialDataOverlayType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_overlayType")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -17,18 +17,17 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.datatransfer.dnd.XDragSourceContext
   * @see com.sun.star.datatransfer.dnd.XDragSourceListener
   */
-@js.native
 trait XDragSourceContext extends XInterface {
   /**
     * Get the identifier of the currently used cursor.
     * @returns The currently selected drag cursor.
     */
-  val CurrentCursor: Double = js.native
+  val CurrentCursor: Double
   /**
     * Get the identifier of the currently used cursor.
     * @returns The currently selected drag cursor.
     */
-  def getCurrentCursor(): Double = js.native
+  def getCurrentCursor(): Double
   /**
     * This method sets the current drag cursor.
     *
@@ -37,17 +36,17 @@ trait XDragSourceContext extends XInterface {
     * Invalid cursor identifiers will be ignored.
     * @param cursorId The identifier the drag source returned when registering the cursor.
     */
-  def setCursor(cursorId: Double): Unit = js.native
+  def setCursor(cursorId: Double): Unit
   /**
     * This method sets the current drag image.
     * @param imageId The identifier the drag source returned when registering the image (0 = none). Invalid identifier will be ignored.
     */
-  def setImage(imageId: Double): Unit = js.native
+  def setImage(imageId: Double): Unit
   /**
     * This method notifies the context that the {@link com.sun.star.datatransfer.DataFlavor} types of the transferable object have changed.
     * @see com.sun.star.datatransfer.XTransferable
     */
-  def transferablesFlavorsChanged(): Unit = js.native
+  def transferablesFlavorsChanged(): Unit
 }
 
 object XDragSourceContext {
@@ -65,43 +64,5 @@ object XDragSourceContext {
     val __obj = js.Dynamic.literal(CurrentCursor = CurrentCursor.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getCurrentCursor = js.Any.fromFunction0(getCurrentCursor), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setCursor = js.Any.fromFunction1(setCursor), setImage = js.Any.fromFunction1(setImage), transferablesFlavorsChanged = js.Any.fromFunction0(transferablesFlavorsChanged))
     __obj.asInstanceOf[XDragSourceContext]
   }
-  @scala.inline
-  implicit class XDragSourceContextOps[Self <: XDragSourceContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentCursor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentCursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetCurrentCursor(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentCursor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetCursor(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCursor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetImage(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setImage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTransferablesFlavorsChanged(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferablesFlavorsChanged")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

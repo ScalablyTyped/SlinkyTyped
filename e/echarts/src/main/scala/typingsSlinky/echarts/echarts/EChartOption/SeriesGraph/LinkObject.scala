@@ -7,23 +7,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LinkObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.links.emphasis
     */
-  var emphasis: js.UndefOr[LabelLineStyle] = js.native
+  var emphasis: js.UndefOr[LabelLineStyle] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.links.label
     */
-  var label: js.UndefOr[FontStyle] = js.native
+  var label: js.UndefOr[FontStyle] = js.undefined
   /**
     * Line style of edges.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links.lineStyle
     */
-  var lineStyle: js.UndefOr[ShadowColor] = js.native
+  var lineStyle: js.UndefOr[ShadowColor] = js.undefined
   /**
     * [name of source node](https://echarts.apache.org/en/option.html#series-graph.data.name)
     * on edge
@@ -31,7 +30,7 @@ trait LinkObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links.source
     */
-  var source: js.UndefOr[String] = js.native
+  var source: js.UndefOr[String] = js.undefined
   /**
     * Symbol of edge ends.
     * Can be an array with two item to specify two ends, or a string
@@ -40,7 +39,7 @@ trait LinkObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links.symbol
     */
-  var symbol: js.UndefOr[js.Array[_] | String] = js.native
+  var symbol: js.UndefOr[js.Array[_] | String] = js.undefined
   /**
     * Symbol size of edge ends.
     * Can be an array with two item to specify two ends, or a string
@@ -49,7 +48,7 @@ trait LinkObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links.symbolSize
     */
-  var symbolSize: js.UndefOr[js.Array[_] | String] = js.native
+  var symbolSize: js.UndefOr[js.Array[_] | String] = js.undefined
   /**
     * [name of target node](https://echarts.apache.org/en/option.html#series-graph.data.name)
     * on edge
@@ -57,125 +56,38 @@ trait LinkObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links.target
     */
-  var target: js.UndefOr[String] = js.native
+  var target: js.UndefOr[String] = js.undefined
   /**
     * value of edge, can be mapped to edge length in force graph.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links.value
     */
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object LinkObject {
   @scala.inline
-  def apply(): LinkObject = {
+  def apply(
+    emphasis: LabelLineStyle = null,
+    label: FontStyle = null,
+    lineStyle: ShadowColor = null,
+    source: String = null,
+    symbol: js.Array[_] | String = null,
+    symbolSize: js.Array[_] | String = null,
+    target: String = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): LinkObject = {
     val __obj = js.Dynamic.literal()
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkObject]
   }
-  @scala.inline
-  implicit class LinkObjectOps[Self <: LinkObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmphasis(value: LabelLineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: FontStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: ShadowColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: js.Array[_] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolSize(value: js.Array[_] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

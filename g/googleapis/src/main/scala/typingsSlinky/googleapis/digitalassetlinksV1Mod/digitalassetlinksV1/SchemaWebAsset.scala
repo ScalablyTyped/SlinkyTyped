@@ -34,29 +34,10 @@ trait SchemaWebAsset extends js.Object {
 
 object SchemaWebAsset {
   @scala.inline
-  def apply(): SchemaWebAsset = {
+  def apply(site: String = null): SchemaWebAsset = {
     val __obj = js.Dynamic.literal()
+    if (site != null) __obj.updateDynamic("site")(site.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWebAsset]
   }
-  @scala.inline
-  implicit class SchemaWebAssetOps[Self <: SchemaWebAsset] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSite(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("site")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("site")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

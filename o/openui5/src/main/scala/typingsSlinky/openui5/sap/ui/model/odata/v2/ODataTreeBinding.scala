@@ -24,12 +24,12 @@ trait ODataTreeBinding extends TreeBinding {
     * exposed on the service.
     * @param iStartIndex the start index of the requested contexts
     * @param iLength the requested amount of contexts. If none given, the default value is the size limit
-    * of the underlying												 sap.ui.model.odata.v2.ODataModel instance.
-    * @param iThreshold the number of entities which should be retrieved in addition to the given length.	
-    * 		  A higher threshold reduces the number of backend requests, yet these request blow up in size,
+    * of the underlying                                                 sap.ui.model.odata.v2.ODataModel instance.
+    * @param iThreshold the number of entities which should be retrieved in addition to the given length.    
+    *           A higher threshold reduces the number of backend requests, yet these request blow up in size,
     * since more data is loaded.
     * @returns an array containing the contexts for the entities returned by the backend, might be fewer
-    * than requested								  if the backend does not have enough data.
+    * than requested                                  if the backend does not have enough data.
     */
   def getRootContexts(iStartIndex: Double): js.Array[Context] = js.native
   def getRootContexts(iStartIndex: Double, iLength: Double, iThreshold: Double): js.Array[Context] = js.native

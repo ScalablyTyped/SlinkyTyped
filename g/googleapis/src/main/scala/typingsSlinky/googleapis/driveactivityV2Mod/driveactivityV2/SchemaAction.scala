@@ -36,77 +36,20 @@ trait SchemaAction extends js.Object {
 
 object SchemaAction {
   @scala.inline
-  def apply(): SchemaAction = {
+  def apply(
+    actor: SchemaActor = null,
+    detail: SchemaActionDetail = null,
+    target: SchemaTarget = null,
+    timeRange: SchemaTimeRange = null,
+    timestamp: String = null
+  ): SchemaAction = {
     val __obj = js.Dynamic.literal()
+    if (actor != null) __obj.updateDynamic("actor")(actor.asInstanceOf[js.Any])
+    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (timeRange != null) __obj.updateDynamic("timeRange")(timeRange.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAction]
   }
-  @scala.inline
-  implicit class SchemaActionOps[Self <: SchemaAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActor(value: SchemaActor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetail(value: SchemaActionDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: SchemaTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeRange(value: SchemaTimeRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bone extends js.Object {
   /**
     * Copy an animation range from another bone
@@ -23,7 +22,7 @@ trait Bone extends js.Object {
     frameOffset: Double,
     rescaleAsRequired: Boolean,
     skelDimensionsRatio: Nullable[Vector3]
-  ): Boolean = js.native
+  ): Boolean
 }
 
 object Bone {
@@ -34,21 +33,5 @@ object Bone {
     val __obj = js.Dynamic.literal(copyAnimationRange = js.Any.fromFunction5(copyAnimationRange))
     __obj.asInstanceOf[Bone]
   }
-  @scala.inline
-  implicit class BoneOps[Self <: Bone] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopyAnimationRange(
-      value: (typingsSlinky.babylonjs.animatableMod.babylonjsBonesBoneAugmentingMod.Bone, String, Double, Boolean, Nullable[Vector3]) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyAnimationRange")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

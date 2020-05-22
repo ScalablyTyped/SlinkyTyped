@@ -4,82 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContentRangeFormatOptions extends js.Object {
-  var first: js.UndefOr[Double] = js.native
-  var last: js.UndefOr[Double] = js.native
-  var length: Double | Null = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var unit: String = js.native
+  var first: js.UndefOr[Double] = js.undefined
+  var last: js.UndefOr[Double] = js.undefined
+  var length: Double | Null
+  var limit: js.UndefOr[Double] = js.undefined
+  var unit: String
 }
 
 object ContentRangeFormatOptions {
   @scala.inline
-  def apply(unit: String): ContentRangeFormatOptions = {
-    val __obj = js.Dynamic.literal(unit = unit.asInstanceOf[js.Any])
+  def apply(
+    unit: String,
+    first: js.UndefOr[Double] = js.undefined,
+    last: js.UndefOr[Double] = js.undefined,
+    length: Double = null.asInstanceOf[Double],
+    limit: js.UndefOr[Double] = js.undefined
+  ): ContentRangeFormatOptions = {
+    val __obj = js.Dynamic.literal(unit = unit.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any])
+    if (!js.isUndefined(first)) __obj.updateDynamic("first")(first.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(last)) __obj.updateDynamic("last")(last.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentRangeFormatOptions]
   }
-  @scala.inline
-  implicit class ContentRangeFormatOptionsOps[Self <: ContentRangeFormatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirst(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLengthNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(null)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

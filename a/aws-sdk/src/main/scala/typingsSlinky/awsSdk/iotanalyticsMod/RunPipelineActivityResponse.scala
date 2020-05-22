@@ -18,41 +18,11 @@ trait RunPipelineActivityResponse extends js.Object {
 
 object RunPipelineActivityResponse {
   @scala.inline
-  def apply(): RunPipelineActivityResponse = {
+  def apply(logResult: LogResult = null, payloads: MessagePayloads = null): RunPipelineActivityResponse = {
     val __obj = js.Dynamic.literal()
+    if (logResult != null) __obj.updateDynamic("logResult")(logResult.asInstanceOf[js.Any])
+    if (payloads != null) __obj.updateDynamic("payloads")(payloads.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunPipelineActivityResponse]
   }
-  @scala.inline
-  implicit class RunPipelineActivityResponseOps[Self <: RunPipelineActivityResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogResult(value: LogResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloads(value: MessagePayloads): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloads: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloads")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

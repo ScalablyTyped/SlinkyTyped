@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IClusterPlacemarkProperties extends IDataManager {
-  var geoObjects: js.Array[IGeoObject] = js.native
+  var geoObjects: js.Array[IGeoObject]
 }
 
 object IClusterPlacemarkProperties {
@@ -15,19 +14,5 @@ object IClusterPlacemarkProperties {
     val __obj = js.Dynamic.literal(events = events.asInstanceOf[js.Any], geoObjects = geoObjects.asInstanceOf[js.Any], get = js.Any.fromFunction2(get))
     __obj.asInstanceOf[IClusterPlacemarkProperties]
   }
-  @scala.inline
-  implicit class IClusterPlacemarkPropertiesOps[Self <: IClusterPlacemarkProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeoObjects(value: js.Array[IGeoObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoObjects")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

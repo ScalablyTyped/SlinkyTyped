@@ -1,40 +1,31 @@
 package typingsSlinky.tunnel.mod
 
+import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpsOverHttpsOptions extends HttpsOverHttpOptions {
   @JSName("proxy")
-  var proxy_HttpsOverHttpsOptions: js.UndefOr[HttpsProxyOptions] = js.native
+  var proxy_HttpsOverHttpsOptions: js.UndefOr[HttpsProxyOptions] = js.undefined
 }
 
 object HttpsOverHttpsOptions {
   @scala.inline
-  def apply(): HttpsOverHttpsOptions = {
+  def apply(
+    ca: js.Array[Buffer] = null,
+    cert: Buffer = null,
+    key: Buffer = null,
+    maxSockets: js.UndefOr[Double] = js.undefined,
+    proxy: HttpsProxyOptions = null
+  ): HttpsOverHttpsOptions = {
     val __obj = js.Dynamic.literal()
+    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
+    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSockets)) __obj.updateDynamic("maxSockets")(maxSockets.get.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpsOverHttpsOptions]
   }
-  @scala.inline
-  implicit class HttpsOverHttpsOptionsOps[Self <: HttpsOverHttpsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProxy(value: HttpsProxyOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

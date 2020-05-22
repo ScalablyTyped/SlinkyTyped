@@ -26,65 +26,18 @@ trait DescribeGlobalReplicationGroupsMessage extends js.Object {
 
 object DescribeGlobalReplicationGroupsMessage {
   @scala.inline
-  def apply(): DescribeGlobalReplicationGroupsMessage = {
+  def apply(
+    GlobalReplicationGroupId: String = null,
+    Marker: String = null,
+    MaxRecords: js.UndefOr[IntegerOptional] = js.undefined,
+    ShowMemberInfo: js.UndefOr[BooleanOptional] = js.undefined
+  ): DescribeGlobalReplicationGroupsMessage = {
     val __obj = js.Dynamic.literal()
+    if (GlobalReplicationGroupId != null) __obj.updateDynamic("GlobalReplicationGroupId")(GlobalReplicationGroupId.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxRecords)) __obj.updateDynamic("MaxRecords")(MaxRecords.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ShowMemberInfo)) __obj.updateDynamic("ShowMemberInfo")(ShowMemberInfo.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeGlobalReplicationGroupsMessage]
   }
-  @scala.inline
-  implicit class DescribeGlobalReplicationGroupsMessageOps[Self <: DescribeGlobalReplicationGroupsMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalReplicationGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalReplicationGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRecords(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMemberInfo(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowMemberInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMemberInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowMemberInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkItemFieldOperation extends js.Object {
   /**
     * Name of the operation.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Reference name of the operation.
     */
-  var referenceName: String = js.native
+  var referenceName: String
 }
 
 object WorkItemFieldOperation {
@@ -22,25 +21,5 @@ object WorkItemFieldOperation {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], referenceName = referenceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkItemFieldOperation]
   }
-  @scala.inline
-  implicit class WorkItemFieldOperationOps[Self <: WorkItemFieldOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferenceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

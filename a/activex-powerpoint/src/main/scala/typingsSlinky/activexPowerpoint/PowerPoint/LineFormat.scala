@@ -11,28 +11,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LineFormat extends js.Object {
-  val Application: js.Any = js.native
-  var BackColor: ColorFormat = js.native
-  var BeginArrowheadLength: MsoArrowheadLength = js.native
-  var BeginArrowheadStyle: MsoArrowheadStyle = js.native
-  var BeginArrowheadWidth: MsoArrowheadWidth = js.native
-  val Creator: Double = js.native
-  var DashStyle: MsoLineDashStyle = js.native
-  var EndArrowheadLength: MsoArrowheadLength = js.native
-  var EndArrowheadStyle: MsoArrowheadStyle = js.native
-  var EndArrowheadWidth: MsoArrowheadWidth = js.native
-  var ForeColor: ColorFormat = js.native
-  var InsetPen: MsoTriState = js.native
-  val Parent: js.Any = js.native
-  var Pattern: MsoPatternType = js.native
+  val Application: js.Any
+  var BackColor: ColorFormat
+  var BeginArrowheadLength: MsoArrowheadLength
+  var BeginArrowheadStyle: MsoArrowheadStyle
+  var BeginArrowheadWidth: MsoArrowheadWidth
+  val Creator: Double
+  var DashStyle: MsoLineDashStyle
+  var EndArrowheadLength: MsoArrowheadLength
+  var EndArrowheadStyle: MsoArrowheadStyle
+  var EndArrowheadWidth: MsoArrowheadWidth
+  var ForeColor: ColorFormat
+  var InsetPen: MsoTriState
+  val Parent: js.Any
+  var Pattern: MsoPatternType
   @JSName("PowerPoint.LineFormat_typekey")
-  var PowerPointDotLineFormat_typekey: LineFormat = js.native
-  var Style: MsoLineStyle = js.native
-  var Transparency: Double = js.native
-  var Visible: MsoTriState = js.native
-  var Weight: Double = js.native
+  var PowerPointDotLineFormat_typekey: LineFormat
+  var Style: MsoLineStyle
+  var Transparency: Double
+  var Visible: MsoTriState
+  var Weight: Double
 }
 
 object LineFormat {
@@ -62,127 +61,5 @@ object LineFormat {
     __obj.updateDynamic("PowerPoint.LineFormat_typekey")(PowerPointDotLineFormat_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineFormat]
   }
-  @scala.inline
-  implicit class LineFormatOps[Self <: LineFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackColor(value: ColorFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeginArrowheadLength(value: MsoArrowheadLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginArrowheadLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeginArrowheadStyle(value: MsoArrowheadStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginArrowheadStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeginArrowheadWidth(value: MsoArrowheadWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginArrowheadWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDashStyle(value: MsoLineDashStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndArrowheadLength(value: MsoArrowheadLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndArrowheadLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndArrowheadStyle(value: MsoArrowheadStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndArrowheadStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndArrowheadWidth(value: MsoArrowheadWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndArrowheadWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeColor(value: ColorFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInsetPen(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsetPen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: MsoPatternType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotLineFormat_typekey(value: LineFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.LineFormat_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyle(value: MsoLineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransparency(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Transparency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisible(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

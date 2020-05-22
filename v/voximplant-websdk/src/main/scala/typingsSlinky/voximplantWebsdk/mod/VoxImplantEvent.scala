@@ -1,15 +1,5 @@
 package typingsSlinky.voximplantWebsdk.mod
 
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.AuthResult
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.ConnectionClosed
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.ConnectionEstablished
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.ConnectionFailed
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.IncomingCall
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.MicAccessResult
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.NetStatsReceived
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.PlaybackFinished
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.SDKReady
-import typingsSlinky.voximplantWebsdk.mod.EventTypes.SourcesInfoUpdated
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,24 +20,45 @@ trait VoxImplantEvent extends js.Object
 
 object VoxImplantEvent {
   @scala.inline
-  implicit def apply(value: AuthResult): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
+  def NetStatsReceived(stats: NetworkInfo): VoxImplantEvent = {
+    val __obj = js.Dynamic.literal(stats = stats.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantEvent]
+  }
   @scala.inline
-  implicit def apply(value: ConnectionClosed): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
+  def ConnectionFailed(message: String): VoxImplantEvent = {
+    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantEvent]
+  }
   @scala.inline
-  implicit def apply(value: ConnectionEstablished): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
+  def AuthResult(
+    result: Boolean,
+    code: js.UndefOr[Double] = js.undefined,
+    displayName: String = null,
+    key: String = null,
+    options: js.Object = null
+  ): VoxImplantEvent = {
+    val __obj = js.Dynamic.literal(result = result.asInstanceOf[js.Any])
+    if (!js.isUndefined(code)) __obj.updateDynamic("code")(code.get.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantEvent]
+  }
   @scala.inline
-  implicit def apply(value: ConnectionFailed): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
+  def IncomingCall(call: Call, headers: js.Object = null): VoxImplantEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantEvent]
+  }
   @scala.inline
-  implicit def apply(value: IncomingCall): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
+  def SDKReady(version: String): VoxImplantEvent = {
+    val __obj = js.Dynamic.literal(version = version.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantEvent]
+  }
   @scala.inline
-  implicit def apply(value: MicAccessResult): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
-  @scala.inline
-  implicit def apply(value: NetStatsReceived): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
-  @scala.inline
-  implicit def apply(value: PlaybackFinished): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
-  @scala.inline
-  implicit def apply(value: SDKReady): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
-  @scala.inline
-  implicit def apply(value: SourcesInfoUpdated): VoxImplantEvent = value.asInstanceOf[VoxImplantEvent]
+  def MicAccessResult(result: Boolean): VoxImplantEvent = {
+    val __obj = js.Dynamic.literal(result = result.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantEvent]
+  }
 }
 

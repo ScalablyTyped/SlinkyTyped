@@ -4,36 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnprojectOptions extends ProjectOptions {
-  var targetZ: js.UndefOr[Double] = js.native
+  var targetZ: js.UndefOr[Double] = js.undefined
 }
 
 object UnprojectOptions {
   @scala.inline
-  def apply(): UnprojectOptions = {
+  def apply(targetZ: js.UndefOr[Double] = js.undefined, topLeft: js.UndefOr[Boolean] = js.undefined): UnprojectOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(targetZ)) __obj.updateDynamic("targetZ")(targetZ.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(topLeft)) __obj.updateDynamic("topLeft")(topLeft.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnprojectOptions]
   }
-  @scala.inline
-  implicit class UnprojectOptionsOps[Self <: UnprojectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetZ")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetZ")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

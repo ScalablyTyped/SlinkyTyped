@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictionarymatches extends js.Object {
-  var `dictionary matches`: Double = js.native
-  var `fast-path pages deleted`: Double = js.native
-  var `internal page key bytes discarded using suffix compression`: Double = js.native
-  var `internal page multi-block writes`: Double = js.native
-  var `internal-page overflow keys`: Double = js.native
-  var `leaf page key bytes discarded using prefix compression`: Double = js.native
-  var `leaf page multi-block writes`: Double = js.native
-  var `leaf-page overflow keys`: Double = js.native
-  var `maximum blocks required for a page`: Double = js.native
-  var `overflow values written`: Double = js.native
-  var `page checksum matches`: Double = js.native
-  var `page reconciliation calls`: Double = js.native
-  var `page reconciliation calls for eviction`: Double = js.native
-  var `pages deleted`: Double = js.native
+  var `dictionary matches`: Double
+  var `fast-path pages deleted`: Double
+  var `internal page key bytes discarded using suffix compression`: Double
+  var `internal page multi-block writes`: Double
+  var `internal-page overflow keys`: Double
+  var `leaf page key bytes discarded using prefix compression`: Double
+  var `leaf page multi-block writes`: Double
+  var `leaf-page overflow keys`: Double
+  var `maximum blocks required for a page`: Double
+  var `overflow values written`: Double
+  var `page checksum matches`: Double
+  var `page reconciliation calls`: Double
+  var `page reconciliation calls for eviction`: Double
+  var `pages deleted`: Double
 }
 
 object Dictionarymatches {
@@ -57,97 +56,5 @@ object Dictionarymatches {
     __obj.updateDynamic("pages deleted")((`pages deleted`).asInstanceOf[js.Any])
     __obj.asInstanceOf[Dictionarymatches]
   }
-  @scala.inline
-  implicit class DictionarymatchesOps[Self <: Dictionarymatches] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withDictionary matches`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary matches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFast-path pages deleted`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fast-path pages deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withInternal page key bytes discarded using suffix compression`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal page key bytes discarded using suffix compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withInternal page multi-block writes`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal page multi-block writes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withInternal-page overflow keys`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal-page overflow keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withLeaf page key bytes discarded using prefix compression`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaf page key bytes discarded using prefix compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withLeaf page multi-block writes`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaf page multi-block writes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withLeaf-page overflow keys`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaf-page overflow keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMaximum blocks required for a page`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum blocks required for a page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withOverflow values written`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow values written")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPage checksum matches`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page checksum matches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPage reconciliation calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page reconciliation calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPage reconciliation calls for eviction`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page reconciliation calls for eviction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPages deleted`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pages deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

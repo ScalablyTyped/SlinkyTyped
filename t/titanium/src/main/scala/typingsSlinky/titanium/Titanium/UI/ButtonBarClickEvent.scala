@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Fired when a button is clicked.
-		 */
-@js.native
+  * Fired when a button is clicked.
+  */
 trait ButtonBarClickEvent extends ButtonBarBaseEvent {
   /**
-  			 * Index of the clicked button.
-  			 */
-  var index: Double = js.native
+    * Index of the clicked button.
+    */
+  var index: Double
 }
 
 object ButtonBarClickEvent {
@@ -21,19 +20,5 @@ object ButtonBarClickEvent {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonBarClickEvent]
   }
-  @scala.inline
-  implicit class ButtonBarClickEventOps[Self <: ButtonBarClickEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

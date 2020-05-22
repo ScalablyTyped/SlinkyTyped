@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   * Represents BLOB data type.
   */
 @js.native
-trait FBBlob extends DataType {
+trait FBBlob extends js.Object {
   /**
     * Synchronously closes previously opened blob.
     */

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompassData extends js.Object {
   /** 面对的方向度数 */
-  var direction: Double = js.native
+  var direction: Double
 }
 
 object CompassData {
@@ -16,19 +15,5 @@ object CompassData {
     val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompassData]
   }
-  @scala.inline
-  implicit class CompassDataOps[Self <: CompassData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirection(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

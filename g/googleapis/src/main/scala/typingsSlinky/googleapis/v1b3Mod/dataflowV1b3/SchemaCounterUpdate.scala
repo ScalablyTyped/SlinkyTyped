@@ -76,197 +76,40 @@ trait SchemaCounterUpdate extends js.Object {
 
 object SchemaCounterUpdate {
   @scala.inline
-  def apply(): SchemaCounterUpdate = {
+  def apply(
+    boolean: js.UndefOr[Boolean] = js.undefined,
+    cumulative: js.UndefOr[Boolean] = js.undefined,
+    distribution: SchemaDistributionUpdate = null,
+    floatingPoint: js.UndefOr[Double] = js.undefined,
+    floatingPointList: SchemaFloatingPointList = null,
+    floatingPointMean: SchemaFloatingPointMean = null,
+    integer: SchemaSplitInt64 = null,
+    integerGauge: SchemaIntegerGauge = null,
+    integerList: SchemaIntegerList = null,
+    integerMean: SchemaIntegerMean = null,
+    internal: js.Any = null,
+    nameAndKind: SchemaNameAndKind = null,
+    shortId: String = null,
+    stringList: SchemaStringList = null,
+    structuredNameAndMetadata: SchemaCounterStructuredNameAndMetadata = null
+  ): SchemaCounterUpdate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(boolean)) __obj.updateDynamic("boolean")(boolean.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cumulative)) __obj.updateDynamic("cumulative")(cumulative.get.asInstanceOf[js.Any])
+    if (distribution != null) __obj.updateDynamic("distribution")(distribution.asInstanceOf[js.Any])
+    if (!js.isUndefined(floatingPoint)) __obj.updateDynamic("floatingPoint")(floatingPoint.get.asInstanceOf[js.Any])
+    if (floatingPointList != null) __obj.updateDynamic("floatingPointList")(floatingPointList.asInstanceOf[js.Any])
+    if (floatingPointMean != null) __obj.updateDynamic("floatingPointMean")(floatingPointMean.asInstanceOf[js.Any])
+    if (integer != null) __obj.updateDynamic("integer")(integer.asInstanceOf[js.Any])
+    if (integerGauge != null) __obj.updateDynamic("integerGauge")(integerGauge.asInstanceOf[js.Any])
+    if (integerList != null) __obj.updateDynamic("integerList")(integerList.asInstanceOf[js.Any])
+    if (integerMean != null) __obj.updateDynamic("integerMean")(integerMean.asInstanceOf[js.Any])
+    if (internal != null) __obj.updateDynamic("internal")(internal.asInstanceOf[js.Any])
+    if (nameAndKind != null) __obj.updateDynamic("nameAndKind")(nameAndKind.asInstanceOf[js.Any])
+    if (shortId != null) __obj.updateDynamic("shortId")(shortId.asInstanceOf[js.Any])
+    if (stringList != null) __obj.updateDynamic("stringList")(stringList.asInstanceOf[js.Any])
+    if (structuredNameAndMetadata != null) __obj.updateDynamic("structuredNameAndMetadata")(structuredNameAndMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCounterUpdate]
   }
-  @scala.inline
-  implicit class SchemaCounterUpdateOps[Self <: SchemaCounterUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoolean(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCumulative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cumulative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCumulative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cumulative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistribution(value: SchemaDistributionUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distribution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatingPoint(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatingPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatingPointList(value: SchemaFloatingPointList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingPointList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatingPointList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingPointList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatingPointMean(value: SchemaFloatingPointMean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingPointMean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatingPointMean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingPointMean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInteger(value: SchemaSplitInt64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInteger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegerGauge(value: SchemaIntegerGauge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerGauge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerGauge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerGauge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegerList(value: SchemaIntegerList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegerMean(value: SchemaIntegerMean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerMean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerMean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerMean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInternal(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInternal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameAndKind(value: SchemaNameAndKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameAndKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameAndKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameAndKind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringList(value: SchemaStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStructuredNameAndMetadata(value: SchemaCounterStructuredNameAndMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structuredNameAndMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStructuredNameAndMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structuredNameAndMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

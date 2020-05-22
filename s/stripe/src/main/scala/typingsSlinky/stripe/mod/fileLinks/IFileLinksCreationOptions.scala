@@ -1,53 +1,37 @@
 package typingsSlinky.stripe.mod.fileLinks
 
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
+import typingsSlinky.stripe.mod.IOptionsMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFileLinksCreationOptions extends IDataOptionsWithMetadata {
   /**
     * A future timestamp after which the link will no longer be usable.
     */
-  var expires_at: js.UndefOr[Double] = js.native
+  var expires_at: js.UndefOr[Double] = js.undefined
   /**
     * The ID of the file
     */
-  var file: String = js.native
+  var file: String
 }
 
 object IFileLinksCreationOptions {
   @scala.inline
-  def apply(file: String): IFileLinksCreationOptions = {
+  def apply(
+    file: String,
+    expand: js.Array[String] = null,
+    expires_at: js.UndefOr[Double] = js.undefined,
+    include: js.Array[String] = null,
+    metadata: IOptionsMetadata = null
+  ): IFileLinksCreationOptions = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (!js.isUndefined(expires_at)) __obj.updateDynamic("expires_at")(expires_at.get.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFileLinksCreationOptions]
   }
-  @scala.inline
-  implicit class IFileLinksCreationOptionsOps[Self <: IFileLinksCreationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpires_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpires_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_at")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

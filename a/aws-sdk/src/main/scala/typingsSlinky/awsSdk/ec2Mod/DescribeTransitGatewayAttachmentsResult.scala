@@ -18,41 +18,11 @@ trait DescribeTransitGatewayAttachmentsResult extends js.Object {
 
 object DescribeTransitGatewayAttachmentsResult {
   @scala.inline
-  def apply(): DescribeTransitGatewayAttachmentsResult = {
+  def apply(NextToken: String = null, TransitGatewayAttachments: TransitGatewayAttachmentList = null): DescribeTransitGatewayAttachmentsResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (TransitGatewayAttachments != null) __obj.updateDynamic("TransitGatewayAttachments")(TransitGatewayAttachments.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTransitGatewayAttachmentsResult]
   }
-  @scala.inline
-  implicit class DescribeTransitGatewayAttachmentsResultOps[Self <: DescribeTransitGatewayAttachmentsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitGatewayAttachments(value: TransitGatewayAttachmentList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayAttachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitGatewayAttachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayAttachments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

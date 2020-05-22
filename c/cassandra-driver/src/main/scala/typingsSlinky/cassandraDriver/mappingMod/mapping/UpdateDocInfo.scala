@@ -5,114 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateDocInfo extends js.Object {
-  var deleteOnlyColumns: js.UndefOr[Boolean] = js.native
-  var fields: js.UndefOr[js.Array[String]] = js.native
-  var ifExists: js.UndefOr[Boolean] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var orderBy: js.UndefOr[StringDictionary[String]] = js.native
-  var ttl: js.UndefOr[Double] = js.native
-  var when: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var deleteOnlyColumns: js.UndefOr[Boolean] = js.undefined
+  var fields: js.UndefOr[js.Array[String]] = js.undefined
+  var ifExists: js.UndefOr[Boolean] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var orderBy: js.UndefOr[StringDictionary[String]] = js.undefined
+  var ttl: js.UndefOr[Double] = js.undefined
+  var when: js.UndefOr[StringDictionary[js.Any]] = js.undefined
 }
 
 object UpdateDocInfo {
   @scala.inline
-  def apply(): UpdateDocInfo = {
+  def apply(
+    deleteOnlyColumns: js.UndefOr[Boolean] = js.undefined,
+    fields: js.Array[String] = null,
+    ifExists: js.UndefOr[Boolean] = js.undefined,
+    limit: js.UndefOr[Double] = js.undefined,
+    orderBy: StringDictionary[String] = null,
+    ttl: js.UndefOr[Double] = js.undefined,
+    when: StringDictionary[js.Any] = null
+  ): UpdateDocInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deleteOnlyColumns)) __obj.updateDynamic("deleteOnlyColumns")(deleteOnlyColumns.get.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(ifExists)) __obj.updateDynamic("ifExists")(ifExists.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (orderBy != null) __obj.updateDynamic("orderBy")(orderBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(ttl)) __obj.updateDynamic("ttl")(ttl.get.asInstanceOf[js.Any])
+    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDocInfo]
   }
-  @scala.inline
-  implicit class UpdateDocInfoOps[Self <: UpdateDocInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteOnlyColumns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnlyColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteOnlyColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnlyColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfExists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifExists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfExists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifExists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderBy(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTtl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhen(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

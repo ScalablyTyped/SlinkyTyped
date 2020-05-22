@@ -1,160 +1,63 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxSchedulerAppointment extends CollectionWidgetItem {
-  /** Specifies whether the appointment lasts all day. */
-  var allDay: js.UndefOr[Boolean] = js.native
-  /** Specifies a detail description of the appointment. */
-  var description: js.UndefOr[String] = js.native
-  /** Specifies the ending of the appointment. */
-  var endDate: js.UndefOr[js.Date] = js.native
-  /** Specifies the timezone of the appointment end date. Applies only if timeZone is not specified. */
-  var endDateTimeZone: js.UndefOr[String] = js.native
-  /** Specifies exceptions for the current recurring appointment. */
-  var recurrenceException: js.UndefOr[String] = js.native
-  /** Specifies a recurrence rule for generating recurring appointments in the scheduler. */
-  var recurrenceRule: js.UndefOr[String] = js.native
-  /** Specifies the start of the appointment. */
-  var startDate: js.UndefOr[js.Date] = js.native
-  /** Specifies the timezone of the appointment start date. Applies only if timeZone is not specified. */
-  var startDateTimeZone: js.UndefOr[String] = js.native
-  /** Specifies a template that should be used to render this appointment only. */
+  /** @name dxSchedulerAppointment.allDay */
+  var allDay: js.UndefOr[Boolean] = js.undefined
+  /** @name dxSchedulerAppointment.description */
+  var description: js.UndefOr[String] = js.undefined
+  /** @name dxSchedulerAppointment.endDate */
+  var endDate: js.UndefOr[js.Date] = js.undefined
+  /** @name dxSchedulerAppointment.endDateTimeZone */
+  var endDateTimeZone: js.UndefOr[String] = js.undefined
+  /** @name dxSchedulerAppointment.recurrenceException */
+  var recurrenceException: js.UndefOr[String] = js.undefined
+  /** @name dxSchedulerAppointment.recurrenceRule */
+  var recurrenceRule: js.UndefOr[String] = js.undefined
+  /** @name dxSchedulerAppointment.startDate */
+  var startDate: js.UndefOr[js.Date] = js.undefined
+  /** @name dxSchedulerAppointment.startDateTimeZone */
+  var startDateTimeZone: js.UndefOr[String] = js.undefined
+  /** @name dxSchedulerAppointment.template */
   @JSName("template")
-  var template_dxSchedulerAppointment: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.core.template] = js.native
+  var template_dxSchedulerAppointment: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.core.template] = js.undefined
 }
 
 object dxSchedulerAppointment {
   @scala.inline
-  def apply(): dxSchedulerAppointment = {
+  def apply(
+    allDay: js.UndefOr[Boolean] = js.undefined,
+    description: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    endDate: js.Date = null,
+    endDateTimeZone: String = null,
+    html: String = null,
+    recurrenceException: String = null,
+    recurrenceRule: String = null,
+    startDate: js.Date = null,
+    startDateTimeZone: String = null,
+    template: typingsSlinky.devextreme.mod.DevExpress.core.template = null,
+    text: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): dxSchedulerAppointment = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allDay)) __obj.updateDynamic("allDay")(allDay.get.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
+    if (endDateTimeZone != null) __obj.updateDynamic("endDateTimeZone")(endDateTimeZone.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (recurrenceException != null) __obj.updateDynamic("recurrenceException")(recurrenceException.asInstanceOf[js.Any])
+    if (recurrenceRule != null) __obj.updateDynamic("recurrenceRule")(recurrenceRule.asInstanceOf[js.Any])
+    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
+    if (startDateTimeZone != null) __obj.updateDynamic("startDateTimeZone")(startDateTimeZone.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxSchedulerAppointment]
   }
-  @scala.inline
-  implicit class dxSchedulerAppointmentOps[Self <: dxSchedulerAppointment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllDay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndDateTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDateTimeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndDateTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDateTimeZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecurrenceException(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceException")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecurrenceException: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceException")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecurrenceRule(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecurrenceRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDateTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateTimeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDateTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateTimeZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: typingsSlinky.devextreme.mod.DevExpress.core.template): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

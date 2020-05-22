@@ -8,6 +8,5 @@ import scala.scalajs.js.annotation._
 /**
   * A mime-type keyed dictionary of data.
   */
-@js.native
 trait IMimeBundle extends JSONObject
 

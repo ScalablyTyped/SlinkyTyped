@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSTypeAssertion
   extends Node
      with Expression {
-  var expression: Expression = js.native
-  var typeAnnotation: TSType = js.native
+  var expression: Expression
+  var typeAnnotation: TSType
   @JSName("type")
-  var type_TSTypeAssertion: typingsSlinky.babelTypes.babelTypesStrings.TSTypeAssertion = js.native
+  var type_TSTypeAssertion: typingsSlinky.babelTypes.babelTypesStrings.TSTypeAssertion
 }
 
 @JSImport("babel-types", "TSTypeAssertion")

@@ -18,41 +18,14 @@ trait SchemaVmEndpointNatMappings extends js.Object {
 
 object SchemaVmEndpointNatMappings {
   @scala.inline
-  def apply(): SchemaVmEndpointNatMappings = {
+  def apply(
+    instanceName: String = null,
+    interfaceNatMappings: js.Array[SchemaVmEndpointNatMappingsInterfaceNatMappings] = null
+  ): SchemaVmEndpointNatMappings = {
     val __obj = js.Dynamic.literal()
+    if (instanceName != null) __obj.updateDynamic("instanceName")(instanceName.asInstanceOf[js.Any])
+    if (interfaceNatMappings != null) __obj.updateDynamic("interfaceNatMappings")(interfaceNatMappings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVmEndpointNatMappings]
   }
-  @scala.inline
-  implicit class SchemaVmEndpointNatMappingsOps[Self <: SchemaVmEndpointNatMappings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterfaceNatMappings(value: js.Array[SchemaVmEndpointNatMappingsInterfaceNatMappings]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceNatMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterfaceNatMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceNatMappings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,6 +19,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.officeUiFabricReact.anon.IButtonPropskeystringstri
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.pivotItemTypesMod.IPivotItemProps
 import typingsSlinky.react.anon.Html
@@ -218,6 +219,8 @@ object PivotItem {
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerButtonProps(value: IButtonPropskeystringstri): this.type = set("headerButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
     def headerText(value: String): this.type = set("headerText", value.asInstanceOf[js.Any])
     @scala.inline

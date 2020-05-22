@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofcnxcc extends js.Object {
-  def get_channel_count(sclient: String, pvname: String): Double = js.native
-  def set_max_channels(sclient: String, max_chan: Double): Double = js.native
-  def set_max_credit(sclient: String, scredit: String, scps: String, initp: Double, finishp: Double): Double = js.native
-  def set_max_time(sclient: String, max_secs: Double): Double = js.native
-  def terminate_all(sclient: String): Double = js.native
-  def update_max_time(sclient: String, secs: Double): Double = js.native
+  def get_channel_count(sclient: String, pvname: String): Double
+  def set_max_channels(sclient: String, max_chan: Double): Double
+  def set_max_credit(sclient: String, scredit: String, scps: String, initp: Double, finishp: Double): Double
+  def set_max_time(sclient: String, max_secs: Double): Double
+  def terminate_all(sclient: String): Double
+  def update_max_time(sclient: String, secs: Double): Double
 }
 
 object Typeofcnxcc {
@@ -27,49 +26,5 @@ object Typeofcnxcc {
     val __obj = js.Dynamic.literal(get_channel_count = js.Any.fromFunction2(get_channel_count), set_max_channels = js.Any.fromFunction2(set_max_channels), set_max_credit = js.Any.fromFunction5(set_max_credit), set_max_time = js.Any.fromFunction2(set_max_time), terminate_all = js.Any.fromFunction1(terminate_all), update_max_time = js.Any.fromFunction2(update_max_time))
     __obj.asInstanceOf[Typeofcnxcc]
   }
-  @scala.inline
-  implicit class TypeofcnxccOps[Self <: Typeofcnxcc] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_channel_count(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_channel_count")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSet_max_channels(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_max_channels")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSet_max_credit(value: (String, String, String, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_max_credit")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withSet_max_time(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_max_time")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTerminate_all(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminate_all")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate_max_time(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update_max_time")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

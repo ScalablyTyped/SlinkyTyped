@@ -18,41 +18,11 @@ trait ExtendedKeyUsage extends js.Object {
 
 object ExtendedKeyUsage {
   @scala.inline
-  def apply(): ExtendedKeyUsage = {
+  def apply(Name: ExtendedKeyUsageName = null, OID: String = null): ExtendedKeyUsage = {
     val __obj = js.Dynamic.literal()
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (OID != null) __obj.updateDynamic("OID")(OID.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtendedKeyUsage]
   }
-  @scala.inline
-  implicit class ExtendedKeyUsageOps[Self <: ExtendedKeyUsage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: ExtendedKeyUsageName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OID")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

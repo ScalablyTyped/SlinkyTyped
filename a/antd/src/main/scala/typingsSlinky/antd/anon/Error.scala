@@ -4,49 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Error extends js.Object {
-  var error: js.UndefOr[js.Error | Null] = js.native
-  var info: ComponentStack = js.native
+  var error: js.UndefOr[js.Error | Null] = js.undefined
+  var info: ComponentStack
 }
 
 object Error {
   @scala.inline
-  def apply(info: ComponentStack): Error = {
+  def apply(info: ComponentStack, error: js.UndefOr[Null | js.Error] = js.undefined): Error = {
     val __obj = js.Dynamic.literal(info = info.asInstanceOf[js.Any])
+    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
     __obj.asInstanceOf[Error]
   }
-  @scala.inline
-  implicit class ErrorOps[Self <: Error] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfo(value: ComponentStack): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: js.Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(null)
-        ret
-    }
-  }
-  
 }
 

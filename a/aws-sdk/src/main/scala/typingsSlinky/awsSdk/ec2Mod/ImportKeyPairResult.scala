@@ -14,45 +14,30 @@ trait ImportKeyPairResult extends js.Object {
     * The key pair name you provided.
     */
   var KeyName: js.UndefOr[String] = js.native
+  /**
+    * The ID of the resulting key pair.
+    */
+  var KeyPairId: js.UndefOr[String] = js.native
+  /**
+    * The tags applied to the imported key pair.
+    */
+  var Tags: js.UndefOr[TagList] = js.native
 }
 
 object ImportKeyPairResult {
   @scala.inline
-  def apply(): ImportKeyPairResult = {
+  def apply(
+    KeyFingerprint: String = null,
+    KeyName: String = null,
+    KeyPairId: String = null,
+    Tags: TagList = null
+  ): ImportKeyPairResult = {
     val __obj = js.Dynamic.literal()
+    if (KeyFingerprint != null) __obj.updateDynamic("KeyFingerprint")(KeyFingerprint.asInstanceOf[js.Any])
+    if (KeyName != null) __obj.updateDynamic("KeyName")(KeyName.asInstanceOf[js.Any])
+    if (KeyPairId != null) __obj.updateDynamic("KeyPairId")(KeyPairId.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportKeyPairResult]
   }
-  @scala.inline
-  implicit class ImportKeyPairResultOps[Self <: ImportKeyPairResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

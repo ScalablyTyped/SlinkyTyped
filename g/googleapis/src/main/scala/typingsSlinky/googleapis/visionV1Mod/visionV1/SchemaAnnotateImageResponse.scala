@@ -75,185 +75,38 @@ trait SchemaAnnotateImageResponse extends js.Object {
 
 object SchemaAnnotateImageResponse {
   @scala.inline
-  def apply(): SchemaAnnotateImageResponse = {
+  def apply(
+    context: SchemaImageAnnotationContext = null,
+    cropHintsAnnotation: SchemaCropHintsAnnotation = null,
+    error: SchemaStatus = null,
+    faceAnnotations: js.Array[SchemaFaceAnnotation] = null,
+    fullTextAnnotation: SchemaTextAnnotation = null,
+    imagePropertiesAnnotation: SchemaImageProperties = null,
+    labelAnnotations: js.Array[SchemaEntityAnnotation] = null,
+    landmarkAnnotations: js.Array[SchemaEntityAnnotation] = null,
+    localizedObjectAnnotations: js.Array[SchemaLocalizedObjectAnnotation] = null,
+    logoAnnotations: js.Array[SchemaEntityAnnotation] = null,
+    productSearchResults: SchemaProductSearchResults = null,
+    safeSearchAnnotation: SchemaSafeSearchAnnotation = null,
+    textAnnotations: js.Array[SchemaEntityAnnotation] = null,
+    webDetection: SchemaWebDetection = null
+  ): SchemaAnnotateImageResponse = {
     val __obj = js.Dynamic.literal()
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (cropHintsAnnotation != null) __obj.updateDynamic("cropHintsAnnotation")(cropHintsAnnotation.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (faceAnnotations != null) __obj.updateDynamic("faceAnnotations")(faceAnnotations.asInstanceOf[js.Any])
+    if (fullTextAnnotation != null) __obj.updateDynamic("fullTextAnnotation")(fullTextAnnotation.asInstanceOf[js.Any])
+    if (imagePropertiesAnnotation != null) __obj.updateDynamic("imagePropertiesAnnotation")(imagePropertiesAnnotation.asInstanceOf[js.Any])
+    if (labelAnnotations != null) __obj.updateDynamic("labelAnnotations")(labelAnnotations.asInstanceOf[js.Any])
+    if (landmarkAnnotations != null) __obj.updateDynamic("landmarkAnnotations")(landmarkAnnotations.asInstanceOf[js.Any])
+    if (localizedObjectAnnotations != null) __obj.updateDynamic("localizedObjectAnnotations")(localizedObjectAnnotations.asInstanceOf[js.Any])
+    if (logoAnnotations != null) __obj.updateDynamic("logoAnnotations")(logoAnnotations.asInstanceOf[js.Any])
+    if (productSearchResults != null) __obj.updateDynamic("productSearchResults")(productSearchResults.asInstanceOf[js.Any])
+    if (safeSearchAnnotation != null) __obj.updateDynamic("safeSearchAnnotation")(safeSearchAnnotation.asInstanceOf[js.Any])
+    if (textAnnotations != null) __obj.updateDynamic("textAnnotations")(textAnnotations.asInstanceOf[js.Any])
+    if (webDetection != null) __obj.updateDynamic("webDetection")(webDetection.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnnotateImageResponse]
   }
-  @scala.inline
-  implicit class SchemaAnnotateImageResponseOps[Self <: SchemaAnnotateImageResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: SchemaImageAnnotationContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCropHintsAnnotation(value: SchemaCropHintsAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropHintsAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCropHintsAnnotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropHintsAnnotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: SchemaStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaceAnnotations(value: js.Array[SchemaFaceAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faceAnnotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faceAnnotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullTextAnnotation(value: SchemaTextAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTextAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullTextAnnotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTextAnnotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImagePropertiesAnnotation(value: SchemaImageProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePropertiesAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImagePropertiesAnnotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePropertiesAnnotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelAnnotations(value: js.Array[SchemaEntityAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAnnotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAnnotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLandmarkAnnotations(value: js.Array[SchemaEntityAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("landmarkAnnotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLandmarkAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("landmarkAnnotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizedObjectAnnotations(value: js.Array[SchemaLocalizedObjectAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedObjectAnnotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalizedObjectAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedObjectAnnotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogoAnnotations(value: js.Array[SchemaEntityAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoAnnotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogoAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoAnnotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductSearchResults(value: SchemaProductSearchResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productSearchResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductSearchResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productSearchResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafeSearchAnnotation(value: SchemaSafeSearchAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeSearchAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafeSearchAnnotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeSearchAnnotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAnnotations(value: js.Array[SchemaEntityAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAnnotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAnnotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebDetection(value: SchemaWebDetection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webDetection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebDetection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webDetection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

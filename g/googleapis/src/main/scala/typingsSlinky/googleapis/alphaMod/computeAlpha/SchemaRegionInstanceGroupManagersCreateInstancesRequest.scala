@@ -17,29 +17,10 @@ trait SchemaRegionInstanceGroupManagersCreateInstancesRequest extends js.Object 
 
 object SchemaRegionInstanceGroupManagersCreateInstancesRequest {
   @scala.inline
-  def apply(): SchemaRegionInstanceGroupManagersCreateInstancesRequest = {
+  def apply(instances: js.Array[SchemaPerInstanceConfig] = null): SchemaRegionInstanceGroupManagersCreateInstancesRequest = {
     val __obj = js.Dynamic.literal()
+    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegionInstanceGroupManagersCreateInstancesRequest]
   }
-  @scala.inline
-  implicit class SchemaRegionInstanceGroupManagersCreateInstancesRequestOps[Self <: SchemaRegionInstanceGroupManagersCreateInstancesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstances(value: js.Array[SchemaPerInstanceConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

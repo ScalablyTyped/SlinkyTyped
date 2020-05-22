@@ -30,77 +30,20 @@ trait SamplingStatisticSummary extends js.Object {
 
 object SamplingStatisticSummary {
   @scala.inline
-  def apply(): SamplingStatisticSummary = {
+  def apply(
+    BorrowCount: js.UndefOr[Integer] = js.undefined,
+    RequestCount: js.UndefOr[Integer] = js.undefined,
+    RuleName: String = null,
+    SampledCount: js.UndefOr[Integer] = js.undefined,
+    Timestamp: js.Date = null
+  ): SamplingStatisticSummary = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(BorrowCount)) __obj.updateDynamic("BorrowCount")(BorrowCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequestCount)) __obj.updateDynamic("RequestCount")(RequestCount.get.asInstanceOf[js.Any])
+    if (RuleName != null) __obj.updateDynamic("RuleName")(RuleName.asInstanceOf[js.Any])
+    if (!js.isUndefined(SampledCount)) __obj.updateDynamic("SampledCount")(SampledCount.get.asInstanceOf[js.Any])
+    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SamplingStatisticSummary]
   }
-  @scala.inline
-  implicit class SamplingStatisticSummaryOps[Self <: SamplingStatisticSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorrowCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BorrowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorrowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BorrowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampledCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampledCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampledCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampledCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

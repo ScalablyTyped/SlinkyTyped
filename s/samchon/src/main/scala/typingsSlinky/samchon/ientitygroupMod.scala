@@ -61,6 +61,12 @@ object ientitygroupMod extends js.Object {
       */
     def createChild(xml: XML): T = js.native
     /**
+      * Test whether container is empty.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def empty(): Boolean = js.native
+    /**
       * Iterator to the end.
       *
       * @return Iterator to the end.
@@ -123,11 +129,20 @@ object ientitygroupMod extends js.Object {
       */
     def has(key: js.Any): Boolean = js.native
     /**
+      * Insert items at the end.
+      *
+      * @param items Items to insert.
+      * @return Number of elements in the container after insertion.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def push(items: T*): Double = js.native
+    /**
       * Reverse iterator to the first element in reverse.
       *
       * @return Reverse iterator to the first.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rbegin(): ReverseT = js.native
     /**
@@ -135,9 +150,15 @@ object ientitygroupMod extends js.Object {
       *
       * @return Reverse iterator to the end.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rend(): ReverseT = js.native
+    /**
+      * Number of elements in the container.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def size(): Double = js.native
     /**
       * Swap elements.
       *

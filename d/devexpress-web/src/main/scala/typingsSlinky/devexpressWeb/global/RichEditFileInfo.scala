@@ -10,5 +10,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("RichEditFileInfo")
 @js.native
 class RichEditFileInfo ()
-  extends typingsSlinky.devexpressWeb.RichEditFileInfo
+  extends typingsSlinky.devexpressWeb.RichEditFileInfo {
+  /**
+    * Gets or sets the file's document format.
+    */
+  /* CompleteClass */
+  override var documentFormat: typingsSlinky.devexpressWeb.DocumentFormat = js.native
+  /**
+    * Gets or sets the file name.
+    */
+  /* CompleteClass */
+  override var fileName: String = js.native
+  /**
+    * Gets or sets the file's folder name.
+    */
+  /* CompleteClass */
+  override var folderPath: String = js.native
+}
 

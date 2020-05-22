@@ -10,31 +10,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** offers printing functionality. */
-@js.native
 trait XPrintable extends XInterface {
   /**
     * @returns a descriptor of the current printer.  The attributes of the current printer are used for formatting.
     * @see PrinterDescriptor
     */
-  var Printer: SafeArray[PropertyValue] = js.native
+  var Printer: SafeArray[PropertyValue]
   /**
     * @returns a descriptor of the current printer.  The attributes of the current printer are used for formatting.
     * @see PrinterDescriptor
     */
-  def getPrinter(): SafeArray[PropertyValue] = js.native
+  def getPrinter(): SafeArray[PropertyValue]
   /**
     * prints the object.
     * @param xOptions specifies the number of copies and some other values which do not affect formatting.
     * @see PrintOptions
     */
-  def print(xOptions: SeqEquiv[PropertyValue]): Unit = js.native
+  def print(xOptions: SeqEquiv[PropertyValue]): Unit
   /**
     * assigns a new printer to the object.
     *
     * Setting a new printer will cause reformatting.
     * @see PrinterDescriptor
     */
-  def setPrinter(aPrinter: SeqEquiv[PropertyValue]): Unit = js.native
+  def setPrinter(aPrinter: SeqEquiv[PropertyValue]): Unit
 }
 
 object XPrintable {
@@ -51,37 +50,5 @@ object XPrintable {
     val __obj = js.Dynamic.literal(Printer = Printer.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getPrinter = js.Any.fromFunction0(getPrinter), print = js.Any.fromFunction1(print), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setPrinter = js.Any.fromFunction1(setPrinter))
     __obj.asInstanceOf[XPrintable]
   }
-  @scala.inline
-  implicit class XPrintableOps[Self <: XPrintable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrinter(value: SafeArray[PropertyValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Printer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetPrinter(value: () => SafeArray[PropertyValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrinter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPrint(value: SeqEquiv[PropertyValue] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPrinter(value: SeqEquiv[PropertyValue] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrinter")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

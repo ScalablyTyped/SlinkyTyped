@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProgressData extends js.Object {
-  var entries: Processed = js.native
-  var fs: ProcessedBytes = js.native
+  var entries: Processed
+  var fs: ProcessedBytes
 }
 
 object ProgressData {
@@ -18,25 +17,5 @@ object ProgressData {
     val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any], fs = fs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressData]
   }
-  @scala.inline
-  implicit class ProgressDataOps[Self <: ProgressData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntries(value: Processed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFs(value: ProcessedBytes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

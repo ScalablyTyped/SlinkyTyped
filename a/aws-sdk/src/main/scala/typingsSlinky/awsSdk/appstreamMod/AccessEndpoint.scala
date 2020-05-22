@@ -18,35 +18,10 @@ trait AccessEndpoint extends js.Object {
 
 object AccessEndpoint {
   @scala.inline
-  def apply(EndpointType: AccessEndpointType): AccessEndpoint = {
+  def apply(EndpointType: AccessEndpointType, VpceId: String = null): AccessEndpoint = {
     val __obj = js.Dynamic.literal(EndpointType = EndpointType.asInstanceOf[js.Any])
+    if (VpceId != null) __obj.updateDynamic("VpceId")(VpceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessEndpoint]
   }
-  @scala.inline
-  implicit class AccessEndpointOps[Self <: AccessEndpoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpointType(value: AccessEndpointType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVpceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientGlobalEvents.EndCallback event.
   */
-@js.native
 trait ASPxClientGlobalEndCallbackEventArgs extends ASPxClientEndCallbackEventArgs {
   /**
     * Gets an object that initiated a callback.
     */
-  var control: ASPxClientControl = js.native
+  var control: ASPxClientControl
 }
 
 object ASPxClientGlobalEndCallbackEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientGlobalEndCallbackEventArgs {
     val __obj = js.Dynamic.literal(command = command.asInstanceOf[js.Any], control = control.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientGlobalEndCallbackEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientGlobalEndCallbackEventArgsOps[Self <: ASPxClientGlobalEndCallbackEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withControl(value: ASPxClientControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

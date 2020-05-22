@@ -47,89 +47,22 @@ trait SchemaCommuteFilter extends js.Object {
 
 object SchemaCommuteFilter {
   @scala.inline
-  def apply(): SchemaCommuteFilter = {
+  def apply(
+    allowImpreciseAddresses: js.UndefOr[Boolean] = js.undefined,
+    commuteMethod: String = null,
+    departureTime: SchemaTimeOfDay = null,
+    roadTraffic: String = null,
+    startCoordinates: SchemaLatLng = null,
+    travelDuration: String = null
+  ): SchemaCommuteFilter = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowImpreciseAddresses)) __obj.updateDynamic("allowImpreciseAddresses")(allowImpreciseAddresses.get.asInstanceOf[js.Any])
+    if (commuteMethod != null) __obj.updateDynamic("commuteMethod")(commuteMethod.asInstanceOf[js.Any])
+    if (departureTime != null) __obj.updateDynamic("departureTime")(departureTime.asInstanceOf[js.Any])
+    if (roadTraffic != null) __obj.updateDynamic("roadTraffic")(roadTraffic.asInstanceOf[js.Any])
+    if (startCoordinates != null) __obj.updateDynamic("startCoordinates")(startCoordinates.asInstanceOf[js.Any])
+    if (travelDuration != null) __obj.updateDynamic("travelDuration")(travelDuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCommuteFilter]
   }
-  @scala.inline
-  implicit class SchemaCommuteFilterOps[Self <: SchemaCommuteFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowImpreciseAddresses(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowImpreciseAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowImpreciseAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowImpreciseAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommuteMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commuteMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommuteMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commuteMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepartureTime(value: SchemaTimeOfDay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("departureTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepartureTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("departureTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoadTraffic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roadTraffic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoadTraffic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roadTraffic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartCoordinates(value: SchemaLatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCoordinates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartCoordinates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCoordinates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTravelDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("travelDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTravelDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("travelDuration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

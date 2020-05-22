@@ -26,65 +26,17 @@ trait PutFileEntry extends js.Object {
 
 object PutFileEntry {
   @scala.inline
-  def apply(filePath: Path): PutFileEntry = {
+  def apply(
+    filePath: Path,
+    fileContent: FileContent = null,
+    fileMode: FileModeTypeEnum = null,
+    sourceFile: SourceFileSpecifier = null
+  ): PutFileEntry = {
     val __obj = js.Dynamic.literal(filePath = filePath.asInstanceOf[js.Any])
+    if (fileContent != null) __obj.updateDynamic("fileContent")(fileContent.asInstanceOf[js.Any])
+    if (fileMode != null) __obj.updateDynamic("fileMode")(fileMode.asInstanceOf[js.Any])
+    if (sourceFile != null) __obj.updateDynamic("sourceFile")(sourceFile.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutFileEntry]
   }
-  @scala.inline
-  implicit class PutFileEntryOps[Self <: PutFileEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilePath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileContentUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileContent(value: FileContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileMode(value: FileModeTypeEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceFile(value: SourceFileSpecifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -33,7 +33,7 @@ import scala.scalajs.js.annotation._
 trait Style extends ClientObject {
   /**
     *
-    * Indicates if text is automatically indented when the text alignment in a cell is set to equal distribution.
+    * Specifies if text is automatically indented when the text alignment in a cell is set to equal distribution.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -47,7 +47,7 @@ trait Style extends ClientObject {
   val borders: RangeBorderCollection = js.native
   /**
     *
-    * Indicates if the style is a built-in style.
+    * Specifies if the style is a built-in style.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -71,7 +71,7 @@ trait Style extends ClientObject {
   val font: RangeFont = js.native
   /**
     *
-    * Indicates if the formula will be hidden when the worksheet is protected.
+    * Specifies if the formula will be hidden when the worksheet is protected.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -85,42 +85,42 @@ trait Style extends ClientObject {
   var horizontalAlignment: HorizontalAlignment | General | Left | Center | Right | Fill | Justify | CenterAcrossSelection | Distributed = js.native
   /**
     *
-    * Indicates if the style includes the AutoIndent, HorizontalAlignment, VerticalAlignment, WrapText, IndentLevel, and TextOrientation properties.
+    * Specifies if the style includes the AutoIndent, HorizontalAlignment, VerticalAlignment, WrapText, IndentLevel, and TextOrientation properties.
     *
     * [Api set: ExcelApi 1.7]
     */
   var includeAlignment: Boolean = js.native
   /**
     *
-    * Indicates if the style includes the Color, ColorIndex, LineStyle, and Weight border properties.
+    * Specifies if the style includes the Color, ColorIndex, LineStyle, and Weight border properties.
     *
     * [Api set: ExcelApi 1.7]
     */
   var includeBorder: Boolean = js.native
   /**
     *
-    * Indicates if the style includes the Background, Bold, Color, ColorIndex, FontStyle, Italic, Name, Size, Strikethrough, Subscript, Superscript, and Underline font properties.
+    * Specifies if the style includes the Background, Bold, Color, ColorIndex, FontStyle, Italic, Name, Size, Strikethrough, Subscript, Superscript, and Underline font properties.
     *
     * [Api set: ExcelApi 1.7]
     */
   var includeFont: Boolean = js.native
   /**
     *
-    * Indicates if the style includes the NumberFormat property.
+    * Specifies if the style includes the NumberFormat property.
     *
     * [Api set: ExcelApi 1.7]
     */
   var includeNumber: Boolean = js.native
   /**
     *
-    * Indicates if the style includes the Color, ColorIndex, InvertIfNegative, Pattern, PatternColor, and PatternColorIndex interior properties.
+    * Specifies if the style includes the Color, ColorIndex, InvertIfNegative, Pattern, PatternColor, and PatternColorIndex interior properties.
     *
     * [Api set: ExcelApi 1.7]
     */
   var includePatterns: Boolean = js.native
   /**
     *
-    * Indicates if the style includes the FormulaHidden and Locked protection properties.
+    * Specifies if the style includes the FormulaHidden and Locked protection properties.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -134,7 +134,7 @@ trait Style extends ClientObject {
   var indentLevel: Double = js.native
   /**
     *
-    * Indicates if the object is locked when the worksheet is protected.
+    * Specifies if the object is locked when the worksheet is protected.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -169,7 +169,7 @@ trait Style extends ClientObject {
   var readingOrder: ReadingOrder | Context | LeftToRight | RightToLeft = js.native
   /**
     *
-    * Indicates if text automatically shrinks to fit in the available column width.
+    * Specifies if text automatically shrinks to fit in the available column width.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -183,14 +183,14 @@ trait Style extends ClientObject {
   var textOrientation: Double = js.native
   /**
     *
-    * Represents the vertical alignment for the style. See Excel.VerticalAlignment for details.
+    * Specifies the vertical alignment for the style. See Excel.VerticalAlignment for details.
     *
     * [Api set: ExcelApi 1.7]
     */
   var verticalAlignment: VerticalAlignment | Top | Center | Bottom | Justify | Distributed = js.native
   /**
     *
-    * Indicates if Microsoft Excel wraps the text in the object.
+    * Specifies if Excel wraps the text in the object.
     *
     * [Api set: ExcelApi 1.7]
     */

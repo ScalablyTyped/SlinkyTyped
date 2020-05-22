@@ -27,6 +27,10 @@ trait ServiceSoftwareOptions extends js.Object {
     */
   var NewVersion: js.UndefOr[String] = js.native
   /**
+    * True if a service software is never automatically updated. False if a service software is automatically updated after AutomatedUpdateDate. 
+    */
+  var OptionalDeployment: js.UndefOr[Boolean] = js.native
+  /**
     * True if you are able to update you service software version. False if you are not able to update your service software version. 
     */
   var UpdateAvailable: js.UndefOr[Boolean] = js.native
@@ -38,101 +42,26 @@ trait ServiceSoftwareOptions extends js.Object {
 
 object ServiceSoftwareOptions {
   @scala.inline
-  def apply(): ServiceSoftwareOptions = {
+  def apply(
+    AutomatedUpdateDate: js.Date = null,
+    Cancellable: js.UndefOr[Boolean] = js.undefined,
+    CurrentVersion: String = null,
+    Description: String = null,
+    NewVersion: String = null,
+    OptionalDeployment: js.UndefOr[Boolean] = js.undefined,
+    UpdateAvailable: js.UndefOr[Boolean] = js.undefined,
+    UpdateStatus: DeploymentStatus = null
+  ): ServiceSoftwareOptions = {
     val __obj = js.Dynamic.literal()
+    if (AutomatedUpdateDate != null) __obj.updateDynamic("AutomatedUpdateDate")(AutomatedUpdateDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(Cancellable)) __obj.updateDynamic("Cancellable")(Cancellable.get.asInstanceOf[js.Any])
+    if (CurrentVersion != null) __obj.updateDynamic("CurrentVersion")(CurrentVersion.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (NewVersion != null) __obj.updateDynamic("NewVersion")(NewVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(OptionalDeployment)) __obj.updateDynamic("OptionalDeployment")(OptionalDeployment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UpdateAvailable)) __obj.updateDynamic("UpdateAvailable")(UpdateAvailable.get.asInstanceOf[js.Any])
+    if (UpdateStatus != null) __obj.updateDynamic("UpdateStatus")(UpdateStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceSoftwareOptions]
   }
-  @scala.inline
-  implicit class ServiceSoftwareOptionsOps[Self <: ServiceSoftwareOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomatedUpdateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomatedUpdateDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomatedUpdateDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomatedUpdateDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancellable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cancellable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancellable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cancellable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateAvailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateAvailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateStatus(value: DeploymentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

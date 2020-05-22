@@ -29,53 +29,16 @@ trait MountTargetArgs extends js.Object {
 
 object MountTargetArgs {
   @scala.inline
-  def apply(fileSystemId: Input[String], subnetId: Input[String]): MountTargetArgs = {
+  def apply(
+    fileSystemId: Input[String],
+    subnetId: Input[String],
+    ipAddress: Input[String] = null,
+    securityGroups: Input[js.Array[Input[String]]] = null
+  ): MountTargetArgs = {
     val __obj = js.Dynamic.literal(fileSystemId = fileSystemId.asInstanceOf[js.Any], subnetId = subnetId.asInstanceOf[js.Any])
+    if (ipAddress != null) __obj.updateDynamic("ipAddress")(ipAddress.asInstanceOf[js.Any])
+    if (securityGroups != null) __obj.updateDynamic("securityGroups")(securityGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[MountTargetArgs]
   }
-  @scala.inline
-  implicit class MountTargetArgsOps[Self <: MountTargetArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileSystemId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubnetId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIpAddress(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroups(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,16 +1,16 @@
 package typingsSlinky.awsLambda.cloudformationCustomResourceMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.awsLambda.awsLambdaStrings.SUCCESS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CloudFormationCustomResourceSuccessResponse
   extends CloudFormationCustomResourceResponseCommon
      with CloudFormationCustomResourceResponse {
-  var Reason: js.UndefOr[String] = js.native
-  var Status: SUCCESS = js.native
+  var Reason: js.UndefOr[String] = js.undefined
+  var Status: SUCCESS
 }
 
 object CloudFormationCustomResourceSuccessResponse {
@@ -20,36 +20,16 @@ object CloudFormationCustomResourceSuccessResponse {
     PhysicalResourceId: String,
     RequestId: String,
     StackId: String,
-    Status: SUCCESS
+    Status: SUCCESS,
+    Data: StringDictionary[js.Any] = null,
+    NoEcho: js.UndefOr[Boolean] = js.undefined,
+    Reason: String = null
   ): CloudFormationCustomResourceSuccessResponse = {
     val __obj = js.Dynamic.literal(LogicalResourceId = LogicalResourceId.asInstanceOf[js.Any], PhysicalResourceId = PhysicalResourceId.asInstanceOf[js.Any], RequestId = RequestId.asInstanceOf[js.Any], StackId = StackId.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
+    if (Data != null) __obj.updateDynamic("Data")(Data.asInstanceOf[js.Any])
+    if (!js.isUndefined(NoEcho)) __obj.updateDynamic("NoEcho")(NoEcho.get.asInstanceOf[js.Any])
+    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudFormationCustomResourceSuccessResponse]
   }
-  @scala.inline
-  implicit class CloudFormationCustomResourceSuccessResponseOps[Self <: CloudFormationCustomResourceSuccessResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: SUCCESS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

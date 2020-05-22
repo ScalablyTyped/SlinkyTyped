@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldsIndex extends js.Object {
   /**
     * An array of date fields or field json objects.
@@ -13,7 +12,7 @@ trait FieldsIndex extends js.Object {
     *
     * @default []
     */
-  var dateFields: js.Array[_ | Field] = js.native
+  var dateFields: js.Array[_ | Field]
   /**
     * Returns a field with the specified field name.
     *
@@ -22,7 +21,7 @@ trait FieldsIndex extends js.Object {
     * @param fieldName The name of the field. The name is case-insensitive.
     *
     */
-  def get(fieldName: String): Field = js.native
+  def get(fieldName: String): Field
   /**
     * Checks if a field with the specified field name exists in the layer.
     *
@@ -31,7 +30,7 @@ trait FieldsIndex extends js.Object {
     * @param fieldName The name of the field. The name is case-insensitive.
     *
     */
-  def has(fieldName: String): Boolean = js.native
+  def has(fieldName: String): Boolean
   /**
     * Checks if a field with the specified field name is a date field.
     *
@@ -40,7 +39,7 @@ trait FieldsIndex extends js.Object {
     * @param fieldName The name of the field.
     *
     */
-  def isDateField(fieldName: String): Boolean = js.native
+  def isDateField(fieldName: String): Boolean
 }
 
 object FieldsIndex {
@@ -54,37 +53,5 @@ object FieldsIndex {
     val __obj = js.Dynamic.literal(dateFields = dateFields.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), has = js.Any.fromFunction1(has), isDateField = js.Any.fromFunction1(isDateField))
     __obj.asInstanceOf[FieldsIndex]
   }
-  @scala.inline
-  implicit class FieldsIndexOps[Self <: FieldsIndex] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateFields(value: js.Array[_ | Field]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGet(value: String => Field): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHas(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsDateField(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDateField")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

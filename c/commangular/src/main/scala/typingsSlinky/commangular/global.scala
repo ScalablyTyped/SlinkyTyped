@@ -14,7 +14,7 @@ object global extends js.Object {
   * Mock dispatch function for testing commands.
   * @param ec an ICommandCall object
   * @param callback The function that will be called upon the completion of the command
-  * 		function should expecte an ICommandInfo parameter.
+  *         function should expecte an ICommandInfo parameter.
   */
   def dispatch(ec: ICommandCall, callback: js.Function): Unit = js.native
   /**

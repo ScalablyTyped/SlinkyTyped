@@ -35,29 +35,10 @@ trait SchemaEnumOperatorOptions extends js.Object {
 
 object SchemaEnumOperatorOptions {
   @scala.inline
-  def apply(): SchemaEnumOperatorOptions = {
+  def apply(operatorName: String = null): SchemaEnumOperatorOptions = {
     val __obj = js.Dynamic.literal()
+    if (operatorName != null) __obj.updateDynamic("operatorName")(operatorName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEnumOperatorOptions]
   }
-  @scala.inline
-  implicit class SchemaEnumOperatorOptionsOps[Self <: SchemaEnumOperatorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperatorName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperatorName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

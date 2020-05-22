@@ -18,19 +18,5 @@ object Scte35Descriptor {
     val __obj = js.Dynamic.literal(Scte35DescriptorSettings = Scte35DescriptorSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scte35Descriptor]
   }
-  @scala.inline
-  implicit class Scte35DescriptorOps[Self <: Scte35Descriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScte35DescriptorSettings(value: Scte35DescriptorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35DescriptorSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

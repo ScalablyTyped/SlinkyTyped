@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICompositeDefinition extends js.Object {
   /**
     * An array of `Body` that are _direct_ children of this composite.
@@ -15,7 +14,7 @@ trait ICompositeDefinition extends js.Object {
     * @type body[]
     * @default []
     */
-  var bodies: js.UndefOr[js.Array[BodyType]] = js.native
+  var bodies: js.UndefOr[js.Array[BodyType]] = js.undefined
   /**
     * An array of `Composite` that are _direct_ children of this composite.
     * To add or remove composites you should use `Composite.add` and `Composite.remove` methods rather than directly modifying this property.
@@ -25,7 +24,7 @@ trait ICompositeDefinition extends js.Object {
     * @type composite[]
     * @default []
     */
-  var composites: js.UndefOr[js.Array[CompositeType]] = js.native
+  var composites: js.UndefOr[js.Array[CompositeType]] = js.undefined
   /**
     * An array of `Constraint` that are _direct_ children of this composite.
     * To add or remove constraints you should use `Composite.add` and `Composite.remove` methods rather than directly modifying this property.
@@ -35,14 +34,14 @@ trait ICompositeDefinition extends js.Object {
     * @type constraint[]
     * @default []
     */
-  var constraints: js.UndefOr[js.Array[ConstraintType]] = js.native
+  var constraints: js.UndefOr[js.Array[ConstraintType]] = js.undefined
   /**
     * An integer `Number` uniquely identifying number generated in `Composite.create` by `Common.nextId`.
     *
     * @property id
     * @type number
     */
-  var id: js.UndefOr[Double] = js.native
+  var id: js.UndefOr[Double] = js.undefined
   /**
     * A flag that specifies whether the composite has been modified during the current step.
     * Most `Matter.Composite` methods will automatically set this flag to `true` to inform the engine of changes to be handled.
@@ -52,7 +51,7 @@ trait ICompositeDefinition extends js.Object {
     * @type boolean
     * @default false
     */
-  var isModified: js.UndefOr[Boolean] = js.native
+  var isModified: js.UndefOr[Boolean] = js.undefined
   /**
     * An arbitrary `String` name to help the user identify and manage composites.
     *
@@ -60,7 +59,7 @@ trait ICompositeDefinition extends js.Object {
     * @type string
     * @default "Composite"
     */
-  var label: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.undefined
   /**
     * The `Composite` that is the parent of this composite. It is automatically managed by the `Matter.Composite` methods.
     *
@@ -68,7 +67,7 @@ trait ICompositeDefinition extends js.Object {
     * @type composite
     * @default null
     */
-  var parent: js.UndefOr[CompositeType] = js.native
+  var parent: js.UndefOr[CompositeType] = js.undefined
   /**
     * A `String` denoting the type of object.
     *
@@ -76,118 +75,31 @@ trait ICompositeDefinition extends js.Object {
     * @type string
     * @default "composite"
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object ICompositeDefinition {
   @scala.inline
-  def apply(): ICompositeDefinition = {
+  def apply(
+    bodies: js.Array[BodyType] = null,
+    composites: js.Array[CompositeType] = null,
+    constraints: js.Array[ConstraintType] = null,
+    id: js.UndefOr[Double] = js.undefined,
+    isModified: js.UndefOr[Boolean] = js.undefined,
+    label: String = null,
+    parent: CompositeType = null,
+    `type`: String = null
+  ): ICompositeDefinition = {
     val __obj = js.Dynamic.literal()
+    if (bodies != null) __obj.updateDynamic("bodies")(bodies.asInstanceOf[js.Any])
+    if (composites != null) __obj.updateDynamic("composites")(composites.asInstanceOf[js.Any])
+    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isModified)) __obj.updateDynamic("isModified")(isModified.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICompositeDefinition]
   }
-  @scala.inline
-  implicit class ICompositeDefinitionOps[Self <: ICompositeDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodies(value: js.Array[BodyType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComposites(value: js.Array[CompositeType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComposites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraints(value: js.Array[ConstraintType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsModified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsModified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isModified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: CompositeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

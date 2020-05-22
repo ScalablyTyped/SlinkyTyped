@@ -22,41 +22,10 @@ trait AttributesResource extends js.Object {
 
 object AttributesResource {
   @scala.inline
-  def apply(ApplicationId: string, AttributeType: string): AttributesResource = {
+  def apply(ApplicationId: string, AttributeType: string, Attributes: ListOfString = null): AttributesResource = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], AttributeType = AttributeType.asInstanceOf[js.Any])
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributesResource]
   }
-  @scala.inline
-  implicit class AttributesResourceOps[Self <: AttributesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeType(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: ListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

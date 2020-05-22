@@ -18,41 +18,11 @@ trait AddAttachmentsToSetResponse extends js.Object {
 
 object AddAttachmentsToSetResponse {
   @scala.inline
-  def apply(): AddAttachmentsToSetResponse = {
+  def apply(attachmentSetId: AttachmentSetId = null, expiryTime: ExpiryTime = null): AddAttachmentsToSetResponse = {
     val __obj = js.Dynamic.literal()
+    if (attachmentSetId != null) __obj.updateDynamic("attachmentSetId")(attachmentSetId.asInstanceOf[js.Any])
+    if (expiryTime != null) __obj.updateDynamic("expiryTime")(expiryTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddAttachmentsToSetResponse]
   }
-  @scala.inline
-  implicit class AddAttachmentsToSetResponseOps[Self <: AddAttachmentsToSetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachmentSetId(value: AttachmentSetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachmentSetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiryTime(value: ExpiryTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiryTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiryTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiryTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,114 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MouseEventOptions extends js.Object {
-  var drag: js.UndefOr[EventListener] = js.native
-  var dragEnd: js.UndefOr[EventListener] = js.native
-  var dragStart: js.UndefOr[EventListener] = js.native
-  var mouseDown: js.UndefOr[EventListener] = js.native
-  var mouseMove: js.UndefOr[EventListener] = js.native
-  var mouseUp: js.UndefOr[EventListener] = js.native
-  var mouseWheel: js.UndefOr[EventListener] = js.native
+  var drag: js.UndefOr[EventListener] = js.undefined
+  var dragEnd: js.UndefOr[EventListener] = js.undefined
+  var dragStart: js.UndefOr[EventListener] = js.undefined
+  var mouseDown: js.UndefOr[EventListener] = js.undefined
+  var mouseMove: js.UndefOr[EventListener] = js.undefined
+  var mouseUp: js.UndefOr[EventListener] = js.undefined
+  var mouseWheel: js.UndefOr[EventListener] = js.undefined
 }
 
 object MouseEventOptions {
   @scala.inline
-  def apply(): MouseEventOptions = {
+  def apply(
+    drag: /* evt */ Event => Unit = null,
+    dragEnd: /* evt */ Event => Unit = null,
+    dragStart: /* evt */ Event => Unit = null,
+    mouseDown: /* evt */ Event => Unit = null,
+    mouseMove: /* evt */ Event => Unit = null,
+    mouseUp: /* evt */ Event => Unit = null,
+    mouseWheel: /* evt */ Event => Unit = null
+  ): MouseEventOptions = {
     val __obj = js.Dynamic.literal()
+    if (drag != null) __obj.updateDynamic("drag")(js.Any.fromFunction1(drag))
+    if (dragEnd != null) __obj.updateDynamic("dragEnd")(js.Any.fromFunction1(dragEnd))
+    if (dragStart != null) __obj.updateDynamic("dragStart")(js.Any.fromFunction1(dragStart))
+    if (mouseDown != null) __obj.updateDynamic("mouseDown")(js.Any.fromFunction1(mouseDown))
+    if (mouseMove != null) __obj.updateDynamic("mouseMove")(js.Any.fromFunction1(mouseMove))
+    if (mouseUp != null) __obj.updateDynamic("mouseUp")(js.Any.fromFunction1(mouseUp))
+    if (mouseWheel != null) __obj.updateDynamic("mouseWheel")(js.Any.fromFunction1(mouseWheel))
     __obj.asInstanceOf[MouseEventOptions]
   }
-  @scala.inline
-  implicit class MouseEventOptionsOps[Self <: MouseEventOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDrag(value: /* evt */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragEnd(value: /* evt */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragStart(value: /* evt */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseDown(value: /* evt */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseMove(value: /* evt */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseUp(value: /* evt */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseWheel(value: /* evt */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseWheel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

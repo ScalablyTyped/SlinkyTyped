@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * An application shortcut.
-		 */
+  * An application shortcut.
+  */
 @JSGlobal("Titanium.UI.ShortcutItem")
 @js.native
 class ShortcutItem ()

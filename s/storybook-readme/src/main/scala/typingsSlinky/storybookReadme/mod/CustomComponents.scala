@@ -6,49 +6,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomComponents extends js.Object {
-  var FooterComponent: js.UndefOr[js.Function1[/* props */ ChildrenElement, ReactElement]] = js.native
-  var PreviewComponent: js.UndefOr[js.Function1[/* props */ ChildrenElement, ReactElement]] = js.native
+  var FooterComponent: js.UndefOr[js.Function1[/* props */ ChildrenElement, ReactElement]] = js.undefined
+  var PreviewComponent: js.UndefOr[js.Function1[/* props */ ChildrenElement, ReactElement]] = js.undefined
 }
 
 object CustomComponents {
   @scala.inline
-  def apply(): CustomComponents = {
+  def apply(
+    FooterComponent: /* props */ ChildrenElement => ReactElement = null,
+    PreviewComponent: /* props */ ChildrenElement => ReactElement = null
+  ): CustomComponents = {
     val __obj = js.Dynamic.literal()
+    if (FooterComponent != null) __obj.updateDynamic("FooterComponent")(js.Any.fromFunction1(FooterComponent))
+    if (PreviewComponent != null) __obj.updateDynamic("PreviewComponent")(js.Any.fromFunction1(PreviewComponent))
     __obj.asInstanceOf[CustomComponents]
   }
-  @scala.inline
-  implicit class CustomComponentsOps[Self <: CustomComponents] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFooterComponent(value: /* props */ ChildrenElement => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FooterComponent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFooterComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FooterComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviewComponent(value: /* props */ ChildrenElement => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviewComponent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPreviewComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviewComponent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

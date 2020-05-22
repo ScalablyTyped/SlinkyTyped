@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait Options extends js.Object
 
-object Options {
-  @scala.inline
-  def github: typingsSlinky.issueParser.issueParserStrings.github = "github".asInstanceOf[typingsSlinky.issueParser.issueParserStrings.github]
-  @scala.inline
-  def gitlab: typingsSlinky.issueParser.issueParserStrings.gitlab = "gitlab".asInstanceOf[typingsSlinky.issueParser.issueParserStrings.gitlab]
-  @scala.inline
-  def bitbucket: typingsSlinky.issueParser.issueParserStrings.bitbucket = "bitbucket".asInstanceOf[typingsSlinky.issueParser.issueParserStrings.bitbucket]
-  @scala.inline
-  def waffle: typingsSlinky.issueParser.issueParserStrings.waffle = "waffle".asInstanceOf[typingsSlinky.issueParser.issueParserStrings.waffle]
-  @scala.inline
-  implicit def apply(value: Overrides): Options = value.asInstanceOf[Options]
-}
-

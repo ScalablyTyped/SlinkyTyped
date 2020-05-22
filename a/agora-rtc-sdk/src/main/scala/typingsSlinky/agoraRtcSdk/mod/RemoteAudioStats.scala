@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * If {@link getRemoteAudioStats} is called successfully, the {@link RemoteAudioStatsMap} interface provides the UID and {@link RemoteAudioStats} of each remote user.
   */
-@js.native
 trait RemoteAudioStats extends js.Object {
   /**
     * Decoding type of the received audio.
@@ -17,159 +16,62 @@ trait RemoteAudioStats extends js.Object {
     * - "1": Opus.
     * - "2": AAC.
     */
-  val CodecType: js.UndefOr[String] = js.native
+  val CodecType: js.UndefOr[String] = js.undefined
   /**
     * End-to-end delay in ms.
     *
     * Delay from capturing to playing the audio.
     */
-  val End2EndDelay: js.UndefOr[String] = js.native
+  val End2EndDelay: js.UndefOr[String] = js.undefined
   /**
     * Whether the audio is muted or not.
     *
     * - "1": Muted.
     * - "0": Unmuted.
     */
-  val MuteState: js.UndefOr[String] = js.native
+  val MuteState: js.UndefOr[String] = js.undefined
   /** Packet loss rate (%) of the remote audio. */
-  val PacketLossRate: js.UndefOr[String] = js.native
+  val PacketLossRate: js.UndefOr[String] = js.undefined
   /** Bitrate of the received audio, in Kbps. */
-  val RecvBitrate: js.UndefOr[String] = js.native
+  val RecvBitrate: js.UndefOr[String] = js.undefined
   /** Volume of the received audio. */
-  val RecvLevel: js.UndefOr[String] = js.native
+  val RecvLevel: js.UndefOr[String] = js.undefined
   /** Total freeze time of the received audio. */
-  val TotalFreezeTime: js.UndefOr[String] = js.native
+  val TotalFreezeTime: js.UndefOr[String] = js.undefined
   /** Total playing duration of the received audio. */
-  val TotalPlayDuration: js.UndefOr[String] = js.native
+  val TotalPlayDuration: js.UndefOr[String] = js.undefined
   /**
     * Transport delay in ms.
     *
     * Delay from sending to receiving the audio.
     */
-  val TransportDelay: js.UndefOr[String] = js.native
+  val TransportDelay: js.UndefOr[String] = js.undefined
 }
 
 object RemoteAudioStats {
   @scala.inline
-  def apply(): RemoteAudioStats = {
+  def apply(
+    CodecType: String = null,
+    End2EndDelay: String = null,
+    MuteState: String = null,
+    PacketLossRate: String = null,
+    RecvBitrate: String = null,
+    RecvLevel: String = null,
+    TotalFreezeTime: String = null,
+    TotalPlayDuration: String = null,
+    TransportDelay: String = null
+  ): RemoteAudioStats = {
     val __obj = js.Dynamic.literal()
+    if (CodecType != null) __obj.updateDynamic("CodecType")(CodecType.asInstanceOf[js.Any])
+    if (End2EndDelay != null) __obj.updateDynamic("End2EndDelay")(End2EndDelay.asInstanceOf[js.Any])
+    if (MuteState != null) __obj.updateDynamic("MuteState")(MuteState.asInstanceOf[js.Any])
+    if (PacketLossRate != null) __obj.updateDynamic("PacketLossRate")(PacketLossRate.asInstanceOf[js.Any])
+    if (RecvBitrate != null) __obj.updateDynamic("RecvBitrate")(RecvBitrate.asInstanceOf[js.Any])
+    if (RecvLevel != null) __obj.updateDynamic("RecvLevel")(RecvLevel.asInstanceOf[js.Any])
+    if (TotalFreezeTime != null) __obj.updateDynamic("TotalFreezeTime")(TotalFreezeTime.asInstanceOf[js.Any])
+    if (TotalPlayDuration != null) __obj.updateDynamic("TotalPlayDuration")(TotalPlayDuration.asInstanceOf[js.Any])
+    if (TransportDelay != null) __obj.updateDynamic("TransportDelay")(TransportDelay.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteAudioStats]
   }
-  @scala.inline
-  implicit class RemoteAudioStatsOps[Self <: RemoteAudioStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodecType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodecType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd2EndDelay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("End2EndDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd2EndDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("End2EndDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMuteState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MuteState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMuteState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MuteState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPacketLossRate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PacketLossRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPacketLossRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PacketLossRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecvBitrate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecvBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecvBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecvBitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecvLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecvLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecvLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecvLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalFreezeTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalFreezeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalFreezeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalFreezeTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalPlayDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalPlayDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalPlayDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalPlayDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransportDelay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransportDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransportDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransportDelay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

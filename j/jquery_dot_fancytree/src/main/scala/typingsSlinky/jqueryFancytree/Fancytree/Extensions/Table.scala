@@ -8,54 +8,33 @@ import scala.scalajs.js.annotation._
 /**
   * Define table-extension options
   */
-@js.native
 trait Table
   extends /* extension */ StringDictionary[js.Any] {
   /**
     * Render the checkboxes into the this column index (default: nodeColumnIdx)
     */
-  var checkboxColumnIdx: js.Any = js.native
+  var checkboxColumnIdx: js.Any
   /**
     * Indent every node level by 16px; default: 16
     */
-  var indentation: Double = js.native
+  var indentation: Double
   /**
     * Render node expander, icon, and title to this column (default: 0)
     */
-  var nodeColumnIdx: Double = js.native
+  var nodeColumnIdx: Double
 }
 
 object Table {
   @scala.inline
-  def apply(checkboxColumnIdx: js.Any, indentation: Double, nodeColumnIdx: Double): Table = {
+  def apply(
+    checkboxColumnIdx: js.Any,
+    indentation: Double,
+    nodeColumnIdx: Double,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null
+  ): Table = {
     val __obj = js.Dynamic.literal(checkboxColumnIdx = checkboxColumnIdx.asInstanceOf[js.Any], indentation = indentation.asInstanceOf[js.Any], nodeColumnIdx = nodeColumnIdx.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Table]
   }
-  @scala.inline
-  implicit class TableOps[Self <: Table] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckboxColumnIdx(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxColumnIdx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndentation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeColumnIdx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeColumnIdx")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

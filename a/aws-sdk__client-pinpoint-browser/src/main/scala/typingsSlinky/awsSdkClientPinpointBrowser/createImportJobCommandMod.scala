@@ -26,9 +26,16 @@ object createImportJobCommandMod extends js.Object {
           Blob
         ] {
     def this(input: CreateImportJobInput) = this()
+    /* CompleteClass */
+    override val input: CreateImportJobInput = js.native
     val middlewareStack: MiddlewareStack[CreateImportJobInput, CreateImportJobOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[CreateImportJobInput, CreateImportJobOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[CreateImportJobInput, CreateImportJobOutput] = js.native
   }

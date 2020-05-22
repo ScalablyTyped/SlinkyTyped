@@ -12,6 +12,21 @@ package object mod {
   /** A space-separated list of class names */
   type ClassNames = java.lang.String
   /**
+    * The output is a collection of node and edge elements OR single element.
+    */
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.cytoscape.mod.Collection[
+  typingsSlinky.cytoscape.mod.SingularElementReturnValue, 
+  typingsSlinky.cytoscape.mod.SingularElementArgument]
+    - typingsSlinky.cytoscape.mod.EdgeCollection
+    - typingsSlinky.cytoscape.mod.NodeCollection
+    - typingsSlinky.cytoscape.mod.SingularElementArgument
+  */
+  type CollectionArgument = typingsSlinky.cytoscape.mod._CollectionArgument | (typingsSlinky.cytoscape.mod.Collection[
+    typingsSlinky.cytoscape.mod.SingularElementReturnValue, 
+    typingsSlinky.cytoscape.mod.SingularElementArgument
+  ])
+  /**
     * Get a new collection, resulting from the collection without some specified elements.
     * http://js.cytoscape.org/#eles.difference
     * @param eles The elements that will not be in the resultant collection.

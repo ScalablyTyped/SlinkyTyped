@@ -16,14 +16,13 @@ import scala.scalajs.js.annotation._
   * quotes they are escaped by doubling them, as usual, for example `=[2]!'''Sheet name''.A1'` in a "soffice" service.
   * @since OOo 3.1
   */
-@js.native
 trait DDELinkInfo extends js.Object {
   /** A list of DDE items. Each item may contain its results from the last update. */
-  var Items: SafeArray[DDEItemInfo] = js.native
+  var Items: SafeArray[DDEItemInfo]
   /** The DDE service name. */
-  var Service: String = js.native
+  var Service: String
   /** The DDE topic. */
-  var Topic: String = js.native
+  var Topic: String
 }
 
 object DDELinkInfo {
@@ -32,31 +31,5 @@ object DDELinkInfo {
     val __obj = js.Dynamic.literal(Items = Items.asInstanceOf[js.Any], Service = Service.asInstanceOf[js.Any], Topic = Topic.asInstanceOf[js.Any])
     __obj.asInstanceOf[DDELinkInfo]
   }
-  @scala.inline
-  implicit class DDELinkInfoOps[Self <: DDELinkInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: SafeArray[DDEItemInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ucs2 extends js.Object {
-  def decode(string: String): js.Array[Double] = js.native
-  def encode(codePoints: js.Array[Double]): String = js.native
+  def decode(string: String): js.Array[Double]
+  def encode(codePoints: js.Array[Double]): String
 }
 
 @JSImport("punycode", "ucs2")

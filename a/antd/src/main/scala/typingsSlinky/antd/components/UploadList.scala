@@ -29,17 +29,19 @@ object UploadList {
     @scala.inline
     def downloadIcon(value: TagMod[Any]): this.type = set("downloadIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def iconRender(value: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): this.type = set("iconRender", js.Any.fromFunction2(value))
+    def iconRender(value: (/* file */ UploadFile[js.Any], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): this.type = set("iconRender", js.Any.fromFunction2(value))
     @scala.inline
-    def items(value: js.Array[UploadFile[_]]): this.type = set("items", value.asInstanceOf[js.Any])
+    def isImageUrl(value: /* file */ UploadFile[_] => Boolean): this.type = set("isImageUrl", js.Any.fromFunction1(value))
+    @scala.inline
+    def items(value: js.Array[UploadFile[js.Any]]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def listType(value: UploadListType): this.type = set("listType", value.asInstanceOf[js.Any])
     @scala.inline
-    def onDownload(value: /* file */ UploadFile[_] => Unit): this.type = set("onDownload", js.Any.fromFunction1(value))
+    def onDownload(value: /* file */ UploadFile[js.Any] => Unit): this.type = set("onDownload", js.Any.fromFunction1(value))
     @scala.inline
-    def onPreview(value: /* file */ UploadFile[_] => Unit): this.type = set("onPreview", js.Any.fromFunction1(value))
+    def onPreview(value: /* file */ UploadFile[js.Any] => Unit): this.type = set("onPreview", js.Any.fromFunction1(value))
     @scala.inline
-    def onRemove(value: /* file */ UploadFile[_] => Unit | Boolean): this.type = set("onRemove", js.Any.fromFunction1(value))
+    def onRemove(value: /* file */ UploadFile[js.Any] => Unit | Boolean): this.type = set("onRemove", js.Any.fromFunction1(value))
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
@@ -58,11 +60,11 @@ object UploadList {
     def showRemoveIcon(value: Boolean): this.type = set("showRemoveIcon", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: UploadListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: UploadListProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(locale: UploadLocale): Builder = {
     val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[UploadListProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[UploadListProps[js.Any]]))
   }
 }
 

@@ -14,29 +14,10 @@ trait GetObjectLockConfigurationOutput extends js.Object {
 
 object GetObjectLockConfigurationOutput {
   @scala.inline
-  def apply(): GetObjectLockConfigurationOutput = {
+  def apply(ObjectLockConfiguration: ObjectLockConfiguration = null): GetObjectLockConfigurationOutput = {
     val __obj = js.Dynamic.literal()
+    if (ObjectLockConfiguration != null) __obj.updateDynamic("ObjectLockConfiguration")(ObjectLockConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetObjectLockConfigurationOutput]
   }
-  @scala.inline
-  implicit class GetObjectLockConfigurationOutputOps[Self <: GetObjectLockConfigurationOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjectLockConfiguration(value: ObjectLockConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

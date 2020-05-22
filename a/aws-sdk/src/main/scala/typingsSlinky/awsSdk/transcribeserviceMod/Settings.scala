@@ -15,7 +15,7 @@ trait Settings extends js.Object {
     */
   var MaxAlternatives: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.MaxAlternatives] = js.native
   /**
-    * The maximum number of speakers to identify in the input audio. If there are more speakers in the audio than this number, multiple speakers will be identified as a single speaker. If you specify the MaxSpeakerLabels field, you must set the ShowSpeakerLabels field to true.
+    * The maximum number of speakers to identify in the input audio. If there are more speakers in the audio than this number, multiple speakers are identified as a single speaker. If you specify the MaxSpeakerLabels field, you must set the ShowSpeakerLabels field to true.
     */
   var MaxSpeakerLabels: js.UndefOr[MaxSpeakers] = js.native
   /**
@@ -42,113 +42,26 @@ trait Settings extends js.Object {
 
 object Settings {
   @scala.inline
-  def apply(): Settings = {
+  def apply(
+    ChannelIdentification: js.UndefOr[Boolean] = js.undefined,
+    MaxAlternatives: js.UndefOr[MaxAlternatives] = js.undefined,
+    MaxSpeakerLabels: js.UndefOr[MaxSpeakers] = js.undefined,
+    ShowAlternatives: js.UndefOr[Boolean] = js.undefined,
+    ShowSpeakerLabels: js.UndefOr[Boolean] = js.undefined,
+    VocabularyFilterMethod: VocabularyFilterMethod = null,
+    VocabularyFilterName: VocabularyFilterName = null,
+    VocabularyName: VocabularyName = null
+  ): Settings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ChannelIdentification)) __obj.updateDynamic("ChannelIdentification")(ChannelIdentification.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxAlternatives)) __obj.updateDynamic("MaxAlternatives")(MaxAlternatives.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxSpeakerLabels)) __obj.updateDynamic("MaxSpeakerLabels")(MaxSpeakerLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ShowAlternatives)) __obj.updateDynamic("ShowAlternatives")(ShowAlternatives.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ShowSpeakerLabels)) __obj.updateDynamic("ShowSpeakerLabels")(ShowSpeakerLabels.get.asInstanceOf[js.Any])
+    if (VocabularyFilterMethod != null) __obj.updateDynamic("VocabularyFilterMethod")(VocabularyFilterMethod.asInstanceOf[js.Any])
+    if (VocabularyFilterName != null) __obj.updateDynamic("VocabularyFilterName")(VocabularyFilterName.asInstanceOf[js.Any])
+    if (VocabularyName != null) __obj.updateDynamic("VocabularyName")(VocabularyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
-  @scala.inline
-  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelIdentification(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelIdentification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelIdentification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelIdentification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAlternatives(value: MaxAlternatives): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAlternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAlternatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAlternatives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSpeakerLabels(value: MaxSpeakers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSpeakerLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSpeakerLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSpeakerLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAlternatives(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowAlternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAlternatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowAlternatives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSpeakerLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowSpeakerLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSpeakerLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowSpeakerLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVocabularyFilterMethod(value: VocabularyFilterMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocabularyFilterMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVocabularyFilterName(value: VocabularyFilterName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocabularyFilterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVocabularyName(value: VocabularyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocabularyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

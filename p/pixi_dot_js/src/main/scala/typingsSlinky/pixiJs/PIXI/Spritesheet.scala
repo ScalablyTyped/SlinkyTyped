@@ -40,7 +40,7 @@ trait Spritesheet extends js.Object {
     */
   var animations: js.Any = js.native
   /**
-    * Reference to ths source texture
+    * Reference to ths source texture.
     * @type {PIXI.BaseTexture}
     */
   var baseTexture: BaseTexture = js.native

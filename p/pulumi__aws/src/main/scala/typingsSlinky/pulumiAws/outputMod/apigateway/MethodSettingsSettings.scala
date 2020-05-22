@@ -50,137 +50,30 @@ trait MethodSettingsSettings extends js.Object {
 
 object MethodSettingsSettings {
   @scala.inline
-  def apply(): MethodSettingsSettings = {
+  def apply(
+    cacheDataEncrypted: js.UndefOr[Boolean] = js.undefined,
+    cacheTtlInSeconds: js.UndefOr[Double] = js.undefined,
+    cachingEnabled: js.UndefOr[Boolean] = js.undefined,
+    dataTraceEnabled: js.UndefOr[Boolean] = js.undefined,
+    loggingLevel: String = null,
+    metricsEnabled: js.UndefOr[Boolean] = js.undefined,
+    requireAuthorizationForCacheControl: js.UndefOr[Boolean] = js.undefined,
+    throttlingBurstLimit: js.UndefOr[Double] = js.undefined,
+    throttlingRateLimit: js.UndefOr[Double] = js.undefined,
+    unauthorizedCacheControlHeaderStrategy: String = null
+  ): MethodSettingsSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cacheDataEncrypted)) __obj.updateDynamic("cacheDataEncrypted")(cacheDataEncrypted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheTtlInSeconds)) __obj.updateDynamic("cacheTtlInSeconds")(cacheTtlInSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cachingEnabled)) __obj.updateDynamic("cachingEnabled")(cachingEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataTraceEnabled)) __obj.updateDynamic("dataTraceEnabled")(dataTraceEnabled.get.asInstanceOf[js.Any])
+    if (loggingLevel != null) __obj.updateDynamic("loggingLevel")(loggingLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(metricsEnabled)) __obj.updateDynamic("metricsEnabled")(metricsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requireAuthorizationForCacheControl)) __obj.updateDynamic("requireAuthorizationForCacheControl")(requireAuthorizationForCacheControl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(throttlingBurstLimit)) __obj.updateDynamic("throttlingBurstLimit")(throttlingBurstLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(throttlingRateLimit)) __obj.updateDynamic("throttlingRateLimit")(throttlingRateLimit.get.asInstanceOf[js.Any])
+    if (unauthorizedCacheControlHeaderStrategy != null) __obj.updateDynamic("unauthorizedCacheControlHeaderStrategy")(unauthorizedCacheControlHeaderStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[MethodSettingsSettings]
   }
-  @scala.inline
-  implicit class MethodSettingsSettingsOps[Self <: MethodSettingsSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheDataEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDataEncrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheDataEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDataEncrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheTtlInSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheTtlInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheTtlInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheTtlInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCachingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCachingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataTraceEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTraceEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataTraceEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTraceEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireAuthorizationForCacheControl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireAuthorizationForCacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireAuthorizationForCacheControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireAuthorizationForCacheControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottlingBurstLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttlingBurstLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottlingBurstLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttlingBurstLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottlingRateLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttlingRateLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottlingRateLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttlingRateLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnauthorizedCacheControlHeaderStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unauthorizedCacheControlHeaderStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnauthorizedCacheControlHeaderStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unauthorizedCacheControlHeaderStrategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

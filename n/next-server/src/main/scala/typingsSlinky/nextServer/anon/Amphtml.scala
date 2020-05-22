@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Amphtml extends js.Object {
-  var amphtml: js.UndefOr[Boolean] = js.native
-  var dataOnly: js.UndefOr[Boolean] = js.native
-  var hasAmp: js.UndefOr[Boolean] = js.native
+  var amphtml: js.UndefOr[Boolean] = js.undefined
+  var dataOnly: js.UndefOr[Boolean] = js.undefined
+  var hasAmp: js.UndefOr[Boolean] = js.undefined
 }
 
 object Amphtml {
   @scala.inline
-  def apply(): Amphtml = {
+  def apply(
+    amphtml: js.UndefOr[Boolean] = js.undefined,
+    dataOnly: js.UndefOr[Boolean] = js.undefined,
+    hasAmp: js.UndefOr[Boolean] = js.undefined
+  ): Amphtml = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(amphtml)) __obj.updateDynamic("amphtml")(amphtml.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataOnly)) __obj.updateDynamic("dataOnly")(dataOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasAmp)) __obj.updateDynamic("hasAmp")(hasAmp.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Amphtml]
   }
-  @scala.inline
-  implicit class AmphtmlOps[Self <: Amphtml] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmphtml(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amphtml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmphtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amphtml")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasAmp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAmp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasAmp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAmp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

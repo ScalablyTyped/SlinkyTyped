@@ -21,41 +21,11 @@ trait SchemaGoogleAppsScriptTypeWebAppConfig extends js.Object {
 
 object SchemaGoogleAppsScriptTypeWebAppConfig {
   @scala.inline
-  def apply(): SchemaGoogleAppsScriptTypeWebAppConfig = {
+  def apply(access: String = null, executeAs: String = null): SchemaGoogleAppsScriptTypeWebAppConfig = {
     val __obj = js.Dynamic.literal()
+    if (access != null) __obj.updateDynamic("access")(access.asInstanceOf[js.Any])
+    if (executeAs != null) __obj.updateDynamic("executeAs")(executeAs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleAppsScriptTypeWebAppConfig]
   }
-  @scala.inline
-  implicit class SchemaGoogleAppsScriptTypeWebAppConfigOps[Self <: SchemaGoogleAppsScriptTypeWebAppConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccess(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecuteAs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executeAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecuteAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executeAs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

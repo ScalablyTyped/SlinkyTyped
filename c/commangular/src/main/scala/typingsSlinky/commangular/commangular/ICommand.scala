@@ -5,16 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * The command function/object
-	 * see http://commangular.org/docs/#commangular-namespace
-	 */
-@js.native
+  * The command function/object
+  * see http://commangular.org/docs/#commangular-namespace
+  */
 trait ICommand extends js.Object {
   /**
-  		 * This function is what gets called when the command executes.
-  		 * It can take parameters in as injected by angular
-  		 */
-  def execute(): js.Any = js.native
+    * This function is what gets called when the command executes.
+    * It can take parameters in as injected by angular
+    */
+  def execute(): js.Any
 }
 
 object ICommand {
@@ -23,19 +22,5 @@ object ICommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute))
     __obj.asInstanceOf[ICommand]
   }
-  @scala.inline
-  implicit class ICommandOps[Self <: ICommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

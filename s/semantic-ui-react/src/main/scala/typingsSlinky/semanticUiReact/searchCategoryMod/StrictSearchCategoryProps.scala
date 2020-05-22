@@ -9,18 +9,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StrictSearchCategoryProps extends js.Object {
   /** The item currently selected by keyboard shortcut. */
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /** An element type to render as (string or function). */
-  var as: js.UndefOr[js.Any] = js.native
+  var as: js.UndefOr[js.Any] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
   /** Additional classes. */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /** Shorthand for primary content. */
-  var content: js.UndefOr[SemanticShorthandContent] = js.native
+  var content: js.UndefOr[SemanticShorthandContent] = js.undefined
   /**
     * Renders the SearchCategory layout.
     *
@@ -30,153 +29,44 @@ trait StrictSearchCategoryProps extends js.Object {
     */
   var layoutRenderer: js.UndefOr[
     js.Function2[/* categoryContent */ ReactElement, /* resultsContent */ ReactElement, ReactElement]
-  ] = js.native
+  ] = js.undefined
   /** Display name. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Renders the category contents.
     *
     * @param {object} props - The SearchCategory props object.
     * @returns {*} - Renderable category contents.
     */
-  var renderer: js.UndefOr[js.Function1[/* props */ SearchCategoryProps, ReactElement]] = js.native
+  var renderer: js.UndefOr[js.Function1[/* props */ SearchCategoryProps, ReactElement]] = js.undefined
   /** Array of Search.Result props. */
-  var results: js.UndefOr[js.Array[ReactComponentClass[SearchResultProps]]] = js.native
+  var results: js.UndefOr[js.Array[ReactComponentClass[SearchResultProps]]] = js.undefined
 }
 
 object StrictSearchCategoryProps {
   @scala.inline
-  def apply(): StrictSearchCategoryProps = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    as: js.Any = null,
+    children: TagMod[Any] = null,
+    className: String = null,
+    content: SemanticShorthandContent = null,
+    layoutRenderer: (/* categoryContent */ ReactElement, /* resultsContent */ ReactElement) => ReactElement = null,
+    name: String = null,
+    renderer: /* props */ SearchCategoryProps => ReactElement = null,
+    results: js.Array[ReactComponentClass[SearchResultProps]] = null
+  ): StrictSearchCategoryProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (layoutRenderer != null) __obj.updateDynamic("layoutRenderer")(js.Any.fromFunction2(layoutRenderer))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (renderer != null) __obj.updateDynamic("renderer")(js.Any.fromFunction1(renderer))
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictSearchCategoryProps]
   }
-  @scala.inline
-  implicit class StrictSearchCategoryPropsOps[Self <: StrictSearchCategoryProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: SemanticShorthandContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayoutRenderer(value: (/* categoryContent */ ReactElement, /* resultsContent */ ReactElement) => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutRenderer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutLayoutRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: /* props */ SearchCategoryProps => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: js.Array[ReactComponentClass[SearchResultProps]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

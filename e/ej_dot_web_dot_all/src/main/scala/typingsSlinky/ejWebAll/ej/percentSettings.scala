@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait percentSettings extends js.Object {
-  var decimals: Double = js.native
-  var groupSizes: js.Array[Double] = js.native
-  var pattern: js.Array[String] = js.native
-  var symbol: String = js.native
+  var decimals: Double
+  var groupSizes: js.Array[Double]
+  var pattern: js.Array[String]
+  var symbol: String
 }
 
 object percentSettings {
@@ -18,37 +17,5 @@ object percentSettings {
     val __obj = js.Dynamic.literal(decimals = decimals.asInstanceOf[js.Any], groupSizes = groupSizes.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any])
     __obj.asInstanceOf[percentSettings]
   }
-  @scala.inline
-  implicit class percentSettingsOps[Self <: percentSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecimals(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupSizes(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

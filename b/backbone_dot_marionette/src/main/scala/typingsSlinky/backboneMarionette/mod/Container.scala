@@ -1,6 +1,7 @@
 package typingsSlinky.backboneMarionette.mod
 
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.underscore.mod.ListIterator
 import typingsSlinky.underscore.mod.MemoIterator
 import scala.scalajs.js
@@ -70,7 +71,7 @@ class Container[TView] () extends js.Object {
   /**
     * Find a view by model.
     */
-  def findByModel(model: Model): TView = js.native
+  def findByModel(model: Model[_, ModelSetOptions]): TView = js.native
   /**
     * Find a view by model cid.
     */

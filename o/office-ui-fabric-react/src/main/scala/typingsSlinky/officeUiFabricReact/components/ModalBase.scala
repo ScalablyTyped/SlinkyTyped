@@ -14,7 +14,7 @@ import typingsSlinky.officeUiFabricReact.modalTypesMod.IModalStyleProps
 import typingsSlinky.officeUiFabricReact.modalTypesMod.IModalStyles
 import typingsSlinky.officeUiFabricReact.overlayTypesMod.IOverlayProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -82,7 +82,7 @@ object ModalBase {
     @scala.inline
     def scrollableContentClassName(value: String): this.type = set("scrollableContentClassName", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IModalStyleProps => Partial[IModalStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IModalStyleProps => DeepPartial[IModalStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IModalStyleProps, IModalStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

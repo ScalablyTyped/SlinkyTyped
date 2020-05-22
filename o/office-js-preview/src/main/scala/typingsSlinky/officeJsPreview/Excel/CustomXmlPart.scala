@@ -22,14 +22,14 @@ trait CustomXmlPart extends ClientObject {
   var context_CustomXmlPart: RequestContext = js.native
   /**
     *
-    * The custom XML part's ID. Read-only.
+    * The custom XML part's ID.
     *
     * [Api set: ExcelApi 1.5]
     */
   val id: String = js.native
   /**
     *
-    * The custom XML part's namespace URI. Read-only.
+    * The custom XML part's namespace URI.
     *
     * [Api set: ExcelApi 1.5]
     */

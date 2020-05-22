@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ApplyResult extends js.Object {
-  var doc: js.Any = js.native
+  var doc: js.Any
 }
 
 object ApplyResult {
@@ -15,19 +14,5 @@ object ApplyResult {
     val __obj = js.Dynamic.literal(doc = doc.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplyResult]
   }
-  @scala.inline
-  implicit class ApplyResultOps[Self <: ApplyResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDoc(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

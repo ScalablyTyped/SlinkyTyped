@@ -38,101 +38,24 @@ trait DescribeFleetMetadataResponse extends js.Object {
 
 object DescribeFleetMetadataResponse {
   @scala.inline
-  def apply(): DescribeFleetMetadataResponse = {
+  def apply(
+    CompanyCode: CompanyCode = null,
+    CreatedTime: js.Date = null,
+    DisplayName: DisplayName = null,
+    FleetName: FleetName = null,
+    FleetStatus: FleetStatus = null,
+    LastUpdatedTime: js.Date = null,
+    OptimizeForEndUserLocation: js.UndefOr[Boolean] = js.undefined
+  ): DescribeFleetMetadataResponse = {
     val __obj = js.Dynamic.literal()
+    if (CompanyCode != null) __obj.updateDynamic("CompanyCode")(CompanyCode.asInstanceOf[js.Any])
+    if (CreatedTime != null) __obj.updateDynamic("CreatedTime")(CreatedTime.asInstanceOf[js.Any])
+    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
+    if (FleetName != null) __obj.updateDynamic("FleetName")(FleetName.asInstanceOf[js.Any])
+    if (FleetStatus != null) __obj.updateDynamic("FleetStatus")(FleetStatus.asInstanceOf[js.Any])
+    if (LastUpdatedTime != null) __obj.updateDynamic("LastUpdatedTime")(LastUpdatedTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(OptimizeForEndUserLocation)) __obj.updateDynamic("OptimizeForEndUserLocation")(OptimizeForEndUserLocation.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFleetMetadataResponse]
   }
-  @scala.inline
-  implicit class DescribeFleetMetadataResponseOps[Self <: DescribeFleetMetadataResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompanyCode(value: CompanyCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompanyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanyCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompanyCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: DisplayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFleetName(value: FleetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFleetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFleetStatus(value: FleetStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFleetStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptimizeForEndUserLocation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptimizeForEndUserLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimizeForEndUserLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptimizeForEndUserLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

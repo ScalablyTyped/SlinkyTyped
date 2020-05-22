@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Pose extends js.Object {
   /**
     * Altitude of the pose in meters above ground level (as defined by WGS84).
     * NaN indicates an unmeasured quantity.
     */
-  var altitude: js.UndefOr[Double] = js.native
+  var altitude: js.UndefOr[Double] = js.undefined
   /**
     * Compass heading, measured at the center of the photo in degrees clockwise
     * from North. Value must be >=0 and <360.
     * NaN indicates an unmeasured quantity.
     */
-  var heading: js.UndefOr[Double] = js.native
+  var heading: js.UndefOr[Double] = js.undefined
   /**
     * Latitude and longitude pair of the pose, as explained here:
     * https://cloud.google.com/datastore/docs/reference/rest/Shared.Types/LatLng
@@ -26,109 +25,42 @@ trait Pose extends js.Object {
     * provided and cannot be found in the exif header, the create photo process
     * will fail.
     */
-  var latLngPair: js.UndefOr[LatLng] = js.native
+  var latLngPair: js.UndefOr[LatLng] = js.undefined
   /** Level (the floor in a building) used to configure vertical navigation. */
-  var level: js.UndefOr[Level] = js.native
+  var level: js.UndefOr[Level] = js.undefined
   /**
     * Pitch, measured at the center of the photo in degrees. Value must be >=-90
     * and <= 90. A value of -90 means looking directly down, and a value of 90
     * means looking directly up.
     * NaN indicates an unmeasured quantity.
     */
-  var pitch: js.UndefOr[Double] = js.native
+  var pitch: js.UndefOr[Double] = js.undefined
   /**
     * Roll, measured in degrees. Value must be >= 0 and <360. A value of 0
     * means level with the horizon.
     * NaN indicates an unmeasured quantity.
     */
-  var roll: js.UndefOr[Double] = js.native
+  var roll: js.UndefOr[Double] = js.undefined
 }
 
 object Pose {
   @scala.inline
-  def apply(): Pose = {
+  def apply(
+    altitude: js.UndefOr[Double] = js.undefined,
+    heading: js.UndefOr[Double] = js.undefined,
+    latLngPair: LatLng = null,
+    level: Level = null,
+    pitch: js.UndefOr[Double] = js.undefined,
+    roll: js.UndefOr[Double] = js.undefined
+  ): Pose = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(altitude)) __obj.updateDynamic("altitude")(altitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(heading)) __obj.updateDynamic("heading")(heading.get.asInstanceOf[js.Any])
+    if (latLngPair != null) __obj.updateDynamic("latLngPair")(latLngPair.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(pitch)) __obj.updateDynamic("pitch")(pitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(roll)) __obj.updateDynamic("roll")(roll.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pose]
   }
-  @scala.inline
-  implicit class PoseOps[Self <: Pose] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeading(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatLngPair(value: LatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLngPair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatLngPair: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLngPair")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Level): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoll(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roll")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

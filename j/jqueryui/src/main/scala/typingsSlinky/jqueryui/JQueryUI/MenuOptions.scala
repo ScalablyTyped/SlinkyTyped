@@ -1,93 +1,44 @@
 package typingsSlinky.jqueryui.JQueryUI
 
+import typingsSlinky.jquery.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // Menu //////////////////////////////////////////////////
-@js.native
 trait MenuOptions extends MenuEvents {
-  var disabled: js.UndefOr[Boolean] = js.native
-  var icons: js.UndefOr[js.Any] = js.native
-  var menus: js.UndefOr[String] = js.native
-  var position: js.UndefOr[js.Any] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var icons: js.UndefOr[js.Any] = js.undefined
+  var menus: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[js.Any] = js.undefined
    // TODO
-  var role: js.UndefOr[String] = js.native
+  var role: js.UndefOr[String] = js.undefined
 }
 
 object MenuOptions {
   @scala.inline
-  def apply(): MenuOptions = {
+  def apply(
+    blur: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit = null,
+    create: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    focus: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit = null,
+    icons: js.Any = null,
+    menus: String = null,
+    position: js.Any = null,
+    role: String = null,
+    select: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit = null
+  ): MenuOptions = {
     val __obj = js.Dynamic.literal()
+    if (blur != null) __obj.updateDynamic("blur")(js.Any.fromFunction2(blur))
+    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (focus != null) __obj.updateDynamic("focus")(js.Any.fromFunction2(focus))
+    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
+    if (menus != null) __obj.updateDynamic("menus")(menus.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction2(select))
     __obj.asInstanceOf[MenuOptions]
   }
-  @scala.inline
-  implicit class MenuOptionsOps[Self <: MenuOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcons(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

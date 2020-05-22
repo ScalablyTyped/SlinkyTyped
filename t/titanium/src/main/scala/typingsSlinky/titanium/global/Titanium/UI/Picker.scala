@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * A control used to select one or more fixed values.
-		 */
+  * A control used to select one or more fixed values.
+  */
 @JSGlobal("Titanium.UI.Picker")
 @js.native
 class Picker ()

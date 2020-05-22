@@ -22,41 +22,10 @@ trait DeletePermissionRequest extends js.Object {
 
 object DeletePermissionRequest {
   @scala.inline
-  def apply(CertificateAuthorityArn: Arn, Principal: Principal): DeletePermissionRequest = {
+  def apply(CertificateAuthorityArn: Arn, Principal: Principal, SourceAccount: AccountId = null): DeletePermissionRequest = {
     val __obj = js.Dynamic.literal(CertificateAuthorityArn = CertificateAuthorityArn.asInstanceOf[js.Any], Principal = Principal.asInstanceOf[js.Any])
+    if (SourceAccount != null) __obj.updateDynamic("SourceAccount")(SourceAccount.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeletePermissionRequest]
   }
-  @scala.inline
-  implicit class DeletePermissionRequestOps[Self <: DeletePermissionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateAuthorityArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrincipal(value: Principal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Principal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceAccount(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceAccount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

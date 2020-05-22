@@ -35,53 +35,12 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeouts extends js.Obj
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeouts {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeouts = {
+  def apply(execution: String = null, idle: String = null, shutdown: String = null): SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeouts = {
     val __obj = js.Dynamic.literal()
+    if (execution != null) __obj.updateDynamic("execution")(execution.asInstanceOf[js.Any])
+    if (idle != null) __obj.updateDynamic("idle")(idle.asInstanceOf[js.Any])
+    if (shutdown != null) __obj.updateDynamic("shutdown")(shutdown.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeouts]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeoutsOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskTimeouts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecution(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShutdown(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shutdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShutdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shutdown")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

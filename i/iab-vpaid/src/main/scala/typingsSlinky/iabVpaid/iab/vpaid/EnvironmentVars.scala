@@ -9,17 +9,16 @@ import scala.scalajs.js.annotation._
 /**
   * JavaScript specific VPAID init config
   */
-@js.native
 trait EnvironmentVars extends js.Object {
   /**
     * A reference to the HTML element on the page in which the ad is to be rendered.
     * The ad unit essentially gets control of that element.
     */
-  var slot: HTMLElement = js.native
+  var slot: HTMLElement
   /** A reference to the video element on the page where the ad video is to be rendered */
-  var videoSlot: HTMLVideoElement = js.native
+  var videoSlot: HTMLVideoElement
   /** A boolean flag indicating whether the `videoSlot` is capable of autoplaying. */
-  var videoSlotCanAutoPlay: Boolean = js.native
+  var videoSlotCanAutoPlay: Boolean
 }
 
 object EnvironmentVars {
@@ -28,31 +27,5 @@ object EnvironmentVars {
     val __obj = js.Dynamic.literal(slot = slot.asInstanceOf[js.Any], videoSlot = videoSlot.asInstanceOf[js.Any], videoSlotCanAutoPlay = videoSlotCanAutoPlay.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentVars]
   }
-  @scala.inline
-  implicit class EnvironmentVarsOps[Self <: EnvironmentVars] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSlot(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideoSlot(value: HTMLVideoElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoSlot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideoSlotCanAutoPlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoSlotCanAutoPlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

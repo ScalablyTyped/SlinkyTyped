@@ -5,83 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a ReceivedMessage. */
-@js.native
 trait IReceivedMessage extends js.Object {
   /** ReceivedMessage ackId */
-  var ackId: js.UndefOr[String | Null] = js.native
+  var ackId: js.UndefOr[String | Null] = js.undefined
   /** ReceivedMessage deliveryAttempt */
-  var deliveryAttempt: js.UndefOr[Double | Null] = js.native
+  var deliveryAttempt: js.UndefOr[Double | Null] = js.undefined
   /** ReceivedMessage message */
-  var message: js.UndefOr[IPubsubMessage | Null] = js.native
+  var message: js.UndefOr[IPubsubMessage | Null] = js.undefined
 }
 
 object IReceivedMessage {
   @scala.inline
-  def apply(): IReceivedMessage = {
+  def apply(
+    ackId: js.UndefOr[Null | String] = js.undefined,
+    deliveryAttempt: js.UndefOr[Null | Double] = js.undefined,
+    message: js.UndefOr[Null | IPubsubMessage] = js.undefined
+  ): IReceivedMessage = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ackId)) __obj.updateDynamic("ackId")(ackId.asInstanceOf[js.Any])
+    if (!js.isUndefined(deliveryAttempt)) __obj.updateDynamic("deliveryAttempt")(deliveryAttempt.asInstanceOf[js.Any])
+    if (!js.isUndefined(message)) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
     __obj.asInstanceOf[IReceivedMessage]
   }
-  @scala.inline
-  implicit class IReceivedMessageOps[Self <: IReceivedMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAckId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAckId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAckIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackId")(null)
-        ret
-    }
-    @scala.inline
-    def withDeliveryAttempt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryAttempt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeliveryAttempt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryAttempt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeliveryAttemptNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryAttempt")(null)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: IPubsubMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(null)
-        ret
-    }
-  }
-  
 }
 

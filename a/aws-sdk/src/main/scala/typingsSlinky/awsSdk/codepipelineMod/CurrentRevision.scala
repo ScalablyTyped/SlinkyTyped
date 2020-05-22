@@ -26,53 +26,16 @@ trait CurrentRevision extends js.Object {
 
 object CurrentRevision {
   @scala.inline
-  def apply(changeIdentifier: RevisionChangeIdentifier, revision: Revision): CurrentRevision = {
+  def apply(
+    changeIdentifier: RevisionChangeIdentifier,
+    revision: Revision,
+    created: js.Date = null,
+    revisionSummary: RevisionSummary = null
+  ): CurrentRevision = {
     val __obj = js.Dynamic.literal(changeIdentifier = changeIdentifier.asInstanceOf[js.Any], revision = revision.asInstanceOf[js.Any])
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (revisionSummary != null) __obj.updateDynamic("revisionSummary")(revisionSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrentRevision]
   }
-  @scala.inline
-  implicit class CurrentRevisionOps[Self <: CurrentRevision] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangeIdentifier(value: RevisionChangeIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevision(value: Revision): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionSummary(value: RevisionSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionSummary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

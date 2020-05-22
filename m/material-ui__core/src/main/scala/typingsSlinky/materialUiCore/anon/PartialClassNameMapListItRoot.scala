@@ -12,29 +12,10 @@ trait PartialClassNameMapListItRoot extends js.Object {
 
 object PartialClassNameMapListItRoot {
   @scala.inline
-  def apply(): PartialClassNameMapListItRoot = {
+  def apply(root: String = null): PartialClassNameMapListItRoot = {
     val __obj = js.Dynamic.literal()
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapListItRoot]
   }
-  @scala.inline
-  implicit class PartialClassNameMapListItRootOps[Self <: PartialClassNameMapListItRoot] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

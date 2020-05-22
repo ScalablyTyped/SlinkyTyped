@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RouteSegment
   extends /* urlSegment */ StringDictionary[
       RouteSegment | (RequestHandler[ParamsDictionary, _, _, Query]) | (js.Array[RequestHandler[ParamsDictionary, _, _, Query]])
@@ -16,8 +15,13 @@ trait RouteSegment
 
 object RouteSegment {
   @scala.inline
-  def apply(): RouteSegment = {
+  def apply(
+    StringDictionary: /* urlSegment */ StringDictionary[
+      RouteSegment | (RequestHandler[ParamsDictionary, _, _, Query]) | (js.Array[RequestHandler[ParamsDictionary, _, _, Query]])
+    ] = null
+  ): RouteSegment = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[RouteSegment]
   }
 }

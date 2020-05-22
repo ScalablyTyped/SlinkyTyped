@@ -15,295 +15,75 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  area  :std.HTMLElement | std.SVGElement | std.Document,   autoScrollSpeed  :number, callback (selected : std.Array<std.HTMLElement | std.SVGElement>, event : std.MouseEvent | std.TouchEvent): void,   customStyles  :boolean,   hoverClass  :string,   multiSelectKeys  :std.ReadonlyArray<'ctrlKey' | 'shiftKey' | 'metaKey' | 'altKey'>,   multiSelectMode  :boolean, onDragMove (event : std.MouseEvent | std.TouchEvent): void, onDragStart (event : std.MouseEvent | std.TouchEvent): void, onDragStartBegin (event : std.MouseEvent | std.TouchEvent): void, onElementSelect (selected : std.HTMLElement | std.SVGElement): void, onElementUnselect (selected : std.HTMLElement | std.SVGElement): void,   selectableClass  :string,   selectables  :std.ArrayLike<std.HTMLElement | std.SVGElement> | std.HTMLElement | std.SVGElement,   selectedClass  :string,   selector  :std.HTMLElement,   selectorClass  :string,   zoom  :number}> */
-@js.native
 trait PartialareaHTMLElementSVG extends js.Object {
-  var area: js.UndefOr[HTMLElement | SVGElement | Document] = js.native
-  var autoScrollSpeed: js.UndefOr[Double] = js.native
+  var area: js.UndefOr[HTMLElement | SVGElement | Document] = js.undefined
+  var autoScrollSpeed: js.UndefOr[Double] = js.undefined
   var callback: js.UndefOr[
     js.Function2[
       /* selected */ js.Array[HTMLElement | SVGElement], 
       /* event */ MouseEvent | TouchEvent, 
       Unit
     ]
-  ] = js.native
-  var customStyles: js.UndefOr[Boolean] = js.native
-  var hoverClass: js.UndefOr[String] = js.native
-  var multiSelectKeys: js.UndefOr[js.Array[ctrlKey | shiftKey | metaKey | altKey]] = js.native
-  var multiSelectMode: js.UndefOr[Boolean] = js.native
-  var onDragMove: js.UndefOr[js.Function1[/* event */ MouseEvent | TouchEvent, Unit]] = js.native
-  var onDragStart: js.UndefOr[js.Function1[/* event */ MouseEvent | TouchEvent, Unit]] = js.native
-  var onDragStartBegin: js.UndefOr[js.Function1[/* event */ MouseEvent | TouchEvent, Unit]] = js.native
-  var onElementSelect: js.UndefOr[js.Function1[/* selected */ HTMLElement | SVGElement, Unit]] = js.native
-  var onElementUnselect: js.UndefOr[js.Function1[/* selected */ HTMLElement | SVGElement, Unit]] = js.native
-  var selectableClass: js.UndefOr[String] = js.native
-  var selectables: js.UndefOr[(ArrayLike[HTMLElement | SVGElement]) | HTMLElement | SVGElement] = js.native
-  var selectedClass: js.UndefOr[String] = js.native
-  var selector: js.UndefOr[HTMLElement] = js.native
-  var selectorClass: js.UndefOr[String] = js.native
-  var zoom: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var customStyles: js.UndefOr[Boolean] = js.undefined
+  var hoverClass: js.UndefOr[String] = js.undefined
+  var multiSelectKeys: js.UndefOr[js.Array[ctrlKey | shiftKey | metaKey | altKey]] = js.undefined
+  var multiSelectMode: js.UndefOr[Boolean] = js.undefined
+  var onDragMove: js.UndefOr[js.Function1[/* event */ MouseEvent | TouchEvent, Unit]] = js.undefined
+  var onDragStart: js.UndefOr[js.Function1[/* event */ MouseEvent | TouchEvent, Unit]] = js.undefined
+  var onDragStartBegin: js.UndefOr[js.Function1[/* event */ MouseEvent | TouchEvent, Unit]] = js.undefined
+  var onElementSelect: js.UndefOr[js.Function1[/* selected */ HTMLElement | SVGElement, Unit]] = js.undefined
+  var onElementUnselect: js.UndefOr[js.Function1[/* selected */ HTMLElement | SVGElement, Unit]] = js.undefined
+  var selectableClass: js.UndefOr[String] = js.undefined
+  var selectables: js.UndefOr[(ArrayLike[HTMLElement | SVGElement]) | HTMLElement | SVGElement] = js.undefined
+  var selectedClass: js.UndefOr[String] = js.undefined
+  var selector: js.UndefOr[HTMLElement] = js.undefined
+  var selectorClass: js.UndefOr[String] = js.undefined
+  var zoom: js.UndefOr[Double] = js.undefined
 }
 
 object PartialareaHTMLElementSVG {
   @scala.inline
-  def apply(): PartialareaHTMLElementSVG = {
+  def apply(
+    area: HTMLElement | SVGElement | Document = null,
+    autoScrollSpeed: js.UndefOr[Double] = js.undefined,
+    callback: (/* selected */ js.Array[HTMLElement | SVGElement], /* event */ MouseEvent | TouchEvent) => Unit = null,
+    customStyles: js.UndefOr[Boolean] = js.undefined,
+    hoverClass: String = null,
+    multiSelectKeys: js.Array[ctrlKey | shiftKey | metaKey | altKey] = null,
+    multiSelectMode: js.UndefOr[Boolean] = js.undefined,
+    onDragMove: /* event */ MouseEvent | TouchEvent => Unit = null,
+    onDragStart: /* event */ MouseEvent | TouchEvent => Unit = null,
+    onDragStartBegin: /* event */ MouseEvent | TouchEvent => Unit = null,
+    onElementSelect: /* selected */ HTMLElement | SVGElement => Unit = null,
+    onElementUnselect: /* selected */ HTMLElement | SVGElement => Unit = null,
+    selectableClass: String = null,
+    selectables: (ArrayLike[HTMLElement | SVGElement]) | HTMLElement | SVGElement = null,
+    selectedClass: String = null,
+    selector: HTMLElement = null,
+    selectorClass: String = null,
+    zoom: js.UndefOr[Double] = js.undefined
+  ): PartialareaHTMLElementSVG = {
     val __obj = js.Dynamic.literal()
+    if (area != null) __obj.updateDynamic("area")(area.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoScrollSpeed)) __obj.updateDynamic("autoScrollSpeed")(autoScrollSpeed.get.asInstanceOf[js.Any])
+    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction2(callback))
+    if (!js.isUndefined(customStyles)) __obj.updateDynamic("customStyles")(customStyles.get.asInstanceOf[js.Any])
+    if (hoverClass != null) __obj.updateDynamic("hoverClass")(hoverClass.asInstanceOf[js.Any])
+    if (multiSelectKeys != null) __obj.updateDynamic("multiSelectKeys")(multiSelectKeys.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiSelectMode)) __obj.updateDynamic("multiSelectMode")(multiSelectMode.get.asInstanceOf[js.Any])
+    if (onDragMove != null) __obj.updateDynamic("onDragMove")(js.Any.fromFunction1(onDragMove))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
+    if (onDragStartBegin != null) __obj.updateDynamic("onDragStartBegin")(js.Any.fromFunction1(onDragStartBegin))
+    if (onElementSelect != null) __obj.updateDynamic("onElementSelect")(js.Any.fromFunction1(onElementSelect))
+    if (onElementUnselect != null) __obj.updateDynamic("onElementUnselect")(js.Any.fromFunction1(onElementUnselect))
+    if (selectableClass != null) __obj.updateDynamic("selectableClass")(selectableClass.asInstanceOf[js.Any])
+    if (selectables != null) __obj.updateDynamic("selectables")(selectables.asInstanceOf[js.Any])
+    if (selectedClass != null) __obj.updateDynamic("selectedClass")(selectedClass.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (selectorClass != null) __obj.updateDynamic("selectorClass")(selectorClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialareaHTMLElementSVG]
   }
-  @scala.inline
-  implicit class PartialareaHTMLElementSVGOps[Self <: PartialareaHTMLElementSVG] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAreaDocument(value: Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAreaSVGElement(value: SVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAreaHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArea(value: HTMLElement | SVGElement | Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScrollSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScrollSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScrollSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScrollSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallback(
-      value: (/* selected */ js.Array[HTMLElement | SVGElement], /* event */ MouseEvent | TouchEvent) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomStyles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiSelectKeys(value: js.Array[ctrlKey | shiftKey | metaKey | altKey]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSelectKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiSelectKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSelectKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiSelectMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSelectMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiSelectMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSelectMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragMove(value: /* event */ MouseEvent | TouchEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragStart(value: /* event */ MouseEvent | TouchEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragStartBegin(value: /* event */ MouseEvent | TouchEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStartBegin")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragStartBegin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStartBegin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnElementSelect(value: /* selected */ HTMLElement | SVGElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onElementSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnElementSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onElementSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnElementUnselect(value: /* selected */ HTMLElement | SVGElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onElementUnselect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnElementUnselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onElementUnselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectableClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectableClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectablesSVGElement(value: SVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectablesHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectables(value: (ArrayLike[HTMLElement | SVGElement]) | HTMLElement | SVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectorClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectorClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectorClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectorClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

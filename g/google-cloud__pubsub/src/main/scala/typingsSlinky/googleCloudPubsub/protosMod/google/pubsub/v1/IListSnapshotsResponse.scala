@@ -5,63 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a ListSnapshotsResponse. */
-@js.native
 trait IListSnapshotsResponse extends js.Object {
   /** ListSnapshotsResponse nextPageToken */
-  var nextPageToken: js.UndefOr[String | Null] = js.native
+  var nextPageToken: js.UndefOr[String | Null] = js.undefined
   /** ListSnapshotsResponse snapshots */
-  var snapshots: js.UndefOr[js.Array[ISnapshot] | Null] = js.native
+  var snapshots: js.UndefOr[js.Array[ISnapshot] | Null] = js.undefined
 }
 
 object IListSnapshotsResponse {
   @scala.inline
-  def apply(): IListSnapshotsResponse = {
+  def apply(
+    nextPageToken: js.UndefOr[Null | String] = js.undefined,
+    snapshots: js.UndefOr[Null | js.Array[ISnapshot]] = js.undefined
+  ): IListSnapshotsResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(nextPageToken)) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(snapshots)) __obj.updateDynamic("snapshots")(snapshots.asInstanceOf[js.Any])
     __obj.asInstanceOf[IListSnapshotsResponse]
   }
-  @scala.inline
-  implicit class IListSnapshotsResponseOps[Self <: IListSnapshotsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageTokenNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(null)
-        ret
-    }
-    @scala.inline
-    def withSnapshots(value: js.Array[ISnapshot]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(null)
-        ret
-    }
-  }
-  
 }
 

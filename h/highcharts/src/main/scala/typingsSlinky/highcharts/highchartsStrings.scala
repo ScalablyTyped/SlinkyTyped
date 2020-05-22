@@ -49,10 +49,8 @@ import typingsSlinky.highcharts.mod.OptionsUnitValue
 import typingsSlinky.highcharts.mod.OptionsZoomKeyValue
 import typingsSlinky.highcharts.mod.OptionsZoomTypeValue
 import typingsSlinky.highcharts.mod.PaneBackgroundShapeValue
-import typingsSlinky.highcharts.mod.PathfinderTypeValue
 import typingsSlinky.highcharts.mod.RangeSelectorButtonTypeValue
 import typingsSlinky.highcharts.mod.SVGPathCommand
-import typingsSlinky.highcharts.mod.SeriesLinecapValue
 import typingsSlinky.highcharts.mod.SeriesOrganizationNodesLayoutValue
 import typingsSlinky.highcharts.mod.SeriesSunburstDataLabelsRotationValue
 import typingsSlinky.highcharts.mod.SymbolKeyValue
@@ -60,6 +58,8 @@ import typingsSlinky.highcharts.mod.TilemapShapeValue
 import typingsSlinky.highcharts.mod.TooltipShapeValue
 import typingsSlinky.highcharts.mod.VariablePieSizeByValue
 import typingsSlinky.highcharts.mod.VerticalAlignValue
+import typingsSlinky.highcharts.mod._PathfinderTypeValue
+import typingsSlinky.highcharts.mod._SeriesLinecapValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -294,7 +294,7 @@ object highchartsStrings {
   sealed trait bullet extends js.Object
   
   @js.native
-  sealed trait butt extends SeriesLinecapValue
+  sealed trait butt extends _SeriesLinecapValue
   
   @js.native
   sealed trait c_ extends SVGPathCommand
@@ -461,7 +461,7 @@ object highchartsStrings {
   sealed trait exportIcon extends js.Object
   
   @js.native
-  sealed trait fastAvoid extends PathfinderTypeValue
+  sealed trait fastAvoid extends _PathfinderTypeValue
   
   @js.native
   sealed trait flag extends FlagsShapeValue
@@ -846,7 +846,7 @@ object highchartsStrings {
   @js.native
   sealed trait round
     extends OptionsLinecapValue
-       with SeriesLinecapValue
+       with _SeriesLinecapValue
   
   @js.native
   sealed trait `row-resize` extends CursorValue
@@ -890,7 +890,7 @@ object highchartsStrings {
        with OptionsZoomKeyValue
   
   @js.native
-  sealed trait simpleConnect extends PathfinderTypeValue
+  sealed trait simpleConnect extends _PathfinderTypeValue
   
   @js.native
   sealed trait sliceAndDice extends OptionsLayoutAlgorithmValue
@@ -914,10 +914,10 @@ object highchartsStrings {
   sealed trait square
     extends OptionsHeaderShapeValue
        with OptionsLinecapValue
-       with SeriesLinecapValue
        with SymbolKeyValue
        with TilemapShapeValue
        with TooltipShapeValue
+       with _SeriesLinecapValue
   
   @js.native
   sealed trait `square-root` extends js.Object
@@ -935,7 +935,7 @@ object highchartsStrings {
   sealed trait stochastic extends js.Object
   
   @js.native
-  sealed trait straight extends PathfinderTypeValue
+  sealed trait straight extends _PathfinderTypeValue
   
   @js.native
   sealed trait stream extends OptionsStackingValue

@@ -18,35 +18,10 @@ trait AttachInstancesQuery extends js.Object {
 
 object AttachInstancesQuery {
   @scala.inline
-  def apply(AutoScalingGroupName: ResourceName): AttachInstancesQuery = {
+  def apply(AutoScalingGroupName: ResourceName, InstanceIds: InstanceIds = null): AttachInstancesQuery = {
     val __obj = js.Dynamic.literal(AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any])
+    if (InstanceIds != null) __obj.updateDynamic("InstanceIds")(InstanceIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachInstancesQuery]
   }
-  @scala.inline
-  implicit class AttachInstancesQueryOps[Self <: AttachInstancesQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingGroupName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceIds(value: InstanceIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

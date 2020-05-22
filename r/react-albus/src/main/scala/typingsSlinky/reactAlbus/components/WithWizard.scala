@@ -11,6 +11,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WithWizard {
+  object Children {
+    @JSImport("react-albus", "WithWizard")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: typingsSlinky.reactAlbus.anon.Children): Default[tag.type, WithWizard_] = new Default[tag.type, WithWizard_](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Children.type): Default[tag.type, WithWizard_] = new Default[tag.type, WithWizard_](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
   object Render {
     @JSImport("react-albus", "WithWizard")
     @js.native
@@ -26,15 +35,6 @@ object WithWizard {
     
     def withProps(p: typingsSlinky.reactAlbus.anon.Render): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     implicit def make(companion: Render.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Children {
-    @JSImport("react-albus", "WithWizard")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: typingsSlinky.reactAlbus.anon.Children): Default[tag.type, WithWizard_] = new Default[tag.type, WithWizard_](js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: Children.type): Default[tag.type, WithWizard_] = new Default[tag.type, WithWizard_](js.Array(this.component, js.Dictionary.empty))()
   }
   
 }

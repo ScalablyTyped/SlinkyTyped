@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EmailFormFields extends js.Object {
-  var EMAIL: String = js.native
+  var EMAIL: String
 }
 
 object EmailFormFields {
@@ -15,19 +14,5 @@ object EmailFormFields {
     val __obj = js.Dynamic.literal(EMAIL = EMAIL.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailFormFields]
   }
-  @scala.inline
-  implicit class EmailFormFieldsOps[Self <: EmailFormFields] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEMAIL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EMAIL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

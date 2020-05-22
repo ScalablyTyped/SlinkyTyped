@@ -23,14 +23,14 @@ trait ChartGridlines extends ClientObject {
   var context_ChartGridlines: RequestContext = js.native
   /**
     *
-    * Represents the formatting of chart gridlines. Read-only.
+    * Represents the formatting of chart gridlines.
     *
     * [Api set: ExcelApi 1.1]
     */
   val format: ChartGridlinesFormat = js.native
   /**
     *
-    * Boolean value representing if the axis gridlines are visible or not.
+    * Specifies if the axis gridlines are visible.
     *
     * [Api set: ExcelApi 1.1]
     */

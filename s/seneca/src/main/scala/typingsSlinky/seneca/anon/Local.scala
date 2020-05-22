@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Local extends js.Object {
-  var local: js.UndefOr[Boolean] = js.native
-  var prefix: js.UndefOr[String] = js.native
+  var local: js.UndefOr[Boolean] = js.undefined
+  var prefix: js.UndefOr[String] = js.undefined
 }
 
 object Local {
   @scala.inline
-  def apply(): Local = {
+  def apply(local: js.UndefOr[Boolean] = js.undefined, prefix: String = null): Local = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.get.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[Local]
   }
-  @scala.inline
-  implicit class LocalOps[Self <: Local] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

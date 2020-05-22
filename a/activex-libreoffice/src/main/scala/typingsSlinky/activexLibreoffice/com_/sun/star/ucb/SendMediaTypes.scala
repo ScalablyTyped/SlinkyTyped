@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** contains a list of Internet media types (like "text/plain" and "text/html"), that are related to a send protocol. */
-@js.native
 trait SendMediaTypes extends js.Object {
   /** the protocol to which the information is related (i.e. "NNTP", "SMTP", "VIM"). */
-  var ProtocolType: String = js.native
+  var ProtocolType: String
   /** a list of Internet media types */
-  var Value: SafeArray[String] = js.native
+  var Value: SafeArray[String]
 }
 
 object SendMediaTypes {
@@ -20,25 +19,5 @@ object SendMediaTypes {
     val __obj = js.Dynamic.literal(ProtocolType = ProtocolType.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendMediaTypes]
   }
-  @scala.inline
-  implicit class SendMediaTypesOps[Self <: SendMediaTypes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProtocolType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProtocolType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

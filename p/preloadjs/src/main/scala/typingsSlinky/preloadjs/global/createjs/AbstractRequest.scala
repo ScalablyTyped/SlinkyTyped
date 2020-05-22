@@ -9,5 +9,11 @@ import scala.scalajs.js.annotation._
 class AbstractRequest protected ()
   extends typingsSlinky.preloadjs.createjs.AbstractRequest {
   def this(item: typingsSlinky.preloadjs.createjs.LoadItem) = this()
+  /* CompleteClass */
+  override def cancel(): Unit = js.native
+  /* CompleteClass */
+  override def destroy(): Unit = js.native
+  /* CompleteClass */
+  override def load(): Unit = js.native
 }
 

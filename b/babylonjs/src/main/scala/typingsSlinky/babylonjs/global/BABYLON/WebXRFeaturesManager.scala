@@ -16,6 +16,11 @@ class WebXRFeaturesManager protected ()
     * @param _xrSessionManager an instance of WebXRSessionManager
     */
   def this(_xrSessionManager: typingsSlinky.babylonjs.BABYLON.WebXRSessionManager) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

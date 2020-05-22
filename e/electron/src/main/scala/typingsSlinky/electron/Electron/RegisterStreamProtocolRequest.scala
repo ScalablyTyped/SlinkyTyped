@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RegisterStreamProtocolRequest extends js.Object {
-  var headers: Headers = js.native
-  var method: String = js.native
-  var referrer: String = js.native
-  var uploadData: js.Array[UploadData] = js.native
-  var url: String = js.native
+  var headers: Headers
+  var method: String
+  var referrer: String
+  var uploadData: js.Array[UploadData]
+  var url: String
 }
 
 object RegisterStreamProtocolRequest {
@@ -19,43 +18,5 @@ object RegisterStreamProtocolRequest {
     val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], uploadData = uploadData.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterStreamProtocolRequest]
   }
-  @scala.inline
-  implicit class RegisterStreamProtocolRequestOps[Self <: RegisterStreamProtocolRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeaders(value: Headers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferrer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUploadData(value: js.Array[UploadData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

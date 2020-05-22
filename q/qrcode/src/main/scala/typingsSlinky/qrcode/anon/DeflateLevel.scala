@@ -4,57 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeflateLevel extends js.Object {
   /**
     * Compression level for deflate.
     * Default: 9
     */
-  var deflateLevel: js.UndefOr[Double] = js.native
+  var deflateLevel: js.UndefOr[Double] = js.undefined
   /**
     * Compression strategy for deflate.
     * Default: 3
     */
-  var deflateStrategy: js.UndefOr[Double] = js.native
+  var deflateStrategy: js.UndefOr[Double] = js.undefined
 }
 
 object DeflateLevel {
   @scala.inline
-  def apply(): DeflateLevel = {
+  def apply(
+    deflateLevel: js.UndefOr[Double] = js.undefined,
+    deflateStrategy: js.UndefOr[Double] = js.undefined
+  ): DeflateLevel = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deflateLevel)) __obj.updateDynamic("deflateLevel")(deflateLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deflateStrategy)) __obj.updateDynamic("deflateStrategy")(deflateStrategy.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeflateLevel]
   }
-  @scala.inline
-  implicit class DeflateLevelOps[Self <: DeflateLevel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeflateLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeflateLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeflateStrategy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeflateStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateStrategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

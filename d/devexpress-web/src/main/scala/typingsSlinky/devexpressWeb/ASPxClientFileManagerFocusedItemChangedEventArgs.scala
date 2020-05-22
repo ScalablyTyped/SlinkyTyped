@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientFileManager.FocusedItemChanged event.
   */
-@js.native
 trait ASPxClientFileManagerFocusedItemChangedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the full name of the item currently being processed.
     */
-  var fullName: String = js.native
+  var fullName: String
   /**
     * Gets the file manager item object related to the event.
     */
-  var item: ASPxClientFileManagerItem = js.native
+  var item: ASPxClientFileManagerItem
   /**
     * Gets the name of the focused item.
     */
-  var name: String = js.native
+  var name: String
 }
 
 object ASPxClientFileManagerFocusedItemChangedEventArgs {
@@ -29,31 +28,5 @@ object ASPxClientFileManagerFocusedItemChangedEventArgs {
     val __obj = js.Dynamic.literal(fullName = fullName.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientFileManagerFocusedItemChangedEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientFileManagerFocusedItemChangedEventArgsOps[Self <: ASPxClientFileManagerFocusedItemChangedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: ASPxClientFileManagerItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

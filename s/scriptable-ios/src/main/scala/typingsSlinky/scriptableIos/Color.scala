@@ -11,33 +11,32 @@ import scala.scalajs.js.annotation._
   * Examples of valid hex values: #ff0000, #00ff0080 #00f and #ff. The hashtag is optional.
   * @see https://docs.scriptable.app/color/#-new-color
   */
-@js.native
 trait Color extends js.Object {
   /**
     * _Alpha of the color._
     * @see https://docs.scriptable.app/color/#alpha
     */
-  var alpha: Double = js.native
+  var alpha: Double
   /**
     * _Amount of blue in the color._
     * @see https://docs.scriptable.app/color/#blue
     */
-  var blue: Double = js.native
+  var blue: Double
   /**
     * _Amount of green in the color._
     * @see https://docs.scriptable.app/color/#green
     */
-  var green: Double = js.native
+  var green: Double
   /**
     * _HEX representation._
     * @see https://docs.scriptable.app/color/#hex
     */
-  var hex: String = js.native
+  var hex: String
   /**
     * _Amount of red in the color._
     * @see https://docs.scriptable.app/color/#red
     */
-  var red: Double = js.native
+  var red: Double
 }
 
 object Color {
@@ -46,43 +45,5 @@ object Color {
     val __obj = js.Dynamic.literal(alpha = alpha.asInstanceOf[js.Any], blue = blue.asInstanceOf[js.Any], green = green.asInstanceOf[js.Any], hex = hex.asInstanceOf[js.Any], red = red.asInstanceOf[js.Any])
     __obj.asInstanceOf[Color]
   }
-  @scala.inline
-  implicit class ColorOps[Self <: Color] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGreen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("green")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("red")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

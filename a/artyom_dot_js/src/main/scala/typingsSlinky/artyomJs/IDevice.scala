@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDevice extends js.Object {
-  var isChrome: js.UndefOr[Boolean] = js.native
-  var isMobile: js.UndefOr[Boolean] = js.native
+  var isChrome: js.UndefOr[Boolean] = js.undefined
+  var isMobile: js.UndefOr[Boolean] = js.undefined
 }
 
 object IDevice {
   @scala.inline
-  def apply(): IDevice = {
+  def apply(isChrome: js.UndefOr[Boolean] = js.undefined, isMobile: js.UndefOr[Boolean] = js.undefined): IDevice = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isChrome)) __obj.updateDynamic("isChrome")(isChrome.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isMobile)) __obj.updateDynamic("isMobile")(isMobile.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDevice]
   }
-  @scala.inline
-  implicit class IDeviceOps[Self <: IDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsChrome(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isChrome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsChrome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isChrome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMobile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMobile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Points extends js.Object {
   /**
     * A list of points, which defines the shape, like `[[22,
@@ -13,7 +12,7 @@ trait Points extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_polyline.shape.points
     */
-  var points: js.UndefOr[js.Array[_]] = js.native
+  var points: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * Whether smooth the line.
     *
@@ -28,7 +27,7 @@ trait Points extends js.Object {
     * "undefined"
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_polyline.shape.smooth
     */
-  var smooth: js.UndefOr[Double | String] = js.native
+  var smooth: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether prevent the smooth process cause the line
     * out of the bounding box.
@@ -38,58 +37,21 @@ trait Points extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_polyline.shape.smoothConstraint
     */
-  var smoothConstraint: js.UndefOr[Boolean] = js.native
+  var smoothConstraint: js.UndefOr[Boolean] = js.undefined
 }
 
 object Points {
   @scala.inline
-  def apply(): Points = {
+  def apply(
+    points: js.Array[_] = null,
+    smooth: Double | String = null,
+    smoothConstraint: js.UndefOr[Boolean] = js.undefined
+  ): Points = {
     val __obj = js.Dynamic.literal()
+    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
+    if (smooth != null) __obj.updateDynamic("smooth")(smooth.asInstanceOf[js.Any])
+    if (!js.isUndefined(smoothConstraint)) __obj.updateDynamic("smoothConstraint")(smoothConstraint.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Points]
   }
-  @scala.inline
-  implicit class PointsOps[Self <: Points] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPoints(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmooth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmooth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmoothConstraint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smoothConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmoothConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smoothConstraint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait UnsuccessfulInstanceCreditSpecificationItem extends js.Object {
 
 object UnsuccessfulInstanceCreditSpecificationItem {
   @scala.inline
-  def apply(): UnsuccessfulInstanceCreditSpecificationItem = {
+  def apply(Error: UnsuccessfulInstanceCreditSpecificationItemError = null, InstanceId: String = null): UnsuccessfulInstanceCreditSpecificationItem = {
     val __obj = js.Dynamic.literal()
+    if (Error != null) __obj.updateDynamic("Error")(Error.asInstanceOf[js.Any])
+    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnsuccessfulInstanceCreditSpecificationItem]
   }
-  @scala.inline
-  implicit class UnsuccessfulInstanceCreditSpecificationItemOps[Self <: UnsuccessfulInstanceCreditSpecificationItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: UnsuccessfulInstanceCreditSpecificationItemError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

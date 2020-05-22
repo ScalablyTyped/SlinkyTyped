@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchDeveloperMetadataRequest extends js.Object {
-  var dataFilters: js.UndefOr[js.Array[DataFilter]] = js.native
+  var dataFilters: js.UndefOr[js.Array[DataFilter]] = js.undefined
 }
 
 object SearchDeveloperMetadataRequest {
   @scala.inline
-  def apply(): SearchDeveloperMetadataRequest = {
+  def apply(dataFilters: js.Array[DataFilter] = null): SearchDeveloperMetadataRequest = {
     val __obj = js.Dynamic.literal()
+    if (dataFilters != null) __obj.updateDynamic("dataFilters")(dataFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchDeveloperMetadataRequest]
   }
-  @scala.inline
-  implicit class SearchDeveloperMetadataRequestOps[Self <: SearchDeveloperMetadataRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataFilters(value: js.Array[DataFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFilters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

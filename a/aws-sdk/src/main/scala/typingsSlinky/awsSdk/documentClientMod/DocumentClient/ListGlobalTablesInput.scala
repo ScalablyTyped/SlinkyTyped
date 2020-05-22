@@ -22,53 +22,16 @@ trait ListGlobalTablesInput extends js.Object {
 
 object ListGlobalTablesInput {
   @scala.inline
-  def apply(): ListGlobalTablesInput = {
+  def apply(
+    ExclusiveStartGlobalTableName: TableName = null,
+    Limit: js.UndefOr[PositiveIntegerObject] = js.undefined,
+    RegionName: RegionName = null
+  ): ListGlobalTablesInput = {
     val __obj = js.Dynamic.literal()
+    if (ExclusiveStartGlobalTableName != null) __obj.updateDynamic("ExclusiveStartGlobalTableName")(ExclusiveStartGlobalTableName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (RegionName != null) __obj.updateDynamic("RegionName")(RegionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListGlobalTablesInput]
   }
-  @scala.inline
-  implicit class ListGlobalTablesInputOps[Self <: ListGlobalTablesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExclusiveStartGlobalTableName(value: TableName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartGlobalTableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusiveStartGlobalTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartGlobalTableName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: PositiveIntegerObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegionName(value: RegionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

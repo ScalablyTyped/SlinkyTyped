@@ -36,37 +36,5 @@ object RdsDbInstanceArgs {
     val __obj = js.Dynamic.literal(dbPassword = dbPassword.asInstanceOf[js.Any], dbUser = dbUser.asInstanceOf[js.Any], rdsDbInstanceArn = rdsDbInstanceArn.asInstanceOf[js.Any], stackId = stackId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RdsDbInstanceArgs]
   }
-  @scala.inline
-  implicit class RdsDbInstanceArgsOps[Self <: RdsDbInstanceArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDbPassword(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dbPassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDbUser(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dbUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRdsDbInstanceArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rdsDbInstanceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStackId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

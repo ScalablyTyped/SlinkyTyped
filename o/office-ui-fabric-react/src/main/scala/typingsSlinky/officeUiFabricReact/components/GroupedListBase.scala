@@ -15,7 +15,7 @@ import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListStylePr
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListStyles
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -68,7 +68,7 @@ object GroupedListBase {
     @scala.inline
     def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IGroupedListStyleProps => Partial[IGroupedListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IGroupedListStyleProps => DeepPartial[IGroupedListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IGroupedListStyleProps, IGroupedListStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

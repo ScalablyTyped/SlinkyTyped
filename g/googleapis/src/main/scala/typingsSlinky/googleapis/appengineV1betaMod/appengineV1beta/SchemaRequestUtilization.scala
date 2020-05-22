@@ -22,41 +22,14 @@ trait SchemaRequestUtilization extends js.Object {
 
 object SchemaRequestUtilization {
   @scala.inline
-  def apply(): SchemaRequestUtilization = {
+  def apply(
+    targetConcurrentRequests: js.UndefOr[Double] = js.undefined,
+    targetRequestCountPerSecond: js.UndefOr[Double] = js.undefined
+  ): SchemaRequestUtilization = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(targetConcurrentRequests)) __obj.updateDynamic("targetConcurrentRequests")(targetConcurrentRequests.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetRequestCountPerSecond)) __obj.updateDynamic("targetRequestCountPerSecond")(targetRequestCountPerSecond.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRequestUtilization]
   }
-  @scala.inline
-  implicit class SchemaRequestUtilizationOps[Self <: SchemaRequestUtilization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetConcurrentRequests(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetConcurrentRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetConcurrentRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetConcurrentRequests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetRequestCountPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRequestCountPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetRequestCountPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRequestCountPerSecond")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

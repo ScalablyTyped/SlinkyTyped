@@ -34,89 +34,22 @@ trait RelationalDatabaseBlueprint extends js.Object {
 
 object RelationalDatabaseBlueprint {
   @scala.inline
-  def apply(): RelationalDatabaseBlueprint = {
+  def apply(
+    blueprintId: String = null,
+    engine: RelationalDatabaseEngine = null,
+    engineDescription: String = null,
+    engineVersion: String = null,
+    engineVersionDescription: String = null,
+    isEngineDefault: js.UndefOr[Boolean] = js.undefined
+  ): RelationalDatabaseBlueprint = {
     val __obj = js.Dynamic.literal()
+    if (blueprintId != null) __obj.updateDynamic("blueprintId")(blueprintId.asInstanceOf[js.Any])
+    if (engine != null) __obj.updateDynamic("engine")(engine.asInstanceOf[js.Any])
+    if (engineDescription != null) __obj.updateDynamic("engineDescription")(engineDescription.asInstanceOf[js.Any])
+    if (engineVersion != null) __obj.updateDynamic("engineVersion")(engineVersion.asInstanceOf[js.Any])
+    if (engineVersionDescription != null) __obj.updateDynamic("engineVersionDescription")(engineVersionDescription.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEngineDefault)) __obj.updateDynamic("isEngineDefault")(isEngineDefault.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelationalDatabaseBlueprint]
   }
-  @scala.inline
-  implicit class RelationalDatabaseBlueprintOps[Self <: RelationalDatabaseBlueprint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlueprintId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blueprintId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlueprintId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blueprintId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngine(value: RelationalDatabaseEngine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineVersionDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineVersionDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineVersionDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineVersionDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEngineDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEngineDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEngineDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEngineDefault")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

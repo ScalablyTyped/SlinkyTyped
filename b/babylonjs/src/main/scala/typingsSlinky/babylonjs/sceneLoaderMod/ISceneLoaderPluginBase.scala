@@ -9,29 +9,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISceneLoaderPluginBase extends js.Object {
   /**
     * The callback that returns true if the data can be directly loaded.
     * @param data string containing the file data
     * @returns if the data can be loaded directly
     */
-  var canDirectLoad: js.UndefOr[js.Function1[/* data */ String, Boolean]] = js.native
+  var canDirectLoad: js.UndefOr[js.Function1[/* data */ String, Boolean]] = js.undefined
   /**
     * The callback that returns the data to pass to the plugin if the data can be directly loaded.
     * @param scene scene loading this data
     * @param data string containing the data
     * @returns data to pass to the plugin
     */
-  var directLoad: js.UndefOr[js.Function2[/* scene */ Scene, /* data */ String, _]] = js.native
+  var directLoad: js.UndefOr[js.Function2[/* scene */ Scene, /* data */ String, _]] = js.undefined
   /**
     * The file extensions supported by this plugin.
     */
-  var extensions: String | ISceneLoaderPluginExtensions = js.native
+  var extensions: String | ISceneLoaderPluginExtensions
   /**
     * The friendly name of this plugin.
     */
-  var name: String = js.native
+  var name: String
   /**
     * The callback called when loading from a file object.
     * @param scene scene loading this file
@@ -52,7 +51,7 @@ trait ISceneLoaderPluginBase extends js.Object {
       /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]], 
       IFileRequest
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * The callback called when loading from a url.
     * @param scene scene loading this url
@@ -73,105 +72,34 @@ trait ISceneLoaderPluginBase extends js.Object {
       /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]], 
       IFileRequest
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * The callback that allows custom handling of the root url based on the response url.
     * @param rootUrl the original root url
     * @param responseURL the response url if available
     * @returns the new root url
     */
-  var rewriteRootURL: js.UndefOr[js.Function2[/* rootUrl */ String, /* responseURL */ js.UndefOr[String], String]] = js.native
+  var rewriteRootURL: js.UndefOr[js.Function2[/* rootUrl */ String, /* responseURL */ js.UndefOr[String], String]] = js.undefined
 }
 
 object ISceneLoaderPluginBase {
   @scala.inline
-  def apply(extensions: String | ISceneLoaderPluginExtensions, name: String): ISceneLoaderPluginBase = {
+  def apply(
+    extensions: String | ISceneLoaderPluginExtensions,
+    name: String,
+    canDirectLoad: /* data */ String => Boolean = null,
+    directLoad: (/* scene */ Scene, /* data */ String) => _ = null,
+    readFile: (/* scene */ Scene, /* file */ File, /* onSuccess */ js.Function1[/* data */ js.Any, Unit], /* onProgress */ js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]], /* useArrayBuffer */ js.UndefOr[Boolean], /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]]) => IFileRequest = null,
+    requestFile: (/* scene */ Scene, /* url */ String, /* onSuccess */ js.Function2[/* data */ js.Any, /* request */ js.UndefOr[WebRequest], Unit], /* onProgress */ js.UndefOr[js.Function1[/* ev */ ProgressEvent, Unit]], /* useArrayBuffer */ js.UndefOr[Boolean], /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]]) => IFileRequest = null,
+    rewriteRootURL: (/* rootUrl */ String, /* responseURL */ js.UndefOr[String]) => String = null
+  ): ISceneLoaderPluginBase = {
     val __obj = js.Dynamic.literal(extensions = extensions.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (canDirectLoad != null) __obj.updateDynamic("canDirectLoad")(js.Any.fromFunction1(canDirectLoad))
+    if (directLoad != null) __obj.updateDynamic("directLoad")(js.Any.fromFunction2(directLoad))
+    if (readFile != null) __obj.updateDynamic("readFile")(js.Any.fromFunction6(readFile))
+    if (requestFile != null) __obj.updateDynamic("requestFile")(js.Any.fromFunction6(requestFile))
+    if (rewriteRootURL != null) __obj.updateDynamic("rewriteRootURL")(js.Any.fromFunction2(rewriteRootURL))
     __obj.asInstanceOf[ISceneLoaderPluginBase]
   }
-  @scala.inline
-  implicit class ISceneLoaderPluginBaseOps[Self <: ISceneLoaderPluginBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtensions(value: String | ISceneLoaderPluginExtensions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanDirectLoad(value: /* data */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDirectLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCanDirectLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDirectLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectLoad(value: (/* scene */ Scene, /* data */ String) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directLoad")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDirectLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadFile(
-      value: (/* scene */ Scene, /* file */ File, /* onSuccess */ js.Function1[/* data */ js.Any, Unit], /* onProgress */ js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]], /* useArrayBuffer */ js.UndefOr[Boolean], /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]]) => IFileRequest
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readFile")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withoutReadFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestFile(
-      value: (/* scene */ Scene, /* url */ String, /* onSuccess */ js.Function2[/* data */ js.Any, /* request */ js.UndefOr[WebRequest], Unit], /* onProgress */ js.UndefOr[js.Function1[/* ev */ ProgressEvent, Unit]], /* useArrayBuffer */ js.UndefOr[Boolean], /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]]) => IFileRequest
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFile")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withoutRequestFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRewriteRootURL(value: (/* rootUrl */ String, /* responseURL */ js.UndefOr[String]) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewriteRootURL")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRewriteRootURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewriteRootURL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SiteVideoSettings extends js.Object {
-  var companionSettings: js.UndefOr[SiteCompanionSetting] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var orientation: js.UndefOr[String] = js.native
-  var skippableSettings: js.UndefOr[SiteSkippableSetting] = js.native
-  var transcodeSettings: js.UndefOr[SiteTranscodeSetting] = js.native
+  var companionSettings: js.UndefOr[SiteCompanionSetting] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var orientation: js.UndefOr[String] = js.undefined
+  var skippableSettings: js.UndefOr[SiteSkippableSetting] = js.undefined
+  var transcodeSettings: js.UndefOr[SiteTranscodeSetting] = js.undefined
 }
 
 object SiteVideoSettings {
   @scala.inline
-  def apply(): SiteVideoSettings = {
+  def apply(
+    companionSettings: SiteCompanionSetting = null,
+    kind: String = null,
+    orientation: String = null,
+    skippableSettings: SiteSkippableSetting = null,
+    transcodeSettings: SiteTranscodeSetting = null
+  ): SiteVideoSettings = {
     val __obj = js.Dynamic.literal()
+    if (companionSettings != null) __obj.updateDynamic("companionSettings")(companionSettings.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (skippableSettings != null) __obj.updateDynamic("skippableSettings")(skippableSettings.asInstanceOf[js.Any])
+    if (transcodeSettings != null) __obj.updateDynamic("transcodeSettings")(transcodeSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SiteVideoSettings]
   }
-  @scala.inline
-  implicit class SiteVideoSettingsOps[Self <: SiteVideoSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompanionSettings(value: SiteCompanionSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companionSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanionSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companionSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippableSettings(value: SiteSkippableSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippableSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippableSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippableSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranscodeSettings(value: SiteTranscodeSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transcodeSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranscodeSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transcodeSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

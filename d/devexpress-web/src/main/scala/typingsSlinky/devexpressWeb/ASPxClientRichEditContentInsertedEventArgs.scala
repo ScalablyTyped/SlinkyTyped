@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientRichEdit.ContentInserted event.
   */
-@js.native
 trait ASPxClientRichEditContentInsertedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the text buffer interval related to the inserted content.
     */
-  var interval: Interval = js.native
+  var interval: Interval
   /**
     * Gets the active sub-document's identifier.
     */
-  var subDocumentId: Double = js.native
+  var subDocumentId: Double
 }
 
 object ASPxClientRichEditContentInsertedEventArgs {
@@ -25,25 +24,5 @@ object ASPxClientRichEditContentInsertedEventArgs {
     val __obj = js.Dynamic.literal(interval = interval.asInstanceOf[js.Any], subDocumentId = subDocumentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientRichEditContentInsertedEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientRichEditContentInsertedEventArgsOps[Self <: ASPxClientRichEditContentInsertedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInterval(value: Interval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubDocumentId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subDocumentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

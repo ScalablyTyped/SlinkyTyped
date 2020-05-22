@@ -8,6 +8,16 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends PBES2Params {
   def this(params: js.Any) = this()
+  /* CompleteClass */
+  override var encryptionScheme: typingsSlinky.pkijs.algorithmIdentifierMod.default = js.native
+  /* CompleteClass */
+  override var keyDerivationFunc: typingsSlinky.pkijs.algorithmIdentifierMod.default = js.native
+  /* CompleteClass */
+  override def fromSchema(schema: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+  /* CompleteClass */
+  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

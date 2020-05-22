@@ -6,157 +6,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IExecutableSchemaDefinition[TContext] extends js.Object {
-  var allowUndefinedInResolve: js.UndefOr[Boolean] = js.native
-  var connectors: js.UndefOr[IConnectors[TContext]] = js.native
-  var directiveResolvers: js.UndefOr[IDirectiveResolvers[_, TContext]] = js.native
-  var inheritResolversFromInterfaces: js.UndefOr[Boolean] = js.native
-  var logger: js.UndefOr[ILogger] = js.native
-  var parseOptions: js.UndefOr[GraphQLParseOptions] = js.native
-  var resolverValidationOptions: js.UndefOr[IResolverValidationOptions] = js.native
-  var resolvers: js.UndefOr[(IResolvers[_, TContext]) | (js.Array[IResolvers[_, TContext]])] = js.native
-  var schemaDirectives: js.UndefOr[StringDictionary[TypeofSchemaDirectiveVisi]] = js.native
-  var typeDefs: ITypeDefinitions = js.native
+  var allowUndefinedInResolve: js.UndefOr[Boolean] = js.undefined
+  var connectors: js.UndefOr[IConnectors[TContext]] = js.undefined
+  var directiveResolvers: js.UndefOr[IDirectiveResolvers[_, TContext]] = js.undefined
+  var inheritResolversFromInterfaces: js.UndefOr[Boolean] = js.undefined
+  var logger: js.UndefOr[ILogger] = js.undefined
+  var parseOptions: js.UndefOr[GraphQLParseOptions] = js.undefined
+  var resolverValidationOptions: js.UndefOr[IResolverValidationOptions] = js.undefined
+  var resolvers: js.UndefOr[(IResolvers[_, TContext]) | (js.Array[IResolvers[_, TContext]])] = js.undefined
+  var schemaDirectives: js.UndefOr[StringDictionary[TypeofSchemaDirectiveVisi]] = js.undefined
+  var typeDefs: ITypeDefinitions
 }
 
 object IExecutableSchemaDefinition {
   @scala.inline
-  def apply[TContext](typeDefs: ITypeDefinitions): IExecutableSchemaDefinition[TContext] = {
+  def apply[TContext](
+    typeDefs: ITypeDefinitions,
+    allowUndefinedInResolve: js.UndefOr[Boolean] = js.undefined,
+    connectors: IConnectors[TContext] = null,
+    directiveResolvers: IDirectiveResolvers[_, TContext] = null,
+    inheritResolversFromInterfaces: js.UndefOr[Boolean] = js.undefined,
+    logger: ILogger = null,
+    parseOptions: GraphQLParseOptions = null,
+    resolverValidationOptions: IResolverValidationOptions = null,
+    resolvers: (IResolvers[_, TContext]) | (js.Array[IResolvers[_, TContext]]) = null,
+    schemaDirectives: StringDictionary[TypeofSchemaDirectiveVisi] = null
+  ): IExecutableSchemaDefinition[TContext] = {
     val __obj = js.Dynamic.literal(typeDefs = typeDefs.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowUndefinedInResolve)) __obj.updateDynamic("allowUndefinedInResolve")(allowUndefinedInResolve.get.asInstanceOf[js.Any])
+    if (connectors != null) __obj.updateDynamic("connectors")(connectors.asInstanceOf[js.Any])
+    if (directiveResolvers != null) __obj.updateDynamic("directiveResolvers")(directiveResolvers.asInstanceOf[js.Any])
+    if (!js.isUndefined(inheritResolversFromInterfaces)) __obj.updateDynamic("inheritResolversFromInterfaces")(inheritResolversFromInterfaces.get.asInstanceOf[js.Any])
+    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
+    if (parseOptions != null) __obj.updateDynamic("parseOptions")(parseOptions.asInstanceOf[js.Any])
+    if (resolverValidationOptions != null) __obj.updateDynamic("resolverValidationOptions")(resolverValidationOptions.asInstanceOf[js.Any])
+    if (resolvers != null) __obj.updateDynamic("resolvers")(resolvers.asInstanceOf[js.Any])
+    if (schemaDirectives != null) __obj.updateDynamic("schemaDirectives")(schemaDirectives.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExecutableSchemaDefinition[TContext]]
   }
-  @scala.inline
-  implicit class IExecutableSchemaDefinitionOps[Self[tcontext] <: IExecutableSchemaDefinition[tcontext], TContext] (val x: Self[TContext]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TContext] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TContext]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TContext] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TContext] with Other]
-    @scala.inline
-    def withTypeDefsFunction0(
-      value: () => js.Array[
-          /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias graphql-tools.graphql-tools/dist/Interfaces.ITypedef */ js.Object
-        ]
-    ): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeDefs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTypeDefs(value: ITypeDefinitions): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeDefs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowUndefinedInResolve(value: Boolean): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUndefinedInResolve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUndefinedInResolve: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUndefinedInResolve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectors(value: IConnectors[TContext]): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectors: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectiveResolvers(value: IDirectiveResolvers[_, TContext]): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directiveResolvers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectiveResolvers: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directiveResolvers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInheritResolversFromInterfaces(value: Boolean): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritResolversFromInterfaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInheritResolversFromInterfaces: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritResolversFromInterfaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogger(value: ILogger): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogger: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParseOptions(value: GraphQLParseOptions): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParseOptions: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolverValidationOptions(value: IResolverValidationOptions): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolverValidationOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolverValidationOptions: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolverValidationOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolvers(value: (IResolvers[_, TContext]) | (js.Array[IResolvers[_, TContext]])): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolvers: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaDirectives(value: StringDictionary[TypeofSchemaDirectiveVisi]): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaDirectives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaDirectives: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaDirectives")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,69 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IButtonGroup
   extends typingsSlinky.extjs.Ext.panel.IPanel {
   /** [Config Option] (Number) */
-  var columns: js.UndefOr[Double] = js.native
+  var columns: js.UndefOr[Double] = js.undefined
   /** [Config Option] (String) */
-  var defaultButtonUI: js.UndefOr[java.lang.String] = js.native
+  var defaultButtonUI: js.UndefOr[java.lang.String] = js.undefined
   /** [Method] private
-  		* @param component Object
-  		*/
+    * @param component Object
+    */
   @JSName("onBeforeAdd")
-  var onBeforeAdd_IButtonGroup: js.UndefOr[js.Function1[/* component */ js.UndefOr[js.Any], Unit]] = js.native
+  var onBeforeAdd_IButtonGroup: js.UndefOr[js.Function1[/* component */ js.UndefOr[js.Any], Unit]] = js.undefined
 }
 
 object IButtonGroup {
   @scala.inline
-  def apply(): IButtonGroup = {
+  def apply(
+    IPanel: typingsSlinky.extjs.Ext.panel.IPanel = null,
+    columns: js.UndefOr[Double] = js.undefined,
+    defaultButtonUI: java.lang.String = null,
+    onBeforeAdd: /* component */ js.UndefOr[js.Any] => Unit = null
+  ): IButtonGroup = {
     val __obj = js.Dynamic.literal()
+    if (IPanel != null) js.Dynamic.global.Object.assign(__obj, IPanel)
+    if (!js.isUndefined(columns)) __obj.updateDynamic("columns")(columns.get.asInstanceOf[js.Any])
+    if (defaultButtonUI != null) __obj.updateDynamic("defaultButtonUI")(defaultButtonUI.asInstanceOf[js.Any])
+    if (onBeforeAdd != null) __obj.updateDynamic("onBeforeAdd")(js.Any.fromFunction1(onBeforeAdd))
     __obj.asInstanceOf[IButtonGroup]
   }
-  @scala.inline
-  implicit class IButtonGroupOps[Self <: IButtonGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultButtonUI(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultButtonUI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultButtonUI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultButtonUI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeAdd(value: /* component */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeAdd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeAdd")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

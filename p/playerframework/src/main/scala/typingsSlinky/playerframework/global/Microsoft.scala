@@ -14,8 +14,8 @@ object Microsoft extends js.Object {
       @js.native
       object Advertising extends js.Object {
         /**
-        	* Provides an ad source that requires a Url to be downloaded and turned into a stream before passing to the ad handler.
-        	**/
+          * Provides an ad source that requires a Url to be downloaded and turned into a stream before passing to the ad handler.
+          **/
         @js.native
         class RemoteAdSource ()
           extends typingsSlinky.playerframework.Microsoft.PlayerFramework.Js.Advertising.RemoteAdSource

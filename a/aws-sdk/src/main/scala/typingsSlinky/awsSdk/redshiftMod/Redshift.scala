@@ -246,12 +246,12 @@ trait Redshift extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreateSnapshotCopyGrantResult, Unit]
   ): Request[CreateSnapshotCopyGrantResult, AWSError] = js.native
   /**
-    * Creates a snapshot schedule with the rate of every 12 hours.
+    * Create a snapshot schedule that can be associated to a cluster and which overrides the default system backup schedule. 
     */
   def createSnapshotSchedule(): Request[SnapshotSchedule, AWSError] = js.native
   def createSnapshotSchedule(callback: js.Function2[/* err */ AWSError, /* data */ SnapshotSchedule, Unit]): Request[SnapshotSchedule, AWSError] = js.native
   /**
-    * Creates a snapshot schedule with the rate of every 12 hours.
+    * Create a snapshot schedule that can be associated to a cluster and which overrides the default system backup schedule. 
     */
   def createSnapshotSchedule(params: CreateSnapshotScheduleMessage): Request[SnapshotSchedule, AWSError] = js.native
   def createSnapshotSchedule(
@@ -268,6 +268,19 @@ trait Redshift extends Service {
     */
   def createTags(params: CreateTagsMessage): Request[js.Object, AWSError] = js.native
   def createTags(params: CreateTagsMessage, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Creates a usage limit for a specified Amazon Redshift feature on a cluster. The usage limit is identified by the returned usage limit identifier.
+    */
+  def createUsageLimit(): Request[UsageLimit, AWSError] = js.native
+  def createUsageLimit(callback: js.Function2[/* err */ AWSError, /* data */ UsageLimit, Unit]): Request[UsageLimit, AWSError] = js.native
+  /**
+    * Creates a usage limit for a specified Amazon Redshift feature on a cluster. The usage limit is identified by the returned usage limit identifier.
+    */
+  def createUsageLimit(params: CreateUsageLimitMessage): Request[UsageLimit, AWSError] = js.native
+  def createUsageLimit(
+    params: CreateUsageLimitMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ UsageLimit, Unit]
+  ): Request[UsageLimit, AWSError] = js.native
   /**
     * Deletes a previously provisioned cluster without its final snapshot being created. A successful response from the web service indicates that the request was received correctly. Use DescribeClusters to monitor the status of the deletion. The delete operation cannot be canceled or reverted once submitted. For more information about managing clusters, go to Amazon Redshift Clusters in the Amazon Redshift Cluster Management Guide. If you want to shut down the cluster and retain it for future use, set SkipFinalClusterSnapshot to false and specify a name for FinalClusterSnapshotIdentifier. You can later restore this snapshot to resume using the cluster. If a final cluster snapshot is requested, the status of the cluster will be "final-snapshot" while the snapshot is being taken, then it's "deleting" once Amazon Redshift begins deleting the cluster.   For more information about managing clusters, go to Amazon Redshift Clusters in the Amazon Redshift Cluster Management Guide.
     */
@@ -421,6 +434,19 @@ trait Redshift extends Service {
     */
   def deleteTags(params: DeleteTagsMessage): Request[js.Object, AWSError] = js.native
   def deleteTags(params: DeleteTagsMessage, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Deletes a usage limit from a cluster.
+    */
+  def deleteUsageLimit(): Request[js.Object, AWSError] = js.native
+  def deleteUsageLimit(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Deletes a usage limit from a cluster.
+    */
+  def deleteUsageLimit(params: DeleteUsageLimitMessage): Request[js.Object, AWSError] = js.native
+  def deleteUsageLimit(
+    params: DeleteUsageLimitMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
   /**
     * Returns a list of attributes attached to an account
     */
@@ -782,6 +808,19 @@ trait Redshift extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ TaggedResourceListMessage, Unit]
   ): Request[TaggedResourceListMessage, AWSError] = js.native
   /**
+    * Shows usage limits on a cluster. Results are filtered based on the combination of input usage limit identifier, cluster identifier, and feature type parameters:   If usage limit identifier, cluster identifier, and feature type are not provided, then all usage limit objects for the current account in the current region are returned.   If usage limit identifier is provided, then the corresponding usage limit object is returned.   If cluster identifier is provided, then all usage limit objects for the specified cluster are returned.   If cluster identifier and feature type are provided, then all usage limit objects for the combination of cluster and feature are returned.  
+    */
+  def describeUsageLimits(): Request[UsageLimitList, AWSError] = js.native
+  def describeUsageLimits(callback: js.Function2[/* err */ AWSError, /* data */ UsageLimitList, Unit]): Request[UsageLimitList, AWSError] = js.native
+  /**
+    * Shows usage limits on a cluster. Results are filtered based on the combination of input usage limit identifier, cluster identifier, and feature type parameters:   If usage limit identifier, cluster identifier, and feature type are not provided, then all usage limit objects for the current account in the current region are returned.   If usage limit identifier is provided, then the corresponding usage limit object is returned.   If cluster identifier is provided, then all usage limit objects for the specified cluster are returned.   If cluster identifier and feature type are provided, then all usage limit objects for the combination of cluster and feature are returned.  
+    */
+  def describeUsageLimits(params: DescribeUsageLimitsMessage): Request[UsageLimitList, AWSError] = js.native
+  def describeUsageLimits(
+    params: DescribeUsageLimitsMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ UsageLimitList, Unit]
+  ): Request[UsageLimitList, AWSError] = js.native
+  /**
     * Stops logging information, such as queries and connection attempts, for the specified Amazon Redshift cluster.
     */
   def disableLogging(): Request[LoggingStatus, AWSError] = js.native
@@ -1020,6 +1059,19 @@ trait Redshift extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ SnapshotSchedule, Unit]
   ): Request[SnapshotSchedule, AWSError] = js.native
   /**
+    * Modifies a usage limit in a cluster. You can't modify the feature type or period of a usage limit.
+    */
+  def modifyUsageLimit(): Request[UsageLimit, AWSError] = js.native
+  def modifyUsageLimit(callback: js.Function2[/* err */ AWSError, /* data */ UsageLimit, Unit]): Request[UsageLimit, AWSError] = js.native
+  /**
+    * Modifies a usage limit in a cluster. You can't modify the feature type or period of a usage limit.
+    */
+  def modifyUsageLimit(params: ModifyUsageLimitMessage): Request[UsageLimit, AWSError] = js.native
+  def modifyUsageLimit(
+    params: ModifyUsageLimitMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ UsageLimit, Unit]
+  ): Request[UsageLimit, AWSError] = js.native
+  /**
     * Pauses a cluster.
     */
   def pauseCluster(): Request[PauseClusterResult, AWSError] = js.native
@@ -1072,12 +1124,12 @@ trait Redshift extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ ClusterParameterGroupNameMessage, Unit]
   ): Request[ClusterParameterGroupNameMessage, AWSError] = js.native
   /**
-    * Changes the size of the cluster. You can change the cluster's type, or change the number or type of nodes. The default behavior is to use the elastic resize method. With an elastic resize, your cluster is available for read and write operations more quickly than with the classic resize method.  Elastic resize operations have the following restrictions:   You can only resize clusters of the following types:   dc2.large   dc2.8xlarge   ds2.xlarge   ds2.8xlarge   ra3.16xlarge     The type of nodes that you add must match the node type for the cluster.  
+    * Changes the size of the cluster. You can change the cluster's type, or change the number or type of nodes. The default behavior is to use the elastic resize method. With an elastic resize, your cluster is available for read and write operations more quickly than with the classic resize method.  Elastic resize operations have the following restrictions:   You can only resize clusters of the following types:   dc2.large   dc2.8xlarge   ds2.xlarge   ds2.8xlarge   ra3.4xlarge   ra3.16xlarge     The type of nodes that you add must match the node type for the cluster.  
     */
   def resizeCluster(): Request[ResizeClusterResult, AWSError] = js.native
   def resizeCluster(callback: js.Function2[/* err */ AWSError, /* data */ ResizeClusterResult, Unit]): Request[ResizeClusterResult, AWSError] = js.native
   /**
-    * Changes the size of the cluster. You can change the cluster's type, or change the number or type of nodes. The default behavior is to use the elastic resize method. With an elastic resize, your cluster is available for read and write operations more quickly than with the classic resize method.  Elastic resize operations have the following restrictions:   You can only resize clusters of the following types:   dc2.large   dc2.8xlarge   ds2.xlarge   ds2.8xlarge   ra3.16xlarge     The type of nodes that you add must match the node type for the cluster.  
+    * Changes the size of the cluster. You can change the cluster's type, or change the number or type of nodes. The default behavior is to use the elastic resize method. With an elastic resize, your cluster is available for read and write operations more quickly than with the classic resize method.  Elastic resize operations have the following restrictions:   You can only resize clusters of the following types:   dc2.large   dc2.8xlarge   ds2.xlarge   ds2.8xlarge   ra3.4xlarge   ra3.16xlarge     The type of nodes that you add must match the node type for the cluster.  
     */
   def resizeCluster(params: ResizeClusterMessage): Request[ResizeClusterResult, AWSError] = js.native
   def resizeCluster(

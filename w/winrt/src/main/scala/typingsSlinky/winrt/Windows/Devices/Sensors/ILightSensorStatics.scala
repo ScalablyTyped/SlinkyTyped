@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILightSensorStatics extends js.Object {
-  def getDefault(): LightSensor = js.native
+  def getDefault(): LightSensor
 }
 
 object ILightSensorStatics {
@@ -15,19 +14,5 @@ object ILightSensorStatics {
     val __obj = js.Dynamic.literal(getDefault = js.Any.fromFunction0(getDefault))
     __obj.asInstanceOf[ILightSensorStatics]
   }
-  @scala.inline
-  implicit class ILightSensorStaticsOps[Self <: ILightSensorStatics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDefault(value: () => LightSensor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefault")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

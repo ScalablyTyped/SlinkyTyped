@@ -10,7 +10,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INotebookTracker extends IWidgetTracker[NotebookPanel] {
   /**
     * The currently focused cell.
@@ -18,18 +17,18 @@ trait INotebookTracker extends IWidgetTracker[NotebookPanel] {
     * #### Notes
     * If there is no cell with the focus, then this value is `null`.
     */
-  val activeCell: Cell = js.native
+  val activeCell: Cell
   /**
     * A signal emitted when the current active cell changes.
     *
     * #### Notes
     * If there is no cell with the focus, then `null` will be emitted.
     */
-  val activeCellChanged: ISignal[this.type, Cell] = js.native
+  val activeCellChanged: ISignal[this.type, Cell]
   /**
     * A signal emitted when the selection state changes.
     */
-  val selectionChanged: ISignal[this.type, Unit] = js.native
+  val selectionChanged: ISignal[this.type, Unit]
 }
 
 @JSImport("@jupyterlab/notebook/lib/tokens", "INotebookTracker")

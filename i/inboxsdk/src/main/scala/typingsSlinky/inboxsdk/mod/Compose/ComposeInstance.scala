@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ComposeInstance extends js.Object {
-  def openNewComposeView(): js.Promise[ComposeView] = js.native
-  def registerComposeViewHandler(handler: js.Function1[/* composeView */ ComposeView, Unit]): js.Function0[Unit] = js.native
+  def openNewComposeView(): js.Promise[ComposeView]
+  def registerComposeViewHandler(handler: js.Function1[/* composeView */ ComposeView, Unit]): js.Function0[Unit]
 }
 
 object ComposeInstance {
@@ -19,25 +18,5 @@ object ComposeInstance {
     val __obj = js.Dynamic.literal(openNewComposeView = js.Any.fromFunction0(openNewComposeView), registerComposeViewHandler = js.Any.fromFunction1(registerComposeViewHandler))
     __obj.asInstanceOf[ComposeInstance]
   }
-  @scala.inline
-  implicit class ComposeInstanceOps[Self <: ComposeInstance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOpenNewComposeView(value: () => js.Promise[ComposeView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openNewComposeView")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterComposeViewHandler(value: js.Function1[/* composeView */ ComposeView, Unit] => js.Function0[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerComposeViewHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

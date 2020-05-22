@@ -41,53 +41,16 @@ trait SchemaUsageRule extends js.Object {
 
 object SchemaUsageRule {
   @scala.inline
-  def apply(): SchemaUsageRule = {
+  def apply(
+    allowUnregisteredCalls: js.UndefOr[Boolean] = js.undefined,
+    selector: String = null,
+    skipServiceControl: js.UndefOr[Boolean] = js.undefined
+  ): SchemaUsageRule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowUnregisteredCalls)) __obj.updateDynamic("allowUnregisteredCalls")(allowUnregisteredCalls.get.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipServiceControl)) __obj.updateDynamic("skipServiceControl")(skipServiceControl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUsageRule]
   }
-  @scala.inline
-  implicit class SchemaUsageRuleOps[Self <: SchemaUsageRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowUnregisteredCalls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnregisteredCalls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUnregisteredCalls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnregisteredCalls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipServiceControl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipServiceControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipServiceControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipServiceControl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

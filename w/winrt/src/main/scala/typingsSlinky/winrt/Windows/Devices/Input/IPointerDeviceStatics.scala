@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPointerDeviceStatics extends js.Object {
-  def getPointerDevice(pointerId: Double): PointerDevice = js.native
-  def getPointerDevices(): IVectorView[PointerDevice] = js.native
+  def getPointerDevice(pointerId: Double): PointerDevice
+  def getPointerDevices(): IVectorView[PointerDevice]
 }
 
 object IPointerDeviceStatics {
@@ -17,25 +16,5 @@ object IPointerDeviceStatics {
     val __obj = js.Dynamic.literal(getPointerDevice = js.Any.fromFunction1(getPointerDevice), getPointerDevices = js.Any.fromFunction0(getPointerDevices))
     __obj.asInstanceOf[IPointerDeviceStatics]
   }
-  @scala.inline
-  implicit class IPointerDeviceStaticsOps[Self <: IPointerDeviceStatics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetPointerDevice(value: Double => PointerDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPointerDevice")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPointerDevices(value: () => IVectorView[PointerDevice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPointerDevices")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

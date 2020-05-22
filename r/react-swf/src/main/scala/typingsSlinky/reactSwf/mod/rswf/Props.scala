@@ -4,63 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props extends js.Object {
   /**
     * (attribute for Object) - Possible values: l, t, r.
     * Default centers the movie in the browser window and crops edges if the browser window is smaller than the movie.
     * l (left), r (right), and t (top) align the movie along the corresponding edge of the browser window and crop the remaining three sides as needed.
     */
-  var align: js.UndefOr[String] = js.native
+  var align: js.UndefOr[String] = js.undefined
   /**
     * Setting this value to true allows the SWF file to enter full screen mode via ActionScript. For more information, see Exploring full screen mode in Flash Player. If this attribute is omitted, the default value is false.
     */
-  var allowFullScreen: js.UndefOr[Boolean] = js.native
+  var allowFullScreen: js.UndefOr[Boolean] = js.undefined
   /**
     * [base directory] or [URL]. Specifies the base directory or URL used to resolve all relative path statements in the SWF file. This attribute is helpful when your SWF file is kept in a different directory from your other files.
     */
-  var base: js.UndefOr[String] = js.native
+  var base: js.UndefOr[String] = js.undefined
   /**
     * [hexadecimal RGB value] in the format #RRGGBB. Specifies the background color of the SWF content. Use this attribute to override the background color (Stage color) setting specified in the SWF file. (This attribute does not affect the background color of the HTML page.)
     */
-  var bgcolor: js.UndefOr[String] = js.native
+  var bgcolor: js.UndefOr[String] = js.undefined
   /**
     * Variables, defined as a string of key=value pairs, that are passed to the SWF file.
     * Use flashvars to specify root-level variables in the SWF file. The format of the string is a set of key=value combinations separated by the '&' character.
     * Browsers support string sizes of up to 64 KB (65535 bytes) in length.
     * For more information on using flashvars, see Using FlashVars to pass variables to a SWF (tn_16417).
     */
-  var flashVars: js.UndefOr[js.Object | String] = js.native
+  var flashVars: js.UndefOr[js.Object | String] = js.undefined
   /**
     *  Possible values: portrait or landscape. Used to control how full screen SWF content appears on mobile devices that support automatic screen rotation, such as phones and tablets. If this attribute is specified, Flash Player uses the specified screen orientation (portrait or landscape) when the SWF is viewed in full screen mode. It doesn't matter how the device is oriented. If this attribute is not specified, orientation of content in full screen mode follows the screen orientation used by the browser.
     */
-  var fullScreenAspectRatio: js.UndefOr[String] = js.native
+  var fullScreenAspectRatio: js.UndefOr[String] = js.undefined
   /**
     * Specifies the height of the SWF content in either pixels or percentage of browser window.
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * (attribute for OBJECT tag) and name (attribute for EMBED tag) - SWF file identifier. Identifies the SWF file to the web browser, allowing browser scripting languages (for example, JavaScript) to reference the SWF content. For cross-browser compatibility, make sure that the id and name are set to the same value.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Specifies whether a timeline-based SWF file repeats indefinitely or stops when it reaches the last frame. If this attribute is omitted, the default value is true.
     */
-  var loop: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies if movie playback controls are available in the Flash Player context menu.
     * true displays a full menu that provides expanded movie playback controls (for example, Zoom, Quality, Play, Loop, Rewind, Forward, Back).
     * false displays a menu that hides movie playback controls (for example, Zoom, Quality, Play, Loop, Rewind, Forward, Back). This attribute is useful for SWF content that does not rely on the Timeline, such as content controlled entirely by ActionScript. The short menu includes "Settings" and "About Flash Player" menu items.
     */
-  var menu: js.UndefOr[Boolean] = js.native
+  var menu: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies whether a timeline-based SWF file begins playing immediately on loading in the browser. If this attribute is omitted, the default value is true.
     */
-  var play: js.UndefOr[Boolean] = js.native
+  var play: js.UndefOr[Boolean] = js.undefined
   /**
     *  Identifies the location of the Flash Player plug-in so that the user can download it if it is not already installed.
     */
-  var pluginspage: js.UndefOr[String] = js.native
+  var pluginspage: js.UndefOr[String] = js.undefined
   /**
     * Possible values: low, autolow, autohigh, medium, high, best. Specifies the display list Stage rendering quality. Setting the Stage.quality property via ActionScript overrides this value.
     * low favors playback speed over appearance and never uses anti-aliasing.
@@ -70,13 +69,13 @@ trait Props extends js.Object {
     * high favors appearance over playback speed and always applies anti-aliasing. If the movie does not contain animation, bitmaps are smoothed; if the movie has animation, bitmaps are not smoothed.
     * best provides the best display quality and does not consider playback speed. All output is anti-aliased and all bitmaps are smoothed.
     */
-  var quality: js.UndefOr[String] = js.native
+  var quality: js.UndefOr[String] = js.undefined
   /**
     * Possible values: l, t, r, tl, tr.
     * l, r, and t align the movie along the left, right, or top edge of the browser window and crop the remaining sides as needed.
     * tl and tr align the movie to the upper-left and top upper-corner of the browser window and crop the bottom and remaining side as necessary.
     */
-  var salign: js.UndefOr[String] = js.native
+  var salign: js.UndefOr[String] = js.undefined
   /**
     *  Possible values: showall, noborder, exactfit, noscale. Specifies how Flash Player scales SWF content to fit the pixel area specified by the OBJECT or EMBED tag.
     *  default (Show all) makes the entire SWF file visible in the specified area without distortion, while maintaining the original aspect ratio of the movie. Borders can appear on two sides of the movie.
@@ -84,15 +83,15 @@ trait Props extends js.Object {
     *  exactfit makes the entire SWF file visible in the specified area without trying to preserve the original aspect ratio. Distortion can occur.
     *  noscale prevents the SWF file from scaling to fit the area of the OBJECT or EMBED tag. Cropping can occur.
     */
-  var scale: js.UndefOr[String] = js.native
+  var scale: js.UndefOr[String] = js.undefined
   /**
     * Specifies the source location (URL) of the SWF file to load.
     */
-  var src: String = js.native
+  var src: String
   /**
     * Specifies the width of the SWF content in either pixels or percentage of browser window.
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
   /**
     * Possible values: window, direct, opaque, transparent, gpu. Sets the Window Mode property of the SWF file for transparency, layering, positioning, and rendering in the browser. If this attribute is omitted, the default value is "window". For more information, see Using Window Mode (wmode) values below.
     * window - The SWF content plays in its own rectangle ("window") on a web page. The browser determines how the SWF content is layered against other HTML elements. With this value, you cannot explicitly specify if SWF content appears above or below other HTML elements on the page.
@@ -101,232 +100,50 @@ trait Props extends js.Object {
     * transparent - The SWF content is layered together with other HTML elements on the page. The SWF file background color (Stage color) is transparent. HTML elements beneath the SWF file are visible through any transparent areas of the SWF, with alpha blending. This option reduces playback performance compared to wmode=window or wmode=direct.
     * gpu - Use additional hardware acceleration on some Internet-connected TVs and mobile devices. In contrast to other wmode values, pixel fidelity for display list graphics is not guaranteed. Otherwise, this value is similar to wmode=direct.
     */
-  var wmode: js.UndefOr[String] = js.native
+  var wmode: js.UndefOr[String] = js.undefined
 }
 
 object Props {
   @scala.inline
-  def apply(src: String): Props = {
+  def apply(
+    src: String,
+    align: String = null,
+    allowFullScreen: js.UndefOr[Boolean] = js.undefined,
+    base: String = null,
+    bgcolor: String = null,
+    flashVars: js.Object | String = null,
+    fullScreenAspectRatio: String = null,
+    height: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    menu: js.UndefOr[Boolean] = js.undefined,
+    play: js.UndefOr[Boolean] = js.undefined,
+    pluginspage: String = null,
+    quality: String = null,
+    salign: String = null,
+    scale: String = null,
+    width: js.UndefOr[Double] = js.undefined,
+    wmode: String = null
+  ): Props = {
     val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowFullScreen)) __obj.updateDynamic("allowFullScreen")(allowFullScreen.get.asInstanceOf[js.Any])
+    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
+    if (bgcolor != null) __obj.updateDynamic("bgcolor")(bgcolor.asInstanceOf[js.Any])
+    if (flashVars != null) __obj.updateDynamic("flashVars")(flashVars.asInstanceOf[js.Any])
+    if (fullScreenAspectRatio != null) __obj.updateDynamic("fullScreenAspectRatio")(fullScreenAspectRatio.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(menu)) __obj.updateDynamic("menu")(menu.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(play)) __obj.updateDynamic("play")(play.get.asInstanceOf[js.Any])
+    if (pluginspage != null) __obj.updateDynamic("pluginspage")(pluginspage.asInstanceOf[js.Any])
+    if (quality != null) __obj.updateDynamic("quality")(quality.asInstanceOf[js.Any])
+    if (salign != null) __obj.updateDynamic("salign")(salign.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (wmode != null) __obj.updateDynamic("wmode")(wmode.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowFullScreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFullScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowFullScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFullScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgcolor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgcolor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlashVars(value: js.Object | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flashVars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlashVars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flashVars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullScreenAspectRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullScreenAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullScreenAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullScreenAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPluginspage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pluginspage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPluginspage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pluginspage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSalign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSalign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWmode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWmode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wmode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

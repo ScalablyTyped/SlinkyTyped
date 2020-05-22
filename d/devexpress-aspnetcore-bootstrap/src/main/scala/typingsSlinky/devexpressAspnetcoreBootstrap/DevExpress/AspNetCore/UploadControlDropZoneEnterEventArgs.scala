@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UploadControlDropZoneEnterEventArgs extends EventArgs {
-  val dropZone: js.Any = js.native
+  val dropZone: js.Any
 }
 
 object UploadControlDropZoneEnterEventArgs {
@@ -15,19 +14,5 @@ object UploadControlDropZoneEnterEventArgs {
     val __obj = js.Dynamic.literal(dropZone = dropZone.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadControlDropZoneEnterEventArgs]
   }
-  @scala.inline
-  implicit class UploadControlDropZoneEnterEventArgsOps[Self <: UploadControlDropZoneEnterEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDropZone(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

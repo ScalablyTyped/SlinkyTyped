@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExecuteSqlRequest extends js.Object {
   /**
     * It is not always possible for Cloud Spanner to infer the right SQL type
@@ -17,7 +16,7 @@ trait ExecuteSqlRequest extends js.Object {
     * definition of Type for more information
     * about SQL types.
     */
-  var paramTypes: js.UndefOr[Record[String, Type]] = js.native
+  var paramTypes: js.UndefOr[Record[String, Type]] = js.undefined
   /**
     * The SQL query string can contain parameter placeholders. A parameter
     * placeholder consists of `'@'` followed by the parameter
@@ -34,12 +33,12 @@ trait ExecuteSqlRequest extends js.Object {
     * object whose keys are parameter names, and whose values are the
     * corresponding parameter values.
     */
-  var params: js.UndefOr[Record[String, _]] = js.native
+  var params: js.UndefOr[Record[String, _]] = js.undefined
   /**
     * Used to control the amount of debugging information returned in
     * ResultSetStats.
     */
-  var queryMode: js.UndefOr[String] = js.native
+  var queryMode: js.UndefOr[String] = js.undefined
   /**
     * If this request is resuming a previously interrupted SQL query
     * execution, `resume_token` should be copied from the last
@@ -48,101 +47,34 @@ trait ExecuteSqlRequest extends js.Object {
     * off. The rest of the request parameters must exactly match the
     * request that yielded this token.
     */
-  var resumeToken: js.UndefOr[String] = js.native
+  var resumeToken: js.UndefOr[String] = js.undefined
   /** Required. The SQL query string. */
-  var sql: js.UndefOr[String] = js.native
+  var sql: js.UndefOr[String] = js.undefined
   /**
     * The transaction to use. If none is provided, the default is a
     * temporary read-only transaction with strong concurrency.
     */
-  var transaction: js.UndefOr[TransactionSelector] = js.native
+  var transaction: js.UndefOr[TransactionSelector] = js.undefined
 }
 
 object ExecuteSqlRequest {
   @scala.inline
-  def apply(): ExecuteSqlRequest = {
+  def apply(
+    paramTypes: Record[String, Type] = null,
+    params: Record[String, _] = null,
+    queryMode: String = null,
+    resumeToken: String = null,
+    sql: String = null,
+    transaction: TransactionSelector = null
+  ): ExecuteSqlRequest = {
     val __obj = js.Dynamic.literal()
+    if (paramTypes != null) __obj.updateDynamic("paramTypes")(paramTypes.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (queryMode != null) __obj.updateDynamic("queryMode")(queryMode.asInstanceOf[js.Any])
+    if (resumeToken != null) __obj.updateDynamic("resumeToken")(resumeToken.asInstanceOf[js.Any])
+    if (sql != null) __obj.updateDynamic("sql")(sql.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteSqlRequest]
   }
-  @scala.inline
-  implicit class ExecuteSqlRequestOps[Self <: ExecuteSqlRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParamTypes(value: Record[String, Type]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParamTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResumeToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResumeToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSql(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSql: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: TransactionSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

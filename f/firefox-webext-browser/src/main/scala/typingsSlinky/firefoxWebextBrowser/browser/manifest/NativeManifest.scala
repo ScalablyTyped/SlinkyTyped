@@ -1,7 +1,9 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
-import typingsSlinky.firefoxWebextBrowser.anon.Allowedextensions
-import typingsSlinky.firefoxWebextBrowser.anon.Type
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.pkcs11
+import typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.stdio
+import typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.storage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +17,22 @@ trait NativeManifest extends js.Object
 
 object NativeManifest {
   @scala.inline
-  implicit def apply(value: Allowedextensions): NativeManifest = value.asInstanceOf[NativeManifest]
+  def Allowedextensions(
+    allowed_extensions: js.Array[ExtensionID],
+    description: String,
+    name: String,
+    path: String,
+    `type`: pkcs11 | stdio
+  ): NativeManifest = {
+    val __obj = js.Dynamic.literal(allowed_extensions = allowed_extensions.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NativeManifest]
+  }
   @scala.inline
-  implicit def apply(value: Type): NativeManifest = value.asInstanceOf[NativeManifest]
+  def Type(data: StringDictionary[js.Any], description: String, name: ExtensionID, `type`: storage): NativeManifest = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NativeManifest]
+  }
 }
 

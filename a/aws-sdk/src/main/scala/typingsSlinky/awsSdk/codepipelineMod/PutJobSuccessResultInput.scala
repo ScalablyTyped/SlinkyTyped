@@ -30,71 +30,19 @@ trait PutJobSuccessResultInput extends js.Object {
 
 object PutJobSuccessResultInput {
   @scala.inline
-  def apply(jobId: JobId): PutJobSuccessResultInput = {
+  def apply(
+    jobId: JobId,
+    continuationToken: ContinuationToken = null,
+    currentRevision: CurrentRevision = null,
+    executionDetails: ExecutionDetails = null,
+    outputVariables: OutputVariablesMap = null
+  ): PutJobSuccessResultInput = {
     val __obj = js.Dynamic.literal(jobId = jobId.asInstanceOf[js.Any])
+    if (continuationToken != null) __obj.updateDynamic("continuationToken")(continuationToken.asInstanceOf[js.Any])
+    if (currentRevision != null) __obj.updateDynamic("currentRevision")(currentRevision.asInstanceOf[js.Any])
+    if (executionDetails != null) __obj.updateDynamic("executionDetails")(executionDetails.asInstanceOf[js.Any])
+    if (outputVariables != null) __obj.updateDynamic("outputVariables")(outputVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutJobSuccessResultInput]
   }
-  @scala.inline
-  implicit class PutJobSuccessResultInputOps[Self <: PutJobSuccessResultInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobId(value: JobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContinuationToken(value: ContinuationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continuationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinuationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continuationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentRevision(value: CurrentRevision): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRevision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionDetails(value: ExecutionDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputVariables(value: OutputVariablesMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputVariables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

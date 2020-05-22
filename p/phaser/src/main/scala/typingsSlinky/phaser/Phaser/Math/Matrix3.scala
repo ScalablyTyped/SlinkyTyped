@@ -57,8 +57,8 @@ trait Matrix3 extends js.Object {
     */
   def multiply(src: Matrix3): Matrix3 = js.native
   /**
-    * [description]
-    * @param m [description]
+    * Set the values of this Matrix3 to be normalized from the given Matrix4.
+    * @param m The Matrix4 to normalize the values from.
     */
   def normalFromMat4(m: Matrix4): Matrix3 = js.native
   /**

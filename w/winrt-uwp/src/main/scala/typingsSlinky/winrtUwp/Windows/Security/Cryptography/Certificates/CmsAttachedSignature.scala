@@ -6,19 +6,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a signature attached to a signed CMS message. */
-@js.native
 trait CmsAttachedSignature extends js.Object {
   /** Gets the list of certificates that are used for chain building for the signer certificate. */
-  var certificates: IVectorView[Certificate] = js.native
+  var certificates: IVectorView[Certificate]
   /** Gets the content of the signed CMS message. */
-  var content: Double = js.native
+  var content: Double
   /** Gets the list of signers that are used for creating or verifying the signature. */
-  var signers: IVectorView[CmsSignerInfo] = js.native
+  var signers: IVectorView[CmsSignerInfo]
   /**
     * Verifies the signature contained in the signed CMS message.
     * @return The result of the signature verification operation.
     */
-  def verifySignature(): SignatureValidationResult = js.native
+  def verifySignature(): SignatureValidationResult
 }
 
 object CmsAttachedSignature {
@@ -32,37 +31,5 @@ object CmsAttachedSignature {
     val __obj = js.Dynamic.literal(certificates = certificates.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], signers = signers.asInstanceOf[js.Any], verifySignature = js.Any.fromFunction0(verifySignature))
     __obj.asInstanceOf[CmsAttachedSignature]
   }
-  @scala.inline
-  implicit class CmsAttachedSignatureOps[Self <: CmsAttachedSignature] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificates(value: IVectorView[Certificate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSigners(value: IVectorView[CmsSignerInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerifySignature(value: () => SignatureValidationResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifySignature")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

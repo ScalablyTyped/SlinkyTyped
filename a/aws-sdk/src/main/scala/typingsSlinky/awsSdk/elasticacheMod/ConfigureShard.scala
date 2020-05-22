@@ -22,41 +22,14 @@ trait ConfigureShard extends js.Object {
 
 object ConfigureShard {
   @scala.inline
-  def apply(NewReplicaCount: Integer, NodeGroupId: AllowedNodeGroupId): ConfigureShard = {
+  def apply(
+    NewReplicaCount: Integer,
+    NodeGroupId: AllowedNodeGroupId,
+    PreferredAvailabilityZones: PreferredAvailabilityZoneList = null
+  ): ConfigureShard = {
     val __obj = js.Dynamic.literal(NewReplicaCount = NewReplicaCount.asInstanceOf[js.Any], NodeGroupId = NodeGroupId.asInstanceOf[js.Any])
+    if (PreferredAvailabilityZones != null) __obj.updateDynamic("PreferredAvailabilityZones")(PreferredAvailabilityZones.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigureShard]
   }
-  @scala.inline
-  implicit class ConfigureShardOps[Self <: ConfigureShard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewReplicaCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewReplicaCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeGroupId(value: AllowedNodeGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreferredAvailabilityZones(value: PreferredAvailabilityZoneList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredAvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredAvailabilityZones")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

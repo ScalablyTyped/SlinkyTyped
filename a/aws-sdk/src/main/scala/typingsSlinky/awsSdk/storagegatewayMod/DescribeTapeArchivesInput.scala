@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DescribeTapeArchivesInput extends js.Object {
   /**
-    * Specifies that the number of virtual tapes descried be limited to the specified number.
+    * Specifies that the number of virtual tapes described be limited to the specified number.
     */
   var Limit: js.UndefOr[PositiveIntObject] = js.native
   /**
@@ -22,53 +22,16 @@ trait DescribeTapeArchivesInput extends js.Object {
 
 object DescribeTapeArchivesInput {
   @scala.inline
-  def apply(): DescribeTapeArchivesInput = {
+  def apply(
+    Limit: js.UndefOr[PositiveIntObject] = js.undefined,
+    Marker: Marker = null,
+    TapeARNs: TapeARNs = null
+  ): DescribeTapeArchivesInput = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (TapeARNs != null) __obj.updateDynamic("TapeARNs")(TapeARNs.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTapeArchivesInput]
   }
-  @scala.inline
-  implicit class DescribeTapeArchivesInputOps[Self <: DescribeTapeArchivesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLimit(value: PositiveIntObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTapeARNs(value: TapeARNs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARNs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTapeARNs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARNs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

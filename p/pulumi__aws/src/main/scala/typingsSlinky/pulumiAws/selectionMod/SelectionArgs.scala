@@ -32,65 +32,18 @@ trait SelectionArgs extends js.Object {
 
 object SelectionArgs {
   @scala.inline
-  def apply(iamRoleArn: Input[String], planId: Input[String]): SelectionArgs = {
+  def apply(
+    iamRoleArn: Input[String],
+    planId: Input[String],
+    name: Input[String] = null,
+    resources: Input[js.Array[Input[String]]] = null,
+    selectionTags: Input[js.Array[Input[SelectionSelectionTag]]] = null
+  ): SelectionArgs = {
     val __obj = js.Dynamic.literal(iamRoleArn = iamRoleArn.asInstanceOf[js.Any], planId = planId.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
+    if (selectionTags != null) __obj.updateDynamic("selectionTags")(selectionTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectionArgs]
   }
-  @scala.inline
-  implicit class SelectionArgsOps[Self <: SelectionArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIamRoleArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlanId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionTags(value: Input[js.Array[Input[SelectionSelectionTag]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionTags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

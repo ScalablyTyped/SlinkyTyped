@@ -16,10 +16,9 @@ import scala.scalajs.js.annotation._
   * flushed upon termination of the dictionary list.
   * @since OOo 1.1.2
   */
-@js.native
 trait XConversionDictionaryList extends XInterface {
   /** @returns the name container interface to the dictionaries in the list.  The interface can be used to add, remove or retrieve dictionaries from the list by */
-  val DictionaryContainer: XNameContainer = js.native
+  val DictionaryContainer: XNameContainer
   /**
     * creates a new dictionary and adds it to the dictionary list.
     *
@@ -31,9 +30,9 @@ trait XConversionDictionaryList extends XInterface {
     * @throws NoSupportException when **nConversionDictionaryType** is not known by the implementation.
     * @throws ElementExistException when a dictionary with the specified name already exists.
     */
-  def addNewDictionary(aName: String, aLocale: Locale, nConversionDictionaryType: Double): XConversionDictionary = js.native
+  def addNewDictionary(aName: String, aLocale: Locale, nConversionDictionaryType: Double): XConversionDictionary
   /** @returns the name container interface to the dictionaries in the list.  The interface can be used to add, remove or retrieve dictionaries from the list by */
-  def getDictionaryContainer(): XNameContainer = js.native
+  def getDictionaryContainer(): XNameContainer
   /**
     * searches for entries that match the given text.
     *
@@ -59,7 +58,7 @@ trait XConversionDictionaryList extends XInterface {
     nConversionDictionaryType: Double,
     eDirection: ConversionDirection,
     nTextConversionOptions: Double
-  ): SafeArray[String] = js.native
+  ): SafeArray[String]
   /**
     * returns the maximum number of characters used as left or right text in entries.
     *
@@ -71,7 +70,7 @@ trait XConversionDictionaryList extends XInterface {
     * @param eDirection specifies if the left text or the right text of entries will be used.
     * @see com.sun.star.linguistic2.ConversionDirection
     */
-  def queryMaxCharCount(aLocale: Locale, nConversionDictionaryType: Double, eDirection: ConversionDirection): Double = js.native
+  def queryMaxCharCount(aLocale: Locale, nConversionDictionaryType: Double, eDirection: ConversionDirection): Double
 }
 
 object XConversionDictionaryList {
@@ -89,43 +88,5 @@ object XConversionDictionaryList {
     val __obj = js.Dynamic.literal(DictionaryContainer = DictionaryContainer.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addNewDictionary = js.Any.fromFunction3(addNewDictionary), getDictionaryContainer = js.Any.fromFunction0(getDictionaryContainer), queryConversions = js.Any.fromFunction7(queryConversions), queryInterface = js.Any.fromFunction1(queryInterface), queryMaxCharCount = js.Any.fromFunction3(queryMaxCharCount), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XConversionDictionaryList]
   }
-  @scala.inline
-  implicit class XConversionDictionaryListOps[Self <: XConversionDictionaryList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDictionaryContainer(value: XNameContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DictionaryContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddNewDictionary(value: (String, Locale, Double) => XConversionDictionary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addNewDictionary")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetDictionaryContainer(value: () => XNameContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDictionaryContainer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryConversions(value: (String, Double, Double, Locale, Double, ConversionDirection, Double) => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryConversions")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withQueryMaxCharCount(value: (Locale, Double, ConversionDirection) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryMaxCharCount")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LeaseOptions extends AccessConditionsOptions {
-  var leaseDuration: js.UndefOr[String] = js.native
-  var proposedLeaseId: js.UndefOr[String] = js.native
+  var leaseDuration: js.UndefOr[String] = js.undefined
+  var proposedLeaseId: js.UndefOr[String] = js.undefined
 }
 
 object LeaseOptions {
   @scala.inline
-  def apply(): LeaseOptions = {
+  def apply(
+    accessConditions: StorageAccessCondition = null,
+    leaseDuration: String = null,
+    locationMode: String = null,
+    maximumExecutionTimeInMs: js.UndefOr[Double] = js.undefined,
+    proposedLeaseId: String = null,
+    timeoutIntervalInMs: js.UndefOr[Double] = js.undefined
+  ): LeaseOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessConditions != null) __obj.updateDynamic("accessConditions")(accessConditions.asInstanceOf[js.Any])
+    if (leaseDuration != null) __obj.updateDynamic("leaseDuration")(leaseDuration.asInstanceOf[js.Any])
+    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumExecutionTimeInMs)) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.get.asInstanceOf[js.Any])
+    if (proposedLeaseId != null) __obj.updateDynamic("proposedLeaseId")(proposedLeaseId.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutIntervalInMs)) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LeaseOptions]
   }
-  @scala.inline
-  implicit class LeaseOptionsOps[Self <: LeaseOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLeaseDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeaseDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProposedLeaseId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proposedLeaseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProposedLeaseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proposedLeaseId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

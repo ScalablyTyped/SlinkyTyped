@@ -1,17 +1,23 @@
 package typingsSlinky.blueprintjsCore.inputGroupMod
 
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
+import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.IControlledProps
 import typingsSlinky.blueprintjsCore.propsMod.IIntentProps
 import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefCallback
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IInputGroupProps
   extends IControlledProps
      with IIntentProps
@@ -21,183 +27,82 @@ trait IInputGroupProps
     * Note that `rightElement` must be disabled separately; this prop will not affect it.
     * @default false
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the component should take up the full width of its container.
     */
-  var fill: js.UndefOr[Boolean] = js.native
-  /** Ref handler that receives HTML `<input>` element backing this component. */
-  var inputRef: js.UndefOr[js.Function1[/* ref */ HTMLInputElement | Null, _]] = js.native
+  var fill: js.UndefOr[Boolean] = js.undefined
+  /** Ref handler or a ref object that receives HTML `<input>` element backing this component. */
+  var inputRef: js.UndefOr[IRefCallback[HTMLInputElement] | IRefObject[HTMLInputElement]] = js.undefined
   /** Whether this input should use large styles. */
-  var large: js.UndefOr[Boolean] = js.native
+  var large: js.UndefOr[Boolean] = js.undefined
   /**
-    * Name of a Blueprint UI icon (or an icon element) to render on the left side of the input group,
-    * before the user's cursor.
+    * Element to render on the left side of input.  This prop is mutually exclusive
+    * with `leftIcon`.
     */
-  var leftIcon: js.UndefOr[IconName | MaybeElement] = js.native
+  var leftElement: js.UndefOr[ReactElement] = js.undefined
+  /**
+    * Name of a Blueprint UI icon to render on the left side of the input group,
+    * before the user's cursor.  This prop is mutually exclusive with `leftElement`.
+    * Usage with content is deprecated.  Use `leftElement` for elements.
+    */
+  var leftIcon: js.UndefOr[IconName | MaybeElement] = js.undefined
   /** Placeholder text in the absence of any value. */
-  var placeholder: js.UndefOr[String] = js.native
+  var placeholder: js.UndefOr[String] = js.undefined
   /**
     * Element to render on right side of input.
     * For best results, use a minimal button, tag, or small spinner.
     */
-  var rightElement: js.UndefOr[ReactElement] = js.native
+  var rightElement: js.UndefOr[ReactElement] = js.undefined
   /** Whether the input (and any buttons) should appear with rounded caps. */
-  var round: js.UndefOr[Boolean] = js.native
+  var round: js.UndefOr[Boolean] = js.undefined
   /** Whether this input should use small styles. */
-  var small: js.UndefOr[Boolean] = js.native
+  var small: js.UndefOr[Boolean] = js.undefined
   /**
     * HTML `input` type attribute.
     * @default "text"
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object IInputGroupProps {
   @scala.inline
-  def apply(): IInputGroupProps = {
+  def apply(
+    className: String = null,
+    defaultValue: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    fill: js.UndefOr[Boolean] = js.undefined,
+    inputRef: IRefCallback[HTMLInputElement] | IRefObject[HTMLInputElement] = null,
+    intent: Intent = null,
+    large: js.UndefOr[Boolean] = js.undefined,
+    leftElement: ReactElement = null,
+    leftIcon: js.UndefOr[Null | IconName | MaybeElement] = js.undefined,
+    onChange: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
+    placeholder: String = null,
+    rightElement: ReactElement = null,
+    round: js.UndefOr[Boolean] = js.undefined,
+    small: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null,
+    value: String = null
+  ): IInputGroupProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.get.asInstanceOf[js.Any])
+    if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
+    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
+    if (!js.isUndefined(large)) __obj.updateDynamic("large")(large.get.asInstanceOf[js.Any])
+    if (leftElement != null) __obj.updateDynamic("leftElement")(leftElement.asInstanceOf[js.Any])
+    if (!js.isUndefined(leftIcon)) __obj.updateDynamic("leftIcon")(leftIcon.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (rightElement != null) __obj.updateDynamic("rightElement")(rightElement.asInstanceOf[js.Any])
+    if (!js.isUndefined(round)) __obj.updateDynamic("round")(round.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(small)) __obj.updateDynamic("small")(small.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInputGroupProps]
   }
-  @scala.inline
-  implicit class IInputGroupPropsOps[Self <: IInputGroupProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputRef(value: /* ref */ HTMLInputElement | Null => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInputRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLarge(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLarge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeftIcon(value: IconName | MaybeElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftIconNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(null)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRound(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmall(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

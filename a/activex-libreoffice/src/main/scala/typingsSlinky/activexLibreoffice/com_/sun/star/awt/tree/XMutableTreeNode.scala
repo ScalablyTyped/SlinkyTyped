@@ -5,19 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a mutable tree node as used by the {@link MutableTreeDataModel} */
-@js.native
 trait XMutableTreeNode extends XTreeNode {
   /**
     * Stores an implementation dependent value.
     *
     * You can use this attribute to store data for this node that is independent of the display value
     */
-  var DataValue: js.Any = js.native
+  var DataValue: js.Any
   /**
     * appends **ChildNode** to this instance.
     * @throws com::sun::star::lang::IllegalArgumentException if **ChildNode** is not a valid node of the corresponding {@link XTreeDataModel} .
     */
-  def appendChild(ChildNode: XMutableTreeNode): Unit = js.native
+  def appendChild(ChildNode: XMutableTreeNode): Unit
   /**
     * inserts **ChildNode** to this instance at the given index.
     * @param Index the index where the node will be inserted to this instance.
@@ -25,38 +24,38 @@ trait XMutableTreeNode extends XTreeNode {
     * @throws com::sun::star::lang::IllegalArgumentException if **ChildNode** is not a valid node of the corresponding {@link XTreeDataModel} .
     * @throws com::sun::star::lang::IndexOutOfBoundsException if **Index** is less than 0 or greater then {@link XTreeNode.getChildCount()} .
     */
-  def insertChildByIndex(Index: Double, ChildNode: XMutableTreeNode): Unit = js.native
+  def insertChildByIndex(Index: Double, ChildNode: XMutableTreeNode): Unit
   /**
     * removes the node from this instance at the specified index.
     * @param Index the index of the node to be removed from this instance.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if **Index** is less than 0 or greater then {@link XTreeNode.getChildCount()} .
     */
-  def removeChildByIndex(Index: Double): Unit = js.native
+  def removeChildByIndex(Index: Double): Unit
   /**
     * The URL for a graphic that is rendered to visualize collapsed non leaf nodes.
     *
     * If **URL** is empty, {@link XTreeControl.DefaultCollapsedGraphicURL} is used.
     */
-  def setCollapsedGraphicURL(URL: String): Unit = js.native
+  def setCollapsedGraphicURL(URL: String): Unit
   /** sets the display value of this node */
-  def setDisplayValue(Value: js.Any): Unit = js.native
+  def setDisplayValue(Value: js.Any): Unit
   /**
     * The URL for a graphic that is rendered to visualize expanded non leaf nodes.
     *
     * If **URL** is empty, {@link XTreeControl.DefaultExpandedGraphicURL} is used.
     */
-  def setExpandedGraphicURL(URL: String): Unit = js.native
+  def setExpandedGraphicURL(URL: String): Unit
   /**
     * Changes if the children of this node are created on demand.
     * @see XTreeNode.hasChildrenOnDemand()
     */
-  def setHasChildrenOnDemand(ChildrenOnDemand: Boolean): Unit = js.native
+  def setHasChildrenOnDemand(ChildrenOnDemand: Boolean): Unit
   /**
     * The URL for a graphic that is rendered before the text part of this node.
     *
     * If this URL is empty, no graphic is rendered.
     */
-  def setNodeGraphicURL(URL: String): Unit = js.native
+  def setNodeGraphicURL(URL: String): Unit
 }
 
 object XMutableTreeNode {
@@ -90,67 +89,5 @@ object XMutableTreeNode {
     val __obj = js.Dynamic.literal(ChildCount = ChildCount.asInstanceOf[js.Any], CollapsedGraphicURL = CollapsedGraphicURL.asInstanceOf[js.Any], DataValue = DataValue.asInstanceOf[js.Any], DisplayValue = DisplayValue.asInstanceOf[js.Any], ExpandedGraphicURL = ExpandedGraphicURL.asInstanceOf[js.Any], NodeGraphicURL = NodeGraphicURL.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], appendChild = js.Any.fromFunction1(appendChild), getChildAt = js.Any.fromFunction1(getChildAt), getChildCount = js.Any.fromFunction0(getChildCount), getCollapsedGraphicURL = js.Any.fromFunction0(getCollapsedGraphicURL), getDisplayValue = js.Any.fromFunction0(getDisplayValue), getExpandedGraphicURL = js.Any.fromFunction0(getExpandedGraphicURL), getIndex = js.Any.fromFunction1(getIndex), getNodeGraphicURL = js.Any.fromFunction0(getNodeGraphicURL), getParent = js.Any.fromFunction0(getParent), hasChildrenOnDemand = js.Any.fromFunction0(hasChildrenOnDemand), insertChildByIndex = js.Any.fromFunction2(insertChildByIndex), removeChildByIndex = js.Any.fromFunction1(removeChildByIndex), setCollapsedGraphicURL = js.Any.fromFunction1(setCollapsedGraphicURL), setDisplayValue = js.Any.fromFunction1(setDisplayValue), setExpandedGraphicURL = js.Any.fromFunction1(setExpandedGraphicURL), setHasChildrenOnDemand = js.Any.fromFunction1(setHasChildrenOnDemand), setNodeGraphicURL = js.Any.fromFunction1(setNodeGraphicURL))
     __obj.asInstanceOf[XMutableTreeNode]
   }
-  @scala.inline
-  implicit class XMutableTreeNodeOps[Self <: XMutableTreeNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppendChild(value: XMutableTreeNode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsertChildByIndex(value: (Double, XMutableTreeNode) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertChildByIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveChildByIndex(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChildByIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetCollapsedGraphicURL(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCollapsedGraphicURL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDisplayValue(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDisplayValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetExpandedGraphicURL(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setExpandedGraphicURL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetHasChildrenOnDemand(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHasChildrenOnDemand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetNodeGraphicURL(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNodeGraphicURL")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

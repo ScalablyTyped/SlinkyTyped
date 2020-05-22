@@ -32,7 +32,6 @@ import scala.scalajs.js.annotation._
   * The {@link CaptionShape} represents a rectangular drawing shape with an additional set of lines. It can be used as a description for a fixed point
   * inside a drawing.
   */
-@js.native
 trait CaptionShape
   extends Shape
      with FillProperties
@@ -42,38 +41,38 @@ trait CaptionShape
      with TextProperties
      with RotationDescriptor {
   /** This property specifies the escape angle of the line of a caption. It is only used if `CaptionIsFixedAngle` is set to `TRUE` */
-  var CaptionAngle: Double = js.native
+  var CaptionAngle: Double
   /** This property specifies the absolute escape distance for the line of a caption. */
-  var CaptionEscapeAbsolute: Double = js.native
+  var CaptionEscapeAbsolute: Double
   /**
     * This property specifies the escape direction for the line of a caption.
     * @see CaptionEscapeDirection
     */
-  var CaptionEscapeDirection: Double = js.native
+  var CaptionEscapeDirection: Double
   /** This property specifies the relative escape distance for the line of a caption. */
-  var CaptionEscapeRelative: Double = js.native
+  var CaptionEscapeRelative: Double
   /** This property specifies the distance between the text area of the caption and the start of the line. */
-  var CaptionGap: Double = js.native
+  var CaptionGap: Double
   /** If this property is `TRUE` , the property `CaptionEscapeRelative` is used, else the property `CaptionEscapeAbsolute` is used. */
-  var CaptionIsEscapeRelative: Boolean = js.native
+  var CaptionIsEscapeRelative: Boolean
   /** If this property is `TRUE` , the application determines the best possible length for the caption line. */
-  var CaptionIsFitLineLength: Boolean = js.native
+  var CaptionIsFitLineLength: Boolean
   /**
     * This property specifies if the escape angle of the line of a caption is fixed or free. If this is set to `FALSE` , the application can choose the best
     * possible angle. If not, the value in `CaptionAngle` is used.
     */
-  var CaptionIsFixedAngle: Boolean = js.native
+  var CaptionIsFixedAngle: Boolean
   /** This property specifies the length of the caption line. */
-  var CaptionLineLength: Double = js.native
+  var CaptionLineLength: Double
   /** The caption point property specify the position of the point that is captioned. A set of lines are rendered from the caption area. */
-  var CaptionPoint: Point = js.native
+  var CaptionPoint: Point
   /**
     * This property specifies the geometry of the line of a caption.
     * @see CaptionType
     */
-  var CaptionType: Double = js.native
+  var CaptionType: Double
   /** This is the radius of the caption area corners. */
-  var CornerRadius: Double = js.native
+  var CornerRadius: Double
 }
 
 object CaptionShape {
@@ -204,85 +203,5 @@ object CaptionShape {
     js.Dynamic.global.Object.assign(__obj, TextProperties)
     __obj.asInstanceOf[CaptionShape]
   }
-  @scala.inline
-  implicit class CaptionShapeOps[Self <: CaptionShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptionAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionEscapeAbsolute(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionEscapeAbsolute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionEscapeDirection(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionEscapeDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionEscapeRelative(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionEscapeRelative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionGap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionIsEscapeRelative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionIsEscapeRelative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionIsFitLineLength(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionIsFitLineLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionIsFixedAngle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionIsFixedAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionLineLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionLineLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionPoint(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCornerRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CornerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

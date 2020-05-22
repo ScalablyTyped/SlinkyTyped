@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JestPuppeteer extends js.Object {
   /**
     * Suspends test execution and gives you opportunity to see what's going on in the browser
@@ -17,7 +16,7 @@ trait JestPuppeteer extends js.Object {
     * })
     * ```
     */
-  def debug(): js.Promise[Unit] = js.native
+  def debug(): js.Promise[Unit]
   /**
     * Reset global.browser
     *
@@ -27,7 +26,7 @@ trait JestPuppeteer extends js.Object {
     * })
     * ```
     */
-  def resetBrowser(): js.Promise[Unit] = js.native
+  def resetBrowser(): js.Promise[Unit]
   /**
     * Reset global.page
     *
@@ -37,7 +36,7 @@ trait JestPuppeteer extends js.Object {
     * })
     * ```
     */
-  def resetPage(): js.Promise[Unit] = js.native
+  def resetPage(): js.Promise[Unit]
 }
 
 object JestPuppeteer {
@@ -50,31 +49,5 @@ object JestPuppeteer {
     val __obj = js.Dynamic.literal(debug = js.Any.fromFunction0(debug), resetBrowser = js.Any.fromFunction0(resetBrowser), resetPage = js.Any.fromFunction0(resetPage))
     __obj.asInstanceOf[JestPuppeteer]
   }
-  @scala.inline
-  implicit class JestPuppeteerOps[Self <: JestPuppeteer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebug(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResetBrowser(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetBrowser")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResetPage(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetPage")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

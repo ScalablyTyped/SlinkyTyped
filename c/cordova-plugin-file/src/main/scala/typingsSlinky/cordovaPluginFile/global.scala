@@ -12,6 +12,9 @@ object global extends js.Object {
   class FileError protected ()
     extends typingsSlinky.cordovaPluginFile.FileError {
     def this(code: Double) = this()
+    /** Error code */
+    /* CompleteClass */
+    override var code: Double = js.native
   }
   
   @js.native

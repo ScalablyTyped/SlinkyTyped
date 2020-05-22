@@ -1,244 +1,67 @@
 package typingsSlinky.reactBootstrap.anon
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.reactBootstrap.mod.SelectCallback
 import typingsSlinky.reactBootstrap.mod.Sizes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActiveIndex extends js.Object {
-  var activeIndex: js.UndefOr[Double] = js.native
-  var bsSize: js.UndefOr[Sizes] = js.native
-  var bsStyle: js.UndefOr[String] = js.native
-  var controls: js.UndefOr[Boolean] = js.native
-  var defaultActiveIndex: js.UndefOr[Double] = js.native
-  var direction: js.UndefOr[String] = js.native
-  var indicators: js.UndefOr[Boolean] = js.native
-  var interval: js.UndefOr[Double | Null] = js.native
-  var nextIcon: js.UndefOr[TagMod[Any]] = js.native
-  var onSelect: js.UndefOr[SelectCallback] = js.native
+  var activeIndex: js.UndefOr[Double] = js.undefined
+  var bsSize: js.UndefOr[Sizes] = js.undefined
+  var bsStyle: js.UndefOr[String] = js.undefined
+  var controls: js.UndefOr[Boolean] = js.undefined
+  var defaultActiveIndex: js.UndefOr[Double] = js.undefined
+  var direction: js.UndefOr[String] = js.undefined
+  var indicators: js.UndefOr[Boolean] = js.undefined
+  var interval: js.UndefOr[Double | Null] = js.undefined
+  var nextIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var onSelect: js.UndefOr[SelectCallback] = js.undefined
   // TODO: Add more specific type
-  var onSlideEnd: js.UndefOr[js.Function] = js.native
-  var pauseOnHover: js.UndefOr[Boolean] = js.native
-  var prevIcon: js.UndefOr[TagMod[Any]] = js.native
-  var slide: js.UndefOr[Boolean] = js.native
-  var wrap: js.UndefOr[Boolean] = js.native
+  var onSlideEnd: js.UndefOr[js.Function] = js.undefined
+  var pauseOnHover: js.UndefOr[Boolean] = js.undefined
+  var prevIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var slide: js.UndefOr[Boolean] = js.undefined
+  var wrap: js.UndefOr[Boolean] = js.undefined
 }
 
 object ActiveIndex {
   @scala.inline
-  def apply(): ActiveIndex = {
+  def apply(
+    activeIndex: js.UndefOr[Double] = js.undefined,
+    bsSize: Sizes = null,
+    bsStyle: String = null,
+    controls: js.UndefOr[Boolean] = js.undefined,
+    defaultActiveIndex: js.UndefOr[Double] = js.undefined,
+    direction: String = null,
+    indicators: js.UndefOr[Boolean] = js.undefined,
+    interval: js.UndefOr[Null | Double] = js.undefined,
+    nextIcon: TagMod[Any] = null,
+    onSelect: SelectCallback = null,
+    onSlideEnd: js.Function = null,
+    pauseOnHover: js.UndefOr[Boolean] = js.undefined,
+    prevIcon: TagMod[Any] = null,
+    slide: js.UndefOr[Boolean] = js.undefined,
+    wrap: js.UndefOr[Boolean] = js.undefined
+  ): ActiveIndex = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activeIndex)) __obj.updateDynamic("activeIndex")(activeIndex.get.asInstanceOf[js.Any])
+    if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
+    if (bsStyle != null) __obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(controls)) __obj.updateDynamic("controls")(controls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultActiveIndex)) __obj.updateDynamic("defaultActiveIndex")(defaultActiveIndex.get.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(indicators)) __obj.updateDynamic("indicators")(indicators.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
+    if (nextIcon != null) __obj.updateDynamic("nextIcon")(nextIcon.asInstanceOf[js.Any])
+    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
+    if (onSlideEnd != null) __obj.updateDynamic("onSlideEnd")(onSlideEnd.asInstanceOf[js.Any])
+    if (!js.isUndefined(pauseOnHover)) __obj.updateDynamic("pauseOnHover")(pauseOnHover.get.asInstanceOf[js.Any])
+    if (prevIcon != null) __obj.updateDynamic("prevIcon")(prevIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(slide)) __obj.updateDynamic("slide")(slide.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActiveIndex]
   }
-  @scala.inline
-  implicit class ActiveIndexOps[Self <: ActiveIndex] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsSize(value: Sizes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultActiveIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultActiveIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndicators(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndicators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntervalNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(null)
-        ret
-    }
-    @scala.inline
-    def withNextIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: SelectCallback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSlideEnd(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSlideEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSlideEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSlideEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPauseOnHover(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseOnHover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPauseOnHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseOnHover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrevIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

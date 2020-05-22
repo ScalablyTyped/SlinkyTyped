@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** See `BigNumber.config` (alias `BigNumber.set`) and `BigNumber.clone`. */
-@js.native
 trait Config extends js.Object {
   /**
     * The alphabet used for base conversion. The length of the alphabet corresponds to the maximum
@@ -25,7 +24,7 @@ trait Config extends js.Object {
     * x.toString(12)              // 'T'
     * ```
     */
-  var ALPHABET: js.UndefOr[String] = js.native
+  var ALPHABET: js.UndefOr[String] = js.undefined
   /**
     * A boolean: `true` or `false`. Default value: `false`.
     *
@@ -51,7 +50,7 @@ trait Config extends js.Object {
     * BigNumber.random()              // 0.54340758610486147524
     * ```
     */
-  var CRYPTO: js.UndefOr[Boolean] = js.native
+  var CRYPTO: js.UndefOr[Boolean] = js.undefined
   /**
     * An integer, 0 to 1e+9. Default value: 20.
     *
@@ -64,7 +63,7 @@ trait Config extends js.Object {
     * BigNumber.set({ DECIMAL_PLACES: 5 })
     * ```
     */
-  var DECIMAL_PLACES: js.UndefOr[Double] = js.native
+  var DECIMAL_PLACES: js.UndefOr[Double] = js.undefined
   /**
     * An integer, 0 to 1e+9, or an array, [-1e+9 to 0, 0 to 1e+9].
     * Default value: `[-7, 20]`.
@@ -103,7 +102,7 @@ trait Config extends js.Object {
     * Calling `toString` with a base argument, e.g. `toString(10)`, will also always return normal
     * notation.
     */
-  var EXPONENTIAL_AT: js.UndefOr[Double | (js.Tuple2[Double, Double])] = js.native
+  var EXPONENTIAL_AT: js.UndefOr[Double | (js.Tuple2[Double, Double])] = js.undefined
   /**
     * An object including any number of the properties shown below.
     *
@@ -140,7 +139,7 @@ trait Config extends js.Object {
     * })
     * ```
     */
-  var FORMAT: js.UndefOr[Format] = js.native
+  var FORMAT: js.UndefOr[Format] = js.undefined
   /**
     * An integer, 0, 1, 3, 6 or 9. Default value: `BigNumber.ROUND_DOWN` (1).
     *
@@ -173,7 +172,7 @@ trait Config extends js.Object {
     * BigNumber.set({ MODULO_MODE: 9 })          // equivalent
     * ```
     */
-  var MODULO_MODE: js.UndefOr[ModuloMode] = js.native
+  var MODULO_MODE: js.UndefOr[ModuloMode] = js.undefined
   /**
     * An integer, 0 to 1e+9. Default value: 0.
     *
@@ -188,7 +187,7 @@ trait Config extends js.Object {
     * BigNumber.config({ POW_PRECISION: 100 })
     * ```
     */
-  var POW_PRECISION: js.UndefOr[Double] = js.native
+  var POW_PRECISION: js.UndefOr[Double] = js.undefined
   /**
     * An integer, magnitude 1 to 1e+9, or an array, [-1e+9 to -1, 1 to 1e+9].
     * Default value: `[-1e+9, 1e+9]`.
@@ -222,7 +221,7 @@ trait Config extends js.Object {
     * The largest possible magnitude of a finite BigNumber is 9.999...e+1000000000.
     * The smallest possible magnitude of a non-zero BigNumber is 1e-1000000000.
     */
-  var RANGE: js.UndefOr[Double | (js.Tuple2[Double, Double])] = js.native
+  var RANGE: js.UndefOr[Double | (js.Tuple2[Double, Double])] = js.undefined
   /**
     * An integer, 0 to 8. Default value: `BigNumber.ROUND_HALF_UP` (4).
     *
@@ -237,130 +236,33 @@ trait Config extends js.Object {
     * BigNumber.set({ ROUNDING_MODE: BigNumber.ROUND_UP })
     * ```
     */
-  var ROUNDING_MODE: js.UndefOr[RoundingMode] = js.native
+  var ROUNDING_MODE: js.UndefOr[RoundingMode] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    ALPHABET: String = null,
+    CRYPTO: js.UndefOr[Boolean] = js.undefined,
+    DECIMAL_PLACES: js.UndefOr[Double] = js.undefined,
+    EXPONENTIAL_AT: Double | (js.Tuple2[Double, Double]) = null,
+    FORMAT: Format = null,
+    MODULO_MODE: ModuloMode = null,
+    POW_PRECISION: js.UndefOr[Double] = js.undefined,
+    RANGE: Double | (js.Tuple2[Double, Double]) = null,
+    ROUNDING_MODE: RoundingMode = null
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (ALPHABET != null) __obj.updateDynamic("ALPHABET")(ALPHABET.asInstanceOf[js.Any])
+    if (!js.isUndefined(CRYPTO)) __obj.updateDynamic("CRYPTO")(CRYPTO.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DECIMAL_PLACES)) __obj.updateDynamic("DECIMAL_PLACES")(DECIMAL_PLACES.get.asInstanceOf[js.Any])
+    if (EXPONENTIAL_AT != null) __obj.updateDynamic("EXPONENTIAL_AT")(EXPONENTIAL_AT.asInstanceOf[js.Any])
+    if (FORMAT != null) __obj.updateDynamic("FORMAT")(FORMAT.asInstanceOf[js.Any])
+    if (MODULO_MODE != null) __obj.updateDynamic("MODULO_MODE")(MODULO_MODE.asInstanceOf[js.Any])
+    if (!js.isUndefined(POW_PRECISION)) __obj.updateDynamic("POW_PRECISION")(POW_PRECISION.get.asInstanceOf[js.Any])
+    if (RANGE != null) __obj.updateDynamic("RANGE")(RANGE.asInstanceOf[js.Any])
+    if (ROUNDING_MODE != null) __obj.updateDynamic("ROUNDING_MODE")(ROUNDING_MODE.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withALPHABET(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ALPHABET")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutALPHABET: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ALPHABET")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCRYPTO(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CRYPTO")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCRYPTO: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CRYPTO")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDECIMAL_PLACES(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DECIMAL_PLACES")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDECIMAL_PLACES: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DECIMAL_PLACES")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEXPONENTIAL_AT(value: Double | (js.Tuple2[Double, Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EXPONENTIAL_AT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEXPONENTIAL_AT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EXPONENTIAL_AT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFORMAT(value: Format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FORMAT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFORMAT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FORMAT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMODULO_MODE(value: ModuloMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MODULO_MODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMODULO_MODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MODULO_MODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPOW_PRECISION(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("POW_PRECISION")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPOW_PRECISION: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("POW_PRECISION")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRANGE(value: Double | (js.Tuple2[Double, Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RANGE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRANGE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RANGE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withROUNDING_MODE(value: RoundingMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ROUNDING_MODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutROUNDING_MODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ROUNDING_MODE")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

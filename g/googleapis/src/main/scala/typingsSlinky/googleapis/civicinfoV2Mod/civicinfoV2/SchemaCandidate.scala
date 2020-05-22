@@ -48,113 +48,26 @@ trait SchemaCandidate extends js.Object {
 
 object SchemaCandidate {
   @scala.inline
-  def apply(): SchemaCandidate = {
+  def apply(
+    candidateUrl: String = null,
+    channels: js.Array[SchemaChannel] = null,
+    email: String = null,
+    name: String = null,
+    orderOnBallot: String = null,
+    party: String = null,
+    phone: String = null,
+    photoUrl: String = null
+  ): SchemaCandidate = {
     val __obj = js.Dynamic.literal()
+    if (candidateUrl != null) __obj.updateDynamic("candidateUrl")(candidateUrl.asInstanceOf[js.Any])
+    if (channels != null) __obj.updateDynamic("channels")(channels.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (orderOnBallot != null) __obj.updateDynamic("orderOnBallot")(orderOnBallot.asInstanceOf[js.Any])
+    if (party != null) __obj.updateDynamic("party")(party.asInstanceOf[js.Any])
+    if (phone != null) __obj.updateDynamic("phone")(phone.asInstanceOf[js.Any])
+    if (photoUrl != null) __obj.updateDynamic("photoUrl")(photoUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCandidate]
   }
-  @scala.inline
-  implicit class SchemaCandidateOps[Self <: SchemaCandidate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCandidateUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("candidateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCandidateUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("candidateUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannels(value: js.Array[SchemaChannel]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderOnBallot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderOnBallot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderOnBallot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderOnBallot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("party")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("party")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhotoUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhotoUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

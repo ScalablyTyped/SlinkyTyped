@@ -9,16 +9,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IToaster extends js.Object {
-  def clear(key: Key): Unit = js.native
-  def getRef(): Ref[Instantiable0[ToasterContainer]] = js.native
-  def info(children: TagMod[Any], props: ReadonlyToastProps): Key = js.native
-  def negative(children: TagMod[Any], props: ReadonlyToastProps): Key = js.native
-  def positive(children: TagMod[Any], props: ReadonlyToastProps): Key = js.native
-  def show(children: TagMod[Any], props: ReadonlyToastProps): Key = js.native
-  def update(key: Key, props: ReadonlyToastProps): Unit = js.native
-  def warning(children: TagMod[Any], props: ReadonlyToastProps): Key = js.native
+  def clear(key: Key): Unit
+  def getRef(): Ref[Instantiable0[ToasterContainer]]
+  def info(children: TagMod[Any], props: ReadonlyToastProps): Key
+  def negative(children: TagMod[Any], props: ReadonlyToastProps): Key
+  def positive(children: TagMod[Any], props: ReadonlyToastProps): Key
+  def show(children: TagMod[Any], props: ReadonlyToastProps): Key
+  def update(key: Key, props: ReadonlyToastProps): Unit
+  def warning(children: TagMod[Any], props: ReadonlyToastProps): Key
 }
 
 object IToaster {
@@ -36,61 +35,5 @@ object IToaster {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction1(clear), getRef = js.Any.fromFunction0(getRef), info = js.Any.fromFunction2(info), negative = js.Any.fromFunction2(negative), positive = js.Any.fromFunction2(positive), show = js.Any.fromFunction2(show), update = js.Any.fromFunction2(update), warning = js.Any.fromFunction2(warning))
     __obj.asInstanceOf[IToaster]
   }
-  @scala.inline
-  implicit class IToasterOps[Self <: IToaster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClear(value: Key => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetRef(value: () => Ref[Instantiable0[ToasterContainer]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRef")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInfo(value: (TagMod[Any], ReadonlyToastProps) => Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withNegative(value: (TagMod[Any], ReadonlyToastProps) => Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPositive(value: (TagMod[Any], ReadonlyToastProps) => Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withShow(value: (TagMod[Any], ReadonlyToastProps) => Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: (Key, ReadonlyToastProps) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withWarning(value: (TagMod[Any], ReadonlyToastProps) => Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

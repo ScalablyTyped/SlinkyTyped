@@ -12,7 +12,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommitIdRequiredException
   extends ServiceException[CommitIdRequiredExceptionDetails]
      with CreateBranchExceptionsUnion
@@ -22,7 +21,7 @@ trait CommitIdRequiredException
      with PostCommentForComparedCommitExceptionsUnion
      with PostCommentForPullRequestExceptionsUnion {
   @JSName("name")
-  var name_CommitIdRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommitIdRequiredException = js.native
+  var name_CommitIdRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommitIdRequiredException
 }
 
 object CommitIdRequiredException {
@@ -31,26 +30,12 @@ object CommitIdRequiredException {
     $metadata: ResponseMetadata,
     details: CommitIdRequiredExceptionDetails,
     message: String,
-    name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommitIdRequiredException
+    name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommitIdRequiredException,
+    stack: String = null
   ): CommitIdRequiredException = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommitIdRequiredException]
   }
-  @scala.inline
-  implicit class CommitIdRequiredExceptionOps[Self <: CommitIdRequiredException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(
-      value: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommitIdRequiredException
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

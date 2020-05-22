@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CorpusQuery extends js.Object {
   /** Details pertaining to Drive holds. If set, corpus must be Drive. */
-  var driveQuery: js.UndefOr[HeldDriveQuery] = js.native
+  var driveQuery: js.UndefOr[HeldDriveQuery] = js.undefined
   /** Details pertaining to Groups holds. If set, corpus must be Groups. */
-  var groupsQuery: js.UndefOr[HeldGroupsQuery] = js.native
+  var groupsQuery: js.UndefOr[HeldGroupsQuery] = js.undefined
   /** Details pertaining to mail holds. If set, corpus must be mail. */
-  var mailQuery: js.UndefOr[HeldMailQuery] = js.native
+  var mailQuery: js.UndefOr[HeldMailQuery] = js.undefined
 }
 
 object CorpusQuery {
   @scala.inline
-  def apply(): CorpusQuery = {
+  def apply(
+    driveQuery: HeldDriveQuery = null,
+    groupsQuery: HeldGroupsQuery = null,
+    mailQuery: HeldMailQuery = null
+  ): CorpusQuery = {
     val __obj = js.Dynamic.literal()
+    if (driveQuery != null) __obj.updateDynamic("driveQuery")(driveQuery.asInstanceOf[js.Any])
+    if (groupsQuery != null) __obj.updateDynamic("groupsQuery")(groupsQuery.asInstanceOf[js.Any])
+    if (mailQuery != null) __obj.updateDynamic("mailQuery")(mailQuery.asInstanceOf[js.Any])
     __obj.asInstanceOf[CorpusQuery]
   }
-  @scala.inline
-  implicit class CorpusQueryOps[Self <: CorpusQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDriveQuery(value: HeldDriveQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriveQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupsQuery(value: HeldGroupsQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupsQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupsQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupsQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMailQuery(value: HeldMailQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mailQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMailQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mailQuery")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

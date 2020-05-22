@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object core {
+  type BodyData = typingsSlinky.node.Buffer | typingsSlinky.needle.mod.core.KeyValue | typingsSlinky.node.NodeJS.ReadableStream | java.lang.String | scala.Null
   type Cookies = org.scalablytyped.runtime.StringDictionary[js.Any]
   type KeyValue = org.scalablytyped.runtime.StringDictionary[js.Any]
   type NeedleCallback = js.Function3[

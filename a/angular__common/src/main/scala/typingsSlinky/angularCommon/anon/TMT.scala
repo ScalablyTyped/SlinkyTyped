@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TMT extends js.Object {
-  var BYN: js.Array[String] = js.native
-  var GEL: js.Array[js.UndefOr[String]] = js.native
-  var RON: js.Array[js.UndefOr[String]] = js.native
-  var RUB: js.Array[String] = js.native
-  var THB: js.Array[String] = js.native
-  var TMT: js.Array[String] = js.native
-  var TWD: js.Array[String] = js.native
-  var UAH: js.Array[String] = js.native
-  var XXX: js.Array[String] = js.native
+  var BYN: js.Array[String]
+  var GEL: js.Array[js.UndefOr[String]]
+  var RON: js.Array[js.UndefOr[String]]
+  var RUB: js.Array[String]
+  var THB: js.Array[String]
+  var TMT: js.Array[String]
+  var TWD: js.Array[String]
+  var UAH: js.Array[String]
+  var XXX: js.Array[String]
 }
 
 object TMT {
@@ -33,67 +32,5 @@ object TMT {
     val __obj = js.Dynamic.literal(BYN = BYN.asInstanceOf[js.Any], GEL = GEL.asInstanceOf[js.Any], RON = RON.asInstanceOf[js.Any], RUB = RUB.asInstanceOf[js.Any], THB = THB.asInstanceOf[js.Any], TMT = TMT.asInstanceOf[js.Any], TWD = TWD.asInstanceOf[js.Any], UAH = UAH.asInstanceOf[js.Any], XXX = XXX.asInstanceOf[js.Any])
     __obj.asInstanceOf[TMT]
   }
-  @scala.inline
-  implicit class TMTOps[Self <: TMT] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBYN(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BYN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGEL(value: js.Array[js.UndefOr[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GEL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRON(value: js.Array[js.UndefOr[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RON")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRUB(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RUB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTHB(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("THB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTMT(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TMT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTWD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TWD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUAH(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UAH")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXXX(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XXX")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

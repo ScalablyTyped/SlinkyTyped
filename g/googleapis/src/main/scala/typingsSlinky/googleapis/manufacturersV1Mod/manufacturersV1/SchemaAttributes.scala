@@ -188,437 +188,80 @@ trait SchemaAttributes extends js.Object {
 
 object SchemaAttributes {
   @scala.inline
-  def apply(): SchemaAttributes = {
+  def apply(
+    additionalImageLink: js.Array[SchemaImage] = null,
+    ageGroup: String = null,
+    brand: String = null,
+    capacity: SchemaCapacity = null,
+    color: String = null,
+    count: SchemaCount = null,
+    description: String = null,
+    disclosureDate: String = null,
+    excludedDestination: js.Array[String] = null,
+    featureDescription: js.Array[SchemaFeatureDescription] = null,
+    flavor: String = null,
+    format: String = null,
+    gender: String = null,
+    gtin: js.Array[String] = null,
+    imageLink: SchemaImage = null,
+    includedDestination: js.Array[String] = null,
+    itemGroupId: String = null,
+    material: String = null,
+    mpn: String = null,
+    pattern: String = null,
+    productDetail: js.Array[SchemaProductDetail] = null,
+    productLine: String = null,
+    productName: String = null,
+    productPageUrl: String = null,
+    productType: js.Array[String] = null,
+    releaseDate: String = null,
+    scent: String = null,
+    size: String = null,
+    sizeSystem: String = null,
+    sizeType: String = null,
+    suggestedRetailPrice: SchemaPrice = null,
+    targetClientId: String = null,
+    theme: String = null,
+    title: String = null,
+    videoLink: js.Array[String] = null
+  ): SchemaAttributes = {
     val __obj = js.Dynamic.literal()
+    if (additionalImageLink != null) __obj.updateDynamic("additionalImageLink")(additionalImageLink.asInstanceOf[js.Any])
+    if (ageGroup != null) __obj.updateDynamic("ageGroup")(ageGroup.asInstanceOf[js.Any])
+    if (brand != null) __obj.updateDynamic("brand")(brand.asInstanceOf[js.Any])
+    if (capacity != null) __obj.updateDynamic("capacity")(capacity.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (disclosureDate != null) __obj.updateDynamic("disclosureDate")(disclosureDate.asInstanceOf[js.Any])
+    if (excludedDestination != null) __obj.updateDynamic("excludedDestination")(excludedDestination.asInstanceOf[js.Any])
+    if (featureDescription != null) __obj.updateDynamic("featureDescription")(featureDescription.asInstanceOf[js.Any])
+    if (flavor != null) __obj.updateDynamic("flavor")(flavor.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
+    if (gtin != null) __obj.updateDynamic("gtin")(gtin.asInstanceOf[js.Any])
+    if (imageLink != null) __obj.updateDynamic("imageLink")(imageLink.asInstanceOf[js.Any])
+    if (includedDestination != null) __obj.updateDynamic("includedDestination")(includedDestination.asInstanceOf[js.Any])
+    if (itemGroupId != null) __obj.updateDynamic("itemGroupId")(itemGroupId.asInstanceOf[js.Any])
+    if (material != null) __obj.updateDynamic("material")(material.asInstanceOf[js.Any])
+    if (mpn != null) __obj.updateDynamic("mpn")(mpn.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (productDetail != null) __obj.updateDynamic("productDetail")(productDetail.asInstanceOf[js.Any])
+    if (productLine != null) __obj.updateDynamic("productLine")(productLine.asInstanceOf[js.Any])
+    if (productName != null) __obj.updateDynamic("productName")(productName.asInstanceOf[js.Any])
+    if (productPageUrl != null) __obj.updateDynamic("productPageUrl")(productPageUrl.asInstanceOf[js.Any])
+    if (productType != null) __obj.updateDynamic("productType")(productType.asInstanceOf[js.Any])
+    if (releaseDate != null) __obj.updateDynamic("releaseDate")(releaseDate.asInstanceOf[js.Any])
+    if (scent != null) __obj.updateDynamic("scent")(scent.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (sizeSystem != null) __obj.updateDynamic("sizeSystem")(sizeSystem.asInstanceOf[js.Any])
+    if (sizeType != null) __obj.updateDynamic("sizeType")(sizeType.asInstanceOf[js.Any])
+    if (suggestedRetailPrice != null) __obj.updateDynamic("suggestedRetailPrice")(suggestedRetailPrice.asInstanceOf[js.Any])
+    if (targetClientId != null) __obj.updateDynamic("targetClientId")(targetClientId.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (videoLink != null) __obj.updateDynamic("videoLink")(videoLink.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttributes]
   }
-  @scala.inline
-  implicit class SchemaAttributesOps[Self <: SchemaAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalImageLink(value: js.Array[SchemaImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalImageLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalImageLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalImageLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgeGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgeGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapacity(value: SchemaCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: SchemaCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisclosureDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disclosureDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisclosureDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disclosureDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludedDestination(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedDestination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureDescription(value: js.Array[SchemaFeatureDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlavor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flavor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlavor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flavor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGender(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGtin(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gtin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGtin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gtin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageLink(value: SchemaImage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludedDestination(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includedDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludedDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includedDestination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaterial(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaterial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMpn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMpn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductDetail(value: js.Array[SchemaProductDetail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductLine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductPageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productPageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductPageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productPageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductType(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedRetailPrice(value: SchemaPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedRetailPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedRetailPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedRetailPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetClientId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetClientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoLink(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoLink")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

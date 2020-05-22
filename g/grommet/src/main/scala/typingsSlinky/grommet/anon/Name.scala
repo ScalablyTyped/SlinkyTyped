@@ -10,69 +10,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Name extends js.Object {
-  var color: js.UndefOr[String | Light] = js.native
-  var name: Africa | Asia | Australia | Europe | (`North America`) | (`South America`) = js.native
-  var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
-  var onHover: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var color: js.UndefOr[String | Light] = js.undefined
+  var name: Africa | Asia | Australia | Europe | (`North America`) | (`South America`)
+  var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
+  var onHover: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
 }
 
 object Name {
   @scala.inline
-  def apply(name: Africa | Asia | Australia | Europe | (`North America`) | (`South America`)): Name = {
+  def apply(
+    name: Africa | Asia | Australia | Europe | (`North America`) | (`South America`),
+    color: String | Light = null,
+    onClick: /* repeated */ js.Any => _ = null,
+    onHover: /* repeated */ js.Any => _ = null
+  ): Name = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction1(onHover))
     __obj.asInstanceOf[Name]
   }
-  @scala.inline
-  implicit class NameOps[Self <: Name] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: Africa | Asia | Australia | Europe | (`North America`) | (`South America`)): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String | Light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* repeated */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHover(value: /* repeated */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHover")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHover")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

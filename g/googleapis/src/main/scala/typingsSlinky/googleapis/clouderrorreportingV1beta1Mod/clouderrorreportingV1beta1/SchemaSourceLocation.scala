@@ -31,53 +31,16 @@ trait SchemaSourceLocation extends js.Object {
 
 object SchemaSourceLocation {
   @scala.inline
-  def apply(): SchemaSourceLocation = {
+  def apply(
+    filePath: String = null,
+    functionName: String = null,
+    lineNumber: js.UndefOr[Double] = js.undefined
+  ): SchemaSourceLocation = {
     val __obj = js.Dynamic.literal()
+    if (filePath != null) __obj.updateDynamic("filePath")(filePath.asInstanceOf[js.Any])
+    if (functionName != null) __obj.updateDynamic("functionName")(functionName.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineNumber)) __obj.updateDynamic("lineNumber")(lineNumber.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceLocation]
   }
-  @scala.inline
-  implicit class SchemaSourceLocationOps[Self <: SchemaSourceLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

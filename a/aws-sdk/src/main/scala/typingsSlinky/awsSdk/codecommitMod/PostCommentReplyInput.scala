@@ -22,41 +22,10 @@ trait PostCommentReplyInput extends js.Object {
 
 object PostCommentReplyInput {
   @scala.inline
-  def apply(content: Content, inReplyTo: CommentId): PostCommentReplyInput = {
+  def apply(content: Content, inReplyTo: CommentId, clientRequestToken: ClientRequestToken = null): PostCommentReplyInput = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], inReplyTo = inReplyTo.asInstanceOf[js.Any])
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostCommentReplyInput]
   }
-  @scala.inline
-  implicit class PostCommentReplyInputOps[Self <: PostCommentReplyInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: Content): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInReplyTo(value: CommentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inReplyTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

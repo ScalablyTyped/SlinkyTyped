@@ -6,137 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Item extends js.Object {
-  var container: js.UndefOr[ViewStyle] = js.native
-  var icon: js.UndefOr[ViewStyle] = js.native
-  var item: js.UndefOr[ViewStyle] = js.native
-  var label: js.UndefOr[TextStyle] = js.native
-  var subheader: js.UndefOr[TextStyle] = js.native
-  var value: js.UndefOr[TextStyle] = js.native
+  var container: js.UndefOr[ViewStyle] = js.undefined
+  var icon: js.UndefOr[ViewStyle] = js.undefined
+  var item: js.UndefOr[ViewStyle] = js.undefined
+  var label: js.UndefOr[TextStyle] = js.undefined
+  var subheader: js.UndefOr[TextStyle] = js.undefined
+  var value: js.UndefOr[TextStyle] = js.undefined
 }
 
 object Item {
   @scala.inline
-  def apply(): Item = {
+  def apply(
+    container: js.UndefOr[Null | ViewStyle] = js.undefined,
+    icon: js.UndefOr[Null | ViewStyle] = js.undefined,
+    item: js.UndefOr[Null | ViewStyle] = js.undefined,
+    label: js.UndefOr[Null | TextStyle] = js.undefined,
+    subheader: js.UndefOr[Null | TextStyle] = js.undefined,
+    value: js.UndefOr[Null | TextStyle] = js.undefined
+  ): Item = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(container)) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(icon)) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (!js.isUndefined(item)) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
+    if (!js.isUndefined(label)) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(subheader)) __obj.updateDynamic("subheader")(subheader.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Item]
   }
-  @scala.inline
-  implicit class ItemOps[Self <: Item] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainer(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(null)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(null)
-        ret
-    }
-    @scala.inline
-    def withItem(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(null)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: TextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(null)
-        ret
-    }
-    @scala.inline
-    def withSubheader(value: TextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubheader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubheaderNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(null)
-        ret
-    }
-    @scala.inline
-    def withValue(value: TextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
-  }
-  
 }
 

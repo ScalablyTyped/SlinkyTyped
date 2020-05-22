@@ -1,36 +1,25 @@
 package typingsSlinky.mdast.mod
 
 import typingsSlinky.mdast.mdastStrings.yaml
+import typingsSlinky.unist.mod.Data
+import typingsSlinky.unist.mod.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait YAML extends Literal {
   @JSName("type")
-  var type_YAML: yaml = js.native
+  var type_YAML: yaml
 }
 
 object YAML {
   @scala.inline
-  def apply(`type`: yaml, value: js.Any): YAML = {
+  def apply(`type`: yaml, value: js.Any, data: Data = null, position: Position = null): YAML = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     __obj.asInstanceOf[YAML]
   }
-  @scala.inline
-  implicit class YAMLOps[Self <: YAML] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: yaml): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

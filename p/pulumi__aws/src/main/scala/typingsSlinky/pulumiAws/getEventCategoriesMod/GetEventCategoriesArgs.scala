@@ -14,29 +14,10 @@ trait GetEventCategoriesArgs extends js.Object {
 
 object GetEventCategoriesArgs {
   @scala.inline
-  def apply(): GetEventCategoriesArgs = {
+  def apply(sourceType: String = null): GetEventCategoriesArgs = {
     val __obj = js.Dynamic.literal()
+    if (sourceType != null) __obj.updateDynamic("sourceType")(sourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetEventCategoriesArgs]
   }
-  @scala.inline
-  implicit class GetEventCategoriesArgsOps[Self <: GetEventCategoriesArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

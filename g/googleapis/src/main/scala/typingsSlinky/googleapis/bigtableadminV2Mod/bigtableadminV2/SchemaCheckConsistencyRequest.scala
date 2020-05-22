@@ -18,29 +18,10 @@ trait SchemaCheckConsistencyRequest extends js.Object {
 
 object SchemaCheckConsistencyRequest {
   @scala.inline
-  def apply(): SchemaCheckConsistencyRequest = {
+  def apply(consistencyToken: String = null): SchemaCheckConsistencyRequest = {
     val __obj = js.Dynamic.literal()
+    if (consistencyToken != null) __obj.updateDynamic("consistencyToken")(consistencyToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCheckConsistencyRequest]
   }
-  @scala.inline
-  implicit class SchemaCheckConsistencyRequestOps[Self <: SchemaCheckConsistencyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsistencyToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consistencyToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsistencyToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consistencyToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -33,22 +33,21 @@ object channelMod extends js.Object {
       * @param propagateFlags A bitwise combination of elements of grpc.propagate
       *     that indicates what information to propagate from parentCall.
       */
-    def createCall(method: String): Call = js.native
-    def createCall(method: String, deadline: Null, host: String): Call = js.native
-    def createCall(method: String, deadline: Null, host: String, parentCall: Null, propagateFlags: Double): Call = js.native
-    def createCall(method: String, deadline: Null, host: String, parentCall: Call): Call = js.native
-    def createCall(method: String, deadline: Null, host: String, parentCall: Call, propagateFlags: Double): Call = js.native
-    def createCall(method: String, deadline: Null, host: Null, parentCall: Null, propagateFlags: Double): Call = js.native
-    def createCall(method: String, deadline: Null, host: Null, parentCall: Call): Call = js.native
-    def createCall(method: String, deadline: Null, host: Null, parentCall: Call, propagateFlags: Double): Call = js.native
-    def createCall(method: String, deadline: Deadline): Call = js.native
-    def createCall(method: String, deadline: Deadline, host: String): Call = js.native
-    def createCall(method: String, deadline: Deadline, host: String, parentCall: Null, propagateFlags: Double): Call = js.native
-    def createCall(method: String, deadline: Deadline, host: String, parentCall: Call): Call = js.native
-    def createCall(method: String, deadline: Deadline, host: String, parentCall: Call, propagateFlags: Double): Call = js.native
-    def createCall(method: String, deadline: Deadline, host: Null, parentCall: Null, propagateFlags: Double): Call = js.native
-    def createCall(method: String, deadline: Deadline, host: Null, parentCall: Call): Call = js.native
-    def createCall(method: String, deadline: Deadline, host: Null, parentCall: Call, propagateFlags: Double): Call = js.native
+    def createCall(
+      method: String,
+      deadline: Deadline,
+      host: js.UndefOr[Null | String],
+       // eslint-disable-line @typescript-eslint/no-explicit-any
+    parentCall: js.Any
+    ): Call = js.native
+    def createCall(
+      method: String,
+      deadline: Deadline,
+      host: js.UndefOr[Null | String],
+       // eslint-disable-line @typescript-eslint/no-explicit-any
+    parentCall: js.Any,
+      propagateFlags: Double
+    ): Call = js.native
     /**
       * Get the channel's current connectivity state. This method is here mainly
       * because it is in the existing internal Channel class, and there isn't

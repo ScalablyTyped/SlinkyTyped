@@ -14,29 +14,10 @@ trait GetStaticIpsRequest extends js.Object {
 
 object GetStaticIpsRequest {
   @scala.inline
-  def apply(): GetStaticIpsRequest = {
+  def apply(pageToken: String = null): GetStaticIpsRequest = {
     val __obj = js.Dynamic.literal()
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetStaticIpsRequest]
   }
-  @scala.inline
-  implicit class GetStaticIpsRequestOps[Self <: GetStaticIpsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

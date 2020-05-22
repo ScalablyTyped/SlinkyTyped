@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventExtendedProperties extends js.Object {
-  var `private`: js.UndefOr[Record[String, String]] = js.native
-  var shared: js.UndefOr[Record[String, String]] = js.native
+  var `private`: js.UndefOr[Record[String, String]] = js.undefined
+  var shared: js.UndefOr[Record[String, String]] = js.undefined
 }
 
 object EventExtendedProperties {
   @scala.inline
-  def apply(): EventExtendedProperties = {
+  def apply(`private`: Record[String, String] = null, shared: Record[String, String] = null): EventExtendedProperties = {
     val __obj = js.Dynamic.literal()
+    if (`private` != null) __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
+    if (shared != null) __obj.updateDynamic("shared")(shared.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventExtendedProperties]
   }
-  @scala.inline
-  implicit class EventExtendedPropertiesOps[Self <: EventExtendedProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrivate(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShared(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

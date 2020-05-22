@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Companyid extends CompanyIdentifier {
-  var company_id: String = js.native
+  var company_id: String
 }
 
 object Companyid {
@@ -16,19 +15,5 @@ object Companyid {
     val __obj = js.Dynamic.literal(company_id = company_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[Companyid]
   }
-  @scala.inline
-  implicit class CompanyidOps[Self <: Companyid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompany_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("company_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

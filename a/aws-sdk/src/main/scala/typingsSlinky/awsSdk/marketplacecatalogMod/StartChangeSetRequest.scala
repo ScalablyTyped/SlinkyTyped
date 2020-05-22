@@ -26,53 +26,16 @@ trait StartChangeSetRequest extends js.Object {
 
 object StartChangeSetRequest {
   @scala.inline
-  def apply(Catalog: Catalog, ChangeSet: RequestedChangeList): StartChangeSetRequest = {
+  def apply(
+    Catalog: Catalog,
+    ChangeSet: RequestedChangeList,
+    ChangeSetName: ChangeSetName = null,
+    ClientRequestToken: ClientRequestToken = null
+  ): StartChangeSetRequest = {
     val __obj = js.Dynamic.literal(Catalog = Catalog.asInstanceOf[js.Any], ChangeSet = ChangeSet.asInstanceOf[js.Any])
+    if (ChangeSetName != null) __obj.updateDynamic("ChangeSetName")(ChangeSetName.asInstanceOf[js.Any])
+    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartChangeSetRequest]
   }
-  @scala.inline
-  implicit class StartChangeSetRequestOps[Self <: StartChangeSetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCatalog(value: Catalog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Catalog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangeSet(value: RequestedChangeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangeSetName(value: ChangeSetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangeSetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

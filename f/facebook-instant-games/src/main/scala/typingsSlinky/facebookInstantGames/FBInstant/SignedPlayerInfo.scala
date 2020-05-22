@@ -7,13 +7,12 @@ import scala.scalajs.js.annotation._
 /**
   * Represents information about the player along with a signature to verify that it indeed comes from Facebook.
   */
-@js.native
 trait SignedPlayerInfo extends js.Object {
   /**
     * Get the id of the player.
     * @returns The ID of the player
     */
-  def getPlayerID(): String = js.native
+  def getPlayerID(): String
   /**
     * A signature to verify this object indeed comes from Facebook. The string is base64url encoded and signed with an HMAC version of your App Secret,
     * based on the OAuth 2.0 spec.
@@ -38,7 +37,7 @@ trait SignedPlayerInfo extends js.Object {
     *
     * @returns The signature string.
     */
-  def getSignature(): String = js.native
+  def getSignature(): String
 }
 
 object SignedPlayerInfo {
@@ -47,25 +46,5 @@ object SignedPlayerInfo {
     val __obj = js.Dynamic.literal(getPlayerID = js.Any.fromFunction0(getPlayerID), getSignature = js.Any.fromFunction0(getSignature))
     __obj.asInstanceOf[SignedPlayerInfo]
   }
-  @scala.inline
-  implicit class SignedPlayerInfoOps[Self <: SignedPlayerInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetPlayerID(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPlayerID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSignature(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSignature")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

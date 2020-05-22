@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActiveXObjectNameMap extends js.Object {
   @JSName("Word.Application")
-  var WordDotApplication: Application = js.native
+  var WordDotApplication: Application
   @JSName("Word.Document")
-  var WordDotDocument: Document = js.native
+  var WordDotDocument: Document
 }
 
 object ActiveXObjectNameMap {
@@ -22,25 +21,5 @@ object ActiveXObjectNameMap {
     __obj.updateDynamic("Word.Document")(WordDotDocument.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActiveXObjectNameMap]
   }
-  @scala.inline
-  implicit class ActiveXObjectNameMapOps[Self <: ActiveXObjectNameMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWordDotApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotDocument(value: Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.Document")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

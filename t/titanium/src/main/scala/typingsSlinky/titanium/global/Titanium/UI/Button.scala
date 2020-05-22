@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * A button widget that has four states: normal, disabled, focused and selected.
-		 */
+  * A button widget that has four states: normal, disabled, focused and selected.
+  */
 @JSGlobal("Titanium.UI.Button")
 @js.native
 class Button ()

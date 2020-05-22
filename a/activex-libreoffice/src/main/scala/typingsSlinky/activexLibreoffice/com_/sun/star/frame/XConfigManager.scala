@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** @deprecated Deprecated */
-@js.native
 trait XConfigManager extends XInterface {
   /**
     * add a listener to notify changes on well known variables inside the real implementation
@@ -20,12 +19,12 @@ trait XConfigManager extends XInterface {
     * @param Listener listener which will be informed
     * @see XConfigManager.removePropertyChangeListener()
     */
-  def addPropertyChangeListener(KeyName: String, Listener: XPropertyChangeListener): Unit = js.native
+  def addPropertyChangeListener(KeyName: String, Listener: XPropertyChangeListener): Unit
   /**
     * was designed for additional functionality for interface {@link com.sun.star.registry.XSimpleRegistry} and make no sense without that
     * @deprecated Deprecated
     */
-  def flush(): Unit = js.native
+  def flush(): Unit
   /**
     * remove a registered listener
     * @deprecated Deprecated
@@ -33,7 +32,7 @@ trait XConfigManager extends XInterface {
     * @param Listener listener which will be deregistered
     * @see XConfigManager.addPropertyChangeListener()
     */
-  def removePropertyChangeListener(KeyName: String, Listener: XPropertyChangeListener): Unit = js.native
+  def removePropertyChangeListener(KeyName: String, Listener: XPropertyChangeListener): Unit
   /**
     * substitute variables (place holder) inside given parameter **Text**
     *
@@ -41,7 +40,7 @@ trait XConfigManager extends XInterface {
     * @param Text original value including variables
     * @returns changed copy of **Text** without any variables
     */
-  def substituteVariables(Text: String): String = js.native
+  def substituteVariables(Text: String): String
 }
 
 object XConfigManager {
@@ -58,37 +57,5 @@ object XConfigManager {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), flush = js.Any.fromFunction0(flush), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), substituteVariables = js.Any.fromFunction1(substituteVariables))
     __obj.asInstanceOf[XConfigManager]
   }
-  @scala.inline
-  implicit class XConfigManagerOps[Self <: XConfigManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddPropertyChangeListener(value: (String, XPropertyChangeListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPropertyChangeListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFlush(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePropertyChangeListener(value: (String, XPropertyChangeListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePropertyChangeListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSubstituteVariables(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("substituteVariables")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

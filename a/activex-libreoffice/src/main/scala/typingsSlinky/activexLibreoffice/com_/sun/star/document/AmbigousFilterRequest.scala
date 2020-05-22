@@ -14,14 +14,13 @@ import scala.scalajs.js.annotation._
   * A possible continuation of type {@link XInteractionFilterSelect} transport this decision back to source of started interaction.
   * @see XInteractionFilterSelect
   */
-@js.native
 trait AmbigousFilterRequest extends Exception {
   /** transport the real detected filter, which stands in conflict to the pre selected one */
-  var DetectedFilter: String = js.native
+  var DetectedFilter: String
   /** transport the preselected filter */
-  var SelectedFilter: String = js.native
+  var SelectedFilter: String
   /** transport URL which couldn't be detected right */
-  var URL: String = js.native
+  var URL: String
 }
 
 object AmbigousFilterRequest {
@@ -30,31 +29,5 @@ object AmbigousFilterRequest {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], DetectedFilter = DetectedFilter.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], SelectedFilter = SelectedFilter.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any])
     __obj.asInstanceOf[AmbigousFilterRequest]
   }
-  @scala.inline
-  implicit class AmbigousFilterRequestOps[Self <: AmbigousFilterRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectedFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectedFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * is a {@link TextField} which is not specified by itself, but dependent on a {@link TextFieldMaster} .
   * @see TextFieldMaster
   */
-@js.native
 trait DependentTextField
   extends TextField_
      with XDependentTextField

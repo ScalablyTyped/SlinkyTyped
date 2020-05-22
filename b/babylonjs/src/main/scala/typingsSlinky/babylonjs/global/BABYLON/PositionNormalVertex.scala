@@ -21,5 +21,11 @@ class PositionNormalVertex ()
     /** the normal of the vertex (defaut: 0,1,0) */
   normal: typingsSlinky.babylonjs.BABYLON.Vector3
   ) = this()
+  /** the normal of the vertex (defaut: 0,1,0) */
+  /* CompleteClass */
+  override var normal: typingsSlinky.babylonjs.BABYLON.Vector3 = js.native
+  /** the position of the vertex (defaut: 0,0,0) */
+  /* CompleteClass */
+  override var position: typingsSlinky.babylonjs.BABYLON.Vector3 = js.native
 }
 

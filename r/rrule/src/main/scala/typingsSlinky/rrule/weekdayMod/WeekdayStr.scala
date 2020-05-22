@@ -1,6 +1,6 @@
 package typingsSlinky.rrule.weekdayMod
 
-import typingsSlinky.rrule.typesMod.ByWeekday
+import typingsSlinky.rrule.typesMod._ByWeekday
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.rrule.rruleStrings.SA
   - typingsSlinky.rrule.rruleStrings.SU
 */
-trait WeekdayStr extends ByWeekday
+trait WeekdayStr extends _ByWeekday
 
 object WeekdayStr {
   @scala.inline

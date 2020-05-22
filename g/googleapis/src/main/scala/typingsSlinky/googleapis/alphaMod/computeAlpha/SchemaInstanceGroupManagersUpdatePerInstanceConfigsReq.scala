@@ -18,29 +18,10 @@ trait SchemaInstanceGroupManagersUpdatePerInstanceConfigsReq extends js.Object {
 
 object SchemaInstanceGroupManagersUpdatePerInstanceConfigsReq {
   @scala.inline
-  def apply(): SchemaInstanceGroupManagersUpdatePerInstanceConfigsReq = {
+  def apply(perInstanceConfigs: js.Array[SchemaPerInstanceConfig] = null): SchemaInstanceGroupManagersUpdatePerInstanceConfigsReq = {
     val __obj = js.Dynamic.literal()
+    if (perInstanceConfigs != null) __obj.updateDynamic("perInstanceConfigs")(perInstanceConfigs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagersUpdatePerInstanceConfigsReq]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupManagersUpdatePerInstanceConfigsReqOps[Self <: SchemaInstanceGroupManagersUpdatePerInstanceConfigsReq] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPerInstanceConfigs(value: js.Array[SchemaPerInstanceConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perInstanceConfigs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerInstanceConfigs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perInstanceConfigs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

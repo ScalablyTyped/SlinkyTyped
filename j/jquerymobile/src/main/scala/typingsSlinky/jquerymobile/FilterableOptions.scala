@@ -4,134 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilterableOptions extends js.Object {
-  var children: js.UndefOr[js.Any] = js.native
-  var defaults: js.UndefOr[Boolean] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var enhanced: js.UndefOr[Boolean] = js.native
-  var filterCallback: js.UndefOr[js.Function2[/* index */ Double, /* searchValue */ js.UndefOr[String], Boolean]] = js.native
-  var filterPlaceholder: js.UndefOr[String] = js.native
-  var filterReveal: js.UndefOr[Boolean] = js.native
-  var filterTheme: js.UndefOr[String] = js.native
-  var input: js.Any = js.native
+  var children: js.UndefOr[js.Any] = js.undefined
+  var defaults: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var enhanced: js.UndefOr[Boolean] = js.undefined
+  var filterCallback: js.UndefOr[js.Function2[/* index */ Double, /* searchValue */ js.UndefOr[String], Boolean]] = js.undefined
+  var filterPlaceholder: js.UndefOr[String] = js.undefined
+  var filterReveal: js.UndefOr[Boolean] = js.undefined
+  var filterTheme: js.UndefOr[String] = js.undefined
+  var input: js.Any
 }
 
 object FilterableOptions {
   @scala.inline
-  def apply(input: js.Any): FilterableOptions = {
+  def apply(
+    input: js.Any,
+    children: js.Any = null,
+    defaults: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    enhanced: js.UndefOr[Boolean] = js.undefined,
+    filterCallback: (/* index */ Double, /* searchValue */ js.UndefOr[String]) => Boolean = null,
+    filterPlaceholder: String = null,
+    filterReveal: js.UndefOr[Boolean] = js.undefined,
+    filterTheme: String = null
+  ): FilterableOptions = {
     val __obj = js.Dynamic.literal(input = input.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaults)) __obj.updateDynamic("defaults")(defaults.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enhanced)) __obj.updateDynamic("enhanced")(enhanced.get.asInstanceOf[js.Any])
+    if (filterCallback != null) __obj.updateDynamic("filterCallback")(js.Any.fromFunction2(filterCallback))
+    if (filterPlaceholder != null) __obj.updateDynamic("filterPlaceholder")(filterPlaceholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(filterReveal)) __obj.updateDynamic("filterReveal")(filterReveal.get.asInstanceOf[js.Any])
+    if (filterTheme != null) __obj.updateDynamic("filterTheme")(filterTheme.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterableOptions]
   }
-  @scala.inline
-  implicit class FilterableOptionsOps[Self <: FilterableOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInput(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaults(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnhanced(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enhanced")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnhanced: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enhanced")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterCallback(value: (/* index */ Double, /* searchValue */ js.UndefOr[String]) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilterCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterReveal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterReveal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterReveal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterReveal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterTheme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,20 +16,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RelationParametersProperties extends js.Object {
   /**
     * The first array of geometries to compute the relation. The structure of each geometry in the array is same as the structure of the json geometry objects returned by the ArcGIS REST API.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RelationParameters.html#geometries1)
     */
-  var geometries1: js.UndefOr[js.Array[GeometryProperties]] = js.native
+  var geometries1: js.UndefOr[js.Array[GeometryProperties]] = js.undefined
   /**
     * The second array of geometries to compute the relation. The structure of each geometry in the array is same as the structure of the json geometry objects returned by the ArcGIS REST API.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RelationParameters.html#geometries2)
     */
-  var geometries2: js.UndefOr[js.Array[GeometryProperties]] = js.native
+  var geometries2: js.UndefOr[js.Array[GeometryProperties]] = js.undefined
   /**
     * The spatial relationship to be tested between the two input geometry arrays. See table below for a list of possible values. If the relation is specified as `relation`, the `relationParameter` parameter describes the spatial relationship and must be specified.
     *
@@ -53,78 +52,29 @@ trait RelationParametersProperties extends js.Object {
     */
   var relation: js.UndefOr[
     cross | disjoint | in_ | `interior-intersection` | intersection | `line-coincidence` | `line-touch` | overlap | `point-touch` | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.relation | touch | within
-  ] = js.native
+  ] = js.undefined
   /**
     * The string describes the spatial relationship to be tested when `RelationParameters.relation = 'relation'`. The [Relational functions for ST_Geometry](https://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/relational-functions-for-st-geometry.htm) topic has additional details. An example of a valid string is: `FFFTTT**`. Also see the description of [geometryEngine.relate()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#relate) for additional examples of valid strings.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RelationParameters.html#relationParameter)
     */
-  var relationParameter: js.UndefOr[String] = js.native
+  var relationParameter: js.UndefOr[String] = js.undefined
 }
 
 object RelationParametersProperties {
   @scala.inline
-  def apply(): RelationParametersProperties = {
+  def apply(
+    geometries1: js.Array[GeometryProperties] = null,
+    geometries2: js.Array[GeometryProperties] = null,
+    relation: cross | disjoint | in_ | `interior-intersection` | intersection | `line-coincidence` | `line-touch` | overlap | `point-touch` | relation | touch | within = null,
+    relationParameter: String = null
+  ): RelationParametersProperties = {
     val __obj = js.Dynamic.literal()
+    if (geometries1 != null) __obj.updateDynamic("geometries1")(geometries1.asInstanceOf[js.Any])
+    if (geometries2 != null) __obj.updateDynamic("geometries2")(geometries2.asInstanceOf[js.Any])
+    if (relation != null) __obj.updateDynamic("relation")(relation.asInstanceOf[js.Any])
+    if (relationParameter != null) __obj.updateDynamic("relationParameter")(relationParameter.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelationParametersProperties]
   }
-  @scala.inline
-  implicit class RelationParametersPropertiesOps[Self <: RelationParametersProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeometries1(value: js.Array[GeometryProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometries1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometries1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometries1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeometries2(value: js.Array[GeometryProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometries2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometries2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometries2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelation(
-      value: cross | disjoint | in_ | `interior-intersection` | intersection | `line-coincidence` | `line-touch` | overlap | `point-touch` | relation | touch | within
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelationParameter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationParameter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelationParameter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationParameter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

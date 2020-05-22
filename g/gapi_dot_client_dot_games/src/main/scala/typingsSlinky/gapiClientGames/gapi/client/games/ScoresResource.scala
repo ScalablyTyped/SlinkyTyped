@@ -10,22 +10,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScoresResource extends js.Object {
   /**
     * Get high scores, and optionally ranks, in leaderboards for the currently authenticated player. For a specific time span, leaderboardId can be set to
     * ALL to retrieve data for all leaderboards in a given time span.
     * NOTE: You cannot ask for 'ALL' leaderboards and 'ALL' timeSpans in the same request; only one parameter may be set to 'ALL'.
     */
-  def get(request: IncludeRankType): Request[PlayerLeaderboardScoreListResponse] = js.native
+  def get(request: IncludeRankType): Request[PlayerLeaderboardScoreListResponse]
   /** Lists the scores in a leaderboard, starting from the top. */
-  def list(request: TimeSpan): Request[LeaderboardScores] = js.native
+  def list(request: TimeSpan): Request[LeaderboardScores]
   /** Lists the scores in a leaderboard around (and including) a player's score. */
-  def listWindow(request: ResultsAbove): Request[LeaderboardScores] = js.native
+  def listWindow(request: ResultsAbove): Request[LeaderboardScores]
   /** Submits a score to the specified leaderboard. */
-  def submit(request: Score): Request[PlayerScoreResponse] = js.native
+  def submit(request: Score): Request[PlayerScoreResponse]
   /** Submits multiple scores to leaderboards. */
-  def submitMultiple(request: Language): Request[PlayerScoreListResponse] = js.native
+  def submitMultiple(request: Language): Request[PlayerScoreListResponse]
 }
 
 object ScoresResource {
@@ -40,43 +39,5 @@ object ScoresResource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), listWindow = js.Any.fromFunction1(listWindow), submit = js.Any.fromFunction1(submit), submitMultiple = js.Any.fromFunction1(submitMultiple))
     __obj.asInstanceOf[ScoresResource]
   }
-  @scala.inline
-  implicit class ScoresResourceOps[Self <: ScoresResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: IncludeRankType => Request[PlayerLeaderboardScoreListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: TimeSpan => Request[LeaderboardScores]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListWindow(value: ResultsAbove => Request[LeaderboardScores]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listWindow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSubmit(value: Score => Request[PlayerScoreResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSubmitMultiple(value: Language => Request[PlayerScoreListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitMultiple")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

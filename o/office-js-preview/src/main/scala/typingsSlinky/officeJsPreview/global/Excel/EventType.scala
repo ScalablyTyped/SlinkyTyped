@@ -15,6 +15,10 @@ object EventType extends js.Object {
   /* "ChartAdded" */ val chartAdded: typingsSlinky.officeJsPreview.Excel.EventType.chartAdded with String = js.native
   /* "ChartDeactivated" */ val chartDeactivated: typingsSlinky.officeJsPreview.Excel.EventType.chartDeactivated with String = js.native
   /* "ChartDeleted" */ val chartDeleted: typingsSlinky.officeJsPreview.Excel.EventType.chartDeleted with String = js.native
+  /* "CommentAdded" */ val commentAdded: typingsSlinky.officeJsPreview.Excel.EventType.commentAdded with String = js.native
+  /* "CommentChanged" */ val commentChanged: typingsSlinky.officeJsPreview.Excel.EventType.commentChanged with String = js.native
+  /* "CommentDeleted" */ val commentDeleted: typingsSlinky.officeJsPreview.Excel.EventType.commentDeleted with String = js.native
+  /* "LinkedDataTypeRefreshRequestCompleted" */ val linkedDataTypeRefreshRequestCompleted: typingsSlinky.officeJsPreview.Excel.EventType.linkedDataTypeRefreshRequestCompleted with String = js.native
   /* "RibbonCommandExecuted" */ val ribbonCommandExecuted: typingsSlinky.officeJsPreview.Excel.EventType.ribbonCommandExecuted with String = js.native
   /* "ShapeActivated" */ val shapeActivated: typingsSlinky.officeJsPreview.Excel.EventType.shapeActivated with String = js.native
   /* "ShapeDeactivated" */ val shapeDeactivated: typingsSlinky.officeJsPreview.Excel.EventType.shapeDeactivated with String = js.native

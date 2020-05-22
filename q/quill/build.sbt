@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "quill"
-version := "2.0-dt-20200225Z-363f60"
+version := "2.0-dt-20200515Z-485ebf"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "parchment" % "1.1.4-501402",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "parchment" % "1.1.4-9822f2",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebRequestDetails
   extends typingsSlinky.chrome.chrome.webRequest.ResourceRequest {
   /** Standard HTTP method. */
-  var method: String = js.native
+  var method: String
 }
 
 object WebRequestDetails {
@@ -21,25 +20,13 @@ object WebRequestDetails {
     tabId: Double,
     timeStamp: Double,
     `type`: typingsSlinky.chrome.chrome.webRequest.ResourceType,
-    url: String
+    url: String,
+    initiator: String = null
   ): WebRequestDetails = {
     val __obj = js.Dynamic.literal(frameId = frameId.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], parentFrameId = parentFrameId.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any], tabId = tabId.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (initiator != null) __obj.updateDynamic("initiator")(initiator.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebRequestDetails]
   }
-  @scala.inline
-  implicit class WebRequestDetailsOps[Self <: WebRequestDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

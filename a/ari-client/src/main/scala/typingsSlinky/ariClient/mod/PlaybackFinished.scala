@@ -4,32 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlaybackFinished extends Event {
   /* Properties */
-  var playback: Playback = js.native
+  var playback: Playback
 }
 
 object PlaybackFinished {
   @scala.inline
-  def apply(application: String, playback: Playback, timestamp: js.Date, `type`: String): PlaybackFinished = {
+  def apply(
+    application: String,
+    playback: Playback,
+    timestamp: js.Date,
+    `type`: String,
+    asterisk_id: String = null
+  ): PlaybackFinished = {
     val __obj = js.Dynamic.literal(application = application.asInstanceOf[js.Any], playback = playback.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (asterisk_id != null) __obj.updateDynamic("asterisk_id")(asterisk_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaybackFinished]
   }
-  @scala.inline
-  implicit class PlaybackFinishedOps[Self <: PlaybackFinished] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlayback(value: Playback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playback")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

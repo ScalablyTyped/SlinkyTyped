@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * The options for openFile mode.
-			 * 1 - open - default,
-			 * 2 - save
-			 */
+  * The options for openFile mode.
+  * 1 - open - default,
+  * 2 - save
+  */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`1`
   - typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`2`

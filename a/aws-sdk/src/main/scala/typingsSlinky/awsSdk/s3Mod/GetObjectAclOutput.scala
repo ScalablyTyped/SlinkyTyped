@@ -19,53 +19,12 @@ trait GetObjectAclOutput extends js.Object {
 
 object GetObjectAclOutput {
   @scala.inline
-  def apply(): GetObjectAclOutput = {
+  def apply(Grants: Grants = null, Owner: Owner = null, RequestCharged: RequestCharged = null): GetObjectAclOutput = {
     val __obj = js.Dynamic.literal()
+    if (Grants != null) __obj.updateDynamic("Grants")(Grants.asInstanceOf[js.Any])
+    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
+    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetObjectAclOutput]
   }
-  @scala.inline
-  implicit class GetObjectAclOutputOps[Self <: GetObjectAclOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrants(value: Grants): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Grants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Grants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: Owner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCharged(value: RequestCharged): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCharged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

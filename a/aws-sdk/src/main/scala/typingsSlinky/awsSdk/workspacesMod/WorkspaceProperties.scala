@@ -30,77 +30,20 @@ trait WorkspaceProperties extends js.Object {
 
 object WorkspaceProperties {
   @scala.inline
-  def apply(): WorkspaceProperties = {
+  def apply(
+    ComputeTypeName: Compute = null,
+    RootVolumeSizeGib: js.UndefOr[RootVolumeSizeGib] = js.undefined,
+    RunningMode: RunningMode = null,
+    RunningModeAutoStopTimeoutInMinutes: js.UndefOr[RunningModeAutoStopTimeoutInMinutes] = js.undefined,
+    UserVolumeSizeGib: js.UndefOr[UserVolumeSizeGib] = js.undefined
+  ): WorkspaceProperties = {
     val __obj = js.Dynamic.literal()
+    if (ComputeTypeName != null) __obj.updateDynamic("ComputeTypeName")(ComputeTypeName.asInstanceOf[js.Any])
+    if (!js.isUndefined(RootVolumeSizeGib)) __obj.updateDynamic("RootVolumeSizeGib")(RootVolumeSizeGib.get.asInstanceOf[js.Any])
+    if (RunningMode != null) __obj.updateDynamic("RunningMode")(RunningMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(RunningModeAutoStopTimeoutInMinutes)) __obj.updateDynamic("RunningModeAutoStopTimeoutInMinutes")(RunningModeAutoStopTimeoutInMinutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UserVolumeSizeGib)) __obj.updateDynamic("UserVolumeSizeGib")(UserVolumeSizeGib.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkspaceProperties]
   }
-  @scala.inline
-  implicit class WorkspacePropertiesOps[Self <: WorkspaceProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComputeTypeName(value: Compute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputeTypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputeTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputeTypeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootVolumeSizeGib(value: RootVolumeSizeGib): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootVolumeSizeGib")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootVolumeSizeGib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootVolumeSizeGib")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunningMode(value: RunningMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunningMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunningMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunningMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunningModeAutoStopTimeoutInMinutes(value: RunningModeAutoStopTimeoutInMinutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunningModeAutoStopTimeoutInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunningModeAutoStopTimeoutInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunningModeAutoStopTimeoutInMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserVolumeSizeGib(value: UserVolumeSizeGib): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserVolumeSizeGib")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserVolumeSizeGib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserVolumeSizeGib")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

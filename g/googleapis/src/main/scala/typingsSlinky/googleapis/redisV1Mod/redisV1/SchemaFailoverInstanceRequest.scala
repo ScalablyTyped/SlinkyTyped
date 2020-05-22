@@ -19,29 +19,10 @@ trait SchemaFailoverInstanceRequest extends js.Object {
 
 object SchemaFailoverInstanceRequest {
   @scala.inline
-  def apply(): SchemaFailoverInstanceRequest = {
+  def apply(dataProtectionMode: String = null): SchemaFailoverInstanceRequest = {
     val __obj = js.Dynamic.literal()
+    if (dataProtectionMode != null) __obj.updateDynamic("dataProtectionMode")(dataProtectionMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFailoverInstanceRequest]
   }
-  @scala.inline
-  implicit class SchemaFailoverInstanceRequestOps[Self <: SchemaFailoverInstanceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataProtectionMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataProtectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataProtectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataProtectionMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

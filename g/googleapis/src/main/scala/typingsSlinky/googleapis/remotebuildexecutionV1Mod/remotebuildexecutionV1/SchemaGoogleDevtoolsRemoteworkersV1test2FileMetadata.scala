@@ -36,65 +36,18 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2FileMetadata extends js.Object {
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2FileMetadata {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2FileMetadata = {
+  def apply(
+    contents: String = null,
+    digest: SchemaGoogleDevtoolsRemoteworkersV1test2Digest = null,
+    isExecutable: js.UndefOr[Boolean] = js.undefined,
+    path: String = null
+  ): SchemaGoogleDevtoolsRemoteworkersV1test2FileMetadata = {
     val __obj = js.Dynamic.literal()
+    if (contents != null) __obj.updateDynamic("contents")(contents.asInstanceOf[js.Any])
+    if (digest != null) __obj.updateDynamic("digest")(digest.asInstanceOf[js.Any])
+    if (!js.isUndefined(isExecutable)) __obj.updateDynamic("isExecutable")(isExecutable.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2FileMetadata]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2FileMetadataOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2FileMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContents(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDigest(value: SchemaGoogleDevtoolsRemoteworkersV1test2Digest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsExecutable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExecutable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsExecutable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExecutable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

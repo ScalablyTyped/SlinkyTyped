@@ -6,87 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FancyThumbsOptions extends js.Object {
   /**
     * Display thumbnails on opening
     */
-  var autoStart: js.UndefOr[Boolean] = js.native
+  var autoStart: js.UndefOr[Boolean] = js.undefined
   /**
     * Vertical (y) or horizontal (x) scrolling
     */
-  var axis: js.UndefOr[x | y] = js.native
+  var axis: js.UndefOr[x | y] = js.undefined
   /**
     * Hide thumbnail grid when closing animation starts
     */
-  var hideOnClose: js.UndefOr[Boolean] = js.native
+  var hideOnClose: js.UndefOr[Boolean] = js.undefined
   /**
     * Container is injected into this element
     */
-  var parentEl: js.UndefOr[String] = js.native
+  var parentEl: js.UndefOr[String] = js.undefined
 }
 
 object FancyThumbsOptions {
   @scala.inline
-  def apply(): FancyThumbsOptions = {
+  def apply(
+    autoStart: js.UndefOr[Boolean] = js.undefined,
+    axis: x | y = null,
+    hideOnClose: js.UndefOr[Boolean] = js.undefined,
+    parentEl: String = null
+  ): FancyThumbsOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoStart)) __obj.updateDynamic("autoStart")(autoStart.get.asInstanceOf[js.Any])
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideOnClose)) __obj.updateDynamic("hideOnClose")(hideOnClose.get.asInstanceOf[js.Any])
+    if (parentEl != null) __obj.updateDynamic("parentEl")(parentEl.asInstanceOf[js.Any])
     __obj.asInstanceOf[FancyThumbsOptions]
   }
-  @scala.inline
-  implicit class FancyThumbsOptionsOps[Self <: FancyThumbsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoStart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxis(value: typingsSlinky.fancybox.fancyboxStrings.x | y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideOnClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentEl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentEl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentEl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentEl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

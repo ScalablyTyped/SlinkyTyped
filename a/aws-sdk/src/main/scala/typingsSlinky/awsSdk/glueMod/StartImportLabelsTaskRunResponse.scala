@@ -14,29 +14,10 @@ trait StartImportLabelsTaskRunResponse extends js.Object {
 
 object StartImportLabelsTaskRunResponse {
   @scala.inline
-  def apply(): StartImportLabelsTaskRunResponse = {
+  def apply(TaskRunId: HashString = null): StartImportLabelsTaskRunResponse = {
     val __obj = js.Dynamic.literal()
+    if (TaskRunId != null) __obj.updateDynamic("TaskRunId")(TaskRunId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartImportLabelsTaskRunResponse]
   }
-  @scala.inline
-  implicit class StartImportLabelsTaskRunResponseOps[Self <: StartImportLabelsTaskRunResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTaskRunId(value: HashString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskRunId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskRunId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

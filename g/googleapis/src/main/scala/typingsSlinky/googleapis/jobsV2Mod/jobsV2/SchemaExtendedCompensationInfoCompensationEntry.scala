@@ -50,101 +50,24 @@ trait SchemaExtendedCompensationInfoCompensationEntry extends js.Object {
 
 object SchemaExtendedCompensationInfoCompensationEntry {
   @scala.inline
-  def apply(): SchemaExtendedCompensationInfoCompensationEntry = {
+  def apply(
+    amount: SchemaExtendedCompensationInfoDecimal = null,
+    description: String = null,
+    expectedUnitsPerYear: SchemaExtendedCompensationInfoDecimal = null,
+    range: SchemaExtendedCompensationInfoCompensationRange = null,
+    `type`: String = null,
+    unit: String = null,
+    unspecified: js.UndefOr[Boolean] = js.undefined
+  ): SchemaExtendedCompensationInfoCompensationEntry = {
     val __obj = js.Dynamic.literal()
+    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (expectedUnitsPerYear != null) __obj.updateDynamic("expectedUnitsPerYear")(expectedUnitsPerYear.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
+    if (!js.isUndefined(unspecified)) __obj.updateDynamic("unspecified")(unspecified.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExtendedCompensationInfoCompensationEntry]
   }
-  @scala.inline
-  implicit class SchemaExtendedCompensationInfoCompensationEntryOps[Self <: SchemaExtendedCompensationInfoCompensationEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: SchemaExtendedCompensationInfoDecimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedUnitsPerYear(value: SchemaExtendedCompensationInfoDecimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedUnitsPerYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedUnitsPerYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedUnitsPerYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: SchemaExtendedCompensationInfoCompensationRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnspecified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unspecified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnspecified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unspecified")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,6 +16,8 @@ object global extends js.Object {
     def this(element: Node) = this()
     def this(element: Element, options: HeadroomOptions) = this()
     def this(element: Node, options: HeadroomOptions) = this()
+    /* CompleteClass */
+    override def init(): Unit = js.native
   }
   
 }

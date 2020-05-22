@@ -22,53 +22,12 @@ trait Stream extends js.Object {
 
 object Stream {
   @scala.inline
-  def apply(): Stream = {
+  def apply(StreamArn: StreamArn = null, StreamLabel: String = null, TableName: TableName = null): Stream = {
     val __obj = js.Dynamic.literal()
+    if (StreamArn != null) __obj.updateDynamic("StreamArn")(StreamArn.asInstanceOf[js.Any])
+    if (StreamLabel != null) __obj.updateDynamic("StreamLabel")(StreamLabel.asInstanceOf[js.Any])
+    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stream]
   }
-  @scala.inline
-  implicit class StreamOps[Self <: Stream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStreamArn(value: StreamArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableName(value: TableName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

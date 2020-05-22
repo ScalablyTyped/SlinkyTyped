@@ -22,13 +22,12 @@ import scala.scalajs.js.annotation._
   *         .build();
   *     }
   */
-@js.native
 trait GetDataResponse extends js.Object {
-  def addAllRows(rows: js.Array[js.Array[String]]): GetDataResponse = js.native
-  def addRow(row: js.Array[String]): GetDataResponse = js.native
-  def build(): js.Any = js.native
-  def setFields(fields: Fields): GetDataResponse = js.native
-  def setFiltersApplied(filtersApplied: Boolean): GetDataResponse = js.native
+  def addAllRows(rows: js.Array[js.Array[String]]): GetDataResponse
+  def addRow(row: js.Array[String]): GetDataResponse
+  def build(): js.Any
+  def setFields(fields: Fields): GetDataResponse
+  def setFiltersApplied(filtersApplied: Boolean): GetDataResponse
 }
 
 object GetDataResponse {
@@ -43,43 +42,5 @@ object GetDataResponse {
     val __obj = js.Dynamic.literal(addAllRows = js.Any.fromFunction1(addAllRows), addRow = js.Any.fromFunction1(addRow), build = js.Any.fromFunction0(build), setFields = js.Any.fromFunction1(setFields), setFiltersApplied = js.Any.fromFunction1(setFiltersApplied))
     __obj.asInstanceOf[GetDataResponse]
   }
-  @scala.inline
-  implicit class GetDataResponseOps[Self <: GetDataResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddAllRows(value: js.Array[js.Array[String]] => GetDataResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addAllRows")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddRow(value: js.Array[String] => GetDataResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withBuild(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetFields(value: Fields => GetDataResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFields")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFiltersApplied(value: Boolean => GetDataResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFiltersApplied")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

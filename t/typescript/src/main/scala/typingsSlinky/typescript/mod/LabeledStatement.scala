@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait LabeledStatement
   extends Statement
      with JSDocContainer
-     with HasJSDoc {
+     with _HasJSDoc {
   @JSName("kind")
   var kind_LabeledStatement: typingsSlinky.typescript.mod.SyntaxKind.LabeledStatement = js.native
   var label: Identifier = js.native

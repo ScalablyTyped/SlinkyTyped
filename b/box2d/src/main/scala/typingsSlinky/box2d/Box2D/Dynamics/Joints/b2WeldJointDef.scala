@@ -6,27 +6,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2WeldJointDef extends b2JointDef {
   /**
-  		* The local anchor point relative to body1's origin.
-  		**/
-  var localAnchorA: b2Vec2 = js.native
+    * The local anchor point relative to body1's origin.
+    **/
+  var localAnchorA: b2Vec2
   /**
-  		* The local anchor point relative to body2's origin.
-  		**/
-  var localAnchorB: b2Vec2 = js.native
+    * The local anchor point relative to body2's origin.
+    **/
+  var localAnchorB: b2Vec2
   /**
-  		* The body2 angle minus body1 angle in the reference state (radians).
-  		**/
-  var referenceAngle: Double = js.native
+    * The body2 angle minus body1 angle in the reference state (radians).
+    **/
+  var referenceAngle: Double
   /**
-  		* Initialize the bodies, anchors, axis, and reference angle using the world anchor and world axis.
-  		* @param bA Body A.
-  		* @param bB Body B.
-  		* @param anchor Anchor.
-  		**/
-  def Initialize(bA: b2Body, bB: b2Body, anchor: b2Vec2): Unit = js.native
+    * Initialize the bodies, anchors, axis, and reference angle using the world anchor and world axis.
+    * @param bA Body A.
+    * @param bB Body B.
+    * @param anchor Anchor.
+    **/
+  def Initialize(bA: b2Body, bB: b2Body, anchor: b2Vec2): Unit
 }
 
 object b2WeldJointDef {
@@ -46,37 +45,5 @@ object b2WeldJointDef {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2WeldJointDef]
   }
-  @scala.inline
-  implicit class b2WeldJointDefOps[Self <: b2WeldJointDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialize(value: (b2Body, b2Body, b2Vec2) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Initialize")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withLocalAnchorA(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocalAnchorB(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferenceAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

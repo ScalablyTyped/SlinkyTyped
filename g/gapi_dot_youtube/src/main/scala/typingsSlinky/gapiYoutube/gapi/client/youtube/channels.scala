@@ -9,16 +9,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait channels extends js.Object {
   /**
     * Returns a collection of zero or more channel resources that match the request criteria.
     */
-  def list(`object`: ForUsername): HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeChannelResource]] = js.native
+  def list(`object`: ForUsername): HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeChannelResource]]
   /**
     * Updates a channel's metadata.
     */
-  def update(`object`: RequestBody): HttpRequest[GoogleApiYouTubeChannelResource] = js.native
+  def update(`object`: RequestBody): HttpRequest[GoogleApiYouTubeChannelResource]
 }
 
 object channels {
@@ -30,25 +29,5 @@ object channels {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[channels]
   }
-  @scala.inline
-  implicit class channelsOps[Self <: channels] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withList(value: ForUsername => HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeChannelResource]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: RequestBody => HttpRequest[GoogleApiYouTubeChannelResource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,164 +1,217 @@
 package typingsSlinky.elasticElasticsearch.anon
 
-import typingsSlinky.elasticElasticsearch.mod.ApiMethod
 import typingsSlinky.elasticElasticsearch.mod.callbackFn
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterAllocationExplain
+import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterDeleteComponentTemplate
+import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterGetComponentTemplate
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterGetSettings
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterHealth
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterPendingTasks
+import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterPutComponentTemplate
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterPutSettings
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterRemoteInfo
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterReroute
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterState
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClusterStats
 import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
+import typingsSlinky.elasticElasticsearch.transportMod.RequestBody
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
+import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AllocationExplain extends js.Object {
-  @JSName("allocationExplain")
-  var allocationExplain_Original: ApiMethod[ClusterAllocationExplain[_], _] = js.native
-  @JSName("allocation_explain")
-  var allocation_explain_Original: ApiMethod[ClusterAllocationExplain[_], _] = js.native
-  @JSName("getSettings")
-  var getSettings_Original: ApiMethod[ClusterGetSettings, _] = js.native
-  @JSName("get_settings")
-  var get_settings_Original: ApiMethod[ClusterGetSettings, _] = js.native
-  @JSName("health")
-  var health_Original: ApiMethod[ClusterHealth, _] = js.native
-  @JSName("pendingTasks")
-  var pendingTasks_Original: ApiMethod[ClusterPendingTasks, _] = js.native
-  @JSName("pending_tasks")
-  var pending_tasks_Original: ApiMethod[ClusterPendingTasks, _] = js.native
-  @JSName("putSettings")
-  var putSettings_Original: ApiMethod[ClusterPutSettings[_], _] = js.native
-  @JSName("put_settings")
-  var put_settings_Original: ApiMethod[ClusterPutSettings[_], _] = js.native
-  @JSName("remoteInfo")
-  var remoteInfo_Original: ApiMethod[ClusterRemoteInfo, _] = js.native
-  @JSName("remote_info")
-  var remote_info_Original: ApiMethod[ClusterRemoteInfo, _] = js.native
-  @JSName("reroute")
-  var reroute_Original: ApiMethod[ClusterReroute[_], _] = js.native
-  @JSName("state")
-  var state_Original: ApiMethod[ClusterState, _] = js.native
-  @JSName("stats")
-  var stats_Original: ApiMethod[ClusterStats, _] = js.native
-  // Promise API
-  def allocationExplain(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def allocationExplain(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def allocationExplain(params: ClusterAllocationExplain[_]): js.Promise[ApiResponse[_, _]] = js.native
-  def allocationExplain(params: ClusterAllocationExplain[_], callback: callbackFn[_]): TransportRequestCallback = js.native
-  def allocationExplain(params: ClusterAllocationExplain[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def allocationExplain(params: ClusterAllocationExplain[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def allocation_explain(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def allocation_explain(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def allocation_explain(params: ClusterAllocationExplain[_]): js.Promise[ApiResponse[_, _]] = js.native
-  def allocation_explain(params: ClusterAllocationExplain[_], callback: callbackFn[_]): TransportRequestCallback = js.native
-  def allocation_explain(params: ClusterAllocationExplain[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def allocation_explain(params: ClusterAllocationExplain[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def getSettings(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def getSettings(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def getSettings(params: ClusterGetSettings): js.Promise[ApiResponse[_, _]] = js.native
-  def getSettings(params: ClusterGetSettings, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def getSettings(params: ClusterGetSettings, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def getSettings(params: ClusterGetSettings, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def get_settings(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def get_settings(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def get_settings(params: ClusterGetSettings): js.Promise[ApiResponse[_, _]] = js.native
-  def get_settings(params: ClusterGetSettings, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def get_settings(params: ClusterGetSettings, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def get_settings(params: ClusterGetSettings, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def health(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def health(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def health(params: ClusterHealth): js.Promise[ApiResponse[_, _]] = js.native
-  def health(params: ClusterHealth, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def health(params: ClusterHealth, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def health(params: ClusterHealth, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def pendingTasks(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def pendingTasks(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def pendingTasks(params: ClusterPendingTasks): js.Promise[ApiResponse[_, _]] = js.native
-  def pendingTasks(params: ClusterPendingTasks, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def pendingTasks(params: ClusterPendingTasks, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def pendingTasks(params: ClusterPendingTasks, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def pending_tasks(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def pending_tasks(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def pending_tasks(params: ClusterPendingTasks): js.Promise[ApiResponse[_, _]] = js.native
-  def pending_tasks(params: ClusterPendingTasks, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def pending_tasks(params: ClusterPendingTasks, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def pending_tasks(params: ClusterPendingTasks, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def putSettings(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def putSettings(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def putSettings(params: ClusterPutSettings[_]): js.Promise[ApiResponse[_, _]] = js.native
-  def putSettings(params: ClusterPutSettings[_], callback: callbackFn[_]): TransportRequestCallback = js.native
-  def putSettings(params: ClusterPutSettings[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def putSettings(params: ClusterPutSettings[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def put_settings(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def put_settings(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def put_settings(params: ClusterPutSettings[_]): js.Promise[ApiResponse[_, _]] = js.native
-  def put_settings(params: ClusterPutSettings[_], callback: callbackFn[_]): TransportRequestCallback = js.native
-  def put_settings(params: ClusterPutSettings[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def put_settings(params: ClusterPutSettings[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def remoteInfo(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def remoteInfo(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def remoteInfo(params: ClusterRemoteInfo): js.Promise[ApiResponse[_, _]] = js.native
-  def remoteInfo(params: ClusterRemoteInfo, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def remoteInfo(params: ClusterRemoteInfo, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def remoteInfo(params: ClusterRemoteInfo, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def remote_info(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def remote_info(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def remote_info(params: ClusterRemoteInfo): js.Promise[ApiResponse[_, _]] = js.native
-  def remote_info(params: ClusterRemoteInfo, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def remote_info(params: ClusterRemoteInfo, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def remote_info(params: ClusterRemoteInfo, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def reroute(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def reroute(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def reroute(params: ClusterReroute[_]): js.Promise[ApiResponse[_, _]] = js.native
-  def reroute(params: ClusterReroute[_], callback: callbackFn[_]): TransportRequestCallback = js.native
-  def reroute(params: ClusterReroute[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def reroute(params: ClusterReroute[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def state(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def state(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def state(params: ClusterState): js.Promise[ApiResponse[_, _]] = js.native
-  def state(params: ClusterState, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def state(params: ClusterState, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def state(params: ClusterState, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def stats(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def stats(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def stats(params: ClusterStats): js.Promise[ApiResponse[_, _]] = js.native
-  def stats(params: ClusterStats, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def stats(params: ClusterStats, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def stats(params: ClusterStats, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
+  def allocationExplain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def allocationExplain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def allocationExplain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterAllocationExplain[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def allocationExplain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterAllocationExplain[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def allocationExplain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterAllocationExplain[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def allocationExplain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClusterAllocationExplain[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def allocation_explain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def allocation_explain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def allocation_explain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterAllocationExplain[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def allocation_explain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterAllocationExplain[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def allocation_explain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterAllocationExplain[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def allocation_explain[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClusterAllocationExplain[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def deleteComponentTemplate[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deleteComponentTemplate[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def deleteComponentTemplate[TResponse, TContext](params: ClusterDeleteComponentTemplate): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deleteComponentTemplate[TResponse, TContext](params: ClusterDeleteComponentTemplate, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def deleteComponentTemplate[TResponse, TContext](params: ClusterDeleteComponentTemplate, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deleteComponentTemplate[TResponse, TContext](
+    params: ClusterDeleteComponentTemplate,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def delete_component_template[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def delete_component_template[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def delete_component_template[TResponse, TContext](params: ClusterDeleteComponentTemplate): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def delete_component_template[TResponse, TContext](params: ClusterDeleteComponentTemplate, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def delete_component_template[TResponse, TContext](params: ClusterDeleteComponentTemplate, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def delete_component_template[TResponse, TContext](
+    params: ClusterDeleteComponentTemplate,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def getComponentTemplate[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getComponentTemplate[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def getComponentTemplate[TResponse, TContext](params: ClusterGetComponentTemplate): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getComponentTemplate[TResponse, TContext](params: ClusterGetComponentTemplate, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def getComponentTemplate[TResponse, TContext](params: ClusterGetComponentTemplate, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getComponentTemplate[TResponse, TContext](
+    params: ClusterGetComponentTemplate,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def getSettings[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getSettings[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def getSettings[TResponse, TContext](params: ClusterGetSettings): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getSettings[TResponse, TContext](params: ClusterGetSettings, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def getSettings[TResponse, TContext](params: ClusterGetSettings, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getSettings[TResponse, TContext](
+    params: ClusterGetSettings,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def get_component_template[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_component_template[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get_component_template[TResponse, TContext](params: ClusterGetComponentTemplate): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_component_template[TResponse, TContext](params: ClusterGetComponentTemplate, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get_component_template[TResponse, TContext](params: ClusterGetComponentTemplate, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_component_template[TResponse, TContext](
+    params: ClusterGetComponentTemplate,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def get_settings[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_settings[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get_settings[TResponse, TContext](params: ClusterGetSettings): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_settings[TResponse, TContext](params: ClusterGetSettings, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get_settings[TResponse, TContext](params: ClusterGetSettings, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_settings[TResponse, TContext](
+    params: ClusterGetSettings,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def health[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def health[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def health[TResponse, TContext](params: ClusterHealth): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def health[TResponse, TContext](params: ClusterHealth, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def health[TResponse, TContext](params: ClusterHealth, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def health[TResponse, TContext](params: ClusterHealth, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def pendingTasks[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def pendingTasks[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def pendingTasks[TResponse, TContext](params: ClusterPendingTasks): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def pendingTasks[TResponse, TContext](params: ClusterPendingTasks, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def pendingTasks[TResponse, TContext](params: ClusterPendingTasks, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def pendingTasks[TResponse, TContext](
+    params: ClusterPendingTasks,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def pending_tasks[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def pending_tasks[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def pending_tasks[TResponse, TContext](params: ClusterPendingTasks): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def pending_tasks[TResponse, TContext](params: ClusterPendingTasks, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def pending_tasks[TResponse, TContext](params: ClusterPendingTasks, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def pending_tasks[TResponse, TContext](
+    params: ClusterPendingTasks,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def putComponentTemplate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putComponentTemplate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def putComponentTemplate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutComponentTemplate[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putComponentTemplate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutComponentTemplate[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def putComponentTemplate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutComponentTemplate[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putComponentTemplate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClusterPutComponentTemplate[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def putSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def putSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutSettings[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutSettings[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def putSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutSettings[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClusterPutSettings[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def put_component_template[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_component_template[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def put_component_template[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutComponentTemplate[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_component_template[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutComponentTemplate[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def put_component_template[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutComponentTemplate[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_component_template[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClusterPutComponentTemplate[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def put_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def put_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutSettings[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutSettings[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def put_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterPutSettings[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClusterPutSettings[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def remoteInfo[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def remoteInfo[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def remoteInfo[TResponse, TContext](params: ClusterRemoteInfo): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def remoteInfo[TResponse, TContext](params: ClusterRemoteInfo, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def remoteInfo[TResponse, TContext](params: ClusterRemoteInfo, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def remoteInfo[TResponse, TContext](
+    params: ClusterRemoteInfo,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def remote_info[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def remote_info[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def remote_info[TResponse, TContext](params: ClusterRemoteInfo): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def remote_info[TResponse, TContext](params: ClusterRemoteInfo, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def remote_info[TResponse, TContext](params: ClusterRemoteInfo, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def remote_info[TResponse, TContext](
+    params: ClusterRemoteInfo,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def reroute[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def reroute[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def reroute[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterReroute[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def reroute[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterReroute[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def reroute[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClusterReroute[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def reroute[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClusterReroute[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def state[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def state[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def state[TResponse, TContext](params: ClusterState): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def state[TResponse, TContext](params: ClusterState, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def state[TResponse, TContext](params: ClusterState, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def state[TResponse, TContext](params: ClusterState, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def stats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def stats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def stats[TResponse, TContext](params: ClusterStats): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def stats[TResponse, TContext](params: ClusterStats, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def stats[TResponse, TContext](params: ClusterStats, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def stats[TResponse, TContext](params: ClusterStats, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
 }
 

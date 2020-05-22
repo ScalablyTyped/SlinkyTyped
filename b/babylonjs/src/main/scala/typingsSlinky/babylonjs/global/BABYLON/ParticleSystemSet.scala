@@ -7,7 +7,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("BABYLON.ParticleSystemSet")
 @js.native
 class ParticleSystemSet ()
-  extends typingsSlinky.babylonjs.BABYLON.ParticleSystemSet
+  extends typingsSlinky.babylonjs.BABYLON.ParticleSystemSet {
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("BABYLON.ParticleSystemSet")

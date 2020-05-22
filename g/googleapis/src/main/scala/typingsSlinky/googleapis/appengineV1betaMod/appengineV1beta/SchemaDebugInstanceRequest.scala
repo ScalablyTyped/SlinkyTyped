@@ -21,29 +21,10 @@ trait SchemaDebugInstanceRequest extends js.Object {
 
 object SchemaDebugInstanceRequest {
   @scala.inline
-  def apply(): SchemaDebugInstanceRequest = {
+  def apply(sshKey: String = null): SchemaDebugInstanceRequest = {
     val __obj = js.Dynamic.literal()
+    if (sshKey != null) __obj.updateDynamic("sshKey")(sshKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDebugInstanceRequest]
   }
-  @scala.inline
-  implicit class SchemaDebugInstanceRequestOps[Self <: SchemaDebugInstanceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSshKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sshKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSshKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sshKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DescribeResourcePermissionsResponse extends js.Object {
 
 object DescribeResourcePermissionsResponse {
   @scala.inline
-  def apply(): DescribeResourcePermissionsResponse = {
+  def apply(Marker: PageMarkerType = null, Principals: PrincipalList = null): DescribeResourcePermissionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (Principals != null) __obj.updateDynamic("Principals")(Principals.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeResourcePermissionsResponse]
   }
-  @scala.inline
-  implicit class DescribeResourcePermissionsResponseOps[Self <: DescribeResourcePermissionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: PageMarkerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrincipals(value: PrincipalList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Principals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Principals")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

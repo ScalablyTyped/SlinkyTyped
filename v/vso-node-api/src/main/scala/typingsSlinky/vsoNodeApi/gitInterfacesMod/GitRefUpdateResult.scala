@@ -4,44 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GitRefUpdateResult extends js.Object {
   /**
     * Custom message for the result object For instance, Reason for failing.
     */
-  var customMessage: String = js.native
+  var customMessage: String
   /**
     * Whether the ref is locked or not
     */
-  var isLocked: Boolean = js.native
+  var isLocked: Boolean
   /**
     * Ref name
     */
-  var name: String = js.native
+  var name: String
   /**
     * New object ID
     */
-  var newObjectId: String = js.native
+  var newObjectId: String
   /**
     * Old object ID
     */
-  var oldObjectId: String = js.native
+  var oldObjectId: String
   /**
     * Name of the plugin that rejected the updated.
     */
-  var rejectedBy: String = js.native
+  var rejectedBy: String
   /**
     * Repository ID
     */
-  var repositoryId: String = js.native
+  var repositoryId: String
   /**
     * True if the ref update succeeded, false otherwise
     */
-  var success: Boolean = js.native
+  var success: Boolean
   /**
     * Status of the update from the TFS server.
     */
-  var updateStatus: GitRefUpdateStatus = js.native
+  var updateStatus: GitRefUpdateStatus
 }
 
 object GitRefUpdateResult {
@@ -60,67 +59,5 @@ object GitRefUpdateResult {
     val __obj = js.Dynamic.literal(customMessage = customMessage.asInstanceOf[js.Any], isLocked = isLocked.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], newObjectId = newObjectId.asInstanceOf[js.Any], oldObjectId = oldObjectId.asInstanceOf[js.Any], rejectedBy = rejectedBy.asInstanceOf[js.Any], repositoryId = repositoryId.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any], updateStatus = updateStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitRefUpdateResult]
   }
-  @scala.inline
-  implicit class GitRefUpdateResultOps[Self <: GitRefUpdateResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsLocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newObjectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldObjectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRejectedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepositoryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateStatus(value: GitRefUpdateStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

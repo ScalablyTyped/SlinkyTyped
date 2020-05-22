@@ -14,29 +14,10 @@ trait DeletePlatformVersionResult extends js.Object {
 
 object DeletePlatformVersionResult {
   @scala.inline
-  def apply(): DeletePlatformVersionResult = {
+  def apply(PlatformSummary: PlatformSummary = null): DeletePlatformVersionResult = {
     val __obj = js.Dynamic.literal()
+    if (PlatformSummary != null) __obj.updateDynamic("PlatformSummary")(PlatformSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeletePlatformVersionResult]
   }
-  @scala.inline
-  implicit class DeletePlatformVersionResultOps[Self <: DeletePlatformVersionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlatformSummary(value: PlatformSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformSummary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -210,461 +210,84 @@ trait SchemaVersion extends js.Object {
 
 object SchemaVersion {
   @scala.inline
-  def apply(): SchemaVersion = {
+  def apply(
+    apiConfig: SchemaApiConfigHandler = null,
+    automaticScaling: SchemaAutomaticScaling = null,
+    basicScaling: SchemaBasicScaling = null,
+    betaSettings: StringDictionary[String] = null,
+    createTime: String = null,
+    createdBy: String = null,
+    defaultExpiration: String = null,
+    deployment: SchemaDeployment = null,
+    diskUsageBytes: String = null,
+    endpointsApiService: SchemaEndpointsApiService = null,
+    entrypoint: SchemaEntrypoint = null,
+    env: String = null,
+    envVariables: StringDictionary[String] = null,
+    errorHandlers: js.Array[SchemaErrorHandler] = null,
+    handlers: js.Array[SchemaUrlMap] = null,
+    healthCheck: SchemaHealthCheck = null,
+    id: String = null,
+    inboundServices: js.Array[String] = null,
+    instanceClass: String = null,
+    libraries: js.Array[SchemaLibrary] = null,
+    livenessCheck: SchemaLivenessCheck = null,
+    manualScaling: SchemaManualScaling = null,
+    name: String = null,
+    network: SchemaNetwork = null,
+    nobuildFilesRegex: String = null,
+    readinessCheck: SchemaReadinessCheck = null,
+    resources: SchemaResources = null,
+    runtime: String = null,
+    runtimeApiVersion: String = null,
+    runtimeChannel: String = null,
+    runtimeMainExecutablePath: String = null,
+    servingStatus: String = null,
+    threadsafe: js.UndefOr[Boolean] = js.undefined,
+    versionUrl: String = null,
+    vm: js.UndefOr[Boolean] = js.undefined,
+    vpcAccessConnector: SchemaVpcAccessConnector = null,
+    zones: js.Array[String] = null
+  ): SchemaVersion = {
     val __obj = js.Dynamic.literal()
+    if (apiConfig != null) __obj.updateDynamic("apiConfig")(apiConfig.asInstanceOf[js.Any])
+    if (automaticScaling != null) __obj.updateDynamic("automaticScaling")(automaticScaling.asInstanceOf[js.Any])
+    if (basicScaling != null) __obj.updateDynamic("basicScaling")(basicScaling.asInstanceOf[js.Any])
+    if (betaSettings != null) __obj.updateDynamic("betaSettings")(betaSettings.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (createdBy != null) __obj.updateDynamic("createdBy")(createdBy.asInstanceOf[js.Any])
+    if (defaultExpiration != null) __obj.updateDynamic("defaultExpiration")(defaultExpiration.asInstanceOf[js.Any])
+    if (deployment != null) __obj.updateDynamic("deployment")(deployment.asInstanceOf[js.Any])
+    if (diskUsageBytes != null) __obj.updateDynamic("diskUsageBytes")(diskUsageBytes.asInstanceOf[js.Any])
+    if (endpointsApiService != null) __obj.updateDynamic("endpointsApiService")(endpointsApiService.asInstanceOf[js.Any])
+    if (entrypoint != null) __obj.updateDynamic("entrypoint")(entrypoint.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (envVariables != null) __obj.updateDynamic("envVariables")(envVariables.asInstanceOf[js.Any])
+    if (errorHandlers != null) __obj.updateDynamic("errorHandlers")(errorHandlers.asInstanceOf[js.Any])
+    if (handlers != null) __obj.updateDynamic("handlers")(handlers.asInstanceOf[js.Any])
+    if (healthCheck != null) __obj.updateDynamic("healthCheck")(healthCheck.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inboundServices != null) __obj.updateDynamic("inboundServices")(inboundServices.asInstanceOf[js.Any])
+    if (instanceClass != null) __obj.updateDynamic("instanceClass")(instanceClass.asInstanceOf[js.Any])
+    if (libraries != null) __obj.updateDynamic("libraries")(libraries.asInstanceOf[js.Any])
+    if (livenessCheck != null) __obj.updateDynamic("livenessCheck")(livenessCheck.asInstanceOf[js.Any])
+    if (manualScaling != null) __obj.updateDynamic("manualScaling")(manualScaling.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (nobuildFilesRegex != null) __obj.updateDynamic("nobuildFilesRegex")(nobuildFilesRegex.asInstanceOf[js.Any])
+    if (readinessCheck != null) __obj.updateDynamic("readinessCheck")(readinessCheck.asInstanceOf[js.Any])
+    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
+    if (runtime != null) __obj.updateDynamic("runtime")(runtime.asInstanceOf[js.Any])
+    if (runtimeApiVersion != null) __obj.updateDynamic("runtimeApiVersion")(runtimeApiVersion.asInstanceOf[js.Any])
+    if (runtimeChannel != null) __obj.updateDynamic("runtimeChannel")(runtimeChannel.asInstanceOf[js.Any])
+    if (runtimeMainExecutablePath != null) __obj.updateDynamic("runtimeMainExecutablePath")(runtimeMainExecutablePath.asInstanceOf[js.Any])
+    if (servingStatus != null) __obj.updateDynamic("servingStatus")(servingStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(threadsafe)) __obj.updateDynamic("threadsafe")(threadsafe.get.asInstanceOf[js.Any])
+    if (versionUrl != null) __obj.updateDynamic("versionUrl")(versionUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(vm)) __obj.updateDynamic("vm")(vm.get.asInstanceOf[js.Any])
+    if (vpcAccessConnector != null) __obj.updateDynamic("vpcAccessConnector")(vpcAccessConnector.asInstanceOf[js.Any])
+    if (zones != null) __obj.updateDynamic("zones")(zones.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVersion]
   }
-  @scala.inline
-  implicit class SchemaVersionOps[Self <: SchemaVersion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiConfig(value: SchemaApiConfigHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomaticScaling(value: SchemaAutomaticScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasicScaling(value: SchemaBasicScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasicScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBetaSettings(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("betaSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBetaSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("betaSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultExpiration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultExpiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultExpiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeployment(value: SchemaDeployment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deployment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeployment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deployment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskUsageBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskUsageBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskUsageBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskUsageBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpointsApiService(value: SchemaEndpointsApiService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointsApiService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointsApiService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointsApiService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntrypoint(value: SchemaEntrypoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entrypoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntrypoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entrypoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvVariables(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envVariables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorHandlers(value: js.Array[SchemaErrorHandler]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandlers(value: js.Array[SchemaUrlMap]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheck(value: SchemaHealthCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInboundServices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inboundServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInboundServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inboundServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLibraries(value: js.Array[SchemaLibrary]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libraries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLibraries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libraries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLivenessCheck(value: SchemaLivenessCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livenessCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLivenessCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livenessCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManualScaling(value: SchemaManualScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManualScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: SchemaNetwork): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNobuildFilesRegex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nobuildFilesRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNobuildFilesRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nobuildFilesRegex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadinessCheck(value: SchemaReadinessCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readinessCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadinessCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readinessCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: SchemaResources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntimeApiVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeApiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntimeApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeApiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntimeChannel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeChannel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntimeChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeChannel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntimeMainExecutablePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeMainExecutablePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntimeMainExecutablePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeMainExecutablePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServingStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servingStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServingStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servingStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreadsafe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadsafe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreadsafe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadsafe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVm(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcAccessConnector(value: SchemaVpcAccessConnector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcAccessConnector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcAccessConnector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcAccessConnector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZones(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

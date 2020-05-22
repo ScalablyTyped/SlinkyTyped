@@ -6,33 +6,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScaleData extends js.Object {
   /** if true an {@link AxisType} CATEGORY is interpreted as DATE if the underlying data given in Categories are dates */
-  var AutoDateAxis: Boolean = js.native
+  var AutoDateAxis: Boolean
   /**
     * describes the type of the axis.
     *
     * It can be a real number axis or a category axis or something else. {@link AxisType} is one value out of the constant group {@link AxisType} .
     */
-  var AxisType: Double = js.native
-  var Categories: XLabeledDataSequence = js.native
+  var AxisType: Double
+  var Categories: XLabeledDataSequence
   /** increment data to be used for not date-time axis */
-  var IncrementData: typingsSlinky.activexLibreoffice.com_.sun.star.chart2.IncrementData = js.native
+  var IncrementData: typingsSlinky.activexLibreoffice.com_.sun.star.chart2.IncrementData
   /**
     * if the any contains a double value this is used as a fixed minimum. Otherwise, if the any is empty or contains an incompatible type, the minimum is
     * automatic.
     *
     * If the minimum is automatic, this means, each view that represents the model containing this scale, has to calculate a minimum by its own means.
     */
-  var Maximum: js.Any = js.native
+  var Maximum: js.Any
   /**
     * if the any contains a double value this is used as a fixed maximum. Otherwise, if the any is empty or contains an incompatible type, the maximum is
     * automatic.
     *
     * If the maximum is automatic, this means, each view that represents the model containing this scale, has to calculate a maximum by its own means.
     */
-  var Minimum: js.Any = js.native
+  var Minimum: js.Any
   /**
     * {@link Axis} orientation (standard or reversed).
     *
@@ -41,20 +40,20 @@ trait ScaleData extends js.Object {
     *
     * Note: Is this a good place for the axis orientation? Two axes may use the same scale, but point into two different directions.
     */
-  var Orientation: AxisOrientation = js.native
+  var Orientation: AxisOrientation
   /**
     * The Origin indicates where other axes cross this axis. If the any contains a double value that value is used. Otherwise an appropriate value has to be
     * calculated by that instances using Origin.
     */
-  var Origin: js.Any = js.native
-  var Scaling: XScaling = js.native
+  var Origin: js.Any
+  var Scaling: XScaling
   /**
     * describes whether data points on category or date axis are placed between tickmarks or not if true the maximum on the scale will be expanded for one
     * interval
     */
-  var ShiftedCategoryPosition: Boolean = js.native
+  var ShiftedCategoryPosition: Boolean
   /** increment data to be used in case of date-time axis */
-  var TimeIncrement: typingsSlinky.activexLibreoffice.com_.sun.star.chart.TimeIncrement = js.native
+  var TimeIncrement: typingsSlinky.activexLibreoffice.com_.sun.star.chart.TimeIncrement
 }
 
 object ScaleData {
@@ -75,79 +74,5 @@ object ScaleData {
     val __obj = js.Dynamic.literal(AutoDateAxis = AutoDateAxis.asInstanceOf[js.Any], AxisType = AxisType.asInstanceOf[js.Any], Categories = Categories.asInstanceOf[js.Any], IncrementData = IncrementData.asInstanceOf[js.Any], Maximum = Maximum.asInstanceOf[js.Any], Minimum = Minimum.asInstanceOf[js.Any], Orientation = Orientation.asInstanceOf[js.Any], Origin = Origin.asInstanceOf[js.Any], Scaling = Scaling.asInstanceOf[js.Any], ShiftedCategoryPosition = ShiftedCategoryPosition.asInstanceOf[js.Any], TimeIncrement = TimeIncrement.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScaleData]
   }
-  @scala.inline
-  implicit class ScaleDataOps[Self <: ScaleData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoDateAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDateAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxisType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AxisType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategories(value: XLabeledDataSequence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncrementData(value: IncrementData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncrementData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaximum(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Maximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinimum(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Minimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: AxisOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScaling(value: XScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShiftedCategoryPosition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShiftedCategoryPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeIncrement(value: TimeIncrement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

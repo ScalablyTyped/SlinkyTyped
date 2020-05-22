@@ -26,65 +26,18 @@ trait ConfigStreamDeliveryInfo extends js.Object {
 
 object ConfigStreamDeliveryInfo {
   @scala.inline
-  def apply(): ConfigStreamDeliveryInfo = {
+  def apply(
+    lastErrorCode: String = null,
+    lastErrorMessage: String = null,
+    lastStatus: DeliveryStatus = null,
+    lastStatusChangeTime: js.Date = null
+  ): ConfigStreamDeliveryInfo = {
     val __obj = js.Dynamic.literal()
+    if (lastErrorCode != null) __obj.updateDynamic("lastErrorCode")(lastErrorCode.asInstanceOf[js.Any])
+    if (lastErrorMessage != null) __obj.updateDynamic("lastErrorMessage")(lastErrorMessage.asInstanceOf[js.Any])
+    if (lastStatus != null) __obj.updateDynamic("lastStatus")(lastStatus.asInstanceOf[js.Any])
+    if (lastStatusChangeTime != null) __obj.updateDynamic("lastStatusChangeTime")(lastStatusChangeTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigStreamDeliveryInfo]
   }
-  @scala.inline
-  implicit class ConfigStreamDeliveryInfoOps[Self <: ConfigStreamDeliveryInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastErrorCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastStatus(value: DeliveryStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastStatusChangeTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatusChangeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastStatusChangeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatusChangeTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

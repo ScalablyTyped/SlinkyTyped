@@ -5,112 +5,40 @@ import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BreadcrumbItemProps extends js.Object {
-  var href: js.UndefOr[String] = js.native
-  var onClick: js.UndefOr[MouseEventHandler[HTMLAnchorElement | HTMLSpanElement]] = js.native
-  var overlay: js.UndefOr[ReactElement | OverlayFunc] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var separator: js.UndefOr[TagMod[Any]] = js.native
+  var dropdownProps: js.UndefOr[DropDownProps] = js.undefined
+  var href: js.UndefOr[String] = js.undefined
+  var onClick: js.UndefOr[MouseEventHandler[HTMLAnchorElement | HTMLSpanElement]] = js.undefined
+  var overlay: js.UndefOr[ReactElement | OverlayFunc] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var separator: js.UndefOr[TagMod[Any]] = js.undefined
 }
 
 object BreadcrumbItemProps {
   @scala.inline
-  def apply(): BreadcrumbItemProps = {
+  def apply(
+    dropdownProps: DropDownProps = null,
+    href: String = null,
+    onClick: SyntheticMouseEvent[HTMLAnchorElement | HTMLSpanElement] => Unit = null,
+    overlay: ReactElement | OverlayFunc = null,
+    prefixCls: String = null,
+    separator: TagMod[Any] = null
+  ): BreadcrumbItemProps = {
     val __obj = js.Dynamic.literal()
+    if (dropdownProps != null) __obj.updateDynamic("dropdownProps")(dropdownProps.asInstanceOf[js.Any])
+    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
     __obj.asInstanceOf[BreadcrumbItemProps]
   }
-  @scala.inline
-  implicit class BreadcrumbItemPropsOps[Self <: BreadcrumbItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: SyntheticMouseEvent[HTMLAnchorElement | HTMLSpanElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverlayFunction0(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: ReactElement | OverlayFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparatorReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -36,8 +36,25 @@ abstract class RemoteEntitySourceDocument protected () extends Document {
   ) = this()
   @JSName("model")
   var model_FRemoteEntitySourceDocument: IModel = js.native
+  /**
+    * In version 8.10.0: introduced
+    */
+  def catalogUrl: String = js.native
+  def catalogUrl(newValue: String): js.Any = js.native
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MRemoteEntitySourceDocument: FolderBase = js.native
+  /**
+    * In version 8.10.0: introduced
+    */
+  def description: String = js.native
+  def description(newValue: String): js.Any = js.native
+  def icon(): js.Any = js.native
+  def icon(newValue: String): js.Any = js.native
+  /**
+    * In version 8.10.0: introduced
+    */
+  @JSName("icon")
+  def icon_Union: String | Null = js.native
 }
 
 /* static members */

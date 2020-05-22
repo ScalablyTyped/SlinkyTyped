@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NuxtOptions extends js.Object {
-  var buildDir: js.UndefOr[String] = js.native
-  var srcDir: js.UndefOr[String] = js.native
+  var buildDir: js.UndefOr[String] = js.undefined
+  var srcDir: js.UndefOr[String] = js.undefined
 }
 
 object NuxtOptions {
   @scala.inline
-  def apply(): NuxtOptions = {
+  def apply(buildDir: String = null, srcDir: String = null): NuxtOptions = {
     val __obj = js.Dynamic.literal()
+    if (buildDir != null) __obj.updateDynamic("buildDir")(buildDir.asInstanceOf[js.Any])
+    if (srcDir != null) __obj.updateDynamic("srcDir")(srcDir.asInstanceOf[js.Any])
     __obj.asInstanceOf[NuxtOptions]
   }
-  @scala.inline
-  implicit class NuxtOptionsOps[Self <: NuxtOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuildDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuildDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcDir")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

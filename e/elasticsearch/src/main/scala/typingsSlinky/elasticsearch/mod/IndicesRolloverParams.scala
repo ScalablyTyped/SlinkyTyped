@@ -4,88 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndicesRolloverParams extends GenericParams {
-  var alias: js.UndefOr[String] = js.native
-  var masterTimeout: js.UndefOr[TimeSpan] = js.native
-  var newIndex: js.UndefOr[String] = js.native
-  var timeout: js.UndefOr[TimeSpan] = js.native
-  var waitForActiveShards: js.UndefOr[Double | String] = js.native
+  var alias: js.UndefOr[String] = js.undefined
+  var masterTimeout: js.UndefOr[TimeSpan] = js.undefined
+  var newIndex: js.UndefOr[String] = js.undefined
+  var timeout: js.UndefOr[TimeSpan] = js.undefined
+  var waitForActiveShards: js.UndefOr[Double | String] = js.undefined
 }
 
 object IndicesRolloverParams {
   @scala.inline
-  def apply(): IndicesRolloverParams = {
+  def apply(
+    alias: String = null,
+    body: js.Any = null,
+    filterPath: String | js.Array[String] = null,
+    ignore: Double | js.Array[Double] = null,
+    masterTimeout: TimeSpan = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    newIndex: String = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    timeout: TimeSpan = null,
+    waitForActiveShards: Double | String = null
+  ): IndicesRolloverParams = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (masterTimeout != null) __obj.updateDynamic("masterTimeout")(masterTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (newIndex != null) __obj.updateDynamic("newIndex")(newIndex.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (waitForActiveShards != null) __obj.updateDynamic("waitForActiveShards")(waitForActiveShards.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesRolloverParams]
   }
-  @scala.inline
-  implicit class IndicesRolloverParamsOps[Self <: IndicesRolloverParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForActiveShards(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForActiveShards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForActiveShards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForActiveShards")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

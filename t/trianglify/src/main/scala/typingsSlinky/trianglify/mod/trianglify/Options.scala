@@ -5,189 +5,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /** Size of the cells used to generate a randomized grid */
-  var cell_size: js.UndefOr[Double] = js.native
+  var cell_size: js.UndefOr[Double] = js.undefined
   /** Color function f(x, y) that returns a color specification that is consumable by chroma-js */
-  var color_function: js.UndefOr[(js.Function2[/* x */ Double, /* y */ Double, String]) | Null] = js.native
+  var color_function: js.UndefOr[(js.Function2[/* x */ Double, /* y */ Double, String]) | Null] = js.undefined
   /** Color space used for gradient construction & interpolation */
-  var color_space: js.UndefOr[String] = js.native
+  var color_space: js.UndefOr[String] = js.undefined
   /** Height of pattern */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /** An array of [x,y] coordinates to trianglulate. Defaults to undefined, and points are generated. */
-  var points: js.UndefOr[js.Array[Double]] = js.native
+  var points: js.UndefOr[js.Array[Double]] = js.undefined
   /** Seed for the RNG */
-  var seed: js.UndefOr[Double | String | Null] = js.native
+  var seed: js.UndefOr[Double | String | Null] = js.undefined
   /** Width of stroke. Defaults to 1.51 to fix an issue with canvas antialiasing. */
-  var stroke_width: js.UndefOr[Double] = js.native
+  var stroke_width: js.UndefOr[Double] = js.undefined
   /** how much to randomize the grid */
-  var variance: js.UndefOr[Double] = js.native
+  var variance: js.UndefOr[Double] = js.undefined
   /** Width of pattern */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
   /** X color stops */
-  var x_colors: js.UndefOr[`false` | String | js.Array[String]] = js.native
+  var x_colors: js.UndefOr[`false` | String | js.Array[String]] = js.undefined
   /** Y color stops */
-  var y_colors: js.UndefOr[`false` | String | js.Array[String]] = js.native
+  var y_colors: js.UndefOr[`false` | String | js.Array[String]] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    cell_size: js.UndefOr[Double] = js.undefined,
+    color_function: js.UndefOr[Null | ((/* x */ Double, /* y */ Double) => String)] = js.undefined,
+    color_space: String = null,
+    height: js.UndefOr[Double] = js.undefined,
+    points: js.Array[Double] = null,
+    seed: js.UndefOr[Null | Double | String] = js.undefined,
+    stroke_width: js.UndefOr[Double] = js.undefined,
+    variance: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined,
+    x_colors: `false` | String | js.Array[String] = null,
+    y_colors: `false` | String | js.Array[String] = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cell_size)) __obj.updateDynamic("cell_size")(cell_size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(color_function)) __obj.updateDynamic("color_function")(if (color_function != null) js.Any.fromFunction2(color_function.asInstanceOf[(/* x */ Double, /* y */ Double) => String]) else null)
+    if (color_space != null) __obj.updateDynamic("color_space")(color_space.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
+    if (!js.isUndefined(seed)) __obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
+    if (!js.isUndefined(stroke_width)) __obj.updateDynamic("stroke_width")(stroke_width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(variance)) __obj.updateDynamic("variance")(variance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (x_colors != null) __obj.updateDynamic("x_colors")(x_colors.asInstanceOf[js.Any])
+    if (y_colors != null) __obj.updateDynamic("y_colors")(y_colors.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCell_size(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cell_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCell_size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cell_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor_function(value: (/* x */ Double, /* y */ Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color_function")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColor_function: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color_function")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor_functionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color_function")(null)
-        ret
-    }
-    @scala.inline
-    def withColor_space(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color_space")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor_space: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color_space")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoints(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeed(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(null)
-        ret
-    }
-    @scala.inline
-    def withStroke_width(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke_width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStroke_width: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke_width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX_colors(value: `false` | String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX_colors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY_colors(value: `false` | String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY_colors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_colors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

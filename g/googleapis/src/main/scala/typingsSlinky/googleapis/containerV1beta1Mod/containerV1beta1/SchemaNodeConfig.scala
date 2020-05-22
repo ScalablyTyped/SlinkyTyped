@@ -132,197 +132,40 @@ trait SchemaNodeConfig extends js.Object {
 
 object SchemaNodeConfig {
   @scala.inline
-  def apply(): SchemaNodeConfig = {
+  def apply(
+    accelerators: js.Array[SchemaAcceleratorConfig] = null,
+    diskSizeGb: js.UndefOr[Double] = js.undefined,
+    diskType: String = null,
+    imageType: String = null,
+    labels: StringDictionary[String] = null,
+    localSsdCount: js.UndefOr[Double] = js.undefined,
+    machineType: String = null,
+    metadata: StringDictionary[String] = null,
+    minCpuPlatform: String = null,
+    oauthScopes: js.Array[String] = null,
+    preemptible: js.UndefOr[Boolean] = js.undefined,
+    serviceAccount: String = null,
+    tags: js.Array[String] = null,
+    taints: js.Array[SchemaNodeTaint] = null,
+    workloadMetadataConfig: SchemaWorkloadMetadataConfig = null
+  ): SchemaNodeConfig = {
     val __obj = js.Dynamic.literal()
+    if (accelerators != null) __obj.updateDynamic("accelerators")(accelerators.asInstanceOf[js.Any])
+    if (!js.isUndefined(diskSizeGb)) __obj.updateDynamic("diskSizeGb")(diskSizeGb.get.asInstanceOf[js.Any])
+    if (diskType != null) __obj.updateDynamic("diskType")(diskType.asInstanceOf[js.Any])
+    if (imageType != null) __obj.updateDynamic("imageType")(imageType.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (!js.isUndefined(localSsdCount)) __obj.updateDynamic("localSsdCount")(localSsdCount.get.asInstanceOf[js.Any])
+    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (minCpuPlatform != null) __obj.updateDynamic("minCpuPlatform")(minCpuPlatform.asInstanceOf[js.Any])
+    if (oauthScopes != null) __obj.updateDynamic("oauthScopes")(oauthScopes.asInstanceOf[js.Any])
+    if (!js.isUndefined(preemptible)) __obj.updateDynamic("preemptible")(preemptible.get.asInstanceOf[js.Any])
+    if (serviceAccount != null) __obj.updateDynamic("serviceAccount")(serviceAccount.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (taints != null) __obj.updateDynamic("taints")(taints.asInstanceOf[js.Any])
+    if (workloadMetadataConfig != null) __obj.updateDynamic("workloadMetadataConfig")(workloadMetadataConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNodeConfig]
   }
-  @scala.inline
-  implicit class SchemaNodeConfigOps[Self <: SchemaNodeConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccelerators(value: js.Array[SchemaAcceleratorConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccelerators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskSizeGb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskSizeGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalSsdCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localSsdCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalSsdCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localSsdCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMachineType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMachineType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCpuPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCpuPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauthScopes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauthScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthScopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreemptible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreemptible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceAccount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaints(value: js.Array[SchemaNodeTaint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkloadMetadataConfig(value: SchemaWorkloadMetadataConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workloadMetadataConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkloadMetadataConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workloadMetadataConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

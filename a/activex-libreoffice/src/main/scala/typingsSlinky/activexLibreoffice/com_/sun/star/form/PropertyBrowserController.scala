@@ -32,7 +32,6 @@ import scala.scalajs.js.annotation._
   * @deprecated Deprecated  Note that nowadays, this service is only a legacy wrapper using the {@link com.sun.star.inspection.ObjectInspector} and the {@link co
   * @see com.sun.star.frame.XController
   */
-@js.native
 trait PropertyBrowserController
   extends XController
      with XPropertySet
@@ -48,25 +47,25 @@ trait PropertyBrowserController
     *
     * Valid values are (this list may be extended in the future): GenericDataEvents
     */
-  var CurrentPage: String = js.native
+  var CurrentPage: String
   /**
     * contains the object to inspect.
     *
     * Changing this property from outside causes the controller to update its view with the data of the new object
     */
-  var IntrospectedObject: XPropertySet = js.native
+  var IntrospectedObject: XPropertySet
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object to which this interface belongs. NULL is returned if the obj
     * @see XPropertySet.getPropertySetInfo
     */
   /* InferMemberOverrides */
-  override val PropertySetInfo: XPropertySetInfo = js.native
+  override val PropertySetInfo: XPropertySetInfo
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object which supplies this interface.
     * @returns NULL if the implementation cannot or will not provide information about the properties; otherwise the interface {@link XPropertySetInfo} is returned.
     */
   /* InferMemberOverrides */
-  override def getPropertySetInfo(): XPropertySetInfo = js.native
+  override def getPropertySetInfo(): XPropertySetInfo
 }
 
 object PropertyBrowserController {
@@ -109,37 +108,5 @@ object PropertyBrowserController {
     val __obj = js.Dynamic.literal(CurrentPage = CurrentPage.asInstanceOf[js.Any], Frame = Frame.asInstanceOf[js.Any], IntrospectedObject = IntrospectedObject.asInstanceOf[js.Any], Model = Model.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], ViewData = ViewData.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertiesChangeListener = js.Any.fromFunction2(addPropertiesChangeListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), attachFrame = js.Any.fromFunction1(attachFrame), attachModel = js.Any.fromFunction1(attachModel), dispose = js.Any.fromFunction0(dispose), firePropertiesChangeEvent = js.Any.fromFunction2(firePropertiesChangeEvent), getFastPropertyValue = js.Any.fromFunction1(getFastPropertyValue), getFrame = js.Any.fromFunction0(getFrame), getModel = js.Any.fromFunction0(getModel), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getPropertyValues = js.Any.fromFunction1(getPropertyValues), getViewData = js.Any.fromFunction0(getViewData), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertiesChangeListener = js.Any.fromFunction1(removePropertiesChangeListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), restoreViewData = js.Any.fromFunction1(restoreViewData), setFastPropertyValue = js.Any.fromFunction2(setFastPropertyValue), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setPropertyValues = js.Any.fromFunction2(setPropertyValues), suspend = js.Any.fromFunction1(suspend))
     __obj.asInstanceOf[PropertyBrowserController]
   }
-  @scala.inline
-  implicit class PropertyBrowserControllerOps[Self <: PropertyBrowserController] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntrospectedObject(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntrospectedObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertySetInfo(value: XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertySetInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetPropertySetInfo(value: () => XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertySetInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

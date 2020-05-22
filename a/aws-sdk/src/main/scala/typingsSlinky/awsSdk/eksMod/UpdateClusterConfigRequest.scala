@@ -23,59 +23,17 @@ trait UpdateClusterConfigRequest extends js.Object {
 
 object UpdateClusterConfigRequest {
   @scala.inline
-  def apply(name: String): UpdateClusterConfigRequest = {
+  def apply(
+    name: String,
+    clientRequestToken: String = null,
+    logging: Logging = null,
+    resourcesVpcConfig: VpcConfigRequest = null
+  ): UpdateClusterConfigRequest = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (resourcesVpcConfig != null) __obj.updateDynamic("resourcesVpcConfig")(resourcesVpcConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateClusterConfigRequest]
   }
-  @scala.inline
-  implicit class UpdateClusterConfigRequestOps[Self <: UpdateClusterConfigRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogging(value: Logging): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourcesVpcConfig(value: VpcConfigRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcesVpcConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourcesVpcConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcesVpcConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

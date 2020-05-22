@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class IpcProvider protected ()
   extends IpcProviderBase
-     with provider {
+     with _provider {
   def this(path: String, net: Server) = this()
 }
 

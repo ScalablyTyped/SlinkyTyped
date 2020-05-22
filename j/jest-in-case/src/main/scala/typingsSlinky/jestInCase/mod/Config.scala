@@ -5,63 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config
   extends /* key */ StringDictionary[js.Any] {
-  var name: js.UndefOr[String] = js.native
-  var only: js.UndefOr[Boolean] = js.native
-  var skip: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[String] = js.undefined
+  var only: js.UndefOr[Boolean] = js.undefined
+  var skip: js.UndefOr[Boolean] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    name: String = null,
+    only: js.UndefOr[Boolean] = js.undefined,
+    skip: js.UndefOr[Boolean] = js.undefined
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(only)) __obj.updateDynamic("only")(only.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skip)) __obj.updateDynamic("skip")(skip.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

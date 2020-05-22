@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Network extends js.Object {
-  var ALL: String = js.native
-  var WIFI_ONLY: String = js.native
+  var ALL: String
+  var WIFI_ONLY: String
 }
 
 @JSImport("react-native-background-downloader", "Network")

@@ -18,41 +18,14 @@ trait EmbeddedDestinationSettings extends js.Object {
 
 object EmbeddedDestinationSettings {
   @scala.inline
-  def apply(): EmbeddedDestinationSettings = {
+  def apply(
+    Destination608ChannelNumber: js.UndefOr[integerMin1Max4] = js.undefined,
+    Destination708ServiceNumber: js.UndefOr[integerMin1Max6] = js.undefined
+  ): EmbeddedDestinationSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Destination608ChannelNumber)) __obj.updateDynamic("Destination608ChannelNumber")(Destination608ChannelNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Destination708ServiceNumber)) __obj.updateDynamic("Destination708ServiceNumber")(Destination708ServiceNumber.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmbeddedDestinationSettings]
   }
-  @scala.inline
-  implicit class EmbeddedDestinationSettingsOps[Self <: EmbeddedDestinationSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination608ChannelNumber(value: integerMin1Max4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination608ChannelNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination608ChannelNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination608ChannelNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestination708ServiceNumber(value: integerMin1Max6): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination708ServiceNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination708ServiceNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination708ServiceNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

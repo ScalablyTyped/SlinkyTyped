@@ -12,7 +12,7 @@ object PowerReset {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.PowerReset] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.PowerReset](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PowerReset.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.PowerReset] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.PowerReset](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.PowerReset] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.PowerReset](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PowerReset.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.PowerReset] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.PowerReset](js.Array(this.component, js.Dictionary.empty))()
 }
 

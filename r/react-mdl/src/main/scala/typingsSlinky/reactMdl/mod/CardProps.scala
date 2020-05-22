@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CardProps
   extends AllHTMLAttributes[js.Any]
      with ClassAttributes[js.Any]
@@ -14,8 +13,15 @@ trait CardProps
 
 object CardProps {
   @scala.inline
-  def apply(): CardProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[js.Any] = null,
+    ClassAttributes: ClassAttributes[js.Any] = null,
+    ShadowedComponent: ShadowedComponent = null
+  ): CardProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (ShadowedComponent != null) js.Dynamic.global.Object.assign(__obj, ShadowedComponent)
     __obj.asInstanceOf[CardProps]
   }
 }

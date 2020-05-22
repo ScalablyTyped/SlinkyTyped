@@ -34,71 +34,19 @@ trait ListResourceRecordSetsResponse extends js.Object {
 
 object ListResourceRecordSetsResponse {
   @scala.inline
-  def apply(IsTruncated: PageTruncated, MaxItems: PageMaxItems, ResourceRecordSets: ResourceRecordSets): ListResourceRecordSetsResponse = {
+  def apply(
+    IsTruncated: PageTruncated,
+    MaxItems: PageMaxItems,
+    ResourceRecordSets: ResourceRecordSets,
+    NextRecordIdentifier: ResourceRecordSetIdentifier = null,
+    NextRecordName: DNSName = null,
+    NextRecordType: RRType = null
+  ): ListResourceRecordSetsResponse = {
     val __obj = js.Dynamic.literal(IsTruncated = IsTruncated.asInstanceOf[js.Any], MaxItems = MaxItems.asInstanceOf[js.Any], ResourceRecordSets = ResourceRecordSets.asInstanceOf[js.Any])
+    if (NextRecordIdentifier != null) __obj.updateDynamic("NextRecordIdentifier")(NextRecordIdentifier.asInstanceOf[js.Any])
+    if (NextRecordName != null) __obj.updateDynamic("NextRecordName")(NextRecordName.asInstanceOf[js.Any])
+    if (NextRecordType != null) __obj.updateDynamic("NextRecordType")(NextRecordType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListResourceRecordSetsResponse]
   }
-  @scala.inline
-  implicit class ListResourceRecordSetsResponseOps[Self <: ListResourceRecordSetsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsTruncated(value: PageTruncated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: PageMaxItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceRecordSets(value: ResourceRecordSets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRecordSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextRecordIdentifier(value: ResourceRecordSetIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextRecordIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextRecordIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextRecordIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextRecordName(value: DNSName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextRecordName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextRecordName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextRecordName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextRecordType(value: RRType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextRecordType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextRecordType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextRecordType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

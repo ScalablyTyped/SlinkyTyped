@@ -8,12 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILoggerRegistry extends IDisposable {
   /**
     * A signal emitted when the logger registry changes.
     */
-  val registryChanged: ISignal[this.type, ILoggerRegistryChange] = js.native
+  val registryChanged: ISignal[this.type, ILoggerRegistryChange]
   /**
     * Get the logger for the specified source.
     *
@@ -21,13 +20,13 @@ trait ILoggerRegistry extends IDisposable {
     *
     * @returns The logger for the specified source.
     */
-  def getLogger(source: String): ILogger = js.native
+  def getLogger(source: String): ILogger
   /**
     * Get all loggers registered.
     *
     * @returns The array containing all registered loggers.
     */
-  def getLoggers(): js.Array[ILogger] = js.native
+  def getLoggers(): js.Array[ILogger]
 }
 
 @JSImport("@jupyterlab/logconsole/lib/tokens", "ILoggerRegistry")

@@ -10,5 +10,7 @@ import scala.scalajs.js.annotation._
 class ResponsiveMode protected ()
   extends typingsSlinky.igniteUi.Infragistics.ResponsiveMode {
   def this(settings: ResponsiveModeSettings) = this()
+  /* CompleteClass */
+  override def isActive(): Unit = js.native
 }
 

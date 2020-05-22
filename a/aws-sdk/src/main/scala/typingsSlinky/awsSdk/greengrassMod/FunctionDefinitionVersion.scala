@@ -18,41 +18,11 @@ trait FunctionDefinitionVersion extends js.Object {
 
 object FunctionDefinitionVersion {
   @scala.inline
-  def apply(): FunctionDefinitionVersion = {
+  def apply(DefaultConfig: FunctionDefaultConfig = null, Functions: listOfFunction = null): FunctionDefinitionVersion = {
     val __obj = js.Dynamic.literal()
+    if (DefaultConfig != null) __obj.updateDynamic("DefaultConfig")(DefaultConfig.asInstanceOf[js.Any])
+    if (Functions != null) __obj.updateDynamic("Functions")(Functions.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionDefinitionVersion]
   }
-  @scala.inline
-  implicit class FunctionDefinitionVersionOps[Self <: FunctionDefinitionVersion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultConfig(value: FunctionDefaultConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctions(value: listOfFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Functions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Functions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,29 +18,10 @@ trait SchemaBuildInfo extends js.Object {
 
 object SchemaBuildInfo {
   @scala.inline
-  def apply(): SchemaBuildInfo = {
+  def apply(cloudBuildId: String = null): SchemaBuildInfo = {
     val __obj = js.Dynamic.literal()
+    if (cloudBuildId != null) __obj.updateDynamic("cloudBuildId")(cloudBuildId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildInfo]
   }
-  @scala.inline
-  implicit class SchemaBuildInfoOps[Self <: SchemaBuildInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudBuildId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudBuildId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudBuildId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudBuildId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

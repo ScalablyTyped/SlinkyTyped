@@ -1,5 +1,11 @@
 package typingsSlinky.rfc6902.diffMod
 
+import typingsSlinky.rfc6902.rfc6902Strings.add
+import typingsSlinky.rfc6902.rfc6902Strings.copy
+import typingsSlinky.rfc6902.rfc6902Strings.move
+import typingsSlinky.rfc6902.rfc6902Strings.remove
+import typingsSlinky.rfc6902.rfc6902Strings.replace
+import typingsSlinky.rfc6902.rfc6902Strings.test
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,16 +22,34 @@ trait Operation extends js.Object
 
 object Operation {
   @scala.inline
-  implicit def apply(value: AddOperation): Operation = value.asInstanceOf[Operation]
+  def CopyOperation(from: String, op: copy, path: String): Operation = {
+    val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
   @scala.inline
-  implicit def apply(value: CopyOperation): Operation = value.asInstanceOf[Operation]
+  def TestOperation(op: test, path: String, value: js.Any): Operation = {
+    val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
   @scala.inline
-  implicit def apply(value: MoveOperation): Operation = value.asInstanceOf[Operation]
+  def AddOperation(op: add, path: String, value: js.Any): Operation = {
+    val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
   @scala.inline
-  implicit def apply(value: RemoveOperation): Operation = value.asInstanceOf[Operation]
+  def RemoveOperation(op: remove, path: String): Operation = {
+    val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
   @scala.inline
-  implicit def apply(value: ReplaceOperation): Operation = value.asInstanceOf[Operation]
+  def MoveOperation(from: String, op: move, path: String): Operation = {
+    val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
   @scala.inline
-  implicit def apply(value: TestOperation): Operation = value.asInstanceOf[Operation]
+  def ReplaceOperation(op: replace, path: String, value: js.Any): Operation = {
+    val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
 }
 

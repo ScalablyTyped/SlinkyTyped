@@ -4,69 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StreetViewLocationRequest extends js.Object {
-  var location: LatLng | LatLngLiteral = js.native
-  var preference: js.UndefOr[StreetViewPreference] = js.native
-  var radius: js.UndefOr[Double] = js.native
-  var source: js.UndefOr[StreetViewSource] = js.native
+  var location: LatLng | LatLngLiteral
+  var preference: js.UndefOr[StreetViewPreference] = js.undefined
+  var radius: js.UndefOr[Double] = js.undefined
+  var source: js.UndefOr[StreetViewSource] = js.undefined
 }
 
 object StreetViewLocationRequest {
   @scala.inline
-  def apply(location: LatLng | LatLngLiteral): StreetViewLocationRequest = {
+  def apply(
+    location: LatLng | LatLngLiteral,
+    preference: StreetViewPreference = null,
+    radius: js.UndefOr[Double] = js.undefined,
+    source: StreetViewSource = null
+  ): StreetViewLocationRequest = {
     val __obj = js.Dynamic.literal(location = location.asInstanceOf[js.Any])
+    if (preference != null) __obj.updateDynamic("preference")(preference.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreetViewLocationRequest]
   }
-  @scala.inline
-  implicit class StreetViewLocationRequestOps[Self <: StreetViewLocationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocation(value: LatLng | LatLngLiteral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreference(value: StreetViewPreference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: StreetViewSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

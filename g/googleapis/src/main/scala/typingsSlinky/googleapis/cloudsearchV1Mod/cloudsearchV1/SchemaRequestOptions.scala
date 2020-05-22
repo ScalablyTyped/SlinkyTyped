@@ -36,65 +36,18 @@ trait SchemaRequestOptions extends js.Object {
 
 object SchemaRequestOptions {
   @scala.inline
-  def apply(): SchemaRequestOptions = {
+  def apply(
+    debugOptions: SchemaDebugOptions = null,
+    languageCode: String = null,
+    searchApplicationId: String = null,
+    timeZone: String = null
+  ): SchemaRequestOptions = {
     val __obj = js.Dynamic.literal()
+    if (debugOptions != null) __obj.updateDynamic("debugOptions")(debugOptions.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (searchApplicationId != null) __obj.updateDynamic("searchApplicationId")(searchApplicationId.asInstanceOf[js.Any])
+    if (timeZone != null) __obj.updateDynamic("timeZone")(timeZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRequestOptions]
   }
-  @scala.inline
-  implicit class SchemaRequestOptionsOps[Self <: SchemaRequestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebugOptions(value: SchemaDebugOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchApplicationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchApplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchApplicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DropResult extends DragUpdate {
-  var reason: DropReason = js.native
+  var reason: DropReason
 }
 
 object DropResult {
@@ -16,25 +15,15 @@ object DropResult {
     mode: MovementMode,
     reason: DropReason,
     source: DraggableLocation,
-    `type`: TypeId
+    `type`: TypeId,
+    combine: Combine = null,
+    destination: DraggableLocation = null
   ): DropResult = {
     val __obj = js.Dynamic.literal(draggableId = draggableId.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (combine != null) __obj.updateDynamic("combine")(combine.asInstanceOf[js.Any])
+    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropResult]
   }
-  @scala.inline
-  implicit class DropResultOps[Self <: DropResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: DropReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

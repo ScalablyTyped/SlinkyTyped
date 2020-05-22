@@ -80,7 +80,9 @@ class DateTime () extends js.Object {
   def toHTTP(): String = js.native
   def toISO(): String = js.native
   def toISO(options: ToISOTimeOptions): String = js.native
+  /** Returns an ISO 8601-compliant string representation of this DateTime's date component */
   def toISODate(): String = js.native
+  def toISODate(options: ToISODateOptions): String = js.native
   def toISOTime(): String = js.native
   def toISOTime(options: ToISOTimeOptions): String = js.native
   def toISOWeekDate(): String = js.native

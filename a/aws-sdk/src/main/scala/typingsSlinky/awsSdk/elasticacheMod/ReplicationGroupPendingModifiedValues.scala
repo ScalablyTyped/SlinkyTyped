@@ -26,65 +26,18 @@ trait ReplicationGroupPendingModifiedValues extends js.Object {
 
 object ReplicationGroupPendingModifiedValues {
   @scala.inline
-  def apply(): ReplicationGroupPendingModifiedValues = {
+  def apply(
+    AuthTokenStatus: AuthTokenUpdateStatus = null,
+    AutomaticFailoverStatus: PendingAutomaticFailoverStatus = null,
+    PrimaryClusterId: String = null,
+    Resharding: ReshardingStatus = null
+  ): ReplicationGroupPendingModifiedValues = {
     val __obj = js.Dynamic.literal()
+    if (AuthTokenStatus != null) __obj.updateDynamic("AuthTokenStatus")(AuthTokenStatus.asInstanceOf[js.Any])
+    if (AutomaticFailoverStatus != null) __obj.updateDynamic("AutomaticFailoverStatus")(AutomaticFailoverStatus.asInstanceOf[js.Any])
+    if (PrimaryClusterId != null) __obj.updateDynamic("PrimaryClusterId")(PrimaryClusterId.asInstanceOf[js.Any])
+    if (Resharding != null) __obj.updateDynamic("Resharding")(Resharding.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationGroupPendingModifiedValues]
   }
-  @scala.inline
-  implicit class ReplicationGroupPendingModifiedValuesOps[Self <: ReplicationGroupPendingModifiedValues] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthTokenStatus(value: AuthTokenUpdateStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthTokenStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthTokenStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthTokenStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomaticFailoverStatus(value: PendingAutomaticFailoverStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticFailoverStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticFailoverStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticFailoverStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryClusterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryClusterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryClusterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResharding(value: ReshardingStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resharding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResharding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resharding")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

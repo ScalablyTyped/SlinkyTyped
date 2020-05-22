@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
   /**
     * #### Have the `.html` extension stripped from paths.
@@ -19,7 +18,7 @@ trait Config extends js.Object {
     * strings (**NOTE:** the paths can only contain globs that are matched
     * using `minimatch`).
     */
-  var cleanUrls: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var cleanUrls: js.UndefOr[Boolean | js.Array[String]] = js.undefined
   /**
     * ### Disable directory listing or restrict it to certain paths.
     *
@@ -31,7 +30,7 @@ trait Config extends js.Object {
     *
     * **NOTE:** The paths can only contain globs that are matched using `minimatch`.
     */
-  var directoryListing: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var directoryListing: js.UndefOr[Boolean | js.Array[String]] = js.undefined
   /**
     * #### Calculate a strong `ETag` response header, instead of `Last-Modified`.
     *
@@ -42,7 +41,7 @@ trait Config extends js.Object {
     * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag
     * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified
     */
-  var etag: js.UndefOr[Boolean] = js.native
+  var etag: js.UndefOr[Boolean] = js.undefined
   /**
     * #### Set custom headers for specific paths.
     *
@@ -55,7 +54,7 @@ trait Config extends js.Object {
     *
     * **NOTE:** The paths can only contain globs that are matched using `minimatch`.
     */
-  var headers: js.UndefOr[js.Array[Header]] = js.native
+  var headers: js.UndefOr[js.Array[Header]] = js.undefined
   /**
     * #### Set a sub directory to be served.
     *
@@ -66,7 +65,7 @@ trait Config extends js.Object {
     *
     * **NOTE:** The path cannot contain globs or regular expressions.
     */
-  var public: js.UndefOr[String] = js.native
+  var public: js.UndefOr[String] = js.undefined
   /**
     * #### Forward paths to different paths or external URLs.
     *
@@ -78,7 +77,7 @@ trait Config extends js.Object {
     * **NOTE:** The paths can contain globs (matched using `minimatch`) or
     * regular expressions (match using `path-to-regexp`).
     */
-  var redirects: js.UndefOr[js.Array[Redirect]] = js.native
+  var redirects: js.UndefOr[js.Array[Redirect]] = js.undefined
   /**
     * #### If a directory only contains one file, render it.
     *
@@ -90,7 +89,7 @@ trait Config extends js.Object {
     * see an image being rendered if the directory contains a single image
     * file.
     */
-  var renderSingle: js.UndefOr[Boolean] = js.native
+  var renderSingle: js.UndefOr[Boolean] = js.undefined
   /**
     * #### Rewrite paths to different paths.
     *
@@ -101,7 +100,7 @@ trait Config extends js.Object {
     * **NOTE:** The paths can contain globs (matched using `minimatch`) or
     * regular expressions (match using `path-to-regexp`).
     */
-  var rewrites: js.UndefOr[js.Array[Rewrite]] = js.native
+  var rewrites: js.UndefOr[js.Array[Rewrite]] = js.undefined
   /**
     * #### Resolve symlinks instead of rendering a 404 error.
     *
@@ -112,7 +111,7 @@ trait Config extends js.Object {
     * Once this property is set, all symlinks will automatically be resolved to
     * their targets.
     */
-  var symlinks: js.UndefOr[Boolean] = js.native
+  var symlinks: js.UndefOr[Boolean] = js.undefined
   /**
     * #### Remove or add trailing slashes to all paths.
     *
@@ -121,7 +120,7 @@ trait Config extends js.Object {
     * this property to `false` and `true` if you want to force them on all
     * URLs.
     */
-  var trailingSlash: js.UndefOr[Boolean] = js.native
+  var trailingSlash: js.UndefOr[Boolean] = js.undefined
   /**
     * #### Exclude paths from the directory listing.
     *
@@ -133,154 +132,37 @@ trait Config extends js.Object {
     *
     * **NOTE:** The paths can only contain globs that are matched using `minimatch`.
     */
-  var unlisted: js.UndefOr[js.Array[String]] = js.native
+  var unlisted: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    cleanUrls: Boolean | js.Array[String] = null,
+    directoryListing: Boolean | js.Array[String] = null,
+    etag: js.UndefOr[Boolean] = js.undefined,
+    headers: js.Array[Header] = null,
+    public: String = null,
+    redirects: js.Array[Redirect] = null,
+    renderSingle: js.UndefOr[Boolean] = js.undefined,
+    rewrites: js.Array[Rewrite] = null,
+    symlinks: js.UndefOr[Boolean] = js.undefined,
+    trailingSlash: js.UndefOr[Boolean] = js.undefined,
+    unlisted: js.Array[String] = null
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (cleanUrls != null) __obj.updateDynamic("cleanUrls")(cleanUrls.asInstanceOf[js.Any])
+    if (directoryListing != null) __obj.updateDynamic("directoryListing")(directoryListing.asInstanceOf[js.Any])
+    if (!js.isUndefined(etag)) __obj.updateDynamic("etag")(etag.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (public != null) __obj.updateDynamic("public")(public.asInstanceOf[js.Any])
+    if (redirects != null) __obj.updateDynamic("redirects")(redirects.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderSingle)) __obj.updateDynamic("renderSingle")(renderSingle.get.asInstanceOf[js.Any])
+    if (rewrites != null) __obj.updateDynamic("rewrites")(rewrites.asInstanceOf[js.Any])
+    if (!js.isUndefined(symlinks)) __obj.updateDynamic("symlinks")(symlinks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trailingSlash)) __obj.updateDynamic("trailingSlash")(trailingSlash.get.asInstanceOf[js.Any])
+    if (unlisted != null) __obj.updateDynamic("unlisted")(unlisted.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCleanUrls(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCleanUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryListing(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryListing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryListing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryListing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Array[Header]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirects(value: js.Array[Redirect]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderSingle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderSingle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderSingle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderSingle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRewrites(value: js.Array[Rewrite]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRewrites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymlinks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symlinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymlinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symlinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrailingSlash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingSlash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrailingSlash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingSlash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnlisted(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlisted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnlisted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlisted")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

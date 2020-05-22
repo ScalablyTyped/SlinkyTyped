@@ -4,53 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenloadConfig extends js.Object {
   /* the api_key, available directly from the WebUI after successful login */
-  var api_key: String = js.native
+  var api_key: String
   /* the api_login, a string available from the WebUI, NOT the user's e-mail */
-  var api_login: String = js.native
+  var api_login: String
   /* the api_version to target, needed for forming the URL, by default 1 */
-  var api_version: js.UndefOr[Double] = js.native
+  var api_version: js.UndefOr[Double] = js.undefined
 }
 
 object OpenloadConfig {
   @scala.inline
-  def apply(api_key: String, api_login: String): OpenloadConfig = {
+  def apply(api_key: String, api_login: String, api_version: js.UndefOr[Double] = js.undefined): OpenloadConfig = {
     val __obj = js.Dynamic.literal(api_key = api_key.asInstanceOf[js.Any], api_login = api_login.asInstanceOf[js.Any])
+    if (!js.isUndefined(api_version)) __obj.updateDynamic("api_version")(api_version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenloadConfig]
   }
-  @scala.inline
-  implicit class OpenloadConfigOps[Self <: OpenloadConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApi_key(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api_key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApi_login(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api_login")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApi_version(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api_version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApi_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api_version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

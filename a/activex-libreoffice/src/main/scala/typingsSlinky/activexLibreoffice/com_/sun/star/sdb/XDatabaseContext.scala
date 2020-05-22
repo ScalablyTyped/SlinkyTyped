@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * Provides an interface for the new-style {@link DatabaseContext} service to implement.
   * @since LibreOffice 4.0
   */
-@js.native
 trait XDatabaseContext
   extends XEnumerationAccess
      with XNameAccess

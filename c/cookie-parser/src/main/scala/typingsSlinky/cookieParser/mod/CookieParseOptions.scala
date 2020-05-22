@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CookieParseOptions extends js.Object {
-  var decode: js.UndefOr[js.Function1[/* val */ String, String]] = js.native
+  var decode: js.UndefOr[js.Function1[/* val */ String, String]] = js.undefined
 }
 
 object CookieParseOptions {
   @scala.inline
-  def apply(): CookieParseOptions = {
+  def apply(decode: /* val */ String => String = null): CookieParseOptions = {
     val __obj = js.Dynamic.literal()
+    if (decode != null) __obj.updateDynamic("decode")(js.Any.fromFunction1(decode))
     __obj.asInstanceOf[CookieParseOptions]
   }
-  @scala.inline
-  implicit class CookieParseOptionsOps[Self <: CookieParseOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecode(value: /* val */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDecode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

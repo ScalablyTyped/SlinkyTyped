@@ -31,65 +31,18 @@ trait SchemaBuildBazelSemverSemVer extends js.Object {
 
 object SchemaBuildBazelSemverSemVer {
   @scala.inline
-  def apply(): SchemaBuildBazelSemverSemVer = {
+  def apply(
+    major: js.UndefOr[Double] = js.undefined,
+    minor: js.UndefOr[Double] = js.undefined,
+    patch: js.UndefOr[Double] = js.undefined,
+    prerelease: String = null
+  ): SchemaBuildBazelSemverSemVer = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(major)) __obj.updateDynamic("major")(major.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minor)) __obj.updateDynamic("minor")(minor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(patch)) __obj.updateDynamic("patch")(patch.get.asInstanceOf[js.Any])
+    if (prerelease != null) __obj.updateDynamic("prerelease")(prerelease.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelSemverSemVer]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelSemverSemVerOps[Self <: SchemaBuildBazelSemverSemVer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMajor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("major")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMajor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("major")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrerelease(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prerelease")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrerelease: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prerelease")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

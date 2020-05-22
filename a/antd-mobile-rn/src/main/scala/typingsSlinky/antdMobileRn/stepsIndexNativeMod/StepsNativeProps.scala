@@ -1,42 +1,35 @@
 package typingsSlinky.antdMobileRn.stepsIndexNativeMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antdMobileRn.antdMobileRnStrings.horizontal
+import typingsSlinky.antdMobileRn.antdMobileRnStrings.vertical
 import typingsSlinky.antdMobileRn.stepsStyleIndexNativeMod.IStepsStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StepsNativeProps extends StepsProps {
   @JSName("styles")
-  var styles_StepsNativeProps: js.UndefOr[IStepsStyle] = js.native
+  var styles_StepsNativeProps: js.UndefOr[IStepsStyle] = js.undefined
 }
 
 object StepsNativeProps {
   @scala.inline
-  def apply(children: js.Array[ReactElement]): StepsNativeProps = {
+  def apply(
+    children: js.Array[ReactElement],
+    current: js.UndefOr[Double] = js.undefined,
+    direction: vertical | horizontal = null,
+    finishIcon: String = null,
+    size: String = null,
+    styles: IStepsStyle = null
+  ): StepsNativeProps = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    if (!js.isUndefined(current)) __obj.updateDynamic("current")(current.get.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (finishIcon != null) __obj.updateDynamic("finishIcon")(finishIcon.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepsNativeProps]
   }
-  @scala.inline
-  implicit class StepsNativePropsOps[Self <: StepsNativeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyles(value: IStepsStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

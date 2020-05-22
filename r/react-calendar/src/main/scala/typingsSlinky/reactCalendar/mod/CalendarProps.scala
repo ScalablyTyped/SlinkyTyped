@@ -9,743 +9,195 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CalendarProps extends js.Object {
-  var activeStartDate: js.UndefOr[js.Date] = js.native
-  var calendarType: js.UndefOr[CalendarType] = js.native
-  var className: js.UndefOr[String | js.Array[String]] = js.native
-  var defaultActiveStartDate: js.UndefOr[js.Date] = js.native
-  var defaultValue: js.UndefOr[js.Date | js.Array[js.Date]] = js.native
-  var defaultView: js.UndefOr[Detail] = js.native
-  var formatLongDate: js.UndefOr[FormatterCallback] = js.native
-  var formatMonth: js.UndefOr[FormatterCallback] = js.native
-  var formatMonthYear: js.UndefOr[FormatterCallback] = js.native
-  var formatShortWeekday: js.UndefOr[FormatterCallback] = js.native
-  var formatYear: js.UndefOr[FormatterCallback] = js.native
-  var locale: js.UndefOr[String] = js.native
-  var maxDate: js.UndefOr[js.Date] = js.native
-  var maxDetail: js.UndefOr[Detail] = js.native
-  var minDate: js.UndefOr[js.Date] = js.native
-  var minDetail: js.UndefOr[Detail] = js.native
-  var navigationAriaLabel: js.UndefOr[String] = js.native
+  var activeStartDate: js.UndefOr[js.Date] = js.undefined
+  var calendarType: js.UndefOr[CalendarType] = js.undefined
+  var className: js.UndefOr[String | js.Array[String]] = js.undefined
+  var defaultActiveStartDate: js.UndefOr[js.Date] = js.undefined
+  var defaultValue: js.UndefOr[js.Date | js.Array[js.Date]] = js.undefined
+  var defaultView: js.UndefOr[Detail] = js.undefined
+  var formatLongDate: js.UndefOr[FormatterCallback] = js.undefined
+  var formatMonth: js.UndefOr[FormatterCallback] = js.undefined
+  var formatMonthYear: js.UndefOr[FormatterCallback] = js.undefined
+  var formatShortWeekday: js.UndefOr[FormatterCallback] = js.undefined
+  var formatYear: js.UndefOr[FormatterCallback] = js.undefined
+  var locale: js.UndefOr[String] = js.undefined
+  var maxDate: js.UndefOr[js.Date] = js.undefined
+  var maxDetail: js.UndefOr[Detail] = js.undefined
+  var minDate: js.UndefOr[js.Date] = js.undefined
+  var minDetail: js.UndefOr[Detail] = js.undefined
+  var navigationAriaLabel: js.UndefOr[String] = js.undefined
   var navigationLabel: js.UndefOr[
     js.Function1[
       /* props */ Date, 
       String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
     ]
-  ] = js.native
-  var next2AriaLabel: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var next2AriaLabel: js.UndefOr[String] = js.undefined
   var next2Label: js.UndefOr[
     String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any) | Null
-  ] = js.native
-  var nextAriaLabel: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var nextAriaLabel: js.UndefOr[String] = js.undefined
   var nextLabel: js.UndefOr[
     String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any)
-  ] = js.native
-  var onActiveStartDateChange: js.UndefOr[ViewCallback] = js.native
-  var onChange: js.UndefOr[OnChangeDateCallback] = js.native
-  var onClickDay: js.UndefOr[DateCallback] = js.native
-  var onClickDecade: js.UndefOr[DateCallback] = js.native
-  var onClickMonth: js.UndefOr[DateCallback] = js.native
-  var onClickWeekNumber: js.UndefOr[ClickWeekNumberCallback] = js.native
-  var onClickYear: js.UndefOr[DateCallback] = js.native
-  var onDrillDown: js.UndefOr[ViewCallback] = js.native
-  var onDrillUp: js.UndefOr[ViewCallback] = js.native
-  var onViewChange: js.UndefOr[ViewCallback] = js.native
-  var prev2AriaLabel: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var onActiveStartDateChange: js.UndefOr[ViewCallback] = js.undefined
+  var onChange: js.UndefOr[OnChangeDateCallback] = js.undefined
+  var onClickDay: js.UndefOr[DateCallback] = js.undefined
+  var onClickDecade: js.UndefOr[DateCallback] = js.undefined
+  var onClickMonth: js.UndefOr[DateCallback] = js.undefined
+  var onClickWeekNumber: js.UndefOr[ClickWeekNumberCallback] = js.undefined
+  var onClickYear: js.UndefOr[DateCallback] = js.undefined
+  var onDrillDown: js.UndefOr[ViewCallback] = js.undefined
+  var onDrillUp: js.UndefOr[ViewCallback] = js.undefined
+  var onViewChange: js.UndefOr[ViewCallback] = js.undefined
+  var prev2AriaLabel: js.UndefOr[String] = js.undefined
   var prev2Label: js.UndefOr[
     String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any) | Null
-  ] = js.native
-  var prevAriaLabel: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var prevAriaLabel: js.UndefOr[String] = js.undefined
   var prevLabel: js.UndefOr[
     String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any)
-  ] = js.native
+  ] = js.undefined
   var renderChildren: js.UndefOr[
     js.Function1[
       /* props */ CalendarTileProperties, 
       (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
     ]
-  ] = js.native
+  ] = js.undefined
    // For backwards compatibility
-  var returnValue: js.UndefOr[start | end | range] = js.native
-  var selectRange: js.UndefOr[Boolean] = js.native
-  var showDoubleView: js.UndefOr[Boolean] = js.native
-  var showFixedNumberOfWeeks: js.UndefOr[Boolean] = js.native
-  var showNavigation: js.UndefOr[Boolean] = js.native
-  var showNeighboringMonth: js.UndefOr[Boolean] = js.native
-  var showWeekNumbers: js.UndefOr[Boolean] = js.native
+  var returnValue: js.UndefOr[start | end | range] = js.undefined
+  var selectRange: js.UndefOr[Boolean] = js.undefined
+  var showDoubleView: js.UndefOr[Boolean] = js.undefined
+  var showFixedNumberOfWeeks: js.UndefOr[Boolean] = js.undefined
+  var showNavigation: js.UndefOr[Boolean] = js.undefined
+  var showNeighboringMonth: js.UndefOr[Boolean] = js.undefined
+  var showWeekNumbers: js.UndefOr[Boolean] = js.undefined
   var tileClassName: js.UndefOr[
     String | js.Array[String] | (js.Function1[/* props */ CalendarTileProperties, String | js.Array[String] | Null])
-  ] = js.native
+  ] = js.undefined
   var tileContent: js.UndefOr[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any) | (js.Function1[
       /* props */ CalendarTileProperties, 
       (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
     ])
-  ] = js.native
-  var tileDisabled: js.UndefOr[js.Function1[/* props */ CalendarTilePropertiesact, Boolean]] = js.native
-  var value: js.UndefOr[js.Date | js.Array[js.Date]] = js.native
-  var view: js.UndefOr[Detail] = js.native
+  ] = js.undefined
+  var tileDisabled: js.UndefOr[js.Function1[/* props */ CalendarTilePropertiesact, Boolean]] = js.undefined
+  var value: js.UndefOr[js.Date | js.Array[js.Date]] = js.undefined
+  var view: js.UndefOr[Detail] = js.undefined
 }
 
 object CalendarProps {
   @scala.inline
-  def apply(): CalendarProps = {
+  def apply(
+    activeStartDate: js.Date = null,
+    calendarType: CalendarType = null,
+    className: String | js.Array[String] = null,
+    defaultActiveStartDate: js.Date = null,
+    defaultValue: js.Date | js.Array[js.Date] = null,
+    defaultView: Detail = null,
+    formatLongDate: (/* locale */ String, /* date */ js.Date) => String = null,
+    formatMonth: (/* locale */ String, /* date */ js.Date) => String = null,
+    formatMonthYear: (/* locale */ String, /* date */ js.Date) => String = null,
+    formatShortWeekday: (/* locale */ String, /* date */ js.Date) => String = null,
+    formatYear: (/* locale */ String, /* date */ js.Date) => String = null,
+    locale: String = null,
+    maxDate: js.Date = null,
+    maxDetail: Detail = null,
+    minDate: js.Date = null,
+    minDetail: Detail = null,
+    navigationAriaLabel: String = null,
+    navigationLabel: /* props */ Date => String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null = null,
+    next2AriaLabel: String = null,
+    next2Label: js.UndefOr[
+      Null | String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any)
+    ] = js.undefined,
+    nextAriaLabel: String = null,
+    nextLabel: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any) = null,
+    onActiveStartDateChange: /* props */ ViewCallbackProperties => Unit = null,
+    onChange: /* date */ js.Date | js.Array[js.Date] => Unit = null,
+    onClickDay: /* date */ js.Date => Unit = null,
+    onClickDecade: /* date */ js.Date => Unit = null,
+    onClickMonth: /* date */ js.Date => Unit = null,
+    onClickWeekNumber: (/* weekNumber */ Double, /* date */ js.Date) => Unit = null,
+    onClickYear: /* date */ js.Date => Unit = null,
+    onDrillDown: /* props */ ViewCallbackProperties => Unit = null,
+    onDrillUp: /* props */ ViewCallbackProperties => Unit = null,
+    onViewChange: /* props */ ViewCallbackProperties => Unit = null,
+    prev2AriaLabel: String = null,
+    prev2Label: js.UndefOr[
+      Null | String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any)
+    ] = js.undefined,
+    prevAriaLabel: String = null,
+    prevLabel: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any) = null,
+    renderChildren: /* props */ CalendarTileProperties => (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null = null,
+    returnValue: start | end | range = null,
+    selectRange: js.UndefOr[Boolean] = js.undefined,
+    showDoubleView: js.UndefOr[Boolean] = js.undefined,
+    showFixedNumberOfWeeks: js.UndefOr[Boolean] = js.undefined,
+    showNavigation: js.UndefOr[Boolean] = js.undefined,
+    showNeighboringMonth: js.UndefOr[Boolean] = js.undefined,
+    showWeekNumbers: js.UndefOr[Boolean] = js.undefined,
+    tileClassName: String | js.Array[String] | (js.Function1[/* props */ CalendarTileProperties, String | js.Array[String] | Null]) = null,
+    tileContent: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any) | (js.Function1[
+      /* props */ CalendarTileProperties, 
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
+    ]) = null,
+    tileDisabled: /* props */ CalendarTilePropertiesact => Boolean = null,
+    value: js.Date | js.Array[js.Date] = null,
+    view: Detail = null
+  ): CalendarProps = {
     val __obj = js.Dynamic.literal()
+    if (activeStartDate != null) __obj.updateDynamic("activeStartDate")(activeStartDate.asInstanceOf[js.Any])
+    if (calendarType != null) __obj.updateDynamic("calendarType")(calendarType.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (defaultActiveStartDate != null) __obj.updateDynamic("defaultActiveStartDate")(defaultActiveStartDate.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (defaultView != null) __obj.updateDynamic("defaultView")(defaultView.asInstanceOf[js.Any])
+    if (formatLongDate != null) __obj.updateDynamic("formatLongDate")(js.Any.fromFunction2(formatLongDate))
+    if (formatMonth != null) __obj.updateDynamic("formatMonth")(js.Any.fromFunction2(formatMonth))
+    if (formatMonthYear != null) __obj.updateDynamic("formatMonthYear")(js.Any.fromFunction2(formatMonthYear))
+    if (formatShortWeekday != null) __obj.updateDynamic("formatShortWeekday")(js.Any.fromFunction2(formatShortWeekday))
+    if (formatYear != null) __obj.updateDynamic("formatYear")(js.Any.fromFunction2(formatYear))
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (maxDetail != null) __obj.updateDynamic("maxDetail")(maxDetail.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
+    if (minDetail != null) __obj.updateDynamic("minDetail")(minDetail.asInstanceOf[js.Any])
+    if (navigationAriaLabel != null) __obj.updateDynamic("navigationAriaLabel")(navigationAriaLabel.asInstanceOf[js.Any])
+    if (navigationLabel != null) __obj.updateDynamic("navigationLabel")(js.Any.fromFunction1(navigationLabel))
+    if (next2AriaLabel != null) __obj.updateDynamic("next2AriaLabel")(next2AriaLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(next2Label)) __obj.updateDynamic("next2Label")(next2Label.asInstanceOf[js.Any])
+    if (nextAriaLabel != null) __obj.updateDynamic("nextAriaLabel")(nextAriaLabel.asInstanceOf[js.Any])
+    if (nextLabel != null) __obj.updateDynamic("nextLabel")(nextLabel.asInstanceOf[js.Any])
+    if (onActiveStartDateChange != null) __obj.updateDynamic("onActiveStartDateChange")(js.Any.fromFunction1(onActiveStartDateChange))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClickDay != null) __obj.updateDynamic("onClickDay")(js.Any.fromFunction1(onClickDay))
+    if (onClickDecade != null) __obj.updateDynamic("onClickDecade")(js.Any.fromFunction1(onClickDecade))
+    if (onClickMonth != null) __obj.updateDynamic("onClickMonth")(js.Any.fromFunction1(onClickMonth))
+    if (onClickWeekNumber != null) __obj.updateDynamic("onClickWeekNumber")(js.Any.fromFunction2(onClickWeekNumber))
+    if (onClickYear != null) __obj.updateDynamic("onClickYear")(js.Any.fromFunction1(onClickYear))
+    if (onDrillDown != null) __obj.updateDynamic("onDrillDown")(js.Any.fromFunction1(onDrillDown))
+    if (onDrillUp != null) __obj.updateDynamic("onDrillUp")(js.Any.fromFunction1(onDrillUp))
+    if (onViewChange != null) __obj.updateDynamic("onViewChange")(js.Any.fromFunction1(onViewChange))
+    if (prev2AriaLabel != null) __obj.updateDynamic("prev2AriaLabel")(prev2AriaLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(prev2Label)) __obj.updateDynamic("prev2Label")(prev2Label.asInstanceOf[js.Any])
+    if (prevAriaLabel != null) __obj.updateDynamic("prevAriaLabel")(prevAriaLabel.asInstanceOf[js.Any])
+    if (prevLabel != null) __obj.updateDynamic("prevLabel")(prevLabel.asInstanceOf[js.Any])
+    if (renderChildren != null) __obj.updateDynamic("renderChildren")(js.Any.fromFunction1(renderChildren))
+    if (returnValue != null) __obj.updateDynamic("returnValue")(returnValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectRange)) __obj.updateDynamic("selectRange")(selectRange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showDoubleView)) __obj.updateDynamic("showDoubleView")(showDoubleView.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showFixedNumberOfWeeks)) __obj.updateDynamic("showFixedNumberOfWeeks")(showFixedNumberOfWeeks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showNavigation)) __obj.updateDynamic("showNavigation")(showNavigation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showNeighboringMonth)) __obj.updateDynamic("showNeighboringMonth")(showNeighboringMonth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showWeekNumbers)) __obj.updateDynamic("showWeekNumbers")(showWeekNumbers.get.asInstanceOf[js.Any])
+    if (tileClassName != null) __obj.updateDynamic("tileClassName")(tileClassName.asInstanceOf[js.Any])
+    if (tileContent != null) __obj.updateDynamic("tileContent")(tileContent.asInstanceOf[js.Any])
+    if (tileDisabled != null) __obj.updateDynamic("tileDisabled")(js.Any.fromFunction1(tileDisabled))
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarProps]
   }
-  @scala.inline
-  implicit class CalendarPropsOps[Self <: CalendarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeStartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeStartDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendarType(value: CalendarType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendarType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultActiveStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveStartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultActiveStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveStartDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: js.Date | js.Array[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultView(value: Detail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatLongDate(value: (/* locale */ String, /* date */ js.Date) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatLongDate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatLongDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatLongDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatMonth(value: (/* locale */ String, /* date */ js.Date) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMonth")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatMonthYear(value: (/* locale */ String, /* date */ js.Date) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMonthYear")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatMonthYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMonthYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatShortWeekday(value: (/* locale */ String, /* date */ js.Date) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatShortWeekday")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatShortWeekday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatShortWeekday")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatYear(value: (/* locale */ String, /* date */ js.Date) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatYear")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDetail(value: Detail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDetail(value: Detail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigationAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigationAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationAriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigationLabel(
-      value: /* props */ Date => String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNavigationLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext2AriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next2AriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext2AriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next2AriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext2Label(
-      value: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any)
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next2Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext2Label: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next2Label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext2LabelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next2Label")(null)
-        ret
-    }
-    @scala.inline
-    def withNextAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextAriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextLabel(
-      value: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any)
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnActiveStartDateChange(value: /* props */ ViewCallbackProperties => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActiveStartDateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnActiveStartDateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActiveStartDateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* date */ js.Date | js.Array[js.Date] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClickDay(value: /* date */ js.Date => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickDay")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClickDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClickDecade(value: /* date */ js.Date => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickDecade")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClickDecade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickDecade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClickMonth(value: /* date */ js.Date => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickMonth")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClickMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClickWeekNumber(value: (/* weekNumber */ Double, /* date */ js.Date) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickWeekNumber")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClickWeekNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickWeekNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClickYear(value: /* date */ js.Date => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickYear")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClickYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDrillDown(value: /* props */ ViewCallbackProperties => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrillDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDrillDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrillDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDrillUp(value: /* props */ ViewCallbackProperties => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrillUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDrillUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrillUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnViewChange(value: /* props */ ViewCallbackProperties => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnViewChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrev2AriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev2AriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrev2AriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev2AriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrev2Label(
-      value: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any)
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev2Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrev2Label: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev2Label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrev2LabelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev2Label")(null)
-        ret
-    }
-    @scala.inline
-    def withPrevAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevAriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevLabel(
-      value: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any)
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderChildren(
-      value: /* props */ CalendarTileProperties => (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderChildren")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderChildren")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnValue(value: start | end | range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectRange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDoubleView(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDoubleView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDoubleView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDoubleView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowFixedNumberOfWeeks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFixedNumberOfWeeks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowFixedNumberOfWeeks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFixedNumberOfWeeks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowNavigation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowNeighboringMonth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNeighboringMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowNeighboringMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNeighboringMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowWeekNumbers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWeekNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowWeekNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWeekNumbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileClassNameFunction1(value: /* props */ CalendarTileProperties => String | js.Array[String] | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileClassName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTileClassName(
-      value: String | js.Array[String] | (js.Function1[/* props */ CalendarTileProperties, String | js.Array[String] | Null])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileContentFunction1(
-      value: /* props */ CalendarTileProperties => (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTileContent(
-      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ js.Any) | (js.Function1[
-          /* props */ CalendarTileProperties, 
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileDisabled(value: /* props */ CalendarTilePropertiesact => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileDisabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTileDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Date | js.Array[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: Detail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

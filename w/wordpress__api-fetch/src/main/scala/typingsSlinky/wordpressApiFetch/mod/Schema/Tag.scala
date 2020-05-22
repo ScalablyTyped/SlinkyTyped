@@ -1,6 +1,7 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
-import typingsSlinky.wordpressApiFetch.anon.PickBaseTagTag
+import typingsSlinky.std.Record
+import typingsSlinky.wordpressApiFetch.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,35 @@ trait Tag[T /* <: Context */] extends js.Object
 
 object Tag {
   @scala.inline
-  implicit def apply[T](value: BaseTag): Tag[T] = value.asInstanceOf[Tag[T]]
+  def BaseTag[T](
+    _links: Record[String, js.Array[Dictk]],
+    count: Double,
+    description: String,
+    id: Double,
+    link: String,
+    meta: js.Array[_],
+    name: String,
+    slug: String,
+    taxonomy: TaxonomyKind,
+    _embedded: Record[String, js.Array[_]] = null
+  ): Tag[T] = {
+    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], count = count.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any], taxonomy = taxonomy.asInstanceOf[js.Any])
+    if (_embedded != null) __obj.updateDynamic("_embedded")(_embedded.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Tag[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: PickBaseTagTag): Tag[T] = value.asInstanceOf[Tag[T]]
+  def PickBaseTagTag[T](
+    _links: Record[String, js.Array[Dictk]],
+    id: Double,
+    link: String,
+    name: String,
+    slug: String,
+    taxonomy: TaxonomyKind,
+    _embedded: Record[String, js.Array[_]] = null
+  ): Tag[T] = {
+    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any], taxonomy = taxonomy.asInstanceOf[js.Any])
+    if (_embedded != null) __obj.updateDynamic("_embedded")(_embedded.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Tag[T]]
+  }
 }
 

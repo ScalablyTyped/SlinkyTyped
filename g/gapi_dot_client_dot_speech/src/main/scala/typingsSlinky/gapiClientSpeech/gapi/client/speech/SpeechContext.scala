@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpeechContext extends js.Object {
   /**
     * &#42;Optional&#42; A list of strings containing words and phrases "hints" so that
@@ -14,34 +13,15 @@ trait SpeechContext extends js.Object {
     * to add additional words to the vocabulary of the recognizer. See
     * [usage limits](https://cloud.google.com/speech/limits#content).
     */
-  var phrases: js.UndefOr[js.Array[String]] = js.native
+  var phrases: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object SpeechContext {
   @scala.inline
-  def apply(): SpeechContext = {
+  def apply(phrases: js.Array[String] = null): SpeechContext = {
     val __obj = js.Dynamic.literal()
+    if (phrases != null) __obj.updateDynamic("phrases")(phrases.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpeechContext]
   }
-  @scala.inline
-  implicit class SpeechContextOps[Self <: SpeechContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPhrases(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phrases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhrases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phrases")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

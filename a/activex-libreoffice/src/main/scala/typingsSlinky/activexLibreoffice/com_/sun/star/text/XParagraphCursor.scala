@@ -6,32 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to move paragraph by paragraph. */
-@js.native
 trait XParagraphCursor extends XTextCursor {
   /**
     * moves the cursor to the end of the current paragraph.
     * @returns `TRUE` if the cursor is now at the end of a paragraph, `FALSE` otherwise. If `FALSE` was returned the cursor will remain at its original position.
     */
-  def gotoEndOfParagraph(bExpand: Boolean): Boolean = js.native
+  def gotoEndOfParagraph(bExpand: Boolean): Boolean
   /**
     * moves the cursor to the next paragraph.
     * @returns `TRUE` if the cursor was moved. It returns `FALSE` it the cursor can not advance further.
     */
-  def gotoNextParagraph(bExpand: Boolean): Boolean = js.native
+  def gotoNextParagraph(bExpand: Boolean): Boolean
   /**
     * moves the cursor to the previous paragraph.
     * @returns `TRUE` if the cursor was moved. It returns `FALSE` it the cursor can not advance further.
     */
-  def gotoPreviousParagraph(bExpand: Boolean): Boolean = js.native
+  def gotoPreviousParagraph(bExpand: Boolean): Boolean
   /**
     * moves the cursor to the start of the current paragraph.
     * @returns `TRUE` if the cursor is now at the start of a paragraph, `FALSE` otherwise. If `FALSE` was returned the cursor will remain at its original position.
     */
-  def gotoStartOfParagraph(bExpand: Boolean): Boolean = js.native
+  def gotoStartOfParagraph(bExpand: Boolean): Boolean
   /** determines if the cursor is positioned at the end of a paragraph. */
-  def isEndOfParagraph(): Boolean = js.native
+  def isEndOfParagraph(): Boolean
   /** determines if the cursor is positioned at the start of a paragraph. */
-  def isStartOfParagraph(): Boolean = js.native
+  def isStartOfParagraph(): Boolean
 }
 
 object XParagraphCursor {
@@ -66,49 +65,5 @@ object XParagraphCursor {
     val __obj = js.Dynamic.literal(End = End.asInstanceOf[js.Any], Start = Start.asInstanceOf[js.Any], String = String.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), collapseToEnd = js.Any.fromFunction0(collapseToEnd), collapseToStart = js.Any.fromFunction0(collapseToStart), getEnd = js.Any.fromFunction0(getEnd), getStart = js.Any.fromFunction0(getStart), getString = js.Any.fromFunction0(getString), getText = js.Any.fromFunction0(getText), goLeft = js.Any.fromFunction2(goLeft), goRight = js.Any.fromFunction2(goRight), gotoEnd = js.Any.fromFunction1(gotoEnd), gotoEndOfParagraph = js.Any.fromFunction1(gotoEndOfParagraph), gotoNextParagraph = js.Any.fromFunction1(gotoNextParagraph), gotoPreviousParagraph = js.Any.fromFunction1(gotoPreviousParagraph), gotoRange = js.Any.fromFunction2(gotoRange), gotoStart = js.Any.fromFunction1(gotoStart), gotoStartOfParagraph = js.Any.fromFunction1(gotoStartOfParagraph), isCollapsed = js.Any.fromFunction0(isCollapsed), isEndOfParagraph = js.Any.fromFunction0(isEndOfParagraph), isStartOfParagraph = js.Any.fromFunction0(isStartOfParagraph), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setString = js.Any.fromFunction1(setString))
     __obj.asInstanceOf[XParagraphCursor]
   }
-  @scala.inline
-  implicit class XParagraphCursorOps[Self <: XParagraphCursor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGotoEndOfParagraph(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoEndOfParagraph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGotoNextParagraph(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoNextParagraph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGotoPreviousParagraph(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoPreviousParagraph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGotoStartOfParagraph(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoStartOfParagraph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsEndOfParagraph(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEndOfParagraph")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsStartOfParagraph(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStartOfParagraph")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

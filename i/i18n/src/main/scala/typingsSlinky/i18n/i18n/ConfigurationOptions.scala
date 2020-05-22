@@ -5,365 +5,157 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigurationOptions extends js.Object {
   /**
     * Hash to specify different aliases for i18n's internal methods to apply on the request/response objects (method -> alias).
     * Note that this will *not* overwrite existing properties with the same name.
     * @default undefined
     */
-  var api: js.UndefOr[StringDictionary[String]] = js.native
+  var api: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * Watch for changes in json files to reload locale on updates
     * @default false
     */
-  var autoReload: js.UndefOr[Boolean] = js.native
+  var autoReload: js.UndefOr[Boolean] = js.undefined
   /**
     * Sets a custom cookie name to parse locale settings from
     * @default null
     */
-  var cookie: js.UndefOr[String] = js.native
+  var cookie: js.UndefOr[String] = js.undefined
   /**
     * Alter a site wide default locale
     * @default "en"
     */
-  var defaultLocale: js.UndefOr[String] = js.native
+  var defaultLocale: js.UndefOr[String] = js.undefined
   /**
     * Where to store json files, relative to modules directory
     * @default "./locales"
     */
-  var directory: js.UndefOr[String] = js.native
+  var directory: js.UndefOr[String] = js.undefined
   /**
     * Control mode on directory creation. Setting has no effect on win.
     * @default null
     */
-  var directoryPermissions: js.UndefOr[String] = js.native
+  var directoryPermissions: js.UndefOr[String] = js.undefined
   /**
     * Setting extension of json files (you might want to set this to '.js' according to webtranslateit)
     * @default ".json"
     */
-  var extension: js.UndefOr[String] = js.native
+  var extension: js.UndefOr[String] = js.undefined
   /**
     * Language fallback map
     * @default {}
     */
-  var fallbacks: js.UndefOr[StringDictionary[String]] = js.native
+  var fallbacks: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * What to use as the indentation unit
     * @default "\t"
     */
-  var indent: js.UndefOr[String] = js.native
+  var indent: js.UndefOr[String] = js.undefined
   /**
     * Setup some locales - other locales default to en silently
     * @default []
     */
-  var locales: js.UndefOr[js.Array[String]] = js.native
+  var locales: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Setting of log level DEBUG
     * @default require("debug")("i18n:debug")
     */
-  var logDebugFn: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  var logDebugFn: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
   /**
     * Setting of log level ERROR
     * @default require("debug")("i18n:error")
     */
-  var logErrorFn: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  var logErrorFn: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
   /**
     * Setting of log level WARN
     * @default require("debug")("i18n:warn")
     */
-  var logWarnFn: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  var logWarnFn: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
   /**
     * Enable object notation
     * @default false
     */
-  var objectNotation: js.UndefOr[Boolean] = js.native
+  var objectNotation: js.UndefOr[Boolean] = js.undefined
   /**
     * Setting prefix of json files name (in case you use different locale files naming scheme (webapp-en.json), rather then just en.json)
     * @default ""
     */
-  var prefix: js.UndefOr[String] = js.native
+  var prefix: js.UndefOr[String] = js.undefined
   /**
     * Downcase locale when passed on queryParam; e.g. lang=en-US becomes en-us.
     * When set to false, the queryParam value will be used as passed; e.g. lang=en-US remains en-US.
     * @default true
     */
-  var preserveLegacyCase: js.UndefOr[Boolean] = js.native
+  var preserveLegacyCase: js.UndefOr[Boolean] = js.undefined
   /**
     * Query parameter to switch locale (ie. /home?lang=ch)
     * @default null
     */
-  var queryParameter: js.UndefOr[String] = js.native
+  var queryParameter: js.UndefOr[String] = js.undefined
   /**
     * object or [obj1, obj2] to bind the i18n api and current locale to
     * @default null
     */
-  var register: js.UndefOr[js.Any] = js.native
+  var register: js.UndefOr[js.Any] = js.undefined
   /**
     * Sync locale information across all files
     * @default false
     */
-  var syncFiles: js.UndefOr[Boolean] = js.native
+  var syncFiles: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether to write new locale information to disk
     * @default true
     */
-  var updateFiles: js.UndefOr[Boolean] = js.native
+  var updateFiles: js.UndefOr[Boolean] = js.undefined
 }
 
 object ConfigurationOptions {
   @scala.inline
-  def apply(): ConfigurationOptions = {
+  def apply(
+    api: StringDictionary[String] = null,
+    autoReload: js.UndefOr[Boolean] = js.undefined,
+    cookie: String = null,
+    defaultLocale: String = null,
+    directory: String = null,
+    directoryPermissions: String = null,
+    extension: String = null,
+    fallbacks: StringDictionary[String] = null,
+    indent: String = null,
+    locales: js.Array[String] = null,
+    logDebugFn: /* msg */ String => Unit = null,
+    logErrorFn: /* msg */ String => Unit = null,
+    logWarnFn: /* msg */ String => Unit = null,
+    objectNotation: js.UndefOr[Boolean] = js.undefined,
+    prefix: String = null,
+    preserveLegacyCase: js.UndefOr[Boolean] = js.undefined,
+    queryParameter: String = null,
+    register: js.Any = null,
+    syncFiles: js.UndefOr[Boolean] = js.undefined,
+    updateFiles: js.UndefOr[Boolean] = js.undefined
+  ): ConfigurationOptions = {
     val __obj = js.Dynamic.literal()
+    if (api != null) __obj.updateDynamic("api")(api.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoReload)) __obj.updateDynamic("autoReload")(autoReload.get.asInstanceOf[js.Any])
+    if (cookie != null) __obj.updateDynamic("cookie")(cookie.asInstanceOf[js.Any])
+    if (defaultLocale != null) __obj.updateDynamic("defaultLocale")(defaultLocale.asInstanceOf[js.Any])
+    if (directory != null) __obj.updateDynamic("directory")(directory.asInstanceOf[js.Any])
+    if (directoryPermissions != null) __obj.updateDynamic("directoryPermissions")(directoryPermissions.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fallbacks != null) __obj.updateDynamic("fallbacks")(fallbacks.asInstanceOf[js.Any])
+    if (indent != null) __obj.updateDynamic("indent")(indent.asInstanceOf[js.Any])
+    if (locales != null) __obj.updateDynamic("locales")(locales.asInstanceOf[js.Any])
+    if (logDebugFn != null) __obj.updateDynamic("logDebugFn")(js.Any.fromFunction1(logDebugFn))
+    if (logErrorFn != null) __obj.updateDynamic("logErrorFn")(js.Any.fromFunction1(logErrorFn))
+    if (logWarnFn != null) __obj.updateDynamic("logWarnFn")(js.Any.fromFunction1(logWarnFn))
+    if (!js.isUndefined(objectNotation)) __obj.updateDynamic("objectNotation")(objectNotation.get.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveLegacyCase)) __obj.updateDynamic("preserveLegacyCase")(preserveLegacyCase.get.asInstanceOf[js.Any])
+    if (queryParameter != null) __obj.updateDynamic("queryParameter")(queryParameter.asInstanceOf[js.Any])
+    if (register != null) __obj.updateDynamic("register")(register.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncFiles)) __obj.updateDynamic("syncFiles")(syncFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateFiles)) __obj.updateDynamic("updateFiles")(updateFiles.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationOptions]
   }
-  @scala.inline
-  implicit class ConfigurationOptionsOps[Self <: ConfigurationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApi(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoReload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoReload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoReload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoReload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCookie(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLocale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLocale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryPermissions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryPermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbacks(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbacks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallbacks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbacks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocales(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocales: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogDebugFn(value: /* msg */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logDebugFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLogDebugFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logDebugFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogErrorFn(value: /* msg */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logErrorFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLogErrorFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logErrorFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogWarnFn(value: /* msg */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logWarnFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLogWarnFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logWarnFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectNotation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectNotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectNotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectNotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveLegacyCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveLegacyCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveLegacyCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveLegacyCase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryParameter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParameter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryParameter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParameter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegister(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegister: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFiles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

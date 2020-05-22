@@ -12,41 +12,11 @@ trait JsDocTags extends js.Object {
 
 object JsDocTags {
   @scala.inline
-  def apply(): JsDocTags = {
+  def apply(params: js.Array[JsDocParam] = null, returns: JsDocReturns = null): JsDocTags = {
     val __obj = js.Dynamic.literal()
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (returns != null) __obj.updateDynamic("returns")(returns.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsDocTags]
   }
-  @scala.inline
-  implicit class JsDocTagsOps[Self <: JsDocTags] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParams(value: js.Array[JsDocParam]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturns(value: JsDocReturns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

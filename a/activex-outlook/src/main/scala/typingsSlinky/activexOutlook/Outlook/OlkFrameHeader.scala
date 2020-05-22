@@ -7,17 +7,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OlkFrameHeader extends js.Object {
-  var Alignment: OlAlignment = js.native
-  var Caption: String = js.native
-  var Enabled: Boolean = js.native
-  val Font: StdFont = js.native
-  var ForeColor: OLE_COLOR = js.native
-  var MouseIcon: StdPicture = js.native
-  var MousePointer: OlMousePointer = js.native
+  var Alignment: OlAlignment
+  var Caption: String
+  var Enabled: Boolean
+  val Font: StdFont
+  var ForeColor: OLE_COLOR
+  var MouseIcon: StdPicture
+  var MousePointer: OlMousePointer
   @JSName("Outlook.OlkFrameHeader_typekey")
-  var OutlookDotOlkFrameHeader_typekey: OlkFrameHeader = js.native
+  var OutlookDotOlkFrameHeader_typekey: OlkFrameHeader
 }
 
 object OlkFrameHeader {
@@ -36,61 +35,5 @@ object OlkFrameHeader {
     __obj.updateDynamic("Outlook.OlkFrameHeader_typekey")(OutlookDotOlkFrameHeader_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OlkFrameHeader]
   }
-  @scala.inline
-  implicit class OlkFrameHeaderOps[Self <: OlkFrameHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: OlAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: StdFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseIcon(value: StdPicture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MouseIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMousePointer(value: OlMousePointer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MousePointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkFrameHeader_typekey(value: OlkFrameHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkFrameHeader_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

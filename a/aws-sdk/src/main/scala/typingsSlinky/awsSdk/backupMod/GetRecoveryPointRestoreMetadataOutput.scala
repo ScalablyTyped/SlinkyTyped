@@ -22,53 +22,12 @@ trait GetRecoveryPointRestoreMetadataOutput extends js.Object {
 
 object GetRecoveryPointRestoreMetadataOutput {
   @scala.inline
-  def apply(): GetRecoveryPointRestoreMetadataOutput = {
+  def apply(BackupVaultArn: ARN = null, RecoveryPointArn: ARN = null, RestoreMetadata: Metadata = null): GetRecoveryPointRestoreMetadataOutput = {
     val __obj = js.Dynamic.literal()
+    if (BackupVaultArn != null) __obj.updateDynamic("BackupVaultArn")(BackupVaultArn.asInstanceOf[js.Any])
+    if (RecoveryPointArn != null) __obj.updateDynamic("RecoveryPointArn")(RecoveryPointArn.asInstanceOf[js.Any])
+    if (RestoreMetadata != null) __obj.updateDynamic("RestoreMetadata")(RestoreMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRecoveryPointRestoreMetadataOutput]
   }
-  @scala.inline
-  implicit class GetRecoveryPointRestoreMetadataOutputOps[Self <: GetRecoveryPointRestoreMetadataOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackupVaultArn(value: ARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupVaultArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupVaultArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupVaultArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecoveryPointArn(value: ARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPointArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecoveryPointArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPointArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestoreMetadata(value: Metadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestoreMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigOptions extends js.Object {
-  var epsilon: js.UndefOr[Double] = js.native
-  var matrix: js.UndefOr[String] = js.native
-  var number: js.UndefOr[String] = js.native
-  var parenthesis: js.UndefOr[String] = js.native
-  var precision: js.UndefOr[Double] = js.native
-  var randomSeed: js.UndefOr[String] = js.native
+  var epsilon: js.UndefOr[Double] = js.undefined
+  var matrix: js.UndefOr[String] = js.undefined
+  var number: js.UndefOr[String] = js.undefined
+  var parenthesis: js.UndefOr[String] = js.undefined
+  var precision: js.UndefOr[Double] = js.undefined
+  var randomSeed: js.UndefOr[String] = js.undefined
 }
 
 object ConfigOptions {
   @scala.inline
-  def apply(): ConfigOptions = {
+  def apply(
+    epsilon: js.UndefOr[Double] = js.undefined,
+    matrix: String = null,
+    number: String = null,
+    parenthesis: String = null,
+    precision: js.UndefOr[Double] = js.undefined,
+    randomSeed: String = null
+  ): ConfigOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(epsilon)) __obj.updateDynamic("epsilon")(epsilon.get.asInstanceOf[js.Any])
+    if (matrix != null) __obj.updateDynamic("matrix")(matrix.asInstanceOf[js.Any])
+    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
+    if (parenthesis != null) __obj.updateDynamic("parenthesis")(parenthesis.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (randomSeed != null) __obj.updateDynamic("randomSeed")(randomSeed.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigOptions]
   }
-  @scala.inline
-  implicit class ConfigOptionsOps[Self <: ConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEpsilon(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epsilon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEpsilon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epsilon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatrix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParenthesis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parenthesis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParenthesis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parenthesis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRandomSeed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("randomSeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRandomSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("randomSeed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

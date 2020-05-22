@@ -14,29 +14,10 @@ trait PutAccountSuppressionAttributesRequest extends js.Object {
 
 object PutAccountSuppressionAttributesRequest {
   @scala.inline
-  def apply(): PutAccountSuppressionAttributesRequest = {
+  def apply(SuppressedReasons: SuppressionListReasons = null): PutAccountSuppressionAttributesRequest = {
     val __obj = js.Dynamic.literal()
+    if (SuppressedReasons != null) __obj.updateDynamic("SuppressedReasons")(SuppressedReasons.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutAccountSuppressionAttributesRequest]
   }
-  @scala.inline
-  implicit class PutAccountSuppressionAttributesRequestOps[Self <: PutAccountSuppressionAttributesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuppressedReasons(value: SuppressionListReasons): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuppressedReasons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressedReasons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuppressedReasons")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

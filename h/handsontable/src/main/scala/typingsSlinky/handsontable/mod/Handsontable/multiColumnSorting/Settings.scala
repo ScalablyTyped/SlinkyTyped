@@ -10,7 +10,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Settings extends js.Object {
   var compareFunctionFactory: js.UndefOr[
     js.Function2[
@@ -18,88 +17,29 @@ trait Settings extends js.Object {
       /* columnMeta */ GridSettings, 
       js.Function2[/* value */ _, /* nextValue */ _, `-1` | `0` | `1`]
     ]
-  ] = js.native
-  var headerAction: js.UndefOr[Boolean] = js.native
-  var indicator: js.UndefOr[Boolean] = js.native
-  var initialConfig: js.UndefOr[Config | js.Array[Config]] = js.native
-  var sortEmptyCells: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var headerAction: js.UndefOr[Boolean] = js.undefined
+  var indicator: js.UndefOr[Boolean] = js.undefined
+  var initialConfig: js.UndefOr[Config | js.Array[Config]] = js.undefined
+  var sortEmptyCells: js.UndefOr[Boolean] = js.undefined
 }
 
 object Settings {
   @scala.inline
-  def apply(): Settings = {
+  def apply(
+    compareFunctionFactory: (/* sortOrder */ SortOrderType, /* columnMeta */ GridSettings) => js.Function2[/* value */ _, /* nextValue */ _, `-1` | `0` | `1`] = null,
+    headerAction: js.UndefOr[Boolean] = js.undefined,
+    indicator: js.UndefOr[Boolean] = js.undefined,
+    initialConfig: Config | js.Array[Config] = null,
+    sortEmptyCells: js.UndefOr[Boolean] = js.undefined
+  ): Settings = {
     val __obj = js.Dynamic.literal()
+    if (compareFunctionFactory != null) __obj.updateDynamic("compareFunctionFactory")(js.Any.fromFunction2(compareFunctionFactory))
+    if (!js.isUndefined(headerAction)) __obj.updateDynamic("headerAction")(headerAction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indicator)) __obj.updateDynamic("indicator")(indicator.get.asInstanceOf[js.Any])
+    if (initialConfig != null) __obj.updateDynamic("initialConfig")(initialConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(sortEmptyCells)) __obj.updateDynamic("sortEmptyCells")(sortEmptyCells.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
-  @scala.inline
-  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompareFunctionFactory(
-      value: (/* sortOrder */ SortOrderType, /* columnMeta */ GridSettings) => js.Function2[/* value */ _, /* nextValue */ _, `-1` | `0` | `1`]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareFunctionFactory")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCompareFunctionFactory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareFunctionFactory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderAction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndicator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialConfig(value: Config | js.Array[Config]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortEmptyCells(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortEmptyCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortEmptyCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortEmptyCells")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

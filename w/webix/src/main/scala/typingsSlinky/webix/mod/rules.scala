@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait rules extends js.Object {
-  def isChecked(): Boolean = js.native
-  def isEmail(): Boolean = js.native
-  def isNotEmpty(): Boolean = js.native
-  def isNumber(): Boolean = js.native
+  def isChecked(): Boolean
+  def isEmail(): Boolean
+  def isNotEmpty(): Boolean
+  def isNumber(): Boolean
 }
 
 @JSImport("webix", "rules")

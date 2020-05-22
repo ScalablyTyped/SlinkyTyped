@@ -4,6 +4,7 @@ import typingsSlinky.typescript.mod.Decorator
 import typingsSlinky.typescript.mod.HeritageClause
 import typingsSlinky.typescript.mod.Identifier
 import typingsSlinky.typescript.mod.JSDocAugmentsTag
+import typingsSlinky.typescript.mod.JSDocImplementsTag
 import typingsSlinky.typescript.mod.LeftHandSideExpression
 import typingsSlinky.typescript.mod.ModifiersArray
 import typingsSlinky.typescript.mod.Node
@@ -28,7 +29,7 @@ trait ExpressionWithTypeArgumen extends js.Object {
   var flags: NodeFlags = js.native
   var kind: ExpressionWithTypeArguments = js.native
   var modifiers: js.UndefOr[ModifiersArray] = js.native
-  var parent: HeritageClause | JSDocAugmentsTag = js.native
+  var parent: HeritageClause | JSDocAugmentsTag | JSDocImplementsTag = js.native
   var pos: Double = js.native
   var typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
   def forEachChild[T](cbNode: js.Function1[/* node */ Node, js.UndefOr[T]]): js.UndefOr[T] = js.native

@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HTMLDocumentCompatibleInfoCollection extends js.Object {
   @JSName("MSHTML.HTMLDocumentCompatibleInfoCollection_typekey")
-  var MSHTMLDotHTMLDocumentCompatibleInfoCollection_typekey: HTMLDocumentCompatibleInfoCollection = js.native
-  val constructor: js.Any = js.native
+  var MSHTMLDotHTMLDocumentCompatibleInfoCollection_typekey: HTMLDocumentCompatibleInfoCollection
+  val constructor: js.Any
 }
 
 object HTMLDocumentCompatibleInfoCollection {
@@ -21,25 +20,5 @@ object HTMLDocumentCompatibleInfoCollection {
     __obj.updateDynamic("MSHTML.HTMLDocumentCompatibleInfoCollection_typekey")(MSHTMLDotHTMLDocumentCompatibleInfoCollection_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLDocumentCompatibleInfoCollection]
   }
-  @scala.inline
-  implicit class HTMLDocumentCompatibleInfoCollectionOps[Self <: HTMLDocumentCompatibleInfoCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotHTMLDocumentCompatibleInfoCollection_typekey(value: HTMLDocumentCompatibleInfoCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.HTMLDocumentCompatibleInfoCollection_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConstructor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

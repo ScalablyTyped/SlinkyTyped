@@ -1,9 +1,5 @@
 package typingsSlinky.vegaTypings.encodeMod
 
-import typingsSlinky.vegaTypings.anon.Band
-import typingsSlinky.vegaTypings.anon.FieldScale
-import typingsSlinky.vegaTypings.anon.Range
-import typingsSlinky.vegaTypings.anon.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,19 +11,43 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.anon.Band
   - typingsSlinky.vegaTypings.anon.Range
 */
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.vegaTypings.encodeMod.ArbitraryValueRef because Already inherited */ trait ScaledValueRef[T] extends ColorValueRef
+trait ScaledValueRef[T] extends js.Object
 
 object ScaledValueRef {
   @scala.inline
-  implicit def apply[T](value: Band): ScaledValueRef[T] = value.asInstanceOf[ScaledValueRef[T]]
+  def Band[T](band: Boolean | Double, scale: Field): ScaledValueRef[T] = {
+    val __obj = js.Dynamic.literal(band = band.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScaledValueRef[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: BaseValueRef[T]): ScaledValueRef[T] = value.asInstanceOf[ScaledValueRef[T]]
+  def Scale[T](scale: Field, value: Boolean | Double | String = null): ScaledValueRef[T] = {
+    val __obj = js.Dynamic.literal(scale = scale.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScaledValueRef[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: FieldScale): ScaledValueRef[T] = value.asInstanceOf[ScaledValueRef[T]]
+  def Range[T](range: Double | Boolean, scale: Field): ScaledValueRef[T] = {
+    val __obj = js.Dynamic.literal(range = range.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScaledValueRef[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: Range): ScaledValueRef[T] = value.asInstanceOf[ScaledValueRef[T]]
+  def FieldScale[T](field: Field, scale: Field): ScaledValueRef[T] = {
+    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScaledValueRef[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: Scale): ScaledValueRef[T] = value.asInstanceOf[ScaledValueRef[T]]
+  def Field[T](field: typingsSlinky.vegaTypings.encodeMod.Field): ScaledValueRef[T] = {
+    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScaledValueRef[T]]
+  }
+  @scala.inline
+  def SignalRef[T](signal: String): ScaledValueRef[T] = {
+    val __obj = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScaledValueRef[T]]
+  }
+  @scala.inline
+  def Value[T](value: T = null): ScaledValueRef[T] = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScaledValueRef[T]]
+  }
 }
 

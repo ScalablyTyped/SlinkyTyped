@@ -30,77 +30,20 @@ trait DescribeUserResponse extends js.Object {
 
 object DescribeUserResponse {
   @scala.inline
-  def apply(): DescribeUserResponse = {
+  def apply(
+    BrokerId: string = null,
+    ConsoleAccess: js.UndefOr[boolean] = js.undefined,
+    Groups: listOfString = null,
+    Pending: UserPendingChanges = null,
+    Username: string = null
+  ): DescribeUserResponse = {
     val __obj = js.Dynamic.literal()
+    if (BrokerId != null) __obj.updateDynamic("BrokerId")(BrokerId.asInstanceOf[js.Any])
+    if (!js.isUndefined(ConsoleAccess)) __obj.updateDynamic("ConsoleAccess")(ConsoleAccess.get.asInstanceOf[js.Any])
+    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
+    if (Pending != null) __obj.updateDynamic("Pending")(Pending.asInstanceOf[js.Any])
+    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeUserResponse]
   }
-  @scala.inline
-  implicit class DescribeUserResponseOps[Self <: DescribeUserResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrokerId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrokerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsoleAccess(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsoleAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsoleAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsoleAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPending(value: UserPendingChanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

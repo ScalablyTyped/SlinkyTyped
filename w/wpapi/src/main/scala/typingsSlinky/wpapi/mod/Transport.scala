@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Transport extends js.Object {
-  var delete: js.UndefOr[TransportFunction] = js.native
-  var get: js.UndefOr[TransportFunction] = js.native
-  var head: js.UndefOr[TransportFunction] = js.native
-  var post: js.UndefOr[TransportFunction] = js.native
-  var put: js.UndefOr[TransportFunction] = js.native
+  var delete: js.UndefOr[TransportFunction] = js.undefined
+  var get: js.UndefOr[TransportFunction] = js.undefined
+  var head: js.UndefOr[TransportFunction] = js.undefined
+  var post: js.UndefOr[TransportFunction] = js.undefined
+  var put: js.UndefOr[TransportFunction] = js.undefined
 }
 
 object Transport {
   @scala.inline
-  def apply(): Transport = {
+  def apply(
+    delete: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any] = null,
+    get: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any] = null,
+    head: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any] = null,
+    post: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any] = null,
+    put: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any] = null
+  ): Transport = {
     val __obj = js.Dynamic.literal()
+    if (delete != null) __obj.updateDynamic("delete")(js.Any.fromFunction2(delete))
+    if (get != null) __obj.updateDynamic("get")(js.Any.fromFunction2(get))
+    if (head != null) __obj.updateDynamic("head")(js.Any.fromFunction2(head))
+    if (post != null) __obj.updateDynamic("post")(js.Any.fromFunction2(post))
+    if (put != null) __obj.updateDynamic("put")(js.Any.fromFunction2(put))
     __obj.asInstanceOf[Transport]
   }
-  @scala.inline
-  implicit class TransportOps[Self <: Transport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGet(value: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHead(value: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPost(value: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPut(value: (/* wpreq */ WPRequest, /* cb */ js.UndefOr[WPRequestCallback]) => js.Promise[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

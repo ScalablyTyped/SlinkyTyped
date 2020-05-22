@@ -4,121 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InlineKeyboardButton extends js.Object {
-  var callback_data: js.UndefOr[String] = js.native
-  var callback_game: js.UndefOr[CallbackGame] = js.native
-  var login_url: js.UndefOr[LoginUrl] = js.native
-  var pay: js.UndefOr[Boolean] = js.native
-  var switch_inline_query: js.UndefOr[String] = js.native
-  var switch_inline_query_current_chat: js.UndefOr[String] = js.native
-  var text: String = js.native
-  var url: js.UndefOr[String] = js.native
+  var callback_data: js.UndefOr[String] = js.undefined
+  var callback_game: js.UndefOr[CallbackGame] = js.undefined
+  var login_url: js.UndefOr[LoginUrl] = js.undefined
+  var pay: js.UndefOr[Boolean] = js.undefined
+  var switch_inline_query: js.UndefOr[String] = js.undefined
+  var switch_inline_query_current_chat: js.UndefOr[String] = js.undefined
+  var text: String
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object InlineKeyboardButton {
   @scala.inline
-  def apply(text: String): InlineKeyboardButton = {
+  def apply(
+    text: String,
+    callback_data: String = null,
+    callback_game: CallbackGame = null,
+    login_url: LoginUrl = null,
+    pay: js.UndefOr[Boolean] = js.undefined,
+    switch_inline_query: String = null,
+    switch_inline_query_current_chat: String = null,
+    url: String = null
+  ): InlineKeyboardButton = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    if (callback_data != null) __obj.updateDynamic("callback_data")(callback_data.asInstanceOf[js.Any])
+    if (callback_game != null) __obj.updateDynamic("callback_game")(callback_game.asInstanceOf[js.Any])
+    if (login_url != null) __obj.updateDynamic("login_url")(login_url.asInstanceOf[js.Any])
+    if (!js.isUndefined(pay)) __obj.updateDynamic("pay")(pay.get.asInstanceOf[js.Any])
+    if (switch_inline_query != null) __obj.updateDynamic("switch_inline_query")(switch_inline_query.asInstanceOf[js.Any])
+    if (switch_inline_query_current_chat != null) __obj.updateDynamic("switch_inline_query_current_chat")(switch_inline_query_current_chat.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[InlineKeyboardButton]
   }
-  @scala.inline
-  implicit class InlineKeyboardButtonOps[Self <: InlineKeyboardButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCallback_data(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallback_data: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback_data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallback_game(value: CallbackGame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback_game")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallback_game: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback_game")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogin_url(value: LoginUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("login_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogin_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("login_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwitch_inline_query(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switch_inline_query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwitch_inline_query: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switch_inline_query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwitch_inline_query_current_chat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switch_inline_query_current_chat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwitch_inline_query_current_chat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switch_inline_query_current_chat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

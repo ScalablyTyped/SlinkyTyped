@@ -11,6 +11,12 @@ object unaryopGpuMod extends js.Object {
   @js.native
   class UnaryOpProgram protected () extends GPGPUProgram {
     def this(aShape: js.Array[Double], opSnippet: String) = this()
+    /* CompleteClass */
+    override var outputShape: js.Array[Double] = js.native
+    /* CompleteClass */
+    override var userCode: String = js.native
+    /* CompleteClass */
+    override var variableNames: js.Array[String] = js.native
   }
   
   val ABS: /* "return abs(x);" */ String = js.native

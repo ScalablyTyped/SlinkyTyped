@@ -4,36 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SAlertProps extends SAlertConfigProps {
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String] = js.undefined
 }
 
 object SAlertProps {
   @scala.inline
-  def apply(): SAlertProps = {
+  def apply(
+    beep: String | Boolean | SAlertBeepProps = null,
+    contentTemplate: /* repeated */ js.Any => _ = null,
+    customFields: js.Object = null,
+    effect: String = null,
+    html: js.UndefOr[Boolean] = js.undefined,
+    message: String = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    onClose: () => Unit = null,
+    onShow: () => Unit = null,
+    position: String = null,
+    stack: Boolean | SAlertStackProps = null,
+    timeout: String | Double = null
+  ): SAlertProps = {
     val __obj = js.Dynamic.literal()
+    if (beep != null) __obj.updateDynamic("beep")(beep.asInstanceOf[js.Any])
+    if (contentTemplate != null) __obj.updateDynamic("contentTemplate")(js.Any.fromFunction1(contentTemplate))
+    if (customFields != null) __obj.updateDynamic("customFields")(customFields.asInstanceOf[js.Any])
+    if (effect != null) __obj.updateDynamic("effect")(effect.asInstanceOf[js.Any])
+    if (!js.isUndefined(html)) __obj.updateDynamic("html")(html.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
+    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SAlertProps]
   }
-  @scala.inline
-  implicit class SAlertPropsOps[Self <: SAlertProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

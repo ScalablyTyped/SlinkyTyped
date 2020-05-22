@@ -1,5 +1,6 @@
 package typingsSlinky.node.http2Mod
 
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.nodeStrings._empty
@@ -61,12 +62,12 @@ class Http2ServerResponse protected () extends Stream {
   def end(callback: js.Function0[Unit]): Unit = js.native
   def end(data: String): Unit = js.native
   def end(data: String, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: String, encoding: String): Unit = js.native
-  def end(data: String, encoding: String, callback: js.Function0[Unit]): Unit = js.native
+  def end(data: String, encoding: BufferEncoding): Unit = js.native
+  def end(data: String, encoding: BufferEncoding, callback: js.Function0[Unit]): Unit = js.native
   def end(data: js.typedarray.Uint8Array): Unit = js.native
   def end(data: js.typedarray.Uint8Array, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: js.typedarray.Uint8Array, encoding: String): Unit = js.native
-  def end(data: js.typedarray.Uint8Array, encoding: String, callback: js.Function0[Unit]): Unit = js.native
+  def end(data: js.typedarray.Uint8Array, encoding: BufferEncoding): Unit = js.native
+  def end(data: js.typedarray.Uint8Array, encoding: BufferEncoding, callback: js.Function0[Unit]): Unit = js.native
   def getHeader(name: String): String = js.native
   def getHeaderNames(): js.Array[String] = js.native
   def getHeaders(): OutgoingHttpHeaders = js.native
@@ -127,14 +128,14 @@ class Http2ServerResponse protected () extends Stream {
   def setTimeout(msecs: Double, callback: js.Function0[Unit]): Unit = js.native
   def write(chunk: String): Boolean = js.native
   def write(chunk: String, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
-  def write(chunk: String, encoding: String): Boolean = js.native
-  def write(chunk: String, encoding: String, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
+  def write(chunk: String, encoding: BufferEncoding): Boolean = js.native
+  def write(chunk: String, encoding: BufferEncoding, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
   def write(chunk: js.typedarray.Uint8Array): Boolean = js.native
   def write(chunk: js.typedarray.Uint8Array, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
-  def write(chunk: js.typedarray.Uint8Array, encoding: String): Boolean = js.native
+  def write(chunk: js.typedarray.Uint8Array, encoding: BufferEncoding): Boolean = js.native
   def write(
     chunk: js.typedarray.Uint8Array,
-    encoding: String,
+    encoding: BufferEncoding,
     callback: js.Function1[/* err */ js.Error, Unit]
   ): Boolean = js.native
   def writeContinue(): Unit = js.native

@@ -11,97 +11,49 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@js.native
 trait AutoFilterLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * An array that holds all the filter criteria in the autofiltered range. Read-Only.
+    * An array that holds all the filter criteria in the autofiltered range.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var criteria: js.UndefOr[Boolean] = js.native
+  var criteria: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates if the AutoFilter is enabled or not. Read-Only.
+    * Specifies if the AutoFilter is enabled.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates if the AutoFilter has filter criteria. Read-Only.
+    * Specifies if the AutoFilter has filter criteria.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var isDataFiltered: js.UndefOr[Boolean] = js.native
+  var isDataFiltered: js.UndefOr[Boolean] = js.undefined
 }
 
 object AutoFilterLoadOptions {
   @scala.inline
-  def apply(): AutoFilterLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    criteria: js.UndefOr[Boolean] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    isDataFiltered: js.UndefOr[Boolean] = js.undefined
+  ): AutoFilterLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(criteria)) __obj.updateDynamic("criteria")(criteria.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDataFiltered)) __obj.updateDynamic("isDataFiltered")(isDataFiltered.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoFilterLoadOptions]
   }
-  @scala.inline
-  implicit class AutoFilterLoadOptionsOps[Self <: AutoFilterLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCriteria(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDataFiltered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataFiltered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDataFiltered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataFiltered")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

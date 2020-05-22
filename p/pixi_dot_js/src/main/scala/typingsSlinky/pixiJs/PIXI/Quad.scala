@@ -10,6 +10,5 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@js.native
 trait Quad extends js.Object
 

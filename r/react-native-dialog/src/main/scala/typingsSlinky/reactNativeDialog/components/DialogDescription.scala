@@ -12,7 +12,7 @@ object DialogDescription {
   @js.native
   object component extends js.Object
   
-  def withProps(p: DescriptionProps with ViewProps with TextProps): `SharedBuilder_<intersection>1493291014`[typingsSlinky.reactNativeDialog.mod.Dialog.Description] = new `SharedBuilder_<intersection>1493291014`[typingsSlinky.reactNativeDialog.mod.Dialog.Description](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DialogDescription.type): `SharedBuilder_<intersection>1493291014`[typingsSlinky.reactNativeDialog.mod.Dialog.Description] = new `SharedBuilder_<intersection>1493291014`[typingsSlinky.reactNativeDialog.mod.Dialog.Description](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: DescriptionProps with ViewProps with TextProps): SharedBuilder_DescriptionPropsViewPropsTextProps1493291014[typingsSlinky.reactNativeDialog.mod.Dialog.Description] = new SharedBuilder_DescriptionPropsViewPropsTextProps1493291014[typingsSlinky.reactNativeDialog.mod.Dialog.Description](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DialogDescription.type): SharedBuilder_DescriptionPropsViewPropsTextProps1493291014[typingsSlinky.reactNativeDialog.mod.Dialog.Description] = new SharedBuilder_DescriptionPropsViewPropsTextProps1493291014[typingsSlinky.reactNativeDialog.mod.Dialog.Description](js.Array(this.component, js.Dictionary.empty))()
 }
 

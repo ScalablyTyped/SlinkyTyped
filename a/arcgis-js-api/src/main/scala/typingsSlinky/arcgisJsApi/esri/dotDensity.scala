@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-dotDensity.html)
   */
-@js.native
 trait dotDensity extends js.Object {
   /**
     * Generates a [DotDensityRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html) based on one or more complementary numeric fields and/or Arcade expressions. This method will determine an appropriate [dotValue](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html#dotValue) for the data at the scale of the provided view.  For example, suppose you have a layer of U.S. counties with fields containing the total sales of various crops: wheat, soybeans, corn, cotton, and vegetables. If a feature has the following values for each field:
@@ -39,7 +38,7 @@ trait dotDensity extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createRenderer(params: dotDensityCreateRendererParams): js.Promise[RendererResult] = js.native
+  def createRenderer(params: dotDensityCreateRendererParams): js.Promise[RendererResult]
 }
 
 object dotDensity {
@@ -48,19 +47,5 @@ object dotDensity {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
     __obj.asInstanceOf[dotDensity]
   }
-  @scala.inline
-  implicit class dotDensityOps[Self <: dotDensity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateRenderer(value: dotDensityCreateRendererParams => js.Promise[RendererResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

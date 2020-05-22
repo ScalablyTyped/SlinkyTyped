@@ -1,25 +1,74 @@
 package typingsSlinky.firebaseAdmin.admin.messaging
 
-import typingsSlinky.firebaseAdmin.ConditionMessage
-import typingsSlinky.firebaseAdmin.TokenMessage
-import typingsSlinky.firebaseAdmin.TopicMessage
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.firebaseAdmin.TokenMessage
-  - typingsSlinky.firebaseAdmin.TopicMessage
-  - typingsSlinky.firebaseAdmin.ConditionMessage
+  - typingsSlinky.firebaseAdmin.messagingMod.TokenMessage
+  - typingsSlinky.firebaseAdmin.messagingMod.TopicMessage
+  - typingsSlinky.firebaseAdmin.messagingMod.ConditionMessage
 */
 trait Message extends js.Object
 
 object Message {
   @scala.inline
-  implicit def apply(value: ConditionMessage): Message = value.asInstanceOf[Message]
+  def TokenMessage(
+    token: String,
+    android: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.AndroidConfig = null,
+    apns: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.ApnsConfig = null,
+    data: StringDictionary[String] = null,
+    fcmOptions: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.FcmOptions = null,
+    notification: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.Notification = null,
+    webpush: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.WebpushConfig = null
+  ): Message = {
+    val __obj = js.Dynamic.literal(token = token.asInstanceOf[js.Any])
+    if (android != null) __obj.updateDynamic("android")(android.asInstanceOf[js.Any])
+    if (apns != null) __obj.updateDynamic("apns")(apns.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (fcmOptions != null) __obj.updateDynamic("fcmOptions")(fcmOptions.asInstanceOf[js.Any])
+    if (notification != null) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
+    if (webpush != null) __obj.updateDynamic("webpush")(webpush.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Message]
+  }
   @scala.inline
-  implicit def apply(value: TokenMessage): Message = value.asInstanceOf[Message]
+  def TopicMessage(
+    topic: String,
+    android: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.AndroidConfig = null,
+    apns: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.ApnsConfig = null,
+    data: StringDictionary[String] = null,
+    fcmOptions: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.FcmOptions = null,
+    notification: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.Notification = null,
+    webpush: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.WebpushConfig = null
+  ): Message = {
+    val __obj = js.Dynamic.literal(topic = topic.asInstanceOf[js.Any])
+    if (android != null) __obj.updateDynamic("android")(android.asInstanceOf[js.Any])
+    if (apns != null) __obj.updateDynamic("apns")(apns.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (fcmOptions != null) __obj.updateDynamic("fcmOptions")(fcmOptions.asInstanceOf[js.Any])
+    if (notification != null) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
+    if (webpush != null) __obj.updateDynamic("webpush")(webpush.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Message]
+  }
   @scala.inline
-  implicit def apply(value: TopicMessage): Message = value.asInstanceOf[Message]
+  def ConditionMessage(
+    condition: String,
+    android: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.AndroidConfig = null,
+    apns: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.ApnsConfig = null,
+    data: StringDictionary[String] = null,
+    fcmOptions: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.FcmOptions = null,
+    notification: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.Notification = null,
+    webpush: typingsSlinky.firebaseAdmin.messagingMod.admin.messaging.WebpushConfig = null
+  ): Message = {
+    val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any])
+    if (android != null) __obj.updateDynamic("android")(android.asInstanceOf[js.Any])
+    if (apns != null) __obj.updateDynamic("apns")(apns.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (fcmOptions != null) __obj.updateDynamic("fcmOptions")(fcmOptions.asInstanceOf[js.Any])
+    if (notification != null) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
+    if (webpush != null) __obj.updateDynamic("webpush")(webpush.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Message]
+  }
 }
 

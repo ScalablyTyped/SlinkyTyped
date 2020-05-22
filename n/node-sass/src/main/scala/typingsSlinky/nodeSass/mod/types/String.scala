@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait String extends Value {
-  def getValue(): java.lang.String = js.native
-  def setValue(s: java.lang.String): Unit = js.native
+  def getValue(): java.lang.String
+  def setValue(s: java.lang.String): Unit
 }
 
 @JSImport("node-sass", "types.String")

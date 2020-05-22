@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RcBaseFormProps extends js.Object {
-  var wrappedComponentRef: js.UndefOr[js.Any] = js.native
+  var wrappedComponentRef: js.UndefOr[js.Any] = js.undefined
 }
 
 object RcBaseFormProps {
   @scala.inline
-  def apply(): RcBaseFormProps = {
+  def apply(wrappedComponentRef: js.Any = null): RcBaseFormProps = {
     val __obj = js.Dynamic.literal()
+    if (wrappedComponentRef != null) __obj.updateDynamic("wrappedComponentRef")(wrappedComponentRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[RcBaseFormProps]
   }
-  @scala.inline
-  implicit class RcBaseFormPropsOps[Self <: RcBaseFormProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWrappedComponentRef(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappedComponentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrappedComponentRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappedComponentRef")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

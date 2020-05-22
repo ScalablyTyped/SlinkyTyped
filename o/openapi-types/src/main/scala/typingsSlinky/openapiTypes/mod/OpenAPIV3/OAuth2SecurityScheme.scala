@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OAuth2SecurityScheme extends SecuritySchemeObject {
-  var flows: AuthorizationCode = js.native
-  var `type`: oauth2 = js.native
+  var flows: AuthorizationCode
+  var `type`: oauth2
 }
 
 object OAuth2SecurityScheme {
@@ -19,25 +18,5 @@ object OAuth2SecurityScheme {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OAuth2SecurityScheme]
   }
-  @scala.inline
-  implicit class OAuth2SecuritySchemeOps[Self <: OAuth2SecurityScheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlows(value: AuthorizationCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: oauth2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

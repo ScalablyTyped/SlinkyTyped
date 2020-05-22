@@ -14,34 +14,33 @@ import scala.scalajs.js.annotation._
   * [Api set: Mailbox 1.8]
   *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
-@js.native
 trait SharedProperties extends js.Object {
   /**
     * The permissions that the delegate has on a shared folder.
     */
-  var delegatePermissions: DelegatePermissions = js.native
+  var delegatePermissions: DelegatePermissions
   /**
     * The email address of the owner of a shared item.
     */
-  var owner: String = js.native
+  var owner: String
   /**
     * The target/owner's mailbox. Use with `targetRestUrl` to construct REST operation's URL.
-    * 
+    *
     * Example usage: `targetRestUrl + "/{api_version}/users/" + targetMailbox + "/{REST_operation}"`
     */
-  var targetMailbox: String = js.native
+  var targetMailbox: String
   /**
     * The REST API's base URL (currently https://outlook.office.com/api).
     * Use with `targetMailbox` to construct REST operation's URL.
-    * 
+    *
     * Example usage: `targetRestUrl + "/{api_version}/users/" + targetMailbox + "/{REST_operation}"`
     */
-  var targetRestUrl: String = js.native
+  var targetRestUrl: String
 }
 
 object SharedProperties {
@@ -55,37 +54,5 @@ object SharedProperties {
     val __obj = js.Dynamic.literal(delegatePermissions = delegatePermissions.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], targetMailbox = targetMailbox.asInstanceOf[js.Any], targetRestUrl = targetRestUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedProperties]
   }
-  @scala.inline
-  implicit class SharedPropertiesOps[Self <: SharedProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelegatePermissions(value: DelegatePermissions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatePermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetMailbox(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetMailbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetRestUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRestUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

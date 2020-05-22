@@ -26,59 +26,17 @@ trait StopInstancesRequest extends js.Object {
 
 object StopInstancesRequest {
   @scala.inline
-  def apply(InstanceIds: InstanceIdStringList): StopInstancesRequest = {
+  def apply(
+    InstanceIds: InstanceIdStringList,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    Force: js.UndefOr[Boolean] = js.undefined,
+    Hibernate: js.UndefOr[Boolean] = js.undefined
+  ): StopInstancesRequest = {
     val __obj = js.Dynamic.literal(InstanceIds = InstanceIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Force)) __obj.updateDynamic("Force")(Force.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Hibernate)) __obj.updateDynamic("Hibernate")(Hibernate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopInstancesRequest]
   }
-  @scala.inline
-  implicit class StopInstancesRequestOps[Self <: StopInstancesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceIds(value: InstanceIdStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHibernate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hibernate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHibernate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hibernate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

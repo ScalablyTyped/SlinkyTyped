@@ -18,41 +18,14 @@ trait StoppingCondition extends js.Object {
 
 object StoppingCondition {
   @scala.inline
-  def apply(): StoppingCondition = {
+  def apply(
+    MaxRuntimeInSeconds: js.UndefOr[MaxRuntimeInSeconds] = js.undefined,
+    MaxWaitTimeInSeconds: js.UndefOr[MaxWaitTimeInSeconds] = js.undefined
+  ): StoppingCondition = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MaxRuntimeInSeconds)) __obj.updateDynamic("MaxRuntimeInSeconds")(MaxRuntimeInSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxWaitTimeInSeconds)) __obj.updateDynamic("MaxWaitTimeInSeconds")(MaxWaitTimeInSeconds.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StoppingCondition]
   }
-  @scala.inline
-  implicit class StoppingConditionOps[Self <: StoppingCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxRuntimeInSeconds(value: MaxRuntimeInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRuntimeInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRuntimeInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRuntimeInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWaitTimeInSeconds(value: MaxWaitTimeInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWaitTimeInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWaitTimeInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWaitTimeInSeconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

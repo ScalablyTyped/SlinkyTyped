@@ -18,41 +18,11 @@ trait GroupOwnerSetting extends js.Object {
 
 object GroupOwnerSetting {
   @scala.inline
-  def apply(): GroupOwnerSetting = {
+  def apply(AutoAddGroupOwner: js.UndefOr[boolean] = js.undefined, GroupOwner: string = null): GroupOwnerSetting = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AutoAddGroupOwner)) __obj.updateDynamic("AutoAddGroupOwner")(AutoAddGroupOwner.get.asInstanceOf[js.Any])
+    if (GroupOwner != null) __obj.updateDynamic("GroupOwner")(GroupOwner.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupOwnerSetting]
   }
-  @scala.inline
-  implicit class GroupOwnerSettingOps[Self <: GroupOwnerSetting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoAddGroupOwner(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAddGroupOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAddGroupOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAddGroupOwner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupOwner(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupOwner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

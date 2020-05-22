@@ -11,35 +11,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Visitor extends js.Object {
    // The name of the Visitor
-  var avatar: Avatar = js.native
+  var avatar: Avatar
    // The time the Lead last recorded making a request
-  val created_at: Double = js.native
+  val created_at: Double
    // A list of segments the Visitor
-  var custom_attributes: StringDictionary[js.Any] = js.native
+  var custom_attributes: StringDictionary[js.Any]
    // value is 'visitor'
-  val id: String = js.native
+  val id: String
    // A Location Object relating to the Visitor
-  var last_request_at: Double | Null = js.native
+  var last_request_at: Double | Null
    // An avatar object for the Visitor
-  var location_data: LocationData | js.Object = js.native
+  var location_data: LocationData | js.Object
    // Automatically generated identifier for the Visitor
-  var name: String | Null = js.native
+  var name: String | Null
    // A list of tags associated with the Visitor
-  var segments: js.Array[Segment] = js.native
+  var segments: js.Array[Segment]
    // The last time the Visitor was updated
-  var social_profiles: js.Array[SocialProfile] = js.native
+  var social_profiles: js.Array[SocialProfile]
    // Whether the Visitor is unsubscribed from emails
-  var tags: js.Array[Tag] = js.native
-  var `type`: visitor = js.native
+  var tags: js.Array[Tag]
+  var `type`: visitor
    // A list of social profiles associated with the Visitor
-  var unsubscribed_from_emails: Boolean = js.native
+  var unsubscribed_from_emails: Boolean
    // The time the Visitor was added to Intercom
-  val updated_at: Double = js.native
+  val updated_at: Double
    // The Intercom defined id representing the Visitor
-  var user_id: String | Null = js.native
+  var user_id: String | Null
 }
 
 object Visitor {
@@ -55,121 +54,14 @@ object Visitor {
     tags: js.Array[Tag],
     `type`: visitor,
     unsubscribed_from_emails: Boolean,
-    updated_at: Double
+    updated_at: Double,
+    last_request_at: Double = null.asInstanceOf[Double],
+    name: String = null,
+    user_id: String = null
   ): Visitor = {
-    val __obj = js.Dynamic.literal(avatar = avatar.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], custom_attributes = custom_attributes.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], location_data = location_data.asInstanceOf[js.Any], segments = segments.asInstanceOf[js.Any], social_profiles = social_profiles.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], unsubscribed_from_emails = unsubscribed_from_emails.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(avatar = avatar.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], custom_attributes = custom_attributes.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], location_data = location_data.asInstanceOf[js.Any], segments = segments.asInstanceOf[js.Any], social_profiles = social_profiles.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], unsubscribed_from_emails = unsubscribed_from_emails.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any], last_request_at = last_request_at.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], user_id = user_id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Visitor]
   }
-  @scala.inline
-  implicit class VisitorOps[Self <: Visitor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvatar(value: Avatar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustom_attributes(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation_data(value: LocationData | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSegments(value: js.Array[Segment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSocial_profiles(value: js.Array[SocialProfile]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("social_profiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: js.Array[Tag]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: visitor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnsubscribed_from_emails(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribed_from_emails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdated_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast_request_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_request_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast_request_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_request_at")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withUser_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser_idNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(null)
-        ret
-    }
-  }
-  
 }
 

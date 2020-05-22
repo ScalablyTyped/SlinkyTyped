@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SwitchTextCaseCommand")
 @js.native
 class SwitchTextCaseCommand ()
-  extends typingsSlinky.devexpressWeb.SwitchTextCaseCommand
+  extends typingsSlinky.devexpressWeb.SwitchTextCaseCommand {
+  /**
+    * Executes the SwitchTextCaseCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

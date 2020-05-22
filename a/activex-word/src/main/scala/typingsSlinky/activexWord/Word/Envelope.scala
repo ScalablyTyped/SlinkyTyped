@@ -4,39 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Envelope extends js.Object {
-  val Address: Range = js.native
-  var AddressFromLeft: Double = js.native
-  var AddressFromTop: Double = js.native
-  val AddressStyle: Style = js.native
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  var DefaultFaceUp: Boolean = js.native
-  var DefaultHeight: Double = js.native
-  var DefaultOmitReturnAddress: Boolean = js.native
-  var DefaultOrientation: WdEnvelopeOrientation = js.native
-  var DefaultPrintBarCode: Boolean = js.native
-  var DefaultPrintFIMA: Boolean = js.native
-  var DefaultSize: String = js.native
-  var DefaultWidth: Double = js.native
-  var FeedSource: WdPaperTray = js.native
-  val Parent: js.Any = js.native
-  var RecipientNamefromLeft: Double = js.native
-  var RecipientNamefromTop: Double = js.native
-  var RecipientPostalfromLeft: Double = js.native
-  var RecipientPostalfromTop: Double = js.native
-  val ReturnAddress: Range = js.native
-  var ReturnAddressFromLeft: Double = js.native
-  var ReturnAddressFromTop: Double = js.native
-  val ReturnAddressStyle: Style = js.native
-  var SenderNamefromLeft: Double = js.native
-  var SenderNamefromTop: Double = js.native
-  var SenderPostalfromLeft: Double = js.native
-  var SenderPostalfromTop: Double = js.native
-  var Vertical: Boolean = js.native
+  val Address: Range
+  var AddressFromLeft: Double
+  var AddressFromTop: Double
+  val AddressStyle: Style
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  var DefaultFaceUp: Boolean
+  var DefaultHeight: Double
+  var DefaultOmitReturnAddress: Boolean
+  var DefaultOrientation: WdEnvelopeOrientation
+  var DefaultPrintBarCode: Boolean
+  var DefaultPrintFIMA: Boolean
+  var DefaultSize: String
+  var DefaultWidth: Double
+  var FeedSource: WdPaperTray
+  val Parent: js.Any
+  var RecipientNamefromLeft: Double
+  var RecipientNamefromTop: Double
+  var RecipientPostalfromLeft: Double
+  var RecipientPostalfromTop: Double
+  val ReturnAddress: Range
+  var ReturnAddressFromLeft: Double
+  var ReturnAddressFromTop: Double
+  val ReturnAddressStyle: Style
+  var SenderNamefromLeft: Double
+  var SenderNamefromTop: Double
+  var SenderPostalfromLeft: Double
+  var SenderPostalfromTop: Double
+  var Vertical: Boolean
   @JSName("Word.Envelope_typekey")
-  var WordDotEnvelope_typekey: Envelope = js.native
+  var WordDotEnvelope_typekey: Envelope
   def Insert(
     ExtractAddress: js.UndefOr[js.Any],
     Address: js.UndefOr[js.Any],
@@ -66,7 +65,7 @@ trait Envelope extends js.Object {
     SenderNamefromTop: js.UndefOr[js.Any],
     SenderPostalfromLeft: js.UndefOr[js.Any],
     SenderPostalfromTop: js.UndefOr[js.Any]
-  ): Unit = js.native
+  ): Unit
   def Insert2000(
     ExtractAddress: js.UndefOr[js.Any],
     Address: js.UndefOr[js.Any],
@@ -86,8 +85,8 @@ trait Envelope extends js.Object {
     ReturnAddressFromTop: js.UndefOr[js.Any],
     DefaultFaceUp: js.UndefOr[js.Any],
     DefaultOrientation: js.UndefOr[js.Any]
-  ): Unit = js.native
-  def Options(): Unit = js.native
+  ): Unit
+  def Options(): Unit
   def PrintOut(
     ExtractAddress: js.UndefOr[js.Any],
     Address: js.UndefOr[js.Any],
@@ -117,7 +116,7 @@ trait Envelope extends js.Object {
     SenderNamefromTop: js.UndefOr[js.Any],
     SenderPostalfromLeft: js.UndefOr[js.Any],
     SenderPostalfromTop: js.UndefOr[js.Any]
-  ): Unit = js.native
+  ): Unit
   def PrintOut2000(
     ExtractAddress: js.UndefOr[js.Any],
     Address: js.UndefOr[js.Any],
@@ -137,8 +136,8 @@ trait Envelope extends js.Object {
     ReturnAddressFromTop: js.UndefOr[js.Any],
     DefaultFaceUp: js.UndefOr[js.Any],
     DefaultOrientation: js.UndefOr[js.Any]
-  ): Unit = js.native
-  def UpdateDocument(): Unit = js.native
+  ): Unit
+  def UpdateDocument(): Unit
 }
 
 object Envelope {
@@ -183,221 +182,5 @@ object Envelope {
     __obj.updateDynamic("Word.Envelope_typekey")(WordDotEnvelope_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Envelope]
   }
-  @scala.inline
-  implicit class EnvelopeOps[Self <: Envelope] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddressFromLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressFromLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddressFromTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressFromTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddressStyle(value: Style): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultFaceUp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultFaceUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultOmitReturnAddress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultOmitReturnAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultOrientation(value: WdEnvelopeOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultPrintBarCode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPrintBarCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultPrintFIMA(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPrintFIMA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeedSource(value: WdPaperTray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeedSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInsert2000(
-      value: (js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Insert2000")(js.Any.fromFunction18(value))
-        ret
-    }
-    @scala.inline
-    def withOptions(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrintOut2000(
-      value: (js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any], js.UndefOr[js.Any]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrintOut2000")(js.Any.fromFunction18(value))
-        ret
-    }
-    @scala.inline
-    def withRecipientNamefromLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientNamefromLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecipientNamefromTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientNamefromTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecipientPostalfromLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientPostalfromLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecipientPostalfromTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientPostalfromTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturnAddress(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturnAddressFromLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnAddressFromLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturnAddressFromTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnAddressFromTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturnAddressStyle(value: Style): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnAddressStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSenderNamefromLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderNamefromLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSenderNamefromTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderNamefromTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSenderPostalfromLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderPostalfromLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSenderPostalfromTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderPostalfromTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateDocument(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotEnvelope_typekey(value: Envelope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.Envelope_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

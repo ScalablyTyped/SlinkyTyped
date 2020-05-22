@@ -18,6 +18,7 @@ package object mod {
     /* config */ js.UndefOr[java.lang.String | typingsSlinky.revalidate.mod.Config], 
     typingsSlinky.revalidate.mod.ConfiguredValidator
   ]
+  type MessageCreator = (js.Function1[/* field */ js.Any, js.Any]) | java.lang.String
   type UnconfiguredValidator = js.Function3[
     /* config */ js.UndefOr[java.lang.String | typingsSlinky.revalidate.mod.Config], 
     /* value */ js.UndefOr[js.Any], 

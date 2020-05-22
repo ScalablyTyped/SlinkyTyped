@@ -22,41 +22,10 @@ trait ModelPackageStatusItem extends js.Object {
 
 object ModelPackageStatusItem {
   @scala.inline
-  def apply(Name: EntityName, Status: DetailedModelPackageStatus): ModelPackageStatusItem = {
+  def apply(Name: EntityName, Status: DetailedModelPackageStatus, FailureReason: String = null): ModelPackageStatusItem = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
+    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelPackageStatusItem]
   }
-  @scala.inline
-  implicit class ModelPackageStatusItemOps[Self <: ModelPackageStatusItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: DetailedModelPackageStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

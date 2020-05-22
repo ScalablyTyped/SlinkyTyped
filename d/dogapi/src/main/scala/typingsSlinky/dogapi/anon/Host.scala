@@ -7,75 +7,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Host extends js.Object {
-  var host: js.UndefOr[String] = js.native
-  var metric_type: js.UndefOr[gauge | count] = js.native
-  var tags: js.UndefOr[js.Array[String]] = js.native
-  var `type`: js.UndefOr[gauge | rate | count] = js.native
+  var host: js.UndefOr[String] = js.undefined
+  var metric_type: js.UndefOr[gauge | count] = js.undefined
+  var tags: js.UndefOr[js.Array[String]] = js.undefined
+  var `type`: js.UndefOr[gauge | rate | count] = js.undefined
 }
 
 object Host {
   @scala.inline
-  def apply(): Host = {
+  def apply(
+    host: String = null,
+    metric_type: gauge | count = null,
+    tags: js.Array[String] = null,
+    `type`: gauge | rate | count = null
+  ): Host = {
     val __obj = js.Dynamic.literal()
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (metric_type != null) __obj.updateDynamic("metric_type")(metric_type.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Host]
   }
-  @scala.inline
-  implicit class HostOps[Self <: Host] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetric_type(value: gauge | count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetric_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: gauge | rate | count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

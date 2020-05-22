@@ -26,9 +26,16 @@ object postCommentReplyCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PostCommentReplyInput) = this()
+    /* CompleteClass */
+    override val input: PostCommentReplyInput = js.native
     val middlewareStack: MiddlewareStack[PostCommentReplyInput, PostCommentReplyOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: CodeCommitResolvedConfiguration
+    ): Handler[PostCommentReplyInput, PostCommentReplyOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[PostCommentReplyInput, PostCommentReplyOutput] = js.native
   }

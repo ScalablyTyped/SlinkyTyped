@@ -13,5 +13,11 @@ class PullInstantiatedSignatureSymbol protected ()
     rootSignature: typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol,
     _typeParameterArgumentMap: TypeArgumentMap
   ) = this()
+  /* CompleteClass */
+  override def getAllowedToReferenceTypeParameters(): js.Array[typingsSlinky.typescriptServices.TypeScript.PullTypeParameterSymbol] = js.native
+  /* CompleteClass */
+  override def getIsSpecialized(): Boolean = js.native
+  /* CompleteClass */
+  override def getTypeParameterArgumentMap(): TypeArgumentMap = js.native
 }
 

@@ -51,3374 +51,814 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined petit-dom.petit-dom.PetitDom.Props<std.HTMLTableElement> & {  content ? :petit-dom.petit-dom.PetitDom.Content | std.ReadonlyArray<petit-dom.petit-dom.PetitDom.Content>} */
-@js.native
 trait PropsHTMLTableElementcont extends js.Object {
-  var ATTRIBUTE_NODE: js.UndefOr[Double] = js.native
-  var CDATA_SECTION_NODE: js.UndefOr[Double] = js.native
-  var COMMENT_NODE: js.UndefOr[Double] = js.native
-  var DOCUMENT_FRAGMENT_NODE: js.UndefOr[Double] = js.native
-  var DOCUMENT_NODE: js.UndefOr[Double] = js.native
-  var DOCUMENT_POSITION_CONTAINED_BY: js.UndefOr[Double] = js.native
-  var DOCUMENT_POSITION_CONTAINS: js.UndefOr[Double] = js.native
-  var DOCUMENT_POSITION_DISCONNECTED: js.UndefOr[Double] = js.native
-  var DOCUMENT_POSITION_FOLLOWING: js.UndefOr[Double] = js.native
-  var DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: js.UndefOr[Double] = js.native
-  var DOCUMENT_POSITION_PRECEDING: js.UndefOr[Double] = js.native
-  var DOCUMENT_TYPE_NODE: js.UndefOr[Double] = js.native
-  var ELEMENT_NODE: js.UndefOr[Double] = js.native
-  var ENTITY_NODE: js.UndefOr[Double] = js.native
-  var ENTITY_REFERENCE_NODE: js.UndefOr[Double] = js.native
-  var NOTATION_NODE: js.UndefOr[Double] = js.native
-  var PROCESSING_INSTRUCTION_NODE: js.UndefOr[Double] = js.native
-  var TEXT_NODE: js.UndefOr[Double] = js.native
-  var accessKey: js.UndefOr[String] = js.native
-  var accessKeyLabel: js.UndefOr[String] = js.native
+  var ATTRIBUTE_NODE: js.UndefOr[Double] = js.undefined
+  var CDATA_SECTION_NODE: js.UndefOr[Double] = js.undefined
+  var COMMENT_NODE: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_FRAGMENT_NODE: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_NODE: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_POSITION_CONTAINED_BY: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_POSITION_CONTAINS: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_POSITION_DISCONNECTED: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_POSITION_FOLLOWING: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_POSITION_PRECEDING: js.UndefOr[Double] = js.undefined
+  var DOCUMENT_TYPE_NODE: js.UndefOr[Double] = js.undefined
+  var ELEMENT_NODE: js.UndefOr[Double] = js.undefined
+  var ENTITY_NODE: js.UndefOr[Double] = js.undefined
+  var ENTITY_REFERENCE_NODE: js.UndefOr[Double] = js.undefined
+  var NOTATION_NODE: js.UndefOr[Double] = js.undefined
+  var PROCESSING_INSTRUCTION_NODE: js.UndefOr[Double] = js.undefined
+  var TEXT_NODE: js.UndefOr[Double] = js.undefined
+  var accessKey: js.UndefOr[String] = js.undefined
+  var accessKeyLabel: js.UndefOr[String] = js.undefined
   var addEventListener: js.UndefOr[
     js.Function2[
       fullscreenchange, 
       /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ Event, _], 
       Unit
     ]
-  ] = js.native
-  var after: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
-  var align: js.UndefOr[String] = js.native
-  var animate: js.UndefOr[js.Function1[/* keyframes */ js.Array[Keyframe], Animation]] = js.native
-  var append: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
-  var appendChild: js.UndefOr[js.Function1[/* newChild */ Node, Node]] = js.native
-  var assignedSlot: js.UndefOr[HTMLSlotElement] = js.native
-  var attachShadow: js.UndefOr[js.Function1[/* init */ ShadowRootInit, ShadowRoot]] = js.native
-  var attributes: js.UndefOr[NamedNodeMap] = js.native
-  var autocapitalize: js.UndefOr[String] = js.native
-  var autofocus: js.UndefOr[Boolean] = js.native
-  var baseURI: js.UndefOr[String] = js.native
-  var before: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
-  var bgColor: js.UndefOr[String] = js.native
-  var blur: js.UndefOr[js.Function0[Unit]] = js.native
-  var border: js.UndefOr[String] = js.native
-  var caption: js.UndefOr[HTMLTableCaptionElement] = js.native
-  var cellPadding: js.UndefOr[String] = js.native
-  var cellSpacing: js.UndefOr[String] = js.native
-  var childElementCount: js.UndefOr[Double] = js.native
-  var childNodes: js.UndefOr[NodeListOf[ChildNode with Node]] = js.native
-  var children: js.UndefOr[HTMLCollection] = js.native
-  var classList: js.UndefOr[DOMTokenList] = js.native
-  var className: js.UndefOr[String] = js.native
-  var click: js.UndefOr[js.Function0[Unit]] = js.native
-  var clientHeight: js.UndefOr[Double] = js.native
-  var clientLeft: js.UndefOr[Double] = js.native
-  var clientTop: js.UndefOr[Double] = js.native
-  var clientWidth: js.UndefOr[Double] = js.native
-  var cloneNode: js.UndefOr[js.Function0[Node]] = js.native
-  var closest: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.native
-  var compareDocumentPosition: js.UndefOr[js.Function1[/* other */ Node, Double]] = js.native
-  var contains: js.UndefOr[js.Function1[/* other */ Node, Boolean]] = js.native
-  var content: js.UndefOr[Content | js.Array[Content]] = js.native
-  var contentEditable: js.UndefOr[String] = js.native
-  var createCaption: js.UndefOr[js.Function0[HTMLTableCaptionElement]] = js.native
-  var createTBody: js.UndefOr[js.Function0[HTMLTableSectionElement]] = js.native
-  var createTFoot: js.UndefOr[js.Function0[HTMLTableSectionElement]] = js.native
-  var createTHead: js.UndefOr[js.Function0[HTMLTableSectionElement]] = js.native
-  var dataset: js.UndefOr[DOMStringMap] = js.native
-  var deleteCaption: js.UndefOr[js.Function0[Unit]] = js.native
-  var deleteRow: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.native
-  var deleteTFoot: js.UndefOr[js.Function0[Unit]] = js.native
-  var deleteTHead: js.UndefOr[js.Function0[Unit]] = js.native
-  var dir: js.UndefOr[String] = js.native
-  var dispatchEvent: js.UndefOr[js.Function1[/* event */ Event, Boolean]] = js.native
-  var draggable: js.UndefOr[Boolean] = js.native
-  var firstChild: js.UndefOr[ChildNode] = js.native
-  var firstElementChild: js.UndefOr[Element] = js.native
-  var focus: js.UndefOr[js.Function0[Unit]] = js.native
-  var frame: js.UndefOr[String] = js.native
-  var getAnimations: js.UndefOr[js.Function0[js.Array[Animation]]] = js.native
-  var getAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, String | Null]] = js.native
-  var getAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, String | Null]] = js.native
-  var getAttributeNames: js.UndefOr[js.Function0[js.Array[String]]] = js.native
-  var getAttributeNode: js.UndefOr[js.Function1[/* name */ String, Attr | Null]] = js.native
-  var getAttributeNodeNS: js.UndefOr[js.Function2[/* namespaceURI */ String, /* localName */ String, Attr | Null]] = js.native
-  var getBoundingClientRect: js.UndefOr[js.Function0[DOMRect]] = js.native
-  var getClientRects: js.UndefOr[js.Function0[DOMRectList]] = js.native
-  var getElementsByClassName: js.UndefOr[js.Function1[/* classNames */ String, HTMLCollectionOf[Element]]] = js.native
-  var getElementsByTagName: js.UndefOr[js.Function1[a, HTMLCollectionOf[HTMLAnchorElement]]] = js.native
+  ] = js.undefined
+  var after: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
+  var align: js.UndefOr[String] = js.undefined
+  var animate: js.UndefOr[js.Function1[/* keyframes */ js.Array[Keyframe], Animation]] = js.undefined
+  var append: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
+  var appendChild: js.UndefOr[js.Function1[/* newChild */ Node, Node]] = js.undefined
+  var assignedSlot: js.UndefOr[HTMLSlotElement] = js.undefined
+  var attachShadow: js.UndefOr[js.Function1[/* init */ ShadowRootInit, ShadowRoot]] = js.undefined
+  var attributes: js.UndefOr[NamedNodeMap] = js.undefined
+  var autocapitalize: js.UndefOr[String] = js.undefined
+  var autofocus: js.UndefOr[Boolean] = js.undefined
+  var baseURI: js.UndefOr[String] = js.undefined
+  var before: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
+  var bgColor: js.UndefOr[String] = js.undefined
+  var blur: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var border: js.UndefOr[String] = js.undefined
+  var caption: js.UndefOr[HTMLTableCaptionElement] = js.undefined
+  var cellPadding: js.UndefOr[String] = js.undefined
+  var cellSpacing: js.UndefOr[String] = js.undefined
+  var childElementCount: js.UndefOr[Double] = js.undefined
+  var childNodes: js.UndefOr[NodeListOf[ChildNode with Node]] = js.undefined
+  var children: js.UndefOr[HTMLCollection] = js.undefined
+  var classList: js.UndefOr[DOMTokenList] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var click: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var clientHeight: js.UndefOr[Double] = js.undefined
+  var clientLeft: js.UndefOr[Double] = js.undefined
+  var clientTop: js.UndefOr[Double] = js.undefined
+  var clientWidth: js.UndefOr[Double] = js.undefined
+  var cloneNode: js.UndefOr[js.Function0[Node]] = js.undefined
+  var closest: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.undefined
+  var compareDocumentPosition: js.UndefOr[js.Function1[/* other */ Node, Double]] = js.undefined
+  var contains: js.UndefOr[js.Function1[/* other */ Node, Boolean]] = js.undefined
+  var content: js.UndefOr[Content | js.Array[Content]] = js.undefined
+  var contentEditable: js.UndefOr[String] = js.undefined
+  var createCaption: js.UndefOr[js.Function0[HTMLTableCaptionElement]] = js.undefined
+  var createTBody: js.UndefOr[js.Function0[HTMLTableSectionElement]] = js.undefined
+  var createTFoot: js.UndefOr[js.Function0[HTMLTableSectionElement]] = js.undefined
+  var createTHead: js.UndefOr[js.Function0[HTMLTableSectionElement]] = js.undefined
+  var dataset: js.UndefOr[DOMStringMap] = js.undefined
+  var deleteCaption: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var deleteRow: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.undefined
+  var deleteTFoot: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var deleteTHead: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var dir: js.UndefOr[String] = js.undefined
+  var dispatchEvent: js.UndefOr[js.Function1[/* event */ Event, Boolean]] = js.undefined
+  var draggable: js.UndefOr[Boolean] = js.undefined
+  var firstChild: js.UndefOr[ChildNode] = js.undefined
+  var firstElementChild: js.UndefOr[Element] = js.undefined
+  var focus: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var frame: js.UndefOr[String] = js.undefined
+  var getAnimations: js.UndefOr[js.Function0[js.Array[Animation]]] = js.undefined
+  var getAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, String | Null]] = js.undefined
+  var getAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, String | Null]] = js.undefined
+  var getAttributeNames: js.UndefOr[js.Function0[js.Array[String]]] = js.undefined
+  var getAttributeNode: js.UndefOr[js.Function1[/* name */ String, Attr | Null]] = js.undefined
+  var getAttributeNodeNS: js.UndefOr[js.Function2[/* namespaceURI */ String, /* localName */ String, Attr | Null]] = js.undefined
+  var getBoundingClientRect: js.UndefOr[js.Function0[DOMRect]] = js.undefined
+  var getClientRects: js.UndefOr[js.Function0[DOMRectList]] = js.undefined
+  var getElementsByClassName: js.UndefOr[js.Function1[/* classNames */ String, HTMLCollectionOf[Element]]] = js.undefined
+  var getElementsByTagName: js.UndefOr[js.Function1[a, HTMLCollectionOf[HTMLAnchorElement]]] = js.undefined
   var getElementsByTagNameNS: js.UndefOr[
     js.Function2[
       httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, 
       /* localName */ String, 
       HTMLCollectionOf[HTMLElement]
     ]
-  ] = js.native
-  var getRootNode: js.UndefOr[js.Function0[Node]] = js.native
-  var hasAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.native
-  var hasAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Boolean]] = js.native
-  var hasAttributes: js.UndefOr[js.Function0[Boolean]] = js.native
-  var hasChildNodes: js.UndefOr[js.Function0[Boolean]] = js.native
-  var hasPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Boolean]] = js.native
-  var hidden: js.UndefOr[Boolean] = js.native
-  var id: js.UndefOr[String] = js.native
-  var innerHTML: js.UndefOr[String] = js.native
-  var innerText: js.UndefOr[String] = js.native
-  var inputMode: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var getRootNode: js.UndefOr[js.Function0[Node]] = js.undefined
+  var hasAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.undefined
+  var hasAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Boolean]] = js.undefined
+  var hasAttributes: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var hasChildNodes: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var hasPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Boolean]] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var innerHTML: js.UndefOr[String] = js.undefined
+  var innerText: js.UndefOr[String] = js.undefined
+  var inputMode: js.UndefOr[String] = js.undefined
   var insertAdjacentElement: js.UndefOr[
     js.Function2[/* position */ InsertPosition, /* insertedElement */ Element, Element | Null]
-  ] = js.native
-  var insertAdjacentHTML: js.UndefOr[js.Function2[/* where */ InsertPosition, /* html */ String, Unit]] = js.native
-  var insertAdjacentText: js.UndefOr[js.Function2[/* where */ InsertPosition, /* text */ String, Unit]] = js.native
-  var insertBefore: js.UndefOr[js.Function2[/* newChild */ Node, /* refChild */ Node, Node]] = js.native
-  var insertRow: js.UndefOr[js.Function0[HTMLTableRowElement]] = js.native
-  var isConnected: js.UndefOr[Boolean] = js.native
-  var isContentEditable: js.UndefOr[Boolean] = js.native
-  var isDefaultNamespace: js.UndefOr[js.Function1[/* namespace */ String, Boolean]] = js.native
-  var isEqualNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.native
-  var isSameNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.native
-  var key: js.UndefOr[Key] = js.native
-  var lang: js.UndefOr[String] = js.native
-  var lastChild: js.UndefOr[ChildNode] = js.native
-  var lastElementChild: js.UndefOr[Element] = js.native
-  var localName: js.UndefOr[String] = js.native
-  var lookupNamespaceURI: js.UndefOr[js.Function1[/* prefix */ String, String | Null]] = js.native
-  var lookupPrefix: js.UndefOr[js.Function1[/* namespace */ String, String | Null]] = js.native
-  var matches: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.native
-  var msGetRegionContent: js.UndefOr[js.Function0[_]] = js.native
-  var namespaceURI: js.UndefOr[String] = js.native
-  var nextElementSibling: js.UndefOr[Element] = js.native
-  var nextSibling: js.UndefOr[ChildNode] = js.native
-  var nodeName: js.UndefOr[String] = js.native
-  var nodeType: js.UndefOr[Double] = js.native
-  var nodeValue: js.UndefOr[String] = js.native
-  var nonce: js.UndefOr[String] = js.native
-  var normalize: js.UndefOr[js.Function0[Unit]] = js.native
-  var offsetHeight: js.UndefOr[Double] = js.native
-  var offsetLeft: js.UndefOr[Double] = js.native
-  var offsetParent: js.UndefOr[Element] = js.native
-  var offsetTop: js.UndefOr[Double] = js.native
-  var offsetWidth: js.UndefOr[Double] = js.native
-  var onabort: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.native
-  var onanimationcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
-  var onanimationend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
-  var onanimationiteration: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
-  var onanimationstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
-  var onauxclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onblur: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.native
-  var oncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var oncanplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onclose: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var oncopy: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.native
-  var oncuechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var oncut: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.native
-  var ondblclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var ondrag: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondragend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondragenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondragexit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var ondragleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondragover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondragstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondrop: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onemptied: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onended: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onerror: js.UndefOr[OnErrorEventHandler] = js.native
-  var onfocus: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.native
-  var onfullscreenchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onfullscreenerror: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var ongotpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var oninput: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var oninvalid: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onkeydown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
-  var onkeypress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
-  var onkeyup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
-  var onload: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onloadstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onlostpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onmousedown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onmouseleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onmousemove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onmouseout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onmouseover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onmouseup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onpaste: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.native
-  var onpause: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onplaying: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onpointerleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onpointermove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onpointerout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onpointerover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onpointerup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var onprogress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _]] = js.native
-  var onratechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onreset: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onresize: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.native
-  var onscroll: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onsecuritypolicyviolation: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _]] = js.native
-  var onseeked: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onseeking: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onselect: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onselectionchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onselectstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onstalled: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onsubmit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onsuspend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var ontoggle: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var ontouchcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
-  var ontouchend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
-  var ontouchmove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
-  var ontouchstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
-  var ontransitioncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
-  var ontransitionend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
-  var ontransitionrun: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
-  var ontransitionstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
-  var onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onwaiting: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
-  var onwheel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]] = js.native
-  var outerHTML: js.UndefOr[String] = js.native
-  var ownerDocument: js.UndefOr[Document] = js.native
-  var parentElement: js.UndefOr[HTMLElement] = js.native
-  var parentNode: js.UndefOr[Node with ParentNode] = js.native
-  var prefix: js.UndefOr[String] = js.native
-  var prepend: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
-  var previousElementSibling: js.UndefOr[Element] = js.native
-  var previousSibling: js.UndefOr[ChildNode] = js.native
-  var querySelector: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.native
-  var querySelectorAll: js.UndefOr[js.Function1[a, NodeListOf[HTMLAnchorElement with Node]]] = js.native
-  var releasePointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.native
-  var remove: js.UndefOr[js.Function0[Unit]] = js.native
-  var removeAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Unit]] = js.native
-  var removeAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Unit]] = js.native
-  var removeAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr]] = js.native
-  var removeChild: js.UndefOr[js.Function1[/* oldChild */ Node, Node]] = js.native
+  ] = js.undefined
+  var insertAdjacentHTML: js.UndefOr[js.Function2[/* where */ InsertPosition, /* html */ String, Unit]] = js.undefined
+  var insertAdjacentText: js.UndefOr[js.Function2[/* where */ InsertPosition, /* text */ String, Unit]] = js.undefined
+  var insertBefore: js.UndefOr[js.Function2[/* newChild */ Node, /* refChild */ Node, Node]] = js.undefined
+  var insertRow: js.UndefOr[js.Function0[HTMLTableRowElement]] = js.undefined
+  var isConnected: js.UndefOr[Boolean] = js.undefined
+  var isContentEditable: js.UndefOr[Boolean] = js.undefined
+  var isDefaultNamespace: js.UndefOr[js.Function1[/* namespace */ String, Boolean]] = js.undefined
+  var isEqualNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.undefined
+  var isSameNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.undefined
+  var key: js.UndefOr[Key] = js.undefined
+  var lang: js.UndefOr[String] = js.undefined
+  var lastChild: js.UndefOr[ChildNode] = js.undefined
+  var lastElementChild: js.UndefOr[Element] = js.undefined
+  var localName: js.UndefOr[String] = js.undefined
+  var lookupNamespaceURI: js.UndefOr[js.Function1[/* prefix */ String, String | Null]] = js.undefined
+  var lookupPrefix: js.UndefOr[js.Function1[/* namespace */ String, String | Null]] = js.undefined
+  var matches: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.undefined
+  var msGetRegionContent: js.UndefOr[js.Function0[_]] = js.undefined
+  var namespaceURI: js.UndefOr[String] = js.undefined
+  var nextElementSibling: js.UndefOr[Element] = js.undefined
+  var nextSibling: js.UndefOr[ChildNode] = js.undefined
+  var nodeName: js.UndefOr[String] = js.undefined
+  var nodeType: js.UndefOr[Double] = js.undefined
+  var nodeValue: js.UndefOr[String] = js.undefined
+  var nonce: js.UndefOr[String] = js.undefined
+  var normalize: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var offsetHeight: js.UndefOr[Double] = js.undefined
+  var offsetLeft: js.UndefOr[Double] = js.undefined
+  var offsetParent: js.UndefOr[Element] = js.undefined
+  var offsetTop: js.UndefOr[Double] = js.undefined
+  var offsetWidth: js.UndefOr[Double] = js.undefined
+  var onabort: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.undefined
+  var onanimationcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
+  var onanimationend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
+  var onanimationiteration: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
+  var onanimationstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
+  var onauxclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onblur: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.undefined
+  var oncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var oncanplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onclose: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var oncopy: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.undefined
+  var oncuechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var oncut: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.undefined
+  var ondblclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var ondrag: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
+  var ondragend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
+  var ondragenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
+  var ondragexit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var ondragleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
+  var ondragover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
+  var ondragstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
+  var ondrop: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
+  var ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onemptied: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onended: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onerror: js.UndefOr[OnErrorEventHandler] = js.undefined
+  var onfocus: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.undefined
+  var onfullscreenchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onfullscreenerror: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var ongotpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var oninput: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var oninvalid: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onkeydown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
+  var onkeypress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
+  var onkeyup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
+  var onload: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onloadstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onlostpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onmousedown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onmouseleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onmousemove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onmouseout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onmouseover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onmouseup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
+  var onpaste: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.undefined
+  var onpause: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onplaying: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onpointerleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onpointermove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onpointerout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onpointerover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onpointerup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
+  var onprogress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _]] = js.undefined
+  var onratechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onreset: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onresize: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.undefined
+  var onscroll: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onsecuritypolicyviolation: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _]] = js.undefined
+  var onseeked: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onseeking: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onselect: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onselectionchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onselectstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onstalled: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onsubmit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onsuspend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var ontoggle: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var ontouchcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
+  var ontouchend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
+  var ontouchmove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
+  var ontouchstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
+  var ontransitioncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
+  var ontransitionend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
+  var ontransitionrun: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
+  var ontransitionstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
+  var onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onwaiting: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onwheel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]] = js.undefined
+  var outerHTML: js.UndefOr[String] = js.undefined
+  var ownerDocument: js.UndefOr[Document] = js.undefined
+  var parentElement: js.UndefOr[HTMLElement] = js.undefined
+  var parentNode: js.UndefOr[Node with ParentNode] = js.undefined
+  var prefix: js.UndefOr[String] = js.undefined
+  var prepend: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
+  var previousElementSibling: js.UndefOr[Element] = js.undefined
+  var previousSibling: js.UndefOr[ChildNode] = js.undefined
+  var querySelector: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.undefined
+  var querySelectorAll: js.UndefOr[js.Function1[a, NodeListOf[HTMLAnchorElement with Node]]] = js.undefined
+  var releasePointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.undefined
+  var remove: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var removeAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Unit]] = js.undefined
+  var removeAttributeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Unit]] = js.undefined
+  var removeAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr]] = js.undefined
+  var removeChild: js.UndefOr[js.Function1[/* oldChild */ Node, Node]] = js.undefined
   var removeEventListener: js.UndefOr[
     js.Function2[
       fullscreenchange, 
       /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ Event, _], 
       Unit
     ]
-  ] = js.native
-  var replaceChild: js.UndefOr[js.Function2[/* newChild */ Node, /* oldChild */ Node, Node]] = js.native
-  var replaceWith: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.native
-  var requestFullscreen: js.UndefOr[js.Function0[js.Promise[Unit]]] = js.native
-  var requestPointerLock: js.UndefOr[js.Function0[Unit]] = js.native
-  var rows: js.UndefOr[HTMLCollectionOf[HTMLTableRowElement]] = js.native
-  var rules: js.UndefOr[String] = js.native
-  var scroll: js.UndefOr[js.Function0[Unit]] = js.native
-  var scrollBy: js.UndefOr[js.Function0[Unit]] = js.native
-  var scrollHeight: js.UndefOr[Double] = js.native
-  var scrollIntoView: js.UndefOr[js.Function0[Unit]] = js.native
-  var scrollLeft: js.UndefOr[Double] = js.native
-  var scrollTo: js.UndefOr[js.Function0[Unit]] = js.native
-  var scrollTop: js.UndefOr[Double] = js.native
-  var scrollWidth: js.UndefOr[Double] = js.native
-  var setAttribute: js.UndefOr[js.Function2[/* qualifiedName */ String, /* value */ String, Unit]] = js.native
+  ] = js.undefined
+  var replaceChild: js.UndefOr[js.Function2[/* newChild */ Node, /* oldChild */ Node, Node]] = js.undefined
+  var replaceWith: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
+  var requestFullscreen: js.UndefOr[js.Function0[js.Promise[Unit]]] = js.undefined
+  var requestPointerLock: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var rows: js.UndefOr[HTMLCollectionOf[HTMLTableRowElement]] = js.undefined
+  var rules: js.UndefOr[String] = js.undefined
+  var scroll: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var scrollBy: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var scrollHeight: js.UndefOr[Double] = js.undefined
+  var scrollIntoView: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var scrollLeft: js.UndefOr[Double] = js.undefined
+  var scrollTo: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var scrollTop: js.UndefOr[Double] = js.undefined
+  var scrollWidth: js.UndefOr[Double] = js.undefined
+  var setAttribute: js.UndefOr[js.Function2[/* qualifiedName */ String, /* value */ String, Unit]] = js.undefined
   var setAttributeNS: js.UndefOr[
     js.Function3[/* namespace */ String, /* qualifiedName */ String, /* value */ String, Unit]
-  ] = js.native
-  var setAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.native
-  var setAttributeNodeNS: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.native
-  var setPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.native
-  var shadowRoot: js.UndefOr[ShadowRoot] = js.native
-  var slot: js.UndefOr[String] = js.native
-  var spellcheck: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[CSSStyleDeclaration] = js.native
-  var summary: js.UndefOr[String] = js.native
-  var tBodies: js.UndefOr[HTMLCollectionOf[HTMLTableSectionElement]] = js.native
-  var tFoot: js.UndefOr[HTMLTableSectionElement] = js.native
-  var tHead: js.UndefOr[HTMLTableSectionElement] = js.native
-  var tabIndex: js.UndefOr[Double] = js.native
-  var tagName: js.UndefOr[String] = js.native
-  var textContent: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var toggleAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.native
-  var translate: js.UndefOr[Boolean] = js.native
-  var webkitMatchesSelector: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.native
-  var width: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var setAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.undefined
+  var setAttributeNodeNS: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.undefined
+  var setPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.undefined
+  var shadowRoot: js.UndefOr[ShadowRoot] = js.undefined
+  var slot: js.UndefOr[String] = js.undefined
+  var spellcheck: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[CSSStyleDeclaration] = js.undefined
+  var summary: js.UndefOr[String] = js.undefined
+  var tBodies: js.UndefOr[HTMLCollectionOf[HTMLTableSectionElement]] = js.undefined
+  var tFoot: js.UndefOr[HTMLTableSectionElement] = js.undefined
+  var tHead: js.UndefOr[HTMLTableSectionElement] = js.undefined
+  var tabIndex: js.UndefOr[Double] = js.undefined
+  var tagName: js.UndefOr[String] = js.undefined
+  var textContent: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var toggleAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.undefined
+  var translate: js.UndefOr[Boolean] = js.undefined
+  var webkitMatchesSelector: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.undefined
+  var width: js.UndefOr[String] = js.undefined
 }
 
 object PropsHTMLTableElementcont {
   @scala.inline
-  def apply(): PropsHTMLTableElementcont = {
+  def apply(
+    ATTRIBUTE_NODE: js.UndefOr[Double] = js.undefined,
+    CDATA_SECTION_NODE: js.UndefOr[Double] = js.undefined,
+    COMMENT_NODE: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_FRAGMENT_NODE: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_NODE: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_POSITION_CONTAINED_BY: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_POSITION_CONTAINS: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_POSITION_DISCONNECTED: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_POSITION_FOLLOWING: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_POSITION_PRECEDING: js.UndefOr[Double] = js.undefined,
+    DOCUMENT_TYPE_NODE: js.UndefOr[Double] = js.undefined,
+    ELEMENT_NODE: js.UndefOr[Double] = js.undefined,
+    ENTITY_NODE: js.UndefOr[Double] = js.undefined,
+    ENTITY_REFERENCE_NODE: js.UndefOr[Double] = js.undefined,
+    NOTATION_NODE: js.UndefOr[Double] = js.undefined,
+    PROCESSING_INSTRUCTION_NODE: js.UndefOr[Double] = js.undefined,
+    TEXT_NODE: js.UndefOr[Double] = js.undefined,
+    accessKey: String = null,
+    accessKeyLabel: String = null,
+    addEventListener: (fullscreenchange, /* listener */ js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]) => Unit = null,
+    after: /* repeated */ Node | String => Unit = null,
+    align: String = null,
+    animate: /* keyframes */ js.Array[Keyframe] => Animation = null,
+    append: /* repeated */ Node | String => Unit = null,
+    appendChild: /* newChild */ Node => Node = null,
+    assignedSlot: HTMLSlotElement = null,
+    attachShadow: /* init */ ShadowRootInit => ShadowRoot = null,
+    attributes: NamedNodeMap = null,
+    autocapitalize: String = null,
+    autofocus: js.UndefOr[Boolean] = js.undefined,
+    baseURI: String = null,
+    before: /* repeated */ Node | String => Unit = null,
+    bgColor: String = null,
+    blur: () => Unit = null,
+    border: String = null,
+    caption: HTMLTableCaptionElement = null,
+    cellPadding: String = null,
+    cellSpacing: String = null,
+    childElementCount: js.UndefOr[Double] = js.undefined,
+    childNodes: NodeListOf[ChildNode with Node] = null,
+    children: HTMLCollection = null,
+    classList: DOMTokenList = null,
+    className: String = null,
+    click: () => Unit = null,
+    clientHeight: js.UndefOr[Double] = js.undefined,
+    clientLeft: js.UndefOr[Double] = js.undefined,
+    clientTop: js.UndefOr[Double] = js.undefined,
+    clientWidth: js.UndefOr[Double] = js.undefined,
+    cloneNode: () => Node = null,
+    closest: a => HTMLAnchorElement | Null = null,
+    compareDocumentPosition: /* other */ Node => Double = null,
+    contains: /* other */ Node => Boolean = null,
+    content: Content | js.Array[Content] = null,
+    contentEditable: String = null,
+    createCaption: () => HTMLTableCaptionElement = null,
+    createTBody: () => HTMLTableSectionElement = null,
+    createTFoot: () => HTMLTableSectionElement = null,
+    createTHead: () => HTMLTableSectionElement = null,
+    dataset: DOMStringMap = null,
+    deleteCaption: () => Unit = null,
+    deleteRow: /* index */ Double => Unit = null,
+    deleteTFoot: () => Unit = null,
+    deleteTHead: () => Unit = null,
+    dir: String = null,
+    dispatchEvent: /* event */ Event => Boolean = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    firstChild: ChildNode = null,
+    firstElementChild: Element = null,
+    focus: () => Unit = null,
+    frame: String = null,
+    getAnimations: () => js.Array[Animation] = null,
+    getAttribute: /* qualifiedName */ String => String | Null = null,
+    getAttributeNS: (/* namespace */ String, /* localName */ String) => String | Null = null,
+    getAttributeNames: () => js.Array[String] = null,
+    getAttributeNode: /* name */ String => Attr | Null = null,
+    getAttributeNodeNS: (/* namespaceURI */ String, /* localName */ String) => Attr | Null = null,
+    getBoundingClientRect: () => DOMRect = null,
+    getClientRects: () => DOMRectList = null,
+    getElementsByClassName: /* classNames */ String => HTMLCollectionOf[Element] = null,
+    getElementsByTagName: a => HTMLCollectionOf[HTMLAnchorElement] = null,
+    getElementsByTagNameNS: (httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, /* localName */ String) => HTMLCollectionOf[HTMLElement] = null,
+    getRootNode: () => Node = null,
+    hasAttribute: /* qualifiedName */ String => Boolean = null,
+    hasAttributeNS: (/* namespace */ String, /* localName */ String) => Boolean = null,
+    hasAttributes: () => Boolean = null,
+    hasChildNodes: () => Boolean = null,
+    hasPointerCapture: /* pointerId */ Double => Boolean = null,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    innerHTML: String = null,
+    innerText: String = null,
+    inputMode: String = null,
+    insertAdjacentElement: (/* position */ InsertPosition, /* insertedElement */ Element) => Element | Null = null,
+    insertAdjacentHTML: (/* where */ InsertPosition, /* html */ String) => Unit = null,
+    insertAdjacentText: (/* where */ InsertPosition, /* text */ String) => Unit = null,
+    insertBefore: (/* newChild */ Node, /* refChild */ Node) => Node = null,
+    insertRow: () => HTMLTableRowElement = null,
+    isConnected: js.UndefOr[Boolean] = js.undefined,
+    isContentEditable: js.UndefOr[Boolean] = js.undefined,
+    isDefaultNamespace: /* namespace */ String => Boolean = null,
+    isEqualNode: /* otherNode */ Node => Boolean = null,
+    isSameNode: /* otherNode */ Node => Boolean = null,
+    key: Key = null,
+    lang: String = null,
+    lastChild: ChildNode = null,
+    lastElementChild: Element = null,
+    localName: String = null,
+    lookupNamespaceURI: /* prefix */ String => String | Null = null,
+    lookupPrefix: /* namespace */ String => String | Null = null,
+    matches: /* selectors */ String => Boolean = null,
+    msGetRegionContent: () => _ = null,
+    namespaceURI: String = null,
+    nextElementSibling: Element = null,
+    nextSibling: ChildNode = null,
+    nodeName: String = null,
+    nodeType: js.UndefOr[Double] = js.undefined,
+    nodeValue: String = null,
+    nonce: String = null,
+    normalize: () => Unit = null,
+    offsetHeight: js.UndefOr[Double] = js.undefined,
+    offsetLeft: js.UndefOr[Double] = js.undefined,
+    offsetParent: Element = null,
+    offsetTop: js.UndefOr[Double] = js.undefined,
+    offsetWidth: js.UndefOr[Double] = js.undefined,
+    onabort: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ UIEvent, _] = null,
+    onanimationcancel: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ AnimationEvent, _] = null,
+    onanimationend: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ AnimationEvent, _] = null,
+    onanimationiteration: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ AnimationEvent, _] = null,
+    onanimationstart: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ AnimationEvent, _] = null,
+    onauxclick: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onblur: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ FocusEvent, _] = null,
+    oncancel: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    oncanplay: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    oncanplaythrough: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onchange: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onclick: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onclose: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    oncontextmenu: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    oncopy: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ ClipboardEvent, _] = null,
+    oncuechange: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    oncut: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ ClipboardEvent, _] = null,
+    ondblclick: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    ondrag: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _] = null,
+    ondragend: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _] = null,
+    ondragenter: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _] = null,
+    ondragexit: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    ondragleave: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _] = null,
+    ondragover: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _] = null,
+    ondragstart: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _] = null,
+    ondrop: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _] = null,
+    ondurationchange: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onemptied: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onended: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onerror: js.UndefOr[
+      Null | ((/* event */ Event | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any)
+    ] = js.undefined,
+    onfocus: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ FocusEvent, _] = null,
+    onfullscreenchange: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onfullscreenerror: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    ongotpointercapture: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    oninput: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    oninvalid: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onkeydown: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ KeyboardEvent, _] = null,
+    onkeypress: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ KeyboardEvent, _] = null,
+    onkeyup: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ KeyboardEvent, _] = null,
+    onload: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onloadeddata: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onloadedmetadata: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onloadstart: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onlostpointercapture: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onmousedown: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onmouseenter: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onmouseleave: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onmousemove: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onmouseout: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onmouseover: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onmouseup: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _] = null,
+    onpaste: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ ClipboardEvent, _] = null,
+    onpause: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onplay: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onplaying: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onpointercancel: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onpointerdown: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onpointerenter: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onpointerleave: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onpointermove: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onpointerout: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onpointerover: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onpointerup: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _] = null,
+    onprogress: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ ProgressEvent, _] = null,
+    onratechange: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onreset: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onresize: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ UIEvent, _] = null,
+    onscroll: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onsecuritypolicyviolation: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ SecurityPolicyViolationEvent, _] = null,
+    onseeked: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onseeking: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onselect: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onselectionchange: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onselectstart: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onstalled: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onsubmit: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onsuspend: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    ontimeupdate: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    ontoggle: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    ontouchcancel: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TouchEvent, _] = null,
+    ontouchend: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TouchEvent, _] = null,
+    ontouchmove: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TouchEvent, _] = null,
+    ontouchstart: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TouchEvent, _] = null,
+    ontransitioncancel: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TransitionEvent, _] = null,
+    ontransitionend: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TransitionEvent, _] = null,
+    ontransitionrun: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TransitionEvent, _] = null,
+    ontransitionstart: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TransitionEvent, _] = null,
+    onvolumechange: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onwaiting: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _] = null,
+    onwheel: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ WheelEvent, _] = null,
+    outerHTML: String = null,
+    ownerDocument: Document = null,
+    parentElement: HTMLElement = null,
+    parentNode: Node with ParentNode = null,
+    prefix: String = null,
+    prepend: /* repeated */ Node | String => Unit = null,
+    previousElementSibling: Element = null,
+    previousSibling: ChildNode = null,
+    querySelector: a => HTMLAnchorElement | Null = null,
+    querySelectorAll: a => NodeListOf[HTMLAnchorElement with Node] = null,
+    releasePointerCapture: /* pointerId */ Double => Unit = null,
+    remove: () => Unit = null,
+    removeAttribute: /* qualifiedName */ String => Unit = null,
+    removeAttributeNS: (/* namespace */ String, /* localName */ String) => Unit = null,
+    removeAttributeNode: /* attr */ Attr => Attr = null,
+    removeChild: /* oldChild */ Node => Node = null,
+    removeEventListener: (fullscreenchange, /* listener */ js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]) => Unit = null,
+    replaceChild: (/* newChild */ Node, /* oldChild */ Node) => Node = null,
+    replaceWith: /* repeated */ Node | String => Unit = null,
+    requestFullscreen: () => js.Promise[Unit] = null,
+    requestPointerLock: () => Unit = null,
+    rows: HTMLCollectionOf[HTMLTableRowElement] = null,
+    rules: String = null,
+    scroll: () => Unit = null,
+    scrollBy: () => Unit = null,
+    scrollHeight: js.UndefOr[Double] = js.undefined,
+    scrollIntoView: () => Unit = null,
+    scrollLeft: js.UndefOr[Double] = js.undefined,
+    scrollTo: () => Unit = null,
+    scrollTop: js.UndefOr[Double] = js.undefined,
+    scrollWidth: js.UndefOr[Double] = js.undefined,
+    setAttribute: (/* qualifiedName */ String, /* value */ String) => Unit = null,
+    setAttributeNS: (/* namespace */ String, /* qualifiedName */ String, /* value */ String) => Unit = null,
+    setAttributeNode: /* attr */ Attr => Attr | Null = null,
+    setAttributeNodeNS: /* attr */ Attr => Attr | Null = null,
+    setPointerCapture: /* pointerId */ Double => Unit = null,
+    shadowRoot: ShadowRoot = null,
+    slot: String = null,
+    spellcheck: js.UndefOr[Boolean] = js.undefined
+  ): PropsHTMLTableElementcont = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ATTRIBUTE_NODE)) __obj.updateDynamic("ATTRIBUTE_NODE")(ATTRIBUTE_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CDATA_SECTION_NODE)) __obj.updateDynamic("CDATA_SECTION_NODE")(CDATA_SECTION_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(COMMENT_NODE)) __obj.updateDynamic("COMMENT_NODE")(COMMENT_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_FRAGMENT_NODE)) __obj.updateDynamic("DOCUMENT_FRAGMENT_NODE")(DOCUMENT_FRAGMENT_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_NODE)) __obj.updateDynamic("DOCUMENT_NODE")(DOCUMENT_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_POSITION_CONTAINED_BY)) __obj.updateDynamic("DOCUMENT_POSITION_CONTAINED_BY")(DOCUMENT_POSITION_CONTAINED_BY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_POSITION_CONTAINS)) __obj.updateDynamic("DOCUMENT_POSITION_CONTAINS")(DOCUMENT_POSITION_CONTAINS.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_POSITION_DISCONNECTED)) __obj.updateDynamic("DOCUMENT_POSITION_DISCONNECTED")(DOCUMENT_POSITION_DISCONNECTED.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_POSITION_FOLLOWING)) __obj.updateDynamic("DOCUMENT_POSITION_FOLLOWING")(DOCUMENT_POSITION_FOLLOWING.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC)) __obj.updateDynamic("DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC")(DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_POSITION_PRECEDING)) __obj.updateDynamic("DOCUMENT_POSITION_PRECEDING")(DOCUMENT_POSITION_PRECEDING.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DOCUMENT_TYPE_NODE)) __obj.updateDynamic("DOCUMENT_TYPE_NODE")(DOCUMENT_TYPE_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ELEMENT_NODE)) __obj.updateDynamic("ELEMENT_NODE")(ELEMENT_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ENTITY_NODE)) __obj.updateDynamic("ENTITY_NODE")(ENTITY_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ENTITY_REFERENCE_NODE)) __obj.updateDynamic("ENTITY_REFERENCE_NODE")(ENTITY_REFERENCE_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NOTATION_NODE)) __obj.updateDynamic("NOTATION_NODE")(NOTATION_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PROCESSING_INSTRUCTION_NODE)) __obj.updateDynamic("PROCESSING_INSTRUCTION_NODE")(PROCESSING_INSTRUCTION_NODE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TEXT_NODE)) __obj.updateDynamic("TEXT_NODE")(TEXT_NODE.get.asInstanceOf[js.Any])
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (accessKeyLabel != null) __obj.updateDynamic("accessKeyLabel")(accessKeyLabel.asInstanceOf[js.Any])
+    if (addEventListener != null) __obj.updateDynamic("addEventListener")(js.Any.fromFunction2(addEventListener))
+    if (after != null) __obj.updateDynamic("after")(js.Any.fromFunction1(after))
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (animate != null) __obj.updateDynamic("animate")(js.Any.fromFunction1(animate))
+    if (append != null) __obj.updateDynamic("append")(js.Any.fromFunction1(append))
+    if (appendChild != null) __obj.updateDynamic("appendChild")(js.Any.fromFunction1(appendChild))
+    if (assignedSlot != null) __obj.updateDynamic("assignedSlot")(assignedSlot.asInstanceOf[js.Any])
+    if (attachShadow != null) __obj.updateDynamic("attachShadow")(js.Any.fromFunction1(attachShadow))
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (autocapitalize != null) __obj.updateDynamic("autocapitalize")(autocapitalize.asInstanceOf[js.Any])
+    if (!js.isUndefined(autofocus)) __obj.updateDynamic("autofocus")(autofocus.get.asInstanceOf[js.Any])
+    if (baseURI != null) __obj.updateDynamic("baseURI")(baseURI.asInstanceOf[js.Any])
+    if (before != null) __obj.updateDynamic("before")(js.Any.fromFunction1(before))
+    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
+    if (blur != null) __obj.updateDynamic("blur")(js.Any.fromFunction0(blur))
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (cellPadding != null) __obj.updateDynamic("cellPadding")(cellPadding.asInstanceOf[js.Any])
+    if (cellSpacing != null) __obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
+    if (!js.isUndefined(childElementCount)) __obj.updateDynamic("childElementCount")(childElementCount.get.asInstanceOf[js.Any])
+    if (childNodes != null) __obj.updateDynamic("childNodes")(childNodes.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (classList != null) __obj.updateDynamic("classList")(classList.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (click != null) __obj.updateDynamic("click")(js.Any.fromFunction0(click))
+    if (!js.isUndefined(clientHeight)) __obj.updateDynamic("clientHeight")(clientHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientLeft)) __obj.updateDynamic("clientLeft")(clientLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientTop)) __obj.updateDynamic("clientTop")(clientTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientWidth)) __obj.updateDynamic("clientWidth")(clientWidth.get.asInstanceOf[js.Any])
+    if (cloneNode != null) __obj.updateDynamic("cloneNode")(js.Any.fromFunction0(cloneNode))
+    if (closest != null) __obj.updateDynamic("closest")(js.Any.fromFunction1(closest))
+    if (compareDocumentPosition != null) __obj.updateDynamic("compareDocumentPosition")(js.Any.fromFunction1(compareDocumentPosition))
+    if (contains != null) __obj.updateDynamic("contains")(js.Any.fromFunction1(contains))
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (createCaption != null) __obj.updateDynamic("createCaption")(js.Any.fromFunction0(createCaption))
+    if (createTBody != null) __obj.updateDynamic("createTBody")(js.Any.fromFunction0(createTBody))
+    if (createTFoot != null) __obj.updateDynamic("createTFoot")(js.Any.fromFunction0(createTFoot))
+    if (createTHead != null) __obj.updateDynamic("createTHead")(js.Any.fromFunction0(createTHead))
+    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
+    if (deleteCaption != null) __obj.updateDynamic("deleteCaption")(js.Any.fromFunction0(deleteCaption))
+    if (deleteRow != null) __obj.updateDynamic("deleteRow")(js.Any.fromFunction1(deleteRow))
+    if (deleteTFoot != null) __obj.updateDynamic("deleteTFoot")(js.Any.fromFunction0(deleteTFoot))
+    if (deleteTHead != null) __obj.updateDynamic("deleteTHead")(js.Any.fromFunction0(deleteTHead))
+    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+    if (dispatchEvent != null) __obj.updateDynamic("dispatchEvent")(js.Any.fromFunction1(dispatchEvent))
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (firstChild != null) __obj.updateDynamic("firstChild")(firstChild.asInstanceOf[js.Any])
+    if (firstElementChild != null) __obj.updateDynamic("firstElementChild")(firstElementChild.asInstanceOf[js.Any])
+    if (focus != null) __obj.updateDynamic("focus")(js.Any.fromFunction0(focus))
+    if (frame != null) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
+    if (getAnimations != null) __obj.updateDynamic("getAnimations")(js.Any.fromFunction0(getAnimations))
+    if (getAttribute != null) __obj.updateDynamic("getAttribute")(js.Any.fromFunction1(getAttribute))
+    if (getAttributeNS != null) __obj.updateDynamic("getAttributeNS")(js.Any.fromFunction2(getAttributeNS))
+    if (getAttributeNames != null) __obj.updateDynamic("getAttributeNames")(js.Any.fromFunction0(getAttributeNames))
+    if (getAttributeNode != null) __obj.updateDynamic("getAttributeNode")(js.Any.fromFunction1(getAttributeNode))
+    if (getAttributeNodeNS != null) __obj.updateDynamic("getAttributeNodeNS")(js.Any.fromFunction2(getAttributeNodeNS))
+    if (getBoundingClientRect != null) __obj.updateDynamic("getBoundingClientRect")(js.Any.fromFunction0(getBoundingClientRect))
+    if (getClientRects != null) __obj.updateDynamic("getClientRects")(js.Any.fromFunction0(getClientRects))
+    if (getElementsByClassName != null) __obj.updateDynamic("getElementsByClassName")(js.Any.fromFunction1(getElementsByClassName))
+    if (getElementsByTagName != null) __obj.updateDynamic("getElementsByTagName")(js.Any.fromFunction1(getElementsByTagName))
+    if (getElementsByTagNameNS != null) __obj.updateDynamic("getElementsByTagNameNS")(js.Any.fromFunction2(getElementsByTagNameNS))
+    if (getRootNode != null) __obj.updateDynamic("getRootNode")(js.Any.fromFunction0(getRootNode))
+    if (hasAttribute != null) __obj.updateDynamic("hasAttribute")(js.Any.fromFunction1(hasAttribute))
+    if (hasAttributeNS != null) __obj.updateDynamic("hasAttributeNS")(js.Any.fromFunction2(hasAttributeNS))
+    if (hasAttributes != null) __obj.updateDynamic("hasAttributes")(js.Any.fromFunction0(hasAttributes))
+    if (hasChildNodes != null) __obj.updateDynamic("hasChildNodes")(js.Any.fromFunction0(hasChildNodes))
+    if (hasPointerCapture != null) __obj.updateDynamic("hasPointerCapture")(js.Any.fromFunction1(hasPointerCapture))
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (innerHTML != null) __obj.updateDynamic("innerHTML")(innerHTML.asInstanceOf[js.Any])
+    if (innerText != null) __obj.updateDynamic("innerText")(innerText.asInstanceOf[js.Any])
+    if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
+    if (insertAdjacentElement != null) __obj.updateDynamic("insertAdjacentElement")(js.Any.fromFunction2(insertAdjacentElement))
+    if (insertAdjacentHTML != null) __obj.updateDynamic("insertAdjacentHTML")(js.Any.fromFunction2(insertAdjacentHTML))
+    if (insertAdjacentText != null) __obj.updateDynamic("insertAdjacentText")(js.Any.fromFunction2(insertAdjacentText))
+    if (insertBefore != null) __obj.updateDynamic("insertBefore")(js.Any.fromFunction2(insertBefore))
+    if (insertRow != null) __obj.updateDynamic("insertRow")(js.Any.fromFunction0(insertRow))
+    if (!js.isUndefined(isConnected)) __obj.updateDynamic("isConnected")(isConnected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isContentEditable)) __obj.updateDynamic("isContentEditable")(isContentEditable.get.asInstanceOf[js.Any])
+    if (isDefaultNamespace != null) __obj.updateDynamic("isDefaultNamespace")(js.Any.fromFunction1(isDefaultNamespace))
+    if (isEqualNode != null) __obj.updateDynamic("isEqualNode")(js.Any.fromFunction1(isEqualNode))
+    if (isSameNode != null) __obj.updateDynamic("isSameNode")(js.Any.fromFunction1(isSameNode))
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (lastChild != null) __obj.updateDynamic("lastChild")(lastChild.asInstanceOf[js.Any])
+    if (lastElementChild != null) __obj.updateDynamic("lastElementChild")(lastElementChild.asInstanceOf[js.Any])
+    if (localName != null) __obj.updateDynamic("localName")(localName.asInstanceOf[js.Any])
+    if (lookupNamespaceURI != null) __obj.updateDynamic("lookupNamespaceURI")(js.Any.fromFunction1(lookupNamespaceURI))
+    if (lookupPrefix != null) __obj.updateDynamic("lookupPrefix")(js.Any.fromFunction1(lookupPrefix))
+    if (matches != null) __obj.updateDynamic("matches")(js.Any.fromFunction1(matches))
+    if (msGetRegionContent != null) __obj.updateDynamic("msGetRegionContent")(js.Any.fromFunction0(msGetRegionContent))
+    if (namespaceURI != null) __obj.updateDynamic("namespaceURI")(namespaceURI.asInstanceOf[js.Any])
+    if (nextElementSibling != null) __obj.updateDynamic("nextElementSibling")(nextElementSibling.asInstanceOf[js.Any])
+    if (nextSibling != null) __obj.updateDynamic("nextSibling")(nextSibling.asInstanceOf[js.Any])
+    if (nodeName != null) __obj.updateDynamic("nodeName")(nodeName.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodeType)) __obj.updateDynamic("nodeType")(nodeType.get.asInstanceOf[js.Any])
+    if (nodeValue != null) __obj.updateDynamic("nodeValue")(nodeValue.asInstanceOf[js.Any])
+    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
+    if (normalize != null) __obj.updateDynamic("normalize")(js.Any.fromFunction0(normalize))
+    if (!js.isUndefined(offsetHeight)) __obj.updateDynamic("offsetHeight")(offsetHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetLeft)) __obj.updateDynamic("offsetLeft")(offsetLeft.get.asInstanceOf[js.Any])
+    if (offsetParent != null) __obj.updateDynamic("offsetParent")(offsetParent.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetTop)) __obj.updateDynamic("offsetTop")(offsetTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetWidth)) __obj.updateDynamic("offsetWidth")(offsetWidth.get.asInstanceOf[js.Any])
+    if (onabort != null) __obj.updateDynamic("onabort")(onabort.asInstanceOf[js.Any])
+    if (onanimationcancel != null) __obj.updateDynamic("onanimationcancel")(onanimationcancel.asInstanceOf[js.Any])
+    if (onanimationend != null) __obj.updateDynamic("onanimationend")(onanimationend.asInstanceOf[js.Any])
+    if (onanimationiteration != null) __obj.updateDynamic("onanimationiteration")(onanimationiteration.asInstanceOf[js.Any])
+    if (onanimationstart != null) __obj.updateDynamic("onanimationstart")(onanimationstart.asInstanceOf[js.Any])
+    if (onauxclick != null) __obj.updateDynamic("onauxclick")(onauxclick.asInstanceOf[js.Any])
+    if (onblur != null) __obj.updateDynamic("onblur")(onblur.asInstanceOf[js.Any])
+    if (oncancel != null) __obj.updateDynamic("oncancel")(oncancel.asInstanceOf[js.Any])
+    if (oncanplay != null) __obj.updateDynamic("oncanplay")(oncanplay.asInstanceOf[js.Any])
+    if (oncanplaythrough != null) __obj.updateDynamic("oncanplaythrough")(oncanplaythrough.asInstanceOf[js.Any])
+    if (onchange != null) __obj.updateDynamic("onchange")(onchange.asInstanceOf[js.Any])
+    if (onclick != null) __obj.updateDynamic("onclick")(onclick.asInstanceOf[js.Any])
+    if (onclose != null) __obj.updateDynamic("onclose")(onclose.asInstanceOf[js.Any])
+    if (oncontextmenu != null) __obj.updateDynamic("oncontextmenu")(oncontextmenu.asInstanceOf[js.Any])
+    if (oncopy != null) __obj.updateDynamic("oncopy")(oncopy.asInstanceOf[js.Any])
+    if (oncuechange != null) __obj.updateDynamic("oncuechange")(oncuechange.asInstanceOf[js.Any])
+    if (oncut != null) __obj.updateDynamic("oncut")(oncut.asInstanceOf[js.Any])
+    if (ondblclick != null) __obj.updateDynamic("ondblclick")(ondblclick.asInstanceOf[js.Any])
+    if (ondrag != null) __obj.updateDynamic("ondrag")(ondrag.asInstanceOf[js.Any])
+    if (ondragend != null) __obj.updateDynamic("ondragend")(ondragend.asInstanceOf[js.Any])
+    if (ondragenter != null) __obj.updateDynamic("ondragenter")(ondragenter.asInstanceOf[js.Any])
+    if (ondragexit != null) __obj.updateDynamic("ondragexit")(ondragexit.asInstanceOf[js.Any])
+    if (ondragleave != null) __obj.updateDynamic("ondragleave")(ondragleave.asInstanceOf[js.Any])
+    if (ondragover != null) __obj.updateDynamic("ondragover")(ondragover.asInstanceOf[js.Any])
+    if (ondragstart != null) __obj.updateDynamic("ondragstart")(ondragstart.asInstanceOf[js.Any])
+    if (ondrop != null) __obj.updateDynamic("ondrop")(ondrop.asInstanceOf[js.Any])
+    if (ondurationchange != null) __obj.updateDynamic("ondurationchange")(ondurationchange.asInstanceOf[js.Any])
+    if (onemptied != null) __obj.updateDynamic("onemptied")(onemptied.asInstanceOf[js.Any])
+    if (onended != null) __obj.updateDynamic("onended")(onended.asInstanceOf[js.Any])
+    if (!js.isUndefined(onerror)) __obj.updateDynamic("onerror")(if (onerror != null) js.Any.fromFunction5(onerror.asInstanceOf[(/* event */ Event | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any]) else null)
+    if (onfocus != null) __obj.updateDynamic("onfocus")(onfocus.asInstanceOf[js.Any])
+    if (onfullscreenchange != null) __obj.updateDynamic("onfullscreenchange")(onfullscreenchange.asInstanceOf[js.Any])
+    if (onfullscreenerror != null) __obj.updateDynamic("onfullscreenerror")(onfullscreenerror.asInstanceOf[js.Any])
+    if (ongotpointercapture != null) __obj.updateDynamic("ongotpointercapture")(ongotpointercapture.asInstanceOf[js.Any])
+    if (oninput != null) __obj.updateDynamic("oninput")(oninput.asInstanceOf[js.Any])
+    if (oninvalid != null) __obj.updateDynamic("oninvalid")(oninvalid.asInstanceOf[js.Any])
+    if (onkeydown != null) __obj.updateDynamic("onkeydown")(onkeydown.asInstanceOf[js.Any])
+    if (onkeypress != null) __obj.updateDynamic("onkeypress")(onkeypress.asInstanceOf[js.Any])
+    if (onkeyup != null) __obj.updateDynamic("onkeyup")(onkeyup.asInstanceOf[js.Any])
+    if (onload != null) __obj.updateDynamic("onload")(onload.asInstanceOf[js.Any])
+    if (onloadeddata != null) __obj.updateDynamic("onloadeddata")(onloadeddata.asInstanceOf[js.Any])
+    if (onloadedmetadata != null) __obj.updateDynamic("onloadedmetadata")(onloadedmetadata.asInstanceOf[js.Any])
+    if (onloadstart != null) __obj.updateDynamic("onloadstart")(onloadstart.asInstanceOf[js.Any])
+    if (onlostpointercapture != null) __obj.updateDynamic("onlostpointercapture")(onlostpointercapture.asInstanceOf[js.Any])
+    if (onmousedown != null) __obj.updateDynamic("onmousedown")(onmousedown.asInstanceOf[js.Any])
+    if (onmouseenter != null) __obj.updateDynamic("onmouseenter")(onmouseenter.asInstanceOf[js.Any])
+    if (onmouseleave != null) __obj.updateDynamic("onmouseleave")(onmouseleave.asInstanceOf[js.Any])
+    if (onmousemove != null) __obj.updateDynamic("onmousemove")(onmousemove.asInstanceOf[js.Any])
+    if (onmouseout != null) __obj.updateDynamic("onmouseout")(onmouseout.asInstanceOf[js.Any])
+    if (onmouseover != null) __obj.updateDynamic("onmouseover")(onmouseover.asInstanceOf[js.Any])
+    if (onmouseup != null) __obj.updateDynamic("onmouseup")(onmouseup.asInstanceOf[js.Any])
+    if (onpaste != null) __obj.updateDynamic("onpaste")(onpaste.asInstanceOf[js.Any])
+    if (onpause != null) __obj.updateDynamic("onpause")(onpause.asInstanceOf[js.Any])
+    if (onplay != null) __obj.updateDynamic("onplay")(onplay.asInstanceOf[js.Any])
+    if (onplaying != null) __obj.updateDynamic("onplaying")(onplaying.asInstanceOf[js.Any])
+    if (onpointercancel != null) __obj.updateDynamic("onpointercancel")(onpointercancel.asInstanceOf[js.Any])
+    if (onpointerdown != null) __obj.updateDynamic("onpointerdown")(onpointerdown.asInstanceOf[js.Any])
+    if (onpointerenter != null) __obj.updateDynamic("onpointerenter")(onpointerenter.asInstanceOf[js.Any])
+    if (onpointerleave != null) __obj.updateDynamic("onpointerleave")(onpointerleave.asInstanceOf[js.Any])
+    if (onpointermove != null) __obj.updateDynamic("onpointermove")(onpointermove.asInstanceOf[js.Any])
+    if (onpointerout != null) __obj.updateDynamic("onpointerout")(onpointerout.asInstanceOf[js.Any])
+    if (onpointerover != null) __obj.updateDynamic("onpointerover")(onpointerover.asInstanceOf[js.Any])
+    if (onpointerup != null) __obj.updateDynamic("onpointerup")(onpointerup.asInstanceOf[js.Any])
+    if (onprogress != null) __obj.updateDynamic("onprogress")(onprogress.asInstanceOf[js.Any])
+    if (onratechange != null) __obj.updateDynamic("onratechange")(onratechange.asInstanceOf[js.Any])
+    if (onreset != null) __obj.updateDynamic("onreset")(onreset.asInstanceOf[js.Any])
+    if (onresize != null) __obj.updateDynamic("onresize")(onresize.asInstanceOf[js.Any])
+    if (onscroll != null) __obj.updateDynamic("onscroll")(onscroll.asInstanceOf[js.Any])
+    if (onsecuritypolicyviolation != null) __obj.updateDynamic("onsecuritypolicyviolation")(onsecuritypolicyviolation.asInstanceOf[js.Any])
+    if (onseeked != null) __obj.updateDynamic("onseeked")(onseeked.asInstanceOf[js.Any])
+    if (onseeking != null) __obj.updateDynamic("onseeking")(onseeking.asInstanceOf[js.Any])
+    if (onselect != null) __obj.updateDynamic("onselect")(onselect.asInstanceOf[js.Any])
+    if (onselectionchange != null) __obj.updateDynamic("onselectionchange")(onselectionchange.asInstanceOf[js.Any])
+    if (onselectstart != null) __obj.updateDynamic("onselectstart")(onselectstart.asInstanceOf[js.Any])
+    if (onstalled != null) __obj.updateDynamic("onstalled")(onstalled.asInstanceOf[js.Any])
+    if (onsubmit != null) __obj.updateDynamic("onsubmit")(onsubmit.asInstanceOf[js.Any])
+    if (onsuspend != null) __obj.updateDynamic("onsuspend")(onsuspend.asInstanceOf[js.Any])
+    if (ontimeupdate != null) __obj.updateDynamic("ontimeupdate")(ontimeupdate.asInstanceOf[js.Any])
+    if (ontoggle != null) __obj.updateDynamic("ontoggle")(ontoggle.asInstanceOf[js.Any])
+    if (ontouchcancel != null) __obj.updateDynamic("ontouchcancel")(ontouchcancel.asInstanceOf[js.Any])
+    if (ontouchend != null) __obj.updateDynamic("ontouchend")(ontouchend.asInstanceOf[js.Any])
+    if (ontouchmove != null) __obj.updateDynamic("ontouchmove")(ontouchmove.asInstanceOf[js.Any])
+    if (ontouchstart != null) __obj.updateDynamic("ontouchstart")(ontouchstart.asInstanceOf[js.Any])
+    if (ontransitioncancel != null) __obj.updateDynamic("ontransitioncancel")(ontransitioncancel.asInstanceOf[js.Any])
+    if (ontransitionend != null) __obj.updateDynamic("ontransitionend")(ontransitionend.asInstanceOf[js.Any])
+    if (ontransitionrun != null) __obj.updateDynamic("ontransitionrun")(ontransitionrun.asInstanceOf[js.Any])
+    if (ontransitionstart != null) __obj.updateDynamic("ontransitionstart")(ontransitionstart.asInstanceOf[js.Any])
+    if (onvolumechange != null) __obj.updateDynamic("onvolumechange")(onvolumechange.asInstanceOf[js.Any])
+    if (onwaiting != null) __obj.updateDynamic("onwaiting")(onwaiting.asInstanceOf[js.Any])
+    if (onwheel != null) __obj.updateDynamic("onwheel")(onwheel.asInstanceOf[js.Any])
+    if (outerHTML != null) __obj.updateDynamic("outerHTML")(outerHTML.asInstanceOf[js.Any])
+    if (ownerDocument != null) __obj.updateDynamic("ownerDocument")(ownerDocument.asInstanceOf[js.Any])
+    if (parentElement != null) __obj.updateDynamic("parentElement")(parentElement.asInstanceOf[js.Any])
+    if (parentNode != null) __obj.updateDynamic("parentNode")(parentNode.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (prepend != null) __obj.updateDynamic("prepend")(js.Any.fromFunction1(prepend))
+    if (previousElementSibling != null) __obj.updateDynamic("previousElementSibling")(previousElementSibling.asInstanceOf[js.Any])
+    if (previousSibling != null) __obj.updateDynamic("previousSibling")(previousSibling.asInstanceOf[js.Any])
+    if (querySelector != null) __obj.updateDynamic("querySelector")(js.Any.fromFunction1(querySelector))
+    if (querySelectorAll != null) __obj.updateDynamic("querySelectorAll")(js.Any.fromFunction1(querySelectorAll))
+    if (releasePointerCapture != null) __obj.updateDynamic("releasePointerCapture")(js.Any.fromFunction1(releasePointerCapture))
+    if (remove != null) __obj.updateDynamic("remove")(js.Any.fromFunction0(remove))
+    if (removeAttribute != null) __obj.updateDynamic("removeAttribute")(js.Any.fromFunction1(removeAttribute))
+    if (removeAttributeNS != null) __obj.updateDynamic("removeAttributeNS")(js.Any.fromFunction2(removeAttributeNS))
+    if (removeAttributeNode != null) __obj.updateDynamic("removeAttributeNode")(js.Any.fromFunction1(removeAttributeNode))
+    if (removeChild != null) __obj.updateDynamic("removeChild")(js.Any.fromFunction1(removeChild))
+    if (removeEventListener != null) __obj.updateDynamic("removeEventListener")(js.Any.fromFunction2(removeEventListener))
+    if (replaceChild != null) __obj.updateDynamic("replaceChild")(js.Any.fromFunction2(replaceChild))
+    if (replaceWith != null) __obj.updateDynamic("replaceWith")(js.Any.fromFunction1(replaceWith))
+    if (requestFullscreen != null) __obj.updateDynamic("requestFullscreen")(js.Any.fromFunction0(requestFullscreen))
+    if (requestPointerLock != null) __obj.updateDynamic("requestPointerLock")(js.Any.fromFunction0(requestPointerLock))
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
+    if (scroll != null) __obj.updateDynamic("scroll")(js.Any.fromFunction0(scroll))
+    if (scrollBy != null) __obj.updateDynamic("scrollBy")(js.Any.fromFunction0(scrollBy))
+    if (!js.isUndefined(scrollHeight)) __obj.updateDynamic("scrollHeight")(scrollHeight.get.asInstanceOf[js.Any])
+    if (scrollIntoView != null) __obj.updateDynamic("scrollIntoView")(js.Any.fromFunction0(scrollIntoView))
+    if (!js.isUndefined(scrollLeft)) __obj.updateDynamic("scrollLeft")(scrollLeft.get.asInstanceOf[js.Any])
+    if (scrollTo != null) __obj.updateDynamic("scrollTo")(js.Any.fromFunction0(scrollTo))
+    if (!js.isUndefined(scrollTop)) __obj.updateDynamic("scrollTop")(scrollTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollWidth)) __obj.updateDynamic("scrollWidth")(scrollWidth.get.asInstanceOf[js.Any])
+    if (setAttribute != null) __obj.updateDynamic("setAttribute")(js.Any.fromFunction2(setAttribute))
+    if (setAttributeNS != null) __obj.updateDynamic("setAttributeNS")(js.Any.fromFunction3(setAttributeNS))
+    if (setAttributeNode != null) __obj.updateDynamic("setAttributeNode")(js.Any.fromFunction1(setAttributeNode))
+    if (setAttributeNodeNS != null) __obj.updateDynamic("setAttributeNodeNS")(js.Any.fromFunction1(setAttributeNodeNS))
+    if (setPointerCapture != null) __obj.updateDynamic("setPointerCapture")(js.Any.fromFunction1(setPointerCapture))
+    if (shadowRoot != null) __obj.updateDynamic("shadowRoot")(shadowRoot.asInstanceOf[js.Any])
+    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+    if (!js.isUndefined(spellcheck)) __obj.updateDynamic("spellcheck")(spellcheck.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropsHTMLTableElementcont]
   }
-  @scala.inline
-  implicit class PropsHTMLTableElementcontOps[Self <: PropsHTMLTableElementcont] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withATTRIBUTE_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ATTRIBUTE_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutATTRIBUTE_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ATTRIBUTE_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCDATA_SECTION_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CDATA_SECTION_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCDATA_SECTION_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CDATA_SECTION_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCOMMENT_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("COMMENT_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCOMMENT_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("COMMENT_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_FRAGMENT_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_FRAGMENT_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_FRAGMENT_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_FRAGMENT_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_POSITION_CONTAINED_BY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_CONTAINED_BY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_POSITION_CONTAINED_BY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_CONTAINED_BY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_POSITION_CONTAINS(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_CONTAINS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_POSITION_CONTAINS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_CONTAINS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_POSITION_DISCONNECTED(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_DISCONNECTED")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_POSITION_DISCONNECTED: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_DISCONNECTED")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_POSITION_FOLLOWING(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_FOLLOWING")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_POSITION_FOLLOWING: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_FOLLOWING")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_POSITION_PRECEDING(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_PRECEDING")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_POSITION_PRECEDING: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_POSITION_PRECEDING")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDOCUMENT_TYPE_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_TYPE_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDOCUMENT_TYPE_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCUMENT_TYPE_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withELEMENT_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ELEMENT_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutELEMENT_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ELEMENT_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withENTITY_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTITY_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutENTITY_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTITY_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withENTITY_REFERENCE_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTITY_REFERENCE_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutENTITY_REFERENCE_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ENTITY_REFERENCE_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNOTATION_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NOTATION_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNOTATION_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NOTATION_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPROCESSING_INSTRUCTION_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PROCESSING_INSTRUCTION_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPROCESSING_INSTRUCTION_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PROCESSING_INSTRUCTION_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTEXT_NODE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TEXT_NODE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTEXT_NODE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TEXT_NODE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessKeyLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKeyLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessKeyLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKeyLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddEventListener(
-      value: (fullscreenchange, /* listener */ js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addEventListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddEventListener: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addEventListener")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfter(value: /* repeated */ Node | String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimate(value: /* keyframes */ js.Array[Keyframe] => Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppend(value: /* repeated */ Node | String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAppend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppendChild(value: /* newChild */ Node => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAppendChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignedSlot(value: HTMLSlotElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedSlot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignedSlot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedSlot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachShadow(value: /* init */ ShadowRootInit => ShadowRoot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachShadow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAttachShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachShadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: NamedNodeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutocapitalize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocapitalize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutocapitalize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocapitalize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutofocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutofocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseURI(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseURI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBefore(value: /* repeated */ Node | String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlur(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaption(value: HTMLTableCaptionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellPadding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellSpacing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildElementCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childElementCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildElementCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childElementCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildNodes(value: NodeListOf[ChildNode with Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildren(value: HTMLCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassList(value: DOMTokenList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClick(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloneNode(value: () => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCloneNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClosest(value: a => HTMLAnchorElement | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closest")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutClosest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompareDocumentPosition(value: /* other */ Node => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareDocumentPosition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCompareDocumentPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareDocumentPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContains(value: /* other */ Node => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: Content | js.Array[Content]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentEditable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateCaption(value: () => HTMLTableCaptionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCaption")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCaption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTBody(value: () => HTMLTableSectionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTBody")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateTBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTFoot(value: () => HTMLTableSectionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTFoot")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateTFoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTFoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTHead(value: () => HTMLTableSectionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTHead")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateTHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataset(value: DOMStringMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteCaption(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteCaption")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutDeleteCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteCaption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteRow(value: /* index */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDeleteRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteTFoot(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTFoot")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutDeleteTFoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTFoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteTHead(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTHead")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutDeleteTHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDispatchEvent(value: /* event */ Event => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDispatchEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstChild(value: ChildNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstElementChild(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstElementChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstElementChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstElementChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocus(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrame(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetAnimations(value: () => js.Array[Animation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnimations")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetAnimations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnimations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetAttribute(value: /* qualifiedName */ String => String | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttribute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetAttributeNS(value: (/* namespace */ String, /* localName */ String) => String | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNS")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetAttributeNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetAttributeNames(value: () => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetAttributeNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetAttributeNode(value: /* name */ String => Attr | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetAttributeNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetAttributeNodeNS(value: (/* namespaceURI */ String, /* localName */ String) => Attr | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNodeNS")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetAttributeNodeNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNodeNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetBoundingClientRect(value: () => DOMRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoundingClientRect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetBoundingClientRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoundingClientRect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetClientRects(value: () => DOMRectList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClientRects")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetClientRects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClientRects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetElementsByClassName(value: /* classNames */ String => HTMLCollectionOf[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByClassName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetElementsByClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetElementsByTagName(value: a => HTMLCollectionOf[HTMLAnchorElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetElementsByTagName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetElementsByTagNameNS(
-      value: (httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, /* localName */ String) => HTMLCollectionOf[HTMLElement]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagNameNS")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetElementsByTagNameNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagNameNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetRootNode(value: () => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRootNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetRootNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRootNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasAttribute(value: /* qualifiedName */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttribute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutHasAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasAttributeNS(value: (/* namespace */ String, /* localName */ String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttributeNS")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutHasAttributeNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttributeNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasAttributes(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttributes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutHasAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasChildNodes(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildNodes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutHasChildNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasPointerCapture(value: /* pointerId */ Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasPointerCapture")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutHasPointerCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasPointerCapture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerHTML(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertAdjacentElement(value: (/* position */ InsertPosition, /* insertedElement */ Element) => Element | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentElement")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInsertAdjacentElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertAdjacentHTML(value: (/* where */ InsertPosition, /* html */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentHTML")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInsertAdjacentHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertAdjacentText(value: (/* where */ InsertPosition, /* text */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentText")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInsertAdjacentText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAdjacentText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertBefore(value: (/* newChild */ Node, /* refChild */ Node) => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInsertBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertRow(value: () => HTMLTableRowElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertRow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutInsertRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsConnected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConnected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsConnected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConnected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsContentEditable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isContentEditable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsContentEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isContentEditable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDefaultNamespace(value: /* namespace */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultNamespace")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsDefaultNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultNamespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEqualNode(value: /* otherNode */ Node => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqualNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsEqualNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqualNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSameNode(value: /* otherNode */ Node => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSameNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsSameNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSameNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastChild(value: ChildNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastElementChild(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastElementChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastElementChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastElementChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookupNamespaceURI(value: /* prefix */ String => String | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupNamespaceURI")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLookupNamespaceURI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupNamespaceURI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookupPrefix(value: /* namespace */ String => String | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupPrefix")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLookupPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatches(value: /* selectors */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsGetRegionContent(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msGetRegionContent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutMsGetRegionContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msGetRegionContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespaceURI(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceURI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespaceURI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceURI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextElementSibling(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextElementSibling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextElementSibling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextElementSibling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextSibling(value: ChildNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextSibling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalize(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutNormalize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetParent(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetParent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnabort(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ UIEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onabort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnabort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onabort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnanimationcancel(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ AnimationEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationcancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnanimationcancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationcancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnanimationend(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ AnimationEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnanimationend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnanimationiteration(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ AnimationEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationiteration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnanimationiteration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationiteration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnanimationstart(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ AnimationEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnanimationstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnauxclick(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onauxclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnauxclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onauxclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnblur(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ FocusEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onblur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnblur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onblur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncancel(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncanplay(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncanplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncanplaythrough(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncanplaythrough: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnchange(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnchange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnclick(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnclose(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onclose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnclose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onclose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncontextmenu(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncontextmenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncontextmenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncontextmenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncopy(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ ClipboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncopy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncopy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncuechange(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncuechange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncut(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ ClipboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndblclick(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondblclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndblclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondblclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndrag(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragend(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragenter(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragexit(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragexit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragexit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragleave(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragleave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragleave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragleave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragover(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragstart(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndrop(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndurationchange(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndurationchange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnemptied(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnemptied: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnended(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onended")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnended: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onended")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnerror(
-      value: (/* event */ Event | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnerrorNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(null)
-        ret
-    }
-    @scala.inline
-    def withOnfocus(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ FocusEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onfocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnfocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onfocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnfullscreenchange(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenchange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnfullscreenchange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenchange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnfullscreenerror(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenerror")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnfullscreenerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOngotpointercapture(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ongotpointercapture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOngotpointercapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ongotpointercapture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOninput(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOninput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOninvalid(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOninvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnkeydown(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ KeyboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeydown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnkeydown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeydown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnkeypress(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ KeyboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeypress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnkeypress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeypress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnkeyup(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ KeyboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeyup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnkeyup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeyup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnload(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnloadeddata(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnloadeddata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnloadedmetadata(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnloadedmetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnloadstart(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnloadstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlostpointercapture(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlostpointercapture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlostpointercapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlostpointercapture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmousedown(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousedown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmousedown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousedown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseenter(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseleave(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseleave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseleave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseleave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmousemove(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmousemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseout(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseover(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseup(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpaste(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ ClipboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpaste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpaste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpause(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnplay(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnplaying(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnplaying: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointercancel(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointercancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointercancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointercancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerdown(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerdown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerenter(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerleave(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerleave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerleave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerleave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointermove(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointermove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointermove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointermove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerout(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerover(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerup(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnprogress(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ ProgressEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprogress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnprogress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprogress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnratechange(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnratechange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnreset(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnreset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnresize(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ UIEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onresize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnresize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onresize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnscroll(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onscroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnscroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onscroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsecuritypolicyviolation(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ SecurityPolicyViolationEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsecuritypolicyviolation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsecuritypolicyviolation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsecuritypolicyviolation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnseeked(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnseeked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnseeking(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnseeking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnselect(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnselectionchange(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectionchange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnselectionchange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectionchange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnselectstart(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnselectstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnstalled(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnstalled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsubmit(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsubmit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsuspend(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsuspend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntimeupdate(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntimeupdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntoggle(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontoggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntoggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontoggle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntouchcancel(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TouchEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchcancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntouchcancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchcancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntouchend(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TouchEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntouchend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntouchmove(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TouchEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchmove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntouchmove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchmove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntouchstart(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TouchEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntouchstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntransitioncancel(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TransitionEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitioncancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntransitioncancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitioncancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntransitionend(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TransitionEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntransitionend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntransitionrun(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TransitionEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionrun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntransitionrun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionrun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntransitionstart(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ TransitionEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntransitionstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnvolumechange(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnvolumechange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnwaiting(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnwaiting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnwheel(value: js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ WheelEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwheel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnwheel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwheel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuterHTML(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuterHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerDocument(value: Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentNode(value: Node with ParentNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrepend(value: /* repeated */ Node | String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrepend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousElementSibling(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousElementSibling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousElementSibling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousElementSibling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousSibling(value: ChildNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousSibling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuerySelector(value: a => HTMLAnchorElement | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelector")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutQuerySelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuerySelectorAll(value: a => NodeListOf[HTMLAnchorElement with Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelectorAll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutQuerySelectorAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySelectorAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleasePointerCapture(value: /* pointerId */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releasePointerCapture")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReleasePointerCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releasePointerCapture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveAttribute(value: /* qualifiedName */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttribute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRemoveAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveAttributeNS(value: (/* namespace */ String, /* localName */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNS")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRemoveAttributeNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveAttributeNode(value: /* attr */ Attr => Attr): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRemoveAttributeNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveChild(value: /* oldChild */ Node => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRemoveChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveEventListener(
-      value: (fullscreenchange, /* listener */ js.ThisFunction1[PropsHTMLTableElementcont, /* ev */ Event, _]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEventListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRemoveEventListener: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEventListener")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceChild(value: (/* newChild */ Node, /* oldChild */ Node) => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceChild")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutReplaceChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceWith(value: /* repeated */ Node | String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWith")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReplaceWith: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWith")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestFullscreen(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFullscreen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRequestFullscreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFullscreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestPointerLock(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPointerLock")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRequestPointerLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPointerLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: HTMLCollectionOf[HTMLTableRowElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScroll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollBy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutScrollBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollIntoView(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollIntoView")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutScrollIntoView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollIntoView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollTo(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutScrollTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetAttribute(value: (/* qualifiedName */ String, /* value */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttribute")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetAttributeNS(value: (/* namespace */ String, /* qualifiedName */ String, /* value */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNS")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetAttributeNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetAttributeNode(value: /* attr */ Attr => Attr | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetAttributeNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetAttributeNodeNS(value: /* attr */ Attr => Attr | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNodeNS")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetAttributeNodeNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNodeNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetPointerCapture(value: /* pointerId */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPointerCapture")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetPointerCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPointerCapture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowRoot(value: ShadowRoot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpellcheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpellcheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

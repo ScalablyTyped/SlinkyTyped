@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides the data for a MessageAvailableChanged event. */
-@js.native
 trait RcsEndUserMessageAvailableEventArgs extends js.Object {
   /** Gets a Boolean value indicating if a new message is available. */
-  var isMessageAvailable: Boolean = js.native
+  var isMessageAvailable: Boolean
   /** Gets the actual message to display, or empty if IsMessageAvailable is FALSE. */
-  var message: RcsEndUserMessage = js.native
+  var message: RcsEndUserMessage
 }
 
 object RcsEndUserMessageAvailableEventArgs {
@@ -19,25 +18,5 @@ object RcsEndUserMessageAvailableEventArgs {
     val __obj = js.Dynamic.literal(isMessageAvailable = isMessageAvailable.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
     __obj.asInstanceOf[RcsEndUserMessageAvailableEventArgs]
   }
-  @scala.inline
-  implicit class RcsEndUserMessageAvailableEventArgsOps[Self <: RcsEndUserMessageAvailableEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsMessageAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMessageAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: RcsEndUserMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

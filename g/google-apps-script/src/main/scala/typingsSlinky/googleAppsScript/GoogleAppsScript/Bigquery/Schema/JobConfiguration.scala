@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JobConfiguration extends js.Object {
-  var copy: js.UndefOr[JobConfigurationTableCopy] = js.native
-  var dryRun: js.UndefOr[Boolean] = js.native
-  var extract: js.UndefOr[JobConfigurationExtract] = js.native
-  var jobTimeoutMs: js.UndefOr[String] = js.native
-  var jobType: js.UndefOr[String] = js.native
-  var labels: js.UndefOr[js.Object] = js.native
-  var load: js.UndefOr[JobConfigurationLoad] = js.native
-  var query: js.UndefOr[JobConfigurationQuery] = js.native
+  var copy: js.UndefOr[JobConfigurationTableCopy] = js.undefined
+  var dryRun: js.UndefOr[Boolean] = js.undefined
+  var extract: js.UndefOr[JobConfigurationExtract] = js.undefined
+  var jobTimeoutMs: js.UndefOr[String] = js.undefined
+  var jobType: js.UndefOr[String] = js.undefined
+  var labels: js.UndefOr[js.Object] = js.undefined
+  var load: js.UndefOr[JobConfigurationLoad] = js.undefined
+  var query: js.UndefOr[JobConfigurationQuery] = js.undefined
 }
 
 object JobConfiguration {
   @scala.inline
-  def apply(): JobConfiguration = {
+  def apply(
+    copy: JobConfigurationTableCopy = null,
+    dryRun: js.UndefOr[Boolean] = js.undefined,
+    extract: JobConfigurationExtract = null,
+    jobTimeoutMs: String = null,
+    jobType: String = null,
+    labels: js.Object = null,
+    load: JobConfigurationLoad = null,
+    query: JobConfigurationQuery = null
+  ): JobConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (copy != null) __obj.updateDynamic("copy")(copy.asInstanceOf[js.Any])
+    if (!js.isUndefined(dryRun)) __obj.updateDynamic("dryRun")(dryRun.get.asInstanceOf[js.Any])
+    if (extract != null) __obj.updateDynamic("extract")(extract.asInstanceOf[js.Any])
+    if (jobTimeoutMs != null) __obj.updateDynamic("jobTimeoutMs")(jobTimeoutMs.asInstanceOf[js.Any])
+    if (jobType != null) __obj.updateDynamic("jobType")(jobType.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (load != null) __obj.updateDynamic("load")(load.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobConfiguration]
   }
-  @scala.inline
-  implicit class JobConfigurationOps[Self <: JobConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopy(value: JobConfigurationTableCopy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtract(value: JobConfigurationExtract): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extract")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtract: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extract")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobTimeoutMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTimeoutMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobTimeoutMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTimeoutMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoad(value: JobConfigurationLoad): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: JobConfigurationQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

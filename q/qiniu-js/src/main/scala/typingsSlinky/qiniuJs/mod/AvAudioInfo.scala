@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AvAudioInfo extends js.Object {
-  var audio: AudioInfo = js.native
-  var format: AvFormat = js.native
-  var video: VideoInfo = js.native
+  var audio: AudioInfo
+  var format: AvFormat
+  var video: VideoInfo
 }
 
 object AvAudioInfo {
@@ -17,31 +16,5 @@ object AvAudioInfo {
     val __obj = js.Dynamic.literal(audio = audio.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvAudioInfo]
   }
-  @scala.inline
-  implicit class AvAudioInfoOps[Self <: AvAudioInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudio(value: AudioInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: AvFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideo(value: VideoInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

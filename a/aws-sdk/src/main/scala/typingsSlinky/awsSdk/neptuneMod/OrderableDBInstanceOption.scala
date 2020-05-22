@@ -90,257 +90,50 @@ trait OrderableDBInstanceOption extends js.Object {
 
 object OrderableDBInstanceOption {
   @scala.inline
-  def apply(): OrderableDBInstanceOption = {
+  def apply(
+    AvailabilityZones: AvailabilityZoneList = null,
+    DBInstanceClass: String = null,
+    Engine: String = null,
+    EngineVersion: String = null,
+    LicenseModel: String = null,
+    MaxIopsPerDbInstance: js.UndefOr[IntegerOptional] = js.undefined,
+    MaxIopsPerGib: js.UndefOr[DoubleOptional] = js.undefined,
+    MaxStorageSize: js.UndefOr[IntegerOptional] = js.undefined,
+    MinIopsPerDbInstance: js.UndefOr[IntegerOptional] = js.undefined,
+    MinIopsPerGib: js.UndefOr[DoubleOptional] = js.undefined,
+    MinStorageSize: js.UndefOr[IntegerOptional] = js.undefined,
+    MultiAZCapable: js.UndefOr[Boolean] = js.undefined,
+    ReadReplicaCapable: js.UndefOr[Boolean] = js.undefined,
+    StorageType: String = null,
+    SupportsEnhancedMonitoring: js.UndefOr[Boolean] = js.undefined,
+    SupportsIAMDatabaseAuthentication: js.UndefOr[Boolean] = js.undefined,
+    SupportsIops: js.UndefOr[Boolean] = js.undefined,
+    SupportsPerformanceInsights: js.UndefOr[Boolean] = js.undefined,
+    SupportsStorageEncryption: js.UndefOr[Boolean] = js.undefined,
+    Vpc: js.UndefOr[Boolean] = js.undefined
+  ): OrderableDBInstanceOption = {
     val __obj = js.Dynamic.literal()
+    if (AvailabilityZones != null) __obj.updateDynamic("AvailabilityZones")(AvailabilityZones.asInstanceOf[js.Any])
+    if (DBInstanceClass != null) __obj.updateDynamic("DBInstanceClass")(DBInstanceClass.asInstanceOf[js.Any])
+    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
+    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
+    if (LicenseModel != null) __obj.updateDynamic("LicenseModel")(LicenseModel.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxIopsPerDbInstance)) __obj.updateDynamic("MaxIopsPerDbInstance")(MaxIopsPerDbInstance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxIopsPerGib)) __obj.updateDynamic("MaxIopsPerGib")(MaxIopsPerGib.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxStorageSize)) __obj.updateDynamic("MaxStorageSize")(MaxStorageSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinIopsPerDbInstance)) __obj.updateDynamic("MinIopsPerDbInstance")(MinIopsPerDbInstance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinIopsPerGib)) __obj.updateDynamic("MinIopsPerGib")(MinIopsPerGib.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinStorageSize)) __obj.updateDynamic("MinStorageSize")(MinStorageSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MultiAZCapable)) __obj.updateDynamic("MultiAZCapable")(MultiAZCapable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReadReplicaCapable)) __obj.updateDynamic("ReadReplicaCapable")(ReadReplicaCapable.get.asInstanceOf[js.Any])
+    if (StorageType != null) __obj.updateDynamic("StorageType")(StorageType.asInstanceOf[js.Any])
+    if (!js.isUndefined(SupportsEnhancedMonitoring)) __obj.updateDynamic("SupportsEnhancedMonitoring")(SupportsEnhancedMonitoring.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SupportsIAMDatabaseAuthentication)) __obj.updateDynamic("SupportsIAMDatabaseAuthentication")(SupportsIAMDatabaseAuthentication.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SupportsIops)) __obj.updateDynamic("SupportsIops")(SupportsIops.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SupportsPerformanceInsights)) __obj.updateDynamic("SupportsPerformanceInsights")(SupportsPerformanceInsights.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SupportsStorageEncryption)) __obj.updateDynamic("SupportsStorageEncryption")(SupportsStorageEncryption.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Vpc)) __obj.updateDynamic("Vpc")(Vpc.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderableDBInstanceOption]
   }
-  @scala.inline
-  implicit class OrderableDBInstanceOptionOps[Self <: OrderableDBInstanceOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZones(value: AvailabilityZoneList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBInstanceClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBInstanceClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxIopsPerDbInstance(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxIopsPerDbInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxIopsPerDbInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxIopsPerDbInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxIopsPerGib(value: DoubleOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxIopsPerGib")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxIopsPerGib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxIopsPerGib")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxStorageSize(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxStorageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxStorageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxStorageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinIopsPerDbInstance(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinIopsPerDbInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinIopsPerDbInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinIopsPerDbInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinIopsPerGib(value: DoubleOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinIopsPerGib")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinIopsPerGib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinIopsPerGib")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinStorageSize(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinStorageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinStorageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinStorageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiAZCapable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAZCapable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiAZCapable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAZCapable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadReplicaCapable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadReplicaCapable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadReplicaCapable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadReplicaCapable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsEnhancedMonitoring(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsEnhancedMonitoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsEnhancedMonitoring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsEnhancedMonitoring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsIAMDatabaseAuthentication(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsIAMDatabaseAuthentication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsIAMDatabaseAuthentication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsIAMDatabaseAuthentication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsIops(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsIops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsIops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsIops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsPerformanceInsights(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsPerformanceInsights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsPerformanceInsights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsPerformanceInsights")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsStorageEncryption(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsStorageEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsStorageEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsStorageEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vpc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vpc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

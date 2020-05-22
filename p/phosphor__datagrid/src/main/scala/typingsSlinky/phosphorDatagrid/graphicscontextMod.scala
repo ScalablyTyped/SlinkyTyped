@@ -35,6 +35,14 @@ object graphicscontextMod extends js.Object {
     var globalAlpha: Double = js.native
     var globalCompositeOperation: String = js.native
     var imageSmoothingEnabled: Boolean = js.native
+    /**
+      * Test whether the object has been disposed.
+      *
+      * #### Notes
+      * This property is always safe to access.
+      */
+    /* CompleteClass */
+    override val isDisposed: Boolean = js.native
     var lineCap: String = js.native
     var lineDashOffset: Double = js.native
     var lineJoin: String = js.native
@@ -63,6 +71,19 @@ object graphicscontextMod extends js.Object {
     def createPattern(image: HTMLImageElement, repetition: String): CanvasPattern = js.native
     def createPattern(image: HTMLVideoElement, repetition: String): CanvasPattern = js.native
     def createRadialGradient(x0: Double, y0: Double, r0: Double, x1: Double, y1: Double, r1: Double): CanvasGradient = js.native
+    /**
+      * Dispose of the resources held by the object.
+      *
+      * #### Notes
+      * If the object's `dispose` method is called more than once, all
+      * calls made after the first will be a no-op.
+      *
+      * #### Undefined Behavior
+      * It is undefined behavior to use any functionality of the object
+      * after it has been disposed unless otherwise explicitly noted.
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
     def drawFocusIfNeeded(element: Element): Unit = js.native
     def drawImage(image: HTMLCanvasElement, dstX: Double, dstY: Double): Unit = js.native
     def drawImage(image: HTMLCanvasElement, dstX: Double, dstY: Double, dstW: Double, dstH: Double): Unit = js.native

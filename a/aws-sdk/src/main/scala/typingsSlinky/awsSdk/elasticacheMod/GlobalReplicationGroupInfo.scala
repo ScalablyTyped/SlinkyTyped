@@ -18,41 +18,11 @@ trait GlobalReplicationGroupInfo extends js.Object {
 
 object GlobalReplicationGroupInfo {
   @scala.inline
-  def apply(): GlobalReplicationGroupInfo = {
+  def apply(GlobalReplicationGroupId: String = null, GlobalReplicationGroupMemberRole: String = null): GlobalReplicationGroupInfo = {
     val __obj = js.Dynamic.literal()
+    if (GlobalReplicationGroupId != null) __obj.updateDynamic("GlobalReplicationGroupId")(GlobalReplicationGroupId.asInstanceOf[js.Any])
+    if (GlobalReplicationGroupMemberRole != null) __obj.updateDynamic("GlobalReplicationGroupMemberRole")(GlobalReplicationGroupMemberRole.asInstanceOf[js.Any])
     __obj.asInstanceOf[GlobalReplicationGroupInfo]
   }
-  @scala.inline
-  implicit class GlobalReplicationGroupInfoOps[Self <: GlobalReplicationGroupInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalReplicationGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalReplicationGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalReplicationGroupMemberRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupMemberRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalReplicationGroupMemberRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupMemberRole")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

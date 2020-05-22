@@ -30,65 +30,18 @@ trait SchemaBadWhitelist extends js.Object {
 
 object SchemaBadWhitelist {
   @scala.inline
-  def apply(): SchemaBadWhitelist = {
+  def apply(
+    domainId: SchemaDomainId = null,
+    maliciousEntity: SchemaMaliciousEntity = null,
+    messages: js.Array[SchemaGmailMessageInfo] = null,
+    sourceIp: String = null
+  ): SchemaBadWhitelist = {
     val __obj = js.Dynamic.literal()
+    if (domainId != null) __obj.updateDynamic("domainId")(domainId.asInstanceOf[js.Any])
+    if (maliciousEntity != null) __obj.updateDynamic("maliciousEntity")(maliciousEntity.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (sourceIp != null) __obj.updateDynamic("sourceIp")(sourceIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBadWhitelist]
   }
-  @scala.inline
-  implicit class SchemaBadWhitelistOps[Self <: SchemaBadWhitelist] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainId(value: SchemaDomainId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaliciousEntity(value: SchemaMaliciousEntity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maliciousEntity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaliciousEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maliciousEntity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: js.Array[SchemaGmailMessageInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

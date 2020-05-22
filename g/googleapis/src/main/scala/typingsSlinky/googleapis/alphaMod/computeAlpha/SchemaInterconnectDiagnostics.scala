@@ -29,53 +29,16 @@ trait SchemaInterconnectDiagnostics extends js.Object {
 
 object SchemaInterconnectDiagnostics {
   @scala.inline
-  def apply(): SchemaInterconnectDiagnostics = {
+  def apply(
+    arpCaches: js.Array[SchemaInterconnectDiagnosticsARPEntry] = null,
+    links: js.Array[SchemaInterconnectDiagnosticsLinkStatus] = null,
+    macAddress: String = null
+  ): SchemaInterconnectDiagnostics = {
     val __obj = js.Dynamic.literal()
+    if (arpCaches != null) __obj.updateDynamic("arpCaches")(arpCaches.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (macAddress != null) __obj.updateDynamic("macAddress")(macAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInterconnectDiagnostics]
   }
-  @scala.inline
-  implicit class SchemaInterconnectDiagnosticsOps[Self <: SchemaInterconnectDiagnostics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArpCaches(value: js.Array[SchemaInterconnectDiagnosticsARPEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arpCaches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArpCaches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arpCaches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: js.Array[SchemaInterconnectDiagnosticsLinkStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMacAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMacAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

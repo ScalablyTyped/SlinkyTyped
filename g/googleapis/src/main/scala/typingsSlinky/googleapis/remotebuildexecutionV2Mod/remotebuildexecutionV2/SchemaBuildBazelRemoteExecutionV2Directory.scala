@@ -48,53 +48,16 @@ trait SchemaBuildBazelRemoteExecutionV2Directory extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2Directory {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2Directory = {
+  def apply(
+    directories: js.Array[SchemaBuildBazelRemoteExecutionV2DirectoryNode] = null,
+    files: js.Array[SchemaBuildBazelRemoteExecutionV2FileNode] = null,
+    symlinks: js.Array[SchemaBuildBazelRemoteExecutionV2SymlinkNode] = null
+  ): SchemaBuildBazelRemoteExecutionV2Directory = {
     val __obj = js.Dynamic.literal()
+    if (directories != null) __obj.updateDynamic("directories")(directories.asInstanceOf[js.Any])
+    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
+    if (symlinks != null) __obj.updateDynamic("symlinks")(symlinks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2Directory]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2DirectoryOps[Self <: SchemaBuildBazelRemoteExecutionV2Directory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectories(value: js.Array[SchemaBuildBazelRemoteExecutionV2DirectoryNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiles(value: js.Array[SchemaBuildBazelRemoteExecutionV2FileNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymlinks(value: js.Array[SchemaBuildBazelRemoteExecutionV2SymlinkNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symlinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymlinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symlinks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

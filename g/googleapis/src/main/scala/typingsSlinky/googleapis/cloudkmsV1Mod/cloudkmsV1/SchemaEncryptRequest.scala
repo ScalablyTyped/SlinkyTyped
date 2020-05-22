@@ -30,41 +30,11 @@ trait SchemaEncryptRequest extends js.Object {
 
 object SchemaEncryptRequest {
   @scala.inline
-  def apply(): SchemaEncryptRequest = {
+  def apply(additionalAuthenticatedData: String = null, plaintext: String = null): SchemaEncryptRequest = {
     val __obj = js.Dynamic.literal()
+    if (additionalAuthenticatedData != null) __obj.updateDynamic("additionalAuthenticatedData")(additionalAuthenticatedData.asInstanceOf[js.Any])
+    if (plaintext != null) __obj.updateDynamic("plaintext")(plaintext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEncryptRequest]
   }
-  @scala.inline
-  implicit class SchemaEncryptRequestOps[Self <: SchemaEncryptRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalAuthenticatedData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalAuthenticatedData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalAuthenticatedData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalAuthenticatedData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaintext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plaintext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaintext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plaintext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

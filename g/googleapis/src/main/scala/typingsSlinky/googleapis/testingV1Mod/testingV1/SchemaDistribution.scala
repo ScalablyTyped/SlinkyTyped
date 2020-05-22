@@ -23,41 +23,11 @@ trait SchemaDistribution extends js.Object {
 
 object SchemaDistribution {
   @scala.inline
-  def apply(): SchemaDistribution = {
+  def apply(marketShare: js.UndefOr[Double] = js.undefined, measurementTime: String = null): SchemaDistribution = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(marketShare)) __obj.updateDynamic("marketShare")(marketShare.get.asInstanceOf[js.Any])
+    if (measurementTime != null) __obj.updateDynamic("measurementTime")(measurementTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDistribution]
   }
-  @scala.inline
-  implicit class SchemaDistributionOps[Self <: SchemaDistribution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarketShare(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marketShare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarketShare: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marketShare")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasurementTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measurementTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasurementTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measurementTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -25,7 +25,6 @@ import scala.scalajs.js.annotation._
   * com.sun.star.sheet.AccessibleSpreadsheet} for tables in the edit view of a spreadsheet.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleTableView
   extends XAccessibleContext
      with XAccessibleComponent

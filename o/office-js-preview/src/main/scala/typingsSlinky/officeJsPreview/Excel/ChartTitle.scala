@@ -31,35 +31,35 @@ trait ChartTitle extends ClientObject {
   var context_ChartTitle: RequestContext = js.native
   /**
     *
-    * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+    * Represents the formatting of a chart title, which includes fill and font formatting.
     *
     * [Api set: ExcelApi 1.1]
     */
   val format: ChartTitleFormat = js.native
   /**
     *
-    * Returns the height, in points, of the chart title. Null if chart title is not visible. Read-only.
+    * Returns the height, in points, of the chart title. Null if chart title is not visible.
     *
     * [Api set: ExcelApi 1.7]
     */
   val height: Double = js.native
   /**
     *
-    * Represents the horizontal alignment for chart title.
+    * Specifies the horizontal alignment for chart title.
     *
     * [Api set: ExcelApi 1.7]
     */
   var horizontalAlignment: ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed = js.native
   /**
     *
-    * Represents the distance, in points, from the left edge of chart title to the left edge of chart area. Null if chart title is not visible.
+    * Specifies the distance, in points, from the left edge of chart title to the left edge of chart area. Null if chart title is not visible.
     *
     * [Api set: ExcelApi 1.7]
     */
   var left: Double = js.native
   /**
     *
-    * Boolean value representing if the chart title will overlay the chart or not.
+    * Specifies if the chart title will overlay the chart.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -80,42 +80,42 @@ trait ChartTitle extends ClientObject {
   var showShadow: Boolean = js.native
   /**
     *
-    * Represents the title text of a chart.
+    * Specifies the chart's title text.
     *
     * [Api set: ExcelApi 1.1]
     */
   var text: String = js.native
   /**
     *
-    * Represents the angle to which the text is oriented for the chart title. The value should either be an integer from -90 to 90 or the integer 180 for vertically-oriented text.
+    * Specifies the angle to which the text is oriented for the chart title. The value should either be an integer from -90 to 90 or the integer 180 for vertically-oriented text.
     *
     * [Api set: ExcelApi 1.7]
     */
   var textOrientation: Double = js.native
   /**
     *
-    * Represents the distance, in points, from the top edge of chart title to the top of chart area. Null if chart title is not visible.
+    * Specifies the distance, in points, from the top edge of chart title to the top of chart area. Null if chart title is not visible.
     *
     * [Api set: ExcelApi 1.7]
     */
   var top: Double = js.native
   /**
     *
-    * Represents the vertical alignment of chart title. See Excel.ChartTextVerticalAlignment for details.
+    * Specifies the vertical alignment of chart title. See Excel.ChartTextVerticalAlignment for details.
     *
     * [Api set: ExcelApi 1.7]
     */
   var verticalAlignment: ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed = js.native
   /**
     *
-    * A boolean value the represents the visibility of a chart title object.
+    * Specifies if the chart title is visibile.
     *
     * [Api set: ExcelApi 1.1]
     */
   var visible: Boolean = js.native
   /**
     *
-    * Returns the width, in points, of the chart title. Null if chart title is not visible. Read-only.
+    * Specifies the width, in points, of the chart title. Null if chart title is not visible.
     *
     * [Api set: ExcelApi 1.7]
     */

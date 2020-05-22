@@ -4,149 +4,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SettingStateDeviceSummary extends Entity {
   // Device Compliant count for the setting
-  var compliantDeviceCount: js.UndefOr[Double] = js.native
+  var compliantDeviceCount: js.UndefOr[Double] = js.undefined
   // Device conflict error count for the setting
-  var conflictDeviceCount: js.UndefOr[Double] = js.native
+  var conflictDeviceCount: js.UndefOr[Double] = js.undefined
   // Device error count for the setting
-  var errorDeviceCount: js.UndefOr[Double] = js.native
+  var errorDeviceCount: js.UndefOr[Double] = js.undefined
   // Name of the InstancePath for the setting
-  var instancePath: js.UndefOr[String] = js.native
+  var instancePath: js.UndefOr[String] = js.undefined
   // Device NonCompliant count for the setting
-  var nonCompliantDeviceCount: js.UndefOr[Double] = js.native
+  var nonCompliantDeviceCount: js.UndefOr[Double] = js.undefined
   // Device Not Applicable count for the setting
-  var notApplicableDeviceCount: js.UndefOr[Double] = js.native
+  var notApplicableDeviceCount: js.UndefOr[Double] = js.undefined
   // Device Compliant count for the setting
-  var remediatedDeviceCount: js.UndefOr[Double] = js.native
+  var remediatedDeviceCount: js.UndefOr[Double] = js.undefined
   // Name of the setting
-  var settingName: js.UndefOr[String] = js.native
+  var settingName: js.UndefOr[String] = js.undefined
   // Device Unkown count for the setting
-  var unknownDeviceCount: js.UndefOr[Double] = js.native
+  var unknownDeviceCount: js.UndefOr[Double] = js.undefined
 }
 
 object SettingStateDeviceSummary {
   @scala.inline
-  def apply(): SettingStateDeviceSummary = {
+  def apply(
+    compliantDeviceCount: js.UndefOr[Double] = js.undefined,
+    conflictDeviceCount: js.UndefOr[Double] = js.undefined,
+    errorDeviceCount: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    instancePath: String = null,
+    nonCompliantDeviceCount: js.UndefOr[Double] = js.undefined,
+    notApplicableDeviceCount: js.UndefOr[Double] = js.undefined,
+    remediatedDeviceCount: js.UndefOr[Double] = js.undefined,
+    settingName: String = null,
+    unknownDeviceCount: js.UndefOr[Double] = js.undefined
+  ): SettingStateDeviceSummary = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(compliantDeviceCount)) __obj.updateDynamic("compliantDeviceCount")(compliantDeviceCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(conflictDeviceCount)) __obj.updateDynamic("conflictDeviceCount")(conflictDeviceCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorDeviceCount)) __obj.updateDynamic("errorDeviceCount")(errorDeviceCount.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (instancePath != null) __obj.updateDynamic("instancePath")(instancePath.asInstanceOf[js.Any])
+    if (!js.isUndefined(nonCompliantDeviceCount)) __obj.updateDynamic("nonCompliantDeviceCount")(nonCompliantDeviceCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(notApplicableDeviceCount)) __obj.updateDynamic("notApplicableDeviceCount")(notApplicableDeviceCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(remediatedDeviceCount)) __obj.updateDynamic("remediatedDeviceCount")(remediatedDeviceCount.get.asInstanceOf[js.Any])
+    if (settingName != null) __obj.updateDynamic("settingName")(settingName.asInstanceOf[js.Any])
+    if (!js.isUndefined(unknownDeviceCount)) __obj.updateDynamic("unknownDeviceCount")(unknownDeviceCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettingStateDeviceSummary]
   }
-  @scala.inline
-  implicit class SettingStateDeviceSummaryOps[Self <: SettingStateDeviceSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompliantDeviceCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compliantDeviceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompliantDeviceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compliantDeviceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConflictDeviceCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictDeviceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConflictDeviceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictDeviceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorDeviceCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDeviceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorDeviceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDeviceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstancePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonCompliantDeviceCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonCompliantDeviceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonCompliantDeviceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonCompliantDeviceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotApplicableDeviceCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notApplicableDeviceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotApplicableDeviceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notApplicableDeviceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemediatedDeviceCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remediatedDeviceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemediatedDeviceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remediatedDeviceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknownDeviceCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownDeviceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnknownDeviceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownDeviceCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

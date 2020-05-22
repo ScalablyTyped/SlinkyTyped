@@ -10,15 +10,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait InstantiableISaturationFilter
   extends /**
-		 * Constructor
-		 * @param [options] Options object
-		 */
+  * Constructor
+  * @param [options] Options object
+  */
 Instantiable0[ISaturationFilter]
      with Instantiable1[/* options */ Saturation, ISaturationFilter] {
   /**
-  		 * Returns filter instance from an object representation
-  		 * @param object Object to create an instance from
-  		 */
+    * Returns filter instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): ISaturationFilter = js.native
 }
 

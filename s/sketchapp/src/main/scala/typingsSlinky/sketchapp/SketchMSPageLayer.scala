@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SketchMSPageLayer extends SketchMSContainerLayer {
   @JSName("_class")
-  var _class_SketchMSPageLayer: page | symbolMaster = js.native
-  var hasClickThrough: Boolean = js.native
-  var horizontalRulerData: SketchMSRulerData = js.native
-  var includeInCloudUpload: Boolean = js.native
-  var verticalRulerData: SketchMSRulerData = js.native
+  var _class_SketchMSPageLayer: page | symbolMaster
+  var hasClickThrough: Boolean
+  var horizontalRulerData: SketchMSRulerData
+  var includeInCloudUpload: Boolean
+  var verticalRulerData: SketchMSRulerData
 }
 
 object SketchMSPageLayer {
@@ -43,48 +42,12 @@ object SketchMSPageLayer {
     rotation: Double,
     shouldBreakMaskChain: Boolean,
     style: SketchMSStyle,
-    verticalRulerData: SketchMSRulerData
+    verticalRulerData: SketchMSRulerData,
+    css: String = null
   ): SketchMSPageLayer = {
     val __obj = js.Dynamic.literal(_class = _class.asInstanceOf[js.Any], booleanOperation = booleanOperation.asInstanceOf[js.Any], clippingMaskMode = clippingMaskMode.asInstanceOf[js.Any], do_objectID = do_objectID.asInstanceOf[js.Any], exportOptions = exportOptions.asInstanceOf[js.Any], frame = frame.asInstanceOf[js.Any], hasClickThrough = hasClickThrough.asInstanceOf[js.Any], hasClippingMask = hasClippingMask.asInstanceOf[js.Any], horizontalRulerData = horizontalRulerData.asInstanceOf[js.Any], includeInCloudUpload = includeInCloudUpload.asInstanceOf[js.Any], isFixedToViewport = isFixedToViewport.asInstanceOf[js.Any], isFlippedHorizontal = isFlippedHorizontal.asInstanceOf[js.Any], isFlippedVertical = isFlippedVertical.asInstanceOf[js.Any], isLocked = isLocked.asInstanceOf[js.Any], isVisible = isVisible.asInstanceOf[js.Any], layerListExpandedType = layerListExpandedType.asInstanceOf[js.Any], layers = layers.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nameIsFixed = nameIsFixed.asInstanceOf[js.Any], resizingConstraint = resizingConstraint.asInstanceOf[js.Any], resizingType = resizingType.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], shouldBreakMaskChain = shouldBreakMaskChain.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], verticalRulerData = verticalRulerData.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchMSPageLayer]
   }
-  @scala.inline
-  implicit class SketchMSPageLayerOps[Self <: SketchMSPageLayer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_class(value: page | symbolMaster): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasClickThrough(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasClickThrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHorizontalRulerData(value: SketchMSRulerData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalRulerData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeInCloudUpload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInCloudUpload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalRulerData(value: SketchMSRulerData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalRulerData")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

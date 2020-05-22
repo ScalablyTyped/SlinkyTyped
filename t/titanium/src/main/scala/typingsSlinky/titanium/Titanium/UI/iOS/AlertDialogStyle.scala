@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * A set of constants for the style that can be used for the `style` property of
-			 * <Titanium.UI.AlertDialog>.
-			 */
+  * A set of constants for the style that can be used for the `style` property of
+  * <Titanium.UI.AlertDialog>.
+  */
 @JSGlobal("Titanium.UI.iOS.AlertDialogStyle")
 @js.native
 object AlertDialogStyle extends js.Object

@@ -35,101 +35,24 @@ trait LogGroup extends js.Object {
 
 object LogGroup {
   @scala.inline
-  def apply(): LogGroup = {
+  def apply(
+    arn: Arn = null,
+    creationTime: js.UndefOr[Timestamp] = js.undefined,
+    kmsKeyId: KmsKeyId = null,
+    logGroupName: LogGroupName = null,
+    metricFilterCount: js.UndefOr[FilterCount] = js.undefined,
+    retentionInDays: js.UndefOr[Days] = js.undefined,
+    storedBytes: js.UndefOr[StoredBytes] = js.undefined
+  ): LogGroup = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (!js.isUndefined(creationTime)) __obj.updateDynamic("creationTime")(creationTime.get.asInstanceOf[js.Any])
+    if (kmsKeyId != null) __obj.updateDynamic("kmsKeyId")(kmsKeyId.asInstanceOf[js.Any])
+    if (logGroupName != null) __obj.updateDynamic("logGroupName")(logGroupName.asInstanceOf[js.Any])
+    if (!js.isUndefined(metricFilterCount)) __obj.updateDynamic("metricFilterCount")(metricFilterCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retentionInDays)) __obj.updateDynamic("retentionInDays")(retentionInDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(storedBytes)) __obj.updateDynamic("storedBytes")(storedBytes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogGroup]
   }
-  @scala.inline
-  implicit class LogGroupOps[Self <: LogGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyId(value: KmsKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogGroupName(value: LogGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricFilterCount(value: FilterCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricFilterCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricFilterCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricFilterCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetentionInDays(value: Days): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetentionInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoredBytes(value: StoredBytes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storedBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoredBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storedBytes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

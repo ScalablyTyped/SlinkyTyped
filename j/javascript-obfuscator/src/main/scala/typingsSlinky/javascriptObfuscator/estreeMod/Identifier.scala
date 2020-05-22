@@ -1,40 +1,22 @@
 package typingsSlinky.javascriptObfuscator.estreeMod
 
+import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Identifier extends BaseNode {
   @JSName("metadata")
-  var metadata_Identifier: js.UndefOr[IdentifierNodeMetadata] = js.native
+  var metadata_Identifier: js.UndefOr[IdentifierNodeMetadata] = js.undefined
 }
 
 object Identifier {
   @scala.inline
-  def apply(): Identifier = {
+  def apply(metadata: IdentifierNodeMetadata = null, parentNode: Node = null): Identifier = {
     val __obj = js.Dynamic.literal()
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (parentNode != null) __obj.updateDynamic("parentNode")(parentNode.asInstanceOf[js.Any])
     __obj.asInstanceOf[Identifier]
   }
-  @scala.inline
-  implicit class IdentifierOps[Self <: Identifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetadata(value: IdentifierNodeMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

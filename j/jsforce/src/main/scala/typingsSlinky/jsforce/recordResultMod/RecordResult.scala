@@ -1,5 +1,8 @@
 package typingsSlinky.jsforce.recordResultMod
 
+import typingsSlinky.jsforce.jsforceBooleans.`false`
+import typingsSlinky.jsforce.jsforceBooleans.`true`
+import typingsSlinky.jsforce.salesforceIdMod.SalesforceId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +15,14 @@ trait RecordResult extends js.Object
 
 object RecordResult {
   @scala.inline
-  implicit def apply(value: ErrorResult): RecordResult = value.asInstanceOf[RecordResult]
+  def SuccessResult(id: SalesforceId, success: `true`): RecordResult = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RecordResult]
+  }
   @scala.inline
-  implicit def apply(value: SuccessResult): RecordResult = value.asInstanceOf[RecordResult]
+  def ErrorResult(errors: js.Array[String], success: `false`): RecordResult = {
+    val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RecordResult]
+  }
 }
 

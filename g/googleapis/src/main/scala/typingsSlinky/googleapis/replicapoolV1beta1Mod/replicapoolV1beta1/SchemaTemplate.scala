@@ -37,65 +37,18 @@ trait SchemaTemplate extends js.Object {
 
 object SchemaTemplate {
   @scala.inline
-  def apply(): SchemaTemplate = {
+  def apply(
+    action: SchemaAction = null,
+    healthChecks: js.Array[SchemaHealthCheck] = null,
+    version: String = null,
+    vmParams: SchemaVmParams = null
+  ): SchemaTemplate = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (healthChecks != null) __obj.updateDynamic("healthChecks")(healthChecks.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (vmParams != null) __obj.updateDynamic("vmParams")(vmParams.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTemplate]
   }
-  @scala.inline
-  implicit class SchemaTemplateOps[Self <: SchemaTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: SchemaAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthChecks(value: js.Array[SchemaHealthCheck]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVmParams(value: SchemaVmParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVmParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmParams")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

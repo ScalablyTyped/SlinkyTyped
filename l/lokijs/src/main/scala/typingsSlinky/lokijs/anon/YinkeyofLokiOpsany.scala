@@ -5,485 +5,147 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ Y in keyof lokijs.LokiOps ]:? any} */
-@js.native
 trait YinkeyofLokiOpsany extends js.Object {
   @JSName("$aeq")
-  var $aeq: js.UndefOr[js.Any] = js.native
+  var $aeq: js.UndefOr[js.Any] = js.undefined
   @JSName("$and")
-  var $and: js.UndefOr[js.Any] = js.native
+  var $and: js.UndefOr[js.Any] = js.undefined
   @JSName("$between")
-  var $between: js.UndefOr[js.Any] = js.native
+  var $between: js.UndefOr[js.Any] = js.undefined
   @JSName("$contains")
-  var $contains: js.UndefOr[js.Any] = js.native
+  var $contains: js.UndefOr[js.Any] = js.undefined
   @JSName("$containsAny")
-  var $containsAny: js.UndefOr[js.Any] = js.native
+  var $containsAny: js.UndefOr[js.Any] = js.undefined
   @JSName("$containsNone")
-  var $containsNone: js.UndefOr[js.Any] = js.native
+  var $containsNone: js.UndefOr[js.Any] = js.undefined
   @JSName("$containsString")
-  var $containsString: js.UndefOr[js.Any] = js.native
+  var $containsString: js.UndefOr[js.Any] = js.undefined
   @JSName("$definedin")
-  var $definedin: js.UndefOr[js.Any] = js.native
+  var $definedin: js.UndefOr[js.Any] = js.undefined
   @JSName("$dteq")
-  var $dteq: js.UndefOr[js.Any] = js.native
+  var $dteq: js.UndefOr[js.Any] = js.undefined
   @JSName("$eq")
-  var $eq: js.UndefOr[js.Any] = js.native
+  var $eq: js.UndefOr[js.Any] = js.undefined
   @JSName("$finite")
-  var $finite: js.UndefOr[js.Any] = js.native
+  var $finite: js.UndefOr[js.Any] = js.undefined
   @JSName("$gt")
-  var $gt: js.UndefOr[js.Any] = js.native
+  var $gt: js.UndefOr[js.Any] = js.undefined
   @JSName("$gte")
-  var $gte: js.UndefOr[js.Any] = js.native
+  var $gte: js.UndefOr[js.Any] = js.undefined
   @JSName("$in")
-  var $in: js.UndefOr[js.Any] = js.native
+  var $in: js.UndefOr[js.Any] = js.undefined
   @JSName("$jbetween")
-  var $jbetween: js.UndefOr[js.Any] = js.native
+  var $jbetween: js.UndefOr[js.Any] = js.undefined
   @JSName("$jgt")
-  var $jgt: js.UndefOr[js.Any] = js.native
+  var $jgt: js.UndefOr[js.Any] = js.undefined
   @JSName("$jgte")
-  var $jgte: js.UndefOr[js.Any] = js.native
+  var $jgte: js.UndefOr[js.Any] = js.undefined
   @JSName("$jlt")
-  var $jlt: js.UndefOr[js.Any] = js.native
+  var $jlt: js.UndefOr[js.Any] = js.undefined
   @JSName("$jlte")
-  var $jlte: js.UndefOr[js.Any] = js.native
+  var $jlte: js.UndefOr[js.Any] = js.undefined
   @JSName("$keyin")
-  var $keyin: js.UndefOr[js.Any] = js.native
+  var $keyin: js.UndefOr[js.Any] = js.undefined
   @JSName("$len")
-  var $len: js.UndefOr[js.Any] = js.native
+  var $len: js.UndefOr[js.Any] = js.undefined
   @JSName("$lt")
-  var $lt: js.UndefOr[js.Any] = js.native
+  var $lt: js.UndefOr[js.Any] = js.undefined
   @JSName("$lte")
-  var $lte: js.UndefOr[js.Any] = js.native
+  var $lte: js.UndefOr[js.Any] = js.undefined
   @JSName("$ne")
-  var $ne: js.UndefOr[js.Any] = js.native
+  var $ne: js.UndefOr[js.Any] = js.undefined
   @JSName("$nin")
-  var $nin: js.UndefOr[js.Any] = js.native
+  var $nin: js.UndefOr[js.Any] = js.undefined
   @JSName("$nkeyin")
-  var $nkeyin: js.UndefOr[js.Any] = js.native
+  var $nkeyin: js.UndefOr[js.Any] = js.undefined
   @JSName("$not")
-  var $not: js.UndefOr[js.Any] = js.native
+  var $not: js.UndefOr[js.Any] = js.undefined
   @JSName("$or")
-  var $or: js.UndefOr[js.Any] = js.native
+  var $or: js.UndefOr[js.Any] = js.undefined
   @JSName("$regex")
-  var $regex: js.UndefOr[js.Any] = js.native
+  var $regex: js.UndefOr[js.Any] = js.undefined
   @JSName("$size")
-  var $size: js.UndefOr[js.Any] = js.native
+  var $size: js.UndefOr[js.Any] = js.undefined
   @JSName("$type")
-  var $type: js.UndefOr[js.Any] = js.native
+  var $type: js.UndefOr[js.Any] = js.undefined
   @JSName("$undefinedin")
-  var $undefinedin: js.UndefOr[js.Any] = js.native
+  var $undefinedin: js.UndefOr[js.Any] = js.undefined
   @JSName("$where")
-  var $where: js.UndefOr[js.Any] = js.native
+  var $where: js.UndefOr[js.Any] = js.undefined
 }
 
 object YinkeyofLokiOpsany {
   @scala.inline
-  def apply(): YinkeyofLokiOpsany = {
+  def apply(
+    $aeq: js.Any = null,
+    $and: js.Any = null,
+    $between: js.Any = null,
+    $contains: js.Any = null,
+    $containsAny: js.Any = null,
+    $containsNone: js.Any = null,
+    $containsString: js.Any = null,
+    $definedin: js.Any = null,
+    $dteq: js.Any = null,
+    $eq: js.Any = null,
+    $finite: js.Any = null,
+    $gt: js.Any = null,
+    $gte: js.Any = null,
+    $in: js.Any = null,
+    $jbetween: js.Any = null,
+    $jgt: js.Any = null,
+    $jgte: js.Any = null,
+    $jlt: js.Any = null,
+    $jlte: js.Any = null,
+    $keyin: js.Any = null,
+    $len: js.Any = null,
+    $lt: js.Any = null,
+    $lte: js.Any = null,
+    $ne: js.Any = null,
+    $nin: js.Any = null,
+    $nkeyin: js.Any = null,
+    $not: js.Any = null,
+    $or: js.Any = null,
+    $regex: js.Any = null,
+    $size: js.Any = null,
+    $type: js.Any = null,
+    $undefinedin: js.Any = null,
+    $where: js.Any = null
+  ): YinkeyofLokiOpsany = {
     val __obj = js.Dynamic.literal()
+    if ($aeq != null) __obj.updateDynamic("$aeq")($aeq.asInstanceOf[js.Any])
+    if ($and != null) __obj.updateDynamic("$and")($and.asInstanceOf[js.Any])
+    if ($between != null) __obj.updateDynamic("$between")($between.asInstanceOf[js.Any])
+    if ($contains != null) __obj.updateDynamic("$contains")($contains.asInstanceOf[js.Any])
+    if ($containsAny != null) __obj.updateDynamic("$containsAny")($containsAny.asInstanceOf[js.Any])
+    if ($containsNone != null) __obj.updateDynamic("$containsNone")($containsNone.asInstanceOf[js.Any])
+    if ($containsString != null) __obj.updateDynamic("$containsString")($containsString.asInstanceOf[js.Any])
+    if ($definedin != null) __obj.updateDynamic("$definedin")($definedin.asInstanceOf[js.Any])
+    if ($dteq != null) __obj.updateDynamic("$dteq")($dteq.asInstanceOf[js.Any])
+    if ($eq != null) __obj.updateDynamic("$eq")($eq.asInstanceOf[js.Any])
+    if ($finite != null) __obj.updateDynamic("$finite")($finite.asInstanceOf[js.Any])
+    if ($gt != null) __obj.updateDynamic("$gt")($gt.asInstanceOf[js.Any])
+    if ($gte != null) __obj.updateDynamic("$gte")($gte.asInstanceOf[js.Any])
+    if ($in != null) __obj.updateDynamic("$in")($in.asInstanceOf[js.Any])
+    if ($jbetween != null) __obj.updateDynamic("$jbetween")($jbetween.asInstanceOf[js.Any])
+    if ($jgt != null) __obj.updateDynamic("$jgt")($jgt.asInstanceOf[js.Any])
+    if ($jgte != null) __obj.updateDynamic("$jgte")($jgte.asInstanceOf[js.Any])
+    if ($jlt != null) __obj.updateDynamic("$jlt")($jlt.asInstanceOf[js.Any])
+    if ($jlte != null) __obj.updateDynamic("$jlte")($jlte.asInstanceOf[js.Any])
+    if ($keyin != null) __obj.updateDynamic("$keyin")($keyin.asInstanceOf[js.Any])
+    if ($len != null) __obj.updateDynamic("$len")($len.asInstanceOf[js.Any])
+    if ($lt != null) __obj.updateDynamic("$lt")($lt.asInstanceOf[js.Any])
+    if ($lte != null) __obj.updateDynamic("$lte")($lte.asInstanceOf[js.Any])
+    if ($ne != null) __obj.updateDynamic("$ne")($ne.asInstanceOf[js.Any])
+    if ($nin != null) __obj.updateDynamic("$nin")($nin.asInstanceOf[js.Any])
+    if ($nkeyin != null) __obj.updateDynamic("$nkeyin")($nkeyin.asInstanceOf[js.Any])
+    if ($not != null) __obj.updateDynamic("$not")($not.asInstanceOf[js.Any])
+    if ($or != null) __obj.updateDynamic("$or")($or.asInstanceOf[js.Any])
+    if ($regex != null) __obj.updateDynamic("$regex")($regex.asInstanceOf[js.Any])
+    if ($size != null) __obj.updateDynamic("$size")($size.asInstanceOf[js.Any])
+    if ($type != null) __obj.updateDynamic("$type")($type.asInstanceOf[js.Any])
+    if ($undefinedin != null) __obj.updateDynamic("$undefinedin")($undefinedin.asInstanceOf[js.Any])
+    if ($where != null) __obj.updateDynamic("$where")($where.asInstanceOf[js.Any])
     __obj.asInstanceOf[YinkeyofLokiOpsany]
   }
-  @scala.inline
-  implicit class YinkeyofLokiOpsanyOps[Self <: YinkeyofLokiOpsany] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$aeq(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$aeq")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$aeq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$aeq")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$and(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$and: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$between(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$between")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$between: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$between")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$contains(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$contains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$contains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$contains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$containsAny(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsAny")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$containsAny: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsAny")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$containsNone(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsNone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$containsNone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsNone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$containsString(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$containsString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$definedin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$definedin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$definedin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$definedin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$dteq(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$dteq")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$dteq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$dteq")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$eq(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$eq")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$eq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$eq")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$finite(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$finite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$finite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$finite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gt(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gte(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gte")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gte: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gte")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$in(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$in: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$jbetween(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jbetween")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$jbetween: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jbetween")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$jgt(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jgt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$jgt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jgt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$jgte(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jgte")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$jgte: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jgte")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$jlt(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jlt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$jlt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jlt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$jlte(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jlte")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$jlte: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jlte")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$keyin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$keyin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$keyin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$keyin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$len(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$len")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$len: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$len")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$lt(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$lt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$lt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$lt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$lte(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$lte")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$lte: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$lte")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$ne(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ne")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$ne: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ne")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$nin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$nin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$nkeyin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nkeyin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$nkeyin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nkeyin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$not(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$not")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$not: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$not")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$or(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$or: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$regex(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$regex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$regex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$regex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$size(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$type(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$undefinedin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$undefinedin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$undefinedin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$undefinedin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$where(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$where: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

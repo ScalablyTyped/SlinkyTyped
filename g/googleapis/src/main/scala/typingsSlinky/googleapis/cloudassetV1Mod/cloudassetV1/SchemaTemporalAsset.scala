@@ -26,53 +26,16 @@ trait SchemaTemporalAsset extends js.Object {
 
 object SchemaTemporalAsset {
   @scala.inline
-  def apply(): SchemaTemporalAsset = {
+  def apply(
+    asset: SchemaAsset = null,
+    deleted: js.UndefOr[Boolean] = js.undefined,
+    window: SchemaTimeWindow = null
+  ): SchemaTemporalAsset = {
     val __obj = js.Dynamic.literal()
+    if (asset != null) __obj.updateDynamic("asset")(asset.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleted)) __obj.updateDynamic("deleted")(deleted.get.asInstanceOf[js.Any])
+    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTemporalAsset]
   }
-  @scala.inline
-  implicit class SchemaTemporalAssetOps[Self <: SchemaTemporalAsset] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsset(value: SchemaAsset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindow(value: SchemaTimeWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

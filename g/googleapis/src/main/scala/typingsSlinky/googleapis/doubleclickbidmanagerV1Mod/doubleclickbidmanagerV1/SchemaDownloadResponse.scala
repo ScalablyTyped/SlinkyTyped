@@ -34,89 +34,22 @@ trait SchemaDownloadResponse extends js.Object {
 
 object SchemaDownloadResponse {
   @scala.inline
-  def apply(): SchemaDownloadResponse = {
+  def apply(
+    adGroups: String = null,
+    ads: String = null,
+    campaigns: String = null,
+    insertionOrders: String = null,
+    inventorySources: String = null,
+    lineItems: String = null
+  ): SchemaDownloadResponse = {
     val __obj = js.Dynamic.literal()
+    if (adGroups != null) __obj.updateDynamic("adGroups")(adGroups.asInstanceOf[js.Any])
+    if (ads != null) __obj.updateDynamic("ads")(ads.asInstanceOf[js.Any])
+    if (campaigns != null) __obj.updateDynamic("campaigns")(campaigns.asInstanceOf[js.Any])
+    if (insertionOrders != null) __obj.updateDynamic("insertionOrders")(insertionOrders.asInstanceOf[js.Any])
+    if (inventorySources != null) __obj.updateDynamic("inventorySources")(inventorySources.asInstanceOf[js.Any])
+    if (lineItems != null) __obj.updateDynamic("lineItems")(lineItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDownloadResponse]
   }
-  @scala.inline
-  implicit class SchemaDownloadResponseOps[Self <: SchemaDownloadResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdGroups(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ads")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCampaigns(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaigns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCampaigns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaigns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertionOrders(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertionOrders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertionOrders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertionOrders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInventorySources(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventorySources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventorySources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventorySources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineItems(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

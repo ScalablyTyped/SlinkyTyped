@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StudentSubmission extends js.Object {
   /**
     * Absolute link to the submission in the Classroom web UI.
     *
     * Read-only.
     */
-  var alternateLink: js.UndefOr[String] = js.native
+  var alternateLink: js.UndefOr[String] = js.undefined
   /**
     * Optional grade. If unset, no grade was set.
     * This value must be non-negative. Decimal (that is, non-integer) values are
@@ -19,14 +18,14 @@ trait StudentSubmission extends js.Object {
     *
     * This may be modified only by course teachers.
     */
-  var assignedGrade: js.UndefOr[Double] = js.native
+  var assignedGrade: js.UndefOr[Double] = js.undefined
   /**
     * Submission content when course_work_type is ASSIGNMENT.
     *
     * Students can modify this content using
     * ModifyAttachments.
     */
-  var assignmentSubmission: js.UndefOr[AssignmentSubmission] = js.native
+  var assignmentSubmission: js.UndefOr[AssignmentSubmission] = js.undefined
   /**
     * Whether this student submission is associated with the Developer Console
     * project making the request.
@@ -36,32 +35,32 @@ trait StudentSubmission extends js.Object {
     *
     * Read-only.
     */
-  var associatedWithDeveloper: js.UndefOr[Boolean] = js.native
+  var associatedWithDeveloper: js.UndefOr[Boolean] = js.undefined
   /**
     * Identifier of the course.
     *
     * Read-only.
     */
-  var courseId: js.UndefOr[String] = js.native
+  var courseId: js.UndefOr[String] = js.undefined
   /**
     * Identifier for the course work this corresponds to.
     *
     * Read-only.
     */
-  var courseWorkId: js.UndefOr[String] = js.native
+  var courseWorkId: js.UndefOr[String] = js.undefined
   /**
     * Type of course work this submission is for.
     *
     * Read-only.
     */
-  var courseWorkType: js.UndefOr[String] = js.native
+  var courseWorkType: js.UndefOr[String] = js.undefined
   /**
     * Creation time of this submission.
     * This may be unset if the student has not accessed this item.
     *
     * Read-only.
     */
-  var creationTime: js.UndefOr[String] = js.native
+  var creationTime: js.UndefOr[String] = js.undefined
   /**
     * Optional pending grade. If unset, no grade was set.
     * This value must be non-negative. Decimal (that is, non-integer) values are
@@ -69,268 +68,91 @@ trait StudentSubmission extends js.Object {
     *
     * This is only visible to and modifiable by course teachers.
     */
-  var draftGrade: js.UndefOr[Double] = js.native
+  var draftGrade: js.UndefOr[Double] = js.undefined
   /**
     * Classroom-assigned Identifier for the student submission.
     * This is unique among submissions for the relevant course work.
     *
     * Read-only.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Whether this submission is late.
     *
     * Read-only.
     */
-  var late: js.UndefOr[Boolean] = js.native
+  var late: js.UndefOr[Boolean] = js.undefined
   /** Submission content when course_work_type is MULTIPLE_CHOICE_QUESTION. */
-  var multipleChoiceSubmission: js.UndefOr[MultipleChoiceSubmission] = js.native
+  var multipleChoiceSubmission: js.UndefOr[MultipleChoiceSubmission] = js.undefined
   /** Submission content when course_work_type is SHORT_ANSWER_QUESTION. */
-  var shortAnswerSubmission: js.UndefOr[ShortAnswerSubmission] = js.native
+  var shortAnswerSubmission: js.UndefOr[ShortAnswerSubmission] = js.undefined
   /**
     * State of this submission.
     *
     * Read-only.
     */
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[String] = js.undefined
   /**
     * The history of the submission (includes state and grade histories).
     *
     * Read-only.
     */
-  var submissionHistory: js.UndefOr[js.Array[SubmissionHistory]] = js.native
+  var submissionHistory: js.UndefOr[js.Array[SubmissionHistory]] = js.undefined
   /**
     * Last update time of this submission.
     * This may be unset if the student has not accessed this item.
     *
     * Read-only.
     */
-  var updateTime: js.UndefOr[String] = js.native
+  var updateTime: js.UndefOr[String] = js.undefined
   /**
     * Identifier for the student that owns this submission.
     *
     * Read-only.
     */
-  var userId: js.UndefOr[String] = js.native
+  var userId: js.UndefOr[String] = js.undefined
 }
 
 object StudentSubmission {
   @scala.inline
-  def apply(): StudentSubmission = {
+  def apply(
+    alternateLink: String = null,
+    assignedGrade: js.UndefOr[Double] = js.undefined,
+    assignmentSubmission: AssignmentSubmission = null,
+    associatedWithDeveloper: js.UndefOr[Boolean] = js.undefined,
+    courseId: String = null,
+    courseWorkId: String = null,
+    courseWorkType: String = null,
+    creationTime: String = null,
+    draftGrade: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    late: js.UndefOr[Boolean] = js.undefined,
+    multipleChoiceSubmission: MultipleChoiceSubmission = null,
+    shortAnswerSubmission: ShortAnswerSubmission = null,
+    state: String = null,
+    submissionHistory: js.Array[SubmissionHistory] = null,
+    updateTime: String = null,
+    userId: String = null
+  ): StudentSubmission = {
     val __obj = js.Dynamic.literal()
+    if (alternateLink != null) __obj.updateDynamic("alternateLink")(alternateLink.asInstanceOf[js.Any])
+    if (!js.isUndefined(assignedGrade)) __obj.updateDynamic("assignedGrade")(assignedGrade.get.asInstanceOf[js.Any])
+    if (assignmentSubmission != null) __obj.updateDynamic("assignmentSubmission")(assignmentSubmission.asInstanceOf[js.Any])
+    if (!js.isUndefined(associatedWithDeveloper)) __obj.updateDynamic("associatedWithDeveloper")(associatedWithDeveloper.get.asInstanceOf[js.Any])
+    if (courseId != null) __obj.updateDynamic("courseId")(courseId.asInstanceOf[js.Any])
+    if (courseWorkId != null) __obj.updateDynamic("courseWorkId")(courseWorkId.asInstanceOf[js.Any])
+    if (courseWorkType != null) __obj.updateDynamic("courseWorkType")(courseWorkType.asInstanceOf[js.Any])
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(draftGrade)) __obj.updateDynamic("draftGrade")(draftGrade.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(late)) __obj.updateDynamic("late")(late.get.asInstanceOf[js.Any])
+    if (multipleChoiceSubmission != null) __obj.updateDynamic("multipleChoiceSubmission")(multipleChoiceSubmission.asInstanceOf[js.Any])
+    if (shortAnswerSubmission != null) __obj.updateDynamic("shortAnswerSubmission")(shortAnswerSubmission.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (submissionHistory != null) __obj.updateDynamic("submissionHistory")(submissionHistory.asInstanceOf[js.Any])
+    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StudentSubmission]
   }
-  @scala.inline
-  implicit class StudentSubmissionOps[Self <: StudentSubmission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlternateLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternateLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignedGrade(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedGrade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignedGrade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedGrade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignmentSubmission(value: AssignmentSubmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignmentSubmission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignmentSubmission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignmentSubmission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssociatedWithDeveloper(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedWithDeveloper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociatedWithDeveloper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedWithDeveloper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCourseId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("courseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCourseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("courseId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCourseWorkId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("courseWorkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCourseWorkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("courseWorkId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCourseWorkType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("courseWorkType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCourseWorkType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("courseWorkType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraftGrade(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draftGrade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraftGrade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draftGrade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("late")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("late")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultipleChoiceSubmission(value: MultipleChoiceSubmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleChoiceSubmission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultipleChoiceSubmission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleChoiceSubmission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortAnswerSubmission(value: ShortAnswerSubmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortAnswerSubmission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortAnswerSubmission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortAnswerSubmission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmissionHistory(value: js.Array[SubmissionHistory]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submissionHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmissionHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submissionHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

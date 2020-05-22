@@ -18,35 +18,10 @@ trait GetDatabasesResponse extends js.Object {
 
 object GetDatabasesResponse {
   @scala.inline
-  def apply(DatabaseList: DatabaseList): GetDatabasesResponse = {
+  def apply(DatabaseList: DatabaseList, NextToken: Token = null): GetDatabasesResponse = {
     val __obj = js.Dynamic.literal(DatabaseList = DatabaseList.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDatabasesResponse]
   }
-  @scala.inline
-  implicit class GetDatabasesResponseOps[Self <: GetDatabasesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseList(value: DatabaseList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

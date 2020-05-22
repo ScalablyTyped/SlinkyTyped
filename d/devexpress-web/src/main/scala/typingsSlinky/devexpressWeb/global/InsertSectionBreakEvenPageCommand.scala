@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InsertSectionBreakEvenPageCommand")
 @js.native
 class InsertSectionBreakEvenPageCommand ()
-  extends typingsSlinky.devexpressWeb.InsertSectionBreakEvenPageCommand
+  extends typingsSlinky.devexpressWeb.InsertSectionBreakEvenPageCommand {
+  /**
+    * Executes the InsertSectionBreakEvenPageCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

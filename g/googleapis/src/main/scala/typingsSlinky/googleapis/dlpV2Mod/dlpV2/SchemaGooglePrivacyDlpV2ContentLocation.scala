@@ -48,89 +48,22 @@ trait SchemaGooglePrivacyDlpV2ContentLocation extends js.Object {
 
 object SchemaGooglePrivacyDlpV2ContentLocation {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2ContentLocation = {
+  def apply(
+    containerName: String = null,
+    containerTimestamp: String = null,
+    containerVersion: String = null,
+    documentLocation: SchemaGooglePrivacyDlpV2DocumentLocation = null,
+    imageLocation: SchemaGooglePrivacyDlpV2ImageLocation = null,
+    recordLocation: SchemaGooglePrivacyDlpV2RecordLocation = null
+  ): SchemaGooglePrivacyDlpV2ContentLocation = {
     val __obj = js.Dynamic.literal()
+    if (containerName != null) __obj.updateDynamic("containerName")(containerName.asInstanceOf[js.Any])
+    if (containerTimestamp != null) __obj.updateDynamic("containerTimestamp")(containerTimestamp.asInstanceOf[js.Any])
+    if (containerVersion != null) __obj.updateDynamic("containerVersion")(containerVersion.asInstanceOf[js.Any])
+    if (documentLocation != null) __obj.updateDynamic("documentLocation")(documentLocation.asInstanceOf[js.Any])
+    if (imageLocation != null) __obj.updateDynamic("imageLocation")(imageLocation.asInstanceOf[js.Any])
+    if (recordLocation != null) __obj.updateDynamic("recordLocation")(recordLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2ContentLocation]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2ContentLocationOps[Self <: SchemaGooglePrivacyDlpV2ContentLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentLocation(value: SchemaGooglePrivacyDlpV2DocumentLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageLocation(value: SchemaGooglePrivacyDlpV2ImageLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordLocation(value: SchemaGooglePrivacyDlpV2RecordLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

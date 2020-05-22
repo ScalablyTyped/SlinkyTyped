@@ -4,107 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Availability extends js.Object {
   /** DS advertiser ID. */
-  var advertiserId: js.UndefOr[String] = js.native
+  var advertiserId: js.UndefOr[String] = js.undefined
   /** DS agency ID. */
-  var agencyId: js.UndefOr[String] = js.native
+  var agencyId: js.UndefOr[String] = js.undefined
   /** The time by which all conversions have been uploaded, in epoch millis UTC. */
-  var availabilityTimestamp: js.UndefOr[String] = js.native
+  var availabilityTimestamp: js.UndefOr[String] = js.undefined
   /** The numeric segmentation identifier (for example, DoubleClick Search Floodlight activity ID). */
-  var segmentationId: js.UndefOr[String] = js.native
+  var segmentationId: js.UndefOr[String] = js.undefined
   /** The friendly segmentation identifier (for example, DoubleClick Search Floodlight activity name). */
-  var segmentationName: js.UndefOr[String] = js.native
+  var segmentationName: js.UndefOr[String] = js.undefined
   /** The segmentation type that this availability is for (its default value is FLOODLIGHT). */
-  var segmentationType: js.UndefOr[String] = js.native
+  var segmentationType: js.UndefOr[String] = js.undefined
 }
 
 object Availability {
   @scala.inline
-  def apply(): Availability = {
+  def apply(
+    advertiserId: String = null,
+    agencyId: String = null,
+    availabilityTimestamp: String = null,
+    segmentationId: String = null,
+    segmentationName: String = null,
+    segmentationType: String = null
+  ): Availability = {
     val __obj = js.Dynamic.literal()
+    if (advertiserId != null) __obj.updateDynamic("advertiserId")(advertiserId.asInstanceOf[js.Any])
+    if (agencyId != null) __obj.updateDynamic("agencyId")(agencyId.asInstanceOf[js.Any])
+    if (availabilityTimestamp != null) __obj.updateDynamic("availabilityTimestamp")(availabilityTimestamp.asInstanceOf[js.Any])
+    if (segmentationId != null) __obj.updateDynamic("segmentationId")(segmentationId.asInstanceOf[js.Any])
+    if (segmentationName != null) __obj.updateDynamic("segmentationName")(segmentationName.asInstanceOf[js.Any])
+    if (segmentationType != null) __obj.updateDynamic("segmentationType")(segmentationType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Availability]
   }
-  @scala.inline
-  implicit class AvailabilityOps[Self <: Availability] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvertiserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgencyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agencyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgencyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agencyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailabilityTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentationType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

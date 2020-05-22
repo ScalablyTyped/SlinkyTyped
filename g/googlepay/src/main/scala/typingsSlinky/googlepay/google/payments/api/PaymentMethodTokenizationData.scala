@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * @see PaymentMethodTokenizationSpecification
   */
-@js.native
 trait PaymentMethodTokenizationData extends js.Object {
   /**
     * The generated payment method token.
@@ -18,7 +17,7 @@ trait PaymentMethodTokenizationData extends js.Object {
     * the selected
     * [[PaymentMethodTokenizationSpecification.type|`PaymentMethodTokenizationSpecification.type`]].
     */
-  var token: String = js.native
+  var token: String
   /**
     * The type of tokenization to be applied to the selected payment
     * method.
@@ -27,7 +26,7 @@ trait PaymentMethodTokenizationData extends js.Object {
     * [[PaymentMethodTokenizationSpecification.type|`PaymentMethodTokenizationSpecification.type`]]
     * specified in the request.
     */
-  var `type`: PaymentMethodTokenizationType = js.native
+  var `type`: PaymentMethodTokenizationType
 }
 
 object PaymentMethodTokenizationData {
@@ -37,25 +36,5 @@ object PaymentMethodTokenizationData {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentMethodTokenizationData]
   }
-  @scala.inline
-  implicit class PaymentMethodTokenizationDataOps[Self <: PaymentMethodTokenizationData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: PaymentMethodTokenizationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

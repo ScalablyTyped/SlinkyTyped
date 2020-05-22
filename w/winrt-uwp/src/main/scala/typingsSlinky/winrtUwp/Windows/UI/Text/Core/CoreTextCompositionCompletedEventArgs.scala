@@ -7,17 +7,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the CompositionCompleted event. */
-@js.native
 trait CoreTextCompositionCompletedEventArgs extends js.Object {
   /** Gets a collection of CoreTextCompositionSegment objects representing the segments in the composition string. Applications can use this property, for example, to get the pre-conversion string for each composition segment. */
-  var compositionSegments: IVectorView[CoreTextCompositionSegment] = js.native
+  var compositionSegments: IVectorView[CoreTextCompositionSegment]
   /** Gets a value that indicates whether the operation is canceled. */
-  var isCanceled: Boolean = js.native
+  var isCanceled: Boolean
   /**
     * Requests that the operation be delayed. Call this method if your text input control is hosted on a worker thread rather than on the UI thread.
     * @return A Deferral object.
     */
-  def getDeferral(): Deferral = js.native
+  def getDeferral(): Deferral
 }
 
 object CoreTextCompositionCompletedEventArgs {
@@ -30,31 +29,5 @@ object CoreTextCompositionCompletedEventArgs {
     val __obj = js.Dynamic.literal(compositionSegments = compositionSegments.asInstanceOf[js.Any], getDeferral = js.Any.fromFunction0(getDeferral), isCanceled = isCanceled.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoreTextCompositionCompletedEventArgs]
   }
-  @scala.inline
-  implicit class CoreTextCompositionCompletedEventArgsOps[Self <: CoreTextCompositionCompletedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompositionSegments(value: IVectorView[CoreTextCompositionSegment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compositionSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDeferral(value: () => Deferral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsCanceled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCanceled")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

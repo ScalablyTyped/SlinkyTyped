@@ -58,9 +58,9 @@ trait Sprite
     * @param ignoreIfPlaying If an animation is already playing then ignore this call. Default false.
     * @param startFrame Optionally start the animation playing from this frame index. Default 0.
     */
-  def play(key: String): Sprite = js.native
-  def play(key: String, ignoreIfPlaying: Boolean): Sprite = js.native
-  def play(key: String, ignoreIfPlaying: Boolean, startFrame: integer): Sprite = js.native
+  def play(key: String): this.type = js.native
+  def play(key: String, ignoreIfPlaying: Boolean): this.type = js.native
+  def play(key: String, ignoreIfPlaying: Boolean, startFrame: integer): this.type = js.native
   /**
     * Update this Sprite's animations.
     * @param time The current timestamp.

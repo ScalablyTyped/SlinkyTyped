@@ -13,12 +13,11 @@ import scala.scalajs.js.annotation._
   * The {@link XGridColumn} defines the properties and behavior of a column in a grid control.
   * @since OOo 3.3
   */
-@js.native
 trait XGridColumn
   extends XComponent
      with XCloneable {
   /** specifies the current width of the column. */
-  var ColumnWidth: Double = js.native
+  var ColumnWidth: Double
   /**
     * denotes the index of the data column which should be used to fetch this grid column's data
     *
@@ -31,7 +30,7 @@ trait XGridColumn
     * If `DataColumnIndex` is negative, the it will be ignored, then the column's index within its column model, as determined by the {@link Index}
     * attribute, will be used.
     */
-  var DataColumnIndex: Double = js.native
+  var DataColumnIndex: Double
   /**
     * specifies the flexibility of the column when it is automatically resized due to the grid control as a whole being resized.
     *
@@ -44,50 +43,50 @@ trait XGridColumn
     *
     * A column's flexibility cannot be negative, attempts to set a negative value will raise an exception.
     */
-  var Flexibility: Double = js.native
+  var Flexibility: Double
   /**
     * is the help text associated with the column.
     *
     * A grid control will usually display a column's help text as tooltip.
     */
-  var HelpText: String = js.native
+  var HelpText: String
   /** Specifies the horizontal alignment of the content in the control. */
-  var HorizontalAlign: HorizontalAlignment = js.native
+  var HorizontalAlign: HorizontalAlignment
   /**
     * specifies an identifier of the column
     *
     * This identifier will not be evaluated by the grid control, or its model. It is merely for clients to identify particular columns.
     */
-  var Identifier: js.Any = js.native
+  var Identifier: js.Any
   /**
     * denotes the index of the column within the grid column model it belongs to
     *
     * If the column is not yet part of a column model, `Index` is -1.
     */
-  var Index: Double = js.native
+  var Index: Double
   /** specifies the maximal width the column can have. */
-  var MaxWidth: Double = js.native
+  var MaxWidth: Double
   /** specifies the minimal width the column can have. */
-  var MinWidth: Double = js.native
+  var MinWidth: Double
   /**
     * controls whether or not the column's width is fixed or not.
     *
     * If this is `TRUE` , the user can interactively change the column's width. Also, the column is subject to auto-resizing, if its {@link Flexibility}
     * attribute is greater `0` .
     */
-  var Resizeable: Boolean = js.native
+  var Resizeable: Boolean
   /** A title is displayed in the column header row if {@link UnoControlGridModel.ShowColumnHeader()} is set to `TRUE` */
-  var Title: String = js.native
+  var Title: String
   /**
     * Adds a listener for the {@link GridColumnEvent} posted after the grid changes.
     * @param Listener the listener to add.
     */
-  def addGridColumnListener(Listener: XGridColumnListener): Unit = js.native
+  def addGridColumnListener(Listener: XGridColumnListener): Unit
   /**
     * Removes a listener previously added with addColumnListener().
     * @param Listener the listener to remove.
     */
-  def removeGridColumnListener(Listener: XGridColumnListener): Unit = js.native
+  def removeGridColumnListener(Listener: XGridColumnListener): Unit
 }
 
 object XGridColumn {
@@ -117,91 +116,5 @@ object XGridColumn {
     val __obj = js.Dynamic.literal(ColumnWidth = ColumnWidth.asInstanceOf[js.Any], DataColumnIndex = DataColumnIndex.asInstanceOf[js.Any], Flexibility = Flexibility.asInstanceOf[js.Any], HelpText = HelpText.asInstanceOf[js.Any], HorizontalAlign = HorizontalAlign.asInstanceOf[js.Any], Identifier = Identifier.asInstanceOf[js.Any], Index = Index.asInstanceOf[js.Any], MaxWidth = MaxWidth.asInstanceOf[js.Any], MinWidth = MinWidth.asInstanceOf[js.Any], Resizeable = Resizeable.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addGridColumnListener = js.Any.fromFunction1(addGridColumnListener), createClone = js.Any.fromFunction0(createClone), dispose = js.Any.fromFunction0(dispose), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removeGridColumnListener = js.Any.fromFunction1(removeGridColumnListener))
     __obj.asInstanceOf[XGridColumn]
   }
-  @scala.inline
-  implicit class XGridColumnOps[Self <: XGridColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataColumnIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataColumnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlexibility(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Flexibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHorizontalAlign(value: HorizontalAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HorizontalAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResizeable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resizeable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddGridColumnListener(value: XGridColumnListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addGridColumnListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveGridColumnListener(value: XGridColumnListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeGridColumnListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

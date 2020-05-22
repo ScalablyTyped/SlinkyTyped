@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies an [XSD compliant decimal type]{@link url="http://www.w3.org/TR/xmlschema-2/#decimal"} */
-@js.native
 trait Decimal extends XDataType {
   /**
     * fractionDigits is the maximum number of digits in the fractional part of values of decimal data
@@ -18,27 +17,27 @@ trait Decimal extends XDataType {
     *
     * See [http://www.w3.org/TR/xmlschema-2/#rf-fractionDigits]{@link url="http://www.w3.org/TR/xmlschema-2/#rf-fractionDigits"}
     */
-  var FractionDigits: Double = js.native
+  var FractionDigits: Double
   /**
     * specifies the exclusive upper bound for the value
     * @see http://www.w3.org/TR/xmlschema-2/#rf-maxExclusive
     */
-  var MaxExclusiveDouble: Double = js.native
+  var MaxExclusiveDouble: Double
   /**
     * specifies the inclusive upper bound for the value
     * @see http://www.w3.org/TR/xmlschema-2/#rf-maxInclusive
     */
-  var MaxInclusiveDouble: Double = js.native
+  var MaxInclusiveDouble: Double
   /**
     * specifies the exclusive lower bound for the value
     * @see http://www.w3.org/TR/xmlschema-2/#rf-minExclusive
     */
-  var MinExclusiveDouble: Double = js.native
+  var MinExclusiveDouble: Double
   /**
     * specifies the inclusive lower bound for the value
     * @see http://www.w3.org/TR/xmlschema-2/#rf-minInclusive
     */
-  var MinInclusiveDouble: Double = js.native
+  var MinInclusiveDouble: Double
   /**
     * totalDigits is the maximum number of digits in values of decimal data types.
     *
@@ -46,7 +45,7 @@ trait Decimal extends XDataType {
     *
     * See [http://www.w3.org/TR/xmlschema-2/#rf-totalDigits]{@link url="http://www.w3.org/TR/xmlschema-2/#rf-totalDigits"}
     */
-  var TotalDigits: Double = js.native
+  var TotalDigits: Double
 }
 
 object Decimal {
@@ -80,49 +79,5 @@ object Decimal {
     val __obj = js.Dynamic.literal(FractionDigits = FractionDigits.asInstanceOf[js.Any], IsBasic = IsBasic.asInstanceOf[js.Any], MaxExclusiveDouble = MaxExclusiveDouble.asInstanceOf[js.Any], MaxInclusiveDouble = MaxInclusiveDouble.asInstanceOf[js.Any], MinExclusiveDouble = MinExclusiveDouble.asInstanceOf[js.Any], MinInclusiveDouble = MinInclusiveDouble.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Pattern = Pattern.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], TotalDigits = TotalDigits.asInstanceOf[js.Any], TypeClass = TypeClass.asInstanceOf[js.Any], WhiteSpaceTreatment = WhiteSpaceTreatment.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), explainInvalid = js.Any.fromFunction1(explainInvalid), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), validate = js.Any.fromFunction1(validate))
     __obj.asInstanceOf[Decimal]
   }
-  @scala.inline
-  implicit class DecimalOps[Self <: Decimal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFractionDigits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FractionDigits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxExclusiveDouble(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxExclusiveDouble")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxInclusiveDouble(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxInclusiveDouble")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinExclusiveDouble(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinExclusiveDouble")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinInclusiveDouble(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinInclusiveDouble")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalDigits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalDigits")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

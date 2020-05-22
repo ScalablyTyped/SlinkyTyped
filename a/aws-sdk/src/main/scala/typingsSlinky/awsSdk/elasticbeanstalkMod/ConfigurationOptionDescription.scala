@@ -54,149 +54,32 @@ trait ConfigurationOptionDescription extends js.Object {
 
 object ConfigurationOptionDescription {
   @scala.inline
-  def apply(): ConfigurationOptionDescription = {
+  def apply(
+    ChangeSeverity: ConfigurationOptionSeverity = null,
+    DefaultValue: ConfigurationOptionDefaultValue = null,
+    MaxLength: js.UndefOr[OptionRestrictionMaxLength] = js.undefined,
+    MaxValue: js.UndefOr[OptionRestrictionMaxValue] = js.undefined,
+    MinValue: js.UndefOr[OptionRestrictionMinValue] = js.undefined,
+    Name: ConfigurationOptionName = null,
+    Namespace: OptionNamespace = null,
+    Regex: OptionRestrictionRegex = null,
+    UserDefined: js.UndefOr[UserDefinedOption] = js.undefined,
+    ValueOptions: ConfigurationOptionPossibleValues = null,
+    ValueType: ConfigurationOptionValueType = null
+  ): ConfigurationOptionDescription = {
     val __obj = js.Dynamic.literal()
+    if (ChangeSeverity != null) __obj.updateDynamic("ChangeSeverity")(ChangeSeverity.asInstanceOf[js.Any])
+    if (DefaultValue != null) __obj.updateDynamic("DefaultValue")(DefaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxLength)) __obj.updateDynamic("MaxLength")(MaxLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxValue)) __obj.updateDynamic("MaxValue")(MaxValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinValue)) __obj.updateDynamic("MinValue")(MinValue.get.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Namespace != null) __obj.updateDynamic("Namespace")(Namespace.asInstanceOf[js.Any])
+    if (Regex != null) __obj.updateDynamic("Regex")(Regex.asInstanceOf[js.Any])
+    if (!js.isUndefined(UserDefined)) __obj.updateDynamic("UserDefined")(UserDefined.get.asInstanceOf[js.Any])
+    if (ValueOptions != null) __obj.updateDynamic("ValueOptions")(ValueOptions.asInstanceOf[js.Any])
+    if (ValueType != null) __obj.updateDynamic("ValueType")(ValueType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationOptionDescription]
   }
-  @scala.inline
-  implicit class ConfigurationOptionDescriptionOps[Self <: ConfigurationOptionDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangeSeverity(value: ConfigurationOptionSeverity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSeverity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangeSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSeverity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: ConfigurationOptionDefaultValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: OptionRestrictionMaxLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: OptionRestrictionMaxValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: OptionRestrictionMinValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ConfigurationOptionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: OptionNamespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegex(value: OptionRestrictionRegex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Regex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Regex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDefined(value: UserDefinedOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefined")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDefined: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefined")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueOptions(value: ConfigurationOptionPossibleValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueType(value: ConfigurationOptionValueType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

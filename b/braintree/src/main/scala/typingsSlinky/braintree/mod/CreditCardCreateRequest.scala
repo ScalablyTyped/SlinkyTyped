@@ -6,173 +6,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreditCardCreateRequest extends js.Object {
-  var billingAddress: js.UndefOr[Company] = js.native
-  var billingAddressId: js.UndefOr[String] = js.native
-  var cardholderName: js.UndefOr[String] = js.native
-  var customerId: String = js.native
-  var cvv: js.UndefOr[String] = js.native
-  var expirationDate: js.UndefOr[String] = js.native
-  var expirationMonth: js.UndefOr[String] = js.native
-  var expirationYear: js.UndefOr[String] = js.native
-  var number: js.UndefOr[String] = js.native
-  var options: js.UndefOr[MakeDefault] = js.native
-  var paymentMethodNonce: js.UndefOr[String] = js.native
-  var token: js.UndefOr[String] = js.native
+  var billingAddress: js.UndefOr[Company] = js.undefined
+  var billingAddressId: js.UndefOr[String] = js.undefined
+  var cardholderName: js.UndefOr[String] = js.undefined
+  var customerId: String
+  var cvv: js.UndefOr[String] = js.undefined
+  var expirationDate: js.UndefOr[String] = js.undefined
+  var expirationMonth: js.UndefOr[String] = js.undefined
+  var expirationYear: js.UndefOr[String] = js.undefined
+  var number: js.UndefOr[String] = js.undefined
+  var options: js.UndefOr[MakeDefault] = js.undefined
+  var paymentMethodNonce: js.UndefOr[String] = js.undefined
+  var token: js.UndefOr[String] = js.undefined
 }
 
 object CreditCardCreateRequest {
   @scala.inline
-  def apply(customerId: String): CreditCardCreateRequest = {
+  def apply(
+    customerId: String,
+    billingAddress: Company = null,
+    billingAddressId: String = null,
+    cardholderName: String = null,
+    cvv: String = null,
+    expirationDate: String = null,
+    expirationMonth: String = null,
+    expirationYear: String = null,
+    number: String = null,
+    options: MakeDefault = null,
+    paymentMethodNonce: String = null,
+    token: String = null
+  ): CreditCardCreateRequest = {
     val __obj = js.Dynamic.literal(customerId = customerId.asInstanceOf[js.Any])
+    if (billingAddress != null) __obj.updateDynamic("billingAddress")(billingAddress.asInstanceOf[js.Any])
+    if (billingAddressId != null) __obj.updateDynamic("billingAddressId")(billingAddressId.asInstanceOf[js.Any])
+    if (cardholderName != null) __obj.updateDynamic("cardholderName")(cardholderName.asInstanceOf[js.Any])
+    if (cvv != null) __obj.updateDynamic("cvv")(cvv.asInstanceOf[js.Any])
+    if (expirationDate != null) __obj.updateDynamic("expirationDate")(expirationDate.asInstanceOf[js.Any])
+    if (expirationMonth != null) __obj.updateDynamic("expirationMonth")(expirationMonth.asInstanceOf[js.Any])
+    if (expirationYear != null) __obj.updateDynamic("expirationYear")(expirationYear.asInstanceOf[js.Any])
+    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (paymentMethodNonce != null) __obj.updateDynamic("paymentMethodNonce")(paymentMethodNonce.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreditCardCreateRequest]
   }
-  @scala.inline
-  implicit class CreditCardCreateRequestOps[Self <: CreditCardCreateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBillingAddress(value: Company): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBillingAddressId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddressId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingAddressId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddressId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCardholderName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardholderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCardholderName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardholderName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCvv(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cvv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCvv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cvv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationMonth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: MakeDefault): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentMethodNonce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentMethodNonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentMethodNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentMethodNonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

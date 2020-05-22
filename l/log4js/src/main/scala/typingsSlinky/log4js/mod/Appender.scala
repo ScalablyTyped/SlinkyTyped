@@ -1,5 +1,20 @@
 package typingsSlinky.log4js.mod
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.log4js.log4jsStrings.categoryFilter
+import typingsSlinky.log4js.log4jsStrings.console
+import typingsSlinky.log4js.log4jsStrings.dateFile
+import typingsSlinky.log4js.log4jsStrings.file
+import typingsSlinky.log4js.log4jsStrings.fileSync
+import typingsSlinky.log4js.log4jsStrings.logLevelFilter
+import typingsSlinky.log4js.log4jsStrings.master
+import typingsSlinky.log4js.log4jsStrings.multiFile
+import typingsSlinky.log4js.log4jsStrings.multiprocess
+import typingsSlinky.log4js.log4jsStrings.noLogFilter
+import typingsSlinky.log4js.log4jsStrings.recording
+import typingsSlinky.log4js.log4jsStrings.stderr
+import typingsSlinky.log4js.log4jsStrings.stdout
+import typingsSlinky.log4js.log4jsStrings.worker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,30 +38,149 @@ trait Appender extends js.Object
 
 object Appender {
   @scala.inline
-  implicit def apply(value: CategoryFilterAppender): Appender = value.asInstanceOf[Appender]
+  def StandardErrorAppender(`type`: stderr, layout: Layout = null): Appender = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: ConsoleAppender): Appender = value.asInstanceOf[Appender]
+  def CategoryFilterAppender(`type`: categoryFilter, appender: String = null, exclude: String | js.Array[String] = null): Appender = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (appender != null) __obj.updateDynamic("appender")(appender.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: CustomAppender): Appender = value.asInstanceOf[Appender]
+  def RecordingAppender(`type`: recording): Appender = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: DateFileAppender): Appender = value.asInstanceOf[Appender]
+  def MultiFileAppender(base: String, extension: String, property: String, `type`: multiFile): Appender = {
+    val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], extension = extension.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: FileAppender): Appender = value.asInstanceOf[Appender]
+  def StandardOutputAppender(`type`: stdout, layout: Layout = null): Appender = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: LogLevelFilterAppender): Appender = value.asInstanceOf[Appender]
+  def CustomAppender(`type`: String | AppenderModule, StringDictionary: /* key */ StringDictionary[js.Any] = null): Appender = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: MultiFileAppender): Appender = value.asInstanceOf[Appender]
+  def DateFileAppender(
+    filename: String,
+    `type`: dateFile,
+    alwaysIncludePattern: js.UndefOr[Boolean] = js.undefined,
+    compress: js.UndefOr[Boolean] = js.undefined,
+    daysToKeep: js.UndefOr[Double] = js.undefined,
+    encoding: String = null,
+    flags: String = null,
+    keepFileExt: js.UndefOr[Boolean] = js.undefined,
+    layout: Layout = null,
+    mode: js.UndefOr[Double] = js.undefined,
+    pattern: String = null
+  ): Appender = {
+    val __obj = js.Dynamic.literal(filename = filename.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(alwaysIncludePattern)) __obj.updateDynamic("alwaysIncludePattern")(alwaysIncludePattern.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compress)) __obj.updateDynamic("compress")(compress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(daysToKeep)) __obj.updateDynamic("daysToKeep")(daysToKeep.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepFileExt)) __obj.updateDynamic("keepFileExt")(keepFileExt.get.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (!js.isUndefined(mode)) __obj.updateDynamic("mode")(mode.get.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: MultiprocessAppender): Appender = value.asInstanceOf[Appender]
+  def FileAppender(
+    filename: String,
+    `type`: file,
+    backups: js.UndefOr[Double] = js.undefined,
+    compress: js.UndefOr[Boolean] = js.undefined,
+    encoding: String = null,
+    flags: String = null,
+    keepFileExt: js.UndefOr[Boolean] = js.undefined,
+    layout: Layout = null,
+    maxLogSize: Double | String = null,
+    mode: js.UndefOr[Double] = js.undefined,
+    numBackups: js.UndefOr[Double] = js.undefined
+  ): Appender = {
+    val __obj = js.Dynamic.literal(filename = filename.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(backups)) __obj.updateDynamic("backups")(backups.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compress)) __obj.updateDynamic("compress")(compress.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepFileExt)) __obj.updateDynamic("keepFileExt")(keepFileExt.get.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (maxLogSize != null) __obj.updateDynamic("maxLogSize")(maxLogSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(mode)) __obj.updateDynamic("mode")(mode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numBackups)) __obj.updateDynamic("numBackups")(numBackups.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: NoLogFilterAppender): Appender = value.asInstanceOf[Appender]
+  def SyncfileAppender(
+    filename: String,
+    `type`: fileSync,
+    backups: js.UndefOr[Double] = js.undefined,
+    layout: Layout = null,
+    maxLogSize: Double | String = null
+  ): Appender = {
+    val __obj = js.Dynamic.literal(filename = filename.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(backups)) __obj.updateDynamic("backups")(backups.get.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (maxLogSize != null) __obj.updateDynamic("maxLogSize")(maxLogSize.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: RecordingAppender): Appender = value.asInstanceOf[Appender]
+  def NoLogFilterAppender(appender: String, exclude: String | js.Array[String], `type`: noLogFilter): Appender = {
+    val __obj = js.Dynamic.literal(appender = appender.asInstanceOf[js.Any], exclude = exclude.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: StandardErrorAppender): Appender = value.asInstanceOf[Appender]
+  def LogLevelFilterAppender(appender: String, level: String, `type`: logLevelFilter, maxLevel: String = null): Appender = {
+    val __obj = js.Dynamic.literal(appender = appender.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (maxLevel != null) __obj.updateDynamic("maxLevel")(maxLevel.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: StandardOutputAppender): Appender = value.asInstanceOf[Appender]
+  def ConsoleAppender(`type`: console, layout: Layout = null): Appender = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
   @scala.inline
-  implicit def apply(value: SyncfileAppender): Appender = value.asInstanceOf[Appender]
+  def MultiprocessAppender(
+    mode: master | worker,
+    `type`: multiprocess,
+    appender: String = null,
+    loggerHost: String = null,
+    loggerPort: js.UndefOr[Double] = js.undefined
+  ): Appender = {
+    val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (appender != null) __obj.updateDynamic("appender")(appender.asInstanceOf[js.Any])
+    if (loggerHost != null) __obj.updateDynamic("loggerHost")(loggerHost.asInstanceOf[js.Any])
+    if (!js.isUndefined(loggerPort)) __obj.updateDynamic("loggerPort")(loggerPort.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Appender]
+  }
 }
 

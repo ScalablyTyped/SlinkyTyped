@@ -14,29 +14,10 @@ trait DeleteRepositoryOutput extends js.Object {
 
 object DeleteRepositoryOutput {
   @scala.inline
-  def apply(): DeleteRepositoryOutput = {
+  def apply(repositoryId: RepositoryId = null): DeleteRepositoryOutput = {
     val __obj = js.Dynamic.literal()
+    if (repositoryId != null) __obj.updateDynamic("repositoryId")(repositoryId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteRepositoryOutput]
   }
-  @scala.inline
-  implicit class DeleteRepositoryOutputOps[Self <: DeleteRepositoryOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRepositoryId(value: RepositoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepositoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

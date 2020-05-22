@@ -1,8 +1,10 @@
 package typingsSlinky.winrtUwp.global.Windows.Storage.Streams
 
+import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Storage.IStorageFile
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStream
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStreamWithContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +13,14 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Storage.Streams.RandomAccessStreamReference")
 @js.native
 abstract class RandomAccessStreamReference ()
-  extends typingsSlinky.winrtUwp.Windows.Storage.Streams.RandomAccessStreamReference
+  extends typingsSlinky.winrtUwp.Windows.Storage.Streams.RandomAccessStreamReference {
+  /**
+    * Opens a stream for random access.
+    * @return The asynchronous operation.
+    */
+  /* CompleteClass */
+  override def openReadAsync(): IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType] = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Storage.Streams.RandomAccessStreamReference")

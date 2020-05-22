@@ -14,29 +14,10 @@ trait CreateObjectResponse extends js.Object {
 
 object CreateObjectResponse {
   @scala.inline
-  def apply(): CreateObjectResponse = {
+  def apply(ObjectIdentifier: ObjectIdentifier = null): CreateObjectResponse = {
     val __obj = js.Dynamic.literal()
+    if (ObjectIdentifier != null) __obj.updateDynamic("ObjectIdentifier")(ObjectIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateObjectResponse]
   }
-  @scala.inline
-  implicit class CreateObjectResponseOps[Self <: CreateObjectResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjectIdentifier(value: ObjectIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

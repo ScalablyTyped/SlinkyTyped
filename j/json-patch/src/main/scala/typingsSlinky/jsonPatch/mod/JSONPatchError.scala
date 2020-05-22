@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("json-patch", "JSONPatchError")
 @js.native
-class JSONPatchError () extends Error
+class JSONPatchError () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

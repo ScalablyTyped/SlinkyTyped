@@ -1,10 +1,34 @@
 package typingsSlinky.reactNativeModalDropdown.mod
 
+import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.mod.AccessibilityActionInfo
+import typingsSlinky.reactNative.mod.AccessibilityRole
+import typingsSlinky.reactNative.mod.AccessibilityState
+import typingsSlinky.reactNative.mod.AccessibilityTrait
+import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.Insets
+import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NativeTouchEvent
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewProps
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNative.reactNativeStrings.`box-none`
+import typingsSlinky.reactNative.reactNativeStrings.`box-only`
+import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
+import typingsSlinky.reactNative.reactNativeStrings.assertive
+import typingsSlinky.reactNative.reactNativeStrings.auto
+import typingsSlinky.reactNative.reactNativeStrings.button
+import typingsSlinky.reactNative.reactNativeStrings.no
+import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.polite
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
+import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeModalDropdown.reactNativeModalDropdownStrings.always
 import typingsSlinky.reactNativeModalDropdown.reactNativeModalDropdownStrings.handled
 import typingsSlinky.reactNativeModalDropdown.reactNativeModalDropdownStrings.never
@@ -12,25 +36,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModalDropdownProps[T] extends ViewProps {
-  var adjustFrame: js.UndefOr[js.Function1[/* positionStyle */ PositionStyle, PositionStyle]] = js.native
-  var animated: js.UndefOr[Boolean] = js.native
-  var defaultIndex: js.UndefOr[Double] = js.native
-  var defaultValue: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var dropdownStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var dropdownTextHighlightStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
-  var dropdownTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
-  var keyboardShouldPersistTaps: js.UndefOr[always | never | handled] = js.native
-  var onDropdownWillHide: js.UndefOr[js.Function0[Unit | Boolean]] = js.native
-  var onDropdownWillShow: js.UndefOr[js.Function0[Unit | Boolean]] = js.native
-  var onSelect: js.UndefOr[js.Function2[/* index */ String, /* option */ T, Unit | Boolean]] = js.native
-  var options: js.UndefOr[js.Array[T]] = js.native
-  var renderButtonText: js.UndefOr[js.Function1[/* text */ String, String]] = js.native
+  var adjustFrame: js.UndefOr[js.Function1[/* positionStyle */ PositionStyle, PositionStyle]] = js.undefined
+  var animated: js.UndefOr[Boolean] = js.undefined
+  var defaultIndex: js.UndefOr[Double] = js.undefined
+  var defaultValue: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var dropdownStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var dropdownTextHighlightStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
+  var dropdownTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
+  var keyboardShouldPersistTaps: js.UndefOr[always | never | handled] = js.undefined
+  var onDropdownWillHide: js.UndefOr[js.Function0[Unit | Boolean]] = js.undefined
+  var onDropdownWillShow: js.UndefOr[js.Function0[Unit | Boolean]] = js.undefined
+  var onSelect: js.UndefOr[js.Function2[/* index */ String, /* option */ T, Unit | Boolean]] = js.undefined
+  var options: js.UndefOr[js.Array[T]] = js.undefined
+  var renderButtonText: js.UndefOr[js.Function1[/* text */ String, String]] = js.undefined
   var renderRow: js.UndefOr[
     js.Function3[/* option */ T, /* index */ String, /* isSelected */ Boolean, TagMod[Any]]
-  ] = js.native
+  ] = js.undefined
   var renderSeparator: js.UndefOr[
     js.Function3[
       /* sectionID */ String, 
@@ -38,279 +61,162 @@ trait ModalDropdownProps[T] extends ViewProps {
       /* adjacentRowHighlighted */ Boolean, 
       TagMod[Any]
     ]
-  ] = js.native
-  var scrollEnabled: js.UndefOr[Boolean] = js.native
-  var showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.native
-  var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  ] = js.undefined
+  var scrollEnabled: js.UndefOr[Boolean] = js.undefined
+  var showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.undefined
+  var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
 }
 
 object ModalDropdownProps {
   @scala.inline
-  def apply[T](): ModalDropdownProps[T] = {
+  def apply[T](
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
+    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
+    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
+    accessibilityHint: String = null,
+    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
+    accessibilityLabel: String = null,
+    accessibilityLiveRegion: none | polite | assertive = null,
+    accessibilityRole: AccessibilityRole = null,
+    accessibilityState: AccessibilityState = null,
+    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
+    accessibilityValue: AccessibilityValue = null,
+    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
+    accessible: js.UndefOr[Boolean] = js.undefined,
+    adjustFrame: /* positionStyle */ PositionStyle => PositionStyle = null,
+    animated: js.UndefOr[Boolean] = js.undefined,
+    collapsable: js.UndefOr[Boolean] = js.undefined,
+    defaultIndex: js.UndefOr[Double] = js.undefined,
+    defaultValue: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    dropdownStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    dropdownTextHighlightStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    dropdownTextStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: Insets = null,
+    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
+    isTVSelectable: js.UndefOr[Boolean] = js.undefined,
+    keyboardShouldPersistTaps: always | never | handled = null,
+    nativeID: String = null,
+    needsOffscreenAlphaCompositing: js.UndefOr[Boolean] = js.undefined,
+    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
+    onAccessibilityEscape: () => Unit = null,
+    onAccessibilityTap: () => Unit = null,
+    onDropdownWillHide: () => Unit | Boolean = null,
+    onDropdownWillShow: () => Unit | Boolean = null,
+    onLayout: /* event */ LayoutChangeEvent => Unit = null,
+    onMagicTap: () => Unit = null,
+    onMoveShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onMoveShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onResponderEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderGrant: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderReject: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderRelease: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderTerminate: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderTerminationRequest: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onSelect: (/* index */ String, /* option */ T) => Unit | Boolean = null,
+    onStartShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onStartShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onTouchCancel: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchEndCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    options: js.Array[T] = null,
+    pointerEvents: `box-none` | none | `box-only` | auto = null,
+    removeClippedSubviews: js.UndefOr[Boolean] = js.undefined,
+    renderButtonText: /* text */ String => String = null,
+    renderRow: (/* option */ T, /* index */ String, /* isSelected */ Boolean) => TagMod[Any] = null,
+    renderSeparator: (/* sectionID */ String, /* index */ String, /* adjacentRowHighlighted */ Boolean) => TagMod[Any] = null,
+    renderToHardwareTextureAndroid: js.UndefOr[Boolean] = js.undefined,
+    scrollEnabled: js.UndefOr[Boolean] = js.undefined,
+    shouldRasterizeIOS: js.UndefOr[Boolean] = js.undefined,
+    showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    testID: String = null,
+    textStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    tvParallaxMagnification: js.UndefOr[Double] = js.undefined,
+    tvParallaxProperties: TVParallaxProperties = null,
+    tvParallaxShiftDistanceX: js.UndefOr[Double] = js.undefined,
+    tvParallaxShiftDistanceY: js.UndefOr[Double] = js.undefined,
+    tvParallaxTiltAngle: js.UndefOr[Double] = js.undefined
+  ): ModalDropdownProps[T] = {
     val __obj = js.Dynamic.literal()
+    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
+    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
+    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
+    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
+    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
+    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
+    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
+    if (accessibilityValue != null) __obj.updateDynamic("accessibilityValue")(accessibilityValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.get.asInstanceOf[js.Any])
+    if (adjustFrame != null) __obj.updateDynamic("adjustFrame")(js.Any.fromFunction1(adjustFrame))
+    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsable)) __obj.updateDynamic("collapsable")(collapsable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultIndex)) __obj.updateDynamic("defaultIndex")(defaultIndex.get.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropdownStyle)) __obj.updateDynamic("dropdownStyle")(dropdownStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropdownTextHighlightStyle)) __obj.updateDynamic("dropdownTextHighlightStyle")(dropdownTextHighlightStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropdownTextStyle)) __obj.updateDynamic("dropdownTextStyle")(dropdownTextStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
+    if (!js.isUndefined(isTVSelectable)) __obj.updateDynamic("isTVSelectable")(isTVSelectable.get.asInstanceOf[js.Any])
+    if (keyboardShouldPersistTaps != null) __obj.updateDynamic("keyboardShouldPersistTaps")(keyboardShouldPersistTaps.asInstanceOf[js.Any])
+    if (nativeID != null) __obj.updateDynamic("nativeID")(nativeID.asInstanceOf[js.Any])
+    if (!js.isUndefined(needsOffscreenAlphaCompositing)) __obj.updateDynamic("needsOffscreenAlphaCompositing")(needsOffscreenAlphaCompositing.get.asInstanceOf[js.Any])
+    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
+    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
+    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
+    if (onDropdownWillHide != null) __obj.updateDynamic("onDropdownWillHide")(js.Any.fromFunction0(onDropdownWillHide))
+    if (onDropdownWillShow != null) __obj.updateDynamic("onDropdownWillShow")(js.Any.fromFunction0(onDropdownWillShow))
+    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
+    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
+    if (onMoveShouldSetResponder != null) __obj.updateDynamic("onMoveShouldSetResponder")(js.Any.fromFunction1(onMoveShouldSetResponder))
+    if (onMoveShouldSetResponderCapture != null) __obj.updateDynamic("onMoveShouldSetResponderCapture")(js.Any.fromFunction1(onMoveShouldSetResponderCapture))
+    if (onResponderEnd != null) __obj.updateDynamic("onResponderEnd")(js.Any.fromFunction1(onResponderEnd))
+    if (onResponderGrant != null) __obj.updateDynamic("onResponderGrant")(js.Any.fromFunction1(onResponderGrant))
+    if (onResponderMove != null) __obj.updateDynamic("onResponderMove")(js.Any.fromFunction1(onResponderMove))
+    if (onResponderReject != null) __obj.updateDynamic("onResponderReject")(js.Any.fromFunction1(onResponderReject))
+    if (onResponderRelease != null) __obj.updateDynamic("onResponderRelease")(js.Any.fromFunction1(onResponderRelease))
+    if (onResponderStart != null) __obj.updateDynamic("onResponderStart")(js.Any.fromFunction1(onResponderStart))
+    if (onResponderTerminate != null) __obj.updateDynamic("onResponderTerminate")(js.Any.fromFunction1(onResponderTerminate))
+    if (onResponderTerminationRequest != null) __obj.updateDynamic("onResponderTerminationRequest")(js.Any.fromFunction1(onResponderTerminationRequest))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
+    if (onStartShouldSetResponder != null) __obj.updateDynamic("onStartShouldSetResponder")(js.Any.fromFunction1(onStartShouldSetResponder))
+    if (onStartShouldSetResponderCapture != null) __obj.updateDynamic("onStartShouldSetResponderCapture")(js.Any.fromFunction1(onStartShouldSetResponderCapture))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchEndCapture != null) __obj.updateDynamic("onTouchEndCapture")(js.Any.fromFunction1(onTouchEndCapture))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeClippedSubviews)) __obj.updateDynamic("removeClippedSubviews")(removeClippedSubviews.get.asInstanceOf[js.Any])
+    if (renderButtonText != null) __obj.updateDynamic("renderButtonText")(js.Any.fromFunction1(renderButtonText))
+    if (renderRow != null) __obj.updateDynamic("renderRow")(js.Any.fromFunction3(renderRow))
+    if (renderSeparator != null) __obj.updateDynamic("renderSeparator")(js.Any.fromFunction3(renderSeparator))
+    if (!js.isUndefined(renderToHardwareTextureAndroid)) __obj.updateDynamic("renderToHardwareTextureAndroid")(renderToHardwareTextureAndroid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollEnabled)) __obj.updateDynamic("scrollEnabled")(scrollEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldRasterizeIOS)) __obj.updateDynamic("shouldRasterizeIOS")(shouldRasterizeIOS.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showsVerticalScrollIndicator)) __obj.updateDynamic("showsVerticalScrollIndicator")(showsVerticalScrollIndicator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (!js.isUndefined(textStyle)) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxMagnification)) __obj.updateDynamic("tvParallaxMagnification")(tvParallaxMagnification.get.asInstanceOf[js.Any])
+    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxShiftDistanceX)) __obj.updateDynamic("tvParallaxShiftDistanceX")(tvParallaxShiftDistanceX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxShiftDistanceY)) __obj.updateDynamic("tvParallaxShiftDistanceY")(tvParallaxShiftDistanceY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxTiltAngle)) __obj.updateDynamic("tvParallaxTiltAngle")(tvParallaxTiltAngle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalDropdownProps[T]]
   }
-  @scala.inline
-  implicit class ModalDropdownPropsOps[Self[t] <: ModalDropdownProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAdjustFrame(value: /* positionStyle */ PositionStyle => PositionStyle): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustFrame")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAdjustFrame: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustFrame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimated(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimated: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultIndex(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultIndex: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownStyle(value: StyleProp[ViewStyle]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownStyle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownStyleNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withDropdownTextHighlightStyle(value: StyleProp[TextStyle]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownTextHighlightStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownTextHighlightStyle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownTextHighlightStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownTextHighlightStyleNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownTextHighlightStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withDropdownTextStyle(value: StyleProp[TextStyle]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownTextStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownTextStyle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownTextStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownTextStyleNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownTextStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withKeyboardShouldPersistTaps(value: always | never | handled): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardShouldPersistTaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardShouldPersistTaps: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardShouldPersistTaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDropdownWillHide(value: () => Unit | Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownWillHide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDropdownWillHide: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownWillHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDropdownWillShow(value: () => Unit | Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownWillShow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDropdownWillShow: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownWillShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: (/* index */ String, /* option */ T) => Unit | Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderButtonText(value: /* text */ String => String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderButtonText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderButtonText: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderButtonText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderRow(value: (/* option */ T, /* index */ String, /* isSelected */ Boolean) => TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderRow")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderRow: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderSeparator(
-      value: (/* sectionID */ String, /* index */ String, /* adjacentRowHighlighted */ Boolean) => TagMod[Any]
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderSeparator")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderSeparator: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderSeparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollEnabled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollEnabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowsVerticalScrollIndicator(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showsVerticalScrollIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowsVerticalScrollIndicator: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showsVerticalScrollIndicator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyle(value: StyleProp[TextStyle]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextStyle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyleNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(null)
-        ret
-    }
-  }
-  
 }
 

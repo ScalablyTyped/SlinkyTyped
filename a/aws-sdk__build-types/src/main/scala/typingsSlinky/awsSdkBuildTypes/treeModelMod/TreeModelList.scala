@@ -6,35 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TreeModelList
   extends List
      with Documented
      with Named {
   @JSName("member")
-  var member_TreeModelList: TreeModelMember = js.native
+  var member_TreeModelList: TreeModelMember
 }
 
 object TreeModelList {
   @scala.inline
-  def apply(documentation: String, member: TreeModelMember, name: String, `type`: list): TreeModelList = {
+  def apply(
+    documentation: String,
+    member: TreeModelMember,
+    name: String,
+    `type`: list,
+    flattened: js.UndefOr[Boolean] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    sensitive: js.UndefOr[Boolean] = js.undefined
+  ): TreeModelList = {
     val __obj = js.Dynamic.literal(documentation = documentation.asInstanceOf[js.Any], member = member.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(flattened)) __obj.updateDynamic("flattened")(flattened.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sensitive)) __obj.updateDynamic("sensitive")(sensitive.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeModelList]
   }
-  @scala.inline
-  implicit class TreeModelListOps[Self <: TreeModelList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMember(value: TreeModelMember): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,123 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IShimmerStyles extends js.Object {
   /** Refers to wrapper element of the children only. */
-  var dataWrapper: js.UndefOr[IStyle] = js.native
+  var dataWrapper: js.UndefOr[IStyle] = js.undefined
   /** Refers to the root wrapper element. */
-  var root: js.UndefOr[IStyle] = js.native
+  var root: js.UndefOr[IStyle] = js.undefined
   /** Styles for the hidden helper element to aid with screen readers. */
-  var screenReaderText: js.UndefOr[IStyle] = js.native
+  var screenReaderText: js.UndefOr[IStyle] = js.undefined
   /** Refers to gradient element of the shimmer animation only. */
-  var shimmerGradient: js.UndefOr[IStyle] = js.native
+  var shimmerGradient: js.UndefOr[IStyle] = js.undefined
   /** Refers to wrapper element of the shimmer only. */
-  var shimmerWrapper: js.UndefOr[IStyle] = js.native
+  var shimmerWrapper: js.UndefOr[IStyle] = js.undefined
 }
 
 object IShimmerStyles {
   @scala.inline
-  def apply(): IShimmerStyles = {
+  def apply(
+    dataWrapper: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined,
+    screenReaderText: js.UndefOr[Null | IStyle] = js.undefined,
+    shimmerGradient: js.UndefOr[Null | IStyle] = js.undefined,
+    shimmerWrapper: js.UndefOr[Null | IStyle] = js.undefined
+  ): IShimmerStyles = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dataWrapper)) __obj.updateDynamic("dataWrapper")(dataWrapper.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(screenReaderText)) __obj.updateDynamic("screenReaderText")(screenReaderText.asInstanceOf[js.Any])
+    if (!js.isUndefined(shimmerGradient)) __obj.updateDynamic("shimmerGradient")(shimmerGradient.asInstanceOf[js.Any])
+    if (!js.isUndefined(shimmerWrapper)) __obj.updateDynamic("shimmerWrapper")(shimmerWrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[IShimmerStyles]
   }
-  @scala.inline
-  implicit class IShimmerStylesOps[Self <: IShimmerStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataWrapper(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataWrapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataWrapperNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataWrapper")(null)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withScreenReaderText(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenReaderText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenReaderTextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderText")(null)
-        ret
-    }
-    @scala.inline
-    def withShimmerGradient(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerGradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShimmerGradient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerGradient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShimmerGradientNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerGradient")(null)
-        ret
-    }
-    @scala.inline
-    def withShimmerWrapper(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShimmerWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerWrapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShimmerWrapperNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerWrapper")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.sipml
 
+import typingsSlinky.sipml.SIPml.Session.EventSubscriptionType
 import typingsSlinky.sipml.SIPml.Stack.Configuration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,20 +13,53 @@ object global extends js.Object {
   object SIPml extends js.Object {
     @js.native
     class Event ()
-      extends typingsSlinky.sipml.SIPml.Event
+      extends typingsSlinky.sipml.SIPml.Event {
+      /* CompleteClass */
+      override var description: String = js.native
+      /* CompleteClass */
+      override var `type`: String = js.native
+      /* CompleteClass */
+      override def getContent(): js.Object = js.native
+      /* CompleteClass */
+      override def getContentString(): String = js.native
+      /* CompleteClass */
+      override def getContentType(): js.Object = js.native
+      /* CompleteClass */
+      override def getSipResponseCode(): Double = js.native
+    }
     
     @js.native
     class EventTarget[EventSubscriptionType /* <: String */, EventType /* <: typingsSlinky.sipml.SIPml.Event */] ()
-      extends typingsSlinky.sipml.SIPml.EventTarget[EventSubscriptionType, EventType]
+      extends typingsSlinky.sipml.SIPml.EventTarget[EventSubscriptionType, EventType] {
+      /* CompleteClass */
+      override def addEventListener(`type`: EventSubscriptionType, listener: js.Function1[EventType, Unit]): Unit = js.native
+      /* CompleteClass */
+      override def removeEventListener(`type`: EventSubscriptionType): Unit = js.native
+    }
     
     @js.native
     class Session ()
-      extends typingsSlinky.sipml.SIPml.Session
+      extends typingsSlinky.sipml.SIPml.Session {
+      /* CompleteClass */
+      override def addEventListener(
+        `type`: EventSubscriptionType,
+        listener: js.Function1[typingsSlinky.sipml.SIPml.Session.Event, Unit]
+      ): Unit = js.native
+      /* CompleteClass */
+      override def removeEventListener(`type`: EventSubscriptionType): Unit = js.native
+    }
     
     @js.native
     class Stack ()
       extends typingsSlinky.sipml.SIPml.Stack {
       def this(configuration: Configuration) = this()
+      /* CompleteClass */
+      override def addEventListener(
+        `type`: typingsSlinky.sipml.SIPml.Stack.EventSubscriptionType,
+        listener: js.Function1[typingsSlinky.sipml.SIPml.Stack.Event, Unit]
+      ): Unit = js.native
+      /* CompleteClass */
+      override def removeEventListener(`type`: typingsSlinky.sipml.SIPml.Stack.EventSubscriptionType): Unit = js.native
     }
     
     def getNavigatorFriendlyName(): String = js.native
@@ -50,27 +84,84 @@ object global extends js.Object {
     object Session extends js.Object {
       @js.native
       class Call ()
-        extends typingsSlinky.sipml.SIPml.Session.Call
+        extends typingsSlinky.sipml.SIPml.Session.Call {
+        /* CompleteClass */
+        override def addEventListener(
+          `type`: EventSubscriptionType,
+          listener: js.Function1[typingsSlinky.sipml.SIPml.Session.Event, Unit]
+        ): Unit = js.native
+        /* CompleteClass */
+        override def removeEventListener(`type`: EventSubscriptionType): Unit = js.native
+      }
       
       @js.native
       class Event ()
-        extends typingsSlinky.sipml.SIPml.Session.Event
+        extends typingsSlinky.sipml.SIPml.Session.Event {
+        /* CompleteClass */
+        override var description: String = js.native
+        /* CompleteClass */
+        override var session: typingsSlinky.sipml.SIPml.Session = js.native
+        /* CompleteClass */
+        override var `type`: String = js.native
+        /* CompleteClass */
+        override def getContent(): js.Object = js.native
+        /* CompleteClass */
+        override def getContentString(): String = js.native
+        /* CompleteClass */
+        override def getContentType(): js.Object = js.native
+        /* CompleteClass */
+        override def getSipResponseCode(): Double = js.native
+        /* CompleteClass */
+        override def getTransferDestinationFriendlyName(): String = js.native
+      }
       
       @js.native
       class Message ()
-        extends typingsSlinky.sipml.SIPml.Session.Message
+        extends typingsSlinky.sipml.SIPml.Session.Message {
+        /* CompleteClass */
+        override def addEventListener(
+          `type`: EventSubscriptionType,
+          listener: js.Function1[typingsSlinky.sipml.SIPml.Session.Event, Unit]
+        ): Unit = js.native
+        /* CompleteClass */
+        override def removeEventListener(`type`: EventSubscriptionType): Unit = js.native
+      }
       
       @js.native
       class Publish ()
-        extends typingsSlinky.sipml.SIPml.Session.Publish
+        extends typingsSlinky.sipml.SIPml.Session.Publish {
+        /* CompleteClass */
+        override def addEventListener(
+          `type`: EventSubscriptionType,
+          listener: js.Function1[typingsSlinky.sipml.SIPml.Session.Event, Unit]
+        ): Unit = js.native
+        /* CompleteClass */
+        override def removeEventListener(`type`: EventSubscriptionType): Unit = js.native
+      }
       
       @js.native
       class Registration ()
-        extends typingsSlinky.sipml.SIPml.Session.Registration
+        extends typingsSlinky.sipml.SIPml.Session.Registration {
+        /* CompleteClass */
+        override def addEventListener(
+          `type`: EventSubscriptionType,
+          listener: js.Function1[typingsSlinky.sipml.SIPml.Session.Event, Unit]
+        ): Unit = js.native
+        /* CompleteClass */
+        override def removeEventListener(`type`: EventSubscriptionType): Unit = js.native
+      }
       
       @js.native
       class Subscribe ()
-        extends typingsSlinky.sipml.SIPml.Session.Subscribe
+        extends typingsSlinky.sipml.SIPml.Session.Subscribe {
+        /* CompleteClass */
+        override def addEventListener(
+          `type`: EventSubscriptionType,
+          listener: js.Function1[typingsSlinky.sipml.SIPml.Session.Event, Unit]
+        ): Unit = js.native
+        /* CompleteClass */
+        override def removeEventListener(`type`: EventSubscriptionType): Unit = js.native
+      }
       
     }
     
@@ -78,7 +169,22 @@ object global extends js.Object {
     object Stack extends js.Object {
       @js.native
       class Event ()
-        extends typingsSlinky.sipml.SIPml.Stack.Event
+        extends typingsSlinky.sipml.SIPml.Stack.Event {
+        /* CompleteClass */
+        override var description: String = js.native
+        /* CompleteClass */
+        override var newSession: typingsSlinky.sipml.SIPml.Session = js.native
+        /* CompleteClass */
+        override var `type`: String = js.native
+        /* CompleteClass */
+        override def getContent(): js.Object = js.native
+        /* CompleteClass */
+        override def getContentString(): String = js.native
+        /* CompleteClass */
+        override def getContentType(): js.Object = js.native
+        /* CompleteClass */
+        override def getSipResponseCode(): Double = js.native
+      }
       
     }
     

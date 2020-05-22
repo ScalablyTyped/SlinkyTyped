@@ -4,373 +4,98 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLAudioElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactAudioPlayerProps extends js.Object {
-  var autoPlay: js.UndefOr[Boolean] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var controls: js.UndefOr[Boolean] = js.native
-  var controlsList: js.UndefOr[String] = js.native
-  var crossOrigin: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var listenInterval: js.UndefOr[Double] = js.native
-  var loop: js.UndefOr[Boolean] = js.native
-  var muted: js.UndefOr[Boolean] = js.native
-  var onAbort: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onCanPlay: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onCanPlayThrough: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onEnded: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onListen: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onLoadedMetadata: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onPause: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onPlay: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onSeeked: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var onVolumeChanged: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
-  var preload: js.UndefOr[Preload] = js.native
-  var src: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var title: js.UndefOr[String] = js.native
-  var volume: js.UndefOr[Double] = js.native
+  var autoPlay: js.UndefOr[Boolean] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var controls: js.UndefOr[Boolean] = js.undefined
+  var controlsList: js.UndefOr[String] = js.undefined
+  var crossOrigin: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var listenInterval: js.UndefOr[Double] = js.undefined
+  var loop: js.UndefOr[Boolean] = js.undefined
+  var muted: js.UndefOr[Boolean] = js.undefined
+  var onAbort: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onCanPlay: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onCanPlayThrough: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onEnded: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onError: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onListen: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onLoadedMetadata: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onPause: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onPlay: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onSeeked: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var onVolumeChanged: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.undefined
+  var preload: js.UndefOr[Preload] = js.undefined
+  var src: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var volume: js.UndefOr[Double] = js.undefined
 }
 
 object ReactAudioPlayerProps {
   @scala.inline
-  def apply(): ReactAudioPlayerProps = {
+  def apply(
+    autoPlay: js.UndefOr[Boolean] = js.undefined,
+    children: TagMod[Any] = null,
+    className: String = null,
+    controls: js.UndefOr[Boolean] = js.undefined,
+    controlsList: String = null,
+    crossOrigin: String = null,
+    id: String = null,
+    listenInterval: js.UndefOr[Double] = js.undefined,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    muted: js.UndefOr[Boolean] = js.undefined,
+    onAbort: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onCanPlay: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onCanPlayThrough: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onEnded: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onError: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onListen: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onLoadedMetadata: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onPause: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onPlay: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onSeeked: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    onVolumeChanged: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit = null,
+    preload: Preload = null,
+    src: String = null,
+    style: CSSProperties = null,
+    title: String = null,
+    volume: js.UndefOr[Double] = js.undefined
+  ): ReactAudioPlayerProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoPlay)) __obj.updateDynamic("autoPlay")(autoPlay.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(controls)) __obj.updateDynamic("controls")(controls.get.asInstanceOf[js.Any])
+    if (controlsList != null) __obj.updateDynamic("controlsList")(controlsList.asInstanceOf[js.Any])
+    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(listenInterval)) __obj.updateDynamic("listenInterval")(listenInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(muted)) __obj.updateDynamic("muted")(muted.get.asInstanceOf[js.Any])
+    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
+    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
+    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
+    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onListen != null) __obj.updateDynamic("onListen")(js.Any.fromFunction1(onListen))
+    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
+    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
+    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
+    if (onSeeked != null) __obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))
+    if (onVolumeChanged != null) __obj.updateDynamic("onVolumeChanged")(js.Any.fromFunction1(onVolumeChanged))
+    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
+    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(volume)) __obj.updateDynamic("volume")(volume.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactAudioPlayerProps]
   }
-  @scala.inline
-  implicit class ReactAudioPlayerPropsOps[Self <: ReactAudioPlayerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoPlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoPlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlsList(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlsList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListenInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listenInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListenInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listenInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMuted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMuted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAbort(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAbort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCanPlay(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCanPlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCanPlayThrough(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCanPlayThrough: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnded(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnListen(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onListen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnListen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onListen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadedMetadata(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadedMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPause(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlay(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSeeked(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSeeked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnVolumeChanged(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnVolumeChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreload(value: Preload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolume(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

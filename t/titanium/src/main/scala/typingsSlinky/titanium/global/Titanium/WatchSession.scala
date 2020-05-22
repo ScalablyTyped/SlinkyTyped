@@ -29,8 +29,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * Used to enable data and file transfers between a watchOS and iOS application.
-	 */
+  * Used to enable data and file transfers between a watchOS and iOS application.
+  */
 @JSGlobal("Titanium.WatchSession")
 @js.native
 class WatchSession ()
@@ -41,77 +41,77 @@ class WatchSession ()
 @js.native
 object WatchSession extends js.Object {
   /**
-  		 * The watch is currently activated.
-  		 */
+    * The watch is currently activated.
+    */
   val ACTIVATION_STATE_ACTIVATED: Double = js.native
   /**
-  		 * The watch is currently inactive.
-  		 */
+    * The watch is currently inactive.
+    */
   val ACTIVATION_STATE_INACTIVE: Double = js.native
   /**
-  		 * The watch is currently not activated.
-  		 */
+    * The watch is currently not activated.
+    */
   val ACTIVATION_STATE_NOT_ACTIVATED: Double = js.native
   /**
-  		 * Returns the current activation state of the watch.
-  		 */
+    * Returns the current activation state of the watch.
+    */
   val activationState: Double = js.native
   /**
-  		 * The name of the API that this proxy corresponds to.
-  		 */
+    * The name of the API that this proxy corresponds to.
+    */
   val apiName: String = js.native
   /**
-  		 * Indicates if the proxy will bubble an event to its parent.
-  		 */
+    * Indicates if the proxy will bubble an event to its parent.
+    */
   var bubbleParent: Boolean = js.native
   /**
-  		 * Returns `true` if there is more content for the session to deliver.
-  		 */
+    * Returns `true` if there is more content for the session to deliver.
+    */
   val hasContentPending: Boolean = js.native
   /**
-  		 * Returns `true` if the watch is currently activated.
-  		 */
+    * Returns `true` if the watch is currently activated.
+    */
   val isActivated: Boolean = js.native
   /**
-  		 * Returns `true` if complication is enabled on the installed watch app.
-  		 */
+    * Returns `true` if complication is enabled on the installed watch app.
+    */
   val isComplicationEnabled: Boolean = js.native
   /**
-  		 * Returns `true` if the device is paired with a watch.
-  		 */
+    * Returns `true` if the device is paired with a watch.
+    */
   val isPaired: Boolean = js.native
   /**
-  		 * Returns `true` if the watch is currently reachable.
-  		 */
+    * Returns `true` if the watch is currently reachable.
+    */
   val isReachable: Boolean = js.native
   /**
-  		 * Returns `true` if the device supports watch connectivity.
-  		 */
+    * Returns `true` if the device supports watch connectivity.
+    */
   val isSupported: Boolean = js.native
   /**
-  		 * Returns `true` if the accompanying watch app is installed.
-  		 */
+    * Returns `true` if the accompanying watch app is installed.
+    */
   val isWatchAppInstalled: Boolean = js.native
   /**
-  		 * The most recent application context sent to the watch app.
-  		 */
+    * The most recent application context sent to the watch app.
+    */
   val recentApplicationContext: js.Any = js.native
   /**
-  		 * The number of calls remaining to `transferCurrentComplication` before the system starts
-  		 * transferring the complicationUserInfo as regular userInfos.
-  		 */
+    * The number of calls remaining to `transferCurrentComplication` before the system starts
+    * transferring the complicationUserInfo as regular userInfos.
+    */
   val remainingComplicationUserInfoTransfers: Double = js.native
   /**
-  		 * Activates the watch session
-  		 */
+    * Activates the watch session
+    */
   def activateSession(): Unit = js.native
   /**
-  		 * Adds the specified callback as an event listener for the named event.
-  		 */
+    * Adds the specified callback as an event listener for the named event.
+    */
   def addEventListener(name: String, callback: js.Function1[/* param0 */ Event, Unit]): Unit = js.native
   /**
-  		 * Adds the specified callback as an event listener for the named event.
-  		 */
+    * Adds the specified callback as an event listener for the named event.
+    */
   @JSName("addEventListener")
   def addEventListener_activationCompleted(
     name: activationCompleted,
@@ -168,29 +168,29 @@ object WatchSession extends js.Object {
     callback: js.ThisFunction1[/* this */ this.type, /* event */ WatchSessionWatchstatechangedEvent, Unit]
   ): Unit = js.native
   /**
-  		 * Applies the properties to the proxy.
-  		 */
+    * Applies the properties to the proxy.
+    */
   def applyProperties(props: js.Any): Unit = js.native
   /**
-  		 * Cancels all incomplete file transfers to the apple watch.
-  		 */
+    * Cancels all incomplete file transfers to the apple watch.
+    */
   def cancelAllFileTransfers(): Unit = js.native
   /**
-  		 * Cancels all incomplete transfers to the apple watch.
-  		 */
+    * Cancels all incomplete transfers to the apple watch.
+    */
   def cancelAllTransfers(): Unit = js.native
   /**
-  		 * Cancels all incomplete user info and complication transfers to the apple watch.
-  		 */
+    * Cancels all incomplete user info and complication transfers to the apple watch.
+    */
   def cancelAllUserInfoTransfers(): Unit = js.native
   /**
-  		 * Fires a synthesized event to any registered listeners.
-  		 */
+    * Fires a synthesized event to any registered listeners.
+    */
   def fireEvent(name: String): Unit = js.native
   def fireEvent(name: String, event: js.Any): Unit = js.native
   /**
-  		 * Fires a synthesized event to any registered listeners.
-  		 */
+    * Fires a synthesized event to any registered listeners.
+    */
   @JSName("fireEvent")
   def fireEvent_activationCompleted(name: activationCompleted): Unit = js.native
   @JSName("fireEvent")
@@ -236,72 +236,72 @@ object WatchSession extends js.Object {
   @JSName("fireEvent")
   def fireEvent_watchstatechanged(name: watchstatechanged, event: WatchSessionWatchstatechangedEvent): Unit = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.activationState> property.
-  		 * @deprecated Access <Titanium.WatchSession.activationState> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.activationState> property.
+    * @deprecated Access <Titanium.WatchSession.activationState> instead.
+    */
   def getActivationState(): Double = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.apiName> property.
-  		 * @deprecated Access <Titanium.WatchSession.apiName> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.apiName> property.
+    * @deprecated Access <Titanium.WatchSession.apiName> instead.
+    */
   def getApiName(): String = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.bubbleParent> property.
-  		 * @deprecated Access <Titanium.WatchSession.bubbleParent> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.bubbleParent> property.
+    * @deprecated Access <Titanium.WatchSession.bubbleParent> instead.
+    */
   def getBubbleParent(): Boolean = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.hasContentPending> property.
-  		 * @deprecated Access <Titanium.WatchSession.hasContentPending> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.hasContentPending> property.
+    * @deprecated Access <Titanium.WatchSession.hasContentPending> instead.
+    */
   def getHasContentPending(): Boolean = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.isActivated> property.
-  		 * @deprecated Access <Titanium.WatchSession.isActivated> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.isActivated> property.
+    * @deprecated Access <Titanium.WatchSession.isActivated> instead.
+    */
   def getIsActivated(): Boolean = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.isComplicationEnabled> property.
-  		 * @deprecated Access <Titanium.WatchSession.isComplicationEnabled> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.isComplicationEnabled> property.
+    * @deprecated Access <Titanium.WatchSession.isComplicationEnabled> instead.
+    */
   def getIsComplicationEnabled(): Boolean = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.isPaired> property.
-  		 * @deprecated Access <Titanium.WatchSession.isPaired> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.isPaired> property.
+    * @deprecated Access <Titanium.WatchSession.isPaired> instead.
+    */
   def getIsPaired(): Boolean = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.isReachable> property.
-  		 * @deprecated Access <Titanium.WatchSession.isReachable> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.isReachable> property.
+    * @deprecated Access <Titanium.WatchSession.isReachable> instead.
+    */
   def getIsReachable(): Boolean = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.isSupported> property.
-  		 * @deprecated Access <Titanium.WatchSession.isSupported> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.isSupported> property.
+    * @deprecated Access <Titanium.WatchSession.isSupported> instead.
+    */
   def getIsSupported(): Boolean = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.isWatchAppInstalled> property.
-  		 * @deprecated Access <Titanium.WatchSession.isWatchAppInstalled> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.isWatchAppInstalled> property.
+    * @deprecated Access <Titanium.WatchSession.isWatchAppInstalled> instead.
+    */
   def getIsWatchAppInstalled(): Boolean = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.recentApplicationContext> property.
-  		 * @deprecated Access <Titanium.WatchSession.recentApplicationContext> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.recentApplicationContext> property.
+    * @deprecated Access <Titanium.WatchSession.recentApplicationContext> instead.
+    */
   def getRecentApplicationContext(): js.Any = js.native
   /**
-  		 * Gets the value of the <Titanium.WatchSession.remainingComplicationUserInfoTransfers> property.
-  		 * @deprecated Access <Titanium.WatchSession.remainingComplicationUserInfoTransfers> instead.
-  		 */
+    * Gets the value of the <Titanium.WatchSession.remainingComplicationUserInfoTransfers> property.
+    * @deprecated Access <Titanium.WatchSession.remainingComplicationUserInfoTransfers> instead.
+    */
   def getRemainingComplicationUserInfoTransfers(): Double = js.native
   /**
-  		 * Removes the specified callback as an event listener for the named event.
-  		 */
+    * Removes the specified callback as an event listener for the named event.
+    */
   def removeEventListener(name: String, callback: js.Function1[/* param0 */ Event, Unit]): Unit = js.native
   /**
-  		 * Removes the specified callback as an event listener for the named event.
-  		 */
+    * Removes the specified callback as an event listener for the named event.
+    */
   @JSName("removeEventListener")
   def removeEventListener_activationCompleted(
     name: activationCompleted,
@@ -358,30 +358,30 @@ object WatchSession extends js.Object {
     callback: js.ThisFunction1[/* this */ this.type, /* event */ WatchSessionWatchstatechangedEvent, Unit]
   ): Unit = js.native
   /**
-  		 * Sends a message to the apple watch.
-  		 */
+    * Sends a message to the apple watch.
+    */
   def sendMessage(message: js.Any): Unit = js.native
   def sendMessage(message: js.Any, reply: js.Function1[/* param0 */ MessageReply, Unit]): Unit = js.native
   /**
-  		 * Sets the value of the <Titanium.WatchSession.bubbleParent> property.
-  		 * @deprecated Set the value using <Titanium.WatchSession.bubbleParent> instead.
-  		 */
+    * Sets the value of the <Titanium.WatchSession.bubbleParent> property.
+    * @deprecated Set the value using <Titanium.WatchSession.bubbleParent> instead.
+    */
   def setBubbleParent(bubbleParent: Boolean): Unit = js.native
   /**
-  		 * Transfers complication data to the watch application.
-  		 */
+    * Transfers complication data to the watch application.
+    */
   def transferCurrentComplication(params: js.Any): Unit = js.native
   /**
-  		 * Transfers a file to the apple watch.
-  		 */
+    * Transfers a file to the apple watch.
+    */
   def transferFile(params: js.Any): Unit = js.native
   /**
-  		 * Transfers an user info to the apple watch.
-  		 */
+    * Transfers an user info to the apple watch.
+    */
   def transferUserInfo(params: js.Any): Unit = js.native
   /**
-  		 * Sends an app context update to the apple watch.
-  		 */
+    * Sends an app context update to the apple watch.
+    */
   def updateApplicationContext(params: js.Any): Unit = js.native
 }
 

@@ -6,18 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an echo effect definition supported by the audio graph. */
-@js.native
 trait EchoEffectDefinition extends js.Object {
   /** Gets the activatable class ID for the echo effect definition object. */
-  var activatableClassId: String = js.native
+  var activatableClassId: String
   /** Gets or sets the delay supported by the echo effect definition. */
-  var delay: Double = js.native
+  var delay: Double
   /** Gets or sets the feedback included in the echo effect definition. */
-  var feedback: Double = js.native
+  var feedback: Double
   /** Gets or sets the properties supported by the echo effect definition. */
-  var properties: IPropertySet = js.native
+  var properties: IPropertySet
   /** Gets or sets the wet-dry audio voice mix for the echo effect definition. */
-  var wetDryMix: Double = js.native
+  var wetDryMix: Double
 }
 
 object EchoEffectDefinition {
@@ -32,43 +31,5 @@ object EchoEffectDefinition {
     val __obj = js.Dynamic.literal(activatableClassId = activatableClassId.asInstanceOf[js.Any], delay = delay.asInstanceOf[js.Any], feedback = feedback.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], wetDryMix = wetDryMix.asInstanceOf[js.Any])
     __obj.asInstanceOf[EchoEffectDefinition]
   }
-  @scala.inline
-  implicit class EchoEffectDefinitionOps[Self <: EchoEffectDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivatableClassId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activatableClassId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeedback(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: IPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWetDryMix(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wetDryMix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

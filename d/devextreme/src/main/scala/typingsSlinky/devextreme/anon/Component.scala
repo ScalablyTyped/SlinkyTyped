@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Component[T] extends js.Object {
-  var component: js.UndefOr[T] = js.native
+  var component: js.UndefOr[T] = js.undefined
 }
 
 object Component {
   @scala.inline
-  def apply[T](): Component[T] = {
+  def apply[T](component: T = null): Component[T] = {
     val __obj = js.Dynamic.literal()
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
     __obj.asInstanceOf[Component[T]]
   }
-  @scala.inline
-  implicit class ComponentOps[Self[t] <: Component[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withComponent(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

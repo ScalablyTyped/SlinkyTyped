@@ -22,149 +22,32 @@ trait HiddenCssProps extends js.Object {
 
 object HiddenCssProps {
   @scala.inline
-  def apply(): HiddenCssProps = {
+  def apply(
+    lgDown: js.UndefOr[Boolean] = js.undefined,
+    lgUp: js.UndefOr[Boolean] = js.undefined,
+    mdDown: js.UndefOr[Boolean] = js.undefined,
+    mdUp: js.UndefOr[Boolean] = js.undefined,
+    only: Breakpoint | js.Array[Breakpoint] = null,
+    smDown: js.UndefOr[Boolean] = js.undefined,
+    smUp: js.UndefOr[Boolean] = js.undefined,
+    xlDown: js.UndefOr[Boolean] = js.undefined,
+    xlUp: js.UndefOr[Boolean] = js.undefined,
+    xsDown: js.UndefOr[Boolean] = js.undefined,
+    xsUp: js.UndefOr[Boolean] = js.undefined
+  ): HiddenCssProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(lgDown)) __obj.updateDynamic("lgDown")(lgDown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lgUp)) __obj.updateDynamic("lgUp")(lgUp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mdDown)) __obj.updateDynamic("mdDown")(mdDown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mdUp)) __obj.updateDynamic("mdUp")(mdUp.get.asInstanceOf[js.Any])
+    if (only != null) __obj.updateDynamic("only")(only.asInstanceOf[js.Any])
+    if (!js.isUndefined(smDown)) __obj.updateDynamic("smDown")(smDown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smUp)) __obj.updateDynamic("smUp")(smUp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xlDown)) __obj.updateDynamic("xlDown")(xlDown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xlUp)) __obj.updateDynamic("xlUp")(xlUp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xsDown)) __obj.updateDynamic("xsDown")(xsDown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xsUp)) __obj.updateDynamic("xsUp")(xsUp.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HiddenCssProps]
   }
-  @scala.inline
-  implicit class HiddenCssPropsOps[Self <: HiddenCssProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLgDown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLgDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLgUp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLgUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMdDown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMdDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMdUp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMdUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnly(value: Breakpoint | js.Array[Breakpoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmDown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmUp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXlDown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXlDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXlUp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXlUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXsDown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXsDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXsUp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXsUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsUp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

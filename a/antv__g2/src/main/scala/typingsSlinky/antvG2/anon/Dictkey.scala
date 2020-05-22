@@ -6,50 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictkey
   extends /* key */ StringDictionary[js.Any] {
-  var offset: js.UndefOr[Double] = js.native
-  var textStyle: js.UndefOr[text] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
+  var textStyle: js.UndefOr[text] = js.undefined
 }
 
 object Dictkey {
   @scala.inline
-  def apply(): Dictkey = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    textStyle: text = null
+  ): Dictkey = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dictkey]
   }
-  @scala.inline
-  implicit class DictkeyOps[Self <: Dictkey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyle(value: text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

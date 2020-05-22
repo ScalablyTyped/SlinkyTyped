@@ -10,8 +10,8 @@ object gridLayer extends js.Object {
   // GridLayer
   //////////////////////////////////////////////////////////////////////
   /**
-  		 * An L.mapbox.gridLayer loads UTFGrid tiles of interactivity into your map, which you can easily access with L.mapbox.gridControl.
-  		 */
+    * An L.mapbox.gridLayer loads UTFGrid tiles of interactivity into your map, which you can easily access with L.mapbox.gridControl.
+    */
   def apply(idOrTileJson: js.Any): GridLayer_ = js.native
 }
 

@@ -14,4 +14,5 @@ package object drawMod {
   type LineCoordType = js.Array[typingsSlinky.ol.coordinateMod.Coordinate]
   type PointCoordType = typingsSlinky.ol.coordinateMod.Coordinate
   type PolyCoordType = js.Array[js.Array[typingsSlinky.ol.coordinateMod.Coordinate]]
+  type SketchCoordType = typingsSlinky.ol.drawMod.PointCoordType | typingsSlinky.ol.drawMod.LineCoordType | typingsSlinky.ol.drawMod.PolyCoordType
 }

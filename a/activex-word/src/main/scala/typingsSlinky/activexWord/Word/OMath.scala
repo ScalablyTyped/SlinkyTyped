@@ -4,33 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMath extends js.Object {
-  var AlignPoint: Double = js.native
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val ArgIndex: Double = js.native
-  var ArgSize: Double = js.native
-  val Breaks: OMathBreaks = js.native
-  val Creator: Double = js.native
-  val Functions: OMathFunctions = js.native
-  var Justification: WdOMathJc = js.native
-  val NestingLevel: Double = js.native
-  val Parent: js.Any = js.native
-  val ParentArg: OMath = js.native
-  val ParentCol: OMathMatCol = js.native
-  val ParentFunction: OMathFunction = js.native
-  val ParentOMath: OMath = js.native
-  val ParentRow: OMathMatRow = js.native
-  val Range: typingsSlinky.activexWord.Word.Range = js.native
-  var Type: WdOMathType = js.native
+  var AlignPoint: Double
+  val Application: typingsSlinky.activexWord.Word.Application
+  val ArgIndex: Double
+  var ArgSize: Double
+  val Breaks: OMathBreaks
+  val Creator: Double
+  val Functions: OMathFunctions
+  var Justification: WdOMathJc
+  val NestingLevel: Double
+  val Parent: js.Any
+  val ParentArg: OMath
+  val ParentCol: OMathMatCol
+  val ParentFunction: OMathFunction
+  val ParentOMath: OMath
+  val ParentRow: OMathMatRow
+  val Range: typingsSlinky.activexWord.Word.Range
+  var Type: WdOMathType
   @JSName("Word.OMath_typekey")
-  var WordDotOMath_typekey: OMath = js.native
-  def BuildUp(): Unit = js.native
-  def ConvertToLiteralText(): Unit = js.native
-  def ConvertToMathText(): Unit = js.native
-  def ConvertToNormalText(): Unit = js.native
-  def Linearize(): Unit = js.native
-  def Remove(): Unit = js.native
+  var WordDotOMath_typekey: OMath
+  def BuildUp(): Unit
+  def ConvertToLiteralText(): Unit
+  def ConvertToMathText(): Unit
+  def ConvertToNormalText(): Unit
+  def Linearize(): Unit
+  def Remove(): Unit
 }
 
 object OMath {
@@ -65,157 +64,5 @@ object OMath {
     __obj.updateDynamic("Word.OMath_typekey")(WordDotOMath_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMath]
   }
-  @scala.inline
-  implicit class OMathOps[Self <: OMath] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignPoint(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArgIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArgIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArgSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArgSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBreaks(value: OMathBreaks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Breaks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuildUp(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildUp")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withConvertToLiteralText(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConvertToLiteralText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withConvertToMathText(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConvertToMathText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withConvertToNormalText(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConvertToNormalText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFunctions(value: OMathFunctions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Functions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJustification(value: WdOMathJc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Justification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinearize(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Linearize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNestingLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NestingLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentArg(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentArg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentCol(value: OMathMatCol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentCol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentFunction(value: OMathFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentOMath(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentOMath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentRow(value: OMathMatRow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: WdOMathType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotOMath_typekey(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMath_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

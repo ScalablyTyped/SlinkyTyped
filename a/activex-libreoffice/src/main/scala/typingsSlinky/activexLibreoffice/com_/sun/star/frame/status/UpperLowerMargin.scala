@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
   * specifies an upper and lower margin.
   * @since OOo 2.0
   */
-@js.native
 trait UpperLowerMargin extends js.Object {
   /** specifies a lower margin in 1/100th mm. */
-  var Lower: Double = js.native
+  var Lower: Double
   /** specifies a upper margin in 1/100th mm. */
-  var Upper: Double = js.native
+  var Upper: Double
 }
 
 object UpperLowerMargin {
@@ -22,25 +21,5 @@ object UpperLowerMargin {
     val __obj = js.Dynamic.literal(Lower = Lower.asInstanceOf[js.Any], Upper = Upper.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpperLowerMargin]
   }
-  @scala.inline
-  implicit class UpperLowerMarginOps[Self <: UpperLowerMargin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLower(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Lower")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpper(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Upper")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

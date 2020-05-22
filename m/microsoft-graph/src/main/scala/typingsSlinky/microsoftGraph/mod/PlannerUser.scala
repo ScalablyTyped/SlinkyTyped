@@ -4,51 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlannerUser extends Entity {
   // Read-only. Nullable. Returns the plannerTasks assigned to the user.
-  var plans: js.UndefOr[js.Array[PlannerPlan]] = js.native
+  var plans: js.UndefOr[js.Array[PlannerPlan]] = js.undefined
   // Read-only. Nullable. Returns the plannerPlans shared with the user.
-  var tasks: js.UndefOr[js.Array[PlannerTask]] = js.native
+  var tasks: js.UndefOr[js.Array[PlannerTask]] = js.undefined
 }
 
 object PlannerUser {
   @scala.inline
-  def apply(): PlannerUser = {
+  def apply(id: String = null, plans: js.Array[PlannerPlan] = null, tasks: js.Array[PlannerTask] = null): PlannerUser = {
     val __obj = js.Dynamic.literal()
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (plans != null) __obj.updateDynamic("plans")(plans.asInstanceOf[js.Any])
+    if (tasks != null) __obj.updateDynamic("tasks")(tasks.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlannerUser]
   }
-  @scala.inline
-  implicit class PlannerUserOps[Self <: PlannerUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlans(value: js.Array[PlannerPlan]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plans")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlans: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plans")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTasks(value: js.Array[PlannerTask]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTasks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

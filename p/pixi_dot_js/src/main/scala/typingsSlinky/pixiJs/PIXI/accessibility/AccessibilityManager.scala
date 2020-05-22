@@ -19,50 +19,49 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI.accessibility
   */
-@js.native
 trait AccessibilityManager extends js.Object {
   /**
     * Setting this to true will visually show the divs.
     *
     * @type {boolean}
     */
-  var debug: Boolean = js.native
+  var debug: Boolean
   /**
     * A flag
     * @type {boolean}
     * @readonly
     */
-  val isActive: Boolean = js.native
+  val isActive: Boolean
   /**
     * A flag
     * @type {boolean}
     * @readonly
     */
-  val isMobileAccessibility: Boolean = js.native
+  val isMobileAccessibility: Boolean
   /**
     * The renderer this accessibility manager works for.
     *
     * @member {PIXI.AbstractRenderer} PIXI.accessibility.AccessibilityManager#renderer
     */
-  var renderer: AbstractRenderer = js.native
+  var renderer: AbstractRenderer
   /**
     * Adjust the hit area based on the bounds of a display object
     *
     * @param {PIXI.Rectangle} hitArea - Bounds of the child
     */
-  def capHitArea(hitArea: Rectangle): Unit = js.native
+  def capHitArea(hitArea: Rectangle): Unit
   /**
     * Destroys the accessibility manager
     *
     */
-  def destroy(): Unit = js.native
+  def destroy(): Unit
   /**
     * private function that will visually add the information to the
     * accessability div
     *
     * @param {HTMLDivElement} div
     */
-  def updateDebugHTML(div: HTMLDivElement): Unit = js.native
+  def updateDebugHTML(div: HTMLDivElement): Unit
 }
 
 object AccessibilityManager {
@@ -79,55 +78,5 @@ object AccessibilityManager {
     val __obj = js.Dynamic.literal(capHitArea = js.Any.fromFunction1(capHitArea), debug = debug.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), isActive = isActive.asInstanceOf[js.Any], isMobileAccessibility = isMobileAccessibility.asInstanceOf[js.Any], renderer = renderer.asInstanceOf[js.Any], updateDebugHTML = js.Any.fromFunction1(updateDebugHTML))
     __obj.asInstanceOf[AccessibilityManager]
   }
-  @scala.inline
-  implicit class AccessibilityManagerOps[Self <: AccessibilityManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapHitArea(value: Rectangle => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capHitArea")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsMobileAccessibility(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobileAccessibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: AbstractRenderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateDebugHTML(value: HTMLDivElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDebugHTML")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

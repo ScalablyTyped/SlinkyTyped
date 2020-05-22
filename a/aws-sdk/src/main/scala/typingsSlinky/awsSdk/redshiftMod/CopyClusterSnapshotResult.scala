@@ -11,29 +11,10 @@ trait CopyClusterSnapshotResult extends js.Object {
 
 object CopyClusterSnapshotResult {
   @scala.inline
-  def apply(): CopyClusterSnapshotResult = {
+  def apply(Snapshot: Snapshot = null): CopyClusterSnapshotResult = {
     val __obj = js.Dynamic.literal()
+    if (Snapshot != null) __obj.updateDynamic("Snapshot")(Snapshot.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyClusterSnapshotResult]
   }
-  @scala.inline
-  implicit class CopyClusterSnapshotResultOps[Self <: CopyClusterSnapshotResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSnapshot(value: Snapshot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Snapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Snapshot")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

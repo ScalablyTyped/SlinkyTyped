@@ -23,16 +23,10 @@ import scala.scalajs.js.annotation._
   *     })
   *
   */
-@js.native
-trait GraphQLList[T /* <: GraphQLType */]
-  extends GraphQLInputType
-     with GraphQLNullableType
-     with GraphQLOutputType
-     with GraphQLType
-     with GraphQLWrappingType {
-  val ofType: T = js.native
-  def inspect(): String = js.native
-  def toJSON(): String = js.native
+trait GraphQLList[T /* <: GraphQLType */] extends js.Object {
+  val ofType: T
+  def inspect(): String
+  def toJSON(): String
 }
 
 @JSImport("graphql/type/definition", "GraphQLList")

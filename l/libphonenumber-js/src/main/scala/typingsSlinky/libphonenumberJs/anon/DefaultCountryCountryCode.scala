@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultCountryCountryCode extends js.Object {
-  var defaultCountry: js.UndefOr[CountryCode] = js.native
+  var defaultCountry: js.UndefOr[CountryCode] = js.undefined
 }
 
 object DefaultCountryCountryCode {
   @scala.inline
-  def apply(): DefaultCountryCountryCode = {
+  def apply(defaultCountry: CountryCode = null): DefaultCountryCountryCode = {
     val __obj = js.Dynamic.literal()
+    if (defaultCountry != null) __obj.updateDynamic("defaultCountry")(defaultCountry.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultCountryCountryCode]
   }
-  @scala.inline
-  implicit class DefaultCountryCountryCodeOps[Self <: DefaultCountryCountryCode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultCountry(value: CountryCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCountry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCountry")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

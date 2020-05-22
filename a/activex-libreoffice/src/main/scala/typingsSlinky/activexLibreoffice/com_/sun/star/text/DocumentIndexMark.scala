@@ -8,14 +8,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is a {@link TextRange} which is explicitly marked as an index entry for a {@link DocumentIndex} . */
-@js.native
 trait DocumentIndexMark extends BaseIndexMark {
   /** determines if this entry is a main entry. In a document index this entry will be emphasized by assigning a character style to it. */
-  var IsMainEntry: Boolean = js.native
+  var IsMainEntry: Boolean
   /** contains the primary key of the index entry. It is used to build a hierarchical document index. */
-  var PrimaryKey: String = js.native
+  var PrimaryKey: String
   /** contains the secondary key of the index entry. It is used to build a hierarchical document index. */
-  var SecondaryKey: String = js.native
+  var SecondaryKey: String
 }
 
 object DocumentIndexMark {
@@ -41,31 +40,5 @@ object DocumentIndexMark {
     val __obj = js.Dynamic.literal(AlternativeText = AlternativeText.asInstanceOf[js.Any], Anchor = Anchor.asInstanceOf[js.Any], AnchorType = AnchorType.asInstanceOf[js.Any], AnchorTypes = AnchorTypes.asInstanceOf[js.Any], IsMainEntry = IsMainEntry.asInstanceOf[js.Any], PrimaryKey = PrimaryKey.asInstanceOf[js.Any], SecondaryKey = SecondaryKey.asInstanceOf[js.Any], TextWrap = TextWrap.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener))
     __obj.asInstanceOf[DocumentIndexMark]
   }
-  @scala.inline
-  implicit class DocumentIndexMarkOps[Self <: DocumentIndexMark] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsMainEntry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMainEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrimaryKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecondaryKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

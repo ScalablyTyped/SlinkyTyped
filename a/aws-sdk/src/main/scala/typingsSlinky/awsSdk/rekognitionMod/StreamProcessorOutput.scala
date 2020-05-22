@@ -14,29 +14,10 @@ trait StreamProcessorOutput extends js.Object {
 
 object StreamProcessorOutput {
   @scala.inline
-  def apply(): StreamProcessorOutput = {
+  def apply(KinesisDataStream: KinesisDataStream = null): StreamProcessorOutput = {
     val __obj = js.Dynamic.literal()
+    if (KinesisDataStream != null) __obj.updateDynamic("KinesisDataStream")(KinesisDataStream.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamProcessorOutput]
   }
-  @scala.inline
-  implicit class StreamProcessorOutputOps[Self <: StreamProcessorOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKinesisDataStream(value: KinesisDataStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisDataStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisDataStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisDataStream")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

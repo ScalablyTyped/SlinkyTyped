@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Measure extends js.Object {
-  var active: js.UndefOr[Boolean] = js.native
-  var aggregation: js.UndefOr[String] = js.native
-  var availableAggregations: js.UndefOr[js.Array[String]] = js.native
-  var caption: js.UndefOr[String] = js.native
-  var format: js.UndefOr[String] = js.native
-  var formula: js.UndefOr[String] = js.native
-  var grandTotalCaption: js.UndefOr[String] = js.native
-  var uniqueName: js.UndefOr[String] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
+  var aggregation: js.UndefOr[String] = js.undefined
+  var availableAggregations: js.UndefOr[js.Array[String]] = js.undefined
+  var caption: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String] = js.undefined
+  var formula: js.UndefOr[String] = js.undefined
+  var grandTotalCaption: js.UndefOr[String] = js.undefined
+  var uniqueName: js.UndefOr[String] = js.undefined
 }
 
 object Measure {
   @scala.inline
-  def apply(): Measure = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    aggregation: String = null,
+    availableAggregations: js.Array[String] = null,
+    caption: String = null,
+    format: String = null,
+    formula: String = null,
+    grandTotalCaption: String = null,
+    uniqueName: String = null
+  ): Measure = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (aggregation != null) __obj.updateDynamic("aggregation")(aggregation.asInstanceOf[js.Any])
+    if (availableAggregations != null) __obj.updateDynamic("availableAggregations")(availableAggregations.asInstanceOf[js.Any])
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (formula != null) __obj.updateDynamic("formula")(formula.asInstanceOf[js.Any])
+    if (grandTotalCaption != null) __obj.updateDynamic("grandTotalCaption")(grandTotalCaption.asInstanceOf[js.Any])
+    if (uniqueName != null) __obj.updateDynamic("uniqueName")(uniqueName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Measure]
   }
-  @scala.inline
-  implicit class MeasureOps[Self <: Measure] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAggregation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailableAggregations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableAggregations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableAggregations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableAggregations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormula(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormula: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrandTotalCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grandTotalCaption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrandTotalCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grandTotalCaption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUniqueName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUniqueName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

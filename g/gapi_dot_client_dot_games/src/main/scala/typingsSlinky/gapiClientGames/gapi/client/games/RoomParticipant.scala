@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RoomParticipant extends js.Object {
   /** True if this participant was auto-matched with the requesting player. */
-  var autoMatched: js.UndefOr[Boolean] = js.native
+  var autoMatched: js.UndefOr[Boolean] = js.undefined
   /** Information about a player that has been anonymously auto-matched against the requesting player. (Either player or autoMatchedPlayer will be set.) */
-  var autoMatchedPlayer: js.UndefOr[AnonymousPlayer] = js.native
+  var autoMatchedPlayer: js.UndefOr[AnonymousPlayer] = js.undefined
   /** The capabilities which can be used when communicating with this participant. */
-  var capabilities: js.UndefOr[js.Array[String]] = js.native
+  var capabilities: js.UndefOr[js.Array[String]] = js.undefined
   /** Client address for the participant. */
-  var clientAddress: js.UndefOr[RoomClientAddress] = js.native
+  var clientAddress: js.UndefOr[RoomClientAddress] = js.undefined
   /** True if this participant is in the fully connected set of peers in the room. */
-  var connected: js.UndefOr[Boolean] = js.native
+  var connected: js.UndefOr[Boolean] = js.undefined
   /** An identifier for the participant in the scope of the room. Cannot be used to identify a player across rooms or in other contexts. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Uniquely identifies the type of this resource. Value is always the fixed string games#roomParticipant. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /**
     * The reason the participant left the room; populated if the participant status is PARTICIPANT_LEFT.
     * Possible values are:
@@ -31,12 +30,12 @@ trait RoomParticipant extends js.Object {
     * - "TIMEOUT" - The client timed out while waiting for players to join and connect.
     * - "PRESENCE_FAILURE" - The client's XMPP connection ended abruptly.
     */
-  var leaveReason: js.UndefOr[String] = js.native
+  var leaveReason: js.UndefOr[String] = js.undefined
   /**
     * Information about the player. Not populated if this player was anonymously auto-matched against the requesting player. (Either player or
     * autoMatchedPlayer will be set.)
     */
-  var player: js.UndefOr[Player] = js.native
+  var player: js.UndefOr[Player] = js.undefined
   /**
     * The status of the participant with respect to the room.
     * Possible values are:
@@ -45,142 +44,35 @@ trait RoomParticipant extends js.Object {
     * - "PARTICIPANT_DECLINED" - The participant declined an invitation to join the room.
     * - "PARTICIPANT_LEFT" - The participant joined the room and then left it.
     */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[String] = js.undefined
 }
 
 object RoomParticipant {
   @scala.inline
-  def apply(): RoomParticipant = {
+  def apply(
+    autoMatched: js.UndefOr[Boolean] = js.undefined,
+    autoMatchedPlayer: AnonymousPlayer = null,
+    capabilities: js.Array[String] = null,
+    clientAddress: RoomClientAddress = null,
+    connected: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    kind: String = null,
+    leaveReason: String = null,
+    player: Player = null,
+    status: String = null
+  ): RoomParticipant = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoMatched)) __obj.updateDynamic("autoMatched")(autoMatched.get.asInstanceOf[js.Any])
+    if (autoMatchedPlayer != null) __obj.updateDynamic("autoMatchedPlayer")(autoMatchedPlayer.asInstanceOf[js.Any])
+    if (capabilities != null) __obj.updateDynamic("capabilities")(capabilities.asInstanceOf[js.Any])
+    if (clientAddress != null) __obj.updateDynamic("clientAddress")(clientAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(connected)) __obj.updateDynamic("connected")(connected.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (leaveReason != null) __obj.updateDynamic("leaveReason")(leaveReason.asInstanceOf[js.Any])
+    if (player != null) __obj.updateDynamic("player")(player.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoomParticipant]
   }
-  @scala.inline
-  implicit class RoomParticipantOps[Self <: RoomParticipant] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoMatched(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMatched")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoMatched: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMatched")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoMatchedPlayer(value: AnonymousPlayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMatchedPlayer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoMatchedPlayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMatchedPlayer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapabilities(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapabilities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientAddress(value: RoomClientAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeaveReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeaveReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayer(value: Player): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a service that provides access to the settings of a text module. */
-@js.native
 trait GlobalSettings
   extends XPrintSettingsSupplier
      with XViewSettingsSupplier

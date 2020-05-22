@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
-import typingsSlinky.grpc.mod.GrpcObject
+import typingsSlinky.grpcGrpcJs.makeClientMod.GrpcObject
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Root
 import scala.scalajs.js

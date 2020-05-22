@@ -2,6 +2,8 @@ package typingsSlinky.officeUiFabricReact.selectionZoneMod
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
@@ -9,30 +11,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISelectionZoneProps extends ClassAttributes[SelectionZone] {
   /**
     * Reference to the component interface.
     */
-  var componentRef: js.UndefOr[js.Function0[Unit]] = js.native
+  var componentRef: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * If true, disables automatic selection on input elements.
     */
-  var disableAutoSelectOnInputElements: js.UndefOr[Boolean] = js.native
+  var disableAutoSelectOnInputElements: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, modal selection is enabled on touch event.
     */
-  var enterModalOnTouch: js.UndefOr[Boolean] = js.native
+  var enterModalOnTouch: js.UndefOr[Boolean] = js.undefined
   /**
     * Determines if an item is selected on focus.
     *
     * @defaultvalue true
     */
-  var isSelectedOnFocus: js.UndefOr[Boolean] = js.native
+  var isSelectedOnFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * @deprecated No longer in use, focus is now managed by {@link FocusZone}.
     */
-  var layout: js.UndefOr[js.Object] = js.native
+  var layout: js.UndefOr[js.Object] = js.undefined
   /**
     * Optional callback for when an
     * item's contextual menu action occurs.
@@ -44,7 +45,7 @@ trait ISelectionZoneProps extends ClassAttributes[SelectionZone] {
       /* ev */ js.UndefOr[Event], 
       Unit | Boolean
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Optional callback for when an item is
     * invoked via ENTER or double-click.
@@ -56,155 +57,53 @@ trait ISelectionZoneProps extends ClassAttributes[SelectionZone] {
       /* ev */ js.UndefOr[Event], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Required {@link ISelection} instance bound to the {@link SelectionZone}.
     */
-  var selection: ISelection[IObjectWithKey] = js.native
+  var selection: ISelection[IObjectWithKey]
   /**
     * The mode of Selection, where the value is one of
     * 'none', 'single', or 'multiple'.
     *
     * @defaultvalue {@link SelectionMode.multiple}
     */
-  var selectionMode: js.UndefOr[SelectionMode] = js.native
+  var selectionMode: js.UndefOr[SelectionMode] = js.undefined
   /**
     * If true, selection is preserved on outer click.
     */
-  var selectionPreservedOnEmptyClick: js.UndefOr[Boolean] = js.native
+  var selectionPreservedOnEmptyClick: js.UndefOr[Boolean] = js.undefined
 }
 
 object ISelectionZoneProps {
   @scala.inline
-  def apply(selection: ISelection[IObjectWithKey]): ISelectionZoneProps = {
+  def apply(
+    selection: ISelection[IObjectWithKey],
+    componentRef: () => Unit = null,
+    disableAutoSelectOnInputElements: js.UndefOr[Boolean] = js.undefined,
+    enterModalOnTouch: js.UndefOr[Boolean] = js.undefined,
+    isSelectedOnFocus: js.UndefOr[Boolean] = js.undefined,
+    key: Key = null,
+    layout: js.Object = null,
+    onItemContextMenu: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit | Boolean = null,
+    onItemInvoked: (/* item */ js.UndefOr[IObjectWithKey], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit = null,
+    ref: js.UndefOr[Null | LegacyRef[SelectionZone]] = js.undefined,
+    selectionMode: SelectionMode = null,
+    selectionPreservedOnEmptyClick: js.UndefOr[Boolean] = js.undefined
+  ): ISelectionZoneProps = {
     val __obj = js.Dynamic.literal(selection = selection.asInstanceOf[js.Any])
+    if (componentRef != null) __obj.updateDynamic("componentRef")(js.Any.fromFunction0(componentRef))
+    if (!js.isUndefined(disableAutoSelectOnInputElements)) __obj.updateDynamic("disableAutoSelectOnInputElements")(disableAutoSelectOnInputElements.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enterModalOnTouch)) __obj.updateDynamic("enterModalOnTouch")(enterModalOnTouch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSelectedOnFocus)) __obj.updateDynamic("isSelectedOnFocus")(isSelectedOnFocus.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (onItemContextMenu != null) __obj.updateDynamic("onItemContextMenu")(js.Any.fromFunction3(onItemContextMenu))
+    if (onItemInvoked != null) __obj.updateDynamic("onItemInvoked")(js.Any.fromFunction3(onItemInvoked))
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectionPreservedOnEmptyClick)) __obj.updateDynamic("selectionPreservedOnEmptyClick")(selectionPreservedOnEmptyClick.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISelectionZoneProps]
   }
-  @scala.inline
-  implicit class ISelectionZonePropsOps[Self <: ISelectionZoneProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelection(value: ISelection[IObjectWithKey]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentRef(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComponentRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAutoSelectOnInputElements(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoSelectOnInputElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAutoSelectOnInputElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoSelectOnInputElements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterModalOnTouch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterModalOnTouch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterModalOnTouch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterModalOnTouch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSelectedOnFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelectedOnFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSelectedOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelectedOnFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemContextMenu(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit | Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemInvoked(
-      value: (/* item */ js.UndefOr[IObjectWithKey], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemInvoked")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemInvoked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemInvoked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: SelectionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionPreservedOnEmptyClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionPreservedOnEmptyClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionPreservedOnEmptyClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionPreservedOnEmptyClick")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

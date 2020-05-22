@@ -4,30 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigurationParamWithUrl extends ConfigurationParam {
-  var url: String = js.native
+  var url: String
 }
 
 object ConfigurationParamWithUrl {
   @scala.inline
-  def apply(url: String): ConfigurationParamWithUrl = {
+  def apply(url: String, credential: String = null, username: String = null): ConfigurationParamWithUrl = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (credential != null) __obj.updateDynamic("credential")(credential.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationParamWithUrl]
   }
-  @scala.inline
-  implicit class ConfigurationParamWithUrlOps[Self <: ConfigurationParamWithUrl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

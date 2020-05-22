@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ElementAccessExpression
   extends MemberExpression
-     with BindingOrAssignmentElement
      with BindingOrAssignmentElementTarget
-     with DeclarationName {
+     with DeclarationName
+     with _BindingOrAssignmentElement {
   var argumentExpression: Expression = js.native
   var expression: LeftHandSideExpression = js.native
   @JSName("kind")

@@ -46,125 +46,28 @@ trait AudioCodecSettings extends js.Object {
 
 object AudioCodecSettings {
   @scala.inline
-  def apply(): AudioCodecSettings = {
+  def apply(
+    AacSettings: AacSettings = null,
+    Ac3Settings: Ac3Settings = null,
+    AiffSettings: AiffSettings = null,
+    Codec: AudioCodec = null,
+    Eac3AtmosSettings: Eac3AtmosSettings = null,
+    Eac3Settings: Eac3Settings = null,
+    Mp2Settings: Mp2Settings = null,
+    Mp3Settings: Mp3Settings = null,
+    WavSettings: WavSettings = null
+  ): AudioCodecSettings = {
     val __obj = js.Dynamic.literal()
+    if (AacSettings != null) __obj.updateDynamic("AacSettings")(AacSettings.asInstanceOf[js.Any])
+    if (Ac3Settings != null) __obj.updateDynamic("Ac3Settings")(Ac3Settings.asInstanceOf[js.Any])
+    if (AiffSettings != null) __obj.updateDynamic("AiffSettings")(AiffSettings.asInstanceOf[js.Any])
+    if (Codec != null) __obj.updateDynamic("Codec")(Codec.asInstanceOf[js.Any])
+    if (Eac3AtmosSettings != null) __obj.updateDynamic("Eac3AtmosSettings")(Eac3AtmosSettings.asInstanceOf[js.Any])
+    if (Eac3Settings != null) __obj.updateDynamic("Eac3Settings")(Eac3Settings.asInstanceOf[js.Any])
+    if (Mp2Settings != null) __obj.updateDynamic("Mp2Settings")(Mp2Settings.asInstanceOf[js.Any])
+    if (Mp3Settings != null) __obj.updateDynamic("Mp3Settings")(Mp3Settings.asInstanceOf[js.Any])
+    if (WavSettings != null) __obj.updateDynamic("WavSettings")(WavSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioCodecSettings]
   }
-  @scala.inline
-  implicit class AudioCodecSettingsOps[Self <: AudioCodecSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAacSettings(value: AacSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AacSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAacSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AacSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAc3Settings(value: Ac3Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ac3Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAc3Settings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ac3Settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAiffSettings(value: AiffSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AiffSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAiffSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AiffSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodec(value: AudioCodec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Codec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Codec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEac3AtmosSettings(value: Eac3AtmosSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Eac3AtmosSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEac3AtmosSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Eac3AtmosSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEac3Settings(value: Eac3Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Eac3Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEac3Settings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Eac3Settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMp2Settings(value: Mp2Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mp2Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMp2Settings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mp2Settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMp3Settings(value: Mp3Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mp3Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMp3Settings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mp3Settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWavSettings(value: WavSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WavSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWavSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WavSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

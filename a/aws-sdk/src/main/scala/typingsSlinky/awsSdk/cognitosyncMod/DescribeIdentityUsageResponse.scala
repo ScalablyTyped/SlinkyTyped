@@ -14,29 +14,10 @@ trait DescribeIdentityUsageResponse extends js.Object {
 
 object DescribeIdentityUsageResponse {
   @scala.inline
-  def apply(): DescribeIdentityUsageResponse = {
+  def apply(IdentityUsage: IdentityUsage = null): DescribeIdentityUsageResponse = {
     val __obj = js.Dynamic.literal()
+    if (IdentityUsage != null) __obj.updateDynamic("IdentityUsage")(IdentityUsage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeIdentityUsageResponse]
   }
-  @scala.inline
-  implicit class DescribeIdentityUsageResponseOps[Self <: DescribeIdentityUsageResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentityUsage(value: IdentityUsage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityUsage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityUsage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

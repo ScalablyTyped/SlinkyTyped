@@ -30,83 +30,20 @@ trait S3Storage extends js.Object {
 
 object S3Storage {
   @scala.inline
-  def apply(): S3Storage = {
+  def apply(
+    AWSAccessKeyId: String = null,
+    Bucket: String = null,
+    Prefix: String = null,
+    UploadPolicy: _Blob = null,
+    UploadPolicySignature: String = null
+  ): S3Storage = {
     val __obj = js.Dynamic.literal()
+    if (AWSAccessKeyId != null) __obj.updateDynamic("AWSAccessKeyId")(AWSAccessKeyId.asInstanceOf[js.Any])
+    if (Bucket != null) __obj.updateDynamic("Bucket")(Bucket.asInstanceOf[js.Any])
+    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
+    if (UploadPolicy != null) __obj.updateDynamic("UploadPolicy")(UploadPolicy.asInstanceOf[js.Any])
+    if (UploadPolicySignature != null) __obj.updateDynamic("UploadPolicySignature")(UploadPolicySignature.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3Storage]
   }
-  @scala.inline
-  implicit class S3StorageOps[Self <: S3Storage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAWSAccessKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AWSAccessKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAWSAccessKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AWSAccessKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadPolicyUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUploadPolicy(value: _Blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadPolicySignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadPolicySignature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadPolicySignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadPolicySignature")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

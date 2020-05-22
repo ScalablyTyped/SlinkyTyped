@@ -46,125 +46,28 @@ trait SplunkDestinationUpdate extends js.Object {
 
 object SplunkDestinationUpdate {
   @scala.inline
-  def apply(): SplunkDestinationUpdate = {
+  def apply(
+    CloudWatchLoggingOptions: CloudWatchLoggingOptions = null,
+    HECAcknowledgmentTimeoutInSeconds: js.UndefOr[HECAcknowledgmentTimeoutInSeconds] = js.undefined,
+    HECEndpoint: HECEndpoint = null,
+    HECEndpointType: HECEndpointType = null,
+    HECToken: HECToken = null,
+    ProcessingConfiguration: ProcessingConfiguration = null,
+    RetryOptions: SplunkRetryOptions = null,
+    S3BackupMode: SplunkS3BackupMode = null,
+    S3Update: S3DestinationUpdate = null
+  ): SplunkDestinationUpdate = {
     val __obj = js.Dynamic.literal()
+    if (CloudWatchLoggingOptions != null) __obj.updateDynamic("CloudWatchLoggingOptions")(CloudWatchLoggingOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(HECAcknowledgmentTimeoutInSeconds)) __obj.updateDynamic("HECAcknowledgmentTimeoutInSeconds")(HECAcknowledgmentTimeoutInSeconds.get.asInstanceOf[js.Any])
+    if (HECEndpoint != null) __obj.updateDynamic("HECEndpoint")(HECEndpoint.asInstanceOf[js.Any])
+    if (HECEndpointType != null) __obj.updateDynamic("HECEndpointType")(HECEndpointType.asInstanceOf[js.Any])
+    if (HECToken != null) __obj.updateDynamic("HECToken")(HECToken.asInstanceOf[js.Any])
+    if (ProcessingConfiguration != null) __obj.updateDynamic("ProcessingConfiguration")(ProcessingConfiguration.asInstanceOf[js.Any])
+    if (RetryOptions != null) __obj.updateDynamic("RetryOptions")(RetryOptions.asInstanceOf[js.Any])
+    if (S3BackupMode != null) __obj.updateDynamic("S3BackupMode")(S3BackupMode.asInstanceOf[js.Any])
+    if (S3Update != null) __obj.updateDynamic("S3Update")(S3Update.asInstanceOf[js.Any])
     __obj.asInstanceOf[SplunkDestinationUpdate]
   }
-  @scala.inline
-  implicit class SplunkDestinationUpdateOps[Self <: SplunkDestinationUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudWatchLoggingOptions(value: CloudWatchLoggingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLoggingOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchLoggingOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLoggingOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHECAcknowledgmentTimeoutInSeconds(value: HECAcknowledgmentTimeoutInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HECAcknowledgmentTimeoutInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHECAcknowledgmentTimeoutInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HECAcknowledgmentTimeoutInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHECEndpoint(value: HECEndpoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HECEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHECEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HECEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHECEndpointType(value: HECEndpointType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HECEndpointType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHECEndpointType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HECEndpointType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHECToken(value: HECToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HECToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHECToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HECToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingConfiguration(value: ProcessingConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessingConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryOptions(value: SplunkRetryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3BackupMode(value: SplunkS3BackupMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BackupMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3BackupMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BackupMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3Update(value: S3DestinationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Update: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

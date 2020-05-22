@@ -27,71 +27,19 @@ trait PutObjectLockConfigurationRequest extends js.Object {
 
 object PutObjectLockConfigurationRequest {
   @scala.inline
-  def apply(Bucket: BucketName): PutObjectLockConfigurationRequest = {
+  def apply(
+    Bucket: BucketName,
+    ContentMD5: ContentMD5 = null,
+    ObjectLockConfiguration: ObjectLockConfiguration = null,
+    RequestPayer: RequestPayer = null,
+    Token: ObjectLockToken = null
+  ): PutObjectLockConfigurationRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any])
+    if (ContentMD5 != null) __obj.updateDynamic("ContentMD5")(ContentMD5.asInstanceOf[js.Any])
+    if (ObjectLockConfiguration != null) __obj.updateDynamic("ObjectLockConfiguration")(ObjectLockConfiguration.asInstanceOf[js.Any])
+    if (RequestPayer != null) __obj.updateDynamic("RequestPayer")(RequestPayer.asInstanceOf[js.Any])
+    if (Token != null) __obj.updateDynamic("Token")(Token.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutObjectLockConfigurationRequest]
   }
-  @scala.inline
-  implicit class PutObjectLockConfigurationRequestOps[Self <: PutObjectLockConfigurationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentMD5(value: ContentMD5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLockConfiguration(value: ObjectLockConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestPayer(value: RequestPayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestPayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: ObjectLockToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

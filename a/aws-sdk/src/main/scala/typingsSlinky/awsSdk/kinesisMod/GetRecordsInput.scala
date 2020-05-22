@@ -18,35 +18,10 @@ trait GetRecordsInput extends js.Object {
 
 object GetRecordsInput {
   @scala.inline
-  def apply(ShardIterator: ShardIterator): GetRecordsInput = {
+  def apply(ShardIterator: ShardIterator, Limit: js.UndefOr[GetRecordsInputLimit] = js.undefined): GetRecordsInput = {
     val __obj = js.Dynamic.literal(ShardIterator = ShardIterator.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRecordsInput]
   }
-  @scala.inline
-  implicit class GetRecordsInputOps[Self <: GetRecordsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShardIterator(value: ShardIterator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShardIterator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLimit(value: GetRecordsInputLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

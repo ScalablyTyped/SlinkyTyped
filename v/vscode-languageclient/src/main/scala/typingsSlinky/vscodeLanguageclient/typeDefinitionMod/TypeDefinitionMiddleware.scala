@@ -10,7 +10,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeDefinitionMiddleware extends js.Object {
   var provideTypeDefinition: js.UndefOr[
     js.ThisFunction4[
@@ -21,43 +20,24 @@ trait TypeDefinitionMiddleware extends js.Object {
       /* next */ ProvideTypeDefinitionSignature, 
       ProviderResult[Definition | js.Array[DefinitionLink]]
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object TypeDefinitionMiddleware {
   @scala.inline
-  def apply(): TypeDefinitionMiddleware = {
+  def apply(
+    provideTypeDefinition: js.ThisFunction4[
+      /* this */ Unit, 
+      /* document */ TextDocument, 
+      /* position */ Position, 
+      /* token */ CancellationToken, 
+      /* next */ ProvideTypeDefinitionSignature, 
+      ProviderResult[Definition | js.Array[DefinitionLink]]
+    ] = null
+  ): TypeDefinitionMiddleware = {
     val __obj = js.Dynamic.literal()
+    if (provideTypeDefinition != null) __obj.updateDynamic("provideTypeDefinition")(provideTypeDefinition.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeDefinitionMiddleware]
   }
-  @scala.inline
-  implicit class TypeDefinitionMiddlewareOps[Self <: TypeDefinitionMiddleware] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvideTypeDefinition(
-      value: js.ThisFunction4[
-          /* this */ Unit, 
-          /* document */ TextDocument, 
-          /* position */ Position, 
-          /* token */ CancellationToken, 
-          /* next */ ProvideTypeDefinitionSignature, 
-          ProviderResult[Definition | js.Array[DefinitionLink]]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideTypeDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvideTypeDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideTypeDefinition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

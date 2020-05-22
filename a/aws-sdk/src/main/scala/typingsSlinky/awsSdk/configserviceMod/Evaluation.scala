@@ -34,54 +34,12 @@ object Evaluation {
     ComplianceResourceId: BaseResourceId,
     ComplianceResourceType: StringWithCharLimit256,
     ComplianceType: ComplianceType,
-    OrderingTimestamp: js.Date
+    OrderingTimestamp: js.Date,
+    Annotation: StringWithCharLimit256 = null
   ): Evaluation = {
     val __obj = js.Dynamic.literal(ComplianceResourceId = ComplianceResourceId.asInstanceOf[js.Any], ComplianceResourceType = ComplianceResourceType.asInstanceOf[js.Any], ComplianceType = ComplianceType.asInstanceOf[js.Any], OrderingTimestamp = OrderingTimestamp.asInstanceOf[js.Any])
+    if (Annotation != null) __obj.updateDynamic("Annotation")(Annotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[Evaluation]
   }
-  @scala.inline
-  implicit class EvaluationOps[Self <: Evaluation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplianceResourceId(value: BaseResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplianceResourceType(value: StringWithCharLimit256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplianceType(value: ComplianceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrderingTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderingTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnnotation(value: StringWithCharLimit256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Annotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Annotation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

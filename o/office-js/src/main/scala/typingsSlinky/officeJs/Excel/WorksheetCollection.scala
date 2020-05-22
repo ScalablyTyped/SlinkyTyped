@@ -98,6 +98,15 @@ trait WorksheetCollection extends ClientObject {
   val onFormatChanged: EventHandlers[WorksheetFormatChangedEventArgs] = js.native
   /**
     *
+    * Occurs when the hidden state of one or more rows has changed on a specific worksheet.
+    *
+    * [Api set: ExcelApi 1.11]
+    *
+    * @eventproperty
+    */
+  val onRowHiddenChanged: EventHandlers[WorksheetRowHiddenChangedEventArgs] = js.native
+  /**
+    *
     * Occurs when one or more rows have been sorted. This happens as the result of a top-to-bottom sort operation.
     *
     * [Api set: ExcelApi 1.10]

@@ -22,41 +22,10 @@ trait VolumeSpecification extends js.Object {
 
 object VolumeSpecification {
   @scala.inline
-  def apply(SizeInGB: Integer, VolumeType: String): VolumeSpecification = {
+  def apply(SizeInGB: Integer, VolumeType: String, Iops: js.UndefOr[Integer] = js.undefined): VolumeSpecification = {
     val __obj = js.Dynamic.literal(SizeInGB = SizeInGB.asInstanceOf[js.Any], VolumeType = VolumeType.asInstanceOf[js.Any])
+    if (!js.isUndefined(Iops)) __obj.updateDynamic("Iops")(Iops.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VolumeSpecification]
   }
-  @scala.inline
-  implicit class VolumeSpecificationOps[Self <: VolumeSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSizeInGB(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeInGB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIops(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Iops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Iops")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

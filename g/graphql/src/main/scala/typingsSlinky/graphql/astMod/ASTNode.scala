@@ -1,5 +1,48 @@
 package typingsSlinky.graphql.astMod
 
+import typingsSlinky.graphql.graphqlStrings.Argument
+import typingsSlinky.graphql.graphqlStrings.BooleanValue
+import typingsSlinky.graphql.graphqlStrings.Directive
+import typingsSlinky.graphql.graphqlStrings.DirectiveDefinition
+import typingsSlinky.graphql.graphqlStrings.Document
+import typingsSlinky.graphql.graphqlStrings.EnumTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.EnumTypeExtension
+import typingsSlinky.graphql.graphqlStrings.EnumValue
+import typingsSlinky.graphql.graphqlStrings.EnumValueDefinition
+import typingsSlinky.graphql.graphqlStrings.FieldDefinition
+import typingsSlinky.graphql.graphqlStrings.Field_
+import typingsSlinky.graphql.graphqlStrings.FloatValue
+import typingsSlinky.graphql.graphqlStrings.FragmentDefinition
+import typingsSlinky.graphql.graphqlStrings.FragmentSpread
+import typingsSlinky.graphql.graphqlStrings.InlineFragment
+import typingsSlinky.graphql.graphqlStrings.InputObjectTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.InputObjectTypeExtension
+import typingsSlinky.graphql.graphqlStrings.InputValueDefinition
+import typingsSlinky.graphql.graphqlStrings.IntValue
+import typingsSlinky.graphql.graphqlStrings.InterfaceTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.InterfaceTypeExtension
+import typingsSlinky.graphql.graphqlStrings.ListType
+import typingsSlinky.graphql.graphqlStrings.ListValue
+import typingsSlinky.graphql.graphqlStrings.Name
+import typingsSlinky.graphql.graphqlStrings.NamedType
+import typingsSlinky.graphql.graphqlStrings.NonNullType
+import typingsSlinky.graphql.graphqlStrings.NullValue
+import typingsSlinky.graphql.graphqlStrings.ObjectField
+import typingsSlinky.graphql.graphqlStrings.ObjectTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.ObjectTypeExtension
+import typingsSlinky.graphql.graphqlStrings.ObjectValue
+import typingsSlinky.graphql.graphqlStrings.OperationDefinition
+import typingsSlinky.graphql.graphqlStrings.OperationTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.ScalarTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.ScalarTypeExtension
+import typingsSlinky.graphql.graphqlStrings.SchemaDefinition
+import typingsSlinky.graphql.graphqlStrings.SchemaExtension
+import typingsSlinky.graphql.graphqlStrings.SelectionSet
+import typingsSlinky.graphql.graphqlStrings.StringValue
+import typingsSlinky.graphql.graphqlStrings.UnionTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.UnionTypeExtension
+import typingsSlinky.graphql.graphqlStrings.Variable
+import typingsSlinky.graphql.graphqlStrings.VariableDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,90 +96,492 @@ trait ASTNode extends js.Object
 
 object ASTNode {
   @scala.inline
-  implicit def apply(value: ArgumentNode): ASTNode = value.asInstanceOf[ASTNode]
+  def EnumTypeExtensionNode(
+    kind: EnumTypeExtension,
+    name: NameNode,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    values: js.Array[EnumValueDefinitionNode] = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: BooleanValueNode): ASTNode = value.asInstanceOf[ASTNode]
+  def StringValueNode(kind: StringValue, value: String, block: js.UndefOr[Boolean] = js.undefined, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.get.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: DirectiveDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def SelectionSetNode(kind: SelectionSet, selections: js.Array[SelectionNode], loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: DirectiveNode): ASTNode = value.asInstanceOf[ASTNode]
+  def EnumValueNode(kind: EnumValue, value: String, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: DocumentNode): ASTNode = value.asInstanceOf[ASTNode]
+  def DirectiveNode(kind: Directive, name: NameNode, arguments: js.Array[ArgumentNode] = null, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: EnumTypeDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def UnionTypeExtensionNode(
+    kind: UnionTypeExtension,
+    name: NameNode,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    types: js.Array[NamedTypeNode] = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: EnumTypeExtensionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ObjectValueNode(fields: js.Array[ObjectFieldNode], kind: ObjectValue, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: EnumValueDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def BooleanValueNode(kind: BooleanValue, value: Boolean, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: EnumValueNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ListValueNode(kind: ListValue, values: js.Array[ValueNode], loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: FieldDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def EnumValueDefinitionNode(
+    kind: EnumValueDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: FieldNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ObjectTypeExtensionNode(
+    kind: ObjectTypeExtension,
+    name: NameNode,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[FieldDefinitionNode] = null,
+    interfaces: js.Array[NamedTypeNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (interfaces != null) __obj.updateDynamic("interfaces")(interfaces.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: FloatValueNode): ASTNode = value.asInstanceOf[ASTNode]
+  def FragmentDefinitionNode(
+    kind: FragmentDefinition,
+    name: NameNode,
+    selectionSet: SelectionSetNode,
+    typeCondition: NamedTypeNode,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    variableDefinitions: js.Array[VariableDefinitionNode] = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selectionSet = selectionSet.asInstanceOf[js.Any], typeCondition = typeCondition.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (variableDefinitions != null) __obj.updateDynamic("variableDefinitions")(variableDefinitions.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: FragmentDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def IntValueNode(kind: IntValue, value: String, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: FragmentSpreadNode): ASTNode = value.asInstanceOf[ASTNode]
+  def NullValueNode(kind: NullValue, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: InlineFragmentNode): ASTNode = value.asInstanceOf[ASTNode]
+  def FragmentSpreadNode(
+    kind: FragmentSpread,
+    name: NameNode,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: InputObjectTypeDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def VariableDefinitionNode(
+    kind: VariableDefinition,
+    `type`: TypeNode,
+    variable: VariableNode,
+    defaultValue: ValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], variable = variable.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: InputObjectTypeExtensionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ListTypeNode(kind: ListType, `type`: TypeNode, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: InputValueDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def FieldNode(
+    kind: Field_,
+    name: NameNode,
+    alias: NameNode = null,
+    arguments: js.Array[ArgumentNode] = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    selectionSet: SelectionSetNode = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (selectionSet != null) __obj.updateDynamic("selectionSet")(selectionSet.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: IntValueNode): ASTNode = value.asInstanceOf[ASTNode]
+  def DocumentNode(definitions: js.Array[DefinitionNode], kind: Document, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(definitions = definitions.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: InterfaceTypeDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def EnumTypeDefinitionNode(
+    kind: EnumTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    values: js.Array[EnumValueDefinitionNode] = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: InterfaceTypeExtensionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def FloatValueNode(kind: FloatValue, value: String, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: ListTypeNode): ASTNode = value.asInstanceOf[ASTNode]
+  def OperationDefinitionNode(
+    kind: OperationDefinition,
+    operation: OperationTypeNode,
+    selectionSet: SelectionSetNode,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    name: NameNode = null,
+    variableDefinitions: js.Array[VariableDefinitionNode] = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any], selectionSet = selectionSet.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (variableDefinitions != null) __obj.updateDynamic("variableDefinitions")(variableDefinitions.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: ListValueNode): ASTNode = value.asInstanceOf[ASTNode]
+  def DirectiveDefinitionNode(
+    kind: DirectiveDefinition,
+    locations: js.Array[NameNode],
+    name: NameNode,
+    repeatable: Boolean,
+    arguments: js.Array[InputValueDefinitionNode] = null,
+    description: StringValueNode = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], locations = locations.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], repeatable = repeatable.asInstanceOf[js.Any])
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: NameNode): ASTNode = value.asInstanceOf[ASTNode]
+  def OperationTypeDefinitionNode(
+    kind: OperationTypeDefinition,
+    operation: OperationTypeNode,
+    `type`: NamedTypeNode,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: NamedTypeNode): ASTNode = value.asInstanceOf[ASTNode]
+  def NonNullTypeNode(kind: NonNullType, `type`: NamedTypeNode | ListTypeNode, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: NonNullTypeNode): ASTNode = value.asInstanceOf[ASTNode]
+  def NameNode(kind: Name, value: String, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: NullValueNode): ASTNode = value.asInstanceOf[ASTNode]
+  def InputObjectTypeDefinitionNode(
+    kind: InputObjectTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[InputValueDefinitionNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: ObjectFieldNode): ASTNode = value.asInstanceOf[ASTNode]
+  def InputValueDefinitionNode(
+    kind: InputValueDefinition,
+    name: NameNode,
+    `type`: TypeNode,
+    defaultValue: ValueNode = null,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ObjectTypeDefinitionNode(
+    kind: ObjectTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[FieldDefinitionNode] = null,
+    interfaces: js.Array[NamedTypeNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (interfaces != null) __obj.updateDynamic("interfaces")(interfaces.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeExtensionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ScalarTypeExtensionNode(
+    kind: ScalarTypeExtension,
+    name: NameNode,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: ObjectValueNode): ASTNode = value.asInstanceOf[ASTNode]
+  def InterfaceTypeDefinitionNode(
+    kind: InterfaceTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[FieldDefinitionNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: OperationDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def FieldDefinitionNode(
+    kind: FieldDefinition,
+    name: NameNode,
+    `type`: TypeNode,
+    arguments: js.Array[InputValueDefinitionNode] = null,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: OperationTypeDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def SchemaExtensionNode(
+    kind: SchemaExtension,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    operationTypes: js.Array[OperationTypeDefinitionNode] = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (operationTypes != null) __obj.updateDynamic("operationTypes")(operationTypes.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: ScalarTypeDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def SchemaDefinitionNode(
+    kind: SchemaDefinition,
+    operationTypes: js.Array[OperationTypeDefinitionNode],
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], operationTypes = operationTypes.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: ScalarTypeExtensionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def UnionTypeDefinitionNode(
+    kind: UnionTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    types: js.Array[NamedTypeNode] = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: SchemaDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def VariableNode(kind: Variable, name: NameNode, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: SchemaExtensionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def InputObjectTypeExtensionNode(
+    kind: InputObjectTypeExtension,
+    name: NameNode,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[InputValueDefinitionNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: SelectionSetNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ScalarTypeDefinitionNode(
+    kind: ScalarTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: StringValueNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ObjectFieldNode(kind: ObjectField, name: NameNode, value: ValueNode, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: UnionTypeDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def ArgumentNode(kind: Argument, name: NameNode, value: ValueNode, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: UnionTypeExtensionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def InterfaceTypeExtensionNode(
+    kind: InterfaceTypeExtension,
+    name: NameNode,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[FieldDefinitionNode] = null,
+    loc: Location = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: VariableDefinitionNode): ASTNode = value.asInstanceOf[ASTNode]
+  def InlineFragmentNode(
+    kind: InlineFragment,
+    selectionSet: SelectionSetNode,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    typeCondition: NamedTypeNode = null
+  ): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], selectionSet = selectionSet.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (typeCondition != null) __obj.updateDynamic("typeCondition")(typeCondition.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
   @scala.inline
-  implicit def apply(value: VariableNode): ASTNode = value.asInstanceOf[ASTNode]
+  def NamedTypeNode(kind: NamedType, name: NameNode, loc: Location = null): ASTNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASTNode]
+  }
 }
 

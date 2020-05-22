@@ -42,113 +42,26 @@ trait ServiceQuotaIncreaseRequestInTemplate extends js.Object {
 
 object ServiceQuotaIncreaseRequestInTemplate {
   @scala.inline
-  def apply(): ServiceQuotaIncreaseRequestInTemplate = {
+  def apply(
+    AwsRegion: AwsRegion = null,
+    DesiredValue: js.UndefOr[QuotaValue] = js.undefined,
+    GlobalQuota: js.UndefOr[GlobalQuota] = js.undefined,
+    QuotaCode: QuotaCode = null,
+    QuotaName: QuotaName = null,
+    ServiceCode: ServiceCode = null,
+    ServiceName: ServiceName = null,
+    Unit: QuotaUnit = null
+  ): ServiceQuotaIncreaseRequestInTemplate = {
     val __obj = js.Dynamic.literal()
+    if (AwsRegion != null) __obj.updateDynamic("AwsRegion")(AwsRegion.asInstanceOf[js.Any])
+    if (!js.isUndefined(DesiredValue)) __obj.updateDynamic("DesiredValue")(DesiredValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(GlobalQuota)) __obj.updateDynamic("GlobalQuota")(GlobalQuota.get.asInstanceOf[js.Any])
+    if (QuotaCode != null) __obj.updateDynamic("QuotaCode")(QuotaCode.asInstanceOf[js.Any])
+    if (QuotaName != null) __obj.updateDynamic("QuotaName")(QuotaName.asInstanceOf[js.Any])
+    if (ServiceCode != null) __obj.updateDynamic("ServiceCode")(ServiceCode.asInstanceOf[js.Any])
+    if (ServiceName != null) __obj.updateDynamic("ServiceName")(ServiceName.asInstanceOf[js.Any])
+    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceQuotaIncreaseRequestInTemplate]
   }
-  @scala.inline
-  implicit class ServiceQuotaIncreaseRequestInTemplateOps[Self <: ServiceQuotaIncreaseRequestInTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsRegion(value: AwsRegion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesiredValue(value: QuotaValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalQuota(value: GlobalQuota): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalQuota")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalQuota: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalQuota")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaCode(value: QuotaCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaName(value: QuotaName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceCode(value: ServiceCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceName(value: ServiceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: QuotaUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

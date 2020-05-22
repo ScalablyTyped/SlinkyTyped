@@ -42,77 +42,20 @@ trait SchemaReplaceAllShapesWithSheetsChartRequest extends js.Object {
 
 object SchemaReplaceAllShapesWithSheetsChartRequest {
   @scala.inline
-  def apply(): SchemaReplaceAllShapesWithSheetsChartRequest = {
+  def apply(
+    chartId: js.UndefOr[Double] = js.undefined,
+    containsText: SchemaSubstringMatchCriteria = null,
+    linkingMode: String = null,
+    pageObjectIds: js.Array[String] = null,
+    spreadsheetId: String = null
+  ): SchemaReplaceAllShapesWithSheetsChartRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(chartId)) __obj.updateDynamic("chartId")(chartId.get.asInstanceOf[js.Any])
+    if (containsText != null) __obj.updateDynamic("containsText")(containsText.asInstanceOf[js.Any])
+    if (linkingMode != null) __obj.updateDynamic("linkingMode")(linkingMode.asInstanceOf[js.Any])
+    if (pageObjectIds != null) __obj.updateDynamic("pageObjectIds")(pageObjectIds.asInstanceOf[js.Any])
+    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReplaceAllShapesWithSheetsChartRequest]
   }
-  @scala.inline
-  implicit class SchemaReplaceAllShapesWithSheetsChartRequestOps[Self <: SchemaReplaceAllShapesWithSheetsChartRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChartId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainsText(value: SchemaSubstringMatchCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainsText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkingMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkingMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageObjectIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageObjectIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageObjectIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageObjectIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpreadsheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpreadsheetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

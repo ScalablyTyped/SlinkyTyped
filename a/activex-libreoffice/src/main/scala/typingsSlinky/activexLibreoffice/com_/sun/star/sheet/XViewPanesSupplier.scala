@@ -11,12 +11,11 @@ import scala.scalajs.js.annotation._
   * enables access to the panes in a view.
   * @deprecated Deprecated
   */
-@js.native
 trait XViewPanesSupplier extends XInterface {
   /** returns the collection of panes in the view. */
-  val ViewPanes: XIndexAccess = js.native
+  val ViewPanes: XIndexAccess
   /** returns the collection of panes in the view. */
-  def getViewPanes(): XIndexAccess = js.native
+  def getViewPanes(): XIndexAccess
 }
 
 object XViewPanesSupplier {
@@ -31,25 +30,5 @@ object XViewPanesSupplier {
     val __obj = js.Dynamic.literal(ViewPanes = ViewPanes.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getViewPanes = js.Any.fromFunction0(getViewPanes), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XViewPanesSupplier]
   }
-  @scala.inline
-  implicit class XViewPanesSupplierOps[Self <: XViewPanesSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withViewPanes(value: XIndexAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewPanes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetViewPanes(value: () => XIndexAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewPanes")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

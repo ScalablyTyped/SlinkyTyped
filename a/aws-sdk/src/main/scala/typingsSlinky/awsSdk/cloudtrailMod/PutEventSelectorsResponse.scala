@@ -18,41 +18,11 @@ trait PutEventSelectorsResponse extends js.Object {
 
 object PutEventSelectorsResponse {
   @scala.inline
-  def apply(): PutEventSelectorsResponse = {
+  def apply(EventSelectors: EventSelectors = null, TrailARN: String = null): PutEventSelectorsResponse = {
     val __obj = js.Dynamic.literal()
+    if (EventSelectors != null) __obj.updateDynamic("EventSelectors")(EventSelectors.asInstanceOf[js.Any])
+    if (TrailARN != null) __obj.updateDynamic("TrailARN")(TrailARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEventSelectorsResponse]
   }
-  @scala.inline
-  implicit class PutEventSelectorsResponseOps[Self <: PutEventSelectorsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventSelectors(value: EventSelectors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSelectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSelectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrailARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrailARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

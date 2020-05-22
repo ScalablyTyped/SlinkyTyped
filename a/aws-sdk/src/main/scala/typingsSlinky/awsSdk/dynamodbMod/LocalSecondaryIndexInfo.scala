@@ -22,53 +22,12 @@ trait LocalSecondaryIndexInfo extends js.Object {
 
 object LocalSecondaryIndexInfo {
   @scala.inline
-  def apply(): LocalSecondaryIndexInfo = {
+  def apply(IndexName: IndexName = null, KeySchema: KeySchema = null, Projection: Projection = null): LocalSecondaryIndexInfo = {
     val __obj = js.Dynamic.literal()
+    if (IndexName != null) __obj.updateDynamic("IndexName")(IndexName.asInstanceOf[js.Any])
+    if (KeySchema != null) __obj.updateDynamic("KeySchema")(KeySchema.asInstanceOf[js.Any])
+    if (Projection != null) __obj.updateDynamic("Projection")(Projection.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalSecondaryIndexInfo]
   }
-  @scala.inline
-  implicit class LocalSecondaryIndexInfoOps[Self <: LocalSecondaryIndexInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexName(value: IndexName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeySchema(value: KeySchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeySchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: Projection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Projection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.apiV1Mod
 
+import typingsSlinky.actionsOnGoogle.anon.Intent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +15,24 @@ trait SmartHomeV1Request extends js.Object
 
 object SmartHomeV1Request {
   @scala.inline
-  implicit def apply(value: SmartHomeV1DisconnectRequest): SmartHomeV1Request = value.asInstanceOf[SmartHomeV1Request]
+  def SmartHomeV1SyncRequest(inputs: js.Array[SmartHomeV1SyncRequestInputs], requestId: String): SmartHomeV1Request = {
+    val __obj = js.Dynamic.literal(inputs = inputs.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SmartHomeV1Request]
+  }
   @scala.inline
-  implicit def apply(value: SmartHomeV1ExecuteRequest): SmartHomeV1Request = value.asInstanceOf[SmartHomeV1Request]
+  def SmartHomeV1QueryRequest(inputs: js.Array[SmartHomeV1QueryRequestInputs], requestId: String): SmartHomeV1Request = {
+    val __obj = js.Dynamic.literal(inputs = inputs.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SmartHomeV1Request]
+  }
   @scala.inline
-  implicit def apply(value: SmartHomeV1QueryRequest): SmartHomeV1Request = value.asInstanceOf[SmartHomeV1Request]
+  def SmartHomeV1ExecuteRequest(inputs: js.Array[SmartHomeV1ExecuteRequestInputs], requestId: String): SmartHomeV1Request = {
+    val __obj = js.Dynamic.literal(inputs = inputs.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SmartHomeV1Request]
+  }
   @scala.inline
-  implicit def apply(value: SmartHomeV1SyncRequest): SmartHomeV1Request = value.asInstanceOf[SmartHomeV1Request]
+  def SmartHomeV1DisconnectRequest(inputs: js.Array[Intent], requestId: String): SmartHomeV1Request = {
+    val __obj = js.Dynamic.literal(inputs = inputs.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SmartHomeV1Request]
+  }
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PathBrand extends js.Object {
-  var __pathBrand: js.Any = js.native
+  var __pathBrand: js.Any
 }
 
 object PathBrand {
@@ -15,19 +14,5 @@ object PathBrand {
     val __obj = js.Dynamic.literal(__pathBrand = __pathBrand.asInstanceOf[js.Any])
     __obj.asInstanceOf[PathBrand]
   }
-  @scala.inline
-  implicit class PathBrandOps[Self <: PathBrand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with__pathBrand(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__pathBrand")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

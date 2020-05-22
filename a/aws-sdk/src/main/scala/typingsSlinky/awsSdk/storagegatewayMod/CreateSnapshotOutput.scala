@@ -18,41 +18,11 @@ trait CreateSnapshotOutput extends js.Object {
 
 object CreateSnapshotOutput {
   @scala.inline
-  def apply(): CreateSnapshotOutput = {
+  def apply(SnapshotId: SnapshotId = null, VolumeARN: VolumeARN = null): CreateSnapshotOutput = {
     val __obj = js.Dynamic.literal()
+    if (SnapshotId != null) __obj.updateDynamic("SnapshotId")(SnapshotId.asInstanceOf[js.Any])
+    if (VolumeARN != null) __obj.updateDynamic("VolumeARN")(VolumeARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSnapshotOutput]
   }
-  @scala.inline
-  implicit class CreateSnapshotOutputOps[Self <: CreateSnapshotOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSnapshotId(value: SnapshotId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeARN(value: VolumeARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

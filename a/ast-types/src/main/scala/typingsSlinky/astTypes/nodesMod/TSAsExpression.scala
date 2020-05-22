@@ -11,14 +11,13 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/nodes.Expression, 'type'> */
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/nodes.Pattern, 'type'> */
-@js.native
 trait TSAsExpression extends ASTNode {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var expression: ExpressionKind = js.native
-  var extra: Parenthesized | Null = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSAsExpression = js.native
-  var typeAnnotation: TSTypeKind = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var expression: ExpressionKind
+  var extra: Parenthesized | Null
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSAsExpression
+  var typeAnnotation: TSTypeKind
 }
 
 object TSAsExpression {
@@ -26,73 +25,16 @@ object TSAsExpression {
   def apply(
     expression: ExpressionKind,
     `type`: typingsSlinky.astTypes.astTypesStrings.TSAsExpression,
-    typeAnnotation: TSTypeKind
+    typeAnnotation: TSTypeKind,
+    comments: js.Array[CommentKind] = null,
+    extra: Parenthesized = null,
+    loc: SourceLocationKind = null
   ): TSAsExpression = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], extra = extra.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSAsExpression]
   }
-  @scala.inline
-  implicit class TSAsExpressionOps[Self <: TSAsExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: ExpressionKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.astTypes.astTypesStrings.TSAsExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotation(value: TSTypeKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra(value: Parenthesized): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtraNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(null)
-        ret
-    }
-    @scala.inline
-    def withLoc(value: SourceLocationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

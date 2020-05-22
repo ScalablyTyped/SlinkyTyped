@@ -4,71 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResponsiveColumnShowingEventUIParam extends js.Object {
   /**
-  	 * Gets the shown column index. Has a value only if the column's key is a number.
-  	 */
-  var columnIndex: js.UndefOr[Double] = js.native
+    * Gets the shown column index. Has a value only if the column's key is a number.
+    */
+  var columnIndex: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets the shown column key. Has a value only if the column's key is a string.
-  	 */
-  var columnKey: js.UndefOr[String] = js.native
+    * Gets the shown column key. Has a value only if the column's key is a string.
+    */
+  var columnKey: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets the reference to the igGridResponsive widget.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets the reference to the igGridResponsive widget.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
 }
 
 object ResponsiveColumnShowingEventUIParam {
   @scala.inline
-  def apply(): ResponsiveColumnShowingEventUIParam = {
+  def apply(columnIndex: js.UndefOr[Double] = js.undefined, columnKey: String = null, owner: js.Any = null): ResponsiveColumnShowingEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(columnIndex)) __obj.updateDynamic("columnIndex")(columnIndex.get.asInstanceOf[js.Any])
+    if (columnKey != null) __obj.updateDynamic("columnKey")(columnKey.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponsiveColumnShowingEventUIParam]
   }
-  @scala.inline
-  implicit class ResponsiveColumnShowingEventUIParamOps[Self <: ResponsiveColumnShowingEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,17 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyleDefinition extends js.Object {
   /**
     * Defines the available classes in this style. The "base" property will be applied to every
     * notification with this style.
     */
-  var classes: js.UndefOr[DictclassName] = js.native
+  var classes: js.UndefOr[DictclassName] = js.undefined
   /**
     * All notifications will have this CSS applied to it.
     */
-  var css: js.UndefOr[String] = js.native
+  var css: js.UndefOr[String] = js.undefined
   /**
     * Defines the HTML wrapping the notification.
     *
@@ -28,52 +27,16 @@ trait StyleDefinition extends js.Object {
     * pass a javasript Object with a "propertyName" key to the notify method, whose value will be
     * the text/html that the element is populated with.
     */
-  var html: String = js.native
+  var html: String
 }
 
 object StyleDefinition {
   @scala.inline
-  def apply(html: String): StyleDefinition = {
+  def apply(html: String, classes: DictclassName = null, css: String = null): StyleDefinition = {
     val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any])
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleDefinition]
   }
-  @scala.inline
-  implicit class StyleDefinitionOps[Self <: StyleDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHtml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClasses(value: DictclassName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCss(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

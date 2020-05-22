@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.PointOfService
 
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.PointOfService.MagneticStripeReaderTrackData")
 @js.native
 abstract class MagneticStripeReaderTrackData ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.MagneticStripeReaderTrackData
+  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.MagneticStripeReaderTrackData {
+  /** Gets the raw or decoded data from the swiped card. */
+  /* CompleteClass */
+  override var data: IBuffer = js.native
+  /** Gets the discretionary data from the swiped card. */
+  /* CompleteClass */
+  override var discretionaryData: IBuffer = js.native
+  /** Gets the encrypted data from the swiped card. */
+  /* CompleteClass */
+  override var encryptedData: IBuffer = js.native
+}
 

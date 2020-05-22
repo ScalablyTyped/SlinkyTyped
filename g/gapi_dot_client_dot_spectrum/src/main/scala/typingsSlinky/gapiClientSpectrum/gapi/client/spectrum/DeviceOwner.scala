@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeviceOwner extends js.Object {
   /** The vCard contact information for the device operator is optional, but may be required by specific regulatory domains. */
-  var operator: js.UndefOr[Vcard] = js.native
+  var operator: js.UndefOr[Vcard] = js.undefined
   /** The vCard contact information for the individual or business that owns the device is required. */
-  var owner: js.UndefOr[Vcard] = js.native
+  var owner: js.UndefOr[Vcard] = js.undefined
 }
 
 object DeviceOwner {
   @scala.inline
-  def apply(): DeviceOwner = {
+  def apply(operator: Vcard = null, owner: Vcard = null): DeviceOwner = {
     val __obj = js.Dynamic.literal()
+    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceOwner]
   }
-  @scala.inline
-  implicit class DeviceOwnerOps[Self <: DeviceOwner] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperator(value: Vcard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: Vcard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

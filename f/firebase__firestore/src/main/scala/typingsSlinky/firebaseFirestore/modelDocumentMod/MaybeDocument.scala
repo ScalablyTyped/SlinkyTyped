@@ -21,10 +21,3 @@ abstract class MaybeDocument protected () extends js.Object {
   def isEqual(other: MaybeDocument): Boolean = js.native
 }
 
-/* static members */
-@JSImport("@firebase/firestore/dist/src/model/document", "MaybeDocument")
-@js.native
-object MaybeDocument extends js.Object {
-  def compareByKey(d1: MaybeDocument, d2: MaybeDocument): Double = js.native
-}
-

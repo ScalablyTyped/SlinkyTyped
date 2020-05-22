@@ -18,41 +18,11 @@ trait LaunchTemplateOverrides extends js.Object {
 
 object LaunchTemplateOverrides {
   @scala.inline
-  def apply(): LaunchTemplateOverrides = {
+  def apply(InstanceType: XmlStringMaxLen255 = null, WeightedCapacity: XmlStringMaxLen32 = null): LaunchTemplateOverrides = {
     val __obj = js.Dynamic.literal()
+    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
+    if (WeightedCapacity != null) __obj.updateDynamic("WeightedCapacity")(WeightedCapacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateOverrides]
   }
-  @scala.inline
-  implicit class LaunchTemplateOverridesOps[Self <: LaunchTemplateOverrides] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceType(value: XmlStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeightedCapacity(value: XmlStringMaxLen32): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeightedCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeightedCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeightedCapacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

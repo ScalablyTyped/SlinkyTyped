@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Directive extends BaseNode {
-  var directive: String = js.native
-  var expression: Literal = js.native
+  var directive: String
+  var expression: Literal
   @JSName("type")
-  var type_Directive: typingsSlinky.estree.estreeStrings.ExpressionStatement = js.native
+  var type_Directive: typingsSlinky.estree.estreeStrings.ExpressionStatement
 }
 
 object Directive {
@@ -17,37 +16,19 @@ object Directive {
   def apply(
     directive: String,
     expression: Literal,
-    `type`: typingsSlinky.estree.estreeStrings.ExpressionStatement
+    `type`: typingsSlinky.estree.estreeStrings.ExpressionStatement,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
   ): Directive = {
     val __obj = js.Dynamic.literal(directive = directive.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[Directive]
   }
-  @scala.inline
-  implicit class DirectiveOps[Self <: Directive] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirective(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpression(value: Literal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.estree.estreeStrings.ExpressionStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

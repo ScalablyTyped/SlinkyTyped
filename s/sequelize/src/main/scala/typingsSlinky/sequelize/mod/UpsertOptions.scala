@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Options for Model.upsert method
   */
-@js.native
 trait UpsertOptions
   extends FieldsOptions
      with LoggingOptions
@@ -16,8 +15,23 @@ trait UpsertOptions
 
 object UpsertOptions {
   @scala.inline
-  def apply(): UpsertOptions = {
+  def apply(
+    benchmark: js.UndefOr[Boolean] = js.undefined,
+    fields: js.Array[String] = null,
+    logging: Boolean | js.Function = null,
+    returning: js.UndefOr[Boolean] = js.undefined,
+    searchPath: String = null,
+    transaction: Transaction = null,
+    validate: js.UndefOr[Boolean] = js.undefined
+  ): UpsertOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(benchmark)) __obj.updateDynamic("benchmark")(benchmark.get.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (!js.isUndefined(returning)) __obj.updateDynamic("returning")(returning.get.asInstanceOf[js.Any])
+    if (searchPath != null) __obj.updateDynamic("searchPath")(searchPath.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
+    if (!js.isUndefined(validate)) __obj.updateDynamic("validate")(validate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpsertOptions]
   }
 }

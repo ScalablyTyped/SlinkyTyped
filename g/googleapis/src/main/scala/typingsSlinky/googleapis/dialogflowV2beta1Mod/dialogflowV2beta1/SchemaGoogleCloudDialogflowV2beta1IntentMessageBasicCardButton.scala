@@ -21,41 +21,14 @@ trait SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButton extends js.
 
 object SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButton {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButton = {
+  def apply(
+    openUriAction: SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction = null,
+    title: String = null
+  ): SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButton = {
     val __obj = js.Dynamic.literal()
+    if (openUriAction != null) __obj.updateDynamic("openUriAction")(openUriAction.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButton]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOps[Self <: SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOpenUriAction(value: SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openUriAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenUriAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openUriAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

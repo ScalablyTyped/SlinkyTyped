@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgnoreIfExists extends js.Object {
-  var ignoreIfExists: js.UndefOr[Boolean] = js.native
-  var ignoreIfNotExists: js.UndefOr[Boolean] = js.native
-  var overwrite: js.UndefOr[Boolean] = js.native
-  var recursive: js.UndefOr[Boolean] = js.native
+  var ignoreIfExists: js.UndefOr[Boolean] = js.undefined
+  var ignoreIfNotExists: js.UndefOr[Boolean] = js.undefined
+  var overwrite: js.UndefOr[Boolean] = js.undefined
+  var recursive: js.UndefOr[Boolean] = js.undefined
 }
 
 object IgnoreIfExists {
   @scala.inline
-  def apply(): IgnoreIfExists = {
+  def apply(
+    ignoreIfExists: js.UndefOr[Boolean] = js.undefined,
+    ignoreIfNotExists: js.UndefOr[Boolean] = js.undefined,
+    overwrite: js.UndefOr[Boolean] = js.undefined,
+    recursive: js.UndefOr[Boolean] = js.undefined
+  ): IgnoreIfExists = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ignoreIfExists)) __obj.updateDynamic("ignoreIfExists")(ignoreIfExists.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreIfNotExists)) __obj.updateDynamic("ignoreIfNotExists")(ignoreIfNotExists.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overwrite)) __obj.updateDynamic("overwrite")(overwrite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgnoreIfExists]
   }
-  @scala.inline
-  implicit class IgnoreIfExistsOps[Self <: IgnoreIfExists] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoreIfExists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreIfExists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreIfExists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreIfExists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreIfNotExists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreIfNotExists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreIfNotExists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreIfNotExists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

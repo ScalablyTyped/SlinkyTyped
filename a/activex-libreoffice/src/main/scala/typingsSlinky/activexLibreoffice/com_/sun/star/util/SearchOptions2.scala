@@ -10,13 +10,12 @@ import scala.scalajs.js.annotation._
   * com.sun.star.util.XTextSearch2}
   * @since LibreOffice 5.2
   */
-@js.native
 trait SearchOptions2 extends SearchOptions {
   /**
     * Search type, one of {@link com.sun.star.util.SearchAlgorithms2} constants. This is preferred over the content of the SearchAlgorithms {@link
     * SearchOptions.algorithmType} enum field.
     */
-  var AlgorithmType2: Double = js.native
+  var AlgorithmType2: Double
   /**
     * The escape character to be used with a {@link com.sun.star.util.SearchAlgorithms2.WILDCARD} search.
     *
@@ -25,7 +24,7 @@ trait SearchOptions2 extends SearchOptions {
     *
     * Common values are '\' (U+005C REVERSE SOLIDUS) aka backslash in text processing context, or '~' (U+007E TILDE) in spreadsheet processing context.
     */
-  var WildcardEscapeCharacter: Double = js.native
+  var WildcardEscapeCharacter: Double
 }
 
 object SearchOptions2 {
@@ -46,25 +45,5 @@ object SearchOptions2 {
     val __obj = js.Dynamic.literal(AlgorithmType2 = AlgorithmType2.asInstanceOf[js.Any], Locale = Locale.asInstanceOf[js.Any], WildcardEscapeCharacter = WildcardEscapeCharacter.asInstanceOf[js.Any], algorithmType = algorithmType.asInstanceOf[js.Any], changedChars = changedChars.asInstanceOf[js.Any], deletedChars = deletedChars.asInstanceOf[js.Any], insertedChars = insertedChars.asInstanceOf[js.Any], replaceString = replaceString.asInstanceOf[js.Any], searchFlag = searchFlag.asInstanceOf[js.Any], searchString = searchString.asInstanceOf[js.Any], transliterateFlags = transliterateFlags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchOptions2]
   }
-  @scala.inline
-  implicit class SearchOptions2Ops[Self <: SearchOptions2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithmType2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmType2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWildcardEscapeCharacter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WildcardEscapeCharacter")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,96 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Context extends js.Object {
-  var context: js.UndefOr[Boolean] = js.native
-  var format: js.UndefOr[typingsSlinky.log4js.mod.Format] = js.native
-  var level: js.UndefOr[String] = js.native
-  var nolog: js.UndefOr[js.Any] = js.native
-  var statusRules: js.UndefOr[js.Array[_]] = js.native
+  var context: js.UndefOr[Boolean] = js.undefined
+  var format: js.UndefOr[typingsSlinky.log4js.mod.Format] = js.undefined
+  var level: js.UndefOr[String] = js.undefined
+  var nolog: js.UndefOr[js.Any] = js.undefined
+  var statusRules: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object Context {
   @scala.inline
-  def apply(): Context = {
+  def apply(
+    context: js.UndefOr[Boolean] = js.undefined,
+    format: typingsSlinky.log4js.mod.Format = null,
+    level: String = null,
+    nolog: js.Any = null,
+    statusRules: js.Array[_] = null
+  ): Context = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(context)) __obj.updateDynamic("context")(context.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (nolog != null) __obj.updateDynamic("nolog")(nolog.asInstanceOf[js.Any])
+    if (statusRules != null) __obj.updateDynamic("statusRules")(statusRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[Context]
   }
-  @scala.inline
-  implicit class ContextOps[Self <: Context] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatFunction3(
-      value: (/* req */ js.Any, /* res */ js.Any, /* formatter */ js.Function1[/* str */ String, String]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: typingsSlinky.log4js.mod.Format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNolog(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nolog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNolog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nolog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusRules(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusRules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

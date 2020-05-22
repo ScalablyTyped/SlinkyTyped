@@ -34,77 +34,20 @@ trait RegisterTypeInput extends js.Object {
 
 object RegisterTypeInput {
   @scala.inline
-  def apply(SchemaHandlerPackage: S3Url, TypeName: TypeName): RegisterTypeInput = {
+  def apply(
+    SchemaHandlerPackage: S3Url,
+    TypeName: TypeName,
+    ClientRequestToken: RequestToken = null,
+    ExecutionRoleArn: RoleArn = null,
+    LoggingConfig: LoggingConfig = null,
+    Type: RegistryType = null
+  ): RegisterTypeInput = {
     val __obj = js.Dynamic.literal(SchemaHandlerPackage = SchemaHandlerPackage.asInstanceOf[js.Any], TypeName = TypeName.asInstanceOf[js.Any])
+    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
+    if (ExecutionRoleArn != null) __obj.updateDynamic("ExecutionRoleArn")(ExecutionRoleArn.asInstanceOf[js.Any])
+    if (LoggingConfig != null) __obj.updateDynamic("LoggingConfig")(LoggingConfig.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterTypeInput]
   }
-  @scala.inline
-  implicit class RegisterTypeInputOps[Self <: RegisterTypeInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSchemaHandlerPackage(value: S3Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaHandlerPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeName(value: TypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: RequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingConfig(value: LoggingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: RegistryType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

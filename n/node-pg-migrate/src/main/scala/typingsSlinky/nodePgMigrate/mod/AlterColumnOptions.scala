@@ -6,145 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AlterColumnOptions extends js.Object {
-  var allowNull: js.UndefOr[Boolean] = js.native
-  var collation: js.UndefOr[String] = js.native
-  var comment: js.UndefOr[String | Null] = js.native
-  var default: js.UndefOr[Value] = js.native
-  var generated: js.UndefOr[Null | `false` | precedenceALWAYSBYDEFAULT] = js.native
-  var notNull: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var using: js.UndefOr[String] = js.native
+  var allowNull: js.UndefOr[Boolean] = js.undefined
+  var collation: js.UndefOr[String] = js.undefined
+  var comment: js.UndefOr[String | Null] = js.undefined
+  var default: js.UndefOr[Value] = js.undefined
+  var generated: js.UndefOr[Null | `false` | precedenceALWAYSBYDEFAULT] = js.undefined
+  var notNull: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var using: js.UndefOr[String] = js.undefined
 }
 
 object AlterColumnOptions {
   @scala.inline
-  def apply(): AlterColumnOptions = {
+  def apply(
+    allowNull: js.UndefOr[Boolean] = js.undefined,
+    collation: String = null,
+    comment: js.UndefOr[Null | String] = js.undefined,
+    default: js.UndefOr[Null | Value] = js.undefined,
+    generated: js.UndefOr[Null | `false` | precedenceALWAYSBYDEFAULT] = js.undefined,
+    notNull: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null,
+    using: String = null
+  ): AlterColumnOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowNull)) __obj.updateDynamic("allowNull")(allowNull.get.asInstanceOf[js.Any])
+    if (collation != null) __obj.updateDynamic("collation")(collation.asInstanceOf[js.Any])
+    if (!js.isUndefined(comment)) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (!js.isUndefined(default)) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (!js.isUndefined(generated)) __obj.updateDynamic("generated")(generated.asInstanceOf[js.Any])
+    if (!js.isUndefined(notNull)) __obj.updateDynamic("notNull")(notNull.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (using != null) __obj.updateDynamic("using")(using.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlterColumnOptions]
   }
-  @scala.inline
-  implicit class AlterColumnOptionsOps[Self <: AlterColumnOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowNull(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(null)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: Value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(null)
-        ret
-    }
-    @scala.inline
-    def withGenerated(value: `false` | precedenceALWAYSBYDEFAULT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeneratedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generated")(null)
-        ret
-    }
-    @scala.inline
-    def withNotNull(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("using")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("using")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

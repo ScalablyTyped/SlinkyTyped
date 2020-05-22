@@ -29,9 +29,24 @@ object cartesianProductMod extends js.Object {
       */
     var size_ : js.Any = js.native
     /**
+      * Get index'th case.
+      *
+      * @param index Index number
+      * @return The row of the index'th in combined permuation case
+      */
+    /* CompleteClass */
+    override def at(index: Double): js.Array[Double] = js.native
+    /**
       * Get digits, Max number (size) of each digit.
       */
     def digits(): js.Array[Double] = js.native
+    /**
+      * Get size of all cases.
+      *
+      * @return Get a number of the all cases.
+      */
+    /* CompleteClass */
+    override def size(): Double = js.native
   }
   
 }

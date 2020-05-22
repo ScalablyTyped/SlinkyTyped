@@ -18,41 +18,11 @@ trait PolicyUser extends js.Object {
 
 object PolicyUser {
   @scala.inline
-  def apply(): PolicyUser = {
+  def apply(UserId: idType = null, UserName: userNameType = null): PolicyUser = {
     val __obj = js.Dynamic.literal()
+    if (UserId != null) __obj.updateDynamic("UserId")(UserId.asInstanceOf[js.Any])
+    if (UserName != null) __obj.updateDynamic("UserName")(UserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyUser]
   }
-  @scala.inline
-  implicit class PolicyUserOps[Self <: PolicyUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserId(value: idType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserName(value: userNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

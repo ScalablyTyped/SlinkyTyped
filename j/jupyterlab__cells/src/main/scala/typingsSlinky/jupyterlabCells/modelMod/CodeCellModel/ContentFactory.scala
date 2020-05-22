@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabCells.modelMod.CodeCellModel
 
+import typingsSlinky.jupyterlabOutputarea.modelMod.IOutputAreaModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +10,11 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("@jupyterlab/cells/lib/model", "CodeCellModel.ContentFactory")
 @js.native
-class ContentFactory () extends IContentFactory
+class ContentFactory () extends IContentFactory {
+  /**
+    * Create an output area.
+    */
+  /* CompleteClass */
+  override def createOutputArea(options: typingsSlinky.jupyterlabOutputarea.modelMod.IOutputAreaModel.IOptions): IOutputAreaModel = js.native
+}
 

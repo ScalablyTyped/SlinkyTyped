@@ -6,202 +6,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Fulfillment extends ShopifyObject {
   /**
     * The date and time when the fulfillment was created.
     */
-  var created_at: js.UndefOr[String] = js.native
+  var created_at: js.UndefOr[String] = js.undefined
   /**
     * A historical record of each item in the fulfillment.
     */
-  var line_items: js.UndefOr[js.Array[LineItem]] = js.native
+  var line_items: js.UndefOr[js.Array[LineItem]] = js.undefined
   /**
     * The unique numeric identifier for the order.
     */
-  var order_id: js.UndefOr[Double] = js.native
+  var order_id: js.UndefOr[Double] = js.undefined
   /**
     * A textfield with information about the receipt.
     */
-  var receipt: js.UndefOr[js.Any] = js.native
+  var receipt: js.UndefOr[js.Any] = js.undefined
   /**
     * The status of the fulfillment. Known values are 'pending', 'open', 'success', 'cancelled',
     * 'error' and 'failure'.
     */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[String] = js.undefined
   /**
     * The name of the shipping company.
     */
-  var tracking_company: js.UndefOr[String] = js.native
+  var tracking_company: js.UndefOr[String] = js.undefined
   /**
     * The shipping number, provided by the shipping company. If multiple tracking numbers
     * exist, returns the first number.
     */
-  var tracking_number: js.UndefOr[String] = js.native
+  var tracking_number: js.UndefOr[String] = js.undefined
   /**
     * A list of shipping numbers, provided by the shipping company. May be null.
     */
-  var tracking_numbers: js.UndefOr[js.Array[String]] = js.native
+  var tracking_numbers: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The tracking url, provided by the shipping company. May be null. If multiple tracking URLs
     * exist, returns the first URL.
     */
-  var tracking_url: js.UndefOr[String] = js.native
+  var tracking_url: js.UndefOr[String] = js.undefined
   /**
     * An array of one or more tracking urls, provided by the shipping company. May be null.
     */
-  var tracking_urls: js.UndefOr[js.Array[String]] = js.native
+  var tracking_urls: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The date and time when the fulfillment was last modified.
     */
-  var updated_at: js.UndefOr[String] = js.native
+  var updated_at: js.UndefOr[String] = js.undefined
 }
 
 object Fulfillment {
   @scala.inline
-  def apply(): Fulfillment = {
+  def apply(
+    admin_graphql_api_id: String = null,
+    created_at: String = null,
+    id: js.UndefOr[Double] = js.undefined,
+    line_items: js.Array[LineItem] = null,
+    order_id: js.UndefOr[Double] = js.undefined,
+    receipt: js.Any = null,
+    status: String = null,
+    tracking_company: String = null,
+    tracking_number: String = null,
+    tracking_numbers: js.Array[String] = null,
+    tracking_url: String = null,
+    tracking_urls: js.Array[String] = null,
+    updated_at: String = null
+  ): Fulfillment = {
     val __obj = js.Dynamic.literal()
+    if (admin_graphql_api_id != null) __obj.updateDynamic("admin_graphql_api_id")(admin_graphql_api_id.asInstanceOf[js.Any])
+    if (created_at != null) __obj.updateDynamic("created_at")(created_at.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (line_items != null) __obj.updateDynamic("line_items")(line_items.asInstanceOf[js.Any])
+    if (!js.isUndefined(order_id)) __obj.updateDynamic("order_id")(order_id.get.asInstanceOf[js.Any])
+    if (receipt != null) __obj.updateDynamic("receipt")(receipt.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (tracking_company != null) __obj.updateDynamic("tracking_company")(tracking_company.asInstanceOf[js.Any])
+    if (tracking_number != null) __obj.updateDynamic("tracking_number")(tracking_number.asInstanceOf[js.Any])
+    if (tracking_numbers != null) __obj.updateDynamic("tracking_numbers")(tracking_numbers.asInstanceOf[js.Any])
+    if (tracking_url != null) __obj.updateDynamic("tracking_url")(tracking_url.asInstanceOf[js.Any])
+    if (tracking_urls != null) __obj.updateDynamic("tracking_urls")(tracking_urls.asInstanceOf[js.Any])
+    if (updated_at != null) __obj.updateDynamic("updated_at")(updated_at.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fulfillment]
   }
-  @scala.inline
-  implicit class FulfillmentOps[Self <: Fulfillment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine_items(value: js.Array[LineItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line_items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine_items: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line_items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReceipt(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receipt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReceipt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receipt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracking_company(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_company")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracking_company: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_company")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracking_number(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracking_number: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracking_numbers(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_numbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracking_numbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_numbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracking_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracking_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracking_urls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_urls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracking_urls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_urls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains information about a piece of content. An app creates a RatedContentDescription object, for each piece of content to be used in the GetRestrictionLevelAsync and RequestContentAccessAsync methods. */
-@js.native
 trait RatedContentDescription extends js.Object {
   /** Specifies the type of a piece of content, defined by RatedContentCategory . */
-  var category: RatedContentCategory = js.native
+  var category: RatedContentCategory
   /** The unique content ID of a piece of content, in the app's content catalog. */
-  var id: String = js.native
+  var id: String
   /** The thumbnail image associated with the content. */
-  var image: IRandomAccessStreamReference = js.native
+  var image: IRandomAccessStreamReference
   /** Provides all existing third-party and Windows Store age ratings for a piece of content. */
-  var ratings: IVector[String] = js.native
+  var ratings: IVector[String]
   /** The display title of a piece of content. */
-  var title: String = js.native
+  var title: String
 }
 
 object RatedContentDescription {
@@ -33,43 +32,5 @@ object RatedContentDescription {
     val __obj = js.Dynamic.literal(category = category.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], ratings = ratings.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[RatedContentDescription]
   }
-  @scala.inline
-  implicit class RatedContentDescriptionOps[Self <: RatedContentDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: RatedContentCategory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: IRandomAccessStreamReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRatings(value: IVector[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ratings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

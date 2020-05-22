@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
-  var pin: Double | String = js.native
-  var pullResistor: js.UndefOr[Double] = js.native
+  var pin: Double | String
+  var pullResistor: js.UndefOr[Double] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(pin: Double | String): Config = {
+  def apply(pin: Double | String, pullResistor: js.UndefOr[Double] = js.undefined): Config = {
     val __obj = js.Dynamic.literal(pin = pin.asInstanceOf[js.Any])
+    if (!js.isUndefined(pullResistor)) __obj.updateDynamic("pullResistor")(pullResistor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPin(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPullResistor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullResistor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPullResistor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullResistor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

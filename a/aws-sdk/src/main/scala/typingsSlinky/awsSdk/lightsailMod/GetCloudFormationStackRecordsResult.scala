@@ -18,41 +18,11 @@ trait GetCloudFormationStackRecordsResult extends js.Object {
 
 object GetCloudFormationStackRecordsResult {
   @scala.inline
-  def apply(): GetCloudFormationStackRecordsResult = {
+  def apply(cloudFormationStackRecords: CloudFormationStackRecordList = null, nextPageToken: String = null): GetCloudFormationStackRecordsResult = {
     val __obj = js.Dynamic.literal()
+    if (cloudFormationStackRecords != null) __obj.updateDynamic("cloudFormationStackRecords")(cloudFormationStackRecords.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCloudFormationStackRecordsResult]
   }
-  @scala.inline
-  implicit class GetCloudFormationStackRecordsResultOps[Self <: GetCloudFormationStackRecordsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudFormationStackRecords(value: CloudFormationStackRecordList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudFormationStackRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudFormationStackRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudFormationStackRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

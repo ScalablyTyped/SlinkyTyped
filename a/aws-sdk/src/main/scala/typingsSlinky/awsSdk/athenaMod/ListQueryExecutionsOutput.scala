@@ -18,41 +18,11 @@ trait ListQueryExecutionsOutput extends js.Object {
 
 object ListQueryExecutionsOutput {
   @scala.inline
-  def apply(): ListQueryExecutionsOutput = {
+  def apply(NextToken: Token = null, QueryExecutionIds: QueryExecutionIdList = null): ListQueryExecutionsOutput = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (QueryExecutionIds != null) __obj.updateDynamic("QueryExecutionIds")(QueryExecutionIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListQueryExecutionsOutput]
   }
-  @scala.inline
-  implicit class ListQueryExecutionsOutputOps[Self <: ListQueryExecutionsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryExecutionIds(value: QueryExecutionIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecutionIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryExecutionIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecutionIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

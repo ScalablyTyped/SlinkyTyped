@@ -4,21 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Command extends js.Object {
   /**
     * Arguments that the command handler should be
     * invoked with.
     */
-  var arguments: js.UndefOr[js.Array[_]] = js.native
+  var arguments: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * The identifier of the actual command handler.
     */
-  var command: String = js.native
+  var command: String
   /**
     * Title of the command, like `save`.
     */
-  var title: String = js.native
+  var title: String
 }
 
 @JSImport("vscode-languageserver-types", "Command")

@@ -17,8 +17,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class Node ()
   extends Item
-     with NodeSet
-     with SchemaContextDefinition {
+     with _NodeSet
+     with _SchemaContextDefinition {
   def this(attrs: js.Array[js.Tuple2[String, _]]) = this()
   def this(attrs: Map[String, _]) = this()
   val document: Document | Null = js.native

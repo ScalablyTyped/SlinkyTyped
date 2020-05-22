@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NewValueOldValue extends js.Object {
-  var newValue: Boolean = js.native
-  var oldValue: js.UndefOr[Boolean] = js.native
+  var newValue: Boolean
+  var oldValue: js.UndefOr[Boolean] = js.undefined
 }
 
 object NewValueOldValue {
   @scala.inline
-  def apply(newValue: Boolean): NewValueOldValue = {
+  def apply(newValue: Boolean, oldValue: js.UndefOr[Boolean] = js.undefined): NewValueOldValue = {
     val __obj = js.Dynamic.literal(newValue = newValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(oldValue)) __obj.updateDynamic("oldValue")(oldValue.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewValueOldValue]
   }
-  @scala.inline
-  implicit class NewValueOldValueOps[Self <: NewValueOldValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

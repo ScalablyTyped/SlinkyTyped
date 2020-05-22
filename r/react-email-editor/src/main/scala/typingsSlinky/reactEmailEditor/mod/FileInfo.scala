@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileInfo extends js.Object {
-  val accepted: js.Array[File] = js.native
-  val attachments: js.Array[File] = js.native
+  val accepted: js.Array[File]
+  val attachments: js.Array[File]
 }
 
 object FileInfo {
@@ -17,25 +16,5 @@ object FileInfo {
     val __obj = js.Dynamic.literal(accepted = accepted.asInstanceOf[js.Any], attachments = attachments.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileInfo]
   }
-  @scala.inline
-  implicit class FileInfoOps[Self <: FileInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccepted(value: js.Array[File]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttachments(value: js.Array[File]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

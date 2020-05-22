@@ -17,7 +17,7 @@ trait ReadableStream extends EventEmitter {
   def read(): String | Buffer = js.native
   def read(size: Double): String | Buffer = js.native
   def resume(): this.type = js.native
-  def setEncoding(encoding: String): this.type = js.native
+  def setEncoding(encoding: BufferEncoding): this.type = js.native
   def unpipe(): this.type = js.native
   def unpipe(destination: WritableStream): this.type = js.native
   def unshift(chunk: String): Unit = js.native

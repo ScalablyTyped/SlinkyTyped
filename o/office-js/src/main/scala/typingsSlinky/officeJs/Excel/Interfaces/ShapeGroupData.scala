@@ -5,61 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `shapeGroup.toJSON()`. */
-@js.native
 trait ShapeGroupData extends js.Object {
   /**
     *
-    * Represents the shape identifier. Read-only.
+    * Specifies the shape identifier.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     *
-    * Returns the collection of Shape objects. Read-only.
+    * Returns the collection of Shape objects.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var shapes: js.UndefOr[js.Array[ShapeData]] = js.native
+  var shapes: js.UndefOr[js.Array[ShapeData]] = js.undefined
 }
 
 object ShapeGroupData {
   @scala.inline
-  def apply(): ShapeGroupData = {
+  def apply(id: String = null, shapes: js.Array[ShapeData] = null): ShapeGroupData = {
     val __obj = js.Dynamic.literal()
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (shapes != null) __obj.updateDynamic("shapes")(shapes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShapeGroupData]
   }
-  @scala.inline
-  implicit class ShapeGroupDataOps[Self <: ShapeGroupData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapes(value: js.Array[ShapeData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

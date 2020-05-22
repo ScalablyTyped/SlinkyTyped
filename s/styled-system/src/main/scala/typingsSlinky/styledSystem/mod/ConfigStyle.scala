@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigStyle extends js.Object {
   /** A fallback scale object for when there isn't one defined in the `theme` object. */
-  var defaultScale: js.UndefOr[Scale] = js.native
+  var defaultScale: js.UndefOr[Scale] = js.undefined
   /**
     * An array of multiple properties (e.g. `['marginLeft', 'marginRight']`) to which this style's value will be
     * assigned (overrides `property` when present).
@@ -16,94 +15,35 @@ trait ConfigStyle extends js.Object {
     js.Array[
       /* keyof csstype.csstype.Properties<string | 0> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 753 */ js.Any
     ]
-  ] = js.native
+  ] = js.undefined
   /** The CSS property to use in the returned style object (overridden by `properties` if present). */
   var property: js.UndefOr[
     /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 754 */ js.Any
-  ] = js.native
+  ] = js.undefined
   /** A string referencing a key in the `theme` object. */
-  var scale: js.UndefOr[String] = js.native
+  var scale: js.UndefOr[String] = js.undefined
   /** A function to transform the raw value based on the scale. */
-  var transform: js.UndefOr[js.Function2[/* value */ js.Any, /* scale */ js.UndefOr[Scale], _]] = js.native
+  var transform: js.UndefOr[js.Function2[/* value */ js.Any, /* scale */ js.UndefOr[Scale], _]] = js.undefined
 }
 
 object ConfigStyle {
   @scala.inline
-  def apply(): ConfigStyle = {
+  def apply(
+    defaultScale: Scale = null,
+    properties: js.Array[
+      /* keyof csstype.csstype.Properties<string | 0> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 753 */ js.Any
+    ] = null,
+    property: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 754 */ js.Any = null,
+    scale: String = null,
+    transform: (/* value */ js.Any, /* scale */ js.UndefOr[Scale]) => _ = null
+  ): ConfigStyle = {
     val __obj = js.Dynamic.literal()
+    if (defaultScale != null) __obj.updateDynamic("defaultScale")(defaultScale.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction2(transform))
     __obj.asInstanceOf[ConfigStyle]
   }
-  @scala.inline
-  implicit class ConfigStyleOps[Self <: ConfigStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultScale(value: Scale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(
-      value: js.Array[
-          /* keyof csstype.csstype.Properties<string | 0> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 753 */ js.Any
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperty(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 754 */ js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: (/* value */ js.Any, /* scale */ js.UndefOr[Scale]) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

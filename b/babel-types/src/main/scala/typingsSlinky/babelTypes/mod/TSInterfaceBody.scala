@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSInterfaceBody extends Node {
-  var body: js.Array[TSTypeElement] = js.native
+  var body: js.Array[TSTypeElement]
   @JSName("type")
-  var type_TSInterfaceBody: typingsSlinky.babelTypes.babelTypesStrings.TSInterfaceBody = js.native
+  var type_TSInterfaceBody: typingsSlinky.babelTypes.babelTypesStrings.TSInterfaceBody
 }
 
 @JSImport("babel-types", "TSInterfaceBody")

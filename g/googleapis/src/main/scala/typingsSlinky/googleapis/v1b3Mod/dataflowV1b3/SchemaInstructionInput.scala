@@ -24,41 +24,14 @@ trait SchemaInstructionInput extends js.Object {
 
 object SchemaInstructionInput {
   @scala.inline
-  def apply(): SchemaInstructionInput = {
+  def apply(
+    outputNum: js.UndefOr[Double] = js.undefined,
+    producerInstructionIndex: js.UndefOr[Double] = js.undefined
+  ): SchemaInstructionInput = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(outputNum)) __obj.updateDynamic("outputNum")(outputNum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(producerInstructionIndex)) __obj.updateDynamic("producerInstructionIndex")(producerInstructionIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstructionInput]
   }
-  @scala.inline
-  implicit class SchemaInstructionInputOps[Self <: SchemaInstructionInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputNum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputNum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputNum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProducerInstructionIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("producerInstructionIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProducerInstructionIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("producerInstructionIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JobConfigurationTableCopy extends js.Object {
-  var createDisposition: js.UndefOr[String] = js.native
-  var destinationEncryptionConfiguration: js.UndefOr[EncryptionConfiguration] = js.native
-  var destinationTable: js.UndefOr[TableReference] = js.native
-  var sourceTable: js.UndefOr[TableReference] = js.native
-  var sourceTables: js.UndefOr[js.Array[TableReference]] = js.native
-  var writeDisposition: js.UndefOr[String] = js.native
+  var createDisposition: js.UndefOr[String] = js.undefined
+  var destinationEncryptionConfiguration: js.UndefOr[EncryptionConfiguration] = js.undefined
+  var destinationTable: js.UndefOr[TableReference] = js.undefined
+  var sourceTable: js.UndefOr[TableReference] = js.undefined
+  var sourceTables: js.UndefOr[js.Array[TableReference]] = js.undefined
+  var writeDisposition: js.UndefOr[String] = js.undefined
 }
 
 object JobConfigurationTableCopy {
   @scala.inline
-  def apply(): JobConfigurationTableCopy = {
+  def apply(
+    createDisposition: String = null,
+    destinationEncryptionConfiguration: EncryptionConfiguration = null,
+    destinationTable: TableReference = null,
+    sourceTable: TableReference = null,
+    sourceTables: js.Array[TableReference] = null,
+    writeDisposition: String = null
+  ): JobConfigurationTableCopy = {
     val __obj = js.Dynamic.literal()
+    if (createDisposition != null) __obj.updateDynamic("createDisposition")(createDisposition.asInstanceOf[js.Any])
+    if (destinationEncryptionConfiguration != null) __obj.updateDynamic("destinationEncryptionConfiguration")(destinationEncryptionConfiguration.asInstanceOf[js.Any])
+    if (destinationTable != null) __obj.updateDynamic("destinationTable")(destinationTable.asInstanceOf[js.Any])
+    if (sourceTable != null) __obj.updateDynamic("sourceTable")(sourceTable.asInstanceOf[js.Any])
+    if (sourceTables != null) __obj.updateDynamic("sourceTables")(sourceTables.asInstanceOf[js.Any])
+    if (writeDisposition != null) __obj.updateDynamic("writeDisposition")(writeDisposition.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobConfigurationTableCopy]
   }
-  @scala.inline
-  implicit class JobConfigurationTableCopyOps[Self <: JobConfigurationTableCopy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateDisposition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDisposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateDisposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDisposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationEncryptionConfiguration(value: EncryptionConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationEncryptionConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationEncryptionConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationEncryptionConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationTable(value: TableReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceTable(value: TableReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceTables(value: js.Array[TableReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteDisposition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeDisposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteDisposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeDisposition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

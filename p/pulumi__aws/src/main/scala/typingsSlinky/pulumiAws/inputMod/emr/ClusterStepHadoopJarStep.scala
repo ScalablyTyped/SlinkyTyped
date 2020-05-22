@@ -16,59 +16,17 @@ trait ClusterStepHadoopJarStep extends js.Object {
 
 object ClusterStepHadoopJarStep {
   @scala.inline
-  def apply(jar: Input[String]): ClusterStepHadoopJarStep = {
+  def apply(
+    jar: Input[String],
+    args: Input[js.Array[Input[String]]] = null,
+    mainClass: Input[String] = null,
+    properties: Input[StringDictionary[_]] = null
+  ): ClusterStepHadoopJarStep = {
     val __obj = js.Dynamic.literal(jar = jar.asInstanceOf[js.Any])
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (mainClass != null) __obj.updateDynamic("mainClass")(mainClass.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterStepHadoopJarStep]
   }
-  @scala.inline
-  implicit class ClusterStepHadoopJarStepOps[Self <: ClusterStepHadoopJarStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJar(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArgs(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMainClass(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

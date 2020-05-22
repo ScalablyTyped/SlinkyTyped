@@ -35,89 +35,22 @@ trait UserPoolPasswordPolicy extends js.Object {
 
 object UserPoolPasswordPolicy {
   @scala.inline
-  def apply(): UserPoolPasswordPolicy = {
+  def apply(
+    minimumLength: Input[Double] = null,
+    requireLowercase: Input[Boolean] = null,
+    requireNumbers: Input[Boolean] = null,
+    requireSymbols: Input[Boolean] = null,
+    requireUppercase: Input[Boolean] = null,
+    temporaryPasswordValidityDays: Input[Double] = null
+  ): UserPoolPasswordPolicy = {
     val __obj = js.Dynamic.literal()
+    if (minimumLength != null) __obj.updateDynamic("minimumLength")(minimumLength.asInstanceOf[js.Any])
+    if (requireLowercase != null) __obj.updateDynamic("requireLowercase")(requireLowercase.asInstanceOf[js.Any])
+    if (requireNumbers != null) __obj.updateDynamic("requireNumbers")(requireNumbers.asInstanceOf[js.Any])
+    if (requireSymbols != null) __obj.updateDynamic("requireSymbols")(requireSymbols.asInstanceOf[js.Any])
+    if (requireUppercase != null) __obj.updateDynamic("requireUppercase")(requireUppercase.asInstanceOf[js.Any])
+    if (temporaryPasswordValidityDays != null) __obj.updateDynamic("temporaryPasswordValidityDays")(temporaryPasswordValidityDays.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolPasswordPolicy]
   }
-  @scala.inline
-  implicit class UserPoolPasswordPolicyOps[Self <: UserPoolPasswordPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMinimumLength(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireLowercase(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireLowercase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireLowercase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireLowercase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireNumbers(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireNumbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireSymbols(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSymbols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireSymbols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSymbols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireUppercase(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireUppercase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireUppercase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireUppercase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemporaryPasswordValidityDays(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("temporaryPasswordValidityDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemporaryPasswordValidityDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("temporaryPasswordValidityDays")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

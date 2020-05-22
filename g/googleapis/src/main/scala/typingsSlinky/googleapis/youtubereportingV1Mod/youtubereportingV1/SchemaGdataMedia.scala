@@ -133,377 +133,70 @@ trait SchemaGdataMedia extends js.Object {
 
 object SchemaGdataMedia {
   @scala.inline
-  def apply(): SchemaGdataMedia = {
+  def apply(
+    algorithm: String = null,
+    bigstoreObjectRef: String = null,
+    blobRef: String = null,
+    blobstore2Info: SchemaGdataBlobstore2Info = null,
+    compositeMedia: js.Array[SchemaGdataCompositeMedia] = null,
+    contentType: String = null,
+    contentTypeInfo: SchemaGdataContentTypeInfo = null,
+    cosmoBinaryReference: String = null,
+    crc32cHash: js.UndefOr[Double] = js.undefined,
+    diffChecksumsResponse: SchemaGdataDiffChecksumsResponse = null,
+    diffDownloadResponse: SchemaGdataDiffDownloadResponse = null,
+    diffUploadRequest: SchemaGdataDiffUploadRequest = null,
+    diffUploadResponse: SchemaGdataDiffUploadResponse = null,
+    diffVersionResponse: SchemaGdataDiffVersionResponse = null,
+    downloadParameters: SchemaGdataDownloadParameters = null,
+    filename: String = null,
+    hash: String = null,
+    hashVerified: js.UndefOr[Boolean] = js.undefined,
+    `inline`: String = null,
+    isPotentialRetry: js.UndefOr[Boolean] = js.undefined,
+    length: String = null,
+    md5Hash: String = null,
+    mediaId: String = null,
+    objectId: SchemaGdataObjectId = null,
+    path: String = null,
+    referenceType: String = null,
+    sha1Hash: String = null,
+    sha256Hash: String = null,
+    timestamp: String = null,
+    token: String = null
+  ): SchemaGdataMedia = {
     val __obj = js.Dynamic.literal()
+    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
+    if (bigstoreObjectRef != null) __obj.updateDynamic("bigstoreObjectRef")(bigstoreObjectRef.asInstanceOf[js.Any])
+    if (blobRef != null) __obj.updateDynamic("blobRef")(blobRef.asInstanceOf[js.Any])
+    if (blobstore2Info != null) __obj.updateDynamic("blobstore2Info")(blobstore2Info.asInstanceOf[js.Any])
+    if (compositeMedia != null) __obj.updateDynamic("compositeMedia")(compositeMedia.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (contentTypeInfo != null) __obj.updateDynamic("contentTypeInfo")(contentTypeInfo.asInstanceOf[js.Any])
+    if (cosmoBinaryReference != null) __obj.updateDynamic("cosmoBinaryReference")(cosmoBinaryReference.asInstanceOf[js.Any])
+    if (!js.isUndefined(crc32cHash)) __obj.updateDynamic("crc32cHash")(crc32cHash.get.asInstanceOf[js.Any])
+    if (diffChecksumsResponse != null) __obj.updateDynamic("diffChecksumsResponse")(diffChecksumsResponse.asInstanceOf[js.Any])
+    if (diffDownloadResponse != null) __obj.updateDynamic("diffDownloadResponse")(diffDownloadResponse.asInstanceOf[js.Any])
+    if (diffUploadRequest != null) __obj.updateDynamic("diffUploadRequest")(diffUploadRequest.asInstanceOf[js.Any])
+    if (diffUploadResponse != null) __obj.updateDynamic("diffUploadResponse")(diffUploadResponse.asInstanceOf[js.Any])
+    if (diffVersionResponse != null) __obj.updateDynamic("diffVersionResponse")(diffVersionResponse.asInstanceOf[js.Any])
+    if (downloadParameters != null) __obj.updateDynamic("downloadParameters")(downloadParameters.asInstanceOf[js.Any])
+    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
+    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
+    if (!js.isUndefined(hashVerified)) __obj.updateDynamic("hashVerified")(hashVerified.get.asInstanceOf[js.Any])
+    if (`inline` != null) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPotentialRetry)) __obj.updateDynamic("isPotentialRetry")(isPotentialRetry.get.asInstanceOf[js.Any])
+    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
+    if (md5Hash != null) __obj.updateDynamic("md5Hash")(md5Hash.asInstanceOf[js.Any])
+    if (mediaId != null) __obj.updateDynamic("mediaId")(mediaId.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (referenceType != null) __obj.updateDynamic("referenceType")(referenceType.asInstanceOf[js.Any])
+    if (sha1Hash != null) __obj.updateDynamic("sha1Hash")(sha1Hash.asInstanceOf[js.Any])
+    if (sha256Hash != null) __obj.updateDynamic("sha256Hash")(sha256Hash.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGdataMedia]
   }
-  @scala.inline
-  implicit class SchemaGdataMediaOps[Self <: SchemaGdataMedia] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBigstoreObjectRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigstoreObjectRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBigstoreObjectRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigstoreObjectRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlobRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlobRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlobstore2Info(value: SchemaGdataBlobstore2Info): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobstore2Info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlobstore2Info: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobstore2Info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompositeMedia(value: js.Array[SchemaGdataCompositeMedia]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compositeMedia")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompositeMedia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compositeMedia")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentTypeInfo(value: SchemaGdataContentTypeInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTypeInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentTypeInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTypeInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCosmoBinaryReference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cosmoBinaryReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCosmoBinaryReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cosmoBinaryReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrc32cHash(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crc32cHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrc32cHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crc32cHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiffChecksumsResponse(value: SchemaGdataDiffChecksumsResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffChecksumsResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiffChecksumsResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffChecksumsResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiffDownloadResponse(value: SchemaGdataDiffDownloadResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffDownloadResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiffDownloadResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffDownloadResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiffUploadRequest(value: SchemaGdataDiffUploadRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffUploadRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiffUploadRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffUploadRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiffUploadResponse(value: SchemaGdataDiffUploadResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffUploadResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiffUploadResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffUploadResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiffVersionResponse(value: SchemaGdataDiffVersionResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffVersionResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiffVersionResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffVersionResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownloadParameters(value: SchemaGdataDownloadParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHashVerified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashVerified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHashVerified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashVerified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPotentialRetry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPotentialRetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPotentialRetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPotentialRetry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLength(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd5Hash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5Hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd5Hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5Hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: SchemaGdataObjectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSha1Hash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha1Hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSha1Hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha1Hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSha256Hash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256Hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSha256Hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256Hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

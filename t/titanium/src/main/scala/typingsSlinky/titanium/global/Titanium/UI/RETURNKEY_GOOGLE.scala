@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Set the return key text to "Google".
-		 */
+  * Set the return key text to "Google".
+  */
 @JSGlobal("Titanium.UI.RETURNKEY_GOOGLE")
 @js.native
 object RETURNKEY_GOOGLE extends TopLevel[Double]

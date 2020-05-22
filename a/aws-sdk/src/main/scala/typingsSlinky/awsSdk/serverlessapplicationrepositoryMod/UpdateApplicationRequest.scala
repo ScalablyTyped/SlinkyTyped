@@ -38,95 +38,23 @@ trait UpdateApplicationRequest extends js.Object {
 
 object UpdateApplicationRequest {
   @scala.inline
-  def apply(ApplicationId: string): UpdateApplicationRequest = {
+  def apply(
+    ApplicationId: string,
+    Author: string = null,
+    Description: string = null,
+    HomePageUrl: string = null,
+    Labels: listOfString = null,
+    ReadmeBody: string = null,
+    ReadmeUrl: string = null
+  ): UpdateApplicationRequest = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any])
+    if (Author != null) __obj.updateDynamic("Author")(Author.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (HomePageUrl != null) __obj.updateDynamic("HomePageUrl")(HomePageUrl.asInstanceOf[js.Any])
+    if (Labels != null) __obj.updateDynamic("Labels")(Labels.asInstanceOf[js.Any])
+    if (ReadmeBody != null) __obj.updateDynamic("ReadmeBody")(ReadmeBody.asInstanceOf[js.Any])
+    if (ReadmeUrl != null) __obj.updateDynamic("ReadmeUrl")(ReadmeUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateApplicationRequest]
   }
-  @scala.inline
-  implicit class UpdateApplicationRequestOps[Self <: UpdateApplicationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthor(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHomePageUrl(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomePageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHomePageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomePageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadmeBody(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadmeBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadmeBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadmeBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadmeUrl(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadmeUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadmeUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadmeUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -27,10 +27,17 @@ object deleteBucketLifecycleCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteBucketLifecycleInput) = this()
+    /* CompleteClass */
+    override val input: DeleteBucketLifecycleInput = js.native
     val middlewareStack: MiddlewareStack[DeleteBucketLifecycleInput, DeleteBucketLifecycleOutput, Blob] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: S3ResolvedConfiguration
+    ): Handler[DeleteBucketLifecycleInput, DeleteBucketLifecycleOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[DeleteBucketLifecycleInput, DeleteBucketLifecycleOutput] = js.native
   }

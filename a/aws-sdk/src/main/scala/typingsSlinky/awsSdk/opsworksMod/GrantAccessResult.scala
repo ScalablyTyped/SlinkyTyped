@@ -14,29 +14,10 @@ trait GrantAccessResult extends js.Object {
 
 object GrantAccessResult {
   @scala.inline
-  def apply(): GrantAccessResult = {
+  def apply(TemporaryCredential: TemporaryCredential = null): GrantAccessResult = {
     val __obj = js.Dynamic.literal()
+    if (TemporaryCredential != null) __obj.updateDynamic("TemporaryCredential")(TemporaryCredential.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrantAccessResult]
   }
-  @scala.inline
-  implicit class GrantAccessResultOps[Self <: GrantAccessResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTemporaryCredential(value: TemporaryCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporaryCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemporaryCredential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporaryCredential")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,41 +23,11 @@ trait SchemaAddHeldAccountsRequest extends js.Object {
 
 object SchemaAddHeldAccountsRequest {
   @scala.inline
-  def apply(): SchemaAddHeldAccountsRequest = {
+  def apply(accountIds: js.Array[String] = null, emails: js.Array[String] = null): SchemaAddHeldAccountsRequest = {
     val __obj = js.Dynamic.literal()
+    if (accountIds != null) __obj.updateDynamic("accountIds")(accountIds.asInstanceOf[js.Any])
+    if (emails != null) __obj.updateDynamic("emails")(emails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddHeldAccountsRequest]
   }
-  @scala.inline
-  implicit class SchemaAddHeldAccountsRequestOps[Self <: SchemaAddHeldAccountsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmails(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

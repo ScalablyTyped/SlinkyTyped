@@ -5,55 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ApiKeyCredentialOptions extends js.Object {
   /**
     * @property {object} [inHeader]  A key value pair of the header parameters that need to be applied to the request.
     */
-  var inHeader: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var inHeader: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   /**
     * @property {object} [inQuery]   A key value pair of the query parameters that need to be applied to the request.
     */
-  var inQuery: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var inQuery: js.UndefOr[StringDictionary[js.Any]] = js.undefined
 }
 
 object ApiKeyCredentialOptions {
   @scala.inline
-  def apply(): ApiKeyCredentialOptions = {
+  def apply(inHeader: StringDictionary[js.Any] = null, inQuery: StringDictionary[js.Any] = null): ApiKeyCredentialOptions = {
     val __obj = js.Dynamic.literal()
+    if (inHeader != null) __obj.updateDynamic("inHeader")(inHeader.asInstanceOf[js.Any])
+    if (inQuery != null) __obj.updateDynamic("inQuery")(inQuery.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiKeyCredentialOptions]
   }
-  @scala.inline
-  implicit class ApiKeyCredentialOptionsOps[Self <: ApiKeyCredentialOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInHeader(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInQuery(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inQuery")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

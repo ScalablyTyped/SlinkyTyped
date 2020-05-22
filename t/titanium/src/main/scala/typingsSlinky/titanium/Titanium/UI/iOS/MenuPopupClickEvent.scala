@@ -5,18 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Fired when the user clicks at one of the menu popup items.
-			 */
-@js.native
+  * Fired when the user clicks at one of the menu popup items.
+  */
 trait MenuPopupClickEvent extends MenuPopupBaseEvent {
   /**
-  				 * The index of the clicked item.
-  				 */
-  var index: Double = js.native
+    * The index of the clicked item.
+    */
+  var index: Double
   /**
-  				 * The title of the clicked item.
-  				 */
-  var title: String = js.native
+    * The title of the clicked item.
+    */
+  var title: String
 }
 
 object MenuPopupClickEvent {
@@ -25,25 +24,5 @@ object MenuPopupClickEvent {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuPopupClickEvent]
   }
-  @scala.inline
-  implicit class MenuPopupClickEventOps[Self <: MenuPopupClickEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

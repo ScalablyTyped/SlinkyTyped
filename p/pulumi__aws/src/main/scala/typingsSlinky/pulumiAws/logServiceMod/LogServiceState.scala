@@ -19,41 +19,11 @@ trait LogServiceState extends js.Object {
 
 object LogServiceState {
   @scala.inline
-  def apply(): LogServiceState = {
+  def apply(directoryId: Input[String] = null, logGroupName: Input[String] = null): LogServiceState = {
     val __obj = js.Dynamic.literal()
+    if (directoryId != null) __obj.updateDynamic("directoryId")(directoryId.asInstanceOf[js.Any])
+    if (logGroupName != null) __obj.updateDynamic("logGroupName")(logGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogServiceState]
   }
-  @scala.inline
-  implicit class LogServiceStateOps[Self <: LogServiceState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectoryId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogGroupName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

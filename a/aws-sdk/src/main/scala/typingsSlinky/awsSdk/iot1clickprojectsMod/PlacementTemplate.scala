@@ -18,41 +18,11 @@ trait PlacementTemplate extends js.Object {
 
 object PlacementTemplate {
   @scala.inline
-  def apply(): PlacementTemplate = {
+  def apply(defaultAttributes: DefaultPlacementAttributeMap = null, deviceTemplates: DeviceTemplateMap = null): PlacementTemplate = {
     val __obj = js.Dynamic.literal()
+    if (defaultAttributes != null) __obj.updateDynamic("defaultAttributes")(defaultAttributes.asInstanceOf[js.Any])
+    if (deviceTemplates != null) __obj.updateDynamic("deviceTemplates")(deviceTemplates.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlacementTemplate]
   }
-  @scala.inline
-  implicit class PlacementTemplateOps[Self <: PlacementTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultAttributes(value: DefaultPlacementAttributeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceTemplates(value: DeviceTemplateMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceTemplates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTemplates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceTemplates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

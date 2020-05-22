@@ -14,474 +14,176 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ElementOptions extends INodeOptions {
   /**
     * Text alignment: left, center, or right.
     */
-  var align: js.UndefOr[left | center | right] = js.native
-  var bg: js.UndefOr[String] = js.native
-  var bold: js.UndefOr[String] = js.native
+  var align: js.UndefOr[left | center | right] = js.undefined
+  var bg: js.UndefOr[String] = js.undefined
+  var bold: js.UndefOr[String] = js.undefined
   /**
     * Border object, see below.
     */
-  var border: js.UndefOr[Border | line | bg] = js.native
-  var bottom: js.UndefOr[TPosition] = js.native
+  var border: js.UndefOr[Border | line | bg] = js.undefined
+  var bottom: js.UndefOr[TPosition] = js.undefined
   /**
     * Background character (default is whitespace ).
     */
-  var ch: js.UndefOr[String] = js.native
+  var ch: js.UndefOr[String] = js.undefined
   /**
     * Element is clickable.
     */
-  var clickable: js.UndefOr[Boolean] = js.native
+  var clickable: js.UndefOr[Boolean] = js.undefined
   /**
     * Element's text content.
     */
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[String] = js.undefined
   /**
     * Allow the element to be dragged with the mouse.
     */
-  var draggable: js.UndefOr[Boolean] = js.native
-  var fg: js.UndefOr[String] = js.native
+  var draggable: js.UndefOr[Boolean] = js.undefined
+  var fg: js.UndefOr[String] = js.undefined
   /**
     * Element is focused.
     */
-  var focused: js.UndefOr[BlessedElement] = js.native
+  var focused: js.UndefOr[BlessedElement] = js.undefined
   /**
     * Offsets of the element relative to its parent. Can be a number, percentage (0-100%), or
     * keyword (center). right and bottom do not accept keywords. Percentages can also have
     * offsets (50%+1, 50%-1).
     */
-  var height: js.UndefOr[Double | String] = js.native
+  var height: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether the element is hidden.
     */
-  var hidden: js.UndefOr[Boolean] = js.native
+  var hidden: js.UndefOr[Boolean] = js.undefined
   /**
     * A floating text label for the element which appears on mouseover.
     */
-  var hoverText: js.UndefOr[String] = js.native
+  var hoverText: js.UndefOr[String] = js.undefined
   /**
     * Element is focusable and can receive key input.
     */
-  var input: js.UndefOr[Boolean] = js.native
-  var keyable: js.UndefOr[Boolean] = js.native
+  var input: js.UndefOr[Boolean] = js.undefined
+  var keyable: js.UndefOr[Boolean] = js.undefined
   /**
     * A simple text label for the element.
     */
-  var label: js.UndefOr[String] = js.native
-  var left: js.UndefOr[TTopLeft] = js.native
+  var label: js.UndefOr[String] = js.undefined
+  var left: js.UndefOr[TTopLeft] = js.undefined
   /**
     * Amount of padding on the inside of the element. Can be a number or an object containing
     * the properties: left, right, top, and bottom.
     */
-  var padding: js.UndefOr[Double | Padding] = js.native
+  var padding: js.UndefOr[Double | Padding] = js.undefined
   /**
     * Can contain the above options.
     */
-  var position: js.UndefOr[Position] = js.native
-  var right: js.UndefOr[TPosition] = js.native
+  var position: js.UndefOr[Position] = js.undefined
+  var right: js.UndefOr[TPosition] = js.undefined
   /**
     * Whether the element is scrollable or not.
     */
-  var scrollable: js.UndefOr[Boolean] = js.native
+  var scrollable: js.UndefOr[Boolean] = js.undefined
   /**
     * Draw a translucent offset shadow behind the element.
     */
-  var shadow: js.UndefOr[Boolean] = js.native
+  var shadow: js.UndefOr[Boolean] = js.undefined
   /**
     * Shrink/flex/grow to content and child elements. Width/height during render.
     */
-  var shrink: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[js.Any] = js.native
-  var tags: js.UndefOr[Boolean] = js.native
-  var top: js.UndefOr[TTopLeft] = js.native
-  var underline: js.UndefOr[String] = js.native
+  var shrink: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[js.Any] = js.undefined
+  var tags: js.UndefOr[Boolean] = js.undefined
+  var top: js.UndefOr[TTopLeft] = js.undefined
+  var underline: js.UndefOr[String] = js.undefined
   /**
     * Vertical text alignment: top, middle, or bottom.
     */
-  var valign: js.UndefOr[top | middle | bottom] = js.native
+  var valign: js.UndefOr[top | middle | bottom] = js.undefined
   /**
     * Width/height of the element, can be a number, percentage (0-100%), or keyword (half or shrink).
     * Percentages can also have offsets (50%+1, 50%-1).
     */
-  var width: js.UndefOr[Double | String] = js.native
+  var width: js.UndefOr[Double | String] = js.undefined
 }
 
 object ElementOptions {
   @scala.inline
-  def apply(): ElementOptions = {
+  def apply(
+    align: left | center | right = null,
+    bg: String = null,
+    bold: String = null,
+    border: Border | line | bg = null,
+    bottom: TPosition = null,
+    ch: String = null,
+    children: js.Array[Node] = null,
+    clickable: js.UndefOr[Boolean] = js.undefined,
+    content: String = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    fg: String = null,
+    focusable: js.UndefOr[Boolean] = js.undefined,
+    focused: BlessedElement = null,
+    height: Double | String = null,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    hoverText: String = null,
+    input: js.UndefOr[Boolean] = js.undefined,
+    keyable: js.UndefOr[Boolean] = js.undefined,
+    label: String = null,
+    left: TTopLeft = null,
+    name: String = null,
+    padding: Double | Padding = null,
+    parent: Node = null,
+    position: Position = null,
+    right: TPosition = null,
+    screen: Screen = null,
+    scrollable: js.UndefOr[Boolean] = js.undefined,
+    shadow: js.UndefOr[Boolean] = js.undefined,
+    shrink: js.UndefOr[Boolean] = js.undefined,
+    style: js.Any = null,
+    tags: js.UndefOr[Boolean] = js.undefined,
+    top: TTopLeft = null,
+    underline: String = null,
+    valign: top | middle | bottom = null,
+    width: Double | String = null
+  ): ElementOptions = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (bg != null) __obj.updateDynamic("bg")(bg.asInstanceOf[js.Any])
+    if (bold != null) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
+    if (ch != null) __obj.updateDynamic("ch")(ch.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (fg != null) __obj.updateDynamic("fg")(fg.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusable)) __obj.updateDynamic("focusable")(focusable.get.asInstanceOf[js.Any])
+    if (focused != null) __obj.updateDynamic("focused")(focused.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (hoverText != null) __obj.updateDynamic("hoverText")(hoverText.asInstanceOf[js.Any])
+    if (!js.isUndefined(input)) __obj.updateDynamic("input")(input.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyable)) __obj.updateDynamic("keyable")(keyable.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
+    if (screen != null) __obj.updateDynamic("screen")(screen.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollable)) __obj.updateDynamic("scrollable")(scrollable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadow)) __obj.updateDynamic("shadow")(shadow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shrink)) __obj.updateDynamic("shrink")(shrink.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(tags)) __obj.updateDynamic("tags")(tags.get.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
+    if (underline != null) __obj.updateDynamic("underline")(underline.asInstanceOf[js.Any])
+    if (valign != null) __obj.updateDynamic("valign")(valign.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementOptions]
   }
-  @scala.inline
-  implicit class ElementOptionsOps[Self <: ElementOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: left | center | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBold(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: Border | line | bg): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottom(value: TPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCh(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocused(value: BlessedElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: TTopLeft): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double | Padding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: TPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShrink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShrink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: TTopLeft): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnderline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnderline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValign(value: top | middle | bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

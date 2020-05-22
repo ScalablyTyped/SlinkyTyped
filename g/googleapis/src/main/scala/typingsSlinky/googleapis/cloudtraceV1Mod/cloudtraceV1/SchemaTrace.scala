@@ -29,53 +29,12 @@ trait SchemaTrace extends js.Object {
 
 object SchemaTrace {
   @scala.inline
-  def apply(): SchemaTrace = {
+  def apply(projectId: String = null, spans: js.Array[SchemaTraceSpan] = null, traceId: String = null): SchemaTrace = {
     val __obj = js.Dynamic.literal()
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (spans != null) __obj.updateDynamic("spans")(spans.asInstanceOf[js.Any])
+    if (traceId != null) __obj.updateDynamic("traceId")(traceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTrace]
   }
-  @scala.inline
-  implicit class SchemaTraceOps[Self <: SchemaTrace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpans(value: js.Array[SchemaTraceSpan]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spans")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpans: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spans")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTraceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTraceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

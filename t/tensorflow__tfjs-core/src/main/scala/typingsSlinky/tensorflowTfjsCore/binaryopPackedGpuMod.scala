@@ -12,11 +12,17 @@ object binaryopPackedGpuMod extends js.Object {
   class BinaryOpPackedProgram protected () extends GPGPUProgram {
     def this(op: String, aShape: js.Array[Double], bShape: js.Array[Double]) = this()
     def this(op: String, aShape: js.Array[Double], bShape: js.Array[Double], checkOutOfBounds: Boolean) = this()
+    /* CompleteClass */
+    override var outputShape: js.Array[Double] = js.native
     @JSName("packedInputs")
     var packedInputs_BinaryOpPackedProgram: Boolean = js.native
     @JSName("packedOutput")
     var packedOutput_BinaryOpPackedProgram: Boolean = js.native
     var supportsBroadcasting: Boolean = js.native
+    /* CompleteClass */
+    override var userCode: String = js.native
+    /* CompleteClass */
+    override var variableNames: js.Array[String] = js.native
   }
   
   val ATAN2: String = js.native

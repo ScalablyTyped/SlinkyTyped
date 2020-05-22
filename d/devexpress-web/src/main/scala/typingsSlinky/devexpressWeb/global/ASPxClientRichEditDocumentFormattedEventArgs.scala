@@ -16,5 +16,10 @@ class ASPxClientRichEditDocumentFormattedEventArgs protected ()
     * @param pageCount The number of pages in the document.
     */
   def this(pageCount: Double) = this()
+  /**
+    * Gets the number of pages in the document.
+    */
+  /* CompleteClass */
+  override var pageCount: Double = js.native
 }
 

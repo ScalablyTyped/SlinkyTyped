@@ -9,142 +9,64 @@ import scala.scalajs.js.annotation._
   * when updating a SAML provider's configuration via
   * {@link https://firebase.google.com/docs/reference/admin/node/admin.auth.Auth#updateProviderConfig `updateProviderConfig()`}.
   */
-@js.native
-trait SAMLUpdateAuthProviderRequest extends UpdateAuthProviderRequest {
+trait SAMLUpdateAuthProviderRequest extends js.Object {
   /**
     * The SAML provider's callback URL. If not provided, the existing
     * configuration's value is not modified.
     */
-  var callbackURL: js.UndefOr[String] = js.native
+  var callbackURL: js.UndefOr[String] = js.undefined
   /**
     * The SAML provider's updated display name. If not provided, the existing
     * configuration's value is not modified.
     */
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   /**
     * Whether the SAML provider is enabled or not. If not provided, the existing
     * configuration's setting is not modified.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The SAML provider's updated IdP entity ID. If not provided, the existing
     * configuration's value is not modified.
     */
-  var idpEntityId: js.UndefOr[String] = js.native
+  var idpEntityId: js.UndefOr[String] = js.undefined
   /**
     * The SAML provider's updated RP entity ID. If not provided, the existing
     * configuration's value is not modified.
     */
-  var rpEntityId: js.UndefOr[String] = js.native
+  var rpEntityId: js.UndefOr[String] = js.undefined
   /**
     * The SAML provider's updated SSO URL. If not provided, the existing
     * configuration's value is not modified.
     */
-  var ssoURL: js.UndefOr[String] = js.native
+  var ssoURL: js.UndefOr[String] = js.undefined
   /**
     * The SAML provider's updated list of X.509 certificated. If not provided, the
     * existing configuration list is not modified.
     */
-  var x509Certificates: js.UndefOr[js.Array[String]] = js.native
+  var x509Certificates: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object SAMLUpdateAuthProviderRequest {
   @scala.inline
-  def apply(): SAMLUpdateAuthProviderRequest = {
+  def apply(
+    callbackURL: String = null,
+    displayName: String = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    idpEntityId: String = null,
+    rpEntityId: String = null,
+    ssoURL: String = null,
+    x509Certificates: js.Array[String] = null
+  ): SAMLUpdateAuthProviderRequest = {
     val __obj = js.Dynamic.literal()
+    if (callbackURL != null) __obj.updateDynamic("callbackURL")(callbackURL.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (idpEntityId != null) __obj.updateDynamic("idpEntityId")(idpEntityId.asInstanceOf[js.Any])
+    if (rpEntityId != null) __obj.updateDynamic("rpEntityId")(rpEntityId.asInstanceOf[js.Any])
+    if (ssoURL != null) __obj.updateDynamic("ssoURL")(ssoURL.asInstanceOf[js.Any])
+    if (x509Certificates != null) __obj.updateDynamic("x509Certificates")(x509Certificates.asInstanceOf[js.Any])
     __obj.asInstanceOf[SAMLUpdateAuthProviderRequest]
   }
-  @scala.inline
-  implicit class SAMLUpdateAuthProviderRequestOps[Self <: SAMLUpdateAuthProviderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallbackURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdpEntityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idpEntityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdpEntityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idpEntityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRpEntityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rpEntityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRpEntityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rpEntityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsoURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssoURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsoURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssoURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX509Certificates(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x509Certificates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX509Certificates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x509Certificates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

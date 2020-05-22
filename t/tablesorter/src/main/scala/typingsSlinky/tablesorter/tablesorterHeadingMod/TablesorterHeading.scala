@@ -9,135 +9,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TablesorterHeading extends TablesorterConfigBase {
   /**
     * The sorting to apply for empty cells.
     */
-  var empty: js.UndefOr[EmptySorting] = js.native
+  var empty: js.UndefOr[EmptySorting] = js.undefined
   /**
     * The filter-concept for the column.
     */
-  var filter: js.UndefOr[ColumnFilter] = js.native
+  var filter: js.UndefOr[ColumnFilter] = js.undefined
   /**
     * The locked sort-order of the heading.
     */
-  var lockedOrder: js.UndefOr[SortOrder] = js.native
+  var lockedOrder: js.UndefOr[SortOrder] = js.undefined
   /**
     * Either the name of the parser to use for text-extraction or a value indicating whether text-extraction is enabled.
     */
-  var parser: js.UndefOr[String | Boolean] = js.native
+  var parser: js.UndefOr[String | Boolean] = js.undefined
   /**
     * A value indicating whether the column should be resizable.
     */
-  var resizable: js.UndefOr[Boolean] = js.native
+  var resizable: js.UndefOr[Boolean] = js.undefined
   /**
     * Either the name of the parser to use for sorting or a value indicating whether sorting is enabled.
     */
-  var sorter: js.UndefOr[String | Boolean] = js.native
+  var sorter: js.UndefOr[String | Boolean] = js.undefined
   /**
     * The sorting to apply for text-cells.
     */
-  var string: js.UndefOr[StringSorting] = js.native
+  var string: js.UndefOr[StringSorting] = js.undefined
 }
 
 object TablesorterHeading {
   @scala.inline
-  def apply(): TablesorterHeading = {
+  def apply(
+    dateFormat: String = null,
+    empty: EmptySorting = null,
+    filter: ColumnFilter = null,
+    lockedOrder: SortOrder = null,
+    parser: String | Boolean = null,
+    resizable: js.UndefOr[Boolean] = js.undefined,
+    sortInitialOrder: SortOrder = null,
+    sorter: String | Boolean = null,
+    string: StringSorting = null
+  ): TablesorterHeading = {
     val __obj = js.Dynamic.literal()
+    if (dateFormat != null) __obj.updateDynamic("dateFormat")(dateFormat.asInstanceOf[js.Any])
+    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (lockedOrder != null) __obj.updateDynamic("lockedOrder")(lockedOrder.asInstanceOf[js.Any])
+    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
+    if (!js.isUndefined(resizable)) __obj.updateDynamic("resizable")(resizable.get.asInstanceOf[js.Any])
+    if (sortInitialOrder != null) __obj.updateDynamic("sortInitialOrder")(sortInitialOrder.asInstanceOf[js.Any])
+    if (sorter != null) __obj.updateDynamic("sorter")(sorter.asInstanceOf[js.Any])
+    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
     __obj.asInstanceOf[TablesorterHeading]
   }
-  @scala.inline
-  implicit class TablesorterHeadingOps[Self <: TablesorterHeading] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmpty(value: EmptySorting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: ColumnFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockedOrder(value: SortOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockedOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockedOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockedOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParser(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSorter(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSorter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withString(value: StringSorting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

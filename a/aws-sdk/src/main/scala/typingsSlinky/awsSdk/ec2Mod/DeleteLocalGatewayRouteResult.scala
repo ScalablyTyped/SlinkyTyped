@@ -14,29 +14,10 @@ trait DeleteLocalGatewayRouteResult extends js.Object {
 
 object DeleteLocalGatewayRouteResult {
   @scala.inline
-  def apply(): DeleteLocalGatewayRouteResult = {
+  def apply(Route: LocalGatewayRoute = null): DeleteLocalGatewayRouteResult = {
     val __obj = js.Dynamic.literal()
+    if (Route != null) __obj.updateDynamic("Route")(Route.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteLocalGatewayRouteResult]
   }
-  @scala.inline
-  implicit class DeleteLocalGatewayRouteResultOps[Self <: DeleteLocalGatewayRouteResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoute(value: LocalGatewayRoute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Route")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Route")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

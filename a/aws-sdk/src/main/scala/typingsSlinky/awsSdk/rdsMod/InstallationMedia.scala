@@ -42,113 +42,26 @@ trait InstallationMedia extends js.Object {
 
 object InstallationMedia {
   @scala.inline
-  def apply(): InstallationMedia = {
+  def apply(
+    CustomAvailabilityZoneId: String = null,
+    Engine: String = null,
+    EngineInstallationMediaPath: String = null,
+    EngineVersion: String = null,
+    FailureCause: InstallationMediaFailureCause = null,
+    InstallationMediaId: String = null,
+    OSInstallationMediaPath: String = null,
+    Status: String = null
+  ): InstallationMedia = {
     val __obj = js.Dynamic.literal()
+    if (CustomAvailabilityZoneId != null) __obj.updateDynamic("CustomAvailabilityZoneId")(CustomAvailabilityZoneId.asInstanceOf[js.Any])
+    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
+    if (EngineInstallationMediaPath != null) __obj.updateDynamic("EngineInstallationMediaPath")(EngineInstallationMediaPath.asInstanceOf[js.Any])
+    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
+    if (FailureCause != null) __obj.updateDynamic("FailureCause")(FailureCause.asInstanceOf[js.Any])
+    if (InstallationMediaId != null) __obj.updateDynamic("InstallationMediaId")(InstallationMediaId.asInstanceOf[js.Any])
+    if (OSInstallationMediaPath != null) __obj.updateDynamic("OSInstallationMediaPath")(OSInstallationMediaPath.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstallationMedia]
   }
-  @scala.inline
-  implicit class InstallationMediaOps[Self <: InstallationMedia] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomAvailabilityZoneId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAvailabilityZoneId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineInstallationMediaPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineInstallationMediaPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineInstallationMediaPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineInstallationMediaPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureCause(value: InstallationMediaFailureCause): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureCause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureCause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureCause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallationMediaId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstallationMediaId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallationMediaId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstallationMediaId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOSInstallationMediaPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OSInstallationMediaPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOSInstallationMediaPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OSInstallationMediaPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

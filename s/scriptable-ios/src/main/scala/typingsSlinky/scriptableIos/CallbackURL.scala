@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * Constructs an object that opens x-callback-url requests and waits for a response from the target app.
   * @see https://docs.scriptable.app/callbackurl/#-new-callbackurl
   */
-@js.native
 trait CallbackURL extends js.Object {
   /**
     * _Construct CallbackURL._
@@ -21,14 +20,14 @@ trait CallbackURL extends js.Object {
     * @param value - Value of the query parameter to add.
     * @see https://docs.scriptable.app/callbackurl/#-addparameter
     */
-  def addParameter(name: String, value: String): Unit = js.native
+  def addParameter(name: String, value: String): Unit
   /**
     * _Creates the callback URL._
     *
     * Creates a callback URL with the specified base URL and query parameters.
     * @see https://docs.scriptable.app/callbackurl/#-geturl
     */
-  def getURL(): String = js.native
+  def getURL(): String
   /**
     * _Opens the callback URL._
     *
@@ -37,7 +36,7 @@ trait CallbackURL extends js.Object {
     * not invoke the callback.
     * @see https://docs.scriptable.app/callbackurl/#-open
     */
-  def open(): js.Promise[_] = js.native
+  def open(): js.Promise[_]
 }
 
 object CallbackURL {
@@ -46,31 +45,5 @@ object CallbackURL {
     val __obj = js.Dynamic.literal(addParameter = js.Any.fromFunction2(addParameter), getURL = js.Any.fromFunction0(getURL), open = js.Any.fromFunction0(open))
     __obj.asInstanceOf[CallbackURL]
   }
-  @scala.inline
-  implicit class CallbackURLOps[Self <: CallbackURL] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddParameter(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addParameter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetURL(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getURL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOpen(value: () => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

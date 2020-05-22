@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TickLabels extends js.Object {
-  var Alignment: Double = js.native
-  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
-  var AutoScaleFont: js.Any = js.native
-  val Creator: Double = js.native
-  val Depth: Double = js.native
-  val Font: ChartFont = js.native
-  val Format: ChartFormat = js.native
-  var MultiLevel: Boolean = js.native
-  val Name: String = js.native
-  var NumberFormat: String = js.native
-  var NumberFormatLinked: Boolean = js.native
-  var NumberFormatLocal: js.Any = js.native
-  var Offset: Double = js.native
-  var Orientation: XlTickLabelOrientation = js.native
-  val Parent: js.Any = js.native
+  var Alignment: Double
+  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application
+  var AutoScaleFont: js.Any
+  val Creator: Double
+  val Depth: Double
+  val Font: ChartFont
+  val Format: ChartFormat
+  var MultiLevel: Boolean
+  val Name: String
+  var NumberFormat: String
+  var NumberFormatLinked: Boolean
+  var NumberFormatLocal: js.Any
+  var Offset: Double
+  var Orientation: XlTickLabelOrientation
+  val Parent: js.Any
   @JSName("PowerPoint.TickLabels_typekey")
-  var PowerPointDotTickLabels_typekey: TickLabels = js.native
-  var ReadingOrder: Double = js.native
-  def Delete(): js.Any = js.native
-  def Select(): js.Any = js.native
+  var PowerPointDotTickLabels_typekey: TickLabels
+  var ReadingOrder: Double
+  def Delete(): js.Any
+  def Select(): js.Any
 }
 
 object TickLabels {
@@ -55,127 +54,5 @@ object TickLabels {
     __obj.updateDynamic("PowerPoint.TickLabels_typekey")(PowerPointDotTickLabels_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[TickLabels]
   }
-  @scala.inline
-  implicit class TickLabelsOps[Self <: TickLabels] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoScaleFont(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScaleFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: ChartFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ChartFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMultiLevel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberFormatLinked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberFormatLinked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberFormatLocal(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberFormatLocal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: XlTickLabelOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotTickLabels_typekey(value: TickLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.TickLabels_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadingOrder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadingOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

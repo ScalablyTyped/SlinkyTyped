@@ -14,6 +14,7 @@ import typingsSlinky.babylonjs.lightMod.Light
 import typingsSlinky.babylonjs.materialMod.Material
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.mathColorMod.Color4
+import typingsSlinky.babylonjs.mathPlaneMod.Plane
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Vector2
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
@@ -638,10 +639,25 @@ class AbstractMesh protected ()
     */
   def isBlocked: Boolean = js.native
   /**
+    * Checks if a cullable object (mesh...) is in the camera frustum
+    * Unlike isInFrustum this cheks the full bounding box
+    * @param frustumPlanes Camera near/planes
+    * @returns true if the object is in frustum otherwise false
+    */
+  /* CompleteClass */
+  override def isCompletelyInFrustum(frustumPlanes: js.Array[Plane]): Boolean = js.native
+  /**
     * gets a boolean indicating if facetData is enabled
     * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata#what-is-a-mesh-facet
     */
   def isFacetDataEnabled: Boolean = js.native
+  /**
+    * Checks if the object or part of the object is in the frustum
+    * @param frustumPlanes Camera near/planes
+    * @returns true if the object is in frustum otherwise false
+    */
+  /* CompleteClass */
+  override def isInFrustum(frustumPlanes: js.Array[Plane]): Boolean = js.native
   /**
     * Gets or sets the current layer mask (default is 0x0FFFFFFF)
     * @see http://doc.babylonjs.com/how_to/layermasks_and_multi-cam_textures

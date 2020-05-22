@@ -21,41 +21,11 @@ trait SchemaSharedDriveFile extends js.Object {
 
 object SchemaSharedDriveFile {
   @scala.inline
-  def apply(): SchemaSharedDriveFile = {
+  def apply(driveFile: SchemaDriveFile = null, shareMode: String = null): SchemaSharedDriveFile = {
     val __obj = js.Dynamic.literal()
+    if (driveFile != null) __obj.updateDynamic("driveFile")(driveFile.asInstanceOf[js.Any])
+    if (shareMode != null) __obj.updateDynamic("shareMode")(shareMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSharedDriveFile]
   }
-  @scala.inline
-  implicit class SchemaSharedDriveFileOps[Self <: SchemaSharedDriveFile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDriveFile(value: SchemaDriveFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriveFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

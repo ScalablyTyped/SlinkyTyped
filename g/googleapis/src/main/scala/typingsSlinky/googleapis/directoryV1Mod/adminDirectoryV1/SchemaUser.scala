@@ -142,545 +142,98 @@ trait SchemaUser extends js.Object {
 
 object SchemaUser {
   @scala.inline
-  def apply(): SchemaUser = {
+  def apply(
+    addresses: js.Any = null,
+    agreedToTerms: js.UndefOr[Boolean] = js.undefined,
+    aliases: js.Array[String] = null,
+    archived: js.UndefOr[Boolean] = js.undefined,
+    changePasswordAtNextLogin: js.UndefOr[Boolean] = js.undefined,
+    creationTime: String = null,
+    customSchemas: StringDictionary[SchemaUserCustomProperties] = null,
+    customerId: String = null,
+    deletionTime: String = null,
+    emails: js.Any = null,
+    etag: String = null,
+    externalIds: js.Any = null,
+    gender: js.Any = null,
+    hashFunction: String = null,
+    id: String = null,
+    ims: js.Any = null,
+    includeInGlobalAddressList: js.UndefOr[Boolean] = js.undefined,
+    ipWhitelisted: js.UndefOr[Boolean] = js.undefined,
+    isAdmin: js.UndefOr[Boolean] = js.undefined,
+    isDelegatedAdmin: js.UndefOr[Boolean] = js.undefined,
+    isEnforcedIn2Sv: js.UndefOr[Boolean] = js.undefined,
+    isEnrolledIn2Sv: js.UndefOr[Boolean] = js.undefined,
+    isMailboxSetup: js.UndefOr[Boolean] = js.undefined,
+    keywords: js.Any = null,
+    kind: String = null,
+    languages: js.Any = null,
+    lastLoginTime: String = null,
+    locations: js.Any = null,
+    name: SchemaUserName = null,
+    nonEditableAliases: js.Array[String] = null,
+    notes: js.Any = null,
+    orgUnitPath: String = null,
+    organizations: js.Any = null,
+    password: String = null,
+    phones: js.Any = null,
+    posixAccounts: js.Any = null,
+    primaryEmail: String = null,
+    relations: js.Any = null,
+    sshPublicKeys: js.Any = null,
+    suspended: js.UndefOr[Boolean] = js.undefined,
+    suspensionReason: String = null,
+    thumbnailPhotoEtag: String = null,
+    thumbnailPhotoUrl: String = null,
+    websites: js.Any = null
+  ): SchemaUser = {
     val __obj = js.Dynamic.literal()
+    if (addresses != null) __obj.updateDynamic("addresses")(addresses.asInstanceOf[js.Any])
+    if (!js.isUndefined(agreedToTerms)) __obj.updateDynamic("agreedToTerms")(agreedToTerms.get.asInstanceOf[js.Any])
+    if (aliases != null) __obj.updateDynamic("aliases")(aliases.asInstanceOf[js.Any])
+    if (!js.isUndefined(archived)) __obj.updateDynamic("archived")(archived.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(changePasswordAtNextLogin)) __obj.updateDynamic("changePasswordAtNextLogin")(changePasswordAtNextLogin.get.asInstanceOf[js.Any])
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (customSchemas != null) __obj.updateDynamic("customSchemas")(customSchemas.asInstanceOf[js.Any])
+    if (customerId != null) __obj.updateDynamic("customerId")(customerId.asInstanceOf[js.Any])
+    if (deletionTime != null) __obj.updateDynamic("deletionTime")(deletionTime.asInstanceOf[js.Any])
+    if (emails != null) __obj.updateDynamic("emails")(emails.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (externalIds != null) __obj.updateDynamic("externalIds")(externalIds.asInstanceOf[js.Any])
+    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
+    if (hashFunction != null) __obj.updateDynamic("hashFunction")(hashFunction.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (ims != null) __obj.updateDynamic("ims")(ims.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeInGlobalAddressList)) __obj.updateDynamic("includeInGlobalAddressList")(includeInGlobalAddressList.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ipWhitelisted)) __obj.updateDynamic("ipWhitelisted")(ipWhitelisted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isAdmin)) __obj.updateDynamic("isAdmin")(isAdmin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDelegatedAdmin)) __obj.updateDynamic("isDelegatedAdmin")(isDelegatedAdmin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEnforcedIn2Sv)) __obj.updateDynamic("isEnforcedIn2Sv")(isEnforcedIn2Sv.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEnrolledIn2Sv)) __obj.updateDynamic("isEnrolledIn2Sv")(isEnrolledIn2Sv.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isMailboxSetup)) __obj.updateDynamic("isMailboxSetup")(isMailboxSetup.get.asInstanceOf[js.Any])
+    if (keywords != null) __obj.updateDynamic("keywords")(keywords.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (languages != null) __obj.updateDynamic("languages")(languages.asInstanceOf[js.Any])
+    if (lastLoginTime != null) __obj.updateDynamic("lastLoginTime")(lastLoginTime.asInstanceOf[js.Any])
+    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nonEditableAliases != null) __obj.updateDynamic("nonEditableAliases")(nonEditableAliases.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (orgUnitPath != null) __obj.updateDynamic("orgUnitPath")(orgUnitPath.asInstanceOf[js.Any])
+    if (organizations != null) __obj.updateDynamic("organizations")(organizations.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (phones != null) __obj.updateDynamic("phones")(phones.asInstanceOf[js.Any])
+    if (posixAccounts != null) __obj.updateDynamic("posixAccounts")(posixAccounts.asInstanceOf[js.Any])
+    if (primaryEmail != null) __obj.updateDynamic("primaryEmail")(primaryEmail.asInstanceOf[js.Any])
+    if (relations != null) __obj.updateDynamic("relations")(relations.asInstanceOf[js.Any])
+    if (sshPublicKeys != null) __obj.updateDynamic("sshPublicKeys")(sshPublicKeys.asInstanceOf[js.Any])
+    if (!js.isUndefined(suspended)) __obj.updateDynamic("suspended")(suspended.get.asInstanceOf[js.Any])
+    if (suspensionReason != null) __obj.updateDynamic("suspensionReason")(suspensionReason.asInstanceOf[js.Any])
+    if (thumbnailPhotoEtag != null) __obj.updateDynamic("thumbnailPhotoEtag")(thumbnailPhotoEtag.asInstanceOf[js.Any])
+    if (thumbnailPhotoUrl != null) __obj.updateDynamic("thumbnailPhotoUrl")(thumbnailPhotoUrl.asInstanceOf[js.Any])
+    if (websites != null) __obj.updateDynamic("websites")(websites.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUser]
   }
-  @scala.inline
-  implicit class SchemaUserOps[Self <: SchemaUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddresses(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgreedToTerms(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agreedToTerms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgreedToTerms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agreedToTerms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAliases(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aliases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAliases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aliases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArchived(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChangePasswordAtNextLogin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changePasswordAtNextLogin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangePasswordAtNextLogin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changePasswordAtNextLogin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomSchemas(value: StringDictionary[SchemaUserCustomProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSchemas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSchemas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSchemas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletionTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmails(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalIds(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGender(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHashFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHashFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIms(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ims")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ims")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeInGlobalAddressList(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInGlobalAddressList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeInGlobalAddressList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInGlobalAddressList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpWhitelisted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipWhitelisted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpWhitelisted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipWhitelisted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAdmin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAdmin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAdmin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAdmin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDelegatedAdmin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDelegatedAdmin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDelegatedAdmin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDelegatedAdmin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEnforcedIn2Sv(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnforcedIn2Sv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEnforcedIn2Sv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnforcedIn2Sv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEnrolledIn2Sv(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnrolledIn2Sv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEnrolledIn2Sv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnrolledIn2Sv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMailboxSetup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMailboxSetup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMailboxSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMailboxSetup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeywords(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeywords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguages(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastLoginTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastLoginTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastLoginTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastLoginTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocations(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: SchemaUserName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonEditableAliases(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonEditableAliases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonEditableAliases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonEditableAliases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrgUnitPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrgUnitPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizations(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhones(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosixAccounts(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("posixAccounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosixAccounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("posixAccounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelations(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSshPublicKeys(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sshPublicKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSshPublicKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sshPublicKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspended(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspended: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspensionReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspensionReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspensionReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspensionReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailPhotoEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailPhotoEtag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailPhotoEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailPhotoEtag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailPhotoUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailPhotoUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailPhotoUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailPhotoUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebsites(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("websites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebsites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("websites")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

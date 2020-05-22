@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * The accessible view of text frames.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleTextFrameView
   extends XAccessibleContext
      with XAccessibleComponent

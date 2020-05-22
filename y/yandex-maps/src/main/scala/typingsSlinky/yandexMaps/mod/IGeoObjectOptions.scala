@@ -1,428 +1,171 @@
 package typingsSlinky.yandexMaps.mod
 
+import typingsSlinky.yandexMaps.yandexMapsStrings.stretch
+import typingsSlinky.yandexMaps.yandexMapsStrings.tile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGeoObjectOptions extends ICircleOptions {
-  var iconCaptionMaxWidth: js.UndefOr[Double] = js.native
-  var iconColor: js.UndefOr[String] = js.native
-  var iconContentLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.native
-  var iconContentOffset: js.UndefOr[js.Array[Double]] = js.native
-  var iconContentPadding: js.UndefOr[js.Array[Double]] = js.native
-  var iconContentSize: js.UndefOr[js.Array[Double]] = js.native
-  var iconImageClipRect: js.UndefOr[js.Array[js.Array[Double]]] = js.native
-  var iconImageHref: js.UndefOr[String] = js.native
-  var iconImageOffset: js.UndefOr[js.Array[Double]] = js.native
-  var iconImageShape: js.UndefOr[IShape | Null] = js.native
-  var iconImageSize: js.UndefOr[js.Array[Double]] = js.native
-  var iconLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.native
-  var iconMaxHeight: js.UndefOr[Double] = js.native
-  var iconMaxWidth: js.UndefOr[Double] = js.native
-  var iconOffset: js.UndefOr[js.Array[Double]] = js.native
-  var iconShadow: js.UndefOr[Boolean] = js.native
-  var iconShadowImageClipRect: js.UndefOr[js.Array[js.Array[Double]]] = js.native
-  var iconShadowImageHref: js.UndefOr[String] = js.native
-  var iconShadowImageOffset: js.UndefOr[js.Array[Double]] = js.native
-  var iconShadowImageSize: js.UndefOr[js.Array[Double]] = js.native
-  var iconShadowLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.native
-  var iconShadowOffset: js.UndefOr[js.Array[Double]] = js.native
-  var lineStringOverlay: js.UndefOr[OverlayKey] = js.native
-  var pointOverlay: js.UndefOr[OverlayKey] = js.native
-  var polygonOverlay: js.UndefOr[OverlayKey] = js.native
-  var preset: js.UndefOr[String] = js.native
-  var rectangleOverlay: js.UndefOr[OverlayKey] = js.native
-  var setMapCursorInDragging: js.UndefOr[Boolean] = js.native
+  var iconCaptionMaxWidth: js.UndefOr[Double] = js.undefined
+  var iconColor: js.UndefOr[String] = js.undefined
+  var iconContentLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.undefined
+  var iconContentOffset: js.UndefOr[js.Array[Double]] = js.undefined
+  var iconContentPadding: js.UndefOr[js.Array[Double]] = js.undefined
+  var iconContentSize: js.UndefOr[js.Array[Double]] = js.undefined
+  var iconImageClipRect: js.UndefOr[js.Array[js.Array[Double]]] = js.undefined
+  var iconImageHref: js.UndefOr[String] = js.undefined
+  var iconImageOffset: js.UndefOr[js.Array[Double]] = js.undefined
+  var iconImageShape: js.UndefOr[IShape | Null] = js.undefined
+  var iconImageSize: js.UndefOr[js.Array[Double]] = js.undefined
+  var iconLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.undefined
+  var iconMaxHeight: js.UndefOr[Double] = js.undefined
+  var iconMaxWidth: js.UndefOr[Double] = js.undefined
+  var iconOffset: js.UndefOr[js.Array[Double]] = js.undefined
+  var iconShadow: js.UndefOr[Boolean] = js.undefined
+  var iconShadowImageClipRect: js.UndefOr[js.Array[js.Array[Double]]] = js.undefined
+  var iconShadowImageHref: js.UndefOr[String] = js.undefined
+  var iconShadowImageOffset: js.UndefOr[js.Array[Double]] = js.undefined
+  var iconShadowImageSize: js.UndefOr[js.Array[Double]] = js.undefined
+  var iconShadowLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.undefined
+  var iconShadowOffset: js.UndefOr[js.Array[Double]] = js.undefined
+  var lineStringOverlay: js.UndefOr[OverlayKey] = js.undefined
+  var pointOverlay: js.UndefOr[OverlayKey] = js.undefined
+  var polygonOverlay: js.UndefOr[OverlayKey] = js.undefined
+  var preset: js.UndefOr[String] = js.undefined
+  var rectangleOverlay: js.UndefOr[OverlayKey] = js.undefined
+  var setMapCursorInDragging: js.UndefOr[Boolean] = js.undefined
 }
 
 object IGeoObjectOptions {
   @scala.inline
-  def apply(): IGeoObjectOptions = {
+  def apply(
+    circleOverlay: String | (js.Function3[
+      /* geometry */ IPixelCircleGeometry, 
+      /* data */ js.Object, 
+      /* options */ js.Object, 
+      js.Promise[IOverlay]
+    ]) = null,
+    cursor: String = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    fill: js.UndefOr[Boolean] = js.undefined,
+    fillColor: String = null,
+    fillImageHref: String = null,
+    fillMethod: stretch | tile = null,
+    fillOpacity: js.UndefOr[Double] = js.undefined,
+    hasBalloon: js.UndefOr[Boolean] = js.undefined,
+    hasHint: js.UndefOr[Boolean] = js.undefined,
+    hideIconOnBalloonOpen: js.UndefOr[Boolean] = js.undefined,
+    iconCaptionMaxWidth: js.UndefOr[Double] = js.undefined,
+    iconColor: String = null,
+    iconContentLayout: String | IClassConstructor[ILayout] = null,
+    iconContentOffset: js.Array[Double] = null,
+    iconContentPadding: js.Array[Double] = null,
+    iconContentSize: js.Array[Double] = null,
+    iconImageClipRect: js.Array[js.Array[Double]] = null,
+    iconImageHref: String = null,
+    iconImageOffset: js.Array[Double] = null,
+    iconImageShape: js.UndefOr[Null | IShape] = js.undefined,
+    iconImageSize: js.Array[Double] = null,
+    iconLayout: String | IClassConstructor[ILayout] = null,
+    iconMaxHeight: js.UndefOr[Double] = js.undefined,
+    iconMaxWidth: js.UndefOr[Double] = js.undefined,
+    iconOffset: js.Array[Double] = null,
+    iconShadow: js.UndefOr[Boolean] = js.undefined,
+    iconShadowImageClipRect: js.Array[js.Array[Double]] = null,
+    iconShadowImageHref: String = null,
+    iconShadowImageOffset: js.Array[Double] = null,
+    iconShadowImageSize: js.Array[Double] = null,
+    iconShadowLayout: String | IClassConstructor[ILayout] = null,
+    iconShadowOffset: js.Array[Double] = null,
+    interactiveZIndex: js.UndefOr[Boolean] = js.undefined,
+    interactivityModel: InteractivityModelKey = null,
+    lineStringOverlay: OverlayKey = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    openBalloonOnClick: js.UndefOr[Boolean] = js.undefined,
+    openEmptyBalloon: js.UndefOr[Boolean] = js.undefined,
+    openEmptyHint: js.UndefOr[Boolean] = js.undefined,
+    openHintOnHover: js.UndefOr[Boolean] = js.undefined,
+    outline: js.UndefOr[Boolean] = js.undefined,
+    pane: String = null,
+    pointOverlay: OverlayKey = null,
+    polygonOverlay: OverlayKey = null,
+    preset: String = null,
+    rectangleOverlay: OverlayKey = null,
+    setMapCursorInDragging: js.UndefOr[Boolean] = js.undefined,
+    strokeColor: (js.Array[js.Array[String] | String]) | String = null,
+    strokeOpacity: (js.Array[js.Array[Double] | Double]) | Double = null,
+    strokeStyle: (js.Array[(js.Array[js.Array[String] | js.Object]) | js.Object | String]) | String | js.Object = null,
+    strokeWidth: (js.Array[js.Array[Double] | Double]) | Double = null,
+    syncOverlayInit: js.UndefOr[Boolean] = js.undefined,
+    useMapMarginInDragging: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined,
+    zIndexActive: js.UndefOr[Double] = js.undefined,
+    zIndexDrag: js.UndefOr[Double] = js.undefined,
+    zIndexHover: js.UndefOr[Double] = js.undefined
+  ): IGeoObjectOptions = {
     val __obj = js.Dynamic.literal()
+    if (circleOverlay != null) __obj.updateDynamic("circleOverlay")(circleOverlay.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.get.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (fillImageHref != null) __obj.updateDynamic("fillImageHref")(fillImageHref.asInstanceOf[js.Any])
+    if (fillMethod != null) __obj.updateDynamic("fillMethod")(fillMethod.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillOpacity)) __obj.updateDynamic("fillOpacity")(fillOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasBalloon)) __obj.updateDynamic("hasBalloon")(hasBalloon.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasHint)) __obj.updateDynamic("hasHint")(hasHint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideIconOnBalloonOpen)) __obj.updateDynamic("hideIconOnBalloonOpen")(hideIconOnBalloonOpen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconCaptionMaxWidth)) __obj.updateDynamic("iconCaptionMaxWidth")(iconCaptionMaxWidth.get.asInstanceOf[js.Any])
+    if (iconColor != null) __obj.updateDynamic("iconColor")(iconColor.asInstanceOf[js.Any])
+    if (iconContentLayout != null) __obj.updateDynamic("iconContentLayout")(iconContentLayout.asInstanceOf[js.Any])
+    if (iconContentOffset != null) __obj.updateDynamic("iconContentOffset")(iconContentOffset.asInstanceOf[js.Any])
+    if (iconContentPadding != null) __obj.updateDynamic("iconContentPadding")(iconContentPadding.asInstanceOf[js.Any])
+    if (iconContentSize != null) __obj.updateDynamic("iconContentSize")(iconContentSize.asInstanceOf[js.Any])
+    if (iconImageClipRect != null) __obj.updateDynamic("iconImageClipRect")(iconImageClipRect.asInstanceOf[js.Any])
+    if (iconImageHref != null) __obj.updateDynamic("iconImageHref")(iconImageHref.asInstanceOf[js.Any])
+    if (iconImageOffset != null) __obj.updateDynamic("iconImageOffset")(iconImageOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconImageShape)) __obj.updateDynamic("iconImageShape")(iconImageShape.asInstanceOf[js.Any])
+    if (iconImageSize != null) __obj.updateDynamic("iconImageSize")(iconImageSize.asInstanceOf[js.Any])
+    if (iconLayout != null) __obj.updateDynamic("iconLayout")(iconLayout.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconMaxHeight)) __obj.updateDynamic("iconMaxHeight")(iconMaxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconMaxWidth)) __obj.updateDynamic("iconMaxWidth")(iconMaxWidth.get.asInstanceOf[js.Any])
+    if (iconOffset != null) __obj.updateDynamic("iconOffset")(iconOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconShadow)) __obj.updateDynamic("iconShadow")(iconShadow.get.asInstanceOf[js.Any])
+    if (iconShadowImageClipRect != null) __obj.updateDynamic("iconShadowImageClipRect")(iconShadowImageClipRect.asInstanceOf[js.Any])
+    if (iconShadowImageHref != null) __obj.updateDynamic("iconShadowImageHref")(iconShadowImageHref.asInstanceOf[js.Any])
+    if (iconShadowImageOffset != null) __obj.updateDynamic("iconShadowImageOffset")(iconShadowImageOffset.asInstanceOf[js.Any])
+    if (iconShadowImageSize != null) __obj.updateDynamic("iconShadowImageSize")(iconShadowImageSize.asInstanceOf[js.Any])
+    if (iconShadowLayout != null) __obj.updateDynamic("iconShadowLayout")(iconShadowLayout.asInstanceOf[js.Any])
+    if (iconShadowOffset != null) __obj.updateDynamic("iconShadowOffset")(iconShadowOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(interactiveZIndex)) __obj.updateDynamic("interactiveZIndex")(interactiveZIndex.get.asInstanceOf[js.Any])
+    if (interactivityModel != null) __obj.updateDynamic("interactivityModel")(interactivityModel.asInstanceOf[js.Any])
+    if (lineStringOverlay != null) __obj.updateDynamic("lineStringOverlay")(lineStringOverlay.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openBalloonOnClick)) __obj.updateDynamic("openBalloonOnClick")(openBalloonOnClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openEmptyBalloon)) __obj.updateDynamic("openEmptyBalloon")(openEmptyBalloon.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openEmptyHint)) __obj.updateDynamic("openEmptyHint")(openEmptyHint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openHintOnHover)) __obj.updateDynamic("openHintOnHover")(openHintOnHover.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(outline)) __obj.updateDynamic("outline")(outline.get.asInstanceOf[js.Any])
+    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
+    if (pointOverlay != null) __obj.updateDynamic("pointOverlay")(pointOverlay.asInstanceOf[js.Any])
+    if (polygonOverlay != null) __obj.updateDynamic("polygonOverlay")(polygonOverlay.asInstanceOf[js.Any])
+    if (preset != null) __obj.updateDynamic("preset")(preset.asInstanceOf[js.Any])
+    if (rectangleOverlay != null) __obj.updateDynamic("rectangleOverlay")(rectangleOverlay.asInstanceOf[js.Any])
+    if (!js.isUndefined(setMapCursorInDragging)) __obj.updateDynamic("setMapCursorInDragging")(setMapCursorInDragging.get.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
+    if (strokeStyle != null) __obj.updateDynamic("strokeStyle")(strokeStyle.asInstanceOf[js.Any])
+    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncOverlayInit)) __obj.updateDynamic("syncOverlayInit")(syncOverlayInit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useMapMarginInDragging)) __obj.updateDynamic("useMapMarginInDragging")(useMapMarginInDragging.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndexActive)) __obj.updateDynamic("zIndexActive")(zIndexActive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndexDrag)) __obj.updateDynamic("zIndexDrag")(zIndexDrag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndexHover)) __obj.updateDynamic("zIndexHover")(zIndexHover.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGeoObjectOptions]
   }
-  @scala.inline
-  implicit class IGeoObjectOptionsOps[Self <: IGeoObjectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIconCaptionMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconCaptionMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconCaptionMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconCaptionMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconContentLayout(value: String | IClassConstructor[ILayout]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconContentLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconContentLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconContentLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconContentOffset(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconContentOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconContentOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconContentOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconContentPadding(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconContentPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconContentPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconContentPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconContentSize(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconContentSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconContentSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconContentSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconImageClipRect(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageClipRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconImageClipRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageClipRect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconImageHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageHref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconImageHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageHref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconImageOffset(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconImageOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconImageShape(value: IShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconImageShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageShape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconImageShapeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageShape")(null)
-        ret
-    }
-    @scala.inline
-    def withIconImageSize(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconImageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconImageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconLayout(value: String | IClassConstructor[ILayout]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconMaxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconMaxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconOffset(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconShadow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconShadowImageClipRect(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowImageClipRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconShadowImageClipRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowImageClipRect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconShadowImageHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowImageHref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconShadowImageHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowImageHref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconShadowImageOffset(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowImageOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconShadowImageOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowImageOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconShadowImageSize(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowImageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconShadowImageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowImageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconShadowLayout(value: String | IClassConstructor[ILayout]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconShadowLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconShadowOffset(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconShadowOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconShadowOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineStringOverlayFunction3(
-      value: (/* geometry */ IPixelLineStringGeometry, /* data */ IDataManager | js.Object, /* options */ js.Object) => js.Promise[String | IClassConstructor[IOverlay]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStringOverlay")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withLineStringOverlay(value: OverlayKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStringOverlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineStringOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStringOverlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointOverlayFunction3(
-      value: (/* geometry */ IPixelLineStringGeometry, /* data */ IDataManager | js.Object, /* options */ js.Object) => js.Promise[String | IClassConstructor[IOverlay]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointOverlay")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withPointOverlay(value: OverlayKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointOverlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointOverlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolygonOverlayFunction3(
-      value: (/* geometry */ IPixelLineStringGeometry, /* data */ IDataManager | js.Object, /* options */ js.Object) => js.Promise[String | IClassConstructor[IOverlay]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonOverlay")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withPolygonOverlay(value: OverlayKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonOverlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolygonOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonOverlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRectangleOverlayFunction3(
-      value: (/* geometry */ IPixelLineStringGeometry, /* data */ IDataManager | js.Object, /* options */ js.Object) => js.Promise[String | IClassConstructor[IOverlay]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangleOverlay")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRectangleOverlay(value: OverlayKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangleOverlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRectangleOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangleOverlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetMapCursorInDragging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMapCursorInDragging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetMapCursorInDragging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMapCursorInDragging")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

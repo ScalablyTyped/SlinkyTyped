@@ -5,62 +5,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IStructureVersionInfo extends ILifeCycle {
-  var experimental: js.UndefOr[IModifierValueHistory] = js.native
-  var properties: js.UndefOr[StringDictionary[IPropertyVersionInfo]] = js.native
-  var public: js.UndefOr[IModifierValueHistory] = js.native
+  var experimental: js.UndefOr[IModifierValueHistory] = js.undefined
+  var properties: js.UndefOr[StringDictionary[IPropertyVersionInfo]] = js.undefined
+  var public: js.UndefOr[IModifierValueHistory] = js.undefined
 }
 
 object IStructureVersionInfo {
   @scala.inline
-  def apply(): IStructureVersionInfo = {
+  def apply(
+    deleted: String = null,
+    deletionMessage: js.UndefOr[Null | String] = js.undefined,
+    deprecated: String = null,
+    deprecationMessage: js.UndefOr[Null | String] = js.undefined,
+    experimental: IModifierValueHistory = null,
+    introduced: String = null,
+    properties: StringDictionary[IPropertyVersionInfo] = null,
+    public: IModifierValueHistory = null
+  ): IStructureVersionInfo = {
     val __obj = js.Dynamic.literal()
+    if (deleted != null) __obj.updateDynamic("deleted")(deleted.asInstanceOf[js.Any])
+    if (!js.isUndefined(deletionMessage)) __obj.updateDynamic("deletionMessage")(deletionMessage.asInstanceOf[js.Any])
+    if (deprecated != null) __obj.updateDynamic("deprecated")(deprecated.asInstanceOf[js.Any])
+    if (!js.isUndefined(deprecationMessage)) __obj.updateDynamic("deprecationMessage")(deprecationMessage.asInstanceOf[js.Any])
+    if (experimental != null) __obj.updateDynamic("experimental")(experimental.asInstanceOf[js.Any])
+    if (introduced != null) __obj.updateDynamic("introduced")(introduced.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (public != null) __obj.updateDynamic("public")(public.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStructureVersionInfo]
   }
-  @scala.inline
-  implicit class IStructureVersionInfoOps[Self <: IStructureVersionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExperimental(value: IModifierValueHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimental: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: StringDictionary[IPropertyVersionInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublic(value: IModifierValueHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

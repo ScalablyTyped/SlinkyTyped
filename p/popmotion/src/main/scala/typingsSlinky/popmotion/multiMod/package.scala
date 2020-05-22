@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object multiMod {
   type ActionStarter[I] = js.Function2[
-    /* action */ typingsSlinky.popmotion.actionMod.Action, 
+    /* action */ typingsSlinky.popmotion.actionMod.Action[typingsSlinky.popmotion.actionTypesMod.ColdSubscription], 
     /* key */ I, 
-    typingsSlinky.popmotion.typesMod.ColdSubscription
+    typingsSlinky.popmotion.actionTypesMod.ColdSubscription
   ]
 }

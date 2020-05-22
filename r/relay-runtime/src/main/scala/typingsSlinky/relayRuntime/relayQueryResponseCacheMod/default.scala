@@ -1,6 +1,8 @@
 package typingsSlinky.relayRuntime.relayQueryResponseCacheMod
 
 import typingsSlinky.relayRuntime.anon.Size
+import typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +11,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends RelayQueryResponseCache {
   def this(config: Size) = this()
+  /* CompleteClass */
+  override def clear(): Unit = js.native
+  /* CompleteClass */
+  override def get(queryID: String, variables: Variables): GraphQLResponse | Null = js.native
+  /* CompleteClass */
+  override def set(queryID: String, variables: Variables, payload: GraphQLResponse): Unit = js.native
 }
 

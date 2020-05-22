@@ -1,156 +1,92 @@
 package typingsSlinky.extjs.Ext.data.association
 
+import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
+import typingsSlinky.extjs.Ext.IClass
 import typingsSlinky.extjs.Ext.data.reader.IReader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAssociation extends IBase {
   /** [Config Option] (String) */
-  var associatedModel: js.UndefOr[String] = js.native
+  var associatedModel: js.UndefOr[String] = js.undefined
   /** [Property] (String) */
-  var associatedName: js.UndefOr[String] = js.native
+  var associatedName: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var associationKey: js.UndefOr[String] = js.native
+  var associationKey: js.UndefOr[String] = js.undefined
   /** [Method] Get a specialized reader for reading associated data
-  		* @returns Ext.data.reader.Reader The reader, null if not supplied
-  		*/
-  var getReader: js.UndefOr[js.Function0[IReader]] = js.native
+    * @returns Ext.data.reader.Reader The reader, null if not supplied
+    */
+  var getReader: js.UndefOr[js.Function0[IReader]] = js.undefined
   /** [Config Option] (String) */
-  var model: js.UndefOr[String] = js.native
+  var model: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var ownerModel: js.UndefOr[String] = js.native
+  var ownerModel: js.UndefOr[String] = js.undefined
   /** [Property] (String) */
-  var ownerName: js.UndefOr[String] = js.native
+  var ownerName: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var primaryKey: js.UndefOr[String] = js.native
+  var primaryKey: js.UndefOr[String] = js.undefined
   /** [Config Option] (Ext.data.reader.Reader) */
-  var reader: js.UndefOr[IReader] = js.native
+  var reader: js.UndefOr[IReader] = js.undefined
 }
 
 object IAssociation {
   @scala.inline
-  def apply(): IAssociation = {
+  def apply(
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    associatedModel: String = null,
+    associatedName: String = null,
+    associationKey: String = null,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    config: js.Any = null,
+    extend: String = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    getReader: () => IReader = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* config */ js.UndefOr[js.Any] => IAssociation = null,
+    mixins: js.Any = null,
+    model: String = null,
+    ownerModel: String = null,
+    ownerName: String = null,
+    primaryKey: String = null,
+    reader: IReader = null,
+    requires: Array = null,
+    self: IClass = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    statics: js.Any = null,
+    uses: Array = null
+  ): IAssociation = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (associatedModel != null) __obj.updateDynamic("associatedModel")(associatedModel.asInstanceOf[js.Any])
+    if (associatedName != null) __obj.updateDynamic("associatedName")(associatedName.asInstanceOf[js.Any])
+    if (associationKey != null) __obj.updateDynamic("associationKey")(associationKey.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (getReader != null) __obj.updateDynamic("getReader")(js.Any.fromFunction0(getReader))
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (ownerModel != null) __obj.updateDynamic("ownerModel")(ownerModel.asInstanceOf[js.Any])
+    if (ownerName != null) __obj.updateDynamic("ownerName")(ownerName.asInstanceOf[js.Any])
+    if (primaryKey != null) __obj.updateDynamic("primaryKey")(primaryKey.asInstanceOf[js.Any])
+    if (reader != null) __obj.updateDynamic("reader")(reader.asInstanceOf[js.Any])
+    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAssociation]
   }
-  @scala.inline
-  implicit class IAssociationOps[Self <: IAssociation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociatedModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociatedModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssociatedName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociatedName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssociationKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associationKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociationKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associationKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetReader(value: () => IReader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getReader")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetReader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getReader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReader(value: IReader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reader")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

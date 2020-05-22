@@ -1,5 +1,6 @@
 package typingsSlinky.makerJs.global.MakerJs.models
 
+import typingsSlinky.makerJs.MakerJs.IPathMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,9 @@ class Star protected ()
   def this(numberOfPoints: Double, outerRadius: Double) = this()
   def this(numberOfPoints: Double, outerRadius: Double, innerRadius: Double) = this()
   def this(numberOfPoints: Double, outerRadius: Double, innerRadius: Double, skipPoints: Double) = this()
+  /* CompleteClass */
+  @JSName("paths")
+  override var paths_Star: IPathMap = js.native
 }
 
 /* static members */

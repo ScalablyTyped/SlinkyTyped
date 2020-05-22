@@ -12,8 +12,14 @@ trait IAPICompleteParam extends js.Object
 
 object IAPICompleteParam {
   @scala.inline
-  implicit def apply(value: IAPIError): IAPICompleteParam = value.asInstanceOf[IAPICompleteParam]
+  def IAPISuccessParam(errMsg: java.lang.String): IAPICompleteParam = {
+    val __obj = js.Dynamic.literal(errMsg = errMsg.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IAPICompleteParam]
+  }
   @scala.inline
-  implicit def apply(value: IAPISuccessParam): IAPICompleteParam = value.asInstanceOf[IAPICompleteParam]
+  def IAPIError(errMsg: java.lang.String): IAPICompleteParam = {
+    val __obj = js.Dynamic.literal(errMsg = errMsg.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IAPICompleteParam]
+  }
 }
 

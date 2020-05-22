@@ -58,7 +58,7 @@ trait Filter extends ClientObject {
   var context_Filter: RequestContext = js.native
   /**
     *
-    * The currently applied filter on the given column. Read-only.
+    * The currently applied filter on the given column.
     *
     * [Api set: ExcelApi 1.2]
     */

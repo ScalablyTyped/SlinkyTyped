@@ -48,101 +48,24 @@ trait SchemaSmimeInfo extends js.Object {
 
 object SchemaSmimeInfo {
   @scala.inline
-  def apply(): SchemaSmimeInfo = {
+  def apply(
+    encryptedKeyPassword: String = null,
+    expiration: String = null,
+    id: String = null,
+    isDefault: js.UndefOr[Boolean] = js.undefined,
+    issuerCn: String = null,
+    pem: String = null,
+    pkcs12: String = null
+  ): SchemaSmimeInfo = {
     val __obj = js.Dynamic.literal()
+    if (encryptedKeyPassword != null) __obj.updateDynamic("encryptedKeyPassword")(encryptedKeyPassword.asInstanceOf[js.Any])
+    if (expiration != null) __obj.updateDynamic("expiration")(expiration.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDefault)) __obj.updateDynamic("isDefault")(isDefault.get.asInstanceOf[js.Any])
+    if (issuerCn != null) __obj.updateDynamic("issuerCn")(issuerCn.asInstanceOf[js.Any])
+    if (pem != null) __obj.updateDynamic("pem")(pem.asInstanceOf[js.Any])
+    if (pkcs12 != null) __obj.updateDynamic("pkcs12")(pkcs12.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSmimeInfo]
   }
-  @scala.inline
-  implicit class SchemaSmimeInfoOps[Self <: SchemaSmimeInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptedKeyPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedKeyPassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptedKeyPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedKeyPassword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssuerCn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuerCn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssuerCn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuerCn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPkcs12(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pkcs12")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPkcs12: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pkcs12")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

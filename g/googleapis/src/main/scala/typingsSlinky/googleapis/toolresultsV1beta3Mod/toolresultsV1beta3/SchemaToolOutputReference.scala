@@ -28,53 +28,16 @@ trait SchemaToolOutputReference extends js.Object {
 
 object SchemaToolOutputReference {
   @scala.inline
-  def apply(): SchemaToolOutputReference = {
+  def apply(
+    creationTime: SchemaTimestamp = null,
+    output: SchemaFileReference = null,
+    testCase: SchemaTestCaseReference = null
+  ): SchemaToolOutputReference = {
     val __obj = js.Dynamic.literal()
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (testCase != null) __obj.updateDynamic("testCase")(testCase.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaToolOutputReference]
   }
-  @scala.inline
-  implicit class SchemaToolOutputReferenceOps[Self <: SchemaToolOutputReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: SchemaTimestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput(value: SchemaFileReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestCase(value: SchemaTestCaseReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testCase")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

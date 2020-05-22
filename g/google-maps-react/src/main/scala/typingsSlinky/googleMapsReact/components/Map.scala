@@ -4,10 +4,10 @@ import org.scalajs.dom.raw.Element
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.googleMapsReact.mod.GoogleAPI
-import typingsSlinky.googleMapsReact.mod.MapProps
+import typingsSlinky.googleMapsReact.mod.IMapProps
+import typingsSlinky.googleMapsReact.mod.Style
 import typingsSlinky.googlemaps.google.maps.FullscreenControlOptions
 import typingsSlinky.googlemaps.google.maps.GestureHandlingOptions
-import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.LatLngBounds
 import typingsSlinky.googlemaps.google.maps.LatLngBoundsLiteral
 import typingsSlinky.googlemaps.google.maps.LatLngLiteral
@@ -39,11 +39,13 @@ object Map {
     @scala.inline
     def bounds(value: LatLngBounds | LatLngBoundsLiteral): this.type = set("bounds", value.asInstanceOf[js.Any])
     @scala.inline
-    def center(value: LatLng | LatLngLiteral): this.type = set("center", value.asInstanceOf[js.Any])
+    def center(value: LatLngLiteral): this.type = set("center", value.asInstanceOf[js.Any])
     @scala.inline
     def centerAroundCurrentLocation(value: Boolean): this.type = set("centerAroundCurrentLocation", value.asInstanceOf[js.Any])
     @scala.inline
     def clickableIcons(value: Boolean): this.type = set("clickableIcons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: Style): this.type = set("containerStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def controlSize(value: Double): this.type = set("controlSize", value.asInstanceOf[js.Any])
     @scala.inline
@@ -84,83 +86,83 @@ object Map {
     def noClear(value: Boolean): this.type = set("noClear", value.asInstanceOf[js.Any])
     @scala.inline
     def onBoundsChanged(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onBoundsChanged", js.Any.fromFunction3(value))
     @scala.inline
     def onCenterChanged(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onCenterChanged", js.Any.fromFunction3(value))
     @scala.inline
     def onClick(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onClick", js.Any.fromFunction3(value))
     @scala.inline
     def onDblclick(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onDblclick", js.Any.fromFunction3(value))
     @scala.inline
     def onDragend(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onDragend", js.Any.fromFunction3(value))
     @scala.inline
     def onDragstart(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onDragstart", js.Any.fromFunction3(value))
     @scala.inline
     def onHeadingChange(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onHeadingChange", js.Any.fromFunction3(value))
     @scala.inline
     def onIdle(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onIdle", js.Any.fromFunction3(value))
     @scala.inline
     def onMaptypeidChanged(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onMaptypeidChanged", js.Any.fromFunction3(value))
     @scala.inline
     def onMousemove(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onMousemove", js.Any.fromFunction3(value))
     @scala.inline
     def onMouseout(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onMouseout", js.Any.fromFunction3(value))
     @scala.inline
     def onMouseover(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onMouseover", js.Any.fromFunction3(value))
     @scala.inline
     def onProjectionChanged(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onProjectionChanged", js.Any.fromFunction3(value))
     @scala.inline
     def onReady(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onReady", js.Any.fromFunction3(value))
     @scala.inline
     def onRecenter(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onRecenter", js.Any.fromFunction3(value))
     @scala.inline
     def onResize(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onResize", js.Any.fromFunction3(value))
     @scala.inline
     def onRightclick(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onRightclick", js.Any.fromFunction3(value))
     @scala.inline
     def onTilesloaded(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onTilesloaded", js.Any.fromFunction3(value))
     @scala.inline
     def onTiltChanged(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onTiltChanged", js.Any.fromFunction3(value))
     @scala.inline
     def onZoomChanged(
-      value: (/* mapProps */ js.UndefOr[MapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* mapProps */ js.UndefOr[IMapProps], /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]], /* event */ js.UndefOr[js.Any]) => js.Any
     ): this.type = set("onZoomChanged", js.Any.fromFunction3(value))
     @scala.inline
     def panControl(value: Boolean): this.type = set("panControl", value.asInstanceOf[js.Any])
@@ -185,6 +187,8 @@ object Map {
     @scala.inline
     def streetViewControlOptions(value: StreetViewControlOptions): this.type = set("streetViewControlOptions", value.asInstanceOf[js.Any])
     @scala.inline
+    def style(value: Style): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
     def styles(value: js.Array[MapTypeStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def tilt(value: Double): this.type = set("tilt", value.asInstanceOf[js.Any])
@@ -198,11 +202,11 @@ object Map {
     def zoomControlOptions(value: ZoomControlOptions): this.type = set("zoomControlOptions", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MapProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: IMapProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(google: GoogleAPI): Builder = {
     val __props = js.Dynamic.literal(google = google.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MapProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IMapProps]))
   }
 }
 

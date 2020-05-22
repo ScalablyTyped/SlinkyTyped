@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ODataStore extends Store {
   def byKey(key: String, extraOptions: Expand): Promise[_] with JQueryPromise[_] = js.native
-  /** Gets an entity with a specific key. */
+  /** @name ODataStore.byKey(key, extraOptions) */
   def byKey(key: js.Any, extraOptions: Expand): Promise[_] with JQueryPromise[_] = js.native
   def byKey(key: Double, extraOptions: Expand): Promise[_] with JQueryPromise[_] = js.native
-  /** Creates a Query for the OData endpoint. */
+  /** @name ODataStore.createQuery(loadOptions) */
   def createQuery(loadOptions: js.Any): js.Any = js.native
 }
 

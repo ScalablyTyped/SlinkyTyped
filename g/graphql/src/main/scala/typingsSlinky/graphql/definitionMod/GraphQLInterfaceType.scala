@@ -14,11 +14,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraphQLInterfaceType protected ()
   extends GraphQLAbstractType
-     with GraphQLCompositeType
-     with GraphQLNamedType
-     with GraphQLNullableType
-     with GraphQLOutputType
-     with GraphQLType {
+     with _GraphQLCompositeType
+     with _GraphQLNamedType
+     with _GraphQLNullableType
+     with _GraphQLOutputType
+     with _GraphQLType {
   def this(config: GraphQLInterfaceTypeConfig[_, _, StringDictionary[_]]) = this()
   var astNode: js.UndefOr[Maybe[InterfaceTypeDefinitionNode]] = js.native
   var description: Maybe[String] = js.native

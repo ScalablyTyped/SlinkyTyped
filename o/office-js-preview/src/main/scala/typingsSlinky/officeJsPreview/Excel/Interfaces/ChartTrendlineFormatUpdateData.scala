@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the ChartTrendlineFormat object, for use in `chartTrendlineFormat.set({ ... })`. */
-@js.native
 trait ChartTrendlineFormatUpdateData extends js.Object {
   /**
     *
@@ -13,34 +12,15 @@ trait ChartTrendlineFormatUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.7]
     */
-  var line: js.UndefOr[ChartLineFormatUpdateData] = js.native
+  var line: js.UndefOr[ChartLineFormatUpdateData] = js.undefined
 }
 
 object ChartTrendlineFormatUpdateData {
   @scala.inline
-  def apply(): ChartTrendlineFormatUpdateData = {
+  def apply(line: ChartLineFormatUpdateData = null): ChartTrendlineFormatUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartTrendlineFormatUpdateData]
   }
-  @scala.inline
-  implicit class ChartTrendlineFormatUpdateDataOps[Self <: ChartTrendlineFormatUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLine(value: ChartLineFormatUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Tab extends js.Object {
-  var tab: String = js.native
+  var tab: String
 }
 
 object Tab {
@@ -15,19 +14,5 @@ object Tab {
     val __obj = js.Dynamic.literal(tab = tab.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tab]
   }
-  @scala.inline
-  implicit class TabOps[Self <: Tab] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTab(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tab")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

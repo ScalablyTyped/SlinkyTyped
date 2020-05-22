@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InsertTablesCaptionCommand")
 @js.native
 class InsertTablesCaptionCommand ()
-  extends typingsSlinky.devexpressWeb.InsertTablesCaptionCommand
+  extends typingsSlinky.devexpressWeb.InsertTablesCaptionCommand {
+  /**
+    * Executes the InsertTablesCaptionCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

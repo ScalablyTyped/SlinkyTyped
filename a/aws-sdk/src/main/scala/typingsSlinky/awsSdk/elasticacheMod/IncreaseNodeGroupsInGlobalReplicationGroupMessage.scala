@@ -26,47 +26,15 @@ trait IncreaseNodeGroupsInGlobalReplicationGroupMessage extends js.Object {
 
 object IncreaseNodeGroupsInGlobalReplicationGroupMessage {
   @scala.inline
-  def apply(ApplyImmediately: Boolean, GlobalReplicationGroupId: String, NodeGroupCount: Integer): IncreaseNodeGroupsInGlobalReplicationGroupMessage = {
+  def apply(
+    ApplyImmediately: Boolean,
+    GlobalReplicationGroupId: String,
+    NodeGroupCount: Integer,
+    RegionalConfigurations: RegionalConfigurationList = null
+  ): IncreaseNodeGroupsInGlobalReplicationGroupMessage = {
     val __obj = js.Dynamic.literal(ApplyImmediately = ApplyImmediately.asInstanceOf[js.Any], GlobalReplicationGroupId = GlobalReplicationGroupId.asInstanceOf[js.Any], NodeGroupCount = NodeGroupCount.asInstanceOf[js.Any])
+    if (RegionalConfigurations != null) __obj.updateDynamic("RegionalConfigurations")(RegionalConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncreaseNodeGroupsInGlobalReplicationGroupMessage]
   }
-  @scala.inline
-  implicit class IncreaseNodeGroupsInGlobalReplicationGroupMessageOps[Self <: IncreaseNodeGroupsInGlobalReplicationGroupMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyImmediately(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyImmediately")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobalReplicationGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeGroupCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegionalConfigurations(value: RegionalConfigurationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionalConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegionalConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionalConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,17 +15,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Statement, 'type'> */
-@js.native
 trait DeclareModule
   extends ASTNode
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var body: BlockStatementKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var id: IdentifierKind | LiteralKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.DeclareModule = js.native
+  var body: BlockStatementKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var id: IdentifierKind | LiteralKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.DeclareModule
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.DeclareModule")

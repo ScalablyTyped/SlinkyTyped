@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DiagramLayoutGrid extends js.Object {
-  var componentSpacingX: js.UndefOr[Double] = js.native
-  var componentSpacingY: js.UndefOr[Double] = js.native
-  var offsetX: js.UndefOr[Double] = js.native
-  var offsetY: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var componentSpacingX: js.UndefOr[Double] = js.undefined
+  var componentSpacingY: js.UndefOr[Double] = js.undefined
+  var offsetX: js.UndefOr[Double] = js.undefined
+  var offsetY: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object DiagramLayoutGrid {
   @scala.inline
-  def apply(): DiagramLayoutGrid = {
+  def apply(
+    componentSpacingX: js.UndefOr[Double] = js.undefined,
+    componentSpacingY: js.UndefOr[Double] = js.undefined,
+    offsetX: js.UndefOr[Double] = js.undefined,
+    offsetY: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): DiagramLayoutGrid = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(componentSpacingX)) __obj.updateDynamic("componentSpacingX")(componentSpacingX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(componentSpacingY)) __obj.updateDynamic("componentSpacingY")(componentSpacingY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetX)) __obj.updateDynamic("offsetX")(offsetX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetY)) __obj.updateDynamic("offsetY")(offsetY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagramLayoutGrid]
   }
-  @scala.inline
-  implicit class DiagramLayoutGridOps[Self <: DiagramLayoutGrid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponentSpacingX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentSpacingX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentSpacingX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentSpacingX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentSpacingY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentSpacingY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentSpacingY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentSpacingY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

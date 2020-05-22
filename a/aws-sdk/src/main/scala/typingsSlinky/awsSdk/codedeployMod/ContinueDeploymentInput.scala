@@ -11,48 +11,18 @@ trait ContinueDeploymentInput extends js.Object {
     */
   var deploymentId: js.UndefOr[DeploymentId] = js.native
   /**
-    *  The status of the deployment's waiting period. READY_WAIT indicates the deployment is ready to start shifting traffic. TERMINATION_WAIT indicates the traffic is shifted, but the original target is not terminated. 
+    *  The status of the deployment's waiting period. READY_WAIT indicates that the deployment is ready to start shifting traffic. TERMINATION_WAIT indicates that the traffic is shifted, but the original target is not terminated. 
     */
   var deploymentWaitType: js.UndefOr[DeploymentWaitType] = js.native
 }
 
 object ContinueDeploymentInput {
   @scala.inline
-  def apply(): ContinueDeploymentInput = {
+  def apply(deploymentId: DeploymentId = null, deploymentWaitType: DeploymentWaitType = null): ContinueDeploymentInput = {
     val __obj = js.Dynamic.literal()
+    if (deploymentId != null) __obj.updateDynamic("deploymentId")(deploymentId.asInstanceOf[js.Any])
+    if (deploymentWaitType != null) __obj.updateDynamic("deploymentWaitType")(deploymentWaitType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContinueDeploymentInput]
   }
-  @scala.inline
-  implicit class ContinueDeploymentInputOps[Self <: ContinueDeploymentInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentId(value: DeploymentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentWaitType(value: DeploymentWaitType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentWaitType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentWaitType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentWaitType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,32 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait WhitelistValidatorConfig
-  extends SimpleValidatorConfig
-     with WhitelistValidator {
-  var whitelist: js.Array[String] = js.native
+trait WhitelistValidatorConfig extends SimpleValidatorConfig {
+  var whitelist: js.Array[String]
 }
 
 object WhitelistValidatorConfig {
   @scala.inline
-  def apply(message: String, whitelist: js.Array[String]): WhitelistValidatorConfig = {
+  def apply(
+    message: String,
+    whitelist: js.Array[String],
+    validateIf: (js.Function1[/* context */ ValidatorContext, Boolean]) | Boolean = null
+  ): WhitelistValidatorConfig = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], whitelist = whitelist.asInstanceOf[js.Any])
+    if (validateIf != null) __obj.updateDynamic("validateIf")(validateIf.asInstanceOf[js.Any])
     __obj.asInstanceOf[WhitelistValidatorConfig]
   }
-  @scala.inline
-  implicit class WhitelistValidatorConfigOps[Self <: WhitelistValidatorConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWhitelist(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

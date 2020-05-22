@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Exp extends js.Object {
-  var exp: Boolean | typingsSlinky.nodeJose.mod.JWS.Exp = js.native
+  var exp: Boolean | typingsSlinky.nodeJose.mod.JWS.Exp
 }
 
 object Exp {
@@ -15,19 +14,5 @@ object Exp {
     val __obj = js.Dynamic.literal(exp = exp.asInstanceOf[js.Any])
     __obj.asInstanceOf[Exp]
   }
-  @scala.inline
-  implicit class ExpOps[Self <: Exp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExp(value: Boolean | typingsSlinky.nodeJose.mod.JWS.Exp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

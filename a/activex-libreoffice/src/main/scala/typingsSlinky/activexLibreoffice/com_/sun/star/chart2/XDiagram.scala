@@ -10,50 +10,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XDiagram extends XInterface {
   /** returns an {@link XColorScheme} that defines the default colors for data series (or data points) in the diagram. */
-  var DefaultColorScheme: XColorScheme = js.native
+  var DefaultColorScheme: XColorScheme
   /**
     * returns the property set that determines the visual appearance of the floor if any.
     *
     * The floor is the bottom of a 3D diagram. For a 2D diagram NULL is returned.
     */
-  val Floor: XPropertySet = js.native
+  val Floor: XPropertySet
   /** returns the legend, which may represent data series and other information about a diagram in a separate box. */
-  var Legend: XLegend = js.native
+  var Legend: XLegend
   /**
     * returns the property set that determines the visual appearance of the wall.
     *
     * The wall is the area behind the union of all coordinate systems used in a diagram.
     */
-  val Wall: XPropertySet = js.native
+  val Wall: XPropertySet
   /** returns an {@link XColorScheme} that defines the default colors for data series (or data points) in the diagram. */
-  def getDefaultColorScheme(): XColorScheme = js.native
+  def getDefaultColorScheme(): XColorScheme
   /**
     * returns the property set that determines the visual appearance of the floor if any.
     *
     * The floor is the bottom of a 3D diagram. For a 2D diagram NULL is returned.
     */
-  def getFloor(): XPropertySet = js.native
+  def getFloor(): XPropertySet
   /** returns the legend, which may represent data series and other information about a diagram in a separate box. */
-  def getLegend(): XLegend = js.native
+  def getLegend(): XLegend
   /**
     * returns the property set that determines the visual appearance of the wall.
     *
     * The wall is the area behind the union of all coordinate systems used in a diagram.
     */
-  def getWall(): XPropertySet = js.native
+  def getWall(): XPropertySet
   /** sets an {@link XColorScheme} that defines the default colors for data series (or data points) in the diagram. */
-  def setDefaultColorScheme(xColorScheme: XColorScheme): Unit = js.native
+  def setDefaultColorScheme(xColorScheme: XColorScheme): Unit
   /**
     * sets new data to the diagram.
     * @param xDataSource This data source will be interpreted in a chart-type specific way and the {@link DataSeries} found in `xDiagram` will be adapted to t
     * @param aArguments Arguments tells how to slice the given data.  For standard parameters that may be used, see the service {@link StandardDiagramCreation
     */
-  def setDiagramData(xDataSource: XDataSource, aArguments: SeqEquiv[PropertyValue]): Unit = js.native
+  def setDiagramData(xDataSource: XDataSource, aArguments: SeqEquiv[PropertyValue]): Unit
   /** sets a new legend. */
-  def setLegend(xLegend: XLegend): Unit = js.native
+  def setLegend(xLegend: XLegend): Unit
 }
 
 object XDiagram {
@@ -77,79 +76,5 @@ object XDiagram {
     val __obj = js.Dynamic.literal(DefaultColorScheme = DefaultColorScheme.asInstanceOf[js.Any], Floor = Floor.asInstanceOf[js.Any], Legend = Legend.asInstanceOf[js.Any], Wall = Wall.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getDefaultColorScheme = js.Any.fromFunction0(getDefaultColorScheme), getFloor = js.Any.fromFunction0(getFloor), getLegend = js.Any.fromFunction0(getLegend), getWall = js.Any.fromFunction0(getWall), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setDefaultColorScheme = js.Any.fromFunction1(setDefaultColorScheme), setDiagramData = js.Any.fromFunction2(setDiagramData), setLegend = js.Any.fromFunction1(setLegend))
     __obj.asInstanceOf[XDiagram]
   }
-  @scala.inline
-  implicit class XDiagramOps[Self <: XDiagram] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultColorScheme(value: XColorScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultColorScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFloor(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Floor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLegend(value: XLegend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWall(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Wall")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDefaultColorScheme(value: () => XColorScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultColorScheme")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFloor(value: () => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFloor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLegend(value: () => XLegend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLegend")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetWall(value: () => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWall")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetDefaultColorScheme(value: XColorScheme => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultColorScheme")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDiagramData(value: (XDataSource, SeqEquiv[PropertyValue]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDiagramData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetLegend(value: XLegend => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLegend")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

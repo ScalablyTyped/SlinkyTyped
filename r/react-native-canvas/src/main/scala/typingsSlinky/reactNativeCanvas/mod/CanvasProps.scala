@@ -7,87 +7,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CanvasProps extends js.Object {
-  var baseUrl: js.UndefOr[String] = js.native
-  var originWhitelist: js.UndefOr[js.Array[String]] = js.native
-  var ref: (js.Function1[/* canvas */ Canvas, _]) | ReactRef[Canvas] = js.native
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var baseUrl: js.UndefOr[String] = js.undefined
+  var originWhitelist: js.UndefOr[js.Array[String]] = js.undefined
+  var ref: (js.Function1[/* canvas */ Canvas, _]) | ReactRef[Canvas]
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
 }
 
 object CanvasProps {
   @scala.inline
-  def apply(ref: (js.Function1[/* canvas */ Canvas, _]) | ReactRef[Canvas]): CanvasProps = {
+  def apply(
+    ref: (js.Function1[/* canvas */ Canvas, _]) | ReactRef[Canvas],
+    baseUrl: String = null,
+    originWhitelist: js.Array[String] = null,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined
+  ): CanvasProps = {
     val __obj = js.Dynamic.literal(ref = ref.asInstanceOf[js.Any])
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (originWhitelist != null) __obj.updateDynamic("originWhitelist")(originWhitelist.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[CanvasProps]
   }
-  @scala.inline
-  implicit class CanvasPropsOps[Self <: CanvasProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRefRefObject(value: ReactRef[Canvas]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefFunction1(value: /* canvas */ Canvas => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRef(value: (js.Function1[/* canvas */ Canvas, _]) | ReactRef[Canvas]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginWhitelist(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originWhitelist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginWhitelist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originWhitelist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-  }
-  
 }
 

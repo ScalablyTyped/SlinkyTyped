@@ -24,41 +24,11 @@ trait SchemaTierRate extends js.Object {
 
 object SchemaTierRate {
   @scala.inline
-  def apply(): SchemaTierRate = {
+  def apply(startUsageAmount: js.UndefOr[Double] = js.undefined, unitPrice: SchemaMoney = null): SchemaTierRate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(startUsageAmount)) __obj.updateDynamic("startUsageAmount")(startUsageAmount.get.asInstanceOf[js.Any])
+    if (unitPrice != null) __obj.updateDynamic("unitPrice")(unitPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTierRate]
   }
-  @scala.inline
-  implicit class SchemaTierRateOps[Self <: SchemaTierRate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStartUsageAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startUsageAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartUsageAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startUsageAmount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnitPrice(value: SchemaMoney): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnitPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPrice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs")
 @js.native
 abstract class SystemMediaTransportControlsButtonPressedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs {
+  /** Gets the button on the SystemMediaTransportControls that was pressed. */
+  /* CompleteClass */
+  override var button: typingsSlinky.winrtUwp.Windows.Media.SystemMediaTransportControlsButton = js.native
+}
 

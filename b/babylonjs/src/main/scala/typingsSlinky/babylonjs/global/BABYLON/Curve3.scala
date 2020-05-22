@@ -16,6 +16,31 @@ class Curve3 protected ()
     * @param points points which make up the curve
     */
   def this(points: js.Array[typingsSlinky.babylonjs.BABYLON.Vector3]) = this()
+  /* CompleteClass */
+  override var _computeLength: js.Any = js.native
+  /* CompleteClass */
+  override var _length: js.Any = js.native
+  /* CompleteClass */
+  override var _points: js.Any = js.native
+  /**
+    * Returns a new instance of Curve3 object : var curve = curveA.continue(curveB);
+    * This new Curve3 is built by translating and sticking the curveB at the end of the curveA.
+    * curveA and curveB keep unchanged.
+    * @param curve the curve to continue from this curve
+    * @returns the newly constructed curve
+    */
+  /* CompleteClass */
+  override def continue(curve: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Curve3]): typingsSlinky.babylonjs.BABYLON.Curve3 = js.native
+  /**
+    * @returns the Curve3 stored array of successive Vector3
+    */
+  /* CompleteClass */
+  override def getPoints(): js.Array[typingsSlinky.babylonjs.BABYLON.Vector3] = js.native
+  /**
+    * @returns the computed length (float) of the curve.
+    */
+  /* CompleteClass */
+  override def length(): Double = js.native
 }
 
 /* static members */

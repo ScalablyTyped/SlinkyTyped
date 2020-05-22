@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProceduralTextureSceneComponent extends ISceneComponent {
-  var _beforeClear: js.Any = js.native
+  var _beforeClear: js.Any
 }
 
 object ProceduralTextureSceneComponent {
@@ -22,19 +21,5 @@ object ProceduralTextureSceneComponent {
     val __obj = js.Dynamic.literal(_beforeClear = _beforeClear.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), name = name.asInstanceOf[js.Any], rebuild = js.Any.fromFunction0(rebuild), register = js.Any.fromFunction0(register), scene = scene.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProceduralTextureSceneComponent]
   }
-  @scala.inline
-  implicit class ProceduralTextureSceneComponentOps[Self <: ProceduralTextureSceneComponent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_beforeClear(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_beforeClear")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

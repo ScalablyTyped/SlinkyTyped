@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IROOM_GROUP_SUBSCRIBE extends js.Object {
-  var groupId: String = js.native
-  var newRooms: js.Array[SFSRoom] = js.native
+  var groupId: String
+  var newRooms: js.Array[SFSRoom]
 }
 
 object IROOM_GROUP_SUBSCRIBE {
@@ -17,25 +16,5 @@ object IROOM_GROUP_SUBSCRIBE {
     val __obj = js.Dynamic.literal(groupId = groupId.asInstanceOf[js.Any], newRooms = newRooms.asInstanceOf[js.Any])
     __obj.asInstanceOf[IROOM_GROUP_SUBSCRIBE]
   }
-  @scala.inline
-  implicit class IROOM_GROUP_SUBSCRIBEOps[Self <: IROOM_GROUP_SUBSCRIBE] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewRooms(value: js.Array[SFSRoom]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRooms")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

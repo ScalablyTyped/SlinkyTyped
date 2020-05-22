@@ -26,53 +26,16 @@ trait SchemaEnvironmentMatrix extends js.Object {
 
 object SchemaEnvironmentMatrix {
   @scala.inline
-  def apply(): SchemaEnvironmentMatrix = {
+  def apply(
+    androidDeviceList: SchemaAndroidDeviceList = null,
+    androidMatrix: SchemaAndroidMatrix = null,
+    iosDeviceList: SchemaIosDeviceList = null
+  ): SchemaEnvironmentMatrix = {
     val __obj = js.Dynamic.literal()
+    if (androidDeviceList != null) __obj.updateDynamic("androidDeviceList")(androidDeviceList.asInstanceOf[js.Any])
+    if (androidMatrix != null) __obj.updateDynamic("androidMatrix")(androidMatrix.asInstanceOf[js.Any])
+    if (iosDeviceList != null) __obj.updateDynamic("iosDeviceList")(iosDeviceList.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEnvironmentMatrix]
   }
-  @scala.inline
-  implicit class SchemaEnvironmentMatrixOps[Self <: SchemaEnvironmentMatrix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidDeviceList(value: SchemaAndroidDeviceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDeviceList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidDeviceList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDeviceList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidMatrix(value: SchemaAndroidMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosDeviceList(value: SchemaIosDeviceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosDeviceList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosDeviceList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosDeviceList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

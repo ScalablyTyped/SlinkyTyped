@@ -18,35 +18,10 @@ trait DeleteBackupRequest extends js.Object {
 
 object DeleteBackupRequest {
   @scala.inline
-  def apply(BackupId: BackupId): DeleteBackupRequest = {
+  def apply(BackupId: BackupId, ClientRequestToken: ClientRequestToken = null): DeleteBackupRequest = {
     val __obj = js.Dynamic.literal(BackupId = BackupId.asInstanceOf[js.Any])
+    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteBackupRequest]
   }
-  @scala.inline
-  implicit class DeleteBackupRequestOps[Self <: DeleteBackupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackupId(value: BackupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

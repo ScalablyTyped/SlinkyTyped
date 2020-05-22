@@ -4,36 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UtilColor extends js.Object {
   /**
     * convert hsv to rgb
     *
-    * 		color.HSVtoRGB(0,0,1) === #FFFFF === { r : 255, g : 0, b : 0 }
+    *         color.HSVtoRGB(0,0,1) === #FFFFF === { r : 255, g : 0, b : 0 }
     *
     * @param H  hue color number  (min : 0, max : 360)
     * @param S  Saturation number  (min : 0, max : 1)
-    * @param V  Value number 		(min : 0, max : 1 )
+    * @param V  Value number         (min : 0, max : 1 )
     */
-  def HSVtoRGB(H: Double, S: Double, V: Double): js.Any = js.native
+  def HSVtoRGB(H: Double, S: Double, V: Double): js.Any
   /**
     * convert rgb to hsv
     *
-    * 		color.RGBtoHSV(0, 0, 255) === { h : 240, s : 1, v : 1 } === '#FFFF00'
+    *         color.RGBtoHSV(0, 0, 255) === { h : 240, s : 1, v : 1 } === '#FFFF00'
     *
     * @param R  red color value
     * @param G  green color value
     * @param B  blue color value
     * @return  hsv color code
     */
-  def RGBtoHSV(R: Double, G: Double, B: Double): js.Any = js.native
+  def RGBtoHSV(R: Double, G: Double, B: Double): js.Any
   /**
     * rgb 컬러 어두운 농도로 변환
     *
     * @param color   RGB color code
     * @param rate 어두운 농도
     */
-  def darken(color: String, rate: Double): String = js.native
+  def darken(color: String, rate: Double): String
   /**
     * convert color to format string
     *
@@ -49,48 +48,48 @@ trait UtilColor extends js.Object {
     * @param obj  obj has r, g, b and a attributes
     * @param type  format string type
     */
-  def format(obj: js.Any, `type`: String): String = js.native
+  def format(obj: js.Any, `type`: String): String
   /**
     * rgb 컬러 밝은 농도로 변환
     *
     * @param color   RGB color code
     * @param rate 밝은 농도
     */
-  def lighten(color: String, rate: Double): String = js.native
+  def lighten(color: String, rate: Double): String
   /**
     * create color map
     *
-    * 		var colorList = color.map(['#352a87', '#0f5cdd', '#00b5a6', '#ffc337', '#fdff00'], count)
+    *         var colorList = color.map(['#352a87', '#0f5cdd', '#00b5a6', '#ffc337', '#fdff00'], count)
     *
     * @param count  a divide number
     * @returns converted color list
     */
-  def map(color_list: js.Array[String], count: Double): js.Array[String] = js.native
+  def map(color_list: js.Array[String], count: Double): js.Array[String]
   /**
     * parse string to rgb color
     *
-    * 		color.rgb("#FF0000") === { r : 255, g : 0, b : 0 }
+    *         color.rgb("#FF0000") === { r : 255, g : 0, b : 0 }
     *
-    * 		color.rgb("rgb(255, 0, 0)") == { r : 255, g : 0, b : }
+    *         color.rgb("rgb(255, 0, 0)") == { r : 255, g : 0, b : }
     *
     * @param str color string
     * @returns  rgb object
     */
-  def rgb(str: String): js.Any = js.native
+  def rgb(str: String): js.Any
   /**
     * get color scale
     *
-    * 		var c = color.scale().domain('#FF0000', '#00FF00');
+    *         var c = color.scale().domain('#FF0000', '#00FF00');
     *
-    * 		// get middle color
-    * 		c(0.5)   ==  #808000
+    *         // get middle color
+    *         c(0.5)   ==  #808000
     *
-    * 		// get middle color list
-    * 		c.ticks(20);  // return array ,    [startColor, ......, endColor ]
+    *         // get middle color list
+    *         c.ticks(20);  // return array ,    [startColor, ......, endColor ]
     *
     * @returns scale function
     */
-  def scale(): ColorScale = js.native
+  def scale(): ColorScale
 }
 
 object UtilColor {
@@ -108,61 +107,5 @@ object UtilColor {
     val __obj = js.Dynamic.literal(HSVtoRGB = js.Any.fromFunction3(HSVtoRGB), RGBtoHSV = js.Any.fromFunction3(RGBtoHSV), darken = js.Any.fromFunction2(darken), format = js.Any.fromFunction2(format), lighten = js.Any.fromFunction2(lighten), map = js.Any.fromFunction2(map), rgb = js.Any.fromFunction1(rgb), scale = js.Any.fromFunction0(scale))
     __obj.asInstanceOf[UtilColor]
   }
-  @scala.inline
-  implicit class UtilColorOps[Self <: UtilColor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHSVtoRGB(value: (Double, Double, Double) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HSVtoRGB")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRGBtoHSV(value: (Double, Double, Double) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RGBtoHSV")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDarken(value: (String, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("darken")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: (js.Any, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLighten(value: (String, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lighten")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withMap(value: (js.Array[String], Double) => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRgb(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rgb")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withScale(value: () => ColorScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

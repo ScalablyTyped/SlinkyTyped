@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeScriptServicesFactory extends IShimFactory {
-  var _shims: js.Any = js.native
-  def close(): Unit = js.native
-  def createClassifier(host: IClassifierHost): Classifier = js.native
-  def createClassifierShim(host: IClassifierHost): ClassifierShim = js.native
-  def createCoreServices(host: ICoreServicesHost): CoreServices = js.native
-  def createCoreServicesShim(host: ICoreServicesHost): CoreServicesShim = js.native
-  def createLanguageServiceShim(host: ILanguageServiceShimHost): ILanguageServiceShim = js.native
-  def createPullLanguageService(host: ILanguageServiceHost): ILanguageService = js.native
+  var _shims: js.Any
+  def close(): Unit
+  def createClassifier(host: IClassifierHost): Classifier
+  def createClassifierShim(host: IClassifierHost): ClassifierShim
+  def createCoreServices(host: ICoreServicesHost): CoreServices
+  def createCoreServicesShim(host: ICoreServicesHost): CoreServicesShim
+  def createLanguageServiceShim(host: ILanguageServiceShimHost): ILanguageServiceShim
+  def createPullLanguageService(host: ILanguageServiceHost): ILanguageService
 }
 
 object TypeScriptServicesFactory {
@@ -33,61 +32,5 @@ object TypeScriptServicesFactory {
     val __obj = js.Dynamic.literal(_shims = _shims.asInstanceOf[js.Any], close = js.Any.fromFunction0(close), createClassifier = js.Any.fromFunction1(createClassifier), createClassifierShim = js.Any.fromFunction1(createClassifierShim), createCoreServices = js.Any.fromFunction1(createCoreServices), createCoreServicesShim = js.Any.fromFunction1(createCoreServicesShim), createLanguageServiceShim = js.Any.fromFunction1(createLanguageServiceShim), createPullLanguageService = js.Any.fromFunction1(createPullLanguageService), registerShim = js.Any.fromFunction1(registerShim), unregisterShim = js.Any.fromFunction1(unregisterShim))
     __obj.asInstanceOf[TypeScriptServicesFactory]
   }
-  @scala.inline
-  implicit class TypeScriptServicesFactoryOps[Self <: TypeScriptServicesFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_shims(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_shims")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateClassifier(value: IClassifierHost => Classifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createClassifier")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateClassifierShim(value: IClassifierHost => ClassifierShim): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createClassifierShim")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateCoreServices(value: ICoreServicesHost => CoreServices): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCoreServices")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateCoreServicesShim(value: ICoreServicesHost => CoreServicesShim): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCoreServicesShim")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateLanguageServiceShim(value: ILanguageServiceShimHost => ILanguageServiceShim): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createLanguageServiceShim")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreatePullLanguageService(value: ILanguageServiceHost => ILanguageService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createPullLanguageService")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

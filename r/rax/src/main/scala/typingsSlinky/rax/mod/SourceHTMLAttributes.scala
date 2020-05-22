@@ -4,88 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceHTMLAttributes[T] extends HTMLAttributes[T] {
-  var media: js.UndefOr[String] = js.native
-  var sizes: js.UndefOr[String] = js.native
-  var src: js.UndefOr[String] = js.native
-  var srcSet: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var media: js.UndefOr[String] = js.undefined
+  var sizes: js.UndefOr[String] = js.undefined
+  var src: js.UndefOr[String] = js.undefined
+  var srcSet: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object SourceHTMLAttributes {
   @scala.inline
-  def apply[T](): SourceHTMLAttributes[T] = {
+  def apply[T](
+    HTMLAttributes: HTMLAttributes[T] = null,
+    media: String = null,
+    sizes: String = null,
+    src: String = null,
+    srcSet: String = null,
+    `type`: String = null
+  ): SourceHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (HTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, HTMLAttributes)
+    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+    if (sizes != null) __obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
+    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
+    if (srcSet != null) __obj.updateDynamic("srcSet")(srcSet.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceHTMLAttributes[T]]
   }
-  @scala.inline
-  implicit class SourceHTMLAttributesOps[Self[t] <: SourceHTMLAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withMedia(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizes(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizes: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrc: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcSet(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcSet: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

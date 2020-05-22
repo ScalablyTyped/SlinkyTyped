@@ -14,29 +14,10 @@ trait TtmlDestinationSettings extends js.Object {
 
 object TtmlDestinationSettings {
   @scala.inline
-  def apply(): TtmlDestinationSettings = {
+  def apply(StyleControl: TtmlDestinationStyleControl = null): TtmlDestinationSettings = {
     val __obj = js.Dynamic.literal()
+    if (StyleControl != null) __obj.updateDynamic("StyleControl")(StyleControl.asInstanceOf[js.Any])
     __obj.asInstanceOf[TtmlDestinationSettings]
   }
-  @scala.inline
-  implicit class TtmlDestinationSettingsOps[Self <: TtmlDestinationSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyleControl(value: TtmlDestinationStyleControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StyleControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyleControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StyleControl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

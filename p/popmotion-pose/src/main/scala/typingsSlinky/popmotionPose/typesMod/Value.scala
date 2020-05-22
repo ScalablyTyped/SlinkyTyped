@@ -6,43 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Value extends js.Object {
-  var raw: ValueReaction = js.native
-  var `type`: js.UndefOr[ValueType] = js.native
+  var raw: ValueReaction
+  var `type`: js.UndefOr[ValueType] = js.undefined
 }
 
 object Value {
   @scala.inline
-  def apply(raw: ValueReaction): Value = {
+  def apply(raw: ValueReaction, `type`: ValueType = null): Value = {
     val __obj = js.Dynamic.literal(raw = raw.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Value]
   }
-  @scala.inline
-  implicit class ValueOps[Self <: Value] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRaw(value: ValueReaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ValueType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

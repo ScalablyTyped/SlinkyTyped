@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IROOM_GROUP_UNSUBSCRIBE extends js.Object {
-  var groupId: String = js.native
+  var groupId: String
 }
 
 object IROOM_GROUP_UNSUBSCRIBE {
@@ -15,19 +14,5 @@ object IROOM_GROUP_UNSUBSCRIBE {
     val __obj = js.Dynamic.literal(groupId = groupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IROOM_GROUP_UNSUBSCRIBE]
   }
-  @scala.inline
-  implicit class IROOM_GROUP_UNSUBSCRIBEOps[Self <: IROOM_GROUP_UNSUBSCRIBE] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PopoverPropsType extends js.Object {
-  var disabled: js.UndefOr[Boolean] = js.native
-  var onSelect: js.UndefOr[js.Function2[/* node */ js.Any, /* index */ js.UndefOr[Double], Unit]] = js.native
-  var overlay: TagMod[Any] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var onSelect: js.UndefOr[js.Function2[/* node */ js.Any, /* index */ js.UndefOr[Double], Unit]] = js.undefined
+  var overlay: TagMod[Any]
 }
 
 object PopoverPropsType {
   @scala.inline
-  def apply(): PopoverPropsType = {
+  def apply(
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    onSelect: (/* node */ js.Any, /* index */ js.UndefOr[Double]) => Unit = null,
+    overlay: TagMod[Any] = null
+  ): PopoverPropsType = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
     __obj.asInstanceOf[PopoverPropsType]
   }
-  @scala.inline
-  implicit class PopoverPropsTypeOps[Self <: PopoverPropsType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: (/* node */ js.Any, /* index */ js.UndefOr[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

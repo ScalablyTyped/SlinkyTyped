@@ -8,12 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides access to the collection of all embedded and linked graphics within this context (i.e. within this document). */
-@js.native
 trait XTextGraphicObjectsSupplier extends XInterface {
   /** @returns the collection of graphic objects in this object (document). */
-  val GraphicObjects: XNameAccess = js.native
+  val GraphicObjects: XNameAccess
   /** @returns the collection of graphic objects in this object (document). */
-  def getGraphicObjects(): XNameAccess = js.native
+  def getGraphicObjects(): XNameAccess
 }
 
 object XTextGraphicObjectsSupplier {
@@ -28,25 +27,5 @@ object XTextGraphicObjectsSupplier {
     val __obj = js.Dynamic.literal(GraphicObjects = GraphicObjects.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getGraphicObjects = js.Any.fromFunction0(getGraphicObjects), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTextGraphicObjectsSupplier]
   }
-  @scala.inline
-  implicit class XTextGraphicObjectsSupplierOps[Self <: XTextGraphicObjectsSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGraphicObjects(value: XNameAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphicObjects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetGraphicObjects(value: () => XNameAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGraphicObjects")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -79,197 +79,40 @@ trait SchemaExternallyHostedApk extends js.Object {
 
 object SchemaExternallyHostedApk {
   @scala.inline
-  def apply(): SchemaExternallyHostedApk = {
+  def apply(
+    applicationLabel: String = null,
+    certificateBase64s: js.Array[String] = null,
+    externallyHostedUrl: String = null,
+    fileSha1Base64: String = null,
+    fileSha256Base64: String = null,
+    fileSize: String = null,
+    iconBase64: String = null,
+    maximumSdk: js.UndefOr[Double] = js.undefined,
+    minimumSdk: js.UndefOr[Double] = js.undefined,
+    nativeCodes: js.Array[String] = null,
+    packageName: String = null,
+    usesFeatures: js.Array[String] = null,
+    usesPermissions: js.Array[SchemaExternallyHostedApkUsesPermission] = null,
+    versionCode: js.UndefOr[Double] = js.undefined,
+    versionName: String = null
+  ): SchemaExternallyHostedApk = {
     val __obj = js.Dynamic.literal()
+    if (applicationLabel != null) __obj.updateDynamic("applicationLabel")(applicationLabel.asInstanceOf[js.Any])
+    if (certificateBase64s != null) __obj.updateDynamic("certificateBase64s")(certificateBase64s.asInstanceOf[js.Any])
+    if (externallyHostedUrl != null) __obj.updateDynamic("externallyHostedUrl")(externallyHostedUrl.asInstanceOf[js.Any])
+    if (fileSha1Base64 != null) __obj.updateDynamic("fileSha1Base64")(fileSha1Base64.asInstanceOf[js.Any])
+    if (fileSha256Base64 != null) __obj.updateDynamic("fileSha256Base64")(fileSha256Base64.asInstanceOf[js.Any])
+    if (fileSize != null) __obj.updateDynamic("fileSize")(fileSize.asInstanceOf[js.Any])
+    if (iconBase64 != null) __obj.updateDynamic("iconBase64")(iconBase64.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumSdk)) __obj.updateDynamic("maximumSdk")(maximumSdk.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumSdk)) __obj.updateDynamic("minimumSdk")(minimumSdk.get.asInstanceOf[js.Any])
+    if (nativeCodes != null) __obj.updateDynamic("nativeCodes")(nativeCodes.asInstanceOf[js.Any])
+    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
+    if (usesFeatures != null) __obj.updateDynamic("usesFeatures")(usesFeatures.asInstanceOf[js.Any])
+    if (usesPermissions != null) __obj.updateDynamic("usesPermissions")(usesPermissions.asInstanceOf[js.Any])
+    if (!js.isUndefined(versionCode)) __obj.updateDynamic("versionCode")(versionCode.get.asInstanceOf[js.Any])
+    if (versionName != null) __obj.updateDynamic("versionName")(versionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExternallyHostedApk]
   }
-  @scala.inline
-  implicit class SchemaExternallyHostedApkOps[Self <: SchemaExternallyHostedApk] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateBase64s(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateBase64s")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateBase64s: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateBase64s")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternallyHostedUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externallyHostedUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternallyHostedUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externallyHostedUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileSha1Base64(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSha1Base64")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSha1Base64: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSha1Base64")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileSha256Base64(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSha256Base64")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSha256Base64: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSha256Base64")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconBase64(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconBase64")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconBase64: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconBase64")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumSdk(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSdk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumSdk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSdk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumSdk(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumSdk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumSdk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumSdk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNativeCodes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNativeCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsesFeatures(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesFeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsesFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesFeatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsesPermissions(value: js.Array[SchemaExternallyHostedApkUsesPermission]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsesPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesPermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,103 +7,45 @@ import scala.scalajs.js.annotation._
 /**
   * OAuth2 Configuration of the SMART on FHIR Server
   */
-@js.native
 trait OAuth2Configuration extends js.Object {
   /**
     * Client or application specific settings provided on the FHIR server during the client/application registration.
     */
-  var client: js.UndefOr[OAuth2ClientSettings] = js.native
+  var client: js.UndefOr[OAuth2ClientSettings] = js.undefined
   /**
     * Fake Access Token Response. Should contain the patient property to set the patient context.
     */
-  var fake_token_response: js.UndefOr[js.Any] = js.native
+  var fake_token_response: js.UndefOr[js.Any] = js.undefined
   /**
     * OAuth2 Provider information. If provided during the Authorize call, the library skips the conformance statement introspection
     */
-  var provider: js.UndefOr[OAuth2Provider] = js.native
+  var provider: js.UndefOr[OAuth2Provider] = js.undefined
   /**
     * Set the response type based on the Authorization Grant eg. code(Authorization Code Grant), token(Implicit Grant)
     */
-  var response_type: js.UndefOr[String] = js.native
+  var response_type: js.UndefOr[String] = js.undefined
   /**
     * FHIR Service URL
     */
-  var server: js.UndefOr[String] = js.native
+  var server: js.UndefOr[String] = js.undefined
 }
 
 object OAuth2Configuration {
   @scala.inline
-  def apply(): OAuth2Configuration = {
+  def apply(
+    client: OAuth2ClientSettings = null,
+    fake_token_response: js.Any = null,
+    provider: OAuth2Provider = null,
+    response_type: String = null,
+    server: String = null
+  ): OAuth2Configuration = {
     val __obj = js.Dynamic.literal()
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    if (fake_token_response != null) __obj.updateDynamic("fake_token_response")(fake_token_response.asInstanceOf[js.Any])
+    if (provider != null) __obj.updateDynamic("provider")(provider.asInstanceOf[js.Any])
+    if (response_type != null) __obj.updateDynamic("response_type")(response_type.asInstanceOf[js.Any])
+    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
     __obj.asInstanceOf[OAuth2Configuration]
   }
-  @scala.inline
-  implicit class OAuth2ConfigurationOps[Self <: OAuth2Configuration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClient(value: OAuth2ClientSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFake_token_response(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fake_token_response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFake_token_response: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fake_token_response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvider(value: OAuth2Provider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

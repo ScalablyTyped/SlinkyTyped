@@ -12,8 +12,30 @@ trait AssemblyExpression extends AssemblyItem
 
 object AssemblyExpression {
   @scala.inline
-  implicit def apply(value: AssemblyCall): AssemblyExpression = value.asInstanceOf[AssemblyExpression]
+  def AssemblyCall(
+    arguments: js.Array[AssemblyExpression],
+    functionName: String,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyCall,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): AssemblyExpression = {
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], functionName = functionName.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AssemblyExpression]
+  }
   @scala.inline
-  implicit def apply(value: AssemblyLiteral): AssemblyExpression = value.asInstanceOf[AssemblyExpression]
+  def AssemblyLiteral(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyLiteral,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): AssemblyExpression = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AssemblyExpression]
+  }
 }
 

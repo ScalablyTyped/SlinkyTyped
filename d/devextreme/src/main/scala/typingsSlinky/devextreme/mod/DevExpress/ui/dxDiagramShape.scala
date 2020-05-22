@@ -9,6 +9,7 @@ import typingsSlinky.devextreme.devextremeStrings.arrowTop
 import typingsSlinky.devextreme.devextremeStrings.cardWithImageOnLeft
 import typingsSlinky.devextreme.devextremeStrings.cardWithImageOnRight
 import typingsSlinky.devextreme.devextremeStrings.cardWithImageOnTop
+import typingsSlinky.devextreme.devextremeStrings.connector
 import typingsSlinky.devextreme.devextremeStrings.cross
 import typingsSlinky.devextreme.devextremeStrings.data
 import typingsSlinky.devextreme.devextremeStrings.database
@@ -34,6 +35,7 @@ import typingsSlinky.devextreme.devextremeStrings.predefinedProcess
 import typingsSlinky.devextreme.devextremeStrings.preparation
 import typingsSlinky.devextreme.devextremeStrings.process
 import typingsSlinky.devextreme.devextremeStrings.rectangle
+import typingsSlinky.devextreme.devextremeStrings.shape
 import typingsSlinky.devextreme.devextremeStrings.star
 import typingsSlinky.devextreme.devextremeStrings.storedData
 import typingsSlinky.devextreme.devextremeStrings.summingJunction
@@ -45,55 +47,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxDiagramShape extends dxDiagramItem {
-  /** Specifies the shape's text. */
-  var text: js.UndefOr[String] = js.native
-  /** Specifies the shape type. */
+  /** @name dxDiagramShape.text */
+  var text: js.UndefOr[String] = js.undefined
+  /** @name dxDiagramShape.type */
   var `type`: js.UndefOr[
     text | rectangle | ellipse | cross | triangle | diamond | heart | pentagon | octagon | star | arrowLeft | arrowTop | arrowRight | arrowBottom | arrowNorthSouth | arrowEastWest | process | decision | terminator | predefinedProcess | document | multipleDocuments | manualInput | preparation | data | database | hardDisk | internalStorage | paperTape | manualOperation | delay | storedData | display | merge | or | summingJunction | verticalContainer | horizontalContainer | cardWithImageOnLeft | cardWithImageOnTop | cardWithImageOnRight | String
-  ] = js.native
+  ] = js.undefined
 }
 
 object dxDiagramShape {
   @scala.inline
-  def apply(): dxDiagramShape = {
+  def apply(
+    dataItem: js.Any = null,
+    id: String = null,
+    itemType: shape | connector = null,
+    text: String = null,
+    `type`: text | rectangle | ellipse | cross | triangle | diamond | heart | pentagon | octagon | star | arrowLeft | arrowTop | arrowRight | arrowBottom | arrowNorthSouth | arrowEastWest | process | decision | terminator | predefinedProcess | document | multipleDocuments | manualInput | preparation | data | database | hardDisk | internalStorage | paperTape | manualOperation | delay | storedData | display | merge | or | summingJunction | verticalContainer | horizontalContainer | cardWithImageOnLeft | cardWithImageOnTop | cardWithImageOnRight | String = null
+  ): dxDiagramShape = {
     val __obj = js.Dynamic.literal()
+    if (dataItem != null) __obj.updateDynamic("dataItem")(dataItem.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxDiagramShape]
   }
-  @scala.inline
-  implicit class dxDiagramShapeOps[Self <: dxDiagramShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(
-      value: text | rectangle | ellipse | cross | triangle | diamond | heart | pentagon | octagon | star | arrowLeft | arrowTop | arrowRight | arrowBottom | arrowNorthSouth | arrowEastWest | process | decision | terminator | predefinedProcess | document | multipleDocuments | manualInput | preparation | data | database | hardDisk | internalStorage | paperTape | manualOperation | delay | storedData | display | merge | or | summingJunction | verticalContainer | horizontalContainer | cardWithImageOnLeft | cardWithImageOnTop | cardWithImageOnRight | String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

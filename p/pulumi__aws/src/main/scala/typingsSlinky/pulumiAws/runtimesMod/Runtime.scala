@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore1Dot0
   - typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot0
   - typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot1
+  - typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore3Dot1
   - typingsSlinky.pulumiAws.pulumiAwsStrings.go1Dotx
   - typingsSlinky.pulumiAws.pulumiAwsStrings.java8
   - typingsSlinky.pulumiAws.pulumiAwsStrings.java11
@@ -35,6 +36,8 @@ object Runtime {
   def dotnetcore2Dot0: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot0 = "dotnetcore2.0".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot0]
   @scala.inline
   def dotnetcore2Dot1: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot1 = "dotnetcore2.1".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot1]
+  @scala.inline
+  def dotnetcore3Dot1: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore3Dot1 = "dotnetcore3.1".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore3Dot1]
   @scala.inline
   def go1Dotx: typingsSlinky.pulumiAws.pulumiAwsStrings.go1Dotx = "go1.x".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.go1Dotx]
   @scala.inline

@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Loop extends js.Object {
-  var loop: js.UndefOr[`false`] = js.native
-  var pan: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[`false`] = js.undefined
+  var pan: js.UndefOr[Boolean] = js.undefined
 }
 
 object Loop {
   @scala.inline
-  def apply(): Loop = {
+  def apply(loop: `false` = null, pan: js.UndefOr[Boolean] = js.undefined): Loop = {
     val __obj = js.Dynamic.literal()
+    if (loop != null) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
+    if (!js.isUndefined(pan)) __obj.updateDynamic("pan")(pan.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Loop]
   }
-  @scala.inline
-  implicit class LoopOps[Self <: Loop] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoop(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPan(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CharacterClassRange
   extends BranchNode
      with NodeBase
      with CharacterClassElement {
-  var max: Character = js.native
-  var min: Character = js.native
+  var max: Character
+  var min: Character
   @JSName("parent")
-  var parent_CharacterClassRange: CharacterClass = js.native
+  var parent_CharacterClassRange: CharacterClass
   @JSName("type")
-  var type_CharacterClassRange: typingsSlinky.regexpp.regexppStrings.CharacterClassRange = js.native
+  var type_CharacterClassRange: typingsSlinky.regexpp.regexppStrings.CharacterClassRange
 }
 
 object CharacterClassRange {
@@ -32,37 +31,5 @@ object CharacterClassRange {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CharacterClassRange]
   }
-  @scala.inline
-  implicit class CharacterClassRangeOps[Self <: CharacterClassRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMax(value: Character): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMin(value: Character): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: CharacterClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.regexpp.regexppStrings.CharacterClassRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

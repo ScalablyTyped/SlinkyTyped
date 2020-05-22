@@ -1,8 +1,5 @@
 package typingsSlinky.xregexp.mod
 
-import typingsSlinky.xregexp.anon.PickRequiredUnicodeCharac
-import typingsSlinky.xregexp.anon.PickRequiredUnicodeCharacAlias
-import typingsSlinky.xregexp.anon.PickRequiredUnicodeCharacAstral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +18,55 @@ trait UnicodeCharacterRange extends js.Object
 
 object UnicodeCharacterRange {
   @scala.inline
-  implicit def apply(value: PickRequiredUnicodeCharac): UnicodeCharacterRange = value.asInstanceOf[UnicodeCharacterRange]
+  def PickRequiredUnicodeCharac(
+    name: String,
+    alias: String = null,
+    astral: String = null,
+    bmp: String = null,
+    inverseOf: String = null,
+    isBmpLast: js.UndefOr[Boolean] = js.undefined
+  ): UnicodeCharacterRange = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (astral != null) __obj.updateDynamic("astral")(astral.asInstanceOf[js.Any])
+    if (bmp != null) __obj.updateDynamic("bmp")(bmp.asInstanceOf[js.Any])
+    if (inverseOf != null) __obj.updateDynamic("inverseOf")(inverseOf.asInstanceOf[js.Any])
+    if (!js.isUndefined(isBmpLast)) __obj.updateDynamic("isBmpLast")(isBmpLast.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UnicodeCharacterRange]
+  }
   @scala.inline
-  implicit def apply(value: PickRequiredUnicodeCharacAlias): UnicodeCharacterRange = value.asInstanceOf[UnicodeCharacterRange]
+  def PickRequiredUnicodeCharacAlias(
+    name: String,
+    alias: String = null,
+    astral: String = null,
+    bmp: String = null,
+    inverseOf: String = null,
+    isBmpLast: js.UndefOr[Boolean] = js.undefined
+  ): UnicodeCharacterRange = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (astral != null) __obj.updateDynamic("astral")(astral.asInstanceOf[js.Any])
+    if (bmp != null) __obj.updateDynamic("bmp")(bmp.asInstanceOf[js.Any])
+    if (inverseOf != null) __obj.updateDynamic("inverseOf")(inverseOf.asInstanceOf[js.Any])
+    if (!js.isUndefined(isBmpLast)) __obj.updateDynamic("isBmpLast")(isBmpLast.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UnicodeCharacterRange]
+  }
   @scala.inline
-  implicit def apply(value: PickRequiredUnicodeCharacAstral): UnicodeCharacterRange = value.asInstanceOf[UnicodeCharacterRange]
+  def PickRequiredUnicodeCharacAstral(
+    name: String,
+    alias: String = null,
+    astral: String = null,
+    bmp: String = null,
+    inverseOf: String = null,
+    isBmpLast: js.UndefOr[Boolean] = js.undefined
+  ): UnicodeCharacterRange = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (astral != null) __obj.updateDynamic("astral")(astral.asInstanceOf[js.Any])
+    if (bmp != null) __obj.updateDynamic("bmp")(bmp.asInstanceOf[js.Any])
+    if (inverseOf != null) __obj.updateDynamic("inverseOf")(inverseOf.asInstanceOf[js.Any])
+    if (!js.isUndefined(isBmpLast)) __obj.updateDynamic("isBmpLast")(isBmpLast.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UnicodeCharacterRange]
+  }
 }
 

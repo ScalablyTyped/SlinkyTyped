@@ -1,5 +1,8 @@
 package typingsSlinky.reactNavigation.mod
 
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashBACK
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashINIT
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashNAVIGATE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +12,43 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNavigation.mod.NavigationNavigateAction
   - typingsSlinky.reactNavigation.mod.NavigationBackAction
 */
-trait NavigationTabAction extends NavigationAction
+trait NavigationTabAction extends _NavigationAction
 
 object NavigationTabAction {
   @scala.inline
-  implicit def apply(value: NavigationBackAction): NavigationTabAction = value.asInstanceOf[NavigationTabAction]
+  def NavigationInitAction(`type`: NavigationSlashINIT, key: String = null, params: NavigationParams = null): NavigationTabAction = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationTabAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationInitAction): NavigationTabAction = value.asInstanceOf[NavigationTabAction]
+  def NavigationNavigateAction(
+    routeName: String,
+    `type`: NavigationSlashNAVIGATE,
+    action: typingsSlinky.reactNavigation.mod.NavigationNavigateAction = null,
+    key: String = null,
+    params: NavigationParams = null
+  ): NavigationTabAction = {
+    val __obj = js.Dynamic.literal(routeName = routeName.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationTabAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationNavigateAction): NavigationTabAction = value.asInstanceOf[NavigationTabAction]
+  def NavigationBackAction(
+    `type`: NavigationSlashBACK,
+    immediate: js.UndefOr[Boolean] = js.undefined,
+    key: js.UndefOr[Null | String] = js.undefined
+  ): NavigationTabAction = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(key)) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationTabAction]
+  }
 }
 

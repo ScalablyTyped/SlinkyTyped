@@ -8,24 +8,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IUboDeclarationStatus extends js.Object {
   /**
     * When the UBO declaration was created
     */
-  var Created: CREATED = js.native
+  var Created: CREATED
   /**
     * When the UBO declaration was refused
     */
-  var Refused: REFUSED = js.native
+  var Refused: REFUSED
   /**
     * When the UBO declaration was validated
     */
-  var Validated: VALIDATED = js.native
+  var Validated: VALIDATED
   /**
     * When validation has been requested for the UBO declaration
     */
-  var ValidationAsked: VALIDATION_ASKED = js.native
+  var ValidationAsked: VALIDATION_ASKED
 }
 
 object IUboDeclarationStatus {
@@ -34,37 +33,5 @@ object IUboDeclarationStatus {
     val __obj = js.Dynamic.literal(Created = Created.asInstanceOf[js.Any], Refused = Refused.asInstanceOf[js.Any], Validated = Validated.asInstanceOf[js.Any], ValidationAsked = ValidationAsked.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUboDeclarationStatus]
   }
-  @scala.inline
-  implicit class IUboDeclarationStatusOps[Self <: IUboDeclarationStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreated(value: CREATED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefused(value: REFUSED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Refused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValidated(value: VALIDATED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Validated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValidationAsked(value: VALIDATION_ASKED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationAsked")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

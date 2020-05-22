@@ -58,6 +58,18 @@ class ActionEvent protected () extends IActionEvent {
     /** additional data for the event */
   additionalData: js.Any
   ) = this()
+  /** The mesh that is currently pointed at (can be null) */
+  /* CompleteClass */
+  override var meshUnderPointer: Nullable[AbstractMesh] = js.native
+  /** The X mouse cursor position at the time of the event */
+  /* CompleteClass */
+  override var pointerX: Double = js.native
+  /** The Y mouse cursor position at the time of the event */
+  /* CompleteClass */
+  override var pointerY: Double = js.native
+  /** The mesh or sprite that triggered the action */
+  /* CompleteClass */
+  override var source: js.Any = js.native
 }
 
 /* static members */

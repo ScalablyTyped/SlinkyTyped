@@ -1,53 +1,44 @@
 package typingsSlinky.ionic.definitionsMod
 
+import typingsSlinky.ionicCliFramework.anon.Value
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandOptionType
+import typingsSlinky.ionicCliFramework.definitionsMod.Footnote
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommandMetadataOption
   extends typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption {
-  var hint: js.UndefOr[String] = js.native
-  var `private`: js.UndefOr[Boolean] = js.native
+  var hint: js.UndefOr[String] = js.undefined
+  var `private`: js.UndefOr[Boolean] = js.undefined
 }
 
 object CommandMetadataOption {
   @scala.inline
-  def apply(name: String, summary: String): CommandMetadataOption = {
+  def apply(
+    name: String,
+    summary: String,
+    aliases: js.Array[String] = null,
+    default: String | Boolean = null,
+    description: String = null,
+    footnotes: js.Array[Footnote] = null,
+    groups: js.Array[String] = null,
+    hint: String = null,
+    `private`: js.UndefOr[Boolean] = js.undefined,
+    spec: Value = null,
+    `type`: CommandOptionType = null
+  ): CommandMetadataOption = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], summary = summary.asInstanceOf[js.Any])
+    if (aliases != null) __obj.updateDynamic("aliases")(aliases.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (footnotes != null) __obj.updateDynamic("footnotes")(footnotes.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(`private`)) __obj.updateDynamic("private")(`private`.get.asInstanceOf[js.Any])
+    if (spec != null) __obj.updateDynamic("spec")(spec.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandMetadataOption]
   }
-  @scala.inline
-  implicit class CommandMetadataOptionOps[Self <: CommandMetadataOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

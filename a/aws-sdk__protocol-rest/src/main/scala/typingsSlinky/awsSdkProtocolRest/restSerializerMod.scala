@@ -2,8 +2,10 @@ package typingsSlinky.awsSdkProtocolRest
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
+import typingsSlinky.awsSdkTypes.httpMod.HttpRequest
 import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializer
 import typingsSlinky.awsSdkTypes.marshallerMod.RequestSerializer
+import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
@@ -36,6 +38,15 @@ object restSerializerMod extends js.Object {
     var serializeBody: js.Any = js.native
     var serializeNonBody: js.Any = js.native
     var utf8Decoder: js.Any = js.native
+    /**
+      * Converts the provided `input` into an HTTP request
+      *
+      * @param operation The operation to be executed via the returned HTTP
+      *                  request.
+      * @param input     The user input to serialize.
+      */
+    /* CompleteClass */
+    override def serialize(operation: OperationModel, input: js.Any): HttpRequest[StreamType] = js.native
   }
   
   type UserInput = StringDictionary[js.Any]

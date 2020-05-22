@@ -6,114 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MultiTagElement extends js.Object {
-  var cancel: js.UndefOr[Boolean] = js.native
-  var component: js.UndefOr[dxTagBox] = js.native
-  var element: js.UndefOr[dxElement] = js.native
-  var model: js.UndefOr[js.Any] = js.native
-  var multiTagElement: js.UndefOr[dxElement] = js.native
-  var selectedItems: js.UndefOr[js.Array[String | Double | _]] = js.native
-  var text: js.UndefOr[String] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
+  var component: js.UndefOr[dxTagBox] = js.undefined
+  var element: js.UndefOr[dxElement] = js.undefined
+  var model: js.UndefOr[js.Any] = js.undefined
+  var multiTagElement: js.UndefOr[dxElement] = js.undefined
+  var selectedItems: js.UndefOr[js.Array[String | Double | _]] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
 }
 
 object MultiTagElement {
   @scala.inline
-  def apply(): MultiTagElement = {
+  def apply(
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    component: dxTagBox = null,
+    element: dxElement = null,
+    model: js.Any = null,
+    multiTagElement: dxElement = null,
+    selectedItems: js.Array[String | Double | _] = null,
+    text: String = null
+  ): MultiTagElement = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (multiTagElement != null) __obj.updateDynamic("multiTagElement")(multiTagElement.asInstanceOf[js.Any])
+    if (selectedItems != null) __obj.updateDynamic("selectedItems")(selectedItems.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiTagElement]
   }
-  @scala.inline
-  implicit class MultiTagElementOps[Self <: MultiTagElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: dxTagBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiTagElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiTagElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiTagElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiTagElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedItems(value: js.Array[String | Double | _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

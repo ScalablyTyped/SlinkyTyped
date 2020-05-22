@@ -22,41 +22,10 @@ trait CreateReceiptRuleRequest extends js.Object {
 
 object CreateReceiptRuleRequest {
   @scala.inline
-  def apply(Rule: ReceiptRule, RuleSetName: ReceiptRuleSetName): CreateReceiptRuleRequest = {
+  def apply(Rule: ReceiptRule, RuleSetName: ReceiptRuleSetName, After: ReceiptRuleName = null): CreateReceiptRuleRequest = {
     val __obj = js.Dynamic.literal(Rule = Rule.asInstanceOf[js.Any], RuleSetName = RuleSetName.asInstanceOf[js.Any])
+    if (After != null) __obj.updateDynamic("After")(After.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateReceiptRuleRequest]
   }
-  @scala.inline
-  implicit class CreateReceiptRuleRequestOps[Self <: CreateReceiptRuleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRule(value: ReceiptRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuleSetName(value: ReceiptRuleSetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAfter(value: ReceiptRuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("After")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("After")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

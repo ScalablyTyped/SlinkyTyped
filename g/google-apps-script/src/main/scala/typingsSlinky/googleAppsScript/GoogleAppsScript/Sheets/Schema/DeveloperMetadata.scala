@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeveloperMetadata extends js.Object {
-  var location: js.UndefOr[DeveloperMetadataLocation] = js.native
-  var metadataId: js.UndefOr[Double] = js.native
-  var metadataKey: js.UndefOr[String] = js.native
-  var metadataValue: js.UndefOr[String] = js.native
-  var visibility: js.UndefOr[String] = js.native
+  var location: js.UndefOr[DeveloperMetadataLocation] = js.undefined
+  var metadataId: js.UndefOr[Double] = js.undefined
+  var metadataKey: js.UndefOr[String] = js.undefined
+  var metadataValue: js.UndefOr[String] = js.undefined
+  var visibility: js.UndefOr[String] = js.undefined
 }
 
 object DeveloperMetadata {
   @scala.inline
-  def apply(): DeveloperMetadata = {
+  def apply(
+    location: DeveloperMetadataLocation = null,
+    metadataId: js.UndefOr[Double] = js.undefined,
+    metadataKey: String = null,
+    metadataValue: String = null,
+    visibility: String = null
+  ): DeveloperMetadata = {
     val __obj = js.Dynamic.literal()
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (!js.isUndefined(metadataId)) __obj.updateDynamic("metadataId")(metadataId.get.asInstanceOf[js.Any])
+    if (metadataKey != null) __obj.updateDynamic("metadataKey")(metadataKey.asInstanceOf[js.Any])
+    if (metadataValue != null) __obj.updateDynamic("metadataValue")(metadataValue.asInstanceOf[js.Any])
+    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeveloperMetadata]
   }
-  @scala.inline
-  implicit class DeveloperMetadataOps[Self <: DeveloperMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocation(value: DeveloperMetadataLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,7 +17,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PathSymbol3DLayerProperties extends Symbol3DLayerProperties {
   /**
     * Defines offset of the path cross section relative to the [Polyline](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polyline.html) geometry.
@@ -33,7 +32,7 @@ trait PathSymbol3DLayerProperties extends Symbol3DLayerProperties {
     *
     * @default "center"
     */
-  var anchor: js.UndefOr[center | bottom | top] = js.native
+  var anchor: js.UndefOr[center | bottom | top] = js.undefined
   /**
     * Controls the shape at the start and end point of the path. `none` will not render the faces that close the path. See the table below for possible values.
     *
@@ -49,7 +48,7 @@ trait PathSymbol3DLayerProperties extends Symbol3DLayerProperties {
     *
     * @default "butt"
     */
-  var cap: js.UndefOr[none | butt | square | round] = js.native
+  var cap: js.UndefOr[none | butt | square | round] = js.undefined
   /**
     * Indicates whether the symbol layer geometry casts shadows in the scene. Setting this property to `false` will disable shadows for the symbol layer even if direct shadows are enabled in [SceneView.environment](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment).
     *
@@ -57,13 +56,13 @@ trait PathSymbol3DLayerProperties extends Symbol3DLayerProperties {
     *
     * @default true
     */
-  var castShadows: js.UndefOr[Boolean] = js.native
+  var castShadows: js.UndefOr[Boolean] = js.undefined
   /**
     * The vertical dimension of the cross-section of the path in meters. If only the [width](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#width) is set, then the height is set to the same value as the width. If neither width nor height are set, then the path is not displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#height)
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * Controls the shape of the connection between two segments of the path. See the table below for possible values.
     *
@@ -78,13 +77,13 @@ trait PathSymbol3DLayerProperties extends Symbol3DLayerProperties {
     *
     * @default "miter"
     */
-  var join: js.UndefOr[miter | bevel | round] = js.native
+  var join: js.UndefOr[miter | bevel | round] = js.undefined
   /**
     * The material used to shade the path. This property defines the paths's color.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#material)
     */
-  var material: js.UndefOr[PathSymbol3DLayerMaterialProperties] = js.native
+  var material: js.UndefOr[PathSymbol3DLayerMaterialProperties] = js.undefined
   /**
     * Cross-section profile of the path geometry. Setting it to `circle` creates a path with a pipe shape and setting it to `quad` gives the path a rectangular shape.
     *
@@ -92,7 +91,7 @@ trait PathSymbol3DLayerProperties extends Symbol3DLayerProperties {
     *
     * @default "circle"
     */
-  var profile: js.UndefOr[circle | quad] = js.native
+  var profile: js.UndefOr[circle | quad] = js.undefined
   /**
     * Defines how the [profile](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#profile) is rotated as it is extruded along the [Polyline](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polyline.html) geometry. The rotation axes (heading, tilt, roll) can be limited to constrain the orientation of the profile in the scene. Setting `profileRotation` to `all` minimizes the twist along the line and ensures that the diameter of the resulting visualization corresponds to [width](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#width) and [height](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#height). Setting `profileRotation` to `"heading"` ensures that the profile stays upright (no tilt or twist).  Typically, `all` is used for `circle` profiles and `heading` is used for `quad` profiles.  As an example, when setting `heading` on a path with a `quad` profile the path is oriented upright:  ![profileRotation-heading](https://developers.arcgis.com/javascript/assets/img/apiref/symbols/profileRotation-heading.png)  The same path with `profileRotation` set to `all` will rotate in all three degrees of freedom:  ![profileRotation-all](https://developers.arcgis.com/javascript/assets/img/apiref/symbols/profileRotation-all.png)
     *
@@ -100,154 +99,47 @@ trait PathSymbol3DLayerProperties extends Symbol3DLayerProperties {
     *
     * @default "all"
     */
-  var profileRotation: js.UndefOr[heading | all] = js.native
+  var profileRotation: js.UndefOr[heading | all] = js.undefined
   /**
     * Sets the width and height of the path in meters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#size)
     */
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.undefined
   /**
     * The horizontal dimension of the cross-section of the path in meters. If only the [height](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#height) is set, then the width is set to the same value as the height. If neither width nor height are set, then the path is not displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#width)
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object PathSymbol3DLayerProperties {
   @scala.inline
-  def apply(): PathSymbol3DLayerProperties = {
+  def apply(
+    anchor: center | bottom | top = null,
+    cap: none | butt | square | round = null,
+    castShadows: js.UndefOr[Boolean] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    join: miter | bevel | round = null,
+    material: PathSymbol3DLayerMaterialProperties = null,
+    profile: circle | quad = null,
+    profileRotation: heading | all = null,
+    size: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): PathSymbol3DLayerProperties = {
     val __obj = js.Dynamic.literal()
+    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
+    if (cap != null) __obj.updateDynamic("cap")(cap.asInstanceOf[js.Any])
+    if (!js.isUndefined(castShadows)) __obj.updateDynamic("castShadows")(castShadows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (join != null) __obj.updateDynamic("join")(join.asInstanceOf[js.Any])
+    if (material != null) __obj.updateDynamic("material")(material.asInstanceOf[js.Any])
+    if (profile != null) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
+    if (profileRotation != null) __obj.updateDynamic("profileRotation")(profileRotation.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PathSymbol3DLayerProperties]
   }
-  @scala.inline
-  implicit class PathSymbol3DLayerPropertiesOps[Self <: PathSymbol3DLayerProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchor(value: center | bottom | top): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCap(value: none | butt | square | round): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCastShadows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("castShadows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCastShadows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("castShadows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJoin(value: miter | bevel | round): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("join")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJoin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("join")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaterial(value: PathSymbol3DLayerMaterialProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaterial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfile(value: circle | quad): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileRotation(value: heading | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileRotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

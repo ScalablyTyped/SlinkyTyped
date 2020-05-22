@@ -1,5 +1,7 @@
 package typingsSlinky.webidl2.mod
 
+import typingsSlinky.webidl2.webidl2Booleans.`false`
+import typingsSlinky.webidl2.webidl2Booleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,30 @@ trait IDLTypeDescription extends js.Object
 
 object IDLTypeDescription {
   @scala.inline
-  implicit def apply(value: SingleTypeDescription): IDLTypeDescription = value.asInstanceOf[IDLTypeDescription]
+  def SingleTypeDescription(
+    idlType: String,
+    nullable: Boolean,
+    sequence: Boolean,
+    union: `false`,
+    generic: String = null,
+    `type`: String = null
+  ): IDLTypeDescription = {
+    val __obj = js.Dynamic.literal(idlType = idlType.asInstanceOf[js.Any], nullable = nullable.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any], union = union.asInstanceOf[js.Any], generic = generic.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLTypeDescription]
+  }
   @scala.inline
-  implicit def apply(value: UnionTypeDescription): IDLTypeDescription = value.asInstanceOf[IDLTypeDescription]
+  def UnionTypeDescription(
+    idlType: js.Array[IDLTypeDescription],
+    nullable: Boolean,
+    sequence: Boolean,
+    union: `true`,
+    generic: String = null,
+    `type`: String = null
+  ): IDLTypeDescription = {
+    val __obj = js.Dynamic.literal(idlType = idlType.asInstanceOf[js.Any], nullable = nullable.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any], union = union.asInstanceOf[js.Any], generic = generic.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLTypeDescription]
+  }
 }
 

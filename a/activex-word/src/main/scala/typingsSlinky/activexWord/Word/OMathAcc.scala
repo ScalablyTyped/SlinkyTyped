@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMathAcc extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  var Char: Double = js.native
-  val Creator: Double = js.native
-  val E: OMath = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  var Char: Double
+  val Creator: Double
+  val E: OMath
+  val Parent: js.Any
   @JSName("Word.OMathAcc_typekey")
-  var WordDotOMathAcc_typekey: OMathAcc = js.native
+  var WordDotOMathAcc_typekey: OMathAcc
 }
 
 object OMathAcc {
@@ -29,49 +28,5 @@ object OMathAcc {
     __obj.updateDynamic("Word.OMathAcc_typekey")(WordDotOMathAcc_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMathAcc]
   }
-  @scala.inline
-  implicit class OMathAccOps[Self <: OMathAcc] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChar(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Char")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withE(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotOMathAcc_typekey(value: OMathAcc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMathAcc_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

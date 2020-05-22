@@ -26,9 +26,16 @@ object batchGetItemCommandMod extends js.Object {
           Readable
         ] {
     def this(input: BatchGetItemInput) = this()
+    /* CompleteClass */
+    override val input: BatchGetItemInput = js.native
     val middlewareStack: MiddlewareStack[BatchGetItemInput, BatchGetItemOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[BatchGetItemInput, BatchGetItemOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[BatchGetItemInput, BatchGetItemOutput] = js.native
   }

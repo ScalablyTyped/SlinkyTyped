@@ -4,36 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InputValues extends js.Object {
   /**
     * The default value to use for this input
     */
-  var defaultValue: String = js.native
+  var defaultValue: String
   /**
     * Errors encountered while computing dynamic values.
     */
-  var error: InputValuesError = js.native
+  var error: InputValuesError
   /**
     * The id of the input
     */
-  var inputId: String = js.native
+  var inputId: String
   /**
     * Should this input be disabled
     */
-  var isDisabled: Boolean = js.native
+  var isDisabled: Boolean
   /**
     * Should the value be restricted to one of the values in the PossibleValues (True) or are the values in PossibleValues just a suggestion (False)
     */
-  var isLimitedToPossibleValues: Boolean = js.native
+  var isLimitedToPossibleValues: Boolean
   /**
     * Should this input be made read-only
     */
-  var isReadOnly: Boolean = js.native
+  var isReadOnly: Boolean
   /**
     * Possible values that this input can take
     */
-  var possibleValues: js.Array[InputValue] = js.native
+  var possibleValues: js.Array[InputValue]
 }
 
 object InputValues {
@@ -50,55 +49,5 @@ object InputValues {
     val __obj = js.Dynamic.literal(defaultValue = defaultValue.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], inputId = inputId.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isLimitedToPossibleValues = isLimitedToPossibleValues.asInstanceOf[js.Any], isReadOnly = isReadOnly.asInstanceOf[js.Any], possibleValues = possibleValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputValues]
   }
-  @scala.inline
-  implicit class InputValuesOps[Self <: InputValues] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: InputValuesError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsLimitedToPossibleValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLimitedToPossibleValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPossibleValues(value: js.Array[InputValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("possibleValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

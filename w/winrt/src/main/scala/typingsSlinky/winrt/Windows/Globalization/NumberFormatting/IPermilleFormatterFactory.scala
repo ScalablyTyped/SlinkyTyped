@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPermilleFormatterFactory extends js.Object {
-  def createPermilleFormatter(languages: IIterable[String], geographicRegion: String): PermilleFormatter = js.native
+  def createPermilleFormatter(languages: IIterable[String], geographicRegion: String): PermilleFormatter
 }
 
 object IPermilleFormatterFactory {
@@ -16,19 +15,5 @@ object IPermilleFormatterFactory {
     val __obj = js.Dynamic.literal(createPermilleFormatter = js.Any.fromFunction2(createPermilleFormatter))
     __obj.asInstanceOf[IPermilleFormatterFactory]
   }
-  @scala.inline
-  implicit class IPermilleFormatterFactoryOps[Self <: IPermilleFormatterFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatePermilleFormatter(value: (IIterable[String], String) => PermilleFormatter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createPermilleFormatter")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -26,59 +26,17 @@ trait CreateVpnGatewayRequest extends js.Object {
 
 object CreateVpnGatewayRequest {
   @scala.inline
-  def apply(Type: GatewayType): CreateVpnGatewayRequest = {
+  def apply(
+    Type: GatewayType,
+    AmazonSideAsn: js.UndefOr[Long] = js.undefined,
+    AvailabilityZone: String = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined
+  ): CreateVpnGatewayRequest = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
+    if (!js.isUndefined(AmazonSideAsn)) __obj.updateDynamic("AmazonSideAsn")(AmazonSideAsn.get.asInstanceOf[js.Any])
+    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVpnGatewayRequest]
   }
-  @scala.inline
-  implicit class CreateVpnGatewayRequestOps[Self <: CreateVpnGatewayRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: GatewayType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmazonSideAsn(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonSideAsn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmazonSideAsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonSideAsn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

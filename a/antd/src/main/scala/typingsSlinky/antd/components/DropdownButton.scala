@@ -13,7 +13,6 @@ import typingsSlinky.antd.antdStrings.hover
 import typingsSlinky.antd.buttonButtonMod.ButtonHTMLType
 import typingsSlinky.antd.dropdownButtonMod.DropdownButtonProps
 import typingsSlinky.antd.dropdownButtonMod.DropdownButtonType
-import typingsSlinky.antd.dropdownButtonMod.default
 import typingsSlinky.antd.dropdownDropdownMod.Align
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
 import typingsSlinky.antd.dropdownDropdownMod.Placement
@@ -31,7 +30,7 @@ object DropdownButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def align(value: Align): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline

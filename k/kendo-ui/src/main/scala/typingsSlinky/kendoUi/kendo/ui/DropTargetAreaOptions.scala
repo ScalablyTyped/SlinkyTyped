@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DropTargetAreaOptions extends js.Object {
-  var dragenter: js.UndefOr[js.Function1[/* e */ DropTargetAreaDragenterEvent, Unit]] = js.native
-  var dragleave: js.UndefOr[js.Function1[/* e */ DropTargetAreaDragleaveEvent, Unit]] = js.native
-  var drop: js.UndefOr[js.Function1[/* e */ DropTargetAreaDropEvent, Unit]] = js.native
-  var filter: js.UndefOr[String] = js.native
-  var group: js.UndefOr[String] = js.native
+  var dragenter: js.UndefOr[js.Function1[/* e */ DropTargetAreaDragenterEvent, Unit]] = js.undefined
+  var dragleave: js.UndefOr[js.Function1[/* e */ DropTargetAreaDragleaveEvent, Unit]] = js.undefined
+  var drop: js.UndefOr[js.Function1[/* e */ DropTargetAreaDropEvent, Unit]] = js.undefined
+  var filter: js.UndefOr[String] = js.undefined
+  var group: js.UndefOr[String] = js.undefined
 }
 
 object DropTargetAreaOptions {
   @scala.inline
-  def apply(): DropTargetAreaOptions = {
+  def apply(
+    dragenter: /* e */ DropTargetAreaDragenterEvent => Unit = null,
+    dragleave: /* e */ DropTargetAreaDragleaveEvent => Unit = null,
+    drop: /* e */ DropTargetAreaDropEvent => Unit = null,
+    filter: String = null,
+    group: String = null
+  ): DropTargetAreaOptions = {
     val __obj = js.Dynamic.literal()
+    if (dragenter != null) __obj.updateDynamic("dragenter")(js.Any.fromFunction1(dragenter))
+    if (dragleave != null) __obj.updateDynamic("dragleave")(js.Any.fromFunction1(dragleave))
+    if (drop != null) __obj.updateDynamic("drop")(js.Any.fromFunction1(drop))
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropTargetAreaOptions]
   }
-  @scala.inline
-  implicit class DropTargetAreaOptionsOps[Self <: DropTargetAreaOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDragenter(value: /* e */ DropTargetAreaDragenterEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragenter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragleave(value: /* e */ DropTargetAreaDragleaveEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragleave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragleave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragleave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrop(value: /* e */ DropTargetAreaDropEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

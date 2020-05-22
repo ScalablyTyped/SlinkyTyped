@@ -17,6 +17,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.officeUiFabricReact.anon.ContainsFocus
 import typingsSlinky.officeUiFabricReact.popupTypesMod.IPopupProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -374,6 +375,8 @@ object Popup {
     def onReset(
       value: SyntheticEvent[EventTarget with typingsSlinky.officeUiFabricReact.popupPopupMod.Popup, Event] => Unit
     ): this.type = set("onReset", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRestoreFocus(value: /* options */ ContainsFocus => Unit): this.type = set("onRestoreFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onScroll(value: SyntheticUIEvent[typingsSlinky.officeUiFabricReact.popupPopupMod.Popup] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline

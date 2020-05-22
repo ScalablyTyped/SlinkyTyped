@@ -23,7 +23,7 @@ trait ImageDetail extends js.Object {
     */
   var imageScanStatus: js.UndefOr[ImageScanStatus] = js.native
   /**
-    * The size, in bytes, of the image in the repository.  Beginning with Docker version 1.9, the Docker client compresses image layers before pushing them to a V2 Docker registry. The output of the docker images command shows the uncompressed image size, so it may return a larger image size than the image sizes returned by DescribeImages. 
+    * The size, in bytes, of the image in the repository. If the image is a manifest list, this will be the max size of all manifests in the list.  Beginning with Docker version 1.9, the Docker client compresses image layers before pushing them to a V2 Docker registry. The output of the docker images command shows the uncompressed image size, so it may return a larger image size than the image sizes returned by DescribeImages. 
     */
   var imageSizeInBytes: js.UndefOr[ImageSizeInBytes] = js.native
   /**
@@ -42,113 +42,26 @@ trait ImageDetail extends js.Object {
 
 object ImageDetail {
   @scala.inline
-  def apply(): ImageDetail = {
+  def apply(
+    imageDigest: ImageDigest = null,
+    imagePushedAt: js.Date = null,
+    imageScanFindingsSummary: ImageScanFindingsSummary = null,
+    imageScanStatus: ImageScanStatus = null,
+    imageSizeInBytes: js.UndefOr[ImageSizeInBytes] = js.undefined,
+    imageTags: ImageTagList = null,
+    registryId: RegistryId = null,
+    repositoryName: RepositoryName = null
+  ): ImageDetail = {
     val __obj = js.Dynamic.literal()
+    if (imageDigest != null) __obj.updateDynamic("imageDigest")(imageDigest.asInstanceOf[js.Any])
+    if (imagePushedAt != null) __obj.updateDynamic("imagePushedAt")(imagePushedAt.asInstanceOf[js.Any])
+    if (imageScanFindingsSummary != null) __obj.updateDynamic("imageScanFindingsSummary")(imageScanFindingsSummary.asInstanceOf[js.Any])
+    if (imageScanStatus != null) __obj.updateDynamic("imageScanStatus")(imageScanStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(imageSizeInBytes)) __obj.updateDynamic("imageSizeInBytes")(imageSizeInBytes.get.asInstanceOf[js.Any])
+    if (imageTags != null) __obj.updateDynamic("imageTags")(imageTags.asInstanceOf[js.Any])
+    if (registryId != null) __obj.updateDynamic("registryId")(registryId.asInstanceOf[js.Any])
+    if (repositoryName != null) __obj.updateDynamic("repositoryName")(repositoryName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageDetail]
   }
-  @scala.inline
-  implicit class ImageDetailOps[Self <: ImageDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageDigest(value: ImageDigest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDigest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDigest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImagePushedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePushedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImagePushedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePushedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageScanFindingsSummary(value: ImageScanFindingsSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageScanFindingsSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageScanFindingsSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageScanFindingsSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageScanStatus(value: ImageScanStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageScanStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageScanStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageScanStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageSizeInBytes(value: ImageSizeInBytes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageSizeInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSizeInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageTags(value: ImageTagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistryId(value: RegistryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepositoryName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

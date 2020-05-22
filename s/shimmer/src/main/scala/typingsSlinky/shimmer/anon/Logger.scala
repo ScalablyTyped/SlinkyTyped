@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Logger extends js.Object {
-  var logger: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  var logger: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
 }
 
 object Logger {
   @scala.inline
-  def apply(): Logger = {
+  def apply(logger: /* msg */ String => Unit = null): Logger = {
     val __obj = js.Dynamic.literal()
+    if (logger != null) __obj.updateDynamic("logger")(js.Any.fromFunction1(logger))
     __obj.asInstanceOf[Logger]
   }
-  @scala.inline
-  implicit class LoggerOps[Self <: Logger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogger(value: /* msg */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

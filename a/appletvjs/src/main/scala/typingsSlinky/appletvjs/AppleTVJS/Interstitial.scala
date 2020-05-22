@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Interstitial extends js.Object {
   /** The duration of the interstitial. */
-  var duration: Double = js.native
+  var duration: Double
   /** The starttime of the interstitial. */
-  var starttime: Double = js.native
+  var starttime: Double
 }
 
 object Interstitial {
@@ -18,25 +17,5 @@ object Interstitial {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], starttime = starttime.asInstanceOf[js.Any])
     __obj.asInstanceOf[Interstitial]
   }
-  @scala.inline
-  implicit class InterstitialOps[Self <: Interstitial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStarttime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("starttime")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

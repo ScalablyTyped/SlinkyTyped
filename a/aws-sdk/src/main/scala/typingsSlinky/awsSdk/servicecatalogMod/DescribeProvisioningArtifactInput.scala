@@ -26,53 +26,16 @@ trait DescribeProvisioningArtifactInput extends js.Object {
 
 object DescribeProvisioningArtifactInput {
   @scala.inline
-  def apply(ProductId: Id, ProvisioningArtifactId: Id): DescribeProvisioningArtifactInput = {
+  def apply(
+    ProductId: Id,
+    ProvisioningArtifactId: Id,
+    AcceptLanguage: AcceptLanguage = null,
+    Verbose: js.UndefOr[Verbose] = js.undefined
+  ): DescribeProvisioningArtifactInput = {
     val __obj = js.Dynamic.literal(ProductId = ProductId.asInstanceOf[js.Any], ProvisioningArtifactId = ProvisioningArtifactId.asInstanceOf[js.Any])
+    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
+    if (!js.isUndefined(Verbose)) __obj.updateDynamic("Verbose")(Verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProvisioningArtifactInput]
   }
-  @scala.inline
-  implicit class DescribeProvisioningArtifactInputOps[Self <: DescribeProvisioningArtifactInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProductId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProvisioningArtifactId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcceptLanguage(value: AcceptLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Verbose): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

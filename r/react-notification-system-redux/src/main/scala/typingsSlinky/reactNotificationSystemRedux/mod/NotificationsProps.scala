@@ -1,41 +1,37 @@
 package typingsSlinky.reactNotificationSystemRedux.mod
 
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactNotificationSystem.mod.Attributes
 import typingsSlinky.reactNotificationSystem.mod.Notification
+import typingsSlinky.reactNotificationSystem.mod.Style
+import typingsSlinky.reactNotificationSystem.mod.System
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NotificationsProps extends Attributes {
-  var notifications: js.UndefOr[js.Array[Notification]] = js.native
+  var notifications: js.UndefOr[js.Array[Notification]] = js.undefined
 }
 
 object NotificationsProps {
   @scala.inline
-  def apply(): NotificationsProps = {
+  def apply(
+    allowHTML: js.UndefOr[Boolean] = js.undefined,
+    key: Key = null,
+    noAnimation: js.UndefOr[Boolean] = js.undefined,
+    notifications: js.Array[Notification] = null,
+    ref: js.UndefOr[Null | LegacyRef[System]] = js.undefined,
+    style: Style | Boolean = null
+  ): NotificationsProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowHTML)) __obj.updateDynamic("allowHTML")(allowHTML.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(noAnimation)) __obj.updateDynamic("noAnimation")(noAnimation.get.asInstanceOf[js.Any])
+    if (notifications != null) __obj.updateDynamic("notifications")(notifications.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationsProps]
   }
-  @scala.inline
-  implicit class NotificationsPropsOps[Self <: NotificationsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotifications(value: js.Array[Notification]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

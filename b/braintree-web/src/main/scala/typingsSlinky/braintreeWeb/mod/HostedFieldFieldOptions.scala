@@ -14,89 +14,31 @@ import scala.scalajs.js.annotation._
   * @property {field} [cvv] A field for 3 or 4 digit CVV or CID.
   * @property {field} [postalCode] A field for postal or region code.
   */
-@js.native
 trait HostedFieldFieldOptions extends js.Object {
-  var cvv: HostedFieldsField = js.native
-  var expirationDate: js.UndefOr[HostedFieldsField] = js.native
-  var expirationMonth: js.UndefOr[HostedFieldsField] = js.native
-  var expirationYear: js.UndefOr[HostedFieldsField] = js.native
-  var number: HostedFieldsField = js.native
-  var postalCode: js.UndefOr[HostedFieldsField] = js.native
+  var cvv: HostedFieldsField
+  var expirationDate: js.UndefOr[HostedFieldsField] = js.undefined
+  var expirationMonth: js.UndefOr[HostedFieldsField] = js.undefined
+  var expirationYear: js.UndefOr[HostedFieldsField] = js.undefined
+  var number: HostedFieldsField
+  var postalCode: js.UndefOr[HostedFieldsField] = js.undefined
 }
 
 object HostedFieldFieldOptions {
   @scala.inline
-  def apply(cvv: HostedFieldsField, number: HostedFieldsField): HostedFieldFieldOptions = {
+  def apply(
+    cvv: HostedFieldsField,
+    number: HostedFieldsField,
+    expirationDate: HostedFieldsField = null,
+    expirationMonth: HostedFieldsField = null,
+    expirationYear: HostedFieldsField = null,
+    postalCode: HostedFieldsField = null
+  ): HostedFieldFieldOptions = {
     val __obj = js.Dynamic.literal(cvv = cvv.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
+    if (expirationDate != null) __obj.updateDynamic("expirationDate")(expirationDate.asInstanceOf[js.Any])
+    if (expirationMonth != null) __obj.updateDynamic("expirationMonth")(expirationMonth.asInstanceOf[js.Any])
+    if (expirationYear != null) __obj.updateDynamic("expirationYear")(expirationYear.asInstanceOf[js.Any])
+    if (postalCode != null) __obj.updateDynamic("postalCode")(postalCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostedFieldFieldOptions]
   }
-  @scala.inline
-  implicit class HostedFieldFieldOptionsOps[Self <: HostedFieldFieldOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCvv(value: HostedFieldsField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cvv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumber(value: HostedFieldsField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpirationDate(value: HostedFieldsField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationMonth(value: HostedFieldsField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationYear(value: HostedFieldsField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostalCode(value: HostedFieldsField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostalCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

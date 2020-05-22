@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FloatPointUnits extends js.Object {
-  def precision(precision: Double): UnitFunction = js.native
+  def precision(precision: Double): UnitFunction
 }
 
 object FloatPointUnits {
@@ -15,19 +14,5 @@ object FloatPointUnits {
     val __obj = js.Dynamic.literal(precision = js.Any.fromFunction1(precision))
     __obj.asInstanceOf[FloatPointUnits]
   }
-  @scala.inline
-  implicit class FloatPointUnitsOps[Self <: FloatPointUnits] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrecision(value: Double => UnitFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

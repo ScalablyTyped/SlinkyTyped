@@ -7,53 +7,52 @@ import scala.scalajs.js.annotation._
 /**
   * NodeSystemInfo is a set of ids/uuids to uniquely identify the node.
   */
-@js.native
 trait NodeSystemInfo extends js.Object {
   /**
     * The Architecture reported by the node
     */
-  val architecture: String = js.native
+  val architecture: String
   /**
     * Boot ID reported by the node.
     */
-  val bootID: String = js.native
+  val bootID: String
   /**
     * ContainerRuntime Version reported by the node through runtime remote API (e.g.
     * docker://1.5.0).
     */
-  val containerRuntimeVersion: String = js.native
+  val containerRuntimeVersion: String
   /**
     * Kernel Version reported by the node from 'uname -r' (e.g. 3.16.0-0.bpo.4-amd64).
     */
-  val kernelVersion: String = js.native
+  val kernelVersion: String
   /**
     * KubeProxy Version reported by the node.
     */
-  val kubeProxyVersion: String = js.native
+  val kubeProxyVersion: String
   /**
     * Kubelet Version reported by the node.
     */
-  val kubeletVersion: String = js.native
+  val kubeletVersion: String
   /**
     * MachineID reported by the node. For unique machine identification in the cluster this field
     * is preferred. Learn more from man(5) machine-id:
     * http://man7.org/linux/man-pages/man5/machine-id.5.html
     */
-  val machineID: String = js.native
+  val machineID: String
   /**
     * The Operating System reported by the node
     */
-  val operatingSystem: String = js.native
+  val operatingSystem: String
   /**
     * OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
     */
-  val osImage: String = js.native
+  val osImage: String
   /**
     * SystemUUID reported by the node. For unique machine identification MachineID is preferred.
     * This field is specific to Red Hat hosts
     * https://access.redhat.com/documentation/en-US/Red_Hat_Subscription_Management/1/html/RHSM/getting-system-uuid.html
     */
-  val systemUUID: String = js.native
+  val systemUUID: String
 }
 
 object NodeSystemInfo {
@@ -73,73 +72,5 @@ object NodeSystemInfo {
     val __obj = js.Dynamic.literal(architecture = architecture.asInstanceOf[js.Any], bootID = bootID.asInstanceOf[js.Any], containerRuntimeVersion = containerRuntimeVersion.asInstanceOf[js.Any], kernelVersion = kernelVersion.asInstanceOf[js.Any], kubeProxyVersion = kubeProxyVersion.asInstanceOf[js.Any], kubeletVersion = kubeletVersion.asInstanceOf[js.Any], machineID = machineID.asInstanceOf[js.Any], operatingSystem = operatingSystem.asInstanceOf[js.Any], osImage = osImage.asInstanceOf[js.Any], systemUUID = systemUUID.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeSystemInfo]
   }
-  @scala.inline
-  implicit class NodeSystemInfoOps[Self <: NodeSystemInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArchitecture(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("architecture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBootID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainerRuntimeVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerRuntimeVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKernelVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKubeProxyVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kubeProxyVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKubeletVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kubeletVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMachineID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperatingSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOsImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSystemUUID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemUUID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

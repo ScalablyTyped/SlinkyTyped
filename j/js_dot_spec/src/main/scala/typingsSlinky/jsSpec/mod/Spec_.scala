@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait Spec_ extends SpecInput {
+trait Spec_ extends js.Object {
   /**
     * The name of the spec, displayed in explain() results.
     */
-  val name: String = js.native
+  val name: String
   /**
     * Data necessary to check values for conformity.
     */
-  val options: js.Object = js.native
+  val options: js.Object
   /**
     * Returns the conformed value to this spec.
     * @param value the value to test for conformance
     * @returns if the value does not conform to the spec, or the value if it does.
     */
-  def conform(value: js.Any): js.Any = js.native
+  def conform(value: js.Any): js.Any
   /**
     * Explain why a value does not conform to this spec.
     * @param path the path to the value
@@ -27,7 +26,7 @@ trait Spec_ extends SpecInput {
     * @param value the value to examine
     * @returns list of problems or null if none
     */
-  def explain(path: js.Array[String], via: js.Array[String], value: js.Any): js.Array[Problem] = js.native
+  def explain(path: js.Array[String], via: js.Array[String], value: js.Any): js.Array[Problem]
 }
 
 object Spec_ {
@@ -41,37 +40,5 @@ object Spec_ {
     val __obj = js.Dynamic.literal(conform = js.Any.fromFunction1(conform), explain = js.Any.fromFunction3(explain), name = name.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[Spec_]
   }
-  @scala.inline
-  implicit class Spec_Ops[Self <: Spec_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConform(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conform")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExplain(value: (js.Array[String], js.Array[String], js.Any) => js.Array[Problem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explain")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

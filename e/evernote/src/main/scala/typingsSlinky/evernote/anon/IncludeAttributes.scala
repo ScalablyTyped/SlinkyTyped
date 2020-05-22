@@ -4,166 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IncludeAttributes extends js.Object {
-  var includeAttributes: js.UndefOr[Boolean] = js.native
-  var includeContentLength: js.UndefOr[Boolean] = js.native
-  var includeCreated: js.UndefOr[Boolean] = js.native
-  var includeDeleted: js.UndefOr[Boolean] = js.native
-  var includeLargestResourceMime: js.UndefOr[Boolean] = js.native
-  var includeLargestResourceSize: js.UndefOr[Boolean] = js.native
-  var includeNotebookGuid: js.UndefOr[Boolean] = js.native
-  var includeTagGuids: js.UndefOr[Boolean] = js.native
-  var includeTitle: js.UndefOr[Boolean] = js.native
-  var includeUpdateSequenceNum: js.UndefOr[Boolean] = js.native
-  var includeUpdated: js.UndefOr[Boolean] = js.native
+  var includeAttributes: js.UndefOr[Boolean] = js.undefined
+  var includeContentLength: js.UndefOr[Boolean] = js.undefined
+  var includeCreated: js.UndefOr[Boolean] = js.undefined
+  var includeDeleted: js.UndefOr[Boolean] = js.undefined
+  var includeLargestResourceMime: js.UndefOr[Boolean] = js.undefined
+  var includeLargestResourceSize: js.UndefOr[Boolean] = js.undefined
+  var includeNotebookGuid: js.UndefOr[Boolean] = js.undefined
+  var includeTagGuids: js.UndefOr[Boolean] = js.undefined
+  var includeTitle: js.UndefOr[Boolean] = js.undefined
+  var includeUpdateSequenceNum: js.UndefOr[Boolean] = js.undefined
+  var includeUpdated: js.UndefOr[Boolean] = js.undefined
 }
 
 object IncludeAttributes {
   @scala.inline
-  def apply(): IncludeAttributes = {
+  def apply(
+    includeAttributes: js.UndefOr[Boolean] = js.undefined,
+    includeContentLength: js.UndefOr[Boolean] = js.undefined,
+    includeCreated: js.UndefOr[Boolean] = js.undefined,
+    includeDeleted: js.UndefOr[Boolean] = js.undefined,
+    includeLargestResourceMime: js.UndefOr[Boolean] = js.undefined,
+    includeLargestResourceSize: js.UndefOr[Boolean] = js.undefined,
+    includeNotebookGuid: js.UndefOr[Boolean] = js.undefined,
+    includeTagGuids: js.UndefOr[Boolean] = js.undefined,
+    includeTitle: js.UndefOr[Boolean] = js.undefined,
+    includeUpdateSequenceNum: js.UndefOr[Boolean] = js.undefined,
+    includeUpdated: js.UndefOr[Boolean] = js.undefined
+  ): IncludeAttributes = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeAttributes)) __obj.updateDynamic("includeAttributes")(includeAttributes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeContentLength)) __obj.updateDynamic("includeContentLength")(includeContentLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeCreated)) __obj.updateDynamic("includeCreated")(includeCreated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeDeleted)) __obj.updateDynamic("includeDeleted")(includeDeleted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeLargestResourceMime)) __obj.updateDynamic("includeLargestResourceMime")(includeLargestResourceMime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeLargestResourceSize)) __obj.updateDynamic("includeLargestResourceSize")(includeLargestResourceSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeNotebookGuid)) __obj.updateDynamic("includeNotebookGuid")(includeNotebookGuid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeTagGuids)) __obj.updateDynamic("includeTagGuids")(includeTagGuids.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeTitle)) __obj.updateDynamic("includeTitle")(includeTitle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeUpdateSequenceNum)) __obj.updateDynamic("includeUpdateSequenceNum")(includeUpdateSequenceNum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeUpdated)) __obj.updateDynamic("includeUpdated")(includeUpdated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncludeAttributes]
   }
-  @scala.inline
-  implicit class IncludeAttributesOps[Self <: IncludeAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeAttributes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeContentLength(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeContentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeCreated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCreated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCreated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeDeleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDeleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDeleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeLargestResourceMime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeLargestResourceMime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeLargestResourceMime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeLargestResourceMime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeLargestResourceSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeLargestResourceSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeLargestResourceSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeLargestResourceSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeNotebookGuid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeNotebookGuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeNotebookGuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeNotebookGuid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeTagGuids(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeTagGuids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeTagGuids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeTagGuids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeTitle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeUpdateSequenceNum(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeUpdateSequenceNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeUpdateSequenceNum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeUpdateSequenceNum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeUpdated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeUpdated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeUpdated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

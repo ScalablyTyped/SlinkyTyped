@@ -30,77 +30,20 @@ trait GetBulkPublishDetailsResponse extends js.Object {
 
 object GetBulkPublishDetailsResponse {
   @scala.inline
-  def apply(): GetBulkPublishDetailsResponse = {
+  def apply(
+    BulkPublishCompleteTime: js.Date = null,
+    BulkPublishStartTime: js.Date = null,
+    BulkPublishStatus: BulkPublishStatus = null,
+    FailureMessage: String = null,
+    IdentityPoolId: IdentityPoolId = null
+  ): GetBulkPublishDetailsResponse = {
     val __obj = js.Dynamic.literal()
+    if (BulkPublishCompleteTime != null) __obj.updateDynamic("BulkPublishCompleteTime")(BulkPublishCompleteTime.asInstanceOf[js.Any])
+    if (BulkPublishStartTime != null) __obj.updateDynamic("BulkPublishStartTime")(BulkPublishStartTime.asInstanceOf[js.Any])
+    if (BulkPublishStatus != null) __obj.updateDynamic("BulkPublishStatus")(BulkPublishStatus.asInstanceOf[js.Any])
+    if (FailureMessage != null) __obj.updateDynamic("FailureMessage")(FailureMessage.asInstanceOf[js.Any])
+    if (IdentityPoolId != null) __obj.updateDynamic("IdentityPoolId")(IdentityPoolId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBulkPublishDetailsResponse]
   }
-  @scala.inline
-  implicit class GetBulkPublishDetailsResponseOps[Self <: GetBulkPublishDetailsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBulkPublishCompleteTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkPublishCompleteTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBulkPublishCompleteTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkPublishCompleteTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBulkPublishStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkPublishStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBulkPublishStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkPublishStartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBulkPublishStatus(value: BulkPublishStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkPublishStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBulkPublishStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkPublishStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentityPoolId(value: IdentityPoolId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityPoolId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

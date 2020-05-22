@@ -5,324 +5,86 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IntercomSettings extends js.Object {
-  var action_color: js.UndefOr[String] = js.native
-  var alignment: js.UndefOr[String] = js.native
+  var action_color: js.UndefOr[String] = js.undefined
+  var alignment: js.UndefOr[String] = js.undefined
   // Messenger attributes
-  var app_id: js.UndefOr[String] = js.native
-  var background_color: js.UndefOr[String] = js.native
-  var company: js.UndefOr[Createdat] = js.native
-  var created_at: js.UndefOr[Double] = js.native
-  var custom_launcher_selector: js.UndefOr[String] = js.native
+  var app_id: js.UndefOr[String] = js.undefined
+  var background_color: js.UndefOr[String] = js.undefined
+  var company: js.UndefOr[Createdat] = js.undefined
+  var created_at: js.UndefOr[Double] = js.undefined
+  var custom_launcher_selector: js.UndefOr[String] = js.undefined
   // Data attributes
-  var email: js.UndefOr[String] = js.native
-  var hide_default_launcher: js.UndefOr[Boolean] = js.native
-  var horizontal_padding: js.UndefOr[Double] = js.native
-  var language_override: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var phone: js.UndefOr[String] = js.native
-  var session_duration: js.UndefOr[Double] = js.native
-  var unsubscribed_from_emails: js.UndefOr[Boolean] = js.native
-  var user_hash: js.UndefOr[String] = js.native
-  var user_id: js.UndefOr[String] = js.native
-  var utm_campaign: js.UndefOr[String] = js.native
-  var utm_content: js.UndefOr[String] = js.native
-  var utm_medium: js.UndefOr[String] = js.native
-  var utm_source: js.UndefOr[String] = js.native
-  var utm_term: js.UndefOr[String] = js.native
-  var vertical_padding: js.UndefOr[Double] = js.native
+  var email: js.UndefOr[String] = js.undefined
+  var hide_default_launcher: js.UndefOr[Boolean] = js.undefined
+  var horizontal_padding: js.UndefOr[Double] = js.undefined
+  var language_override: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var phone: js.UndefOr[String] = js.undefined
+  var session_duration: js.UndefOr[Double] = js.undefined
+  var unsubscribed_from_emails: js.UndefOr[Boolean] = js.undefined
+  var user_hash: js.UndefOr[String] = js.undefined
+  var user_id: js.UndefOr[String] = js.undefined
+  var utm_campaign: js.UndefOr[String] = js.undefined
+  var utm_content: js.UndefOr[String] = js.undefined
+  var utm_medium: js.UndefOr[String] = js.undefined
+  var utm_source: js.UndefOr[String] = js.undefined
+  var utm_term: js.UndefOr[String] = js.undefined
+  var vertical_padding: js.UndefOr[Double] = js.undefined
 }
 
 object IntercomSettings {
   @scala.inline
-  def apply(): IntercomSettings = {
+  def apply(
+    action_color: String = null,
+    alignment: String = null,
+    app_id: String = null,
+    background_color: String = null,
+    company: Createdat = null,
+    created_at: js.UndefOr[Double] = js.undefined,
+    custom_launcher_selector: String = null,
+    email: String = null,
+    hide_default_launcher: js.UndefOr[Boolean] = js.undefined,
+    horizontal_padding: js.UndefOr[Double] = js.undefined,
+    language_override: String = null,
+    name: String = null,
+    phone: String = null,
+    session_duration: js.UndefOr[Double] = js.undefined,
+    unsubscribed_from_emails: js.UndefOr[Boolean] = js.undefined,
+    user_hash: String = null,
+    user_id: String = null,
+    utm_campaign: String = null,
+    utm_content: String = null,
+    utm_medium: String = null,
+    utm_source: String = null,
+    utm_term: String = null,
+    vertical_padding: js.UndefOr[Double] = js.undefined
+  ): IntercomSettings = {
     val __obj = js.Dynamic.literal()
+    if (action_color != null) __obj.updateDynamic("action_color")(action_color.asInstanceOf[js.Any])
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (app_id != null) __obj.updateDynamic("app_id")(app_id.asInstanceOf[js.Any])
+    if (background_color != null) __obj.updateDynamic("background_color")(background_color.asInstanceOf[js.Any])
+    if (company != null) __obj.updateDynamic("company")(company.asInstanceOf[js.Any])
+    if (!js.isUndefined(created_at)) __obj.updateDynamic("created_at")(created_at.get.asInstanceOf[js.Any])
+    if (custom_launcher_selector != null) __obj.updateDynamic("custom_launcher_selector")(custom_launcher_selector.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (!js.isUndefined(hide_default_launcher)) __obj.updateDynamic("hide_default_launcher")(hide_default_launcher.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontal_padding)) __obj.updateDynamic("horizontal_padding")(horizontal_padding.get.asInstanceOf[js.Any])
+    if (language_override != null) __obj.updateDynamic("language_override")(language_override.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (phone != null) __obj.updateDynamic("phone")(phone.asInstanceOf[js.Any])
+    if (!js.isUndefined(session_duration)) __obj.updateDynamic("session_duration")(session_duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unsubscribed_from_emails)) __obj.updateDynamic("unsubscribed_from_emails")(unsubscribed_from_emails.get.asInstanceOf[js.Any])
+    if (user_hash != null) __obj.updateDynamic("user_hash")(user_hash.asInstanceOf[js.Any])
+    if (user_id != null) __obj.updateDynamic("user_id")(user_id.asInstanceOf[js.Any])
+    if (utm_campaign != null) __obj.updateDynamic("utm_campaign")(utm_campaign.asInstanceOf[js.Any])
+    if (utm_content != null) __obj.updateDynamic("utm_content")(utm_content.asInstanceOf[js.Any])
+    if (utm_medium != null) __obj.updateDynamic("utm_medium")(utm_medium.asInstanceOf[js.Any])
+    if (utm_source != null) __obj.updateDynamic("utm_source")(utm_source.asInstanceOf[js.Any])
+    if (utm_term != null) __obj.updateDynamic("utm_term")(utm_term.asInstanceOf[js.Any])
+    if (!js.isUndefined(vertical_padding)) __obj.updateDynamic("vertical_padding")(vertical_padding.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntercomSettings]
   }
-  @scala.inline
-  implicit class IntercomSettingsOps[Self <: IntercomSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction_color(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action_color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction_color: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action_color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApp_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApp_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground_color(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background_color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground_color: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background_color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompany(value: Createdat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompany: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom_launcher_selector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_launcher_selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom_launcher_selector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_launcher_selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHide_default_launcher(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide_default_launcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHide_default_launcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide_default_launcher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontal_padding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal_padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontal_padding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal_padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage_override(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language_override")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage_override: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language_override")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSession_duration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session_duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession_duration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session_duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnsubscribed_from_emails(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribed_from_emails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnsubscribed_from_emails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribed_from_emails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_hash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtm_campaign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_campaign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtm_campaign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_campaign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtm_content(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtm_content: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtm_medium(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_medium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtm_medium: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_medium")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtm_source(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtm_source: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtm_term(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_term")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtm_term: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utm_term")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertical_padding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical_padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertical_padding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical_padding")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

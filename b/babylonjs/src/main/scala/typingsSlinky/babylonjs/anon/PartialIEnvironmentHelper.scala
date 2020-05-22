@@ -8,374 +8,96 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<babylonjs.babylonjs/Helpers/environmentHelper.IEnvironmentHelperOptions> */
-@js.native
 trait PartialIEnvironmentHelper extends js.Object {
-  var backgroundYRotation: js.UndefOr[Double] = js.native
-  var cameraContrast: js.UndefOr[Double] = js.native
-  var cameraExposure: js.UndefOr[Double] = js.native
-  var createGround: js.UndefOr[Boolean] = js.native
-  var createSkybox: js.UndefOr[Boolean] = js.native
-  var enableGroundMirror: js.UndefOr[Boolean] = js.native
-  var enableGroundShadow: js.UndefOr[Boolean] = js.native
-  var environmentTexture: js.UndefOr[String | BaseTexture] = js.native
-  var groundColor: js.UndefOr[Color3] = js.native
-  var groundMirrorAmount: js.UndefOr[Double] = js.native
-  var groundMirrorBlurKernel: js.UndefOr[Double] = js.native
-  var groundMirrorFallOffDistance: js.UndefOr[Double] = js.native
-  var groundMirrorFresnelWeight: js.UndefOr[Double] = js.native
-  var groundMirrorSizeRatio: js.UndefOr[Double] = js.native
-  var groundMirrorTextureType: js.UndefOr[Double] = js.native
-  var groundOpacity: js.UndefOr[Double] = js.native
-  var groundShadowLevel: js.UndefOr[Double] = js.native
-  var groundSize: js.UndefOr[Double] = js.native
-  var groundTexture: js.UndefOr[String | BaseTexture] = js.native
-  var groundYBias: js.UndefOr[Double] = js.native
-  var rootPosition: js.UndefOr[Vector3] = js.native
-  var setupImageProcessing: js.UndefOr[Boolean] = js.native
-  var sizeAuto: js.UndefOr[Boolean] = js.native
-  var skyboxColor: js.UndefOr[Color3] = js.native
-  var skyboxSize: js.UndefOr[Double] = js.native
-  var skyboxTexture: js.UndefOr[String | BaseTexture] = js.native
-  var toneMappingEnabled: js.UndefOr[Boolean] = js.native
+  var backgroundYRotation: js.UndefOr[Double] = js.undefined
+  var cameraContrast: js.UndefOr[Double] = js.undefined
+  var cameraExposure: js.UndefOr[Double] = js.undefined
+  var createGround: js.UndefOr[Boolean] = js.undefined
+  var createSkybox: js.UndefOr[Boolean] = js.undefined
+  var enableGroundMirror: js.UndefOr[Boolean] = js.undefined
+  var enableGroundShadow: js.UndefOr[Boolean] = js.undefined
+  var environmentTexture: js.UndefOr[String | BaseTexture] = js.undefined
+  var groundColor: js.UndefOr[Color3] = js.undefined
+  var groundMirrorAmount: js.UndefOr[Double] = js.undefined
+  var groundMirrorBlurKernel: js.UndefOr[Double] = js.undefined
+  var groundMirrorFallOffDistance: js.UndefOr[Double] = js.undefined
+  var groundMirrorFresnelWeight: js.UndefOr[Double] = js.undefined
+  var groundMirrorSizeRatio: js.UndefOr[Double] = js.undefined
+  var groundMirrorTextureType: js.UndefOr[Double] = js.undefined
+  var groundOpacity: js.UndefOr[Double] = js.undefined
+  var groundShadowLevel: js.UndefOr[Double] = js.undefined
+  var groundSize: js.UndefOr[Double] = js.undefined
+  var groundTexture: js.UndefOr[String | BaseTexture] = js.undefined
+  var groundYBias: js.UndefOr[Double] = js.undefined
+  var rootPosition: js.UndefOr[Vector3] = js.undefined
+  var setupImageProcessing: js.UndefOr[Boolean] = js.undefined
+  var sizeAuto: js.UndefOr[Boolean] = js.undefined
+  var skyboxColor: js.UndefOr[Color3] = js.undefined
+  var skyboxSize: js.UndefOr[Double] = js.undefined
+  var skyboxTexture: js.UndefOr[String | BaseTexture] = js.undefined
+  var toneMappingEnabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialIEnvironmentHelper {
   @scala.inline
-  def apply(): PartialIEnvironmentHelper = {
+  def apply(
+    backgroundYRotation: js.UndefOr[Double] = js.undefined,
+    cameraContrast: js.UndefOr[Double] = js.undefined,
+    cameraExposure: js.UndefOr[Double] = js.undefined,
+    createGround: js.UndefOr[Boolean] = js.undefined,
+    createSkybox: js.UndefOr[Boolean] = js.undefined,
+    enableGroundMirror: js.UndefOr[Boolean] = js.undefined,
+    enableGroundShadow: js.UndefOr[Boolean] = js.undefined,
+    environmentTexture: String | BaseTexture = null,
+    groundColor: Color3 = null,
+    groundMirrorAmount: js.UndefOr[Double] = js.undefined,
+    groundMirrorBlurKernel: js.UndefOr[Double] = js.undefined,
+    groundMirrorFallOffDistance: js.UndefOr[Double] = js.undefined,
+    groundMirrorFresnelWeight: js.UndefOr[Double] = js.undefined,
+    groundMirrorSizeRatio: js.UndefOr[Double] = js.undefined,
+    groundMirrorTextureType: js.UndefOr[Double] = js.undefined,
+    groundOpacity: js.UndefOr[Double] = js.undefined,
+    groundShadowLevel: js.UndefOr[Double] = js.undefined,
+    groundSize: js.UndefOr[Double] = js.undefined,
+    groundTexture: String | BaseTexture = null,
+    groundYBias: js.UndefOr[Double] = js.undefined,
+    rootPosition: Vector3 = null,
+    setupImageProcessing: js.UndefOr[Boolean] = js.undefined,
+    sizeAuto: js.UndefOr[Boolean] = js.undefined,
+    skyboxColor: Color3 = null,
+    skyboxSize: js.UndefOr[Double] = js.undefined,
+    skyboxTexture: String | BaseTexture = null,
+    toneMappingEnabled: js.UndefOr[Boolean] = js.undefined
+  ): PartialIEnvironmentHelper = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(backgroundYRotation)) __obj.updateDynamic("backgroundYRotation")(backgroundYRotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cameraContrast)) __obj.updateDynamic("cameraContrast")(cameraContrast.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cameraExposure)) __obj.updateDynamic("cameraExposure")(cameraExposure.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(createGround)) __obj.updateDynamic("createGround")(createGround.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(createSkybox)) __obj.updateDynamic("createSkybox")(createSkybox.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableGroundMirror)) __obj.updateDynamic("enableGroundMirror")(enableGroundMirror.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableGroundShadow)) __obj.updateDynamic("enableGroundShadow")(enableGroundShadow.get.asInstanceOf[js.Any])
+    if (environmentTexture != null) __obj.updateDynamic("environmentTexture")(environmentTexture.asInstanceOf[js.Any])
+    if (groundColor != null) __obj.updateDynamic("groundColor")(groundColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundMirrorAmount)) __obj.updateDynamic("groundMirrorAmount")(groundMirrorAmount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundMirrorBlurKernel)) __obj.updateDynamic("groundMirrorBlurKernel")(groundMirrorBlurKernel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundMirrorFallOffDistance)) __obj.updateDynamic("groundMirrorFallOffDistance")(groundMirrorFallOffDistance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundMirrorFresnelWeight)) __obj.updateDynamic("groundMirrorFresnelWeight")(groundMirrorFresnelWeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundMirrorSizeRatio)) __obj.updateDynamic("groundMirrorSizeRatio")(groundMirrorSizeRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundMirrorTextureType)) __obj.updateDynamic("groundMirrorTextureType")(groundMirrorTextureType.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundOpacity)) __obj.updateDynamic("groundOpacity")(groundOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundShadowLevel)) __obj.updateDynamic("groundShadowLevel")(groundShadowLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundSize)) __obj.updateDynamic("groundSize")(groundSize.get.asInstanceOf[js.Any])
+    if (groundTexture != null) __obj.updateDynamic("groundTexture")(groundTexture.asInstanceOf[js.Any])
+    if (!js.isUndefined(groundYBias)) __obj.updateDynamic("groundYBias")(groundYBias.get.asInstanceOf[js.Any])
+    if (rootPosition != null) __obj.updateDynamic("rootPosition")(rootPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(setupImageProcessing)) __obj.updateDynamic("setupImageProcessing")(setupImageProcessing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeAuto)) __obj.updateDynamic("sizeAuto")(sizeAuto.get.asInstanceOf[js.Any])
+    if (skyboxColor != null) __obj.updateDynamic("skyboxColor")(skyboxColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(skyboxSize)) __obj.updateDynamic("skyboxSize")(skyboxSize.get.asInstanceOf[js.Any])
+    if (skyboxTexture != null) __obj.updateDynamic("skyboxTexture")(skyboxTexture.asInstanceOf[js.Any])
+    if (!js.isUndefined(toneMappingEnabled)) __obj.updateDynamic("toneMappingEnabled")(toneMappingEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIEnvironmentHelper]
   }
-  @scala.inline
-  implicit class PartialIEnvironmentHelperOps[Self <: PartialIEnvironmentHelper] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundYRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundYRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundYRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundYRotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCameraContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraContrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCameraContrast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraContrast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCameraExposure(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraExposure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCameraExposure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraExposure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateGround(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createGround")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateGround: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createGround")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateSkybox(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSkybox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateSkybox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSkybox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableGroundMirror(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroundMirror")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableGroundMirror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroundMirror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableGroundShadow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroundShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableGroundShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroundShadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentTexture(value: String | BaseTexture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentTexture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentTexture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentTexture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundColor(value: Color3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundMirrorAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorAmount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorBlurKernel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorBlurKernel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundMirrorBlurKernel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorBlurKernel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorFallOffDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorFallOffDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundMirrorFallOffDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorFallOffDistance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorFresnelWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorFresnelWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundMirrorFresnelWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorFresnelWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorSizeRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorSizeRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundMirrorSizeRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorSizeRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorTextureType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorTextureType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundMirrorTextureType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorTextureType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundShadowLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundShadowLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundShadowLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundShadowLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundTexture(value: String | BaseTexture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundTexture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundTexture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundTexture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundYBias(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundYBias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundYBias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundYBias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootPosition(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetupImageProcessing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupImageProcessing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetupImageProcessing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupImageProcessing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeAuto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeAuto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeAuto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkyboxColor(value: Color3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkyboxColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkyboxSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkyboxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkyboxTexture(value: String | BaseTexture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxTexture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkyboxTexture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxTexture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToneMappingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toneMappingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToneMappingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toneMappingEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

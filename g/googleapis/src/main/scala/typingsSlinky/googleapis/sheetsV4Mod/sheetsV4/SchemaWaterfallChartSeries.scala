@@ -41,89 +41,22 @@ trait SchemaWaterfallChartSeries extends js.Object {
 
 object SchemaWaterfallChartSeries {
   @scala.inline
-  def apply(): SchemaWaterfallChartSeries = {
+  def apply(
+    customSubtotals: js.Array[SchemaWaterfallChartCustomSubtotal] = null,
+    data: SchemaChartData = null,
+    hideTrailingSubtotal: js.UndefOr[Boolean] = js.undefined,
+    negativeColumnsStyle: SchemaWaterfallChartColumnStyle = null,
+    positiveColumnsStyle: SchemaWaterfallChartColumnStyle = null,
+    subtotalColumnsStyle: SchemaWaterfallChartColumnStyle = null
+  ): SchemaWaterfallChartSeries = {
     val __obj = js.Dynamic.literal()
+    if (customSubtotals != null) __obj.updateDynamic("customSubtotals")(customSubtotals.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideTrailingSubtotal)) __obj.updateDynamic("hideTrailingSubtotal")(hideTrailingSubtotal.get.asInstanceOf[js.Any])
+    if (negativeColumnsStyle != null) __obj.updateDynamic("negativeColumnsStyle")(negativeColumnsStyle.asInstanceOf[js.Any])
+    if (positiveColumnsStyle != null) __obj.updateDynamic("positiveColumnsStyle")(positiveColumnsStyle.asInstanceOf[js.Any])
+    if (subtotalColumnsStyle != null) __obj.updateDynamic("subtotalColumnsStyle")(subtotalColumnsStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWaterfallChartSeries]
   }
-  @scala.inline
-  implicit class SchemaWaterfallChartSeriesOps[Self <: SchemaWaterfallChartSeries] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomSubtotals(value: js.Array[SchemaWaterfallChartCustomSubtotal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSubtotals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSubtotals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSubtotals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: SchemaChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideTrailingSubtotal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTrailingSubtotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideTrailingSubtotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTrailingSubtotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegativeColumnsStyle(value: SchemaWaterfallChartColumnStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeColumnsStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegativeColumnsStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeColumnsStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositiveColumnsStyle(value: SchemaWaterfallChartColumnStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positiveColumnsStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositiveColumnsStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positiveColumnsStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtotalColumnsStyle(value: SchemaWaterfallChartColumnStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtotalColumnsStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtotalColumnsStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtotalColumnsStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

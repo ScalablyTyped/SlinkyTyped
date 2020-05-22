@@ -1,6 +1,5 @@
 package typingsSlinky.expressValidator.schemaMod
 
-import typingsSlinky.expressValidator.anon.`0`
 import typingsSlinky.expressValidator.expressValidatorStrings.blacklist
 import typingsSlinky.expressValidator.expressValidatorStrings.customSanitizer
 import typingsSlinky.expressValidator.expressValidatorStrings.escape
@@ -25,11 +24,4 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.expressValidator.anon.`0`[K]
 */
 trait SanitizerSchemaOptions[K /* <: /* keyof express-validator.express-validator/src/chain/sanitizers.Sanitizers<any> */ customSanitizer | blacklist | escape | unescape | ltrim | normalizeEmail | rtrim | stripLow | toArray | toBoolean | toDate | toFloat | toInt | trim | whitelist */] extends js.Object
-
-object SanitizerSchemaOptions {
-  @scala.inline
-  def `true`[K]: typingsSlinky.expressValidator.expressValidatorBooleans.`true` = true.asInstanceOf[typingsSlinky.expressValidator.expressValidatorBooleans.`true`]
-  @scala.inline
-  implicit def apply[K](value: `0`[K]): SanitizerSchemaOptions[K] = value.asInstanceOf[SanitizerSchemaOptions[K]]
-}
 

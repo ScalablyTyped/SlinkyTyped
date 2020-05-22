@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OSNotificationOpenedResult extends js.Object {
-  var action: ActionID = js.native
-  var notification: OSNotification = js.native
+  var action: ActionID
+  var notification: OSNotification
 }
 
 object OSNotificationOpenedResult {
@@ -17,25 +16,5 @@ object OSNotificationOpenedResult {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], notification = notification.asInstanceOf[js.Any])
     __obj.asInstanceOf[OSNotificationOpenedResult]
   }
-  @scala.inline
-  implicit class OSNotificationOpenedResultOps[Self <: OSNotificationOpenedResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: ActionID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotification(value: OSNotification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

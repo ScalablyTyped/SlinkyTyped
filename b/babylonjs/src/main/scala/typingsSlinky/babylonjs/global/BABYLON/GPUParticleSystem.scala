@@ -24,6 +24,11 @@ class GPUParticleSystem protected ()
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     isAnimationSheetEnabled: Boolean
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

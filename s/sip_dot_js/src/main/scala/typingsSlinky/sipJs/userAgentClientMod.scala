@@ -3,6 +3,7 @@ package typingsSlinky.sipJs
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.sipJs.coreExceptionsMod.TransportError
 import typingsSlinky.sipJs.coreTransportMod.Transport
+import typingsSlinky.sipJs.dialogsMod.Dialog
 import typingsSlinky.sipJs.logMod.Logger
 import typingsSlinky.sipJs.logMod.LoggerFactory
 import typingsSlinky.sipJs.messagesMod.IncomingResponseMessage
@@ -63,10 +64,12 @@ object userAgentClientMod extends js.Object {
       * FIXME: This "guard for and retry the request with credentials"
       * implementation is not complete and at best minimally passable.
       * @param response - The incoming response to guard.
+      * @param dialog - If defined, the dialog within which the response was received.
       * @returns True if the program execution is to continue in the branch in question.
       *          Otherwise the request is retried with credentials and current request processing must stop.
       */
     /* protected */ def authenticationGuard(message: IncomingResponseMessage): Boolean = js.native
+    /* protected */ def authenticationGuard(message: IncomingResponseMessage, dialog: Dialog): Boolean = js.native
     /**
       * 8.1.3.1 Transaction Layer Errors
       * In some cases, the response returned by the transaction layer will

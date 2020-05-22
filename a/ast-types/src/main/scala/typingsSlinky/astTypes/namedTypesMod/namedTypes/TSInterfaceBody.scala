@@ -16,17 +16,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
-@js.native
 trait TSInterfaceBody
   extends ASTNode
      with NodeKind
      with PrintableKind {
   var body: js.Array[
     TSCallSignatureDeclarationKind | TSConstructSignatureDeclarationKind | TSIndexSignatureKind | TSMethodSignatureKind | TSPropertySignatureKind
-  ] = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSInterfaceBody = js.native
+  ]
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSInterfaceBody
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSInterfaceBody")

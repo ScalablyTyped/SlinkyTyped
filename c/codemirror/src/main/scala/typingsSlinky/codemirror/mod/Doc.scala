@@ -2,8 +2,8 @@ package typingsSlinky.codemirror.mod
 
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.codemirror.anon.Anchor
 import typingsSlinky.codemirror.anon.Bias
-import typingsSlinky.codemirror.anon.Head
 import typingsSlinky.codemirror.anon.InsertLeft
 import typingsSlinky.codemirror.anon.Redo
 import typingsSlinky.codemirror.anon.SharedHist
@@ -13,6 +13,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Doc extends js.Object {
+  /** Get the mode option **/
+  var modeOption: js.Any = js.native
   /** Expose the state object, so that the Doc.state.completionActive property is reachable*/
   var state: js.Any = js.native
   /** Adds a line widget, an element shown below a line, spanning the whole of the editor's width, and moving the lines below it downwards.
@@ -114,7 +116,7 @@ trait Doc extends js.Object {
   def linkedDoc(options: SharedHist): Doc = js.native
   /** Retrieves a list of all current selections. These will always be sorted, and never overlap (overlapping selections are merged).
     Each object in the array contains anchor and head properties referring to {line, ch} objects. */
-  def listSelections(): js.Array[Head] = js.native
+  def listSelections(): js.Array[Range] = js.native
   /** Set the editor content as 'clean', a flag that it will retain until it is edited, and which will be set again
     when such an edit is undone again. Useful to track whether the content needs to be saved. This function is deprecated
     in favor of changeGeneration, which allows multiple subsystems to track different notions of cleanness without interfering.*/
@@ -136,6 +138,9 @@ trait Doc extends js.Object {
   def replaceRange(replacement: String, from: Position): Unit = js.native
   def replaceRange(replacement: String, from: Position, to: Position): Unit = js.native
   def replaceRange(replacement: String, from: Position, to: Position, origin: String): Unit = js.native
+  def replaceRange(replacement: js.Array[String], from: Position): Unit = js.native
+  def replaceRange(replacement: js.Array[String], from: Position, to: Position): Unit = js.native
+  def replaceRange(replacement: js.Array[String], from: Position, to: Position, origin: String): Unit = js.native
   /** Replace the selection with the given string. By default, the new selection will span the inserted text.
     The optional collapse argument can be used to change this -- passing "start" or "end" will collapse the selection to the start or end of the inserted text. */
   def replaceSelection(replacement: String): Unit = js.native
@@ -170,9 +175,9 @@ trait Doc extends js.Object {
     number, it determines which selection is the primary one. When it is not given, the primary index is taken from
     the previous selection, or set to the last range if the previous selection had less ranges than the new one.
     Supports the same options as setSelection. */
-  def setSelections(ranges: js.Array[Head]): Unit = js.native
-  def setSelections(ranges: js.Array[Head], primary: Double): Unit = js.native
-  def setSelections(ranges: js.Array[Head], primary: Double, options: Bias): Unit = js.native
+  def setSelections(ranges: js.Array[Anchor]): Unit = js.native
+  def setSelections(ranges: js.Array[Anchor], primary: Double): Unit = js.native
+  def setSelections(ranges: js.Array[Anchor], primary: Double, options: Bias): Unit = js.native
   /** Set the editor content. */
   def setValue(content: String): Unit = js.native
   /** Return true if any text is selected. */

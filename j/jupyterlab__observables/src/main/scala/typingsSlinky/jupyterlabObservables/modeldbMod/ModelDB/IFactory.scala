@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
 /**
   * A factory interface for creating `IModelDB` objects.
   */
-@js.native
 trait IFactory extends js.Object {
   /**
     * Create a new `IModelDB` instance.
     */
-  def createNew(path: String): IModelDB = js.native
+  def createNew(path: String): IModelDB
 }
 
 object IFactory {
@@ -22,19 +21,5 @@ object IFactory {
     val __obj = js.Dynamic.literal(createNew = js.Any.fromFunction1(createNew))
     __obj.asInstanceOf[IFactory]
   }
-  @scala.inline
-  implicit class IFactoryOps[Self <: IFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateNew(value: String => IModelDB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createNew")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

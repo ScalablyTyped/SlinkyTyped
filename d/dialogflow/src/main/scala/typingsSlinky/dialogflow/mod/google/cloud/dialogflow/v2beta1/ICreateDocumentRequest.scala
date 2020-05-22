@@ -5,63 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a CreateDocumentRequest. */
-@js.native
 trait ICreateDocumentRequest extends js.Object {
   /** CreateDocumentRequest document */
-  var document: js.UndefOr[IDocument | Null] = js.native
+  var document: js.UndefOr[IDocument | Null] = js.undefined
   /** CreateDocumentRequest parent */
-  var parent: js.UndefOr[String | Null] = js.native
+  var parent: js.UndefOr[String | Null] = js.undefined
 }
 
 object ICreateDocumentRequest {
   @scala.inline
-  def apply(): ICreateDocumentRequest = {
+  def apply(
+    document: js.UndefOr[Null | IDocument] = js.undefined,
+    parent: js.UndefOr[Null | String] = js.undefined
+  ): ICreateDocumentRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(document)) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
+    if (!js.isUndefined(parent)) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICreateDocumentRequest]
   }
-  @scala.inline
-  implicit class ICreateDocumentRequestOps[Self <: ICreateDocumentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocument(value: IDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(null)
-        ret
-    }
-    @scala.inline
-    def withParent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(null)
-        ret
-    }
-  }
-  
 }
 

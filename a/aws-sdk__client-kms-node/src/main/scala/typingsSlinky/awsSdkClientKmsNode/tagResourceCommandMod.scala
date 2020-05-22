@@ -26,9 +26,16 @@ object tagResourceCommandMod extends js.Object {
           Readable
         ] {
     def this(input: TagResourceInput) = this()
+    /* CompleteClass */
+    override val input: TagResourceInput = js.native
     val middlewareStack: MiddlewareStack[TagResourceInput, TagResourceOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: KMSResolvedConfiguration
+    ): Handler[TagResourceInput, TagResourceOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[TagResourceInput, TagResourceOutput] = js.native
   }

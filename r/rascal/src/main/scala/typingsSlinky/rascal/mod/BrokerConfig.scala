@@ -5,114 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BrokerConfig extends js.Object {
-  var defaults: js.UndefOr[BrokerConfig] = js.native
-  var encryption: js.UndefOr[StringDictionary[Encryption]] = js.native
-  var publications: js.UndefOr[StringDictionary[PublicationConfig]] = js.native
-  var recovery: js.UndefOr[StringDictionary[Recovery | js.Array[Recovery]]] = js.native
-  var redeliveries: js.UndefOr[Redelivery] = js.native
-  var subscriptions: js.UndefOr[StringDictionary[SubscriptionConfig]] = js.native
-  var vhosts: js.UndefOr[StringDictionary[VhostConfig]] = js.native
+  var defaults: js.UndefOr[VhostConfig] = js.undefined
+  var encryption: js.UndefOr[StringDictionary[Encryption]] = js.undefined
+  var publications: js.UndefOr[StringDictionary[PublicationConfig]] = js.undefined
+  var recovery: js.UndefOr[StringDictionary[Recovery | js.Array[Recovery]]] = js.undefined
+  var redeliveries: js.UndefOr[Redelivery] = js.undefined
+  var subscriptions: js.UndefOr[StringDictionary[SubscriptionConfig]] = js.undefined
+  var vhosts: js.UndefOr[StringDictionary[VhostConfig]] = js.undefined
 }
 
 object BrokerConfig {
   @scala.inline
-  def apply(): BrokerConfig = {
+  def apply(
+    defaults: VhostConfig = null,
+    encryption: StringDictionary[Encryption] = null,
+    publications: StringDictionary[PublicationConfig] = null,
+    recovery: StringDictionary[Recovery | js.Array[Recovery]] = null,
+    redeliveries: Redelivery = null,
+    subscriptions: StringDictionary[SubscriptionConfig] = null,
+    vhosts: StringDictionary[VhostConfig] = null
+  ): BrokerConfig = {
     val __obj = js.Dynamic.literal()
+    if (defaults != null) __obj.updateDynamic("defaults")(defaults.asInstanceOf[js.Any])
+    if (encryption != null) __obj.updateDynamic("encryption")(encryption.asInstanceOf[js.Any])
+    if (publications != null) __obj.updateDynamic("publications")(publications.asInstanceOf[js.Any])
+    if (recovery != null) __obj.updateDynamic("recovery")(recovery.asInstanceOf[js.Any])
+    if (redeliveries != null) __obj.updateDynamic("redeliveries")(redeliveries.asInstanceOf[js.Any])
+    if (subscriptions != null) __obj.updateDynamic("subscriptions")(subscriptions.asInstanceOf[js.Any])
+    if (vhosts != null) __obj.updateDynamic("vhosts")(vhosts.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrokerConfig]
   }
-  @scala.inline
-  implicit class BrokerConfigOps[Self <: BrokerConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaults(value: BrokerConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryption(value: StringDictionary[Encryption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublications(value: StringDictionary[PublicationConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecovery(value: StringDictionary[Recovery | js.Array[Recovery]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recovery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecovery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recovery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedeliveries(value: Redelivery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redeliveries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedeliveries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redeliveries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscriptions(value: StringDictionary[SubscriptionConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVhosts(value: StringDictionary[VhostConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vhosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVhosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vhosts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

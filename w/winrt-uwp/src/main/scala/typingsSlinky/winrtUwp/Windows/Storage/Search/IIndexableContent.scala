@@ -7,16 +7,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents app content and properties that can be added to the ContentIndexer . */
-@js.native
 trait IIndexableContent extends js.Object {
   /** Gets or sets the identifier for the content properties in the IIndexableContent object. Changes to the actual representation of the item in the index can be made using the ContentIndexer class. */
-  var id: String = js.native
+  var id: String
   /** Gets the content properties. */
-  var properties: IMap[String, _] = js.native
+  var properties: IMap[String, _]
   /** Gets or sets a stream that provides full-text content. Changes to the actual representation of the item in the index can be made using the ContentIndexer class. */
-  var stream: IRandomAccessStream = js.native
+  var stream: IRandomAccessStream
   /** Specifies the type of content in the Stream . */
-  var streamContentType: String = js.native
+  var streamContentType: String
 }
 
 object IIndexableContent {
@@ -25,37 +24,5 @@ object IIndexableContent {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], stream = stream.asInstanceOf[js.Any], streamContentType = streamContentType.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIndexableContent]
   }
-  @scala.inline
-  implicit class IIndexableContentOps[Self <: IIndexableContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: IMap[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStream(value: IRandomAccessStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStreamContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

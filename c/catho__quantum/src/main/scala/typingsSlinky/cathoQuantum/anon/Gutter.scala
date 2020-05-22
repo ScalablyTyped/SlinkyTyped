@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Gutter extends js.Object {
-  var colors: js.UndefOr[js.Object] = js.native
-  var gutter: js.UndefOr[Double] = js.native
+  var colors: js.UndefOr[js.Object] = js.undefined
+  var gutter: js.UndefOr[Double] = js.undefined
 }
 
 object Gutter {
   @scala.inline
-  def apply(): Gutter = {
+  def apply(colors: js.Object = null, gutter: js.UndefOr[Double] = js.undefined): Gutter = {
     val __obj = js.Dynamic.literal()
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (!js.isUndefined(gutter)) __obj.updateDynamic("gutter")(gutter.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Gutter]
   }
-  @scala.inline
-  implicit class GutterOps[Self <: Gutter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColors(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGutter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGutter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

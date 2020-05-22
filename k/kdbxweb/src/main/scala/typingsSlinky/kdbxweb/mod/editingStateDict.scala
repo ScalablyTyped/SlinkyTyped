@@ -5,30 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait editingStateDict extends /* uuid */ StringDictionary[editingState] {
-  var meta: editingState = js.native
+  var meta: editingState
 }
 
 object editingStateDict {
   @scala.inline
-  def apply(meta: editingState): editingStateDict = {
+  def apply(meta: editingState, StringDictionary: /* uuid */ StringDictionary[editingState] = null): editingStateDict = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[editingStateDict]
   }
-  @scala.inline
-  implicit class editingStateDictOps[Self <: editingStateDict] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMeta(value: editingState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

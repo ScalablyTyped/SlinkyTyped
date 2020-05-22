@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddSource_ extends js.Object {
-  var homeUrl: String = js.native
-  def getProxies(options: InternalOptions): GetProxiesEventEmitter = js.native
+  var homeUrl: String
+  def getProxies(options: InternalOptions): GetProxiesEventEmitter
 }
 
 object AddSource_ {
@@ -16,25 +15,5 @@ object AddSource_ {
     val __obj = js.Dynamic.literal(getProxies = js.Any.fromFunction1(getProxies), homeUrl = homeUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddSource_]
   }
-  @scala.inline
-  implicit class AddSource_Ops[Self <: AddSource_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetProxies(value: InternalOptions => GetProxiesEventEmitter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProxies")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHomeUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("homeUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

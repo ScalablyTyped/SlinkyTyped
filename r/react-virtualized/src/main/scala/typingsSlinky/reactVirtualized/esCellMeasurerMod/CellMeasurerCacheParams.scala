@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellMeasurerCacheParams extends js.Object {
-  var defaultHeight: js.UndefOr[Double] = js.native
-  var defaultWidth: js.UndefOr[Double] = js.native
-  var fixedHeight: js.UndefOr[Boolean] = js.native
-  var fixedWidth: js.UndefOr[Boolean] = js.native
-  var keyMapper: js.UndefOr[KeyMapper] = js.native
-  var minHeight: js.UndefOr[Double] = js.native
-  var minWidth: js.UndefOr[Double] = js.native
+  var defaultHeight: js.UndefOr[Double] = js.undefined
+  var defaultWidth: js.UndefOr[Double] = js.undefined
+  var fixedHeight: js.UndefOr[Boolean] = js.undefined
+  var fixedWidth: js.UndefOr[Boolean] = js.undefined
+  var keyMapper: js.UndefOr[KeyMapper] = js.undefined
+  var minHeight: js.UndefOr[Double] = js.undefined
+  var minWidth: js.UndefOr[Double] = js.undefined
 }
 
 object CellMeasurerCacheParams {
   @scala.inline
-  def apply(): CellMeasurerCacheParams = {
+  def apply(
+    defaultHeight: js.UndefOr[Double] = js.undefined,
+    defaultWidth: js.UndefOr[Double] = js.undefined,
+    fixedHeight: js.UndefOr[Boolean] = js.undefined,
+    fixedWidth: js.UndefOr[Boolean] = js.undefined,
+    keyMapper: (/* rowIndex */ Double, /* columnIndex */ Double) => js.Any = null,
+    minHeight: js.UndefOr[Double] = js.undefined,
+    minWidth: js.UndefOr[Double] = js.undefined
+  ): CellMeasurerCacheParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(defaultHeight)) __obj.updateDynamic("defaultHeight")(defaultHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultWidth)) __obj.updateDynamic("defaultWidth")(defaultWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedHeight)) __obj.updateDynamic("fixedHeight")(fixedHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedWidth)) __obj.updateDynamic("fixedWidth")(fixedWidth.get.asInstanceOf[js.Any])
+    if (keyMapper != null) __obj.updateDynamic("keyMapper")(js.Any.fromFunction2(keyMapper))
+    if (!js.isUndefined(minHeight)) __obj.updateDynamic("minHeight")(minHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellMeasurerCacheParams]
   }
-  @scala.inline
-  implicit class CellMeasurerCacheParamsOps[Self <: CellMeasurerCacheParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyMapper(value: (/* rowIndex */ Double, /* columnIndex */ Double) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyMapper")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutKeyMapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyMapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

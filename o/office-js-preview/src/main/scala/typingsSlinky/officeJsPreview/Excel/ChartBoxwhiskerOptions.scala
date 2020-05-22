@@ -25,35 +25,35 @@ trait ChartBoxwhiskerOptions extends ClientObject {
   var context_ChartBoxwhiskerOptions: RequestContext = js.native
   /**
     *
-    * Returns or sets the quartile calculation type of a box and whisker chart. Read/Write.
+    * Specifies if the quartile calculation type of a box and whisker chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var quartileCalculation: ChartBoxQuartileCalculation | Inclusive | Exclusive = js.native
   /**
     *
-    * Specifies whether or not the inner points are shown in a box and whisker chart. Read/Write.
+    * Specifies if inner points are shown in a box and whisker chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var showInnerPoints: Boolean = js.native
   /**
     *
-    * Specifies whether or not the mean line is shown in a box and whisker chart. Read/Write.
+    * Specifies if the mean line is shown in a box and whisker chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var showMeanLine: Boolean = js.native
   /**
     *
-    * Specifies whether or not the mean marker is shown in a box and whisker chart. Read/Write.
+    * Specifies if the mean marker is shown in a box and whisker chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var showMeanMarker: Boolean = js.native
   /**
     *
-    * Specifies whether or not outlier points are shown in a box and whisker chart. Read/Write.
+    * Specifies if outlier points are shown in a box and whisker chart.
     *
     * [Api set: ExcelApi 1.9]
     */

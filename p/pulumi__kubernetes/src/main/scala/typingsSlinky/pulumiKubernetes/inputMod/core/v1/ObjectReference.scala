@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
 /**
   * ObjectReference contains enough information to let you inspect or modify the referred object.
   */
-@js.native
 trait ObjectReference extends js.Object {
   /**
     * API version of the referent.
     */
-  var apiVersion: js.UndefOr[Input[String]] = js.native
+  var apiVersion: js.UndefOr[Input[String]] = js.undefined
   /**
     * If referring to a piece of an object instead of an entire object, this string should
     * contain a valid JSON/Go field access statement, such as
@@ -23,131 +22,54 @@ trait ObjectReference extends js.Object {
     * "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to
     * have some well-defined way of referencing a part of an object.
     */
-  var fieldPath: js.UndefOr[Input[String]] = js.native
+  var fieldPath: js.UndefOr[Input[String]] = js.undefined
   /**
     * Kind of the referent. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  var kind: js.UndefOr[Input[String]] = js.native
+  var kind: js.UndefOr[Input[String]] = js.undefined
   /**
     * Name of the referent. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     */
-  var name: js.UndefOr[Input[String]] = js.native
+  var name: js.UndefOr[Input[String]] = js.undefined
   /**
     * Namespace of the referent. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
     */
-  var namespace: js.UndefOr[Input[String]] = js.native
+  var namespace: js.UndefOr[Input[String]] = js.undefined
   /**
     * Specific resourceVersion to which this reference is made, if any. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
     */
-  var resourceVersion: js.UndefOr[Input[String]] = js.native
+  var resourceVersion: js.UndefOr[Input[String]] = js.undefined
   /**
     * UID of the referent. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
     */
-  var uid: js.UndefOr[Input[String]] = js.native
+  var uid: js.UndefOr[Input[String]] = js.undefined
 }
 
 object ObjectReference {
   @scala.inline
-  def apply(): ObjectReference = {
+  def apply(
+    apiVersion: Input[String] = null,
+    fieldPath: Input[String] = null,
+    kind: Input[String] = null,
+    name: Input[String] = null,
+    namespace: Input[String] = null,
+    resourceVersion: Input[String] = null,
+    uid: Input[String] = null
+  ): ObjectReference = {
     val __obj = js.Dynamic.literal()
+    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+    if (fieldPath != null) __obj.updateDynamic("fieldPath")(fieldPath.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (resourceVersion != null) __obj.updateDynamic("resourceVersion")(resourceVersion.asInstanceOf[js.Any])
+    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectReference]
   }
-  @scala.inline
-  implicit class ObjectReferenceOps[Self <: ObjectReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldPath(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

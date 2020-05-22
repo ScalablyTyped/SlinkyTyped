@@ -17,29 +17,10 @@ trait SchemaImportSshPublicKeyResponse extends js.Object {
 
 object SchemaImportSshPublicKeyResponse {
   @scala.inline
-  def apply(): SchemaImportSshPublicKeyResponse = {
+  def apply(loginProfile: SchemaLoginProfile = null): SchemaImportSshPublicKeyResponse = {
     val __obj = js.Dynamic.literal()
+    if (loginProfile != null) __obj.updateDynamic("loginProfile")(loginProfile.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImportSshPublicKeyResponse]
   }
-  @scala.inline
-  implicit class SchemaImportSshPublicKeyResponseOps[Self <: SchemaImportSshPublicKeyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoginProfile(value: SchemaLoginProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loginProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoginProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loginProfile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

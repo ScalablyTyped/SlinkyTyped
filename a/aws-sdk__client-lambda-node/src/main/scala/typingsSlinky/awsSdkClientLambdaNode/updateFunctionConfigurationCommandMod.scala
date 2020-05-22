@@ -26,9 +26,16 @@ object updateFunctionConfigurationCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UpdateFunctionConfigurationInput) = this()
+    /* CompleteClass */
+    override val input: UpdateFunctionConfigurationInput = js.native
     val middlewareStack: MiddlewareStack[UpdateFunctionConfigurationInput, UpdateFunctionConfigurationOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: LambdaResolvedConfiguration
+    ): Handler[UpdateFunctionConfigurationInput, UpdateFunctionConfigurationOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[UpdateFunctionConfigurationInput, UpdateFunctionConfigurationOutput] = js.native
   }

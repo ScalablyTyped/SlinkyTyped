@@ -9,127 +9,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GroupOptions extends js.Object {
-  var color1: js.UndefOr[String] = js.native
-  var color2: js.UndefOr[String] = js.native
-  var color3: js.UndefOr[String] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var mode: js.UndefOr[`1` | `3` | `4`] = js.native
-  var no_cover: js.UndefOr[NumericBoolean] = js.native
-  var wide: js.UndefOr[NumericBoolean] = js.native
-  var width: js.UndefOr[Double | auto] = js.native
+  var color1: js.UndefOr[String] = js.undefined
+  var color2: js.UndefOr[String] = js.undefined
+  var color3: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var mode: js.UndefOr[`1` | `3` | `4`] = js.undefined
+  var no_cover: js.UndefOr[NumericBoolean] = js.undefined
+  var wide: js.UndefOr[NumericBoolean] = js.undefined
+  var width: js.UndefOr[Double | auto] = js.undefined
 }
 
 object GroupOptions {
   @scala.inline
-  def apply(): GroupOptions = {
+  def apply(
+    color1: String = null,
+    color2: String = null,
+    color3: String = null,
+    height: js.UndefOr[Double] = js.undefined,
+    mode: `1` | `3` | `4` = null,
+    no_cover: NumericBoolean = null,
+    wide: NumericBoolean = null,
+    width: Double | auto = null
+  ): GroupOptions = {
     val __obj = js.Dynamic.literal()
+    if (color1 != null) __obj.updateDynamic("color1")(color1.asInstanceOf[js.Any])
+    if (color2 != null) __obj.updateDynamic("color2")(color2.asInstanceOf[js.Any])
+    if (color3 != null) __obj.updateDynamic("color3")(color3.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (no_cover != null) __obj.updateDynamic("no_cover")(no_cover.asInstanceOf[js.Any])
+    if (wide != null) __obj.updateDynamic("wide")(wide.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupOptions]
   }
-  @scala.inline
-  implicit class GroupOptionsOps[Self <: GroupOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor3(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: `1` | `3` | `4`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNo_cover(value: NumericBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no_cover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNo_cover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no_cover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWide(value: NumericBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,41 +19,14 @@ trait ClusterOpenMonitoringPrometheus extends js.Object {
 
 object ClusterOpenMonitoringPrometheus {
   @scala.inline
-  def apply(): ClusterOpenMonitoringPrometheus = {
+  def apply(
+    jmxExporter: Input[ClusterOpenMonitoringPrometheusJmxExporter] = null,
+    nodeExporter: Input[ClusterOpenMonitoringPrometheusNodeExporter] = null
+  ): ClusterOpenMonitoringPrometheus = {
     val __obj = js.Dynamic.literal()
+    if (jmxExporter != null) __obj.updateDynamic("jmxExporter")(jmxExporter.asInstanceOf[js.Any])
+    if (nodeExporter != null) __obj.updateDynamic("nodeExporter")(nodeExporter.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterOpenMonitoringPrometheus]
   }
-  @scala.inline
-  implicit class ClusterOpenMonitoringPrometheusOps[Self <: ClusterOpenMonitoringPrometheus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJmxExporter(value: Input[ClusterOpenMonitoringPrometheusJmxExporter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jmxExporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJmxExporter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jmxExporter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeExporter(value: Input[ClusterOpenMonitoringPrometheusNodeExporter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeExporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeExporter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeExporter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

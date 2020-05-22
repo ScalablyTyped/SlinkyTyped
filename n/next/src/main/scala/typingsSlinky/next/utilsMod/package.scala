@@ -11,6 +11,9 @@ package object utilsMod {
     typingsSlinky.next.utilsMod.AppInitialProps, 
     typingsSlinky.next.utilsMod.AppPropsType[typingsSlinky.next.routerMod.NextRouter, js.Object]
   ]
+  type ComponentsEnhancer = typingsSlinky.next.anon.EnhanceApp | (typingsSlinky.next.utilsMod.Enhancer[
+    typingsSlinky.next.utilsMod.NextComponentType[typingsSlinky.next.utilsMod.NextPageContext, js.Object, js.Object]
+  ])
   type DocumentType = (typingsSlinky.next.utilsMod.NextComponentType[
     typingsSlinky.next.utilsMod.DocumentContext, 
     typingsSlinky.next.utilsMod.DocumentInitialProps, 
@@ -20,7 +23,7 @@ package object utilsMod {
   type NextApiHandler[T] = js.Function2[
     /* req */ typingsSlinky.next.utilsMod.NextApiRequest, 
     /* res */ typingsSlinky.next.utilsMod.NextApiResponse[T], 
-    scala.Unit
+    scala.Unit | js.Promise[scala.Unit]
   ]
   type NextComponentType[C /* <: typingsSlinky.next.utilsMod.BaseContext */, IP, P] = slinky.core.ReactComponentClass[P] with (typingsSlinky.next.anon.GetInitialProps[C, IP])
   type RenderPage = js.Function1[

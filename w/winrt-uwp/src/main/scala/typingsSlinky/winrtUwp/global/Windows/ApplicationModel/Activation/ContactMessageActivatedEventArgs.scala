@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Activation
 
+import typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.Contact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,27 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs")
 @js.native
 abstract class ContactMessageActivatedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs {
+  /** Gets the contact for the message. */
+  /* CompleteClass */
+  override var contact: Contact = js.native
+  /** Gets the activation type. */
+  /* CompleteClass */
+  override var kind: typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ActivationKind = js.native
+  /** Gets the execution state of the app before it was activated. */
+  /* CompleteClass */
+  override var previousExecutionState: typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ApplicationExecutionState = js.native
+  /** Gets the identifier of the service used for the message. */
+  /* CompleteClass */
+  override var serviceId: String = js.native
+  /** Gets the user identifier of the service used for the message. */
+  /* CompleteClass */
+  override var serviceUserId: String = js.native
+  /** Gets the splash screen object, which provides information about the transition from the splash screen to the activated app. */
+  /* CompleteClass */
+  override var splashScreen: typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.SplashScreen = js.native
+  /** Gets the action to be performed. */
+  /* CompleteClass */
+  override var verb: String = js.native
+}
 

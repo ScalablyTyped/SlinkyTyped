@@ -5,39 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeDefinitionClientCapabilities extends js.Object {
   /**
     * The text document client capabilities
     */
-  var textDocument: js.UndefOr[TypeDefinition] = js.native
+  var textDocument: js.UndefOr[TypeDefinition] = js.undefined
 }
 
 object TypeDefinitionClientCapabilities {
   @scala.inline
-  def apply(): TypeDefinitionClientCapabilities = {
+  def apply(textDocument: TypeDefinition = null): TypeDefinitionClientCapabilities = {
     val __obj = js.Dynamic.literal()
+    if (textDocument != null) __obj.updateDynamic("textDocument")(textDocument.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeDefinitionClientCapabilities]
   }
-  @scala.inline
-  implicit class TypeDefinitionClientCapabilitiesOps[Self <: TypeDefinitionClientCapabilities] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTextDocument(value: TypeDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDocument")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

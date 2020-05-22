@@ -9,10 +9,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfirmationOptions extends js.Object {
   /** The text for the buttons. */
-  var buttons: js.UndefOr[js.Array[String]] = js.native
+  var buttons: js.UndefOr[js.Array[String]] = js.undefined
   /**
     *  The index of the button to be used to cancel the dialog, via the `Esc` key.
     *  By default this is assigned to the first button with "cancel" or "no" as the
@@ -21,194 +20,67 @@ trait ConfirmationOptions extends js.Object {
     *
     *  This option is ignored on Windows.
     */
-  var cancelId: js.UndefOr[Double] = js.native
+  var cancelId: js.UndefOr[Double] = js.undefined
   /** Initial checked state of the checkbox. false by default. */
-  var checkboxChecked: js.UndefOr[Boolean] = js.native
+  var checkboxChecked: js.UndefOr[Boolean] = js.undefined
   /** If provided, the message box will include a checkbox with the given label. */
-  var checkboxLabel: js.UndefOr[String] = js.native
+  var checkboxLabel: js.UndefOr[String] = js.undefined
   /** The index for the button to be selected by default in the prompt. */
-  var defaultId: js.UndefOr[Double] = js.native
+  var defaultId: js.UndefOr[Double] = js.undefined
   /** Additional information regarding the message. */
-  var detail: js.UndefOr[String] = js.native
+  var detail: js.UndefOr[String] = js.undefined
   /** An Electron NativeImage to use as the prompt's icon. */
-  var icon: js.UndefOr[js.Object] = js.native
+  var icon: js.UndefOr[js.Object] = js.undefined
   /** The content of the message box. */
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String] = js.undefined
   /**
     *  On Windows, Electron will try to figure out which one of the buttons are
     *  common buttons (like `Cancel` or `Yes`), and show the others as command links
     *  in the dialog. This can make the dialog appear in the style of modern Windows
     *  apps. If you don't like this behavior, you can set noLink to true.
     */
-  var noLink: js.UndefOr[Boolean] = js.native
+  var noLink: js.UndefOr[Boolean] = js.undefined
   /**
     * Normalize the keyboard access keys across platforms.
     * Atom defaults this to true.
     */
-  var normalizeAccessKeys: js.UndefOr[Boolean] = js.native
+  var normalizeAccessKeys: js.UndefOr[Boolean] = js.undefined
   /** The title for the prompt. */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /** The type of the confirmation prompt. */
-  var `type`: js.UndefOr[none | info | error | question | warning] = js.native
+  var `type`: js.UndefOr[none | info | error | question | warning] = js.undefined
 }
 
 object ConfirmationOptions {
   @scala.inline
-  def apply(): ConfirmationOptions = {
+  def apply(
+    buttons: js.Array[String] = null,
+    cancelId: js.UndefOr[Double] = js.undefined,
+    checkboxChecked: js.UndefOr[Boolean] = js.undefined,
+    checkboxLabel: String = null,
+    defaultId: js.UndefOr[Double] = js.undefined,
+    detail: String = null,
+    icon: js.Object = null,
+    message: String = null,
+    noLink: js.UndefOr[Boolean] = js.undefined,
+    normalizeAccessKeys: js.UndefOr[Boolean] = js.undefined,
+    title: String = null,
+    `type`: none | info | error | question | warning = null
+  ): ConfirmationOptions = {
     val __obj = js.Dynamic.literal()
+    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelId)) __obj.updateDynamic("cancelId")(cancelId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(checkboxChecked)) __obj.updateDynamic("checkboxChecked")(checkboxChecked.get.asInstanceOf[js.Any])
+    if (checkboxLabel != null) __obj.updateDynamic("checkboxLabel")(checkboxLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultId)) __obj.updateDynamic("defaultId")(defaultId.get.asInstanceOf[js.Any])
+    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(noLink)) __obj.updateDynamic("noLink")(noLink.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(normalizeAccessKeys)) __obj.updateDynamic("normalizeAccessKeys")(normalizeAccessKeys.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmationOptions]
   }
-  @scala.inline
-  implicit class ConfirmationOptionsOps[Self <: ConfirmationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withButtons(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancelId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckboxChecked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckboxChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckboxLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckboxLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoLink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalizeAccessKeys(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeAccessKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalizeAccessKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeAccessKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: none | info | error | question | warning): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

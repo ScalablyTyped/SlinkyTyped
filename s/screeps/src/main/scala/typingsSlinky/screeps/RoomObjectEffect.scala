@@ -15,8 +15,14 @@ trait RoomObjectEffect extends js.Object
 
 object RoomObjectEffect {
   @scala.inline
-  implicit def apply(value: NaturalEffect): RoomObjectEffect = value.asInstanceOf[RoomObjectEffect]
+  def NaturalEffect(effect: EffectConstant, ticksRemaining: Double): RoomObjectEffect = {
+    val __obj = js.Dynamic.literal(effect = effect.asInstanceOf[js.Any], ticksRemaining = ticksRemaining.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RoomObjectEffect]
+  }
   @scala.inline
-  implicit def apply(value: PowerEffect): RoomObjectEffect = value.asInstanceOf[RoomObjectEffect]
+  def PowerEffect(effect: PowerConstant, level: Double, power: PowerConstant, ticksRemaining: Double): RoomObjectEffect = {
+    val __obj = js.Dynamic.literal(effect = effect.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], power = power.asInstanceOf[js.Any], ticksRemaining = ticksRemaining.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RoomObjectEffect]
+  }
 }
 

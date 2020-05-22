@@ -19,29 +19,10 @@ trait SchemaTeamDriveInfo extends js.Object {
 
 object SchemaTeamDriveInfo {
   @scala.inline
-  def apply(): SchemaTeamDriveInfo = {
+  def apply(teamDriveIds: js.Array[String] = null): SchemaTeamDriveInfo = {
     val __obj = js.Dynamic.literal()
+    if (teamDriveIds != null) __obj.updateDynamic("teamDriveIds")(teamDriveIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTeamDriveInfo]
   }
-  @scala.inline
-  implicit class SchemaTeamDriveInfoOps[Self <: SchemaTeamDriveInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTeamDriveIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeamDriveIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

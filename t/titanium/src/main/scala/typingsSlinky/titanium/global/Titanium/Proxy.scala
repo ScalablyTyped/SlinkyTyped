@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * The base for all Titanium objects.
-	 */
+  * The base for all Titanium objects.
+  */
 @JSGlobal("Titanium.Proxy")
 @js.native
 class Proxy ()

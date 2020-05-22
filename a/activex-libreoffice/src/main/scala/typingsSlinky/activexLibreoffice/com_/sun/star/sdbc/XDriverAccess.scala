@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdbc.XDriverManager
   * @see com.sun.star.sdbc.XDriver
   */
-@js.native
 trait XDriverAccess extends XInterface {
   /**
     * get a driver which accepts a given url.
@@ -20,7 +19,7 @@ trait XDriverAccess extends XInterface {
     * @see com.sun.star.sdbc.XDriver.acceptsURL
     * @throws SQLException if a database access error occurs.
     */
-  def getDriverByURL(url: String): XDriver = js.native
+  def getDriverByURL(url: String): XDriver
 }
 
 object XDriverAccess {
@@ -34,19 +33,5 @@ object XDriverAccess {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getDriverByURL = js.Any.fromFunction1(getDriverByURL), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDriverAccess]
   }
-  @scala.inline
-  implicit class XDriverAccessOps[Self <: XDriverAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDriverByURL(value: String => XDriver): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDriverByURL")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

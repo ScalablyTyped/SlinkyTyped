@@ -5,145 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AtlasJSONFileConfig extends js.Object {
   /**
     * The default file extension to use for the atlas json if no url is provided.
     */
-  var atlasExtension: js.UndefOr[String] = js.native
+  var atlasExtension: js.UndefOr[String] = js.undefined
   /**
     * The absolute or relative URL to load the atlas json file from. Or a well formed JSON object to use instead.
     */
-  var atlasURL: js.UndefOr[String] = js.native
+  var atlasURL: js.UndefOr[String] = js.undefined
   /**
     * Extra XHR Settings specifically for the atlas json file.
     */
-  var atlasXhrSettings: js.UndefOr[XHRSettingsObject] = js.native
+  var atlasXhrSettings: js.UndefOr[XHRSettingsObject] = js.undefined
   /**
     * The key of the file. Must be unique within both the Loader and the Texture Manager.
     */
-  var key: String = js.native
+  var key: String
   /**
     * The filename of an associated normal map. It uses the same path and url to load as the texture image.
     */
-  var normalMap: js.UndefOr[String] = js.native
+  var normalMap: js.UndefOr[String] = js.undefined
   /**
     * The default file extension to use for the image texture if no url is provided.
     */
-  var textureExtension: js.UndefOr[String] = js.native
+  var textureExtension: js.UndefOr[String] = js.undefined
   /**
     * The absolute or relative URL to load the texture image file from.
     */
-  var textureURL: js.UndefOr[String] = js.native
+  var textureURL: js.UndefOr[String] = js.undefined
   /**
     * Extra XHR Settings specifically for the texture image file.
     */
-  var textureXhrSettings: js.UndefOr[XHRSettingsObject] = js.native
+  var textureXhrSettings: js.UndefOr[XHRSettingsObject] = js.undefined
 }
 
 object AtlasJSONFileConfig {
   @scala.inline
-  def apply(key: String): AtlasJSONFileConfig = {
+  def apply(
+    key: String,
+    atlasExtension: String = null,
+    atlasURL: String = null,
+    atlasXhrSettings: XHRSettingsObject = null,
+    normalMap: String = null,
+    textureExtension: String = null,
+    textureURL: String = null,
+    textureXhrSettings: XHRSettingsObject = null
+  ): AtlasJSONFileConfig = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    if (atlasExtension != null) __obj.updateDynamic("atlasExtension")(atlasExtension.asInstanceOf[js.Any])
+    if (atlasURL != null) __obj.updateDynamic("atlasURL")(atlasURL.asInstanceOf[js.Any])
+    if (atlasXhrSettings != null) __obj.updateDynamic("atlasXhrSettings")(atlasXhrSettings.asInstanceOf[js.Any])
+    if (normalMap != null) __obj.updateDynamic("normalMap")(normalMap.asInstanceOf[js.Any])
+    if (textureExtension != null) __obj.updateDynamic("textureExtension")(textureExtension.asInstanceOf[js.Any])
+    if (textureURL != null) __obj.updateDynamic("textureURL")(textureURL.asInstanceOf[js.Any])
+    if (textureXhrSettings != null) __obj.updateDynamic("textureXhrSettings")(textureXhrSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[AtlasJSONFileConfig]
   }
-  @scala.inline
-  implicit class AtlasJSONFileConfigOps[Self <: AtlasJSONFileConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAtlasExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atlasExtension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAtlasExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atlasExtension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAtlasURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atlasURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAtlasURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atlasURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAtlasXhrSettings(value: XHRSettingsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atlasXhrSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAtlasXhrSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atlasXhrSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalMap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextureExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textureExtension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextureExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textureExtension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextureURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textureURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextureURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textureURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextureXhrSettings(value: XHRSettingsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textureXhrSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextureXhrSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textureXhrSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

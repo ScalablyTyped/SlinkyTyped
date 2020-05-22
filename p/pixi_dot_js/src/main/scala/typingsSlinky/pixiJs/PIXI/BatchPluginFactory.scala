@@ -9,6 +9,5 @@ import scala.scalajs.js.annotation._
   * @memberof PIXI
   * @hideconstructor
   */
-@js.native
 trait BatchPluginFactory extends js.Object
 

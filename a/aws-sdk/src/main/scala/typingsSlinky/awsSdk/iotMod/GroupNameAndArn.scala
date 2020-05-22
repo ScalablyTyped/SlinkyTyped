@@ -18,41 +18,11 @@ trait GroupNameAndArn extends js.Object {
 
 object GroupNameAndArn {
   @scala.inline
-  def apply(): GroupNameAndArn = {
+  def apply(groupArn: ThingGroupArn = null, groupName: ThingGroupName = null): GroupNameAndArn = {
     val __obj = js.Dynamic.literal()
+    if (groupArn != null) __obj.updateDynamic("groupArn")(groupArn.asInstanceOf[js.Any])
+    if (groupName != null) __obj.updateDynamic("groupName")(groupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupNameAndArn]
   }
-  @scala.inline
-  implicit class GroupNameAndArnOps[Self <: GroupNameAndArn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupArn(value: ThingGroupArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: ThingGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

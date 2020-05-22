@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MultiConfigInput extends ParallelExecutionInputBase {
-  var multipliers: String = js.native
+  var multipliers: String
 }
 
 object MultiConfigInput {
@@ -20,19 +19,5 @@ object MultiConfigInput {
     val __obj = js.Dynamic.literal(continueOnError = continueOnError.asInstanceOf[js.Any], maxNumberOfAgents = maxNumberOfAgents.asInstanceOf[js.Any], multipliers = multipliers.asInstanceOf[js.Any], parallelExecutionType = parallelExecutionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiConfigInput]
   }
-  @scala.inline
-  implicit class MultiConfigInputOps[Self <: MultiConfigInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMultipliers(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipliers")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

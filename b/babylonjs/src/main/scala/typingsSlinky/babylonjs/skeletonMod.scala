@@ -58,6 +58,11 @@ object skeletonMod extends js.Object {
     var _uniqueId: js.Any = js.native
     var _useTextureToStoreBoneMatrices: js.Any = js.native
     /**
+      * Array of animations
+      */
+    /* CompleteClass */
+    override var animations: Nullable[js.Array[Animation]] = js.native
+    /**
       * Gets the list of animations attached to this skeleton
       */
     @JSName("animations")

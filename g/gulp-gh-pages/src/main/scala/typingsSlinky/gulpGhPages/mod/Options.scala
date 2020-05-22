@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var branch: js.UndefOr[String] = js.native
-  var cacheDir: js.UndefOr[String] = js.native
-  var force: js.UndefOr[Boolean] = js.native
-  var message: js.UndefOr[String] = js.native
-  var origin: js.UndefOr[String] = js.native
-  var push: js.UndefOr[Boolean] = js.native
-  var remoteUrl: js.UndefOr[String] = js.native
+  var branch: js.UndefOr[String] = js.undefined
+  var cacheDir: js.UndefOr[String] = js.undefined
+  var force: js.UndefOr[Boolean] = js.undefined
+  var message: js.UndefOr[String] = js.undefined
+  var origin: js.UndefOr[String] = js.undefined
+  var push: js.UndefOr[Boolean] = js.undefined
+  var remoteUrl: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    branch: String = null,
+    cacheDir: String = null,
+    force: js.UndefOr[Boolean] = js.undefined,
+    message: String = null,
+    origin: String = null,
+    push: js.UndefOr[Boolean] = js.undefined,
+    remoteUrl: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (branch != null) __obj.updateDynamic("branch")(branch.asInstanceOf[js.Any])
+    if (cacheDir != null) __obj.updateDynamic("cacheDir")(cacheDir.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+    if (!js.isUndefined(push)) __obj.updateDynamic("push")(push.get.asInstanceOf[js.Any])
+    if (remoteUrl != null) __obj.updateDynamic("remoteUrl")(remoteUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBranch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPush(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

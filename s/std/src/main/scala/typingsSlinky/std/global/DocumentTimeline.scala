@@ -12,6 +12,8 @@ import scala.scalajs.js.annotation._
 class DocumentTimeline ()
   extends typingsSlinky.std.AnimationTimeline {
   def this(options: DocumentTimelineOptions) = this()
+  /* CompleteClass */
+  override val currentTime: Double | Null = js.native
 }
 
 @JSGlobal("DocumentTimeline")

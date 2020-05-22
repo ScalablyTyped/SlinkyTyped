@@ -18,41 +18,11 @@ trait JoinDomainOutput extends js.Object {
 
 object JoinDomainOutput {
   @scala.inline
-  def apply(): JoinDomainOutput = {
+  def apply(ActiveDirectoryStatus: ActiveDirectoryStatus = null, GatewayARN: GatewayARN = null): JoinDomainOutput = {
     val __obj = js.Dynamic.literal()
+    if (ActiveDirectoryStatus != null) __obj.updateDynamic("ActiveDirectoryStatus")(ActiveDirectoryStatus.asInstanceOf[js.Any])
+    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[JoinDomainOutput]
   }
-  @scala.inline
-  implicit class JoinDomainOutputOps[Self <: JoinDomainOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveDirectoryStatus(value: ActiveDirectoryStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectoryStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveDirectoryStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectoryStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGatewayARN(value: GatewayARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Subdivisions extends js.Object {
-  var height: js.UndefOr[Double] = js.native
-  var subdivisions: js.UndefOr[Double] = js.native
-  var subdivisionsX: js.UndefOr[Double] = js.native
-  var subdivisionsY: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
+  var subdivisions: js.UndefOr[Double] = js.undefined
+  var subdivisionsX: js.UndefOr[Double] = js.undefined
+  var subdivisionsY: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object Subdivisions {
   @scala.inline
-  def apply(): Subdivisions = {
+  def apply(
+    height: js.UndefOr[Double] = js.undefined,
+    subdivisions: js.UndefOr[Double] = js.undefined,
+    subdivisionsX: js.UndefOr[Double] = js.undefined,
+    subdivisionsY: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): Subdivisions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subdivisions)) __obj.updateDynamic("subdivisions")(subdivisions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subdivisionsX)) __obj.updateDynamic("subdivisionsX")(subdivisionsX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subdivisionsY)) __obj.updateDynamic("subdivisionsY")(subdivisionsY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Subdivisions]
   }
-  @scala.inline
-  implicit class SubdivisionsOps[Self <: Subdivisions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubdivisions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubdivisions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubdivisionsX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisionsX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubdivisionsX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisionsX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubdivisionsY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisionsY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubdivisionsY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisionsY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

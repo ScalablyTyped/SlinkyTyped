@@ -22,7 +22,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.Utilities.Utility")
 @js.native
 class Utility ()
-  extends typingsSlinky.sharepoint.SP.Utilities.Utility
+  extends typingsSlinky.sharepoint.SP.Utilities.Utility {
+  /* CompleteClass */
+  override var lAYOUTS_LATESTVERSION_RELATIVE_URL: String = js.native
+  /* CompleteClass */
+  override var lAYOUTS_LATESTVERSION_URL: String = js.native
+}
 
 /* static members */
 @JSGlobal("SP.Utilities.Utility")

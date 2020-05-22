@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * files using the keys in the Data field as the file names. Note that this is identical to a
   * secret volume source without the default mode.
   */
-@js.native
 trait SecretProjection extends js.Object {
   /**
     * If unspecified, each key-value pair in the Data field of the referenced Secret will be
@@ -21,16 +20,16 @@ trait SecretProjection extends js.Object {
     * setup will error unless it is marked optional. Paths must be relative and may not contain
     * the '..' path or start with '..'.
     */
-  val items: js.Array[KeyToPath] = js.native
+  val items: js.Array[KeyToPath]
   /**
     * Name of the referent. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     */
-  val name: String = js.native
+  val name: String
   /**
     * Specify whether the Secret or its key must be defined
     */
-  val optional: Boolean = js.native
+  val optional: Boolean
 }
 
 object SecretProjection {
@@ -39,31 +38,5 @@ object SecretProjection {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecretProjection]
   }
-  @scala.inline
-  implicit class SecretProjectionOps[Self <: SecretProjection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[KeyToPath]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

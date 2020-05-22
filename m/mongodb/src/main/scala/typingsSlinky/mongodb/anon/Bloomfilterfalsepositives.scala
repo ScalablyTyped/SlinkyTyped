@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bloomfilterfalsepositives extends js.Object {
-  var `bloom filter false positives`: Double = js.native
-  var `bloom filter hits`: Double = js.native
-  var `bloom filter misses`: Double = js.native
-  var `bloom filter pages evicted from cache`: Double = js.native
-  var `bloom filter pages read into cache`: Double = js.native
-  var `bloom filters in the LSM tree`: Double = js.native
-  var `chunks in the LSM tree`: Double = js.native
-  var `highest merge generation in the LSM tree`: Double = js.native
-  var `queries that could have benefited from a Bloom filter that did not exist`: Double = js.native
-  var `sleep for LSM checkpoint throttle`: Double = js.native
-  var `sleep for LSM merge throttle`: Double = js.native
-  var `total size of bloom filters`: Double = js.native
+  var `bloom filter false positives`: Double
+  var `bloom filter hits`: Double
+  var `bloom filter misses`: Double
+  var `bloom filter pages evicted from cache`: Double
+  var `bloom filter pages read into cache`: Double
+  var `bloom filters in the LSM tree`: Double
+  var `chunks in the LSM tree`: Double
+  var `highest merge generation in the LSM tree`: Double
+  var `queries that could have benefited from a Bloom filter that did not exist`: Double
+  var `sleep for LSM checkpoint throttle`: Double
+  var `sleep for LSM merge throttle`: Double
+  var `total size of bloom filters`: Double
 }
 
 object Bloomfilterfalsepositives {
@@ -51,85 +50,5 @@ object Bloomfilterfalsepositives {
     __obj.updateDynamic("total size of bloom filters")((`total size of bloom filters`).asInstanceOf[js.Any])
     __obj.asInstanceOf[Bloomfilterfalsepositives]
   }
-  @scala.inline
-  implicit class BloomfilterfalsepositivesOps[Self <: Bloomfilterfalsepositives] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withBloom filter false positives`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bloom filter false positives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBloom filter hits`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bloom filter hits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBloom filter misses`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bloom filter misses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBloom filter pages evicted from cache`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bloom filter pages evicted from cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBloom filter pages read into cache`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bloom filter pages read into cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBloom filters in the LSM tree`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bloom filters in the LSM tree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withChunks in the LSM tree`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunks in the LSM tree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withHighest merge generation in the LSM tree`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highest merge generation in the LSM tree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withQueries that could have benefited from a Bloom filter that did not exist`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queries that could have benefited from a Bloom filter that did not exist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSleep for LSM checkpoint throttle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleep for LSM checkpoint throttle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSleep for LSM merge throttle`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleep for LSM merge throttle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTotal size of bloom filters`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total size of bloom filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

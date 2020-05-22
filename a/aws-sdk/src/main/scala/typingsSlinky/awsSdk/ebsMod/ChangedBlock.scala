@@ -22,53 +22,16 @@ trait ChangedBlock extends js.Object {
 
 object ChangedBlock {
   @scala.inline
-  def apply(): ChangedBlock = {
+  def apply(
+    BlockIndex: js.UndefOr[BlockIndex] = js.undefined,
+    FirstBlockToken: BlockToken = null,
+    SecondBlockToken: BlockToken = null
+  ): ChangedBlock = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(BlockIndex)) __obj.updateDynamic("BlockIndex")(BlockIndex.get.asInstanceOf[js.Any])
+    if (FirstBlockToken != null) __obj.updateDynamic("FirstBlockToken")(FirstBlockToken.asInstanceOf[js.Any])
+    if (SecondBlockToken != null) __obj.updateDynamic("SecondBlockToken")(SecondBlockToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangedBlock]
   }
-  @scala.inline
-  implicit class ChangedBlockOps[Self <: ChangedBlock] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockIndex(value: BlockIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstBlockToken(value: BlockToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstBlockToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstBlockToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstBlockToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondBlockToken(value: BlockToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondBlockToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondBlockToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondBlockToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Css extends js.Object {
   /**
     * @example:
     *  /-\s(.+css)/gi
     */
-  var css: js.RegExp = js.native
+  var css: js.RegExp
   /**
     * @example:
     *  /-\s(.+js)/gi
     */
   @JSName("js")
-  var js_ : js.RegExp = js.native
+  var js_ : js.RegExp
 }
 
 object Css {
@@ -26,25 +25,5 @@ object Css {
     __obj.updateDynamic("js")(js_.asInstanceOf[js.Any])
     __obj.asInstanceOf[Css]
   }
-  @scala.inline
-  implicit class CssOps[Self <: Css] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCss(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJs_(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("js")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

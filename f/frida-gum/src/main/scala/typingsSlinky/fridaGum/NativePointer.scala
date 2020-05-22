@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NativePointer
   extends NativePointerValue
-     with NativeReturnValue {
+     with _NativeReturnValue {
   def add(v: String): NativePointer = js.native
   def add(v: Double): NativePointer = js.native
   def add(v: Int64): NativePointer = js.native

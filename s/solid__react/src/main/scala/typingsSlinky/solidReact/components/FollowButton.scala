@@ -12,7 +12,7 @@ object FollowButton {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ActivityButtonProps with HTMLAttributes[HTMLButtonElement]): `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.FollowButton] = new `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.FollowButton](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: FollowButton.type): `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.FollowButton] = new `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.FollowButton](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: ActivityButtonProps with HTMLAttributes[HTMLButtonElement]): SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.FollowButton] = new SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.FollowButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FollowButton.type): SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.FollowButton] = new SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.FollowButton](js.Array(this.component, js.Dictionary.empty))()
 }
 

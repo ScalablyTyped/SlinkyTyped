@@ -2,9 +2,9 @@ package typingsSlinky.jsrsasign.mod.KJUR
 
 import typingsSlinky.jsrsasign.anon.Aud
 import typingsSlinky.jsrsasign.anon.B64
-import typingsSlinky.jsrsasign.anon.HeaderObj
 import typingsSlinky.jsrsasign.anon.Hex
 import typingsSlinky.jsrsasign.anon.Utf8
+import typingsSlinky.jsrsasign.jsrsasign.KJUR.jws.JWS.JWSResult
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.jws.JWS.JsonWebKey
 import typingsSlinky.jsrsasign.jsrsasignNumbers.`0`
 import typingsSlinky.jsrsasign.jsrsasignNumbers.`1`
@@ -187,13 +187,11 @@ object jws extends js.Object {
       * @param o JWK object to be calculated thumbprint
       * @return Base64 URL encoded JWK thumbprint value
       * @description
-      * This method calculates JWK thmubprint for specified JWK object
-      * as described in
-      * [RFC 7638](https://tools.ietf.org/html/rfc7638).
+      * This method calculates JWK thumbprint for specified JWK object
+      * as described in [RFC 7638](https://tools.ietf.org/html/rfc7638).
       * It supports all type of "kty". (i.e. "RSA", "EC" and "oct"
       * (for symmetric key))
-      * Working sample is
-      * [here](https://kjur.github.io/jsrsasign/sample/tool_jwktp.html).
+      * Working sample is [here](https://kjur.github.io/jsrsasign/sample/tool_jwktp.html).
       * @example
       * jwk = {"kty":"RSA", "n":"0vx...", "e":"AQAB", ...};
       * thumbprint = KJUR.jws.JWS.getJWKthumbprint(jwk);
@@ -233,6 +231,7 @@ object jws extends js.Object {
       * @return 1 or 0
       */
     def isSafeJSONString(s: String): `0` | `1` = js.native
+    def isSafeJSONString(s: String, h: js.Object): `0` | `1` = js.native
     def isSafeJSONString(s: String, h: js.Object, p: String): `0` | `1` = js.native
     /**
       * parse header and payload of JWS signature
@@ -267,7 +266,7 @@ object jws extends js.Object {
       *   sigHex: "91f3cd..."
       * }
       */
-    def parse(sJWS: String): HeaderObj = js.native
+    def parse(sJWS: String): JWSResult = js.native
     /**
       * parse JWS string and set public property 'parsedJWS' dictionary.
       * @param sJWS JWS signature string to be parsed.

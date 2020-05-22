@@ -35,5 +35,17 @@ class Geopoint protected ()
     altitudeReferenceSystem: typingsSlinky.winrtUwp.Windows.Devices.Geolocation.AltitudeReferenceSystem,
     spatialReferenceId: Double
   ) = this()
+  /** The altitude reference system of the geographic point. */
+  /* CompleteClass */
+  override var altitudeReferenceSystem: typingsSlinky.winrtUwp.Windows.Devices.Geolocation.AltitudeReferenceSystem = js.native
+  /** The type of geographic shape. */
+  /* CompleteClass */
+  override var geoshapeType: typingsSlinky.winrtUwp.Windows.Devices.Geolocation.GeoshapeType = js.native
+  /** The position of a geographic point. */
+  /* CompleteClass */
+  override var position: BasicGeoposition = js.native
+  /** The spatial reference identifier for the geographic point, corresponding to a spatial reference system based on the specific ellipsoid used for either flat-earth mapping or round-earth mapping. */
+  /* CompleteClass */
+  override var spatialReferenceId: Double = js.native
 }
 

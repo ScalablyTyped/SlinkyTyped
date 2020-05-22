@@ -1,5 +1,9 @@
 package typingsSlinky.react.experimentalMod.reactAugmentingMod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.reactStrings.backwards
+import typingsSlinky.react.reactStrings.forwards
+import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +16,23 @@ trait SuspenseListProps extends js.Object
 
 object SuspenseListProps {
   @scala.inline
-  implicit def apply(value: DirectionalSuspenseListProps): SuspenseListProps = value.asInstanceOf[SuspenseListProps]
+  def DirectionalSuspenseListProps(
+    children: ReactElement | js.Iterable[ReactElement],
+    revealOrder: forwards | backwards,
+    tail: SuspenseListTailMode = null
+  ): SuspenseListProps = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], revealOrder = revealOrder.asInstanceOf[js.Any])
+    if (tail != null) __obj.updateDynamic("tail")(tail.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SuspenseListProps]
+  }
   @scala.inline
-  implicit def apply(value: NonDirectionalSuspenseListProps): SuspenseListProps = value.asInstanceOf[SuspenseListProps]
+  def NonDirectionalSuspenseListProps(
+    children: ReactElement | js.Iterable[ReactElement],
+    revealOrder: Exclude[SuspenseListRevealOrder, forwards | backwards] = null
+  ): SuspenseListProps = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    if (revealOrder != null) __obj.updateDynamic("revealOrder")(revealOrder.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SuspenseListProps]
+  }
 }
 

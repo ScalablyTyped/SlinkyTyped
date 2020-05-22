@@ -22,47 +22,11 @@ trait ListTargetsForPolicyRequest extends js.Object {
 
 object ListTargetsForPolicyRequest {
   @scala.inline
-  def apply(policyName: PolicyName): ListTargetsForPolicyRequest = {
+  def apply(policyName: PolicyName, marker: Marker = null, pageSize: js.UndefOr[PageSize] = js.undefined): ListTargetsForPolicyRequest = {
     val __obj = js.Dynamic.literal(policyName = policyName.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTargetsForPolicyRequest]
   }
-  @scala.inline
-  implicit class ListTargetsForPolicyRequestOps[Self <: ListTargetsForPolicyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyName(value: PolicyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarker(value: Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: PageSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

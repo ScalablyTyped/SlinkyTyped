@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnAttr extends js.Object {
-  var cell: String = js.native
-  var editable: Boolean = js.native
-  var formater: String = js.native
-  var headerCell: String = js.native
-  var label: String = js.native
-  var name: String = js.native
-  var renderable: Boolean = js.native
-  var sortable: Boolean = js.native
+  var cell: String
+  var editable: Boolean
+  var formater: String
+  var headerCell: String
+  var label: String
+  var name: String
+  var renderable: Boolean
+  var sortable: Boolean
 }
 
 object ColumnAttr {
@@ -31,61 +30,5 @@ object ColumnAttr {
     val __obj = js.Dynamic.literal(cell = cell.asInstanceOf[js.Any], editable = editable.asInstanceOf[js.Any], formater = formater.asInstanceOf[js.Any], headerCell = headerCell.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], renderable = renderable.asInstanceOf[js.Any], sortable = sortable.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnAttr]
   }
-  @scala.inline
-  implicit class ColumnAttrOps[Self <: ColumnAttr] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCell(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEditable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormater(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formater")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderCell(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortable")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

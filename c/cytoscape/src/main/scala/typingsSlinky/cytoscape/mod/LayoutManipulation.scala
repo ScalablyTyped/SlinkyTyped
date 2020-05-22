@@ -10,19 +10,18 @@ import scala.scalajs.js.annotation._
   * which allow for more complex behaviour than the primary run-one-layout-at-a-time usecase.
   * A new, developer accessible layout can be made via cy.makeLayout().
   */
-@js.native
 trait LayoutManipulation extends js.Object {
   /**
     * Start running the layout
     * http://js.cytoscape.org/#layout.run
     */
-  def run(): this.type = js.native
-  def start(): this.type = js.native
+  def run(): this.type
+  def start(): this.type
   /**
     * Stop running the (asynchronous/discrete) layout
     * http://js.cytoscape.org/#layout.stop
     */
-  def stop(): this.type = js.native
+  def stop(): this.type
 }
 
 object LayoutManipulation {
@@ -31,31 +30,5 @@ object LayoutManipulation {
     val __obj = js.Dynamic.literal(run = js.Any.fromFunction0(run), start = js.Any.fromFunction0(start), stop = js.Any.fromFunction0(stop))
     __obj.asInstanceOf[LayoutManipulation]
   }
-  @scala.inline
-  implicit class LayoutManipulationOps[Self <: LayoutManipulation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRun(value: () => LayoutManipulation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStart(value: () => LayoutManipulation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStop(value: () => LayoutManipulation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

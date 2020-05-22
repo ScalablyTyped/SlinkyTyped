@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * All {@link PackageRegistryBackend} objects are related to a {@link XPackageManager} instance.
   * @since OOo 2.0
   */
-@js.native
 trait PackageRegistryBackend extends XPackageRegistry {
   /**
     * Creates a persistent registry.
@@ -20,12 +19,12 @@ trait PackageRegistryBackend extends XPackageRegistry {
     * @param cacheDirectory cache directory that the registry has to use
     * @param readOnly reflects whether writing to cache directory is allowed
     */
-  def createPersistent(context: String, cacheDirectory: String, readOnly: Boolean): Unit = js.native
+  def createPersistent(context: String, cacheDirectory: String, readOnly: Boolean): Unit
   /**
     * Creates a transient registry.
     * @param context context of registry, e.g. user, shared
     */
-  def createTransient(context: String): Unit = js.native
+  def createTransient(context: String): Unit
 }
 
 object PackageRegistryBackend {
@@ -41,25 +40,5 @@ object PackageRegistryBackend {
     val __obj = js.Dynamic.literal(SupportedPackageTypes = SupportedPackageTypes.asInstanceOf[js.Any], bindPackage = js.Any.fromFunction5(bindPackage), createPersistent = js.Any.fromFunction3(createPersistent), createTransient = js.Any.fromFunction1(createTransient), getSupportedPackageTypes = js.Any.fromFunction0(getSupportedPackageTypes), packageRemoved = js.Any.fromFunction2(packageRemoved))
     __obj.asInstanceOf[PackageRegistryBackend]
   }
-  @scala.inline
-  implicit class PackageRegistryBackendOps[Self <: PackageRegistryBackend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatePersistent(value: (String, String, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createPersistent")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withCreateTransient(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTransient")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

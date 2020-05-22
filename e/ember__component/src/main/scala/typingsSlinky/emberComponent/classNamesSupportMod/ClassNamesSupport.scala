@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClassNamesSupport extends js.Object {
   /**
     * A list of properties of the view to apply as class names. If the property is a string value,
@@ -18,13 +17,13 @@ trait ClassNamesSupport extends js.Object {
     *
     * This list of properties is inherited from the component's superclasses as well.
     */
-  var classNameBindings: js.Array[String] = js.native
+  var classNameBindings: js.Array[String]
   /**
     * Standard CSS class names to apply to the view's outer element. This
     * property automatically inherits any class names defined by the view's
     * superclasses as well.
     */
-  var classNames: js.Array[String] = js.native
+  var classNames: js.Array[String]
 }
 
 object ClassNamesSupport {
@@ -33,25 +32,5 @@ object ClassNamesSupport {
     val __obj = js.Dynamic.literal(classNameBindings = classNameBindings.asInstanceOf[js.Any], classNames = classNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassNamesSupport]
   }
-  @scala.inline
-  implicit class ClassNamesSupportOps[Self <: ClassNamesSupport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassNameBindings(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNameBindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

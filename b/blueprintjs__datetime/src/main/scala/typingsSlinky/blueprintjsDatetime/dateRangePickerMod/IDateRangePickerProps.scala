@@ -2,15 +2,18 @@ package typingsSlinky.blueprintjsDatetime.dateRangePickerMod
 
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
 import typingsSlinky.blueprintjsCore.propsMod.IProps
+import typingsSlinky.blueprintjsDatetime.anon.FormatDate
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerBaseProps
-import typingsSlinky.blueprintjsDatetime.dateUtilsMod.DateRange
+import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerModifiers
+import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDateRangeShortcut
+import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
+import typingsSlinky.blueprintjsDatetime.timePickerMod.TimePrecision
 import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDateRangePickerProps
   extends IDatePickerBaseProps
      with IProps {
@@ -20,20 +23,20 @@ trait IDateRangePickerProps
     * If `false`, clicking a selected date will clear the selection.
     * @default false
     */
-  var allowSingleDayRange: js.UndefOr[Boolean] = js.native
+  var allowSingleDayRange: js.UndefOr[Boolean] = js.undefined
   /**
     * The date-range boundary that the next click should modify.
     * This will be honored unless the next click would overlap the other boundary date.
     * In that case, the two boundary dates will be auto-swapped to keep them in chronological order.
     * If `undefined`, the picker will revert to its default selection behavior.
     */
-  var boundaryToModify: js.UndefOr[Boundary] = js.native
+  var boundaryToModify: js.UndefOr[Boundary] = js.undefined
   /**
     * Whether displayed months in the calendar are contiguous.
     * If false, each side of the calendar can move independently to non-contiguous months.
     * @default true
     */
-  var contiguousCalendarMonths: js.UndefOr[Boolean] = js.native
+  var contiguousCalendarMonths: js.UndefOr[Boolean] = js.undefined
   /**
     * Props to pass to ReactDayPicker. See API documentation
     * [here](http://react-day-picker.js.org/api/DayPicker).
@@ -42,19 +45,19 @@ trait IDateRangePickerProps
     * `canChangeMonth`, `captionElement`, `numberOfMonths`, `fromMonth` (use
     * `minDate`), `month` (use `initialMonth`), `toMonth` (use `maxDate`).
     */
-  var dayPickerProps: js.UndefOr[DayPickerProps] = js.native
+  var dayPickerProps: js.UndefOr[DayPickerProps] = js.undefined
   /**
     * Initial `DateRange` the calendar will display as selected.
     * This should not be set if `value` is set.
     */
-  var defaultValue: js.UndefOr[DateRange] = js.native
+  var defaultValue: js.UndefOr[DateRange] = js.undefined
   /**
     * Called when the user selects a day.
     * If no days are selected, it will pass `[null, null]`.
     * If a start date is selected but not an end date, it will pass `[selectedDate, null]`.
     * If both a start and end date are selected, it will pass `[startDate, endDate]`.
     */
-  var onChange: js.UndefOr[js.Function1[/* selectedDates */ DateRange, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* selectedDates */ DateRange, Unit]] = js.undefined
   /**
     * Called when the user changes the hovered date range, either from mouseenter or mouseleave.
     * When triggered from mouseenter, it will pass the date range that would result from next click.
@@ -67,16 +70,16 @@ trait IDateRangePickerProps
       /* hoveredBoundary */ Boundary, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Called when the `shortcuts` props is enabled and the user changes the shortcut.
     */
-  var onShortcutChange: js.UndefOr[js.Function2[/* shortcut */ IDateRangeShortcut, /* index */ Double, Unit]] = js.native
+  var onShortcutChange: js.UndefOr[js.Function2[/* shortcut */ IDateRangeShortcut, /* index */ Double, Unit]] = js.undefined
   /**
     * The currently selected shortcut.
     * If this prop is provided, the component acts in a controlled manner.
     */
-  var selectedShortcutIndex: js.UndefOr[Double] = js.native
+  var selectedShortcutIndex: js.UndefOr[Double] = js.undefined
   /**
     * Whether shortcuts to quickly select a range of dates are displayed or not.
     * If `true`, preset shortcuts will be displayed.
@@ -84,178 +87,69 @@ trait IDateRangePickerProps
     * If an array is provided, the custom shortcuts will be displayed.
     * @default true
     */
-  var shortcuts: js.UndefOr[Boolean | js.Array[IDateRangeShortcut]] = js.native
+  var shortcuts: js.UndefOr[Boolean | js.Array[IDateRangeShortcut]] = js.undefined
   /**
     * Whether to show only a single month calendar.
     * @default false
     */
-  var singleMonthOnly: js.UndefOr[Boolean] = js.native
+  var singleMonthOnly: js.UndefOr[Boolean] = js.undefined
   /**
     * The currently selected `DateRange`.
     * If this prop is provided, the component acts in a controlled manner.
     */
-  var value: js.UndefOr[DateRange] = js.native
+  var value: js.UndefOr[DateRange] = js.undefined
 }
 
 object IDateRangePickerProps {
   @scala.inline
-  def apply(): IDateRangePickerProps = {
+  def apply(
+    allowSingleDayRange: js.UndefOr[Boolean] = js.undefined,
+    boundaryToModify: Boundary = null,
+    className: String = null,
+    contiguousCalendarMonths: js.UndefOr[Boolean] = js.undefined,
+    dayPickerProps: DayPickerProps = null,
+    defaultValue: DateRange = null,
+    initialMonth: js.Date = null,
+    locale: String = null,
+    localeUtils: FormatDate = null,
+    maxDate: js.Date = null,
+    minDate: js.Date = null,
+    modifiers: IDatePickerModifiers = null,
+    onChange: /* selectedDates */ DateRange => Unit = null,
+    onHoverChange: (/* hoveredDates */ DateRange, /* hoveredDay */ js.Date, /* hoveredBoundary */ Boundary) => Unit = null,
+    onShortcutChange: (/* shortcut */ IDateRangeShortcut, /* index */ Double) => Unit = null,
+    reverseMonthAndYearMenus: js.UndefOr[Boolean] = js.undefined,
+    selectedShortcutIndex: js.UndefOr[Double] = js.undefined,
+    shortcuts: Boolean | js.Array[IDateRangeShortcut] = null,
+    singleMonthOnly: js.UndefOr[Boolean] = js.undefined,
+    timePickerProps: ITimePickerProps = null,
+    timePrecision: TimePrecision = null,
+    value: DateRange = null
+  ): IDateRangePickerProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowSingleDayRange)) __obj.updateDynamic("allowSingleDayRange")(allowSingleDayRange.get.asInstanceOf[js.Any])
+    if (boundaryToModify != null) __obj.updateDynamic("boundaryToModify")(boundaryToModify.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(contiguousCalendarMonths)) __obj.updateDynamic("contiguousCalendarMonths")(contiguousCalendarMonths.get.asInstanceOf[js.Any])
+    if (dayPickerProps != null) __obj.updateDynamic("dayPickerProps")(dayPickerProps.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (initialMonth != null) __obj.updateDynamic("initialMonth")(initialMonth.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (localeUtils != null) __obj.updateDynamic("localeUtils")(localeUtils.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
+    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onHoverChange != null) __obj.updateDynamic("onHoverChange")(js.Any.fromFunction3(onHoverChange))
+    if (onShortcutChange != null) __obj.updateDynamic("onShortcutChange")(js.Any.fromFunction2(onShortcutChange))
+    if (!js.isUndefined(reverseMonthAndYearMenus)) __obj.updateDynamic("reverseMonthAndYearMenus")(reverseMonthAndYearMenus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectedShortcutIndex)) __obj.updateDynamic("selectedShortcutIndex")(selectedShortcutIndex.get.asInstanceOf[js.Any])
+    if (shortcuts != null) __obj.updateDynamic("shortcuts")(shortcuts.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleMonthOnly)) __obj.updateDynamic("singleMonthOnly")(singleMonthOnly.get.asInstanceOf[js.Any])
+    if (timePickerProps != null) __obj.updateDynamic("timePickerProps")(timePickerProps.asInstanceOf[js.Any])
+    if (timePrecision != null) __obj.updateDynamic("timePrecision")(timePrecision.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDateRangePickerProps]
   }
-  @scala.inline
-  implicit class IDateRangePickerPropsOps[Self <: IDateRangePickerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowSingleDayRange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSingleDayRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSingleDayRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSingleDayRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundaryToModify(value: Boundary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryToModify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundaryToModify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryToModify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContiguousCalendarMonths(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contiguousCalendarMonths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContiguousCalendarMonths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contiguousCalendarMonths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayPickerProps(value: DayPickerProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPickerProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayPickerProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPickerProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: DateRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* selectedDates */ DateRange => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHoverChange(
-      value: (/* hoveredDates */ DateRange, /* hoveredDay */ js.Date, /* hoveredBoundary */ Boundary) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHoverChange")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHoverChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHoverChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShortcutChange(value: (/* shortcut */ IDateRangeShortcut, /* index */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShortcutChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShortcutChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShortcutChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedShortcutIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedShortcutIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedShortcutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedShortcutIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortcuts(value: Boolean | js.Array[IDateRangeShortcut]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcuts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortcuts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcuts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleMonthOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleMonthOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleMonthOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleMonthOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: DateRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

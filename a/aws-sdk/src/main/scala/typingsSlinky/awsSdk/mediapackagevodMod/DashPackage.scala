@@ -31,71 +31,19 @@ trait DashPackage extends js.Object {
 
 object DashPackage {
   @scala.inline
-  def apply(DashManifests: listOfDashManifest): DashPackage = {
+  def apply(
+    DashManifests: listOfDashManifest,
+    Encryption: DashEncryption = null,
+    PeriodTriggers: listOfPeriodTriggersElement = null,
+    SegmentDurationSeconds: js.UndefOr[integer] = js.undefined,
+    SegmentTemplateFormat: SegmentTemplateFormat = null
+  ): DashPackage = {
     val __obj = js.Dynamic.literal(DashManifests = DashManifests.asInstanceOf[js.Any])
+    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
+    if (PeriodTriggers != null) __obj.updateDynamic("PeriodTriggers")(PeriodTriggers.asInstanceOf[js.Any])
+    if (!js.isUndefined(SegmentDurationSeconds)) __obj.updateDynamic("SegmentDurationSeconds")(SegmentDurationSeconds.get.asInstanceOf[js.Any])
+    if (SegmentTemplateFormat != null) __obj.updateDynamic("SegmentTemplateFormat")(SegmentTemplateFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[DashPackage]
   }
-  @scala.inline
-  implicit class DashPackageOps[Self <: DashPackage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDashManifests(value: listOfDashManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashManifests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncryption(value: DashEncryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeriodTriggers(value: listOfPeriodTriggersElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PeriodTriggers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeriodTriggers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PeriodTriggers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentDurationSeconds(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDurationSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentDurationSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDurationSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentTemplateFormat(value: SegmentTemplateFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentTemplateFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentTemplateFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentTemplateFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

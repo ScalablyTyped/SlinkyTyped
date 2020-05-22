@@ -4,75 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ViewOffset extends js.Object {
-  var animated: js.UndefOr[Boolean | Null] = js.native
-  var index: Double = js.native
-  var viewOffset: js.UndefOr[Double] = js.native
-  var viewPosition: js.UndefOr[Double] = js.native
+  var animated: js.UndefOr[Boolean | Null] = js.undefined
+  var index: Double
+  var viewOffset: js.UndefOr[Double] = js.undefined
+  var viewPosition: js.UndefOr[Double] = js.undefined
 }
 
 object ViewOffset {
   @scala.inline
-  def apply(index: Double): ViewOffset = {
+  def apply(
+    index: Double,
+    animated: js.UndefOr[Null | Boolean] = js.undefined,
+    viewOffset: js.UndefOr[Double] = js.undefined,
+    viewPosition: js.UndefOr[Double] = js.undefined
+  ): ViewOffset = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewOffset)) __obj.updateDynamic("viewOffset")(viewOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewPosition)) __obj.updateDynamic("viewPosition")(viewPosition.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewOffset]
   }
-  @scala.inline
-  implicit class ViewOffsetOps[Self <: ViewOffset] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimatedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(null)
-        ret
-    }
-    @scala.inline
-    def withViewOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait _empty extends js.Object {
-  var AM: js.Array[String] = js.native
+  var AM: js.Array[String]
   @JSName(":")
-  var Colon: String = js.native
-  var PM: js.Array[String] = js.native
+  var Colon: String
+  var PM: js.Array[String]
   @JSName("/")
-  var Slash: String = js.native
-  var days: Names = js.native
-  var firstDay: Double = js.native
-  var months: NamesAbbr = js.native
-  var patterns: D = js.native
-  var twoDigitYearMax: Double = js.native
+  var Slash: String
+  var days: Names
+  var firstDay: Double
+  var months: NamesAbbr
+  var patterns: D
+  var twoDigitYearMax: Double
 }
 
 object _empty {
@@ -37,67 +36,5 @@ object _empty {
     __obj.updateDynamic("/")(Slash.asInstanceOf[js.Any])
     __obj.asInstanceOf[_empty]
   }
-  @scala.inline
-  implicit class _emptyOps[Self <: _empty] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAM(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPM(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSlash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("/")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDays(value: Names): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("days")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstDay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonths(value: NamesAbbr): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("months")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatterns(value: D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTwoDigitYearMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twoDigitYearMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -13,33 +13,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IReview extends IResourceObject {
   /**
     * The charge associated with this review. [Expandable]
     */
-  var charge: String | ICharge = js.native
+  var charge: String | ICharge
   /**
     * Time at which the object was created. Measured in seconds since the Unix epoch.
     */
-  var created: Double = js.native
+  var created: Double
   /**
     * Has the value true if the object exists in live mode or the value false if the object exists in test mode.
     */
-  var livemode: Boolean = js.native
+  var livemode: Boolean
   /**
     * String representing the object’s type. Objects of the same type share the same value.
     */
   @JSName("object")
-  var object_IReview: review = js.native
+  var object_IReview: review
   /**
     * If true, the review needs action.
     */
-  var open: Boolean = js.native
+  var open: Boolean
   /**
     * The reason the review is currently open or closed.
     */
-  var reason: rule | manual | approved | refunded | refunded_as_fraud | disputed = js.native
+  var reason: rule | manual | approved | refunded | refunded_as_fraud | disputed
 }
 
 object IReview {
@@ -57,49 +56,5 @@ object IReview {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IReview]
   }
-  @scala.inline
-  implicit class IReviewOps[Self <: IReview] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharge(value: String | ICharge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLivemode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: review): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: rule | manual | approved | refunded | refunded_as_fraud | disputed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

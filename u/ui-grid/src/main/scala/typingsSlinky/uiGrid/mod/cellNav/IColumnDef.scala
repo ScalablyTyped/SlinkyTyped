@@ -4,41 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IColumnDef extends js.Object {
   /**
     * Enable focus on a cell within this column.
     * Defaults to true
     * @default true
     */
-  var allowCellFocus: js.UndefOr[Boolean] = js.native
+  var allowCellFocus: js.UndefOr[Boolean] = js.undefined
 }
 
 object IColumnDef {
   @scala.inline
-  def apply(): IColumnDef = {
+  def apply(allowCellFocus: js.UndefOr[Boolean] = js.undefined): IColumnDef = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowCellFocus)) __obj.updateDynamic("allowCellFocus")(allowCellFocus.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColumnDef]
   }
-  @scala.inline
-  implicit class IColumnDefOps[Self <: IColumnDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowCellFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCellFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowCellFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCellFocus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

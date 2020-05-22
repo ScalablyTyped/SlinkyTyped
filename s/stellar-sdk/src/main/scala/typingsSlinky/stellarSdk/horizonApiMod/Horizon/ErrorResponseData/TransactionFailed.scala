@@ -7,13 +7,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransactionFailed extends Base {
-  var extras: TransactionFailedExtras = js.native
+  var extras: TransactionFailedExtras
   @JSName("status")
-  var status_TransactionFailed: `400` = js.native
+  var status_TransactionFailed: `400`
   @JSName("title")
-  var title_TransactionFailed: `Transaction Failed` = js.native
+  var title_TransactionFailed: `Transaction Failed`
 }
 
 object TransactionFailed {
@@ -30,31 +29,5 @@ object TransactionFailed {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactionFailed]
   }
-  @scala.inline
-  implicit class TransactionFailedOps[Self <: TransactionFailed] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtras(value: TransactionFailedExtras): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extras")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: `400`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: `Transaction Failed`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -10,21 +10,20 @@ import scala.scalajs.js.annotation._
   *     <li>Decay: 5 ticks per body part of the deceased creep</li>
   * </ul>
   */
-@js.native
 trait Tombstone extends RoomObject {
   /**
     * An object containing the deceased creep.
     */
-  var creep: AnyCreep = js.native
+  var creep: AnyCreep
   /**
     * Time of death.
     */
-  var deathTime: Double = js.native
+  var deathTime: Double
   /**
     * A unique object identificator.
     * You can use {@link Game.getObjectById} method to retrieve an object instance by its id.
     */
-  var id: Id[this.type] = js.native
+  var id: Id[this.type]
   /**
     * An object with the tombstone contents.
     * Each object key is one of the RESOURCE_* constants, values are resources amounts.
@@ -32,11 +31,11 @@ trait Tombstone extends RoomObject {
     * other resources are undefined when empty.
     * You can use lodash.sum to get the total amount of contents.
     */
-  var store: StoreDefinitionUnlimited = js.native
+  var store: StoreDefinitionUnlimited
   /**
     * The amount of game ticks before this tombstone decays.
     */
-  var ticksToDecay: Double = js.native
+  var ticksToDecay: Double
 }
 
 object Tombstone {
@@ -48,48 +47,12 @@ object Tombstone {
     id: Id[Tombstone],
     pos: RoomPosition,
     store: StoreDefinitionUnlimited,
-    ticksToDecay: Double
+    ticksToDecay: Double,
+    room: Room = null
   ): Tombstone = {
     val __obj = js.Dynamic.literal(creep = creep.asInstanceOf[js.Any], deathTime = deathTime.asInstanceOf[js.Any], effects = effects.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], pos = pos.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], ticksToDecay = ticksToDecay.asInstanceOf[js.Any])
+    if (room != null) __obj.updateDynamic("room")(room.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tombstone]
   }
-  @scala.inline
-  implicit class TombstoneOps[Self <: Tombstone] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreep(value: AnyCreep): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeathTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deathTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Id[Tombstone]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStore(value: StoreDefinitionUnlimited): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicksToDecay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksToDecay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

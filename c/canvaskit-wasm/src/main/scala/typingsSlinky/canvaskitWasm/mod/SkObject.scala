@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SkObject[T /* <: SkObject[T] */] extends js.Object {
-  def delete(): Unit = js.native
-  def deleteAfter(): Unit = js.native
-  def isAliasOf(other: js.Any): Boolean = js.native
-  def isDeleted(): Boolean = js.native
+  def delete(): Unit
+  def deleteAfter(): Unit
+  def isAliasOf(other: js.Any): Boolean
+  def isDeleted(): Boolean
 }
 
 object SkObject {
@@ -23,37 +22,5 @@ object SkObject {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction0(delete), deleteAfter = js.Any.fromFunction0(deleteAfter), isAliasOf = js.Any.fromFunction1(isAliasOf), isDeleted = js.Any.fromFunction0(isDeleted))
     __obj.asInstanceOf[SkObject[T]]
   }
-  @scala.inline
-  implicit class SkObjectOps[Self[t] <: SkObject[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withDelete(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteAfter(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAfter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsAliasOf(value: js.Any => Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAliasOf")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsDeleted(value: () => Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeleted")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

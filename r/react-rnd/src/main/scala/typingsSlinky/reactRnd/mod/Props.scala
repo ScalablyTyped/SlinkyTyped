@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.reResizable.mod.ResizeDirection
@@ -22,510 +21,126 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props
   extends /* key */ StringDictionary[js.Any] {
-  var bounds: js.UndefOr[String] = js.native
-  var cancel: js.UndefOr[String] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var default: js.UndefOr[xnumberynumberSize] = js.native
-  var disableDragging: js.UndefOr[Boolean] = js.native
-  var dragAxis: js.UndefOr[x | y | both | none] = js.native
-  var dragGrid: js.UndefOr[Grid] = js.native
-  var dragHandleClassName: js.UndefOr[String] = js.native
-  var enableResizing: js.UndefOr[ResizeEnable] = js.native
-  var enableUserSelectHack: js.UndefOr[Boolean] = js.native
-  var lockAspectRatio: js.UndefOr[Boolean | Double] = js.native
-  var lockAspectRatioExtraHeight: js.UndefOr[Double] = js.native
-  var lockAspectRatioExtraWidth: js.UndefOr[Double] = js.native
-  var maxHeight: js.UndefOr[Double | String] = js.native
-  var maxWidth: js.UndefOr[Double | String] = js.native
-  var minHeight: js.UndefOr[Double | String] = js.native
-  var minWidth: js.UndefOr[Double | String] = js.native
-  var onDrag: js.UndefOr[RndDragCallback] = js.native
-  var onDragStart: js.UndefOr[RndDragCallback] = js.native
-  var onDragStop: js.UndefOr[RndDragCallback] = js.native
-  var onMouseDown: js.UndefOr[js.Function1[/* e */ MouseEvent, Unit]] = js.native
-  var onMouseUp: js.UndefOr[js.Function1[/* e */ MouseEvent, Unit]] = js.native
-  var onResize: js.UndefOr[RndResizeCallback] = js.native
-  var onResizeStart: js.UndefOr[RndResizeStartCallback] = js.native
-  var onResizeStop: js.UndefOr[RndResizeCallback] = js.native
-  var position: js.UndefOr[X] = js.native
-  var resizeGrid: js.UndefOr[Grid] = js.native
-  var resizeHandleClasses: js.UndefOr[HandleClasses] = js.native
-  var resizeHandleComponent: js.UndefOr[HandleComponent] = js.native
-  var resizeHandleStyles: js.UndefOr[HandleStyles] = js.native
-  var resizeHandleWrapperClass: js.UndefOr[String] = js.native
-  var resizeHandleWrapperStyle: js.UndefOr[CSSProperties] = js.native
-  var scale: js.UndefOr[Double] = js.native
-  var size: js.UndefOr[Size] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var bounds: js.UndefOr[String] = js.undefined
+  var cancel: js.UndefOr[String] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var default: js.UndefOr[xnumberynumberSize] = js.undefined
+  var disableDragging: js.UndefOr[Boolean] = js.undefined
+  var dragAxis: js.UndefOr[x | y | both | none] = js.undefined
+  var dragGrid: js.UndefOr[Grid] = js.undefined
+  var dragHandleClassName: js.UndefOr[String] = js.undefined
+  var enableResizing: js.UndefOr[ResizeEnable] = js.undefined
+  var enableUserSelectHack: js.UndefOr[Boolean] = js.undefined
+  var lockAspectRatio: js.UndefOr[Boolean | Double] = js.undefined
+  var lockAspectRatioExtraHeight: js.UndefOr[Double] = js.undefined
+  var lockAspectRatioExtraWidth: js.UndefOr[Double] = js.undefined
+  var maxHeight: js.UndefOr[Double | String] = js.undefined
+  var maxWidth: js.UndefOr[Double | String] = js.undefined
+  var minHeight: js.UndefOr[Double | String] = js.undefined
+  var minWidth: js.UndefOr[Double | String] = js.undefined
+  var onDrag: js.UndefOr[RndDragCallback] = js.undefined
+  var onDragStart: js.UndefOr[RndDragCallback] = js.undefined
+  var onDragStop: js.UndefOr[RndDragCallback] = js.undefined
+  var onMouseDown: js.UndefOr[js.Function1[/* e */ MouseEvent, Unit]] = js.undefined
+  var onMouseUp: js.UndefOr[js.Function1[/* e */ MouseEvent, Unit]] = js.undefined
+  var onResize: js.UndefOr[RndResizeCallback] = js.undefined
+  var onResizeStart: js.UndefOr[RndResizeStartCallback] = js.undefined
+  var onResizeStop: js.UndefOr[RndResizeCallback] = js.undefined
+  var position: js.UndefOr[X] = js.undefined
+  var resizeGrid: js.UndefOr[Grid] = js.undefined
+  var resizeHandleClasses: js.UndefOr[HandleClasses] = js.undefined
+  var resizeHandleComponent: js.UndefOr[HandleComponent] = js.undefined
+  var resizeHandleStyles: js.UndefOr[HandleStyles] = js.undefined
+  var resizeHandleWrapperClass: js.UndefOr[String] = js.undefined
+  var resizeHandleWrapperStyle: js.UndefOr[CSSProperties] = js.undefined
+  var scale: js.UndefOr[Double] = js.undefined
+  var size: js.UndefOr[Size] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object Props {
   @scala.inline
-  def apply(): Props = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    bounds: String = null,
+    cancel: String = null,
+    children: TagMod[Any] = null,
+    className: String = null,
+    default: xnumberynumberSize = null,
+    disableDragging: js.UndefOr[Boolean] = js.undefined,
+    dragAxis: x | y | both | none = null,
+    dragGrid: Grid = null,
+    dragHandleClassName: String = null,
+    enableResizing: ResizeEnable = null,
+    enableUserSelectHack: js.UndefOr[Boolean] = js.undefined,
+    lockAspectRatio: Boolean | Double = null,
+    lockAspectRatioExtraHeight: js.UndefOr[Double] = js.undefined,
+    lockAspectRatioExtraWidth: js.UndefOr[Double] = js.undefined,
+    maxHeight: Double | String = null,
+    maxWidth: Double | String = null,
+    minHeight: Double | String = null,
+    minWidth: Double | String = null,
+    onDrag: (/* e */ DraggableEvent, /* data */ typingsSlinky.reactDraggable.mod.DraggableData) => Unit | `false` = null,
+    onDragStart: (/* e */ DraggableEvent, /* data */ typingsSlinky.reactDraggable.mod.DraggableData) => Unit | `false` = null,
+    onDragStop: (/* e */ DraggableEvent, /* data */ typingsSlinky.reactDraggable.mod.DraggableData) => Unit | `false` = null,
+    onMouseDown: /* e */ MouseEvent => Unit = null,
+    onMouseUp: /* e */ MouseEvent => Unit = null,
+    onResize: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit = null,
+    onResizeStart: (/* e */ SyntheticMouseEvent[HTMLDivElement] | SyntheticTouchEvent[HTMLDivElement], /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement) => Unit = null,
+    onResizeStop: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit = null,
+    position: X = null,
+    resizeGrid: Grid = null,
+    resizeHandleClasses: HandleClasses = null,
+    resizeHandleComponent: HandleComponent = null,
+    resizeHandleStyles: HandleStyles = null,
+    resizeHandleWrapperClass: String = null,
+    resizeHandleWrapperStyle: CSSProperties = null,
+    scale: js.UndefOr[Double] = js.undefined,
+    size: Size = null,
+    style: CSSProperties = null
+  ): Props = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableDragging)) __obj.updateDynamic("disableDragging")(disableDragging.get.asInstanceOf[js.Any])
+    if (dragAxis != null) __obj.updateDynamic("dragAxis")(dragAxis.asInstanceOf[js.Any])
+    if (dragGrid != null) __obj.updateDynamic("dragGrid")(dragGrid.asInstanceOf[js.Any])
+    if (dragHandleClassName != null) __obj.updateDynamic("dragHandleClassName")(dragHandleClassName.asInstanceOf[js.Any])
+    if (enableResizing != null) __obj.updateDynamic("enableResizing")(enableResizing.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableUserSelectHack)) __obj.updateDynamic("enableUserSelectHack")(enableUserSelectHack.get.asInstanceOf[js.Any])
+    if (lockAspectRatio != null) __obj.updateDynamic("lockAspectRatio")(lockAspectRatio.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockAspectRatioExtraHeight)) __obj.updateDynamic("lockAspectRatioExtraHeight")(lockAspectRatioExtraHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockAspectRatioExtraWidth)) __obj.updateDynamic("lockAspectRatioExtraWidth")(lockAspectRatioExtraWidth.get.asInstanceOf[js.Any])
+    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
+    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
+    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
+    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
+    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction2(onDrag))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction2(onDragStart))
+    if (onDragStop != null) __obj.updateDynamic("onDragStop")(js.Any.fromFunction2(onDragStop))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction5(onResize))
+    if (onResizeStart != null) __obj.updateDynamic("onResizeStart")(js.Any.fromFunction3(onResizeStart))
+    if (onResizeStop != null) __obj.updateDynamic("onResizeStop")(js.Any.fromFunction5(onResizeStop))
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (resizeGrid != null) __obj.updateDynamic("resizeGrid")(resizeGrid.asInstanceOf[js.Any])
+    if (resizeHandleClasses != null) __obj.updateDynamic("resizeHandleClasses")(resizeHandleClasses.asInstanceOf[js.Any])
+    if (resizeHandleComponent != null) __obj.updateDynamic("resizeHandleComponent")(resizeHandleComponent.asInstanceOf[js.Any])
+    if (resizeHandleStyles != null) __obj.updateDynamic("resizeHandleStyles")(resizeHandleStyles.asInstanceOf[js.Any])
+    if (resizeHandleWrapperClass != null) __obj.updateDynamic("resizeHandleWrapperClass")(resizeHandleWrapperClass.asInstanceOf[js.Any])
+    if (resizeHandleWrapperStyle != null) __obj.updateDynamic("resizeHandleWrapperStyle")(resizeHandleWrapperStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBounds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: xnumberynumberSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableDragging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDragging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableDragging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDragging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragAxis(value: typingsSlinky.reactRnd.reactRndStrings.x | y | both | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragGrid(value: Grid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragGrid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragHandleClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragHandleClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragHandleClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragHandleClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableResizing(value: ResizeEnable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResizing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableResizing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResizing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableUserSelectHack(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUserSelectHack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableUserSelectHack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUserSelectHack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockAspectRatio(value: Boolean | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockAspectRatioExtraHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockAspectRatioExtraHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockAspectRatioExtraHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockAspectRatioExtraHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockAspectRatioExtraWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockAspectRatioExtraWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockAspectRatioExtraWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockAspectRatioExtraWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDrag(
-      value: (/* e */ DraggableEvent, /* data */ typingsSlinky.reactDraggable.mod.DraggableData) => Unit | `false`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragStart(
-      value: (/* e */ DraggableEvent, /* data */ typingsSlinky.reactDraggable.mod.DraggableData) => Unit | `false`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragStop(
-      value: (/* e */ DraggableEvent, /* data */ typingsSlinky.reactDraggable.mod.DraggableData) => Unit | `false`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStop")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseDown(value: /* e */ MouseEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseUp(value: /* e */ MouseEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResize(
-      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResizeStart(
-      value: (/* e */ SyntheticMouseEvent[HTMLDivElement] | SyntheticTouchEvent[HTMLDivElement], /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStart")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResizeStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResizeStop(
-      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStop")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResizeStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: X): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeGrid(value: Grid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeGrid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeHandleClasses(value: HandleClasses): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleClasses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeHandleClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleClasses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeHandleComponent(value: HandleComponent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeHandleComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeHandleStyles(value: HandleStyles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeHandleStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeHandleWrapperClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleWrapperClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeHandleWrapperClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleWrapperClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeHandleWrapperStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleWrapperStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeHandleWrapperStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeHandleWrapperStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

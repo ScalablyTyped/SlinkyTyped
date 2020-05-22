@@ -4,93 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Generator extends js.Object {
   /**
     * SVG shape ID generator callback
     */
-  var generator: js.UndefOr[String | (js.Function1[/* svg */ String, String])] = js.native
+  var generator: js.UndefOr[String | (js.Function1[/* svg */ String, String])] = js.undefined
   /**
     * File name separator for shape states (e.g. ':hover')
     */
-  var pseudo: js.UndefOr[String] = js.native
+  var pseudo: js.UndefOr[String] = js.undefined
   /**
     * Separator for directory name traversal
     */
-  var separator: js.UndefOr[String] = js.native
+  var separator: js.UndefOr[String] = js.undefined
   /**
     * Whitespace replacement for shape IDs
     */
-  var whitespace: js.UndefOr[String] = js.native
+  var whitespace: js.UndefOr[String] = js.undefined
 }
 
 object Generator {
   @scala.inline
-  def apply(): Generator = {
+  def apply(
+    generator: String | (js.Function1[/* svg */ String, String]) = null,
+    pseudo: String = null,
+    separator: String = null,
+    whitespace: String = null
+  ): Generator = {
     val __obj = js.Dynamic.literal()
+    if (generator != null) __obj.updateDynamic("generator")(generator.asInstanceOf[js.Any])
+    if (pseudo != null) __obj.updateDynamic("pseudo")(pseudo.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
+    if (whitespace != null) __obj.updateDynamic("whitespace")(whitespace.asInstanceOf[js.Any])
     __obj.asInstanceOf[Generator]
   }
-  @scala.inline
-  implicit class GeneratorOps[Self <: Generator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeneratorFunction1(value: /* svg */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generator")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGenerator(value: String | (js.Function1[/* svg */ String, String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPseudo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pseudo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPseudo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pseudo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhitespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhitespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitespace")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

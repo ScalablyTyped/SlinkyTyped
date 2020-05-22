@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextStreamWriter extends TextStreamBase {
   @JSName("IWshRuntimeLibrary.TextStreamWriter_typekey")
-  var IWshRuntimeLibraryDotTextStreamWriter_typekey: TextStreamWriter = js.native
+  var IWshRuntimeLibraryDotTextStreamWriter_typekey: TextStreamWriter
   /**
     * Sends a string to an output stream.
     */
-  def Write(s: String): Unit = js.native
+  def Write(s: String): Unit
   /**
     * Sends a specified number of blank lines (newline characters) to an output stream.
     */
-  def WriteBlankLines(intLines: Double): Unit = js.native
+  def WriteBlankLines(intLines: Double): Unit
   /**
     * Sends a string followed by a newline character to an output stream.
     */
-  def WriteLine(s: String): Unit = js.native
+  def WriteLine(s: String): Unit
 }
 
 object TextStreamWriter {
@@ -37,37 +36,5 @@ object TextStreamWriter {
     __obj.updateDynamic("IWshRuntimeLibrary.TextStreamWriter_typekey")(IWshRuntimeLibraryDotTextStreamWriter_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextStreamWriter]
   }
-  @scala.inline
-  implicit class TextStreamWriterOps[Self <: TextStreamWriter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIWshRuntimeLibraryDotTextStreamWriter_typekey(value: TextStreamWriter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IWshRuntimeLibrary.TextStreamWriter_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWrite(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Write")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWriteBlankLines(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteBlankLines")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWriteLine(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteLine")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

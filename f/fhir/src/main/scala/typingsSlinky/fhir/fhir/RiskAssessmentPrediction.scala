@@ -7,193 +7,92 @@ import scala.scalajs.js.annotation._
 /**
   * Outcome predicted
   */
-@js.native
 trait RiskAssessmentPrediction extends BackboneElement {
   /**
     * Contains extended information for property 'probabilityDecimal'.
     */
-  var _probabilityDecimal: js.UndefOr[Element] = js.native
+  var _probabilityDecimal: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'rationale'.
     */
-  var _rationale: js.UndefOr[Element] = js.native
+  var _rationale: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'relativeRisk'.
     */
-  var _relativeRisk: js.UndefOr[Element] = js.native
+  var _relativeRisk: js.UndefOr[Element] = js.undefined
   /**
     * Possible outcome for the subject
     */
-  var outcome: CodeableConcept = js.native
+  var outcome: CodeableConcept
   /**
     * Likelihood of specified outcome
     */
-  var probabilityDecimal: js.UndefOr[decimal] = js.native
+  var probabilityDecimal: js.UndefOr[decimal] = js.undefined
   /**
     * Likelihood of specified outcome
     */
-  var probabilityRange: js.UndefOr[Range] = js.native
+  var probabilityRange: js.UndefOr[Range] = js.undefined
   /**
     * Likelihood of specified outcome as a qualitative value
     */
-  var qualitativeRisk: js.UndefOr[CodeableConcept] = js.native
+  var qualitativeRisk: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Explanation of prediction
     */
-  var rationale: js.UndefOr[String] = js.native
+  var rationale: js.UndefOr[String] = js.undefined
   /**
     * Relative likelihood
     */
-  var relativeRisk: js.UndefOr[decimal] = js.native
+  var relativeRisk: js.UndefOr[decimal] = js.undefined
   /**
     * Timeframe or age range
     */
-  var whenPeriod: js.UndefOr[Period] = js.native
+  var whenPeriod: js.UndefOr[Period] = js.undefined
   /**
     * Timeframe or age range
     */
-  var whenRange: js.UndefOr[Range] = js.native
+  var whenRange: js.UndefOr[Range] = js.undefined
 }
 
 object RiskAssessmentPrediction {
   @scala.inline
-  def apply(outcome: CodeableConcept): RiskAssessmentPrediction = {
+  def apply(
+    outcome: CodeableConcept,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _probabilityDecimal: Element = null,
+    _rationale: Element = null,
+    _relativeRisk: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    probabilityDecimal: js.UndefOr[decimal] = js.undefined,
+    probabilityRange: Range = null,
+    qualitativeRisk: CodeableConcept = null,
+    rationale: String = null,
+    relativeRisk: js.UndefOr[decimal] = js.undefined,
+    whenPeriod: Period = null,
+    whenRange: Range = null
+  ): RiskAssessmentPrediction = {
     val __obj = js.Dynamic.literal(outcome = outcome.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_probabilityDecimal != null) __obj.updateDynamic("_probabilityDecimal")(_probabilityDecimal.asInstanceOf[js.Any])
+    if (_rationale != null) __obj.updateDynamic("_rationale")(_rationale.asInstanceOf[js.Any])
+    if (_relativeRisk != null) __obj.updateDynamic("_relativeRisk")(_relativeRisk.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (!js.isUndefined(probabilityDecimal)) __obj.updateDynamic("probabilityDecimal")(probabilityDecimal.get.asInstanceOf[js.Any])
+    if (probabilityRange != null) __obj.updateDynamic("probabilityRange")(probabilityRange.asInstanceOf[js.Any])
+    if (qualitativeRisk != null) __obj.updateDynamic("qualitativeRisk")(qualitativeRisk.asInstanceOf[js.Any])
+    if (rationale != null) __obj.updateDynamic("rationale")(rationale.asInstanceOf[js.Any])
+    if (!js.isUndefined(relativeRisk)) __obj.updateDynamic("relativeRisk")(relativeRisk.get.asInstanceOf[js.Any])
+    if (whenPeriod != null) __obj.updateDynamic("whenPeriod")(whenPeriod.asInstanceOf[js.Any])
+    if (whenRange != null) __obj.updateDynamic("whenRange")(whenRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[RiskAssessmentPrediction]
   }
-  @scala.inline
-  implicit class RiskAssessmentPredictionOps[Self <: RiskAssessmentPrediction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutcome(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outcome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_probabilityDecimal(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_probabilityDecimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_probabilityDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_probabilityDecimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_rationale(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_rationale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_rationale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_rationale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_relativeRisk(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_relativeRisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_relativeRisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_relativeRisk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProbabilityDecimal(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("probabilityDecimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProbabilityDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("probabilityDecimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProbabilityRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("probabilityRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProbabilityRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("probabilityRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualitativeRisk(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualitativeRisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualitativeRisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualitativeRisk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRationale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rationale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRationale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rationale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelativeRisk(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeRisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelativeRisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeRisk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhenPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whenPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhenPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whenPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhenRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whenRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhenRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whenRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

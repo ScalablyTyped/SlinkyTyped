@@ -6,14 +6,13 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<rollup.rollup.OutputPluginHooks> */
 /* Inlined parent std.Partial<rollup.rollup.OutputPluginValueHooks> */
-@js.native
 trait OutputPlugin extends js.Object {
   var augmentChunkHash: js.UndefOr[
     js.ThisFunction1[/* this */ PluginContext, /* chunk */ PreRenderedChunk, String | Unit]
-  ] = js.native
-  var banner: js.UndefOr[AddonHook] = js.native
-  var cacheKey: js.UndefOr[String] = js.native
-  var footer: js.UndefOr[AddonHook] = js.native
+  ] = js.undefined
+  var banner: js.UndefOr[AddonHook] = js.undefined
+  var cacheKey: js.UndefOr[String] = js.undefined
+  var footer: js.UndefOr[AddonHook] = js.undefined
   var generateBundle: js.UndefOr[
     js.ThisFunction3[
       /* this */ PluginContext, 
@@ -22,9 +21,9 @@ trait OutputPlugin extends js.Object {
       /* isWrite */ Boolean, 
       Unit | js.Promise[Unit]
     ]
-  ] = js.native
-  var intro: js.UndefOr[AddonHook] = js.native
-  var name: String = js.native
+  ] = js.undefined
+  var intro: js.UndefOr[AddonHook] = js.undefined
+  var name: String
   var ongenerate: js.UndefOr[
     js.ThisFunction2[
       /* this */ PluginContext, 
@@ -32,7 +31,7 @@ trait OutputPlugin extends js.Object {
       /* chunk */ OutputChunk, 
       Unit | js.Promise[Unit]
     ]
-  ] = js.native
+  ] = js.undefined
   var onwrite: js.UndefOr[
     js.ThisFunction2[
       /* this */ PluginContext, 
@@ -40,19 +39,19 @@ trait OutputPlugin extends js.Object {
       /* chunk */ OutputChunk, 
       Unit | js.Promise[Unit]
     ]
-  ] = js.native
+  ] = js.undefined
   var outputOptions: js.UndefOr[
     js.ThisFunction1[
       /* this */ PluginContext, 
       /* options */ OutputOptions, 
       js.UndefOr[OutputOptions | Null]
     ]
-  ] = js.native
-  var outro: js.UndefOr[AddonHook] = js.native
-  var renderChunk: js.UndefOr[RenderChunkHook] = js.native
+  ] = js.undefined
+  var outro: js.UndefOr[AddonHook] = js.undefined
+  var renderChunk: js.UndefOr[RenderChunkHook] = js.undefined
   var renderError: js.UndefOr[
     js.ThisFunction1[/* this */ PluginContext, /* err */ js.UndefOr[js.Error], js.Promise[Unit] | Unit]
-  ] = js.native
+  ] = js.undefined
   var renderStart: js.UndefOr[
     js.ThisFunction2[
       /* this */ PluginContext, 
@@ -60,303 +59,87 @@ trait OutputPlugin extends js.Object {
       /* inputOptions */ InputOptions, 
       js.Promise[Unit] | Unit
     ]
-  ] = js.native
-  var resolveAssetUrl: js.UndefOr[ResolveAssetUrlHook] = js.native
-  var resolveDynamicImport: js.UndefOr[ResolveDynamicImportHook] = js.native
-  var resolveFileUrl: js.UndefOr[ResolveFileUrlHook] = js.native
-  var transformBundle: js.UndefOr[TransformChunkHook] = js.native
-  var transformChunk: js.UndefOr[TransformChunkHook] = js.native
+  ] = js.undefined
+  var resolveAssetUrl: js.UndefOr[ResolveAssetUrlHook] = js.undefined
+  var resolveDynamicImport: js.UndefOr[ResolveDynamicImportHook] = js.undefined
+  var resolveFileUrl: js.UndefOr[ResolveFileUrlHook] = js.undefined
+  var transformBundle: js.UndefOr[TransformChunkHook] = js.undefined
+  var transformChunk: js.UndefOr[TransformChunkHook] = js.undefined
   var writeBundle: js.UndefOr[
     js.ThisFunction1[/* this */ PluginContext, /* bundle */ OutputBundle, Unit | js.Promise[Unit]]
-  ] = js.native
+  ] = js.undefined
 }
 
 object OutputPlugin {
   @scala.inline
-  def apply(name: String): OutputPlugin = {
+  def apply(
+    name: String,
+    augmentChunkHash: js.ThisFunction1[/* this */ PluginContext, /* chunk */ PreRenderedChunk, String | Unit] = null,
+    banner: AddonHook = null,
+    cacheKey: String = null,
+    footer: AddonHook = null,
+    generateBundle: js.ThisFunction3[
+      /* this */ PluginContext, 
+      /* options */ OutputOptions, 
+      /* bundle */ OutputBundle, 
+      /* isWrite */ Boolean, 
+      Unit | js.Promise[Unit]
+    ] = null,
+    intro: AddonHook = null,
+    ongenerate: js.ThisFunction2[
+      /* this */ PluginContext, 
+      /* options */ OnGenerateOptions, 
+      /* chunk */ OutputChunk, 
+      Unit | js.Promise[Unit]
+    ] = null,
+    onwrite: js.ThisFunction2[
+      /* this */ PluginContext, 
+      /* options */ OnWriteOptions, 
+      /* chunk */ OutputChunk, 
+      Unit | js.Promise[Unit]
+    ] = null,
+    outputOptions: js.ThisFunction1[
+      /* this */ PluginContext, 
+      /* options */ OutputOptions, 
+      js.UndefOr[OutputOptions | Null]
+    ] = null,
+    outro: AddonHook = null,
+    renderChunk: RenderChunkHook = null,
+    renderError: js.ThisFunction1[/* this */ PluginContext, /* err */ js.UndefOr[js.Error], js.Promise[Unit] | Unit] = null,
+    renderStart: js.ThisFunction2[
+      /* this */ PluginContext, 
+      /* outputOptions */ OutputOptions, 
+      /* inputOptions */ InputOptions, 
+      js.Promise[Unit] | Unit
+    ] = null,
+    resolveAssetUrl: ResolveAssetUrlHook = null,
+    resolveDynamicImport: ResolveDynamicImportHook = null,
+    resolveFileUrl: ResolveFileUrlHook = null,
+    transformBundle: TransformChunkHook = null,
+    transformChunk: TransformChunkHook = null,
+    writeBundle: js.ThisFunction1[/* this */ PluginContext, /* bundle */ OutputBundle, Unit | js.Promise[Unit]] = null
+  ): OutputPlugin = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (augmentChunkHash != null) __obj.updateDynamic("augmentChunkHash")(augmentChunkHash.asInstanceOf[js.Any])
+    if (banner != null) __obj.updateDynamic("banner")(banner.asInstanceOf[js.Any])
+    if (cacheKey != null) __obj.updateDynamic("cacheKey")(cacheKey.asInstanceOf[js.Any])
+    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (generateBundle != null) __obj.updateDynamic("generateBundle")(generateBundle.asInstanceOf[js.Any])
+    if (intro != null) __obj.updateDynamic("intro")(intro.asInstanceOf[js.Any])
+    if (ongenerate != null) __obj.updateDynamic("ongenerate")(ongenerate.asInstanceOf[js.Any])
+    if (onwrite != null) __obj.updateDynamic("onwrite")(onwrite.asInstanceOf[js.Any])
+    if (outputOptions != null) __obj.updateDynamic("outputOptions")(outputOptions.asInstanceOf[js.Any])
+    if (outro != null) __obj.updateDynamic("outro")(outro.asInstanceOf[js.Any])
+    if (renderChunk != null) __obj.updateDynamic("renderChunk")(renderChunk.asInstanceOf[js.Any])
+    if (renderError != null) __obj.updateDynamic("renderError")(renderError.asInstanceOf[js.Any])
+    if (renderStart != null) __obj.updateDynamic("renderStart")(renderStart.asInstanceOf[js.Any])
+    if (resolveAssetUrl != null) __obj.updateDynamic("resolveAssetUrl")(resolveAssetUrl.asInstanceOf[js.Any])
+    if (resolveDynamicImport != null) __obj.updateDynamic("resolveDynamicImport")(resolveDynamicImport.asInstanceOf[js.Any])
+    if (resolveFileUrl != null) __obj.updateDynamic("resolveFileUrl")(resolveFileUrl.asInstanceOf[js.Any])
+    if (transformBundle != null) __obj.updateDynamic("transformBundle")(transformBundle.asInstanceOf[js.Any])
+    if (transformChunk != null) __obj.updateDynamic("transformChunk")(transformChunk.asInstanceOf[js.Any])
+    if (writeBundle != null) __obj.updateDynamic("writeBundle")(writeBundle.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputPlugin]
   }
-  @scala.inline
-  implicit class OutputPluginOps[Self <: OutputPlugin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAugmentChunkHash(value: js.ThisFunction1[/* this */ PluginContext, /* chunk */ PreRenderedChunk, String | Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("augmentChunkHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAugmentChunkHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("augmentChunkHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBanner(value: AddonHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBanner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooter(value: AddonHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateBundle(
-      value: js.ThisFunction3[
-          /* this */ PluginContext, 
-          /* options */ OutputOptions, 
-          /* bundle */ OutputBundle, 
-          /* isWrite */ Boolean, 
-          Unit | js.Promise[Unit]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateBundle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateBundle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateBundle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntro(value: AddonHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intro")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntro: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intro")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOngenerate(
-      value: js.ThisFunction2[
-          /* this */ PluginContext, 
-          /* options */ OnGenerateOptions, 
-          /* chunk */ OutputChunk, 
-          Unit | js.Promise[Unit]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ongenerate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOngenerate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ongenerate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnwrite(
-      value: js.ThisFunction2[
-          /* this */ PluginContext, 
-          /* options */ OnWriteOptions, 
-          /* chunk */ OutputChunk, 
-          Unit | js.Promise[Unit]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnwrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputOptions(
-      value: js.ThisFunction1[
-          /* this */ PluginContext, 
-          /* options */ OutputOptions, 
-          js.UndefOr[OutputOptions | Null]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutro(value: AddonHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outro")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutro: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outro")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderChunk(value: RenderChunkHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderChunk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderChunk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderChunk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderError(
-      value: js.ThisFunction1[/* this */ PluginContext, /* err */ js.UndefOr[js.Error], js.Promise[Unit] | Unit]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderStart(
-      value: js.ThisFunction2[
-          /* this */ PluginContext, 
-          /* outputOptions */ OutputOptions, 
-          /* inputOptions */ InputOptions, 
-          js.Promise[Unit] | Unit
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolveAssetUrl(value: ResolveAssetUrlHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveAssetUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolveAssetUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveAssetUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolveDynamicImport(value: ResolveDynamicImportHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveDynamicImport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolveDynamicImport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveDynamicImport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolveFileUrl(value: ResolveFileUrlHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveFileUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolveFileUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveFileUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformBundle(value: TransformChunkHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformBundle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformBundle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformBundle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformChunk(value: TransformChunkHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformChunk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformChunk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformChunk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteBundle(
-      value: js.ThisFunction1[/* this */ PluginContext, /* bundle */ OutputBundle, Unit | js.Promise[Unit]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeBundle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteBundle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeBundle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

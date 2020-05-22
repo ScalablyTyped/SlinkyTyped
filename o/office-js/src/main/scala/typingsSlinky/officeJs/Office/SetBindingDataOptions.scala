@@ -11,23 +11,22 @@ import scala.scalajs.js.annotation._
   * 
   * If the rows option is used, the value must be "thisRow".
   */
-@js.native
 trait SetBindingDataOptions extends js.Object {
   /**
     * A user-defined item of any type that is returned, unchanged, in the asyncContext property of the AsyncResult object that is passed to a callback.
     */
-  var asyncContext: js.UndefOr[js.Any] = js.native
+  var asyncContext: js.UndefOr[js.Any] = js.undefined
   /**
     * Use only with binding type table and when a TableData object is passed for the data parameter. An array of objects that specify a range of 
     * columns, rows, or cells and specify, as key-value pairs, the cell formatting to apply to that range. 
     * 
     * Example: `[{cells: Office.Table.Data, format: {fontColor: "yellow"}}, {cells: {row: 3, column: 4}, format: {borderColor: "white", fontStyle: "bold"}}]`
     */
-  var cellFormat: js.UndefOr[js.Array[RangeFormatConfiguration]] = js.native
+  var cellFormat: js.UndefOr[js.Array[RangeFormatConfiguration]] = js.undefined
   /**
     * Explicitly sets the shape of the data object. If not supplied is inferred from the data type.
     */
-  var coercionType: js.UndefOr[CoercionType | String] = js.native
+  var coercionType: js.UndefOr[CoercionType | String] = js.undefined
   /**
     * Only for table bindings in content add-ins for Access. Array of strings. Specifies the column names.
     * 
@@ -35,7 +34,7 @@ trait SetBindingDataOptions extends js.Object {
     * As an alternative, we recommend that you use {@link https://powerapps.microsoft.com/ | Microsoft PowerApps}
     * to build no-code business solutions for web and mobile devices.
     */
-  var columns: js.UndefOr[js.Array[String]] = js.native
+  var columns: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Only for table bindings in content add-ins for Access. Specifies the pre-defined string "thisRow" to get data in the currently selected row.
     * 
@@ -43,133 +42,46 @@ trait SetBindingDataOptions extends js.Object {
     * As an alternative, we recommend that you use {@link https://powerapps.microsoft.com/ | Microsoft PowerApps}
     * to build no-code business solutions for web and mobile devices.
     */
-  var rows: js.UndefOr[String] = js.native
+  var rows: js.UndefOr[String] = js.undefined
   /**
     * Specifies the zero-based starting column for a subset of the data. Only for table or matrix bindings. If omitted, data is set starting in 
     * the first column.
     */
-  var startColumn: js.UndefOr[Double] = js.native
+  var startColumn: js.UndefOr[Double] = js.undefined
   /**
     * Specifies the zero-based starting row for a subset of the data in the binding. Only for table or matrix bindings. If omitted, data is set 
     * starting in the first row.
     */
-  var startRow: js.UndefOr[Double] = js.native
+  var startRow: js.UndefOr[Double] = js.undefined
   /**
     * For an inserted table, a list of key-value pairs that specify table formatting options, such as header row, total row, and banded rows. 
     * Example: `{bandedRows: true,  filterButton: false}`
     */
-  var tableOptions: js.UndefOr[js.Object] = js.native
+  var tableOptions: js.UndefOr[js.Object] = js.undefined
 }
 
 object SetBindingDataOptions {
   @scala.inline
-  def apply(): SetBindingDataOptions = {
+  def apply(
+    asyncContext: js.Any = null,
+    cellFormat: js.Array[RangeFormatConfiguration] = null,
+    coercionType: CoercionType | String = null,
+    columns: js.Array[String] = null,
+    rows: String = null,
+    startColumn: js.UndefOr[Double] = js.undefined,
+    startRow: js.UndefOr[Double] = js.undefined,
+    tableOptions: js.Object = null
+  ): SetBindingDataOptions = {
     val __obj = js.Dynamic.literal()
+    if (asyncContext != null) __obj.updateDynamic("asyncContext")(asyncContext.asInstanceOf[js.Any])
+    if (cellFormat != null) __obj.updateDynamic("cellFormat")(cellFormat.asInstanceOf[js.Any])
+    if (coercionType != null) __obj.updateDynamic("coercionType")(coercionType.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (!js.isUndefined(startColumn)) __obj.updateDynamic("startColumn")(startColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startRow)) __obj.updateDynamic("startRow")(startRow.get.asInstanceOf[js.Any])
+    if (tableOptions != null) __obj.updateDynamic("tableOptions")(tableOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetBindingDataOptions]
   }
-  @scala.inline
-  implicit class SetBindingDataOptionsOps[Self <: SetBindingDataOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsyncContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsyncContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellFormat(value: js.Array[RangeFormatConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoercionType(value: CoercionType | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coercionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoercionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coercionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

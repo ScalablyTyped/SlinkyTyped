@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Delete extends js.Object {
-  var create: scala.Double = js.native
-  var delete: scala.Double = js.native
-  var update: scala.Double = js.native
+  var create: scala.Double
+  var delete: scala.Double
+  var update: scala.Double
 }
 
 object Delete {
@@ -17,31 +16,5 @@ object Delete {
     val __obj = js.Dynamic.literal(create = create.asInstanceOf[js.Any], delete = delete.asInstanceOf[js.Any], update = update.asInstanceOf[js.Any])
     __obj.asInstanceOf[Delete]
   }
-  @scala.inline
-  implicit class DeleteOps[Self <: Delete] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.vegaTypings.markMod
 
-import typingsSlinky.vegaTypings.anon.Aggregate
-import typingsSlinky.vegaTypings.anon.Name
+import typingsSlinky.vegaTypings.anon.As
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +13,15 @@ trait Facet extends js.Object
 
 object Facet {
   @scala.inline
-  implicit def apply(value: Aggregate): Facet = value.asInstanceOf[Facet]
+  def Name(data: String, field: String, name: String): Facet = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], field = field.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Facet]
+  }
   @scala.inline
-  implicit def apply(value: Name): Facet = value.asInstanceOf[Facet]
+  def Aggregate(data: String, groupby: String | js.Array[String], name: String, aggregate: As = null): Facet = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], groupby = groupby.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (aggregate != null) __obj.updateDynamic("aggregate")(aggregate.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Facet]
+  }
 }
 

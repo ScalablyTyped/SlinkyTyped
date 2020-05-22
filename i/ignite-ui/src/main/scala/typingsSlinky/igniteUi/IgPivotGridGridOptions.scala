@@ -5,142 +5,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgPivotGridGridOptions
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Enables/disables rendering of alternating row styles (odd and even rows receive different styling). Note that if a custom jQuery template is set, this has no effect and CSS for the row should be adjusted manually in the template contents.
-  	 */
-  var alternateRowStyles: js.UndefOr[Boolean] = js.native
+    * Enables/disables rendering of alternating row styles (odd and even rows receive different styling). Note that if a custom jQuery template is set, this has no effect and CSS for the row should be adjusted manually in the template contents.
+    */
+  var alternateRowStyles: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Caption text that will be shown above the pivot grid header.
-  	 */
-  var caption: js.UndefOr[String] = js.native
+    * Caption text that will be shown above the pivot grid header.
+    */
+  var caption: js.UndefOr[String] = js.undefined
   /**
-  	 * Default column width that will be set for all columns.
-  	 */
-  var defaultColumnWidth: js.UndefOr[String | Double] = js.native
+    * Default column width that will be set for all columns.
+    */
+  var defaultColumnWidth: js.UndefOr[String | Double] = js.undefined
   /**
-  	 * Enables/disables rendering of ui-state-hover classes when the mouse is over a record. This can be useful in templating scenarios, for example, where we don't want to apply hover styling to templated content.
-  	 */
-  var enableHoverStyles: js.UndefOr[Boolean] = js.native
+    * Enables/disables rendering of ui-state-hover classes when the mouse is over a record. This can be useful in templating scenarios, for example, where we don't want to apply hover styling to templated content.
+    */
+  var enableHoverStyles: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * A list of grid features definitions. The supported features are Resizing and Tooltips. Each feature goes with its separate options that are documented for the feature accordingly.
-  	 *
-  	 */
-  var features: js.UndefOr[IgPivotGridGridOptionsFeatures] = js.native
+    * A list of grid features definitions. The supported features are Resizing and Tooltips. Each feature goes with its separate options that are documented for the feature accordingly.
+    *
+    */
+  var features: js.UndefOr[IgPivotGridGridOptionsFeatures] = js.undefined
   /**
-  	 * Headers will be fixed if this option is set to true, and only the grid data will be scrollable.
-  	 *
-  	 */
-  var fixedHeaders: js.UndefOr[Boolean] = js.native
+    * Headers will be fixed if this option is set to true, and only the grid data will be scrollable.
+    *
+    */
+  var fixedHeaders: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Initial tabIndex attribute that will be set on the container element.
-  	 *
-  	 */
-  var tabIndex: js.UndefOr[Double] = js.native
+    * Initial tabIndex attribute that will be set on the container element.
+    *
+    */
+  var tabIndex: js.UndefOr[Double] = js.undefined
 }
 
 object IgPivotGridGridOptions {
   @scala.inline
-  def apply(): IgPivotGridGridOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    alternateRowStyles: js.UndefOr[Boolean] = js.undefined,
+    caption: String = null,
+    defaultColumnWidth: String | Double = null,
+    enableHoverStyles: js.UndefOr[Boolean] = js.undefined,
+    features: IgPivotGridGridOptionsFeatures = null,
+    fixedHeaders: js.UndefOr[Boolean] = js.undefined,
+    tabIndex: js.UndefOr[Double] = js.undefined
+  ): IgPivotGridGridOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(alternateRowStyles)) __obj.updateDynamic("alternateRowStyles")(alternateRowStyles.get.asInstanceOf[js.Any])
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (defaultColumnWidth != null) __obj.updateDynamic("defaultColumnWidth")(defaultColumnWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableHoverStyles)) __obj.updateDynamic("enableHoverStyles")(enableHoverStyles.get.asInstanceOf[js.Any])
+    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedHeaders)) __obj.updateDynamic("fixedHeaders")(fixedHeaders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgPivotGridGridOptions]
   }
-  @scala.inline
-  implicit class IgPivotGridGridOptionsOps[Self <: IgPivotGridGridOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlternateRowStyles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateRowStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternateRowStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateRowStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultColumnWidth(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultColumnWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableHoverStyles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHoverStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableHoverStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHoverStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatures(value: IgPivotGridGridOptionsFeatures): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

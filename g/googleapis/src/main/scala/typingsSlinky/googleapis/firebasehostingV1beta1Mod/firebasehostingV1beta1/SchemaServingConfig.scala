@@ -43,89 +43,22 @@ trait SchemaServingConfig extends js.Object {
 
 object SchemaServingConfig {
   @scala.inline
-  def apply(): SchemaServingConfig = {
+  def apply(
+    appAssociation: String = null,
+    cleanUrls: js.UndefOr[Boolean] = js.undefined,
+    headers: js.Array[SchemaHeader] = null,
+    redirects: js.Array[SchemaRedirect] = null,
+    rewrites: js.Array[SchemaRewrite] = null,
+    trailingSlashBehavior: String = null
+  ): SchemaServingConfig = {
     val __obj = js.Dynamic.literal()
+    if (appAssociation != null) __obj.updateDynamic("appAssociation")(appAssociation.asInstanceOf[js.Any])
+    if (!js.isUndefined(cleanUrls)) __obj.updateDynamic("cleanUrls")(cleanUrls.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (redirects != null) __obj.updateDynamic("redirects")(redirects.asInstanceOf[js.Any])
+    if (rewrites != null) __obj.updateDynamic("rewrites")(rewrites.asInstanceOf[js.Any])
+    if (trailingSlashBehavior != null) __obj.updateDynamic("trailingSlashBehavior")(trailingSlashBehavior.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServingConfig]
   }
-  @scala.inline
-  implicit class SchemaServingConfigOps[Self <: SchemaServingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppAssociation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appAssociation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppAssociation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appAssociation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCleanUrls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCleanUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Array[SchemaHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirects(value: js.Array[SchemaRedirect]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRewrites(value: js.Array[SchemaRewrite]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRewrites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrailingSlashBehavior(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingSlashBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrailingSlashBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingSlashBehavior")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

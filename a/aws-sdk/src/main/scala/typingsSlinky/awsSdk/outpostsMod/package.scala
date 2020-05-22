@@ -22,6 +22,12 @@ package object outpostsMod {
   type SiteId = java.lang.String
   type SiteName = java.lang.String
   type Token = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2019-12-03`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.outpostsMod._apiVersion | java.lang.String
   type outpostListDefinition = js.Array[typingsSlinky.awsSdk.outpostsMod.Outpost]
   type siteListDefinition = js.Array[typingsSlinky.awsSdk.outpostsMod.Site]
 }

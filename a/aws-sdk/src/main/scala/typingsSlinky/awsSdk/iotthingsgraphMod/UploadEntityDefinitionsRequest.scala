@@ -22,53 +22,16 @@ trait UploadEntityDefinitionsRequest extends js.Object {
 
 object UploadEntityDefinitionsRequest {
   @scala.inline
-  def apply(): UploadEntityDefinitionsRequest = {
+  def apply(
+    deprecateExistingEntities: js.UndefOr[DeprecateExistingEntities] = js.undefined,
+    document: DefinitionDocument = null,
+    syncWithPublicNamespace: js.UndefOr[SyncWithPublicNamespace] = js.undefined
+  ): UploadEntityDefinitionsRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deprecateExistingEntities)) __obj.updateDynamic("deprecateExistingEntities")(deprecateExistingEntities.get.asInstanceOf[js.Any])
+    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncWithPublicNamespace)) __obj.updateDynamic("syncWithPublicNamespace")(syncWithPublicNamespace.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadEntityDefinitionsRequest]
   }
-  @scala.inline
-  implicit class UploadEntityDefinitionsRequestOps[Self <: UploadEntityDefinitionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeprecateExistingEntities(value: DeprecateExistingEntities): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecateExistingEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecateExistingEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecateExistingEntities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocument(value: DefinitionDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncWithPublicNamespace(value: SyncWithPublicNamespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncWithPublicNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncWithPublicNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncWithPublicNamespace")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

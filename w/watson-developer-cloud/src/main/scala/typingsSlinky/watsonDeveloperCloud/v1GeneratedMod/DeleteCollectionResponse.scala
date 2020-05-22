@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** DeleteCollectionResponse. */
-@js.native
 trait DeleteCollectionResponse extends js.Object {
   /** The unique identifier of the collection that is being deleted. */
-  var collection_id: String = js.native
+  var collection_id: String
   /** The status of the collection. The status of a successful deletion operation is `deleted`. */
-  var status: String = js.native
+  var status: String
 }
 
 object DeleteCollectionResponse {
@@ -19,25 +18,5 @@ object DeleteCollectionResponse {
     val __obj = js.Dynamic.literal(collection_id = collection_id.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteCollectionResponse]
   }
-  @scala.inline
-  implicit class DeleteCollectionResponseOps[Self <: DeleteCollectionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollection_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

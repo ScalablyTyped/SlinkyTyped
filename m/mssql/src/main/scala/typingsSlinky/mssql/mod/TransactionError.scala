@@ -11,5 +11,9 @@ class TransactionError protected () extends Error {
   def this(message: String) = this()
   def this(message: String, code: js.Any) = this()
   var code: String = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

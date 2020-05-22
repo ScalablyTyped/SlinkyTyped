@@ -2,7 +2,6 @@ package typingsSlinky.antd.inputGroupMod
 
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.large
@@ -14,159 +13,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GroupProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var compact: js.UndefOr[Boolean] = js.native
-  var onBlur: js.UndefOr[FocusEventHandler[HTMLSpanElement]] = js.native
-  var onFocus: js.UndefOr[FocusEventHandler[HTMLSpanElement]] = js.native
-  var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLSpanElement]] = js.native
-  var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLSpanElement]] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var size: js.UndefOr[large | small | typingsSlinky.antd.antdStrings.default] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var compact: js.UndefOr[Boolean] = js.undefined
+  var onBlur: js.UndefOr[FocusEventHandler[HTMLSpanElement]] = js.undefined
+  var onFocus: js.UndefOr[FocusEventHandler[HTMLSpanElement]] = js.undefined
+  var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLSpanElement]] = js.undefined
+  var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLSpanElement]] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var size: js.UndefOr[large | small | typingsSlinky.antd.antdStrings.default] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object GroupProps {
   @scala.inline
-  def apply(): GroupProps = {
+  def apply(
+    children: TagMod[Any] = null,
+    className: String = null,
+    compact: js.UndefOr[Boolean] = js.undefined,
+    onBlur: SyntheticFocusEvent[HTMLSpanElement] => Unit = null,
+    onFocus: SyntheticFocusEvent[HTMLSpanElement] => Unit = null,
+    onMouseEnter: SyntheticMouseEvent[HTMLSpanElement] => Unit = null,
+    onMouseLeave: SyntheticMouseEvent[HTMLSpanElement] => Unit = null,
+    prefixCls: String = null,
+    size: large | small | typingsSlinky.antd.antdStrings.default = null,
+    style: CSSProperties = null
+  ): GroupProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupProps]
   }
-  @scala.inline
-  implicit class GroupPropsOps[Self <: GroupProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseEnter(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseLeave(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: large | small | typingsSlinky.antd.antdStrings.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

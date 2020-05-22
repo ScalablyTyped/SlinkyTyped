@@ -11,31 +11,30 @@ import scala.scalajs.js.annotation._
   * gives access to the VCL window implementation.
   * @deprecated Deprecated
   */
-@js.native
 trait XVclWindowPeer extends XWindowPeer {
   /** enables clipping of sibling windows. */
-  def enableClipSiblings(bClip: Boolean): Unit = js.native
+  def enableClipSiblings(bClip: Boolean): Unit
   /** returns the value of the property with the specified name. */
-  def getProperty(PropertyName: String): js.Any = js.native
+  def getProperty(PropertyName: String): js.Any
   /** returns the font, foreground and background color for the specified type. */
   def getStyles(
     nType: Double,
     Font: js.Array[FontDescriptor],
     ForegroundColor: js.Array[Color],
     BackgroundColor: js.Array[Color]
-  ): Unit = js.native
+  ): Unit
   /** returns `TRUE` if the window peer is a child, `FALSE` otherwise. */
-  def isChild(Peer: XWindowPeer): Boolean = js.native
+  def isChild(Peer: XWindowPeer): Boolean
   /** returns `TRUE` if the window peer is in design mode, `FALSE` otherwise. */
-  def isDesignMode(): Boolean = js.native
+  def isDesignMode(): Boolean
   /** sets the control font. */
-  def setControlFont(aFont: FontDescriptor): Unit = js.native
+  def setControlFont(aFont: FontDescriptor): Unit
   /** sets the design mode for use in a design editor. */
-  def setDesignMode(bOn: Boolean): Unit = js.native
+  def setDesignMode(bOn: Boolean): Unit
   /** sets the foreground color. */
-  def setForeground(Color: Color): Unit = js.native
+  def setForeground(Color: Color): Unit
   /** sets the value of the property with the specified name. */
-  def setProperty(PropertyName: String, Value: js.Any): Unit = js.native
+  def setProperty(PropertyName: String, Value: js.Any): Unit
 }
 
 object XVclWindowPeer {
@@ -66,67 +65,5 @@ object XVclWindowPeer {
     val __obj = js.Dynamic.literal(Toolkit = Toolkit.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), dispose = js.Any.fromFunction0(dispose), enableClipSiblings = js.Any.fromFunction1(enableClipSiblings), getProperty = js.Any.fromFunction1(getProperty), getStyles = js.Any.fromFunction4(getStyles), getToolkit = js.Any.fromFunction0(getToolkit), invalidate = js.Any.fromFunction1(invalidate), invalidateRect = js.Any.fromFunction2(invalidateRect), isChild = js.Any.fromFunction1(isChild), isDesignMode = js.Any.fromFunction0(isDesignMode), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), setBackground = js.Any.fromFunction1(setBackground), setControlFont = js.Any.fromFunction1(setControlFont), setDesignMode = js.Any.fromFunction1(setDesignMode), setForeground = js.Any.fromFunction1(setForeground), setPointer = js.Any.fromFunction1(setPointer), setProperty = js.Any.fromFunction2(setProperty))
     __obj.asInstanceOf[XVclWindowPeer]
   }
-  @scala.inline
-  implicit class XVclWindowPeerOps[Self <: XVclWindowPeer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableClipSiblings(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableClipSiblings")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetProperty(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProperty")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetStyles(value: (Double, js.Array[FontDescriptor], js.Array[Color], js.Array[Color]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStyles")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withIsChild(value: XWindowPeer => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsDesignMode(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDesignMode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetControlFont(value: FontDescriptor => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setControlFont")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDesignMode(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDesignMode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetForeground(value: Color => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setForeground")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetProperty(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setProperty")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

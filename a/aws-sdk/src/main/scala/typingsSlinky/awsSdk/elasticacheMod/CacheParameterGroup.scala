@@ -26,65 +26,18 @@ trait CacheParameterGroup extends js.Object {
 
 object CacheParameterGroup {
   @scala.inline
-  def apply(): CacheParameterGroup = {
+  def apply(
+    CacheParameterGroupFamily: String = null,
+    CacheParameterGroupName: String = null,
+    Description: String = null,
+    IsGlobal: js.UndefOr[Boolean] = js.undefined
+  ): CacheParameterGroup = {
     val __obj = js.Dynamic.literal()
+    if (CacheParameterGroupFamily != null) __obj.updateDynamic("CacheParameterGroupFamily")(CacheParameterGroupFamily.asInstanceOf[js.Any])
+    if (CacheParameterGroupName != null) __obj.updateDynamic("CacheParameterGroupName")(CacheParameterGroupName.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsGlobal)) __obj.updateDynamic("IsGlobal")(IsGlobal.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheParameterGroup]
   }
-  @scala.inline
-  implicit class CacheParameterGroupOps[Self <: CacheParameterGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheParameterGroupFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheParameterGroupFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheParameterGroupFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheParameterGroupFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheParameterGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheParameterGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheParameterGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheParameterGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsGlobal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsGlobal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsGlobal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsGlobal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

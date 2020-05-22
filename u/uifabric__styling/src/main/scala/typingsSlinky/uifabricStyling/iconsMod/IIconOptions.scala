@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IIconOptions extends js.Object {
   /**
     * By default, registering the same set of icons will generate a console warning per duplicate icon
@@ -20,45 +19,20 @@ trait IIconOptions extends js.Object {
     * that if an icon which was previous registered is registered again, it will be silently ignored.
     * However, consider whether the problems listed above will cause issues.
     **/
-  var disableWarnings: Boolean = js.native
+  var disableWarnings: Boolean
   /**
     * @deprecated
     * Use 'disableWarnings' instead.
     */
-  var warnOnMissingIcons: js.UndefOr[Boolean] = js.native
+  var warnOnMissingIcons: js.UndefOr[Boolean] = js.undefined
 }
 
 object IIconOptions {
   @scala.inline
-  def apply(disableWarnings: Boolean): IIconOptions = {
+  def apply(disableWarnings: Boolean, warnOnMissingIcons: js.UndefOr[Boolean] = js.undefined): IIconOptions = {
     val __obj = js.Dynamic.literal(disableWarnings = disableWarnings.asInstanceOf[js.Any])
+    if (!js.isUndefined(warnOnMissingIcons)) __obj.updateDynamic("warnOnMissingIcons")(warnOnMissingIcons.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIconOptions]
   }
-  @scala.inline
-  implicit class IIconOptionsOps[Self <: IIconOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableWarnings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWarnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWarnOnMissingIcons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnOnMissingIcons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnOnMissingIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnOnMissingIcons")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

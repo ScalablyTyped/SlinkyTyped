@@ -36,41 +36,11 @@ trait SchemaWeightedFontFamily extends js.Object {
 
 object SchemaWeightedFontFamily {
   @scala.inline
-  def apply(): SchemaWeightedFontFamily = {
+  def apply(fontFamily: String = null, weight: js.UndefOr[Double] = js.undefined): SchemaWeightedFontFamily = {
     val __obj = js.Dynamic.literal()
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWeightedFontFamily]
   }
-  @scala.inline
-  implicit class SchemaWeightedFontFamilyOps[Self <: SchemaWeightedFontFamily] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

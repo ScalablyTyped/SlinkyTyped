@@ -22,41 +22,11 @@ trait SchemaRoomP2PStatuses extends js.Object {
 
 object SchemaRoomP2PStatuses {
   @scala.inline
-  def apply(): SchemaRoomP2PStatuses = {
+  def apply(kind: String = null, updates: js.Array[SchemaRoomP2PStatus] = null): SchemaRoomP2PStatuses = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (updates != null) __obj.updateDynamic("updates")(updates.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoomP2PStatuses]
   }
-  @scala.inline
-  implicit class SchemaRoomP2PStatusesOps[Self <: SchemaRoomP2PStatuses] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdates(value: js.Array[SchemaRoomP2PStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,30 +6,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodeLayerProps extends BaseWidgetProps {
-  var diagramEngine: DiagramEngine = js.native
+  var diagramEngine: DiagramEngine
 }
 
 object NodeLayerProps {
   @scala.inline
-  def apply(diagramEngine: DiagramEngine): NodeLayerProps = {
+  def apply(
+    diagramEngine: DiagramEngine,
+    baseClass: String = null,
+    className: String = null,
+    extraProps: js.Any = null
+  ): NodeLayerProps = {
     val __obj = js.Dynamic.literal(diagramEngine = diagramEngine.asInstanceOf[js.Any])
+    if (baseClass != null) __obj.updateDynamic("baseClass")(baseClass.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (extraProps != null) __obj.updateDynamic("extraProps")(extraProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeLayerProps]
   }
-  @scala.inline
-  implicit class NodeLayerPropsOps[Self <: NodeLayerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiagramEngine(value: DiagramEngine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagramEngine")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

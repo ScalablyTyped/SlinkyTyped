@@ -20,5 +20,20 @@ class ASPxClientAppointmentDragEventArgs protected ()
     mouseEvent: js.Any,
     dragInformation: js.Array[typingsSlinky.devexpressWeb.ASPxClientAppointmentDragInfo]
   ) = this()
+  /**
+    * Specifies whether or not appointments can be dropped into the intervals over which they are currently dragged.
+    */
+  /* CompleteClass */
+  override var allow: Boolean = js.native
+  /**
+    * Provides information about dragged appointments.
+    */
+  /* CompleteClass */
+  override var dragInformation: js.Array[typingsSlinky.devexpressWeb.ASPxClientAppointmentDragInfo] = js.native
+  /**
+    * Gets a mouse event object related to the current drag operation.
+    */
+  /* CompleteClass */
+  override var mouseEvent: js.Any = js.native
 }
 

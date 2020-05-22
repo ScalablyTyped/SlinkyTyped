@@ -11,29 +11,10 @@ trait SchemaResponseHeader extends js.Object {
 
 object SchemaResponseHeader {
   @scala.inline
-  def apply(): SchemaResponseHeader = {
+  def apply(operationId: String = null): SchemaResponseHeader = {
     val __obj = js.Dynamic.literal()
+    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResponseHeader]
   }
-  @scala.inline
-  implicit class SchemaResponseHeaderOps[Self <: SchemaResponseHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

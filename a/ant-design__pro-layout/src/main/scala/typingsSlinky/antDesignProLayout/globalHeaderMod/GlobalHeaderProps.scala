@@ -1,20 +1,18 @@
 package typingsSlinky.antDesignProLayout.globalHeaderMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GlobalHeaderProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var collapsed: js.UndefOr[Boolean] = js.native
-  var collapsedButtonRender: js.UndefOr[WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]] = js.native
-  var isMobile: js.UndefOr[Boolean] = js.native
-  var logo: js.UndefOr[TagMod[Any]] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var collapsed: js.UndefOr[Boolean] = js.undefined
+  var collapsedButtonRender: js.UndefOr[WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]] = js.undefined
+  var isMobile: js.UndefOr[Boolean] = js.undefined
+  var logo: js.UndefOr[TagMod[Any]] = js.undefined
   var menuHeaderRender: js.UndefOr[
     WithFalse[
       js.Function3[
@@ -24,185 +22,48 @@ trait GlobalHeaderProps extends js.Object {
         TagMod[Any]
       ]
     ]
-  ] = js.native
+  ] = js.undefined
   var menuRender: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: @ant-design/pro-layout.@ant-design/pro-layout/lib/BasicLayout.BasicLayoutProps['menuRender'] */ js.Any
-  ] = js.native
-  var onCollapse: js.UndefOr[js.Function1[/* collapsed */ Boolean, Unit]] = js.native
-  var rightContentRender: js.UndefOr[WithFalse[js.Function1[/* props */ this.type, TagMod[Any]]]] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  ] = js.undefined
+  var onCollapse: js.UndefOr[js.Function1[/* collapsed */ Boolean, Unit]] = js.undefined
+  var rightContentRender: js.UndefOr[WithFalse[js.Function1[/* props */ this.type, TagMod[Any]]]] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object GlobalHeaderProps {
   @scala.inline
-  def apply(): GlobalHeaderProps = {
+  def apply(
+    className: String = null,
+    collapsed: js.UndefOr[Boolean] = js.undefined,
+    collapsedButtonRender: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]] = null,
+    isMobile: js.UndefOr[Boolean] = js.undefined,
+    logo: TagMod[Any] = null,
+    menuHeaderRender: WithFalse[
+      js.Function3[
+        /* logo */ TagMod[Any], 
+        /* title */ TagMod[Any], 
+        /* props */ js.UndefOr[GlobalHeaderProps], 
+        TagMod[Any]
+      ]
+    ] = null,
+    menuRender: /* import warning: importer.ImportType#apply Failed type conversion: @ant-design/pro-layout.@ant-design/pro-layout/lib/BasicLayout.BasicLayoutProps['menuRender'] */ js.Any = null,
+    onCollapse: /* collapsed */ Boolean => Unit = null,
+    rightContentRender: WithFalse[js.Function1[GlobalHeaderProps, TagMod[Any]]] = null,
+    style: CSSProperties = null
+  ): GlobalHeaderProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.get.asInstanceOf[js.Any])
+    if (collapsedButtonRender != null) __obj.updateDynamic("collapsedButtonRender")(collapsedButtonRender.asInstanceOf[js.Any])
+    if (!js.isUndefined(isMobile)) __obj.updateDynamic("isMobile")(isMobile.get.asInstanceOf[js.Any])
+    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
+    if (menuHeaderRender != null) __obj.updateDynamic("menuHeaderRender")(menuHeaderRender.asInstanceOf[js.Any])
+    if (menuRender != null) __obj.updateDynamic("menuRender")(menuRender.asInstanceOf[js.Any])
+    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
+    if (rightContentRender != null) __obj.updateDynamic("rightContentRender")(rightContentRender.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[GlobalHeaderProps]
   }
-  @scala.inline
-  implicit class GlobalHeaderPropsOps[Self <: GlobalHeaderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedButtonRender")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCollapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedButtonRender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsedButtonRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedButtonRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMobile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMobile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogoReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLogo(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuHeaderRenderFunction3(
-      value: (/* logo */ TagMod[Any], /* title */ TagMod[Any], /* props */ js.UndefOr[GlobalHeaderProps]) => TagMod[Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuHeaderRender")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withMenuHeaderRender(
-      value: WithFalse[
-          js.Function3[
-            /* logo */ TagMod[Any], 
-            /* title */ TagMod[Any], 
-            /* props */ js.UndefOr[GlobalHeaderProps], 
-            TagMod[Any]
-          ]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuHeaderRender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuHeaderRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuHeaderRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuRender(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: @ant-design/pro-layout.@ant-design/pro-layout/lib/BasicLayout.BasicLayoutProps['menuRender'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuRender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCollapse(value: /* collapsed */ Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightContentRenderFunction1(value: GlobalHeaderProps => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentRender")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRightContentRender(value: WithFalse[js.Function1[GlobalHeaderProps, TagMod[Any]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentRender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightContentRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightContentRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

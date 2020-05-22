@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents completion information for a task at the time a completion notification is sent. */
-@js.native
 trait BackgroundTaskCompletedEventArgs extends js.Object {
   /** Gets the identifier of the background task instance for this completion status notification. */
-  var instanceId: String = js.native
+  var instanceId: String
   /** Throws an exception if the background task completed event has reported an error. */
-  def checkResult(): Unit = js.native
+  def checkResult(): Unit
 }
 
 object BackgroundTaskCompletedEventArgs {
@@ -19,25 +18,5 @@ object BackgroundTaskCompletedEventArgs {
     val __obj = js.Dynamic.literal(checkResult = js.Any.fromFunction0(checkResult), instanceId = instanceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackgroundTaskCompletedEventArgs]
   }
-  @scala.inline
-  implicit class BackgroundTaskCompletedEventArgsOps[Self <: BackgroundTaskCompletedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckResult(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkResult")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

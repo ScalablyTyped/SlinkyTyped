@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies an end docking event. */
-@js.native
 trait EndDockingEvent extends EventObject {
   /** specifies the new bounding rectangle of the window */
-  var WindowRectangle: Rectangle = js.native
+  var WindowRectangle: Rectangle
   /** specifies that the docking procedure was canceled */
-  var bCancelled: Boolean = js.native
+  var bCancelled: Boolean
   /** specifies if the window is now floating `TRUE` or docked `FALSE` */
-  var bFloating: Boolean = js.native
+  var bFloating: Boolean
 }
 
 object EndDockingEvent {
@@ -23,31 +22,5 @@ object EndDockingEvent {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any], WindowRectangle = WindowRectangle.asInstanceOf[js.Any], bCancelled = bCancelled.asInstanceOf[js.Any], bFloating = bFloating.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndDockingEvent]
   }
-  @scala.inline
-  implicit class EndDockingEventOps[Self <: EndDockingEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWindowRectangle(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowRectangle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBCancelled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bCancelled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBFloating(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bFloating")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

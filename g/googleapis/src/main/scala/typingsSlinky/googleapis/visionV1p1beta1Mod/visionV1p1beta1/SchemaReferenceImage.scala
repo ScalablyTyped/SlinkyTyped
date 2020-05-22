@@ -34,53 +34,12 @@ trait SchemaReferenceImage extends js.Object {
 
 object SchemaReferenceImage {
   @scala.inline
-  def apply(): SchemaReferenceImage = {
+  def apply(boundingPolys: js.Array[SchemaBoundingPoly] = null, name: String = null, uri: String = null): SchemaReferenceImage = {
     val __obj = js.Dynamic.literal()
+    if (boundingPolys != null) __obj.updateDynamic("boundingPolys")(boundingPolys.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReferenceImage]
   }
-  @scala.inline
-  implicit class SchemaReferenceImageOps[Self <: SchemaReferenceImage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingPolys(value: js.Array[SchemaBoundingPoly]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPolys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingPolys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPolys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

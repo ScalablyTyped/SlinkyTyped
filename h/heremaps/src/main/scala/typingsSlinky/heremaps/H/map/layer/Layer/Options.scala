@@ -13,88 +13,30 @@ import scala.scalajs.js.annotation._
   * @property projection {H.geo.IProjection=} - The projection to be used for this layer, default is H.geo.mercator
   * @property minWorldSize {number=} - The minimal world size at zoom level 0, default is 256
   */
-@js.native
 trait Options extends js.Object {
-  var dark: js.UndefOr[Boolean] = js.native
-  var max: js.UndefOr[Double] = js.native
-  var min: js.UndefOr[Double] = js.native
-  var minWorldSize: js.UndefOr[Double] = js.native
-  var projection: js.UndefOr[IProjection] = js.native
+  var dark: js.UndefOr[Boolean] = js.undefined
+  var max: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[Double] = js.undefined
+  var minWorldSize: js.UndefOr[Double] = js.undefined
+  var projection: js.UndefOr[IProjection] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    dark: js.UndefOr[Boolean] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    minWorldSize: js.UndefOr[Double] = js.undefined,
+    projection: IProjection = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dark)) __obj.updateDynamic("dark")(dark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWorldSize)) __obj.updateDynamic("minWorldSize")(minWorldSize.get.asInstanceOf[js.Any])
+    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDark(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWorldSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWorldSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWorldSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWorldSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: IProjection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

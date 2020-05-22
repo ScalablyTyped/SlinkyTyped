@@ -22,242 +22,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait toastOptions extends js.Object {
-  var afterHidden: js.UndefOr[js.Function0[_]] = js.native
-  var afterShown: js.UndefOr[js.Function0[_]] = js.native
-  var allowToastClose: js.UndefOr[Boolean] = js.native
-  var beforeHide: js.UndefOr[js.Function0[_]] = js.native
-  var beforeShow: js.UndefOr[js.Function0[_]] = js.native
-  var bgColor: js.UndefOr[String] = js.native
-  var heading: js.UndefOr[String] = js.native
-  var hideAfter: js.UndefOr[Double | `false`] = js.native
-  var icon: js.UndefOr[info | warning | error | success] = js.native
-  var loader: js.UndefOr[Boolean] = js.native
-  var loaderBg: js.UndefOr[String] = js.native
+  var afterHidden: js.UndefOr[js.Function0[_]] = js.undefined
+  var afterShown: js.UndefOr[js.Function0[_]] = js.undefined
+  var allowToastClose: js.UndefOr[Boolean] = js.undefined
+  var beforeHide: js.UndefOr[js.Function0[_]] = js.undefined
+  var beforeShow: js.UndefOr[js.Function0[_]] = js.undefined
+  var bgColor: js.UndefOr[String] = js.undefined
+  var heading: js.UndefOr[String] = js.undefined
+  var hideAfter: js.UndefOr[Double | `false`] = js.undefined
+  var icon: js.UndefOr[info | warning | error | success] = js.undefined
+  var loader: js.UndefOr[Boolean] = js.undefined
+  var loaderBg: js.UndefOr[String] = js.undefined
   var position: js.UndefOr[
     `bottom-left` | `bottom-right` | `bottom-center` | `top-right` | `top-left` | `top-center` | `mid-center` | CustomPosition
-  ] = js.native
-  var showHideTransition: js.UndefOr[fade | slide | plain] = js.native
-  var stack: js.UndefOr[Double | `false`] = js.native
-  var text: String = js.native
-  var textAlign: js.UndefOr[left | right | center] = js.native
-  var textColor: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var showHideTransition: js.UndefOr[fade | slide | plain] = js.undefined
+  var stack: js.UndefOr[Double | `false`] = js.undefined
+  var text: String
+  var textAlign: js.UndefOr[left | right | center] = js.undefined
+  var textColor: js.UndefOr[String] = js.undefined
 }
 
 object toastOptions {
   @scala.inline
-  def apply(text: String): toastOptions = {
+  def apply(
+    text: String,
+    afterHidden: () => _ = null,
+    afterShown: () => _ = null,
+    allowToastClose: js.UndefOr[Boolean] = js.undefined,
+    beforeHide: () => _ = null,
+    beforeShow: () => _ = null,
+    bgColor: String = null,
+    heading: String = null,
+    hideAfter: Double | `false` = null,
+    icon: info | warning | error | success = null,
+    loader: js.UndefOr[Boolean] = js.undefined,
+    loaderBg: String = null,
+    position: `bottom-left` | `bottom-right` | `bottom-center` | `top-right` | `top-left` | `top-center` | `mid-center` | CustomPosition = null,
+    showHideTransition: fade | slide | plain = null,
+    stack: Double | `false` = null,
+    textAlign: left | right | center = null,
+    textColor: String = null
+  ): toastOptions = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    if (afterHidden != null) __obj.updateDynamic("afterHidden")(js.Any.fromFunction0(afterHidden))
+    if (afterShown != null) __obj.updateDynamic("afterShown")(js.Any.fromFunction0(afterShown))
+    if (!js.isUndefined(allowToastClose)) __obj.updateDynamic("allowToastClose")(allowToastClose.get.asInstanceOf[js.Any])
+    if (beforeHide != null) __obj.updateDynamic("beforeHide")(js.Any.fromFunction0(beforeHide))
+    if (beforeShow != null) __obj.updateDynamic("beforeShow")(js.Any.fromFunction0(beforeShow))
+    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
+    if (heading != null) __obj.updateDynamic("heading")(heading.asInstanceOf[js.Any])
+    if (hideAfter != null) __obj.updateDynamic("hideAfter")(hideAfter.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (!js.isUndefined(loader)) __obj.updateDynamic("loader")(loader.get.asInstanceOf[js.Any])
+    if (loaderBg != null) __obj.updateDynamic("loaderBg")(loaderBg.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (showHideTransition != null) __obj.updateDynamic("showHideTransition")(showHideTransition.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[toastOptions]
   }
-  @scala.inline
-  implicit class toastOptionsOps[Self <: toastOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAfterHidden(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterHidden")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterShown(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterShown")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterShown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterShown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowToastClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowToastClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowToastClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowToastClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeHide(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeHide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeShow(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeShow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeading(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideAfter(value: Double | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: info | warning | error | success): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoaderBg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaderBg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoaderBg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaderBg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(
-      value: `bottom-left` | `bottom-right` | `bottom-center` | `top-right` | `top-left` | `top-center` | `mid-center` | CustomPosition
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHideTransition(value: fade | slide | plain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHideTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHideTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHideTransition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStack(value: Double | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: left | right | center): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientSpreadsheet.SelectionChanged event.
   */
-@js.native
 trait ASPxClientSpreadsheetSelectionChangedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets an object that determines the currently selected region within the Spreadsheet.
     */
-  var selection: ASPxClientSpreadsheetSelection = js.native
+  var selection: ASPxClientSpreadsheetSelection
 }
 
 object ASPxClientSpreadsheetSelectionChangedEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientSpreadsheetSelectionChangedEventArgs {
     val __obj = js.Dynamic.literal(selection = selection.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientSpreadsheetSelectionChangedEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientSpreadsheetSelectionChangedEventArgsOps[Self <: ASPxClientSpreadsheetSelectionChangedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelection(value: ASPxClientSpreadsheetSelection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

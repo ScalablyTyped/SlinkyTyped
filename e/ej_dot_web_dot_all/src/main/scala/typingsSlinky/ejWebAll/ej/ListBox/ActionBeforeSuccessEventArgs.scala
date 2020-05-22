@@ -4,128 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActionBeforeSuccessEventArgs extends js.Object {
   /** List of actual object.
     */
-  var actual: js.UndefOr[js.Any] = js.native
+  var actual: js.UndefOr[js.Any] = js.undefined
   /** Set this option to true to cancel the event.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Instance of the listbox model object.
     */
-  var model: js.UndefOr[Model] = js.native
+  var model: js.UndefOr[Model] = js.undefined
   /** Object of ListBox widget which contains DataManager arguments
     */
-  var request: js.UndefOr[js.Any] = js.native
+  var request: js.UndefOr[js.Any] = js.undefined
   /** List of array object
     */
-  var result: js.UndefOr[js.Array[_]] = js.native
+  var result: js.UndefOr[js.Array[_]] = js.undefined
   /** Name of the event.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /** ExecuteQuery object of DataManager
     */
-  var xhr: js.UndefOr[js.Any] = js.native
+  var xhr: js.UndefOr[js.Any] = js.undefined
 }
 
 object ActionBeforeSuccessEventArgs {
   @scala.inline
-  def apply(): ActionBeforeSuccessEventArgs = {
+  def apply(
+    actual: js.Any = null,
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    model: Model = null,
+    request: js.Any = null,
+    result: js.Array[_] = null,
+    `type`: String = null,
+    xhr: js.Any = null
+  ): ActionBeforeSuccessEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (actual != null) __obj.updateDynamic("actual")(actual.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (xhr != null) __obj.updateDynamic("xhr")(xhr.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionBeforeSuccessEventArgs]
   }
-  @scala.inline
-  implicit class ActionBeforeSuccessEventArgsOps[Self <: ActionBeforeSuccessEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActual(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actual")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActual: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actual")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: Model): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXhr(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXhr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhr")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

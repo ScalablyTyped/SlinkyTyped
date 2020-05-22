@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChunkExtractorManagerProps extends js.Object {
-  var extractor: ChunkExtractor = js.native
+  var extractor: ChunkExtractor
 }
 
 object ChunkExtractorManagerProps {
@@ -15,19 +14,5 @@ object ChunkExtractorManagerProps {
     val __obj = js.Dynamic.literal(extractor = extractor.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChunkExtractorManagerProps]
   }
-  @scala.inline
-  implicit class ChunkExtractorManagerPropsOps[Self <: ChunkExtractorManagerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtractor(value: ChunkExtractor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractor")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

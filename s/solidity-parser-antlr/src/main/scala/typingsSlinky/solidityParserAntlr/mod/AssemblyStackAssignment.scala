@@ -5,34 +5,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.solidityParserAntlr.mod.ASTNode because Already inherited */ @js.native
-trait AssemblyStackAssignment
+- typingsSlinky.solidityParserAntlr.mod.ASTNode because Already inherited */ trait AssemblyStackAssignment
   extends AssemblyItem
      with BaseASTNode {
   @JSName("type")
-  var type_AssemblyStackAssignment: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyStackAssignment = js.native
+  var type_AssemblyStackAssignment: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyStackAssignment
 }
 
 object AssemblyStackAssignment {
   @scala.inline
-  def apply(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyStackAssignment): AssemblyStackAssignment = {
+  def apply(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyStackAssignment,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): AssemblyStackAssignment = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssemblyStackAssignment]
   }
-  @scala.inline
-  implicit class AssemblyStackAssignmentOps[Self <: AssemblyStackAssignment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyStackAssignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

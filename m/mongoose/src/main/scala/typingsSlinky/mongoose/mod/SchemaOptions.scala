@@ -7,432 +7,155 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SchemaOptions extends js.Object {
   /** defaults to true */
-  var _id: js.UndefOr[Boolean] = js.native
+  var _id: js.UndefOr[Boolean] = js.undefined
+  /**
+    * When false, use the connection's autoCreate option
+    * @default false
+    */
+  var autoCreate: js.UndefOr[Boolean] = js.undefined
   /** defaults to false (which means use the connection's autoIndex option) */
-  var autoIndex: js.UndefOr[Boolean] = js.native
+  var autoIndex: js.UndefOr[Boolean] = js.undefined
   /** defaults to true */
-  var bufferCommands: js.UndefOr[Boolean] = js.native
+  var bufferCommands: js.UndefOr[Boolean] = js.undefined
   /** defaults to false */
-  var capped: js.UndefOr[Boolean | Double | AutoIndexId] = js.native
+  var capped: js.UndefOr[Boolean | Double | AutoIndexId] = js.undefined
   /** Sets a default collation for every query and aggregation. */
-  var collation: js.UndefOr[CollationOptions] = js.native
+  var collation: js.UndefOr[CollationOptions] = js.undefined
   /** no default */
-  var collection: js.UndefOr[String] = js.native
+  var collection: js.UndefOr[String] = js.undefined
   /** defaults to "__t" */
-  var discriminatorKey: js.UndefOr[String] = js.native
+  var discriminatorKey: js.UndefOr[String] = js.undefined
   /** defaults to false. */
-  var emitIndexErrors: js.UndefOr[Boolean] = js.native
-  var excludeIndexes: js.UndefOr[js.Any] = js.native
+  var emitIndexErrors: js.UndefOr[Boolean] = js.undefined
+  var excludeIndexes: js.UndefOr[js.Any] = js.undefined
   /** defaults to true */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /** controls document#toObject behavior when called manually - defaults to true */
-  var minimize: js.UndefOr[Boolean] = js.native
-  var read: js.UndefOr[String] = js.native
+  var minimize: js.UndefOr[Boolean] = js.undefined
+  var read: js.UndefOr[String] = js.undefined
   /** defaults to true. */
-  var safe: js.UndefOr[Boolean | J] = js.native
+  var safe: js.UndefOr[Boolean | J] = js.undefined
   /**
     * By default, Mongoose will automatically
     * select() any populated paths.
     * To opt out, set selectPopulatedPaths to false.
     */
-  var selectPopulatedPaths: js.UndefOr[Boolean] = js.native
+  var selectPopulatedPaths: js.UndefOr[Boolean] = js.undefined
   /** defaults to null */
-  var shardKey: js.UndefOr[js.Object] = js.native
+  var shardKey: js.UndefOr[js.Object] = js.undefined
   /**
     * skipVersioning allows excluding paths from
     * versioning (the internal revision will not be
     * incremented even if these paths are updated).
     */
-  var skipVersioning: js.UndefOr[js.Any] = js.native
+  var skipVersioning: js.UndefOr[js.Any] = js.undefined
   /**
     * Validation errors in a single nested schema are reported
     * both on the child and on the parent schema.
     * Set storeSubdocValidationError to false on the child schema
     * to make Mongoose only report the parent error.
     */
-  var storeSubdocValidationError: js.UndefOr[Boolean] = js.native
+  var storeSubdocValidationError: js.UndefOr[Boolean] = js.undefined
   /** defaults to true */
-  var strict: js.UndefOr[Boolean | `throw`] = js.native
+  var strict: js.UndefOr[Boolean | `throw`] = js.undefined
+  /** no default */
+  var strictQuery: js.UndefOr[Boolean] = js.undefined
   /**
     * If set timestamps, mongoose assigns createdAt
     * and updatedAt fields to your schema, the type
     * assigned is Date.
     */
-  var timestamps: js.UndefOr[Boolean | SchemaTimestampsConfig] = js.native
+  var timestamps: js.UndefOr[Boolean | SchemaTimestampsConfig] = js.undefined
   /** no default */
-  var toJSON: js.UndefOr[DocumentToObjectOptions] = js.native
+  var toJSON: js.UndefOr[DocumentToObjectOptions] = js.undefined
   /** no default */
-  var toObject: js.UndefOr[DocumentToObjectOptions] = js.native
+  var toObject: js.UndefOr[DocumentToObjectOptions] = js.undefined
   /** defaults to 'type' */
-  var typeKey: js.UndefOr[String] = js.native
+  var typeKey: js.UndefOr[String] = js.undefined
   /**
     * Determines whether a type set to a POJO becomes
     * a Mixed path or a Subdocument (defaults to true).
     */
-  var typePojoToMixed: js.UndefOr[Boolean] = js.native
+  var typePojoToMixed: js.UndefOr[Boolean] = js.undefined
   /** defaults to false */
-  var useNestedStrict: js.UndefOr[Boolean] = js.native
+  var useNestedStrict: js.UndefOr[Boolean] = js.undefined
   /** defaults to false */
-  var usePushEach: js.UndefOr[Boolean] = js.native
+  var usePushEach: js.UndefOr[Boolean] = js.undefined
   /** defaults to true */
-  var validateBeforeSave: js.UndefOr[Boolean] = js.native
+  var validateBeforeSave: js.UndefOr[Boolean] = js.undefined
   /** defaults to "__v" */
-  var versionKey: js.UndefOr[String | Boolean] = js.native
-  var writeConcern: js.UndefOr[WriteConcern] = js.native
+  var versionKey: js.UndefOr[String | Boolean] = js.undefined
+  var writeConcern: js.UndefOr[WriteConcern] = js.undefined
 }
 
 object SchemaOptions {
   @scala.inline
-  def apply(): SchemaOptions = {
+  def apply(
+    _id: js.UndefOr[Boolean] = js.undefined,
+    autoCreate: js.UndefOr[Boolean] = js.undefined,
+    autoIndex: js.UndefOr[Boolean] = js.undefined,
+    bufferCommands: js.UndefOr[Boolean] = js.undefined,
+    capped: Boolean | Double | AutoIndexId = null,
+    collation: CollationOptions = null,
+    collection: String = null,
+    discriminatorKey: String = null,
+    emitIndexErrors: js.UndefOr[Boolean] = js.undefined,
+    excludeIndexes: js.Any = null,
+    id: js.UndefOr[Boolean] = js.undefined,
+    minimize: js.UndefOr[Boolean] = js.undefined,
+    read: String = null,
+    safe: Boolean | J = null,
+    selectPopulatedPaths: js.UndefOr[Boolean] = js.undefined,
+    shardKey: js.Object = null,
+    skipVersioning: js.Any = null,
+    storeSubdocValidationError: js.UndefOr[Boolean] = js.undefined,
+    strict: Boolean | `throw` = null,
+    strictQuery: js.UndefOr[Boolean] = js.undefined,
+    timestamps: Boolean | SchemaTimestampsConfig = null,
+    toJSON: DocumentToObjectOptions = null,
+    toObject: DocumentToObjectOptions = null,
+    typeKey: String = null,
+    typePojoToMixed: js.UndefOr[Boolean] = js.undefined,
+    useNestedStrict: js.UndefOr[Boolean] = js.undefined,
+    usePushEach: js.UndefOr[Boolean] = js.undefined,
+    validateBeforeSave: js.UndefOr[Boolean] = js.undefined,
+    versionKey: String | Boolean = null,
+    writeConcern: WriteConcern = null
+  ): SchemaOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(_id)) __obj.updateDynamic("_id")(_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoCreate)) __obj.updateDynamic("autoCreate")(autoCreate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoIndex)) __obj.updateDynamic("autoIndex")(autoIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bufferCommands)) __obj.updateDynamic("bufferCommands")(bufferCommands.get.asInstanceOf[js.Any])
+    if (capped != null) __obj.updateDynamic("capped")(capped.asInstanceOf[js.Any])
+    if (collation != null) __obj.updateDynamic("collation")(collation.asInstanceOf[js.Any])
+    if (collection != null) __obj.updateDynamic("collection")(collection.asInstanceOf[js.Any])
+    if (discriminatorKey != null) __obj.updateDynamic("discriminatorKey")(discriminatorKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(emitIndexErrors)) __obj.updateDynamic("emitIndexErrors")(emitIndexErrors.get.asInstanceOf[js.Any])
+    if (excludeIndexes != null) __obj.updateDynamic("excludeIndexes")(excludeIndexes.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimize)) __obj.updateDynamic("minimize")(minimize.get.asInstanceOf[js.Any])
+    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
+    if (safe != null) __obj.updateDynamic("safe")(safe.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectPopulatedPaths)) __obj.updateDynamic("selectPopulatedPaths")(selectPopulatedPaths.get.asInstanceOf[js.Any])
+    if (shardKey != null) __obj.updateDynamic("shardKey")(shardKey.asInstanceOf[js.Any])
+    if (skipVersioning != null) __obj.updateDynamic("skipVersioning")(skipVersioning.asInstanceOf[js.Any])
+    if (!js.isUndefined(storeSubdocValidationError)) __obj.updateDynamic("storeSubdocValidationError")(storeSubdocValidationError.get.asInstanceOf[js.Any])
+    if (strict != null) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
+    if (!js.isUndefined(strictQuery)) __obj.updateDynamic("strictQuery")(strictQuery.get.asInstanceOf[js.Any])
+    if (timestamps != null) __obj.updateDynamic("timestamps")(timestamps.asInstanceOf[js.Any])
+    if (toJSON != null) __obj.updateDynamic("toJSON")(toJSON.asInstanceOf[js.Any])
+    if (toObject != null) __obj.updateDynamic("toObject")(toObject.asInstanceOf[js.Any])
+    if (typeKey != null) __obj.updateDynamic("typeKey")(typeKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(typePojoToMixed)) __obj.updateDynamic("typePojoToMixed")(typePojoToMixed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNestedStrict)) __obj.updateDynamic("useNestedStrict")(useNestedStrict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePushEach)) __obj.updateDynamic("usePushEach")(usePushEach.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(validateBeforeSave)) __obj.updateDynamic("validateBeforeSave")(validateBeforeSave.get.asInstanceOf[js.Any])
+    if (versionKey != null) __obj.updateDynamic("versionKey")(versionKey.asInstanceOf[js.Any])
+    if (writeConcern != null) __obj.updateDynamic("writeConcern")(writeConcern.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOptions]
   }
-  @scala.inline
-  implicit class SchemaOptionsOps[Self <: SchemaOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_id(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBufferCommands(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferCommands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBufferCommands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferCommands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapped(value: Boolean | Double | AutoIndexId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapped: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capped")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollation(value: CollationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiscriminatorKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discriminatorKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscriminatorKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discriminatorKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmitIndexErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitIndexErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmitIndexErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitIndexErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeIndexes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafe(value: Boolean | J): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectPopulatedPaths(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectPopulatedPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectPopulatedPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectPopulatedPaths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShardKey(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shardKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShardKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shardKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipVersioning(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipVersioning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipVersioning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipVersioning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoreSubdocValidationError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeSubdocValidationError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoreSubdocValidationError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeSubdocValidationError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean | `throw`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamps(value: Boolean | SchemaTimestampsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: DocumentToObjectOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToJSON: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToObject(value: DocumentToObjectOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypePojoToMixed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typePojoToMixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypePojoToMixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typePojoToMixed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseNestedStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNestedStrict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNestedStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNestedStrict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsePushEach(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePushEach")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsePushEach: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePushEach")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidateBeforeSave(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateBeforeSave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidateBeforeSave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateBeforeSave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionKey(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteConcern(value: WriteConcern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeConcern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteConcern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeConcern")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

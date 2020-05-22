@@ -18,29 +18,10 @@ trait SchemaSslCertsInsertRequest extends js.Object {
 
 object SchemaSslCertsInsertRequest {
   @scala.inline
-  def apply(): SchemaSslCertsInsertRequest = {
+  def apply(commonName: String = null): SchemaSslCertsInsertRequest = {
     val __obj = js.Dynamic.literal()
+    if (commonName != null) __obj.updateDynamic("commonName")(commonName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSslCertsInsertRequest]
   }
-  @scala.inline
-  implicit class SchemaSslCertsInsertRequestOps[Self <: SchemaSslCertsInsertRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommonName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommonName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

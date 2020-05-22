@@ -27,14 +27,13 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.linguistic2.Hyphenator
   * @see com.sun.star.linguistic2.Thesaurus
   */
-@js.native
 trait XLinguServiceManager extends XInterface {
   /** @returns the {@link com.sun.star.linguistic2.XHyphenator} interface to be used for hyphenation. */
-  val Hyphenator: XHyphenator = js.native
+  val Hyphenator: XHyphenator
   /** @returns the {@link com.sun.star.linguistic2.XSpellChecker} interface to be used for spell checking. */
-  val SpellChecker: XSpellChecker = js.native
+  val SpellChecker: XSpellChecker
   /** @returns the {@link com.sun.star.linguistic2.XThesaurus} interface to be used for thesaurus functionality. */
-  val Thesaurus: XThesaurus = js.native
+  val Thesaurus: XThesaurus
   /**
     * adds a listener to the list of event listeners.
     *
@@ -43,39 +42,39 @@ trait XLinguServiceManager extends XInterface {
     * @param xListener the listener to be added.
     * @returns `TRUE` if the listener was successfully added, `FALSE` otherwise.
     */
-  def addLinguServiceManagerListener(xListener: XEventListener): Boolean = js.native
+  def addLinguServiceManagerListener(xListener: XEventListener): Boolean
   /**
     * @param aServiceName the name of the service requesting the list of available implementations.
     * @param aLocale the language used to query the list of available implementations.
     * @returns the list of implementation names of the available services.
     */
-  def getAvailableServices(aServiceName: String, aLocale: Locale): SafeArray[String] = js.native
+  def getAvailableServices(aServiceName: String, aLocale: Locale): SafeArray[String]
   /**
     * queries the list of service implementations to be used for a given service and language.
     * @param aServiceName the name of the service to get queried.
     * @param aLocale the language to get queried.
     * @returns the list of implementation names of the services to be used.
     */
-  def getConfiguredServices(aServiceName: String, aLocale: Locale): SafeArray[String] = js.native
+  def getConfiguredServices(aServiceName: String, aLocale: Locale): SafeArray[String]
   /** @returns the {@link com.sun.star.linguistic2.XHyphenator} interface to be used for hyphenation. */
-  def getHyphenator(): XHyphenator = js.native
+  def getHyphenator(): XHyphenator
   /** @returns the {@link com.sun.star.linguistic2.XSpellChecker} interface to be used for spell checking. */
-  def getSpellChecker(): XSpellChecker = js.native
+  def getSpellChecker(): XSpellChecker
   /** @returns the {@link com.sun.star.linguistic2.XThesaurus} interface to be used for thesaurus functionality. */
-  def getThesaurus(): XThesaurus = js.native
+  def getThesaurus(): XThesaurus
   /**
     * removes a listener from the list of event listeners.
     * @param xListener the listener to be removed.
     * @returns `TRUE` if the listener was successfully removed, `FALSE` otherwise.
     */
-  def removeLinguServiceManagerListener(xListener: XEventListener): Boolean = js.native
+  def removeLinguServiceManagerListener(xListener: XEventListener): Boolean
   /**
     * sets the list of service implementations to be used for a given service and language.
     * @param aServiceName the name of the service to set the list of implementations to be used.
     * @param aLocale the language to set the list.
     * @param aServiceImplNames the name of the service to set the list.
     */
-  def setConfiguredServices(aServiceName: String, aLocale: Locale, aServiceImplNames: SeqEquiv[String]): Unit = js.native
+  def setConfiguredServices(aServiceName: String, aLocale: Locale, aServiceImplNames: SeqEquiv[String]): Unit
 }
 
 object XLinguServiceManager {
@@ -99,79 +98,5 @@ object XLinguServiceManager {
     val __obj = js.Dynamic.literal(Hyphenator = Hyphenator.asInstanceOf[js.Any], SpellChecker = SpellChecker.asInstanceOf[js.Any], Thesaurus = Thesaurus.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addLinguServiceManagerListener = js.Any.fromFunction1(addLinguServiceManagerListener), getAvailableServices = js.Any.fromFunction2(getAvailableServices), getConfiguredServices = js.Any.fromFunction2(getConfiguredServices), getHyphenator = js.Any.fromFunction0(getHyphenator), getSpellChecker = js.Any.fromFunction0(getSpellChecker), getThesaurus = js.Any.fromFunction0(getThesaurus), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeLinguServiceManagerListener = js.Any.fromFunction1(removeLinguServiceManagerListener), setConfiguredServices = js.Any.fromFunction3(setConfiguredServices))
     __obj.asInstanceOf[XLinguServiceManager]
   }
-  @scala.inline
-  implicit class XLinguServiceManagerOps[Self <: XLinguServiceManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHyphenator(value: XHyphenator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hyphenator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpellChecker(value: XSpellChecker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpellChecker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThesaurus(value: XThesaurus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Thesaurus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddLinguServiceManagerListener(value: XEventListener => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addLinguServiceManagerListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAvailableServices(value: (String, Locale) => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAvailableServices")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetConfiguredServices(value: (String, Locale) => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConfiguredServices")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetHyphenator(value: () => XHyphenator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHyphenator")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSpellChecker(value: () => XSpellChecker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSpellChecker")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetThesaurus(value: () => XThesaurus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getThesaurus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveLinguServiceManagerListener(value: XEventListener => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLinguServiceManagerListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetConfiguredServices(value: (String, Locale, SeqEquiv[String]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setConfiguredServices")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

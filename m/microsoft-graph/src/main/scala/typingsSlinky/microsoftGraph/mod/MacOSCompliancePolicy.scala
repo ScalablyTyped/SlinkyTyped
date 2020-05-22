@@ -4,264 +4,112 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MacOSCompliancePolicy extends DeviceCompliancePolicy {
   // Require that devices have enabled device threat protection.
-  var deviceThreatProtectionEnabled: js.UndefOr[Boolean] = js.native
+  var deviceThreatProtectionEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured,
     * low, medium, high, notSet.
     */
-  var deviceThreatProtectionRequiredSecurityLevel: js.UndefOr[DeviceThreatProtectionLevel] = js.native
+  var deviceThreatProtectionRequiredSecurityLevel: js.UndefOr[DeviceThreatProtectionLevel] = js.undefined
   // Corresponds to the 'Block all incoming connections' option.
-  var firewallBlockAllIncoming: js.UndefOr[Boolean] = js.native
+  var firewallBlockAllIncoming: js.UndefOr[Boolean] = js.undefined
   // Corresponds to 'Enable stealth mode.'
-  var firewallEnableStealthMode: js.UndefOr[Boolean] = js.native
+  var firewallEnableStealthMode: js.UndefOr[Boolean] = js.undefined
   // Whether the firewall should be enabled or not.
-  var firewallEnabled: js.UndefOr[Boolean] = js.native
+  var firewallEnabled: js.UndefOr[Boolean] = js.undefined
   // Maximum MacOS version.
-  var osMaximumVersion: js.UndefOr[String] = js.native
+  var osMaximumVersion: js.UndefOr[String] = js.undefined
   // Minimum MacOS version.
-  var osMinimumVersion: js.UndefOr[String] = js.native
+  var osMinimumVersion: js.UndefOr[String] = js.undefined
   // Indicates whether or not to block simple passwords.
-  var passwordBlockSimple: js.UndefOr[Boolean] = js.native
+  var passwordBlockSimple: js.UndefOr[Boolean] = js.undefined
   // Number of days before the password expires. Valid values 1 to 65535
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[Double] = js.undefined
   // The number of character sets required in the password.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.undefined
   // Minimum length of password. Valid values 4 to 14
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[Double] = js.undefined
   // Minutes of inactivity before a password is required.
-  var passwordMinutesOfInactivityBeforeLock: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeLock: js.UndefOr[Double] = js.undefined
   // Number of previous passwords to block. Valid values 1 to 24
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.undefined
   // Whether or not to require a password.
-  var passwordRequired: js.UndefOr[Boolean] = js.native
+  var passwordRequired: js.UndefOr[Boolean] = js.undefined
   // The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
-  var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.native
+  var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.undefined
   // Require encryption on Mac OS devices.
-  var storageRequireEncryption: js.UndefOr[Boolean] = js.native
+  var storageRequireEncryption: js.UndefOr[Boolean] = js.undefined
   // Require that devices have enabled system integrity protection.
-  var systemIntegrityProtectionEnabled: js.UndefOr[Boolean] = js.native
+  var systemIntegrityProtectionEnabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object MacOSCompliancePolicy {
   @scala.inline
-  def apply(): MacOSCompliancePolicy = {
+  def apply(
+    assignments: js.Array[DeviceCompliancePolicyAssignment] = null,
+    createdDateTime: String = null,
+    description: String = null,
+    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
+    deviceStatusOverview: DeviceComplianceDeviceOverview = null,
+    deviceStatuses: js.Array[DeviceComplianceDeviceStatus] = null,
+    deviceThreatProtectionEnabled: js.UndefOr[Boolean] = js.undefined,
+    deviceThreatProtectionRequiredSecurityLevel: DeviceThreatProtectionLevel = null,
+    displayName: String = null,
+    firewallBlockAllIncoming: js.UndefOr[Boolean] = js.undefined,
+    firewallEnableStealthMode: js.UndefOr[Boolean] = js.undefined,
+    firewallEnabled: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    osMaximumVersion: String = null,
+    osMinimumVersion: String = null,
+    passwordBlockSimple: js.UndefOr[Boolean] = js.undefined,
+    passwordExpirationDays: js.UndefOr[Double] = js.undefined,
+    passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.undefined,
+    passwordMinimumLength: js.UndefOr[Double] = js.undefined,
+    passwordMinutesOfInactivityBeforeLock: js.UndefOr[Double] = js.undefined,
+    passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.undefined,
+    passwordRequired: js.UndefOr[Boolean] = js.undefined,
+    passwordRequiredType: RequiredPasswordType = null,
+    scheduledActionsForRule: js.Array[DeviceComplianceScheduledActionForRule] = null,
+    storageRequireEncryption: js.UndefOr[Boolean] = js.undefined,
+    systemIntegrityProtectionEnabled: js.UndefOr[Boolean] = js.undefined,
+    userStatusOverview: DeviceComplianceUserOverview = null,
+    userStatuses: js.Array[DeviceComplianceUserStatus] = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): MacOSCompliancePolicy = {
     val __obj = js.Dynamic.literal()
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
+    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
+    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(deviceThreatProtectionEnabled)) __obj.updateDynamic("deviceThreatProtectionEnabled")(deviceThreatProtectionEnabled.get.asInstanceOf[js.Any])
+    if (deviceThreatProtectionRequiredSecurityLevel != null) __obj.updateDynamic("deviceThreatProtectionRequiredSecurityLevel")(deviceThreatProtectionRequiredSecurityLevel.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(firewallBlockAllIncoming)) __obj.updateDynamic("firewallBlockAllIncoming")(firewallBlockAllIncoming.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(firewallEnableStealthMode)) __obj.updateDynamic("firewallEnableStealthMode")(firewallEnableStealthMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(firewallEnabled)) __obj.updateDynamic("firewallEnabled")(firewallEnabled.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (osMaximumVersion != null) __obj.updateDynamic("osMaximumVersion")(osMaximumVersion.asInstanceOf[js.Any])
+    if (osMinimumVersion != null) __obj.updateDynamic("osMinimumVersion")(osMinimumVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordBlockSimple)) __obj.updateDynamic("passwordBlockSimple")(passwordBlockSimple.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordExpirationDays)) __obj.updateDynamic("passwordExpirationDays")(passwordExpirationDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumCharacterSetCount)) __obj.updateDynamic("passwordMinimumCharacterSetCount")(passwordMinimumCharacterSetCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumLength)) __obj.updateDynamic("passwordMinimumLength")(passwordMinimumLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinutesOfInactivityBeforeLock)) __obj.updateDynamic("passwordMinutesOfInactivityBeforeLock")(passwordMinutesOfInactivityBeforeLock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordPreviousPasswordBlockCount)) __obj.updateDynamic("passwordPreviousPasswordBlockCount")(passwordPreviousPasswordBlockCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordRequired)) __obj.updateDynamic("passwordRequired")(passwordRequired.get.asInstanceOf[js.Any])
+    if (passwordRequiredType != null) __obj.updateDynamic("passwordRequiredType")(passwordRequiredType.asInstanceOf[js.Any])
+    if (scheduledActionsForRule != null) __obj.updateDynamic("scheduledActionsForRule")(scheduledActionsForRule.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageRequireEncryption)) __obj.updateDynamic("storageRequireEncryption")(storageRequireEncryption.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(systemIntegrityProtectionEnabled)) __obj.updateDynamic("systemIntegrityProtectionEnabled")(systemIntegrityProtectionEnabled.get.asInstanceOf[js.Any])
+    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
+    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MacOSCompliancePolicy]
   }
-  @scala.inline
-  implicit class MacOSCompliancePolicyOps[Self <: MacOSCompliancePolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceThreatProtectionEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceThreatProtectionEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceThreatProtectionEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceThreatProtectionEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceThreatProtectionRequiredSecurityLevel(value: DeviceThreatProtectionLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceThreatProtectionRequiredSecurityLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceThreatProtectionRequiredSecurityLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceThreatProtectionRequiredSecurityLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirewallBlockAllIncoming(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firewallBlockAllIncoming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirewallBlockAllIncoming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firewallBlockAllIncoming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirewallEnableStealthMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firewallEnableStealthMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirewallEnableStealthMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firewallEnableStealthMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirewallEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firewallEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirewallEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firewallEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOsMaximumVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osMaximumVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOsMaximumVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osMaximumVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOsMinimumVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osMinimumVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOsMinimumVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osMinimumVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordBlockSimple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordBlockSimple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordBlockSimple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordBlockSimple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordExpirationDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordExpirationDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumCharacterSetCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumCharacterSetCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumCharacterSetCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumCharacterSetCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinutesOfInactivityBeforeLock(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinutesOfInactivityBeforeLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinutesOfInactivityBeforeLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinutesOfInactivityBeforeLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordPreviousPasswordBlockCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPreviousPasswordBlockCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordPreviousPasswordBlockCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPreviousPasswordBlockCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequiredType(value: RequiredPasswordType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequiredType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequiredType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequiredType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageRequireEncryption(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRequireEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageRequireEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRequireEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemIntegrityProtectionEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemIntegrityProtectionEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemIntegrityProtectionEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemIntegrityProtectionEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

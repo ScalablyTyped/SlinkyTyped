@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserFeedResponseCaption extends js.Object {
-  var bit_flags: Double = js.native
-  var content_type: String = js.native
-  var created_at: Double = js.native
-  var created_at_utc: Double = js.native
-  var did_report_as_spam: Boolean = js.native
-  var has_translation: Boolean = js.native
-  var media_id: String = js.native
-  var pk: String = js.native
-  var share_enabled: Boolean = js.native
-  var status: String = js.native
-  var text: String = js.native
-  var `type`: Double = js.native
-  var user: UserFeedResponseUser = js.native
-  var user_id: Double = js.native
+  var bit_flags: Double
+  var content_type: String
+  var created_at: Double
+  var created_at_utc: Double
+  var did_report_as_spam: Boolean
+  var has_translation: Boolean
+  var media_id: String
+  var pk: String
+  var share_enabled: Boolean
+  var status: String
+  var text: String
+  var `type`: Double
+  var user: UserFeedResponseUser
+  var user_id: Double
 }
 
 object UserFeedResponseCaption {
@@ -44,97 +43,5 @@ object UserFeedResponseCaption {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserFeedResponseCaption]
   }
-  @scala.inline
-  implicit class UserFeedResponseCaptionOps[Self <: UserFeedResponseCaption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBit_flags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bit_flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated_at_utc(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at_utc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDid_report_as_spam(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("did_report_as_spam")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHas_translation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_translation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMedia_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPk(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShare_enabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("share_enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser(value: UserFeedResponseUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

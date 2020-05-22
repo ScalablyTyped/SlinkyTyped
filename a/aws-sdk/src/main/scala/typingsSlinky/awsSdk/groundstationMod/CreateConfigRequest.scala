@@ -22,41 +22,10 @@ trait CreateConfigRequest extends js.Object {
 
 object CreateConfigRequest {
   @scala.inline
-  def apply(configData: ConfigTypeData, name: SafeName): CreateConfigRequest = {
+  def apply(configData: ConfigTypeData, name: SafeName, tags: TagsMap = null): CreateConfigRequest = {
     val __obj = js.Dynamic.literal(configData = configData.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateConfigRequest]
   }
-  @scala.inline
-  implicit class CreateConfigRequestOps[Self <: CreateConfigRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigData(value: ConfigTypeData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: SafeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,68 +1,46 @@
 package typingsSlinky.googleGax.grpcMod
 
+import typingsSlinky.googleAuthLibrary.credentialsMod.CredentialBody
 import typingsSlinky.googleAuthLibrary.googleauthMod.GoogleAuthOptions
+import typingsSlinky.googleAuthLibrary.jwtclientMod.JWTOptions
 import typingsSlinky.googleAuthLibrary.mod.GoogleAuth
+import typingsSlinky.googleAuthLibrary.oauth2clientMod.OAuth2ClientOptions
+import typingsSlinky.googleAuthLibrary.refreshclientMod.UserRefreshClientOptions
 import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GrpcClientOptions extends GoogleAuthOptions {
-  var auth: js.UndefOr[GoogleAuth] = js.native
-  var grpc: js.UndefOr[GrpcModule] = js.native
-  var promise: js.UndefOr[PromiseConstructor] = js.native
+  var auth: js.UndefOr[GoogleAuth] = js.undefined
+  var grpc: js.UndefOr[GrpcModule] = js.undefined
+  var promise: js.UndefOr[PromiseConstructor] = js.undefined
 }
 
 object GrpcClientOptions {
   @scala.inline
-  def apply(): GrpcClientOptions = {
+  def apply(
+    auth: GoogleAuth = null,
+    clientOptions: JWTOptions | OAuth2ClientOptions | UserRefreshClientOptions = null,
+    credentials: CredentialBody = null,
+    grpc: GrpcModule = null,
+    keyFile: String = null,
+    keyFilename: String = null,
+    projectId: String = null,
+    promise: PromiseConstructor = null,
+    scopes: String | js.Array[String] = null
+  ): GrpcClientOptions = {
     val __obj = js.Dynamic.literal()
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (clientOptions != null) __obj.updateDynamic("clientOptions")(clientOptions.asInstanceOf[js.Any])
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (grpc != null) __obj.updateDynamic("grpc")(grpc.asInstanceOf[js.Any])
+    if (keyFile != null) __obj.updateDynamic("keyFile")(keyFile.asInstanceOf[js.Any])
+    if (keyFilename != null) __obj.updateDynamic("keyFilename")(keyFilename.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (promise != null) __obj.updateDynamic("promise")(promise.asInstanceOf[js.Any])
+    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrpcClientOptions]
   }
-  @scala.inline
-  implicit class GrpcClientOptionsOps[Self <: GrpcClientOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: GoogleAuth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrpc(value: GrpcModule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grpc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrpc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grpc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromise(value: PromiseConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

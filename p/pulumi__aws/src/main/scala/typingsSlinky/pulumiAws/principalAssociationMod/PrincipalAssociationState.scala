@@ -19,41 +19,11 @@ trait PrincipalAssociationState extends js.Object {
 
 object PrincipalAssociationState {
   @scala.inline
-  def apply(): PrincipalAssociationState = {
+  def apply(principal: Input[String] = null, resourceShareArn: Input[String] = null): PrincipalAssociationState = {
     val __obj = js.Dynamic.literal()
+    if (principal != null) __obj.updateDynamic("principal")(principal.asInstanceOf[js.Any])
+    if (resourceShareArn != null) __obj.updateDynamic("resourceShareArn")(resourceShareArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrincipalAssociationState]
   }
-  @scala.inline
-  implicit class PrincipalAssociationStateOps[Self <: PrincipalAssociationState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrincipal(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceShareArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceShareArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

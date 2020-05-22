@@ -5,42 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IntrinsicTransitionGroupProps[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */] extends TransitionActions {
-  var component: js.UndefOr[T | Null] = js.native
+  var component: js.UndefOr[T | Null] = js.undefined
 }
 
 object IntrinsicTransitionGroupProps {
   @scala.inline
-  def apply[T](): IntrinsicTransitionGroupProps[T] = {
+  def apply[T](
+    appear: js.UndefOr[Boolean] = js.undefined,
+    component: js.UndefOr[Null | T] = js.undefined,
+    enter: js.UndefOr[Boolean] = js.undefined,
+    exit: js.UndefOr[Boolean] = js.undefined
+  ): IntrinsicTransitionGroupProps[T] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(appear)) __obj.updateDynamic("appear")(appear.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(component)) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (!js.isUndefined(enter)) __obj.updateDynamic("enter")(enter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exit)) __obj.updateDynamic("exit")(exit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrinsicTransitionGroupProps[T]]
   }
-  @scala.inline
-  implicit class IntrinsicTransitionGroupPropsOps[Self[t] <: IntrinsicTransitionGroupProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withComponent(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(null)
-        ret
-    }
-  }
-  
 }
 

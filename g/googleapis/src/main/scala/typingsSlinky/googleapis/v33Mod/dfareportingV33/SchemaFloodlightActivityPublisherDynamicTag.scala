@@ -40,89 +40,22 @@ trait SchemaFloodlightActivityPublisherDynamicTag extends js.Object {
 
 object SchemaFloodlightActivityPublisherDynamicTag {
   @scala.inline
-  def apply(): SchemaFloodlightActivityPublisherDynamicTag = {
+  def apply(
+    clickThrough: js.UndefOr[Boolean] = js.undefined,
+    directorySiteId: String = null,
+    dynamicTag: SchemaFloodlightActivityDynamicTag = null,
+    siteId: String = null,
+    siteIdDimensionValue: SchemaDimensionValue = null,
+    viewThrough: js.UndefOr[Boolean] = js.undefined
+  ): SchemaFloodlightActivityPublisherDynamicTag = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clickThrough)) __obj.updateDynamic("clickThrough")(clickThrough.get.asInstanceOf[js.Any])
+    if (directorySiteId != null) __obj.updateDynamic("directorySiteId")(directorySiteId.asInstanceOf[js.Any])
+    if (dynamicTag != null) __obj.updateDynamic("dynamicTag")(dynamicTag.asInstanceOf[js.Any])
+    if (siteId != null) __obj.updateDynamic("siteId")(siteId.asInstanceOf[js.Any])
+    if (siteIdDimensionValue != null) __obj.updateDynamic("siteIdDimensionValue")(siteIdDimensionValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewThrough)) __obj.updateDynamic("viewThrough")(viewThrough.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFloodlightActivityPublisherDynamicTag]
   }
-  @scala.inline
-  implicit class SchemaFloodlightActivityPublisherDynamicTagOps[Self <: SchemaFloodlightActivityPublisherDynamicTag] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClickThrough(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickThrough: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThrough")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectorySiteId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectorySiteId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicTag(value: SchemaFloodlightActivityDynamicTag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiteId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiteId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiteIdDimensionValue(value: SchemaDimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiteIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewThrough(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewThrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewThrough: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewThrough")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

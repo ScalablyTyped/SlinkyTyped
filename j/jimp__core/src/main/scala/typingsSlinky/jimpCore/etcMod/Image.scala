@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Image extends js.Object {
-  var bitmap: Bitmap = js.native
+  var bitmap: Bitmap
 }
 
 object Image {
@@ -15,19 +14,5 @@ object Image {
     val __obj = js.Dynamic.literal(bitmap = bitmap.asInstanceOf[js.Any])
     __obj.asInstanceOf[Image]
   }
-  @scala.inline
-  implicit class ImageOps[Self <: Image] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitmap(value: Bitmap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitmap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

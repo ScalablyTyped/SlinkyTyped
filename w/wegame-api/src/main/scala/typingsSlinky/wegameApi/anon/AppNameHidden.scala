@@ -4,36 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppNameHidden extends js.Object {
   /**
     * 游戏名称是否隐藏
     */
-  var appNameHidden: Boolean = js.native
+  var appNameHidden: Boolean
   /**
     * 游戏icon的border颜色色值
     */
-  var borderColor: String = js.native
+  var borderColor: String
   /**
     * 游戏icon的border尺寸
     */
-  var borderWidth: Double = js.native
+  var borderWidth: Double
   /**
     * 游戏名称的颜色色值
     */
-  var color: String = js.native
+  var color: String
   /**
     * 游戏icon的X轴坐标
     */
-  var left: Double = js.native
+  var left: Double
   /**
     * 游戏icon的宽高值
     */
-  var size: Double = js.native
+  var size: Double
   /**
     * 游戏icon的Y轴坐标
     */
-  var top: Double = js.native
+  var top: Double
 }
 
 object AppNameHidden {
@@ -50,55 +49,5 @@ object AppNameHidden {
     val __obj = js.Dynamic.literal(appNameHidden = appNameHidden.asInstanceOf[js.Any], borderColor = borderColor.asInstanceOf[js.Any], borderWidth = borderWidth.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppNameHidden]
   }
-  @scala.inline
-  implicit class AppNameHiddenOps[Self <: AppNameHidden] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppNameHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appNameHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

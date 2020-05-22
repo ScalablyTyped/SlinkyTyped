@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PredicateCondition extends Condition {
   /** defines the predicate function used to validate the condition */
-  def predicate(): Boolean = js.native
+  def predicate(): Boolean
 }
 
 object PredicateCondition {
@@ -26,19 +25,5 @@ object PredicateCondition {
     val __obj = js.Dynamic.literal(_actionManager = _actionManager.asInstanceOf[js.Any], _currentResult = _currentResult.asInstanceOf[js.Any], _evaluationId = _evaluationId.asInstanceOf[js.Any], _getEffectiveTarget = js.Any.fromFunction2(_getEffectiveTarget), _getProperty = js.Any.fromFunction1(_getProperty), _serialize = js.Any.fromFunction1(_serialize), isValid = js.Any.fromFunction0(isValid), predicate = js.Any.fromFunction0(predicate), serialize = js.Any.fromFunction0(serialize))
     __obj.asInstanceOf[PredicateCondition]
   }
-  @scala.inline
-  implicit class PredicateConditionOps[Self <: PredicateCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPredicate(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predicate")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

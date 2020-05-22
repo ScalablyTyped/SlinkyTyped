@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SetBreakpointReturnType extends js.Object {
   /**
     * Location this breakpoint resolved into.
     */
-  var actualLocation: Location = js.native
+  var actualLocation: Location
   /**
     * Id of the created breakpoint for further reference.
     */
-  var breakpointId: BreakpointId = js.native
+  var breakpointId: BreakpointId
 }
 
 object SetBreakpointReturnType {
@@ -22,25 +21,5 @@ object SetBreakpointReturnType {
     val __obj = js.Dynamic.literal(actualLocation = actualLocation.asInstanceOf[js.Any], breakpointId = breakpointId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetBreakpointReturnType]
   }
-  @scala.inline
-  implicit class SetBreakpointReturnTypeOps[Self <: SetBreakpointReturnType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualLocation(value: Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBreakpointId(value: BreakpointId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

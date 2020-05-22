@@ -15,114 +15,36 @@ import scala.scalajs.js.annotation._
   * @property crossOrigin {(string | boolean=)} - indicates if CORS headers should be used for default layers, if false is specified, CORS headers are not set, defaults to 'anonymous'.
   * Be aware that storing of content is not possible if crossOrigin is not set to true (see H.Map#storeContent).
   */
-@js.native
 trait DefaultLayersOptions extends js.Object {
-  var crossOrigin: js.UndefOr[String | Boolean] = js.native
-  var lg: js.UndefOr[String] = js.native
-  var lg2: js.UndefOr[String] = js.native
-  var pois: js.UndefOr[Boolean] = js.native
-  var ppi: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[String] = js.native
-  var tileSize: js.UndefOr[Double] = js.native
+  var crossOrigin: js.UndefOr[String | Boolean] = js.undefined
+  var lg: js.UndefOr[String] = js.undefined
+  var lg2: js.UndefOr[String] = js.undefined
+  var pois: js.UndefOr[Boolean] = js.undefined
+  var ppi: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[String] = js.undefined
+  var tileSize: js.UndefOr[Double] = js.undefined
 }
 
 object DefaultLayersOptions {
   @scala.inline
-  def apply(): DefaultLayersOptions = {
+  def apply(
+    crossOrigin: String | Boolean = null,
+    lg: String = null,
+    lg2: String = null,
+    pois: js.UndefOr[Boolean] = js.undefined,
+    ppi: js.UndefOr[Double] = js.undefined,
+    style: String = null,
+    tileSize: js.UndefOr[Double] = js.undefined
+  ): DefaultLayersOptions = {
     val __obj = js.Dynamic.literal()
+    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
+    if (lg != null) __obj.updateDynamic("lg")(lg.asInstanceOf[js.Any])
+    if (lg2 != null) __obj.updateDynamic("lg2")(lg2.asInstanceOf[js.Any])
+    if (!js.isUndefined(pois)) __obj.updateDynamic("pois")(pois.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ppi)) __obj.updateDynamic("ppi")(ppi.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileSize)) __obj.updateDynamic("tileSize")(tileSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultLayersOptions]
   }
-  @scala.inline
-  implicit class DefaultLayersOptionsOps[Self <: DefaultLayersOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCrossOrigin(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLg2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLg2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPois(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pois")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPois: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pois")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPpi(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ppi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPpi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ppi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

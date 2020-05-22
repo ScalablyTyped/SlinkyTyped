@@ -22,6 +22,50 @@ import scala.scalajs.js.annotation._
   */
 class default () extends CoreObject {
   def this(properties: js.Object) = this()
+  /**
+    * Defines the properties that will be concatenated from the superclass (instead of overridden).
+    * @default null
+    */
+  /* CompleteClass */
+  override var concatenatedProperties: js.Array[_] = js.native
+  /**
+    * Destroyed object property flag. If this property is true the observers and bindings were
+    * already removed by the effect of calling the destroy() method.
+    * @default false
+    */
+  /* CompleteClass */
+  override var isDestroyed: Boolean = js.native
+  /**
+    * Destruction scheduled flag. The destroy() method has been called. The object stays intact
+    * until the end of the run loop at which point the isDestroyed flag is set.
+    * @default false
+    */
+  /* CompleteClass */
+  override var isDestroying: Boolean = js.native
+  /* CompleteClass */
+  override def _super(args: js.Any*): js.Any = js.native
+  /**
+    * Destroys an object by setting the `isDestroyed` flag and removing its
+    * metadata, which effectively destroys observers and bindings.
+    * If you try to set a property on a destroyed object, an exception will be
+    * raised.
+    * Note that destruction is scheduled for the end of the run loop and does not
+    * happen immediately.  It will set an isDestroying flag immediately.
+    * @return receiver
+    */
+  /* CompleteClass */
+  override def destroy(): CoreObject = js.native
+  /**
+    * An overridable method called when objects are instantiated. By default,
+    * does nothing unless it is overridden during class definition.
+    */
+  /* CompleteClass */
+  override def init(): Unit = js.native
+  /**
+    * Override to implement teardown.
+    */
+  /* CompleteClass */
+  override def willDestroy(): Unit = js.native
 }
 
 /* static members */

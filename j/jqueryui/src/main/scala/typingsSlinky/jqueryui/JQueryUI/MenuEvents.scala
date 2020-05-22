@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MenuEvents extends js.Object {
-  var blur: js.UndefOr[MenuEvent] = js.native
-  var create: js.UndefOr[MenuEvent] = js.native
-  var focus: js.UndefOr[MenuEvent] = js.native
-  var select: js.UndefOr[MenuEvent] = js.native
+  var blur: js.UndefOr[MenuEvent] = js.undefined
+  var create: js.UndefOr[MenuEvent] = js.undefined
+  var focus: js.UndefOr[MenuEvent] = js.undefined
+  var select: js.UndefOr[MenuEvent] = js.undefined
 }
 
 object MenuEvents {
   @scala.inline
-  def apply(): MenuEvents = {
+  def apply(
+    blur: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit = null,
+    create: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit = null,
+    focus: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit = null,
+    select: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit = null
+  ): MenuEvents = {
     val __obj = js.Dynamic.literal()
+    if (blur != null) __obj.updateDynamic("blur")(js.Any.fromFunction2(blur))
+    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
+    if (focus != null) __obj.updateDynamic("focus")(js.Any.fromFunction2(focus))
+    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction2(select))
     __obj.asInstanceOf[MenuEvents]
   }
-  @scala.inline
-  implicit class MenuEventsOps[Self <: MenuEvents] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlur(value: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocus(value: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: (/* event */ JQueryEventObject, /* ui */ MenuUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

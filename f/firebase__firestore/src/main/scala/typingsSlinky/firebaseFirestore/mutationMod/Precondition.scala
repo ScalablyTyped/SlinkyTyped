@@ -26,9 +26,10 @@ class Precondition protected () extends js.Object {
 @JSImport("@firebase/firestore/dist/lib/src/model/mutation", "Precondition")
 @js.native
 object Precondition extends js.Object {
-  val NONE: Precondition = js.native
   /** Creates a new Precondition with an exists flag. */
   def exists(exists: Boolean): Precondition = js.native
+  /** Creates a new empty Precondition. */
+  def none(): Precondition = js.native
   /** Creates a new Precondition based on a version a document exists at. */
   def updateTime(version: SnapshotVersion): Precondition = js.native
 }

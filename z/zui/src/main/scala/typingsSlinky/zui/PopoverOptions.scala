@@ -4,184 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PopoverOptions extends js.Object {
-  var animation: js.UndefOr[Boolean] = js.native
-  var container: js.UndefOr[String | Boolean] = js.native
-  var content: js.UndefOr[js.Any] = js.native
-  var delay: js.UndefOr[Double | js.Object] = js.native
-  var html: js.UndefOr[Boolean] = js.native
-  var placement: js.UndefOr[String | CallBack] = js.native
-  var selector: js.UndefOr[String] = js.native
-  var template: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String | CallBack] = js.native
-  var trigger: js.UndefOr[String] = js.native
-  var viewport: js.UndefOr[String | CallBack | js.Object] = js.native
+  var animation: js.UndefOr[Boolean] = js.undefined
+  var container: js.UndefOr[String | Boolean] = js.undefined
+  var content: js.UndefOr[js.Any] = js.undefined
+  var delay: js.UndefOr[Double | js.Object] = js.undefined
+  var html: js.UndefOr[Boolean] = js.undefined
+  var placement: js.UndefOr[String | CallBack] = js.undefined
+  var selector: js.UndefOr[String] = js.undefined
+  var template: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String | CallBack] = js.undefined
+  var trigger: js.UndefOr[String] = js.undefined
+  var viewport: js.UndefOr[String | CallBack | js.Object] = js.undefined
 }
 
 object PopoverOptions {
   @scala.inline
-  def apply(): PopoverOptions = {
+  def apply(
+    animation: js.UndefOr[Boolean] = js.undefined,
+    container: String | Boolean = null,
+    content: js.Any = null,
+    delay: Double | js.Object = null,
+    html: js.UndefOr[Boolean] = js.undefined,
+    placement: String | CallBack = null,
+    selector: String = null,
+    template: String = null,
+    title: String | CallBack = null,
+    trigger: String = null,
+    viewport: String | CallBack | js.Object = null
+  ): PopoverOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.get.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (!js.isUndefined(html)) __obj.updateDynamic("html")(html.get.asInstanceOf[js.Any])
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
+    if (viewport != null) __obj.updateDynamic("viewport")(viewport.asInstanceOf[js.Any])
     __obj.asInstanceOf[PopoverOptions]
   }
-  @scala.inline
-  implicit class PopoverOptionsOps[Self <: PopoverOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacementFunction0(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPlacement(value: String | CallBack): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleFunction0(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String | CallBack): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrigger(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewportFunction0(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withViewport(value: String | CallBack | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

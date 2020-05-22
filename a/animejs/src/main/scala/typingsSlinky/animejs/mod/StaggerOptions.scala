@@ -1,6 +1,5 @@
 package typingsSlinky.animejs.mod
 
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.animejs.animejsStrings.center
 import typingsSlinky.animejs.animejsStrings.first
 import typingsSlinky.animejs.animejsStrings.last
@@ -12,109 +11,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StaggerOptions extends js.Object {
-  var axis: js.UndefOr[x | y] = js.native
-  var direction: js.UndefOr[normal | reverse] = js.native
-  var easing: js.UndefOr[CustomEasingFunction | String | EasingOptions] = js.native
-  var from: js.UndefOr[first | last | center | Double] = js.native
-  var grid: js.UndefOr[js.Array[Double]] = js.native
-  var start: js.UndefOr[Double | String] = js.native
+  var axis: js.UndefOr[x | y] = js.undefined
+  var direction: js.UndefOr[normal | reverse] = js.undefined
+  var easing: js.UndefOr[CustomEasingFunction | String | EasingOptions] = js.undefined
+  var from: js.UndefOr[first | last | center | Double] = js.undefined
+  var grid: js.UndefOr[js.Array[Double]] = js.undefined
+  var start: js.UndefOr[Double | String] = js.undefined
 }
 
 object StaggerOptions {
   @scala.inline
-  def apply(): StaggerOptions = {
+  def apply(
+    axis: x | y = null,
+    direction: normal | reverse = null,
+    easing: CustomEasingFunction | String | EasingOptions = null,
+    from: first | last | center | Double = null,
+    grid: js.Array[Double] = null,
+    start: Double | String = null
+  ): StaggerOptions = {
     val __obj = js.Dynamic.literal()
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaggerOptions]
   }
-  @scala.inline
-  implicit class StaggerOptionsOps[Self <: StaggerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxis(value: typingsSlinky.animejs.animejsStrings.x | y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: normal | reverse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasingFunction3(
-      value: (/* el */ HTMLElement, /* index */ Double, /* length */ Double) => js.Function1[/* time */ Double, Double]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withEasing(value: CustomEasingFunction | String | EasingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: first | last | center | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrid(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

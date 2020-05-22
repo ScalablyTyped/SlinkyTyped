@@ -6,75 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableOpts extends js.Object {
-  val arrName: js.UndefOr[String] = js.native
-  val fields: js.UndefOr[StringDictionary[Field]] = js.native
-  val idAttribute: js.UndefOr[String] = js.native
-  val mapName: js.UndefOr[String] = js.native
+  val arrName: js.UndefOr[String] = js.undefined
+  val fields: js.UndefOr[StringDictionary[Field]] = js.undefined
+  val idAttribute: js.UndefOr[String] = js.undefined
+  val mapName: js.UndefOr[String] = js.undefined
 }
 
 object TableOpts {
   @scala.inline
-  def apply(): TableOpts = {
+  def apply(
+    arrName: String = null,
+    fields: StringDictionary[Field] = null,
+    idAttribute: String = null,
+    mapName: String = null
+  ): TableOpts = {
     val __obj = js.Dynamic.literal()
+    if (arrName != null) __obj.updateDynamic("arrName")(arrName.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (idAttribute != null) __obj.updateDynamic("idAttribute")(idAttribute.asInstanceOf[js.Any])
+    if (mapName != null) __obj.updateDynamic("mapName")(mapName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableOpts]
   }
-  @scala.inline
-  implicit class TableOptsOps[Self <: TableOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: StringDictionary[Field]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdAttribute(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idAttribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,4 +13,5 @@ package object typesMod {
   {[ K in keyof Values ]:? Values[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias formik.formik/dist/types.FormikTouched<Values[K]> * / object : boolean}
     */ typingsSlinky.formik.formikStrings.FormikTouched with org.scalablytyped.runtime.TopLevel[Values]
   type FormikValues = org.scalablytyped.runtime.StringDictionary[js.Any]
+  type GenericFieldHTMLAttributes = typingsSlinky.react.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement] | typingsSlinky.react.mod.SelectHTMLAttributes[org.scalajs.dom.raw.HTMLSelectElement] | typingsSlinky.react.mod.TextareaHTMLAttributes[org.scalajs.dom.raw.HTMLTextAreaElement]
 }

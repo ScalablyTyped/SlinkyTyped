@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SendWorkerMessagesResponse extends js.Object {
   /** The servers response to the worker messages. */
-  var workerMessageResponses: js.UndefOr[js.Array[WorkerMessageResponse]] = js.native
+  var workerMessageResponses: js.UndefOr[js.Array[WorkerMessageResponse]] = js.undefined
 }
 
 object SendWorkerMessagesResponse {
   @scala.inline
-  def apply(): SendWorkerMessagesResponse = {
+  def apply(workerMessageResponses: js.Array[WorkerMessageResponse] = null): SendWorkerMessagesResponse = {
     val __obj = js.Dynamic.literal()
+    if (workerMessageResponses != null) __obj.updateDynamic("workerMessageResponses")(workerMessageResponses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendWorkerMessagesResponse]
   }
-  @scala.inline
-  implicit class SendWorkerMessagesResponseOps[Self <: SendWorkerMessagesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWorkerMessageResponses(value: js.Array[WorkerMessageResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessageResponses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerMessageResponses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessageResponses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.hapiInert.mod.hapiHapiAugmentingMod
 
-import typingsSlinky.hapiHapi.mod.Request
 import typingsSlinky.hapiInert.anon.RelativeTo
 import typingsSlinky.hapiInert.mod.DirectoryHandlerRouteObject
 import typingsSlinky.hapiInert.mod.FileHandlerRouteObject
@@ -9,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HandlerDecorations extends js.Object {
   /**
     * The directory handler
@@ -23,7 +21,7 @@ trait HandlerDecorations extends js.Object {
     * The directory handler is an object with the following options:
     * @see {@link https://github.com/hapijs/inert#the-directory-handler}
     */
-  var directory: js.UndefOr[DirectoryHandlerRouteObject] = js.native
+  var directory: js.UndefOr[DirectoryHandlerRouteObject] = js.undefined
   /**
     * The file handler
     *
@@ -33,65 +31,22 @@ trait HandlerDecorations extends js.Object {
     *  * an object with one or more of the following options @see IFileHandler
     * @see {@link https://github.com/hapijs/inert#the-file-handler}
     */
-  var file: js.UndefOr[String | RequestHandler[String] | FileHandlerRouteObject] = js.native
-  var files: js.UndefOr[RelativeTo] = js.native
+  var file: js.UndefOr[String | RequestHandler[String] | FileHandlerRouteObject] = js.undefined
+  var files: js.UndefOr[RelativeTo] = js.undefined
 }
 
 object HandlerDecorations {
   @scala.inline
-  def apply(): HandlerDecorations = {
+  def apply(
+    directory: DirectoryHandlerRouteObject = null,
+    file: String | RequestHandler[String] | FileHandlerRouteObject = null,
+    files: RelativeTo = null
+  ): HandlerDecorations = {
     val __obj = js.Dynamic.literal()
+    if (directory != null) __obj.updateDynamic("directory")(directory.asInstanceOf[js.Any])
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
+    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
     __obj.asInstanceOf[HandlerDecorations]
   }
-  @scala.inline
-  implicit class HandlerDecorationsOps[Self <: HandlerDecorations] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectory(value: DirectoryHandlerRouteObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileFunction1(value: /* request */ Request => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFile(value: String | RequestHandler[String] | FileHandlerRouteObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiles(value: RelativeTo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

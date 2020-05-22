@@ -5,6 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type AsyncAutoTask[R1, R /* <: typingsSlinky.async.mod.Dictionary[_] */, E] = (typingsSlinky.async.mod.AsyncAutoTaskFunctionWithoutDependencies[R1, E]) | (js.Array[
+    (/* keyof R */ java.lang.String) | (typingsSlinky.async.mod.AsyncAutoTaskFunction[R1, R, E])
+  ])
   type AsyncAutoTaskFunction[R1, R /* <: typingsSlinky.async.mod.Dictionary[_] */, E] = js.Function2[
     /* results */ R, 
     /* cb */ (typingsSlinky.async.mod.AsyncResultCallback[R1, E]) | typingsSlinky.async.mod.ErrorCallback[E], 
@@ -68,4 +71,5 @@ package object mod {
   type AsyncWorker[T, E] = js.Function2[/* task */ T, /* callback */ typingsSlinky.async.mod.ErrorCallback[E], scala.Unit]
   type Dictionary[T] = org.scalablytyped.runtime.StringDictionary[T]
   type ErrorCallback[E] = js.Function1[/* err */ js.UndefOr[E | scala.Null], scala.Unit]
+  type IterableCollection[T] = js.Array[T] | typingsSlinky.std.IterableIterator[T] | typingsSlinky.async.mod.Dictionary[T]
 }

@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StripeBankTokenResponse extends StripeTokenResponse {
-  var bank_account: Bankname = js.native
+  var bank_account: Bankname
 }
 
 object StripeBankTokenResponse {
@@ -20,26 +19,14 @@ object StripeBankTokenResponse {
     livemode: Boolean,
     `object`: String,
     `type`: String,
-    used: Boolean
+    used: Boolean,
+    error: StripeError = null
   ): StripeBankTokenResponse = {
     val __obj = js.Dynamic.literal(bank_account = bank_account.asInstanceOf[js.Any], client_ip = client_ip.asInstanceOf[js.Any], created = created.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], livemode = livemode.asInstanceOf[js.Any], used = used.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
     __obj.asInstanceOf[StripeBankTokenResponse]
   }
-  @scala.inline
-  implicit class StripeBankTokenResponseOps[Self <: StripeBankTokenResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBank_account(value: Bankname): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bank_account")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -48,464 +48,122 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined rbx.rbx/base/helpers.HelpersProps */
-@js.native
 trait CheckboxProps extends js.Object {
   var backgroundColor: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-  ] = js.native
-  var badge: js.UndefOr[Double | String] = js.native
+  ] = js.undefined
+  var badge: js.UndefOr[Double | String] = js.undefined
   var badgeColor: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link
-  ] = js.native
-  var badgeOutlined: js.UndefOr[Boolean] = js.native
-  var badgeRounded: js.UndefOr[Boolean] = js.native
-  var badgeSize: js.UndefOr[small | medium | large] = js.native
-  var className: js.UndefOr[String] = js.native
-  var clearfix: js.UndefOr[Boolean] = js.native
-  var clipped: js.UndefOr[Boolean] = js.native
-  var hidden: js.UndefOr[Boolean] = js.native
-  var invisible: js.UndefOr[Boolean] = js.native
-  var italic: js.UndefOr[Boolean] = js.native
-  var marginless: js.UndefOr[Boolean] = js.native
-  var overlay: js.UndefOr[Boolean] = js.native
-  var paddingless: js.UndefOr[Boolean] = js.native
-  var pull: js.UndefOr[left | right] = js.native
-  var radiusless: js.UndefOr[Boolean] = js.native
-  var relative: js.UndefOr[Boolean] = js.native
-  var responsive: js.UndefOr[BinVariablesbreakpointsLi] = js.native
-  var shadowless: js.UndefOr[Boolean] = js.native
-  var srOnly: js.UndefOr[Boolean] = js.native
-  var textAlign: js.UndefOr[centered | justified | left | right] = js.native
+  ] = js.undefined
+  var badgeOutlined: js.UndefOr[Boolean] = js.undefined
+  var badgeRounded: js.UndefOr[Boolean] = js.undefined
+  var badgeSize: js.UndefOr[small | medium | large] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var clearfix: js.UndefOr[Boolean] = js.undefined
+  var clipped: js.UndefOr[Boolean] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
+  var invisible: js.UndefOr[Boolean] = js.undefined
+  var italic: js.UndefOr[Boolean] = js.undefined
+  var marginless: js.UndefOr[Boolean] = js.undefined
+  var overlay: js.UndefOr[Boolean] = js.undefined
+  var paddingless: js.UndefOr[Boolean] = js.undefined
+  var pull: js.UndefOr[left | right] = js.undefined
+  var radiusless: js.UndefOr[Boolean] = js.undefined
+  var relative: js.UndefOr[Boolean] = js.undefined
+  var responsive: js.UndefOr[BinVariablesbreakpointsLi] = js.undefined
+  var shadowless: js.UndefOr[Boolean] = js.undefined
+  var srOnly: js.UndefOr[Boolean] = js.undefined
+  var textAlign: js.UndefOr[centered | justified | left | right] = js.undefined
   var textColor: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-  ] = js.native
-  var textSize: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6` | `7`] = js.native
-  var textTransform: js.UndefOr[capitalized | lowercase | uppercase] = js.native
-  var textWeight: js.UndefOr[light | medium | normal | semibold | bold] = js.native
-  var tooltip: js.UndefOr[Double | String] = js.native
-  var tooltipActive: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var textSize: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6` | `7`] = js.undefined
+  var textTransform: js.UndefOr[capitalized | lowercase | uppercase] = js.undefined
+  var textWeight: js.UndefOr[light | medium | normal | semibold | bold] = js.undefined
+  var tooltip: js.UndefOr[Double | String] = js.undefined
+  var tooltipActive: js.UndefOr[Boolean] = js.undefined
   var tooltipColor: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link
-  ] = js.native
-  var tooltipMultiline: js.UndefOr[Boolean] = js.native
-  var tooltipPosition: js.UndefOr[top | right | bottom | left] = js.native
-  var tooltipResponsive: js.UndefOr[KinVariablesbreakpointsto] = js.native
-  var unselectable: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var tooltipMultiline: js.UndefOr[Boolean] = js.undefined
+  var tooltipPosition: js.UndefOr[top | right | bottom | left] = js.undefined
+  var tooltipResponsive: js.UndefOr[KinVariablesbreakpointsto] = js.undefined
+  var unselectable: js.UndefOr[Boolean] = js.undefined
 }
 
 object CheckboxProps {
   @scala.inline
-  def apply(): CheckboxProps = {
+  def apply(
+    backgroundColor: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis` = null,
+    badge: Double | String = null,
+    badgeColor: primary | success | info | warning | danger | light | dark | white | black | link = null,
+    badgeOutlined: js.UndefOr[Boolean] = js.undefined,
+    badgeRounded: js.UndefOr[Boolean] = js.undefined,
+    badgeSize: small | medium | large = null,
+    className: String = null,
+    clearfix: js.UndefOr[Boolean] = js.undefined,
+    clipped: js.UndefOr[Boolean] = js.undefined,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    invisible: js.UndefOr[Boolean] = js.undefined,
+    italic: js.UndefOr[Boolean] = js.undefined,
+    marginless: js.UndefOr[Boolean] = js.undefined,
+    overlay: js.UndefOr[Boolean] = js.undefined,
+    paddingless: js.UndefOr[Boolean] = js.undefined,
+    pull: left | right = null,
+    radiusless: js.UndefOr[Boolean] = js.undefined,
+    relative: js.UndefOr[Boolean] = js.undefined,
+    responsive: BinVariablesbreakpointsLi = null,
+    shadowless: js.UndefOr[Boolean] = js.undefined,
+    srOnly: js.UndefOr[Boolean] = js.undefined,
+    textAlign: centered | justified | left | right = null,
+    textColor: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis` = null,
+    textSize: `1` | `2` | `3` | `4` | `5` | `6` | `7` = null,
+    textTransform: capitalized | lowercase | uppercase = null,
+    textWeight: light | medium | normal | semibold | bold = null,
+    tooltip: Double | String = null,
+    tooltipActive: js.UndefOr[Boolean] = js.undefined,
+    tooltipColor: primary | success | info | warning | danger | light | dark | white | black | link = null,
+    tooltipMultiline: js.UndefOr[Boolean] = js.undefined,
+    tooltipPosition: top | right | bottom | left = null,
+    tooltipResponsive: KinVariablesbreakpointsto = null,
+    unselectable: js.UndefOr[Boolean] = js.undefined
+  ): CheckboxProps = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
+    if (badgeColor != null) __obj.updateDynamic("badgeColor")(badgeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(badgeOutlined)) __obj.updateDynamic("badgeOutlined")(badgeOutlined.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(badgeRounded)) __obj.updateDynamic("badgeRounded")(badgeRounded.get.asInstanceOf[js.Any])
+    if (badgeSize != null) __obj.updateDynamic("badgeSize")(badgeSize.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearfix)) __obj.updateDynamic("clearfix")(clearfix.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clipped)) __obj.updateDynamic("clipped")(clipped.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(invisible)) __obj.updateDynamic("invisible")(invisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginless)) __obj.updateDynamic("marginless")(marginless.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overlay)) __obj.updateDynamic("overlay")(overlay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingless)) __obj.updateDynamic("paddingless")(paddingless.get.asInstanceOf[js.Any])
+    if (pull != null) __obj.updateDynamic("pull")(pull.asInstanceOf[js.Any])
+    if (!js.isUndefined(radiusless)) __obj.updateDynamic("radiusless")(radiusless.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(relative)) __obj.updateDynamic("relative")(relative.get.asInstanceOf[js.Any])
+    if (responsive != null) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowless)) __obj.updateDynamic("shadowless")(shadowless.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(srOnly)) __obj.updateDynamic("srOnly")(srOnly.get.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
+    if (textSize != null) __obj.updateDynamic("textSize")(textSize.asInstanceOf[js.Any])
+    if (textTransform != null) __obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
+    if (textWeight != null) __obj.updateDynamic("textWeight")(textWeight.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (!js.isUndefined(tooltipActive)) __obj.updateDynamic("tooltipActive")(tooltipActive.get.asInstanceOf[js.Any])
+    if (tooltipColor != null) __obj.updateDynamic("tooltipColor")(tooltipColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(tooltipMultiline)) __obj.updateDynamic("tooltipMultiline")(tooltipMultiline.get.asInstanceOf[js.Any])
+    if (tooltipPosition != null) __obj.updateDynamic("tooltipPosition")(tooltipPosition.asInstanceOf[js.Any])
+    if (tooltipResponsive != null) __obj.updateDynamic("tooltipResponsive")(tooltipResponsive.asInstanceOf[js.Any])
+    if (!js.isUndefined(unselectable)) __obj.updateDynamic("unselectable")(unselectable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckboxProps]
   }
-  @scala.inline
-  implicit class CheckboxPropsOps[Self <: CheckboxProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(
-      value: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadge(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadgeColor(value: primary | success | info | warning | danger | light | dark | white | black | link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadgeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadgeOutlined(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeOutlined")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadgeOutlined: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeOutlined")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadgeRounded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeRounded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadgeRounded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeRounded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadgeSize(value: small | medium | large): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadgeSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearfix(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearfix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearfix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearfix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClipped(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClipped: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipped")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItalic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItalic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPull(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadiusless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadiusless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: BinVariablesbreakpointsLi): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: centered | justified | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextColor(
-      value: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextSize(value: `1` | `2` | `3` | `4` | `5` | `6` | `7`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextTransform(value: capitalized | lowercase | uppercase): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextWeight(value: light | medium | normal | semibold | bold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipColor(value: primary | success | info | warning | danger | light | dark | white | black | link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipMultiline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipMultiline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipMultiline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipMultiline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipPosition(value: top | right | bottom | left): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipResponsive(value: KinVariablesbreakpointsto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipResponsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipResponsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnselectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnselectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

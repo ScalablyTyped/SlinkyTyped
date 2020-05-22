@@ -38,89 +38,22 @@ trait CreateBusinessReportScheduleRequest extends js.Object {
 
 object CreateBusinessReportScheduleRequest {
   @scala.inline
-  def apply(ContentRange: BusinessReportContentRange, Format: BusinessReportFormat): CreateBusinessReportScheduleRequest = {
+  def apply(
+    ContentRange: BusinessReportContentRange,
+    Format: BusinessReportFormat,
+    ClientRequestToken: ClientRequestToken = null,
+    Recurrence: BusinessReportRecurrence = null,
+    S3BucketName: CustomerS3BucketName = null,
+    S3KeyPrefix: S3KeyPrefix = null,
+    ScheduleName: BusinessReportScheduleName = null
+  ): CreateBusinessReportScheduleRequest = {
     val __obj = js.Dynamic.literal(ContentRange = ContentRange.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any])
+    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
+    if (Recurrence != null) __obj.updateDynamic("Recurrence")(Recurrence.asInstanceOf[js.Any])
+    if (S3BucketName != null) __obj.updateDynamic("S3BucketName")(S3BucketName.asInstanceOf[js.Any])
+    if (S3KeyPrefix != null) __obj.updateDynamic("S3KeyPrefix")(S3KeyPrefix.asInstanceOf[js.Any])
+    if (ScheduleName != null) __obj.updateDynamic("ScheduleName")(ScheduleName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBusinessReportScheduleRequest]
   }
-  @scala.inline
-  implicit class CreateBusinessReportScheduleRequestOps[Self <: CreateBusinessReportScheduleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentRange(value: BusinessReportContentRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: BusinessReportFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecurrence(value: BusinessReportRecurrence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recurrence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecurrence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recurrence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3BucketName(value: CustomerS3BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3BucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3KeyPrefix(value: S3KeyPrefix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3KeyPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3KeyPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3KeyPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleName(value: BusinessReportScheduleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.maxmind.anon
 import typingsSlinky.maxmind.maxmindStrings.buffer
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
-import typingsSlinky.node.anon.EncodingPersistent
 import typingsSlinky.node.anon.Persistent
 import typingsSlinky.node.anon.Recursive
 import typingsSlinky.node.fsMod.FSWatcher
@@ -39,17 +38,11 @@ trait FnCallFilenameOptionsListener extends js.Object {
     options: BufferEncoding,
     listener: js.Function2[/* event */ String, /* filename */ String, Unit]
   ): FSWatcher = js.native
-  def apply(filename: PathLike, options: EncodingPersistent): FSWatcher = js.native
-  def apply(
-    filename: PathLike,
-    options: EncodingPersistent,
-    listener: js.Function2[/* event */ String, /* filename */ String | Buffer, Unit]
-  ): FSWatcher = js.native
   def apply(filename: PathLike, options: Persistent): FSWatcher = js.native
   def apply(
     filename: PathLike,
     options: Persistent,
-    listener: js.Function2[/* event */ String, /* filename */ String, Unit]
+    listener: js.Function2[/* event */ String, Buffer | (/* filename */ String), Unit]
   ): FSWatcher = js.native
   def apply(filename: PathLike, options: Recursive): FSWatcher = js.native
   def apply(

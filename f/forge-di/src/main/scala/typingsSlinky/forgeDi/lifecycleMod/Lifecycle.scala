@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Lifecycle extends js.Object {
-  def resolve(resolver: default, context: typingsSlinky.forgeDi.contextMod.default, args: Arguments): js.Any = js.native
+  def resolve(resolver: default, context: typingsSlinky.forgeDi.contextMod.default, args: Arguments): js.Any
 }
 
 object Lifecycle {
@@ -17,19 +16,5 @@ object Lifecycle {
     val __obj = js.Dynamic.literal(resolve = js.Any.fromFunction3(resolve))
     __obj.asInstanceOf[Lifecycle]
   }
-  @scala.inline
-  implicit class LifecycleOps[Self <: Lifecycle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResolve(value: (default, typingsSlinky.forgeDi.contextMod.default, Arguments) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

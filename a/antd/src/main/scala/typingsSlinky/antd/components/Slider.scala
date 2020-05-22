@@ -7,9 +7,10 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.sliderMod.SliderMarks
 import typingsSlinky.antd.sliderMod.SliderProps
 import typingsSlinky.antd.sliderMod.SliderValue
-import typingsSlinky.antd.sliderMod.default
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +23,7 @@ object Slider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -75,7 +76,7 @@ object Slider {
     def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: SliderProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Slider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StandardGridsterItem extends js.Object {
   // starting column where the item will be placed
-  var col: Double = js.native
+  var col: Double
   // starting row where the item will be placed
-  var row: Double = js.native
+  var row: Double
   // width of the item expressed in terms of number of columns it will occupy
-  var sizeX: Double = js.native
+  var sizeX: Double
   // height of the item expressed in terms of number of rows it will occupy
-  var sizeY: Double = js.native
+  var sizeY: Double
 }
 
 object StandardGridsterItem {
@@ -22,37 +21,5 @@ object StandardGridsterItem {
     val __obj = js.Dynamic.literal(col = col.asInstanceOf[js.Any], row = row.asInstanceOf[js.Any], sizeX = sizeX.asInstanceOf[js.Any], sizeY = sizeY.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardGridsterItem]
   }
-  @scala.inline
-  implicit class StandardGridsterItemOps[Self <: StandardGridsterItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCol(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizeX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizeY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeY")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

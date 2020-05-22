@@ -30,77 +30,20 @@ trait CreateVocabularyResponse extends js.Object {
 
 object CreateVocabularyResponse {
   @scala.inline
-  def apply(): CreateVocabularyResponse = {
+  def apply(
+    FailureReason: FailureReason = null,
+    LanguageCode: LanguageCode = null,
+    LastModifiedTime: js.Date = null,
+    VocabularyName: VocabularyName = null,
+    VocabularyState: VocabularyState = null
+  ): CreateVocabularyResponse = {
     val __obj = js.Dynamic.literal()
+    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
+    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
+    if (LastModifiedTime != null) __obj.updateDynamic("LastModifiedTime")(LastModifiedTime.asInstanceOf[js.Any])
+    if (VocabularyName != null) __obj.updateDynamic("VocabularyName")(VocabularyName.asInstanceOf[js.Any])
+    if (VocabularyState != null) __obj.updateDynamic("VocabularyState")(VocabularyState.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVocabularyResponse]
   }
-  @scala.inline
-  implicit class CreateVocabularyResponseOps[Self <: CreateVocabularyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailureReason(value: FailureReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: LanguageCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVocabularyName(value: VocabularyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocabularyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVocabularyState(value: VocabularyState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocabularyState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,101 +38,24 @@ trait ActiveViolation extends js.Object {
 
 object ActiveViolation {
   @scala.inline
-  def apply(): ActiveViolation = {
+  def apply(
+    behavior: Behavior = null,
+    lastViolationTime: js.Date = null,
+    lastViolationValue: MetricValue = null,
+    securityProfileName: SecurityProfileName = null,
+    thingName: DeviceDefenderThingName = null,
+    violationId: ViolationId = null,
+    violationStartTime: js.Date = null
+  ): ActiveViolation = {
     val __obj = js.Dynamic.literal()
+    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
+    if (lastViolationTime != null) __obj.updateDynamic("lastViolationTime")(lastViolationTime.asInstanceOf[js.Any])
+    if (lastViolationValue != null) __obj.updateDynamic("lastViolationValue")(lastViolationValue.asInstanceOf[js.Any])
+    if (securityProfileName != null) __obj.updateDynamic("securityProfileName")(securityProfileName.asInstanceOf[js.Any])
+    if (thingName != null) __obj.updateDynamic("thingName")(thingName.asInstanceOf[js.Any])
+    if (violationId != null) __obj.updateDynamic("violationId")(violationId.asInstanceOf[js.Any])
+    if (violationStartTime != null) __obj.updateDynamic("violationStartTime")(violationStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActiveViolation]
   }
-  @scala.inline
-  implicit class ActiveViolationOps[Self <: ActiveViolation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBehavior(value: Behavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastViolationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastViolationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastViolationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastViolationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastViolationValue(value: MetricValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastViolationValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastViolationValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastViolationValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityProfileName(value: SecurityProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingName(value: DeviceDefenderThingName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViolationId(value: ViolationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("violationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViolationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("violationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViolationStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("violationStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViolationStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("violationStartTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

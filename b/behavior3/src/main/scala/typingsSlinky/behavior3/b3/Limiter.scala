@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * executing the child.
   *
   */
-@js.native
 trait Limiter extends BaseNode
 
 object Limiter {

@@ -10,6 +10,7 @@ import typingsSlinky.antd.antdStrings.`jump-prev`
 import typingsSlinky.antd.antdStrings.next
 import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.prev
+import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.paginationMod.default
 import typingsSlinky.antd.paginationPaginationMod.PaginationProps
 import typingsSlinky.react.mod.CSSProperties
@@ -55,6 +56,8 @@ object Pagination {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
+    @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline
     def selectPrefixCls(value: String): this.type = set("selectPrefixCls", value.asInstanceOf[js.Any])
@@ -65,11 +68,13 @@ object Pagination {
     @scala.inline
     def showSizeChanger(value: Boolean): this.type = set("showSizeChanger", value.asInstanceOf[js.Any])
     @scala.inline
+    def showTitle(value: Boolean): this.type = set("showTitle", value.asInstanceOf[js.Any])
+    @scala.inline
     def showTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any]): this.type = set("showTotal", js.Any.fromFunction2(value))
     @scala.inline
     def simple(value: Boolean): this.type = set("simple", value.asInstanceOf[js.Any])
     @scala.inline
-    def size(value: String): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: typingsSlinky.antd.antdStrings.default | small): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

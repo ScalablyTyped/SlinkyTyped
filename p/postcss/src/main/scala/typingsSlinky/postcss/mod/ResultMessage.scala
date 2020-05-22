@@ -5,39 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResultMessage
   extends /* others */ StringDictionary[js.Any] {
-  var plugin: String = js.native
-  var `type`: String = js.native
+  var plugin: String
+  var `type`: String
 }
 
 object ResultMessage {
   @scala.inline
-  def apply(plugin: String, `type`: String): ResultMessage = {
+  def apply(plugin: String, `type`: String, StringDictionary: /* name */ StringDictionary[js.Any] = null): ResultMessage = {
     val __obj = js.Dynamic.literal(plugin = plugin.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[ResultMessage]
   }
-  @scala.inline
-  implicit class ResultMessageOps[Self <: ResultMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlugin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

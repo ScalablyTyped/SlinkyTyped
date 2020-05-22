@@ -1,5 +1,7 @@
 package typingsSlinky.fridaGum.global
 
+import typingsSlinky.fridaGum.GeneratedSourcePosition
+import typingsSlinky.fridaGum.OriginalSourcePosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,5 +20,12 @@ class SourceMap protected ()
     * @param json String containing the source map encoded as JSON.
     */
   def this(json: String) = this()
+  /**
+    * Attempts to map a generated source position back to the original.
+    *
+    * @param generatedPosition Position in generated code.
+    */
+  /* CompleteClass */
+  override def resolve(generatedPosition: GeneratedSourcePosition): OriginalSourcePosition | Null = js.native
 }
 

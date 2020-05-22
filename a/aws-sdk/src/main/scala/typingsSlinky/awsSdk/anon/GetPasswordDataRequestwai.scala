@@ -24,47 +24,15 @@ trait GetPasswordDataRequestwai extends js.Object {
 
 object GetPasswordDataRequestwai {
   @scala.inline
-  def apply(InstanceId: InstanceId): GetPasswordDataRequestwai = {
+  def apply(
+    InstanceId: InstanceId,
+    $waiter: WaiterConfiguration = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined
+  ): GetPasswordDataRequestwai = {
     val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any])
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPasswordDataRequestwai]
   }
-  @scala.inline
-  implicit class GetPasswordDataRequestwaiOps[Self <: GetPasswordDataRequestwai] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

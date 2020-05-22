@@ -22,47 +22,15 @@ trait SimpleScalingPolicyConfiguration extends js.Object {
 
 object SimpleScalingPolicyConfiguration {
   @scala.inline
-  def apply(ScalingAdjustment: Integer): SimpleScalingPolicyConfiguration = {
+  def apply(
+    ScalingAdjustment: Integer,
+    AdjustmentType: AdjustmentType = null,
+    CoolDown: js.UndefOr[Integer] = js.undefined
+  ): SimpleScalingPolicyConfiguration = {
     val __obj = js.Dynamic.literal(ScalingAdjustment = ScalingAdjustment.asInstanceOf[js.Any])
+    if (AdjustmentType != null) __obj.updateDynamic("AdjustmentType")(AdjustmentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(CoolDown)) __obj.updateDynamic("CoolDown")(CoolDown.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleScalingPolicyConfiguration]
   }
-  @scala.inline
-  implicit class SimpleScalingPolicyConfigurationOps[Self <: SimpleScalingPolicyConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScalingAdjustment(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingAdjustment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdjustmentType(value: AdjustmentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustmentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdjustmentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustmentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoolDown(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CoolDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoolDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CoolDown")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

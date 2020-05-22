@@ -6,74 +6,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2RevoluteJoint extends b2Joint {
   /**
-  		* Enable/disable the joint limit.
-  		* @param flag True to enable, false to disable.
-  		**/
-  def EnableLimit(flag: Boolean): Unit = js.native
+    * Enable/disable the joint limit.
+    * @param flag True to enable, false to disable.
+    **/
+  def EnableLimit(flag: Boolean): Unit
   /**
-  		* Enable/disable the joint motor.
-  		* @param flag True to enable, false to diasable.
-  		**/
-  def EnableMotor(flag: Boolean): Unit = js.native
+    * Enable/disable the joint motor.
+    * @param flag True to enable, false to diasable.
+    **/
+  def EnableMotor(flag: Boolean): Unit
   /**
-  		* Get the current joint angle in radians.
-  		* @return Joint angle.
-  		**/
-  def GetJointAngle(): Double = js.native
+    * Get the current joint angle in radians.
+    * @return Joint angle.
+    **/
+  def GetJointAngle(): Double
   /**
-  		* Get the current joint angle speed in radians per second.
-  		* @return Joint speed.
-  		**/
-  def GetJointSpeed(): Double = js.native
+    * Get the current joint angle speed in radians per second.
+    * @return Joint speed.
+    **/
+  def GetJointSpeed(): Double
   /**
-  		* Get the lower joint limit in radians.
-  		* @return Lower limit.
-  		**/
-  def GetLowerLimit(): Double = js.native
+    * Get the lower joint limit in radians.
+    * @return Lower limit.
+    **/
+  def GetLowerLimit(): Double
   /**
-  		* Get the motor speed in radians per second.
-  		* @return Motor speed.
-  		**/
-  def GetMotorSpeed(): Double = js.native
+    * Get the motor speed in radians per second.
+    * @return Motor speed.
+    **/
+  def GetMotorSpeed(): Double
   /**
-  		* Get the current motor torque, usually in N-m.
-  		* @return Motor torque.
-  		**/
-  def GetMotorTorque(): Double = js.native
+    * Get the current motor torque, usually in N-m.
+    * @return Motor torque.
+    **/
+  def GetMotorTorque(): Double
   /**
-  		* Get the upper joint limit in radians.
-  		* @return Upper limit.
-  		**/
-  def GetUpperLimit(): Double = js.native
+    * Get the upper joint limit in radians.
+    * @return Upper limit.
+    **/
+  def GetUpperLimit(): Double
   /**
-  		* Is the joint limit enabled?
-  		* @return True if enabled, false if disabled.
-  		**/
-  def IsLimitEnabled(): Boolean = js.native
+    * Is the joint limit enabled?
+    * @return True if enabled, false if disabled.
+    **/
+  def IsLimitEnabled(): Boolean
   /**
-  		* Is the joint motor enabled?
-  		* @return True if enabled, false if disabled.
-  		**/
-  def IsMotorEnabled(): Boolean = js.native
+    * Is the joint motor enabled?
+    * @return True if enabled, false if disabled.
+    **/
+  def IsMotorEnabled(): Boolean
   /**
-  		* Set the joint limits in radians.
-  		* @param lower New lower limit.
-  		* @param upper New upper limit.
-  		**/
-  def SetLimits(lower: Double, upper: Double): Unit = js.native
+    * Set the joint limits in radians.
+    * @param lower New lower limit.
+    * @param upper New upper limit.
+    **/
+  def SetLimits(lower: Double, upper: Double): Unit
   /**
-  		* Set the maximum motor torque, usually in N-m.
-  		* @param torque New max torque.
-  		**/
-  def SetMaxMotorTorque(torque: Double): Unit = js.native
+    * Set the maximum motor torque, usually in N-m.
+    * @param torque New max torque.
+    **/
+  def SetMaxMotorTorque(torque: Double): Unit
   /**
-  		* Set the motor speed in radians per second.
-  		* @param speed New motor speed.
-  		**/
-  def SetMotorSpeed(speed: Double): Unit = js.native
+    * Set the motor speed in radians per second.
+    * @param speed New motor speed.
+    **/
+  def SetMotorSpeed(speed: Double): Unit
 }
 
 object b2RevoluteJoint {
@@ -107,91 +106,5 @@ object b2RevoluteJoint {
     val __obj = js.Dynamic.literal(EnableLimit = js.Any.fromFunction1(EnableLimit), EnableMotor = js.Any.fromFunction1(EnableMotor), GetAnchorA = js.Any.fromFunction0(GetAnchorA), GetAnchorB = js.Any.fromFunction0(GetAnchorB), GetBodyA = js.Any.fromFunction0(GetBodyA), GetBodyB = js.Any.fromFunction0(GetBodyB), GetJointAngle = js.Any.fromFunction0(GetJointAngle), GetJointSpeed = js.Any.fromFunction0(GetJointSpeed), GetLowerLimit = js.Any.fromFunction0(GetLowerLimit), GetMotorSpeed = js.Any.fromFunction0(GetMotorSpeed), GetMotorTorque = js.Any.fromFunction0(GetMotorTorque), GetNext = js.Any.fromFunction0(GetNext), GetReactionForce = js.Any.fromFunction1(GetReactionForce), GetReactionTorque = js.Any.fromFunction1(GetReactionTorque), GetType = js.Any.fromFunction0(GetType), GetUpperLimit = js.Any.fromFunction0(GetUpperLimit), GetUserData = js.Any.fromFunction0(GetUserData), IsActive = js.Any.fromFunction0(IsActive), IsLimitEnabled = js.Any.fromFunction0(IsLimitEnabled), IsMotorEnabled = js.Any.fromFunction0(IsMotorEnabled), SetLimits = js.Any.fromFunction2(SetLimits), SetMaxMotorTorque = js.Any.fromFunction1(SetMaxMotorTorque), SetMotorSpeed = js.Any.fromFunction1(SetMotorSpeed), SetUserData = js.Any.fromFunction1(SetUserData))
     __obj.asInstanceOf[b2RevoluteJoint]
   }
-  @scala.inline
-  implicit class b2RevoluteJointOps[Self <: b2RevoluteJoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableLimit(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableLimit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEnableMotor(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableMotor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetJointAngle(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetJointAngle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetJointSpeed(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetJointSpeed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLowerLimit(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLowerLimit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMotorSpeed(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMotorSpeed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMotorTorque(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMotorTorque")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUpperLimit(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetUpperLimit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsLimitEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLimitEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsMotorEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMotorEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetLimits(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetLimits")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetMaxMotorTorque(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetMaxMotorTorque")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetMotorSpeed(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetMotorSpeed")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

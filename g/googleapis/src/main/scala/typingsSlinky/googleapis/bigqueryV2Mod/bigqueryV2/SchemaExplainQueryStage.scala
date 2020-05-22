@@ -127,365 +127,68 @@ trait SchemaExplainQueryStage extends js.Object {
 
 object SchemaExplainQueryStage {
   @scala.inline
-  def apply(): SchemaExplainQueryStage = {
+  def apply(
+    completedParallelInputs: String = null,
+    computeMsAvg: String = null,
+    computeMsMax: String = null,
+    computeRatioAvg: js.UndefOr[Double] = js.undefined,
+    computeRatioMax: js.UndefOr[Double] = js.undefined,
+    endMs: String = null,
+    id: String = null,
+    inputStages: js.Array[String] = null,
+    name: String = null,
+    parallelInputs: String = null,
+    readMsAvg: String = null,
+    readMsMax: String = null,
+    readRatioAvg: js.UndefOr[Double] = js.undefined,
+    readRatioMax: js.UndefOr[Double] = js.undefined,
+    recordsRead: String = null,
+    recordsWritten: String = null,
+    shuffleOutputBytes: String = null,
+    shuffleOutputBytesSpilled: String = null,
+    startMs: String = null,
+    status: String = null,
+    steps: js.Array[SchemaExplainQueryStep] = null,
+    waitMsAvg: String = null,
+    waitMsMax: String = null,
+    waitRatioAvg: js.UndefOr[Double] = js.undefined,
+    waitRatioMax: js.UndefOr[Double] = js.undefined,
+    writeMsAvg: String = null,
+    writeMsMax: String = null,
+    writeRatioAvg: js.UndefOr[Double] = js.undefined,
+    writeRatioMax: js.UndefOr[Double] = js.undefined
+  ): SchemaExplainQueryStage = {
     val __obj = js.Dynamic.literal()
+    if (completedParallelInputs != null) __obj.updateDynamic("completedParallelInputs")(completedParallelInputs.asInstanceOf[js.Any])
+    if (computeMsAvg != null) __obj.updateDynamic("computeMsAvg")(computeMsAvg.asInstanceOf[js.Any])
+    if (computeMsMax != null) __obj.updateDynamic("computeMsMax")(computeMsMax.asInstanceOf[js.Any])
+    if (!js.isUndefined(computeRatioAvg)) __obj.updateDynamic("computeRatioAvg")(computeRatioAvg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(computeRatioMax)) __obj.updateDynamic("computeRatioMax")(computeRatioMax.get.asInstanceOf[js.Any])
+    if (endMs != null) __obj.updateDynamic("endMs")(endMs.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inputStages != null) __obj.updateDynamic("inputStages")(inputStages.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (parallelInputs != null) __obj.updateDynamic("parallelInputs")(parallelInputs.asInstanceOf[js.Any])
+    if (readMsAvg != null) __obj.updateDynamic("readMsAvg")(readMsAvg.asInstanceOf[js.Any])
+    if (readMsMax != null) __obj.updateDynamic("readMsMax")(readMsMax.asInstanceOf[js.Any])
+    if (!js.isUndefined(readRatioAvg)) __obj.updateDynamic("readRatioAvg")(readRatioAvg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readRatioMax)) __obj.updateDynamic("readRatioMax")(readRatioMax.get.asInstanceOf[js.Any])
+    if (recordsRead != null) __obj.updateDynamic("recordsRead")(recordsRead.asInstanceOf[js.Any])
+    if (recordsWritten != null) __obj.updateDynamic("recordsWritten")(recordsWritten.asInstanceOf[js.Any])
+    if (shuffleOutputBytes != null) __obj.updateDynamic("shuffleOutputBytes")(shuffleOutputBytes.asInstanceOf[js.Any])
+    if (shuffleOutputBytesSpilled != null) __obj.updateDynamic("shuffleOutputBytesSpilled")(shuffleOutputBytesSpilled.asInstanceOf[js.Any])
+    if (startMs != null) __obj.updateDynamic("startMs")(startMs.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
+    if (waitMsAvg != null) __obj.updateDynamic("waitMsAvg")(waitMsAvg.asInstanceOf[js.Any])
+    if (waitMsMax != null) __obj.updateDynamic("waitMsMax")(waitMsMax.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitRatioAvg)) __obj.updateDynamic("waitRatioAvg")(waitRatioAvg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitRatioMax)) __obj.updateDynamic("waitRatioMax")(waitRatioMax.get.asInstanceOf[js.Any])
+    if (writeMsAvg != null) __obj.updateDynamic("writeMsAvg")(writeMsAvg.asInstanceOf[js.Any])
+    if (writeMsMax != null) __obj.updateDynamic("writeMsMax")(writeMsMax.asInstanceOf[js.Any])
+    if (!js.isUndefined(writeRatioAvg)) __obj.updateDynamic("writeRatioAvg")(writeRatioAvg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(writeRatioMax)) __obj.updateDynamic("writeRatioMax")(writeRatioMax.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExplainQueryStage]
   }
-  @scala.inline
-  implicit class SchemaExplainQueryStageOps[Self <: SchemaExplainQueryStage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompletedParallelInputs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedParallelInputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletedParallelInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedParallelInputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeMsAvg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeMsAvg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputeMsAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeMsAvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeMsMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeMsMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputeMsMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeMsMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeRatioAvg(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeRatioAvg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputeRatioAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeRatioAvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeRatioMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeRatioMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputeRatioMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeRatioMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputStages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputStages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallelInputs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelInputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallelInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelInputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadMsAvg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readMsAvg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadMsAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readMsAvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadMsMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readMsMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadMsMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readMsMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadRatioAvg(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readRatioAvg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadRatioAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readRatioAvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadRatioMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readRatioMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadRatioMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readRatioMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordsRead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordsRead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsRead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordsWritten(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsWritten")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordsWritten: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsWritten")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShuffleOutputBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffleOutputBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShuffleOutputBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffleOutputBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShuffleOutputBytesSpilled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffleOutputBytesSpilled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShuffleOutputBytesSpilled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffleOutputBytesSpilled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSteps(value: js.Array[SchemaExplainQueryStep]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitMsAvg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitMsAvg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitMsAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitMsAvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitMsMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitMsMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitMsMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitMsMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitRatioAvg(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitRatioAvg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitRatioAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitRatioAvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitRatioMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitRatioMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitRatioMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitRatioMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteMsAvg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeMsAvg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteMsAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeMsAvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteMsMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeMsMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteMsMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeMsMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteRatioAvg(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRatioAvg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteRatioAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRatioAvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteRatioMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRatioMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteRatioMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRatioMax")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

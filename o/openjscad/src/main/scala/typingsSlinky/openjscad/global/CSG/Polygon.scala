@@ -33,6 +33,14 @@ object Polygon extends js.Object {
   class Shared protected ()
     extends typingsSlinky.openjscad.CSG.Polygon.Shared {
     def this(color: js.Any) = this()
+    /* CompleteClass */
+    override var color: js.Any = js.native
+    /* CompleteClass */
+    override var tag: js.Any = js.native
+    /* CompleteClass */
+    override def getHash(): js.Any = js.native
+    /* CompleteClass */
+    override def getTag(): js.Any = js.native
   }
   
   var defaultShared: typingsSlinky.openjscad.CSG.Polygon.Shared = js.native

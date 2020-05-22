@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * This interface is used to retrieve, add, or remove clipboard instances.
   * @see com.sun.star.datatransfer.clipboard.XClipboard
   */
-@js.native
 trait XClipboardManager extends XInterface {
   /**
     * Add a clipboard instance to the manager's list.
@@ -19,24 +18,24 @@ trait XClipboardManager extends XInterface {
     * @throws com::sun::star::IllegalArgumentException if xClipboard is not a valid clipboard.
     * @throws com::sun::star::container::ElementExistsException if a clipboard with the name of xClipboard already exists.
     */
-  def addClipboard(xClipboard: XClipboard): Unit = js.native
+  def addClipboard(xClipboard: XClipboard): Unit
   /**
     * Get a clipboard instance by name.
     * @param aName The name of clipboard to return. To retrieve the default (system) clipboard, pass an empty string.
     * @returns The clipboard object with the specified name.
     * @throws com::sun::star::container::NoSuchElementException if no clipboard with the specified name exists.
     */
-  def getClipboard(aName: String): XClipboard = js.native
+  def getClipboard(aName: String): XClipboard
   /**
     * Get a list of a managed clipboards.
     * @returns A sequence of the names of all available clipboards.
     */
-  def listClipboardNames(): SafeArray[String] = js.native
+  def listClipboardNames(): SafeArray[String]
   /**
     * Removes the clipboard with the specified name from the list.
     * @param aName The name of the clipboard to remove.
     */
-  def removeClipboard(aName: String): Unit = js.native
+  def removeClipboard(aName: String): Unit
 }
 
 object XClipboardManager {
@@ -53,37 +52,5 @@ object XClipboardManager {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addClipboard = js.Any.fromFunction1(addClipboard), getClipboard = js.Any.fromFunction1(getClipboard), listClipboardNames = js.Any.fromFunction0(listClipboardNames), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeClipboard = js.Any.fromFunction1(removeClipboard))
     __obj.asInstanceOf[XClipboardManager]
   }
-  @scala.inline
-  implicit class XClipboardManagerOps[Self <: XClipboardManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddClipboard(value: XClipboard => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClipboard")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetClipboard(value: String => XClipboard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClipboard")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListClipboardNames(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listClipboardNames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveClipboard(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClipboard")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -6,34 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IconToggleProps
   extends AllHTMLAttributes[js.Any]
      with ClassAttributes[js.Any]
      with RippleComponent {
   @JSName("name")
-  var name_IconToggleProps: String = js.native
+  var name_IconToggleProps: String
 }
 
 object IconToggleProps {
   @scala.inline
-  def apply(name: String): IconToggleProps = {
+  def apply(
+    name: String,
+    AllHTMLAttributes: AllHTMLAttributes[js.Any] = null,
+    ClassAttributes: ClassAttributes[js.Any] = null,
+    RippleComponent: RippleComponent = null
+  ): IconToggleProps = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (RippleComponent != null) js.Dynamic.global.Object.assign(__obj, RippleComponent)
     __obj.asInstanceOf[IconToggleProps]
   }
-  @scala.inline
-  implicit class IconTogglePropsOps[Self <: IconToggleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

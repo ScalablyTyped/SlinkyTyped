@@ -22,5 +22,20 @@ class ASPxClientRibbonCommandExecutedEventArgs protected ()
     parameter: String,
     processOnServer: Boolean
   ) = this()
+  /**
+    * Gets an item object related to the event.
+    */
+  /* CompleteClass */
+  override var item: typingsSlinky.devexpressWeb.ASPxClientRibbonItem = js.native
+  /**
+    * Gets an optional parameter that complements the processed command.
+    */
+  /* CompleteClass */
+  override var parameter: String = js.native
+  /**
+    * Gets or sets a value that specifies whether the event should be finally processed on the server side.
+    */
+  /* CompleteClass */
+  override var processOnServer: Boolean = js.native
 }
 

@@ -46,125 +46,28 @@ trait SystemInstanceSummary extends js.Object {
 
 object SystemInstanceSummary {
   @scala.inline
-  def apply(): SystemInstanceSummary = {
+  def apply(
+    arn: Arn = null,
+    createdAt: js.Date = null,
+    greengrassGroupId: GreengrassGroupId = null,
+    greengrassGroupName: GroupName = null,
+    greengrassGroupVersionId: GreengrassGroupVersionId = null,
+    id: Urn = null,
+    status: SystemInstanceDeploymentStatus = null,
+    target: DeploymentTarget = null,
+    updatedAt: js.Date = null
+  ): SystemInstanceSummary = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (createdAt != null) __obj.updateDynamic("createdAt")(createdAt.asInstanceOf[js.Any])
+    if (greengrassGroupId != null) __obj.updateDynamic("greengrassGroupId")(greengrassGroupId.asInstanceOf[js.Any])
+    if (greengrassGroupName != null) __obj.updateDynamic("greengrassGroupName")(greengrassGroupName.asInstanceOf[js.Any])
+    if (greengrassGroupVersionId != null) __obj.updateDynamic("greengrassGroupVersionId")(greengrassGroupVersionId.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (updatedAt != null) __obj.updateDynamic("updatedAt")(updatedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[SystemInstanceSummary]
   }
-  @scala.inline
-  implicit class SystemInstanceSummaryOps[Self <: SystemInstanceSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGreengrassGroupId(value: GreengrassGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrassGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGreengrassGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrassGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGreengrassGroupName(value: GroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrassGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGreengrassGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrassGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGreengrassGroupVersionId(value: GreengrassGroupVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrassGroupVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGreengrassGroupVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrassGroupVersionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Urn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SystemInstanceDeploymentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: DeploymentTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedAt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

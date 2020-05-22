@@ -14,29 +14,10 @@ trait DescribeUserPoolDomainResponse extends js.Object {
 
 object DescribeUserPoolDomainResponse {
   @scala.inline
-  def apply(): DescribeUserPoolDomainResponse = {
+  def apply(DomainDescription: DomainDescriptionType = null): DescribeUserPoolDomainResponse = {
     val __obj = js.Dynamic.literal()
+    if (DomainDescription != null) __obj.updateDynamic("DomainDescription")(DomainDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeUserPoolDomainResponse]
   }
-  @scala.inline
-  implicit class DescribeUserPoolDomainResponseOps[Self <: DescribeUserPoolDomainResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainDescription(value: DomainDescriptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

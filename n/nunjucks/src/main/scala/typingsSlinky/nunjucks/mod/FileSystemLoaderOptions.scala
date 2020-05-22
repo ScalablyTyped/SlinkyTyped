@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileSystemLoaderOptions extends js.Object {
   /**  if true, the system will avoid using a cache and templates will be recompiled every single time */
-  var noCache: js.UndefOr[Boolean] = js.native
+  var noCache: js.UndefOr[Boolean] = js.undefined
   /** if true, the system will automatically update templates when they are changed on the filesystem */
-  var watch: js.UndefOr[Boolean] = js.native
+  var watch: js.UndefOr[Boolean] = js.undefined
 }
 
 object FileSystemLoaderOptions {
   @scala.inline
-  def apply(): FileSystemLoaderOptions = {
+  def apply(noCache: js.UndefOr[Boolean] = js.undefined, watch: js.UndefOr[Boolean] = js.undefined): FileSystemLoaderOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(noCache)) __obj.updateDynamic("noCache")(noCache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(watch)) __obj.updateDynamic("watch")(watch.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileSystemLoaderOptions]
   }
-  @scala.inline
-  implicit class FileSystemLoaderOptionsOps[Self <: FileSystemLoaderOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNoCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

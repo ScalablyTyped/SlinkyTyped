@@ -1,6 +1,6 @@
 package typingsSlinky.intlMessageformatParser
 
-import typingsSlinky.intlMessageformatParser.mod.ValidPluralRule
+import typingsSlinky.intlMessageformatParser.mod._ValidPluralRule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +10,6 @@ object intlMessageformatParserStrings {
   sealed trait any extends js.Object
   
   @js.native
-  sealed trait cardinal extends js.Object
-  
-  @js.native
   sealed trait `class` extends js.Object
   
   @js.native
@@ -20,8 +17,8 @@ object intlMessageformatParserStrings {
   
   @js.native
   sealed trait few
-    extends ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
+    extends _ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
   
   @js.native
   sealed trait h11 extends js.Object
@@ -40,36 +37,31 @@ object intlMessageformatParserStrings {
   
   @js.native
   sealed trait many
-    extends ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
+    extends _ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
   
   @js.native
   sealed trait one
-    extends ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
-  
-  @js.native
-  sealed trait ordinal extends js.Object
+    extends _ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
   
   @js.native
   sealed trait other
-    extends ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
+    extends _ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
   
   @js.native
   sealed trait two
-    extends ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
+    extends _ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
   
   @js.native
   sealed trait zero
-    extends ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
+    extends _ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
   
   @scala.inline
   def any: any = "any".asInstanceOf[any]
-  @scala.inline
-  def cardinal: cardinal = "cardinal".asInstanceOf[cardinal]
   @scala.inline
   def `class`: `class` = "class".asInstanceOf[`class`]
   @scala.inline
@@ -90,8 +82,6 @@ object intlMessageformatParserStrings {
   def many: many = "many".asInstanceOf[many]
   @scala.inline
   def one: one = "one".asInstanceOf[one]
-  @scala.inline
-  def ordinal: ordinal = "ordinal".asInstanceOf[ordinal]
   @scala.inline
   def other: other = "other".asInstanceOf[other]
   @scala.inline

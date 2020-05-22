@@ -10,8 +10,11 @@ import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSlider
 import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSliderProps
 import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSliderStyleProps
 import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSliderStyles
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.alpha
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.hue
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.transparency
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -53,13 +56,15 @@ object ColorSlider {
     @scala.inline
     def overlayStyle(value: CSSProperties): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IColorSliderStyleProps => Partial[IColorSliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IColorSliderStyleProps => DeepPartial[IColorSliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IColorSliderStyleProps, IColorSliderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def thumbColor(value: String): this.type = set("thumbColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: hue | alpha | transparency): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }

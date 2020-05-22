@@ -34,89 +34,22 @@ trait BrokerInstanceOption extends js.Object {
 
 object BrokerInstanceOption {
   @scala.inline
-  def apply(): BrokerInstanceOption = {
+  def apply(
+    AvailabilityZones: listOfAvailabilityZone = null,
+    EngineType: EngineType = null,
+    HostInstanceType: string = null,
+    StorageType: BrokerStorageType = null,
+    SupportedDeploymentModes: listOfDeploymentMode = null,
+    SupportedEngineVersions: listOfString = null
+  ): BrokerInstanceOption = {
     val __obj = js.Dynamic.literal()
+    if (AvailabilityZones != null) __obj.updateDynamic("AvailabilityZones")(AvailabilityZones.asInstanceOf[js.Any])
+    if (EngineType != null) __obj.updateDynamic("EngineType")(EngineType.asInstanceOf[js.Any])
+    if (HostInstanceType != null) __obj.updateDynamic("HostInstanceType")(HostInstanceType.asInstanceOf[js.Any])
+    if (StorageType != null) __obj.updateDynamic("StorageType")(StorageType.asInstanceOf[js.Any])
+    if (SupportedDeploymentModes != null) __obj.updateDynamic("SupportedDeploymentModes")(SupportedDeploymentModes.asInstanceOf[js.Any])
+    if (SupportedEngineVersions != null) __obj.updateDynamic("SupportedEngineVersions")(SupportedEngineVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrokerInstanceOption]
   }
-  @scala.inline
-  implicit class BrokerInstanceOptionOps[Self <: BrokerInstanceOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZones(value: listOfAvailabilityZone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineType(value: EngineType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostInstanceType(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostInstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostInstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageType(value: BrokerStorageType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedDeploymentModes(value: listOfDeploymentMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedDeploymentModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedDeploymentModes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedDeploymentModes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedEngineVersions(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedEngineVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedEngineVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedEngineVersions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

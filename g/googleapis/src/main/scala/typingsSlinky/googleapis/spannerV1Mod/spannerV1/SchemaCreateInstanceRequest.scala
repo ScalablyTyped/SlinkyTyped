@@ -23,41 +23,11 @@ trait SchemaCreateInstanceRequest extends js.Object {
 
 object SchemaCreateInstanceRequest {
   @scala.inline
-  def apply(): SchemaCreateInstanceRequest = {
+  def apply(instance: SchemaInstance = null, instanceId: String = null): SchemaCreateInstanceRequest = {
     val __obj = js.Dynamic.literal()
+    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
+    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateInstanceRequest]
   }
-  @scala.inline
-  implicit class SchemaCreateInstanceRequestOps[Self <: SchemaCreateInstanceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstance(value: SchemaInstance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClearFilter extends js.Object {
-  var clearFilter: js.UndefOr[String] = js.native
-  var createFilter: js.UndefOr[String] = js.native
-  var filterEnabledHint: js.UndefOr[String] = js.native
+  var clearFilter: js.UndefOr[String] = js.undefined
+  var createFilter: js.UndefOr[String] = js.undefined
+  var filterEnabledHint: js.UndefOr[String] = js.undefined
 }
 
 object ClearFilter {
   @scala.inline
-  def apply(): ClearFilter = {
+  def apply(clearFilter: String = null, createFilter: String = null, filterEnabledHint: String = null): ClearFilter = {
     val __obj = js.Dynamic.literal()
+    if (clearFilter != null) __obj.updateDynamic("clearFilter")(clearFilter.asInstanceOf[js.Any])
+    if (createFilter != null) __obj.updateDynamic("createFilter")(createFilter.asInstanceOf[js.Any])
+    if (filterEnabledHint != null) __obj.updateDynamic("filterEnabledHint")(filterEnabledHint.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClearFilter]
   }
-  @scala.inline
-  implicit class ClearFilterOps[Self <: ClearFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterEnabledHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterEnabledHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterEnabledHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterEnabledHint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

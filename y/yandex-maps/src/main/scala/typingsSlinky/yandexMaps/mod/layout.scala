@@ -12,6 +12,8 @@ object layout extends js.Object {
     @js.native
     class Base protected () extends ILayout {
       def this(data: js.Object) = this()
+      /* CompleteClass */
+      override var events: IEventManager = js.native
       def build(): Unit = js.native
       def clear(): Unit = js.native
       def onSublayoutSizeChange(sublayoutInfo: js.Object, nodeSizeByContent: js.Object): Unit = js.native

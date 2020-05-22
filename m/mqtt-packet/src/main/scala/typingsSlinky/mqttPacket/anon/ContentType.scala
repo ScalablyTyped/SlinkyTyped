@@ -5,114 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContentType extends js.Object {
-  var contentType: js.UndefOr[String] = js.native
-  var correlationData: js.UndefOr[Buffer] = js.native
-  var messageExpiryInterval: js.UndefOr[Double] = js.native
-  var payloadFormatIndicator: js.UndefOr[Double] = js.native
-  var responseTopic: js.UndefOr[String] = js.native
-  var userProperties: js.UndefOr[js.Object] = js.native
-  var willDelayInterval: js.UndefOr[Double] = js.native
+  var contentType: js.UndefOr[String] = js.undefined
+  var correlationData: js.UndefOr[Buffer] = js.undefined
+  var messageExpiryInterval: js.UndefOr[Double] = js.undefined
+  var payloadFormatIndicator: js.UndefOr[Double] = js.undefined
+  var responseTopic: js.UndefOr[String] = js.undefined
+  var userProperties: js.UndefOr[js.Object] = js.undefined
+  var willDelayInterval: js.UndefOr[Double] = js.undefined
 }
 
 object ContentType {
   @scala.inline
-  def apply(): ContentType = {
+  def apply(
+    contentType: String = null,
+    correlationData: Buffer = null,
+    messageExpiryInterval: js.UndefOr[Double] = js.undefined,
+    payloadFormatIndicator: js.UndefOr[Double] = js.undefined,
+    responseTopic: String = null,
+    userProperties: js.Object = null,
+    willDelayInterval: js.UndefOr[Double] = js.undefined
+  ): ContentType = {
     val __obj = js.Dynamic.literal()
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (correlationData != null) __obj.updateDynamic("correlationData")(correlationData.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageExpiryInterval)) __obj.updateDynamic("messageExpiryInterval")(messageExpiryInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(payloadFormatIndicator)) __obj.updateDynamic("payloadFormatIndicator")(payloadFormatIndicator.get.asInstanceOf[js.Any])
+    if (responseTopic != null) __obj.updateDynamic("responseTopic")(responseTopic.asInstanceOf[js.Any])
+    if (userProperties != null) __obj.updateDynamic("userProperties")(userProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(willDelayInterval)) __obj.updateDynamic("willDelayInterval")(willDelayInterval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentType]
   }
-  @scala.inline
-  implicit class ContentTypeOps[Self <: ContentType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCorrelationData(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCorrelationData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageExpiryInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageExpiryInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageExpiryInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageExpiryInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadFormatIndicator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFormatIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadFormatIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFormatIndicator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTopic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTopic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserProperties(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWillDelayInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("willDelayInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWillDelayInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("willDelayInterval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

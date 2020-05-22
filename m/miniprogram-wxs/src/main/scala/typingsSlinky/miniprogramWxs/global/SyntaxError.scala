@@ -11,6 +11,10 @@ import scala.scalajs.js.annotation._
 class SyntaxError ()
   extends typingsSlinky.std.Error {
   def this(message: String) = this()
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 
 @JSGlobal("SyntaxError")

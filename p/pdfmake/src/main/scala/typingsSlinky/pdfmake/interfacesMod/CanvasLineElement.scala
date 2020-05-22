@@ -5,62 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CanvasLineElement extends js.Object {
-  var dash: js.UndefOr[Length] = js.native
-  var lineColor: js.UndefOr[String] = js.native
-  var lineWidth: js.UndefOr[Double] = js.native
+  var dash: js.UndefOr[Length] = js.undefined
+  var lineColor: js.UndefOr[String] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.undefined
 }
 
 object CanvasLineElement {
   @scala.inline
-  def apply(): CanvasLineElement = {
+  def apply(dash: Length = null, lineColor: String = null, lineWidth: js.UndefOr[Double] = js.undefined): CanvasLineElement = {
     val __obj = js.Dynamic.literal()
+    if (dash != null) __obj.updateDynamic("dash")(dash.asInstanceOf[js.Any])
+    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineWidth)) __obj.updateDynamic("lineWidth")(lineWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CanvasLineElement]
   }
-  @scala.inline
-  implicit class CanvasLineElementOps[Self <: CanvasLineElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDash(value: Length): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

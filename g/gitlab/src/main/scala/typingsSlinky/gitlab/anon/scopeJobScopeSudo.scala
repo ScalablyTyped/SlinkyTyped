@@ -6,43 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  scope  :gitlab.gitlab/dist/types/core/services/Jobs.JobScope} & gitlab.gitlab/dist/types/core/infrastructure.Sudo */
-@js.native
 trait scopeJobScopeSudo extends js.Object {
-  var scope: JobScope = js.native
-  var sudo: js.UndefOr[String | Double] = js.native
+  var scope: JobScope
+  var sudo: js.UndefOr[String | Double] = js.undefined
 }
 
 object scopeJobScopeSudo {
   @scala.inline
-  def apply(scope: JobScope): scopeJobScopeSudo = {
+  def apply(scope: JobScope, sudo: String | Double = null): scopeJobScopeSudo = {
     val __obj = js.Dynamic.literal(scope = scope.asInstanceOf[js.Any])
+    if (sudo != null) __obj.updateDynamic("sudo")(sudo.asInstanceOf[js.Any])
     __obj.asInstanceOf[scopeJobScopeSudo]
   }
-  @scala.inline
-  implicit class scopeJobScopeSudoOps[Self <: scopeJobScopeSudo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScope(value: JobScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSudo(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sudo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSudo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sudo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

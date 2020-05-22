@@ -2,11 +2,13 @@ package typingsSlinky.blueprintjsDatetime
 
 import typingsSlinky.blueprintjsDatetime.anon.PartialIDateInputProps
 import typingsSlinky.blueprintjsDatetime.anon.PartialIDateRangeInputPro
+import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeStrings.millisecond
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeStrings.minute
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeStrings.second
 import typingsSlinky.blueprintjsDatetime.datePickerMod.IDatePickerProps
 import typingsSlinky.blueprintjsDatetime.dateRangeInputMod.IDateRangeInputProps
+import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import typingsSlinky.blueprintjsDatetime.dateRangePickerMod.IDateRangePickerProps
 import typingsSlinky.blueprintjsDatetime.dateTimePickerMod.IDateTimePickerProps
 import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
@@ -50,6 +52,30 @@ object mod extends js.Object {
   }
   
   @js.native
+  trait IDatePickerLocaleUtils extends js.Object {
+    def formatDate(date: js.Date): String = js.native
+    def formatDate(date: js.Date, format: String): String = js.native
+    def formatDate(date: js.Date, format: String, locale: String): String = js.native
+    def formatDate(date: js.Date, format: js.Array[String]): String = js.native
+    def formatDate(date: js.Date, format: js.Array[String], locale: String): String = js.native
+    def formatDay(day: js.Date): String = js.native
+    def formatDay(day: js.Date, locale: String): String = js.native
+    def formatMonthTitle(month: js.Date): String = js.native
+    def formatMonthTitle(month: js.Date, locale: String): String = js.native
+    def formatWeekdayLong(weekday: Double): String = js.native
+    def formatWeekdayLong(weekday: Double, locale: String): String = js.native
+    def formatWeekdayShort(weekday: Double): String = js.native
+    def formatWeekdayShort(weekday: Double, locale: String): String = js.native
+    def getFirstDayOfWeek(): Double = js.native
+    def getFirstDayOfWeek(locale: String): Double = js.native
+    def getMonths(): js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String] = js.native
+    def getMonths(locale: String): js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String] = js.native
+    def parseDate(str: String): js.Date = js.native
+    def parseDate(str: String, format: String): js.Date = js.native
+    def parseDate(str: String, format: String, locale: String): js.Date = js.native
+  }
+  
+  @js.native
   class TimePicker ()
     extends typingsSlinky.blueprintjsDatetime.timePickerMod.TimePicker {
     def this(props: ITimePickerProps) = this()
@@ -74,6 +100,7 @@ object mod extends js.Object {
     val DATEPICKER_FOOTER: String = js.native
     val DATEPICKER_MONTH_SELECT: String = js.native
     val DATEPICKER_NAVBAR: String = js.native
+    val DATEPICKER_TIMEPICKER_WRAPPER: String = js.native
     val DATEPICKER_YEAR_SELECT: String = js.native
     val DATERANGEPICKER: String = js.native
     val DATERANGEPICKER_CONTIGUOUS: String = js.native
@@ -132,6 +159,41 @@ object mod extends js.Object {
   }
   
   @js.native
+  object DateUtils extends js.Object {
+    def areEqual(date1: js.Date, date2: js.Date): Boolean = js.native
+    def areRangesEqual(dateRange1: DateRange, dateRange2: DateRange): Boolean = js.native
+    def areSameDay(date1: js.Date, date2: js.Date): Boolean = js.native
+    def areSameMonth(date1: js.Date, date2: js.Date): Boolean = js.native
+    def areSameTime(date1: js.Date, date2: js.Date): Boolean = js.native
+    def clone(d: js.Date): js.Date = js.native
+    def convert24HourMeridiem(hour: Double, toPm: Boolean): Double = js.native
+    def get12HourFrom24Hour(hour: Double): Double = js.native
+    def get24HourFrom12Hour(hour: Double, isPm: Boolean): Double = js.native
+    def getDateBetween(dateRange: DateRange): js.Date = js.native
+    def getDateNextMonth(date: js.Date): js.Date = js.native
+    def getDateOnlyWithTime(date: js.Date): js.Date = js.native
+    def getDatePreviousMonth(date: js.Date): js.Date = js.native
+    def getDateTime(): js.Date = js.native
+    def getDateTime(date: Null, time: js.Date): js.Date = js.native
+    def getDateTime(date: js.Date): js.Date = js.native
+    def getDateTime(date: js.Date, time: js.Date): js.Date = js.native
+    def getIsPmFrom24Hour(hour: Double): Boolean = js.native
+    def getTimeInRange(time: js.Date, minTime: js.Date, maxTime: js.Date): js.Date = js.native
+    def isDateValid(): /* is std.Date */ Boolean = js.native
+    def isDateValid(date: js.Date): /* is std.Date */ Boolean = js.native
+    @JSName("isDateValid")
+    def isDateValid_false(date: `false`): /* is std.Date */ Boolean = js.native
+    def isDayInRange(date: js.Date, dateRange: DateRange): Boolean = js.native
+    def isDayInRange(date: js.Date, dateRange: DateRange, exclusive: Boolean): Boolean = js.native
+    def isDayRangeInRange(innerRange: DateRange, outerRange: DateRange): Boolean = js.native
+    def isMonthInRange(date: js.Date, dateRange: DateRange): Boolean = js.native
+    def isTimeEqualOrGreaterThan(time: js.Date, timeToCompare: js.Date): Boolean = js.native
+    def isTimeEqualOrSmallerThan(time: js.Date, timeToCompare: js.Date): Boolean = js.native
+    def isTimeInRange(date: js.Date, minDate: js.Date, maxDate: js.Date): Boolean = js.native
+    def isTimeSameOrAfter(date: js.Date, dateToCompare: js.Date): Boolean = js.native
+  }
+  
+  @js.native
   object Months extends js.Object {
     /* 3 */ val APRIL: typingsSlinky.blueprintjsDatetime.monthsMod.Months.APRIL with Double = js.native
     /* 7 */ val AUGUST: typingsSlinky.blueprintjsDatetime.monthsMod.Months.AUGUST with Double = js.native
@@ -163,6 +225,5 @@ object mod extends js.Object {
     var SECOND: second = js.native
   }
   
-  type IDatePickerLocaleUtils = /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any
 }
 

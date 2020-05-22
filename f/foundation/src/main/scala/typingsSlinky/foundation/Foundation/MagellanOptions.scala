@@ -5,127 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // http://foundation.zurb.com/docs/components/magellan.html#js
-@js.native
 trait MagellanOptions extends js.Object {
-  var active_class: js.UndefOr[String] = js.native
-  var destination_threshold: js.UndefOr[Double] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var easing: js.UndefOr[String] = js.native
-  var fixed_top: js.UndefOr[Double] = js.native
-  var offset_by_height: js.UndefOr[Boolean] = js.native
-  var threshold: js.UndefOr[Double] = js.native
-  var throttle_delay: js.UndefOr[Double] = js.native
+  var active_class: js.UndefOr[String] = js.undefined
+  var destination_threshold: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var easing: js.UndefOr[String] = js.undefined
+  var fixed_top: js.UndefOr[Double] = js.undefined
+  var offset_by_height: js.UndefOr[Boolean] = js.undefined
+  var threshold: js.UndefOr[Double] = js.undefined
+  var throttle_delay: js.UndefOr[Double] = js.undefined
 }
 
 object MagellanOptions {
   @scala.inline
-  def apply(): MagellanOptions = {
+  def apply(
+    active_class: String = null,
+    destination_threshold: js.UndefOr[Double] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    easing: String = null,
+    fixed_top: js.UndefOr[Double] = js.undefined,
+    offset_by_height: js.UndefOr[Boolean] = js.undefined,
+    threshold: js.UndefOr[Double] = js.undefined,
+    throttle_delay: js.UndefOr[Double] = js.undefined
+  ): MagellanOptions = {
     val __obj = js.Dynamic.literal()
+    if (active_class != null) __obj.updateDynamic("active_class")(active_class.asInstanceOf[js.Any])
+    if (!js.isUndefined(destination_threshold)) __obj.updateDynamic("destination_threshold")(destination_threshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixed_top)) __obj.updateDynamic("fixed_top")(fixed_top.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset_by_height)) __obj.updateDynamic("offset_by_height")(offset_by_height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(threshold)) __obj.updateDynamic("threshold")(threshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(throttle_delay)) __obj.updateDynamic("throttle_delay")(throttle_delay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MagellanOptions]
   }
-  @scala.inline
-  implicit class MagellanOptionsOps[Self <: MagellanOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive_class(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active_class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive_class: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active_class")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestination_threshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination_threshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination_threshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination_threshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixed_top(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed_top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixed_top: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed_top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset_by_height(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset_by_height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset_by_height: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset_by_height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottle_delay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle_delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottle_delay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle_delay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

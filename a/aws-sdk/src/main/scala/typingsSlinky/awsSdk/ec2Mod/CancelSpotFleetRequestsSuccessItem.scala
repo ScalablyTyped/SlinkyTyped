@@ -22,53 +22,16 @@ trait CancelSpotFleetRequestsSuccessItem extends js.Object {
 
 object CancelSpotFleetRequestsSuccessItem {
   @scala.inline
-  def apply(): CancelSpotFleetRequestsSuccessItem = {
+  def apply(
+    CurrentSpotFleetRequestState: BatchState = null,
+    PreviousSpotFleetRequestState: BatchState = null,
+    SpotFleetRequestId: String = null
+  ): CancelSpotFleetRequestsSuccessItem = {
     val __obj = js.Dynamic.literal()
+    if (CurrentSpotFleetRequestState != null) __obj.updateDynamic("CurrentSpotFleetRequestState")(CurrentSpotFleetRequestState.asInstanceOf[js.Any])
+    if (PreviousSpotFleetRequestState != null) __obj.updateDynamic("PreviousSpotFleetRequestState")(PreviousSpotFleetRequestState.asInstanceOf[js.Any])
+    if (SpotFleetRequestId != null) __obj.updateDynamic("SpotFleetRequestId")(SpotFleetRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelSpotFleetRequestsSuccessItem]
   }
-  @scala.inline
-  implicit class CancelSpotFleetRequestsSuccessItemOps[Self <: CancelSpotFleetRequestsSuccessItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentSpotFleetRequestState(value: BatchState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentSpotFleetRequestState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentSpotFleetRequestState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentSpotFleetRequestState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousSpotFleetRequestState(value: BatchState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousSpotFleetRequestState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousSpotFleetRequestState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousSpotFleetRequestState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotFleetRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotFleetRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

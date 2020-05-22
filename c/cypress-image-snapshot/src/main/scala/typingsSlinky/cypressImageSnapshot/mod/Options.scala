@@ -16,280 +16,74 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<{  blackout  :std.Array<string>,   capture  :'runner' | 'viewport' | 'fullPage',   clip  :{  x  :number,   y  :number,   width  :number,   height  :number},   disableTimersAndAnimations  :boolean,   padding  :number | [number] | [number, number] | [number, number, number] | [number, number, number, number],   scale  :boolean, beforeScreenshot (doc : std.Document): void, afterScreenshot (doc : std.Document): void,   customDiffConfig ? :{ readonly threshold ? :number,  readonly includeAA ? :boolean},   customSnapshotsDir ? :string,   customDiffDir ? :string,   customSnapshotIdentifier ? :(parameters : {  testPath  :string,   currentTestName  :string,   counter  :number,   defaultIdentifier  :string}): string | string,   diffDirection ? :'horizontal' | 'vertical',   noColors ? :boolean,   failureThreshold ? :number,   failureThresholdType ? :'pixel' | 'percent',   updatePassedSnapshot ? :boolean,   blur ? :number,   runInProcess ? :boolean}> */
-@js.native
 trait Options extends js.Object {
-  var afterScreenshot: js.UndefOr[js.Function1[/* doc */ Document, Unit]] = js.native
-  var beforeScreenshot: js.UndefOr[js.Function1[/* doc */ Document, Unit]] = js.native
-  var blackout: js.UndefOr[js.Array[String]] = js.native
-  var blur: js.UndefOr[Double] = js.native
-  var capture: js.UndefOr[runner | viewport | fullPage] = js.native
-  var clip: js.UndefOr[Height] = js.native
-  var customDiffConfig: js.UndefOr[IncludeAA] = js.native
-  var customDiffDir: js.UndefOr[String] = js.native
-  var customSnapshotIdentifier: js.UndefOr[(js.Function1[/* parameters */ Counter, String]) | String] = js.native
-  var customSnapshotsDir: js.UndefOr[String] = js.native
-  var diffDirection: js.UndefOr[horizontal | vertical] = js.native
-  var disableTimersAndAnimations: js.UndefOr[Boolean] = js.native
-  var failureThreshold: js.UndefOr[Double] = js.native
-  var failureThresholdType: js.UndefOr[pixel | percent] = js.native
-  var noColors: js.UndefOr[Boolean] = js.native
+  var afterScreenshot: js.UndefOr[js.Function1[/* doc */ Document, Unit]] = js.undefined
+  var beforeScreenshot: js.UndefOr[js.Function1[/* doc */ Document, Unit]] = js.undefined
+  var blackout: js.UndefOr[js.Array[String]] = js.undefined
+  var blur: js.UndefOr[Double] = js.undefined
+  var capture: js.UndefOr[runner | viewport | fullPage] = js.undefined
+  var clip: js.UndefOr[Height] = js.undefined
+  var customDiffConfig: js.UndefOr[IncludeAA] = js.undefined
+  var customDiffDir: js.UndefOr[String] = js.undefined
+  var customSnapshotIdentifier: js.UndefOr[(js.Function1[/* parameters */ Counter, String]) | String] = js.undefined
+  var customSnapshotsDir: js.UndefOr[String] = js.undefined
+  var diffDirection: js.UndefOr[horizontal | vertical] = js.undefined
+  var disableTimersAndAnimations: js.UndefOr[Boolean] = js.undefined
+  var failureThreshold: js.UndefOr[Double] = js.undefined
+  var failureThresholdType: js.UndefOr[pixel | percent] = js.undefined
+  var noColors: js.UndefOr[Boolean] = js.undefined
   var padding: js.UndefOr[
     Double | js.Array[Double] | (js.Tuple2[Double, Double]) | (js.Tuple3[Double, Double, Double]) | (js.Tuple4[Double, Double, Double, Double])
-  ] = js.native
-  var runInProcess: js.UndefOr[Boolean] = js.native
-  var scale: js.UndefOr[Boolean] = js.native
-  var updatePassedSnapshot: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var runInProcess: js.UndefOr[Boolean] = js.undefined
+  var scale: js.UndefOr[Boolean] = js.undefined
+  var updatePassedSnapshot: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    afterScreenshot: /* doc */ Document => Unit = null,
+    beforeScreenshot: /* doc */ Document => Unit = null,
+    blackout: js.Array[String] = null,
+    blur: js.UndefOr[Double] = js.undefined,
+    capture: runner | viewport | fullPage = null,
+    clip: Height = null,
+    customDiffConfig: IncludeAA = null,
+    customDiffDir: String = null,
+    customSnapshotIdentifier: (js.Function1[/* parameters */ Counter, String]) | String = null,
+    customSnapshotsDir: String = null,
+    diffDirection: horizontal | vertical = null,
+    disableTimersAndAnimations: js.UndefOr[Boolean] = js.undefined,
+    failureThreshold: js.UndefOr[Double] = js.undefined,
+    failureThresholdType: pixel | percent = null,
+    noColors: js.UndefOr[Boolean] = js.undefined,
+    padding: Double | js.Array[Double] | (js.Tuple2[Double, Double]) | (js.Tuple3[Double, Double, Double]) | (js.Tuple4[Double, Double, Double, Double]) = null,
+    runInProcess: js.UndefOr[Boolean] = js.undefined,
+    scale: js.UndefOr[Boolean] = js.undefined,
+    updatePassedSnapshot: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (afterScreenshot != null) __obj.updateDynamic("afterScreenshot")(js.Any.fromFunction1(afterScreenshot))
+    if (beforeScreenshot != null) __obj.updateDynamic("beforeScreenshot")(js.Any.fromFunction1(beforeScreenshot))
+    if (blackout != null) __obj.updateDynamic("blackout")(blackout.asInstanceOf[js.Any])
+    if (!js.isUndefined(blur)) __obj.updateDynamic("blur")(blur.get.asInstanceOf[js.Any])
+    if (capture != null) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
+    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
+    if (customDiffConfig != null) __obj.updateDynamic("customDiffConfig")(customDiffConfig.asInstanceOf[js.Any])
+    if (customDiffDir != null) __obj.updateDynamic("customDiffDir")(customDiffDir.asInstanceOf[js.Any])
+    if (customSnapshotIdentifier != null) __obj.updateDynamic("customSnapshotIdentifier")(customSnapshotIdentifier.asInstanceOf[js.Any])
+    if (customSnapshotsDir != null) __obj.updateDynamic("customSnapshotsDir")(customSnapshotsDir.asInstanceOf[js.Any])
+    if (diffDirection != null) __obj.updateDynamic("diffDirection")(diffDirection.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableTimersAndAnimations)) __obj.updateDynamic("disableTimersAndAnimations")(disableTimersAndAnimations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failureThreshold)) __obj.updateDynamic("failureThreshold")(failureThreshold.get.asInstanceOf[js.Any])
+    if (failureThresholdType != null) __obj.updateDynamic("failureThresholdType")(failureThresholdType.asInstanceOf[js.Any])
+    if (!js.isUndefined(noColors)) __obj.updateDynamic("noColors")(noColors.get.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (!js.isUndefined(runInProcess)) __obj.updateDynamic("runInProcess")(runInProcess.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatePassedSnapshot)) __obj.updateDynamic("updatePassedSnapshot")(updatePassedSnapshot.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterScreenshot(value: /* doc */ Document => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterScreenshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeScreenshot(value: /* doc */ Document => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeScreenshot")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeScreenshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeScreenshot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlackout(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blackout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlackout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blackout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlur(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapture(value: runner | viewport | fullPage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClip(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomDiffConfig(value: IncludeAA): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDiffConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomDiffConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDiffConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomDiffDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDiffDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomDiffDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDiffDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomSnapshotIdentifierFunction1(value: /* parameters */ Counter => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotIdentifier")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCustomSnapshotIdentifier(value: (js.Function1[/* parameters */ Counter, String]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSnapshotIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomSnapshotsDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotsDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSnapshotsDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotsDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiffDirection(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiffDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diffDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableTimersAndAnimations(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTimersAndAnimations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableTimersAndAnimations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTimersAndAnimations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureThresholdType(value: pixel | percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThresholdType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureThresholdType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThresholdType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoColors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noColors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(
-      value: Double | js.Array[Double] | (js.Tuple2[Double, Double]) | (js.Tuple3[Double, Double, Double]) | (js.Tuple4[Double, Double, Double, Double])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunInProcess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runInProcess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunInProcess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runInProcess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatePassedSnapshot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatePassedSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatePassedSnapshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatePassedSnapshot")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

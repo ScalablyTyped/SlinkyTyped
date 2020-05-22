@@ -22,53 +22,16 @@ trait FlinkApplicationConfigurationUpdate extends js.Object {
 
 object FlinkApplicationConfigurationUpdate {
   @scala.inline
-  def apply(): FlinkApplicationConfigurationUpdate = {
+  def apply(
+    CheckpointConfigurationUpdate: CheckpointConfigurationUpdate = null,
+    MonitoringConfigurationUpdate: MonitoringConfigurationUpdate = null,
+    ParallelismConfigurationUpdate: ParallelismConfigurationUpdate = null
+  ): FlinkApplicationConfigurationUpdate = {
     val __obj = js.Dynamic.literal()
+    if (CheckpointConfigurationUpdate != null) __obj.updateDynamic("CheckpointConfigurationUpdate")(CheckpointConfigurationUpdate.asInstanceOf[js.Any])
+    if (MonitoringConfigurationUpdate != null) __obj.updateDynamic("MonitoringConfigurationUpdate")(MonitoringConfigurationUpdate.asInstanceOf[js.Any])
+    if (ParallelismConfigurationUpdate != null) __obj.updateDynamic("ParallelismConfigurationUpdate")(ParallelismConfigurationUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlinkApplicationConfigurationUpdate]
   }
-  @scala.inline
-  implicit class FlinkApplicationConfigurationUpdateOps[Self <: FlinkApplicationConfigurationUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckpointConfigurationUpdate(value: CheckpointConfigurationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointConfigurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckpointConfigurationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointConfigurationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitoringConfigurationUpdate(value: MonitoringConfigurationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringConfigurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitoringConfigurationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringConfigurationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallelismConfigurationUpdate(value: ParallelismConfigurationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParallelismConfigurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallelismConfigurationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParallelismConfigurationUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

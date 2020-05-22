@@ -13,4 +13,5 @@ package object mod {
     /* opts */ typingsSlinky.inputmask.mod.Options, 
     scala.Boolean | typingsSlinky.inputmask.anon.C
   ]
+  type Range = typingsSlinky.inputmask.anon.End | (js.Tuple2[java.lang.String, java.lang.String])
 }

@@ -7,5 +7,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Access.LocalVar")
 @js.native
 class LocalVar protected ()
-  extends typingsSlinky.activexAccess.Access.LocalVar
+  extends typingsSlinky.activexAccess.Access.LocalVar {
+  /* CompleteClass */
+  @JSName("Access.LocalVar_typekey")
+  override var AccessDotLocalVar_typekey: typingsSlinky.activexAccess.Access.LocalVar = js.native
+  /* CompleteClass */
+  override val Name: String = js.native
+  /* CompleteClass */
+  override var Value: js.Any = js.native
+  /* CompleteClass */
+  override var _Value: js.Any = js.native
+  /* CompleteClass */
+  override def IsMemberSafe(dispid: Double): Boolean = js.native
+}
 

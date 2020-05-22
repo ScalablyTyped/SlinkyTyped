@@ -6,42 +6,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Methods extends js.Object {
   /** User Auth */
-  def auth(cb: ZendeskCallback[_, _]): js.Any = js.native
+  def auth(cb: ZendeskCallback[_, _]): js.Any
   /** Creating Users */
-  def create(user: CreatePayload, cb: ZendeskCallback[_, _]): ResponsePayload = js.native
-  def createMany(users: CreateManyPayload, cb: ZendeskCallback[_, _]): typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload = js.native
-  def createOrUpdate(user: CreatePayload, cb: ZendeskCallback[_, _]): ResponsePayload = js.native
-  def createOrUpdateMany(users: CreateManyPayload, cb: ZendeskCallback[_, _]): typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload = js.native
+  def create(user: CreatePayload, cb: ZendeskCallback[_, _]): ResponsePayload
+  def createMany(users: CreateManyPayload, cb: ZendeskCallback[_, _]): typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload
+  def createOrUpdate(user: CreatePayload, cb: ZendeskCallback[_, _]): ResponsePayload
+  def createOrUpdateMany(users: CreateManyPayload, cb: ZendeskCallback[_, _]): typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload
   /** Deleting Users */
-  def delete(userId: ZendeskID, cb: ZendeskCallback[_, _]): js.Any = js.native
-  def incremental(startTime: Double, cb: ZendeskCallback[_, _]): ListPayload = js.native
+  def delete(userId: ZendeskID, cb: ZendeskCallback[_, _]): js.Any
+  def incremental(startTime: Double, cb: ZendeskCallback[_, _]): ListPayload
   /** Users Export */
-  def incrementalInclude(startTime: Double, include: js.Any, cb: ZendeskCallback[_, _]): ListPayload = js.native
-  def incrementalSample(startTime: Double, cb: ZendeskCallback[_, _]): ListPayload = js.native
+  def incrementalInclude(startTime: Double, include: js.Any, cb: ZendeskCallback[_, _]): ListPayload
+  def incrementalSample(startTime: Double, cb: ZendeskCallback[_, _]): ListPayload
   /** Listing Users */
-  def list(cb: ZendeskCallback[_, _]): ListPayload = js.native
-  def listByGroup(groupId: ZendeskID, cb: ZendeskCallback[_, _]): ListPayload = js.native
-  def listByOrganization(organizationId: ZendeskID, cb: ZendeskCallback[_, _]): ListPayload = js.native
+  def list(cb: ZendeskCallback[_, _]): ListPayload
+  def listByGroup(groupId: ZendeskID, cb: ZendeskCallback[_, _]): ListPayload
+  def listByOrganization(organizationId: ZendeskID, cb: ZendeskCallback[_, _]): ListPayload
   /** Getting own User */
-  def me(cb: ZendeskCallback[_, _]): ResponsePayload = js.native
+  def me(cb: ZendeskCallback[_, _]): ResponsePayload
   /** Merging Users */
-  def merge(userId: ZendeskID, targetUserId: ZendeskID, cb: ZendeskCallback[_, _]): ResponsePayload = js.native
+  def merge(userId: ZendeskID, targetUserId: ZendeskID, cb: ZendeskCallback[_, _]): ResponsePayload
   /** Changing User Password */
-  def password(userId: ZendeskID, oldPassword: String, newPassword: String, cb: ZendeskCallback[_, _]): js.Any = js.native
+  def password(userId: ZendeskID, oldPassword: String, newPassword: String, cb: ZendeskCallback[_, _]): js.Any
   /** Searching Users */
-  def search(params: js.Any, cb: ZendeskCallback[_, _]): ListPayload = js.native
+  def search(params: js.Any, cb: ZendeskCallback[_, _]): ListPayload
   /** Showing Users */
-  def show(userId: ZendeskID, cb: ZendeskCallback[_, _]): ResponsePayload = js.native
-  def showMany(userIds: js.Array[ZendeskID], cb: ZendeskCallback[_, _]): ListPayload = js.native
+  def show(userId: ZendeskID, cb: ZendeskCallback[_, _]): ResponsePayload
+  def showMany(userIds: js.Array[ZendeskID], cb: ZendeskCallback[_, _]): ListPayload
   /** Suspending Users */
-  def suspend(userId: ZendeskID, cb: ZendeskCallback[_, _]): ResponsePayload = js.native
-  def unsuspend(userId: ZendeskID, cb: ZendeskCallback[_, _]): ResponsePayload = js.native
+  def suspend(userId: ZendeskID, cb: ZendeskCallback[_, _]): ResponsePayload
+  def unsuspend(userId: ZendeskID, cb: ZendeskCallback[_, _]): ResponsePayload
   /** Updating Users */
-  def update(userId: ZendeskID, user: UpdatePayload, cb: ZendeskCallback[_, _]): ResponsePayload = js.native
-  def updateMany(userIds: UpdateIdPayload, users: UpdateManyPayload, cb: ZendeskCallback[_, _]): typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload = js.native
+  def update(userId: ZendeskID, user: UpdatePayload, cb: ZendeskCallback[_, _]): ResponsePayload
+  def updateMany(userIds: UpdateIdPayload, users: UpdateManyPayload, cb: ZendeskCallback[_, _]): typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload
 }
 
 object Methods {
@@ -73,151 +72,5 @@ object Methods {
     val __obj = js.Dynamic.literal(auth = js.Any.fromFunction1(auth), create = js.Any.fromFunction2(create), createMany = js.Any.fromFunction2(createMany), createOrUpdate = js.Any.fromFunction2(createOrUpdate), createOrUpdateMany = js.Any.fromFunction2(createOrUpdateMany), delete = js.Any.fromFunction2(delete), incremental = js.Any.fromFunction2(incremental), incrementalInclude = js.Any.fromFunction3(incrementalInclude), incrementalSample = js.Any.fromFunction2(incrementalSample), list = js.Any.fromFunction1(list), listByGroup = js.Any.fromFunction2(listByGroup), listByOrganization = js.Any.fromFunction2(listByOrganization), me = js.Any.fromFunction1(me), merge = js.Any.fromFunction3(merge), password = js.Any.fromFunction4(password), search = js.Any.fromFunction2(search), show = js.Any.fromFunction2(show), showMany = js.Any.fromFunction2(showMany), suspend = js.Any.fromFunction2(suspend), unsuspend = js.Any.fromFunction2(unsuspend), update = js.Any.fromFunction3(update), updateMany = js.Any.fromFunction3(updateMany))
     __obj.asInstanceOf[Methods]
   }
-  @scala.inline
-  implicit class MethodsOps[Self <: Methods] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: ZendeskCallback[_, _] => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreate(value: (CreatePayload, ZendeskCallback[_, _]) => ResponsePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateMany(
-      value: (CreateManyPayload, ZendeskCallback[_, _]) => typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createMany")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateOrUpdate(value: (CreatePayload, ZendeskCallback[_, _]) => ResponsePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createOrUpdate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateOrUpdateMany(
-      value: (CreateManyPayload, ZendeskCallback[_, _]) => typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createOrUpdateMany")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: (ZendeskID, ZendeskCallback[_, _]) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withIncremental(value: (Double, ZendeskCallback[_, _]) => ListPayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incremental")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withIncrementalInclude(value: (Double, js.Any, ZendeskCallback[_, _]) => ListPayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementalInclude")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withIncrementalSample(value: (Double, ZendeskCallback[_, _]) => ListPayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementalSample")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: ZendeskCallback[_, _] => ListPayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListByGroup(value: (ZendeskID, ZendeskCallback[_, _]) => ListPayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listByGroup")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withListByOrganization(value: (ZendeskID, ZendeskCallback[_, _]) => ListPayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listByOrganization")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withMe(value: ZendeskCallback[_, _] => ResponsePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("me")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMerge(value: (ZendeskID, ZendeskID, ZendeskCallback[_, _]) => ResponsePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withPassword(value: (ZendeskID, String, String, ZendeskCallback[_, _]) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withSearch(value: (js.Any, ZendeskCallback[_, _]) => ListPayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withShow(value: (ZendeskID, ZendeskCallback[_, _]) => ResponsePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withShowMany(value: (js.Array[ZendeskID], ZendeskCallback[_, _]) => ListPayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMany")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSuspend(value: (ZendeskID, ZendeskCallback[_, _]) => ResponsePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspend")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUnsuspend(value: (ZendeskID, ZendeskCallback[_, _]) => ResponsePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsuspend")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: (ZendeskID, UpdatePayload, ZendeskCallback[_, _]) => ResponsePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateMany(
-      value: (UpdateIdPayload, UpdateManyPayload, ZendeskCallback[_, _]) => typingsSlinky.nodeZendesk.mod.JobStatuses.ResponsePayload
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMany")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

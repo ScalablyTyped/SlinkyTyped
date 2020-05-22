@@ -62,173 +62,36 @@ trait DescribeSigningJobResponse extends js.Object {
 
 object DescribeSigningJobResponse {
   @scala.inline
-  def apply(): DescribeSigningJobResponse = {
+  def apply(
+    completedAt: js.Date = null,
+    createdAt: js.Date = null,
+    jobId: JobId = null,
+    overrides: SigningPlatformOverrides = null,
+    platformId: PlatformId = null,
+    profileName: ProfileName = null,
+    requestedBy: RequestedBy = null,
+    signedObject: SignedObject = null,
+    signingMaterial: SigningMaterial = null,
+    signingParameters: SigningParameters = null,
+    source: Source = null,
+    status: SigningStatus = null,
+    statusReason: StatusReason = null
+  ): DescribeSigningJobResponse = {
     val __obj = js.Dynamic.literal()
+    if (completedAt != null) __obj.updateDynamic("completedAt")(completedAt.asInstanceOf[js.Any])
+    if (createdAt != null) __obj.updateDynamic("createdAt")(createdAt.asInstanceOf[js.Any])
+    if (jobId != null) __obj.updateDynamic("jobId")(jobId.asInstanceOf[js.Any])
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (platformId != null) __obj.updateDynamic("platformId")(platformId.asInstanceOf[js.Any])
+    if (profileName != null) __obj.updateDynamic("profileName")(profileName.asInstanceOf[js.Any])
+    if (requestedBy != null) __obj.updateDynamic("requestedBy")(requestedBy.asInstanceOf[js.Any])
+    if (signedObject != null) __obj.updateDynamic("signedObject")(signedObject.asInstanceOf[js.Any])
+    if (signingMaterial != null) __obj.updateDynamic("signingMaterial")(signingMaterial.asInstanceOf[js.Any])
+    if (signingParameters != null) __obj.updateDynamic("signingParameters")(signingParameters.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (statusReason != null) __obj.updateDynamic("statusReason")(statusReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSigningJobResponse]
   }
-  @scala.inline
-  implicit class DescribeSigningJobResponseOps[Self <: DescribeSigningJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompletedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobId(value: JobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrides(value: SigningPlatformOverrides): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatformId(value: PlatformId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platformId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platformId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileName(value: ProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestedBy(value: RequestedBy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignedObject(value: SignedObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signedObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignedObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signedObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigningMaterial(value: SigningMaterial): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingMaterial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningMaterial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingMaterial")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigningParameters(value: SigningParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SigningStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusReason(value: StatusReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

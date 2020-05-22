@@ -18,35 +18,10 @@ trait DeleteRemediationConfigurationRequest extends js.Object {
 
 object DeleteRemediationConfigurationRequest {
   @scala.inline
-  def apply(ConfigRuleName: ConfigRuleName): DeleteRemediationConfigurationRequest = {
+  def apply(ConfigRuleName: ConfigRuleName, ResourceType: String = null): DeleteRemediationConfigurationRequest = {
     val __obj = js.Dynamic.literal(ConfigRuleName = ConfigRuleName.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteRemediationConfigurationRequest]
   }
-  @scala.inline
-  implicit class DeleteRemediationConfigurationRequestOps[Self <: DeleteRemediationConfigurationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigRuleName(value: ConfigRuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

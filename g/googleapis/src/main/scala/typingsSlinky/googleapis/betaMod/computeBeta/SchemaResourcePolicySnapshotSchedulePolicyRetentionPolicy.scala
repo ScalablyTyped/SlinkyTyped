@@ -22,41 +22,11 @@ trait SchemaResourcePolicySnapshotSchedulePolicyRetentionPolicy extends js.Objec
 
 object SchemaResourcePolicySnapshotSchedulePolicyRetentionPolicy {
   @scala.inline
-  def apply(): SchemaResourcePolicySnapshotSchedulePolicyRetentionPolicy = {
+  def apply(maxRetentionDays: js.UndefOr[Double] = js.undefined, onSourceDiskDelete: String = null): SchemaResourcePolicySnapshotSchedulePolicyRetentionPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxRetentionDays)) __obj.updateDynamic("maxRetentionDays")(maxRetentionDays.get.asInstanceOf[js.Any])
+    if (onSourceDiskDelete != null) __obj.updateDynamic("onSourceDiskDelete")(onSourceDiskDelete.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourcePolicySnapshotSchedulePolicyRetentionPolicy]
   }
-  @scala.inline
-  implicit class SchemaResourcePolicySnapshotSchedulePolicyRetentionPolicyOps[Self <: SchemaResourcePolicySnapshotSchedulePolicyRetentionPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxRetentionDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetentionDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRetentionDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetentionDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSourceDiskDelete(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSourceDiskDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSourceDiskDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSourceDiskDelete")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

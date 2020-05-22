@@ -18,41 +18,11 @@ trait CreateStreamingURLResult extends js.Object {
 
 object CreateStreamingURLResult {
   @scala.inline
-  def apply(): CreateStreamingURLResult = {
+  def apply(Expires: js.Date = null, StreamingURL: String = null): CreateStreamingURLResult = {
     val __obj = js.Dynamic.literal()
+    if (Expires != null) __obj.updateDynamic("Expires")(Expires.asInstanceOf[js.Any])
+    if (StreamingURL != null) __obj.updateDynamic("StreamingURL")(StreamingURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateStreamingURLResult]
   }
-  @scala.inline
-  implicit class CreateStreamingURLResultOps[Self <: CreateStreamingURLResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpires(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamingURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamingURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingURL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

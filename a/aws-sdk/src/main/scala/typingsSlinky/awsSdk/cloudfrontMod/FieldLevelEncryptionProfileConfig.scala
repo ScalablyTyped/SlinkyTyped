@@ -26,47 +26,15 @@ trait FieldLevelEncryptionProfileConfig extends js.Object {
 
 object FieldLevelEncryptionProfileConfig {
   @scala.inline
-  def apply(CallerReference: String, EncryptionEntities: EncryptionEntities, Name: String): FieldLevelEncryptionProfileConfig = {
+  def apply(
+    CallerReference: String,
+    EncryptionEntities: EncryptionEntities,
+    Name: String,
+    Comment: String = null
+  ): FieldLevelEncryptionProfileConfig = {
     val __obj = js.Dynamic.literal(CallerReference = CallerReference.asInstanceOf[js.Any], EncryptionEntities = EncryptionEntities.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldLevelEncryptionProfileConfig]
   }
-  @scala.inline
-  implicit class FieldLevelEncryptionProfileConfigOps[Self <: FieldLevelEncryptionProfileConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerReference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncryptionEntities(value: EncryptionEntities): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

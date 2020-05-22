@@ -134,14 +134,14 @@ trait CameraManager extends js.Object {
     */
   def addExisting(camera: Camera): Camera = js.native
   def addExisting(camera: Camera, makeMain: Boolean): Camera = js.native
-  def fromJSON(config: js.Array[CameraConfig]): CameraManager = js.native
+  def fromJSON(config: js.Array[CameraConfig]): this.type = js.native
   /**
     * Populates this Camera Manager based on the given configuration object, or an array of config objects.
     * 
     * See the `Phaser.Types.Cameras.Scene2D.CameraConfig` documentation for details of the object structure.
     * @param config A Camera configuration object, or an array of them, to be added to this Camera Manager.
     */
-  def fromJSON(config: CameraConfig): CameraManager = js.native
+  def fromJSON(config: CameraConfig): this.type = js.native
   /**
     * Gets a Camera based on its name.
     * 

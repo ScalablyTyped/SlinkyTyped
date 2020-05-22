@@ -1,26 +1,26 @@
 package typingsSlinky.stripe.mod.transfers
 
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
+import typingsSlinky.stripe.mod.IOptionsMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITransferCreationOptions extends IDataOptionsWithMetadata {
   /**
     * A positive integer in cents/pence representing how much to transfer.
     */
-  var amount: Double = js.native
+  var amount: Double
   /**
     * 3-letter ISO code for currency.
     */
-  var currency: String = js.native
+  var currency: String
   /**
     * An arbitrary string attached to the object. Often useful for
     * displaying to users. This can be unset by updating the value
     * to null and then saving.
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * The id of a bank account or a card to send the transfer to, or the
     * string "default_for_currency" to use the default external
@@ -30,7 +30,7 @@ trait ITransferCreationOptions extends IDataOptionsWithMetadata {
     * Stripe account; see the details about when such transfers are
     * permitted.
     */
-  var destination: String = js.native
+  var destination: String
   /**
     * You can use this parameter to transfer funds from a charge (or
     * other transaction) before they are added to your available
@@ -38,98 +38,42 @@ trait ITransferCreationOptions extends IDataOptionsWithMetadata {
     * funds will not become available until the original charge
     * becomes available. See the Connect documentation for details.
     */
-  var source_transaction: js.UndefOr[String] = js.native
+  var source_transaction: js.UndefOr[String] = js.undefined
   /**
     * The source balance to use for this transfer. One of bank_account
     * or card. For most users, this will default to card.
     */
-  var source_type: js.UndefOr[SourceTypes] = js.native
+  var source_type: js.UndefOr[SourceTypes] = js.undefined
   /**
     * A string that identifies this transaction as part of a group.
     * See the Connect documentation for details.
     */
-  var transfer_group: js.UndefOr[String] = js.native
+  var transfer_group: js.UndefOr[String] = js.undefined
 }
 
 object ITransferCreationOptions {
   @scala.inline
-  def apply(amount: Double, currency: String, destination: String): ITransferCreationOptions = {
+  def apply(
+    amount: Double,
+    currency: String,
+    destination: String,
+    description: String = null,
+    expand: js.Array[String] = null,
+    include: js.Array[String] = null,
+    metadata: IOptionsMetadata = null,
+    source_transaction: String = null,
+    source_type: SourceTypes = null,
+    transfer_group: String = null
+  ): ITransferCreationOptions = {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], currency = currency.asInstanceOf[js.Any], destination = destination.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (source_transaction != null) __obj.updateDynamic("source_transaction")(source_transaction.asInstanceOf[js.Any])
+    if (source_type != null) __obj.updateDynamic("source_type")(source_type.asInstanceOf[js.Any])
+    if (transfer_group != null) __obj.updateDynamic("transfer_group")(transfer_group.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITransferCreationOptions]
   }
-  @scala.inline
-  implicit class ITransferCreationOptionsOps[Self <: ITransferCreationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestination(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource_transaction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource_transaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_transaction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource_type(value: SourceTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransfer_group(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transfer_group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransfer_group: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transfer_group")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

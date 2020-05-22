@@ -7,8 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PublicKey
-  extends typingsSlinky.nodeForge.mod.pki.PublicKey {
+trait PublicKey extends js.Object {
   var e: BigInteger = js.native
   var n: BigInteger = js.native
   def encrypt(data: Bytes): Bytes = js.native

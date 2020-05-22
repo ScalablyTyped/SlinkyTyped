@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PaymentMethodResponse extends js.Object {
-  var error: js.UndefOr[Error] = js.native
-  var paymentMethod: js.UndefOr[PaymentMethod] = js.native
+  var error: js.UndefOr[Error] = js.undefined
+  var paymentMethod: js.UndefOr[PaymentMethod] = js.undefined
 }
 
 object PaymentMethodResponse {
   @scala.inline
-  def apply(): PaymentMethodResponse = {
+  def apply(error: Error = null, paymentMethod: PaymentMethod = null): PaymentMethodResponse = {
     val __obj = js.Dynamic.literal()
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (paymentMethod != null) __obj.updateDynamic("paymentMethod")(paymentMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentMethodResponse]
   }
-  @scala.inline
-  implicit class PaymentMethodResponseOps[Self <: PaymentMethodResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentMethod(value: PaymentMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentMethod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

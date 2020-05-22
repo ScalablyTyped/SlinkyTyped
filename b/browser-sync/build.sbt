@@ -1,20 +1,21 @@
 organization := "org.scalablytyped.slinky"
 name := "browser-sync"
-version := "2.26-dt-20200226Z-dca723"
+version := "2.26-dt-20200515Z-2ff9d7"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "chokidar" % "3.3.1-c4152c",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200415Z-cfdf0c",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20191126Z-d94a1a",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-34f923",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200227Z-51c95d",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "chokidar" % "3.4.0-ab3e5d",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200515Z-f4fc10",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200515Z-2900a9",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-8e6135",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-0a4f98",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-85de9b",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

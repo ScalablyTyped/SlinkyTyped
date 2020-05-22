@@ -86,113 +86,40 @@ trait ParamsResourceLivebroadcastsControl extends StandardParameters {
 
 object ParamsResourceLivebroadcastsControl {
   @scala.inline
-  def apply(): ParamsResourceLivebroadcastsControl = {
+  def apply(
+    alt: String = null,
+    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
+    displaySlate: js.UndefOr[Boolean] = js.undefined,
+    fields: String = null,
+    id: String = null,
+    key: String = null,
+    oauth_token: String = null,
+    offsetTimeMs: String = null,
+    onBehalfOfContentOwner: String = null,
+    onBehalfOfContentOwnerChannel: String = null,
+    part: String = null,
+    prettyPrint: js.UndefOr[Boolean] = js.undefined,
+    quotaUser: String = null,
+    userIp: String = null,
+    walltime: String = null
+  ): ParamsResourceLivebroadcastsControl = {
     val __obj = js.Dynamic.literal()
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (!js.isUndefined(displaySlate)) __obj.updateDynamic("displaySlate")(displaySlate.get.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
+    if (offsetTimeMs != null) __obj.updateDynamic("offsetTimeMs")(offsetTimeMs.asInstanceOf[js.Any])
+    if (onBehalfOfContentOwner != null) __obj.updateDynamic("onBehalfOfContentOwner")(onBehalfOfContentOwner.asInstanceOf[js.Any])
+    if (onBehalfOfContentOwnerChannel != null) __obj.updateDynamic("onBehalfOfContentOwnerChannel")(onBehalfOfContentOwnerChannel.asInstanceOf[js.Any])
+    if (part != null) __obj.updateDynamic("part")(part.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.get.asInstanceOf[js.Any])
+    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
+    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
+    if (walltime != null) __obj.updateDynamic("walltime")(walltime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourceLivebroadcastsControl]
   }
-  @scala.inline
-  implicit class ParamsResourceLivebroadcastsControlOps[Self <: ParamsResourceLivebroadcastsControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplaySlate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displaySlate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplaySlate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displaySlate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetTimeMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTimeMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetTimeMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTimeMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBehalfOfContentOwner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfContentOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBehalfOfContentOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfContentOwner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBehalfOfContentOwnerChannel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfContentOwnerChannel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBehalfOfContentOwnerChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfContentOwnerChannel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("part")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("part")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWalltime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("walltime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWalltime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("walltime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

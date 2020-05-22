@@ -2,6 +2,7 @@ package typingsSlinky.googleCloudPubsub.publisherMod
 
 import typingsSlinky.googleCloudPubsub.publisherMessageQueuesMod.OrderedQueue
 import typingsSlinky.googleCloudPubsub.publisherMessageQueuesMod.Queue
+import typingsSlinky.googleCloudPubsub.srcPubsubMod.EmptyCallback
 import typingsSlinky.googleCloudPubsub.topicMod.Topic
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.Map
@@ -20,6 +21,8 @@ class Publisher protected () extends js.Object {
   var queue: Queue = js.native
   var settings: PublishOptions = js.native
   var topic: Topic = js.native
+  def flush(): js.Promise[Unit] = js.native
+  def flush(callback: EmptyCallback): Unit = js.native
   def publish(data: Buffer): js.Promise[String] = js.native
   def publish(data: Buffer, attributes: Attributes): js.Promise[String] = js.native
   def publish(data: Buffer, attributes: Attributes, callback: PublishCallback): Unit = js.native

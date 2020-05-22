@@ -4,114 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KeygenHTMLAttributes[T] extends HTMLAttributes[T] {
-  var autoFocus: js.UndefOr[Boolean] = js.native
-  var challenge: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var form: js.UndefOr[String] = js.native
-  var keyParams: js.UndefOr[String] = js.native
-  var keyType: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var challenge: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var form: js.UndefOr[String] = js.undefined
+  var keyParams: js.UndefOr[String] = js.undefined
+  var keyType: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object KeygenHTMLAttributes {
   @scala.inline
-  def apply[T](): KeygenHTMLAttributes[T] = {
+  def apply[T](
+    HTMLAttributes: HTMLAttributes[T] = null,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    challenge: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    form: String = null,
+    keyParams: String = null,
+    keyType: String = null,
+    name: String = null
+  ): KeygenHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (HTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, HTMLAttributes)
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (challenge != null) __obj.updateDynamic("challenge")(challenge.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (keyParams != null) __obj.updateDynamic("keyParams")(keyParams.asInstanceOf[js.Any])
+    if (keyType != null) __obj.updateDynamic("keyType")(keyType.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeygenHTMLAttributes[T]]
   }
-  @scala.inline
-  implicit class KeygenHTMLAttributesOps[Self[t] <: KeygenHTMLAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChallenge(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("challenge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChallenge: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("challenge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForm(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyParams(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyParams: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyType(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyType: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

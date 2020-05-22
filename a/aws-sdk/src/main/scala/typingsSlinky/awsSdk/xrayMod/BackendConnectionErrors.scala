@@ -34,89 +34,22 @@ trait BackendConnectionErrors extends js.Object {
 
 object BackendConnectionErrors {
   @scala.inline
-  def apply(): BackendConnectionErrors = {
+  def apply(
+    ConnectionRefusedCount: js.UndefOr[NullableInteger] = js.undefined,
+    HTTPCode4XXCount: js.UndefOr[NullableInteger] = js.undefined,
+    HTTPCode5XXCount: js.UndefOr[NullableInteger] = js.undefined,
+    OtherCount: js.UndefOr[NullableInteger] = js.undefined,
+    TimeoutCount: js.UndefOr[NullableInteger] = js.undefined,
+    UnknownHostCount: js.UndefOr[NullableInteger] = js.undefined
+  ): BackendConnectionErrors = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ConnectionRefusedCount)) __obj.updateDynamic("ConnectionRefusedCount")(ConnectionRefusedCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HTTPCode4XXCount)) __obj.updateDynamic("HTTPCode4XXCount")(HTTPCode4XXCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HTTPCode5XXCount)) __obj.updateDynamic("HTTPCode5XXCount")(HTTPCode5XXCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(OtherCount)) __obj.updateDynamic("OtherCount")(OtherCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TimeoutCount)) __obj.updateDynamic("TimeoutCount")(TimeoutCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UnknownHostCount)) __obj.updateDynamic("UnknownHostCount")(UnknownHostCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackendConnectionErrors]
   }
-  @scala.inline
-  implicit class BackendConnectionErrorsOps[Self <: BackendConnectionErrors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionRefusedCount(value: NullableInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionRefusedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionRefusedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionRefusedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHTTPCode4XXCount(value: NullableInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPCode4XXCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHTTPCode4XXCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPCode4XXCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHTTPCode5XXCount(value: NullableInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPCode5XXCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHTTPCode5XXCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPCode5XXCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtherCount(value: NullableInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OtherCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtherCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OtherCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeoutCount(value: NullableInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknownHostCount(value: NullableInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnknownHostCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnknownHostCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnknownHostCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

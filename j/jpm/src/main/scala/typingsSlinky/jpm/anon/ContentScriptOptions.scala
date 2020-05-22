@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContentScriptOptions extends js.Object {
-  var contentScript: js.UndefOr[String | js.Array[String]] = js.native
-  var contentScriptFile: js.UndefOr[String | js.Array[String]] = js.native
-  var contentScriptOptions: js.UndefOr[js.Object] = js.native
-  var onError: js.UndefOr[js.Function1[/* error */ js.Error, _]] = js.native
-  var onMessage: js.UndefOr[js.Function1[/* message */ String, _]] = js.native
+  var contentScript: js.UndefOr[String | js.Array[String]] = js.undefined
+  var contentScriptFile: js.UndefOr[String | js.Array[String]] = js.undefined
+  var contentScriptOptions: js.UndefOr[js.Object] = js.undefined
+  var onError: js.UndefOr[js.Function1[/* error */ js.Error, _]] = js.undefined
+  var onMessage: js.UndefOr[js.Function1[/* message */ String, _]] = js.undefined
 }
 
 object ContentScriptOptions {
   @scala.inline
-  def apply(): ContentScriptOptions = {
+  def apply(
+    contentScript: String | js.Array[String] = null,
+    contentScriptFile: String | js.Array[String] = null,
+    contentScriptOptions: js.Object = null,
+    onError: /* error */ js.Error => _ = null,
+    onMessage: /* message */ String => _ = null
+  ): ContentScriptOptions = {
     val __obj = js.Dynamic.literal()
+    if (contentScript != null) __obj.updateDynamic("contentScript")(contentScript.asInstanceOf[js.Any])
+    if (contentScriptFile != null) __obj.updateDynamic("contentScriptFile")(contentScriptFile.asInstanceOf[js.Any])
+    if (contentScriptOptions != null) __obj.updateDynamic("contentScriptOptions")(contentScriptOptions.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onMessage != null) __obj.updateDynamic("onMessage")(js.Any.fromFunction1(onMessage))
     __obj.asInstanceOf[ContentScriptOptions]
   }
-  @scala.inline
-  implicit class ContentScriptOptionsOps[Self <: ContentScriptOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentScript(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentScriptFile(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScriptFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentScriptFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScriptFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentScriptOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScriptOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentScriptOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScriptOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: /* error */ js.Error => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMessage(value: /* message */ String => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

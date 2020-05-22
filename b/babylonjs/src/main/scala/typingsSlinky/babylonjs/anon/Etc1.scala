@@ -4,87 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Etc1 extends js.Object {
   /**
     * etc1 compression format
     */
-  var etc1: js.UndefOr[Boolean] = js.native
+  var etc1: js.UndefOr[Boolean] = js.undefined
   /**
     * etc2 compression format
     */
-  var etc2: js.UndefOr[Boolean] = js.native
+  var etc2: js.UndefOr[Boolean] = js.undefined
   /**
     * pvrtc compression format
     */
-  var pvrtc: js.UndefOr[Boolean] = js.native
+  var pvrtc: js.UndefOr[Boolean] = js.undefined
   /**
     * s3tc compression format
     */
-  var s3tc: js.UndefOr[Boolean] = js.native
+  var s3tc: js.UndefOr[Boolean] = js.undefined
 }
 
 object Etc1 {
   @scala.inline
-  def apply(): Etc1 = {
+  def apply(
+    etc1: js.UndefOr[Boolean] = js.undefined,
+    etc2: js.UndefOr[Boolean] = js.undefined,
+    pvrtc: js.UndefOr[Boolean] = js.undefined,
+    s3tc: js.UndefOr[Boolean] = js.undefined
+  ): Etc1 = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(etc1)) __obj.updateDynamic("etc1")(etc1.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(etc2)) __obj.updateDynamic("etc2")(etc2.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pvrtc)) __obj.updateDynamic("pvrtc")(pvrtc.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(s3tc)) __obj.updateDynamic("s3tc")(s3tc.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Etc1]
   }
-  @scala.inline
-  implicit class Etc1Ops[Self <: Etc1] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEtc1(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etc1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtc1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etc1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtc2(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etc2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtc2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etc2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPvrtc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pvrtc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPvrtc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pvrtc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3tc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3tc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3tc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3tc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

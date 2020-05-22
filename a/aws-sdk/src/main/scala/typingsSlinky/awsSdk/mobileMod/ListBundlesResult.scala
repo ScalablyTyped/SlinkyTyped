@@ -18,41 +18,11 @@ trait ListBundlesResult extends js.Object {
 
 object ListBundlesResult {
   @scala.inline
-  def apply(): ListBundlesResult = {
+  def apply(bundleList: BundleList = null, nextToken: NextToken = null): ListBundlesResult = {
     val __obj = js.Dynamic.literal()
+    if (bundleList != null) __obj.updateDynamic("bundleList")(bundleList.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBundlesResult]
   }
-  @scala.inline
-  implicit class ListBundlesResultOps[Self <: ListBundlesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBundleList(value: BundleList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundleList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -34,89 +34,22 @@ trait GetProvisionedConcurrencyConfigResponse extends js.Object {
 
 object GetProvisionedConcurrencyConfigResponse {
   @scala.inline
-  def apply(): GetProvisionedConcurrencyConfigResponse = {
+  def apply(
+    AllocatedProvisionedConcurrentExecutions: js.UndefOr[NonNegativeInteger] = js.undefined,
+    AvailableProvisionedConcurrentExecutions: js.UndefOr[NonNegativeInteger] = js.undefined,
+    LastModified: Timestamp = null,
+    RequestedProvisionedConcurrentExecutions: js.UndefOr[PositiveInteger] = js.undefined,
+    Status: ProvisionedConcurrencyStatusEnum = null,
+    StatusReason: String = null
+  ): GetProvisionedConcurrencyConfigResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AllocatedProvisionedConcurrentExecutions)) __obj.updateDynamic("AllocatedProvisionedConcurrentExecutions")(AllocatedProvisionedConcurrentExecutions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(AvailableProvisionedConcurrentExecutions)) __obj.updateDynamic("AvailableProvisionedConcurrentExecutions")(AvailableProvisionedConcurrentExecutions.get.asInstanceOf[js.Any])
+    if (LastModified != null) __obj.updateDynamic("LastModified")(LastModified.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequestedProvisionedConcurrentExecutions)) __obj.updateDynamic("RequestedProvisionedConcurrentExecutions")(RequestedProvisionedConcurrentExecutions.get.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusReason != null) __obj.updateDynamic("StatusReason")(StatusReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetProvisionedConcurrencyConfigResponse]
   }
-  @scala.inline
-  implicit class GetProvisionedConcurrencyConfigResponseOps[Self <: GetProvisionedConcurrencyConfigResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocatedProvisionedConcurrentExecutions(value: NonNegativeInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedProvisionedConcurrentExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocatedProvisionedConcurrentExecutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedProvisionedConcurrentExecutions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailableProvisionedConcurrentExecutions(value: NonNegativeInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableProvisionedConcurrentExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableProvisionedConcurrentExecutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableProvisionedConcurrentExecutions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModified(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestedProvisionedConcurrentExecutions(value: PositiveInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestedProvisionedConcurrentExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestedProvisionedConcurrentExecutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestedProvisionedConcurrentExecutions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ProvisionedConcurrencyStatusEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextElement extends js.Object {
   /**
     * A TextElement representing a spot in the text that is dynamically
     * replaced with content that can change over time.
     */
-  var autoText: js.UndefOr[AutoText] = js.native
+  var autoText: js.UndefOr[AutoText] = js.undefined
   /**
     * The zero-based end index of this text element, exclusive, in Unicode code
     * units.
     */
-  var endIndex: js.UndefOr[Double] = js.native
+  var endIndex: js.UndefOr[Double] = js.undefined
   /**
     * A marker representing the beginning of a new paragraph.
     *
@@ -25,9 +24,9 @@ trait TextElement extends js.Object {
     * paragraph. The range of indices of two separate paragraphs will never
     * overlap.
     */
-  var paragraphMarker: js.UndefOr[ParagraphMarker] = js.native
+  var paragraphMarker: js.UndefOr[ParagraphMarker] = js.undefined
   /** The zero-based start index of this text element, in Unicode code units. */
-  var startIndex: js.UndefOr[Double] = js.native
+  var startIndex: js.UndefOr[Double] = js.undefined
   /**
     * A TextElement representing a run of text where all of the characters
     * in the run have the same TextStyle.
@@ -36,82 +35,25 @@ trait TextElement extends js.Object {
     * contained in the index range of a single `paragraph_marker` TextElement.
     * In other words, a TextRun will never span multiple paragraphs.
     */
-  var textRun: js.UndefOr[TextRun] = js.native
+  var textRun: js.UndefOr[TextRun] = js.undefined
 }
 
 object TextElement {
   @scala.inline
-  def apply(): TextElement = {
+  def apply(
+    autoText: AutoText = null,
+    endIndex: js.UndefOr[Double] = js.undefined,
+    paragraphMarker: ParagraphMarker = null,
+    startIndex: js.UndefOr[Double] = js.undefined,
+    textRun: TextRun = null
+  ): TextElement = {
     val __obj = js.Dynamic.literal()
+    if (autoText != null) __obj.updateDynamic("autoText")(autoText.asInstanceOf[js.Any])
+    if (!js.isUndefined(endIndex)) __obj.updateDynamic("endIndex")(endIndex.get.asInstanceOf[js.Any])
+    if (paragraphMarker != null) __obj.updateDynamic("paragraphMarker")(paragraphMarker.asInstanceOf[js.Any])
+    if (!js.isUndefined(startIndex)) __obj.updateDynamic("startIndex")(startIndex.get.asInstanceOf[js.Any])
+    if (textRun != null) __obj.updateDynamic("textRun")(textRun.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextElement]
   }
-  @scala.inline
-  implicit class TextElementOps[Self <: TextElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoText(value: AutoText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParagraphMarker(value: ParagraphMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParagraphMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphMarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextRun(value: TextRun): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

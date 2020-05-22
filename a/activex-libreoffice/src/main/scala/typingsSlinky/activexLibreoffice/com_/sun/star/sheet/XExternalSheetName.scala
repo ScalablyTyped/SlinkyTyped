@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * hidden sheet is composed of the URL of the external document and the external sheet name.
   * @since OOo 3.0
   */
-@js.native
 trait XExternalSheetName extends XInterface {
   /**
     * sets an external name at the sheet.
@@ -23,7 +22,7 @@ trait XExternalSheetName extends XInterface {
     * @param aSheetName the name of the sheet in the external document.
     * @throws com::sun::star::container::ElementExistException a sheet with that external name already exists in this document
     */
-  def setExternalName(aUrl: String, aSheetName: String): Unit = js.native
+  def setExternalName(aUrl: String, aSheetName: String): Unit
 }
 
 object XExternalSheetName {
@@ -37,19 +36,5 @@ object XExternalSheetName {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setExternalName = js.Any.fromFunction2(setExternalName))
     __obj.asInstanceOf[XExternalSheetName]
   }
-  @scala.inline
-  implicit class XExternalSheetNameOps[Self <: XExternalSheetName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetExternalName(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setExternalName")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -38,101 +38,24 @@ trait ViewerCertificate extends js.Object {
 
 object ViewerCertificate {
   @scala.inline
-  def apply(): ViewerCertificate = {
+  def apply(
+    ACMCertificateArn: String = null,
+    Certificate: String = null,
+    CertificateSource: CertificateSource = null,
+    CloudFrontDefaultCertificate: js.UndefOr[Boolean] = js.undefined,
+    IAMCertificateId: String = null,
+    MinimumProtocolVersion: MinimumProtocolVersion = null,
+    SSLSupportMethod: SSLSupportMethod = null
+  ): ViewerCertificate = {
     val __obj = js.Dynamic.literal()
+    if (ACMCertificateArn != null) __obj.updateDynamic("ACMCertificateArn")(ACMCertificateArn.asInstanceOf[js.Any])
+    if (Certificate != null) __obj.updateDynamic("Certificate")(Certificate.asInstanceOf[js.Any])
+    if (CertificateSource != null) __obj.updateDynamic("CertificateSource")(CertificateSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(CloudFrontDefaultCertificate)) __obj.updateDynamic("CloudFrontDefaultCertificate")(CloudFrontDefaultCertificate.get.asInstanceOf[js.Any])
+    if (IAMCertificateId != null) __obj.updateDynamic("IAMCertificateId")(IAMCertificateId.asInstanceOf[js.Any])
+    if (MinimumProtocolVersion != null) __obj.updateDynamic("MinimumProtocolVersion")(MinimumProtocolVersion.asInstanceOf[js.Any])
+    if (SSLSupportMethod != null) __obj.updateDynamic("SSLSupportMethod")(SSLSupportMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewerCertificate]
   }
-  @scala.inline
-  implicit class ViewerCertificateOps[Self <: ViewerCertificate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withACMCertificateArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ACMCertificateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutACMCertificateArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ACMCertificateArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateSource(value: CertificateSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudFrontDefaultCertificate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontDefaultCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudFrontDefaultCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontDefaultCertificate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIAMCertificateId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IAMCertificateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIAMCertificateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IAMCertificateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumProtocolVersion(value: MinimumProtocolVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumProtocolVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumProtocolVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumProtocolVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSLSupportMethod(value: SSLSupportMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSLSupportMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSLSupportMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSLSupportMethod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

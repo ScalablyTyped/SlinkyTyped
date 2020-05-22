@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Response extends js.Object {
-  var error: js.Error = js.native
-  var response: js.UndefOr[org.scalajs.dom.experimental.Response] = js.native
+  var error: js.Error
+  var response: js.UndefOr[org.scalajs.dom.experimental.Response] = js.undefined
 }
 
 object Response {
   @scala.inline
-  def apply(error: js.Error): Response = {
+  def apply(error: js.Error, response: org.scalajs.dom.experimental.Response = null): Response = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
+    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
     __obj.asInstanceOf[Response]
   }
-  @scala.inline
-  implicit class ResponseOps[Self <: Response] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: js.Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResponse(value: org.scalajs.dom.experimental.Response): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

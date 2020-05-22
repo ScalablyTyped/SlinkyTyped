@@ -17,5 +17,17 @@ class ^[T] protected () extends KDBush[T] {
     nodeSize: Double,
     ArrayType: typingsSlinky.kdbush.mod.ArrayType
   ) = this()
+  /* CompleteClass */
+  override var coords: js.Array[Double] = js.native
+  /* CompleteClass */
+  override var ids: js.Array[Double] = js.native
+  /* CompleteClass */
+  override var nodeSize: Double = js.native
+  /* CompleteClass */
+  override var points: js.Array[T] = js.native
+  /* CompleteClass */
+  override def range(minX: Double, minY: Double, maxX: Double, maxY: Double): js.Array[Double] = js.native
+  /* CompleteClass */
+  override def within(x: Double, y: Double, r: Double): js.Array[Double] = js.native
 }
 

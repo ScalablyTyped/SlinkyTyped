@@ -16,28 +16,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InventoryConfiguration extends js.Object {
   /**
     * <p>Contains information about where to publish the inventory results.</p>
     */
-  var Destination: InventoryDestination = js.native
+  var Destination: InventoryDestination
   /**
     * <p>Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria.</p>
     */
-  var Filter: js.UndefOr[InventoryFilter] = js.native
+  var Filter: js.UndefOr[InventoryFilter] = js.undefined
   /**
     * <p>The ID used to identify the inventory configuration.</p>
     */
-  var Id: String = js.native
+  var Id: String
   /**
     * <p>Specifies which object version(s) to included in the inventory results.</p>
     */
-  var IncludedObjectVersions: All | Current | String = js.native
+  var IncludedObjectVersions: All | Current | String
   /**
     * <p>Specifies whether the inventory is enabled or disabled.</p>
     */
-  var IsEnabled: Boolean = js.native
+  var IsEnabled: Boolean
   /**
     * <p>Contains the optional fields that are included in the inventory results.</p>
     */
@@ -47,11 +46,11 @@ trait InventoryConfiguration extends js.Object {
     ]) | (js.Iterable[
       Size | LastModifiedDate | StorageClass | ETag | IsMultipartUploaded | ReplicationStatus | EncryptionStatus | String
     ])
-  ] = js.native
+  ] = js.undefined
   /**
     * <p>Specifies the schedule for generating inventory results.</p>
     */
-  var Schedule: InventorySchedule = js.native
+  var Schedule: InventorySchedule
 }
 
 object InventoryConfiguration {
@@ -61,88 +60,18 @@ object InventoryConfiguration {
     Id: String,
     IncludedObjectVersions: All | Current | String,
     IsEnabled: Boolean,
-    Schedule: InventorySchedule
+    Schedule: InventorySchedule,
+    Filter: InventoryFilter = null,
+    OptionalFields: (js.Array[
+      Size | LastModifiedDate | StorageClass | ETag | IsMultipartUploaded | ReplicationStatus | EncryptionStatus | String
+    ]) | (js.Iterable[
+      Size | LastModifiedDate | StorageClass | ETag | IsMultipartUploaded | ReplicationStatus | EncryptionStatus | String
+    ]) = null
   ): InventoryConfiguration = {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], IncludedObjectVersions = IncludedObjectVersions.asInstanceOf[js.Any], IsEnabled = IsEnabled.asInstanceOf[js.Any], Schedule = Schedule.asInstanceOf[js.Any])
+    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
+    if (OptionalFields != null) __obj.updateDynamic("OptionalFields")(OptionalFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[InventoryConfiguration]
   }
-  @scala.inline
-  implicit class InventoryConfigurationOps[Self <: InventoryConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: InventoryDestination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludedObjectVersions(value: All | Current | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludedObjectVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: InventorySchedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: InventoryFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionalFieldsIterable(
-      value: js.Iterable[
-          Size | LastModifiedDate | StorageClass | ETag | IsMultipartUploaded | ReplicationStatus | EncryptionStatus | String
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionalFields(
-      value: (js.Array[
-          Size | LastModifiedDate | StorageClass | ETag | IsMultipartUploaded | ReplicationStatus | EncryptionStatus | String
-        ]) | (js.Iterable[
-          Size | LastModifiedDate | StorageClass | ETag | IsMultipartUploaded | ReplicationStatus | EncryptionStatus | String
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionalFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalFields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

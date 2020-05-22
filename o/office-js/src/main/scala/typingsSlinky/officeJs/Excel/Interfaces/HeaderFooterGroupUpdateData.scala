@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the HeaderFooterGroup object, for use in `headerFooterGroup.set({ ... })`. */
-@js.native
 trait HeaderFooterGroupUpdateData extends js.Object {
   /**
     *
@@ -18,148 +17,71 @@ trait HeaderFooterGroupUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var defaultForAllPages: js.UndefOr[HeaderFooterUpdateData] = js.native
+  var defaultForAllPages: js.UndefOr[HeaderFooterUpdateData] = js.undefined
   /**
     *
     * The header/footer to use for even pages, odd header/footer needs to be specified for odd pages.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var evenPages: js.UndefOr[HeaderFooterUpdateData] = js.native
+  var evenPages: js.UndefOr[HeaderFooterUpdateData] = js.undefined
   /**
     *
     * The first page header/footer, for all other pages general or even/odd is used.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var firstPage: js.UndefOr[HeaderFooterUpdateData] = js.native
+  var firstPage: js.UndefOr[HeaderFooterUpdateData] = js.undefined
   /**
     *
     * The header/footer to use for odd pages, even header/footer needs to be specified for even pages.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var oddPages: js.UndefOr[HeaderFooterUpdateData] = js.native
+  var oddPages: js.UndefOr[HeaderFooterUpdateData] = js.undefined
   /**
     *
-    * Gets or sets the state of which headers/footers are set. See Excel.HeaderFooterState for details.
+    * The state by which headers/footers are set. See Excel.HeaderFooterState for details.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var state: js.UndefOr[HeaderFooterState | Default | FirstAndDefault | OddAndEven | FirstOddAndEven] = js.native
+  var state: js.UndefOr[HeaderFooterState | Default | FirstAndDefault | OddAndEven | FirstOddAndEven] = js.undefined
   /**
     *
     * Gets or sets a flag indicating if headers/footers are aligned with the page margins set in the page layout options for the worksheet.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var useSheetMargins: js.UndefOr[Boolean] = js.native
+  var useSheetMargins: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets or sets a flag indicating if headers/footers should be scaled by the page percentage scale set in the page layout options for the worksheet.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var useSheetScale: js.UndefOr[Boolean] = js.native
+  var useSheetScale: js.UndefOr[Boolean] = js.undefined
 }
 
 object HeaderFooterGroupUpdateData {
   @scala.inline
-  def apply(): HeaderFooterGroupUpdateData = {
+  def apply(
+    defaultForAllPages: HeaderFooterUpdateData = null,
+    evenPages: HeaderFooterUpdateData = null,
+    firstPage: HeaderFooterUpdateData = null,
+    oddPages: HeaderFooterUpdateData = null,
+    state: HeaderFooterState | Default | FirstAndDefault | OddAndEven | FirstOddAndEven = null,
+    useSheetMargins: js.UndefOr[Boolean] = js.undefined,
+    useSheetScale: js.UndefOr[Boolean] = js.undefined
+  ): HeaderFooterGroupUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (defaultForAllPages != null) __obj.updateDynamic("defaultForAllPages")(defaultForAllPages.asInstanceOf[js.Any])
+    if (evenPages != null) __obj.updateDynamic("evenPages")(evenPages.asInstanceOf[js.Any])
+    if (firstPage != null) __obj.updateDynamic("firstPage")(firstPage.asInstanceOf[js.Any])
+    if (oddPages != null) __obj.updateDynamic("oddPages")(oddPages.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (!js.isUndefined(useSheetMargins)) __obj.updateDynamic("useSheetMargins")(useSheetMargins.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useSheetScale)) __obj.updateDynamic("useSheetScale")(useSheetScale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderFooterGroupUpdateData]
   }
-  @scala.inline
-  implicit class HeaderFooterGroupUpdateDataOps[Self <: HeaderFooterGroupUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultForAllPages(value: HeaderFooterUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultForAllPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultForAllPages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultForAllPages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvenPages(value: HeaderFooterUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvenPages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstPage(value: HeaderFooterUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOddPages(value: HeaderFooterUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oddPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOddPages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oddPages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: HeaderFooterState | Default | FirstAndDefault | OddAndEven | FirstOddAndEven): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseSheetMargins(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSheetMargins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseSheetMargins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSheetMargins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseSheetScale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSheetScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseSheetScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSheetScale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

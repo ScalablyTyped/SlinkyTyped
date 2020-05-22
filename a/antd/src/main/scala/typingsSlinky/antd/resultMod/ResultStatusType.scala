@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait ResultStatusType extends js.Object
 
-object ResultStatusType {
-  @scala.inline
-  def success: typingsSlinky.antd.antdStrings.success = "success".asInstanceOf[typingsSlinky.antd.antdStrings.success]
-  @scala.inline
-  def error: typingsSlinky.antd.antdStrings.error = "error".asInstanceOf[typingsSlinky.antd.antdStrings.error]
-  @scala.inline
-  def info: typingsSlinky.antd.antdStrings.info = "info".asInstanceOf[typingsSlinky.antd.antdStrings.info]
-  @scala.inline
-  def warning: typingsSlinky.antd.antdStrings.warning = "warning".asInstanceOf[typingsSlinky.antd.antdStrings.warning]
-  @scala.inline
-  implicit def apply(value: ExceptionStatusType): ResultStatusType = value.asInstanceOf[ResultStatusType]
-}
-

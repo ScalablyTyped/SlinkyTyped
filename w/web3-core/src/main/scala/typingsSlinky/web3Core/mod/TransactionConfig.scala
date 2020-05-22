@@ -5,166 +5,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransactionConfig extends js.Object {
-  var chain: js.UndefOr[String] = js.native
-  var chainId: js.UndefOr[Double] = js.native
-  var common: js.UndefOr[Common] = js.native
-  var data: js.UndefOr[String] = js.native
-  var from: js.UndefOr[String | Double] = js.native
-  var gas: js.UndefOr[Double | String] = js.native
-  var gasPrice: js.UndefOr[Double | String | ^ ] = js.native
-  var hardfork: js.UndefOr[String] = js.native
-  var nonce: js.UndefOr[Double] = js.native
-  var to: js.UndefOr[String] = js.native
-  var value: js.UndefOr[Double | String | ^ ] = js.native
+  var chain: js.UndefOr[String] = js.undefined
+  var chainId: js.UndefOr[Double] = js.undefined
+  var common: js.UndefOr[Common] = js.undefined
+  var data: js.UndefOr[String] = js.undefined
+  var from: js.UndefOr[String | Double] = js.undefined
+  var gas: js.UndefOr[Double | String] = js.undefined
+  var gasPrice: js.UndefOr[Double | String | ^ ] = js.undefined
+  var hardfork: js.UndefOr[String] = js.undefined
+  var nonce: js.UndefOr[Double] = js.undefined
+  var to: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[Double | String | ^ ] = js.undefined
 }
 
 object TransactionConfig {
   @scala.inline
-  def apply(): TransactionConfig = {
+  def apply(
+    chain: String = null,
+    chainId: js.UndefOr[Double] = js.undefined,
+    common: Common = null,
+    data: String = null,
+    from: String | Double = null,
+    gas: Double | String = null,
+    gasPrice: Double | String | ^  = null,
+    hardfork: String = null,
+    nonce: js.UndefOr[Double] = js.undefined,
+    to: String = null,
+    value: Double | String | ^  = null
+  ): TransactionConfig = {
     val __obj = js.Dynamic.literal()
+    if (chain != null) __obj.updateDynamic("chain")(chain.asInstanceOf[js.Any])
+    if (!js.isUndefined(chainId)) __obj.updateDynamic("chainId")(chainId.get.asInstanceOf[js.Any])
+    if (common != null) __obj.updateDynamic("common")(common.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (gas != null) __obj.updateDynamic("gas")(gas.asInstanceOf[js.Any])
+    if (gasPrice != null) __obj.updateDynamic("gasPrice")(gasPrice.asInstanceOf[js.Any])
+    if (hardfork != null) __obj.updateDynamic("hardfork")(hardfork.asInstanceOf[js.Any])
+    if (!js.isUndefined(nonce)) __obj.updateDynamic("nonce")(nonce.get.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactionConfig]
   }
-  @scala.inline
-  implicit class TransactionConfigOps[Self <: TransactionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChainId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chainId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChainId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chainId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommon(value: Common): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGas(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGasPrice(value: Double | String | ^ ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gasPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGasPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gasPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHardfork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardfork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHardfork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardfork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonce(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double | String | ^ ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

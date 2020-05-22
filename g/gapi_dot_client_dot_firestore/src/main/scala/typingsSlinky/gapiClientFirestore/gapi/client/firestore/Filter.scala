@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Filter extends js.Object {
   /** A composite filter. */
-  var compositeFilter: js.UndefOr[CompositeFilter] = js.native
+  var compositeFilter: js.UndefOr[CompositeFilter] = js.undefined
   /** A filter on a document field. */
-  var fieldFilter: js.UndefOr[FieldFilter] = js.native
+  var fieldFilter: js.UndefOr[FieldFilter] = js.undefined
   /** A filter that takes exactly one argument. */
-  var unaryFilter: js.UndefOr[UnaryFilter] = js.native
+  var unaryFilter: js.UndefOr[UnaryFilter] = js.undefined
 }
 
 object Filter {
   @scala.inline
-  def apply(): Filter = {
+  def apply(
+    compositeFilter: CompositeFilter = null,
+    fieldFilter: FieldFilter = null,
+    unaryFilter: UnaryFilter = null
+  ): Filter = {
     val __obj = js.Dynamic.literal()
+    if (compositeFilter != null) __obj.updateDynamic("compositeFilter")(compositeFilter.asInstanceOf[js.Any])
+    if (fieldFilter != null) __obj.updateDynamic("fieldFilter")(fieldFilter.asInstanceOf[js.Any])
+    if (unaryFilter != null) __obj.updateDynamic("unaryFilter")(unaryFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[Filter]
   }
-  @scala.inline
-  implicit class FilterOps[Self <: Filter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompositeFilter(value: CompositeFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compositeFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompositeFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compositeFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldFilter(value: FieldFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnaryFilter(value: UnaryFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unaryFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnaryFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unaryFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

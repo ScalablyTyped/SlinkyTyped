@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * children again.
   *
   */
-@js.native
 trait MemPriority extends BaseNode
 
 object MemPriority {

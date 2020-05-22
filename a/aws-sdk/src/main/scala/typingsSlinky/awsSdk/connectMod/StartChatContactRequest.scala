@@ -34,71 +34,19 @@ trait StartChatContactRequest extends js.Object {
 
 object StartChatContactRequest {
   @scala.inline
-  def apply(ContactFlowId: ContactFlowId, InstanceId: InstanceId, ParticipantDetails: ParticipantDetails): StartChatContactRequest = {
+  def apply(
+    ContactFlowId: ContactFlowId,
+    InstanceId: InstanceId,
+    ParticipantDetails: ParticipantDetails,
+    Attributes: Attributes = null,
+    ClientToken: ClientToken = null,
+    InitialMessage: ChatMessage = null
+  ): StartChatContactRequest = {
     val __obj = js.Dynamic.literal(ContactFlowId = ContactFlowId.asInstanceOf[js.Any], InstanceId = InstanceId.asInstanceOf[js.Any], ParticipantDetails = ParticipantDetails.asInstanceOf[js.Any])
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (InitialMessage != null) __obj.updateDynamic("InitialMessage")(InitialMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartChatContactRequest]
   }
-  @scala.inline
-  implicit class StartChatContactRequestOps[Self <: StartChatContactRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContactFlowId(value: ContactFlowId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContactFlowId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParticipantDetails(value: ParticipantDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParticipantDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: Attributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: ClientToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialMessage(value: ChatMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

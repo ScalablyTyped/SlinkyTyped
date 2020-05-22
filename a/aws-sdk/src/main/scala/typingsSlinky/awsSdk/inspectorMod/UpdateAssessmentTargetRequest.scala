@@ -22,41 +22,10 @@ trait UpdateAssessmentTargetRequest extends js.Object {
 
 object UpdateAssessmentTargetRequest {
   @scala.inline
-  def apply(assessmentTargetArn: Arn, assessmentTargetName: AssessmentTargetName): UpdateAssessmentTargetRequest = {
+  def apply(assessmentTargetArn: Arn, assessmentTargetName: AssessmentTargetName, resourceGroupArn: Arn = null): UpdateAssessmentTargetRequest = {
     val __obj = js.Dynamic.literal(assessmentTargetArn = assessmentTargetArn.asInstanceOf[js.Any], assessmentTargetName = assessmentTargetName.asInstanceOf[js.Any])
+    if (resourceGroupArn != null) __obj.updateDynamic("resourceGroupArn")(resourceGroupArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAssessmentTargetRequest]
   }
-  @scala.inline
-  implicit class UpdateAssessmentTargetRequestOps[Self <: UpdateAssessmentTargetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssessmentTargetArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentTargetArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssessmentTargetName(value: AssessmentTargetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentTargetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceGroupArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceGroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceGroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceGroupArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

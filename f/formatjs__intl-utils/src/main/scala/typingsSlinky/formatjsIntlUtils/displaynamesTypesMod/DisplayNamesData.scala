@@ -6,19 +6,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisplayNamesData extends js.Object {
   /**
     * Not in spec, but we need this to display both language and region in display name.
     * e.g. zh-Hans-SG + "{0}（{1}）" -> 简体中文（新加坡）
     * Here {0} is replaced by language display name and {1} is replaced by region display name.
     */
-  var patterns: Locale = js.native
+  var patterns: Locale
   /**
     * Note that for style fields, `short` and `narrow` might not exist.
     * At runtime, the fallback order will be narrow -> short -> long.
     */
-  var types: Currency = js.native
+  var types: Currency
 }
 
 object DisplayNamesData {
@@ -27,25 +26,5 @@ object DisplayNamesData {
     val __obj = js.Dynamic.literal(patterns = patterns.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisplayNamesData]
   }
-  @scala.inline
-  implicit class DisplayNamesDataOps[Self <: DisplayNamesData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPatterns(value: Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypes(value: Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

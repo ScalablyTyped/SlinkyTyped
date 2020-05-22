@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BulkWriteOpResultObject extends js.Object {
-  var deletedCount: js.UndefOr[scala.Double] = js.native
-  var insertedCount: js.UndefOr[scala.Double] = js.native
-  var insertedIds: js.UndefOr[js.Any] = js.native
-  var matchedCount: js.UndefOr[scala.Double] = js.native
-  var modifiedCount: js.UndefOr[scala.Double] = js.native
-  var result: js.UndefOr[js.Any] = js.native
-  var upsertedCount: js.UndefOr[scala.Double] = js.native
-  var upsertedIds: js.UndefOr[js.Any] = js.native
+  var deletedCount: js.UndefOr[scala.Double] = js.undefined
+  var insertedCount: js.UndefOr[scala.Double] = js.undefined
+  var insertedIds: js.UndefOr[js.Any] = js.undefined
+  var matchedCount: js.UndefOr[scala.Double] = js.undefined
+  var modifiedCount: js.UndefOr[scala.Double] = js.undefined
+  var result: js.UndefOr[js.Any] = js.undefined
+  var upsertedCount: js.UndefOr[scala.Double] = js.undefined
+  var upsertedIds: js.UndefOr[js.Any] = js.undefined
 }
 
 object BulkWriteOpResultObject {
   @scala.inline
-  def apply(): BulkWriteOpResultObject = {
+  def apply(
+    deletedCount: js.UndefOr[scala.Double] = js.undefined,
+    insertedCount: js.UndefOr[scala.Double] = js.undefined,
+    insertedIds: js.Any = null,
+    matchedCount: js.UndefOr[scala.Double] = js.undefined,
+    modifiedCount: js.UndefOr[scala.Double] = js.undefined,
+    result: js.Any = null,
+    upsertedCount: js.UndefOr[scala.Double] = js.undefined,
+    upsertedIds: js.Any = null
+  ): BulkWriteOpResultObject = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deletedCount)) __obj.updateDynamic("deletedCount")(deletedCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(insertedCount)) __obj.updateDynamic("insertedCount")(insertedCount.get.asInstanceOf[js.Any])
+    if (insertedIds != null) __obj.updateDynamic("insertedIds")(insertedIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchedCount)) __obj.updateDynamic("matchedCount")(matchedCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifiedCount)) __obj.updateDynamic("modifiedCount")(modifiedCount.get.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (!js.isUndefined(upsertedCount)) __obj.updateDynamic("upsertedCount")(upsertedCount.get.asInstanceOf[js.Any])
+    if (upsertedIds != null) __obj.updateDynamic("upsertedIds")(upsertedIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[BulkWriteOpResultObject]
   }
-  @scala.inline
-  implicit class BulkWriteOpResultObjectOps[Self <: BulkWriteOpResultObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletedCount(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertedCount(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertedIds(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertedIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertedIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertedIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchedCount(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifiedCount(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifiedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpsertedCount(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upsertedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpsertedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upsertedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpsertedIds(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upsertedIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpsertedIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upsertedIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

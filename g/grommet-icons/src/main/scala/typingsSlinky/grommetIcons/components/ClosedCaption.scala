@@ -12,7 +12,7 @@ object ClosedCaption {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.ClosedCaption] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.ClosedCaption](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ClosedCaption.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.ClosedCaption] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.ClosedCaption](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.ClosedCaption] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.ClosedCaption](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ClosedCaption.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.ClosedCaption] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.ClosedCaption](js.Array(this.component, js.Dictionary.empty))()
 }
 

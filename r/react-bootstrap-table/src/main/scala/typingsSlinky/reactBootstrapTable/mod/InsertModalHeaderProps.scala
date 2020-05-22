@@ -6,119 +6,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InsertModalHeaderProps extends js.Object {
   /**
-  	 * Callback function to call prior to closing the Insert Modal window.
-  	 */
-  var beforeClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, _], Unit]] = js.native
+    * Callback function to call prior to closing the Insert Modal window.
+    */
+  var beforeClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, _], Unit]] = js.undefined
   /**
-  	 * Header class name.
-  	 */
-  var className: js.UndefOr[String] = js.native
+    * Header class name.
+    */
+  var className: js.UndefOr[String] = js.undefined
   /**
-  	 * Set to true to hide the close button. Default is false.
-  	 */
-  var hideClose: js.UndefOr[Boolean] = js.native
+    * Set to true to hide the close button. Default is false.
+    */
+  var hideClose: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Callback function to call to close the Insert Modal window.
-  	 */
-  var onModalClose: js.UndefOr[js.Function1[/* closeModal */ js.Function0[Unit], Unit]] = js.native
+    * Callback function to call to close the Insert Modal window.
+    */
+  var onModalClose: js.UndefOr[js.Function1[/* closeModal */ js.Function0[Unit], Unit]] = js.undefined
   /**
-  	 * Title to display in the header.
-  	 */
-  var title: js.UndefOr[String] = js.native
+    * Title to display in the header.
+    */
+  var title: js.UndefOr[String] = js.undefined
   /**
-  	 * Bootstrap version.
-  	 */
-  var version: js.UndefOr[BootstrapVersion] = js.native
+    * Bootstrap version.
+    */
+  var version: js.UndefOr[BootstrapVersion] = js.undefined
 }
 
 object InsertModalHeaderProps {
   @scala.inline
-  def apply(): InsertModalHeaderProps = {
+  def apply(
+    beforeClose: /* e */ SyntheticEvent[Event, _] => Unit = null,
+    className: String = null,
+    hideClose: js.UndefOr[Boolean] = js.undefined,
+    onModalClose: /* closeModal */ js.Function0[Unit] => Unit = null,
+    title: String = null,
+    version: BootstrapVersion = null
+  ): InsertModalHeaderProps = {
     val __obj = js.Dynamic.literal()
+    if (beforeClose != null) __obj.updateDynamic("beforeClose")(js.Any.fromFunction1(beforeClose))
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideClose)) __obj.updateDynamic("hideClose")(hideClose.get.asInstanceOf[js.Any])
+    if (onModalClose != null) __obj.updateDynamic("onModalClose")(js.Any.fromFunction1(onModalClose))
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[InsertModalHeaderProps]
   }
-  @scala.inline
-  implicit class InsertModalHeaderPropsOps[Self <: InsertModalHeaderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBeforeClose(value: /* e */ SyntheticEvent[Event, _] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnModalClose(value: /* closeModal */ js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onModalClose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnModalClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onModalClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: BootstrapVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

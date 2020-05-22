@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ValueSet extends js.Object {
   /**
     * The symbol kind values the client supports. When this
@@ -16,34 +15,15 @@ trait ValueSet extends js.Object {
     * the symbol kinds from `File` to `Array` as defined in
     * the initial version of the protocol.
     */
-  var valueSet: js.UndefOr[js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind]] = js.native
+  var valueSet: js.UndefOr[js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind]] = js.undefined
 }
 
 object ValueSet {
   @scala.inline
-  def apply(): ValueSet = {
+  def apply(valueSet: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind] = null): ValueSet = {
     val __obj = js.Dynamic.literal()
+    if (valueSet != null) __obj.updateDynamic("valueSet")(valueSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueSet]
   }
-  @scala.inline
-  implicit class ValueSetOps[Self <: ValueSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValueSet(value: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

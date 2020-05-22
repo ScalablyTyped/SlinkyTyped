@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MimeType extends js.Object {
-  var mimeType: js.UndefOr[String] = js.native
-  var params: js.UndefOr[js.Array[NameValuePair]] = js.native
+  var mimeType: js.UndefOr[String] = js.undefined
+  var params: js.UndefOr[js.Array[NameValuePair]] = js.undefined
 }
 
 object MimeType {
   @scala.inline
-  def apply(): MimeType = {
+  def apply(mimeType: String = null, params: js.Array[NameValuePair] = null): MimeType = {
     val __obj = js.Dynamic.literal()
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
     __obj.asInstanceOf[MimeType]
   }
-  @scala.inline
-  implicit class MimeTypeOps[Self <: MimeType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Array[NameValuePair]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

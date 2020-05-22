@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GooglePrivacyDlpV2beta1ListInfoTypesResponse extends js.Object {
   /** Set of sensitive info types belonging to a category. */
-  var infoTypes: js.UndefOr[js.Array[GooglePrivacyDlpV2beta1InfoTypeDescription]] = js.native
+  var infoTypes: js.UndefOr[js.Array[GooglePrivacyDlpV2beta1InfoTypeDescription]] = js.undefined
 }
 
 object GooglePrivacyDlpV2beta1ListInfoTypesResponse {
   @scala.inline
-  def apply(): GooglePrivacyDlpV2beta1ListInfoTypesResponse = {
+  def apply(infoTypes: js.Array[GooglePrivacyDlpV2beta1InfoTypeDescription] = null): GooglePrivacyDlpV2beta1ListInfoTypesResponse = {
     val __obj = js.Dynamic.literal()
+    if (infoTypes != null) __obj.updateDynamic("infoTypes")(infoTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GooglePrivacyDlpV2beta1ListInfoTypesResponse]
   }
-  @scala.inline
-  implicit class GooglePrivacyDlpV2beta1ListInfoTypesResponseOps[Self <: GooglePrivacyDlpV2beta1ListInfoTypesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfoTypes(value: js.Array[GooglePrivacyDlpV2beta1InfoTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfoTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

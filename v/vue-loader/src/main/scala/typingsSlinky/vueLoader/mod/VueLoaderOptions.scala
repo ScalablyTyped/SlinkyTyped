@@ -7,179 +7,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VueLoaderOptions extends js.Object {
-  var cacheDirectory: js.UndefOr[String] = js.native
-  var cacheIdentifier: js.UndefOr[String] = js.native
-  var compiler: js.UndefOr[VueTemplateCompiler] = js.native
-  var compilerOptions: js.UndefOr[CompilerOptions] = js.native
-  var exposeFilename: js.UndefOr[Boolean] = js.native
-  var hotReload: js.UndefOr[Boolean] = js.native
-  var optimizeSSR: js.UndefOr[Boolean] = js.native
-  var prettify: js.UndefOr[Boolean] = js.native
-  var productionMode: js.UndefOr[Boolean] = js.native
-  var shadowMode: js.UndefOr[Boolean] = js.native
-  var transformAssetUrls: js.UndefOr[StringDictionary[String | js.Array[String]]] = js.native
-  var transpileOptions: js.UndefOr[js.Object] = js.native
+  var cacheDirectory: js.UndefOr[String] = js.undefined
+  var cacheIdentifier: js.UndefOr[String] = js.undefined
+  var compiler: js.UndefOr[VueTemplateCompiler] = js.undefined
+  var compilerOptions: js.UndefOr[CompilerOptions] = js.undefined
+  var exposeFilename: js.UndefOr[Boolean] = js.undefined
+  var hotReload: js.UndefOr[Boolean] = js.undefined
+  var optimizeSSR: js.UndefOr[Boolean] = js.undefined
+  var prettify: js.UndefOr[Boolean] = js.undefined
+  var productionMode: js.UndefOr[Boolean] = js.undefined
+  var shadowMode: js.UndefOr[Boolean] = js.undefined
+  var transformAssetUrls: js.UndefOr[StringDictionary[String | js.Array[String]]] = js.undefined
+  var transpileOptions: js.UndefOr[js.Object] = js.undefined
 }
 
 object VueLoaderOptions {
   @scala.inline
-  def apply(): VueLoaderOptions = {
+  def apply(
+    cacheDirectory: String = null,
+    cacheIdentifier: String = null,
+    compiler: VueTemplateCompiler = null,
+    compilerOptions: CompilerOptions = null,
+    exposeFilename: js.UndefOr[Boolean] = js.undefined,
+    hotReload: js.UndefOr[Boolean] = js.undefined,
+    optimizeSSR: js.UndefOr[Boolean] = js.undefined,
+    prettify: js.UndefOr[Boolean] = js.undefined,
+    productionMode: js.UndefOr[Boolean] = js.undefined,
+    shadowMode: js.UndefOr[Boolean] = js.undefined,
+    transformAssetUrls: StringDictionary[String | js.Array[String]] = null,
+    transpileOptions: js.Object = null
+  ): VueLoaderOptions = {
     val __obj = js.Dynamic.literal()
+    if (cacheDirectory != null) __obj.updateDynamic("cacheDirectory")(cacheDirectory.asInstanceOf[js.Any])
+    if (cacheIdentifier != null) __obj.updateDynamic("cacheIdentifier")(cacheIdentifier.asInstanceOf[js.Any])
+    if (compiler != null) __obj.updateDynamic("compiler")(compiler.asInstanceOf[js.Any])
+    if (compilerOptions != null) __obj.updateDynamic("compilerOptions")(compilerOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(exposeFilename)) __obj.updateDynamic("exposeFilename")(exposeFilename.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hotReload)) __obj.updateDynamic("hotReload")(hotReload.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(optimizeSSR)) __obj.updateDynamic("optimizeSSR")(optimizeSSR.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettify)) __obj.updateDynamic("prettify")(prettify.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(productionMode)) __obj.updateDynamic("productionMode")(productionMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowMode)) __obj.updateDynamic("shadowMode")(shadowMode.get.asInstanceOf[js.Any])
+    if (transformAssetUrls != null) __obj.updateDynamic("transformAssetUrls")(transformAssetUrls.asInstanceOf[js.Any])
+    if (transpileOptions != null) __obj.updateDynamic("transpileOptions")(transpileOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[VueLoaderOptions]
   }
-  @scala.inline
-  implicit class VueLoaderOptionsOps[Self <: VueLoaderOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDirectory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompiler(value: VueTemplateCompiler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compiler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompiler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compiler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompilerOptions(value: CompilerOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compilerOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompilerOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compilerOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExposeFilename(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeFilename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExposeFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeFilename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHotReload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotReload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHotReload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotReload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptimizeSSR(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizeSSR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimizeSSR: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizeSSR")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrettify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prettify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrettify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prettify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductionMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformAssetUrls(value: StringDictionary[String | js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformAssetUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformAssetUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformAssetUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranspileOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transpileOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranspileOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transpileOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

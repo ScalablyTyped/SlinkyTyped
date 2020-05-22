@@ -39,7 +39,7 @@ trait StartAutomationExecutionRequest extends js.Object {
     */
   var Tags: js.UndefOr[TagList] = js.native
   /**
-    * A location is a combination of AWS Regions and/or AWS accounts where you want to run the Automation. Use this action to start an Automation in multiple Regions and multiple accounts. For more information, see Executing Automations in Multiple AWS Regions and Accounts in the AWS Systems Manager User Guide. 
+    * A location is a combination of AWS Regions and/or AWS accounts where you want to run the Automation. Use this action to start an Automation in multiple Regions and multiple accounts. For more information, see Running Automation workflows in multiple AWS Regions and accounts in the AWS Systems Manager User Guide. 
     */
   var TargetLocations: js.UndefOr[typingsSlinky.awsSdk.ssmMod.TargetLocations] = js.native
   /**
@@ -58,155 +58,33 @@ trait StartAutomationExecutionRequest extends js.Object {
 
 object StartAutomationExecutionRequest {
   @scala.inline
-  def apply(DocumentName: DocumentARN): StartAutomationExecutionRequest = {
+  def apply(
+    DocumentName: DocumentARN,
+    ClientToken: IdempotencyToken = null,
+    DocumentVersion: DocumentVersion = null,
+    MaxConcurrency: MaxConcurrency = null,
+    MaxErrors: MaxErrors = null,
+    Mode: ExecutionMode = null,
+    Parameters: AutomationParameterMap = null,
+    Tags: TagList = null,
+    TargetLocations: TargetLocations = null,
+    TargetMaps: TargetMaps = null,
+    TargetParameterName: AutomationParameterKey = null,
+    Targets: Targets = null
+  ): StartAutomationExecutionRequest = {
     val __obj = js.Dynamic.literal(DocumentName = DocumentName.asInstanceOf[js.Any])
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (DocumentVersion != null) __obj.updateDynamic("DocumentVersion")(DocumentVersion.asInstanceOf[js.Any])
+    if (MaxConcurrency != null) __obj.updateDynamic("MaxConcurrency")(MaxConcurrency.asInstanceOf[js.Any])
+    if (MaxErrors != null) __obj.updateDynamic("MaxErrors")(MaxErrors.asInstanceOf[js.Any])
+    if (Mode != null) __obj.updateDynamic("Mode")(Mode.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (TargetLocations != null) __obj.updateDynamic("TargetLocations")(TargetLocations.asInstanceOf[js.Any])
+    if (TargetMaps != null) __obj.updateDynamic("TargetMaps")(TargetMaps.asInstanceOf[js.Any])
+    if (TargetParameterName != null) __obj.updateDynamic("TargetParameterName")(TargetParameterName.asInstanceOf[js.Any])
+    if (Targets != null) __obj.updateDynamic("Targets")(Targets.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartAutomationExecutionRequest]
   }
-  @scala.inline
-  implicit class StartAutomationExecutionRequestOps[Self <: StartAutomationExecutionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentName(value: DocumentARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: IdempotencyToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentVersion(value: DocumentVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxConcurrency(value: MaxConcurrency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxErrors(value: MaxErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ExecutionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: AutomationParameterMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetLocations(value: TargetLocations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLocations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetMaps(value: TargetMaps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetMaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetMaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetMaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetParameterName(value: AutomationParameterKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetParameterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetParameterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetParameterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargets(value: Targets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

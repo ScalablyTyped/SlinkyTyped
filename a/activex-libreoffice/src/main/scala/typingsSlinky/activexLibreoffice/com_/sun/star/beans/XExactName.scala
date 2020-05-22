@@ -16,10 +16,9 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.beans.XIntrospectionAccess
   * @see com.sun.star.container.XNameAccess
   */
-@js.native
 trait XExactName extends XInterface {
   /** @returns the exact name for a given aprroximate name.  For example "getExactName" could be returned for "GETEXACTNAME" when "GETEXACTNAME" was used by a c */
-  def getExactName(aApproximateName: String): String = js.native
+  def getExactName(aApproximateName: String): String
 }
 
 object XExactName {
@@ -33,19 +32,5 @@ object XExactName {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getExactName = js.Any.fromFunction1(getExactName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XExactName]
   }
-  @scala.inline
-  implicit class XExactNameOps[Self <: XExactName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetExactName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExactName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,8 @@
 package typingsSlinky.instagramPrivateApi.mediaConfigureVideoOptionsMod
 
+import typingsSlinky.instagramPrivateApi.anon.Length
+import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`0`
+import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`1`
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`4`
 import typingsSlinky.instagramPrivateApi.mediaConfigureOptionsMod.MediaLocation
 import typingsSlinky.instagramPrivateApi.postingOptionsMod.PostingUsertags
@@ -7,127 +10,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaConfigureTimelineVideoOptions extends MediaConfigureVideoOptions {
-  var caption: js.UndefOr[String] = js.native
-  var date_time_original: js.UndefOr[String] = js.native
-  var device_id: js.UndefOr[String] = js.native
-  var filter_type: js.UndefOr[String] = js.native
-  var location: js.UndefOr[MediaLocation | String] = js.native
-  var source_type: js.UndefOr[`4`] = js.native
-  var timezone_offset: js.UndefOr[String] = js.native
-  var usertags: js.UndefOr[PostingUsertags | String] = js.native
+  var caption: js.UndefOr[String] = js.undefined
+  var date_time_original: js.UndefOr[String] = js.undefined
+  var device_id: js.UndefOr[String] = js.undefined
+  var filter_type: js.UndefOr[String] = js.undefined
+  var location: js.UndefOr[MediaLocation | String] = js.undefined
+  var source_type: js.UndefOr[`4`] = js.undefined
+  var timezone_offset: js.UndefOr[String] = js.undefined
+  var usertags: js.UndefOr[PostingUsertags | String] = js.undefined
 }
 
 object MediaConfigureTimelineVideoOptions {
   @scala.inline
-  def apply(height: Double, length: Double, upload_id: String, width: Double): MediaConfigureTimelineVideoOptions = {
+  def apply(
+    height: Double,
+    length: Double,
+    upload_id: String,
+    width: Double,
+    audio_muted: js.UndefOr[Boolean] = js.undefined,
+    caption: String = null,
+    clips: js.Array[Length] = null,
+    date_time_original: String = null,
+    device_id: String = null,
+    filter_type: String = null,
+    geotag_enabled: `1` | `0` = null,
+    location: MediaLocation | String = null,
+    media_latitude: String = null,
+    media_longitude: String = null,
+    poster_frame_index: js.UndefOr[Double] = js.undefined,
+    posting_latitude: String = null,
+    posting_longitude: String = null,
+    source_type: `4` = null,
+    timezone_offset: String = null,
+    usertags: PostingUsertags | String = null
+  ): MediaConfigureTimelineVideoOptions = {
     val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], upload_id = upload_id.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    if (!js.isUndefined(audio_muted)) __obj.updateDynamic("audio_muted")(audio_muted.get.asInstanceOf[js.Any])
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (clips != null) __obj.updateDynamic("clips")(clips.asInstanceOf[js.Any])
+    if (date_time_original != null) __obj.updateDynamic("date_time_original")(date_time_original.asInstanceOf[js.Any])
+    if (device_id != null) __obj.updateDynamic("device_id")(device_id.asInstanceOf[js.Any])
+    if (filter_type != null) __obj.updateDynamic("filter_type")(filter_type.asInstanceOf[js.Any])
+    if (geotag_enabled != null) __obj.updateDynamic("geotag_enabled")(geotag_enabled.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (media_latitude != null) __obj.updateDynamic("media_latitude")(media_latitude.asInstanceOf[js.Any])
+    if (media_longitude != null) __obj.updateDynamic("media_longitude")(media_longitude.asInstanceOf[js.Any])
+    if (!js.isUndefined(poster_frame_index)) __obj.updateDynamic("poster_frame_index")(poster_frame_index.get.asInstanceOf[js.Any])
+    if (posting_latitude != null) __obj.updateDynamic("posting_latitude")(posting_latitude.asInstanceOf[js.Any])
+    if (posting_longitude != null) __obj.updateDynamic("posting_longitude")(posting_longitude.asInstanceOf[js.Any])
+    if (source_type != null) __obj.updateDynamic("source_type")(source_type.asInstanceOf[js.Any])
+    if (timezone_offset != null) __obj.updateDynamic("timezone_offset")(timezone_offset.asInstanceOf[js.Any])
+    if (usertags != null) __obj.updateDynamic("usertags")(usertags.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaConfigureTimelineVideoOptions]
   }
-  @scala.inline
-  implicit class MediaConfigureTimelineVideoOptionsOps[Self <: MediaConfigureTimelineVideoOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate_time_original(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date_time_original")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate_time_original: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date_time_original")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevice_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevice_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: MediaLocation | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource_type(value: `4`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimezone_offset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone_offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezone_offset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone_offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsertags(value: PostingUsertags | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usertags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsertags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usertags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

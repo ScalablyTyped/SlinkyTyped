@@ -38,101 +38,24 @@ trait DescribeAuditMitigationActionsTaskResponse extends js.Object {
 
 object DescribeAuditMitigationActionsTaskResponse {
   @scala.inline
-  def apply(): DescribeAuditMitigationActionsTaskResponse = {
+  def apply(
+    actionsDefinition: MitigationActionList = null,
+    auditCheckToActionsMapping: AuditCheckToActionsMapping = null,
+    endTime: js.Date = null,
+    startTime: js.Date = null,
+    target: AuditMitigationActionsTaskTarget = null,
+    taskStatistics: AuditMitigationActionsTaskStatistics = null,
+    taskStatus: AuditMitigationActionsTaskStatus = null
+  ): DescribeAuditMitigationActionsTaskResponse = {
     val __obj = js.Dynamic.literal()
+    if (actionsDefinition != null) __obj.updateDynamic("actionsDefinition")(actionsDefinition.asInstanceOf[js.Any])
+    if (auditCheckToActionsMapping != null) __obj.updateDynamic("auditCheckToActionsMapping")(auditCheckToActionsMapping.asInstanceOf[js.Any])
+    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (taskStatistics != null) __obj.updateDynamic("taskStatistics")(taskStatistics.asInstanceOf[js.Any])
+    if (taskStatus != null) __obj.updateDynamic("taskStatus")(taskStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAuditMitigationActionsTaskResponse]
   }
-  @scala.inline
-  implicit class DescribeAuditMitigationActionsTaskResponseOps[Self <: DescribeAuditMitigationActionsTaskResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionsDefinition(value: MitigationActionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionsDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionsDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionsDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuditCheckToActionsMapping(value: AuditCheckToActionsMapping): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auditCheckToActionsMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuditCheckToActionsMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auditCheckToActionsMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: AuditMitigationActionsTaskTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskStatistics(value: AuditMitigationActionsTaskStatistics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStatistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStatistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskStatus(value: AuditMitigationActionsTaskStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

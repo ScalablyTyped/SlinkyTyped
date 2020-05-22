@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cordova extends js.Object {
-  var getAppVersion: GetAppName = js.native
+  var getAppVersion: GetAppName
 }
 
 object Cordova {
@@ -16,19 +15,5 @@ object Cordova {
     val __obj = js.Dynamic.literal(getAppVersion = getAppVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cordova]
   }
-  @scala.inline
-  implicit class CordovaOps[Self <: Cordova] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAppVersion(value: GetAppName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAppVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

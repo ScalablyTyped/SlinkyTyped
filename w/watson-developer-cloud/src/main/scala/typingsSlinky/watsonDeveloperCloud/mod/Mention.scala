@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A mention of a contextual entity. */
-@js.native
 trait Mention extends js.Object {
   /** The name of the entity. */
-  var entity: String = js.native
+  var entity: String
   /** An array of zero-based character offsets that indicate where the entity mentions begin and end in the input text. */
-  var location: js.Array[Double] = js.native
+  var location: js.Array[Double]
 }
 
 object Mention {
@@ -19,25 +18,5 @@ object Mention {
     val __obj = js.Dynamic.literal(entity = entity.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mention]
   }
-  @scala.inline
-  implicit class MentionOps[Self <: Mention] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

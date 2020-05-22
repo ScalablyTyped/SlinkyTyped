@@ -30,77 +30,19 @@ trait MessageAttributeValue extends js.Object {
 
 object MessageAttributeValue {
   @scala.inline
-  def apply(DataType: String): MessageAttributeValue = {
+  def apply(
+    DataType: String,
+    BinaryListValues: BinaryList = null,
+    BinaryValue: Binary = null,
+    StringListValues: StringList = null,
+    StringValue: String = null
+  ): MessageAttributeValue = {
     val __obj = js.Dynamic.literal(DataType = DataType.asInstanceOf[js.Any])
+    if (BinaryListValues != null) __obj.updateDynamic("BinaryListValues")(BinaryListValues.asInstanceOf[js.Any])
+    if (BinaryValue != null) __obj.updateDynamic("BinaryValue")(BinaryValue.asInstanceOf[js.Any])
+    if (StringListValues != null) __obj.updateDynamic("StringListValues")(StringListValues.asInstanceOf[js.Any])
+    if (StringValue != null) __obj.updateDynamic("StringValue")(StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageAttributeValue]
   }
-  @scala.inline
-  implicit class MessageAttributeValueOps[Self <: MessageAttributeValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinaryListValues(value: BinaryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryListValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryListValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryListValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinaryValueUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinaryValue(value: Binary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringListValues(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringListValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

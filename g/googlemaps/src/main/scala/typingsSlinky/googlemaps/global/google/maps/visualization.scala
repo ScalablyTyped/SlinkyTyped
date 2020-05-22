@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** Visualization Library *****/
 @JSGlobal("google.maps.visualization")
 @js.native
 object visualization extends js.Object {
@@ -16,20 +15,27 @@ object visualization extends js.Object {
     def this(opts: HeatmapLayerOptions) = this()
   }
   
+  // TODO find source documentation
   @js.native
   class MapsEngineLayer protected ()
     extends typingsSlinky.googlemaps.google.maps.visualization.MapsEngineLayer {
     def this(options: MapsEngineLayerOptions) = this()
   }
   
+  // TODO find source documentation
   @js.native
   class MapsEventListener ()
     extends typingsSlinky.googlemaps.google.maps.visualization.MapsEventListener
   
+  // TODO find source documentation
   @js.native
   class MouseEvent ()
-    extends typingsSlinky.googlemaps.google.maps.visualization.MouseEvent
+    extends typingsSlinky.googlemaps.google.maps.visualization.MouseEvent {
+    /* CompleteClass */
+    override def stop(): Unit = js.native
+  }
   
+  // TODO find source documentation
   @js.native
   object MapsEngineStatus extends js.Object {
     /* "INVALID_LAYER" */ val INVALID_LAYER: typingsSlinky.googlemaps.google.maps.visualization.MapsEngineStatus.INVALID_LAYER with String = js.native

@@ -4,52 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IViewport extends IContainer {
   /** [Property] (Boolean) */
-  var isViewport: js.UndefOr[Boolean] = js.native
+  var isViewport: js.UndefOr[Boolean] = js.undefined
   /** [Method] Template method called when this Component s DOM structure is created  */
   @JSName("onRender")
-  var onRender_IViewport: js.UndefOr[js.Function0[Unit]] = js.native
+  var onRender_IViewport: js.UndefOr[js.Function0[Unit]] = js.undefined
 }
 
 object IViewport {
   @scala.inline
-  def apply(): IViewport = {
+  def apply(
+    IContainer: IContainer = null,
+    isViewport: js.UndefOr[Boolean] = js.undefined,
+    onRender: () => Unit = null
+  ): IViewport = {
     val __obj = js.Dynamic.literal()
+    if (IContainer != null) js.Dynamic.global.Object.assign(__obj, IContainer)
+    if (!js.isUndefined(isViewport)) __obj.updateDynamic("isViewport")(isViewport.get.asInstanceOf[js.Any])
+    if (onRender != null) __obj.updateDynamic("onRender")(js.Any.fromFunction0(onRender))
     __obj.asInstanceOf[IViewport]
   }
-  @scala.inline
-  implicit class IViewportOps[Self <: IViewport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsViewport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isViewport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsViewport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isViewport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRender(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRender")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRender")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

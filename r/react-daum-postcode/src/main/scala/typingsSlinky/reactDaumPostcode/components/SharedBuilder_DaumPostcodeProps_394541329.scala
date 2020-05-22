@@ -26,6 +26,10 @@ class SharedBuilder_DaumPostcodeProps_394541329[R <: js.Object] (val args: js.Ar
   @scala.inline
   def errorMessage(value: ReactElement): this.type = set("errorMessage", value.asInstanceOf[js.Any])
   @scala.inline
+  def focusContent(value: Boolean): this.type = set("focusContent", value.asInstanceOf[js.Any])
+  @scala.inline
+  def focusInput(value: Boolean): this.type = set("focusInput", value.asInstanceOf[js.Any])
+  @scala.inline
   def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
   @scala.inline
   def hideEngBtn(value: Boolean): this.type = set("hideEngBtn", value.asInstanceOf[js.Any])

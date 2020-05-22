@@ -34,89 +34,22 @@ trait RouteTableAssociation extends js.Object {
 
 object RouteTableAssociation {
   @scala.inline
-  def apply(): RouteTableAssociation = {
+  def apply(
+    AssociationState: RouteTableAssociationState = null,
+    GatewayId: String = null,
+    Main: js.UndefOr[Boolean] = js.undefined,
+    RouteTableAssociationId: String = null,
+    RouteTableId: String = null,
+    SubnetId: String = null
+  ): RouteTableAssociation = {
     val __obj = js.Dynamic.literal()
+    if (AssociationState != null) __obj.updateDynamic("AssociationState")(AssociationState.asInstanceOf[js.Any])
+    if (GatewayId != null) __obj.updateDynamic("GatewayId")(GatewayId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Main)) __obj.updateDynamic("Main")(Main.get.asInstanceOf[js.Any])
+    if (RouteTableAssociationId != null) __obj.updateDynamic("RouteTableAssociationId")(RouteTableAssociationId.asInstanceOf[js.Any])
+    if (RouteTableId != null) __obj.updateDynamic("RouteTableId")(RouteTableId.asInstanceOf[js.Any])
+    if (SubnetId != null) __obj.updateDynamic("SubnetId")(SubnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteTableAssociation]
   }
-  @scala.inline
-  implicit class RouteTableAssociationOps[Self <: RouteTableAssociation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociationState(value: RouteTableAssociationState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGatewayId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMain(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Main")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Main")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteTableAssociationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTableAssociationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteTableAssociationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTableAssociationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteTableId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteTableId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTableId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

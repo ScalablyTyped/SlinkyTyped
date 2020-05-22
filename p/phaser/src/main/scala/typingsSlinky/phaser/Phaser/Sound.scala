@@ -116,12 +116,7 @@ object Sound extends js.Object {
   }
   
   /**
-    * The sound manager is responsible for playing back audio via Web Audio API or HTML Audio tag as fallback.
-    * The audio file type and the encoding of those files are extremely important.
-    * 
-    * Not all browsers can play all audio formats.
-    * 
-    * There is a good guide to what's supported [here](https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics#Audio_Codec_Support).
+    * Base class for other Sound Manager classes.
     */
   @js.native
   trait BaseSoundManager extends EventEmitter {
@@ -180,6 +175,16 @@ object Sound extends js.Object {
     def addAudioSprite(key: String): HTML5AudioSound | WebAudioSound = js.native
     def addAudioSprite(key: String, config: SoundConfig): HTML5AudioSound | WebAudioSound = js.native
     /**
+      * Gets the first sound in the manager matching the given key, if any.
+      * @param key Sound asset key.
+      */
+    def get(key: String): BaseSound = js.native
+    /**
+      * Gets any sounds in the manager matching the given key.
+      * @param key Sound asset key.
+      */
+    def getAll(key: String): js.Array[BaseSound] = js.native
+    /**
       * Method used internally for pausing sound manager if
       * Phaser.Sound.BaseSoundManager#pauseOnBlur is set to true.
       */
@@ -204,8 +209,9 @@ object Sound extends js.Object {
     def play(key: String, extra: SoundConfig): Boolean = js.native
     def play(key: String, extra: SoundMarker): Boolean = js.native
     /**
-      * Enables playing audio sprite sound on the fly without the need to keep a reference to it.
-      * Sound will auto destroy once its playback ends.
+      * Adds a new audio sprite sound to the sound manager and plays it.
+      * The sprite will be automatically removed (destroyed) once playback ends.
+      * This lets you play a new sound on the fly without the need to keep a reference to it.
       * @param key Asset key for the sound.
       * @param spriteName The name of the sound sprite to play.
       * @param config An optional config object containing default sound settings.
@@ -218,6 +224,10 @@ object Sound extends js.Object {
       * @param sound The sound object to remove.
       */
     def remove(sound: BaseSound): Boolean = js.native
+    /**
+      * Removes all sounds from the manager, destroying the sounds.
+      */
+    def removeAll(): Unit = js.native
     /**
       * Removes all sounds from the sound manager that have an asset key matching the given value.
       * The removed sounds are destroyed before removal.
@@ -246,6 +256,11 @@ object Sound extends js.Object {
       * Stops all the sounds in the game.
       */
     def stopAll(): Unit = js.native
+    /**
+      * Stops any sounds matching the given key.
+      * @param key Sound asset key.
+      */
+    def stopByKey(key: String): Double = js.native
     /**
       * Method used internally for unlocking audio playback on devices that
       * require user interaction before any sound can be played on a web page.
@@ -387,6 +402,56 @@ object Sound extends js.Object {
   }
   
   /**
+    * No audio implementation of the sound. It is used if audio has been
+    * disabled in the game config or the device doesn't support any audio.
+    * 
+    * It represents a graceful degradation of sound logic that provides
+    * minimal functionality and prevents Phaser projects that use audio from
+    * breaking on devices that don't support any audio playback technologies.
+    */
+  @js.native
+  trait NoAudioSound extends js.Object {
+    /**
+      * 
+      * @param marker Marker object.
+      */
+    def addMarker(marker: SoundMarker): Boolean = js.native
+    /**
+      * Destroys this sound and all associated events and marks it for removal from the sound manager.
+      */
+    def destroy(): Unit = js.native
+    def pause(): Boolean = js.native
+    /**
+      * 
+      * @param markerName If you want to play a marker then provide the marker name here. Alternatively, this parameter can be a SoundConfig object. Default ''.
+      * @param config Optional sound config object to be applied to this marker or entire sound if no marker name is provided. It gets memorized for future plays of current section of the sound.
+      */
+    def play(): Boolean = js.native
+    def play(markerName: String): Boolean = js.native
+    def play(markerName: String, config: SoundConfig): Boolean = js.native
+    def play(markerName: SoundConfig): Boolean = js.native
+    def play(markerName: SoundConfig, config: SoundConfig): Boolean = js.native
+    /**
+      * 
+      * @param markerName The name of the marker to remove.
+      */
+    def removeMarker(markerName: String): Null = js.native
+    /**
+      * Resumes the sound.
+      */
+    def resume(): Boolean = js.native
+    /**
+      * Stop playing this sound.
+      */
+    def stop(): Boolean = js.native
+    /**
+      * 
+      * @param marker Marker object with updated values.
+      */
+    def updateMarker(marker: SoundMarker): Boolean = js.native
+  }
+  
+  /**
     * Web Audio API implementation of the sound.
     */
   @js.native
@@ -459,7 +524,11 @@ object Sound extends js.Object {
   }
   
   /**
-    * Web Audio API implementation of the sound manager.
+    * Web Audio API implementation of the Sound Manager.
+    * 
+    * Not all browsers can play all audio formats.
+    * 
+    * There is a good guide to what's supported: [Cross-browser audio basics: Audio codec support](https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics#Audio_Codec_Support).
     */
   @js.native
   trait WebAudioSoundManager extends BaseSoundManager {
@@ -508,19 +577,10 @@ object Sound extends js.Object {
   }
   
   /**
-    * No audio implementation of the sound. It is used if audio has been
+    * No-audio implementation of the Sound Manager. It is used if audio has been
     * disabled in the game config or the device doesn't support any audio.
     * 
-    * It represents a graceful degradation of sound logic that provides
-    * minimal functionality and prevents Phaser projects that use audio from
-    * breaking on devices that don't support any audio playback technologies.
-    */
-  type NoAudioSound = BaseSound
-  /**
-    * No audio implementation of the sound manager. It is used if audio has been
-    * disabled in the game config or the device doesn't support any audio.
-    * 
-    * It represents a graceful degradation of sound manager logic that provides
+    * It represents a graceful degradation of Sound Manager logic that provides
     * minimal functionality and prevents Phaser projects that use audio from
     * breaking on devices that don't support any audio playback technologies.
     */

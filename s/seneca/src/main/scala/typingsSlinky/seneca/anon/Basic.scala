@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Basic extends js.Object {
-  var basic: js.UndefOr[Boolean] = js.native
-  var `mem-store`: js.UndefOr[Boolean] = js.native
-  var transport: js.UndefOr[Boolean] = js.native
-  var web: js.UndefOr[Boolean] = js.native
+  var basic: js.UndefOr[Boolean] = js.undefined
+  var `mem-store`: js.UndefOr[Boolean] = js.undefined
+  var transport: js.UndefOr[Boolean] = js.undefined
+  var web: js.UndefOr[Boolean] = js.undefined
 }
 
 object Basic {
   @scala.inline
-  def apply(): Basic = {
+  def apply(
+    basic: js.UndefOr[Boolean] = js.undefined,
+    `mem-store`: js.UndefOr[Boolean] = js.undefined,
+    transport: js.UndefOr[Boolean] = js.undefined,
+    web: js.UndefOr[Boolean] = js.undefined
+  ): Basic = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(basic)) __obj.updateDynamic("basic")(basic.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`mem-store`)) __obj.updateDynamic("mem-store")(`mem-store`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transport)) __obj.updateDynamic("transport")(transport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(web)) __obj.updateDynamic("web")(web.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Basic]
   }
-  @scala.inline
-  implicit class BasicOps[Self <: Basic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBasic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMem-store`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mem-store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMem-store`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mem-store")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeb(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("web")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("web")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

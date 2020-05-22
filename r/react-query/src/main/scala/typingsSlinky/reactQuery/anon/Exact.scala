@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Exact extends js.Object {
-  var exact: js.UndefOr[Boolean] = js.native
-  var force: js.UndefOr[Boolean] = js.native
-  var throwOnError: js.UndefOr[Boolean] = js.native
+  var exact: js.UndefOr[Boolean] = js.undefined
+  var force: js.UndefOr[Boolean] = js.undefined
+  var throwOnError: js.UndefOr[Boolean] = js.undefined
 }
 
 object Exact {
   @scala.inline
-  def apply(): Exact = {
+  def apply(
+    exact: js.UndefOr[Boolean] = js.undefined,
+    force: js.UndefOr[Boolean] = js.undefined,
+    throwOnError: js.UndefOr[Boolean] = js.undefined
+  ): Exact = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(exact)) __obj.updateDynamic("exact")(exact.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(throwOnError)) __obj.updateDynamic("throwOnError")(throwOnError.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Exact]
   }
-  @scala.inline
-  implicit class ExactOps[Self <: Exact] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrowOnError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throwOnError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrowOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throwOnError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

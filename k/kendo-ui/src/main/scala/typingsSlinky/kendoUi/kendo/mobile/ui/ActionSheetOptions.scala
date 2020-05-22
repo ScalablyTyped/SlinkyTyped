@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActionSheetOptions extends js.Object {
-  var cancel: js.UndefOr[String] = js.native
-  var close: js.UndefOr[js.Function1[/* e */ ActionSheetEvent, Unit]] = js.native
-  var name: js.UndefOr[String] = js.native
-  var open: js.UndefOr[js.Function1[/* e */ ActionSheetOpenEvent, Unit]] = js.native
-  var popup: js.UndefOr[ActionSheetPopup] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var cancel: js.UndefOr[String] = js.undefined
+  var close: js.UndefOr[js.Function1[/* e */ ActionSheetEvent, Unit]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var open: js.UndefOr[js.Function1[/* e */ ActionSheetOpenEvent, Unit]] = js.undefined
+  var popup: js.UndefOr[ActionSheetPopup] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object ActionSheetOptions {
   @scala.inline
-  def apply(): ActionSheetOptions = {
+  def apply(
+    cancel: String = null,
+    close: /* e */ ActionSheetEvent => Unit = null,
+    name: String = null,
+    open: /* e */ ActionSheetOpenEvent => Unit = null,
+    popup: ActionSheetPopup = null,
+    `type`: String = null
+  ): ActionSheetOptions = {
     val __obj = js.Dynamic.literal()
+    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction1(close))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (open != null) __obj.updateDynamic("open")(js.Any.fromFunction1(open))
+    if (popup != null) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionSheetOptions]
   }
-  @scala.inline
-  implicit class ActionSheetOptionsOps[Self <: ActionSheetOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClose(value: /* e */ ActionSheetEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: /* e */ ActionSheetOpenEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopup(value: ActionSheetPopup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

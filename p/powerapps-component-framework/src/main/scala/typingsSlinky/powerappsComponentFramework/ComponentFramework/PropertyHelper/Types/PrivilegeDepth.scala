@@ -5,13 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Entity Priviledge Depth
-			 * -1 - None
-			 * 0 - Basic
-			 * 1 - Local
-			 * 2 - Deep
-			 * 3 - Global
-			 */
+  * Entity Priviledge Depth
+  * -1 - None
+  * 0 - Basic
+  * 1 - Local
+  * 2 - Deep
+  * 3 - Global
+  */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`-1`
   - typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`0`

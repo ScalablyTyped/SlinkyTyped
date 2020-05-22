@@ -7,187 +7,91 @@ import scala.scalajs.js.annotation._
 /**
   * Links this graph makes rules about
   */
-@js.native
 trait GraphDefinitionLink extends BackboneElement {
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.native
+  var _description: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'max'.
     */
-  var _max: js.UndefOr[Element] = js.native
+  var _max: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'min'.
     */
-  var _min: js.UndefOr[Element] = js.native
+  var _min: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'path'.
     */
-  var _path: js.UndefOr[Element] = js.native
+  var _path: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'sliceName'.
     */
-  var _sliceName: js.UndefOr[Element] = js.native
+  var _sliceName: js.UndefOr[Element] = js.undefined
   /**
     * Why this link is specified
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * Maximum occurrences for this link
     */
-  var max: js.UndefOr[String] = js.native
+  var max: js.UndefOr[String] = js.undefined
   /**
     * Minimum occurrences for this link
     */
-  var min: js.UndefOr[integer] = js.native
+  var min: js.UndefOr[integer] = js.undefined
   /**
     * Path in the resource that contains the link
     */
-  var path: String = js.native
+  var path: String
   /**
     * Which slice (if profiled)
     */
-  var sliceName: js.UndefOr[String] = js.native
+  var sliceName: js.UndefOr[String] = js.undefined
   /**
     * Potential target for the link
     */
-  var target: js.Array[GraphDefinitionLinkTarget] = js.native
+  var target: js.Array[GraphDefinitionLinkTarget]
 }
 
 object GraphDefinitionLink {
   @scala.inline
-  def apply(path: String, target: js.Array[GraphDefinitionLinkTarget]): GraphDefinitionLink = {
+  def apply(
+    path: String,
+    target: js.Array[GraphDefinitionLinkTarget],
+    _description: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _max: Element = null,
+    _min: Element = null,
+    _path: Element = null,
+    _sliceName: Element = null,
+    description: String = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    max: String = null,
+    min: js.UndefOr[integer] = js.undefined,
+    modifierExtension: js.Array[Extension] = null,
+    sliceName: String = null
+  ): GraphDefinitionLink = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_max != null) __obj.updateDynamic("_max")(_max.asInstanceOf[js.Any])
+    if (_min != null) __obj.updateDynamic("_min")(_min.asInstanceOf[js.Any])
+    if (_path != null) __obj.updateDynamic("_path")(_path.asInstanceOf[js.Any])
+    if (_sliceName != null) __obj.updateDynamic("_sliceName")(_sliceName.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (sliceName != null) __obj.updateDynamic("sliceName")(sliceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphDefinitionLink]
   }
-  @scala.inline
-  implicit class GraphDefinitionLinkOps[Self <: GraphDefinitionLink] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Array[GraphDefinitionLinkTarget]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_description(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_max(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_max: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_min(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_min: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_path(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_path: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sliceName(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sliceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sliceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sliceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSliceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSliceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

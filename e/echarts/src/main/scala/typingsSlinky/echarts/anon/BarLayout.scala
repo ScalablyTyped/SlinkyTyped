@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BarLayout extends js.Object {
   /**
     * When `barLayout` is needed, (for example, when attaching
@@ -20,7 +19,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.barLayout
     */
-  var barLayout: js.UndefOr[js.Function] = js.native
+  var barLayout: js.UndefOr[js.Function] = js.undefined
   /**
     * Convert data to coordinate.
     *
@@ -29,7 +28,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.coord
     */
-  var coord: js.UndefOr[js.Function] = js.native
+  var coord: js.UndefOr[js.Function] = js.undefined
   /**
     * Obtain the current series index.
     * Notice that the `currentSeriesIndex` is different
@@ -44,7 +43,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.currentSeriesIndices
     */
-  var currentSeriesIndices: js.UndefOr[js.Function] = js.native
+  var currentSeriesIndices: js.UndefOr[js.Function] = js.undefined
   /**
     * Obtain font string, which can be used on style setting
     * directly.
@@ -54,7 +53,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.font
     */
-  var font: js.UndefOr[js.Function] = js.native
+  var font: js.UndefOr[js.Function] = js.undefined
   /**
     * ```
     * @return {number} The current devicePixelRatio。
@@ -64,7 +63,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.getDevicePixelRatio
     */
-  var getDevicePixelRatio: js.UndefOr[js.Function] = js.native
+  var getDevicePixelRatio: js.UndefOr[js.Function] = js.undefined
   /**
     * ```
     * @return {number} Height of echarts container.
@@ -74,7 +73,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.getHeight
     */
-  var getHeight: js.UndefOr[js.Function] = js.native
+  var getHeight: js.UndefOr[js.Function] = js.undefined
   /**
     * ```
     * @return {number} Width of echarts containter.
@@ -84,7 +83,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.getWidth
     */
-  var getWidth: js.UndefOr[js.Function] = js.native
+  var getWidth: js.UndefOr[js.Function] = js.undefined
   /**
     * ```
     * @return {module:zrender} zrender instance.
@@ -94,7 +93,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.getZr
     */
-  var getZr: js.UndefOr[js.Function] = js.native
+  var getZr: js.UndefOr[js.Function] = js.undefined
   /**
     * Get the size by the given data range.
     *
@@ -117,7 +116,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.size
     */
-  var size: js.UndefOr[js.Function] = js.native
+  var size: js.UndefOr[js.Function] = js.undefined
   /**
     * The method obtains style info defined in
     * [series.itemStyle](https://echarts.apache.org/en/option.html#series-custom.itemStyle)
@@ -134,7 +133,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.style
     */
-  var style: js.UndefOr[js.Function] = js.native
+  var style: js.UndefOr[js.Function] = js.undefined
   /**
     * The method obtains style info defined in
     * [series.itemStyle.emphasis](https://echarts.apache.org/en/option.html#series-custom.itemStyle.emphasis)
@@ -151,7 +150,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.styleEmphasis
     */
-  var styleEmphasis: js.UndefOr[js.Function] = js.native
+  var styleEmphasis: js.UndefOr[js.Function] = js.undefined
   /**
     * Get value on the given dimension.
     *
@@ -160,7 +159,7 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.value
     */
-  var value: js.UndefOr[js.Function] = js.native
+  var value: js.UndefOr[js.Function] = js.undefined
   /**
     * Get the visual info. It is rarely be used.
     *
@@ -169,178 +168,41 @@ trait BarLayout extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api.visual
     */
-  var visual: js.UndefOr[js.Function] = js.native
+  var visual: js.UndefOr[js.Function] = js.undefined
 }
 
 object BarLayout {
   @scala.inline
-  def apply(): BarLayout = {
+  def apply(
+    barLayout: js.Function = null,
+    coord: js.Function = null,
+    currentSeriesIndices: js.Function = null,
+    font: js.Function = null,
+    getDevicePixelRatio: js.Function = null,
+    getHeight: js.Function = null,
+    getWidth: js.Function = null,
+    getZr: js.Function = null,
+    size: js.Function = null,
+    style: js.Function = null,
+    styleEmphasis: js.Function = null,
+    value: js.Function = null,
+    visual: js.Function = null
+  ): BarLayout = {
     val __obj = js.Dynamic.literal()
+    if (barLayout != null) __obj.updateDynamic("barLayout")(barLayout.asInstanceOf[js.Any])
+    if (coord != null) __obj.updateDynamic("coord")(coord.asInstanceOf[js.Any])
+    if (currentSeriesIndices != null) __obj.updateDynamic("currentSeriesIndices")(currentSeriesIndices.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (getDevicePixelRatio != null) __obj.updateDynamic("getDevicePixelRatio")(getDevicePixelRatio.asInstanceOf[js.Any])
+    if (getHeight != null) __obj.updateDynamic("getHeight")(getHeight.asInstanceOf[js.Any])
+    if (getWidth != null) __obj.updateDynamic("getWidth")(getWidth.asInstanceOf[js.Any])
+    if (getZr != null) __obj.updateDynamic("getZr")(getZr.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styleEmphasis != null) __obj.updateDynamic("styleEmphasis")(styleEmphasis.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (visual != null) __obj.updateDynamic("visual")(visual.asInstanceOf[js.Any])
     __obj.asInstanceOf[BarLayout]
   }
-  @scala.inline
-  implicit class BarLayoutOps[Self <: BarLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBarLayout(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoord(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coord")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoord: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coord")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentSeriesIndices(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSeriesIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentSeriesIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSeriesIndices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetDevicePixelRatio(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDevicePixelRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetDevicePixelRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDevicePixelRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetHeight(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetWidth(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetZr(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getZr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetZr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getZr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleEmphasis(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleEmphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyleEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleEmphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisual(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visual")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisual: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visual")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

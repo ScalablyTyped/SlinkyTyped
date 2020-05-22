@@ -23,21 +23,28 @@ trait ChartAxisTitle extends ClientObject {
   var context_ChartAxisTitle: RequestContext = js.native
   /**
     *
-    * Represents the formatting of chart axis title. Read-only.
+    * Specifies the formatting of chart axis title.
     *
     * [Api set: ExcelApi 1.1]
     */
   val format: ChartAxisTitleFormat = js.native
   /**
     *
-    * Represents the axis title.
+    * Specifies the axis title.
     *
     * [Api set: ExcelApi 1.1]
     */
   var text: String = js.native
   /**
     *
-    * A boolean that specifies the visibility of an axis title.
+    * Specifies the angle to which the text is oriented for the chart axis title. The value should either be an integer from -90 to 90 or the integer 180 for vertically-oriented text.
+    *
+    * [Api set: ExcelApiOnline 1.1]
+    */
+  var textOrientation: Double = js.native
+  /**
+    *
+    * Specifies if the axis title is visibile.
     *
     * [Api set: ExcelApi 1.1]
     */

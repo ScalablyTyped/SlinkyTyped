@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICanvasGradient extends js.Object {
   @JSName("MSHTML.ICanvasGradient_typekey")
-  var MSHTMLDotICanvasGradient_typekey: ICanvasGradient = js.native
-  def addColorStop(offset: Double, color: String): Unit = js.native
+  var MSHTMLDotICanvasGradient_typekey: ICanvasGradient
+  def addColorStop(offset: Double, color: String): Unit
 }
 
 object ICanvasGradient {
@@ -18,25 +17,5 @@ object ICanvasGradient {
     __obj.updateDynamic("MSHTML.ICanvasGradient_typekey")(MSHTMLDotICanvasGradient_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICanvasGradient]
   }
-  @scala.inline
-  implicit class ICanvasGradientOps[Self <: ICanvasGradient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotICanvasGradient_typekey(value: ICanvasGradient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.ICanvasGradient_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddColorStop(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addColorStop")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

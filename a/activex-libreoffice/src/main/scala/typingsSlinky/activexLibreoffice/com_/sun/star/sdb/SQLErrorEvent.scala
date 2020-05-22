@@ -7,10 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is invoked in case of fired database exception triggered by a database object. */
-@js.native
 trait SQLErrorEvent extends EventObject {
   /** contains the exception that is going to be fired. */
-  var Reason: js.Any = js.native
+  var Reason: js.Any
 }
 
 object SQLErrorEvent {
@@ -19,19 +18,5 @@ object SQLErrorEvent {
     val __obj = js.Dynamic.literal(Reason = Reason.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SQLErrorEvent]
   }
-  @scala.inline
-  implicit class SQLErrorEventOps[Self <: SQLErrorEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

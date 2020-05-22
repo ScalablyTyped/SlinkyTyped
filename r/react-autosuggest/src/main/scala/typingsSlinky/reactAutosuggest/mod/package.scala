@@ -46,4 +46,5 @@ package object mod {
     /* request */ typingsSlinky.reactAutosuggest.mod.SuggestionsFetchRequestedParams, 
     scala.Unit
   ]
+  type Theme = (typingsSlinky.std.Record[java.lang.String, java.lang.String | typingsSlinky.react.mod.CSSProperties]) | typingsSlinky.reactAutosuggest.anon.PartialRecordThemeKeystri
 }

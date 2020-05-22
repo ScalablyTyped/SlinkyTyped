@@ -1,7 +1,8 @@
 package typingsSlinky.eslint.mod.Rule
 
-import typingsSlinky.eslint.anon.Loc
-import typingsSlinky.eslint.anon.NodeNode
+import typingsSlinky.eslint.anon.Column
+import typingsSlinky.eslint.mod.AST.SourceLocation
+import typingsSlinky.estree.mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,14 @@ trait ReportDescriptorLocation extends js.Object
 
 object ReportDescriptorLocation {
   @scala.inline
-  implicit def apply(value: Loc): ReportDescriptorLocation = value.asInstanceOf[ReportDescriptorLocation]
+  def NodeNode(node: Node): ReportDescriptorLocation = {
+    val __obj = js.Dynamic.literal(node = node.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReportDescriptorLocation]
+  }
   @scala.inline
-  implicit def apply(value: NodeNode): ReportDescriptorLocation = value.asInstanceOf[ReportDescriptorLocation]
+  def Loc(loc: SourceLocation | Column): ReportDescriptorLocation = {
+    val __obj = js.Dynamic.literal(loc = loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReportDescriptorLocation]
+  }
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * [[PaymentMethodType|`PaymentMethodType.CARD`]] payment method used for
   * developer callbacks.
   */
-@js.native
 trait IntermediateCardInfo extends js.Object {
   /**
     * The card network.
@@ -22,7 +21,7 @@ trait IntermediateCardInfo extends js.Object {
     * [[PaymentMethodData.description|`PaymentMethodData.description`]]
     * instead.
     */
-  var cardNetwork: CardNetwork = js.native
+  var cardNetwork: CardNetwork
 }
 
 object IntermediateCardInfo {
@@ -31,19 +30,5 @@ object IntermediateCardInfo {
     val __obj = js.Dynamic.literal(cardNetwork = cardNetwork.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntermediateCardInfo]
   }
-  @scala.inline
-  implicit class IntermediateCardInfoOps[Self <: IntermediateCardInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCardNetwork(value: CardNetwork): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardNetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

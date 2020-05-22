@@ -12,127 +12,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<jss.jss.RuleOptions> */
-@js.native
 trait PartialRuleOptions extends js.Object {
-  var Renderer: js.UndefOr[typingsSlinky.jss.mod.Renderer] = js.native
-  var classes: js.UndefOr[Classes[String]] = js.native
-  var generateId: js.UndefOr[GenerateId] = js.native
-  var index: js.UndefOr[Double] = js.native
-  var jss: js.UndefOr[Jss] = js.native
-  var parent: js.UndefOr[ContainerRule | (StyleSheet[String | Double | js.Symbol])] = js.native
-  var selector: js.UndefOr[String] = js.native
-  var sheet: js.UndefOr[StyleSheet[String | Double | js.Symbol]] = js.native
+  var Renderer: js.UndefOr[typingsSlinky.jss.mod.Renderer] = js.undefined
+  var classes: js.UndefOr[Classes[String]] = js.undefined
+  var generateId: js.UndefOr[GenerateId] = js.undefined
+  var index: js.UndefOr[Double] = js.undefined
+  var jss: js.UndefOr[Jss] = js.undefined
+  var parent: js.UndefOr[ContainerRule | (StyleSheet[String | Double | js.Symbol])] = js.undefined
+  var selector: js.UndefOr[String] = js.undefined
+  var sheet: js.UndefOr[StyleSheet[String | Double | js.Symbol]] = js.undefined
 }
 
 object PartialRuleOptions {
   @scala.inline
-  def apply(): PartialRuleOptions = {
+  def apply(
+    Renderer: Renderer = null,
+    classes: Classes[String] = null,
+    generateId: (/* rule */ Rule, /* sheet */ js.UndefOr[StyleSheet[String]]) => String = null,
+    index: js.UndefOr[Double] = js.undefined,
+    jss: Jss = null,
+    parent: ContainerRule | (StyleSheet[String | Double | js.Symbol]) = null,
+    selector: String = null,
+    sheet: StyleSheet[String | Double | js.Symbol] = null
+  ): PartialRuleOptions = {
     val __obj = js.Dynamic.literal()
+    if (Renderer != null) __obj.updateDynamic("Renderer")(Renderer.asInstanceOf[js.Any])
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (generateId != null) __obj.updateDynamic("generateId")(js.Any.fromFunction2(generateId))
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (jss != null) __obj.updateDynamic("jss")(jss.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (sheet != null) __obj.updateDynamic("sheet")(sheet.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRuleOptions]
   }
-  @scala.inline
-  implicit class PartialRuleOptionsOps[Self <: PartialRuleOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRenderer(value: Renderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Renderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClasses(value: Classes[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateId(value: (/* rule */ Rule, /* sheet */ js.UndefOr[StyleSheet[String]]) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateId")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGenerateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJss(value: Jss): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: ContainerRule | (StyleSheet[String | Double | js.Symbol])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheet(value: StyleSheet[String | Double | js.Symbol]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -21,41 +21,11 @@ trait SchemaGooglePrivacyDlpV2InfoTypeStats extends js.Object {
 
 object SchemaGooglePrivacyDlpV2InfoTypeStats {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2InfoTypeStats = {
+  def apply(count: String = null, infoType: SchemaGooglePrivacyDlpV2InfoType = null): SchemaGooglePrivacyDlpV2InfoTypeStats = {
     val __obj = js.Dynamic.literal()
+    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
+    if (infoType != null) __obj.updateDynamic("infoType")(infoType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2InfoTypeStats]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2InfoTypeStatsOps[Self <: SchemaGooglePrivacyDlpV2InfoTypeStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfoType(value: SchemaGooglePrivacyDlpV2InfoType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfoType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

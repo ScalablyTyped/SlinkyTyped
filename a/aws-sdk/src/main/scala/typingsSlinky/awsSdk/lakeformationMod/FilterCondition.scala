@@ -22,53 +22,16 @@ trait FilterCondition extends js.Object {
 
 object FilterCondition {
   @scala.inline
-  def apply(): FilterCondition = {
+  def apply(
+    ComparisonOperator: ComparisonOperator = null,
+    Field: FieldNameString = null,
+    StringValueList: StringValueList = null
+  ): FilterCondition = {
     val __obj = js.Dynamic.literal()
+    if (ComparisonOperator != null) __obj.updateDynamic("ComparisonOperator")(ComparisonOperator.asInstanceOf[js.Any])
+    if (Field != null) __obj.updateDynamic("Field")(Field.asInstanceOf[js.Any])
+    if (StringValueList != null) __obj.updateDynamic("StringValueList")(StringValueList.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterCondition]
   }
-  @scala.inline
-  implicit class FilterConditionOps[Self <: FilterCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparisonOperator(value: ComparisonOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparisonOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: FieldNameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValueList(value: StringValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValueList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValueList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValueList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

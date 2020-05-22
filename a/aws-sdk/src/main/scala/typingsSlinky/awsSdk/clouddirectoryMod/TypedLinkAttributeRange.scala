@@ -18,35 +18,10 @@ trait TypedLinkAttributeRange extends js.Object {
 
 object TypedLinkAttributeRange {
   @scala.inline
-  def apply(Range: TypedAttributeValueRange): TypedLinkAttributeRange = {
+  def apply(Range: TypedAttributeValueRange, AttributeName: AttributeName = null): TypedLinkAttributeRange = {
     val __obj = js.Dynamic.literal(Range = Range.asInstanceOf[js.Any])
+    if (AttributeName != null) __obj.updateDynamic("AttributeName")(AttributeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypedLinkAttributeRange]
   }
-  @scala.inline
-  implicit class TypedLinkAttributeRangeOps[Self <: TypedLinkAttributeRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRange(value: TypedAttributeValueRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeName(value: AttributeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

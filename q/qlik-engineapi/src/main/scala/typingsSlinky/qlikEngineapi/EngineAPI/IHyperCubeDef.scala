@@ -7,34 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * HyperCubeDef...
   */
-@js.native
 trait IHyperCubeDef extends js.Object {
   /**
     * If this property is set to true, the cells are always expanded.
     * It implies that it is not possible to collapse any cells.
     * >> The default value is false.
     */
-  var qAlwaysFullyExpanded: Boolean = js.native
+  var qAlwaysFullyExpanded: Boolean
   /**
     * Specifies a calculation condition, which must be fulfilled for the hypercube to be (re)calculated.
     * As long as the condition is not met, the engine does not perform a new calculation.
     * This property is optional. By default, there is no calculation condition.
     */
-  var qCalcCond: js.UndefOr[IValueExpr] = js.native
+  var qCalcCond: js.UndefOr[IValueExpr] = js.undefined
   /**
     * Array of dimensions.
     */
-  var qDimensions: js.Array[INxDimension] = js.native
+  var qDimensions: js.Array[INxDimension]
   /**
     * This property applies for pivot tables and allows to change the layout of the table.
     * An indentation is added to the beginning of each row.
     * >> The default value is false.
     */
-  var qIndentMode: Boolean = js.native
+  var qIndentMode: Boolean
   /**
     * Initial data set.
     */
-  var qInitialDataFetch: js.Array[INxPage] = js.native
+  var qInitialDataFetch: js.Array[INxPage]
   /**
     * Defines the sort order of the columns in the hypercube.
     * Column numbers are separated by a comma.
@@ -48,23 +47,23 @@ trait IHyperCubeDef extends js.Object {
     * You can neither collapse/expand a pseudo dimension nor make any selections in it.
     * Stacked pivot tables can only contain one measure.
     */
-  var qInterColumnSortOrder: js.Array[Double] = js.native
+  var qInterColumnSortOrder: js.Array[Double]
   /**
     * Maximum number of cells for an initial data fetch (set in qInitialDataFetch) when in stacked mode (qMode is K).
     * >> The default value is 5000.
     */
-  var qMaxStackedCells: Double = js.native
+  var qMaxStackedCells: Double
   /**
     * Array of measures.
     */
-  var qMeasures: js.Array[INxMeasure] = js.native
+  var qMeasures: js.Array[INxMeasure]
   /**
     * Defines the way the data are handled internally by the engine.
     * Default value is DATA_MODE_STRAIGHT.
     * A pivot table can contain several dimensions and measures whereas a stacked pivot
     * table can contain several dimensions but only one measure.
     */
-  var qMode: NxHypercubeMode = js.native
+  var qMode: NxHypercubeMode
   /**
     * Number of left dimensions.
     * Default value is -1. In that case, all dimensions are left dimensions.
@@ -99,41 +98,41 @@ trait IHyperCubeDef extends js.Object {
     * - Category is a top dimension.
     * - The pseudo dimension is a top dimension
     */
-  var qNoOfLeftDims: Double = js.native
+  var qNoOfLeftDims: Double
   /**
     * If this property is set to true, the missing symbols (if any) are replaced by 0 if the value is a numeric
     * and by an empty string if the value is a string.
     * >> The default value is false.
     */
-  var qPopulateMissing: Boolean = js.native
-  var qPseudoDimPos: Double = js.native
+  var qPopulateMissing: Boolean
+  var qPseudoDimPos: Double
    // ?Dokufehler
-  var qReductionMode: ReductionModeType = js.native
+  var qReductionMode: ReductionModeType
   /**
     * If set to true, the total (if any) is shown on the first row.
     * >> The default value is false.
     */
-  var qShowTotalsAbove: Boolean = js.native
+  var qShowTotalsAbove: Boolean
   /**
     * To enable the sorting by ascending or descending order in the values of a measure.
     * This property applies to pivot tables and stacked pivot tables.
     * In the case of a pivot table, the measure or pseudo dimension should be defined as a top dimension.
     * The sorting is restricted to the values of the first measure in a pivot table.
     */
-  var qSortbyYValue: String = js.native
+  var qSortbyYValue: String
   /**
     * Name of the alternate state.
     * Default is current selections $.
     */
-  var qStateName: String = js.native
+  var qStateName: String
   /**
     * Removes missing values.
     */
-  var qSuppressMissing: Boolean = js.native
+  var qSuppressMissing: Boolean
   /**
     * Removes zero values.
     */
-  var qSuppressZero: Boolean = js.native
+  var qSuppressZero: Boolean
 }
 
 object IHyperCubeDef {
@@ -155,132 +154,12 @@ object IHyperCubeDef {
     qSortbyYValue: String,
     qStateName: String,
     qSuppressMissing: Boolean,
-    qSuppressZero: Boolean
+    qSuppressZero: Boolean,
+    qCalcCond: IValueExpr = null
   ): IHyperCubeDef = {
     val __obj = js.Dynamic.literal(qAlwaysFullyExpanded = qAlwaysFullyExpanded.asInstanceOf[js.Any], qDimensions = qDimensions.asInstanceOf[js.Any], qIndentMode = qIndentMode.asInstanceOf[js.Any], qInitialDataFetch = qInitialDataFetch.asInstanceOf[js.Any], qInterColumnSortOrder = qInterColumnSortOrder.asInstanceOf[js.Any], qMaxStackedCells = qMaxStackedCells.asInstanceOf[js.Any], qMeasures = qMeasures.asInstanceOf[js.Any], qMode = qMode.asInstanceOf[js.Any], qNoOfLeftDims = qNoOfLeftDims.asInstanceOf[js.Any], qPopulateMissing = qPopulateMissing.asInstanceOf[js.Any], qPseudoDimPos = qPseudoDimPos.asInstanceOf[js.Any], qReductionMode = qReductionMode.asInstanceOf[js.Any], qShowTotalsAbove = qShowTotalsAbove.asInstanceOf[js.Any], qSortbyYValue = qSortbyYValue.asInstanceOf[js.Any], qStateName = qStateName.asInstanceOf[js.Any], qSuppressMissing = qSuppressMissing.asInstanceOf[js.Any], qSuppressZero = qSuppressZero.asInstanceOf[js.Any])
+    if (qCalcCond != null) __obj.updateDynamic("qCalcCond")(qCalcCond.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHyperCubeDef]
   }
-  @scala.inline
-  implicit class IHyperCubeDefOps[Self <: IHyperCubeDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQAlwaysFullyExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAlwaysFullyExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQDimensions(value: js.Array[INxDimension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQIndentMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qIndentMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQInitialDataFetch(value: js.Array[INxPage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qInitialDataFetch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQInterColumnSortOrder(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qInterColumnSortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQMaxStackedCells(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qMaxStackedCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQMeasures(value: js.Array[INxMeasure]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qMeasures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQMode(value: NxHypercubeMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQNoOfLeftDims(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qNoOfLeftDims")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQPopulateMissing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qPopulateMissing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQPseudoDimPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qPseudoDimPos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQReductionMode(value: ReductionModeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qReductionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQShowTotalsAbove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowTotalsAbove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSortbyYValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSortbyYValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQStateName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qStateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSuppressMissing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSuppressMissing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSuppressZero(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSuppressZero")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQCalcCond(value: IValueExpr): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qCalcCond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQCalcCond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qCalcCond")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomMessage extends js.Object {
-  var customMessage: js.UndefOr[String] = js.native
-  var toAccount: js.UndefOr[Boolean] = js.native
-  var transferReason: js.UndefOr[String] = js.native
+  var customMessage: js.UndefOr[String] = js.undefined
+  var toAccount: js.UndefOr[Boolean] = js.undefined
+  var transferReason: js.UndefOr[String] = js.undefined
 }
 
 object CustomMessage {
   @scala.inline
-  def apply(): CustomMessage = {
+  def apply(
+    customMessage: String = null,
+    toAccount: js.UndefOr[Boolean] = js.undefined,
+    transferReason: String = null
+  ): CustomMessage = {
     val __obj = js.Dynamic.literal()
+    if (customMessage != null) __obj.updateDynamic("customMessage")(customMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(toAccount)) __obj.updateDynamic("toAccount")(toAccount.get.asInstanceOf[js.Any])
+    if (transferReason != null) __obj.updateDynamic("transferReason")(transferReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomMessage]
   }
-  @scala.inline
-  implicit class CustomMessageOps[Self <: CustomMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToAccount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransferReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransferReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferReason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

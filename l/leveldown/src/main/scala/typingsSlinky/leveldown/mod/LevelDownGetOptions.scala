@@ -5,36 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LevelDownGetOptions extends AbstractGetOptions {
-  var fillCache: js.UndefOr[Boolean] = js.native
+  var fillCache: js.UndefOr[Boolean] = js.undefined
 }
 
 object LevelDownGetOptions {
   @scala.inline
-  def apply(): LevelDownGetOptions = {
+  def apply(asBuffer: js.UndefOr[Boolean] = js.undefined, fillCache: js.UndefOr[Boolean] = js.undefined): LevelDownGetOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(asBuffer)) __obj.updateDynamic("asBuffer")(asBuffer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillCache)) __obj.updateDynamic("fillCache")(fillCache.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LevelDownGetOptions]
   }
-  @scala.inline
-  implicit class LevelDownGetOptionsOps[Self <: LevelDownGetOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFillCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillCache")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,37 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CanvasRenderingContext2D extends js.Object {
   @JSName("MSHTML.CanvasRenderingContext2D_typekey")
-  var MSHTMLDotCanvasRenderingContext2D_typekey: CanvasRenderingContext2D = js.native
-  val canvas: IHTMLCanvasElement = js.native
-  var fillStyle: js.Any = js.native
-  var font: String = js.native
-  var globalAlpha: Double = js.native
-  var globalCompositeOperation: String = js.native
-  var lineCap: String = js.native
-  var lineJoin: String = js.native
-  var lineWidth: Double = js.native
-  var miterLimit: Double = js.native
-  var shadowBlur: Double = js.native
-  var shadowColor: String = js.native
-  var shadowOffsetX: Double = js.native
-  var shadowOffsetY: Double = js.native
-  var strokeStyle: js.Any = js.native
-  var textAlign: String = js.native
-  var textBaseline: String = js.native
-  def arc(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double, anticlockwise: Double): Unit = js.native
-  def arcTo(x1: Double, y1: Double, x2: Double, y2: Double, radius: Double): Unit = js.native
-  def beginPath(): Unit = js.native
-  def bezierCurveTo(cp1x: Double, cp1y: Double, cp2x: Double, cp2y: Double, x: Double, y: Double): Unit = js.native
-  def clearRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native
-  def clip(): Unit = js.native
-  def closePath(): Unit = js.native
-  def createImageData(a1: js.Any, a2: js.Any): ICanvasImageData = js.native
-  def createLinearGradient(x0: Double, y0: Double, x1: Double, y1: Double): ICanvasGradient = js.native
-  def createPattern(Image: js.Any, repetition: js.Any): ICanvasPattern = js.native
-  def createRadialGradient(x0: Double, y0: Double, r0: Double, x1: Double, y1: Double, r1: Double): ICanvasGradient = js.native
+  var MSHTMLDotCanvasRenderingContext2D_typekey: CanvasRenderingContext2D
+  val canvas: IHTMLCanvasElement
+  var fillStyle: js.Any
+  var font: String
+  var globalAlpha: Double
+  var globalCompositeOperation: String
+  var lineCap: String
+  var lineJoin: String
+  var lineWidth: Double
+  var miterLimit: Double
+  var shadowBlur: Double
+  var shadowColor: String
+  var shadowOffsetX: Double
+  var shadowOffsetY: Double
+  var strokeStyle: js.Any
+  var textAlign: String
+  var textBaseline: String
+  def arc(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double, anticlockwise: Double): Unit
+  def arcTo(x1: Double, y1: Double, x2: Double, y2: Double, radius: Double): Unit
+  def beginPath(): Unit
+  def bezierCurveTo(cp1x: Double, cp1y: Double, cp2x: Double, cp2y: Double, x: Double, y: Double): Unit
+  def clearRect(x: Double, y: Double, w: Double, h: Double): Unit
+  def clip(): Unit
+  def closePath(): Unit
+  def createImageData(a1: js.Any, a2: js.Any): ICanvasImageData
+  def createLinearGradient(x0: Double, y0: Double, x1: Double, y1: Double): ICanvasGradient
+  def createPattern(Image: js.Any, repetition: js.Any): ICanvasPattern
+  def createRadialGradient(x0: Double, y0: Double, r0: Double, x1: Double, y1: Double, r1: Double): ICanvasGradient
   def drawImage(
     pSrc: js.Any,
     a1: js.Any,
@@ -45,15 +44,15 @@ trait CanvasRenderingContext2D extends js.Object {
     a6: js.Any,
     a7: js.Any,
     a8: js.Any
-  ): Unit = js.native
-  def fill(): Unit = js.native
-  def fillRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native
-  def fillText(text: String, x: Double, y: Double, maxWidth: js.Any): Unit = js.native
-  def getImageData(sx: Double, sy: Double, sw: Double, sh: Double): ICanvasImageData = js.native
-  def isPointInPath(x: Double, y: Double): Boolean = js.native
-  def lineTo(x: Double, y: Double): Unit = js.native
-  def measureText(text: String): ICanvasTextMetrics = js.native
-  def moveTo(x: Double, y: Double): Unit = js.native
+  ): Unit
+  def fill(): Unit
+  def fillRect(x: Double, y: Double, w: Double, h: Double): Unit
+  def fillText(text: String, x: Double, y: Double, maxWidth: js.Any): Unit
+  def getImageData(sx: Double, sy: Double, sw: Double, sh: Double): ICanvasImageData
+  def isPointInPath(x: Double, y: Double): Boolean
+  def lineTo(x: Double, y: Double): Unit
+  def measureText(text: String): ICanvasTextMetrics
+  def moveTo(x: Double, y: Double): Unit
   def putImageData(
     imagedata: ICanvasImageData,
     dx: Double,
@@ -62,19 +61,19 @@ trait CanvasRenderingContext2D extends js.Object {
     dirtyY: js.Any,
     dirtyWidth: js.Any,
     dirtyHeight: js.Any
-  ): Unit = js.native
-  def quadraticCurveTo(cpx: Double, cpy: Double, x: Double, y: Double): Unit = js.native
-  def rect(x: Double, y: Double, w: Double, h: Double): Unit = js.native
-  def restore(): Unit = js.native
-  def rotate(angle: Double): Unit = js.native
-  def save(): Unit = js.native
-  def scale(x: Double, y: Double): Unit = js.native
-  def setTransform(m11: Double, m12: Double, m21: Double, m22: Double, dx: Double, dy: Double): Unit = js.native
-  def stroke(): Unit = js.native
-  def strokeRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native
-  def strokeText(text: String, x: Double, y: Double, maxWidth: js.Any): Unit = js.native
-  def transform(m11: Double, m12: Double, m21: Double, m22: Double, dx: Double, dy: Double): Unit = js.native
-  def translate(x: Double, y: Double): Unit = js.native
+  ): Unit
+  def quadraticCurveTo(cpx: Double, cpy: Double, x: Double, y: Double): Unit
+  def rect(x: Double, y: Double, w: Double, h: Double): Unit
+  def restore(): Unit
+  def rotate(angle: Double): Unit
+  def save(): Unit
+  def scale(x: Double, y: Double): Unit
+  def setTransform(m11: Double, m12: Double, m21: Double, m22: Double, dx: Double, dy: Double): Unit
+  def stroke(): Unit
+  def strokeRect(x: Double, y: Double, w: Double, h: Double): Unit
+  def strokeText(text: String, x: Double, y: Double, maxWidth: js.Any): Unit
+  def transform(m11: Double, m12: Double, m21: Double, m22: Double, dx: Double, dy: Double): Unit
+  def translate(x: Double, y: Double): Unit
 }
 
 object CanvasRenderingContext2D {
@@ -135,313 +134,5 @@ object CanvasRenderingContext2D {
     __obj.updateDynamic("MSHTML.CanvasRenderingContext2D_typekey")(MSHTMLDotCanvasRenderingContext2D_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CanvasRenderingContext2D]
   }
-  @scala.inline
-  implicit class CanvasRenderingContext2DOps[Self <: CanvasRenderingContext2D] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotCanvasRenderingContext2D_typekey(value: CanvasRenderingContext2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.CanvasRenderingContext2D_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArc(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arc")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withArcTo(value: (Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arcTo")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withBeginPath(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginPath")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withBezierCurveTo(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bezierCurveTo")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withCanvas(value: IHTMLCanvasElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClearRect(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearRect")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withClip(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClosePath(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closePath")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateImageData(value: (js.Any, js.Any) => ICanvasImageData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createImageData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateLinearGradient(value: (Double, Double, Double, Double) => ICanvasGradient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createLinearGradient")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withCreatePattern(value: (js.Any, js.Any) => ICanvasPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createPattern")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateRadialGradient(value: (Double, Double, Double, Double, Double, Double) => ICanvasGradient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRadialGradient")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withDrawImage(value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImage")(js.Any.fromFunction9(value))
-        ret
-    }
-    @scala.inline
-    def withFill(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFillRect(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRect")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withFillStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFillText(value: (String, Double, Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillText")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withFont(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetImageData(value: (Double, Double, Double, Double) => ICanvasImageData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getImageData")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGlobalAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobalCompositeOperation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalCompositeOperation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPointInPath(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPointInPath")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLineCap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineJoin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineJoin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineTo(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineTo")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeasureText(value: String => ICanvasTextMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMiterLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("miterLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMoveTo(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveTo")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPutImageData(value: (ICanvasImageData, Double, Double, js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("putImageData")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withQuadraticCurveTo(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quadraticCurveTo")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRect(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRestore(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRotate(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSave(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withScale(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetTransform(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTransform")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withShadowBlur(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShadowColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShadowOffsetX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShadowOffsetY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStroke(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStrokeRect(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeRect")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withStrokeStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrokeText(value: (String, Double, Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeText")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextBaseline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textBaseline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransform(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withTranslate(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

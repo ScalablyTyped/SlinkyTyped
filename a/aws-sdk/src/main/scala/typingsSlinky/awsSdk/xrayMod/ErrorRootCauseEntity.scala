@@ -22,53 +22,16 @@ trait ErrorRootCauseEntity extends js.Object {
 
 object ErrorRootCauseEntity {
   @scala.inline
-  def apply(): ErrorRootCauseEntity = {
+  def apply(
+    Exceptions: RootCauseExceptions = null,
+    Name: String = null,
+    Remote: js.UndefOr[NullableBoolean] = js.undefined
+  ): ErrorRootCauseEntity = {
     val __obj = js.Dynamic.literal()
+    if (Exceptions != null) __obj.updateDynamic("Exceptions")(Exceptions.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (!js.isUndefined(Remote)) __obj.updateDynamic("Remote")(Remote.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorRootCauseEntity]
   }
-  @scala.inline
-  implicit class ErrorRootCauseEntityOps[Self <: ErrorRootCauseEntity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExceptions(value: RootCauseExceptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Exceptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExceptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Exceptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemote(value: NullableBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Remote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Remote")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

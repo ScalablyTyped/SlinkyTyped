@@ -1,8 +1,5 @@
 package typingsSlinky.geolib.typesMod
 
-import typingsSlinky.geolib.anon.Lng
-import typingsSlinky.geolib.anon.Lon
-import typingsSlinky.geolib.anon.LongitudeGeolibLongitudeInputValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +13,19 @@ trait GeolibInputLongitude extends js.Object
 
 object GeolibInputLongitude {
   @scala.inline
-  implicit def apply(value: Lng): GeolibInputLongitude = value.asInstanceOf[GeolibInputLongitude]
+  def Lng(lng: GeolibLongitudeInputValue): GeolibInputLongitude = {
+    val __obj = js.Dynamic.literal(lng = lng.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeolibInputLongitude]
+  }
   @scala.inline
-  implicit def apply(value: Lon): GeolibInputLongitude = value.asInstanceOf[GeolibInputLongitude]
+  def Lon(lon: GeolibLongitudeInputValue): GeolibInputLongitude = {
+    val __obj = js.Dynamic.literal(lon = lon.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeolibInputLongitude]
+  }
   @scala.inline
-  implicit def apply(value: LongitudeGeolibLongitudeInputValue): GeolibInputLongitude = value.asInstanceOf[GeolibInputLongitude]
+  def LongitudeGeolibLongitudeInputValue(longitude: GeolibLongitudeInputValue): GeolibInputLongitude = {
+    val __obj = js.Dynamic.literal(longitude = longitude.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeolibInputLongitude]
+  }
 }
 

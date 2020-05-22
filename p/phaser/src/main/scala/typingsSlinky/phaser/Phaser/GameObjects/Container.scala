@@ -24,6 +24,10 @@ import scala.scalajs.js.annotation._
   * 
   * The position of the Game Object automatically becomes relative to the position of the Container.
   * 
+  * The origin of a Container is 0x0 (in local space) and that cannot be changed. The children you add to the
+  * Container should be positioned with this value in mind. I.e. you should treat 0x0 as being the center of
+  * the Container, and position children positively and negative around it as required.
+  * 
   * When the Container is rendered, all of its children are rendered as well, in the order in which they exist
   * within the Container. Container children can be repositioned using methods such as `MoveUp`, `MoveDown` and `SendToBack`.
   * 
@@ -182,16 +186,16 @@ trait Container
     * them from physics bodies if not accounted for in your code.
     */
   var scrollFactorY: Double = js.native
-  def add(child: js.Array[GameObject]): Container = js.native
+  def add(child: js.Array[GameObject]): this.type = js.native
   /**
     * Adds the given Game Object, or array of Game Objects, to this Container.
     * 
     * Each Game Object must be unique within the Container.
     * @param child The Game Object, or array of Game Objects, to add to the Container.
     */
-  def add(child: GameObject): Container = js.native
-  def addAt(child: js.Array[GameObject]): Container = js.native
-  def addAt(child: js.Array[GameObject], index: integer): Container = js.native
+  def add(child: GameObject): this.type = js.native
+  def addAt(child: js.Array[GameObject]): this.type = js.native
+  def addAt(child: js.Array[GameObject], index: integer): this.type = js.native
   /**
     * Adds the given Game Object, or array of Game Objects, to this Container at the specified position.
     * 
@@ -201,14 +205,14 @@ trait Container
     * @param child The Game Object, or array of Game Objects, to add to the Container.
     * @param index The position to insert the Game Object/s at. Default 0.
     */
-  def addAt(child: GameObject): Container = js.native
-  def addAt(child: GameObject, index: integer): Container = js.native
+  def addAt(child: GameObject): this.type = js.native
+  def addAt(child: GameObject, index: integer): this.type = js.native
   /**
     * Brings the given Game Object to the top of this Container.
     * This will cause it to render on-top of any other objects in the Container.
     * @param child The Game Object to bring to the top of the Container.
     */
-  def bringToTop(child: GameObject): Container = js.native
+  def bringToTop(child: GameObject): this.type = js.native
   /**
     * Returns the total number of Game Objects in this Container that have a property
     * matching the given value.
@@ -236,8 +240,8 @@ trait Container
     * @param context Value to use as `this` when executing callback.
     * @param args Additional arguments that will be passed to the callback, after the child.
     */
-  def each(callback: js.Function): Container = js.native
-  def each(callback: js.Function, context: js.Object, args: js.Any*): Container = js.native
+  def each(callback: js.Function): this.type = js.native
+  def each(callback: js.Function, context: js.Object, args: js.Any*): this.type = js.native
   /**
     * Returns `true` if the given Game Object is a direct child of this Container.
     * 
@@ -341,13 +345,13 @@ trait Container
     * @param context Value to use as `this` when executing callback.
     * @param args Additional arguments that will be passed to the callback, after the child.
     */
-  def iterate(callback: js.Function): Container = js.native
-  def iterate(callback: js.Function, context: js.Object, args: js.Any*): Container = js.native
+  def iterate(callback: js.Function): this.type = js.native
+  def iterate(callback: js.Function, context: js.Object, args: js.Any*): this.type = js.native
   /**
     * Moves the given Game Object down one place in this Container, unless it's already at the bottom.
     * @param child The Game Object to be moved in the Container.
     */
-  def moveDown(child: GameObject): Container = js.native
+  def moveDown(child: GameObject): this.type = js.native
   /**
     * Moves a Game Object to a new position within this Container.
     * 
@@ -358,12 +362,12 @@ trait Container
     * @param child The Game Object to move.
     * @param index The new position of the Game Object in this Container.
     */
-  def moveTo(child: GameObject, index: integer): Container = js.native
+  def moveTo(child: GameObject, index: integer): this.type = js.native
   /**
     * Moves the given Game Object up one place in this Container, unless it's already at the top.
     * @param child The Game Object to be moved in the Container.
     */
-  def moveUp(child: GameObject): Container = js.native
+  def moveUp(child: GameObject): this.type = js.native
   /**
     * Takes a Point-like object, such as a Vector2, Geom.Point or object with public x and y properties,
     * and transforms it into the space of this Container, then returns it in the output object.
@@ -386,8 +390,8 @@ trait Container
     * Internal destroy handler, called as part of the destroy process.
     */
   /* protected */ def preDestroy(): Unit = js.native
-  def remove(child: js.Array[GameObject]): Container = js.native
-  def remove(child: js.Array[GameObject], destroyChild: Boolean): Container = js.native
+  def remove(child: js.Array[GameObject]): this.type = js.native
+  def remove(child: js.Array[GameObject], destroyChild: Boolean): this.type = js.native
   /**
     * Removes the given Game Object, or array of Game Objects, from this Container.
     * 
@@ -397,16 +401,16 @@ trait Container
     * @param child The Game Object, or array of Game Objects, to be removed from the Container.
     * @param destroyChild Optionally call `destroy` on each child successfully removed from this Container. Default false.
     */
-  def remove(child: GameObject): Container = js.native
-  def remove(child: GameObject, destroyChild: Boolean): Container = js.native
+  def remove(child: GameObject): this.type = js.native
+  def remove(child: GameObject, destroyChild: Boolean): this.type = js.native
   /**
     * Removes all Game Objects from this Container.
     * 
     * You can also optionally call `destroy` on each Game Object that is removed from the Container.
     * @param destroyChild Optionally call `destroy` on each Game Object successfully removed from this Container. Default false.
     */
-  def removeAll(): Container = js.native
-  def removeAll(destroyChild: Boolean): Container = js.native
+  def removeAll(): this.type = js.native
+  def removeAll(destroyChild: Boolean): this.type = js.native
   /**
     * Removes the Game Object at the given position in this Container.
     * 
@@ -414,8 +418,8 @@ trait Container
     * @param index The index of the Game Object to be removed.
     * @param destroyChild Optionally call `destroy` on the Game Object if successfully removed from this Container. Default false.
     */
-  def removeAt(index: integer): Container = js.native
-  def removeAt(index: integer, destroyChild: Boolean): Container = js.native
+  def removeAt(index: integer): this.type = js.native
+  def removeAt(index: integer, destroyChild: Boolean): this.type = js.native
   /**
     * Removes the Game Objects between the given positions in this Container.
     * 
@@ -424,10 +428,10 @@ trait Container
     * @param endIndex An optional end index to search up to (but not included) Default Container.length.
     * @param destroyChild Optionally call `destroy` on each Game Object successfully removed from this Container. Default false.
     */
-  def removeBetween(): Container = js.native
-  def removeBetween(startIndex: integer): Container = js.native
-  def removeBetween(startIndex: integer, endIndex: integer): Container = js.native
-  def removeBetween(startIndex: integer, endIndex: integer, destroyChild: Boolean): Container = js.native
+  def removeBetween(): this.type = js.native
+  def removeBetween(startIndex: integer): this.type = js.native
+  def removeBetween(startIndex: integer, endIndex: integer): this.type = js.native
+  def removeBetween(startIndex: integer, endIndex: integer, destroyChild: Boolean): this.type = js.native
   /**
     * Replaces a Game Object in this Container with the new Game Object.
     * The new Game Object cannot already be a child of this Container.
@@ -435,18 +439,18 @@ trait Container
     * @param newChild The Game Object to be added to this Container.
     * @param destroyChild Optionally call `destroy` on the Game Object if successfully removed from this Container. Default false.
     */
-  def replace(oldChild: GameObject, newChild: GameObject): Container = js.native
-  def replace(oldChild: GameObject, newChild: GameObject, destroyChild: Boolean): Container = js.native
+  def replace(oldChild: GameObject, newChild: GameObject): this.type = js.native
+  def replace(oldChild: GameObject, newChild: GameObject, destroyChild: Boolean): this.type = js.native
   /**
     * Reverses the order of all Game Objects in this Container.
     */
-  def reverse(): Container = js.native
+  def reverse(): this.type = js.native
   /**
     * Sends the given Game Object to the bottom of this Container.
     * This will cause it to render below any other objects in the Container.
     * @param child The Game Object to send to the bottom of the Container.
     */
-  def sendToBack(child: GameObject): Container = js.native
+  def sendToBack(child: GameObject): this.type = js.native
   /**
     * Sets the property to the given value on all Game Objects in this Container.
     * 
@@ -458,9 +462,9 @@ trait Container
     * @param startIndex An optional start index to search from. Default 0.
     * @param endIndex An optional end index to search up to (but not included) Default Container.length.
     */
-  def setAll(property: String, value: js.Any): Container = js.native
-  def setAll(property: String, value: js.Any, startIndex: integer): Container = js.native
-  def setAll(property: String, value: js.Any, startIndex: integer, endIndex: integer): Container = js.native
+  def setAll(property: String, value: js.Any): this.type = js.native
+  def setAll(property: String, value: js.Any, startIndex: integer): this.type = js.native
+  def setAll(property: String, value: js.Any, startIndex: integer, endIndex: integer): this.type = js.native
   /**
     * Does this Container exclusively manage its children?
     * 
@@ -475,8 +479,8 @@ trait Container
     * display list, but are being replicated where-ever this Container is.
     * @param value The exclusive state of this Container. Default true.
     */
-  def setExclusive(): Container = js.native
-  def setExclusive(value: Boolean): Container = js.native
+  def setExclusive(): this.type = js.native
+  def setExclusive(value: Boolean): this.type = js.native
   /**
     * Sets the scroll factor of this Container and optionally all of its children.
     * 
@@ -503,21 +507,21 @@ trait Container
   /**
     * Shuffles the all Game Objects in this Container using the Fisher-Yates implementation.
     */
-  def shuffle(): Container = js.native
+  def shuffle(): this.type = js.native
   /**
     * Sort the contents of this Container so the items are in order based on the given property.
     * For example: `sort('alpha')` would sort the elements based on the value of their `alpha` property.
     * @param property The property to lexically sort by.
     * @param handler Provide your own custom handler function. Will receive 2 children which it should compare and return a boolean.
     */
-  def sort(property: String): Container = js.native
-  def sort(property: String, handler: js.Function): Container = js.native
+  def sort(property: String): this.type = js.native
+  def sort(property: String, handler: js.Function): this.type = js.native
   /**
     * Swaps the position of two Game Objects in this Container.
     * Both Game Objects must belong to this Container.
     * @param child1 The first Game Object to swap.
     * @param child2 The second Game Object to swap.
     */
-  def swap(child1: GameObject, child2: GameObject): Container = js.native
+  def swap(child1: GameObject, child2: GameObject): this.type = js.native
 }
 

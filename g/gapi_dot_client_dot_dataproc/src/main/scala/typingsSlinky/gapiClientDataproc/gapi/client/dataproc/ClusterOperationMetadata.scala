@@ -5,135 +5,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClusterOperationMetadata extends js.Object {
   /** Output-only. Name of the cluster for the operation. */
-  var clusterName: js.UndefOr[String] = js.native
+  var clusterName: js.UndefOr[String] = js.undefined
   /** Output-only. Cluster UUID for the operation. */
-  var clusterUuid: js.UndefOr[String] = js.native
+  var clusterUuid: js.UndefOr[String] = js.undefined
   /** Output-only. Short description of operation. */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /** Output-only. Labels associated with the operation */
-  var labels: js.UndefOr[Record[String, String]] = js.native
+  var labels: js.UndefOr[Record[String, String]] = js.undefined
   /** Output-only. The operation type. */
-  var operationType: js.UndefOr[String] = js.native
+  var operationType: js.UndefOr[String] = js.undefined
   /** Output-only. Current operation status. */
-  var status: js.UndefOr[ClusterOperationStatus] = js.native
+  var status: js.UndefOr[ClusterOperationStatus] = js.undefined
   /** Output-only. The previous operation status. */
-  var statusHistory: js.UndefOr[js.Array[ClusterOperationStatus]] = js.native
+  var statusHistory: js.UndefOr[js.Array[ClusterOperationStatus]] = js.undefined
   /** Output-only. Errors encountered during operation execution. */
-  var warnings: js.UndefOr[js.Array[String]] = js.native
+  var warnings: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object ClusterOperationMetadata {
   @scala.inline
-  def apply(): ClusterOperationMetadata = {
+  def apply(
+    clusterName: String = null,
+    clusterUuid: String = null,
+    description: String = null,
+    labels: Record[String, String] = null,
+    operationType: String = null,
+    status: ClusterOperationStatus = null,
+    statusHistory: js.Array[ClusterOperationStatus] = null,
+    warnings: js.Array[String] = null
+  ): ClusterOperationMetadata = {
     val __obj = js.Dynamic.literal()
+    if (clusterName != null) __obj.updateDynamic("clusterName")(clusterName.asInstanceOf[js.Any])
+    if (clusterUuid != null) __obj.updateDynamic("clusterUuid")(clusterUuid.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (operationType != null) __obj.updateDynamic("operationType")(operationType.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (statusHistory != null) __obj.updateDynamic("statusHistory")(statusHistory.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterOperationMetadata]
   }
-  @scala.inline
-  implicit class ClusterOperationMetadataOps[Self <: ClusterOperationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterUuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterUuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterUuid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ClusterOperationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusHistory(value: js.Array[ClusterOperationStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,5 +30,13 @@ class KeyVaultCredentials protected () extends ServiceClientCredentials {
     body: js.Any,
     callback: ServiceCallback[_]
   ): js.Any = js.native
+  /**
+    * Signs a request with the Authentication header.
+    *
+    * @param {WebResource} The WebResource to be signed.
+    * @param {function(error)}  callback  The callback function.
+    */
+  /* CompleteClass */
+  override def signRequest(webResource: WebResource, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
 

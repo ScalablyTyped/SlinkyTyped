@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocsUploadView extends js.Object {
   // Allows the user to select a folder in Google Drive to upload to.
-  def setIncludeFolders(included: Boolean): DocsUploadView = js.native
+  def setIncludeFolders(included: Boolean): DocsUploadView
   // Sets the upload destination to the specified folder. This overrides ".setIncludeFolders" to false.
-  def setParent(parentId: String): DocsUploadView = js.native
+  def setParent(parentId: String): DocsUploadView
 }
 
 object DocsUploadView {
@@ -18,25 +17,5 @@ object DocsUploadView {
     val __obj = js.Dynamic.literal(setIncludeFolders = js.Any.fromFunction1(setIncludeFolders), setParent = js.Any.fromFunction1(setParent))
     __obj.asInstanceOf[DocsUploadView]
   }
-  @scala.inline
-  implicit class DocsUploadViewOps[Self <: DocsUploadView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetIncludeFolders(value: Boolean => DocsUploadView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIncludeFolders")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetParent(value: String => DocsUploadView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setParent")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

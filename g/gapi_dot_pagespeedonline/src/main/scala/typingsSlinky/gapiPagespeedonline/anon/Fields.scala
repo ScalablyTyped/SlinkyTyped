@@ -4,113 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Fields extends js.Object {
   /**
     * Selector specifying which fields to include in a partial response.
     */
-  var fields: js.UndefOr[String] = js.native
+  var fields: js.UndefOr[String] = js.undefined
   /**
     * The locale that results should be generated in.
     */
-  var locale: js.UndefOr[String] = js.native
+  var locale: js.UndefOr[String] = js.undefined
   /**
     * The PageSpeed rules to run. Can be specified multiple times
     */
-  var rule: js.UndefOr[js.Array[String]] = js.native
+  var rule: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Indicates if binary data containing a screenshot should be included
     */
-  var screenshot: js.UndefOr[Boolean] = js.native
+  var screenshot: js.UndefOr[Boolean] = js.undefined
   /**
     * The strategy to use when analyzing the page. Valid values are desktop and mobile.
     */
-  var stategy: js.UndefOr[String] = js.native
+  var stategy: js.UndefOr[String] = js.undefined
   /**
     * The URL of the page for which the PageSpeed Insights API should generate results.
     */
-  var url: String = js.native
+  var url: String
 }
 
 object Fields {
   @scala.inline
-  def apply(url: String): Fields = {
+  def apply(
+    url: String,
+    fields: String = null,
+    locale: String = null,
+    rule: js.Array[String] = null,
+    screenshot: js.UndefOr[Boolean] = js.undefined,
+    stategy: String = null
+  ): Fields = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
+    if (!js.isUndefined(screenshot)) __obj.updateDynamic("screenshot")(screenshot.get.asInstanceOf[js.Any])
+    if (stategy != null) __obj.updateDynamic("stategy")(stategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fields]
   }
-  @scala.inline
-  implicit class FieldsOps[Self <: Fields] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRule(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenshot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

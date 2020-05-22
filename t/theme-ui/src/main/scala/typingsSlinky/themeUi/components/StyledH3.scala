@@ -17,7 +17,7 @@ object StyledH3 {
   
   def withProps(
     p: (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with As
-  ): `SharedBuilder_<intersection>1112162328`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>1112162328`[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: StyledH3.type): `SharedBuilder_<intersection>1112162328`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>1112162328`[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
+  ): SharedBuilder_DetailedHTMLPropsSxPropsAs1112162328[LegacyRef[js.Any] with js.Object] = new SharedBuilder_DetailedHTMLPropsSxPropsAs1112162328[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StyledH3.type): SharedBuilder_DetailedHTMLPropsSxPropsAs1112162328[LegacyRef[js.Any] with js.Object] = new SharedBuilder_DetailedHTMLPropsSxPropsAs1112162328[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

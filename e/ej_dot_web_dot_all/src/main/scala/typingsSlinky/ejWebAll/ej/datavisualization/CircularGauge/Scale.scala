@@ -4,455 +4,177 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Scale extends js.Object {
   /** Specify backgroundColor for the scale of circular gauge
     * @Default {null}
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
   /** Specify border for scales of circular gauge
     * @Default {Object}
     */
-  var border: js.UndefOr[ScalesBorder] = js.native
+  var border: js.UndefOr[ScalesBorder] = js.undefined
   /** Specify the custom labels for the scales.
     * @Default {Array}
     */
-  var customLabels: js.UndefOr[js.Array[ScalesCustomLabel]] = js.native
+  var customLabels: js.UndefOr[js.Array[ScalesCustomLabel]] = js.undefined
   /** Specify scale direction of circular gauge. See
     * @Default {Clockwise}
     */
-  var direction: js.UndefOr[Direction | String] = js.native
+  var direction: js.UndefOr[Direction | String] = js.undefined
   /** Specify representing state of circular gauge
     * @Default {Array}
     */
-  var indicators: js.UndefOr[js.Array[ScalesIndicator]] = js.native
+  var indicators: js.UndefOr[js.Array[ScalesIndicator]] = js.undefined
   /** Specify the text values displayed in a meaningful manner alongside the ticks of circular gauge
     * @Default {Array}
     */
-  var labels: js.UndefOr[js.Array[ScalesLabel]] = js.native
+  var labels: js.UndefOr[js.Array[ScalesLabel]] = js.undefined
   /** Specify majorIntervalValue of circular gauge
     * @Default {10}
     */
-  var majorIntervalValue: js.UndefOr[Double] = js.native
+  var majorIntervalValue: js.UndefOr[Double] = js.undefined
   /** Specify maximum scale value of circular gauge
     * @Default {null}
     */
-  var maximum: js.UndefOr[Double] = js.native
+  var maximum: js.UndefOr[Double] = js.undefined
   /** Specify minimum scale value of circular gauge
     * @Default {null}
     */
-  var minimum: js.UndefOr[Double] = js.native
+  var minimum: js.UndefOr[Double] = js.undefined
   /** Specify minorIntervalValue of circular gauge
     * @Default {2}
     */
-  var minorIntervalValue: js.UndefOr[Double] = js.native
+  var minorIntervalValue: js.UndefOr[Double] = js.undefined
   /** Specify opacity value of circular gauge
     * @Default {1}
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /** Specify pointer cap of circular gauge
     * @Default {Object}
     */
-  var pointerCap: js.UndefOr[ScalesPointerCap] = js.native
+  var pointerCap: js.UndefOr[ScalesPointerCap] = js.undefined
   /** Specify pointers value of circular gauge
     * @Default {Array}
     */
-  var pointers: js.UndefOr[js.Array[ScalesPointer]] = js.native
+  var pointers: js.UndefOr[js.Array[ScalesPointer]] = js.undefined
   /** Specify scale radius of circular gauge
     * @Default {170}
     */
-  var radius: js.UndefOr[Double] = js.native
+  var radius: js.UndefOr[Double] = js.undefined
   /** Specify ranges value of circular gauge
     * @Default {Array}
     */
-  var ranges: js.UndefOr[js.Array[ScalesRange]] = js.native
+  var ranges: js.UndefOr[js.Array[ScalesRange]] = js.undefined
   /** Specify shadowOffset value of circular gauge
     * @Default {0}
     */
-  var shadowOffset: js.UndefOr[Double] = js.native
+  var shadowOffset: js.UndefOr[Double] = js.undefined
   /** Specify showIndicators of circular gauge
     * @Default {false}
     */
-  var showIndicators: js.UndefOr[Boolean] = js.native
+  var showIndicators: js.UndefOr[Boolean] = js.undefined
   /** Specify showLabels of circular gauge
     * @Default {true}
     */
-  var showLabels: js.UndefOr[Boolean] = js.native
+  var showLabels: js.UndefOr[Boolean] = js.undefined
   /** Specify showPointers of circular gauge
     * @Default {true}
     */
-  var showPointers: js.UndefOr[Boolean] = js.native
+  var showPointers: js.UndefOr[Boolean] = js.undefined
   /** Specify showRanges of circular gauge
     * @Default {false}
     */
-  var showRanges: js.UndefOr[Boolean] = js.native
+  var showRanges: js.UndefOr[Boolean] = js.undefined
   /** Specify showScaleBar of circular gauge
     * @Default {false}
     */
-  var showScaleBar: js.UndefOr[Boolean] = js.native
+  var showScaleBar: js.UndefOr[Boolean] = js.undefined
   /** Specify showTicks of circular gauge
     * @Default {true}
     */
-  var showTicks: js.UndefOr[Boolean] = js.native
+  var showTicks: js.UndefOr[Boolean] = js.undefined
   /** Specify scaleBar size of circular gauge
     * @Default {6}
     */
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.undefined
   /** Specify startAngle of circular gauge
     * @Default {115}
     */
-  var startAngle: js.UndefOr[Double] = js.native
+  var startAngle: js.UndefOr[Double] = js.undefined
   /** Specify subGauge of circular gauge
     * @Default {Array}
     */
-  var subGauges: js.UndefOr[js.Array[ScalesSubGauge]] = js.native
+  var subGauges: js.UndefOr[js.Array[ScalesSubGauge]] = js.undefined
   /** Specify sweepAngle of circular gauge
     * @Default {310}
     */
-  var sweepAngle: js.UndefOr[Double] = js.native
+  var sweepAngle: js.UndefOr[Double] = js.undefined
   /** Specify ticks of circular gauge
     * @Default {Array}
     */
-  var ticks: js.UndefOr[js.Array[ScalesTick]] = js.native
+  var ticks: js.UndefOr[js.Array[ScalesTick]] = js.undefined
 }
 
 object Scale {
   @scala.inline
-  def apply(): Scale = {
+  def apply(
+    backgroundColor: String = null,
+    border: ScalesBorder = null,
+    customLabels: js.Array[ScalesCustomLabel] = null,
+    direction: Direction | String = null,
+    indicators: js.Array[ScalesIndicator] = null,
+    labels: js.Array[ScalesLabel] = null,
+    majorIntervalValue: js.UndefOr[Double] = js.undefined,
+    maximum: js.UndefOr[Double] = js.undefined,
+    minimum: js.UndefOr[Double] = js.undefined,
+    minorIntervalValue: js.UndefOr[Double] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    pointerCap: ScalesPointerCap = null,
+    pointers: js.Array[ScalesPointer] = null,
+    radius: js.UndefOr[Double] = js.undefined,
+    ranges: js.Array[ScalesRange] = null,
+    shadowOffset: js.UndefOr[Double] = js.undefined,
+    showIndicators: js.UndefOr[Boolean] = js.undefined,
+    showLabels: js.UndefOr[Boolean] = js.undefined,
+    showPointers: js.UndefOr[Boolean] = js.undefined,
+    showRanges: js.UndefOr[Boolean] = js.undefined,
+    showScaleBar: js.UndefOr[Boolean] = js.undefined,
+    showTicks: js.UndefOr[Boolean] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    startAngle: js.UndefOr[Double] = js.undefined,
+    subGauges: js.Array[ScalesSubGauge] = null,
+    sweepAngle: js.UndefOr[Double] = js.undefined,
+    ticks: js.Array[ScalesTick] = null
+  ): Scale = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (customLabels != null) __obj.updateDynamic("customLabels")(customLabels.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (indicators != null) __obj.updateDynamic("indicators")(indicators.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (!js.isUndefined(majorIntervalValue)) __obj.updateDynamic("majorIntervalValue")(majorIntervalValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximum)) __obj.updateDynamic("maximum")(maximum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimum)) __obj.updateDynamic("minimum")(minimum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minorIntervalValue)) __obj.updateDynamic("minorIntervalValue")(minorIntervalValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (pointerCap != null) __obj.updateDynamic("pointerCap")(pointerCap.asInstanceOf[js.Any])
+    if (pointers != null) __obj.updateDynamic("pointers")(pointers.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (ranges != null) __obj.updateDynamic("ranges")(ranges.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowOffset)) __obj.updateDynamic("shadowOffset")(shadowOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showIndicators)) __obj.updateDynamic("showIndicators")(showIndicators.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLabels)) __obj.updateDynamic("showLabels")(showLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showPointers)) __obj.updateDynamic("showPointers")(showPointers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRanges)) __obj.updateDynamic("showRanges")(showRanges.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showScaleBar)) __obj.updateDynamic("showScaleBar")(showScaleBar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTicks)) __obj.updateDynamic("showTicks")(showTicks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startAngle)) __obj.updateDynamic("startAngle")(startAngle.get.asInstanceOf[js.Any])
+    if (subGauges != null) __obj.updateDynamic("subGauges")(subGauges.asInstanceOf[js.Any])
+    if (!js.isUndefined(sweepAngle)) __obj.updateDynamic("sweepAngle")(sweepAngle.get.asInstanceOf[js.Any])
+    if (ticks != null) __obj.updateDynamic("ticks")(ticks.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scale]
   }
-  @scala.inline
-  implicit class ScaleOps[Self <: Scale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: ScalesBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomLabels(value: js.Array[ScalesCustomLabel]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: Direction | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndicators(value: js.Array[ScalesIndicator]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndicators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: js.Array[ScalesLabel]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMajorIntervalValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorIntervalValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMajorIntervalValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorIntervalValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorIntervalValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorIntervalValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorIntervalValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorIntervalValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointerCap(value: ScalesPointerCap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerCap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointerCap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerCap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointers(value: js.Array[ScalesPointer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRanges(value: js.Array[ScalesRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowIndicators(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIndicators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowIndicators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIndicators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowPointers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowPointers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPointers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRanges(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowScaleBar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScaleBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowScaleBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScaleBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTicks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubGauges(value: js.Array[ScalesSubGauge]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subGauges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubGauges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subGauges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSweepAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sweepAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSweepAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sweepAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTicks(value: js.Array[ScalesTick]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,110 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExportUsersJob extends Job {
-  var connection_id: js.UndefOr[String] = js.native
-  var created_at: js.UndefOr[String] = js.native
-  var fields: js.UndefOr[js.Array[ExportUserField]] = js.native
-  var format: js.UndefOr[JobFormat] = js.native
-  var id: String = js.native
-  var location: js.UndefOr[String] = js.native
-  var status: JobStatus = js.native
-  var `type`: users_export = js.native
+  var connection_id: js.UndefOr[String] = js.undefined
+  var created_at: js.UndefOr[String] = js.undefined
+  var fields: js.UndefOr[js.Array[ExportUserField]] = js.undefined
+  var format: js.UndefOr[JobFormat] = js.undefined
+  var id: String
+  var location: js.UndefOr[String] = js.undefined
+  var status: JobStatus
+  var `type`: users_export
 }
 
 object ExportUsersJob {
   @scala.inline
-  def apply(id: String, status: JobStatus, `type`: users_export): ExportUsersJob = {
+  def apply(
+    id: String,
+    status: JobStatus,
+    `type`: users_export,
+    connection_id: String = null,
+    created_at: String = null,
+    fields: js.Array[ExportUserField] = null,
+    format: JobFormat = null,
+    location: String = null
+  ): ExportUsersJob = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (connection_id != null) __obj.updateDynamic("connection_id")(connection_id.asInstanceOf[js.Any])
+    if (created_at != null) __obj.updateDynamic("created_at")(created_at.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportUsersJob]
   }
-  @scala.inline
-  implicit class ExportUsersJobOps[Self <: ExportUsersJob] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: JobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: users_export): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnection_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: js.Array[ExportUserField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: JobFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

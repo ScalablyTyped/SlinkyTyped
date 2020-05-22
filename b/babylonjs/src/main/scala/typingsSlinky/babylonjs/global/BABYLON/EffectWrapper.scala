@@ -14,5 +14,20 @@ class EffectWrapper protected ()
     * @param creationOptions options to create the effect
     */
   def this(creationOptions: EffectWrapperCreationOptions) = this()
+  /**
+    * The underlying effect
+    */
+  /* CompleteClass */
+  override var effect: typingsSlinky.babylonjs.BABYLON.Effect = js.native
+  /**
+    * Event that is fired right before the effect is drawn (should be used to update uniforms)
+    */
+  /* CompleteClass */
+  override var onApplyObservable: typingsSlinky.babylonjs.BABYLON.Observable[js.Object] = js.native
+  /**
+    * Disposes of the effect wrapper
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

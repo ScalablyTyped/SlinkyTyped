@@ -4,337 +4,89 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDatePickerProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var date: js.UndefOr[js.Any] = js.native
-  var defaultDate: js.UndefOr[js.Any] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var formatDay: js.UndefOr[js.Function2[/* day */ Double, /* date */ js.UndefOr[js.Any], _]] = js.native
-  var formatMonth: js.UndefOr[js.Function2[/* month */ Double, /* date */ js.UndefOr[js.Any], _]] = js.native
-  var itemStyle: js.UndefOr[js.Any] = js.native
-  var locale: js.UndefOr[js.Any] = js.native
-  var maxDate: js.UndefOr[js.Any] = js.native
-  var maxHour: js.UndefOr[Double] = js.native
-  var maxMinute: js.UndefOr[Double] = js.native
-  var minDate: js.UndefOr[js.Any] = js.native
-  var minHour: js.UndefOr[Double] = js.native
-  var minMinute: js.UndefOr[Double] = js.native
-  var minuteStep: js.UndefOr[Double] = js.native
-  var mode: js.UndefOr[String] = js.native
-  var onDateChange: js.UndefOr[js.Function1[/* date */ js.Any, Unit]] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var date: js.UndefOr[js.Any] = js.undefined
+  var defaultDate: js.UndefOr[js.Any] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var formatDay: js.UndefOr[js.Function2[/* day */ Double, /* date */ js.UndefOr[js.Any], _]] = js.undefined
+  var formatMonth: js.UndefOr[js.Function2[/* month */ Double, /* date */ js.UndefOr[js.Any], _]] = js.undefined
+  var itemStyle: js.UndefOr[js.Any] = js.undefined
+  var locale: js.UndefOr[js.Any] = js.undefined
+  var maxDate: js.UndefOr[js.Any] = js.undefined
+  var maxHour: js.UndefOr[Double] = js.undefined
+  var maxMinute: js.UndefOr[Double] = js.undefined
+  var minDate: js.UndefOr[js.Any] = js.undefined
+  var minHour: js.UndefOr[Double] = js.undefined
+  var minMinute: js.UndefOr[Double] = js.undefined
+  var minuteStep: js.UndefOr[Double] = js.undefined
+  var mode: js.UndefOr[String] = js.undefined
+  var onDateChange: js.UndefOr[js.Function1[/* date */ js.Any, Unit]] = js.undefined
   /** web only */
-  var onScrollChange: js.UndefOr[js.Function3[/* date */ js.Any, /* vals */ js.Any, /* index */ Double, Unit]] = js.native
-  var onValueChange: js.UndefOr[js.Function2[/* vals */ js.Any, /* index */ Double, Unit]] = js.native
-  var pickerPrefixCls: js.UndefOr[String] = js.native
+  var onScrollChange: js.UndefOr[js.Function3[/* date */ js.Any, /* vals */ js.Any, /* index */ Double, Unit]] = js.undefined
+  var onValueChange: js.UndefOr[js.Function2[/* vals */ js.Any, /* index */ Double, Unit]] = js.undefined
+  var pickerPrefixCls: js.UndefOr[String] = js.undefined
   /** web only */
-  var prefixCls: js.UndefOr[String] = js.native
-  var rootNativeProps: js.UndefOr[js.Object] = js.native
-  var style: js.UndefOr[js.Any] = js.native
-  var use12Hours: js.UndefOr[Boolean] = js.native
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var rootNativeProps: js.UndefOr[js.Object] = js.undefined
+  var style: js.UndefOr[js.Any] = js.undefined
+  var use12Hours: js.UndefOr[Boolean] = js.undefined
 }
 
 object IDatePickerProps {
   @scala.inline
-  def apply(): IDatePickerProps = {
+  def apply(
+    className: String = null,
+    date: js.Any = null,
+    defaultDate: js.Any = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    formatDay: (/* day */ Double, /* date */ js.UndefOr[js.Any]) => _ = null,
+    formatMonth: (/* month */ Double, /* date */ js.UndefOr[js.Any]) => _ = null,
+    itemStyle: js.Any = null,
+    locale: js.Any = null,
+    maxDate: js.Any = null,
+    maxHour: js.UndefOr[Double] = js.undefined,
+    maxMinute: js.UndefOr[Double] = js.undefined,
+    minDate: js.Any = null,
+    minHour: js.UndefOr[Double] = js.undefined,
+    minMinute: js.UndefOr[Double] = js.undefined,
+    minuteStep: js.UndefOr[Double] = js.undefined,
+    mode: String = null,
+    onDateChange: /* date */ js.Any => Unit = null,
+    onScrollChange: (/* date */ js.Any, /* vals */ js.Any, /* index */ Double) => Unit = null,
+    onValueChange: (/* vals */ js.Any, /* index */ Double) => Unit = null,
+    pickerPrefixCls: String = null,
+    prefixCls: String = null,
+    rootNativeProps: js.Object = null,
+    style: js.Any = null,
+    use12Hours: js.UndefOr[Boolean] = js.undefined
+  ): IDatePickerProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (formatDay != null) __obj.updateDynamic("formatDay")(js.Any.fromFunction2(formatDay))
+    if (formatMonth != null) __obj.updateDynamic("formatMonth")(js.Any.fromFunction2(formatMonth))
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHour)) __obj.updateDynamic("maxHour")(maxHour.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxMinute)) __obj.updateDynamic("maxMinute")(maxMinute.get.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(minHour)) __obj.updateDynamic("minHour")(minHour.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minMinute)) __obj.updateDynamic("minMinute")(minMinute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minuteStep)) __obj.updateDynamic("minuteStep")(minuteStep.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (onDateChange != null) __obj.updateDynamic("onDateChange")(js.Any.fromFunction1(onDateChange))
+    if (onScrollChange != null) __obj.updateDynamic("onScrollChange")(js.Any.fromFunction3(onScrollChange))
+    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction2(onValueChange))
+    if (pickerPrefixCls != null) __obj.updateDynamic("pickerPrefixCls")(pickerPrefixCls.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (rootNativeProps != null) __obj.updateDynamic("rootNativeProps")(rootNativeProps.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDatePickerProps]
   }
-  @scala.inline
-  implicit class IDatePickerPropsOps[Self <: IDatePickerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultDate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatDay(value: (/* day */ Double, /* date */ js.UndefOr[js.Any]) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDay")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatMonth(value: (/* month */ Double, /* date */ js.UndefOr[js.Any]) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMonth")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHour(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMinute(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMinute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMinute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMinute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHour(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinMinute(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minMinute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinMinute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minMinute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinuteStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinuteStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDateChange(value: /* date */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScrollChange(value: (/* date */ js.Any, /* vals */ js.Any, /* index */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollChange")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScrollChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnValueChange(value: (/* vals */ js.Any, /* index */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnValueChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickerPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerPrefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickerPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerPrefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNativeProps(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootNativeProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootNativeProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootNativeProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse12Hours(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use12Hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse12Hours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use12Hours")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-dropdown.SemanticUI.DropdownSettings._Impl, 'fullTextSearch'> */
-@js.native
 trait PickImplfullTextSearch extends js.Object {
-  var fullTextSearch: Boolean | exact = js.native
+  var fullTextSearch: Boolean | exact
 }
 
 object PickImplfullTextSearch {
@@ -17,19 +16,5 @@ object PickImplfullTextSearch {
     val __obj = js.Dynamic.literal(fullTextSearch = fullTextSearch.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplfullTextSearch]
   }
-  @scala.inline
-  implicit class PickImplfullTextSearchOps[Self <: PickImplfullTextSearch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullTextSearch(value: Boolean | exact): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTextSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

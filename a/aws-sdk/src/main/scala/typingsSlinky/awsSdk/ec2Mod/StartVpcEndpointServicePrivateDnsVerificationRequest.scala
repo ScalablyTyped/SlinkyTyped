@@ -18,35 +18,10 @@ trait StartVpcEndpointServicePrivateDnsVerificationRequest extends js.Object {
 
 object StartVpcEndpointServicePrivateDnsVerificationRequest {
   @scala.inline
-  def apply(ServiceId: VpcEndpointServiceId): StartVpcEndpointServicePrivateDnsVerificationRequest = {
+  def apply(ServiceId: VpcEndpointServiceId, DryRun: js.UndefOr[Boolean] = js.undefined): StartVpcEndpointServicePrivateDnsVerificationRequest = {
     val __obj = js.Dynamic.literal(ServiceId = ServiceId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartVpcEndpointServicePrivateDnsVerificationRequest]
   }
-  @scala.inline
-  implicit class StartVpcEndpointServicePrivateDnsVerificationRequestOps[Self <: StartVpcEndpointServicePrivateDnsVerificationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceId(value: VpcEndpointServiceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "vue-i18n" : "8.15.6"
+      "vue-i18n" : "8.17.7"
     }
   ],
   "test-dependencies" : [
     {
-      "vue-i18n" : "8.15.6"
+      "vue-i18n" : "8.17.7"
     }
   ],
   "compile-devDependencies" : [

@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * Interface for an Iframe control.
   * @see {@link FramedControl}
   */
-@js.native
 trait IframeControl
   extends FramedControl
      with UiCanSetVisibleElement {
@@ -19,7 +18,7 @@ trait IframeControl
     * @returns The initial URL.
     * @remarks Unavailable for Microsoft Dynamics CRM for tablets.
     */
-  def getInitialUrl(): String = js.native
+  def getInitialUrl(): String
 }
 
 object IframeControl {
@@ -41,19 +40,5 @@ object IframeControl {
     val __obj = js.Dynamic.literal(getContentWindow = js.Any.fromFunction0(getContentWindow), getControlType = js.Any.fromFunction0(getControlType), getInitialUrl = js.Any.fromFunction0(getInitialUrl), getLabel = js.Any.fromFunction0(getLabel), getName = js.Any.fromFunction0(getName), getObject = js.Any.fromFunction0(getObject), getParent = js.Any.fromFunction0(getParent), getSrc = js.Any.fromFunction0(getSrc), getVisible = js.Any.fromFunction0(getVisible), setLabel = js.Any.fromFunction1(setLabel), setSrc = js.Any.fromFunction1(setSrc), setVisible = js.Any.fromFunction1(setVisible))
     __obj.asInstanceOf[IframeControl]
   }
-  @scala.inline
-  implicit class IframeControlOps[Self <: IframeControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetInitialUrl(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInitialUrl")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

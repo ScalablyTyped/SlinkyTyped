@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PluginArgsBase extends js.Object {
-  var Ractive: Instantiable = js.native
+  var Ractive: Instantiable
 }
 
 object PluginArgsBase {
@@ -16,19 +15,5 @@ object PluginArgsBase {
     val __obj = js.Dynamic.literal(Ractive = Ractive.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginArgsBase]
   }
-  @scala.inline
-  implicit class PluginArgsBaseOps[Self <: PluginArgsBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRactive(value: Instantiable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ractive")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

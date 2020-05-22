@@ -42,113 +42,26 @@ trait Schedule extends js.Object {
 
 object Schedule {
   @scala.inline
-  def apply(): Schedule = {
+  def apply(
+    CopyTags: js.UndefOr[CopyTags] = js.undefined,
+    CreateRule: CreateRule = null,
+    CrossRegionCopyRules: CrossRegionCopyRules = null,
+    FastRestoreRule: FastRestoreRule = null,
+    Name: ScheduleName = null,
+    RetainRule: RetainRule = null,
+    TagsToAdd: TagsToAddList = null,
+    VariableTags: VariableTagsList = null
+  ): Schedule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CopyTags)) __obj.updateDynamic("CopyTags")(CopyTags.get.asInstanceOf[js.Any])
+    if (CreateRule != null) __obj.updateDynamic("CreateRule")(CreateRule.asInstanceOf[js.Any])
+    if (CrossRegionCopyRules != null) __obj.updateDynamic("CrossRegionCopyRules")(CrossRegionCopyRules.asInstanceOf[js.Any])
+    if (FastRestoreRule != null) __obj.updateDynamic("FastRestoreRule")(FastRestoreRule.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (RetainRule != null) __obj.updateDynamic("RetainRule")(RetainRule.asInstanceOf[js.Any])
+    if (TagsToAdd != null) __obj.updateDynamic("TagsToAdd")(TagsToAdd.asInstanceOf[js.Any])
+    if (VariableTags != null) __obj.updateDynamic("VariableTags")(VariableTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[Schedule]
   }
-  @scala.inline
-  implicit class ScheduleOps[Self <: Schedule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopyTags(value: CopyTags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateRule(value: CreateRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossRegionCopyRules(value: CrossRegionCopyRules): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CrossRegionCopyRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossRegionCopyRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CrossRegionCopyRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFastRestoreRule(value: FastRestoreRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FastRestoreRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFastRestoreRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FastRestoreRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ScheduleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetainRule(value: RetainRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetainRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagsToAdd(value: TagsToAddList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsToAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagsToAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsToAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableTags(value: VariableTagsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariableTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableTags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,113 +10,50 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to initialize a context.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * A kernel preference.
     */
-  var kernelPreference: js.UndefOr[IKernelPreference] = js.native
+  var kernelPreference: js.UndefOr[IKernelPreference] = js.undefined
   /**
     * A session manager instance.
     */
-  var manager: IManager = js.native
+  var manager: IManager
   /**
     * The name of the session.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The initial path of the file.
     */
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.undefined
   /**
     * A function to call when the session becomes busy.
     */
-  var setBusy: js.UndefOr[js.Function0[IDisposable]] = js.native
+  var setBusy: js.UndefOr[js.Function0[IDisposable]] = js.undefined
   /**
     * The type of the session.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(manager: IManager): IOptions = {
+  def apply(
+    manager: IManager,
+    kernelPreference: IKernelPreference = null,
+    name: String = null,
+    path: String = null,
+    setBusy: () => IDisposable = null,
+    `type`: String = null
+  ): IOptions = {
     val __obj = js.Dynamic.literal(manager = manager.asInstanceOf[js.Any])
+    if (kernelPreference != null) __obj.updateDynamic("kernelPreference")(kernelPreference.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (setBusy != null) __obj.updateDynamic("setBusy")(js.Any.fromFunction0(setBusy))
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManager(value: IManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKernelPreference(value: IKernelPreference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKernelPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBusy(value: () => IDisposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBusy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetBusy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBusy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

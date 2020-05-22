@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * method to cache these passwords.
   * @since OOo 1.1.2
   */
-@js.native
 trait XSSOPasswordCache extends XInterface {
   /**
     * adds a username/password combination to the cache.
@@ -21,7 +20,7 @@ trait XSSOPasswordCache extends XInterface {
     * @param Password the associated password
     * @param Persist indicates whether or not the username/password combination should be persisted
     */
-  def addPassword(UserName: String, Password: String, Persist: Boolean): Unit = js.native
+  def addPassword(UserName: String, Password: String, Persist: Boolean): Unit
   /**
     * retrieves a password for a given user from the cache.
     *
@@ -30,13 +29,13 @@ trait XSSOPasswordCache extends XInterface {
     * @param Persist indicates whether or not the password is persistent
     * @returns the required password
     */
-  def getPassword(UserName: String, Persist: js.Array[Boolean]): String = js.native
+  def getPassword(UserName: String, Persist: js.Array[Boolean]): String
   /**
     * removes a password from the cache
     * @param UserName the name of the user whose password should be removed.
     * @param RemovePersist indicates whether or not the password should also be removed, if present, from persistent cache.
     */
-  def removePassword(UserName: String, RemovePersist: Boolean): Unit = js.native
+  def removePassword(UserName: String, RemovePersist: Boolean): Unit
 }
 
 object XSSOPasswordCache {
@@ -52,31 +51,5 @@ object XSSOPasswordCache {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addPassword = js.Any.fromFunction3(addPassword), getPassword = js.Any.fromFunction2(getPassword), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePassword = js.Any.fromFunction2(removePassword))
     __obj.asInstanceOf[XSSOPasswordCache]
   }
-  @scala.inline
-  implicit class XSSOPasswordCacheOps[Self <: XSSOPasswordCache] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddPassword(value: (String, String, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPassword")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetPassword(value: (String, js.Array[Boolean]) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPassword")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePassword(value: (String, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePassword")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

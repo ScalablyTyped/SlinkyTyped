@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectionalSuspenseListProps
   extends SuspenseListCommonProps
      with typingsSlinky.react.mod.SuspenseListProps
@@ -15,7 +14,7 @@ trait DirectionalSuspenseListProps
   /**
     * Defines the order in which the `SuspenseList` children should be revealed.
     */
-  var revealOrder: forwards | backwards = js.native
+  var revealOrder: forwards | backwards
   /**
     * Dictates how unloaded items in a SuspenseList is shown.
     *
@@ -23,40 +22,19 @@ trait DirectionalSuspenseListProps
     * - `collapsed` shows only the next fallback in the list.
     * - `hidden` doesn’t show any unloaded items.
     */
-  var tail: js.UndefOr[SuspenseListTailMode] = js.native
+  var tail: js.UndefOr[SuspenseListTailMode] = js.undefined
 }
 
 object DirectionalSuspenseListProps {
   @scala.inline
-  def apply(children: ReactElement | js.Iterable[ReactElement], revealOrder: forwards | backwards): DirectionalSuspenseListProps = {
+  def apply(
+    children: ReactElement | js.Iterable[ReactElement],
+    revealOrder: forwards | backwards,
+    tail: SuspenseListTailMode = null
+  ): DirectionalSuspenseListProps = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], revealOrder = revealOrder.asInstanceOf[js.Any])
+    if (tail != null) __obj.updateDynamic("tail")(tail.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionalSuspenseListProps]
   }
-  @scala.inline
-  implicit class DirectionalSuspenseListPropsOps[Self <: DirectionalSuspenseListProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRevealOrder(value: forwards | backwards): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revealOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTail(value: SuspenseListTailMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

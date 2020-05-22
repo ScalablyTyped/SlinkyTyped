@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FitBoundsOptions extends js.Object {
-  var fitBoundsOptions: js.UndefOr[typingsSlinky.mapboxGl.mod.FitBoundsOptions] = js.native
-  var positionOptions: js.UndefOr[PositionOptions] = js.native
-  var showAccuracyCircle: js.UndefOr[Boolean] = js.native
-  var showUserLocation: js.UndefOr[Boolean] = js.native
-  var trackUserLocation: js.UndefOr[Boolean] = js.native
+  var fitBoundsOptions: js.UndefOr[typingsSlinky.mapboxGl.mod.FitBoundsOptions] = js.undefined
+  var positionOptions: js.UndefOr[PositionOptions] = js.undefined
+  var showAccuracyCircle: js.UndefOr[Boolean] = js.undefined
+  var showUserLocation: js.UndefOr[Boolean] = js.undefined
+  var trackUserLocation: js.UndefOr[Boolean] = js.undefined
 }
 
 object FitBoundsOptions {
   @scala.inline
-  def apply(): FitBoundsOptions = {
+  def apply(
+    fitBoundsOptions: typingsSlinky.mapboxGl.mod.FitBoundsOptions = null,
+    positionOptions: PositionOptions = null,
+    showAccuracyCircle: js.UndefOr[Boolean] = js.undefined,
+    showUserLocation: js.UndefOr[Boolean] = js.undefined,
+    trackUserLocation: js.UndefOr[Boolean] = js.undefined
+  ): FitBoundsOptions = {
     val __obj = js.Dynamic.literal()
+    if (fitBoundsOptions != null) __obj.updateDynamic("fitBoundsOptions")(fitBoundsOptions.asInstanceOf[js.Any])
+    if (positionOptions != null) __obj.updateDynamic("positionOptions")(positionOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(showAccuracyCircle)) __obj.updateDynamic("showAccuracyCircle")(showAccuracyCircle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showUserLocation)) __obj.updateDynamic("showUserLocation")(showUserLocation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trackUserLocation)) __obj.updateDynamic("trackUserLocation")(trackUserLocation.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FitBoundsOptions]
   }
-  @scala.inline
-  implicit class FitBoundsOptionsOps[Self <: FitBoundsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFitBoundsOptions(value: typingsSlinky.mapboxGl.mod.FitBoundsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fitBoundsOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFitBoundsOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fitBoundsOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionOptions(value: PositionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAccuracyCircle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAccuracyCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAccuracyCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAccuracyCircle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowUserLocation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showUserLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowUserLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showUserLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackUserLocation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackUserLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackUserLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackUserLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

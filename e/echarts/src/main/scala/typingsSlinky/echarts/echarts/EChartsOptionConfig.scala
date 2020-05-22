@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EChartsOptionConfig extends js.Object {
-  var lazyUpdate: js.UndefOr[Boolean] = js.native
-  var notMerge: js.UndefOr[Boolean] = js.native
-  var silent: js.UndefOr[Boolean] = js.native
+  var lazyUpdate: js.UndefOr[Boolean] = js.undefined
+  var notMerge: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.undefined
 }
 
 object EChartsOptionConfig {
   @scala.inline
-  def apply(): EChartsOptionConfig = {
+  def apply(
+    lazyUpdate: js.UndefOr[Boolean] = js.undefined,
+    notMerge: js.UndefOr[Boolean] = js.undefined,
+    silent: js.UndefOr[Boolean] = js.undefined
+  ): EChartsOptionConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(lazyUpdate)) __obj.updateDynamic("lazyUpdate")(lazyUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(notMerge)) __obj.updateDynamic("notMerge")(notMerge.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EChartsOptionConfig]
   }
-  @scala.inline
-  implicit class EChartsOptionConfigOps[Self <: EChartsOptionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLazyUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazyUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotMerge(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notMerge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotMerge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notMerge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

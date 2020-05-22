@@ -6,655 +6,269 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgGridHiding
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Specifies time of milliseconds for animation duration to show/hide modal dialog
-  	 *
-  	 */
-  var columnChooserAnimationDuration: js.UndefOr[Double] = js.native
+    * Specifies time of milliseconds for animation duration to show/hide modal dialog
+    *
+    */
+  var columnChooserAnimationDuration: js.UndefOr[Double] = js.undefined
   /**
-  	 * Event fired when button Apply in column chooser is clicked
-  	 */
-  var columnChooserButtonApplyClick: js.UndefOr[ColumnChooserButtonApplyClickEvent] = js.native
+    * Event fired when button Apply in column chooser is clicked
+    */
+  var columnChooserButtonApplyClick: js.UndefOr[ColumnChooserButtonApplyClickEvent] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * Specifies text of button which apply changes in modal dialog. Use option [locale.columnChooserButtonApplyText](ui.iggridhiding#options:locale.columnChooserButtonApplyText).
-  	 */
-  var columnChooserButtonApplyText: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * Specifies text of button which apply changes in modal dialog. Use option [locale.columnChooserButtonApplyText](ui.iggridhiding#options:locale.columnChooserButtonApplyText).
+    */
+  var columnChooserButtonApplyText: js.UndefOr[String] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * Specifies text of button which cancel changes in modal dialog. Use option [locale.columnChooserButtonCancelText](ui.iggridhiding#options:locale.columnChooserButtonCancelText).
-  	 */
-  var columnChooserButtonCancelText: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * Specifies text of button which cancel changes in modal dialog. Use option [locale.columnChooserButtonCancelText](ui.iggridhiding#options:locale.columnChooserButtonCancelText).
+    */
+  var columnChooserButtonCancelText: js.UndefOr[String] = js.undefined
   /**
-  	 * Event fired when button Reset in column chooser is clicked
-  	 */
-  var columnChooserButtonResetClick: js.UndefOr[ColumnChooserButtonResetClickEvent] = js.native
+    * Event fired when button Reset in column chooser is clicked
+    */
+  var columnChooserButtonResetClick: js.UndefOr[ColumnChooserButtonResetClickEvent] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * The caption of the column chooser dialog. Use option [locale.columnChooserCaptionText](ui.iggridhiding#options:locale.columnChooserCaptionText).
-  	 */
-  var columnChooserCaptionText: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * The caption of the column chooser dialog. Use option [locale.columnChooserCaptionText](ui.iggridhiding#options:locale.columnChooserCaptionText).
+    */
+  var columnChooserCaptionText: js.UndefOr[String] = js.undefined
   /**
-  	 * Event fired after the column chooser has been closed.
-  	 */
-  var columnChooserClosed: js.UndefOr[ColumnChooserClosedEvent] = js.native
+    * Event fired after the column chooser has been closed.
+    */
+  var columnChooserClosed: js.UndefOr[ColumnChooserClosedEvent] = js.undefined
   /**
-  	 * Event fired before the column chooser is closed.
-  	 */
-  var columnChooserClosing: js.UndefOr[ColumnChooserClosingEvent] = js.native
+    * Event fired before the column chooser is closed.
+    */
+  var columnChooserClosing: js.UndefOr[ColumnChooserClosingEvent] = js.undefined
   /**
-  	 * Controls containment behavior.
-  	 *
-  	 * owner  The column chooser dialog will be draggable only in the grid area
-  	 * window  The column chooser dialog will be draggable in the whole window area
-  	 */
-  var columnChooserContainment: js.UndefOr[String] = js.native
+    * Controls containment behavior.
+    *
+    * owner  The column chooser dialog will be draggable only in the grid area
+    * window  The column chooser dialog will be draggable in the whole window area
+    */
+  var columnChooserContainment: js.UndefOr[String] = js.undefined
   /**
-  	 * Event fired after the contents of the column chooser are rendered.
-  	 */
-  var columnChooserContentsRendered: js.UndefOr[ColumnChooserContentsRenderedEvent] = js.native
+    * Event fired after the contents of the column chooser are rendered.
+    */
+  var columnChooserContentsRendered: js.UndefOr[ColumnChooserContentsRenderedEvent] = js.undefined
   /**
-  	 * Event fired before the contents of the column chooser are rendered.
-  	 */
-  var columnChooserContentsRendering: js.UndefOr[ColumnChooserContentsRenderingEvent] = js.native
+    * Event fired before the contents of the column chooser are rendered.
+    */
+  var columnChooserContentsRendering: js.UndefOr[ColumnChooserContentsRenderingEvent] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * The text used in the drop down tools menu(Feature Chooser) to launch the column chooser dialog. Use option [locale.columnChooserDisplayText](ui.iggridhiding#options:locale.columnChooserDisplayText).
-  	 */
-  var columnChooserDisplayText: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * The text used in the drop down tools menu(Feature Chooser) to launch the column chooser dialog. Use option [locale.columnChooserDisplayText](ui.iggridhiding#options:locale.columnChooserDisplayText).
+    */
+  var columnChooserDisplayText: js.UndefOr[String] = js.undefined
   /**
-  	 * The default column chooser height.
-  	 *
-  	 */
-  var columnChooserHeight: js.UndefOr[String] = js.native
+    * The default column chooser height.
+    *
+    */
+  var columnChooserHeight: js.UndefOr[String] = js.undefined
   /**
-  	 * Specifies on click show/hide directly to be shown/hidden columns. If columnChooserHideOnClick is false then Apply and Cancel Buttons are shown on the bottom of modal dialog. Columns are Shown/Hidden after the Apply button is clicked
-  	 *
-  	 */
-  var columnChooserHideOnClick: js.UndefOr[Boolean] = js.native
+    * Specifies on click show/hide directly to be shown/hidden columns. If columnChooserHideOnClick is false then Apply and Cancel Buttons are shown on the bottom of modal dialog. Columns are Shown/Hidden after the Apply button is clicked
+    *
+    */
+  var columnChooserHideOnClick: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * The text used in the column chooser to hide column. Use option [locale.columnChooserHideText](ui.iggridhiding#options:locale.columnChooserHideText).
-  	 */
-  var columnChooserHideText: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * The text used in the column chooser to hide column. Use option [locale.columnChooserHideText](ui.iggridhiding#options:locale.columnChooserHideText).
+    */
+  var columnChooserHideText: js.UndefOr[String] = js.undefined
   /**
-  	 * Event fired every time the column chooser changes its position.
-  	 */
-  var columnChooserMoving: js.UndefOr[ColumnChooserMovingEvent] = js.native
+    * Event fired every time the column chooser changes its position.
+    */
+  var columnChooserMoving: js.UndefOr[ColumnChooserMovingEvent] = js.undefined
   /**
-  	 * Event fired after the column chooser is already opened.
-  	 */
-  var columnChooserOpened: js.UndefOr[ColumnChooserOpenedEvent] = js.native
+    * Event fired after the column chooser is already opened.
+    */
+  var columnChooserOpened: js.UndefOr[ColumnChooserOpenedEvent] = js.undefined
   /**
-  	 * Event fired before the column chooser is opened.
-  	 */
-  var columnChooserOpening: js.UndefOr[ColumnChooserOpeningEvent] = js.native
+    * Event fired before the column chooser is opened.
+    */
+  var columnChooserOpening: js.UndefOr[ColumnChooserOpeningEvent] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * Text label for reset button. Use option [locale.columnChooserResetButtonLabel](ui.iggridhiding#options:locale.columnChooserResetButtonLabel).
-  	 */
-  var columnChooserResetButtonLabel: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * Text label for reset button. Use option [locale.columnChooserResetButtonLabel](ui.iggridhiding#options:locale.columnChooserResetButtonLabel).
+    */
+  var columnChooserResetButtonLabel: js.UndefOr[String] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * The text used in the column chooser to show column. Use option [locale.columnChooserShowText](ui.iggridhiding#options:locale.columnChooserShowText).
-  	 */
-  var columnChooserShowText: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * The text used in the column chooser to show column. Use option [locale.columnChooserShowText](ui.iggridhiding#options:locale.columnChooserShowText).
+    */
+  var columnChooserShowText: js.UndefOr[String] = js.undefined
   /**
-  	 * The default column chooser width.
-  	 *
-  	 */
-  var columnChooserWidth: js.UndefOr[String] = js.native
+    * The default column chooser width.
+    *
+    */
+  var columnChooserWidth: js.UndefOr[String] = js.undefined
   /**
-  	 * Event fired after the hiding has been executed and results are rendered.
-  	 */
-  var columnHidden: js.UndefOr[ColumnHiddenEvent] = js.native
+    * Event fired after the hiding has been executed and results are rendered.
+    */
+  var columnHidden: js.UndefOr[ColumnHiddenEvent] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * The text used in the drop down tools menu(Feature Chooser) to hide a column. Use option [locale.columnHideText](ui.iggridhiding#options:locale.columnHideText).
-  	 */
-  var columnHideText: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * The text used in the drop down tools menu(Feature Chooser) to hide a column. Use option [locale.columnHideText](ui.iggridhiding#options:locale.columnHideText).
+    */
+  var columnHideText: js.UndefOr[String] = js.undefined
   /**
-  	 * Event fired before a hiding operation is executed.
-  	 */
-  var columnHiding: js.UndefOr[ColumnHidingEvent] = js.native
+    * Event fired before a hiding operation is executed.
+    */
+  var columnHiding: js.UndefOr[ColumnHidingEvent] = js.undefined
   /**
-  	 * Event fired when trying to hide all columns in fixed or unfixed area.
-  	 */
-  var columnHidingRefused: js.UndefOr[ColumnHidingRefusedEvent] = js.native
+    * Event fired when trying to hide all columns in fixed or unfixed area.
+    */
+  var columnHidingRefused: js.UndefOr[ColumnHidingRefusedEvent] = js.undefined
   /**
-  	 * A list of column settings that specifies hiding options on a per column basis.
-  	 *
-  	 */
-  var columnSettings: js.UndefOr[js.Array[IgGridHidingColumnSetting]] = js.native
+    * A list of column settings that specifies hiding options on a per column basis.
+    *
+    */
+  var columnSettings: js.UndefOr[js.Array[IgGridHidingColumnSetting]] = js.undefined
   /**
-  	 * Event fired before a showing operation is executed.
-  	 */
-  var columnShowing: js.UndefOr[ColumnShowingEvent] = js.native
+    * Event fired before a showing operation is executed.
+    */
+  var columnShowing: js.UndefOr[ColumnShowingEvent] = js.undefined
   /**
-  	 * Event fired when trying to show column(s) in fixed area and total width of fixed are will be larger than whole grid width.
-  	 */
-  var columnShowingRefused: js.UndefOr[ColumnShowingRefusedEvent] = js.native
+    * Event fired when trying to show column(s) in fixed area and total width of fixed are will be larger than whole grid width.
+    */
+  var columnShowingRefused: js.UndefOr[ColumnShowingRefusedEvent] = js.undefined
   /**
-  	 * Event fired after the showing has been executed and results are rendered.
-  	 */
-  var columnShown: js.UndefOr[ColumnShownEvent] = js.native
+    * Event fired after the showing has been executed and results are rendered.
+    */
+  var columnShown: js.UndefOr[ColumnShownEvent] = js.undefined
   /**
-  	 * Name of the dialog widget to be used. It should inherit from $.ui.igGridModalDialog.
-  	 *
-  	 */
-  var dialogWidget: js.UndefOr[String] = js.native
+    * Name of the dialog widget to be used. It should inherit from $.ui.igGridModalDialog.
+    *
+    */
+  var dialogWidget: js.UndefOr[String] = js.undefined
   /**
-  	 * The duration of the dropdown animation in milliseconds.
-  	 *
-  	 */
-  var dropDownAnimationDuration: js.UndefOr[Double] = js.native
+    * The duration of the dropdown animation in milliseconds.
+    *
+    */
+  var dropDownAnimationDuration: js.UndefOr[Double] = js.undefined
   /**
-  	 * The width in pixels of the hidden column indicator in the header.
-  	 *
-  	 */
-  var hiddenColumnIndicatorHeaderWidth: js.UndefOr[Double] = js.native
+    * The width in pixels of the hidden column indicator in the header.
+    *
+    */
+  var hiddenColumnIndicatorHeaderWidth: js.UndefOr[Double] = js.undefined
   /**
-  	 * This option has been removed as of 2017.2 Volume release.
-  	 * The text displayed in the tooltip of the hidden column indicator. Use option [locale.hiddenColumnIndicatorTooltipText](ui.iggridhiding#options:locale.hiddenColumnIndicatorTooltipText).
-  	 */
-  var hiddenColumnIndicatorTooltipText: js.UndefOr[String] = js.native
+    * This option has been removed as of 2017.2 Volume release.
+    * The text displayed in the tooltip of the hidden column indicator. Use option [locale.hiddenColumnIndicatorTooltipText](ui.iggridhiding#options:locale.hiddenColumnIndicatorTooltipText).
+    */
+  var hiddenColumnIndicatorTooltipText: js.UndefOr[String] = js.undefined
   /**
-  	 * Enables/disables feature inheritance for the child layouts. NOTE: It only applies for igHierarchicalGrid.
-  	 *
-  	 */
-  var inherit: js.UndefOr[Boolean] = js.native
+    * Enables/disables feature inheritance for the child layouts. NOTE: It only applies for igHierarchicalGrid.
+    *
+    */
+  var inherit: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Set/Get the locale language setting for the widget.
-  	 *
-  	 */
-  var language: js.UndefOr[String] = js.native
-  var locale: js.UndefOr[IgGridHidingLocale] = js.native
+    * Set/Get the locale language setting for the widget.
+    *
+    */
+  var language: js.UndefOr[String] = js.undefined
+  var locale: js.UndefOr[IgGridHidingLocale] = js.undefined
   /**
-  	 * Event fired before a hiding operation is executed.
-  	 */
-  var multiColumnHiding: js.UndefOr[MultiColumnHidingEvent] = js.native
+    * Event fired before a hiding operation is executed.
+    */
+  var multiColumnHiding: js.UndefOr[MultiColumnHidingEvent] = js.undefined
   /**
-  	 * Set/Get the regional setting for the widget.
-  	 *
-  	 */
-  var regional: js.UndefOr[String | js.Object] = js.native
+    * Set/Get the regional setting for the widget.
+    *
+    */
+  var regional: js.UndefOr[String | js.Object] = js.undefined
 }
 
 object IgGridHiding {
   @scala.inline
-  def apply(): IgGridHiding = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    columnChooserAnimationDuration: js.UndefOr[Double] = js.undefined,
+    columnChooserButtonApplyClick: (/* event */ Event, /* ui */ ColumnChooserButtonApplyClickEventUIParam) => Unit = null,
+    columnChooserButtonApplyText: String = null,
+    columnChooserButtonCancelText: String = null,
+    columnChooserButtonResetClick: (/* event */ Event, /* ui */ ColumnChooserButtonResetClickEventUIParam) => Unit = null,
+    columnChooserCaptionText: String = null,
+    columnChooserClosed: (/* event */ Event, /* ui */ ColumnChooserClosedEventUIParam) => Unit = null,
+    columnChooserClosing: (/* event */ Event, /* ui */ ColumnChooserClosingEventUIParam) => Unit = null,
+    columnChooserContainment: String = null,
+    columnChooserContentsRendered: (/* event */ Event, /* ui */ ColumnChooserContentsRenderedEventUIParam) => Unit = null,
+    columnChooserContentsRendering: (/* event */ Event, /* ui */ ColumnChooserContentsRenderingEventUIParam) => Unit = null,
+    columnChooserDisplayText: String = null,
+    columnChooserHeight: String = null,
+    columnChooserHideOnClick: js.UndefOr[Boolean] = js.undefined,
+    columnChooserHideText: String = null,
+    columnChooserMoving: (/* event */ Event, /* ui */ ColumnChooserMovingEventUIParam) => Unit = null,
+    columnChooserOpened: (/* event */ Event, /* ui */ ColumnChooserOpenedEventUIParam) => Unit = null,
+    columnChooserOpening: (/* event */ Event, /* ui */ ColumnChooserOpeningEventUIParam) => Unit = null,
+    columnChooserResetButtonLabel: String = null,
+    columnChooserShowText: String = null,
+    columnChooserWidth: String = null,
+    columnHidden: (/* event */ Event, /* ui */ ColumnHiddenEventUIParam) => Unit = null,
+    columnHideText: String = null,
+    columnHiding: (/* event */ Event, /* ui */ ColumnHidingEventUIParam) => Unit = null,
+    columnHidingRefused: (/* event */ Event, /* ui */ ColumnHidingRefusedEventUIParam) => Unit = null,
+    columnSettings: js.Array[IgGridHidingColumnSetting] = null,
+    columnShowing: (/* event */ Event, /* ui */ ColumnShowingEventUIParam) => Unit = null,
+    columnShowingRefused: (/* event */ Event, /* ui */ ColumnShowingRefusedEventUIParam) => Unit = null,
+    columnShown: (/* event */ Event, /* ui */ ColumnShownEventUIParam) => Unit = null,
+    dialogWidget: String = null,
+    dropDownAnimationDuration: js.UndefOr[Double] = js.undefined,
+    hiddenColumnIndicatorHeaderWidth: js.UndefOr[Double] = js.undefined,
+    hiddenColumnIndicatorTooltipText: String = null,
+    inherit: js.UndefOr[Boolean] = js.undefined,
+    language: String = null,
+    locale: IgGridHidingLocale = null,
+    multiColumnHiding: (/* event */ Event, /* ui */ MultiColumnHidingEventUIParam) => Unit = null,
+    regional: String | js.Object = null
+  ): IgGridHiding = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(columnChooserAnimationDuration)) __obj.updateDynamic("columnChooserAnimationDuration")(columnChooserAnimationDuration.get.asInstanceOf[js.Any])
+    if (columnChooserButtonApplyClick != null) __obj.updateDynamic("columnChooserButtonApplyClick")(js.Any.fromFunction2(columnChooserButtonApplyClick))
+    if (columnChooserButtonApplyText != null) __obj.updateDynamic("columnChooserButtonApplyText")(columnChooserButtonApplyText.asInstanceOf[js.Any])
+    if (columnChooserButtonCancelText != null) __obj.updateDynamic("columnChooserButtonCancelText")(columnChooserButtonCancelText.asInstanceOf[js.Any])
+    if (columnChooserButtonResetClick != null) __obj.updateDynamic("columnChooserButtonResetClick")(js.Any.fromFunction2(columnChooserButtonResetClick))
+    if (columnChooserCaptionText != null) __obj.updateDynamic("columnChooserCaptionText")(columnChooserCaptionText.asInstanceOf[js.Any])
+    if (columnChooserClosed != null) __obj.updateDynamic("columnChooserClosed")(js.Any.fromFunction2(columnChooserClosed))
+    if (columnChooserClosing != null) __obj.updateDynamic("columnChooserClosing")(js.Any.fromFunction2(columnChooserClosing))
+    if (columnChooserContainment != null) __obj.updateDynamic("columnChooserContainment")(columnChooserContainment.asInstanceOf[js.Any])
+    if (columnChooserContentsRendered != null) __obj.updateDynamic("columnChooserContentsRendered")(js.Any.fromFunction2(columnChooserContentsRendered))
+    if (columnChooserContentsRendering != null) __obj.updateDynamic("columnChooserContentsRendering")(js.Any.fromFunction2(columnChooserContentsRendering))
+    if (columnChooserDisplayText != null) __obj.updateDynamic("columnChooserDisplayText")(columnChooserDisplayText.asInstanceOf[js.Any])
+    if (columnChooserHeight != null) __obj.updateDynamic("columnChooserHeight")(columnChooserHeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnChooserHideOnClick)) __obj.updateDynamic("columnChooserHideOnClick")(columnChooserHideOnClick.get.asInstanceOf[js.Any])
+    if (columnChooserHideText != null) __obj.updateDynamic("columnChooserHideText")(columnChooserHideText.asInstanceOf[js.Any])
+    if (columnChooserMoving != null) __obj.updateDynamic("columnChooserMoving")(js.Any.fromFunction2(columnChooserMoving))
+    if (columnChooserOpened != null) __obj.updateDynamic("columnChooserOpened")(js.Any.fromFunction2(columnChooserOpened))
+    if (columnChooserOpening != null) __obj.updateDynamic("columnChooserOpening")(js.Any.fromFunction2(columnChooserOpening))
+    if (columnChooserResetButtonLabel != null) __obj.updateDynamic("columnChooserResetButtonLabel")(columnChooserResetButtonLabel.asInstanceOf[js.Any])
+    if (columnChooserShowText != null) __obj.updateDynamic("columnChooserShowText")(columnChooserShowText.asInstanceOf[js.Any])
+    if (columnChooserWidth != null) __obj.updateDynamic("columnChooserWidth")(columnChooserWidth.asInstanceOf[js.Any])
+    if (columnHidden != null) __obj.updateDynamic("columnHidden")(js.Any.fromFunction2(columnHidden))
+    if (columnHideText != null) __obj.updateDynamic("columnHideText")(columnHideText.asInstanceOf[js.Any])
+    if (columnHiding != null) __obj.updateDynamic("columnHiding")(js.Any.fromFunction2(columnHiding))
+    if (columnHidingRefused != null) __obj.updateDynamic("columnHidingRefused")(js.Any.fromFunction2(columnHidingRefused))
+    if (columnSettings != null) __obj.updateDynamic("columnSettings")(columnSettings.asInstanceOf[js.Any])
+    if (columnShowing != null) __obj.updateDynamic("columnShowing")(js.Any.fromFunction2(columnShowing))
+    if (columnShowingRefused != null) __obj.updateDynamic("columnShowingRefused")(js.Any.fromFunction2(columnShowingRefused))
+    if (columnShown != null) __obj.updateDynamic("columnShown")(js.Any.fromFunction2(columnShown))
+    if (dialogWidget != null) __obj.updateDynamic("dialogWidget")(dialogWidget.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropDownAnimationDuration)) __obj.updateDynamic("dropDownAnimationDuration")(dropDownAnimationDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hiddenColumnIndicatorHeaderWidth)) __obj.updateDynamic("hiddenColumnIndicatorHeaderWidth")(hiddenColumnIndicatorHeaderWidth.get.asInstanceOf[js.Any])
+    if (hiddenColumnIndicatorTooltipText != null) __obj.updateDynamic("hiddenColumnIndicatorTooltipText")(hiddenColumnIndicatorTooltipText.asInstanceOf[js.Any])
+    if (!js.isUndefined(inherit)) __obj.updateDynamic("inherit")(inherit.get.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (multiColumnHiding != null) __obj.updateDynamic("multiColumnHiding")(js.Any.fromFunction2(multiColumnHiding))
+    if (regional != null) __obj.updateDynamic("regional")(regional.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgGridHiding]
   }
-  @scala.inline
-  implicit class IgGridHidingOps[Self <: IgGridHiding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnChooserAnimationDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserAnimationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserAnimationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserButtonApplyClick(value: (/* event */ Event, /* ui */ ColumnChooserButtonApplyClickEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonApplyClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserButtonApplyClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonApplyClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserButtonApplyText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonApplyText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserButtonApplyText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonApplyText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserButtonCancelText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonCancelText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserButtonCancelText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonCancelText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserButtonResetClick(value: (/* event */ Event, /* ui */ ColumnChooserButtonResetClickEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonResetClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserButtonResetClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonResetClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserCaptionText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserCaptionText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserCaptionText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserCaptionText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserClosed(value: (/* event */ Event, /* ui */ ColumnChooserClosedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserClosed")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserClosed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserClosed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserClosing(value: (/* event */ Event, /* ui */ ColumnChooserClosingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserClosing")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserClosing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserClosing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserContainment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserContainment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserContainment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserContainment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserContentsRendered(value: (/* event */ Event, /* ui */ ColumnChooserContentsRenderedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserContentsRendered")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserContentsRendered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserContentsRendered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserContentsRendering(value: (/* event */ Event, /* ui */ ColumnChooserContentsRenderingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserContentsRendering")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserContentsRendering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserContentsRendering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserDisplayText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserDisplayText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserDisplayText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserDisplayText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserHideOnClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserHideOnClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserHideOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserHideOnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserHideText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserHideText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserHideText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserHideText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserMoving(value: (/* event */ Event, /* ui */ ColumnChooserMovingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserMoving")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserMoving: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserMoving")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserOpened(value: (/* event */ Event, /* ui */ ColumnChooserOpenedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserOpened")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserOpened: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserOpened")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserOpening(value: (/* event */ Event, /* ui */ ColumnChooserOpeningEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserOpening")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserOpening: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserOpening")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserResetButtonLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserResetButtonLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserResetButtonLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserResetButtonLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserShowText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserShowText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserShowText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserShowText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnChooserWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnChooserWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnHidden(value: (/* event */ Event, /* ui */ ColumnHiddenEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidden")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnHideText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHideText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnHideText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHideText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnHiding(value: (/* event */ Event, /* ui */ ColumnHidingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHiding")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnHiding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHiding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnHidingRefused(value: (/* event */ Event, /* ui */ ColumnHidingRefusedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidingRefused")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnHidingRefused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidingRefused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnSettings(value: js.Array[IgGridHidingColumnSetting]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnShowing(value: (/* event */ Event, /* ui */ ColumnShowingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnShowing")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnShowing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnShowing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnShowingRefused(value: (/* event */ Event, /* ui */ ColumnShowingRefusedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnShowingRefused")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnShowingRefused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnShowingRefused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnShown(value: (/* event */ Event, /* ui */ ColumnShownEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnShown")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnShown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnShown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialogWidget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogWidget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialogWidget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogWidget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropDownAnimationDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownAnimationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropDownAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownAnimationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenColumnIndicatorHeaderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenColumnIndicatorHeaderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenColumnIndicatorHeaderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenColumnIndicatorHeaderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenColumnIndicatorTooltipText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenColumnIndicatorTooltipText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenColumnIndicatorTooltipText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenColumnIndicatorTooltipText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInherit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInherit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: IgGridHidingLocale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiColumnHiding(value: (/* event */ Event, /* ui */ MultiColumnHidingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiColumnHiding")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutMultiColumnHiding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiColumnHiding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegional(value: String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

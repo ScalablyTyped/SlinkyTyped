@@ -3,6 +3,7 @@ package typingsSlinky.backboneMarionette.mod
 import org.scalajs.dom.raw.DocumentFragment
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.backboneMarionette.anon.Instantiable
 import typingsSlinky.backboneMarionette.anon.InstantiableView
 import typingsSlinky.backboneMarionette.anon.PreventRender
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("backbone.marionette", "CollectionView")
 @js.native
-class CollectionView[TModel /* <: Model */, TView /* <: View[TModel] */, TCollection /* <: Collection[TModel] */] () extends View[TModel] {
+class CollectionView[TModel /* <: Model[_, ModelSetOptions] */, TView /* <: View[TModel] */, TCollection /* <: Collection[TModel] */] () extends View[TModel] {
   def this(options: CollectionViewOptions[TModel, TCollection]) = this()
   /**
     * Specify a child view to use.

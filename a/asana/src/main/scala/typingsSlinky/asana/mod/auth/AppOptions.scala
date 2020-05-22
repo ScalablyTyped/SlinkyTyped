@@ -4,62 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppOptions extends AsanaAuthorizeUrlOptions {
-  var clientId: js.UndefOr[String | Double] = js.native
-  var clientSecret: js.UndefOr[String] = js.native
-  var scope: js.UndefOr[String] = js.native
+  var clientId: js.UndefOr[String | Double] = js.undefined
+  var clientSecret: js.UndefOr[String] = js.undefined
+  var scope: js.UndefOr[String] = js.undefined
 }
 
 object AppOptions {
   @scala.inline
-  def apply(): AppOptions = {
+  def apply(
+    asanaBaseUrl: String = null,
+    clientId: String | Double = null,
+    clientSecret: String = null,
+    redirectUri: String = null,
+    scope: String = null
+  ): AppOptions = {
     val __obj = js.Dynamic.literal()
+    if (asanaBaseUrl != null) __obj.updateDynamic("asanaBaseUrl")(asanaBaseUrl.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (clientSecret != null) __obj.updateDynamic("clientSecret")(clientSecret.asInstanceOf[js.Any])
+    if (redirectUri != null) __obj.updateDynamic("redirectUri")(redirectUri.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppOptions]
   }
-  @scala.inline
-  implicit class AppOptionsOps[Self <: AppOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientId(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

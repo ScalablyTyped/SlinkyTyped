@@ -5,17 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @class
-  * @name pc.LayoutGroupComponentSystem
-  * @augments pc.ComponentSystem
-  * @description Create a new LayoutGroupComponentSystem.
-  * @classdesc Manages creation of {@link pc.LayoutGroupComponent}s.
-  * @param {pc.Application} app - The application.
+  * Create a new LayoutGroupComponentSystem.
+  * @param app - The application.
   */
 @JSImport("playcanvas", "LayoutGroupComponentSystem")
 @js.native
 class LayoutGroupComponentSystem protected ()
-  extends typingsSlinky.playcanvas.pc.LayoutGroupComponentSystem {
+  extends typingsSlinky.playcanvas.pc.EventHandler {
   def this(app: typingsSlinky.playcanvas.pc.Application) = this()
 }
 

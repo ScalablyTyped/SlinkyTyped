@@ -1,8 +1,8 @@
 package typingsSlinky.mobx.observablemapMod
 
-import typingsSlinky.mobx.anon.Name
-import typingsSlinky.mobx.anon.NewValue
-import typingsSlinky.mobx.anon.Object
+import typingsSlinky.mobx.mobxStrings.add
+import typingsSlinky.mobx.mobxStrings.delete
+import typingsSlinky.mobx.mobxStrings.update
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +16,25 @@ trait IMapDidChange[K, V] extends js.Object
 
 object IMapDidChange {
   @scala.inline
-  implicit def apply[K, V](value: Name[K, V]): IMapDidChange[K, V] = value.asInstanceOf[IMapDidChange[K, V]]
+  def Name[K, V](name: K, newValue: V, `object`: ObservableMap[K, V], oldValue: V, `type`: update): IMapDidChange[K, V] = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], newValue = newValue.asInstanceOf[js.Any], oldValue = oldValue.asInstanceOf[js.Any])
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IMapDidChange[K, V]]
+  }
   @scala.inline
-  implicit def apply[K, V](value: NewValue[K, V]): IMapDidChange[K, V] = value.asInstanceOf[IMapDidChange[K, V]]
+  def NewValue[K, V](name: K, newValue: V, `object`: ObservableMap[K, V], `type`: add): IMapDidChange[K, V] = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], newValue = newValue.asInstanceOf[js.Any])
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IMapDidChange[K, V]]
+  }
   @scala.inline
-  implicit def apply[K, V](value: Object[K, V]): IMapDidChange[K, V] = value.asInstanceOf[IMapDidChange[K, V]]
+  def Object[K, V](name: K, `object`: ObservableMap[K, V], oldValue: V, `type`: delete): IMapDidChange[K, V] = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], oldValue = oldValue.asInstanceOf[js.Any])
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IMapDidChange[K, V]]
+  }
 }
 

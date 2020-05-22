@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeParameters */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeAnnotation */
-@js.native
 trait TSCallSignatureDeclaration
   extends ASTNode
      with DeclarationKind
@@ -32,12 +31,12 @@ trait TSCallSignatureDeclaration
      with StatementKind
      with TSHasOptionalTypeAnnotationKind
      with TSHasOptionalTypeParametersKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSCallSignatureDeclaration = js.native
-  var typeAnnotation: js.UndefOr[TSTypeAnnotationKind | Null] = js.native
-  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind]
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSCallSignatureDeclaration
+  var typeAnnotation: js.UndefOr[TSTypeAnnotationKind | Null] = js.undefined
+  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.undefined
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSCallSignatureDeclaration")

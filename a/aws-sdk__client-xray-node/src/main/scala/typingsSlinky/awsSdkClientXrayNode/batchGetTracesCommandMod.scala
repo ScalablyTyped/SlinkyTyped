@@ -26,9 +26,16 @@ object batchGetTracesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: BatchGetTracesInput) = this()
+    /* CompleteClass */
+    override val input: BatchGetTracesInput = js.native
     val middlewareStack: MiddlewareStack[BatchGetTracesInput, BatchGetTracesOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: XRayResolvedConfiguration
+    ): Handler[BatchGetTracesInput, BatchGetTracesOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[BatchGetTracesInput, BatchGetTracesOutput] = js.native
   }

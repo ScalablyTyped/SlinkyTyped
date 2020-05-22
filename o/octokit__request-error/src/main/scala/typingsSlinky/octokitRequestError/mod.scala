@@ -23,6 +23,10 @@ object mod extends js.Object {
       * error response headers
       */
     var headers: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResponseHeaders */ js.Any = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     @JSName("name")
     var name_RequestError: HttpError = js.native
     /**

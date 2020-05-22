@@ -26,5 +26,4 @@ trait Collection[TOut, TIn]
      with CollectionComparision
      with CollectionBuildingFiltering[TIn, TOut]
      with CollectionAlgorithms
-     with CollectionArgument
 

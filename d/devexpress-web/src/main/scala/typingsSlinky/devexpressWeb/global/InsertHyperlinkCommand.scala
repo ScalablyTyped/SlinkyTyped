@@ -10,5 +10,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InsertHyperlinkCommand")
 @js.native
 class InsertHyperlinkCommand ()
-  extends typingsSlinky.devexpressWeb.InsertHyperlinkCommand
+  extends typingsSlinky.devexpressWeb.InsertHyperlinkCommand {
+  /**
+    * Executes the InsertHyperlinkCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
+    * @param settings A HyperlinkSettings object specifying hyperlink settings.
+    */
+  /* CompleteClass */
+  override def execute(settings: typingsSlinky.devexpressWeb.HyperlinkSettings): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[typingsSlinky.devexpressWeb.HyperlinkSettings] = js.native
+}
 

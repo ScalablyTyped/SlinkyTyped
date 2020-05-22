@@ -1,5 +1,6 @@
 package typingsSlinky.wordpressCompose
 
+import slinky.core.ReactComponentClass
 import typingsSlinky.wordpressCompose.anon.kinkeyofWindowEventMapstr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,9 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object withGlobalEventsMod extends js.Object {
   // prettier-ignore
-  def default(eventMapper: kinkeyofWindowEventMapstr): js.Function1[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentClass<any> */ /* component */ js.Any, 
-    _
-  ] = js.native
+  def default(eventMapper: kinkeyofWindowEventMapstr): js.Function1[/* component */ ReactComponentClass[_], ReactComponentClass[_]] = js.native
 }
 

@@ -34,89 +34,22 @@ trait StackSummary extends js.Object {
 
 object StackSummary {
   @scala.inline
-  def apply(): StackSummary = {
+  def apply(
+    AppsCount: js.UndefOr[Integer] = js.undefined,
+    Arn: String = null,
+    InstancesCount: InstancesCount = null,
+    LayersCount: js.UndefOr[Integer] = js.undefined,
+    Name: String = null,
+    StackId: String = null
+  ): StackSummary = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AppsCount)) __obj.updateDynamic("AppsCount")(AppsCount.get.asInstanceOf[js.Any])
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (InstancesCount != null) __obj.updateDynamic("InstancesCount")(InstancesCount.asInstanceOf[js.Any])
+    if (!js.isUndefined(LayersCount)) __obj.updateDynamic("LayersCount")(LayersCount.get.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (StackId != null) __obj.updateDynamic("StackId")(StackId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackSummary]
   }
-  @scala.inline
-  implicit class StackSummaryOps[Self <: StackSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppsCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AppsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AppsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstancesCount(value: InstancesCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayersCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayersCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayersCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayersCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -29,65 +29,18 @@ trait SchemaProfile extends js.Object {
 
 object SchemaProfile {
   @scala.inline
-  def apply(): SchemaProfile = {
+  def apply(
+    emailAddress: String = null,
+    historyId: String = null,
+    messagesTotal: js.UndefOr[Double] = js.undefined,
+    threadsTotal: js.UndefOr[Double] = js.undefined
+  ): SchemaProfile = {
     val __obj = js.Dynamic.literal()
+    if (emailAddress != null) __obj.updateDynamic("emailAddress")(emailAddress.asInstanceOf[js.Any])
+    if (historyId != null) __obj.updateDynamic("historyId")(historyId.asInstanceOf[js.Any])
+    if (!js.isUndefined(messagesTotal)) __obj.updateDynamic("messagesTotal")(messagesTotal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(threadsTotal)) __obj.updateDynamic("threadsTotal")(threadsTotal.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProfile]
   }
-  @scala.inline
-  implicit class SchemaProfileOps[Self <: SchemaProfile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmailAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistoryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("historyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("historyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessagesTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessagesTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesTotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreadsTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadsTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreadsTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadsTotal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

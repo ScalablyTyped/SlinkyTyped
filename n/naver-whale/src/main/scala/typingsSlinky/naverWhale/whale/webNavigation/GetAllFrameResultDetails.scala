@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetAllFrameResultDetails
   extends typingsSlinky.chrome.chrome.webNavigation.GetFrameResultDetails {
   /** The ID of the frame. 0 indicates that this is the main frame; a positive value indicates the ID of a subframe. */
-  var frameId: Double = js.native
+  var frameId: Double
   /** The ID of the process runs the renderer for this tab. */
-  var processId: Double = js.native
+  var processId: Double
 }
 
 object GetAllFrameResultDetails {
@@ -19,25 +18,5 @@ object GetAllFrameResultDetails {
     val __obj = js.Dynamic.literal(errorOccurred = errorOccurred.asInstanceOf[js.Any], frameId = frameId.asInstanceOf[js.Any], parentFrameId = parentFrameId.asInstanceOf[js.Any], processId = processId.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAllFrameResultDetails]
   }
-  @scala.inline
-  implicit class GetAllFrameResultDetailsOps[Self <: GetAllFrameResultDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrameId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProcessId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

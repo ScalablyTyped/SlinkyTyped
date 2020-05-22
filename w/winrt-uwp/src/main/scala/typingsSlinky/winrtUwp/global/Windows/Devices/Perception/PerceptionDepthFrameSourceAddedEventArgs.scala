@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs")
 @js.native
 abstract class PerceptionDepthFrameSourceAddedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs {
+  /** Gets the depth frame source that was added. */
+  /* CompleteClass */
+  override var frameSource: typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionDepthFrameSource = js.native
+}
 

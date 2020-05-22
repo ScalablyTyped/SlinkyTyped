@@ -3,11 +3,11 @@ package typingsSlinky.uirouterAngularjs.interfaceMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.uirouterCore.commonCommonMod.IInjectable
 import typingsSlinky.uirouterCore.stateInterfaceMod.ViewDeclaration
+import typingsSlinky.uirouterCore.viewInterfaceMod.ViewContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Ng1ViewDeclaration extends ViewDeclaration {
   /**
     * An object which maps `resolve`s to [[component]] `bindings`.
@@ -49,7 +49,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     * ```
     *
     */
-  var bindings: js.UndefOr[StringDictionary[String]] = js.native
+  var bindings: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * The name of the component to use for this view.
     *
@@ -102,7 +102,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     *
     * See also: Todd Motto's angular 1.3 and 1.4 [backport of .component()](https://github.com/toddmotto/angular-component)
     */
-  var component: js.UndefOr[String] = js.native
+  var component: js.UndefOr[String] = js.undefined
   /**
     * Dynamic component provider function.
     *
@@ -123,7 +123,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     * }
     * ```
     */
-  var componentProvider: js.UndefOr[IInjectable] = js.native
+  var componentProvider: js.UndefOr[IInjectable] = js.undefined
   /**
     * The view's controller function or name
     *
@@ -137,7 +137,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     *
     * See: [[Ng1Controller]] for information about component-level router hooks.
     */
-  var controller: js.UndefOr[IInjectable | String] = js.native
+  var controller: js.UndefOr[IInjectable | String] = js.undefined
   /**
     * A controller alias name.
     *
@@ -146,7 +146,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     * If present, the controller will be published to scope under the `controllerAs` name.
     * See: https://docs.angularjs.org/api/ng/directive/ngController
     */
-  var controllerAs: js.UndefOr[String] = js.native
+  var controllerAs: js.UndefOr[String] = js.undefined
   /**
     * Dynamic controller provider function.
     *
@@ -171,7 +171,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     * }
     * ```
     */
-  var controllerProvider: js.UndefOr[IInjectable] = js.native
+  var controllerProvider: js.UndefOr[IInjectable] = js.undefined
   /**
     * The scope variable name to use for resolve data.
     *
@@ -182,7 +182,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     *
     * Defaults to `$resolve`.
     */
-  var resolveAs: js.UndefOr[String] = js.native
+  var resolveAs: js.UndefOr[String] = js.undefined
   /**
     * The HTML template for the view.
     *
@@ -207,7 +207,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     * }
     * ```
     */
-  var template: js.UndefOr[js.Function | String] = js.native
+  var template: js.UndefOr[js.Function | String] = js.undefined
   /**
     * Injected function which returns the HTML template.
     *
@@ -223,7 +223,7 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     * }
     * ```
     */
-  var templateProvider: js.UndefOr[IInjectable] = js.native
+  var templateProvider: js.UndefOr[IInjectable] = js.undefined
   /**
     * The URL for the HTML template for the view.
     *
@@ -246,142 +246,45 @@ trait Ng1ViewDeclaration extends ViewDeclaration {
     * }
     * ```
     */
-  var templateUrl: js.UndefOr[String | js.Function] = js.native
+  var templateUrl: js.UndefOr[String | js.Function] = js.undefined
 }
 
 object Ng1ViewDeclaration {
   @scala.inline
-  def apply(): Ng1ViewDeclaration = {
+  def apply(
+    $context: ViewContext = null,
+    $name: String = null,
+    $type: String = null,
+    $uiViewContextAnchor: String = null,
+    $uiViewName: String = null,
+    bindings: StringDictionary[String] = null,
+    component: String = null,
+    componentProvider: IInjectable = null,
+    controller: IInjectable | String = null,
+    controllerAs: String = null,
+    controllerProvider: IInjectable = null,
+    resolveAs: String = null,
+    template: js.Function | String = null,
+    templateProvider: IInjectable = null,
+    templateUrl: String | js.Function = null
+  ): Ng1ViewDeclaration = {
     val __obj = js.Dynamic.literal()
+    if ($context != null) __obj.updateDynamic("$context")($context.asInstanceOf[js.Any])
+    if ($name != null) __obj.updateDynamic("$name")($name.asInstanceOf[js.Any])
+    if ($type != null) __obj.updateDynamic("$type")($type.asInstanceOf[js.Any])
+    if ($uiViewContextAnchor != null) __obj.updateDynamic("$uiViewContextAnchor")($uiViewContextAnchor.asInstanceOf[js.Any])
+    if ($uiViewName != null) __obj.updateDynamic("$uiViewName")($uiViewName.asInstanceOf[js.Any])
+    if (bindings != null) __obj.updateDynamic("bindings")(bindings.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (componentProvider != null) __obj.updateDynamic("componentProvider")(componentProvider.asInstanceOf[js.Any])
+    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
+    if (controllerAs != null) __obj.updateDynamic("controllerAs")(controllerAs.asInstanceOf[js.Any])
+    if (controllerProvider != null) __obj.updateDynamic("controllerProvider")(controllerProvider.asInstanceOf[js.Any])
+    if (resolveAs != null) __obj.updateDynamic("resolveAs")(resolveAs.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (templateProvider != null) __obj.updateDynamic("templateProvider")(templateProvider.asInstanceOf[js.Any])
+    if (templateUrl != null) __obj.updateDynamic("templateUrl")(templateUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ng1ViewDeclaration]
   }
-  @scala.inline
-  implicit class Ng1ViewDeclarationOps[Self <: Ng1ViewDeclaration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBindings(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentProvider(value: IInjectable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withController(value: IInjectable | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutController: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControllerAs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControllerAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerAs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControllerProvider(value: IInjectable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControllerProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolveAs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolveAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveAs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: js.Function | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateProvider(value: IInjectable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateUrl(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

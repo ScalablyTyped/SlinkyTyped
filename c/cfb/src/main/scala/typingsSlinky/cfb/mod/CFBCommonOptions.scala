@@ -9,51 +9,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CFBCommonOptions extends js.Object {
   /** If true, throw errors when features are not understood */
-  var WTF: js.UndefOr[Boolean] = js.native
+  var WTF: js.UndefOr[Boolean] = js.undefined
   /** Input data encoding */
-  var `type`: js.UndefOr[base64 | binary | buffer | file | array] = js.native
+  var `type`: js.UndefOr[base64 | binary | buffer | file | array] = js.undefined
 }
 
 object CFBCommonOptions {
   @scala.inline
-  def apply(): CFBCommonOptions = {
+  def apply(WTF: js.UndefOr[Boolean] = js.undefined, `type`: base64 | binary | buffer | file | array = null): CFBCommonOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(WTF)) __obj.updateDynamic("WTF")(WTF.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CFBCommonOptions]
   }
-  @scala.inline
-  implicit class CFBCommonOptionsOps[Self <: CFBCommonOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWTF(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WTF")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWTF: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WTF")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: base64 | binary | buffer | file | array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

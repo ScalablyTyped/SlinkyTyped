@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
   * describes an external link in a formula.
   * @since OOo 3.1
   */
-@js.native
 trait ExternalLinkInfo extends js.Object {
   /**
     * Location of this link type.
@@ -22,9 +21,9 @@ trait ExternalLinkInfo extends js.Object {
     *  2. If {@link Type} is {@link ExternalLinkType.DDE} , this member shall contain a {@link DDELinkInfo} describing service name, topic, and all known
     * items of a DDE link.
     */
-  var Data: js.Any = js.native
+  var Data: js.Any
   /** Link type, one of {@link ExternalLinkType} constants. */
-  var Type: Double = js.native
+  var Type: Double
 }
 
 object ExternalLinkInfo {
@@ -33,25 +32,5 @@ object ExternalLinkInfo {
     val __obj = js.Dynamic.literal(Data = Data.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExternalLinkInfo]
   }
-  @scala.inline
-  implicit class ExternalLinkInfoOps[Self <: ExternalLinkInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

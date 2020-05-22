@@ -19,18 +19,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
-@js.native
 trait UnaryExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var argument: ExpressionKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var operator: `-_` | Plussign | Exclamationmark | Tilde | typeof | void | delete = js.native
-  var prefix: js.UndefOr[Boolean] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.UnaryExpression = js.native
+  var argument: ExpressionKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var operator: `-_` | Plussign | Exclamationmark | Tilde | typeof | void | delete
+  var prefix: js.UndefOr[Boolean] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.UnaryExpression
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.UnaryExpression")

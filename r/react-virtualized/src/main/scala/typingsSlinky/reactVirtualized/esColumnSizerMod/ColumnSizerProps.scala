@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnSizerProps
   extends /**
   * PLEASE NOTE
@@ -17,13 +16,13 @@ trait ColumnSizerProps
   */
 /* key */ StringDictionary[js.Any] {
   /** Number of columns in Grid or Table child */
-  var columnCount: js.UndefOr[Double] = js.native
+  var columnCount: js.UndefOr[Double] = js.undefined
   /** Optional maximum allowed column width */
-  var columnMaxWidth: js.UndefOr[Double] = js.native
+  var columnMaxWidth: js.UndefOr[Double] = js.undefined
   /** Optional minimum allowed column width */
-  var columnMinWidth: js.UndefOr[Double] = js.native
+  var columnMinWidth: js.UndefOr[Double] = js.undefined
   /** Width of Grid or Table child */
-  var width: Double = js.native
+  var width: Double
   /**
     * Function responsible for rendering a virtualized Grid.
     * This function should implement the following signature:
@@ -33,70 +32,25 @@ trait ColumnSizerProps
     * The :registerChild should be passed to the Grid's :ref property.
     * The :adjustedWidth property is optional; it reflects the lesser of the overall width or the width of all columns.
     */
-  def children(props: SizedColumnProps): TagMod[Any] = js.native
+  def children(props: SizedColumnProps): TagMod[Any]
 }
 
 object ColumnSizerProps {
   @scala.inline
-  def apply(children: SizedColumnProps => TagMod[Any], width: Double): ColumnSizerProps = {
+  def apply(
+    children: SizedColumnProps => TagMod[Any],
+    width: Double,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    columnCount: js.UndefOr[Double] = js.undefined,
+    columnMaxWidth: js.UndefOr[Double] = js.undefined,
+    columnMinWidth: js.UndefOr[Double] = js.undefined
+  ): ColumnSizerProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), width = width.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(columnCount)) __obj.updateDynamic("columnCount")(columnCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnMaxWidth)) __obj.updateDynamic("columnMaxWidth")(columnMaxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnMinWidth)) __obj.updateDynamic("columnMinWidth")(columnMinWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnSizerProps]
   }
-  @scala.inline
-  implicit class ColumnSizerPropsOps[Self <: ColumnSizerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: SizedColumnProps => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnMinWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnMinWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

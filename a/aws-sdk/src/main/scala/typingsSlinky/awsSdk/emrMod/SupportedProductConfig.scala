@@ -18,41 +18,11 @@ trait SupportedProductConfig extends js.Object {
 
 object SupportedProductConfig {
   @scala.inline
-  def apply(): SupportedProductConfig = {
+  def apply(Args: XmlStringList = null, Name: XmlStringMaxLen256 = null): SupportedProductConfig = {
     val __obj = js.Dynamic.literal()
+    if (Args != null) __obj.updateDynamic("Args")(Args.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SupportedProductConfig]
   }
-  @scala.inline
-  implicit class SupportedProductConfigOps[Self <: SupportedProductConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: XmlStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

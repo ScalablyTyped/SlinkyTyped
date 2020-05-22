@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait typeCreateRendererParams extends Object {
   /**
     * The [named string](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) or basemap object of the Esri basemap that will be paired with the output visualization. Determines optimal colors for the output renderer.
@@ -16,7 +15,7 @@ trait typeCreateRendererParams extends Object {
     *
     * @default gray
     */
-  var basemap: js.UndefOr[String | Basemap] = js.native
+  var basemap: js.UndefOr[String | Basemap] = js.undefined
   /**
     * **This option only applies to generating renderers for mesh SceneLayers**. Specifies how the symbol's color is applied to the geometry color/texture. See the documentation in [FillSymbol3DLayer.material](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-FillSymbol3DLayer.html#material) for more context. See the table below for possible values.
     *
@@ -31,13 +30,13 @@ trait typeCreateRendererParams extends Object {
     *
     * @default replace
     */
-  var colorMixMode: js.UndefOr[String] = js.native
+  var colorMixMode: js.UndefOr[String] = js.undefined
   /**
     * Enables the `defaultSymbol` on the renderer and assigns it to features with no value.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var defaultSymbolEnabled: js.UndefOr[Boolean] = js.native
+  var defaultSymbolEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether to add edges to the output renderer. This setting only applies to mesh SceneLayers.  **Possible Values:** solid | none
     *
@@ -45,25 +44,25 @@ trait typeCreateRendererParams extends Object {
     *
     * @default none
     */
-  var edgesType: js.UndefOr[String] = js.native
+  var edgesType: js.UndefOr[String] = js.undefined
   /**
     * The name of the field from which to extract unique values that will be used for the basis of the data-driven visualization. This property is ignored if a `valueExpression` is used.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var field: js.UndefOr[String] = js.native
+  var field: js.UndefOr[String] = js.undefined
   /**
     * The layer for which the renderer is generated.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer = js.native
+  var layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer
   /**
     * Provides options for setting a title to a field that will override the field alias defined in the service. This title will represent the field in the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var legendOptions: js.UndefOr[typeCreateRendererParamsLegendOptions] = js.native
+  var legendOptions: js.UndefOr[typeCreateRendererParamsLegendOptions] = js.undefined
   /**
     * The number of types (or categories) displayed by the renderer. Use `-1` to display all returned types.
     *
@@ -71,7 +70,7 @@ trait typeCreateRendererParams extends Object {
     *
     * @default 10
     */
-  var numTypes: js.UndefOr[Double] = js.native
+  var numTypes: js.UndefOr[Double] = js.undefined
   /**
     * For polygon layers only. Indicates whether the polygon outline width should vary based on view scale. When set, a valid [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance must be provided in the `view` parameter. This option is not supported for 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
@@ -79,19 +78,19 @@ trait typeCreateRendererParams extends Object {
     *
     * @default false
     */
-  var outlineOptimizationEnabled: js.UndefOr[Boolean] = js.native
+  var outlineOptimizationEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates that all domain codes should be returned if the given field has domain values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var returnAllCodedValues: js.UndefOr[Boolean] = js.native
+  var returnAllCodedValues: js.UndefOr[Boolean] = js.undefined
   /**
     * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var signal: js.UndefOr[AbortSignal] = js.native
+  var signal: js.UndefOr[AbortSignal] = js.undefined
   /**
     * For point and polyline layers only. Indicates whether symbol sizes should vary based on view scale. When set, a valid [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance must be provided in the `view` parameter. This option is not supported for 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
@@ -99,7 +98,7 @@ trait typeCreateRendererParams extends Object {
     *
     * @default false
     */
-  var sizeOptimizationEnabled: js.UndefOr[Boolean] = js.native
+  var sizeOptimizationEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates how values should be sorted in the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html). See the table below for information about values that may be passed to this parameter.
     *
@@ -115,13 +114,13 @@ trait typeCreateRendererParams extends Object {
     *
     * @default count
     */
-  var sortBy: js.UndefOr[String] = js.native
+  var sortBy: js.UndefOr[String] = js.undefined
   /**
     * A statistics object generated from the [uniqueValues](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-uniqueValues.html) function. If statistics for the field have already been generated, then pass the object here to avoid making a second statistics query to the server.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var statistics: js.UndefOr[UniqueValuesResult] = js.native
+  var statistics: js.UndefOr[UniqueValuesResult] = js.undefined
   /**
     * The type of symbol to generate. This depends on the view in which you are working and the desired visualization. This parameter can be ignored for layers with a `mesh` geometry type. Possible values are described below.
     *
@@ -137,31 +136,31 @@ trait typeCreateRendererParams extends Object {
     *
     * @default 2d
     */
-  var symbolType: js.UndefOr[String] = js.native
+  var symbolType: js.UndefOr[String] = js.undefined
   /**
     * In authoring apps, the user may select a pre-defined type scheme. Pass the scheme object to this property to avoid getting one based on the `basemap`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var typeScheme: js.UndefOr[TypeScheme] = js.native
+  var typeScheme: js.UndefOr[TypeScheme] = js.undefined
   /**
     * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number or a string. This expression can reference field values using the `$feature` global variable. This property overrides the `field` property and therefore is used instead of an input `field` value.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var valueExpression: js.UndefOr[String] = js.native
+  var valueExpression: js.UndefOr[String] = js.undefined
   /**
     * Text describing the value returned from the `valueExpression`. This is used by the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html#createRenderer)
     */
-  var valueExpressionTitle: js.UndefOr[String] = js.native
+  var valueExpressionTitle: js.UndefOr[String] = js.undefined
   /**
     * The view where the input layer is rendered. This method inspects the view's background (i.e. basemap, web map background, or view container) to determine optimal colors for the output renderer. This parameter should always be set in practice, but if not provided this method will assume the generated renderer will display on a light background. This parameter is required when creating renderers using a `valueExpression` or for renderers intended for display in a SceneView.
     *
     * [Read more...](global.html)
     */
-  var view: js.UndefOr[View] = js.native
+  var view: js.UndefOr[View] = js.undefined
 }
 
 object typeCreateRendererParams {
@@ -170,240 +169,46 @@ object typeCreateRendererParams {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
     layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer,
-    propertyIsEnumerable: PropertyKey => Boolean
+    propertyIsEnumerable: PropertyKey => Boolean,
+    basemap: String | Basemap = null,
+    colorMixMode: String = null,
+    defaultSymbolEnabled: js.UndefOr[Boolean] = js.undefined,
+    edgesType: String = null,
+    field: String = null,
+    legendOptions: typeCreateRendererParamsLegendOptions = null,
+    numTypes: js.UndefOr[Double] = js.undefined,
+    outlineOptimizationEnabled: js.UndefOr[Boolean] = js.undefined,
+    returnAllCodedValues: js.UndefOr[Boolean] = js.undefined,
+    signal: AbortSignal = null,
+    sizeOptimizationEnabled: js.UndefOr[Boolean] = js.undefined,
+    sortBy: String = null,
+    statistics: UniqueValuesResult = null,
+    symbolType: String = null,
+    typeScheme: TypeScheme = null,
+    valueExpression: String = null,
+    valueExpressionTitle: String = null,
+    view: View = null
   ): typeCreateRendererParams = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), layer = layer.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
+    if (basemap != null) __obj.updateDynamic("basemap")(basemap.asInstanceOf[js.Any])
+    if (colorMixMode != null) __obj.updateDynamic("colorMixMode")(colorMixMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultSymbolEnabled)) __obj.updateDynamic("defaultSymbolEnabled")(defaultSymbolEnabled.get.asInstanceOf[js.Any])
+    if (edgesType != null) __obj.updateDynamic("edgesType")(edgesType.asInstanceOf[js.Any])
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (legendOptions != null) __obj.updateDynamic("legendOptions")(legendOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(numTypes)) __obj.updateDynamic("numTypes")(numTypes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(outlineOptimizationEnabled)) __obj.updateDynamic("outlineOptimizationEnabled")(outlineOptimizationEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnAllCodedValues)) __obj.updateDynamic("returnAllCodedValues")(returnAllCodedValues.get.asInstanceOf[js.Any])
+    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeOptimizationEnabled)) __obj.updateDynamic("sizeOptimizationEnabled")(sizeOptimizationEnabled.get.asInstanceOf[js.Any])
+    if (sortBy != null) __obj.updateDynamic("sortBy")(sortBy.asInstanceOf[js.Any])
+    if (statistics != null) __obj.updateDynamic("statistics")(statistics.asInstanceOf[js.Any])
+    if (symbolType != null) __obj.updateDynamic("symbolType")(symbolType.asInstanceOf[js.Any])
+    if (typeScheme != null) __obj.updateDynamic("typeScheme")(typeScheme.asInstanceOf[js.Any])
+    if (valueExpression != null) __obj.updateDynamic("valueExpression")(valueExpression.asInstanceOf[js.Any])
+    if (valueExpressionTitle != null) __obj.updateDynamic("valueExpressionTitle")(valueExpressionTitle.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[typeCreateRendererParams]
   }
-  @scala.inline
-  implicit class typeCreateRendererParamsOps[Self <: typeCreateRendererParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayer(value: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasemap(value: String | Basemap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorMixMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMixMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorMixMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMixMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSymbolEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSymbolEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSymbolEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSymbolEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgesType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgesType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgesType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgesType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendOptions(value: typeCreateRendererParamsLegendOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumTypes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineOptimizationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOptimizationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineOptimizationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOptimizationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnAllCodedValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnAllCodedValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnAllCodedValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnAllCodedValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignal(value: AbortSignal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeOptimizationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeOptimizationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeOptimizationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeOptimizationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatistics(value: UniqueValuesResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeScheme(value: TypeScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeScheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueExpressionTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpressionTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueExpressionTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpressionTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

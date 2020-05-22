@@ -5,121 +5,43 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An object speficying the Entities enrichment and related parameters. */
-@js.native
 trait NluEnrichmentEntities extends js.Object {
   /** When `true`, emotion detection of entities will be performed on the specified field. */
-  var emotion: js.UndefOr[Boolean] = js.native
+  var emotion: js.UndefOr[Boolean] = js.undefined
   /** The maximum number of entities to extract for each instance of the specified field. */
-  var limit: js.UndefOr[Double] = js.native
+  var limit: js.UndefOr[Double] = js.undefined
   /** When `true`, the types of mentions for each idetifieid entity is recorded. The default is `false`. */
-  var mention_types: js.UndefOr[Boolean] = js.native
+  var mention_types: js.UndefOr[Boolean] = js.undefined
   /** When `true`, the number of mentions of each identified entity is recorded. The default is `false`. */
-  var mentions: js.UndefOr[Boolean] = js.native
+  var mentions: js.UndefOr[Boolean] = js.undefined
   /** The enrichement model to use with entity extraction. May be a custom model provided by Watson Knowledge Studio, the public model for use with Knowledge Graph `en-news`, or the default public model `alchemy`. */
-  var model: js.UndefOr[String] = js.native
+  var model: js.UndefOr[String] = js.undefined
   /** When `true`, a list of sentence locations for each instance of each identified entity is recorded. The default is `false`. */
-  var sentence_locations: js.UndefOr[Boolean] = js.native
+  var sentence_locations: js.UndefOr[Boolean] = js.undefined
   /** When `true`, sentiment analysis of entities will be performed on the specified field. */
-  var sentiment: js.UndefOr[Boolean] = js.native
+  var sentiment: js.UndefOr[Boolean] = js.undefined
 }
 
 object NluEnrichmentEntities {
   @scala.inline
-  def apply(): NluEnrichmentEntities = {
+  def apply(
+    emotion: js.UndefOr[Boolean] = js.undefined,
+    limit: js.UndefOr[Double] = js.undefined,
+    mention_types: js.UndefOr[Boolean] = js.undefined,
+    mentions: js.UndefOr[Boolean] = js.undefined,
+    model: String = null,
+    sentence_locations: js.UndefOr[Boolean] = js.undefined,
+    sentiment: js.UndefOr[Boolean] = js.undefined
+  ): NluEnrichmentEntities = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(emotion)) __obj.updateDynamic("emotion")(emotion.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mention_types)) __obj.updateDynamic("mention_types")(mention_types.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mentions)) __obj.updateDynamic("mentions")(mentions.get.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (!js.isUndefined(sentence_locations)) __obj.updateDynamic("sentence_locations")(sentence_locations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sentiment)) __obj.updateDynamic("sentiment")(sentiment.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NluEnrichmentEntities]
   }
-  @scala.inline
-  implicit class NluEnrichmentEntitiesOps[Self <: NluEnrichmentEntities] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmotion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emotion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmotion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emotion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMention_types(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mention_types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMention_types: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mention_types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMentions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mentions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMentions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mentions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSentence_locations(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentence_locations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentence_locations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentence_locations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSentiment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentiment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentiment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentiment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

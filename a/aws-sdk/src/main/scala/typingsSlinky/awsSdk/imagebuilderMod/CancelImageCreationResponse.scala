@@ -22,53 +22,16 @@ trait CancelImageCreationResponse extends js.Object {
 
 object CancelImageCreationResponse {
   @scala.inline
-  def apply(): CancelImageCreationResponse = {
+  def apply(
+    clientToken: ClientToken = null,
+    imageBuildVersionArn: ImageBuildVersionArn = null,
+    requestId: NonEmptyString = null
+  ): CancelImageCreationResponse = {
     val __obj = js.Dynamic.literal()
+    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
+    if (imageBuildVersionArn != null) __obj.updateDynamic("imageBuildVersionArn")(imageBuildVersionArn.asInstanceOf[js.Any])
+    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelImageCreationResponse]
   }
-  @scala.inline
-  implicit class CancelImageCreationResponseOps[Self <: CancelImageCreationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientToken(value: ClientToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageBuildVersionArn(value: ImageBuildVersionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageBuildVersionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageBuildVersionArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageBuildVersionArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

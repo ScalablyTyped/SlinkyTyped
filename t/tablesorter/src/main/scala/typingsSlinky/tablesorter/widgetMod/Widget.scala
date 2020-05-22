@@ -6,20 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Widget[TElement] extends js.Object {
   /**
     * The identification of the widget.
     */
-  var id: String = js.native
+  var id: String
   /**
     * The default options of the widget.
     */
-  var options: StringDictionary[js.Any] = js.native
+  var options: StringDictionary[js.Any]
   /**
     * The priority of the widget.
     */
-  var priority: Double = js.native
+  var priority: Double
   /**
     * Pre-processes the table after applying a sort.
     *
@@ -40,7 +39,7 @@ trait Widget[TElement] extends js.Object {
     config: TablesorterConfigurationStore[TElement],
     widgetOptions: StringDictionary[js.Any],
     initializing: Boolean
-  ): Unit = js.native
+  ): Unit
   /**
     * Initializes the widget.
     *
@@ -61,7 +60,7 @@ trait Widget[TElement] extends js.Object {
     thisWidget: this.type,
     config: TablesorterConfigurationStore[TElement],
     widgetOptions: StringDictionary[js.Any]
-  ): Unit = js.native
+  ): Unit
   /**
     * Removes the widget from the table.
     *
@@ -82,7 +81,7 @@ trait Widget[TElement] extends js.Object {
     config: TablesorterConfigurationStore[TElement],
     widgetOptions: StringDictionary[js.Any],
     refreshing: Boolean
-  ): Unit = js.native
+  ): Unit
 }
 
 object Widget {
@@ -98,55 +97,5 @@ object Widget {
     val __obj = js.Dynamic.literal(format = js.Any.fromFunction4(format), id = id.asInstanceOf[js.Any], init = js.Any.fromFunction4(init), options = options.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any], remove = js.Any.fromFunction4(remove))
     __obj.asInstanceOf[Widget[TElement]]
   }
-  @scala.inline
-  implicit class WidgetOps[Self[telement] <: Widget[telement], TElement] (val x: Self[TElement]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TElement] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TElement]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TElement] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TElement] with Other]
-    @scala.inline
-    def withFormat(
-      value: (TElement, TablesorterConfigurationStore[TElement], StringDictionary[js.Any], Boolean) => Unit
-    ): Self[TElement] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self[TElement] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInit(
-      value: (TElement, Widget[TElement], TablesorterConfigurationStore[TElement], StringDictionary[js.Any]) => Unit
-    ): Self[TElement] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withOptions(value: StringDictionary[js.Any]): Self[TElement] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Double): Self[TElement] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemove(
-      value: (TElement, TablesorterConfigurationStore[TElement], StringDictionary[js.Any], Boolean) => Unit
-    ): Self[TElement] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

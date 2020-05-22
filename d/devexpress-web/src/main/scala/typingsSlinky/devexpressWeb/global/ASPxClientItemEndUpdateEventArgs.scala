@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientItemEndUpdateEventArgs")
 @js.native
 class ASPxClientItemEndUpdateEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientItemEndUpdateEventArgs
+  extends typingsSlinky.devexpressWeb.ASPxClientItemEndUpdateEventArgs {
+  /**
+    * Gets the component name of the dashboard item.
+    */
+  /* CompleteClass */
+  override var ItemName: String = js.native
+}
 

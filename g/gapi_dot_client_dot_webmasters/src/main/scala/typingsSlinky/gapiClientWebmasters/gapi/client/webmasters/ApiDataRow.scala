@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ApiDataRow extends js.Object {
-  var clicks: js.UndefOr[Double] = js.native
-  var ctr: js.UndefOr[Double] = js.native
-  var impressions: js.UndefOr[Double] = js.native
-  var keys: js.UndefOr[js.Array[String]] = js.native
-  var position: js.UndefOr[Double] = js.native
+  var clicks: js.UndefOr[Double] = js.undefined
+  var ctr: js.UndefOr[Double] = js.undefined
+  var impressions: js.UndefOr[Double] = js.undefined
+  var keys: js.UndefOr[js.Array[String]] = js.undefined
+  var position: js.UndefOr[Double] = js.undefined
 }
 
 object ApiDataRow {
   @scala.inline
-  def apply(): ApiDataRow = {
+  def apply(
+    clicks: js.UndefOr[Double] = js.undefined,
+    ctr: js.UndefOr[Double] = js.undefined,
+    impressions: js.UndefOr[Double] = js.undefined,
+    keys: js.Array[String] = null,
+    position: js.UndefOr[Double] = js.undefined
+  ): ApiDataRow = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clicks)) __obj.updateDynamic("clicks")(clicks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ctr)) __obj.updateDynamic("ctr")(ctr.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(impressions)) __obj.updateDynamic("impressions")(impressions.get.asInstanceOf[js.Any])
+    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
+    if (!js.isUndefined(position)) __obj.updateDynamic("position")(position.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiDataRow]
   }
-  @scala.inline
-  implicit class ApiDataRowOps[Self <: ApiDataRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClicks(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCtr(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCtr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImpressions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

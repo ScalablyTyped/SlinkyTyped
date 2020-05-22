@@ -7,17 +7,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides handling of array formulas in a cell range. */
-@js.native
 trait XArrayFormulaRange extends XInterface {
   /** returns the array formula of the range or an empty string, if the range does not contain an array formula. */
-  var ArrayFormula: String = js.native
+  var ArrayFormula: String
   /** returns the array formula of the range or an empty string, if the range does not contain an array formula. */
-  def getArrayFormula(): String = js.native
+  def getArrayFormula(): String
   /**
     * applies the array formula to the entire cell range.
     * @param aFormula the formula that will be applied as array formula. Passing an empty string erases an existing array formula.
     */
-  def setArrayFormula(aFormula: String): Unit = js.native
+  def setArrayFormula(aFormula: String): Unit
 }
 
 object XArrayFormulaRange {
@@ -33,31 +32,5 @@ object XArrayFormulaRange {
     val __obj = js.Dynamic.literal(ArrayFormula = ArrayFormula.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getArrayFormula = js.Any.fromFunction0(getArrayFormula), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setArrayFormula = js.Any.fromFunction1(setArrayFormula))
     __obj.asInstanceOf[XArrayFormulaRange]
   }
-  @scala.inline
-  implicit class XArrayFormulaRangeOps[Self <: XArrayFormulaRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrayFormula(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayFormula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetArrayFormula(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getArrayFormula")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetArrayFormula(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setArrayFormula")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

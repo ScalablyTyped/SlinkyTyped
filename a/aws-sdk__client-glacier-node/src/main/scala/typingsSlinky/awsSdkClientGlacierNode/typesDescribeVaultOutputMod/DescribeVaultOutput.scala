@@ -1,135 +1,62 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesDescribeVaultOutputMod
 
-import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait DescribeVaultOutput extends OutputTypesUnion {
+trait DescribeVaultOutput extends _OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */
   @JSName("$metadata")
-  var $metadata: ResponseMetadata = js.native
+  var $metadata: ResponseMetadata
   /**
     * <p>The Universal Coordinated Time (UTC) date when the vault was created. This value should be a string in the ISO 8601 date format, for example <code>2012-03-20T17:03:43.221Z</code>.</p>
     */
-  var CreationDate: js.UndefOr[String] = js.native
+  var CreationDate: js.UndefOr[String] = js.undefined
   /**
     * <p>The Universal Coordinated Time (UTC) date when Amazon Glacier completed the last vault inventory. This value should be a string in the ISO 8601 date format, for example <code>2012-03-20T17:03:43.221Z</code>.</p>
     */
-  var LastInventoryDate: js.UndefOr[String] = js.native
+  var LastInventoryDate: js.UndefOr[String] = js.undefined
   /**
     * <p>The number of archives in the vault as of the last inventory date. This field will return <code>null</code> if an inventory has not yet run on the vault, for example if you just created the vault.</p>
     */
-  var NumberOfArchives: js.UndefOr[Double] = js.native
+  var NumberOfArchives: js.UndefOr[Double] = js.undefined
   /**
     * <p>Total size, in bytes, of the archives in the vault as of the last inventory date. This field will return null if an inventory has not yet run on the vault, for example if you just created the vault.</p>
     */
-  var SizeInBytes: js.UndefOr[Double] = js.native
+  var SizeInBytes: js.UndefOr[Double] = js.undefined
   /**
     * <p>The Amazon Resource Name (ARN) of the vault.</p>
     */
-  var VaultARN: js.UndefOr[String] = js.native
+  var VaultARN: js.UndefOr[String] = js.undefined
   /**
     * <p>The name of the vault.</p>
     */
-  var VaultName: js.UndefOr[String] = js.native
+  var VaultName: js.UndefOr[String] = js.undefined
 }
 
 object DescribeVaultOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): DescribeVaultOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    CreationDate: String = null,
+    LastInventoryDate: String = null,
+    NumberOfArchives: js.UndefOr[Double] = js.undefined,
+    SizeInBytes: js.UndefOr[Double] = js.undefined,
+    VaultARN: String = null,
+    VaultName: String = null
+  ): DescribeVaultOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (LastInventoryDate != null) __obj.updateDynamic("LastInventoryDate")(LastInventoryDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfArchives)) __obj.updateDynamic("NumberOfArchives")(NumberOfArchives.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SizeInBytes)) __obj.updateDynamic("SizeInBytes")(SizeInBytes.get.asInstanceOf[js.Any])
+    if (VaultARN != null) __obj.updateDynamic("VaultARN")(VaultARN.asInstanceOf[js.Any])
+    if (VaultName != null) __obj.updateDynamic("VaultName")(VaultName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVaultOutput]
   }
-  @scala.inline
-  implicit class DescribeVaultOutputOps[Self <: DescribeVaultOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$metadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastInventoryDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastInventoryDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastInventoryDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastInventoryDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfArchives(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfArchives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfArchives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfArchives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVaultARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVaultARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVaultName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVaultName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

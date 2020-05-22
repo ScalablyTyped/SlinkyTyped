@@ -6,25 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from js.Any because couldn't resolve ClassTree. */
 object ImageCenterCoverExample {
   @JSImport("office-ui-fabric-react/lib/components/Image/examples/Image.CenterCover.Example", "ImageCenterCoverExample")
   @js.native
   object component extends js.Object
   
-  def apply(p: js.Any): Default[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.imageCenterCoverExampleMod.ImageCenterCoverExample
-  ] = new Default[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.imageCenterCoverExampleMod.ImageCenterCoverExample
-  ](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ImageCenterCoverExample.type): Default[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.imageCenterCoverExampleMod.ImageCenterCoverExample
-  ] = new Default[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.imageCenterCoverExampleMod.ImageCenterCoverExample
-  ](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ImageCenterCoverExample.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

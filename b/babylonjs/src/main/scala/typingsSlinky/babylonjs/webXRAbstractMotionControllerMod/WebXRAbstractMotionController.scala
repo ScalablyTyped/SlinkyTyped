@@ -123,6 +123,11 @@ abstract class WebXRAbstractMotionController protected () extends IDisposable {
     */
   /* protected */ def _updateModel(xrFrame: XRFrame): Unit = js.native
   /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
     * Returns all components of specific type
     * @param type the type to search for
     * @return an array of components with this type

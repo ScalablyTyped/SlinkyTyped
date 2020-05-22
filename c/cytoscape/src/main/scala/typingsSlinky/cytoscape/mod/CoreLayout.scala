@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#core/layout
   */
-@js.native
 trait CoreLayout extends js.Object {
-  def createLayout(options: LayoutOptions): Layouts = js.native
+  def createLayout(options: LayoutOptions): Layouts
   /**
     * Run a layout, which algorithmically positions the nodes in the graph.
     * For layouts included with Cytoscape.js, you can find their
@@ -19,7 +18,7 @@ trait CoreLayout extends js.Object {
     * An analogue to run a layout on a subset of the graph exists as eles.layout().
     * http://js.cytoscape.org/#cy.layout
     */
-  def layout(layout: LayoutOptions): Layouts = js.native
+  def layout(layout: LayoutOptions): Layouts
   /**
     * Get a new layout, which can be used to algorithmically
     * position the nodes in the graph.
@@ -32,7 +31,7 @@ trait CoreLayout extends js.Object {
     * Note that you must call layout.run() in order for it to affect the graph.
     * An analogue to make a layout on a subset of the graph exists as eles.makeLayout().
     */
-  def makeLayout(options: LayoutOptions): Layouts = js.native
+  def makeLayout(options: LayoutOptions): Layouts
 }
 
 object CoreLayout {
@@ -45,31 +44,5 @@ object CoreLayout {
     val __obj = js.Dynamic.literal(createLayout = js.Any.fromFunction1(createLayout), layout = js.Any.fromFunction1(layout), makeLayout = js.Any.fromFunction1(makeLayout))
     __obj.asInstanceOf[CoreLayout]
   }
-  @scala.inline
-  implicit class CoreLayoutOps[Self <: CoreLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateLayout(value: LayoutOptions => Layouts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createLayout")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLayout(value: LayoutOptions => Layouts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMakeLayout(value: LayoutOptions => Layouts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("makeLayout")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

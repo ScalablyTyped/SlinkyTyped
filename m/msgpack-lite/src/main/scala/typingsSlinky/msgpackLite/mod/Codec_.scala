@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Codec_ extends js.Object {
   /**
     * Register a custom extension to serialize your own class instances
@@ -19,14 +18,14 @@ trait Codec_ extends js.Object {
     etype: Double,
     Class: Instantiable1[/* args (repeated) */ js.Any, T],
     packer: js.Function1[/* t */ T, Buffer | js.typedarray.Uint8Array]
-  ): Unit = js.native
+  ): Unit
   /**
     * Register a custom extension to deserialize your own class instances
     *
     * @param etype an integer within the range of 0 and 127 (0x0 and 0x7F)
     * @param unpacker a function that converts bytes to an instance of T
     */
-  def addExtUnpacker[T](etype: Double, unpacker: js.Function1[/* data */ Buffer | js.typedarray.Uint8Array, T]): Unit = js.native
+  def addExtUnpacker[T](etype: Double, unpacker: js.Function1[/* data */ Buffer | js.typedarray.Uint8Array, T]): Unit
 }
 
 object Codec_ {
@@ -38,27 +37,5 @@ object Codec_ {
     val __obj = js.Dynamic.literal(addExtPacker = js.Any.fromFunction3(addExtPacker), addExtUnpacker = js.Any.fromFunction2(addExtUnpacker))
     __obj.asInstanceOf[Codec_]
   }
-  @scala.inline
-  implicit class Codec_Ops[Self <: Codec_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddExtPacker(
-      value: (Double, Instantiable1[/* args (repeated) */ js.Any, js.Any], js.Function1[js.Any, Buffer | js.typedarray.Uint8Array]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addExtPacker")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withAddExtUnpacker(value: (Double, js.Function1[/* data */ Buffer | js.typedarray.Uint8Array, js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addExtUnpacker")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

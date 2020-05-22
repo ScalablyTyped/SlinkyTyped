@@ -22,53 +22,16 @@ trait PolicyVersion extends js.Object {
 
 object PolicyVersion {
   @scala.inline
-  def apply(): PolicyVersion = {
+  def apply(
+    createDate: js.Date = null,
+    isDefaultVersion: js.UndefOr[IsDefaultVersion] = js.undefined,
+    versionId: PolicyVersionId = null
+  ): PolicyVersion = {
     val __obj = js.Dynamic.literal()
+    if (createDate != null) __obj.updateDynamic("createDate")(createDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDefaultVersion)) __obj.updateDynamic("isDefaultVersion")(isDefaultVersion.get.asInstanceOf[js.Any])
+    if (versionId != null) __obj.updateDynamic("versionId")(versionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyVersion]
   }
-  @scala.inline
-  implicit class PolicyVersionOps[Self <: PolicyVersion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDefaultVersion(value: IsDefaultVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDefaultVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: PolicyVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

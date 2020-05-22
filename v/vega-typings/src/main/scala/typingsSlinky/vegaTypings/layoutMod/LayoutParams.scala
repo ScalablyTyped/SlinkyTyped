@@ -5,140 +5,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LayoutParams extends Layout {
-  var align: js.UndefOr[LayoutAlign | SignalRef | RowColumn[LayoutAlign]] = js.native
-  var bounds: js.UndefOr[LayoutBounds] = js.native
-  var columns: js.UndefOr[Double | SignalRef] = js.native
-  var footerBand: js.UndefOr[Double | SignalRef | RowColumn[Double]] = js.native
-  var headerBand: js.UndefOr[Double | SignalRef | RowColumn[Double]] = js.native
-  var offset: js.UndefOr[LayoutOffset] = js.native
-  var padding: js.UndefOr[Double | SignalRef | RowColumn[Double]] = js.native
-  var titleAnchor: js.UndefOr[LayoutTitleAnchor | SignalRef | RowColumn[LayoutTitleAnchor]] = js.native
-  var titleBand: js.UndefOr[Double | SignalRef | RowColumn[Double]] = js.native
+  var align: js.UndefOr[LayoutAlign | SignalRef | RowColumn[LayoutAlign]] = js.undefined
+  var bounds: js.UndefOr[LayoutBounds] = js.undefined
+  var columns: js.UndefOr[Double | SignalRef] = js.undefined
+  var footerBand: js.UndefOr[Double | SignalRef | RowColumn[Double]] = js.undefined
+  var headerBand: js.UndefOr[Double | SignalRef | RowColumn[Double]] = js.undefined
+  var offset: js.UndefOr[LayoutOffset] = js.undefined
+  var padding: js.UndefOr[Double | SignalRef | RowColumn[Double]] = js.undefined
+  var titleAnchor: js.UndefOr[LayoutTitleAnchor | SignalRef | RowColumn[LayoutTitleAnchor]] = js.undefined
+  var titleBand: js.UndefOr[Double | SignalRef | RowColumn[Double]] = js.undefined
 }
 
 object LayoutParams {
   @scala.inline
-  def apply(): LayoutParams = {
+  def apply(
+    align: LayoutAlign | SignalRef | RowColumn[LayoutAlign] = null,
+    bounds: LayoutBounds = null,
+    columns: Double | SignalRef = null,
+    footerBand: Double | SignalRef | RowColumn[Double] = null,
+    headerBand: Double | SignalRef | RowColumn[Double] = null,
+    offset: LayoutOffset = null,
+    padding: Double | SignalRef | RowColumn[Double] = null,
+    titleAnchor: LayoutTitleAnchor | SignalRef | RowColumn[LayoutTitleAnchor] = null,
+    titleBand: Double | SignalRef | RowColumn[Double] = null
+  ): LayoutParams = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (footerBand != null) __obj.updateDynamic("footerBand")(footerBand.asInstanceOf[js.Any])
+    if (headerBand != null) __obj.updateDynamic("headerBand")(headerBand.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (titleAnchor != null) __obj.updateDynamic("titleAnchor")(titleAnchor.asInstanceOf[js.Any])
+    if (titleBand != null) __obj.updateDynamic("titleBand")(titleBand.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayoutParams]
   }
-  @scala.inline
-  implicit class LayoutParamsOps[Self <: LayoutParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: LayoutAlign | SignalRef | RowColumn[LayoutAlign]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounds(value: LayoutBounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterBand(value: Double | SignalRef | RowColumn[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerBand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterBand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerBand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderBand(value: Double | SignalRef | RowColumn[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerBand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderBand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerBand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: LayoutOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double | SignalRef | RowColumn[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleAnchor(value: LayoutTitleAnchor | SignalRef | RowColumn[LayoutTitleAnchor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAnchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleBand(value: Double | SignalRef | RowColumn[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleBand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleBand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleBand")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

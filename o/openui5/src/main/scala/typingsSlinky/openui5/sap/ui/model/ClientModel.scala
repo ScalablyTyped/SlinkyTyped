@@ -18,7 +18,7 @@ trait ClientModel extends Model {
   def getData(): Unit = js.native
   /**
     * update all bindings
-    * @param bForceUpdate true/false: Default = false. If set to false an update					will only be done
+    * @param bForceUpdate true/false: Default = false. If set to false an update                    will only be done
     * when the value of a binding changed.
     */
   def updateBindings(bForceUpdate: Boolean): Unit = js.native

@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SortSettings extends js.Object {
   /** Option to add columns based on which the rows have to be sorted recursively.
     * @Default {[]}
     */
-  var sortedColumns: js.UndefOr[js.Array[SortSettingsSortedColumn]] = js.native
+  var sortedColumns: js.UndefOr[js.Array[SortSettingsSortedColumn]] = js.undefined
 }
 
 object SortSettings {
   @scala.inline
-  def apply(): SortSettings = {
+  def apply(sortedColumns: js.Array[SortSettingsSortedColumn] = null): SortSettings = {
     val __obj = js.Dynamic.literal()
+    if (sortedColumns != null) __obj.updateDynamic("sortedColumns")(sortedColumns.asInstanceOf[js.Any])
     __obj.asInstanceOf[SortSettings]
   }
-  @scala.inline
-  implicit class SortSettingsOps[Self <: SortSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSortedColumns(value: js.Array[SortSettingsSortedColumn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortedColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortedColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortedColumns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,88 +9,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Body extends js.Object {
-  var body: js.UndefOr[OptionsUrlencoded] = js.native
-  var cookie: js.UndefOr[CookieOptions] = js.native
-  var data: js.UndefOr[DataParserOptions] = js.native
-  var json: js.UndefOr[OptionsJson] = js.native
-  var text: js.UndefOr[OptionsText] = js.native
+  var body: js.UndefOr[OptionsUrlencoded] = js.undefined
+  var cookie: js.UndefOr[CookieOptions] = js.undefined
+  var data: js.UndefOr[DataParserOptions] = js.undefined
+  var json: js.UndefOr[OptionsJson] = js.undefined
+  var text: js.UndefOr[OptionsText] = js.undefined
 }
 
 object Body {
   @scala.inline
-  def apply(): Body = {
+  def apply(
+    body: OptionsUrlencoded = null,
+    cookie: CookieOptions = null,
+    data: DataParserOptions = null,
+    json: OptionsJson = null,
+    text: OptionsText = null
+  ): Body = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (cookie != null) __obj.updateDynamic("cookie")(cookie.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (json != null) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Body]
   }
-  @scala.inline
-  implicit class BodyOps[Self <: Body] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: OptionsUrlencoded): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCookie(value: CookieOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: DataParserOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJson(value: OptionsJson): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: OptionsText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

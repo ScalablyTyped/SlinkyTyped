@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   * @remarks
   *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
-  * 
+  *
   * @beta
   */
 @JSGlobal("Office.MailboxEnums.AppointmentSensitivityType")

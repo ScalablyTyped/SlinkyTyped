@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait sha1result extends js.Object {
   /**
     * @param offset - multiple of 64
@@ -14,14 +13,14 @@ trait sha1result extends js.Object {
     * @param output - multiple of 32
     * @returns hashed
     */
-  def finish(offset: Double, length: Double, output: Double): Double = js.native
+  def finish(offset: Double, length: Double, output: Double): Double
   /**
     * @param offset - multiple of 64
     * @param length
     * @param output - multiple of 32
     * @returns hashed
     */
-  def hmac_finish(offset: Double, length: Double, output: Double): Double = js.native
+  def hmac_finish(offset: Double, length: Double, output: Double): Double
   def hmac_init(
     p0: Double,
     p1: Double,
@@ -39,10 +38,10 @@ trait sha1result extends js.Object {
     p13: Double,
     p14: Double,
     p15: Double
-  ): Unit = js.native
+  ): Unit
   // HMAC-SHA;
-  def hmac_reset(): Unit = js.native
-  def init(h0: Double, h1: Double, h2: Double, h3: Double, h4: Double, total0: Double, total1: Double): Unit = js.native
+  def hmac_reset(): Unit
+  def init(h0: Double, h1: Double, h2: Double, h3: Double, h4: Double, total0: Double, total1: Double): Unit
   // ;
   /**
     * PBKDF2-HMAC-SHA
@@ -52,15 +51,15 @@ trait sha1result extends js.Object {
     * @param count
     * @param output - multiple of 32
     */
-  def pbkdf2_generate_block(offset: Double, length: Double, block: Double, count: Double, output: Double): `0` | `-1` = js.native
+  def pbkdf2_generate_block(offset: Double, length: Double, block: Double, count: Double, output: Double): `0` | `-1`
   /**
     * @param offset - multiple of 64
     * @param length
     * @returns hashed
     */
-  def process(offset: Double, length: Double): Double = js.native
+  def process(offset: Double, length: Double): Double
   // SHA1
-  def reset(): Unit = js.native
+  def reset(): Unit
 }
 
 object sha1result {
@@ -78,63 +77,5 @@ object sha1result {
     val __obj = js.Dynamic.literal(finish = js.Any.fromFunction3(finish), hmac_finish = js.Any.fromFunction3(hmac_finish), hmac_init = js.Any.fromFunction16(hmac_init), hmac_reset = js.Any.fromFunction0(hmac_reset), init = js.Any.fromFunction7(init), pbkdf2_generate_block = js.Any.fromFunction5(pbkdf2_generate_block), process = js.Any.fromFunction2(process), reset = js.Any.fromFunction0(reset))
     __obj.asInstanceOf[sha1result]
   }
-  @scala.inline
-  implicit class sha1resultOps[Self <: sha1result] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFinish(value: (Double, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finish")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withHmac_finish(value: (Double, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hmac_finish")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withHmac_init(
-      value: (Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hmac_init")(js.Any.fromFunction16(value))
-        ret
-    }
-    @scala.inline
-    def withHmac_reset(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hmac_reset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInit(value: (Double, Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withPbkdf2_generate_block(value: (Double, Double, Double, Double, Double) => `0` | `-1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pbkdf2_generate_block")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withProcess(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("process")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withReset(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,7 @@
 package typingsSlinky.trezorConnect.mod
 
+import typingsSlinky.trezorConnect.trezorConnectStrings.`send-max`
+import typingsSlinky.trezorConnect.trezorConnectStrings.opreturn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +16,28 @@ trait Output extends js.Object
 
 object Output {
   @scala.inline
-  implicit def apply(value: InternalOutput): Output = value.asInstanceOf[Output]
+  def RegularOutput(address: String, amount: String, script_type: String = null): Output = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], amount = amount.asInstanceOf[js.Any])
+    if (script_type != null) __obj.updateDynamic("script_type")(script_type.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Output]
+  }
   @scala.inline
-  implicit def apply(value: OpReturnOutput): Output = value.asInstanceOf[Output]
+  def InternalOutput(address_n: js.Array[Double], amount: String, script_type: String = null): Output = {
+    val __obj = js.Dynamic.literal(address_n = address_n.asInstanceOf[js.Any], amount = amount.asInstanceOf[js.Any])
+    if (script_type != null) __obj.updateDynamic("script_type")(script_type.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Output]
+  }
   @scala.inline
-  implicit def apply(value: RegularOutput): Output = value.asInstanceOf[Output]
+  def SendMaxOutput(address: String, `type`: `send-max`): Output = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Output]
+  }
   @scala.inline
-  implicit def apply(value: SendMaxOutput): Output = value.asInstanceOf[Output]
+  def OpReturnOutput(dataHex: String, `type`: opreturn): Output = {
+    val __obj = js.Dynamic.literal(dataHex = dataHex.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Output]
+  }
 }
 

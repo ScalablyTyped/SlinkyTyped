@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * represents a collection of all columns of a table or spreadsheet.
   * @see com.sun.star.table.TableColumn
   */
-@js.native
 trait TableColumns
   extends XTableColumns
      with XEnumerationAccess

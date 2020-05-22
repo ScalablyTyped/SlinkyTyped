@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.draftJs.draftJsStrings.PHOTO
   - typingsSlinky.draftJs.draftJsStrings.IMAGE
 */
-trait ComposedEntityType extends DraftEntityType
+trait ComposedEntityType extends js.Object
 
 object ComposedEntityType {
   @scala.inline

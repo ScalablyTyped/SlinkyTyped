@@ -59,8 +59,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * API
-	 */
+  * API
+  */
 @js.native
 trait Api extends js.Object {
   def blur(): Api = js.native

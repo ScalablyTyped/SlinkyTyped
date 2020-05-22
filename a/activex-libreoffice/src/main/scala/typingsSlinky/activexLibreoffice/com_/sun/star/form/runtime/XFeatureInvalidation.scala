@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * @see XFormOperations
   * @since OOo 2.2
   */
-@js.native
 trait XFeatureInvalidation extends js.Object {
   /**
     * invalidates all features
@@ -18,7 +17,7 @@ trait XFeatureInvalidation extends js.Object {
     * This method is used of it cannot be exactly and reliably determined which features might actually have changed their state. In this case, the callee
     * should assume all features it is interested in must be requeried.
     */
-  def invalidateAllFeatures(): Unit = js.native
+  def invalidateAllFeatures(): Unit
   /**
     * invalidates the given FormFeatures
     *
@@ -26,7 +25,7 @@ trait XFeatureInvalidation extends js.Object {
     * potentially out-of-date, and need to be updated.
     * @param Features The set of features whose state might have changed.
     */
-  def invalidateFeatures(Features: SeqEquiv[Double]): Unit = js.native
+  def invalidateFeatures(Features: SeqEquiv[Double]): Unit
 }
 
 object XFeatureInvalidation {
@@ -35,25 +34,5 @@ object XFeatureInvalidation {
     val __obj = js.Dynamic.literal(invalidateAllFeatures = js.Any.fromFunction0(invalidateAllFeatures), invalidateFeatures = js.Any.fromFunction1(invalidateFeatures))
     __obj.asInstanceOf[XFeatureInvalidation]
   }
-  @scala.inline
-  implicit class XFeatureInvalidationOps[Self <: XFeatureInvalidation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalidateAllFeatures(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidateAllFeatures")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInvalidateFeatures(value: SeqEquiv[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidateFeatures")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -57,6 +57,9 @@ object framingBehaviorMod extends js.Object {
       * camera limits and sensibilities.
       */
     var autoCorrectCameraLimitsAndSensibility: Boolean = js.native
+    /** gets or sets behavior's name */
+    /* CompleteClass */
+    override var name: String = js.native
     /**
       * Calculates the lowest radius for the camera based on the bounding box of the mesh.
       * @param mesh The mesh on which to base the calculation. mesh boundingInfo used to estimate necessary
@@ -65,6 +68,12 @@ object framingBehaviorMod extends js.Object {
       *		 to fully enclose the mesh in the viewing frustum.
       */
     /* protected */ def _calculateLowerRadiusFromModelBoundingSphere(minimumWorld: Vector3, maximumWorld: Vector3): Double = js.native
+    /**
+      * Called when the behavior is attached to a target
+      * @param target defines the target where the behavior is attached to
+      */
+    /* CompleteClass */
+    override def attach(target: ArcRotateCamera): Unit = js.native
     /**
       * Gets the angle above/below the horizontal plane to return to when the return to default elevation idle
       * behaviour is triggered, in radians.
@@ -75,6 +84,11 @@ object framingBehaviorMod extends js.Object {
       * behaviour is triggered, in radians.
       */
     def defaultElevation(elevation: Double): js.Any = js.native
+    /**
+      * Called when the behavior is detached from its target
+      */
+    /* CompleteClass */
+    override def detach(): Unit = js.native
     /**
       * Gets the time (in milliseconds) taken to return to the default beta position.
       * Negative value indicates camera should not return to default.
@@ -101,6 +115,11 @@ object framingBehaviorMod extends js.Object {
       * Sets the transition time when framing the mesh, in milliseconds
       */
     def framingTime(time: Double): js.Any = js.native
+    /**
+      * Function called when the behavior needs to be initialized (after attaching it to a target)
+      */
+    /* CompleteClass */
+    override def init(): Unit = js.native
     /**
       * Gets a value indicating if the user is moving the camera
       */

@@ -14,29 +14,10 @@ trait GetCompatibleElasticsearchVersionsResponse extends js.Object {
 
 object GetCompatibleElasticsearchVersionsResponse {
   @scala.inline
-  def apply(): GetCompatibleElasticsearchVersionsResponse = {
+  def apply(CompatibleElasticsearchVersions: CompatibleElasticsearchVersionsList = null): GetCompatibleElasticsearchVersionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (CompatibleElasticsearchVersions != null) __obj.updateDynamic("CompatibleElasticsearchVersions")(CompatibleElasticsearchVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCompatibleElasticsearchVersionsResponse]
   }
-  @scala.inline
-  implicit class GetCompatibleElasticsearchVersionsResponseOps[Self <: GetCompatibleElasticsearchVersionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompatibleElasticsearchVersions(value: CompatibleElasticsearchVersionsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompatibleElasticsearchVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompatibleElasticsearchVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompatibleElasticsearchVersions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

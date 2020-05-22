@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSEnumMember extends Node {
-  var id: Identifier_ | StringLiteral_ = js.native
-  var initializer: Expression | Null = js.native
+  var id: Identifier_ | StringLiteral_
+  var initializer: Expression | Null
   @JSName("type")
-  var type_TSEnumMember: typingsSlinky.babelTypes.babelTypesStrings.TSEnumMember = js.native
+  var type_TSEnumMember: typingsSlinky.babelTypes.babelTypesStrings.TSEnumMember
 }
 
 @JSImport("babel-types", "TSEnumMember")

@@ -10,20 +10,19 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@js.native
 trait Polygon extends js.Object {
   /**
     * `false` after moveTo, `true` after `closePath`. In all other cases it is `true`.
     * @member {boolean} PIXI.Polygon#closeStroke
     * @default true
     */
-  var closeStroke: Boolean = js.native
+  var closeStroke: Boolean
   /**
     * An array of the points of this polygon
     *
     * @member {number[]} PIXI.Polygon#points
     */
-  var points: js.Array[Double] = js.native
+  var points: js.Array[Double]
   /**
     * The type of the object, mainly used to avoid `instanceof` checks
     *
@@ -32,7 +31,7 @@ trait Polygon extends js.Object {
     * @default PIXI.SHAPES.POLY
     * @see PIXI.SHAPES
     */
-  val `type`: Double = js.native
+  val `type`: Double
   /**
     * Checks whether the x and y coordinates passed to this function are contained within this polygon
     *
@@ -40,7 +39,7 @@ trait Polygon extends js.Object {
     * @param {number} y - The Y coordinate of the point to test
     * @return {boolean} Whether the x/y coordinates are within this polygon
     */
-  def contains(x: Double, y: Double): Boolean = js.native
+  def contains(x: Double, y: Double): Boolean
 }
 
 object Polygon {
@@ -55,37 +54,5 @@ object Polygon {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Polygon]
   }
-  @scala.inline
-  implicit class PolygonOps[Self <: Polygon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloseStroke(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeStroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContains(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPoints(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

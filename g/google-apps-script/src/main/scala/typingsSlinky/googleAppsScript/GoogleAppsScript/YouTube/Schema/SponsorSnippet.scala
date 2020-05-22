@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SponsorSnippet extends js.Object {
-  var channelId: js.UndefOr[String] = js.native
-  var cumulativeDurationMonths: js.UndefOr[Double] = js.native
-  var sponsorDetails: js.UndefOr[ChannelProfileDetails] = js.native
-  var sponsorSince: js.UndefOr[String] = js.native
+  var channelId: js.UndefOr[String] = js.undefined
+  var cumulativeDurationMonths: js.UndefOr[Double] = js.undefined
+  var sponsorDetails: js.UndefOr[ChannelProfileDetails] = js.undefined
+  var sponsorSince: js.UndefOr[String] = js.undefined
 }
 
 object SponsorSnippet {
   @scala.inline
-  def apply(): SponsorSnippet = {
+  def apply(
+    channelId: String = null,
+    cumulativeDurationMonths: js.UndefOr[Double] = js.undefined,
+    sponsorDetails: ChannelProfileDetails = null,
+    sponsorSince: String = null
+  ): SponsorSnippet = {
     val __obj = js.Dynamic.literal()
+    if (channelId != null) __obj.updateDynamic("channelId")(channelId.asInstanceOf[js.Any])
+    if (!js.isUndefined(cumulativeDurationMonths)) __obj.updateDynamic("cumulativeDurationMonths")(cumulativeDurationMonths.get.asInstanceOf[js.Any])
+    if (sponsorDetails != null) __obj.updateDynamic("sponsorDetails")(sponsorDetails.asInstanceOf[js.Any])
+    if (sponsorSince != null) __obj.updateDynamic("sponsorSince")(sponsorSince.asInstanceOf[js.Any])
     __obj.asInstanceOf[SponsorSnippet]
   }
-  @scala.inline
-  implicit class SponsorSnippetOps[Self <: SponsorSnippet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCumulativeDurationMonths(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cumulativeDurationMonths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCumulativeDurationMonths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cumulativeDurationMonths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSponsorDetails(value: ChannelProfileDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sponsorDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSponsorDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sponsorDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSponsorSince(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sponsorSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSponsorSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sponsorSince")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

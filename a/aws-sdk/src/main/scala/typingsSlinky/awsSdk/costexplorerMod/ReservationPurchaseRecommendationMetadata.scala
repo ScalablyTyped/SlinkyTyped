@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReservationPurchaseRecommendationMetadata extends js.Object {
   /**
-    * The time stamp for when AWS made this recommendation.
+    * The timestamp for when AWS made this recommendation.
     */
   var GenerationTimestamp: js.UndefOr[GenericString] = js.native
   /**
@@ -18,41 +18,11 @@ trait ReservationPurchaseRecommendationMetadata extends js.Object {
 
 object ReservationPurchaseRecommendationMetadata {
   @scala.inline
-  def apply(): ReservationPurchaseRecommendationMetadata = {
+  def apply(GenerationTimestamp: GenericString = null, RecommendationId: GenericString = null): ReservationPurchaseRecommendationMetadata = {
     val __obj = js.Dynamic.literal()
+    if (GenerationTimestamp != null) __obj.updateDynamic("GenerationTimestamp")(GenerationTimestamp.asInstanceOf[js.Any])
+    if (RecommendationId != null) __obj.updateDynamic("RecommendationId")(RecommendationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservationPurchaseRecommendationMetadata]
   }
-  @scala.inline
-  implicit class ReservationPurchaseRecommendationMetadataOps[Self <: ReservationPurchaseRecommendationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGenerationTimestamp(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerationTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerationTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendationId(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendationId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

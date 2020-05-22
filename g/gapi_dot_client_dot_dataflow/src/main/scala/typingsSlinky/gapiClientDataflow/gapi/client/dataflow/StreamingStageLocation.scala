@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StreamingStageLocation extends js.Object {
   /**
     * Identifies the particular stream within the streaming Dataflow
     * job.
     */
-  var streamId: js.UndefOr[String] = js.native
+  var streamId: js.UndefOr[String] = js.undefined
 }
 
 object StreamingStageLocation {
   @scala.inline
-  def apply(): StreamingStageLocation = {
+  def apply(streamId: String = null): StreamingStageLocation = {
     val __obj = js.Dynamic.literal()
+    if (streamId != null) __obj.updateDynamic("streamId")(streamId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamingStageLocation]
   }
-  @scala.inline
-  implicit class StreamingStageLocationOps[Self <: StreamingStageLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStreamId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

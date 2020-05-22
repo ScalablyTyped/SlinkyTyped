@@ -26,65 +26,18 @@ trait DescribeScalingActivitiesType extends js.Object {
 
 object DescribeScalingActivitiesType {
   @scala.inline
-  def apply(): DescribeScalingActivitiesType = {
+  def apply(
+    ActivityIds: ActivityIds = null,
+    AutoScalingGroupName: ResourceName = null,
+    MaxRecords: js.UndefOr[MaxRecords] = js.undefined,
+    NextToken: XmlString = null
+  ): DescribeScalingActivitiesType = {
     val __obj = js.Dynamic.literal()
+    if (ActivityIds != null) __obj.updateDynamic("ActivityIds")(ActivityIds.asInstanceOf[js.Any])
+    if (AutoScalingGroupName != null) __obj.updateDynamic("AutoScalingGroupName")(AutoScalingGroupName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxRecords)) __obj.updateDynamic("MaxRecords")(MaxRecords.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeScalingActivitiesType]
   }
-  @scala.inline
-  implicit class DescribeScalingActivitiesTypeOps[Self <: DescribeScalingActivitiesType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityIds(value: ActivityIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScalingGroupName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRecords(value: MaxRecords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

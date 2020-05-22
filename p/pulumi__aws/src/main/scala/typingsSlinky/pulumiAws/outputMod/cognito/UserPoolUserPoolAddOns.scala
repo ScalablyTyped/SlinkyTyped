@@ -18,19 +18,5 @@ object UserPoolUserPoolAddOns {
     val __obj = js.Dynamic.literal(advancedSecurityMode = advancedSecurityMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolUserPoolAddOns]
   }
-  @scala.inline
-  implicit class UserPoolUserPoolAddOnsOps[Self <: UserPoolUserPoolAddOns] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvancedSecurityMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advancedSecurityMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

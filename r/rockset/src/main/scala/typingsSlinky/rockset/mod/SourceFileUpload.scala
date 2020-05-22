@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceFileUpload extends js.Object {
   // name of the file
-  var file_name: String = js.native
+  var file_name: String
   // size of the file in bytes
-  var file_size: Double = js.native
+  var file_size: Double
   // time of file upload
-  var file_upload_time: String = js.native
+  var file_upload_time: String
 }
 
 object SourceFileUpload {
@@ -20,31 +19,5 @@ object SourceFileUpload {
     val __obj = js.Dynamic.literal(file_name = file_name.asInstanceOf[js.Any], file_size = file_size.asInstanceOf[js.Any], file_upload_time = file_upload_time.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceFileUpload]
   }
-  @scala.inline
-  implicit class SourceFileUploadOps[Self <: SourceFileUpload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFile_size(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFile_upload_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_upload_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

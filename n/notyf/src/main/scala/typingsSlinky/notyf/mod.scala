@@ -39,5 +39,12 @@ object mod extends js.Object {
     def apply(value: Double): js.UndefOr[typingsSlinky.notyf.notyfModelsMod.NotyfArrayEvent with Double] = js.native
   }
   
+  @js.native
+  object NotyfEvent extends js.Object {
+    /* 0 */ val Dismiss: typingsSlinky.notyf.notyfOptionsMod.NotyfEvent.Dismiss with Double = js.native
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.notyf.notyfOptionsMod.NotyfEvent with Double] = js.native
+  }
+  
 }
 

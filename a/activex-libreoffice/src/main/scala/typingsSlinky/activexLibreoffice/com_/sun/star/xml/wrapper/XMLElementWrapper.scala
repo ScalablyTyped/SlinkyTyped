@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Service of {@link XMLElementWrapper} */
-@js.native
 trait XMLElementWrapper
   extends XUnoTunnel
      with XInitialization

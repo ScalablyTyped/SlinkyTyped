@@ -21,4 +21,8 @@ package object mod {
     * Path to file
     */
   org.scalablytyped.runtime.StringDictionary[typingsSlinky.cleanCss.anon.SourceMap]
+  /**
+    * Union of all types acceptable as input for the minify function
+    */
+  type Sources = java.lang.String | (js.Array[typingsSlinky.cleanCss.mod.Source | java.lang.String]) | typingsSlinky.cleanCss.mod.Source | typingsSlinky.node.Buffer
 }

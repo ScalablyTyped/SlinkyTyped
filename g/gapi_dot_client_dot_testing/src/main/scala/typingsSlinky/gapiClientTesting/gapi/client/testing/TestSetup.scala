@@ -4,107 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestSetup extends js.Object {
   /**
     * The device will be logged in on this account for the duration of the test.
     * Optional
     */
-  var account: js.UndefOr[Account] = js.native
+  var account: js.UndefOr[Account] = js.undefined
   /**
     * The directories on the device to upload to GCS at the end of the test;
     * they must be absolute, whitelisted paths.
     * Refer to RegularFile for whitelisted paths.
     * Optional
     */
-  var directoriesToPull: js.UndefOr[js.Array[String]] = js.native
+  var directoriesToPull: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Environment variables to set for the test (only applicable for
     * instrumentation tests).
     */
-  var environmentVariables: js.UndefOr[js.Array[EnvironmentVariable]] = js.native
+  var environmentVariables: js.UndefOr[js.Array[EnvironmentVariable]] = js.undefined
   /** Optional */
-  var filesToPush: js.UndefOr[js.Array[DeviceFile]] = js.native
+  var filesToPush: js.UndefOr[js.Array[DeviceFile]] = js.undefined
   /**
     * The network traffic profile used for running the test.
     * Optional
     */
-  var networkProfile: js.UndefOr[String] = js.native
+  var networkProfile: js.UndefOr[String] = js.undefined
 }
 
 object TestSetup {
   @scala.inline
-  def apply(): TestSetup = {
+  def apply(
+    account: Account = null,
+    directoriesToPull: js.Array[String] = null,
+    environmentVariables: js.Array[EnvironmentVariable] = null,
+    filesToPush: js.Array[DeviceFile] = null,
+    networkProfile: String = null
+  ): TestSetup = {
     val __obj = js.Dynamic.literal()
+    if (account != null) __obj.updateDynamic("account")(account.asInstanceOf[js.Any])
+    if (directoriesToPull != null) __obj.updateDynamic("directoriesToPull")(directoriesToPull.asInstanceOf[js.Any])
+    if (environmentVariables != null) __obj.updateDynamic("environmentVariables")(environmentVariables.asInstanceOf[js.Any])
+    if (filesToPush != null) __obj.updateDynamic("filesToPush")(filesToPush.asInstanceOf[js.Any])
+    if (networkProfile != null) __obj.updateDynamic("networkProfile")(networkProfile.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestSetup]
   }
-  @scala.inline
-  implicit class TestSetupOps[Self <: TestSetup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccount(value: Account): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoriesToPull(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoriesToPull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoriesToPull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoriesToPull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentVariables(value: js.Array[EnvironmentVariable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilesToPush(value: js.Array[DeviceFile]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filesToPush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilesToPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filesToPush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProfile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

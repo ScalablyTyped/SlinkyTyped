@@ -70,162 +70,30 @@ object JobFlowDetail {
     ExecutionStatusDetail: JobFlowExecutionStatusDetail,
     Instances: JobFlowInstancesDetail,
     JobFlowId: XmlStringMaxLen256,
-    Name: XmlStringMaxLen256
+    Name: XmlStringMaxLen256,
+    AmiVersion: XmlStringMaxLen256 = null,
+    AutoScalingRole: XmlString = null,
+    BootstrapActions: BootstrapActionDetailList = null,
+    JobFlowRole: XmlString = null,
+    LogUri: XmlString = null,
+    ScaleDownBehavior: ScaleDownBehavior = null,
+    ServiceRole: XmlString = null,
+    Steps: StepDetailList = null,
+    SupportedProducts: SupportedProductsList = null,
+    VisibleToAllUsers: js.UndefOr[Boolean] = js.undefined
   ): JobFlowDetail = {
     val __obj = js.Dynamic.literal(ExecutionStatusDetail = ExecutionStatusDetail.asInstanceOf[js.Any], Instances = Instances.asInstanceOf[js.Any], JobFlowId = JobFlowId.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (AmiVersion != null) __obj.updateDynamic("AmiVersion")(AmiVersion.asInstanceOf[js.Any])
+    if (AutoScalingRole != null) __obj.updateDynamic("AutoScalingRole")(AutoScalingRole.asInstanceOf[js.Any])
+    if (BootstrapActions != null) __obj.updateDynamic("BootstrapActions")(BootstrapActions.asInstanceOf[js.Any])
+    if (JobFlowRole != null) __obj.updateDynamic("JobFlowRole")(JobFlowRole.asInstanceOf[js.Any])
+    if (LogUri != null) __obj.updateDynamic("LogUri")(LogUri.asInstanceOf[js.Any])
+    if (ScaleDownBehavior != null) __obj.updateDynamic("ScaleDownBehavior")(ScaleDownBehavior.asInstanceOf[js.Any])
+    if (ServiceRole != null) __obj.updateDynamic("ServiceRole")(ServiceRole.asInstanceOf[js.Any])
+    if (Steps != null) __obj.updateDynamic("Steps")(Steps.asInstanceOf[js.Any])
+    if (SupportedProducts != null) __obj.updateDynamic("SupportedProducts")(SupportedProducts.asInstanceOf[js.Any])
+    if (!js.isUndefined(VisibleToAllUsers)) __obj.updateDynamic("VisibleToAllUsers")(VisibleToAllUsers.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobFlowDetail]
   }
-  @scala.inline
-  implicit class JobFlowDetailOps[Self <: JobFlowDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionStatusDetail(value: JobFlowExecutionStatusDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionStatusDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstances(value: JobFlowInstancesDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobFlowId(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmiVersion(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScalingRole(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBootstrapActions(value: BootstrapActionDetailList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBootstrapActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobFlowRole(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobFlowRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogUri(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleDownBehavior(value: ScaleDownBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleDownBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleDownBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleDownBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceRole(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSteps(value: StepDetailList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Steps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedProducts(value: SupportedProductsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedProducts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedProducts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedProducts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleToAllUsers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibleToAllUsers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleToAllUsers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibleToAllUsers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

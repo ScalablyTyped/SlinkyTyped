@@ -4,38 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyleSetOpts extends SetOpts {
   /** Whether or not to apply the new styles immediately. Defaults to updating the Ractive-managed style tag (true) */
   @JSName("apply")
-  var apply: js.UndefOr[Boolean] = js.native
+  var apply: js.UndefOr[Boolean] = js.undefined
 }
 
 object StyleSetOpts {
   @scala.inline
-  def apply(): StyleSetOpts = {
+  def apply(
+    apply: js.UndefOr[Boolean] = js.undefined,
+    deep: js.UndefOr[Boolean] = js.undefined,
+    keep: js.UndefOr[Boolean] = js.undefined,
+    shuffle: Shuffler = null
+  ): StyleSetOpts = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(apply)) __obj.updateDynamic("apply")(apply.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deep)) __obj.updateDynamic("deep")(deep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keep)) __obj.updateDynamic("keep")(keep.get.asInstanceOf[js.Any])
+    if (shuffle != null) __obj.updateDynamic("shuffle")(shuffle.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleSetOpts]
   }
-  @scala.inline
-  implicit class StyleSetOptsOps[Self <: StyleSetOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApply(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApply: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

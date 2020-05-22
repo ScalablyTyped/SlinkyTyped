@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IActionOpts extends js.Object {
-  var adapter: js.UndefOr[String] = js.native
-  var pathname: js.UndefOr[String] = js.native
-  var request: js.UndefOr[js.Function] = js.native
-  var response: js.UndefOr[js.Function] = js.native
-  var responseError: js.UndefOr[js.Function] = js.native
+  var adapter: js.UndefOr[String] = js.undefined
+  var pathname: js.UndefOr[String] = js.undefined
+  var request: js.UndefOr[js.Function] = js.undefined
+  var response: js.UndefOr[js.Function] = js.undefined
+  var responseError: js.UndefOr[js.Function] = js.undefined
 }
 
 object IActionOpts {
   @scala.inline
-  def apply(): IActionOpts = {
+  def apply(
+    adapter: String = null,
+    pathname: String = null,
+    request: js.Function = null,
+    response: js.Function = null,
+    responseError: js.Function = null
+  ): IActionOpts = {
     val __obj = js.Dynamic.literal()
+    if (adapter != null) __obj.updateDynamic("adapter")(adapter.asInstanceOf[js.Any])
+    if (pathname != null) __obj.updateDynamic("pathname")(pathname.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
+    if (responseError != null) __obj.updateDynamic("responseError")(responseError.asInstanceOf[js.Any])
     __obj.asInstanceOf[IActionOpts]
   }
-  @scala.inline
-  implicit class IActionOptsOps[Self <: IActionOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdapter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdapter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseError(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait location extends js.Object {
   /**
     * Generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) that may be applied directly to a supported [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The renderer contains a single symbol with a color optimally chosen based on the indicated basemap.  In most cases you will provide a `layer` and `basemap` to generate this renderer. If working in a 3D [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html), then the `view` and `symbolType` options should be used.
@@ -38,7 +37,7 @@ trait location extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createRenderer(params: locationCreateRendererParams): js.Promise[locationRendererResult] = js.native
+  def createRenderer(params: locationCreateRendererParams): js.Promise[locationRendererResult]
 }
 
 object location {
@@ -47,19 +46,5 @@ object location {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
     __obj.asInstanceOf[location]
   }
-  @scala.inline
-  implicit class locationOps[Self <: location] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateRenderer(value: locationCreateRendererParams => js.Promise[locationRendererResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

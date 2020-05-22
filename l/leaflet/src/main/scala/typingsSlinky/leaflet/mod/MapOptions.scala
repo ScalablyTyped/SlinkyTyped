@@ -4,525 +4,137 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapOptions extends js.Object {
   // Control options
-  var attributionControl: js.UndefOr[Boolean] = js.native
-  var bounceAtZoomLimits: js.UndefOr[Boolean] = js.native
-  var boxZoom: js.UndefOr[Boolean] = js.native
-  var center: js.UndefOr[LatLngExpression] = js.native
+  var attributionControl: js.UndefOr[Boolean] = js.undefined
+  var bounceAtZoomLimits: js.UndefOr[Boolean] = js.undefined
+  var boxZoom: js.UndefOr[Boolean] = js.undefined
+  var center: js.UndefOr[LatLngExpression] = js.undefined
   // Interaction options
-  var closePopupOnClick: js.UndefOr[Boolean] = js.native
+  var closePopupOnClick: js.UndefOr[Boolean] = js.undefined
   // Map state options
-  var crs: js.UndefOr[CRS] = js.native
-  var doubleClickZoom: js.UndefOr[Zoom] = js.native
-  var dragging: js.UndefOr[Boolean] = js.native
-  var easeLinearity: js.UndefOr[Double] = js.native
+  var crs: js.UndefOr[CRS] = js.undefined
+  var doubleClickZoom: js.UndefOr[Zoom] = js.undefined
+  var dragging: js.UndefOr[Boolean] = js.undefined
+  var easeLinearity: js.UndefOr[Double] = js.undefined
   // Animation options
-  var fadeAnimation: js.UndefOr[Boolean] = js.native
+  var fadeAnimation: js.UndefOr[Boolean] = js.undefined
   // Panning inertia options
-  var inertia: js.UndefOr[Boolean] = js.native
-  var inertiaDeceleration: js.UndefOr[Double] = js.native
-  var inertiaMaxSpeed: js.UndefOr[Double] = js.native
+  var inertia: js.UndefOr[Boolean] = js.undefined
+  var inertiaDeceleration: js.UndefOr[Double] = js.undefined
+  var inertiaMaxSpeed: js.UndefOr[Double] = js.undefined
   // Keyboard navigation options
-  var keyboard: js.UndefOr[Boolean] = js.native
-  var keyboardPanDelta: js.UndefOr[Double] = js.native
-  var layers: js.UndefOr[js.Array[Layer]] = js.native
-  var markerZoomAnimation: js.UndefOr[Boolean] = js.native
-  var maxBounds: js.UndefOr[LatLngBoundsExpression] = js.native
-  var maxBoundsViscosity: js.UndefOr[Double] = js.native
-  var maxZoom: js.UndefOr[Double] = js.native
-  var minZoom: js.UndefOr[Double] = js.native
-  var preferCanvas: js.UndefOr[Boolean] = js.native
-  var renderer: js.UndefOr[Renderer] = js.native
+  var keyboard: js.UndefOr[Boolean] = js.undefined
+  var keyboardPanDelta: js.UndefOr[Double] = js.undefined
+  var layers: js.UndefOr[js.Array[Layer]] = js.undefined
+  var markerZoomAnimation: js.UndefOr[Boolean] = js.undefined
+  var maxBounds: js.UndefOr[LatLngBoundsExpression] = js.undefined
+  var maxBoundsViscosity: js.UndefOr[Double] = js.undefined
+  var maxZoom: js.UndefOr[Double] = js.undefined
+  var minZoom: js.UndefOr[Double] = js.undefined
+  var preferCanvas: js.UndefOr[Boolean] = js.undefined
+  var renderer: js.UndefOr[Renderer] = js.undefined
   // Mousewheel options
-  var scrollWheelZoom: js.UndefOr[Zoom] = js.native
+  var scrollWheelZoom: js.UndefOr[Zoom] = js.undefined
   // Touch interaction options
-  var tap: js.UndefOr[Boolean] = js.native
-  var tapTolerance: js.UndefOr[Double] = js.native
-  var touchZoom: js.UndefOr[Zoom] = js.native
-  var trackResize: js.UndefOr[Boolean] = js.native
-  var transform3DLimit: js.UndefOr[Double] = js.native
-  var wheelDebounceTime: js.UndefOr[Double] = js.native
-  var wheelPxPerZoomLevel: js.UndefOr[Double] = js.native
-  var worldCopyJump: js.UndefOr[Boolean] = js.native
-  var zoom: js.UndefOr[Double] = js.native
-  var zoomAnimation: js.UndefOr[Boolean] = js.native
-  var zoomAnimationThreshold: js.UndefOr[Double] = js.native
-  var zoomControl: js.UndefOr[Boolean] = js.native
-  var zoomDelta: js.UndefOr[Double] = js.native
-  var zoomSnap: js.UndefOr[Double] = js.native
+  var tap: js.UndefOr[Boolean] = js.undefined
+  var tapTolerance: js.UndefOr[Double] = js.undefined
+  var touchZoom: js.UndefOr[Zoom] = js.undefined
+  var trackResize: js.UndefOr[Boolean] = js.undefined
+  var transform3DLimit: js.UndefOr[Double] = js.undefined
+  var wheelDebounceTime: js.UndefOr[Double] = js.undefined
+  var wheelPxPerZoomLevel: js.UndefOr[Double] = js.undefined
+  var worldCopyJump: js.UndefOr[Boolean] = js.undefined
+  var zoom: js.UndefOr[Double] = js.undefined
+  var zoomAnimation: js.UndefOr[Boolean] = js.undefined
+  var zoomAnimationThreshold: js.UndefOr[Double] = js.undefined
+  var zoomControl: js.UndefOr[Boolean] = js.undefined
+  var zoomDelta: js.UndefOr[Double] = js.undefined
+  var zoomSnap: js.UndefOr[Double] = js.undefined
 }
 
 object MapOptions {
   @scala.inline
-  def apply(): MapOptions = {
+  def apply(
+    attributionControl: js.UndefOr[Boolean] = js.undefined,
+    bounceAtZoomLimits: js.UndefOr[Boolean] = js.undefined,
+    boxZoom: js.UndefOr[Boolean] = js.undefined,
+    center: LatLngExpression = null,
+    closePopupOnClick: js.UndefOr[Boolean] = js.undefined,
+    crs: CRS = null,
+    doubleClickZoom: Zoom = null,
+    dragging: js.UndefOr[Boolean] = js.undefined,
+    easeLinearity: js.UndefOr[Double] = js.undefined,
+    fadeAnimation: js.UndefOr[Boolean] = js.undefined,
+    inertia: js.UndefOr[Boolean] = js.undefined,
+    inertiaDeceleration: js.UndefOr[Double] = js.undefined,
+    inertiaMaxSpeed: js.UndefOr[Double] = js.undefined,
+    keyboard: js.UndefOr[Boolean] = js.undefined,
+    keyboardPanDelta: js.UndefOr[Double] = js.undefined,
+    layers: js.Array[Layer] = null,
+    markerZoomAnimation: js.UndefOr[Boolean] = js.undefined,
+    maxBounds: LatLngBoundsExpression = null,
+    maxBoundsViscosity: js.UndefOr[Double] = js.undefined,
+    maxZoom: js.UndefOr[Double] = js.undefined,
+    minZoom: js.UndefOr[Double] = js.undefined,
+    preferCanvas: js.UndefOr[Boolean] = js.undefined,
+    renderer: Renderer = null,
+    scrollWheelZoom: Zoom = null,
+    tap: js.UndefOr[Boolean] = js.undefined,
+    tapTolerance: js.UndefOr[Double] = js.undefined,
+    touchZoom: Zoom = null,
+    trackResize: js.UndefOr[Boolean] = js.undefined,
+    transform3DLimit: js.UndefOr[Double] = js.undefined,
+    wheelDebounceTime: js.UndefOr[Double] = js.undefined,
+    wheelPxPerZoomLevel: js.UndefOr[Double] = js.undefined,
+    worldCopyJump: js.UndefOr[Boolean] = js.undefined,
+    zoom: js.UndefOr[Double] = js.undefined,
+    zoomAnimation: js.UndefOr[Boolean] = js.undefined,
+    zoomAnimationThreshold: js.UndefOr[Double] = js.undefined,
+    zoomControl: js.UndefOr[Boolean] = js.undefined,
+    zoomDelta: js.UndefOr[Double] = js.undefined,
+    zoomSnap: js.UndefOr[Double] = js.undefined
+  ): MapOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(attributionControl)) __obj.updateDynamic("attributionControl")(attributionControl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bounceAtZoomLimits)) __obj.updateDynamic("bounceAtZoomLimits")(bounceAtZoomLimits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boxZoom)) __obj.updateDynamic("boxZoom")(boxZoom.get.asInstanceOf[js.Any])
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (!js.isUndefined(closePopupOnClick)) __obj.updateDynamic("closePopupOnClick")(closePopupOnClick.get.asInstanceOf[js.Any])
+    if (crs != null) __obj.updateDynamic("crs")(crs.asInstanceOf[js.Any])
+    if (doubleClickZoom != null) __obj.updateDynamic("doubleClickZoom")(doubleClickZoom.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragging)) __obj.updateDynamic("dragging")(dragging.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(easeLinearity)) __obj.updateDynamic("easeLinearity")(easeLinearity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fadeAnimation)) __obj.updateDynamic("fadeAnimation")(fadeAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inertia)) __obj.updateDynamic("inertia")(inertia.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inertiaDeceleration)) __obj.updateDynamic("inertiaDeceleration")(inertiaDeceleration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inertiaMaxSpeed)) __obj.updateDynamic("inertiaMaxSpeed")(inertiaMaxSpeed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboardPanDelta)) __obj.updateDynamic("keyboardPanDelta")(keyboardPanDelta.get.asInstanceOf[js.Any])
+    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerZoomAnimation)) __obj.updateDynamic("markerZoomAnimation")(markerZoomAnimation.get.asInstanceOf[js.Any])
+    if (maxBounds != null) __obj.updateDynamic("maxBounds")(maxBounds.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBoundsViscosity)) __obj.updateDynamic("maxBoundsViscosity")(maxBoundsViscosity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxZoom)) __obj.updateDynamic("maxZoom")(maxZoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minZoom)) __obj.updateDynamic("minZoom")(minZoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preferCanvas)) __obj.updateDynamic("preferCanvas")(preferCanvas.get.asInstanceOf[js.Any])
+    if (renderer != null) __obj.updateDynamic("renderer")(renderer.asInstanceOf[js.Any])
+    if (scrollWheelZoom != null) __obj.updateDynamic("scrollWheelZoom")(scrollWheelZoom.asInstanceOf[js.Any])
+    if (!js.isUndefined(tap)) __obj.updateDynamic("tap")(tap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tapTolerance)) __obj.updateDynamic("tapTolerance")(tapTolerance.get.asInstanceOf[js.Any])
+    if (touchZoom != null) __obj.updateDynamic("touchZoom")(touchZoom.asInstanceOf[js.Any])
+    if (!js.isUndefined(trackResize)) __obj.updateDynamic("trackResize")(trackResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transform3DLimit)) __obj.updateDynamic("transform3DLimit")(transform3DLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wheelDebounceTime)) __obj.updateDynamic("wheelDebounceTime")(wheelDebounceTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wheelPxPerZoomLevel)) __obj.updateDynamic("wheelPxPerZoomLevel")(wheelPxPerZoomLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(worldCopyJump)) __obj.updateDynamic("worldCopyJump")(worldCopyJump.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomAnimation)) __obj.updateDynamic("zoomAnimation")(zoomAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomAnimationThreshold)) __obj.updateDynamic("zoomAnimationThreshold")(zoomAnimationThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomControl)) __obj.updateDynamic("zoomControl")(zoomControl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomDelta)) __obj.updateDynamic("zoomDelta")(zoomDelta.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomSnap)) __obj.updateDynamic("zoomSnap")(zoomSnap.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapOptions]
   }
-  @scala.inline
-  implicit class MapOptionsOps[Self <: MapOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributionControl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributionControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounceAtZoomLimits(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceAtZoomLimits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounceAtZoomLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceAtZoomLimits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenter(value: LatLngExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClosePopupOnClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closePopupOnClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClosePopupOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closePopupOnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrs(value: CRS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoubleClickZoom(value: Zoom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClickZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoubleClickZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClickZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEaseLinearity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeLinearity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEaseLinearity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeLinearity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFadeAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fadeAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFadeAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fadeAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInertia(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertia")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInertia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertia")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInertiaDeceleration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertiaDeceleration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInertiaDeceleration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertiaDeceleration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInertiaMaxSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertiaMaxSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInertiaMaxSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertiaMaxSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardPanDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardPanDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardPanDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardPanDelta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayers(value: js.Array[Layer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerZoomAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerZoomAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerZoomAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerZoomAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBounds(value: LatLngBoundsExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBoundsViscosity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBoundsViscosity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBoundsViscosity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBoundsViscosity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferCanvas(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferCanvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferCanvas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: Renderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollWheelZoom(value: Zoom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollWheelZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollWheelZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollWheelZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTapTolerance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tapTolerance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTapTolerance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tapTolerance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchZoom(value: Zoom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform3DLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform3DLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransform3DLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform3DLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWheelDebounceTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelDebounceTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWheelDebounceTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelDebounceTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWheelPxPerZoomLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelPxPerZoomLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWheelPxPerZoomLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelPxPerZoomLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorldCopyJump(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldCopyJump")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorldCopyJump: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldCopyJump")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomAnimationThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomAnimationThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomAnimationThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomAnimationThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomControl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomDelta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomSnap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomSnap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomSnap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomSnap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

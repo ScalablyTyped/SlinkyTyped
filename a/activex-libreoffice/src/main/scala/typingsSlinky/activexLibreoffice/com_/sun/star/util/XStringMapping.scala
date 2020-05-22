@@ -8,10 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides a mapping from `string` to `string` */
-@js.native
 trait XStringMapping extends XInterface {
   /** provides a mapping for a given sequence of strings to a sequence of belonging strings. */
-  def mapStrings(Parameter: js.Array[SeqEquiv[String]]): Boolean = js.native
+  def mapStrings(Parameter: js.Array[SeqEquiv[String]]): Boolean
 }
 
 object XStringMapping {
@@ -25,19 +24,5 @@ object XStringMapping {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), mapStrings = js.Any.fromFunction1(mapStrings), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XStringMapping]
   }
-  @scala.inline
-  implicit class XStringMappingOps[Self <: XStringMapping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMapStrings(value: js.Array[SeqEquiv[String]] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapStrings")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

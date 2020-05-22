@@ -25,53 +25,16 @@ trait SchemaDicomConfig extends js.Object {
 
 object SchemaDicomConfig {
   @scala.inline
-  def apply(): SchemaDicomConfig = {
+  def apply(
+    filterProfile: String = null,
+    keepList: SchemaTagFilterList = null,
+    removeList: SchemaTagFilterList = null
+  ): SchemaDicomConfig = {
     val __obj = js.Dynamic.literal()
+    if (filterProfile != null) __obj.updateDynamic("filterProfile")(filterProfile.asInstanceOf[js.Any])
+    if (keepList != null) __obj.updateDynamic("keepList")(keepList.asInstanceOf[js.Any])
+    if (removeList != null) __obj.updateDynamic("removeList")(removeList.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDicomConfig]
   }
-  @scala.inline
-  implicit class SchemaDicomConfigOps[Self <: SchemaDicomConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilterProfile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepList(value: SchemaTagFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveList(value: SchemaTagFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

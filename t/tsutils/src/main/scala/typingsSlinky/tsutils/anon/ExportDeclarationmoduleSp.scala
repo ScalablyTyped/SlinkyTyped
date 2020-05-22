@@ -1,6 +1,6 @@
 package typingsSlinky.tsutils.anon
 
-import typingsSlinky.tsutils.utilUtilMod.ImportLike
+import typingsSlinky.tsutils.utilUtilMod._ImportLike
 import typingsSlinky.typescript.mod.Decorator
 import typingsSlinky.typescript.mod.Expression
 import typingsSlinky.typescript.mod.Identifier
@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined typescript.typescript.ExportDeclaration & {  moduleSpecifier  :{}} */
 @js.native
-trait ExportDeclarationmoduleSp extends ImportLike {
+trait ExportDeclarationmoduleSp extends _ImportLike {
   var _declarationBrand: js.Any = js.native
   var _statementBrand: js.Any = js.native
   var decorators: js.UndefOr[NodeArray[Decorator]] = js.native

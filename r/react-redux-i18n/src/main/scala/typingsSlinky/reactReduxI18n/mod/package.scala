@@ -10,5 +10,8 @@ package object mod {
     /* getState */ js.UndefOr[js.Function0[S]], 
     js.Any
   ]
+  type SubTranslationObject = java.lang.String | (org.scalablytyped.runtime.StringDictionary[
+    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias react-redux-i18n.react-redux-i18n.SubTranslationObject */ js.Object
+  ])
   type TranslationObjects = org.scalablytyped.runtime.StringDictionary[typingsSlinky.reactReduxI18n.mod.SubTranslationObject]
 }

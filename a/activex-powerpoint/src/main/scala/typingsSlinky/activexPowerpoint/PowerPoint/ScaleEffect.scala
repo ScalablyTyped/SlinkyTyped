@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScaleEffect extends js.Object {
-  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
-  var ByX: Double = js.native
-  var ByY: Double = js.native
-  var FromX: Double = js.native
-  var FromY: Double = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application
+  var ByX: Double
+  var ByY: Double
+  var FromX: Double
+  var FromY: Double
+  val Parent: js.Any
   @JSName("PowerPoint.ScaleEffect_typekey")
-  var PowerPointDotScaleEffect_typekey: ScaleEffect = js.native
-  var ToX: Double = js.native
-  var ToY: Double = js.native
+  var PowerPointDotScaleEffect_typekey: ScaleEffect
+  var ToX: Double
+  var ToY: Double
 }
 
 object ScaleEffect {
@@ -35,67 +34,5 @@ object ScaleEffect {
     __obj.updateDynamic("PowerPoint.ScaleEffect_typekey")(PowerPointDotScaleEffect_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScaleEffect]
   }
-  @scala.inline
-  implicit class ScaleEffectOps[Self <: ScaleEffect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withByX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ByX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withByY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ByY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFromX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFromY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotScaleEffect_typekey(value: ScaleEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.ScaleEffect_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToY")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

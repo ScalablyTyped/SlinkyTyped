@@ -5,93 +5,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Webpage metadata, such as the author and the title of the page. */
-@js.native
 trait AnalysisResultsMetadata extends js.Object {
   /** The authors of the document. */
-  var authors: js.UndefOr[js.Array[Author]] = js.native
+  var authors: js.UndefOr[js.Array[Author]] = js.undefined
   /** RSS/ATOM feeds found on the webpage. */
-  var feeds: js.UndefOr[js.Array[Feed]] = js.native
+  var feeds: js.UndefOr[js.Array[Feed]] = js.undefined
   /** URL of a prominent image on the webpage. */
-  var image: js.UndefOr[String] = js.native
+  var image: js.UndefOr[String] = js.undefined
   /** The publication date in the format ISO 8601. */
-  var publication_date: js.UndefOr[String] = js.native
+  var publication_date: js.UndefOr[String] = js.undefined
   /** The title of the document. */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object AnalysisResultsMetadata {
   @scala.inline
-  def apply(): AnalysisResultsMetadata = {
+  def apply(
+    authors: js.Array[Author] = null,
+    feeds: js.Array[Feed] = null,
+    image: String = null,
+    publication_date: String = null,
+    title: String = null
+  ): AnalysisResultsMetadata = {
     val __obj = js.Dynamic.literal()
+    if (authors != null) __obj.updateDynamic("authors")(authors.asInstanceOf[js.Any])
+    if (feeds != null) __obj.updateDynamic("feeds")(feeds.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (publication_date != null) __obj.updateDynamic("publication_date")(publication_date.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalysisResultsMetadata]
   }
-  @scala.inline
-  implicit class AnalysisResultsMetadataOps[Self <: AnalysisResultsMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthors(value: js.Array[Author]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeeds(value: js.Array[Feed]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feeds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeeds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feeds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublication_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publication_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublication_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publication_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

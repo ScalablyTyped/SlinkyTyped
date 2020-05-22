@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SparklineSeriesItemTargetBorder extends js.Object {
-  var color: js.UndefOr[String | js.Function] = js.native
-  var dashType: js.UndefOr[String | js.Function] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var color: js.UndefOr[String | js.Function] = js.undefined
+  var dashType: js.UndefOr[String | js.Function] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object SparklineSeriesItemTargetBorder {
   @scala.inline
-  def apply(): SparklineSeriesItemTargetBorder = {
+  def apply(
+    color: String | js.Function = null,
+    dashType: String | js.Function = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): SparklineSeriesItemTargetBorder = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (dashType != null) __obj.updateDynamic("dashType")(dashType.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SparklineSeriesItemTargetBorder]
   }
-  @scala.inline
-  implicit class SparklineSeriesItemTargetBorderOps[Self <: SparklineSeriesItemTargetBorder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDashType(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

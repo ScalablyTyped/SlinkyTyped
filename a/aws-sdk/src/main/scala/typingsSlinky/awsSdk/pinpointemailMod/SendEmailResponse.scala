@@ -14,29 +14,10 @@ trait SendEmailResponse extends js.Object {
 
 object SendEmailResponse {
   @scala.inline
-  def apply(): SendEmailResponse = {
+  def apply(MessageId: OutboundMessageId = null): SendEmailResponse = {
     val __obj = js.Dynamic.literal()
+    if (MessageId != null) __obj.updateDynamic("MessageId")(MessageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendEmailResponse]
   }
-  @scala.inline
-  implicit class SendEmailResponseOps[Self <: SendEmailResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessageId(value: OutboundMessageId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

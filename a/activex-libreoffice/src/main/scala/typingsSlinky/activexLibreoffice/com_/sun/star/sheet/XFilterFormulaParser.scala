@@ -8,10 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Extends the interface {@link XFormulaParser} by an attribute that specifies the namespace URL of the supported formula language. */
-@js.native
 trait XFilterFormulaParser extends XFormulaParser {
   /** Specifies the namespace URL of the formula language supported by this implementation. */
-  var SupportedNamespace: String = js.native
+  var SupportedNamespace: String
 }
 
 object XFilterFormulaParser {
@@ -24,19 +23,5 @@ object XFilterFormulaParser {
     val __obj = js.Dynamic.literal(SupportedNamespace = SupportedNamespace.asInstanceOf[js.Any], parseFormula = js.Any.fromFunction2(parseFormula), printFormula = js.Any.fromFunction2(printFormula))
     __obj.asInstanceOf[XFilterFormulaParser]
   }
-  @scala.inline
-  implicit class XFilterFormulaParserOps[Self <: XFilterFormulaParser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSupportedNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

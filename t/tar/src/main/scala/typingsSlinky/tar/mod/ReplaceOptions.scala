@@ -6,281 +6,118 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReplaceOptions extends js.Object {
   /**
     * Alias for cwd.
     */
-  var C: js.UndefOr[String] = js.native
+  var C: js.UndefOr[String] = js.undefined
   /**
     * Alias for follow.
     */
-  var L: js.UndefOr[Boolean] = js.native
+  var L: js.UndefOr[Boolean] = js.undefined
   /**
     * Extract files relative to the specified directory. Defaults to
     * process.cwd(). If provided, this must exist and must be a directory.
     */
-  var cwd: js.UndefOr[String] = js.native
+  var cwd: js.UndefOr[String] = js.undefined
   /**
     * Required. Write the tarball archive to the specified filename.
     */
-  var file: String = js.native
+  var file: String
   /**
     * A function that gets called with (path, stat) for each entry being
     * added. Return true to emit the entry from the archive, or false to skip it.
     */
-  var filter: js.UndefOr[js.Function2[/* path */ String, /* stat */ FileStat, Boolean]] = js.native
+  var filter: js.UndefOr[js.Function2[/* path */ String, /* stat */ FileStat, Boolean]] = js.undefined
   /**
     * Set to true to pack the targets of symbolic links. Without this
     * option, symbolic links are archived as such.
     */
-  var follow: js.UndefOr[Boolean] = js.native
+  var follow: js.UndefOr[Boolean] = js.undefined
   /**
     * Set to any truthy value to create a gzipped archive,
     * or an object with settings for zlib.Gzip()
     */
-  var gzip: js.UndefOr[Boolean | ZlibOptions] = js.native
+  var gzip: js.UndefOr[Boolean | ZlibOptions] = js.undefined
   /**
     * Alias for follow.
     */
-  var h: js.UndefOr[Boolean] = js.native
+  var h: js.UndefOr[Boolean] = js.undefined
   /**
     * The maximum buffer size for fs.read() operations. Defaults to 16 MB.
     */
-  var maxReadSize: js.UndefOr[Double] = js.native
+  var maxReadSize: js.UndefOr[Double] = js.undefined
   /**
     * Do not recursively archive the contents of directories.
     */
-  var noDirRecurse: js.UndefOr[Boolean] = js.native
+  var noDirRecurse: js.UndefOr[Boolean] = js.undefined
   /**
     * uppress pax extended headers. Note that this means that long paths and
     * linkpaths will be truncated, and large or negative numeric values
     * may be interpreted incorrectly.
     */
-  var noPax: js.UndefOr[Boolean] = js.native
+  var noPax: js.UndefOr[Boolean] = js.undefined
   /**
     * A function that will get called with (message, data)
     * for any warnings encountered.
     */
-  var onwarn: js.UndefOr[js.Function2[/* message */ String, /* data */ Buffer, Unit]] = js.native
+  var onwarn: js.UndefOr[js.Function2[/* message */ String, /* data */ Buffer, Unit]] = js.undefined
   /**
     * A path portion to prefix onto the entries in the archive.
     */
-  var prefix: js.UndefOr[String] = js.native
+  var prefix: js.UndefOr[String] = js.undefined
   /**
     * Allow absolute paths. By default, / is stripped from absolute paths.
     */
-  var preservePaths: js.UndefOr[Boolean] = js.native
+  var preservePaths: js.UndefOr[Boolean] = js.undefined
   /**
     * Treat warnings as crash-worthy errors. Default false.
     */
-  var strict: js.UndefOr[Boolean] = js.native
+  var strict: js.UndefOr[Boolean] = js.undefined
   /**
     * Act synchronously. If this is set, then any provided file will be
     * fully written after the call to tar.c.
     */
-  var sync: js.UndefOr[Boolean] = js.native
+  var sync: js.UndefOr[Boolean] = js.undefined
 }
 
 object ReplaceOptions {
   @scala.inline
-  def apply(file: String): ReplaceOptions = {
+  def apply(
+    file: String,
+    C: String = null,
+    L: js.UndefOr[Boolean] = js.undefined,
+    cwd: String = null,
+    filter: (/* path */ String, /* stat */ FileStat) => Boolean = null,
+    follow: js.UndefOr[Boolean] = js.undefined,
+    gzip: Boolean | ZlibOptions = null,
+    h: js.UndefOr[Boolean] = js.undefined,
+    maxReadSize: js.UndefOr[Double] = js.undefined,
+    noDirRecurse: js.UndefOr[Boolean] = js.undefined,
+    noPax: js.UndefOr[Boolean] = js.undefined,
+    onwarn: (/* message */ String, /* data */ Buffer) => Unit = null,
+    prefix: String = null,
+    preservePaths: js.UndefOr[Boolean] = js.undefined,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    sync: js.UndefOr[Boolean] = js.undefined
+  ): ReplaceOptions = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    if (C != null) __obj.updateDynamic("C")(C.asInstanceOf[js.Any])
+    if (!js.isUndefined(L)) __obj.updateDynamic("L")(L.get.asInstanceOf[js.Any])
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction2(filter))
+    if (!js.isUndefined(follow)) __obj.updateDynamic("follow")(follow.get.asInstanceOf[js.Any])
+    if (gzip != null) __obj.updateDynamic("gzip")(gzip.asInstanceOf[js.Any])
+    if (!js.isUndefined(h)) __obj.updateDynamic("h")(h.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxReadSize)) __obj.updateDynamic("maxReadSize")(maxReadSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noDirRecurse)) __obj.updateDynamic("noDirRecurse")(noDirRecurse.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noPax)) __obj.updateDynamic("noPax")(noPax.get.asInstanceOf[js.Any])
+    if (onwarn != null) __obj.updateDynamic("onwarn")(js.Any.fromFunction2(onwarn))
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(preservePaths)) __obj.updateDynamic("preservePaths")(preservePaths.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sync)) __obj.updateDynamic("sync")(sync.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplaceOptions]
   }
-  @scala.inline
-  implicit class ReplaceOptionsOps[Self <: ReplaceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withC(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("C")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("C")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withL(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("L")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("L")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCwd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: (/* path */ String, /* stat */ FileStat) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGzip(value: Boolean | ZlibOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGzip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withH(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutH: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxReadSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxReadSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxReadSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxReadSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoDirRecurse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDirRecurse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoDirRecurse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDirRecurse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoPax(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noPax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoPax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noPax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnwarn(value: (/* message */ String, /* data */ Buffer) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwarn")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnwarn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwarn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreservePaths(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preservePaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreservePaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preservePaths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

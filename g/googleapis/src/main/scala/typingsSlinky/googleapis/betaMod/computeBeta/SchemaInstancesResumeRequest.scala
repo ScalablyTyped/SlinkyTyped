@@ -25,41 +25,14 @@ trait SchemaInstancesResumeRequest extends js.Object {
 
 object SchemaInstancesResumeRequest {
   @scala.inline
-  def apply(): SchemaInstancesResumeRequest = {
+  def apply(
+    disks: js.Array[SchemaCustomerEncryptionKeyProtectedDisk] = null,
+    instanceEncryptionKey: SchemaCustomerEncryptionKey = null
+  ): SchemaInstancesResumeRequest = {
     val __obj = js.Dynamic.literal()
+    if (disks != null) __obj.updateDynamic("disks")(disks.asInstanceOf[js.Any])
+    if (instanceEncryptionKey != null) __obj.updateDynamic("instanceEncryptionKey")(instanceEncryptionKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesResumeRequest]
   }
-  @scala.inline
-  implicit class SchemaInstancesResumeRequestOps[Self <: SchemaInstancesResumeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisks(value: js.Array[SchemaCustomerEncryptionKeyProtectedDisk]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceEncryptionKey(value: SchemaCustomerEncryptionKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceEncryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceEncryptionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceEncryptionKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

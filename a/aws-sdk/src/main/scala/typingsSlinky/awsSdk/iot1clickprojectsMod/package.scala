@@ -32,4 +32,10 @@ package object iot1clickprojectsMod {
   type TagMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.iot1clickprojectsMod.TagValue]
   type TagValue = java.lang.String
   type Time = js.Date
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2018-05-14`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.iot1clickprojectsMod._apiVersion | java.lang.String
 }

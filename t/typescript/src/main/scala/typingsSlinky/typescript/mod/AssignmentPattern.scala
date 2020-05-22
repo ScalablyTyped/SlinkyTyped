@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait AssignmentPattern extends js.Object
 
-object AssignmentPattern {
-  @scala.inline
-  implicit def apply(value: ArrayLiteralExpression): AssignmentPattern = value.asInstanceOf[AssignmentPattern]
-  @scala.inline
-  implicit def apply(value: ObjectLiteralExpression): AssignmentPattern = value.asInstanceOf[AssignmentPattern]
-}
-

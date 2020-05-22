@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MoveStatusCondition extends js.Object {
-  var condition: String = js.native
-  var probability: Double = js.native
+  var condition: String
+  var probability: Double
 }
 
 object MoveStatusCondition {
@@ -16,25 +15,5 @@ object MoveStatusCondition {
     val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any], probability = probability.asInstanceOf[js.Any])
     __obj.asInstanceOf[MoveStatusCondition]
   }
-  @scala.inline
-  implicit class MoveStatusConditionOps[Self <: MoveStatusCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCondition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProbability(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("probability")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

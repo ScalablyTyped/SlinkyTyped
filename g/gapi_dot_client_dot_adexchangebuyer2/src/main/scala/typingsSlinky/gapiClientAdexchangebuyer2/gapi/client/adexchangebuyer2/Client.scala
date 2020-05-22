@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Client extends js.Object {
   /**
     * The globally-unique numerical ID of the client.
     * The value of this field is ignored in create and update operations.
     */
-  var clientAccountId: js.UndefOr[String] = js.native
+  var clientAccountId: js.UndefOr[String] = js.undefined
   /**
     * Name used to represent this client to publishers.
     * You may have multiple clients that map to the same entity,
@@ -18,7 +17,7 @@ trait Client extends js.Object {
     * must be unique.
     * You can specify this field as empty.
     */
-  var clientName: js.UndefOr[String] = js.native
+  var clientName: js.UndefOr[String] = js.undefined
   /**
     * Numerical identifier of the client entity.
     * The entity can be an advertiser, a brand, or an agency.
@@ -36,136 +35,49 @@ trait Client extends js.Object {
     * [agencies.txt](https://storage.googleapis.com/adx-rtb-dictionaries/agencies.txt)
     * file.
     */
-  var entityId: js.UndefOr[String] = js.native
+  var entityId: js.UndefOr[String] = js.undefined
   /**
     * The name of the entity. This field is automatically fetched based on
     * the type and ID.
     * The value of this field is ignored in create and update operations.
     */
-  var entityName: js.UndefOr[String] = js.native
+  var entityName: js.UndefOr[String] = js.undefined
   /** The type of the client entity: `ADVERTISER`, `BRAND`, or `AGENCY`. */
-  var entityType: js.UndefOr[String] = js.native
+  var entityType: js.UndefOr[String] = js.undefined
   /**
     * The role which is assigned to the client buyer. Each role implies a set of
     * permissions granted to the client. Must be one of `CLIENT_DEAL_VIEWER`,
     * `CLIENT_DEAL_NEGOTIATOR` or `CLIENT_DEAL_APPROVER`.
     */
-  var role: js.UndefOr[String] = js.native
+  var role: js.UndefOr[String] = js.undefined
   /** The status of the client buyer. */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[String] = js.undefined
   /** Whether the client buyer will be visible to sellers. */
-  var visibleToSeller: js.UndefOr[Boolean] = js.native
+  var visibleToSeller: js.UndefOr[Boolean] = js.undefined
 }
 
 object Client {
   @scala.inline
-  def apply(): Client = {
+  def apply(
+    clientAccountId: String = null,
+    clientName: String = null,
+    entityId: String = null,
+    entityName: String = null,
+    entityType: String = null,
+    role: String = null,
+    status: String = null,
+    visibleToSeller: js.UndefOr[Boolean] = js.undefined
+  ): Client = {
     val __obj = js.Dynamic.literal()
+    if (clientAccountId != null) __obj.updateDynamic("clientAccountId")(clientAccountId.asInstanceOf[js.Any])
+    if (clientName != null) __obj.updateDynamic("clientName")(clientName.asInstanceOf[js.Any])
+    if (entityId != null) __obj.updateDynamic("entityId")(entityId.asInstanceOf[js.Any])
+    if (entityName != null) __obj.updateDynamic("entityName")(entityName.asInstanceOf[js.Any])
+    if (entityType != null) __obj.updateDynamic("entityType")(entityType.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibleToSeller)) __obj.updateDynamic("visibleToSeller")(visibleToSeller.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Client]
   }
-  @scala.inline
-  implicit class ClientOps[Self <: Client] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleToSeller(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleToSeller")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleToSeller: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleToSeller")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

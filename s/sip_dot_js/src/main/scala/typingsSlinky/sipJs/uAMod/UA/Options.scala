@@ -15,445 +15,113 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var allowLegacyNotifications: js.UndefOr[Boolean] = js.native
-  var allowOutOfDialogRefers: js.UndefOr[Boolean] = js.native
-  var authenticationFactory: js.UndefOr[js.Function1[/* ua */ typingsSlinky.sipJs.uAMod.UA, DigestAuthentication | _]] = js.native
-  var authorizationUser: js.UndefOr[String] = js.native
-  var autostart: js.UndefOr[Boolean] = js.native
-  var autostop: js.UndefOr[Boolean] = js.native
-  var displayName: js.UndefOr[String] = js.native
+  var allowLegacyNotifications: js.UndefOr[Boolean] = js.undefined
+  var allowOutOfDialogRefers: js.UndefOr[Boolean] = js.undefined
+  var authenticationFactory: js.UndefOr[js.Function1[/* ua */ typingsSlinky.sipJs.uAMod.UA, DigestAuthentication | _]] = js.undefined
+  var authorizationUser: js.UndefOr[String] = js.undefined
+  var autostart: js.UndefOr[Boolean] = js.undefined
+  var autostop: js.UndefOr[Boolean] = js.undefined
+  var displayName: js.UndefOr[String] = js.undefined
   var dtmfType: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DtmfType */ js.Any
-  ] = js.native
-  var experimentalFeatures: js.UndefOr[Boolean] = js.native
-  var extraSupported: js.UndefOr[js.Array[String]] = js.native
-  var forceRport: js.UndefOr[Boolean] = js.native
-  var hackAllowUnregisteredOptionTags: js.UndefOr[Boolean] = js.native
-  var hackIpInContact: js.UndefOr[Boolean] = js.native
-  var hackViaTcp: js.UndefOr[Boolean] = js.native
-  var hackWssInTransport: js.UndefOr[Boolean] = js.native
-  var hostportParams: js.UndefOr[js.Any] = js.native
-  var log: js.UndefOr[BuiltinEnabled] = js.native
-  var noAnswerTimeout: js.UndefOr[Double] = js.native
-  var password: js.UndefOr[String] = js.native
-  var register: js.UndefOr[Boolean] = js.native
-  var registerOptions: js.UndefOr[RegisterOptions] = js.native
-  var rel100: js.UndefOr[supported] = js.native
-  var replaces: js.UndefOr[supported] = js.native
-  var sessionDescriptionHandlerFactory: js.UndefOr[SessionDescriptionHandlerFactory] = js.native
-  var sessionDescriptionHandlerFactoryOptions: js.UndefOr[SessionDescriptionHandlerFactoryOptions] = js.native
-  var sipjsId: js.UndefOr[String] = js.native
-  var transportConstructor: js.UndefOr[Instantiable2[/* logger */ js.Any, /* options */ js.Any, Transport]] = js.native
-  var transportOptions: js.UndefOr[js.Any] = js.native
-  var uri: js.UndefOr[String | URI] = js.native
-  var usePreloadedRoute: js.UndefOr[Boolean] = js.native
-  var userAgentString: js.UndefOr[String] = js.native
-  var viaHost: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var experimentalFeatures: js.UndefOr[Boolean] = js.undefined
+  var extraSupported: js.UndefOr[js.Array[String]] = js.undefined
+  var forceRport: js.UndefOr[Boolean] = js.undefined
+  var hackAllowUnregisteredOptionTags: js.UndefOr[Boolean] = js.undefined
+  var hackIpInContact: js.UndefOr[Boolean] = js.undefined
+  var hackViaTcp: js.UndefOr[Boolean] = js.undefined
+  var hackWssInTransport: js.UndefOr[Boolean] = js.undefined
+  var hostportParams: js.UndefOr[js.Any] = js.undefined
+  var log: js.UndefOr[BuiltinEnabled] = js.undefined
+  var noAnswerTimeout: js.UndefOr[Double] = js.undefined
+  var password: js.UndefOr[String] = js.undefined
+  var register: js.UndefOr[Boolean] = js.undefined
+  var registerOptions: js.UndefOr[RegisterOptions] = js.undefined
+  var rel100: js.UndefOr[supported] = js.undefined
+  var replaces: js.UndefOr[supported] = js.undefined
+  var sessionDescriptionHandlerFactory: js.UndefOr[SessionDescriptionHandlerFactory] = js.undefined
+  var sessionDescriptionHandlerFactoryOptions: js.UndefOr[SessionDescriptionHandlerFactoryOptions] = js.undefined
+  var sipjsId: js.UndefOr[String] = js.undefined
+  var transportConstructor: js.UndefOr[Instantiable2[/* logger */ js.Any, /* options */ js.Any, Transport]] = js.undefined
+  var transportOptions: js.UndefOr[js.Any] = js.undefined
+  var uri: js.UndefOr[String | URI] = js.undefined
+  var usePreloadedRoute: js.UndefOr[Boolean] = js.undefined
+  var userAgentString: js.UndefOr[String] = js.undefined
+  var viaHost: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    allowLegacyNotifications: js.UndefOr[Boolean] = js.undefined,
+    allowOutOfDialogRefers: js.UndefOr[Boolean] = js.undefined,
+    authenticationFactory: /* ua */ typingsSlinky.sipJs.uAMod.UA => DigestAuthentication | _ = null,
+    authorizationUser: String = null,
+    autostart: js.UndefOr[Boolean] = js.undefined,
+    autostop: js.UndefOr[Boolean] = js.undefined,
+    displayName: String = null,
+    dtmfType: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DtmfType */ js.Any = null,
+    experimentalFeatures: js.UndefOr[Boolean] = js.undefined,
+    extraSupported: js.Array[String] = null,
+    forceRport: js.UndefOr[Boolean] = js.undefined,
+    hackAllowUnregisteredOptionTags: js.UndefOr[Boolean] = js.undefined,
+    hackIpInContact: js.UndefOr[Boolean] = js.undefined,
+    hackViaTcp: js.UndefOr[Boolean] = js.undefined,
+    hackWssInTransport: js.UndefOr[Boolean] = js.undefined,
+    hostportParams: js.Any = null,
+    log: BuiltinEnabled = null,
+    noAnswerTimeout: js.UndefOr[Double] = js.undefined,
+    password: String = null,
+    register: js.UndefOr[Boolean] = js.undefined,
+    registerOptions: RegisterOptions = null,
+    rel100: supported = null,
+    replaces: supported = null,
+    sessionDescriptionHandlerFactory: (/* session */ InviteClientContext | InviteServerContext, /* options */ js.UndefOr[SessionDescriptionHandlerFactoryOptions]) => SessionDescriptionHandler = null,
+    sessionDescriptionHandlerFactoryOptions: SessionDescriptionHandlerFactoryOptions = null,
+    sipjsId: String = null,
+    transportConstructor: Instantiable2[/* logger */ js.Any, /* options */ js.Any, Transport] = null,
+    transportOptions: js.Any = null,
+    uri: String | URI = null,
+    usePreloadedRoute: js.UndefOr[Boolean] = js.undefined,
+    userAgentString: String = null,
+    viaHost: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowLegacyNotifications)) __obj.updateDynamic("allowLegacyNotifications")(allowLegacyNotifications.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowOutOfDialogRefers)) __obj.updateDynamic("allowOutOfDialogRefers")(allowOutOfDialogRefers.get.asInstanceOf[js.Any])
+    if (authenticationFactory != null) __obj.updateDynamic("authenticationFactory")(js.Any.fromFunction1(authenticationFactory))
+    if (authorizationUser != null) __obj.updateDynamic("authorizationUser")(authorizationUser.asInstanceOf[js.Any])
+    if (!js.isUndefined(autostart)) __obj.updateDynamic("autostart")(autostart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autostop)) __obj.updateDynamic("autostop")(autostop.get.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (dtmfType != null) __obj.updateDynamic("dtmfType")(dtmfType.asInstanceOf[js.Any])
+    if (!js.isUndefined(experimentalFeatures)) __obj.updateDynamic("experimentalFeatures")(experimentalFeatures.get.asInstanceOf[js.Any])
+    if (extraSupported != null) __obj.updateDynamic("extraSupported")(extraSupported.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceRport)) __obj.updateDynamic("forceRport")(forceRport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hackAllowUnregisteredOptionTags)) __obj.updateDynamic("hackAllowUnregisteredOptionTags")(hackAllowUnregisteredOptionTags.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hackIpInContact)) __obj.updateDynamic("hackIpInContact")(hackIpInContact.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hackViaTcp)) __obj.updateDynamic("hackViaTcp")(hackViaTcp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hackWssInTransport)) __obj.updateDynamic("hackWssInTransport")(hackWssInTransport.get.asInstanceOf[js.Any])
+    if (hostportParams != null) __obj.updateDynamic("hostportParams")(hostportParams.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
+    if (!js.isUndefined(noAnswerTimeout)) __obj.updateDynamic("noAnswerTimeout")(noAnswerTimeout.get.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(register)) __obj.updateDynamic("register")(register.get.asInstanceOf[js.Any])
+    if (registerOptions != null) __obj.updateDynamic("registerOptions")(registerOptions.asInstanceOf[js.Any])
+    if (rel100 != null) __obj.updateDynamic("rel100")(rel100.asInstanceOf[js.Any])
+    if (replaces != null) __obj.updateDynamic("replaces")(replaces.asInstanceOf[js.Any])
+    if (sessionDescriptionHandlerFactory != null) __obj.updateDynamic("sessionDescriptionHandlerFactory")(js.Any.fromFunction2(sessionDescriptionHandlerFactory))
+    if (sessionDescriptionHandlerFactoryOptions != null) __obj.updateDynamic("sessionDescriptionHandlerFactoryOptions")(sessionDescriptionHandlerFactoryOptions.asInstanceOf[js.Any])
+    if (sipjsId != null) __obj.updateDynamic("sipjsId")(sipjsId.asInstanceOf[js.Any])
+    if (transportConstructor != null) __obj.updateDynamic("transportConstructor")(transportConstructor.asInstanceOf[js.Any])
+    if (transportOptions != null) __obj.updateDynamic("transportOptions")(transportOptions.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePreloadedRoute)) __obj.updateDynamic("usePreloadedRoute")(usePreloadedRoute.get.asInstanceOf[js.Any])
+    if (userAgentString != null) __obj.updateDynamic("userAgentString")(userAgentString.asInstanceOf[js.Any])
+    if (viaHost != null) __obj.updateDynamic("viaHost")(viaHost.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowLegacyNotifications(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLegacyNotifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowLegacyNotifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLegacyNotifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowOutOfDialogRefers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowOutOfDialogRefers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowOutOfDialogRefers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowOutOfDialogRefers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthenticationFactory(value: /* ua */ typingsSlinky.sipJs.uAMod.UA => DigestAuthentication | _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationFactory")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationFactory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationFactory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizationUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizationUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutostart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autostart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutostart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autostart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutostop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autostop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutostop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autostop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDtmfType(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DtmfType */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtmfType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDtmfType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtmfType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperimentalFeatures(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalFeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimentalFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalFeatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtraSupported(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraSupported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtraSupported: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraSupported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceRport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceRport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceRport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceRport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHackAllowUnregisteredOptionTags(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hackAllowUnregisteredOptionTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHackAllowUnregisteredOptionTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hackAllowUnregisteredOptionTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHackIpInContact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hackIpInContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHackIpInContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hackIpInContact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHackViaTcp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hackViaTcp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHackViaTcp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hackViaTcp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHackWssInTransport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hackWssInTransport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHackWssInTransport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hackWssInTransport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostportParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostportParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostportParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostportParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: BuiltinEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoAnswerTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAnswerTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoAnswerTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAnswerTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegister(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegister: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegisterOptions(value: RegisterOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegisterOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRel100(value: supported): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rel100")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRel100: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rel100")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaces(value: supported): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionDescriptionHandlerFactory(
-      value: (/* session */ InviteClientContext | InviteServerContext, /* options */ js.UndefOr[SessionDescriptionHandlerFactoryOptions]) => SessionDescriptionHandler
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionDescriptionHandlerFactory")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSessionDescriptionHandlerFactory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionDescriptionHandlerFactory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionDescriptionHandlerFactoryOptions(value: SessionDescriptionHandlerFactoryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionDescriptionHandlerFactoryOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionDescriptionHandlerFactoryOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionDescriptionHandlerFactoryOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSipjsId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sipjsId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSipjsId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sipjsId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransportConstructor(value: Instantiable2[/* logger */ js.Any, /* options */ js.Any, Transport]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportConstructor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransportConstructor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportConstructor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransportOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransportOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String | URI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsePreloadedRoute(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePreloadedRoute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsePreloadedRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePreloadedRoute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAgentString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgentString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAgentString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgentString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViaHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viaHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViaHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viaHost")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

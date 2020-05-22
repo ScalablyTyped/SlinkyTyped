@@ -21,41 +21,11 @@ trait SchemaSortSpec extends js.Object {
 
 object SchemaSortSpec {
   @scala.inline
-  def apply(): SchemaSortSpec = {
+  def apply(dimensionIndex: js.UndefOr[Double] = js.undefined, sortOrder: String = null): SchemaSortSpec = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dimensionIndex)) __obj.updateDynamic("dimensionIndex")(dimensionIndex.get.asInstanceOf[js.Any])
+    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSortSpec]
   }
-  @scala.inline
-  implicit class SchemaSortSpecOps[Self <: SchemaSortSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortOrder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

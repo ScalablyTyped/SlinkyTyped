@@ -35,41 +35,14 @@ trait SchemaInstanceGroupManagersResizeAdvancedRequest extends js.Object {
 
 object SchemaInstanceGroupManagersResizeAdvancedRequest {
   @scala.inline
-  def apply(): SchemaInstanceGroupManagersResizeAdvancedRequest = {
+  def apply(
+    noCreationRetries: js.UndefOr[Boolean] = js.undefined,
+    targetSize: js.UndefOr[Double] = js.undefined
+  ): SchemaInstanceGroupManagersResizeAdvancedRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(noCreationRetries)) __obj.updateDynamic("noCreationRetries")(noCreationRetries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetSize)) __obj.updateDynamic("targetSize")(targetSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagersResizeAdvancedRequest]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupManagersResizeAdvancedRequestOps[Self <: SchemaInstanceGroupManagersResizeAdvancedRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNoCreationRetries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCreationRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoCreationRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCreationRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

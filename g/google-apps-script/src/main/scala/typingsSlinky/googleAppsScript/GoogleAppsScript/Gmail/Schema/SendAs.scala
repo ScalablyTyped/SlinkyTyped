@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SendAs extends js.Object {
-  var displayName: js.UndefOr[String] = js.native
-  var isDefault: js.UndefOr[Boolean] = js.native
-  var isPrimary: js.UndefOr[Boolean] = js.native
-  var replyToAddress: js.UndefOr[String] = js.native
-  var sendAsEmail: js.UndefOr[String] = js.native
-  var signature: js.UndefOr[String] = js.native
-  var smtpMsa: js.UndefOr[SmtpMsa] = js.native
-  var treatAsAlias: js.UndefOr[Boolean] = js.native
-  var verificationStatus: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
+  var isDefault: js.UndefOr[Boolean] = js.undefined
+  var isPrimary: js.UndefOr[Boolean] = js.undefined
+  var replyToAddress: js.UndefOr[String] = js.undefined
+  var sendAsEmail: js.UndefOr[String] = js.undefined
+  var signature: js.UndefOr[String] = js.undefined
+  var smtpMsa: js.UndefOr[SmtpMsa] = js.undefined
+  var treatAsAlias: js.UndefOr[Boolean] = js.undefined
+  var verificationStatus: js.UndefOr[String] = js.undefined
 }
 
 object SendAs {
   @scala.inline
-  def apply(): SendAs = {
+  def apply(
+    displayName: String = null,
+    isDefault: js.UndefOr[Boolean] = js.undefined,
+    isPrimary: js.UndefOr[Boolean] = js.undefined,
+    replyToAddress: String = null,
+    sendAsEmail: String = null,
+    signature: String = null,
+    smtpMsa: SmtpMsa = null,
+    treatAsAlias: js.UndefOr[Boolean] = js.undefined,
+    verificationStatus: String = null
+  ): SendAs = {
     val __obj = js.Dynamic.literal()
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDefault)) __obj.updateDynamic("isDefault")(isDefault.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPrimary)) __obj.updateDynamic("isPrimary")(isPrimary.get.asInstanceOf[js.Any])
+    if (replyToAddress != null) __obj.updateDynamic("replyToAddress")(replyToAddress.asInstanceOf[js.Any])
+    if (sendAsEmail != null) __obj.updateDynamic("sendAsEmail")(sendAsEmail.asInstanceOf[js.Any])
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
+    if (smtpMsa != null) __obj.updateDynamic("smtpMsa")(smtpMsa.asInstanceOf[js.Any])
+    if (!js.isUndefined(treatAsAlias)) __obj.updateDynamic("treatAsAlias")(treatAsAlias.get.asInstanceOf[js.Any])
+    if (verificationStatus != null) __obj.updateDynamic("verificationStatus")(verificationStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendAs]
   }
-  @scala.inline
-  implicit class SendAsOps[Self <: SendAs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPrimary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplyToAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyToAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyToAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyToAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendAsEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendAsEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendAsEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendAsEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmtpMsa(value: SmtpMsa): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smtpMsa")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmtpMsa: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smtpMsa")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreatAsAlias(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treatAsAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreatAsAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treatAsAlias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerificationStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerificationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

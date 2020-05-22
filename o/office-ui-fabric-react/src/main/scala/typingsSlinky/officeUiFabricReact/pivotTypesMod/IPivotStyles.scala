@@ -5,178 +5,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPivotStyles extends js.Object {
-  var count: IStyle = js.native
-  var icon: IStyle = js.native
-  var itemContainer: js.UndefOr[IStyle] = js.native
-  var link: IStyle = js.native
-  var linkContent: IStyle = js.native
-  var linkIsSelected: IStyle = js.native
+  var count: IStyle
+  var icon: IStyle
+  var itemContainer: js.UndefOr[IStyle] = js.undefined
+  var link: IStyle
+  var linkContent: IStyle
+  var linkIsSelected: IStyle
   /**
     * Style for the root element.
     */
-  var root: IStyle = js.native
-  var text: IStyle = js.native
+  var root: IStyle
+  var text: IStyle
 }
 
 object IPivotStyles {
   @scala.inline
-  def apply(): IPivotStyles = {
+  def apply(
+    count: js.UndefOr[Null | IStyle] = js.undefined,
+    icon: js.UndefOr[Null | IStyle] = js.undefined,
+    itemContainer: js.UndefOr[Null | IStyle] = js.undefined,
+    link: js.UndefOr[Null | IStyle] = js.undefined,
+    linkContent: js.UndefOr[Null | IStyle] = js.undefined,
+    linkIsSelected: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined,
+    text: js.UndefOr[Null | IStyle] = js.undefined
+  ): IPivotStyles = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
+    if (!js.isUndefined(icon)) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemContainer)) __obj.updateDynamic("itemContainer")(itemContainer.asInstanceOf[js.Any])
+    if (!js.isUndefined(link)) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (!js.isUndefined(linkContent)) __obj.updateDynamic("linkContent")(linkContent.asInstanceOf[js.Any])
+    if (!js.isUndefined(linkIsSelected)) __obj.updateDynamic("linkIsSelected")(linkIsSelected.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(text)) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPivotStyles]
   }
-  @scala.inline
-  implicit class IPivotStylesOps[Self <: IPivotStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(null)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(null)
-        ret
-    }
-    @scala.inline
-    def withItemContainer(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemContainer")(null)
-        ret
-    }
-    @scala.inline
-    def withLink(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(null)
-        ret
-    }
-    @scala.inline
-    def withLinkContent(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkContentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContent")(null)
-        ret
-    }
-    @scala.inline
-    def withLinkIsSelected(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkIsSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkIsSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkIsSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkIsSelectedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkIsSelected")(null)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withText(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(null)
-        ret
-    }
-  }
-  
 }
 

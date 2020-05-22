@@ -119,257 +119,50 @@ trait SchemaTurnBasedMatch extends js.Object {
 
 object SchemaTurnBasedMatch {
   @scala.inline
-  def apply(): SchemaTurnBasedMatch = {
+  def apply(
+    applicationId: String = null,
+    autoMatchingCriteria: SchemaTurnBasedAutoMatchingCriteria = null,
+    creationDetails: SchemaTurnBasedMatchModification = null,
+    data: SchemaTurnBasedMatchData = null,
+    description: String = null,
+    inviterId: String = null,
+    kind: String = null,
+    lastUpdateDetails: SchemaTurnBasedMatchModification = null,
+    matchId: String = null,
+    matchNumber: js.UndefOr[Double] = js.undefined,
+    matchVersion: js.UndefOr[Double] = js.undefined,
+    participants: js.Array[SchemaTurnBasedMatchParticipant] = null,
+    pendingParticipantId: String = null,
+    previousMatchData: SchemaTurnBasedMatchData = null,
+    rematchId: String = null,
+    results: js.Array[SchemaParticipantResult] = null,
+    status: String = null,
+    userMatchStatus: String = null,
+    variant: js.UndefOr[Double] = js.undefined,
+    withParticipantId: String = null
+  ): SchemaTurnBasedMatch = {
     val __obj = js.Dynamic.literal()
+    if (applicationId != null) __obj.updateDynamic("applicationId")(applicationId.asInstanceOf[js.Any])
+    if (autoMatchingCriteria != null) __obj.updateDynamic("autoMatchingCriteria")(autoMatchingCriteria.asInstanceOf[js.Any])
+    if (creationDetails != null) __obj.updateDynamic("creationDetails")(creationDetails.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (inviterId != null) __obj.updateDynamic("inviterId")(inviterId.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (lastUpdateDetails != null) __obj.updateDynamic("lastUpdateDetails")(lastUpdateDetails.asInstanceOf[js.Any])
+    if (matchId != null) __obj.updateDynamic("matchId")(matchId.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchNumber)) __obj.updateDynamic("matchNumber")(matchNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchVersion)) __obj.updateDynamic("matchVersion")(matchVersion.get.asInstanceOf[js.Any])
+    if (participants != null) __obj.updateDynamic("participants")(participants.asInstanceOf[js.Any])
+    if (pendingParticipantId != null) __obj.updateDynamic("pendingParticipantId")(pendingParticipantId.asInstanceOf[js.Any])
+    if (previousMatchData != null) __obj.updateDynamic("previousMatchData")(previousMatchData.asInstanceOf[js.Any])
+    if (rematchId != null) __obj.updateDynamic("rematchId")(rematchId.asInstanceOf[js.Any])
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (userMatchStatus != null) __obj.updateDynamic("userMatchStatus")(userMatchStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(variant)) __obj.updateDynamic("variant")(variant.get.asInstanceOf[js.Any])
+    if (withParticipantId != null) __obj.updateDynamic("withParticipantId")(withParticipantId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTurnBasedMatch]
   }
-  @scala.inline
-  implicit class SchemaTurnBasedMatchOps[Self <: SchemaTurnBasedMatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoMatchingCriteria(value: SchemaTurnBasedAutoMatchingCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMatchingCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoMatchingCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMatchingCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDetails(value: SchemaTurnBasedMatchModification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: SchemaTurnBasedMatchData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInviterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inviterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInviterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inviterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateDetails(value: SchemaTurnBasedMatchModification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParticipants(value: js.Array[SchemaTurnBasedMatchParticipant]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("participants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParticipants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("participants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPendingParticipantId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingParticipantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingParticipantId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingParticipantId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousMatchData(value: SchemaTurnBasedMatchData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousMatchData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousMatchData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousMatchData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRematchId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rematchId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRematchId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rematchId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: js.Array[SchemaParticipantResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserMatchStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userMatchStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserMatchStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userMatchStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariant(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithParticipantId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withParticipantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithParticipantId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withParticipantId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

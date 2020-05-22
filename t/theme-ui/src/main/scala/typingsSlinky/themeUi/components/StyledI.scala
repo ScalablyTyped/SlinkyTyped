@@ -15,7 +15,7 @@ object StyledI {
   @js.native
   object component extends js.Object
   
-  def withProps(p: (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with As): `SharedBuilder_<intersection>1849220441`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>1849220441`[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: StyledI.type): `SharedBuilder_<intersection>1849220441`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>1849220441`[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with As): SharedBuilder_DetailedHTMLPropsSxPropsAs1849220441[LegacyRef[js.Any] with js.Object] = new SharedBuilder_DetailedHTMLPropsSxPropsAs1849220441[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StyledI.type): SharedBuilder_DetailedHTMLPropsSxPropsAs1849220441[LegacyRef[js.Any] with js.Object] = new SharedBuilder_DetailedHTMLPropsSxPropsAs1849220441[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

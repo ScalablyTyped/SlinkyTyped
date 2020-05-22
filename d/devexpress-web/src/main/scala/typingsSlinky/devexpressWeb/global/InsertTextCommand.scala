@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InsertTextCommand")
 @js.native
 class InsertTextCommand ()
-  extends typingsSlinky.devexpressWeb.InsertTextCommand
+  extends typingsSlinky.devexpressWeb.InsertTextCommand {
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

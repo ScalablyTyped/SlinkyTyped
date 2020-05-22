@@ -9,266 +9,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppManifest
   extends /* key */ StringDictionary[js.Any] {
-  var bundleUrl: String = js.native
-  var debuggerHost: js.UndefOr[String] = js.native
-  var description: js.UndefOr[String] = js.native
-  var developer: js.UndefOr[Tool] = js.native
-  var entryPoint: js.UndefOr[String] = js.native
-  var icon: js.UndefOr[String] = js.native
-  var loading: js.UndefOr[Icon] = js.native
-  var logUrl: js.UndefOr[String] = js.native
-  var mainModuleName: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var notification: js.UndefOr[Dictkey] = js.native
-  var orientation: js.UndefOr[String] = js.native
-  var packagerOpts: js.UndefOr[Dev] = js.native
-  var primaryColor: js.UndefOr[String] = js.native
+  var bundleUrl: String
+  var debuggerHost: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var developer: js.UndefOr[Tool] = js.undefined
+  var entryPoint: js.UndefOr[String] = js.undefined
+  var icon: js.UndefOr[String] = js.undefined
+  var loading: js.UndefOr[Icon] = js.undefined
+  var logUrl: js.UndefOr[String] = js.undefined
+  var mainModuleName: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var notification: js.UndefOr[Dictkey] = js.undefined
+  var orientation: js.UndefOr[String] = js.undefined
+  var packagerOpts: js.UndefOr[Dev] = js.undefined
+  var primaryColor: js.UndefOr[String] = js.undefined
   /** Published Apps Only */
-  var revisionId: js.UndefOr[String] = js.native
-  var sdkVersion: js.UndefOr[String] = js.native
-  var slug: js.UndefOr[String] = js.native
-  var version: js.UndefOr[String] = js.native
-  var xde: js.UndefOr[Boolean] = js.native
+  var revisionId: js.UndefOr[String] = js.undefined
+  var sdkVersion: js.UndefOr[String] = js.undefined
+  var slug: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
+  var xde: js.UndefOr[Boolean] = js.undefined
 }
 
 object AppManifest {
   @scala.inline
-  def apply(bundleUrl: String): AppManifest = {
+  def apply(
+    bundleUrl: String,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    debuggerHost: String = null,
+    description: String = null,
+    developer: Tool = null,
+    entryPoint: String = null,
+    icon: String = null,
+    loading: Icon = null,
+    logUrl: String = null,
+    mainModuleName: String = null,
+    name: String = null,
+    notification: Dictkey = null,
+    orientation: String = null,
+    packagerOpts: Dev = null,
+    primaryColor: String = null,
+    revisionId: String = null,
+    sdkVersion: String = null,
+    slug: String = null,
+    version: String = null,
+    xde: js.UndefOr[Boolean] = js.undefined
+  ): AppManifest = {
     val __obj = js.Dynamic.literal(bundleUrl = bundleUrl.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (debuggerHost != null) __obj.updateDynamic("debuggerHost")(debuggerHost.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (developer != null) __obj.updateDynamic("developer")(developer.asInstanceOf[js.Any])
+    if (entryPoint != null) __obj.updateDynamic("entryPoint")(entryPoint.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
+    if (logUrl != null) __obj.updateDynamic("logUrl")(logUrl.asInstanceOf[js.Any])
+    if (mainModuleName != null) __obj.updateDynamic("mainModuleName")(mainModuleName.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (notification != null) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (packagerOpts != null) __obj.updateDynamic("packagerOpts")(packagerOpts.asInstanceOf[js.Any])
+    if (primaryColor != null) __obj.updateDynamic("primaryColor")(primaryColor.asInstanceOf[js.Any])
+    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
+    if (sdkVersion != null) __obj.updateDynamic("sdkVersion")(sdkVersion.asInstanceOf[js.Any])
+    if (slug != null) __obj.updateDynamic("slug")(slug.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (!js.isUndefined(xde)) __obj.updateDynamic("xde")(xde.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppManifest]
   }
-  @scala.inline
-  implicit class AppManifestOps[Self <: AppManifest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBundleUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebuggerHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggerHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebuggerHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggerHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeveloper(value: Tool): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeveloper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntryPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntryPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoading(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMainModuleName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainModuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainModuleName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainModuleName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotification(value: Dictkey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackagerOpts(value: Dev): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packagerOpts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackagerOpts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packagerOpts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSdkVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSdkVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlug(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXde(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xde")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXde: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xde")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

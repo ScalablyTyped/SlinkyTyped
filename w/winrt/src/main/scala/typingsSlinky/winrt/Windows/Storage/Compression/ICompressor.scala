@@ -8,10 +8,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICompressor extends IOutputStream {
-  def detachStream(): IOutputStream = js.native
-  def finishAsync(): IAsyncOperation[Boolean] = js.native
+  def detachStream(): IOutputStream
+  def finishAsync(): IAsyncOperation[Boolean]
 }
 
 object ICompressor {
@@ -26,25 +25,5 @@ object ICompressor {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), detachStream = js.Any.fromFunction0(detachStream), finishAsync = js.Any.fromFunction0(finishAsync), flushAsync = js.Any.fromFunction0(flushAsync), writeAsync = js.Any.fromFunction1(writeAsync))
     __obj.asInstanceOf[ICompressor]
   }
-  @scala.inline
-  implicit class ICompressorOps[Self <: ICompressor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetachStream(value: () => IOutputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detachStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFinishAsync(value: () => IAsyncOperation[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finishAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

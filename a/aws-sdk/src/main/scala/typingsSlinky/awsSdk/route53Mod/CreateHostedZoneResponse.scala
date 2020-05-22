@@ -34,54 +34,12 @@ object CreateHostedZoneResponse {
     ChangeInfo: ChangeInfo,
     DelegationSet: DelegationSet,
     HostedZone: HostedZone,
-    Location: ResourceURI
+    Location: ResourceURI,
+    VPC: VPC = null
   ): CreateHostedZoneResponse = {
     val __obj = js.Dynamic.literal(ChangeInfo = ChangeInfo.asInstanceOf[js.Any], DelegationSet = DelegationSet.asInstanceOf[js.Any], HostedZone = HostedZone.asInstanceOf[js.Any], Location = Location.asInstanceOf[js.Any])
+    if (VPC != null) __obj.updateDynamic("VPC")(VPC.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateHostedZoneResponse]
   }
-  @scala.inline
-  implicit class CreateHostedZoneResponseOps[Self <: CreateHostedZoneResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangeInfo(value: ChangeInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelegationSet(value: DelegationSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DelegationSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostedZone(value: HostedZone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation(value: ResourceURI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVPC(value: VPC): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VPC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVPC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VPC")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

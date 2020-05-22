@@ -70,7 +70,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -614,7 +614,7 @@ class SharedBuilder_IShimmerLineProps1550650054 (val args: js.Array[js.Any])
   @scala.inline
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   @scala.inline
-  def stylesFunction1(value: IShimmerLineStyleProps => Partial[IShimmerLineStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def stylesFunction1(value: IShimmerLineStyleProps => DeepPartial[IShimmerLineStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   @scala.inline
   def styles(value: IStyleFunctionOrObject[IShimmerLineStyleProps, IShimmerLineStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   @scala.inline

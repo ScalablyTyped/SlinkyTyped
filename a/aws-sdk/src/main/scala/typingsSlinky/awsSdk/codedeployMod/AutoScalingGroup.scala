@@ -18,41 +18,11 @@ trait AutoScalingGroup extends js.Object {
 
 object AutoScalingGroup {
   @scala.inline
-  def apply(): AutoScalingGroup = {
+  def apply(hook: AutoScalingGroupHook = null, name: AutoScalingGroupName = null): AutoScalingGroup = {
     val __obj = js.Dynamic.literal()
+    if (hook != null) __obj.updateDynamic("hook")(hook.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoScalingGroup]
   }
-  @scala.inline
-  implicit class AutoScalingGroupOps[Self <: AutoScalingGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHook(value: AutoScalingGroupHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: AutoScalingGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

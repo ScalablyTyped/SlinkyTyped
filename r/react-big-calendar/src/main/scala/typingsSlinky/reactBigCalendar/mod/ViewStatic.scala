@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ViewStatic extends js.Object {
-  def navigate(date: js.Date, action: NavigateAction, props: js.Any): js.Date = js.native
-  def title(date: js.Date, options: TitleOptions): String = js.native
+  def navigate(date: js.Date, action: NavigateAction, props: js.Any): js.Date
+  def title(date: js.Date, options: TitleOptions): String
 }
 
 object ViewStatic {
@@ -16,25 +15,5 @@ object ViewStatic {
     val __obj = js.Dynamic.literal(navigate = js.Any.fromFunction3(navigate), title = js.Any.fromFunction2(title))
     __obj.asInstanceOf[ViewStatic]
   }
-  @scala.inline
-  implicit class ViewStaticOps[Self <: ViewStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNavigate(value: (js.Date, NavigateAction, js.Any) => js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withTitle(value: (js.Date, TitleOptions) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

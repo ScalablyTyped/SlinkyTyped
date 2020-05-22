@@ -18,41 +18,11 @@ trait ResolveCaseResponse extends js.Object {
 
 object ResolveCaseResponse {
   @scala.inline
-  def apply(): ResolveCaseResponse = {
+  def apply(finalCaseStatus: CaseStatus = null, initialCaseStatus: CaseStatus = null): ResolveCaseResponse = {
     val __obj = js.Dynamic.literal()
+    if (finalCaseStatus != null) __obj.updateDynamic("finalCaseStatus")(finalCaseStatus.asInstanceOf[js.Any])
+    if (initialCaseStatus != null) __obj.updateDynamic("initialCaseStatus")(initialCaseStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolveCaseResponse]
   }
-  @scala.inline
-  implicit class ResolveCaseResponseOps[Self <: ResolveCaseResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFinalCaseStatus(value: CaseStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalCaseStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalCaseStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalCaseStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialCaseStatus(value: CaseStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialCaseStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialCaseStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialCaseStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

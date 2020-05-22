@@ -6,32 +6,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // 位置-----地图组件控制
-@js.native
 trait GetCenterLocationOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  def success_MGetCenterLocationOptions(res: Latitude): Unit = js.native
+  def success_MGetCenterLocationOptions(res: Latitude): Unit
 }
 
 object GetCenterLocationOptions {
   @scala.inline
-  def apply(success: Latitude => Unit): GetCenterLocationOptions = {
+  def apply(success: Latitude => Unit, complete: /* res */ js.Any => Unit = null, fail: js.Any => Unit = null): GetCenterLocationOptions = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
     __obj.asInstanceOf[GetCenterLocationOptions]
   }
-  @scala.inline
-  implicit class GetCenterLocationOptionsOps[Self <: GetCenterLocationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccess(value: Latitude => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,12 @@ trait CreateStreamingDistributionResult extends js.Object {
 
 object CreateStreamingDistributionResult {
   @scala.inline
-  def apply(): CreateStreamingDistributionResult = {
+  def apply(ETag: String = null, Location: String = null, StreamingDistribution: StreamingDistribution = null): CreateStreamingDistributionResult = {
     val __obj = js.Dynamic.literal()
+    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
+    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
+    if (StreamingDistribution != null) __obj.updateDynamic("StreamingDistribution")(StreamingDistribution.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateStreamingDistributionResult]
   }
-  @scala.inline
-  implicit class CreateStreamingDistributionResultOps[Self <: CreateStreamingDistributionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withETag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutETag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamingDistribution(value: StreamingDistribution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingDistribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamingDistribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingDistribution")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

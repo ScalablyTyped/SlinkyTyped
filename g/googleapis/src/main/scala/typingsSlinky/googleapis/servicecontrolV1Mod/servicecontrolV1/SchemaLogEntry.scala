@@ -70,149 +70,32 @@ trait SchemaLogEntry extends js.Object {
 
 object SchemaLogEntry {
   @scala.inline
-  def apply(): SchemaLogEntry = {
+  def apply(
+    httpRequest: SchemaHttpRequest = null,
+    insertId: String = null,
+    labels: StringDictionary[String] = null,
+    name: String = null,
+    operation: SchemaLogEntryOperation = null,
+    protoPayload: StringDictionary[js.Any] = null,
+    severity: String = null,
+    structPayload: StringDictionary[js.Any] = null,
+    textPayload: String = null,
+    timestamp: String = null,
+    trace: String = null
+  ): SchemaLogEntry = {
     val __obj = js.Dynamic.literal()
+    if (httpRequest != null) __obj.updateDynamic("httpRequest")(httpRequest.asInstanceOf[js.Any])
+    if (insertId != null) __obj.updateDynamic("insertId")(insertId.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
+    if (protoPayload != null) __obj.updateDynamic("protoPayload")(protoPayload.asInstanceOf[js.Any])
+    if (severity != null) __obj.updateDynamic("severity")(severity.asInstanceOf[js.Any])
+    if (structPayload != null) __obj.updateDynamic("structPayload")(structPayload.asInstanceOf[js.Any])
+    if (textPayload != null) __obj.updateDynamic("textPayload")(textPayload.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
+    if (trace != null) __obj.updateDynamic("trace")(trace.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLogEntry]
   }
-  @scala.inline
-  implicit class SchemaLogEntryOps[Self <: SchemaLogEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpRequest(value: SchemaHttpRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperation(value: SchemaLogEntryOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtoPayload(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protoPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtoPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protoPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStructPayload(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStructPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

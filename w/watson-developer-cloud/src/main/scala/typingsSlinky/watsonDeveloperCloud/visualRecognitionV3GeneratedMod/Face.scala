@@ -5,65 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Information about the face. */
-@js.native
 trait Face extends js.Object {
   /** Age information about a face. */
-  var age: js.UndefOr[FaceAge] = js.native
+  var age: js.UndefOr[FaceAge] = js.undefined
   /** The location of the bounding box around the face. */
-  var face_location: js.UndefOr[FaceLocation] = js.native
+  var face_location: js.UndefOr[FaceLocation] = js.undefined
   /** Information about the gender of the face. */
-  var gender: js.UndefOr[FaceGender] = js.native
+  var gender: js.UndefOr[FaceGender] = js.undefined
 }
 
 object Face {
   @scala.inline
-  def apply(): Face = {
+  def apply(age: FaceAge = null, face_location: FaceLocation = null, gender: FaceGender = null): Face = {
     val __obj = js.Dynamic.literal()
+    if (age != null) __obj.updateDynamic("age")(age.asInstanceOf[js.Any])
+    if (face_location != null) __obj.updateDynamic("face_location")(face_location.asInstanceOf[js.Any])
+    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
     __obj.asInstanceOf[Face]
   }
-  @scala.inline
-  implicit class FaceOps[Self <: Face] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAge(value: FaceAge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("age")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("age")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFace_location(value: FaceLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("face_location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFace_location: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("face_location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGender(value: FaceGender): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

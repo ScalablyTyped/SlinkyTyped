@@ -4,31 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchReposLegacyResponseRepositoriesItem extends js.Object {
-  var created: String = js.native
-  var created_at: String = js.native
-  var description: String = js.native
-  var followers: Double = js.native
-  var fork: Boolean = js.native
-  var forks: Double = js.native
-  var has_downloads: Boolean = js.native
-  var has_issues: Boolean = js.native
-  var has_wiki: Boolean = js.native
-  var homepage: String = js.native
-  var language: String = js.native
-  var name: String = js.native
-  var open_issues: Double = js.native
-  var owner: String = js.native
-  var `private`: Boolean = js.native
-  var pushed: String = js.native
-  var pushed_at: String = js.native
-  var score: Double = js.native
-  var size: Double = js.native
-  var `type`: String = js.native
-  var url: String = js.native
-  var username: String = js.native
-  var watchers: Double = js.native
+  var created: String
+  var created_at: String
+  var description: String
+  var followers: Double
+  var fork: Boolean
+  var forks: Double
+  var has_downloads: Boolean
+  var has_issues: Boolean
+  var has_wiki: Boolean
+  var homepage: String
+  var language: String
+  var name: String
+  var open_issues: Double
+  var owner: String
+  var `private`: Boolean
+  var pushed: String
+  var pushed_at: String
+  var score: Double
+  var size: Double
+  var `type`: String
+  var url: String
+  var username: String
+  var watchers: Double
 }
 
 object SearchReposLegacyResponseRepositoriesItem {
@@ -63,151 +62,5 @@ object SearchReposLegacyResponseRepositoriesItem {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchReposLegacyResponseRepositoriesItem]
   }
-  @scala.inline
-  implicit class SearchReposLegacyResponseRepositoriesItemOps[Self <: SearchReposLegacyResponseRepositoriesItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFollowers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFork(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForks(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHas_downloads(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_downloads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHas_issues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_issues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHas_wiki(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_wiki")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHomepage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("homepage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpen_issues(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open_issues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPushed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPushed_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushed_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWatchers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchers")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

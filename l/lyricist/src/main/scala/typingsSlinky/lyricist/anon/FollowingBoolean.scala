@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FollowingBoolean extends js.Object {
-  var following: Boolean = js.native
+  var following: Boolean
 }
 
 object FollowingBoolean {
@@ -15,19 +14,5 @@ object FollowingBoolean {
     val __obj = js.Dynamic.literal(following = following.asInstanceOf[js.Any])
     __obj.asInstanceOf[FollowingBoolean]
   }
-  @scala.inline
-  implicit class FollowingBooleanOps[Self <: FollowingBoolean] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFollowing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("following")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

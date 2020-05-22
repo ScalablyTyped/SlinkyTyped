@@ -68,7 +68,7 @@ import typingsSlinky.antd.cardMod.CardProps
 import typingsSlinky.antd.cardMod.CardSize
 import typingsSlinky.antd.cardMod.CardTabListType
 import typingsSlinky.antd.cardMod.CardType
-import typingsSlinky.antd.cardMod.default
+import typingsSlinky.antd.tabsMod.TabsProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -85,7 +85,7 @@ object Card {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -458,6 +458,8 @@ object Card {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def tabList(value: js.Array[CardTabListType]): this.type = set("tabList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabProps(value: TabsProps): this.type = set("tabProps", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline

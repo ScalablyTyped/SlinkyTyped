@@ -134,257 +134,50 @@ trait SchemaSettings extends js.Object {
 
 object SchemaSettings {
   @scala.inline
-  def apply(): SchemaSettings = {
+  def apply(
+    activationPolicy: String = null,
+    authorizedGaeApplications: js.Array[String] = null,
+    availabilityType: String = null,
+    backupConfiguration: SchemaBackupConfiguration = null,
+    crashSafeReplicationEnabled: js.UndefOr[Boolean] = js.undefined,
+    dataDiskSizeGb: String = null,
+    dataDiskType: String = null,
+    databaseFlags: js.Array[SchemaDatabaseFlags] = null,
+    databaseReplicationEnabled: js.UndefOr[Boolean] = js.undefined,
+    ipConfiguration: SchemaIpConfiguration = null,
+    kind: String = null,
+    locationPreference: SchemaLocationPreference = null,
+    maintenanceWindow: SchemaMaintenanceWindow = null,
+    pricingPlan: String = null,
+    replicationType: String = null,
+    settingsVersion: String = null,
+    storageAutoResize: js.UndefOr[Boolean] = js.undefined,
+    storageAutoResizeLimit: String = null,
+    tier: String = null,
+    userLabels: StringDictionary[String] = null
+  ): SchemaSettings = {
     val __obj = js.Dynamic.literal()
+    if (activationPolicy != null) __obj.updateDynamic("activationPolicy")(activationPolicy.asInstanceOf[js.Any])
+    if (authorizedGaeApplications != null) __obj.updateDynamic("authorizedGaeApplications")(authorizedGaeApplications.asInstanceOf[js.Any])
+    if (availabilityType != null) __obj.updateDynamic("availabilityType")(availabilityType.asInstanceOf[js.Any])
+    if (backupConfiguration != null) __obj.updateDynamic("backupConfiguration")(backupConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(crashSafeReplicationEnabled)) __obj.updateDynamic("crashSafeReplicationEnabled")(crashSafeReplicationEnabled.get.asInstanceOf[js.Any])
+    if (dataDiskSizeGb != null) __obj.updateDynamic("dataDiskSizeGb")(dataDiskSizeGb.asInstanceOf[js.Any])
+    if (dataDiskType != null) __obj.updateDynamic("dataDiskType")(dataDiskType.asInstanceOf[js.Any])
+    if (databaseFlags != null) __obj.updateDynamic("databaseFlags")(databaseFlags.asInstanceOf[js.Any])
+    if (!js.isUndefined(databaseReplicationEnabled)) __obj.updateDynamic("databaseReplicationEnabled")(databaseReplicationEnabled.get.asInstanceOf[js.Any])
+    if (ipConfiguration != null) __obj.updateDynamic("ipConfiguration")(ipConfiguration.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (locationPreference != null) __obj.updateDynamic("locationPreference")(locationPreference.asInstanceOf[js.Any])
+    if (maintenanceWindow != null) __obj.updateDynamic("maintenanceWindow")(maintenanceWindow.asInstanceOf[js.Any])
+    if (pricingPlan != null) __obj.updateDynamic("pricingPlan")(pricingPlan.asInstanceOf[js.Any])
+    if (replicationType != null) __obj.updateDynamic("replicationType")(replicationType.asInstanceOf[js.Any])
+    if (settingsVersion != null) __obj.updateDynamic("settingsVersion")(settingsVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageAutoResize)) __obj.updateDynamic("storageAutoResize")(storageAutoResize.get.asInstanceOf[js.Any])
+    if (storageAutoResizeLimit != null) __obj.updateDynamic("storageAutoResizeLimit")(storageAutoResizeLimit.asInstanceOf[js.Any])
+    if (tier != null) __obj.updateDynamic("tier")(tier.asInstanceOf[js.Any])
+    if (userLabels != null) __obj.updateDynamic("userLabels")(userLabels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSettings]
   }
-  @scala.inline
-  implicit class SchemaSettingsOps[Self <: SchemaSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivationPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activationPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivationPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activationPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizedGaeApplications(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizedGaeApplications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizedGaeApplications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizedGaeApplications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailabilityType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackupConfiguration(value: SchemaBackupConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backupConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backupConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrashSafeReplicationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crashSafeReplicationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrashSafeReplicationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crashSafeReplicationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataDiskSizeGb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDiskSizeGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataDiskSizeGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDiskSizeGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataDiskType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDiskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataDiskType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDiskType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabaseFlags(value: js.Array[SchemaDatabaseFlags]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseFlags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabaseReplicationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseReplicationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseReplicationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseReplicationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpConfiguration(value: SchemaIpConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationPreference(value: SchemaLocationPreference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaintenanceWindow(value: SchemaMaintenanceWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenanceWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaintenanceWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenanceWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPricingPlan(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingPlan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPricingPlan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingPlan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageAutoResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageAutoResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageAutoResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageAutoResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageAutoResizeLimit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageAutoResizeLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageAutoResizeLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageAutoResizeLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userLabels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

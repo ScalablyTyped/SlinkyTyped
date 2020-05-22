@@ -1,5 +1,9 @@
 package typingsSlinky.relayCompiler.iRMod
 
+import typingsSlinky.relayCompiler.relayCompilerStrings.Derived
+import typingsSlinky.relayCompiler.relayCompilerStrings.Generated
+import typingsSlinky.relayCompiler.relayCompilerStrings.Source
+import typingsSlinky.relayCompiler.relayCompilerStrings.Unknown
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +18,24 @@ trait Location extends js.Object
 
 object Location {
   @scala.inline
-  implicit def apply(value: DerivedLocation): Location = value.asInstanceOf[Location]
+  def SourceLocation(end: Double, kind: Source, source: typingsSlinky.graphql.mod.Source, start: Double): Location = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Location]
+  }
   @scala.inline
-  implicit def apply(value: GeneratedLocation): Location = value.asInstanceOf[Location]
+  def GeneratedLocation(kind: Generated): Location = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Location]
+  }
   @scala.inline
-  implicit def apply(value: SourceLocation): Location = value.asInstanceOf[Location]
+  def DerivedLocation(kind: Derived, source: Location): Location = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Location]
+  }
   @scala.inline
-  implicit def apply(value: UnknownLocation): Location = value.asInstanceOf[Location]
+  def UnknownLocation(kind: Unknown): Location = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Location]
+  }
 }
 

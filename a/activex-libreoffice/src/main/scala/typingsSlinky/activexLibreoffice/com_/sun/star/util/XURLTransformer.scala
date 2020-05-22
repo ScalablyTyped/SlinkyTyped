@@ -11,14 +11,13 @@ import scala.scalajs.js.annotation._
   * @see URL
   * @see URLTransformer
   */
-@js.native
 trait XURLTransformer extends XInterface {
   /**
     * assembles the parts of the {@link URL} specified by **aURL** and stores it into {@link URL.Complete}
     * @param aURL the {@link URL} which contains alls necessary information in a structured form. The member {@link URL.Complete} contains the {@link URL} in
     * @returns `TRUE` if assembling was successfully or `FALSE` otherwise.
     */
-  def assemble(aURL: js.Array[URL]): Boolean = js.native
+  def assemble(aURL: js.Array[URL]): Boolean
   /**
     * returns a representation of the {@link URL} for UI purposes only
     *
@@ -28,7 +27,7 @@ trait XURLTransformer extends XInterface {
     * @param bWithPassword specifies whether the password will be included in the encoding or not. Usually passwords should never be shown at the user interface.
     * @returns a string representing the **aURL** if it is syntactically correct. A empty string if **aURL** is not syntactically correct.
     */
-  def getPresentation(aURL: URL, bWithPassword: Boolean): String = js.native
+  def getPresentation(aURL: URL, bWithPassword: Boolean): String
   /**
     * parses the string in {@link URL.Complete} , which may contain a syntactically complete {@link URL} or is specified by the provided protocol
     *
@@ -38,7 +37,7 @@ trait XURLTransformer extends XInterface {
     * @param sSmartProtocol optional information which protocol specification should be used to parse {@link URL.Complete} . If empty the implementation can u
     * @returns `TRUE` if parsing was successful (means if {@link URL.Complete} could be syntactically correct) or `FALSE` otherwise.
     */
-  def parseSmart(aURL: js.Array[URL], sSmartProtocol: String): Boolean = js.native
+  def parseSmart(aURL: js.Array[URL], sSmartProtocol: String): Boolean
   /**
     * parses the string in {@link URL.Complete} which should contain a syntactically complete {@link URL} .
     *
@@ -47,7 +46,7 @@ trait XURLTransformer extends XInterface {
     * @param aURL the {@link URL} which include the complete string notation and will contain all parsed parts of it after finishing this call. {@link URL.Com
     * @returns `TRUE` if parsing was successfully (means if given {@link URL} was syntactically correct) or `FALSE` otherwise.
     */
-  def parseStrict(aURL: js.Array[URL]): Boolean = js.native
+  def parseStrict(aURL: js.Array[URL]): Boolean
 }
 
 object XURLTransformer {
@@ -64,37 +63,5 @@ object XURLTransformer {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), assemble = js.Any.fromFunction1(assemble), getPresentation = js.Any.fromFunction2(getPresentation), parseSmart = js.Any.fromFunction2(parseSmart), parseStrict = js.Any.fromFunction1(parseStrict), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XURLTransformer]
   }
-  @scala.inline
-  implicit class XURLTransformerOps[Self <: XURLTransformer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssemble(value: js.Array[URL] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assemble")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPresentation(value: (URL, Boolean) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPresentation")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withParseSmart(value: (js.Array[URL], String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseSmart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withParseStrict(value: js.Array[URL] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseStrict")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

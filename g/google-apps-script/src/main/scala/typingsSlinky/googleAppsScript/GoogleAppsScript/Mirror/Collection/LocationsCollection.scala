@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LocationsCollection extends js.Object {
   // Gets a single location by ID.
-  def get(id: String): Location = js.native
+  def get(id: String): Location
   // Retrieves a list of locations for the user.
-  def list(): LocationsListResponse = js.native
+  def list(): LocationsListResponse
 }
 
 object LocationsCollection {
@@ -20,25 +19,5 @@ object LocationsCollection {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction0(list))
     __obj.asInstanceOf[LocationsCollection]
   }
-  @scala.inline
-  implicit class LocationsCollectionOps[Self <: LocationsCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: String => Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: () => LocationsListResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

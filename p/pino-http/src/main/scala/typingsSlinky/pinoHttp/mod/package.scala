@@ -14,4 +14,5 @@ package object mod {
     /* res */ typingsSlinky.node.httpMod.ServerResponse, 
     scala.Unit
   ]
+  type ReqId = scala.Double | java.lang.String | js.Object
 }

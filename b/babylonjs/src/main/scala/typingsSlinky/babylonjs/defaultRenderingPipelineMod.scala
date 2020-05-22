@@ -105,6 +105,11 @@ object defaultRenderingPipelineMod extends js.Object {
     var _sharpenEffect: js.Any = js.native
     var _sharpenEnabled: js.Any = js.native
     /**
+      * Array of animations
+      */
+    /* CompleteClass */
+    override var animations: Nullable[js.Array[Animation]] = js.native
+    /**
       * Animations which can be used to tweak settings over a period of time
       */
     @JSName("animations")

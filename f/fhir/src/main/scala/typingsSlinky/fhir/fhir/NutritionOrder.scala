@@ -8,235 +8,123 @@ import scala.scalajs.js.annotation._
   * Diet, formula or nutritional supplement request
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
-trait NutritionOrder extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait NutritionOrder extends DomainResource {
   /**
     * Contains extended information for property 'dateTime'.
     */
-  var _dateTime: js.UndefOr[Element] = js.native
+  var _dateTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.native
+  var _status: js.UndefOr[Element] = js.undefined
   /**
     * List of the patient's food and nutrition-related allergies and intolerances
     */
-  var allergyIntolerance: js.UndefOr[js.Array[Reference]] = js.native
+  var allergyIntolerance: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Date and time the nutrition order was requested
     */
-  var dateTime: typingsSlinky.fhir.fhir.dateTime = js.native
+  var dateTime: typingsSlinky.fhir.fhir.dateTime
   /**
     * The encounter associated with this nutrition order
     */
-  var encounter: js.UndefOr[Reference] = js.native
+  var encounter: js.UndefOr[Reference] = js.undefined
   /**
     * Enteral formula components
     */
-  var enteralFormula: js.UndefOr[NutritionOrderEnteralFormula] = js.native
+  var enteralFormula: js.UndefOr[NutritionOrderEnteralFormula] = js.undefined
   /**
     * Order-specific modifier about the type of food that should not be given
     */
-  var excludeFoodModifier: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var excludeFoodModifier: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Order-specific modifier about the type of food that should be given
     */
-  var foodPreferenceModifier: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var foodPreferenceModifier: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Identifiers assigned to this order
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
   /**
     * Oral diet components
     */
-  var oralDiet: js.UndefOr[NutritionOrderOralDiet] = js.native
+  var oralDiet: js.UndefOr[NutritionOrderOralDiet] = js.undefined
   /**
     * Who ordered the diet, formula or nutritional supplement
     */
-  var orderer: js.UndefOr[Reference] = js.native
+  var orderer: js.UndefOr[Reference] = js.undefined
   /**
     * The person who requires the diet, formula or nutritional supplement
     */
-  var patient: Reference = js.native
+  var patient: Reference
   /**
     * proposed | draft | planned | requested | active | on-hold | completed | cancelled | entered-in-error
     */
-  var status: js.UndefOr[code] = js.native
+  var status: js.UndefOr[code] = js.undefined
   /**
     * Supplement components
     */
-  var supplement: js.UndefOr[js.Array[NutritionOrderSupplement]] = js.native
+  var supplement: js.UndefOr[js.Array[NutritionOrderSupplement]] = js.undefined
 }
 
 object NutritionOrder {
   @scala.inline
-  def apply(dateTime: dateTime, patient: Reference): NutritionOrder = {
+  def apply(
+    dateTime: dateTime,
+    patient: Reference,
+    _dateTime: Element = null,
+    _id: Element = null,
+    _implicitRules: Element = null,
+    _language: Element = null,
+    _resourceType: Element = null,
+    _status: Element = null,
+    allergyIntolerance: js.Array[Reference] = null,
+    contained: js.Array[Resource] = null,
+    encounter: Reference = null,
+    enteralFormula: NutritionOrderEnteralFormula = null,
+    excludeFoodModifier: js.Array[CodeableConcept] = null,
+    extension: js.Array[Extension] = null,
+    foodPreferenceModifier: js.Array[CodeableConcept] = null,
+    id: id = null,
+    identifier: js.Array[Identifier] = null,
+    implicitRules: uri = null,
+    language: code = null,
+    meta: Meta = null,
+    modifierExtension: js.Array[Extension] = null,
+    oralDiet: NutritionOrderOralDiet = null,
+    orderer: Reference = null,
+    resourceType: code = null,
+    status: code = null,
+    supplement: js.Array[NutritionOrderSupplement] = null,
+    text: Narrative = null
+  ): NutritionOrder = {
     val __obj = js.Dynamic.literal(dateTime = dateTime.asInstanceOf[js.Any], patient = patient.asInstanceOf[js.Any])
+    if (_dateTime != null) __obj.updateDynamic("_dateTime")(_dateTime.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
+    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
+    if (allergyIntolerance != null) __obj.updateDynamic("allergyIntolerance")(allergyIntolerance.asInstanceOf[js.Any])
+    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
+    if (encounter != null) __obj.updateDynamic("encounter")(encounter.asInstanceOf[js.Any])
+    if (enteralFormula != null) __obj.updateDynamic("enteralFormula")(enteralFormula.asInstanceOf[js.Any])
+    if (excludeFoodModifier != null) __obj.updateDynamic("excludeFoodModifier")(excludeFoodModifier.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (foodPreferenceModifier != null) __obj.updateDynamic("foodPreferenceModifier")(foodPreferenceModifier.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (oralDiet != null) __obj.updateDynamic("oralDiet")(oralDiet.asInstanceOf[js.Any])
+    if (orderer != null) __obj.updateDynamic("orderer")(orderer.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (supplement != null) __obj.updateDynamic("supplement")(supplement.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[NutritionOrder]
   }
-  @scala.inline
-  implicit class NutritionOrderOps[Self <: NutritionOrder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateTime(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatient(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_dateTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_dateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_dateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_dateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_status(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllergyIntolerance(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allergyIntolerance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllergyIntolerance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allergyIntolerance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncounter(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encounter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncounter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encounter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnteralFormula(value: NutritionOrderEnteralFormula): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enteralFormula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnteralFormula: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enteralFormula")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeFoodModifier(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeFoodModifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeFoodModifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeFoodModifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFoodPreferenceModifier(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foodPreferenceModifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFoodPreferenceModifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foodPreferenceModifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: js.Array[Identifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOralDiet(value: NutritionOrderOralDiet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oralDiet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOralDiet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oralDiet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderer(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupplement(value: js.Array[NutritionOrderSupplement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supplement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupplement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supplement")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,10 @@ trait CreatePlacementRequest extends js.Object {
 
 object CreatePlacementRequest {
   @scala.inline
-  def apply(placementName: PlacementName, projectName: ProjectName): CreatePlacementRequest = {
+  def apply(placementName: PlacementName, projectName: ProjectName, attributes: PlacementAttributeMap = null): CreatePlacementRequest = {
     val __obj = js.Dynamic.literal(placementName = placementName.asInstanceOf[js.Any], projectName = projectName.asInstanceOf[js.Any])
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePlacementRequest]
   }
-  @scala.inline
-  implicit class CreatePlacementRequestOps[Self <: CreatePlacementRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlacementName(value: PlacementName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjectName(value: ProjectName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: PlacementAttributeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

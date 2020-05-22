@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Enumeration.DeviceAccessChangedEventArgs")
 @js.native
 abstract class DeviceAccessChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceAccessChangedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceAccessChangedEventArgs {
+  /** The new status of access to a device. */
+  /* CompleteClass */
+  override var status: typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceAccessStatus = js.native
+}
 

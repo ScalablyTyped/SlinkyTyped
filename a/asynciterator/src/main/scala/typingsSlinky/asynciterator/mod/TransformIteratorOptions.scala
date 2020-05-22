@@ -4,49 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransformIteratorOptions[S] extends BufferedIteratorOptions {
-  var optional: js.UndefOr[Boolean] = js.native
-  var source: js.UndefOr[AsyncIterator[S]] = js.native
+  var optional: js.UndefOr[Boolean] = js.undefined
+  var source: js.UndefOr[AsyncIterator[S]] = js.undefined
 }
 
 object TransformIteratorOptions {
   @scala.inline
-  def apply[S](): TransformIteratorOptions[S] = {
+  def apply[S](
+    autoStart: js.UndefOr[Boolean] = js.undefined,
+    maxBufferSize: js.UndefOr[Double] = js.undefined,
+    optional: js.UndefOr[Boolean] = js.undefined,
+    source: AsyncIterator[S] = null
+  ): TransformIteratorOptions[S] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoStart)) __obj.updateDynamic("autoStart")(autoStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBufferSize)) __obj.updateDynamic("maxBufferSize")(maxBufferSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(optional)) __obj.updateDynamic("optional")(optional.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformIteratorOptions[S]]
   }
-  @scala.inline
-  implicit class TransformIteratorOptionsOps[Self[s] <: TransformIteratorOptions[s], S] (val x: Self[S]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[S]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
-    @scala.inline
-    def withOptional(value: Boolean): Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptional: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: AsyncIterator[S]): Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

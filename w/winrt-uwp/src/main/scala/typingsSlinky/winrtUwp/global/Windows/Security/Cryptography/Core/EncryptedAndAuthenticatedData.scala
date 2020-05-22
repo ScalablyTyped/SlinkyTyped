@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Security.Cryptography.Core
 
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData")
 @js.native
 abstract class EncryptedAndAuthenticatedData ()
-  extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData
+  extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData {
+  /** Gets the authentication tag. */
+  /* CompleteClass */
+  override var authenticationTag: IBuffer = js.native
+  /** Gets the encrypted data. */
+  /* CompleteClass */
+  override var encryptedData: IBuffer = js.native
+}
 

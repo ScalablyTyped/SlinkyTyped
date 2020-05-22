@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices
 
+import typingsSlinky.winrtUwp.Windows.Devices.Gpio.GpioPinEdge
 import typingsSlinky.winrtUwp.Windows.Devices.Gpio.Provider.IGpioProvider
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
@@ -24,7 +25,11 @@ object Gpio extends js.Object {
   /** Provides data about the GpioPin.ValueChanged event that occurs when the value of the general-purpose I/O (GPIO) pin changes, either because of an external stimulus when the pin is configured as an input, or when a value is written to the pin when the pin in configured as an output. */
   @js.native
   abstract class GpioPinValueChangedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.Gpio.GpioPinValueChangedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Devices.Gpio.GpioPinValueChangedEventArgs {
+    /** Gets the type of change that occurred to the value of the general-purpose I/O (GPIO) pin for the GpioPin.ValueChanged event. */
+    /* CompleteClass */
+    override var edge: GpioPinEdge = js.native
+  }
   
   /* static members */
   @js.native
@@ -104,7 +109,10 @@ object Gpio extends js.Object {
   object Provider extends js.Object {
     @js.native
     abstract class GpioPinProviderValueChangedEventArgs ()
-      extends typingsSlinky.winrtUwp.Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs
+      extends typingsSlinky.winrtUwp.Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs {
+      /* CompleteClass */
+      override var edge: js.Any = js.native
+    }
     
     @js.native
     object ProviderGpioPinDriveMode extends js.Object {

@@ -86,89 +86,22 @@ trait SchemaBuildBazelRemoteExecutionV2Command extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2Command {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2Command = {
+  def apply(
+    arguments: js.Array[String] = null,
+    environmentVariables: js.Array[SchemaBuildBazelRemoteExecutionV2CommandEnvironmentVariable] = null,
+    outputDirectories: js.Array[String] = null,
+    outputFiles: js.Array[String] = null,
+    platform: SchemaBuildBazelRemoteExecutionV2Platform = null,
+    workingDirectory: String = null
+  ): SchemaBuildBazelRemoteExecutionV2Command = {
     val __obj = js.Dynamic.literal()
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (environmentVariables != null) __obj.updateDynamic("environmentVariables")(environmentVariables.asInstanceOf[js.Any])
+    if (outputDirectories != null) __obj.updateDynamic("outputDirectories")(outputDirectories.asInstanceOf[js.Any])
+    if (outputFiles != null) __obj.updateDynamic("outputFiles")(outputFiles.asInstanceOf[js.Any])
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (workingDirectory != null) __obj.updateDynamic("workingDirectory")(workingDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2Command]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2CommandOps[Self <: SchemaBuildBazelRemoteExecutionV2Command] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArguments(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentVariables(value: js.Array[SchemaBuildBazelRemoteExecutionV2CommandEnvironmentVariable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputDirectories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputDirectories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputFiles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: SchemaBuildBazelRemoteExecutionV2Platform): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkingDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkingDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDirectory")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

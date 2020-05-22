@@ -1,6 +1,8 @@
 package typingsSlinky.makeDir.anon
 
 import typingsSlinky.node.NodeJS.ErrnoException
+import typingsSlinky.node.fsMod.Mode
+import typingsSlinky.node.fsMod.OpenMode
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,35 +10,15 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Typeofopen extends js.Object {
-  /**
-    * Asynchronous open(2) - open and possibly create a file. If the file is created, its mode will be `0o666`.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    */
   def apply(
     path: PathLike,
-    flags: String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
-  /**
-    * Asynchronous open(2) - open and possibly create a file.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param mode A file mode. If a string is passed, it is parsed as an octal integer. If not supplied, defaults to `0o666`.
-    */
-  def apply(
-    path: PathLike,
-    flags: String,
-    mode: js.UndefOr[Double | Null | String],
-    callback: js.Function2[ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
-  def apply(
-    path: PathLike,
-    flags: Double,
+    flags: OpenMode,
     callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
   ): Unit = js.native
   def apply(
     path: PathLike,
-    flags: Double,
-    mode: js.UndefOr[Double | Null | String],
+    flags: OpenMode,
+    mode: js.UndefOr[Mode | Null],
     callback: js.Function2[ErrnoException | Null, /* fd */ Double, Unit]
   ): Unit = js.native
   /**
@@ -44,11 +26,7 @@ trait Typeofopen extends js.Object {
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param mode A file mode. If a string is passed, it is parsed as an octal integer. If not supplied, defaults to `0o666`.
     */
-  def __promisify__(path: PathLike, flags: String): js.Promise[Double] = js.native
-  def __promisify__(path: PathLike, flags: String, mode: String): js.Promise[Double] = js.native
-  def __promisify__(path: PathLike, flags: String, mode: Double): js.Promise[Double] = js.native
-  def __promisify__(path: PathLike, flags: Double): js.Promise[Double] = js.native
-  def __promisify__(path: PathLike, flags: Double, mode: String): js.Promise[Double] = js.native
-  def __promisify__(path: PathLike, flags: Double, mode: Double): js.Promise[Double] = js.native
+  def __promisify__(path: PathLike, flags: OpenMode): js.Promise[Double] = js.native
+  def __promisify__(path: PathLike, flags: OpenMode, mode: Mode): js.Promise[Double] = js.native
 }
 

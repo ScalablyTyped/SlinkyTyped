@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkXmlBodyParser
 
+import typingsSlinky.awsSdkTypes.protocolMod.Member
 import typingsSlinky.awsSdkTypes.unmarshallerMod.BodyParser
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import scala.scalajs.js
@@ -19,6 +20,16 @@ object mod extends js.Object {
     var parseStructure: js.Any = js.native
     var parseTimeStamp: js.Any = js.native
     var unmarshall: js.Any = js.native
+    /**
+      * Convert the provided input into the shape described in the supplied
+      * serialization model.
+      *
+      * @param shape A serialization model describing the expected shape of the
+      *              value supplied as `input`.
+      * @param input The value to parse
+      */
+    /* CompleteClass */
+    override def parse[OutputType](shape: Member, input: String): OutputType = js.native
   }
   
 }

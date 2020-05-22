@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ComparisonValue extends js.Object {
   /** Type of comparison. Possible values are LESS_THAN or GREATER_THAN. */
-  var comparisonType: js.UndefOr[String] = js.native
+  var comparisonType: js.UndefOr[String] = js.undefined
   /** Value used for this comparison. */
-  var comparisonValue: js.UndefOr[String] = js.native
+  var comparisonValue: js.UndefOr[String] = js.undefined
 }
 
 object ComparisonValue {
   @scala.inline
-  def apply(): ComparisonValue = {
+  def apply(comparisonType: String = null, comparisonValue: String = null): ComparisonValue = {
     val __obj = js.Dynamic.literal()
+    if (comparisonType != null) __obj.updateDynamic("comparisonType")(comparisonType.asInstanceOf[js.Any])
+    if (comparisonValue != null) __obj.updateDynamic("comparisonValue")(comparisonValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComparisonValue]
   }
-  @scala.inline
-  implicit class ComparisonValueOps[Self <: ComparisonValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparisonType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparisonType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparisonValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparisonValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

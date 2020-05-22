@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation._
 class KeyEventData ()
   extends DomEventData
      with KeystrokeInfo {
+  /* CompleteClass */
+  override var keyCode: Double = js.native
   var keystroke: Double = js.native
 }
 

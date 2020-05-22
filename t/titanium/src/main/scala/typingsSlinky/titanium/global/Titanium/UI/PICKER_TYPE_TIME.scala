@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Use a time picker.
-		 */
+  * Use a time picker.
+  */
 @JSGlobal("Titanium.UI.PICKER_TYPE_TIME")
 @js.native
 object PICKER_TYPE_TIME extends TopLevel[Double]

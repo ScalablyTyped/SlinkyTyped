@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreativeFieldAssignment extends js.Object {
   /** ID of the creative field. */
-  var creativeFieldId: js.UndefOr[String] = js.native
+  var creativeFieldId: js.UndefOr[String] = js.undefined
   /** ID of the creative field value. */
-  var creativeFieldValueId: js.UndefOr[String] = js.native
+  var creativeFieldValueId: js.UndefOr[String] = js.undefined
 }
 
 object CreativeFieldAssignment {
   @scala.inline
-  def apply(): CreativeFieldAssignment = {
+  def apply(creativeFieldId: String = null, creativeFieldValueId: String = null): CreativeFieldAssignment = {
     val __obj = js.Dynamic.literal()
+    if (creativeFieldId != null) __obj.updateDynamic("creativeFieldId")(creativeFieldId.asInstanceOf[js.Any])
+    if (creativeFieldValueId != null) __obj.updateDynamic("creativeFieldValueId")(creativeFieldValueId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreativeFieldAssignment]
   }
-  @scala.inline
-  implicit class CreativeFieldAssignmentOps[Self <: CreativeFieldAssignment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreativeFieldId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeFieldId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeFieldId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeFieldId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreativeFieldValueId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeFieldValueId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeFieldValueId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeFieldValueId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

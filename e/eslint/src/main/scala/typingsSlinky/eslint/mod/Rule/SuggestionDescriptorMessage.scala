@@ -1,7 +1,5 @@
 package typingsSlinky.eslint.mod.Rule
 
-import typingsSlinky.eslint.anon.Desc
-import typingsSlinky.eslint.anon.MessageId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait SuggestionDescriptorMessage extends js.Object
 
 object SuggestionDescriptorMessage {
   @scala.inline
-  implicit def apply(value: Desc): SuggestionDescriptorMessage = value.asInstanceOf[SuggestionDescriptorMessage]
+  def Desc(desc: String): SuggestionDescriptorMessage = {
+    val __obj = js.Dynamic.literal(desc = desc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SuggestionDescriptorMessage]
+  }
   @scala.inline
-  implicit def apply(value: MessageId): SuggestionDescriptorMessage = value.asInstanceOf[SuggestionDescriptorMessage]
+  def MessageId(messageId: String): SuggestionDescriptorMessage = {
+    val __obj = js.Dynamic.literal(messageId = messageId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SuggestionDescriptorMessage]
+  }
 }
 

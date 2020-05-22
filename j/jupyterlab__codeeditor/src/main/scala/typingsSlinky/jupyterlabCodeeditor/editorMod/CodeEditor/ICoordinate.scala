@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 /**
   * An interface describing editor state coordinates.
   */
-@js.native
 trait ICoordinate
   extends JSONObject
      with ClientRect

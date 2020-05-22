@@ -16,5 +16,10 @@ class ASPxClientSplitterPaneEventArgs protected ()
     * @param pane A ASPxClientSplitterPane object representing a splitter pane related to the generated event.
     */
   def this(pane: typingsSlinky.devexpressWeb.ASPxClientSplitterPane) = this()
+  /**
+    * Gets the pane object related to the event.
+    */
+  /* CompleteClass */
+  override var pane: typingsSlinky.devexpressWeb.ASPxClientSplitterPane = js.native
 }
 

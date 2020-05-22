@@ -18,19 +18,5 @@ object DeregisterVolumeRequest {
     val __obj = js.Dynamic.literal(VolumeId = VolumeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeregisterVolumeRequest]
   }
-  @scala.inline
-  implicit class DeregisterVolumeRequestOps[Self <: DeregisterVolumeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVolumeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

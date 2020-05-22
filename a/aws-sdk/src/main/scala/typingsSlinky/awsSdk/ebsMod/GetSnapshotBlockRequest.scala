@@ -26,31 +26,5 @@ object GetSnapshotBlockRequest {
     val __obj = js.Dynamic.literal(BlockIndex = BlockIndex.asInstanceOf[js.Any], BlockToken = BlockToken.asInstanceOf[js.Any], SnapshotId = SnapshotId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSnapshotBlockRequest]
   }
-  @scala.inline
-  implicit class GetSnapshotBlockRequestOps[Self <: GetSnapshotBlockRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockIndex(value: BlockIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockToken(value: BlockToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnapshotId(value: SnapshotId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

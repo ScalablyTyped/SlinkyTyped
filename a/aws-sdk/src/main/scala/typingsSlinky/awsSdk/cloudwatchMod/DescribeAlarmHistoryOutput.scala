@@ -18,41 +18,11 @@ trait DescribeAlarmHistoryOutput extends js.Object {
 
 object DescribeAlarmHistoryOutput {
   @scala.inline
-  def apply(): DescribeAlarmHistoryOutput = {
+  def apply(AlarmHistoryItems: AlarmHistoryItems = null, NextToken: NextToken = null): DescribeAlarmHistoryOutput = {
     val __obj = js.Dynamic.literal()
+    if (AlarmHistoryItems != null) __obj.updateDynamic("AlarmHistoryItems")(AlarmHistoryItems.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAlarmHistoryOutput]
   }
-  @scala.inline
-  implicit class DescribeAlarmHistoryOutputOps[Self <: DescribeAlarmHistoryOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlarmHistoryItems(value: AlarmHistoryItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmHistoryItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmHistoryItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmHistoryItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

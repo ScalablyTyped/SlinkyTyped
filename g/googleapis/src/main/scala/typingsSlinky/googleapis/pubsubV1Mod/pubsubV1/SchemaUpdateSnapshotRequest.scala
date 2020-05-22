@@ -22,41 +22,11 @@ trait SchemaUpdateSnapshotRequest extends js.Object {
 
 object SchemaUpdateSnapshotRequest {
   @scala.inline
-  def apply(): SchemaUpdateSnapshotRequest = {
+  def apply(snapshot: SchemaSnapshot = null, updateMask: String = null): SchemaUpdateSnapshotRequest = {
     val __obj = js.Dynamic.literal()
+    if (snapshot != null) __obj.updateDynamic("snapshot")(snapshot.asInstanceOf[js.Any])
+    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateSnapshotRequest]
   }
-  @scala.inline
-  implicit class SchemaUpdateSnapshotRequestOps[Self <: SchemaUpdateSnapshotRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSnapshot(value: SchemaSnapshot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateMask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

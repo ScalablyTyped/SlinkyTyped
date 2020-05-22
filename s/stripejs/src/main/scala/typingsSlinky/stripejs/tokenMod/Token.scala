@@ -11,42 +11,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Token extends js.Object {
   /**
     * Hash describing the bank account
     */
-  var bank_account: js.UndefOr[BankAccount] = js.native
+  var bank_account: js.UndefOr[BankAccount] = js.undefined
   /**
     * Hash describing the card used to make the charge
     */
-  var card: js.UndefOr[Card] = js.native
+  var card: js.UndefOr[Card] = js.undefined
   /**
     * IP address of the client that generated the token
     */
-  var client_ip: String = js.native
+  var client_ip: String
   /**
     * Time at which the object was created. Measured in seconds since the Unix epoch
     */
-  var created: String = js.native
+  var created: String
   /**
     * The unique identifier for the token
     */
-  var id: String = js.native
+  var id: String
   /**
     * LIVE MODE = `true`
     * TEST MODE = `false`
     */
-  var livemode: Boolean = js.native
-  var `object`: token = js.native
+  var livemode: Boolean
+  var `object`: token
   /**
     * Type of the token
     */
-  var `type`: account | bank_account | card | pii = js.native
+  var `type`: account | bank_account | card | pii
   /**
     * Whether this token has already been used (tokens can be used only once)
     */
-  var used: Boolean = js.native
+  var used: Boolean
 }
 
 object Token {
@@ -58,86 +57,16 @@ object Token {
     livemode: Boolean,
     `object`: token,
     `type`: account | bank_account | card | pii,
-    used: Boolean
+    used: Boolean,
+    bank_account: BankAccount = null,
+    card: Card = null
   ): Token = {
     val __obj = js.Dynamic.literal(client_ip = client_ip.asInstanceOf[js.Any], created = created.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], livemode = livemode.asInstanceOf[js.Any], used = used.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bank_account != null) __obj.updateDynamic("bank_account")(bank_account.asInstanceOf[js.Any])
+    if (card != null) __obj.updateDynamic("card")(card.asInstanceOf[js.Any])
     __obj.asInstanceOf[Token]
   }
-  @scala.inline
-  implicit class TokenOps[Self <: Token] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClient_ip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLivemode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: account | bank_account | card | pii): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("used")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBank_account(value: BankAccount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bank_account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBank_account: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bank_account")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCard(value: Card): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

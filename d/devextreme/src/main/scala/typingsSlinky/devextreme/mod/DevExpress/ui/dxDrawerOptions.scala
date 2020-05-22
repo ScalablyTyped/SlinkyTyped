@@ -1,6 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.anon.ComponentElement
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
 import typingsSlinky.devextreme.devextremeStrings.after
 import typingsSlinky.devextreme.devextremeStrings.before
 import typingsSlinky.devextreme.devextremeStrings.bottom
@@ -19,219 +22,99 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxDrawerOptions extends WidgetOptions[dxDrawer] {
-  /** Specifies the duration of the drawer's opening and closing animation (in milliseconds). Applies only if animationEnabled is true. */
-  var animationDuration: js.UndefOr[Double] = js.native
-  /** Specifies whether to use an opening and closing animation. */
-  var animationEnabled: js.UndefOr[Boolean] = js.native
-  /** Specifies whether to close the drawer if a user clicks or taps the view area. */
-  var closeOnOutsideClick: js.UndefOr[Boolean | (js.Function1[/* event */ event, Boolean])] = js.native
-  /** Specifies the drawer's width or height (depending on the drawer's position) in the opened state. */
-  var maxSize: js.UndefOr[Double] = js.native
-  /** Specifies the drawer's width or height (depending on the drawer's position) in the closed state. */
-  var minSize: js.UndefOr[Double] = js.native
-  /** Specifies whether the drawer is opened. */
-  var opened: js.UndefOr[Boolean] = js.native
-  /** Specifies how the drawer interacts with the view in the opened state. */
-  var openedStateMode: js.UndefOr[overlap | shrink | push] = js.native
-  /** Specifies the drawer's position in relation to the view. */
-  var position: js.UndefOr[left | right | top | bottom | before | after] = js.native
-  /** Specifies the drawer's reveal mode. */
-  var revealMode: js.UndefOr[slide | expand] = js.native
-  /** Specifies whether to shade the view when the drawer is opened. */
-  var shading: js.UndefOr[Boolean] = js.native
-  /** Specifies a CSS selector for the element in which the drawer should be rendered. Applies only when the openedStateMode is "overlap". */
-  var target: js.UndefOr[String | Element | JQuery] = js.native
-  /** Specifies the drawer's content. */
+  /** @name dxDrawer.Options.animationDuration */
+  var animationDuration: js.UndefOr[Double] = js.undefined
+  /** @name dxDrawer.Options.animationEnabled */
+  var animationEnabled: js.UndefOr[Boolean] = js.undefined
+  /** @name dxDrawer.Options.closeOnOutsideClick */
+  var closeOnOutsideClick: js.UndefOr[Boolean | (js.Function1[/* event */ event, Boolean])] = js.undefined
+  /** @name dxDrawer.Options.maxSize */
+  var maxSize: js.UndefOr[Double] = js.undefined
+  /** @name dxDrawer.Options.minSize */
+  var minSize: js.UndefOr[Double] = js.undefined
+  /** @name dxDrawer.Options.opened */
+  var opened: js.UndefOr[Boolean] = js.undefined
+  /** @name dxDrawer.Options.openedStateMode */
+  var openedStateMode: js.UndefOr[overlap | shrink | push] = js.undefined
+  /** @name dxDrawer.Options.position */
+  var position: js.UndefOr[left | right | top | bottom | before | after] = js.undefined
+  /** @name dxDrawer.Options.revealMode */
+  var revealMode: js.UndefOr[slide | expand] = js.undefined
+  /** @name dxDrawer.Options.shading */
+  var shading: js.UndefOr[Boolean] = js.undefined
+  /** @name dxDrawer.Options.target */
+  var target: js.UndefOr[String | Element | JQuery] = js.undefined
+  /** @name dxDrawer.Options.template */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* Element */ dxElement, _])
-  ] = js.native
+  ] = js.undefined
 }
 
 object dxDrawerOptions {
   @scala.inline
-  def apply(): dxDrawerOptions = {
+  def apply(
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    animationEnabled: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    closeOnOutsideClick: Boolean | (js.Function1[/* event */ event, Boolean]) = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementAttr: js.Any = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    maxSize: js.UndefOr[Double] = js.undefined,
+    minSize: js.UndefOr[Double] = js.undefined,
+    onContentReady: /* e */ ComponentElement[dxDrawer] => _ = null,
+    onDisposing: /* e */ Model[dxDrawer] => _ = null,
+    onInitialized: /* e */ typingsSlinky.devextreme.anon.Element[dxDrawer] => _ = null,
+    onOptionChanged: /* e */ Name[dxDrawer] => _ = null,
+    opened: js.UndefOr[Boolean] = js.undefined,
+    openedStateMode: overlap | shrink | push = null,
+    position: left | right | top | bottom | before | after = null,
+    revealMode: slide | expand = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    shading: js.UndefOr[Boolean] = js.undefined,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    target: String | Element | JQuery = null,
+    template: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* Element */ dxElement, _]) = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxDrawerOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationEnabled)) __obj.updateDynamic("animationEnabled")(animationEnabled.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (closeOnOutsideClick != null) __obj.updateDynamic("closeOnOutsideClick")(closeOnOutsideClick.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSize)) __obj.updateDynamic("maxSize")(maxSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minSize)) __obj.updateDynamic("minSize")(minSize.get.asInstanceOf[js.Any])
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (!js.isUndefined(opened)) __obj.updateDynamic("opened")(opened.get.asInstanceOf[js.Any])
+    if (openedStateMode != null) __obj.updateDynamic("openedStateMode")(openedStateMode.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (revealMode != null) __obj.updateDynamic("revealMode")(revealMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shading)) __obj.updateDynamic("shading")(shading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxDrawerOptions]
   }
-  @scala.inline
-  implicit class dxDrawerOptionsOps[Self <: dxDrawerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnOutsideClickFunction1(value: /* event */ event => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnOutsideClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCloseOnOutsideClick(value: Boolean | (js.Function1[/* event */ event, Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnOutsideClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnOutsideClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnOutsideClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpened(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opened")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpened: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opened")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenedStateMode(value: overlap | shrink | push): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openedStateMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenedStateMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openedStateMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: left | right | top | bottom | before | after): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevealMode(value: slide | expand): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revealMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevealMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revealMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String | Element | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateFunction1(value: /* Element */ dxElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* Element */ dxElement, _])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

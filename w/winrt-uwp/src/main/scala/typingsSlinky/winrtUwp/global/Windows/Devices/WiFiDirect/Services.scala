@@ -1,6 +1,11 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.WiFiDirect
 
+import typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceInformation
+import typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod
+import typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceIPProtocol
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import typingsSlinky.winrtUwp.Windows.Networking.EndpointPair
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,17 +34,38 @@ object Services extends js.Object {
   /** Returned when a WiFiDirectServiceAdvertiser.AutoAcceptSessionConnected event is raised. */
   @js.native
   abstract class WiFiDirectServiceAutoAcceptSessionConnectedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs {
+    /** Gets the WiFiDirectServiceSession that was created when the connection was automatically accepted. */
+    /* CompleteClass */
+    override var session: typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession = js.native
+    /** Gets the session information buffer that corresponds to this automatically accepted connection. */
+    /* CompleteClass */
+    override var sessionInfo: IBuffer = js.native
+  }
   
   /** Contains provisioning information about a Wi-Fi Direct Service. */
   @js.native
   abstract class WiFiDirectServiceProvisioningInfo ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo
+    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo {
+    /** Gets a value indicating whether Wi-Fi Direct Point to Point (P2P) group formation is needed. */
+    /* CompleteClass */
+    override var isGroupFormationNeeded: Boolean = js.native
+    /** Gets a value describing the configuration method in use. */
+    /* CompleteClass */
+    override var selectedConfigurationMethod: WiFiDirectServiceConfigurationMethod = js.native
+  }
   
   /** Returned when a WiFiDirectServiceSession.RemotePortAdded event is raised. Your event handler should use this information to establish new socket connections to the new port. */
   @js.native
   abstract class WiFiDirectServiceRemotePortAddedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs {
+    /** Gets the endpoint pairs associated with the new remote port. */
+    /* CompleteClass */
+    override var endpointPairs: IVectorView[EndpointPair] = js.native
+    /** Gets the protocol used to communicate with the new remote port. */
+    /* CompleteClass */
+    override var protocol: WiFiDirectServiceIPProtocol = js.native
+  }
   
   /** Represents a Wi-Fi Direct Services (WFDS) session. */
   @js.native
@@ -49,17 +75,41 @@ object Services extends js.Object {
   /** Returned when a WiFiDirectService.SessionDeferred event is raised. */
   @js.native
   abstract class WiFiDirectServiceSessionDeferredEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs {
+    /** Gets the service-defined session information returned by the service when it sends a deferral in response to a connection request. Note that a deferral does not indicate that the connection is refused. Rather, it indicates that the server is performing a time-consuming operation such as requesting user input. A seeker should implement a 120-second timeout after getting a deferral before giving up on the request. */
+    /* CompleteClass */
+    override var deferredSessionInfo: IBuffer = js.native
+  }
   
   /** Describes a Wi-Fi Direct Service session request. */
   @js.native
   abstract class WiFiDirectServiceSessionRequest ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest
+    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest {
+    /** Gets device information for the requesting device. */
+    /* CompleteClass */
+    override var deviceInformation: DeviceInformation = js.native
+    /** Gets information about how provisioning should be performed if the session is established. */
+    /* CompleteClass */
+    override var provisioningInfo: typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo = js.native
+    /** Gets the session information blob associated with this request. */
+    /* CompleteClass */
+    override var sessionInfo: IBuffer = js.native
+    /** Closes the session request. Your server code calls this method to reject a session request. */
+    /* CompleteClass */
+    override def close(): Unit = js.native
+  }
   
   /** Returned when a WiFiDirectServiceAdvertiser.SessionRequested event is raised. */
   @js.native
   abstract class WiFiDirectServiceSessionRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs {
+    /**
+      * Gets information about the session request that raised a WiFiDirectServiceAdvertiser.SessionRequested event.
+      * @return Information about a new session request.
+      */
+    /* CompleteClass */
+    override def getSessionRequest(): typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest = js.native
+  }
   
   /* static members */
   @js.native

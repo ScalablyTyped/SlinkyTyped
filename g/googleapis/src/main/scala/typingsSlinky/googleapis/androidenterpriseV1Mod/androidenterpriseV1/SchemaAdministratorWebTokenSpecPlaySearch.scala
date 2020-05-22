@@ -18,41 +18,11 @@ trait SchemaAdministratorWebTokenSpecPlaySearch extends js.Object {
 
 object SchemaAdministratorWebTokenSpecPlaySearch {
   @scala.inline
-  def apply(): SchemaAdministratorWebTokenSpecPlaySearch = {
+  def apply(approveApps: js.UndefOr[Boolean] = js.undefined, enabled: js.UndefOr[Boolean] = js.undefined): SchemaAdministratorWebTokenSpecPlaySearch = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(approveApps)) __obj.updateDynamic("approveApps")(approveApps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdministratorWebTokenSpecPlaySearch]
   }
-  @scala.inline
-  implicit class SchemaAdministratorWebTokenSpecPlaySearchOps[Self <: SchemaAdministratorWebTokenSpecPlaySearch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApproveApps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approveApps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApproveApps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approveApps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

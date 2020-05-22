@@ -1,0 +1,8 @@
+package typingsSlinky.wordpressEditor.unsavedChangesWarningMod.UnsavedChangesWarning
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Props extends js.Object
+

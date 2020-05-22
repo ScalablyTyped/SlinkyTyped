@@ -35,77 +35,20 @@ trait SchemaAppRestrictionsSchemaRestrictionRestrictionValue extends js.Object {
 
 object SchemaAppRestrictionsSchemaRestrictionRestrictionValue {
   @scala.inline
-  def apply(): SchemaAppRestrictionsSchemaRestrictionRestrictionValue = {
+  def apply(
+    `type`: String = null,
+    valueBool: js.UndefOr[Boolean] = js.undefined,
+    valueInteger: js.UndefOr[Double] = js.undefined,
+    valueMultiselect: js.Array[String] = null,
+    valueString: String = null
+  ): SchemaAppRestrictionsSchemaRestrictionRestrictionValue = {
     val __obj = js.Dynamic.literal()
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueBool)) __obj.updateDynamic("valueBool")(valueBool.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueInteger)) __obj.updateDynamic("valueInteger")(valueInteger.get.asInstanceOf[js.Any])
+    if (valueMultiselect != null) __obj.updateDynamic("valueMultiselect")(valueMultiselect.asInstanceOf[js.Any])
+    if (valueString != null) __obj.updateDynamic("valueString")(valueString.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppRestrictionsSchemaRestrictionRestrictionValue]
   }
-  @scala.inline
-  implicit class SchemaAppRestrictionsSchemaRestrictionRestrictionValueOps[Self <: SchemaAppRestrictionsSchemaRestrictionRestrictionValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueBool(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueBool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBool")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueInteger(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInteger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueInteger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInteger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueMultiselect(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMultiselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueMultiselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMultiselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

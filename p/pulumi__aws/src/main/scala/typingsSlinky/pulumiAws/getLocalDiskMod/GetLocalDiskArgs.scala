@@ -22,47 +22,11 @@ trait GetLocalDiskArgs extends js.Object {
 
 object GetLocalDiskArgs {
   @scala.inline
-  def apply(gatewayArn: String): GetLocalDiskArgs = {
+  def apply(gatewayArn: String, diskNode: String = null, diskPath: String = null): GetLocalDiskArgs = {
     val __obj = js.Dynamic.literal(gatewayArn = gatewayArn.asInstanceOf[js.Any])
+    if (diskNode != null) __obj.updateDynamic("diskNode")(diskNode.asInstanceOf[js.Any])
+    if (diskPath != null) __obj.updateDynamic("diskPath")(diskPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLocalDiskArgs]
   }
-  @scala.inline
-  implicit class GetLocalDiskArgsOps[Self <: GetLocalDiskArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGatewayArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiskNode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

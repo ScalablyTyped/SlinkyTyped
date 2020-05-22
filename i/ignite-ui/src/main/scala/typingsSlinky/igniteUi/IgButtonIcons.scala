@@ -5,53 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgButtonIcons
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
-  var primary: js.UndefOr[js.Any] = js.native
-  var secondary: js.UndefOr[js.Any] = js.native
+  var primary: js.UndefOr[js.Any] = js.undefined
+  var secondary: js.UndefOr[js.Any] = js.undefined
 }
 
 object IgButtonIcons {
   @scala.inline
-  def apply(): IgButtonIcons = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    primary: js.Any = null,
+    secondary: js.Any = null
+  ): IgButtonIcons = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
+    if (secondary != null) __obj.updateDynamic("secondary")(secondary.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgButtonIcons]
   }
-  @scala.inline
-  implicit class IgButtonIconsOps[Self <: IgButtonIcons] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrimary(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondary(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -177,7 +177,7 @@ trait M2tsSettings extends js.Object {
     */
   var SegmentationStyle: js.UndefOr[M2tsSegmentationStyle] = js.native
   /**
-    * The length in seconds of each segment. Required unless markers is set to None_.
+    * The length in seconds of each segment. Required unless markers is set to _none_.
     */
   var SegmentationTime: js.UndefOr[doubleMin1] = js.native
   /**
@@ -200,581 +200,104 @@ trait M2tsSettings extends js.Object {
 
 object M2tsSettings {
   @scala.inline
-  def apply(): M2tsSettings = {
+  def apply(
+    AbsentInputAudioBehavior: M2tsAbsentInputAudioBehavior = null,
+    Arib: M2tsArib = null,
+    AribCaptionsPid: string = null,
+    AribCaptionsPidControl: M2tsAribCaptionsPidControl = null,
+    AudioBufferModel: M2tsAudioBufferModel = null,
+    AudioFramesPerPes: js.UndefOr[integerMin0] = js.undefined,
+    AudioPids: string = null,
+    AudioStreamType: M2tsAudioStreamType = null,
+    Bitrate: js.UndefOr[integerMin0] = js.undefined,
+    BufferModel: M2tsBufferModel = null,
+    CcDescriptor: M2tsCcDescriptor = null,
+    DvbNitSettings: DvbNitSettings = null,
+    DvbSdtSettings: DvbSdtSettings = null,
+    DvbSubPids: string = null,
+    DvbTdtSettings: DvbTdtSettings = null,
+    DvbTeletextPid: string = null,
+    Ebif: M2tsEbifControl = null,
+    EbpAudioInterval: M2tsAudioInterval = null,
+    EbpLookaheadMs: js.UndefOr[integerMin0Max10000] = js.undefined,
+    EbpPlacement: M2tsEbpPlacement = null,
+    EcmPid: string = null,
+    EsRateInPes: M2tsEsRateInPes = null,
+    EtvPlatformPid: string = null,
+    EtvSignalPid: string = null,
+    FragmentTime: js.UndefOr[doubleMin0] = js.undefined,
+    Klv: M2tsKlv = null,
+    KlvDataPids: string = null,
+    NielsenId3Behavior: M2tsNielsenId3Behavior = null,
+    NullPacketBitrate: js.UndefOr[doubleMin0] = js.undefined,
+    PatInterval: js.UndefOr[integerMin0Max1000] = js.undefined,
+    PcrControl: M2tsPcrControl = null,
+    PcrPeriod: js.UndefOr[integerMin0Max500] = js.undefined,
+    PcrPid: string = null,
+    PmtInterval: js.UndefOr[integerMin0Max1000] = js.undefined,
+    PmtPid: string = null,
+    ProgramNum: js.UndefOr[integerMin0Max65535] = js.undefined,
+    RateMode: M2tsRateMode = null,
+    Scte27Pids: string = null,
+    Scte35Control: M2tsScte35Control = null,
+    Scte35Pid: string = null,
+    SegmentationMarkers: M2tsSegmentationMarkers = null,
+    SegmentationStyle: M2tsSegmentationStyle = null,
+    SegmentationTime: js.UndefOr[doubleMin1] = js.undefined,
+    TimedMetadataBehavior: M2tsTimedMetadataBehavior = null,
+    TimedMetadataPid: string = null,
+    TransportStreamId: js.UndefOr[integerMin0Max65535] = js.undefined,
+    VideoPid: string = null
+  ): M2tsSettings = {
     val __obj = js.Dynamic.literal()
+    if (AbsentInputAudioBehavior != null) __obj.updateDynamic("AbsentInputAudioBehavior")(AbsentInputAudioBehavior.asInstanceOf[js.Any])
+    if (Arib != null) __obj.updateDynamic("Arib")(Arib.asInstanceOf[js.Any])
+    if (AribCaptionsPid != null) __obj.updateDynamic("AribCaptionsPid")(AribCaptionsPid.asInstanceOf[js.Any])
+    if (AribCaptionsPidControl != null) __obj.updateDynamic("AribCaptionsPidControl")(AribCaptionsPidControl.asInstanceOf[js.Any])
+    if (AudioBufferModel != null) __obj.updateDynamic("AudioBufferModel")(AudioBufferModel.asInstanceOf[js.Any])
+    if (!js.isUndefined(AudioFramesPerPes)) __obj.updateDynamic("AudioFramesPerPes")(AudioFramesPerPes.get.asInstanceOf[js.Any])
+    if (AudioPids != null) __obj.updateDynamic("AudioPids")(AudioPids.asInstanceOf[js.Any])
+    if (AudioStreamType != null) __obj.updateDynamic("AudioStreamType")(AudioStreamType.asInstanceOf[js.Any])
+    if (!js.isUndefined(Bitrate)) __obj.updateDynamic("Bitrate")(Bitrate.get.asInstanceOf[js.Any])
+    if (BufferModel != null) __obj.updateDynamic("BufferModel")(BufferModel.asInstanceOf[js.Any])
+    if (CcDescriptor != null) __obj.updateDynamic("CcDescriptor")(CcDescriptor.asInstanceOf[js.Any])
+    if (DvbNitSettings != null) __obj.updateDynamic("DvbNitSettings")(DvbNitSettings.asInstanceOf[js.Any])
+    if (DvbSdtSettings != null) __obj.updateDynamic("DvbSdtSettings")(DvbSdtSettings.asInstanceOf[js.Any])
+    if (DvbSubPids != null) __obj.updateDynamic("DvbSubPids")(DvbSubPids.asInstanceOf[js.Any])
+    if (DvbTdtSettings != null) __obj.updateDynamic("DvbTdtSettings")(DvbTdtSettings.asInstanceOf[js.Any])
+    if (DvbTeletextPid != null) __obj.updateDynamic("DvbTeletextPid")(DvbTeletextPid.asInstanceOf[js.Any])
+    if (Ebif != null) __obj.updateDynamic("Ebif")(Ebif.asInstanceOf[js.Any])
+    if (EbpAudioInterval != null) __obj.updateDynamic("EbpAudioInterval")(EbpAudioInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(EbpLookaheadMs)) __obj.updateDynamic("EbpLookaheadMs")(EbpLookaheadMs.get.asInstanceOf[js.Any])
+    if (EbpPlacement != null) __obj.updateDynamic("EbpPlacement")(EbpPlacement.asInstanceOf[js.Any])
+    if (EcmPid != null) __obj.updateDynamic("EcmPid")(EcmPid.asInstanceOf[js.Any])
+    if (EsRateInPes != null) __obj.updateDynamic("EsRateInPes")(EsRateInPes.asInstanceOf[js.Any])
+    if (EtvPlatformPid != null) __obj.updateDynamic("EtvPlatformPid")(EtvPlatformPid.asInstanceOf[js.Any])
+    if (EtvSignalPid != null) __obj.updateDynamic("EtvSignalPid")(EtvSignalPid.asInstanceOf[js.Any])
+    if (!js.isUndefined(FragmentTime)) __obj.updateDynamic("FragmentTime")(FragmentTime.get.asInstanceOf[js.Any])
+    if (Klv != null) __obj.updateDynamic("Klv")(Klv.asInstanceOf[js.Any])
+    if (KlvDataPids != null) __obj.updateDynamic("KlvDataPids")(KlvDataPids.asInstanceOf[js.Any])
+    if (NielsenId3Behavior != null) __obj.updateDynamic("NielsenId3Behavior")(NielsenId3Behavior.asInstanceOf[js.Any])
+    if (!js.isUndefined(NullPacketBitrate)) __obj.updateDynamic("NullPacketBitrate")(NullPacketBitrate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PatInterval)) __obj.updateDynamic("PatInterval")(PatInterval.get.asInstanceOf[js.Any])
+    if (PcrControl != null) __obj.updateDynamic("PcrControl")(PcrControl.asInstanceOf[js.Any])
+    if (!js.isUndefined(PcrPeriod)) __obj.updateDynamic("PcrPeriod")(PcrPeriod.get.asInstanceOf[js.Any])
+    if (PcrPid != null) __obj.updateDynamic("PcrPid")(PcrPid.asInstanceOf[js.Any])
+    if (!js.isUndefined(PmtInterval)) __obj.updateDynamic("PmtInterval")(PmtInterval.get.asInstanceOf[js.Any])
+    if (PmtPid != null) __obj.updateDynamic("PmtPid")(PmtPid.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProgramNum)) __obj.updateDynamic("ProgramNum")(ProgramNum.get.asInstanceOf[js.Any])
+    if (RateMode != null) __obj.updateDynamic("RateMode")(RateMode.asInstanceOf[js.Any])
+    if (Scte27Pids != null) __obj.updateDynamic("Scte27Pids")(Scte27Pids.asInstanceOf[js.Any])
+    if (Scte35Control != null) __obj.updateDynamic("Scte35Control")(Scte35Control.asInstanceOf[js.Any])
+    if (Scte35Pid != null) __obj.updateDynamic("Scte35Pid")(Scte35Pid.asInstanceOf[js.Any])
+    if (SegmentationMarkers != null) __obj.updateDynamic("SegmentationMarkers")(SegmentationMarkers.asInstanceOf[js.Any])
+    if (SegmentationStyle != null) __obj.updateDynamic("SegmentationStyle")(SegmentationStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(SegmentationTime)) __obj.updateDynamic("SegmentationTime")(SegmentationTime.get.asInstanceOf[js.Any])
+    if (TimedMetadataBehavior != null) __obj.updateDynamic("TimedMetadataBehavior")(TimedMetadataBehavior.asInstanceOf[js.Any])
+    if (TimedMetadataPid != null) __obj.updateDynamic("TimedMetadataPid")(TimedMetadataPid.asInstanceOf[js.Any])
+    if (!js.isUndefined(TransportStreamId)) __obj.updateDynamic("TransportStreamId")(TransportStreamId.get.asInstanceOf[js.Any])
+    if (VideoPid != null) __obj.updateDynamic("VideoPid")(VideoPid.asInstanceOf[js.Any])
     __obj.asInstanceOf[M2tsSettings]
   }
-  @scala.inline
-  implicit class M2tsSettingsOps[Self <: M2tsSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbsentInputAudioBehavior(value: M2tsAbsentInputAudioBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbsentInputAudioBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsentInputAudioBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbsentInputAudioBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArib(value: M2tsArib): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arib")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arib")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAribCaptionsPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AribCaptionsPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAribCaptionsPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AribCaptionsPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAribCaptionsPidControl(value: M2tsAribCaptionsPidControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AribCaptionsPidControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAribCaptionsPidControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AribCaptionsPidControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioBufferModel(value: M2tsAudioBufferModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioBufferModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioBufferModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioBufferModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioFramesPerPes(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioFramesPerPes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioFramesPerPes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioFramesPerPes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioPids(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioPids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioPids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioPids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioStreamType(value: M2tsAudioStreamType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioStreamType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioStreamType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioStreamType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBitrate(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBufferModel(value: M2tsBufferModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBufferModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCcDescriptor(value: M2tsCcDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CcDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCcDescriptor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CcDescriptor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDvbNitSettings(value: DvbNitSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbNitSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDvbNitSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbNitSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDvbSdtSettings(value: DvbSdtSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSdtSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDvbSdtSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSdtSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDvbSubPids(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubPids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDvbSubPids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubPids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDvbTdtSettings(value: DvbTdtSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbTdtSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDvbTdtSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbTdtSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDvbTeletextPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbTeletextPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDvbTeletextPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbTeletextPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbif(value: M2tsEbifControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ebif")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbif: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ebif")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbpAudioInterval(value: M2tsAudioInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbpAudioInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbpAudioInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbpAudioInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbpLookaheadMs(value: integerMin0Max10000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbpLookaheadMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbpLookaheadMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbpLookaheadMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbpPlacement(value: M2tsEbpPlacement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbpPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbpPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbpPlacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEcmPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EcmPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcmPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EcmPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEsRateInPes(value: M2tsEsRateInPes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EsRateInPes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEsRateInPes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EsRateInPes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtvPlatformPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EtvPlatformPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtvPlatformPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EtvPlatformPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtvSignalPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EtvSignalPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtvSignalPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EtvSignalPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFragmentTime(value: doubleMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFragmentTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKlv(value: M2tsKlv): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Klv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKlv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Klv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKlvDataPids(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KlvDataPids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKlvDataPids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KlvDataPids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNielsenId3Behavior(value: M2tsNielsenId3Behavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NielsenId3Behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNielsenId3Behavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NielsenId3Behavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNullPacketBitrate(value: doubleMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NullPacketBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNullPacketBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NullPacketBitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatInterval(value: integerMin0Max1000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PatInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PatInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPcrControl(value: M2tsPcrControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPcrControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPcrPeriod(value: integerMin0Max500): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPcrPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPcrPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPcrPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPmtInterval(value: integerMin0Max1000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PmtInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPmtInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PmtInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPmtPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PmtPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPmtPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PmtPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgramNum(value: integerMin0Max65535): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgramNum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateMode(value: M2tsRateMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RateMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RateMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScte27Pids(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte27Pids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScte27Pids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte27Pids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScte35Control(value: M2tsScte35Control): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScte35Control: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScte35Pid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Pid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScte35Pid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Pid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentationMarkers(value: M2tsSegmentationMarkers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationMarkers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentationMarkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationMarkers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentationStyle(value: M2tsSegmentationStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentationStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentationTime(value: doubleMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimedMetadataBehavior(value: M2tsTimedMetadataBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimedMetadataBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimedMetadataPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimedMetadataPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransportStreamId(value: integerMin0Max65535): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransportStreamId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransportStreamId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransportStreamId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoPid(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoPid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

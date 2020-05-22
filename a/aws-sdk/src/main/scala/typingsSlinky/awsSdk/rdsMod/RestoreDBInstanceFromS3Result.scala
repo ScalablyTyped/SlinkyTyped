@@ -11,29 +11,10 @@ trait RestoreDBInstanceFromS3Result extends js.Object {
 
 object RestoreDBInstanceFromS3Result {
   @scala.inline
-  def apply(): RestoreDBInstanceFromS3Result = {
+  def apply(DBInstance: DBInstance = null): RestoreDBInstanceFromS3Result = {
     val __obj = js.Dynamic.literal()
+    if (DBInstance != null) __obj.updateDynamic("DBInstance")(DBInstance.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreDBInstanceFromS3Result]
   }
-  @scala.inline
-  implicit class RestoreDBInstanceFromS3ResultOps[Self <: RestoreDBInstanceFromS3Result] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBInstance(value: DBInstance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

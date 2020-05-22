@@ -14,6 +14,10 @@ object syncerrorMod extends js.Object {
     def this(message: String, status: Double) = this()
     def this(message: String, status: Double, code: Double) = this()
     var code: Double = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     var status: Double = js.native
   }
   

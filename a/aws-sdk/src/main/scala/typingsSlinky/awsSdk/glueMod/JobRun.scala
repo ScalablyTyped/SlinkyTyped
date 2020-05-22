@@ -43,7 +43,7 @@ trait JobRun extends js.Object {
     */
   var JobName: js.UndefOr[NameString] = js.native
   /**
-    * The current state of the job run.
+    * The current state of the job run. For more information about the statuses of jobs that have terminated abnormally, see AWS Glue Job Run Statuses.
     */
   var JobRunState: js.UndefOr[typingsSlinky.awsSdk.glueMod.JobRunState] = js.native
   /**
@@ -98,281 +98,54 @@ trait JobRun extends js.Object {
 
 object JobRun {
   @scala.inline
-  def apply(): JobRun = {
+  def apply(
+    AllocatedCapacity: js.UndefOr[IntegerValue] = js.undefined,
+    Arguments: GenericMap = null,
+    Attempt: js.UndefOr[AttemptCount] = js.undefined,
+    CompletedOn: js.Date = null,
+    ErrorMessage: ErrorString = null,
+    ExecutionTime: js.UndefOr[ExecutionTime] = js.undefined,
+    GlueVersion: GlueVersionString = null,
+    Id: IdString = null,
+    JobName: NameString = null,
+    JobRunState: JobRunState = null,
+    LastModifiedOn: js.Date = null,
+    LogGroupName: GenericString = null,
+    MaxCapacity: js.UndefOr[NullableDouble] = js.undefined,
+    NotificationProperty: NotificationProperty = null,
+    NumberOfWorkers: js.UndefOr[NullableInteger] = js.undefined,
+    PredecessorRuns: PredecessorList = null,
+    PreviousRunId: IdString = null,
+    SecurityConfiguration: NameString = null,
+    StartedOn: js.Date = null,
+    Timeout: js.UndefOr[Timeout] = js.undefined,
+    TriggerName: NameString = null,
+    WorkerType: WorkerType = null
+  ): JobRun = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AllocatedCapacity)) __obj.updateDynamic("AllocatedCapacity")(AllocatedCapacity.get.asInstanceOf[js.Any])
+    if (Arguments != null) __obj.updateDynamic("Arguments")(Arguments.asInstanceOf[js.Any])
+    if (!js.isUndefined(Attempt)) __obj.updateDynamic("Attempt")(Attempt.get.asInstanceOf[js.Any])
+    if (CompletedOn != null) __obj.updateDynamic("CompletedOn")(CompletedOn.asInstanceOf[js.Any])
+    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(ExecutionTime)) __obj.updateDynamic("ExecutionTime")(ExecutionTime.get.asInstanceOf[js.Any])
+    if (GlueVersion != null) __obj.updateDynamic("GlueVersion")(GlueVersion.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (JobName != null) __obj.updateDynamic("JobName")(JobName.asInstanceOf[js.Any])
+    if (JobRunState != null) __obj.updateDynamic("JobRunState")(JobRunState.asInstanceOf[js.Any])
+    if (LastModifiedOn != null) __obj.updateDynamic("LastModifiedOn")(LastModifiedOn.asInstanceOf[js.Any])
+    if (LogGroupName != null) __obj.updateDynamic("LogGroupName")(LogGroupName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxCapacity)) __obj.updateDynamic("MaxCapacity")(MaxCapacity.get.asInstanceOf[js.Any])
+    if (NotificationProperty != null) __obj.updateDynamic("NotificationProperty")(NotificationProperty.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfWorkers)) __obj.updateDynamic("NumberOfWorkers")(NumberOfWorkers.get.asInstanceOf[js.Any])
+    if (PredecessorRuns != null) __obj.updateDynamic("PredecessorRuns")(PredecessorRuns.asInstanceOf[js.Any])
+    if (PreviousRunId != null) __obj.updateDynamic("PreviousRunId")(PreviousRunId.asInstanceOf[js.Any])
+    if (SecurityConfiguration != null) __obj.updateDynamic("SecurityConfiguration")(SecurityConfiguration.asInstanceOf[js.Any])
+    if (StartedOn != null) __obj.updateDynamic("StartedOn")(StartedOn.asInstanceOf[js.Any])
+    if (!js.isUndefined(Timeout)) __obj.updateDynamic("Timeout")(Timeout.get.asInstanceOf[js.Any])
+    if (TriggerName != null) __obj.updateDynamic("TriggerName")(TriggerName.asInstanceOf[js.Any])
+    if (WorkerType != null) __obj.updateDynamic("WorkerType")(WorkerType.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobRun]
   }
-  @scala.inline
-  implicit class JobRunOps[Self <: JobRun] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocatedCapacity(value: IntegerValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocatedCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArguments(value: GenericMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttempt(value: AttemptCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attempt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttempt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attempt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompletedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorMessage(value: ErrorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionTime(value: ExecutionTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlueVersion(value: GlueVersionString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlueVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlueVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlueVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: IdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobRunState(value: JobRunState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobRunState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobRunState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobRunState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogGroupName(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxCapacity(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationProperty(value: NotificationProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfWorkers(value: NullableInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfWorkers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfWorkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfWorkers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredecessorRuns(value: PredecessorList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredecessorRuns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredecessorRuns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredecessorRuns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousRunId(value: IdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousRunId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousRunId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityConfiguration(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Timeout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TriggerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TriggerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerType(value: WorkerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

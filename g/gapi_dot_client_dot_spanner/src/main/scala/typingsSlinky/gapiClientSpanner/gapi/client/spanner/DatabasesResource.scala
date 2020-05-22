@@ -9,10 +9,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DatabasesResource extends js.Object {
-  var operations: OperationsResource = js.native
-  var sessions: SessionsResource = js.native
+  var operations: OperationsResource
+  var sessions: SessionsResource
   /**
     * Creates a new Cloud Spanner database and starts to prepare it for serving.
     * The returned long-running operation will
@@ -23,17 +22,17 @@ trait DatabasesResource extends js.Object {
     * response field type is
     * Database, if successful.
     */
-  def create(request: Key): Request[Operation] = js.native
+  def create(request: Key): Request[Operation]
   /** Drops (aka deletes) a Cloud Spanner database. */
-  def dropDatabase(request: typingsSlinky.gapiClientSpanner.anon.Database): Request[js.Object] = js.native
+  def dropDatabase(request: typingsSlinky.gapiClientSpanner.anon.Database): Request[js.Object]
   /** Gets the state of a Cloud Spanner database. */
-  def get(request: Accesstoken): Request[Database] = js.native
+  def get(request: Accesstoken): Request[Database]
   /**
     * Returns the schema of a Cloud Spanner database as a list of formatted
     * DDL statements. This method does not show pending schema updates, those may
     * be queried using the Operations API.
     */
-  def getDdl(request: typingsSlinky.gapiClientSpanner.anon.Database): Request[GetDatabaseDdlResponse] = js.native
+  def getDdl(request: typingsSlinky.gapiClientSpanner.anon.Database): Request[GetDatabaseDdlResponse]
   /**
     * Gets the access control policy for a database resource. Returns an empty
     * policy if a database exists but does not have a policy set.
@@ -41,9 +40,9 @@ trait DatabasesResource extends js.Object {
     * Authorization requires `spanner.databases.getIamPolicy` permission on
     * resource.
     */
-  def getIamPolicy(request: Oauthtoken): Request[Policy] = js.native
+  def getIamPolicy(request: Oauthtoken): Request[Policy]
   /** Lists Cloud Spanner databases. */
-  def list(request: Alt): Request[ListDatabasesResponse] = js.native
+  def list(request: Alt): Request[ListDatabasesResponse]
   /**
     * Sets the access control policy on a database resource. Replaces any
     * existing policy.
@@ -51,7 +50,7 @@ trait DatabasesResource extends js.Object {
     * Authorization requires `spanner.databases.setIamPolicy` permission on
     * resource.
     */
-  def setIamPolicy(request: Oauthtoken): Request[Policy] = js.native
+  def setIamPolicy(request: Oauthtoken): Request[Policy]
   /**
     * Returns permissions that the caller has on the specified database resource.
     *
@@ -60,7 +59,7 @@ trait DatabasesResource extends js.Object {
     * the containing Cloud Spanner instance. Otherwise returns an empty set of
     * permissions.
     */
-  def testIamPermissions(request: Oauthtoken): Request[TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Oauthtoken): Request[TestIamPermissionsResponse]
   /**
     * Updates the schema of a Cloud Spanner database by
     * creating/altering/dropping tables, columns, indexes, etc. The returned
@@ -70,7 +69,7 @@ trait DatabasesResource extends js.Object {
     * metadata field type is
     * UpdateDatabaseDdlMetadata.  The operation has no response.
     */
-  def updateDdl(request: typingsSlinky.gapiClientSpanner.anon.Database): Request[Operation] = js.native
+  def updateDdl(request: typingsSlinky.gapiClientSpanner.anon.Database): Request[Operation]
 }
 
 object DatabasesResource {
@@ -91,79 +90,5 @@ object DatabasesResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), dropDatabase = js.Any.fromFunction1(dropDatabase), get = js.Any.fromFunction1(get), getDdl = js.Any.fromFunction1(getDdl), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), operations = operations.asInstanceOf[js.Any], sessions = sessions.asInstanceOf[js.Any], setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions), updateDdl = js.Any.fromFunction1(updateDdl))
     __obj.asInstanceOf[DatabasesResource]
   }
-  @scala.inline
-  implicit class DatabasesResourceOps[Self <: DatabasesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Key => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDropDatabase(value: typingsSlinky.gapiClientSpanner.anon.Database => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDatabase")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Accesstoken => Request[Database]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDdl(value: typingsSlinky.gapiClientSpanner.anon.Database => Request[GetDatabaseDdlResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDdl")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetIamPolicy(value: Oauthtoken => Request[Policy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Alt => Request[ListDatabasesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOperations(value: OperationsResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSessions(value: SessionsResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetIamPolicy(value: Oauthtoken => Request[Policy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTestIamPermissions(value: Oauthtoken => Request[TestIamPermissionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateDdl(value: typingsSlinky.gapiClientSpanner.anon.Database => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDdl")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

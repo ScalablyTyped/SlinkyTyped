@@ -5,65 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** TrainingExample. */
-@js.native
 trait TrainingExample extends js.Object {
   /** The cross reference associated with this training example. */
-  var cross_reference: js.UndefOr[String] = js.native
+  var cross_reference: js.UndefOr[String] = js.undefined
   /** The document ID associated with this training example. */
-  var document_id: js.UndefOr[String] = js.native
+  var document_id: js.UndefOr[String] = js.undefined
   /** The relevance of the training example. */
-  var relevance: js.UndefOr[Double] = js.native
+  var relevance: js.UndefOr[Double] = js.undefined
 }
 
 object TrainingExample {
   @scala.inline
-  def apply(): TrainingExample = {
+  def apply(
+    cross_reference: String = null,
+    document_id: String = null,
+    relevance: js.UndefOr[Double] = js.undefined
+  ): TrainingExample = {
     val __obj = js.Dynamic.literal()
+    if (cross_reference != null) __obj.updateDynamic("cross_reference")(cross_reference.asInstanceOf[js.Any])
+    if (document_id != null) __obj.updateDynamic("document_id")(document_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(relevance)) __obj.updateDynamic("relevance")(relevance.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrainingExample]
   }
-  @scala.inline
-  implicit class TrainingExampleOps[Self <: TrainingExample] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCross_reference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cross_reference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCross_reference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cross_reference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocument_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelevance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relevance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelevance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relevance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

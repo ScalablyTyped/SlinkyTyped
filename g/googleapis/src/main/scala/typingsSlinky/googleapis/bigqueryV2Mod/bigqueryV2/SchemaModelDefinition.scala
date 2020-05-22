@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.bigqueryV2Mod.bigqueryV2
 
-import typingsSlinky.googleapis.AnonLabels
+import typingsSlinky.googleapis.anon.Labels
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait SchemaModelDefinition extends js.Object {
     * options are immutable for subsequent training runs. Default values are
     * used for any options not specified in the input query.
     */
-  var modelOptions: js.UndefOr[AnonLabels] = js.native
+  var modelOptions: js.UndefOr[Labels] = js.native
   /**
     * [Output-only, Beta] Information about ml training runs, each training run
     * comprises of multiple iterations and there may be multiple training runs
@@ -24,41 +24,11 @@ trait SchemaModelDefinition extends js.Object {
 
 object SchemaModelDefinition {
   @scala.inline
-  def apply(): SchemaModelDefinition = {
+  def apply(modelOptions: Labels = null, trainingRuns: js.Array[SchemaBqmlTrainingRun] = null): SchemaModelDefinition = {
     val __obj = js.Dynamic.literal()
+    if (modelOptions != null) __obj.updateDynamic("modelOptions")(modelOptions.asInstanceOf[js.Any])
+    if (trainingRuns != null) __obj.updateDynamic("trainingRuns")(trainingRuns.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModelDefinition]
   }
-  @scala.inline
-  implicit class SchemaModelDefinitionOps[Self <: SchemaModelDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModelOptions(value: AnonLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrainingRuns(value: js.Array[SchemaBqmlTrainingRun]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingRuns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrainingRuns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingRuns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

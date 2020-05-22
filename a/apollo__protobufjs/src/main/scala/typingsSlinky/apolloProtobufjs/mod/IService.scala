@@ -6,31 +6,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.apolloProtobufjs.mod.AnyNestedObject because Already inherited */ @js.native
-trait IService extends INamespace {
+- typingsSlinky.apolloProtobufjs.mod.AnyNestedObject because Already inherited */ trait IService extends INamespace {
   /** Method descriptors */
-  var methods: StringDictionary[IMethod] = js.native
+  var methods: StringDictionary[IMethod]
 }
 
 object IService {
   @scala.inline
-  def apply(methods: StringDictionary[IMethod]): IService = {
+  def apply(
+    methods: StringDictionary[IMethod],
+    nested: StringDictionary[AnyNestedObject] = null,
+    options: StringDictionary[js.Any] = null
+  ): IService = {
     val __obj = js.Dynamic.literal(methods = methods.asInstanceOf[js.Any])
+    if (nested != null) __obj.updateDynamic("nested")(nested.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[IService]
   }
-  @scala.inline
-  implicit class IServiceOps[Self <: IService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMethods(value: StringDictionary[IMethod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

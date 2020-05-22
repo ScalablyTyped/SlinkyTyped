@@ -16,41 +16,11 @@ trait SchemaManagedZonePrivateVisibilityConfigNetwork extends js.Object {
 
 object SchemaManagedZonePrivateVisibilityConfigNetwork {
   @scala.inline
-  def apply(): SchemaManagedZonePrivateVisibilityConfigNetwork = {
+  def apply(kind: String = null, networkUrl: String = null): SchemaManagedZonePrivateVisibilityConfigNetwork = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (networkUrl != null) __obj.updateDynamic("networkUrl")(networkUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedZonePrivateVisibilityConfigNetwork]
   }
-  @scala.inline
-  implicit class SchemaManagedZonePrivateVisibilityConfigNetworkOps[Self <: SchemaManagedZonePrivateVisibilityConfigNetwork] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,7 +11,23 @@ import scala.scalajs.js.annotation._
 @JSGlobal("M.ScrollSpy")
 @js.native
 class ScrollSpy ()
-  extends typingsSlinky.materializeCss.M.Component[ScrollSpyOptions]
+  extends typingsSlinky.materializeCss.M.Component[ScrollSpyOptions] {
+  /**
+    * The DOM element the plugin was initialized with
+    */
+  /* CompleteClass */
+  override var el: Element = js.native
+  /**
+    * The options the instance was initialized with
+    */
+  /* CompleteClass */
+  override var options: ScrollSpyOptions = js.native
+  /**
+    * Destroy plugin instance and teardown
+    */
+  /* CompleteClass */
+  override def destroy(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("M.ScrollSpy")

@@ -1,50 +1,31 @@
 package typingsSlinky.multerGridfsStorage.mod
 
+import org.scalajs.dom.experimental.Request
 import typingsSlinky.mongodb.mod.Db
 import typingsSlinky.mongodb.mod.MongoClient
 import typingsSlinky.mongoose.mod.Connection_
 import typingsSlinky.mongoose.mod.Mongoose
+import typingsSlinky.multerGridfsStorage.mod.global.Express.Multer.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DbStorageOptions extends MulterGfsOptions {
-  var client: js.UndefOr[MongoClient | js.Promise[MongoClient]] = js.native
-  var db: Mongoose | Connection_ | Db | (js.Promise[Mongoose | Connection_ | Db]) = js.native
+  var client: js.UndefOr[MongoClient | js.Promise[MongoClient]] = js.undefined
+  var db: Mongoose | Connection_ | Db | (js.Promise[Mongoose | Connection_ | Db])
 }
 
 object DbStorageOptions {
   @scala.inline
-  def apply(db: Mongoose | Connection_ | Db | (js.Promise[Mongoose | Connection_ | Db])): DbStorageOptions = {
+  def apply(
+    db: Mongoose | Connection_ | Db | (js.Promise[Mongoose | Connection_ | Db]),
+    client: MongoClient | js.Promise[MongoClient] = null,
+    file: (/* req */ Request, /* file */ File) => _ = null
+  ): DbStorageOptions = {
     val __obj = js.Dynamic.literal(db = db.asInstanceOf[js.Any])
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    if (file != null) __obj.updateDynamic("file")(js.Any.fromFunction2(file))
     __obj.asInstanceOf[DbStorageOptions]
   }
-  @scala.inline
-  implicit class DbStorageOptionsOps[Self <: DbStorageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDb(value: Mongoose | Connection_ | Db | (js.Promise[Mongoose | Connection_ | Db])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("db")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClient(value: MongoClient | js.Promise[MongoClient]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

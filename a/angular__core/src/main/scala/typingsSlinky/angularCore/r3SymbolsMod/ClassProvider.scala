@@ -22,50 +22,24 @@ import scala.scalajs.js.annotation._
   *
   * @publicApi
   */
-@js.native
 trait ClassProvider extends ClassSansProvider {
   /**
     * When true, injector returns an array of instances. This is useful to allow multiple
     * providers spread across many files to provide configuration information to a common token.
     */
-  var multi: js.UndefOr[Boolean] = js.native
+  var multi: js.UndefOr[Boolean] = js.undefined
   /**
     * An injection token. (Typically an instance of `Type` or `InjectionToken`, but can be `any`).
     */
-  var provide: js.Any = js.native
+  var provide: js.Any
 }
 
 object ClassProvider {
   @scala.inline
-  def apply(provide: js.Any, useClass: Type[_]): ClassProvider = {
+  def apply(provide: js.Any, useClass: Type[_], multi: js.UndefOr[Boolean] = js.undefined): ClassProvider = {
     val __obj = js.Dynamic.literal(provide = provide.asInstanceOf[js.Any], useClass = useClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassProvider]
   }
-  @scala.inline
-  implicit class ClassProviderOps[Self <: ClassProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvide(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMulti(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulti: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

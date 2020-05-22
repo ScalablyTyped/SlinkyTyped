@@ -41,6 +41,7 @@ trait Program extends ScriptReferenceHost {
   def getGlobalDiagnostics(): js.Array[Diagnostic] = js.native
   def getGlobalDiagnostics(cancellationToken: CancellationToken): js.Array[Diagnostic] = js.native
   def getIdentifierCount(): Double = js.native
+  def getInstantiationCount(): Double = js.native
   def getNodeCount(): Double = js.native
   def getOptionsDiagnostics(): js.Array[Diagnostic] = js.native
   def getOptionsDiagnostics(cancellationToken: CancellationToken): js.Array[Diagnostic] = js.native

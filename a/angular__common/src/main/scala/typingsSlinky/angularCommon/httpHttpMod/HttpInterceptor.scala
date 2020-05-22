@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpInterceptor extends js.Object {
   /**
     * Identifies and handles a given HTTP request.
@@ -14,7 +13,7 @@ trait HttpInterceptor extends js.Object {
     * if no interceptors remain in the chain.
     * @returns An observable of the event stream.
     */
-  def intercept(req: HttpRequest[_], next: HttpHandler): Observable_[HttpEvent[_]] = js.native
+  def intercept(req: HttpRequest[_], next: HttpHandler): Observable_[HttpEvent[_]]
 }
 
 object HttpInterceptor {
@@ -23,19 +22,5 @@ object HttpInterceptor {
     val __obj = js.Dynamic.literal(intercept = js.Any.fromFunction2(intercept))
     __obj.asInstanceOf[HttpInterceptor]
   }
-  @scala.inline
-  implicit class HttpInterceptorOps[Self <: HttpInterceptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIntercept(value: (HttpRequest[_], HttpHandler) => Observable_[HttpEvent[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intercept")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

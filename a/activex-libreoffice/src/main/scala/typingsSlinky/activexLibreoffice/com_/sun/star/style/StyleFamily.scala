@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * This service is a container of style sheets of the same style family.
   * @see StyleFamilies
   */
-@js.native
 trait StyleFamily
   extends XNameContainer
      with XIndexAccess

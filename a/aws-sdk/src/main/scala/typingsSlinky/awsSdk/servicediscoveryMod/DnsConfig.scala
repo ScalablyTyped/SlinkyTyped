@@ -22,47 +22,11 @@ trait DnsConfig extends js.Object {
 
 object DnsConfig {
   @scala.inline
-  def apply(DnsRecords: DnsRecordList): DnsConfig = {
+  def apply(DnsRecords: DnsRecordList, NamespaceId: ResourceId = null, RoutingPolicy: RoutingPolicy = null): DnsConfig = {
     val __obj = js.Dynamic.literal(DnsRecords = DnsRecords.asInstanceOf[js.Any])
+    if (NamespaceId != null) __obj.updateDynamic("NamespaceId")(NamespaceId.asInstanceOf[js.Any])
+    if (RoutingPolicy != null) __obj.updateDynamic("RoutingPolicy")(RoutingPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[DnsConfig]
   }
-  @scala.inline
-  implicit class DnsConfigOps[Self <: DnsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDnsRecords(value: DnsRecordList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespaceId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NamespaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespaceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NamespaceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoutingPolicy(value: RoutingPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoutingPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutingPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoutingPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** gives access to user-visible strings for a solver. */
-@js.native
 trait XSolverDescription extends XInterface {
   /** A user-visible name of the component. */
-  var ComponentDescription: String = js.native
+  var ComponentDescription: String
   /** After calling solve, a message describing the status (explaining why no solution was found). */
-  var StatusDescription: String = js.native
+  var StatusDescription: String
   /** returns a short description for a property in the component's {@link com.sun.star.beans.XPropertySet} interface. */
-  def getPropertyDescription(aPropertyName: String): String = js.native
+  def getPropertyDescription(aPropertyName: String): String
 }
 
 object XSolverDescription {
@@ -30,31 +29,5 @@ object XSolverDescription {
     val __obj = js.Dynamic.literal(ComponentDescription = ComponentDescription.asInstanceOf[js.Any], StatusDescription = StatusDescription.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getPropertyDescription = js.Any.fromFunction1(getPropertyDescription), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSolverDescription]
   }
-  @scala.inline
-  implicit class XSolverDescriptionOps[Self <: XSolverDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponentDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetPropertyDescription(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertyDescription")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

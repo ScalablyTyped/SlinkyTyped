@@ -4,266 +4,83 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigFile extends js.Object {
   @JSName("features.ssl-commands")
-  var `featuresDotssl-commands`: js.UndefOr[Boolean] = js.native
+  var `featuresDotssl-commands`: js.UndefOr[Boolean] = js.undefined
   @JSName("git.host")
-  var gitDothost: js.UndefOr[String] = js.native
+  var gitDothost: js.UndefOr[String] = js.undefined
   @JSName("git.port")
-  var gitDotport: js.UndefOr[Double] = js.native
+  var gitDotport: js.UndefOr[Double] = js.undefined
   @JSName("git.setup")
-  var gitDotsetup: js.UndefOr[Boolean] = js.native
-  var interactive: js.UndefOr[Boolean] = js.native
-  var npmClient: NpmClient = js.native
+  var gitDotsetup: js.UndefOr[Boolean] = js.undefined
+  var interactive: js.UndefOr[Boolean] = js.undefined
+  var npmClient: NpmClient
   @JSName("org.id")
-  var orgDotid: js.UndefOr[String] = js.native
-  var proxy: js.UndefOr[String] = js.native
+  var orgDotid: js.UndefOr[String] = js.undefined
+  var proxy: js.UndefOr[String] = js.undefined
   @JSName("ssl.cafile")
-  var sslDotcafile: js.UndefOr[String | js.Array[String]] = js.native
+  var sslDotcafile: js.UndefOr[String | js.Array[String]] = js.undefined
   @JSName("ssl.certfile")
-  var sslDotcertfile: js.UndefOr[String | js.Array[String]] = js.native
+  var sslDotcertfile: js.UndefOr[String | js.Array[String]] = js.undefined
   @JSName("ssl.keyfile")
-  var sslDotkeyfile: js.UndefOr[String | js.Array[String]] = js.native
-  var telemetry: Boolean = js.native
+  var sslDotkeyfile: js.UndefOr[String | js.Array[String]] = js.undefined
+  var telemetry: Boolean
   @JSName("tokens.telemetry")
-  var tokensDottelemetry: js.UndefOr[String] = js.native
+  var tokensDottelemetry: js.UndefOr[String] = js.undefined
   @JSName("tokens.user")
-  var tokensDotuser: js.UndefOr[String] = js.native
+  var tokensDotuser: js.UndefOr[String] = js.undefined
   @JSName("urls.api")
-  var urlsDotapi: js.UndefOr[String] = js.native
+  var urlsDotapi: js.UndefOr[String] = js.undefined
   @JSName("urls.dash")
-  var urlsDotdash: js.UndefOr[String] = js.native
+  var urlsDotdash: js.UndefOr[String] = js.undefined
   @JSName("user.email")
-  var userDotemail: js.UndefOr[String] = js.native
+  var userDotemail: js.UndefOr[String] = js.undefined
   @JSName("user.id")
-  var userDotid: js.UndefOr[Double] = js.native
-  var version: String = js.native
+  var userDotid: js.UndefOr[Double] = js.undefined
+  var version: String
 }
 
 object ConfigFile {
   @scala.inline
-  def apply(npmClient: NpmClient, telemetry: Boolean, version: String): ConfigFile = {
+  def apply(
+    npmClient: NpmClient,
+    telemetry: Boolean,
+    version: String,
+    `featuresDotssl-commands`: js.UndefOr[Boolean] = js.undefined,
+    gitDothost: String = null,
+    gitDotport: js.UndefOr[Double] = js.undefined,
+    gitDotsetup: js.UndefOr[Boolean] = js.undefined,
+    interactive: js.UndefOr[Boolean] = js.undefined,
+    orgDotid: String = null,
+    proxy: String = null,
+    sslDotcafile: String | js.Array[String] = null,
+    sslDotcertfile: String | js.Array[String] = null,
+    sslDotkeyfile: String | js.Array[String] = null,
+    tokensDottelemetry: String = null,
+    tokensDotuser: String = null,
+    urlsDotapi: String = null,
+    urlsDotdash: String = null,
+    userDotemail: String = null,
+    userDotid: js.UndefOr[Double] = js.undefined
+  ): ConfigFile = {
     val __obj = js.Dynamic.literal(npmClient = npmClient.asInstanceOf[js.Any], telemetry = telemetry.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+    if (!js.isUndefined(`featuresDotssl-commands`)) __obj.updateDynamic("features.ssl-commands")(`featuresDotssl-commands`.get.asInstanceOf[js.Any])
+    if (gitDothost != null) __obj.updateDynamic("git.host")(gitDothost.asInstanceOf[js.Any])
+    if (!js.isUndefined(gitDotport)) __obj.updateDynamic("git.port")(gitDotport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gitDotsetup)) __obj.updateDynamic("git.setup")(gitDotsetup.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interactive)) __obj.updateDynamic("interactive")(interactive.get.asInstanceOf[js.Any])
+    if (orgDotid != null) __obj.updateDynamic("org.id")(orgDotid.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (sslDotcafile != null) __obj.updateDynamic("ssl.cafile")(sslDotcafile.asInstanceOf[js.Any])
+    if (sslDotcertfile != null) __obj.updateDynamic("ssl.certfile")(sslDotcertfile.asInstanceOf[js.Any])
+    if (sslDotkeyfile != null) __obj.updateDynamic("ssl.keyfile")(sslDotkeyfile.asInstanceOf[js.Any])
+    if (tokensDottelemetry != null) __obj.updateDynamic("tokens.telemetry")(tokensDottelemetry.asInstanceOf[js.Any])
+    if (tokensDotuser != null) __obj.updateDynamic("tokens.user")(tokensDotuser.asInstanceOf[js.Any])
+    if (urlsDotapi != null) __obj.updateDynamic("urls.api")(urlsDotapi.asInstanceOf[js.Any])
+    if (urlsDotdash != null) __obj.updateDynamic("urls.dash")(urlsDotdash.asInstanceOf[js.Any])
+    if (userDotemail != null) __obj.updateDynamic("user.email")(userDotemail.asInstanceOf[js.Any])
+    if (!js.isUndefined(userDotid)) __obj.updateDynamic("user.id")(userDotid.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigFile]
   }
-  @scala.inline
-  implicit class ConfigFileOps[Self <: ConfigFile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNpmClient(value: NpmClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("npmClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTelemetry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("telemetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFeaturesDotssl-commands`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features.ssl-commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFeaturesDotssl-commands`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features.ssl-commands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGitDothost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git.host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGitDothost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git.host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGitDotport(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git.port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGitDotport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git.port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGitDotsetup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git.setup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGitDotsetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git.setup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInteractive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInteractive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrgDotid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("org.id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrgDotid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("org.id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSslDotcafile(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl.cafile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSslDotcafile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl.cafile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSslDotcertfile(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl.certfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSslDotcertfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl.certfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSslDotkeyfile(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl.keyfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSslDotkeyfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl.keyfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokensDottelemetry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens.telemetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokensDottelemetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens.telemetry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokensDotuser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens.user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokensDotuser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens.user")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlsDotapi(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls.api")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlsDotapi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls.api")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlsDotdash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls.dash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlsDotdash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls.dash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDotemail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user.email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDotemail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user.email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDotid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user.id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDotid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user.id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

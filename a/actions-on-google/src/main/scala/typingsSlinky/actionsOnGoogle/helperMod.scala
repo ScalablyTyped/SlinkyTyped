@@ -2,7 +2,6 @@ package typingsSlinky.actionsOnGoogle
 
 import typingsSlinky.actionsOnGoogle.carouselMod.CarouselOptions
 import typingsSlinky.actionsOnGoogle.conversationConversationMod.Intent
-import typingsSlinky.actionsOnGoogle.conversationConversationMod.Response
 import typingsSlinky.actionsOnGoogle.datetimeMod.DateTimeOptions
 import typingsSlinky.actionsOnGoogle.deeplinkMod.DeepLinkOptions
 import typingsSlinky.actionsOnGoogle.helperHelperMod.HelperOptions
@@ -103,8 +102,7 @@ object helperMod extends js.Object {
   
   @js.native
   class Helper[TIntent /* <: Intent */, TValueSpec] protected ()
-    extends typingsSlinky.actionsOnGoogle.helperHelperMod.Helper[TIntent, TValueSpec]
-       with Response {
+    extends typingsSlinky.actionsOnGoogle.helperHelperMod.Helper[TIntent, TValueSpec] {
     def this(options: HelperOptions[TIntent, TValueSpec]) = this()
   }
   

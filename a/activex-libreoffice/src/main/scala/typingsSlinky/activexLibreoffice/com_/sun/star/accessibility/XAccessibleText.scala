@@ -26,7 +26,6 @@ import scala.scalajs.js.annotation._
   * selection is used for example to express the current cursor position.
   * @since OOo 1.1.2
   */
-@js.native
 trait XAccessibleText extends XInterface {
   /**
     * Return the position of the caret.
@@ -35,35 +34,35 @@ trait XAccessibleText extends XInterface {
     * is that of the character to the right of it.
     * @returns The returned offset is relative to the text represented by this object.
     */
-  var CaretPosition: Double = js.native
+  var CaretPosition: Double
   /**
     * Return the number of characters in the represented text.
     *
     * Returns the number of characters in the text represented by this object or, in other words, the text length.
     * @returns Returns the number of characters of this object's text. A zero value indicates an empty text.
     */
-  val CharacterCount: Double = js.native
+  val CharacterCount: Double
   /**
     * Return the selected text.
     *
     * Returns the portion of the text that is selected.
     * @returns The returned text is the selected portion of the object's text. If no text is selected when this method is called or when selection is not suppor
     */
-  val SelectedText: String = js.native
+  val SelectedText: String
   /**
     * Return the position of the end of the selection.
     *
     * Returns the index of the end of the selected text.
     * @returns If there is no selection or selection is not supported the position of selection start and end will be the same undefined value.
     */
-  val SelectionEnd: Double = js.native
+  val SelectionEnd: Double
   /**
     * Return the position of the start of the selection.
     *
     * Returns the index of the start of the selected text.
     * @returns If there is no selection or selection is not supported the position of selection start and end will be the same undefined value.
     */
-  val SelectionStart: Double = js.native
+  val SelectionStart: Double
   /**
     * Return the whole text.
     *
@@ -71,7 +70,7 @@ trait XAccessibleText extends XInterface {
     * .
     * @returns Returns a string that contains the complete text.
     */
-  val Text: String = js.native
+  val Text: String
   /**
     * Copy the specified text into the clipboard.
     *
@@ -85,7 +84,7 @@ trait XAccessibleText extends XInterface {
     * @returns Returns `TRUE` if the specified text has been copied successfully into the clipboard.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the indices are invalid
     */
-  def copyText(nStartIndex: Double, nEndIndex: Double): Boolean = js.native
+  def copyText(nStartIndex: Double, nEndIndex: Double): Boolean
   /**
     * Return the position of the caret.
     *
@@ -93,7 +92,7 @@ trait XAccessibleText extends XInterface {
     * is that of the character to the right of it.
     * @returns The returned offset is relative to the text represented by this object.
     */
-  def getCaretPosition(): Double = js.native
+  def getCaretPosition(): Double
   /**
     * Return the character at the specified position.
     *
@@ -102,7 +101,7 @@ trait XAccessibleText extends XInterface {
     * @returns the character at the index nIndex.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is invalid
     */
-  def getCharacter(nIndex: Double): String = js.native
+  def getCharacter(nIndex: Double): String
   /**
     * Get the attribute set for the specified position.
     *
@@ -113,7 +112,7 @@ trait XAccessibleText extends XInterface {
     * @returns Returns the explicitly or implicitly (empty aRequestedAttributes argument) requested attributes of the specified character. Each attribute is rep
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is invalid
     */
-  def getCharacterAttributes(nIndex: Double, aRequestedAttributes: SeqEquiv[String]): SafeArray[PropertyValue] = js.native
+  def getCharacterAttributes(nIndex: Double, aRequestedAttributes: SeqEquiv[String]): SafeArray[PropertyValue]
   /**
     * Return the bounding box of the specified position.
     *
@@ -130,14 +129,14 @@ trait XAccessibleText extends XInterface {
     * @returns The bounding box of the referenced character. The bounding box of the virtual character at position length has to have non-empty dimensions.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is invalid
     */
-  def getCharacterBounds(nIndex: Double): Rectangle = js.native
+  def getCharacterBounds(nIndex: Double): Rectangle
   /**
     * Return the number of characters in the represented text.
     *
     * Returns the number of characters in the text represented by this object or, in other words, the text length.
     * @returns Returns the number of characters of this object's text. A zero value indicates an empty text.
     */
-  def getCharacterCount(): Double = js.native
+  def getCharacterCount(): Double
   /**
     * Return the text position for the specified screen position.
     *
@@ -147,28 +146,28 @@ trait XAccessibleText extends XInterface {
     * @param aPoint The position for which to look up the index of the character that is rendered on to the display at that point.
     * @returns Index of the character under the given point or -1 if the point is invalid or there is no character under the point.
     */
-  def getIndexAtPoint(aPoint: Point): Double = js.native
+  def getIndexAtPoint(aPoint: Point): Double
   /**
     * Return the selected text.
     *
     * Returns the portion of the text that is selected.
     * @returns The returned text is the selected portion of the object's text. If no text is selected when this method is called or when selection is not suppor
     */
-  def getSelectedText(): String = js.native
+  def getSelectedText(): String
   /**
     * Return the position of the end of the selection.
     *
     * Returns the index of the end of the selected text.
     * @returns If there is no selection or selection is not supported the position of selection start and end will be the same undefined value.
     */
-  def getSelectionEnd(): Double = js.native
+  def getSelectionEnd(): Double
   /**
     * Return the position of the start of the selection.
     *
     * Returns the index of the start of the selected text.
     * @returns If there is no selection or selection is not supported the position of selection start and end will be the same undefined value.
     */
-  def getSelectionStart(): Double = js.native
+  def getSelectionStart(): Double
   /**
     * Return the whole text.
     *
@@ -176,7 +175,7 @@ trait XAccessibleText extends XInterface {
     * .
     * @returns Returns a string that contains the complete text.
     */
-  def getText(): String = js.native
+  def getText(): String
   /**
     * Get a text portion around the given position.
     *
@@ -189,7 +188,7 @@ trait XAccessibleText extends XInterface {
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is invalid
     * @throws com::sun::star::lang::IllegalArgumentException if the given text type is not valid.
     */
-  def getTextAtIndex(nIndex: Double, nTextType: Double): TextSegment = js.native
+  def getTextAtIndex(nIndex: Double, nTextType: Double): TextSegment
   /**
     * Get a text portion before the given position.
     *
@@ -205,7 +204,7 @@ trait XAccessibleText extends XInterface {
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is invalid.
     * @throws com::sun::star::lang::IllegalArgumentException if the given text type is not valid.
     */
-  def getTextBeforeIndex(nIndex: Double, nTextType: Double): TextSegment = js.native
+  def getTextBeforeIndex(nIndex: Double, nTextType: Double): TextSegment
   /**
     * Get a text portion behind the given position.
     *
@@ -221,7 +220,7 @@ trait XAccessibleText extends XInterface {
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is invalid
     * @throws com::sun::star::lang::IllegalArgumentException if the given text type is not valid.
     */
-  def getTextBehindIndex(nIndex: Double, nTextType: Double): TextSegment = js.native
+  def getTextBehindIndex(nIndex: Double, nTextType: Double): TextSegment
   /**
     * Return the specified text range.
     *
@@ -237,7 +236,7 @@ trait XAccessibleText extends XInterface {
     * @returns Returns the substring starting with the character at nStartIndex (inclusive) and up to the character at nEndIndex (exclusive), if nStartIndex is
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the indices are invalid
     */
-  def getTextRange(nStartIndex: Double, nEndIndex: Double): String = js.native
+  def getTextRange(nStartIndex: Double, nEndIndex: Double): String
   /**
     * Set the position of the caret.
     *
@@ -253,7 +252,7 @@ trait XAccessibleText extends XInterface {
     * @returns Returns `TRUE` if the caret has been moved and `FALSE` otherwise. A `TRUE` value does not necessarily mean that the caret has been positioned exa
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is not valid.
     */
-  def setCaretPosition(nIndex: Double): Boolean = js.native
+  def setCaretPosition(nIndex: Double): Boolean
   /**
     * Set a new selection.
     *
@@ -268,7 +267,7 @@ trait XAccessibleText extends XInterface {
     * @returns Returns `TRUE` if the selection has been set successfully and `FALSE` otherwise or when selection is not supported.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the indices are invalid
     */
-  def setSelection(nStartIndex: Double, nEndIndex: Double): Boolean = js.native
+  def setSelection(nStartIndex: Double, nEndIndex: Double): Boolean
 }
 
 object XAccessibleText {
@@ -304,151 +303,5 @@ object XAccessibleText {
     val __obj = js.Dynamic.literal(CaretPosition = CaretPosition.asInstanceOf[js.Any], CharacterCount = CharacterCount.asInstanceOf[js.Any], SelectedText = SelectedText.asInstanceOf[js.Any], SelectionEnd = SelectionEnd.asInstanceOf[js.Any], SelectionStart = SelectionStart.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), copyText = js.Any.fromFunction2(copyText), getCaretPosition = js.Any.fromFunction0(getCaretPosition), getCharacter = js.Any.fromFunction1(getCharacter), getCharacterAttributes = js.Any.fromFunction2(getCharacterAttributes), getCharacterBounds = js.Any.fromFunction1(getCharacterBounds), getCharacterCount = js.Any.fromFunction0(getCharacterCount), getIndexAtPoint = js.Any.fromFunction1(getIndexAtPoint), getSelectedText = js.Any.fromFunction0(getSelectedText), getSelectionEnd = js.Any.fromFunction0(getSelectionEnd), getSelectionStart = js.Any.fromFunction0(getSelectionStart), getText = js.Any.fromFunction0(getText), getTextAtIndex = js.Any.fromFunction2(getTextAtIndex), getTextBeforeIndex = js.Any.fromFunction2(getTextBeforeIndex), getTextBehindIndex = js.Any.fromFunction2(getTextBehindIndex), getTextRange = js.Any.fromFunction2(getTextRange), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setCaretPosition = js.Any.fromFunction1(setCaretPosition), setSelection = js.Any.fromFunction2(setSelection))
     __obj.asInstanceOf[XAccessibleText]
   }
-  @scala.inline
-  implicit class XAccessibleTextOps[Self <: XAccessibleText] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaretPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaretPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharacterCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CharacterCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectionEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectionEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectionStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectionStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCopyText(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyText")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetCaretPosition(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCaretPosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCharacter(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCharacter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCharacterAttributes(value: (Double, SeqEquiv[String]) => SafeArray[PropertyValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCharacterAttributes")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetCharacterBounds(value: Double => Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCharacterBounds")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCharacterCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCharacterCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIndexAtPoint(value: Point => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndexAtPoint")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetSelectedText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSelectionEnd(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectionEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSelectionStart(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectionStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextAtIndex(value: (Double, Double) => TextSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextAtIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextBeforeIndex(value: (Double, Double) => TextSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextBeforeIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextBehindIndex(value: (Double, Double) => TextSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextBehindIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextRange(value: (Double, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextRange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetCaretPosition(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCaretPosition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSelection(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelection")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

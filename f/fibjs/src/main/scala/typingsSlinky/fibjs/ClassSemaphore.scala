@@ -7,20 +7,20 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ClassSemaphore extends ClassLock {
   /**
-  	 * 
-  	 * @brief 释放一个信号量，等同于 release()
-  	 * 
-  	 * 
-  	 */
+    * 
+    * @brief 释放一个信号量，等同于 release()
+    * 
+    * 
+    */
   def post(): Unit = js.native
   /**
-  	 * 
-  	 * @brief 尝试获取一个信号，如不能获取，则立即返回并返回 false，等同于 acquire(false)
-  	 * @return 获取成功则返回 true
-  	 * 
-  	 * 
-  	 * 
-  	 */
+    * 
+    * @brief 尝试获取一个信号，如不能获取，则立即返回并返回 false，等同于 acquire(false)
+    * @return 获取成功则返回 true
+    * 
+    * 
+    * 
+    */
   def trywait(): Boolean = js.native
 }
 

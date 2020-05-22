@@ -18,41 +18,11 @@ trait AbortEnvironmentUpdateMessage extends js.Object {
 
 object AbortEnvironmentUpdateMessage {
   @scala.inline
-  def apply(): AbortEnvironmentUpdateMessage = {
+  def apply(EnvironmentId: EnvironmentId = null, EnvironmentName: EnvironmentName = null): AbortEnvironmentUpdateMessage = {
     val __obj = js.Dynamic.literal()
+    if (EnvironmentId != null) __obj.updateDynamic("EnvironmentId")(EnvironmentId.asInstanceOf[js.Any])
+    if (EnvironmentName != null) __obj.updateDynamic("EnvironmentName")(EnvironmentName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbortEnvironmentUpdateMessage]
   }
-  @scala.inline
-  implicit class AbortEnvironmentUpdateMessageOps[Self <: AbortEnvironmentUpdateMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnvironmentId(value: EnvironmentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentName(value: EnvironmentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

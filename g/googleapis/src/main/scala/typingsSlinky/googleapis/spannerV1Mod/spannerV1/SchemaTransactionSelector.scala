@@ -31,53 +31,16 @@ trait SchemaTransactionSelector extends js.Object {
 
 object SchemaTransactionSelector {
   @scala.inline
-  def apply(): SchemaTransactionSelector = {
+  def apply(
+    begin: SchemaTransactionOptions = null,
+    id: String = null,
+    singleUse: SchemaTransactionOptions = null
+  ): SchemaTransactionSelector = {
     val __obj = js.Dynamic.literal()
+    if (begin != null) __obj.updateDynamic("begin")(begin.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (singleUse != null) __obj.updateDynamic("singleUse")(singleUse.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTransactionSelector]
   }
-  @scala.inline
-  implicit class SchemaTransactionSelectorOps[Self <: SchemaTransactionSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBegin(value: SchemaTransactionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("begin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBegin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("begin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleUse(value: SchemaTransactionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleUse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleUse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleUse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

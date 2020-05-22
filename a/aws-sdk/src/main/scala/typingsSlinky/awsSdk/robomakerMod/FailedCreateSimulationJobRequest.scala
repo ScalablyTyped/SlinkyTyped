@@ -26,65 +26,18 @@ trait FailedCreateSimulationJobRequest extends js.Object {
 
 object FailedCreateSimulationJobRequest {
   @scala.inline
-  def apply(): FailedCreateSimulationJobRequest = {
+  def apply(
+    failedAt: js.Date = null,
+    failureCode: SimulationJobErrorCode = null,
+    failureReason: GenericString = null,
+    request: SimulationJobRequest = null
+  ): FailedCreateSimulationJobRequest = {
     val __obj = js.Dynamic.literal()
+    if (failedAt != null) __obj.updateDynamic("failedAt")(failedAt.asInstanceOf[js.Any])
+    if (failureCode != null) __obj.updateDynamic("failureCode")(failureCode.asInstanceOf[js.Any])
+    if (failureReason != null) __obj.updateDynamic("failureReason")(failureReason.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
     __obj.asInstanceOf[FailedCreateSimulationJobRequest]
   }
-  @scala.inline
-  implicit class FailedCreateSimulationJobRequestOps[Self <: FailedCreateSimulationJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureCode(value: SimulationJobErrorCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: SimulationJobRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

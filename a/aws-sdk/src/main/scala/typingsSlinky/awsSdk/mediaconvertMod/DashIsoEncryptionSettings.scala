@@ -18,41 +18,14 @@ trait DashIsoEncryptionSettings extends js.Object {
 
 object DashIsoEncryptionSettings {
   @scala.inline
-  def apply(): DashIsoEncryptionSettings = {
+  def apply(
+    PlaybackDeviceCompatibility: DashIsoPlaybackDeviceCompatibility = null,
+    SpekeKeyProvider: SpekeKeyProvider = null
+  ): DashIsoEncryptionSettings = {
     val __obj = js.Dynamic.literal()
+    if (PlaybackDeviceCompatibility != null) __obj.updateDynamic("PlaybackDeviceCompatibility")(PlaybackDeviceCompatibility.asInstanceOf[js.Any])
+    if (SpekeKeyProvider != null) __obj.updateDynamic("SpekeKeyProvider")(SpekeKeyProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[DashIsoEncryptionSettings]
   }
-  @scala.inline
-  implicit class DashIsoEncryptionSettingsOps[Self <: DashIsoEncryptionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlaybackDeviceCompatibility(value: DashIsoPlaybackDeviceCompatibility): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackDeviceCompatibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaybackDeviceCompatibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackDeviceCompatibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpekeKeyProvider(value: SpekeKeyProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpekeKeyProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,154 +1,101 @@
 package typingsSlinky.antdMobile.pickerPropsTypeMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcCascader.cascaderTypesMod.CascaderValue
 import typingsSlinky.rmcPicker.popupPickerTypesMod.IPopupPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PickerPropsType extends IPopupPickerProps {
-  var cascade: js.UndefOr[Boolean] = js.native
-  var cols: js.UndefOr[Double] = js.native
-  var data: js.Array[js.Array[PickerData] | PickerData] = js.native
-  var extra: js.UndefOr[String] = js.native
-  var format: js.UndefOr[js.Function1[/* values */ js.Array[TagMod[Any]], String | js.Array[TagMod[Any]]]] = js.native
-  var indicatorStyle: js.UndefOr[js.Any] = js.native
-  var itemStyle: js.UndefOr[js.Any] = js.native
-  var onChange: js.UndefOr[js.Function1[/* date */ js.UndefOr[CascaderValue], Unit]] = js.native
-  var onPickerChange: js.UndefOr[js.Function1[/* value */ CascaderValue, Unit]] = js.native
+  var cascade: js.UndefOr[Boolean] = js.undefined
+  var cols: js.UndefOr[Double] = js.undefined
+  var data: js.Array[js.Array[PickerData] | PickerData]
+  var extra: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[js.Function1[/* values */ js.Array[TagMod[Any]], String | js.Array[TagMod[Any]]]] = js.undefined
+  var indicatorStyle: js.UndefOr[js.Any] = js.undefined
+  var itemStyle: js.UndefOr[js.Any] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* date */ js.UndefOr[CascaderValue], Unit]] = js.undefined
+  var onPickerChange: js.UndefOr[js.Function1[/* value */ CascaderValue, Unit]] = js.undefined
   @JSName("value")
-  var value_PickerPropsType: js.UndefOr[js.Array[String | Double]] = js.native
+  var value_PickerPropsType: js.UndefOr[js.Array[String | Double]] = js.undefined
 }
 
 object PickerPropsType {
   @scala.inline
-  def apply(data: js.Array[js.Array[PickerData] | PickerData]): PickerPropsType = {
+  def apply(
+    data: js.Array[js.Array[PickerData] | PickerData],
+    WrapComponent: js.Any = null,
+    actionTextActiveOpacity: js.UndefOr[Double] = js.undefined,
+    actionTextUnderlayColor: String = null,
+    cascade: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    cols: js.UndefOr[Double] = js.undefined,
+    content: ReactElement | String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    dismissText: String | ReactElement = null,
+    extra: String = null,
+    format: /* values */ js.Array[TagMod[Any]] => String | js.Array[TagMod[Any]] = null,
+    indicatorStyle: js.Any = null,
+    itemStyle: js.Any = null,
+    maskTransitionName: String = null,
+    okText: String | ReactElement = null,
+    onChange: /* date */ js.UndefOr[CascaderValue] => Unit = null,
+    onDismiss: () => Unit = null,
+    onOk: /* value */ js.UndefOr[js.Any] => Unit = null,
+    onPickerChange: /* value */ CascaderValue => Unit = null,
+    onVisibleChange: /* visible */ Boolean => Unit = null,
+    picker: js.Any = null,
+    pickerValueChangeProp: String = null,
+    pickerValueProp: String = null,
+    popupTransitionName: String = null,
+    prefixCls: String = null,
+    style: js.Any = null,
+    styles: js.Any = null,
+    title: String | ReactElement = null,
+    transitionName: String = null,
+    triggerType: String = null,
+    value: js.Array[String | Double] = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    wrapStyle: CSSProperties = null
+  ): PickerPropsType = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (WrapComponent != null) __obj.updateDynamic("WrapComponent")(WrapComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(actionTextActiveOpacity)) __obj.updateDynamic("actionTextActiveOpacity")(actionTextActiveOpacity.get.asInstanceOf[js.Any])
+    if (actionTextUnderlayColor != null) __obj.updateDynamic("actionTextUnderlayColor")(actionTextUnderlayColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(cascade)) __obj.updateDynamic("cascade")(cascade.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(cols)) __obj.updateDynamic("cols")(cols.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (dismissText != null) __obj.updateDynamic("dismissText")(dismissText.asInstanceOf[js.Any])
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(js.Any.fromFunction1(format))
+    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (maskTransitionName != null) __obj.updateDynamic("maskTransitionName")(maskTransitionName.asInstanceOf[js.Any])
+    if (okText != null) __obj.updateDynamic("okText")(okText.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
+    if (onOk != null) __obj.updateDynamic("onOk")(js.Any.fromFunction1(onOk))
+    if (onPickerChange != null) __obj.updateDynamic("onPickerChange")(js.Any.fromFunction1(onPickerChange))
+    if (onVisibleChange != null) __obj.updateDynamic("onVisibleChange")(js.Any.fromFunction1(onVisibleChange))
+    if (picker != null) __obj.updateDynamic("picker")(picker.asInstanceOf[js.Any])
+    if (pickerValueChangeProp != null) __obj.updateDynamic("pickerValueChangeProp")(pickerValueChangeProp.asInstanceOf[js.Any])
+    if (pickerValueProp != null) __obj.updateDynamic("pickerValueProp")(pickerValueProp.asInstanceOf[js.Any])
+    if (popupTransitionName != null) __obj.updateDynamic("popupTransitionName")(popupTransitionName.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
+    if (triggerType != null) __obj.updateDynamic("triggerType")(triggerType.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (wrapStyle != null) __obj.updateDynamic("wrapStyle")(wrapStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickerPropsType]
   }
-  @scala.inline
-  implicit class PickerPropsTypeOps[Self <: PickerPropsType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Array[js.Array[PickerData] | PickerData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCascade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCascade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCols(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: /* values */ js.Array[TagMod[Any]] => String | js.Array[TagMod[Any]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndicatorStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndicatorStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* date */ js.UndefOr[CascaderValue] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPickerChange(value: /* value */ CascaderValue => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPickerChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPickerChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPickerChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Array[String | Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

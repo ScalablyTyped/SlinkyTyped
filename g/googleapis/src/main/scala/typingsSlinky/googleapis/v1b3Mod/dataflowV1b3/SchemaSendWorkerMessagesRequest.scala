@@ -23,41 +23,11 @@ trait SchemaSendWorkerMessagesRequest extends js.Object {
 
 object SchemaSendWorkerMessagesRequest {
   @scala.inline
-  def apply(): SchemaSendWorkerMessagesRequest = {
+  def apply(location: String = null, workerMessages: js.Array[SchemaWorkerMessage] = null): SchemaSendWorkerMessagesRequest = {
     val __obj = js.Dynamic.literal()
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (workerMessages != null) __obj.updateDynamic("workerMessages")(workerMessages.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSendWorkerMessagesRequest]
   }
-  @scala.inline
-  implicit class SchemaSendWorkerMessagesRequestOps[Self <: SchemaSendWorkerMessagesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerMessages(value: js.Array[SchemaWorkerMessage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

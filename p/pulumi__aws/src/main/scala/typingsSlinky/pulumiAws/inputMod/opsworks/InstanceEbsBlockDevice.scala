@@ -17,83 +17,21 @@ trait InstanceEbsBlockDevice extends js.Object {
 
 object InstanceEbsBlockDevice {
   @scala.inline
-  def apply(deviceName: Input[String]): InstanceEbsBlockDevice = {
+  def apply(
+    deviceName: Input[String],
+    deleteOnTermination: Input[Boolean] = null,
+    iops: Input[Double] = null,
+    snapshotId: Input[String] = null,
+    volumeSize: Input[Double] = null,
+    volumeType: Input[String] = null
+  ): InstanceEbsBlockDevice = {
     val __obj = js.Dynamic.literal(deviceName = deviceName.asInstanceOf[js.Any])
+    if (deleteOnTermination != null) __obj.updateDynamic("deleteOnTermination")(deleteOnTermination.asInstanceOf[js.Any])
+    if (iops != null) __obj.updateDynamic("iops")(iops.asInstanceOf[js.Any])
+    if (snapshotId != null) __obj.updateDynamic("snapshotId")(snapshotId.asInstanceOf[js.Any])
+    if (volumeSize != null) __obj.updateDynamic("volumeSize")(volumeSize.asInstanceOf[js.Any])
+    if (volumeType != null) __obj.updateDynamic("volumeType")(volumeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceEbsBlockDevice]
   }
-  @scala.inline
-  implicit class InstanceEbsBlockDeviceOps[Self <: InstanceEbsBlockDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteOnTermination(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnTermination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteOnTermination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnTermination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIops(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeSize(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

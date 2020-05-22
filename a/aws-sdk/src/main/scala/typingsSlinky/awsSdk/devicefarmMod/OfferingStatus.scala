@@ -26,65 +26,18 @@ trait OfferingStatus extends js.Object {
 
 object OfferingStatus {
   @scala.inline
-  def apply(): OfferingStatus = {
+  def apply(
+    effectiveOn: js.Date = null,
+    offering: Offering = null,
+    quantity: js.UndefOr[Integer] = js.undefined,
+    `type`: OfferingTransactionType = null
+  ): OfferingStatus = {
     val __obj = js.Dynamic.literal()
+    if (effectiveOn != null) __obj.updateDynamic("effectiveOn")(effectiveOn.asInstanceOf[js.Any])
+    if (offering != null) __obj.updateDynamic("offering")(offering.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantity)) __obj.updateDynamic("quantity")(quantity.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OfferingStatus]
   }
-  @scala.inline
-  implicit class OfferingStatusOps[Self <: OfferingStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEffectiveOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectiveOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffering(value: Offering): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: OfferingTransactionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

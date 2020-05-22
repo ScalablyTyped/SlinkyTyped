@@ -7,24 +7,23 @@ import scala.scalajs.js.annotation._
 /**
   * Defines the list of variables in an app.
   */
-@js.native
 trait IVariableListDef extends js.Object {
   /**
     * Data Type JSON
     */
-  var qData: js.Any = js.native
+  var qData: js.Any
   /**
     * Shows the system variables if set to true.
     */
-  var qShowConfig: Boolean = js.native
+  var qShowConfig: Boolean
   /**
     * Shows the reserved variables if set to true.
     */
-  var qShowReserved: Boolean = js.native
+  var qShowReserved: Boolean
   /**
     * Type of the list.
     */
-  var qType: String = js.native
+  var qType: String
 }
 
 object IVariableListDef {
@@ -33,37 +32,5 @@ object IVariableListDef {
     val __obj = js.Dynamic.literal(qData = qData.asInstanceOf[js.Any], qShowConfig = qShowConfig.asInstanceOf[js.Any], qShowReserved = qShowReserved.asInstanceOf[js.Any], qType = qType.asInstanceOf[js.Any])
     __obj.asInstanceOf[IVariableListDef]
   }
-  @scala.inline
-  implicit class IVariableListDefOps[Self <: IVariableListDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQShowConfig(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQShowReserved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowReserved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

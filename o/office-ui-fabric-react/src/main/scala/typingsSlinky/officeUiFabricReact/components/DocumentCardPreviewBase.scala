@@ -8,7 +8,7 @@ import typingsSlinky.officeUiFabricReact.documentCardPreviewTypesMod.IDocumentCa
 import typingsSlinky.officeUiFabricReact.documentCardPreviewTypesMod.IDocumentCardPreviewProps
 import typingsSlinky.officeUiFabricReact.documentCardPreviewTypesMod.IDocumentCardPreviewStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardPreviewTypesMod.IDocumentCardPreviewStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -39,7 +39,7 @@ object DocumentCardPreviewBase {
     @scala.inline
     def getOverflowDocumentCountText(value: /* overflowCount */ Double => String): this.type = set("getOverflowDocumentCountText", js.Any.fromFunction1(value))
     @scala.inline
-    def stylesFunction1(value: IDocumentCardPreviewStyleProps => Partial[IDocumentCardPreviewStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDocumentCardPreviewStyleProps => DeepPartial[IDocumentCardPreviewStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardPreviewStyleProps, IDocumentCardPreviewStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

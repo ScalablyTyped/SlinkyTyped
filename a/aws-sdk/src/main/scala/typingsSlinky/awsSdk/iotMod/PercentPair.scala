@@ -18,41 +18,11 @@ trait PercentPair extends js.Object {
 
 object PercentPair {
   @scala.inline
-  def apply(): PercentPair = {
+  def apply(percent: js.UndefOr[Percent] = js.undefined, value: js.UndefOr[PercentValue] = js.undefined): PercentPair = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(percent)) __obj.updateDynamic("percent")(percent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PercentPair]
   }
-  @scala.inline
-  implicit class PercentPairOps[Self <: PercentPair] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPercent(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: PercentValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

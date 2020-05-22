@@ -11,92 +11,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IonTextarea extends js.Object {
   /**
     * If `true`, the element height will increase based on the value.
     */
-  var autoGrow: Boolean = js.native
+  var autoGrow: Boolean
   /**
     * Indicates whether and how the text value should be automatically capitalized as it is entered/edited by the user.
     */
-  var autocapitalize: String = js.native
+  var autocapitalize: String
   /**
     * This Boolean attribute lets you specify that a form control should have input focus when the page loads.
     */
-  var autofocus: Boolean = js.native
+  var autofocus: Boolean
   /**
     * If `true`, the value will be cleared after focus upon edit. Defaults to `true` when `type` is `"password"`, `false` for all other types.
     */
-  var clearOnEdit: Boolean = js.native
+  var clearOnEdit: Boolean
   /**
     * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
     */
-  var color: js.UndefOr[Color] = js.native
+  var color: js.UndefOr[Color] = js.undefined
   /**
     * The visible width of the text control, in average character widths. If it is specified, it must be a positive integer.
     */
-  var cols: js.UndefOr[Double] = js.native
+  var cols: js.UndefOr[Double] = js.undefined
   /**
     * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke.
     */
-  var debounce: Double = js.native
+  var debounce: Double
   /**
     * If `true`, the user cannot interact with the textarea.
     */
-  var disabled: Boolean = js.native
+  var disabled: Boolean
   /**
     * If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters that the user can enter.
     */
-  var maxlength: js.UndefOr[Double] = js.native
+  var maxlength: js.UndefOr[Double] = js.undefined
   /**
     * If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters that the user can enter.
     */
-  var minlength: js.UndefOr[Double] = js.native
+  var minlength: js.UndefOr[Double] = js.undefined
   /**
     * The mode determines which platform styles to use.
     */
-  var mode: js.UndefOr[ios | md] = js.native
+  var mode: js.UndefOr[ios | md] = js.undefined
   /**
     * The name of the control, which is submitted with the form data.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Instructional text that shows before the input has a value.
     */
-  var placeholder: js.UndefOr[String | Null] = js.native
+  var placeholder: js.UndefOr[String | Null] = js.undefined
   /**
     * If `true`, the user cannot modify the value.
     */
-  var readonly: Boolean = js.native
+  var readonly: Boolean
   /**
     * If `true`, the user must fill in a value before submitting a form.
     */
-  var required: Boolean = js.native
+  var required: Boolean
   /**
     * The number of visible text lines for the control.
     */
-  var rows: js.UndefOr[Double] = js.native
+  var rows: js.UndefOr[Double] = js.undefined
   /**
     * If `true`, the element will have its spelling and grammar checked.
     */
-  var spellcheck: Boolean = js.native
+  var spellcheck: Boolean
   /**
     * The value of the textarea.
     */
-  var value: js.UndefOr[String | Null] = js.native
+  var value: js.UndefOr[String | Null] = js.undefined
   /**
     * Indicates how the control wraps text.
     */
-  var wrap: js.UndefOr[hard | soft | off] = js.native
+  var wrap: js.UndefOr[hard | soft | off] = js.undefined
   /**
     * Returns the native `<textarea>` element used under the hood.
     */
-  def getInputElement(): js.Promise[HTMLTextAreaElement] = js.native
+  def getInputElement(): js.Promise[HTMLTextAreaElement]
   /**
     * Sets focus on the specified `ion-textarea`. Use this method instead of the global `input.focus()`.
     */
-  def setFocus(): js.Promise[Unit] = js.native
+  def setFocus(): js.Promise[Unit]
 }
 
 object IonTextarea {
@@ -113,210 +112,28 @@ object IonTextarea {
     readonly: Boolean,
     required: Boolean,
     setFocus: () => js.Promise[Unit],
-    spellcheck: Boolean
+    spellcheck: Boolean,
+    color: Color = null,
+    cols: js.UndefOr[Double] = js.undefined,
+    maxlength: js.UndefOr[Double] = js.undefined,
+    minlength: js.UndefOr[Double] = js.undefined,
+    mode: ios | md = null,
+    placeholder: js.UndefOr[Null | String] = js.undefined,
+    rows: js.UndefOr[Double] = js.undefined,
+    value: js.UndefOr[Null | String] = js.undefined,
+    wrap: hard | soft | off = null
   ): IonTextarea = {
     val __obj = js.Dynamic.literal(autoGrow = autoGrow.asInstanceOf[js.Any], autocapitalize = autocapitalize.asInstanceOf[js.Any], autofocus = autofocus.asInstanceOf[js.Any], clearOnEdit = clearOnEdit.asInstanceOf[js.Any], debounce = debounce.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], getInputElement = js.Any.fromFunction0(getInputElement), name = name.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], setFocus = js.Any.fromFunction0(setFocus), spellcheck = spellcheck.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(cols)) __obj.updateDynamic("cols")(cols.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxlength)) __obj.updateDynamic("maxlength")(maxlength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minlength)) __obj.updateDynamic("minlength")(minlength.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(placeholder)) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (wrap != null) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonTextarea]
   }
-  @scala.inline
-  implicit class IonTextareaOps[Self <: IonTextarea] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoGrow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutocapitalize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocapitalize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutofocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClearOnEdit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOnEdit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebounce(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetInputElement(value: () => js.Promise[HTMLTextAreaElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInputElement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetFocus(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFocus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSpellcheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCols(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxlength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxlength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxlength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxlength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinlength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minlength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinlength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minlength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ios | md): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(null)
-        ret
-    }
-    @scala.inline
-    def withRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
-    @scala.inline
-    def withWrap(value: hard | soft | off): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

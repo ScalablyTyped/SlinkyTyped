@@ -7,97 +7,56 @@ import scala.scalajs.js.annotation._
 /**
   * Adjudication details
   */
-@js.native
 trait ExplanationOfBenefitItemAdjudication extends BackboneElement {
   /**
     * Contains extended information for property 'value'.
     */
-  var _value: js.UndefOr[Element] = js.native
+  var _value: js.UndefOr[Element] = js.undefined
   /**
     * Monetary amount
     */
-  var amount: js.UndefOr[Money] = js.native
+  var amount: js.UndefOr[Money] = js.undefined
   /**
     * Adjudication category such as co-pay, eligible, benefit, etc.
     */
-  var category: CodeableConcept = js.native
+  var category: CodeableConcept
   /**
     * Explanation of Adjudication outcome
     */
-  var reason: js.UndefOr[CodeableConcept] = js.native
+  var reason: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Non-monitory value
     */
-  var value: js.UndefOr[decimal] = js.native
+  var value: js.UndefOr[decimal] = js.undefined
 }
 
 object ExplanationOfBenefitItemAdjudication {
   @scala.inline
-  def apply(category: CodeableConcept): ExplanationOfBenefitItemAdjudication = {
+  def apply(
+    category: CodeableConcept,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _value: Element = null,
+    amount: Money = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    reason: CodeableConcept = null,
+    value: js.UndefOr[decimal] = js.undefined
+  ): ExplanationOfBenefitItemAdjudication = {
     val __obj = js.Dynamic.literal(category = category.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_value != null) __obj.updateDynamic("_value")(_value.asInstanceOf[js.Any])
+    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExplanationOfBenefitItemAdjudication]
   }
-  @scala.inline
-  implicit class ExplanationOfBenefitItemAdjudicationOps[Self <: ExplanationOfBenefitItemAdjudication] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_value(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_value: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmount(value: Money): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReason(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

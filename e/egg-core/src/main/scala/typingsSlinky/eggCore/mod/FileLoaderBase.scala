@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileLoaderBase extends js.Object {
   /**
     * attach items to target object. Mapping the directory to properties.
@@ -13,7 +12,7 @@ trait FileLoaderBase extends js.Object {
     * @return {Object} target
     * @since 1.0.0
     */
-  def load(): js.Object = js.native
+  def load(): js.Object
   /**
     * Parse files from given directories, then return an items list, each item contains properties and exports.
     *
@@ -40,7 +39,7 @@ trait FileLoaderBase extends js.Object {
     * @return {Array} items
     * @since 1.0.0
     */
-  def parse(): js.Array[Exports] = js.native
+  def parse(): js.Array[Exports]
 }
 
 object FileLoaderBase {
@@ -49,25 +48,5 @@ object FileLoaderBase {
     val __obj = js.Dynamic.literal(load = js.Any.fromFunction0(load), parse = js.Any.fromFunction0(parse))
     __obj.asInstanceOf[FileLoaderBase]
   }
-  @scala.inline
-  implicit class FileLoaderBaseOps[Self <: FileLoaderBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoad(value: () => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParse(value: () => js.Array[Exports]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

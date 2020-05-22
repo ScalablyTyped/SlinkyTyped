@@ -13,15 +13,14 @@ import scala.scalajs.js.annotation._
   * not form a hierarchy.
   * @since OOo 2.3
   */
-@js.native
 trait XLogger extends js.Object {
   /**
     * specifies which log events are logged or ignored.
     * @see LogLevel
     */
-  var Level: Double = js.native
+  var Level: Double
   /** denotes the name of the logger. */
-  var Name: String = js.native
+  var Name: String
   /**
     * adds the given handler to the list of handlers.
     *
@@ -33,7 +32,7 @@ trait XLogger extends js.Object {
     * set.
     * @param LogHandler the handler to add to the list of handlers. The call is ignored if this parameter is `NULL` .
     */
-  def addLogHandler(LogHandler: XLogHandler): Unit = js.native
+  def addLogHandler(LogHandler: XLogHandler): Unit
   /**
     * determines whether logger instance would produce any output for the given level.
     *
@@ -44,13 +43,13 @@ trait XLogger extends js.Object {
     * @see addLogHandler
     * @see removeLogHandler
     */
-  def isLoggable(Level: Double): Boolean = js.native
+  def isLoggable(Level: Double): Boolean
   /**
     * logs a given message
     * @param Level the log level of this message. If this level is smaller than the logger's {@link Level} attribute, then the call will be ignored.
     * @param Message the message to log
     */
-  def log(Level: Double, Message: String): Unit = js.native
+  def log(Level: Double, Message: String): Unit
   /**
     * logs a given message, detailing the source class and method at which the logged event occurred.
     * @param Level the log level of this message. If this level is smaller than the logger's {@link Level} attribute, then the call will be ignored.
@@ -58,12 +57,12 @@ trait XLogger extends js.Object {
     * @param SourceMethod the source class at which the logged event occurred.
     * @param Message the message to log
     */
-  def logp(Level: Double, SourceClass: String, SourceMethod: String, Message: String): Unit = js.native
+  def logp(Level: Double, SourceClass: String, SourceMethod: String, Message: String): Unit
   /**
     * removes the given handler from the list of handlers.
     * @param LogHandler the handler to remove from the list of handlers. The call is ignored if this parameter is `NULL` , or if the handler has not previousl
     */
-  def removeLogHandler(LogHandler: XLogHandler): Unit = js.native
+  def removeLogHandler(LogHandler: XLogHandler): Unit
 }
 
 object XLogger {
@@ -80,55 +79,5 @@ object XLogger {
     val __obj = js.Dynamic.literal(Level = Level.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], addLogHandler = js.Any.fromFunction1(addLogHandler), isLoggable = js.Any.fromFunction1(isLoggable), log = js.Any.fromFunction2(log), logp = js.Any.fromFunction4(logp), removeLogHandler = js.Any.fromFunction1(removeLogHandler))
     __obj.asInstanceOf[XLogger]
   }
-  @scala.inline
-  implicit class XLoggerOps[Self <: XLogger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddLogHandler(value: XLogHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addLogHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsLoggable(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoggable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLog(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLogp(value: (Double, String, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logp")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveLogHandler(value: XLogHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLogHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

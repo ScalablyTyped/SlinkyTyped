@@ -42,113 +42,26 @@ trait GetRandomPasswordRequest extends js.Object {
 
 object GetRandomPasswordRequest {
   @scala.inline
-  def apply(): GetRandomPasswordRequest = {
+  def apply(
+    ExcludeCharacters: ExcludeCharactersType = null,
+    ExcludeLowercase: js.UndefOr[ExcludeLowercaseType] = js.undefined,
+    ExcludeNumbers: js.UndefOr[ExcludeNumbersType] = js.undefined,
+    ExcludePunctuation: js.UndefOr[ExcludePunctuationType] = js.undefined,
+    ExcludeUppercase: js.UndefOr[ExcludeUppercaseType] = js.undefined,
+    IncludeSpace: js.UndefOr[IncludeSpaceType] = js.undefined,
+    PasswordLength: js.UndefOr[PasswordLengthType] = js.undefined,
+    RequireEachIncludedType: js.UndefOr[RequireEachIncludedTypeType] = js.undefined
+  ): GetRandomPasswordRequest = {
     val __obj = js.Dynamic.literal()
+    if (ExcludeCharacters != null) __obj.updateDynamic("ExcludeCharacters")(ExcludeCharacters.asInstanceOf[js.Any])
+    if (!js.isUndefined(ExcludeLowercase)) __obj.updateDynamic("ExcludeLowercase")(ExcludeLowercase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ExcludeNumbers)) __obj.updateDynamic("ExcludeNumbers")(ExcludeNumbers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ExcludePunctuation)) __obj.updateDynamic("ExcludePunctuation")(ExcludePunctuation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ExcludeUppercase)) __obj.updateDynamic("ExcludeUppercase")(ExcludeUppercase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeSpace)) __obj.updateDynamic("IncludeSpace")(IncludeSpace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PasswordLength)) __obj.updateDynamic("PasswordLength")(PasswordLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequireEachIncludedType)) __obj.updateDynamic("RequireEachIncludedType")(RequireEachIncludedType.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRandomPasswordRequest]
   }
-  @scala.inline
-  implicit class GetRandomPasswordRequestOps[Self <: GetRandomPasswordRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExcludeCharacters(value: ExcludeCharactersType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeCharacters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeCharacters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeLowercase(value: ExcludeLowercaseType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeLowercase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeLowercase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeLowercase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeNumbers(value: ExcludeNumbersType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeNumbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludePunctuation(value: ExcludePunctuationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludePunctuation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludePunctuation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludePunctuation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeUppercase(value: ExcludeUppercaseType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeUppercase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeUppercase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeUppercase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeSpace(value: IncludeSpaceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeSpace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordLength(value: PasswordLengthType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PasswordLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PasswordLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireEachIncludedType(value: RequireEachIncludedTypeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireEachIncludedType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireEachIncludedType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireEachIncludedType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BasicAuthenticator extends Authenticator {
   /**
     * @param {Object} request The request to modify, for the `request` library.
@@ -14,7 +13,7 @@ trait BasicAuthenticator extends Authenticator {
     * @param request
     * @return
     */
-  def authenticateRequest(request: BasicAuthenticatorRequest): BasicAuthenticatorRequest = js.native
+  def authenticateRequest(request: BasicAuthenticatorRequest): BasicAuthenticatorRequest
 }
 
 @JSImport("asana", "auth.BasicAuthenticator")

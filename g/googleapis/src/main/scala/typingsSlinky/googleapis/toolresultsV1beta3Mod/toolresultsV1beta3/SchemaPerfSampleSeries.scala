@@ -37,89 +37,22 @@ trait SchemaPerfSampleSeries extends js.Object {
 
 object SchemaPerfSampleSeries {
   @scala.inline
-  def apply(): SchemaPerfSampleSeries = {
+  def apply(
+    basicPerfSampleSeries: SchemaBasicPerfSampleSeries = null,
+    executionId: String = null,
+    historyId: String = null,
+    projectId: String = null,
+    sampleSeriesId: String = null,
+    stepId: String = null
+  ): SchemaPerfSampleSeries = {
     val __obj = js.Dynamic.literal()
+    if (basicPerfSampleSeries != null) __obj.updateDynamic("basicPerfSampleSeries")(basicPerfSampleSeries.asInstanceOf[js.Any])
+    if (executionId != null) __obj.updateDynamic("executionId")(executionId.asInstanceOf[js.Any])
+    if (historyId != null) __obj.updateDynamic("historyId")(historyId.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (sampleSeriesId != null) __obj.updateDynamic("sampleSeriesId")(sampleSeriesId.asInstanceOf[js.Any])
+    if (stepId != null) __obj.updateDynamic("stepId")(stepId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPerfSampleSeries]
   }
-  @scala.inline
-  implicit class SchemaPerfSampleSeriesOps[Self <: SchemaPerfSampleSeries] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBasicPerfSampleSeries(value: SchemaBasicPerfSampleSeries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicPerfSampleSeries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasicPerfSampleSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicPerfSampleSeries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistoryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("historyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("historyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleSeriesId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSeriesId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleSeriesId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSeriesId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

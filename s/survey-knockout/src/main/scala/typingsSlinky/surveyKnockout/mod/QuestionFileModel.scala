@@ -1,6 +1,7 @@
 package typingsSlinky.surveyKnockout.mod
 
 import org.scalajs.dom.raw.File
+import typingsSlinky.surveyKnockout.anon.Calculations
 import typingsSlinky.surveyKnockout.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -94,6 +95,7 @@ class QuestionFileModel protected () extends Question {
     * The remove file confirmation message.
     */
   def getConfirmRemoveMessage(fileName: String): String = js.native
+  def getPlainData(options: Calculations): js.Any = js.native
   /**
     * Load multiple files programmatically.
     * @param files

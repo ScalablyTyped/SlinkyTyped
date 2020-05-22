@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FontSizeProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal] extends js.Object {
   /**
     * The fontSize utility parses a component's `fontSize` prop and converts it into a CSS font-size declaration.
@@ -15,40 +14,15 @@ trait FontSizeProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal] extends
     * - And array values are converted into responsive values.
     *
     */
-  var fontSize: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
+  var fontSize: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
 }
 
 object FontSizeProps {
   @scala.inline
-  def apply[ThemeType, TVal](): FontSizeProps[ThemeType, TVal] = {
+  def apply[ThemeType, TVal](fontSize: js.UndefOr[Null | (ResponsiveValue[TVal, ThemeType])] = js.undefined): FontSizeProps[ThemeType, TVal] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontSizeProps[ThemeType, TVal]]
   }
-  @scala.inline
-  implicit class FontSizePropsOps[Self[themetype, tval] <: FontSizeProps[themetype, tval], ThemeType, TVal] (val x: Self[ThemeType, TVal]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ThemeType, TVal] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType, TVal]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[ThemeType, TVal]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[ThemeType, TVal]) with Other]
-    @scala.inline
-    def withFontSize(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSizeNull: Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(null)
-        ret
-    }
-  }
-  
 }
 

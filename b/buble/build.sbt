@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "buble"
-version := "0.19-dt-20190312Z-f9888b"
+version := "0.19-dt-20190312Z-d4b76e"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "magic-string" % "0.25.4-120d57",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "magic-string" % "0.25.4-7f3b33",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

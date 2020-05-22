@@ -11,12 +11,11 @@ import scala.scalajs.js.annotation._
   * This interface enables the object to handle numbering rules.
   * @see com.sun.star.text.NumberingRules
   */
-@js.native
 trait XNumberingRulesSupplier extends XInterface {
   /** @returns the collection of "NumberingRules" currently contained in the object. */
-  val NumberingRules: XIndexAccess = js.native
+  val NumberingRules: XIndexAccess
   /** @returns the collection of "NumberingRules" currently contained in the object. */
-  def getNumberingRules(): XIndexAccess = js.native
+  def getNumberingRules(): XIndexAccess
 }
 
 object XNumberingRulesSupplier {
@@ -31,25 +30,5 @@ object XNumberingRulesSupplier {
     val __obj = js.Dynamic.literal(NumberingRules = NumberingRules.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getNumberingRules = js.Any.fromFunction0(getNumberingRules), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XNumberingRulesSupplier]
   }
-  @scala.inline
-  implicit class XNumberingRulesSupplierOps[Self <: XNumberingRulesSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumberingRules(value: XIndexAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberingRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetNumberingRules(value: () => XIndexAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberingRules")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

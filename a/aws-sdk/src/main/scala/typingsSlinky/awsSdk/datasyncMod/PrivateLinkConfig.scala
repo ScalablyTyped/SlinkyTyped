@@ -26,65 +26,18 @@ trait PrivateLinkConfig extends js.Object {
 
 object PrivateLinkConfig {
   @scala.inline
-  def apply(): PrivateLinkConfig = {
+  def apply(
+    PrivateLinkEndpoint: Endpoint = null,
+    SecurityGroupArns: PLSecurityGroupArnList = null,
+    SubnetArns: PLSubnetArnList = null,
+    VpcEndpointId: VpcEndpointId = null
+  ): PrivateLinkConfig = {
     val __obj = js.Dynamic.literal()
+    if (PrivateLinkEndpoint != null) __obj.updateDynamic("PrivateLinkEndpoint")(PrivateLinkEndpoint.asInstanceOf[js.Any])
+    if (SecurityGroupArns != null) __obj.updateDynamic("SecurityGroupArns")(SecurityGroupArns.asInstanceOf[js.Any])
+    if (SubnetArns != null) __obj.updateDynamic("SubnetArns")(SubnetArns.asInstanceOf[js.Any])
+    if (VpcEndpointId != null) __obj.updateDynamic("VpcEndpointId")(VpcEndpointId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrivateLinkConfig]
   }
-  @scala.inline
-  implicit class PrivateLinkConfigOps[Self <: PrivateLinkConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrivateLinkEndpoint(value: Endpoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateLinkEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateLinkEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateLinkEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupArns(value: PLSecurityGroupArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetArns(value: PLSubnetArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcEndpointId(value: VpcEndpointId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcEndpointId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

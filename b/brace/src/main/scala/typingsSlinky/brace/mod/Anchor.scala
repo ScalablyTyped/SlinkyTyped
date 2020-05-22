@@ -5,21 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Anchor extends js.Object {
   /**
     * When called, the `'change'` event listener is removed.
     **/
-  def detach(): Unit = js.native
+  def detach(): Unit
   /**
     * Returns the current document.
     **/
-  def getDocument(): Document = js.native
+  def getDocument(): Document
   /**
     * Returns an object identifying the `row` and `column` position of the current anchor.
     **/
-  def getPosition(): Position = js.native
-  def on(event: String, fn: js.Function1[/* e */ js.Any, _]): Unit = js.native
+  def getPosition(): Position
+  def on(event: String, fn: js.Function1[/* e */ js.Any, _]): Unit
   /**
     * Fires whenever the anchor position changes.
     * Both of these objects have a `row` and `column` property corresponding to the position.
@@ -28,14 +27,14 @@ trait Anchor extends js.Object {
     * - `old`: An object describing the old Anchor position
     * - `value`: An object describing the new Anchor position
     **/
-  def onChange(e: js.Any): Unit = js.native
+  def onChange(e: js.Any): Unit
   /**
     * Sets the anchor position to the specified row and column. If `noClip` is `true`, the position is not clipped.
     * @param row The row index to move the anchor to
     * @param column The column index to move the anchor to
     * @param noClip Identifies if you want the position to be clipped
     **/
-  def setPosition(row: Double, column: Double, noClip: Boolean): Unit = js.native
+  def setPosition(row: Double, column: Double, noClip: Boolean): Unit
 }
 
 @JSImport("brace", "Anchor")

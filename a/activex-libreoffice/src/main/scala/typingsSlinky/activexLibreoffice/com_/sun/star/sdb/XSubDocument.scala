@@ -9,14 +9,13 @@ import scala.scalajs.js.annotation._
   * allows operating on a sub document of an {@link OfficeDatabaseDocument}
   * @since OOo 3.1
   */
-@js.native
 trait XSubDocument extends js.Object {
   /**
     * closes the sub document, if it had previously been opened in either mode
     * @returns `TRUE` if and only if the document could be closed, `FALSE` otherwise, e.g. if the closing has been vetoed by the user.
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs during closing the document
     */
-  def close(): Boolean = js.native
+  def close(): Boolean
   /**
     * opens the sub document
     *
@@ -24,18 +23,18 @@ trait XSubDocument extends js.Object {
     * @returns the sub document, usually an {@link com.sun.star.frame.XModel} , or an {@link com.sun.star.frame.XController} if the sub document does not have a
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs during opening the document
     */
-  def open(): XComponent = js.native
+  def open(): XComponent
   /**
     * opens the sub document in design mode
     * @returns the sub document, usually an {@link com.sun.star.frame.XModel} , or an {@link com.sun.star.frame.XController} if the sub document does not have a
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs during opening the document
     */
-  def openDesign(): XComponent = js.native
+  def openDesign(): XComponent
   /**
     * stores the sub document, if it had previously been opened in either mode
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs during storing the document
     */
-  def store(): Unit = js.native
+  def store(): Unit
 }
 
 object XSubDocument {
@@ -44,37 +43,5 @@ object XSubDocument {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), open = js.Any.fromFunction0(open), openDesign = js.Any.fromFunction0(openDesign), store = js.Any.fromFunction0(store))
     __obj.asInstanceOf[XSubDocument]
   }
-  @scala.inline
-  implicit class XSubDocumentOps[Self <: XSubDocument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOpen(value: () => XComponent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOpenDesign(value: () => XComponent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openDesign")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStore(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

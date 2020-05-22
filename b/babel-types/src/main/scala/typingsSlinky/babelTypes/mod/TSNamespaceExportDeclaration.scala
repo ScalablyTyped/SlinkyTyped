@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSNamespaceExportDeclaration
   extends Node
      with Statement {
-  var id: Identifier_ = js.native
+  var id: Identifier_
   @JSName("type")
-  var type_TSNamespaceExportDeclaration: typingsSlinky.babelTypes.babelTypesStrings.TSNamespaceExportDeclaration = js.native
+  var type_TSNamespaceExportDeclaration: typingsSlinky.babelTypes.babelTypesStrings.TSNamespaceExportDeclaration
 }
 
 @JSImport("babel-types", "TSNamespaceExportDeclaration")

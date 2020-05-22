@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectoryItems
   extends /* name */ StringDictionary[
       String | Buffer | (js.Function0[
@@ -16,8 +15,15 @@ trait DirectoryItems
 
 object DirectoryItems {
   @scala.inline
-  def apply(): DirectoryItems = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[
+      String | Buffer | (js.Function0[
+        typingsSlinky.mockFs.fileMod.^  | typingsSlinky.mockFs.directoryMod.^  | typingsSlinky.mockFs.symlinkMod.^ 
+      ]) | DirectoryItems
+    ] = null
+  ): DirectoryItems = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[DirectoryItems]
   }
 }

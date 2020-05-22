@@ -1,7 +1,6 @@
 package typingsSlinky.ionicCore.componentsMod.LocalJSX
 
 import org.scalajs.dom.raw.CustomEvent
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.mod.ComponentProps
@@ -12,289 +11,110 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IonPopover extends js.Object {
   /**
     * If `true`, the popover will animate.
     */
-  var animated: js.UndefOr[Boolean] = js.native
+  var animated: js.UndefOr[Boolean] = js.undefined
   /**
     * If `true`, the popover will be dismissed when the backdrop is clicked.
     */
-  var backdropDismiss: js.UndefOr[Boolean] = js.native
+  var backdropDismiss: js.UndefOr[Boolean] = js.undefined
   /**
     * The component to display inside of the popover.
     */
-  var component: ComponentRef = js.native
+  var component: ComponentRef
   /**
     * The data to pass to the popover component.
     */
-  var componentProps: js.UndefOr[ComponentProps[Null]] = js.native
+  var componentProps: js.UndefOr[ComponentProps[Null]] = js.undefined
   /**
     * Additional classes to apply for custom CSS. If multiple classes are provided they should be separated by spaces.
     */
-  var cssClass: js.UndefOr[String | js.Array[String]] = js.native
+  var cssClass: js.UndefOr[String | js.Array[String]] = js.undefined
   /**
     * Animation to use when the popover is presented.
     */
-  var enterAnimation: js.UndefOr[AnimationBuilder] = js.native
+  var enterAnimation: js.UndefOr[AnimationBuilder] = js.undefined
   /**
     * The event to pass to the popover animation.
     */
-  var event: js.UndefOr[js.Any] = js.native
+  var event: js.UndefOr[js.Any] = js.undefined
   /**
     * If `true`, the keyboard will be automatically dismissed when the overlay is presented.
     */
-  var keyboardClose: js.UndefOr[Boolean] = js.native
+  var keyboardClose: js.UndefOr[Boolean] = js.undefined
   /**
     * Animation to use when the popover is dismissed.
     */
-  var leaveAnimation: js.UndefOr[AnimationBuilder] = js.native
+  var leaveAnimation: js.UndefOr[AnimationBuilder] = js.undefined
   /**
     * The mode determines which platform styles to use.
     */
-  var mode: js.UndefOr[ios | md] = js.native
+  var mode: js.UndefOr[ios | md] = js.undefined
   /**
     * Emitted after the popover has dismissed.
     */
-  var onIonPopoverDidDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonPopoverDidDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted after the popover has presented.
     */
-  var onIonPopoverDidPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonPopoverDidPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted before the popover has dismissed.
     */
-  var onIonPopoverWillDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonPopoverWillDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted before the popover has presented.
     */
-  var onIonPopoverWillPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonPopoverWillPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * If `true`, a backdrop will be displayed behind the popover.
     */
-  var showBackdrop: js.UndefOr[Boolean] = js.native
+  var showBackdrop: js.UndefOr[Boolean] = js.undefined
   /**
     * If `true`, the popover will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).
     */
-  var translucent: js.UndefOr[Boolean] = js.native
+  var translucent: js.UndefOr[Boolean] = js.undefined
 }
 
 object IonPopover {
   @scala.inline
-  def apply(): IonPopover = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    animated: js.UndefOr[Boolean] = js.undefined,
+    backdropDismiss: js.UndefOr[Boolean] = js.undefined,
+    component: ComponentRef = null,
+    componentProps: ComponentProps[Null] = null,
+    cssClass: String | js.Array[String] = null,
+    enterAnimation: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation] = null,
+    event: js.Any = null,
+    keyboardClose: js.UndefOr[Boolean] = js.undefined,
+    leaveAnimation: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation] = null,
+    mode: ios | md = null,
+    onIonPopoverDidDismiss: /* event */ CustomEvent => Unit = null,
+    onIonPopoverDidPresent: /* event */ CustomEvent => Unit = null,
+    onIonPopoverWillDismiss: /* event */ CustomEvent => Unit = null,
+    onIonPopoverWillPresent: /* event */ CustomEvent => Unit = null,
+    showBackdrop: js.UndefOr[Boolean] = js.undefined,
+    translucent: js.UndefOr[Boolean] = js.undefined
+  ): IonPopover = {
+    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
+    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(backdropDismiss)) __obj.updateDynamic("backdropDismiss")(backdropDismiss.get.asInstanceOf[js.Any])
+    if (componentProps != null) __obj.updateDynamic("componentProps")(componentProps.asInstanceOf[js.Any])
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (enterAnimation != null) __obj.updateDynamic("enterAnimation")(js.Any.fromFunction3(enterAnimation))
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboardClose)) __obj.updateDynamic("keyboardClose")(keyboardClose.get.asInstanceOf[js.Any])
+    if (leaveAnimation != null) __obj.updateDynamic("leaveAnimation")(js.Any.fromFunction3(leaveAnimation))
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (onIonPopoverDidDismiss != null) __obj.updateDynamic("onIonPopoverDidDismiss")(js.Any.fromFunction1(onIonPopoverDidDismiss))
+    if (onIonPopoverDidPresent != null) __obj.updateDynamic("onIonPopoverDidPresent")(js.Any.fromFunction1(onIonPopoverDidPresent))
+    if (onIonPopoverWillDismiss != null) __obj.updateDynamic("onIonPopoverWillDismiss")(js.Any.fromFunction1(onIonPopoverWillDismiss))
+    if (onIonPopoverWillPresent != null) __obj.updateDynamic("onIonPopoverWillPresent")(js.Any.fromFunction1(onIonPopoverWillPresent))
+    if (!js.isUndefined(showBackdrop)) __obj.updateDynamic("showBackdrop")(showBackdrop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(translucent)) __obj.updateDynamic("translucent")(translucent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonPopover]
   }
-  @scala.inline
-  implicit class IonPopoverOps[Self <: IonPopover] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackdropDismiss(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropDismiss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackdropDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponent(value: ComponentRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(null)
-        ret
-    }
-    @scala.inline
-    def withComponentProps(value: ComponentProps[Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterAnimation(
-      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutEnterAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeaveAnimation(
-      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveAnimation")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutLeaveAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ios | md): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonPopoverDidDismiss(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonPopoverDidDismiss")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonPopoverDidDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonPopoverDidDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonPopoverDidPresent(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonPopoverDidPresent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonPopoverDidPresent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonPopoverDidPresent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonPopoverWillDismiss(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonPopoverWillDismiss")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonPopoverWillDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonPopoverWillDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonPopoverWillPresent(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonPopoverWillPresent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonPopoverWillPresent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonPopoverWillPresent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowBackdrop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBackdrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowBackdrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBackdrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslucent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translucent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslucent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translucent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

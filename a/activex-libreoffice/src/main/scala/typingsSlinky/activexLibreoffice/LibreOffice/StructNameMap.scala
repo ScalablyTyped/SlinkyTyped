@@ -389,784 +389,783 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StructNameMap extends js.Object {
   @JSName("com.sun.star.accessibility.AccessibleEventObject")
-  var comDotsunDotstarDotaccessibilityDotAccessibleEventObject: AccessibleEventObject = js.native
+  var comDotsunDotstarDotaccessibilityDotAccessibleEventObject: AccessibleEventObject
   @JSName("com.sun.star.accessibility.AccessibleRelation")
-  var comDotsunDotstarDotaccessibilityDotAccessibleRelation: AccessibleRelation = js.native
+  var comDotsunDotstarDotaccessibilityDotAccessibleRelation: AccessibleRelation
   @JSName("com.sun.star.accessibility.AccessibleTableModelChange")
-  var comDotsunDotstarDotaccessibilityDotAccessibleTableModelChange: AccessibleTableModelChange = js.native
+  var comDotsunDotstarDotaccessibilityDotAccessibleTableModelChange: AccessibleTableModelChange
   @JSName("com.sun.star.accessibility.TextSegment")
-  var comDotsunDotstarDotaccessibilityDotTextSegment: TextSegment = js.native
+  var comDotsunDotstarDotaccessibilityDotTextSegment: TextSegment
   @JSName("com.sun.star.animations.Event")
-  var comDotsunDotstarDotanimationsDotEvent: Event = js.native
+  var comDotsunDotstarDotanimationsDotEvent: Event
   @JSName("com.sun.star.animations.TargetProperties")
-  var comDotsunDotstarDotanimationsDotTargetProperties: TargetProperties = js.native
+  var comDotsunDotstarDotanimationsDotTargetProperties: TargetProperties
   @JSName("com.sun.star.animations.TimeFilterPair")
-  var comDotsunDotstarDotanimationsDotTimeFilterPair: TimeFilterPair = js.native
+  var comDotsunDotstarDotanimationsDotTimeFilterPair: TimeFilterPair
   @JSName("com.sun.star.animations.ValuePair")
-  var comDotsunDotstarDotanimationsDotValuePair: ValuePair = js.native
+  var comDotsunDotstarDotanimationsDotValuePair: ValuePair
   @JSName("com.sun.star.awt.ActionEvent")
-  var comDotsunDotstarDotawtDotActionEvent: ActionEvent = js.native
+  var comDotsunDotstarDotawtDotActionEvent: ActionEvent
   @JSName("com.sun.star.awt.AdjustmentEvent")
-  var comDotsunDotstarDotawtDotAdjustmentEvent: AdjustmentEvent = js.native
+  var comDotsunDotstarDotawtDotAdjustmentEvent: AdjustmentEvent
   @JSName("com.sun.star.awt.DeviceInfo")
-  var comDotsunDotstarDotawtDotDeviceInfo: DeviceInfo = js.native
+  var comDotsunDotstarDotawtDotDeviceInfo: DeviceInfo
   @JSName("com.sun.star.awt.DockingData")
-  var comDotsunDotstarDotawtDotDockingData: DockingData = js.native
+  var comDotsunDotstarDotawtDotDockingData: DockingData
   @JSName("com.sun.star.awt.DockingEvent")
-  var comDotsunDotstarDotawtDotDockingEvent: DockingEvent = js.native
+  var comDotsunDotstarDotawtDotDockingEvent: DockingEvent
   @JSName("com.sun.star.awt.EndDockingEvent")
-  var comDotsunDotstarDotawtDotEndDockingEvent: EndDockingEvent = js.native
+  var comDotsunDotstarDotawtDotEndDockingEvent: EndDockingEvent
   @JSName("com.sun.star.awt.EndPopupModeEvent")
-  var comDotsunDotstarDotawtDotEndPopupModeEvent: EndPopupModeEvent = js.native
+  var comDotsunDotstarDotawtDotEndPopupModeEvent: EndPopupModeEvent
   @JSName("com.sun.star.awt.EnhancedMouseEvent")
-  var comDotsunDotstarDotawtDotEnhancedMouseEvent: EnhancedMouseEvent = js.native
+  var comDotsunDotstarDotawtDotEnhancedMouseEvent: EnhancedMouseEvent
   @JSName("com.sun.star.awt.FocusEvent")
-  var comDotsunDotstarDotawtDotFocusEvent: FocusEvent = js.native
+  var comDotsunDotstarDotawtDotFocusEvent: FocusEvent
   @JSName("com.sun.star.awt.FontDescriptor")
-  var comDotsunDotstarDotawtDotFontDescriptor: FontDescriptor = js.native
+  var comDotsunDotstarDotawtDotFontDescriptor: FontDescriptor
   @JSName("com.sun.star.awt.Gradient")
-  var comDotsunDotstarDotawtDotGradient: Gradient = js.native
+  var comDotsunDotstarDotawtDotGradient: Gradient
   @JSName("com.sun.star.awt.InputEvent")
-  var comDotsunDotstarDotawtDotInputEvent: InputEvent = js.native
+  var comDotsunDotstarDotawtDotInputEvent: InputEvent
   @JSName("com.sun.star.awt.ItemEvent")
-  var comDotsunDotstarDotawtDotItemEvent: ItemEvent = js.native
+  var comDotsunDotstarDotawtDotItemEvent: ItemEvent
   @JSName("com.sun.star.awt.ItemListEvent")
-  var comDotsunDotstarDotawtDotItemListEvent: ItemListEvent = js.native
+  var comDotsunDotstarDotawtDotItemListEvent: ItemListEvent
   @JSName("com.sun.star.awt.KeyEvent")
-  var comDotsunDotstarDotawtDotKeyEvent: KeyEvent = js.native
+  var comDotsunDotstarDotawtDotKeyEvent: KeyEvent
   @JSName("com.sun.star.awt.KeyStroke")
-  var comDotsunDotstarDotawtDotKeyStroke: KeyStroke = js.native
+  var comDotsunDotstarDotawtDotKeyStroke: KeyStroke
   @JSName("com.sun.star.awt.MenuEvent")
-  var comDotsunDotstarDotawtDotMenuEvent: MenuEvent = js.native
+  var comDotsunDotstarDotawtDotMenuEvent: MenuEvent
   @JSName("com.sun.star.awt.MouseEvent")
-  var comDotsunDotstarDotawtDotMouseEvent: MouseEvent = js.native
+  var comDotsunDotstarDotawtDotMouseEvent: MouseEvent
   @JSName("com.sun.star.awt.PaintEvent")
-  var comDotsunDotstarDotawtDotPaintEvent: PaintEvent = js.native
+  var comDotsunDotstarDotawtDotPaintEvent: PaintEvent
   @JSName("com.sun.star.awt.Point")
-  var comDotsunDotstarDotawtDotPoint: Point = js.native
+  var comDotsunDotstarDotawtDotPoint: Point
   @JSName("com.sun.star.awt.Rectangle")
-  var comDotsunDotstarDotawtDotRectangle: Rectangle = js.native
+  var comDotsunDotstarDotawtDotRectangle: Rectangle
   @JSName("com.sun.star.awt.Selection")
-  var comDotsunDotstarDotawtDotSelection: Selection = js.native
+  var comDotsunDotstarDotawtDotSelection: Selection
   @JSName("com.sun.star.awt.SimpleFontMetric")
-  var comDotsunDotstarDotawtDotSimpleFontMetric: SimpleFontMetric = js.native
+  var comDotsunDotstarDotawtDotSimpleFontMetric: SimpleFontMetric
   @JSName("com.sun.star.awt.Size")
-  var comDotsunDotstarDotawtDotSize: Size = js.native
+  var comDotsunDotstarDotawtDotSize: Size
   @JSName("com.sun.star.awt.SpinEvent")
-  var comDotsunDotstarDotawtDotSpinEvent: SpinEvent = js.native
+  var comDotsunDotstarDotawtDotSpinEvent: SpinEvent
   @JSName("com.sun.star.awt.SystemDependentXWindow")
-  var comDotsunDotstarDotawtDotSystemDependentXWindow: SystemDependentXWindow = js.native
+  var comDotsunDotstarDotawtDotSystemDependentXWindow: SystemDependentXWindow
   @JSName("com.sun.star.awt.TextEvent")
-  var comDotsunDotstarDotawtDotTextEvent: TextEvent = js.native
+  var comDotsunDotstarDotawtDotTextEvent: TextEvent
   @JSName("com.sun.star.awt.VclContainerEvent")
-  var comDotsunDotstarDotawtDotVclContainerEvent: VclContainerEvent = js.native
+  var comDotsunDotstarDotawtDotVclContainerEvent: VclContainerEvent
   @JSName("com.sun.star.awt.WindowDescriptor")
-  var comDotsunDotstarDotawtDotWindowDescriptor: WindowDescriptor = js.native
+  var comDotsunDotstarDotawtDotWindowDescriptor: WindowDescriptor
   @JSName("com.sun.star.awt.WindowEvent")
-  var comDotsunDotstarDotawtDotWindowEvent: WindowEvent = js.native
+  var comDotsunDotstarDotawtDotWindowEvent: WindowEvent
   @JSName("com.sun.star.awt.grid.GridColumnEvent")
-  var comDotsunDotstarDotawtDotgridDotGridColumnEvent: GridColumnEvent = js.native
+  var comDotsunDotstarDotawtDotgridDotGridColumnEvent: GridColumnEvent
   @JSName("com.sun.star.awt.grid.GridDataEvent")
-  var comDotsunDotstarDotawtDotgridDotGridDataEvent: GridDataEvent = js.native
+  var comDotsunDotstarDotawtDotgridDotGridDataEvent: GridDataEvent
   @JSName("com.sun.star.awt.grid.GridSelectionEvent")
-  var comDotsunDotstarDotawtDotgridDotGridSelectionEvent: GridSelectionEvent = js.native
+  var comDotsunDotstarDotawtDotgridDotGridSelectionEvent: GridSelectionEvent
   @JSName("com.sun.star.awt.tab.TabPageActivatedEvent")
-  var comDotsunDotstarDotawtDottabDotTabPageActivatedEvent: TabPageActivatedEvent = js.native
+  var comDotsunDotstarDotawtDottabDotTabPageActivatedEvent: TabPageActivatedEvent
   @JSName("com.sun.star.awt.tree.TreeDataModelEvent")
-  var comDotsunDotstarDotawtDottreeDotTreeDataModelEvent: TreeDataModelEvent = js.native
+  var comDotsunDotstarDotawtDottreeDotTreeDataModelEvent: TreeDataModelEvent
   @JSName("com.sun.star.awt.tree.TreeExpansionEvent")
-  var comDotsunDotstarDotawtDottreeDotTreeExpansionEvent: TreeExpansionEvent = js.native
+  var comDotsunDotstarDotawtDottreeDotTreeExpansionEvent: TreeExpansionEvent
   @JSName("com.sun.star.beans.GetDirectPropertyTolerantResult")
-  var comDotsunDotstarDotbeansDotGetDirectPropertyTolerantResult: GetDirectPropertyTolerantResult = js.native
+  var comDotsunDotstarDotbeansDotGetDirectPropertyTolerantResult: GetDirectPropertyTolerantResult
   @JSName("com.sun.star.beans.GetPropertyTolerantResult")
-  var comDotsunDotstarDotbeansDotGetPropertyTolerantResult: GetPropertyTolerantResult = js.native
+  var comDotsunDotstarDotbeansDotGetPropertyTolerantResult: GetPropertyTolerantResult
   @JSName("com.sun.star.beans.NamedValue")
-  var comDotsunDotstarDotbeansDotNamedValue: NamedValue = js.native
+  var comDotsunDotstarDotbeansDotNamedValue: NamedValue
   @JSName("com.sun.star.beans.Property")
-  var comDotsunDotstarDotbeansDotProperty: Property = js.native
+  var comDotsunDotstarDotbeansDotProperty: Property
   @JSName("com.sun.star.beans.PropertyChangeEvent")
-  var comDotsunDotstarDotbeansDotPropertyChangeEvent: PropertyChangeEvent = js.native
+  var comDotsunDotstarDotbeansDotPropertyChangeEvent: PropertyChangeEvent
   @JSName("com.sun.star.beans.PropertySetInfoChangeEvent")
-  var comDotsunDotstarDotbeansDotPropertySetInfoChangeEvent: PropertySetInfoChangeEvent = js.native
+  var comDotsunDotstarDotbeansDotPropertySetInfoChangeEvent: PropertySetInfoChangeEvent
   @JSName("com.sun.star.beans.PropertyStateChangeEvent")
-  var comDotsunDotstarDotbeansDotPropertyStateChangeEvent: PropertyStateChangeEvent = js.native
+  var comDotsunDotstarDotbeansDotPropertyStateChangeEvent: PropertyStateChangeEvent
   @JSName("com.sun.star.beans.PropertyValue")
-  var comDotsunDotstarDotbeansDotPropertyValue: PropertyValue = js.native
+  var comDotsunDotstarDotbeansDotPropertyValue: PropertyValue
   @JSName("com.sun.star.beans.SetPropertyTolerantFailed")
-  var comDotsunDotstarDotbeansDotSetPropertyTolerantFailed: SetPropertyTolerantFailed = js.native
+  var comDotsunDotstarDotbeansDotSetPropertyTolerantFailed: SetPropertyTolerantFailed
   @JSName("com.sun.star.beans.StringPair")
-  var comDotsunDotstarDotbeansDotStringPair: StringPair = js.native
+  var comDotsunDotstarDotbeansDotStringPair: StringPair
   @JSName("com.sun.star.bridge.ProtocolProperty")
-  var comDotsunDotstarDotbridgeDotProtocolProperty: ProtocolProperty = js.native
+  var comDotsunDotstarDotbridgeDotProtocolProperty: ProtocolProperty
   @JSName("com.sun.star.bridge.oleautomation.Currency")
-  var comDotsunDotstarDotbridgeDotoleautomationDotCurrency: Currency = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotCurrency: Currency
   @JSName("com.sun.star.bridge.oleautomation.Date")
-  var comDotsunDotstarDotbridgeDotoleautomationDotDate: Date = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotDate: Date
   @JSName("com.sun.star.bridge.oleautomation.Decimal")
-  var comDotsunDotstarDotbridgeDotoleautomationDotDecimal: Decimal = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotDecimal: Decimal
   @JSName("com.sun.star.bridge.oleautomation.NamedArgument")
-  var comDotsunDotstarDotbridgeDotoleautomationDotNamedArgument: NamedArgument = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotNamedArgument: NamedArgument
   @JSName("com.sun.star.bridge.oleautomation.PropertyPutArgument")
-  var comDotsunDotstarDotbridgeDotoleautomationDotPropertyPutArgument: PropertyPutArgument = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotPropertyPutArgument: PropertyPutArgument
   @JSName("com.sun.star.bridge.oleautomation.SCode")
-  var comDotsunDotstarDotbridgeDotoleautomationDotSCode: SCode = js.native
+  var comDotsunDotstarDotbridgeDotoleautomationDotSCode: SCode
   @JSName("com.sun.star.chart2.DataPointLabel")
-  var comDotsunDotstarDotchart2DotDataPointLabel: DataPointLabel = js.native
+  var comDotsunDotstarDotchart2DotDataPointLabel: DataPointLabel
   @JSName("com.sun.star.chart2.FillBitmap")
-  var comDotsunDotstarDotchart2DotFillBitmap: FillBitmap = js.native
+  var comDotsunDotstarDotchart2DotFillBitmap: FillBitmap
   @JSName("com.sun.star.chart2.IncrementData")
-  var comDotsunDotstarDotchart2DotIncrementData: IncrementData = js.native
+  var comDotsunDotstarDotchart2DotIncrementData: IncrementData
   @JSName("com.sun.star.chart2.InterpretedData")
-  var comDotsunDotstarDotchart2DotInterpretedData: InterpretedData = js.native
+  var comDotsunDotstarDotchart2DotInterpretedData: InterpretedData
   @JSName("com.sun.star.chart2.LightSource")
-  var comDotsunDotstarDotchart2DotLightSource: LightSource = js.native
+  var comDotsunDotstarDotchart2DotLightSource: LightSource
   @JSName("com.sun.star.chart2.RelativePosition")
-  var comDotsunDotstarDotchart2DotRelativePosition: RelativePosition = js.native
+  var comDotsunDotstarDotchart2DotRelativePosition: RelativePosition
   @JSName("com.sun.star.chart2.RelativeSize")
-  var comDotsunDotstarDotchart2DotRelativeSize: RelativeSize = js.native
+  var comDotsunDotstarDotchart2DotRelativeSize: RelativeSize
   @JSName("com.sun.star.chart2.ScaleData")
-  var comDotsunDotstarDotchart2DotScaleData: ScaleData = js.native
+  var comDotsunDotstarDotchart2DotScaleData: ScaleData
   @JSName("com.sun.star.chart2.SubIncrement")
-  var comDotsunDotstarDotchart2DotSubIncrement: SubIncrement = js.native
+  var comDotsunDotstarDotchart2DotSubIncrement: SubIncrement
   @JSName("com.sun.star.chart2.Symbol")
-  var comDotsunDotstarDotchart2DotSymbol: Symbol = js.native
+  var comDotsunDotstarDotchart2DotSymbol: Symbol
   @JSName("com.sun.star.chart2.data.HighlightedRange")
-  var comDotsunDotstarDotchart2DotdataDotHighlightedRange: HighlightedRange = js.native
+  var comDotsunDotstarDotchart2DotdataDotHighlightedRange: HighlightedRange
   @JSName("com.sun.star.chart.ChartDataChangeEvent")
-  var comDotsunDotstarDotchartDotChartDataChangeEvent: ChartDataChangeEvent = js.native
+  var comDotsunDotstarDotchartDotChartDataChangeEvent: ChartDataChangeEvent
   @JSName("com.sun.star.chart.ChartDataRow")
-  var comDotsunDotstarDotchartDotChartDataRow: ChartDataRow = js.native
+  var comDotsunDotstarDotchartDotChartDataRow: ChartDataRow
   @JSName("com.sun.star.chart.ChartDataValue")
-  var comDotsunDotstarDotchartDotChartDataValue: ChartDataValue = js.native
+  var comDotsunDotstarDotchartDotChartDataValue: ChartDataValue
   @JSName("com.sun.star.chart.ChartSeriesAddress")
-  var comDotsunDotstarDotchartDotChartSeriesAddress: ChartSeriesAddress = js.native
+  var comDotsunDotstarDotchartDotChartSeriesAddress: ChartSeriesAddress
   @JSName("com.sun.star.chart.TimeIncrement")
-  var comDotsunDotstarDotchartDotTimeIncrement: TimeIncrement = js.native
+  var comDotsunDotstarDotchartDotTimeIncrement: TimeIncrement
   @JSName("com.sun.star.chart.TimeInterval")
-  var comDotsunDotstarDotchartDotTimeInterval: TimeInterval = js.native
+  var comDotsunDotstarDotchartDotTimeInterval: TimeInterval
   @JSName("com.sun.star.configuration.backend.ComponentChangeEvent")
-  var comDotsunDotstarDotconfigurationDotbackendDotComponentChangeEvent: ComponentChangeEvent = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotComponentChangeEvent: ComponentChangeEvent
   @JSName("com.sun.star.configuration.backend.PropertyInfo")
-  var comDotsunDotstarDotconfigurationDotbackendDotPropertyInfo: PropertyInfo = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotPropertyInfo: PropertyInfo
   @JSName("com.sun.star.configuration.backend.TemplateIdentifier")
-  var comDotsunDotstarDotconfigurationDotbackendDotTemplateIdentifier: TemplateIdentifier = js.native
+  var comDotsunDotstarDotconfigurationDotbackendDotTemplateIdentifier: TemplateIdentifier
   @JSName("com.sun.star.connection.SocketPermission")
-  var comDotsunDotstarDotconnectionDotSocketPermission: SocketPermission = js.native
+  var comDotsunDotstarDotconnectionDotSocketPermission: SocketPermission
   @JSName("com.sun.star.container.ContainerEvent")
-  var comDotsunDotstarDotcontainerDotContainerEvent: ContainerEvent = js.native
+  var comDotsunDotstarDotcontainerDotContainerEvent: ContainerEvent
   @JSName("com.sun.star.datatransfer.DataFlavor")
-  var comDotsunDotstarDotdatatransferDotDataFlavor: DataFlavor = js.native
+  var comDotsunDotstarDotdatatransferDotDataFlavor: DataFlavor
   @JSName("com.sun.star.datatransfer.clipboard.ClipboardEvent")
-  var comDotsunDotstarDotdatatransferDotclipboardDotClipboardEvent: ClipboardEvent = js.native
+  var comDotsunDotstarDotdatatransferDotclipboardDotClipboardEvent: ClipboardEvent
   @JSName("com.sun.star.datatransfer.dnd.DragGestureEvent")
-  var comDotsunDotstarDotdatatransferDotdndDotDragGestureEvent: DragGestureEvent = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotDragGestureEvent: DragGestureEvent
   @JSName("com.sun.star.datatransfer.dnd.DragSourceDragEvent")
-  var comDotsunDotstarDotdatatransferDotdndDotDragSourceDragEvent: DragSourceDragEvent = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotDragSourceDragEvent: DragSourceDragEvent
   @JSName("com.sun.star.datatransfer.dnd.DragSourceDropEvent")
-  var comDotsunDotstarDotdatatransferDotdndDotDragSourceDropEvent: DragSourceDropEvent = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotDragSourceDropEvent: DragSourceDropEvent
   @JSName("com.sun.star.datatransfer.dnd.DragSourceEvent")
-  var comDotsunDotstarDotdatatransferDotdndDotDragSourceEvent: DragSourceEvent = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotDragSourceEvent: DragSourceEvent
   @JSName("com.sun.star.datatransfer.dnd.DropTargetDragEnterEvent")
-  var comDotsunDotstarDotdatatransferDotdndDotDropTargetDragEnterEvent: DropTargetDragEnterEvent = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotDropTargetDragEnterEvent: DropTargetDragEnterEvent
   @JSName("com.sun.star.datatransfer.dnd.DropTargetDragEvent")
-  var comDotsunDotstarDotdatatransferDotdndDotDropTargetDragEvent: DropTargetDragEvent = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotDropTargetDragEvent: DropTargetDragEvent
   @JSName("com.sun.star.datatransfer.dnd.DropTargetDropEvent")
-  var comDotsunDotstarDotdatatransferDotdndDotDropTargetDropEvent: DropTargetDropEvent = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotDropTargetDropEvent: DropTargetDropEvent
   @JSName("com.sun.star.datatransfer.dnd.DropTargetEvent")
-  var comDotsunDotstarDotdatatransferDotdndDotDropTargetEvent: DropTargetEvent = js.native
+  var comDotsunDotstarDotdatatransferDotdndDotDropTargetEvent: DropTargetEvent
   @JSName("com.sun.star.deployment.UpdateInformationEntry")
-  var comDotsunDotstarDotdeploymentDotUpdateInformationEntry: UpdateInformationEntry = js.native
+  var comDotsunDotstarDotdeploymentDotUpdateInformationEntry: UpdateInformationEntry
   @JSName("com.sun.star.document.CmisProperty")
-  var comDotsunDotstarDotdocumentDotCmisProperty: CmisProperty = js.native
+  var comDotsunDotstarDotdocumentDotCmisProperty: CmisProperty
   @JSName("com.sun.star.document.CmisVersion")
-  var comDotsunDotstarDotdocumentDotCmisVersion: CmisVersion = js.native
+  var comDotsunDotstarDotdocumentDotCmisVersion: CmisVersion
   @JSName("com.sun.star.document.DocumentEvent")
-  var comDotsunDotstarDotdocumentDotDocumentEvent: DocumentEvent = js.native
+  var comDotsunDotstarDotdocumentDotDocumentEvent: DocumentEvent
   @JSName("com.sun.star.document.EventObject")
-  var comDotsunDotstarDotdocumentDotEventObject: EventObject = js.native
+  var comDotsunDotstarDotdocumentDotEventObject: EventObject
   @JSName("com.sun.star.document.UndoManagerEvent")
-  var comDotsunDotstarDotdocumentDotUndoManagerEvent: UndoManagerEvent = js.native
+  var comDotsunDotstarDotdocumentDotUndoManagerEvent: UndoManagerEvent
   @JSName("com.sun.star.drawing.BezierPoint")
-  var comDotsunDotstarDotdrawingDotBezierPoint: BezierPoint = js.native
+  var comDotsunDotstarDotdrawingDotBezierPoint: BezierPoint
   @JSName("com.sun.star.drawing.BoundVolume")
-  var comDotsunDotstarDotdrawingDotBoundVolume: BoundVolume = js.native
+  var comDotsunDotstarDotdrawingDotBoundVolume: BoundVolume
   @JSName("com.sun.star.drawing.CameraGeometry")
-  var comDotsunDotstarDotdrawingDotCameraGeometry: CameraGeometry = js.native
+  var comDotsunDotstarDotdrawingDotCameraGeometry: CameraGeometry
   @JSName("com.sun.star.drawing.Direction3D")
-  var comDotsunDotstarDotdrawingDotDirection3D: Direction3D = js.native
+  var comDotsunDotstarDotdrawingDotDirection3D: Direction3D
   @JSName("com.sun.star.drawing.EnhancedCustomShapeAdjustmentValue")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeAdjustmentValue: EnhancedCustomShapeAdjustmentValue = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeAdjustmentValue: EnhancedCustomShapeAdjustmentValue
   @JSName("com.sun.star.drawing.EnhancedCustomShapeParameter")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeParameter: EnhancedCustomShapeParameter = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeParameter: EnhancedCustomShapeParameter
   @JSName("com.sun.star.drawing.EnhancedCustomShapeParameterPair")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeParameterPair: EnhancedCustomShapeParameterPair = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeParameterPair: EnhancedCustomShapeParameterPair
   @JSName("com.sun.star.drawing.EnhancedCustomShapeSegment")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeSegment: EnhancedCustomShapeSegment = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeSegment: EnhancedCustomShapeSegment
   @JSName("com.sun.star.drawing.EnhancedCustomShapeTextFrame")
-  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeTextFrame: EnhancedCustomShapeTextFrame = js.native
+  var comDotsunDotstarDotdrawingDotEnhancedCustomShapeTextFrame: EnhancedCustomShapeTextFrame
   @JSName("com.sun.star.drawing.GluePoint")
-  var comDotsunDotstarDotdrawingDotGluePoint: GluePoint = js.native
+  var comDotsunDotstarDotdrawingDotGluePoint: GluePoint
   @JSName("com.sun.star.drawing.GluePoint2")
-  var comDotsunDotstarDotdrawingDotGluePoint2: GluePoint2 = js.native
+  var comDotsunDotstarDotdrawingDotGluePoint2: GluePoint2
   @JSName("com.sun.star.drawing.Hatch")
-  var comDotsunDotstarDotdrawingDotHatch: Hatch = js.native
+  var comDotsunDotstarDotdrawingDotHatch: Hatch
   @JSName("com.sun.star.drawing.HomogenMatrix")
-  var comDotsunDotstarDotdrawingDotHomogenMatrix: HomogenMatrix = js.native
+  var comDotsunDotstarDotdrawingDotHomogenMatrix: HomogenMatrix
   @JSName("com.sun.star.drawing.HomogenMatrix3")
-  var comDotsunDotstarDotdrawingDotHomogenMatrix3: HomogenMatrix3 = js.native
+  var comDotsunDotstarDotdrawingDotHomogenMatrix3: HomogenMatrix3
   @JSName("com.sun.star.drawing.HomogenMatrix4")
-  var comDotsunDotstarDotdrawingDotHomogenMatrix4: HomogenMatrix4 = js.native
+  var comDotsunDotstarDotdrawingDotHomogenMatrix4: HomogenMatrix4
   @JSName("com.sun.star.drawing.HomogenMatrixLine")
-  var comDotsunDotstarDotdrawingDotHomogenMatrixLine: HomogenMatrixLine = js.native
+  var comDotsunDotstarDotdrawingDotHomogenMatrixLine: HomogenMatrixLine
   @JSName("com.sun.star.drawing.HomogenMatrixLine3")
-  var comDotsunDotstarDotdrawingDotHomogenMatrixLine3: HomogenMatrixLine3 = js.native
+  var comDotsunDotstarDotdrawingDotHomogenMatrixLine3: HomogenMatrixLine3
   @JSName("com.sun.star.drawing.HomogenMatrixLine4")
-  var comDotsunDotstarDotdrawingDotHomogenMatrixLine4: HomogenMatrixLine4 = js.native
+  var comDotsunDotstarDotdrawingDotHomogenMatrixLine4: HomogenMatrixLine4
   @JSName("com.sun.star.drawing.LineDash")
-  var comDotsunDotstarDotdrawingDotLineDash: LineDash = js.native
+  var comDotsunDotstarDotdrawingDotLineDash: LineDash
   @JSName("com.sun.star.drawing.PolyPolygonBezierCoords")
-  var comDotsunDotstarDotdrawingDotPolyPolygonBezierCoords: PolyPolygonBezierCoords = js.native
+  var comDotsunDotstarDotdrawingDotPolyPolygonBezierCoords: PolyPolygonBezierCoords
   @JSName("com.sun.star.drawing.PolyPolygonShape3D")
-  var comDotsunDotstarDotdrawingDotPolyPolygonShape3D: PolyPolygonShape3D = js.native
+  var comDotsunDotstarDotdrawingDotPolyPolygonShape3D: PolyPolygonShape3D
   @JSName("com.sun.star.drawing.Position3D")
-  var comDotsunDotstarDotdrawingDotPosition3D: Position3D = js.native
+  var comDotsunDotstarDotdrawingDotPosition3D: Position3D
   @JSName("com.sun.star.drawing.framework.ConfigurationChangeEvent")
-  var comDotsunDotstarDotdrawingDotframeworkDotConfigurationChangeEvent: ConfigurationChangeEvent = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotConfigurationChangeEvent: ConfigurationChangeEvent
   @JSName("com.sun.star.drawing.framework.TabBarButton")
-  var comDotsunDotstarDotdrawingDotframeworkDotTabBarButton: TabBarButton = js.native
+  var comDotsunDotstarDotdrawingDotframeworkDotTabBarButton: TabBarButton
   @JSName("com.sun.star.embed.InsertedObjectInfo")
-  var comDotsunDotstarDotembedDotInsertedObjectInfo: InsertedObjectInfo = js.native
+  var comDotsunDotstarDotembedDotInsertedObjectInfo: InsertedObjectInfo
   @JSName("com.sun.star.embed.VerbDescriptor")
-  var comDotsunDotstarDotembedDotVerbDescriptor: VerbDescriptor = js.native
+  var comDotsunDotstarDotembedDotVerbDescriptor: VerbDescriptor
   @JSName("com.sun.star.embed.VisualRepresentation")
-  var comDotsunDotstarDotembedDotVisualRepresentation: VisualRepresentation = js.native
+  var comDotsunDotstarDotembedDotVisualRepresentation: VisualRepresentation
   @JSName("com.sun.star.form.DatabaseDeleteEvent")
-  var comDotsunDotstarDotformDotDatabaseDeleteEvent: DatabaseDeleteEvent = js.native
+  var comDotsunDotstarDotformDotDatabaseDeleteEvent: DatabaseDeleteEvent
   @JSName("com.sun.star.form.DatabaseParameterEvent")
-  var comDotsunDotstarDotformDotDatabaseParameterEvent: DatabaseParameterEvent = js.native
+  var comDotsunDotstarDotformDotDatabaseParameterEvent: DatabaseParameterEvent
   @JSName("com.sun.star.form.ErrorEvent")
-  var comDotsunDotstarDotformDotErrorEvent: ErrorEvent = js.native
+  var comDotsunDotstarDotformDotErrorEvent: ErrorEvent
   @JSName("com.sun.star.form.binding.ListEntryEvent")
-  var comDotsunDotstarDotformDotbindingDotListEntryEvent: ListEntryEvent = js.native
+  var comDotsunDotstarDotformDotbindingDotListEntryEvent: ListEntryEvent
   @JSName("com.sun.star.form.runtime.FeatureState")
-  var comDotsunDotstarDotformDotruntimeDotFeatureState: FeatureState = js.native
+  var comDotsunDotstarDotformDotruntimeDotFeatureState: FeatureState
   @JSName("com.sun.star.form.runtime.FilterEvent")
-  var comDotsunDotstarDotformDotruntimeDotFilterEvent: FilterEvent = js.native
+  var comDotsunDotstarDotformDotruntimeDotFilterEvent: FilterEvent
   @JSName("com.sun.star.formula.SymbolDescriptor")
-  var comDotsunDotstarDotformulaDotSymbolDescriptor: SymbolDescriptor = js.native
+  var comDotsunDotstarDotformulaDotSymbolDescriptor: SymbolDescriptor
   @JSName("com.sun.star.frame.BorderWidths")
-  var comDotsunDotstarDotframeDotBorderWidths: BorderWidths = js.native
+  var comDotsunDotstarDotframeDotBorderWidths: BorderWidths
   @JSName("com.sun.star.frame.ControlCommand")
-  var comDotsunDotstarDotframeDotControlCommand: ControlCommand = js.native
+  var comDotsunDotstarDotframeDotControlCommand: ControlCommand
   @JSName("com.sun.star.frame.ControlEvent")
-  var comDotsunDotstarDotframeDotControlEvent: ControlEvent = js.native
+  var comDotsunDotstarDotframeDotControlEvent: ControlEvent
   @JSName("com.sun.star.frame.DispatchDescriptor")
-  var comDotsunDotstarDotframeDotDispatchDescriptor: DispatchDescriptor = js.native
+  var comDotsunDotstarDotframeDotDispatchDescriptor: DispatchDescriptor
   @JSName("com.sun.star.frame.DispatchInformation")
-  var comDotsunDotstarDotframeDotDispatchInformation: DispatchInformation = js.native
+  var comDotsunDotstarDotframeDotDispatchInformation: DispatchInformation
   @JSName("com.sun.star.frame.DispatchResultEvent")
-  var comDotsunDotstarDotframeDotDispatchResultEvent: DispatchResultEvent = js.native
+  var comDotsunDotstarDotframeDotDispatchResultEvent: DispatchResultEvent
   @JSName("com.sun.star.frame.DispatchStatement")
-  var comDotsunDotstarDotframeDotDispatchStatement: DispatchStatement = js.native
+  var comDotsunDotstarDotframeDotDispatchStatement: DispatchStatement
   @JSName("com.sun.star.frame.FeatureStateEvent")
-  var comDotsunDotstarDotframeDotFeatureStateEvent: FeatureStateEvent = js.native
+  var comDotsunDotstarDotframeDotFeatureStateEvent: FeatureStateEvent
   @JSName("com.sun.star.frame.FrameActionEvent")
-  var comDotsunDotstarDotframeDotFrameActionEvent: FrameActionEvent = js.native
+  var comDotsunDotstarDotframeDotFrameActionEvent: FrameActionEvent
   @JSName("com.sun.star.frame.TitleChangedEvent")
-  var comDotsunDotstarDotframeDotTitleChangedEvent: TitleChangedEvent = js.native
+  var comDotsunDotstarDotframeDotTitleChangedEvent: TitleChangedEvent
   @JSName("com.sun.star.frame.status.ClipboardFormats")
-  var comDotsunDotstarDotframeDotstatusDotClipboardFormats: ClipboardFormats = js.native
+  var comDotsunDotstarDotframeDotstatusDotClipboardFormats: ClipboardFormats
   @JSName("com.sun.star.frame.status.FontHeight")
-  var comDotsunDotstarDotframeDotstatusDotFontHeight: FontHeight = js.native
+  var comDotsunDotstarDotframeDotstatusDotFontHeight: FontHeight
   @JSName("com.sun.star.frame.status.ItemStatus")
-  var comDotsunDotstarDotframeDotstatusDotItemStatus: ItemStatus = js.native
+  var comDotsunDotstarDotframeDotstatusDotItemStatus: ItemStatus
   @JSName("com.sun.star.frame.status.LeftRightMargin")
-  var comDotsunDotstarDotframeDotstatusDotLeftRightMargin: LeftRightMargin = js.native
+  var comDotsunDotstarDotframeDotstatusDotLeftRightMargin: LeftRightMargin
   @JSName("com.sun.star.frame.status.LeftRightMarginScale")
-  var comDotsunDotstarDotframeDotstatusDotLeftRightMarginScale: LeftRightMarginScale = js.native
+  var comDotsunDotstarDotframeDotstatusDotLeftRightMarginScale: LeftRightMarginScale
   @JSName("com.sun.star.frame.status.Template")
-  var comDotsunDotstarDotframeDotstatusDotTemplate: Template = js.native
+  var comDotsunDotstarDotframeDotstatusDotTemplate: Template
   @JSName("com.sun.star.frame.status.UpperLowerMargin")
-  var comDotsunDotstarDotframeDotstatusDotUpperLowerMargin: UpperLowerMargin = js.native
+  var comDotsunDotstarDotframeDotstatusDotUpperLowerMargin: UpperLowerMargin
   @JSName("com.sun.star.frame.status.UpperLowerMarginScale")
-  var comDotsunDotstarDotframeDotstatusDotUpperLowerMarginScale: UpperLowerMarginScale = js.native
+  var comDotsunDotstarDotframeDotstatusDotUpperLowerMarginScale: UpperLowerMarginScale
   @JSName("com.sun.star.frame.status.Verb")
-  var comDotsunDotstarDotframeDotstatusDotVerb: Verb = js.native
+  var comDotsunDotstarDotframeDotstatusDotVerb: Verb
   @JSName("com.sun.star.frame.status.Visibility")
-  var comDotsunDotstarDotframeDotstatusDotVisibility: Visibility = js.native
+  var comDotsunDotstarDotframeDotstatusDotVisibility: Visibility
   @JSName("com.sun.star.geometry.AffineMatrix2D")
-  var comDotsunDotstarDotgeometryDotAffineMatrix2D: AffineMatrix2D = js.native
+  var comDotsunDotstarDotgeometryDotAffineMatrix2D: AffineMatrix2D
   @JSName("com.sun.star.geometry.AffineMatrix3D")
-  var comDotsunDotstarDotgeometryDotAffineMatrix3D: AffineMatrix3D = js.native
+  var comDotsunDotstarDotgeometryDotAffineMatrix3D: AffineMatrix3D
   @JSName("com.sun.star.geometry.EllipticalArc")
-  var comDotsunDotstarDotgeometryDotEllipticalArc: EllipticalArc = js.native
+  var comDotsunDotstarDotgeometryDotEllipticalArc: EllipticalArc
   @JSName("com.sun.star.geometry.IntegerBezierSegment2D")
-  var comDotsunDotstarDotgeometryDotIntegerBezierSegment2D: IntegerBezierSegment2D = js.native
+  var comDotsunDotstarDotgeometryDotIntegerBezierSegment2D: IntegerBezierSegment2D
   @JSName("com.sun.star.geometry.IntegerPoint2D")
-  var comDotsunDotstarDotgeometryDotIntegerPoint2D: IntegerPoint2D = js.native
+  var comDotsunDotstarDotgeometryDotIntegerPoint2D: IntegerPoint2D
   @JSName("com.sun.star.geometry.IntegerRectangle2D")
-  var comDotsunDotstarDotgeometryDotIntegerRectangle2D: IntegerRectangle2D = js.native
+  var comDotsunDotstarDotgeometryDotIntegerRectangle2D: IntegerRectangle2D
   @JSName("com.sun.star.geometry.IntegerSize2D")
-  var comDotsunDotstarDotgeometryDotIntegerSize2D: IntegerSize2D = js.native
+  var comDotsunDotstarDotgeometryDotIntegerSize2D: IntegerSize2D
   @JSName("com.sun.star.geometry.Matrix2D")
-  var comDotsunDotstarDotgeometryDotMatrix2D: Matrix2D = js.native
+  var comDotsunDotstarDotgeometryDotMatrix2D: Matrix2D
   @JSName("com.sun.star.geometry.RealBezierSegment2D")
-  var comDotsunDotstarDotgeometryDotRealBezierSegment2D: RealBezierSegment2D = js.native
+  var comDotsunDotstarDotgeometryDotRealBezierSegment2D: RealBezierSegment2D
   @JSName("com.sun.star.geometry.RealPoint2D")
-  var comDotsunDotstarDotgeometryDotRealPoint2D: RealPoint2D = js.native
+  var comDotsunDotstarDotgeometryDotRealPoint2D: RealPoint2D
   @JSName("com.sun.star.geometry.RealRectangle2D")
-  var comDotsunDotstarDotgeometryDotRealRectangle2D: RealRectangle2D = js.native
+  var comDotsunDotstarDotgeometryDotRealRectangle2D: RealRectangle2D
   @JSName("com.sun.star.geometry.RealRectangle3D")
-  var comDotsunDotstarDotgeometryDotRealRectangle3D: RealRectangle3D = js.native
+  var comDotsunDotstarDotgeometryDotRealRectangle3D: RealRectangle3D
   @JSName("com.sun.star.geometry.RealSize2D")
-  var comDotsunDotstarDotgeometryDotRealSize2D: RealSize2D = js.native
+  var comDotsunDotstarDotgeometryDotRealSize2D: RealSize2D
   @JSName("com.sun.star.i18n.Boundary")
-  var comDotsunDotstarDoti18nDotBoundary: Boundary = js.native
+  var comDotsunDotstarDoti18nDotBoundary: Boundary
   @JSName("com.sun.star.i18n.Calendar")
-  var comDotsunDotstarDoti18nDotCalendar: Calendar = js.native
+  var comDotsunDotstarDoti18nDotCalendar: Calendar
   @JSName("com.sun.star.i18n.Calendar2")
-  var comDotsunDotstarDoti18nDotCalendar2: Calendar2 = js.native
+  var comDotsunDotstarDoti18nDotCalendar2: Calendar2
   @JSName("com.sun.star.i18n.CalendarItem")
-  var comDotsunDotstarDoti18nDotCalendarItem: CalendarItem = js.native
+  var comDotsunDotstarDoti18nDotCalendarItem: CalendarItem
   @JSName("com.sun.star.i18n.CalendarItem2")
-  var comDotsunDotstarDoti18nDotCalendarItem2: CalendarItem2 = js.native
+  var comDotsunDotstarDoti18nDotCalendarItem2: CalendarItem2
   @JSName("com.sun.star.i18n.Currency")
-  var comDotsunDotstarDoti18nDotCurrency: typingsSlinky.activexLibreoffice.com_.sun.star.i18n.Currency = js.native
+  var comDotsunDotstarDoti18nDotCurrency: typingsSlinky.activexLibreoffice.com_.sun.star.i18n.Currency
   @JSName("com.sun.star.i18n.Currency2")
-  var comDotsunDotstarDoti18nDotCurrency2: Currency2 = js.native
+  var comDotsunDotstarDoti18nDotCurrency2: Currency2
   @JSName("com.sun.star.i18n.ForbiddenCharacters")
-  var comDotsunDotstarDoti18nDotForbiddenCharacters: ForbiddenCharacters = js.native
+  var comDotsunDotstarDoti18nDotForbiddenCharacters: ForbiddenCharacters
   @JSName("com.sun.star.i18n.FormatElement")
-  var comDotsunDotstarDoti18nDotFormatElement: FormatElement = js.native
+  var comDotsunDotstarDoti18nDotFormatElement: FormatElement
   @JSName("com.sun.star.i18n.Implementation")
-  var comDotsunDotstarDoti18nDotImplementation: Implementation = js.native
+  var comDotsunDotstarDoti18nDotImplementation: Implementation
   @JSName("com.sun.star.i18n.LanguageCountryInfo")
-  var comDotsunDotstarDoti18nDotLanguageCountryInfo: LanguageCountryInfo = js.native
+  var comDotsunDotstarDoti18nDotLanguageCountryInfo: LanguageCountryInfo
   @JSName("com.sun.star.i18n.LineBreakHyphenationOptions")
-  var comDotsunDotstarDoti18nDotLineBreakHyphenationOptions: LineBreakHyphenationOptions = js.native
+  var comDotsunDotstarDoti18nDotLineBreakHyphenationOptions: LineBreakHyphenationOptions
   @JSName("com.sun.star.i18n.LineBreakResults")
-  var comDotsunDotstarDoti18nDotLineBreakResults: LineBreakResults = js.native
+  var comDotsunDotstarDoti18nDotLineBreakResults: LineBreakResults
   @JSName("com.sun.star.i18n.LineBreakUserOptions")
-  var comDotsunDotstarDoti18nDotLineBreakUserOptions: LineBreakUserOptions = js.native
+  var comDotsunDotstarDoti18nDotLineBreakUserOptions: LineBreakUserOptions
   @JSName("com.sun.star.i18n.LocaleDataItem")
-  var comDotsunDotstarDoti18nDotLocaleDataItem: LocaleDataItem = js.native
+  var comDotsunDotstarDoti18nDotLocaleDataItem: LocaleDataItem
   @JSName("com.sun.star.i18n.NativeNumberXmlAttributes")
-  var comDotsunDotstarDoti18nDotNativeNumberXmlAttributes: NativeNumberXmlAttributes = js.native
+  var comDotsunDotstarDoti18nDotNativeNumberXmlAttributes: NativeNumberXmlAttributes
   @JSName("com.sun.star.i18n.NumberFormatCode")
-  var comDotsunDotstarDoti18nDotNumberFormatCode: NumberFormatCode = js.native
+  var comDotsunDotstarDoti18nDotNumberFormatCode: NumberFormatCode
   @JSName("com.sun.star.i18n.ParseResult")
-  var comDotsunDotstarDoti18nDotParseResult: ParseResult = js.native
+  var comDotsunDotstarDoti18nDotParseResult: ParseResult
   @JSName("com.sun.star.i18n.TextConversionResult")
-  var comDotsunDotstarDoti18nDotTextConversionResult: TextConversionResult = js.native
+  var comDotsunDotstarDoti18nDotTextConversionResult: TextConversionResult
   @JSName("com.sun.star.inspection.LineDescriptor")
-  var comDotsunDotstarDotinspectionDotLineDescriptor: LineDescriptor = js.native
+  var comDotsunDotstarDotinspectionDotLineDescriptor: LineDescriptor
   @JSName("com.sun.star.inspection.PropertyCategoryDescriptor")
-  var comDotsunDotstarDotinspectionDotPropertyCategoryDescriptor: PropertyCategoryDescriptor = js.native
+  var comDotsunDotstarDotinspectionDotPropertyCategoryDescriptor: PropertyCategoryDescriptor
   @JSName("com.sun.star.io.DataTransferEvent")
-  var comDotsunDotstarDotioDotDataTransferEvent: DataTransferEvent = js.native
+  var comDotsunDotstarDotioDotDataTransferEvent: DataTransferEvent
   @JSName("com.sun.star.io.FilePermission")
-  var comDotsunDotstarDotioDotFilePermission: FilePermission = js.native
+  var comDotsunDotstarDotioDotFilePermission: FilePermission
   @JSName("com.sun.star.lang.EventObject")
-  var comDotsunDotstarDotlangDotEventObject: typingsSlinky.activexLibreoffice.com_.sun.star.lang.EventObject = js.native
+  var comDotsunDotstarDotlangDotEventObject: typingsSlinky.activexLibreoffice.com_.sun.star.lang.EventObject
   @JSName("com.sun.star.lang.Locale")
-  var comDotsunDotstarDotlangDotLocale: Locale = js.native
+  var comDotsunDotstarDotlangDotLocale: Locale
   @JSName("com.sun.star.linguistic2.DictionaryEvent")
-  var comDotsunDotstarDotlinguistic2DotDictionaryEvent: DictionaryEvent = js.native
+  var comDotsunDotstarDotlinguistic2DotDictionaryEvent: DictionaryEvent
   @JSName("com.sun.star.linguistic2.DictionaryListEvent")
-  var comDotsunDotstarDotlinguistic2DotDictionaryListEvent: DictionaryListEvent = js.native
+  var comDotsunDotstarDotlinguistic2DotDictionaryListEvent: DictionaryListEvent
   @JSName("com.sun.star.linguistic2.LinguServiceEvent")
-  var comDotsunDotstarDotlinguistic2DotLinguServiceEvent: LinguServiceEvent = js.native
+  var comDotsunDotstarDotlinguistic2DotLinguServiceEvent: LinguServiceEvent
   @JSName("com.sun.star.linguistic2.ProofreadingResult")
-  var comDotsunDotstarDotlinguistic2DotProofreadingResult: ProofreadingResult = js.native
+  var comDotsunDotstarDotlinguistic2DotProofreadingResult: ProofreadingResult
   @JSName("com.sun.star.linguistic2.SingleProofreadingError")
-  var comDotsunDotstarDotlinguistic2DotSingleProofreadingError: SingleProofreadingError = js.native
+  var comDotsunDotstarDotlinguistic2DotSingleProofreadingError: SingleProofreadingError
   @JSName("com.sun.star.logging.LogRecord")
-  var comDotsunDotstarDotloggingDotLogRecord: LogRecord = js.native
+  var comDotsunDotstarDotloggingDotLogRecord: LogRecord
   @JSName("com.sun.star.mail.MailAttachment")
-  var comDotsunDotstarDotmailDotMailAttachment: MailAttachment = js.native
+  var comDotsunDotstarDotmailDotMailAttachment: MailAttachment
   @JSName("com.sun.star.mozilla.MenuMultipleChange")
-  var comDotsunDotstarDotmozillaDotMenuMultipleChange: MenuMultipleChange = js.native
+  var comDotsunDotstarDotmozillaDotMenuMultipleChange: MenuMultipleChange
   @JSName("com.sun.star.mozilla.MenuSingleChange")
-  var comDotsunDotstarDotmozillaDotMenuSingleChange: MenuSingleChange = js.native
+  var comDotsunDotstarDotmozillaDotMenuSingleChange: MenuSingleChange
   @JSName("com.sun.star.packages.zip.ZipEntry")
-  var comDotsunDotstarDotpackagesDotzipDotZipEntry: ZipEntry = js.native
+  var comDotsunDotstarDotpackagesDotzipDotZipEntry: ZipEntry
   @JSName("com.sun.star.presentation.ParagraphTarget")
-  var comDotsunDotstarDotpresentationDotParagraphTarget: ParagraphTarget = js.native
+  var comDotsunDotstarDotpresentationDotParagraphTarget: ParagraphTarget
   @JSName("com.sun.star.rdf.Statement")
-  var comDotsunDotstarDotrdfDotStatement: Statement = js.native
+  var comDotsunDotstarDotrdfDotStatement: Statement
   @JSName("com.sun.star.reflection.ParamInfo")
-  var comDotsunDotstarDotreflectionDotParamInfo: ParamInfo = js.native
+  var comDotsunDotstarDotreflectionDotParamInfo: ParamInfo
   @JSName("com.sun.star.rendering.ARGBColor")
-  var comDotsunDotstarDotrenderingDotARGBColor: ARGBColor = js.native
+  var comDotsunDotstarDotrenderingDotARGBColor: ARGBColor
   @JSName("com.sun.star.rendering.AnimationAttributes")
-  var comDotsunDotstarDotrenderingDotAnimationAttributes: AnimationAttributes = js.native
+  var comDotsunDotstarDotrenderingDotAnimationAttributes: AnimationAttributes
   @JSName("com.sun.star.rendering.Caret")
-  var comDotsunDotstarDotrenderingDotCaret: Caret = js.native
+  var comDotsunDotstarDotrenderingDotCaret: Caret
   @JSName("com.sun.star.rendering.ColorProfile")
-  var comDotsunDotstarDotrenderingDotColorProfile: ColorProfile = js.native
+  var comDotsunDotstarDotrenderingDotColorProfile: ColorProfile
   @JSName("com.sun.star.rendering.FloatingPointBitmapLayout")
-  var comDotsunDotstarDotrenderingDotFloatingPointBitmapLayout: FloatingPointBitmapLayout = js.native
+  var comDotsunDotstarDotrenderingDotFloatingPointBitmapLayout: FloatingPointBitmapLayout
   @JSName("com.sun.star.rendering.FontInfo")
-  var comDotsunDotstarDotrenderingDotFontInfo: FontInfo = js.native
+  var comDotsunDotstarDotrenderingDotFontInfo: FontInfo
   @JSName("com.sun.star.rendering.FontMetrics")
-  var comDotsunDotstarDotrenderingDotFontMetrics: FontMetrics = js.native
+  var comDotsunDotstarDotrenderingDotFontMetrics: FontMetrics
   @JSName("com.sun.star.rendering.FontRequest")
-  var comDotsunDotstarDotrenderingDotFontRequest: FontRequest = js.native
+  var comDotsunDotstarDotrenderingDotFontRequest: FontRequest
   @JSName("com.sun.star.rendering.IntegerBitmapLayout")
-  var comDotsunDotstarDotrenderingDotIntegerBitmapLayout: IntegerBitmapLayout = js.native
+  var comDotsunDotstarDotrenderingDotIntegerBitmapLayout: IntegerBitmapLayout
   @JSName("com.sun.star.rendering.Panose")
-  var comDotsunDotstarDotrenderingDotPanose: Panose = js.native
+  var comDotsunDotstarDotrenderingDotPanose: Panose
   @JSName("com.sun.star.rendering.RGBColor")
-  var comDotsunDotstarDotrenderingDotRGBColor: RGBColor = js.native
+  var comDotsunDotstarDotrenderingDotRGBColor: RGBColor
   @JSName("com.sun.star.rendering.RenderState")
-  var comDotsunDotstarDotrenderingDotRenderState: RenderState = js.native
+  var comDotsunDotstarDotrenderingDotRenderState: RenderState
   @JSName("com.sun.star.rendering.StringContext")
-  var comDotsunDotstarDotrenderingDotStringContext: StringContext = js.native
+  var comDotsunDotstarDotrenderingDotStringContext: StringContext
   @JSName("com.sun.star.rendering.StrokeAttributes")
-  var comDotsunDotstarDotrenderingDotStrokeAttributes: StrokeAttributes = js.native
+  var comDotsunDotstarDotrenderingDotStrokeAttributes: StrokeAttributes
   @JSName("com.sun.star.rendering.TextHit")
-  var comDotsunDotstarDotrenderingDotTextHit: TextHit = js.native
+  var comDotsunDotstarDotrenderingDotTextHit: TextHit
   @JSName("com.sun.star.rendering.Texture")
-  var comDotsunDotstarDotrenderingDotTexture: Texture = js.native
+  var comDotsunDotstarDotrenderingDotTexture: Texture
   @JSName("com.sun.star.rendering.ViewState")
-  var comDotsunDotstarDotrenderingDotViewState: ViewState = js.native
+  var comDotsunDotstarDotrenderingDotViewState: ViewState
   @JSName("com.sun.star.scanner.ScannerContext")
-  var comDotsunDotstarDotscannerDotScannerContext: ScannerContext = js.native
+  var comDotsunDotstarDotscannerDotScannerContext: ScannerContext
   @JSName("com.sun.star.script.AllEventObject")
-  var comDotsunDotstarDotscriptDotAllEventObject: AllEventObject = js.native
+  var comDotsunDotstarDotscriptDotAllEventObject: AllEventObject
   @JSName("com.sun.star.script.ArrayWrapper")
-  var comDotsunDotstarDotscriptDotArrayWrapper: ArrayWrapper = js.native
+  var comDotsunDotstarDotscriptDotArrayWrapper: ArrayWrapper
   @JSName("com.sun.star.script.ContextInformation")
-  var comDotsunDotstarDotscriptDotContextInformation: ContextInformation = js.native
+  var comDotsunDotstarDotscriptDotContextInformation: ContextInformation
   @JSName("com.sun.star.script.EventListener")
-  var comDotsunDotstarDotscriptDotEventListener: EventListener = js.native
+  var comDotsunDotstarDotscriptDotEventListener: EventListener
   @JSName("com.sun.star.script.FinishEngineEvent")
-  var comDotsunDotstarDotscriptDotFinishEngineEvent: FinishEngineEvent = js.native
+  var comDotsunDotstarDotscriptDotFinishEngineEvent: FinishEngineEvent
   @JSName("com.sun.star.script.InterruptEngineEvent")
-  var comDotsunDotstarDotscriptDotInterruptEngineEvent: InterruptEngineEvent = js.native
+  var comDotsunDotstarDotscriptDotInterruptEngineEvent: InterruptEngineEvent
   @JSName("com.sun.star.script.InvocationInfo")
-  var comDotsunDotstarDotscriptDotInvocationInfo: InvocationInfo = js.native
+  var comDotsunDotstarDotscriptDotInvocationInfo: InvocationInfo
   @JSName("com.sun.star.script.ModuleInfo")
-  var comDotsunDotstarDotscriptDotModuleInfo: ModuleInfo = js.native
+  var comDotsunDotstarDotscriptDotModuleInfo: ModuleInfo
   @JSName("com.sun.star.script.NativeObjectWrapper")
-  var comDotsunDotstarDotscriptDotNativeObjectWrapper: NativeObjectWrapper = js.native
+  var comDotsunDotstarDotscriptDotNativeObjectWrapper: NativeObjectWrapper
   @JSName("com.sun.star.script.ScriptEvent")
-  var comDotsunDotstarDotscriptDotScriptEvent: ScriptEvent = js.native
+  var comDotsunDotstarDotscriptDotScriptEvent: ScriptEvent
   @JSName("com.sun.star.script.ScriptEventDescriptor")
-  var comDotsunDotstarDotscriptDotScriptEventDescriptor: ScriptEventDescriptor = js.native
+  var comDotsunDotstarDotscriptDotScriptEventDescriptor: ScriptEventDescriptor
   @JSName("com.sun.star.script.vba.VBAScriptEvent")
-  var comDotsunDotstarDotscriptDotvbaDotVBAScriptEvent: VBAScriptEvent = js.native
+  var comDotsunDotstarDotscriptDotvbaDotVBAScriptEvent: VBAScriptEvent
   @JSName("com.sun.star.sdb.DatabaseRegistrationEvent")
-  var comDotsunDotstarDotsdbDotDatabaseRegistrationEvent: DatabaseRegistrationEvent = js.native
+  var comDotsunDotstarDotsdbDotDatabaseRegistrationEvent: DatabaseRegistrationEvent
   @JSName("com.sun.star.sdb.RowChangeEvent")
-  var comDotsunDotstarDotsdbDotRowChangeEvent: RowChangeEvent = js.native
+  var comDotsunDotstarDotsdbDotRowChangeEvent: RowChangeEvent
   @JSName("com.sun.star.sdb.RowsChangeEvent")
-  var comDotsunDotstarDotsdbDotRowsChangeEvent: RowsChangeEvent = js.native
+  var comDotsunDotstarDotsdbDotRowsChangeEvent: RowsChangeEvent
   @JSName("com.sun.star.sdb.SQLErrorEvent")
-  var comDotsunDotstarDotsdbDotSQLErrorEvent: SQLErrorEvent = js.native
+  var comDotsunDotstarDotsdbDotSQLErrorEvent: SQLErrorEvent
   @JSName("com.sun.star.sdb.application.CopyTableRowEvent")
-  var comDotsunDotstarDotsdbDotapplicationDotCopyTableRowEvent: CopyTableRowEvent = js.native
+  var comDotsunDotstarDotsdbDotapplicationDotCopyTableRowEvent: CopyTableRowEvent
   @JSName("com.sun.star.sdb.application.NamedDatabaseObject")
-  var comDotsunDotstarDotsdbDotapplicationDotNamedDatabaseObject: NamedDatabaseObject = js.native
+  var comDotsunDotstarDotsdbDotapplicationDotNamedDatabaseObject: NamedDatabaseObject
   @JSName("com.sun.star.sdbc.ChangeEvent")
-  var comDotsunDotstarDotsdbcDotChangeEvent: ChangeEvent = js.native
+  var comDotsunDotstarDotsdbcDotChangeEvent: ChangeEvent
   @JSName("com.sun.star.sdbc.DriverPropertyInfo")
-  var comDotsunDotstarDotsdbcDotDriverPropertyInfo: DriverPropertyInfo = js.native
+  var comDotsunDotstarDotsdbcDotDriverPropertyInfo: DriverPropertyInfo
   @JSName("com.sun.star.security.AllPermission")
-  var comDotsunDotstarDotsecurityDotAllPermission: AllPermission = js.native
+  var comDotsunDotstarDotsecurityDotAllPermission: AllPermission
   @JSName("com.sun.star.security.CertAltNameEntry")
-  var comDotsunDotstarDotsecurityDotCertAltNameEntry: CertAltNameEntry = js.native
+  var comDotsunDotstarDotsecurityDotCertAltNameEntry: CertAltNameEntry
   @JSName("com.sun.star.security.DocumentSignatureInformation")
-  var comDotsunDotstarDotsecurityDotDocumentSignatureInformation: DocumentSignatureInformation = js.native
+  var comDotsunDotstarDotsecurityDotDocumentSignatureInformation: DocumentSignatureInformation
   @JSName("com.sun.star.security.RuntimePermission")
-  var comDotsunDotstarDotsecurityDotRuntimePermission: RuntimePermission = js.native
+  var comDotsunDotstarDotsecurityDotRuntimePermission: RuntimePermission
   @JSName("com.sun.star.sheet.ActivationEvent")
-  var comDotsunDotstarDotsheetDotActivationEvent: ActivationEvent = js.native
+  var comDotsunDotstarDotsheetDotActivationEvent: ActivationEvent
   @JSName("com.sun.star.sheet.ComplexReference")
-  var comDotsunDotstarDotsheetDotComplexReference: ComplexReference = js.native
+  var comDotsunDotstarDotsheetDotComplexReference: ComplexReference
   @JSName("com.sun.star.sheet.DDEItemInfo")
-  var comDotsunDotstarDotsheetDotDDEItemInfo: DDEItemInfo = js.native
+  var comDotsunDotstarDotsheetDotDDEItemInfo: DDEItemInfo
   @JSName("com.sun.star.sheet.DDELinkInfo")
-  var comDotsunDotstarDotsheetDotDDELinkInfo: DDELinkInfo = js.native
+  var comDotsunDotstarDotsheetDotDDELinkInfo: DDELinkInfo
   @JSName("com.sun.star.sheet.DataPilotFieldAutoShowInfo")
-  var comDotsunDotstarDotsheetDotDataPilotFieldAutoShowInfo: DataPilotFieldAutoShowInfo = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldAutoShowInfo: DataPilotFieldAutoShowInfo
   @JSName("com.sun.star.sheet.DataPilotFieldFilter")
-  var comDotsunDotstarDotsheetDotDataPilotFieldFilter: DataPilotFieldFilter = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldFilter: DataPilotFieldFilter
   @JSName("com.sun.star.sheet.DataPilotFieldGroupInfo")
-  var comDotsunDotstarDotsheetDotDataPilotFieldGroupInfo: DataPilotFieldGroupInfo = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldGroupInfo: DataPilotFieldGroupInfo
   @JSName("com.sun.star.sheet.DataPilotFieldLayoutInfo")
-  var comDotsunDotstarDotsheetDotDataPilotFieldLayoutInfo: DataPilotFieldLayoutInfo = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldLayoutInfo: DataPilotFieldLayoutInfo
   @JSName("com.sun.star.sheet.DataPilotFieldReference")
-  var comDotsunDotstarDotsheetDotDataPilotFieldReference: DataPilotFieldReference = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldReference: DataPilotFieldReference
   @JSName("com.sun.star.sheet.DataPilotFieldSortInfo")
-  var comDotsunDotstarDotsheetDotDataPilotFieldSortInfo: DataPilotFieldSortInfo = js.native
+  var comDotsunDotstarDotsheetDotDataPilotFieldSortInfo: DataPilotFieldSortInfo
   @JSName("com.sun.star.sheet.DataPilotTableHeaderData")
-  var comDotsunDotstarDotsheetDotDataPilotTableHeaderData: DataPilotTableHeaderData = js.native
+  var comDotsunDotstarDotsheetDotDataPilotTableHeaderData: DataPilotTableHeaderData
   @JSName("com.sun.star.sheet.DataPilotTablePositionData")
-  var comDotsunDotstarDotsheetDotDataPilotTablePositionData: DataPilotTablePositionData = js.native
+  var comDotsunDotstarDotsheetDotDataPilotTablePositionData: DataPilotTablePositionData
   @JSName("com.sun.star.sheet.DataPilotTableResultData")
-  var comDotsunDotstarDotsheetDotDataPilotTableResultData: DataPilotTableResultData = js.native
+  var comDotsunDotstarDotsheetDotDataPilotTableResultData: DataPilotTableResultData
   @JSName("com.sun.star.sheet.DataResult")
-  var comDotsunDotstarDotsheetDotDataResult: DataResult = js.native
+  var comDotsunDotstarDotsheetDotDataResult: DataResult
   @JSName("com.sun.star.sheet.ExternalLinkInfo")
-  var comDotsunDotstarDotsheetDotExternalLinkInfo: ExternalLinkInfo = js.native
+  var comDotsunDotstarDotsheetDotExternalLinkInfo: ExternalLinkInfo
   @JSName("com.sun.star.sheet.ExternalReference")
-  var comDotsunDotstarDotsheetDotExternalReference: ExternalReference = js.native
+  var comDotsunDotstarDotsheetDotExternalReference: ExternalReference
   @JSName("com.sun.star.sheet.FilterFieldValue")
-  var comDotsunDotstarDotsheetDotFilterFieldValue: FilterFieldValue = js.native
+  var comDotsunDotstarDotsheetDotFilterFieldValue: FilterFieldValue
   @JSName("com.sun.star.sheet.FormulaOpCodeMapEntry")
-  var comDotsunDotstarDotsheetDotFormulaOpCodeMapEntry: FormulaOpCodeMapEntry = js.native
+  var comDotsunDotstarDotsheetDotFormulaOpCodeMapEntry: FormulaOpCodeMapEntry
   @JSName("com.sun.star.sheet.FormulaToken")
-  var comDotsunDotstarDotsheetDotFormulaToken: FormulaToken = js.native
+  var comDotsunDotstarDotsheetDotFormulaToken: FormulaToken
   @JSName("com.sun.star.sheet.FunctionArgument")
-  var comDotsunDotstarDotsheetDotFunctionArgument: FunctionArgument = js.native
+  var comDotsunDotstarDotsheetDotFunctionArgument: FunctionArgument
   @JSName("com.sun.star.sheet.GoalResult")
-  var comDotsunDotstarDotsheetDotGoalResult: GoalResult = js.native
+  var comDotsunDotstarDotsheetDotGoalResult: GoalResult
   @JSName("com.sun.star.sheet.LocalizedName")
-  var comDotsunDotstarDotsheetDotLocalizedName: LocalizedName = js.native
+  var comDotsunDotstarDotsheetDotLocalizedName: LocalizedName
   @JSName("com.sun.star.sheet.MemberResult")
-  var comDotsunDotstarDotsheetDotMemberResult: MemberResult = js.native
+  var comDotsunDotstarDotsheetDotMemberResult: MemberResult
   @JSName("com.sun.star.sheet.NameToken")
-  var comDotsunDotstarDotsheetDotNameToken: NameToken = js.native
+  var comDotsunDotstarDotsheetDotNameToken: NameToken
   @JSName("com.sun.star.sheet.RangeSelectionEvent")
-  var comDotsunDotstarDotsheetDotRangeSelectionEvent: RangeSelectionEvent = js.native
+  var comDotsunDotstarDotsheetDotRangeSelectionEvent: RangeSelectionEvent
   @JSName("com.sun.star.sheet.ResultEvent")
-  var comDotsunDotstarDotsheetDotResultEvent: ResultEvent = js.native
+  var comDotsunDotstarDotsheetDotResultEvent: ResultEvent
   @JSName("com.sun.star.sheet.SingleReference")
-  var comDotsunDotstarDotsheetDotSingleReference: SingleReference = js.native
+  var comDotsunDotstarDotsheetDotSingleReference: SingleReference
   @JSName("com.sun.star.sheet.SolverConstraint")
-  var comDotsunDotstarDotsheetDotSolverConstraint: SolverConstraint = js.native
+  var comDotsunDotstarDotsheetDotSolverConstraint: SolverConstraint
   @JSName("com.sun.star.sheet.SubTotalColumn")
-  var comDotsunDotstarDotsheetDotSubTotalColumn: SubTotalColumn = js.native
+  var comDotsunDotstarDotsheetDotSubTotalColumn: SubTotalColumn
   @JSName("com.sun.star.sheet.TableFilterField")
-  var comDotsunDotstarDotsheetDotTableFilterField: TableFilterField = js.native
+  var comDotsunDotstarDotsheetDotTableFilterField: TableFilterField
   @JSName("com.sun.star.sheet.TableFilterField2")
-  var comDotsunDotstarDotsheetDotTableFilterField2: TableFilterField2 = js.native
+  var comDotsunDotstarDotsheetDotTableFilterField2: TableFilterField2
   @JSName("com.sun.star.sheet.TableFilterField3")
-  var comDotsunDotstarDotsheetDotTableFilterField3: TableFilterField3 = js.native
+  var comDotsunDotstarDotsheetDotTableFilterField3: TableFilterField3
   @JSName("com.sun.star.sheet.TablePageBreakData")
-  var comDotsunDotstarDotsheetDotTablePageBreakData: TablePageBreakData = js.native
+  var comDotsunDotstarDotsheetDotTablePageBreakData: TablePageBreakData
   @JSName("com.sun.star.sheet.opencl.OpenCLDevice")
-  var comDotsunDotstarDotsheetDotopenclDotOpenCLDevice: OpenCLDevice = js.native
+  var comDotsunDotstarDotsheetDotopenclDotOpenCLDevice: OpenCLDevice
   @JSName("com.sun.star.sheet.opencl.OpenCLPlatform")
-  var comDotsunDotstarDotsheetDotopenclDotOpenCLPlatform: OpenCLPlatform = js.native
+  var comDotsunDotstarDotsheetDotopenclDotOpenCLPlatform: OpenCLPlatform
   @JSName("com.sun.star.style.DropCapFormat")
-  var comDotsunDotstarDotstyleDotDropCapFormat: DropCapFormat = js.native
+  var comDotsunDotstarDotstyleDotDropCapFormat: DropCapFormat
   @JSName("com.sun.star.style.LineSpacing")
-  var comDotsunDotstarDotstyleDotLineSpacing: LineSpacing = js.native
+  var comDotsunDotstarDotstyleDotLineSpacing: LineSpacing
   @JSName("com.sun.star.style.TabStop")
-  var comDotsunDotstarDotstyleDotTabStop: TabStop = js.native
+  var comDotsunDotstarDotstyleDotTabStop: TabStop
   @JSName("com.sun.star.table.BorderLine")
-  var comDotsunDotstarDottableDotBorderLine: BorderLine = js.native
+  var comDotsunDotstarDottableDotBorderLine: BorderLine
   @JSName("com.sun.star.table.BorderLine2")
-  var comDotsunDotstarDottableDotBorderLine2: BorderLine2 = js.native
+  var comDotsunDotstarDottableDotBorderLine2: BorderLine2
   @JSName("com.sun.star.table.CellAddress")
-  var comDotsunDotstarDottableDotCellAddress: CellAddress = js.native
+  var comDotsunDotstarDottableDotCellAddress: CellAddress
   @JSName("com.sun.star.table.CellRangeAddress")
-  var comDotsunDotstarDottableDotCellRangeAddress: CellRangeAddress = js.native
+  var comDotsunDotstarDottableDotCellRangeAddress: CellRangeAddress
   @JSName("com.sun.star.table.ShadowFormat")
-  var comDotsunDotstarDottableDotShadowFormat: ShadowFormat = js.native
+  var comDotsunDotstarDottableDotShadowFormat: ShadowFormat
   @JSName("com.sun.star.table.TableBorder")
-  var comDotsunDotstarDottableDotTableBorder: TableBorder = js.native
+  var comDotsunDotstarDottableDotTableBorder: TableBorder
   @JSName("com.sun.star.table.TableBorder2")
-  var comDotsunDotstarDottableDotTableBorder2: TableBorder2 = js.native
+  var comDotsunDotstarDottableDotTableBorder2: TableBorder2
   @JSName("com.sun.star.table.TableBorderDistances")
-  var comDotsunDotstarDottableDotTableBorderDistances: TableBorderDistances = js.native
+  var comDotsunDotstarDottableDotTableBorderDistances: TableBorderDistances
   @JSName("com.sun.star.table.TableSortField")
-  var comDotsunDotstarDottableDotTableSortField: TableSortField = js.native
+  var comDotsunDotstarDottableDotTableSortField: TableSortField
   @JSName("com.sun.star.task.UrlRecord")
-  var comDotsunDotstarDottaskDotUrlRecord: UrlRecord = js.native
+  var comDotsunDotstarDottaskDotUrlRecord: UrlRecord
   @JSName("com.sun.star.task.UserRecord")
-  var comDotsunDotstarDottaskDotUserRecord: UserRecord = js.native
+  var comDotsunDotstarDottaskDotUserRecord: UserRecord
   @JSName("com.sun.star.text.GraphicCrop")
-  var comDotsunDotstarDottextDotGraphicCrop: GraphicCrop = js.native
+  var comDotsunDotstarDottextDotGraphicCrop: GraphicCrop
   @JSName("com.sun.star.text.HoriOrientationFormat")
-  var comDotsunDotstarDottextDotHoriOrientationFormat: HoriOrientationFormat = js.native
+  var comDotsunDotstarDottextDotHoriOrientationFormat: HoriOrientationFormat
   @JSName("com.sun.star.text.MailMergeEvent")
-  var comDotsunDotstarDottextDotMailMergeEvent: MailMergeEvent = js.native
+  var comDotsunDotstarDottextDotMailMergeEvent: MailMergeEvent
   @JSName("com.sun.star.text.SectionFileLink")
-  var comDotsunDotstarDottextDotSectionFileLink: SectionFileLink = js.native
+  var comDotsunDotstarDottextDotSectionFileLink: SectionFileLink
   @JSName("com.sun.star.text.TableColumnSeparator")
-  var comDotsunDotstarDottextDotTableColumnSeparator: TableColumnSeparator = js.native
+  var comDotsunDotstarDottextDotTableColumnSeparator: TableColumnSeparator
   @JSName("com.sun.star.text.TextColumn")
-  var comDotsunDotstarDottextDotTextColumn: TextColumn = js.native
+  var comDotsunDotstarDottextDotTextColumn: TextColumn
   @JSName("com.sun.star.text.TextMarkupDescriptor")
-  var comDotsunDotstarDottextDotTextMarkupDescriptor: TextMarkupDescriptor = js.native
+  var comDotsunDotstarDottextDotTextMarkupDescriptor: TextMarkupDescriptor
   @JSName("com.sun.star.text.TextPosition")
-  var comDotsunDotstarDottextDotTextPosition: TextPosition = js.native
+  var comDotsunDotstarDottextDotTextPosition: TextPosition
   @JSName("com.sun.star.text.TextRangeSelection")
-  var comDotsunDotstarDottextDotTextRangeSelection: TextRangeSelection = js.native
+  var comDotsunDotstarDottextDotTextRangeSelection: TextRangeSelection
   @JSName("com.sun.star.text.VertOrientationFormat")
-  var comDotsunDotstarDottextDotVertOrientationFormat: VertOrientationFormat = js.native
+  var comDotsunDotstarDottextDotVertOrientationFormat: VertOrientationFormat
   @JSName("com.sun.star.ucb.CheckinArgument")
-  var comDotsunDotstarDotucbDotCheckinArgument: CheckinArgument = js.native
+  var comDotsunDotstarDotucbDotCheckinArgument: CheckinArgument
   @JSName("com.sun.star.ucb.Command")
-  var comDotsunDotstarDotucbDotCommand: Command = js.native
+  var comDotsunDotstarDotucbDotCommand: Command
   @JSName("com.sun.star.ucb.CommandInfo")
-  var comDotsunDotstarDotucbDotCommandInfo: CommandInfo = js.native
+  var comDotsunDotstarDotucbDotCommandInfo: CommandInfo
   @JSName("com.sun.star.ucb.CommandInfoChangeEvent")
-  var comDotsunDotstarDotucbDotCommandInfoChangeEvent: CommandInfoChangeEvent = js.native
+  var comDotsunDotstarDotucbDotCommandInfoChangeEvent: CommandInfoChangeEvent
   @JSName("com.sun.star.ucb.ContentEvent")
-  var comDotsunDotstarDotucbDotContentEvent: ContentEvent = js.native
+  var comDotsunDotstarDotucbDotContentEvent: ContentEvent
   @JSName("com.sun.star.ucb.ContentInfo")
-  var comDotsunDotstarDotucbDotContentInfo: ContentInfo = js.native
+  var comDotsunDotstarDotucbDotContentInfo: ContentInfo
   @JSName("com.sun.star.ucb.ContentProviderInfo")
-  var comDotsunDotstarDotucbDotContentProviderInfo: ContentProviderInfo = js.native
+  var comDotsunDotstarDotucbDotContentProviderInfo: ContentProviderInfo
   @JSName("com.sun.star.ucb.CrossReference")
-  var comDotsunDotstarDotucbDotCrossReference: CrossReference = js.native
+  var comDotsunDotstarDotucbDotCrossReference: CrossReference
   @JSName("com.sun.star.ucb.DocumentHeaderField")
-  var comDotsunDotstarDotucbDotDocumentHeaderField: DocumentHeaderField = js.native
+  var comDotsunDotstarDotucbDotDocumentHeaderField: DocumentHeaderField
   @JSName("com.sun.star.ucb.ExportStreamInfo")
-  var comDotsunDotstarDotucbDotExportStreamInfo: ExportStreamInfo = js.native
+  var comDotsunDotstarDotucbDotExportStreamInfo: ExportStreamInfo
   @JSName("com.sun.star.ucb.FetchResult")
-  var comDotsunDotstarDotucbDotFetchResult: FetchResult = js.native
+  var comDotsunDotstarDotucbDotFetchResult: FetchResult
   @JSName("com.sun.star.ucb.FolderList")
-  var comDotsunDotstarDotucbDotFolderList: FolderList = js.native
+  var comDotsunDotstarDotucbDotFolderList: FolderList
   @JSName("com.sun.star.ucb.FolderListEntry")
-  var comDotsunDotstarDotucbDotFolderListEntry: FolderListEntry = js.native
+  var comDotsunDotstarDotucbDotFolderListEntry: FolderListEntry
   @JSName("com.sun.star.ucb.GlobalTransferCommandArgument")
-  var comDotsunDotstarDotucbDotGlobalTransferCommandArgument: GlobalTransferCommandArgument = js.native
+  var comDotsunDotstarDotucbDotGlobalTransferCommandArgument: GlobalTransferCommandArgument
   @JSName("com.sun.star.ucb.GlobalTransferCommandArgument2")
-  var comDotsunDotstarDotucbDotGlobalTransferCommandArgument2: GlobalTransferCommandArgument2 = js.native
+  var comDotsunDotstarDotucbDotGlobalTransferCommandArgument2: GlobalTransferCommandArgument2
   @JSName("com.sun.star.ucb.InsertCommandArgument")
-  var comDotsunDotstarDotucbDotInsertCommandArgument: InsertCommandArgument = js.native
+  var comDotsunDotstarDotucbDotInsertCommandArgument: InsertCommandArgument
   @JSName("com.sun.star.ucb.InsertCommandArgument2")
-  var comDotsunDotstarDotucbDotInsertCommandArgument2: InsertCommandArgument2 = js.native
+  var comDotsunDotstarDotucbDotInsertCommandArgument2: InsertCommandArgument2
   @JSName("com.sun.star.ucb.Link")
-  var comDotsunDotstarDotucbDotLink: Link = js.native
+  var comDotsunDotstarDotucbDotLink: Link
   @JSName("com.sun.star.ucb.ListAction")
-  var comDotsunDotstarDotucbDotListAction: ListAction = js.native
+  var comDotsunDotstarDotucbDotListAction: ListAction
   @JSName("com.sun.star.ucb.ListEvent")
-  var comDotsunDotstarDotucbDotListEvent: ListEvent = js.native
+  var comDotsunDotstarDotucbDotListEvent: ListEvent
   @JSName("com.sun.star.ucb.Lock")
-  var comDotsunDotstarDotucbDotLock: Lock = js.native
+  var comDotsunDotstarDotucbDotLock: Lock
   @JSName("com.sun.star.ucb.LockEntry")
-  var comDotsunDotstarDotucbDotLockEntry: LockEntry = js.native
+  var comDotsunDotstarDotucbDotLockEntry: LockEntry
   @JSName("com.sun.star.ucb.NumberedSortingInfo")
-  var comDotsunDotstarDotucbDotNumberedSortingInfo: NumberedSortingInfo = js.native
+  var comDotsunDotstarDotucbDotNumberedSortingInfo: NumberedSortingInfo
   @JSName("com.sun.star.ucb.OpenCommandArgument")
-  var comDotsunDotstarDotucbDotOpenCommandArgument: OpenCommandArgument = js.native
+  var comDotsunDotstarDotucbDotOpenCommandArgument: OpenCommandArgument
   @JSName("com.sun.star.ucb.OpenCommandArgument2")
-  var comDotsunDotstarDotucbDotOpenCommandArgument2: OpenCommandArgument2 = js.native
+  var comDotsunDotstarDotucbDotOpenCommandArgument2: OpenCommandArgument2
   @JSName("com.sun.star.ucb.OpenCommandArgument3")
-  var comDotsunDotstarDotucbDotOpenCommandArgument3: OpenCommandArgument3 = js.native
+  var comDotsunDotstarDotucbDotOpenCommandArgument3: OpenCommandArgument3
   @JSName("com.sun.star.ucb.PostCommandArgument")
-  var comDotsunDotstarDotucbDotPostCommandArgument: PostCommandArgument = js.native
+  var comDotsunDotstarDotucbDotPostCommandArgument: PostCommandArgument
   @JSName("com.sun.star.ucb.PostCommandArgument2")
-  var comDotsunDotstarDotucbDotPostCommandArgument2: PostCommandArgument2 = js.native
+  var comDotsunDotstarDotucbDotPostCommandArgument2: PostCommandArgument2
   @JSName("com.sun.star.ucb.PropertyCommandArgument")
-  var comDotsunDotstarDotucbDotPropertyCommandArgument: PropertyCommandArgument = js.native
+  var comDotsunDotstarDotucbDotPropertyCommandArgument: PropertyCommandArgument
   @JSName("com.sun.star.ucb.PropertyValueInfo")
-  var comDotsunDotstarDotucbDotPropertyValueInfo: PropertyValueInfo = js.native
+  var comDotsunDotstarDotucbDotPropertyValueInfo: PropertyValueInfo
   @JSName("com.sun.star.ucb.RecipientInfo")
-  var comDotsunDotstarDotucbDotRecipientInfo: RecipientInfo = js.native
+  var comDotsunDotstarDotucbDotRecipientInfo: RecipientInfo
   @JSName("com.sun.star.ucb.RemoteContentProviderChangeEvent")
-  var comDotsunDotstarDotucbDotRemoteContentProviderChangeEvent: RemoteContentProviderChangeEvent = js.native
+  var comDotsunDotstarDotucbDotRemoteContentProviderChangeEvent: RemoteContentProviderChangeEvent
   @JSName("com.sun.star.ucb.Rule")
-  var comDotsunDotstarDotucbDotRule: Rule = js.native
+  var comDotsunDotstarDotucbDotRule: Rule
   @JSName("com.sun.star.ucb.RuleSet")
-  var comDotsunDotstarDotucbDotRuleSet: RuleSet = js.native
+  var comDotsunDotstarDotucbDotRuleSet: RuleSet
   @JSName("com.sun.star.ucb.RuleTerm")
-  var comDotsunDotstarDotucbDotRuleTerm: RuleTerm = js.native
+  var comDotsunDotstarDotucbDotRuleTerm: RuleTerm
   @JSName("com.sun.star.ucb.SearchCommandArgument")
-  var comDotsunDotstarDotucbDotSearchCommandArgument: SearchCommandArgument = js.native
+  var comDotsunDotstarDotucbDotSearchCommandArgument: SearchCommandArgument
   @JSName("com.sun.star.ucb.SearchCriterium")
-  var comDotsunDotstarDotucbDotSearchCriterium: SearchCriterium = js.native
+  var comDotsunDotstarDotucbDotSearchCriterium: SearchCriterium
   @JSName("com.sun.star.ucb.SearchInfo")
-  var comDotsunDotstarDotucbDotSearchInfo: SearchInfo = js.native
+  var comDotsunDotstarDotucbDotSearchInfo: SearchInfo
   @JSName("com.sun.star.ucb.SendInfo")
-  var comDotsunDotstarDotucbDotSendInfo: SendInfo = js.native
+  var comDotsunDotstarDotucbDotSendInfo: SendInfo
   @JSName("com.sun.star.ucb.SendMediaTypes")
-  var comDotsunDotstarDotucbDotSendMediaTypes: SendMediaTypes = js.native
+  var comDotsunDotstarDotucbDotSendMediaTypes: SendMediaTypes
   @JSName("com.sun.star.ucb.SortingInfo")
-  var comDotsunDotstarDotucbDotSortingInfo: SortingInfo = js.native
+  var comDotsunDotstarDotucbDotSortingInfo: SortingInfo
   @JSName("com.sun.star.ucb.TransferInfo")
-  var comDotsunDotstarDotucbDotTransferInfo: TransferInfo = js.native
+  var comDotsunDotstarDotucbDotTransferInfo: TransferInfo
   @JSName("com.sun.star.ucb.TransferInfo2")
-  var comDotsunDotstarDotucbDotTransferInfo2: TransferInfo2 = js.native
+  var comDotsunDotstarDotucbDotTransferInfo2: TransferInfo2
   @JSName("com.sun.star.ucb.TransferResult")
-  var comDotsunDotstarDotucbDotTransferResult: TransferResult = js.native
+  var comDotsunDotstarDotucbDotTransferResult: TransferResult
   @JSName("com.sun.star.ucb.WelcomeDynamicResultSetStruct")
-  var comDotsunDotstarDotucbDotWelcomeDynamicResultSetStruct: WelcomeDynamicResultSetStruct = js.native
+  var comDotsunDotstarDotucbDotWelcomeDynamicResultSetStruct: WelcomeDynamicResultSetStruct
   @JSName("com.sun.star.ui.ConfigurationEvent")
-  var comDotsunDotstarDotuiDotConfigurationEvent: ConfigurationEvent = js.native
+  var comDotsunDotstarDotuiDotConfigurationEvent: ConfigurationEvent
   @JSName("com.sun.star.ui.ContextChangeEventObject")
-  var comDotsunDotstarDotuiDotContextChangeEventObject: ContextChangeEventObject = js.native
+  var comDotsunDotstarDotuiDotContextChangeEventObject: ContextChangeEventObject
   @JSName("com.sun.star.ui.ContextMenuExecuteEvent")
-  var comDotsunDotstarDotuiDotContextMenuExecuteEvent: ContextMenuExecuteEvent = js.native
+  var comDotsunDotstarDotuiDotContextMenuExecuteEvent: ContextMenuExecuteEvent
   @JSName("com.sun.star.ui.LayoutSize")
-  var comDotsunDotstarDotuiDotLayoutSize: LayoutSize = js.native
+  var comDotsunDotstarDotuiDotLayoutSize: LayoutSize
   @JSName("com.sun.star.ui.dialogs.DialogClosedEvent")
-  var comDotsunDotstarDotuiDotdialogsDotDialogClosedEvent: DialogClosedEvent = js.native
+  var comDotsunDotstarDotuiDotdialogsDotDialogClosedEvent: DialogClosedEvent
   @JSName("com.sun.star.ui.dialogs.FilePickerEvent")
-  var comDotsunDotstarDotuiDotdialogsDotFilePickerEvent: FilePickerEvent = js.native
+  var comDotsunDotstarDotuiDotdialogsDotFilePickerEvent: FilePickerEvent
   @JSName("com.sun.star.uno.Uik")
-  var comDotsunDotstarDotunoDotUik: Uik = js.native
+  var comDotsunDotstarDotunoDotUik: Uik
   @JSName("com.sun.star.util.AliasProgrammaticPair")
-  var comDotsunDotstarDotutilDotAliasProgrammaticPair: AliasProgrammaticPair = js.native
+  var comDotsunDotstarDotutilDotAliasProgrammaticPair: AliasProgrammaticPair
   @JSName("com.sun.star.util.AtomClassRequest")
-  var comDotsunDotstarDotutilDotAtomClassRequest: AtomClassRequest = js.native
+  var comDotsunDotstarDotutilDotAtomClassRequest: AtomClassRequest
   @JSName("com.sun.star.util.AtomDescription")
-  var comDotsunDotstarDotutilDotAtomDescription: AtomDescription = js.native
+  var comDotsunDotstarDotutilDotAtomDescription: AtomDescription
   @JSName("com.sun.star.util.CellProtection")
-  var comDotsunDotstarDotutilDotCellProtection: CellProtection = js.native
+  var comDotsunDotstarDotutilDotCellProtection: CellProtection
   @JSName("com.sun.star.util.ChangesEvent")
-  var comDotsunDotstarDotutilDotChangesEvent: ChangesEvent = js.native
+  var comDotsunDotstarDotutilDotChangesEvent: ChangesEvent
   @JSName("com.sun.star.util.DataEditorEvent")
-  var comDotsunDotstarDotutilDotDataEditorEvent: DataEditorEvent = js.native
+  var comDotsunDotstarDotutilDotDataEditorEvent: DataEditorEvent
   @JSName("com.sun.star.util.Date")
-  var comDotsunDotstarDotutilDotDate: typingsSlinky.activexLibreoffice.com_.sun.star.util.Date = js.native
+  var comDotsunDotstarDotutilDotDate: typingsSlinky.activexLibreoffice.com_.sun.star.util.Date
   @JSName("com.sun.star.util.DateTime")
-  var comDotsunDotstarDotutilDotDateTime: DateTime = js.native
+  var comDotsunDotstarDotutilDotDateTime: DateTime
   @JSName("com.sun.star.util.DateTimeRange")
-  var comDotsunDotstarDotutilDotDateTimeRange: DateTimeRange = js.native
+  var comDotsunDotstarDotutilDotDateTimeRange: DateTimeRange
   @JSName("com.sun.star.util.DateTimeWithTimezone")
-  var comDotsunDotstarDotutilDotDateTimeWithTimezone: DateTimeWithTimezone = js.native
+  var comDotsunDotstarDotutilDotDateTimeWithTimezone: DateTimeWithTimezone
   @JSName("com.sun.star.util.DateWithTimezone")
-  var comDotsunDotstarDotutilDotDateWithTimezone: DateWithTimezone = js.native
+  var comDotsunDotstarDotutilDotDateWithTimezone: DateWithTimezone
   @JSName("com.sun.star.util.Duration")
-  var comDotsunDotstarDotutilDotDuration: Duration = js.native
+  var comDotsunDotstarDotutilDotDuration: Duration
   @JSName("com.sun.star.util.ElementChange")
-  var comDotsunDotstarDotutilDotElementChange: ElementChange = js.native
+  var comDotsunDotstarDotutilDotElementChange: ElementChange
   @JSName("com.sun.star.util.ModeChangeEvent")
-  var comDotsunDotstarDotutilDotModeChangeEvent: ModeChangeEvent = js.native
+  var comDotsunDotstarDotutilDotModeChangeEvent: ModeChangeEvent
   @JSName("com.sun.star.util.RevisionTag")
-  var comDotsunDotstarDotutilDotRevisionTag: RevisionTag = js.native
+  var comDotsunDotstarDotutilDotRevisionTag: RevisionTag
   @JSName("com.sun.star.util.SearchOptions")
-  var comDotsunDotstarDotutilDotSearchOptions: SearchOptions = js.native
+  var comDotsunDotstarDotutilDotSearchOptions: SearchOptions
   @JSName("com.sun.star.util.SearchOptions2")
-  var comDotsunDotstarDotutilDotSearchOptions2: SearchOptions2 = js.native
+  var comDotsunDotstarDotutilDotSearchOptions2: SearchOptions2
   @JSName("com.sun.star.util.SearchResult")
-  var comDotsunDotstarDotutilDotSearchResult: SearchResult = js.native
+  var comDotsunDotstarDotutilDotSearchResult: SearchResult
   @JSName("com.sun.star.util.SortField")
-  var comDotsunDotstarDotutilDotSortField: SortField = js.native
+  var comDotsunDotstarDotutilDotSortField: SortField
   @JSName("com.sun.star.util.Time")
-  var comDotsunDotstarDotutilDotTime: Time = js.native
+  var comDotsunDotstarDotutilDotTime: Time
   @JSName("com.sun.star.util.TimeWithTimezone")
-  var comDotsunDotstarDotutilDotTimeWithTimezone: TimeWithTimezone = js.native
+  var comDotsunDotstarDotutilDotTimeWithTimezone: TimeWithTimezone
   @JSName("com.sun.star.util.URL")
-  var comDotsunDotstarDotutilDotURL: URL = js.native
+  var comDotsunDotstarDotutilDotURL: URL
   @JSName("com.sun.star.view.PrintJobEvent")
-  var comDotsunDotstarDotviewDotPrintJobEvent: PrintJobEvent = js.native
+  var comDotsunDotstarDotviewDotPrintJobEvent: PrintJobEvent
   @JSName("com.sun.star.view.PrintableStateEvent")
-  var comDotsunDotstarDotviewDotPrintableStateEvent: PrintableStateEvent = js.native
+  var comDotsunDotstarDotviewDotPrintableStateEvent: PrintableStateEvent
   @JSName("com.sun.star.xml.Attribute")
-  var comDotsunDotstarDotxmlDotAttribute: Attribute = js.native
+  var comDotsunDotstarDotxmlDotAttribute: Attribute
   @JSName("com.sun.star.xml.AttributeData")
-  var comDotsunDotstarDotxmlDotAttributeData: AttributeData = js.native
+  var comDotsunDotstarDotxmlDotAttributeData: AttributeData
   @JSName("com.sun.star.xml.FastAttribute")
-  var comDotsunDotstarDotxmlDotFastAttribute: FastAttribute = js.native
+  var comDotsunDotstarDotxmlDotFastAttribute: FastAttribute
   @JSName("com.sun.star.xml.crypto.sax.ElementStackItem")
-  var comDotsunDotstarDotxmlDotcryptoDotsaxDotElementStackItem: ElementStackItem = js.native
+  var comDotsunDotstarDotxmlDotcryptoDotsaxDotElementStackItem: ElementStackItem
   @JSName("com.sun.star.xml.csax.XMLAttribute")
-  var comDotsunDotstarDotxmlDotcsaxDotXMLAttribute: XMLAttribute = js.native
+  var comDotsunDotstarDotxmlDotcsaxDotXMLAttribute: XMLAttribute
   @JSName("com.sun.star.xml.sax.InputSource")
-  var comDotsunDotstarDotxmlDotsaxDotInputSource: InputSource = js.native
+  var comDotsunDotstarDotxmlDotsaxDotInputSource: InputSource
   @JSName("com.sun.star.xml.xpath.Libxml2ExtensionHandle")
-  var comDotsunDotstarDotxmlDotxpathDotLibxml2ExtensionHandle: Libxml2ExtensionHandle = js.native
+  var comDotsunDotstarDotxmlDotxpathDotLibxml2ExtensionHandle: Libxml2ExtensionHandle
 }
 
 object StructNameMap {
@@ -1684,1537 +1683,5 @@ object StructNameMap {
     __obj.updateDynamic("com.sun.star.sheet.DataPilotFieldLayoutInfo")(comDotsunDotstarDotsheetDotDataPilotFieldLayoutInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructNameMap]
   }
-  @scala.inline
-  implicit class StructNameMapOps[Self <: StructNameMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComDotsunDotstarDotaccessibilityDotAccessibleEventObject(value: AccessibleEventObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.accessibility.AccessibleEventObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotaccessibilityDotAccessibleRelation(value: AccessibleRelation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.accessibility.AccessibleRelation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotaccessibilityDotAccessibleTableModelChange(value: AccessibleTableModelChange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.accessibility.AccessibleTableModelChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotaccessibilityDotTextSegment(value: TextSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.accessibility.TextSegment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotEvent(value: Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.Event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotTargetProperties(value: TargetProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.TargetProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotTimeFilterPair(value: TimeFilterPair): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.TimeFilterPair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotanimationsDotValuePair(value: ValuePair): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.animations.ValuePair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotActionEvent(value: ActionEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.ActionEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotAdjustmentEvent(value: AdjustmentEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.AdjustmentEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotDeviceInfo(value: DeviceInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.DeviceInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotDockingData(value: DockingData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.DockingData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotDockingEvent(value: DockingEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.DockingEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotEndDockingEvent(value: EndDockingEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.EndDockingEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotEndPopupModeEvent(value: EndPopupModeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.EndPopupModeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotEnhancedMouseEvent(value: EnhancedMouseEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.EnhancedMouseEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotFocusEvent(value: FocusEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.FocusEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotFontDescriptor(value: FontDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.FontDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotGradient(value: Gradient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.Gradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotInputEvent(value: InputEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.InputEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotItemEvent(value: ItemEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.ItemEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotItemListEvent(value: ItemListEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.ItemListEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotKeyEvent(value: KeyEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.KeyEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotKeyStroke(value: KeyStroke): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.KeyStroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotMenuEvent(value: MenuEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.MenuEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotMouseEvent(value: MouseEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.MouseEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotPaintEvent(value: PaintEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.PaintEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotPoint(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.Point")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotRectangle(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.Rectangle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotSelection(value: Selection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.Selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotSimpleFontMetric(value: SimpleFontMetric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.SimpleFontMetric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.Size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotSpinEvent(value: SpinEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.SpinEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotSystemDependentXWindow(value: SystemDependentXWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.SystemDependentXWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotTextEvent(value: TextEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.TextEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotVclContainerEvent(value: VclContainerEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.VclContainerEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotWindowDescriptor(value: WindowDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.WindowDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotWindowEvent(value: WindowEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.WindowEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotGridColumnEvent(value: GridColumnEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.GridColumnEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotGridDataEvent(value: GridDataEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.GridDataEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDotgridDotGridSelectionEvent(value: GridSelectionEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.grid.GridSelectionEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottabDotTabPageActivatedEvent(value: TabPageActivatedEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tab.TabPageActivatedEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottreeDotTreeDataModelEvent(value: TreeDataModelEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tree.TreeDataModelEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotawtDottreeDotTreeExpansionEvent(value: TreeExpansionEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.awt.tree.TreeExpansionEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotGetDirectPropertyTolerantResult(value: GetDirectPropertyTolerantResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.GetDirectPropertyTolerantResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotGetPropertyTolerantResult(value: GetPropertyTolerantResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.GetPropertyTolerantResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotNamedValue(value: NamedValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.NamedValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotProperty(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.Property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotPropertyChangeEvent(value: PropertyChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.PropertyChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotPropertySetInfoChangeEvent(value: PropertySetInfoChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.PropertySetInfoChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotPropertyStateChangeEvent(value: PropertyStateChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.PropertyStateChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotPropertyValue(value: PropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.PropertyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotSetPropertyTolerantFailed(value: SetPropertyTolerantFailed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.SetPropertyTolerantFailed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbeansDotStringPair(value: StringPair): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.beans.StringPair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotProtocolProperty(value: ProtocolProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.ProtocolProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotCurrency(value: Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.Currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotDate(value: Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.Date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotDecimal(value: Decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.Decimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotNamedArgument(value: NamedArgument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.NamedArgument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotPropertyPutArgument(value: PropertyPutArgument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.PropertyPutArgument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotbridgeDotoleautomationDotSCode(value: SCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.bridge.oleautomation.SCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotDataPointLabel(value: DataPointLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.DataPointLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotFillBitmap(value: FillBitmap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.FillBitmap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotIncrementData(value: IncrementData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.IncrementData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotInterpretedData(value: InterpretedData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.InterpretedData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotLightSource(value: LightSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.LightSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotRelativePosition(value: RelativePosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.RelativePosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotRelativeSize(value: RelativeSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.RelativeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotScaleData(value: ScaleData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.ScaleData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotSubIncrement(value: SubIncrement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.SubIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotSymbol(value: Symbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.Symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchart2DotdataDotHighlightedRange(value: HighlightedRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart2.data.HighlightedRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartDataChangeEvent(value: ChartDataChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartDataChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartDataRow(value: ChartDataRow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartDataRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartDataValue(value: ChartDataValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartDataValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotChartSeriesAddress(value: ChartSeriesAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.ChartSeriesAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotTimeIncrement(value: TimeIncrement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.TimeIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotchartDotTimeInterval(value: TimeInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.chart.TimeInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotComponentChangeEvent(value: ComponentChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.ComponentChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotPropertyInfo(value: PropertyInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.PropertyInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconfigurationDotbackendDotTemplateIdentifier(value: TemplateIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.configuration.backend.TemplateIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotconnectionDotSocketPermission(value: SocketPermission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.connection.SocketPermission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotcontainerDotContainerEvent(value: ContainerEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.container.ContainerEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotDataFlavor(value: DataFlavor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.DataFlavor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotclipboardDotClipboardEvent(value: ClipboardEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.clipboard.ClipboardEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotdndDotDragGestureEvent(value: DragGestureEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.dnd.DragGestureEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotdndDotDragSourceDragEvent(value: DragSourceDragEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.dnd.DragSourceDragEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotdndDotDragSourceDropEvent(value: DragSourceDropEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.dnd.DragSourceDropEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotdndDotDragSourceEvent(value: DragSourceEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.dnd.DragSourceEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotdndDotDropTargetDragEnterEvent(value: DropTargetDragEnterEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.dnd.DropTargetDragEnterEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotdndDotDropTargetDragEvent(value: DropTargetDragEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.dnd.DropTargetDragEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotdndDotDropTargetDropEvent(value: DropTargetDropEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.dnd.DropTargetDropEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdatatransferDotdndDotDropTargetEvent(value: DropTargetEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.datatransfer.dnd.DropTargetEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdeploymentDotUpdateInformationEntry(value: UpdateInformationEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.deployment.UpdateInformationEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdocumentDotCmisProperty(value: CmisProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.document.CmisProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdocumentDotCmisVersion(value: CmisVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.document.CmisVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdocumentDotDocumentEvent(value: DocumentEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.document.DocumentEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdocumentDotEventObject(value: EventObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.document.EventObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdocumentDotUndoManagerEvent(value: UndoManagerEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.document.UndoManagerEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotBezierPoint(value: BezierPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.BezierPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotBoundVolume(value: BoundVolume): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.BoundVolume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotCameraGeometry(value: CameraGeometry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.CameraGeometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotDirection3D(value: Direction3D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.Direction3D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotEnhancedCustomShapeAdjustmentValue(value: EnhancedCustomShapeAdjustmentValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.EnhancedCustomShapeAdjustmentValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotEnhancedCustomShapeParameter(value: EnhancedCustomShapeParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.EnhancedCustomShapeParameter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotEnhancedCustomShapeParameterPair(value: EnhancedCustomShapeParameterPair): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.EnhancedCustomShapeParameterPair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotEnhancedCustomShapeSegment(value: EnhancedCustomShapeSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.EnhancedCustomShapeSegment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotEnhancedCustomShapeTextFrame(value: EnhancedCustomShapeTextFrame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.EnhancedCustomShapeTextFrame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotGluePoint(value: GluePoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.GluePoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotGluePoint2(value: GluePoint2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.GluePoint2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotHatch(value: Hatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.Hatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotHomogenMatrix(value: HomogenMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.HomogenMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotHomogenMatrix3(value: HomogenMatrix3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.HomogenMatrix3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotHomogenMatrix4(value: HomogenMatrix4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.HomogenMatrix4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotHomogenMatrixLine(value: HomogenMatrixLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.HomogenMatrixLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotHomogenMatrixLine3(value: HomogenMatrixLine3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.HomogenMatrixLine3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotHomogenMatrixLine4(value: HomogenMatrixLine4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.HomogenMatrixLine4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotLineDash(value: LineDash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.LineDash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotPolyPolygonBezierCoords(value: PolyPolygonBezierCoords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.PolyPolygonBezierCoords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotPolyPolygonShape3D(value: PolyPolygonShape3D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.PolyPolygonShape3D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotPosition3D(value: Position3D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.Position3D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotframeworkDotConfigurationChangeEvent(value: ConfigurationChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.framework.ConfigurationChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotdrawingDotframeworkDotTabBarButton(value: TabBarButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.drawing.framework.TabBarButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotembedDotInsertedObjectInfo(value: InsertedObjectInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.embed.InsertedObjectInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotembedDotVerbDescriptor(value: VerbDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.embed.VerbDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotembedDotVisualRepresentation(value: VisualRepresentation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.embed.VisualRepresentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotformDotDatabaseDeleteEvent(value: DatabaseDeleteEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.form.DatabaseDeleteEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotformDotDatabaseParameterEvent(value: DatabaseParameterEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.form.DatabaseParameterEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotformDotErrorEvent(value: ErrorEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.form.ErrorEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotformDotbindingDotListEntryEvent(value: ListEntryEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.form.binding.ListEntryEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotformDotruntimeDotFeatureState(value: FeatureState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.form.runtime.FeatureState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotformDotruntimeDotFilterEvent(value: FilterEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.form.runtime.FilterEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotformulaDotSymbolDescriptor(value: SymbolDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.formula.SymbolDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotBorderWidths(value: BorderWidths): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.BorderWidths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotControlCommand(value: ControlCommand): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.ControlCommand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotControlEvent(value: ControlEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.ControlEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotDispatchDescriptor(value: DispatchDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.DispatchDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotDispatchInformation(value: DispatchInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.DispatchInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotDispatchResultEvent(value: DispatchResultEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.DispatchResultEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotDispatchStatement(value: DispatchStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.DispatchStatement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotFeatureStateEvent(value: FeatureStateEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.FeatureStateEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotFrameActionEvent(value: FrameActionEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.FrameActionEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotTitleChangedEvent(value: TitleChangedEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.TitleChangedEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotClipboardFormats(value: ClipboardFormats): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.ClipboardFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotFontHeight(value: FontHeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.FontHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotItemStatus(value: ItemStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.ItemStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotLeftRightMargin(value: LeftRightMargin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.LeftRightMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotLeftRightMarginScale(value: LeftRightMarginScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.LeftRightMarginScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotTemplate(value: Template): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.Template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotUpperLowerMargin(value: UpperLowerMargin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.UpperLowerMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotUpperLowerMarginScale(value: UpperLowerMarginScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.UpperLowerMarginScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotVerb(value: Verb): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.Verb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotframeDotstatusDotVisibility(value: Visibility): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.frame.status.Visibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotAffineMatrix2D(value: AffineMatrix2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.AffineMatrix2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotAffineMatrix3D(value: AffineMatrix3D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.AffineMatrix3D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotEllipticalArc(value: EllipticalArc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.EllipticalArc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotIntegerBezierSegment2D(value: IntegerBezierSegment2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.IntegerBezierSegment2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotIntegerPoint2D(value: IntegerPoint2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.IntegerPoint2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotIntegerRectangle2D(value: IntegerRectangle2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.IntegerRectangle2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotIntegerSize2D(value: IntegerSize2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.IntegerSize2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotMatrix2D(value: Matrix2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.Matrix2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotRealBezierSegment2D(value: RealBezierSegment2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.RealBezierSegment2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotRealPoint2D(value: RealPoint2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.RealPoint2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotRealRectangle2D(value: RealRectangle2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.RealRectangle2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotRealRectangle3D(value: RealRectangle3D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.RealRectangle3D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotgeometryDotRealSize2D(value: RealSize2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.geometry.RealSize2D")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotBoundary(value: Boundary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.Boundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotCalendar(value: Calendar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.Calendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotCalendar2(value: Calendar2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.Calendar2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotCalendarItem(value: CalendarItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.CalendarItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotCalendarItem2(value: CalendarItem2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.CalendarItem2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotCurrency(value: typingsSlinky.activexLibreoffice.com_.sun.star.i18n.Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.Currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotCurrency2(value: Currency2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.Currency2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotForbiddenCharacters(value: ForbiddenCharacters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.ForbiddenCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotFormatElement(value: FormatElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.FormatElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotImplementation(value: Implementation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.Implementation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotLanguageCountryInfo(value: LanguageCountryInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.LanguageCountryInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotLineBreakHyphenationOptions(value: LineBreakHyphenationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.LineBreakHyphenationOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotLineBreakResults(value: LineBreakResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.LineBreakResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotLineBreakUserOptions(value: LineBreakUserOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.LineBreakUserOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotLocaleDataItem(value: LocaleDataItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.LocaleDataItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotNativeNumberXmlAttributes(value: NativeNumberXmlAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.NativeNumberXmlAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotNumberFormatCode(value: NumberFormatCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.NumberFormatCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotParseResult(value: ParseResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.ParseResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDoti18nDotTextConversionResult(value: TextConversionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.i18n.TextConversionResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotinspectionDotLineDescriptor(value: LineDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.inspection.LineDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotinspectionDotPropertyCategoryDescriptor(value: PropertyCategoryDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.inspection.PropertyCategoryDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotioDotDataTransferEvent(value: DataTransferEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.io.DataTransferEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotioDotFilePermission(value: FilePermission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.io.FilePermission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotlangDotEventObject(value: typingsSlinky.activexLibreoffice.com_.sun.star.lang.EventObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.lang.EventObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotlangDotLocale(value: Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.lang.Locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotlinguistic2DotDictionaryEvent(value: DictionaryEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.linguistic2.DictionaryEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotlinguistic2DotDictionaryListEvent(value: DictionaryListEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.linguistic2.DictionaryListEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotlinguistic2DotLinguServiceEvent(value: LinguServiceEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.linguistic2.LinguServiceEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotlinguistic2DotProofreadingResult(value: ProofreadingResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.linguistic2.ProofreadingResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotlinguistic2DotSingleProofreadingError(value: SingleProofreadingError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.linguistic2.SingleProofreadingError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotloggingDotLogRecord(value: LogRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.logging.LogRecord")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotmailDotMailAttachment(value: MailAttachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.mail.MailAttachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotmozillaDotMenuMultipleChange(value: MenuMultipleChange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.mozilla.MenuMultipleChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotmozillaDotMenuSingleChange(value: MenuSingleChange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.mozilla.MenuSingleChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotpackagesDotzipDotZipEntry(value: ZipEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.packages.zip.ZipEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotpresentationDotParagraphTarget(value: ParagraphTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.presentation.ParagraphTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrdfDotStatement(value: Statement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rdf.Statement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotreflectionDotParamInfo(value: ParamInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.reflection.ParamInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotARGBColor(value: ARGBColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.ARGBColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotAnimationAttributes(value: AnimationAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.AnimationAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotCaret(value: Caret): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.Caret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotColorProfile(value: ColorProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.ColorProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotFloatingPointBitmapLayout(value: FloatingPointBitmapLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.FloatingPointBitmapLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotFontInfo(value: FontInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.FontInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotFontMetrics(value: FontMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.FontMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotFontRequest(value: FontRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.FontRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotIntegerBitmapLayout(value: IntegerBitmapLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.IntegerBitmapLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotPanose(value: Panose): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.Panose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotRGBColor(value: RGBColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.RGBColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotRenderState(value: RenderState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.RenderState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotStringContext(value: StringContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.StringContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotStrokeAttributes(value: StrokeAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.StrokeAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotTextHit(value: TextHit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.TextHit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotTexture(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.Texture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotrenderingDotViewState(value: ViewState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.rendering.ViewState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscannerDotScannerContext(value: ScannerContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.scanner.ScannerContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotAllEventObject(value: AllEventObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.AllEventObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotArrayWrapper(value: ArrayWrapper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.ArrayWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotContextInformation(value: ContextInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.ContextInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotEventListener(value: EventListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.EventListener")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotFinishEngineEvent(value: FinishEngineEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.FinishEngineEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotInterruptEngineEvent(value: InterruptEngineEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.InterruptEngineEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotInvocationInfo(value: InvocationInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.InvocationInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotModuleInfo(value: ModuleInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.ModuleInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotNativeObjectWrapper(value: NativeObjectWrapper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.NativeObjectWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotScriptEvent(value: ScriptEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.ScriptEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotScriptEventDescriptor(value: ScriptEventDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.ScriptEventDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotscriptDotvbaDotVBAScriptEvent(value: VBAScriptEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.script.vba.VBAScriptEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsdbDotDatabaseRegistrationEvent(value: DatabaseRegistrationEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sdb.DatabaseRegistrationEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsdbDotRowChangeEvent(value: RowChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sdb.RowChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsdbDotRowsChangeEvent(value: RowsChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sdb.RowsChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsdbDotSQLErrorEvent(value: SQLErrorEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sdb.SQLErrorEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsdbDotapplicationDotCopyTableRowEvent(value: CopyTableRowEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sdb.application.CopyTableRowEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsdbDotapplicationDotNamedDatabaseObject(value: NamedDatabaseObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sdb.application.NamedDatabaseObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsdbcDotChangeEvent(value: ChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sdbc.ChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsdbcDotDriverPropertyInfo(value: DriverPropertyInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sdbc.DriverPropertyInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsecurityDotAllPermission(value: AllPermission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.security.AllPermission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsecurityDotCertAltNameEntry(value: CertAltNameEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.security.CertAltNameEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsecurityDotDocumentSignatureInformation(value: DocumentSignatureInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.security.DocumentSignatureInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsecurityDotRuntimePermission(value: RuntimePermission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.security.RuntimePermission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsheetDotActivationEvent(value: ActivationEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sheet.ActivationEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsheetDotComplexReference(value: ComplexReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sheet.ComplexReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsheetDotDDEItemInfo(value: DDEItemInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sheet.DDEItemInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsheetDotDDELinkInfo(value: DDELinkInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sheet.DDELinkInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsheetDotDataPilotFieldAutoShowInfo(value: DataPilotFieldAutoShowInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sheet.DataPilotFieldAutoShowInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsheetDotDataPilotFieldFilter(value: DataPilotFieldFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sheet.DataPilotFieldFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsheetDotDataPilotFieldGroupInfo(value: DataPilotFieldGroupInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sheet.DataPilotFieldGroupInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComDotsunDotstarDotsheetDotDataPilotFieldLayoutInfo(value: DataPilotFieldLayoutInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("com.sun.star.sheet.DataPilotFieldLayoutInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

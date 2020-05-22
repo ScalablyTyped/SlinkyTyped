@@ -4,219 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextareaHTMLAttributes[T] extends HTMLAttributes[T] {
-  var autoComplete: js.UndefOr[String] = js.native
-  var autoFocus: js.UndefOr[Boolean] = js.native
-  var cols: js.UndefOr[Double] = js.native
-  var dirName: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var form: js.UndefOr[String] = js.native
-  var maxLength: js.UndefOr[Double] = js.native
-  var minLength: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
+  var autoComplete: js.UndefOr[String] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var cols: js.UndefOr[Double] = js.undefined
+  var dirName: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var form: js.UndefOr[String] = js.undefined
+  var maxLength: js.UndefOr[Double] = js.undefined
+  var minLength: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
   @JSName("onChange")
-  var onChange_TextareaHTMLAttributes: js.UndefOr[ChangeEventHandler[T]] = js.native
-  var readOnly: js.UndefOr[Boolean] = js.native
-  var required: js.UndefOr[Boolean] = js.native
-  var rows: js.UndefOr[Double] = js.native
-  var value: js.UndefOr[String | js.Array[String] | Double] = js.native
-  var wrap: js.UndefOr[String] = js.native
+  var onChange_TextareaHTMLAttributes: js.UndefOr[ChangeEventHandler[T]] = js.undefined
+  var readOnly: js.UndefOr[Boolean] = js.undefined
+  var required: js.UndefOr[Boolean] = js.undefined
+  var rows: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[String | js.Array[String] | Double] = js.undefined
+  var wrap: js.UndefOr[String] = js.undefined
 }
 
 object TextareaHTMLAttributes {
   @scala.inline
-  def apply[T](): TextareaHTMLAttributes[T] = {
+  def apply[T](
+    HTMLAttributes: HTMLAttributes[T] = null,
+    autoComplete: String = null,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    cols: js.UndefOr[Double] = js.undefined,
+    dirName: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    form: String = null,
+    maxLength: js.UndefOr[Double] = js.undefined,
+    minLength: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    onChange: ChangeEvent[T] => Unit = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    required: js.UndefOr[Boolean] = js.undefined,
+    rows: js.UndefOr[Double] = js.undefined,
+    value: String | js.Array[String] | Double = null,
+    wrap: String = null
+  ): TextareaHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (HTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, HTMLAttributes)
+    if (autoComplete != null) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cols)) __obj.updateDynamic("cols")(cols.get.asInstanceOf[js.Any])
+    if (dirName != null) __obj.updateDynamic("dirName")(dirName.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLength)) __obj.updateDynamic("maxLength")(maxLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minLength)) __obj.updateDynamic("minLength")(minLength.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (wrap != null) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextareaHTMLAttributes[T]]
   }
-  @scala.inline
-  implicit class TextareaHTMLAttributesOps[Self[t] <: TextareaHTMLAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAutoComplete(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoComplete: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCols(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCols: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dirName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dirName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForm(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLength: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinLength(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinLength: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: ChangeEvent[T] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String | js.Array[String] | Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

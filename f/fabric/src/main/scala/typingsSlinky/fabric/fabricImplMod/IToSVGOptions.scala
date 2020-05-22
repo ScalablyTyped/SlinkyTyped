@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IToSVGOptions extends js.Object {
   /**
-  	 * Encoding of SVG output
-  	 */
-  var encoding: js.UndefOr[String] = js.native
+    * Encoding of SVG output
+    */
+  var encoding: js.UndefOr[String] = js.undefined
   /**
-  	 * desired height of svg with or without units
-  	 */
-  var height: js.UndefOr[Double] = js.native
+    * desired height of svg with or without units
+    */
+  var height: js.UndefOr[Double] = js.undefined
   /**
-  	 * If true xml tag is not included
-  	 */
-  var suppressPreamble: js.UndefOr[Boolean] = js.native
+    * If true xml tag is not included
+    */
+  var suppressPreamble: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * SVG viewbox object
-  	 */
-  var viewBox: js.UndefOr[IViewBox] = js.native
+    * SVG viewbox object
+    */
+  var viewBox: js.UndefOr[IViewBox] = js.undefined
   /**
-  	 * desired width of svg with or without units
-  	 */
-  var width: js.UndefOr[Double] = js.native
+    * desired width of svg with or without units
+    */
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object IToSVGOptions {
   @scala.inline
-  def apply(): IToSVGOptions = {
+  def apply(
+    encoding: String = null,
+    height: js.UndefOr[Double] = js.undefined,
+    suppressPreamble: js.UndefOr[Boolean] = js.undefined,
+    viewBox: IViewBox = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): IToSVGOptions = {
     val __obj = js.Dynamic.literal()
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressPreamble)) __obj.updateDynamic("suppressPreamble")(suppressPreamble.get.asInstanceOf[js.Any])
+    if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IToSVGOptions]
   }
-  @scala.inline
-  implicit class IToSVGOptionsOps[Self <: IToSVGOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressPreamble(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressPreamble")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressPreamble: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressPreamble")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewBox(value: IViewBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

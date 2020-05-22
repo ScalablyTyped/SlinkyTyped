@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used to provide the details about a call that was just blocked. */
-@js.native
 trait PhoneCallBlockedTriggerDetails extends js.Object {
   /** Gets the reason why a phone call was blocked. */
-  var callBlockedReason: PhoneCallBlockedReason = js.native
+  var callBlockedReason: PhoneCallBlockedReason
   /** Gets the ID of the phone call that was just blocked. */
-  var lineId: String = js.native
+  var lineId: String
   /** Gets the phone number of the blocked call. */
-  var phoneNumber: String = js.native
+  var phoneNumber: String
 }
 
 object PhoneCallBlockedTriggerDetails {
@@ -21,31 +20,5 @@ object PhoneCallBlockedTriggerDetails {
     val __obj = js.Dynamic.literal(callBlockedReason = callBlockedReason.asInstanceOf[js.Any], lineId = lineId.asInstanceOf[js.Any], phoneNumber = phoneNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhoneCallBlockedTriggerDetails]
   }
-  @scala.inline
-  implicit class PhoneCallBlockedTriggerDetailsOps[Self <: PhoneCallBlockedTriggerDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallBlockedReason(value: PhoneCallBlockedReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callBlockedReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhoneNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

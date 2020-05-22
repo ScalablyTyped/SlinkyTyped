@@ -36,65 +36,18 @@ trait SchemaModifyAckDeadlineRequest extends js.Object {
 
 object SchemaModifyAckDeadlineRequest {
   @scala.inline
-  def apply(): SchemaModifyAckDeadlineRequest = {
+  def apply(
+    ackDeadlineSeconds: js.UndefOr[Double] = js.undefined,
+    ackId: String = null,
+    ackIds: js.Array[String] = null,
+    subscription: String = null
+  ): SchemaModifyAckDeadlineRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ackDeadlineSeconds)) __obj.updateDynamic("ackDeadlineSeconds")(ackDeadlineSeconds.get.asInstanceOf[js.Any])
+    if (ackId != null) __obj.updateDynamic("ackId")(ackId.asInstanceOf[js.Any])
+    if (ackIds != null) __obj.updateDynamic("ackIds")(ackIds.asInstanceOf[js.Any])
+    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModifyAckDeadlineRequest]
   }
-  @scala.inline
-  implicit class SchemaModifyAckDeadlineRequestOps[Self <: SchemaModifyAckDeadlineRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAckDeadlineSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAckDeadlineSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAckId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAckId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAckIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAckIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
   *
   * Those values are provided by initial parameters.
   */
-@js.native
 trait FixedTSAAdapter extends js.Object {
-  def getTSTHex(msgHex: String, hashAlg: String): String = js.native
+  def getTSTHex(msgHex: String, hashAlg: String): String
 }
 
 object FixedTSAAdapter {
@@ -30,19 +29,5 @@ object FixedTSAAdapter {
     val __obj = js.Dynamic.literal(getTSTHex = js.Any.fromFunction2(getTSTHex))
     __obj.asInstanceOf[FixedTSAAdapter]
   }
-  @scala.inline
-  implicit class FixedTSAAdapterOps[Self <: FixedTSAAdapter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetTSTHex(value: (String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTSTHex")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

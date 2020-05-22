@@ -5,108 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SocketConnectParams extends js.Object {
-  var complete: js.UndefOr[js.Function0[Unit]] = js.native
-  var fail: js.UndefOr[js.Function0[Unit]] = js.native
-  var header: js.UndefOr[StringDictionary[String]] = js.native
-  var method: js.UndefOr[RequestMethod] = js.native
-  var protocols: js.UndefOr[js.Array[String]] = js.native
-  var success: js.UndefOr[js.Function0[Unit]] = js.native
-  var url: String = js.native
+  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var fail: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var header: js.UndefOr[StringDictionary[String]] = js.undefined
+  var method: js.UndefOr[RequestMethod] = js.undefined
+  var protocols: js.UndefOr[js.Array[String]] = js.undefined
+  var success: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var url: String
 }
 
 object SocketConnectParams {
   @scala.inline
-  def apply(url: String): SocketConnectParams = {
+  def apply(
+    url: String,
+    complete: () => Unit = null,
+    fail: () => Unit = null,
+    header: StringDictionary[String] = null,
+    method: RequestMethod = null,
+    protocols: js.Array[String] = null,
+    success: () => Unit = null
+  ): SocketConnectParams = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (protocols != null) __obj.updateDynamic("protocols")(protocols.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction0(success))
     __obj.asInstanceOf[SocketConnectParams]
   }
-  @scala.inline
-  implicit class SocketConnectParamsOps[Self <: SocketConnectParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: RequestMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocols(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

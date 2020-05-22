@@ -17,115 +17,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojpopup.ojPopupSettableProperties> */
-@js.native
 trait ojPopupSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var autoDismiss: js.UndefOr[none | focusLoss] = js.native
-  var chrome: js.UndefOr[default | none] = js.native
-  var initialFocus: js.UndefOr[auto | none | firstFocusable | popup] = js.native
-  var modality: js.UndefOr[modeless | modal] = js.native
-  var position: js.UndefOr[Position] = js.native
-  var tail: js.UndefOr[none | simple] = js.native
-  var translations: js.UndefOr[AriaCloseSkipLink] = js.native
+  var autoDismiss: js.UndefOr[none | focusLoss] = js.undefined
+  var chrome: js.UndefOr[default | none] = js.undefined
+  var initialFocus: js.UndefOr[auto | none | firstFocusable | popup] = js.undefined
+  var modality: js.UndefOr[modeless | modal] = js.undefined
+  var position: js.UndefOr[Position] = js.undefined
+  var tail: js.UndefOr[none | simple] = js.undefined
+  var translations: js.UndefOr[AriaCloseSkipLink] = js.undefined
 }
 
 object ojPopupSettablePropertiesLenient {
   @scala.inline
-  def apply(): ojPopupSettablePropertiesLenient = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    autoDismiss: none | focusLoss = null,
+    chrome: default | none = null,
+    initialFocus: auto | none | firstFocusable | popup = null,
+    modality: modeless | modal = null,
+    position: Position = null,
+    tail: none | simple = null,
+    translations: AriaCloseSkipLink = null
+  ): ojPopupSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (autoDismiss != null) __obj.updateDynamic("autoDismiss")(autoDismiss.asInstanceOf[js.Any])
+    if (chrome != null) __obj.updateDynamic("chrome")(chrome.asInstanceOf[js.Any])
+    if (initialFocus != null) __obj.updateDynamic("initialFocus")(initialFocus.asInstanceOf[js.Any])
+    if (modality != null) __obj.updateDynamic("modality")(modality.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (tail != null) __obj.updateDynamic("tail")(tail.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojPopupSettablePropertiesLenient]
   }
-  @scala.inline
-  implicit class ojPopupSettablePropertiesLenientOps[Self <: ojPopupSettablePropertiesLenient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoDismiss(value: none | focusLoss): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDismiss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChrome(value: default | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChrome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialFocus(value: auto | none | firstFocusable | popup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModality(value: modeless | modal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTail(value: none | simple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: AriaCloseSkipLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

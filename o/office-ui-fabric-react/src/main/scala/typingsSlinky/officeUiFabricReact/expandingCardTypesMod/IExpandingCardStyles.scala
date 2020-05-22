@@ -6,89 +6,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IExpandingCardStyles extends IBaseCardStyles {
   /**
     * Style for the main card element.
     */
-  var compactCard: js.UndefOr[IStyle] = js.native
+  var compactCard: js.UndefOr[IStyle] = js.undefined
   /**
     * Base Style for the expanded card content.
     */
-  var expandedCard: js.UndefOr[IStyle] = js.native
+  var expandedCard: js.UndefOr[IStyle] = js.undefined
   /**
     * Style for the expanded card scroll content.
     */
-  var expandedCardScroll: js.UndefOr[IStyle] = js.native
+  var expandedCardScroll: js.UndefOr[IStyle] = js.undefined
 }
 
 object IExpandingCardStyles {
   @scala.inline
-  def apply(): IExpandingCardStyles = {
+  def apply(
+    compactCard: js.UndefOr[Null | IStyle] = js.undefined,
+    expandedCard: js.UndefOr[Null | IStyle] = js.undefined,
+    expandedCardScroll: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined
+  ): IExpandingCardStyles = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(compactCard)) __obj.updateDynamic("compactCard")(compactCard.asInstanceOf[js.Any])
+    if (!js.isUndefined(expandedCard)) __obj.updateDynamic("expandedCard")(expandedCard.asInstanceOf[js.Any])
+    if (!js.isUndefined(expandedCardScroll)) __obj.updateDynamic("expandedCardScroll")(expandedCardScroll.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExpandingCardStyles]
   }
-  @scala.inline
-  implicit class IExpandingCardStylesOps[Self <: IExpandingCardStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompactCard(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactCard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompactCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactCard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompactCardNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactCard")(null)
-        ret
-    }
-    @scala.inline
-    def withExpandedCard(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedCard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandedCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedCard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandedCardNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedCard")(null)
-        ret
-    }
-    @scala.inline
-    def withExpandedCardScroll(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedCardScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandedCardScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedCardScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandedCardScrollNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedCardScroll")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -68,185 +68,38 @@ trait SchemaChannelSettings extends js.Object {
 
 object SchemaChannelSettings {
   @scala.inline
-  def apply(): SchemaChannelSettings = {
+  def apply(
+    country: String = null,
+    defaultLanguage: String = null,
+    defaultTab: String = null,
+    description: String = null,
+    featuredChannelsTitle: String = null,
+    featuredChannelsUrls: js.Array[String] = null,
+    keywords: String = null,
+    moderateComments: js.UndefOr[Boolean] = js.undefined,
+    profileColor: String = null,
+    showBrowseView: js.UndefOr[Boolean] = js.undefined,
+    showRelatedChannels: js.UndefOr[Boolean] = js.undefined,
+    title: String = null,
+    trackingAnalyticsAccountId: String = null,
+    unsubscribedTrailer: String = null
+  ): SchemaChannelSettings = {
     val __obj = js.Dynamic.literal()
+    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
+    if (defaultLanguage != null) __obj.updateDynamic("defaultLanguage")(defaultLanguage.asInstanceOf[js.Any])
+    if (defaultTab != null) __obj.updateDynamic("defaultTab")(defaultTab.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (featuredChannelsTitle != null) __obj.updateDynamic("featuredChannelsTitle")(featuredChannelsTitle.asInstanceOf[js.Any])
+    if (featuredChannelsUrls != null) __obj.updateDynamic("featuredChannelsUrls")(featuredChannelsUrls.asInstanceOf[js.Any])
+    if (keywords != null) __obj.updateDynamic("keywords")(keywords.asInstanceOf[js.Any])
+    if (!js.isUndefined(moderateComments)) __obj.updateDynamic("moderateComments")(moderateComments.get.asInstanceOf[js.Any])
+    if (profileColor != null) __obj.updateDynamic("profileColor")(profileColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(showBrowseView)) __obj.updateDynamic("showBrowseView")(showBrowseView.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRelatedChannels)) __obj.updateDynamic("showRelatedChannels")(showRelatedChannels.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (trackingAnalyticsAccountId != null) __obj.updateDynamic("trackingAnalyticsAccountId")(trackingAnalyticsAccountId.asInstanceOf[js.Any])
+    if (unsubscribedTrailer != null) __obj.updateDynamic("unsubscribedTrailer")(unsubscribedTrailer.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannelSettings]
   }
-  @scala.inline
-  implicit class SchemaChannelSettingsOps[Self <: SchemaChannelSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultTab(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTab")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeaturedChannelsTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featuredChannelsTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeaturedChannelsTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featuredChannelsTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeaturedChannelsUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featuredChannelsUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeaturedChannelsUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featuredChannelsUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeywords(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeywords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModerateComments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moderateComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModerateComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moderateComments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowBrowseView(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBrowseView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowBrowseView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBrowseView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRelatedChannels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRelatedChannels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRelatedChannels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRelatedChannels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackingAnalyticsAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingAnalyticsAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackingAnalyticsAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingAnalyticsAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnsubscribedTrailer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribedTrailer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnsubscribedTrailer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribedTrailer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,9 +10,7 @@ import scala.scalajs.js.annotation._
   * requested number of bytes could not be allocated an exception is raised.
   */
 @js.native
-trait Uint32Array
-  extends /* index */ NumberDictionary[Double]
-     with Uint32List {
+trait Uint32Array extends /* index */ NumberDictionary[Double] {
   /**
     * The size in bytes of each element in the array.
     */

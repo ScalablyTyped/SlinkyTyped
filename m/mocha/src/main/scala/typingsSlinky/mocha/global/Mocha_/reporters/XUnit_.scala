@@ -2,6 +2,8 @@ package typingsSlinky.mocha.global.Mocha_.reporters
 
 import typingsSlinky.mocha.Mocha.IRunner
 import typingsSlinky.mocha.Mocha.Runner
+import typingsSlinky.mocha.Mocha.Stats
+import typingsSlinky.mocha.Mocha.Test
 import typingsSlinky.mocha.Mocha.reporters.XUnit
 import typingsSlinky.mocha.Mocha.reporters.XUnit.MochaOptions
 import scala.scalajs.js
@@ -21,5 +23,49 @@ class XUnit_ protected () extends XUnit {
   def this(runner: Runner) = this()
   def this(runner: IRunner, options: MochaOptions) = this()
   def this(runner: Runner, options: MochaOptions) = this()
+  /**
+    * Test failures
+    */
+  /* CompleteClass */
+  override var failures: js.Array[Test] = js.native
+  /**
+    * The configured runner
+    */
+  /* CompleteClass */
+  override var runner: Runner = js.native
+  /**
+    * Test run statistics
+    */
+  /* CompleteClass */
+  override var stats: Stats = js.native
+  /**
+    * Override done to close the stream (if it's a file).
+    *
+    * @see https://mochajs.org/api/Mocha.reporters.XUnit.html#done
+    */
+  /* CompleteClass */
+  @JSName("done")
+  override def done_MXUnit_(failures: Double, fn: js.Function1[/* failures */ Double, Unit]): Unit = js.native
+  /**
+    * Output common epilogue used by many of the bundled reporters.
+    *
+    * @see https://mochajs.org/api/Mocha.reporters.Base.html#.Base#epilogue
+    */
+  /* CompleteClass */
+  override def epilogue(): Unit = js.native
+  /**
+    * Output tag for the given `test.`
+    *
+    * @see https://mochajs.org/api/Mocha.reporters.XUnit.html#test
+    */
+  /* CompleteClass */
+  override def test(test: Test): Unit = js.native
+  /**
+    * Write out the given line.
+    *
+    * @see https://mochajs.org/api/Mocha.reporters.XUnit.html#write
+    */
+  /* CompleteClass */
+  override def write(line: String): Unit = js.native
 }
 

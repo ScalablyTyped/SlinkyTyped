@@ -6,42 +6,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TupleTypeAnnotation_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TupleTypeAnnotation_
   extends Flow
      with BaseNode
      with FlowType {
   @JSName("type")
-  var type_TupleTypeAnnotation_ : TupleTypeAnnotation = js.native
-  var types: js.Array[FlowType] = js.native
+  var type_TupleTypeAnnotation_ : TupleTypeAnnotation
+  var types: js.Array[FlowType]
 }
 
 object TupleTypeAnnotation_ {
   @scala.inline
-  def apply(`type`: TupleTypeAnnotation, types: js.Array[FlowType]): TupleTypeAnnotation_ = {
-    val __obj = js.Dynamic.literal(types = types.asInstanceOf[js.Any])
+  def apply(
+    `type`: TupleTypeAnnotation,
+    types: js.Array[FlowType],
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): TupleTypeAnnotation_ = {
+    val __obj = js.Dynamic.literal(types = types.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TupleTypeAnnotation_]
   }
-  @scala.inline
-  implicit class TupleTypeAnnotation_Ops[Self <: TupleTypeAnnotation_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: TupleTypeAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[FlowType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

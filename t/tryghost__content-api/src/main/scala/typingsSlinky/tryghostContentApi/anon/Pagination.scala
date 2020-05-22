@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Pagination extends js.Object {
-  var pagination: typingsSlinky.tryghostContentApi.mod.Pagination = js.native
+  var pagination: typingsSlinky.tryghostContentApi.mod.Pagination
 }
 
 object Pagination {
@@ -15,19 +14,5 @@ object Pagination {
     val __obj = js.Dynamic.literal(pagination = pagination.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pagination]
   }
-  @scala.inline
-  implicit class PaginationOps[Self <: Pagination] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPagination(value: typingsSlinky.tryghostContentApi.mod.Pagination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

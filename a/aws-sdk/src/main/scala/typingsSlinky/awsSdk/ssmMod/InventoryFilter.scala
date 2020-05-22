@@ -11,7 +11,7 @@ trait InventoryFilter extends js.Object {
     */
   var Key: InventoryFilterKey = js.native
   /**
-    * The type of filter.
+    * The type of filter.  The Exists filter must be used with aggregators. For more information, see Aggregating inventory data in the AWS Systems Manager User Guide. 
     */
   var Type: js.UndefOr[InventoryQueryOperatorType] = js.native
   /**
@@ -22,41 +22,10 @@ trait InventoryFilter extends js.Object {
 
 object InventoryFilter {
   @scala.inline
-  def apply(Key: InventoryFilterKey, Values: InventoryFilterValueList): InventoryFilter = {
+  def apply(Key: InventoryFilterKey, Values: InventoryFilterValueList, Type: InventoryQueryOperatorType = null): InventoryFilter = {
     val __obj = js.Dynamic.literal(Key = Key.asInstanceOf[js.Any], Values = Values.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[InventoryFilter]
   }
-  @scala.inline
-  implicit class InventoryFilterOps[Self <: InventoryFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: InventoryFilterKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValues(value: InventoryFilterValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: InventoryQueryOperatorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

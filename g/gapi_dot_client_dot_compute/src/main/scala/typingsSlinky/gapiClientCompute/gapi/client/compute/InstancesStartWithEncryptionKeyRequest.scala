@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InstancesStartWithEncryptionKeyRequest extends js.Object {
   /**
     * Array of disks associated with this instance that are protected with a customer-supplied encryption key.
@@ -13,34 +12,15 @@ trait InstancesStartWithEncryptionKeyRequest extends js.Object {
     *
     * If the disk is not protected with a customer-supplied encryption key it should not be specified.
     */
-  var disks: js.UndefOr[js.Array[CustomerEncryptionKeyProtectedDisk]] = js.native
+  var disks: js.UndefOr[js.Array[CustomerEncryptionKeyProtectedDisk]] = js.undefined
 }
 
 object InstancesStartWithEncryptionKeyRequest {
   @scala.inline
-  def apply(): InstancesStartWithEncryptionKeyRequest = {
+  def apply(disks: js.Array[CustomerEncryptionKeyProtectedDisk] = null): InstancesStartWithEncryptionKeyRequest = {
     val __obj = js.Dynamic.literal()
+    if (disks != null) __obj.updateDynamic("disks")(disks.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstancesStartWithEncryptionKeyRequest]
   }
-  @scala.inline
-  implicit class InstancesStartWithEncryptionKeyRequestOps[Self <: InstancesStartWithEncryptionKeyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisks(value: js.Array[CustomerEncryptionKeyProtectedDisk]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

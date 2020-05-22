@@ -17,29 +17,10 @@ trait SchemaClusterState extends js.Object {
 
 object SchemaClusterState {
   @scala.inline
-  def apply(): SchemaClusterState = {
+  def apply(replicationState: String = null): SchemaClusterState = {
     val __obj = js.Dynamic.literal()
+    if (replicationState != null) __obj.updateDynamic("replicationState")(replicationState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClusterState]
   }
-  @scala.inline
-  implicit class SchemaClusterStateOps[Self <: SchemaClusterState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplicationState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * The CrosshairIndicatorLegendElement class's client-side equivalent.
   */
-@js.native
 trait ASPxClientCrosshairIndicatorLegendElement extends ASPxClientCrosshairLegendElementBase {
   /**
     * Returns the Indicator whose point the legend element displays.
     */
-  var Indicator: ASPxClientIndicator = js.native
+  var Indicator: ASPxClientIndicator
 }
 
 object ASPxClientCrosshairIndicatorLegendElement {
@@ -27,19 +26,5 @@ object ASPxClientCrosshairIndicatorLegendElement {
     val __obj = js.Dynamic.literal(AxisLabelElement = AxisLabelElement.asInstanceOf[js.Any], Indicator = Indicator.asInstanceOf[js.Any], LineElement = LineElement.asInstanceOf[js.Any], Point = Point.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientCrosshairIndicatorLegendElement]
   }
-  @scala.inline
-  implicit class ASPxClientCrosshairIndicatorLegendElementOps[Self <: ASPxClientCrosshairIndicatorLegendElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndicator(value: ASPxClientIndicator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Indicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

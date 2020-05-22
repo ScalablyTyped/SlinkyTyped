@@ -14,11 +14,11 @@ package object specsSpecTestRunnerMod {
   ]
   type SpecUserPatch = js.Tuple2[
     java.lang.String, 
-    typingsSlinky.firebaseFirestore.srcModelFieldValueMod.JsonObject[js.Any]
+    typingsSlinky.firebaseFirestore.modelObjectValueMod.JsonObject[js.Any]
   ]
   type SpecUserSet = js.Tuple2[
     java.lang.String, 
-    typingsSlinky.firebaseFirestore.srcModelFieldValueMod.JsonObject[js.Any]
+    typingsSlinky.firebaseFirestore.modelObjectValueMod.JsonObject[js.Any]
   ]
   type SpecUserUnlisten = js.Tuple2[
     typingsSlinky.firebaseFirestore.coreTypesMod.TargetId, 

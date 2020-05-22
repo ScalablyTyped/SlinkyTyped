@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IWebElement extends js.Object {
   /**
     * Schedules a command to clear the {@code value} of this element. This
@@ -13,14 +12,14 @@ trait IWebElement extends js.Object {
     * @return {!Promise} A promise that will be resolved when
     *     the element has been cleared.
     */
-  def clear(): js.Promise[Unit] = js.native
+  def clear(): js.Promise[Unit]
   // region Methods
   /**
     * Schedules a command to click on this element.
     * @return {!Promise} A promise that will be resolved when
     *     the click command has completed.
     */
-  def click(): js.Promise[Unit] = js.native
+  def click(): js.Promise[Unit]
   /**
     * Schedules a command to query for the value of the given attribute of the
     * element. Will return the current value even if it has been modified after
@@ -48,7 +47,7 @@ trait IWebElement extends js.Object {
     * @return {!Promise} A promise that will be resolved with the
     *     attribute's value.
     */
-  def getAttribute(attributeName: String): js.Promise[String] = js.native
+  def getAttribute(attributeName: String): js.Promise[String]
   /**
     * Schedules a command to query for the computed style of the element
     * represented by this instance. If the element inherits the named style from
@@ -63,64 +62,64 @@ trait IWebElement extends js.Object {
     * @return {!Promise} A promise that will be resolved with the
     *     requested CSS value.
     */
-  def getCssValue(cssStyleProperty: String): js.Promise[String] = js.native
+  def getCssValue(cssStyleProperty: String): js.Promise[String]
   /**
     * @return {!Promise.<WebElement.Id>} A promise
     *     that resolves to this element's JSON representation as defined by the
     *     WebDriver wire protocol.
     * @see http://code.google.com/p/selenium/wiki/JsonWireProtocol
     */
-  def getId(): js.Promise[IWebElementId] = js.native
+  def getId(): js.Promise[IWebElementId]
   /**
     * Schedules a command to compute the location of this element in page space.
     * @return {!Promise} A promise that will be resolved to the
     *     element's location as a {@code {x:number, y:number}} object.
     */
-  def getLocation(): js.Promise[ILocation] = js.native
+  def getLocation(): js.Promise[ILocation]
   /**
     * Returns an object describing an element's location, in pixels relative to
     * the document element, and the element's size in pixels.
     */
-  def getRect(): js.Promise[IRectangle] = js.native
+  def getRect(): js.Promise[IRectangle]
   /**
     * Schedules a command to compute the size of this element's bounding box, in
     * pixels.
     * @return {!Promise} A promise that will be resolved with the
     *     element's size as a {@code {width:number, height:number}} object.
     */
-  def getSize(): js.Promise[ISize] = js.native
+  def getSize(): js.Promise[ISize]
   /**
     * Schedules a command to query for the tag/node name of this element.
     * @return {!Promise} A promise that will be resolved with the
     *     element's tag name.
     */
-  def getTagName(): js.Promise[String] = js.native
+  def getTagName(): js.Promise[String]
   /**
     * Get the visible (i.e. not hidden by CSS) innerText of this element,
     * including sub-elements, without any leading or trailing whitespace.
     * @return {!Promise} A promise that will be resolved with the
     *     element's visible text.
     */
-  def getText(): js.Promise[String] = js.native
+  def getText(): js.Promise[String]
   /**
     * Schedules a command to test whether this element is currently displayed.
     * @return {!Promise} A promise that will be resolved with
     *     whether this element is currently visible on the page.
     */
-  def isDisplayed(): js.Promise[Boolean] = js.native
+  def isDisplayed(): js.Promise[Boolean]
   /**
     * Schedules a command to query whether the DOM element represented by this
     * instance is enabled, as dicted by the {@code disabled} attribute.
     * @return {!Promise} A promise that will be resolved with
     *     whether this element is currently enabled.
     */
-  def isEnabled(): js.Promise[Boolean] = js.native
+  def isEnabled(): js.Promise[Boolean]
   /**
     * Schedules a command to query whether this element is selected.
     * @return {!Promise} A promise that will be resolved with
     *     whether this element is currently selected.
     */
-  def isSelected(): js.Promise[Boolean] = js.native
+  def isSelected(): js.Promise[Boolean]
   /**
     * Schedules a command to type a sequence on the DOM element represented by
     * this instance.
@@ -177,7 +176,7 @@ trait IWebElement extends js.Object {
     * @return {!Promise} A promise that will be resolved when all
     *     keys have been typed.
     */
-  def sendKeys(var_args: (Double | String | (js.Promise[String | Double]))*): js.Promise[Unit] = js.native
+  def sendKeys(var_args: (Double | String | (js.Promise[String | Double]))*): js.Promise[Unit]
   /**
     * Schedules a command to submit the form containing this element (or this
     * element if it is a FORM element). This command is a no-op if the element is
@@ -185,7 +184,7 @@ trait IWebElement extends js.Object {
     * @return {!Promise} A promise that will be resolved when
     *     the form has been submitted.
     */
-  def submit(): js.Promise[Unit] = js.native
+  def submit(): js.Promise[Unit]
 }
 
 object IWebElement {
@@ -210,103 +209,5 @@ object IWebElement {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), click = js.Any.fromFunction0(click), getAttribute = js.Any.fromFunction1(getAttribute), getCssValue = js.Any.fromFunction1(getCssValue), getId = js.Any.fromFunction0(getId), getLocation = js.Any.fromFunction0(getLocation), getRect = js.Any.fromFunction0(getRect), getSize = js.Any.fromFunction0(getSize), getTagName = js.Any.fromFunction0(getTagName), getText = js.Any.fromFunction0(getText), isDisplayed = js.Any.fromFunction0(isDisplayed), isEnabled = js.Any.fromFunction0(isEnabled), isSelected = js.Any.fromFunction0(isSelected), sendKeys = js.Any.fromFunction1(sendKeys), submit = js.Any.fromFunction0(submit))
     __obj.asInstanceOf[IWebElement]
   }
-  @scala.inline
-  implicit class IWebElementOps[Self <: IWebElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClear(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClick(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAttribute(value: String => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttribute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCssValue(value: String => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCssValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetId(value: () => js.Promise[IWebElementId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLocation(value: () => js.Promise[ILocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRect(value: () => js.Promise[IRectangle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSize(value: () => js.Promise[ISize]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTagName(value: () => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTagName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetText(value: () => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsDisplayed(value: () => js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisplayed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsEnabled(value: () => js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsSelected(value: () => js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSendKeys(value: /* repeated */ Double | String | (js.Promise[String | Double]) => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendKeys")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSubmit(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

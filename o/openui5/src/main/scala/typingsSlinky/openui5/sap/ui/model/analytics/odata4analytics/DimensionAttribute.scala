@@ -4,34 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DimensionAttribute extends js.Object {
   /**
     * Get dimension
     * @returns The dimension object         containing this attribute
     */
-  def getDimension(): Dimension = js.native
+  def getDimension(): Dimension
   /**
     * Get the key property
     * @returns The DataJS object representing the property for the key         of this dimension attribute
     */
-  def getKeyProperty(): js.Any = js.native
+  def getKeyProperty(): js.Any
   /**
     * Get label
     * @returns The (possibly language-dependent) label text for this         dimension attribute
     */
-  def getLabelText(): String = js.native
+  def getLabelText(): String
   /**
     * Get the name of the dimension attribute
     * @returns The name of the dimension attribute, which is identical         to the name of the property
     * in the entity type holding the         attribute value
     */
-  def getName(): String = js.native
+  def getName(): String
   /**
     * Get text property related to this dimension attribute
     * @returns The DataJS object representing the text property or         null if it does not exist
     */
-  def getTextProperty(): js.Any = js.native
+  def getTextProperty(): js.Any
 }
 
 object DimensionAttribute {
@@ -46,43 +45,5 @@ object DimensionAttribute {
     val __obj = js.Dynamic.literal(getDimension = js.Any.fromFunction0(getDimension), getKeyProperty = js.Any.fromFunction0(getKeyProperty), getLabelText = js.Any.fromFunction0(getLabelText), getName = js.Any.fromFunction0(getName), getTextProperty = js.Any.fromFunction0(getTextProperty))
     __obj.asInstanceOf[DimensionAttribute]
   }
-  @scala.inline
-  implicit class DimensionAttributeOps[Self <: DimensionAttribute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDimension(value: () => Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDimension")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetKeyProperty(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyProperty")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLabelText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabelText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextProperty(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextProperty")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

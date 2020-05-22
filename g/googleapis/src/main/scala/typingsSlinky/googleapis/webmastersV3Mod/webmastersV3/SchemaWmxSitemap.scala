@@ -53,125 +53,28 @@ trait SchemaWmxSitemap extends js.Object {
 
 object SchemaWmxSitemap {
   @scala.inline
-  def apply(): SchemaWmxSitemap = {
+  def apply(
+    contents: js.Array[SchemaWmxSitemapContent] = null,
+    errors: String = null,
+    isPending: js.UndefOr[Boolean] = js.undefined,
+    isSitemapsIndex: js.UndefOr[Boolean] = js.undefined,
+    lastDownloaded: String = null,
+    lastSubmitted: String = null,
+    path: String = null,
+    `type`: String = null,
+    warnings: String = null
+  ): SchemaWmxSitemap = {
     val __obj = js.Dynamic.literal()
+    if (contents != null) __obj.updateDynamic("contents")(contents.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPending)) __obj.updateDynamic("isPending")(isPending.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSitemapsIndex)) __obj.updateDynamic("isSitemapsIndex")(isSitemapsIndex.get.asInstanceOf[js.Any])
+    if (lastDownloaded != null) __obj.updateDynamic("lastDownloaded")(lastDownloaded.asInstanceOf[js.Any])
+    if (lastSubmitted != null) __obj.updateDynamic("lastSubmitted")(lastSubmitted.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWmxSitemap]
   }
-  @scala.inline
-  implicit class SchemaWmxSitemapOps[Self <: SchemaWmxSitemap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContents(value: js.Array[SchemaWmxSitemapContent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSitemapsIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSitemapsIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSitemapsIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSitemapsIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastDownloaded(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDownloaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastDownloaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDownloaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastSubmitted(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSubmitted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastSubmitted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSubmitted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

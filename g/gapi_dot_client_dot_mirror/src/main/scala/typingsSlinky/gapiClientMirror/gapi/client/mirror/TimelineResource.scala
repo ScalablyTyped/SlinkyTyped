@@ -8,21 +8,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimelineResource extends js.Object {
-  var attachments: AttachmentsResource = js.native
+  var attachments: AttachmentsResource
   /** Deletes a timeline item. */
-  def delete(request: Alt): Request[Unit] = js.native
+  def delete(request: Alt): Request[Unit]
   /** Gets a single timeline item by ID. */
-  def get(request: Alt): Request[TimelineItem] = js.native
+  def get(request: Alt): Request[TimelineItem]
   /** Inserts a new item into the timeline. */
-  def insert(request: Fields): Request[TimelineItem] = js.native
+  def insert(request: Fields): Request[TimelineItem]
   /** Retrieves a list of timeline items for the authenticated user. */
-  def list(request: BundleId): Request[TimelineListResponse] = js.native
+  def list(request: BundleId): Request[TimelineListResponse]
   /** Updates a timeline item in place. This method supports patch semantics. */
-  def patch(request: Alt): Request[TimelineItem] = js.native
+  def patch(request: Alt): Request[TimelineItem]
   /** Updates a timeline item in place. */
-  def update(request: Alt): Request[TimelineItem] = js.native
+  def update(request: Alt): Request[TimelineItem]
 }
 
 object TimelineResource {
@@ -39,55 +38,5 @@ object TimelineResource {
     val __obj = js.Dynamic.literal(attachments = attachments.asInstanceOf[js.Any], delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[TimelineResource]
   }
-  @scala.inline
-  implicit class TimelineResourceOps[Self <: TimelineResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachments(value: AttachmentsResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Alt => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Alt => Request[TimelineItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: Fields => Request[TimelineItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: BundleId => Request[TimelineListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Alt => Request[TimelineItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Alt => Request[TimelineItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

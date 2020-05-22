@@ -7,13 +7,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is a factory for instances of service {@link com.sun.star.sdb.SQLQueryComposer} . */
-@js.native
 trait XSQLQueryComposerFactory extends XInterface {
   /**
     * creates a new query composer.
     * @returns the {@link SQLQueryComposer} object
     */
-  def createQueryComposer(): XSQLQueryComposer = js.native
+  def createQueryComposer(): XSQLQueryComposer
 }
 
 object XSQLQueryComposerFactory {
@@ -27,19 +26,5 @@ object XSQLQueryComposerFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createQueryComposer = js.Any.fromFunction0(createQueryComposer), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSQLQueryComposerFactory]
   }
-  @scala.inline
-  implicit class XSQLQueryComposerFactoryOps[Self <: XSQLQueryComposerFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateQueryComposer(value: () => XSQLQueryComposer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createQueryComposer")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

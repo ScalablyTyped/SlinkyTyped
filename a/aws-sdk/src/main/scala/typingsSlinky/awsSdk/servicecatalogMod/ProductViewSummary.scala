@@ -54,149 +54,32 @@ trait ProductViewSummary extends js.Object {
 
 object ProductViewSummary {
   @scala.inline
-  def apply(): ProductViewSummary = {
+  def apply(
+    Distributor: ProductViewDistributor = null,
+    HasDefaultPath: js.UndefOr[HasDefaultPath] = js.undefined,
+    Id: Id = null,
+    Name: ProductViewName = null,
+    Owner: ProductViewOwner = null,
+    ProductId: Id = null,
+    ShortDescription: ProductViewShortDescription = null,
+    SupportDescription: SupportDescription = null,
+    SupportEmail: SupportEmail = null,
+    SupportUrl: SupportUrl = null,
+    Type: ProductType = null
+  ): ProductViewSummary = {
     val __obj = js.Dynamic.literal()
+    if (Distributor != null) __obj.updateDynamic("Distributor")(Distributor.asInstanceOf[js.Any])
+    if (!js.isUndefined(HasDefaultPath)) __obj.updateDynamic("HasDefaultPath")(HasDefaultPath.get.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
+    if (ProductId != null) __obj.updateDynamic("ProductId")(ProductId.asInstanceOf[js.Any])
+    if (ShortDescription != null) __obj.updateDynamic("ShortDescription")(ShortDescription.asInstanceOf[js.Any])
+    if (SupportDescription != null) __obj.updateDynamic("SupportDescription")(SupportDescription.asInstanceOf[js.Any])
+    if (SupportEmail != null) __obj.updateDynamic("SupportEmail")(SupportEmail.asInstanceOf[js.Any])
+    if (SupportUrl != null) __obj.updateDynamic("SupportUrl")(SupportUrl.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductViewSummary]
   }
-  @scala.inline
-  implicit class ProductViewSummaryOps[Self <: ProductViewSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDistributor(value: ProductViewDistributor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Distributor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistributor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Distributor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasDefaultPath(value: HasDefaultPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasDefaultPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasDefaultPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasDefaultPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ProductViewName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: ProductViewOwner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortDescription(value: ProductViewShortDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportDescription(value: SupportDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportEmail(value: SupportEmail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportUrl(value: SupportUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ProductType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

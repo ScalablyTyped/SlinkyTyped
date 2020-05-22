@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@firebase/firestore/dist/lib/src/local/indexeddb_schema", "SCHEMA_VERSION")
 @js.native
-object SCHEMA_VERSION extends TopLevel[/* 9 */ Double]
+object SCHEMA_VERSION extends TopLevel[/* 10 */ Double]
 

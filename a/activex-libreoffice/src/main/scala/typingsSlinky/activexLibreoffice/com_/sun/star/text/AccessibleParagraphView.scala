@@ -28,7 +28,6 @@ import scala.scalajs.js.annotation._
   * The accessible view of a paragraph fragment.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleParagraphView
   extends XAccessibleEditableText
      with XAccessibleContext

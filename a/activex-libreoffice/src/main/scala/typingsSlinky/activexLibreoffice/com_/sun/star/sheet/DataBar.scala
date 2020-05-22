@@ -7,29 +7,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataBar extends XConditionEntry {
-  var AxisColor: Color = js.native
+  var AxisColor: Color
   /** See {@link com.sun.star.sheet.DataBarAxis} for possible values */
-  var AxisPosition: Double = js.native
-  var Color: typingsSlinky.activexLibreoffice.com_.sun.star.util.Color = js.native
-  var DataBarEntries: SafeArray[XDataBarEntry] = js.native
+  var AxisPosition: Double
+  var Color: typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
+  var DataBarEntries: SafeArray[XDataBarEntry]
   /**
     * Maximum databar length in percent of cell width.
     *
     * Allowed values are (0, 1000) but larger than MinimumLength.
     */
-  var MaximumLength: Double = js.native
+  var MaximumLength: Double
   /**
     * Minimum databar length in percent of cell width.
     *
     * Allowed values are [0, 100) but smaller than MaximumLength.
     */
-  var MinimumLength: Double = js.native
-  var NegativeColor: Color = js.native
-  var ShowValue: Boolean = js.native
-  var UseGradient: Boolean = js.native
-  var UseNegativeColor: Boolean = js.native
+  var MinimumLength: Double
+  var NegativeColor: Color
+  var ShowValue: Boolean
+  var UseGradient: Boolean
+  var UseNegativeColor: Boolean
 }
 
 object DataBar {
@@ -54,73 +53,5 @@ object DataBar {
     val __obj = js.Dynamic.literal(AxisColor = AxisColor.asInstanceOf[js.Any], AxisPosition = AxisPosition.asInstanceOf[js.Any], Color = Color.asInstanceOf[js.Any], DataBarEntries = DataBarEntries.asInstanceOf[js.Any], MaximumLength = MaximumLength.asInstanceOf[js.Any], MinimumLength = MinimumLength.asInstanceOf[js.Any], NegativeColor = NegativeColor.asInstanceOf[js.Any], ShowValue = ShowValue.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], UseGradient = UseGradient.asInstanceOf[js.Any], UseNegativeColor = UseNegativeColor.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getType = js.Any.fromFunction0(getType), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[DataBar]
   }
-  @scala.inline
-  implicit class DataBarOps[Self <: DataBar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxisColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AxisColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxisPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AxisPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataBarEntries(value: SafeArray[XDataBarEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataBarEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaximumLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinimumLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNegativeColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NegativeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseGradient(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseGradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseNegativeColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseNegativeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

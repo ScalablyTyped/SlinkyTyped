@@ -23,53 +23,16 @@ trait SchemaGSuitePrincipal extends js.Object {
 
 object SchemaGSuitePrincipal {
   @scala.inline
-  def apply(): SchemaGSuitePrincipal = {
+  def apply(
+    gsuiteDomain: js.UndefOr[Boolean] = js.undefined,
+    gsuiteGroupEmail: String = null,
+    gsuiteUserEmail: String = null
+  ): SchemaGSuitePrincipal = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(gsuiteDomain)) __obj.updateDynamic("gsuiteDomain")(gsuiteDomain.get.asInstanceOf[js.Any])
+    if (gsuiteGroupEmail != null) __obj.updateDynamic("gsuiteGroupEmail")(gsuiteGroupEmail.asInstanceOf[js.Any])
+    if (gsuiteUserEmail != null) __obj.updateDynamic("gsuiteUserEmail")(gsuiteUserEmail.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGSuitePrincipal]
   }
-  @scala.inline
-  implicit class SchemaGSuitePrincipalOps[Self <: SchemaGSuitePrincipal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGsuiteDomain(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gsuiteDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGsuiteDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gsuiteDomain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGsuiteGroupEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gsuiteGroupEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGsuiteGroupEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gsuiteGroupEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGsuiteUserEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gsuiteUserEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGsuiteUserEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gsuiteUserEmail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

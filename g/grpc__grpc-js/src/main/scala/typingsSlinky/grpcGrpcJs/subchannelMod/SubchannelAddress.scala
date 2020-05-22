@@ -12,8 +12,14 @@ trait SubchannelAddress extends js.Object
 
 object SubchannelAddress {
   @scala.inline
-  implicit def apply(value: IpcSubchannelAddress): SubchannelAddress = value.asInstanceOf[SubchannelAddress]
+  def TcpSubchannelAddress(host: String, port: Double): SubchannelAddress = {
+    val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SubchannelAddress]
+  }
   @scala.inline
-  implicit def apply(value: TcpSubchannelAddress): SubchannelAddress = value.asInstanceOf[SubchannelAddress]
+  def IpcSubchannelAddress(path: String): SubchannelAddress = {
+    val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SubchannelAddress]
+  }
 }
 

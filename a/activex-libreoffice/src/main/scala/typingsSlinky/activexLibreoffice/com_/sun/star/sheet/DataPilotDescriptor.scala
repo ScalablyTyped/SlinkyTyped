@@ -17,44 +17,43 @@ import scala.scalajs.js.annotation._
   * represents the description of the layout of a data pilot table.
   * @see com.sun.star.sheet.DataPilotTable
   */
-@js.native
 trait DataPilotDescriptor
   extends XDataPilotDescriptor
      with XPropertySet
      with XDataPilotDataLayoutFieldSupplier {
   /** specifies if columns for grand total results are created. */
-  var ColumnGrand: Boolean = js.native
+  var ColumnGrand: Boolean
   /** specifies whether to drill down to details or go into edit mode. */
-  var DrillDownOnDoubleClick: Boolean = js.native
+  var DrillDownOnDoubleClick: Boolean
   /**
     * specifies a label for grand total results.
     * @since OOo 3.4
     */
-  var GrandTotalName: String = js.native
+  var GrandTotalName: String
   /** specifies if empty rows in the source data are ignored. */
-  var IgnoreEmptyRows: Boolean = js.native
+  var IgnoreEmptyRows: Boolean
   /**
     * specifies parameters to create the data pilot table from a database.
     * @see DatabaseImportDescriptor
     * @since OOo 3.3
     */
-  var ImportDescriptor: SafeArray[PropertyValue] = js.native
+  var ImportDescriptor: SafeArray[PropertyValue]
   /** specifies if empty category cells in the source data should be treated as repetition of the content from the previous row. */
-  var RepeatIfEmpty: Boolean = js.native
+  var RepeatIfEmpty: Boolean
   /** specifies if rows for grand total results are created. */
-  var RowGrand: Boolean = js.native
+  var RowGrand: Boolean
   /**
     * specifies arguments that are passed to the implementation named by {@link SourceServiceName} .
     * @since OOo 3.3
     */
-  var ServiceArguments: SafeArray[PropertyValue] = js.native
+  var ServiceArguments: SafeArray[PropertyValue]
   /** specifies whether the filter button is shown. */
-  var ShowFilterButton: Boolean = js.native
+  var ShowFilterButton: Boolean
   /**
     * specifies the name of a {@link DataPilotSource} implementation for the data pilot table.
     * @since OOo 3.3
     */
-  var SourceServiceName: String = js.native
+  var SourceServiceName: String
 }
 
 object DataPilotDescriptor {
@@ -110,73 +109,5 @@ object DataPilotDescriptor {
     val __obj = js.Dynamic.literal(ColumnFields = ColumnFields.asInstanceOf[js.Any], ColumnGrand = ColumnGrand.asInstanceOf[js.Any], DataFields = DataFields.asInstanceOf[js.Any], DataLayoutField = DataLayoutField.asInstanceOf[js.Any], DataPilotFields = DataPilotFields.asInstanceOf[js.Any], DrillDownOnDoubleClick = DrillDownOnDoubleClick.asInstanceOf[js.Any], FilterDescriptor = FilterDescriptor.asInstanceOf[js.Any], GrandTotalName = GrandTotalName.asInstanceOf[js.Any], HiddenFields = HiddenFields.asInstanceOf[js.Any], IgnoreEmptyRows = IgnoreEmptyRows.asInstanceOf[js.Any], ImportDescriptor = ImportDescriptor.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], PageFields = PageFields.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], RepeatIfEmpty = RepeatIfEmpty.asInstanceOf[js.Any], RowFields = RowFields.asInstanceOf[js.Any], RowGrand = RowGrand.asInstanceOf[js.Any], ServiceArguments = ServiceArguments.asInstanceOf[js.Any], ShowFilterButton = ShowFilterButton.asInstanceOf[js.Any], SourceRange = SourceRange.asInstanceOf[js.Any], SourceServiceName = SourceServiceName.asInstanceOf[js.Any], Tag = Tag.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getColumnFields = js.Any.fromFunction0(getColumnFields), getDataFields = js.Any.fromFunction0(getDataFields), getDataLayoutField = js.Any.fromFunction0(getDataLayoutField), getDataPilotFields = js.Any.fromFunction0(getDataPilotFields), getFilterDescriptor = js.Any.fromFunction0(getFilterDescriptor), getHiddenFields = js.Any.fromFunction0(getHiddenFields), getName = js.Any.fromFunction0(getName), getPageFields = js.Any.fromFunction0(getPageFields), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getRowFields = js.Any.fromFunction0(getRowFields), getSourceRange = js.Any.fromFunction0(getSourceRange), getTag = js.Any.fromFunction0(getTag), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setName = js.Any.fromFunction1(setName), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setSourceRange = js.Any.fromFunction1(setSourceRange), setTag = js.Any.fromFunction1(setTag))
     __obj.asInstanceOf[DataPilotDescriptor]
   }
-  @scala.inline
-  implicit class DataPilotDescriptorOps[Self <: DataPilotDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnGrand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnGrand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDrillDownOnDoubleClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DrillDownOnDoubleClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGrandTotalName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrandTotalName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIgnoreEmptyRows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IgnoreEmptyRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImportDescriptor(value: SafeArray[PropertyValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatIfEmpty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatIfEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowGrand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowGrand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceArguments(value: SafeArray[PropertyValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowFilterButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowFilterButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceServiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

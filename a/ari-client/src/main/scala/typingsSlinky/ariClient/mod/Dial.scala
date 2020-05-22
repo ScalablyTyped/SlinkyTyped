@@ -4,91 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dial extends Event {
   /* Properties */
-  var caller: js.UndefOr[Channel] = js.native
-  var dialstatus: String = js.native
-  var dialstring: js.UndefOr[String] = js.native
-  var forward: js.UndefOr[String] = js.native
-  var forwarded: js.UndefOr[Channel] = js.native
-  var peer: Channel = js.native
+  var caller: js.UndefOr[Channel] = js.undefined
+  var dialstatus: String
+  var dialstring: js.UndefOr[String] = js.undefined
+  var forward: js.UndefOr[String] = js.undefined
+  var forwarded: js.UndefOr[Channel] = js.undefined
+  var peer: Channel
 }
 
 object Dial {
   @scala.inline
-  def apply(application: String, dialstatus: String, peer: Channel, timestamp: js.Date, `type`: String): Dial = {
+  def apply(
+    application: String,
+    dialstatus: String,
+    peer: Channel,
+    timestamp: js.Date,
+    `type`: String,
+    asterisk_id: String = null,
+    caller: Channel = null,
+    dialstring: String = null,
+    forward: String = null,
+    forwarded: Channel = null
+  ): Dial = {
     val __obj = js.Dynamic.literal(application = application.asInstanceOf[js.Any], dialstatus = dialstatus.asInstanceOf[js.Any], peer = peer.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (asterisk_id != null) __obj.updateDynamic("asterisk_id")(asterisk_id.asInstanceOf[js.Any])
+    if (caller != null) __obj.updateDynamic("caller")(caller.asInstanceOf[js.Any])
+    if (dialstring != null) __obj.updateDynamic("dialstring")(dialstring.asInstanceOf[js.Any])
+    if (forward != null) __obj.updateDynamic("forward")(forward.asInstanceOf[js.Any])
+    if (forwarded != null) __obj.updateDynamic("forwarded")(forwarded.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dial]
   }
-  @scala.inline
-  implicit class DialOps[Self <: Dial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDialstatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialstatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPeer(value: Channel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaller(value: Channel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caller")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaller: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caller")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialstring(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialstring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialstring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialstring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForward(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForward: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForwarded(value: Channel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forwarded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForwarded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forwarded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

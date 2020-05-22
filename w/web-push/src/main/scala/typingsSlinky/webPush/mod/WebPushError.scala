@@ -12,6 +12,10 @@ class WebPushError protected () extends Error {
   val body: String = js.native
   val endpoint: String = js.native
   val headers: Headers = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
   val statusCode: Double = js.native
 }
 

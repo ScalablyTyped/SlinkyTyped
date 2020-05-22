@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InappproductsInsertResponse extends js.Object {
-  var inappproduct: js.UndefOr[InAppProduct] = js.native
+  var inappproduct: js.UndefOr[InAppProduct] = js.undefined
 }
 
 object InappproductsInsertResponse {
   @scala.inline
-  def apply(): InappproductsInsertResponse = {
+  def apply(inappproduct: InAppProduct = null): InappproductsInsertResponse = {
     val __obj = js.Dynamic.literal()
+    if (inappproduct != null) __obj.updateDynamic("inappproduct")(inappproduct.asInstanceOf[js.Any])
     __obj.asInstanceOf[InappproductsInsertResponse]
   }
-  @scala.inline
-  implicit class InappproductsInsertResponseOps[Self <: InappproductsInsertResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInappproduct(value: InAppProduct): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inappproduct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInappproduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inappproduct")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

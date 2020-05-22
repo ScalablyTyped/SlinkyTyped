@@ -29,48 +29,12 @@ object ByteMatchSetByteMatchTuple {
   def apply(
     fieldToMatch: ByteMatchSetByteMatchTupleFieldToMatch,
     positionalConstraint: String,
-    textTransformation: String
+    textTransformation: String,
+    targetString: String = null
   ): ByteMatchSetByteMatchTuple = {
     val __obj = js.Dynamic.literal(fieldToMatch = fieldToMatch.asInstanceOf[js.Any], positionalConstraint = positionalConstraint.asInstanceOf[js.Any], textTransformation = textTransformation.asInstanceOf[js.Any])
+    if (targetString != null) __obj.updateDynamic("targetString")(targetString.asInstanceOf[js.Any])
     __obj.asInstanceOf[ByteMatchSetByteMatchTuple]
   }
-  @scala.inline
-  implicit class ByteMatchSetByteMatchTupleOps[Self <: ByteMatchSetByteMatchTuple] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFieldToMatch(value: ByteMatchSetByteMatchTupleFieldToMatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldToMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPositionalConstraint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionalConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextTransformation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

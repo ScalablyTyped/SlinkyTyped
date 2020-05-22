@@ -8,15 +8,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * [bdd, tdd]
-	 *
-	 * Describe a "suite" with the given `title` and callback `fn` containing nested suites.
-	 *
-	 * Indicates this suite should not be executed.
-	 *
-	 * @returns [bdd] `Suite`
-	 * @returns [tdd] `void`
-	 */
+  * [bdd, tdd]
+  *
+  * Describe a "suite" with the given `title` and callback `fn` containing nested suites.
+  *
+  * Indicates this suite should not be executed.
+  *
+  * @returns [bdd] `Suite`
+  * @returns [tdd] `void`
+  */
 @js.native
 trait PendingSuiteFunction extends js.Object {
   // tslint:disable-next-line: unified-signatures

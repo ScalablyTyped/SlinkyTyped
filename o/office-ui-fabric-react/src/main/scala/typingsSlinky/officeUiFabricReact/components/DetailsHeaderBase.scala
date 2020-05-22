@@ -21,7 +21,7 @@ import typingsSlinky.officeUiFabricReact.detailsRowCheckTypesMod.IDetailsCheckbo
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibility
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -108,7 +108,7 @@ object DetailsHeaderBase {
     @scala.inline
     def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDetailsHeaderStyleProps => Partial[IDetailsHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDetailsHeaderStyleProps => DeepPartial[IDetailsHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDetailsHeaderStyleProps, IDetailsHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

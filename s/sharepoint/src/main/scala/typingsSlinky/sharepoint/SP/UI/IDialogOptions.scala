@@ -7,233 +7,75 @@ import scala.scalajs.js.annotation._
 
 /** Options for dialog creation */
 // tslint:disable-next-line: interface-name
-@js.native
 trait IDialogOptions extends js.Object {
   /** specifies if maximize button should be shown on the dialog */
-  var allowMaximize: js.UndefOr[Boolean] = js.native
+  var allowMaximize: js.UndefOr[Boolean] = js.undefined
   /** custom arguments to be passed to the dialog */
-  var args: js.UndefOr[js.Any] = js.native
+  var args: js.UndefOr[js.Any] = js.undefined
   /** automatically determine size of the dialog based on its contents. */
-  var autoSize: js.UndefOr[Boolean] = js.native
+  var autoSize: js.UndefOr[Boolean] = js.undefined
   /** minimum width of the dialog when using autoSize option */
-  var autoSizeStartWidth: js.UndefOr[Double] = js.native
+  var autoSizeStartWidth: js.UndefOr[Double] = js.undefined
   /** callback that is called after dialog is closed */
-  var dialogReturnValueCallback: js.UndefOr[DialogReturnValueCallback] = js.native
+  var dialogReturnValueCallback: js.UndefOr[DialogReturnValueCallback] = js.undefined
   /** height of the dialog. if not specified, will be determined automatically based on the contents of the dialog */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /** html element which will be used as contents of the dialog. You should use either html or url attribute, but not both. */
-  var html: js.UndefOr[HTMLElement] = js.native
+  var html: js.UndefOr[HTMLElement] = js.undefined
   /** include padding for adding a scrollbar */
-  var includeScrollBarPadding: js.UndefOr[Boolean] = js.native
+  var includeScrollBarPadding: js.UndefOr[Boolean] = js.undefined
   /** specifies if close button should be shown on the dialog */
-  var showClose: js.UndefOr[Boolean] = js.native
+  var showClose: js.UndefOr[Boolean] = js.undefined
   /** The dialog will be maximized when shown. */
-  var showMaximized: js.UndefOr[Boolean] = js.native
+  var showMaximized: js.UndefOr[Boolean] = js.undefined
   /** Text displayed in the title bar of the dialog box. If not defined, it will default to the title of the page defined by url property. */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /** url of the page which is shown in the modal dialog. You should use either html or url attribute, but not both. */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
   /** width of the dialog. if not specified, will be determined automatically based on the contents of the dialog */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
   /** X coordinate of the dialog box. */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /** Y coordinate of the dialog box. */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object IDialogOptions {
   @scala.inline
-  def apply(): IDialogOptions = {
+  def apply(
+    allowMaximize: js.UndefOr[Boolean] = js.undefined,
+    args: js.Any = null,
+    autoSize: js.UndefOr[Boolean] = js.undefined,
+    autoSizeStartWidth: js.UndefOr[Double] = js.undefined,
+    dialogReturnValueCallback: (/* dialogResult */ DialogResult, /* returnValue */ js.Any) => Unit = null,
+    height: js.UndefOr[Double] = js.undefined,
+    html: HTMLElement = null,
+    includeScrollBarPadding: js.UndefOr[Boolean] = js.undefined,
+    showClose: js.UndefOr[Boolean] = js.undefined,
+    showMaximized: js.UndefOr[Boolean] = js.undefined,
+    title: String = null,
+    url: String = null,
+    width: js.UndefOr[Double] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): IDialogOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowMaximize)) __obj.updateDynamic("allowMaximize")(allowMaximize.get.asInstanceOf[js.Any])
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoSize)) __obj.updateDynamic("autoSize")(autoSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoSizeStartWidth)) __obj.updateDynamic("autoSizeStartWidth")(autoSizeStartWidth.get.asInstanceOf[js.Any])
+    if (dialogReturnValueCallback != null) __obj.updateDynamic("dialogReturnValueCallback")(js.Any.fromFunction2(dialogReturnValueCallback))
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeScrollBarPadding)) __obj.updateDynamic("includeScrollBarPadding")(includeScrollBarPadding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showClose)) __obj.updateDynamic("showClose")(showClose.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMaximized)) __obj.updateDynamic("showMaximized")(showMaximized.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDialogOptions]
   }
-  @scala.inline
-  implicit class IDialogOptionsOps[Self <: IDialogOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowMaximize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMaximize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowMaximize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMaximize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArgs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoSizeStartWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSizeStartWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoSizeStartWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSizeStartWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialogReturnValueCallback(value: (/* dialogResult */ DialogResult, /* returnValue */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogReturnValueCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDialogReturnValueCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogReturnValueCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeScrollBarPadding(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeScrollBarPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeScrollBarPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeScrollBarPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMaximized(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMaximized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMaximized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMaximized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

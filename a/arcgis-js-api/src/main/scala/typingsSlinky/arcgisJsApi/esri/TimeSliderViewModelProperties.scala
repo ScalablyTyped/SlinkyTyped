@@ -8,14 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimeSliderViewModelProperties extends js.Object {
   /**
     * The temporal extent of the entire slider. It defines the entire time period within which you can visualize your time aware data using the time slider widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider-TimeSliderViewModel.html#fullTimeExtent)
     */
-  var fullTimeExtent: js.UndefOr[TimeExtentProperties] = js.native
+  var fullTimeExtent: js.UndefOr[TimeExtentProperties] = js.undefined
   /**
     * If animating, the time indicator(s) will restart if they reach the edge.
     *
@@ -23,7 +22,7 @@ trait TimeSliderViewModelProperties extends js.Object {
     *
     * @default true
     */
-  var loop: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Boolean] = js.undefined
   /**
     * The time slider mode. This property is used for defining if the temporal data will be displayed cumulatively up to a point in time, a single instant in time, or within a time range. See the following table for possible values.
     *
@@ -39,7 +38,7 @@ trait TimeSliderViewModelProperties extends js.Object {
     *
     * @default time-window
     */
-  var mode: js.UndefOr[instant | `time-window` | `cumulative-from-start` | `cumulative-from-end`] = js.native
+  var mode: js.UndefOr[instant | `time-window` | `cumulative-from-start` | `cumulative-from-end`] = js.undefined
   /**
     * The time (in milliseconds) between playback steps.
     *
@@ -47,7 +46,7 @@ trait TimeSliderViewModelProperties extends js.Object {
     *
     * @default 1000
     */
-  var playRate: js.UndefOr[Double] = js.native
+  var playRate: js.UndefOr[Double] = js.undefined
   /**
     * Defines specific locations on the time slider where thumbs will snap to when manipulated. If unspecified, ten evenly spaced stops will be added.  For continuous sliding set `stops` to null.
     * ```js
@@ -120,7 +119,7 @@ trait TimeSliderViewModelProperties extends js.Object {
     *
     * @default { count : 10 }
     */
-  var stops: js.UndefOr[StopsByDates | StopsByCount | StopsByInterval] = js.native
+  var stops: js.UndefOr[StopsByDates | StopsByCount | StopsByInterval] = js.undefined
   /**
     * The user defined time extent. Values define the current location of time slider thumbs. The "time-window" [mode](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider-TimeSliderViewModel.html#mode) has two values, the other modes only have one.
     *
@@ -128,112 +127,35 @@ trait TimeSliderViewModelProperties extends js.Object {
     *
     * @default null
     */
-  var values: js.UndefOr[js.Array[DateProperties]] = js.native
+  var values: js.UndefOr[js.Array[DateProperties]] = js.undefined
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). If this property is set, the TimeSlider widget will update the view's timeExtent property whenever the time slider is manipulated or updated programmatically. This property will affect any time-aware layer in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider-TimeSliderViewModel.html#view)
     */
-  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.undefined
 }
 
 object TimeSliderViewModelProperties {
   @scala.inline
-  def apply(): TimeSliderViewModelProperties = {
+  def apply(
+    fullTimeExtent: TimeExtentProperties = null,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    mode: instant | `time-window` | `cumulative-from-start` | `cumulative-from-end` = null,
+    playRate: js.UndefOr[Double] = js.undefined,
+    stops: StopsByDates | StopsByCount | StopsByInterval = null,
+    values: js.Array[DateProperties] = null,
+    view: MapViewProperties | SceneViewProperties = null
+  ): TimeSliderViewModelProperties = {
     val __obj = js.Dynamic.literal()
+    if (fullTimeExtent != null) __obj.updateDynamic("fullTimeExtent")(fullTimeExtent.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(playRate)) __obj.updateDynamic("playRate")(playRate.get.asInstanceOf[js.Any])
+    if (stops != null) __obj.updateDynamic("stops")(stops.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeSliderViewModelProperties]
   }
-  @scala.inline
-  implicit class TimeSliderViewModelPropertiesOps[Self <: TimeSliderViewModelProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullTimeExtent(value: TimeExtentProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTimeExtent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullTimeExtent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTimeExtent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: instant | `time-window` | `cumulative-from-start` | `cumulative-from-end`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStops(value: StopsByDates | StopsByCount | StopsByInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Array[DateProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: MapViewProperties | SceneViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,35 +19,10 @@ trait DescribeTypeRegistrationI extends js.Object {
 
 object DescribeTypeRegistrationI {
   @scala.inline
-  def apply(RegistrationToken: RegistrationToken): DescribeTypeRegistrationI = {
+  def apply(RegistrationToken: RegistrationToken, $waiter: WaiterConfiguration = null): DescribeTypeRegistrationI = {
     val __obj = js.Dynamic.literal(RegistrationToken = RegistrationToken.asInstanceOf[js.Any])
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTypeRegistrationI]
   }
-  @scala.inline
-  implicit class DescribeTypeRegistrationIOps[Self <: DescribeTypeRegistrationI] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegistrationToken(value: RegistrationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

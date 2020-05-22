@@ -6,136 +6,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransformOptions extends js.Object {
    // input
-  var file: js.UndefOr[String] = js.native
+  var file: js.UndefOr[String] = js.undefined
      // output
-  var includeContent: js.UndefOr[Boolean] = js.native
+  var includeContent: js.UndefOr[Boolean] = js.undefined
   // custom JSX pragma (https://buble.surge.sh/guide/#jsx)
-  var jsx: js.UndefOr[String] = js.native
+  var jsx: js.UndefOr[String] = js.undefined
   // others
-  var namedFunctionExpressions: js.UndefOr[Boolean] = js.native
+  var namedFunctionExpressions: js.UndefOr[Boolean] = js.undefined
    // default: 'React.createElement'
   // custom `Object.assign` (https://buble.surge.sh/guide/#object-spread-and-rest)
-  var objectAssign: js.UndefOr[String | Boolean] = js.native
+  var objectAssign: js.UndefOr[String | Boolean] = js.undefined
   // used for sourcemaps
-  var source: js.UndefOr[String] = js.native
+  var source: js.UndefOr[String] = js.undefined
   // source: https://github.com/Rich-Harris/buble/blob/master/src/support.js
-  var target: js.UndefOr[Chrome] = js.native
+  var target: js.UndefOr[Chrome] = js.undefined
   // transforms
-  var transforms: js.UndefOr[Arrow] = js.native
+  var transforms: js.UndefOr[Arrow] = js.undefined
 }
 
 object TransformOptions {
   @scala.inline
-  def apply(): TransformOptions = {
+  def apply(
+    file: String = null,
+    includeContent: js.UndefOr[Boolean] = js.undefined,
+    jsx: String = null,
+    namedFunctionExpressions: js.UndefOr[Boolean] = js.undefined,
+    objectAssign: String | Boolean = null,
+    source: String = null,
+    target: Chrome = null,
+    transforms: Arrow = null
+  ): TransformOptions = {
     val __obj = js.Dynamic.literal()
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeContent)) __obj.updateDynamic("includeContent")(includeContent.get.asInstanceOf[js.Any])
+    if (jsx != null) __obj.updateDynamic("jsx")(jsx.asInstanceOf[js.Any])
+    if (!js.isUndefined(namedFunctionExpressions)) __obj.updateDynamic("namedFunctionExpressions")(namedFunctionExpressions.get.asInstanceOf[js.Any])
+    if (objectAssign != null) __obj.updateDynamic("objectAssign")(objectAssign.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (transforms != null) __obj.updateDynamic("transforms")(transforms.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformOptions]
   }
-  @scala.inline
-  implicit class TransformOptionsOps[Self <: TransformOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsx(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamedFunctionExpressions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namedFunctionExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamedFunctionExpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namedFunctionExpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectAssign(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectAssign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectAssign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectAssign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Chrome): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransforms(value: Arrow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transforms")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

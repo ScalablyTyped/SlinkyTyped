@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RateData extends js.Object {
-  var fromCurrency: String = js.native
-  var rate: String = js.native
-  var toCurrency: String = js.native
+  var fromCurrency: String
+  var rate: String
+  var toCurrency: String
 }
 
 object RateData {
@@ -17,31 +16,5 @@ object RateData {
     val __obj = js.Dynamic.literal(fromCurrency = fromCurrency.asInstanceOf[js.Any], rate = rate.asInstanceOf[js.Any], toCurrency = toCurrency.asInstanceOf[js.Any])
     __obj.asInstanceOf[RateData]
   }
-  @scala.inline
-  implicit class RateDataOps[Self <: RateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFromCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromCurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toCurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

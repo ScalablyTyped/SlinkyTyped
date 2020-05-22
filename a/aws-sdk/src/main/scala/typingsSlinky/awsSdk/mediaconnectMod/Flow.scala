@@ -41,6 +41,10 @@ trait Flow extends js.Object {
     * The current status of the flow.
     */
   var Status: typingsSlinky.awsSdk.mediaconnectMod.Status = js.native
+  /**
+    * The VPC Interfaces for this flow.
+    */
+  var VpcInterfaces: js.UndefOr[listOfVpcInterface] = js.native
 }
 
 object Flow {
@@ -52,108 +56,20 @@ object Flow {
     Name: string,
     Outputs: listOfOutput,
     Source: Source,
-    Status: Status
+    Status: Status,
+    Description: string = null,
+    EgressIp: string = null,
+    SourceFailoverConfig: FailoverConfig = null,
+    Sources: listOfSource = null,
+    VpcInterfaces: listOfVpcInterface = null
   ): Flow = {
     val __obj = js.Dynamic.literal(AvailabilityZone = AvailabilityZone.asInstanceOf[js.Any], Entitlements = Entitlements.asInstanceOf[js.Any], FlowArn = FlowArn.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Outputs = Outputs.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (EgressIp != null) __obj.updateDynamic("EgressIp")(EgressIp.asInstanceOf[js.Any])
+    if (SourceFailoverConfig != null) __obj.updateDynamic("SourceFailoverConfig")(SourceFailoverConfig.asInstanceOf[js.Any])
+    if (Sources != null) __obj.updateDynamic("Sources")(Sources.asInstanceOf[js.Any])
+    if (VpcInterfaces != null) __obj.updateDynamic("VpcInterfaces")(VpcInterfaces.asInstanceOf[js.Any])
     __obj.asInstanceOf[Flow]
   }
-  @scala.inline
-  implicit class FlowOps[Self <: Flow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZone(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntitlements(value: listOfEntitlement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Entitlements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlowArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutputs(value: listOfOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEgressIp(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EgressIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEgressIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EgressIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceFailoverConfig(value: FailoverConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceFailoverConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceFailoverConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceFailoverConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSources(value: listOfSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

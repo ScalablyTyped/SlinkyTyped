@@ -17,77 +17,20 @@ trait PartialStyleRulesBottomNa extends js.Object {
 
 object PartialStyleRulesBottomNa {
   @scala.inline
-  def apply(): PartialStyleRulesBottomNa = {
+  def apply(
+    iconOnly: CSSProperties = null,
+    label: CSSProperties = null,
+    root: CSSProperties = null,
+    selected: CSSProperties = null,
+    wrapper: CSSProperties = null
+  ): PartialStyleRulesBottomNa = {
     val __obj = js.Dynamic.literal()
+    if (iconOnly != null) __obj.updateDynamic("iconOnly")(iconOnly.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
+    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesBottomNa]
   }
-  @scala.inline
-  implicit class PartialStyleRulesBottomNaOps[Self <: PartialStyleRulesBottomNa] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIconOnly(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapper(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

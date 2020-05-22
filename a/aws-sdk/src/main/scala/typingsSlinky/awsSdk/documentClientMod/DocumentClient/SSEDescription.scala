@@ -26,65 +26,18 @@ trait SSEDescription extends js.Object {
 
 object SSEDescription {
   @scala.inline
-  def apply(): SSEDescription = {
+  def apply(
+    InaccessibleEncryptionDateTime: js.Date = null,
+    KMSMasterKeyArn: KMSMasterKeyArn = null,
+    SSEType: SSEType = null,
+    Status: SSEStatus = null
+  ): SSEDescription = {
     val __obj = js.Dynamic.literal()
+    if (InaccessibleEncryptionDateTime != null) __obj.updateDynamic("InaccessibleEncryptionDateTime")(InaccessibleEncryptionDateTime.asInstanceOf[js.Any])
+    if (KMSMasterKeyArn != null) __obj.updateDynamic("KMSMasterKeyArn")(KMSMasterKeyArn.asInstanceOf[js.Any])
+    if (SSEType != null) __obj.updateDynamic("SSEType")(SSEType.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SSEDescription]
   }
-  @scala.inline
-  implicit class SSEDescriptionOps[Self <: SSEDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInaccessibleEncryptionDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InaccessibleEncryptionDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInaccessibleEncryptionDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InaccessibleEncryptionDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKMSMasterKeyArn(value: KMSMasterKeyArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSMasterKeyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKMSMasterKeyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSMasterKeyArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSEType(value: SSEType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSEType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SSEStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

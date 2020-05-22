@@ -1,5 +1,7 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import typingsSlinky.babylonjs.BABYLON.Nullable
+import typingsSlinky.babylonjs.anon.Exception
 import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelperBackgroundYRotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +20,160 @@ class EnvironmentHelper protected ()
     options: PartialIEnvironmentHelperBackgroundYRotation,
     scene: typingsSlinky.babylonjs.BABYLON.Scene
   ) = this()
+  /* CompleteClass */
+  override var _errorHandler: js.Any = js.native
+  /**
+    * Get the scene sizes according to the setup.
+    */
+  /* CompleteClass */
+  override var _getSceneSize: js.Any = js.native
+  /* CompleteClass */
+  override var _ground: js.Any = js.native
+  /* CompleteClass */
+  override var _groundMaterial: js.Any = js.native
+  /* CompleteClass */
+  override var _groundMirror: js.Any = js.native
+  /* CompleteClass */
+  override var _groundTexture: js.Any = js.native
+  /* CompleteClass */
+  override var _options: js.Any = js.native
+  /* CompleteClass */
+  override var _rootMesh: js.Any = js.native
+  /**
+    * Stores the creation options.
+    */
+  /* CompleteClass */
+  override val _scene: js.Any = js.native
+  /**
+    * Setup the background according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupBackground: js.Any = js.native
+  /**
+    * Setup the environment texture according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupEnvironmentTexture: js.Any = js.native
+  /**
+    * Setup the ground according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupGround: js.Any = js.native
+  /**
+    * Setup the ground diffuse texture according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupGroundDiffuseTexture: js.Any = js.native
+  /**
+    * Setup the ground material according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupGroundMaterial: js.Any = js.native
+  /**
+    * Setup the ground mirror texture according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupGroundMirrorTexture: js.Any = js.native
+  /**
+    * Setup the image processing according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupImageProcessing: js.Any = js.native
+  /**
+    * Setup the ground to receive the mirror texture.
+    */
+  /* CompleteClass */
+  override var _setupMirrorInGroundMaterial: js.Any = js.native
+  /**
+    * Setup the skybox according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupSkybox: js.Any = js.native
+  /**
+    * Setup the skybox material according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupSkyboxMaterial: js.Any = js.native
+  /**
+    * Setup the skybox reflection texture according to the specified options.
+    */
+  /* CompleteClass */
+  override var _setupSkyboxReflectionTexture: js.Any = js.native
+  /* CompleteClass */
+  override var _skybox: js.Any = js.native
+  /* CompleteClass */
+  override var _skyboxMaterial: js.Any = js.native
+  /* CompleteClass */
+  override var _skyboxTexture: js.Any = js.native
+  /**
+    * This observable will be notified with any error during the creation of the environment,
+    * mainly texture creation errors.
+    */
+  /* CompleteClass */
+  override var onErrorObservable: typingsSlinky.babylonjs.BABYLON.Observable[Exception] = js.native
+  /**
+    * Dispose all the elements created by the Helper.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
+    * Gets the ground mesh created by the helper.
+    */
+  /* CompleteClass */
+  override def ground: Nullable[typingsSlinky.babylonjs.BABYLON.Mesh] = js.native
+  /**
+    * Gets the ground material created by the helper.
+    */
+  /* CompleteClass */
+  override def groundMaterial: Nullable[typingsSlinky.babylonjs.BABYLON.BackgroundMaterial] = js.native
+  /**
+    * Gets the ground mirror created by the helper.
+    */
+  /* CompleteClass */
+  override def groundMirror: Nullable[typingsSlinky.babylonjs.BABYLON.MirrorTexture] = js.native
+  /**
+    * Gets the ground mirror render list to helps pushing the meshes
+    * you wish in the ground reflection.
+    */
+  /* CompleteClass */
+  override def groundMirrorRenderList: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.AbstractMesh]] = js.native
+  /**
+    * Gets the ground texture created by the helper.
+    */
+  /* CompleteClass */
+  override def groundTexture: Nullable[typingsSlinky.babylonjs.BABYLON.BaseTexture] = js.native
+  /**
+    * Gets the root mesh created by the helper.
+    */
+  /* CompleteClass */
+  override def rootMesh: typingsSlinky.babylonjs.BABYLON.Mesh = js.native
+  /**
+    * Sets the primary color of all the available elements.
+    * @param color the main color to affect to the ground and the background
+    */
+  /* CompleteClass */
+  override def setMainColor(color: typingsSlinky.babylonjs.BABYLON.Color3): Unit = js.native
+  /**
+    * Gets the skybox created by the helper.
+    */
+  /* CompleteClass */
+  override def skybox: Nullable[typingsSlinky.babylonjs.BABYLON.Mesh] = js.native
+  /**
+    * Gets the skybox material created by the helper.
+    */
+  /* CompleteClass */
+  override def skyboxMaterial: Nullable[typingsSlinky.babylonjs.BABYLON.BackgroundMaterial] = js.native
+  /**
+    * Gets the skybox texture created by the helper.
+    */
+  /* CompleteClass */
+  override def skyboxTexture: Nullable[typingsSlinky.babylonjs.BABYLON.BaseTexture] = js.native
+  /**
+    * Updates the background according to the new options
+    * @param options
+    */
+  /* CompleteClass */
+  override def updateOptions(options: PartialIEnvironmentHelperBackgroundYRotation): Unit = js.native
 }
 
 /* static members */

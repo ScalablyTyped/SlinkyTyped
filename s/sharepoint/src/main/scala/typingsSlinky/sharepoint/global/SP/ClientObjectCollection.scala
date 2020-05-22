@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.global.SP
 
+import typingsSlinky.sharepoint.IEnumerator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.ClientObjectCollection")
 @js.native
 class ClientObjectCollection[T] ()
-  extends typingsSlinky.sharepoint.SP.ClientObjectCollection[T]
+  extends typingsSlinky.sharepoint.SP.ClientObjectCollection[T] {
+  /* CompleteClass */
+  override def getEnumerator(): IEnumerator[T] = js.native
+}
 

@@ -20,28 +20,28 @@ import scala.scalajs.js.annotation._
 trait DocumentProperties extends ClientObject {
   /**
     *
-    * Gets or sets the author of the workbook.
+    * The author of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
   var author: String = js.native
   /**
     *
-    * Gets or sets the category of the workbook.
+    * The category of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
   var category: String = js.native
   /**
     *
-    * Gets or sets the comments of the workbook.
+    * The comments of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
   var comments: String = js.native
   /**
     *
-    * Gets or sets the company of the workbook.
+    * The company of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -65,7 +65,7 @@ trait DocumentProperties extends ClientObject {
   val custom: CustomPropertyCollection = js.native
   /**
     *
-    * Gets or sets the keywords of the workbook.
+    * The keywords of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -79,7 +79,7 @@ trait DocumentProperties extends ClientObject {
   val lastAuthor: String = js.native
   /**
     *
-    * Gets or sets the manager of the workbook.
+    * The manager of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -93,14 +93,14 @@ trait DocumentProperties extends ClientObject {
   var revisionNumber: Double = js.native
   /**
     *
-    * Gets or sets the subject of the workbook.
+    * The subject of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
   var subject: String = js.native
   /**
     *
-    * Gets or sets the title of the workbook.
+    * The title of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */

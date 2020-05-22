@@ -4,203 +4,77 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IColorPalette extends IComponent {
   /** [Config Option] (Boolean) */
-  var allowReselect: js.UndefOr[Boolean] = js.native
+  var allowReselect: js.UndefOr[Boolean] = js.undefined
   /** [Method] Clears any selection and sets the value to null  */
-  var clear: js.UndefOr[js.Function0[Unit]] = js.native
+  var clear: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Config Option] (String) */
-  var clickEvent: js.UndefOr[java.lang.String] = js.native
+  var clickEvent: js.UndefOr[java.lang.String] = js.undefined
   /** [Property] (String[]) */
-  var colors: js.UndefOr[Array] = js.native
+  var colors: js.UndefOr[Array] = js.undefined
   /** [Method] Get the currently selected color value
-  		* @returns String value The selected value. Null if nothing is selected.
-  		*/
-  var getValue: js.UndefOr[js.Function0[java.lang.String]] = js.native
+    * @returns String value The selected value. Null if nothing is selected.
+    */
+  var getValue: js.UndefOr[js.Function0[java.lang.String]] = js.undefined
   /** [Config Option] (Function) */
-  var handler: js.UndefOr[js.Any] = js.native
+  var handler: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var itemCls: js.UndefOr[java.lang.String] = js.native
+  var itemCls: js.UndefOr[java.lang.String] = js.undefined
   /** [Method] Template method called when this Component s DOM structure is created  */
   @JSName("onRender")
-  var onRender_IColorPalette: js.UndefOr[js.Function0[Unit]] = js.native
+  var onRender_IColorPalette: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Config Option] (Object) */
-  var scope: js.UndefOr[js.Any] = js.native
+  var scope: js.UndefOr[js.Any] = js.undefined
   /** [Method] Selects the specified color in the picker fires the select event
-  		* @param color String A valid 6-digit color hex code (# will be stripped if included)
-  		* @param suppressEvent Boolean True to stop the select event from firing.
-  		*/
+    * @param color String A valid 6-digit color hex code (# will be stripped if included)
+    * @param suppressEvent Boolean True to stop the select event from firing.
+    */
   var select: js.UndefOr[
     js.Function2[
       /* color */ js.UndefOr[java.lang.String], 
       /* suppressEvent */ js.UndefOr[Boolean], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Config Option] (String) */
-  var selectedCls: js.UndefOr[java.lang.String] = js.native
+  var selectedCls: js.UndefOr[java.lang.String] = js.undefined
   /** [Config Option] (String) */
-  var value: js.UndefOr[java.lang.String] = js.native
+  var value: js.UndefOr[java.lang.String] = js.undefined
 }
 
 object IColorPalette {
   @scala.inline
-  def apply(): IColorPalette = {
+  def apply(
+    IComponent: IComponent = null,
+    allowReselect: js.UndefOr[Boolean] = js.undefined,
+    clear: () => Unit = null,
+    clickEvent: java.lang.String = null,
+    colors: Array = null,
+    getValue: () => java.lang.String = null,
+    handler: js.Any = null,
+    itemCls: java.lang.String = null,
+    onRender: () => Unit = null,
+    scope: js.Any = null,
+    select: (/* color */ js.UndefOr[java.lang.String], /* suppressEvent */ js.UndefOr[Boolean]) => Unit = null,
+    selectedCls: java.lang.String = null,
+    value: java.lang.String = null
+  ): IColorPalette = {
     val __obj = js.Dynamic.literal()
+    if (IComponent != null) js.Dynamic.global.Object.assign(__obj, IComponent)
+    if (!js.isUndefined(allowReselect)) __obj.updateDynamic("allowReselect")(allowReselect.get.asInstanceOf[js.Any])
+    if (clear != null) __obj.updateDynamic("clear")(js.Any.fromFunction0(clear))
+    if (clickEvent != null) __obj.updateDynamic("clickEvent")(clickEvent.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (getValue != null) __obj.updateDynamic("getValue")(js.Any.fromFunction0(getValue))
+    if (handler != null) __obj.updateDynamic("handler")(handler.asInstanceOf[js.Any])
+    if (itemCls != null) __obj.updateDynamic("itemCls")(itemCls.asInstanceOf[js.Any])
+    if (onRender != null) __obj.updateDynamic("onRender")(js.Any.fromFunction0(onRender))
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction2(select))
+    if (selectedCls != null) __obj.updateDynamic("selectedCls")(selectedCls.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColorPalette]
   }
-  @scala.inline
-  implicit class IColorPaletteOps[Self <: IColorPalette] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowReselect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowReselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowReselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowReselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutClear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickEvent(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColors(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetValue(value: () => java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandler(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemCls(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRender(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRender")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: (/* color */ js.UndefOr[java.lang.String], /* suppressEvent */ js.UndefOr[Boolean]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedCls(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

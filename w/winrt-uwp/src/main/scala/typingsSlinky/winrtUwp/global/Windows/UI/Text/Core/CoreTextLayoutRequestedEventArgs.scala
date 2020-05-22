@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs")
 @js.native
 abstract class CoreTextLayoutRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs {
+  /** Gets information about a LayoutRequested event. */
+  /* CompleteClass */
+  override var request: typingsSlinky.winrtUwp.Windows.UI.Text.Core.CoreTextLayoutRequest = js.native
+}
 

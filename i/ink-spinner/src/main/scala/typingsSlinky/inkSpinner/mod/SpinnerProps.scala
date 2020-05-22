@@ -5,41 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpinnerProps extends js.Object {
   /**
     * Type of a spinner to use. See https://github.com/sindresorhus/cli-spinners for available spinners.
     *
     * @default 'dot'
     */
-  var `type`: js.UndefOr[SpinnerName] = js.native
+  var `type`: js.UndefOr[SpinnerName] = js.undefined
 }
 
 object SpinnerProps {
   @scala.inline
-  def apply(): SpinnerProps = {
+  def apply(`type`: SpinnerName = null): SpinnerProps = {
     val __obj = js.Dynamic.literal()
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpinnerProps]
   }
-  @scala.inline
-  implicit class SpinnerPropsOps[Self <: SpinnerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: SpinnerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

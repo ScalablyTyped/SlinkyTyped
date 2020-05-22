@@ -9,49 +9,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Shape extends js.Object {
-  var shape: js.UndefOr[circle | square] = js.native
-  var size: js.UndefOr[Double | small | large | default] = js.native
+  var shape: js.UndefOr[circle | square] = js.undefined
+  var size: js.UndefOr[Double | small | large | default] = js.undefined
 }
 
 object Shape {
   @scala.inline
-  def apply(): Shape = {
+  def apply(shape: circle | square = null, size: Double | small | large | default = null): Shape = {
     val __obj = js.Dynamic.literal()
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Shape]
   }
-  @scala.inline
-  implicit class ShapeOps[Self <: Shape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShape(value: circle | square): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double | small | large | default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

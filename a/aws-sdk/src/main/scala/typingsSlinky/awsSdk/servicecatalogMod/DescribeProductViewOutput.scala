@@ -18,41 +18,11 @@ trait DescribeProductViewOutput extends js.Object {
 
 object DescribeProductViewOutput {
   @scala.inline
-  def apply(): DescribeProductViewOutput = {
+  def apply(ProductViewSummary: ProductViewSummary = null, ProvisioningArtifacts: ProvisioningArtifacts = null): DescribeProductViewOutput = {
     val __obj = js.Dynamic.literal()
+    if (ProductViewSummary != null) __obj.updateDynamic("ProductViewSummary")(ProductViewSummary.asInstanceOf[js.Any])
+    if (ProvisioningArtifacts != null) __obj.updateDynamic("ProvisioningArtifacts")(ProvisioningArtifacts.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProductViewOutput]
   }
-  @scala.inline
-  implicit class DescribeProductViewOutputOps[Self <: DescribeProductViewOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProductViewSummary(value: ProductViewSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductViewSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisioningArtifacts(value: ProvisioningArtifacts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifacts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisioningArtifacts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifacts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,6 +15,9 @@ trait GetZoneArgs extends js.Object {
     * Used with `name` field to get a private Hosted Zone.
     */
   val privateZone: js.UndefOr[Boolean] = js.native
+  /**
+    * The number of Record Set in the Hosted Zone.
+    */
   val resourceRecordSetCount: js.UndefOr[Double] = js.native
   /**
     * Used with `name` field. A mapping of tags, each pair of which must exactly match a pair on the desired Hosted Zone.
@@ -32,89 +35,22 @@ trait GetZoneArgs extends js.Object {
 
 object GetZoneArgs {
   @scala.inline
-  def apply(): GetZoneArgs = {
+  def apply(
+    name: String = null,
+    privateZone: js.UndefOr[Boolean] = js.undefined,
+    resourceRecordSetCount: js.UndefOr[Double] = js.undefined,
+    tags: StringDictionary[js.Any] = null,
+    vpcId: String = null,
+    zoneId: String = null
+  ): GetZoneArgs = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(privateZone)) __obj.updateDynamic("privateZone")(privateZone.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resourceRecordSetCount)) __obj.updateDynamic("resourceRecordSetCount")(resourceRecordSetCount.get.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (vpcId != null) __obj.updateDynamic("vpcId")(vpcId.asInstanceOf[js.Any])
+    if (zoneId != null) __obj.updateDynamic("zoneId")(zoneId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetZoneArgs]
   }
-  @scala.inline
-  implicit class GetZoneArgsOps[Self <: GetZoneArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateZone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceRecordSetCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRecordSetCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceRecordSetCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRecordSetCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoneId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoneId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -463,7 +463,9 @@ object NumericInput {
     @scala.inline
     def onTransitionEnd(value: SyntheticTransitionEvent[HTMLInputElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onValueChange(value: (/* valueAsNumber */ Double, /* valueAsString */ String) => Unit): this.type = set("onValueChange", js.Any.fromFunction2(value))
+    def onValueChange(
+      value: (/* valueAsNumber */ Double, /* valueAsString */ String, /* inputElement */ HTMLInputElement | Null) => Unit
+    ): this.type = set("onValueChange", js.Any.fromFunction3(value))
     @scala.inline
     def onVolumeChange(value: SyntheticEvent[Event, HTMLInputElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     @scala.inline

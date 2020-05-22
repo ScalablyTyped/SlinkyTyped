@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IWebDriverCookie extends IWebDriverOptionsCookie {
   /**
     * When the cookie expires.
@@ -15,34 +14,27 @@ trait IWebDriverCookie extends IWebDriverOptionsCookie {
     * @type {(!number|undefined)}
     */
   @JSName("expiry")
-  var expiry_IWebDriverCookie: js.UndefOr[Double] = js.native
+  var expiry_IWebDriverCookie: js.UndefOr[Double] = js.undefined
 }
 
 object IWebDriverCookie {
   @scala.inline
-  def apply(name: String, value: String): IWebDriverCookie = {
+  def apply(
+    name: String,
+    value: String,
+    domain: String = null,
+    expiry: js.UndefOr[Double] = js.undefined,
+    httpOnly: js.UndefOr[Boolean] = js.undefined,
+    path: String = null,
+    secure: js.UndefOr[Boolean] = js.undefined
+  ): IWebDriverCookie = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (!js.isUndefined(expiry)) __obj.updateDynamic("expiry")(expiry.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(httpOnly)) __obj.updateDynamic("httpOnly")(httpOnly.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWebDriverCookie]
   }
-  @scala.inline
-  implicit class IWebDriverCookieOps[Self <: IWebDriverCookie] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpiry(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiry")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

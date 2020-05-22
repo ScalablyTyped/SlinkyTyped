@@ -7,25 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigatorXAxisTitleOptions extends js.Object {
   /**
     * (Highstock, Gantt) Alignment of the title relative to the axis values.
     * Possible values are "low", "middle" or "high".
     */
-  var align: js.UndefOr[AxisTitleAlignValue] = js.native
+  var align: js.UndefOr[AxisTitleAlignValue] = js.undefined
   /**
     * (Highstock, Gantt) The pixel distance between the axis labels or line and
     * the title. Defaults to 0 for horizontal axes, 10 for vertical
     */
-  var margin: js.UndefOr[Double] = js.native
+  var margin: js.UndefOr[Double] = js.undefined
   /**
     * (Highstock, Gantt) The distance of the axis title from the axis line. By
     * default, this distance is computed from the offset width of the labels,
     * the labels' distance from the axis and the title's margin. However when
     * the offset option is set, it overrides all this.
     */
-  var offset: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Defines how the title is repositioned according to the 3D
     * chart orientation.
@@ -47,17 +46,17 @@ trait NavigatorXAxisTitleOptions extends js.Object {
     *
     * - `undefined`: Will use the config from `labels.position3d`
     */
-  var position3d: js.UndefOr[chart_ | flap | typingsSlinky.highcharts.highchartsStrings.offset | ortho | Null] = js.native
+  var position3d: js.UndefOr[chart_ | flap | typingsSlinky.highcharts.highchartsStrings.offset | ortho | Null] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) Whether to reserve space for the title
     * when laying out the axis.
     */
-  var reserveSpace: js.UndefOr[Boolean] = js.native
+  var reserveSpace: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highstock, Gantt) The rotation of the text in degrees. 0 is horizontal,
     * 270 is vertical reading from bottom to top.
     */
-  var rotation: js.UndefOr[Double] = js.native
+  var rotation: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) If enabled, the axis title will skewed to follow the
     * perspective.
@@ -69,7 +68,7 @@ trait NavigatorXAxisTitleOptions extends js.Object {
     *
     * A `null` value will use the config from `labels.skew3d`.
     */
-  var skew3d: js.UndefOr[Boolean | Null] = js.native
+  var skew3d: js.UndefOr[Boolean | Null] = js.undefined
   /**
     * (Highstock, Gantt) CSS styles for the title. If the title text is longer
     * than the axis length, it will wrap to multiple lines by default. This can
@@ -79,12 +78,12 @@ trait NavigatorXAxisTitleOptions extends js.Object {
     * In styled mode, the stroke width is given in the `.highcharts-axis-title`
     * class.
     */
-  var style: js.UndefOr[CSSObject] = js.native
+  var style: js.UndefOr[CSSObject] = js.undefined
   /**
     * (Highstock, Gantt) The actual text of the axis title. It can contain
     * basic HTML text markup like <b>, <i> and spans with style.
     */
-  var text: js.UndefOr[String | Null] = js.native
+  var text: js.UndefOr[String | Null] = js.undefined
   /**
     * (Highstock, Gantt) Alignment of the text, can be `"left"`, `"right"` or
     * `"center"`. Default alignment depends on the title.align:
@@ -113,211 +112,56 @@ trait NavigatorXAxisTitleOptions extends js.Object {
     * - for `align` = `"high"` and `opposite` = `false` `textAlign` is set to
     * `right`
     */
-  var textAlign: js.UndefOr[AlignValue] = js.native
+  var textAlign: js.UndefOr[AlignValue] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) Whether to use HTML to render the axis
     * title.
     */
-  var useHTML: js.UndefOr[Boolean] = js.native
+  var useHTML: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) Horizontal pixel offset of the title
     * position.
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) Vertical pixel offset of the title
     * position.
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object NavigatorXAxisTitleOptions {
   @scala.inline
-  def apply(): NavigatorXAxisTitleOptions = {
+  def apply(
+    align: AxisTitleAlignValue = null,
+    margin: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    position3d: js.UndefOr[Null | chart_ | flap | typingsSlinky.highcharts.highchartsStrings.offset | ortho] = js.undefined,
+    reserveSpace: js.UndefOr[Boolean] = js.undefined,
+    rotation: js.UndefOr[Double] = js.undefined,
+    skew3d: js.UndefOr[Null | Boolean] = js.undefined,
+    style: CSSObject = null,
+    text: js.UndefOr[Null | String] = js.undefined,
+    textAlign: AlignValue = null,
+    useHTML: js.UndefOr[Boolean] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): NavigatorXAxisTitleOptions = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (!js.isUndefined(margin)) __obj.updateDynamic("margin")(margin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(position3d)) __obj.updateDynamic("position3d")(position3d.asInstanceOf[js.Any])
+    if (!js.isUndefined(reserveSpace)) __obj.updateDynamic("reserveSpace")(reserveSpace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skew3d)) __obj.updateDynamic("skew3d")(skew3d.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(text)) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(useHTML)) __obj.updateDynamic("useHTML")(useHTML.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigatorXAxisTitleOptions]
   }
-  @scala.inline
-  implicit class NavigatorXAxisTitleOptionsOps[Self <: NavigatorXAxisTitleOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: AxisTitleAlignValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition3d(value: chart_ | flap | typingsSlinky.highcharts.highchartsStrings.offset | ortho): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position3d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition3d: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position3d")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition3dNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position3d")(null)
-        ret
-    }
-    @scala.inline
-    def withReserveSpace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reserveSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReserveSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reserveSpace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkew3d(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skew3d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkew3d: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skew3d")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkew3dNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skew3d")(null)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(null)
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: AlignValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseHTML(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

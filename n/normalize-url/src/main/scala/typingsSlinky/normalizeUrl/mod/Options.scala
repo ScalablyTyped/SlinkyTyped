@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
   		@default 'http:'
   		*/
-  val defaultProtocol: js.UndefOr[String] = js.native
+  val defaultProtocol: js.UndefOr[String] = js.undefined
   /**
   		Normalizes `https:` URLs to `http:`.
   		@default false
@@ -21,7 +20,7 @@ trait Options extends js.Object {
   		//=> 'http://sindresorhus.com'
   		```
   		*/
-  val forceHttp: js.UndefOr[Boolean] = js.native
+  val forceHttp: js.UndefOr[Boolean] = js.undefined
   /**
   		Normalizes `http:` URLs to `https:`.
   		This option can't be used with the `forceHttp` option at the same time.
@@ -34,7 +33,7 @@ trait Options extends js.Object {
   		//=> 'https://sindresorhus.com'
   		```
   		*/
-  val forceHttps: js.UndefOr[Boolean] = js.native
+  val forceHttps: js.UndefOr[Boolean] = js.undefined
   /**
   		Prepends `defaultProtocol` to the URL if it's protocol-relative.
   		@default true
@@ -46,7 +45,7 @@ trait Options extends js.Object {
   		//=> '//sindresorhus.com'
   		```
   		*/
-  val normalizeProtocol: js.UndefOr[Boolean] = js.native
+  val normalizeProtocol: js.UndefOr[Boolean] = js.undefined
   /**
   		Removes the default directory index file from path that matches any of the provided strings or regexes.
   		When `true`, the regex `/^index\.[a-z]+$/` is used.
@@ -59,7 +58,7 @@ trait Options extends js.Object {
   		//=> 'http://sindresorhus.com/foo'
   		```
   		*/
-  val removeDirectoryIndex: js.UndefOr[js.Array[js.RegExp | String]] = js.native
+  val removeDirectoryIndex: js.UndefOr[js.Array[js.RegExp | String]] = js.undefined
   /**
   		Removes query parameters that matches any of the provided strings or regexes.
   		@default [/^utm_\w+/i]
@@ -71,7 +70,7 @@ trait Options extends js.Object {
   		//=> 'http://sindresorhus.com/?foo=bar'
   		```
   		*/
-  val removeQueryParameters: js.UndefOr[js.Array[js.RegExp | String]] = js.native
+  val removeQueryParameters: js.UndefOr[js.Array[js.RegExp | String]] = js.undefined
   /**
   		Removes trailing slash.
   		__Note__: Trailing slash is always removed if the URL doesn't have a pathname.
@@ -86,7 +85,7 @@ trait Options extends js.Object {
   		//=> 'http://sindresorhus.com'
   		```
   		*/
-  val removeTrailingSlash: js.UndefOr[Boolean] = js.native
+  val removeTrailingSlash: js.UndefOr[Boolean] = js.undefined
   /**
   		Sorts the query parameters alphabetically by key.
   		@default true
@@ -98,7 +97,7 @@ trait Options extends js.Object {
   		//=> 'http://sindresorhus.com/?b=two&a=one&c=three'
   		```
   		*/
-  val sortQueryParameters: js.UndefOr[Boolean] = js.native
+  val sortQueryParameters: js.UndefOr[Boolean] = js.undefined
   /**
   		Strip the [authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) part of a URL.
   		@default true
@@ -110,7 +109,7 @@ trait Options extends js.Object {
   		//=> 'https://user:password@sindresorhus.com'
   		```
   		*/
-  val stripAuthentication: js.UndefOr[Boolean] = js.native
+  val stripAuthentication: js.UndefOr[Boolean] = js.undefined
   /**
   		Removes hash from the URL.
   		@default false
@@ -122,7 +121,7 @@ trait Options extends js.Object {
   		//=> 'http://sindresorhus.com/about.html'
   		```
   		*/
-  val stripHash: js.UndefOr[Boolean] = js.native
+  val stripHash: js.UndefOr[Boolean] = js.undefined
   /**
   		Removes HTTP(S) protocol from an URL `http://sindresorhus.com` → `sindresorhus.com`.
   		@default false
@@ -134,7 +133,7 @@ trait Options extends js.Object {
   		//=> 'sindresorhus.com'
   		```
   		*/
-  val stripProtocol: js.UndefOr[Boolean] = js.native
+  val stripProtocol: js.UndefOr[Boolean] = js.undefined
   /**
   		Removes `www.` from the URL.
   		@default true
@@ -146,166 +145,39 @@ trait Options extends js.Object {
   		//=> 'http://www.sindresorhus.com'
   		```
   		*/
-  val stripWWW: js.UndefOr[Boolean] = js.native
+  val stripWWW: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    defaultProtocol: String = null,
+    forceHttp: js.UndefOr[Boolean] = js.undefined,
+    forceHttps: js.UndefOr[Boolean] = js.undefined,
+    normalizeProtocol: js.UndefOr[Boolean] = js.undefined,
+    removeDirectoryIndex: js.Array[js.RegExp | String] = null,
+    removeQueryParameters: js.Array[js.RegExp | String] = null,
+    removeTrailingSlash: js.UndefOr[Boolean] = js.undefined,
+    sortQueryParameters: js.UndefOr[Boolean] = js.undefined,
+    stripAuthentication: js.UndefOr[Boolean] = js.undefined,
+    stripHash: js.UndefOr[Boolean] = js.undefined,
+    stripProtocol: js.UndefOr[Boolean] = js.undefined,
+    stripWWW: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (defaultProtocol != null) __obj.updateDynamic("defaultProtocol")(defaultProtocol.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceHttp)) __obj.updateDynamic("forceHttp")(forceHttp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceHttps)) __obj.updateDynamic("forceHttps")(forceHttps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(normalizeProtocol)) __obj.updateDynamic("normalizeProtocol")(normalizeProtocol.get.asInstanceOf[js.Any])
+    if (removeDirectoryIndex != null) __obj.updateDynamic("removeDirectoryIndex")(removeDirectoryIndex.asInstanceOf[js.Any])
+    if (removeQueryParameters != null) __obj.updateDynamic("removeQueryParameters")(removeQueryParameters.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeTrailingSlash)) __obj.updateDynamic("removeTrailingSlash")(removeTrailingSlash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sortQueryParameters)) __obj.updateDynamic("sortQueryParameters")(sortQueryParameters.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripAuthentication)) __obj.updateDynamic("stripAuthentication")(stripAuthentication.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripHash)) __obj.updateDynamic("stripHash")(stripHash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripProtocol)) __obj.updateDynamic("stripProtocol")(stripProtocol.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripWWW)) __obj.updateDynamic("stripWWW")(stripWWW.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceHttp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceHttp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceHttp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceHttp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceHttps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceHttps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceHttps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceHttps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalizeProtocol(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalizeProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveDirectoryIndex(value: js.Array[js.RegExp | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDirectoryIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveDirectoryIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDirectoryIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveQueryParameters(value: js.Array[js.RegExp | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeQueryParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveQueryParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeQueryParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveTrailingSlash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTrailingSlash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveTrailingSlash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTrailingSlash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortQueryParameters(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortQueryParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortQueryParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortQueryParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripAuthentication(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripAuthentication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripAuthentication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripAuthentication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripHash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripProtocol(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripWWW(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripWWW")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripWWW: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripWWW")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

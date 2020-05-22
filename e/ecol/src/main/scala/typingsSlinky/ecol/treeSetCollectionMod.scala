@@ -3,6 +3,8 @@ package typingsSlinky.ecol
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
 import typingsSlinky.tstl.anon.Iteratoranyanyany
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
@@ -53,6 +55,8 @@ object treeSetCollectionMod extends js.Object {
     /* protected */ override def _Insert_by_key(key: T): InsertRet[T, `true`, TreeSet[T], Iterator[T], ReverseIterator[T]] = js.native
     /* InferMemberOverrides */
     /* protected */ override def _Insert_by_range[InputIterator /* <: IForwardIterator[T, InputIterator] */](begin: InputIterator, end: InputIterator): Unit = js.native
+    /* CompleteClass */
+    override def addEventListener(`type`: Type, listener: Listener[T, TreeSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -84,6 +88,13 @@ object treeSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def count(key: T): Double = js.native
+    /* CompleteClass */
+    override def dispatchEvent(event: CollectionEvent[T, TreeSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
+    /**
+      * Test whether container is empty.
+      */
+    /* InferMemberOverrides */
+    override def empty(): Boolean = js.native
     /**
       * Iterator to the end.
       *
@@ -153,6 +164,8 @@ object treeSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def has(key: T): Boolean = js.native
+    /* CompleteClass */
+    override def hasEventListener(`type`: Type): Boolean = js.native
     /* InferMemberOverrides */
     override def insert(hint: Iterator[T], key: T): Iterator[T] = js.native
     /* InferMemberOverrides */
@@ -165,6 +178,15 @@ object treeSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def merge(source: TreeSet[T]): Unit = js.native
+    /**
+      * Insert items at the end.
+      *
+      * @param items Items to insert.
+      * @return Number of elements in the container after insertion.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def push(items: T*): Double = js.native
     /**
       * Reverse iterator to the first element in reverse.
       *
@@ -184,6 +206,8 @@ object treeSetCollectionMod extends js.Object {
       * @inheritDoc
       */
     def refresh(it: Iterator[T]): Unit = js.native
+    /* CompleteClass */
+    override def removeEventListener(`type`: Type, listener: Listener[T, TreeSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
     /**
       * Reverse iterator to the reverse end.
       *
@@ -191,6 +215,11 @@ object treeSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def rend(): ReverseIterator[T] = js.native
+    /**
+      * Number of elements in the container.
+      */
+    /* InferMemberOverrides */
+    override def size(): Double = js.native
     /**
       * Swap elements.
       *

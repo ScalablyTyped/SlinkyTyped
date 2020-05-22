@@ -6,49 +6,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Invalid extends js.Object {
-  var invalid: js.UndefOr[js.Array[InvalidTestCase]] = js.native
-  var valid: js.UndefOr[js.Array[String | ValidTestCase]] = js.native
+  var invalid: js.UndefOr[js.Array[InvalidTestCase]] = js.undefined
+  var valid: js.UndefOr[js.Array[String | ValidTestCase]] = js.undefined
 }
 
 object Invalid {
   @scala.inline
-  def apply(): Invalid = {
+  def apply(invalid: js.Array[InvalidTestCase] = null, valid: js.Array[String | ValidTestCase] = null): Invalid = {
     val __obj = js.Dynamic.literal()
+    if (invalid != null) __obj.updateDynamic("invalid")(invalid.asInstanceOf[js.Any])
+    if (valid != null) __obj.updateDynamic("valid")(valid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Invalid]
   }
-  @scala.inline
-  implicit class InvalidOps[Self <: Invalid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalid(value: js.Array[InvalidTestCase]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValid(value: js.Array[String | ValidTestCase]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

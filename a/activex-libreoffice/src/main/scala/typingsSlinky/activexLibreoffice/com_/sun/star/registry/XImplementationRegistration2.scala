@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * register the components name only (library or jar name).
   * @since OOo 2.4
   */
-@js.native
 trait XImplementationRegistration2 extends XImplementationRegistration {
   /**
     * registers a component which provides one or more implementations.
@@ -25,7 +24,7 @@ trait XImplementationRegistration2 extends XImplementationRegistration {
     aLocation: String,
     aRegisteredLocation: String,
     xReg: XSimpleRegistry
-  ): Unit = js.native
+  ): Unit
 }
 
 object XImplementationRegistration2 {
@@ -43,19 +42,5 @@ object XImplementationRegistration2 {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), checkInstantiation = js.Any.fromFunction1(checkInstantiation), getImplementations = js.Any.fromFunction2(getImplementations), queryInterface = js.Any.fromFunction1(queryInterface), registerImplementation = js.Any.fromFunction3(registerImplementation), registerImplementationWithLocation = js.Any.fromFunction4(registerImplementationWithLocation), release = js.Any.fromFunction0(release), revokeImplementation = js.Any.fromFunction2(revokeImplementation))
     __obj.asInstanceOf[XImplementationRegistration2]
   }
-  @scala.inline
-  implicit class XImplementationRegistration2Ops[Self <: XImplementationRegistration2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegisterImplementationWithLocation(value: (String, String, String, XSimpleRegistry) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerImplementationWithLocation")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

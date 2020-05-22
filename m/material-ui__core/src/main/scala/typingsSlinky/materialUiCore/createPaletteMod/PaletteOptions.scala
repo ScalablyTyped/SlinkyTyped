@@ -28,173 +28,36 @@ trait PaletteOptions extends js.Object {
 
 object PaletteOptions {
   @scala.inline
-  def apply(): PaletteOptions = {
+  def apply(
+    action: PartialTypeAction = null,
+    background: PartialTypeBackground = null,
+    common: PartialCommonColors = null,
+    contrastThreshold: js.UndefOr[Double] = js.undefined,
+    divider: String = null,
+    error: PaletteColorOptions = null,
+    getContrastText: /* background */ String => String = null,
+    grey: ColorPartial = null,
+    primary: PaletteColorOptions = null,
+    secondary: PaletteColorOptions = null,
+    text: PartialTypeText = null,
+    tonalOffset: js.UndefOr[Double] = js.undefined,
+    `type`: PaletteType = null
+  ): PaletteOptions = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (common != null) __obj.updateDynamic("common")(common.asInstanceOf[js.Any])
+    if (!js.isUndefined(contrastThreshold)) __obj.updateDynamic("contrastThreshold")(contrastThreshold.get.asInstanceOf[js.Any])
+    if (divider != null) __obj.updateDynamic("divider")(divider.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (getContrastText != null) __obj.updateDynamic("getContrastText")(js.Any.fromFunction1(getContrastText))
+    if (grey != null) __obj.updateDynamic("grey")(grey.asInstanceOf[js.Any])
+    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
+    if (secondary != null) __obj.updateDynamic("secondary")(secondary.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(tonalOffset)) __obj.updateDynamic("tonalOffset")(tonalOffset.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaletteOptions]
   }
-  @scala.inline
-  implicit class PaletteOptionsOps[Self <: PaletteOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: PartialTypeAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: PartialTypeBackground): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommon(value: PartialCommonColors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContrastThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContrastThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDivider(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("divider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDivider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("divider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: PaletteColorOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetContrastText(value: /* background */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContrastText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetContrastText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContrastText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrey(value: ColorPartial): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimary(value: PaletteColorOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondary(value: PaletteColorOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: PartialTypeText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTonalOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tonalOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTonalOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tonalOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: PaletteType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

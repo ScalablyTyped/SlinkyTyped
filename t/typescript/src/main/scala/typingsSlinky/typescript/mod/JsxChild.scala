@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait JsxChild extends js.Object
 
-object JsxChild {
-  @scala.inline
-  implicit def apply(value: JsxElement): JsxChild = value.asInstanceOf[JsxChild]
-  @scala.inline
-  implicit def apply(value: JsxExpression): JsxChild = value.asInstanceOf[JsxChild]
-  @scala.inline
-  implicit def apply(value: JsxFragment): JsxChild = value.asInstanceOf[JsxChild]
-  @scala.inline
-  implicit def apply(value: JsxSelfClosingElement): JsxChild = value.asInstanceOf[JsxChild]
-  @scala.inline
-  implicit def apply(value: JsxText): JsxChild = value.asInstanceOf[JsxChild]
-}
-

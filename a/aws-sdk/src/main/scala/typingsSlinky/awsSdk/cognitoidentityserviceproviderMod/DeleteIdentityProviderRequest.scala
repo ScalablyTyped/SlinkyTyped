@@ -22,25 +22,5 @@ object DeleteIdentityProviderRequest {
     val __obj = js.Dynamic.literal(ProviderName = ProviderName.asInstanceOf[js.Any], UserPoolId = UserPoolId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteIdentityProviderRequest]
   }
-  @scala.inline
-  implicit class DeleteIdentityProviderRequestOps[Self <: DeleteIdentityProviderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProviderName(value: ProviderNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserPoolId(value: UserPoolIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

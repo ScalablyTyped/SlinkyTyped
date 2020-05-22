@@ -6,13 +6,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Exposes the PlayReady PlayReadyDomain class iterator. */
-@js.native
 trait PlayReadyDomainIterable extends js.Object {
   /**
     * Returns an iterator that iterates over the items in the PlayReady domain collection.
     * @return The PlayReady domain iterator.
     */
-  def first(): IIterator[IPlayReadyDomain] = js.native
+  def first(): IIterator[IPlayReadyDomain]
 }
 
 object PlayReadyDomainIterable {
@@ -21,19 +20,5 @@ object PlayReadyDomainIterable {
     val __obj = js.Dynamic.literal(first = js.Any.fromFunction0(first))
     __obj.asInstanceOf[PlayReadyDomainIterable]
   }
-  @scala.inline
-  implicit class PlayReadyDomainIterableOps[Self <: PlayReadyDomainIterable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFirst(value: () => IIterator[IPlayReadyDomain]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,16 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataMatcherMap
   extends /* key */ StringDictionary[DataMatcher]
-     with DataMatcher
-     with RequestBodyMatcher
+     with _DataMatcher
+     with _RequestBodyMatcher
 
 object DataMatcherMap {
   @scala.inline
-  def apply(): DataMatcherMap = {
+  def apply(StringDictionary: /* key */ StringDictionary[DataMatcher] = null): DataMatcherMap = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[DataMatcherMap]
   }
 }

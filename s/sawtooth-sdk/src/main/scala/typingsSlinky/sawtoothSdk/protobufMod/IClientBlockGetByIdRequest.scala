@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IClientBlockGetByIdRequest extends js.Object {
   /** ClientBlockGetByIdRequest blockId */
-  var blockId: js.UndefOr[String | Null] = js.native
+  var blockId: js.UndefOr[String | Null] = js.undefined
 }
 
 object IClientBlockGetByIdRequest {
   @scala.inline
-  def apply(): IClientBlockGetByIdRequest = {
+  def apply(blockId: js.UndefOr[Null | String] = js.undefined): IClientBlockGetByIdRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockId)) __obj.updateDynamic("blockId")(blockId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IClientBlockGetByIdRequest]
   }
-  @scala.inline
-  implicit class IClientBlockGetByIdRequestOps[Self <: IClientBlockGetByIdRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(null)
-        ret
-    }
-  }
-  
 }
 

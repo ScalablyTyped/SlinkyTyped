@@ -14,29 +14,10 @@ trait GetBucketLocationOutput extends js.Object {
 
 object GetBucketLocationOutput {
   @scala.inline
-  def apply(): GetBucketLocationOutput = {
+  def apply(LocationConstraint: BucketLocationConstraint = null): GetBucketLocationOutput = {
     val __obj = js.Dynamic.literal()
+    if (LocationConstraint != null) __obj.updateDynamic("LocationConstraint")(LocationConstraint.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketLocationOutput]
   }
-  @scala.inline
-  implicit class GetBucketLocationOutputOps[Self <: GetBucketLocationOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocationConstraint(value: BucketLocationConstraint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationConstraint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

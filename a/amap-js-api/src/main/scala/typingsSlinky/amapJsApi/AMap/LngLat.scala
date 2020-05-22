@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LngLat extends LocationValue {
+trait LngLat extends js.Object {
   // internal
   def add(lnglat: LngLat): LngLat = js.native
   def add(lnglat: LngLat, noAutofix: Boolean): LngLat = js.native

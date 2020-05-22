@@ -7,7 +7,7 @@ import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooter
 import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooterProps
 import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooterStyleProps
 import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooterStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -33,7 +33,7 @@ object DialogFooterBase {
     @scala.inline
     def componentRef(value: IRefObject[IDialogFooter]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDialogFooterStyleProps => Partial[IDialogFooterStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDialogFooterStyleProps => DeepPartial[IDialogFooterStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDialogFooterStyleProps, IDialogFooterStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

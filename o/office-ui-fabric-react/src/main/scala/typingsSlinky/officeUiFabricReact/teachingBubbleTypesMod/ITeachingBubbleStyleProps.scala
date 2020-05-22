@@ -7,139 +7,46 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Required<std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/TeachingBubble/TeachingBubble.types.ITeachingBubbleProps, 'theme'>> & std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/TeachingBubble/TeachingBubble.types.ITeachingBubbleProps, 'hasCondensedHeadline' | 'hasSmallHeadline' | 'isWide'> & {  calloutProps ? :office-ui-fabric-react.office-ui-fabric-react/lib/Callout.ICalloutContentStyleProps,   primaryButtonClassName ? :string,   secondaryButtonClassName ? :string,   hasCloseButton ? :boolean,   hasHeadline ? :boolean} */
-@js.native
 trait ITeachingBubbleStyleProps extends js.Object {
   /** Style props for callout. */
-  var calloutProps: js.UndefOr[ICalloutContentStyleProps] = js.native
+  var calloutProps: js.UndefOr[ICalloutContentStyleProps] = js.undefined
   /** If the close button is visible. */
-  var hasCloseButton: js.UndefOr[Boolean] = js.native
-  var hasCondensedHeadline: js.UndefOr[Boolean] = js.native
+  var hasCloseButton: js.UndefOr[Boolean] = js.undefined
+  var hasCondensedHeadline: js.UndefOr[Boolean] = js.undefined
   /** If a headline has been specified. */
-  var hasHeadline: js.UndefOr[Boolean] = js.native
-  var hasSmallHeadline: js.UndefOr[Boolean] = js.native
-  var isWide: js.UndefOr[Boolean] = js.native
+  var hasHeadline: js.UndefOr[Boolean] = js.undefined
+  var hasSmallHeadline: js.UndefOr[Boolean] = js.undefined
+  var isWide: js.UndefOr[Boolean] = js.undefined
   /** Class name for primary button. */
-  var primaryButtonClassName: js.UndefOr[String] = js.native
+  var primaryButtonClassName: js.UndefOr[String] = js.undefined
   /** Class name for secondary button. */
-  var secondaryButtonClassName: js.UndefOr[String] = js.native
-  var theme: ITheme = js.native
+  var secondaryButtonClassName: js.UndefOr[String] = js.undefined
+  var theme: ITheme
 }
 
 object ITeachingBubbleStyleProps {
   @scala.inline
-  def apply(theme: ITheme): ITeachingBubbleStyleProps = {
+  def apply(
+    theme: ITheme,
+    calloutProps: ICalloutContentStyleProps = null,
+    hasCloseButton: js.UndefOr[Boolean] = js.undefined,
+    hasCondensedHeadline: js.UndefOr[Boolean] = js.undefined,
+    hasHeadline: js.UndefOr[Boolean] = js.undefined,
+    hasSmallHeadline: js.UndefOr[Boolean] = js.undefined,
+    isWide: js.UndefOr[Boolean] = js.undefined,
+    primaryButtonClassName: String = null,
+    secondaryButtonClassName: String = null
+  ): ITeachingBubbleStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    if (calloutProps != null) __obj.updateDynamic("calloutProps")(calloutProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasCloseButton)) __obj.updateDynamic("hasCloseButton")(hasCloseButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasCondensedHeadline)) __obj.updateDynamic("hasCondensedHeadline")(hasCondensedHeadline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasHeadline)) __obj.updateDynamic("hasHeadline")(hasHeadline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasSmallHeadline)) __obj.updateDynamic("hasSmallHeadline")(hasSmallHeadline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isWide)) __obj.updateDynamic("isWide")(isWide.get.asInstanceOf[js.Any])
+    if (primaryButtonClassName != null) __obj.updateDynamic("primaryButtonClassName")(primaryButtonClassName.asInstanceOf[js.Any])
+    if (secondaryButtonClassName != null) __obj.updateDynamic("secondaryButtonClassName")(secondaryButtonClassName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITeachingBubbleStyleProps]
   }
-  @scala.inline
-  implicit class ITeachingBubbleStylePropsOps[Self <: ITeachingBubbleStyleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCalloutProps(value: ICalloutContentStyleProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calloutProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalloutProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calloutProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasCloseButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCloseButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasCloseButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCloseButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasCondensedHeadline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCondensedHeadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasCondensedHeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCondensedHeadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasHeadline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasHeadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasHeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasHeadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasSmallHeadline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasSmallHeadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasSmallHeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasSmallHeadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsWide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsWide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryButtonClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryButtonClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondaryButtonClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryButtonClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondaryButtonClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryButtonClassName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

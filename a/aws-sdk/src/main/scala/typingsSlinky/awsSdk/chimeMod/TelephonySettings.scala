@@ -26,31 +26,5 @@ object TelephonySettings {
     val __obj = js.Dynamic.literal(InboundCalling = InboundCalling.asInstanceOf[js.Any], OutboundCalling = OutboundCalling.asInstanceOf[js.Any], SMS = SMS.asInstanceOf[js.Any])
     __obj.asInstanceOf[TelephonySettings]
   }
-  @scala.inline
-  implicit class TelephonySettingsOps[Self <: TelephonySettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInboundCalling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InboundCalling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutboundCalling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutboundCalling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSMS(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SMS")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

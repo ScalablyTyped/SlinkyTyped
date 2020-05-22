@@ -68,7 +68,7 @@ trait ConditionalFormatCollection extends ClientObject {
     */
   def clearAll(): Unit = js.native
   /**
-    * Returns the number of conditional formats in the workbook. Read-only.
+    * Returns the number of conditional formats in the workbook.
     *
     * [Api set: ExcelApi 1.6]
     */

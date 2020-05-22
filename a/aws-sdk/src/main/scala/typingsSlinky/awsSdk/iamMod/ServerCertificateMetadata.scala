@@ -38,66 +38,14 @@ object ServerCertificateMetadata {
     Arn: arnType,
     Path: pathType,
     ServerCertificateId: idType,
-    ServerCertificateName: serverCertificateNameType
+    ServerCertificateName: serverCertificateNameType,
+    Expiration: js.Date = null,
+    UploadDate: js.Date = null
   ): ServerCertificateMetadata = {
     val __obj = js.Dynamic.literal(Arn = Arn.asInstanceOf[js.Any], Path = Path.asInstanceOf[js.Any], ServerCertificateId = ServerCertificateId.asInstanceOf[js.Any], ServerCertificateName = ServerCertificateName.asInstanceOf[js.Any])
+    if (Expiration != null) __obj.updateDynamic("Expiration")(Expiration.asInstanceOf[js.Any])
+    if (UploadDate != null) __obj.updateDynamic("UploadDate")(UploadDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerCertificateMetadata]
   }
-  @scala.inline
-  implicit class ServerCertificateMetadataOps[Self <: ServerCertificateMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: arnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: pathType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerCertificateId(value: idType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerCertificateName(value: serverCertificateNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpiration(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

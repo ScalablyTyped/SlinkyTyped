@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormattingOptions
   extends /**
   * Signature for further properties.
@@ -16,27 +15,27 @@ trait FormattingOptions
     *
     * @since 3.15.0
     */
-  var insertFinalNewline: js.UndefOr[Boolean] = js.native
+  var insertFinalNewline: js.UndefOr[Boolean] = js.undefined
   /**
     * Prefer spaces over tabs.
     */
-  var insertSpaces: Boolean = js.native
+  var insertSpaces: Boolean
   /**
     * Size of a tab in spaces.
     */
-  var tabSize: Double = js.native
+  var tabSize: Double
   /**
     * Trim all newlines after the final newline at the end of the file.
     *
     * @since 3.15.0
     */
-  var trimFinalNewlines: js.UndefOr[Boolean] = js.native
+  var trimFinalNewlines: js.UndefOr[Boolean] = js.undefined
   /**
     * Trim trailing whitespaces on a line.
     *
     * @since 3.15.0
     */
-  var trimTrailingWhitespace: js.UndefOr[Boolean] = js.native
+  var trimTrailingWhitespace: js.UndefOr[Boolean] = js.undefined
 }
 
 @JSImport("vscode-languageserver-types", "FormattingOptions")

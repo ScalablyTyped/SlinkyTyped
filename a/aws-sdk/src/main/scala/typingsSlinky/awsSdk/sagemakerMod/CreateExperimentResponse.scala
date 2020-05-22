@@ -14,29 +14,10 @@ trait CreateExperimentResponse extends js.Object {
 
 object CreateExperimentResponse {
   @scala.inline
-  def apply(): CreateExperimentResponse = {
+  def apply(ExperimentArn: ExperimentArn = null): CreateExperimentResponse = {
     val __obj = js.Dynamic.literal()
+    if (ExperimentArn != null) __obj.updateDynamic("ExperimentArn")(ExperimentArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateExperimentResponse]
   }
-  @scala.inline
-  implicit class CreateExperimentResponseOps[Self <: CreateExperimentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExperimentArn(value: ExperimentArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExperimentArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimentArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExperimentArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

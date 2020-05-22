@@ -8,29 +8,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CardholderName extends js.Object {
-  var bin: String = js.native
-  var cardType: String = js.native
-  var cardholderName: js.UndefOr[String] = js.native
-  var commercial: typingsSlinky.braintree.mod.Commercial = js.native
-  var countryOfIssuance: String = js.native
-  var customerLocation: typingsSlinky.braintree.mod.CustomerLocation = js.native
-  var debit: String = js.native
-  var durbinRegulated: DurbinRegulated = js.native
-  var expirationDate: js.UndefOr[String] = js.native
-  var expirationMonth: js.UndefOr[String] = js.native
-  var expirationYear: js.UndefOr[String] = js.native
-  var healthcare: HealthCare = js.native
-  var imageUrl: js.UndefOr[String] = js.native
-  var issuingBank: String = js.native
-  var last4: String = js.native
-  var maskedNumber: js.UndefOr[String] = js.native
-  var payroll: Payroll = js.native
-  var prepaid: Prepaid = js.native
-  var productId: String = js.native
-  var token: String = js.native
-  var uniqueNumberIdentifier: String = js.native
+  var bin: String
+  var cardType: String
+  var cardholderName: js.UndefOr[String] = js.undefined
+  var commercial: typingsSlinky.braintree.mod.Commercial
+  var countryOfIssuance: String
+  var customerLocation: typingsSlinky.braintree.mod.CustomerLocation
+  var debit: String
+  var durbinRegulated: DurbinRegulated
+  var expirationDate: js.UndefOr[String] = js.undefined
+  var expirationMonth: js.UndefOr[String] = js.undefined
+  var expirationYear: js.UndefOr[String] = js.undefined
+  var healthcare: HealthCare
+  var imageUrl: js.UndefOr[String] = js.undefined
+  var issuingBank: String
+  var last4: String
+  var maskedNumber: js.UndefOr[String] = js.undefined
+  var payroll: Payroll
+  var prepaid: Prepaid
+  var productId: String
+  var token: String
+  var uniqueNumberIdentifier: String
 }
 
 object CardholderName {
@@ -50,180 +49,22 @@ object CardholderName {
     prepaid: Prepaid,
     productId: String,
     token: String,
-    uniqueNumberIdentifier: String
+    uniqueNumberIdentifier: String,
+    cardholderName: String = null,
+    expirationDate: String = null,
+    expirationMonth: String = null,
+    expirationYear: String = null,
+    imageUrl: String = null,
+    maskedNumber: String = null
   ): CardholderName = {
     val __obj = js.Dynamic.literal(bin = bin.asInstanceOf[js.Any], cardType = cardType.asInstanceOf[js.Any], commercial = commercial.asInstanceOf[js.Any], countryOfIssuance = countryOfIssuance.asInstanceOf[js.Any], customerLocation = customerLocation.asInstanceOf[js.Any], debit = debit.asInstanceOf[js.Any], durbinRegulated = durbinRegulated.asInstanceOf[js.Any], healthcare = healthcare.asInstanceOf[js.Any], issuingBank = issuingBank.asInstanceOf[js.Any], last4 = last4.asInstanceOf[js.Any], payroll = payroll.asInstanceOf[js.Any], prepaid = prepaid.asInstanceOf[js.Any], productId = productId.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any], uniqueNumberIdentifier = uniqueNumberIdentifier.asInstanceOf[js.Any])
+    if (cardholderName != null) __obj.updateDynamic("cardholderName")(cardholderName.asInstanceOf[js.Any])
+    if (expirationDate != null) __obj.updateDynamic("expirationDate")(expirationDate.asInstanceOf[js.Any])
+    if (expirationMonth != null) __obj.updateDynamic("expirationMonth")(expirationMonth.asInstanceOf[js.Any])
+    if (expirationYear != null) __obj.updateDynamic("expirationYear")(expirationYear.asInstanceOf[js.Any])
+    if (imageUrl != null) __obj.updateDynamic("imageUrl")(imageUrl.asInstanceOf[js.Any])
+    if (maskedNumber != null) __obj.updateDynamic("maskedNumber")(maskedNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardholderName]
   }
-  @scala.inline
-  implicit class CardholderNameOps[Self <: CardholderName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCardType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommercial(value: typingsSlinky.braintree.mod.Commercial): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commercial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountryOfIssuance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryOfIssuance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomerLocation(value: typingsSlinky.braintree.mod.CustomerLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDurbinRegulated(value: DurbinRegulated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durbinRegulated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealthcare(value: HealthCare): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthcare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIssuingBank(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuingBank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayroll(value: Payroll): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrepaid(value: Prepaid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepaid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUniqueNumberIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueNumberIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCardholderName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardholderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCardholderName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardholderName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationMonth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaskedNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maskedNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaskedNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maskedNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

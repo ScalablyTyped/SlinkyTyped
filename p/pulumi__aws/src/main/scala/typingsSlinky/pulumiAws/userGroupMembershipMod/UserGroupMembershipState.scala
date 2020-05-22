@@ -19,41 +19,11 @@ trait UserGroupMembershipState extends js.Object {
 
 object UserGroupMembershipState {
   @scala.inline
-  def apply(): UserGroupMembershipState = {
+  def apply(groups: Input[js.Array[Input[String]]] = null, user: Input[String] = null): UserGroupMembershipState = {
     val __obj = js.Dynamic.literal()
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserGroupMembershipState]
   }
-  @scala.inline
-  implicit class UserGroupMembershipStateOps[Self <: UserGroupMembershipState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroups(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

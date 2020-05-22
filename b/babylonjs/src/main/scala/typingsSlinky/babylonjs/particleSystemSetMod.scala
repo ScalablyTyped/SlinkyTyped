@@ -23,6 +23,11 @@ object particleSystemSetMod extends js.Object {
       */
     var systems: js.Array[IParticleSystem] = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Gets the emitter node used with this set
       */
     def emitterNode: Nullable[TransformNode] = js.native

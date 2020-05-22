@@ -18,47 +18,11 @@ trait CommitTransactionResult extends js.Object {
 
 object CommitTransactionResult {
   @scala.inline
-  def apply(): CommitTransactionResult = {
+  def apply(CommitDigest: CommitDigest = null, TransactionId: TransactionId = null): CommitTransactionResult = {
     val __obj = js.Dynamic.literal()
+    if (CommitDigest != null) __obj.updateDynamic("CommitDigest")(CommitDigest.asInstanceOf[js.Any])
+    if (TransactionId != null) __obj.updateDynamic("TransactionId")(TransactionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommitTransactionResult]
   }
-  @scala.inline
-  implicit class CommitTransactionResultOps[Self <: CommitTransactionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitDigestUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommitDigest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommitDigest(value: CommitDigest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommitDigest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommitDigest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionId(value: TransactionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,31 +8,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides functionality to update the music information that is displayed on the SystemMediaTransportControls . */
-@js.native
 trait SystemMediaTransportControlsDisplayUpdater extends js.Object {
   /** Gets or sets the media id of the app. */
-  var appMediaId: String = js.native
+  var appMediaId: String
   /** Gets the image properties associated with the currently playing media. */
-  var imageProperties: ImageDisplayProperties = js.native
+  var imageProperties: ImageDisplayProperties
   /** Gets the music properties associated with the currently playing media. */
-  var musicProperties: MusicDisplayProperties = js.native
+  var musicProperties: MusicDisplayProperties
   /** Gets or sets thumbnail image associated with the currently playing media. */
-  var thumbnail: RandomAccessStreamReference = js.native
+  var thumbnail: RandomAccessStreamReference
   /** Gets or sets the type of media. */
-  var `type`: MediaPlaybackType = js.native
+  var `type`: MediaPlaybackType
   /** Gets the video properties associated with the currently playing media. */
-  var videoProperties: VideoDisplayProperties = js.native
+  var videoProperties: VideoDisplayProperties
   /** Clears out all of the media metadata. */
-  def clearAll(): Unit = js.native
+  def clearAll(): Unit
   /**
     * Initialize the media properties using the specified file.
     * @param type The type of media.
     * @param source The file to initialize the media properties.
     * @return When this method completes, it returns a boolean value that indicates true if the operation succeeded; otherwise, false.
     */
-  def copyFromFileAsync(`type`: MediaPlaybackType, source: StorageFile): IPromiseWithIAsyncOperation[Boolean] = js.native
+  def copyFromFileAsync(`type`: MediaPlaybackType, source: StorageFile): IPromiseWithIAsyncOperation[Boolean]
   /** Updates the metadata for the currently playing media. */
-  def update(): Unit = js.native
+  def update(): Unit
 }
 
 object SystemMediaTransportControlsDisplayUpdater {
@@ -52,67 +51,5 @@ object SystemMediaTransportControlsDisplayUpdater {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SystemMediaTransportControlsDisplayUpdater]
   }
-  @scala.inline
-  implicit class SystemMediaTransportControlsDisplayUpdaterOps[Self <: SystemMediaTransportControlsDisplayUpdater] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppMediaId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appMediaId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClearAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearAll")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCopyFromFileAsync(value: (MediaPlaybackType, StorageFile) => IPromiseWithIAsyncOperation[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFromFileAsync")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withImageProperties(value: ImageDisplayProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMusicProperties(value: MusicDisplayProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("musicProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThumbnail(value: RandomAccessStreamReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: MediaPlaybackType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withVideoProperties(value: VideoDisplayProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

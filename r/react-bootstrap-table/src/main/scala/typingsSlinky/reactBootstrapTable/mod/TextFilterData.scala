@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextFilterData extends FilterValue {
-  var `type`: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.TextFilter = js.native
-  var value: String = js.native
+  var `type`: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.TextFilter
+  var value: String
 }
 
 object TextFilterData {
@@ -17,25 +16,5 @@ object TextFilterData {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextFilterData]
   }
-  @scala.inline
-  implicit class TextFilterDataOps[Self <: TextFilterData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.TextFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

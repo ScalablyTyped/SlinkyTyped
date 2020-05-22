@@ -17,29 +17,10 @@ trait SchemaGoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest ext
 
 object SchemaGoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest = {
+  def apply(association: SchemaGoogleCloudPrivatecatalogproducerV1beta1Association = null): SchemaGoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest = {
     val __obj = js.Dynamic.literal()
+    if (association != null) __obj.updateDynamic("association")(association.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequestOps[Self <: SchemaGoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociation(value: SchemaGoogleCloudPrivatecatalogproducerV1beta1Association): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("association")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("association")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

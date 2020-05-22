@@ -73,149 +73,32 @@ trait SchemaScanRun extends js.Object {
 
 object SchemaScanRun {
   @scala.inline
-  def apply(): SchemaScanRun = {
+  def apply(
+    endTime: String = null,
+    errorTrace: SchemaScanRunErrorTrace = null,
+    executionState: String = null,
+    hasVulnerabilities: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    progressPercent: js.UndefOr[Double] = js.undefined,
+    resultState: String = null,
+    startTime: String = null,
+    urlsCrawledCount: String = null,
+    urlsTestedCount: String = null,
+    warningTraces: js.Array[SchemaScanRunWarningTrace] = null
+  ): SchemaScanRun = {
     val __obj = js.Dynamic.literal()
+    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
+    if (errorTrace != null) __obj.updateDynamic("errorTrace")(errorTrace.asInstanceOf[js.Any])
+    if (executionState != null) __obj.updateDynamic("executionState")(executionState.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasVulnerabilities)) __obj.updateDynamic("hasVulnerabilities")(hasVulnerabilities.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(progressPercent)) __obj.updateDynamic("progressPercent")(progressPercent.get.asInstanceOf[js.Any])
+    if (resultState != null) __obj.updateDynamic("resultState")(resultState.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
+    if (urlsCrawledCount != null) __obj.updateDynamic("urlsCrawledCount")(urlsCrawledCount.asInstanceOf[js.Any])
+    if (urlsTestedCount != null) __obj.updateDynamic("urlsTestedCount")(urlsTestedCount.asInstanceOf[js.Any])
+    if (warningTraces != null) __obj.updateDynamic("warningTraces")(warningTraces.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScanRun]
   }
-  @scala.inline
-  implicit class SchemaScanRunOps[Self <: SchemaScanRun] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorTrace(value: SchemaScanRunErrorTrace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTrace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorTrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTrace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasVulnerabilities(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasVulnerabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasVulnerabilities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasVulnerabilities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlsCrawledCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlsCrawledCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlsCrawledCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlsCrawledCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlsTestedCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlsTestedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlsTestedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlsTestedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarningTraces(value: js.Array[SchemaScanRunWarningTrace]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warningTraces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarningTraces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warningTraces")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

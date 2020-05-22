@@ -4,119 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChipTheme extends js.Object {
   /**
     * Added to the root element when the component includes an avatar.
     */
-  var avatar: js.UndefOr[String] = js.native
+  var avatar: js.UndefOr[String] = js.undefined
   /**
     * Used for the root element.
     */
-  var chip: js.UndefOr[String] = js.native
+  var chip: js.UndefOr[String] = js.undefined
   /**
     * Added to the root element when the component is deletable.
     */
-  var deletable: js.UndefOr[String] = js.native
+  var deletable: js.UndefOr[String] = js.undefined
   /**
     * Used for the delete element wrapper.
     */
-  var delete: js.UndefOr[String] = js.native
+  var delete: js.UndefOr[String] = js.undefined
   /**
     * Used for the delete icon.
     */
-  var deleteIcon: js.UndefOr[String] = js.native
+  var deleteIcon: js.UndefOr[String] = js.undefined
   /**
     * Used for the delete svg inner layer.
     */
-  var deleteX: js.UndefOr[String] = js.native
+  var deleteX: js.UndefOr[String] = js.undefined
 }
 
 object ChipTheme {
   @scala.inline
-  def apply(): ChipTheme = {
+  def apply(
+    avatar: String = null,
+    chip: String = null,
+    deletable: String = null,
+    delete: String = null,
+    deleteIcon: String = null,
+    deleteX: String = null
+  ): ChipTheme = {
     val __obj = js.Dynamic.literal()
+    if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
+    if (chip != null) __obj.updateDynamic("chip")(chip.asInstanceOf[js.Any])
+    if (deletable != null) __obj.updateDynamic("deletable")(deletable.asInstanceOf[js.Any])
+    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
+    if (deleteIcon != null) __obj.updateDynamic("deleteIcon")(deleteIcon.asInstanceOf[js.Any])
+    if (deleteX != null) __obj.updateDynamic("deleteX")(deleteX.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChipTheme]
   }
-  @scala.inline
-  implicit class ChipThemeOps[Self <: ChipTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvatar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelete(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteX(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteX")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

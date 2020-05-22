@@ -287,6 +287,6 @@ trait PluginManager extends js.Object {
     * If the plugin is not already running, nothing will happen.
     * @param key The key of the plugin to stop.
     */
-  def stop(key: String): PluginManager = js.native
+  def stop(key: String): this.type = js.native
 }
 

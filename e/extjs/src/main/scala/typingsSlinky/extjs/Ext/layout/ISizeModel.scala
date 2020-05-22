@@ -2,237 +2,112 @@ package typingsSlinky.extjs.Ext.layout
 
 import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
+import typingsSlinky.extjs.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISizeModel extends IBase {
   /** [Property] (Boolean) */
-  var auto: js.UndefOr[Boolean] = js.native
+  var auto: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var calculated: js.UndefOr[Boolean] = js.native
+  var calculated: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var calculatedFromConfigured: js.UndefOr[Boolean] = js.native
+  var calculatedFromConfigured: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var calculatedFromNatural: js.UndefOr[Boolean] = js.native
+  var calculatedFromNatural: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var calculatedFromShrinkWrap: js.UndefOr[Boolean] = js.native
+  var calculatedFromShrinkWrap: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var configured: js.UndefOr[Boolean] = js.native
+  var configured: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var constrainedMax: js.UndefOr[Boolean] = js.native
+  var constrainedMax: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var constrainedMin: js.UndefOr[Boolean] = js.native
+  var constrainedMin: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var fixed: js.UndefOr[Boolean] = js.native
+  var fixed: js.UndefOr[Boolean] = js.undefined
   /** [Property] (String) */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** [Property] (Object) */
-  var names: js.UndefOr[js.Any] = js.native
+  var names: js.UndefOr[js.Any] = js.undefined
   /** [Property] (Boolean) */
-  var natural: js.UndefOr[Boolean] = js.native
+  var natural: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Number) */
-  var ordinal: js.UndefOr[Double] = js.native
+  var ordinal: js.UndefOr[Double] = js.undefined
   /** [Property] (Object[]) */
-  var pairsByHeightOrdinal: js.UndefOr[Array] = js.native
+  var pairsByHeightOrdinal: js.UndefOr[Array] = js.undefined
   /** [Property] (Boolean) */
-  var shrinkWrap: js.UndefOr[Boolean] = js.native
+  var shrinkWrap: js.UndefOr[Boolean] = js.undefined
 }
 
 object ISizeModel {
   @scala.inline
-  def apply(): ISizeModel = {
+  def apply(
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    auto: js.UndefOr[Boolean] = js.undefined,
+    calculated: js.UndefOr[Boolean] = js.undefined,
+    calculatedFromConfigured: js.UndefOr[Boolean] = js.undefined,
+    calculatedFromNatural: js.UndefOr[Boolean] = js.undefined,
+    calculatedFromShrinkWrap: js.UndefOr[Boolean] = js.undefined,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    config: js.Any = null,
+    configured: js.UndefOr[Boolean] = js.undefined,
+    constrainedMax: js.UndefOr[Boolean] = js.undefined,
+    constrainedMin: js.UndefOr[Boolean] = js.undefined,
+    extend: String = null,
+    fixed: js.UndefOr[Boolean] = js.undefined,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* config */ js.UndefOr[js.Any] => ISizeModel = null,
+    mixins: js.Any = null,
+    name: String = null,
+    names: js.Any = null,
+    natural: js.UndefOr[Boolean] = js.undefined,
+    ordinal: js.UndefOr[Double] = js.undefined,
+    pairsByHeightOrdinal: Array = null,
+    requires: Array = null,
+    self: IClass = null,
+    shrinkWrap: js.UndefOr[Boolean] = js.undefined,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    statics: js.Any = null,
+    uses: Array = null
+  ): ISizeModel = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (!js.isUndefined(auto)) __obj.updateDynamic("auto")(auto.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(calculated)) __obj.updateDynamic("calculated")(calculated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(calculatedFromConfigured)) __obj.updateDynamic("calculatedFromConfigured")(calculatedFromConfigured.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(calculatedFromNatural)) __obj.updateDynamic("calculatedFromNatural")(calculatedFromNatural.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(calculatedFromShrinkWrap)) __obj.updateDynamic("calculatedFromShrinkWrap")(calculatedFromShrinkWrap.get.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (!js.isUndefined(configured)) __obj.updateDynamic("configured")(configured.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constrainedMax)) __obj.updateDynamic("constrainedMax")(constrainedMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constrainedMin)) __obj.updateDynamic("constrainedMin")(constrainedMin.get.asInstanceOf[js.Any])
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.get.asInstanceOf[js.Any])
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (names != null) __obj.updateDynamic("names")(names.asInstanceOf[js.Any])
+    if (!js.isUndefined(natural)) __obj.updateDynamic("natural")(natural.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ordinal)) __obj.updateDynamic("ordinal")(ordinal.get.asInstanceOf[js.Any])
+    if (pairsByHeightOrdinal != null) __obj.updateDynamic("pairsByHeightOrdinal")(pairsByHeightOrdinal.asInstanceOf[js.Any])
+    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (!js.isUndefined(shrinkWrap)) __obj.updateDynamic("shrinkWrap")(shrinkWrap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISizeModel]
   }
-  @scala.inline
-  implicit class ISizeModelOps[Self <: ISizeModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalculated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalculated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalculatedFromConfigured(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFromConfigured")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalculatedFromConfigured: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFromConfigured")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalculatedFromNatural(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFromNatural")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalculatedFromNatural: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFromNatural")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalculatedFromShrinkWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFromShrinkWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalculatedFromShrinkWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedFromShrinkWrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigured(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configured")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigured: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configured")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstrainedMax(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainedMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstrainedMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainedMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstrainedMin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainedMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstrainedMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainedMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNames(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNatural(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("natural")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNatural: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("natural")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrdinal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrdinal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPairsByHeightOrdinal(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pairsByHeightOrdinal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPairsByHeightOrdinal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pairsByHeightOrdinal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShrinkWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShrinkWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkWrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

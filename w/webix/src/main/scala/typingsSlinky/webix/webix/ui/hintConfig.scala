@@ -6,328 +6,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait hintConfig extends js.Object {
-  var animate: js.UndefOr[js.Any] = js.native
-  var borderless: js.UndefOr[Boolean] = js.native
-  var container: js.UndefOr[String | HTMLElement] = js.native
-  var css: js.UndefOr[js.Any] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var gravity: js.UndefOr[Double] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var hidden: js.UndefOr[Boolean] = js.native
-  var id: js.UndefOr[String | Double] = js.native
-  var keyPressTimeout: js.UndefOr[Double] = js.native
-  var left: js.UndefOr[Double] = js.native
-  var maxHeight: js.UndefOr[Double] = js.native
-  var maxWidth: js.UndefOr[Double] = js.native
-  var minHeight: js.UndefOr[Double] = js.native
-  var minWidth: js.UndefOr[Double] = js.native
-  var nextButton: js.UndefOr[Boolean | String] = js.native
-  var on: js.UndefOr[EventHash] = js.native
-  var prevButton: js.UndefOr[Boolean | String] = js.native
-  var stepTimeout: js.UndefOr[Double] = js.native
-  var steps: js.UndefOr[js.Array[_]] = js.native
-  var top: js.UndefOr[Double] = js.native
-  var view: js.UndefOr[String] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var animate: js.UndefOr[js.Any] = js.undefined
+  var borderless: js.UndefOr[Boolean] = js.undefined
+  var container: js.UndefOr[String | HTMLElement] = js.undefined
+  var css: js.UndefOr[js.Any] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var gravity: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
+  var id: js.UndefOr[String | Double] = js.undefined
+  var keyPressTimeout: js.UndefOr[Double] = js.undefined
+  var left: js.UndefOr[Double] = js.undefined
+  var maxHeight: js.UndefOr[Double] = js.undefined
+  var maxWidth: js.UndefOr[Double] = js.undefined
+  var minHeight: js.UndefOr[Double] = js.undefined
+  var minWidth: js.UndefOr[Double] = js.undefined
+  var nextButton: js.UndefOr[Boolean | String] = js.undefined
+  var on: js.UndefOr[EventHash] = js.undefined
+  var prevButton: js.UndefOr[Boolean | String] = js.undefined
+  var stepTimeout: js.UndefOr[Double] = js.undefined
+  var steps: js.UndefOr[js.Array[_]] = js.undefined
+  var top: js.UndefOr[Double] = js.undefined
+  var view: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object hintConfig {
   @scala.inline
-  def apply(): hintConfig = {
+  def apply(
+    animate: js.Any = null,
+    borderless: js.UndefOr[Boolean] = js.undefined,
+    container: String | HTMLElement = null,
+    css: js.Any = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    gravity: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    id: String | Double = null,
+    keyPressTimeout: js.UndefOr[Double] = js.undefined,
+    left: js.UndefOr[Double] = js.undefined,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    minHeight: js.UndefOr[Double] = js.undefined,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    nextButton: Boolean | String = null,
+    on: EventHash = null,
+    prevButton: Boolean | String = null,
+    stepTimeout: js.UndefOr[Double] = js.undefined,
+    steps: js.Array[_] = null,
+    top: js.UndefOr[Double] = js.undefined,
+    view: String = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): hintConfig = {
     val __obj = js.Dynamic.literal()
+    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderless)) __obj.updateDynamic("borderless")(borderless.get.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gravity)) __obj.updateDynamic("gravity")(gravity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyPressTimeout)) __obj.updateDynamic("keyPressTimeout")(keyPressTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minHeight)) __obj.updateDynamic("minHeight")(minHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (nextButton != null) __obj.updateDynamic("nextButton")(nextButton.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+    if (prevButton != null) __obj.updateDynamic("prevButton")(prevButton.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepTimeout)) __obj.updateDynamic("stepTimeout")(stepTimeout.get.asInstanceOf[js.Any])
+    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[hintConfig]
   }
-  @scala.inline
-  implicit class hintConfigOps[Self <: hintConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCss(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyPressTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPressTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyPressTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPressTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextButton(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOn(value: EventHash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevButton(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSteps(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

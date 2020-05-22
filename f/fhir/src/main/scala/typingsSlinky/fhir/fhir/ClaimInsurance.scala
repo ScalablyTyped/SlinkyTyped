@@ -7,165 +7,84 @@ import scala.scalajs.js.annotation._
 /**
   * Insurance or medical plan
   */
-@js.native
 trait ClaimInsurance extends BackboneElement {
   /**
     * Contains extended information for property 'businessArrangement'.
     */
-  var _businessArrangement: js.UndefOr[Element] = js.native
+  var _businessArrangement: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'focal'.
     */
-  var _focal: js.UndefOr[Element] = js.native
+  var _focal: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'preAuthRef'.
     */
-  var _preAuthRef: js.UndefOr[js.Array[Element]] = js.native
+  var _preAuthRef: js.UndefOr[js.Array[Element]] = js.undefined
   /**
     * Contains extended information for property 'sequence'.
     */
-  var _sequence: js.UndefOr[Element] = js.native
+  var _sequence: js.UndefOr[Element] = js.undefined
   /**
     * Business agreement
     */
-  var businessArrangement: js.UndefOr[String] = js.native
+  var businessArrangement: js.UndefOr[String] = js.undefined
   /**
     * Adjudication results
     */
-  var claimResponse: js.UndefOr[Reference] = js.native
+  var claimResponse: js.UndefOr[Reference] = js.undefined
   /**
     * Insurance information
     */
-  var coverage: Reference = js.native
+  var coverage: Reference
   /**
     * Is the focal Coverage
     */
-  var focal: Boolean = js.native
+  var focal: Boolean
   /**
     * Pre-Authorization/Determination Reference
     */
-  var preAuthRef: js.UndefOr[js.Array[String]] = js.native
+  var preAuthRef: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Service instance identifier
     */
-  var sequence: positiveInt = js.native
+  var sequence: positiveInt
 }
 
 object ClaimInsurance {
   @scala.inline
-  def apply(coverage: Reference, focal: Boolean, sequence: positiveInt): ClaimInsurance = {
+  def apply(
+    coverage: Reference,
+    focal: Boolean,
+    sequence: positiveInt,
+    _businessArrangement: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _focal: Element = null,
+    _id: Element = null,
+    _preAuthRef: js.Array[Element] = null,
+    _sequence: Element = null,
+    businessArrangement: String = null,
+    claimResponse: Reference = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    preAuthRef: js.Array[String] = null
+  ): ClaimInsurance = {
     val __obj = js.Dynamic.literal(coverage = coverage.asInstanceOf[js.Any], focal = focal.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any])
+    if (_businessArrangement != null) __obj.updateDynamic("_businessArrangement")(_businessArrangement.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_focal != null) __obj.updateDynamic("_focal")(_focal.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_preAuthRef != null) __obj.updateDynamic("_preAuthRef")(_preAuthRef.asInstanceOf[js.Any])
+    if (_sequence != null) __obj.updateDynamic("_sequence")(_sequence.asInstanceOf[js.Any])
+    if (businessArrangement != null) __obj.updateDynamic("businessArrangement")(businessArrangement.asInstanceOf[js.Any])
+    if (claimResponse != null) __obj.updateDynamic("claimResponse")(claimResponse.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (preAuthRef != null) __obj.updateDynamic("preAuthRef")(preAuthRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClaimInsurance]
   }
-  @scala.inline
-  implicit class ClaimInsuranceOps[Self <: ClaimInsurance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoverage(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coverage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFocal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSequence(value: positiveInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_businessArrangement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_businessArrangement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_businessArrangement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_businessArrangement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_focal(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_focal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_focal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_focal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_preAuthRef(value: js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_preAuthRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_preAuthRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_preAuthRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sequence(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sequence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBusinessArrangement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("businessArrangement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBusinessArrangement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("businessArrangement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClaimResponse(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreAuthRef(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preAuthRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreAuthRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preAuthRef")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

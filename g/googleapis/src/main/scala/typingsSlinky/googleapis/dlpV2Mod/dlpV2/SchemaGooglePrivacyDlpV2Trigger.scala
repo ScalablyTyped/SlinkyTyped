@@ -17,29 +17,10 @@ trait SchemaGooglePrivacyDlpV2Trigger extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Trigger {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2Trigger = {
+  def apply(schedule: SchemaGooglePrivacyDlpV2Schedule = null): SchemaGooglePrivacyDlpV2Trigger = {
     val __obj = js.Dynamic.literal()
+    if (schedule != null) __obj.updateDynamic("schedule")(schedule.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Trigger]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2TriggerOps[Self <: SchemaGooglePrivacyDlpV2Trigger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSchedule(value: SchemaGooglePrivacyDlpV2Schedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -3,8 +3,8 @@ package typingsSlinky.yandexMaps
 import typingsSlinky.yandexMaps.mod.ControlKey
 import typingsSlinky.yandexMaps.mod.ControlSetKey
 import typingsSlinky.yandexMaps.mod.ControlSingleKey
-import typingsSlinky.yandexMaps.mod.InteractivityModelKey
-import typingsSlinky.yandexMaps.mod.OverlayKey
+import typingsSlinky.yandexMaps.mod._InteractivityModelKey
+import typingsSlinky.yandexMaps.mod._OverlayKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,37 +31,37 @@ object yandexMapsStrings {
        with ControlSetKey
   
   @js.native
-  sealed trait defaultNumbersigncircle extends OverlayKey
+  sealed trait defaultNumbersigncircle extends _OverlayKey
   
   @js.native
-  sealed trait defaultNumbersigngeoObject extends InteractivityModelKey
+  sealed trait defaultNumbersigngeoObject extends _InteractivityModelKey
   
   @js.native
-  sealed trait defaultNumbersignlayer extends InteractivityModelKey
+  sealed trait defaultNumbersignlayer extends _InteractivityModelKey
   
   @js.native
-  sealed trait defaultNumbersignopaque extends InteractivityModelKey
+  sealed trait defaultNumbersignopaque extends _InteractivityModelKey
   
   @js.native
-  sealed trait defaultNumbersignpin extends OverlayKey
+  sealed trait defaultNumbersignpin extends _OverlayKey
   
   @js.native
-  sealed trait defaultNumbersignplacemark extends OverlayKey
+  sealed trait defaultNumbersignplacemark extends _OverlayKey
   
   @js.native
-  sealed trait defaultNumbersignpolygon extends OverlayKey
+  sealed trait defaultNumbersignpolygon extends _OverlayKey
   
   @js.native
-  sealed trait defaultNumbersignpolyline extends OverlayKey
+  sealed trait defaultNumbersignpolyline extends _OverlayKey
   
   @js.native
-  sealed trait defaultNumbersignrectangle extends OverlayKey
+  sealed trait defaultNumbersignrectangle extends _OverlayKey
   
   @js.native
-  sealed trait defaultNumbersignsilent extends InteractivityModelKey
+  sealed trait defaultNumbersignsilent extends _InteractivityModelKey
   
   @js.native
-  sealed trait defaultNumbersigntransparent extends InteractivityModelKey
+  sealed trait defaultNumbersigntransparent extends _InteractivityModelKey
   
   @js.native
   sealed trait district extends js.Object
@@ -83,34 +83,34 @@ object yandexMapsStrings {
   sealed trait hidden extends js.Object
   
   @js.native
-  sealed trait hotspotNumbersigncircle extends OverlayKey
+  sealed trait hotspotNumbersigncircle extends _OverlayKey
   
   @js.native
-  sealed trait hotspotNumbersignplacemark extends OverlayKey
+  sealed trait hotspotNumbersignplacemark extends _OverlayKey
   
   @js.native
-  sealed trait hotspotNumbersignpolygon extends OverlayKey
+  sealed trait hotspotNumbersignpolygon extends _OverlayKey
   
   @js.native
-  sealed trait hotspotNumbersignpolyline extends OverlayKey
+  sealed trait hotspotNumbersignpolyline extends _OverlayKey
   
   @js.native
-  sealed trait hotspotNumbersignrectangle extends OverlayKey
+  sealed trait hotspotNumbersignrectangle extends _OverlayKey
   
   @js.native
   sealed trait house extends js.Object
   
   @js.native
-  sealed trait htmlNumbersignballoon extends OverlayKey
+  sealed trait htmlNumbersignballoon extends _OverlayKey
   
   @js.native
-  sealed trait htmlNumbersignhint extends OverlayKey
+  sealed trait htmlNumbersignhint extends _OverlayKey
   
   @js.native
-  sealed trait htmlNumbersignplacemark extends OverlayKey
+  sealed trait htmlNumbersignplacemark extends _OverlayKey
   
   @js.native
-  sealed trait htmlNumbersignrectangle extends OverlayKey
+  sealed trait htmlNumbersignrectangle extends _OverlayKey
   
   @js.native
   sealed trait ifNull extends js.Object

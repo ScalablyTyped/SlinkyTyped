@@ -4,253 +4,90 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BrowserStackOptions extends js.Object {
   /**  BS access key, you can also use BROWSERSTACK_ACCESS_KEY env variable */
-  var accessKey: String = js.native
+  var accessKey: String
   /** the BS worker build name */
-  var build: js.UndefOr[String] = js.native
+  var build: js.UndefOr[String] = js.undefined
   /** the browser capture timeout */
-  var captureTimeout: js.UndefOr[Double] = js.native
+  var captureTimeout: js.UndefOr[Double] = js.undefined
   /** force traffic through the local BrowserStack tunnel, passes flag through to BrowserStackTunnel */
-  var forcelocal: js.UndefOr[Boolean] = js.native
-  /** the BS worker name  */
-  var name: js.UndefOr[String] = js.native
-  /** the BS worker project name */
-  var project: js.UndefOr[String] = js.native
-  /** the host of your proxy for communicating with BrowserStack REST API and BrowserStackLocal */
-  var proxyHost: js.UndefOr[String] = js.native
-  /** the password used for authentication with your proxy */
-  var proxyPass: js.UndefOr[String] = js.native
-  /** the port of your proxy */
-  var proxyPort: js.UndefOr[Double] = js.native
-  /** the protocol of your proxy (optional. default: http. valid: http or https) */
-  var proxyProtocol: js.UndefOr[String] = js.native
-  /** the username used for authentication with your proxy */
-  var proxyUser: js.UndefOr[String] = js.native
-  /** how many times do you want to retry to capture the browser */
-  var retryLimit: js.UndefOr[Double] = js.native
-  /** do you wanna establish the BrowserStack tunnel */
-  var startTunnel: js.UndefOr[Boolean] = js.native
-  /** the BS worker timeout */
-  var timeout: js.UndefOr[Double] = js.native
+  var forcelocal: js.UndefOr[Boolean] = js.undefined
   /**
-    * in case you want to start the BrowserStack tunnel outside karma
-    * by setting `startTunnel` to `false`,
-    * set the identifier passed to the -localIdentifier option here (optional)
+    * @alias tunnelIdentifier
     */
-  var tunnelIdentifier: js.UndefOr[String] = js.native
+  var localIdentifier: js.UndefOr[String] = js.undefined
+  /** the BS worker name  */
+  var name: js.UndefOr[String] = js.undefined
+  /** the BS worker project name */
+  var project: js.UndefOr[String] = js.undefined
+  /** the host of your proxy for communicating with BrowserStack REST API and BrowserStackLocal */
+  var proxyHost: js.UndefOr[String] = js.undefined
+  /** the password used for authentication with your proxy */
+  var proxyPass: js.UndefOr[String] = js.undefined
+  /** the port of your proxy */
+  var proxyPort: js.UndefOr[Double] = js.undefined
+  /** the protocol of your proxy (optional. default: http. valid: http or https) */
+  var proxyProtocol: js.UndefOr[String] = js.undefined
+  /** the username used for authentication with your proxy */
+  var proxyUser: js.UndefOr[String] = js.undefined
+  /** how many times do you want to retry to capture the browser */
+  var retryLimit: js.UndefOr[Double] = js.undefined
+  /** do you wanna establish the BrowserStack tunnel */
+  var startTunnel: js.UndefOr[Boolean] = js.undefined
+  /** the BS worker timeout */
+  var timeout: js.UndefOr[Double] = js.undefined
+  /**
+    * in case you want to start the BrowserStack tunnel outside `karma` by setting `startTunnel` to `false`,
+    * set the identifier passed to the `-localIdentifier` option here
+    */
+  var tunnelIdentifier: js.UndefOr[String] = js.undefined
   /** BS username, you can also use BROWSERSTACK_USERNAME env variable */
-  var username: String = js.native
+  var username: String
   /** enable video recording of session on BrowserStack */
-  var video: js.UndefOr[Boolean] = js.native
+  var video: js.UndefOr[Boolean] = js.undefined
 }
 
 object BrowserStackOptions {
   @scala.inline
-  def apply(accessKey: String, username: String): BrowserStackOptions = {
+  def apply(
+    accessKey: String,
+    username: String,
+    build: String = null,
+    captureTimeout: js.UndefOr[Double] = js.undefined,
+    forcelocal: js.UndefOr[Boolean] = js.undefined,
+    localIdentifier: String = null,
+    name: String = null,
+    project: String = null,
+    proxyHost: String = null,
+    proxyPass: String = null,
+    proxyPort: js.UndefOr[Double] = js.undefined,
+    proxyProtocol: String = null,
+    proxyUser: String = null,
+    retryLimit: js.UndefOr[Double] = js.undefined,
+    startTunnel: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    tunnelIdentifier: String = null,
+    video: js.UndefOr[Boolean] = js.undefined
+  ): BrowserStackOptions = {
     val __obj = js.Dynamic.literal(accessKey = accessKey.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
+    if (build != null) __obj.updateDynamic("build")(build.asInstanceOf[js.Any])
+    if (!js.isUndefined(captureTimeout)) __obj.updateDynamic("captureTimeout")(captureTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forcelocal)) __obj.updateDynamic("forcelocal")(forcelocal.get.asInstanceOf[js.Any])
+    if (localIdentifier != null) __obj.updateDynamic("localIdentifier")(localIdentifier.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (project != null) __obj.updateDynamic("project")(project.asInstanceOf[js.Any])
+    if (proxyHost != null) __obj.updateDynamic("proxyHost")(proxyHost.asInstanceOf[js.Any])
+    if (proxyPass != null) __obj.updateDynamic("proxyPass")(proxyPass.asInstanceOf[js.Any])
+    if (!js.isUndefined(proxyPort)) __obj.updateDynamic("proxyPort")(proxyPort.get.asInstanceOf[js.Any])
+    if (proxyProtocol != null) __obj.updateDynamic("proxyProtocol")(proxyProtocol.asInstanceOf[js.Any])
+    if (proxyUser != null) __obj.updateDynamic("proxyUser")(proxyUser.asInstanceOf[js.Any])
+    if (!js.isUndefined(retryLimit)) __obj.updateDynamic("retryLimit")(retryLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startTunnel)) __obj.updateDynamic("startTunnel")(startTunnel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (tunnelIdentifier != null) __obj.updateDynamic("tunnelIdentifier")(tunnelIdentifier.asInstanceOf[js.Any])
+    if (!js.isUndefined(video)) __obj.updateDynamic("video")(video.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrowserStackOptions]
   }
-  @scala.inline
-  implicit class BrowserStackOptionsOps[Self <: BrowserStackOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuild(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptureTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptureTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForcelocal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forcelocal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForcelocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forcelocal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxyHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxyPass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyPass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyPass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyPass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxyPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxyProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxyUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTunnel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTunnel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTunnel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTunnel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTunnelIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnelIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTunnelIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnelIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

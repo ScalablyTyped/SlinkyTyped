@@ -33,13 +33,12 @@ import scala.scalajs.js.annotation._
   * entity, {@link com.sun.star.reflection.XPublished} should not be supported.
   * @since OOo 2.0
   */
-@js.native
 trait XPublished extends js.Object {
   /**
     * Returns the " published " status of a UNOIDL entity.
     * @returns `TRUE` if the UNOIDL entity represented by this object is published
     */
-  def isPublished(): Boolean = js.native
+  def isPublished(): Boolean
 }
 
 object XPublished {
@@ -48,19 +47,5 @@ object XPublished {
     val __obj = js.Dynamic.literal(isPublished = js.Any.fromFunction0(isPublished))
     __obj.asInstanceOf[XPublished]
   }
-  @scala.inline
-  implicit class XPublishedOps[Self <: XPublished] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsPublished(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPublished")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,80 +1,30 @@
 package typingsSlinky.elasticElasticsearch.transportMod
 
 import typingsSlinky.elasticElasticsearch.anon.Aborted
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait RequestEvent[T, C] extends js.Object {
-  var body: T = js.native
-  var headers: anyObject | Null = js.native
-  var meta: Aborted[C] = js.native
-  var statusCode: Double | Null = js.native
-  var warnings: js.Array[String] | Null = js.native
+trait RequestEvent[TResponse, TContext] extends js.Object {
+  var body: TResponse
+  var headers: (Record[String, _]) | Null
+  var meta: Aborted[TContext]
+  var statusCode: Double | Null
+  var warnings: js.Array[String] | Null
 }
 
 object RequestEvent {
   @scala.inline
-  def apply[T, C](body: T, meta: Aborted[C]): RequestEvent[T, C] = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RequestEvent[T, C]]
+  def apply[TResponse, TContext](
+    body: TResponse,
+    meta: Aborted[TContext],
+    headers: Record[String, _] = null,
+    statusCode: Double = null.asInstanceOf[Double],
+    warnings: js.Array[String] = null
+  ): RequestEvent[TResponse, TContext] = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any], warnings = warnings.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RequestEvent[TResponse, TContext]]
   }
-  @scala.inline
-  implicit class RequestEventOps[Self[t, c] <: RequestEvent[t, c], T, C] (val x: Self[T, C]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T, C] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, C]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[T, C]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, C]) with Other]
-    @scala.inline
-    def withBody(value: T): Self[T, C] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeta(value: Aborted[C]): Self[T, C] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: anyObject): Self[T, C] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeadersNull: Self[T, C] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(null)
-        ret
-    }
-    @scala.inline
-    def withStatusCode(value: Double): Self[T, C] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusCodeNull: Self[T, C] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(null)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: js.Array[String]): Self[T, C] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWarningsNull: Self[T, C] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(null)
-        ret
-    }
-  }
-  
 }
 

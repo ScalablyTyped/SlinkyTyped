@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TeamDriveBackgroundImageFile extends js.Object {
-  var id: js.UndefOr[String] = js.native
-  var width: js.UndefOr[Double] = js.native
-  var xCoordinate: js.UndefOr[Double] = js.native
-  var yCoordinate: js.UndefOr[Double] = js.native
+  var id: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
+  var xCoordinate: js.UndefOr[Double] = js.undefined
+  var yCoordinate: js.UndefOr[Double] = js.undefined
 }
 
 object TeamDriveBackgroundImageFile {
   @scala.inline
-  def apply(): TeamDriveBackgroundImageFile = {
+  def apply(
+    id: String = null,
+    width: js.UndefOr[Double] = js.undefined,
+    xCoordinate: js.UndefOr[Double] = js.undefined,
+    yCoordinate: js.UndefOr[Double] = js.undefined
+  ): TeamDriveBackgroundImageFile = {
     val __obj = js.Dynamic.literal()
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xCoordinate)) __obj.updateDynamic("xCoordinate")(xCoordinate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yCoordinate)) __obj.updateDynamic("yCoordinate")(yCoordinate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamDriveBackgroundImageFile]
   }
-  @scala.inline
-  implicit class TeamDriveBackgroundImageFileOps[Self <: TeamDriveBackgroundImageFile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXCoordinate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xCoordinate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXCoordinate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xCoordinate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYCoordinate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yCoordinate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYCoordinate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yCoordinate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

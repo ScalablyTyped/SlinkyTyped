@@ -8,101 +8,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventFromComponent extends js.Object {
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
-  var fromComponent: js.UndefOr[dxSortable | dxDraggable] = js.native
-  var fromData: js.UndefOr[js.Any] = js.native
-  var itemData: js.UndefOr[js.Any] = js.native
-  var itemElement: js.UndefOr[dxElement] = js.native
-  var toComponent: js.UndefOr[dxSortable | dxDraggable] = js.native
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
+  var fromComponent: js.UndefOr[dxSortable | dxDraggable] = js.undefined
+  var fromData: js.UndefOr[js.Any] = js.undefined
+  var itemData: js.UndefOr[js.Any] = js.undefined
+  var itemElement: js.UndefOr[dxElement] = js.undefined
+  var toComponent: js.UndefOr[dxSortable | dxDraggable] = js.undefined
 }
 
 object EventFromComponent {
   @scala.inline
-  def apply(): EventFromComponent = {
+  def apply(
+    event: event = null,
+    fromComponent: dxSortable | dxDraggable = null,
+    fromData: js.Any = null,
+    itemData: js.Any = null,
+    itemElement: dxElement = null,
+    toComponent: dxSortable | dxDraggable = null
+  ): EventFromComponent = {
     val __obj = js.Dynamic.literal()
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (fromComponent != null) __obj.updateDynamic("fromComponent")(fromComponent.asInstanceOf[js.Any])
+    if (fromData != null) __obj.updateDynamic("fromData")(fromData.asInstanceOf[js.Any])
+    if (itemData != null) __obj.updateDynamic("itemData")(itemData.asInstanceOf[js.Any])
+    if (itemElement != null) __obj.updateDynamic("itemElement")(itemElement.asInstanceOf[js.Any])
+    if (toComponent != null) __obj.updateDynamic("toComponent")(toComponent.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventFromComponent]
   }
-  @scala.inline
-  implicit class EventFromComponentOps[Self <: EventFromComponent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvent(value: event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromComponent(value: dxSortable | dxDraggable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToComponent(value: dxSortable | dxDraggable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toComponent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

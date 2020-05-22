@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PhononPageEventObject extends js.Object {
-  def addEvent(event: String, callback: js.Function1[/* parameter */ js.UndefOr[js.Any], Unit]): Unit = js.native
+  def addEvent(event: String, callback: js.Function1[/* parameter */ js.UndefOr[js.Any], Unit]): Unit
 }
 
 object PhononPageEventObject {
@@ -15,19 +14,5 @@ object PhononPageEventObject {
     val __obj = js.Dynamic.literal(addEvent = js.Any.fromFunction2(addEvent))
     __obj.asInstanceOf[PhononPageEventObject]
   }
-  @scala.inline
-  implicit class PhononPageEventObjectOps[Self <: PhononPageEventObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddEvent(value: (String, js.Function1[/* parameter */ js.UndefOr[js.Any], Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addEvent")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

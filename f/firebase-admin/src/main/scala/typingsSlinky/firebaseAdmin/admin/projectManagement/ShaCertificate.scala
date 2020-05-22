@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * Do not call this constructor directly. Instead, use
   * [`projectManagement.shaCertificate()`](admin.projectManagement.ProjectManagement#shaCertificate).
   */
-@js.native
 trait ShaCertificate extends js.Object {
   /**
     * The SHA certificate type.
@@ -22,7 +21,7 @@ trait ShaCertificate extends js.Object {
     * var certType = shaCertificate.certType;
     * ```
     */
-  var certType: sha1_ | sha256_ = js.native
+  var certType: sha1_ | sha256_
   /**
     * The fully-qualified resource name that identifies this sha-key.
     *
@@ -33,7 +32,7 @@ trait ShaCertificate extends js.Object {
     * var resourceName = shaCertificate.resourceName;
     * ```
     */
-  var resourceName: js.UndefOr[String] = js.native
+  var resourceName: js.UndefOr[String] = js.undefined
   /**
     * The SHA-1 or SHA-256 hash for this certificate.
     *
@@ -42,46 +41,15 @@ trait ShaCertificate extends js.Object {
     * var shaHash = shaCertificate.shaHash;
     * ```
     */
-  var shaHash: String = js.native
+  var shaHash: String
 }
 
 object ShaCertificate {
   @scala.inline
-  def apply(certType: sha1_ | sha256_, shaHash: String): ShaCertificate = {
+  def apply(certType: sha1_ | sha256_, shaHash: String, resourceName: String = null): ShaCertificate = {
     val __obj = js.Dynamic.literal(certType = certType.asInstanceOf[js.Any], shaHash = shaHash.asInstanceOf[js.Any])
+    if (resourceName != null) __obj.updateDynamic("resourceName")(resourceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShaCertificate]
   }
-  @scala.inline
-  implicit class ShaCertificateOps[Self <: ShaCertificate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertType(value: sha1_ | sha256_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShaHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shaHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

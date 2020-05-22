@@ -27,6 +27,10 @@ object Errors extends js.Object {
     def this(status: EpilogueError, message: String, errors: js.Array[String], cause: js.Error) = this()
     var cause: js.Error = js.native
     var errors: js.Array[String] = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     var status: Double | EpilogueError = js.native
   }
   
@@ -45,7 +49,12 @@ object Errors extends js.Object {
   }
   
   @js.native
-  class RequestCompleted () extends Error
+  class RequestCompleted () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
 }
 

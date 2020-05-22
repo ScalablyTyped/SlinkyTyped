@@ -46,125 +46,28 @@ trait Bot extends js.Object {
 
 object Bot {
   @scala.inline
-  def apply(): Bot = {
+  def apply(
+    BotEmail: SensitiveString = null,
+    BotId: String = null,
+    BotType: BotType = null,
+    CreatedTimestamp: js.Date = null,
+    Disabled: js.UndefOr[NullableBoolean] = js.undefined,
+    DisplayName: SensitiveString = null,
+    SecurityToken: SensitiveString = null,
+    UpdatedTimestamp: js.Date = null,
+    UserId: String = null
+  ): Bot = {
     val __obj = js.Dynamic.literal()
+    if (BotEmail != null) __obj.updateDynamic("BotEmail")(BotEmail.asInstanceOf[js.Any])
+    if (BotId != null) __obj.updateDynamic("BotId")(BotId.asInstanceOf[js.Any])
+    if (BotType != null) __obj.updateDynamic("BotType")(BotType.asInstanceOf[js.Any])
+    if (CreatedTimestamp != null) __obj.updateDynamic("CreatedTimestamp")(CreatedTimestamp.asInstanceOf[js.Any])
+    if (!js.isUndefined(Disabled)) __obj.updateDynamic("Disabled")(Disabled.get.asInstanceOf[js.Any])
+    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
+    if (SecurityToken != null) __obj.updateDynamic("SecurityToken")(SecurityToken.asInstanceOf[js.Any])
+    if (UpdatedTimestamp != null) __obj.updateDynamic("UpdatedTimestamp")(UpdatedTimestamp.asInstanceOf[js.Any])
+    if (UserId != null) __obj.updateDynamic("UserId")(UserId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bot]
   }
-  @scala.inline
-  implicit class BotOps[Self <: Bot] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBotEmail(value: SensitiveString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BotEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBotEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BotEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBotId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBotId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BotId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBotType(value: BotType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BotType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBotType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BotType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: NullableBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: SensitiveString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityToken(value: SensitiveString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

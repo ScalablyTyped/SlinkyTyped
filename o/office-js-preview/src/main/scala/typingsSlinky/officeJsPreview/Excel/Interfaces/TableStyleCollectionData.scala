@@ -5,36 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `tableStyleCollection.toJSON()`. */
-@js.native
 trait TableStyleCollectionData extends js.Object {
-  var items: js.UndefOr[js.Array[TableStyleData]] = js.native
+  var items: js.UndefOr[js.Array[TableStyleData]] = js.undefined
 }
 
 object TableStyleCollectionData {
   @scala.inline
-  def apply(): TableStyleCollectionData = {
+  def apply(items: js.Array[TableStyleData] = null): TableStyleCollectionData = {
     val __obj = js.Dynamic.literal()
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableStyleCollectionData]
   }
-  @scala.inline
-  implicit class TableStyleCollectionDataOps[Self <: TableStyleCollectionData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[TableStyleData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,12 @@ trait LaunchDetails extends js.Object {
 
 object LaunchDetails {
   @scala.inline
-  def apply(): LaunchDetails = {
+  def apply(latestLaunchTime: js.Date = null, stackId: StackId = null, stackName: StackName = null): LaunchDetails = {
     val __obj = js.Dynamic.literal()
+    if (latestLaunchTime != null) __obj.updateDynamic("latestLaunchTime")(latestLaunchTime.asInstanceOf[js.Any])
+    if (stackId != null) __obj.updateDynamic("stackId")(stackId.asInstanceOf[js.Any])
+    if (stackName != null) __obj.updateDynamic("stackName")(stackName.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchDetails]
   }
-  @scala.inline
-  implicit class LaunchDetailsOps[Self <: LaunchDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLatestLaunchTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latestLaunchTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatestLaunchTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latestLaunchTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackId(value: StackId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackName(value: StackName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

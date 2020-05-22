@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SwirlEffect extends VertexEffect {
-  var angle: Double = js.native
-  var centerX: Double = js.native
-  var centerY: Double = js.native
-  var radius: Double = js.native
-  var worldX: js.Any = js.native
-  var worldY: js.Any = js.native
+  var angle: Double
+  var centerX: Double
+  var centerY: Double
+  var radius: Double
+  var worldX: js.Any
+  var worldY: js.Any
 }
 
 object SwirlEffect {
@@ -30,49 +29,5 @@ object SwirlEffect {
     val __obj = js.Dynamic.literal(angle = angle.asInstanceOf[js.Any], begin = js.Any.fromFunction1(begin), centerX = centerX.asInstanceOf[js.Any], centerY = centerY.asInstanceOf[js.Any], end = js.Any.fromFunction0(end), radius = radius.asInstanceOf[js.Any], transform = js.Any.fromFunction4(transform), worldX = worldX.asInstanceOf[js.Any], worldY = worldY.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwirlEffect]
   }
-  @scala.inline
-  implicit class SwirlEffectOps[Self <: SwirlEffect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCenterX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("centerX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCenterY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("centerY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorldX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorldY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldY")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

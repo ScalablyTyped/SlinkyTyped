@@ -22,25 +22,5 @@ object AttachLoadBalancerTlsCertificateRequest {
     val __obj = js.Dynamic.literal(certificateName = certificateName.asInstanceOf[js.Any], loadBalancerName = loadBalancerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachLoadBalancerTlsCertificateRequest]
   }
-  @scala.inline
-  implicit class AttachLoadBalancerTlsCertificateRequestOps[Self <: AttachLoadBalancerTlsCertificateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadBalancerName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

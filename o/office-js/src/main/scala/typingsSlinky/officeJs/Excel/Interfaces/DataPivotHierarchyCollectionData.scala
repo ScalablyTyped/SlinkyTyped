@@ -5,36 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `dataPivotHierarchyCollection.toJSON()`. */
-@js.native
 trait DataPivotHierarchyCollectionData extends js.Object {
-  var items: js.UndefOr[js.Array[DataPivotHierarchyData]] = js.native
+  var items: js.UndefOr[js.Array[DataPivotHierarchyData]] = js.undefined
 }
 
 object DataPivotHierarchyCollectionData {
   @scala.inline
-  def apply(): DataPivotHierarchyCollectionData = {
+  def apply(items: js.Array[DataPivotHierarchyData] = null): DataPivotHierarchyCollectionData = {
     val __obj = js.Dynamic.literal()
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataPivotHierarchyCollectionData]
   }
-  @scala.inline
-  implicit class DataPivotHierarchyCollectionDataOps[Self <: DataPivotHierarchyCollectionData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[DataPivotHierarchyData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

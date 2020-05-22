@@ -22,25 +22,5 @@ object GetFileUploadURLRequest {
     val __obj = js.Dynamic.literal(AssignmentId = AssignmentId.asInstanceOf[js.Any], QuestionIdentifier = QuestionIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFileUploadURLRequest]
   }
-  @scala.inline
-  implicit class GetFileUploadURLRequestOps[Self <: GetFileUploadURLRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssignmentId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuestionIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuestionIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

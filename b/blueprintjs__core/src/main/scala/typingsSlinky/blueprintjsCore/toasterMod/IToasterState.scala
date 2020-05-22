@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IToasterState extends js.Object {
-  var toasts: js.Array[IToastOptions] = js.native
+  var toasts: js.Array[IToastOptions]
 }
 
 object IToasterState {
@@ -15,19 +14,5 @@ object IToasterState {
     val __obj = js.Dynamic.literal(toasts = toasts.asInstanceOf[js.Any])
     __obj.asInstanceOf[IToasterState]
   }
-  @scala.inline
-  implicit class IToasterStateOps[Self <: IToasterState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToasts(value: js.Array[IToastOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toasts")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

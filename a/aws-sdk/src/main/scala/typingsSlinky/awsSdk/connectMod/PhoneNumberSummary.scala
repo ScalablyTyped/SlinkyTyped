@@ -30,77 +30,20 @@ trait PhoneNumberSummary extends js.Object {
 
 object PhoneNumberSummary {
   @scala.inline
-  def apply(): PhoneNumberSummary = {
+  def apply(
+    Arn: ARN = null,
+    Id: PhoneNumberId = null,
+    PhoneNumber: PhoneNumber = null,
+    PhoneNumberCountryCode: PhoneNumberCountryCode = null,
+    PhoneNumberType: PhoneNumberType = null
+  ): PhoneNumberSummary = {
     val __obj = js.Dynamic.literal()
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (PhoneNumber != null) __obj.updateDynamic("PhoneNumber")(PhoneNumber.asInstanceOf[js.Any])
+    if (PhoneNumberCountryCode != null) __obj.updateDynamic("PhoneNumberCountryCode")(PhoneNumberCountryCode.asInstanceOf[js.Any])
+    if (PhoneNumberType != null) __obj.updateDynamic("PhoneNumberType")(PhoneNumberType.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhoneNumberSummary]
   }
-  @scala.inline
-  implicit class PhoneNumberSummaryOps[Self <: PhoneNumberSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: ARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: PhoneNumberId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumber(value: PhoneNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumberCountryCode(value: PhoneNumberCountryCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberCountryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumberCountryCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberCountryCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumberType(value: PhoneNumberType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumberType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

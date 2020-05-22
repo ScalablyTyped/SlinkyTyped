@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.acceleratorMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.globalaccelerator.AcceleratorAttributes
 import typingsSlinky.pulumiAws.inputMod.globalaccelerator.AcceleratorIpSet
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -37,105 +38,34 @@ trait AcceleratorState extends js.Object {
     * The name of the accelerator.
     */
   val name: js.UndefOr[Input[String]] = js.native
+  /**
+    * A mapping of tags to assign to the resource.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[_]]] = js.native
 }
 
 object AcceleratorState {
   @scala.inline
-  def apply(): AcceleratorState = {
+  def apply(
+    attributes: Input[AcceleratorAttributes] = null,
+    dnsName: Input[String] = null,
+    enabled: Input[Boolean] = null,
+    hostedZoneId: Input[String] = null,
+    ipAddressType: Input[String] = null,
+    ipSets: Input[js.Array[Input[AcceleratorIpSet]]] = null,
+    name: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null
+  ): AcceleratorState = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (dnsName != null) __obj.updateDynamic("dnsName")(dnsName.asInstanceOf[js.Any])
+    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
+    if (hostedZoneId != null) __obj.updateDynamic("hostedZoneId")(hostedZoneId.asInstanceOf[js.Any])
+    if (ipAddressType != null) __obj.updateDynamic("ipAddressType")(ipAddressType.asInstanceOf[js.Any])
+    if (ipSets != null) __obj.updateDynamic("ipSets")(ipSets.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcceleratorState]
   }
-  @scala.inline
-  implicit class AcceleratorStateOps[Self <: AcceleratorState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: Input[AcceleratorAttributes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostedZoneId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostedZoneId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpAddressType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddressType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddressType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddressType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpSets(value: Input[js.Array[Input[AcceleratorIpSet]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpSets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipSets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

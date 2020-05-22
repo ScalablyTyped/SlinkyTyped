@@ -9,101 +9,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.Delta> */
-@js.native
 trait PartialDelta extends js.Object {
-  var decreasing: js.UndefOr[Symbol] = js.native
-  var increasing: js.UndefOr[Symbol] = js.native
-  var position: js.UndefOr[top | bottom | left | right] = js.native
-  var reference: js.UndefOr[Double] = js.native
-  var relative: js.UndefOr[Boolean] = js.native
-  var valueformat: js.UndefOr[String] = js.native
+  var decreasing: js.UndefOr[Symbol] = js.undefined
+  var increasing: js.UndefOr[Symbol] = js.undefined
+  var position: js.UndefOr[top | bottom | left | right] = js.undefined
+  var reference: js.UndefOr[Double] = js.undefined
+  var relative: js.UndefOr[Boolean] = js.undefined
+  var valueformat: js.UndefOr[String] = js.undefined
 }
 
 object PartialDelta {
   @scala.inline
-  def apply(): PartialDelta = {
+  def apply(
+    decreasing: Symbol = null,
+    increasing: Symbol = null,
+    position: top | bottom | left | right = null,
+    reference: js.UndefOr[Double] = js.undefined,
+    relative: js.UndefOr[Boolean] = js.undefined,
+    valueformat: String = null
+  ): PartialDelta = {
     val __obj = js.Dynamic.literal()
+    if (decreasing != null) __obj.updateDynamic("decreasing")(decreasing.asInstanceOf[js.Any])
+    if (increasing != null) __obj.updateDynamic("increasing")(increasing.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(reference)) __obj.updateDynamic("reference")(reference.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(relative)) __obj.updateDynamic("relative")(relative.get.asInstanceOf[js.Any])
+    if (valueformat != null) __obj.updateDynamic("valueformat")(valueformat.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialDelta]
   }
-  @scala.inline
-  implicit class PartialDeltaOps[Self <: PartialDelta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecreasing(value: Symbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decreasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecreasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decreasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncreasing(value: Symbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncreasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: top | bottom | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReference(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueformat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueformat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueformat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueformat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

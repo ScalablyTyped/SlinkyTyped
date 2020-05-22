@@ -75,228 +75,51 @@ trait ApplicationState extends js.Object {
     */
   val stackId: js.UndefOr[Input[String]] = js.native
   /**
-    * The type of source to use. For example, "archive".
+    * Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
     */
   val `type`: js.UndefOr[Input[String]] = js.native
 }
 
 object ApplicationState {
   @scala.inline
-  def apply(): ApplicationState = {
+  def apply(
+    appSources: Input[js.Array[Input[ApplicationAppSource]]] = null,
+    autoBundleOnDeploy: Input[String] = null,
+    awsFlowRubySettings: Input[String] = null,
+    dataSourceArn: Input[String] = null,
+    dataSourceDatabaseName: Input[String] = null,
+    dataSourceType: Input[String] = null,
+    description: Input[String] = null,
+    documentRoot: Input[String] = null,
+    domains: Input[js.Array[Input[String]]] = null,
+    enableSsl: Input[Boolean] = null,
+    environments: Input[js.Array[Input[ApplicationEnvironment]]] = null,
+    name: Input[String] = null,
+    railsEnv: Input[String] = null,
+    shortName: Input[String] = null,
+    sslConfigurations: Input[js.Array[Input[ApplicationSslConfiguration]]] = null,
+    stackId: Input[String] = null,
+    `type`: Input[String] = null
+  ): ApplicationState = {
     val __obj = js.Dynamic.literal()
+    if (appSources != null) __obj.updateDynamic("appSources")(appSources.asInstanceOf[js.Any])
+    if (autoBundleOnDeploy != null) __obj.updateDynamic("autoBundleOnDeploy")(autoBundleOnDeploy.asInstanceOf[js.Any])
+    if (awsFlowRubySettings != null) __obj.updateDynamic("awsFlowRubySettings")(awsFlowRubySettings.asInstanceOf[js.Any])
+    if (dataSourceArn != null) __obj.updateDynamic("dataSourceArn")(dataSourceArn.asInstanceOf[js.Any])
+    if (dataSourceDatabaseName != null) __obj.updateDynamic("dataSourceDatabaseName")(dataSourceDatabaseName.asInstanceOf[js.Any])
+    if (dataSourceType != null) __obj.updateDynamic("dataSourceType")(dataSourceType.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (documentRoot != null) __obj.updateDynamic("documentRoot")(documentRoot.asInstanceOf[js.Any])
+    if (domains != null) __obj.updateDynamic("domains")(domains.asInstanceOf[js.Any])
+    if (enableSsl != null) __obj.updateDynamic("enableSsl")(enableSsl.asInstanceOf[js.Any])
+    if (environments != null) __obj.updateDynamic("environments")(environments.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (railsEnv != null) __obj.updateDynamic("railsEnv")(railsEnv.asInstanceOf[js.Any])
+    if (shortName != null) __obj.updateDynamic("shortName")(shortName.asInstanceOf[js.Any])
+    if (sslConfigurations != null) __obj.updateDynamic("sslConfigurations")(sslConfigurations.asInstanceOf[js.Any])
+    if (stackId != null) __obj.updateDynamic("stackId")(stackId.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationState]
   }
-  @scala.inline
-  implicit class ApplicationStateOps[Self <: ApplicationState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppSources(value: Input[js.Array[Input[ApplicationAppSource]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appSources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoBundleOnDeploy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBundleOnDeploy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoBundleOnDeploy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBundleOnDeploy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsFlowRubySettings(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsFlowRubySettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsFlowRubySettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsFlowRubySettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSourceArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSourceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSourceDatabaseName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceDatabaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSourceDatabaseName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceDatabaseName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSourceType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentRoot(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentRoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomains(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSsl(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSsl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSsl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSsl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironments(value: Input[js.Array[Input[ApplicationEnvironment]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRailsEnv(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("railsEnv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRailsEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("railsEnv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSslConfigurations(value: Input[js.Array[Input[ApplicationSslConfiguration]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sslConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSslConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sslConfigurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

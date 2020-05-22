@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MaybeDocument
   extends MaybeIdentifiedDocument
      with MaybeRevisionedDocument
 
 object MaybeDocument {
   @scala.inline
-  def apply(): MaybeDocument = {
+  def apply(_id: String = null, _rev: String = null): MaybeDocument = {
     val __obj = js.Dynamic.literal()
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_rev != null) __obj.updateDynamic("_rev")(_rev.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaybeDocument]
   }
 }

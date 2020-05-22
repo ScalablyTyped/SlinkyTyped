@@ -66,179 +66,37 @@ trait Stage extends js.Object {
 
 object Stage {
   @scala.inline
-  def apply(StageName: StringWithLengthBetween1And128): Stage = {
+  def apply(
+    StageName: StringWithLengthBetween1And128,
+    AccessLogSettings: AccessLogSettings = null,
+    ApiGatewayManaged: js.UndefOr[boolean] = js.undefined,
+    AutoDeploy: js.UndefOr[boolean] = js.undefined,
+    ClientCertificateId: Id = null,
+    CreatedDate: js.Date = null,
+    DefaultRouteSettings: RouteSettings = null,
+    DeploymentId: Id = null,
+    Description: StringWithLengthBetween0And1024 = null,
+    LastDeploymentStatusMessage: string = null,
+    LastUpdatedDate: js.Date = null,
+    RouteSettings: RouteSettingsMap = null,
+    StageVariables: StageVariablesMap = null,
+    Tags: Tags = null
+  ): Stage = {
     val __obj = js.Dynamic.literal(StageName = StageName.asInstanceOf[js.Any])
+    if (AccessLogSettings != null) __obj.updateDynamic("AccessLogSettings")(AccessLogSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(ApiGatewayManaged)) __obj.updateDynamic("ApiGatewayManaged")(ApiGatewayManaged.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(AutoDeploy)) __obj.updateDynamic("AutoDeploy")(AutoDeploy.get.asInstanceOf[js.Any])
+    if (ClientCertificateId != null) __obj.updateDynamic("ClientCertificateId")(ClientCertificateId.asInstanceOf[js.Any])
+    if (CreatedDate != null) __obj.updateDynamic("CreatedDate")(CreatedDate.asInstanceOf[js.Any])
+    if (DefaultRouteSettings != null) __obj.updateDynamic("DefaultRouteSettings")(DefaultRouteSettings.asInstanceOf[js.Any])
+    if (DeploymentId != null) __obj.updateDynamic("DeploymentId")(DeploymentId.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (LastDeploymentStatusMessage != null) __obj.updateDynamic("LastDeploymentStatusMessage")(LastDeploymentStatusMessage.asInstanceOf[js.Any])
+    if (LastUpdatedDate != null) __obj.updateDynamic("LastUpdatedDate")(LastUpdatedDate.asInstanceOf[js.Any])
+    if (RouteSettings != null) __obj.updateDynamic("RouteSettings")(RouteSettings.asInstanceOf[js.Any])
+    if (StageVariables != null) __obj.updateDynamic("StageVariables")(StageVariables.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stage]
   }
-  @scala.inline
-  implicit class StageOps[Self <: Stage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStageName(value: StringWithLengthBetween1And128): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessLogSettings(value: AccessLogSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessLogSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessLogSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessLogSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiGatewayManaged(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiGatewayManaged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiGatewayManaged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiGatewayManaged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoDeploy(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeploy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDeploy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeploy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientCertificateId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertificateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientCertificateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertificateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultRouteSettings(value: RouteSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRouteSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRouteSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRouteSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: StringWithLengthBetween0And1024): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastDeploymentStatusMessage(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDeploymentStatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastDeploymentStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDeploymentStatusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteSettings(value: RouteSettingsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageVariables(value: StageVariablesMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StageVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StageVariables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Tags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,35 +18,10 @@ trait DescribeCopyProductStatusInput extends js.Object {
 
 object DescribeCopyProductStatusInput {
   @scala.inline
-  def apply(CopyProductToken: Id): DescribeCopyProductStatusInput = {
+  def apply(CopyProductToken: Id, AcceptLanguage: AcceptLanguage = null): DescribeCopyProductStatusInput = {
     val __obj = js.Dynamic.literal(CopyProductToken = CopyProductToken.asInstanceOf[js.Any])
+    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCopyProductStatusInput]
   }
-  @scala.inline
-  implicit class DescribeCopyProductStatusInputOps[Self <: DescribeCopyProductStatusInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopyProductToken(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyProductToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcceptLanguage(value: AcceptLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

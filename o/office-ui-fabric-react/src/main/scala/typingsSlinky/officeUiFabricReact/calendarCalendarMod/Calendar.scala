@@ -31,6 +31,9 @@ class Calendar protected ()
   def UNSAFE_componentWillReceiveProps_MCalendar(nextProps: ICalendarProps): Unit = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MCalendar(): Unit = js.native
+  /** Sets focus to the selected date. */
+  /* CompleteClass */
+  override def focus(): Unit = js.native
 }
 
 /* static members */

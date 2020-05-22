@@ -62,173 +62,36 @@ trait GetRouteResult extends js.Object {
 
 object GetRouteResult {
   @scala.inline
-  def apply(): GetRouteResult = {
+  def apply(
+    ApiGatewayManaged: js.UndefOr[boolean] = js.undefined,
+    ApiKeyRequired: js.UndefOr[boolean] = js.undefined,
+    AuthorizationScopes: AuthorizationScopes = null,
+    AuthorizationType: AuthorizationType = null,
+    AuthorizerId: Id = null,
+    ModelSelectionExpression: SelectionExpression = null,
+    OperationName: StringWithLengthBetween1And64 = null,
+    RequestModels: RouteModels = null,
+    RequestParameters: RouteParameters = null,
+    RouteId: Id = null,
+    RouteKey: SelectionKey = null,
+    RouteResponseSelectionExpression: SelectionExpression = null,
+    Target: StringWithLengthBetween1And128 = null
+  ): GetRouteResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ApiGatewayManaged)) __obj.updateDynamic("ApiGatewayManaged")(ApiGatewayManaged.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ApiKeyRequired)) __obj.updateDynamic("ApiKeyRequired")(ApiKeyRequired.get.asInstanceOf[js.Any])
+    if (AuthorizationScopes != null) __obj.updateDynamic("AuthorizationScopes")(AuthorizationScopes.asInstanceOf[js.Any])
+    if (AuthorizationType != null) __obj.updateDynamic("AuthorizationType")(AuthorizationType.asInstanceOf[js.Any])
+    if (AuthorizerId != null) __obj.updateDynamic("AuthorizerId")(AuthorizerId.asInstanceOf[js.Any])
+    if (ModelSelectionExpression != null) __obj.updateDynamic("ModelSelectionExpression")(ModelSelectionExpression.asInstanceOf[js.Any])
+    if (OperationName != null) __obj.updateDynamic("OperationName")(OperationName.asInstanceOf[js.Any])
+    if (RequestModels != null) __obj.updateDynamic("RequestModels")(RequestModels.asInstanceOf[js.Any])
+    if (RequestParameters != null) __obj.updateDynamic("RequestParameters")(RequestParameters.asInstanceOf[js.Any])
+    if (RouteId != null) __obj.updateDynamic("RouteId")(RouteId.asInstanceOf[js.Any])
+    if (RouteKey != null) __obj.updateDynamic("RouteKey")(RouteKey.asInstanceOf[js.Any])
+    if (RouteResponseSelectionExpression != null) __obj.updateDynamic("RouteResponseSelectionExpression")(RouteResponseSelectionExpression.asInstanceOf[js.Any])
+    if (Target != null) __obj.updateDynamic("Target")(Target.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRouteResult]
   }
-  @scala.inline
-  implicit class GetRouteResultOps[Self <: GetRouteResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiGatewayManaged(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiGatewayManaged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiGatewayManaged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiGatewayManaged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiKeyRequired(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiKeyRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiKeyRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiKeyRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizationScopes(value: AuthorizationScopes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizationScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizationScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizationScopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizationType(value: AuthorizationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizerId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelSelectionExpression(value: SelectionExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelSelectionExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelSelectionExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelSelectionExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationName(value: StringWithLengthBetween1And64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestModels(value: RouteModels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestModels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestModels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestModels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestParameters(value: RouteParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteKey(value: SelectionKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteResponseSelectionExpression(value: SelectionExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteResponseSelectionExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteResponseSelectionExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteResponseSelectionExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: StringWithLengthBetween1And128): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

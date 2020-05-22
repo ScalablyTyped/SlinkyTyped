@@ -17,14 +17,13 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.form.component.GridControl
   * @see com.sun.star.form.control.GridControl
   */
-@js.native
 trait XGrid extends XInterface {
   /** retrieves the current column position. */
-  var CurrentColumnPosition: Double = js.native
+  var CurrentColumnPosition: Double
   /** retrieves the current column position. */
-  def getCurrentColumnPosition(): Double = js.native
+  def getCurrentColumnPosition(): Double
   /** sets the current column position. */
-  def setCurrentColumnPosition(nPos: Double): Unit = js.native
+  def setCurrentColumnPosition(nPos: Double): Unit
 }
 
 object XGrid {
@@ -40,31 +39,5 @@ object XGrid {
     val __obj = js.Dynamic.literal(CurrentColumnPosition = CurrentColumnPosition.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getCurrentColumnPosition = js.Any.fromFunction0(getCurrentColumnPosition), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setCurrentColumnPosition = js.Any.fromFunction1(setCurrentColumnPosition))
     __obj.asInstanceOf[XGrid]
   }
-  @scala.inline
-  implicit class XGridOps[Self <: XGrid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentColumnPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentColumnPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetCurrentColumnPosition(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentColumnPosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetCurrentColumnPosition(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCurrentColumnPosition")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

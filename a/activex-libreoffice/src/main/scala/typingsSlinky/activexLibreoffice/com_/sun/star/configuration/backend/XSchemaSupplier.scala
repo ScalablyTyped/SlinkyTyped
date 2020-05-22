@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * provides access to configuration component schemas.
   * @since OOo 1.1.2
   */
-@js.native
 trait XSchemaSupplier extends XInterface {
   /**
     * Returns the schema information (component + templates) for a particular component.
@@ -19,7 +18,7 @@ trait XSchemaSupplier extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if the component identifier is invalid.
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def getComponentSchema(aComponent: String): XSchema = js.native
+  def getComponentSchema(aComponent: String): XSchema
 }
 
 object XSchemaSupplier {
@@ -33,19 +32,5 @@ object XSchemaSupplier {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getComponentSchema = js.Any.fromFunction1(getComponentSchema), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSchemaSupplier]
   }
-  @scala.inline
-  implicit class XSchemaSupplierOps[Self <: XSchemaSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetComponentSchema(value: String => XSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getComponentSchema")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

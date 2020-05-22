@@ -12,13 +12,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Existing extends js.Object {
-  var existing: Binding = js.native
-  var identifier: Identifier_ = js.native
-  var kind: `var` | let | const = js.native
-  var path: NodePath[Node] = js.native
-  var scope: Scope = js.native
+  var existing: Binding
+  var identifier: Identifier_
+  var kind: `var` | let | const
+  var path: NodePath[Node]
+  var scope: Scope
 }
 
 object Existing {
@@ -33,43 +32,5 @@ object Existing {
     val __obj = js.Dynamic.literal(existing = existing.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[Existing]
   }
-  @scala.inline
-  implicit class ExistingOps[Self <: Existing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExisting(value: Binding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("existing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: Identifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: `var` | let | const): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: NodePath[Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScope(value: Scope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

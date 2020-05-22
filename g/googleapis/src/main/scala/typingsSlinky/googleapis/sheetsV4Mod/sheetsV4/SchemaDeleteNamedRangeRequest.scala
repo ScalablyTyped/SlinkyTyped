@@ -17,29 +17,10 @@ trait SchemaDeleteNamedRangeRequest extends js.Object {
 
 object SchemaDeleteNamedRangeRequest {
   @scala.inline
-  def apply(): SchemaDeleteNamedRangeRequest = {
+  def apply(namedRangeId: String = null): SchemaDeleteNamedRangeRequest = {
     val __obj = js.Dynamic.literal()
+    if (namedRangeId != null) __obj.updateDynamic("namedRangeId")(namedRangeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteNamedRangeRequest]
   }
-  @scala.inline
-  implicit class SchemaDeleteNamedRangeRequestOps[Self <: SchemaDeleteNamedRangeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNamedRangeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namedRangeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamedRangeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namedRangeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

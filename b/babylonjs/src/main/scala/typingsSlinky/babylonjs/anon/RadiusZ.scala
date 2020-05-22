@@ -5,153 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RadiusZ extends js.Object {
-  var backUVs: js.UndefOr[Vector4] = js.native
-  var flat: js.UndefOr[Boolean] = js.native
-  var frontUVs: js.UndefOr[Vector4] = js.native
-  var radius: js.UndefOr[Double] = js.native
-  var radiusX: js.UndefOr[Double] = js.native
-  var radiusY: js.UndefOr[Double] = js.native
-  var radiusZ: js.UndefOr[Double] = js.native
-  var sideOrientation: js.UndefOr[Double] = js.native
-  var subdivisions: js.UndefOr[Double] = js.native
-  var updatable: js.UndefOr[Boolean] = js.native
+  var backUVs: js.UndefOr[Vector4] = js.undefined
+  var flat: js.UndefOr[Boolean] = js.undefined
+  var frontUVs: js.UndefOr[Vector4] = js.undefined
+  var radius: js.UndefOr[Double] = js.undefined
+  var radiusX: js.UndefOr[Double] = js.undefined
+  var radiusY: js.UndefOr[Double] = js.undefined
+  var radiusZ: js.UndefOr[Double] = js.undefined
+  var sideOrientation: js.UndefOr[Double] = js.undefined
+  var subdivisions: js.UndefOr[Double] = js.undefined
+  var updatable: js.UndefOr[Boolean] = js.undefined
 }
 
 object RadiusZ {
   @scala.inline
-  def apply(): RadiusZ = {
+  def apply(
+    backUVs: Vector4 = null,
+    flat: js.UndefOr[Boolean] = js.undefined,
+    frontUVs: Vector4 = null,
+    radius: js.UndefOr[Double] = js.undefined,
+    radiusX: js.UndefOr[Double] = js.undefined,
+    radiusY: js.UndefOr[Double] = js.undefined,
+    radiusZ: js.UndefOr[Double] = js.undefined,
+    sideOrientation: js.UndefOr[Double] = js.undefined,
+    subdivisions: js.UndefOr[Double] = js.undefined,
+    updatable: js.UndefOr[Boolean] = js.undefined
+  ): RadiusZ = {
     val __obj = js.Dynamic.literal()
+    if (backUVs != null) __obj.updateDynamic("backUVs")(backUVs.asInstanceOf[js.Any])
+    if (!js.isUndefined(flat)) __obj.updateDynamic("flat")(flat.get.asInstanceOf[js.Any])
+    if (frontUVs != null) __obj.updateDynamic("frontUVs")(frontUVs.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radiusX)) __obj.updateDynamic("radiusX")(radiusX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radiusY)) __obj.updateDynamic("radiusY")(radiusY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radiusZ)) __obj.updateDynamic("radiusZ")(radiusZ.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sideOrientation)) __obj.updateDynamic("sideOrientation")(sideOrientation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subdivisions)) __obj.updateDynamic("subdivisions")(subdivisions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatable)) __obj.updateDynamic("updatable")(updatable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadiusZ]
   }
-  @scala.inline
-  implicit class RadiusZOps[Self <: RadiusZ] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackUVs(value: Vector4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backUVs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackUVs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backUVs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrontUVs(value: Vector4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frontUVs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrontUVs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frontUVs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadiusX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadiusX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadiusY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadiusY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadiusZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusZ")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadiusZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusZ")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSideOrientation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSideOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubdivisions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubdivisions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DidChangeAccountsParams extends js.Object {
   // Updated accounts
-  var accounts: js.Array[Account] = js.native
+  var accounts: js.Array[Account]
 }
 
 object DidChangeAccountsParams {
@@ -16,19 +15,5 @@ object DidChangeAccountsParams {
     val __obj = js.Dynamic.literal(accounts = accounts.asInstanceOf[js.Any])
     __obj.asInstanceOf[DidChangeAccountsParams]
   }
-  @scala.inline
-  implicit class DidChangeAccountsParamsOps[Self <: DidChangeAccountsParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccounts(value: js.Array[Account]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

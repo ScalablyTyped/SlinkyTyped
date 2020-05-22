@@ -14,29 +14,10 @@ trait CreateSnapshotsResult extends js.Object {
 
 object CreateSnapshotsResult {
   @scala.inline
-  def apply(): CreateSnapshotsResult = {
+  def apply(Snapshots: SnapshotSet = null): CreateSnapshotsResult = {
     val __obj = js.Dynamic.literal()
+    if (Snapshots != null) __obj.updateDynamic("Snapshots")(Snapshots.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSnapshotsResult]
   }
-  @scala.inline
-  implicit class CreateSnapshotsResultOps[Self <: CreateSnapshotsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSnapshots(value: SnapshotSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Snapshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Snapshots")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

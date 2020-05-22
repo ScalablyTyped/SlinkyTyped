@@ -14,29 +14,10 @@ trait OIDC extends js.Object {
 
 object OIDC {
   @scala.inline
-  def apply(): OIDC = {
+  def apply(issuer: String = null): OIDC = {
     val __obj = js.Dynamic.literal()
+    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
     __obj.asInstanceOf[OIDC]
   }
-  @scala.inline
-  implicit class OIDCOps[Self <: OIDC] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIssuer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

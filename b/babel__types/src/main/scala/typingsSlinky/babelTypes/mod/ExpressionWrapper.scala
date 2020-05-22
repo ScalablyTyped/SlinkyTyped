@@ -1,5 +1,8 @@
 package typingsSlinky.babelTypes.mod
 
+import typingsSlinky.babelTypes.babelTypesStrings.ExpressionStatement
+import typingsSlinky.babelTypes.babelTypesStrings.ParenthesizedExpression
+import typingsSlinky.babelTypes.babelTypesStrings.TypeCastExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +12,54 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ParenthesizedExpression_
   - typingsSlinky.babelTypes.mod.TypeCastExpression_
 */
-trait ExpressionWrapper extends Node
+trait ExpressionWrapper extends _Node
 
 object ExpressionWrapper {
   @scala.inline
-  implicit def apply(value: ExpressionStatement_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
+  def ExpressionStatement_(
+    expression: Expression,
+    `type`: ExpressionStatement,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): ExpressionWrapper = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExpressionWrapper]
+  }
   @scala.inline
-  implicit def apply(value: ParenthesizedExpression_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
+  def ParenthesizedExpression_(
+    expression: Expression,
+    `type`: ParenthesizedExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): ExpressionWrapper = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExpressionWrapper]
+  }
   @scala.inline
-  implicit def apply(value: TypeCastExpression_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
+  def TypeCastExpression_(
+    expression: Expression,
+    `type`: TypeCastExpression,
+    typeAnnotation: TypeAnnotation_,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): ExpressionWrapper = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExpressionWrapper]
+  }
 }
 

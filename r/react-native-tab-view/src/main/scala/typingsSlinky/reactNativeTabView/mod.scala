@@ -23,6 +23,10 @@ object mod extends js.Object {
     extends typingsSlinky.reactNativeTabView.tabBarMod.default[T]
   
   @js.native
+  class TabBarIndicator[T /* <: Route */] ()
+    extends typingsSlinky.reactNativeTabView.tabBarIndicatorMod.TabBarIndicator[T]
+  
+  @js.native
   class TabView[T /* <: Route */] ()
     extends typingsSlinky.reactNativeTabView.tabViewMod.default[T]
   

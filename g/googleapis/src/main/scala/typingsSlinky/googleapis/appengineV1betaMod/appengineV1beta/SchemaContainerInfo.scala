@@ -22,29 +22,10 @@ trait SchemaContainerInfo extends js.Object {
 
 object SchemaContainerInfo {
   @scala.inline
-  def apply(): SchemaContainerInfo = {
+  def apply(image: String = null): SchemaContainerInfo = {
     val __obj = js.Dynamic.literal()
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContainerInfo]
   }
-  @scala.inline
-  implicit class SchemaContainerInfoOps[Self <: SchemaContainerInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

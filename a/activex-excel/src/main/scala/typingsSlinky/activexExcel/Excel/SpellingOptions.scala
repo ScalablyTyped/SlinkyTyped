@@ -4,29 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpellingOptions extends js.Object {
-  var ArabicModes: XlArabicModes = js.native
-  var ArabicStrictAlefHamza: Boolean = js.native
-  var ArabicStrictFinalYaa: Boolean = js.native
-  var ArabicStrictTaaMarboota: Boolean = js.native
-  var BrazilReform: XlPortugueseReform = js.native
-  var DictLang: Double = js.native
+  var ArabicModes: XlArabicModes
+  var ArabicStrictAlefHamza: Boolean
+  var ArabicStrictFinalYaa: Boolean
+  var ArabicStrictTaaMarboota: Boolean
+  var BrazilReform: XlPortugueseReform
+  var DictLang: Double
   @JSName("Excel.SpellingOptions_typekey")
-  var ExcelDotSpellingOptions_typekey: SpellingOptions = js.native
-  var GermanPostReform: Boolean = js.native
-  var HebrewModes: XlHebrewModes = js.native
-  var IgnoreCaps: Boolean = js.native
-  var IgnoreFileNames: Boolean = js.native
-  var IgnoreMixedDigits: Boolean = js.native
-  var KoreanCombineAux: Boolean = js.native
-  var KoreanProcessCompound: Boolean = js.native
-  var KoreanUseAutoChangeList: Boolean = js.native
-  var PortugalReform: XlPortugueseReform = js.native
-  var RussianStrictE: Boolean = js.native
-  var SpanishModes: XlSpanishModes = js.native
-  var SuggestMainOnly: Boolean = js.native
-  var UserDict: String = js.native
+  var ExcelDotSpellingOptions_typekey: SpellingOptions
+  var GermanPostReform: Boolean
+  var HebrewModes: XlHebrewModes
+  var IgnoreCaps: Boolean
+  var IgnoreFileNames: Boolean
+  var IgnoreMixedDigits: Boolean
+  var KoreanCombineAux: Boolean
+  var KoreanProcessCompound: Boolean
+  var KoreanUseAutoChangeList: Boolean
+  var PortugalReform: XlPortugueseReform
+  var RussianStrictE: Boolean
+  var SpanishModes: XlSpanishModes
+  var SuggestMainOnly: Boolean
+  var UserDict: String
 }
 
 object SpellingOptions {
@@ -57,133 +56,5 @@ object SpellingOptions {
     __obj.updateDynamic("Excel.SpellingOptions_typekey")(ExcelDotSpellingOptions_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpellingOptions]
   }
-  @scala.inline
-  implicit class SpellingOptionsOps[Self <: SpellingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArabicModes(value: XlArabicModes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArabicModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArabicStrictAlefHamza(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArabicStrictAlefHamza")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArabicStrictFinalYaa(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArabicStrictFinalYaa")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArabicStrictTaaMarboota(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArabicStrictTaaMarboota")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrazilReform(value: XlPortugueseReform): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrazilReform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDictLang(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DictLang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcelDotSpellingOptions_typekey(value: SpellingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.SpellingOptions_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGermanPostReform(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GermanPostReform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHebrewModes(value: XlHebrewModes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HebrewModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIgnoreCaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IgnoreCaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIgnoreFileNames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IgnoreFileNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIgnoreMixedDigits(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IgnoreMixedDigits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKoreanCombineAux(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KoreanCombineAux")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKoreanProcessCompound(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KoreanProcessCompound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKoreanUseAutoChangeList(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KoreanUseAutoChangeList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPortugalReform(value: XlPortugueseReform): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortugalReform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRussianStrictE(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RussianStrictE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpanishModes(value: XlSpanishModes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpanishModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuggestMainOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuggestMainOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserDict(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDict")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

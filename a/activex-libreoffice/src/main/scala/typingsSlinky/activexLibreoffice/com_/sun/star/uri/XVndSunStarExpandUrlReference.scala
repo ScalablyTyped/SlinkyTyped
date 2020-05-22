@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * represents absolute " vnd.sun.star.expand " URL references.
   * @since OOo 2.3
   */
-@js.native
 trait XVndSunStarExpandUrlReference
   extends XUriReference
      with XVndSunStarExpandUrl

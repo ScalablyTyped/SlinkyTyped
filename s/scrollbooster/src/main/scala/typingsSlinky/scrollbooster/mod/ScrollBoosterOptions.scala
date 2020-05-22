@@ -13,211 +13,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScrollBoosterOptions extends js.Object {
-  var bounce: js.UndefOr[Boolean] = js.native
-  var bounceForce: js.UndefOr[Double] = js.native
-  var content: js.UndefOr[HTMLElement | Null] = js.native
-  var direction: js.UndefOr[horizontal | vertical | all] = js.native
-  var emulateScroll: js.UndefOr[Boolean] = js.native
-  var friction: js.UndefOr[Double] = js.native
-  var inputsFocus: js.UndefOr[Boolean] = js.native
-  var onClick: js.UndefOr[js.Function2[/* state */ ScrollingState, /* event */ Event, Unit]] = js.native
-  var onUpdate: js.UndefOr[js.Function1[/* state */ ScrollingState, Unit]] = js.native
-  var pointerMode: js.UndefOr[touch | mouse | all] = js.native
-  var scrollMode: js.UndefOr[transform | native] = js.native
-  var shouldScroll: js.UndefOr[js.Function2[/* state */ ScrollingState, /* event */ Event, Boolean]] = js.native
-  var textSelection: js.UndefOr[Boolean] = js.native
-  var viewport: HTMLElement | Null = js.native
+  var bounce: js.UndefOr[Boolean] = js.undefined
+  var bounceForce: js.UndefOr[Double] = js.undefined
+  var content: js.UndefOr[HTMLElement | Null] = js.undefined
+  var direction: js.UndefOr[horizontal | vertical | all] = js.undefined
+  var emulateScroll: js.UndefOr[Boolean] = js.undefined
+  var friction: js.UndefOr[Double] = js.undefined
+  var inputsFocus: js.UndefOr[Boolean] = js.undefined
+  var onClick: js.UndefOr[js.Function2[/* state */ ScrollingState, /* event */ Event, Unit]] = js.undefined
+  var onUpdate: js.UndefOr[js.Function1[/* state */ ScrollingState, Unit]] = js.undefined
+  var pointerMode: js.UndefOr[touch | mouse | all] = js.undefined
+  var scrollMode: js.UndefOr[transform | native] = js.undefined
+  var shouldScroll: js.UndefOr[js.Function2[/* state */ ScrollingState, /* event */ Event, Boolean]] = js.undefined
+  var textSelection: js.UndefOr[Boolean] = js.undefined
+  var viewport: HTMLElement | Null
 }
 
 object ScrollBoosterOptions {
   @scala.inline
-  def apply(): ScrollBoosterOptions = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    bounce: js.UndefOr[Boolean] = js.undefined,
+    bounceForce: js.UndefOr[Double] = js.undefined,
+    content: js.UndefOr[Null | HTMLElement] = js.undefined,
+    direction: horizontal | vertical | all = null,
+    emulateScroll: js.UndefOr[Boolean] = js.undefined,
+    friction: js.UndefOr[Double] = js.undefined,
+    inputsFocus: js.UndefOr[Boolean] = js.undefined,
+    onClick: (/* state */ ScrollingState, /* event */ Event) => Unit = null,
+    onUpdate: /* state */ ScrollingState => Unit = null,
+    pointerMode: touch | mouse | all = null,
+    scrollMode: transform | native = null,
+    shouldScroll: (/* state */ ScrollingState, /* event */ Event) => Boolean = null,
+    textSelection: js.UndefOr[Boolean] = js.undefined,
+    viewport: HTMLElement = null
+  ): ScrollBoosterOptions = {
+    val __obj = js.Dynamic.literal(viewport = viewport.asInstanceOf[js.Any])
+    if (!js.isUndefined(bounce)) __obj.updateDynamic("bounce")(bounce.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bounceForce)) __obj.updateDynamic("bounceForce")(bounceForce.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(content)) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(emulateScroll)) __obj.updateDynamic("emulateScroll")(emulateScroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(friction)) __obj.updateDynamic("friction")(friction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputsFocus)) __obj.updateDynamic("inputsFocus")(inputsFocus.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction1(onUpdate))
+    if (pointerMode != null) __obj.updateDynamic("pointerMode")(pointerMode.asInstanceOf[js.Any])
+    if (scrollMode != null) __obj.updateDynamic("scrollMode")(scrollMode.asInstanceOf[js.Any])
+    if (shouldScroll != null) __obj.updateDynamic("shouldScroll")(js.Any.fromFunction2(shouldScroll))
+    if (!js.isUndefined(textSelection)) __obj.updateDynamic("textSelection")(textSelection.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollBoosterOptions]
   }
-  @scala.inline
-  implicit class ScrollBoosterOptionsOps[Self <: ScrollBoosterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBounce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounceForce(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceForce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounceForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceForce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(null)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: horizontal | vertical | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmulateScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emulateScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmulateScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emulateScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFriction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputsFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputsFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputsFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputsFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: (/* state */ ScrollingState, /* event */ Event) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdate(value: /* state */ ScrollingState => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointerMode(value: touch | mouse | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointerMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollMode(value: transform | native): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldScroll(value: (/* state */ ScrollingState, /* event */ Event) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldScroll")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutShouldScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewport(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewportNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(null)
-        ret
-    }
-  }
-  
 }
 

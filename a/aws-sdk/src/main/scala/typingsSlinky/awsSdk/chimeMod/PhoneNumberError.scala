@@ -22,53 +22,12 @@ trait PhoneNumberError extends js.Object {
 
 object PhoneNumberError {
   @scala.inline
-  def apply(): PhoneNumberError = {
+  def apply(ErrorCode: ErrorCode = null, ErrorMessage: String = null, PhoneNumberId: NonEmptyString = null): PhoneNumberError = {
     val __obj = js.Dynamic.literal()
+    if (ErrorCode != null) __obj.updateDynamic("ErrorCode")(ErrorCode.asInstanceOf[js.Any])
+    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
+    if (PhoneNumberId != null) __obj.updateDynamic("PhoneNumberId")(PhoneNumberId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhoneNumberError]
   }
-  @scala.inline
-  implicit class PhoneNumberErrorOps[Self <: PhoneNumberError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorCode(value: ErrorCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumberId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumberId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

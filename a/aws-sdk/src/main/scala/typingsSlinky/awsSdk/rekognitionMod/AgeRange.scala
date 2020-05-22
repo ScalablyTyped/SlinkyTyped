@@ -18,41 +18,11 @@ trait AgeRange extends js.Object {
 
 object AgeRange {
   @scala.inline
-  def apply(): AgeRange = {
+  def apply(High: js.UndefOr[UInteger] = js.undefined, Low: js.UndefOr[UInteger] = js.undefined): AgeRange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(High)) __obj.updateDynamic("High")(High.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Low)) __obj.updateDynamic("Low")(Low.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgeRange]
   }
-  @scala.inline
-  implicit class AgeRangeOps[Self <: AgeRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHigh(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("High")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHigh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("High")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLow(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Low")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Low")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

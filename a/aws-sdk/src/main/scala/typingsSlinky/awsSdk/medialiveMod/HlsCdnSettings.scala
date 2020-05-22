@@ -14,65 +14,18 @@ trait HlsCdnSettings extends js.Object {
 
 object HlsCdnSettings {
   @scala.inline
-  def apply(): HlsCdnSettings = {
+  def apply(
+    HlsAkamaiSettings: HlsAkamaiSettings = null,
+    HlsBasicPutSettings: HlsBasicPutSettings = null,
+    HlsMediaStoreSettings: HlsMediaStoreSettings = null,
+    HlsWebdavSettings: HlsWebdavSettings = null
+  ): HlsCdnSettings = {
     val __obj = js.Dynamic.literal()
+    if (HlsAkamaiSettings != null) __obj.updateDynamic("HlsAkamaiSettings")(HlsAkamaiSettings.asInstanceOf[js.Any])
+    if (HlsBasicPutSettings != null) __obj.updateDynamic("HlsBasicPutSettings")(HlsBasicPutSettings.asInstanceOf[js.Any])
+    if (HlsMediaStoreSettings != null) __obj.updateDynamic("HlsMediaStoreSettings")(HlsMediaStoreSettings.asInstanceOf[js.Any])
+    if (HlsWebdavSettings != null) __obj.updateDynamic("HlsWebdavSettings")(HlsWebdavSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsCdnSettings]
   }
-  @scala.inline
-  implicit class HlsCdnSettingsOps[Self <: HlsCdnSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHlsAkamaiSettings(value: HlsAkamaiSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsAkamaiSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsAkamaiSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsAkamaiSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHlsBasicPutSettings(value: HlsBasicPutSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsBasicPutSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsBasicPutSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsBasicPutSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHlsMediaStoreSettings(value: HlsMediaStoreSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsMediaStoreSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsMediaStoreSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsMediaStoreSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHlsWebdavSettings(value: HlsWebdavSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsWebdavSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsWebdavSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsWebdavSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

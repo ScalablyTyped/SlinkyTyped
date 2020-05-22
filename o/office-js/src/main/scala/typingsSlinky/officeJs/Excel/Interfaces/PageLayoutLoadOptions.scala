@@ -10,421 +10,203 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@js.native
 trait PageLayoutLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's black and white print option.
+    * The worksheet's black and white print option.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var blackAndWhite: js.UndefOr[Boolean] = js.native
+  var blackAndWhite: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's bottom page margin to use for printing in points.
+    * The worksheet's bottom page margin to use for printing in points.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var bottomMargin: js.UndefOr[Boolean] = js.native
+  var bottomMargin: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's center horizontally flag. This flag determines whether the worksheet will be centered horizontally when it's printed.
+    * The worksheet's center horizontally flag. This flag determines whether the worksheet will be centered horizontally when it's printed.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var centerHorizontally: js.UndefOr[Boolean] = js.native
+  var centerHorizontally: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's center vertically flag. This flag determines whether the worksheet will be centered vertically when it's printed.
+    * The worksheet's center vertically flag. This flag determines whether the worksheet will be centered vertically when it's printed.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var centerVertically: js.UndefOr[Boolean] = js.native
+  var centerVertically: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's draft mode option. If true the sheet will be printed without graphics.
+    * The worksheet's draft mode option. If true the sheet will be printed without graphics.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var draftMode: js.UndefOr[Boolean] = js.native
+  var draftMode: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's first page number to print. Null value represents "auto" page numbering.
+    * The worksheet's first page number to print. Null value represents "auto" page numbering.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var firstPageNumber: js.UndefOr[Boolean] = js.native
+  var firstPageNumber: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's footer margin, in points, for use when printing.
+    * The worksheet's footer margin, in points, for use when printing.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var footerMargin: js.UndefOr[Boolean] = js.native
+  var footerMargin: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's header margin, in points, for use when printing.
+    * The worksheet's header margin, in points, for use when printing.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var headerMargin: js.UndefOr[Boolean] = js.native
+  var headerMargin: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Header and footer configuration for the worksheet.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var headersFooters: js.UndefOr[HeaderFooterGroupLoadOptions] = js.native
+  var headersFooters: js.UndefOr[HeaderFooterGroupLoadOptions] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's left margin, in points, for use when printing.
+    * The worksheet's left margin, in points, for use when printing.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var leftMargin: js.UndefOr[Boolean] = js.native
+  var leftMargin: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's orientation of the page.
+    * The worksheet's orientation of the page.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var orientation: js.UndefOr[Boolean] = js.native
+  var orientation: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's paper size of the page.
+    * The worksheet's paper size of the page.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var paperSize: js.UndefOr[Boolean] = js.native
+  var paperSize: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets whether the worksheet's comments should be displayed when printing.
+    * Specifies if the worksheet's comments should be displayed when printing.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var printComments: js.UndefOr[Boolean] = js.native
+  var printComments: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's print errors option.
+    * The worksheet's print errors option.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var printErrors: js.UndefOr[Boolean] = js.native
+  var printErrors: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's print gridlines flag. This flag determines whether gridlines will be printed or not.
+    * Specifies if the worksheet's gridlines will be printed.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var printGridlines: js.UndefOr[Boolean] = js.native
+  var printGridlines: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's print headings flag. This flag determines whether headings will be printed or not.
+    * Specifies if the worksheet's headings will be printed.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var printHeadings: js.UndefOr[Boolean] = js.native
+  var printHeadings: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's page print order option. This specifies the order to use for processing the page number printed.
+    * The worksheet's page print order option. This specifies the order to use for processing the page number printed.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var printOrder: js.UndefOr[Boolean] = js.native
+  var printOrder: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's right margin, in points, for use when printing.
+    * The worksheet's right margin, in points, for use when printing.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var rightMargin: js.UndefOr[Boolean] = js.native
+  var rightMargin: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's top margin, in points, for use when printing.
+    * The worksheet's top margin, in points, for use when printing.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var topMargin: js.UndefOr[Boolean] = js.native
+  var topMargin: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the worksheet's print zoom options.
+    * The worksheet's print zoom options.
     The `PageLayoutZoomOptions` object must be set as a JSON object (use `x.zoom = {...}` instead of `x.zoom.scale = ...`).
     *
     * [Api set: ExcelApi 1.9]
     */
-  var zoom: js.UndefOr[Boolean] = js.native
+  var zoom: js.UndefOr[Boolean] = js.undefined
 }
 
 object PageLayoutLoadOptions {
   @scala.inline
-  def apply(): PageLayoutLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    blackAndWhite: js.UndefOr[Boolean] = js.undefined,
+    bottomMargin: js.UndefOr[Boolean] = js.undefined,
+    centerHorizontally: js.UndefOr[Boolean] = js.undefined,
+    centerVertically: js.UndefOr[Boolean] = js.undefined,
+    draftMode: js.UndefOr[Boolean] = js.undefined,
+    firstPageNumber: js.UndefOr[Boolean] = js.undefined,
+    footerMargin: js.UndefOr[Boolean] = js.undefined,
+    headerMargin: js.UndefOr[Boolean] = js.undefined,
+    headersFooters: HeaderFooterGroupLoadOptions = null,
+    leftMargin: js.UndefOr[Boolean] = js.undefined,
+    orientation: js.UndefOr[Boolean] = js.undefined,
+    paperSize: js.UndefOr[Boolean] = js.undefined,
+    printComments: js.UndefOr[Boolean] = js.undefined,
+    printErrors: js.UndefOr[Boolean] = js.undefined,
+    printGridlines: js.UndefOr[Boolean] = js.undefined,
+    printHeadings: js.UndefOr[Boolean] = js.undefined,
+    printOrder: js.UndefOr[Boolean] = js.undefined,
+    rightMargin: js.UndefOr[Boolean] = js.undefined,
+    topMargin: js.UndefOr[Boolean] = js.undefined,
+    zoom: js.UndefOr[Boolean] = js.undefined
+  ): PageLayoutLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(blackAndWhite)) __obj.updateDynamic("blackAndWhite")(blackAndWhite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bottomMargin)) __obj.updateDynamic("bottomMargin")(bottomMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(centerHorizontally)) __obj.updateDynamic("centerHorizontally")(centerHorizontally.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(centerVertically)) __obj.updateDynamic("centerVertically")(centerVertically.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(draftMode)) __obj.updateDynamic("draftMode")(draftMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstPageNumber)) __obj.updateDynamic("firstPageNumber")(firstPageNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(footerMargin)) __obj.updateDynamic("footerMargin")(footerMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headerMargin)) __obj.updateDynamic("headerMargin")(headerMargin.get.asInstanceOf[js.Any])
+    if (headersFooters != null) __obj.updateDynamic("headersFooters")(headersFooters.asInstanceOf[js.Any])
+    if (!js.isUndefined(leftMargin)) __obj.updateDynamic("leftMargin")(leftMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(orientation)) __obj.updateDynamic("orientation")(orientation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paperSize)) __obj.updateDynamic("paperSize")(paperSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(printComments)) __obj.updateDynamic("printComments")(printComments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(printErrors)) __obj.updateDynamic("printErrors")(printErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(printGridlines)) __obj.updateDynamic("printGridlines")(printGridlines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(printHeadings)) __obj.updateDynamic("printHeadings")(printHeadings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(printOrder)) __obj.updateDynamic("printOrder")(printOrder.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rightMargin)) __obj.updateDynamic("rightMargin")(rightMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(topMargin)) __obj.updateDynamic("topMargin")(topMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageLayoutLoadOptions]
   }
-  @scala.inline
-  implicit class PageLayoutLoadOptionsOps[Self <: PageLayoutLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlackAndWhite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blackAndWhite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlackAndWhite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blackAndWhite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottomMargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottomMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenterHorizontally(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("centerHorizontally")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenterHorizontally: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("centerHorizontally")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenterVertically(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("centerVertically")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenterVertically: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("centerVertically")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraftMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draftMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraftMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draftMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstPageNumber(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPageNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPageNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterMargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderMargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadersFooters(value: HeaderFooterGroupLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headersFooters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeadersFooters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headersFooters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftMargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintComments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrintComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printComments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrintErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintGridlines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printGridlines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrintGridlines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printGridlines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintHeadings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printHeadings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrintHeadings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printHeadings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintOrder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrintOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightMargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopMargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

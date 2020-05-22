@@ -26,59 +26,17 @@ trait DeleteInventoryRequest extends js.Object {
 
 object DeleteInventoryRequest {
   @scala.inline
-  def apply(TypeName: InventoryItemTypeName): DeleteInventoryRequest = {
+  def apply(
+    TypeName: InventoryItemTypeName,
+    ClientToken: ClientToken = null,
+    DryRun: js.UndefOr[DryRun] = js.undefined,
+    SchemaDeleteOption: InventorySchemaDeleteOption = null
+  ): DeleteInventoryRequest = {
     val __obj = js.Dynamic.literal(TypeName = TypeName.asInstanceOf[js.Any])
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (SchemaDeleteOption != null) __obj.updateDynamic("SchemaDeleteOption")(SchemaDeleteOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteInventoryRequest]
   }
-  @scala.inline
-  implicit class DeleteInventoryRequestOps[Self <: DeleteInventoryRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTypeName(value: InventoryItemTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: ClientToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: DryRun): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaDeleteOption(value: InventorySchemaDeleteOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaDeleteOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaDeleteOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaDeleteOption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

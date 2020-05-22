@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContainerInfo extends js.Object {
   /**
     * URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples:
     * "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
     */
-  var image: js.UndefOr[String] = js.native
+  var image: js.UndefOr[String] = js.undefined
 }
 
 object ContainerInfo {
   @scala.inline
-  def apply(): ContainerInfo = {
+  def apply(image: String = null): ContainerInfo = {
     val __obj = js.Dynamic.literal()
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerInfo]
   }
-  @scala.inline
-  implicit class ContainerInfoOps[Self <: ContainerInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

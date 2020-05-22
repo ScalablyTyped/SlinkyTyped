@@ -22,25 +22,5 @@ object DetachThingPrincipalRequest {
     val __obj = js.Dynamic.literal(principal = principal.asInstanceOf[js.Any], thingName = thingName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetachThingPrincipalRequest]
   }
-  @scala.inline
-  implicit class DetachThingPrincipalRequestOps[Self <: DetachThingPrincipalRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrincipal(value: Principal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThingName(value: ThingName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

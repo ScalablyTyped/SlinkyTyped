@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Inline extends js.Object {
-  var `inline`: js.UndefOr[Boolean] = js.native
-  var prev: js.UndefOr[String | js.Object] = js.native
+  var `inline`: js.UndefOr[Boolean] = js.undefined
+  var prev: js.UndefOr[String | js.Object] = js.undefined
 }
 
 object Inline {
   @scala.inline
-  def apply(): Inline = {
+  def apply(`inline`: js.UndefOr[Boolean] = js.undefined, prev: String | js.Object = null): Inline = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
+    if (prev != null) __obj.updateDynamic("prev")(prev.asInstanceOf[js.Any])
     __obj.asInstanceOf[Inline]
   }
-  @scala.inline
-  implicit class InlineOps[Self <: Inline] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrev(value: String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrev: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

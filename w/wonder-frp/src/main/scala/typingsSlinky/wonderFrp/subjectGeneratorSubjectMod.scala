@@ -18,6 +18,14 @@ object subjectGeneratorSubjectMod extends js.Object {
     var _isStart: js.Any = js.native
     var isStart: Boolean = js.native
     var observer: js.Any = js.native
+    /* CompleteClass */
+    override def completed(): js.Any = js.native
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /* CompleteClass */
+    override def error(error: js.Any): js.Any = js.native
+    /* CompleteClass */
+    override def next(value: js.Any): js.Any = js.native
     def onAfterCompleted(): Unit = js.native
     def onAfterError(error: js.Any): Unit = js.native
     def onAfterNext(value: js.Any): Unit = js.native

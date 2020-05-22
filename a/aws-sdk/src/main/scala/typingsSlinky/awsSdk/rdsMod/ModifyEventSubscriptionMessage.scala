@@ -30,71 +30,19 @@ trait ModifyEventSubscriptionMessage extends js.Object {
 
 object ModifyEventSubscriptionMessage {
   @scala.inline
-  def apply(SubscriptionName: String): ModifyEventSubscriptionMessage = {
+  def apply(
+    SubscriptionName: String,
+    Enabled: js.UndefOr[BooleanOptional] = js.undefined,
+    EventCategories: EventCategoriesList = null,
+    SnsTopicArn: String = null,
+    SourceType: String = null
+  ): ModifyEventSubscriptionMessage = {
     val __obj = js.Dynamic.literal(SubscriptionName = SubscriptionName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
+    if (EventCategories != null) __obj.updateDynamic("EventCategories")(EventCategories.asInstanceOf[js.Any])
+    if (SnsTopicArn != null) __obj.updateDynamic("SnsTopicArn")(SnsTopicArn.asInstanceOf[js.Any])
+    if (SourceType != null) __obj.updateDynamic("SourceType")(SourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyEventSubscriptionMessage]
   }
-  @scala.inline
-  implicit class ModifyEventSubscriptionMessageOps[Self <: ModifyEventSubscriptionMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubscriptionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventCategories(value: EventCategoriesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnsTopicArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnsTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,235 +4,97 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEvent extends js.Object {
   /**
-  	         * Actions of the Event
-  	         */
-  var actions: js.UndefOr[js.Array[IEventAction]] = js.native
+    * Actions of the Event
+    */
+  var actions: js.UndefOr[js.Array[IEventAction]] = js.undefined
   /**
-  	         * If set the event will display as all-day event
-  	         */
-  var allDay: js.UndefOr[Boolean] = js.native
+    * If set the event will display as all-day event
+    */
+  var allDay: js.UndefOr[Boolean] = js.undefined
   /**
-  	         * Color of the Event
-  	         */
-  var color: js.UndefOr[IEventColor] = js.native
+    * Color of the Event
+    */
+  var color: js.UndefOr[IEventColor] = js.undefined
   /**
     * A CSS class (or more, just separate with spaces) that will be added to the event when it is displayed on each view. Useful for marking an event as selected / active etc
     */
-  var cssClass: js.UndefOr[String] = js.native
+  var cssClass: js.UndefOr[String] = js.undefined
   /**
     * If delete-event-html is set and this field is explicitly set to false then dont make it deleteable
     */
-  var deletable: js.UndefOr[Boolean] = js.native
+  var deletable: js.UndefOr[Boolean] = js.undefined
   /**
     * Allow an event to be dragged and dropped
     */
-  var draggable: js.UndefOr[Boolean] = js.native
+  var draggable: js.UndefOr[Boolean] = js.undefined
   /**
     * If edit-event-html is set and this field is explicitly set to false then dont make it editable.
     */
-  var editable: js.UndefOr[Boolean] = js.native
+  var editable: js.UndefOr[Boolean] = js.undefined
   /**
     * Optional - a javascript date object for when the event ends
     */
-  var endsAt: js.UndefOr[js.Date] = js.native
+  var endsAt: js.UndefOr[js.Date] = js.undefined
   /**
     * If set to false then will not count towards the badge total amount on the month and year view
     */
-  var incrementsBadgeTotal: js.UndefOr[Boolean] = js.native
+  var incrementsBadgeTotal: js.UndefOr[Boolean] = js.undefined
   /**
     * If set the event will recur on the given period. Valid values are year or month
     */
-  var recursOn: js.UndefOr[String] = js.native
+  var recursOn: js.UndefOr[String] = js.undefined
   /**
     * Allow an event to be resizable
     */
-  var resizable: js.UndefOr[Boolean] = js.native
+  var resizable: js.UndefOr[Boolean] = js.undefined
   /**
     * A javascript date object for when the event starts
     */
-  var startsAt: js.Date = js.native
+  var startsAt: js.Date
   /**
     * The title of the event
     */
-  var title: String = js.native
+  var title: String
   /**
     * The type of the event (determines its color). Can be important, warning, info, inverse, success or special
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object IEvent {
   @scala.inline
-  def apply(startsAt: js.Date, title: String): IEvent = {
+  def apply(
+    startsAt: js.Date,
+    title: String,
+    actions: js.Array[IEventAction] = null,
+    allDay: js.UndefOr[Boolean] = js.undefined,
+    color: IEventColor = null,
+    cssClass: String = null,
+    deletable: js.UndefOr[Boolean] = js.undefined,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    editable: js.UndefOr[Boolean] = js.undefined,
+    endsAt: js.Date = null,
+    incrementsBadgeTotal: js.UndefOr[Boolean] = js.undefined,
+    recursOn: String = null,
+    resizable: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null
+  ): IEvent = {
     val __obj = js.Dynamic.literal(startsAt = startsAt.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (!js.isUndefined(allDay)) __obj.updateDynamic("allDay")(allDay.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(deletable)) __obj.updateDynamic("deletable")(deletable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(editable)) __obj.updateDynamic("editable")(editable.get.asInstanceOf[js.Any])
+    if (endsAt != null) __obj.updateDynamic("endsAt")(endsAt.asInstanceOf[js.Any])
+    if (!js.isUndefined(incrementsBadgeTotal)) __obj.updateDynamic("incrementsBadgeTotal")(incrementsBadgeTotal.get.asInstanceOf[js.Any])
+    if (recursOn != null) __obj.updateDynamic("recursOn")(recursOn.asInstanceOf[js.Any])
+    if (!js.isUndefined(resizable)) __obj.updateDynamic("resizable")(resizable.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEvent]
   }
-  @scala.inline
-  implicit class IEventOps[Self <: IEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStartsAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startsAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActions(value: js.Array[IEventAction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllDay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: IEventColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndsAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endsAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndsAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endsAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncrementsBadgeTotal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementsBadgeTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncrementsBadgeTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementsBadgeTotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

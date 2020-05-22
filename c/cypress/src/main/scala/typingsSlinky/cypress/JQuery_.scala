@@ -274,10 +274,8 @@ trait JQuery_[TElement]
   </html>
   ```
     */
-  def add(selector_elements_html_selection: Selector | htmlString): this.type = js.native
+  def add(selector_elements_html_selection: Node | Selector | TypeOrArray[Element] | htmlString): this.type = js.native
   def add(selector_elements_html_selection: JQuery[HTMLElement]): this.type = js.native
-  def add(selector_elements_html_selection: Node): this.type = js.native
-  def add(selector_elements_html_selection: TypeOrArray[Element]): this.type = js.native
   /**
     * Create a new jQuery object with elements added to the set of matched elements.
     * @param selector A string representing a selector expression to find additional elements to add to the set of matched elements.
@@ -1146,9 +1144,8 @@ trait JQuery_[TElement]
   </html>
   ```
     */
-  def appendTo(target: Selector | htmlString): this.type = js.native
+  def appendTo(target: Selector | (TypeOrArray[Element | DocumentFragment]) | htmlString): this.type = js.native
   def appendTo(target: JQuery[HTMLElement]): this.type = js.native
-  def appendTo(target: TypeOrArray[Element | DocumentFragment]): this.type = js.native
   def attr(attributeName: String): this.type = js.native
   /**
     * Set one or more attributes for the set of matched elements.
@@ -5759,9 +5756,8 @@ trait JQuery_[TElement]
   </html>
   ```
     */
-  def insertAfter(target: Selector | htmlString): this.type = js.native
+  def insertAfter(target: Selector | TypeOrArray[org.scalajs.dom.raw.Node] | htmlString): this.type = js.native
   def insertAfter(target: JQuery[org.scalajs.dom.raw.Node]): this.type = js.native
-  def insertAfter(target: TypeOrArray[org.scalajs.dom.raw.Node]): this.type = js.native
   /**
     * Insert every element in the set of matched elements before the target.
     * @param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements
@@ -5795,9 +5791,8 @@ trait JQuery_[TElement]
   </html>
   ```
     */
-  def insertBefore(target: Selector | htmlString): this.type = js.native
+  def insertBefore(target: Selector | TypeOrArray[org.scalajs.dom.raw.Node] | htmlString): this.type = js.native
   def insertBefore(target: JQuery[org.scalajs.dom.raw.Node]): this.type = js.native
-  def insertBefore(target: TypeOrArray[org.scalajs.dom.raw.Node]): this.type = js.native
   def is(
     selector_function_selection_elements: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* element */ TElement, Boolean]
   ): Boolean = js.native
@@ -9084,9 +9079,8 @@ trait JQuery_[TElement]
   </html>
   ```
     */
-  def prependTo(target: Selector | htmlString): this.type = js.native
+  def prependTo(target: Selector | (TypeOrArray[Element | DocumentFragment]) | htmlString): this.type = js.native
   def prependTo(target: JQuery[HTMLElement]): this.type = js.native
-  def prependTo(target: TypeOrArray[Element | DocumentFragment]): this.type = js.native
   /**
     * Get the immediately preceding sibling of each element in the set of matched elements. If a selector is provided, it retrieves the previous sibling only if it matches that selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -10110,6 +10104,7 @@ trait JQuery_[TElement]
     */
   def replaceAll(target: Selector): this.type = js.native
   def replaceAll(target: TypeOrArray[Element]): this.type = js.native
+  def replaceWith(newContent_function: Node | TypeOrArray[Element]): this.type = js.native
   def replaceWith(
     newContent_function: js.ThisFunction2[
       /* this */ TElement, 
@@ -10119,8 +10114,6 @@ trait JQuery_[TElement]
     ]
   ): this.type = js.native
   def replaceWith(newContent_function: JQuery[Node]): this.type = js.native
-  def replaceWith(newContent_function: Node): this.type = js.native
-  def replaceWith(newContent_function: TypeOrArray[Element]): this.type = js.native
   /**
     * Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
     * @param newContent_function _&#x40;param_ `newContent_function`

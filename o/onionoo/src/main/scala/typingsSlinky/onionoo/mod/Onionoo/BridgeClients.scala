@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BridgeClients extends js.Object {
   /**
     * Object containing graph history objects with the average number of clients connecting to this bridge.
@@ -16,44 +15,19 @@ trait BridgeClients extends js.Object {
     * data resolution. The unit is number of clients. Contained graph history objects may contain null values
     * if the bridge did not report client statistics for at least 50% of a given time period.
     */
-  var average_clients: js.UndefOr[PartialRecord6months1year] = js.native
+  var average_clients: js.UndefOr[PartialRecord6months1year] = js.undefined
   /**
     * SHA-1 hash of the bridge fingerprint consisting of 40 upper-case hexadecimal characters.
     */
-  var fingerprint: String = js.native
+  var fingerprint: String
 }
 
 object BridgeClients {
   @scala.inline
-  def apply(fingerprint: String): BridgeClients = {
+  def apply(fingerprint: String, average_clients: PartialRecord6months1year = null): BridgeClients = {
     val __obj = js.Dynamic.literal(fingerprint = fingerprint.asInstanceOf[js.Any])
+    if (average_clients != null) __obj.updateDynamic("average_clients")(average_clients.asInstanceOf[js.Any])
     __obj.asInstanceOf[BridgeClients]
   }
-  @scala.inline
-  implicit class BridgeClientsOps[Self <: BridgeClients] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAverage_clients(value: PartialRecord6months1year): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("average_clients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAverage_clients: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("average_clients")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

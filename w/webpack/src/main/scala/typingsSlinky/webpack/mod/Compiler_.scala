@@ -251,6 +251,10 @@ object Compiler_ extends js.Object {
       watchOptions: typingsSlinky.webpack.mod.Compiler_.Watching.WatchOptions,
       handler: typingsSlinky.webpack.mod.Compiler_.Watching.Handler
     ) = this()
+    /* CompleteClass */
+    override def close(callback: js.Function0[Unit]): Unit = js.native
+    /* CompleteClass */
+    override def invalidate(): Unit = js.native
   }
   
   @js.native

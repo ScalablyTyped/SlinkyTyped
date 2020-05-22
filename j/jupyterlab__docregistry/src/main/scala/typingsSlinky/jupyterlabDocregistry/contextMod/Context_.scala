@@ -91,10 +91,31 @@ class Context_[T /* <: IModel */] protected () extends IContext[T] {
     */
   val factoryName: String = js.native
   /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
+  /**
     * The client session object associated with the context.
     */
   @JSName("session")
   val session_Context_ : ClientSession = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Initialize the context.
     *

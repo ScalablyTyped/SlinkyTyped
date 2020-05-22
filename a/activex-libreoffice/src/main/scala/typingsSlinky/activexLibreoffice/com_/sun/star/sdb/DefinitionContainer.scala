@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   *
   * To reflect the changes with the underlying database, a refresh mechanism needs to be supported.
   */
-@js.native
 trait DefinitionContainer
   extends XNameContainer
      with XIndexAccess

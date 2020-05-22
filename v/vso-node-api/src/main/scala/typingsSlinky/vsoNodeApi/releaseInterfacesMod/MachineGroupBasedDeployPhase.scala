@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MachineGroupBasedDeployPhase extends DeployPhase {
-  var deploymentInput: MachineGroupDeploymentInput = js.native
+  var deploymentInput: MachineGroupDeploymentInput
 }
 
 object MachineGroupBasedDeployPhase {
@@ -21,19 +20,5 @@ object MachineGroupBasedDeployPhase {
     val __obj = js.Dynamic.literal(deploymentInput = deploymentInput.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], phaseType = phaseType.asInstanceOf[js.Any], rank = rank.asInstanceOf[js.Any], workflowTasks = workflowTasks.asInstanceOf[js.Any])
     __obj.asInstanceOf[MachineGroupBasedDeployPhase]
   }
-  @scala.inline
-  implicit class MachineGroupBasedDeployPhaseOps[Self <: MachineGroupBasedDeployPhase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentInput(value: MachineGroupDeploymentInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

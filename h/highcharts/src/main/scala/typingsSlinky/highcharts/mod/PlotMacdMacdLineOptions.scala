@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotMacdMacdLineOptions extends js.Object {
-  var styles: js.UndefOr[PlotMacdMacdLineStylesOptions] = js.native
+  var styles: js.UndefOr[PlotMacdMacdLineStylesOptions] = js.undefined
   /**
     * (Highcharts, Highstock) An array defining zones within a series. Zones
     * can be applied to the X axis, Y axis or Z axis for bubbles, according to
@@ -17,46 +16,16 @@ trait PlotMacdMacdLineOptions extends js.Object {
     * `.highcharts-zone-{n}` class, or custom classed from the `className`
     * option (view live demo).
     */
-  var zones: js.UndefOr[js.Array[PlotMacdMacdLineZonesOptions]] = js.native
+  var zones: js.UndefOr[js.Array[PlotMacdMacdLineZonesOptions]] = js.undefined
 }
 
 object PlotMacdMacdLineOptions {
   @scala.inline
-  def apply(): PlotMacdMacdLineOptions = {
+  def apply(styles: PlotMacdMacdLineStylesOptions = null, zones: js.Array[PlotMacdMacdLineZonesOptions] = null): PlotMacdMacdLineOptions = {
     val __obj = js.Dynamic.literal()
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (zones != null) __obj.updateDynamic("zones")(zones.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotMacdMacdLineOptions]
   }
-  @scala.inline
-  implicit class PlotMacdMacdLineOptionsOps[Self <: PlotMacdMacdLineOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyles(value: PlotMacdMacdLineStylesOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZones(value: js.Array[PlotMacdMacdLineZonesOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

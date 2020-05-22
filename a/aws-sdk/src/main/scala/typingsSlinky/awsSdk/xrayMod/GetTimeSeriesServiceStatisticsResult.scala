@@ -22,53 +22,16 @@ trait GetTimeSeriesServiceStatisticsResult extends js.Object {
 
 object GetTimeSeriesServiceStatisticsResult {
   @scala.inline
-  def apply(): GetTimeSeriesServiceStatisticsResult = {
+  def apply(
+    ContainsOldGroupVersions: js.UndefOr[Boolean] = js.undefined,
+    NextToken: String = null,
+    TimeSeriesServiceStatistics: TimeSeriesServiceStatisticsList = null
+  ): GetTimeSeriesServiceStatisticsResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ContainsOldGroupVersions)) __obj.updateDynamic("ContainsOldGroupVersions")(ContainsOldGroupVersions.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (TimeSeriesServiceStatistics != null) __obj.updateDynamic("TimeSeriesServiceStatistics")(TimeSeriesServiceStatistics.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTimeSeriesServiceStatisticsResult]
   }
-  @scala.inline
-  implicit class GetTimeSeriesServiceStatisticsResultOps[Self <: GetTimeSeriesServiceStatisticsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainsOldGroupVersions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsOldGroupVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainsOldGroupVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsOldGroupVersions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeSeriesServiceStatistics(value: TimeSeriesServiceStatisticsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeSeriesServiceStatistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeSeriesServiceStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeSeriesServiceStatistics")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

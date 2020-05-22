@@ -31,6 +31,21 @@ object webRequestMod extends js.Object {
     var _injectCustomRequestHeaders: js.Any = js.native
     var _xhr: js.Any = js.native
     /**
+      * Returns client's response url
+      */
+    /* CompleteClass */
+    override var responseURL: String = js.native
+    /**
+      * Returns client's status
+      */
+    /* CompleteClass */
+    override var status: Double = js.native
+    /**
+      * Returns client's status as a text
+      */
+    /* CompleteClass */
+    override var statusText: String = js.native
+    /**
       * Cancels any network activity
       */
     def abort(): Unit = js.native

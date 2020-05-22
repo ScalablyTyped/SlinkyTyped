@@ -27,53 +27,16 @@ trait SchemaOrderCustomerMarketingRightsInfo extends js.Object {
 
 object SchemaOrderCustomerMarketingRightsInfo {
   @scala.inline
-  def apply(): SchemaOrderCustomerMarketingRightsInfo = {
+  def apply(
+    explicitMarketingPreference: String = null,
+    lastUpdatedTimestamp: String = null,
+    marketingEmailAddress: String = null
+  ): SchemaOrderCustomerMarketingRightsInfo = {
     val __obj = js.Dynamic.literal()
+    if (explicitMarketingPreference != null) __obj.updateDynamic("explicitMarketingPreference")(explicitMarketingPreference.asInstanceOf[js.Any])
+    if (lastUpdatedTimestamp != null) __obj.updateDynamic("lastUpdatedTimestamp")(lastUpdatedTimestamp.asInstanceOf[js.Any])
+    if (marketingEmailAddress != null) __obj.updateDynamic("marketingEmailAddress")(marketingEmailAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderCustomerMarketingRightsInfo]
   }
-  @scala.inline
-  implicit class SchemaOrderCustomerMarketingRightsInfoOps[Self <: SchemaOrderCustomerMarketingRightsInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExplicitMarketingPreference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitMarketingPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplicitMarketingPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitMarketingPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarketingEmailAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marketingEmailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarketingEmailAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marketingEmailAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

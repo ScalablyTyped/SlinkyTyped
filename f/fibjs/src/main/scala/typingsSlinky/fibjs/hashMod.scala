@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief 信息摘要计算模块，可用于计算信息摘要和摘要签名
-	* @detail 
-	*/
+  * @brief 信息摘要计算模块，可用于计算信息摘要和摘要签名
+  * @detail 
+  */
 @JSImport("hash", JSImport.Namespace)
 @js.native
 object hashMod extends js.Object {

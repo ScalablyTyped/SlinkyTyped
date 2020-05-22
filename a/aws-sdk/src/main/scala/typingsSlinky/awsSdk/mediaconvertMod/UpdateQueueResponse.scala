@@ -14,29 +14,10 @@ trait UpdateQueueResponse extends js.Object {
 
 object UpdateQueueResponse {
   @scala.inline
-  def apply(): UpdateQueueResponse = {
+  def apply(Queue: Queue = null): UpdateQueueResponse = {
     val __obj = js.Dynamic.literal()
+    if (Queue != null) __obj.updateDynamic("Queue")(Queue.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateQueueResponse]
   }
-  @scala.inline
-  implicit class UpdateQueueResponseOps[Self <: UpdateQueueResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueue(value: Queue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

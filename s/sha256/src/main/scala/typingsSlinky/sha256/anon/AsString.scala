@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AsString extends js.Object {
-  var asString: `true` = js.native
+  var asString: `true`
 }
 
 object AsString {
@@ -16,19 +15,5 @@ object AsString {
     val __obj = js.Dynamic.literal(asString = asString.asInstanceOf[js.Any])
     __obj.asInstanceOf[AsString]
   }
-  @scala.inline
-  implicit class AsStringOps[Self <: AsString] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsString(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asString")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

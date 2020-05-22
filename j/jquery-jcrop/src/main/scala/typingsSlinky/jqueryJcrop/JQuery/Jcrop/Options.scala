@@ -4,536 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var addClass: js.UndefOr[String] = js.native
-  var allowMove: js.UndefOr[Boolean] = js.native
-  var allowResize: js.UndefOr[Boolean] = js.native
+  var addClass: js.UndefOr[String] = js.undefined
+  var allowMove: js.UndefOr[Boolean] = js.undefined
+  var allowResize: js.UndefOr[Boolean] = js.undefined
   // Basic Settings
-  var allowSelect: js.UndefOr[Boolean] = js.native
-  var animationDelay: js.UndefOr[Double] = js.native
+  var allowSelect: js.UndefOr[Boolean] = js.undefined
+  var animationDelay: js.UndefOr[Double] = js.undefined
   /** Aspect ratio of w/h (e.g. 1 for square)  */
-  var aspectRatio: js.UndefOr[Double] = js.native
-  var baseClass: js.UndefOr[String] = js.native
+  var aspectRatio: js.UndefOr[Double] = js.undefined
+  var baseClass: js.UndefOr[String] = js.undefined
   /** Set color of background container @default 'black' */
-  var bgColor: js.UndefOr[String] = js.native
-  var bgFade: js.UndefOr[Boolean] = js.native
+  var bgColor: js.UndefOr[String] = js.undefined
+  var bgFade: js.UndefOr[Boolean] = js.undefined
   /** Opacity of outer image when cropping; between 0 and 1 @default .6 */
-  var bgOpacity: js.UndefOr[Double] = js.native
-  var borderOpacity: js.UndefOr[Double] = js.native
-  var boundary: js.UndefOr[Double] = js.native
+  var bgOpacity: js.UndefOr[Double] = js.undefined
+  var borderOpacity: js.UndefOr[Double] = js.undefined
+  var boundary: js.UndefOr[Double] = js.undefined
   /** Maximum height of cropping area @default 0 (no limit) */
-  var boxHeight: js.UndefOr[Double] = js.native
+  var boxHeight: js.UndefOr[Double] = js.undefined
   /** Maximum width of cropping area @default 0 (no limit) */
-  var boxWidth: js.UndefOr[Double] = js.native
-  var createBorders: js.UndefOr[js.Array[CardinalDirection]] = js.native
-  var createDragbars: js.UndefOr[js.Array[CardinalDirection]] = js.native
-  var createHandles: js.UndefOr[js.Array[CardinalDirection | IntermediateDirection]] = js.native
-  var dragEdges: js.UndefOr[Boolean] = js.native
-  var drawBorders: js.UndefOr[Boolean] = js.native
-  var fadeTime: js.UndefOr[Double] = js.native
-  var fixedSupport: js.UndefOr[Boolean] = js.native
-  var handleOpacity: js.UndefOr[Double] = js.native
-  var handleSize: js.UndefOr[Double | Null] = js.native
-  var keySupport: js.UndefOr[Boolean] = js.native
+  var boxWidth: js.UndefOr[Double] = js.undefined
+  var createBorders: js.UndefOr[js.Array[CardinalDirection]] = js.undefined
+  var createDragbars: js.UndefOr[js.Array[CardinalDirection]] = js.undefined
+  var createHandles: js.UndefOr[js.Array[CardinalDirection | IntermediateDirection]] = js.undefined
+  var dragEdges: js.UndefOr[Boolean] = js.undefined
+  var drawBorders: js.UndefOr[Boolean] = js.undefined
+  var fadeTime: js.UndefOr[Double] = js.undefined
+  var fixedSupport: js.UndefOr[Boolean] = js.undefined
+  var handleOpacity: js.UndefOr[Double] = js.undefined
+  var handleSize: js.UndefOr[Double | Null] = js.undefined
+  var keySupport: js.UndefOr[Boolean] = js.undefined
   /** Maximum width/height, use 0 for unbounded dimension; [width, height] */
-  var maxSize: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var minSelect: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var maxSize: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var minSelect: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
   /** Minimum width/height, use 0 for unbounded dimension; [width, height] */
-  var minSize: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var minSize: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
   /** Called when the selection is moving */
-  var onChange: js.UndefOr[JCropEventHandler] = js.native
+  var onChange: js.UndefOr[JCropEventHandler] = js.undefined
   /** Called when double-clicked */
-  var onDblClick: js.UndefOr[JCropEventHandler] = js.native
+  var onDblClick: js.UndefOr[JCropEventHandler] = js.undefined
   /** Called when the selection is released */
-  var onRelease: js.UndefOr[JCropEventHandler] = js.native
+  var onRelease: js.UndefOr[JCropEventHandler] = js.undefined
   /** Called when selection is completed */
-  var onSelect: js.UndefOr[JCropEventHandler] = js.native
+  var onSelect: js.UndefOr[JCropEventHandler] = js.undefined
   /** Set an initial selection area; [x, y, x2, y2] */
-  var setSelect: js.UndefOr[js.Tuple4[Double, Double, Double, Double]] = js.native
-  var shade: js.UndefOr[Boolean | Null] = js.native
-  var swingSpeed: js.UndefOr[Double] = js.native
-  var touchSupport: js.UndefOr[Boolean | Null] = js.native
-  var trackDocument: js.UndefOr[Boolean] = js.native
+  var setSelect: js.UndefOr[js.Tuple4[Double, Double, Double, Double]] = js.undefined
+  var shade: js.UndefOr[Boolean | Null] = js.undefined
+  var swingSpeed: js.UndefOr[Double] = js.undefined
+  var touchSupport: js.UndefOr[Boolean | Null] = js.undefined
+  var trackDocument: js.UndefOr[Boolean] = js.undefined
   /** Specify the true size of the image */
-  var trueSize: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var trueSize: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    addClass: String = null,
+    allowMove: js.UndefOr[Boolean] = js.undefined,
+    allowResize: js.UndefOr[Boolean] = js.undefined,
+    allowSelect: js.UndefOr[Boolean] = js.undefined,
+    animationDelay: js.UndefOr[Double] = js.undefined,
+    aspectRatio: js.UndefOr[Double] = js.undefined,
+    baseClass: String = null,
+    bgColor: String = null,
+    bgFade: js.UndefOr[Boolean] = js.undefined,
+    bgOpacity: js.UndefOr[Double] = js.undefined,
+    borderOpacity: js.UndefOr[Double] = js.undefined,
+    boundary: js.UndefOr[Double] = js.undefined,
+    boxHeight: js.UndefOr[Double] = js.undefined,
+    boxWidth: js.UndefOr[Double] = js.undefined,
+    createBorders: js.Array[CardinalDirection] = null,
+    createDragbars: js.Array[CardinalDirection] = null,
+    createHandles: js.Array[CardinalDirection | IntermediateDirection] = null,
+    dragEdges: js.UndefOr[Boolean] = js.undefined,
+    drawBorders: js.UndefOr[Boolean] = js.undefined,
+    fadeTime: js.UndefOr[Double] = js.undefined,
+    fixedSupport: js.UndefOr[Boolean] = js.undefined,
+    handleOpacity: js.UndefOr[Double] = js.undefined,
+    handleSize: js.UndefOr[Null | Double] = js.undefined,
+    keySupport: js.UndefOr[Boolean] = js.undefined,
+    maxSize: js.Tuple2[Double, Double] = null,
+    minSelect: js.Tuple2[Double, Double] = null,
+    minSize: js.Tuple2[Double, Double] = null,
+    onChange: /* c */ SelectionInfo => Unit = null,
+    onDblClick: /* c */ SelectionInfo => Unit = null,
+    onRelease: /* c */ SelectionInfo => Unit = null,
+    onSelect: /* c */ SelectionInfo => Unit = null,
+    setSelect: js.Tuple4[Double, Double, Double, Double] = null,
+    shade: js.UndefOr[Null | Boolean] = js.undefined,
+    swingSpeed: js.UndefOr[Double] = js.undefined,
+    touchSupport: js.UndefOr[Null | Boolean] = js.undefined,
+    trackDocument: js.UndefOr[Boolean] = js.undefined,
+    trueSize: js.Tuple2[Double, Double] = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (addClass != null) __obj.updateDynamic("addClass")(addClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowMove)) __obj.updateDynamic("allowMove")(allowMove.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowResize)) __obj.updateDynamic("allowResize")(allowResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSelect)) __obj.updateDynamic("allowSelect")(allowSelect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDelay)) __obj.updateDynamic("animationDelay")(animationDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(aspectRatio)) __obj.updateDynamic("aspectRatio")(aspectRatio.get.asInstanceOf[js.Any])
+    if (baseClass != null) __obj.updateDynamic("baseClass")(baseClass.asInstanceOf[js.Any])
+    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(bgFade)) __obj.updateDynamic("bgFade")(bgFade.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bgOpacity)) __obj.updateDynamic("bgOpacity")(bgOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderOpacity)) __obj.updateDynamic("borderOpacity")(borderOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boundary)) __obj.updateDynamic("boundary")(boundary.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boxHeight)) __obj.updateDynamic("boxHeight")(boxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boxWidth)) __obj.updateDynamic("boxWidth")(boxWidth.get.asInstanceOf[js.Any])
+    if (createBorders != null) __obj.updateDynamic("createBorders")(createBorders.asInstanceOf[js.Any])
+    if (createDragbars != null) __obj.updateDynamic("createDragbars")(createDragbars.asInstanceOf[js.Any])
+    if (createHandles != null) __obj.updateDynamic("createHandles")(createHandles.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragEdges)) __obj.updateDynamic("dragEdges")(dragEdges.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(drawBorders)) __obj.updateDynamic("drawBorders")(drawBorders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fadeTime)) __obj.updateDynamic("fadeTime")(fadeTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedSupport)) __obj.updateDynamic("fixedSupport")(fixedSupport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleOpacity)) __obj.updateDynamic("handleOpacity")(handleOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleSize)) __obj.updateDynamic("handleSize")(handleSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(keySupport)) __obj.updateDynamic("keySupport")(keySupport.get.asInstanceOf[js.Any])
+    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
+    if (minSelect != null) __obj.updateDynamic("minSelect")(minSelect.asInstanceOf[js.Any])
+    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onDblClick != null) __obj.updateDynamic("onDblClick")(js.Any.fromFunction1(onDblClick))
+    if (onRelease != null) __obj.updateDynamic("onRelease")(js.Any.fromFunction1(onRelease))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (setSelect != null) __obj.updateDynamic("setSelect")(setSelect.asInstanceOf[js.Any])
+    if (!js.isUndefined(shade)) __obj.updateDynamic("shade")(shade.asInstanceOf[js.Any])
+    if (!js.isUndefined(swingSpeed)) __obj.updateDynamic("swingSpeed")(swingSpeed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(touchSupport)) __obj.updateDynamic("touchSupport")(touchSupport.asInstanceOf[js.Any])
+    if (!js.isUndefined(trackDocument)) __obj.updateDynamic("trackDocument")(trackDocument.get.asInstanceOf[js.Any])
+    if (trueSize != null) __obj.updateDynamic("trueSize")(trueSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowMove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAspectRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgFade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgFade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgFade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgFade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundary(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateBorders(value: js.Array[CardinalDirection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createBorders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateBorders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createBorders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateDragbars(value: js.Array[CardinalDirection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDragbars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateDragbars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDragbars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateHandles(value: js.Array[CardinalDirection | IntermediateDirection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createHandles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateHandles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createHandles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragEdges(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEdges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragEdges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEdges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawBorders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBorders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawBorders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBorders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFadeTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fadeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFadeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fadeTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleSizeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSize")(null)
-        ret
-    }
-    @scala.inline
-    def withKeySupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keySupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeySupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keySupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSize(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSelect(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSize(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* c */ SelectionInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDblClick(value: /* c */ SelectionInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDblClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDblClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDblClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRelease(value: /* c */ SelectionInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRelease")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRelease: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRelease")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: /* c */ SelectionInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetSelect(value: js.Tuple4[Double, Double, Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shade")(null)
-        ret
-    }
-    @scala.inline
-    def withSwingSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swingSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwingSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swingSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchSupportNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchSupport")(null)
-        ret
-    }
-    @scala.inline
-    def withTrackDocument(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackDocument")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrueSize(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trueSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrueSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trueSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

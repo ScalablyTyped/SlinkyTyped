@@ -9,22 +9,21 @@ import scala.scalajs.js.annotation._
   * This is done in order to allow rollbacks of tasks. This is the interface these `Storages` must
   * follow.
   */
-@js.native
 trait Storage extends js.Object {
   /** Gets list of executed migrations. */
-  def executed(): js.Promise[js.Array[String]] = js.native
+  def executed(): js.Promise[js.Array[String]]
   /**
     * Logs migration to be considered as executed.
     *
     * @param migrationName - Name of the migration to be logged.
     */
-  def logMigration(migrationName: String): js.Promise[Unit] = js.native
+  def logMigration(migrationName: String): js.Promise[Unit]
   /**
     * Unlogs migration to be considered as pending.
     *
     * @param migrationName - Name of the migration to be unlogged.
     */
-  def unlogMigration(migrationName: String): js.Promise[Unit] = js.native
+  def unlogMigration(migrationName: String): js.Promise[Unit]
 }
 
 object Storage {
@@ -37,31 +36,5 @@ object Storage {
     val __obj = js.Dynamic.literal(executed = js.Any.fromFunction0(executed), logMigration = js.Any.fromFunction1(logMigration), unlogMigration = js.Any.fromFunction1(unlogMigration))
     __obj.asInstanceOf[Storage]
   }
-  @scala.inline
-  implicit class StorageOps[Self <: Storage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecuted(value: () => js.Promise[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLogMigration(value: String => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logMigration")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUnlogMigration(value: String => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlogMigration")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

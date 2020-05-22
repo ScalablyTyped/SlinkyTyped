@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * @deprecated Deprecated
   * @see XSortable
   */
-@js.native
 trait SortDescriptor extends XPropertySet {
   /**
     * specifies the algorithm for the compare operator (collator).
@@ -24,18 +23,18 @@ trait SortDescriptor extends XPropertySet {
     * @see com.sun.star.text.TextSortDescriptor
     * @see com.sun.star.i18n.XCollator
     */
-  var CollatorAlgorithm: String = js.native
+  var CollatorAlgorithm: String
   /** specifies the locale for the compare operator (collator). */
-  var CollatorLocale: Locale = js.native
+  var CollatorLocale: Locale
   /** specifies if the case of letters is important when comparing entries. */
-  var IsCaseSensitive: Boolean = js.native
+  var IsCaseSensitive: Boolean
   /**
     * specifies the sorting order.
     *
     * The sorting order may be defined for separate keys in specific implementations. For those this property may not need to be set.
     * @see com.sun.star.text.TextSortDescriptor
     */
-  var SortAscending: Boolean = js.native
+  var SortAscending: Boolean
   /**
     * specifies if the columns are sorted.
     *
@@ -43,7 +42,7 @@ trait SortDescriptor extends XPropertySet {
     *
     * **FALSE**: The rows are sorted.
     */
-  var SortColumns: Boolean = js.native
+  var SortColumns: Boolean
 }
 
 object SortDescriptor {
@@ -69,43 +68,5 @@ object SortDescriptor {
     val __obj = js.Dynamic.literal(CollatorAlgorithm = CollatorAlgorithm.asInstanceOf[js.Any], CollatorLocale = CollatorLocale.asInstanceOf[js.Any], IsCaseSensitive = IsCaseSensitive.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], SortAscending = SortAscending.asInstanceOf[js.Any], SortColumns = SortColumns.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[SortDescriptor]
   }
-  @scala.inline
-  implicit class SortDescriptorOps[Self <: SortDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollatorAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CollatorAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCollatorLocale(value: Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CollatorLocale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsCaseSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsCaseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortAscending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortAscending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortColumns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

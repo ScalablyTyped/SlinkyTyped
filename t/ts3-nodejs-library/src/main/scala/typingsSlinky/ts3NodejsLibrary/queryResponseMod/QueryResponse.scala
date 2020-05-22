@@ -14,3395 +14,847 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<ts3-nodejs-library.ts3-nodejs-library/lib/types/QueryResponse.QueryResponseTypes> */
-@js.native
 trait QueryResponse extends js.Object {
-  var apikey: js.UndefOr[String] = js.native
-  var average_speed: js.UndefOr[Double] = js.native
-  var banid: js.UndefOr[Double] = js.native
-  var build: js.UndefOr[Double] = js.native
-  var cfid: js.UndefOr[Double] = js.native
-  var cgid: js.UndefOr[Double] = js.native
-  var channel_banner_gfx_url: js.UndefOr[String] = js.native
-  var channel_banner_mode: js.UndefOr[Double] = js.native
-  var channel_codec: js.UndefOr[Codec] = js.native
-  var channel_codec_is_unencrypted: js.UndefOr[Double] = js.native
-  var channel_codec_latency_factor: js.UndefOr[Double] = js.native
-  var channel_codec_quality: js.UndefOr[Double] = js.native
-  var channel_delete_delay: js.UndefOr[Double] = js.native
-  var channel_description: js.UndefOr[String] = js.native
-  var channel_filepath: js.UndefOr[String] = js.native
-  var channel_flag_default: js.UndefOr[Double] = js.native
-  var channel_flag_maxclients_unlimited: js.UndefOr[Double] = js.native
-  var channel_flag_maxfamilyclients_inherited: js.UndefOr[Double] = js.native
-  var channel_flag_maxfamilyclients_unlimited: js.UndefOr[Double] = js.native
-  var channel_flag_password: js.UndefOr[Double] = js.native
-  var channel_flag_permanent: js.UndefOr[Double] = js.native
-  var channel_flag_private: js.UndefOr[Double] = js.native
-  var channel_flag_semi_permanent: js.UndefOr[Double] = js.native
-  var channel_flag_temporary: js.UndefOr[Double] = js.native
-  var channel_forced_silence: js.UndefOr[Double] = js.native
-  var channel_icon_id: js.UndefOr[Double] = js.native
-  var channel_maxclients: js.UndefOr[Double] = js.native
-  var channel_maxfamilyclients: js.UndefOr[Double] = js.native
-  var channel_name: js.UndefOr[String] = js.native
-  var channel_name_phonetic: js.UndefOr[String] = js.native
-  var channel_needed_subscribe_power: js.UndefOr[Double] = js.native
-  var channel_needed_talk_power: js.UndefOr[Double] = js.native
-  var channel_order: js.UndefOr[Double] = js.native
-  var channel_password: js.UndefOr[String] = js.native
-  var channel_security_salt: js.UndefOr[String] = js.native
-  var channel_topic: js.UndefOr[String] = js.native
-  var cid: js.UndefOr[Double] = js.native
-  var cldbid: js.UndefOr[Double] = js.native
-  var clid: js.UndefOr[Double] = js.native
-  var client_away: js.UndefOr[Double] = js.native
-  var client_away_message: js.UndefOr[String] = js.native
-  var client_badges: js.UndefOr[String] = js.native
-  var client_base64HashClientUID: js.UndefOr[String] = js.native
-  var client_channel_group_id: js.UndefOr[Double] = js.native
-  var client_channel_group_inherited_channel_id: js.UndefOr[Double] = js.native
-  var client_channel_id: js.UndefOr[Double] = js.native
-  var client_country: js.UndefOr[String] = js.native
-  var client_created: js.UndefOr[Double] = js.native
-  var client_database_id: js.UndefOr[Double] = js.native
-  var client_default_channel: js.UndefOr[Double] = js.native
-  var client_default_token: js.UndefOr[String] = js.native
-  var client_description: js.UndefOr[String] = js.native
-  var client_flag_avatar: js.UndefOr[String] = js.native
-  var client_flag_talking: js.UndefOr[Double] = js.native
-  var client_icon_id: js.UndefOr[Double] = js.native
-  var client_id: js.UndefOr[Double] = js.native
-  var client_idle_time: js.UndefOr[Double] = js.native
-  var client_input_hardware: js.UndefOr[Double] = js.native
-  var client_input_muted: js.UndefOr[Double] = js.native
-  var client_integrations: js.UndefOr[String] = js.native
-  var client_is_channel_commander: js.UndefOr[Double] = js.native
-  var client_is_priority_speaker: js.UndefOr[Double] = js.native
-  var client_is_recording: js.UndefOr[Double] = js.native
-  var client_is_talker: js.UndefOr[Double] = js.native
-  var client_lastconnected: js.UndefOr[Double] = js.native
-  var client_lastip: js.UndefOr[String] = js.native
-  var client_login_name: js.UndefOr[String] = js.native
-  var client_login_password: js.UndefOr[String] = js.native
-  var client_meta_data: js.UndefOr[String] = js.native
-  var client_month_bytes_downloaded: js.UndefOr[Double] = js.native
-  var client_month_bytes_uploaded: js.UndefOr[Double] = js.native
-  var client_myteamspeak_avatar: js.UndefOr[String] = js.native
-  var client_myteamspeak_id: js.UndefOr[String] = js.native
-  var client_needed_serverquery_view_power: js.UndefOr[Double] = js.native
-  var client_nickname: js.UndefOr[String] = js.native
-  var client_nickname_phonetic: js.UndefOr[String] = js.native
-  var client_origin_server_id: js.UndefOr[Double] = js.native
-  var client_output_hardware: js.UndefOr[Double] = js.native
-  var client_output_muted: js.UndefOr[Double] = js.native
-  var client_outputonly_muted: js.UndefOr[Double] = js.native
-  var client_platform: js.UndefOr[String] = js.native
-  var client_security_hash: js.UndefOr[String] = js.native
-  var client_servergroups: js.UndefOr[js.Array[Double]] = js.native
-  var client_signed_badges: js.UndefOr[String] = js.native
-  var client_talk_power: js.UndefOr[Double] = js.native
-  var client_talk_request: js.UndefOr[Double] = js.native
-  var client_talk_request_msg: js.UndefOr[String] = js.native
-  var client_total_bytes_downloaded: js.UndefOr[Double] = js.native
-  var client_total_bytes_uploaded: js.UndefOr[Double] = js.native
-  var client_totalconnections: js.UndefOr[Double] = js.native
-  var client_type: js.UndefOr[ClientType] = js.native
-  var client_unique_identifier: js.UndefOr[String] = js.native
-  var client_version: js.UndefOr[String] = js.native
-  var client_version_sign: js.UndefOr[String] = js.native
-  var clientftfid: js.UndefOr[Double] = js.native
-  var cluid: js.UndefOr[String] = js.native
-  var connection_bandwidth_received_last_minute_total: js.UndefOr[Double] = js.native
-  var connection_bandwidth_received_last_second_total: js.UndefOr[Double] = js.native
-  var connection_bandwidth_sent_last_minute_total: js.UndefOr[Double] = js.native
-  var connection_bandwidth_sent_last_second_total: js.UndefOr[Double] = js.native
-  var connection_bytes_received_control: js.UndefOr[Double] = js.native
-  var connection_bytes_received_keepalive: js.UndefOr[Double] = js.native
-  var connection_bytes_received_speech: js.UndefOr[Double] = js.native
-  var connection_bytes_received_total: js.UndefOr[Double] = js.native
-  var connection_bytes_sent_control: js.UndefOr[Double] = js.native
-  var connection_bytes_sent_keepalive: js.UndefOr[Double] = js.native
-  var connection_bytes_sent_speech: js.UndefOr[Double] = js.native
-  var connection_bytes_sent_total: js.UndefOr[Double] = js.native
-  var connection_client_ip: js.UndefOr[String] = js.native
-  var connection_connected_time: js.UndefOr[Double] = js.native
-  var connection_filetransfer_bandwidth_received: js.UndefOr[Double] = js.native
-  var connection_filetransfer_bandwidth_sent: js.UndefOr[Double] = js.native
-  var connection_filetransfer_bytes_received_total: js.UndefOr[Double] = js.native
-  var connection_filetransfer_bytes_sent_total: js.UndefOr[Double] = js.native
-  var connection_packetloss_total: js.UndefOr[Double] = js.native
-  var connection_packets_received_control: js.UndefOr[Double] = js.native
-  var connection_packets_received_keepalive: js.UndefOr[Double] = js.native
-  var connection_packets_received_speech: js.UndefOr[Double] = js.native
-  var connection_packets_received_total: js.UndefOr[Double] = js.native
-  var connection_packets_sent_control: js.UndefOr[Double] = js.native
-  var connection_packets_sent_keepalive: js.UndefOr[Double] = js.native
-  var connection_packets_sent_speech: js.UndefOr[Double] = js.native
-  var connection_packets_sent_total: js.UndefOr[Double] = js.native
-  var connection_ping: js.UndefOr[Double] = js.native
-  var count: js.UndefOr[Double] = js.native
-  var cpid: js.UndefOr[Double] = js.native
-  var created: js.UndefOr[Double] = js.native
-  var created_at: js.UndefOr[Double] = js.native
-  var ctid: js.UndefOr[Double] = js.native
-  var current_speed: js.UndefOr[Double] = js.native
-  var datetime: js.UndefOr[Double] = js.native
-  var desc: js.UndefOr[String] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var end: js.UndefOr[Double] = js.native
-  var enforcements: js.UndefOr[Double] = js.native
-  var expires_at: js.UndefOr[Double] = js.native
-  var extra_msg: js.UndefOr[String] = js.native
-  var failed_permid: js.UndefOr[Double] = js.native
-  var fcldbid: js.UndefOr[Double] = js.native
-  var file_size: js.UndefOr[Double] = js.native
-  var flag_read: js.UndefOr[Double] = js.native
-  var fname: js.UndefOr[String] = js.native
-  var ftkey: js.UndefOr[String] = js.native
-  var hash: js.UndefOr[String] = js.native
-  var host_timestamp_utc: js.UndefOr[Double] = js.native
-  var iconid: js.UndefOr[Double] = js.native
-  var id: js.UndefOr[Double] = js.native
-  var id1: js.UndefOr[Double] = js.native
-  var id2: js.UndefOr[Double] = js.native
-  var ident: js.UndefOr[String] = js.native
-  var instance_uptime: js.UndefOr[Double] = js.native
-  var invokercldbid: js.UndefOr[Double] = js.native
-  var invokerid: js.UndefOr[Double] = js.native
-  var invokername: js.UndefOr[String] = js.native
-  var invokeruid: js.UndefOr[String] = js.native
-  var ip: js.UndefOr[String] = js.native
-  var l: js.UndefOr[String] = js.native
-  var last_pos: js.UndefOr[Double] = js.native
-  var lastnickname: js.UndefOr[String] = js.native
-  var message: js.UndefOr[String] = js.native
-  var msg: js.UndefOr[String] = js.native
-  var msgid: js.UndefOr[Double] = js.native
-  var mytsid: js.UndefOr[String] = js.native
-  var n: js.UndefOr[Double] = js.native
-  var n_member_addp: js.UndefOr[Double] = js.native
-  var n_member_removep: js.UndefOr[Double] = js.native
-  var n_modifyp: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var namemode: js.UndefOr[Double] = js.native
-  var nickname: js.UndefOr[String] = js.native
-  var order: js.UndefOr[Double] = js.native
-  var p: js.UndefOr[Double] = js.native
-  var path: js.UndefOr[String] = js.native
-  var permdesc: js.UndefOr[String] = js.native
-  var permid: js.UndefOr[Double] = js.native
-  var permname: js.UndefOr[String] = js.native
-  var permnegated: js.UndefOr[Double] = js.native
-  var permsid: js.UndefOr[String] = js.native
-  var permskip: js.UndefOr[Double] = js.native
-  var permvalue: js.UndefOr[Double] = js.native
-  var pid: js.UndefOr[Double] = js.native
-  var platform: js.UndefOr[String] = js.native
-  var port: js.UndefOr[Double] = js.native
-  var proto: js.UndefOr[Double] = js.native
-  var pw_clear: js.UndefOr[String] = js.native
-  var reason: js.UndefOr[String] = js.native
-  var reasonid: js.UndefOr[Double] = js.native
-  var reasonmsg: js.UndefOr[String] = js.native
-  var runtime: js.UndefOr[Double] = js.native
-  var s: js.UndefOr[Double] = js.native
-  var salt: js.UndefOr[String] = js.native
-  var savedb: js.UndefOr[Double] = js.native
-  var scope: js.UndefOr[ApiKeyScope] = js.native
-  var seconds_empty: js.UndefOr[Double] = js.native
-  var sender: js.UndefOr[Double] = js.native
-  var server_id: js.UndefOr[Double] = js.native
-  var serverftfid: js.UndefOr[Double] = js.native
-  var serverinstance_database_version: js.UndefOr[Double] = js.native
-  var serverinstance_filetransfer_port: js.UndefOr[Double] = js.native
-  var serverinstance_guest_serverquery_group: js.UndefOr[Double] = js.native
-  var serverinstance_max_download_total_bandwidth: js.UndefOr[Double] = js.native
-  var serverinstance_max_upload_total_bandwidth: js.UndefOr[Double] = js.native
-  var serverinstance_pending_connections_per_ip: js.UndefOr[Double] = js.native
-  var serverinstance_permissions_version: js.UndefOr[Double] = js.native
-  var serverinstance_serverquery_flood_ban_time: js.UndefOr[Double] = js.native
-  var serverinstance_serverquery_flood_commands: js.UndefOr[Double] = js.native
-  var serverinstance_serverquery_flood_time: js.UndefOr[Double] = js.native
-  var serverinstance_serverquery_max_connections_per_ip: js.UndefOr[Double] = js.native
-  var serverinstance_template_channeladmin_group: js.UndefOr[Double] = js.native
-  var serverinstance_template_channeldefault_group: js.UndefOr[Double] = js.native
-  var serverinstance_template_serveradmin_group: js.UndefOr[Double] = js.native
-  var serverinstance_template_serverdefault_group: js.UndefOr[Double] = js.native
-  var sgid: js.UndefOr[Double] = js.native
-  var sid: js.UndefOr[Double] = js.native
-  var size: js.UndefOr[Double] = js.native
-  var sizedone: js.UndefOr[Double] = js.native
-  var snapshot: js.UndefOr[String] = js.native
-  var sortid: js.UndefOr[Double] = js.native
-  var start: js.UndefOr[Double] = js.native
-  var status: js.UndefOr[Double] = js.native
-  var subject: js.UndefOr[String] = js.native
-  var t: js.UndefOr[Double] = js.native
-  var target: js.UndefOr[Double] = js.native
-  var targetmode: js.UndefOr[TextMessageTargetMode] = js.native
-  var tcid: js.UndefOr[Double] = js.native
-  var tcldbid: js.UndefOr[Double] = js.native
-  var time_left: js.UndefOr[Double] = js.native
-  var timestamp: js.UndefOr[Double] = js.native
-  var tname: js.UndefOr[String] = js.native
-  var token: js.UndefOr[String] = js.native
-  var token1: js.UndefOr[String] = js.native
-  var token2: js.UndefOr[String] = js.native
-  var token_created: js.UndefOr[Double] = js.native
-  var token_customset: js.UndefOr[js.Array[TokenCustomSet]] = js.native
-  var token_description: js.UndefOr[String] = js.native
-  var token_id1: js.UndefOr[Double] = js.native
-  var token_id2: js.UndefOr[Double] = js.native
-  var token_type: js.UndefOr[TokenType] = js.native
-  var tokencustomset: js.UndefOr[js.Array[TokenCustomSet]] = js.native
-  var total_clients: js.UndefOr[Double] = js.native
-  var total_clients_family: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[Double] = js.native
-  var uid: js.UndefOr[String] = js.native
-  var v: js.UndefOr[Double] = js.native
-  var value: js.UndefOr[String] = js.native
-  var version: js.UndefOr[String] = js.native
-  var virtualserver_antiflood_points_needed_command_block: js.UndefOr[Double] = js.native
-  var virtualserver_antiflood_points_needed_ip_block: js.UndefOr[Double] = js.native
-  var virtualserver_antiflood_points_needed_plugin_block: js.UndefOr[Double] = js.native
-  var virtualserver_antiflood_points_tick_reduce: js.UndefOr[Double] = js.native
-  var virtualserver_ask_for_privilegekey: js.UndefOr[Double] = js.native
-  var virtualserver_autostart: js.UndefOr[Double] = js.native
-  var virtualserver_channel_temp_delete_delay_default: js.UndefOr[Double] = js.native
-  var virtualserver_channelsonline: js.UndefOr[Double] = js.native
-  var virtualserver_client_connections: js.UndefOr[Double] = js.native
-  var virtualserver_clientsonline: js.UndefOr[Double] = js.native
-  var virtualserver_codec_encryption_mode: js.UndefOr[CodecEncryptionMode] = js.native
-  var virtualserver_complain_autoban_count: js.UndefOr[Double] = js.native
-  var virtualserver_complain_autoban_time: js.UndefOr[Double] = js.native
-  var virtualserver_complain_remove_time: js.UndefOr[Double] = js.native
-  var virtualserver_created: js.UndefOr[Double] = js.native
-  var virtualserver_default_channel_admin_group: js.UndefOr[Double] = js.native
-  var virtualserver_default_channel_group: js.UndefOr[Double] = js.native
-  var virtualserver_default_server_group: js.UndefOr[Double] = js.native
-  var virtualserver_download_quota: js.UndefOr[Double] = js.native
-  var virtualserver_filebase: js.UndefOr[String] = js.native
-  var virtualserver_flag_password: js.UndefOr[Double] = js.native
-  var virtualserver_hostbanner_gfx_interval: js.UndefOr[Double] = js.native
-  var virtualserver_hostbanner_gfx_url: js.UndefOr[String] = js.native
-  var virtualserver_hostbanner_mode: js.UndefOr[HostBannerMode] = js.native
-  var virtualserver_hostbanner_url: js.UndefOr[String] = js.native
-  var virtualserver_hostbutton_gfx_url: js.UndefOr[String] = js.native
-  var virtualserver_hostbutton_tooltip: js.UndefOr[String] = js.native
-  var virtualserver_hostbutton_url: js.UndefOr[String] = js.native
-  var virtualserver_hostmessage: js.UndefOr[String] = js.native
-  var virtualserver_hostmessage_mode: js.UndefOr[HostMessageMode] = js.native
-  var virtualserver_icon_id: js.UndefOr[Double] = js.native
-  var virtualserver_id: js.UndefOr[Double] = js.native
-  var virtualserver_ip: js.UndefOr[js.Array[String]] = js.native
-  var virtualserver_log_channel: js.UndefOr[Double] = js.native
-  var virtualserver_log_client: js.UndefOr[Double] = js.native
-  var virtualserver_log_filetransfer: js.UndefOr[Double] = js.native
-  var virtualserver_log_permissions: js.UndefOr[Double] = js.native
-  var virtualserver_log_query: js.UndefOr[Double] = js.native
-  var virtualserver_log_server: js.UndefOr[Double] = js.native
-  var virtualserver_machine_id: js.UndefOr[String] = js.native
-  var virtualserver_max_download_total_bandwidth: js.UndefOr[Double] = js.native
-  var virtualserver_max_upload_total_bandwidth: js.UndefOr[Double] = js.native
-  var virtualserver_maxclients: js.UndefOr[Double] = js.native
-  var virtualserver_min_android_version: js.UndefOr[Double] = js.native
-  var virtualserver_min_client_version: js.UndefOr[Double] = js.native
-  var virtualserver_min_clients_in_channel_before_forced_silence: js.UndefOr[Double] = js.native
-  var virtualserver_min_ios_version: js.UndefOr[Double] = js.native
-  var virtualserver_month_bytes_downloaded: js.UndefOr[Double] = js.native
-  var virtualserver_month_bytes_uploaded: js.UndefOr[Double] = js.native
-  var virtualserver_name: js.UndefOr[String] = js.native
-  var virtualserver_name_phonetic: js.UndefOr[String] = js.native
-  var virtualserver_needed_identity_security_level: js.UndefOr[Double] = js.native
-  var virtualserver_nickname: js.UndefOr[String] = js.native
-  var virtualserver_password: js.UndefOr[String] = js.native
-  var virtualserver_platform: js.UndefOr[String] = js.native
-  var virtualserver_port: js.UndefOr[Double] = js.native
-  var virtualserver_priority_speaker_dimm_modificator: js.UndefOr[Double] = js.native
-  var virtualserver_query_client_connections: js.UndefOr[Double] = js.native
-  var virtualserver_queryclientsonline: js.UndefOr[Double] = js.native
-  var virtualserver_reserved_slots: js.UndefOr[Double] = js.native
-  var virtualserver_status: js.UndefOr[String] = js.native
-  var virtualserver_total_bytes_downloaded: js.UndefOr[Double] = js.native
-  var virtualserver_total_bytes_uploaded: js.UndefOr[Double] = js.native
-  var virtualserver_total_packetloss_control: js.UndefOr[Double] = js.native
-  var virtualserver_total_packetloss_keepalive: js.UndefOr[Double] = js.native
-  var virtualserver_total_packetloss_speech: js.UndefOr[Double] = js.native
-  var virtualserver_total_packetloss_total: js.UndefOr[Double] = js.native
-  var virtualserver_total_ping: js.UndefOr[Double] = js.native
-  var virtualserver_unique_identifier: js.UndefOr[String] = js.native
-  var virtualserver_upload_quota: js.UndefOr[Double] = js.native
-  var virtualserver_uptime: js.UndefOr[Double] = js.native
-  var virtualserver_version: js.UndefOr[String] = js.native
-  var virtualserver_weblist_enabled: js.UndefOr[Double] = js.native
-  var virtualserver_welcomemessage: js.UndefOr[String] = js.native
-  var virtualservers_running_total: js.UndefOr[Double] = js.native
-  var virtualservers_total_channels_online: js.UndefOr[Double] = js.native
-  var virtualservers_total_clients_online: js.UndefOr[Double] = js.native
-  var virtualservers_total_maxclients: js.UndefOr[Double] = js.native
+  var apikey: js.UndefOr[String] = js.undefined
+  var average_speed: js.UndefOr[Double] = js.undefined
+  var banid: js.UndefOr[Double] = js.undefined
+  var build: js.UndefOr[Double] = js.undefined
+  var cfid: js.UndefOr[Double] = js.undefined
+  var cgid: js.UndefOr[Double] = js.undefined
+  var channel_banner_gfx_url: js.UndefOr[String] = js.undefined
+  var channel_banner_mode: js.UndefOr[Double] = js.undefined
+  var channel_codec: js.UndefOr[Codec] = js.undefined
+  var channel_codec_is_unencrypted: js.UndefOr[Double] = js.undefined
+  var channel_codec_latency_factor: js.UndefOr[Double] = js.undefined
+  var channel_codec_quality: js.UndefOr[Double] = js.undefined
+  var channel_delete_delay: js.UndefOr[Double] = js.undefined
+  var channel_description: js.UndefOr[String] = js.undefined
+  var channel_filepath: js.UndefOr[String] = js.undefined
+  var channel_flag_default: js.UndefOr[Double] = js.undefined
+  var channel_flag_maxclients_unlimited: js.UndefOr[Double] = js.undefined
+  var channel_flag_maxfamilyclients_inherited: js.UndefOr[Double] = js.undefined
+  var channel_flag_maxfamilyclients_unlimited: js.UndefOr[Double] = js.undefined
+  var channel_flag_password: js.UndefOr[Double] = js.undefined
+  var channel_flag_permanent: js.UndefOr[Double] = js.undefined
+  var channel_flag_private: js.UndefOr[Double] = js.undefined
+  var channel_flag_semi_permanent: js.UndefOr[Double] = js.undefined
+  var channel_flag_temporary: js.UndefOr[Double] = js.undefined
+  var channel_forced_silence: js.UndefOr[Double] = js.undefined
+  var channel_icon_id: js.UndefOr[Double] = js.undefined
+  var channel_maxclients: js.UndefOr[Double] = js.undefined
+  var channel_maxfamilyclients: js.UndefOr[Double] = js.undefined
+  var channel_name: js.UndefOr[String] = js.undefined
+  var channel_name_phonetic: js.UndefOr[String] = js.undefined
+  var channel_needed_subscribe_power: js.UndefOr[Double] = js.undefined
+  var channel_needed_talk_power: js.UndefOr[Double] = js.undefined
+  var channel_order: js.UndefOr[Double] = js.undefined
+  var channel_password: js.UndefOr[String] = js.undefined
+  var channel_security_salt: js.UndefOr[String] = js.undefined
+  var channel_topic: js.UndefOr[String] = js.undefined
+  var cid: js.UndefOr[Double] = js.undefined
+  var cldbid: js.UndefOr[Double] = js.undefined
+  var clid: js.UndefOr[Double] = js.undefined
+  var client_away: js.UndefOr[Double] = js.undefined
+  var client_away_message: js.UndefOr[String] = js.undefined
+  var client_badges: js.UndefOr[String] = js.undefined
+  var client_base64HashClientUID: js.UndefOr[String] = js.undefined
+  var client_channel_group_id: js.UndefOr[Double] = js.undefined
+  var client_channel_group_inherited_channel_id: js.UndefOr[Double] = js.undefined
+  var client_channel_id: js.UndefOr[Double] = js.undefined
+  var client_country: js.UndefOr[String] = js.undefined
+  var client_created: js.UndefOr[Double] = js.undefined
+  var client_database_id: js.UndefOr[Double] = js.undefined
+  var client_default_channel: js.UndefOr[Double] = js.undefined
+  var client_default_token: js.UndefOr[String] = js.undefined
+  var client_description: js.UndefOr[String] = js.undefined
+  var client_flag_avatar: js.UndefOr[String] = js.undefined
+  var client_flag_talking: js.UndefOr[Double] = js.undefined
+  var client_icon_id: js.UndefOr[Double] = js.undefined
+  var client_id: js.UndefOr[Double] = js.undefined
+  var client_idle_time: js.UndefOr[Double] = js.undefined
+  var client_input_hardware: js.UndefOr[Double] = js.undefined
+  var client_input_muted: js.UndefOr[Double] = js.undefined
+  var client_integrations: js.UndefOr[String] = js.undefined
+  var client_is_channel_commander: js.UndefOr[Double] = js.undefined
+  var client_is_priority_speaker: js.UndefOr[Double] = js.undefined
+  var client_is_recording: js.UndefOr[Double] = js.undefined
+  var client_is_talker: js.UndefOr[Double] = js.undefined
+  var client_lastconnected: js.UndefOr[Double] = js.undefined
+  var client_lastip: js.UndefOr[String] = js.undefined
+  var client_login_name: js.UndefOr[String] = js.undefined
+  var client_login_password: js.UndefOr[String] = js.undefined
+  var client_meta_data: js.UndefOr[String] = js.undefined
+  var client_month_bytes_downloaded: js.UndefOr[Double] = js.undefined
+  var client_month_bytes_uploaded: js.UndefOr[Double] = js.undefined
+  var client_myteamspeak_avatar: js.UndefOr[String] = js.undefined
+  var client_myteamspeak_id: js.UndefOr[String] = js.undefined
+  var client_needed_serverquery_view_power: js.UndefOr[Double] = js.undefined
+  var client_nickname: js.UndefOr[String] = js.undefined
+  var client_nickname_phonetic: js.UndefOr[String] = js.undefined
+  var client_origin_server_id: js.UndefOr[Double] = js.undefined
+  var client_output_hardware: js.UndefOr[Double] = js.undefined
+  var client_output_muted: js.UndefOr[Double] = js.undefined
+  var client_outputonly_muted: js.UndefOr[Double] = js.undefined
+  var client_platform: js.UndefOr[String] = js.undefined
+  var client_security_hash: js.UndefOr[String] = js.undefined
+  var client_servergroups: js.UndefOr[js.Array[Double]] = js.undefined
+  var client_signed_badges: js.UndefOr[String] = js.undefined
+  var client_talk_power: js.UndefOr[Double] = js.undefined
+  var client_talk_request: js.UndefOr[Double] = js.undefined
+  var client_talk_request_msg: js.UndefOr[String] = js.undefined
+  var client_total_bytes_downloaded: js.UndefOr[Double] = js.undefined
+  var client_total_bytes_uploaded: js.UndefOr[Double] = js.undefined
+  var client_totalconnections: js.UndefOr[Double] = js.undefined
+  var client_type: js.UndefOr[ClientType] = js.undefined
+  var client_unique_identifier: js.UndefOr[String] = js.undefined
+  var client_version: js.UndefOr[String] = js.undefined
+  var client_version_sign: js.UndefOr[String] = js.undefined
+  var clientftfid: js.UndefOr[Double] = js.undefined
+  var cluid: js.UndefOr[String] = js.undefined
+  var connection_bandwidth_received_last_minute_total: js.UndefOr[Double] = js.undefined
+  var connection_bandwidth_received_last_second_total: js.UndefOr[Double] = js.undefined
+  var connection_bandwidth_sent_last_minute_total: js.UndefOr[Double] = js.undefined
+  var connection_bandwidth_sent_last_second_total: js.UndefOr[Double] = js.undefined
+  var connection_bytes_received_control: js.UndefOr[Double] = js.undefined
+  var connection_bytes_received_keepalive: js.UndefOr[Double] = js.undefined
+  var connection_bytes_received_speech: js.UndefOr[Double] = js.undefined
+  var connection_bytes_received_total: js.UndefOr[Double] = js.undefined
+  var connection_bytes_sent_control: js.UndefOr[Double] = js.undefined
+  var connection_bytes_sent_keepalive: js.UndefOr[Double] = js.undefined
+  var connection_bytes_sent_speech: js.UndefOr[Double] = js.undefined
+  var connection_bytes_sent_total: js.UndefOr[Double] = js.undefined
+  var connection_client_ip: js.UndefOr[String] = js.undefined
+  var connection_connected_time: js.UndefOr[Double] = js.undefined
+  var connection_filetransfer_bandwidth_received: js.UndefOr[Double] = js.undefined
+  var connection_filetransfer_bandwidth_sent: js.UndefOr[Double] = js.undefined
+  var connection_filetransfer_bytes_received_total: js.UndefOr[Double] = js.undefined
+  var connection_filetransfer_bytes_sent_total: js.UndefOr[Double] = js.undefined
+  var connection_packetloss_total: js.UndefOr[Double] = js.undefined
+  var connection_packets_received_control: js.UndefOr[Double] = js.undefined
+  var connection_packets_received_keepalive: js.UndefOr[Double] = js.undefined
+  var connection_packets_received_speech: js.UndefOr[Double] = js.undefined
+  var connection_packets_received_total: js.UndefOr[Double] = js.undefined
+  var connection_packets_sent_control: js.UndefOr[Double] = js.undefined
+  var connection_packets_sent_keepalive: js.UndefOr[Double] = js.undefined
+  var connection_packets_sent_speech: js.UndefOr[Double] = js.undefined
+  var connection_packets_sent_total: js.UndefOr[Double] = js.undefined
+  var connection_ping: js.UndefOr[Double] = js.undefined
+  var count: js.UndefOr[Double] = js.undefined
+  var cpid: js.UndefOr[Double] = js.undefined
+  var created: js.UndefOr[Double] = js.undefined
+  var created_at: js.UndefOr[Double] = js.undefined
+  var ctid: js.UndefOr[Double] = js.undefined
+  var current_speed: js.UndefOr[Double] = js.undefined
+  var datetime: js.UndefOr[Double] = js.undefined
+  var desc: js.UndefOr[String] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var end: js.UndefOr[Double] = js.undefined
+  var enforcements: js.UndefOr[Double] = js.undefined
+  var expires_at: js.UndefOr[Double] = js.undefined
+  var extra_msg: js.UndefOr[String] = js.undefined
+  var failed_permid: js.UndefOr[Double] = js.undefined
+  var fcldbid: js.UndefOr[Double] = js.undefined
+  var file_size: js.UndefOr[Double] = js.undefined
+  var flag_read: js.UndefOr[Double] = js.undefined
+  var fname: js.UndefOr[String] = js.undefined
+  var ftkey: js.UndefOr[String] = js.undefined
+  var hash: js.UndefOr[String] = js.undefined
+  var host_timestamp_utc: js.UndefOr[Double] = js.undefined
+  var iconid: js.UndefOr[Double] = js.undefined
+  var id: js.UndefOr[Double] = js.undefined
+  var id1: js.UndefOr[Double] = js.undefined
+  var id2: js.UndefOr[Double] = js.undefined
+  var ident: js.UndefOr[String] = js.undefined
+  var instance_uptime: js.UndefOr[Double] = js.undefined
+  var invokercldbid: js.UndefOr[Double] = js.undefined
+  var invokerid: js.UndefOr[Double] = js.undefined
+  var invokername: js.UndefOr[String] = js.undefined
+  var invokeruid: js.UndefOr[String] = js.undefined
+  var ip: js.UndefOr[String] = js.undefined
+  var l: js.UndefOr[String] = js.undefined
+  var last_pos: js.UndefOr[Double] = js.undefined
+  var lastnickname: js.UndefOr[String] = js.undefined
+  var message: js.UndefOr[String] = js.undefined
+  var msg: js.UndefOr[String] = js.undefined
+  var msgid: js.UndefOr[Double] = js.undefined
+  var mytsid: js.UndefOr[String] = js.undefined
+  var n: js.UndefOr[Double] = js.undefined
+  var n_member_addp: js.UndefOr[Double] = js.undefined
+  var n_member_removep: js.UndefOr[Double] = js.undefined
+  var n_modifyp: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var namemode: js.UndefOr[Double] = js.undefined
+  var nickname: js.UndefOr[String] = js.undefined
+  var order: js.UndefOr[Double] = js.undefined
+  var p: js.UndefOr[Double] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var permdesc: js.UndefOr[String] = js.undefined
+  var permid: js.UndefOr[Double] = js.undefined
+  var permname: js.UndefOr[String] = js.undefined
+  var permnegated: js.UndefOr[Double] = js.undefined
+  var permsid: js.UndefOr[String] = js.undefined
+  var permskip: js.UndefOr[Double] = js.undefined
+  var permvalue: js.UndefOr[Double] = js.undefined
+  var pid: js.UndefOr[Double] = js.undefined
+  var platform: js.UndefOr[String] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
+  var proto: js.UndefOr[Double] = js.undefined
+  var pw_clear: js.UndefOr[String] = js.undefined
+  var reason: js.UndefOr[String] = js.undefined
+  var reasonid: js.UndefOr[Double] = js.undefined
+  var reasonmsg: js.UndefOr[String] = js.undefined
+  var runtime: js.UndefOr[Double] = js.undefined
+  var s: js.UndefOr[Double] = js.undefined
+  var salt: js.UndefOr[String] = js.undefined
+  var savedb: js.UndefOr[Double] = js.undefined
+  var scope: js.UndefOr[ApiKeyScope] = js.undefined
+  var seconds_empty: js.UndefOr[Double] = js.undefined
+  var sender: js.UndefOr[Double] = js.undefined
+  var server_id: js.UndefOr[Double] = js.undefined
+  var serverftfid: js.UndefOr[Double] = js.undefined
+  var serverinstance_database_version: js.UndefOr[Double] = js.undefined
+  var serverinstance_filetransfer_port: js.UndefOr[Double] = js.undefined
+  var serverinstance_guest_serverquery_group: js.UndefOr[Double] = js.undefined
+  var serverinstance_max_download_total_bandwidth: js.UndefOr[Double] = js.undefined
+  var serverinstance_max_upload_total_bandwidth: js.UndefOr[Double] = js.undefined
+  var serverinstance_pending_connections_per_ip: js.UndefOr[Double] = js.undefined
+  var serverinstance_permissions_version: js.UndefOr[Double] = js.undefined
+  var serverinstance_serverquery_flood_ban_time: js.UndefOr[Double] = js.undefined
+  var serverinstance_serverquery_flood_commands: js.UndefOr[Double] = js.undefined
+  var serverinstance_serverquery_flood_time: js.UndefOr[Double] = js.undefined
+  var serverinstance_serverquery_max_connections_per_ip: js.UndefOr[Double] = js.undefined
+  var serverinstance_template_channeladmin_group: js.UndefOr[Double] = js.undefined
+  var serverinstance_template_channeldefault_group: js.UndefOr[Double] = js.undefined
+  var serverinstance_template_serveradmin_group: js.UndefOr[Double] = js.undefined
+  var serverinstance_template_serverdefault_group: js.UndefOr[Double] = js.undefined
+  var sgid: js.UndefOr[Double] = js.undefined
+  var sid: js.UndefOr[Double] = js.undefined
+  var size: js.UndefOr[Double] = js.undefined
+  var sizedone: js.UndefOr[Double] = js.undefined
+  var snapshot: js.UndefOr[String] = js.undefined
+  var sortid: js.UndefOr[Double] = js.undefined
+  var start: js.UndefOr[Double] = js.undefined
+  var status: js.UndefOr[Double] = js.undefined
+  var subject: js.UndefOr[String] = js.undefined
+  var t: js.UndefOr[Double] = js.undefined
+  var target: js.UndefOr[Double] = js.undefined
+  var targetmode: js.UndefOr[TextMessageTargetMode] = js.undefined
+  var tcid: js.UndefOr[Double] = js.undefined
+  var tcldbid: js.UndefOr[Double] = js.undefined
+  var time_left: js.UndefOr[Double] = js.undefined
+  var timestamp: js.UndefOr[Double] = js.undefined
+  var tname: js.UndefOr[String] = js.undefined
+  var token: js.UndefOr[String] = js.undefined
+  var token1: js.UndefOr[String] = js.undefined
+  var token2: js.UndefOr[String] = js.undefined
+  var token_created: js.UndefOr[Double] = js.undefined
+  var token_customset: js.UndefOr[js.Array[TokenCustomSet]] = js.undefined
+  var token_description: js.UndefOr[String] = js.undefined
+  var token_id1: js.UndefOr[Double] = js.undefined
+  var token_id2: js.UndefOr[Double] = js.undefined
+  var token_type: js.UndefOr[TokenType] = js.undefined
+  var tokencustomset: js.UndefOr[js.Array[TokenCustomSet]] = js.undefined
+  var total_clients: js.UndefOr[Double] = js.undefined
+  var total_clients_family: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[Double] = js.undefined
+  var uid: js.UndefOr[String] = js.undefined
+  var v: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
+  var virtualserver_antiflood_points_needed_command_block: js.UndefOr[Double] = js.undefined
+  var virtualserver_antiflood_points_needed_ip_block: js.UndefOr[Double] = js.undefined
+  var virtualserver_antiflood_points_needed_plugin_block: js.UndefOr[Double] = js.undefined
+  var virtualserver_antiflood_points_tick_reduce: js.UndefOr[Double] = js.undefined
+  var virtualserver_ask_for_privilegekey: js.UndefOr[Double] = js.undefined
+  var virtualserver_autostart: js.UndefOr[Double] = js.undefined
+  var virtualserver_channel_temp_delete_delay_default: js.UndefOr[Double] = js.undefined
+  var virtualserver_channelsonline: js.UndefOr[Double] = js.undefined
+  var virtualserver_client_connections: js.UndefOr[Double] = js.undefined
+  var virtualserver_clientsonline: js.UndefOr[Double] = js.undefined
+  var virtualserver_codec_encryption_mode: js.UndefOr[CodecEncryptionMode] = js.undefined
+  var virtualserver_complain_autoban_count: js.UndefOr[Double] = js.undefined
+  var virtualserver_complain_autoban_time: js.UndefOr[Double] = js.undefined
+  var virtualserver_complain_remove_time: js.UndefOr[Double] = js.undefined
+  var virtualserver_created: js.UndefOr[Double] = js.undefined
+  var virtualserver_default_channel_admin_group: js.UndefOr[Double] = js.undefined
+  var virtualserver_default_channel_group: js.UndefOr[Double] = js.undefined
+  var virtualserver_default_server_group: js.UndefOr[Double] = js.undefined
+  var virtualserver_download_quota: js.UndefOr[Double] = js.undefined
+  var virtualserver_filebase: js.UndefOr[String] = js.undefined
+  var virtualserver_flag_password: js.UndefOr[Double] = js.undefined
+  var virtualserver_hostbanner_gfx_interval: js.UndefOr[Double] = js.undefined
+  var virtualserver_hostbanner_gfx_url: js.UndefOr[String] = js.undefined
+  var virtualserver_hostbanner_mode: js.UndefOr[HostBannerMode] = js.undefined
+  var virtualserver_hostbanner_url: js.UndefOr[String] = js.undefined
+  var virtualserver_hostbutton_gfx_url: js.UndefOr[String] = js.undefined
+  var virtualserver_hostbutton_tooltip: js.UndefOr[String] = js.undefined
+  var virtualserver_hostbutton_url: js.UndefOr[String] = js.undefined
+  var virtualserver_hostmessage: js.UndefOr[String] = js.undefined
+  var virtualserver_hostmessage_mode: js.UndefOr[HostMessageMode] = js.undefined
+  var virtualserver_icon_id: js.UndefOr[Double] = js.undefined
+  var virtualserver_id: js.UndefOr[Double] = js.undefined
+  var virtualserver_ip: js.UndefOr[js.Array[String]] = js.undefined
+  var virtualserver_log_channel: js.UndefOr[Double] = js.undefined
+  var virtualserver_log_client: js.UndefOr[Double] = js.undefined
+  var virtualserver_log_filetransfer: js.UndefOr[Double] = js.undefined
+  var virtualserver_log_permissions: js.UndefOr[Double] = js.undefined
+  var virtualserver_log_query: js.UndefOr[Double] = js.undefined
+  var virtualserver_log_server: js.UndefOr[Double] = js.undefined
+  var virtualserver_machine_id: js.UndefOr[String] = js.undefined
+  var virtualserver_max_download_total_bandwidth: js.UndefOr[Double] = js.undefined
+  var virtualserver_max_upload_total_bandwidth: js.UndefOr[Double] = js.undefined
+  var virtualserver_maxclients: js.UndefOr[Double] = js.undefined
+  var virtualserver_min_android_version: js.UndefOr[Double] = js.undefined
+  var virtualserver_min_client_version: js.UndefOr[Double] = js.undefined
+  var virtualserver_min_clients_in_channel_before_forced_silence: js.UndefOr[Double] = js.undefined
+  var virtualserver_min_ios_version: js.UndefOr[Double] = js.undefined
+  var virtualserver_month_bytes_downloaded: js.UndefOr[Double] = js.undefined
+  var virtualserver_month_bytes_uploaded: js.UndefOr[Double] = js.undefined
+  var virtualserver_name: js.UndefOr[String] = js.undefined
+  var virtualserver_name_phonetic: js.UndefOr[String] = js.undefined
+  var virtualserver_needed_identity_security_level: js.UndefOr[Double] = js.undefined
+  var virtualserver_nickname: js.UndefOr[String] = js.undefined
+  var virtualserver_password: js.UndefOr[String] = js.undefined
+  var virtualserver_platform: js.UndefOr[String] = js.undefined
+  var virtualserver_port: js.UndefOr[Double] = js.undefined
+  var virtualserver_priority_speaker_dimm_modificator: js.UndefOr[Double] = js.undefined
+  var virtualserver_query_client_connections: js.UndefOr[Double] = js.undefined
+  var virtualserver_queryclientsonline: js.UndefOr[Double] = js.undefined
+  var virtualserver_reserved_slots: js.UndefOr[Double] = js.undefined
+  var virtualserver_status: js.UndefOr[String] = js.undefined
+  var virtualserver_total_bytes_downloaded: js.UndefOr[Double] = js.undefined
+  var virtualserver_total_bytes_uploaded: js.UndefOr[Double] = js.undefined
+  var virtualserver_total_packetloss_control: js.UndefOr[Double] = js.undefined
+  var virtualserver_total_packetloss_keepalive: js.UndefOr[Double] = js.undefined
+  var virtualserver_total_packetloss_speech: js.UndefOr[Double] = js.undefined
+  var virtualserver_total_packetloss_total: js.UndefOr[Double] = js.undefined
+  var virtualserver_total_ping: js.UndefOr[Double] = js.undefined
+  var virtualserver_unique_identifier: js.UndefOr[String] = js.undefined
+  var virtualserver_upload_quota: js.UndefOr[Double] = js.undefined
+  var virtualserver_uptime: js.UndefOr[Double] = js.undefined
+  var virtualserver_version: js.UndefOr[String] = js.undefined
+  var virtualserver_weblist_enabled: js.UndefOr[Double] = js.undefined
+  var virtualserver_welcomemessage: js.UndefOr[String] = js.undefined
+  var virtualservers_running_total: js.UndefOr[Double] = js.undefined
+  var virtualservers_total_channels_online: js.UndefOr[Double] = js.undefined
+  var virtualservers_total_clients_online: js.UndefOr[Double] = js.undefined
+  var virtualservers_total_maxclients: js.UndefOr[Double] = js.undefined
 }
 
 object QueryResponse {
   @scala.inline
-  def apply(): QueryResponse = {
+  def apply(
+    apikey: String = null,
+    average_speed: js.UndefOr[Double] = js.undefined,
+    banid: js.UndefOr[Double] = js.undefined,
+    build: js.UndefOr[Double] = js.undefined,
+    cfid: js.UndefOr[Double] = js.undefined,
+    cgid: js.UndefOr[Double] = js.undefined,
+    channel_banner_gfx_url: String = null,
+    channel_banner_mode: js.UndefOr[Double] = js.undefined,
+    channel_codec: Codec = null,
+    channel_codec_is_unencrypted: js.UndefOr[Double] = js.undefined,
+    channel_codec_latency_factor: js.UndefOr[Double] = js.undefined,
+    channel_codec_quality: js.UndefOr[Double] = js.undefined,
+    channel_delete_delay: js.UndefOr[Double] = js.undefined,
+    channel_description: String = null,
+    channel_filepath: String = null,
+    channel_flag_default: js.UndefOr[Double] = js.undefined,
+    channel_flag_maxclients_unlimited: js.UndefOr[Double] = js.undefined,
+    channel_flag_maxfamilyclients_inherited: js.UndefOr[Double] = js.undefined,
+    channel_flag_maxfamilyclients_unlimited: js.UndefOr[Double] = js.undefined,
+    channel_flag_password: js.UndefOr[Double] = js.undefined,
+    channel_flag_permanent: js.UndefOr[Double] = js.undefined,
+    channel_flag_private: js.UndefOr[Double] = js.undefined,
+    channel_flag_semi_permanent: js.UndefOr[Double] = js.undefined,
+    channel_flag_temporary: js.UndefOr[Double] = js.undefined,
+    channel_forced_silence: js.UndefOr[Double] = js.undefined,
+    channel_icon_id: js.UndefOr[Double] = js.undefined,
+    channel_maxclients: js.UndefOr[Double] = js.undefined,
+    channel_maxfamilyclients: js.UndefOr[Double] = js.undefined,
+    channel_name: String = null,
+    channel_name_phonetic: String = null,
+    channel_needed_subscribe_power: js.UndefOr[Double] = js.undefined,
+    channel_needed_talk_power: js.UndefOr[Double] = js.undefined,
+    channel_order: js.UndefOr[Double] = js.undefined,
+    channel_password: String = null,
+    channel_security_salt: String = null,
+    channel_topic: String = null,
+    cid: js.UndefOr[Double] = js.undefined,
+    cldbid: js.UndefOr[Double] = js.undefined,
+    clid: js.UndefOr[Double] = js.undefined,
+    client_away: js.UndefOr[Double] = js.undefined,
+    client_away_message: String = null,
+    client_badges: String = null,
+    client_base64HashClientUID: String = null,
+    client_channel_group_id: js.UndefOr[Double] = js.undefined,
+    client_channel_group_inherited_channel_id: js.UndefOr[Double] = js.undefined,
+    client_channel_id: js.UndefOr[Double] = js.undefined,
+    client_country: String = null,
+    client_created: js.UndefOr[Double] = js.undefined,
+    client_database_id: js.UndefOr[Double] = js.undefined,
+    client_default_channel: js.UndefOr[Double] = js.undefined,
+    client_default_token: String = null,
+    client_description: String = null,
+    client_flag_avatar: String = null,
+    client_flag_talking: js.UndefOr[Double] = js.undefined,
+    client_icon_id: js.UndefOr[Double] = js.undefined,
+    client_id: js.UndefOr[Double] = js.undefined,
+    client_idle_time: js.UndefOr[Double] = js.undefined,
+    client_input_hardware: js.UndefOr[Double] = js.undefined,
+    client_input_muted: js.UndefOr[Double] = js.undefined,
+    client_integrations: String = null,
+    client_is_channel_commander: js.UndefOr[Double] = js.undefined,
+    client_is_priority_speaker: js.UndefOr[Double] = js.undefined,
+    client_is_recording: js.UndefOr[Double] = js.undefined,
+    client_is_talker: js.UndefOr[Double] = js.undefined,
+    client_lastconnected: js.UndefOr[Double] = js.undefined,
+    client_lastip: String = null,
+    client_login_name: String = null,
+    client_login_password: String = null,
+    client_meta_data: String = null,
+    client_month_bytes_downloaded: js.UndefOr[Double] = js.undefined,
+    client_month_bytes_uploaded: js.UndefOr[Double] = js.undefined,
+    client_myteamspeak_avatar: String = null,
+    client_myteamspeak_id: String = null,
+    client_needed_serverquery_view_power: js.UndefOr[Double] = js.undefined,
+    client_nickname: String = null,
+    client_nickname_phonetic: String = null,
+    client_origin_server_id: js.UndefOr[Double] = js.undefined,
+    client_output_hardware: js.UndefOr[Double] = js.undefined,
+    client_output_muted: js.UndefOr[Double] = js.undefined,
+    client_outputonly_muted: js.UndefOr[Double] = js.undefined,
+    client_platform: String = null,
+    client_security_hash: String = null,
+    client_servergroups: js.Array[Double] = null,
+    client_signed_badges: String = null,
+    client_talk_power: js.UndefOr[Double] = js.undefined,
+    client_talk_request: js.UndefOr[Double] = js.undefined,
+    client_talk_request_msg: String = null,
+    client_total_bytes_downloaded: js.UndefOr[Double] = js.undefined,
+    client_total_bytes_uploaded: js.UndefOr[Double] = js.undefined,
+    client_totalconnections: js.UndefOr[Double] = js.undefined,
+    client_type: ClientType = null,
+    client_unique_identifier: String = null,
+    client_version: String = null,
+    client_version_sign: String = null,
+    clientftfid: js.UndefOr[Double] = js.undefined,
+    cluid: String = null,
+    connection_bandwidth_received_last_minute_total: js.UndefOr[Double] = js.undefined,
+    connection_bandwidth_received_last_second_total: js.UndefOr[Double] = js.undefined,
+    connection_bandwidth_sent_last_minute_total: js.UndefOr[Double] = js.undefined,
+    connection_bandwidth_sent_last_second_total: js.UndefOr[Double] = js.undefined,
+    connection_bytes_received_control: js.UndefOr[Double] = js.undefined,
+    connection_bytes_received_keepalive: js.UndefOr[Double] = js.undefined,
+    connection_bytes_received_speech: js.UndefOr[Double] = js.undefined,
+    connection_bytes_received_total: js.UndefOr[Double] = js.undefined,
+    connection_bytes_sent_control: js.UndefOr[Double] = js.undefined,
+    connection_bytes_sent_keepalive: js.UndefOr[Double] = js.undefined,
+    connection_bytes_sent_speech: js.UndefOr[Double] = js.undefined,
+    connection_bytes_sent_total: js.UndefOr[Double] = js.undefined,
+    connection_client_ip: String = null,
+    connection_connected_time: js.UndefOr[Double] = js.undefined,
+    connection_filetransfer_bandwidth_received: js.UndefOr[Double] = js.undefined,
+    connection_filetransfer_bandwidth_sent: js.UndefOr[Double] = js.undefined,
+    connection_filetransfer_bytes_received_total: js.UndefOr[Double] = js.undefined,
+    connection_filetransfer_bytes_sent_total: js.UndefOr[Double] = js.undefined,
+    connection_packetloss_total: js.UndefOr[Double] = js.undefined,
+    connection_packets_received_control: js.UndefOr[Double] = js.undefined,
+    connection_packets_received_keepalive: js.UndefOr[Double] = js.undefined,
+    connection_packets_received_speech: js.UndefOr[Double] = js.undefined,
+    connection_packets_received_total: js.UndefOr[Double] = js.undefined,
+    connection_packets_sent_control: js.UndefOr[Double] = js.undefined,
+    connection_packets_sent_keepalive: js.UndefOr[Double] = js.undefined,
+    connection_packets_sent_speech: js.UndefOr[Double] = js.undefined,
+    connection_packets_sent_total: js.UndefOr[Double] = js.undefined,
+    connection_ping: js.UndefOr[Double] = js.undefined,
+    count: js.UndefOr[Double] = js.undefined,
+    cpid: js.UndefOr[Double] = js.undefined,
+    created: js.UndefOr[Double] = js.undefined,
+    created_at: js.UndefOr[Double] = js.undefined,
+    ctid: js.UndefOr[Double] = js.undefined,
+    current_speed: js.UndefOr[Double] = js.undefined,
+    datetime: js.UndefOr[Double] = js.undefined,
+    desc: String = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    end: js.UndefOr[Double] = js.undefined,
+    enforcements: js.UndefOr[Double] = js.undefined,
+    expires_at: js.UndefOr[Double] = js.undefined,
+    extra_msg: String = null,
+    failed_permid: js.UndefOr[Double] = js.undefined,
+    fcldbid: js.UndefOr[Double] = js.undefined,
+    file_size: js.UndefOr[Double] = js.undefined,
+    flag_read: js.UndefOr[Double] = js.undefined,
+    fname: String = null,
+    ftkey: String = null,
+    hash: String = null,
+    host_timestamp_utc: js.UndefOr[Double] = js.undefined,
+    iconid: js.UndefOr[Double] = js.undefined,
+    id: js.UndefOr[Double] = js.undefined,
+    id1: js.UndefOr[Double] = js.undefined,
+    id2: js.UndefOr[Double] = js.undefined,
+    ident: String = null,
+    instance_uptime: js.UndefOr[Double] = js.undefined,
+    invokercldbid: js.UndefOr[Double] = js.undefined,
+    invokerid: js.UndefOr[Double] = js.undefined,
+    invokername: String = null,
+    invokeruid: String = null,
+    ip: String = null,
+    l: String = null,
+    last_pos: js.UndefOr[Double] = js.undefined,
+    lastnickname: String = null,
+    message: String = null,
+    msg: String = null,
+    msgid: js.UndefOr[Double] = js.undefined,
+    mytsid: String = null,
+    n: js.UndefOr[Double] = js.undefined,
+    n_member_addp: js.UndefOr[Double] = js.undefined,
+    n_member_removep: js.UndefOr[Double] = js.undefined,
+    n_modifyp: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    namemode: js.UndefOr[Double] = js.undefined,
+    nickname: String = null,
+    order: js.UndefOr[Double] = js.undefined,
+    p: js.UndefOr[Double] = js.undefined,
+    path: String = null,
+    permdesc: String = null,
+    permid: js.UndefOr[Double] = js.undefined,
+    permname: String = null,
+    permnegated: js.UndefOr[Double] = js.undefined,
+    permsid: String = null,
+    permskip: js.UndefOr[Double] = js.undefined,
+    permvalue: js.UndefOr[Double] = js.undefined,
+    pid: js.UndefOr[Double] = js.undefined,
+    platform: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    proto: js.UndefOr[Double] = js.undefined,
+    pw_clear: String = null,
+    reason: String = null,
+    reasonid: js.UndefOr[Double] = js.undefined,
+    reasonmsg: String = null,
+    runtime: js.UndefOr[Double] = js.undefined,
+    s: js.UndefOr[Double] = js.undefined,
+    salt: String = null,
+    savedb: js.UndefOr[Double] = js.undefined,
+    scope: ApiKeyScope = null,
+    seconds_empty: js.UndefOr[Double] = js.undefined,
+    sender: js.UndefOr[Double] = js.undefined,
+    server_id: js.UndefOr[Double] = js.undefined,
+    serverftfid: js.UndefOr[Double] = js.undefined,
+    serverinstance_database_version: js.UndefOr[Double] = js.undefined,
+    serverinstance_filetransfer_port: js.UndefOr[Double] = js.undefined,
+    serverinstance_guest_serverquery_group: js.UndefOr[Double] = js.undefined,
+    serverinstance_max_download_total_bandwidth: js.UndefOr[Double] = js.undefined,
+    serverinstance_max_upload_total_bandwidth: js.UndefOr[Double] = js.undefined,
+    serverinstance_pending_connections_per_ip: js.UndefOr[Double] = js.undefined,
+    serverinstance_permissions_version: js.UndefOr[Double] = js.undefined,
+    serverinstance_serverquery_flood_ban_time: js.UndefOr[Double] = js.undefined,
+    serverinstance_serverquery_flood_commands: js.UndefOr[Double] = js.undefined,
+    serverinstance_serverquery_flood_time: js.UndefOr[Double] = js.undefined,
+    serverinstance_serverquery_max_connections_per_ip: js.UndefOr[Double] = js.undefined,
+    serverinstance_template_channeladmin_group: js.UndefOr[Double] = js.undefined,
+    serverinstance_template_channeldefault_group: js.UndefOr[Double] = js.undefined,
+    serverinstance_template_serveradmin_group: js.UndefOr[Double] = js.undefined,
+    serverinstance_template_serverdefault_group: js.UndefOr[Double] = js.undefined,
+    sgid: js.UndefOr[Double] = js.undefined,
+    sid: js.UndefOr[Double] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    sizedone: js.UndefOr[Double] = js.undefined,
+    snapshot: String = null,
+    sortid: js.UndefOr[Double] = js.undefined,
+    start: js.UndefOr[Double] = js.undefined,
+    status: js.UndefOr[Double] = js.undefined,
+    subject: String = null,
+    t: js.UndefOr[Double] = js.undefined,
+    target: js.UndefOr[Double] = js.undefined,
+    targetmode: TextMessageTargetMode = null,
+    tcid: js.UndefOr[Double] = js.undefined,
+    tcldbid: js.UndefOr[Double] = js.undefined,
+    time_left: js.UndefOr[Double] = js.undefined,
+    timestamp: js.UndefOr[Double] = js.undefined,
+    tname: String = null,
+    token: String = null,
+    token1: String = null,
+    token2: String = null,
+    token_created: js.UndefOr[Double] = js.undefined,
+    token_customset: js.Array[TokenCustomSet] = null,
+    token_description: String = null,
+    token_id1: js.UndefOr[Double] = js.undefined,
+    token_id2: js.UndefOr[Double] = js.undefined,
+    token_type: TokenType = null,
+    tokencustomset: js.Array[TokenCustomSet] = null,
+    total_clients: js.UndefOr[Double] = js.undefined,
+    total_clients_family: js.UndefOr[Double] = js.undefined,
+    `type`: js.UndefOr[Double] = js.undefined,
+    uid: String = null,
+    v: js.UndefOr[Double] = js.undefined,
+    value: String = null,
+    version: String = null,
+    virtualserver_antiflood_points_needed_command_block: js.UndefOr[Double] = js.undefined,
+    virtualserver_antiflood_points_needed_ip_block: js.UndefOr[Double] = js.undefined,
+    virtualserver_antiflood_points_needed_plugin_block: js.UndefOr[Double] = js.undefined,
+    virtualserver_antiflood_points_tick_reduce: js.UndefOr[Double] = js.undefined,
+    virtualserver_ask_for_privilegekey: js.UndefOr[Double] = js.undefined,
+    virtualserver_autostart: js.UndefOr[Double] = js.undefined,
+    virtualserver_channel_temp_delete_delay_default: js.UndefOr[Double] = js.undefined,
+    virtualserver_channelsonline: js.UndefOr[Double] = js.undefined
+  ): QueryResponse = {
     val __obj = js.Dynamic.literal()
+    if (apikey != null) __obj.updateDynamic("apikey")(apikey.asInstanceOf[js.Any])
+    if (!js.isUndefined(average_speed)) __obj.updateDynamic("average_speed")(average_speed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(banid)) __obj.updateDynamic("banid")(banid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(build)) __obj.updateDynamic("build")(build.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cfid)) __obj.updateDynamic("cfid")(cfid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cgid)) __obj.updateDynamic("cgid")(cgid.get.asInstanceOf[js.Any])
+    if (channel_banner_gfx_url != null) __obj.updateDynamic("channel_banner_gfx_url")(channel_banner_gfx_url.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_banner_mode)) __obj.updateDynamic("channel_banner_mode")(channel_banner_mode.get.asInstanceOf[js.Any])
+    if (channel_codec != null) __obj.updateDynamic("channel_codec")(channel_codec.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_codec_is_unencrypted)) __obj.updateDynamic("channel_codec_is_unencrypted")(channel_codec_is_unencrypted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_codec_latency_factor)) __obj.updateDynamic("channel_codec_latency_factor")(channel_codec_latency_factor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_codec_quality)) __obj.updateDynamic("channel_codec_quality")(channel_codec_quality.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_delete_delay)) __obj.updateDynamic("channel_delete_delay")(channel_delete_delay.get.asInstanceOf[js.Any])
+    if (channel_description != null) __obj.updateDynamic("channel_description")(channel_description.asInstanceOf[js.Any])
+    if (channel_filepath != null) __obj.updateDynamic("channel_filepath")(channel_filepath.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_default)) __obj.updateDynamic("channel_flag_default")(channel_flag_default.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_maxclients_unlimited)) __obj.updateDynamic("channel_flag_maxclients_unlimited")(channel_flag_maxclients_unlimited.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_maxfamilyclients_inherited)) __obj.updateDynamic("channel_flag_maxfamilyclients_inherited")(channel_flag_maxfamilyclients_inherited.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_maxfamilyclients_unlimited)) __obj.updateDynamic("channel_flag_maxfamilyclients_unlimited")(channel_flag_maxfamilyclients_unlimited.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_password)) __obj.updateDynamic("channel_flag_password")(channel_flag_password.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_permanent)) __obj.updateDynamic("channel_flag_permanent")(channel_flag_permanent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_private)) __obj.updateDynamic("channel_flag_private")(channel_flag_private.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_semi_permanent)) __obj.updateDynamic("channel_flag_semi_permanent")(channel_flag_semi_permanent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_flag_temporary)) __obj.updateDynamic("channel_flag_temporary")(channel_flag_temporary.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_forced_silence)) __obj.updateDynamic("channel_forced_silence")(channel_forced_silence.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_icon_id)) __obj.updateDynamic("channel_icon_id")(channel_icon_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_maxclients)) __obj.updateDynamic("channel_maxclients")(channel_maxclients.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_maxfamilyclients)) __obj.updateDynamic("channel_maxfamilyclients")(channel_maxfamilyclients.get.asInstanceOf[js.Any])
+    if (channel_name != null) __obj.updateDynamic("channel_name")(channel_name.asInstanceOf[js.Any])
+    if (channel_name_phonetic != null) __obj.updateDynamic("channel_name_phonetic")(channel_name_phonetic.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_needed_subscribe_power)) __obj.updateDynamic("channel_needed_subscribe_power")(channel_needed_subscribe_power.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_needed_talk_power)) __obj.updateDynamic("channel_needed_talk_power")(channel_needed_talk_power.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(channel_order)) __obj.updateDynamic("channel_order")(channel_order.get.asInstanceOf[js.Any])
+    if (channel_password != null) __obj.updateDynamic("channel_password")(channel_password.asInstanceOf[js.Any])
+    if (channel_security_salt != null) __obj.updateDynamic("channel_security_salt")(channel_security_salt.asInstanceOf[js.Any])
+    if (channel_topic != null) __obj.updateDynamic("channel_topic")(channel_topic.asInstanceOf[js.Any])
+    if (!js.isUndefined(cid)) __obj.updateDynamic("cid")(cid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cldbid)) __obj.updateDynamic("cldbid")(cldbid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clid)) __obj.updateDynamic("clid")(clid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_away)) __obj.updateDynamic("client_away")(client_away.get.asInstanceOf[js.Any])
+    if (client_away_message != null) __obj.updateDynamic("client_away_message")(client_away_message.asInstanceOf[js.Any])
+    if (client_badges != null) __obj.updateDynamic("client_badges")(client_badges.asInstanceOf[js.Any])
+    if (client_base64HashClientUID != null) __obj.updateDynamic("client_base64HashClientUID")(client_base64HashClientUID.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_channel_group_id)) __obj.updateDynamic("client_channel_group_id")(client_channel_group_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_channel_group_inherited_channel_id)) __obj.updateDynamic("client_channel_group_inherited_channel_id")(client_channel_group_inherited_channel_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_channel_id)) __obj.updateDynamic("client_channel_id")(client_channel_id.get.asInstanceOf[js.Any])
+    if (client_country != null) __obj.updateDynamic("client_country")(client_country.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_created)) __obj.updateDynamic("client_created")(client_created.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_database_id)) __obj.updateDynamic("client_database_id")(client_database_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_default_channel)) __obj.updateDynamic("client_default_channel")(client_default_channel.get.asInstanceOf[js.Any])
+    if (client_default_token != null) __obj.updateDynamic("client_default_token")(client_default_token.asInstanceOf[js.Any])
+    if (client_description != null) __obj.updateDynamic("client_description")(client_description.asInstanceOf[js.Any])
+    if (client_flag_avatar != null) __obj.updateDynamic("client_flag_avatar")(client_flag_avatar.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_flag_talking)) __obj.updateDynamic("client_flag_talking")(client_flag_talking.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_icon_id)) __obj.updateDynamic("client_icon_id")(client_icon_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_id)) __obj.updateDynamic("client_id")(client_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_idle_time)) __obj.updateDynamic("client_idle_time")(client_idle_time.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_input_hardware)) __obj.updateDynamic("client_input_hardware")(client_input_hardware.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_input_muted)) __obj.updateDynamic("client_input_muted")(client_input_muted.get.asInstanceOf[js.Any])
+    if (client_integrations != null) __obj.updateDynamic("client_integrations")(client_integrations.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_is_channel_commander)) __obj.updateDynamic("client_is_channel_commander")(client_is_channel_commander.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_is_priority_speaker)) __obj.updateDynamic("client_is_priority_speaker")(client_is_priority_speaker.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_is_recording)) __obj.updateDynamic("client_is_recording")(client_is_recording.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_is_talker)) __obj.updateDynamic("client_is_talker")(client_is_talker.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_lastconnected)) __obj.updateDynamic("client_lastconnected")(client_lastconnected.get.asInstanceOf[js.Any])
+    if (client_lastip != null) __obj.updateDynamic("client_lastip")(client_lastip.asInstanceOf[js.Any])
+    if (client_login_name != null) __obj.updateDynamic("client_login_name")(client_login_name.asInstanceOf[js.Any])
+    if (client_login_password != null) __obj.updateDynamic("client_login_password")(client_login_password.asInstanceOf[js.Any])
+    if (client_meta_data != null) __obj.updateDynamic("client_meta_data")(client_meta_data.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_month_bytes_downloaded)) __obj.updateDynamic("client_month_bytes_downloaded")(client_month_bytes_downloaded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_month_bytes_uploaded)) __obj.updateDynamic("client_month_bytes_uploaded")(client_month_bytes_uploaded.get.asInstanceOf[js.Any])
+    if (client_myteamspeak_avatar != null) __obj.updateDynamic("client_myteamspeak_avatar")(client_myteamspeak_avatar.asInstanceOf[js.Any])
+    if (client_myteamspeak_id != null) __obj.updateDynamic("client_myteamspeak_id")(client_myteamspeak_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_needed_serverquery_view_power)) __obj.updateDynamic("client_needed_serverquery_view_power")(client_needed_serverquery_view_power.get.asInstanceOf[js.Any])
+    if (client_nickname != null) __obj.updateDynamic("client_nickname")(client_nickname.asInstanceOf[js.Any])
+    if (client_nickname_phonetic != null) __obj.updateDynamic("client_nickname_phonetic")(client_nickname_phonetic.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_origin_server_id)) __obj.updateDynamic("client_origin_server_id")(client_origin_server_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_output_hardware)) __obj.updateDynamic("client_output_hardware")(client_output_hardware.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_output_muted)) __obj.updateDynamic("client_output_muted")(client_output_muted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_outputonly_muted)) __obj.updateDynamic("client_outputonly_muted")(client_outputonly_muted.get.asInstanceOf[js.Any])
+    if (client_platform != null) __obj.updateDynamic("client_platform")(client_platform.asInstanceOf[js.Any])
+    if (client_security_hash != null) __obj.updateDynamic("client_security_hash")(client_security_hash.asInstanceOf[js.Any])
+    if (client_servergroups != null) __obj.updateDynamic("client_servergroups")(client_servergroups.asInstanceOf[js.Any])
+    if (client_signed_badges != null) __obj.updateDynamic("client_signed_badges")(client_signed_badges.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_talk_power)) __obj.updateDynamic("client_talk_power")(client_talk_power.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_talk_request)) __obj.updateDynamic("client_talk_request")(client_talk_request.get.asInstanceOf[js.Any])
+    if (client_talk_request_msg != null) __obj.updateDynamic("client_talk_request_msg")(client_talk_request_msg.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_total_bytes_downloaded)) __obj.updateDynamic("client_total_bytes_downloaded")(client_total_bytes_downloaded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_total_bytes_uploaded)) __obj.updateDynamic("client_total_bytes_uploaded")(client_total_bytes_uploaded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(client_totalconnections)) __obj.updateDynamic("client_totalconnections")(client_totalconnections.get.asInstanceOf[js.Any])
+    if (client_type != null) __obj.updateDynamic("client_type")(client_type.asInstanceOf[js.Any])
+    if (client_unique_identifier != null) __obj.updateDynamic("client_unique_identifier")(client_unique_identifier.asInstanceOf[js.Any])
+    if (client_version != null) __obj.updateDynamic("client_version")(client_version.asInstanceOf[js.Any])
+    if (client_version_sign != null) __obj.updateDynamic("client_version_sign")(client_version_sign.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientftfid)) __obj.updateDynamic("clientftfid")(clientftfid.get.asInstanceOf[js.Any])
+    if (cluid != null) __obj.updateDynamic("cluid")(cluid.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bandwidth_received_last_minute_total)) __obj.updateDynamic("connection_bandwidth_received_last_minute_total")(connection_bandwidth_received_last_minute_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bandwidth_received_last_second_total)) __obj.updateDynamic("connection_bandwidth_received_last_second_total")(connection_bandwidth_received_last_second_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bandwidth_sent_last_minute_total)) __obj.updateDynamic("connection_bandwidth_sent_last_minute_total")(connection_bandwidth_sent_last_minute_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bandwidth_sent_last_second_total)) __obj.updateDynamic("connection_bandwidth_sent_last_second_total")(connection_bandwidth_sent_last_second_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bytes_received_control)) __obj.updateDynamic("connection_bytes_received_control")(connection_bytes_received_control.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bytes_received_keepalive)) __obj.updateDynamic("connection_bytes_received_keepalive")(connection_bytes_received_keepalive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bytes_received_speech)) __obj.updateDynamic("connection_bytes_received_speech")(connection_bytes_received_speech.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bytes_received_total)) __obj.updateDynamic("connection_bytes_received_total")(connection_bytes_received_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bytes_sent_control)) __obj.updateDynamic("connection_bytes_sent_control")(connection_bytes_sent_control.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bytes_sent_keepalive)) __obj.updateDynamic("connection_bytes_sent_keepalive")(connection_bytes_sent_keepalive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bytes_sent_speech)) __obj.updateDynamic("connection_bytes_sent_speech")(connection_bytes_sent_speech.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_bytes_sent_total)) __obj.updateDynamic("connection_bytes_sent_total")(connection_bytes_sent_total.get.asInstanceOf[js.Any])
+    if (connection_client_ip != null) __obj.updateDynamic("connection_client_ip")(connection_client_ip.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_connected_time)) __obj.updateDynamic("connection_connected_time")(connection_connected_time.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_filetransfer_bandwidth_received)) __obj.updateDynamic("connection_filetransfer_bandwidth_received")(connection_filetransfer_bandwidth_received.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_filetransfer_bandwidth_sent)) __obj.updateDynamic("connection_filetransfer_bandwidth_sent")(connection_filetransfer_bandwidth_sent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_filetransfer_bytes_received_total)) __obj.updateDynamic("connection_filetransfer_bytes_received_total")(connection_filetransfer_bytes_received_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_filetransfer_bytes_sent_total)) __obj.updateDynamic("connection_filetransfer_bytes_sent_total")(connection_filetransfer_bytes_sent_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packetloss_total)) __obj.updateDynamic("connection_packetloss_total")(connection_packetloss_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packets_received_control)) __obj.updateDynamic("connection_packets_received_control")(connection_packets_received_control.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packets_received_keepalive)) __obj.updateDynamic("connection_packets_received_keepalive")(connection_packets_received_keepalive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packets_received_speech)) __obj.updateDynamic("connection_packets_received_speech")(connection_packets_received_speech.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packets_received_total)) __obj.updateDynamic("connection_packets_received_total")(connection_packets_received_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packets_sent_control)) __obj.updateDynamic("connection_packets_sent_control")(connection_packets_sent_control.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packets_sent_keepalive)) __obj.updateDynamic("connection_packets_sent_keepalive")(connection_packets_sent_keepalive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packets_sent_speech)) __obj.updateDynamic("connection_packets_sent_speech")(connection_packets_sent_speech.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_packets_sent_total)) __obj.updateDynamic("connection_packets_sent_total")(connection_packets_sent_total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_ping)) __obj.updateDynamic("connection_ping")(connection_ping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cpid)) __obj.updateDynamic("cpid")(cpid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(created)) __obj.updateDynamic("created")(created.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(created_at)) __obj.updateDynamic("created_at")(created_at.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ctid)) __obj.updateDynamic("ctid")(ctid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(current_speed)) __obj.updateDynamic("current_speed")(current_speed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(datetime)) __obj.updateDynamic("datetime")(datetime.get.asInstanceOf[js.Any])
+    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(end)) __obj.updateDynamic("end")(end.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enforcements)) __obj.updateDynamic("enforcements")(enforcements.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expires_at)) __obj.updateDynamic("expires_at")(expires_at.get.asInstanceOf[js.Any])
+    if (extra_msg != null) __obj.updateDynamic("extra_msg")(extra_msg.asInstanceOf[js.Any])
+    if (!js.isUndefined(failed_permid)) __obj.updateDynamic("failed_permid")(failed_permid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fcldbid)) __obj.updateDynamic("fcldbid")(fcldbid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(file_size)) __obj.updateDynamic("file_size")(file_size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flag_read)) __obj.updateDynamic("flag_read")(flag_read.get.asInstanceOf[js.Any])
+    if (fname != null) __obj.updateDynamic("fname")(fname.asInstanceOf[js.Any])
+    if (ftkey != null) __obj.updateDynamic("ftkey")(ftkey.asInstanceOf[js.Any])
+    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
+    if (!js.isUndefined(host_timestamp_utc)) __obj.updateDynamic("host_timestamp_utc")(host_timestamp_utc.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconid)) __obj.updateDynamic("iconid")(iconid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id1)) __obj.updateDynamic("id1")(id1.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id2)) __obj.updateDynamic("id2")(id2.get.asInstanceOf[js.Any])
+    if (ident != null) __obj.updateDynamic("ident")(ident.asInstanceOf[js.Any])
+    if (!js.isUndefined(instance_uptime)) __obj.updateDynamic("instance_uptime")(instance_uptime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(invokercldbid)) __obj.updateDynamic("invokercldbid")(invokercldbid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(invokerid)) __obj.updateDynamic("invokerid")(invokerid.get.asInstanceOf[js.Any])
+    if (invokername != null) __obj.updateDynamic("invokername")(invokername.asInstanceOf[js.Any])
+    if (invokeruid != null) __obj.updateDynamic("invokeruid")(invokeruid.asInstanceOf[js.Any])
+    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
+    if (l != null) __obj.updateDynamic("l")(l.asInstanceOf[js.Any])
+    if (!js.isUndefined(last_pos)) __obj.updateDynamic("last_pos")(last_pos.get.asInstanceOf[js.Any])
+    if (lastnickname != null) __obj.updateDynamic("lastnickname")(lastnickname.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (msg != null) __obj.updateDynamic("msg")(msg.asInstanceOf[js.Any])
+    if (!js.isUndefined(msgid)) __obj.updateDynamic("msgid")(msgid.get.asInstanceOf[js.Any])
+    if (mytsid != null) __obj.updateDynamic("mytsid")(mytsid.asInstanceOf[js.Any])
+    if (!js.isUndefined(n)) __obj.updateDynamic("n")(n.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(n_member_addp)) __obj.updateDynamic("n_member_addp")(n_member_addp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(n_member_removep)) __obj.updateDynamic("n_member_removep")(n_member_removep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(n_modifyp)) __obj.updateDynamic("n_modifyp")(n_modifyp.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(namemode)) __obj.updateDynamic("namemode")(namemode.get.asInstanceOf[js.Any])
+    if (nickname != null) __obj.updateDynamic("nickname")(nickname.asInstanceOf[js.Any])
+    if (!js.isUndefined(order)) __obj.updateDynamic("order")(order.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(p)) __obj.updateDynamic("p")(p.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (permdesc != null) __obj.updateDynamic("permdesc")(permdesc.asInstanceOf[js.Any])
+    if (!js.isUndefined(permid)) __obj.updateDynamic("permid")(permid.get.asInstanceOf[js.Any])
+    if (permname != null) __obj.updateDynamic("permname")(permname.asInstanceOf[js.Any])
+    if (!js.isUndefined(permnegated)) __obj.updateDynamic("permnegated")(permnegated.get.asInstanceOf[js.Any])
+    if (permsid != null) __obj.updateDynamic("permsid")(permsid.asInstanceOf[js.Any])
+    if (!js.isUndefined(permskip)) __obj.updateDynamic("permskip")(permskip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(permvalue)) __obj.updateDynamic("permvalue")(permvalue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pid)) __obj.updateDynamic("pid")(pid.get.asInstanceOf[js.Any])
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(proto)) __obj.updateDynamic("proto")(proto.get.asInstanceOf[js.Any])
+    if (pw_clear != null) __obj.updateDynamic("pw_clear")(pw_clear.asInstanceOf[js.Any])
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
+    if (!js.isUndefined(reasonid)) __obj.updateDynamic("reasonid")(reasonid.get.asInstanceOf[js.Any])
+    if (reasonmsg != null) __obj.updateDynamic("reasonmsg")(reasonmsg.asInstanceOf[js.Any])
+    if (!js.isUndefined(runtime)) __obj.updateDynamic("runtime")(runtime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(s)) __obj.updateDynamic("s")(s.get.asInstanceOf[js.Any])
+    if (salt != null) __obj.updateDynamic("salt")(salt.asInstanceOf[js.Any])
+    if (!js.isUndefined(savedb)) __obj.updateDynamic("savedb")(savedb.get.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (!js.isUndefined(seconds_empty)) __obj.updateDynamic("seconds_empty")(seconds_empty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sender)) __obj.updateDynamic("sender")(sender.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(server_id)) __obj.updateDynamic("server_id")(server_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverftfid)) __obj.updateDynamic("serverftfid")(serverftfid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_database_version)) __obj.updateDynamic("serverinstance_database_version")(serverinstance_database_version.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_filetransfer_port)) __obj.updateDynamic("serverinstance_filetransfer_port")(serverinstance_filetransfer_port.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_guest_serverquery_group)) __obj.updateDynamic("serverinstance_guest_serverquery_group")(serverinstance_guest_serverquery_group.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_max_download_total_bandwidth)) __obj.updateDynamic("serverinstance_max_download_total_bandwidth")(serverinstance_max_download_total_bandwidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_max_upload_total_bandwidth)) __obj.updateDynamic("serverinstance_max_upload_total_bandwidth")(serverinstance_max_upload_total_bandwidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_pending_connections_per_ip)) __obj.updateDynamic("serverinstance_pending_connections_per_ip")(serverinstance_pending_connections_per_ip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_permissions_version)) __obj.updateDynamic("serverinstance_permissions_version")(serverinstance_permissions_version.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_serverquery_flood_ban_time)) __obj.updateDynamic("serverinstance_serverquery_flood_ban_time")(serverinstance_serverquery_flood_ban_time.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_serverquery_flood_commands)) __obj.updateDynamic("serverinstance_serverquery_flood_commands")(serverinstance_serverquery_flood_commands.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_serverquery_flood_time)) __obj.updateDynamic("serverinstance_serverquery_flood_time")(serverinstance_serverquery_flood_time.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_serverquery_max_connections_per_ip)) __obj.updateDynamic("serverinstance_serverquery_max_connections_per_ip")(serverinstance_serverquery_max_connections_per_ip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_template_channeladmin_group)) __obj.updateDynamic("serverinstance_template_channeladmin_group")(serverinstance_template_channeladmin_group.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_template_channeldefault_group)) __obj.updateDynamic("serverinstance_template_channeldefault_group")(serverinstance_template_channeldefault_group.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_template_serveradmin_group)) __obj.updateDynamic("serverinstance_template_serveradmin_group")(serverinstance_template_serveradmin_group.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverinstance_template_serverdefault_group)) __obj.updateDynamic("serverinstance_template_serverdefault_group")(serverinstance_template_serverdefault_group.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sgid)) __obj.updateDynamic("sgid")(sgid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sid)) __obj.updateDynamic("sid")(sid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizedone)) __obj.updateDynamic("sizedone")(sizedone.get.asInstanceOf[js.Any])
+    if (snapshot != null) __obj.updateDynamic("snapshot")(snapshot.asInstanceOf[js.Any])
+    if (!js.isUndefined(sortid)) __obj.updateDynamic("sortid")(sortid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(start)) __obj.updateDynamic("start")(start.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.get.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (!js.isUndefined(t)) __obj.updateDynamic("t")(t.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(target)) __obj.updateDynamic("target")(target.get.asInstanceOf[js.Any])
+    if (targetmode != null) __obj.updateDynamic("targetmode")(targetmode.asInstanceOf[js.Any])
+    if (!js.isUndefined(tcid)) __obj.updateDynamic("tcid")(tcid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tcldbid)) __obj.updateDynamic("tcldbid")(tcldbid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(time_left)) __obj.updateDynamic("time_left")(time_left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timestamp)) __obj.updateDynamic("timestamp")(timestamp.get.asInstanceOf[js.Any])
+    if (tname != null) __obj.updateDynamic("tname")(tname.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
+    if (token1 != null) __obj.updateDynamic("token1")(token1.asInstanceOf[js.Any])
+    if (token2 != null) __obj.updateDynamic("token2")(token2.asInstanceOf[js.Any])
+    if (!js.isUndefined(token_created)) __obj.updateDynamic("token_created")(token_created.get.asInstanceOf[js.Any])
+    if (token_customset != null) __obj.updateDynamic("token_customset")(token_customset.asInstanceOf[js.Any])
+    if (token_description != null) __obj.updateDynamic("token_description")(token_description.asInstanceOf[js.Any])
+    if (!js.isUndefined(token_id1)) __obj.updateDynamic("token_id1")(token_id1.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(token_id2)) __obj.updateDynamic("token_id2")(token_id2.get.asInstanceOf[js.Any])
+    if (token_type != null) __obj.updateDynamic("token_type")(token_type.asInstanceOf[js.Any])
+    if (tokencustomset != null) __obj.updateDynamic("tokencustomset")(tokencustomset.asInstanceOf[js.Any])
+    if (!js.isUndefined(total_clients)) __obj.updateDynamic("total_clients")(total_clients.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(total_clients_family)) __obj.updateDynamic("total_clients_family")(total_clients_family.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.get.asInstanceOf[js.Any])
+    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
+    if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualserver_antiflood_points_needed_command_block)) __obj.updateDynamic("virtualserver_antiflood_points_needed_command_block")(virtualserver_antiflood_points_needed_command_block.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualserver_antiflood_points_needed_ip_block)) __obj.updateDynamic("virtualserver_antiflood_points_needed_ip_block")(virtualserver_antiflood_points_needed_ip_block.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualserver_antiflood_points_needed_plugin_block)) __obj.updateDynamic("virtualserver_antiflood_points_needed_plugin_block")(virtualserver_antiflood_points_needed_plugin_block.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualserver_antiflood_points_tick_reduce)) __obj.updateDynamic("virtualserver_antiflood_points_tick_reduce")(virtualserver_antiflood_points_tick_reduce.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualserver_ask_for_privilegekey)) __obj.updateDynamic("virtualserver_ask_for_privilegekey")(virtualserver_ask_for_privilegekey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualserver_autostart)) __obj.updateDynamic("virtualserver_autostart")(virtualserver_autostart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualserver_channel_temp_delete_delay_default)) __obj.updateDynamic("virtualserver_channel_temp_delete_delay_default")(virtualserver_channel_temp_delete_delay_default.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualserver_channelsonline)) __obj.updateDynamic("virtualserver_channelsonline")(virtualserver_channelsonline.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryResponse]
   }
-  @scala.inline
-  implicit class QueryResponseOps[Self <: QueryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApikey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apikey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApikey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apikey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAverage_speed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("average_speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAverage_speed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("average_speed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBanid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBanid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuild(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCfid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cfid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCfid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cfid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCgid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cgid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCgid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cgid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_banner_gfx_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_banner_gfx_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_banner_gfx_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_banner_gfx_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_banner_mode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_banner_mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_banner_mode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_banner_mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_codec(value: Codec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_codec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_codec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_codec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_codec_is_unencrypted(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_codec_is_unencrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_codec_is_unencrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_codec_is_unencrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_codec_latency_factor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_codec_latency_factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_codec_latency_factor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_codec_latency_factor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_codec_quality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_codec_quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_codec_quality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_codec_quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_delete_delay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_delete_delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_delete_delay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_delete_delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_description(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_filepath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_filepath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_filepath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_filepath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_default(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_default: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_maxclients_unlimited(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_maxclients_unlimited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_maxclients_unlimited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_maxclients_unlimited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_maxfamilyclients_inherited(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_maxfamilyclients_inherited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_maxfamilyclients_inherited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_maxfamilyclients_inherited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_maxfamilyclients_unlimited(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_maxfamilyclients_unlimited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_maxfamilyclients_unlimited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_maxfamilyclients_unlimited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_password(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_password: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_permanent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_permanent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_permanent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_permanent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_private(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_private")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_private: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_private")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_semi_permanent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_semi_permanent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_semi_permanent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_semi_permanent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_flag_temporary(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_temporary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_flag_temporary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_flag_temporary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_forced_silence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_forced_silence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_forced_silence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_forced_silence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_icon_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_icon_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_icon_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_icon_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_maxclients(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_maxclients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_maxclients: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_maxclients")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_maxfamilyclients(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_maxfamilyclients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_maxfamilyclients: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_maxfamilyclients")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_name_phonetic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_name_phonetic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_name_phonetic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_name_phonetic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_needed_subscribe_power(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_needed_subscribe_power")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_needed_subscribe_power: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_needed_subscribe_power")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_needed_talk_power(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_needed_talk_power")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_needed_talk_power: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_needed_talk_power")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_order(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_order: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_password(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_password: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_security_salt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_security_salt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_security_salt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_security_salt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel_topic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel_topic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_topic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCldbid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cldbid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCldbid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cldbid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_away(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_away")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_away: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_away")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_away_message(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_away_message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_away_message: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_away_message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_badges(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_badges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_badges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_badges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_base64HashClientUID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_base64HashClientUID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_base64HashClientUID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_base64HashClientUID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_channel_group_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_channel_group_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_channel_group_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_channel_group_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_channel_group_inherited_channel_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_channel_group_inherited_channel_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_channel_group_inherited_channel_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_channel_group_inherited_channel_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_channel_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_channel_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_channel_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_channel_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_country(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_country: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_created(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_created: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_database_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_database_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_database_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_database_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_default_channel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_default_channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_default_channel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_default_channel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_default_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_default_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_default_token: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_default_token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_description(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_flag_avatar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_flag_avatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_flag_avatar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_flag_avatar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_flag_talking(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_flag_talking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_flag_talking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_flag_talking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_icon_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_icon_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_icon_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_icon_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_idle_time(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_idle_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_idle_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_idle_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_input_hardware(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_input_hardware")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_input_hardware: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_input_hardware")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_input_muted(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_input_muted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_input_muted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_input_muted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_integrations(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_integrations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_integrations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_integrations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_is_channel_commander(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_is_channel_commander")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_is_channel_commander: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_is_channel_commander")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_is_priority_speaker(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_is_priority_speaker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_is_priority_speaker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_is_priority_speaker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_is_recording(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_is_recording")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_is_recording: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_is_recording")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_is_talker(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_is_talker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_is_talker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_is_talker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_lastconnected(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_lastconnected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_lastconnected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_lastconnected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_lastip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_lastip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_lastip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_lastip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_login_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_login_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_login_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_login_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_login_password(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_login_password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_login_password: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_login_password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_meta_data(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_meta_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_meta_data: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_meta_data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_month_bytes_downloaded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_month_bytes_downloaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_month_bytes_downloaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_month_bytes_downloaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_month_bytes_uploaded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_month_bytes_uploaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_month_bytes_uploaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_month_bytes_uploaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_myteamspeak_avatar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_myteamspeak_avatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_myteamspeak_avatar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_myteamspeak_avatar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_myteamspeak_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_myteamspeak_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_myteamspeak_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_myteamspeak_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_needed_serverquery_view_power(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_needed_serverquery_view_power")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_needed_serverquery_view_power: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_needed_serverquery_view_power")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_nickname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_nickname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_nickname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_nickname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_nickname_phonetic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_nickname_phonetic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_nickname_phonetic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_nickname_phonetic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_origin_server_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_origin_server_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_origin_server_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_origin_server_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_output_hardware(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_output_hardware")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_output_hardware: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_output_hardware")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_output_muted(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_output_muted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_output_muted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_output_muted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_outputonly_muted(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_outputonly_muted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_outputonly_muted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_outputonly_muted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_platform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_platform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_security_hash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_security_hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_security_hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_security_hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_servergroups(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_servergroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_servergroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_servergroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_signed_badges(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_signed_badges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_signed_badges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_signed_badges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_talk_power(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_talk_power")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_talk_power: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_talk_power")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_talk_request(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_talk_request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_talk_request: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_talk_request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_talk_request_msg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_talk_request_msg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_talk_request_msg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_talk_request_msg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_total_bytes_downloaded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_total_bytes_downloaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_total_bytes_downloaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_total_bytes_downloaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_total_bytes_uploaded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_total_bytes_uploaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_total_bytes_uploaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_total_bytes_uploaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_totalconnections(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_totalconnections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_totalconnections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_totalconnections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_type(value: ClientType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_unique_identifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_unique_identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_unique_identifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_unique_identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_version(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient_version_sign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_version_sign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient_version_sign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_version_sign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientftfid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientftfid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientftfid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientftfid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCluid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCluid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bandwidth_received_last_minute_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bandwidth_received_last_minute_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bandwidth_received_last_minute_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bandwidth_received_last_minute_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bandwidth_received_last_second_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bandwidth_received_last_second_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bandwidth_received_last_second_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bandwidth_received_last_second_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bandwidth_sent_last_minute_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bandwidth_sent_last_minute_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bandwidth_sent_last_minute_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bandwidth_sent_last_minute_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bandwidth_sent_last_second_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bandwidth_sent_last_second_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bandwidth_sent_last_second_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bandwidth_sent_last_second_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bytes_received_control(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_received_control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bytes_received_control: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_received_control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bytes_received_keepalive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_received_keepalive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bytes_received_keepalive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_received_keepalive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bytes_received_speech(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_received_speech")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bytes_received_speech: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_received_speech")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bytes_received_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_received_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bytes_received_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_received_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bytes_sent_control(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_sent_control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bytes_sent_control: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_sent_control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bytes_sent_keepalive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_sent_keepalive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bytes_sent_keepalive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_sent_keepalive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bytes_sent_speech(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_sent_speech")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bytes_sent_speech: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_sent_speech")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_bytes_sent_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_sent_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_bytes_sent_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_bytes_sent_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_client_ip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_client_ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_client_ip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_client_ip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_connected_time(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_connected_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_connected_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_connected_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_filetransfer_bandwidth_received(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_filetransfer_bandwidth_received")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_filetransfer_bandwidth_received: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_filetransfer_bandwidth_received")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_filetransfer_bandwidth_sent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_filetransfer_bandwidth_sent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_filetransfer_bandwidth_sent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_filetransfer_bandwidth_sent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_filetransfer_bytes_received_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_filetransfer_bytes_received_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_filetransfer_bytes_received_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_filetransfer_bytes_received_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_filetransfer_bytes_sent_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_filetransfer_bytes_sent_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_filetransfer_bytes_sent_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_filetransfer_bytes_sent_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packetloss_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packetloss_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packetloss_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packetloss_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packets_received_control(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_received_control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packets_received_control: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_received_control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packets_received_keepalive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_received_keepalive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packets_received_keepalive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_received_keepalive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packets_received_speech(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_received_speech")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packets_received_speech: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_received_speech")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packets_received_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_received_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packets_received_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_received_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packets_sent_control(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_sent_control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packets_sent_control: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_sent_control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packets_sent_keepalive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_sent_keepalive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packets_sent_keepalive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_sent_keepalive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packets_sent_speech(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_sent_speech")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packets_sent_speech: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_sent_speech")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_packets_sent_total(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_sent_total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_packets_sent_total: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_packets_sent_total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_ping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_ping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_ping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_ping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCtid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCtid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrent_speed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current_speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrent_speed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current_speed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatetime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datetime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatetime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datetime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforcements(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforcements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpires_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpires_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra_msg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_msg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra_msg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_msg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailed_permid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failed_permid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailed_permid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failed_permid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFcldbid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fcldbid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFcldbid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fcldbid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFile_size(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFile_size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlag_read(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flag_read")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlag_read: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flag_read")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFtkey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ftkey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFtkey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ftkey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost_timestamp_utc(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host_timestamp_utc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost_timestamp_utc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host_timestamp_utc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId1(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ident")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ident")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstance_uptime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance_uptime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstance_uptime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance_uptime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvokercldbid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokercldbid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvokercldbid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokercldbid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvokerid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokerid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvokerid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokerid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvokername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokername")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvokername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokername")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvokeruid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokeruid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvokeruid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokeruid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLast_pos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_pos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLast_pos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_pos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastnickname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastnickname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastnickname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastnickname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsgid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msgid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsgid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msgid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMytsid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mytsid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMytsid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mytsid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withN(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withN_member_addp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n_member_addp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutN_member_addp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n_member_addp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withN_member_removep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n_member_removep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutN_member_removep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n_member_removep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withN_modifyp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n_modifyp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutN_modifyp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n_modifyp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamemode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamemode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namemode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNickname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNickname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermdesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permdesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermdesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permdesc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermnegated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permnegated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermnegated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permnegated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermsid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permsid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermsid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permsid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermskip(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permskip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermskip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permskip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermvalue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permvalue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermvalue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permvalue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProto(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPw_clear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pw_clear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPw_clear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pw_clear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonmsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonmsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonmsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonmsg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSalt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSalt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSavedb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savedb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSavedb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savedb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: ApiKeyScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeconds_empty(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seconds_empty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeconds_empty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seconds_empty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSender(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerftfid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverftfid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerftfid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverftfid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_database_version(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_database_version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_database_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_database_version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_filetransfer_port(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_filetransfer_port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_filetransfer_port: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_filetransfer_port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_guest_serverquery_group(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_guest_serverquery_group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_guest_serverquery_group: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_guest_serverquery_group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_max_download_total_bandwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_max_download_total_bandwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_max_download_total_bandwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_max_download_total_bandwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_max_upload_total_bandwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_max_upload_total_bandwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_max_upload_total_bandwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_max_upload_total_bandwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_pending_connections_per_ip(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_pending_connections_per_ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_pending_connections_per_ip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_pending_connections_per_ip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_permissions_version(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_permissions_version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_permissions_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_permissions_version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_serverquery_flood_ban_time(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_serverquery_flood_ban_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_serverquery_flood_ban_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_serverquery_flood_ban_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_serverquery_flood_commands(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_serverquery_flood_commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_serverquery_flood_commands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_serverquery_flood_commands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_serverquery_flood_time(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_serverquery_flood_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_serverquery_flood_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_serverquery_flood_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_serverquery_max_connections_per_ip(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_serverquery_max_connections_per_ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_serverquery_max_connections_per_ip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_serverquery_max_connections_per_ip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_template_channeladmin_group(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_template_channeladmin_group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_template_channeladmin_group: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_template_channeladmin_group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_template_channeldefault_group(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_template_channeldefault_group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_template_channeldefault_group: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_template_channeldefault_group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_template_serveradmin_group(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_template_serveradmin_group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_template_serveradmin_group: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_template_serveradmin_group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerinstance_template_serverdefault_group(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_template_serverdefault_group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerinstance_template_serverdefault_group: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverinstance_template_serverdefault_group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSgid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sgid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSgid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sgid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizedone(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizedone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizedone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizedone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withT(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetmode(value: TextMessageTargetMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetmode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetmode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTcid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTcid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTcldbid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcldbid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTcldbid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcldbid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime_left(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time_left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime_left: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time_left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_created(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_created: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_customset(value: js.Array[TokenCustomSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_customset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_customset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_customset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_description(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_id1(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_id1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_id1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_id1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_id2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_id2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_id2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_id2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_type(value: TokenType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokencustomset(value: js.Array[TokenCustomSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokencustomset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokencustomset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokencustomset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal_clients(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_clients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal_clients: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_clients")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal_clients_family(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_clients_family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal_clients_family: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_clients_family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withV(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutV: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualserver_antiflood_points_needed_command_block(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_antiflood_points_needed_command_block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualserver_antiflood_points_needed_command_block: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_antiflood_points_needed_command_block")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualserver_antiflood_points_needed_ip_block(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_antiflood_points_needed_ip_block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualserver_antiflood_points_needed_ip_block: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_antiflood_points_needed_ip_block")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualserver_antiflood_points_needed_plugin_block(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_antiflood_points_needed_plugin_block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualserver_antiflood_points_needed_plugin_block: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_antiflood_points_needed_plugin_block")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualserver_antiflood_points_tick_reduce(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_antiflood_points_tick_reduce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualserver_antiflood_points_tick_reduce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_antiflood_points_tick_reduce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualserver_ask_for_privilegekey(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_ask_for_privilegekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualserver_ask_for_privilegekey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_ask_for_privilegekey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualserver_autostart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_autostart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualserver_autostart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_autostart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualserver_channel_temp_delete_delay_default(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_channel_temp_delete_delay_default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualserver_channel_temp_delete_delay_default: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_channel_temp_delete_delay_default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualserver_channelsonline(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_channelsonline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualserver_channelsonline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualserver_channelsonline")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

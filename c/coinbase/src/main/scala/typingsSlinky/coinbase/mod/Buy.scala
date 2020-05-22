@@ -53,6 +53,11 @@ class Buy () extends Resource {
     */
   var requires_completion_step: Boolean = js.native
   /**
+    * Resource type
+    */
+  /* CompleteClass */
+  override var resource: ResourceType = js.native
+  /**
     * Constant "buy"
     */
   @JSName("resource")

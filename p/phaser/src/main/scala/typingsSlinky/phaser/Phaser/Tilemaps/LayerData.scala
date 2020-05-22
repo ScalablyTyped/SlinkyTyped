@@ -9,88 +9,87 @@ import scala.scalajs.js.annotation._
   * etc. into this format. Tilemap, StaticTilemapLayer and DynamicTilemapLayer have a reference
   * to this data and use it to look up and perform operations on tiles.
   */
-@js.native
 trait LayerData extends js.Object {
   /**
-    * [description]
+    * The alpha value of the layer.
     */
-  var alpha: Double = js.native
+  var alpha: Double
   /**
-    * [description]
+    * The base tile height.
     */
-  var baseTileHeight: Double = js.native
+  var baseTileHeight: Double
   /**
-    * [description]
+    * The base tile width.
     */
-  var baseTileWidth: Double = js.native
+  var baseTileWidth: Double
   /**
-    * [description]
+    * An array of physics bodies.
     */
-  var bodies: js.Array[_] = js.native
+  var bodies: js.Array[_]
   /**
-    * [description]
+    * An array of callbacks.
     */
-  var callbacks: js.Array[_] = js.native
+  var callbacks: js.Array[_]
   /**
-    * [description]
+    * Tile Collision ID index map.
     */
-  var collideIndexes: js.Array[_] = js.native
+  var collideIndexes: js.Array[_]
   /**
-    * An array of the tile indexes
+    * An array of the tile data indexes.
     */
-  var data: js.Array[js.Array[Tile]] = js.native
+  var data: js.Array[js.Array[Tile]]
   /**
-    * The height in tiles of the layer.
+    * The height of the layer in tiles.
     */
-  var height: Double = js.native
+  var height: Double
   /**
     * The height in pixels of the entire layer.
     */
-  var heightInPixels: Double = js.native
+  var heightInPixels: Double
   /**
-    * [description]
+    * Tile ID index map.
     */
-  var indexes: js.Array[_] = js.native
+  var indexes: js.Array[_]
   /**
     * The name of the layer, if specified in Tiled.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Layer specific properties (can be specified in Tiled)
     */
-  var properties: js.Object = js.native
+  var properties: js.Array[js.Object]
   /**
     * The pixel height of the tiles.
     */
-  var tileHeight: Double = js.native
+  var tileHeight: Double
   /**
     * The pixel width of the tiles.
     */
-  var tileWidth: Double = js.native
+  var tileWidth: Double
   /**
-    * [description]
+    * A reference to the Tilemap layer that owns this data.
     */
-  var tilemapLayer: DynamicTilemapLayer | StaticTilemapLayer = js.native
+  var tilemapLayer: DynamicTilemapLayer | StaticTilemapLayer
   /**
-    * [description]
+    * Is the layer visible or not?
     */
-  var visible: Boolean = js.native
+  var visible: Boolean
   /**
-    * The width in tile of the layer.
+    * The width of the layer in tiles.
     */
-  var width: Double = js.native
+  var width: Double
   /**
     * The width in pixels of the entire layer.
     */
-  var widthInPixels: Double = js.native
+  var widthInPixels: Double
   /**
-    * The x offset of where to draw from the top left
+    * The x offset of where to draw from the top left.
     */
-  var x: Double = js.native
+  var x: Double
   /**
-    * The y offset of where to draw from the top left
+    * The y offset of where to draw from the top left.
     */
-  var y: Double = js.native
+  var y: Double
 }
 
 object LayerData {
@@ -107,7 +106,7 @@ object LayerData {
     heightInPixels: Double,
     indexes: js.Array[_],
     name: String,
-    properties: js.Object,
+    properties: js.Array[js.Object],
     tileHeight: Double,
     tileWidth: Double,
     tilemapLayer: DynamicTilemapLayer | StaticTilemapLayer,
@@ -120,133 +119,5 @@ object LayerData {
     val __obj = js.Dynamic.literal(alpha = alpha.asInstanceOf[js.Any], baseTileHeight = baseTileHeight.asInstanceOf[js.Any], baseTileWidth = baseTileWidth.asInstanceOf[js.Any], bodies = bodies.asInstanceOf[js.Any], callbacks = callbacks.asInstanceOf[js.Any], collideIndexes = collideIndexes.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], heightInPixels = heightInPixels.asInstanceOf[js.Any], indexes = indexes.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], tileHeight = tileHeight.asInstanceOf[js.Any], tileWidth = tileWidth.asInstanceOf[js.Any], tilemapLayer = tilemapLayer.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], widthInPixels = widthInPixels.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayerData]
   }
-  @scala.inline
-  implicit class LayerDataOps[Self <: LayerData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseTileHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseTileHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseTileWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseTileWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBodies(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCallbacks(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCollideIndexes(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collideIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[js.Array[Tile]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeightInPixels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightInPixels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndexes(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTileHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTileWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTilemapLayer(value: DynamicTilemapLayer | StaticTilemapLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilemapLayer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidthInPixels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthInPixels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

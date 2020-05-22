@@ -1,5 +1,9 @@
 package typingsSlinky.antd.tooltipMod
 
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.TagMod
+import typingsSlinky.antd.placementsMod.AdjustOverflow
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +16,56 @@ trait TooltipProps extends js.Object
 
 object TooltipProps {
   @scala.inline
-  implicit def apply(value: TooltipPropsWithOverlay): TooltipProps = value.asInstanceOf[TooltipProps]
+  def TooltipPropsWithTitle(
+    arrowPointAtCenter: js.UndefOr[Boolean] = js.undefined,
+    autoAdjustOverflow: Boolean | AdjustOverflow = null,
+    builtinPlacements: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any = null,
+    className: String = null,
+    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
+    openClassName: String = null,
+    overlay: TagMod[Any] | RenderFunction = null,
+    placement: TooltipPlacement = null,
+    style: CSSProperties = null,
+    title: TagMod[Any] | RenderFunction = null
+  ): TooltipProps = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arrowPointAtCenter)) __obj.updateDynamic("arrowPointAtCenter")(arrowPointAtCenter.get.asInstanceOf[js.Any])
+    if (autoAdjustOverflow != null) __obj.updateDynamic("autoAdjustOverflow")(autoAdjustOverflow.asInstanceOf[js.Any])
+    if (builtinPlacements != null) __obj.updateDynamic("builtinPlacements")(builtinPlacements.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
+    if (openClassName != null) __obj.updateDynamic("openClassName")(openClassName.asInstanceOf[js.Any])
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TooltipProps]
+  }
   @scala.inline
-  implicit def apply(value: TooltipPropsWithTitle): TooltipProps = value.asInstanceOf[TooltipProps]
+  def TooltipPropsWithOverlay(
+    arrowPointAtCenter: js.UndefOr[Boolean] = js.undefined,
+    autoAdjustOverflow: Boolean | AdjustOverflow = null,
+    builtinPlacements: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any = null,
+    className: String = null,
+    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
+    openClassName: String = null,
+    overlay: TagMod[Any] | RenderFunction = null,
+    placement: TooltipPlacement = null,
+    style: CSSProperties = null,
+    title: TagMod[Any] | RenderFunction = null
+  ): TooltipProps = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arrowPointAtCenter)) __obj.updateDynamic("arrowPointAtCenter")(arrowPointAtCenter.get.asInstanceOf[js.Any])
+    if (autoAdjustOverflow != null) __obj.updateDynamic("autoAdjustOverflow")(autoAdjustOverflow.asInstanceOf[js.Any])
+    if (builtinPlacements != null) __obj.updateDynamic("builtinPlacements")(builtinPlacements.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
+    if (openClassName != null) __obj.updateDynamic("openClassName")(openClassName.asInstanceOf[js.Any])
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TooltipProps]
+  }
 }
 

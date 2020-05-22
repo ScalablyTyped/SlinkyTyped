@@ -18,19 +18,5 @@ object StartDataCollectionByAgentIdsRequest {
     val __obj = js.Dynamic.literal(agentIds = agentIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartDataCollectionByAgentIdsRequest]
   }
-  @scala.inline
-  implicit class StartDataCollectionByAgentIdsRequestOps[Self <: StartDataCollectionByAgentIdsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentIds(value: AgentIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

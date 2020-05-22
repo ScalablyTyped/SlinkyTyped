@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `1` extends js.Object {
-  var `1`: String = js.native
-  var `2`: String = js.native
-  var `3`: String = js.native
-  var `4`: String = js.native
-  var `5`: String = js.native
-  var `6`: String = js.native
-  var `7`: String = js.native
-  var `8`: String = js.native
+  var `1`: String
+  var `2`: String
+  var `3`: String
+  var `4`: String
+  var `5`: String
+  var `6`: String
+  var `7`: String
+  var `8`: String
 }
 
 object `1` {
@@ -39,61 +38,5 @@ object `1` {
     __obj.updateDynamic("8")(`8`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1`]
   }
-  @scala.inline
-  implicit class `1Ops`[Self <: `1`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with3(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with5(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with6(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("6")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with7(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("7")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with8(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("8")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

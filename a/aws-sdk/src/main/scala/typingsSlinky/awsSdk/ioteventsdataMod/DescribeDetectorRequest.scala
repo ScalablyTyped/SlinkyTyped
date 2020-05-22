@@ -18,35 +18,10 @@ trait DescribeDetectorRequest extends js.Object {
 
 object DescribeDetectorRequest {
   @scala.inline
-  def apply(detectorModelName: DetectorModelName): DescribeDetectorRequest = {
+  def apply(detectorModelName: DetectorModelName, keyValue: KeyValue = null): DescribeDetectorRequest = {
     val __obj = js.Dynamic.literal(detectorModelName = detectorModelName.asInstanceOf[js.Any])
+    if (keyValue != null) __obj.updateDynamic("keyValue")(keyValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDetectorRequest]
   }
-  @scala.inline
-  implicit class DescribeDetectorRequestOps[Self <: DescribeDetectorRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectorModelName(value: DetectorModelName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyValue(value: KeyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

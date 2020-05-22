@@ -22,41 +22,10 @@ trait UpdateInputRequest extends js.Object {
 
 object UpdateInputRequest {
   @scala.inline
-  def apply(inputDefinition: InputDefinition, inputName: InputName): UpdateInputRequest = {
+  def apply(inputDefinition: InputDefinition, inputName: InputName, inputDescription: InputDescription = null): UpdateInputRequest = {
     val __obj = js.Dynamic.literal(inputDefinition = inputDefinition.asInstanceOf[js.Any], inputName = inputName.asInstanceOf[js.Any])
+    if (inputDescription != null) __obj.updateDynamic("inputDescription")(inputDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateInputRequest]
   }
-  @scala.inline
-  implicit class UpdateInputRequestOps[Self <: UpdateInputRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputDefinition(value: InputDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputName(value: InputName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputDescription(value: InputDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

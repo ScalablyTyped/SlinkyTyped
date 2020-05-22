@@ -1,10 +1,10 @@
 package typingsSlinky.victory.mod
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VictoryMultiLabeableProps extends VictoryLabableProps {
   /**
     * The labels prop defines labels that will appear above each bar in your chart.
@@ -14,40 +14,19 @@ trait VictoryMultiLabeableProps extends VictoryLabableProps {
     * like data={[{x: 1, y: 1, label: "first"}]}.
     * @example ["spring", "summer", "fall", "winter"], (datum) => datum.title
     */
-  var labels: js.UndefOr[js.Array[String] | (js.Function1[/* data */ js.Any, String])] = js.native
+  var labels: js.UndefOr[js.Array[String] | (js.Function1[/* data */ js.Any, String])] = js.undefined
 }
 
 object VictoryMultiLabeableProps {
   @scala.inline
-  def apply(): VictoryMultiLabeableProps = {
+  def apply(
+    labelComponent: ReactElement = null,
+    labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null
+  ): VictoryMultiLabeableProps = {
     val __obj = js.Dynamic.literal()
+    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryMultiLabeableProps]
   }
-  @scala.inline
-  implicit class VictoryMultiLabeablePropsOps[Self <: VictoryMultiLabeableProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabelsFunction1(value: /* data */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLabels(value: js.Array[String] | (js.Function1[/* data */ js.Any, String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

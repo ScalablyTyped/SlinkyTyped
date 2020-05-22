@@ -22,53 +22,16 @@ trait AccountQuota extends js.Object {
 
 object AccountQuota {
   @scala.inline
-  def apply(): AccountQuota = {
+  def apply(
+    AccountQuotaName: String = null,
+    Max: js.UndefOr[Long] = js.undefined,
+    Used: js.UndefOr[Long] = js.undefined
+  ): AccountQuota = {
     val __obj = js.Dynamic.literal()
+    if (AccountQuotaName != null) __obj.updateDynamic("AccountQuotaName")(AccountQuotaName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Max)) __obj.updateDynamic("Max")(Max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Used)) __obj.updateDynamic("Used")(Used.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountQuota]
   }
-  @scala.inline
-  implicit class AccountQuotaOps[Self <: AccountQuota] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountQuotaName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountQuotaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountQuotaName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountQuotaName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsed(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Used")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Used")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

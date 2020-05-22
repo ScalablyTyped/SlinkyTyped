@@ -1,5 +1,11 @@
 package typingsSlinky.winrtUwp.global.Windows.Media
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
+import typingsSlinky.winrtUwp.Windows.Foundation.Uri
+import typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnectionError
+import typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnectionState
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStreamReference
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStreamWithContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +17,20 @@ object PlayTo extends js.Object {
   /** Provides information about the CurrentTimeChangeRequested event. */
   @js.native
   abstract class CurrentTimeChangeRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs {
+    /** Gets the new time that the Play To source audio or video stream has been changed to. */
+    /* CompleteClass */
+    override var time: Double = js.native
+  }
   
   /** Provides information about the MuteChangeRequested event. */
   @js.native
   abstract class MuteChangeRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.MuteChangeRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.MuteChangeRequestedEventArgs {
+    /** Gets a value that indicates whether mute or unmute was requested. */
+    /* CompleteClass */
+    override var mute: Boolean = js.native
+  }
   
   /** Provides information about a Play To connection. */
   @js.native
@@ -26,17 +40,38 @@ object PlayTo extends js.Object {
   /** Provides information about the Error event. */
   @js.native
   abstract class PlayToConnectionErrorEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnectionErrorEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnectionErrorEventArgs {
+    /** Gets the error code for a Play To connection error. */
+    /* CompleteClass */
+    override var code: PlayToConnectionError = js.native
+    /** Gets the error message for a Play To connection error. */
+    /* CompleteClass */
+    override var message: String = js.native
+  }
   
   /** Provides information about the StateChanged event. */
   @js.native
   abstract class PlayToConnectionStateChangedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs {
+    /** Gets the current state after the Play To connection state has changed. */
+    /* CompleteClass */
+    override var currentState: PlayToConnectionState = js.native
+    /** Gets the previous state before the Play To connection state was changed. */
+    /* CompleteClass */
+    override var previousState: PlayToConnectionState = js.native
+  }
   
   /** Provides information about the Transferred event. */
   @js.native
   abstract class PlayToConnectionTransferredEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs {
+    /** Gets the current Play To source that a connection was transferred to. */
+    /* CompleteClass */
+    override var currentSource: typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSource = js.native
+    /** Gets the previous Play To source that a connection was transferred from. */
+    /* CompleteClass */
+    override var previousSource: typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSource = js.native
+  }
   
   /** Provides access to Play To capabilities. */
   @js.native
@@ -52,42 +87,140 @@ object PlayTo extends js.Object {
   /** Represents a media element to connect to a Play To target. */
   @js.native
   abstract class PlayToSource ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSource
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSource {
+    /** Gets the connection to the Play To target. */
+    /* CompleteClass */
+    override var connection: typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToConnection = js.native
+    /** Gets or sets the next Play To source element. */
+    /* CompleteClass */
+    override var next: typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSource = js.native
+    /** Specifies a preferred Uniform Resource Identifier (URI) for the media stream, such as a cloud based media server, used is used for Play To by reference. */
+    /* CompleteClass */
+    override var preferredSourceUri: Uri = js.native
+    /** Connects the next Play To source element to the Play To target. */
+    /* CompleteClass */
+    override def playNext(): Unit = js.native
+  }
   
   /** Represents a deferred operation when you're supplying a source media element for Play To. */
   @js.native
   abstract class PlayToSourceDeferral ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceDeferral
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceDeferral {
+    /** Ends the deferral. */
+    /* CompleteClass */
+    override def complete(): Unit = js.native
+  }
   
   /** Represents a request to connect a media element with a Play To target. */
   @js.native
   abstract class PlayToSourceRequest ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceRequest
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceRequest {
+    /** Gets the time limit to supply the Play To source element. */
+    /* CompleteClass */
+    override var deadline: js.Date = js.native
+    /**
+      * Displays an error message in the Play To UI.
+      * @param errorString The error message to display in the Play To UI.
+      */
+    /* CompleteClass */
+    override def displayErrorString(errorString: String): Unit = js.native
+    /**
+      * Defers connecting a media source to a Play To target.
+      * @return A deferral object that you can use to identify when the deferral is complete.
+      */
+    /* CompleteClass */
+    override def getDeferral(): typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceDeferral = js.native
+    /**
+      * Sets the source element to connect to the Play To target.
+      * @param value The source element to connect to the Play To target.
+      */
+    /* CompleteClass */
+    override def setSource(value: typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSource): Unit = js.native
+  }
   
   /** Provides information about the SourceRequested event. */
   @js.native
   abstract class PlayToSourceRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceRequestedEventArgs {
+    /** Gets the media object to connect to a Play To target. */
+    /* CompleteClass */
+    override var sourceRequest: typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceRequest = js.native
+  }
   
   /** Provides information about the SourceSelected event. */
   @js.native
   abstract class PlayToSourceSelectedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceSelectedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlayToSourceSelectedEventArgs {
+    /** Gets the display name of the selected Play To source. */
+    /* CompleteClass */
+    override var friendlyName: String = js.native
+    /** Gets the display icon for the selected Play To source. */
+    /* CompleteClass */
+    override var icon: IRandomAccessStreamWithContentType = js.native
+    /** Gets a value that indicates whether the selected Play To source supports audio. */
+    /* CompleteClass */
+    override var supportsAudio: Boolean = js.native
+    /** Gets a value that indicates whether the selected Play To source supports displaying images. */
+    /* CompleteClass */
+    override var supportsImage: Boolean = js.native
+    /** Gets a value that indicates whether the selected Play To source supports video. */
+    /* CompleteClass */
+    override var supportsVideo: Boolean = js.native
+  }
   
   /** Provides information about the PlaybackRateChangeRequested event. */
   @js.native
   abstract class PlaybackRateChangeRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs {
+    /** Gets the new playback rate. */
+    /* CompleteClass */
+    override var rate: Double = js.native
+  }
   
   /** Provides information about the SourceChangeRequested event. */
   @js.native
   abstract class SourceChangeRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.SourceChangeRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.SourceChangeRequestedEventArgs {
+    /** Gets the name of the album that contains the song in the audio stream. */
+    /* CompleteClass */
+    override var album: String = js.native
+    /** Gets the author of the content in the media stream. */
+    /* CompleteClass */
+    override var author: String = js.native
+    /** Gets the date that the content in the media stream was published. */
+    /* CompleteClass */
+    override var date: js.Date = js.native
+    /** Gets the description of the content in the media stream. */
+    /* CompleteClass */
+    override var description: String = js.native
+    /** Gets the names of the genres that the content in the media stream belongs to. */
+    /* CompleteClass */
+    override var genre: String = js.native
+    /** Gets custom property names and values for the content in the media stream. */
+    /* CompleteClass */
+    override var properties: IMapView[String, _] = js.native
+    /** Gets the rating for the content in the media stream. */
+    /* CompleteClass */
+    override var rating: Double = js.native
+    /** Gets the media stream for the Play To receiver. */
+    /* CompleteClass */
+    override var stream: IRandomAccessStreamWithContentType = js.native
+    /** Gets the thumbnail image for the content in the media stream. */
+    /* CompleteClass */
+    override var thumbnail: IRandomAccessStreamReference = js.native
+    /** Gets the title of the content in the media stream. */
+    /* CompleteClass */
+    override var title: String = js.native
+  }
   
   /** Provides information about the VolumeChangeRequested event. */
   @js.native
   abstract class VolumeChangeRequestedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.VolumeChangeRequestedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Media.PlayTo.VolumeChangeRequestedEventArgs {
+    /** Gets the new volume level. */
+    /* CompleteClass */
+    override var volume: Double = js.native
+  }
   
   /** Describes an error on a Play To connection. */
   @js.native

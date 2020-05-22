@@ -30,31 +30,5 @@ object CloudWatchDimensionConfiguration {
     val __obj = js.Dynamic.literal(DefaultDimensionValue = DefaultDimensionValue.asInstanceOf[js.Any], DimensionName = DimensionName.asInstanceOf[js.Any], DimensionValueSource = DimensionValueSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudWatchDimensionConfiguration]
   }
-  @scala.inline
-  implicit class CloudWatchDimensionConfigurationOps[Self <: CloudWatchDimensionConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultDimensionValue(value: DefaultDimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDimensionName(value: DimensionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DimensionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDimensionValueSource(value: DimensionValueSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DimensionValueSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

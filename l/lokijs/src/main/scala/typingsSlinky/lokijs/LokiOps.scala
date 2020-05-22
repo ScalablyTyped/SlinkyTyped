@@ -4,81 +4,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LokiOps extends js.Object {
   // abstract/loose equality
   @JSName("$aeq")
-  def $aeq(a: js.Any, b: js.Any): Boolean = js.native
+  def $aeq(a: js.Any, b: js.Any): Boolean
   @JSName("$and")
-  def $and(a: js.Any, b: js.Any): Boolean = js.native
+  def $and(a: js.Any, b: js.Any): Boolean
   /** ex : coll.find({'orderCount': {$between: [10, 50]}}); */
   @JSName("$between")
-  def $between(a: js.Any, vals: js.Any): Boolean = js.native
+  def $between(a: js.Any, vals: js.Any): Boolean
   @JSName("$contains")
-  def $contains(a: js.Any, b: js.Any): Boolean = js.native
+  def $contains(a: js.Any, b: js.Any): Boolean
   @JSName("$containsAny")
-  def $containsAny(a: js.Any, b: js.Any): Boolean = js.native
+  def $containsAny(a: js.Any, b: js.Any): Boolean
   @JSName("$containsNone")
-  def $containsNone(a: js.Any, b: js.Any): Boolean = js.native
+  def $containsNone(a: js.Any, b: js.Any): Boolean
   @JSName("$containsString")
-  def $containsString(a: js.Any, b: js.Any): Boolean = js.native
+  def $containsString(a: js.Any, b: js.Any): Boolean
   @JSName("$definedin")
-  def $definedin(a: js.Any, b: js.Any): Boolean = js.native
+  def $definedin(a: js.Any, b: js.Any): Boolean
   // date equality / loki abstract equality test
   @JSName("$dteq")
-  def $dteq(a: js.Any, b: js.Any): Boolean = js.native
+  def $dteq(a: js.Any, b: js.Any): Boolean
   @JSName("$eq")
-  def $eq(a: js.Any, b: js.Any): Boolean = js.native
+  def $eq(a: js.Any, b: js.Any): Boolean
   @JSName("$finite")
-  def $finite(a: js.Any, b: js.Any): Boolean = js.native
+  def $finite(a: js.Any, b: js.Any): Boolean
   @JSName("$gt")
-  def $gt(a: js.Any, b: js.Any): Boolean = js.native
+  def $gt(a: js.Any, b: js.Any): Boolean
   @JSName("$gte")
-  def $gte(a: js.Any, b: js.Any): Boolean = js.native
+  def $gte(a: js.Any, b: js.Any): Boolean
   @JSName("$in")
-  def $in(a: js.Any, b: js.Any): Boolean = js.native
+  def $in(a: js.Any, b: js.Any): Boolean
   @JSName("$jbetween")
-  def $jbetween(a: js.Any, vals: js.Any): Boolean = js.native
+  def $jbetween(a: js.Any, vals: js.Any): Boolean
   @JSName("$jgt")
-  def $jgt(a: js.Any, b: js.Any): Boolean = js.native
+  def $jgt(a: js.Any, b: js.Any): Boolean
   @JSName("$jgte")
-  def $jgte(a: js.Any, b: js.Any): Boolean = js.native
+  def $jgte(a: js.Any, b: js.Any): Boolean
   @JSName("$jlt")
-  def $jlt(a: js.Any, b: js.Any): Boolean = js.native
+  def $jlt(a: js.Any, b: js.Any): Boolean
   @JSName("$jlte")
-  def $jlte(a: js.Any, b: js.Any): Boolean = js.native
+  def $jlte(a: js.Any, b: js.Any): Boolean
   @JSName("$keyin")
-  def $keyin(a: js.Any, b: js.Any): Boolean = js.native
+  def $keyin(a: js.Any, b: js.Any): Boolean
   @JSName("$len")
-  def $len(a: js.Any, b: js.Any): Boolean = js.native
+  def $len(a: js.Any, b: js.Any): Boolean
   @JSName("$lt")
-  def $lt(a: js.Any, b: js.Any): Boolean = js.native
+  def $lt(a: js.Any, b: js.Any): Boolean
   @JSName("$lte")
-  def $lte(a: js.Any, b: js.Any): Boolean = js.native
+  def $lte(a: js.Any, b: js.Any): Boolean
   @JSName("$ne")
-  def $ne(a: js.Any, b: js.Any): Boolean = js.native
+  def $ne(a: js.Any, b: js.Any): Boolean
   @JSName("$nin")
-  def $nin(a: js.Any, b: js.Any): Boolean = js.native
+  def $nin(a: js.Any, b: js.Any): Boolean
   @JSName("$nkeyin")
-  def $nkeyin(a: js.Any, b: js.Any): Boolean = js.native
+  def $nkeyin(a: js.Any, b: js.Any): Boolean
   // field-level logical operators
   // a is the value in the collection
   // b is the nested query operation (for '$not')
   //   or an array of nested query operations (for '$and' and '$or')
   @JSName("$not")
-  def $not(a: js.Any, b: js.Any): Boolean = js.native
+  def $not(a: js.Any, b: js.Any): Boolean
   @JSName("$or")
-  def $or(a: js.Any, b: js.Any): Boolean = js.native
+  def $or(a: js.Any, b: js.Any): Boolean
   @JSName("$regex")
-  def $regex(a: js.Any, b: js.Any): Boolean = js.native
+  def $regex(a: js.Any, b: js.Any): Boolean
   @JSName("$size")
-  def $size(a: js.Any, b: js.Any): Boolean = js.native
+  def $size(a: js.Any, b: js.Any): Boolean
   @JSName("$type")
-  def $type(a: js.Any, b: js.Any): Boolean = js.native
+  def $type(a: js.Any, b: js.Any): Boolean
   @JSName("$undefinedin")
-  def $undefinedin(a: js.Any, b: js.Any): Boolean = js.native
+  def $undefinedin(a: js.Any, b: js.Any): Boolean
   @JSName("$where")
-  def $where(a: js.Any, b: js.Any): Boolean = js.native
+  def $where(a: js.Any, b: js.Any): Boolean
 }
 
 object LokiOps {
@@ -121,211 +120,5 @@ object LokiOps {
     val __obj = js.Dynamic.literal($aeq = js.Any.fromFunction2($aeq), $and = js.Any.fromFunction2($and), $between = js.Any.fromFunction2($between), $contains = js.Any.fromFunction2($contains), $containsAny = js.Any.fromFunction2($containsAny), $containsNone = js.Any.fromFunction2($containsNone), $containsString = js.Any.fromFunction2($containsString), $definedin = js.Any.fromFunction2($definedin), $dteq = js.Any.fromFunction2($dteq), $eq = js.Any.fromFunction2($eq), $finite = js.Any.fromFunction2($finite), $gt = js.Any.fromFunction2($gt), $gte = js.Any.fromFunction2($gte), $in = js.Any.fromFunction2($in), $jbetween = js.Any.fromFunction2($jbetween), $jgt = js.Any.fromFunction2($jgt), $jgte = js.Any.fromFunction2($jgte), $jlt = js.Any.fromFunction2($jlt), $jlte = js.Any.fromFunction2($jlte), $keyin = js.Any.fromFunction2($keyin), $len = js.Any.fromFunction2($len), $lt = js.Any.fromFunction2($lt), $lte = js.Any.fromFunction2($lte), $ne = js.Any.fromFunction2($ne), $nin = js.Any.fromFunction2($nin), $nkeyin = js.Any.fromFunction2($nkeyin), $not = js.Any.fromFunction2($not), $or = js.Any.fromFunction2($or), $regex = js.Any.fromFunction2($regex), $size = js.Any.fromFunction2($size), $type = js.Any.fromFunction2($type), $undefinedin = js.Any.fromFunction2($undefinedin), $where = js.Any.fromFunction2($where))
     __obj.asInstanceOf[LokiOps]
   }
-  @scala.inline
-  implicit class LokiOpsOps[Self <: LokiOps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$aeq(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$aeq")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$and(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$between(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$between")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$contains(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$contains")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$containsAny(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsAny")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$containsNone(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsNone")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$containsString(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$containsString")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$definedin(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$definedin")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$dteq(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$dteq")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$eq(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$eq")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$finite(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$finite")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$gt(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$gte(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gte")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$in(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$in")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$jbetween(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jbetween")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$jgt(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jgt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$jgte(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jgte")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$jlt(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jlt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$jlte(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$jlte")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$keyin(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$keyin")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$len(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$len")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$lt(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$lt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$lte(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$lte")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$ne(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ne")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$nin(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nin")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$nkeyin(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nkeyin")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$not(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$not")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$or(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$regex(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$regex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$size(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$type(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$undefinedin(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$undefinedin")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with$where(value: (js.Any, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$where")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

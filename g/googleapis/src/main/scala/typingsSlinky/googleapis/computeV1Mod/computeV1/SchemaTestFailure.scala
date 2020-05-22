@@ -14,65 +14,18 @@ trait SchemaTestFailure extends js.Object {
 
 object SchemaTestFailure {
   @scala.inline
-  def apply(): SchemaTestFailure = {
+  def apply(
+    actualService: String = null,
+    expectedService: String = null,
+    host: String = null,
+    path: String = null
+  ): SchemaTestFailure = {
     val __obj = js.Dynamic.literal()
+    if (actualService != null) __obj.updateDynamic("actualService")(actualService.asInstanceOf[js.Any])
+    if (expectedService != null) __obj.updateDynamic("expectedService")(expectedService.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestFailure]
   }
-  @scala.inline
-  implicit class SchemaTestFailureOps[Self <: SchemaTestFailure] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActualService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

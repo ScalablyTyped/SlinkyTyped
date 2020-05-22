@@ -5,24 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompletedAuthToken extends AuthToken {
   /**
     * Unix timestamp when Authentication Token was created.
     * Only exists if requestStatus is COMPLETED.
     */
-  val creationTime: Double = js.native
+  val creationTime: Double
   /**
     * Authentication Token time to live duration in milliseconds.
     * Only exists if requestStatus is COMPLETED.
     */
-  val expiresIn: Double = js.native
-  val requestStatus: `2` = js.native
+  val expiresIn: Double
+  val requestStatus: `2`
   /**
     * Firebase Installations Authentication Token.
     * Only exists if requestStatus is COMPLETED.
     */
-  val token: String = js.native
+  val token: String
 }
 
 object CompletedAuthToken {
@@ -31,37 +30,5 @@ object CompletedAuthToken {
     val __obj = js.Dynamic.literal(creationTime = creationTime.asInstanceOf[js.Any], expiresIn = expiresIn.asInstanceOf[js.Any], requestStatus = requestStatus.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompletedAuthToken]
   }
-  @scala.inline
-  implicit class CompletedAuthTokenOps[Self <: CompletedAuthToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpiresIn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestStatus(value: `2`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

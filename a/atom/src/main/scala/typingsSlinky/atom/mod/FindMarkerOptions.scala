@@ -4,149 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FindMarkerOptions extends js.Object {
   /** Only include markers that contain the given Point, inclusive. */
-  var containsPoint: js.UndefOr[PointCompatible] = js.native
+  var containsPoint: js.UndefOr[PointCompatible] = js.undefined
   /** Only include markers that contain the given Range, inclusive. */
-  var containsRange: js.UndefOr[RangeCompatible] = js.native
+  var containsRange: js.UndefOr[RangeCompatible] = js.undefined
   /** Only include markers that end at the given Point. */
-  var endPosition: js.UndefOr[PointCompatible] = js.native
+  var endPosition: js.UndefOr[PointCompatible] = js.undefined
   /** Only include markers that end at the given row number. */
-  var endRow: js.UndefOr[Double] = js.native
+  var endRow: js.UndefOr[Double] = js.undefined
   /** Only include markers that end inside the given Range. */
-  var endsInRange: js.UndefOr[RangeCompatible] = js.native
+  var endsInRange: js.UndefOr[RangeCompatible] = js.undefined
   /** Only include markers that intersect the given row number. */
-  var intersectsRow: js.UndefOr[Double] = js.native
+  var intersectsRow: js.UndefOr[Double] = js.undefined
   /** Only include markers that start at the given Point. */
-  var startPosition: js.UndefOr[PointCompatible] = js.native
+  var startPosition: js.UndefOr[PointCompatible] = js.undefined
   /** Only include markers that start at the given row number. */
-  var startRow: js.UndefOr[Double] = js.native
+  var startRow: js.UndefOr[Double] = js.undefined
   /** Only include markers that start inside the given Range. */
-  var startsInRange: js.UndefOr[RangeCompatible] = js.native
+  var startsInRange: js.UndefOr[RangeCompatible] = js.undefined
 }
 
 object FindMarkerOptions {
   @scala.inline
-  def apply(): FindMarkerOptions = {
+  def apply(
+    containsPoint: PointCompatible = null,
+    containsRange: RangeCompatible = null,
+    endPosition: PointCompatible = null,
+    endRow: js.UndefOr[Double] = js.undefined,
+    endsInRange: RangeCompatible = null,
+    intersectsRow: js.UndefOr[Double] = js.undefined,
+    startPosition: PointCompatible = null,
+    startRow: js.UndefOr[Double] = js.undefined,
+    startsInRange: RangeCompatible = null
+  ): FindMarkerOptions = {
     val __obj = js.Dynamic.literal()
+    if (containsPoint != null) __obj.updateDynamic("containsPoint")(containsPoint.asInstanceOf[js.Any])
+    if (containsRange != null) __obj.updateDynamic("containsRange")(containsRange.asInstanceOf[js.Any])
+    if (endPosition != null) __obj.updateDynamic("endPosition")(endPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(endRow)) __obj.updateDynamic("endRow")(endRow.get.asInstanceOf[js.Any])
+    if (endsInRange != null) __obj.updateDynamic("endsInRange")(endsInRange.asInstanceOf[js.Any])
+    if (!js.isUndefined(intersectsRow)) __obj.updateDynamic("intersectsRow")(intersectsRow.get.asInstanceOf[js.Any])
+    if (startPosition != null) __obj.updateDynamic("startPosition")(startPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(startRow)) __obj.updateDynamic("startRow")(startRow.get.asInstanceOf[js.Any])
+    if (startsInRange != null) __obj.updateDynamic("startsInRange")(startsInRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindMarkerOptions]
   }
-  @scala.inline
-  implicit class FindMarkerOptionsOps[Self <: FindMarkerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainsPoint(value: PointCompatible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainsPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainsRange(value: RangeCompatible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainsRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndPosition(value: PointCompatible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndsInRange(value: RangeCompatible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endsInRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndsInRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endsInRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntersectsRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intersectsRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntersectsRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intersectsRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartPosition(value: PointCompatible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartsInRange(value: RangeCompatible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startsInRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartsInRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startsInRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

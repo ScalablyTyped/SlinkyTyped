@@ -14,29 +14,10 @@ trait CreateStreamOutput extends js.Object {
 
 object CreateStreamOutput {
   @scala.inline
-  def apply(): CreateStreamOutput = {
+  def apply(StreamARN: ResourceARN = null): CreateStreamOutput = {
     val __obj = js.Dynamic.literal()
+    if (StreamARN != null) __obj.updateDynamic("StreamARN")(StreamARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateStreamOutput]
   }
-  @scala.inline
-  implicit class CreateStreamOutputOps[Self <: CreateStreamOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStreamARN(value: ResourceARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

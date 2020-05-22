@@ -4,108 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Company extends js.Object {
   /**
     * Input only. Optional. Email address of customer's users in the admin role.
     * Each email address must be associated with a Google Account.
     */
-  var adminEmails: js.UndefOr[js.Array[String]] = js.native
+  var adminEmails: js.UndefOr[js.Array[String]] = js.undefined
   /** Output only. The ID of the company. Assigned by the server. */
-  var companyId: js.UndefOr[String] = js.native
+  var companyId: js.UndefOr[String] = js.undefined
   /**
     * Required. The name of the company. For example _XYZ Corp_. Characters
     * allowed are: Latin letters, numerals, hyphens, and spaces. Displayed to the
     * customer's employees in the zero-touch enrollment portal.
     */
-  var companyName: js.UndefOr[String] = js.native
+  var companyName: js.UndefOr[String] = js.undefined
   /**
     * Output only. The API resource name of the company in the format
     * `partners/[PARTNER_ID]/customers/[CUSTOMER_ID]`. Assigned by the server.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Input only. Email address of customer's users in the owner role. At least
     * one `owner_email` is required. Each email address must be associated with a
     * Google Account. Owners share the same access as admins but can also add,
     * delete, and edit your organization's portal users.
     */
-  var ownerEmails: js.UndefOr[js.Array[String]] = js.native
+  var ownerEmails: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object Company {
   @scala.inline
-  def apply(): Company = {
+  def apply(
+    adminEmails: js.Array[String] = null,
+    companyId: String = null,
+    companyName: String = null,
+    name: String = null,
+    ownerEmails: js.Array[String] = null
+  ): Company = {
     val __obj = js.Dynamic.literal()
+    if (adminEmails != null) __obj.updateDynamic("adminEmails")(adminEmails.asInstanceOf[js.Any])
+    if (companyId != null) __obj.updateDynamic("companyId")(companyId.asInstanceOf[js.Any])
+    if (companyName != null) __obj.updateDynamic("companyName")(companyName.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (ownerEmails != null) __obj.updateDynamic("ownerEmails")(ownerEmails.asInstanceOf[js.Any])
     __obj.asInstanceOf[Company]
   }
-  @scala.inline
-  implicit class CompanyOps[Self <: Company] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdminEmails(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adminEmails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdminEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adminEmails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompanyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompanyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerEmails(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerEmails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerEmails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

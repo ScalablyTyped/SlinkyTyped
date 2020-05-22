@@ -4,225 +4,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormatOptions extends js.Object {
   /**
     * Do not include superfluous whitespace characters and line terminators. Default is false.
     */
-  var compact: js.UndefOr[Boolean] = js.native
+  var compact: js.UndefOr[Boolean] = js.undefined
   /**
     * Escape as few characters in string literals as necessary. Default is false.
     */
-  var escapeless: js.UndefOr[Boolean] = js.native
+  var escapeless: js.UndefOr[Boolean] = js.undefined
   /**
     * Generate hexadecimal a numeric literal if it is shorter than its equivalents. Requires option.format.renumber. Default is false.
     */
-  var hexadecimal: js.UndefOr[Boolean] = js.native
+  var hexadecimal: js.UndefOr[Boolean] = js.undefined
   /**
     * The indent options
     */
-  var indent: js.UndefOr[IndentOptions] = js.native
+  var indent: js.UndefOr[IndentOptions] = js.undefined
   /**
     * Enforce JSON format of numeric and string literals. This option takes precedence over option.format.hexadecimal and option.format.quotes. Default is false.
     */
-  var json: js.UndefOr[Boolean] = js.native
+  var json: js.UndefOr[Boolean] = js.undefined
   /**
     * New line string. Default is '\n'.
     */
-  var newline: js.UndefOr[String] = js.native
+  var newline: js.UndefOr[String] = js.undefined
   /**
     * Preserve parentheses in new expressions that have no arguments. Default is true.
     */
-  var parentheses: js.UndefOr[Boolean] = js.native
-  var preserveBlankLines: js.UndefOr[Boolean] = js.native
+  var parentheses: js.UndefOr[Boolean] = js.undefined
+  var preserveBlankLines: js.UndefOr[Boolean] = js.undefined
   /**
     * Delimiter to use for string literals. Accepted values are: 'single', 'double', and 'auto'. When 'auto' is specified, escodegen selects a delimiter that results in a shorter literal. Default is 'single'.
     */
-  var quotes: js.UndefOr[String] = js.native
+  var quotes: js.UndefOr[String] = js.undefined
   /**
     * Try to generate shorter numeric literals than toString() (9.8.1). Default is false.
     */
-  var renumber: js.UndefOr[Boolean] = js.native
-  var safeConcatenation: js.UndefOr[Boolean] = js.native
+  var renumber: js.UndefOr[Boolean] = js.undefined
+  var safeConcatenation: js.UndefOr[Boolean] = js.undefined
   /**
     * Preserve semicolons at the end of blocks and programs. Default is true.
     */
-  var semicolons: js.UndefOr[Boolean] = js.native
+  var semicolons: js.UndefOr[Boolean] = js.undefined
   /**
     * White space string. Default is standard ' ' (\x20).
     */
-  var space: js.UndefOr[String] = js.native
+  var space: js.UndefOr[String] = js.undefined
 }
 
 object FormatOptions {
   @scala.inline
-  def apply(): FormatOptions = {
+  def apply(
+    compact: js.UndefOr[Boolean] = js.undefined,
+    escapeless: js.UndefOr[Boolean] = js.undefined,
+    hexadecimal: js.UndefOr[Boolean] = js.undefined,
+    indent: IndentOptions = null,
+    json: js.UndefOr[Boolean] = js.undefined,
+    newline: String = null,
+    parentheses: js.UndefOr[Boolean] = js.undefined,
+    preserveBlankLines: js.UndefOr[Boolean] = js.undefined,
+    quotes: String = null,
+    renumber: js.UndefOr[Boolean] = js.undefined,
+    safeConcatenation: js.UndefOr[Boolean] = js.undefined,
+    semicolons: js.UndefOr[Boolean] = js.undefined,
+    space: String = null
+  ): FormatOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(escapeless)) __obj.updateDynamic("escapeless")(escapeless.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hexadecimal)) __obj.updateDynamic("hexadecimal")(hexadecimal.get.asInstanceOf[js.Any])
+    if (indent != null) __obj.updateDynamic("indent")(indent.asInstanceOf[js.Any])
+    if (!js.isUndefined(json)) __obj.updateDynamic("json")(json.get.asInstanceOf[js.Any])
+    if (newline != null) __obj.updateDynamic("newline")(newline.asInstanceOf[js.Any])
+    if (!js.isUndefined(parentheses)) __obj.updateDynamic("parentheses")(parentheses.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveBlankLines)) __obj.updateDynamic("preserveBlankLines")(preserveBlankLines.get.asInstanceOf[js.Any])
+    if (quotes != null) __obj.updateDynamic("quotes")(quotes.asInstanceOf[js.Any])
+    if (!js.isUndefined(renumber)) __obj.updateDynamic("renumber")(renumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(safeConcatenation)) __obj.updateDynamic("safeConcatenation")(safeConcatenation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(semicolons)) __obj.updateDynamic("semicolons")(semicolons.get.asInstanceOf[js.Any])
+    if (space != null) __obj.updateDynamic("space")(space.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormatOptions]
   }
-  @scala.inline
-  implicit class FormatOptionsOps[Self <: FormatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEscapeless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEscapeless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHexadecimal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexadecimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHexadecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexadecimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent(value: IndentOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJson(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentheses(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentheses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentheses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentheses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveBlankLines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveBlankLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveBlankLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveBlankLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenumber(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafeConcatenation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeConcatenation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafeConcatenation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeConcatenation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSemicolons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("semicolons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSemicolons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("semicolons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

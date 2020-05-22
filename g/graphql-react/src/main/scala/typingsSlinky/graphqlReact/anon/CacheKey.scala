@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CacheKey extends js.Object {
-  var cacheKey: GraphQLCacheKey = js.native
-  var cacheValue: GraphQLCacheValue[_] = js.native
+  var cacheKey: GraphQLCacheKey
+  var cacheValue: GraphQLCacheValue[_]
 }
 
 object CacheKey {
@@ -18,25 +17,5 @@ object CacheKey {
     val __obj = js.Dynamic.literal(cacheKey = cacheKey.asInstanceOf[js.Any], cacheValue = cacheValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheKey]
   }
-  @scala.inline
-  implicit class CacheKeyOps[Self <: CacheKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheKey(value: GraphQLCacheKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCacheValue(value: GraphQLCacheValue[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofenterprise extends js.Object {
   ////////////////////
   // Enterprise Device Attributes
@@ -16,7 +15,7 @@ trait Typeofenterprise extends js.Object {
     * Important: This API works only on Chrome OS.
     * Note: This API is only for extensions pre-installed by policy.
     */
-  val deviceAttributes: TypeofdeviceAttributes = js.native
+  val deviceAttributes: TypeofdeviceAttributes
   ////////////////////
   // Enterprise Platform Keys
   ////////////////////
@@ -27,7 +26,7 @@ trait Typeofenterprise extends js.Object {
     * Important: This API works only on Chrome OS.
     * Note:  This API is only for extensions pre-installed by policy.
     */
-  val platformKeys: TypeofplatformKeys = js.native
+  val platformKeys: TypeofplatformKeys
 }
 
 object Typeofenterprise {
@@ -36,25 +35,5 @@ object Typeofenterprise {
     val __obj = js.Dynamic.literal(deviceAttributes = deviceAttributes.asInstanceOf[js.Any], platformKeys = platformKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[Typeofenterprise]
   }
-  @scala.inline
-  implicit class TypeofenterpriseOps[Self <: Typeofenterprise] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceAttributes(value: TypeofdeviceAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlatformKeys(value: TypeofplatformKeys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platformKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientAnnotation")
 @js.native
 class ASPxClientAnnotation ()
-  extends typingsSlinky.devexpressWeb.ASPxClientWebChartElementNamed
+  extends typingsSlinky.devexpressWeb.ASPxClientWebChartElementNamed {
+  /**
+    * Gets the chart that owns the current chart element.
+    */
+  /* CompleteClass */
+  override var chart: typingsSlinky.devexpressWeb.ASPxClientWebChart = js.native
+  /**
+    * Gets the name of the chart element.
+    */
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

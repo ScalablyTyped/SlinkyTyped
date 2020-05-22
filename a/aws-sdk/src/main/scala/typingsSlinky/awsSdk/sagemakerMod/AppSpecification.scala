@@ -22,47 +22,15 @@ trait AppSpecification extends js.Object {
 
 object AppSpecification {
   @scala.inline
-  def apply(ImageUri: ImageUri): AppSpecification = {
+  def apply(
+    ImageUri: ImageUri,
+    ContainerArguments: ContainerArguments = null,
+    ContainerEntrypoint: ContainerEntrypoint = null
+  ): AppSpecification = {
     val __obj = js.Dynamic.literal(ImageUri = ImageUri.asInstanceOf[js.Any])
+    if (ContainerArguments != null) __obj.updateDynamic("ContainerArguments")(ContainerArguments.asInstanceOf[js.Any])
+    if (ContainerEntrypoint != null) __obj.updateDynamic("ContainerEntrypoint")(ContainerEntrypoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppSpecification]
   }
-  @scala.inline
-  implicit class AppSpecificationOps[Self <: AppSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageUri(value: ImageUri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainerArguments(value: ContainerArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerArguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerEntrypoint(value: ContainerEntrypoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerEntrypoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerEntrypoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerEntrypoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

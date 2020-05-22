@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfirmOptions extends js.Object {
-  var content: js.UndefOr[String] = js.native
-  var initOpen: js.UndefOr[js.Function1[/* e */ DialogEvent, Unit]] = js.native
-  var messages: js.UndefOr[ConfirmMessages] = js.native
-  var name: js.UndefOr[String] = js.native
-  var open: js.UndefOr[js.Function1[/* e */ DialogEvent, Unit]] = js.native
-  var title: js.UndefOr[String | Boolean] = js.native
+  var content: js.UndefOr[String] = js.undefined
+  var initOpen: js.UndefOr[js.Function1[/* e */ DialogEvent, Unit]] = js.undefined
+  var messages: js.UndefOr[ConfirmMessages] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var open: js.UndefOr[js.Function1[/* e */ DialogEvent, Unit]] = js.undefined
+  var title: js.UndefOr[String | Boolean] = js.undefined
 }
 
 object ConfirmOptions {
   @scala.inline
-  def apply(): ConfirmOptions = {
+  def apply(
+    content: String = null,
+    initOpen: /* e */ DialogEvent => Unit = null,
+    messages: ConfirmMessages = null,
+    name: String = null,
+    open: /* e */ DialogEvent => Unit = null,
+    title: String | Boolean = null
+  ): ConfirmOptions = {
     val __obj = js.Dynamic.literal()
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (initOpen != null) __obj.updateDynamic("initOpen")(js.Any.fromFunction1(initOpen))
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (open != null) __obj.updateDynamic("open")(js.Any.fromFunction1(open))
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmOptions]
   }
-  @scala.inline
-  implicit class ConfirmOptionsOps[Self <: ConfirmOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitOpen(value: /* e */ DialogEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initOpen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInitOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: ConfirmMessages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: /* e */ DialogEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

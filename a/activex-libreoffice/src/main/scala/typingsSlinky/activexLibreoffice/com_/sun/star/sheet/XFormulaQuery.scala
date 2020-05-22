@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.SheetRangesQuery
   * @see com.sun.star.sheet.SheetCellRanges
   */
-@js.native
 trait XFormulaQuery extends XInterface {
   /**
     * queries all dependent formula cells.
@@ -22,7 +21,7 @@ trait XFormulaQuery extends XInterface {
     * @param bRecursive `FALSE` = queries cells dependent from the original range(s), `TRUE` = repeats query with all found cells (finds dependents of depende
     * @returns all dependent cells of any formula cell of the current cell range(s).
     */
-  def queryDependents(bRecursive: Boolean): XSheetCellRanges = js.native
+  def queryDependents(bRecursive: Boolean): XSheetCellRanges
   /**
     * queries all precedent cells.
     *
@@ -30,7 +29,7 @@ trait XFormulaQuery extends XInterface {
     * @param bRecursive `FALSE` = queries precedent cells of the original range(s), `TRUE` = repeats query with all found cells (finds precedents of precedent
     * @returns all precedent cells of any formula cell of the current cell range(s).
     */
-  def queryPrecedents(bRecursive: Boolean): XSheetCellRanges = js.native
+  def queryPrecedents(bRecursive: Boolean): XSheetCellRanges
 }
 
 object XFormulaQuery {
@@ -45,25 +44,5 @@ object XFormulaQuery {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryDependents = js.Any.fromFunction1(queryDependents), queryInterface = js.Any.fromFunction1(queryInterface), queryPrecedents = js.Any.fromFunction1(queryPrecedents), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XFormulaQuery]
   }
-  @scala.inline
-  implicit class XFormulaQueryOps[Self <: XFormulaQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryDependents(value: Boolean => XSheetCellRanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryDependents")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQueryPrecedents(value: Boolean => XSheetCellRanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPrecedents")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

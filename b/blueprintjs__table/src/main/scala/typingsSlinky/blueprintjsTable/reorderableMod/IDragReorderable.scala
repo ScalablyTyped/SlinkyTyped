@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsTable.reorderableMod
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.blueprintjsTable.draggableMod.ICoordinateData
+import typingsSlinky.blueprintjsTable.dragTypesMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import scala.scalajs.js
 import scala.scalajs.js.`|`

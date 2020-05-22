@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CallFunctionSuccess extends js.Object {
-  var errMsg: String = js.native
-  var requestID: String = js.native
-  var result: String = js.native
+  var errMsg: String
+  var requestID: String
+  var result: String
 }
 
 object CallFunctionSuccess {
@@ -17,31 +16,5 @@ object CallFunctionSuccess {
     val __obj = js.Dynamic.literal(errMsg = errMsg.asInstanceOf[js.Any], requestID = requestID.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[CallFunctionSuccess]
   }
-  @scala.inline
-  implicit class CallFunctionSuccessOps[Self <: CallFunctionSuccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResult(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

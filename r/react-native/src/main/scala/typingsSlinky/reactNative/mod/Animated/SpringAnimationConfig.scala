@@ -5,186 +5,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpringAnimationConfig extends AnimationConfig {
-  var bounciness: js.UndefOr[Double] = js.native
-  var damping: js.UndefOr[Double] = js.native
-  var delay: js.UndefOr[Double] = js.native
-  var friction: js.UndefOr[Double] = js.native
-  var mass: js.UndefOr[Double] = js.native
-  var overshootClamping: js.UndefOr[Boolean] = js.native
-  var restDisplacementThreshold: js.UndefOr[Double] = js.native
-  var restSpeedThreshold: js.UndefOr[Double] = js.native
-  var speed: js.UndefOr[Double] = js.native
-  var stiffness: js.UndefOr[Double] = js.native
-  var tension: js.UndefOr[Double] = js.native
-  var toValue: Double | AnimatedValue | X | AnimatedValueXY = js.native
-  var velocity: js.UndefOr[Double | X] = js.native
+  var bounciness: js.UndefOr[Double] = js.undefined
+  var damping: js.UndefOr[Double] = js.undefined
+  var delay: js.UndefOr[Double] = js.undefined
+  var friction: js.UndefOr[Double] = js.undefined
+  var mass: js.UndefOr[Double] = js.undefined
+  var overshootClamping: js.UndefOr[Boolean] = js.undefined
+  var restDisplacementThreshold: js.UndefOr[Double] = js.undefined
+  var restSpeedThreshold: js.UndefOr[Double] = js.undefined
+  var speed: js.UndefOr[Double] = js.undefined
+  var stiffness: js.UndefOr[Double] = js.undefined
+  var tension: js.UndefOr[Double] = js.undefined
+  var toValue: Double | AnimatedValue | X | AnimatedValueXY
+  var velocity: js.UndefOr[Double | X] = js.undefined
 }
 
 object SpringAnimationConfig {
   @scala.inline
-  def apply(toValue: Double | AnimatedValue | X | AnimatedValueXY, useNativeDriver: Boolean): SpringAnimationConfig = {
+  def apply(
+    toValue: Double | AnimatedValue | X | AnimatedValueXY,
+    useNativeDriver: Boolean,
+    bounciness: js.UndefOr[Double] = js.undefined,
+    damping: js.UndefOr[Double] = js.undefined,
+    delay: js.UndefOr[Double] = js.undefined,
+    friction: js.UndefOr[Double] = js.undefined,
+    isInteraction: js.UndefOr[Boolean] = js.undefined,
+    mass: js.UndefOr[Double] = js.undefined,
+    overshootClamping: js.UndefOr[Boolean] = js.undefined,
+    restDisplacementThreshold: js.UndefOr[Double] = js.undefined,
+    restSpeedThreshold: js.UndefOr[Double] = js.undefined,
+    speed: js.UndefOr[Double] = js.undefined,
+    stiffness: js.UndefOr[Double] = js.undefined,
+    tension: js.UndefOr[Double] = js.undefined,
+    velocity: Double | X = null
+  ): SpringAnimationConfig = {
     val __obj = js.Dynamic.literal(toValue = toValue.asInstanceOf[js.Any], useNativeDriver = useNativeDriver.asInstanceOf[js.Any])
+    if (!js.isUndefined(bounciness)) __obj.updateDynamic("bounciness")(bounciness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(damping)) __obj.updateDynamic("damping")(damping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(friction)) __obj.updateDynamic("friction")(friction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isInteraction)) __obj.updateDynamic("isInteraction")(isInteraction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mass)) __obj.updateDynamic("mass")(mass.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overshootClamping)) __obj.updateDynamic("overshootClamping")(overshootClamping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restDisplacementThreshold)) __obj.updateDynamic("restDisplacementThreshold")(restDisplacementThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restSpeedThreshold)) __obj.updateDynamic("restSpeedThreshold")(restSpeedThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(speed)) __obj.updateDynamic("speed")(speed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stiffness)) __obj.updateDynamic("stiffness")(stiffness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tension)) __obj.updateDynamic("tension")(tension.get.asInstanceOf[js.Any])
+    if (velocity != null) __obj.updateDynamic("velocity")(velocity.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpringAnimationConfig]
   }
-  @scala.inline
-  implicit class SpringAnimationConfigOps[Self <: SpringAnimationConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToValue(value: Double | AnimatedValue | X | AnimatedValueXY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBounciness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounciness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounciness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounciness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDamping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDamping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFriction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMass(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOvershootClamping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootClamping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOvershootClamping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootClamping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestDisplacementThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restDisplacementThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestDisplacementThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restDisplacementThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestSpeedThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restSpeedThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestSpeedThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restSpeedThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStiffness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStiffness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTension(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVelocity(value: Double | X): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVelocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

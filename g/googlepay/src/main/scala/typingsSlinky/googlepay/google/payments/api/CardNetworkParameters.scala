@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * This should only be set for [[PaymentMethodType|`CARD`]].
   */
-@js.native
 trait CardNetworkParameters extends js.Object {
   /**
     * Acquiring institution identification code as assigned by the DS
@@ -18,14 +17,14 @@ trait CardNetworkParameters extends js.Object {
     * This is an optional field. We recommend setting this field to allow
     * SCA challenges to be done for the given card network.
     */
-  var acquirerBin: js.UndefOr[String] = js.native
+  var acquirerBin: js.UndefOr[String] = js.undefined
   /**
     * Acquirer-assigned Merchant identifier for VISA.
     *
     * This is an optional field. We recommend setting this field to allow
     * SCA challenges to be done for the given card network.
     */
-  var acquirerMerchantId: js.UndefOr[String] = js.native
+  var acquirerMerchantId: js.UndefOr[String] = js.undefined
   /**
     * Type of card network parameters. Currently only
     * [[CardNetwork|`VISA`]] and [[CardNetwork|`MASTERCARD`]] are
@@ -33,52 +32,16 @@ trait CardNetworkParameters extends js.Object {
     *
     * This field is required.
     */
-  var cardNetwork: CardNetwork = js.native
+  var cardNetwork: CardNetwork
 }
 
 object CardNetworkParameters {
   @scala.inline
-  def apply(cardNetwork: CardNetwork): CardNetworkParameters = {
+  def apply(cardNetwork: CardNetwork, acquirerBin: String = null, acquirerMerchantId: String = null): CardNetworkParameters = {
     val __obj = js.Dynamic.literal(cardNetwork = cardNetwork.asInstanceOf[js.Any])
+    if (acquirerBin != null) __obj.updateDynamic("acquirerBin")(acquirerBin.asInstanceOf[js.Any])
+    if (acquirerMerchantId != null) __obj.updateDynamic("acquirerMerchantId")(acquirerMerchantId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardNetworkParameters]
   }
-  @scala.inline
-  implicit class CardNetworkParametersOps[Self <: CardNetworkParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCardNetwork(value: CardNetwork): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardNetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcquirerBin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquirerBin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcquirerBin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquirerBin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAcquirerMerchantId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquirerMerchantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcquirerMerchantId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquirerMerchantId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

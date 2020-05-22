@@ -18,41 +18,11 @@ trait BatchCreateAttendeeResponse extends js.Object {
 
 object BatchCreateAttendeeResponse {
   @scala.inline
-  def apply(): BatchCreateAttendeeResponse = {
+  def apply(Attendees: AttendeeList = null, Errors: BatchCreateAttendeeErrorList = null): BatchCreateAttendeeResponse = {
     val __obj = js.Dynamic.literal()
+    if (Attendees != null) __obj.updateDynamic("Attendees")(Attendees.asInstanceOf[js.Any])
+    if (Errors != null) __obj.updateDynamic("Errors")(Errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchCreateAttendeeResponse]
   }
-  @scala.inline
-  implicit class BatchCreateAttendeeResponseOps[Self <: BatchCreateAttendeeResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttendees(value: AttendeeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attendees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttendees: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attendees")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: BatchCreateAttendeeErrorList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,12 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BuildResult extends js.Object {
-  val artifactPaths: js.Array[String] = js.native
-  val configuration: Configuration = js.native
-  val outDir: String = js.native
-  val platformToTargets: Map[Platform, Map[String, Target]] = js.native
+  val artifactPaths: js.Array[String]
+  val configuration: Configuration
+  val outDir: String
+  val platformToTargets: Map[Platform, Map[String, Target]]
 }
 
 object BuildResult {
@@ -27,37 +26,5 @@ object BuildResult {
     val __obj = js.Dynamic.literal(artifactPaths = artifactPaths.asInstanceOf[js.Any], configuration = configuration.asInstanceOf[js.Any], outDir = outDir.asInstanceOf[js.Any], platformToTargets = platformToTargets.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildResult]
   }
-  @scala.inline
-  implicit class BuildResultOps[Self <: BuildResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArtifactPaths(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfiguration(value: Configuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlatformToTargets(value: Map[Platform, Map[String, Target]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platformToTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

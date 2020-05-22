@@ -12,7 +12,7 @@ object FormCheckmark {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.FormCheckmark] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.FormCheckmark](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: FormCheckmark.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.FormCheckmark] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.FormCheckmark](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.FormCheckmark] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.FormCheckmark](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormCheckmark.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.FormCheckmark] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.FormCheckmark](js.Array(this.component, js.Dictionary.empty))()
 }
 

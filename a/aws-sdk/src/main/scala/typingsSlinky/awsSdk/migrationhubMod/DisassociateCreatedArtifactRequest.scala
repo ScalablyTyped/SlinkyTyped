@@ -29,48 +29,12 @@ object DisassociateCreatedArtifactRequest {
   def apply(
     CreatedArtifactName: CreatedArtifactName,
     MigrationTaskName: MigrationTaskName,
-    ProgressUpdateStream: ProgressUpdateStream
+    ProgressUpdateStream: ProgressUpdateStream,
+    DryRun: js.UndefOr[DryRun] = js.undefined
   ): DisassociateCreatedArtifactRequest = {
     val __obj = js.Dynamic.literal(CreatedArtifactName = CreatedArtifactName.asInstanceOf[js.Any], MigrationTaskName = MigrationTaskName.asInstanceOf[js.Any], ProgressUpdateStream = ProgressUpdateStream.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateCreatedArtifactRequest]
   }
-  @scala.inline
-  implicit class DisassociateCreatedArtifactRequestOps[Self <: DisassociateCreatedArtifactRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedArtifactName(value: CreatedArtifactName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedArtifactName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMigrationTaskName(value: MigrationTaskName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationTaskName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProgressUpdateStream(value: ProgressUpdateStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: DryRun): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

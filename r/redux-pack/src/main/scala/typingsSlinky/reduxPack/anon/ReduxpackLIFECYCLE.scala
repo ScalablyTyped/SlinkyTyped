@@ -5,51 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReduxpackLIFECYCLE extends js.Object {
   @JSName("redux-pack/LIFECYCLE")
-  var `redux-packSlashLIFECYCLE`: js.UndefOr[LIFECYCLEValues] = js.native
+  var `redux-packSlashLIFECYCLE`: js.UndefOr[LIFECYCLEValues] = js.undefined
   @JSName("redux-pack/TRANSACTION")
-  var `redux-packSlashTRANSACTION`: js.UndefOr[String] = js.native
+  var `redux-packSlashTRANSACTION`: js.UndefOr[String] = js.undefined
 }
 
 object ReduxpackLIFECYCLE {
   @scala.inline
-  def apply(): ReduxpackLIFECYCLE = {
+  def apply(`redux-packSlashLIFECYCLE`: LIFECYCLEValues = null, `redux-packSlashTRANSACTION`: String = null): ReduxpackLIFECYCLE = {
     val __obj = js.Dynamic.literal()
+    if (`redux-packSlashLIFECYCLE` != null) __obj.updateDynamic("redux-pack/LIFECYCLE")(`redux-packSlashLIFECYCLE`.asInstanceOf[js.Any])
+    if (`redux-packSlashTRANSACTION` != null) __obj.updateDynamic("redux-pack/TRANSACTION")(`redux-packSlashTRANSACTION`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReduxpackLIFECYCLE]
   }
-  @scala.inline
-  implicit class ReduxpackLIFECYCLEOps[Self <: ReduxpackLIFECYCLE] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withRedux-packSlashLIFECYCLE`(value: LIFECYCLEValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redux-pack/LIFECYCLE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutRedux-packSlashLIFECYCLE`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redux-pack/LIFECYCLE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withRedux-packSlashTRANSACTION`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redux-pack/TRANSACTION")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutRedux-packSlashTRANSACTION`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redux-pack/TRANSACTION")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

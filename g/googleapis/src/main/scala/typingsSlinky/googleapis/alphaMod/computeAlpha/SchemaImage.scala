@@ -1,7 +1,7 @@
 package typingsSlinky.googleapis.alphaMod.computeAlpha
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleapis.AnonContainerType
+import typingsSlinky.googleapis.anon.ContainerType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -103,7 +103,7 @@ trait SchemaImage extends js.Object {
   /**
     * The parameters of the raw disk image.
     */
-  var rawDisk: js.UndefOr[AnonContainerType] = js.native
+  var rawDisk: js.UndefOr[ContainerType] = js.native
   /**
     * [Output Only] Server-defined URL for the resource.
     */
@@ -192,389 +192,72 @@ trait SchemaImage extends js.Object {
 
 object SchemaImage {
   @scala.inline
-  def apply(): SchemaImage = {
+  def apply(
+    archiveSizeBytes: String = null,
+    creationTimestamp: String = null,
+    deprecated: SchemaDeprecationStatus = null,
+    description: String = null,
+    diskSizeGb: String = null,
+    family: String = null,
+    guestOsFeatures: js.Array[SchemaGuestOsFeature] = null,
+    id: String = null,
+    imageEncryptionKey: SchemaCustomerEncryptionKey = null,
+    kind: String = null,
+    labelFingerprint: String = null,
+    labels: StringDictionary[String] = null,
+    licenseCodes: js.Array[String] = null,
+    licenses: js.Array[String] = null,
+    name: String = null,
+    rawDisk: ContainerType = null,
+    selfLink: String = null,
+    selfLinkWithId: String = null,
+    shieldedInstanceInitialState: SchemaInitialStateConfig = null,
+    sourceDisk: String = null,
+    sourceDiskEncryptionKey: SchemaCustomerEncryptionKey = null,
+    sourceDiskId: String = null,
+    sourceImage: String = null,
+    sourceImageEncryptionKey: SchemaCustomerEncryptionKey = null,
+    sourceImageId: String = null,
+    sourceSnapshot: String = null,
+    sourceSnapshotEncryptionKey: SchemaCustomerEncryptionKey = null,
+    sourceSnapshotId: String = null,
+    sourceType: String = null,
+    status: String = null,
+    storageLocations: js.Array[String] = null
+  ): SchemaImage = {
     val __obj = js.Dynamic.literal()
+    if (archiveSizeBytes != null) __obj.updateDynamic("archiveSizeBytes")(archiveSizeBytes.asInstanceOf[js.Any])
+    if (creationTimestamp != null) __obj.updateDynamic("creationTimestamp")(creationTimestamp.asInstanceOf[js.Any])
+    if (deprecated != null) __obj.updateDynamic("deprecated")(deprecated.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (diskSizeGb != null) __obj.updateDynamic("diskSizeGb")(diskSizeGb.asInstanceOf[js.Any])
+    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
+    if (guestOsFeatures != null) __obj.updateDynamic("guestOsFeatures")(guestOsFeatures.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (imageEncryptionKey != null) __obj.updateDynamic("imageEncryptionKey")(imageEncryptionKey.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (labelFingerprint != null) __obj.updateDynamic("labelFingerprint")(labelFingerprint.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (licenseCodes != null) __obj.updateDynamic("licenseCodes")(licenseCodes.asInstanceOf[js.Any])
+    if (licenses != null) __obj.updateDynamic("licenses")(licenses.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (rawDisk != null) __obj.updateDynamic("rawDisk")(rawDisk.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (selfLinkWithId != null) __obj.updateDynamic("selfLinkWithId")(selfLinkWithId.asInstanceOf[js.Any])
+    if (shieldedInstanceInitialState != null) __obj.updateDynamic("shieldedInstanceInitialState")(shieldedInstanceInitialState.asInstanceOf[js.Any])
+    if (sourceDisk != null) __obj.updateDynamic("sourceDisk")(sourceDisk.asInstanceOf[js.Any])
+    if (sourceDiskEncryptionKey != null) __obj.updateDynamic("sourceDiskEncryptionKey")(sourceDiskEncryptionKey.asInstanceOf[js.Any])
+    if (sourceDiskId != null) __obj.updateDynamic("sourceDiskId")(sourceDiskId.asInstanceOf[js.Any])
+    if (sourceImage != null) __obj.updateDynamic("sourceImage")(sourceImage.asInstanceOf[js.Any])
+    if (sourceImageEncryptionKey != null) __obj.updateDynamic("sourceImageEncryptionKey")(sourceImageEncryptionKey.asInstanceOf[js.Any])
+    if (sourceImageId != null) __obj.updateDynamic("sourceImageId")(sourceImageId.asInstanceOf[js.Any])
+    if (sourceSnapshot != null) __obj.updateDynamic("sourceSnapshot")(sourceSnapshot.asInstanceOf[js.Any])
+    if (sourceSnapshotEncryptionKey != null) __obj.updateDynamic("sourceSnapshotEncryptionKey")(sourceSnapshotEncryptionKey.asInstanceOf[js.Any])
+    if (sourceSnapshotId != null) __obj.updateDynamic("sourceSnapshotId")(sourceSnapshotId.asInstanceOf[js.Any])
+    if (sourceType != null) __obj.updateDynamic("sourceType")(sourceType.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (storageLocations != null) __obj.updateDynamic("storageLocations")(storageLocations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImage]
   }
-  @scala.inline
-  implicit class SchemaImageOps[Self <: SchemaImage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArchiveSizeBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchiveSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeprecated(value: SchemaDeprecationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskSizeGb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskSizeGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuestOsFeatures(value: js.Array[SchemaGuestOsFeature]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guestOsFeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuestOsFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guestOsFeatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageEncryptionKey(value: SchemaCustomerEncryptionKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageEncryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageEncryptionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageEncryptionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseCodes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenses(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawDisk(value: AnonContainerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawDisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawDisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawDisk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLinkWithId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLinkWithId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLinkWithId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLinkWithId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShieldedInstanceInitialState(value: SchemaInitialStateConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shieldedInstanceInitialState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShieldedInstanceInitialState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shieldedInstanceInitialState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceDisk(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceDisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDisk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceDiskEncryptionKey(value: SchemaCustomerEncryptionKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDiskEncryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceDiskEncryptionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDiskEncryptionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceDiskId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDiskId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceDiskId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDiskId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceImageEncryptionKey(value: SchemaCustomerEncryptionKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImageEncryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceImageEncryptionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImageEncryptionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceImageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceImageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSnapshot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSnapshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSnapshot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSnapshotEncryptionKey(value: SchemaCustomerEncryptionKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSnapshotEncryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSnapshotEncryptionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSnapshotEncryptionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSnapshotId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSnapshotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSnapshotId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSnapshotId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageLocations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageLocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageLocations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,56 +6,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StateObject
   extends BaseObject
      with AnyObject {
   @JSName("acl")
-  var acl_StateObject: js.UndefOr[StateACL] = js.native
+  var acl_StateObject: js.UndefOr[StateACL] = js.undefined
   @JSName("common")
-  var common_StateObject: StateCommon = js.native
+  var common_StateObject: StateCommon
   @JSName("type")
-  var type_StateObject: state = js.native
+  var type_StateObject: state
 }
 
 object StateObject {
   @scala.inline
-  def apply(_id: String, common: StateCommon, native: Record[String, ObjectField], `type`: state): StateObject = {
+  def apply(
+    _id: String,
+    common: StateCommon,
+    native: Record[String, ObjectField],
+    `type`: state,
+    acl: StateACL = null,
+    encryptedNative: js.Array[String] = null,
+    enums: Record[String, String] = null,
+    from: String = null,
+    protectedNative: js.Array[String] = null,
+    ts: js.UndefOr[Double] = js.undefined
+  ): StateObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (acl != null) __obj.updateDynamic("acl")(acl.asInstanceOf[js.Any])
+    if (encryptedNative != null) __obj.updateDynamic("encryptedNative")(encryptedNative.asInstanceOf[js.Any])
+    if (enums != null) __obj.updateDynamic("enums")(enums.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (protectedNative != null) __obj.updateDynamic("protectedNative")(protectedNative.asInstanceOf[js.Any])
+    if (!js.isUndefined(ts)) __obj.updateDynamic("ts")(ts.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StateObject]
   }
-  @scala.inline
-  implicit class StateObjectOps[Self <: StateObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommon(value: StateCommon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: state): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcl(value: StateACL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

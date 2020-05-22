@@ -8,49 +8,18 @@ import scala.scalajs.js.annotation._
 /**
   * @todo describe
   */
-@js.native
 trait MinorSplitLine extends js.Object {
-  var lineStyle: js.UndefOr[LineStyle] = js.native
-  var show: js.UndefOr[Boolean] = js.native
+  var lineStyle: js.UndefOr[LineStyle] = js.undefined
+  var show: js.UndefOr[Boolean] = js.undefined
 }
 
 object MinorSplitLine {
   @scala.inline
-  def apply(): MinorSplitLine = {
+  def apply(lineStyle: LineStyle = null, show: js.UndefOr[Boolean] = js.undefined): MinorSplitLine = {
     val __obj = js.Dynamic.literal()
+    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MinorSplitLine]
   }
-  @scala.inline
-  implicit class MinorSplitLineOps[Self <: MinorSplitLine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLineStyle(value: LineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

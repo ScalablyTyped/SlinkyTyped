@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.start
 */
 trait ContentPosition
-  extends AlignContentProperty
-     with JustifyContentProperty
-     with PlaceContentProperty
+  extends _AlignContentProperty
+     with _JustifyContentProperty
+     with _PlaceContentProperty
 
 object ContentPosition {
   @scala.inline

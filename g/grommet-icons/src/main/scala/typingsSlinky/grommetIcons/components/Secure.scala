@@ -12,7 +12,7 @@ object Secure {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Secure] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Secure](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Secure.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Secure] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Secure](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Secure] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Secure](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Secure.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Secure] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Secure](js.Array(this.component, js.Dictionary.empty))()
 }
 

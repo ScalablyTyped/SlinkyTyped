@@ -8,40 +8,39 @@ import scala.scalajs.js.annotation._
 /**
   * Interface for CRM Business Process Flow stages.
   */
-@js.native
 trait Stage extends js.Object {
   /**
     * Returns an object with a getValue method which will return the integer value of the business process flow
     * category.
     * @returns The stage category.
     */
-  def getCategory(): GetValue = js.native
+  def getCategory(): GetValue
   /**
     * Returns the logical name of the entity associated with the stage.
     * @returns The entity name.
     */
-  def getEntityName(): String = js.native
+  def getEntityName(): String
   /**
     * Returns the unique identifier of the stage.
     * @returns The identifier of the Stage, in GUID format.
     * @example Example: "{825CB223-A651-DF11-AA8B-00155DBA3804}".
     */
-  def getId(): String = js.native
+  def getId(): String
   /**
     * Returns the name of the stage.
     * @returns The name.
     */
-  def getName(): String = js.native
+  def getName(): String
   /**
     * Returns the status of the stage.
     * @returns The status, either "active" or "inactive".
     */
-  def getStatus(): StageStatus = js.native
+  def getStatus(): StageStatus
   /**
     * Returns a collection of steps in the stage.
     * @returns An array of Step.
     */
-  def getSteps(): js.Array[Step] = js.native
+  def getSteps(): js.Array[Step]
 }
 
 object Stage {
@@ -57,49 +56,5 @@ object Stage {
     val __obj = js.Dynamic.literal(getCategory = js.Any.fromFunction0(getCategory), getEntityName = js.Any.fromFunction0(getEntityName), getId = js.Any.fromFunction0(getId), getName = js.Any.fromFunction0(getName), getStatus = js.Any.fromFunction0(getStatus), getSteps = js.Any.fromFunction0(getSteps))
     __obj.asInstanceOf[Stage]
   }
-  @scala.inline
-  implicit class StageOps[Self <: Stage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCategory(value: () => GetValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCategory")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetEntityName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEntityName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetId(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStatus(value: () => StageStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSteps(value: () => js.Array[Step]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSteps")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

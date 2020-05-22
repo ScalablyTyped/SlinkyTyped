@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NetworkTypeData extends js.Object {
   /** 返回网络类型2g，3g，4g，wifi */
-  var networkType: typingsSlinky.baiduApp.swan.networkType = js.native
+  var networkType: typingsSlinky.baiduApp.swan.networkType
 }
 
 object NetworkTypeData {
@@ -16,19 +15,5 @@ object NetworkTypeData {
     val __obj = js.Dynamic.literal(networkType = networkType.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkTypeData]
   }
-  @scala.inline
-  implicit class NetworkTypeDataOps[Self <: NetworkTypeData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNetworkType(value: networkType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

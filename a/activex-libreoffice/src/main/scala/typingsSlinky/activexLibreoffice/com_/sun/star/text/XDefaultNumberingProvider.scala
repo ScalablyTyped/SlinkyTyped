@@ -17,7 +17,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.lang.Locale
   * @version 1.0
   */
-@js.native
 trait XDefaultNumberingProvider extends XInterface {
   /**
     * provides access to outline numberings according to a given {@link com.sun.star.lang.Locale} .
@@ -26,14 +25,14 @@ trait XDefaultNumberingProvider extends XInterface {
     * @see com.sun.star.text.NumberingLevel
     * @see com.sun.star.lang.Locale
     */
-  def getDefaultContinuousNumberingLevels(aLocale: Locale): SafeArray[PropertyValues] = js.native
+  def getDefaultContinuousNumberingLevels(aLocale: Locale): SafeArray[PropertyValues]
   /**
     * provides access to outline numberings according to a given {@link com.sun.star.lang.Locale} .
     *
     * Outline numberings usually consist of levels with different settings.
     * @see com.sun.star.text.NumberingLevel
     */
-  def getDefaultOutlineNumberings(aLocale: Locale): SafeArray[XIndexAccess] = js.native
+  def getDefaultOutlineNumberings(aLocale: Locale): SafeArray[XIndexAccess]
 }
 
 object XDefaultNumberingProvider {
@@ -48,25 +47,5 @@ object XDefaultNumberingProvider {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getDefaultContinuousNumberingLevels = js.Any.fromFunction1(getDefaultContinuousNumberingLevels), getDefaultOutlineNumberings = js.Any.fromFunction1(getDefaultOutlineNumberings), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDefaultNumberingProvider]
   }
-  @scala.inline
-  implicit class XDefaultNumberingProviderOps[Self <: XDefaultNumberingProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDefaultContinuousNumberingLevels(value: Locale => SafeArray[PropertyValues]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultContinuousNumberingLevels")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDefaultOutlineNumberings(value: Locale => SafeArray[XIndexAccess]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultOutlineNumberings")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

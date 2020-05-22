@@ -7,32 +7,31 @@ import scala.scalajs.js.annotation._
 /**
   * Contains the settings defining a misspelled interval.
   */
-@js.native
 trait MisspelledInterval extends js.Object {
   /**
     * Gets the spelling error type.
     */
-  val errorType: SpellingErrorType = js.native
+  val errorType: SpellingErrorType
   /**
     * Gets the text buffer interval occupied by the current element.
     */
-  val interval: Interval = js.native
+  val interval: Interval
   /**
     * Gets the length of the misspelled interval.
     */
-  val length: Double = js.native
+  val length: Double
   /**
     * Gets the start position of the misspelled word in the interval.
     */
-  val start: Double = js.native
+  val start: Double
   /**
     * Gets a list of suggested words to replace the misspelled word.
     */
-  val suggestions: js.Array[String] = js.native
+  val suggestions: js.Array[String]
   /**
     * Gets an erroneous word found during spell check.
     */
-  val word: String = js.native
+  val word: String
 }
 
 object MisspelledInterval {
@@ -48,49 +47,5 @@ object MisspelledInterval {
     val __obj = js.Dynamic.literal(errorType = errorType.asInstanceOf[js.Any], interval = interval.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], suggestions = suggestions.asInstanceOf[js.Any], word = word.asInstanceOf[js.Any])
     __obj.asInstanceOf[MisspelledInterval]
   }
-  @scala.inline
-  implicit class MisspelledIntervalOps[Self <: MisspelledInterval] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorType(value: SpellingErrorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Interval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuggestions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWord(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("word")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

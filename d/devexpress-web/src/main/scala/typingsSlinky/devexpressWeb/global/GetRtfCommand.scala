@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("GetRtfCommand")
 @js.native
 class GetRtfCommand ()
-  extends typingsSlinky.devexpressWeb.GetRtfCommand
+  extends typingsSlinky.devexpressWeb.GetRtfCommand {
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

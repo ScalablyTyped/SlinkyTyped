@@ -37,89 +37,22 @@ trait SchemaSegmentDimensionFilter extends js.Object {
 
 object SchemaSegmentDimensionFilter {
   @scala.inline
-  def apply(): SchemaSegmentDimensionFilter = {
+  def apply(
+    caseSensitive: js.UndefOr[Boolean] = js.undefined,
+    dimensionName: String = null,
+    expressions: js.Array[String] = null,
+    maxComparisonValue: String = null,
+    minComparisonValue: String = null,
+    operator: String = null
+  ): SchemaSegmentDimensionFilter = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.get.asInstanceOf[js.Any])
+    if (dimensionName != null) __obj.updateDynamic("dimensionName")(dimensionName.asInstanceOf[js.Any])
+    if (expressions != null) __obj.updateDynamic("expressions")(expressions.asInstanceOf[js.Any])
+    if (maxComparisonValue != null) __obj.updateDynamic("maxComparisonValue")(maxComparisonValue.asInstanceOf[js.Any])
+    if (minComparisonValue != null) __obj.updateDynamic("minComparisonValue")(minComparisonValue.asInstanceOf[js.Any])
+    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSegmentDimensionFilter]
   }
-  @scala.inline
-  implicit class SchemaSegmentDimensionFilterOps[Self <: SchemaSegmentDimensionFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaseSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaseSensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpressions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxComparisonValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxComparisonValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxComparisonValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxComparisonValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinComparisonValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minComparisonValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinComparisonValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minComparisonValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

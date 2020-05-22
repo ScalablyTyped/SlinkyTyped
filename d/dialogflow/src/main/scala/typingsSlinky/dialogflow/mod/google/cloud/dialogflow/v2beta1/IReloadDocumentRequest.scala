@@ -5,63 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a ReloadDocumentRequest. */
-@js.native
 trait IReloadDocumentRequest extends js.Object {
   /** ReloadDocumentRequest gcsSource */
-  var gcsSource: js.UndefOr[IGcsSource | Null] = js.native
+  var gcsSource: js.UndefOr[IGcsSource | Null] = js.undefined
   /** ReloadDocumentRequest name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
 }
 
 object IReloadDocumentRequest {
   @scala.inline
-  def apply(): IReloadDocumentRequest = {
+  def apply(
+    gcsSource: js.UndefOr[Null | IGcsSource] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined
+  ): IReloadDocumentRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(gcsSource)) __obj.updateDynamic("gcsSource")(gcsSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IReloadDocumentRequest]
   }
-  @scala.inline
-  implicit class IReloadDocumentRequestOps[Self <: IReloadDocumentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGcsSource(value: IGcsSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcsSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcsSourceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSource")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-  }
-  
 }
 

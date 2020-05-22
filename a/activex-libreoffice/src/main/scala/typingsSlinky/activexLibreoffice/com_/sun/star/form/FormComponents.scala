@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   * so the collection must be able to handle duplicate entry names.
   * @see FormComponent
   */
-@js.native
 trait FormComponents
   extends XNameContainer
      with XContainer

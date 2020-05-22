@@ -58,149 +58,32 @@ trait SchemaIdentitytoolkitRelyingpartySetProjectConfigRequest extends js.Object
 
 object SchemaIdentitytoolkitRelyingpartySetProjectConfigRequest {
   @scala.inline
-  def apply(): SchemaIdentitytoolkitRelyingpartySetProjectConfigRequest = {
+  def apply(
+    allowPasswordUser: js.UndefOr[Boolean] = js.undefined,
+    apiKey: String = null,
+    authorizedDomains: js.Array[String] = null,
+    changeEmailTemplate: SchemaEmailTemplate = null,
+    delegatedProjectNumber: String = null,
+    enableAnonymousUser: js.UndefOr[Boolean] = js.undefined,
+    idpConfig: js.Array[SchemaIdpConfig] = null,
+    legacyResetPasswordTemplate: SchemaEmailTemplate = null,
+    resetPasswordTemplate: SchemaEmailTemplate = null,
+    useEmailSending: js.UndefOr[Boolean] = js.undefined,
+    verifyEmailTemplate: SchemaEmailTemplate = null
+  ): SchemaIdentitytoolkitRelyingpartySetProjectConfigRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowPasswordUser)) __obj.updateDynamic("allowPasswordUser")(allowPasswordUser.get.asInstanceOf[js.Any])
+    if (apiKey != null) __obj.updateDynamic("apiKey")(apiKey.asInstanceOf[js.Any])
+    if (authorizedDomains != null) __obj.updateDynamic("authorizedDomains")(authorizedDomains.asInstanceOf[js.Any])
+    if (changeEmailTemplate != null) __obj.updateDynamic("changeEmailTemplate")(changeEmailTemplate.asInstanceOf[js.Any])
+    if (delegatedProjectNumber != null) __obj.updateDynamic("delegatedProjectNumber")(delegatedProjectNumber.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAnonymousUser)) __obj.updateDynamic("enableAnonymousUser")(enableAnonymousUser.get.asInstanceOf[js.Any])
+    if (idpConfig != null) __obj.updateDynamic("idpConfig")(idpConfig.asInstanceOf[js.Any])
+    if (legacyResetPasswordTemplate != null) __obj.updateDynamic("legacyResetPasswordTemplate")(legacyResetPasswordTemplate.asInstanceOf[js.Any])
+    if (resetPasswordTemplate != null) __obj.updateDynamic("resetPasswordTemplate")(resetPasswordTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(useEmailSending)) __obj.updateDynamic("useEmailSending")(useEmailSending.get.asInstanceOf[js.Any])
+    if (verifyEmailTemplate != null) __obj.updateDynamic("verifyEmailTemplate")(verifyEmailTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIdentitytoolkitRelyingpartySetProjectConfigRequest]
   }
-  @scala.inline
-  implicit class SchemaIdentitytoolkitRelyingpartySetProjectConfigRequestOps[Self <: SchemaIdentitytoolkitRelyingpartySetProjectConfigRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowPasswordUser(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPasswordUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowPasswordUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPasswordUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizedDomains(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizedDomains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizedDomains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizedDomains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChangeEmailTemplate(value: SchemaEmailTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeEmailTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangeEmailTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeEmailTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelegatedProjectNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatedProjectNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelegatedProjectNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatedProjectNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAnonymousUser(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnonymousUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAnonymousUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnonymousUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdpConfig(value: js.Array[SchemaIdpConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idpConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdpConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idpConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegacyResetPasswordTemplate(value: SchemaEmailTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyResetPasswordTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegacyResetPasswordTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyResetPasswordTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetPasswordTemplate(value: SchemaEmailTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetPasswordTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetPasswordTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetPasswordTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEmailSending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEmailSending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEmailSending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEmailSending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifyEmailTemplate(value: SchemaEmailTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyEmailTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerifyEmailTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyEmailTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

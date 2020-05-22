@@ -8,7 +8,7 @@ import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCar
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusStyles
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -24,7 +24,7 @@ object DocumentCardStatus {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -36,7 +36,7 @@ object DocumentCardStatus {
     @scala.inline
     def statusIcon(value: String): this.type = set("statusIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDocumentCardStatusStyleProps => Partial[IDocumentCardStatusStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDocumentCardStatusStyleProps => DeepPartial[IDocumentCardStatusStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardStatusStyleProps, IDocumentCardStatusStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

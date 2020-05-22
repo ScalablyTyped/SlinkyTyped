@@ -11,7 +11,7 @@ trait LambdaFunctionInfo extends js.Object {
     */
   var currentVersion: js.UndefOr[Version] = js.native
   /**
-    *  The alias of a Lambda function. For more information, see Introduction to AWS Lambda Aliases. 
+    *  The alias of a Lambda function. For more information, see AWS Lambda Function Aliases in the AWS Lambda Developer Guide.
     */
   var functionAlias: js.UndefOr[LambdaFunctionAlias] = js.native
   /**
@@ -30,77 +30,20 @@ trait LambdaFunctionInfo extends js.Object {
 
 object LambdaFunctionInfo {
   @scala.inline
-  def apply(): LambdaFunctionInfo = {
+  def apply(
+    currentVersion: Version = null,
+    functionAlias: LambdaFunctionAlias = null,
+    functionName: LambdaFunctionName = null,
+    targetVersion: Version = null,
+    targetVersionWeight: js.UndefOr[TrafficWeight] = js.undefined
+  ): LambdaFunctionInfo = {
     val __obj = js.Dynamic.literal()
+    if (currentVersion != null) __obj.updateDynamic("currentVersion")(currentVersion.asInstanceOf[js.Any])
+    if (functionAlias != null) __obj.updateDynamic("functionAlias")(functionAlias.asInstanceOf[js.Any])
+    if (functionName != null) __obj.updateDynamic("functionName")(functionName.asInstanceOf[js.Any])
+    if (targetVersion != null) __obj.updateDynamic("targetVersion")(targetVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetVersionWeight)) __obj.updateDynamic("targetVersionWeight")(targetVersionWeight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LambdaFunctionInfo]
   }
-  @scala.inline
-  implicit class LambdaFunctionInfoOps[Self <: LambdaFunctionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionAlias(value: LambdaFunctionAlias): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionAlias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionName(value: LambdaFunctionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetVersionWeight(value: TrafficWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetVersionWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetVersionWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetVersionWeight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

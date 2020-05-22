@@ -5,153 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Element extends js.Object {
-  var attributes: js.UndefOr[Attributes] = js.native
-  var cdata: js.UndefOr[String] = js.native
-  var comment: js.UndefOr[String] = js.native
-  var declaration: js.UndefOr[AttributesDeclarationAttributes] = js.native
-  var doctype: js.UndefOr[String] = js.native
-  var elements: js.UndefOr[js.Array[Element]] = js.native
-  var instruction: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var text: js.UndefOr[String | Double | Boolean] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var attributes: js.UndefOr[Attributes] = js.undefined
+  var cdata: js.UndefOr[String] = js.undefined
+  var comment: js.UndefOr[String] = js.undefined
+  var declaration: js.UndefOr[AttributesDeclarationAttributes] = js.undefined
+  var doctype: js.UndefOr[String] = js.undefined
+  var elements: js.UndefOr[js.Array[Element]] = js.undefined
+  var instruction: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String | Double | Boolean] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object Element {
   @scala.inline
-  def apply(): Element = {
+  def apply(
+    attributes: Attributes = null,
+    cdata: String = null,
+    comment: String = null,
+    declaration: AttributesDeclarationAttributes = null,
+    doctype: String = null,
+    elements: js.Array[Element] = null,
+    instruction: String = null,
+    name: String = null,
+    text: String | Double | Boolean = null,
+    `type`: String = null
+  ): Element = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (cdata != null) __obj.updateDynamic("cdata")(cdata.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (declaration != null) __obj.updateDynamic("declaration")(declaration.asInstanceOf[js.Any])
+    if (doctype != null) __obj.updateDynamic("doctype")(doctype.asInstanceOf[js.Any])
+    if (elements != null) __obj.updateDynamic("elements")(elements.asInstanceOf[js.Any])
+    if (instruction != null) __obj.updateDynamic("instruction")(instruction.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Element]
   }
-  @scala.inline
-  implicit class ElementOps[Self <: Element] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: Attributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdata(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeclaration(value: AttributesDeclarationAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeclaration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoctype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doctype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoctype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doctype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElements(value: js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstruction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstruction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String | Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

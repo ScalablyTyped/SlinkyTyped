@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
   * describes how a single data column is treated when creating subtotals.
   * @see com.sun.star.sheet.SubTotalDescriptor
   */
-@js.native
 trait SubTotalColumn extends js.Object {
   /** the index of the column inside the source data area. */
-  var Column: Double = js.native
+  var Column: Double
   /** specifies what kind of subtotals are calculated. */
-  var Function: GeneralFunction = js.native
+  var Function: GeneralFunction
 }
 
 object SubTotalColumn {
@@ -22,25 +21,5 @@ object SubTotalColumn {
     val __obj = js.Dynamic.literal(Column = Column.asInstanceOf[js.Any], Function = Function.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubTotalColumn]
   }
-  @scala.inline
-  implicit class SubTotalColumnOps[Self <: SubTotalColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFunction(value: GeneralFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Function")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -11,7 +11,7 @@ trait GetReservationPurchaseRecommendationRequest extends js.Object {
     */
   var AccountId: js.UndefOr[GenericString] = js.native
   /**
-    * The account scope that you want recommendations for. PAYER means that AWS includes the master account and any member accounts when it calculates its recommendations. LINKED means that AWS includes only member accounts when it calculates its recommendations. Valid values are PAYER and LINKED.
+    * The account scope that you want your recommendations for. Amazon Web Services calculates recommendations including the payer account and linked accounts if the value is set to PAYER. If the value is LINKED, recommendations are calculated for individual linked accounts only.
     */
   var AccountScope: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.AccountScope] = js.native
   /**
@@ -46,119 +46,27 @@ trait GetReservationPurchaseRecommendationRequest extends js.Object {
 
 object GetReservationPurchaseRecommendationRequest {
   @scala.inline
-  def apply(Service: GenericString): GetReservationPurchaseRecommendationRequest = {
+  def apply(
+    Service: GenericString,
+    AccountId: GenericString = null,
+    AccountScope: AccountScope = null,
+    LookbackPeriodInDays: LookbackPeriodInDays = null,
+    NextPageToken: NextPageToken = null,
+    PageSize: js.UndefOr[NonNegativeInteger] = js.undefined,
+    PaymentOption: PaymentOption = null,
+    ServiceSpecification: ServiceSpecification = null,
+    TermInYears: TermInYears = null
+  ): GetReservationPurchaseRecommendationRequest = {
     val __obj = js.Dynamic.literal(Service = Service.asInstanceOf[js.Any])
+    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
+    if (AccountScope != null) __obj.updateDynamic("AccountScope")(AccountScope.asInstanceOf[js.Any])
+    if (LookbackPeriodInDays != null) __obj.updateDynamic("LookbackPeriodInDays")(LookbackPeriodInDays.asInstanceOf[js.Any])
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(PageSize)) __obj.updateDynamic("PageSize")(PageSize.get.asInstanceOf[js.Any])
+    if (PaymentOption != null) __obj.updateDynamic("PaymentOption")(PaymentOption.asInstanceOf[js.Any])
+    if (ServiceSpecification != null) __obj.updateDynamic("ServiceSpecification")(ServiceSpecification.asInstanceOf[js.Any])
+    if (TermInYears != null) __obj.updateDynamic("TermInYears")(TermInYears.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetReservationPurchaseRecommendationRequest]
   }
-  @scala.inline
-  implicit class GetReservationPurchaseRecommendationRequestOps[Self <: GetReservationPurchaseRecommendationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withService(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccountId(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccountScope(value: AccountScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookbackPeriodInDays(value: LookbackPeriodInDays): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LookbackPeriodInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookbackPeriodInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LookbackPeriodInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: NextPageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: NonNegativeInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentOption(value: PaymentOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceSpecification(value: ServiceSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceSpecification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceSpecification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTermInYears(value: TermInYears): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TermInYears")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTermInYears: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TermInYears")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,12 @@ trait InstanceStatusDetails extends js.Object {
 
 object InstanceStatusDetails {
   @scala.inline
-  def apply(): InstanceStatusDetails = {
+  def apply(ImpairedSince: js.Date = null, Name: StatusName = null, Status: StatusType = null): InstanceStatusDetails = {
     val __obj = js.Dynamic.literal()
+    if (ImpairedSince != null) __obj.updateDynamic("ImpairedSince")(ImpairedSince.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceStatusDetails]
   }
-  @scala.inline
-  implicit class InstanceStatusDetailsOps[Self <: InstanceStatusDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImpairedSince(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImpairedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpairedSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImpairedSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: StatusName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: StatusType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

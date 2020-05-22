@@ -1,13 +1,12 @@
 package typingsSlinky.baconjs
 
-import typingsSlinky.baconjs.replyMod.Reply
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object baconjsStrings {
   @js.native
-  sealed trait `Lessthansignno-moreGreaterthansign` extends Reply
+  sealed trait `Lessthansignno-moreGreaterthansign` extends js.Object
   
   @js.native
   sealed trait ObjectTemplate extends js.Object

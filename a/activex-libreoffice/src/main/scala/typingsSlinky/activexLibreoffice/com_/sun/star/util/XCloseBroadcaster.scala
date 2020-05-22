@@ -15,18 +15,17 @@ import scala.scalajs.js.annotation._
   * about real closing.
   * @see
   */
-@js.native
 trait XCloseBroadcaster extends XInterface {
   /**
     * adds the specified listener to receive or have a veto for "close" events
     * @param Listener the listener which is interest on closing events
     */
-  def addCloseListener(Listener: XCloseListener): Unit = js.native
+  def addCloseListener(Listener: XCloseListener): Unit
   /**
     * removes the specified listener
     * @param Listener the listener which isn't interest on closing events any longer
     */
-  def removeCloseListener(Listener: XCloseListener): Unit = js.native
+  def removeCloseListener(Listener: XCloseListener): Unit
 }
 
 object XCloseBroadcaster {
@@ -41,25 +40,5 @@ object XCloseBroadcaster {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addCloseListener = js.Any.fromFunction1(addCloseListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeCloseListener = js.Any.fromFunction1(removeCloseListener))
     __obj.asInstanceOf[XCloseBroadcaster]
   }
-  @scala.inline
-  implicit class XCloseBroadcasterOps[Self <: XCloseBroadcaster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddCloseListener(value: XCloseListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addCloseListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveCloseListener(value: XCloseListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCloseListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

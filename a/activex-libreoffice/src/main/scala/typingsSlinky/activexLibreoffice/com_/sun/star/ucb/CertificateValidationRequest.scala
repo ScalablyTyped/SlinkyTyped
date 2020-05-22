@@ -9,14 +9,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An error specifying an invalid certificate. */
-@js.native
 trait CertificateValidationRequest extends ClassifiedInteractionRequest {
   /** The certificate itself. */
-  var Certificate: XCertificate = js.native
+  var Certificate: XCertificate
   /** This value describes the validity of the certificate. */
-  var CertificateValidity: Double = js.native
+  var CertificateValidity: Double
   /** The host name. */
-  var HostName: String = js.native
+  var HostName: String
 }
 
 object CertificateValidationRequest {
@@ -32,31 +31,5 @@ object CertificateValidationRequest {
     val __obj = js.Dynamic.literal(Certificate = Certificate.asInstanceOf[js.Any], CertificateValidity = CertificateValidity.asInstanceOf[js.Any], Classification = Classification.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], HostName = HostName.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateValidationRequest]
   }
-  @scala.inline
-  implicit class CertificateValidationRequestOps[Self <: CertificateValidationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificate(value: XCertificate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertificateValidity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateValidity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

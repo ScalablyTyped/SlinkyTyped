@@ -4,177 +4,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ManagedDeviceMobileAppConfiguration extends Entity {
   // The list of group assignemenets for app configration.
-  var assignments: js.UndefOr[js.Array[ManagedDeviceMobileAppConfigurationAssignment]] = js.native
+  var assignments: js.UndefOr[js.Array[ManagedDeviceMobileAppConfigurationAssignment]] = js.undefined
   // DateTime the object was created.
-  var createdDateTime: js.UndefOr[String] = js.native
+  var createdDateTime: js.UndefOr[String] = js.undefined
   // Admin provided description of the Device Configuration.
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   // App configuration device status summary.
-  var deviceStatusSummary: js.UndefOr[ManagedDeviceMobileAppConfigurationDeviceSummary] = js.native
+  var deviceStatusSummary: js.UndefOr[ManagedDeviceMobileAppConfigurationDeviceSummary] = js.undefined
   // List of ManagedDeviceMobileAppConfigurationDeviceStatus.
-  var deviceStatuses: js.UndefOr[js.Array[ManagedDeviceMobileAppConfigurationDeviceStatus]] = js.native
+  var deviceStatuses: js.UndefOr[js.Array[ManagedDeviceMobileAppConfigurationDeviceStatus]] = js.undefined
   // Admin provided name of the device configuration.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   // DateTime the object was last modified.
-  var lastModifiedDateTime: js.UndefOr[String] = js.native
+  var lastModifiedDateTime: js.UndefOr[String] = js.undefined
   // the associated app.
-  var targetedMobileApps: js.UndefOr[js.Array[String]] = js.native
+  var targetedMobileApps: js.UndefOr[js.Array[String]] = js.undefined
   // App configuration user status summary.
-  var userStatusSummary: js.UndefOr[ManagedDeviceMobileAppConfigurationUserSummary] = js.native
+  var userStatusSummary: js.UndefOr[ManagedDeviceMobileAppConfigurationUserSummary] = js.undefined
   // List of ManagedDeviceMobileAppConfigurationUserStatus.
-  var userStatuses: js.UndefOr[js.Array[ManagedDeviceMobileAppConfigurationUserStatus]] = js.native
+  var userStatuses: js.UndefOr[js.Array[ManagedDeviceMobileAppConfigurationUserStatus]] = js.undefined
   // Version of the device configuration.
-  var version: js.UndefOr[Double] = js.native
+  var version: js.UndefOr[Double] = js.undefined
 }
 
 object ManagedDeviceMobileAppConfiguration {
   @scala.inline
-  def apply(): ManagedDeviceMobileAppConfiguration = {
+  def apply(
+    assignments: js.Array[ManagedDeviceMobileAppConfigurationAssignment] = null,
+    createdDateTime: String = null,
+    description: String = null,
+    deviceStatusSummary: ManagedDeviceMobileAppConfigurationDeviceSummary = null,
+    deviceStatuses: js.Array[ManagedDeviceMobileAppConfigurationDeviceStatus] = null,
+    displayName: String = null,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    targetedMobileApps: js.Array[String] = null,
+    userStatusSummary: ManagedDeviceMobileAppConfigurationUserSummary = null,
+    userStatuses: js.Array[ManagedDeviceMobileAppConfigurationUserStatus] = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): ManagedDeviceMobileAppConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (deviceStatusSummary != null) __obj.updateDynamic("deviceStatusSummary")(deviceStatusSummary.asInstanceOf[js.Any])
+    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (targetedMobileApps != null) __obj.updateDynamic("targetedMobileApps")(targetedMobileApps.asInstanceOf[js.Any])
+    if (userStatusSummary != null) __obj.updateDynamic("userStatusSummary")(userStatusSummary.asInstanceOf[js.Any])
+    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManagedDeviceMobileAppConfiguration]
   }
-  @scala.inline
-  implicit class ManagedDeviceMobileAppConfigurationOps[Self <: ManagedDeviceMobileAppConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssignments(value: js.Array[ManagedDeviceMobileAppConfigurationAssignment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceStatusSummary(value: ManagedDeviceMobileAppConfigurationDeviceSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceStatusSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceStatusSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceStatusSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceStatuses(value: js.Array[ManagedDeviceMobileAppConfigurationDeviceStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceStatuses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceStatuses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetedMobileApps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedMobileApps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetedMobileApps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedMobileApps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserStatusSummary(value: ManagedDeviceMobileAppConfigurationUserSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userStatusSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserStatusSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userStatusSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserStatuses(value: js.Array[ManagedDeviceMobileAppConfigurationUserStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserStatuses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userStatuses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

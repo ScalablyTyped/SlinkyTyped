@@ -18,20 +18,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RasterFunctionProperties extends js.Object {
   /**
     * The arguments for the raster function. The structure depends on the function specified. See [raster functions](https://developers.arcgis.com/documentation/common-data-types/raster-function-objects.htm) for a list of functions and their arguments. Also parses the arguments of RFT format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterFunction.html#functionArguments)
     */
-  var functionArguments: js.UndefOr[js.Any] = js.native
+  var functionArguments: js.UndefOr[js.Any] = js.undefined
   /**
     * The raster function name. See [raster functions](https://developers.arcgis.com/documentation/common-data-types/raster-function-objects.htm) for a list of functions and their arguments. The name in the raster function in RFT JSON format is also parsed to functionName.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterFunction.html#functionName)
     */
-  var functionName: js.UndefOr[String] = js.native
+  var functionName: js.UndefOr[String] = js.undefined
   /**
     * Defines the pixel type of the output image.
     *
@@ -41,76 +40,29 @@ trait RasterFunctionProperties extends js.Object {
     */
   var outputPixelType: js.UndefOr[
     c128 | c64 | f32 | f64 | s16 | s32 | s8 | u1 | u16 | u2 | u32 | u4 | u8 | unknown
-  ] = js.native
+  ] = js.undefined
   /**
     * The variable name for the raster function.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterFunction.html#variableName)
     */
-  var variableName: js.UndefOr[String] = js.native
+  var variableName: js.UndefOr[String] = js.undefined
 }
 
 object RasterFunctionProperties {
   @scala.inline
-  def apply(): RasterFunctionProperties = {
+  def apply(
+    functionArguments: js.Any = null,
+    functionName: String = null,
+    outputPixelType: c128 | c64 | f32 | f64 | s16 | s32 | s8 | u1 | u16 | u2 | u32 | u4 | u8 | unknown = null,
+    variableName: String = null
+  ): RasterFunctionProperties = {
     val __obj = js.Dynamic.literal()
+    if (functionArguments != null) __obj.updateDynamic("functionArguments")(functionArguments.asInstanceOf[js.Any])
+    if (functionName != null) __obj.updateDynamic("functionName")(functionName.asInstanceOf[js.Any])
+    if (outputPixelType != null) __obj.updateDynamic("outputPixelType")(outputPixelType.asInstanceOf[js.Any])
+    if (variableName != null) __obj.updateDynamic("variableName")(variableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[RasterFunctionProperties]
   }
-  @scala.inline
-  implicit class RasterFunctionPropertiesOps[Self <: RasterFunctionProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionArguments(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionArguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputPixelType(value: c128 | c64 | f32 | f64 | s16 | s32 | s8 | u1 | u16 | u2 | u32 | u4 | u8 | unknown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPixelType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputPixelType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPixelType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,19 +18,5 @@ object GetIdentityPoliciesResponse {
     val __obj = js.Dynamic.literal(Policies = Policies.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIdentityPoliciesResponse]
   }
-  @scala.inline
-  implicit class GetIdentityPoliciesResponseOps[Self <: GetIdentityPoliciesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicies(value: PolicyMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -11,93 +11,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Readonly<baseui.baseui/toast.SharedStylePropsArg> */
-@js.native
 trait ReadonlySharedStylePropsA extends js.Object {
   @JSName("$closeable")
-  val $closeable: js.UndefOr[Boolean] = js.native
+  val $closeable: js.UndefOr[Boolean] = js.undefined
   @JSName("$isRendered")
-  val $isRendered: js.UndefOr[Boolean] = js.native
+  val $isRendered: js.UndefOr[Boolean] = js.undefined
   @JSName("$isVisible")
-  val $isVisible: js.UndefOr[Boolean] = js.native
+  val $isVisible: js.UndefOr[Boolean] = js.undefined
   @JSName("$kind")
-  val $kind: js.UndefOr[info | positive | warning | negative] = js.native
+  val $kind: js.UndefOr[info | positive | warning | negative] = js.undefined
   @JSName("$type")
-  val $type: js.UndefOr[`inline` | toast] = js.native
+  val $type: js.UndefOr[`inline` | toast] = js.undefined
 }
 
 object ReadonlySharedStylePropsA {
   @scala.inline
-  def apply(): ReadonlySharedStylePropsA = {
+  def apply(
+    $closeable: js.UndefOr[Boolean] = js.undefined,
+    $isRendered: js.UndefOr[Boolean] = js.undefined,
+    $isVisible: js.UndefOr[Boolean] = js.undefined,
+    $kind: info | positive | warning | negative = null,
+    $type: `inline` | toast = null
+  ): ReadonlySharedStylePropsA = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($closeable)) __obj.updateDynamic("$closeable")($closeable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($isRendered)) __obj.updateDynamic("$isRendered")($isRendered.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($isVisible)) __obj.updateDynamic("$isVisible")($isVisible.get.asInstanceOf[js.Any])
+    if ($kind != null) __obj.updateDynamic("$kind")($kind.asInstanceOf[js.Any])
+    if ($type != null) __obj.updateDynamic("$type")($type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadonlySharedStylePropsA]
   }
-  @scala.inline
-  implicit class ReadonlySharedStylePropsAOps[Self <: ReadonlySharedStylePropsA] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$closeable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$closeable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$closeable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$closeable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$isRendered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isRendered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$isRendered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isRendered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$isVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$isVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$kind(value: info | positive | warning | negative): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$kind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$type(value: `inline` | toast): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

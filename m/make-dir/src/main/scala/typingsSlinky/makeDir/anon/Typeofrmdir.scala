@@ -9,10 +9,6 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Typeofrmdir extends js.Object {
-  /**
-    * Asynchronous rmdir(2) - delete a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    */
   def apply(path: PathLike, callback: NoParamCallback): Unit = js.native
   def apply(path: PathLike, options: RmDirAsyncOptions, callback: NoParamCallback): Unit = js.native
   /**

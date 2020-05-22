@@ -20,41 +20,14 @@ trait XssMatchSetArgs extends js.Object {
 
 object XssMatchSetArgs {
   @scala.inline
-  def apply(): XssMatchSetArgs = {
+  def apply(
+    name: Input[String] = null,
+    xssMatchTuples: Input[js.Array[Input[XssMatchSetXssMatchTuple]]] = null
+  ): XssMatchSetArgs = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (xssMatchTuples != null) __obj.updateDynamic("xssMatchTuples")(xssMatchTuples.asInstanceOf[js.Any])
     __obj.asInstanceOf[XssMatchSetArgs]
   }
-  @scala.inline
-  implicit class XssMatchSetArgsOps[Self <: XssMatchSetArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXssMatchTuples(value: Input[js.Array[Input[XssMatchSetXssMatchTuple]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xssMatchTuples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXssMatchTuples: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xssMatchTuples")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

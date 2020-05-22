@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GlideSysAttachment extends js.Object {
-  def copy(sourceTable: String, sourceSysId: String, destinationTable: String, destinationSysId: String): Unit = js.native
-  def deleteAttachment(sysId: String): Unit = js.native
-  def getContent(record: GlideRecord): js.Any = js.native
-  def getContentBase64(record: GlideRecord): String = js.native
-  def getContentStream(sysId: String): js.Object = js.native
-  def write(record: GlideRecord, fileName: String, contentType: String, data: js.Any): String = js.native
-  def writeBase64(record: GlideRecord, fileName: String, contentType: String, base64Content: String): String = js.native
-  def writeContentStream(record: GlideRecord, fileName: String, contentType: String, inputStream: js.Object): String = js.native
+  def copy(sourceTable: String, sourceSysId: String, destinationTable: String, destinationSysId: String): Unit
+  def deleteAttachment(sysId: String): Unit
+  def getContent(record: GlideRecord): js.Any
+  def getContentBase64(record: GlideRecord): String
+  def getContentStream(sysId: String): js.Object
+  def write(record: GlideRecord, fileName: String, contentType: String, data: js.Any): String
+  def writeBase64(record: GlideRecord, fileName: String, contentType: String, base64Content: String): String
+  def writeContentStream(record: GlideRecord, fileName: String, contentType: String, inputStream: js.Object): String
 }
 
 object GlideSysAttachment {
@@ -32,61 +31,5 @@ object GlideSysAttachment {
     val __obj = js.Dynamic.literal(copy = js.Any.fromFunction4(copy), deleteAttachment = js.Any.fromFunction1(deleteAttachment), getContent = js.Any.fromFunction1(getContent), getContentBase64 = js.Any.fromFunction1(getContentBase64), getContentStream = js.Any.fromFunction1(getContentStream), write = js.Any.fromFunction4(write), writeBase64 = js.Any.fromFunction4(writeBase64), writeContentStream = js.Any.fromFunction4(writeContentStream))
     __obj.asInstanceOf[GlideSysAttachment]
   }
-  @scala.inline
-  implicit class GlideSysAttachmentOps[Self <: GlideSysAttachment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopy(value: (String, String, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteAttachment(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAttachment")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetContent(value: GlideRecord => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetContentBase64(value: GlideRecord => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentBase64")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetContentStream(value: String => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentStream")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWrite(value: (GlideRecord, String, String, js.Any) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withWriteBase64(value: (GlideRecord, String, String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeBase64")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withWriteContentStream(value: (GlideRecord, String, String, js.Object) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeContentStream")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

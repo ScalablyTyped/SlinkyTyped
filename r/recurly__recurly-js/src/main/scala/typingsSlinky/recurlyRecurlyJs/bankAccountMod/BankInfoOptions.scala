@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BankInfoOptions extends js.Object {
-  var routingNumber: String = js.native
+  var routingNumber: String
 }
 
 object BankInfoOptions {
@@ -15,19 +14,5 @@ object BankInfoOptions {
     val __obj = js.Dynamic.literal(routingNumber = routingNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[BankInfoOptions]
   }
-  @scala.inline
-  implicit class BankInfoOptionsOps[Self <: BankInfoOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoutingNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routingNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

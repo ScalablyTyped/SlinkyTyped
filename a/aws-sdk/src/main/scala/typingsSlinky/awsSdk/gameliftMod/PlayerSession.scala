@@ -17,7 +17,7 @@ trait PlayerSession extends js.Object {
   /**
     *  The Amazon Resource Name (ARN) associated with the GameLift fleet that the player's game session is running on. 
     */
-  var FleetArn: js.UndefOr[ArnStringModel] = js.native
+  var FleetArn: js.UndefOr[typingsSlinky.awsSdk.gameliftMod.FleetArn] = js.native
   /**
     * A unique identifier for a fleet that the player's game session is running on.
     */
@@ -58,161 +58,34 @@ trait PlayerSession extends js.Object {
 
 object PlayerSession {
   @scala.inline
-  def apply(): PlayerSession = {
+  def apply(
+    CreationTime: js.Date = null,
+    DnsName: DnsName = null,
+    FleetArn: FleetArn = null,
+    FleetId: FleetId = null,
+    GameSessionId: NonZeroAndMaxString = null,
+    IpAddress: IpAddress = null,
+    PlayerData: PlayerData = null,
+    PlayerId: NonZeroAndMaxString = null,
+    PlayerSessionId: PlayerSessionId = null,
+    Port: js.UndefOr[PortNumber] = js.undefined,
+    Status: PlayerSessionStatus = null,
+    TerminationTime: js.Date = null
+  ): PlayerSession = {
     val __obj = js.Dynamic.literal()
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (DnsName != null) __obj.updateDynamic("DnsName")(DnsName.asInstanceOf[js.Any])
+    if (FleetArn != null) __obj.updateDynamic("FleetArn")(FleetArn.asInstanceOf[js.Any])
+    if (FleetId != null) __obj.updateDynamic("FleetId")(FleetId.asInstanceOf[js.Any])
+    if (GameSessionId != null) __obj.updateDynamic("GameSessionId")(GameSessionId.asInstanceOf[js.Any])
+    if (IpAddress != null) __obj.updateDynamic("IpAddress")(IpAddress.asInstanceOf[js.Any])
+    if (PlayerData != null) __obj.updateDynamic("PlayerData")(PlayerData.asInstanceOf[js.Any])
+    if (PlayerId != null) __obj.updateDynamic("PlayerId")(PlayerId.asInstanceOf[js.Any])
+    if (PlayerSessionId != null) __obj.updateDynamic("PlayerSessionId")(PlayerSessionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Port)) __obj.updateDynamic("Port")(Port.get.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (TerminationTime != null) __obj.updateDynamic("TerminationTime")(TerminationTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayerSession]
   }
-  @scala.inline
-  implicit class PlayerSessionOps[Self <: PlayerSession] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsName(value: DnsName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFleetArn(value: ArnStringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFleetArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFleetId(value: FleetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFleetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGameSessionId(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameSessionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpAddress(value: IpAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayerData(value: PlayerData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayerData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayerId(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayerSessionId(value: PlayerSessionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayerSessionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSessionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: PortNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: PlayerSessionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerminationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerminationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

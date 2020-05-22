@@ -19,35 +19,10 @@ trait GetIdentityVerificationAt extends js.Object {
 
 object GetIdentityVerificationAt {
   @scala.inline
-  def apply(Identities: IdentityList): GetIdentityVerificationAt = {
+  def apply(Identities: IdentityList, $waiter: WaiterConfiguration = null): GetIdentityVerificationAt = {
     val __obj = js.Dynamic.literal(Identities = Identities.asInstanceOf[js.Any])
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIdentityVerificationAt]
   }
-  @scala.inline
-  implicit class GetIdentityVerificationAtOps[Self <: GetIdentityVerificationAt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentities(value: IdentityList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

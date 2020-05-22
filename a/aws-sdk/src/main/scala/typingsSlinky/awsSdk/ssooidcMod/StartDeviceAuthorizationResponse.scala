@@ -34,89 +34,22 @@ trait StartDeviceAuthorizationResponse extends js.Object {
 
 object StartDeviceAuthorizationResponse {
   @scala.inline
-  def apply(): StartDeviceAuthorizationResponse = {
+  def apply(
+    deviceCode: DeviceCode = null,
+    expiresIn: js.UndefOr[ExpirationInSeconds] = js.undefined,
+    interval: js.UndefOr[IntervalInSeconds] = js.undefined,
+    userCode: UserCode = null,
+    verificationUri: URI = null,
+    verificationUriComplete: URI = null
+  ): StartDeviceAuthorizationResponse = {
     val __obj = js.Dynamic.literal()
+    if (deviceCode != null) __obj.updateDynamic("deviceCode")(deviceCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(expiresIn)) __obj.updateDynamic("expiresIn")(expiresIn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (userCode != null) __obj.updateDynamic("userCode")(userCode.asInstanceOf[js.Any])
+    if (verificationUri != null) __obj.updateDynamic("verificationUri")(verificationUri.asInstanceOf[js.Any])
+    if (verificationUriComplete != null) __obj.updateDynamic("verificationUriComplete")(verificationUriComplete.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartDeviceAuthorizationResponse]
   }
-  @scala.inline
-  implicit class StartDeviceAuthorizationResponseOps[Self <: StartDeviceAuthorizationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceCode(value: DeviceCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiresIn(value: ExpirationInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiresIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: IntervalInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserCode(value: UserCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerificationUri(value: URI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerificationUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerificationUriComplete(value: URI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationUriComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerificationUriComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationUriComplete")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

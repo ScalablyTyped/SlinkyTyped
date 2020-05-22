@@ -12,8 +12,34 @@ trait SearchOptions extends js.Object
 
 object SearchOptions {
   @scala.inline
-  implicit def apply(value: SearchOptionsWithQ): SearchOptions = value.asInstanceOf[SearchOptions]
+  def SearchOptionsWithQ(
+    q: String,
+    from: String = null,
+    rows: js.UndefOr[Double] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    until: String = null
+  ): SearchOptions = {
+    val __obj = js.Dynamic.literal(q = q.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (until != null) __obj.updateDynamic("until")(until.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SearchOptions]
+  }
   @scala.inline
-  implicit def apply(value: SearchOptionsWithQuery): SearchOptions = value.asInstanceOf[SearchOptions]
+  def SearchOptionsWithQuery(
+    query: String,
+    from: String = null,
+    rows: js.UndefOr[Double] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    until: String = null
+  ): SearchOptions = {
+    val __obj = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (until != null) __obj.updateDynamic("until")(until.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SearchOptions]
+  }
 }
 

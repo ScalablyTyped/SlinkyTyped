@@ -4,2983 +4,989 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Windows10GeneralConfiguration extends DeviceConfiguration {
   /**
     * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a
     * Microsoft account.
     */
-  var accountsBlockAddingNonMicrosoftAccountEmail: js.UndefOr[Boolean] = js.native
+  var accountsBlockAddingNonMicrosoftAccountEmail: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
-  var antiTheftModeBlocked: js.UndefOr[Boolean] = js.native
+  var antiTheftModeBlocked: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are:
     * notConfigured, blocked, allowed.
     */
-  var appsAllowTrustedAppsSideloading: js.UndefOr[StateManagementSetting] = js.native
+  var appsAllowTrustedAppsSideloading: js.UndefOr[StateManagementSetting] = js.undefined
   /**
     * Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were
     * downloaded.
     */
-  var appsBlockWindowsStoreOriginatedApps: js.UndefOr[Boolean] = js.native
+  var appsBlockWindowsStoreOriginatedApps: js.UndefOr[Boolean] = js.undefined
   // Specify a list of allowed Bluetooth services and profiles in hex formatted strings.
-  var bluetoothAllowedServices: js.UndefOr[js.Array[String]] = js.native
+  var bluetoothAllowedServices: js.UndefOr[js.Array[String]] = js.undefined
   // Whether or not to Block the user from using bluetooth advertising.
-  var bluetoothBlockAdvertising: js.UndefOr[Boolean] = js.native
+  var bluetoothBlockAdvertising: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from using bluetooth discoverable mode.
-  var bluetoothBlockDiscoverableMode: js.UndefOr[Boolean] = js.native
+  var bluetoothBlockDiscoverableMode: js.UndefOr[Boolean] = js.undefined
   // Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device.
-  var bluetoothBlockPrePairing: js.UndefOr[Boolean] = js.native
+  var bluetoothBlockPrePairing: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from using bluetooth.
-  var bluetoothBlocked: js.UndefOr[Boolean] = js.native
+  var bluetoothBlocked: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from accessing the camera of the device.
-  var cameraBlocked: js.UndefOr[Boolean] = js.native
+  var cameraBlocked: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from using data over cellular while roaming.
-  var cellularBlockDataWhenRoaming: js.UndefOr[Boolean] = js.native
+  var cellularBlockDataWhenRoaming: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from using VPN over cellular.
-  var cellularBlockVpn: js.UndefOr[Boolean] = js.native
+  var cellularBlockVpn: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from using VPN when roaming over cellular.
-  var cellularBlockVpnWhenRoaming: js.UndefOr[Boolean] = js.native
+  var cellularBlockVpnWhenRoaming: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from doing manual root certificate installation.
-  var certificatesBlockManualRootCertificateInstallation: js.UndefOr[Boolean] = js.native
+  var certificatesBlockManualRootCertificateInstallation: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote
     * messaging, remote app sessions and other cross-device experiences.
     */
-  var connectedDevicesServiceBlocked: js.UndefOr[Boolean] = js.native
+  var connectedDevicesServiceBlocked: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from using copy paste.
-  var copyPasteBlocked: js.UndefOr[Boolean] = js.native
+  var copyPasteBlocked: js.UndefOr[Boolean] = js.undefined
   // Whether or not to Block the user from using Cortana.
-  var cortanaBlocked: js.UndefOr[Boolean] = js.native
+  var cortanaBlocked: js.UndefOr[Boolean] = js.undefined
   // Whether or not to block end user access to Defender.
-  var defenderBlockEndUserAccess: js.UndefOr[Boolean] = js.native
+  var defenderBlockEndUserAccess: js.UndefOr[Boolean] = js.undefined
   // Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
-  var defenderCloudBlockLevel: js.UndefOr[DefenderCloudBlockLevelType] = js.native
+  var defenderCloudBlockLevel: js.UndefOr[DefenderCloudBlockLevelType] = js.undefined
   // Number of days before deleting quarantined malware. Valid values 0 to 90
-  var defenderDaysBeforeDeletingQuarantinedMalware: js.UndefOr[Double] = js.native
+  var defenderDaysBeforeDeletingQuarantinedMalware: js.UndefOr[Double] = js.undefined
   // Gets or sets Defender’s actions to take on detected Malware per threat level.
-  var defenderDetectedMalwareActions: js.UndefOr[DefenderDetectedMalwareActions] = js.native
+  var defenderDetectedMalwareActions: js.UndefOr[DefenderDetectedMalwareActions] = js.undefined
   // File extensions to exclude from scans and real time protection.
-  var defenderFileExtensionsToExclude: js.UndefOr[js.Array[String]] = js.native
+  var defenderFileExtensionsToExclude: js.UndefOr[js.Array[String]] = js.undefined
   // Files and folder to exclude from scans and real time protection.
-  var defenderFilesAndFoldersToExclude: js.UndefOr[js.Array[String]] = js.native
+  var defenderFilesAndFoldersToExclude: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles,
     * monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
     */
-  var defenderMonitorFileActivity: js.UndefOr[DefenderMonitorFileActivity] = js.native
+  var defenderMonitorFileActivity: js.UndefOr[DefenderMonitorFileActivity] = js.undefined
   // Processes to exclude from scans and real time protection.
-  var defenderProcessesToExclude: js.UndefOr[js.Array[String]] = js.native
+  var defenderProcessesToExclude: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt,
     * promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
     */
-  var defenderPromptForSampleSubmission: js.UndefOr[DefenderPromptForSampleSubmission] = js.native
+  var defenderPromptForSampleSubmission: js.UndefOr[DefenderPromptForSampleSubmission] = js.undefined
   // Indicates whether or not to require behavior monitoring.
-  var defenderRequireBehaviorMonitoring: js.UndefOr[Boolean] = js.native
+  var defenderRequireBehaviorMonitoring: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require cloud protection.
-  var defenderRequireCloudProtection: js.UndefOr[Boolean] = js.native
+  var defenderRequireCloudProtection: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require network inspection system.
-  var defenderRequireNetworkInspectionSystem: js.UndefOr[Boolean] = js.native
+  var defenderRequireNetworkInspectionSystem: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require real time monitoring.
-  var defenderRequireRealTimeMonitoring: js.UndefOr[Boolean] = js.native
+  var defenderRequireRealTimeMonitoring: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to scan archive files.
-  var defenderScanArchiveFiles: js.UndefOr[Boolean] = js.native
+  var defenderScanArchiveFiles: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to scan downloads.
-  var defenderScanDownloads: js.UndefOr[Boolean] = js.native
+  var defenderScanDownloads: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to scan incoming mail messages.
-  var defenderScanIncomingMail: js.UndefOr[Boolean] = js.native
+  var defenderScanIncomingMail: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to scan mapped network drives during full scan.
-  var defenderScanMappedNetworkDrivesDuringFullScan: js.UndefOr[Boolean] = js.native
+  var defenderScanMappedNetworkDrivesDuringFullScan: js.UndefOr[Boolean] = js.undefined
   // Max CPU usage percentage during scan. Valid values 0 to 100
-  var defenderScanMaxCpu: js.UndefOr[Double] = js.native
+  var defenderScanMaxCpu: js.UndefOr[Double] = js.undefined
   // Indicates whether or not to scan files opened from a network folder.
-  var defenderScanNetworkFiles: js.UndefOr[Boolean] = js.native
+  var defenderScanNetworkFiles: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to scan removable drives during full scan.
-  var defenderScanRemovableDrivesDuringFullScan: js.UndefOr[Boolean] = js.native
+  var defenderScanRemovableDrivesDuringFullScan: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to scan scripts loaded in Internet Explorer browser.
-  var defenderScanScriptsLoadedInInternetExplorer: js.UndefOr[Boolean] = js.native
+  var defenderScanScriptsLoadedInInternetExplorer: js.UndefOr[Boolean] = js.undefined
   // The defender system scan type. Possible values are: userDefined, disabled, quick, full.
-  var defenderScanType: js.UndefOr[DefenderScanType] = js.native
+  var defenderScanType: js.UndefOr[DefenderScanType] = js.undefined
   // The time to perform a daily quick scan.
-  var defenderScheduledQuickScanTime: js.UndefOr[String] = js.native
+  var defenderScheduledQuickScanTime: js.UndefOr[String] = js.undefined
   // The defender time for the system scan.
-  var defenderScheduledScanTime: js.UndefOr[String] = js.native
+  var defenderScheduledScanTime: js.UndefOr[String] = js.undefined
   // The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
-  var defenderSignatureUpdateIntervalInHours: js.UndefOr[Double] = js.native
+  var defenderSignatureUpdateIntervalInHours: js.UndefOr[Double] = js.undefined
   /**
     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday,
     * wednesday, thursday, friday, saturday.
     */
-  var defenderSystemScanSchedule: js.UndefOr[WeeklySchedule] = js.native
+  var defenderSystemScanSchedule: js.UndefOr[WeeklySchedule] = js.undefined
   // Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
-  var developerUnlockSetting: js.UndefOr[StateManagementSetting] = js.native
+  var developerUnlockSetting: js.UndefOr[StateManagementSetting] = js.undefined
   // Indicates whether or not to Block the user from resetting their phone.
-  var deviceManagementBlockFactoryResetOnMobile: js.UndefOr[Boolean] = js.native
+  var deviceManagementBlockFactoryResetOnMobile: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from doing manual un-enrollment from device management.
-  var deviceManagementBlockManualUnenroll: js.UndefOr[Boolean] = js.native
+  var deviceManagementBlockManualUnenroll: js.UndefOr[Boolean] = js.undefined
   /**
     * Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values
     * are: userDefined, none, basic, enhanced, full.
     */
-  var diagnosticsDataSubmissionMode: js.UndefOr[DiagnosticDataSubmissionMode] = js.native
+  var diagnosticsDataSubmissionMode: js.UndefOr[DiagnosticDataSubmissionMode] = js.undefined
   /**
     * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see
     * by default when they open Edge.
     */
-  var edgeAllowStartPagesModification: js.UndefOr[Boolean] = js.native
+  var edgeAllowStartPagesModification: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to prevent access to about flags on Edge browser.
-  var edgeBlockAccessToAboutFlags: js.UndefOr[Boolean] = js.native
+  var edgeBlockAccessToAboutFlags: js.UndefOr[Boolean] = js.undefined
   /**
     * Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections
     * from Microsoft Edge to Microsoft services.
     */
-  var edgeBlockAddressBarDropdown: js.UndefOr[Boolean] = js.native
+  var edgeBlockAddressBarDropdown: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block auto fill.
-  var edgeBlockAutofill: js.UndefOr[Boolean] = js.native
+  var edgeBlockAutofill: js.UndefOr[Boolean] = js.undefined
   /**
     * Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with
     * known compatibility issues.
     */
-  var edgeBlockCompatibilityList: js.UndefOr[Boolean] = js.native
+  var edgeBlockCompatibilityList: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block developer tools in the Edge browser.
-  var edgeBlockDeveloperTools: js.UndefOr[Boolean] = js.native
+  var edgeBlockDeveloperTools: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block extensions in the Edge browser.
-  var edgeBlockExtensions: js.UndefOr[Boolean] = js.native
+  var edgeBlockExtensions: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
-  var edgeBlockInPrivateBrowsing: js.UndefOr[Boolean] = js.native
+  var edgeBlockInPrivateBrowsing: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from using JavaScript.
-  var edgeBlockJavaScript: js.UndefOr[Boolean] = js.native
+  var edgeBlockJavaScript: js.UndefOr[Boolean] = js.undefined
   /**
     * Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft
     * Edge.
     */
-  var edgeBlockLiveTileDataCollection: js.UndefOr[Boolean] = js.native
+  var edgeBlockLiveTileDataCollection: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block password manager.
-  var edgeBlockPasswordManager: js.UndefOr[Boolean] = js.native
+  var edgeBlockPasswordManager: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block popups.
-  var edgeBlockPopups: js.UndefOr[Boolean] = js.native
+  var edgeBlockPopups: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from using the search suggestions in the address bar.
-  var edgeBlockSearchSuggestions: js.UndefOr[Boolean] = js.native
+  var edgeBlockSearchSuggestions: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from sending the do not track header.
-  var edgeBlockSendingDoNotTrackHeader: js.UndefOr[Boolean] = js.native
+  var edgeBlockSendingDoNotTrackHeader: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property
     * is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
     */
-  var edgeBlockSendingIntranetTrafficToInternetExplorer: js.UndefOr[Boolean] = js.native
+  var edgeBlockSendingIntranetTrafficToInternetExplorer: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from using the Edge browser.
-  var edgeBlocked: js.UndefOr[Boolean] = js.native
+  var edgeBlocked: js.UndefOr[Boolean] = js.undefined
   // Clear browsing data on exiting Microsoft Edge.
-  var edgeClearBrowsingDataOnExit: js.UndefOr[Boolean] = js.native
+  var edgeClearBrowsingDataOnExit: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty,
     * blockAll.
     */
-  var edgeCookiePolicy: js.UndefOr[EdgeCookiePolicy] = js.native
+  var edgeCookiePolicy: js.UndefOr[EdgeCookiePolicy] = js.undefined
   /**
     * Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those
     * enrolled in zero emissions configurations, to block this page.
     */
-  var edgeDisableFirstRunPage: js.UndefOr[Boolean] = js.native
+  var edgeDisableFirstRunPage: js.UndefOr[Boolean] = js.undefined
   // Indicates the enterprise mode site list location. Could be a local file, local network or http location.
-  var edgeEnterpriseModeSiteListLocation: js.UndefOr[String] = js.native
+  var edgeEnterpriseModeSiteListLocation: js.UndefOr[String] = js.undefined
   // The first run URL for when Edge browser is opened for the first time.
-  var edgeFirstRunUrl: js.UndefOr[String] = js.native
+  var edgeFirstRunUrl: js.UndefOr[String] = js.undefined
   // The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
-  var edgeHomepageUrls: js.UndefOr[js.Array[String]] = js.native
+  var edgeHomepageUrls: js.UndefOr[js.Array[String]] = js.undefined
   // Indicates whether or not to Require the user to use the smart screen filter.
-  var edgeRequireSmartScreen: js.UndefOr[Boolean] = js.native
+  var edgeRequireSmartScreen: js.UndefOr[Boolean] = js.undefined
   /**
     * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their
     * default search engine provided the AllowSearchEngineCustomization policy is not set.
     */
-  var edgeSearchEngine: js.UndefOr[EdgeSearchEngineBase] = js.native
+  var edgeSearchEngine: js.UndefOr[EdgeSearchEngineBase] = js.undefined
   // Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
-  var edgeSendIntranetTrafficToInternetExplorer: js.UndefOr[Boolean] = js.native
+  var edgeSendIntranetTrafficToInternetExplorer: js.UndefOr[Boolean] = js.undefined
   /**
     * Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order
     * changes to favorites are shared between browsers.
     */
-  var edgeSyncFavoritesWithInternetExplorer: js.UndefOr[Boolean] = js.native
+  var edgeSyncFavoritesWithInternetExplorer: js.UndefOr[Boolean] = js.undefined
   // Endpoint for discovering cloud printers.
-  var enterpriseCloudPrintDiscoveryEndPoint: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintDiscoveryEndPoint: js.UndefOr[String] = js.undefined
   /**
     * Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid
     * values 1 to 65535
     */
-  var enterpriseCloudPrintDiscoveryMaxLimit: js.UndefOr[Double] = js.native
+  var enterpriseCloudPrintDiscoveryMaxLimit: js.UndefOr[Double] = js.undefined
   // OAuth resource URI for printer discovery service as configured in Azure portal.
-  var enterpriseCloudPrintMopriaDiscoveryResourceIdentifier: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintMopriaDiscoveryResourceIdentifier: js.UndefOr[String] = js.undefined
   // Authentication endpoint for acquiring OAuth tokens.
-  var enterpriseCloudPrintOAuthAuthority: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintOAuthAuthority: js.UndefOr[String] = js.undefined
   // GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
-  var enterpriseCloudPrintOAuthClientIdentifier: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintOAuthClientIdentifier: js.UndefOr[String] = js.undefined
   // OAuth resource URI for print service as configured in the Azure portal.
-  var enterpriseCloudPrintResourceIdentifier: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintResourceIdentifier: js.UndefOr[String] = js.undefined
   // Indicates whether or not to enable device discovery UX.
-  var experienceBlockDeviceDiscovery: js.UndefOr[Boolean] = js.native
+  var experienceBlockDeviceDiscovery: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
-  var experienceBlockErrorDialogWhenNoSIM: js.UndefOr[Boolean] = js.native
+  var experienceBlockErrorDialogWhenNoSIM: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to enable task switching on the device.
-  var experienceBlockTaskSwitcher: js.UndefOr[Boolean] = js.native
+  var experienceBlockTaskSwitcher: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block DVR and broadcasting.
-  var gameDvrBlocked: js.UndefOr[Boolean] = js.native
+  var gameDvrBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from using internet sharing.
-  var internetSharingBlocked: js.UndefOr[Boolean] = js.native
+  var internetSharingBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from location services.
-  var locationServicesBlocked: js.UndefOr[Boolean] = js.native
+  var locationServicesBlocked: js.UndefOr[Boolean] = js.undefined
   /**
     * Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows
     * 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored.
     */
-  var lockScreenAllowTimeoutConfiguration: js.UndefOr[Boolean] = js.native
+  var lockScreenAllowTimeoutConfiguration: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block action center notifications over lock screen.
-  var lockScreenBlockActionCenterNotifications: js.UndefOr[Boolean] = js.native
+  var lockScreenBlockActionCenterNotifications: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not the user can interact with Cortana using speech while the system is locked.
-  var lockScreenBlockCortana: js.UndefOr[Boolean] = js.native
+  var lockScreenBlockCortana: js.UndefOr[Boolean] = js.undefined
   // Indicates whether to allow toast notifications above the device lock screen.
-  var lockScreenBlockToastNotifications: js.UndefOr[Boolean] = js.native
+  var lockScreenBlockToastNotifications: js.UndefOr[Boolean] = js.undefined
   /**
     * Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices.
     * Supported values are 11-1800. Valid values 11 to 1800
     */
-  var lockScreenTimeoutInSeconds: js.UndefOr[Double] = js.native
+  var lockScreenTimeoutInSeconds: js.UndefOr[Double] = js.undefined
   // Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
-  var logonBlockFastUserSwitching: js.UndefOr[Boolean] = js.native
+  var logonBlockFastUserSwitching: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block Microsoft account settings sync.
-  var microsoftAccountBlockSettingsSync: js.UndefOr[Boolean] = js.native
+  var microsoftAccountBlockSettingsSync: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block a Microsoft account.
-  var microsoftAccountBlocked: js.UndefOr[Boolean] = js.native
+  var microsoftAccountBlocked: js.UndefOr[Boolean] = js.undefined
   /**
     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to
     * the user account that’s enrolled into MDM.
     */
-  var networkProxyApplySettingsDeviceWide: js.UndefOr[Boolean] = js.native
+  var networkProxyApplySettingsDeviceWide: js.UndefOr[Boolean] = js.undefined
   // Address to the proxy auto-config (PAC) script you want to use.
-  var networkProxyAutomaticConfigurationUrl: js.UndefOr[String] = js.native
+  var networkProxyAutomaticConfigurationUrl: js.UndefOr[String] = js.undefined
   /**
     * Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC)
     * script.
     */
-  var networkProxyDisableAutoDetect: js.UndefOr[Boolean] = js.native
+  var networkProxyDisableAutoDetect: js.UndefOr[Boolean] = js.undefined
   // Specifies manual proxy server settings.
-  var networkProxyServer: js.UndefOr[Windows10NetworkProxyServer] = js.native
+  var networkProxyServer: js.UndefOr[Windows10NetworkProxyServer] = js.undefined
   // Indicates whether or not to Block the user from using near field communication.
-  var nfcBlocked: js.UndefOr[Boolean] = js.native
+  var nfcBlocked: js.UndefOr[Boolean] = js.undefined
   // Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
-  var oneDriveDisableFileSync: js.UndefOr[Boolean] = js.native
+  var oneDriveDisableFileSync: js.UndefOr[Boolean] = js.undefined
   /**
     * Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the
     * use of picture passwords.
     */
-  var passwordBlockSimple: js.UndefOr[Boolean] = js.native
+  var passwordBlockSimple: js.UndefOr[Boolean] = js.undefined
   // The password expiration in days. Valid values 0 to 730
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[Double] = js.undefined
   // The number of character sets required in the password.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.undefined
   // The minimum password length. Valid values 4 to 16
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[Double] = js.undefined
   // The minutes of inactivity before the screen times out.
-  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.undefined
   // The number of previous passwords to prevent reuse of. Valid values 0 to 50
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.undefined
   // Indicates whether or not to require a password upon resuming from an idle state.
-  var passwordRequireWhenResumeFromIdleState: js.UndefOr[Boolean] = js.native
+  var passwordRequireWhenResumeFromIdleState: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require the user to have a password.
-  var passwordRequired: js.UndefOr[Boolean] = js.native
+  var passwordRequired: js.UndefOr[Boolean] = js.undefined
   // The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
-  var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.native
+  var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.undefined
   // The number of sign in failures before factory reset. Valid values 0 to 999
-  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.native
+  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.undefined
   /**
     * A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url
     * to a local image on the file system that needs to used as the Desktop Image.
     */
-  var personalizationDesktopImageUrl: js.UndefOr[String] = js.native
+  var personalizationDesktopImageUrl: js.UndefOr[String] = js.undefined
   /**
     * A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a
     * file Url to a local image on the file system that needs to be used as the Lock Screen Image.
     */
-  var personalizationLockScreenImageUrl: js.UndefOr[String] = js.native
+  var personalizationLockScreenImageUrl: js.UndefOr[String] = js.undefined
   /**
     * Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured,
     * blocked, allowed.
     */
-  var privacyAdvertisingId: js.UndefOr[StateManagementSetting] = js.native
+  var privacyAdvertisingId: js.UndefOr[StateManagementSetting] = js.undefined
   /**
     * Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when
     * launching apps.
     */
-  var privacyAutoAcceptPairingAndConsentPrompts: js.UndefOr[Boolean] = js.native
+  var privacyAutoAcceptPairingAndConsentPrompts: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store
     * applications.
     */
-  var privacyBlockInputPersonalization: js.UndefOr[Boolean] = js.native
+  var privacyBlockInputPersonalization: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from reset protection mode.
-  var resetProtectionModeBlocked: js.UndefOr[Boolean] = js.native
+  var resetProtectionModeBlocked: js.UndefOr[Boolean] = js.undefined
   // Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
-  var safeSearchFilter: js.UndefOr[SafeSearchFilterType] = js.native
+  var safeSearchFilter: js.UndefOr[SafeSearchFilterType] = js.undefined
   // Indicates whether or not to Block the user from taking Screenshots.
-  var screenCaptureBlocked: js.UndefOr[Boolean] = js.native
+  var screenCaptureBlocked: js.UndefOr[Boolean] = js.undefined
   // Specifies if search can use diacritics.
-  var searchBlockDiacritics: js.UndefOr[Boolean] = js.native
+  var searchBlockDiacritics: js.UndefOr[Boolean] = js.undefined
   // Specifies whether to use automatic language detection when indexing content and properties.
-  var searchDisableAutoLanguageDetection: js.UndefOr[Boolean] = js.native
+  var searchDisableAutoLanguageDetection: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to disable the search indexer backoff feature.
-  var searchDisableIndexerBackoff: js.UndefOr[Boolean] = js.native
+  var searchDisableIndexerBackoff: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for
     * Cortana or Explorer.
     */
-  var searchDisableIndexingEncryptedItems: js.UndefOr[Boolean] = js.native
+  var searchDisableIndexingEncryptedItems: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
-  var searchDisableIndexingRemovableDrive: js.UndefOr[Boolean] = js.native
+  var searchDisableIndexingRemovableDrive: js.UndefOr[Boolean] = js.undefined
   // Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
-  var searchEnableAutomaticIndexSizeManangement: js.UndefOr[Boolean] = js.native
+  var searchEnableAutomaticIndexSizeManangement: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block remote queries of this computer’s index.
-  var searchEnableRemoteQueries: js.UndefOr[Boolean] = js.native
+  var searchEnableRemoteQueries: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Accounts in Settings app.
-  var settingsBlockAccountsPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockAccountsPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from installing provisioning packages.
-  var settingsBlockAddProvisioningPackage: js.UndefOr[Boolean] = js.native
+  var settingsBlockAddProvisioningPackage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Apps in Settings app.
-  var settingsBlockAppsPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockAppsPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from changing the language settings.
-  var settingsBlockChangeLanguage: js.UndefOr[Boolean] = js.native
+  var settingsBlockChangeLanguage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from changing power and sleep settings.
-  var settingsBlockChangePowerSleep: js.UndefOr[Boolean] = js.native
+  var settingsBlockChangePowerSleep: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from changing the region settings.
-  var settingsBlockChangeRegion: js.UndefOr[Boolean] = js.native
+  var settingsBlockChangeRegion: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from changing date and time settings.
-  var settingsBlockChangeSystemTime: js.UndefOr[Boolean] = js.native
+  var settingsBlockChangeSystemTime: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Devices in Settings app.
-  var settingsBlockDevicesPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockDevicesPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Ease of Access in Settings app.
-  var settingsBlockEaseOfAccessPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockEaseOfAccessPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from editing the device name.
-  var settingsBlockEditDeviceName: js.UndefOr[Boolean] = js.native
+  var settingsBlockEditDeviceName: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Gaming in Settings app.
-  var settingsBlockGamingPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockGamingPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Network &amp; Internet in Settings app.
-  var settingsBlockNetworkInternetPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockNetworkInternetPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Personalization in Settings app.
-  var settingsBlockPersonalizationPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockPersonalizationPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Privacy in Settings app.
-  var settingsBlockPrivacyPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockPrivacyPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
-  var settingsBlockRemoveProvisioningPackage: js.UndefOr[Boolean] = js.native
+  var settingsBlockRemoveProvisioningPackage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Settings app.
-  var settingsBlockSettingsApp: js.UndefOr[Boolean] = js.native
+  var settingsBlockSettingsApp: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to System in Settings app.
-  var settingsBlockSystemPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockSystemPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Time &amp; Language in Settings app.
-  var settingsBlockTimeLanguagePage: js.UndefOr[Boolean] = js.native
+  var settingsBlockTimeLanguagePage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block access to Update &amp; Security in Settings app.
-  var settingsBlockUpdateSecurityPage: js.UndefOr[Boolean] = js.native
+  var settingsBlockUpdateSecurityPage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block multiple users of the same app to share data.
-  var sharedUserAppDataAllowed: js.UndefOr[Boolean] = js.native
+  var sharedUserAppDataAllowed: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
-  var smartScreenBlockPromptOverride: js.UndefOr[Boolean] = js.native
+  var smartScreenBlockPromptOverride: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
-  var smartScreenBlockPromptOverrideForFiles: js.UndefOr[Boolean] = js.native
+  var smartScreenBlockPromptOverrideForFiles: js.UndefOr[Boolean] = js.undefined
   // Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
-  var smartScreenEnableAppInstallControl: js.UndefOr[Boolean] = js.native
+  var smartScreenEnableAppInstallControl: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the user from unpinning apps from taskbar.
-  var startBlockUnpinningAppsFromTaskbar: js.UndefOr[Boolean] = js.native
+  var startBlockUnpinningAppsFromTaskbar: js.UndefOr[Boolean] = js.undefined
   /**
     * Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle
     * in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
     */
-  var startMenuAppListVisibility: js.UndefOr[WindowsStartMenuAppListVisibilityType] = js.native
+  var startMenuAppListVisibility: js.UndefOr[WindowsStartMenuAppListVisibilityType] = js.undefined
   // Enabling this policy hides the change account setting from appearing in the user tile in the start menu.
-  var startMenuHideChangeAccountSettings: js.UndefOr[Boolean] = js.native
+  var startMenuHideChangeAccountSettings: js.UndefOr[Boolean] = js.undefined
   /**
     * Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in
     * the Settings app.
     */
-  var startMenuHideFrequentlyUsedApps: js.UndefOr[Boolean] = js.native
+  var startMenuHideFrequentlyUsedApps: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides hibernate from appearing in the power button in the start menu.
-  var startMenuHideHibernate: js.UndefOr[Boolean] = js.native
+  var startMenuHideHibernate: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides lock from appearing in the user tile in the start menu.
-  var startMenuHideLock: js.UndefOr[Boolean] = js.native
+  var startMenuHideLock: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides the power button from appearing in the start menu.
-  var startMenuHidePowerButton: js.UndefOr[Boolean] = js.native
+  var startMenuHidePowerButton: js.UndefOr[Boolean] = js.undefined
   /**
     * Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding
     * toggle in the Settings app.
     */
-  var startMenuHideRecentJumpLists: js.UndefOr[Boolean] = js.native
+  var startMenuHideRecentJumpLists: js.UndefOr[Boolean] = js.undefined
   /**
     * Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle
     * in the Settings app.
     */
-  var startMenuHideRecentlyAddedApps: js.UndefOr[Boolean] = js.native
+  var startMenuHideRecentlyAddedApps: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
-  var startMenuHideRestartOptions: js.UndefOr[Boolean] = js.native
+  var startMenuHideRestartOptions: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu.
-  var startMenuHideShutDown: js.UndefOr[Boolean] = js.native
+  var startMenuHideShutDown: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides sign out from appearing in the user tile in the start menu.
-  var startMenuHideSignOut: js.UndefOr[Boolean] = js.native
+  var startMenuHideSignOut: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides sleep from appearing in the power button in the start menu.
-  var startMenuHideSleep: js.UndefOr[Boolean] = js.native
+  var startMenuHideSleep: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides switch account from appearing in the user tile in the start menu.
-  var startMenuHideSwitchAccount: js.UndefOr[Boolean] = js.native
+  var startMenuHideSwitchAccount: js.UndefOr[Boolean] = js.undefined
   // Enabling this policy hides the user tile from appearing in the start menu.
-  var startMenuHideUserTile: js.UndefOr[Boolean] = js.native
+  var startMenuHideUserTile: js.UndefOr[Boolean] = js.undefined
   /**
     * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can
     * contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause
     * Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is
     * modified. The value should be a UTF-8 Base64 encoded byte array.
     */
-  var startMenuLayoutEdgeAssetsXml: js.UndefOr[Double] = js.native
+  var startMenuLayoutEdgeAssetsXml: js.UndefOr[Double] = js.undefined
   /**
     * Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified
     * by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
     */
-  var startMenuLayoutXml: js.UndefOr[Double] = js.native
+  var startMenuLayoutXml: js.UndefOr[Double] = js.undefined
   // Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
-  var startMenuMode: js.UndefOr[WindowsStartMenuModeType] = js.native
+  var startMenuMode: js.UndefOr[WindowsStartMenuModeType] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are:
     * notConfigured, hide, show.
     */
-  var startMenuPinnedFolderDocuments: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderDocuments: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are:
     * notConfigured, hide, show.
     */
-  var startMenuPinnedFolderDownloads: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderDownloads: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured,
     * hide, show.
     */
-  var startMenuPinnedFolderFileExplorer: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderFileExplorer: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are:
     * notConfigured, hide, show.
     */
-  var startMenuPinnedFolderHomeGroup: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderHomeGroup: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured,
     * hide, show.
     */
-  var startMenuPinnedFolderMusic: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderMusic: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are:
     * notConfigured, hide, show.
     */
-  var startMenuPinnedFolderNetwork: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderNetwork: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are:
     * notConfigured, hide, show.
     */
-  var startMenuPinnedFolderPersonalFolder: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderPersonalFolder: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are:
     * notConfigured, hide, show.
     */
-  var startMenuPinnedFolderPictures: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderPictures: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are:
     * notConfigured, hide, show.
     */
-  var startMenuPinnedFolderSettings: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderSettings: js.UndefOr[VisibilitySetting] = js.undefined
   /**
     * Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are:
     * notConfigured, hide, show.
     */
-  var startMenuPinnedFolderVideos: js.UndefOr[VisibilitySetting] = js.native
+  var startMenuPinnedFolderVideos: js.UndefOr[VisibilitySetting] = js.undefined
   // Indicates whether or not to Block the user from using removable storage.
-  var storageBlockRemovableStorage: js.UndefOr[Boolean] = js.native
+  var storageBlockRemovableStorage: js.UndefOr[Boolean] = js.undefined
   // Indicating whether or not to require encryption on a mobile device.
-  var storageRequireMobileDeviceEncryption: js.UndefOr[Boolean] = js.native
+  var storageRequireMobileDeviceEncryption: js.UndefOr[Boolean] = js.undefined
   // Indicates whether application data is restricted to the system drive.
-  var storageRestrictAppDataToSystemVolume: js.UndefOr[Boolean] = js.native
+  var storageRestrictAppDataToSystemVolume: js.UndefOr[Boolean] = js.undefined
   // Indicates whether the installation of applications is restricted to the system drive.
-  var storageRestrictAppInstallToSystemVolume: js.UndefOr[Boolean] = js.native
+  var storageRestrictAppInstallToSystemVolume: js.UndefOr[Boolean] = js.undefined
   // Whether the device is required to connect to the network.
-  var tenantLockdownRequireNetworkDuringOutOfBoxExperience: js.UndefOr[Boolean] = js.native
+  var tenantLockdownRequireNetworkDuringOutOfBoxExperience: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from USB connection.
-  var usbBlocked: js.UndefOr[Boolean] = js.native
+  var usbBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from voice recording.
-  var voiceRecordingBlocked: js.UndefOr[Boolean] = js.native
+  var voiceRecordingBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
-  var webRtcBlockLocalhostIpAddress: js.UndefOr[Boolean] = js.native
+  var webRtcBlockLocalhostIpAddress: js.UndefOr[Boolean] = js.undefined
   // Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
-  var wiFiBlockAutomaticConnectHotspots: js.UndefOr[Boolean] = js.native
+  var wiFiBlockAutomaticConnectHotspots: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from using Wi-Fi manual configuration.
-  var wiFiBlockManualConfiguration: js.UndefOr[Boolean] = js.native
+  var wiFiBlockManualConfiguration: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from using Wi-Fi.
-  var wiFiBlocked: js.UndefOr[Boolean] = js.native
+  var wiFiBlocked: js.UndefOr[Boolean] = js.undefined
   /**
     * Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low
     * frequency. Valid values 1 to 500
     */
-  var wiFiScanInterval: js.UndefOr[Double] = js.native
+  var wiFiScanInterval: js.UndefOr[Double] = js.undefined
   /**
     * Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership
     * notifications, Post-OOBE app install and redirect tiles.
     */
-  var windowsSpotlightBlockConsumerSpecificFeatures: js.UndefOr[Boolean] = js.native
+  var windowsSpotlightBlockConsumerSpecificFeatures: js.UndefOr[Boolean] = js.undefined
   /**
     * Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce
     * users to what is new or changed
     */
-  var windowsSpotlightBlockOnActionCenter: js.UndefOr[Boolean] = js.native
+  var windowsSpotlightBlockOnActionCenter: js.UndefOr[Boolean] = js.undefined
   // Block personalized content in Windows spotlight based on user’s device usage.
-  var windowsSpotlightBlockTailoredExperiences: js.UndefOr[Boolean] = js.native
+  var windowsSpotlightBlockTailoredExperiences: js.UndefOr[Boolean] = js.undefined
   // Block third party content delivered via Windows Spotlight
-  var windowsSpotlightBlockThirdPartyNotifications: js.UndefOr[Boolean] = js.native
+  var windowsSpotlightBlockThirdPartyNotifications: js.UndefOr[Boolean] = js.undefined
   // Block Windows Spotlight Windows welcome experience
-  var windowsSpotlightBlockWelcomeExperience: js.UndefOr[Boolean] = js.native
+  var windowsSpotlightBlockWelcomeExperience: js.UndefOr[Boolean] = js.undefined
   // Allows IT admins to turn off the popup of Windows Tips.
-  var windowsSpotlightBlockWindowsTips: js.UndefOr[Boolean] = js.native
+  var windowsSpotlightBlockWindowsTips: js.UndefOr[Boolean] = js.undefined
   // Allows IT admins to turn off all Windows Spotlight features
-  var windowsSpotlightBlocked: js.UndefOr[Boolean] = js.native
+  var windowsSpotlightBlocked: js.UndefOr[Boolean] = js.undefined
   // Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
-  var windowsSpotlightConfigureOnLockScreen: js.UndefOr[WindowsSpotlightEnablementSettings] = js.native
+  var windowsSpotlightConfigureOnLockScreen: js.UndefOr[WindowsSpotlightEnablementSettings] = js.undefined
   // Indicates whether or not to block automatic update of apps from Windows Store.
-  var windowsStoreBlockAutoUpdate: js.UndefOr[Boolean] = js.native
+  var windowsStoreBlockAutoUpdate: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from using the Windows store.
-  var windowsStoreBlocked: js.UndefOr[Boolean] = js.native
+  var windowsStoreBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to enable Private Store Only.
-  var windowsStoreEnablePrivateStoreOnly: js.UndefOr[Boolean] = js.native
+  var windowsStoreEnablePrivateStoreOnly: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to allow other devices from discovering this PC for projection.
-  var wirelessDisplayBlockProjectionToThisDevice: js.UndefOr[Boolean] = js.native
+  var wirelessDisplayBlockProjectionToThisDevice: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to allow user input from wireless display receiver.
-  var wirelessDisplayBlockUserInputFromReceiver: js.UndefOr[Boolean] = js.native
+  var wirelessDisplayBlockUserInputFromReceiver: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require a PIN for new devices to initiate pairing.
-  var wirelessDisplayRequirePinForPairing: js.UndefOr[Boolean] = js.native
+  var wirelessDisplayRequirePinForPairing: js.UndefOr[Boolean] = js.undefined
 }
 
 object Windows10GeneralConfiguration {
   @scala.inline
-  def apply(): Windows10GeneralConfiguration = {
+  def apply(
+    accountsBlockAddingNonMicrosoftAccountEmail: js.UndefOr[Boolean] = js.undefined,
+    antiTheftModeBlocked: js.UndefOr[Boolean] = js.undefined,
+    appsAllowTrustedAppsSideloading: StateManagementSetting = null,
+    appsBlockWindowsStoreOriginatedApps: js.UndefOr[Boolean] = js.undefined,
+    assignments: js.Array[DeviceConfigurationAssignment] = null,
+    bluetoothAllowedServices: js.Array[String] = null,
+    bluetoothBlockAdvertising: js.UndefOr[Boolean] = js.undefined,
+    bluetoothBlockDiscoverableMode: js.UndefOr[Boolean] = js.undefined,
+    bluetoothBlockPrePairing: js.UndefOr[Boolean] = js.undefined,
+    bluetoothBlocked: js.UndefOr[Boolean] = js.undefined,
+    cameraBlocked: js.UndefOr[Boolean] = js.undefined,
+    cellularBlockDataWhenRoaming: js.UndefOr[Boolean] = js.undefined,
+    cellularBlockVpn: js.UndefOr[Boolean] = js.undefined,
+    cellularBlockVpnWhenRoaming: js.UndefOr[Boolean] = js.undefined,
+    certificatesBlockManualRootCertificateInstallation: js.UndefOr[Boolean] = js.undefined,
+    connectedDevicesServiceBlocked: js.UndefOr[Boolean] = js.undefined,
+    copyPasteBlocked: js.UndefOr[Boolean] = js.undefined,
+    cortanaBlocked: js.UndefOr[Boolean] = js.undefined,
+    createdDateTime: String = null,
+    defenderBlockEndUserAccess: js.UndefOr[Boolean] = js.undefined,
+    defenderCloudBlockLevel: DefenderCloudBlockLevelType = null,
+    defenderDaysBeforeDeletingQuarantinedMalware: js.UndefOr[Double] = js.undefined,
+    defenderDetectedMalwareActions: DefenderDetectedMalwareActions = null,
+    defenderFileExtensionsToExclude: js.Array[String] = null,
+    defenderFilesAndFoldersToExclude: js.Array[String] = null,
+    defenderMonitorFileActivity: DefenderMonitorFileActivity = null,
+    defenderProcessesToExclude: js.Array[String] = null,
+    defenderPromptForSampleSubmission: DefenderPromptForSampleSubmission = null,
+    defenderRequireBehaviorMonitoring: js.UndefOr[Boolean] = js.undefined,
+    defenderRequireCloudProtection: js.UndefOr[Boolean] = js.undefined,
+    defenderRequireNetworkInspectionSystem: js.UndefOr[Boolean] = js.undefined,
+    defenderRequireRealTimeMonitoring: js.UndefOr[Boolean] = js.undefined,
+    defenderScanArchiveFiles: js.UndefOr[Boolean] = js.undefined,
+    defenderScanDownloads: js.UndefOr[Boolean] = js.undefined,
+    defenderScanIncomingMail: js.UndefOr[Boolean] = js.undefined,
+    defenderScanMappedNetworkDrivesDuringFullScan: js.UndefOr[Boolean] = js.undefined,
+    defenderScanMaxCpu: js.UndefOr[Double] = js.undefined,
+    defenderScanNetworkFiles: js.UndefOr[Boolean] = js.undefined,
+    defenderScanRemovableDrivesDuringFullScan: js.UndefOr[Boolean] = js.undefined,
+    defenderScanScriptsLoadedInInternetExplorer: js.UndefOr[Boolean] = js.undefined,
+    defenderScanType: DefenderScanType = null,
+    defenderScheduledQuickScanTime: String = null,
+    defenderScheduledScanTime: String = null,
+    defenderSignatureUpdateIntervalInHours: js.UndefOr[Double] = js.undefined,
+    defenderSystemScanSchedule: WeeklySchedule = null,
+    description: String = null,
+    developerUnlockSetting: StateManagementSetting = null,
+    deviceManagementBlockFactoryResetOnMobile: js.UndefOr[Boolean] = js.undefined,
+    deviceManagementBlockManualUnenroll: js.UndefOr[Boolean] = js.undefined,
+    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
+    deviceStatusOverview: DeviceConfigurationDeviceOverview = null,
+    deviceStatuses: js.Array[DeviceConfigurationDeviceStatus] = null,
+    diagnosticsDataSubmissionMode: DiagnosticDataSubmissionMode = null,
+    displayName: String = null,
+    edgeAllowStartPagesModification: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockAccessToAboutFlags: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockAddressBarDropdown: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockAutofill: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockCompatibilityList: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockDeveloperTools: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockExtensions: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockInPrivateBrowsing: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockJavaScript: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockLiveTileDataCollection: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockPasswordManager: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockPopups: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockSearchSuggestions: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockSendingDoNotTrackHeader: js.UndefOr[Boolean] = js.undefined,
+    edgeBlockSendingIntranetTrafficToInternetExplorer: js.UndefOr[Boolean] = js.undefined,
+    edgeBlocked: js.UndefOr[Boolean] = js.undefined,
+    edgeClearBrowsingDataOnExit: js.UndefOr[Boolean] = js.undefined,
+    edgeCookiePolicy: EdgeCookiePolicy = null,
+    edgeDisableFirstRunPage: js.UndefOr[Boolean] = js.undefined,
+    edgeEnterpriseModeSiteListLocation: String = null,
+    edgeFirstRunUrl: String = null,
+    edgeHomepageUrls: js.Array[String] = null,
+    edgeRequireSmartScreen: js.UndefOr[Boolean] = js.undefined,
+    edgeSearchEngine: EdgeSearchEngineBase = null,
+    edgeSendIntranetTrafficToInternetExplorer: js.UndefOr[Boolean] = js.undefined,
+    edgeSyncFavoritesWithInternetExplorer: js.UndefOr[Boolean] = js.undefined,
+    enterpriseCloudPrintDiscoveryEndPoint: String = null,
+    enterpriseCloudPrintDiscoveryMaxLimit: js.UndefOr[Double] = js.undefined,
+    enterpriseCloudPrintMopriaDiscoveryResourceIdentifier: String = null,
+    enterpriseCloudPrintOAuthAuthority: String = null,
+    enterpriseCloudPrintOAuthClientIdentifier: String = null,
+    enterpriseCloudPrintResourceIdentifier: String = null,
+    experienceBlockDeviceDiscovery: js.UndefOr[Boolean] = js.undefined,
+    experienceBlockErrorDialogWhenNoSIM: js.UndefOr[Boolean] = js.undefined,
+    experienceBlockTaskSwitcher: js.UndefOr[Boolean] = js.undefined,
+    gameDvrBlocked: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    internetSharingBlocked: js.UndefOr[Boolean] = js.undefined,
+    lastModifiedDateTime: String = null,
+    locationServicesBlocked: js.UndefOr[Boolean] = js.undefined,
+    lockScreenAllowTimeoutConfiguration: js.UndefOr[Boolean] = js.undefined,
+    lockScreenBlockActionCenterNotifications: js.UndefOr[Boolean] = js.undefined,
+    lockScreenBlockCortana: js.UndefOr[Boolean] = js.undefined,
+    lockScreenBlockToastNotifications: js.UndefOr[Boolean] = js.undefined,
+    lockScreenTimeoutInSeconds: js.UndefOr[Double] = js.undefined,
+    logonBlockFastUserSwitching: js.UndefOr[Boolean] = js.undefined,
+    microsoftAccountBlockSettingsSync: js.UndefOr[Boolean] = js.undefined,
+    microsoftAccountBlocked: js.UndefOr[Boolean] = js.undefined,
+    networkProxyApplySettingsDeviceWide: js.UndefOr[Boolean] = js.undefined,
+    networkProxyAutomaticConfigurationUrl: String = null,
+    networkProxyDisableAutoDetect: js.UndefOr[Boolean] = js.undefined,
+    networkProxyServer: Windows10NetworkProxyServer = null,
+    nfcBlocked: js.UndefOr[Boolean] = js.undefined,
+    oneDriveDisableFileSync: js.UndefOr[Boolean] = js.undefined,
+    passwordBlockSimple: js.UndefOr[Boolean] = js.undefined,
+    passwordExpirationDays: js.UndefOr[Double] = js.undefined,
+    passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.undefined,
+    passwordMinimumLength: js.UndefOr[Double] = js.undefined,
+    passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.undefined,
+    passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.undefined,
+    passwordRequireWhenResumeFromIdleState: js.UndefOr[Boolean] = js.undefined,
+    passwordRequired: js.UndefOr[Boolean] = js.undefined,
+    passwordRequiredType: RequiredPasswordType = null,
+    passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.undefined,
+    personalizationDesktopImageUrl: String = null,
+    personalizationLockScreenImageUrl: String = null,
+    privacyAdvertisingId: StateManagementSetting = null,
+    privacyAutoAcceptPairingAndConsentPrompts: js.UndefOr[Boolean] = js.undefined,
+    privacyBlockInputPersonalization: js.UndefOr[Boolean] = js.undefined,
+    resetProtectionModeBlocked: js.UndefOr[Boolean] = js.undefined,
+    safeSearchFilter: SafeSearchFilterType = null,
+    screenCaptureBlocked: js.UndefOr[Boolean] = js.undefined,
+    searchBlockDiacritics: js.UndefOr[Boolean] = js.undefined,
+    searchDisableAutoLanguageDetection: js.UndefOr[Boolean] = js.undefined,
+    searchDisableIndexerBackoff: js.UndefOr[Boolean] = js.undefined,
+    searchDisableIndexingEncryptedItems: js.UndefOr[Boolean] = js.undefined,
+    searchDisableIndexingRemovableDrive: js.UndefOr[Boolean] = js.undefined,
+    searchEnableAutomaticIndexSizeManangement: js.UndefOr[Boolean] = js.undefined,
+    searchEnableRemoteQueries: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockAccountsPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockAddProvisioningPackage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockAppsPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockChangeLanguage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockChangePowerSleep: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockChangeRegion: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockChangeSystemTime: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockDevicesPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockEaseOfAccessPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockEditDeviceName: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockGamingPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockNetworkInternetPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockPersonalizationPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockPrivacyPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockRemoveProvisioningPackage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockSettingsApp: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockSystemPage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockTimeLanguagePage: js.UndefOr[Boolean] = js.undefined,
+    settingsBlockUpdateSecurityPage: js.UndefOr[Boolean] = js.undefined,
+    sharedUserAppDataAllowed: js.UndefOr[Boolean] = js.undefined,
+    smartScreenBlockPromptOverride: js.UndefOr[Boolean] = js.undefined,
+    smartScreenBlockPromptOverrideForFiles: js.UndefOr[Boolean] = js.undefined,
+    smartScreenEnableAppInstallControl: js.UndefOr[Boolean] = js.undefined,
+    startBlockUnpinningAppsFromTaskbar: js.UndefOr[Boolean] = js.undefined,
+    startMenuAppListVisibility: WindowsStartMenuAppListVisibilityType = null,
+    startMenuHideChangeAccountSettings: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideFrequentlyUsedApps: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideHibernate: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideLock: js.UndefOr[Boolean] = js.undefined,
+    startMenuHidePowerButton: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideRecentJumpLists: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideRecentlyAddedApps: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideRestartOptions: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideShutDown: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideSignOut: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideSleep: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideSwitchAccount: js.UndefOr[Boolean] = js.undefined,
+    startMenuHideUserTile: js.UndefOr[Boolean] = js.undefined,
+    startMenuLayoutEdgeAssetsXml: js.UndefOr[Double] = js.undefined,
+    startMenuLayoutXml: js.UndefOr[Double] = js.undefined,
+    startMenuMode: WindowsStartMenuModeType = null,
+    startMenuPinnedFolderDocuments: VisibilitySetting = null,
+    startMenuPinnedFolderDownloads: VisibilitySetting = null,
+    startMenuPinnedFolderFileExplorer: VisibilitySetting = null,
+    startMenuPinnedFolderHomeGroup: VisibilitySetting = null,
+    startMenuPinnedFolderMusic: VisibilitySetting = null,
+    startMenuPinnedFolderNetwork: VisibilitySetting = null,
+    startMenuPinnedFolderPersonalFolder: VisibilitySetting = null,
+    startMenuPinnedFolderPictures: VisibilitySetting = null,
+    startMenuPinnedFolderSettings: VisibilitySetting = null,
+    startMenuPinnedFolderVideos: VisibilitySetting = null,
+    storageBlockRemovableStorage: js.UndefOr[Boolean] = js.undefined,
+    storageRequireMobileDeviceEncryption: js.UndefOr[Boolean] = js.undefined,
+    storageRestrictAppDataToSystemVolume: js.UndefOr[Boolean] = js.undefined,
+    storageRestrictAppInstallToSystemVolume: js.UndefOr[Boolean] = js.undefined,
+    tenantLockdownRequireNetworkDuringOutOfBoxExperience: js.UndefOr[Boolean] = js.undefined,
+    usbBlocked: js.UndefOr[Boolean] = js.undefined,
+    userStatusOverview: DeviceConfigurationUserOverview = null,
+    userStatuses: js.Array[DeviceConfigurationUserStatus] = null,
+    version: js.UndefOr[Double] = js.undefined,
+    voiceRecordingBlocked: js.UndefOr[Boolean] = js.undefined,
+    webRtcBlockLocalhostIpAddress: js.UndefOr[Boolean] = js.undefined,
+    wiFiBlockAutomaticConnectHotspots: js.UndefOr[Boolean] = js.undefined,
+    wiFiBlockManualConfiguration: js.UndefOr[Boolean] = js.undefined,
+    wiFiBlocked: js.UndefOr[Boolean] = js.undefined,
+    wiFiScanInterval: js.UndefOr[Double] = js.undefined,
+    windowsSpotlightBlockConsumerSpecificFeatures: js.UndefOr[Boolean] = js.undefined,
+    windowsSpotlightBlockOnActionCenter: js.UndefOr[Boolean] = js.undefined,
+    windowsSpotlightBlockTailoredExperiences: js.UndefOr[Boolean] = js.undefined,
+    windowsSpotlightBlockThirdPartyNotifications: js.UndefOr[Boolean] = js.undefined,
+    windowsSpotlightBlockWelcomeExperience: js.UndefOr[Boolean] = js.undefined,
+    windowsSpotlightBlockWindowsTips: js.UndefOr[Boolean] = js.undefined,
+    windowsSpotlightBlocked: js.UndefOr[Boolean] = js.undefined,
+    windowsSpotlightConfigureOnLockScreen: WindowsSpotlightEnablementSettings = null,
+    windowsStoreBlockAutoUpdate: js.UndefOr[Boolean] = js.undefined,
+    windowsStoreBlocked: js.UndefOr[Boolean] = js.undefined,
+    windowsStoreEnablePrivateStoreOnly: js.UndefOr[Boolean] = js.undefined,
+    wirelessDisplayBlockProjectionToThisDevice: js.UndefOr[Boolean] = js.undefined,
+    wirelessDisplayBlockUserInputFromReceiver: js.UndefOr[Boolean] = js.undefined,
+    wirelessDisplayRequirePinForPairing: js.UndefOr[Boolean] = js.undefined
+  ): Windows10GeneralConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(accountsBlockAddingNonMicrosoftAccountEmail)) __obj.updateDynamic("accountsBlockAddingNonMicrosoftAccountEmail")(accountsBlockAddingNonMicrosoftAccountEmail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(antiTheftModeBlocked)) __obj.updateDynamic("antiTheftModeBlocked")(antiTheftModeBlocked.get.asInstanceOf[js.Any])
+    if (appsAllowTrustedAppsSideloading != null) __obj.updateDynamic("appsAllowTrustedAppsSideloading")(appsAllowTrustedAppsSideloading.asInstanceOf[js.Any])
+    if (!js.isUndefined(appsBlockWindowsStoreOriginatedApps)) __obj.updateDynamic("appsBlockWindowsStoreOriginatedApps")(appsBlockWindowsStoreOriginatedApps.get.asInstanceOf[js.Any])
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (bluetoothAllowedServices != null) __obj.updateDynamic("bluetoothAllowedServices")(bluetoothAllowedServices.asInstanceOf[js.Any])
+    if (!js.isUndefined(bluetoothBlockAdvertising)) __obj.updateDynamic("bluetoothBlockAdvertising")(bluetoothBlockAdvertising.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bluetoothBlockDiscoverableMode)) __obj.updateDynamic("bluetoothBlockDiscoverableMode")(bluetoothBlockDiscoverableMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bluetoothBlockPrePairing)) __obj.updateDynamic("bluetoothBlockPrePairing")(bluetoothBlockPrePairing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bluetoothBlocked)) __obj.updateDynamic("bluetoothBlocked")(bluetoothBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cameraBlocked)) __obj.updateDynamic("cameraBlocked")(cameraBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellularBlockDataWhenRoaming)) __obj.updateDynamic("cellularBlockDataWhenRoaming")(cellularBlockDataWhenRoaming.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellularBlockVpn)) __obj.updateDynamic("cellularBlockVpn")(cellularBlockVpn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellularBlockVpnWhenRoaming)) __obj.updateDynamic("cellularBlockVpnWhenRoaming")(cellularBlockVpnWhenRoaming.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(certificatesBlockManualRootCertificateInstallation)) __obj.updateDynamic("certificatesBlockManualRootCertificateInstallation")(certificatesBlockManualRootCertificateInstallation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connectedDevicesServiceBlocked)) __obj.updateDynamic("connectedDevicesServiceBlocked")(connectedDevicesServiceBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(copyPasteBlocked)) __obj.updateDynamic("copyPasteBlocked")(copyPasteBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cortanaBlocked)) __obj.updateDynamic("cortanaBlocked")(cortanaBlocked.get.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderBlockEndUserAccess)) __obj.updateDynamic("defenderBlockEndUserAccess")(defenderBlockEndUserAccess.get.asInstanceOf[js.Any])
+    if (defenderCloudBlockLevel != null) __obj.updateDynamic("defenderCloudBlockLevel")(defenderCloudBlockLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderDaysBeforeDeletingQuarantinedMalware)) __obj.updateDynamic("defenderDaysBeforeDeletingQuarantinedMalware")(defenderDaysBeforeDeletingQuarantinedMalware.get.asInstanceOf[js.Any])
+    if (defenderDetectedMalwareActions != null) __obj.updateDynamic("defenderDetectedMalwareActions")(defenderDetectedMalwareActions.asInstanceOf[js.Any])
+    if (defenderFileExtensionsToExclude != null) __obj.updateDynamic("defenderFileExtensionsToExclude")(defenderFileExtensionsToExclude.asInstanceOf[js.Any])
+    if (defenderFilesAndFoldersToExclude != null) __obj.updateDynamic("defenderFilesAndFoldersToExclude")(defenderFilesAndFoldersToExclude.asInstanceOf[js.Any])
+    if (defenderMonitorFileActivity != null) __obj.updateDynamic("defenderMonitorFileActivity")(defenderMonitorFileActivity.asInstanceOf[js.Any])
+    if (defenderProcessesToExclude != null) __obj.updateDynamic("defenderProcessesToExclude")(defenderProcessesToExclude.asInstanceOf[js.Any])
+    if (defenderPromptForSampleSubmission != null) __obj.updateDynamic("defenderPromptForSampleSubmission")(defenderPromptForSampleSubmission.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderRequireBehaviorMonitoring)) __obj.updateDynamic("defenderRequireBehaviorMonitoring")(defenderRequireBehaviorMonitoring.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderRequireCloudProtection)) __obj.updateDynamic("defenderRequireCloudProtection")(defenderRequireCloudProtection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderRequireNetworkInspectionSystem)) __obj.updateDynamic("defenderRequireNetworkInspectionSystem")(defenderRequireNetworkInspectionSystem.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderRequireRealTimeMonitoring)) __obj.updateDynamic("defenderRequireRealTimeMonitoring")(defenderRequireRealTimeMonitoring.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderScanArchiveFiles)) __obj.updateDynamic("defenderScanArchiveFiles")(defenderScanArchiveFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderScanDownloads)) __obj.updateDynamic("defenderScanDownloads")(defenderScanDownloads.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderScanIncomingMail)) __obj.updateDynamic("defenderScanIncomingMail")(defenderScanIncomingMail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderScanMappedNetworkDrivesDuringFullScan)) __obj.updateDynamic("defenderScanMappedNetworkDrivesDuringFullScan")(defenderScanMappedNetworkDrivesDuringFullScan.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderScanMaxCpu)) __obj.updateDynamic("defenderScanMaxCpu")(defenderScanMaxCpu.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderScanNetworkFiles)) __obj.updateDynamic("defenderScanNetworkFiles")(defenderScanNetworkFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderScanRemovableDrivesDuringFullScan)) __obj.updateDynamic("defenderScanRemovableDrivesDuringFullScan")(defenderScanRemovableDrivesDuringFullScan.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderScanScriptsLoadedInInternetExplorer)) __obj.updateDynamic("defenderScanScriptsLoadedInInternetExplorer")(defenderScanScriptsLoadedInInternetExplorer.get.asInstanceOf[js.Any])
+    if (defenderScanType != null) __obj.updateDynamic("defenderScanType")(defenderScanType.asInstanceOf[js.Any])
+    if (defenderScheduledQuickScanTime != null) __obj.updateDynamic("defenderScheduledQuickScanTime")(defenderScheduledQuickScanTime.asInstanceOf[js.Any])
+    if (defenderScheduledScanTime != null) __obj.updateDynamic("defenderScheduledScanTime")(defenderScheduledScanTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(defenderSignatureUpdateIntervalInHours)) __obj.updateDynamic("defenderSignatureUpdateIntervalInHours")(defenderSignatureUpdateIntervalInHours.get.asInstanceOf[js.Any])
+    if (defenderSystemScanSchedule != null) __obj.updateDynamic("defenderSystemScanSchedule")(defenderSystemScanSchedule.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (developerUnlockSetting != null) __obj.updateDynamic("developerUnlockSetting")(developerUnlockSetting.asInstanceOf[js.Any])
+    if (!js.isUndefined(deviceManagementBlockFactoryResetOnMobile)) __obj.updateDynamic("deviceManagementBlockFactoryResetOnMobile")(deviceManagementBlockFactoryResetOnMobile.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deviceManagementBlockManualUnenroll)) __obj.updateDynamic("deviceManagementBlockManualUnenroll")(deviceManagementBlockManualUnenroll.get.asInstanceOf[js.Any])
+    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
+    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
+    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
+    if (diagnosticsDataSubmissionMode != null) __obj.updateDynamic("diagnosticsDataSubmissionMode")(diagnosticsDataSubmissionMode.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeAllowStartPagesModification)) __obj.updateDynamic("edgeAllowStartPagesModification")(edgeAllowStartPagesModification.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockAccessToAboutFlags)) __obj.updateDynamic("edgeBlockAccessToAboutFlags")(edgeBlockAccessToAboutFlags.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockAddressBarDropdown)) __obj.updateDynamic("edgeBlockAddressBarDropdown")(edgeBlockAddressBarDropdown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockAutofill)) __obj.updateDynamic("edgeBlockAutofill")(edgeBlockAutofill.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockCompatibilityList)) __obj.updateDynamic("edgeBlockCompatibilityList")(edgeBlockCompatibilityList.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockDeveloperTools)) __obj.updateDynamic("edgeBlockDeveloperTools")(edgeBlockDeveloperTools.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockExtensions)) __obj.updateDynamic("edgeBlockExtensions")(edgeBlockExtensions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockInPrivateBrowsing)) __obj.updateDynamic("edgeBlockInPrivateBrowsing")(edgeBlockInPrivateBrowsing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockJavaScript)) __obj.updateDynamic("edgeBlockJavaScript")(edgeBlockJavaScript.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockLiveTileDataCollection)) __obj.updateDynamic("edgeBlockLiveTileDataCollection")(edgeBlockLiveTileDataCollection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockPasswordManager)) __obj.updateDynamic("edgeBlockPasswordManager")(edgeBlockPasswordManager.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockPopups)) __obj.updateDynamic("edgeBlockPopups")(edgeBlockPopups.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockSearchSuggestions)) __obj.updateDynamic("edgeBlockSearchSuggestions")(edgeBlockSearchSuggestions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockSendingDoNotTrackHeader)) __obj.updateDynamic("edgeBlockSendingDoNotTrackHeader")(edgeBlockSendingDoNotTrackHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlockSendingIntranetTrafficToInternetExplorer)) __obj.updateDynamic("edgeBlockSendingIntranetTrafficToInternetExplorer")(edgeBlockSendingIntranetTrafficToInternetExplorer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeBlocked)) __obj.updateDynamic("edgeBlocked")(edgeBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeClearBrowsingDataOnExit)) __obj.updateDynamic("edgeClearBrowsingDataOnExit")(edgeClearBrowsingDataOnExit.get.asInstanceOf[js.Any])
+    if (edgeCookiePolicy != null) __obj.updateDynamic("edgeCookiePolicy")(edgeCookiePolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeDisableFirstRunPage)) __obj.updateDynamic("edgeDisableFirstRunPage")(edgeDisableFirstRunPage.get.asInstanceOf[js.Any])
+    if (edgeEnterpriseModeSiteListLocation != null) __obj.updateDynamic("edgeEnterpriseModeSiteListLocation")(edgeEnterpriseModeSiteListLocation.asInstanceOf[js.Any])
+    if (edgeFirstRunUrl != null) __obj.updateDynamic("edgeFirstRunUrl")(edgeFirstRunUrl.asInstanceOf[js.Any])
+    if (edgeHomepageUrls != null) __obj.updateDynamic("edgeHomepageUrls")(edgeHomepageUrls.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeRequireSmartScreen)) __obj.updateDynamic("edgeRequireSmartScreen")(edgeRequireSmartScreen.get.asInstanceOf[js.Any])
+    if (edgeSearchEngine != null) __obj.updateDynamic("edgeSearchEngine")(edgeSearchEngine.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeSendIntranetTrafficToInternetExplorer)) __obj.updateDynamic("edgeSendIntranetTrafficToInternetExplorer")(edgeSendIntranetTrafficToInternetExplorer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeSyncFavoritesWithInternetExplorer)) __obj.updateDynamic("edgeSyncFavoritesWithInternetExplorer")(edgeSyncFavoritesWithInternetExplorer.get.asInstanceOf[js.Any])
+    if (enterpriseCloudPrintDiscoveryEndPoint != null) __obj.updateDynamic("enterpriseCloudPrintDiscoveryEndPoint")(enterpriseCloudPrintDiscoveryEndPoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(enterpriseCloudPrintDiscoveryMaxLimit)) __obj.updateDynamic("enterpriseCloudPrintDiscoveryMaxLimit")(enterpriseCloudPrintDiscoveryMaxLimit.get.asInstanceOf[js.Any])
+    if (enterpriseCloudPrintMopriaDiscoveryResourceIdentifier != null) __obj.updateDynamic("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier")(enterpriseCloudPrintMopriaDiscoveryResourceIdentifier.asInstanceOf[js.Any])
+    if (enterpriseCloudPrintOAuthAuthority != null) __obj.updateDynamic("enterpriseCloudPrintOAuthAuthority")(enterpriseCloudPrintOAuthAuthority.asInstanceOf[js.Any])
+    if (enterpriseCloudPrintOAuthClientIdentifier != null) __obj.updateDynamic("enterpriseCloudPrintOAuthClientIdentifier")(enterpriseCloudPrintOAuthClientIdentifier.asInstanceOf[js.Any])
+    if (enterpriseCloudPrintResourceIdentifier != null) __obj.updateDynamic("enterpriseCloudPrintResourceIdentifier")(enterpriseCloudPrintResourceIdentifier.asInstanceOf[js.Any])
+    if (!js.isUndefined(experienceBlockDeviceDiscovery)) __obj.updateDynamic("experienceBlockDeviceDiscovery")(experienceBlockDeviceDiscovery.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(experienceBlockErrorDialogWhenNoSIM)) __obj.updateDynamic("experienceBlockErrorDialogWhenNoSIM")(experienceBlockErrorDialogWhenNoSIM.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(experienceBlockTaskSwitcher)) __obj.updateDynamic("experienceBlockTaskSwitcher")(experienceBlockTaskSwitcher.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gameDvrBlocked)) __obj.updateDynamic("gameDvrBlocked")(gameDvrBlocked.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(internetSharingBlocked)) __obj.updateDynamic("internetSharingBlocked")(internetSharingBlocked.get.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(locationServicesBlocked)) __obj.updateDynamic("locationServicesBlocked")(locationServicesBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockScreenAllowTimeoutConfiguration)) __obj.updateDynamic("lockScreenAllowTimeoutConfiguration")(lockScreenAllowTimeoutConfiguration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockScreenBlockActionCenterNotifications)) __obj.updateDynamic("lockScreenBlockActionCenterNotifications")(lockScreenBlockActionCenterNotifications.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockScreenBlockCortana)) __obj.updateDynamic("lockScreenBlockCortana")(lockScreenBlockCortana.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockScreenBlockToastNotifications)) __obj.updateDynamic("lockScreenBlockToastNotifications")(lockScreenBlockToastNotifications.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockScreenTimeoutInSeconds)) __obj.updateDynamic("lockScreenTimeoutInSeconds")(lockScreenTimeoutInSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logonBlockFastUserSwitching)) __obj.updateDynamic("logonBlockFastUserSwitching")(logonBlockFastUserSwitching.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(microsoftAccountBlockSettingsSync)) __obj.updateDynamic("microsoftAccountBlockSettingsSync")(microsoftAccountBlockSettingsSync.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(microsoftAccountBlocked)) __obj.updateDynamic("microsoftAccountBlocked")(microsoftAccountBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(networkProxyApplySettingsDeviceWide)) __obj.updateDynamic("networkProxyApplySettingsDeviceWide")(networkProxyApplySettingsDeviceWide.get.asInstanceOf[js.Any])
+    if (networkProxyAutomaticConfigurationUrl != null) __obj.updateDynamic("networkProxyAutomaticConfigurationUrl")(networkProxyAutomaticConfigurationUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(networkProxyDisableAutoDetect)) __obj.updateDynamic("networkProxyDisableAutoDetect")(networkProxyDisableAutoDetect.get.asInstanceOf[js.Any])
+    if (networkProxyServer != null) __obj.updateDynamic("networkProxyServer")(networkProxyServer.asInstanceOf[js.Any])
+    if (!js.isUndefined(nfcBlocked)) __obj.updateDynamic("nfcBlocked")(nfcBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(oneDriveDisableFileSync)) __obj.updateDynamic("oneDriveDisableFileSync")(oneDriveDisableFileSync.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordBlockSimple)) __obj.updateDynamic("passwordBlockSimple")(passwordBlockSimple.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordExpirationDays)) __obj.updateDynamic("passwordExpirationDays")(passwordExpirationDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumCharacterSetCount)) __obj.updateDynamic("passwordMinimumCharacterSetCount")(passwordMinimumCharacterSetCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumLength)) __obj.updateDynamic("passwordMinimumLength")(passwordMinimumLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinutesOfInactivityBeforeScreenTimeout)) __obj.updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(passwordMinutesOfInactivityBeforeScreenTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordPreviousPasswordBlockCount)) __obj.updateDynamic("passwordPreviousPasswordBlockCount")(passwordPreviousPasswordBlockCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordRequireWhenResumeFromIdleState)) __obj.updateDynamic("passwordRequireWhenResumeFromIdleState")(passwordRequireWhenResumeFromIdleState.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordRequired)) __obj.updateDynamic("passwordRequired")(passwordRequired.get.asInstanceOf[js.Any])
+    if (passwordRequiredType != null) __obj.updateDynamic("passwordRequiredType")(passwordRequiredType.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordSignInFailureCountBeforeFactoryReset)) __obj.updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(passwordSignInFailureCountBeforeFactoryReset.get.asInstanceOf[js.Any])
+    if (personalizationDesktopImageUrl != null) __obj.updateDynamic("personalizationDesktopImageUrl")(personalizationDesktopImageUrl.asInstanceOf[js.Any])
+    if (personalizationLockScreenImageUrl != null) __obj.updateDynamic("personalizationLockScreenImageUrl")(personalizationLockScreenImageUrl.asInstanceOf[js.Any])
+    if (privacyAdvertisingId != null) __obj.updateDynamic("privacyAdvertisingId")(privacyAdvertisingId.asInstanceOf[js.Any])
+    if (!js.isUndefined(privacyAutoAcceptPairingAndConsentPrompts)) __obj.updateDynamic("privacyAutoAcceptPairingAndConsentPrompts")(privacyAutoAcceptPairingAndConsentPrompts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(privacyBlockInputPersonalization)) __obj.updateDynamic("privacyBlockInputPersonalization")(privacyBlockInputPersonalization.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resetProtectionModeBlocked)) __obj.updateDynamic("resetProtectionModeBlocked")(resetProtectionModeBlocked.get.asInstanceOf[js.Any])
+    if (safeSearchFilter != null) __obj.updateDynamic("safeSearchFilter")(safeSearchFilter.asInstanceOf[js.Any])
+    if (!js.isUndefined(screenCaptureBlocked)) __obj.updateDynamic("screenCaptureBlocked")(screenCaptureBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchBlockDiacritics)) __obj.updateDynamic("searchBlockDiacritics")(searchBlockDiacritics.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchDisableAutoLanguageDetection)) __obj.updateDynamic("searchDisableAutoLanguageDetection")(searchDisableAutoLanguageDetection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchDisableIndexerBackoff)) __obj.updateDynamic("searchDisableIndexerBackoff")(searchDisableIndexerBackoff.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchDisableIndexingEncryptedItems)) __obj.updateDynamic("searchDisableIndexingEncryptedItems")(searchDisableIndexingEncryptedItems.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchDisableIndexingRemovableDrive)) __obj.updateDynamic("searchDisableIndexingRemovableDrive")(searchDisableIndexingRemovableDrive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchEnableAutomaticIndexSizeManangement)) __obj.updateDynamic("searchEnableAutomaticIndexSizeManangement")(searchEnableAutomaticIndexSizeManangement.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchEnableRemoteQueries)) __obj.updateDynamic("searchEnableRemoteQueries")(searchEnableRemoteQueries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockAccountsPage)) __obj.updateDynamic("settingsBlockAccountsPage")(settingsBlockAccountsPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockAddProvisioningPackage)) __obj.updateDynamic("settingsBlockAddProvisioningPackage")(settingsBlockAddProvisioningPackage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockAppsPage)) __obj.updateDynamic("settingsBlockAppsPage")(settingsBlockAppsPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockChangeLanguage)) __obj.updateDynamic("settingsBlockChangeLanguage")(settingsBlockChangeLanguage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockChangePowerSleep)) __obj.updateDynamic("settingsBlockChangePowerSleep")(settingsBlockChangePowerSleep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockChangeRegion)) __obj.updateDynamic("settingsBlockChangeRegion")(settingsBlockChangeRegion.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockChangeSystemTime)) __obj.updateDynamic("settingsBlockChangeSystemTime")(settingsBlockChangeSystemTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockDevicesPage)) __obj.updateDynamic("settingsBlockDevicesPage")(settingsBlockDevicesPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockEaseOfAccessPage)) __obj.updateDynamic("settingsBlockEaseOfAccessPage")(settingsBlockEaseOfAccessPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockEditDeviceName)) __obj.updateDynamic("settingsBlockEditDeviceName")(settingsBlockEditDeviceName.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockGamingPage)) __obj.updateDynamic("settingsBlockGamingPage")(settingsBlockGamingPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockNetworkInternetPage)) __obj.updateDynamic("settingsBlockNetworkInternetPage")(settingsBlockNetworkInternetPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockPersonalizationPage)) __obj.updateDynamic("settingsBlockPersonalizationPage")(settingsBlockPersonalizationPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockPrivacyPage)) __obj.updateDynamic("settingsBlockPrivacyPage")(settingsBlockPrivacyPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockRemoveProvisioningPackage)) __obj.updateDynamic("settingsBlockRemoveProvisioningPackage")(settingsBlockRemoveProvisioningPackage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockSettingsApp)) __obj.updateDynamic("settingsBlockSettingsApp")(settingsBlockSettingsApp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockSystemPage)) __obj.updateDynamic("settingsBlockSystemPage")(settingsBlockSystemPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockTimeLanguagePage)) __obj.updateDynamic("settingsBlockTimeLanguagePage")(settingsBlockTimeLanguagePage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(settingsBlockUpdateSecurityPage)) __obj.updateDynamic("settingsBlockUpdateSecurityPage")(settingsBlockUpdateSecurityPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sharedUserAppDataAllowed)) __obj.updateDynamic("sharedUserAppDataAllowed")(sharedUserAppDataAllowed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smartScreenBlockPromptOverride)) __obj.updateDynamic("smartScreenBlockPromptOverride")(smartScreenBlockPromptOverride.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smartScreenBlockPromptOverrideForFiles)) __obj.updateDynamic("smartScreenBlockPromptOverrideForFiles")(smartScreenBlockPromptOverrideForFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smartScreenEnableAppInstallControl)) __obj.updateDynamic("smartScreenEnableAppInstallControl")(smartScreenEnableAppInstallControl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startBlockUnpinningAppsFromTaskbar)) __obj.updateDynamic("startBlockUnpinningAppsFromTaskbar")(startBlockUnpinningAppsFromTaskbar.get.asInstanceOf[js.Any])
+    if (startMenuAppListVisibility != null) __obj.updateDynamic("startMenuAppListVisibility")(startMenuAppListVisibility.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideChangeAccountSettings)) __obj.updateDynamic("startMenuHideChangeAccountSettings")(startMenuHideChangeAccountSettings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideFrequentlyUsedApps)) __obj.updateDynamic("startMenuHideFrequentlyUsedApps")(startMenuHideFrequentlyUsedApps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideHibernate)) __obj.updateDynamic("startMenuHideHibernate")(startMenuHideHibernate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideLock)) __obj.updateDynamic("startMenuHideLock")(startMenuHideLock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHidePowerButton)) __obj.updateDynamic("startMenuHidePowerButton")(startMenuHidePowerButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideRecentJumpLists)) __obj.updateDynamic("startMenuHideRecentJumpLists")(startMenuHideRecentJumpLists.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideRecentlyAddedApps)) __obj.updateDynamic("startMenuHideRecentlyAddedApps")(startMenuHideRecentlyAddedApps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideRestartOptions)) __obj.updateDynamic("startMenuHideRestartOptions")(startMenuHideRestartOptions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideShutDown)) __obj.updateDynamic("startMenuHideShutDown")(startMenuHideShutDown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideSignOut)) __obj.updateDynamic("startMenuHideSignOut")(startMenuHideSignOut.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideSleep)) __obj.updateDynamic("startMenuHideSleep")(startMenuHideSleep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideSwitchAccount)) __obj.updateDynamic("startMenuHideSwitchAccount")(startMenuHideSwitchAccount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuHideUserTile)) __obj.updateDynamic("startMenuHideUserTile")(startMenuHideUserTile.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuLayoutEdgeAssetsXml)) __obj.updateDynamic("startMenuLayoutEdgeAssetsXml")(startMenuLayoutEdgeAssetsXml.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startMenuLayoutXml)) __obj.updateDynamic("startMenuLayoutXml")(startMenuLayoutXml.get.asInstanceOf[js.Any])
+    if (startMenuMode != null) __obj.updateDynamic("startMenuMode")(startMenuMode.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderDocuments != null) __obj.updateDynamic("startMenuPinnedFolderDocuments")(startMenuPinnedFolderDocuments.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderDownloads != null) __obj.updateDynamic("startMenuPinnedFolderDownloads")(startMenuPinnedFolderDownloads.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderFileExplorer != null) __obj.updateDynamic("startMenuPinnedFolderFileExplorer")(startMenuPinnedFolderFileExplorer.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderHomeGroup != null) __obj.updateDynamic("startMenuPinnedFolderHomeGroup")(startMenuPinnedFolderHomeGroup.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderMusic != null) __obj.updateDynamic("startMenuPinnedFolderMusic")(startMenuPinnedFolderMusic.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderNetwork != null) __obj.updateDynamic("startMenuPinnedFolderNetwork")(startMenuPinnedFolderNetwork.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderPersonalFolder != null) __obj.updateDynamic("startMenuPinnedFolderPersonalFolder")(startMenuPinnedFolderPersonalFolder.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderPictures != null) __obj.updateDynamic("startMenuPinnedFolderPictures")(startMenuPinnedFolderPictures.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderSettings != null) __obj.updateDynamic("startMenuPinnedFolderSettings")(startMenuPinnedFolderSettings.asInstanceOf[js.Any])
+    if (startMenuPinnedFolderVideos != null) __obj.updateDynamic("startMenuPinnedFolderVideos")(startMenuPinnedFolderVideos.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageBlockRemovableStorage)) __obj.updateDynamic("storageBlockRemovableStorage")(storageBlockRemovableStorage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageRequireMobileDeviceEncryption)) __obj.updateDynamic("storageRequireMobileDeviceEncryption")(storageRequireMobileDeviceEncryption.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageRestrictAppDataToSystemVolume)) __obj.updateDynamic("storageRestrictAppDataToSystemVolume")(storageRestrictAppDataToSystemVolume.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageRestrictAppInstallToSystemVolume)) __obj.updateDynamic("storageRestrictAppInstallToSystemVolume")(storageRestrictAppInstallToSystemVolume.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tenantLockdownRequireNetworkDuringOutOfBoxExperience)) __obj.updateDynamic("tenantLockdownRequireNetworkDuringOutOfBoxExperience")(tenantLockdownRequireNetworkDuringOutOfBoxExperience.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usbBlocked)) __obj.updateDynamic("usbBlocked")(usbBlocked.get.asInstanceOf[js.Any])
+    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
+    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(voiceRecordingBlocked)) __obj.updateDynamic("voiceRecordingBlocked")(voiceRecordingBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(webRtcBlockLocalhostIpAddress)) __obj.updateDynamic("webRtcBlockLocalhostIpAddress")(webRtcBlockLocalhostIpAddress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wiFiBlockAutomaticConnectHotspots)) __obj.updateDynamic("wiFiBlockAutomaticConnectHotspots")(wiFiBlockAutomaticConnectHotspots.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wiFiBlockManualConfiguration)) __obj.updateDynamic("wiFiBlockManualConfiguration")(wiFiBlockManualConfiguration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wiFiBlocked)) __obj.updateDynamic("wiFiBlocked")(wiFiBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wiFiScanInterval)) __obj.updateDynamic("wiFiScanInterval")(wiFiScanInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsSpotlightBlockConsumerSpecificFeatures)) __obj.updateDynamic("windowsSpotlightBlockConsumerSpecificFeatures")(windowsSpotlightBlockConsumerSpecificFeatures.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsSpotlightBlockOnActionCenter)) __obj.updateDynamic("windowsSpotlightBlockOnActionCenter")(windowsSpotlightBlockOnActionCenter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsSpotlightBlockTailoredExperiences)) __obj.updateDynamic("windowsSpotlightBlockTailoredExperiences")(windowsSpotlightBlockTailoredExperiences.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsSpotlightBlockThirdPartyNotifications)) __obj.updateDynamic("windowsSpotlightBlockThirdPartyNotifications")(windowsSpotlightBlockThirdPartyNotifications.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsSpotlightBlockWelcomeExperience)) __obj.updateDynamic("windowsSpotlightBlockWelcomeExperience")(windowsSpotlightBlockWelcomeExperience.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsSpotlightBlockWindowsTips)) __obj.updateDynamic("windowsSpotlightBlockWindowsTips")(windowsSpotlightBlockWindowsTips.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsSpotlightBlocked)) __obj.updateDynamic("windowsSpotlightBlocked")(windowsSpotlightBlocked.get.asInstanceOf[js.Any])
+    if (windowsSpotlightConfigureOnLockScreen != null) __obj.updateDynamic("windowsSpotlightConfigureOnLockScreen")(windowsSpotlightConfigureOnLockScreen.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsStoreBlockAutoUpdate)) __obj.updateDynamic("windowsStoreBlockAutoUpdate")(windowsStoreBlockAutoUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsStoreBlocked)) __obj.updateDynamic("windowsStoreBlocked")(windowsStoreBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsStoreEnablePrivateStoreOnly)) __obj.updateDynamic("windowsStoreEnablePrivateStoreOnly")(windowsStoreEnablePrivateStoreOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wirelessDisplayBlockProjectionToThisDevice)) __obj.updateDynamic("wirelessDisplayBlockProjectionToThisDevice")(wirelessDisplayBlockProjectionToThisDevice.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wirelessDisplayBlockUserInputFromReceiver)) __obj.updateDynamic("wirelessDisplayBlockUserInputFromReceiver")(wirelessDisplayBlockUserInputFromReceiver.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wirelessDisplayRequirePinForPairing)) __obj.updateDynamic("wirelessDisplayRequirePinForPairing")(wirelessDisplayRequirePinForPairing.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Windows10GeneralConfiguration]
   }
-  @scala.inline
-  implicit class Windows10GeneralConfigurationOps[Self <: Windows10GeneralConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountsBlockAddingNonMicrosoftAccountEmail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountsBlockAddingNonMicrosoftAccountEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountsBlockAddingNonMicrosoftAccountEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountsBlockAddingNonMicrosoftAccountEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAntiTheftModeBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antiTheftModeBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAntiTheftModeBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antiTheftModeBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppsAllowTrustedAppsSideloading(value: StateManagementSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appsAllowTrustedAppsSideloading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppsAllowTrustedAppsSideloading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appsAllowTrustedAppsSideloading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppsBlockWindowsStoreOriginatedApps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appsBlockWindowsStoreOriginatedApps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppsBlockWindowsStoreOriginatedApps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appsBlockWindowsStoreOriginatedApps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothAllowedServices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothAllowedServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothAllowedServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothAllowedServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothBlockAdvertising(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlockAdvertising")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothBlockAdvertising: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlockAdvertising")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothBlockDiscoverableMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlockDiscoverableMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothBlockDiscoverableMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlockDiscoverableMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothBlockPrePairing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlockPrePairing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothBlockPrePairing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlockPrePairing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCameraBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCameraBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellularBlockDataWhenRoaming(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockDataWhenRoaming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellularBlockDataWhenRoaming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockDataWhenRoaming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellularBlockVpn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockVpn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellularBlockVpn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockVpn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellularBlockVpnWhenRoaming(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockVpnWhenRoaming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellularBlockVpnWhenRoaming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockVpnWhenRoaming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificatesBlockManualRootCertificateInstallation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatesBlockManualRootCertificateInstallation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificatesBlockManualRootCertificateInstallation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatesBlockManualRootCertificateInstallation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectedDevicesServiceBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectedDevicesServiceBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectedDevicesServiceBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectedDevicesServiceBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyPasteBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyPasteBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyPasteBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyPasteBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCortanaBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cortanaBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCortanaBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cortanaBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderBlockEndUserAccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderBlockEndUserAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderBlockEndUserAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderBlockEndUserAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderCloudBlockLevel(value: DefenderCloudBlockLevelType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderCloudBlockLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderCloudBlockLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderCloudBlockLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderDaysBeforeDeletingQuarantinedMalware(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderDaysBeforeDeletingQuarantinedMalware")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderDaysBeforeDeletingQuarantinedMalware: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderDaysBeforeDeletingQuarantinedMalware")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderDetectedMalwareActions(value: DefenderDetectedMalwareActions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderDetectedMalwareActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderDetectedMalwareActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderDetectedMalwareActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderFileExtensionsToExclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderFileExtensionsToExclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderFileExtensionsToExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderFileExtensionsToExclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderFilesAndFoldersToExclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderFilesAndFoldersToExclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderFilesAndFoldersToExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderFilesAndFoldersToExclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderMonitorFileActivity(value: DefenderMonitorFileActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderMonitorFileActivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderMonitorFileActivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderMonitorFileActivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderProcessesToExclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderProcessesToExclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderProcessesToExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderProcessesToExclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderPromptForSampleSubmission(value: DefenderPromptForSampleSubmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderPromptForSampleSubmission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderPromptForSampleSubmission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderPromptForSampleSubmission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderRequireBehaviorMonitoring(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderRequireBehaviorMonitoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderRequireBehaviorMonitoring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderRequireBehaviorMonitoring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderRequireCloudProtection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderRequireCloudProtection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderRequireCloudProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderRequireCloudProtection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderRequireNetworkInspectionSystem(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderRequireNetworkInspectionSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderRequireNetworkInspectionSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderRequireNetworkInspectionSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderRequireRealTimeMonitoring(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderRequireRealTimeMonitoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderRequireRealTimeMonitoring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderRequireRealTimeMonitoring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanArchiveFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanArchiveFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanArchiveFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanArchiveFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanDownloads(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanDownloads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanDownloads: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanDownloads")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanIncomingMail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanIncomingMail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanIncomingMail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanIncomingMail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanMappedNetworkDrivesDuringFullScan(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanMappedNetworkDrivesDuringFullScan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanMappedNetworkDrivesDuringFullScan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanMappedNetworkDrivesDuringFullScan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanMaxCpu(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanMaxCpu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanMaxCpu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanMaxCpu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanNetworkFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanNetworkFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanNetworkFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanNetworkFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanRemovableDrivesDuringFullScan(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanRemovableDrivesDuringFullScan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanRemovableDrivesDuringFullScan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanRemovableDrivesDuringFullScan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanScriptsLoadedInInternetExplorer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanScriptsLoadedInInternetExplorer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanScriptsLoadedInInternetExplorer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanScriptsLoadedInInternetExplorer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScanType(value: DefenderScanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScanType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScanType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScheduledQuickScanTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScheduledQuickScanTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScheduledQuickScanTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScheduledQuickScanTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderScheduledScanTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScheduledScanTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderScheduledScanTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderScheduledScanTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderSignatureUpdateIntervalInHours(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderSignatureUpdateIntervalInHours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderSignatureUpdateIntervalInHours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderSignatureUpdateIntervalInHours")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefenderSystemScanSchedule(value: WeeklySchedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderSystemScanSchedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefenderSystemScanSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defenderSystemScanSchedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeveloperUnlockSetting(value: StateManagementSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerUnlockSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeveloperUnlockSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerUnlockSetting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceManagementBlockFactoryResetOnMobile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceManagementBlockFactoryResetOnMobile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceManagementBlockFactoryResetOnMobile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceManagementBlockFactoryResetOnMobile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceManagementBlockManualUnenroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceManagementBlockManualUnenroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceManagementBlockManualUnenroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceManagementBlockManualUnenroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiagnosticsDataSubmissionMode(value: DiagnosticDataSubmissionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticsDataSubmissionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiagnosticsDataSubmissionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticsDataSubmissionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeAllowStartPagesModification(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeAllowStartPagesModification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeAllowStartPagesModification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeAllowStartPagesModification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockAccessToAboutFlags(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockAccessToAboutFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockAccessToAboutFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockAccessToAboutFlags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockAddressBarDropdown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockAddressBarDropdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockAddressBarDropdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockAddressBarDropdown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockAutofill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockAutofill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockAutofill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockAutofill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockCompatibilityList(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockCompatibilityList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockCompatibilityList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockCompatibilityList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockDeveloperTools(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockDeveloperTools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockDeveloperTools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockDeveloperTools")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockExtensions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockExtensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockExtensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockInPrivateBrowsing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockInPrivateBrowsing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockInPrivateBrowsing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockInPrivateBrowsing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockJavaScript(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockJavaScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockJavaScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockJavaScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockLiveTileDataCollection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockLiveTileDataCollection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockLiveTileDataCollection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockLiveTileDataCollection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockPasswordManager(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockPasswordManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockPasswordManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockPasswordManager")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockPopups(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockPopups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockPopups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockPopups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockSearchSuggestions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockSearchSuggestions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockSearchSuggestions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockSearchSuggestions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockSendingDoNotTrackHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockSendingDoNotTrackHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockSendingDoNotTrackHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockSendingDoNotTrackHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlockSendingIntranetTrafficToInternetExplorer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockSendingIntranetTrafficToInternetExplorer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlockSendingIntranetTrafficToInternetExplorer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlockSendingIntranetTrafficToInternetExplorer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeClearBrowsingDataOnExit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeClearBrowsingDataOnExit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeClearBrowsingDataOnExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeClearBrowsingDataOnExit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeCookiePolicy(value: EdgeCookiePolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeCookiePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeCookiePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeCookiePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeDisableFirstRunPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeDisableFirstRunPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeDisableFirstRunPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeDisableFirstRunPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeEnterpriseModeSiteListLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeEnterpriseModeSiteListLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeEnterpriseModeSiteListLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeEnterpriseModeSiteListLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeFirstRunUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeFirstRunUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeFirstRunUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeFirstRunUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeHomepageUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeHomepageUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeHomepageUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeHomepageUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeRequireSmartScreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeRequireSmartScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeRequireSmartScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeRequireSmartScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeSearchEngine(value: EdgeSearchEngineBase): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSearchEngine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeSearchEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSearchEngine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeSendIntranetTrafficToInternetExplorer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSendIntranetTrafficToInternetExplorer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeSendIntranetTrafficToInternetExplorer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSendIntranetTrafficToInternetExplorer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeSyncFavoritesWithInternetExplorer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSyncFavoritesWithInternetExplorer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeSyncFavoritesWithInternetExplorer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSyncFavoritesWithInternetExplorer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterpriseCloudPrintDiscoveryEndPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintDiscoveryEndPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterpriseCloudPrintDiscoveryEndPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintDiscoveryEndPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterpriseCloudPrintDiscoveryMaxLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintDiscoveryMaxLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterpriseCloudPrintDiscoveryMaxLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintDiscoveryMaxLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterpriseCloudPrintOAuthAuthority(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintOAuthAuthority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterpriseCloudPrintOAuthAuthority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintOAuthAuthority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterpriseCloudPrintOAuthClientIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintOAuthClientIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterpriseCloudPrintOAuthClientIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintOAuthClientIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterpriseCloudPrintResourceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintResourceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterpriseCloudPrintResourceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseCloudPrintResourceIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperienceBlockDeviceDiscovery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experienceBlockDeviceDiscovery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperienceBlockDeviceDiscovery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experienceBlockDeviceDiscovery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperienceBlockErrorDialogWhenNoSIM(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experienceBlockErrorDialogWhenNoSIM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperienceBlockErrorDialogWhenNoSIM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experienceBlockErrorDialogWhenNoSIM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperienceBlockTaskSwitcher(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experienceBlockTaskSwitcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperienceBlockTaskSwitcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experienceBlockTaskSwitcher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGameDvrBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameDvrBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameDvrBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameDvrBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInternetSharingBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internetSharingBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInternetSharingBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internetSharingBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationServicesBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationServicesBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationServicesBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationServicesBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockScreenAllowTimeoutConfiguration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenAllowTimeoutConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockScreenAllowTimeoutConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenAllowTimeoutConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockScreenBlockActionCenterNotifications(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenBlockActionCenterNotifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockScreenBlockActionCenterNotifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenBlockActionCenterNotifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockScreenBlockCortana(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenBlockCortana")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockScreenBlockCortana: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenBlockCortana")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockScreenBlockToastNotifications(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenBlockToastNotifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockScreenBlockToastNotifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenBlockToastNotifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockScreenTimeoutInSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenTimeoutInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockScreenTimeoutInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenTimeoutInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogonBlockFastUserSwitching(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonBlockFastUserSwitching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogonBlockFastUserSwitching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonBlockFastUserSwitching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMicrosoftAccountBlockSettingsSync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("microsoftAccountBlockSettingsSync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMicrosoftAccountBlockSettingsSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("microsoftAccountBlockSettingsSync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMicrosoftAccountBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("microsoftAccountBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMicrosoftAccountBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("microsoftAccountBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProxyApplySettingsDeviceWide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProxyApplySettingsDeviceWide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProxyApplySettingsDeviceWide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProxyApplySettingsDeviceWide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProxyAutomaticConfigurationUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProxyAutomaticConfigurationUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProxyAutomaticConfigurationUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProxyAutomaticConfigurationUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProxyDisableAutoDetect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProxyDisableAutoDetect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProxyDisableAutoDetect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProxyDisableAutoDetect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProxyServer(value: Windows10NetworkProxyServer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProxyServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProxyServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProxyServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNfcBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nfcBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNfcBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nfcBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOneDriveDisableFileSync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneDriveDisableFileSync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOneDriveDisableFileSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneDriveDisableFileSync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordBlockSimple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordBlockSimple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordBlockSimple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordBlockSimple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordExpirationDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordExpirationDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumCharacterSetCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumCharacterSetCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumCharacterSetCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumCharacterSetCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinutesOfInactivityBeforeScreenTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordPreviousPasswordBlockCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPreviousPasswordBlockCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordPreviousPasswordBlockCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPreviousPasswordBlockCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequireWhenResumeFromIdleState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequireWhenResumeFromIdleState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequireWhenResumeFromIdleState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequireWhenResumeFromIdleState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequiredType(value: RequiredPasswordType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequiredType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequiredType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequiredType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordSignInFailureCountBeforeFactoryReset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordSignInFailureCountBeforeFactoryReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersonalizationDesktopImageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personalizationDesktopImageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersonalizationDesktopImageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personalizationDesktopImageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersonalizationLockScreenImageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personalizationLockScreenImageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersonalizationLockScreenImageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personalizationLockScreenImageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivacyAdvertisingId(value: StateManagementSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyAdvertisingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivacyAdvertisingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyAdvertisingId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivacyAutoAcceptPairingAndConsentPrompts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyAutoAcceptPairingAndConsentPrompts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivacyAutoAcceptPairingAndConsentPrompts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyAutoAcceptPairingAndConsentPrompts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivacyBlockInputPersonalization(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyBlockInputPersonalization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivacyBlockInputPersonalization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyBlockInputPersonalization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetProtectionModeBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetProtectionModeBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetProtectionModeBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetProtectionModeBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafeSearchFilter(value: SafeSearchFilterType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeSearchFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafeSearchFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeSearchFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenCaptureBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCaptureBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenCaptureBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCaptureBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchBlockDiacritics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBlockDiacritics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchBlockDiacritics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBlockDiacritics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchDisableAutoLanguageDetection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDisableAutoLanguageDetection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchDisableAutoLanguageDetection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDisableAutoLanguageDetection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchDisableIndexerBackoff(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDisableIndexerBackoff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchDisableIndexerBackoff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDisableIndexerBackoff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchDisableIndexingEncryptedItems(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDisableIndexingEncryptedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchDisableIndexingEncryptedItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDisableIndexingEncryptedItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchDisableIndexingRemovableDrive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDisableIndexingRemovableDrive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchDisableIndexingRemovableDrive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDisableIndexingRemovableDrive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchEnableAutomaticIndexSizeManangement(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchEnableAutomaticIndexSizeManangement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchEnableAutomaticIndexSizeManangement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchEnableAutomaticIndexSizeManangement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchEnableRemoteQueries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchEnableRemoteQueries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchEnableRemoteQueries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchEnableRemoteQueries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockAccountsPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockAccountsPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockAccountsPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockAccountsPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockAddProvisioningPackage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockAddProvisioningPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockAddProvisioningPackage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockAddProvisioningPackage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockAppsPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockAppsPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockAppsPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockAppsPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockChangeLanguage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockChangeLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockChangeLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockChangeLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockChangePowerSleep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockChangePowerSleep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockChangePowerSleep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockChangePowerSleep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockChangeRegion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockChangeRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockChangeRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockChangeRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockChangeSystemTime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockChangeSystemTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockChangeSystemTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockChangeSystemTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockDevicesPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockDevicesPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockDevicesPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockDevicesPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockEaseOfAccessPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockEaseOfAccessPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockEaseOfAccessPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockEaseOfAccessPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockEditDeviceName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockEditDeviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockEditDeviceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockEditDeviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockGamingPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockGamingPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockGamingPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockGamingPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockNetworkInternetPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockNetworkInternetPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockNetworkInternetPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockNetworkInternetPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockPersonalizationPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockPersonalizationPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockPersonalizationPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockPersonalizationPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockPrivacyPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockPrivacyPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockPrivacyPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockPrivacyPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockRemoveProvisioningPackage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockRemoveProvisioningPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockRemoveProvisioningPackage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockRemoveProvisioningPackage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockSettingsApp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockSettingsApp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockSettingsApp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockSettingsApp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockSystemPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockSystemPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockSystemPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockSystemPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockTimeLanguagePage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockTimeLanguagePage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockTimeLanguagePage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockTimeLanguagePage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsBlockUpdateSecurityPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockUpdateSecurityPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsBlockUpdateSecurityPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsBlockUpdateSecurityPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharedUserAppDataAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedUserAppDataAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharedUserAppDataAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedUserAppDataAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartScreenBlockPromptOverride(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartScreenBlockPromptOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartScreenBlockPromptOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartScreenBlockPromptOverride")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartScreenBlockPromptOverrideForFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartScreenBlockPromptOverrideForFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartScreenBlockPromptOverrideForFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartScreenBlockPromptOverrideForFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartScreenEnableAppInstallControl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartScreenEnableAppInstallControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartScreenEnableAppInstallControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartScreenEnableAppInstallControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartBlockUnpinningAppsFromTaskbar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startBlockUnpinningAppsFromTaskbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartBlockUnpinningAppsFromTaskbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startBlockUnpinningAppsFromTaskbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuAppListVisibility(value: WindowsStartMenuAppListVisibilityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuAppListVisibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuAppListVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuAppListVisibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideChangeAccountSettings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideChangeAccountSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideChangeAccountSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideChangeAccountSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideFrequentlyUsedApps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideFrequentlyUsedApps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideFrequentlyUsedApps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideFrequentlyUsedApps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideHibernate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideHibernate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideHibernate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideHibernate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideLock(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHidePowerButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHidePowerButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHidePowerButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHidePowerButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideRecentJumpLists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideRecentJumpLists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideRecentJumpLists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideRecentJumpLists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideRecentlyAddedApps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideRecentlyAddedApps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideRecentlyAddedApps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideRecentlyAddedApps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideRestartOptions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideRestartOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideRestartOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideRestartOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideShutDown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideShutDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideShutDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideShutDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideSignOut(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideSignOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideSignOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideSignOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideSleep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideSleep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideSleep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideSleep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideSwitchAccount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideSwitchAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideSwitchAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideSwitchAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuHideUserTile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideUserTile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuHideUserTile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuHideUserTile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuLayoutEdgeAssetsXml(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuLayoutEdgeAssetsXml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuLayoutEdgeAssetsXml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuLayoutEdgeAssetsXml")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuLayoutXml(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuLayoutXml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuLayoutXml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuLayoutXml")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuMode(value: WindowsStartMenuModeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderDocuments(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderDocuments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderDocuments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderDocuments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderDownloads(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderDownloads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderDownloads: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderDownloads")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderFileExplorer(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderFileExplorer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderFileExplorer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderFileExplorer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderHomeGroup(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderHomeGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderHomeGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderHomeGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderMusic(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderMusic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderMusic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderMusic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderNetwork(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderNetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderNetwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderPersonalFolder(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderPersonalFolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderPersonalFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderPersonalFolder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderPictures(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderPictures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderPictures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderPictures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderSettings(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartMenuPinnedFolderVideos(value: VisibilitySetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderVideos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartMenuPinnedFolderVideos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMenuPinnedFolderVideos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageBlockRemovableStorage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageBlockRemovableStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageBlockRemovableStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageBlockRemovableStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageRequireMobileDeviceEncryption(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRequireMobileDeviceEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageRequireMobileDeviceEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRequireMobileDeviceEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageRestrictAppDataToSystemVolume(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRestrictAppDataToSystemVolume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageRestrictAppDataToSystemVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRestrictAppDataToSystemVolume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageRestrictAppInstallToSystemVolume(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRestrictAppInstallToSystemVolume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageRestrictAppInstallToSystemVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRestrictAppInstallToSystemVolume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenantLockdownRequireNetworkDuringOutOfBoxExperience(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantLockdownRequireNetworkDuringOutOfBoxExperience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenantLockdownRequireNetworkDuringOutOfBoxExperience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantLockdownRequireNetworkDuringOutOfBoxExperience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsbBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usbBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsbBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usbBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVoiceRecordingBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceRecordingBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoiceRecordingBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceRecordingBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebRtcBlockLocalhostIpAddress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webRtcBlockLocalhostIpAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebRtcBlockLocalhostIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webRtcBlockLocalhostIpAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWiFiBlockAutomaticConnectHotspots(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiFiBlockAutomaticConnectHotspots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWiFiBlockAutomaticConnectHotspots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiFiBlockAutomaticConnectHotspots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWiFiBlockManualConfiguration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiFiBlockManualConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWiFiBlockManualConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiFiBlockManualConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWiFiBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiFiBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWiFiBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiFiBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWiFiScanInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiFiScanInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWiFiScanInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiFiScanInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsSpotlightBlockConsumerSpecificFeatures(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockConsumerSpecificFeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsSpotlightBlockConsumerSpecificFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockConsumerSpecificFeatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsSpotlightBlockOnActionCenter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockOnActionCenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsSpotlightBlockOnActionCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockOnActionCenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsSpotlightBlockTailoredExperiences(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockTailoredExperiences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsSpotlightBlockTailoredExperiences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockTailoredExperiences")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsSpotlightBlockThirdPartyNotifications(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockThirdPartyNotifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsSpotlightBlockThirdPartyNotifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockThirdPartyNotifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsSpotlightBlockWelcomeExperience(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockWelcomeExperience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsSpotlightBlockWelcomeExperience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockWelcomeExperience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsSpotlightBlockWindowsTips(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockWindowsTips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsSpotlightBlockWindowsTips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlockWindowsTips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsSpotlightBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsSpotlightBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsSpotlightConfigureOnLockScreen(value: WindowsSpotlightEnablementSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightConfigureOnLockScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsSpotlightConfigureOnLockScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsSpotlightConfigureOnLockScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsStoreBlockAutoUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsStoreBlockAutoUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsStoreBlockAutoUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsStoreBlockAutoUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsStoreBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsStoreBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsStoreBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsStoreBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsStoreEnablePrivateStoreOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsStoreEnablePrivateStoreOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsStoreEnablePrivateStoreOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsStoreEnablePrivateStoreOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWirelessDisplayBlockProjectionToThisDevice(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wirelessDisplayBlockProjectionToThisDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWirelessDisplayBlockProjectionToThisDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wirelessDisplayBlockProjectionToThisDevice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWirelessDisplayBlockUserInputFromReceiver(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wirelessDisplayBlockUserInputFromReceiver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWirelessDisplayBlockUserInputFromReceiver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wirelessDisplayBlockUserInputFromReceiver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWirelessDisplayRequirePinForPairing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wirelessDisplayRequirePinForPairing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWirelessDisplayRequirePinForPairing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wirelessDisplayRequirePinForPairing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

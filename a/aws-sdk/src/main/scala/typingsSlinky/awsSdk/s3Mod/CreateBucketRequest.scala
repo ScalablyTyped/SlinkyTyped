@@ -46,119 +46,27 @@ trait CreateBucketRequest extends js.Object {
 
 object CreateBucketRequest {
   @scala.inline
-  def apply(Bucket: BucketName): CreateBucketRequest = {
+  def apply(
+    Bucket: BucketName,
+    ACL: BucketCannedACL = null,
+    CreateBucketConfiguration: CreateBucketConfiguration = null,
+    GrantFullControl: GrantFullControl = null,
+    GrantRead: GrantRead = null,
+    GrantReadACP: GrantReadACP = null,
+    GrantWrite: GrantWrite = null,
+    GrantWriteACP: GrantWriteACP = null,
+    ObjectLockEnabledForBucket: js.UndefOr[ObjectLockEnabledForBucket] = js.undefined
+  ): CreateBucketRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any])
+    if (ACL != null) __obj.updateDynamic("ACL")(ACL.asInstanceOf[js.Any])
+    if (CreateBucketConfiguration != null) __obj.updateDynamic("CreateBucketConfiguration")(CreateBucketConfiguration.asInstanceOf[js.Any])
+    if (GrantFullControl != null) __obj.updateDynamic("GrantFullControl")(GrantFullControl.asInstanceOf[js.Any])
+    if (GrantRead != null) __obj.updateDynamic("GrantRead")(GrantRead.asInstanceOf[js.Any])
+    if (GrantReadACP != null) __obj.updateDynamic("GrantReadACP")(GrantReadACP.asInstanceOf[js.Any])
+    if (GrantWrite != null) __obj.updateDynamic("GrantWrite")(GrantWrite.asInstanceOf[js.Any])
+    if (GrantWriteACP != null) __obj.updateDynamic("GrantWriteACP")(GrantWriteACP.asInstanceOf[js.Any])
+    if (!js.isUndefined(ObjectLockEnabledForBucket)) __obj.updateDynamic("ObjectLockEnabledForBucket")(ObjectLockEnabledForBucket.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBucketRequest]
   }
-  @scala.inline
-  implicit class CreateBucketRequestOps[Self <: CreateBucketRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withACL(value: BucketCannedACL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ACL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutACL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ACL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateBucketConfiguration(value: CreateBucketConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateBucketConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateBucketConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateBucketConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrantFullControl(value: GrantFullControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantFullControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantFullControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantFullControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrantRead(value: GrantRead): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantRead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantRead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrantReadACP(value: GrantReadACP): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantReadACP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantReadACP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantReadACP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrantWrite(value: GrantWrite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantWrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantWrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantWrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrantWriteACP(value: GrantWriteACP): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantWriteACP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantWriteACP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantWriteACP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLockEnabledForBucket(value: ObjectLockEnabledForBucket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockEnabledForBucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockEnabledForBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockEnabledForBucket")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

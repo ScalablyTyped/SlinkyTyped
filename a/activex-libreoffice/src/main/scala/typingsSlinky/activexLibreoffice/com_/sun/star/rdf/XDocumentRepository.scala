@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * @see XDocumentMetadataAccess
   * @since OOo 3.2
   */
-@js.native
 trait XDocumentRepository extends XRepository {
   /**
     * find the RDFa statement(s) associated with an ODF element.
@@ -29,7 +28,7 @@ trait XDocumentRepository extends XRepository {
     * @throws com::sun::star::lang::IllegalArgumentException if the given Element is `NULL` , or of a type that can not have RDFa metadata attached.
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def getStatementRDFa(Element: XMetadatable): Pair[SafeArray[Statement], Boolean] = js.native
+  def getStatementRDFa(Element: XMetadatable): Pair[SafeArray[Statement], Boolean]
   /**
     * gets matching RDFa statements from the repository.
     *
@@ -46,7 +45,7 @@ trait XDocumentRepository extends XRepository {
     * @see XNamedGraph.getStatements
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def getStatementsRDFa(Subject: XResource, Predicate: XURI, Object: XNode): XEnumeration = js.native
+  def getStatementsRDFa(Subject: XResource, Predicate: XURI, Object: XNode): XEnumeration
   /**
     * remove the RDFa statement(s) that correspond to an ODF element from the repository.
     *
@@ -55,7 +54,7 @@ trait XDocumentRepository extends XRepository {
     * @throws com::sun::star::lang::IllegalArgumentException if the given Element is `NULL` , or of a type that can not have RDFa metadata attached.
     * @throws RepositoryException if an error occurs when accessing the repository.
     */
-  def removeStatementRDFa(Element: XMetadatable): Unit = js.native
+  def removeStatementRDFa(Element: XMetadatable): Unit
   /**
     * update the RDFa statement(s) that correspond to an ODF element in the repository.
     *
@@ -82,7 +81,7 @@ trait XDocumentRepository extends XRepository {
     Object: XMetadatable,
     RDFaContent: String,
     RDFaDatatype: XURI
-  ): Unit = js.native
+  ): Unit
 }
 
 object XDocumentRepository {
@@ -108,37 +107,5 @@ object XDocumentRepository {
     val __obj = js.Dynamic.literal(GraphNames = GraphNames.asInstanceOf[js.Any], createBlankNode = js.Any.fromFunction0(createBlankNode), createGraph = js.Any.fromFunction1(createGraph), destroyGraph = js.Any.fromFunction1(destroyGraph), exportGraph = js.Any.fromFunction4(exportGraph), getGraph = js.Any.fromFunction1(getGraph), getGraphNames = js.Any.fromFunction0(getGraphNames), getStatementRDFa = js.Any.fromFunction1(getStatementRDFa), getStatements = js.Any.fromFunction3(getStatements), getStatementsRDFa = js.Any.fromFunction3(getStatementsRDFa), importGraph = js.Any.fromFunction4(importGraph), queryAsk = js.Any.fromFunction1(queryAsk), queryConstruct = js.Any.fromFunction1(queryConstruct), querySelect = js.Any.fromFunction1(querySelect), removeStatementRDFa = js.Any.fromFunction1(removeStatementRDFa), setStatementRDFa = js.Any.fromFunction5(setStatementRDFa))
     __obj.asInstanceOf[XDocumentRepository]
   }
-  @scala.inline
-  implicit class XDocumentRepositoryOps[Self <: XDocumentRepository] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetStatementRDFa(value: XMetadatable => Pair[SafeArray[Statement], Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatementRDFa")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetStatementsRDFa(value: (XResource, XURI, XNode) => XEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatementsRDFa")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveStatementRDFa(value: XMetadatable => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeStatementRDFa")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetStatementRDFa(value: (XResource, SeqEquiv[XURI], XMetadatable, String, XURI) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStatementRDFa")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

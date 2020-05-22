@@ -25,7 +25,6 @@ import scala.scalajs.js.annotation._
   *
   * {@link TextSection} instances can be linked from and to other texts.
   */
-@js.native
 trait TextSection
   extends TextContent
      with UserDefinedAttributesSupplier
@@ -34,89 +33,89 @@ trait TextSection
      with XPropertySet
      with XPropertyState {
   /** contains the name of the file filter for the background graphic. */
-  var BackGraphicFilter: String = js.native
+  var BackGraphicFilter: String
   /**
     * determines the position of the background graphic.
     * @see GraphicLocation
     */
-  var BackGraphicLocation: GraphicLocation = js.native
+  var BackGraphicLocation: GraphicLocation
   /** contains the URL for the background graphic. */
-  var BackGraphicURL: String = js.native
+  var BackGraphicURL: String
   /**
     * This property contains a conditional expression.
     *
     * If the result of the conditional expression is `TRUE` and the property {@link TextSection.IsVisible} is `FALSE` , then the section is hidden.
     */
-  var Condition: String = js.native
+  var Condition: String
   /**
     * specifies the source element of the command string for a DDE operation.
     *
     * The element can be i.e. a name of a cell in a sheet or a bookmark.
     */
-  var DDECommandElement: String = js.native
+  var DDECommandElement: String
   /** specifies the source file name of the command string for a DDE operation. */
-  var DDECommandFile: String = js.native
+  var DDECommandFile: String
   /**
     * specifies the type of the command string for a DDE operation.
     *
     * The type can be the name of the application that provides a DDE source.
     */
-  var DDECommandType: String = js.native
+  var DDECommandType: String
   /** determines whether endnotes inside the section are displayed at the end of the section text. */
-  var EndnoteIsCollectAtTextEnd: Boolean = js.native
+  var EndnoteIsCollectAtTextEnd: Boolean
   /** determines whether the endnotes within the section use an own numbering format. This is only valid if `EndnoteIsRestartNumbering` is set. */
-  var EndnoteIsOwnNumbering: Boolean = js.native
+  var EndnoteIsOwnNumbering: Boolean
   /** determines whether the endnotes numbering restarts within the section. This is only valid if `EndnoteIsRestartNumbering` is set. */
-  var EndnoteIsRestartNumbering: Boolean = js.native
+  var EndnoteIsRestartNumbering: Boolean
   /** determines the prefix that is display before the endnote number. This is only valid if `EndnoteIsOwnNumbering` is set. */
-  var EndnoteNumberingPrefix: String = js.native
+  var EndnoteNumberingPrefix: String
   /** determines the suffix that is display after the endnote number. This is only valid if `EndnoteIsOwnNumbering` is set. */
-  var EndnoteNumberingSuffix: String = js.native
+  var EndnoteNumberingSuffix: String
   /**
     * determines the numbering type of the endnote numbering as a value of {@link com.sun.star.style.NumberingType} . This is only valid if
     * `EndoteIsOwnNumbering` is set.
     */
-  var EndnoteNumberingType: Double = js.native
+  var EndnoteNumberingType: Double
   /** determines at which number the endnote numbering inside of the section starts. This is only valid if `EndnoteIsRestartNumbering` is set. */
-  var EndnoteRestartNumberingAt: Double = js.native
+  var EndnoteRestartNumberingAt: Double
   /** If this property is set, then the content of the section is read from the specified document. */
-  var FileLink: SectionFileLink = js.native
+  var FileLink: SectionFileLink
   /** determines whether footnotes inside the section are displayed at the end of the section text. */
-  var FootnoteIsCollectAtTextEnd: Boolean = js.native
+  var FootnoteIsCollectAtTextEnd: Boolean
   /** determines whether the footnotes within the section use an own numbering format. This is only valid if `FootnoteIsRestartNumbering` is set. */
-  var FootnoteIsOwnNumbering: Boolean = js.native
+  var FootnoteIsOwnNumbering: Boolean
   /** determines whether the footnotes numbering restarts within the section. This is only valid if `FootnoteIsRestartNumbering` is set. */
-  var FootnoteIsRestartNumbering: Boolean = js.native
+  var FootnoteIsRestartNumbering: Boolean
   /** determines the prefix that is display before the footnote number. This is only valid if `FootnoteIsOwnNumbering` is set. */
-  var FootnoteNumberingPrefix: String = js.native
+  var FootnoteNumberingPrefix: String
   /** determines the suffix that is display after of the footnote number. This is only valid if `FootnoteIsOwnNumbering` is set. */
-  var FootnoteNumberingSuffix: String = js.native
+  var FootnoteNumberingSuffix: String
   /**
     * determines the numbering type of the footnote numbering as a value of {@link com.sun.star.style.NumberingType} . This is only valid if
     * `FootnoteIsOwnNumbering` is set.
     */
-  var FootnoteNumberingType: Double = js.native
+  var FootnoteNumberingType: Double
   /** determines at which number the footnote numbering inside of the section starts. This is only valid if `FootnoteIsRestartNumbering` is set. */
-  var FootnoteRestartNumberingAt: Double = js.native
+  var FootnoteRestartNumberingAt: Double
   /** determines if a DDE link is updated automatically. */
-  var IsAutomaticUpdate: Boolean = js.native
+  var IsAutomaticUpdate: Boolean
   /** If this property is `TRUE` , the text section is protected and cannot be modified from the user interface. */
-  var IsProtected: Boolean = js.native
+  var IsProtected: Boolean
   /** If this property is `FALSE` , the text section is hidden. */
-  var IsVisible: Boolean = js.native
+  var IsVisible: Boolean
   /**
     * specifies the source of a file link in the document that is specified in {@link TextSection.FileLink} .
     *
     * The source may be a text section or a bookmark. If {@link TextSection.FileLink} is empty, then the current document is searched for the source. If
     * this property is empty and {@link TextSection.FileLink} is set, then the complete document content is linked into this section.
     */
-  var LinkRegion: String = js.native
+  var LinkRegion: String
   /** determines the left margin of the section */
-  var SectionLeftMargin: Double = js.native
+  var SectionLeftMargin: Double
   /** determines the left margin of the section */
-  var SectionRightMargin: Double = js.native
+  var SectionRightMargin: Double
   /** allows columns to be set into the text section */
-  var TextColumns: XTextColumns = js.native
+  var TextColumns: XTextColumns
 }
 
 object TextSection {
@@ -187,187 +186,5 @@ object TextSection {
     val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], AnchorType = AnchorType.asInstanceOf[js.Any], AnchorTypes = AnchorTypes.asInstanceOf[js.Any], BackGraphicFilter = BackGraphicFilter.asInstanceOf[js.Any], BackGraphicLocation = BackGraphicLocation.asInstanceOf[js.Any], BackGraphicURL = BackGraphicURL.asInstanceOf[js.Any], ChildSections = ChildSections.asInstanceOf[js.Any], Condition = Condition.asInstanceOf[js.Any], DDECommandElement = DDECommandElement.asInstanceOf[js.Any], DDECommandFile = DDECommandFile.asInstanceOf[js.Any], DDECommandType = DDECommandType.asInstanceOf[js.Any], EndnoteIsCollectAtTextEnd = EndnoteIsCollectAtTextEnd.asInstanceOf[js.Any], EndnoteIsOwnNumbering = EndnoteIsOwnNumbering.asInstanceOf[js.Any], EndnoteIsRestartNumbering = EndnoteIsRestartNumbering.asInstanceOf[js.Any], EndnoteNumberingPrefix = EndnoteNumberingPrefix.asInstanceOf[js.Any], EndnoteNumberingSuffix = EndnoteNumberingSuffix.asInstanceOf[js.Any], EndnoteNumberingType = EndnoteNumberingType.asInstanceOf[js.Any], EndnoteRestartNumberingAt = EndnoteRestartNumberingAt.asInstanceOf[js.Any], FileLink = FileLink.asInstanceOf[js.Any], FootnoteIsCollectAtTextEnd = FootnoteIsCollectAtTextEnd.asInstanceOf[js.Any], FootnoteIsOwnNumbering = FootnoteIsOwnNumbering.asInstanceOf[js.Any], FootnoteIsRestartNumbering = FootnoteIsRestartNumbering.asInstanceOf[js.Any], FootnoteNumberingPrefix = FootnoteNumberingPrefix.asInstanceOf[js.Any], FootnoteNumberingSuffix = FootnoteNumberingSuffix.asInstanceOf[js.Any], FootnoteNumberingType = FootnoteNumberingType.asInstanceOf[js.Any], FootnoteRestartNumberingAt = FootnoteRestartNumberingAt.asInstanceOf[js.Any], IsAutomaticUpdate = IsAutomaticUpdate.asInstanceOf[js.Any], IsProtected = IsProtected.asInstanceOf[js.Any], IsVisible = IsVisible.asInstanceOf[js.Any], LinkRegion = LinkRegion.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], ParentSection = ParentSection.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], SectionLeftMargin = SectionLeftMargin.asInstanceOf[js.Any], SectionRightMargin = SectionRightMargin.asInstanceOf[js.Any], TextColumns = TextColumns.asInstanceOf[js.Any], TextWrap = TextWrap.asInstanceOf[js.Any], UserDefinedAttributes = UserDefinedAttributes.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), getChildSections = js.Any.fromFunction0(getChildSections), getName = js.Any.fromFunction0(getName), getParentSection = js.Any.fromFunction0(getParentSection), getPropertyDefault = js.Any.fromFunction1(getPropertyDefault), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyState = js.Any.fromFunction1(getPropertyState), getPropertyStates = js.Any.fromFunction1(getPropertyStates), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setName = js.Any.fromFunction1(setName), setPropertyToDefault = js.Any.fromFunction1(setPropertyToDefault), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[TextSection]
   }
-  @scala.inline
-  implicit class TextSectionOps[Self <: TextSection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackGraphicFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackGraphicFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackGraphicLocation(value: GraphicLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackGraphicLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackGraphicURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackGraphicURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCondition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDDECommandElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DDECommandElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDDECommandFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DDECommandFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDDECommandType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DDECommandType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndnoteIsCollectAtTextEnd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndnoteIsCollectAtTextEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndnoteIsOwnNumbering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndnoteIsOwnNumbering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndnoteIsRestartNumbering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndnoteIsRestartNumbering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndnoteNumberingPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndnoteNumberingPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndnoteNumberingSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndnoteNumberingSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndnoteNumberingType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndnoteNumberingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndnoteRestartNumberingAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndnoteRestartNumberingAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileLink(value: SectionFileLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFootnoteIsCollectAtTextEnd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FootnoteIsCollectAtTextEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFootnoteIsOwnNumbering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FootnoteIsOwnNumbering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFootnoteIsRestartNumbering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FootnoteIsRestartNumbering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFootnoteNumberingPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FootnoteNumberingPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFootnoteNumberingSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FootnoteNumberingSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFootnoteNumberingType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FootnoteNumberingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFootnoteRestartNumberingAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FootnoteRestartNumberingAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsAutomaticUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAutomaticUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsProtected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsProtected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSectionLeftMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SectionLeftMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSectionRightMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SectionRightMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextColumns(value: XTextColumns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

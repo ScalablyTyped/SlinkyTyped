@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeoJsonObject extends js.Object {
   /**
     * Bounding box of the coordinate range of the object's Geometries, Features, or Feature Collections.
@@ -14,48 +13,23 @@ trait GeoJsonObject extends js.Object {
     * The axes order of a bbox follows the axes order of geometries.
     * https://tools.ietf.org/html/rfc7946#section-5
     */
-  var bbox: js.UndefOr[BBox] = js.native
+  var bbox: js.UndefOr[BBox] = js.undefined
   // Don't include foreign members directly into this type def.
   // in order to preserve type safety.
   // [key: string]: any;
   /**
     * Specifies the type of GeoJSON object.
     */
-  var `type`: GeoJsonTypes = js.native
+  var `type`: GeoJsonTypes
 }
 
 object GeoJsonObject {
   @scala.inline
-  def apply(`type`: GeoJsonTypes): GeoJsonObject = {
+  def apply(`type`: GeoJsonTypes, bbox: BBox = null): GeoJsonObject = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoJsonObject]
   }
-  @scala.inline
-  implicit class GeoJsonObjectOps[Self <: GeoJsonObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: GeoJsonTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBbox(value: BBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBbox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bbox")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,13 +26,11 @@ class ListItem protected () extends js.Object {
     */
   def this(data: ListItemDescriptor) = this()
   val data: js.Any = js.native
-  val dateExpires: String = js.native
-  val dateUpdated: js.Date = js.native
-  val index: Double = js.native
-  val lastEventId: Double = js.native
-  val revision: String = js.native
-  val uri: String = js.native
-  val value: js.Object = js.native
+  def dateExpires: String = js.native
+  def dateUpdated: js.Date = js.native
+  def index: Double = js.native
+  def lastEventId: Double = js.native
+  def revision: String = js.native
   /**
     * @private
     */
@@ -41,5 +39,7 @@ class ListItem protected () extends js.Object {
     * @private
     */
   def updateDateExpires(dateExpires: String): Unit = js.native
+  def uri: String = js.native
+  def value: js.Object = js.native
 }
 

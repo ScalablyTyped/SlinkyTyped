@@ -27,21 +27,21 @@ trait Image extends ClientObject {
   var context_Image: RequestContext = js.native
   /**
     *
-    * Returns the format of the image. Read-only.
+    * Returns the format of the image.
     *
     * [Api set: ExcelApi 1.9]
     */
   val format: PictureFormat | UNKNOWN | BMP | JPEG | GIF | PNG | SVG = js.native
   /**
     *
-    * Represents the shape identifier for the image object. Read-only.
+    * Specifies the shape identifier for the image object.
     *
     * [Api set: ExcelApi 1.9]
     */
   val id: String = js.native
   /**
     *
-    * Returns the Shape object associated with the image. Read-only.
+    * Returns the Shape object associated with the image.
     *
     * [Api set: ExcelApi 1.9]
     */

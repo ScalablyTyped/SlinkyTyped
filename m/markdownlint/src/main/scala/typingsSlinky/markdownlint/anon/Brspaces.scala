@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Brspaces extends js.Object {
-  var br_spaces: js.UndefOr[Double] = js.native
-  var list_item_empty_lines: js.UndefOr[Boolean] = js.native
+  var br_spaces: js.UndefOr[Double] = js.undefined
+  var list_item_empty_lines: js.UndefOr[Boolean] = js.undefined
 }
 
 object Brspaces {
   @scala.inline
-  def apply(): Brspaces = {
+  def apply(
+    br_spaces: js.UndefOr[Double] = js.undefined,
+    list_item_empty_lines: js.UndefOr[Boolean] = js.undefined
+  ): Brspaces = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(br_spaces)) __obj.updateDynamic("br_spaces")(br_spaces.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(list_item_empty_lines)) __obj.updateDynamic("list_item_empty_lines")(list_item_empty_lines.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Brspaces]
   }
-  @scala.inline
-  implicit class BrspacesOps[Self <: Brspaces] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBr_spaces(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("br_spaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBr_spaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("br_spaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withList_item_empty_lines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list_item_empty_lines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutList_item_empty_lines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list_item_empty_lines")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -84,6 +84,11 @@ object standardRenderingPipelineMod extends js.Object {
     var _vlsEnabled: js.Any = js.native
     var _volumetricLightStepsCount: js.Any = js.native
     /**
+      * Array of animations
+      */
+    /* CompleteClass */
+    override var animations: Nullable[js.Array[Animation]] = js.native
+    /**
       * List of animations for the pipeline (IAnimatable implementation)
       */
     @JSName("animations")

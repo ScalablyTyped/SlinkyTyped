@@ -1,49 +1,60 @@
 package typingsSlinky.rdfjsFetchLite.mod
 
+import org.scalajs.dom.experimental.AbortSignal
+import org.scalajs.dom.experimental.ReferrerPolicy
+import org.scalajs.dom.experimental.RequestCache
+import org.scalajs.dom.experimental.RequestCredentials
+import org.scalajs.dom.experimental.RequestMode
+import org.scalajs.dom.experimental.RequestRedirect
 import typingsSlinky.rdfjsFetchLite.anon.FnCall
 import typingsSlinky.rdfjsFetchLite.anon.PickparsersSinkMapEventEm
+import typingsSlinky.std.BodyInit
+import typingsSlinky.std.HeadersInit
 import typingsSlinky.std.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormatsInit extends RequestInit {
-  var fetch: js.UndefOr[FnCall] = js.native
-  var formats: PickparsersSinkMapEventEm = js.native
+  var fetch: js.UndefOr[FnCall] = js.undefined
+  var formats: PickparsersSinkMapEventEm
 }
 
 object FormatsInit {
   @scala.inline
-  def apply(formats: PickparsersSinkMapEventEm): FormatsInit = {
+  def apply(
+    formats: PickparsersSinkMapEventEm,
+    body: js.UndefOr[Null | BodyInit] = js.undefined,
+    cache: RequestCache = null,
+    credentials: RequestCredentials = null,
+    fetch: FnCall = null,
+    headers: HeadersInit = null,
+    integrity: String = null,
+    keepalive: js.UndefOr[Boolean] = js.undefined,
+    method: String = null,
+    mode: RequestMode = null,
+    redirect: RequestRedirect = null,
+    referrer: String = null,
+    referrerPolicy: ReferrerPolicy = null,
+    signal: js.UndefOr[Null | AbortSignal] = js.undefined,
+    window: js.Any = null
+  ): FormatsInit = {
     val __obj = js.Dynamic.literal(formats = formats.asInstanceOf[js.Any])
+    if (!js.isUndefined(body)) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (fetch != null) __obj.updateDynamic("fetch")(fetch.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepalive)) __obj.updateDynamic("keepalive")(keepalive.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (redirect != null) __obj.updateDynamic("redirect")(redirect.asInstanceOf[js.Any])
+    if (referrer != null) __obj.updateDynamic("referrer")(referrer.asInstanceOf[js.Any])
+    if (referrerPolicy != null) __obj.updateDynamic("referrerPolicy")(referrerPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(signal)) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
+    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormatsInit]
   }
-  @scala.inline
-  implicit class FormatsInitOps[Self <: FormatsInit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormats(value: PickparsersSinkMapEventEm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFetch(value: FnCall): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

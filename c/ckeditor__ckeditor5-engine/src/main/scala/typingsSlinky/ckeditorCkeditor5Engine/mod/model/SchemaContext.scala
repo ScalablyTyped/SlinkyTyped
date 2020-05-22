@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@ckeditor/ckeditor5-engine", "model.SchemaContext")
 @js.native
-class SchemaContext () extends SchemaContextDefinition
+class SchemaContext () extends _SchemaContextDefinition
 

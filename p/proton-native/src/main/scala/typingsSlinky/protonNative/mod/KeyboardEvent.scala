@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KeyboardEvent extends js.Object {
-  var extKey: Double = js.native
-  var key: String = js.native
-  var modifierKey: Double = js.native
-  var modifiers: Double = js.native
+  var extKey: Double
+  var key: String
+  var modifierKey: Double
+  var modifiers: Double
 }
 
 object KeyboardEvent {
@@ -18,37 +17,5 @@ object KeyboardEvent {
     val __obj = js.Dynamic.literal(extKey = extKey.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], modifierKey = modifierKey.asInstanceOf[js.Any], modifiers = modifiers.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyboardEvent]
   }
-  @scala.inline
-  implicit class KeyboardEventOps[Self <: KeyboardEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtKey(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModifierKey(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModifiers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

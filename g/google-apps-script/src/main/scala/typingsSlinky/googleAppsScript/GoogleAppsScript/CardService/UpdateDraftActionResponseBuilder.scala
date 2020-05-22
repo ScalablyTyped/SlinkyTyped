@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation._
 /**
   * A builder for UpdateDraftActionResponse objects.
   */
-@js.native
 trait UpdateDraftActionResponseBuilder extends js.Object {
-  def build(): UpdateDraftActionResponse = js.native
-  def setUpdateDraftBodyAction(updateDraftBodyAction: UpdateDraftBodyAction): UpdateDraftActionResponseBuilder = js.native
+  def build(): UpdateDraftActionResponse
+  def setUpdateDraftBodyAction(updateDraftBodyAction: UpdateDraftBodyAction): UpdateDraftActionResponseBuilder
 }
 
 object UpdateDraftActionResponseBuilder {
@@ -22,25 +21,5 @@ object UpdateDraftActionResponseBuilder {
     val __obj = js.Dynamic.literal(build = js.Any.fromFunction0(build), setUpdateDraftBodyAction = js.Any.fromFunction1(setUpdateDraftBodyAction))
     __obj.asInstanceOf[UpdateDraftActionResponseBuilder]
   }
-  @scala.inline
-  implicit class UpdateDraftActionResponseBuilderOps[Self <: UpdateDraftActionResponseBuilder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuild(value: () => UpdateDraftActionResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetUpdateDraftBodyAction(value: UpdateDraftBodyAction => UpdateDraftActionResponseBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setUpdateDraftBodyAction")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

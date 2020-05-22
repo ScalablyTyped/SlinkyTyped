@@ -16,101 +16,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Footer extends js.Object {
-  var body: js.UndefOr[Boolean | top | left | bottom | right | horizontal | vertical | all | Side] = js.native
-  var color: js.UndefOr[String | Light] = js.native
-  var footer: js.UndefOr[Boolean | top | left | bottom | right | horizontal | vertical | all | Side] = js.native
-  var header: js.UndefOr[Boolean | top | left | bottom | right | horizontal | vertical | all | Side] = js.native
-  var side: js.UndefOr[top | left | bottom | right | horizontal | vertical | all] = js.native
-  var size: js.UndefOr[xsmall | small | medium | large | xlarge | String] = js.native
+  var body: js.UndefOr[Boolean | top | left | bottom | right | horizontal | vertical | all | Side] = js.undefined
+  var color: js.UndefOr[String | Light] = js.undefined
+  var footer: js.UndefOr[Boolean | top | left | bottom | right | horizontal | vertical | all | Side] = js.undefined
+  var header: js.UndefOr[Boolean | top | left | bottom | right | horizontal | vertical | all | Side] = js.undefined
+  var side: js.UndefOr[top | left | bottom | right | horizontal | vertical | all] = js.undefined
+  var size: js.UndefOr[xsmall | small | medium | large | xlarge | String] = js.undefined
 }
 
 object Footer {
   @scala.inline
-  def apply(): Footer = {
+  def apply(
+    body: Boolean | top | left | bottom | right | horizontal | vertical | all | Side = null,
+    color: String | Light = null,
+    footer: Boolean | top | left | bottom | right | horizontal | vertical | all | Side = null,
+    header: Boolean | top | left | bottom | right | horizontal | vertical | all | Side = null,
+    side: top | left | bottom | right | horizontal | vertical | all = null,
+    size: xsmall | small | medium | large | xlarge | String = null
+  ): Footer = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (side != null) __obj.updateDynamic("side")(side.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Footer]
   }
-  @scala.inline
-  implicit class FooterOps[Self <: Footer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Boolean | top | left | bottom | right | horizontal | vertical | all | Side): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String | Light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooter(value: Boolean | top | left | bottom | right | horizontal | vertical | all | Side): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: Boolean | top | left | bottom | right | horizontal | vertical | all | Side): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSide(value: top | left | bottom | right | horizontal | vertical | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: xsmall | small | medium | large | xlarge | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

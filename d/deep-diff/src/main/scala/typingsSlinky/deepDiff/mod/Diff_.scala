@@ -1,5 +1,9 @@
 package typingsSlinky.deepDiff.mod
 
+import typingsSlinky.deepDiff.deepDiffStrings.A
+import typingsSlinky.deepDiff.deepDiffStrings.D
+import typingsSlinky.deepDiff.deepDiffStrings.E
+import typingsSlinky.deepDiff.deepDiffStrings.N
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +18,28 @@ trait Diff_[LHS, RHS] extends js.Object
 
 object Diff_ {
   @scala.inline
-  implicit def apply[LHS, RHS](value: DiffArray[LHS, RHS]): Diff_[LHS, RHS] = value.asInstanceOf[Diff_[LHS, RHS]]
+  def DiffNew[LHS, RHS](kind: N, rhs: RHS, path: js.Array[_] = null): Diff_[LHS, RHS] = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], rhs = rhs.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Diff_[LHS, RHS]]
+  }
   @scala.inline
-  implicit def apply[LHS, RHS](value: DiffDeleted[LHS]): Diff_[LHS, RHS] = value.asInstanceOf[Diff_[LHS, RHS]]
+  def DiffDeleted[LHS, RHS](kind: D, lhs: LHS, path: js.Array[_] = null): Diff_[LHS, RHS] = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], lhs = lhs.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Diff_[LHS, RHS]]
+  }
   @scala.inline
-  implicit def apply[LHS, RHS](value: DiffEdit[LHS, RHS]): Diff_[LHS, RHS] = value.asInstanceOf[Diff_[LHS, RHS]]
+  def DiffEdit[LHS, RHS](kind: E, lhs: LHS, rhs: RHS, path: js.Array[_] = null): Diff_[LHS, RHS] = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], lhs = lhs.asInstanceOf[js.Any], rhs = rhs.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Diff_[LHS, RHS]]
+  }
   @scala.inline
-  implicit def apply[LHS, RHS](value: DiffNew[RHS]): Diff_[LHS, RHS] = value.asInstanceOf[Diff_[LHS, RHS]]
+  def DiffArray[LHS, RHS](index: Double, item: Diff_[LHS, RHS], kind: A, path: js.Array[_] = null): Diff_[LHS, RHS] = {
+    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Diff_[LHS, RHS]]
+  }
 }
 

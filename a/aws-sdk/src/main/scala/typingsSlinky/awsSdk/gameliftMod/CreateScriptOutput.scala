@@ -14,29 +14,10 @@ trait CreateScriptOutput extends js.Object {
 
 object CreateScriptOutput {
   @scala.inline
-  def apply(): CreateScriptOutput = {
+  def apply(Script: Script = null): CreateScriptOutput = {
     val __obj = js.Dynamic.literal()
+    if (Script != null) __obj.updateDynamic("Script")(Script.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateScriptOutput]
   }
-  @scala.inline
-  implicit class CreateScriptOutputOps[Self <: CreateScriptOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScript(value: Script): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Script")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Script")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

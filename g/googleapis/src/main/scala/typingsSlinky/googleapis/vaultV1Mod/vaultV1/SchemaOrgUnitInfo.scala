@@ -19,29 +19,10 @@ trait SchemaOrgUnitInfo extends js.Object {
 
 object SchemaOrgUnitInfo {
   @scala.inline
-  def apply(): SchemaOrgUnitInfo = {
+  def apply(orgUnitId: String = null): SchemaOrgUnitInfo = {
     val __obj = js.Dynamic.literal()
+    if (orgUnitId != null) __obj.updateDynamic("orgUnitId")(orgUnitId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrgUnitInfo]
   }
-  @scala.inline
-  implicit class SchemaOrgUnitInfoOps[Self <: SchemaOrgUnitInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrgUnitId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrgUnitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

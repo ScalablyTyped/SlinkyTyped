@@ -1,6 +1,5 @@
 package typingsSlinky.elasticElasticsearch.anon
 
-import typingsSlinky.elasticElasticsearch.mod.ApiMethod
 import typingsSlinky.elasticElasticsearch.mod.callbackFn
 import typingsSlinky.elasticElasticsearch.requestParamsMod.IngestDeletePipeline
 import typingsSlinky.elasticElasticsearch.requestParamsMod.IngestGetPipeline
@@ -8,103 +7,106 @@ import typingsSlinky.elasticElasticsearch.requestParamsMod.IngestProcessorGrok
 import typingsSlinky.elasticElasticsearch.requestParamsMod.IngestPutPipeline
 import typingsSlinky.elasticElasticsearch.requestParamsMod.IngestSimulate
 import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
+import typingsSlinky.elasticElasticsearch.transportMod.RequestBody
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
+import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DeletePipeline extends js.Object {
-  @JSName("deletePipeline")
-  var deletePipeline_Original: ApiMethod[IngestDeletePipeline, _] = js.native
-  @JSName("delete_pipeline")
-  var delete_pipeline_Original: ApiMethod[IngestDeletePipeline, _] = js.native
-  @JSName("getPipeline")
-  var getPipeline_Original: ApiMethod[IngestGetPipeline, _] = js.native
-  @JSName("get_pipeline")
-  var get_pipeline_Original: ApiMethod[IngestGetPipeline, _] = js.native
-  @JSName("processorGrok")
-  var processorGrok_Original: ApiMethod[IngestProcessorGrok, _] = js.native
-  @JSName("processor_grok")
-  var processor_grok_Original: ApiMethod[IngestProcessorGrok, _] = js.native
-  @JSName("putPipeline")
-  var putPipeline_Original: ApiMethod[IngestPutPipeline[_], _] = js.native
-  @JSName("put_pipeline")
-  var put_pipeline_Original: ApiMethod[IngestPutPipeline[_], _] = js.native
-  @JSName("simulate")
-  var simulate_Original: ApiMethod[IngestSimulate[_], _] = js.native
-  // Promise API
-  def deletePipeline(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def deletePipeline(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def deletePipeline(params: IngestDeletePipeline): js.Promise[ApiResponse[_, _]] = js.native
-  def deletePipeline(params: IngestDeletePipeline, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def deletePipeline(params: IngestDeletePipeline, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def deletePipeline(params: IngestDeletePipeline, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def delete_pipeline(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def delete_pipeline(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def delete_pipeline(params: IngestDeletePipeline): js.Promise[ApiResponse[_, _]] = js.native
-  def delete_pipeline(params: IngestDeletePipeline, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def delete_pipeline(params: IngestDeletePipeline, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def delete_pipeline(params: IngestDeletePipeline, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def getPipeline(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def getPipeline(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def getPipeline(params: IngestGetPipeline): js.Promise[ApiResponse[_, _]] = js.native
-  def getPipeline(params: IngestGetPipeline, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def getPipeline(params: IngestGetPipeline, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def getPipeline(params: IngestGetPipeline, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def get_pipeline(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def get_pipeline(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def get_pipeline(params: IngestGetPipeline): js.Promise[ApiResponse[_, _]] = js.native
-  def get_pipeline(params: IngestGetPipeline, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def get_pipeline(params: IngestGetPipeline, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def get_pipeline(params: IngestGetPipeline, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def processorGrok(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def processorGrok(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def processorGrok(params: IngestProcessorGrok): js.Promise[ApiResponse[_, _]] = js.native
-  def processorGrok(params: IngestProcessorGrok, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def processorGrok(params: IngestProcessorGrok, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def processorGrok(params: IngestProcessorGrok, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def processor_grok(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def processor_grok(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def processor_grok(params: IngestProcessorGrok): js.Promise[ApiResponse[_, _]] = js.native
-  def processor_grok(params: IngestProcessorGrok, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def processor_grok(params: IngestProcessorGrok, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def processor_grok(params: IngestProcessorGrok, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def putPipeline(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def putPipeline(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def putPipeline(params: IngestPutPipeline[_]): js.Promise[ApiResponse[_, _]] = js.native
-  def putPipeline(params: IngestPutPipeline[_], callback: callbackFn[_]): TransportRequestCallback = js.native
-  def putPipeline(params: IngestPutPipeline[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def putPipeline(params: IngestPutPipeline[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def put_pipeline(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def put_pipeline(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def put_pipeline(params: IngestPutPipeline[_]): js.Promise[ApiResponse[_, _]] = js.native
-  def put_pipeline(params: IngestPutPipeline[_], callback: callbackFn[_]): TransportRequestCallback = js.native
-  def put_pipeline(params: IngestPutPipeline[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def put_pipeline(params: IngestPutPipeline[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def simulate(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def simulate(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def simulate(params: IngestSimulate[_]): js.Promise[ApiResponse[_, _]] = js.native
-  def simulate(params: IngestSimulate[_], callback: callbackFn[_]): TransportRequestCallback = js.native
-  def simulate(params: IngestSimulate[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def simulate(params: IngestSimulate[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
+  def deletePipeline[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deletePipeline[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def deletePipeline[TResponse, TContext](params: IngestDeletePipeline): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deletePipeline[TResponse, TContext](params: IngestDeletePipeline, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def deletePipeline[TResponse, TContext](params: IngestDeletePipeline, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deletePipeline[TResponse, TContext](
+    params: IngestDeletePipeline,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def delete_pipeline[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def delete_pipeline[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def delete_pipeline[TResponse, TContext](params: IngestDeletePipeline): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def delete_pipeline[TResponse, TContext](params: IngestDeletePipeline, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def delete_pipeline[TResponse, TContext](params: IngestDeletePipeline, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def delete_pipeline[TResponse, TContext](
+    params: IngestDeletePipeline,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def getPipeline[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getPipeline[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def getPipeline[TResponse, TContext](params: IngestGetPipeline): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getPipeline[TResponse, TContext](params: IngestGetPipeline, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def getPipeline[TResponse, TContext](params: IngestGetPipeline, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def getPipeline[TResponse, TContext](
+    params: IngestGetPipeline,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def get_pipeline[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_pipeline[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get_pipeline[TResponse, TContext](params: IngestGetPipeline): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_pipeline[TResponse, TContext](params: IngestGetPipeline, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get_pipeline[TResponse, TContext](params: IngestGetPipeline, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get_pipeline[TResponse, TContext](
+    params: IngestGetPipeline,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def processorGrok[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def processorGrok[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def processorGrok[TResponse, TContext](params: IngestProcessorGrok): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def processorGrok[TResponse, TContext](params: IngestProcessorGrok, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def processorGrok[TResponse, TContext](params: IngestProcessorGrok, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def processorGrok[TResponse, TContext](
+    params: IngestProcessorGrok,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def processor_grok[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def processor_grok[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def processor_grok[TResponse, TContext](params: IngestProcessorGrok): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def processor_grok[TResponse, TContext](params: IngestProcessorGrok, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def processor_grok[TResponse, TContext](params: IngestProcessorGrok, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def processor_grok[TResponse, TContext](
+    params: IngestProcessorGrok,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def putPipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putPipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def putPipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestPutPipeline[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putPipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestPutPipeline[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def putPipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestPutPipeline[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def putPipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: IngestPutPipeline[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def put_pipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_pipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def put_pipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestPutPipeline[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_pipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestPutPipeline[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def put_pipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestPutPipeline[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def put_pipeline[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: IngestPutPipeline[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  def simulate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def simulate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def simulate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestSimulate[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def simulate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestSimulate[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def simulate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: IngestSimulate[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def simulate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: IngestSimulate[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
 }
 

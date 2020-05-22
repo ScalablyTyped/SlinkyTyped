@@ -31,31 +31,5 @@ object LifecyclePolicyPolicyDetails {
     val __obj = js.Dynamic.literal(resourceTypes = resourceTypes.asInstanceOf[js.Any], schedules = schedules.asInstanceOf[js.Any], targetTags = targetTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecyclePolicyPolicyDetails]
   }
-  @scala.inline
-  implicit class LifecyclePolicyPolicyDetailsOps[Self <: LifecyclePolicyPolicyDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchedules(value: js.Array[LifecyclePolicyPolicyDetailsSchedule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetTags(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

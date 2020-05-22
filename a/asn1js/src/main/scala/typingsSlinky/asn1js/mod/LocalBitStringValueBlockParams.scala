@@ -6,75 +6,39 @@ import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.asn1js.mod.LocalBaseBlockParams because Already inherited
-- typingsSlinky.asn1js.mod.LocalHexBlockParams because var conflicts: blockLength, error, valueBeforeDecode, warnings. Inlined isHexOnly, valueHex */ @js.native
-trait LocalBitStringValueBlockParams extends LocalConstructedValueBlockParams {
-  var isConstructed: js.UndefOr[scala.Boolean] = js.native
-  var isHexOnly: js.UndefOr[scala.Boolean] = js.native
-  var unusedBits: js.UndefOr[Double] = js.native
-  var valueHex: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
+- typingsSlinky.asn1js.mod.LocalHexBlockParams because var conflicts: blockLength, error, valueBeforeDecode, warnings. Inlined isHexOnly, valueHex */ trait LocalBitStringValueBlockParams extends LocalConstructedValueBlockParams {
+  var isConstructed: js.UndefOr[scala.Boolean] = js.undefined
+  var isHexOnly: js.UndefOr[scala.Boolean] = js.undefined
+  var unusedBits: js.UndefOr[Double] = js.undefined
+  var valueHex: js.UndefOr[js.typedarray.ArrayBuffer] = js.undefined
 }
 
 object LocalBitStringValueBlockParams {
   @scala.inline
-  def apply(): LocalBitStringValueBlockParams = {
+  def apply(
+    blockLength: js.UndefOr[Double] = js.undefined,
+    error: String = null,
+    isConstructed: js.UndefOr[scala.Boolean] = js.undefined,
+    isHexOnly: js.UndefOr[scala.Boolean] = js.undefined,
+    isIndefiniteForm: js.UndefOr[scala.Boolean] = js.undefined,
+    unusedBits: js.UndefOr[Double] = js.undefined,
+    value: LocalValueBlock = null,
+    valueBeforeDecode: js.typedarray.ArrayBuffer = null,
+    valueHex: js.typedarray.ArrayBuffer = null,
+    warnings: js.Array[String] = null
+  ): LocalBitStringValueBlockParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockLength)) __obj.updateDynamic("blockLength")(blockLength.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (!js.isUndefined(isConstructed)) __obj.updateDynamic("isConstructed")(isConstructed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isHexOnly)) __obj.updateDynamic("isHexOnly")(isHexOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isIndefiniteForm)) __obj.updateDynamic("isIndefiniteForm")(isIndefiniteForm.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unusedBits)) __obj.updateDynamic("unusedBits")(unusedBits.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (valueBeforeDecode != null) __obj.updateDynamic("valueBeforeDecode")(valueBeforeDecode.asInstanceOf[js.Any])
+    if (valueHex != null) __obj.updateDynamic("valueHex")(valueHex.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalBitStringValueBlockParams]
   }
-  @scala.inline
-  implicit class LocalBitStringValueBlockParamsOps[Self <: LocalBitStringValueBlockParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsConstructed(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConstructed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsConstructed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConstructed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHexOnly(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHexOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHexOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHexOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnusedBits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unusedBits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnusedBits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unusedBits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueHex(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueHex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueHex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueHex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

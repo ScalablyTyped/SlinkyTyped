@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Convert extends js.Object {
-  var convert: js.Function = js.native
+  var convert: js.Function
 }
 
 object Convert {
@@ -15,19 +14,5 @@ object Convert {
     val __obj = js.Dynamic.literal(convert = convert.asInstanceOf[js.Any])
     __obj.asInstanceOf[Convert]
   }
-  @scala.inline
-  implicit class ConvertOps[Self <: Convert] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConvert(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convert")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -10,89 +10,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptionsSplitView extends js.Object {
   /**
     * Master view display mode
     * @default 'auto'
     */
-  var displayMode: js.UndefOr[auto | visible | hidden | overlay] = js.native
+  var displayMode: js.UndefOr[auto | visible | hidden | overlay] = js.undefined
   /**
     * Set the maximum width of master view
     */
-  var maxWidth: js.UndefOr[Double] = js.native
+  var maxWidth: js.UndefOr[Double] = js.undefined
   /**
     * Set the minimum width of master view
     */
-  var minWidth: js.UndefOr[Double] = js.native
+  var minWidth: js.UndefOr[Double] = js.undefined
   /**
     * Master view side. Leading is left. Trailing is right.
     * @default 'leading'
     */
-  var primaryEdge: js.UndefOr[leading | trailing] = js.native
+  var primaryEdge: js.UndefOr[leading | trailing] = js.undefined
 }
 
 object OptionsSplitView {
   @scala.inline
-  def apply(): OptionsSplitView = {
+  def apply(
+    displayMode: auto | visible | hidden | overlay = null,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    primaryEdge: leading | trailing = null
+  ): OptionsSplitView = {
     val __obj = js.Dynamic.literal()
+    if (displayMode != null) __obj.updateDynamic("displayMode")(displayMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (primaryEdge != null) __obj.updateDynamic("primaryEdge")(primaryEdge.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsSplitView]
   }
-  @scala.inline
-  implicit class OptionsSplitViewOps[Self <: OptionsSplitView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayMode(value: auto | visible | hidden | overlay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryEdge(value: leading | trailing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryEdge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryEdge")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,39 +7,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectConfigContext
   extends BaseConfigContext
      with ConfigContext {
-  var config: BaseConfig[IProjectConfig] = js.native
-  var global: `false` = js.native
+  var config: BaseConfig[IProjectConfig]
+  var global: `false`
 }
 
 object ProjectConfigContext {
   @scala.inline
-  def apply(config: BaseConfig[IProjectConfig], force: Boolean, global: `false`, json: Boolean, root: Boolean): ProjectConfigContext = {
+  def apply(
+    config: BaseConfig[IProjectConfig],
+    force: Boolean,
+    global: `false`,
+    json: Boolean,
+    root: Boolean,
+    property: String = null,
+    value: js.Any = null
+  ): ProjectConfigContext = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], force = force.asInstanceOf[js.Any], global = global.asInstanceOf[js.Any], json = json.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
+    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectConfigContext]
   }
-  @scala.inline
-  implicit class ProjectConfigContextOps[Self <: ProjectConfigContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: BaseConfig[IProjectConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobal(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

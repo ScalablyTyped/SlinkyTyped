@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("sip.js/lib/Constants", "C.SIPS")
 @js.native
 object SIPS
-  extends TopLevel[/* "0.15.10" */ String]
+  extends TopLevel[/* "0.15.11" */ String]
 

@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShellQuotedString extends js.Object {
   /**
-  		 * The quoting style to use.
-  		 */
-  var quoting: ShellQuoting = js.native
+    * The quoting style to use.
+    */
+  var quoting: ShellQuoting
   /**
-  		 * The actual string value.
-  		 */
-  var value: String = js.native
+    * The actual string value.
+    */
+  var value: String
 }
 
 object ShellQuotedString {
@@ -22,25 +21,5 @@ object ShellQuotedString {
     val __obj = js.Dynamic.literal(quoting = quoting.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShellQuotedString]
   }
-  @scala.inline
-  implicit class ShellQuotedStringOps[Self <: ShellQuotedString] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuoting(value: ShellQuoting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quoting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

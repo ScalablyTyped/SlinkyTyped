@@ -13,64 +13,63 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.text.Cell
   * @see com.sun.star.text.XTextTable
   */
-@js.native
 trait XTextTableCursor extends XInterface {
   /**
     * @returns the name of the cell range that is selected by this cursor. The name is the cell name of the top left table cell of the range concatenated by ":"
     * @see com.sun:star.text.CellRange
     */
-  val RangeName: String = js.native
+  val RangeName: String
   /**
     * @returns the name of the cell range that is selected by this cursor. The name is the cell name of the top left table cell of the range concatenated by ":"
     * @see com.sun:star.text.CellRange
     */
-  def getRangeName(): String = js.native
+  def getRangeName(): String
   /**
     * moves the cursor to the bottom neighbor cell.
     * @param nCount the number of cells to move.
     * @param bExpand determines whether the selection is to be expanded.
     */
-  def goDown(nCount: Double, bExpand: Boolean): Boolean = js.native
+  def goDown(nCount: Double, bExpand: Boolean): Boolean
   /**
     * moves the cursor to the left neighbor.
     * @param nCount the number of cells to move.
     * @param bExpand determines whether the selection is to be expanded.
     */
-  def goLeft(nCount: Double, bExpand: Boolean): Boolean = js.native
+  def goLeft(nCount: Double, bExpand: Boolean): Boolean
   /**
     * moves the cursor to the right neighbor.
     * @param nCount the number of cells to move.
     * @param bExpand determines whether the selection is to be expanded.
     */
-  def goRight(nCount: Double, bExpand: Boolean): Boolean = js.native
+  def goRight(nCount: Double, bExpand: Boolean): Boolean
   /**
     * moves the cursor to the top neighbor.
     * @param nCount the number of cells to move.
     * @param bExpand determines whether the selection is to be expanded.
     */
-  def goUp(nCount: Double, bExpand: Boolean): Boolean = js.native
+  def goUp(nCount: Double, bExpand: Boolean): Boolean
   /**
     * moves the cursor to the cell with the specified name.
     * @param aCellName specifies the name of the cell to go to.
     * @param bExpand determines whether the selection is to be expanded.
     * @see com.sun.star.text.Cell
     */
-  def gotoCellByName(aCellName: String, bExpand: Boolean): Boolean = js.native
+  def gotoCellByName(aCellName: String, bExpand: Boolean): Boolean
   /**
     * moves the cursor to the bottom right cell of the table.
     * @param bExpand determines whether the selection is to be expanded.
     */
-  def gotoEnd(bExpand: Boolean): Unit = js.native
+  def gotoEnd(bExpand: Boolean): Unit
   /**
     * moves the cursor to the top left cell of the table.
     * @param bExpand determines whether the selection is to be expanded.
     */
-  def gotoStart(bExpand: Boolean): Unit = js.native
+  def gotoStart(bExpand: Boolean): Unit
   /**
     * merges the selected range of cells.
     * @see com.sun.star.CellRange
     */
-  def mergeRange(): Boolean = js.native
+  def mergeRange(): Boolean
   /**
     * splits the range of cells.
     * @param nCount specifies the number of new cells that will be created for each cell contained in the range.
@@ -78,7 +77,7 @@ trait XTextTableCursor extends XInterface {
     * @see com.sun.star.Cell
     * @see com.sun.star.CellRange
     */
-  def splitRange(nCount: Double, bHorizontal: Boolean): Boolean = js.native
+  def splitRange(nCount: Double, bHorizontal: Boolean): Boolean
 }
 
 object XTextTableCursor {
@@ -102,79 +101,5 @@ object XTextTableCursor {
     val __obj = js.Dynamic.literal(RangeName = RangeName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getRangeName = js.Any.fromFunction0(getRangeName), goDown = js.Any.fromFunction2(goDown), goLeft = js.Any.fromFunction2(goLeft), goRight = js.Any.fromFunction2(goRight), goUp = js.Any.fromFunction2(goUp), gotoCellByName = js.Any.fromFunction2(gotoCellByName), gotoEnd = js.Any.fromFunction1(gotoEnd), gotoStart = js.Any.fromFunction1(gotoStart), mergeRange = js.Any.fromFunction0(mergeRange), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), splitRange = js.Any.fromFunction2(splitRange))
     __obj.asInstanceOf[XTextTableCursor]
   }
-  @scala.inline
-  implicit class XTextTableCursorOps[Self <: XTextTableCursor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRangeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetRangeName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRangeName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGoDown(value: (Double, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goDown")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGoLeft(value: (Double, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goLeft")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGoRight(value: (Double, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goRight")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGoUp(value: (Double, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goUp")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGotoCellByName(value: (String, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoCellByName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGotoEnd(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGotoStart(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMergeRange(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSplitRange(value: (Double, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitRange")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

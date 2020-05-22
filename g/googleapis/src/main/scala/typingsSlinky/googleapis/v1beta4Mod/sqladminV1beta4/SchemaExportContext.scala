@@ -1,7 +1,7 @@
 package typingsSlinky.googleapis.v1beta4Mod.sqladminV1beta4
 
-import typingsSlinky.googleapis.AnonMysqlExportOptions
-import typingsSlinky.googleapis.AnonSelectQuery
+import typingsSlinky.googleapis.anon.MysqlExportOptions
+import typingsSlinky.googleapis.anon.SelectQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait SchemaExportContext extends js.Object {
   /**
     * Options for exporting data as CSV.
     */
-  var csvExportOptions: js.UndefOr[AnonSelectQuery] = js.native
+  var csvExportOptions: js.UndefOr[SelectQuery] = js.native
   /**
     * Databases to be exported. MySQL instances: If fileType is SQL and no
     * database is specified, all databases are exported, except for the mysql
@@ -38,7 +38,7 @@ trait SchemaExportContext extends js.Object {
   /**
     * Options for exporting data as SQL statements.
     */
-  var sqlExportOptions: js.UndefOr[AnonMysqlExportOptions] = js.native
+  var sqlExportOptions: js.UndefOr[MysqlExportOptions] = js.native
   /**
     * The path to the file in Google Cloud Storage where the export will be
     * stored. The URI is in the form gs://bucketName/fileName. If the file
@@ -51,89 +51,22 @@ trait SchemaExportContext extends js.Object {
 
 object SchemaExportContext {
   @scala.inline
-  def apply(): SchemaExportContext = {
+  def apply(
+    csvExportOptions: SelectQuery = null,
+    databases: js.Array[String] = null,
+    fileType: String = null,
+    kind: String = null,
+    sqlExportOptions: MysqlExportOptions = null,
+    uri: String = null
+  ): SchemaExportContext = {
     val __obj = js.Dynamic.literal()
+    if (csvExportOptions != null) __obj.updateDynamic("csvExportOptions")(csvExportOptions.asInstanceOf[js.Any])
+    if (databases != null) __obj.updateDynamic("databases")(databases.asInstanceOf[js.Any])
+    if (fileType != null) __obj.updateDynamic("fileType")(fileType.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (sqlExportOptions != null) __obj.updateDynamic("sqlExportOptions")(sqlExportOptions.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExportContext]
   }
-  @scala.inline
-  implicit class SchemaExportContextOps[Self <: SchemaExportContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCsvExportOptions(value: AnonSelectQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvExportOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvExportOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvExportOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabases(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSqlExportOptions(value: AnonMysqlExportOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqlExportOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSqlExportOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqlExportOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

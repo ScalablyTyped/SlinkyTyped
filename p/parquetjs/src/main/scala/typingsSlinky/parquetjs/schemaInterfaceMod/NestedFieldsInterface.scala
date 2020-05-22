@@ -4,56 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NestedFieldsInterface extends SchemaInterfaceField {
-  var fields: SchemaInterface = js.native
-  var optional: js.UndefOr[Boolean] = js.native
-  var repeated: js.UndefOr[Boolean] = js.native
+  var fields: SchemaInterface
+  var optional: js.UndefOr[Boolean] = js.undefined
+  var repeated: js.UndefOr[Boolean] = js.undefined
 }
 
 object NestedFieldsInterface {
   @scala.inline
-  def apply(fields: SchemaInterface): NestedFieldsInterface = {
+  def apply(
+    fields: SchemaInterface,
+    optional: js.UndefOr[Boolean] = js.undefined,
+    repeated: js.UndefOr[Boolean] = js.undefined
+  ): NestedFieldsInterface = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(optional)) __obj.updateDynamic("optional")(optional.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(repeated)) __obj.updateDynamic("repeated")(repeated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NestedFieldsInterface]
   }
-  @scala.inline
-  implicit class NestedFieldsInterfaceOps[Self <: NestedFieldsInterface] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: SchemaInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepeated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepeated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BigQueryModelTraining extends js.Object {
-  var currentIteration: js.UndefOr[Double] = js.native
-  var expectedTotalIterations: js.UndefOr[String] = js.native
+  var currentIteration: js.UndefOr[Double] = js.undefined
+  var expectedTotalIterations: js.UndefOr[String] = js.undefined
 }
 
 object BigQueryModelTraining {
   @scala.inline
-  def apply(): BigQueryModelTraining = {
+  def apply(currentIteration: js.UndefOr[Double] = js.undefined, expectedTotalIterations: String = null): BigQueryModelTraining = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(currentIteration)) __obj.updateDynamic("currentIteration")(currentIteration.get.asInstanceOf[js.Any])
+    if (expectedTotalIterations != null) __obj.updateDynamic("expectedTotalIterations")(expectedTotalIterations.asInstanceOf[js.Any])
     __obj.asInstanceOf[BigQueryModelTraining]
   }
-  @scala.inline
-  implicit class BigQueryModelTrainingOps[Self <: BigQueryModelTraining] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentIteration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentIteration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentIteration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentIteration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedTotalIterations(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedTotalIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedTotalIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedTotalIterations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

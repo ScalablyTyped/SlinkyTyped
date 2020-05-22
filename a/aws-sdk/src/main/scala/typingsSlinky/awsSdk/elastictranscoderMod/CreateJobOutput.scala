@@ -54,149 +54,32 @@ trait CreateJobOutput extends js.Object {
 
 object CreateJobOutput {
   @scala.inline
-  def apply(): CreateJobOutput = {
+  def apply(
+    AlbumArt: JobAlbumArt = null,
+    Captions: Captions = null,
+    Composition: Composition = null,
+    Encryption: Encryption = null,
+    Key: Key = null,
+    PresetId: Id = null,
+    Rotate: Rotate = null,
+    SegmentDuration: FloatString = null,
+    ThumbnailEncryption: Encryption = null,
+    ThumbnailPattern: ThumbnailPattern = null,
+    Watermarks: JobWatermarks = null
+  ): CreateJobOutput = {
     val __obj = js.Dynamic.literal()
+    if (AlbumArt != null) __obj.updateDynamic("AlbumArt")(AlbumArt.asInstanceOf[js.Any])
+    if (Captions != null) __obj.updateDynamic("Captions")(Captions.asInstanceOf[js.Any])
+    if (Composition != null) __obj.updateDynamic("Composition")(Composition.asInstanceOf[js.Any])
+    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
+    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
+    if (PresetId != null) __obj.updateDynamic("PresetId")(PresetId.asInstanceOf[js.Any])
+    if (Rotate != null) __obj.updateDynamic("Rotate")(Rotate.asInstanceOf[js.Any])
+    if (SegmentDuration != null) __obj.updateDynamic("SegmentDuration")(SegmentDuration.asInstanceOf[js.Any])
+    if (ThumbnailEncryption != null) __obj.updateDynamic("ThumbnailEncryption")(ThumbnailEncryption.asInstanceOf[js.Any])
+    if (ThumbnailPattern != null) __obj.updateDynamic("ThumbnailPattern")(ThumbnailPattern.asInstanceOf[js.Any])
+    if (Watermarks != null) __obj.updateDynamic("Watermarks")(Watermarks.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateJobOutput]
   }
-  @scala.inline
-  implicit class CreateJobOutputOps[Self <: CreateJobOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlbumArt(value: JobAlbumArt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlbumArt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbumArt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlbumArt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptions(value: Captions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Captions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Captions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComposition(value: Composition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Composition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Composition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryption(value: Encryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPresetId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPresetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotate(value: Rotate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentDuration(value: FloatString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailEncryption(value: Encryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbnailEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbnailEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailPattern(value: ThumbnailPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbnailPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbnailPattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatermarks(value: JobWatermarks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Watermarks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatermarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Watermarks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

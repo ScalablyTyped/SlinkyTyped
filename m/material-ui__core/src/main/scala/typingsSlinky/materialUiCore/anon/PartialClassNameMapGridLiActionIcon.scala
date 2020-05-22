@@ -22,149 +22,32 @@ trait PartialClassNameMapGridLiActionIcon extends js.Object {
 
 object PartialClassNameMapGridLiActionIcon {
   @scala.inline
-  def apply(): PartialClassNameMapGridLiActionIcon = {
+  def apply(
+    actionIcon: String = null,
+    actionIconActionPosLeft: String = null,
+    root: String = null,
+    rootSubtitle: String = null,
+    subtitle: String = null,
+    title: String = null,
+    titlePositionBottom: String = null,
+    titlePositionTop: String = null,
+    titleWrap: String = null,
+    titleWrapActionPosLeft: String = null,
+    titleWrapActionPosRight: String = null
+  ): PartialClassNameMapGridLiActionIcon = {
     val __obj = js.Dynamic.literal()
+    if (actionIcon != null) __obj.updateDynamic("actionIcon")(actionIcon.asInstanceOf[js.Any])
+    if (actionIconActionPosLeft != null) __obj.updateDynamic("actionIconActionPosLeft")(actionIconActionPosLeft.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (rootSubtitle != null) __obj.updateDynamic("rootSubtitle")(rootSubtitle.asInstanceOf[js.Any])
+    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titlePositionBottom != null) __obj.updateDynamic("titlePositionBottom")(titlePositionBottom.asInstanceOf[js.Any])
+    if (titlePositionTop != null) __obj.updateDynamic("titlePositionTop")(titlePositionTop.asInstanceOf[js.Any])
+    if (titleWrap != null) __obj.updateDynamic("titleWrap")(titleWrap.asInstanceOf[js.Any])
+    if (titleWrapActionPosLeft != null) __obj.updateDynamic("titleWrapActionPosLeft")(titleWrapActionPosLeft.asInstanceOf[js.Any])
+    if (titleWrapActionPosRight != null) __obj.updateDynamic("titleWrapActionPosRight")(titleWrapActionPosRight.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapGridLiActionIcon]
   }
-  @scala.inline
-  implicit class PartialClassNameMapGridLiActionIconOps[Self <: PartialClassNameMapGridLiActionIcon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionIconActionPosLeft(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionIconActionPosLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionIconActionPosLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionIconActionPosLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootSubtitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootSubtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootSubtitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootSubtitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitlePositionBottom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titlePositionBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitlePositionBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titlePositionBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitlePositionTop(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titlePositionTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitlePositionTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titlePositionTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleWrap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleWrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleWrapActionPosLeft(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleWrapActionPosLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleWrapActionPosLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleWrapActionPosLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleWrapActionPosRight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleWrapActionPosRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleWrapActionPosRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleWrapActionPosRight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

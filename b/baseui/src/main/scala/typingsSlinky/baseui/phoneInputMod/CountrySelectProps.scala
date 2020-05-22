@@ -2,7 +2,6 @@ package typingsSlinky.baseui.phoneInputMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.facade.ReactRef
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -13,152 +12,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CountrySelectProps extends js.Object {
-  var countries: StringDictionary[Country] = js.native
-  var country: js.UndefOr[Country] = js.native
-  var inputRef: js.UndefOr[Ref[HTMLInputElement]] = js.native
-  var mapIsoToLabel: js.UndefOr[js.Function1[/* iso */ String, String]] = js.native
-  var maxDropdownHeight: js.UndefOr[String] = js.native
-  var maxDropdownWidth: js.UndefOr[String] = js.native
-  var onCountryChange: js.UndefOr[js.Function1[/* event */ OnChangeParams, _]] = js.native
-  var overrides: js.UndefOr[typingsSlinky.baseui.anon.CountrySelect] = js.native
-  var size: js.UndefOr[mini | default_ | compact | large_] = js.native
+  var countries: StringDictionary[Country]
+  var country: js.UndefOr[Country] = js.undefined
+  var inputRef: js.UndefOr[Ref[HTMLInputElement]] = js.undefined
+  var mapIsoToLabel: js.UndefOr[js.Function1[/* iso */ String, String]] = js.undefined
+  var maxDropdownHeight: js.UndefOr[String] = js.undefined
+  var maxDropdownWidth: js.UndefOr[String] = js.undefined
+  var onCountryChange: js.UndefOr[js.Function1[/* event */ OnChangeParams, _]] = js.undefined
+  var overrides: js.UndefOr[typingsSlinky.baseui.anon.CountrySelect] = js.undefined
+  var size: js.UndefOr[mini | default_ | compact | large_] = js.undefined
 }
 
 object CountrySelectProps {
   @scala.inline
-  def apply(countries: StringDictionary[Country]): CountrySelectProps = {
+  def apply(
+    countries: StringDictionary[Country],
+    country: Country = null,
+    inputRef: js.UndefOr[Null | Ref[HTMLInputElement]] = js.undefined,
+    mapIsoToLabel: /* iso */ String => String = null,
+    maxDropdownHeight: String = null,
+    maxDropdownWidth: String = null,
+    onCountryChange: /* event */ OnChangeParams => _ = null,
+    overrides: typingsSlinky.baseui.anon.CountrySelect = null,
+    size: mini | default_ | compact | large_ = null
+  ): CountrySelectProps = {
     val __obj = js.Dynamic.literal(countries = countries.asInstanceOf[js.Any])
+    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputRef)) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
+    if (mapIsoToLabel != null) __obj.updateDynamic("mapIsoToLabel")(js.Any.fromFunction1(mapIsoToLabel))
+    if (maxDropdownHeight != null) __obj.updateDynamic("maxDropdownHeight")(maxDropdownHeight.asInstanceOf[js.Any])
+    if (maxDropdownWidth != null) __obj.updateDynamic("maxDropdownWidth")(maxDropdownWidth.asInstanceOf[js.Any])
+    if (onCountryChange != null) __obj.updateDynamic("onCountryChange")(js.Any.fromFunction1(onCountryChange))
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[CountrySelectProps]
   }
-  @scala.inline
-  implicit class CountrySelectPropsOps[Self <: CountrySelectProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountries(value: StringDictionary[Country]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountry(value: Country): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputRefRefObject(value: ReactRef[HTMLInputElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInputRef(value: Ref[HTMLInputElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputRefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(null)
-        ret
-    }
-    @scala.inline
-    def withMapIsoToLabel(value: /* iso */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIsoToLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMapIsoToLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIsoToLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDropdownHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDropdownHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDropdownHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDropdownHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDropdownWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDropdownWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDropdownWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDropdownWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCountryChange(value: /* event */ OnChangeParams => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCountryChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCountryChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCountryChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrides(value: typingsSlinky.baseui.anon.CountrySelect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: mini | default_ | compact | large_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

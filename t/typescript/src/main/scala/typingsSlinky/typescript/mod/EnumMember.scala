@@ -9,8 +9,8 @@ trait EnumMember
   extends NamedDeclaration
      with JSDocContainer
      with HasExpressionInitializer
-     with HasJSDoc
-     with VariableLikeDeclaration {
+     with VariableLikeDeclaration
+     with _HasJSDoc {
   var initializer: js.UndefOr[Expression] = js.native
   @JSName("kind")
   var kind_EnumMember: typingsSlinky.typescript.mod.SyntaxKind.EnumMember = js.native

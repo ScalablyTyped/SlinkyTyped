@@ -74,209 +74,42 @@ trait ResizeProgressMessage extends js.Object {
 
 object ResizeProgressMessage {
   @scala.inline
-  def apply(): ResizeProgressMessage = {
+  def apply(
+    AvgResizeRateInMegaBytesPerSecond: js.UndefOr[DoubleOptional] = js.undefined,
+    DataTransferProgressPercent: js.UndefOr[DoubleOptional] = js.undefined,
+    ElapsedTimeInSeconds: js.UndefOr[LongOptional] = js.undefined,
+    EstimatedTimeToCompletionInSeconds: js.UndefOr[LongOptional] = js.undefined,
+    ImportTablesCompleted: ImportTablesCompleted = null,
+    ImportTablesInProgress: ImportTablesInProgress = null,
+    ImportTablesNotStarted: ImportTablesNotStarted = null,
+    Message: String = null,
+    ProgressInMegaBytes: js.UndefOr[LongOptional] = js.undefined,
+    ResizeType: String = null,
+    Status: String = null,
+    TargetClusterType: String = null,
+    TargetEncryptionType: String = null,
+    TargetNodeType: String = null,
+    TargetNumberOfNodes: js.UndefOr[IntegerOptional] = js.undefined,
+    TotalResizeDataInMegaBytes: js.UndefOr[LongOptional] = js.undefined
+  ): ResizeProgressMessage = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AvgResizeRateInMegaBytesPerSecond)) __obj.updateDynamic("AvgResizeRateInMegaBytesPerSecond")(AvgResizeRateInMegaBytesPerSecond.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DataTransferProgressPercent)) __obj.updateDynamic("DataTransferProgressPercent")(DataTransferProgressPercent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ElapsedTimeInSeconds)) __obj.updateDynamic("ElapsedTimeInSeconds")(ElapsedTimeInSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(EstimatedTimeToCompletionInSeconds)) __obj.updateDynamic("EstimatedTimeToCompletionInSeconds")(EstimatedTimeToCompletionInSeconds.get.asInstanceOf[js.Any])
+    if (ImportTablesCompleted != null) __obj.updateDynamic("ImportTablesCompleted")(ImportTablesCompleted.asInstanceOf[js.Any])
+    if (ImportTablesInProgress != null) __obj.updateDynamic("ImportTablesInProgress")(ImportTablesInProgress.asInstanceOf[js.Any])
+    if (ImportTablesNotStarted != null) __obj.updateDynamic("ImportTablesNotStarted")(ImportTablesNotStarted.asInstanceOf[js.Any])
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProgressInMegaBytes)) __obj.updateDynamic("ProgressInMegaBytes")(ProgressInMegaBytes.get.asInstanceOf[js.Any])
+    if (ResizeType != null) __obj.updateDynamic("ResizeType")(ResizeType.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (TargetClusterType != null) __obj.updateDynamic("TargetClusterType")(TargetClusterType.asInstanceOf[js.Any])
+    if (TargetEncryptionType != null) __obj.updateDynamic("TargetEncryptionType")(TargetEncryptionType.asInstanceOf[js.Any])
+    if (TargetNodeType != null) __obj.updateDynamic("TargetNodeType")(TargetNodeType.asInstanceOf[js.Any])
+    if (!js.isUndefined(TargetNumberOfNodes)) __obj.updateDynamic("TargetNumberOfNodes")(TargetNumberOfNodes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalResizeDataInMegaBytes)) __obj.updateDynamic("TotalResizeDataInMegaBytes")(TotalResizeDataInMegaBytes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResizeProgressMessage]
   }
-  @scala.inline
-  implicit class ResizeProgressMessageOps[Self <: ResizeProgressMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvgResizeRateInMegaBytesPerSecond(value: DoubleOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvgResizeRateInMegaBytesPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvgResizeRateInMegaBytesPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvgResizeRateInMegaBytesPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataTransferProgressPercent(value: DoubleOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTransferProgressPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataTransferProgressPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTransferProgressPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElapsedTimeInSeconds(value: LongOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElapsedTimeInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElapsedTimeInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElapsedTimeInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedTimeToCompletionInSeconds(value: LongOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedTimeToCompletionInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedTimeToCompletionInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedTimeToCompletionInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportTablesCompleted(value: ImportTablesCompleted): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportTablesCompleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportTablesCompleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportTablesCompleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportTablesInProgress(value: ImportTablesInProgress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportTablesInProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportTablesInProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportTablesInProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportTablesNotStarted(value: ImportTablesNotStarted): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportTablesNotStarted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportTablesNotStarted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportTablesNotStarted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressInMegaBytes(value: LongOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressInMegaBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressInMegaBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressInMegaBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResizeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResizeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetClusterType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetClusterType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetClusterType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetClusterType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetEncryptionType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetEncryptionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetEncryptionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetEncryptionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetNodeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetNodeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetNodeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetNodeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetNumberOfNodes(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetNumberOfNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetNumberOfNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetNumberOfNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalResizeDataInMegaBytes(value: LongOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalResizeDataInMegaBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalResizeDataInMegaBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalResizeDataInMegaBytes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

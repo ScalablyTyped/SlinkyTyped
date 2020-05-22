@@ -14,10 +14,9 @@ import scala.scalajs.js.annotation._
   * server for storage, as its representation is more concise than our
   * immutable objects.
   */
-@js.native
 trait RawDraftContentState extends js.Object {
-  var blocks: js.Array[RawDraftContentBlock] = js.native
-  var entityMap: StringDictionary[RawDraftEntity[StringDictionary[_]]] = js.native
+  var blocks: js.Array[RawDraftContentBlock]
+  var entityMap: StringDictionary[RawDraftEntity[StringDictionary[_]]]
 }
 
 object RawDraftContentState {
@@ -29,25 +28,5 @@ object RawDraftContentState {
     val __obj = js.Dynamic.literal(blocks = blocks.asInstanceOf[js.Any], entityMap = entityMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[RawDraftContentState]
   }
-  @scala.inline
-  implicit class RawDraftContentStateOps[Self <: RawDraftContentState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlocks(value: js.Array[RawDraftContentBlock]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntityMap(value: StringDictionary[RawDraftEntity[StringDictionary[_]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

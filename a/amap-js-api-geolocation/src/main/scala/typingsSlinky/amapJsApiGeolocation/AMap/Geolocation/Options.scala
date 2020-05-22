@@ -8,20 +8,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * 是否PC端为优先使用浏览器定位
     */
-  var GeoLocationFirst: js.UndefOr[Boolean] = js.native
+  var GeoLocationFirst: js.UndefOr[Boolean] = js.undefined
   /**
     * 自定义定位按钮的内容
     */
-  var buttonDom: js.UndefOr[String | HTMLElement] = js.native
+  var buttonDom: js.UndefOr[String | HTMLElement] = js.undefined
   /**
     * 按钮距离停靠位置的偏移量
     */
-  var buttonOffset: js.UndefOr[Pixel] = js.native
+  var buttonOffset: js.UndefOr[Pixel] = js.undefined
   /**
     * 定位按钮可停靠的位置
     * “LT”：左上角
@@ -29,33 +28,33 @@ trait Options extends js.Object {
     * “RT”：右上角
     * “RB”：右下角
     */
-  var buttonPosition: js.UndefOr[ButtonPosition] = js.native
+  var buttonPosition: js.UndefOr[ButtonPosition] = js.undefined
   /**
     * 定位点Circle的配置
     */
-  var circleOptions: js.UndefOr[typingsSlinky.amapJsApi.AMap.Circle.Options[_]] = js.native
+  var circleOptions: js.UndefOr[typingsSlinky.amapJsApi.AMap.Circle.Options[_]] = js.undefined
   /**
     * 是否转换成高德坐标
     */
-  var convert: js.UndefOr[Boolean] = js.native
+  var convert: js.UndefOr[Boolean] = js.undefined
   // internal
-  var convertUrl: js.UndefOr[String] = js.native
+  var convertUrl: js.UndefOr[String] = js.undefined
   /**
     * 是否使用高精度
     */
-  var enableHighAccuracy: js.UndefOr[Boolean] = js.native
+  var enableHighAccuracy: js.UndefOr[Boolean] = js.undefined
   /**
     * 是否返回详细信息
     */
-  var extensions: js.UndefOr[all | base] = js.native
+  var extensions: js.UndefOr[all | base] = js.undefined
   /**
     * 定位点Marker的配置
     */
-  var markerOptions: js.UndefOr[typingsSlinky.amapJsApi.AMap.Marker.Options[_]] = js.native
+  var markerOptions: js.UndefOr[typingsSlinky.amapJsApi.AMap.Marker.Options[_]] = js.undefined
   /**
     * 缓存毫秒数
     */
-  var maximumAge: js.UndefOr[Double] = js.native
+  var maximumAge: js.UndefOr[Double] = js.undefined
   /**
     * 是否禁止使用浏览器Geolocation定位，默认值为0
     * 0: 可以使用浏览器定位
@@ -63,7 +62,7 @@ trait Options extends js.Object {
     * 2: PC上禁止使用浏览器定位
     * 3: 所有终端禁止使用浏览器定位
     */
-  var noGeoLocation: js.UndefOr[Double] = js.native
+  var noGeoLocation: js.UndefOr[Double] = js.undefined
   /**
     * 是否禁止使用IP定位，默认值为0
     * 0: 可以使用IP定位
@@ -71,309 +70,86 @@ trait Options extends js.Object {
     * 2: PC上禁止使用IP定位
     * 3: 所有终端禁止使用IP定位
     */
-  var noIpLocate: js.UndefOr[Double] = js.native
+  var noIpLocate: js.UndefOr[Double] = js.undefined
   /**
     * 定位成功后，是否把定位得到的坐标设置为地图中心点坐标
     */
-  var panToLocation: js.UndefOr[Boolean] = js.native
+  var panToLocation: js.UndefOr[Boolean] = js.undefined
   /**
     * 是否显示定位按钮
     */
-  var showButton: js.UndefOr[Boolean] = js.native
+  var showButton: js.UndefOr[Boolean] = js.undefined
   /**
     * 定位成功并且有精度信息时，是否用一个圆圈circle表示精度范围
     */
-  var showCircle: js.UndefOr[Boolean] = js.native
+  var showCircle: js.UndefOr[Boolean] = js.undefined
   /**
     * 定位成功时是否在定位位置显示一个Marker
     */
-  var showMarker: js.UndefOr[Boolean] = js.native
-  var stopWhenPermissionDenied: js.UndefOr[Boolean] = js.native
+  var showMarker: js.UndefOr[Boolean] = js.undefined
+  var stopWhenPermissionDenied: js.UndefOr[Boolean] = js.undefined
   /**
     * 超时毫秒数
     */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
   /**
     * 是否使用安卓定位sdk用来进行定位
     */
-  var useNative: js.UndefOr[Boolean] = js.native
+  var useNative: js.UndefOr[Boolean] = js.undefined
   /**
     * 定位成功且显示精度范围时，是否把地图视野调整到正好显示精度范围
     */
-  var zoomToAccuracy: js.UndefOr[Boolean] = js.native
+  var zoomToAccuracy: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    GeoLocationFirst: js.UndefOr[Boolean] = js.undefined,
+    buttonDom: String | HTMLElement = null,
+    buttonOffset: Pixel = null,
+    buttonPosition: ButtonPosition = null,
+    circleOptions: typingsSlinky.amapJsApi.AMap.Circle.Options[_] = null,
+    convert: js.UndefOr[Boolean] = js.undefined,
+    convertUrl: String = null,
+    enableHighAccuracy: js.UndefOr[Boolean] = js.undefined,
+    extensions: all | base = null,
+    markerOptions: typingsSlinky.amapJsApi.AMap.Marker.Options[_] = null,
+    maximumAge: js.UndefOr[Double] = js.undefined,
+    noGeoLocation: js.UndefOr[Double] = js.undefined,
+    noIpLocate: js.UndefOr[Double] = js.undefined,
+    panToLocation: js.UndefOr[Boolean] = js.undefined,
+    showButton: js.UndefOr[Boolean] = js.undefined,
+    showCircle: js.UndefOr[Boolean] = js.undefined,
+    showMarker: js.UndefOr[Boolean] = js.undefined,
+    stopWhenPermissionDenied: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    useNative: js.UndefOr[Boolean] = js.undefined,
+    zoomToAccuracy: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(GeoLocationFirst)) __obj.updateDynamic("GeoLocationFirst")(GeoLocationFirst.get.asInstanceOf[js.Any])
+    if (buttonDom != null) __obj.updateDynamic("buttonDom")(buttonDom.asInstanceOf[js.Any])
+    if (buttonOffset != null) __obj.updateDynamic("buttonOffset")(buttonOffset.asInstanceOf[js.Any])
+    if (buttonPosition != null) __obj.updateDynamic("buttonPosition")(buttonPosition.asInstanceOf[js.Any])
+    if (circleOptions != null) __obj.updateDynamic("circleOptions")(circleOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(convert)) __obj.updateDynamic("convert")(convert.get.asInstanceOf[js.Any])
+    if (convertUrl != null) __obj.updateDynamic("convertUrl")(convertUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableHighAccuracy)) __obj.updateDynamic("enableHighAccuracy")(enableHighAccuracy.get.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (markerOptions != null) __obj.updateDynamic("markerOptions")(markerOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumAge)) __obj.updateDynamic("maximumAge")(maximumAge.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noGeoLocation)) __obj.updateDynamic("noGeoLocation")(noGeoLocation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noIpLocate)) __obj.updateDynamic("noIpLocate")(noIpLocate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(panToLocation)) __obj.updateDynamic("panToLocation")(panToLocation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showButton)) __obj.updateDynamic("showButton")(showButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCircle)) __obj.updateDynamic("showCircle")(showCircle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMarker)) __obj.updateDynamic("showMarker")(showMarker.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stopWhenPermissionDenied)) __obj.updateDynamic("stopWhenPermissionDenied")(stopWhenPermissionDenied.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNative)) __obj.updateDynamic("useNative")(useNative.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomToAccuracy)) __obj.updateDynamic("zoomToAccuracy")(zoomToAccuracy.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeoLocationFirst(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocationFirst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoLocationFirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocationFirst")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonDomHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonDom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withButtonDom(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonDom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonDom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonDom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonOffset(value: Pixel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonPosition(value: ButtonPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCircleOptions(value: typingsSlinky.amapJsApi.AMap.Circle.Options[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circleOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircleOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circleOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConvert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConvert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConvertUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConvertUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableHighAccuracy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHighAccuracy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableHighAccuracy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHighAccuracy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: all | base): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerOptions(value: typingsSlinky.amapJsApi.AMap.Marker.Options[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumAge(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoGeoLocation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noGeoLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoGeoLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noGeoLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoIpLocate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noIpLocate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoIpLocate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noIpLocate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanToLocation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panToLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanToLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panToLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCircle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCircle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMarker(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopWhenPermissionDenied(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopWhenPermissionDenied")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopWhenPermissionDenied: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopWhenPermissionDenied")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseNative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomToAccuracy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomToAccuracy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomToAccuracy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomToAccuracy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

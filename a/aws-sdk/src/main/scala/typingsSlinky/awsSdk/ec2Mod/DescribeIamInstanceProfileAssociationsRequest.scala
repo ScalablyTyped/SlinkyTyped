@@ -11,7 +11,7 @@ trait DescribeIamInstanceProfileAssociationsRequest extends js.Object {
     */
   var AssociationIds: js.UndefOr[AssociationIdList] = js.native
   /**
-    * The filters.    instance-id - The ID of the instance.    state - The state of the association (associating | associated | disassociating | disassociated).  
+    * The filters.    instance-id - The ID of the instance.    state - The state of the association (associating | associated | disassociating).  
     */
   var Filters: js.UndefOr[FilterList] = js.native
   /**
@@ -26,65 +26,18 @@ trait DescribeIamInstanceProfileAssociationsRequest extends js.Object {
 
 object DescribeIamInstanceProfileAssociationsRequest {
   @scala.inline
-  def apply(): DescribeIamInstanceProfileAssociationsRequest = {
+  def apply(
+    AssociationIds: AssociationIdList = null,
+    Filters: FilterList = null,
+    MaxResults: js.UndefOr[DescribeIamInstanceProfileAssociationsMaxResults] = js.undefined,
+    NextToken: NextToken = null
+  ): DescribeIamInstanceProfileAssociationsRequest = {
     val __obj = js.Dynamic.literal()
+    if (AssociationIds != null) __obj.updateDynamic("AssociationIds")(AssociationIds.asInstanceOf[js.Any])
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeIamInstanceProfileAssociationsRequest]
   }
-  @scala.inline
-  implicit class DescribeIamInstanceProfileAssociationsRequestOps[Self <: DescribeIamInstanceProfileAssociationsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociationIds(value: AssociationIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociationIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: FilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: DescribeIamInstanceProfileAssociationsMaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

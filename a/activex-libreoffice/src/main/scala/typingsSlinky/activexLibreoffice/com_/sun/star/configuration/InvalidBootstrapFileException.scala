@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is thrown when creating a configuration provider fails because a bootstrap file needed to locate the configuration contains invalid data */
-@js.native
 trait InvalidBootstrapFileException extends Exception {
-  var BootstrapFileURL: String = js.native
+  var BootstrapFileURL: String
 }
 
 object InvalidBootstrapFileException {
@@ -18,19 +17,5 @@ object InvalidBootstrapFileException {
     val __obj = js.Dynamic.literal(BootstrapFileURL = BootstrapFileURL.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidBootstrapFileException]
   }
-  @scala.inline
-  implicit class InvalidBootstrapFileExceptionOps[Self <: InvalidBootstrapFileException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBootstrapFileURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapFileURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

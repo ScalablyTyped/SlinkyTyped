@@ -10,16 +10,15 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to initialize a MarkdownViewer.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * Context
     */
-  var context: IContext[IModel] = js.native
+  var context: IContext[IModel]
   /**
     * The renderer instance.
     */
-  var renderer: IRenderer = js.native
+  var renderer: IRenderer
 }
 
 object IOptions {
@@ -28,25 +27,5 @@ object IOptions {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], renderer = renderer.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: IContext[IModel]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: IRenderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

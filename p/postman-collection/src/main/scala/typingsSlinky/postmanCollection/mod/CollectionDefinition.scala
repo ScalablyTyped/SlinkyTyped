@@ -5,49 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollectionDefinition extends ItemGroupDefinition {
-  var info: js.UndefOr[Id] = js.native
-  var variable: js.UndefOr[js.Array[VariableDefinition]] = js.native
+  var info: js.UndefOr[Id] = js.undefined
+  var variable: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
 }
 
 object CollectionDefinition {
   @scala.inline
-  def apply(): CollectionDefinition = {
+  def apply(
+    auth: RequestAuthDefinition = null,
+    description: String | DescriptionDefinition = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    event: js.Array[EventDefinition] = null,
+    id: String = null,
+    info: Id = null,
+    item: js.Array[ItemDefinition | ItemGroupDefinition] = null,
+    name: String = null,
+    variable: js.Array[VariableDefinition] = null
+  ): CollectionDefinition = {
     val __obj = js.Dynamic.literal()
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (variable != null) __obj.updateDynamic("variable")(variable.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionDefinition]
   }
-  @scala.inline
-  implicit class CollectionDefinitionOps[Self <: CollectionDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfo(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariable(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

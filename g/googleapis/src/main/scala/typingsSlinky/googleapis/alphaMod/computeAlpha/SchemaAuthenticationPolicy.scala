@@ -46,65 +46,18 @@ trait SchemaAuthenticationPolicy extends js.Object {
 
 object SchemaAuthenticationPolicy {
   @scala.inline
-  def apply(): SchemaAuthenticationPolicy = {
+  def apply(
+    origins: js.Array[SchemaOriginAuthenticationMethod] = null,
+    peers: js.Array[SchemaPeerAuthenticationMethod] = null,
+    principalBinding: String = null,
+    serverTlsContext: SchemaTlsContext = null
+  ): SchemaAuthenticationPolicy = {
     val __obj = js.Dynamic.literal()
+    if (origins != null) __obj.updateDynamic("origins")(origins.asInstanceOf[js.Any])
+    if (peers != null) __obj.updateDynamic("peers")(peers.asInstanceOf[js.Any])
+    if (principalBinding != null) __obj.updateDynamic("principalBinding")(principalBinding.asInstanceOf[js.Any])
+    if (serverTlsContext != null) __obj.updateDynamic("serverTlsContext")(serverTlsContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuthenticationPolicy]
   }
-  @scala.inline
-  implicit class SchemaAuthenticationPolicyOps[Self <: SchemaAuthenticationPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrigins(value: js.Array[SchemaOriginAuthenticationMethod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeers(value: js.Array[SchemaPeerAuthenticationMethod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrincipalBinding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principalBinding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipalBinding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principalBinding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerTlsContext(value: SchemaTlsContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverTlsContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerTlsContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverTlsContext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,13 @@
 package typingsSlinky.formatjsIntlUnifiedNumberformat.dataMod
 
 import typingsSlinky.formatjsIntlUnifiedNumberformat.anon.RecordDecimalFormatNumSig
+import typingsSlinky.formatjsIntlUnifiedNumberformat.formatjsIntlUnifiedNumberformatStrings.always
+import typingsSlinky.formatjsIntlUnifiedNumberformat.formatjsIntlUnifiedNumberformatStrings.auto
+import typingsSlinky.formatjsIntlUnifiedNumberformat.formatjsIntlUnifiedNumberformatStrings.compactLong
+import typingsSlinky.formatjsIntlUnifiedNumberformat.formatjsIntlUnifiedNumberformatStrings.compactShort
+import typingsSlinky.formatjsIntlUnifiedNumberformat.formatjsIntlUnifiedNumberformatStrings.exceptZero
+import typingsSlinky.formatjsIntlUnifiedNumberformat.formatjsIntlUnifiedNumberformatStrings.never
+import typingsSlinky.formatjsIntlUtils.numberTypesMod.CompactSignPattern
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.DecimalFormatNum
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.NotationPattern
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.RawNumberData
@@ -9,13 +16,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PercentPatterns extends DecimalPatterns {
-  var generateStandardOrScientificPattern: js.Any = js.native
+  var generateStandardOrScientificPattern: js.Any
   @JSName("scientific")
-  def scientific_MPercentPatterns: SignPattern = js.native
+  def scientific_MPercentPatterns: SignPattern
   @JSName("standard")
-  def standard_MPercentPatterns: SignPattern = js.native
+  def standard_MPercentPatterns: SignPattern
 }
 
 object PercentPatterns {
@@ -44,7 +50,12 @@ object PercentPatterns {
     numbers: RawNumberData,
     produceCompactSignPattern: DecimalFormatNum => SignPattern,
     scientific: () => SignPattern,
-    standard: () => SignPattern
+    standard: () => SignPattern,
+    compactSignPattern: CompactSignPattern = null,
+    decimalNum: DecimalFormatNum = null,
+    notation: compactShort | compactLong = null,
+    signDisplay: auto | always | never | exceptZero = null,
+    signPattern: SignPattern = null
   ): PercentPatterns = {
     val __obj = js.Dynamic.literal(always = js.Any.fromFunction0(always), auto = js.Any.fromFunction0(auto), compactLong = js.Any.fromFunction0(compactLong), compactShort = js.Any.fromFunction0(compactShort), exceptZero = js.Any.fromFunction0(exceptZero), generateStandardOrScientificPattern = generateStandardOrScientificPattern.asInstanceOf[js.Any], never = js.Any.fromFunction0(never), numberingSystem = numberingSystem.asInstanceOf[js.Any], numbers = numbers.asInstanceOf[js.Any], produceCompactSignPattern = js.Any.fromFunction1(produceCompactSignPattern), scientific = js.Any.fromFunction0(scientific), standard = js.Any.fromFunction0(standard))
     __obj.updateDynamic("1000")(js.Any.fromFunction0(`1000`))
@@ -59,33 +70,12 @@ object PercentPatterns {
     __obj.updateDynamic("1000000000000")(js.Any.fromFunction0(`1000000000000`))
     __obj.updateDynamic("10000000000000")(js.Any.fromFunction0(`10000000000000`))
     __obj.updateDynamic("100000000000000")(js.Any.fromFunction0(`100000000000000`))
+    if (compactSignPattern != null) __obj.updateDynamic("compactSignPattern")(compactSignPattern.asInstanceOf[js.Any])
+    if (decimalNum != null) __obj.updateDynamic("decimalNum")(decimalNum.asInstanceOf[js.Any])
+    if (notation != null) __obj.updateDynamic("notation")(notation.asInstanceOf[js.Any])
+    if (signDisplay != null) __obj.updateDynamic("signDisplay")(signDisplay.asInstanceOf[js.Any])
+    if (signPattern != null) __obj.updateDynamic("signPattern")(signPattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[PercentPatterns]
   }
-  @scala.inline
-  implicit class PercentPatternsOps[Self <: PercentPatterns] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGenerateStandardOrScientificPattern(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateStandardOrScientificPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScientific(value: () => SignPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scientific")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStandard(value: () => SignPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standard")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -8,68 +8,37 @@ import scala.scalajs.js.annotation._
   * Provides options for whether to select the location that is navigated to.
   *
   * @remarks
-  * 
+  *
   * The behavior caused by the {@link Office.SelectionMode | options.selectionMode} option varies by host:
   *
-  * In Excel: `Office.SelectionMode.Selected` selects all content in the binding, or named item. `Office.SelectionMode.None` for text bindings, 
+  * In Excel: `Office.SelectionMode.Selected` selects all content in the binding, or named item. `Office.SelectionMode.None` for text bindings,
   * selects the cell; for matrix bindings, table bindings, and named items, selects the first data cell (not first cell in header row for tables).
   *
-  * In PowerPoint: `Office.SelectionMode.Selected` selects the slide title or first textbox on the slide. 
+  * In PowerPoint: `Office.SelectionMode.Selected` selects the slide title or first textbox on the slide.
   * `Office.SelectionMode.None` doesn't select anything.
   *
-  * In Word: `Office.SelectionMode.Selected` selects all content in the binding. `Office.SelectionMode.None` for text bindings, moves the cursor to 
+  * In Word: `Office.SelectionMode.Selected` selects all content in the binding. `Office.SelectionMode.None` for text bindings, moves the cursor to
   * the beginning of the text; for matrix bindings and table bindings, selects the first data cell (not first cell in header row for tables).
   */
-@js.native
 trait GoToByIdOptions extends js.Object {
   /**
     * A user-defined item of any type that is returned, unchanged, in the asyncContext property of the AsyncResult object that is passed to a callback.
     */
-  var asyncContext: js.UndefOr[js.Any] = js.native
+  var asyncContext: js.UndefOr[js.Any] = js.undefined
   /**
-    * Specifies whether the location specified by the id parameter is selected (highlighted). 
+    * Specifies whether the location specified by the id parameter is selected (highlighted).
     * Use {@link Office.SelectionMode} or string equivalent. See the Remarks for more information.
     */
-  var selectionMode: js.UndefOr[SelectionMode | String] = js.native
+  var selectionMode: js.UndefOr[SelectionMode | String] = js.undefined
 }
 
 object GoToByIdOptions {
   @scala.inline
-  def apply(): GoToByIdOptions = {
+  def apply(asyncContext: js.Any = null, selectionMode: SelectionMode | String = null): GoToByIdOptions = {
     val __obj = js.Dynamic.literal()
+    if (asyncContext != null) __obj.updateDynamic("asyncContext")(asyncContext.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoToByIdOptions]
   }
-  @scala.inline
-  implicit class GoToByIdOptionsOps[Self <: GoToByIdOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsyncContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsyncContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: SelectionMode | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

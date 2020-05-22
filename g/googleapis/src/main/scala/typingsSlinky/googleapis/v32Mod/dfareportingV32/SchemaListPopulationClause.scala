@@ -19,29 +19,10 @@ trait SchemaListPopulationClause extends js.Object {
 
 object SchemaListPopulationClause {
   @scala.inline
-  def apply(): SchemaListPopulationClause = {
+  def apply(terms: js.Array[SchemaListPopulationTerm] = null): SchemaListPopulationClause = {
     val __obj = js.Dynamic.literal()
+    if (terms != null) __obj.updateDynamic("terms")(terms.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListPopulationClause]
   }
-  @scala.inline
-  implicit class SchemaListPopulationClauseOps[Self <: SchemaListPopulationClause] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTerms(value: js.Array[SchemaListPopulationTerm]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terms")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

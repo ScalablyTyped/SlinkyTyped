@@ -14,6 +14,8 @@ trait Popup extends Widget {
   def open(): Unit = js.native
   def position(): Unit = js.native
   def setOptions(options: js.Any): Unit = js.native
+  def toggle(): Unit = js.native
+  def toggle(toggle: Boolean): Unit = js.native
   def visible(): Boolean = js.native
 }
 

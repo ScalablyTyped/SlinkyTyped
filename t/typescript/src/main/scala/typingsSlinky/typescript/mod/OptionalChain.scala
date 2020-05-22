@@ -8,15 +8,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.typescript.mod.PropertyAccessChain
   - typingsSlinky.typescript.mod.ElementAccessChain
   - typingsSlinky.typescript.mod.CallChain
+  - typingsSlinky.typescript.mod.NonNullChain
 */
 trait OptionalChain extends js.Object
-
-object OptionalChain {
-  @scala.inline
-  implicit def apply(value: CallChain): OptionalChain = value.asInstanceOf[OptionalChain]
-  @scala.inline
-  implicit def apply(value: ElementAccessChain): OptionalChain = value.asInstanceOf[OptionalChain]
-  @scala.inline
-  implicit def apply(value: PropertyAccessChain): OptionalChain = value.asInstanceOf[OptionalChain]
-}
 

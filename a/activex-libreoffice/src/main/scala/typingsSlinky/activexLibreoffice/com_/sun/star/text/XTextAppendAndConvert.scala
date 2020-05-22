@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** merges the functions of {@link XTextAppend} , {@link XTextContentAppend} and {@link XTextConvert} . */
-@js.native
 trait XTextAppendAndConvert
   extends XText
      with XParagraphAppend

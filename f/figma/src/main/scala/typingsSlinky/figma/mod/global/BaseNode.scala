@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait BaseNode extends js.Object
 
-object BaseNode {
-  @scala.inline
-  implicit def apply(value: DocumentNode): BaseNode = value.asInstanceOf[BaseNode]
-  @scala.inline
-  implicit def apply(value: PageNode): BaseNode = value.asInstanceOf[BaseNode]
-  @scala.inline
-  implicit def apply(value: SceneNode): BaseNode = value.asInstanceOf[BaseNode]
-}
-

@@ -1,9 +1,8 @@
 package typingsSlinky.reactNative
 
 import typingsSlinky.reactNative.mod.AccessibilityActionName
-import typingsSlinky.reactNative.mod.AccessibilityEventName
+import typingsSlinky.reactNative.mod.AccessibilityChangeEventName
 import typingsSlinky.reactNative.mod.AccessibilityRole
-import typingsSlinky.reactNative.mod.AccessibilityStates
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AlertType
 import typingsSlinky.reactNative.mod.Animated.ExtrapolateType
@@ -11,7 +10,6 @@ import typingsSlinky.reactNative.mod.AppStateEvent
 import typingsSlinky.reactNative.mod.AppStateStatus
 import typingsSlinky.reactNative.mod.CameraRollAssetType
 import typingsSlinky.reactNative.mod.CameraRollGroupType
-import typingsSlinky.reactNative.mod.ColorSchemeName
 import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.FlexAlignType
 import typingsSlinky.reactNative.mod.FontVariant
@@ -30,6 +28,7 @@ import typingsSlinky.reactNative.mod.ReturnKeyTypeIOS
 import typingsSlinky.reactNative.mod.ReturnKeyTypeOptions
 import typingsSlinky.reactNative.mod.StatusBarAnimation
 import typingsSlinky.reactNative.mod.StatusBarStyle
+import typingsSlinky.reactNative.mod._ColorSchemeName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -268,7 +267,7 @@ object reactNativeStrings {
   sealed trait androidDotpermissionDotWRITE_EXTERNAL_STORAGE extends Permission
   
   @js.native
-  sealed trait announcementFinished extends AccessibilityEventName
+  sealed trait announcementFinished extends js.Object
   
   @js.native
   sealed trait arraybuffer extends XMLHttpRequestResponseType
@@ -316,7 +315,7 @@ object reactNativeStrings {
   sealed trait bold extends js.Object
   
   @js.native
-  sealed trait boldTextChanged extends AccessibilityEventName
+  sealed trait boldTextChanged extends AccessibilityChangeEventName
   
   @js.native
   sealed trait bookmarks extends js.Object
@@ -329,9 +328,6 @@ object reactNativeStrings {
   
   @js.native
   sealed trait `box-only` extends js.Object
-  
-  @js.native
-  sealed trait busy extends AccessibilityStates
   
   @js.native
   sealed trait butt extends js.Object
@@ -375,7 +371,7 @@ object reactNativeStrings {
   
   @js.native
   sealed trait change
-    extends AccessibilityEventName
+    extends AccessibilityChangeEventName
        with AppStateEvent
   
   @js.native
@@ -385,9 +381,6 @@ object reactNativeStrings {
   sealed trait checkbox extends AccessibilityRole
   
   @js.native
-  sealed trait checked extends AccessibilityStates
-  
-  @js.native
   sealed trait clamp extends ExtrapolateType
   
   @js.native
@@ -395,9 +388,6 @@ object reactNativeStrings {
   
   @js.native
   sealed trait clock extends js.Object
-  
-  @js.native
-  sealed trait collapsed extends AccessibilityStates
   
   @js.native
   sealed trait column extends js.Object
@@ -432,7 +422,7 @@ object reactNativeStrings {
   sealed trait creditCardNumber extends js.Object
   
   @js.native
-  sealed trait dark extends ColorSchemeName
+  sealed trait dark extends _ColorSchemeName
   
   @js.native
   sealed trait `dark-content` extends StatusBarStyle
@@ -480,9 +470,7 @@ object reactNativeStrings {
   sealed trait dialog extends js.Object
   
   @js.native
-  sealed trait disabled
-    extends AccessibilityStates
-       with AccessibilityTrait
+  sealed trait disabled extends AccessibilityTrait
   
   @js.native
   sealed trait disk extends js.Object
@@ -544,9 +532,6 @@ object reactNativeStrings {
   
   @js.native
   sealed trait escape extends AccessibilityActionName
-  
-  @js.native
-  sealed trait expanded extends AccessibilityStates
   
   @js.native
   sealed trait extend extends ExtrapolateType
@@ -619,16 +604,13 @@ object reactNativeStrings {
   sealed trait granted extends PermissionStatus
   
   @js.native
-  sealed trait grayscaleChanged extends AccessibilityEventName
+  sealed trait grayscaleChanged extends AccessibilityChangeEventName
   
   @js.native
   sealed trait handled extends js.Object
   
   @js.native
   sealed trait hardwareBackPress extends js.Object
-  
-  @js.native
-  sealed trait hasPopup extends AccessibilityStates
   
   @js.native
   sealed trait head extends js.Object
@@ -683,7 +665,7 @@ object reactNativeStrings {
   sealed trait interactive extends js.Object
   
   @js.native
-  sealed trait invertColorsChanged extends AccessibilityEventName
+  sealed trait invertColorsChanged extends AccessibilityChangeEventName
   
   @js.native
   sealed trait ios extends PlatformOSType
@@ -754,7 +736,7 @@ object reactNativeStrings {
   sealed trait left extends js.Object
   
   @js.native
-  sealed trait light extends ColorSchemeName
+  sealed trait light extends _ColorSchemeName
   
   @js.native
   sealed trait `light-content` extends StatusBarStyle
@@ -1040,10 +1022,10 @@ object reactNativeStrings {
   sealed trait recents extends js.Object
   
   @js.native
-  sealed trait reduceMotionChanged extends AccessibilityEventName
+  sealed trait reduceMotionChanged extends AccessibilityChangeEventName
   
   @js.native
-  sealed trait reduceTransparencyChanged extends AccessibilityEventName
+  sealed trait reduceTransparencyChanged extends AccessibilityChangeEventName
   
   @js.native
   sealed trait register extends PushNotificationEventName
@@ -1095,7 +1077,7 @@ object reactNativeStrings {
   sealed trait screen extends js.Object
   
   @js.native
-  sealed trait screenReaderChanged extends AccessibilityEventName
+  sealed trait screenReaderChanged extends AccessibilityChangeEventName
   
   @js.native
   sealed trait scroll extends js.Object
@@ -1117,9 +1099,7 @@ object reactNativeStrings {
   sealed trait `secure-text` extends AlertType
   
   @js.native
-  sealed trait selected
-    extends AccessibilityStates
-       with AccessibilityTrait
+  sealed trait selected extends AccessibilityTrait
   
   @js.native
   sealed trait send
@@ -1246,9 +1226,6 @@ object reactNativeStrings {
   
   @js.native
   sealed trait twitter extends KeyboardTypeIOS
-  
-  @js.native
-  sealed trait unchecked extends AccessibilityStates
   
   @js.native
   sealed trait underline extends js.Object
@@ -1519,8 +1496,6 @@ object reactNativeStrings {
   @scala.inline
   def `box-only`: `box-only` = "box-only".asInstanceOf[`box-only`]
   @scala.inline
-  def busy: busy = "busy".asInstanceOf[busy]
-  @scala.inline
   def butt: butt = "butt".asInstanceOf[butt]
   @scala.inline
   def button: button = "button".asInstanceOf[button]
@@ -1551,15 +1526,11 @@ object reactNativeStrings {
   @scala.inline
   def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
   @scala.inline
-  def checked: checked = "checked".asInstanceOf[checked]
-  @scala.inline
   def clamp: clamp = "clamp".asInstanceOf[clamp]
   @scala.inline
   def clip: clip = "clip".asInstanceOf[clip]
   @scala.inline
   def clock: clock = "clock".asInstanceOf[clock]
-  @scala.inline
-  def collapsed: collapsed = "collapsed".asInstanceOf[collapsed]
   @scala.inline
   def column: column = "column".asInstanceOf[column]
   @scala.inline
@@ -1649,8 +1620,6 @@ object reactNativeStrings {
   @scala.inline
   def escape: escape = "escape".asInstanceOf[escape]
   @scala.inline
-  def expanded: expanded = "expanded".asInstanceOf[expanded]
-  @scala.inline
   def extend: extend = "extend".asInstanceOf[extend]
   @scala.inline
   def fade: fade = "fade".asInstanceOf[fade]
@@ -1700,8 +1669,6 @@ object reactNativeStrings {
   def handled: handled = "handled".asInstanceOf[handled]
   @scala.inline
   def hardwareBackPress: hardwareBackPress = "hardwareBackPress".asInstanceOf[hardwareBackPress]
-  @scala.inline
-  def hasPopup: hasPopup = "hasPopup".asInstanceOf[hasPopup]
   @scala.inline
   def head: head = "head".asInstanceOf[head]
   @scala.inline
@@ -2088,8 +2055,6 @@ object reactNativeStrings {
   def trailing: trailing = "trailing".asInstanceOf[trailing]
   @scala.inline
   def twitter: twitter = "twitter".asInstanceOf[twitter]
-  @scala.inline
-  def unchecked: unchecked = "unchecked".asInstanceOf[unchecked]
   @scala.inline
   def underline: underline = "underline".asInstanceOf[underline]
   @scala.inline

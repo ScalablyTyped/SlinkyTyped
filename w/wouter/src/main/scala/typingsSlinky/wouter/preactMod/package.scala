@@ -12,6 +12,7 @@ package object preactMod {
     typingsSlinky.wouter.preactMod.LocationTuple
   ]
   type LocationTuple = js.Tuple2[typingsSlinky.wouter.preactMod.Path, typingsSlinky.wouter.preactMod.PushCallback]
+  type Match[T /* <: typingsSlinky.wouter.preactMod.DefaultParams */] = typingsSlinky.wouter.preactMod.MatchWithParams[T] | typingsSlinky.wouter.preactMod.NoMatch
   type MatchWithParams[T /* <: typingsSlinky.wouter.preactMod.DefaultParams */] = js.Tuple2[
     typingsSlinky.wouter.wouterBooleans.`true`, 
     typingsSlinky.wouter.preactMod.Params[T]

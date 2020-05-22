@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Chained[Parent] extends js.Object {
-  def end(): Parent = js.native
+  def end(): Parent
 }
 
 object Chained {
@@ -15,19 +14,5 @@ object Chained {
     val __obj = js.Dynamic.literal(end = js.Any.fromFunction0(end))
     __obj.asInstanceOf[Chained[Parent]]
   }
-  @scala.inline
-  implicit class ChainedOps[Self[parent] <: Chained[parent], Parent] (val x: Self[Parent]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Parent] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Parent]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[Parent] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Parent] with Other]
-    @scala.inline
-    def withEnd(value: () => Parent): Self[Parent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait GetTopicRuleDestinationResponse extends js.Object {
 
 object GetTopicRuleDestinationResponse {
   @scala.inline
-  def apply(): GetTopicRuleDestinationResponse = {
+  def apply(topicRuleDestination: TopicRuleDestination = null): GetTopicRuleDestinationResponse = {
     val __obj = js.Dynamic.literal()
+    if (topicRuleDestination != null) __obj.updateDynamic("topicRuleDestination")(topicRuleDestination.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTopicRuleDestinationResponse]
   }
-  @scala.inline
-  implicit class GetTopicRuleDestinationResponseOps[Self <: GetTopicRuleDestinationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTopicRuleDestination(value: TopicRuleDestination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicRuleDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicRuleDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicRuleDestination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

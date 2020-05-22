@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cancelable extends js.Object {
-  def cancel(): Unit = js.native
-  def flush(): Unit = js.native
+  def cancel(): Unit
+  def flush(): Unit
 }
 
 object Cancelable {
@@ -16,25 +15,5 @@ object Cancelable {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction0(cancel), flush = js.Any.fromFunction0(flush))
     __obj.asInstanceOf[Cancelable]
   }
-  @scala.inline
-  implicit class CancelableOps[Self <: Cancelable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFlush(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

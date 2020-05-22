@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Counter extends js.Object {
   // Adds the given value to the counter.
-  def increment(delta: Double): Unit = js.native
+  def increment(delta: Double): Unit
 }
 
 object Counter {
@@ -16,19 +15,5 @@ object Counter {
     val __obj = js.Dynamic.literal(increment = js.Any.fromFunction1(increment))
     __obj.asInstanceOf[Counter]
   }
-  @scala.inline
-  implicit class CounterOps[Self <: Counter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncrement(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

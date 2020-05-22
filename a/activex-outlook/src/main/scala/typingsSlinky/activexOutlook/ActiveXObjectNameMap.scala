@@ -24,48 +24,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActiveXObjectNameMap extends js.Object {
   @JSName("DOCSITE.DocSiteControl")
-  var DOCSITEDotDocSiteControl: DocSiteControl = js.native
+  var DOCSITEDotDocSiteControl: DocSiteControl
   @JSName("Outlook.Application")
-  var OutlookDotApplication: Application = js.native
+  var OutlookDotApplication: Application
   @JSName("Outlook.OlkBusinessCardControl")
-  var OutlookDotOlkBusinessCardControl: OlkBusinessCardControl = js.native
+  var OutlookDotOlkBusinessCardControl: OlkBusinessCardControl
   @JSName("Outlook.OlkCategoryStrip")
-  var OutlookDotOlkCategoryStrip: OlkCategory = js.native
+  var OutlookDotOlkCategoryStrip: OlkCategory
   @JSName("Outlook.OlkCheckBox")
-  var OutlookDotOlkCheckBox: OlkCheckBox = js.native
+  var OutlookDotOlkCheckBox: OlkCheckBox
   @JSName("Outlook.OlkComboBox")
-  var OutlookDotOlkComboBox: OlkComboBox = js.native
+  var OutlookDotOlkComboBox: OlkComboBox
   @JSName("Outlook.OlkCommandButton")
-  var OutlookDotOlkCommandButton: OlkCommandButton = js.native
+  var OutlookDotOlkCommandButton: OlkCommandButton
   @JSName("Outlook.OlkContactPhoto")
-  var OutlookDotOlkContactPhoto: OlkContactPhoto = js.native
+  var OutlookDotOlkContactPhoto: OlkContactPhoto
   @JSName("Outlook.OlkDateControl")
-  var OutlookDotOlkDateControl: OlkDateControl = js.native
+  var OutlookDotOlkDateControl: OlkDateControl
   @JSName("Outlook.OlkFrameHeader")
-  var OutlookDotOlkFrameHeader: OlkFrameHeader = js.native
+  var OutlookDotOlkFrameHeader: OlkFrameHeader
   @JSName("Outlook.OlkInfoBar")
-  var OutlookDotOlkInfoBar: OlkInfoBar = js.native
+  var OutlookDotOlkInfoBar: OlkInfoBar
   @JSName("Outlook.OlkLabel")
-  var OutlookDotOlkLabel: OlkLabel = js.native
+  var OutlookDotOlkLabel: OlkLabel
   @JSName("Outlook.OlkListBox")
-  var OutlookDotOlkListBox: OlkListBox = js.native
+  var OutlookDotOlkListBox: OlkListBox
   @JSName("Outlook.OlkOptionButton")
-  var OutlookDotOlkOptionButton: OlkOptionButton = js.native
+  var OutlookDotOlkOptionButton: OlkOptionButton
   @JSName("Outlook.OlkPageControl")
-  var OutlookDotOlkPageControl: OlkPageControl = js.native
+  var OutlookDotOlkPageControl: OlkPageControl
   @JSName("Outlook.OlkSenderPhoto")
-  var OutlookDotOlkSenderPhoto: OlkSenderPhoto = js.native
+  var OutlookDotOlkSenderPhoto: OlkSenderPhoto
   @JSName("Outlook.OlkTextBox")
-  var OutlookDotOlkTextBox: OlkTextBox = js.native
+  var OutlookDotOlkTextBox: OlkTextBox
   @JSName("Outlook.OlkTimeControl")
-  var OutlookDotOlkTimeControl: OlkTimeControl = js.native
+  var OutlookDotOlkTimeControl: OlkTimeControl
   @JSName("Outlook.OlkTimeZone")
-  var OutlookDotOlkTimeZone: OlkTimeZoneControl = js.native
+  var OutlookDotOlkTimeZone: OlkTimeZoneControl
   @JSName("RECIP.RecipCtl")
-  var RECIPDotRecipCtl: RecipientControl = js.native
+  var RECIPDotRecipCtl: RecipientControl
 }
 
 object ActiveXObjectNameMap {
@@ -115,133 +114,5 @@ object ActiveXObjectNameMap {
     __obj.updateDynamic("RECIP.RecipCtl")(RECIPDotRecipCtl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActiveXObjectNameMap]
   }
-  @scala.inline
-  implicit class ActiveXObjectNameMapOps[Self <: ActiveXObjectNameMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDOCSITEDotDocSiteControl(value: DocSiteControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DOCSITE.DocSiteControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkBusinessCardControl(value: OlkBusinessCardControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkBusinessCardControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkCategoryStrip(value: OlkCategory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkCategoryStrip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkCheckBox(value: OlkCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkCheckBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkComboBox(value: OlkComboBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkComboBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkCommandButton(value: OlkCommandButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkCommandButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkContactPhoto(value: OlkContactPhoto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkContactPhoto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkDateControl(value: OlkDateControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkDateControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkFrameHeader(value: OlkFrameHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkFrameHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkInfoBar(value: OlkInfoBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkInfoBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkLabel(value: OlkLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkListBox(value: OlkListBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkListBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkOptionButton(value: OlkOptionButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkOptionButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkPageControl(value: OlkPageControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkPageControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkSenderPhoto(value: OlkSenderPhoto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkSenderPhoto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkTextBox(value: OlkTextBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkTextBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkTimeControl(value: OlkTimeControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkTimeControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkTimeZone(value: OlkTimeZoneControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkTimeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRECIPDotRecipCtl(value: RecipientControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RECIP.RecipCtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

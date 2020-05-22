@@ -26,59 +26,17 @@ trait UpdateDomainContactRequest extends js.Object {
 
 object UpdateDomainContactRequest {
   @scala.inline
-  def apply(DomainName: DomainName): UpdateDomainContactRequest = {
+  def apply(
+    DomainName: DomainName,
+    AdminContact: ContactDetail = null,
+    RegistrantContact: ContactDetail = null,
+    TechContact: ContactDetail = null
+  ): UpdateDomainContactRequest = {
     val __obj = js.Dynamic.literal(DomainName = DomainName.asInstanceOf[js.Any])
+    if (AdminContact != null) __obj.updateDynamic("AdminContact")(AdminContact.asInstanceOf[js.Any])
+    if (RegistrantContact != null) __obj.updateDynamic("RegistrantContact")(RegistrantContact.asInstanceOf[js.Any])
+    if (TechContact != null) __obj.updateDynamic("TechContact")(TechContact.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDomainContactRequest]
   }
-  @scala.inline
-  implicit class UpdateDomainContactRequestOps[Self <: UpdateDomainContactRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainName(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdminContact(value: ContactDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdminContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminContact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrantContact(value: ContactDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrantContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrantContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrantContact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTechContact(value: ContactDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TechContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTechContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TechContact")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

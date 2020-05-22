@@ -1,7 +1,9 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.Midi
 
 import typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceInformation
+import typingsSlinky.winrtUwp.Windows.Devices.Midi.IMidiMessage
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +12,32 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Midi.MidiSynthesizer")
 @js.native
 abstract class MidiSynthesizer ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Midi.MidiSynthesizer
+  extends typingsSlinky.winrtUwp.Windows.Devices.Midi.MidiSynthesizer {
+  /** Gets the audio output device being used by this instance of the Microsoft MIDI synthesizer. */
+  /* CompleteClass */
+  override var audioDevice: DeviceInformation = js.native
+  /** Gets the device ID of the Microsoft MIDI synthesizer. Note that all instances of the synthesizer have the same ID. */
+  /* CompleteClass */
+  override var deviceId: String = js.native
+  /** Gets or sets the output volume of this instance of the Microsoft MIDI synthesizer. */
+  /* CompleteClass */
+  override var volume: Double = js.native
+  /** Closes this instance of the Microsoft MIDI synthesizer. It is a best practice for the caller to use this method to clear resources used by the MIDI object. */
+  /* CompleteClass */
+  override def close(): Unit = js.native
+  /**
+    * Sends an array of bytes through the synthesizer's out port . This enables you to send your data as a byte array instead of as a defined MIDI message.
+    * @param midiData The array of bytes to send.
+    */
+  /* CompleteClass */
+  override def sendBuffer(midiData: IBuffer): Unit = js.native
+  /**
+    * Sends a MIDI message through the Microsoft MIDI synthesizer's out port .
+    * @param midiMessage The MIDI message to send.
+    */
+  /* CompleteClass */
+  override def sendMessage(midiMessage: IMidiMessage): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Devices.Midi.MidiSynthesizer")

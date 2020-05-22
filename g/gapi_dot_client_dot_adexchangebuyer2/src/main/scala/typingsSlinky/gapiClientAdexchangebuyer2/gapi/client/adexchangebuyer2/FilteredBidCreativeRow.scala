@@ -4,65 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilteredBidCreativeRow extends js.Object {
   /** The number of bids with the specified creative. */
-  var bidCount: js.UndefOr[MetricValue] = js.native
+  var bidCount: js.UndefOr[MetricValue] = js.undefined
   /** The ID of the creative. */
-  var creativeId: js.UndefOr[String] = js.native
+  var creativeId: js.UndefOr[String] = js.undefined
   /** The values of all dimensions associated with metric values in this row. */
-  var rowDimensions: js.UndefOr[RowDimensions] = js.native
+  var rowDimensions: js.UndefOr[RowDimensions] = js.undefined
 }
 
 object FilteredBidCreativeRow {
   @scala.inline
-  def apply(): FilteredBidCreativeRow = {
+  def apply(bidCount: MetricValue = null, creativeId: String = null, rowDimensions: RowDimensions = null): FilteredBidCreativeRow = {
     val __obj = js.Dynamic.literal()
+    if (bidCount != null) __obj.updateDynamic("bidCount")(bidCount.asInstanceOf[js.Any])
+    if (creativeId != null) __obj.updateDynamic("creativeId")(creativeId.asInstanceOf[js.Any])
+    if (rowDimensions != null) __obj.updateDynamic("rowDimensions")(rowDimensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilteredBidCreativeRow]
   }
-  @scala.inline
-  implicit class FilteredBidCreativeRowOps[Self <: FilteredBidCreativeRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBidCount(value: MetricValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bidCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBidCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bidCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreativeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDimensions(value: RowDimensions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDimensions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

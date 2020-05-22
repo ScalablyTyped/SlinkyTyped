@@ -4,218 +4,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CountParams extends GenericParams {
-  var allowNoIndices: js.UndefOr[Boolean] = js.native
-  var analyzeWildcard: js.UndefOr[Boolean] = js.native
-  var analyzer: js.UndefOr[String] = js.native
-  var defaultOperator: js.UndefOr[DefaultOperator] = js.native
-  var df: js.UndefOr[String] = js.native
-  var expandWildcards: js.UndefOr[ExpandWildcards] = js.native
-  var ignoreUnavailable: js.UndefOr[Boolean] = js.native
-  var index: js.UndefOr[NameList] = js.native
-  var lenient: js.UndefOr[Boolean] = js.native
-  var lowercaseExpandedTerms: js.UndefOr[Boolean] = js.native
-  var minScore: js.UndefOr[Double] = js.native
-  var preference: js.UndefOr[String] = js.native
-  var q: js.UndefOr[String] = js.native
-  var routing: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[NameList] = js.native
+  var allowNoIndices: js.UndefOr[Boolean] = js.undefined
+  var analyzeWildcard: js.UndefOr[Boolean] = js.undefined
+  var analyzer: js.UndefOr[String] = js.undefined
+  var defaultOperator: js.UndefOr[DefaultOperator] = js.undefined
+  var df: js.UndefOr[String] = js.undefined
+  var expandWildcards: js.UndefOr[ExpandWildcards] = js.undefined
+  var ignoreUnavailable: js.UndefOr[Boolean] = js.undefined
+  var index: js.UndefOr[NameList] = js.undefined
+  var lenient: js.UndefOr[Boolean] = js.undefined
+  var lowercaseExpandedTerms: js.UndefOr[Boolean] = js.undefined
+  var minScore: js.UndefOr[Double] = js.undefined
+  var preference: js.UndefOr[String] = js.undefined
+  var q: js.UndefOr[String] = js.undefined
+  var routing: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[NameList] = js.undefined
 }
 
 object CountParams {
   @scala.inline
-  def apply(): CountParams = {
+  def apply(
+    allowNoIndices: js.UndefOr[Boolean] = js.undefined,
+    analyzeWildcard: js.UndefOr[Boolean] = js.undefined,
+    analyzer: String = null,
+    body: js.Any = null,
+    defaultOperator: DefaultOperator = null,
+    df: String = null,
+    expandWildcards: ExpandWildcards = null,
+    filterPath: String | js.Array[String] = null,
+    ignore: Double | js.Array[Double] = null,
+    ignoreUnavailable: js.UndefOr[Boolean] = js.undefined,
+    index: NameList = null,
+    lenient: js.UndefOr[Boolean] = js.undefined,
+    lowercaseExpandedTerms: js.UndefOr[Boolean] = js.undefined,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    minScore: js.UndefOr[Double] = js.undefined,
+    preference: String = null,
+    q: String = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    routing: String = null,
+    `type`: NameList = null
+  ): CountParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowNoIndices)) __obj.updateDynamic("allowNoIndices")(allowNoIndices.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(analyzeWildcard)) __obj.updateDynamic("analyzeWildcard")(analyzeWildcard.get.asInstanceOf[js.Any])
+    if (analyzer != null) __obj.updateDynamic("analyzer")(analyzer.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (defaultOperator != null) __obj.updateDynamic("defaultOperator")(defaultOperator.asInstanceOf[js.Any])
+    if (df != null) __obj.updateDynamic("df")(df.asInstanceOf[js.Any])
+    if (expandWildcards != null) __obj.updateDynamic("expandWildcards")(expandWildcards.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreUnavailable)) __obj.updateDynamic("ignoreUnavailable")(ignoreUnavailable.get.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (!js.isUndefined(lenient)) __obj.updateDynamic("lenient")(lenient.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lowercaseExpandedTerms)) __obj.updateDynamic("lowercaseExpandedTerms")(lowercaseExpandedTerms.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(minScore)) __obj.updateDynamic("minScore")(minScore.get.asInstanceOf[js.Any])
+    if (preference != null) __obj.updateDynamic("preference")(preference.asInstanceOf[js.Any])
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (routing != null) __obj.updateDynamic("routing")(routing.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CountParams]
   }
-  @scala.inline
-  implicit class CountParamsOps[Self <: CountParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowNoIndices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNoIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowNoIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNoIndices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyzeWildcard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzeWildcard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzeWildcard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzeWildcard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyzer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOperator(value: DefaultOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOperator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDf(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("df")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("df")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandWildcards(value: ExpandWildcards): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandWildcards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandWildcards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandWildcards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreUnavailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnavailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreUnavailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnavailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLenient(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lenient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLenient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lenient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowercaseExpandedTerms(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowercaseExpandedTerms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowercaseExpandedTerms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowercaseExpandedTerms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinScore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouting(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

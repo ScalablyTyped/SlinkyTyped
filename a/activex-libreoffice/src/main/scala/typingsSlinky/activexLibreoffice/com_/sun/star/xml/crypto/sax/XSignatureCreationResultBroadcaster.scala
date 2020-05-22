@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   *
   * This interface is used to manipulate signature creation result listener.
   */
-@js.native
 trait XSignatureCreationResultBroadcaster extends XInterface {
   /**
     * Adds a new signature creation result listener.
@@ -19,14 +18,14 @@ trait XSignatureCreationResultBroadcaster extends XInterface {
     * When the signature is created, the result information will be sent to this listener.
     * @param listener the listener to be added
     */
-  def addSignatureCreationResultListener(listener: XSignatureCreationResultListener): Unit = js.native
+  def addSignatureCreationResultListener(listener: XSignatureCreationResultListener): Unit
   /**
     * Removes a signature creation result listener.
     *
     * After a listener is removed, no result information will be sent to it.
     * @param listener the listener to be removed
     */
-  def removeSignatureCreationResultListener(listener: XSignatureCreationResultListener): Unit = js.native
+  def removeSignatureCreationResultListener(listener: XSignatureCreationResultListener): Unit
 }
 
 object XSignatureCreationResultBroadcaster {
@@ -41,25 +40,5 @@ object XSignatureCreationResultBroadcaster {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addSignatureCreationResultListener = js.Any.fromFunction1(addSignatureCreationResultListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeSignatureCreationResultListener = js.Any.fromFunction1(removeSignatureCreationResultListener))
     __obj.asInstanceOf[XSignatureCreationResultBroadcaster]
   }
-  @scala.inline
-  implicit class XSignatureCreationResultBroadcasterOps[Self <: XSignatureCreationResultBroadcaster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddSignatureCreationResultListener(value: XSignatureCreationResultListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addSignatureCreationResultListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveSignatureCreationResultListener(value: XSignatureCreationResultListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeSignatureCreationResultListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

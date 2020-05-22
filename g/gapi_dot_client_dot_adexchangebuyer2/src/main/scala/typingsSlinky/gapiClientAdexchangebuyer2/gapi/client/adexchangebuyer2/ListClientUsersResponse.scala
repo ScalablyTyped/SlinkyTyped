@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListClientUsersResponse extends js.Object {
   /**
     * A token to retrieve the next page of results.
@@ -15,48 +14,18 @@ trait ListClientUsersResponse extends js.Object {
     * method to retrieve the next
     * page of results.
     */
-  var nextPageToken: js.UndefOr[String] = js.native
+  var nextPageToken: js.UndefOr[String] = js.undefined
   /** The returned list of client users. */
-  var users: js.UndefOr[js.Array[ClientUser]] = js.native
+  var users: js.UndefOr[js.Array[ClientUser]] = js.undefined
 }
 
 object ListClientUsersResponse {
   @scala.inline
-  def apply(): ListClientUsersResponse = {
+  def apply(nextPageToken: String = null, users: js.Array[ClientUser] = null): ListClientUsersResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (users != null) __obj.updateDynamic("users")(users.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListClientUsersResponse]
   }
-  @scala.inline
-  implicit class ListClientUsersResponseOps[Self <: ListClientUsersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsers(value: js.Array[ClientUser]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

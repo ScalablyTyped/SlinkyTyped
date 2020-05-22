@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IOpenAPISchemaValidator extends js.Object {
   /**
     * Validate the provided OpenAPI doc against this validator's schema version and
     * return the results.
     */
-  def validate(doc: Document): OpenAPISchemaValidatorResult = js.native
+  def validate(doc: Document): OpenAPISchemaValidatorResult
 }
 
 object IOpenAPISchemaValidator {
@@ -20,19 +19,5 @@ object IOpenAPISchemaValidator {
     val __obj = js.Dynamic.literal(validate = js.Any.fromFunction1(validate))
     __obj.asInstanceOf[IOpenAPISchemaValidator]
   }
-  @scala.inline
-  implicit class IOpenAPISchemaValidatorOps[Self <: IOpenAPISchemaValidator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValidate(value: Document => OpenAPISchemaValidatorResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

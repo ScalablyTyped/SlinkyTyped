@@ -11,31 +11,55 @@ object mod extends js.Object {
   @js.native
   class IllegalArgumentError () extends Error {
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   @js.native
   class IllegalStateError () extends Error {
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   @js.native
   class IllegalValueError () extends Error {
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   @js.native
   class InvalidTypeError () extends Error {
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   @js.native
   class UndefinedValueError () extends Error {
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   @js.native
   class UnknownValueError () extends Error {
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   def checkArgument(condition: js.Any): Unit = js.native

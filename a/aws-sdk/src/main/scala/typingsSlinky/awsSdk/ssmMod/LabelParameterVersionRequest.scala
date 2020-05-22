@@ -22,41 +22,14 @@ trait LabelParameterVersionRequest extends js.Object {
 
 object LabelParameterVersionRequest {
   @scala.inline
-  def apply(Labels: ParameterLabelList, Name: PSParameterName): LabelParameterVersionRequest = {
+  def apply(
+    Labels: ParameterLabelList,
+    Name: PSParameterName,
+    ParameterVersion: js.UndefOr[PSParameterVersion] = js.undefined
+  ): LabelParameterVersionRequest = {
     val __obj = js.Dynamic.literal(Labels = Labels.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (!js.isUndefined(ParameterVersion)) __obj.updateDynamic("ParameterVersion")(ParameterVersion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelParameterVersionRequest]
   }
-  @scala.inline
-  implicit class LabelParameterVersionRequestOps[Self <: LabelParameterVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabels(value: ParameterLabelList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: PSParameterName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParameterVersion(value: PSParameterVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

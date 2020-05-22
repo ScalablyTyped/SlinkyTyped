@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateImageResponse extends js.Object {
   /** The object ID of the created image. */
-  var objectId: js.UndefOr[String] = js.native
+  var objectId: js.UndefOr[String] = js.undefined
 }
 
 object CreateImageResponse {
   @scala.inline
-  def apply(): CreateImageResponse = {
+  def apply(objectId: String = null): CreateImageResponse = {
     val __obj = js.Dynamic.literal()
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateImageResponse]
   }
-  @scala.inline
-  implicit class CreateImageResponseOps[Self <: CreateImageResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

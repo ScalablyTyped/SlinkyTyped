@@ -1,5 +1,8 @@
 package typingsSlinky.ecol
 
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
 import typingsSlinky.tstl.mod.base.Container
 import scala.scalajs.js
@@ -15,6 +18,14 @@ object eventDispatcherMod extends js.Object {
       * @hidden
       */
     var listeners_ : js.Any = js.native
+    /* CompleteClass */
+    override def addEventListener(`type`: Type, listener: Listener[T, SourceT, IteratorT, ReverseT]): Unit = js.native
+    /* CompleteClass */
+    override def dispatchEvent(event: CollectionEvent[T, SourceT, IteratorT, ReverseT]): Unit = js.native
+    /* CompleteClass */
+    override def hasEventListener(`type`: Type): Boolean = js.native
+    /* CompleteClass */
+    override def removeEventListener(`type`: Type, listener: Listener[T, SourceT, IteratorT, ReverseT]): Unit = js.native
   }
   
 }

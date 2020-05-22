@@ -1,5 +1,6 @@
 package typingsSlinky.pkijs.encryptedContentInfoMod
 
+import typingsSlinky.asn1js.mod.OctetString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,18 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends EncryptedContentInfo {
   def this(params: js.Any) = this()
+  /* CompleteClass */
+  override var contentEncryptionAlgorithm: typingsSlinky.pkijs.algorithmIdentifierMod.default = js.native
+  /* CompleteClass */
+  override var eContentType: String = js.native
+  /* CompleteClass */
+  override var encryptedContent: OctetString = js.native
+  /* CompleteClass */
+  override def fromSchema(schema: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+  /* CompleteClass */
+  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

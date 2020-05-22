@@ -5,23 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Selection extends js.Object {
-  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
-  val ChildShapeRange: typingsSlinky.activexPowerpoint.PowerPoint.ShapeRange = js.native
-  val HasChildShapeRange: Boolean = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application
+  val ChildShapeRange: typingsSlinky.activexPowerpoint.PowerPoint.ShapeRange
+  val HasChildShapeRange: Boolean
+  val Parent: js.Any
   @JSName("PowerPoint.Selection_typekey")
-  var PowerPointDotSelection_typekey: Selection = js.native
-  val ShapeRange: typingsSlinky.activexPowerpoint.PowerPoint.ShapeRange = js.native
-  val SlideRange: typingsSlinky.activexPowerpoint.PowerPoint.SlideRange = js.native
-  val TextRange: typingsSlinky.activexPowerpoint.PowerPoint.TextRange = js.native
-  val TextRange2: typingsSlinky.activexOffice.Office.TextRange2 = js.native
-  val Type: PpSelectionType = js.native
-  def Copy(): Unit = js.native
-  def Cut(): Unit = js.native
-  def Delete(): Unit = js.native
-  def Unselect(): Unit = js.native
+  var PowerPointDotSelection_typekey: Selection
+  val ShapeRange: typingsSlinky.activexPowerpoint.PowerPoint.ShapeRange
+  val SlideRange: typingsSlinky.activexPowerpoint.PowerPoint.SlideRange
+  val TextRange: typingsSlinky.activexPowerpoint.PowerPoint.TextRange
+  val TextRange2: typingsSlinky.activexOffice.Office.TextRange2
+  val Type: PpSelectionType
+  def Copy(): Unit
+  def Cut(): Unit
+  def Delete(): Unit
+  def Unselect(): Unit
 }
 
 object Selection {
@@ -46,97 +45,5 @@ object Selection {
     __obj.updateDynamic("PowerPoint.Selection_typekey")(PowerPointDotSelection_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
-  @scala.inline
-  implicit class SelectionOps[Self <: Selection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildShapeRange(value: ShapeRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChildShapeRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCopy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Copy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCut(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cut")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasChildShapeRange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasChildShapeRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotSelection_typekey(value: Selection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.Selection_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShapeRange(value: ShapeRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShapeRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSlideRange(value: SlideRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SlideRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextRange(value: TextRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextRange2(value: TextRange2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextRange2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: PpSelectionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnselect(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unselect")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

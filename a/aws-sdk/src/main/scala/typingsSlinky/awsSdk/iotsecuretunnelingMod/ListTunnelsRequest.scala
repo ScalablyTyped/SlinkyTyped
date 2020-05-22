@@ -22,53 +22,16 @@ trait ListTunnelsRequest extends js.Object {
 
 object ListTunnelsRequest {
   @scala.inline
-  def apply(): ListTunnelsRequest = {
+  def apply(
+    maxResults: js.UndefOr[MaxResults] = js.undefined,
+    nextToken: NextToken = null,
+    thingName: ThingName = null
+  ): ListTunnelsRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (thingName != null) __obj.updateDynamic("thingName")(thingName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTunnelsRequest]
   }
-  @scala.inline
-  implicit class ListTunnelsRequestOps[Self <: ListTunnelsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxResults(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingName(value: ThingName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

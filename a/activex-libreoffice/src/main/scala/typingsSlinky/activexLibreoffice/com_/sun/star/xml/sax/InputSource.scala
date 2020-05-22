@@ -12,21 +12,20 @@ import scala.scalajs.js.annotation._
   *
   * as the argument of {@link XParser.parseStream()}as the return value of XEntityReslover::resolveEntity().
   */
-@js.native
 trait InputSource extends js.Object {
   /** contains the byte input stream of the document. */
-  var aInputStream: XInputStream = js.native
+  var aInputStream: XInputStream
   /**
     * contains the encoding of the data stream. This is used by the parser to do Unicode conversions.
     *
     * Note that in general you do not need to specify an encoding. Either it is UTF-8 or UTF-16 which is recognized by the parser or it is specified in the
     * first line of the XML-File ( e.g. **?xml encoding="EUC-JP"?** ).
     */
-  var sEncoding: String = js.native
+  var sEncoding: String
   /** contains the public Id of the document, for example, needed in exception-message strings. */
-  var sPublicId: String = js.native
+  var sPublicId: String
   /** contains the system ID of the document. */
-  var sSystemId: String = js.native
+  var sSystemId: String
 }
 
 object InputSource {
@@ -35,37 +34,5 @@ object InputSource {
     val __obj = js.Dynamic.literal(aInputStream = aInputStream.asInstanceOf[js.Any], sEncoding = sEncoding.asInstanceOf[js.Any], sPublicId = sPublicId.asInstanceOf[js.Any], sSystemId = sSystemId.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputSource]
   }
-  @scala.inline
-  implicit class InputSourceOps[Self <: InputSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAInputStream(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aInputStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSPublicId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPublicId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSSystemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSystemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

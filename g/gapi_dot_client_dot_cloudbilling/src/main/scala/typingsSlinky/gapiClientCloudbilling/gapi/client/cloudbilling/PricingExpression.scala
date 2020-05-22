@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PricingExpression extends js.Object {
   /**
     * The base unit for the SKU which is the unit used in usage exports.
     * Example: "By"
     */
-  var baseUnit: js.UndefOr[String] = js.native
+  var baseUnit: js.UndefOr[String] = js.undefined
   /**
     * Conversion factor for converting from price per usage_unit to price per
     * base_unit, and start_usage_amount to start_usage_amount in base_unit.
@@ -18,12 +17,12 @@ trait PricingExpression extends js.Object {
     * start_usage_amount &#42; base_unit_conversion_factor = start_usage_amount in
     * base_unit.
     */
-  var baseUnitConversionFactor: js.UndefOr[Double] = js.native
+  var baseUnitConversionFactor: js.UndefOr[Double] = js.undefined
   /**
     * The base unit in human readable form.
     * Example: "byte".
     */
-  var baseUnitDescription: js.UndefOr[String] = js.native
+  var baseUnitDescription: js.UndefOr[String] = js.undefined
   /**
     * The recommended quantity of units for displaying pricing info. When
     * displaying pricing info it is recommended to display:
@@ -34,122 +33,45 @@ trait PricingExpression extends js.Object {
     * the display_quantity is "1000" then the recommended way of displaying the
     * pricing info is "0.10 USD per 1000 GB"
     */
-  var displayQuantity: js.UndefOr[Double] = js.native
+  var displayQuantity: js.UndefOr[Double] = js.undefined
   /**
     * The list of tiered rates for this pricing. The total cost is computed by
     * applying each of the tiered rates on usage. This repeated list is sorted
     * by ascending order of start_usage_amount.
     */
-  var tieredRates: js.UndefOr[js.Array[TierRate]] = js.native
+  var tieredRates: js.UndefOr[js.Array[TierRate]] = js.undefined
   /**
     * The short hand for unit of usage this pricing is specified in.
     * Example: usage_unit of "GiBy" means that usage is specified in "Gibi Byte".
     */
-  var usageUnit: js.UndefOr[String] = js.native
+  var usageUnit: js.UndefOr[String] = js.undefined
   /**
     * The unit of usage in human readable form.
     * Example: "gibi byte".
     */
-  var usageUnitDescription: js.UndefOr[String] = js.native
+  var usageUnitDescription: js.UndefOr[String] = js.undefined
 }
 
 object PricingExpression {
   @scala.inline
-  def apply(): PricingExpression = {
+  def apply(
+    baseUnit: String = null,
+    baseUnitConversionFactor: js.UndefOr[Double] = js.undefined,
+    baseUnitDescription: String = null,
+    displayQuantity: js.UndefOr[Double] = js.undefined,
+    tieredRates: js.Array[TierRate] = null,
+    usageUnit: String = null,
+    usageUnitDescription: String = null
+  ): PricingExpression = {
     val __obj = js.Dynamic.literal()
+    if (baseUnit != null) __obj.updateDynamic("baseUnit")(baseUnit.asInstanceOf[js.Any])
+    if (!js.isUndefined(baseUnitConversionFactor)) __obj.updateDynamic("baseUnitConversionFactor")(baseUnitConversionFactor.get.asInstanceOf[js.Any])
+    if (baseUnitDescription != null) __obj.updateDynamic("baseUnitDescription")(baseUnitDescription.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayQuantity)) __obj.updateDynamic("displayQuantity")(displayQuantity.get.asInstanceOf[js.Any])
+    if (tieredRates != null) __obj.updateDynamic("tieredRates")(tieredRates.asInstanceOf[js.Any])
+    if (usageUnit != null) __obj.updateDynamic("usageUnit")(usageUnit.asInstanceOf[js.Any])
+    if (usageUnitDescription != null) __obj.updateDynamic("usageUnitDescription")(usageUnitDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[PricingExpression]
   }
-  @scala.inline
-  implicit class PricingExpressionOps[Self <: PricingExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUnitConversionFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitConversionFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUnitConversionFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitConversionFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUnitDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUnitDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayQuantity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayQuantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayQuantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTieredRates(value: js.Array[TierRate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tieredRates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTieredRates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tieredRates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsageUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usageUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsageUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usageUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsageUnitDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usageUnitDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsageUnitDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usageUnitDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

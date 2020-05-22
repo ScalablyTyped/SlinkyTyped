@@ -124,6 +124,7 @@ import typingsSlinky.pulumiAws.anon.TypeofIoTEvents
 import typingsSlinky.pulumiAws.anon.TypeofIoTEventsData
 import typingsSlinky.pulumiAws.anon.TypeofIoTJobsDataPlane
 import typingsSlinky.pulumiAws.anon.TypeofIoTSecureTunneling
+import typingsSlinky.pulumiAws.anon.TypeofIoTSiteWise
 import typingsSlinky.pulumiAws.anon.TypeofIoTThingsGraph
 import typingsSlinky.pulumiAws.anon.TypeofIot
 import typingsSlinky.pulumiAws.anon.TypeofIotData
@@ -147,6 +148,7 @@ import typingsSlinky.pulumiAws.anon.TypeofMQ
 import typingsSlinky.pulumiAws.anon.TypeofMTurk
 import typingsSlinky.pulumiAws.anon.TypeofMachineLearning
 import typingsSlinky.pulumiAws.anon.TypeofMacie
+import typingsSlinky.pulumiAws.anon.TypeofMacie2
 import typingsSlinky.pulumiAws.anon.TypeofManagedBlockchain
 import typingsSlinky.pulumiAws.anon.TypeofMarketplaceCatalog
 import typingsSlinky.pulumiAws.anon.TypeofMarketplaceCommerce
@@ -223,6 +225,7 @@ import typingsSlinky.pulumiAws.anon.TypeofSnowball
 import typingsSlinky.pulumiAws.anon.TypeofStepFunctions
 import typingsSlinky.pulumiAws.anon.TypeofStorageGateway
 import typingsSlinky.pulumiAws.anon.TypeofSupport
+import typingsSlinky.pulumiAws.anon.TypeofSynthetics
 import typingsSlinky.pulumiAws.anon.TypeofTextract
 import typingsSlinky.pulumiAws.anon.TypeofTranscribeService
 import typingsSlinky.pulumiAws.anon.TypeofTransfer
@@ -395,6 +398,7 @@ object pulumiAwsAugmentingMod extends js.Object {
     var IoTEventsData: Instantiable0[typingsSlinky.awsSdk.mod.IoTEventsData] | TypeofIoTEventsData = js.native
     var IoTJobsDataPlane: Instantiable0[typingsSlinky.awsSdk.mod.IoTJobsDataPlane] | TypeofIoTJobsDataPlane = js.native
     var IoTSecureTunneling: Instantiable0[typingsSlinky.awsSdk.mod.IoTSecureTunneling] | TypeofIoTSecureTunneling = js.native
+    var IoTSiteWise: Instantiable0[typingsSlinky.awsSdk.mod.IoTSiteWise] | TypeofIoTSiteWise = js.native
     var IoTThingsGraph: Instantiable0[typingsSlinky.awsSdk.mod.IoTThingsGraph] | TypeofIoTThingsGraph = js.native
     var Iot: Instantiable0[typingsSlinky.awsSdk.mod.Iot] | TypeofIot = js.native
     var IotData: Instantiable0[typingsSlinky.awsSdk.mod.IotData] | TypeofIotData = js.native
@@ -418,6 +422,7 @@ object pulumiAwsAugmentingMod extends js.Object {
     var MTurk: Instantiable0[typingsSlinky.awsSdk.mod.MTurk] | TypeofMTurk = js.native
     var MachineLearning: Instantiable0[typingsSlinky.awsSdk.mod.MachineLearning] | TypeofMachineLearning = js.native
     var Macie: Instantiable0[typingsSlinky.awsSdk.mod.Macie] | TypeofMacie = js.native
+    var Macie2: Instantiable0[typingsSlinky.awsSdk.mod.Macie2] | TypeofMacie2 = js.native
     var ManagedBlockchain: Instantiable0[typingsSlinky.awsSdk.mod.ManagedBlockchain] | TypeofManagedBlockchain = js.native
     var MarketplaceCatalog: Instantiable0[typingsSlinky.awsSdk.mod.MarketplaceCatalog] | TypeofMarketplaceCatalog = js.native
     var MarketplaceCommerceAnalytics: Instantiable0[typingsSlinky.awsSdk.mod.MarketplaceCommerceAnalytics] | TypeofMarketplaceCommerce = js.native
@@ -505,6 +510,7 @@ object pulumiAwsAugmentingMod extends js.Object {
     var StepFunctions: Instantiable0[typingsSlinky.awsSdk.mod.StepFunctions] | TypeofStepFunctions = js.native
     var StorageGateway: Instantiable0[typingsSlinky.awsSdk.mod.StorageGateway] | TypeofStorageGateway = js.native
     var Support: Instantiable0[typingsSlinky.awsSdk.mod.Support] | TypeofSupport = js.native
+    var Synthetics: Instantiable0[typingsSlinky.awsSdk.mod.Synthetics] | TypeofSynthetics = js.native
     // Needed to expose interfaces on the class
     val TemporaryCredentials: js.Any | (Instantiable1[
         /* options */ TemporaryCredentialsOptions, 

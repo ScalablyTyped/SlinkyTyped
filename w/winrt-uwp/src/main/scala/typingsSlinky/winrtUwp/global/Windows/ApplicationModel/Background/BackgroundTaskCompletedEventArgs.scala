@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs")
 @js.native
 abstract class BackgroundTaskCompletedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs {
+  /** Gets the identifier of the background task instance for this completion status notification. */
+  /* CompleteClass */
+  override var instanceId: String = js.native
+  /** Throws an exception if the background task completed event has reported an error. */
+  /* CompleteClass */
+  override def checkResult(): Unit = js.native
+}
 

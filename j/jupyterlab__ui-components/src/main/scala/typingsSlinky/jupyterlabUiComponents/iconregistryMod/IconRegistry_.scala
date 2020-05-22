@@ -1,9 +1,13 @@
 package typingsSlinky.jupyterlabUiComponents.iconregistryMod
 
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactElement
 import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionscontainerHTML
+import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionscontainerHTMLAlignContent
+import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionstagdivspan
 import typingsSlinky.jupyterlabUiComponents.iconregistryMod.IconRegistry.IOptions
 import typingsSlinky.jupyterlabUiComponents.interfacesMod.IIconRegistry
+import typingsSlinky.jupyterlabUiComponents.interfacesMod.Icon.IModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +22,30 @@ class IconRegistry_ () extends IIconRegistry {
   var _resolveName: js.Any = js.native
   var _svg: js.Any = js.native
   /**
+    * Add the raw text representation of an svg icon to this registry
+    */
+  /* CompleteClass */
+  override def addIcon(icons: IModel*): Unit = js.native
+  /**
+    * Check if any icon of name `name` has been registered.
+    * Exact matches only
+    */
+  /* CompleteClass */
+  override def contains(name: String): Boolean = js.native
+  /**
     * Get the icon as an HTMLElement of tag <svg><svg/>
     */
   def icon(props: INodeOptionscontainerHTML): HTMLElement | Null = js.native
+  /**
+    * Get the icon as an HTMLElement of tag <svg><svg/>
+    */
+  /* CompleteClass */
+  override def icon(props: INodeOptionscontainerHTMLAlignContent): HTMLElement | Null = js.native
+  /**
+    * Get the icon as a ReactElement of tag <tag><svg><svg/><tag/>
+    */
+  /* CompleteClass */
+  override def iconReact(props: INodeOptionstagdivspan): ReactElement = js.native
   def resolveName(name: String): String = js.native
   def resolveSvg(name: String): HTMLElement | Null = js.native
   def svg(name: String): String = js.native

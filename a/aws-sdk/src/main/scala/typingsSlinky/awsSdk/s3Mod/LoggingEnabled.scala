@@ -22,41 +22,10 @@ trait LoggingEnabled extends js.Object {
 
 object LoggingEnabled {
   @scala.inline
-  def apply(TargetBucket: TargetBucket, TargetPrefix: TargetPrefix): LoggingEnabled = {
+  def apply(TargetBucket: TargetBucket, TargetPrefix: TargetPrefix, TargetGrants: TargetGrants = null): LoggingEnabled = {
     val __obj = js.Dynamic.literal(TargetBucket = TargetBucket.asInstanceOf[js.Any], TargetPrefix = TargetPrefix.asInstanceOf[js.Any])
+    if (TargetGrants != null) __obj.updateDynamic("TargetGrants")(TargetGrants.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggingEnabled]
   }
-  @scala.inline
-  implicit class LoggingEnabledOps[Self <: LoggingEnabled] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetBucket(value: TargetBucket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetBucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetPrefix(value: TargetPrefix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetGrants(value: TargetGrants): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGrants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetGrants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGrants")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

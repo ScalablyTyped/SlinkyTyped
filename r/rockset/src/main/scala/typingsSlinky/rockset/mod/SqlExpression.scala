@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SqlExpression extends js.Object {
   // The name of a sql function
-  var sql: js.UndefOr[String] = js.native
+  var sql: js.UndefOr[String] = js.undefined
 }
 
 object SqlExpression {
   @scala.inline
-  def apply(): SqlExpression = {
+  def apply(sql: String = null): SqlExpression = {
     val __obj = js.Dynamic.literal()
+    if (sql != null) __obj.updateDynamic("sql")(sql.asInstanceOf[js.Any])
     __obj.asInstanceOf[SqlExpression]
   }
-  @scala.inline
-  implicit class SqlExpressionOps[Self <: SqlExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSql(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSql: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

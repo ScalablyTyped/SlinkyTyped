@@ -6,89 +6,159 @@ import scala.scalajs.js.annotation._
 
 package object pc {
   /**
-    * @class
-    * @name pc.AnimationHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading {@link pc.Animation} resources.
+    * Create an AnimationComponentSystem.
+    * @param app - The application managing this system.
+    */
+  type AnimationComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Resource handler used for loading {@link pc.Animation} resources.
     */
   type AnimationHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.AudioHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading {@link pc.Sound} resources.
-    * @param {pc.SoundManager} manager - The sound manager.
+    * Resource handler used for loading {@link pc.Sound} resources.
+    * @param manager - The sound manager.
     */
   type AudioHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.CubemapHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading cubemap {@link pc.Texture} resources.
-    * @param {pc.GraphicsDevice} device - The graphics device.
-    * @param {pc.AssetRegistry} assets - The asset registry.
-    * @param {pc.ResourceLoader} loader - The resource loader.
+    * Create new AudioListenerComponent.
+    * @param system - The ComponentSystem that created this Component.
+    * @param entity - The Entity that this Component is attached to.
+    */
+  type AudioListenerComponent = typingsSlinky.playcanvas.pc.Component
+  /**
+    * Create a new AudioListenerComponentSystem.
+    * @param app - The application managing this system.
+    * @param manager - A sound manager instance.
+    */
+  type AudioListenerComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Create a new ButtonComponentSystem.
+    * @param app - The application.
+    */
+  type ButtonComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Creates a new CollisionComponentSystem.
+    * @param app - The running {pc.Application}.
+    */
+  type CollisionComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Component Systems contain the logic and functionality to update all Components of a particular type.
+    * @param app - The application managing this system.
+    */
+  type ComponentSystem = typingsSlinky.playcanvas.pc.EventHandler
+  /**
+    * Loads files that contain in them multiple resources. For example GLB files which can contain
+    textures, models and animations.
+    * @param device - The graphics device that will be rendering.
+    * @param defaultMaterial - The shared default material that is used in any place that a material is not specified.
+    */
+  type ContainerHandler = typingsSlinky.playcanvas.pc.ResourceHandler
+  /**
+    * Resource handler used for loading cubemap {@link pc.Texture} resources.
+    * @param device - The graphics device.
+    * @param assets - The asset registry.
+    * @param loader - The resource loader.
     */
   type CubemapHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.FontHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading {@link pc.Font} resources.
-    * @param {pc.ResourceLoader} loader - The resource loader.
+    * Manages creation of {@link pc.ElementComponent}s.
+    * @param app - The application.
+    */
+  type ElementComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Create a new ElementDragHelper.
+    * @param element - The Element that should become draggable.
+    * @param [axis] - Optional axis to constrain to, either 'x', 'y' or null.
+    */
+  type ElementDragHelper = typingsSlinky.playcanvas.pc.EventHandler
+  /**
+    * Resource handler used for loading {@link pc.Font} resources.
+    * @param loader - The resource loader.
     */
   type FontHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.MaterialHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading {@link pc.Material} resources.
-    * @param {pc.Application} app - The running {@link pc.Application}.
+    * Create a new LayoutChildComponentSystem.
+    * @param app - The application.
+    */
+  type LayoutChildComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Create a new LayoutGroupComponentSystem.
+    * @param app - The application.
+    */
+  type LayoutGroupComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Create a new LightComponentSystem.
+    * @param app - The application.
+    */
+  type LightComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Resource handler used for loading {@link pc.Material} resources.
+    * @param app - The running {@link pc.Application}.
     */
   type MaterialHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.SceneHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading {@link pc.Scene} resources.
-    * @param {pc.Application} app - The running {@link pc.Application}.
+    * Create a new ModelComponentSystem.
+    * @param app - The Application.
+    */
+  type ModelComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Create a new ParticleSystemComponentSystem.
+    * @param app - The Application.
+    */
+  type ParticleSystemComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Resource handler used for loading {@link pc.Scene} resources.
+    * @param app - The running {@link pc.Application}.
     */
   type SceneHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.ScriptHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler for loading JavaScript files dynamically
-    * Two types of JavaScript files can be loaded, PlayCanvas scripts which contain calls to {@link pc.createScript},
-    * or regular JavaScript files, such as third-party libraries.
-    * @param {pc.Application} app - The running {@link pc.Application}.
+    * Create a new ScreenComponentSystem.
+    * @param app - The application.
+    */
+  type ScreenComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Create a new ScriptComponentSystem.
+    * @param app - The application.
+    */
+  type ScriptComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Resource handler for loading JavaScript files dynamically
+    Two types of JavaScript files can be loaded, PlayCanvas scripts which contain calls to {@link pc.createScript},
+    or regular JavaScript files, such as third-party libraries.
+    * @param app - The running {@link pc.Application}.
     */
   type ScriptHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.SpriteHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading {@link pc.Sprite} resources.
-    * @param {pc.AssetRegistry} assets - The asset registry.
-    * @param {pc.GraphicsDevice} device - The graphics device.
+    * Create a new ScrollViewComponentSystem.
+    * @param app - The application.
+    */
+  type ScrollViewComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Create a new ScrollbarComponentSystem.
+    * @param app - The application.
+    */
+  type ScrollbarComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Manages creation of {@link pc.SpriteComponent}s.
+    * @param app - The application.
+    */
+  type SpriteComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Resource handler used for loading {@link pc.Sprite} resources.
+    * @param assets - The asset registry.
+    * @param device - The graphics device.
     */
   type SpriteHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.TextureAtlasHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading {@link pc.TextureAtlas} resources.
-    * @param {pc.ResourceLoader} loader - The resource loader.
+    * Resource handler used for loading {@link pc.TextureAtlas} resources.
+    * @param loader - The resource loader.
     */
   type TextureAtlasHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
-    * @class
-    * @name pc.TextureHandler
-    * @implements {pc.ResourceHandler}
-    * @classdesc Resource handler used for loading 2D and 3D {@link pc.Texture} resources.
-    * @param {pc.GraphicsDevice} device - The graphics device.
-    * @param {pc.AssetRegistry} assets - The asset registry.
-    * @param {pc.ResourceLoader} loader - The resource loader.
+    * Resource handler used for loading 2D and 3D {@link pc.Texture} resources.
+    * @param device - The graphics device.
+    * @param assets - The asset registry.
+    * @param loader - The resource loader.
     */
   type TextureHandler = typingsSlinky.playcanvas.pc.ResourceHandler
 }

@@ -22,41 +22,14 @@ trait PutRecordBatchOutput extends js.Object {
 
 object PutRecordBatchOutput {
   @scala.inline
-  def apply(FailedPutCount: NonNegativeIntegerObject, RequestResponses: PutRecordBatchResponseEntryList): PutRecordBatchOutput = {
+  def apply(
+    FailedPutCount: NonNegativeIntegerObject,
+    RequestResponses: PutRecordBatchResponseEntryList,
+    Encrypted: js.UndefOr[BooleanObject] = js.undefined
+  ): PutRecordBatchOutput = {
     val __obj = js.Dynamic.literal(FailedPutCount = FailedPutCount.asInstanceOf[js.Any], RequestResponses = RequestResponses.asInstanceOf[js.Any])
+    if (!js.isUndefined(Encrypted)) __obj.updateDynamic("Encrypted")(Encrypted.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutRecordBatchOutput]
   }
-  @scala.inline
-  implicit class PutRecordBatchOutputOps[Self <: PutRecordBatchOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedPutCount(value: NonNegativeIntegerObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedPutCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestResponses(value: PutRecordBatchResponseEntryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestResponses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncrypted(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

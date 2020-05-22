@@ -12,6 +12,12 @@ object resizeBilinearBackpropGpuMod extends js.Object {
   @js.native
   class ResizeBilinearBackpropProgram protected () extends GPGPUProgram {
     def this(dy: Tensor4D, x: Tensor4D, alignCorners: Boolean) = this()
+    /* CompleteClass */
+    override var outputShape: js.Array[Double] = js.native
+    /* CompleteClass */
+    override var userCode: String = js.native
+    /* CompleteClass */
+    override var variableNames: js.Array[String] = js.native
   }
   
 }

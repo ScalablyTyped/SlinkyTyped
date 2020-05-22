@@ -4,205 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHelmetConfiguration extends js.Object {
-  var contentSecurityPolicy: js.UndefOr[Boolean | IHelmetContentSecurityPolicyConfiguration] = js.native
-  var dnsPrefetchControl: js.UndefOr[Boolean | IHelmetDnsPrefetchControlConfiguration] = js.native
-  var expectCt: js.UndefOr[Boolean | IHelmetExpectCtConfiguration] = js.native
-  var featurePolicy: js.UndefOr[IFeaturePolicyOptions] = js.native
-  var frameguard: js.UndefOr[Boolean | IHelmetFrameguardConfiguration] = js.native
-  var hidePoweredBy: js.UndefOr[Boolean | IHelmetHidePoweredByConfiguration] = js.native
-  var hpkp: js.UndefOr[Boolean | IHelmetHpkpConfiguration] = js.native
-  var hsts: js.UndefOr[Boolean | IHelmetHstsConfiguration] = js.native
-  var ieNoOpen: js.UndefOr[Boolean] = js.native
-  var noCache: js.UndefOr[Boolean] = js.native
-  var noSniff: js.UndefOr[Boolean] = js.native
-  var permittedCrossDomainPolicies: js.UndefOr[Boolean | IHelmetPermittedCrossDomainPoliciesConfiguration] = js.native
-  var referrerPolicy: js.UndefOr[Boolean | IHelmetReferrerPolicyConfiguration] = js.native
-  var xssFilter: js.UndefOr[Boolean | IHelmetXssFilterConfiguration] = js.native
+  var contentSecurityPolicy: js.UndefOr[Boolean | IHelmetContentSecurityPolicyConfiguration] = js.undefined
+  var dnsPrefetchControl: js.UndefOr[Boolean | IHelmetDnsPrefetchControlConfiguration] = js.undefined
+  var expectCt: js.UndefOr[Boolean | IHelmetExpectCtConfiguration] = js.undefined
+  var featurePolicy: js.UndefOr[IFeaturePolicyOptions] = js.undefined
+  var frameguard: js.UndefOr[Boolean | IHelmetFrameguardConfiguration] = js.undefined
+  var hidePoweredBy: js.UndefOr[Boolean | IHelmetHidePoweredByConfiguration] = js.undefined
+  var hpkp: js.UndefOr[Boolean | IHelmetHpkpConfiguration] = js.undefined
+  var hsts: js.UndefOr[Boolean | IHelmetHstsConfiguration] = js.undefined
+  var ieNoOpen: js.UndefOr[Boolean] = js.undefined
+  var noCache: js.UndefOr[Boolean] = js.undefined
+  var noSniff: js.UndefOr[Boolean] = js.undefined
+  var permittedCrossDomainPolicies: js.UndefOr[Boolean | IHelmetPermittedCrossDomainPoliciesConfiguration] = js.undefined
+  var referrerPolicy: js.UndefOr[Boolean | IHelmetReferrerPolicyConfiguration] = js.undefined
+  var xssFilter: js.UndefOr[Boolean | IHelmetXssFilterConfiguration] = js.undefined
 }
 
 object IHelmetConfiguration {
   @scala.inline
-  def apply(): IHelmetConfiguration = {
+  def apply(
+    contentSecurityPolicy: Boolean | IHelmetContentSecurityPolicyConfiguration = null,
+    dnsPrefetchControl: Boolean | IHelmetDnsPrefetchControlConfiguration = null,
+    expectCt: Boolean | IHelmetExpectCtConfiguration = null,
+    featurePolicy: IFeaturePolicyOptions = null,
+    frameguard: Boolean | IHelmetFrameguardConfiguration = null,
+    hidePoweredBy: Boolean | IHelmetHidePoweredByConfiguration = null,
+    hpkp: Boolean | IHelmetHpkpConfiguration = null,
+    hsts: Boolean | IHelmetHstsConfiguration = null,
+    ieNoOpen: js.UndefOr[Boolean] = js.undefined,
+    noCache: js.UndefOr[Boolean] = js.undefined,
+    noSniff: js.UndefOr[Boolean] = js.undefined,
+    permittedCrossDomainPolicies: Boolean | IHelmetPermittedCrossDomainPoliciesConfiguration = null,
+    referrerPolicy: Boolean | IHelmetReferrerPolicyConfiguration = null,
+    xssFilter: Boolean | IHelmetXssFilterConfiguration = null
+  ): IHelmetConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (contentSecurityPolicy != null) __obj.updateDynamic("contentSecurityPolicy")(contentSecurityPolicy.asInstanceOf[js.Any])
+    if (dnsPrefetchControl != null) __obj.updateDynamic("dnsPrefetchControl")(dnsPrefetchControl.asInstanceOf[js.Any])
+    if (expectCt != null) __obj.updateDynamic("expectCt")(expectCt.asInstanceOf[js.Any])
+    if (featurePolicy != null) __obj.updateDynamic("featurePolicy")(featurePolicy.asInstanceOf[js.Any])
+    if (frameguard != null) __obj.updateDynamic("frameguard")(frameguard.asInstanceOf[js.Any])
+    if (hidePoweredBy != null) __obj.updateDynamic("hidePoweredBy")(hidePoweredBy.asInstanceOf[js.Any])
+    if (hpkp != null) __obj.updateDynamic("hpkp")(hpkp.asInstanceOf[js.Any])
+    if (hsts != null) __obj.updateDynamic("hsts")(hsts.asInstanceOf[js.Any])
+    if (!js.isUndefined(ieNoOpen)) __obj.updateDynamic("ieNoOpen")(ieNoOpen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noCache)) __obj.updateDynamic("noCache")(noCache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noSniff)) __obj.updateDynamic("noSniff")(noSniff.get.asInstanceOf[js.Any])
+    if (permittedCrossDomainPolicies != null) __obj.updateDynamic("permittedCrossDomainPolicies")(permittedCrossDomainPolicies.asInstanceOf[js.Any])
+    if (referrerPolicy != null) __obj.updateDynamic("referrerPolicy")(referrerPolicy.asInstanceOf[js.Any])
+    if (xssFilter != null) __obj.updateDynamic("xssFilter")(xssFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHelmetConfiguration]
   }
-  @scala.inline
-  implicit class IHelmetConfigurationOps[Self <: IHelmetConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentSecurityPolicy(value: Boolean | IHelmetContentSecurityPolicyConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSecurityPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentSecurityPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSecurityPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsPrefetchControl(value: Boolean | IHelmetDnsPrefetchControlConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsPrefetchControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsPrefetchControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsPrefetchControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectCt(value: Boolean | IHelmetExpectCtConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectCt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectCt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectCt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeaturePolicy(value: IFeaturePolicyOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featurePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeaturePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featurePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrameguard(value: Boolean | IHelmetFrameguardConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameguard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameguard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameguard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidePoweredBy(value: Boolean | IHelmetHidePoweredByConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidePoweredBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidePoweredBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidePoweredBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHpkp(value: Boolean | IHelmetHpkpConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hpkp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHpkp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hpkp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHsts(value: Boolean | IHelmetHstsConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hsts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHsts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hsts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIeNoOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ieNoOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIeNoOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ieNoOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoSniff(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noSniff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoSniff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noSniff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermittedCrossDomainPolicies(value: Boolean | IHelmetPermittedCrossDomainPoliciesConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permittedCrossDomainPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermittedCrossDomainPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permittedCrossDomainPolicies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferrerPolicy(value: Boolean | IHelmetReferrerPolicyConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrerPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferrerPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrerPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXssFilter(value: Boolean | IHelmetXssFilterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xssFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXssFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xssFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

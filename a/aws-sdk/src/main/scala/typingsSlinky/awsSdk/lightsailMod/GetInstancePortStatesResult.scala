@@ -7,36 +7,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetInstancePortStatesResult extends js.Object {
   /**
-    * Information about the port states resulting from your request.
+    * An array of objects that describe the firewall port states for the specified instance.
     */
   var portStates: js.UndefOr[InstancePortStateList] = js.native
 }
 
 object GetInstancePortStatesResult {
   @scala.inline
-  def apply(): GetInstancePortStatesResult = {
+  def apply(portStates: InstancePortStateList = null): GetInstancePortStatesResult = {
     val __obj = js.Dynamic.literal()
+    if (portStates != null) __obj.updateDynamic("portStates")(portStates.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInstancePortStatesResult]
   }
-  @scala.inline
-  implicit class GetInstancePortStatesResultOps[Self <: GetInstancePortStatesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPortStates(value: InstancePortStateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portStates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

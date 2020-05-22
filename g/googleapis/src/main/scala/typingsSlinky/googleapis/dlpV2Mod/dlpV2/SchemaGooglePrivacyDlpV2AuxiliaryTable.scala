@@ -32,53 +32,16 @@ trait SchemaGooglePrivacyDlpV2AuxiliaryTable extends js.Object {
 
 object SchemaGooglePrivacyDlpV2AuxiliaryTable {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2AuxiliaryTable = {
+  def apply(
+    quasiIds: js.Array[SchemaGooglePrivacyDlpV2QuasiIdField] = null,
+    relativeFrequency: SchemaGooglePrivacyDlpV2FieldId = null,
+    table: SchemaGooglePrivacyDlpV2BigQueryTable = null
+  ): SchemaGooglePrivacyDlpV2AuxiliaryTable = {
     val __obj = js.Dynamic.literal()
+    if (quasiIds != null) __obj.updateDynamic("quasiIds")(quasiIds.asInstanceOf[js.Any])
+    if (relativeFrequency != null) __obj.updateDynamic("relativeFrequency")(relativeFrequency.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2AuxiliaryTable]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2AuxiliaryTableOps[Self <: SchemaGooglePrivacyDlpV2AuxiliaryTable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuasiIds(value: js.Array[SchemaGooglePrivacyDlpV2QuasiIdField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuasiIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelativeFrequency(value: SchemaGooglePrivacyDlpV2FieldId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeFrequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelativeFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeFrequency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: SchemaGooglePrivacyDlpV2BigQueryTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

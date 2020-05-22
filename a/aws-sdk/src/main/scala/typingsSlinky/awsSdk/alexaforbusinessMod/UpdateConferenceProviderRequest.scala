@@ -33,60 +33,14 @@ object UpdateConferenceProviderRequest {
   def apply(
     ConferenceProviderArn: Arn,
     ConferenceProviderType: ConferenceProviderType,
-    MeetingSetting: MeetingSetting
+    MeetingSetting: MeetingSetting,
+    IPDialIn: IPDialIn = null,
+    PSTNDialIn: PSTNDialIn = null
   ): UpdateConferenceProviderRequest = {
     val __obj = js.Dynamic.literal(ConferenceProviderArn = ConferenceProviderArn.asInstanceOf[js.Any], ConferenceProviderType = ConferenceProviderType.asInstanceOf[js.Any], MeetingSetting = MeetingSetting.asInstanceOf[js.Any])
+    if (IPDialIn != null) __obj.updateDynamic("IPDialIn")(IPDialIn.asInstanceOf[js.Any])
+    if (PSTNDialIn != null) __obj.updateDynamic("PSTNDialIn")(PSTNDialIn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateConferenceProviderRequest]
   }
-  @scala.inline
-  implicit class UpdateConferenceProviderRequestOps[Self <: UpdateConferenceProviderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConferenceProviderArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConferenceProviderArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConferenceProviderType(value: ConferenceProviderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConferenceProviderType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeetingSetting(value: MeetingSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MeetingSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIPDialIn(value: IPDialIn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPDialIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIPDialIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPDialIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPSTNDialIn(value: PSTNDialIn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PSTNDialIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPSTNDialIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PSTNDialIn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

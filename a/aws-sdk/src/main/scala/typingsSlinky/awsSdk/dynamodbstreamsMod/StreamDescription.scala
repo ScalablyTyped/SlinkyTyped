@@ -46,125 +46,28 @@ trait StreamDescription extends js.Object {
 
 object StreamDescription {
   @scala.inline
-  def apply(): StreamDescription = {
+  def apply(
+    CreationRequestDateTime: js.Date = null,
+    KeySchema: KeySchema = null,
+    LastEvaluatedShardId: ShardId = null,
+    Shards: ShardDescriptionList = null,
+    StreamArn: StreamArn = null,
+    StreamLabel: String = null,
+    StreamStatus: StreamStatus = null,
+    StreamViewType: StreamViewType = null,
+    TableName: TableName = null
+  ): StreamDescription = {
     val __obj = js.Dynamic.literal()
+    if (CreationRequestDateTime != null) __obj.updateDynamic("CreationRequestDateTime")(CreationRequestDateTime.asInstanceOf[js.Any])
+    if (KeySchema != null) __obj.updateDynamic("KeySchema")(KeySchema.asInstanceOf[js.Any])
+    if (LastEvaluatedShardId != null) __obj.updateDynamic("LastEvaluatedShardId")(LastEvaluatedShardId.asInstanceOf[js.Any])
+    if (Shards != null) __obj.updateDynamic("Shards")(Shards.asInstanceOf[js.Any])
+    if (StreamArn != null) __obj.updateDynamic("StreamArn")(StreamArn.asInstanceOf[js.Any])
+    if (StreamLabel != null) __obj.updateDynamic("StreamLabel")(StreamLabel.asInstanceOf[js.Any])
+    if (StreamStatus != null) __obj.updateDynamic("StreamStatus")(StreamStatus.asInstanceOf[js.Any])
+    if (StreamViewType != null) __obj.updateDynamic("StreamViewType")(StreamViewType.asInstanceOf[js.Any])
+    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamDescription]
   }
-  @scala.inline
-  implicit class StreamDescriptionOps[Self <: StreamDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationRequestDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationRequestDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationRequestDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationRequestDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeySchema(value: KeySchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeySchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastEvaluatedShardId(value: ShardId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedShardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastEvaluatedShardId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedShardId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShards(value: ShardDescriptionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamArn(value: StreamArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamStatus(value: StreamStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamViewType(value: StreamViewType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamViewType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamViewType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamViewType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableName(value: TableName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

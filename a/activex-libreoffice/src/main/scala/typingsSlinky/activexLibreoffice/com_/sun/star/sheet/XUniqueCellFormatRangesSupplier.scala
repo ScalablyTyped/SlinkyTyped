@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.SheetCellRange
   * @see com.sun.star.sheet.SheetCellRanges
   */
-@js.native
 trait XUniqueCellFormatRangesSupplier extends XInterface {
   /**
     * returns a collection of equal-formatted cell range collections.
@@ -25,7 +24,7 @@ trait XUniqueCellFormatRangesSupplier extends XInterface {
     * @returns the collection of equal-formatted cell range collections.
     * @see com.sun.star.sheet.UniqueCellFormatRanges
     */
-  val UniqueCellFormatRanges: XIndexAccess = js.native
+  val UniqueCellFormatRanges: XIndexAccess
   /**
     * returns a collection of equal-formatted cell range collections.
     *
@@ -37,7 +36,7 @@ trait XUniqueCellFormatRangesSupplier extends XInterface {
     * @returns the collection of equal-formatted cell range collections.
     * @see com.sun.star.sheet.UniqueCellFormatRanges
     */
-  def getUniqueCellFormatRanges(): XIndexAccess = js.native
+  def getUniqueCellFormatRanges(): XIndexAccess
 }
 
 object XUniqueCellFormatRangesSupplier {
@@ -52,25 +51,5 @@ object XUniqueCellFormatRangesSupplier {
     val __obj = js.Dynamic.literal(UniqueCellFormatRanges = UniqueCellFormatRanges.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getUniqueCellFormatRanges = js.Any.fromFunction0(getUniqueCellFormatRanges), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XUniqueCellFormatRangesSupplier]
   }
-  @scala.inline
-  implicit class XUniqueCellFormatRangesSupplierOps[Self <: XUniqueCellFormatRangesSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUniqueCellFormatRanges(value: XIndexAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueCellFormatRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetUniqueCellFormatRanges(value: () => XIndexAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUniqueCellFormatRanges")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

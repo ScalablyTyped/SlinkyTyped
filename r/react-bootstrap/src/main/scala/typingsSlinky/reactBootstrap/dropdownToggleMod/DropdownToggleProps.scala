@@ -6,110 +6,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DropdownToggleProps
   extends AllHTMLAttributes[DropdownToggle]
      with ClassAttributes[DropdownToggle] {
-  var bsClass: js.UndefOr[String] = js.native
-  var bsRole: js.UndefOr[String] = js.native
-  var bsSize: js.UndefOr[String] = js.native
+  var bsClass: js.UndefOr[String] = js.undefined
+  var bsRole: js.UndefOr[String] = js.undefined
+  var bsSize: js.UndefOr[String] = js.undefined
    // Added since v0.30.0
-  var bsStyle: js.UndefOr[String | Null] = js.native
-  var noCaret: js.UndefOr[Boolean] = js.native
-  var useAnchor: js.UndefOr[Boolean] = js.native
+  var bsStyle: js.UndefOr[String | Null] = js.undefined
+  var noCaret: js.UndefOr[Boolean] = js.undefined
+  var useAnchor: js.UndefOr[Boolean] = js.undefined
 }
 
 object DropdownToggleProps {
   @scala.inline
-  def apply(): DropdownToggleProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[DropdownToggle] = null,
+    ClassAttributes: ClassAttributes[DropdownToggle] = null,
+    bsClass: String = null,
+    bsRole: String = null,
+    bsSize: String = null,
+    bsStyle: js.UndefOr[Null | String] = js.undefined,
+    noCaret: js.UndefOr[Boolean] = js.undefined,
+    useAnchor: js.UndefOr[Boolean] = js.undefined
+  ): DropdownToggleProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
+    if (bsRole != null) __obj.updateDynamic("bsRole")(bsRole.asInstanceOf[js.Any])
+    if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(bsStyle)) __obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(noCaret)) __obj.updateDynamic("noCaret")(noCaret.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useAnchor)) __obj.updateDynamic("useAnchor")(useAnchor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropdownToggleProps]
   }
-  @scala.inline
-  implicit class DropdownTogglePropsOps[Self <: DropdownToggleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBsClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withNoCaret(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCaret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoCaret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCaret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseAnchor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAnchor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

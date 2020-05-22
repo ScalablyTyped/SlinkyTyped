@@ -22,53 +22,16 @@ trait DevicePoolCompatibilityResult extends js.Object {
 
 object DevicePoolCompatibilityResult {
   @scala.inline
-  def apply(): DevicePoolCompatibilityResult = {
+  def apply(
+    compatible: js.UndefOr[Boolean] = js.undefined,
+    device: Device = null,
+    incompatibilityMessages: IncompatibilityMessages = null
+  ): DevicePoolCompatibilityResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(compatible)) __obj.updateDynamic("compatible")(compatible.get.asInstanceOf[js.Any])
+    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
+    if (incompatibilityMessages != null) __obj.updateDynamic("incompatibilityMessages")(incompatibilityMessages.asInstanceOf[js.Any])
     __obj.asInstanceOf[DevicePoolCompatibilityResult]
   }
-  @scala.inline
-  implicit class DevicePoolCompatibilityResultOps[Self <: DevicePoolCompatibilityResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompatible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompatible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevice(value: Device): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncompatibilityMessages(value: IncompatibilityMessages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibilityMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncompatibilityMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibilityMessages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

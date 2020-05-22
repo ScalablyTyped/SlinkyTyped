@@ -64,126 +64,22 @@ object CreateProfileRequest {
     ProfileName: ProfileName,
     TemperatureUnit: TemperatureUnit,
     Timezone: Timezone,
-    WakeWord: WakeWord
+    WakeWord: WakeWord,
+    ClientRequestToken: ClientRequestToken = null,
+    Locale: DeviceLocale = null,
+    MaxVolumeLimit: js.UndefOr[MaxVolumeLimit] = js.undefined,
+    MeetingRoomConfiguration: CreateMeetingRoomConfiguration = null,
+    PSTNEnabled: js.UndefOr[Boolean] = js.undefined,
+    SetupModeDisabled: js.UndefOr[Boolean] = js.undefined
   ): CreateProfileRequest = {
     val __obj = js.Dynamic.literal(Address = Address.asInstanceOf[js.Any], DistanceUnit = DistanceUnit.asInstanceOf[js.Any], ProfileName = ProfileName.asInstanceOf[js.Any], TemperatureUnit = TemperatureUnit.asInstanceOf[js.Any], Timezone = Timezone.asInstanceOf[js.Any], WakeWord = WakeWord.asInstanceOf[js.Any])
+    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
+    if (Locale != null) __obj.updateDynamic("Locale")(Locale.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxVolumeLimit)) __obj.updateDynamic("MaxVolumeLimit")(MaxVolumeLimit.get.asInstanceOf[js.Any])
+    if (MeetingRoomConfiguration != null) __obj.updateDynamic("MeetingRoomConfiguration")(MeetingRoomConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(PSTNEnabled)) __obj.updateDynamic("PSTNEnabled")(PSTNEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SetupModeDisabled)) __obj.updateDynamic("SetupModeDisabled")(SetupModeDisabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProfileRequest]
   }
-  @scala.inline
-  implicit class CreateProfileRequestOps[Self <: CreateProfileRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDistanceUnit(value: DistanceUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DistanceUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfileName(value: ProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemperatureUnit(value: TemperatureUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemperatureUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimezone(value: Timezone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWakeWord(value: WakeWord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WakeWord")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: DeviceLocale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxVolumeLimit(value: MaxVolumeLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxVolumeLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxVolumeLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxVolumeLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeetingRoomConfiguration(value: CreateMeetingRoomConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MeetingRoomConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeetingRoomConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MeetingRoomConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPSTNEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PSTNEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPSTNEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PSTNEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetupModeDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetupModeDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetupModeDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetupModeDisabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

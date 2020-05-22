@@ -4,1037 +4,249 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Product extends js.Object {
-  var additionalImageLinks: js.UndefOr[js.Array[String]] = js.native
-  var additionalProductTypes: js.UndefOr[js.Array[String]] = js.native
-  var adult: js.UndefOr[Boolean] = js.native
-  var adwordsGrouping: js.UndefOr[String] = js.native
-  var adwordsLabels: js.UndefOr[js.Array[String]] = js.native
-  var adwordsRedirect: js.UndefOr[String] = js.native
-  var ageGroup: js.UndefOr[String] = js.native
-  var aspects: js.UndefOr[js.Array[ProductAspect]] = js.native
-  var availability: js.UndefOr[String] = js.native
-  var availabilityDate: js.UndefOr[String] = js.native
-  var brand: js.UndefOr[String] = js.native
-  var channel: js.UndefOr[String] = js.native
-  var color: js.UndefOr[String] = js.native
-  var condition: js.UndefOr[String] = js.native
-  var contentLanguage: js.UndefOr[String] = js.native
-  var costOfGoodsSold: js.UndefOr[Price] = js.native
-  var customAttributes: js.UndefOr[js.Array[CustomAttribute]] = js.native
-  var customGroups: js.UndefOr[js.Array[CustomGroup]] = js.native
-  var customLabel0: js.UndefOr[String] = js.native
-  var customLabel1: js.UndefOr[String] = js.native
-  var customLabel2: js.UndefOr[String] = js.native
-  var customLabel3: js.UndefOr[String] = js.native
-  var customLabel4: js.UndefOr[String] = js.native
-  var description: js.UndefOr[String] = js.native
-  var destinations: js.UndefOr[js.Array[ProductDestination]] = js.native
-  var displayAdsId: js.UndefOr[String] = js.native
-  var displayAdsLink: js.UndefOr[String] = js.native
-  var displayAdsSimilarIds: js.UndefOr[js.Array[String]] = js.native
-  var displayAdsTitle: js.UndefOr[String] = js.native
-  var displayAdsValue: js.UndefOr[Double] = js.native
-  var energyEfficiencyClass: js.UndefOr[String] = js.native
-  var expirationDate: js.UndefOr[String] = js.native
-  var gender: js.UndefOr[String] = js.native
-  var googleProductCategory: js.UndefOr[String] = js.native
-  var gtin: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var identifierExists: js.UndefOr[Boolean] = js.native
-  var imageLink: js.UndefOr[String] = js.native
-  var installment: js.UndefOr[Installment] = js.native
-  var isBundle: js.UndefOr[Boolean] = js.native
-  var itemGroupId: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var link: js.UndefOr[String] = js.native
-  var loyaltyPoints: js.UndefOr[LoyaltyPoints] = js.native
-  var material: js.UndefOr[String] = js.native
-  var maxEnergyEfficiencyClass: js.UndefOr[String] = js.native
-  var maxHandlingTime: js.UndefOr[String] = js.native
-  var minEnergyEfficiencyClass: js.UndefOr[String] = js.native
-  var minHandlingTime: js.UndefOr[String] = js.native
-  var mobileLink: js.UndefOr[String] = js.native
-  var mpn: js.UndefOr[String] = js.native
-  var multipack: js.UndefOr[String] = js.native
-  var offerId: js.UndefOr[String] = js.native
-  var onlineOnly: js.UndefOr[Boolean] = js.native
-  var pattern: js.UndefOr[String] = js.native
-  var price: js.UndefOr[Price] = js.native
-  var productType: js.UndefOr[String] = js.native
-  var promotionIds: js.UndefOr[js.Array[String]] = js.native
-  var salePrice: js.UndefOr[Price] = js.native
-  var salePriceEffectiveDate: js.UndefOr[String] = js.native
-  var sellOnGoogleQuantity: js.UndefOr[String] = js.native
-  var shipping: js.UndefOr[js.Array[ProductShipping]] = js.native
-  var shippingHeight: js.UndefOr[ProductShippingDimension] = js.native
-  var shippingLabel: js.UndefOr[String] = js.native
-  var shippingLength: js.UndefOr[ProductShippingDimension] = js.native
-  var shippingWeight: js.UndefOr[ProductShippingWeight] = js.native
-  var shippingWidth: js.UndefOr[ProductShippingDimension] = js.native
-  var sizeSystem: js.UndefOr[String] = js.native
-  var sizeType: js.UndefOr[String] = js.native
-  var sizes: js.UndefOr[js.Array[String]] = js.native
-  var source: js.UndefOr[String] = js.native
-  var targetCountry: js.UndefOr[String] = js.native
-  var taxes: js.UndefOr[js.Array[ProductTax]] = js.native
-  var title: js.UndefOr[String] = js.native
-  var unitPricingBaseMeasure: js.UndefOr[ProductUnitPricingBaseMeasure] = js.native
-  var unitPricingMeasure: js.UndefOr[ProductUnitPricingMeasure] = js.native
-  var validatedDestinations: js.UndefOr[js.Array[String]] = js.native
-  var warnings: js.UndefOr[js.Array[Error]] = js.native
+  var additionalImageLinks: js.UndefOr[js.Array[String]] = js.undefined
+  var additionalProductTypes: js.UndefOr[js.Array[String]] = js.undefined
+  var adult: js.UndefOr[Boolean] = js.undefined
+  var adwordsGrouping: js.UndefOr[String] = js.undefined
+  var adwordsLabels: js.UndefOr[js.Array[String]] = js.undefined
+  var adwordsRedirect: js.UndefOr[String] = js.undefined
+  var ageGroup: js.UndefOr[String] = js.undefined
+  var aspects: js.UndefOr[js.Array[ProductAspect]] = js.undefined
+  var availability: js.UndefOr[String] = js.undefined
+  var availabilityDate: js.UndefOr[String] = js.undefined
+  var brand: js.UndefOr[String] = js.undefined
+  var channel: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var condition: js.UndefOr[String] = js.undefined
+  var contentLanguage: js.UndefOr[String] = js.undefined
+  var costOfGoodsSold: js.UndefOr[Price] = js.undefined
+  var customAttributes: js.UndefOr[js.Array[CustomAttribute]] = js.undefined
+  var customGroups: js.UndefOr[js.Array[CustomGroup]] = js.undefined
+  var customLabel0: js.UndefOr[String] = js.undefined
+  var customLabel1: js.UndefOr[String] = js.undefined
+  var customLabel2: js.UndefOr[String] = js.undefined
+  var customLabel3: js.UndefOr[String] = js.undefined
+  var customLabel4: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var destinations: js.UndefOr[js.Array[ProductDestination]] = js.undefined
+  var displayAdsId: js.UndefOr[String] = js.undefined
+  var displayAdsLink: js.UndefOr[String] = js.undefined
+  var displayAdsSimilarIds: js.UndefOr[js.Array[String]] = js.undefined
+  var displayAdsTitle: js.UndefOr[String] = js.undefined
+  var displayAdsValue: js.UndefOr[Double] = js.undefined
+  var energyEfficiencyClass: js.UndefOr[String] = js.undefined
+  var expirationDate: js.UndefOr[String] = js.undefined
+  var gender: js.UndefOr[String] = js.undefined
+  var googleProductCategory: js.UndefOr[String] = js.undefined
+  var gtin: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var identifierExists: js.UndefOr[Boolean] = js.undefined
+  var imageLink: js.UndefOr[String] = js.undefined
+  var installment: js.UndefOr[Installment] = js.undefined
+  var isBundle: js.UndefOr[Boolean] = js.undefined
+  var itemGroupId: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var link: js.UndefOr[String] = js.undefined
+  var loyaltyPoints: js.UndefOr[LoyaltyPoints] = js.undefined
+  var material: js.UndefOr[String] = js.undefined
+  var maxEnergyEfficiencyClass: js.UndefOr[String] = js.undefined
+  var maxHandlingTime: js.UndefOr[String] = js.undefined
+  var minEnergyEfficiencyClass: js.UndefOr[String] = js.undefined
+  var minHandlingTime: js.UndefOr[String] = js.undefined
+  var mobileLink: js.UndefOr[String] = js.undefined
+  var mpn: js.UndefOr[String] = js.undefined
+  var multipack: js.UndefOr[String] = js.undefined
+  var offerId: js.UndefOr[String] = js.undefined
+  var onlineOnly: js.UndefOr[Boolean] = js.undefined
+  var pattern: js.UndefOr[String] = js.undefined
+  var price: js.UndefOr[Price] = js.undefined
+  var productType: js.UndefOr[String] = js.undefined
+  var promotionIds: js.UndefOr[js.Array[String]] = js.undefined
+  var salePrice: js.UndefOr[Price] = js.undefined
+  var salePriceEffectiveDate: js.UndefOr[String] = js.undefined
+  var sellOnGoogleQuantity: js.UndefOr[String] = js.undefined
+  var shipping: js.UndefOr[js.Array[ProductShipping]] = js.undefined
+  var shippingHeight: js.UndefOr[ProductShippingDimension] = js.undefined
+  var shippingLabel: js.UndefOr[String] = js.undefined
+  var shippingLength: js.UndefOr[ProductShippingDimension] = js.undefined
+  var shippingWeight: js.UndefOr[ProductShippingWeight] = js.undefined
+  var shippingWidth: js.UndefOr[ProductShippingDimension] = js.undefined
+  var sizeSystem: js.UndefOr[String] = js.undefined
+  var sizeType: js.UndefOr[String] = js.undefined
+  var sizes: js.UndefOr[js.Array[String]] = js.undefined
+  var source: js.UndefOr[String] = js.undefined
+  var targetCountry: js.UndefOr[String] = js.undefined
+  var taxes: js.UndefOr[js.Array[ProductTax]] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var unitPricingBaseMeasure: js.UndefOr[ProductUnitPricingBaseMeasure] = js.undefined
+  var unitPricingMeasure: js.UndefOr[ProductUnitPricingMeasure] = js.undefined
+  var validatedDestinations: js.UndefOr[js.Array[String]] = js.undefined
+  var warnings: js.UndefOr[js.Array[Error]] = js.undefined
 }
 
 object Product {
   @scala.inline
-  def apply(): Product = {
+  def apply(
+    additionalImageLinks: js.Array[String] = null,
+    additionalProductTypes: js.Array[String] = null,
+    adult: js.UndefOr[Boolean] = js.undefined,
+    adwordsGrouping: String = null,
+    adwordsLabels: js.Array[String] = null,
+    adwordsRedirect: String = null,
+    ageGroup: String = null,
+    aspects: js.Array[ProductAspect] = null,
+    availability: String = null,
+    availabilityDate: String = null,
+    brand: String = null,
+    channel: String = null,
+    color: String = null,
+    condition: String = null,
+    contentLanguage: String = null,
+    costOfGoodsSold: Price = null,
+    customAttributes: js.Array[CustomAttribute] = null,
+    customGroups: js.Array[CustomGroup] = null,
+    customLabel0: String = null,
+    customLabel1: String = null,
+    customLabel2: String = null,
+    customLabel3: String = null,
+    customLabel4: String = null,
+    description: String = null,
+    destinations: js.Array[ProductDestination] = null,
+    displayAdsId: String = null,
+    displayAdsLink: String = null,
+    displayAdsSimilarIds: js.Array[String] = null,
+    displayAdsTitle: String = null,
+    displayAdsValue: js.UndefOr[Double] = js.undefined,
+    energyEfficiencyClass: String = null,
+    expirationDate: String = null,
+    gender: String = null,
+    googleProductCategory: String = null,
+    gtin: String = null,
+    id: String = null,
+    identifierExists: js.UndefOr[Boolean] = js.undefined,
+    imageLink: String = null,
+    installment: Installment = null,
+    isBundle: js.UndefOr[Boolean] = js.undefined,
+    itemGroupId: String = null,
+    kind: String = null,
+    link: String = null,
+    loyaltyPoints: LoyaltyPoints = null,
+    material: String = null,
+    maxEnergyEfficiencyClass: String = null,
+    maxHandlingTime: String = null,
+    minEnergyEfficiencyClass: String = null,
+    minHandlingTime: String = null,
+    mobileLink: String = null,
+    mpn: String = null,
+    multipack: String = null,
+    offerId: String = null,
+    onlineOnly: js.UndefOr[Boolean] = js.undefined,
+    pattern: String = null,
+    price: Price = null,
+    productType: String = null,
+    promotionIds: js.Array[String] = null,
+    salePrice: Price = null,
+    salePriceEffectiveDate: String = null,
+    sellOnGoogleQuantity: String = null,
+    shipping: js.Array[ProductShipping] = null,
+    shippingHeight: ProductShippingDimension = null,
+    shippingLabel: String = null,
+    shippingLength: ProductShippingDimension = null,
+    shippingWeight: ProductShippingWeight = null,
+    shippingWidth: ProductShippingDimension = null,
+    sizeSystem: String = null,
+    sizeType: String = null,
+    sizes: js.Array[String] = null,
+    source: String = null,
+    targetCountry: String = null,
+    taxes: js.Array[ProductTax] = null,
+    title: String = null,
+    unitPricingBaseMeasure: ProductUnitPricingBaseMeasure = null,
+    unitPricingMeasure: ProductUnitPricingMeasure = null,
+    validatedDestinations: js.Array[String] = null,
+    warnings: js.Array[Error] = null
+  ): Product = {
     val __obj = js.Dynamic.literal()
+    if (additionalImageLinks != null) __obj.updateDynamic("additionalImageLinks")(additionalImageLinks.asInstanceOf[js.Any])
+    if (additionalProductTypes != null) __obj.updateDynamic("additionalProductTypes")(additionalProductTypes.asInstanceOf[js.Any])
+    if (!js.isUndefined(adult)) __obj.updateDynamic("adult")(adult.get.asInstanceOf[js.Any])
+    if (adwordsGrouping != null) __obj.updateDynamic("adwordsGrouping")(adwordsGrouping.asInstanceOf[js.Any])
+    if (adwordsLabels != null) __obj.updateDynamic("adwordsLabels")(adwordsLabels.asInstanceOf[js.Any])
+    if (adwordsRedirect != null) __obj.updateDynamic("adwordsRedirect")(adwordsRedirect.asInstanceOf[js.Any])
+    if (ageGroup != null) __obj.updateDynamic("ageGroup")(ageGroup.asInstanceOf[js.Any])
+    if (aspects != null) __obj.updateDynamic("aspects")(aspects.asInstanceOf[js.Any])
+    if (availability != null) __obj.updateDynamic("availability")(availability.asInstanceOf[js.Any])
+    if (availabilityDate != null) __obj.updateDynamic("availabilityDate")(availabilityDate.asInstanceOf[js.Any])
+    if (brand != null) __obj.updateDynamic("brand")(brand.asInstanceOf[js.Any])
+    if (channel != null) __obj.updateDynamic("channel")(channel.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
+    if (contentLanguage != null) __obj.updateDynamic("contentLanguage")(contentLanguage.asInstanceOf[js.Any])
+    if (costOfGoodsSold != null) __obj.updateDynamic("costOfGoodsSold")(costOfGoodsSold.asInstanceOf[js.Any])
+    if (customAttributes != null) __obj.updateDynamic("customAttributes")(customAttributes.asInstanceOf[js.Any])
+    if (customGroups != null) __obj.updateDynamic("customGroups")(customGroups.asInstanceOf[js.Any])
+    if (customLabel0 != null) __obj.updateDynamic("customLabel0")(customLabel0.asInstanceOf[js.Any])
+    if (customLabel1 != null) __obj.updateDynamic("customLabel1")(customLabel1.asInstanceOf[js.Any])
+    if (customLabel2 != null) __obj.updateDynamic("customLabel2")(customLabel2.asInstanceOf[js.Any])
+    if (customLabel3 != null) __obj.updateDynamic("customLabel3")(customLabel3.asInstanceOf[js.Any])
+    if (customLabel4 != null) __obj.updateDynamic("customLabel4")(customLabel4.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (destinations != null) __obj.updateDynamic("destinations")(destinations.asInstanceOf[js.Any])
+    if (displayAdsId != null) __obj.updateDynamic("displayAdsId")(displayAdsId.asInstanceOf[js.Any])
+    if (displayAdsLink != null) __obj.updateDynamic("displayAdsLink")(displayAdsLink.asInstanceOf[js.Any])
+    if (displayAdsSimilarIds != null) __obj.updateDynamic("displayAdsSimilarIds")(displayAdsSimilarIds.asInstanceOf[js.Any])
+    if (displayAdsTitle != null) __obj.updateDynamic("displayAdsTitle")(displayAdsTitle.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayAdsValue)) __obj.updateDynamic("displayAdsValue")(displayAdsValue.get.asInstanceOf[js.Any])
+    if (energyEfficiencyClass != null) __obj.updateDynamic("energyEfficiencyClass")(energyEfficiencyClass.asInstanceOf[js.Any])
+    if (expirationDate != null) __obj.updateDynamic("expirationDate")(expirationDate.asInstanceOf[js.Any])
+    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
+    if (googleProductCategory != null) __obj.updateDynamic("googleProductCategory")(googleProductCategory.asInstanceOf[js.Any])
+    if (gtin != null) __obj.updateDynamic("gtin")(gtin.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(identifierExists)) __obj.updateDynamic("identifierExists")(identifierExists.get.asInstanceOf[js.Any])
+    if (imageLink != null) __obj.updateDynamic("imageLink")(imageLink.asInstanceOf[js.Any])
+    if (installment != null) __obj.updateDynamic("installment")(installment.asInstanceOf[js.Any])
+    if (!js.isUndefined(isBundle)) __obj.updateDynamic("isBundle")(isBundle.get.asInstanceOf[js.Any])
+    if (itemGroupId != null) __obj.updateDynamic("itemGroupId")(itemGroupId.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (loyaltyPoints != null) __obj.updateDynamic("loyaltyPoints")(loyaltyPoints.asInstanceOf[js.Any])
+    if (material != null) __obj.updateDynamic("material")(material.asInstanceOf[js.Any])
+    if (maxEnergyEfficiencyClass != null) __obj.updateDynamic("maxEnergyEfficiencyClass")(maxEnergyEfficiencyClass.asInstanceOf[js.Any])
+    if (maxHandlingTime != null) __obj.updateDynamic("maxHandlingTime")(maxHandlingTime.asInstanceOf[js.Any])
+    if (minEnergyEfficiencyClass != null) __obj.updateDynamic("minEnergyEfficiencyClass")(minEnergyEfficiencyClass.asInstanceOf[js.Any])
+    if (minHandlingTime != null) __obj.updateDynamic("minHandlingTime")(minHandlingTime.asInstanceOf[js.Any])
+    if (mobileLink != null) __obj.updateDynamic("mobileLink")(mobileLink.asInstanceOf[js.Any])
+    if (mpn != null) __obj.updateDynamic("mpn")(mpn.asInstanceOf[js.Any])
+    if (multipack != null) __obj.updateDynamic("multipack")(multipack.asInstanceOf[js.Any])
+    if (offerId != null) __obj.updateDynamic("offerId")(offerId.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlineOnly)) __obj.updateDynamic("onlineOnly")(onlineOnly.get.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
+    if (productType != null) __obj.updateDynamic("productType")(productType.asInstanceOf[js.Any])
+    if (promotionIds != null) __obj.updateDynamic("promotionIds")(promotionIds.asInstanceOf[js.Any])
+    if (salePrice != null) __obj.updateDynamic("salePrice")(salePrice.asInstanceOf[js.Any])
+    if (salePriceEffectiveDate != null) __obj.updateDynamic("salePriceEffectiveDate")(salePriceEffectiveDate.asInstanceOf[js.Any])
+    if (sellOnGoogleQuantity != null) __obj.updateDynamic("sellOnGoogleQuantity")(sellOnGoogleQuantity.asInstanceOf[js.Any])
+    if (shipping != null) __obj.updateDynamic("shipping")(shipping.asInstanceOf[js.Any])
+    if (shippingHeight != null) __obj.updateDynamic("shippingHeight")(shippingHeight.asInstanceOf[js.Any])
+    if (shippingLabel != null) __obj.updateDynamic("shippingLabel")(shippingLabel.asInstanceOf[js.Any])
+    if (shippingLength != null) __obj.updateDynamic("shippingLength")(shippingLength.asInstanceOf[js.Any])
+    if (shippingWeight != null) __obj.updateDynamic("shippingWeight")(shippingWeight.asInstanceOf[js.Any])
+    if (shippingWidth != null) __obj.updateDynamic("shippingWidth")(shippingWidth.asInstanceOf[js.Any])
+    if (sizeSystem != null) __obj.updateDynamic("sizeSystem")(sizeSystem.asInstanceOf[js.Any])
+    if (sizeType != null) __obj.updateDynamic("sizeType")(sizeType.asInstanceOf[js.Any])
+    if (sizes != null) __obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (targetCountry != null) __obj.updateDynamic("targetCountry")(targetCountry.asInstanceOf[js.Any])
+    if (taxes != null) __obj.updateDynamic("taxes")(taxes.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (unitPricingBaseMeasure != null) __obj.updateDynamic("unitPricingBaseMeasure")(unitPricingBaseMeasure.asInstanceOf[js.Any])
+    if (unitPricingMeasure != null) __obj.updateDynamic("unitPricingMeasure")(unitPricingMeasure.asInstanceOf[js.Any])
+    if (validatedDestinations != null) __obj.updateDynamic("validatedDestinations")(validatedDestinations.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[Product]
   }
-  @scala.inline
-  implicit class ProductOps[Self <: Product] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalImageLinks(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalImageLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalImageLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalImageLinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalProductTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProductTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalProductTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProductTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdult(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdwordsGrouping(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsGrouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdwordsGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsGrouping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdwordsLabels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdwordsLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdwordsRedirect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdwordsRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsRedirect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgeGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgeGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAspects(value: js.Array[ProductAspect]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailability(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailabilityDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCondition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCostOfGoodsSold(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("costOfGoodsSold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCostOfGoodsSold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("costOfGoodsSold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomAttributes(value: js.Array[CustomAttribute]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomGroups(value: js.Array[CustomGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomLabel0(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomLabel0: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel0")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomLabel1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomLabel1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomLabel2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomLabel2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomLabel3(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomLabel3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomLabel4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomLabel4: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabel4")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinations(value: js.Array[ProductDestination]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayAdsId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayAdsId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayAdsLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayAdsLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayAdsSimilarIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsSimilarIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayAdsSimilarIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsSimilarIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayAdsTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayAdsTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayAdsValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayAdsValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAdsValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnergyEfficiencyClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("energyEfficiencyClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnergyEfficiencyClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("energyEfficiencyClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGender(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleProductCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleProductCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleProductCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleProductCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGtin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gtin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGtin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gtin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifierExists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifierExists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifierExists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifierExists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallment(value: Installment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBundle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBundle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBundle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBundle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoyaltyPoints(value: LoyaltyPoints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loyaltyPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoyaltyPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loyaltyPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaterial(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaterial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxEnergyEfficiencyClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEnergyEfficiencyClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxEnergyEfficiencyClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEnergyEfficiencyClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHandlingTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHandlingTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHandlingTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHandlingTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinEnergyEfficiencyClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minEnergyEfficiencyClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinEnergyEfficiencyClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minEnergyEfficiencyClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHandlingTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHandlingTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHandlingTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHandlingTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMobileLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMobileLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMpn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMpn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultipack(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultipack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlineOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlineOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlineOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlineOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrice(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromotionIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promotionIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromotionIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promotionIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSalePrice(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salePrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSalePrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salePrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSalePriceEffectiveDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salePriceEffectiveDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSalePriceEffectiveDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salePriceEffectiveDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSellOnGoogleQuantity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sellOnGoogleQuantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSellOnGoogleQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sellOnGoogleQuantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShipping(value: js.Array[ProductShipping]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShipping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingHeight(value: ProductShippingDimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingLength(value: ProductShippingDimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingWeight(value: ProductShippingWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingWidth(value: ProductShippingDimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCountry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCountry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaxes(value: js.Array[ProductTax]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taxes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnitPricingBaseMeasure(value: ProductUnitPricingBaseMeasure): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPricingBaseMeasure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnitPricingBaseMeasure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPricingBaseMeasure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnitPricingMeasure(value: ProductUnitPricingMeasure): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPricingMeasure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnitPricingMeasure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPricingMeasure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidatedDestinations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validatedDestinations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidatedDestinations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validatedDestinations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: js.Array[Error]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

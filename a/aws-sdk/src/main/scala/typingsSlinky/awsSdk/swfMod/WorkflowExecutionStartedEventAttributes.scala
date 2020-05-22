@@ -58,143 +58,31 @@ trait WorkflowExecutionStartedEventAttributes extends js.Object {
 
 object WorkflowExecutionStartedEventAttributes {
   @scala.inline
-  def apply(childPolicy: ChildPolicy, taskList: TaskList, workflowType: WorkflowType): WorkflowExecutionStartedEventAttributes = {
+  def apply(
+    childPolicy: ChildPolicy,
+    taskList: TaskList,
+    workflowType: WorkflowType,
+    continuedExecutionRunId: WorkflowRunIdOptional = null,
+    executionStartToCloseTimeout: DurationInSecondsOptional = null,
+    input: Data = null,
+    lambdaRole: Arn = null,
+    parentInitiatedEventId: js.UndefOr[EventId] = js.undefined,
+    parentWorkflowExecution: WorkflowExecution = null,
+    tagList: TagList = null,
+    taskPriority: TaskPriority = null,
+    taskStartToCloseTimeout: DurationInSecondsOptional = null
+  ): WorkflowExecutionStartedEventAttributes = {
     val __obj = js.Dynamic.literal(childPolicy = childPolicy.asInstanceOf[js.Any], taskList = taskList.asInstanceOf[js.Any], workflowType = workflowType.asInstanceOf[js.Any])
+    if (continuedExecutionRunId != null) __obj.updateDynamic("continuedExecutionRunId")(continuedExecutionRunId.asInstanceOf[js.Any])
+    if (executionStartToCloseTimeout != null) __obj.updateDynamic("executionStartToCloseTimeout")(executionStartToCloseTimeout.asInstanceOf[js.Any])
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (lambdaRole != null) __obj.updateDynamic("lambdaRole")(lambdaRole.asInstanceOf[js.Any])
+    if (!js.isUndefined(parentInitiatedEventId)) __obj.updateDynamic("parentInitiatedEventId")(parentInitiatedEventId.get.asInstanceOf[js.Any])
+    if (parentWorkflowExecution != null) __obj.updateDynamic("parentWorkflowExecution")(parentWorkflowExecution.asInstanceOf[js.Any])
+    if (tagList != null) __obj.updateDynamic("tagList")(tagList.asInstanceOf[js.Any])
+    if (taskPriority != null) __obj.updateDynamic("taskPriority")(taskPriority.asInstanceOf[js.Any])
+    if (taskStartToCloseTimeout != null) __obj.updateDynamic("taskStartToCloseTimeout")(taskStartToCloseTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowExecutionStartedEventAttributes]
   }
-  @scala.inline
-  implicit class WorkflowExecutionStartedEventAttributesOps[Self <: WorkflowExecutionStartedEventAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildPolicy(value: ChildPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTaskList(value: TaskList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkflowType(value: WorkflowType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContinuedExecutionRunId(value: WorkflowRunIdOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continuedExecutionRunId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinuedExecutionRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continuedExecutionRunId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionStartToCloseTimeout(value: DurationInSecondsOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStartToCloseTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionStartToCloseTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStartToCloseTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambdaRole(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambdaRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentInitiatedEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentInitiatedEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentInitiatedEventId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentInitiatedEventId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentWorkflowExecution(value: WorkflowExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentWorkflowExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentWorkflowExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentWorkflowExecution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagList(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskPriority(value: TaskPriority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskPriority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskPriority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskStartToCloseTimeout(value: DurationInSecondsOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStartToCloseTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskStartToCloseTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStartToCloseTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

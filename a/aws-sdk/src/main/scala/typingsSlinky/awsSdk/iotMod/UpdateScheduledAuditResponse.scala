@@ -14,29 +14,10 @@ trait UpdateScheduledAuditResponse extends js.Object {
 
 object UpdateScheduledAuditResponse {
   @scala.inline
-  def apply(): UpdateScheduledAuditResponse = {
+  def apply(scheduledAuditArn: ScheduledAuditArn = null): UpdateScheduledAuditResponse = {
     val __obj = js.Dynamic.literal()
+    if (scheduledAuditArn != null) __obj.updateDynamic("scheduledAuditArn")(scheduledAuditArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateScheduledAuditResponse]
   }
-  @scala.inline
-  implicit class UpdateScheduledAuditResponseOps[Self <: UpdateScheduledAuditResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScheduledAuditArn(value: ScheduledAuditArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledAuditArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledAuditArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledAuditArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

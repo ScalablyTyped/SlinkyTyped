@@ -60,125 +60,28 @@ trait SchemaEnterprise extends js.Object {
 
 object SchemaEnterprise {
   @scala.inline
-  def apply(): SchemaEnterprise = {
+  def apply(
+    appAutoApprovalEnabled: js.UndefOr[Boolean] = js.undefined,
+    enabledNotificationTypes: js.Array[String] = null,
+    enterpriseDisplayName: String = null,
+    logo: SchemaExternalData = null,
+    name: String = null,
+    primaryColor: js.UndefOr[Double] = js.undefined,
+    pubsubTopic: String = null,
+    signinDetails: js.Array[SchemaSigninDetail] = null,
+    termsAndConditions: js.Array[SchemaTermsAndConditions] = null
+  ): SchemaEnterprise = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(appAutoApprovalEnabled)) __obj.updateDynamic("appAutoApprovalEnabled")(appAutoApprovalEnabled.get.asInstanceOf[js.Any])
+    if (enabledNotificationTypes != null) __obj.updateDynamic("enabledNotificationTypes")(enabledNotificationTypes.asInstanceOf[js.Any])
+    if (enterpriseDisplayName != null) __obj.updateDynamic("enterpriseDisplayName")(enterpriseDisplayName.asInstanceOf[js.Any])
+    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(primaryColor)) __obj.updateDynamic("primaryColor")(primaryColor.get.asInstanceOf[js.Any])
+    if (pubsubTopic != null) __obj.updateDynamic("pubsubTopic")(pubsubTopic.asInstanceOf[js.Any])
+    if (signinDetails != null) __obj.updateDynamic("signinDetails")(signinDetails.asInstanceOf[js.Any])
+    if (termsAndConditions != null) __obj.updateDynamic("termsAndConditions")(termsAndConditions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEnterprise]
   }
-  @scala.inline
-  implicit class SchemaEnterpriseOps[Self <: SchemaEnterprise] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppAutoApprovalEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appAutoApprovalEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppAutoApprovalEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appAutoApprovalEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabledNotificationTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledNotificationTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabledNotificationTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledNotificationTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterpriseDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseDisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterpriseDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseDisplayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogo(value: SchemaExternalData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPubsubTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubTopic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPubsubTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubTopic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigninDetails(value: js.Array[SchemaSigninDetail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signinDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigninDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signinDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTermsAndConditions(value: js.Array[SchemaTermsAndConditions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("termsAndConditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTermsAndConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("termsAndConditions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

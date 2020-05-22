@@ -38,20 +38,19 @@ import scala.scalajs.js.annotation._
   * about.
   * @see XConnectionPointContainer
   */
-@js.native
 trait XConnectionPoint extends XInterface {
   /**
     * @returns the {@link XConnectionPointContainer} interface on the parent connectable object.
     * @see XConnectionPointContainer
     */
-  val ConnectionPointContainer: XConnectionPointContainer = js.native
+  val ConnectionPointContainer: XConnectionPointContainer
   /**
     * @returns the type of the outgoing interface managed by this connection point.  Using the XConnectionPointContainer::getConnectionPoints() method, a client
     * @see XConnectionPointContainer.findConnectionPoint
     */
-  val ConnectionType: `type` = js.native
+  val ConnectionType: `type`
   /** @returns a sequence of all currently advised connections. */
-  val Connections: SafeArray[XInterface] = js.native
+  val Connections: SafeArray[XInterface]
   /**
     * creates a connection between a connection point and a client's sink, where the sink implements the outgoing interface supported by this connection
     * point.
@@ -64,19 +63,19 @@ trait XConnectionPoint extends XInterface {
     * @throws ListenerExistException if it is a unicast broadcaster and a listener is already set.
     * @throws InvalidListenerException if the listener does not supply the needed interfaces.
     */
-  def advise(xListener: XInterface): Unit = js.native
+  def advise(xListener: XInterface): Unit
   /**
     * @returns the {@link XConnectionPointContainer} interface on the parent connectable object.
     * @see XConnectionPointContainer
     */
-  def getConnectionPointContainer(): XConnectionPointContainer = js.native
+  def getConnectionPointContainer(): XConnectionPointContainer
   /**
     * @returns the type of the outgoing interface managed by this connection point.  Using the XConnectionPointContainer::getConnectionPoints() method, a client
     * @see XConnectionPointContainer.findConnectionPoint
     */
-  def getConnectionType(): `type` = js.native
+  def getConnectionType(): `type`
   /** @returns a sequence of all currently advised connections. */
-  def getConnections(): SafeArray[XInterface] = js.native
+  def getConnections(): SafeArray[XInterface]
   /**
     * terminates a notification previously set up with advise.
     *
@@ -86,7 +85,7 @@ trait XConnectionPoint extends XInterface {
     * @param xListener specifies the listener interface on the client's advise sink.
     * @see com.sun.star.beans.XPropertySet.removePropertyChangeListener
     */
-  def unadvise(xListener: XInterface): Unit = js.native
+  def unadvise(xListener: XInterface): Unit
 }
 
 object XConnectionPoint {
@@ -107,61 +106,5 @@ object XConnectionPoint {
     val __obj = js.Dynamic.literal(ConnectionPointContainer = ConnectionPointContainer.asInstanceOf[js.Any], ConnectionType = ConnectionType.asInstanceOf[js.Any], Connections = Connections.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), advise = js.Any.fromFunction1(advise), getConnectionPointContainer = js.Any.fromFunction0(getConnectionPointContainer), getConnectionType = js.Any.fromFunction0(getConnectionType), getConnections = js.Any.fromFunction0(getConnections), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), unadvise = js.Any.fromFunction1(unadvise))
     __obj.asInstanceOf[XConnectionPoint]
   }
-  @scala.inline
-  implicit class XConnectionPointOps[Self <: XConnectionPoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionPointContainer(value: XConnectionPointContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionPointContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnectionType(value: `type`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnections(value: SafeArray[XInterface]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Connections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdvise(value: XInterface => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advise")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetConnectionPointContainer(value: () => XConnectionPointContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConnectionPointContainer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetConnectionType(value: () => `type`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConnectionType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetConnections(value: () => SafeArray[XInterface]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConnections")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUnadvise(value: XInterface => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unadvise")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

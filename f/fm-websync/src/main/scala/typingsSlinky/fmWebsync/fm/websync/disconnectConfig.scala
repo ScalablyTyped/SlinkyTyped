@@ -4,71 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait disconnectConfig extends baseRequestConfig {
   /**
     * The callback to invoke after onSuccess or onFailure. See disconnectCompleteArgs for callback argument details.
     */
-  var onComplete: js.UndefOr[js.Function1[/* args */ baseResponseArgs, Unit]] = js.native
+  var onComplete: js.UndefOr[js.Function1[/* args */ baseResponseArgs, Unit]] = js.undefined
   /**
     * The callback to invoke if the disconnect fails. See disconnectFailureArgs for callback argument details.
     */
-  var onFailure: js.UndefOr[js.Function1[/* args */ baseFailureArgs, Unit]] = js.native
+  var onFailure: js.UndefOr[js.Function1[/* args */ baseFailureArgs, Unit]] = js.undefined
   /**
     * The callback to invoke if the disconnect succeeds. See disconnectSuccessArgs for callback argument details.
     */
-  var onSuccess: js.UndefOr[js.Function1[/* args */ baseResponseArgs, Unit]] = js.native
+  var onSuccess: js.UndefOr[js.Function1[/* args */ baseResponseArgs, Unit]] = js.undefined
 }
 
 object disconnectConfig {
   @scala.inline
-  def apply(): disconnectConfig = {
+  def apply(
+    meta: js.Any = null,
+    onComplete: /* args */ baseResponseArgs => Unit = null,
+    onFailure: /* args */ baseFailureArgs => Unit = null,
+    onSuccess: /* args */ baseResponseArgs => Unit = null,
+    requestUrl: String = null,
+    suppressErrors: js.UndefOr[Boolean] = js.undefined,
+    sync: js.UndefOr[Boolean] = js.undefined
+  ): disconnectConfig = {
     val __obj = js.Dynamic.literal()
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction1(onComplete))
+    if (onFailure != null) __obj.updateDynamic("onFailure")(js.Any.fromFunction1(onFailure))
+    if (onSuccess != null) __obj.updateDynamic("onSuccess")(js.Any.fromFunction1(onSuccess))
+    if (requestUrl != null) __obj.updateDynamic("requestUrl")(requestUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressErrors)) __obj.updateDynamic("suppressErrors")(suppressErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sync)) __obj.updateDynamic("sync")(sync.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[disconnectConfig]
   }
-  @scala.inline
-  implicit class disconnectConfigOps[Self <: disconnectConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnComplete(value: /* args */ baseResponseArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFailure(value: /* args */ baseFailureArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFailure")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSuccess(value: /* args */ baseResponseArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

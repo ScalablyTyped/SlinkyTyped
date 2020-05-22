@@ -34,71 +34,19 @@ trait AssessmentRunNotification extends js.Object {
 
 object AssessmentRunNotification {
   @scala.inline
-  def apply(date: js.Date, error: Bool, event: InspectorEvent): AssessmentRunNotification = {
+  def apply(
+    date: js.Date,
+    error: Bool,
+    event: InspectorEvent,
+    message: Message = null,
+    snsPublishStatusCode: AssessmentRunNotificationSnsStatusCode = null,
+    snsTopicArn: Arn = null
+  ): AssessmentRunNotification = {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (snsPublishStatusCode != null) __obj.updateDynamic("snsPublishStatusCode")(snsPublishStatusCode.asInstanceOf[js.Any])
+    if (snsTopicArn != null) __obj.updateDynamic("snsTopicArn")(snsTopicArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssessmentRunNotification]
   }
-  @scala.inline
-  implicit class AssessmentRunNotificationOps[Self <: AssessmentRunNotification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: Bool): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvent(value: InspectorEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnsPublishStatusCode(value: AssessmentRunNotificationSnsStatusCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snsPublishStatusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnsPublishStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snsPublishStatusCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnsTopicArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snsTopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnsTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snsTopicArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,47 +13,15 @@ trait ServiceCapacityProviderStrategy extends js.Object {
 
 object ServiceCapacityProviderStrategy {
   @scala.inline
-  def apply(capacityProvider: String): ServiceCapacityProviderStrategy = {
+  def apply(
+    capacityProvider: String,
+    base: js.UndefOr[Double] = js.undefined,
+    weight: js.UndefOr[Double] = js.undefined
+  ): ServiceCapacityProviderStrategy = {
     val __obj = js.Dynamic.literal(capacityProvider = capacityProvider.asInstanceOf[js.Any])
+    if (!js.isUndefined(base)) __obj.updateDynamic("base")(base.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceCapacityProviderStrategy]
   }
-  @scala.inline
-  implicit class ServiceCapacityProviderStrategyOps[Self <: ServiceCapacityProviderStrategy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacityProvider(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

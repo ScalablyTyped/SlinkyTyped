@@ -22,41 +22,11 @@ trait SchemaGoogleDevtoolsContaineranalysisV1alpha1ProjectRepoId extends js.Obje
 
 object SchemaGoogleDevtoolsContaineranalysisV1alpha1ProjectRepoId {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsContaineranalysisV1alpha1ProjectRepoId = {
+  def apply(projectId: String = null, repoName: String = null): SchemaGoogleDevtoolsContaineranalysisV1alpha1ProjectRepoId = {
     val __obj = js.Dynamic.literal()
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (repoName != null) __obj.updateDynamic("repoName")(repoName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsContaineranalysisV1alpha1ProjectRepoId]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdOps[Self <: SchemaGoogleDevtoolsContaineranalysisV1alpha1ProjectRepoId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepoName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repoName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepoName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repoName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

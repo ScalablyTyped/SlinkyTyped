@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParentGuid extends js.Object {
-  var guid: js.UndefOr[typingsSlinky.evernote.mod.Types.Guid] = js.native
-  var name: js.UndefOr[String] = js.native
-  var parentGuid: js.UndefOr[typingsSlinky.evernote.mod.Types.Guid] = js.native
-  var updateSequenceNum: js.UndefOr[Double] = js.native
+  var guid: js.UndefOr[typingsSlinky.evernote.mod.Types.Guid] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var parentGuid: js.UndefOr[typingsSlinky.evernote.mod.Types.Guid] = js.undefined
+  var updateSequenceNum: js.UndefOr[Double] = js.undefined
 }
 
 object ParentGuid {
   @scala.inline
-  def apply(): ParentGuid = {
+  def apply(
+    guid: typingsSlinky.evernote.mod.Types.Guid = null,
+    name: String = null,
+    parentGuid: typingsSlinky.evernote.mod.Types.Guid = null,
+    updateSequenceNum: js.UndefOr[Double] = js.undefined
+  ): ParentGuid = {
     val __obj = js.Dynamic.literal()
+    if (guid != null) __obj.updateDynamic("guid")(guid.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (parentGuid != null) __obj.updateDynamic("parentGuid")(parentGuid.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateSequenceNum)) __obj.updateDynamic("updateSequenceNum")(updateSequenceNum.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParentGuid]
   }
-  @scala.inline
-  implicit class ParentGuidOps[Self <: ParentGuid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGuid(value: typingsSlinky.evernote.mod.Types.Guid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentGuid(value: typingsSlinky.evernote.mod.Types.Guid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentGuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentGuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentGuid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateSequenceNum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSequenceNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateSequenceNum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSequenceNum")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

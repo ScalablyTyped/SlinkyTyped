@@ -9,31 +9,30 @@ import scala.scalajs.js.annotation._
 /**
   * Cypress test run result for a single spec.
   */
-@js.native
 trait RunResult extends js.Object {
-  var error: String | Null = js.native
-  var hooks: js.Array[HookInformation] = js.native
+  var error: String | Null
+  var hooks: js.Array[HookInformation]
   /**
     * Reporter name like "spec"
     */
-  var reporter: String = js.native
+  var reporter: String
   /**
     * This is controlled by the reporter, and Cypress cannot guarantee
     * the properties. Usually this object has suites, tests, passes, etc
     */
-  var reporterStats: js.Object = js.native
-  var screenshots: js.Array[ScreenshotInformation] = js.native
-  var shouldUploadVideo: Boolean = js.native
+  var reporterStats: js.Object
+  var screenshots: js.Array[ScreenshotInformation]
+  var shouldUploadVideo: Boolean
   /**
     * information about the spec test file.
     */
-  var spec: Absolute = js.native
+  var spec: Absolute
   /**
     * Accurate test results collected by Cypress.
     */
-  var stats: Failures = js.native
-  var tests: js.Array[TestResult] = js.native
-  var video: String | Null = js.native
+  var stats: Failures
+  var tests: js.Array[TestResult]
+  var video: String | Null
 }
 
 object RunResult {
@@ -46,90 +45,12 @@ object RunResult {
     shouldUploadVideo: Boolean,
     spec: Absolute,
     stats: Failures,
-    tests: js.Array[TestResult]
+    tests: js.Array[TestResult],
+    error: String = null,
+    video: String = null
   ): RunResult = {
-    val __obj = js.Dynamic.literal(hooks = hooks.asInstanceOf[js.Any], reporter = reporter.asInstanceOf[js.Any], reporterStats = reporterStats.asInstanceOf[js.Any], screenshots = screenshots.asInstanceOf[js.Any], shouldUploadVideo = shouldUploadVideo.asInstanceOf[js.Any], spec = spec.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any], tests = tests.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(hooks = hooks.asInstanceOf[js.Any], reporter = reporter.asInstanceOf[js.Any], reporterStats = reporterStats.asInstanceOf[js.Any], screenshots = screenshots.asInstanceOf[js.Any], shouldUploadVideo = shouldUploadVideo.asInstanceOf[js.Any], spec = spec.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any], tests = tests.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunResult]
   }
-  @scala.inline
-  implicit class RunResultOps[Self <: RunResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHooks(value: js.Array[HookInformation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReporter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReporterStats(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporterStats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScreenshots(value: js.Array[ScreenshotInformation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShouldUploadVideo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUploadVideo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpec(value: Absolute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStats(value: Failures): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTests(value: js.Array[TestResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(null)
-        ret
-    }
-    @scala.inline
-    def withVideo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideoNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(null)
-        ret
-    }
-  }
-  
 }
 

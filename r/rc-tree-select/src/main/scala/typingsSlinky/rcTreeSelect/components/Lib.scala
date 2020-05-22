@@ -12,6 +12,11 @@ object Lib {
   object component extends js.Object
   
   def withProps[ValueType](p: TreeSelectProps[ValueType]): SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType] = new SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[ValueType](): SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType](js.Array(this.component, __props.asInstanceOf[TreeSelectProps[ValueType]]))
+  }
   implicit def make[ValueType](companion: Lib.type): SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType] = new SharedBuilder_TreeSelectProps_1571959893[default[js.Any], ValueType](js.Array(this.component, js.Dictionary.empty))()
 }
 

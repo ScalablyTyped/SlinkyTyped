@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDOMTreeWalker extends js.Object {
   @JSName("MSHTML.IDOMTreeWalker_typekey")
-  var MSHTMLDotIDOMTreeWalker_typekey: IDOMTreeWalker = js.native
-  var currentNode: js.Any = js.native
-  val expandEntityReferences: Boolean = js.native
-  val filter: js.Any = js.native
-  val root: js.Any = js.native
-  val whatToShow: Double = js.native
-  def firstChild(): js.Any = js.native
-  def lastChild(): js.Any = js.native
-  def nextNode(): js.Any = js.native
-  def nextSibling(): js.Any = js.native
-  def parentNode(): js.Any = js.native
-  def previousNode(): js.Any = js.native
-  def previousSibling(): js.Any = js.native
+  var MSHTMLDotIDOMTreeWalker_typekey: IDOMTreeWalker
+  var currentNode: js.Any
+  val expandEntityReferences: Boolean
+  val filter: js.Any
+  val root: js.Any
+  val whatToShow: Double
+  def firstChild(): js.Any
+  def lastChild(): js.Any
+  def nextNode(): js.Any
+  def nextSibling(): js.Any
+  def parentNode(): js.Any
+  def previousNode(): js.Any
+  def previousSibling(): js.Any
 }
 
 object IDOMTreeWalker {
@@ -43,91 +42,5 @@ object IDOMTreeWalker {
     __obj.updateDynamic("MSHTML.IDOMTreeWalker_typekey")(MSHTMLDotIDOMTreeWalker_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDOMTreeWalker]
   }
-  @scala.inline
-  implicit class IDOMTreeWalkerOps[Self <: IDOMTreeWalker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotIDOMTreeWalker_typekey(value: IDOMTreeWalker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.IDOMTreeWalker_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentNode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpandEntityReferences(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandEntityReferences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstChild(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLastChild(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNextNode(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNextSibling(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParentNode(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPreviousNode(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPreviousSibling(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRoot(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWhatToShow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whatToShow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

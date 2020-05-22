@@ -23,14 +23,14 @@ trait FormatProtection extends ClientObject {
   var context_FormatProtection: RequestContext = js.native
   /**
     *
-    * Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+    * Specifies if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
     *
     * [Api set: ExcelApi 1.2]
     */
   var formulaHidden: Boolean = js.native
   /**
     *
-    * Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+    * Specifies if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
     *
     * [Api set: ExcelApi 1.2]
     */

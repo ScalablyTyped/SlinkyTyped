@@ -14,29 +14,10 @@ trait AdjustmentType extends js.Object {
 
 object AdjustmentType {
   @scala.inline
-  def apply(): AdjustmentType = {
+  def apply(AdjustmentType: XmlStringMaxLen255 = null): AdjustmentType = {
     val __obj = js.Dynamic.literal()
+    if (AdjustmentType != null) __obj.updateDynamic("AdjustmentType")(AdjustmentType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdjustmentType]
   }
-  @scala.inline
-  implicit class AdjustmentTypeOps[Self <: AdjustmentType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdjustmentType(value: XmlStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustmentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdjustmentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustmentType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

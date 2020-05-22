@@ -26,65 +26,18 @@ trait PipelineSummary extends js.Object {
 
 object PipelineSummary {
   @scala.inline
-  def apply(): PipelineSummary = {
+  def apply(
+    creationTime: js.Date = null,
+    lastUpdateTime: js.Date = null,
+    pipelineName: PipelineName = null,
+    reprocessingSummaries: ReprocessingSummaries = null
+  ): PipelineSummary = {
     val __obj = js.Dynamic.literal()
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (lastUpdateTime != null) __obj.updateDynamic("lastUpdateTime")(lastUpdateTime.asInstanceOf[js.Any])
+    if (pipelineName != null) __obj.updateDynamic("pipelineName")(pipelineName.asInstanceOf[js.Any])
+    if (reprocessingSummaries != null) __obj.updateDynamic("reprocessingSummaries")(reprocessingSummaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipelineSummary]
   }
-  @scala.inline
-  implicit class PipelineSummaryOps[Self <: PipelineSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipelineName(value: PipelineName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReprocessingSummaries(value: ReprocessingSummaries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reprocessingSummaries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReprocessingSummaries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reprocessingSummaries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

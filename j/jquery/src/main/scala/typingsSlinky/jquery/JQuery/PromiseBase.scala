@@ -4,7 +4,6 @@ import typingsSlinky.jquery.JQuery.Deferred.CallbackBase
 import typingsSlinky.jquery.jqueryStrings.pending
 import typingsSlinky.jquery.jqueryStrings.rejected
 import typingsSlinky.jquery.jqueryStrings.resolved
-import typingsSlinky.std.PromiseLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,9 +27,7 @@ import scala.scalajs.js.annotation._
   * @see \`{@link https://api.jquery.com/Types/#Promise }\`
   */
 @js.native
-trait PromiseBase[TR, TJ, TN, UR, UJ, UN, VR, VJ, VN, SR, SJ, SN]
-  extends _Promise[TR]
-     with PromiseLike[TR] {
+trait PromiseBase[TR, TJ, TN, UR, UJ, UN, VR, VJ, VN, SR, SJ, SN] extends js.Object {
   /**
     * Add handlers to be called when the Deferred object is either resolved or rejected.
     * @param alwaysCallback A function, or array of functions, that is called when the Deferred is resolved or rejected.
@@ -48,6 +45,24 @@ trait PromiseBase[TR, TJ, TN, UR, UJ, UN, VR, VJ, VN, SR, SJ, SN]
     alwaysCallback: TypeOrArray[CallbackBase[TR | TJ, UR | UJ, VR | VJ, SR | SJ]],
     alwaysCallbacks: (TypeOrArray[CallbackBase[TR | TJ, UR | UJ, VR | VJ, SR | SJ]])*
   ): this.type = js.native
+  // #endregion
+  /**
+    * Add handlers to be called when the Deferred object is rejected.
+    * @param failFilter A function that is called when the Deferred is rejected.
+    * @see \`{@link https://api.jquery.com/deferred.catch/ }\`
+    * @since 3.0
+    * @example ​ ````Since the jQuery.get method returns a jqXHR object, which is derived from a Deferred object, we can rejection handlers using the .catch method.
+  ```javascript
+  $.get( "test.php" )
+    .then( function() {
+    alert( "$.get succeeded" );
+    } )
+    .catch( function() {
+    alert( "$.get failed!" );
+    } );
+  ```
+    */
+  def `catch`[ARF, AJF, ANF, BRF, BJF, BNF, CRF, CJF, CNF, RRF, RJF, RNF](): PromiseBase[ARF, AJF, ANF, BRF, BJF, BNF, CRF, CJF, CNF, RRF, RJF, RNF] = js.native
   def `catch`[ARF, AJF, ANF, BRF, BJF, BNF, CRF, CJF, CNF, RRF, RJF, RNF](
     failFilter: js.Function4[
       /* t */ TJ, 
@@ -665,22 +680,25 @@ trait PromiseBase[TR, TJ, TN, UR, UJ, UN, VR, VJ, VN, SR, SJ, SN]
     */
   def state(): pending | resolved | rejected = js.native
   /**
-    * Attaches callbacks for the resolution and/or rejection of the Promise.
-    * @param onfulfilled The callback to execute when the Promise is resolved.
-    * @param onrejected The callback to execute when the Promise is rejected.
-    * @returns A Promise for the completion of which ever callback is executed.
+    * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
+    * @param doneFilter An optional function that is called when the Deferred is resolved.
+    * @param failFilter An optional function that is called when the Deferred is rejected.
+    * @param progressFilter An optional function that is called when progress notifications are sent to the Deferred.
+    * @see \`{@link https://api.jquery.com/deferred.then/ }\`
+    * @since 1.8
+    * @example ​ ````Chain tasks:
+  ```javascript
+  var request = $.ajax( url, { dataType: "json" } ),
+    chained = request.then(function( data ) {
+    return $.ajax( url2, { data: { user: data.userId } } );
+    });
+  ​
+  chained.done(function( data ) {
+    // data retrieved from url2 as provided by the first request
+  });
+  ```
     */
-  /* InferMemberOverrides */
-  override def `then`[TResult1, TResult2](): (_Promise[TResult1 | TResult2]) with (js.Thenable[TResult1 | TResult2]) = js.native
-  /* InferMemberOverrides */
-  override def `then`[TResult1, TResult2](onfulfilled: js.Function1[TR, TResult1 | js.Thenable[TResult1]]): (_Promise[TResult1 | TResult2]) with (js.Thenable[TResult1 | TResult2]) = js.native
-  /* InferMemberOverrides */
-  override def `then`[TResult1, TResult2](
-    onfulfilled: js.Function1[TR, TResult1 | js.Thenable[TResult1]],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): (_Promise[TResult1 | TResult2]) with (js.Thenable[TResult1 | TResult2]) = js.native
-  /* InferMemberOverrides */
-  override def `then`[TResult1, TResult2](onfulfilled: Null, onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]): (_Promise[TResult1 | TResult2]) with (js.Thenable[TResult1 | TResult2]) = js.native
+  def `then`[ARP, AJP, ANP, BRP, BJP, BNP, CRP, CJP, CNP, RRP, RJP, RNP](): PromiseBase[ARP, AJP, ANP, BRP, BJP, BNP, CRP, CJP, CNP, RRP, RJP, RNP] = js.native
   /**
     * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
     * @param doneFilter An optional function that is called when the Deferred is resolved.

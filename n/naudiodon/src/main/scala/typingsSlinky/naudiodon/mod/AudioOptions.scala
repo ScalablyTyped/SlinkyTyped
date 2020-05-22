@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AudioOptions extends js.Object {
-  var channelCount: js.UndefOr[Double] = js.native
-  var deviceId: js.UndefOr[Double] = js.native
-  var maxQueue: js.UndefOr[Double] = js.native
-  var sampleFormat: js.UndefOr[Double] = js.native
-  var sampleRate: js.UndefOr[Double] = js.native
+  var channelCount: js.UndefOr[Double] = js.undefined
+  var deviceId: js.UndefOr[Double] = js.undefined
+  var maxQueue: js.UndefOr[Double] = js.undefined
+  var sampleFormat: js.UndefOr[Double] = js.undefined
+  var sampleRate: js.UndefOr[Double] = js.undefined
 }
 
 object AudioOptions {
   @scala.inline
-  def apply(): AudioOptions = {
+  def apply(
+    channelCount: js.UndefOr[Double] = js.undefined,
+    deviceId: js.UndefOr[Double] = js.undefined,
+    maxQueue: js.UndefOr[Double] = js.undefined,
+    sampleFormat: js.UndefOr[Double] = js.undefined,
+    sampleRate: js.UndefOr[Double] = js.undefined
+  ): AudioOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(channelCount)) __obj.updateDynamic("channelCount")(channelCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deviceId)) __obj.updateDynamic("deviceId")(deviceId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxQueue)) __obj.updateDynamic("maxQueue")(maxQueue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sampleFormat)) __obj.updateDynamic("sampleFormat")(sampleFormat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sampleRate)) __obj.updateDynamic("sampleRate")(sampleRate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioOptions]
   }
-  @scala.inline
-  implicit class AudioOptionsOps[Self <: AudioOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxQueue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxQueue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxQueue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxQueue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleFormat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

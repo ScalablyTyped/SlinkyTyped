@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is the result of a goal seek operation. */
-@js.native
 trait GoalResult extends js.Object {
   /** the amount by which the result changed in the last iteration. */
-  var Divergence: Double = js.native
+  var Divergence: Double
   /** the resulting value. */
-  var Result: Double = js.native
+  var Result: Double
 }
 
 object GoalResult {
@@ -19,25 +18,5 @@ object GoalResult {
     val __obj = js.Dynamic.literal(Divergence = Divergence.asInstanceOf[js.Any], Result = Result.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoalResult]
   }
-  @scala.inline
-  implicit class GoalResultOps[Self <: GoalResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDivergence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Divergence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResult(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Result")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

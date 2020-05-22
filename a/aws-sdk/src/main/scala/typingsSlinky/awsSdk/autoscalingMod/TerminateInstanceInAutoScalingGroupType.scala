@@ -22,25 +22,5 @@ object TerminateInstanceInAutoScalingGroupType {
     val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any], ShouldDecrementDesiredCapacity = ShouldDecrementDesiredCapacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[TerminateInstanceInAutoScalingGroupType]
   }
-  @scala.inline
-  implicit class TerminateInstanceInAutoScalingGroupTypeOps[Self <: TerminateInstanceInAutoScalingGroupType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: XmlStringMaxLen19): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShouldDecrementDesiredCapacity(value: ShouldDecrementDesiredCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShouldDecrementDesiredCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

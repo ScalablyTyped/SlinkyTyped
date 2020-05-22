@@ -63,12 +63,13 @@ import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.antd.inputNumberMod.InputNumberProps
-import typingsSlinky.antd.inputNumberMod.default
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -81,7 +82,7 @@ object InputNumber {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -297,7 +298,7 @@ object InputNumber {
     @scala.inline
     def onCanPlayThrough(value: SyntheticEvent[Event, HTMLInputElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* value */ js.UndefOr[Double] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* value */ js.UndefOr[Double | String] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLInputElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -502,7 +503,7 @@ object InputNumber {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InputNumberProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: InputNumberProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: InputNumber.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -9,16 +9,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** allows the transformation of numeric values from one coordinate-system into an other. Values may be transformed using any mapping. */
-@js.native
 trait XTransformation extends XInterface {
   /** the dimension of the input coordinate sequence that is to be transformed by the {@link transform()} method. */
-  val SourceDimension: Double = js.native
+  val SourceDimension: Double
   /** the dimension of the output coordinate sequence that is the result of the {@link transform()} method. */
-  val TargetDimension: Double = js.native
+  val TargetDimension: Double
   /** the dimension of the input coordinate sequence that is to be transformed by the {@link transform()} method. */
-  def getSourceDimension(): Double = js.native
+  def getSourceDimension(): Double
   /** the dimension of the output coordinate sequence that is the result of the {@link transform()} method. */
-  def getTargetDimension(): Double = js.native
+  def getTargetDimension(): Double
   /**
     * transforms the given input data tuple, given in the source coordinate system, according to the internal transformation rules, into a tuple of
     * transformed coordinates in the destination coordinate system.
@@ -28,7 +27,7 @@ trait XTransformation extends XInterface {
     * @returns the transformed data tuple. The length of this sequence is equal to the dimension of the output coordinate system.
     * @throws com::sun::star::lang::IllegalArgumentException if the dimension of the input vector is not equal to the dimension given in {@link getSourceDimens
     */
-  def transform(aValues: SeqEquiv[Double]): SafeArray[Double] = js.native
+  def transform(aValues: SeqEquiv[Double]): SafeArray[Double]
 }
 
 object XTransformation {
@@ -46,43 +45,5 @@ object XTransformation {
     val __obj = js.Dynamic.literal(SourceDimension = SourceDimension.asInstanceOf[js.Any], TargetDimension = TargetDimension.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getSourceDimension = js.Any.fromFunction0(getSourceDimension), getTargetDimension = js.Any.fromFunction0(getTargetDimension), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), transform = js.Any.fromFunction1(transform))
     __obj.asInstanceOf[XTransformation]
   }
-  @scala.inline
-  implicit class XTransformationOps[Self <: XTransformation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceDimension(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceDimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetDimension(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetDimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetSourceDimension(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSourceDimension")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTargetDimension(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTargetDimension")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTransform(value: SeqEquiv[Double] => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

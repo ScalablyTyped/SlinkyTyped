@@ -5,42 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Seed extends js.Object {
-  var seed: js.UndefOr[NativeBuffer | String] = js.native
+  var seed: js.UndefOr[NativeBuffer | String] = js.undefined
 }
 
 object Seed {
   @scala.inline
-  def apply(): Seed = {
+  def apply(seed: NativeBuffer | String = null): Seed = {
     val __obj = js.Dynamic.literal()
+    if (seed != null) __obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
     __obj.asInstanceOf[Seed]
   }
-  @scala.inline
-  implicit class SeedOps[Self <: Seed] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSeedUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeed(value: NativeBuffer | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

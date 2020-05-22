@@ -11,7 +11,8 @@ trait ListenerTlsFileCertificate extends js.Object {
     */
   var certificateChain: FilePath = js.native
   /**
-    * The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
+    * The private key for a certificate stored on the file system of the virtual node that the
+    proxy is running on.
     */
   var privateKey: FilePath = js.native
 }
@@ -22,25 +23,5 @@ object ListenerTlsFileCertificate {
     val __obj = js.Dynamic.literal(certificateChain = certificateChain.asInstanceOf[js.Any], privateKey = privateKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerTlsFileCertificate]
   }
-  @scala.inline
-  implicit class ListenerTlsFileCertificateOps[Self <: ListenerTlsFileCertificate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateChain(value: FilePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateChain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivateKey(value: FilePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

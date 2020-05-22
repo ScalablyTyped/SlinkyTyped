@@ -12,7 +12,7 @@ object DialogTitle {
   @js.native
   object component extends js.Object
   
-  def withProps(p: TitleProps with ViewProps with TextProps): `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.Dialog.Title] = new `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.Dialog.Title](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DialogTitle.type): `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.Dialog.Title] = new `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.Dialog.Title](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: TitleProps with ViewProps with TextProps): SharedBuilder_TitlePropsViewPropsTextProps_1344350995[typingsSlinky.reactNativeDialog.mod.Dialog.Title] = new SharedBuilder_TitlePropsViewPropsTextProps_1344350995[typingsSlinky.reactNativeDialog.mod.Dialog.Title](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DialogTitle.type): SharedBuilder_TitlePropsViewPropsTextProps_1344350995[typingsSlinky.reactNativeDialog.mod.Dialog.Title] = new SharedBuilder_TitlePropsViewPropsTextProps_1344350995[typingsSlinky.reactNativeDialog.mod.Dialog.Title](js.Array(this.component, js.Dictionary.empty))()
 }
 

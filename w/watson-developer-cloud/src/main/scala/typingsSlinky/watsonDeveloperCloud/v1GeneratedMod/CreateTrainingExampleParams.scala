@@ -5,115 +5,42 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Parameters for the `createTrainingExample` operation. */
-@js.native
 trait CreateTrainingExampleParams extends js.Object {
   /** The ID of the collection. */
-  var collection_id: String = js.native
+  var collection_id: String
   /** The cross reference associated with this training example. */
-  var cross_reference: js.UndefOr[String] = js.native
+  var cross_reference: js.UndefOr[String] = js.undefined
   /** The document ID associated with this training example. */
-  var document_id: js.UndefOr[String] = js.native
+  var document_id: js.UndefOr[String] = js.undefined
   /** The ID of the environment. */
-  var environment_id: String = js.native
-  var headers: js.UndefOr[js.Object] = js.native
+  var environment_id: String
+  var headers: js.UndefOr[js.Object] = js.undefined
   /** The ID of the query used for training. */
-  var query_id: String = js.native
+  var query_id: String
   /** The relevance of the training example. */
-  var relevance: js.UndefOr[Double] = js.native
-  var return_response: js.UndefOr[Boolean] = js.native
+  var relevance: js.UndefOr[Double] = js.undefined
+  var return_response: js.UndefOr[Boolean] = js.undefined
 }
 
 object CreateTrainingExampleParams {
   @scala.inline
-  def apply(collection_id: String, environment_id: String, query_id: String): CreateTrainingExampleParams = {
+  def apply(
+    collection_id: String,
+    environment_id: String,
+    query_id: String,
+    cross_reference: String = null,
+    document_id: String = null,
+    headers: js.Object = null,
+    relevance: js.UndefOr[Double] = js.undefined,
+    return_response: js.UndefOr[Boolean] = js.undefined
+  ): CreateTrainingExampleParams = {
     val __obj = js.Dynamic.literal(collection_id = collection_id.asInstanceOf[js.Any], environment_id = environment_id.asInstanceOf[js.Any], query_id = query_id.asInstanceOf[js.Any])
+    if (cross_reference != null) __obj.updateDynamic("cross_reference")(cross_reference.asInstanceOf[js.Any])
+    if (document_id != null) __obj.updateDynamic("document_id")(document_id.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (!js.isUndefined(relevance)) __obj.updateDynamic("relevance")(relevance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(return_response)) __obj.updateDynamic("return_response")(return_response.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTrainingExampleParams]
   }
-  @scala.inline
-  implicit class CreateTrainingExampleParamsOps[Self <: CreateTrainingExampleParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollection_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuery_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCross_reference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cross_reference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCross_reference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cross_reference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocument_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelevance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relevance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelevance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relevance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturn_response(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturn_response: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

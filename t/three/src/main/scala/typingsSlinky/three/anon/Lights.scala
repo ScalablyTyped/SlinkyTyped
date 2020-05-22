@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Lights extends js.Object {
-  var lights: WebGLLights = js.native
-  var lightsArray: js.Array[Light] = js.native
-  var shadowsArray: js.Array[Light] = js.native
+  var lights: WebGLLights
+  var lightsArray: js.Array[Light]
+  var shadowsArray: js.Array[Light]
 }
 
 object Lights {
@@ -19,31 +18,5 @@ object Lights {
     val __obj = js.Dynamic.literal(lights = lights.asInstanceOf[js.Any], lightsArray = lightsArray.asInstanceOf[js.Any], shadowsArray = shadowsArray.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lights]
   }
-  @scala.inline
-  implicit class LightsOps[Self <: Lights] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLights(value: WebGLLights): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLightsArray(value: js.Array[Light]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lightsArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShadowsArray(value: js.Array[Light]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowsArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,151 +5,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SizePerPageDropDownProps extends js.Object {
   /**
-  	 * Bootstrap css style class for the button, e.g. 'btn-warning'
-  	 */
-  var btnContextual: js.UndefOr[String] = js.native
+    * Bootstrap css style class for the button, e.g. 'btn-warning'
+    */
+  var btnContextual: js.UndefOr[String] = js.undefined
   /**
-  	 * Custom class name to use for the component.
-  	 */
-  var className: js.UndefOr[String] = js.native
+    * Custom class name to use for the component.
+    */
+  var className: js.UndefOr[String] = js.undefined
   /**
-  	 * Current size per page
-  	 */
-  var currSizePerPage: js.UndefOr[String] = js.native
+    * Current size per page
+    */
+  var currSizePerPage: js.UndefOr[String] = js.undefined
   /**
-  	 * Flag to indicate that the dropdown is currently hidden
-  	 */
-  var hidden: js.UndefOr[Boolean] = js.native
+    * Flag to indicate that the dropdown is currently hidden
+    */
+  var hidden: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Callback function that should be triggered when the user clicks on the dropdown button.
-  	 */
-  var onClick: js.UndefOr[js.Function1[/* toggleDropDown */ js.Function0[Unit], Unit]] = js.native
+    * Callback function that should be triggered when the user clicks on the dropdown button.
+    */
+  var onClick: js.UndefOr[js.Function1[/* toggleDropDown */ js.Function0[Unit], Unit]] = js.undefined
   /**
-  	 * Flag to indicate that the dropdown is open
-  	 */
-  var open: js.UndefOr[Boolean] = js.native
+    * Flag to indicate that the dropdown is open
+    */
+  var open: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Size Per Page options list
-  	 */
-  var options: js.UndefOr[js.Array[Double | Text]] = js.native
+    * Size Per Page options list
+    */
+  var options: js.UndefOr[js.Array[Double | Text]] = js.undefined
   /**
-  	 * Whether the button menu should 'dropup' or 'dropdown'.
-  	 */
-  var variation: js.UndefOr[DropDirection] = js.native
+    * Whether the button menu should 'dropup' or 'dropdown'.
+    */
+  var variation: js.UndefOr[DropDirection] = js.undefined
 }
 
 object SizePerPageDropDownProps {
   @scala.inline
-  def apply(): SizePerPageDropDownProps = {
+  def apply(
+    btnContextual: String = null,
+    className: String = null,
+    currSizePerPage: String = null,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    onClick: /* toggleDropDown */ js.Function0[Unit] => Unit = null,
+    open: js.UndefOr[Boolean] = js.undefined,
+    options: js.Array[Double | Text] = null,
+    variation: DropDirection = null
+  ): SizePerPageDropDownProps = {
     val __obj = js.Dynamic.literal()
+    if (btnContextual != null) __obj.updateDynamic("btnContextual")(btnContextual.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (currSizePerPage != null) __obj.updateDynamic("currSizePerPage")(currSizePerPage.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.get.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (variation != null) __obj.updateDynamic("variation")(variation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SizePerPageDropDownProps]
   }
-  @scala.inline
-  implicit class SizePerPageDropDownPropsOps[Self <: SizePerPageDropDownProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBtnContextual(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("btnContextual")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBtnContextual: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("btnContextual")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrSizePerPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currSizePerPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrSizePerPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currSizePerPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* toggleDropDown */ js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Array[Double | Text]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariation(value: DropDirection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

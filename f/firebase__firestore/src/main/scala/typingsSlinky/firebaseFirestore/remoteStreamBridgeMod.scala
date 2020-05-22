@@ -22,6 +22,16 @@ object remoteStreamBridgeMod extends js.Object {
     def callOnClose(err: FirestoreError): Unit = js.native
     def callOnMessage(msg: O): Unit = js.native
     def callOnOpen(): Unit = js.native
+    /* CompleteClass */
+    override def close(): Unit = js.native
+    /* CompleteClass */
+    override def onClose(callback: js.Function1[/* err */ js.UndefOr[FirestoreError], Unit]): Unit = js.native
+    /* CompleteClass */
+    override def onMessage(callback: js.Function1[O, Unit]): Unit = js.native
+    /* CompleteClass */
+    override def onOpen(callback: js.Function0[Unit]): Unit = js.native
+    /* CompleteClass */
+    override def send(msg: I): Unit = js.native
   }
   
 }

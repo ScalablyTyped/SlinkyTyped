@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextEditorOptionsChangeEvent extends js.Object {
   /**
-  		 * The new value for the [text editor's options](#TextEditor.options).
-  		 */
-  val options: TextEditorOptions = js.native
+    * The new value for the [text editor's options](#TextEditor.options).
+    */
+  val options: TextEditorOptions
   /**
-  		 * The [text editor](#TextEditor) for which the options have changed.
-  		 */
-  val textEditor: TextEditor = js.native
+    * The [text editor](#TextEditor) for which the options have changed.
+    */
+  val textEditor: TextEditor
 }
 
 object TextEditorOptionsChangeEvent {
@@ -22,25 +21,5 @@ object TextEditorOptionsChangeEvent {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any], textEditor = textEditor.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextEditorOptionsChangeEvent]
   }
-  @scala.inline
-  implicit class TextEditorOptionsChangeEventOps[Self <: TextEditorOptionsChangeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOptions(value: TextEditorOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextEditor(value: TextEditor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textEditor")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

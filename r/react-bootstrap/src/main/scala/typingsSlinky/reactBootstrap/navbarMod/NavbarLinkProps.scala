@@ -11,47 +11,28 @@ import scala.scalajs.js.annotation._
 /**
   * the classes below aren't present in lib/
   */
-@js.native
 trait NavbarLinkProps
   extends AllHTMLAttributes[NavbarLink]
      with ClassAttributes[NavbarLink] {
   @JSName("href")
-  var href_NavbarLinkProps: String = js.native
+  var href_NavbarLinkProps: String
   @JSName("onClick")
-  var onClick_NavbarLinkProps: js.UndefOr[MouseEventHandler[_]] = js.native
+  var onClick_NavbarLinkProps: js.UndefOr[MouseEventHandler[_]] = js.undefined
 }
 
 object NavbarLinkProps {
   @scala.inline
-  def apply(href: String): NavbarLinkProps = {
+  def apply(
+    href: String,
+    AllHTMLAttributes: AllHTMLAttributes[NavbarLink] = null,
+    ClassAttributes: ClassAttributes[NavbarLink] = null,
+    onClick: SyntheticMouseEvent[_] => Unit = null
+  ): NavbarLinkProps = {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
     __obj.asInstanceOf[NavbarLinkProps]
   }
-  @scala.inline
-  implicit class NavbarLinkPropsOps[Self <: NavbarLinkProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: SyntheticMouseEvent[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

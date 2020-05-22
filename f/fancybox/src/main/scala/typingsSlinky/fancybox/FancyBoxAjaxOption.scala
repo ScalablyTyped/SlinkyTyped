@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FancyBoxAjaxOption extends js.Object {
   /**
     * Object containing settings for ajax request
     */
-  var settings: JQueryAjaxSettings = js.native
+  var settings: JQueryAjaxSettings
 }
 
 object FancyBoxAjaxOption {
@@ -19,19 +18,5 @@ object FancyBoxAjaxOption {
     val __obj = js.Dynamic.literal(settings = settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[FancyBoxAjaxOption]
   }
-  @scala.inline
-  implicit class FancyBoxAjaxOptionOps[Self <: FancyBoxAjaxOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSettings(value: JQueryAjaxSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

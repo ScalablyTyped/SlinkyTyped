@@ -30,77 +30,20 @@ trait Location extends js.Object {
 
 object Location {
   @scala.inline
-  def apply(): Location = {
+  def apply(
+    availablePortSpeeds: AvailablePortSpeeds = null,
+    availableProviders: ProviderList = null,
+    locationCode: LocationCode = null,
+    locationName: LocationName = null,
+    region: Region = null
+  ): Location = {
     val __obj = js.Dynamic.literal()
+    if (availablePortSpeeds != null) __obj.updateDynamic("availablePortSpeeds")(availablePortSpeeds.asInstanceOf[js.Any])
+    if (availableProviders != null) __obj.updateDynamic("availableProviders")(availableProviders.asInstanceOf[js.Any])
+    if (locationCode != null) __obj.updateDynamic("locationCode")(locationCode.asInstanceOf[js.Any])
+    if (locationName != null) __obj.updateDynamic("locationName")(locationName.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
     __obj.asInstanceOf[Location]
   }
-  @scala.inline
-  implicit class LocationOps[Self <: Location] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailablePortSpeeds(value: AvailablePortSpeeds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availablePortSpeeds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailablePortSpeeds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availablePortSpeeds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailableProviders(value: ProviderList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableProviders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableProviders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableProviders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationCode(value: LocationCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationName(value: LocationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: Region): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

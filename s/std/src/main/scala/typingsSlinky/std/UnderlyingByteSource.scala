@@ -5,83 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnderlyingByteSource extends js.Object {
-  var autoAllocateChunkSize: js.UndefOr[Double] = js.native
-  var cancel: js.UndefOr[ReadableStreamErrorCallback] = js.native
-  var pull: js.UndefOr[ReadableByteStreamControllerCallback] = js.native
-  var start: js.UndefOr[ReadableByteStreamControllerCallback] = js.native
-  var `type`: bytes = js.native
+  var autoAllocateChunkSize: js.UndefOr[Double] = js.undefined
+  var cancel: js.UndefOr[ReadableStreamErrorCallback] = js.undefined
+  var pull: js.UndefOr[ReadableByteStreamControllerCallback] = js.undefined
+  var start: js.UndefOr[ReadableByteStreamControllerCallback] = js.undefined
+  var `type`: bytes
 }
 
 object UnderlyingByteSource {
   @scala.inline
-  def apply(`type`: bytes): UnderlyingByteSource = {
+  def apply(
+    `type`: bytes,
+    autoAllocateChunkSize: js.UndefOr[Double] = js.undefined,
+    cancel: /* reason */ js.Any => Unit | js.Thenable[Unit] = null,
+    pull: /* controller */ ReadableByteStreamController => Unit | js.Thenable[Unit] = null,
+    start: /* controller */ ReadableByteStreamController => Unit | js.Thenable[Unit] = null
+  ): UnderlyingByteSource = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoAllocateChunkSize)) __obj.updateDynamic("autoAllocateChunkSize")(autoAllocateChunkSize.get.asInstanceOf[js.Any])
+    if (cancel != null) __obj.updateDynamic("cancel")(js.Any.fromFunction1(cancel))
+    if (pull != null) __obj.updateDynamic("pull")(js.Any.fromFunction1(pull))
+    if (start != null) __obj.updateDynamic("start")(js.Any.fromFunction1(start))
     __obj.asInstanceOf[UnderlyingByteSource]
   }
-  @scala.inline
-  implicit class UnderlyingByteSourceOps[Self <: UnderlyingByteSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: bytes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoAllocateChunkSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAllocateChunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAllocateChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAllocateChunkSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancel(value: /* reason */ js.Any => Unit | js.Thenable[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPull(value: /* controller */ ReadableByteStreamController => Unit | js.Thenable[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pull")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: /* controller */ ReadableByteStreamController => Unit | js.Thenable[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

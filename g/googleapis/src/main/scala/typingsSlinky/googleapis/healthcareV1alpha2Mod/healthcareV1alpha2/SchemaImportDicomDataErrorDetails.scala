@@ -19,29 +19,10 @@ trait SchemaImportDicomDataErrorDetails extends js.Object {
 
 object SchemaImportDicomDataErrorDetails {
   @scala.inline
-  def apply(): SchemaImportDicomDataErrorDetails = {
+  def apply(sampleErrors: js.Array[SchemaErrorDetail] = null): SchemaImportDicomDataErrorDetails = {
     val __obj = js.Dynamic.literal()
+    if (sampleErrors != null) __obj.updateDynamic("sampleErrors")(sampleErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImportDicomDataErrorDetails]
   }
-  @scala.inline
-  implicit class SchemaImportDicomDataErrorDetailsOps[Self <: SchemaImportDicomDataErrorDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSampleErrors(value: js.Array[SchemaErrorDetail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleErrors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

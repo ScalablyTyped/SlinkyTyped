@@ -18,41 +18,11 @@ trait VpcAttachment extends js.Object {
 
 object VpcAttachment {
   @scala.inline
-  def apply(): VpcAttachment = {
+  def apply(State: AttachmentStatus = null, VpcId: String = null): VpcAttachment = {
     val __obj = js.Dynamic.literal()
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcAttachment]
   }
-  @scala.inline
-  implicit class VpcAttachmentOps[Self <: VpcAttachment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withState(value: AttachmentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

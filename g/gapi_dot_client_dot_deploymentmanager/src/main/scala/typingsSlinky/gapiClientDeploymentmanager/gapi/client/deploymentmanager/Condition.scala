@@ -4,107 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Condition extends js.Object {
   /** Trusted attributes supplied by the IAM system. */
-  var iam: js.UndefOr[String] = js.native
+  var iam: js.UndefOr[String] = js.undefined
   /** An operator to apply the subject with. */
-  var op: js.UndefOr[String] = js.native
+  var op: js.UndefOr[String] = js.undefined
   /** Trusted attributes discharged by the service. */
-  var svc: js.UndefOr[String] = js.native
+  var svc: js.UndefOr[String] = js.undefined
   /** Trusted attributes supplied by any service that owns resources and uses the IAM system for access control. */
-  var sys: js.UndefOr[String] = js.native
+  var sys: js.UndefOr[String] = js.undefined
   /** DEPRECATED. Use 'values' instead. */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.undefined
   /** The objects of the condition. This is mutually exclusive with 'value'. */
-  var values: js.UndefOr[js.Array[String]] = js.native
+  var values: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object Condition {
   @scala.inline
-  def apply(): Condition = {
+  def apply(
+    iam: String = null,
+    op: String = null,
+    svc: String = null,
+    sys: String = null,
+    value: String = null,
+    values: js.Array[String] = null
+  ): Condition = {
     val __obj = js.Dynamic.literal()
+    if (iam != null) __obj.updateDynamic("iam")(iam.asInstanceOf[js.Any])
+    if (op != null) __obj.updateDynamic("op")(op.asInstanceOf[js.Any])
+    if (svc != null) __obj.updateDynamic("svc")(svc.asInstanceOf[js.Any])
+    if (sys != null) __obj.updateDynamic("sys")(sys.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[Condition]
   }
-  @scala.inline
-  implicit class ConditionOps[Self <: Condition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIam(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iam")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iam")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("op")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("op")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSys(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

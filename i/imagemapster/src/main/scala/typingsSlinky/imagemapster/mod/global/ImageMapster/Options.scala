@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends RenderingOptions {
   /**
     *
@@ -15,7 +14,7 @@ trait Options extends RenderingOptions {
     * a "key" property identifying a valid mapKey, and additional
     * rendering options specific to that area or group
     */
-  var areas: js.UndefOr[js.Array[AreaRenderingOptions]] = js.native
+  var areas: js.UndefOr[js.Array[AreaRenderingOptions]] = js.undefined
   /**
     * a jQuery object whose elements are bound to the map.
     *
@@ -25,7 +24,7 @@ trait Options extends RenderingOptions {
     * attribute. If more than one element in the list has the same value,
     * the action will affect all matching elements.
     */
-  var boundList: js.UndefOr[JQuery] = js.native
+  var boundList: js.UndefOr[JQuery] = js.undefined
   /**
     * Clicking on a link should cause the browser to navigate to the href
     * whenever it's not a hash sign (#). Version 1.2.4.050 and later
@@ -42,7 +41,7 @@ trait Options extends RenderingOptions {
     * you can include it on just one, and clicking any area will cause the
     * appropraite navigation.
     */
-  var clickNavigate: js.UndefOr[Boolean] = js.native
+  var clickNavigate: js.UndefOr[Boolean] = js.undefined
   /**
     * time (in milliseconds) to wait for images to load before giving up
     *
@@ -53,7 +52,7 @@ trait Options extends RenderingOptions {
     * will give up. If you have particularly large pages or images, you
     * may want to increase this to account for long load times.
     */
-  var configTimeout: js.UndefOr[Double] = js.native
+  var configTimeout: js.UndefOr[Double] = js.undefined
   /**
     * an attribute on items in a boundList that corresponds to the value
     * of the mapKey attributes.
@@ -63,7 +62,7 @@ trait Options extends RenderingOptions {
     * imageMap mapKey tag. Any item in the boundList with missing or
     * mismatched data will be ignored.
     */
-  var listKey: js.UndefOr[String] = js.native
+  var listKey: js.UndefOr[String] = js.undefined
   /**
     * attribute to set or remove when an area is selected or deselected
     *
@@ -71,7 +70,7 @@ trait Options extends RenderingOptions {
     * this attribute on the list element that matches that area based on
     * their respective keys.
     */
-  var listSelectedAttribute: js.UndefOr[String] = js.native
+  var listSelectedAttribute: js.UndefOr[String] = js.undefined
   /**
     * a class to add or remove when an area is selected or deselected
     *
@@ -80,7 +79,7 @@ trait Options extends RenderingOptions {
     * used to easily create any kind of associated action when areas on
     * the map are changed.
     */
-  var listSelectedClass: js.UndefOr[String] = js.native
+  var listSelectedClass: js.UndefOr[String] = js.undefined
   /**
     * an attribute identifying each imagemap area.
     *
@@ -113,7 +112,7 @@ trait Options extends RenderingOptions {
     * of each group. When the area is physically moused over, the first
     * key listed will identify the group that's effective for that action.
     */
-  var mapKey: js.UndefOr[String] = js.native
+  var mapKey: js.UndefOr[String] = js.undefined
   /**
     * an attribute on each area tag containing additional descriptive
     * information about an area.
@@ -134,7 +133,7 @@ trait Options extends RenderingOptions {
     * If there are grouped areas (areas with the same key), then the value
     * from the first area found with data in this attribute will be used.
     */
-  var mapValue: js.UndefOr[String] = js.native
+  var mapValue: js.UndefOr[String] = js.undefined
   /**
     * delay removing highlight when mouse exits an area (1.2.5b36)
     *
@@ -162,7 +161,7 @@ trait Options extends RenderingOptions {
     * is intended to help keep the higlights active for imagemaps that are
     * sparse, or have very small areas.
     */
-  var mouseoutDelay: js.UndefOr[Double] = js.native
+  var mouseoutDelay: js.UndefOr[Double] = js.undefined
   /**
     * Treat areas containing the onhref attribute (or missing the href
     * attribute) as masks. This is true by default.
@@ -186,7 +185,7 @@ trait Options extends RenderingOptions {
     * different color. This can be specified for each area (see the
     * fillColorMask option below) to create the best possible effect.
     */
-  var noHrefIsMask: js.UndefOr[Boolean] = js.native
+  var noHrefIsMask: js.UndefOr[Boolean] = js.undefined
   /**
     * callback when a hotspot area is clicked. Return false to cancel
     * default select action, or true to navigate to the 'href'
@@ -200,7 +199,7 @@ trait Options extends RenderingOptions {
     * This can be used to perform additional actions on a click without
     * binding another event and having to obtain information manually.
     */
-  var onClick: js.UndefOr[js.Function1[/* data */ OnClickData, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* data */ OnClickData, Unit]] = js.undefined
   /**
     * a callback when the mapster has finished initial configuration
     *
@@ -217,7 +216,7 @@ trait Options extends RenderingOptions {
     * because the alternate image is loaded by the client at configure
     * time to ensure it is available immediately when needed.
     */
-  var onConfigured: js.UndefOr[js.Function1[/* success */ Boolean, Unit]] = js.native
+  var onConfigured: js.UndefOr[js.Function1[/* success */ Boolean, Unit]] = js.undefined
   /**
     * a callback on mapster initialization that provides summary data
     * about the image map, and expects a jQuery list to be returned.
@@ -230,34 +229,34 @@ trait Options extends RenderingOptions {
     * that make up the bound list, the same as if it was assigned
     * manually.
     */
-  var onGetList: js.UndefOr[js.Function1[/* data */ OnGetListData, JQuery]] = js.native
+  var onGetList: js.UndefOr[js.Function1[/* data */ OnGetListData, JQuery]] = js.undefined
   /**
     * callback when mouse leavesd a bound area.
     *
     * Callback when the mouse leaves a bound area. The data structure
     * passed to the callback is the same as onMouseover.
     */
-  var onMouseout: js.UndefOr[js.Function1[/* data */ OnMouseData, Unit]] = js.native
+  var onMouseout: js.UndefOr[js.Function1[/* data */ OnMouseData, Unit]] = js.undefined
   /**
     * callback when mouse enters a bound area.
     *
     * This function is called when the mouse enters a bound area.
     */
-  var onMouseover: js.UndefOr[js.Function1[/* data */ OnMouseData, Unit]] = js.native
+  var onMouseover: js.UndefOr[js.Function1[/* data */ OnMouseData, Unit]] = js.undefined
   /**
     * callback when a toolTip is created
     *
     * This can be used to control tooltip closing behavior directly, if
     * desired.
     */
-  var onShowToolTip: js.UndefOr[js.Function1[/* data */ OnShowToolTipData, Unit]] = js.native
+  var onShowToolTip: js.UndefOr[js.Function1[/* data */ OnShowToolTipData, Unit]] = js.undefined
   /**
     * callback when area state is changed (either highlight or select).
     *
     * onStateChange can be used to get more specific information than the
     * mouseover or click events.
     */
-  var onStateChange: js.UndefOr[js.Function1[/* data */ OnStateChangeData, Unit]] = js.native
+  var onStateChange: js.UndefOr[js.Function1[/* data */ OnStateChangeData, Unit]] = js.undefined
   /**
     * Automatically scale imagemaps to match the size of a
     * dynamically-scaled image.
@@ -277,7 +276,7 @@ trait Options extends RenderingOptions {
     * If this behavior is not desired for some reason, this can be
     * disabled by setting this option to false.
     */
-  var scaleMap: js.UndefOr[Boolean] = js.native
+  var scaleMap: js.UndefOr[Boolean] = js.undefined
   /**
     * enable tooltips
     *
@@ -289,7 +288,7 @@ trait Options extends RenderingOptions {
     * rather enables tooltips for the entire map. At the item level, only
     * the presence of tooltip data is necessary for a tooltip to appear.
     */
-  var showToolTip: js.UndefOr[Boolean] = js.native
+  var showToolTip: js.UndefOr[Boolean] = js.undefined
   /**
     * sort the values before calling onGetList
     *
@@ -297,7 +296,7 @@ trait Options extends RenderingOptions {
     * ascending order by the area value from mapValue. If "desc" is
     * passed, the list will be sorted in descending order.
     */
-  var sortList: js.UndefOr[Boolean | asc | desc] = js.native
+  var sortList: js.UndefOr[Boolean | asc | desc] = js.undefined
   /**
     * specify the behavior that causes a toolTip to close.
     *
@@ -323,7 +322,7 @@ trait Options extends RenderingOptions {
     * tooltips never closing, leaving it to you to close them manually
     * though the tooltip method.
     */
-  var toolTipClose: js.UndefOr[js.Array[ToolTipCloseEvent]] = js.native
+  var toolTipClose: js.UndefOr[js.Array[ToolTipCloseEvent]] = js.undefined
   /**
     * HTML describing the popup that will be created for tooltips.
     *
@@ -337,331 +336,118 @@ trait Options extends RenderingOptions {
     * it can't be placed within the image, it will be placed in the
     * lower-right corner and extend outside the image.
     */
-  var toolTipContainer: js.UndefOr[String | JQuery] = js.native
+  var toolTipContainer: js.UndefOr[String | JQuery] = js.undefined
   /**
     * add "classname" class to the wrapper created around the image, or
     * copy classes from the image if "true"
     */
-  var wrapClass: js.UndefOr[String | Boolean] = js.native
+  var wrapClass: js.UndefOr[String | Boolean] = js.undefined
   /**
     * add CSS to the wrapper created around the image
     */
-  var wrapCss: js.UndefOr[String | Boolean] = js.native
+  var wrapCss: js.UndefOr[String | Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    altImage: String = null,
+    altImageFill: js.UndefOr[Boolean] = js.undefined,
+    altImageOpacity: js.UndefOr[Double] = js.undefined,
+    altImageStroke: js.UndefOr[Boolean] = js.undefined,
+    areas: js.Array[AreaRenderingOptions] = null,
+    boundList: JQuery = null,
+    clickNavigate: js.UndefOr[Boolean] = js.undefined,
+    configTimeout: js.UndefOr[Double] = js.undefined,
+    fade: js.UndefOr[Boolean] = js.undefined,
+    fadeDuration: js.UndefOr[Double] = js.undefined,
+    fill: js.UndefOr[Boolean] = js.undefined,
+    fillColor: String = null,
+    fillColorMask: String = null,
+    fillOpacity: js.UndefOr[Double] = js.undefined,
+    highlight: js.UndefOr[Boolean] = js.undefined,
+    isDeselectable: js.UndefOr[Boolean] = js.undefined,
+    isSelectable: js.UndefOr[Boolean] = js.undefined,
+    listKey: String = null,
+    listSelectedAttribute: String = null,
+    listSelectedClass: String = null,
+    mapKey: String = null,
+    mapValue: String = null,
+    mouseoutDelay: js.UndefOr[Double] = js.undefined,
+    noHrefIsMask: js.UndefOr[Boolean] = js.undefined,
+    onClick: /* data */ OnClickData => Unit = null,
+    onConfigured: /* success */ Boolean => Unit = null,
+    onGetList: /* data */ OnGetListData => JQuery = null,
+    onMouseout: /* data */ OnMouseData => Unit = null,
+    onMouseover: /* data */ OnMouseData => Unit = null,
+    onShowToolTip: /* data */ OnShowToolTipData => Unit = null,
+    onStateChange: /* data */ OnStateChangeData => Unit = null,
+    render_highlight: String | RenderingOptions = null,
+    render_select: String | RenderingOptions = null,
+    scaleMap: js.UndefOr[Boolean] = js.undefined,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    showToolTip: js.UndefOr[Boolean] = js.undefined,
+    singleSelect: js.UndefOr[Boolean] = js.undefined,
+    sortList: Boolean | asc | desc = null,
+    staticState: js.UndefOr[Boolean] = js.undefined,
+    stroke: js.UndefOr[Boolean] = js.undefined,
+    strokeColor: String = null,
+    strokeOpacity: js.UndefOr[Double] = js.undefined,
+    strokeWidth: js.UndefOr[Double] = js.undefined,
+    toolTipClose: js.Array[ToolTipCloseEvent] = null,
+    toolTipContainer: String | JQuery = null,
+    wrapClass: String | Boolean = null,
+    wrapCss: String | Boolean = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (altImage != null) __obj.updateDynamic("altImage")(altImage.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageFill)) __obj.updateDynamic("altImageFill")(altImageFill.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageOpacity)) __obj.updateDynamic("altImageOpacity")(altImageOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageStroke)) __obj.updateDynamic("altImageStroke")(altImageStroke.get.asInstanceOf[js.Any])
+    if (areas != null) __obj.updateDynamic("areas")(areas.asInstanceOf[js.Any])
+    if (boundList != null) __obj.updateDynamic("boundList")(boundList.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickNavigate)) __obj.updateDynamic("clickNavigate")(clickNavigate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(configTimeout)) __obj.updateDynamic("configTimeout")(configTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fade)) __obj.updateDynamic("fade")(fade.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fadeDuration)) __obj.updateDynamic("fadeDuration")(fadeDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.get.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (fillColorMask != null) __obj.updateDynamic("fillColorMask")(fillColorMask.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillOpacity)) __obj.updateDynamic("fillOpacity")(fillOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlight)) __obj.updateDynamic("highlight")(highlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDeselectable)) __obj.updateDynamic("isDeselectable")(isDeselectable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSelectable)) __obj.updateDynamic("isSelectable")(isSelectable.get.asInstanceOf[js.Any])
+    if (listKey != null) __obj.updateDynamic("listKey")(listKey.asInstanceOf[js.Any])
+    if (listSelectedAttribute != null) __obj.updateDynamic("listSelectedAttribute")(listSelectedAttribute.asInstanceOf[js.Any])
+    if (listSelectedClass != null) __obj.updateDynamic("listSelectedClass")(listSelectedClass.asInstanceOf[js.Any])
+    if (mapKey != null) __obj.updateDynamic("mapKey")(mapKey.asInstanceOf[js.Any])
+    if (mapValue != null) __obj.updateDynamic("mapValue")(mapValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseoutDelay)) __obj.updateDynamic("mouseoutDelay")(mouseoutDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noHrefIsMask)) __obj.updateDynamic("noHrefIsMask")(noHrefIsMask.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onConfigured != null) __obj.updateDynamic("onConfigured")(js.Any.fromFunction1(onConfigured))
+    if (onGetList != null) __obj.updateDynamic("onGetList")(js.Any.fromFunction1(onGetList))
+    if (onMouseout != null) __obj.updateDynamic("onMouseout")(js.Any.fromFunction1(onMouseout))
+    if (onMouseover != null) __obj.updateDynamic("onMouseover")(js.Any.fromFunction1(onMouseover))
+    if (onShowToolTip != null) __obj.updateDynamic("onShowToolTip")(js.Any.fromFunction1(onShowToolTip))
+    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction1(onStateChange))
+    if (render_highlight != null) __obj.updateDynamic("render_highlight")(render_highlight.asInstanceOf[js.Any])
+    if (render_select != null) __obj.updateDynamic("render_select")(render_select.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleMap)) __obj.updateDynamic("scaleMap")(scaleMap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showToolTip)) __obj.updateDynamic("showToolTip")(showToolTip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleSelect)) __obj.updateDynamic("singleSelect")(singleSelect.get.asInstanceOf[js.Any])
+    if (sortList != null) __obj.updateDynamic("sortList")(sortList.asInstanceOf[js.Any])
+    if (!js.isUndefined(staticState)) __obj.updateDynamic("staticState")(staticState.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stroke)) __obj.updateDynamic("stroke")(stroke.get.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeOpacity)) __obj.updateDynamic("strokeOpacity")(strokeOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeWidth)) __obj.updateDynamic("strokeWidth")(strokeWidth.get.asInstanceOf[js.Any])
+    if (toolTipClose != null) __obj.updateDynamic("toolTipClose")(toolTipClose.asInstanceOf[js.Any])
+    if (toolTipContainer != null) __obj.updateDynamic("toolTipContainer")(toolTipContainer.asInstanceOf[js.Any])
+    if (wrapClass != null) __obj.updateDynamic("wrapClass")(wrapClass.asInstanceOf[js.Any])
+    if (wrapCss != null) __obj.updateDynamic("wrapCss")(wrapCss.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAreas(value: js.Array[AreaRenderingOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundList(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickNavigate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickNavigate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickNavigate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickNavigate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListSelectedAttribute(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelectedAttribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListSelectedAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelectedAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListSelectedClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelectedClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListSelectedClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelectedClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseoutDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseoutDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseoutDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoHrefIsMask(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noHrefIsMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoHrefIsMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noHrefIsMask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* data */ OnClickData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnConfigured(value: /* success */ Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onConfigured")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnConfigured: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onConfigured")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnGetList(value: /* data */ OnGetListData => JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGetList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGetList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGetList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseout(value: /* data */ OnMouseData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseout")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseover(value: /* data */ OnMouseData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseover")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShowToolTip(value: /* data */ OnShowToolTipData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowToolTip")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShowToolTip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowToolTip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStateChange(value: /* data */ OnStateChangeData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowToolTip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowToolTip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortList(value: Boolean | asc | desc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolTipClose(value: js.Array[ToolTipCloseEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTipClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolTipClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTipClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolTipContainer(value: String | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTipContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolTipContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTipContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapClass(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapCss(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapCss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapCss")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

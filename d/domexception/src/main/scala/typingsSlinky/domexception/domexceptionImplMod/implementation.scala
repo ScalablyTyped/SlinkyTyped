@@ -13,5 +13,11 @@ class implementation protected () extends DOMExceptionImpl {
     hasMessageName: js.Tuple2[js.UndefOr[String], js.UndefOr[String]],
     privateData: js.Object
   ) = this()
+  /* CompleteClass */
+  override val code: String = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

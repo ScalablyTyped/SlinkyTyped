@@ -12,12 +12,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppendFileOption extends js.Object {
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[AppendFileCompleteCallback] = js.native
+  var complete: js.UndefOr[AppendFileCompleteCallback] = js.undefined
   /** 要追加的文本或二进制数据 */
-  var data: String | ArrayBuffer = js.native
+  var data: String | ArrayBuffer
   /** 指定写入文件的字符编码
     *
     * 可选值：
@@ -30,90 +29,31 @@ trait AppendFileOption extends js.Object {
     * - 'latin1': ; */
   var encoding: js.UndefOr[
     ascii | base64 | binary | hex | `ucs2Slashucs-2Slashutf16leSlashutf-16le` | `utf-8Slashutf8` | latin1
-  ] = js.native
+  ] = js.undefined
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[AppendFileFailCallback] = js.native
+  var fail: js.UndefOr[AppendFileFailCallback] = js.undefined
   /** 要追加内容的文件路径 */
-  var filePath: String = js.native
+  var filePath: String
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[AppendFileSuccessCallback] = js.native
+  var success: js.UndefOr[AppendFileSuccessCallback] = js.undefined
 }
 
 object AppendFileOption {
   @scala.inline
-  def apply(data: String | ArrayBuffer, filePath: String): AppendFileOption = {
+  def apply(
+    data: String | ArrayBuffer,
+    filePath: String,
+    complete: /* res */ GeneralCallbackResult => Unit = null,
+    encoding: ascii | base64 | binary | hex | `ucs2Slashucs-2Slashutf16leSlashutf-16le` | `utf-8Slashutf8` | latin1 = null,
+    fail: /* result */ AppendFileFailCallbackResult => Unit = null,
+    success: /* res */ GeneralCallbackResult => Unit = null
+  ): AppendFileOption = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], filePath = filePath.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[AppendFileOption]
   }
-  @scala.inline
-  implicit class AppendFileOptionOps[Self <: AppendFileOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: String | ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(
-      value: ascii | base64 | binary | hex | `ucs2Slashucs-2Slashutf16leSlashutf-16le` | `utf-8Slashutf8` | latin1
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* result */ AppendFileFailCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

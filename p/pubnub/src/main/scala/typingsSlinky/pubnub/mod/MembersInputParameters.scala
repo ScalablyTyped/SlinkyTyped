@@ -1,41 +1,31 @@
 package typingsSlinky.pubnub.mod
 
 import typingsSlinky.pubnub.anon.Custom
+import typingsSlinky.pubnub.anon.CustomFields
+import typingsSlinky.pubnub.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MembersInputParameters extends GetObjectsParameters {
-  var spaceId: String = js.native
-  var users: js.Array[Custom] = js.native
+  var spaceId: String
+  var users: js.Array[Custom]
 }
 
 object MembersInputParameters {
   @scala.inline
-  def apply(spaceId: String, users: js.Array[Custom]): MembersInputParameters = {
+  def apply(
+    spaceId: String,
+    users: js.Array[Custom],
+    include: CustomFields = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    page: Next = null
+  ): MembersInputParameters = {
     val __obj = js.Dynamic.literal(spaceId = spaceId.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
     __obj.asInstanceOf[MembersInputParameters]
   }
-  @scala.inline
-  implicit class MembersInputParametersOps[Self <: MembersInputParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSpaceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsers(value: js.Array[Custom]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

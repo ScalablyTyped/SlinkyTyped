@@ -15,7 +15,7 @@ trait UpdateEndpointInput extends js.Object {
     */
   var EndpointName: typingsSlinky.awsSdk.sagemakerMod.EndpointName = js.native
   /**
-    * When you are updating endpoint resources with RetainAllVariantProperties, whose value is set to true, ExcludeRetainedVariantProperties specifies the list of type VariantProperty to override with the values provided by EndpointConfig. If you don't specify a value for ExcludeAllVariantProperties, no variant properties are overridden. 
+    * When you are updating endpoint resources with UpdateEndpointInput$RetainAllVariantProperties, whose value is set to true, ExcludeRetainedVariantProperties specifies the list of type VariantProperty to override with the values provided by EndpointConfig. If you don't specify a value for ExcludeAllVariantProperties, no variant properties are overridden. 
     */
   var ExcludeRetainedVariantProperties: js.UndefOr[VariantPropertyList] = js.native
   /**
@@ -26,53 +26,16 @@ trait UpdateEndpointInput extends js.Object {
 
 object UpdateEndpointInput {
   @scala.inline
-  def apply(EndpointConfigName: EndpointConfigName, EndpointName: EndpointName): UpdateEndpointInput = {
+  def apply(
+    EndpointConfigName: EndpointConfigName,
+    EndpointName: EndpointName,
+    ExcludeRetainedVariantProperties: VariantPropertyList = null,
+    RetainAllVariantProperties: js.UndefOr[Boolean] = js.undefined
+  ): UpdateEndpointInput = {
     val __obj = js.Dynamic.literal(EndpointConfigName = EndpointConfigName.asInstanceOf[js.Any], EndpointName = EndpointName.asInstanceOf[js.Any])
+    if (ExcludeRetainedVariantProperties != null) __obj.updateDynamic("ExcludeRetainedVariantProperties")(ExcludeRetainedVariantProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(RetainAllVariantProperties)) __obj.updateDynamic("RetainAllVariantProperties")(RetainAllVariantProperties.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateEndpointInput]
   }
-  @scala.inline
-  implicit class UpdateEndpointInputOps[Self <: UpdateEndpointInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpointConfigName(value: EndpointConfigName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointConfigName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndpointName(value: EndpointName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcludeRetainedVariantProperties(value: VariantPropertyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeRetainedVariantProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeRetainedVariantProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeRetainedVariantProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetainAllVariantProperties(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainAllVariantProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetainAllVariantProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainAllVariantProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

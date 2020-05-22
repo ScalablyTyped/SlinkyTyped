@@ -4,30 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PerfyResult extends js.Object {
   /** UTC end time of the execution (low-resolution). e.g. 1533302466486 */
-  val endTime: Double = js.native
+  val endTime: Double
   /** Float representation of full elapsed time in milliseconds. e.g. 1235.125 */
-  val fullMilliseconds: Double = js.native
+  val fullMilliseconds: Double
   /** Float representation of full elapsed time in nanoseconds. e.g. 1235125283 */
-  val fullNanoseconds: Double = js.native
+  val fullNanoseconds: Double
   /** Alias of `time` */
-  val fullSeconds: Double = js.native
+  val fullSeconds: Double
   /** Nanoseconds portion converted to milliseconds. 235.125283 */
-  val milliseconds: Double = js.native
+  val milliseconds: Double
   /** Initialized name of the performance instance */
-  val name: String = js.native
+  val name: String
   /** Nanoseconds portion of the elapsed time. e.g. 235125283 */
-  val nanoseconds: Double = js.native
+  val nanoseconds: Double
   /** Seconds portion of the elapsed time. e.g. 1 */
-  val seconds: Double = js.native
+  val seconds: Double
   /** UTC start time of the execution (low-resolution). e.g. 1533302465251 */
-  val startTime: Double = js.native
+  val startTime: Double
   /** Text summary shorthand for elapsed time */
-  val summary: String = js.native
+  val summary: String
   /** Number — Float representation of full elapsed time in seconds. e.g. 1.235 */
-  val time: Double = js.native
+  val time: Double
 }
 
 object PerfyResult {
@@ -48,79 +47,5 @@ object PerfyResult {
     val __obj = js.Dynamic.literal(endTime = endTime.asInstanceOf[js.Any], fullMilliseconds = fullMilliseconds.asInstanceOf[js.Any], fullNanoseconds = fullNanoseconds.asInstanceOf[js.Any], fullSeconds = fullSeconds.asInstanceOf[js.Any], milliseconds = milliseconds.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nanoseconds = nanoseconds.asInstanceOf[js.Any], seconds = seconds.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], summary = summary.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerfyResult]
   }
-  @scala.inline
-  implicit class PerfyResultOps[Self <: PerfyResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullMilliseconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMilliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullNanoseconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullNanoseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMilliseconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("milliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNanoseconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nanoseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

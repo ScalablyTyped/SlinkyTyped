@@ -4,34 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DebuggerStatement
   extends BaseNode
      with Statement {
   @JSName("type")
-  var type_DebuggerStatement: typingsSlinky.estree.estreeStrings.DebuggerStatement = js.native
+  var type_DebuggerStatement: typingsSlinky.estree.estreeStrings.DebuggerStatement
 }
 
 object DebuggerStatement {
   @scala.inline
-  def apply(`type`: typingsSlinky.estree.estreeStrings.DebuggerStatement): DebuggerStatement = {
+  def apply(
+    `type`: typingsSlinky.estree.estreeStrings.DebuggerStatement,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): DebuggerStatement = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[DebuggerStatement]
   }
-  @scala.inline
-  implicit class DebuggerStatementOps[Self <: DebuggerStatement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.estree.estreeStrings.DebuggerStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

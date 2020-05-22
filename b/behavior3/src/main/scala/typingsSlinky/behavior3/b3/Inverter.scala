@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * for `FAILURE` and `FAILURE` for `SUCCESS`.
   *
   */
-@js.native
 trait Inverter extends BaseNode
 
 object Inverter {

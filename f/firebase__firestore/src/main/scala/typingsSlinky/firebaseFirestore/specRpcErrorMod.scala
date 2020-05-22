@@ -14,6 +14,10 @@ object specRpcErrorMod extends js.Object {
     def this(code: Double, message: String) = this()
     def this(code: Code, message: String) = this()
     var code: Double = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
 }

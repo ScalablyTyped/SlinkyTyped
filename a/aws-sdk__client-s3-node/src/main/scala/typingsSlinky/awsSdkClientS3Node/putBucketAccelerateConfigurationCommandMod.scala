@@ -27,6 +27,8 @@ object putBucketAccelerateConfigurationCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutBucketAccelerateConfigurationInput) = this()
+    /* CompleteClass */
+    override val input: PutBucketAccelerateConfigurationInput = js.native
     val middlewareStack: MiddlewareStack[
         PutBucketAccelerateConfigurationInput, 
         PutBucketAccelerateConfigurationOutput, 
@@ -35,6 +37,11 @@ object putBucketAccelerateConfigurationCommandMod extends js.Object {
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[PutBucketAccelerateConfigurationInput, PutBucketAccelerateConfigurationOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[PutBucketAccelerateConfigurationInput, PutBucketAccelerateConfigurationOutput] = js.native
   }

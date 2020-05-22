@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Deferrable extends js.Object {
-  var deferrable: js.UndefOr[Boolean] = js.native
-  var readOnly: js.UndefOr[Boolean] = js.native
-  var tiLevel: js.UndefOr[isolationLevel] = js.native
+  var deferrable: js.UndefOr[Boolean] = js.undefined
+  var readOnly: js.UndefOr[Boolean] = js.undefined
+  var tiLevel: js.UndefOr[isolationLevel] = js.undefined
 }
 
 object Deferrable {
   @scala.inline
-  def apply(): Deferrable = {
+  def apply(
+    deferrable: js.UndefOr[Boolean] = js.undefined,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    tiLevel: isolationLevel = null
+  ): Deferrable = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deferrable)) __obj.updateDynamic("deferrable")(deferrable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (tiLevel != null) __obj.updateDynamic("tiLevel")(tiLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Deferrable]
   }
-  @scala.inline
-  implicit class DeferrableOps[Self <: Deferrable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeferrable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferrable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferrable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferrable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiLevel(value: isolationLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiLevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

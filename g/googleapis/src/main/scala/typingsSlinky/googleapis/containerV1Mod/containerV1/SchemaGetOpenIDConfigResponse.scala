@@ -42,101 +42,24 @@ trait SchemaGetOpenIDConfigResponse extends js.Object {
 
 object SchemaGetOpenIDConfigResponse {
   @scala.inline
-  def apply(): SchemaGetOpenIDConfigResponse = {
+  def apply(
+    claims_supported: js.Array[String] = null,
+    grant_types: js.Array[String] = null,
+    id_token_signing_alg_values_supported: js.Array[String] = null,
+    issuer: String = null,
+    jwks_uri: String = null,
+    response_types_supported: js.Array[String] = null,
+    subject_types_supported: js.Array[String] = null
+  ): SchemaGetOpenIDConfigResponse = {
     val __obj = js.Dynamic.literal()
+    if (claims_supported != null) __obj.updateDynamic("claims_supported")(claims_supported.asInstanceOf[js.Any])
+    if (grant_types != null) __obj.updateDynamic("grant_types")(grant_types.asInstanceOf[js.Any])
+    if (id_token_signing_alg_values_supported != null) __obj.updateDynamic("id_token_signing_alg_values_supported")(id_token_signing_alg_values_supported.asInstanceOf[js.Any])
+    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
+    if (jwks_uri != null) __obj.updateDynamic("jwks_uri")(jwks_uri.asInstanceOf[js.Any])
+    if (response_types_supported != null) __obj.updateDynamic("response_types_supported")(response_types_supported.asInstanceOf[js.Any])
+    if (subject_types_supported != null) __obj.updateDynamic("subject_types_supported")(subject_types_supported.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetOpenIDConfigResponse]
   }
-  @scala.inline
-  implicit class SchemaGetOpenIDConfigResponseOps[Self <: SchemaGetOpenIDConfigResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClaims_supported(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claims_supported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaims_supported: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claims_supported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrant_types(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grant_types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrant_types: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grant_types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId_token_signing_alg_values_supported(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id_token_signing_alg_values_supported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId_token_signing_alg_values_supported: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id_token_signing_alg_values_supported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssuer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJwks_uri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwks_uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJwks_uri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwks_uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse_types_supported(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response_types_supported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse_types_supported: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response_types_supported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject_types_supported(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject_types_supported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject_types_supported: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject_types_supported")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

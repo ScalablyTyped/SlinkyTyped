@@ -4,75 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndicesGetTemplateParams extends GenericParams {
-  var flatSettings: js.UndefOr[Boolean] = js.native
-  var local: js.UndefOr[Boolean] = js.native
-  var masterTimeout: js.UndefOr[TimeSpan] = js.native
-  var name: js.UndefOr[NameList] = js.native
+  var flatSettings: js.UndefOr[Boolean] = js.undefined
+  var local: js.UndefOr[Boolean] = js.undefined
+  var masterTimeout: js.UndefOr[TimeSpan] = js.undefined
+  var name: js.UndefOr[NameList] = js.undefined
 }
 
 object IndicesGetTemplateParams {
   @scala.inline
-  def apply(): IndicesGetTemplateParams = {
+  def apply(
+    body: js.Any = null,
+    filterPath: String | js.Array[String] = null,
+    flatSettings: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    local: js.UndefOr[Boolean] = js.undefined,
+    masterTimeout: TimeSpan = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    name: NameList = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined
+  ): IndicesGetTemplateParams = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(flatSettings)) __obj.updateDynamic("flatSettings")(flatSettings.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.get.asInstanceOf[js.Any])
+    if (masterTimeout != null) __obj.updateDynamic("masterTimeout")(masterTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesGetTemplateParams]
   }
-  @scala.inline
-  implicit class IndicesGetTemplateParamsOps[Self <: IndicesGetTemplateParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlatSettings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlatSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

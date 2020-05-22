@@ -5,140 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IShellListingEvents extends IEvents {
-  var OnContentChanged: js.UndefOr[js.Function1[/* items */ IShellItems, Unit]] = js.native
-  var OnListingActivated: js.UndefOr[js.Function1[/* oldListing */ Null | IShellListing, Unit]] = js.native
-  var OnListingDeactivated: js.UndefOr[js.Function1[/* newListing */ Null | IShellListing, Unit]] = js.native
-  var OnSelectedItemsChanged: js.UndefOr[js.Function1[/* selectedItems */ IShellItems, Unit]] = js.native
-  var OnSelectionChanged: js.UndefOr[js.Function1[/* selectedItems */ IShellItems, Unit]] = js.native
-  var OnShowContextMenu: js.UndefOr[js.Function1[/* selectedItems */ IShellItems, Unit]] = js.native
-  var OnShowMainMenu: js.UndefOr[js.Function1[/* selectedItems */ IShellItems, Unit]] = js.native
-  var OnStarted: js.UndefOr[js.Function0[Unit]] = js.native
-  var OnStop: js.UndefOr[js.Function0[Unit]] = js.native
+  var OnContentChanged: js.UndefOr[js.Function1[/* items */ IShellItems, Unit]] = js.undefined
+  var OnListingActivated: js.UndefOr[js.Function1[/* oldListing */ Null | IShellListing, Unit]] = js.undefined
+  var OnListingDeactivated: js.UndefOr[js.Function1[/* newListing */ Null | IShellListing, Unit]] = js.undefined
+  var OnSelectedItemsChanged: js.UndefOr[js.Function1[/* selectedItems */ IShellItems, Unit]] = js.undefined
+  var OnSelectionChanged: js.UndefOr[js.Function1[/* selectedItems */ IShellItems, Unit]] = js.undefined
+  var OnShowContextMenu: js.UndefOr[js.Function1[/* selectedItems */ IShellItems, Unit]] = js.undefined
+  var OnShowMainMenu: js.UndefOr[js.Function1[/* selectedItems */ IShellItems, Unit]] = js.undefined
+  var OnStarted: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var OnStop: js.UndefOr[js.Function0[Unit]] = js.undefined
 }
 
 object IShellListingEvents {
   @scala.inline
-  def apply(Register: (Event, js.Function) => Double, Unregister: Double => Unit): IShellListingEvents = {
+  def apply(
+    Register: (Event, js.Function) => Double,
+    Unregister: Double => Unit,
+    OnContentChanged: /* items */ IShellItems => Unit = null,
+    OnListingActivated: /* oldListing */ Null | IShellListing => Unit = null,
+    OnListingDeactivated: /* newListing */ Null | IShellListing => Unit = null,
+    OnSelectedItemsChanged: /* selectedItems */ IShellItems => Unit = null,
+    OnSelectionChanged: /* selectedItems */ IShellItems => Unit = null,
+    OnShowContextMenu: /* selectedItems */ IShellItems => Unit = null,
+    OnShowMainMenu: /* selectedItems */ IShellItems => Unit = null,
+    OnStarted: () => Unit = null,
+    OnStop: () => Unit = null
+  ): IShellListingEvents = {
     val __obj = js.Dynamic.literal(Register = js.Any.fromFunction2(Register), Unregister = js.Any.fromFunction1(Unregister))
+    if (OnContentChanged != null) __obj.updateDynamic("OnContentChanged")(js.Any.fromFunction1(OnContentChanged))
+    if (OnListingActivated != null) __obj.updateDynamic("OnListingActivated")(js.Any.fromFunction1(OnListingActivated))
+    if (OnListingDeactivated != null) __obj.updateDynamic("OnListingDeactivated")(js.Any.fromFunction1(OnListingDeactivated))
+    if (OnSelectedItemsChanged != null) __obj.updateDynamic("OnSelectedItemsChanged")(js.Any.fromFunction1(OnSelectedItemsChanged))
+    if (OnSelectionChanged != null) __obj.updateDynamic("OnSelectionChanged")(js.Any.fromFunction1(OnSelectionChanged))
+    if (OnShowContextMenu != null) __obj.updateDynamic("OnShowContextMenu")(js.Any.fromFunction1(OnShowContextMenu))
+    if (OnShowMainMenu != null) __obj.updateDynamic("OnShowMainMenu")(js.Any.fromFunction1(OnShowMainMenu))
+    if (OnStarted != null) __obj.updateDynamic("OnStarted")(js.Any.fromFunction0(OnStarted))
+    if (OnStop != null) __obj.updateDynamic("OnStop")(js.Any.fromFunction0(OnStop))
     __obj.asInstanceOf[IShellListingEvents]
   }
-  @scala.inline
-  implicit class IShellListingEventsOps[Self <: IShellListingEvents] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnContentChanged(value: /* items */ IShellItems => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnContentChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContentChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnContentChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnListingActivated(value: /* oldListing */ Null | IShellListing => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnListingActivated")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnListingActivated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnListingActivated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnListingDeactivated(value: /* newListing */ Null | IShellListing => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnListingDeactivated")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnListingDeactivated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnListingDeactivated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectedItemsChanged(value: /* selectedItems */ IShellItems => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSelectedItemsChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectedItemsChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSelectedItemsChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectionChanged(value: /* selectedItems */ IShellItems => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSelectionChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectionChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSelectionChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShowContextMenu(value: /* selectedItems */ IShellItems => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnShowContextMenu")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShowContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnShowContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShowMainMenu(value: /* selectedItems */ IShellItems => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnShowMainMenu")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShowMainMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnShowMainMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStarted(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnStarted")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStarted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnStarted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStop(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnStop")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnStop")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

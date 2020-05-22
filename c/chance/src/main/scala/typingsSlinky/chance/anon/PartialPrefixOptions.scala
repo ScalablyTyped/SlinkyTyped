@@ -8,49 +8,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<chance.Chance.PrefixOptions> */
-@js.native
 trait PartialPrefixOptions extends js.Object {
-  var full: js.UndefOr[Boolean] = js.native
-  var gender: js.UndefOr[male | female | all] = js.native
+  var full: js.UndefOr[Boolean] = js.undefined
+  var gender: js.UndefOr[male | female | all] = js.undefined
 }
 
 object PartialPrefixOptions {
   @scala.inline
-  def apply(): PartialPrefixOptions = {
+  def apply(full: js.UndefOr[Boolean] = js.undefined, gender: male | female | all = null): PartialPrefixOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(full)) __obj.updateDynamic("full")(full.get.asInstanceOf[js.Any])
+    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPrefixOptions]
   }
-  @scala.inline
-  implicit class PartialPrefixOptionsOps[Self <: PartialPrefixOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFull(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("full")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("full")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGender(value: male | female | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

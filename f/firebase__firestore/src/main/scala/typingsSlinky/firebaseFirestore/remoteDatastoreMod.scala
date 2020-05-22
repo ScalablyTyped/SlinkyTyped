@@ -1,7 +1,9 @@
 package typingsSlinky.firebaseFirestore
 
 import typingsSlinky.firebaseFirestore.apiCredentialsMod.CredentialsProvider
+import typingsSlinky.firebaseFirestore.coreQueryMod.Query
 import typingsSlinky.firebaseFirestore.modelDocumentKeyMod.DocumentKey
+import typingsSlinky.firebaseFirestore.modelDocumentMod.Document
 import typingsSlinky.firebaseFirestore.modelDocumentMod.MaybeDocument
 import typingsSlinky.firebaseFirestore.modelMutationMod.Mutation
 import typingsSlinky.firebaseFirestore.modelMutationMod.MutationResult
@@ -20,26 +22,16 @@ import scala.scalajs.js.annotation._
 @js.native
 object remoteDatastoreMod extends js.Object {
   @js.native
-  class Datastore protected () extends js.Object {
-    def this(
-      queue: AsyncQueue,
-      connection: Connection,
-      credentials: CredentialsProvider,
-      serializer: JsonProtoSerializer
-    ) = this()
-    var connection: js.Any = js.native
-    var credentials: js.Any = js.native
-    /** Gets an auth token and invokes the provided RPC. */
-    var invokeRPC: js.Any = js.native
-    /** Gets an auth token and invokes the provided RPC with streamed results. */
-    var invokeStreamingRPC: js.Any = js.native
-    var queue: js.Any = js.native
-    var serializer: js.Any = js.native
-    def commit(mutations: js.Array[Mutation]): js.Promise[js.Array[MutationResult]] = js.native
-    def lookup(keys: js.Array[DocumentKey]): js.Promise[js.Array[MaybeDocument]] = js.native
-    def newPersistentWatchStream(listener: WatchStreamListener): PersistentListenStream = js.native
-    def newPersistentWriteStream(listener: WriteStreamListener): PersistentWriteStream = js.native
+  class Datastore () extends js.Object {
+    @JSName("_")
+    var _underscore: js.Any = js.native
   }
   
+  def invokeBatchGetDocumentsRpc(datastore: Datastore, keys: js.Array[DocumentKey]): js.Promise[js.Array[MaybeDocument]] = js.native
+  def invokeCommitRpc(datastore: Datastore, mutations: js.Array[Mutation]): js.Promise[js.Array[MutationResult]] = js.native
+  def invokeRunQueryRpc(datastore: Datastore, query: Query): js.Promise[js.Array[Document]] = js.native
+  def newDatastore(connection: Connection, credentials: CredentialsProvider, serializer: JsonProtoSerializer): Datastore = js.native
+  def newPersistentWatchStream(datastore: Datastore, queue: AsyncQueue, listener: WatchStreamListener): PersistentListenStream = js.native
+  def newPersistentWriteStream(datastore: Datastore, queue: AsyncQueue, listener: WriteStreamListener): PersistentWriteStream = js.native
 }
 

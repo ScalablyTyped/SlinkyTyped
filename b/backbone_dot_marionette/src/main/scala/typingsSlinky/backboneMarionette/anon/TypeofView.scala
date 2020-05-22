@@ -2,13 +2,15 @@ package typingsSlinky.backboneMarionette.anon
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.backbone.mod.View
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TypeofView extends Instantiable0[View[Model]] {
+trait TypeofView
+  extends Instantiable0[View[Model[js.Any, ModelSetOptions]]] {
   /**
     * Do not use, prefer TypeScript's extend functionality.
     **/

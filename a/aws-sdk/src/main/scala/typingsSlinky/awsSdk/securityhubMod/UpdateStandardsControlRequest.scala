@@ -22,47 +22,15 @@ trait UpdateStandardsControlRequest extends js.Object {
 
 object UpdateStandardsControlRequest {
   @scala.inline
-  def apply(StandardsControlArn: NonEmptyString): UpdateStandardsControlRequest = {
+  def apply(
+    StandardsControlArn: NonEmptyString,
+    ControlStatus: ControlStatus = null,
+    DisabledReason: NonEmptyString = null
+  ): UpdateStandardsControlRequest = {
     val __obj = js.Dynamic.literal(StandardsControlArn = StandardsControlArn.asInstanceOf[js.Any])
+    if (ControlStatus != null) __obj.updateDynamic("ControlStatus")(ControlStatus.asInstanceOf[js.Any])
+    if (DisabledReason != null) __obj.updateDynamic("DisabledReason")(DisabledReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateStandardsControlRequest]
   }
-  @scala.inline
-  implicit class UpdateStandardsControlRequestOps[Self <: UpdateStandardsControlRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStandardsControlArn(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardsControlArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withControlStatus(value: ControlStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ControlStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ControlStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledReason(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisabledReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisabledReason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

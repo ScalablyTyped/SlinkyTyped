@@ -5,50 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Shortcodes extends js.Object {
   /** Array of known shortcode names */
-  var shortcodes: js.UndefOr[js.Array[String]] = js.native
-  var `type`: js.UndefOr[CountType] = js.native
+  var shortcodes: js.UndefOr[js.Array[String]] = js.undefined
+  var `type`: js.UndefOr[CountType] = js.undefined
 }
 
 object Shortcodes {
   @scala.inline
-  def apply(): Shortcodes = {
+  def apply(shortcodes: js.Array[String] = null, `type`: CountType = null): Shortcodes = {
     val __obj = js.Dynamic.literal()
+    if (shortcodes != null) __obj.updateDynamic("shortcodes")(shortcodes.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Shortcodes]
   }
-  @scala.inline
-  implicit class ShortcodesOps[Self <: Shortcodes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShortcodes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortcodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: CountType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

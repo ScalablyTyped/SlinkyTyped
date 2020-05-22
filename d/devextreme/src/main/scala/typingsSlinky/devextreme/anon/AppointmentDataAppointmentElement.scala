@@ -6,101 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppointmentDataAppointmentElement extends js.Object {
-  var appointmentData: js.UndefOr[js.Any] = js.native
-  var appointmentElement: js.UndefOr[dxElement] = js.native
-  var component: js.UndefOr[dxScheduler] = js.native
-  var element: js.UndefOr[dxElement] = js.native
-  var model: js.UndefOr[js.Any] = js.native
-  var targetedAppointmentData: js.UndefOr[js.Any] = js.native
+  var appointmentData: js.UndefOr[js.Any] = js.undefined
+  var appointmentElement: js.UndefOr[dxElement] = js.undefined
+  var component: js.UndefOr[dxScheduler] = js.undefined
+  var element: js.UndefOr[dxElement] = js.undefined
+  var model: js.UndefOr[js.Any] = js.undefined
+  var targetedAppointmentData: js.UndefOr[js.Any] = js.undefined
 }
 
 object AppointmentDataAppointmentElement {
   @scala.inline
-  def apply(): AppointmentDataAppointmentElement = {
+  def apply(
+    appointmentData: js.Any = null,
+    appointmentElement: dxElement = null,
+    component: dxScheduler = null,
+    element: dxElement = null,
+    model: js.Any = null,
+    targetedAppointmentData: js.Any = null
+  ): AppointmentDataAppointmentElement = {
     val __obj = js.Dynamic.literal()
+    if (appointmentData != null) __obj.updateDynamic("appointmentData")(appointmentData.asInstanceOf[js.Any])
+    if (appointmentElement != null) __obj.updateDynamic("appointmentElement")(appointmentElement.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (targetedAppointmentData != null) __obj.updateDynamic("targetedAppointmentData")(targetedAppointmentData.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppointmentDataAppointmentElement]
   }
-  @scala.inline
-  implicit class AppointmentDataAppointmentElementOps[Self <: AppointmentDataAppointmentElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppointmentData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppointmentData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppointmentElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppointmentElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: dxScheduler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetedAppointmentData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedAppointmentData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetedAppointmentData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedAppointmentData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EndAngle extends js.Object {
-  var data: js.UndefOr[js.Array[_]] = js.native
-  var endAngle: js.UndefOr[Double] = js.native
-  var padAngle: js.UndefOr[Double] = js.native
-  var startAngle: js.UndefOr[Double] = js.native
+  var data: js.UndefOr[js.Array[_]] = js.undefined
+  var endAngle: js.UndefOr[Double] = js.undefined
+  var padAngle: js.UndefOr[Double] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.undefined
 }
 
 object EndAngle {
   @scala.inline
-  def apply(): EndAngle = {
+  def apply(
+    data: js.Array[_] = null,
+    endAngle: js.UndefOr[Double] = js.undefined,
+    padAngle: js.UndefOr[Double] = js.undefined,
+    startAngle: js.UndefOr[Double] = js.undefined
+  ): EndAngle = {
     val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(endAngle)) __obj.updateDynamic("endAngle")(endAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(padAngle)) __obj.updateDynamic("padAngle")(padAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startAngle)) __obj.updateDynamic("startAngle")(startAngle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndAngle]
   }
-  @scala.inline
-  implicit class EndAngleOps[Self <: EndAngle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait DescribeEntityAggregatesRequest extends js.Object {
 
 object DescribeEntityAggregatesRequest {
   @scala.inline
-  def apply(): DescribeEntityAggregatesRequest = {
+  def apply(eventArns: EventArnsList = null): DescribeEntityAggregatesRequest = {
     val __obj = js.Dynamic.literal()
+    if (eventArns != null) __obj.updateDynamic("eventArns")(eventArns.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEntityAggregatesRequest]
   }
-  @scala.inline
-  implicit class DescribeEntityAggregatesRequestOps[Self <: DescribeEntityAggregatesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventArns(value: EventArnsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventArns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

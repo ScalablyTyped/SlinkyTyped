@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Ground extends js.Object {
   /**
     * Should the ground be removed (default false)
     */
-  var ground: js.UndefOr[Boolean] = js.native
+  var ground: js.UndefOr[Boolean] = js.undefined
   /**
     * Should the skybox be removed (default false)
     */
-  var skyBox: js.UndefOr[Boolean] = js.native
+  var skyBox: js.UndefOr[Boolean] = js.undefined
 }
 
 object Ground {
   @scala.inline
-  def apply(): Ground = {
+  def apply(ground: js.UndefOr[Boolean] = js.undefined, skyBox: js.UndefOr[Boolean] = js.undefined): Ground = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ground)) __obj.updateDynamic("ground")(ground.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skyBox)) __obj.updateDynamic("skyBox")(skyBox.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ground]
   }
-  @scala.inline
-  implicit class GroundOps[Self <: Ground] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGround(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGround: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkyBox(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkyBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyBox")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

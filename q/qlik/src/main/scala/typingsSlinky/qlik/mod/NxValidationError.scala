@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NxValidationError extends js.Object {
-  var qContext: String = js.native
-  var qErrorCode: Double = js.native
-  var qExtendedMessage: String = js.native
+  var qContext: String
+  var qErrorCode: Double
+  var qExtendedMessage: String
 }
 
 object NxValidationError {
@@ -17,31 +16,5 @@ object NxValidationError {
     val __obj = js.Dynamic.literal(qContext = qContext.asInstanceOf[js.Any], qErrorCode = qErrorCode.asInstanceOf[js.Any], qExtendedMessage = qExtendedMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[NxValidationError]
   }
-  @scala.inline
-  implicit class NxValidationErrorOps[Self <: NxValidationError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQErrorCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qErrorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQExtendedMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qExtendedMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

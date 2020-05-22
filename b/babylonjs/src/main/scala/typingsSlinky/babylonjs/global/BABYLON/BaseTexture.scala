@@ -17,6 +17,11 @@ class BaseTexture protected ()
     * @param scene Define the scene the texture blongs to
     */
   def this(scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

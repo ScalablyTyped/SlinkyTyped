@@ -34,89 +34,22 @@ trait MigrationTaskSummary extends js.Object {
 
 object MigrationTaskSummary {
   @scala.inline
-  def apply(): MigrationTaskSummary = {
+  def apply(
+    MigrationTaskName: MigrationTaskName = null,
+    ProgressPercent: js.UndefOr[ProgressPercent] = js.undefined,
+    ProgressUpdateStream: ProgressUpdateStream = null,
+    Status: Status = null,
+    StatusDetail: StatusDetail = null,
+    UpdateDateTime: js.Date = null
+  ): MigrationTaskSummary = {
     val __obj = js.Dynamic.literal()
+    if (MigrationTaskName != null) __obj.updateDynamic("MigrationTaskName")(MigrationTaskName.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProgressPercent)) __obj.updateDynamic("ProgressPercent")(ProgressPercent.get.asInstanceOf[js.Any])
+    if (ProgressUpdateStream != null) __obj.updateDynamic("ProgressUpdateStream")(ProgressUpdateStream.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusDetail != null) __obj.updateDynamic("StatusDetail")(StatusDetail.asInstanceOf[js.Any])
+    if (UpdateDateTime != null) __obj.updateDynamic("UpdateDateTime")(UpdateDateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[MigrationTaskSummary]
   }
-  @scala.inline
-  implicit class MigrationTaskSummaryOps[Self <: MigrationTaskSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMigrationTaskName(value: MigrationTaskName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationTaskName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMigrationTaskName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationTaskName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressPercent(value: ProgressPercent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressUpdateStream(value: ProgressUpdateStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressUpdateStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusDetail(value: StatusDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

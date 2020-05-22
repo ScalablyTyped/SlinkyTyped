@@ -38,53 +38,16 @@ trait SchemaBackendServiceFailoverPolicy extends js.Object {
 
 object SchemaBackendServiceFailoverPolicy {
   @scala.inline
-  def apply(): SchemaBackendServiceFailoverPolicy = {
+  def apply(
+    disableConnectionDrainOnFailover: js.UndefOr[Boolean] = js.undefined,
+    dropTrafficIfUnhealthy: js.UndefOr[Boolean] = js.undefined,
+    failoverRatio: js.UndefOr[Double] = js.undefined
+  ): SchemaBackendServiceFailoverPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableConnectionDrainOnFailover)) __obj.updateDynamic("disableConnectionDrainOnFailover")(disableConnectionDrainOnFailover.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropTrafficIfUnhealthy)) __obj.updateDynamic("dropTrafficIfUnhealthy")(dropTrafficIfUnhealthy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failoverRatio)) __obj.updateDynamic("failoverRatio")(failoverRatio.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBackendServiceFailoverPolicy]
   }
-  @scala.inline
-  implicit class SchemaBackendServiceFailoverPolicyOps[Self <: SchemaBackendServiceFailoverPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableConnectionDrainOnFailover(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableConnectionDrainOnFailover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableConnectionDrainOnFailover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableConnectionDrainOnFailover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropTrafficIfUnhealthy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropTrafficIfUnhealthy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropTrafficIfUnhealthy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropTrafficIfUnhealthy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailoverRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailoverRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverRatio")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

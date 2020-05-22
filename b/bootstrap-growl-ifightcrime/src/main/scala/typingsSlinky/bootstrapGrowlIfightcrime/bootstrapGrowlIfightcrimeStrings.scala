@@ -1,8 +1,8 @@
 package typingsSlinky.bootstrapGrowlIfightcrime
 
-import typingsSlinky.bootstrapGrowlIfightcrime.BootstrapGrowlIfightcrime.AlertType
 import typingsSlinky.bootstrapGrowlIfightcrime.BootstrapGrowlIfightcrime.AlignType
 import typingsSlinky.bootstrapGrowlIfightcrime.BootstrapGrowlIfightcrime.OffsetPositionType
+import typingsSlinky.bootstrapGrowlIfightcrime.BootstrapGrowlIfightcrime._AlertType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,10 +18,10 @@ object bootstrapGrowlIfightcrimeStrings {
   sealed trait center extends AlignType
   
   @js.native
-  sealed trait danger extends AlertType
+  sealed trait danger extends _AlertType
   
   @js.native
-  sealed trait info extends AlertType
+  sealed trait info extends _AlertType
   
   @js.native
   sealed trait left extends AlignType
@@ -30,13 +30,13 @@ object bootstrapGrowlIfightcrimeStrings {
   sealed trait right extends AlignType
   
   @js.native
-  sealed trait success extends AlertType
+  sealed trait success extends _AlertType
   
   @js.native
   sealed trait top extends OffsetPositionType
   
   @js.native
-  sealed trait warning extends AlertType
+  sealed trait warning extends _AlertType
   
   @scala.inline
   def auto: auto = "auto".asInstanceOf[auto]

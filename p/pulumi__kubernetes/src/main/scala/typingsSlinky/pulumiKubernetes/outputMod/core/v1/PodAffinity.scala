@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Pod affinity is a group of inter pod affinity scheduling rules.
   */
-@js.native
 trait PodAffinity extends js.Object {
   /**
     * The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions
@@ -19,7 +18,7 @@ trait PodAffinity extends js.Object {
     * matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most
     * preferred.
     */
-  val preferredDuringSchedulingIgnoredDuringExecution: js.Array[WeightedPodAffinityTerm] = js.native
+  val preferredDuringSchedulingIgnoredDuringExecution: js.Array[WeightedPodAffinityTerm]
   /**
     * If the affinity requirements specified by this field are not met at scheduling time, the
     * pod will not be scheduled onto the node. If the affinity requirements specified by this
@@ -28,7 +27,7 @@ trait PodAffinity extends js.Object {
     * multiple elements, the lists of nodes corresponding to each podAffinityTerm are
     * intersected, i.e. all terms must be satisfied.
     */
-  val requiredDuringSchedulingIgnoredDuringExecution: js.Array[PodAffinityTerm] = js.native
+  val requiredDuringSchedulingIgnoredDuringExecution: js.Array[PodAffinityTerm]
 }
 
 object PodAffinity {
@@ -40,25 +39,5 @@ object PodAffinity {
     val __obj = js.Dynamic.literal(preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution.asInstanceOf[js.Any], requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution.asInstanceOf[js.Any])
     __obj.asInstanceOf[PodAffinity]
   }
-  @scala.inline
-  implicit class PodAffinityOps[Self <: PodAffinity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPreferredDuringSchedulingIgnoredDuringExecution(value: js.Array[WeightedPodAffinityTerm]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredDuringSchedulingIgnoredDuringExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequiredDuringSchedulingIgnoredDuringExecution(value: js.Array[PodAffinityTerm]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredDuringSchedulingIgnoredDuringExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

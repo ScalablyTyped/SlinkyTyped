@@ -35,6 +35,8 @@ object Drawer {
     @scala.inline
     def dragToggleDistance(value: Double): this.type = set("dragToggleDistance", value.asInstanceOf[js.Any])
     @scala.inline
+    def enableDragHandle(value: Boolean): this.type = set("enableDragHandle", value.asInstanceOf[js.Any])
+    @scala.inline
     def onOpenChange(value: /* isOpen */ Boolean => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
     @scala.inline
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])

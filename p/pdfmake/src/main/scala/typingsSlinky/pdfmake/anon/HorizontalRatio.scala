@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HorizontalRatio extends js.Object {
-  var horizontalRatio: Double = js.native
-  var left: Double = js.native
-  var pageInnerHeight: Double = js.native
-  var pageInnerWidth: Double = js.native
-  var pageNumber: Double = js.native
-  var pageOrientation: PageOrientation = js.native
-  var top: Double = js.native
-  var verticalRatio: Double = js.native
+  var horizontalRatio: Double
+  var left: Double
+  var pageInnerHeight: Double
+  var pageInnerWidth: Double
+  var pageNumber: Double
+  var pageOrientation: PageOrientation
+  var top: Double
+  var verticalRatio: Double
 }
 
 object HorizontalRatio {
@@ -32,61 +31,5 @@ object HorizontalRatio {
     val __obj = js.Dynamic.literal(horizontalRatio = horizontalRatio.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], pageInnerHeight = pageInnerHeight.asInstanceOf[js.Any], pageInnerWidth = pageInnerWidth.asInstanceOf[js.Any], pageNumber = pageNumber.asInstanceOf[js.Any], pageOrientation = pageOrientation.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any], verticalRatio = verticalRatio.asInstanceOf[js.Any])
     __obj.asInstanceOf[HorizontalRatio]
   }
-  @scala.inline
-  implicit class HorizontalRatioOps[Self <: HorizontalRatio] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHorizontalRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageInnerHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageInnerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageInnerWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageInnerWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageOrientation(value: PageOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

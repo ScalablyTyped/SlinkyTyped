@@ -4,143 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellTypeSettings extends js.Object {
   /** Specifies the button background color of Custom Cell type.
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
   /** Specifies the dropdown list data source range of Custom Cell type.
     */
-  var dataSourceRange: js.UndefOr[String] = js.native
+  var dataSourceRange: js.UndefOr[String] = js.undefined
   /** Specifies the dropdown list data source sheet index of Custom Cell type.
     */
-  var dataSourceSheetIndex: js.UndefOr[Double] = js.native
+  var dataSourceSheetIndex: js.UndefOr[Double] = js.undefined
   /** Specifies the text and value of field in dropdown list.
     */
-  var field: js.UndefOr[js.Any] = js.native
+  var field: js.UndefOr[js.Any] = js.undefined
   /** Specifies the checkbox is set true or false of Custom Cell type.
     */
-  var isChecked: js.UndefOr[Boolean] = js.native
+  var isChecked: js.UndefOr[Boolean] = js.undefined
   /** Specifies the button text of Custom Cell type.
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
   /** Specifies the button type of Custom Cell type.
     */
-  var `type`: js.UndefOr[CustomCellType] = js.native
-  /** Specifies the value for datepicker of Custom Cell type.
+  var `type`: js.UndefOr[CustomCellType] = js.undefined
+  /** Specifies the datepicker of Custom Cell type.
     */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object CellTypeSettings {
   @scala.inline
-  def apply(): CellTypeSettings = {
+  def apply(
+    backgroundColor: String = null,
+    dataSourceRange: String = null,
+    dataSourceSheetIndex: js.UndefOr[Double] = js.undefined,
+    field: js.Any = null,
+    isChecked: js.UndefOr[Boolean] = js.undefined,
+    text: String = null,
+    `type`: CustomCellType = null,
+    value: String = null
+  ): CellTypeSettings = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (dataSourceRange != null) __obj.updateDynamic("dataSourceRange")(dataSourceRange.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataSourceSheetIndex)) __obj.updateDynamic("dataSourceSheetIndex")(dataSourceSheetIndex.get.asInstanceOf[js.Any])
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (!js.isUndefined(isChecked)) __obj.updateDynamic("isChecked")(isChecked.get.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellTypeSettings]
   }
-  @scala.inline
-  implicit class CellTypeSettingsOps[Self <: CellTypeSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSourceRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSourceRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSourceSheetIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceSheetIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSourceSheetIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceSheetIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsChecked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: CustomCellType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

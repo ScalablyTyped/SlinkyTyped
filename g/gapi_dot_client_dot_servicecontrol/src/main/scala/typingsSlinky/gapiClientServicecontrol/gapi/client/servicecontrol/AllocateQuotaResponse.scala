@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AllocateQuotaResponse extends js.Object {
   /** Indicates the decision of the allocate. */
-  var allocateErrors: js.UndefOr[js.Array[QuotaError]] = js.native
+  var allocateErrors: js.UndefOr[js.Array[QuotaError]] = js.undefined
   /** WARNING: DO NOT use this field until this warning message is removed. */
-  var allocateInfo: js.UndefOr[AllocateInfo] = js.native
+  var allocateInfo: js.UndefOr[AllocateInfo] = js.undefined
   /**
     * The same operation_id value used in the AllocateQuotaRequest. Used for
     * logging and diagnostics purposes.
     */
-  var operationId: js.UndefOr[String] = js.native
+  var operationId: js.UndefOr[String] = js.undefined
   /**
     * Quota metrics to indicate the result of allocation. Depending on the
     * request, one or more of the following metrics will be included:
@@ -27,84 +26,27 @@ trait AllocateQuotaResponse extends js.Object {
     * boolean metric :
     * "serviceruntime.googleapis.com/quota/exceeded"
     */
-  var quotaMetrics: js.UndefOr[js.Array[MetricValueSet]] = js.native
+  var quotaMetrics: js.UndefOr[js.Array[MetricValueSet]] = js.undefined
   /** ID of the actual config used to process the request. */
-  var serviceConfigId: js.UndefOr[String] = js.native
+  var serviceConfigId: js.UndefOr[String] = js.undefined
 }
 
 object AllocateQuotaResponse {
   @scala.inline
-  def apply(): AllocateQuotaResponse = {
+  def apply(
+    allocateErrors: js.Array[QuotaError] = null,
+    allocateInfo: AllocateInfo = null,
+    operationId: String = null,
+    quotaMetrics: js.Array[MetricValueSet] = null,
+    serviceConfigId: String = null
+  ): AllocateQuotaResponse = {
     val __obj = js.Dynamic.literal()
+    if (allocateErrors != null) __obj.updateDynamic("allocateErrors")(allocateErrors.asInstanceOf[js.Any])
+    if (allocateInfo != null) __obj.updateDynamic("allocateInfo")(allocateInfo.asInstanceOf[js.Any])
+    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
+    if (quotaMetrics != null) __obj.updateDynamic("quotaMetrics")(quotaMetrics.asInstanceOf[js.Any])
+    if (serviceConfigId != null) __obj.updateDynamic("serviceConfigId")(serviceConfigId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllocateQuotaResponse]
   }
-  @scala.inline
-  implicit class AllocateQuotaResponseOps[Self <: AllocateQuotaResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocateErrors(value: js.Array[QuotaError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocateErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllocateInfo(value: AllocateInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocateInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaMetrics(value: js.Array[MetricValueSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceConfigId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceConfigId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

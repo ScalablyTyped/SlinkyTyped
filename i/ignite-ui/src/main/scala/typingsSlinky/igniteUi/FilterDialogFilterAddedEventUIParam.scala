@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilterDialogFilterAddedEventUIParam extends js.Object {
   /**
-  	 * Gets reference to the filters table row DOM element.
-  	 */
-  var filter: js.UndefOr[String] = js.native
+    * Gets reference to the filters table row DOM element.
+    */
+  var filter: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets reference to GridFiltering.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets reference to GridFiltering.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
 }
 
 object FilterDialogFilterAddedEventUIParam {
   @scala.inline
-  def apply(): FilterDialogFilterAddedEventUIParam = {
+  def apply(filter: String = null, owner: js.Any = null): FilterDialogFilterAddedEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterDialogFilterAddedEventUIParam]
   }
-  @scala.inline
-  implicit class FilterDialogFilterAddedEventUIParamOps[Self <: FilterDialogFilterAddedEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

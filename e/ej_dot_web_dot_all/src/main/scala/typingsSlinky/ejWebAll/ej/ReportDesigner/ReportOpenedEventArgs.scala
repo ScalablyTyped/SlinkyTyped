@@ -4,53 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReportOpenedEventArgs extends js.Object {
   /** Specifies whether report opened from device or server.
     */
-  var isServerReport: js.UndefOr[Boolean] = js.native
+  var isServerReport: js.UndefOr[Boolean] = js.undefined
   /** Name of Opened Report.
     */
-  var reportName: js.UndefOr[String] = js.native
+  var reportName: js.UndefOr[String] = js.undefined
 }
 
 object ReportOpenedEventArgs {
   @scala.inline
-  def apply(): ReportOpenedEventArgs = {
+  def apply(isServerReport: js.UndefOr[Boolean] = js.undefined, reportName: String = null): ReportOpenedEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isServerReport)) __obj.updateDynamic("isServerReport")(isServerReport.get.asInstanceOf[js.Any])
+    if (reportName != null) __obj.updateDynamic("reportName")(reportName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportOpenedEventArgs]
   }
-  @scala.inline
-  implicit class ReportOpenedEventArgsOps[Self <: ReportOpenedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsServerReport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isServerReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsServerReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isServerReport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

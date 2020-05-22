@@ -17,29 +17,10 @@ trait SchemaInstanceGroupManagerStatusVersionTarget extends js.Object {
 
 object SchemaInstanceGroupManagerStatusVersionTarget {
   @scala.inline
-  def apply(): SchemaInstanceGroupManagerStatusVersionTarget = {
+  def apply(isReached: js.UndefOr[Boolean] = js.undefined): SchemaInstanceGroupManagerStatusVersionTarget = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isReached)) __obj.updateDynamic("isReached")(isReached.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagerStatusVersionTarget]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupManagerStatusVersionTargetOps[Self <: SchemaInstanceGroupManagerStatusVersionTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsReached(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReached")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsReached: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReached")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

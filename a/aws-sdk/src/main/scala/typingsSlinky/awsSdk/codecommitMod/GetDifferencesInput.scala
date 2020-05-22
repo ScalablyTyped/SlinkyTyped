@@ -38,89 +38,22 @@ trait GetDifferencesInput extends js.Object {
 
 object GetDifferencesInput {
   @scala.inline
-  def apply(afterCommitSpecifier: CommitName, repositoryName: RepositoryName): GetDifferencesInput = {
+  def apply(
+    afterCommitSpecifier: CommitName,
+    repositoryName: RepositoryName,
+    MaxResults: js.UndefOr[Limit] = js.undefined,
+    NextToken: NextToken = null,
+    afterPath: Path = null,
+    beforeCommitSpecifier: CommitName = null,
+    beforePath: Path = null
+  ): GetDifferencesInput = {
     val __obj = js.Dynamic.literal(afterCommitSpecifier = afterCommitSpecifier.asInstanceOf[js.Any], repositoryName = repositoryName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (afterPath != null) __obj.updateDynamic("afterPath")(afterPath.asInstanceOf[js.Any])
+    if (beforeCommitSpecifier != null) __obj.updateDynamic("beforeCommitSpecifier")(beforeCommitSpecifier.asInstanceOf[js.Any])
+    if (beforePath != null) __obj.updateDynamic("beforePath")(beforePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDifferencesInput]
   }
-  @scala.inline
-  implicit class GetDifferencesInputOps[Self <: GetDifferencesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterCommitSpecifier(value: CommitName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterCommitSpecifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: Limit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterPath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeCommitSpecifier(value: CommitName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeCommitSpecifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeforeCommitSpecifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeCommitSpecifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforePath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeforePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforePath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

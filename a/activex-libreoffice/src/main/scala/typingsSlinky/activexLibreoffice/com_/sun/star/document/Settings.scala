@@ -20,111 +20,110 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.drawing.DocumentSettings
   * @see com.sun.star.presentation.DocumentSettings
   */
-@js.native
 trait Settings extends XPropertySet {
   /** layout engine should add value of a Font's "external leading" attribute to the line spacing. */
-  var AddExternalLeading: Boolean = js.native
+  var AddExternalLeading: Boolean
   /** specifies if the user-specific settings saved within a document should be loaded with the document. */
-  var ApplyUserData: Boolean = js.native
-  var AutoCalculate: Boolean = js.native
-  var BitmapTableURL: String = js.native
+  var ApplyUserData: Boolean
+  var AutoCalculate: Boolean
+  var BitmapTableURL: String
   /**
     * specifies the compression (character spacing) type used for Asian characters.
     * @see com.sun.star.text.CharacterCompressionType
     */
-  var CharacterCompressionType: Double = js.native
+  var CharacterCompressionType: Double
   /** contains the URL that points to a color table (file extension .soc) that will be used for showing a palette in dialogs using colors. */
-  var ColorTableURL: String = js.native
+  var ColorTableURL: String
   /** a string value, specifying the name of the object displayed currently (or the SQL statement used). */
-  var CurrentDatabaseCommand: String = js.native
+  var CurrentDatabaseCommand: String
   /**
     * determines the interpretation of the property DataTableName.
     * @see com.sun.star.sdb.CommandType
     */
-  var CurrentDatabaseCommandType: Double = js.native
+  var CurrentDatabaseCommandType: Double
   /**
     * The name of the globally registered {@link com.sun.star.sdb.DataSource} from which the current data is taken.
     *
     * The data source can e.g. be used for feeding a form letter.
     */
-  var CurrentDatabaseDataSource: String = js.native
-  var DashTableURL: String = js.native
-  var DefaultTabStop: Double = js.native
+  var CurrentDatabaseDataSource: String
+  var DashTableURL: String
+  var DefaultTabStop: Double
   /**
     * Whether to embed fonts used by the document (see e.g. handling of OOXML embedRegular etc.)
     * @since LibreOffice 4.0
     */
-  var EmbedFonts: Boolean = js.native
+  var EmbedFonts: Boolean
   /**
     * Whether to embed also system fonts used by the document. Does not have any effect if EmbedFonts is false.
     * @since LibreOffice 4.0
     */
-  var EmbedSystemFonts: Boolean = js.native
+  var EmbedSystemFonts: Boolean
   /** specifies if fields in text documents are updated automatically. */
-  var FieldAutoUpdate: Boolean = js.native
+  var FieldAutoUpdate: Boolean
   /**
     * gives access to the set of forbidden characters.
     * @returns the {@link com.sun.star.i18n.XForbiddenCharacters} interface to allow retrieval and modification of the forbidden characters set.
     */
-  var ForbiddenCharacters: XForbiddenCharacters = js.native
-  var GradientTableURL: String = js.native
-  var HatchTableURL: String = js.native
+  var ForbiddenCharacters: XForbiddenCharacters
+  var GradientTableURL: String
+  var HatchTableURL: String
   /**
     * specifies if kerning is applied to Asian punctuation.
     *
     * Applies only if kerning is enabled.
     */
-  var IsKernAsianPunctuation: Boolean = js.native
+  var IsKernAsianPunctuation: Boolean
   /**
     * determines if the document will be printed as a booklet (brochure), i.e., two document pages are put together on one physical page, such that you can
     * fold the print result and get a booklet.
     *
     * Note, that you have to print in duplex mode, if both, {@link IsPrintBookletFront} and {@link IsPrintBookletBack} are set to `TRUE` .
     */
-  var IsPrintBooklet: Boolean = js.native
+  var IsPrintBooklet: Boolean
   /**
     * is only effective, if {@link IsPrintBooklet} is `TRUE` . If this property is also `TRUE` , only the backs of the pages of your booklet are printed.
     *
     * This is especially useful, if your printer does not supply duplex printing.
     */
-  var IsPrintBookletBack: Boolean = js.native
+  var IsPrintBookletBack: Boolean
   /**
     * is only effective, if {@link IsPrintBooklet} is `TRUE` . If this property is also `TRUE` , only the fronts of the pages of your booklet are printed.
     *
     * This is especially useful, if your printer does not supply duplex printing.
     */
-  var IsPrintBookletFront: Boolean = js.native
-  var LineEndTableURL: String = js.native
+  var IsPrintBookletFront: Boolean
+  var LineEndTableURL: String
   /**
     * specifies the update mode for links when loading text documents.
     *
     * For supported values see the constants group {@link LinkUpdateModes} .
     */
-  var LinkUpdateMode: Double = js.native
-  var PrintQuality: Double = js.native
+  var LinkUpdateMode: Double
+  var PrintQuality: Double
   /**
     * forbid use of printer metrics for layout
     *
     * For supported values see the constants group {@link PrinterIndependentLayout} .
     */
-  var PrinterIndependentLayout: Double = js.native
+  var PrinterIndependentLayout: Double
   /** printer used by the document. */
-  var PrinterName: String = js.native
+  var PrinterName: String
   /**
     * platform and driver dependent printer setup data.
     *
     * This property serves to capture the current printer setup settings, such as paper tray, printer options, etc. The data can typically be interpreted
     * only by the system that generated it. The PrinterSetup property may be used to save and restore the user's printer settings.
     */
-  var PrinterSetup: SafeArray[Double] = js.native
+  var PrinterSetup: SafeArray[Double]
   /** specifies if a new version is created if a document has been modified and you want to close it. */
-  var SaveVersionOnClose: Boolean = js.native
+  var SaveVersionOnClose: Boolean
   /**
     * specifies if the document should be updated when the template it was created from changes.
     *
     * Applies only for documents that were created from a template.
     */
-  var UpdateFromTemplate: Boolean = js.native
+  var UpdateFromTemplate: Boolean
 }
 
 object Settings {
@@ -174,187 +173,5 @@ object Settings {
     val __obj = js.Dynamic.literal(AddExternalLeading = AddExternalLeading.asInstanceOf[js.Any], ApplyUserData = ApplyUserData.asInstanceOf[js.Any], AutoCalculate = AutoCalculate.asInstanceOf[js.Any], BitmapTableURL = BitmapTableURL.asInstanceOf[js.Any], CharacterCompressionType = CharacterCompressionType.asInstanceOf[js.Any], ColorTableURL = ColorTableURL.asInstanceOf[js.Any], CurrentDatabaseCommand = CurrentDatabaseCommand.asInstanceOf[js.Any], CurrentDatabaseCommandType = CurrentDatabaseCommandType.asInstanceOf[js.Any], CurrentDatabaseDataSource = CurrentDatabaseDataSource.asInstanceOf[js.Any], DashTableURL = DashTableURL.asInstanceOf[js.Any], DefaultTabStop = DefaultTabStop.asInstanceOf[js.Any], EmbedFonts = EmbedFonts.asInstanceOf[js.Any], EmbedSystemFonts = EmbedSystemFonts.asInstanceOf[js.Any], FieldAutoUpdate = FieldAutoUpdate.asInstanceOf[js.Any], ForbiddenCharacters = ForbiddenCharacters.asInstanceOf[js.Any], GradientTableURL = GradientTableURL.asInstanceOf[js.Any], HatchTableURL = HatchTableURL.asInstanceOf[js.Any], IsKernAsianPunctuation = IsKernAsianPunctuation.asInstanceOf[js.Any], IsPrintBooklet = IsPrintBooklet.asInstanceOf[js.Any], IsPrintBookletBack = IsPrintBookletBack.asInstanceOf[js.Any], IsPrintBookletFront = IsPrintBookletFront.asInstanceOf[js.Any], LineEndTableURL = LineEndTableURL.asInstanceOf[js.Any], LinkUpdateMode = LinkUpdateMode.asInstanceOf[js.Any], PrintQuality = PrintQuality.asInstanceOf[js.Any], PrinterIndependentLayout = PrinterIndependentLayout.asInstanceOf[js.Any], PrinterName = PrinterName.asInstanceOf[js.Any], PrinterSetup = PrinterSetup.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], SaveVersionOnClose = SaveVersionOnClose.asInstanceOf[js.Any], UpdateFromTemplate = UpdateFromTemplate.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[Settings]
   }
-  @scala.inline
-  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddExternalLeading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddExternalLeading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplyUserData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyUserData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoCalculate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoCalculate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBitmapTableURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitmapTableURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharacterCompressionType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CharacterCompressionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColorTableURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorTableURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentDatabaseCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentDatabaseCommand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentDatabaseCommandType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentDatabaseCommandType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentDatabaseDataSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentDatabaseDataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDashTableURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashTableURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultTabStop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTabStop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmbedFonts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbedFonts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmbedSystemFonts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbedSystemFonts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldAutoUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldAutoUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForbiddenCharacters(value: XForbiddenCharacters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForbiddenCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGradientTableURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GradientTableURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHatchTableURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HatchTableURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsKernAsianPunctuation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsKernAsianPunctuation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPrintBooklet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsPrintBooklet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPrintBookletBack(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsPrintBookletBack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPrintBookletFront(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsPrintBookletFront")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineEndTableURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineEndTableURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkUpdateMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkUpdateMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrintQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrintQuality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrinterIndependentLayout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrinterIndependentLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrinterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrinterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrinterSetup(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrinterSetup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSaveVersionOnClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SaveVersionOnClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateFromTemplate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateFromTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

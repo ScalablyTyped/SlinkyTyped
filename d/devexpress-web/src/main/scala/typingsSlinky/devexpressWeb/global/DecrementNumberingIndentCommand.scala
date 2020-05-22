@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("DecrementNumberingIndentCommand")
 @js.native
 class DecrementNumberingIndentCommand ()
-  extends typingsSlinky.devexpressWeb.DecrementNumberingIndentCommand
+  extends typingsSlinky.devexpressWeb.DecrementNumberingIndentCommand {
+  /**
+    * Executes the DecrementNumberingIndentCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

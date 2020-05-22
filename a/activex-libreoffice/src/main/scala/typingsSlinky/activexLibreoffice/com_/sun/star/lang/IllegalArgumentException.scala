@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This exception is thrown to indicate that a method has passed an illegal or inappropriate argument. */
-@js.native
 trait IllegalArgumentException extends Exception {
   /**
     * identifies the position of the illegal argument.
     *
     * This field is -1 if the position is not known.
     */
-  var ArgumentPosition: Double = js.native
+  var ArgumentPosition: Double
 }
 
 object IllegalArgumentException {
@@ -23,19 +22,5 @@ object IllegalArgumentException {
     val __obj = js.Dynamic.literal(ArgumentPosition = ArgumentPosition.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[IllegalArgumentException]
   }
-  @scala.inline
-  implicit class IllegalArgumentExceptionOps[Self <: IllegalArgumentException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgumentPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArgumentPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

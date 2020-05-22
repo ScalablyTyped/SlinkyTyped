@@ -4,128 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RowSelectingEventArgs extends js.Object {
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Returns the data selecting record.
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /** Returns the previous selected data.
     */
-  var previousData: js.UndefOr[js.Any] = js.native
+  var previousData: js.UndefOr[js.Any] = js.undefined
   /** Returns the previous selected row index.
     */
-  var previousIndex: js.UndefOr[String] = js.native
+  var previousIndex: js.UndefOr[String] = js.undefined
   /** Returns the previous selected row element.
     */
-  var previousTreeGridRow: js.UndefOr[js.Any] = js.native
+  var previousTreeGridRow: js.UndefOr[js.Any] = js.undefined
   /** Returns the index of selecting row record.
     */
-  var recordIndex: js.UndefOr[String] = js.native
+  var recordIndex: js.UndefOr[String] = js.undefined
   /** Returns the selecting row element.
     */
-  var targetRow: js.UndefOr[js.Any] = js.native
+  var targetRow: js.UndefOr[js.Any] = js.undefined
 }
 
 object RowSelectingEventArgs {
   @scala.inline
-  def apply(): RowSelectingEventArgs = {
+  def apply(
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    data: js.Any = null,
+    previousData: js.Any = null,
+    previousIndex: String = null,
+    previousTreeGridRow: js.Any = null,
+    recordIndex: String = null,
+    targetRow: js.Any = null
+  ): RowSelectingEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (previousData != null) __obj.updateDynamic("previousData")(previousData.asInstanceOf[js.Any])
+    if (previousIndex != null) __obj.updateDynamic("previousIndex")(previousIndex.asInstanceOf[js.Any])
+    if (previousTreeGridRow != null) __obj.updateDynamic("previousTreeGridRow")(previousTreeGridRow.asInstanceOf[js.Any])
+    if (recordIndex != null) __obj.updateDynamic("recordIndex")(recordIndex.asInstanceOf[js.Any])
+    if (targetRow != null) __obj.updateDynamic("targetRow")(targetRow.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowSelectingEventArgs]
   }
-  @scala.inline
-  implicit class RowSelectingEventArgsOps[Self <: RowSelectingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousTreeGridRow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousTreeGridRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousTreeGridRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousTreeGridRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetRow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

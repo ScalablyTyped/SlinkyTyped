@@ -26,59 +26,17 @@ trait MultiplexProgramSettings extends js.Object {
 
 object MultiplexProgramSettings {
   @scala.inline
-  def apply(ProgramNumber: integerMin0Max65535): MultiplexProgramSettings = {
+  def apply(
+    ProgramNumber: integerMin0Max65535,
+    PreferredChannelPipeline: PreferredChannelPipeline = null,
+    ServiceDescriptor: MultiplexProgramServiceDescriptor = null,
+    VideoSettings: MultiplexVideoSettings = null
+  ): MultiplexProgramSettings = {
     val __obj = js.Dynamic.literal(ProgramNumber = ProgramNumber.asInstanceOf[js.Any])
+    if (PreferredChannelPipeline != null) __obj.updateDynamic("PreferredChannelPipeline")(PreferredChannelPipeline.asInstanceOf[js.Any])
+    if (ServiceDescriptor != null) __obj.updateDynamic("ServiceDescriptor")(ServiceDescriptor.asInstanceOf[js.Any])
+    if (VideoSettings != null) __obj.updateDynamic("VideoSettings")(VideoSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiplexProgramSettings]
   }
-  @scala.inline
-  implicit class MultiplexProgramSettingsOps[Self <: MultiplexProgramSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProgramNumber(value: integerMin0Max65535): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreferredChannelPipeline(value: PreferredChannelPipeline): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredChannelPipeline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredChannelPipeline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredChannelPipeline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceDescriptor(value: MultiplexProgramServiceDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceDescriptor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceDescriptor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoSettings(value: MultiplexVideoSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

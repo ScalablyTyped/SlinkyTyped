@@ -46,125 +46,28 @@ trait RelationalDatabaseBundle extends js.Object {
 
 object RelationalDatabaseBundle {
   @scala.inline
-  def apply(): RelationalDatabaseBundle = {
+  def apply(
+    bundleId: String = null,
+    cpuCount: js.UndefOr[integer] = js.undefined,
+    diskSizeInGb: js.UndefOr[integer] = js.undefined,
+    isActive: js.UndefOr[Boolean] = js.undefined,
+    isEncrypted: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    price: js.UndefOr[float] = js.undefined,
+    ramSizeInGb: js.UndefOr[float] = js.undefined,
+    transferPerMonthInGb: js.UndefOr[integer] = js.undefined
+  ): RelationalDatabaseBundle = {
     val __obj = js.Dynamic.literal()
+    if (bundleId != null) __obj.updateDynamic("bundleId")(bundleId.asInstanceOf[js.Any])
+    if (!js.isUndefined(cpuCount)) __obj.updateDynamic("cpuCount")(cpuCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(diskSizeInGb)) __obj.updateDynamic("diskSizeInGb")(diskSizeInGb.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isActive)) __obj.updateDynamic("isActive")(isActive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEncrypted)) __obj.updateDynamic("isEncrypted")(isEncrypted.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(price)) __obj.updateDynamic("price")(price.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ramSizeInGb)) __obj.updateDynamic("ramSizeInGb")(ramSizeInGb.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transferPerMonthInGb)) __obj.updateDynamic("transferPerMonthInGb")(transferPerMonthInGb.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelationalDatabaseBundle]
   }
-  @scala.inline
-  implicit class RelationalDatabaseBundleOps[Self <: RelationalDatabaseBundle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBundleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpuCount(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpuCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskSizeInGb(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeInGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskSizeInGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeInGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEncrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEncrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrice(value: float): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRamSizeInGb(value: float): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ramSizeInGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRamSizeInGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ramSizeInGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransferPerMonthInGb(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferPerMonthInGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransferPerMonthInGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferPerMonthInGb")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

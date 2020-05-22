@@ -5,88 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<mongoose.mongoose.ConnectionOptions, 'autoIndex' | 'autoCreate' | 'useCreateIndex' | 'useFindAndModify' | 'bufferCommands'> */
-@js.native
 trait PickConnectionOptionsauto extends js.Object {
-  var autoCreate: js.UndefOr[Boolean] = js.native
-  var autoIndex: js.UndefOr[Boolean] = js.native
-  var bufferCommands: js.UndefOr[Boolean] = js.native
-  var useCreateIndex: js.UndefOr[Boolean] = js.native
-  var useFindAndModify: js.UndefOr[Boolean] = js.native
+  var autoCreate: js.UndefOr[Boolean] = js.undefined
+  var autoIndex: js.UndefOr[Boolean] = js.undefined
+  var bufferCommands: js.UndefOr[Boolean] = js.undefined
+  var useCreateIndex: js.UndefOr[Boolean] = js.undefined
+  var useFindAndModify: js.UndefOr[Boolean] = js.undefined
 }
 
 object PickConnectionOptionsauto {
   @scala.inline
-  def apply(): PickConnectionOptionsauto = {
+  def apply(
+    autoCreate: js.UndefOr[Boolean] = js.undefined,
+    autoIndex: js.UndefOr[Boolean] = js.undefined,
+    bufferCommands: js.UndefOr[Boolean] = js.undefined,
+    useCreateIndex: js.UndefOr[Boolean] = js.undefined,
+    useFindAndModify: js.UndefOr[Boolean] = js.undefined
+  ): PickConnectionOptionsauto = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoCreate)) __obj.updateDynamic("autoCreate")(autoCreate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoIndex)) __obj.updateDynamic("autoIndex")(autoIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bufferCommands)) __obj.updateDynamic("bufferCommands")(bufferCommands.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useCreateIndex)) __obj.updateDynamic("useCreateIndex")(useCreateIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useFindAndModify)) __obj.updateDynamic("useFindAndModify")(useFindAndModify.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickConnectionOptionsauto]
   }
-  @scala.inline
-  implicit class PickConnectionOptionsautoOps[Self <: PickConnectionOptionsauto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoCreate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBufferCommands(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferCommands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBufferCommands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferCommands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseCreateIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCreateIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseCreateIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCreateIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseFindAndModify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFindAndModify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseFindAndModify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFindAndModify")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

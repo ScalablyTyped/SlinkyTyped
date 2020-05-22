@@ -6,127 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Formatter extends js.Object {
-  var formatter: js.UndefOr[js.Function1[/* context */ Section, String]] = js.native
-  var inner: js.UndefOr[ID3PieLabelsOptions] = js.native
-  var lines: js.UndefOr[Enabled] = js.native
-  var mainLabel: js.UndefOr[ID3PieStyleOptions] = js.native
-  var outer: js.UndefOr[pieDistancenumberID3PieLa] = js.native
-  var percentage: js.UndefOr[decimalPlacesnumberID3Pie] = js.native
-  var truncation: js.UndefOr[TruncateLength] = js.native
-  var value: js.UndefOr[ID3PieStyleOptions] = js.native
+  var formatter: js.UndefOr[js.Function1[/* context */ Section, String]] = js.undefined
+  var inner: js.UndefOr[ID3PieLabelsOptions] = js.undefined
+  var lines: js.UndefOr[Enabled] = js.undefined
+  var mainLabel: js.UndefOr[ID3PieStyleOptions] = js.undefined
+  var outer: js.UndefOr[pieDistancenumberID3PieLa] = js.undefined
+  var percentage: js.UndefOr[decimalPlacesnumberID3Pie] = js.undefined
+  var truncation: js.UndefOr[TruncateLength] = js.undefined
+  var value: js.UndefOr[ID3PieStyleOptions] = js.undefined
 }
 
 object Formatter {
   @scala.inline
-  def apply(): Formatter = {
+  def apply(
+    formatter: /* context */ Section => String = null,
+    inner: ID3PieLabelsOptions = null,
+    lines: Enabled = null,
+    mainLabel: ID3PieStyleOptions = null,
+    outer: pieDistancenumberID3PieLa = null,
+    percentage: decimalPlacesnumberID3Pie = null,
+    truncation: TruncateLength = null,
+    value: ID3PieStyleOptions = null
+  ): Formatter = {
     val __obj = js.Dynamic.literal()
+    if (formatter != null) __obj.updateDynamic("formatter")(js.Any.fromFunction1(formatter))
+    if (inner != null) __obj.updateDynamic("inner")(inner.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
+    if (mainLabel != null) __obj.updateDynamic("mainLabel")(mainLabel.asInstanceOf[js.Any])
+    if (outer != null) __obj.updateDynamic("outer")(outer.asInstanceOf[js.Any])
+    if (percentage != null) __obj.updateDynamic("percentage")(percentage.asInstanceOf[js.Any])
+    if (truncation != null) __obj.updateDynamic("truncation")(truncation.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Formatter]
   }
-  @scala.inline
-  implicit class FormatterOps[Self <: Formatter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormatter(value: /* context */ Section => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInner(value: ID3PieLabelsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLines(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMainLabel(value: ID3PieStyleOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuter(value: pieDistancenumberID3PieLa): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercentage(value: decimalPlacesnumberID3Pie): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruncation(value: TruncateLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruncation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: ID3PieStyleOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type Callback[T] = js.Function2[/* err */ js.Any, /* value */ js.UndefOr[T], scala.Unit]
+  type EvalArg = java.lang.String | scala.Double
   /**
     * Function that returns the LUA script to run on the
     * Redis server to extend the ttl of a locked resource.

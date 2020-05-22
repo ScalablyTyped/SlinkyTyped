@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Options for sonifying a point.
   */
-@js.native
 trait PointSonifyOptionsObject extends js.Object {
   /**
     * Optionally provide the minimum/maximum values for the points. If this
@@ -16,60 +15,28 @@ trait PointSonifyOptionsObject extends js.Object {
     * point data properties to objects with min/max values: (see online
     * documentation for example)
     */
-  var dataExtremes: js.UndefOr[js.Object] = js.native
+  var dataExtremes: js.UndefOr[js.Object] = js.undefined
   /**
     * The instrument definitions for this point.
     */
-  var instruments: js.Array[PointInstrumentObject] = js.native
+  var instruments: js.Array[PointInstrumentObject]
   /**
     * Callback called when the sonification has finished.
     */
-  var onEnd: js.UndefOr[js.Function] = js.native
+  var onEnd: js.UndefOr[js.Function] = js.undefined
 }
 
 object PointSonifyOptionsObject {
   @scala.inline
-  def apply(instruments: js.Array[PointInstrumentObject]): PointSonifyOptionsObject = {
+  def apply(
+    instruments: js.Array[PointInstrumentObject],
+    dataExtremes: js.Object = null,
+    onEnd: js.Function = null
+  ): PointSonifyOptionsObject = {
     val __obj = js.Dynamic.literal(instruments = instruments.asInstanceOf[js.Any])
+    if (dataExtremes != null) __obj.updateDynamic("dataExtremes")(dataExtremes.asInstanceOf[js.Any])
+    if (onEnd != null) __obj.updateDynamic("onEnd")(onEnd.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointSonifyOptionsObject]
   }
-  @scala.inline
-  implicit class PointSonifyOptionsObjectOps[Self <: PointSonifyOptionsObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstruments(value: js.Array[PointInstrumentObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataExtremes(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataExtremes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataExtremes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataExtremes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnd(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

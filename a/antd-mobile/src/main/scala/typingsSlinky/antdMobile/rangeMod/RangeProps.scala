@@ -1,80 +1,51 @@
 package typingsSlinky.antdMobile.rangeMod
 
+import slinky.core.TagMod
 import typingsSlinky.antdMobile.rangePropsTypeMod.RangePropsType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeProps extends RangePropsType {
-  var handleStyle: js.UndefOr[js.Array[CSSProperties]] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var railStyle: js.UndefOr[CSSProperties] = js.native
-  var trackStyle: js.UndefOr[js.Array[CSSProperties]] = js.native
+  var handleStyle: js.UndefOr[js.Array[CSSProperties]] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var railStyle: js.UndefOr[CSSProperties] = js.undefined
+  var trackStyle: js.UndefOr[js.Array[CSSProperties]] = js.undefined
 }
 
 object RangeProps {
   @scala.inline
-  def apply(): RangeProps = {
+  def apply(
+    defaultValue: js.UndefOr[Double] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    handleStyle: js.Array[CSSProperties] = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    onAfterChange: /* value */ js.UndefOr[Double] => Unit = null,
+    onChange: /* value */ js.UndefOr[Double] => Unit = null,
+    prefixCls: String = null,
+    railStyle: CSSProperties = null,
+    step: js.UndefOr[Double] = js.undefined,
+    tipFormatter: /* value */ js.UndefOr[Double] => TagMod[Any] = null,
+    trackStyle: js.Array[CSSProperties] = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): RangeProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(defaultValue)) __obj.updateDynamic("defaultValue")(defaultValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (handleStyle != null) __obj.updateDynamic("handleStyle")(handleStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (onAfterChange != null) __obj.updateDynamic("onAfterChange")(js.Any.fromFunction1(onAfterChange))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (railStyle != null) __obj.updateDynamic("railStyle")(railStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (tipFormatter != null) __obj.updateDynamic("tipFormatter")(js.Any.fromFunction1(tipFormatter))
+    if (trackStyle != null) __obj.updateDynamic("trackStyle")(trackStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeProps]
   }
-  @scala.inline
-  implicit class RangePropsOps[Self <: RangeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandleStyle(value: js.Array[CSSProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRailStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("railStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRailStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("railStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackStyle(value: js.Array[CSSProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,154 +5,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IWrapperOptions extends js.Object {
-  var apiCheck: js.UndefOr[StringDictionary[js.Function]] = js.native
-  var apiCheckFunction: js.UndefOr[String] = js.native
+  var apiCheck: js.UndefOr[StringDictionary[js.Function]] = js.undefined
+  var apiCheckFunction: js.UndefOr[String] = js.undefined
    //'throw' or 'warn
-  var apiCheckInstance: js.UndefOr[js.Any] = js.native
-  var apiCheckOptions: js.UndefOr[js.Object] = js.native
-  var name: js.UndefOr[String] = js.native
-  var overwriteOk: js.UndefOr[Boolean] = js.native
-  var template: js.UndefOr[String] = js.native
-  var templateUrl: js.UndefOr[String] = js.native
-  var types: js.UndefOr[js.Array[String]] = js.native
-  var validateOptions: js.UndefOr[js.Function] = js.native
+  var apiCheckInstance: js.UndefOr[js.Any] = js.undefined
+  var apiCheckOptions: js.UndefOr[js.Object] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var overwriteOk: js.UndefOr[Boolean] = js.undefined
+  var template: js.UndefOr[String] = js.undefined
+  var templateUrl: js.UndefOr[String] = js.undefined
+  var types: js.UndefOr[js.Array[String]] = js.undefined
+  var validateOptions: js.UndefOr[js.Function] = js.undefined
 }
 
 object IWrapperOptions {
   @scala.inline
-  def apply(): IWrapperOptions = {
+  def apply(
+    apiCheck: StringDictionary[js.Function] = null,
+    apiCheckFunction: String = null,
+    apiCheckInstance: js.Any = null,
+    apiCheckOptions: js.Object = null,
+    name: String = null,
+    overwriteOk: js.UndefOr[Boolean] = js.undefined,
+    template: String = null,
+    templateUrl: String = null,
+    types: js.Array[String] = null,
+    validateOptions: js.Function = null
+  ): IWrapperOptions = {
     val __obj = js.Dynamic.literal()
+    if (apiCheck != null) __obj.updateDynamic("apiCheck")(apiCheck.asInstanceOf[js.Any])
+    if (apiCheckFunction != null) __obj.updateDynamic("apiCheckFunction")(apiCheckFunction.asInstanceOf[js.Any])
+    if (apiCheckInstance != null) __obj.updateDynamic("apiCheckInstance")(apiCheckInstance.asInstanceOf[js.Any])
+    if (apiCheckOptions != null) __obj.updateDynamic("apiCheckOptions")(apiCheckOptions.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(overwriteOk)) __obj.updateDynamic("overwriteOk")(overwriteOk.get.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (templateUrl != null) __obj.updateDynamic("templateUrl")(templateUrl.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
+    if (validateOptions != null) __obj.updateDynamic("validateOptions")(validateOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWrapperOptions]
   }
-  @scala.inline
-  implicit class IWrapperOptionsOps[Self <: IWrapperOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiCheck(value: StringDictionary[js.Function]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiCheckFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCheckFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiCheckFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCheckFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiCheckInstance(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCheckInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiCheckInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCheckInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiCheckOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCheckOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiCheckOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCheckOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwriteOk(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteOk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwriteOk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteOk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidateOptions(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidateOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MarkupContent extends js.Object {
   /**
     * The type of the Markup
     */
-  var kind: MarkupKind = js.native
+  var kind: MarkupKind
   /**
     * The content itself
     */
-  var value: String = js.native
+  var value: String
 }
 
 @JSImport("vscode-languageserver-types", "MarkupContent")

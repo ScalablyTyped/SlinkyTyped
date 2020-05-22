@@ -18,41 +18,11 @@ trait DeleteGroupRequest extends js.Object {
 
 object DeleteGroupRequest {
   @scala.inline
-  def apply(): DeleteGroupRequest = {
+  def apply(GroupARN: GroupARN = null, GroupName: GroupName = null): DeleteGroupRequest = {
     val __obj = js.Dynamic.literal()
+    if (GroupARN != null) __obj.updateDynamic("GroupARN")(GroupARN.asInstanceOf[js.Any])
+    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteGroupRequest]
   }
-  @scala.inline
-  implicit class DeleteGroupRequestOps[Self <: DeleteGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupARN(value: GroupARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: GroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

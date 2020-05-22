@@ -14,8 +14,8 @@ import scala.scalajs.js.annotation._
 trait FunctionExpression
   extends PrimaryExpression
      with FunctionLikeDeclaration
-     with HasJSDoc
      with SignatureDeclaration
+     with _HasJSDoc
      with JSDocContainer {
   var _declarationBrand: js.Any = js.native
   var _functionLikeDeclarationBrand: js.Any = js.native

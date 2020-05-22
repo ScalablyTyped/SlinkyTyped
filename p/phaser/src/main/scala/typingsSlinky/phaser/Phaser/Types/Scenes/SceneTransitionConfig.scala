@@ -5,161 +5,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SceneTransitionConfig extends js.Object {
   /**
     * Will the Scenes Input system be able to process events while it is transitioning in or out?
     */
-  var allowInput: js.UndefOr[Boolean] = js.native
+  var allowInput: js.UndefOr[Boolean] = js.undefined
   /**
-    * An object containing any data you wish to be passed to the target Scenes init / create methods.
+    * An object containing any data you wish to be passed to the target scene's init / create methods (if sleep is false) or to the target scene's wake event callback (if sleep is true).
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /**
     * The duration, in ms, for the transition to last.
     */
-  var duration: js.UndefOr[integer] = js.native
+  var duration: js.UndefOr[integer] = js.undefined
   /**
     * Move the target Scene to be above this one before the transition starts.
     */
-  var moveAbove: js.UndefOr[Boolean] = js.native
+  var moveAbove: js.UndefOr[Boolean] = js.undefined
   /**
     * Move the target Scene to be below this one before the transition starts.
     */
-  var moveBelow: js.UndefOr[Boolean] = js.native
+  var moveBelow: js.UndefOr[Boolean] = js.undefined
   /**
     * This callback is invoked every frame for the duration of the transition.
     */
-  var onUpdate: js.UndefOr[js.Function] = js.native
+  var onUpdate: js.UndefOr[js.Function] = js.undefined
   /**
     * The context in which the callback is invoked.
     */
-  var onUpdateScope: js.UndefOr[js.Any] = js.native
+  var onUpdateScope: js.UndefOr[js.Any] = js.undefined
+  /**
+    * Will the Scene responsible for the transition be removed from the Scene Manager after the transition completes?
+    */
+  var remove: js.UndefOr[Boolean] = js.undefined
   /**
     * Will the Scene responsible for the transition be sent to sleep on completion (`true`), or stopped? (`false`)
     */
-  var sleep: js.UndefOr[Boolean] = js.native
+  var sleep: js.UndefOr[Boolean] = js.undefined
   /**
     * The Scene key to transition to.
     */
-  var target: String = js.native
+  var target: String
 }
 
 object SceneTransitionConfig {
   @scala.inline
-  def apply(target: String): SceneTransitionConfig = {
+  def apply(
+    target: String,
+    allowInput: js.UndefOr[Boolean] = js.undefined,
+    data: js.Any = null,
+    duration: js.UndefOr[integer] = js.undefined,
+    moveAbove: js.UndefOr[Boolean] = js.undefined,
+    moveBelow: js.UndefOr[Boolean] = js.undefined,
+    onUpdate: js.Function = null,
+    onUpdateScope: js.Any = null,
+    remove: js.UndefOr[Boolean] = js.undefined,
+    sleep: js.UndefOr[Boolean] = js.undefined
+  ): SceneTransitionConfig = {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowInput)) __obj.updateDynamic("allowInput")(allowInput.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(moveAbove)) __obj.updateDynamic("moveAbove")(moveAbove.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(moveBelow)) __obj.updateDynamic("moveBelow")(moveBelow.get.asInstanceOf[js.Any])
+    if (onUpdate != null) __obj.updateDynamic("onUpdate")(onUpdate.asInstanceOf[js.Any])
+    if (onUpdateScope != null) __obj.updateDynamic("onUpdateScope")(onUpdateScope.asInstanceOf[js.Any])
+    if (!js.isUndefined(remove)) __obj.updateDynamic("remove")(remove.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sleep)) __obj.updateDynamic("sleep")(sleep.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SceneTransitionConfig]
   }
-  @scala.inline
-  implicit class SceneTransitionConfigOps[Self <: SceneTransitionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowInput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMoveAbove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveAbove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoveAbove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveAbove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMoveBelow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveBelow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoveBelow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveBelow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdate(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdateScope(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdateScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdateScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdateScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSleep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSleep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleep")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -71,2315 +71,547 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react.react.WeakValidationMap<fundamental-react.fundamental-react/lib/TreeView/TreeView.TreeHeadProps> */
-@js.native
 trait WeakValidationMapTreeHead extends js.Object {
-  var about: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var accessKey: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-activedescendant`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-atomic`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-autocomplete`: js.UndefOr[Validator[js.UndefOr[none | `inline` | list_ | both | Null]]] = js.native
-  var `aria-busy`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-checked`: js.UndefOr[Validator[js.UndefOr[mixed | Boolean | Null]]] = js.native
-  var `aria-colcount`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-colindex`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-colspan`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-controls`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-current`: js.UndefOr[Validator[js.UndefOr[page | step | location | date | time_ | Boolean | Null]]] = js.native
-  var `aria-describedby`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-details`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-disabled`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-dropeffect`: js.UndefOr[Validator[js.UndefOr[none | copy | execute | link_ | move | popup | Null]]] = js.native
-  var `aria-errormessage`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-expanded`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-flowto`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-grabbed`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-haspopup`: js.UndefOr[Validator[js.UndefOr[menu_ | listbox | tree | grid | dialog | Boolean | Null]]] = js.native
-  var `aria-hidden`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-invalid`: js.UndefOr[Validator[js.UndefOr[grammar | spelling | Boolean | Null]]] = js.native
-  var `aria-keyshortcuts`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-label`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-labelledby`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-level`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-live`: js.UndefOr[Validator[js.UndefOr[off | assertive | polite | Null]]] = js.native
-  var `aria-modal`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-multiline`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-multiselectable`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-orientation`: js.UndefOr[Validator[js.UndefOr[horizontal | vertical | Null]]] = js.native
-  var `aria-owns`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-placeholder`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-posinset`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-pressed`: js.UndefOr[Validator[js.UndefOr[mixed | Boolean | Null]]] = js.native
-  var `aria-readonly`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
+  var about: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var accessKey: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-activedescendant`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-atomic`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-autocomplete`: js.UndefOr[Validator[js.UndefOr[none | `inline` | list_ | both | Null]]] = js.undefined
+  var `aria-busy`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-checked`: js.UndefOr[Validator[js.UndefOr[mixed | Boolean | Null]]] = js.undefined
+  var `aria-colcount`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-colindex`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-colspan`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-controls`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-current`: js.UndefOr[Validator[js.UndefOr[page | step | location | date | time_ | Boolean | Null]]] = js.undefined
+  var `aria-describedby`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-details`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-disabled`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-dropeffect`: js.UndefOr[Validator[js.UndefOr[none | copy | execute | link_ | move | popup | Null]]] = js.undefined
+  var `aria-errormessage`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-expanded`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-flowto`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-grabbed`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-haspopup`: js.UndefOr[Validator[js.UndefOr[menu_ | listbox | tree | grid | dialog | Boolean | Null]]] = js.undefined
+  var `aria-hidden`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-invalid`: js.UndefOr[Validator[js.UndefOr[grammar | spelling | Boolean | Null]]] = js.undefined
+  var `aria-keyshortcuts`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-label`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-labelledby`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-level`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-live`: js.UndefOr[Validator[js.UndefOr[off | assertive | polite | Null]]] = js.undefined
+  var `aria-modal`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-multiline`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-multiselectable`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-orientation`: js.UndefOr[Validator[js.UndefOr[horizontal | vertical | Null]]] = js.undefined
+  var `aria-owns`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-placeholder`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-posinset`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-pressed`: js.UndefOr[Validator[js.UndefOr[mixed | Boolean | Null]]] = js.undefined
+  var `aria-readonly`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var `aria-relevant`: js.UndefOr[
     Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]
-  ] = js.native
-  var `aria-required`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-roledescription`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var `aria-rowcount`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-rowindex`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-rowspan`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-selected`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var `aria-setsize`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-sort`: js.UndefOr[Validator[js.UndefOr[none | ascending | descending | other | Null]]] = js.native
-  var `aria-valuemax`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-valuemin`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-valuenow`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var `aria-valuetext`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var autoCapitalize: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var autoCorrect: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var autoSave: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var buttonProps: js.UndefOr[Validator[js.UndefOr[Null | StringDictionary[_]]]] = js.native
-  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.native
-  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var color: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var contentEditable: js.UndefOr[Validator[js.UndefOr[inherit | Booleanish | Null]]] = js.native
-  var contextMenu: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[Validator[js.UndefOr[Html | Null]]] = js.native
-  var datatype: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var defaultChecked: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var defaultValue: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Double | Null | String]]] = js.native
-  var dir: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var draggable: js.UndefOr[Validator[js.UndefOr[Booleanish | Null]]] = js.native
-  var hidden: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var inlist: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.native
+  ] = js.undefined
+  var `aria-required`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-roledescription`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var `aria-rowcount`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-rowindex`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-rowspan`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-selected`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var `aria-setsize`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-sort`: js.UndefOr[Validator[js.UndefOr[none | ascending | descending | other | Null]]] = js.undefined
+  var `aria-valuemax`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-valuemin`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-valuenow`: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var `aria-valuetext`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var autoCapitalize: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var autoCorrect: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var autoSave: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var buttonProps: js.UndefOr[Validator[js.UndefOr[Null | StringDictionary[_]]]] = js.undefined
+  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
+  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var color: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var contentEditable: js.UndefOr[Validator[js.UndefOr[inherit | Booleanish | Null]]] = js.undefined
+  var contextMenu: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var dangerouslySetInnerHTML: js.UndefOr[Validator[js.UndefOr[Html | Null]]] = js.undefined
+  var datatype: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var defaultChecked: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var defaultValue: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Double | Null | String]]] = js.undefined
+  var dir: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var draggable: js.UndefOr[Validator[js.UndefOr[Booleanish | Null]]] = js.undefined
+  var hidden: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var inlist: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.undefined
   var inputMode: js.UndefOr[
     Validator[js.UndefOr[none | text | tel | url | email | numeric | decimal | search | Null]]
-  ] = js.native
-  var is: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var isExpanded: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var itemID: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var itemProp: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var itemRef: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var itemScope: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var itemType: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var lang: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var onAbort: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onAnimationEnd: js.UndefOr[Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onAnimationIteration: js.UndefOr[Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onAnimationStart: js.UndefOr[Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onAuxClick: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onBeforeInput: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onBlur: js.UndefOr[Validator[js.UndefOr[FocusEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onCanPlay: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onCanPlayThrough: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onChange: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onClick: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onCompositionEnd: js.UndefOr[Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onCompositionStart: js.UndefOr[Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onCompositionUpdate: js.UndefOr[Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onContextMenu: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onCopy: js.UndefOr[Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onCut: js.UndefOr[Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDoubleClick: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDrag: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDragEnd: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDragEnter: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDragExit: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDragLeave: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDragOver: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDragStart: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDrop: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onDurationChange: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onEmptied: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onEncrypted: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onEnded: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onError: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onExpandAll: js.UndefOr[Validator[js.UndefOr[(js.Function1[/* repeated */ _, _]) | Null]]] = js.native
-  var onFocus: js.UndefOr[Validator[js.UndefOr[FocusEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onInput: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onInvalid: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onKeyDown: js.UndefOr[Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onKeyPress: js.UndefOr[Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onKeyUp: js.UndefOr[Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onLoad: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onLoadStart: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onLoadedData: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onLoadedMetadata: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onMouseDown: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onMouseEnter: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onMouseLeave: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onMouseMove: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onMouseOut: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onMouseOver: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onMouseUp: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onPaste: js.UndefOr[Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onPause: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onPlay: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onPlaying: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onPointerCancel: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.native
-  var onPointerDown: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.native
-  var onPointerEnter: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.native
-  var onPointerLeave: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.native
-  var onPointerMove: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.native
-  var onPointerOut: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.native
-  var onPointerOver: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.native
-  var onPointerUp: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.native
-  var onProgress: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onRateChange: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onReset: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onScroll: js.UndefOr[Validator[js.UndefOr[Null | UIEventHandler[HTMLDivElement]]]] = js.native
-  var onSeeked: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onSeeking: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onSelect: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onStalled: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onSubmit: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.native
-  var onSuspend: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onTimeUpdate: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onTouchCancel: js.UndefOr[Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]] = js.native
-  var onTouchEnd: js.UndefOr[Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]] = js.native
-  var onTouchMove: js.UndefOr[Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]] = js.native
-  var onTouchStart: js.UndefOr[Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]] = js.native
-  var onTransitionEnd: js.UndefOr[Validator[js.UndefOr[Null | TransitionEventHandler[HTMLDivElement]]]] = js.native
-  var onVolumeChange: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onWaiting: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.native
-  var onWheel: js.UndefOr[Validator[js.UndefOr[Null | WheelEventHandler[HTMLDivElement]]]] = js.native
-  var placeholder: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var prefix: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var property: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var radioGroup: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var resource: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var results: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var role: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var security: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var slot: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var spellCheck: js.UndefOr[Validator[js.UndefOr[Booleanish | Null]]] = js.native
-  var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.native
-  var suppressContentEditableWarning: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var suppressHydrationWarning: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var tabIndex: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
-  var title: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var translate: js.UndefOr[Validator[js.UndefOr[yes | no | Null]]] = js.native
-  var typeof: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var unselectable: js.UndefOr[Validator[js.UndefOr[on | off | Null]]] = js.native
-  var vocab: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  ] = js.undefined
+  var is: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var isExpanded: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var itemID: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var itemProp: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var itemRef: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var itemScope: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var itemType: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var lang: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var onAbort: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onAnimationEnd: js.UndefOr[Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onAnimationIteration: js.UndefOr[Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onAnimationStart: js.UndefOr[Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onAuxClick: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onBeforeInput: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onBlur: js.UndefOr[Validator[js.UndefOr[FocusEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onCanPlay: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onCanPlayThrough: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onChange: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onClick: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onCompositionEnd: js.UndefOr[Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onCompositionStart: js.UndefOr[Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onCompositionUpdate: js.UndefOr[Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onContextMenu: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onCopy: js.UndefOr[Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onCut: js.UndefOr[Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDoubleClick: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDrag: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDragEnd: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDragEnter: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDragExit: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDragLeave: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDragOver: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDragStart: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDrop: js.UndefOr[Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onDurationChange: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onEmptied: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onEncrypted: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onEnded: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onError: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onExpandAll: js.UndefOr[Validator[js.UndefOr[(js.Function1[/* repeated */ _, _]) | Null]]] = js.undefined
+  var onFocus: js.UndefOr[Validator[js.UndefOr[FocusEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onInput: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onInvalid: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onKeyDown: js.UndefOr[Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onKeyPress: js.UndefOr[Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onKeyUp: js.UndefOr[Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onLoad: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onLoadStart: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onLoadedData: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onLoadedMetadata: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onMouseDown: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onMouseEnter: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onMouseLeave: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onMouseMove: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onMouseOut: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onMouseOver: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onMouseUp: js.UndefOr[Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onPaste: js.UndefOr[Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onPause: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPlay: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPlaying: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPointerCancel: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPointerDown: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPointerEnter: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPointerLeave: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPointerMove: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPointerOut: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPointerOver: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.undefined
+  var onPointerUp: js.UndefOr[Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]] = js.undefined
+  var onProgress: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onRateChange: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onReset: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onScroll: js.UndefOr[Validator[js.UndefOr[Null | UIEventHandler[HTMLDivElement]]]] = js.undefined
+  var onSeeked: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onSeeking: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onSelect: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onStalled: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onSubmit: js.UndefOr[Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]] = js.undefined
+  var onSuspend: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onTimeUpdate: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onTouchCancel: js.UndefOr[Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]] = js.undefined
+  var onTouchEnd: js.UndefOr[Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]] = js.undefined
+  var onTouchMove: js.UndefOr[Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]] = js.undefined
+  var onTouchStart: js.UndefOr[Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]] = js.undefined
+  var onTransitionEnd: js.UndefOr[Validator[js.UndefOr[Null | TransitionEventHandler[HTMLDivElement]]]] = js.undefined
+  var onVolumeChange: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onWaiting: js.UndefOr[Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]] = js.undefined
+  var onWheel: js.UndefOr[Validator[js.UndefOr[Null | WheelEventHandler[HTMLDivElement]]]] = js.undefined
+  var placeholder: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var prefix: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var property: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var radioGroup: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var resource: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var results: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var role: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var security: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var slot: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var spellCheck: js.UndefOr[Validator[js.UndefOr[Booleanish | Null]]] = js.undefined
+  var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.undefined
+  var suppressContentEditableWarning: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var suppressHydrationWarning: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var tabIndex: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
+  var title: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var translate: js.UndefOr[Validator[js.UndefOr[yes | no | Null]]] = js.undefined
+  var typeof: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var unselectable: js.UndefOr[Validator[js.UndefOr[on | off | Null]]] = js.undefined
+  var vocab: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
 }
 
 object WeakValidationMapTreeHead {
   @scala.inline
-  def apply(): WeakValidationMapTreeHead = {
+  def apply(
+    about: Validator[js.UndefOr[Null | String]] = null,
+    accessKey: Validator[js.UndefOr[Null | String]] = null,
+    `aria-activedescendant`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-atomic`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-autocomplete`: Validator[js.UndefOr[none | `inline` | list_ | both | Null]] = null,
+    `aria-busy`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-checked`: Validator[js.UndefOr[mixed | Boolean | Null]] = null,
+    `aria-colcount`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-colindex`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-colspan`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-controls`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-current`: Validator[js.UndefOr[page | step | location | date | time_ | Boolean | Null]] = null,
+    `aria-describedby`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-details`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-disabled`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-dropeffect`: Validator[js.UndefOr[none | copy | execute | link_ | move | popup | Null]] = null,
+    `aria-errormessage`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-expanded`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-flowto`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-grabbed`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-haspopup`: Validator[js.UndefOr[menu_ | listbox | tree | grid | dialog | Boolean | Null]] = null,
+    `aria-hidden`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-invalid`: Validator[js.UndefOr[grammar | spelling | Boolean | Null]] = null,
+    `aria-keyshortcuts`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-label`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-labelledby`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-level`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-live`: Validator[js.UndefOr[off | assertive | polite | Null]] = null,
+    `aria-modal`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-multiline`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-multiselectable`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-orientation`: Validator[js.UndefOr[horizontal | vertical | Null]] = null,
+    `aria-owns`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-placeholder`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-posinset`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-pressed`: Validator[js.UndefOr[mixed | Boolean | Null]] = null,
+    `aria-readonly`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-relevant`: Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]] = null,
+    `aria-required`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-roledescription`: Validator[js.UndefOr[Null | String]] = null,
+    `aria-rowcount`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-rowindex`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-rowspan`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-selected`: Validator[js.UndefOr[Boolean | Null]] = null,
+    `aria-setsize`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-sort`: Validator[js.UndefOr[none | ascending | descending | other | Null]] = null,
+    `aria-valuemax`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-valuemin`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-valuenow`: Validator[js.UndefOr[Double | Null]] = null,
+    `aria-valuetext`: Validator[js.UndefOr[Null | String]] = null,
+    autoCapitalize: Validator[js.UndefOr[Null | String]] = null,
+    autoCorrect: Validator[js.UndefOr[Null | String]] = null,
+    autoSave: Validator[js.UndefOr[Null | String]] = null,
+    buttonProps: Validator[js.UndefOr[Null | StringDictionary[_]]] = null,
+    children: Validator[js.UndefOr[Null | TagMod[Any]]] = null,
+    className: Validator[js.UndefOr[Null | String]] = null,
+    color: Validator[js.UndefOr[Null | String]] = null,
+    contentEditable: Validator[js.UndefOr[inherit | Booleanish | Null]] = null,
+    contextMenu: Validator[js.UndefOr[Null | String]] = null,
+    dangerouslySetInnerHTML: Validator[js.UndefOr[Html | Null]] = null,
+    datatype: Validator[js.UndefOr[Null | String]] = null,
+    defaultChecked: Validator[js.UndefOr[Boolean | Null]] = null,
+    defaultValue: Validator[js.UndefOr[js.Array[String] | Double | Null | String]] = null,
+    dir: Validator[js.UndefOr[Null | String]] = null,
+    draggable: Validator[js.UndefOr[Booleanish | Null]] = null,
+    hidden: Validator[js.UndefOr[Boolean | Null]] = null,
+    id: Validator[js.UndefOr[Null | String]] = null,
+    inlist: Validator[js.UndefOr[_ | Null]] = null,
+    inputMode: Validator[js.UndefOr[none | text | tel | url | email | numeric | decimal | search | Null]] = null,
+    is: Validator[js.UndefOr[Null | String]] = null,
+    isExpanded: Validator[js.UndefOr[Boolean | Null]] = null,
+    itemID: Validator[js.UndefOr[Null | String]] = null,
+    itemProp: Validator[js.UndefOr[Null | String]] = null,
+    itemRef: Validator[js.UndefOr[Null | String]] = null,
+    itemScope: Validator[js.UndefOr[Boolean | Null]] = null,
+    itemType: Validator[js.UndefOr[Null | String]] = null,
+    lang: Validator[js.UndefOr[Null | String]] = null,
+    onAbort: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onAnimationEnd: Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]] = null,
+    onAnimationIteration: Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]] = null,
+    onAnimationStart: Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]] = null,
+    onAuxClick: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onBeforeInput: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]] = null,
+    onBlur: Validator[js.UndefOr[FocusEventHandler[HTMLDivElement] | Null]] = null,
+    onCanPlay: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onCanPlayThrough: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onChange: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]] = null,
+    onClick: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onCompositionEnd: Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]] = null,
+    onCompositionStart: Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]] = null,
+    onCompositionUpdate: Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]] = null,
+    onContextMenu: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onCopy: Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]] = null,
+    onCut: Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]] = null,
+    onDoubleClick: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onDrag: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]] = null,
+    onDragEnd: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]] = null,
+    onDragEnter: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]] = null,
+    onDragExit: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]] = null,
+    onDragLeave: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]] = null,
+    onDragOver: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]] = null,
+    onDragStart: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]] = null,
+    onDrop: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]] = null,
+    onDurationChange: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onEmptied: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onEncrypted: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onEnded: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onError: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onExpandAll: Validator[js.UndefOr[(js.Function1[/* repeated */ _, _]) | Null]] = null,
+    onFocus: Validator[js.UndefOr[FocusEventHandler[HTMLDivElement] | Null]] = null,
+    onInput: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]] = null,
+    onInvalid: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]] = null,
+    onKeyDown: Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]] = null,
+    onKeyPress: Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]] = null,
+    onKeyUp: Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]] = null,
+    onLoad: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onLoadStart: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onLoadedData: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onLoadedMetadata: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onMouseDown: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onMouseEnter: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onMouseLeave: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onMouseMove: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onMouseOut: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onMouseOver: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onMouseUp: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]] = null,
+    onPaste: Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]] = null,
+    onPause: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onPlay: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onPlaying: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onPointerCancel: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]] = null,
+    onPointerDown: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]] = null,
+    onPointerEnter: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]] = null,
+    onPointerLeave: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]] = null,
+    onPointerMove: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]] = null,
+    onPointerOut: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]] = null,
+    onPointerOver: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]] = null,
+    onPointerUp: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]] = null,
+    onProgress: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onRateChange: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onReset: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]] = null,
+    onScroll: Validator[js.UndefOr[Null | UIEventHandler[HTMLDivElement]]] = null,
+    onSeeked: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onSeeking: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onSelect: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onStalled: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onSubmit: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]] = null,
+    onSuspend: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onTimeUpdate: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onTouchCancel: Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]] = null,
+    onTouchEnd: Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]] = null,
+    onTouchMove: Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]] = null,
+    onTouchStart: Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]] = null,
+    onTransitionEnd: Validator[js.UndefOr[Null | TransitionEventHandler[HTMLDivElement]]] = null,
+    onVolumeChange: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onWaiting: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]] = null,
+    onWheel: Validator[js.UndefOr[Null | WheelEventHandler[HTMLDivElement]]] = null,
+    placeholder: Validator[js.UndefOr[Null | String]] = null,
+    prefix: Validator[js.UndefOr[Null | String]] = null,
+    property: Validator[js.UndefOr[Null | String]] = null,
+    radioGroup: Validator[js.UndefOr[Null | String]] = null,
+    resource: Validator[js.UndefOr[Null | String]] = null,
+    results: Validator[js.UndefOr[Double | Null]] = null,
+    role: Validator[js.UndefOr[Null | String]] = null,
+    security: Validator[js.UndefOr[Null | String]] = null,
+    slot: Validator[js.UndefOr[Null | String]] = null,
+    spellCheck: Validator[js.UndefOr[Booleanish | Null]] = null,
+    style: Validator[js.UndefOr[CSSProperties | Null]] = null,
+    suppressContentEditableWarning: Validator[js.UndefOr[Boolean | Null]] = null,
+    suppressHydrationWarning: Validator[js.UndefOr[Boolean | Null]] = null,
+    tabIndex: Validator[js.UndefOr[Double | Null]] = null,
+    title: Validator[js.UndefOr[Null | String]] = null,
+    translate: Validator[js.UndefOr[yes | no | Null]] = null,
+    typeof: Validator[js.UndefOr[Null | String]] = null,
+    unselectable: Validator[js.UndefOr[on | off | Null]] = null,
+    vocab: Validator[js.UndefOr[Null | String]] = null
+  ): WeakValidationMapTreeHead = {
     val __obj = js.Dynamic.literal()
+    if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+    if (`aria-atomic` != null) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
+    if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+    if (`aria-busy` != null) __obj.updateDynamic("aria-busy")(`aria-busy`.asInstanceOf[js.Any])
+    if (`aria-checked` != null) __obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+    if (`aria-colcount` != null) __obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
+    if (`aria-colindex` != null) __obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
+    if (`aria-colspan` != null) __obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
+    if (`aria-controls` != null) __obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
+    if (`aria-current` != null) __obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
+    if (`aria-details` != null) __obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
+    if (`aria-disabled` != null) __obj.updateDynamic("aria-disabled")(`aria-disabled`.asInstanceOf[js.Any])
+    if (`aria-dropeffect` != null) __obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+    if (`aria-errormessage` != null) __obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
+    if (`aria-expanded` != null) __obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
+    if (`aria-flowto` != null) __obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
+    if (`aria-grabbed` != null) __obj.updateDynamic("aria-grabbed")(`aria-grabbed`.asInstanceOf[js.Any])
+    if (`aria-haspopup` != null) __obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+    if (`aria-hidden` != null) __obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
+    if (`aria-invalid` != null) __obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+    if (`aria-keyshortcuts` != null) __obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+    if (`aria-level` != null) __obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
+    if (`aria-live` != null) __obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+    if (`aria-modal` != null) __obj.updateDynamic("aria-modal")(`aria-modal`.asInstanceOf[js.Any])
+    if (`aria-multiline` != null) __obj.updateDynamic("aria-multiline")(`aria-multiline`.asInstanceOf[js.Any])
+    if (`aria-multiselectable` != null) __obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.asInstanceOf[js.Any])
+    if (`aria-orientation` != null) __obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+    if (`aria-owns` != null) __obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+    if (`aria-placeholder` != null) __obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
+    if (`aria-posinset` != null) __obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
+    if (`aria-pressed` != null) __obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+    if (`aria-readonly` != null) __obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
+    if (`aria-relevant` != null) __obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+    if (`aria-required` != null) __obj.updateDynamic("aria-required")(`aria-required`.asInstanceOf[js.Any])
+    if (`aria-roledescription` != null) __obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
+    if (`aria-rowcount` != null) __obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
+    if (`aria-rowindex` != null) __obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
+    if (`aria-rowspan` != null) __obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
+    if (`aria-selected` != null) __obj.updateDynamic("aria-selected")(`aria-selected`.asInstanceOf[js.Any])
+    if (`aria-setsize` != null) __obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
+    if (`aria-sort` != null) __obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+    if (`aria-valuemax` != null) __obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
+    if (`aria-valuemin` != null) __obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
+    if (`aria-valuenow` != null) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
+    if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
+    if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
+    if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
+    if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
+    if (buttonProps != null) __obj.updateDynamic("buttonProps")(buttonProps.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
+    if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
+    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (defaultChecked != null) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+    if (draggable != null) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
+    if (hidden != null) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
+    if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
+    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
+    if (isExpanded != null) __obj.updateDynamic("isExpanded")(isExpanded.asInstanceOf[js.Any])
+    if (itemID != null) __obj.updateDynamic("itemID")(itemID.asInstanceOf[js.Any])
+    if (itemProp != null) __obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
+    if (itemRef != null) __obj.updateDynamic("itemRef")(itemRef.asInstanceOf[js.Any])
+    if (itemScope != null) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
+    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (onAbort != null) __obj.updateDynamic("onAbort")(onAbort.asInstanceOf[js.Any])
+    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(onAnimationEnd.asInstanceOf[js.Any])
+    if (onAnimationIteration != null) __obj.updateDynamic("onAnimationIteration")(onAnimationIteration.asInstanceOf[js.Any])
+    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(onAnimationStart.asInstanceOf[js.Any])
+    if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(onAuxClick.asInstanceOf[js.Any])
+    if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(onBeforeInput.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(onBlur.asInstanceOf[js.Any])
+    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(onCanPlay.asInstanceOf[js.Any])
+    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(onCanPlayThrough.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(onCompositionEnd.asInstanceOf[js.Any])
+    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(onCompositionStart.asInstanceOf[js.Any])
+    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(onCompositionUpdate.asInstanceOf[js.Any])
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(onContextMenu.asInstanceOf[js.Any])
+    if (onCopy != null) __obj.updateDynamic("onCopy")(onCopy.asInstanceOf[js.Any])
+    if (onCut != null) __obj.updateDynamic("onCut")(onCut.asInstanceOf[js.Any])
+    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(onDoubleClick.asInstanceOf[js.Any])
+    if (onDrag != null) __obj.updateDynamic("onDrag")(onDrag.asInstanceOf[js.Any])
+    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(onDragEnd.asInstanceOf[js.Any])
+    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(onDragEnter.asInstanceOf[js.Any])
+    if (onDragExit != null) __obj.updateDynamic("onDragExit")(onDragExit.asInstanceOf[js.Any])
+    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(onDragLeave.asInstanceOf[js.Any])
+    if (onDragOver != null) __obj.updateDynamic("onDragOver")(onDragOver.asInstanceOf[js.Any])
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(onDragStart.asInstanceOf[js.Any])
+    if (onDrop != null) __obj.updateDynamic("onDrop")(onDrop.asInstanceOf[js.Any])
+    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(onDurationChange.asInstanceOf[js.Any])
+    if (onEmptied != null) __obj.updateDynamic("onEmptied")(onEmptied.asInstanceOf[js.Any])
+    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(onEncrypted.asInstanceOf[js.Any])
+    if (onEnded != null) __obj.updateDynamic("onEnded")(onEnded.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(onError.asInstanceOf[js.Any])
+    if (onExpandAll != null) __obj.updateDynamic("onExpandAll")(onExpandAll.asInstanceOf[js.Any])
+    if (onFocus != null) __obj.updateDynamic("onFocus")(onFocus.asInstanceOf[js.Any])
+    if (onInput != null) __obj.updateDynamic("onInput")(onInput.asInstanceOf[js.Any])
+    if (onInvalid != null) __obj.updateDynamic("onInvalid")(onInvalid.asInstanceOf[js.Any])
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(onKeyDown.asInstanceOf[js.Any])
+    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(onKeyPress.asInstanceOf[js.Any])
+    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(onKeyUp.asInstanceOf[js.Any])
+    if (onLoad != null) __obj.updateDynamic("onLoad")(onLoad.asInstanceOf[js.Any])
+    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(onLoadStart.asInstanceOf[js.Any])
+    if (onLoadedData != null) __obj.updateDynamic("onLoadedData")(onLoadedData.asInstanceOf[js.Any])
+    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(onLoadedMetadata.asInstanceOf[js.Any])
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(onMouseDown.asInstanceOf[js.Any])
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(onMouseEnter.asInstanceOf[js.Any])
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(onMouseLeave.asInstanceOf[js.Any])
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(onMouseMove.asInstanceOf[js.Any])
+    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(onMouseOut.asInstanceOf[js.Any])
+    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(onMouseOver.asInstanceOf[js.Any])
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(onMouseUp.asInstanceOf[js.Any])
+    if (onPaste != null) __obj.updateDynamic("onPaste")(onPaste.asInstanceOf[js.Any])
+    if (onPause != null) __obj.updateDynamic("onPause")(onPause.asInstanceOf[js.Any])
+    if (onPlay != null) __obj.updateDynamic("onPlay")(onPlay.asInstanceOf[js.Any])
+    if (onPlaying != null) __obj.updateDynamic("onPlaying")(onPlaying.asInstanceOf[js.Any])
+    if (onPointerCancel != null) __obj.updateDynamic("onPointerCancel")(onPointerCancel.asInstanceOf[js.Any])
+    if (onPointerDown != null) __obj.updateDynamic("onPointerDown")(onPointerDown.asInstanceOf[js.Any])
+    if (onPointerEnter != null) __obj.updateDynamic("onPointerEnter")(onPointerEnter.asInstanceOf[js.Any])
+    if (onPointerLeave != null) __obj.updateDynamic("onPointerLeave")(onPointerLeave.asInstanceOf[js.Any])
+    if (onPointerMove != null) __obj.updateDynamic("onPointerMove")(onPointerMove.asInstanceOf[js.Any])
+    if (onPointerOut != null) __obj.updateDynamic("onPointerOut")(onPointerOut.asInstanceOf[js.Any])
+    if (onPointerOver != null) __obj.updateDynamic("onPointerOver")(onPointerOver.asInstanceOf[js.Any])
+    if (onPointerUp != null) __obj.updateDynamic("onPointerUp")(onPointerUp.asInstanceOf[js.Any])
+    if (onProgress != null) __obj.updateDynamic("onProgress")(onProgress.asInstanceOf[js.Any])
+    if (onRateChange != null) __obj.updateDynamic("onRateChange")(onRateChange.asInstanceOf[js.Any])
+    if (onReset != null) __obj.updateDynamic("onReset")(onReset.asInstanceOf[js.Any])
+    if (onScroll != null) __obj.updateDynamic("onScroll")(onScroll.asInstanceOf[js.Any])
+    if (onSeeked != null) __obj.updateDynamic("onSeeked")(onSeeked.asInstanceOf[js.Any])
+    if (onSeeking != null) __obj.updateDynamic("onSeeking")(onSeeking.asInstanceOf[js.Any])
+    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
+    if (onStalled != null) __obj.updateDynamic("onStalled")(onStalled.asInstanceOf[js.Any])
+    if (onSubmit != null) __obj.updateDynamic("onSubmit")(onSubmit.asInstanceOf[js.Any])
+    if (onSuspend != null) __obj.updateDynamic("onSuspend")(onSuspend.asInstanceOf[js.Any])
+    if (onTimeUpdate != null) __obj.updateDynamic("onTimeUpdate")(onTimeUpdate.asInstanceOf[js.Any])
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(onTouchCancel.asInstanceOf[js.Any])
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(onTouchEnd.asInstanceOf[js.Any])
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(onTouchMove.asInstanceOf[js.Any])
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(onTouchStart.asInstanceOf[js.Any])
+    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(onTransitionEnd.asInstanceOf[js.Any])
+    if (onVolumeChange != null) __obj.updateDynamic("onVolumeChange")(onVolumeChange.asInstanceOf[js.Any])
+    if (onWaiting != null) __obj.updateDynamic("onWaiting")(onWaiting.asInstanceOf[js.Any])
+    if (onWheel != null) __obj.updateDynamic("onWheel")(onWheel.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
+    if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
+    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+    if (spellCheck != null) __obj.updateDynamic("spellCheck")(spellCheck.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (suppressContentEditableWarning != null) __obj.updateDynamic("suppressContentEditableWarning")(suppressContentEditableWarning.asInstanceOf[js.Any])
+    if (suppressHydrationWarning != null) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
+    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
+    if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
+    if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
+    if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeakValidationMapTreeHead]
   }
-  @scala.inline
-  implicit class WeakValidationMapTreeHeadOps[Self <: WeakValidationMapTreeHead] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbout(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessKey(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-activedescendant`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-activedescendant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-activedescendant`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-activedescendant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-atomic`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-atomic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-atomic`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-atomic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-autocomplete`(value: Validator[js.UndefOr[none | `inline` | list_ | both | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-autocomplete`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-autocomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-busy`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-busy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-busy`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-busy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-checked`(value: Validator[js.UndefOr[mixed | Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-checked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-checked`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-checked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-colcount`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colcount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-colcount`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colcount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-colindex`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colindex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-colindex`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colindex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-colspan`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colspan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-colspan`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colspan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-controls`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-controls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-controls`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-controls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-current`(value: Validator[js.UndefOr[page | step | location | date | time_ | Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-current")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-current`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-current")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-describedby`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-describedby`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-details`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-details`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-disabled`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-disabled`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-dropeffect`(value: Validator[js.UndefOr[none | copy | execute | link_ | move | popup | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-dropeffect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-dropeffect`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-dropeffect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-errormessage`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-errormessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-errormessage`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-errormessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-expanded`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-expanded`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-flowto`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-flowto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-flowto`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-flowto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-grabbed`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-grabbed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-grabbed`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-grabbed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-haspopup`(value: Validator[js.UndefOr[menu_ | listbox | tree | grid | dialog | Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-haspopup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-haspopup`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-haspopup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-hidden`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-hidden`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-invalid`(value: Validator[js.UndefOr[grammar | spelling | Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-invalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-invalid`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-invalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-keyshortcuts`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-keyshortcuts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-keyshortcuts`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-keyshortcuts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-label`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-label`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-labelledby`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-labelledby`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-level`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-level`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-live`(value: Validator[js.UndefOr[off | assertive | polite | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-live")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-live`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-live")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-modal`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-modal`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-modal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-multiline`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-multiline`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-multiselectable`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiselectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-multiselectable`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiselectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-orientation`(value: Validator[js.UndefOr[horizontal | vertical | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-orientation`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-owns`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-owns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-owns`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-owns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-placeholder`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-placeholder`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-posinset`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-posinset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-posinset`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-posinset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-pressed`(value: Validator[js.UndefOr[mixed | Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-pressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-pressed`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-pressed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-readonly`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-readonly`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-relevant`(value: Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-relevant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-relevant`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-relevant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-required`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-required`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-roledescription`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-roledescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-roledescription`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-roledescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-rowcount`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowcount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-rowcount`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowcount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-rowindex`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowindex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-rowindex`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowindex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-rowspan`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowspan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-rowspan`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowspan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-selected`(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-selected`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-setsize`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-setsize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-setsize`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-setsize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-sort`(value: Validator[js.UndefOr[none | ascending | descending | other | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-sort`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-valuemax`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-valuemax`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-valuemin`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-valuemin`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-valuenow`(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuenow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-valuenow`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuenow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-valuetext`(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuetext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-valuetext`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuetext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoCapitalize(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCapitalize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoCorrect(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCorrect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoSave(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoSave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonProps(value: Validator[js.UndefOr[Null | StringDictionary[_]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildren(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentEditable(value: Validator[js.UndefOr[inherit | Booleanish | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextMenu(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDangerouslySetInnerHTML(value: Validator[js.UndefOr[Html | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDangerouslySetInnerHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatatype(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatatype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultChecked(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: Validator[js.UndefOr[js.Array[String] | Double | Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDir(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Validator[js.UndefOr[Booleanish | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlist(value: Validator[js.UndefOr[_ | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputMode(value: Validator[js.UndefOr[none | text | tel | url | email | numeric | decimal | search | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsExpanded(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemID(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemProp(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemProp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemProp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemProp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemRef(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemScope(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemType(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLang(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAbort(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnAbort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAnimationEnd(value: Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnAnimationEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAnimationIteration(value: Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationIteration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnAnimationIteration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationIteration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAnimationStart(value: Validator[js.UndefOr[AnimationEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnAnimationStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAuxClick(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuxClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnAuxClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuxClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeInput(value: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: Validator[js.UndefOr[FocusEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCanPlay(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCanPlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCanPlayThrough(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCanPlayThrough: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCompositionEnd(value: Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCompositionEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCompositionStart(value: Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCompositionStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCompositionUpdate(value: Validator[js.UndefOr[CompositionEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCompositionUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContextMenu(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCopy(value: Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCopy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCopy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCut(value: Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDoubleClick(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDoubleClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDrag(value: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragEnd(value: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDragEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragEnter(value: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDragEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragExit(value: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragExit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDragExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragExit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragLeave(value: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragLeave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDragLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragOver(value: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDragOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragStart(value: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDrop(value: Validator[js.UndefOr[DragEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDurationChange(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDurationChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEmptied(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnEmptied: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEncrypted(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnded(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnEnded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExpandAll(value: Validator[js.UndefOr[(js.Function1[/* repeated */ _, _]) | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpandAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnExpandAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpandAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: Validator[js.UndefOr[FocusEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInput(value: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInvalid(value: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnInvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyDown(value: Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyPress(value: Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyUp(value: Validator[js.UndefOr[KeyboardEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoad(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadStart(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadedData(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadedData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadedMetadata(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadedMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseDown(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseEnter(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseLeave(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseMove(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseOut(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseOver(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseUp(value: Validator[js.UndefOr[MouseEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPaste(value: Validator[js.UndefOr[ClipboardEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPaste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPaste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPause(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlay(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlaying(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPlaying: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerCancel(value: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerCancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerCancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerDown(value: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerEnter(value: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerLeave(value: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerLeave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerMove(value: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerMove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerOut(value: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerOver(value: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerUp(value: Validator[js.UndefOr[Null | PointerEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnProgress(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRateChange(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnRateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReset(value: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScroll(value: Validator[js.UndefOr[Null | UIEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSeeked(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSeeked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSeeking(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSeeking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStalled(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnStalled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSubmit(value: Validator[js.UndefOr[FormEventHandler[HTMLDivElement] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSubmit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSuspend(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSuspend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTimeUpdate(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTimeUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchCancel(value: Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchEnd(value: Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchMove(value: Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchStart(value: Validator[js.UndefOr[Null | TouchEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTransitionEnd(value: Validator[js.UndefOr[Null | TransitionEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTransitionEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnVolumeChange(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnVolumeChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnWaiting(value: Validator[js.UndefOr[Null | ReactEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnWaiting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnWheel(value: Validator[js.UndefOr[Null | WheelEventHandler[HTMLDivElement]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWheel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnWheel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWheel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperty(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadioGroup(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radioGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadioGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radioGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResource(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurity(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlot(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpellCheck(value: Validator[js.UndefOr[Booleanish | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpellCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Validator[js.UndefOr[CSSProperties | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressContentEditableWarning(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressContentEditableWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressContentEditableWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressContentEditableWarning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressHydrationWarning(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressHydrationWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressHydrationWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressHydrationWarning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: Validator[js.UndefOr[Double | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslate(value: Validator[js.UndefOr[yes | no | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeof(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeof")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeof: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeof")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnselectable(value: Validator[js.UndefOr[on | off | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnselectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVocab(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vocab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vocab")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

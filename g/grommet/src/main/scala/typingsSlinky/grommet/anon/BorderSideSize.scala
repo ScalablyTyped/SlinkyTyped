@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BorderSideSize extends js.Object {
-  var border: js.UndefOr[SideSize] = js.native
+  var border: js.UndefOr[SideSize] = js.undefined
 }
 
 object BorderSideSize {
   @scala.inline
-  def apply(): BorderSideSize = {
+  def apply(border: SideSize = null): BorderSideSize = {
     val __obj = js.Dynamic.literal()
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
     __obj.asInstanceOf[BorderSideSize]
   }
-  @scala.inline
-  implicit class BorderSideSizeOps[Self <: BorderSideSize] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorder(value: SideSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

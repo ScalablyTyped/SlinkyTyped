@@ -23,41 +23,11 @@ trait SchemaGoogleCloudDialogflowV2beta1ListContextsResponse extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2beta1ListContextsResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2beta1ListContextsResponse = {
+  def apply(contexts: js.Array[SchemaGoogleCloudDialogflowV2beta1Context] = null, nextPageToken: String = null): SchemaGoogleCloudDialogflowV2beta1ListContextsResponse = {
     val __obj = js.Dynamic.literal()
+    if (contexts != null) __obj.updateDynamic("contexts")(contexts.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1ListContextsResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2beta1ListContextsResponseOps[Self <: SchemaGoogleCloudDialogflowV2beta1ListContextsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContexts(value: js.Array[SchemaGoogleCloudDialogflowV2beta1Context]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

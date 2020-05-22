@@ -30,77 +30,20 @@ trait GameSessionConnectionInfo extends js.Object {
 
 object GameSessionConnectionInfo {
   @scala.inline
-  def apply(): GameSessionConnectionInfo = {
+  def apply(
+    DnsName: DnsName = null,
+    GameSessionArn: ArnStringModel = null,
+    IpAddress: StringModel = null,
+    MatchedPlayerSessions: MatchedPlayerSessionList = null,
+    Port: js.UndefOr[PositiveInteger] = js.undefined
+  ): GameSessionConnectionInfo = {
     val __obj = js.Dynamic.literal()
+    if (DnsName != null) __obj.updateDynamic("DnsName")(DnsName.asInstanceOf[js.Any])
+    if (GameSessionArn != null) __obj.updateDynamic("GameSessionArn")(GameSessionArn.asInstanceOf[js.Any])
+    if (IpAddress != null) __obj.updateDynamic("IpAddress")(IpAddress.asInstanceOf[js.Any])
+    if (MatchedPlayerSessions != null) __obj.updateDynamic("MatchedPlayerSessions")(MatchedPlayerSessions.asInstanceOf[js.Any])
+    if (!js.isUndefined(Port)) __obj.updateDynamic("Port")(Port.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GameSessionConnectionInfo]
   }
-  @scala.inline
-  implicit class GameSessionConnectionInfoOps[Self <: GameSessionConnectionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDnsName(value: DnsName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGameSessionArn(value: ArnStringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameSessionArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpAddress(value: StringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchedPlayerSessions(value: MatchedPlayerSessionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedPlayerSessions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchedPlayerSessions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedPlayerSessions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: PositiveInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

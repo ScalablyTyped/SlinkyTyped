@@ -16,4 +16,5 @@ package object lambdaMixinsMod {
     js.Promise[R] | scala.Unit
   ]
   type CallbackFactory[E, R] = js.Function0[typingsSlinky.pulumiAws.lambdaMixinsMod.Callback[E, R]]
+  type EventHandler[E, R] = (typingsSlinky.pulumiAws.lambdaMixinsMod.Callback[E, R]) | typingsSlinky.pulumiAws.lambdaFunctionMod.Function
 }

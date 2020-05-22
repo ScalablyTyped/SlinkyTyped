@@ -12,6 +12,7 @@ import typingsSlinky.codemirror.mod.TextMarker
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.EdgeLocation
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IEditor
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IPosition
+import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IRange
 import typingsSlinky.jupyterlabCodemirror.anon.Bias
 import typingsSlinky.jupyterlabCodemirror.anon.Bottom
 import typingsSlinky.jupyterlabCodemirror.anon.From
@@ -172,8 +173,21 @@ class CodeMirrorEditor_ protected () extends IEditor {
     * Get the codemirror editor wrapped by the editor.
     */
   val editor: Editor = js.native
+  /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
   var selectionMarkers: StringDictionary[js.UndefOr[js.Array[TextMarker]]] = js.native
   val state: js.Any = js.native
+  /**
+    * The uuid of this selection owner.
+    */
+  /* CompleteClass */
+  override var uuid: String = js.native
   def addOverlay(mode: String): Unit = js.native
   def addOverlay(mode: String, options: js.Object): Unit = js.native
   def addOverlay(mode: js.Object): Unit = js.native
@@ -186,6 +200,19 @@ class CodeMirrorEditor_ protected () extends IEditor {
   @JSName("cursorCoords")
   def cursorCoords_window(where: Boolean, mode: window): Bottom = js.native
   /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
     * Execute a codemirror command on the editor.
     *
     * @param command - The name of the command to execute.
@@ -194,6 +221,11 @@ class CodeMirrorEditor_ protected () extends IEditor {
   def firstLine(): Double = js.native
   def getCursor(): Position = js.native
   def getCursor(start: String): Position = js.native
+  /**
+    * Returns the primary position of the cursor, never `null`.
+    */
+  /* CompleteClass */
+  override def getCursorPosition(): IPosition = js.native
   @JSName("getOption")
   def getOption_autoClosingBrackets(option: autoClosingBrackets): Boolean = js.native
   @JSName("getOption")
@@ -270,6 +302,16 @@ class CodeMirrorEditor_ protected () extends IEditor {
   def getSearchCursor(query: js.RegExp, start: Position): SearchCursor = js.native
   def getSearchCursor(query: js.RegExp, start: Position, caseFold: Boolean): SearchCursor = js.native
   /**
+    * Returns the primary selection, never `null`.
+    */
+  /* CompleteClass */
+  override def getSelection(): IRange = js.native
+  /**
+    * Gets the selections for all the cursors, never `null` or empty.
+    */
+  /* CompleteClass */
+  override def getSelections(): js.Array[IRange] = js.native
+  /**
     * Handle the DOM events for the editor.
     *
     * @param event - The DOM event sent to the editor.
@@ -289,6 +331,16 @@ class CodeMirrorEditor_ protected () extends IEditor {
   def removeOverlay(mode: String): Unit = js.native
   def removeOverlay(mode: js.Object): Unit = js.native
   def scrollIntoView(pos: From, margin: Double): Unit = js.native
+  /**
+    * Set the primary position of the cursor.
+    *
+    * @param position - The new primary position.
+    *
+    * #### Notes
+    * This will remove any secondary cursors.
+    */
+  /* CompleteClass */
+  override def setCursorPosition(position: IPosition): Unit = js.native
   def setCursorPosition(position: IPosition, options: Bias): Unit = js.native
   def setOption(option: lineWrap, value: bounded): Unit = js.native
   def setOption(option: lineWrap, value: off): Unit = js.native
@@ -373,5 +425,27 @@ class CodeMirrorEditor_ protected () extends IEditor {
   def setOption_theme(option: theme, value: String): Unit = js.native
   @JSName("setOption")
   def setOption_wordWrapColumn(option: wordWrapColumn, value: Double): Unit = js.native
+  /**
+    * Set the primary selection.
+    *
+    * @param selection - The desired selection range.
+    *
+    * #### Notes
+    * This will remove any secondary cursors.
+    */
+  /* CompleteClass */
+  override def setSelection(selection: IRange): Unit = js.native
+  /**
+    * Sets the selections for all the cursors.
+    *
+    * @param selections - The new selections.
+    *
+    * #### Notes
+    * Cursors will be removed or added, as necessary.
+    * Passing an empty array resets a cursor position to the start of a
+    * document.
+    */
+  /* CompleteClass */
+  override def setSelections(selections: js.Array[IRange]): Unit = js.native
 }
 

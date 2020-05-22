@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TweenStep extends js.Object {
-  var d: Double = js.native
-  var ease: js.Function = js.native
-  var index: Double = js.native
-  var next: TweenStep = js.native
-  var passive: Boolean = js.native
-  var prev: TweenStep = js.native
-  var props: TweenProps = js.native
-  var t: Double = js.native
+  var d: Double
+  var ease: js.Function
+  var index: Double
+  var next: TweenStep
+  var passive: Boolean
+  var prev: TweenStep
+  var props: TweenProps
+  var t: Double
 }
 
 object TweenStep {
@@ -31,61 +30,5 @@ object TweenStep {
     val __obj = js.Dynamic.literal(d = d.asInstanceOf[js.Any], ease = ease.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], passive = passive.asInstanceOf[js.Any], prev = prev.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], t = t.asInstanceOf[js.Any])
     __obj.asInstanceOf[TweenStep]
   }
-  @scala.inline
-  implicit class TweenStepOps[Self <: TweenStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withD(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEase(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ease")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNext(value: TweenStep): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPassive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrev(value: TweenStep): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProps(value: TweenProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withT(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

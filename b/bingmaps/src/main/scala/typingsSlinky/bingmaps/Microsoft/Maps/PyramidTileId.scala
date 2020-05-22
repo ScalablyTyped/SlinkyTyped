@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PyramidTileId extends js.Object {
   /** The height of the tile. */
-  var pixelHeight: Double = js.native
+  var pixelHeight: Double
   /** The width of the tile. */
-  var pixelWidth: Double = js.native
+  var pixelWidth: Double
   /** The quadkey ID of the tile. */
-  var quadKey: String = js.native
+  var quadKey: String
   /** The x tile coordinate. */
-  var x: Double = js.native
+  var x: Double
   /** The y tile coordinate. */
-  var y: Double = js.native
+  var y: Double
   /** The zoom level of the tile. */
-  var zoom: Double = js.native
+  var zoom: Double
 }
 
 object PyramidTileId {
@@ -26,49 +25,5 @@ object PyramidTileId {
     val __obj = js.Dynamic.literal(pixelHeight = pixelHeight.asInstanceOf[js.Any], pixelWidth = pixelWidth.asInstanceOf[js.Any], quadKey = quadKey.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], zoom = zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[PyramidTileId]
   }
-  @scala.inline
-  implicit class PyramidTileIdOps[Self <: PyramidTileId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPixelHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPixelWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuadKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quadKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

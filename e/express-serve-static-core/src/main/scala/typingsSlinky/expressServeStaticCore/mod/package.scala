@@ -10,7 +10,7 @@ package object mod {
       typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
       _, 
       _, 
-      typingsSlinky.expressServeStaticCore.mod.Query
+      typingsSlinky.qs.mod.ParsedQs
     ], 
     T
   ])
@@ -27,23 +27,28 @@ package object mod {
     typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
     js.Any, 
     js.Any, 
-    typingsSlinky.expressServeStaticCore.mod.Query
+    typingsSlinky.qs.mod.ParsedQs
   ]
-  type NextFunction = js.Function1[/* err */ js.UndefOr[js.Any], scala.Unit]
+  type Params = typingsSlinky.expressServeStaticCore.mod.ParamsDictionary | typingsSlinky.expressServeStaticCore.mod.ParamsArray
   type ParamsArray = js.Array[java.lang.String]
   type ParamsDictionary = org.scalablytyped.runtime.StringDictionary[java.lang.String]
+  type PathParams = java.lang.String | js.RegExp | (js.Array[java.lang.String | js.RegExp])
+  type Query = typingsSlinky.qs.mod.ParsedQs
   type RequestHandler[P /* <: typingsSlinky.expressServeStaticCore.mod.Params */, ResBody, ReqBody, ReqQuery] = js.Function3[
     /* req */ typingsSlinky.expressServeStaticCore.mod.Request[P, ResBody, ReqBody, ReqQuery], 
     /* res */ typingsSlinky.expressServeStaticCore.mod.Response[ResBody], 
     /* next */ typingsSlinky.expressServeStaticCore.mod.NextFunction, 
     js.Any
   ]
+  type RequestHandlerParams[P /* <: typingsSlinky.expressServeStaticCore.mod.Params */, ResBody, ReqBody, ReqQuery] = (typingsSlinky.expressServeStaticCore.mod.RequestHandler[P, ResBody, ReqBody, ReqQuery]) | (typingsSlinky.expressServeStaticCore.mod.ErrorRequestHandler[P, ResBody, ReqBody, ReqQuery]) | (js.Array[
+    (typingsSlinky.expressServeStaticCore.mod.RequestHandler[P, js.Any, js.Any, typingsSlinky.qs.mod.ParsedQs]) | (typingsSlinky.expressServeStaticCore.mod.ErrorRequestHandler[P, js.Any, js.Any, typingsSlinky.qs.mod.ParsedQs])
+  ])
   type RequestParamHandler = js.Function5[
     /* req */ typingsSlinky.expressServeStaticCore.mod.Request[
       typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
       js.Any, 
       js.Any, 
-      typingsSlinky.expressServeStaticCore.mod.Query
+      typingsSlinky.qs.mod.ParsedQs
     ], 
     /* res */ typingsSlinky.expressServeStaticCore.mod.Response[js.Any], 
     /* next */ typingsSlinky.expressServeStaticCore.mod.NextFunction, 

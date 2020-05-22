@@ -2,8 +2,11 @@ package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -17,12 +20,16 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.colorsMod.PresetColorType
+import typingsSlinky.antd.colorsMod.PresetStatusColorType
 import typingsSlinky.antd.tagMod.TagProps
-import typingsSlinky.antd.tagMod.default
+import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -80,7 +87,7 @@ object Tag {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -192,7 +199,7 @@ object Tag {
     @scala.inline
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: LiteralUnion[PresetColorType | PresetStatusColorType, String]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -211,6 +218,10 @@ object Tag {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -435,7 +446,7 @@ object Tag {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: TagProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Tag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

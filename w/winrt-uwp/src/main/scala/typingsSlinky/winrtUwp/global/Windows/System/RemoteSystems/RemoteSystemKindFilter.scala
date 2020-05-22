@@ -12,5 +12,8 @@ class RemoteSystemKindFilter protected ()
   extends typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemKindFilter {
   /** Initializes an instance of the RemoteSystemKindFilter class with a list of string representations of device types to target. These strings should conform to the values of the properties of the RemoteSystemKinds class. */
   def this(remoteSystemKinds: IIterable[String]) = this()
+  /** String representation(s) of the device type(s) that the containing RemoteSystemKindFilter object targets. */
+  /* CompleteClass */
+  override var remoteSystemKinds: typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemKinds = js.native
 }
 

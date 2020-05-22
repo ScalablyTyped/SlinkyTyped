@@ -94,269 +94,52 @@ trait S3Settings extends js.Object {
 
 object S3Settings {
   @scala.inline
-  def apply(): S3Settings = {
+  def apply(
+    BucketFolder: String = null,
+    BucketName: String = null,
+    CdcInsertsAndUpdates: js.UndefOr[BooleanOptional] = js.undefined,
+    CdcInsertsOnly: js.UndefOr[BooleanOptional] = js.undefined,
+    CompressionType: CompressionTypeValue = null,
+    CsvDelimiter: String = null,
+    CsvRowDelimiter: String = null,
+    DataFormat: DataFormatValue = null,
+    DataPageSize: js.UndefOr[IntegerOptional] = js.undefined,
+    DictPageSizeLimit: js.UndefOr[IntegerOptional] = js.undefined,
+    EnableStatistics: js.UndefOr[BooleanOptional] = js.undefined,
+    EncodingType: EncodingTypeValue = null,
+    EncryptionMode: EncryptionModeValue = null,
+    ExternalTableDefinition: String = null,
+    IncludeOpForFullLoad: js.UndefOr[BooleanOptional] = js.undefined,
+    ParquetTimestampInMillisecond: js.UndefOr[BooleanOptional] = js.undefined,
+    ParquetVersion: ParquetVersionValue = null,
+    RowGroupLength: js.UndefOr[IntegerOptional] = js.undefined,
+    ServerSideEncryptionKmsKeyId: String = null,
+    ServiceAccessRoleArn: String = null,
+    TimestampColumnName: String = null
+  ): S3Settings = {
     val __obj = js.Dynamic.literal()
+    if (BucketFolder != null) __obj.updateDynamic("BucketFolder")(BucketFolder.asInstanceOf[js.Any])
+    if (BucketName != null) __obj.updateDynamic("BucketName")(BucketName.asInstanceOf[js.Any])
+    if (!js.isUndefined(CdcInsertsAndUpdates)) __obj.updateDynamic("CdcInsertsAndUpdates")(CdcInsertsAndUpdates.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CdcInsertsOnly)) __obj.updateDynamic("CdcInsertsOnly")(CdcInsertsOnly.get.asInstanceOf[js.Any])
+    if (CompressionType != null) __obj.updateDynamic("CompressionType")(CompressionType.asInstanceOf[js.Any])
+    if (CsvDelimiter != null) __obj.updateDynamic("CsvDelimiter")(CsvDelimiter.asInstanceOf[js.Any])
+    if (CsvRowDelimiter != null) __obj.updateDynamic("CsvRowDelimiter")(CsvRowDelimiter.asInstanceOf[js.Any])
+    if (DataFormat != null) __obj.updateDynamic("DataFormat")(DataFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(DataPageSize)) __obj.updateDynamic("DataPageSize")(DataPageSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DictPageSizeLimit)) __obj.updateDynamic("DictPageSizeLimit")(DictPageSizeLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnableStatistics)) __obj.updateDynamic("EnableStatistics")(EnableStatistics.get.asInstanceOf[js.Any])
+    if (EncodingType != null) __obj.updateDynamic("EncodingType")(EncodingType.asInstanceOf[js.Any])
+    if (EncryptionMode != null) __obj.updateDynamic("EncryptionMode")(EncryptionMode.asInstanceOf[js.Any])
+    if (ExternalTableDefinition != null) __obj.updateDynamic("ExternalTableDefinition")(ExternalTableDefinition.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeOpForFullLoad)) __obj.updateDynamic("IncludeOpForFullLoad")(IncludeOpForFullLoad.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ParquetTimestampInMillisecond)) __obj.updateDynamic("ParquetTimestampInMillisecond")(ParquetTimestampInMillisecond.get.asInstanceOf[js.Any])
+    if (ParquetVersion != null) __obj.updateDynamic("ParquetVersion")(ParquetVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(RowGroupLength)) __obj.updateDynamic("RowGroupLength")(RowGroupLength.get.asInstanceOf[js.Any])
+    if (ServerSideEncryptionKmsKeyId != null) __obj.updateDynamic("ServerSideEncryptionKmsKeyId")(ServerSideEncryptionKmsKeyId.asInstanceOf[js.Any])
+    if (ServiceAccessRoleArn != null) __obj.updateDynamic("ServiceAccessRoleArn")(ServiceAccessRoleArn.asInstanceOf[js.Any])
+    if (TimestampColumnName != null) __obj.updateDynamic("TimestampColumnName")(TimestampColumnName.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3Settings]
   }
-  @scala.inline
-  implicit class S3SettingsOps[Self <: S3Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketFolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketFolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketFolder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucketName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdcInsertsAndUpdates(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcInsertsAndUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdcInsertsAndUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcInsertsAndUpdates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdcInsertsOnly(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcInsertsOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdcInsertsOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcInsertsOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompressionType(value: CompressionTypeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompressionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsvDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CsvDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CsvDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsvRowDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CsvRowDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvRowDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CsvRowDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataFormat(value: DataFormatValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataPageSize(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataPageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataPageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDictPageSizeLimit(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DictPageSizeLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDictPageSizeLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DictPageSizeLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableStatistics(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableStatistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableStatistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodingType(value: EncodingTypeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodingType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionMode(value: EncryptionModeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalTableDefinition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalTableDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalTableDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalTableDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeOpForFullLoad(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeOpForFullLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeOpForFullLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeOpForFullLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParquetTimestampInMillisecond(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParquetTimestampInMillisecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParquetTimestampInMillisecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParquetTimestampInMillisecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParquetVersion(value: ParquetVersionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParquetVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParquetVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParquetVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowGroupLength(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowGroupLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowGroupLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowGroupLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerSideEncryptionKmsKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryptionKmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideEncryptionKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryptionKmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceAccessRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceAccessRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampColumnName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampColumnName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampColumnName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampColumnName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

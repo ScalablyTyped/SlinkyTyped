@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
-- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsDomainModel, name, generalization, attributes, isRemote, remoteSourceDocument, remoteSourceDocumentQualifiedName */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.Entity")
+- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsDomainModel, name, generalization, attributes, isRemote, remoteSourceDocument, remoteSourceDocumentQualifiedName, source */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.Entity")
 @js.native
 class Entity protected ()
   extends Element
@@ -45,6 +45,7 @@ class Entity protected ()
   @JSName("generalization")
   val generalization_FEntity: IGeneralizationBase = js.native
   /**
+    * In version 8.10.0: deleted
     * In version 8.2.0: added public
     * In version 7.17.0: introduced
     */
@@ -54,15 +55,29 @@ class Entity protected ()
   var model_FEntity: IModel = js.native
   @JSName("name")
   val name_FEntity: String = js.native
+  /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
   @JSName("remoteSourceDocumentQualifiedName")
   val remoteSourceDocumentQualifiedName_FEntity: String | Null = js.native
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * In version 8.10.0: deleted
     * In version 8.2.0: introduced
     */
   @JSName("remoteSourceDocument")
   val remoteSourceDocument_FEntity: IRemoteEntitySourceDocument | Null = js.native
+  /**
+    * In version 8.10.0: introduced
+    */
+  @JSName("source")
+  val source_FEntity: IEntitySource | Null = js.native
   def accessRules: IList[AccessRule] = js.native
   def attributes: IList[Attribute] = js.native
   def containerAsDomainModel: DomainModel = js.native
@@ -80,6 +95,7 @@ class Entity protected ()
   def image_Union: IImage | Null = js.native
   def indexes: IList[Index] = js.native
   /**
+    * In version 8.10.0: deleted
     * In version 8.2.0: added public
     * In version 7.17.0: introduced
     */
@@ -92,6 +108,7 @@ class Entity protected ()
   @JSName("qualifiedName")
   def qualifiedName_MEntity: String | Null = js.native
   /**
+    * In version 8.10.0: deleted
     * In version 7.17.0: introduced
     */
   def remoteSource: String = js.native
@@ -102,10 +119,18 @@ class Entity protected ()
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * In version 8.10.0: deleted
     * In version 8.2.0: introduced
     */
   @JSName("remoteSourceDocument")
   def remoteSourceDocument_Union: IRemoteEntitySourceDocument | Null = js.native
+  def source(): js.Any = js.native
+  def source(newValue: EntitySource): js.Any = js.native
+  /**
+    * In version 8.10.0: introduced
+    */
+  @JSName("source")
+  def source_Union: EntitySource | Null = js.native
   def validationRules: IList[ValidationRule] = js.native
 }
 

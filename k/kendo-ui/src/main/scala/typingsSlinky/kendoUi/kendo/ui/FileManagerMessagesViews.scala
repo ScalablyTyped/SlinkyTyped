@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileManagerMessagesViews extends js.Object {
-  var dateCreatedField: js.UndefOr[String] = js.native
-  var dateModifiedField: js.UndefOr[String] = js.native
-  var items: js.UndefOr[String] = js.native
-  var nameField: js.UndefOr[String] = js.native
-  var sizeField: js.UndefOr[String] = js.native
-  var typeField: js.UndefOr[String] = js.native
+  var dateCreatedField: js.UndefOr[String] = js.undefined
+  var dateModifiedField: js.UndefOr[String] = js.undefined
+  var items: js.UndefOr[String] = js.undefined
+  var nameField: js.UndefOr[String] = js.undefined
+  var sizeField: js.UndefOr[String] = js.undefined
+  var typeField: js.UndefOr[String] = js.undefined
 }
 
 object FileManagerMessagesViews {
   @scala.inline
-  def apply(): FileManagerMessagesViews = {
+  def apply(
+    dateCreatedField: String = null,
+    dateModifiedField: String = null,
+    items: String = null,
+    nameField: String = null,
+    sizeField: String = null,
+    typeField: String = null
+  ): FileManagerMessagesViews = {
     val __obj = js.Dynamic.literal()
+    if (dateCreatedField != null) __obj.updateDynamic("dateCreatedField")(dateCreatedField.asInstanceOf[js.Any])
+    if (dateModifiedField != null) __obj.updateDynamic("dateModifiedField")(dateModifiedField.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (nameField != null) __obj.updateDynamic("nameField")(nameField.asInstanceOf[js.Any])
+    if (sizeField != null) __obj.updateDynamic("sizeField")(sizeField.asInstanceOf[js.Any])
+    if (typeField != null) __obj.updateDynamic("typeField")(typeField.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileManagerMessagesViews]
   }
-  @scala.inline
-  implicit class FileManagerMessagesViewsOps[Self <: FileManagerMessagesViews] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateCreatedField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateCreatedField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateCreatedField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateCreatedField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateModifiedField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateModifiedField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateModifiedField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateModifiedField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeField")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,103 +6,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JsftpOpts extends js.Object {
   var createSocket: js.UndefOr[
     js.Function2[/* hasPortHost */ Host, /* firstAction */ js.Function0[js.Object], Socket]
-  ] = js.native
-  var host: js.UndefOr[String] = js.native
-  var pass: js.UndefOr[String] = js.native
-  var port: js.UndefOr[Double] = js.native
-  var useList: js.UndefOr[Boolean] = js.native
-  var user: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var pass: js.UndefOr[String] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
+  var useList: js.UndefOr[Boolean] = js.undefined
+  var user: js.UndefOr[String] = js.undefined
 }
 
 object JsftpOpts {
   @scala.inline
-  def apply(): JsftpOpts = {
+  def apply(
+    createSocket: (/* hasPortHost */ Host, /* firstAction */ js.Function0[js.Object]) => Socket = null,
+    host: String = null,
+    pass: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    useList: js.UndefOr[Boolean] = js.undefined,
+    user: String = null
+  ): JsftpOpts = {
     val __obj = js.Dynamic.literal()
+    if (createSocket != null) __obj.updateDynamic("createSocket")(js.Any.fromFunction2(createSocket))
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (pass != null) __obj.updateDynamic("pass")(pass.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useList)) __obj.updateDynamic("useList")(useList.get.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsftpOpts]
   }
-  @scala.inline
-  implicit class JsftpOptsOps[Self <: JsftpOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateSocket(value: (/* hasPortHost */ Host, /* firstAction */ js.Function0[js.Object]) => Socket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSocket")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateSocket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSocket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseList(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

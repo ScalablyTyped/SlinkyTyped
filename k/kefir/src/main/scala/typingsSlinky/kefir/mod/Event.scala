@@ -1,8 +1,8 @@
 package typingsSlinky.kefir.mod
 
-import typingsSlinky.kefir.anon.Type
-import typingsSlinky.kefir.anon.TypeValue
-import typingsSlinky.kefir.anon.ValueVoid
+import typingsSlinky.kefir.kefirStrings.end
+import typingsSlinky.kefir.kefirStrings.error
+import typingsSlinky.kefir.kefirStrings.value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +16,22 @@ trait Event[V, E] extends js.Object
 
 object Event {
   @scala.inline
-  implicit def apply[V, E](value: Type[V]): Event[V, E] = value.asInstanceOf[Event[V, E]]
+  def Type[V, E](`type`: value, value: V): Event[V, E] = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Event[V, E]]
+  }
   @scala.inline
-  implicit def apply[V, E](value: TypeValue[E]): Event[V, E] = value.asInstanceOf[Event[V, E]]
+  def TypeValue[V, E](`type`: error, value: E): Event[V, E] = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Event[V, E]]
+  }
   @scala.inline
-  implicit def apply[V, E](value: ValueVoid): Event[V, E] = value.asInstanceOf[Event[V, E]]
+  def ValueVoid[V, E](`type`: end, value: Unit): Event[V, E] = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Event[V, E]]
+  }
 }
 

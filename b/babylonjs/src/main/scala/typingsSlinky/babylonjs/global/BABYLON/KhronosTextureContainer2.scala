@@ -9,6 +9,13 @@ import scala.scalajs.js.annotation._
 class KhronosTextureContainer2 protected ()
   extends typingsSlinky.babylonjs.BABYLON.KhronosTextureContainer2 {
   def this(engine: typingsSlinky.babylonjs.BABYLON.ThinEngine) = this()
+  /* CompleteClass */
+  override var _determineTranscodeFormat: js.Any = js.native
+  /* CompleteClass */
+  override def uploadAsync(
+    data: js.typedarray.ArrayBufferView,
+    internalTexture: typingsSlinky.babylonjs.BABYLON.InternalTexture
+  ): js.Promise[Unit] = js.native
 }
 
 /* static members */

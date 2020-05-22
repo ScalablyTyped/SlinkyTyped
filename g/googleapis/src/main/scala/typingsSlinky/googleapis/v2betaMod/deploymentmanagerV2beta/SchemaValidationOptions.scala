@@ -22,41 +22,11 @@ trait SchemaValidationOptions extends js.Object {
 
 object SchemaValidationOptions {
   @scala.inline
-  def apply(): SchemaValidationOptions = {
+  def apply(schemaValidation: String = null, undeclaredProperties: String = null): SchemaValidationOptions = {
     val __obj = js.Dynamic.literal()
+    if (schemaValidation != null) __obj.updateDynamic("schemaValidation")(schemaValidation.asInstanceOf[js.Any])
+    if (undeclaredProperties != null) __obj.updateDynamic("undeclaredProperties")(undeclaredProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaValidationOptions]
   }
-  @scala.inline
-  implicit class SchemaValidationOptionsOps[Self <: SchemaValidationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSchemaValidation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaValidation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaValidation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaValidation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUndeclaredProperties(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undeclaredProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUndeclaredProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undeclaredProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

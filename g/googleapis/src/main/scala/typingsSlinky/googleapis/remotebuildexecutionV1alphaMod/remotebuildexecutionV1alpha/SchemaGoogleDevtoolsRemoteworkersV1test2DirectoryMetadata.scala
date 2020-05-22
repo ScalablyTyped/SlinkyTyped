@@ -23,41 +23,11 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2DirectoryMetadata extends js.Objec
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2DirectoryMetadata {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2DirectoryMetadata = {
+  def apply(digest: SchemaGoogleDevtoolsRemoteworkersV1test2Digest = null, path: String = null): SchemaGoogleDevtoolsRemoteworkersV1test2DirectoryMetadata = {
     val __obj = js.Dynamic.literal()
+    if (digest != null) __obj.updateDynamic("digest")(digest.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2DirectoryMetadata]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2DirectoryMetadataOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2DirectoryMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDigest(value: SchemaGoogleDevtoolsRemoteworkersV1test2Digest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

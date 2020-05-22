@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CreatePageCountFieldCommand")
 @js.native
 class CreatePageCountFieldCommand ()
-  extends typingsSlinky.devexpressWeb.CreatePageCountFieldCommand
+  extends typingsSlinky.devexpressWeb.CreatePageCountFieldCommand {
+  /**
+    * Executes the CreatePageCountFieldCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

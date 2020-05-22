@@ -109,6 +109,8 @@ import typingsSlinky.pulumiKubernetes.outputMod.flowcontrol.v1alpha1.PriorityLev
 import typingsSlinky.pulumiKubernetes.outputMod.meta.v1.ListMeta
 import typingsSlinky.pulumiKubernetes.outputMod.meta.v1.ObjectMeta
 import typingsSlinky.pulumiKubernetes.outputMod.meta.v1.StatusDetails
+import typingsSlinky.pulumiKubernetes.outputMod.networking.v1beta1.IngressClass
+import typingsSlinky.pulumiKubernetes.outputMod.networking.v1beta1.IngressClassSpec
 import typingsSlinky.pulumiKubernetes.outputMod.node.v1alpha1.RuntimeClass
 import typingsSlinky.pulumiKubernetes.outputMod.node.v1alpha1.RuntimeClassSpec
 import typingsSlinky.pulumiKubernetes.outputMod.node.v1beta1.Overhead
@@ -127,14 +129,14 @@ import typingsSlinky.pulumiKubernetes.outputMod.rbac.v1.Subject
 import typingsSlinky.pulumiKubernetes.outputMod.scheduling.v1.PriorityClass
 import typingsSlinky.pulumiKubernetes.outputMod.settings.v1alpha1.PodPreset
 import typingsSlinky.pulumiKubernetes.outputMod.settings.v1alpha1.PodPresetSpec
+import typingsSlinky.pulumiKubernetes.outputMod.storage.v1.CSIDriver
+import typingsSlinky.pulumiKubernetes.outputMod.storage.v1.CSIDriverSpec
 import typingsSlinky.pulumiKubernetes.outputMod.storage.v1.CSINode
 import typingsSlinky.pulumiKubernetes.outputMod.storage.v1.CSINodeSpec
 import typingsSlinky.pulumiKubernetes.outputMod.storage.v1.StorageClass
 import typingsSlinky.pulumiKubernetes.outputMod.storage.v1.VolumeAttachment
 import typingsSlinky.pulumiKubernetes.outputMod.storage.v1.VolumeAttachmentSpec
 import typingsSlinky.pulumiKubernetes.outputMod.storage.v1.VolumeAttachmentStatus
-import typingsSlinky.pulumiKubernetes.outputMod.storage.v1beta1.CSIDriver
-import typingsSlinky.pulumiKubernetes.outputMod.storage.v1beta1.CSIDriverSpec
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.APIServiceList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.AuditSinkList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Binding
@@ -155,6 +157,7 @@ import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.EndpointsList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.EventList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.FlowSchemaList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.HorizontalPodAutoscalerList
+import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.IngressClassList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.IngressList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.JobList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.LeaseList
@@ -221,10 +224,6 @@ import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.apiregistrationDot
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.apiregistrationDotk8sDotioSlashv1beta1
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.apiregistrationDotk8sDotioSlashv1beta1SlashAPIService
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.apiregistrationDotk8sDotioSlashv1beta1SlashAPIServiceList
-import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.apiregistrationSlashv1SlashAPIService
-import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.apiregistrationSlashv1SlashAPIServiceList
-import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.apiregistrationSlashv1beta1SlashAPIService
-import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.apiregistrationSlashv1beta1SlashAPIServiceList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.appsSlashv1
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.appsSlashv1SlashControllerRevision
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.appsSlashv1SlashControllerRevisionList
@@ -341,6 +340,7 @@ import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.flowcontrolDotapis
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.globalDefault
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.handler
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.imagePullSecrets
+import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.immutable
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.involvedObject
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.items
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.kind
@@ -353,6 +353,8 @@ import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.networkingDotk8sDo
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.networkingDotk8sDotioSlashv1SlashNetworkPolicyList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.networkingDotk8sDotioSlashv1beta1
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.networkingDotk8sDotioSlashv1beta1SlashIngress
+import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.networkingDotk8sDotioSlashv1beta1SlashIngressClass
+import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.networkingDotk8sDotioSlashv1beta1SlashIngressClassList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.networkingDotk8sDotioSlashv1beta1SlashIngressList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.nodeDotk8sDotioSlashv1alpha1
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.nodeDotk8sDotioSlashv1alpha1SlashRuntimeClass
@@ -427,6 +429,8 @@ import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.source
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.spec
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.status_
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.storageDotk8sDotioSlashv1
+import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.storageDotk8sDotioSlashv1SlashCSIDriver
+import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.storageDotk8sDotioSlashv1SlashCSIDriverList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.storageDotk8sDotioSlashv1SlashCSINode
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.storageDotk8sDotioSlashv1SlashCSINodeList
 import typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.storageDotk8sDotioSlashv1SlashStorageClass
@@ -1324,144 +1328,6 @@ abstract class CollectionComponentResource protected ()
   ): Output_[typingsSlinky.pulumiKubernetes.outputMod.apiregistration.v1beta1.APIServiceSpec] = js.native
   def getResourceProperty(
     groupVersionKind: apiregistrationDotk8sDotioSlashv1beta1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: status_
-  ): Output_[
-    typingsSlinky.pulumiKubernetes.outputMod.apiregistration.v1beta1.APIServiceStatus
-  ] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIServiceList, name: String, property: apiVersion): Output_[apiregistrationDotk8sDotioSlashv1] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIServiceList, name: String, property: items): Output_[js.Array[APIService]] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIServiceList, name: String, property: kind): Output_[APIServiceList] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIServiceList, name: String, property: metadata): Output_[ListMeta] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIServiceList,
-    namespace: String,
-    name: String,
-    property: apiVersion
-  ): Output_[apiregistrationDotk8sDotioSlashv1] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIServiceList,
-    namespace: String,
-    name: String,
-    property: items
-  ): Output_[js.Array[APIService]] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIServiceList,
-    namespace: String,
-    name: String,
-    property: kind
-  ): Output_[APIServiceList] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIServiceList,
-    namespace: String,
-    name: String,
-    property: metadata
-  ): Output_[ListMeta] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIService, name: String, property: apiVersion): Output_[apiregistrationDotk8sDotioSlashv1] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIService, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.APIService] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIService, name: String, property: metadata): Output_[ObjectMeta] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIService, name: String, property: spec): Output_[APIServiceSpec] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1SlashAPIService, name: String, property: status_): Output_[APIServiceStatus] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: apiVersion
-  ): Output_[apiregistrationDotk8sDotioSlashv1] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: kind
-  ): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.APIService] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: metadata
-  ): Output_[ObjectMeta] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: spec
-  ): Output_[APIServiceSpec] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: status_
-  ): Output_[APIServiceStatus] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList,
-    name: String,
-    property: apiVersion
-  ): Output_[apiregistrationDotk8sDotioSlashv1beta1] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList, name: String, property: items): Output_[
-    js.Array[typingsSlinky.pulumiKubernetes.outputMod.apiregistration.v1beta1.APIService]
-  ] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList, name: String, property: kind): Output_[APIServiceList] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList, name: String, property: metadata): Output_[ListMeta] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList,
-    namespace: String,
-    name: String,
-    property: apiVersion
-  ): Output_[apiregistrationDotk8sDotioSlashv1beta1] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList,
-    namespace: String,
-    name: String,
-    property: items
-  ): Output_[
-    js.Array[typingsSlinky.pulumiKubernetes.outputMod.apiregistration.v1beta1.APIService]
-  ] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList,
-    namespace: String,
-    name: String,
-    property: kind
-  ): Output_[APIServiceList] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList,
-    namespace: String,
-    name: String,
-    property: metadata
-  ): Output_[ListMeta] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1beta1SlashAPIService, name: String, property: apiVersion): Output_[apiregistrationDotk8sDotioSlashv1beta1] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1beta1SlashAPIService, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.APIService] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1beta1SlashAPIService, name: String, property: metadata): Output_[ObjectMeta] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1beta1SlashAPIService, name: String, property: spec): Output_[typingsSlinky.pulumiKubernetes.outputMod.apiregistration.v1beta1.APIServiceSpec] = js.native
-  def getResourceProperty(groupVersionKind: apiregistrationSlashv1beta1SlashAPIService, name: String, property: status_): Output_[
-    typingsSlinky.pulumiKubernetes.outputMod.apiregistration.v1beta1.APIServiceStatus
-  ] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: apiVersion
-  ): Output_[apiregistrationDotk8sDotioSlashv1beta1] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: kind
-  ): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.APIService] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: metadata
-  ): Output_[ObjectMeta] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIService,
-    namespace: String,
-    name: String,
-    property: spec
-  ): Output_[typingsSlinky.pulumiKubernetes.outputMod.apiregistration.v1beta1.APIServiceSpec] = js.native
-  def getResourceProperty(
-    groupVersionKind: apiregistrationSlashv1beta1SlashAPIService,
     namespace: String,
     name: String,
     property: status_
@@ -4424,6 +4290,86 @@ abstract class CollectionComponentResource protected ()
     property: spec
   ): Output_[typingsSlinky.pulumiKubernetes.outputMod.networking.v1.NetworkPolicySpec] = js.native
   def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    name: String,
+    property: apiVersion
+  ): Output_[networkingDotk8sDotioSlashv1beta1] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    name: String,
+    property: items
+  ): Output_[js.Array[IngressClass]] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    name: String,
+    property: kind
+  ): Output_[IngressClassList] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    name: String,
+    property: metadata
+  ): Output_[ListMeta] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    namespace: String,
+    name: String,
+    property: apiVersion
+  ): Output_[networkingDotk8sDotioSlashv1beta1] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    namespace: String,
+    name: String,
+    property: items
+  ): Output_[js.Array[IngressClass]] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    namespace: String,
+    name: String,
+    property: kind
+  ): Output_[IngressClassList] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    namespace: String,
+    name: String,
+    property: metadata
+  ): Output_[ListMeta] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass,
+    name: String,
+    property: apiVersion
+  ): Output_[networkingDotk8sDotioSlashv1beta1] = js.native
+  def getResourceProperty(groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.IngressClass] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass,
+    name: String,
+    property: metadata
+  ): Output_[ObjectMeta] = js.native
+  def getResourceProperty(groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass, name: String, property: spec): Output_[IngressClassSpec] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass,
+    namespace: String,
+    name: String,
+    property: apiVersion
+  ): Output_[networkingDotk8sDotioSlashv1beta1] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass,
+    namespace: String,
+    name: String,
+    property: kind
+  ): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.IngressClass] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass,
+    namespace: String,
+    name: String,
+    property: metadata
+  ): Output_[ObjectMeta] = js.native
+  def getResourceProperty(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass,
+    namespace: String,
+    name: String,
+    property: spec
+  ): Output_[IngressClassSpec] = js.native
+  def getResourceProperty(
     groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressList,
     name: String,
     property: apiVersion
@@ -6353,6 +6299,62 @@ abstract class CollectionComponentResource protected ()
     name: String,
     property: spec
   ): Output_[PodPresetSpec] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList, name: String, property: apiVersion): Output_[storageDotk8sDotioSlashv1] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList, name: String, property: items): Output_[js.Array[CSIDriver]] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList, name: String, property: kind): Output_[CSIDriverList] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList, name: String, property: metadata): Output_[ListMeta] = js.native
+  def getResourceProperty(
+    groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList,
+    namespace: String,
+    name: String,
+    property: apiVersion
+  ): Output_[storageDotk8sDotioSlashv1] = js.native
+  def getResourceProperty(
+    groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList,
+    namespace: String,
+    name: String,
+    property: items
+  ): Output_[js.Array[CSIDriver]] = js.native
+  def getResourceProperty(
+    groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList,
+    namespace: String,
+    name: String,
+    property: kind
+  ): Output_[CSIDriverList] = js.native
+  def getResourceProperty(
+    groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList,
+    namespace: String,
+    name: String,
+    property: metadata
+  ): Output_[ListMeta] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver, name: String, property: apiVersion): Output_[storageDotk8sDotioSlashv1] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.CSIDriver] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver, name: String, property: metadata): Output_[ObjectMeta] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver, name: String, property: spec): Output_[CSIDriverSpec] = js.native
+  def getResourceProperty(
+    groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver,
+    namespace: String,
+    name: String,
+    property: apiVersion
+  ): Output_[storageDotk8sDotioSlashv1] = js.native
+  def getResourceProperty(
+    groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver,
+    namespace: String,
+    name: String,
+    property: kind
+  ): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.CSIDriver] = js.native
+  def getResourceProperty(
+    groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver,
+    namespace: String,
+    name: String,
+    property: metadata
+  ): Output_[ObjectMeta] = js.native
+  def getResourceProperty(
+    groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver,
+    namespace: String,
+    name: String,
+    property: spec
+  ): Output_[CSIDriverSpec] = js.native
   def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSINodeList, name: String, property: apiVersion): Output_[storageDotk8sDotioSlashv1] = js.native
   def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSINodeList, name: String, property: items): Output_[js.Array[CSINode]] = js.native
   def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1SlashCSINodeList, name: String, property: kind): Output_[CSINodeList] = js.native
@@ -6714,7 +6716,7 @@ abstract class CollectionComponentResource protected ()
     name: String,
     property: apiVersion
   ): Output_[storageDotk8sDotioSlashv1beta1] = js.native
-  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriverList, name: String, property: items): Output_[js.Array[CSIDriver]] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriverList, name: String, property: items): Output_[js.Array[typingsSlinky.pulumiKubernetes.outputMod.storage.v1beta1.CSIDriver]] = js.native
   def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriverList, name: String, property: kind): Output_[CSIDriverList] = js.native
   def getResourceProperty(
     groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriverList,
@@ -6732,7 +6734,7 @@ abstract class CollectionComponentResource protected ()
     namespace: String,
     name: String,
     property: items
-  ): Output_[js.Array[CSIDriver]] = js.native
+  ): Output_[js.Array[typingsSlinky.pulumiKubernetes.outputMod.storage.v1beta1.CSIDriver]] = js.native
   def getResourceProperty(
     groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriverList,
     namespace: String,
@@ -6748,7 +6750,7 @@ abstract class CollectionComponentResource protected ()
   def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriver, name: String, property: apiVersion): Output_[storageDotk8sDotioSlashv1beta1] = js.native
   def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriver, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.CSIDriver] = js.native
   def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriver, name: String, property: metadata): Output_[ObjectMeta] = js.native
-  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriver, name: String, property: spec): Output_[CSIDriverSpec] = js.native
+  def getResourceProperty(groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriver, name: String, property: spec): Output_[typingsSlinky.pulumiKubernetes.outputMod.storage.v1beta1.CSIDriverSpec] = js.native
   def getResourceProperty(
     groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSIDriver,
     namespace: String,
@@ -6772,7 +6774,7 @@ abstract class CollectionComponentResource protected ()
     namespace: String,
     name: String,
     property: spec
-  ): Output_[CSIDriverSpec] = js.native
+  ): Output_[typingsSlinky.pulumiKubernetes.outputMod.storage.v1beta1.CSIDriverSpec] = js.native
   def getResourceProperty(
     groupVersionKind: storageDotk8sDotioSlashv1beta1SlashCSINodeList,
     name: String,
@@ -7126,11 +7128,13 @@ abstract class CollectionComponentResource protected ()
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, name: String, property: apiVersion): Output_[v1] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, name: String, property: binaryData): Output_[js.Object] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, name: String, property: data): Output_[StringDictionary[Output_[String]]] = js.native
+  def getResourceProperty(groupVersionKind: v1SlashConfigMap, name: String, property: immutable): Output_[Boolean] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ConfigMap] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, name: String, property: metadata): Output_[ObjectMeta] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, namespace: String, name: String, property: apiVersion): Output_[v1] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, namespace: String, name: String, property: binaryData): Output_[js.Object] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, namespace: String, name: String, property: data): Output_[StringDictionary[Output_[String]]] = js.native
+  def getResourceProperty(groupVersionKind: v1SlashConfigMap, namespace: String, name: String, property: immutable): Output_[Boolean] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, namespace: String, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ConfigMap] = js.native
   def getResourceProperty(groupVersionKind: v1SlashConfigMap, namespace: String, name: String, property: metadata): Output_[ObjectMeta] = js.native
   def getResourceProperty(groupVersionKind: v1SlashEndpointsList, name: String, property: apiVersion): Output_[v1] = js.native
@@ -7425,12 +7429,14 @@ abstract class CollectionComponentResource protected ()
   def getResourceProperty(groupVersionKind: v1SlashSecret, name: String, property: `type`): Output_[String] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, name: String, property: apiVersion): Output_[v1] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, name: String, property: data): Output_[js.Object] = js.native
+  def getResourceProperty(groupVersionKind: v1SlashSecret, name: String, property: immutable): Output_[Boolean] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Secret] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, name: String, property: metadata): Output_[ObjectMeta] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, name: String, property: stringData): Output_[StringDictionary[Output_[String]]] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, namespace: String, name: String, property: `type`): Output_[String] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, namespace: String, name: String, property: apiVersion): Output_[v1] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, namespace: String, name: String, property: data): Output_[js.Object] = js.native
+  def getResourceProperty(groupVersionKind: v1SlashSecret, namespace: String, name: String, property: immutable): Output_[Boolean] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, namespace: String, name: String, property: kind): Output_[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Secret] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, namespace: String, name: String, property: metadata): Output_[ObjectMeta] = js.native
   def getResourceProperty(groupVersionKind: v1SlashSecret, namespace: String, name: String, property: stringData): Output_[StringDictionary[Output_[String]]] = js.native
@@ -7699,22 +7705,6 @@ abstract class CollectionComponentResource protected ()
     namespace: String,
     name: String
   ): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1beta1.APIServiceList] = js.native
-  @JSName("getResource")
-  def getResource_apiregistrationv1APIService(groupVersionKind: apiregistrationSlashv1SlashAPIService, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1.APIService] = js.native
-  @JSName("getResource")
-  def getResource_apiregistrationv1APIService(groupVersionKind: apiregistrationSlashv1SlashAPIService, namespace: String, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1.APIService] = js.native
-  @JSName("getResource")
-  def getResource_apiregistrationv1APIServiceList(groupVersionKind: apiregistrationSlashv1SlashAPIServiceList, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1.APIServiceList] = js.native
-  @JSName("getResource")
-  def getResource_apiregistrationv1APIServiceList(groupVersionKind: apiregistrationSlashv1SlashAPIServiceList, namespace: String, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1.APIServiceList] = js.native
-  @JSName("getResource")
-  def getResource_apiregistrationv1beta1APIService(groupVersionKind: apiregistrationSlashv1beta1SlashAPIService, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1beta1.APIService] = js.native
-  @JSName("getResource")
-  def getResource_apiregistrationv1beta1APIService(groupVersionKind: apiregistrationSlashv1beta1SlashAPIService, namespace: String, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1beta1.APIService] = js.native
-  @JSName("getResource")
-  def getResource_apiregistrationv1beta1APIServiceList(groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1beta1.APIServiceList] = js.native
-  @JSName("getResource")
-  def getResource_apiregistrationv1beta1APIServiceList(groupVersionKind: apiregistrationSlashv1beta1SlashAPIServiceList, namespace: String, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apiregistration.v1beta1.APIServiceList] = js.native
   @JSName("getResource")
   def getResource_appsv1ControllerRevision(groupVersionKind: appsSlashv1SlashControllerRevision, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.apps.v1.ControllerRevision] = js.native
   @JSName("getResource")
@@ -8189,6 +8179,22 @@ abstract class CollectionComponentResource protected ()
   @JSName("getResource")
   def getResource_networkingk8siov1beta1Ingress(groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngress, namespace: String, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.networking.v1beta1.Ingress] = js.native
   @JSName("getResource")
+  def getResource_networkingk8siov1beta1IngressClass(groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.networking.v1beta1.IngressClass] = js.native
+  @JSName("getResource")
+  def getResource_networkingk8siov1beta1IngressClass(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClass,
+    namespace: String,
+    name: String
+  ): Output_[typingsSlinky.pulumiKubernetes.mod.networking.v1beta1.IngressClass] = js.native
+  @JSName("getResource")
+  def getResource_networkingk8siov1beta1IngressClassList(groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.networking.v1beta1.IngressClassList] = js.native
+  @JSName("getResource")
+  def getResource_networkingk8siov1beta1IngressClassList(
+    groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressClassList,
+    namespace: String,
+    name: String
+  ): Output_[typingsSlinky.pulumiKubernetes.mod.networking.v1beta1.IngressClassList] = js.native
+  @JSName("getResource")
   def getResource_networkingk8siov1beta1IngressList(groupVersionKind: networkingDotk8sDotioSlashv1beta1SlashIngressList, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.networking.v1beta1.IngressList] = js.native
   @JSName("getResource")
   def getResource_networkingk8siov1beta1IngressList(
@@ -8489,6 +8495,14 @@ abstract class CollectionComponentResource protected ()
     namespace: String,
     name: String
   ): Output_[typingsSlinky.pulumiKubernetes.mod.settings.v1alpha1.PodPresetList] = js.native
+  @JSName("getResource")
+  def getResource_storagek8siov1CSIDriver(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.storage.v1.CSIDriver] = js.native
+  @JSName("getResource")
+  def getResource_storagek8siov1CSIDriver(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriver, namespace: String, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.storage.v1.CSIDriver] = js.native
+  @JSName("getResource")
+  def getResource_storagek8siov1CSIDriverList(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.storage.v1.CSIDriverList] = js.native
+  @JSName("getResource")
+  def getResource_storagek8siov1CSIDriverList(groupVersionKind: storageDotk8sDotioSlashv1SlashCSIDriverList, namespace: String, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.storage.v1.CSIDriverList] = js.native
   @JSName("getResource")
   def getResource_storagek8siov1CSINode(groupVersionKind: storageDotk8sDotioSlashv1SlashCSINode, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.storage.v1.CSINode] = js.native
   @JSName("getResource")

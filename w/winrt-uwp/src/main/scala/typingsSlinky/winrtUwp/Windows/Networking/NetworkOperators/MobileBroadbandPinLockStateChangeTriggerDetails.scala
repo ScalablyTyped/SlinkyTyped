@@ -6,10 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides details for a network registration state change notification. */
-@js.native
 trait MobileBroadbandPinLockStateChangeTriggerDetails extends js.Object {
   /** Gets the collection of PIN lock state change details associated with a notification. */
-  var pinLockStateChanges: IVectorView[MobileBroadbandPinLockStateChange] = js.native
+  var pinLockStateChanges: IVectorView[MobileBroadbandPinLockStateChange]
 }
 
 object MobileBroadbandPinLockStateChangeTriggerDetails {
@@ -18,19 +17,5 @@ object MobileBroadbandPinLockStateChangeTriggerDetails {
     val __obj = js.Dynamic.literal(pinLockStateChanges = pinLockStateChanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[MobileBroadbandPinLockStateChangeTriggerDetails]
   }
-  @scala.inline
-  implicit class MobileBroadbandPinLockStateChangeTriggerDetailsOps[Self <: MobileBroadbandPinLockStateChangeTriggerDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPinLockStateChanges(value: IVectorView[MobileBroadbandPinLockStateChange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinLockStateChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

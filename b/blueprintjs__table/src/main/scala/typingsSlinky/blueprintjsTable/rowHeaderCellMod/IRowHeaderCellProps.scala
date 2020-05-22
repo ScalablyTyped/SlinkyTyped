@@ -2,20 +2,21 @@ package typingsSlinky.blueprintjsTable.rowHeaderCellMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsTable.headerCellMod.IHeaderCellProps
+import typingsSlinky.blueprintjsTable.resizeHandleMod.ResizeHandle
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IRowHeaderCellProps extends IHeaderCellProps {
   /**
     * Specifies if the row is reorderable.
     */
-  var enableRowReordering: js.UndefOr[Boolean] = js.native
+  var enableRowReordering: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies whether the full row is part of a selection.
     */
-  var isRowSelected: js.UndefOr[Boolean] = js.native
+  var isRowSelected: js.UndefOr[Boolean] = js.undefined
   /**
     * A callback to override the default name rendering behavior. The default
     * behavior is to simply use the `RowHeaderCell`s name prop.
@@ -26,58 +27,39 @@ trait IRowHeaderCellProps extends IHeaderCellProps {
     * The callback will also receive the row index if an `index` was originally
     * provided via props.
     */
-  var nameRenderer: js.UndefOr[js.Function2[/* name */ String, /* index */ js.UndefOr[Double], ReactElement]] = js.native
+  var nameRenderer: js.UndefOr[js.Function2[/* name */ String, /* index */ js.UndefOr[Double], ReactElement]] = js.undefined
 }
 
 object IRowHeaderCellProps {
   @scala.inline
-  def apply(): IRowHeaderCellProps = {
+  def apply(
+    className: String = null,
+    enableRowReordering: js.UndefOr[Boolean] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    isActive: js.UndefOr[Boolean] = js.undefined,
+    isRowSelected: js.UndefOr[Boolean] = js.undefined,
+    loading: js.UndefOr[Boolean] = js.undefined,
+    menuRenderer: /* index */ js.UndefOr[Double] => ReactElement = null,
+    name: String = null,
+    nameRenderer: (/* name */ String, /* index */ js.UndefOr[Double]) => ReactElement = null,
+    reorderHandle: ReactElement = null,
+    resizeHandle: ResizeHandle = null,
+    style: CSSProperties = null
+  ): IRowHeaderCellProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableRowReordering)) __obj.updateDynamic("enableRowReordering")(enableRowReordering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isActive)) __obj.updateDynamic("isActive")(isActive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isRowSelected)) __obj.updateDynamic("isRowSelected")(isRowSelected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
+    if (menuRenderer != null) __obj.updateDynamic("menuRenderer")(js.Any.fromFunction1(menuRenderer))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nameRenderer != null) __obj.updateDynamic("nameRenderer")(js.Any.fromFunction2(nameRenderer))
+    if (reorderHandle != null) __obj.updateDynamic("reorderHandle")(reorderHandle.asInstanceOf[js.Any])
+    if (resizeHandle != null) __obj.updateDynamic("resizeHandle")(resizeHandle.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRowHeaderCellProps]
   }
-  @scala.inline
-  implicit class IRowHeaderCellPropsOps[Self <: IRowHeaderCellProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableRowReordering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRowReordering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableRowReordering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRowReordering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsRowSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRowSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsRowSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRowSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameRenderer(value: (/* name */ String, /* index */ js.UndefOr[Double]) => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRenderer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutNameRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRenderer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

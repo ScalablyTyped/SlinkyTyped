@@ -18,35 +18,10 @@ trait GetQueueUrlRequest extends js.Object {
 
 object GetQueueUrlRequest {
   @scala.inline
-  def apply(QueueName: String): GetQueueUrlRequest = {
+  def apply(QueueName: String, QueueOwnerAWSAccountId: String = null): GetQueueUrlRequest = {
     val __obj = js.Dynamic.literal(QueueName = QueueName.asInstanceOf[js.Any])
+    if (QueueOwnerAWSAccountId != null) __obj.updateDynamic("QueueOwnerAWSAccountId")(QueueOwnerAWSAccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetQueueUrlRequest]
   }
-  @scala.inline
-  implicit class GetQueueUrlRequestOps[Self <: GetQueueUrlRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueueName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueueOwnerAWSAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueOwnerAWSAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueueOwnerAWSAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueOwnerAWSAccountId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

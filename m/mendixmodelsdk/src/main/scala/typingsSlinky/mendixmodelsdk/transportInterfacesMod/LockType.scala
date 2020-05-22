@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.commit
   - typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.update
   - typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.switch
+  - typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`commit-wc`
 */
 trait LockType extends js.Object
 
@@ -19,6 +20,8 @@ object LockType {
   def bidi: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.bidi = "bidi".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.bidi]
   @scala.inline
   def commit: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.commit = "commit".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.commit]
+  @scala.inline
+  def `commit-wc`: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`commit-wc` = "commit-wc".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`commit-wc`]
   @scala.inline
   def conversion: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.conversion = "conversion".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.conversion]
   @scala.inline

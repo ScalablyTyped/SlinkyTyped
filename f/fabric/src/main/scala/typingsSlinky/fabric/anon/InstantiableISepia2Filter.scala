@@ -12,9 +12,9 @@ trait InstantiableISepia2Filter
   extends Instantiable0[ISepia2Filter]
      with Instantiable1[/* options */ js.Any, ISepia2Filter] {
   /**
-  		 * Returns filter instance from an object representation
-  		 * @param object Object to create an instance from
-  		 */
+    * Returns filter instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): ISepia2Filter = js.native
 }
 

@@ -324,6 +324,9 @@ object uiBoxStrings {
   sealed trait order extends js.Object
   
   @js.native
+  sealed trait outline extends js.Object
+  
+  @js.native
   sealed trait overflow extends js.Object
   
   @js.native
@@ -367,6 +370,9 @@ object uiBoxStrings {
   
   @js.native
   sealed trait position extends js.Object
+  
+  @js.native
+  sealed trait resize extends js.Object
   
   @js.native
   sealed trait right extends js.Object
@@ -647,6 +653,8 @@ object uiBoxStrings {
   @scala.inline
   def order: order = "order".asInstanceOf[order]
   @scala.inline
+  def outline: outline = "outline".asInstanceOf[outline]
+  @scala.inline
   def overflow: overflow = "overflow".asInstanceOf[overflow]
   @scala.inline
   def overflowX: overflowX = "overflowX".asInstanceOf[overflowX]
@@ -676,6 +684,8 @@ object uiBoxStrings {
   def pointerEvents: pointerEvents = "pointerEvents".asInstanceOf[pointerEvents]
   @scala.inline
   def position: position = "position".asInstanceOf[position]
+  @scala.inline
+  def resize: resize = "resize".asInstanceOf[resize]
   @scala.inline
   def right: right = "right".asInstanceOf[right]
   @scala.inline

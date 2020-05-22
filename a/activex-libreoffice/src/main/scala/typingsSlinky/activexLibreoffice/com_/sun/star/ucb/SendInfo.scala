@@ -9,12 +9,11 @@ import scala.scalajs.js.annotation._
   *
   * It can contain any string values (server names, user names, passwords, ...).
   */
-@js.native
 trait SendInfo extends js.Object {
   /** the protocol to which the info is related (i.e. "NNTP", "SMTP", "VIM"). */
-  var ProtocolType: String = js.native
+  var ProtocolType: String
   /** the value. */
-  var Value: String = js.native
+  var Value: String
 }
 
 object SendInfo {
@@ -23,25 +22,5 @@ object SendInfo {
     val __obj = js.Dynamic.literal(ProtocolType = ProtocolType.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendInfo]
   }
-  @scala.inline
-  implicit class SendInfoOps[Self <: SendInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProtocolType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProtocolType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

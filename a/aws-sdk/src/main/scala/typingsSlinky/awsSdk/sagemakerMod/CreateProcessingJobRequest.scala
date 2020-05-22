@@ -55,126 +55,24 @@ object CreateProcessingJobRequest {
     AppSpecification: AppSpecification,
     ProcessingJobName: ProcessingJobName,
     ProcessingResources: ProcessingResources,
-    RoleArn: RoleArn
+    RoleArn: RoleArn,
+    Environment: ProcessingEnvironmentMap = null,
+    ExperimentConfig: ExperimentConfig = null,
+    NetworkConfig: NetworkConfig = null,
+    ProcessingInputs: ProcessingInputs = null,
+    ProcessingOutputConfig: ProcessingOutputConfig = null,
+    StoppingCondition: ProcessingStoppingCondition = null,
+    Tags: TagList = null
   ): CreateProcessingJobRequest = {
     val __obj = js.Dynamic.literal(AppSpecification = AppSpecification.asInstanceOf[js.Any], ProcessingJobName = ProcessingJobName.asInstanceOf[js.Any], ProcessingResources = ProcessingResources.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any])
+    if (Environment != null) __obj.updateDynamic("Environment")(Environment.asInstanceOf[js.Any])
+    if (ExperimentConfig != null) __obj.updateDynamic("ExperimentConfig")(ExperimentConfig.asInstanceOf[js.Any])
+    if (NetworkConfig != null) __obj.updateDynamic("NetworkConfig")(NetworkConfig.asInstanceOf[js.Any])
+    if (ProcessingInputs != null) __obj.updateDynamic("ProcessingInputs")(ProcessingInputs.asInstanceOf[js.Any])
+    if (ProcessingOutputConfig != null) __obj.updateDynamic("ProcessingOutputConfig")(ProcessingOutputConfig.asInstanceOf[js.Any])
+    if (StoppingCondition != null) __obj.updateDynamic("StoppingCondition")(StoppingCondition.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProcessingJobRequest]
   }
-  @scala.inline
-  implicit class CreateProcessingJobRequestOps[Self <: CreateProcessingJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppSpecification(value: AppSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AppSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProcessingJobName(value: ProcessingJobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProcessingResources(value: ProcessingResources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: ProcessingEnvironmentMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperimentConfig(value: ExperimentConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExperimentConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimentConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExperimentConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkConfig(value: NetworkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingInputs(value: ProcessingInputs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingInputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessingInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingInputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingOutputConfig(value: ProcessingOutputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingOutputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessingOutputConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingOutputConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoppingCondition(value: ProcessingStoppingCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoppingCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingCondition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

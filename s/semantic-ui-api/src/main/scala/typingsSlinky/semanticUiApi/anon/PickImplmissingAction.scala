@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-api.SemanticUI.Api.ErrorSettings._Impl, 'missingAction'> */
-@js.native
 trait PickImplmissingAction extends js.Object {
-  var missingAction: String = js.native
+  var missingAction: String
 }
 
 object PickImplmissingAction {
@@ -16,19 +15,5 @@ object PickImplmissingAction {
     val __obj = js.Dynamic.literal(missingAction = missingAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplmissingAction]
   }
-  @scala.inline
-  implicit class PickImplmissingActionOps[Self <: PickImplmissingAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMissingAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

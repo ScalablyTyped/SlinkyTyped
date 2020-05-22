@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UploadDriver extends js.Object {
-  var html5: js.Any = js.native
+  var html5: js.Any
 }
 
 @JSImport("webix", "UploadDriver")

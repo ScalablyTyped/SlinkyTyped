@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.fusiontablesV2Mod.fusiontablesV2
 
-import typingsSlinky.googleapis.AnonColors
+import typingsSlinky.googleapis.anon.Colors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait SchemaStyleFunction extends js.Object {
     * Gradient function that interpolates a range of colors based on column
     * value.
     */
-  var gradient: js.UndefOr[AnonColors] = js.native
+  var gradient: js.UndefOr[Colors] = js.native
   /**
     * Stylers can be one of three kinds: &quot;fusiontables#fromColumn if the
     * column value is to be used as is, i.e., the column values can have colors
@@ -38,65 +38,18 @@ trait SchemaStyleFunction extends js.Object {
 
 object SchemaStyleFunction {
   @scala.inline
-  def apply(): SchemaStyleFunction = {
+  def apply(
+    buckets: js.Array[SchemaBucket] = null,
+    columnName: String = null,
+    gradient: Colors = null,
+    kind: String = null
+  ): SchemaStyleFunction = {
     val __obj = js.Dynamic.literal()
+    if (buckets != null) __obj.updateDynamic("buckets")(buckets.asInstanceOf[js.Any])
+    if (columnName != null) __obj.updateDynamic("columnName")(columnName.asInstanceOf[js.Any])
+    if (gradient != null) __obj.updateDynamic("gradient")(gradient.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStyleFunction]
   }
-  @scala.inline
-  implicit class SchemaStyleFunctionOps[Self <: SchemaStyleFunction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuckets(value: js.Array[SchemaBucket]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGradient(value: AnonColors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGradient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,10 +10,9 @@ import scala.scalajs.js.annotation._
   * @see https://github.com/node-modules/utility#others
   * -------------------0^0---------------------
   */
-@js.native
 trait IReplaceInvalidHttpHeaderCharReturns extends js.Object {
-  var invalid: Boolean = js.native
-  var `val`: String = js.native
+  var invalid: Boolean
+  var `val`: String
 }
 
 object IReplaceInvalidHttpHeaderCharReturns {
@@ -23,25 +22,5 @@ object IReplaceInvalidHttpHeaderCharReturns {
     __obj.updateDynamic("val")(`val`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IReplaceInvalidHttpHeaderCharReturns]
   }
-  @scala.inline
-  implicit class IReplaceInvalidHttpHeaderCharReturnsOps[Self <: IReplaceInvalidHttpHeaderCharReturns] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("val")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

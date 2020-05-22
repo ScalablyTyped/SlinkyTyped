@@ -65,7 +65,14 @@ object U extends js.Object {
   
   @js.native
   class LoadScriptsState ()
-    extends typingsSlinky.sharepoint.Srch.U.LoadScriptsState
+    extends typingsSlinky.sharepoint.Srch.U.LoadScriptsState {
+    /* CompleteClass */
+    override var progress: Double = js.native
+    /* CompleteClass */
+    override var scriptsToLoad: js.Any = js.native
+    /* CompleteClass */
+    override var timeoutHandle: js.Any = js.native
+  }
   
   @js.native
   class PropNames ()

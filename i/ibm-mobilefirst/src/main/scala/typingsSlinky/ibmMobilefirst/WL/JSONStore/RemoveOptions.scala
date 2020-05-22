@@ -1,69 +1,38 @@
 package typingsSlinky.ibmMobilefirst.WL.JSONStore
 
+import typingsSlinky.ibmMobilefirst.WL.IResponse
 import typingsSlinky.ibmMobilefirst.WL.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RemoveOptions extends Options {
-  var exact: js.UndefOr[Boolean] = js.native
-  var markDirty: js.UndefOr[Boolean] = js.native
+  var exact: js.UndefOr[Boolean] = js.undefined
+  var markDirty: js.UndefOr[Boolean] = js.undefined
   /**
     * @deprecated
     */
-  var push: js.UndefOr[Boolean] = js.native
+  var push: js.UndefOr[Boolean] = js.undefined
 }
 
 object RemoveOptions {
   @scala.inline
-  def apply(): RemoveOptions = {
+  def apply(
+    exact: js.UndefOr[Boolean] = js.undefined,
+    invocationContext: js.Any = null,
+    markDirty: js.UndefOr[Boolean] = js.undefined,
+    onFailure: /* response */ IResponse => Unit = null,
+    onSuccess: /* response */ IResponse => Unit = null,
+    push: js.UndefOr[Boolean] = js.undefined
+  ): RemoveOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(exact)) __obj.updateDynamic("exact")(exact.get.asInstanceOf[js.Any])
+    if (invocationContext != null) __obj.updateDynamic("invocationContext")(invocationContext.asInstanceOf[js.Any])
+    if (!js.isUndefined(markDirty)) __obj.updateDynamic("markDirty")(markDirty.get.asInstanceOf[js.Any])
+    if (onFailure != null) __obj.updateDynamic("onFailure")(js.Any.fromFunction1(onFailure))
+    if (onSuccess != null) __obj.updateDynamic("onSuccess")(js.Any.fromFunction1(onSuccess))
+    if (!js.isUndefined(push)) __obj.updateDynamic("push")(push.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoveOptions]
   }
-  @scala.inline
-  implicit class RemoveOptionsOps[Self <: RemoveOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkDirty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markDirty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkDirty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markDirty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPush(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

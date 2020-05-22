@@ -7,46 +7,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConstructQuery
   extends Query
      with BaseQuery {
-  var queryType: CONSTRUCT = js.native
-  var template: js.UndefOr[js.Array[Triple]] = js.native
+  var queryType: CONSTRUCT
+  var template: js.UndefOr[js.Array[Triple]] = js.undefined
 }
 
 object ConstructQuery {
   @scala.inline
-  def apply(prefixes: StringDictionary[String], queryType: CONSTRUCT, `type`: query): ConstructQuery = {
+  def apply(
+    prefixes: StringDictionary[String],
+    queryType: CONSTRUCT,
+    `type`: query,
+    base: String = null,
+    template: js.Array[Triple] = null,
+    values: js.Array[ValuePatternRow] = null,
+    where: js.Array[Pattern] = null
+  ): ConstructQuery = {
     val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConstructQuery]
   }
-  @scala.inline
-  implicit class ConstructQueryOps[Self <: ConstructQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryType(value: CONSTRUCT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: js.Array[Triple]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

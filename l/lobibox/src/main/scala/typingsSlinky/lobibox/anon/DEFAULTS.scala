@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DEFAULTS extends js.Object {
-  var DEFAULTS: MessageBoxesDefault = js.native
-  var OPTIONS: MessageBoxesOptions = js.native
+  var DEFAULTS: MessageBoxesDefault
+  var OPTIONS: MessageBoxesOptions
 }
 
 object DEFAULTS {
@@ -18,25 +17,5 @@ object DEFAULTS {
     val __obj = js.Dynamic.literal(DEFAULTS = DEFAULTS.asInstanceOf[js.Any], OPTIONS = OPTIONS.asInstanceOf[js.Any])
     __obj.asInstanceOf[DEFAULTS]
   }
-  @scala.inline
-  implicit class DEFAULTSOps[Self <: DEFAULTS] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDEFAULTS(value: MessageBoxesDefault): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DEFAULTS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOPTIONS(value: MessageBoxesOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPTIONS")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

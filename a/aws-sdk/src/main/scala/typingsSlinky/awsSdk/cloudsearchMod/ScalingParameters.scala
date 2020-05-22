@@ -22,53 +22,16 @@ trait ScalingParameters extends js.Object {
 
 object ScalingParameters {
   @scala.inline
-  def apply(): ScalingParameters = {
+  def apply(
+    DesiredInstanceType: PartitionInstanceType = null,
+    DesiredPartitionCount: js.UndefOr[UIntValue] = js.undefined,
+    DesiredReplicationCount: js.UndefOr[UIntValue] = js.undefined
+  ): ScalingParameters = {
     val __obj = js.Dynamic.literal()
+    if (DesiredInstanceType != null) __obj.updateDynamic("DesiredInstanceType")(DesiredInstanceType.asInstanceOf[js.Any])
+    if (!js.isUndefined(DesiredPartitionCount)) __obj.updateDynamic("DesiredPartitionCount")(DesiredPartitionCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DesiredReplicationCount)) __obj.updateDynamic("DesiredReplicationCount")(DesiredReplicationCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScalingParameters]
   }
-  @scala.inline
-  implicit class ScalingParametersOps[Self <: ScalingParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDesiredInstanceType(value: PartitionInstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesiredPartitionCount(value: UIntValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredPartitionCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredPartitionCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredPartitionCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesiredReplicationCount(value: UIntValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredReplicationCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredReplicationCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredReplicationCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

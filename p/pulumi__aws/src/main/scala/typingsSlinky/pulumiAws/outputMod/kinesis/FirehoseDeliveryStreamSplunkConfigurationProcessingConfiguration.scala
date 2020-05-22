@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration extends js.Object {
   /**
-    * Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+    * Enables or disables data processing.
     */
   var enabled: js.UndefOr[Boolean] = js.native
   /**
@@ -20,41 +20,14 @@ trait FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration extends j
 
 object FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration {
   @scala.inline
-  def apply(): FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration = {
+  def apply(
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    processors: js.Array[FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor] = null
+  ): FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (processors != null) __obj.updateDynamic("processors")(processors.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration]
   }
-  @scala.inline
-  implicit class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationOps[Self <: FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessors(value: js.Array[FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

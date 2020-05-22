@@ -6,64 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PanelTitleProps
   extends AllHTMLAttributes[PanelTitle]
      with ClassAttributes[PanelTitle] {
-  var bsClass: js.UndefOr[String] = js.native
-  var componentClass: js.UndefOr[String] = js.native
-  var toggle: js.UndefOr[Boolean] = js.native
+  var bsClass: js.UndefOr[String] = js.undefined
+  var componentClass: js.UndefOr[String] = js.undefined
+  var toggle: js.UndefOr[Boolean] = js.undefined
 }
 
 object PanelTitleProps {
   @scala.inline
-  def apply(): PanelTitleProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[PanelTitle] = null,
+    ClassAttributes: ClassAttributes[PanelTitle] = null,
+    bsClass: String = null,
+    componentClass: String = null,
+    toggle: js.UndefOr[Boolean] = js.undefined
+  ): PanelTitleProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
+    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(toggle)) __obj.updateDynamic("toggle")(toggle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PanelTitleProps]
   }
-  @scala.inline
-  implicit class PanelTitlePropsOps[Self <: PanelTitleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBsClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

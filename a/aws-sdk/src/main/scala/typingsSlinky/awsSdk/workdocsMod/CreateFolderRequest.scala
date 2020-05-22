@@ -22,47 +22,15 @@ trait CreateFolderRequest extends js.Object {
 
 object CreateFolderRequest {
   @scala.inline
-  def apply(ParentFolderId: ResourceIdType): CreateFolderRequest = {
+  def apply(
+    ParentFolderId: ResourceIdType,
+    AuthenticationToken: AuthenticationHeaderType = null,
+    Name: ResourceNameType = null
+  ): CreateFolderRequest = {
     val __obj = js.Dynamic.literal(ParentFolderId = ParentFolderId.asInstanceOf[js.Any])
+    if (AuthenticationToken != null) __obj.updateDynamic("AuthenticationToken")(AuthenticationToken.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFolderRequest]
   }
-  @scala.inline
-  implicit class CreateFolderRequestOps[Self <: CreateFolderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParentFolderId(value: ResourceIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentFolderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthenticationToken(value: AuthenticationHeaderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ResourceNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

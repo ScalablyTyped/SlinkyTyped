@@ -8,40 +8,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GenerateSWConfig extends js.Object {
   /**
     * A list of entries to be precached, in addition to any entries that are
     * generated as part of the build configuration.
     */
-  var additionalManifestEntries: js.UndefOr[js.Array[ManifestEntry]] = js.native
+  var additionalManifestEntries: js.UndefOr[js.Array[ManifestEntry]] = js.undefined
   /**
     * The [targets](https://babeljs.io/docs/en/babel-preset-env#targets) to pass to
     * `babel-preset-env` when transpiling the service worker bundle.
     *
     * @default ['chrome >= 56']
     */
-  var babelPresetEnvTargets: js.UndefOr[js.Array[String]] = js.native
+  var babelPresetEnvTargets: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * An optional ID to be prepended to cache names. This is primarily useful for
     * local development where multiple sites may be served from the same
     * `http://localhost:port` origin.
     */
-  var cacheId: js.UndefOr[String] = js.native
+  var cacheId: js.UndefOr[String] = js.undefined
   /**
     * Whether or not Workbox should attempt to identify an delete any precaches
     * created by older, incompatible versions.
     *
     * @default false
     */
-  var cleanupOutdatedCaches: js.UndefOr[Boolean] = js.native
+  var cleanupOutdatedCaches: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether or not the service worker should [start controlling](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#clientsclaim)
     * any existing clients as soon as it activates.
     *
     * @default false
     */
-  var clientsClaim: js.UndefOr[Boolean] = js.native
+  var clientsClaim: js.UndefOr[Boolean] = js.undefined
   /**
     * If a navigation request for a URL ending in `/` fails to match a precached
     * URL, this value will be appended to the URL and that will be checked for
@@ -50,7 +49,7 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default 'index.html'
     */
-  var directoryIndex: js.UndefOr[String] = js.native
+  var directoryIndex: js.UndefOr[String] = js.undefined
   /**
     * Assets that match this will be assumed to be uniquely versioned via their
     * URL, and exempted from the normal HTTP cache-busting that's done when
@@ -59,11 +58,11 @@ trait GenerateSWConfig extends js.Object {
     * you provide a RegExp that will detect that, as it will reduce the bandwidth
     * consumed when precaching.
     */
-  var dontCacheBustURLsMatching: js.UndefOr[js.RegExp] = js.native
+  var dontCacheBustURLsMatching: js.UndefOr[js.RegExp] = js.undefined
   /**
     * The local directory you wish to match `globPatterns` against. The path is relative to the current directory.
     */
-  var globDirectory: String = js.native
+  var globDirectory: String
   /**
     * Determines whether or not symlinks are followed when generating the precache
     * manifest. For more information, see the definition of `follow` in the `glob`
@@ -71,7 +70,7 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default true
     */
-  var globFollow: js.UndefOr[Boolean] = js.native
+  var globFollow: js.UndefOr[Boolean] = js.undefined
   /**
     * A set of patterns matching files to always exclude when generating the
     * precache manifest. For more information, see the definition of `ignore` in the `glob`
@@ -79,7 +78,7 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default ['node_modules/ **']
     */
-  var globIgnores: js.UndefOr[js.Array[String]] = js.native
+  var globIgnores: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Files matching any of these patterns will be included in the precache
     * manifest. For more information, see the
@@ -87,7 +86,7 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default ['**.{js,css,html}']
     */
-  var globPatterns: js.UndefOr[js.Array[String]] = js.native
+  var globPatterns: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * If true, an error reading a directory when generating a precache manifest
     * will cause the build to fail. If false, the problematic directory will be
@@ -96,7 +95,7 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default true
     */
-  var globStrict: js.UndefOr[Boolean] = js.native
+  var globStrict: js.UndefOr[Boolean] = js.undefined
   /**
     * Any search parameter names that match against one of the RegExp in this array
     * will be removed before looking for a precache match. This is useful if your
@@ -105,14 +104,14 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default [/^utm_/]
     */
-  var ignoreURLParametersMatching: js.UndefOr[js.Array[js.RegExp]] = js.native
+  var ignoreURLParametersMatching: js.UndefOr[js.Array[js.RegExp]] = js.undefined
   /**
     * A list of JavaScript files that should be passed to [`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts)
     * inside the generated service worker file. This is  useful when you want to
     * let Workbox create your top-level service worker file, but want to include
     * some additional code, such as a push event listener.
     */
-  var importScripts: js.UndefOr[js.Array[String]] = js.native
+  var importScripts: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Whether the runtime code for the Workbox library should be included in the
     * top-level service worker, or split into a separate file that needs to be deployed
@@ -121,13 +120,13 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default false
     */
-  var inlineWorkboxRuntime: js.UndefOr[Boolean] = js.native
+  var inlineWorkboxRuntime: js.UndefOr[Boolean] = js.undefined
   /**
     * One or more functions which will be applied sequentially against the
     * generated manifest. If `modifyURLPrefix` or `dontCacheBustURLsMatching` are
     * also specified, their corresponding transformations will be applied first.
     */
-  var manifestTransforms: js.UndefOr[js.Array[ManifestTransform]] = js.native
+  var manifestTransforms: js.UndefOr[js.Array[ManifestTransform]] = js.undefined
   /**
     * This value can be used to determine the maximum size of files that will be
     * precached. This prevents you from inadvertently precaching very large files
@@ -135,13 +134,13 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default 2097152
     */
-  var maximumFileSizeToCacheInBytes: js.UndefOr[Double] = js.native
+  var maximumFileSizeToCacheInBytes: js.UndefOr[Double] = js.undefined
   /**
     * If set to 'production', then an optimized service worker bundle that excludes
     * debugging info will be produced. If not explicitly configured here, the `mode`
     * value configured in the current `webpack` compiltion will be used.
     */
-  var mode: js.UndefOr[String] = js.native
+  var mode: js.UndefOr[String] = js.undefined
   /**
     * A mapping of prefixes that, if present in an entry in the precache manifest,
     * will be replaced with the corresponding value. This can be used to, for example,
@@ -150,7 +149,7 @@ trait GenerateSWConfig extends js.Object {
     * you can use the `manifestTransforms` option and provide a function that modifies
     * the entries in the manifest using whatever logic you provide.
     */
-  var modifyURLPrefix: js.UndefOr[StringDictionary[String]] = js.native
+  var modifyURLPrefix: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * If specified, all [navigation requests](https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests)
     * for URLs that aren't precached will be fulfilled with the HTML at the URL
@@ -158,7 +157,7 @@ trait GenerateSWConfig extends js.Object {
     * precache manifest. This is meant to be used in a Single Page App scenario, in
     * which you want all navigations to use common [App Shell HTML](https://developers.google.com/web/fundamentals/architecture/app-shell).
     */
-  var navigateFallback: js.UndefOr[String] = js.native
+  var navigateFallback: js.UndefOr[String] = js.undefined
   /**
     * An optional array of regular expressions that restricts which URLs the configured
     * `navigateFallback` behavior applies to. This is useful if only a subset of
@@ -167,7 +166,7 @@ trait GenerateSWConfig extends js.Object {
     * both `navigateFallbackDenylist` and `navigateFallbackAllowlist` are
     * configured, the denylist takes precedent.
     */
-  var navigateFallbackAllowlist: js.UndefOr[js.Array[js.RegExp]] = js.native
+  var navigateFallbackAllowlist: js.UndefOr[js.Array[js.RegExp]] = js.undefined
   /**
     * An optional array of regular expressions that restricts which URLs the configured
     * `navigateFallback` behavior applies to. This is useful if only a subset of
@@ -176,7 +175,7 @@ trait GenerateSWConfig extends js.Object {
     * both `navigateFallbackDenylist` and `navigateFallbackAllowlist` are
     * configured, the denylist takes precedent.
     */
-  var navigateFallbackDenylist: js.UndefOr[js.Array[js.RegExp]] = js.native
+  var navigateFallbackDenylist: js.UndefOr[js.Array[js.RegExp]] = js.undefined
   /**
     * Whether or not to enable [navigation preload](https://developers.google.com/web/tools/workbox/modules/workbox-navigation-preload)
     * in the generated service worker. When set to true, you must also use
@@ -185,7 +184,7 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default false
     */
-  var navigationPreload: js.UndefOr[Boolean] = js.native
+  var navigationPreload: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls whether or not to include support for [offline Google Analytics](https://developers.google.com/web/tools/workbox/guides/enable-offline-analytics).
     * When `true`, the call to `workbox-google-analytics`'s `initialize()` will be
@@ -195,8 +194,8 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default false
     */
-  var offlineGoogleAnalytics: js.UndefOr[Boolean | js.Object] = js.native
-  var runtimeCaching: js.UndefOr[js.Array[RuntimeCachingEntry]] = js.native
+  var offlineGoogleAnalytics: js.UndefOr[Boolean | js.Object] = js.undefined
+  var runtimeCaching: js.UndefOr[js.Array[RuntimeCachingEntry]] = js.undefined
   /**
     * Whether to add an unconditional call to [`skipWaiting()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-core#.skipWaiting)
     * to the generated service worker. If `false`, then a `message` listener will
@@ -204,18 +203,18 @@ trait GenerateSWConfig extends js.Object {
     *
     * @default false
     */
-  var skipWaiting: js.UndefOr[Boolean] = js.native
+  var skipWaiting: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether to create a sourcemap for the generated service worker files.
     *
     * @default true
     */
-  var sourcemap: js.UndefOr[Boolean] = js.native
+  var sourcemap: js.UndefOr[Boolean] = js.undefined
   /**
     * The path and filename of the service worker file that will be created by the
     * build process, relative to the current working directory. It must end in '.js'.
     */
-  var swDest: String = js.native
+  var swDest: String
   /**
     * If a URL is rendered based on some server-side logic, its contents may depend
     * on multiple files or on some other unique string value. The keys in this object
@@ -225,358 +224,71 @@ trait GenerateSWConfig extends js.Object {
     * it will be interpreted as unique versioning information that you've generated
     * for a given URL.
     */
-  var templatedURLs: js.UndefOr[js.Object] = js.native
+  var templatedURLs: js.UndefOr[js.Object] = js.undefined
 }
 
 object GenerateSWConfig {
   @scala.inline
-  def apply(globDirectory: String, swDest: String): GenerateSWConfig = {
+  def apply(
+    globDirectory: String,
+    swDest: String,
+    additionalManifestEntries: js.Array[ManifestEntry] = null,
+    babelPresetEnvTargets: js.Array[String] = null,
+    cacheId: String = null,
+    cleanupOutdatedCaches: js.UndefOr[Boolean] = js.undefined,
+    clientsClaim: js.UndefOr[Boolean] = js.undefined,
+    directoryIndex: String = null,
+    dontCacheBustURLsMatching: js.RegExp = null,
+    globFollow: js.UndefOr[Boolean] = js.undefined,
+    globIgnores: js.Array[String] = null,
+    globPatterns: js.Array[String] = null,
+    globStrict: js.UndefOr[Boolean] = js.undefined,
+    ignoreURLParametersMatching: js.Array[js.RegExp] = null,
+    importScripts: js.Array[String] = null,
+    inlineWorkboxRuntime: js.UndefOr[Boolean] = js.undefined,
+    manifestTransforms: js.Array[ManifestTransform] = null,
+    maximumFileSizeToCacheInBytes: js.UndefOr[Double] = js.undefined,
+    mode: String = null,
+    modifyURLPrefix: StringDictionary[String] = null,
+    navigateFallback: String = null,
+    navigateFallbackAllowlist: js.Array[js.RegExp] = null,
+    navigateFallbackDenylist: js.Array[js.RegExp] = null,
+    navigationPreload: js.UndefOr[Boolean] = js.undefined,
+    offlineGoogleAnalytics: Boolean | js.Object = null,
+    runtimeCaching: js.Array[RuntimeCachingEntry] = null,
+    skipWaiting: js.UndefOr[Boolean] = js.undefined,
+    sourcemap: js.UndefOr[Boolean] = js.undefined,
+    templatedURLs: js.Object = null
+  ): GenerateSWConfig = {
     val __obj = js.Dynamic.literal(globDirectory = globDirectory.asInstanceOf[js.Any], swDest = swDest.asInstanceOf[js.Any])
+    if (additionalManifestEntries != null) __obj.updateDynamic("additionalManifestEntries")(additionalManifestEntries.asInstanceOf[js.Any])
+    if (babelPresetEnvTargets != null) __obj.updateDynamic("babelPresetEnvTargets")(babelPresetEnvTargets.asInstanceOf[js.Any])
+    if (cacheId != null) __obj.updateDynamic("cacheId")(cacheId.asInstanceOf[js.Any])
+    if (!js.isUndefined(cleanupOutdatedCaches)) __obj.updateDynamic("cleanupOutdatedCaches")(cleanupOutdatedCaches.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientsClaim)) __obj.updateDynamic("clientsClaim")(clientsClaim.get.asInstanceOf[js.Any])
+    if (directoryIndex != null) __obj.updateDynamic("directoryIndex")(directoryIndex.asInstanceOf[js.Any])
+    if (dontCacheBustURLsMatching != null) __obj.updateDynamic("dontCacheBustURLsMatching")(dontCacheBustURLsMatching.asInstanceOf[js.Any])
+    if (!js.isUndefined(globFollow)) __obj.updateDynamic("globFollow")(globFollow.get.asInstanceOf[js.Any])
+    if (globIgnores != null) __obj.updateDynamic("globIgnores")(globIgnores.asInstanceOf[js.Any])
+    if (globPatterns != null) __obj.updateDynamic("globPatterns")(globPatterns.asInstanceOf[js.Any])
+    if (!js.isUndefined(globStrict)) __obj.updateDynamic("globStrict")(globStrict.get.asInstanceOf[js.Any])
+    if (ignoreURLParametersMatching != null) __obj.updateDynamic("ignoreURLParametersMatching")(ignoreURLParametersMatching.asInstanceOf[js.Any])
+    if (importScripts != null) __obj.updateDynamic("importScripts")(importScripts.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineWorkboxRuntime)) __obj.updateDynamic("inlineWorkboxRuntime")(inlineWorkboxRuntime.get.asInstanceOf[js.Any])
+    if (manifestTransforms != null) __obj.updateDynamic("manifestTransforms")(manifestTransforms.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumFileSizeToCacheInBytes)) __obj.updateDynamic("maximumFileSizeToCacheInBytes")(maximumFileSizeToCacheInBytes.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (modifyURLPrefix != null) __obj.updateDynamic("modifyURLPrefix")(modifyURLPrefix.asInstanceOf[js.Any])
+    if (navigateFallback != null) __obj.updateDynamic("navigateFallback")(navigateFallback.asInstanceOf[js.Any])
+    if (navigateFallbackAllowlist != null) __obj.updateDynamic("navigateFallbackAllowlist")(navigateFallbackAllowlist.asInstanceOf[js.Any])
+    if (navigateFallbackDenylist != null) __obj.updateDynamic("navigateFallbackDenylist")(navigateFallbackDenylist.asInstanceOf[js.Any])
+    if (!js.isUndefined(navigationPreload)) __obj.updateDynamic("navigationPreload")(navigationPreload.get.asInstanceOf[js.Any])
+    if (offlineGoogleAnalytics != null) __obj.updateDynamic("offlineGoogleAnalytics")(offlineGoogleAnalytics.asInstanceOf[js.Any])
+    if (runtimeCaching != null) __obj.updateDynamic("runtimeCaching")(runtimeCaching.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipWaiting)) __obj.updateDynamic("skipWaiting")(skipWaiting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourcemap)) __obj.updateDynamic("sourcemap")(sourcemap.get.asInstanceOf[js.Any])
+    if (templatedURLs != null) __obj.updateDynamic("templatedURLs")(templatedURLs.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateSWConfig]
   }
-  @scala.inline
-  implicit class GenerateSWConfigOps[Self <: GenerateSWConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwDest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swDest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdditionalManifestEntries(value: js.Array[ManifestEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalManifestEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalManifestEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalManifestEntries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBabelPresetEnvTargets(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("babelPresetEnvTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBabelPresetEnvTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("babelPresetEnvTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCleanupOutdatedCaches(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanupOutdatedCaches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCleanupOutdatedCaches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanupOutdatedCaches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientsClaim(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientsClaim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientsClaim: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientsClaim")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDontCacheBustURLsMatching(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dontCacheBustURLsMatching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDontCacheBustURLsMatching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dontCacheBustURLsMatching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobFollow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globFollow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobFollow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globFollow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobIgnores(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globIgnores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobIgnores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globIgnores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobPatterns(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globPatterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobPatterns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globPatterns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globStrict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globStrict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreURLParametersMatching(value: js.Array[js.RegExp]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreURLParametersMatching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreURLParametersMatching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreURLParametersMatching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportScripts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importScripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportScripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importScripts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineWorkboxRuntime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineWorkboxRuntime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineWorkboxRuntime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineWorkboxRuntime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifestTransforms(value: js.Array[ManifestTransform]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestTransforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifestTransforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestTransforms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumFileSizeToCacheInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFileSizeToCacheInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumFileSizeToCacheInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFileSizeToCacheInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifyURLPrefix(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyURLPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifyURLPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyURLPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigateFallback(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateFallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigateFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateFallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigateFallbackAllowlist(value: js.Array[js.RegExp]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateFallbackAllowlist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigateFallbackAllowlist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateFallbackAllowlist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigateFallbackDenylist(value: js.Array[js.RegExp]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateFallbackDenylist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigateFallbackDenylist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateFallbackDenylist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigationPreload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationPreload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigationPreload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationPreload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfflineGoogleAnalytics(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offlineGoogleAnalytics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfflineGoogleAnalytics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offlineGoogleAnalytics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntimeCaching(value: js.Array[RuntimeCachingEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeCaching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntimeCaching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeCaching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipWaiting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipWaiting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipWaiting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipWaiting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourcemap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourcemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplatedURLs(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templatedURLs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplatedURLs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templatedURLs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

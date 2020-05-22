@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-dimmer.SemanticUI.Dimmer.DurationSettings._Impl, 'hide'> */
-@js.native
 trait PickImplhide extends js.Object {
-  var hide: Double = js.native
+  var hide: Double
 }
 
 object PickImplhide {
@@ -16,19 +15,5 @@ object PickImplhide {
     val __obj = js.Dynamic.literal(hide = hide.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplhide]
   }
-  @scala.inline
-  implicit class PickImplhideOps[Self <: PickImplhide] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHide(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait NotifyWorkersResponse extends js.Object {
 
 object NotifyWorkersResponse {
   @scala.inline
-  def apply(): NotifyWorkersResponse = {
+  def apply(NotifyWorkersFailureStatuses: NotifyWorkersFailureStatusList = null): NotifyWorkersResponse = {
     val __obj = js.Dynamic.literal()
+    if (NotifyWorkersFailureStatuses != null) __obj.updateDynamic("NotifyWorkersFailureStatuses")(NotifyWorkersFailureStatuses.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotifyWorkersResponse]
   }
-  @scala.inline
-  implicit class NotifyWorkersResponseOps[Self <: NotifyWorkersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotifyWorkersFailureStatuses(value: NotifyWorkersFailureStatusList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotifyWorkersFailureStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotifyWorkersFailureStatuses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotifyWorkersFailureStatuses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

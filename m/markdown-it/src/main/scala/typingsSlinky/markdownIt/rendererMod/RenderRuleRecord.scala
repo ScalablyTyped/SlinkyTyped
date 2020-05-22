@@ -6,159 +6,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RenderRuleRecord
   extends /* type */ StringDictionary[js.UndefOr[RenderRule]] {
-  var code_block: js.UndefOr[RenderRule] = js.native
-  var code_inline: js.UndefOr[RenderRule] = js.native
-  var fence: js.UndefOr[RenderRule] = js.native
-  var hardbreak: js.UndefOr[RenderRule] = js.native
-  var html_block: js.UndefOr[RenderRule] = js.native
-  var html_inline: js.UndefOr[RenderRule] = js.native
-  var image: js.UndefOr[RenderRule] = js.native
-  var softbreak: js.UndefOr[RenderRule] = js.native
-  var text: js.UndefOr[RenderRule] = js.native
+  var code_block: js.UndefOr[RenderRule] = js.undefined
+  var code_inline: js.UndefOr[RenderRule] = js.undefined
+  var fence: js.UndefOr[RenderRule] = js.undefined
+  var hardbreak: js.UndefOr[RenderRule] = js.undefined
+  var html_block: js.UndefOr[RenderRule] = js.undefined
+  var html_inline: js.UndefOr[RenderRule] = js.undefined
+  var image: js.UndefOr[RenderRule] = js.undefined
+  var softbreak: js.UndefOr[RenderRule] = js.undefined
+  var text: js.UndefOr[RenderRule] = js.undefined
 }
 
 object RenderRuleRecord {
   @scala.inline
-  def apply(): RenderRuleRecord = {
+  def apply(
+    StringDictionary: /* type */ StringDictionary[js.UndefOr[RenderRule]] = null,
+    code_block: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null,
+    code_inline: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null,
+    fence: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null,
+    hardbreak: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null,
+    html_block: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null,
+    html_inline: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null,
+    image: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null,
+    softbreak: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null,
+    text: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String = null
+  ): RenderRuleRecord = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (code_block != null) __obj.updateDynamic("code_block")(js.Any.fromFunction5(code_block))
+    if (code_inline != null) __obj.updateDynamic("code_inline")(js.Any.fromFunction5(code_inline))
+    if (fence != null) __obj.updateDynamic("fence")(js.Any.fromFunction5(fence))
+    if (hardbreak != null) __obj.updateDynamic("hardbreak")(js.Any.fromFunction5(hardbreak))
+    if (html_block != null) __obj.updateDynamic("html_block")(js.Any.fromFunction5(html_block))
+    if (html_inline != null) __obj.updateDynamic("html_inline")(js.Any.fromFunction5(html_inline))
+    if (image != null) __obj.updateDynamic("image")(js.Any.fromFunction5(image))
+    if (softbreak != null) __obj.updateDynamic("softbreak")(js.Any.fromFunction5(softbreak))
+    if (text != null) __obj.updateDynamic("text")(js.Any.fromFunction5(text))
     __obj.asInstanceOf[RenderRuleRecord]
   }
-  @scala.inline
-  implicit class RenderRuleRecordOps[Self <: RenderRuleRecord] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode_block(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code_block")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutCode_block: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code_block")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCode_inline(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code_inline")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutCode_inline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code_inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFence(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fence")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutFence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHardbreak(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardbreak")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutHardbreak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardbreak")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml_block(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_block")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutHtml_block: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_block")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml_inline(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_inline")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutHtml_inline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSoftbreak(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softbreak")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutSoftbreak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softbreak")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(
-      value: (/* tokens */ js.Array[typingsSlinky.markdownIt.tokenMod.^], /* idx */ Double, /* options */ Options, /* env */ js.Any, /* self */ Renderer) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

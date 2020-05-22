@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AbortSignalLike extends js.Object {
-  val aborted: Boolean = js.native
+  val aborted: Boolean
   @JSName("addEventListener")
-  def addEventListener_abort(`type`: abort, callback: js.Function0[_]): js.Any = js.native
+  def addEventListener_abort(`type`: abort, callback: js.Function0[_]): js.Any
 }
 
 object AbortSignalLike {
@@ -18,25 +17,5 @@ object AbortSignalLike {
     val __obj = js.Dynamic.literal(aborted = aborted.asInstanceOf[js.Any], addEventListener = js.Any.fromFunction2(addEventListener))
     __obj.asInstanceOf[AbortSignalLike]
   }
-  @scala.inline
-  implicit class AbortSignalLikeOps[Self <: AbortSignalLike] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAborted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aborted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddEventListener(value: (abort, js.Function0[_]) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addEventListener")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

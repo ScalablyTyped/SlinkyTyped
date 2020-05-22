@@ -42,89 +42,22 @@ trait SchemaUserActivitySession extends js.Object {
 
 object SchemaUserActivitySession {
   @scala.inline
-  def apply(): SchemaUserActivitySession = {
+  def apply(
+    activities: js.Array[SchemaActivity] = null,
+    dataSource: String = null,
+    deviceCategory: String = null,
+    platform: String = null,
+    sessionDate: String = null,
+    sessionId: String = null
+  ): SchemaUserActivitySession = {
     val __obj = js.Dynamic.literal()
+    if (activities != null) __obj.updateDynamic("activities")(activities.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (deviceCategory != null) __obj.updateDynamic("deviceCategory")(deviceCategory.asInstanceOf[js.Any])
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (sessionDate != null) __obj.updateDynamic("sessionDate")(sessionDate.asInstanceOf[js.Any])
+    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUserActivitySession]
   }
-  @scala.inline
-  implicit class SchemaUserActivitySessionOps[Self <: SchemaUserActivitySession] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivities(value: js.Array[SchemaActivity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

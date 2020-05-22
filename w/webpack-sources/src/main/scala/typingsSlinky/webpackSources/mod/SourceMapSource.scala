@@ -3,6 +3,8 @@ package typingsSlinky.webpackSources.mod
 import typingsSlinky.sourceListMap.mod.SourceListMap
 import typingsSlinky.sourceMap.mod.RawSourceMap
 import typingsSlinky.sourceMap.mod.SourceMapGenerator
+import typingsSlinky.webpackSources.anon.Columns
+import typingsSlinky.webpackSources.anon.Map
 import typingsSlinky.webpackSources.anon.Module
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,5 +55,9 @@ class SourceMapSource protected ()
   var _sourceMap: SourceMapGenerator | RawSourceMap = js.native
   var _value: String = js.native
   def listMap(options: Module): SourceListMap = js.native
+  /* CompleteClass */
+  override def map(options: Columns): RawSourceMap = js.native
+  /* CompleteClass */
+  override def sourceAndMap(options: Columns): Map = js.native
 }
 

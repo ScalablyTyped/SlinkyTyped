@@ -29,53 +29,16 @@ trait SchemaPivotGroupRule extends js.Object {
 
 object SchemaPivotGroupRule {
   @scala.inline
-  def apply(): SchemaPivotGroupRule = {
+  def apply(
+    dateTimeRule: SchemaDateTimeRule = null,
+    histogramRule: SchemaHistogramRule = null,
+    manualRule: SchemaManualRule = null
+  ): SchemaPivotGroupRule = {
     val __obj = js.Dynamic.literal()
+    if (dateTimeRule != null) __obj.updateDynamic("dateTimeRule")(dateTimeRule.asInstanceOf[js.Any])
+    if (histogramRule != null) __obj.updateDynamic("histogramRule")(histogramRule.asInstanceOf[js.Any])
+    if (manualRule != null) __obj.updateDynamic("manualRule")(manualRule.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPivotGroupRule]
   }
-  @scala.inline
-  implicit class SchemaPivotGroupRuleOps[Self <: SchemaPivotGroupRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateTimeRule(value: SchemaDateTimeRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateTimeRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistogramRule(value: SchemaHistogramRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistogramRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManualRule(value: SchemaManualRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManualRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRule")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

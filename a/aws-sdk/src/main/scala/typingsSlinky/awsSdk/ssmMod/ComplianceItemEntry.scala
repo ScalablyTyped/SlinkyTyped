@@ -30,65 +30,18 @@ trait ComplianceItemEntry extends js.Object {
 
 object ComplianceItemEntry {
   @scala.inline
-  def apply(Severity: ComplianceSeverity, Status: ComplianceStatus): ComplianceItemEntry = {
+  def apply(
+    Severity: ComplianceSeverity,
+    Status: ComplianceStatus,
+    Details: ComplianceItemDetails = null,
+    Id: ComplianceItemId = null,
+    Title: ComplianceItemTitle = null
+  ): ComplianceItemEntry = {
     val __obj = js.Dynamic.literal(Severity = Severity.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
+    if (Details != null) __obj.updateDynamic("Details")(Details.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComplianceItemEntry]
   }
-  @scala.inline
-  implicit class ComplianceItemEntryOps[Self <: ComplianceItemEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSeverity(value: ComplianceSeverity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ComplianceStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetails(value: ComplianceItemDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: ComplianceItemId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: ComplianceItemTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PurgeQueueInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
@@ -15,78 +14,36 @@ trait PurgeQueueInput extends InputTypesUnion {
     * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal
     */
   @JSName("$abortSignal")
-  var $abortSignal: js.UndefOr[AbortSignal] = js.native
+  var $abortSignal: js.UndefOr[AbortSignal] = js.undefined
   /**
     * Per-request HTTP configuration options. If set, any options specified will override the corresponding HTTP option set on the client for this command.
     */
   @JSName("$httpOptions")
-  var $httpOptions: js.UndefOr[NodeHttpOptions] = js.native
+  var $httpOptions: js.UndefOr[NodeHttpOptions] = js.undefined
   /**
     * The maximum number of times this operation should be retried. If set, this value will override the `maxRetries` configuration set on the client for this command.
     */
   @JSName("$maxRetries")
-  var $maxRetries: js.UndefOr[Double] = js.native
+  var $maxRetries: js.UndefOr[Double] = js.undefined
   /**
     * <p>The URL of the queue from which the <code>PurgeQueue</code> action deletes messages.</p> <p>Queue URLs and names are case-sensitive.</p>
     */
-  var QueueUrl: String = js.native
+  var QueueUrl: String
 }
 
 object PurgeQueueInput {
   @scala.inline
-  def apply(QueueUrl: String): PurgeQueueInput = {
+  def apply(
+    QueueUrl: String,
+    $abortSignal: AbortSignal = null,
+    $httpOptions: NodeHttpOptions = null,
+    $maxRetries: js.UndefOr[Double] = js.undefined
+  ): PurgeQueueInput = {
     val __obj = js.Dynamic.literal(QueueUrl = QueueUrl.asInstanceOf[js.Any])
+    if ($abortSignal != null) __obj.updateDynamic("$abortSignal")($abortSignal.asInstanceOf[js.Any])
+    if ($httpOptions != null) __obj.updateDynamic("$httpOptions")($httpOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined($maxRetries)) __obj.updateDynamic("$maxRetries")($maxRetries.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurgeQueueInput]
   }
-  @scala.inline
-  implicit class PurgeQueueInputOps[Self <: PurgeQueueInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueueUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$abortSignal(value: AbortSignal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$abortSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$httpOptions(value: NodeHttpOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$httpOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$maxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$maxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

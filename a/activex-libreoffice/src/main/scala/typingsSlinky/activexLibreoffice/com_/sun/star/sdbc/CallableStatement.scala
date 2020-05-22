@@ -35,7 +35,6 @@ import scala.scalajs.js.annotation._
   * For maximum portability, a call's {@link com.sun.star.sdbc.ResultSet} objects and update counts should be processed prior to getting the values of
   * output parameters.
   */
-@js.native
 trait CallableStatement
   extends PreparedStatement
      with XRow

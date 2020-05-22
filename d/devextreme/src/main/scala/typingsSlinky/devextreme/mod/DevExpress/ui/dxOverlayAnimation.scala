@@ -5,51 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxOverlayAnimation extends js.Object {
-  /** An object that defines the animation options used when the widget is being hidden. */
-  var hide: js.UndefOr[animationConfig] = js.native
-  /** An object that defines the animation options used when the widget is being shown. */
-  var show: js.UndefOr[animationConfig] = js.native
+  /** @name dxOverlay.Options.animation.hide */
+  var hide: js.UndefOr[animationConfig] = js.undefined
+  /** @name dxOverlay.Options.animation.show */
+  var show: js.UndefOr[animationConfig] = js.undefined
 }
 
 object dxOverlayAnimation {
   @scala.inline
-  def apply(): dxOverlayAnimation = {
+  def apply(hide: animationConfig = null, show: animationConfig = null): dxOverlayAnimation = {
     val __obj = js.Dynamic.literal()
+    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxOverlayAnimation]
   }
-  @scala.inline
-  implicit class dxOverlayAnimationOps[Self <: dxOverlayAnimation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHide(value: animationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: animationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

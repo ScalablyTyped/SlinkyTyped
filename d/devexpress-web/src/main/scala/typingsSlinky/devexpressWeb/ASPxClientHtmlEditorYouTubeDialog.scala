@@ -7,28 +7,27 @@ import scala.scalajs.js.annotation._
 /**
   * Provides client functionality for the YouTube Video dialog within the ASPxHtmlEditor.
   */
-@js.native
 trait ASPxClientHtmlEditorYouTubeDialog extends ASPxClientHtmlEditorEditElementDialog {
   /**
     * Provides access to the client object of the "Allow fullscreen" check box in the Html Editor's "Insert YouTube Video" dialog.
     */
-  def GetAllowFullscreenCheckBox(): ASPxClientCheckBox = js.native
+  def GetAllowFullscreenCheckBox(): ASPxClientCheckBox
   /**
     * Provides access to the client object of the "Enable privacy-enhanced mode" check box in the Html Editor's YouTube Video dialog.
     */
-  def GetConfidentModeCheckBox(): ASPxClientCheckBox = js.native
+  def GetConfidentModeCheckBox(): ASPxClientCheckBox
   /**
     * Provides access to the client object of the "Show player controls" check box in the Html Editor's YouTube Video dialog.
     */
-  def GetShowPlayerControlsCheckBox(): ASPxClientCheckBox = js.native
+  def GetShowPlayerControlsCheckBox(): ASPxClientCheckBox
   /**
     * Provides access to the client object of the "Show suggested videos when the video finishes" check box in the Html Editor's YouTube Video dialog.
     */
-  def GetShowSameVideosCheckBox(): ASPxClientCheckBox = js.native
+  def GetShowSameVideosCheckBox(): ASPxClientCheckBox
   /**
     * Provides access to the client object of the "Show video title and player actions" check box in the Html Editor's YouTube Video dialog.
     */
-  def GetShowVideoNameCheckBox(): ASPxClientCheckBox = js.native
+  def GetShowVideoNameCheckBox(): ASPxClientCheckBox
 }
 
 object ASPxClientHtmlEditorYouTubeDialog {
@@ -54,43 +53,5 @@ object ASPxClientHtmlEditorYouTubeDialog {
     val __obj = js.Dynamic.literal(GetAllowFullscreenCheckBox = js.Any.fromFunction0(GetAllowFullscreenCheckBox), GetBorderColorColorEdit = js.Any.fromFunction0(GetBorderColorColorEdit), GetBorderStyleComboBox = js.Any.fromFunction0(GetBorderStyleComboBox), GetBorderWidthSpinEdit = js.Any.fromFunction0(GetBorderWidthSpinEdit), GetBottomMarginTextBox = js.Any.fromFunction0(GetBottomMarginTextBox), GetCancelButton = js.Any.fromFunction0(GetCancelButton), GetConfidentModeCheckBox = js.Any.fromFunction0(GetConfidentModeCheckBox), GetCssClassNameComboBox = js.Any.fromFunction0(GetCssClassNameComboBox), GetFormLayout = js.Any.fromFunction0(GetFormLayout), GetLeftMarginTextBox = js.Any.fromFunction0(GetLeftMarginTextBox), GetOkButton = js.Any.fromFunction0(GetOkButton), GetRightMarginTextBox = js.Any.fromFunction0(GetRightMarginTextBox), GetShowPlayerControlsCheckBox = js.Any.fromFunction0(GetShowPlayerControlsCheckBox), GetShowSameVideosCheckBox = js.Any.fromFunction0(GetShowSameVideosCheckBox), GetShowVideoNameCheckBox = js.Any.fromFunction0(GetShowVideoNameCheckBox), GetTopMarginTextBox = js.Any.fromFunction0(GetTopMarginTextBox))
     __obj.asInstanceOf[ASPxClientHtmlEditorYouTubeDialog]
   }
-  @scala.inline
-  implicit class ASPxClientHtmlEditorYouTubeDialogOps[Self <: ASPxClientHtmlEditorYouTubeDialog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAllowFullscreenCheckBox(value: () => ASPxClientCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAllowFullscreenCheckBox")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetConfidentModeCheckBox(value: () => ASPxClientCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetConfidentModeCheckBox")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetShowPlayerControlsCheckBox(value: () => ASPxClientCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetShowPlayerControlsCheckBox")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetShowSameVideosCheckBox(value: () => ASPxClientCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetShowSameVideosCheckBox")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetShowVideoNameCheckBox(value: () => ASPxClientCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetShowVideoNameCheckBox")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

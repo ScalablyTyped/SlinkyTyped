@@ -32,77 +32,20 @@ trait SchemaQueryTimelineSample extends js.Object {
 
 object SchemaQueryTimelineSample {
   @scala.inline
-  def apply(): SchemaQueryTimelineSample = {
+  def apply(
+    activeUnits: String = null,
+    completedUnits: String = null,
+    elapsedMs: String = null,
+    pendingUnits: String = null,
+    totalSlotMs: String = null
+  ): SchemaQueryTimelineSample = {
     val __obj = js.Dynamic.literal()
+    if (activeUnits != null) __obj.updateDynamic("activeUnits")(activeUnits.asInstanceOf[js.Any])
+    if (completedUnits != null) __obj.updateDynamic("completedUnits")(completedUnits.asInstanceOf[js.Any])
+    if (elapsedMs != null) __obj.updateDynamic("elapsedMs")(elapsedMs.asInstanceOf[js.Any])
+    if (pendingUnits != null) __obj.updateDynamic("pendingUnits")(pendingUnits.asInstanceOf[js.Any])
+    if (totalSlotMs != null) __obj.updateDynamic("totalSlotMs")(totalSlotMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueryTimelineSample]
   }
-  @scala.inline
-  implicit class SchemaQueryTimelineSampleOps[Self <: SchemaQueryTimelineSample] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveUnits(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompletedUnits(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletedUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElapsedMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elapsedMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElapsedMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elapsedMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPendingUnits(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalSlotMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSlotMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalSlotMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSlotMs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

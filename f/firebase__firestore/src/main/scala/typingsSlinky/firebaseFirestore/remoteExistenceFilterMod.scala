@@ -11,7 +11,6 @@ object remoteExistenceFilterMod extends js.Object {
   class ExistenceFilter protected () extends js.Object {
     def this(count: Double) = this()
     var count: Double = js.native
-    def isEqual(other: ExistenceFilter): Boolean = js.native
   }
   
 }

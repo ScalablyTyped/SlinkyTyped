@@ -26,31 +26,5 @@ object NotifyWorkersRequest {
     val __obj = js.Dynamic.literal(MessageText = MessageText.asInstanceOf[js.Any], Subject = Subject.asInstanceOf[js.Any], WorkerIds = WorkerIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotifyWorkersRequest]
   }
-  @scala.inline
-  implicit class NotifyWorkersRequestOps[Self <: NotifyWorkersRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessageText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkerIds(value: CustomerIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

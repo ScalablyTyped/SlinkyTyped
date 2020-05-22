@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.getAvailabilityZoneMod
 
+import typingsSlinky.pulumiAws.inputMod.GetAvailabilityZoneFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,12 +8,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetAvailabilityZoneArgs extends js.Object {
   /**
-    * The full name of the availability zone to select.
+    * Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
+    */
+  val allAvailabilityZones: js.UndefOr[Boolean] = js.native
+  /**
+    * Configuration block(s) for filtering. Detailed below.
+    */
+  val filters: js.UndefOr[js.Array[GetAvailabilityZoneFilter]] = js.native
+  /**
+    * The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
     */
   val name: js.UndefOr[String] = js.native
   /**
-    * A specific availability zone state to require. May
-    * be any of `"available"`, `"information"` or `"impaired"`.
+    * A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
     */
   val state: js.UndefOr[String] = js.native
   /**
@@ -23,53 +31,20 @@ trait GetAvailabilityZoneArgs extends js.Object {
 
 object GetAvailabilityZoneArgs {
   @scala.inline
-  def apply(): GetAvailabilityZoneArgs = {
+  def apply(
+    allAvailabilityZones: js.UndefOr[Boolean] = js.undefined,
+    filters: js.Array[GetAvailabilityZoneFilter] = null,
+    name: String = null,
+    state: String = null,
+    zoneId: String = null
+  ): GetAvailabilityZoneArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allAvailabilityZones)) __obj.updateDynamic("allAvailabilityZones")(allAvailabilityZones.get.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (zoneId != null) __obj.updateDynamic("zoneId")(zoneId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAvailabilityZoneArgs]
   }
-  @scala.inline
-  implicit class GetAvailabilityZoneArgsOps[Self <: GetAvailabilityZoneArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoneId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoneId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

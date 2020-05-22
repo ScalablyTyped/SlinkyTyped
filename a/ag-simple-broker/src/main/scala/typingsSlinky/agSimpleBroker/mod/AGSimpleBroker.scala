@@ -8,6 +8,7 @@ import typingsSlinky.agSimpleBroker.agSimpleBrokerStrings.unsubscribe
 import typingsSlinky.agSimpleBroker.anon.Error
 import typingsSlinky.agSimpleBroker.anon.Id
 import typingsSlinky.asyncStreamEmitter.mod.AsyncStreamEmitter
+import typingsSlinky.socketclusterServer.serverMod.CodecEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,9 +41,7 @@ trait AGSimpleBroker
   def listener_subscribe(eventName: subscribe): typingsSlinky.consumableStream.mod.^[SubscribeData] = js.native
   @JSName("listener")
   def listener_unsubscribe(eventName: unsubscribe): typingsSlinky.consumableStream.mod.^[UnsubscribeData] = js.native
-  def setCodecEngine(
-    codec: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGServer.CodecEngine */ js.Any
-  ): Unit = js.native
+  def setCodecEngine(codec: CodecEngine): Unit = js.native
   def subscribeClient(client: Id, channelName: String): js.Promise[Unit] = js.native
   def subscribeSocket(client: Id, channelName: String): js.Promise[Unit] = js.native
   def subscriptions(): js.Array[String] = js.native

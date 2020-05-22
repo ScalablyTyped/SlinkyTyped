@@ -2,12 +2,12 @@ package typingsSlinky.reactDates
 
 import typingsSlinky.reactDates.mod.AnchorDirectionShape
 import typingsSlinky.reactDates.mod.CalendarInfoPositionShape
-import typingsSlinky.reactDates.mod.DisabledShape
 import typingsSlinky.reactDates.mod.FocusedInputShape
 import typingsSlinky.reactDates.mod.IconPositionShape
 import typingsSlinky.reactDates.mod.OpenDirectionShape
 import typingsSlinky.reactDates.mod.OrientationShape
 import typingsSlinky.reactDates.mod.ScrollableOrientationShape
+import typingsSlinky.reactDates.mod._DisabledShape
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,8 +31,8 @@ object reactDatesStrings {
   
   @js.native
   sealed trait endDate
-    extends DisabledShape
-       with FocusedInputShape
+    extends FocusedInputShape
+       with _DisabledShape
   
   @js.native
   sealed trait horizontal
@@ -47,8 +47,8 @@ object reactDatesStrings {
   
   @js.native
   sealed trait startDate
-    extends DisabledShape
-       with FocusedInputShape
+    extends FocusedInputShape
+       with _DisabledShape
   
   @js.native
   sealed trait top extends CalendarInfoPositionShape

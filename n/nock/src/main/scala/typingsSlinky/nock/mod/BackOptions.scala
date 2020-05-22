@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BackOptions extends js.Object {
-  var after: js.UndefOr[js.Function1[/* scope */ Scope, Unit]] = js.native
-  var afterRecord: js.UndefOr[js.Function1[/* defs */ js.Array[Definition], js.Array[Definition]]] = js.native
-  var before: js.UndefOr[js.Function1[/* def */ Definition, Unit]] = js.native
-  var recorder: js.UndefOr[RecorderOptions] = js.native
+  var after: js.UndefOr[js.Function1[/* scope */ Scope, Unit]] = js.undefined
+  var afterRecord: js.UndefOr[js.Function1[/* defs */ js.Array[Definition], js.Array[Definition]]] = js.undefined
+  var before: js.UndefOr[js.Function1[/* def */ Definition, Unit]] = js.undefined
+  var recorder: js.UndefOr[RecorderOptions] = js.undefined
 }
 
 object BackOptions {
   @scala.inline
-  def apply(): BackOptions = {
+  def apply(
+    after: /* scope */ Scope => Unit = null,
+    afterRecord: /* defs */ js.Array[Definition] => js.Array[Definition] = null,
+    before: /* def */ Definition => Unit = null,
+    recorder: RecorderOptions = null
+  ): BackOptions = {
     val __obj = js.Dynamic.literal()
+    if (after != null) __obj.updateDynamic("after")(js.Any.fromFunction1(after))
+    if (afterRecord != null) __obj.updateDynamic("afterRecord")(js.Any.fromFunction1(afterRecord))
+    if (before != null) __obj.updateDynamic("before")(js.Any.fromFunction1(before))
+    if (recorder != null) __obj.updateDynamic("recorder")(recorder.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackOptions]
   }
-  @scala.inline
-  implicit class BackOptionsOps[Self <: BackOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfter(value: /* scope */ Scope => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterRecord(value: /* defs */ js.Array[Definition] => js.Array[Definition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRecord")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterRecord: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRecord")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBefore(value: /* def */ Definition => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecorder(value: RecorderOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recorder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

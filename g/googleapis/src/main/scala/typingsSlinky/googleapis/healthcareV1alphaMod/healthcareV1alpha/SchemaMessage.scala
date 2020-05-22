@@ -62,125 +62,28 @@ trait SchemaMessage extends js.Object {
 
 object SchemaMessage {
   @scala.inline
-  def apply(): SchemaMessage = {
+  def apply(
+    createTime: String = null,
+    data: String = null,
+    labels: StringDictionary[String] = null,
+    messageType: String = null,
+    name: String = null,
+    parsedData: SchemaParsedData = null,
+    patientIds: js.Array[SchemaPatientId] = null,
+    sendFacility: String = null,
+    sendTime: String = null
+  ): SchemaMessage = {
     val __obj = js.Dynamic.literal()
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (messageType != null) __obj.updateDynamic("messageType")(messageType.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (parsedData != null) __obj.updateDynamic("parsedData")(parsedData.asInstanceOf[js.Any])
+    if (patientIds != null) __obj.updateDynamic("patientIds")(patientIds.asInstanceOf[js.Any])
+    if (sendFacility != null) __obj.updateDynamic("sendFacility")(sendFacility.asInstanceOf[js.Any])
+    if (sendTime != null) __obj.updateDynamic("sendTime")(sendTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMessage]
   }
-  @scala.inline
-  implicit class SchemaMessageOps[Self <: SchemaMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParsedData(value: SchemaParsedData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsedData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParsedData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsedData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatientIds(value: js.Array[SchemaPatientId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patientIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatientIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patientIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendFacility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendFacility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendFacility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendFacility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

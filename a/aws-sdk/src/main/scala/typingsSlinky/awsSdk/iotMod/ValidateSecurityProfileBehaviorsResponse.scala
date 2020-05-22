@@ -18,41 +18,11 @@ trait ValidateSecurityProfileBehaviorsResponse extends js.Object {
 
 object ValidateSecurityProfileBehaviorsResponse {
   @scala.inline
-  def apply(): ValidateSecurityProfileBehaviorsResponse = {
+  def apply(valid: js.UndefOr[Valid] = js.undefined, validationErrors: ValidationErrors = null): ValidateSecurityProfileBehaviorsResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(valid)) __obj.updateDynamic("valid")(valid.get.asInstanceOf[js.Any])
+    if (validationErrors != null) __obj.updateDynamic("validationErrors")(validationErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidateSecurityProfileBehaviorsResponse]
   }
-  @scala.inline
-  implicit class ValidateSecurityProfileBehaviorsResponseOps[Self <: ValidateSecurityProfileBehaviorsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValid(value: Valid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationErrors(value: ValidationErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationErrors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

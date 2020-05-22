@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Count extends js.Object {
-  var count: `true` = js.native
+  var count: `true`
 }
 
 object Count {
@@ -16,19 +15,5 @@ object Count {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any])
     __obj.asInstanceOf[Count]
   }
-  @scala.inline
-  implicit class CountOps[Self <: Count] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

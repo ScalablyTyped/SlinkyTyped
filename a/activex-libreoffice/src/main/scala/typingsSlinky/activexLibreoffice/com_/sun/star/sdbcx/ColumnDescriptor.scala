@@ -13,34 +13,33 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdbcx.Column
   * @see com.sun.star.sdbcx.Table
   */
-@js.native
 trait ColumnDescriptor extends Descriptor {
   /** specifies how to create an auto-increment column. */
-  var AutoIncrementCreation: String = js.native
+  var AutoIncrementCreation: String
   /** keeps a default value for a column, is provided as string. */
-  var DefaultValue: String = js.native
+  var DefaultValue: String
   /** keeps a description of the object. */
-  var Description: String = js.native
+  var Description: String
   /**
     * indicates whether the column is automatically numbered, thus read-only.
     * @see com.sun.star.sdbc.ColumnValue
     */
-  var IsAutoIncrement: Boolean = js.native
+  var IsAutoIncrement: Boolean
   /**
     * indicates the nullability of values in the designated column.
     * @see com.sun.star.sdbc.ColumnValue
     */
-  var IsNullable: Double = js.native
+  var IsNullable: Double
   /** indicates that the column contains some kind of time or date stamp used to track updates. */
-  var IsRowVersion: Boolean = js.native
+  var IsRowVersion: Boolean
   /** gets a column's number of decimal digits. */
-  var Precision: Double = js.native
+  var Precision: Double
   /** gets a column's number of digits to right of the decimal point. */
-  var Scale: Double = js.native
+  var Scale: Double
   /** is the {@link com.sun.star.sdbc.DataType} of the column. */
-  var Type: Double = js.native
+  var Type: Double
   /** is the type name used by the database. If the column type is a user-defined type, then a fully-qualified type name is returned. May be empty. */
-  var TypeName: String = js.native
+  var TypeName: String
 }
 
 object ColumnDescriptor {
@@ -72,73 +71,5 @@ object ColumnDescriptor {
     val __obj = js.Dynamic.literal(AutoIncrementCreation = AutoIncrementCreation.asInstanceOf[js.Any], DefaultValue = DefaultValue.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], IsAutoIncrement = IsAutoIncrement.asInstanceOf[js.Any], IsNullable = IsNullable.asInstanceOf[js.Any], IsRowVersion = IsRowVersion.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Precision = Precision.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], Scale = Scale.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], TypeName = TypeName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[ColumnDescriptor]
   }
-  @scala.inline
-  implicit class ColumnDescriptorOps[Self <: ColumnDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoIncrementCreation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoIncrementCreation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsAutoIncrement(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAutoIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsNullable(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsNullable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsRowVersion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsRowVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

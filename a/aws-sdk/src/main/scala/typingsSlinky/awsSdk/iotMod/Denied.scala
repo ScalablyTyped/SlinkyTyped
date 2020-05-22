@@ -18,41 +18,11 @@ trait Denied extends js.Object {
 
 object Denied {
   @scala.inline
-  def apply(): Denied = {
+  def apply(explicitDeny: ExplicitDeny = null, implicitDeny: ImplicitDeny = null): Denied = {
     val __obj = js.Dynamic.literal()
+    if (explicitDeny != null) __obj.updateDynamic("explicitDeny")(explicitDeny.asInstanceOf[js.Any])
+    if (implicitDeny != null) __obj.updateDynamic("implicitDeny")(implicitDeny.asInstanceOf[js.Any])
     __obj.asInstanceOf[Denied]
   }
-  @scala.inline
-  implicit class DeniedOps[Self <: Denied] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExplicitDeny(value: ExplicitDeny): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitDeny")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplicitDeny: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitDeny")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImplicitDeny(value: ImplicitDeny): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implicitDeny")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImplicitDeny: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implicitDeny")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

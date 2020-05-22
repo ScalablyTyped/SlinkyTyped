@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
 /**
   * The interface for a document model that represents code.
   */
-@js.native
 trait ICodeModel
   extends IModel
      with typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IModel {
@@ -22,7 +21,7 @@ trait ICodeModel
     * data is stored.
     */
   /* InferMemberOverrides */
-  override val modelDB: IModelDB = js.native
+  override val modelDB: IModelDB
 }
 
 object ICodeModel {
@@ -55,19 +54,5 @@ object ICodeModel {
     val __obj = js.Dynamic.literal(contentChanged = contentChanged.asInstanceOf[js.Any], defaultKernelLanguage = defaultKernelLanguage.asInstanceOf[js.Any], defaultKernelName = defaultKernelName.asInstanceOf[js.Any], dirty = dirty.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), fromJSON = js.Any.fromFunction1(fromJSON), fromString = js.Any.fromFunction1(fromString), initialize = js.Any.fromFunction0(initialize), isDisposed = isDisposed.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any], mimeTypeChanged = mimeTypeChanged.asInstanceOf[js.Any], modelDB = modelDB.asInstanceOf[js.Any], readOnly = readOnly.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any], stateChanged = stateChanged.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICodeModel]
   }
-  @scala.inline
-  implicit class ICodeModelOps[Self <: ICodeModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModelDB(value: IModelDB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelDB")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -11,22 +11,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpecResult extends js.Object {
-  var __callsite: js.UndefOr[GetColumnNumber] = js.native
-  var description: String = js.native
-  var duration: js.UndefOr[Milliseconds] = js.native
-  var failedExpectations: js.Array[FailedAssertion] = js.native
-  var fullName: String = js.native
-  var id: String = js.native
+  var __callsite: js.UndefOr[GetColumnNumber] = js.undefined
+  var description: String
+  var duration: js.UndefOr[Milliseconds] = js.undefined
+  var failedExpectations: js.Array[FailedAssertion]
+  var fullName: String
+  var id: String
   var passedExpectations: js.Array[
     ReturnType[
       js.Function2[/* options */ Options, /* initError */ js.UndefOr[js.Error], FailedAssertion]
     ]
-  ] = js.native
-  var pendingReason: String = js.native
-  var status: Status = js.native
-  var testPath: Path = js.native
+  ]
+  var pendingReason: String
+  var status: Status
+  var testPath: Path
 }
 
 object SpecResult {
@@ -43,96 +42,14 @@ object SpecResult {
     ],
     pendingReason: String,
     status: Status,
-    testPath: Path
+    testPath: Path,
+    __callsite: GetColumnNumber = null,
+    duration: js.UndefOr[Milliseconds] = js.undefined
   ): SpecResult = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], failedExpectations = failedExpectations.asInstanceOf[js.Any], fullName = fullName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], passedExpectations = passedExpectations.asInstanceOf[js.Any], pendingReason = pendingReason.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], testPath = testPath.asInstanceOf[js.Any])
+    if (__callsite != null) __obj.updateDynamic("__callsite")(__callsite.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpecResult]
   }
-  @scala.inline
-  implicit class SpecResultOps[Self <: SpecResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailedExpectations(value: js.Array[FailedAssertion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedExpectations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPassedExpectations(
-      value: js.Array[
-          ReturnType[
-            js.Function2[/* options */ Options, /* initError */ js.UndefOr[js.Error], FailedAssertion]
-          ]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passedExpectations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPendingReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTestPath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with__callsite(value: GetColumnNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__callsite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without__callsite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__callsite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Milliseconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

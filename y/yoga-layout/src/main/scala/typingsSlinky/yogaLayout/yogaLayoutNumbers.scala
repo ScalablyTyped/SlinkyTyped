@@ -7,6 +7,7 @@ import typingsSlinky.yogaLayout.mod.YogaEdge
 import typingsSlinky.yogaLayout.mod.YogaFlexDirection
 import typingsSlinky.yogaLayout.mod.YogaFlexWrap
 import typingsSlinky.yogaLayout.mod.YogaJustifyContent
+import typingsSlinky.yogaLayout.mod.YogaMeasureMode
 import typingsSlinky.yogaLayout.mod.YogaOverflow
 import typingsSlinky.yogaLayout.mod.YogaPositionType
 import typingsSlinky.yogaLayout.mod.YogaUnit
@@ -24,6 +25,7 @@ object yogaLayoutNumbers {
        with YogaFlexDirection
        with YogaFlexWrap
        with YogaJustifyContent
+       with YogaMeasureMode
        with YogaOverflow
        with YogaPositionType
        with YogaUnit
@@ -37,6 +39,7 @@ object yogaLayoutNumbers {
        with YogaFlexDirection
        with YogaFlexWrap
        with YogaJustifyContent
+       with YogaMeasureMode
        with YogaOverflow
        with YogaPositionType
        with YogaUnit
@@ -49,6 +52,7 @@ object yogaLayoutNumbers {
        with YogaFlexDirection
        with YogaFlexWrap
        with YogaJustifyContent
+       with YogaMeasureMode
        with YogaOverflow
        with YogaUnit
   
@@ -58,6 +62,7 @@ object yogaLayoutNumbers {
        with YogaEdge
        with YogaFlexDirection
        with YogaJustifyContent
+       with YogaMeasureMode
        with YogaUnit
   
   @js.native

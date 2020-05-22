@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SafariExtensionMessageEvent extends SafariEvent {
   /**
-  	 * The message data.
-  	 */
-  var message: js.Any = js.native
+    * The message data.
+    */
+  var message: js.Any
   /**
-  	 * The name of the message.
-  	 */
-  var name: String = js.native
+    * The name of the message.
+    */
+  var name: String
 }
 
 object SafariExtensionMessageEvent {
@@ -36,25 +35,5 @@ object SafariExtensionMessageEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SafariExtensionMessageEvent]
   }
-  @scala.inline
-  implicit class SafariExtensionMessageEventOps[Self <: SafariExtensionMessageEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

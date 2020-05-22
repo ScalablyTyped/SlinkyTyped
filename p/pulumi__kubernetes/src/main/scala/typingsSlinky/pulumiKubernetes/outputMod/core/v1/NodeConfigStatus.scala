@@ -7,14 +7,13 @@ import scala.scalajs.js.annotation._
 /**
   * NodeConfigStatus describes the status of the config assigned by Node.Spec.ConfigSource.
   */
-@js.native
 trait NodeConfigStatus extends js.Object {
   /**
     * Active reports the checkpointed config the node is actively using. Active will represent
     * either the current version of the Assigned config, or the current LastKnownGood config,
     * depending on whether attempting to use the Assigned config results in an error.
     */
-  val active: NodeConfigSource = js.native
+  val active: NodeConfigSource
   /**
     * Assigned reports the checkpointed config the node will try to use. When
     * Node.Spec.ConfigSource is updated, the node checkpoints the associated config payload to
@@ -24,7 +23,7 @@ trait NodeConfigStatus extends js.Object {
     * restarted, it tries to make the Assigned config the Active config by loading and validating
     * the checkpointed payload identified by Assigned.
     */
-  val assigned: NodeConfigSource = js.native
+  val assigned: NodeConfigSource
   /**
     * Error describes any problems reconciling the Spec.ConfigSource to the Active config. Errors
     * may occur, for example, attempting to checkpoint Spec.ConfigSource to the local Assigned
@@ -39,7 +38,7 @@ trait NodeConfigStatus extends js.Object {
     * machines can check whether or not Error is empty, but should not rely on the stability of
     * the Error text across Kubelet versions.
     */
-  val error: String = js.native
+  val error: String
   /**
     * LastKnownGood reports the checkpointed config the node will fall back to when it encounters
     * an error attempting to use the Assigned config. The Assigned config becomes the
@@ -52,7 +51,7 @@ trait NodeConfigStatus extends js.Object {
     * method of determining config stability and correctness, as this may change or become
     * configurable in the future.
     */
-  val lastKnownGood: NodeConfigSource = js.native
+  val lastKnownGood: NodeConfigSource
 }
 
 object NodeConfigStatus {
@@ -66,37 +65,5 @@ object NodeConfigStatus {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], assigned = assigned.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], lastKnownGood = lastKnownGood.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeConfigStatus]
   }
-  @scala.inline
-  implicit class NodeConfigStatusOps[Self <: NodeConfigStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: NodeConfigSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssigned(value: NodeConfigSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastKnownGood(value: NodeConfigSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastKnownGood")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

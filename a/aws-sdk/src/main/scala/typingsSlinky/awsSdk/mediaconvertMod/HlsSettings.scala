@@ -34,89 +34,22 @@ trait HlsSettings extends js.Object {
 
 object HlsSettings {
   @scala.inline
-  def apply(): HlsSettings = {
+  def apply(
+    AudioGroupId: string = null,
+    AudioOnlyContainer: HlsAudioOnlyContainer = null,
+    AudioRenditionSets: string = null,
+    AudioTrackType: HlsAudioTrackType = null,
+    IFrameOnlyManifest: HlsIFrameOnlyManifest = null,
+    SegmentModifier: string = null
+  ): HlsSettings = {
     val __obj = js.Dynamic.literal()
+    if (AudioGroupId != null) __obj.updateDynamic("AudioGroupId")(AudioGroupId.asInstanceOf[js.Any])
+    if (AudioOnlyContainer != null) __obj.updateDynamic("AudioOnlyContainer")(AudioOnlyContainer.asInstanceOf[js.Any])
+    if (AudioRenditionSets != null) __obj.updateDynamic("AudioRenditionSets")(AudioRenditionSets.asInstanceOf[js.Any])
+    if (AudioTrackType != null) __obj.updateDynamic("AudioTrackType")(AudioTrackType.asInstanceOf[js.Any])
+    if (IFrameOnlyManifest != null) __obj.updateDynamic("IFrameOnlyManifest")(IFrameOnlyManifest.asInstanceOf[js.Any])
+    if (SegmentModifier != null) __obj.updateDynamic("SegmentModifier")(SegmentModifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsSettings]
   }
-  @scala.inline
-  implicit class HlsSettingsOps[Self <: HlsSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioGroupId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioOnlyContainer(value: HlsAudioOnlyContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioOnlyContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioOnlyContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioOnlyContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioRenditionSets(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioRenditionSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioRenditionSets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioRenditionSets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioTrackType(value: HlsAudioTrackType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioTrackType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioTrackType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioTrackType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIFrameOnlyManifest(value: HlsIFrameOnlyManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IFrameOnlyManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIFrameOnlyManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IFrameOnlyManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentModifier(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentModifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentModifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentModifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

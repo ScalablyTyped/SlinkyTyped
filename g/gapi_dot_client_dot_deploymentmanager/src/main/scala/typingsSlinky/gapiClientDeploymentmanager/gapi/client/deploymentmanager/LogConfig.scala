@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LogConfig extends js.Object {
   /** Cloud audit options. */
-  var cloudAudit: js.UndefOr[LogConfigCloudAuditOptions] = js.native
+  var cloudAudit: js.UndefOr[LogConfigCloudAuditOptions] = js.undefined
   /** Counter options. */
-  var counter: js.UndefOr[LogConfigCounterOptions] = js.native
+  var counter: js.UndefOr[LogConfigCounterOptions] = js.undefined
   /** Data access options. */
-  var dataAccess: js.UndefOr[LogConfigDataAccessOptions] = js.native
+  var dataAccess: js.UndefOr[LogConfigDataAccessOptions] = js.undefined
 }
 
 object LogConfig {
   @scala.inline
-  def apply(): LogConfig = {
+  def apply(
+    cloudAudit: LogConfigCloudAuditOptions = null,
+    counter: LogConfigCounterOptions = null,
+    dataAccess: LogConfigDataAccessOptions = null
+  ): LogConfig = {
     val __obj = js.Dynamic.literal()
+    if (cloudAudit != null) __obj.updateDynamic("cloudAudit")(cloudAudit.asInstanceOf[js.Any])
+    if (counter != null) __obj.updateDynamic("counter")(counter.asInstanceOf[js.Any])
+    if (dataAccess != null) __obj.updateDynamic("dataAccess")(dataAccess.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogConfig]
   }
-  @scala.inline
-  implicit class LogConfigOps[Self <: LogConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudAudit(value: LogConfigCloudAuditOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudAudit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudAudit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudAudit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCounter(value: LogConfigCounterOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCounter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataAccess(value: LogConfigDataAccessOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataAccess")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

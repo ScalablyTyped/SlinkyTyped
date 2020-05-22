@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.Sensors
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,12 +18,23 @@ object Custom extends js.Object {
   /** Represents a property set of key/value pairs that contain the custom data sent from the sensor’s driver to the app. */
   @js.native
   abstract class CustomSensorReading ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.Custom.CustomSensorReading
+    extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.Custom.CustomSensorReading {
+    /** Gets the property set for the sensor. */
+    /* CompleteClass */
+    override var properties: IMapView[String, _] = js.native
+    /** Gets the time at which the sensor reported the reading. */
+    /* CompleteClass */
+    override var timestamp: js.Date = js.native
+  }
   
   /** Represents data for the reading–changed event of the custom sensor. */
   @js.native
   abstract class CustomSensorReadingChangedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs {
+    /** Gets the most recent sensor reading. */
+    /* CompleteClass */
+    override var reading: typingsSlinky.winrtUwp.Windows.Devices.Sensors.Custom.CustomSensorReading = js.native
+  }
   
   /* static members */
   @js.native

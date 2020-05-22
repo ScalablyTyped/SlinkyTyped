@@ -8,6 +8,16 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends BitArray {
   def this(length: Double) = this()
+  /* CompleteClass */
+  override var bits: js.typedarray.Uint32Array = js.native
+  /* CompleteClass */
+  override var length: Double = js.native
+  /* CompleteClass */
+  override def get(index: Double): Boolean = js.native
+  /* CompleteClass */
+  override def set(index: Double, value: js.Any): Boolean = js.native
+  /* CompleteClass */
+  override def toJSON(): BitArrayJSON = js.native
 }
 
 @JSImport("minimal-bit-array", JSImport.Namespace)

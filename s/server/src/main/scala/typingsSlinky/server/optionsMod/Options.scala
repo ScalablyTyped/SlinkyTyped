@@ -10,166 +10,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var engine: js.UndefOr[String] = js.native
-  var env: js.UndefOr[String] = js.native
-  var favicon: js.UndefOr[String] = js.native
-  var log: js.UndefOr[LogLevel | Level] = js.native
-  var parser: js.UndefOr[Body] = js.native
-  var port: js.UndefOr[Double] = js.native
-  var public: js.UndefOr[String] = js.native
-  var secret: js.UndefOr[String] = js.native
-  var security: js.UndefOr[`false` | IHelmetConfigurationcsurf] = js.native
-  var session: js.UndefOr[SessionOptions] = js.native
-  var views: js.UndefOr[String] = js.native
+  var engine: js.UndefOr[String] = js.undefined
+  var env: js.UndefOr[String] = js.undefined
+  var favicon: js.UndefOr[String] = js.undefined
+  var log: js.UndefOr[LogLevel | Level] = js.undefined
+  var parser: js.UndefOr[Body] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
+  var public: js.UndefOr[String] = js.undefined
+  var secret: js.UndefOr[String] = js.undefined
+  var security: js.UndefOr[`false` | IHelmetConfigurationcsurf] = js.undefined
+  var session: js.UndefOr[SessionOptions] = js.undefined
+  var views: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    engine: String = null,
+    env: String = null,
+    favicon: String = null,
+    log: LogLevel | Level = null,
+    parser: Body = null,
+    port: js.UndefOr[Double] = js.undefined,
+    public: String = null,
+    secret: String = null,
+    security: `false` | IHelmetConfigurationcsurf = null,
+    session: SessionOptions = null,
+    views: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (engine != null) __obj.updateDynamic("engine")(engine.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (favicon != null) __obj.updateDynamic("favicon")(favicon.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
+    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (public != null) __obj.updateDynamic("public")(public.asInstanceOf[js.Any])
+    if (secret != null) __obj.updateDynamic("secret")(secret.asInstanceOf[js.Any])
+    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
+    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEngine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFavicon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("favicon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFavicon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("favicon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: LogLevel | Level): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParser(value: Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurity(value: `false` | IHelmetConfigurationcsurf): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSession(value: SessionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViews(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SelectionRange extends js.Object {
-  var parent: js.UndefOr[SelectionRange] = js.native
-  var textSpan: TextSpan = js.native
+  var parent: js.UndefOr[SelectionRange] = js.undefined
+  var textSpan: TextSpan
 }
 
 object SelectionRange {
   @scala.inline
-  def apply(textSpan: TextSpan): SelectionRange = {
+  def apply(textSpan: TextSpan, parent: SelectionRange = null): SelectionRange = {
     val __obj = js.Dynamic.literal(textSpan = textSpan.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectionRange]
   }
-  @scala.inline
-  implicit class SelectionRangeOps[Self <: SelectionRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTextSpan(value: TextSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: SelectionRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

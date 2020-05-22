@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange")
 @js.native
 abstract class MobileBroadbandNetworkRegistrationStateChange ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange {
+  /** Gets the unique identifier of the device associated with a network registration state change. */
+  /* CompleteClass */
+  override var deviceId: String = js.native
+  /** Gets an object which contains details about the network associated with this network state change. */
+  /* CompleteClass */
+  override var network: typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandNetwork = js.native
+}
 

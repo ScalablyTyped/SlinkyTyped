@@ -13,40 +13,25 @@ trait DeleteKeyPairRequest extends js.Object {
   /**
     * The name of the key pair.
     */
-  var KeyName: KeyPairName = js.native
+  var KeyName: js.UndefOr[KeyPairName] = js.native
+  /**
+    * The ID of the key pair.
+    */
+  var KeyPairId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.KeyPairId] = js.native
 }
 
 object DeleteKeyPairRequest {
   @scala.inline
-  def apply(KeyName: KeyPairName): DeleteKeyPairRequest = {
-    val __obj = js.Dynamic.literal(KeyName = KeyName.asInstanceOf[js.Any])
+  def apply(
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    KeyName: KeyPairName = null,
+    KeyPairId: KeyPairId = null
+  ): DeleteKeyPairRequest = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (KeyName != null) __obj.updateDynamic("KeyName")(KeyName.asInstanceOf[js.Any])
+    if (KeyPairId != null) __obj.updateDynamic("KeyPairId")(KeyPairId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteKeyPairRequest]
   }
-  @scala.inline
-  implicit class DeleteKeyPairRequestOps[Self <: DeleteKeyPairRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyName(value: KeyPairName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

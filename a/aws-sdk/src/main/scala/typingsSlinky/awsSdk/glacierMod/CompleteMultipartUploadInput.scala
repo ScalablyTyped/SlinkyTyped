@@ -30,59 +30,17 @@ trait CompleteMultipartUploadInput extends js.Object {
 
 object CompleteMultipartUploadInput {
   @scala.inline
-  def apply(accountId: String, uploadId: String, vaultName: String): CompleteMultipartUploadInput = {
+  def apply(
+    accountId: String,
+    uploadId: String,
+    vaultName: String,
+    archiveSize: String = null,
+    checksum: String = null
+  ): CompleteMultipartUploadInput = {
     val __obj = js.Dynamic.literal(accountId = accountId.asInstanceOf[js.Any], uploadId = uploadId.asInstanceOf[js.Any], vaultName = vaultName.asInstanceOf[js.Any])
+    if (archiveSize != null) __obj.updateDynamic("archiveSize")(archiveSize.asInstanceOf[js.Any])
+    if (checksum != null) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompleteMultipartUploadInput]
   }
-  @scala.inline
-  implicit class CompleteMultipartUploadInputOps[Self <: CompleteMultipartUploadInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUploadId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVaultName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArchiveSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchiveSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChecksum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecksum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

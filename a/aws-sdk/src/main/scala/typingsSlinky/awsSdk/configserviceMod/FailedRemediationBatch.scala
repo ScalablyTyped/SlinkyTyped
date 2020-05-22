@@ -18,41 +18,11 @@ trait FailedRemediationBatch extends js.Object {
 
 object FailedRemediationBatch {
   @scala.inline
-  def apply(): FailedRemediationBatch = {
+  def apply(FailedItems: RemediationConfigurations = null, FailureMessage: String = null): FailedRemediationBatch = {
     val __obj = js.Dynamic.literal()
+    if (FailedItems != null) __obj.updateDynamic("FailedItems")(FailedItems.asInstanceOf[js.Any])
+    if (FailureMessage != null) __obj.updateDynamic("FailureMessage")(FailureMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[FailedRemediationBatch]
   }
-  @scala.inline
-  implicit class FailedRemediationBatchOps[Self <: FailedRemediationBatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedItems(value: RemediationConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DescribeGlobalReplicationGroupsResult extends js.Object {
 
 object DescribeGlobalReplicationGroupsResult {
   @scala.inline
-  def apply(): DescribeGlobalReplicationGroupsResult = {
+  def apply(GlobalReplicationGroups: GlobalReplicationGroupList = null, Marker: String = null): DescribeGlobalReplicationGroupsResult = {
     val __obj = js.Dynamic.literal()
+    if (GlobalReplicationGroups != null) __obj.updateDynamic("GlobalReplicationGroups")(GlobalReplicationGroups.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeGlobalReplicationGroupsResult]
   }
-  @scala.inline
-  implicit class DescribeGlobalReplicationGroupsResultOps[Self <: DescribeGlobalReplicationGroupsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalReplicationGroups(value: GlobalReplicationGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalReplicationGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

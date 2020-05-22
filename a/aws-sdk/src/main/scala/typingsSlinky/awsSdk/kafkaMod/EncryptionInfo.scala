@@ -22,41 +22,11 @@ trait EncryptionInfo extends js.Object {
 
 object EncryptionInfo {
   @scala.inline
-  def apply(): EncryptionInfo = {
+  def apply(EncryptionAtRest: EncryptionAtRest = null, EncryptionInTransit: EncryptionInTransit = null): EncryptionInfo = {
     val __obj = js.Dynamic.literal()
+    if (EncryptionAtRest != null) __obj.updateDynamic("EncryptionAtRest")(EncryptionAtRest.asInstanceOf[js.Any])
+    if (EncryptionInTransit != null) __obj.updateDynamic("EncryptionInTransit")(EncryptionInTransit.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptionInfo]
   }
-  @scala.inline
-  implicit class EncryptionInfoOps[Self <: EncryptionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptionAtRest(value: EncryptionAtRest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAtRest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionAtRest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAtRest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionInTransit(value: EncryptionInTransit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionInTransit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionInTransit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionInTransit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

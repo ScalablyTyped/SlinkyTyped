@@ -28,7 +28,7 @@ trait TableRow extends ClientObject {
   var context_TableRow: RequestContext = js.native
   /**
     *
-    * Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
+    * Returns the index number of the row within the rows collection of the table. Zero-indexed.
     *
     * [Api set: ExcelApi 1.1]
     */

@@ -1,13 +1,12 @@
 package typingsSlinky.reactNativeFirebase.mod.RNFirebase.firestore
 
-import typingsSlinky.reactNativeFirebase.mod.RNFirebase.firestore.Types.UpdateKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-native-firebase", "RNFirebase.firestore.FieldPath")
 @js.native
-class FieldPath protected () extends UpdateKey {
+class FieldPath protected () extends js.Object {
   def this(segments: String*) = this()
 }
 

@@ -5,63 +5,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestEnv extends js.Object {
-  var backendName: String = js.native
-  var flags: js.UndefOr[Flags] = js.native
-  var isDataSync: js.UndefOr[Boolean] = js.native
-  var name: String = js.native
+  var backendName: String
+  var flags: js.UndefOr[Flags] = js.undefined
+  var isDataSync: js.UndefOr[Boolean] = js.undefined
+  var name: String
 }
 
 object TestEnv {
   @scala.inline
-  def apply(backendName: String, name: String): TestEnv = {
+  def apply(
+    backendName: String,
+    name: String,
+    flags: Flags = null,
+    isDataSync: js.UndefOr[Boolean] = js.undefined
+  ): TestEnv = {
     val __obj = js.Dynamic.literal(backendName = backendName.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDataSync)) __obj.updateDynamic("isDataSync")(isDataSync.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestEnv]
   }
-  @scala.inline
-  implicit class TestEnvOps[Self <: TestEnv] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackendName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backendName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlags(value: Flags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDataSync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataSync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDataSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataSync")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -24,71 +24,19 @@ trait UpdateServerRequest extends js.Object {
 
 object UpdateServerRequest {
   @scala.inline
-  def apply(ServerName: ServerName): UpdateServerRequest = {
+  def apply(
+    ServerName: ServerName,
+    BackupRetentionCount: js.UndefOr[Integer] = js.undefined,
+    DisableAutomatedBackup: js.UndefOr[Boolean] = js.undefined,
+    PreferredBackupWindow: TimeWindowDefinition = null,
+    PreferredMaintenanceWindow: TimeWindowDefinition = null
+  ): UpdateServerRequest = {
     val __obj = js.Dynamic.literal(ServerName = ServerName.asInstanceOf[js.Any])
+    if (!js.isUndefined(BackupRetentionCount)) __obj.updateDynamic("BackupRetentionCount")(BackupRetentionCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DisableAutomatedBackup)) __obj.updateDynamic("DisableAutomatedBackup")(DisableAutomatedBackup.get.asInstanceOf[js.Any])
+    if (PreferredBackupWindow != null) __obj.updateDynamic("PreferredBackupWindow")(PreferredBackupWindow.asInstanceOf[js.Any])
+    if (PreferredMaintenanceWindow != null) __obj.updateDynamic("PreferredMaintenanceWindow")(PreferredMaintenanceWindow.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateServerRequest]
   }
-  @scala.inline
-  implicit class UpdateServerRequestOps[Self <: UpdateServerRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServerName(value: ServerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackupRetentionCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupRetentionCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupRetentionCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupRetentionCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAutomatedBackup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableAutomatedBackup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAutomatedBackup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableAutomatedBackup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredBackupWindow(value: TimeWindowDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredBackupWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredBackupWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredBackupWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredMaintenanceWindow(value: TimeWindowDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredMaintenanceWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

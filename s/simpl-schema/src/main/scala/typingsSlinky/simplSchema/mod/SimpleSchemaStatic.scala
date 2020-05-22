@@ -48,7 +48,7 @@ trait SimpleSchemaStatic
   def schema(key: String): SchemaDefinition = js.native
   def validate(obj: js.Any): Unit = js.native
   def validate(obj: js.Any, options: ValidationOption): Unit = js.native
-  def validator(): js.Function0[Boolean] = js.native
-  def validator(options: ValidationOption): js.Function0[Boolean] = js.native
+  def validator(): js.Function1[/* obj */ js.Any, Boolean] = js.native
+  def validator(options: ValidationOption): js.Function1[/* obj */ js.Any, Boolean] = js.native
 }
 

@@ -17,29 +17,10 @@ trait SchemaIdentitytoolkitRelyingpartySendVerificationCodeResponse extends js.O
 
 object SchemaIdentitytoolkitRelyingpartySendVerificationCodeResponse {
   @scala.inline
-  def apply(): SchemaIdentitytoolkitRelyingpartySendVerificationCodeResponse = {
+  def apply(sessionInfo: String = null): SchemaIdentitytoolkitRelyingpartySendVerificationCodeResponse = {
     val __obj = js.Dynamic.literal()
+    if (sessionInfo != null) __obj.updateDynamic("sessionInfo")(sessionInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIdentitytoolkitRelyingpartySendVerificationCodeResponse]
   }
-  @scala.inline
-  implicit class SchemaIdentitytoolkitRelyingpartySendVerificationCodeResponseOps[Self <: SchemaIdentitytoolkitRelyingpartySendVerificationCodeResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSessionInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

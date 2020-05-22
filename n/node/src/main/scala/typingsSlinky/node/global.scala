@@ -222,7 +222,10 @@ object global extends js.Object {
   object NodeJS extends js.Object
   
   @js.native
-  object Symbol extends SymbolConstructor
+  object Symbol extends SymbolConstructor {
+    /* CompleteClass */
+    override val asyncIterator: js.Symbol = js.native
+  }
   
   @js.native
   object setImmediate extends js.Object {

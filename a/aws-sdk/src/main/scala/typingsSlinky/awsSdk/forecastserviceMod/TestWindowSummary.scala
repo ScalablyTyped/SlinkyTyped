@@ -26,65 +26,18 @@ trait TestWindowSummary extends js.Object {
 
 object TestWindowSummary {
   @scala.inline
-  def apply(): TestWindowSummary = {
+  def apply(
+    Message: ErrorMessage = null,
+    Status: Status = null,
+    TestWindowEnd: js.Date = null,
+    TestWindowStart: js.Date = null
+  ): TestWindowSummary = {
     val __obj = js.Dynamic.literal()
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (TestWindowEnd != null) __obj.updateDynamic("TestWindowEnd")(TestWindowEnd.asInstanceOf[js.Any])
+    if (TestWindowStart != null) __obj.updateDynamic("TestWindowStart")(TestWindowStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestWindowSummary]
   }
-  @scala.inline
-  implicit class TestWindowSummaryOps[Self <: TestWindowSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: ErrorMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestWindowEnd(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TestWindowEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestWindowEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TestWindowEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestWindowStart(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TestWindowStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestWindowStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TestWindowStart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

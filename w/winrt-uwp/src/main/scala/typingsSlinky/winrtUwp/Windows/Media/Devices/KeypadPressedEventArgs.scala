@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains information for the KeypadPressed event. */
-@js.native
 trait KeypadPressedEventArgs extends js.Object {
   /** Returns the value of the keypad button on the device that was pressed. */
-  var telephonyKey: TelephonyKey = js.native
+  var telephonyKey: TelephonyKey
 }
 
 object KeypadPressedEventArgs {
@@ -17,19 +16,5 @@ object KeypadPressedEventArgs {
     val __obj = js.Dynamic.literal(telephonyKey = telephonyKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeypadPressedEventArgs]
   }
-  @scala.inline
-  implicit class KeypadPressedEventArgsOps[Self <: KeypadPressedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTelephonyKey(value: TelephonyKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonyKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

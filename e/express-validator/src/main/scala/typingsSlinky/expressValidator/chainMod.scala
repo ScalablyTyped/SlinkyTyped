@@ -1,6 +1,7 @@
 package typingsSlinky.expressValidator
 
 import typingsSlinky.expressValidator.contextBuilderMod.ContextBuilder
+import typingsSlinky.expressValidator.contextMod.Context
 import typingsSlinky.expressValidator.selectFieldsMod.SelectFields_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,8 +19,10 @@ object chainMod extends js.Object {
   @js.native
   class ContextRunnerImpl protected ()
     extends typingsSlinky.expressValidator.contextRunnerImplMod.ContextRunnerImpl {
-    def this(builder: ContextBuilder) = this()
-    def this(builder: ContextBuilder, selectFields: SelectFields_) = this()
+    def this(builderOrContext: ContextBuilder) = this()
+    def this(builderOrContext: Context) = this()
+    def this(builderOrContext: ContextBuilder, selectFields: SelectFields_) = this()
+    def this(builderOrContext: Context, selectFields: SelectFields_) = this()
   }
   
   @js.native

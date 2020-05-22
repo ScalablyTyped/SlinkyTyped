@@ -4,71 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodePoolAutoscaling extends js.Object {
   /** Is autoscaling enabled for this node pool. */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Maximum number of nodes in the NodePool. Must be >= min_node_count. There
     * has to enough quota to scale up the cluster.
     */
-  var maxNodeCount: js.UndefOr[Double] = js.native
+  var maxNodeCount: js.UndefOr[Double] = js.undefined
   /**
     * Minimum number of nodes in the NodePool. Must be >= 1 and <=
     * max_node_count.
     */
-  var minNodeCount: js.UndefOr[Double] = js.native
+  var minNodeCount: js.UndefOr[Double] = js.undefined
 }
 
 object NodePoolAutoscaling {
   @scala.inline
-  def apply(): NodePoolAutoscaling = {
+  def apply(
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    maxNodeCount: js.UndefOr[Double] = js.undefined,
+    minNodeCount: js.UndefOr[Double] = js.undefined
+  ): NodePoolAutoscaling = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxNodeCount)) __obj.updateDynamic("maxNodeCount")(maxNodeCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minNodeCount)) __obj.updateDynamic("minNodeCount")(minNodeCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodePoolAutoscaling]
   }
-  @scala.inline
-  implicit class NodePoolAutoscalingOps[Self <: NodePoolAutoscaling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxNodeCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNodeCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxNodeCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNodeCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinNodeCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minNodeCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinNodeCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minNodeCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

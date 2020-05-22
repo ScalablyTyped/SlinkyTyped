@@ -9,6 +9,8 @@ package object interfaceMod {
     /* date */ DateType | scala.Null, 
     typingsSlinky.rcPicker.interfaceMod.DisabledTimes
   ]
+  type EventValue[DateType] = DateType | scala.Null
+  type NullableDateType[DateType] = js.UndefOr[DateType | scala.Null]
   type OnPanelChange[DateType] = js.Function2[
     /* value */ DateType, 
     /* mode */ typingsSlinky.rcPicker.interfaceMod.PanelMode, 
@@ -20,4 +22,8 @@ package object interfaceMod {
     scala.Unit
   ]
   type RangeList = js.Array[typingsSlinky.rcPicker.anon.Label]
+  type RangeValue[DateType] = (js.Tuple2[
+    typingsSlinky.rcPicker.interfaceMod.EventValue[DateType], 
+    typingsSlinky.rcPicker.interfaceMod.EventValue[DateType]
+  ]) | scala.Null
 }

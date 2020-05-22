@@ -55,161 +55,34 @@ trait RoleDetail extends js.Object {
 
 object RoleDetail {
   @scala.inline
-  def apply(): RoleDetail = {
+  def apply(
+    Arn: arnType = null,
+    AssumeRolePolicyDocument: policyDocumentType = null,
+    AttachedManagedPolicies: attachedPoliciesListType = null,
+    CreateDate: js.Date = null,
+    InstanceProfileList: instanceProfileListType = null,
+    Path: pathType = null,
+    PermissionsBoundary: AttachedPermissionsBoundary = null,
+    RoleId: idType = null,
+    RoleLastUsed: RoleLastUsed = null,
+    RoleName: roleNameType = null,
+    RolePolicyList: policyDetailListType = null,
+    Tags: tagListType = null
+  ): RoleDetail = {
     val __obj = js.Dynamic.literal()
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (AssumeRolePolicyDocument != null) __obj.updateDynamic("AssumeRolePolicyDocument")(AssumeRolePolicyDocument.asInstanceOf[js.Any])
+    if (AttachedManagedPolicies != null) __obj.updateDynamic("AttachedManagedPolicies")(AttachedManagedPolicies.asInstanceOf[js.Any])
+    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
+    if (InstanceProfileList != null) __obj.updateDynamic("InstanceProfileList")(InstanceProfileList.asInstanceOf[js.Any])
+    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
+    if (PermissionsBoundary != null) __obj.updateDynamic("PermissionsBoundary")(PermissionsBoundary.asInstanceOf[js.Any])
+    if (RoleId != null) __obj.updateDynamic("RoleId")(RoleId.asInstanceOf[js.Any])
+    if (RoleLastUsed != null) __obj.updateDynamic("RoleLastUsed")(RoleLastUsed.asInstanceOf[js.Any])
+    if (RoleName != null) __obj.updateDynamic("RoleName")(RoleName.asInstanceOf[js.Any])
+    if (RolePolicyList != null) __obj.updateDynamic("RolePolicyList")(RolePolicyList.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoleDetail]
   }
-  @scala.inline
-  implicit class RoleDetailOps[Self <: RoleDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: arnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssumeRolePolicyDocument(value: policyDocumentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumeRolePolicyDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssumeRolePolicyDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumeRolePolicyDocument")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachedManagedPolicies(value: attachedPoliciesListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachedManagedPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachedManagedPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachedManagedPolicies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceProfileList(value: instanceProfileListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceProfileList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceProfileList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceProfileList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: pathType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionsBoundary(value: AttachedPermissionsBoundary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionsBoundary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleId(value: idType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleLastUsed(value: RoleLastUsed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleLastUsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleLastUsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleLastUsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleName(value: roleNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRolePolicyList(value: policyDetailListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RolePolicyList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRolePolicyList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RolePolicyList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: tagListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait UpdateCostCategoryDefinitionResponse extends js.Object {
 
 object UpdateCostCategoryDefinitionResponse {
   @scala.inline
-  def apply(): UpdateCostCategoryDefinitionResponse = {
+  def apply(CostCategoryArn: Arn = null, EffectiveStart: ZonedDateTime = null): UpdateCostCategoryDefinitionResponse = {
     val __obj = js.Dynamic.literal()
+    if (CostCategoryArn != null) __obj.updateDynamic("CostCategoryArn")(CostCategoryArn.asInstanceOf[js.Any])
+    if (EffectiveStart != null) __obj.updateDynamic("EffectiveStart")(EffectiveStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateCostCategoryDefinitionResponse]
   }
-  @scala.inline
-  implicit class UpdateCostCategoryDefinitionResponseOps[Self <: UpdateCostCategoryDefinitionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCostCategoryArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostCategoryArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCostCategoryArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostCategoryArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectiveStart(value: ZonedDateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectiveStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectiveStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectiveStart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

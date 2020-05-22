@@ -38,95 +38,23 @@ trait ModifyInstancePlacementRequest extends js.Object {
 
 object ModifyInstancePlacementRequest {
   @scala.inline
-  def apply(InstanceId: InstanceId): ModifyInstancePlacementRequest = {
+  def apply(
+    InstanceId: InstanceId,
+    Affinity: Affinity = null,
+    GroupName: PlacementGroupName = null,
+    HostId: DedicatedHostId = null,
+    HostResourceGroupArn: String = null,
+    PartitionNumber: js.UndefOr[Integer] = js.undefined,
+    Tenancy: HostTenancy = null
+  ): ModifyInstancePlacementRequest = {
     val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any])
+    if (Affinity != null) __obj.updateDynamic("Affinity")(Affinity.asInstanceOf[js.Any])
+    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
+    if (HostId != null) __obj.updateDynamic("HostId")(HostId.asInstanceOf[js.Any])
+    if (HostResourceGroupArn != null) __obj.updateDynamic("HostResourceGroupArn")(HostResourceGroupArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartitionNumber)) __obj.updateDynamic("PartitionNumber")(PartitionNumber.get.asInstanceOf[js.Any])
+    if (Tenancy != null) __obj.updateDynamic("Tenancy")(Tenancy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyInstancePlacementRequest]
   }
-  @scala.inline
-  implicit class ModifyInstancePlacementRequestOps[Self <: ModifyInstancePlacementRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAffinity(value: Affinity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Affinity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAffinity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Affinity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: PlacementGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostId(value: DedicatedHostId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostResourceGroupArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostResourceGroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostResourceGroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostResourceGroupArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionNumber(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenancy(value: HostTenancy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenancy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,84 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResourceGroupPatchable extends js.Object {
   /**
     * The ID of the resource that manages this resource group.
     */
-  var managedBy: js.UndefOr[String] = js.native
+  var managedBy: js.UndefOr[String] = js.undefined
   /**
     * The name of the resource group.
     */
-  var name: js.UndefOr[String] = js.native
-  var properties: js.UndefOr[ResourceGroupProperties] = js.native
+  var name: js.UndefOr[String] = js.undefined
+  var properties: js.UndefOr[ResourceGroupProperties] = js.undefined
   /**
     * The tags attached to the resource group.
     */
-  var tags: js.UndefOr[StringDictionary[String]] = js.native
+  var tags: js.UndefOr[StringDictionary[String]] = js.undefined
 }
 
 object ResourceGroupPatchable {
   @scala.inline
-  def apply(): ResourceGroupPatchable = {
+  def apply(
+    managedBy: String = null,
+    name: String = null,
+    properties: ResourceGroupProperties = null,
+    tags: StringDictionary[String] = null
+  ): ResourceGroupPatchable = {
     val __obj = js.Dynamic.literal()
+    if (managedBy != null) __obj.updateDynamic("managedBy")(managedBy.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceGroupPatchable]
   }
-  @scala.inline
-  implicit class ResourceGroupPatchableOps[Self <: ResourceGroupPatchable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManagedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: ResourceGroupProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

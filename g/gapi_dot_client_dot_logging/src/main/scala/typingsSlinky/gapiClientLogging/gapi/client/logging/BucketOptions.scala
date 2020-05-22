@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BucketOptions extends js.Object {
   /** The explicit buckets. */
-  var explicitBuckets: js.UndefOr[Explicit] = js.native
+  var explicitBuckets: js.UndefOr[Explicit] = js.undefined
   /** The exponential buckets. */
-  var exponentialBuckets: js.UndefOr[Exponential] = js.native
+  var exponentialBuckets: js.UndefOr[Exponential] = js.undefined
   /** The linear bucket. */
-  var linearBuckets: js.UndefOr[Linear] = js.native
+  var linearBuckets: js.UndefOr[Linear] = js.undefined
 }
 
 object BucketOptions {
   @scala.inline
-  def apply(): BucketOptions = {
+  def apply(
+    explicitBuckets: Explicit = null,
+    exponentialBuckets: Exponential = null,
+    linearBuckets: Linear = null
+  ): BucketOptions = {
     val __obj = js.Dynamic.literal()
+    if (explicitBuckets != null) __obj.updateDynamic("explicitBuckets")(explicitBuckets.asInstanceOf[js.Any])
+    if (exponentialBuckets != null) __obj.updateDynamic("exponentialBuckets")(exponentialBuckets.asInstanceOf[js.Any])
+    if (linearBuckets != null) __obj.updateDynamic("linearBuckets")(linearBuckets.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketOptions]
   }
-  @scala.inline
-  implicit class BucketOptionsOps[Self <: BucketOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExplicitBuckets(value: Explicit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitBuckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplicitBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitBuckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExponentialBuckets(value: Exponential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exponentialBuckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExponentialBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exponentialBuckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinearBuckets(value: Linear): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearBuckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinearBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearBuckets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

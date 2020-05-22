@@ -33,77 +33,20 @@ trait SchemaGooglePrivacyDlpV2LDiversityHistogramBucket extends js.Object {
 
 object SchemaGooglePrivacyDlpV2LDiversityHistogramBucket {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2LDiversityHistogramBucket = {
+  def apply(
+    bucketSize: String = null,
+    bucketValueCount: String = null,
+    bucketValues: js.Array[SchemaGooglePrivacyDlpV2LDiversityEquivalenceClass] = null,
+    sensitiveValueFrequencyLowerBound: String = null,
+    sensitiveValueFrequencyUpperBound: String = null
+  ): SchemaGooglePrivacyDlpV2LDiversityHistogramBucket = {
     val __obj = js.Dynamic.literal()
+    if (bucketSize != null) __obj.updateDynamic("bucketSize")(bucketSize.asInstanceOf[js.Any])
+    if (bucketValueCount != null) __obj.updateDynamic("bucketValueCount")(bucketValueCount.asInstanceOf[js.Any])
+    if (bucketValues != null) __obj.updateDynamic("bucketValues")(bucketValues.asInstanceOf[js.Any])
+    if (sensitiveValueFrequencyLowerBound != null) __obj.updateDynamic("sensitiveValueFrequencyLowerBound")(sensitiveValueFrequencyLowerBound.asInstanceOf[js.Any])
+    if (sensitiveValueFrequencyUpperBound != null) __obj.updateDynamic("sensitiveValueFrequencyUpperBound")(sensitiveValueFrequencyUpperBound.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2LDiversityHistogramBucket]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2LDiversityHistogramBucketOps[Self <: SchemaGooglePrivacyDlpV2LDiversityHistogramBucket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucketValueCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketValueCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucketValues(value: js.Array[SchemaGooglePrivacyDlpV2LDiversityEquivalenceClass]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSensitiveValueFrequencyLowerBound(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitiveValueFrequencyLowerBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSensitiveValueFrequencyLowerBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitiveValueFrequencyLowerBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSensitiveValueFrequencyUpperBound(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitiveValueFrequencyUpperBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSensitiveValueFrequencyUpperBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitiveValueFrequencyUpperBound")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

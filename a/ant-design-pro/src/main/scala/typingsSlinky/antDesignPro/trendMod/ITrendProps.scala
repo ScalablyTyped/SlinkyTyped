@@ -7,82 +7,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITrendProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var colorful: js.UndefOr[Boolean] = js.native
-  var flag: up | down = js.native
-  var reverseColor: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var colorful: js.UndefOr[Boolean] = js.undefined
+  var flag: up | down
+  var reverseColor: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object ITrendProps {
   @scala.inline
-  def apply(flag: up | down): ITrendProps = {
+  def apply(
+    flag: up | down,
+    className: String = null,
+    colorful: js.UndefOr[Boolean] = js.undefined,
+    reverseColor: js.UndefOr[Boolean] = js.undefined,
+    style: CSSProperties = null
+  ): ITrendProps = {
     val __obj = js.Dynamic.literal(flag = flag.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorful)) __obj.updateDynamic("colorful")(colorful.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverseColor)) __obj.updateDynamic("reverseColor")(reverseColor.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITrendProps]
   }
-  @scala.inline
-  implicit class ITrendPropsOps[Self <: ITrendProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlag(value: up | down): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorful(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorful")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorful: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorful")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverseColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverseColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

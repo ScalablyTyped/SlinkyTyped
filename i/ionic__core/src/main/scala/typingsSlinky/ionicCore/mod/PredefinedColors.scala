@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ionicCore.ionicCoreStrings.medium
   - typingsSlinky.ionicCore.ionicCoreStrings.dark
 */
-trait PredefinedColors extends Color
+trait PredefinedColors extends js.Object
 
 object PredefinedColors {
   @scala.inline

@@ -23,6 +23,12 @@ class Rule[T] ()
   var oneOfs: TypedChainedMap[this.type, Rule[Rule[Module]]] = js.native
   var rules: TypedChainedMap[this.type, Rule[Rule[Module]]] = js.native
   var uses: TypedChainedMap[this.type, Use[Rule[Module]]] = js.native
+  /* CompleteClass */
+  override def after(name: String): this.type = js.native
+  /* CompleteClass */
+  override def before(name: String): this.type = js.native
+  /* CompleteClass */
+  override def end(): T = js.native
   @JSName("enforce")
   def enforce_post(value: post): this.type = js.native
   @JSName("enforce")

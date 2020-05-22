@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.form.control.GridControl
   * @see com.sun.star.form.component.GridControl
   */
-@js.native
 trait XGridFieldDataSupplier extends XInterface {
   /**
     * retrieves the actual column data for the given row
@@ -27,7 +26,7 @@ trait XGridFieldDataSupplier extends XInterface {
     * If a column does not support the requested type, `NULL` is returned at the respective position.
     * @see XGridFieldDataSupplier.queryFieldDataType
     */
-  def queryFieldData(nRow: Double, xType: `type`): SafeArray[_] = js.native
+  def queryFieldData(nRow: Double, xType: `type`): SafeArray[_]
   /**
     * checks whether or not the content of the grid's columns can be retrieved in the requested format.
     *
@@ -38,7 +37,7 @@ trait XGridFieldDataSupplier extends XInterface {
     * @see DataAwareControlModel
     * @see XGridFieldDataSupplier.queryFieldData
     */
-  def queryFieldDataType(xType: `type`): SafeArray[Boolean] = js.native
+  def queryFieldDataType(xType: `type`): SafeArray[Boolean]
 }
 
 object XGridFieldDataSupplier {
@@ -53,25 +52,5 @@ object XGridFieldDataSupplier {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryFieldData = js.Any.fromFunction2(queryFieldData), queryFieldDataType = js.Any.fromFunction1(queryFieldDataType), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XGridFieldDataSupplier]
   }
-  @scala.inline
-  implicit class XGridFieldDataSupplierOps[Self <: XGridFieldDataSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryFieldData(value: (Double, `type`) => SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryFieldData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withQueryFieldDataType(value: `type` => SafeArray[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryFieldDataType")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

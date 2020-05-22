@@ -22,41 +22,10 @@ trait SslConfiguration extends js.Object {
 
 object SslConfiguration {
   @scala.inline
-  def apply(Certificate: String, PrivateKey: String): SslConfiguration = {
+  def apply(Certificate: String, PrivateKey: String, Chain: String = null): SslConfiguration = {
     val __obj = js.Dynamic.literal(Certificate = Certificate.asInstanceOf[js.Any], PrivateKey = PrivateKey.asInstanceOf[js.Any])
+    if (Chain != null) __obj.updateDynamic("Chain")(Chain.asInstanceOf[js.Any])
     __obj.asInstanceOf[SslConfiguration]
   }
-  @scala.inline
-  implicit class SslConfigurationOps[Self <: SslConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivateKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Chain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Chain")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

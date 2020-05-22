@@ -26,65 +26,18 @@ trait ServiceRegistry extends js.Object {
 
 object ServiceRegistry {
   @scala.inline
-  def apply(): ServiceRegistry = {
+  def apply(
+    containerName: String = null,
+    containerPort: js.UndefOr[BoxedInteger] = js.undefined,
+    port: js.UndefOr[BoxedInteger] = js.undefined,
+    registryArn: String = null
+  ): ServiceRegistry = {
     val __obj = js.Dynamic.literal()
+    if (containerName != null) __obj.updateDynamic("containerName")(containerName.asInstanceOf[js.Any])
+    if (!js.isUndefined(containerPort)) __obj.updateDynamic("containerPort")(containerPort.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (registryArn != null) __obj.updateDynamic("registryArn")(registryArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceRegistry]
   }
-  @scala.inline
-  implicit class ServiceRegistryOps[Self <: ServiceRegistry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerPort(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistryArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistryArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

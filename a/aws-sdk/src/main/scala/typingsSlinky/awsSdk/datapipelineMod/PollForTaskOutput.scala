@@ -14,29 +14,10 @@ trait PollForTaskOutput extends js.Object {
 
 object PollForTaskOutput {
   @scala.inline
-  def apply(): PollForTaskOutput = {
+  def apply(taskObject: TaskObject = null): PollForTaskOutput = {
     val __obj = js.Dynamic.literal()
+    if (taskObject != null) __obj.updateDynamic("taskObject")(taskObject.asInstanceOf[js.Any])
     __obj.asInstanceOf[PollForTaskOutput]
   }
-  @scala.inline
-  implicit class PollForTaskOutputOps[Self <: PollForTaskOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTaskObject(value: TaskObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskObject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

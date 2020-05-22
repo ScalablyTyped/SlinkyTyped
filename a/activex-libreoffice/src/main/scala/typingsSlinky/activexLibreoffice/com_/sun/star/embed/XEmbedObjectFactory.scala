@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   *
   * This interface provides user with full control over object creation.
   */
-@js.native
 trait XEmbedObjectFactory extends XInterface {
   /**
     * creates a new object and transport parameters for persistent initialization.
@@ -41,7 +40,7 @@ trait XEmbedObjectFactory extends XInterface {
     nEntryConnectionMode: Double,
     aArgs: SeqEquiv[PropertyValue],
     aObjectArgs: SeqEquiv[PropertyValue]
-  ): XInterface = js.native
+  ): XInterface
 }
 
 object XEmbedObjectFactory {
@@ -55,21 +54,5 @@ object XEmbedObjectFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createInstanceUserInit = js.Any.fromFunction7(createInstanceUserInit), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XEmbedObjectFactory]
   }
-  @scala.inline
-  implicit class XEmbedObjectFactoryOps[Self <: XEmbedObjectFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateInstanceUserInit(
-      value: (SeqEquiv[Double], String, XStorage, String, Double, SeqEquiv[PropertyValue], SeqEquiv[PropertyValue]) => XInterface
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstanceUserInit")(js.Any.fromFunction7(value))
-        ret
-    }
-  }
-  
 }
 

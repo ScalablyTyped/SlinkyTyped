@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LeagueDto extends js.Object {
-  var entries: js.Array[LeagueEntryDto] = js.native
-  var name: String = js.native
-  var participantId: String = js.native
-  var queue: String = js.native
-  var tier: String = js.native
+  var entries: js.Array[LeagueEntryDto]
+  var name: String
+  var participantId: String
+  var queue: String
+  var tier: String
 }
 
 object LeagueDto {
@@ -25,43 +24,5 @@ object LeagueDto {
     val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], participantId = participantId.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any], tier = tier.asInstanceOf[js.Any])
     __obj.asInstanceOf[LeagueDto]
   }
-  @scala.inline
-  implicit class LeagueDtoOps[Self <: LeagueDto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntries(value: js.Array[LeagueEntryDto]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParticipantId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("participantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

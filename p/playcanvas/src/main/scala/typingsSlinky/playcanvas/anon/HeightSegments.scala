@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HeightSegments extends js.Object {
-  var halfExtents: js.UndefOr[Vec3] = js.native
-  var heightSegments: js.UndefOr[Double] = js.native
-  var lengthSegments: js.UndefOr[Double] = js.native
-  var widthSegments: js.UndefOr[Double] = js.native
+  var halfExtents: js.UndefOr[Vec3] = js.undefined
+  var heightSegments: js.UndefOr[Double] = js.undefined
+  var lengthSegments: js.UndefOr[Double] = js.undefined
+  var widthSegments: js.UndefOr[Double] = js.undefined
 }
 
 object HeightSegments {
   @scala.inline
-  def apply(): HeightSegments = {
+  def apply(
+    halfExtents: Vec3 = null,
+    heightSegments: js.UndefOr[Double] = js.undefined,
+    lengthSegments: js.UndefOr[Double] = js.undefined,
+    widthSegments: js.UndefOr[Double] = js.undefined
+  ): HeightSegments = {
     val __obj = js.Dynamic.literal()
+    if (halfExtents != null) __obj.updateDynamic("halfExtents")(halfExtents.asInstanceOf[js.Any])
+    if (!js.isUndefined(heightSegments)) __obj.updateDynamic("heightSegments")(heightSegments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lengthSegments)) __obj.updateDynamic("lengthSegments")(lengthSegments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(widthSegments)) __obj.updateDynamic("widthSegments")(widthSegments.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeightSegments]
   }
-  @scala.inline
-  implicit class HeightSegmentsOps[Self <: HeightSegments] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHalfExtents(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("halfExtents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHalfExtents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("halfExtents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightSegments(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightSegments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLengthSegments(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLengthSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthSegments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidthSegments(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidthSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthSegments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

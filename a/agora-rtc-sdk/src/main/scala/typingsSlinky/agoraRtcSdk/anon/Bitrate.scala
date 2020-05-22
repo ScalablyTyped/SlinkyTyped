@@ -4,87 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bitrate extends js.Object {
-  /** Bitrate of the low-video stream frame in Kbps. A positive integer, and the value range is [1,10000000]. */
-  var bitrate: js.UndefOr[Double] = js.native
-  /** Frame rate of the low-video stream frame in fps. A positive integer, and the value range is [1,10000]. */
-  var framerate: js.UndefOr[Double] = js.native
   /**
-    * Height of the low-video stream frame. A positive integer, and the value range is [1,10000].
+    * The bitrate of the low-quality video stream frame in Kbps.
     *
-    * The width and height parameters are bound together, and take effect only when both are set. Otherwise, the SDK assigns default values.
+    * A positive integer, and the value range is [1,10000000]. The default value is 50.
     */
-  var height: js.UndefOr[Double] = js.native
+  var bitrate: js.UndefOr[Double] = js.undefined
   /**
-    * Width of the low-video stream frame. A positive integer, and the value range is [1,10000].
+    * The frame rate of the low-quality video stream frame in fps.
     *
-    * The width and height parameters are bound together, and take effect only when both are set.Otherwise, the SDK assigns default values.
+    * A positive integer, and the value range is [1,10000]. The default value is 15.
     */
-  var width: js.UndefOr[Double] = js.native
+  var framerate: js.UndefOr[Double] = js.undefined
+  /**
+    * The height of the low-quality video stream frame.
+    *
+    * A positive integer, and the value range is [1,10000]. The default value is 120.
+    *
+    * The width and height parameters are bound together, and take effect only when both are set. Otherwise, the SDK assigns the default values.
+    */
+  var height: js.UndefOr[Double] = js.undefined
+  /**
+    * The width of the low-quality video stream frame.
+    *
+    * A positive integer, and the value range is [1,10000]. The default value is 160.
+    *
+    * The width and height parameters are bound together, and take effect only when both are set. Otherwise, the SDK assigns the default values.
+    */
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object Bitrate {
   @scala.inline
-  def apply(): Bitrate = {
+  def apply(
+    bitrate: js.UndefOr[Double] = js.undefined,
+    framerate: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): Bitrate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bitrate)) __obj.updateDynamic("bitrate")(bitrate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(framerate)) __obj.updateDynamic("framerate")(framerate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bitrate]
   }
-  @scala.inline
-  implicit class BitrateOps[Self <: Bitrate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitrate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framerate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framerate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

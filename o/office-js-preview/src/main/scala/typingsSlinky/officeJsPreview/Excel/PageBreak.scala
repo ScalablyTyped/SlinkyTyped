@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 trait PageBreak extends ClientObject {
   /**
     *
-    * Represents the column index for the page break
+    * Specifies the column index for the page break
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -25,7 +25,7 @@ trait PageBreak extends ClientObject {
   var context_PageBreak: RequestContext = js.native
   /**
     *
-    * Represents the row index for the page break
+    * Specifies the row index for the page break
     *
     * [Api set: ExcelApi 1.9]
     */

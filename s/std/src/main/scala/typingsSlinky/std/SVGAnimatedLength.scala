@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used for attributes of basic type <length> which can be animated. */
-@js.native
 trait SVGAnimatedLength extends js.Object {
-  val animVal: org.scalajs.dom.raw.SVGLength = js.native
-  val baseVal: org.scalajs.dom.raw.SVGLength = js.native
+  val animVal: org.scalajs.dom.raw.SVGLength
+  val baseVal: org.scalajs.dom.raw.SVGLength
 }
 
 object SVGAnimatedLength {
@@ -17,25 +16,5 @@ object SVGAnimatedLength {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGAnimatedLength]
   }
-  @scala.inline
-  implicit class SVGAnimatedLengthOps[Self <: org.scalajs.dom.raw.SVGAnimatedLength] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimVal(value: org.scalajs.dom.raw.SVGLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseVal(value: org.scalajs.dom.raw.SVGLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

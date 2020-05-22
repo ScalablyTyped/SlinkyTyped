@@ -34,89 +34,22 @@ trait DescribeBillingGroupResponse extends js.Object {
 
 object DescribeBillingGroupResponse {
   @scala.inline
-  def apply(): DescribeBillingGroupResponse = {
+  def apply(
+    billingGroupArn: BillingGroupArn = null,
+    billingGroupId: BillingGroupId = null,
+    billingGroupMetadata: BillingGroupMetadata = null,
+    billingGroupName: BillingGroupName = null,
+    billingGroupProperties: BillingGroupProperties = null,
+    version: js.UndefOr[Version] = js.undefined
+  ): DescribeBillingGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (billingGroupArn != null) __obj.updateDynamic("billingGroupArn")(billingGroupArn.asInstanceOf[js.Any])
+    if (billingGroupId != null) __obj.updateDynamic("billingGroupId")(billingGroupId.asInstanceOf[js.Any])
+    if (billingGroupMetadata != null) __obj.updateDynamic("billingGroupMetadata")(billingGroupMetadata.asInstanceOf[js.Any])
+    if (billingGroupName != null) __obj.updateDynamic("billingGroupName")(billingGroupName.asInstanceOf[js.Any])
+    if (billingGroupProperties != null) __obj.updateDynamic("billingGroupProperties")(billingGroupProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeBillingGroupResponse]
   }
-  @scala.inline
-  implicit class DescribeBillingGroupResponseOps[Self <: DescribeBillingGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBillingGroupArn(value: BillingGroupArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingGroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBillingGroupId(value: BillingGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBillingGroupMetadata(value: BillingGroupMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingGroupMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBillingGroupName(value: BillingGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBillingGroupProperties(value: BillingGroupProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingGroupProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

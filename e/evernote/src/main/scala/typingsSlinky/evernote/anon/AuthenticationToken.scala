@@ -8,153 +8,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AuthenticationToken extends js.Object {
-  var authenticationToken: js.UndefOr[String] = js.native
-  var currentTime: js.UndefOr[Timestamp] = js.native
-  var expiration: js.UndefOr[Timestamp] = js.native
-  var noteStoreUrl: js.UndefOr[String] = js.native
-  var publicUserInfo: js.UndefOr[PublicUserInfo] = js.native
-  var secondFactorDeliveryHint: js.UndefOr[String] = js.native
-  var secondFactorRequired: js.UndefOr[Boolean] = js.native
-  var urls: js.UndefOr[UserUrls] = js.native
-  var user: js.UndefOr[User] = js.native
-  var webApiUrlPrefix: js.UndefOr[String] = js.native
+  var authenticationToken: js.UndefOr[String] = js.undefined
+  var currentTime: js.UndefOr[Timestamp] = js.undefined
+  var expiration: js.UndefOr[Timestamp] = js.undefined
+  var noteStoreUrl: js.UndefOr[String] = js.undefined
+  var publicUserInfo: js.UndefOr[PublicUserInfo] = js.undefined
+  var secondFactorDeliveryHint: js.UndefOr[String] = js.undefined
+  var secondFactorRequired: js.UndefOr[Boolean] = js.undefined
+  var urls: js.UndefOr[UserUrls] = js.undefined
+  var user: js.UndefOr[User] = js.undefined
+  var webApiUrlPrefix: js.UndefOr[String] = js.undefined
 }
 
 object AuthenticationToken {
   @scala.inline
-  def apply(): AuthenticationToken = {
+  def apply(
+    authenticationToken: String = null,
+    currentTime: js.UndefOr[Timestamp] = js.undefined,
+    expiration: js.UndefOr[Timestamp] = js.undefined,
+    noteStoreUrl: String = null,
+    publicUserInfo: PublicUserInfo = null,
+    secondFactorDeliveryHint: String = null,
+    secondFactorRequired: js.UndefOr[Boolean] = js.undefined,
+    urls: UserUrls = null,
+    user: User = null,
+    webApiUrlPrefix: String = null
+  ): AuthenticationToken = {
     val __obj = js.Dynamic.literal()
+    if (authenticationToken != null) __obj.updateDynamic("authenticationToken")(authenticationToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(currentTime)) __obj.updateDynamic("currentTime")(currentTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expiration)) __obj.updateDynamic("expiration")(expiration.get.asInstanceOf[js.Any])
+    if (noteStoreUrl != null) __obj.updateDynamic("noteStoreUrl")(noteStoreUrl.asInstanceOf[js.Any])
+    if (publicUserInfo != null) __obj.updateDynamic("publicUserInfo")(publicUserInfo.asInstanceOf[js.Any])
+    if (secondFactorDeliveryHint != null) __obj.updateDynamic("secondFactorDeliveryHint")(secondFactorDeliveryHint.asInstanceOf[js.Any])
+    if (!js.isUndefined(secondFactorRequired)) __obj.updateDynamic("secondFactorRequired")(secondFactorRequired.get.asInstanceOf[js.Any])
+    if (urls != null) __obj.updateDynamic("urls")(urls.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
+    if (webApiUrlPrefix != null) __obj.updateDynamic("webApiUrlPrefix")(webApiUrlPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthenticationToken]
   }
-  @scala.inline
-  implicit class AuthenticationTokenOps[Self <: AuthenticationToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiration(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoteStoreUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteStoreUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoteStoreUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteStoreUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicUserInfo(value: PublicUserInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicUserInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicUserInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicUserInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondFactorDeliveryHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondFactorDeliveryHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondFactorDeliveryHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondFactorDeliveryHint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondFactorRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondFactorRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondFactorRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondFactorRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrls(value: UserUrls): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: User): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebApiUrlPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webApiUrlPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebApiUrlPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webApiUrlPrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

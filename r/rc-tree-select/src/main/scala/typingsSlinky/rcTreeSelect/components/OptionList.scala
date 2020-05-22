@@ -26,7 +26,7 @@ object OptionList {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any]] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
     @scala.inline
@@ -35,6 +35,8 @@ object OptionList {
     def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
     def notFoundContent(value: TagMod[Any]): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: OptionListProps[js.Array[DataNode]] with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

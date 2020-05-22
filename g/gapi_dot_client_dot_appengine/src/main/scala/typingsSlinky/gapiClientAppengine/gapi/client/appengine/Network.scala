@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Network extends js.Object {
   /**
     * List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable for App Engine flexible environment
     * versions.
     */
-  var forwardedPorts: js.UndefOr[js.Array[String]] = js.native
+  var forwardedPorts: js.UndefOr[js.Array[String]] = js.undefined
   /** Tag to apply to the VM instance during creation. Only applicable for for App Engine flexible environment versions. */
-  var instanceTag: js.UndefOr[String] = js.native
+  var instanceTag: js.UndefOr[String] = js.undefined
   /** Google Compute Engine network where the virtual machines are created. Specify the short name, not the resource path.Defaults to default. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.If a subnetwork name is
     * specified, a network name will also be required unless it is for the default network.
@@ -25,70 +24,23 @@ trait Network extends js.Object {
     * created from the IPCidrRange of the subnetwork.If specified, the subnetwork must exist in the same region as the App Engine flexible environment
     * application.
     */
-  var subnetworkName: js.UndefOr[String] = js.native
+  var subnetworkName: js.UndefOr[String] = js.undefined
 }
 
 object Network {
   @scala.inline
-  def apply(): Network = {
+  def apply(
+    forwardedPorts: js.Array[String] = null,
+    instanceTag: String = null,
+    name: String = null,
+    subnetworkName: String = null
+  ): Network = {
     val __obj = js.Dynamic.literal()
+    if (forwardedPorts != null) __obj.updateDynamic("forwardedPorts")(forwardedPorts.asInstanceOf[js.Any])
+    if (instanceTag != null) __obj.updateDynamic("instanceTag")(instanceTag.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (subnetworkName != null) __obj.updateDynamic("subnetworkName")(subnetworkName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Network]
   }
-  @scala.inline
-  implicit class NetworkOps[Self <: Network] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForwardedPorts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedPorts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForwardedPorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedPorts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetworkName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworkName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetworkName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworkName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,12 @@ trait EventType_ extends js.Object {
 
 object EventType_ {
   @scala.inline
-  def apply(): EventType_ = {
+  def apply(category: eventTypeCategory = null, code: eventTypeCode = null, service: service = null): EventType_ = {
     val __obj = js.Dynamic.literal()
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventType_]
   }
-  @scala.inline
-  implicit class EventType_Ops[Self <: EventType_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: eventTypeCategory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCode(value: eventTypeCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: service): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

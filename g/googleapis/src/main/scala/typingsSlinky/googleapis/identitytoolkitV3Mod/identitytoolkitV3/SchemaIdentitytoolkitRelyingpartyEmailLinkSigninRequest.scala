@@ -25,53 +25,12 @@ trait SchemaIdentitytoolkitRelyingpartyEmailLinkSigninRequest extends js.Object 
 
 object SchemaIdentitytoolkitRelyingpartyEmailLinkSigninRequest {
   @scala.inline
-  def apply(): SchemaIdentitytoolkitRelyingpartyEmailLinkSigninRequest = {
+  def apply(email: String = null, idToken: String = null, oobCode: String = null): SchemaIdentitytoolkitRelyingpartyEmailLinkSigninRequest = {
     val __obj = js.Dynamic.literal()
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (idToken != null) __obj.updateDynamic("idToken")(idToken.asInstanceOf[js.Any])
+    if (oobCode != null) __obj.updateDynamic("oobCode")(oobCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIdentitytoolkitRelyingpartyEmailLinkSigninRequest]
   }
-  @scala.inline
-  implicit class SchemaIdentitytoolkitRelyingpartyEmailLinkSigninRequestOps[Self <: SchemaIdentitytoolkitRelyingpartyEmailLinkSigninRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOobCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oobCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOobCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oobCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

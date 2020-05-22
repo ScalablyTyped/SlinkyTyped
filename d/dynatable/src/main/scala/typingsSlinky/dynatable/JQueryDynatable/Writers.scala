@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Writers extends js.Object {
   /**
     * Function that returns the cell data to be written inside the cell
@@ -20,7 +19,7 @@ trait Writers extends js.Object {
     *    return record[this.id];
     * };
     */
-  var _attributeWriter: js.UndefOr[js.Function1[/* record */ js.Any, _]] = js.native
+  var _attributeWriter: js.UndefOr[js.Function1[/* record */ js.Any, _]] = js.undefined
   /**
     * Function that returns the HTML code that will be injected for the cell
     *
@@ -54,7 +53,7 @@ trait Writers extends js.Object {
     *     return td + '>' + html + '</td>';
     * };
     */
-  var _cellWriter: js.UndefOr[js.Function2[/* column */ Column, /* record */ js.Any, String]] = js.native
+  var _cellWriter: js.UndefOr[js.Function2[/* column */ Column, /* record */ js.Any, String]] = js.undefined
   /**
     * Function that write the data inside each row
     *
@@ -84,60 +83,21 @@ trait Writers extends js.Object {
       /* cellWriter */ js.Function, 
       String
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object Writers {
   @scala.inline
-  def apply(): Writers = {
+  def apply(
+    _attributeWriter: /* record */ js.Any => _ = null,
+    _cellWriter: (/* column */ Column, /* record */ js.Any) => String = null,
+    _rowWriter: (/* rowIndex */ Double, /* record */ js.Any, /* columns */ js.Array[Column], /* cellWriter */ js.Function) => String = null
+  ): Writers = {
     val __obj = js.Dynamic.literal()
+    if (_attributeWriter != null) __obj.updateDynamic("_attributeWriter")(js.Any.fromFunction1(_attributeWriter))
+    if (_cellWriter != null) __obj.updateDynamic("_cellWriter")(js.Any.fromFunction2(_cellWriter))
+    if (_rowWriter != null) __obj.updateDynamic("_rowWriter")(js.Any.fromFunction4(_rowWriter))
     __obj.asInstanceOf[Writers]
   }
-  @scala.inline
-  implicit class WritersOps[Self <: Writers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_attributeWriter(value: /* record */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_attributeWriter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def without_attributeWriter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_attributeWriter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_cellWriter(value: (/* column */ Column, /* record */ js.Any) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_cellWriter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def without_cellWriter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_cellWriter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_rowWriter(
-      value: (/* rowIndex */ Double, /* record */ js.Any, /* columns */ js.Array[Column], /* cellWriter */ js.Function) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_rowWriter")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def without_rowWriter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_rowWriter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

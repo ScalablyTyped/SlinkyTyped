@@ -9,28 +9,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StatesResource extends js.Object {
   /**
     * Clears (sets to empty) the data for the passed key if and only if the passed version matches the currently stored version. This method results in a
     * conflict error on version mismatch.
     */
-  def clear(request: Alt): Request[WriteResult] = js.native
+  def clear(request: Alt): Request[WriteResult]
   /**
     * Deletes a key and the data associated with it. The key is removed and no longer counts against the key quota. Note that since this method is not safe
     * in the face of concurrent modifications, it should only be used for development and testing purposes. Invoking this method in shipping code can result
     * in data loss and data corruption.
     */
-  def delete(request: Fields): Request[Unit] = js.native
+  def delete(request: Fields): Request[Unit]
   /** Retrieves the data corresponding to the passed key. If the key does not exist on the server, an HTTP 404 will be returned. */
-  def get(request: Fields): Request[GetResponse] = js.native
+  def get(request: Fields): Request[GetResponse]
   /** Lists all the states keys, and optionally the state data. */
-  def list(request: IncludeData): Request[ListResponse] = js.native
+  def list(request: IncludeData): Request[ListResponse]
   /**
     * Update the data associated with the input key if and only if the passed version matches the currently stored version. This method is safe in the face
     * of concurrent writes. Maximum per-key size is 128KB.
     */
-  def update(request: CurrentStateVersion): Request[WriteResult] = js.native
+  def update(request: CurrentStateVersion): Request[WriteResult]
 }
 
 object StatesResource {
@@ -45,43 +44,5 @@ object StatesResource {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction1(clear), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[StatesResource]
   }
-  @scala.inline
-  implicit class StatesResourceOps[Self <: StatesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClear(value: Alt => Request[WriteResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Fields => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Fields => Request[GetResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: IncludeData => Request[ListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: CurrentStateVersion => Request[WriteResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

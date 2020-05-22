@@ -65,4 +65,11 @@ package object mod {
   type ASTUndefined = typingsSlinky.terser.mod.ASTAtom
   type ASTVar = typingsSlinky.terser.mod.ASTDefinitions
   type ASTWhile = typingsSlinky.terser.mod.ASTDWLoop
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.terser.mod.ASTSymbolFunarg
+    - typingsSlinky.terser.mod.ASTDefaultAssign
+    - typingsSlinky.terser.mod.ASTDestructuring
+    - typingsSlinky.terser.mod.ASTExpansion
+  */
+  type ArgType = typingsSlinky.terser.mod._ArgType | typingsSlinky.terser.mod.ASTSymbolFunarg | typingsSlinky.terser.mod.ASTDefaultAssign
 }

@@ -5,75 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListViewClickEvent extends ListViewEvent {
-  var button: js.UndefOr[Button] = js.native
-  var dataItem: js.UndefOr[js.Any] = js.native
-  var item: js.UndefOr[JQuery] = js.native
-  var target: js.UndefOr[JQuery] = js.native
+  var button: js.UndefOr[Button] = js.undefined
+  var dataItem: js.UndefOr[js.Any] = js.undefined
+  var item: js.UndefOr[JQuery] = js.undefined
+  var target: js.UndefOr[JQuery] = js.undefined
 }
 
 object ListViewClickEvent {
   @scala.inline
-  def apply(isDefaultPrevented: () => Boolean, preventDefault: js.Function, sender: ListView): ListViewClickEvent = {
+  def apply(
+    isDefaultPrevented: () => Boolean,
+    preventDefault: js.Function,
+    sender: ListView,
+    button: Button = null,
+    dataItem: js.Any = null,
+    item: JQuery = null,
+    target: JQuery = null
+  ): ListViewClickEvent = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), preventDefault = preventDefault.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (dataItem != null) __obj.updateDynamic("dataItem")(dataItem.asInstanceOf[js.Any])
+    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListViewClickEvent]
   }
-  @scala.inline
-  implicit class ListViewClickEventOps[Self <: ListViewClickEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withButton(value: Button): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItem(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

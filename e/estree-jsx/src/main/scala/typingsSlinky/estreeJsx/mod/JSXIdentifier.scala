@@ -1,45 +1,37 @@
 package typingsSlinky.estreeJsx.mod
 
 import typingsSlinky.estree.mod.BaseNode
+import typingsSlinky.estree.mod.Comment
+import typingsSlinky.estree.mod.SourceLocation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JSXIdentifier
   extends BaseNode
-     with Node {
-  var name: String = js.native
+     with _Node {
+  var name: String
   @JSName("type")
-  var type_JSXIdentifier: typingsSlinky.estreeJsx.estreeJsxStrings.JSXIdentifier = js.native
+  var type_JSXIdentifier: typingsSlinky.estreeJsx.estreeJsxStrings.JSXIdentifier
 }
 
 object JSXIdentifier {
   @scala.inline
-  def apply(name: String, `type`: typingsSlinky.estreeJsx.estreeJsxStrings.JSXIdentifier): JSXIdentifier = {
+  def apply(
+    name: String,
+    `type`: typingsSlinky.estreeJsx.estreeJsxStrings.JSXIdentifier,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): JSXIdentifier = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSXIdentifier]
   }
-  @scala.inline
-  implicit class JSXIdentifierOps[Self <: JSXIdentifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.estreeJsx.estreeJsxStrings.JSXIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

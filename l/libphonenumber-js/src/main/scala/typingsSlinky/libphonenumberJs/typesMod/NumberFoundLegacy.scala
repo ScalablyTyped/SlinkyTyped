@@ -4,64 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NumberFoundLegacy extends js.Object {
-  var country: CountryCode = js.native
-  var endsAt: Double = js.native
-  var ext: js.UndefOr[Extension] = js.native
-  var phone: NationalNumber = js.native
-  var startsAt: Double = js.native
+  var country: CountryCode
+  var endsAt: Double
+  var ext: js.UndefOr[Extension] = js.undefined
+  var phone: NationalNumber
+  var startsAt: Double
 }
 
 object NumberFoundLegacy {
   @scala.inline
-  def apply(country: CountryCode, endsAt: Double, phone: NationalNumber, startsAt: Double): NumberFoundLegacy = {
+  def apply(
+    country: CountryCode,
+    endsAt: Double,
+    phone: NationalNumber,
+    startsAt: Double,
+    ext: Extension = null
+  ): NumberFoundLegacy = {
     val __obj = js.Dynamic.literal(country = country.asInstanceOf[js.Any], endsAt = endsAt.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], startsAt = startsAt.asInstanceOf[js.Any])
+    if (ext != null) __obj.updateDynamic("ext")(ext.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberFoundLegacy]
   }
-  @scala.inline
-  implicit class NumberFoundLegacyOps[Self <: NumberFoundLegacy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountry(value: CountryCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndsAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endsAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhone(value: NationalNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartsAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startsAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExt(value: Extension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

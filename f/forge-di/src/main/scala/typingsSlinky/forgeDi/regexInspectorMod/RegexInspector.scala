@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RegexInspector extends Inspector {
-  var getParameterNames: js.Any = js.native
+  var getParameterNames: js.Any
 }
 
 object RegexInspector {
@@ -22,19 +21,5 @@ object RegexInspector {
     val __obj = js.Dynamic.literal(findConstructor = js.Any.fromFunction1(findConstructor), getDependencies = js.Any.fromFunction1(getDependencies), getParameterNames = getParameterNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegexInspector]
   }
-  @scala.inline
-  implicit class RegexInspectorOps[Self <: RegexInspector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetParameterNames(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getParameterNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.mail.XMailMessage
   * @since OOo 2.0
   */
-@js.native
 trait XSmtpService extends XMailService {
   /**
     * Send a mail message to its recipients.
@@ -28,7 +27,7 @@ trait XSmtpService extends XMailService {
     * @throws com::sun::star::mail::MailException is thrown on other errors that may happen during sending. A possible reason may be for instance that a file a
     * @throws com::sun::star::datatransfer::UnsupportedFlavorException is thrown when the body of the mail message is provided in an unsupported mime content t
     */
-  def sendMailMessage(xMailMessage: XMailMessage): Unit = js.native
+  def sendMailMessage(xMailMessage: XMailMessage): Unit
 }
 
 object XSmtpService {
@@ -51,19 +50,5 @@ object XSmtpService {
     val __obj = js.Dynamic.literal(CurrentConnectionContext = CurrentConnectionContext.asInstanceOf[js.Any], SupportedConnectionTypes = SupportedConnectionTypes.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addConnectionListener = js.Any.fromFunction1(addConnectionListener), connect = js.Any.fromFunction2(connect), disconnect = js.Any.fromFunction0(disconnect), getCurrentConnectionContext = js.Any.fromFunction0(getCurrentConnectionContext), getSupportedConnectionTypes = js.Any.fromFunction0(getSupportedConnectionTypes), isConnected = js.Any.fromFunction0(isConnected), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeConnectionListener = js.Any.fromFunction1(removeConnectionListener), sendMailMessage = js.Any.fromFunction1(sendMailMessage))
     __obj.asInstanceOf[XSmtpService]
   }
-  @scala.inline
-  implicit class XSmtpServiceOps[Self <: XSmtpService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSendMailMessage(value: XMailMessage => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMailMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

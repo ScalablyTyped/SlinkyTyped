@@ -13,5 +13,8 @@ import scala.scalajs.js.annotation._
 class Layer ()
   extends typingsSlinky.bingmaps.Microsoft.Maps.Layer {
   def this(id: String) = this()
+  /** Clears all data in the layer. */
+  /* CompleteClass */
+  override def clear(): Unit = js.native
 }
 

@@ -59,125 +59,28 @@ trait SchemaAndroidRoboTest extends js.Object {
 
 object SchemaAndroidRoboTest {
   @scala.inline
-  def apply(): SchemaAndroidRoboTest = {
+  def apply(
+    appApk: SchemaFileReference = null,
+    appBundle: SchemaAppBundle = null,
+    appInitialActivity: String = null,
+    appPackageId: String = null,
+    maxDepth: js.UndefOr[Double] = js.undefined,
+    maxSteps: js.UndefOr[Double] = js.undefined,
+    roboDirectives: js.Array[SchemaRoboDirective] = null,
+    roboScript: SchemaFileReference = null,
+    startingIntents: js.Array[SchemaRoboStartingIntent] = null
+  ): SchemaAndroidRoboTest = {
     val __obj = js.Dynamic.literal()
+    if (appApk != null) __obj.updateDynamic("appApk")(appApk.asInstanceOf[js.Any])
+    if (appBundle != null) __obj.updateDynamic("appBundle")(appBundle.asInstanceOf[js.Any])
+    if (appInitialActivity != null) __obj.updateDynamic("appInitialActivity")(appInitialActivity.asInstanceOf[js.Any])
+    if (appPackageId != null) __obj.updateDynamic("appPackageId")(appPackageId.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDepth)) __obj.updateDynamic("maxDepth")(maxDepth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSteps)) __obj.updateDynamic("maxSteps")(maxSteps.get.asInstanceOf[js.Any])
+    if (roboDirectives != null) __obj.updateDynamic("roboDirectives")(roboDirectives.asInstanceOf[js.Any])
+    if (roboScript != null) __obj.updateDynamic("roboScript")(roboScript.asInstanceOf[js.Any])
+    if (startingIntents != null) __obj.updateDynamic("startingIntents")(startingIntents.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidRoboTest]
   }
-  @scala.inline
-  implicit class SchemaAndroidRoboTestOps[Self <: SchemaAndroidRoboTest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppApk(value: SchemaFileReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appApk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppApk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appApk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppBundle(value: SchemaAppBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBundle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppBundle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBundle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppInitialActivity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appInitialActivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppInitialActivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appInitialActivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppPackageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appPackageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppPackageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appPackageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSteps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSteps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoboDirectives(value: js.Array[SchemaRoboDirective]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roboDirectives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoboDirectives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roboDirectives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoboScript(value: SchemaFileReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roboScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoboScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roboScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartingIntents(value: js.Array[SchemaRoboStartingIntent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startingIntents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartingIntents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startingIntents")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,134 +10,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetFolderOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */
   @JSName("$metadata")
-  var $metadata: ResponseMetadata = js.native
+  var $metadata: ResponseMetadata
   /**
     * <p>The full commit ID used as a reference for which version of the folder content is returned.</p>
     */
-  var commitId: String = js.native
+  var commitId: String
   /**
     * <p>The list of files that exist in the specified folder, if any.</p>
     */
-  var files: js.UndefOr[js.Array[UnmarshalledFile]] = js.native
+  var files: js.UndefOr[js.Array[UnmarshalledFile]] = js.undefined
   /**
     * <p>The fully-qualified path of the folder whose contents are returned.</p>
     */
-  var folderPath: String = js.native
+  var folderPath: String
   /**
     * <p>The list of folders that exist beneath the specified folder, if any.</p>
     */
-  var subFolders: js.UndefOr[js.Array[UnmarshalledFolder]] = js.native
+  var subFolders: js.UndefOr[js.Array[UnmarshalledFolder]] = js.undefined
   /**
     * <p>The list of submodules that exist in the specified folder, if any.</p>
     */
-  var subModules: js.UndefOr[js.Array[UnmarshalledSubModule]] = js.native
+  var subModules: js.UndefOr[js.Array[UnmarshalledSubModule]] = js.undefined
   /**
     * <p>The list of symbolic links to other files and folders that exist in the specified folder, if any.</p>
     */
-  var symbolicLinks: js.UndefOr[js.Array[UnmarshalledSymbolicLink]] = js.native
+  var symbolicLinks: js.UndefOr[js.Array[UnmarshalledSymbolicLink]] = js.undefined
   /**
     * <p>The full SHA-1 pointer of the tree information for the commit that contains the folder.</p>
     */
-  var treeId: js.UndefOr[String] = js.native
+  var treeId: js.UndefOr[String] = js.undefined
 }
 
 object GetFolderOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata, commitId: String, folderPath: String): GetFolderOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    commitId: String,
+    folderPath: String,
+    files: js.Array[UnmarshalledFile] = null,
+    subFolders: js.Array[UnmarshalledFolder] = null,
+    subModules: js.Array[UnmarshalledSubModule] = null,
+    symbolicLinks: js.Array[UnmarshalledSymbolicLink] = null,
+    treeId: String = null
+  ): GetFolderOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], commitId = commitId.asInstanceOf[js.Any], folderPath = folderPath.asInstanceOf[js.Any])
+    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
+    if (subFolders != null) __obj.updateDynamic("subFolders")(subFolders.asInstanceOf[js.Any])
+    if (subModules != null) __obj.updateDynamic("subModules")(subModules.asInstanceOf[js.Any])
+    if (symbolicLinks != null) __obj.updateDynamic("symbolicLinks")(symbolicLinks.asInstanceOf[js.Any])
+    if (treeId != null) __obj.updateDynamic("treeId")(treeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFolderOutput]
   }
-  @scala.inline
-  implicit class GetFolderOutputOps[Self <: GetFolderOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$metadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommitId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFolderPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFiles(value: js.Array[UnmarshalledFile]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubFolders(value: js.Array[UnmarshalledFolder]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subFolders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubFolders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subFolders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubModules(value: js.Array[UnmarshalledSubModule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subModules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subModules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolicLinks(value: js.Array[UnmarshalledSymbolicLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolicLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolicLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolicLinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

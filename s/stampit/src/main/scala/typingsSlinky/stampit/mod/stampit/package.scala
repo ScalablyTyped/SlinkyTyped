@@ -5,6 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object stampit {
+  /** A composable object (either a `Stamp` or a `ExtendedDescriptor`.) */
+  type Composable = typingsSlinky.stampit.mod.StampSignature | (typingsSlinky.stampit.mod.stampit.ExtendedDescriptor[js.Any, js.Any])
   /**
     * A function used as `.composers` argument.
     * @template S̤t̤a̤m̤p̤ The type of the `Stamp` produced by the `.compose()` method.

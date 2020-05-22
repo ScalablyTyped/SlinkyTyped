@@ -11,20 +11,19 @@ import scala.scalajs.js.annotation._
   * provides a framework for implementing a wizard dialog.
   * @since OOo 3.3
   */
-@js.native
 trait Wizard extends XWizard {
   /**
     * creates a wizard with a multiple possible execution paths
     * @param PageIds the IDs of the pages which constitute the execution paths. IDs in each path must be in ascending order.
     * @param Controller the wizard controller.
     */
-  def createMultiplePathsWizard(PageIds: SeqEquiv[SeqEquiv[Double]], Controller: XWizardController): Unit = js.native
+  def createMultiplePathsWizard(PageIds: SeqEquiv[SeqEquiv[Double]], Controller: XWizardController): Unit
   /**
     * creates a wizard with a single execution path
     * @param PageIds the IDs of the pages which constitute the execution path. IDs must be in ascending order.
     * @param Controller the wizard controller.
     */
-  def createSinglePathWizard(PageIds: SeqEquiv[Double], Controller: XWizardController): Unit = js.native
+  def createSinglePathWizard(PageIds: SeqEquiv[Double], Controller: XWizardController): Unit
 }
 
 object Wizard {
@@ -54,25 +53,5 @@ object Wizard {
     val __obj = js.Dynamic.literal(CurrentPage = CurrentPage.asInstanceOf[js.Any], DialogWindow = DialogWindow.asInstanceOf[js.Any], HelpURL = HelpURL.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), activatePath = js.Any.fromFunction2(activatePath), advanceTo = js.Any.fromFunction1(advanceTo), createMultiplePathsWizard = js.Any.fromFunction2(createMultiplePathsWizard), createSinglePathWizard = js.Any.fromFunction2(createSinglePathWizard), enableButton = js.Any.fromFunction2(enableButton), enablePage = js.Any.fromFunction2(enablePage), execute = js.Any.fromFunction0(execute), getCurrentPage = js.Any.fromFunction0(getCurrentPage), goBackTo = js.Any.fromFunction1(goBackTo), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setDefaultButton = js.Any.fromFunction1(setDefaultButton), setTitle = js.Any.fromFunction1(setTitle), travelNext = js.Any.fromFunction0(travelNext), travelPrevious = js.Any.fromFunction0(travelPrevious), updateTravelUI = js.Any.fromFunction0(updateTravelUI))
     __obj.asInstanceOf[Wizard]
   }
-  @scala.inline
-  implicit class WizardOps[Self <: Wizard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateMultiplePathsWizard(value: (SeqEquiv[SeqEquiv[Double]], XWizardController) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createMultiplePathsWizard")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateSinglePathWizard(value: (SeqEquiv[Double], XWizardController) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSinglePathWizard")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

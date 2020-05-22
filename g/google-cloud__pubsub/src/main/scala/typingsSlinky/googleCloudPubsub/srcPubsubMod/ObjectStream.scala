@@ -55,10 +55,10 @@ trait ObjectStream[O] extends js.Object {
   def _final(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _flush(callback: TransformCallback): Unit = js.native
   def _read(size: Double): Unit = js.native
-  def _transform(chunk: js.Any, encoding: String, callback: TransformCallback): Unit = js.native
+  def _transform(chunk: js.Any, encoding: BufferEncoding, callback: TransformCallback): Unit = js.native
   def _write(
     chunk: js.Any,
-    encoding: String,
+    encoding: BufferEncoding,
     callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
   ): Unit = js.native
   def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
@@ -130,14 +130,14 @@ trait ObjectStream[O] extends js.Object {
   def end(cb: js.Function0[Unit]): Unit = js.native
   def end(chunk: js.Any): Unit = js.native
   def end(chunk: js.Any, cb: js.Function0[Unit]): Unit = js.native
-  def end(chunk: js.Any, encoding: String): Unit = js.native
-  def end(chunk: js.Any, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   def end(data: String): Unit = js.native
   def end(data: String, cb: js.Function0[Unit]): Unit = js.native
   def end(data: js.typedarray.Uint8Array): Unit = js.native
   def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: String, encoding: String): Unit = js.native
-  def end(str: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(str: String, encoding: BufferEncoding): Unit = js.native
+  def end(str: String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   def eventNames(): js.Array[String | js.Symbol] = js.native
   def getMaxListeners(): Double = js.native
   def isPaused(): Boolean = js.native
@@ -255,7 +255,7 @@ trait ObjectStream[O] extends js.Object {
   @JSName("prependOnceListener")
   def prependOnceListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def push(chunk: js.Any): Boolean = js.native
-  def push(chunk: js.Any, encoding: String): Boolean = js.native
+  def push(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
   def rawListeners(event: String): js.Array[js.Function] = js.native
   def rawListeners(event: js.Symbol): js.Array[js.Function] = js.native
   def read(): js.Any = js.native
@@ -292,8 +292,8 @@ trait ObjectStream[O] extends js.Object {
   @JSName("removeListener")
   def removeListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def resume(): this.type = js.native
-  def setDefaultEncoding(encoding: String): this.type = js.native
-  def setEncoding(encoding: String): this.type = js.native
+  def setDefaultEncoding(encoding: BufferEncoding): this.type = js.native
+  def setEncoding(encoding: BufferEncoding): this.type = js.native
   def setMaxListeners(n: Double): this.type = js.native
   def uncork(): Unit = js.native
   def unpipe(): this.type = js.native
@@ -311,9 +311,17 @@ trait ObjectStream[O] extends js.Object {
   def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(chunk: js.Any): Boolean = js.native
   def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
-  def write(chunk: js.Any, encoding: String): Boolean = js.native
-  def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
-  def write(str: String, encoding: String): Boolean = js.native
-  def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
+  def write(
+    chunk: js.Any,
+    encoding: BufferEncoding,
+    cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
+  ): Boolean = js.native
+  def write(str: String, encoding: BufferEncoding): Boolean = js.native
+  def write(
+    str: String,
+    encoding: BufferEncoding,
+    cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
+  ): Boolean = js.native
 }
 

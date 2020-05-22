@@ -7,25 +7,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides properties and methods to manage one or more InkRecognizer objects used for handwriting recognition. */
-@js.native
 trait InkRecognizerContainer extends js.Object {
   /**
     * Gets the collection of installed handwriting recognizers.
     * @return The installed handwriting recognizers as a collection of InkRecognizer objects.
     */
-  def getRecognizers(): IVectorView[InkRecognizer] = js.native
+  def getRecognizers(): IVectorView[InkRecognizer]
   /**
     * Performs handwriting recognition on one or more InkStroke objects.
     * @param strokeCollection The set of strokes on which recognition is performed.
     * @param recognitionTarget One of the values from the InkRecognitionTarget enumeration.
     * @return The results of the recognition as a collection of InkRecognitionResult objects.
     */
-  def recognizeAsync(strokeCollection: InkStrokeContainer, recognitionTarget: InkRecognitionTarget): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
+  def recognizeAsync(strokeCollection: InkStrokeContainer, recognitionTarget: InkRecognitionTarget): IPromiseWithIAsyncOperation[IVectorView[_]]
   /**
     * Sets the default InkRecognizer used for handwriting recognition.
     * @param recognizer The InkRecognizer .
     */
-  def setDefaultRecognizer(recognizer: InkRecognizer): Unit = js.native
+  def setDefaultRecognizer(recognizer: InkRecognizer): Unit
 }
 
 object InkRecognizerContainer {
@@ -38,31 +37,5 @@ object InkRecognizerContainer {
     val __obj = js.Dynamic.literal(getRecognizers = js.Any.fromFunction0(getRecognizers), recognizeAsync = js.Any.fromFunction2(recognizeAsync), setDefaultRecognizer = js.Any.fromFunction1(setDefaultRecognizer))
     __obj.asInstanceOf[InkRecognizerContainer]
   }
-  @scala.inline
-  implicit class InkRecognizerContainerOps[Self <: InkRecognizerContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetRecognizers(value: () => IVectorView[InkRecognizer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRecognizers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRecognizeAsync(value: (InkStrokeContainer, InkRecognitionTarget) => IPromiseWithIAsyncOperation[IVectorView[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recognizeAsync")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetDefaultRecognizer(value: InkRecognizer => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultRecognizer")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

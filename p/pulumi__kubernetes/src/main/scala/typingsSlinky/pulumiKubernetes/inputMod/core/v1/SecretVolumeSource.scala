@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * the keys in the Data field as the file names. Secret volumes support ownership management and
   * SELinux relabeling.
   */
-@js.native
 trait SecretVolumeSource extends js.Object {
   /**
     * Optional: mode bits to use on created files by default. Must be a value between 0 and 0777.
@@ -20,7 +19,7 @@ trait SecretVolumeSource extends js.Object {
     * be in conflict with other options that affect the file mode, like fsGroup, and the result
     * can be other mode bits set.
     */
-  var defaultMode: js.UndefOr[Input[Double]] = js.native
+  var defaultMode: js.UndefOr[Input[Double]] = js.undefined
   /**
     * If unspecified, each key-value pair in the Data field of the referenced Secret will be
     * projected into the volume as a file whose name is the key and content is the value. If
@@ -29,79 +28,32 @@ trait SecretVolumeSource extends js.Object {
     * setup will error unless it is marked optional. Paths must be relative and may not contain
     * the '..' path or start with '..'.
     */
-  var items: js.UndefOr[Input[js.Array[Input[KeyToPath]]]] = js.native
+  var items: js.UndefOr[Input[js.Array[Input[KeyToPath]]]] = js.undefined
   /**
     * Specify whether the Secret or its keys must be defined
     */
-  var optional: js.UndefOr[Input[Boolean]] = js.native
+  var optional: js.UndefOr[Input[Boolean]] = js.undefined
   /**
     * Name of the secret in the pod's namespace to use. More info:
     * https://kubernetes.io/docs/concepts/storage/volumes#secret
     */
-  var secretName: js.UndefOr[Input[String]] = js.native
+  var secretName: js.UndefOr[Input[String]] = js.undefined
 }
 
 object SecretVolumeSource {
   @scala.inline
-  def apply(): SecretVolumeSource = {
+  def apply(
+    defaultMode: Input[Double] = null,
+    items: Input[js.Array[Input[KeyToPath]]] = null,
+    optional: Input[Boolean] = null,
+    secretName: Input[String] = null
+  ): SecretVolumeSource = {
     val __obj = js.Dynamic.literal()
+    if (defaultMode != null) __obj.updateDynamic("defaultMode")(defaultMode.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (optional != null) __obj.updateDynamic("optional")(optional.asInstanceOf[js.Any])
+    if (secretName != null) __obj.updateDynamic("secretName")(secretName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecretVolumeSource]
   }
-  @scala.inline
-  implicit class SecretVolumeSourceOps[Self <: SecretVolumeSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultMode(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: Input[js.Array[Input[KeyToPath]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptional(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecretName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecretName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

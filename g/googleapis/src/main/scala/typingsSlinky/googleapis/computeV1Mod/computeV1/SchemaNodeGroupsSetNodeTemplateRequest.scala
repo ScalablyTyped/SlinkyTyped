@@ -15,29 +15,10 @@ trait SchemaNodeGroupsSetNodeTemplateRequest extends js.Object {
 
 object SchemaNodeGroupsSetNodeTemplateRequest {
   @scala.inline
-  def apply(): SchemaNodeGroupsSetNodeTemplateRequest = {
+  def apply(nodeTemplate: String = null): SchemaNodeGroupsSetNodeTemplateRequest = {
     val __obj = js.Dynamic.literal()
+    if (nodeTemplate != null) __obj.updateDynamic("nodeTemplate")(nodeTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNodeGroupsSetNodeTemplateRequest]
   }
-  @scala.inline
-  implicit class SchemaNodeGroupsSetNodeTemplateRequestOps[Self <: SchemaNodeGroupsSetNodeTemplateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodeTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

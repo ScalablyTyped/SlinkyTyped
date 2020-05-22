@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type Filter[T] = js.RegExp | typingsSlinky.hoxy.mod.TesterFunction[T] | T
   type InterceptionHandler = js.ThisFunction3[
     /* this */ typingsSlinky.hoxy.mod.Proxy, 
     /* req */ typingsSlinky.hoxy.mod.Request, 

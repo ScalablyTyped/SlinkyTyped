@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PathSpec extends js.Object {
-  var cwd: js.UndefOr[String] = js.native
-  var extensions: js.UndefOr[String | js.Array[String] | (StringDictionary[String | Null])] = js.native
-  var findUp: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var path: js.UndefOr[String] = js.native
+  var cwd: js.UndefOr[String] = js.undefined
+  var extensions: js.UndefOr[String | js.Array[String] | (StringDictionary[String | Null])] = js.undefined
+  var findUp: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
 }
 
 object PathSpec {
   @scala.inline
-  def apply(): PathSpec = {
+  def apply(
+    cwd: String = null,
+    extensions: String | js.Array[String] | (StringDictionary[String | Null]) = null,
+    findUp: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    path: String = null
+  ): PathSpec = {
     val __obj = js.Dynamic.literal()
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(findUp)) __obj.updateDynamic("findUp")(findUp.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[PathSpec]
   }
-  @scala.inline
-  implicit class PathSpecOps[Self <: PathSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCwd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: String | js.Array[String] | (StringDictionary[String | Null])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFindUp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

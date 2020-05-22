@@ -13,23 +13,22 @@ import scala.scalajs.js.annotation._
   *
   * The type class of this type is TypeClass_INTERFACE_ATTRIBUTE.
   */
-@js.native
 trait XInterfaceAttributeTypeDescription extends XInterfaceMemberTypeDescription {
   /**
     * Returns the type of the attribute.
     * @returns type of attribute
     */
-  val Type: XTypeDescription = js.native
+  val Type: XTypeDescription
   /**
     * Returns the type of the attribute.
     * @returns type of attribute
     */
-  def getType(): XTypeDescription = js.native
+  def getType(): XTypeDescription
   /**
     * Returns true, if this attribute is read-only.
     * @returns true, if attribute is read-only
     */
-  def isReadOnly(): Boolean = js.native
+  def isReadOnly(): Boolean
 }
 
 object XInterfaceAttributeTypeDescription {
@@ -53,31 +52,5 @@ object XInterfaceAttributeTypeDescription {
     val __obj = js.Dynamic.literal(MemberName = MemberName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], TypeClass = TypeClass.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getMemberName = js.Any.fromFunction0(getMemberName), getName = js.Any.fromFunction0(getName), getPosition = js.Any.fromFunction0(getPosition), getType = js.Any.fromFunction0(getType), getTypeClass = js.Any.fromFunction0(getTypeClass), isReadOnly = js.Any.fromFunction0(isReadOnly), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XInterfaceAttributeTypeDescription]
   }
-  @scala.inline
-  implicit class XInterfaceAttributeTypeDescriptionOps[Self <: XInterfaceAttributeTypeDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: XTypeDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetType(value: () => XTypeDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsReadOnly(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadOnly")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

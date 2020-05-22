@@ -826,6 +826,15 @@ trait Cypress extends js.Object {
     */
   def moment(inp: MomentInput, format: MomentFormatSpecification, strict: Boolean): Moment = js.native
   /**
+    * Cypress automatically includes moment.js and exposes it as Cypress.moment.
+    *
+    * @see https://on.cypress.io/moment
+    * @see http://momentjs.com/
+    * @example
+    *    const todaysDate = Cypress.moment().format("MMM DD, YYYY")
+    */
+  def moment(inp: MomentInput, strict: Boolean): Moment = js.native
+  /**
     * Fires when an uncaught exception occurs in your application.
     * Cypress will fail the test when this fires.
     * Return `false` from this event and Cypress will not fail the test. Also useful for debugging purposes because the actual `error` instance is provided to you.

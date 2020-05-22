@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteProjectAdministrators extends js.Object {
-  var userId: Double = js.native
+  var userId: Double
 }
 
 object DeleteProjectAdministrators {
@@ -15,19 +14,5 @@ object DeleteProjectAdministrators {
     val __obj = js.Dynamic.literal(userId = userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteProjectAdministrators]
   }
-  @scala.inline
-  implicit class DeleteProjectAdministratorsOps[Self <: DeleteProjectAdministrators] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

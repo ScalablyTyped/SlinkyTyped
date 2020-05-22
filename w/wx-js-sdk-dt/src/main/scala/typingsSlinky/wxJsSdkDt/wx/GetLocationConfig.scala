@@ -4,47 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetLocationConfig extends WxBaseRequestConfig {
   /**
     * 默认为 wgs84 的 gps 坐标，如果要返回直接给 openLocation 用的火星坐标，可传入'gcj02'
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   @JSName("success")
-  def success_MGetLocationConfig(res: Location): Unit = js.native
+  def success_MGetLocationConfig(res: Location): Unit
 }
 
 object GetLocationConfig {
   @scala.inline
-  def apply(success: Location => Unit): GetLocationConfig = {
+  def apply(
+    success: Location => Unit,
+    cancel: () => Unit = null,
+    complete: /* res */ js.UndefOr[js.Any] => Unit = null,
+    fail: /* error */ js.UndefOr[js.Any] => Unit = null,
+    `type`: String = null
+  ): GetLocationConfig = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
+    if (cancel != null) __obj.updateDynamic("cancel")(js.Any.fromFunction0(cancel))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLocationConfig]
   }
-  @scala.inline
-  implicit class GetLocationConfigOps[Self <: GetLocationConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccess(value: Location => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,75 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Calendars extends js.Object {
-  var calendar: js.UndefOr[_empty] = js.native
-  var calendars: js.UndefOr[`0`] = js.native
-  var name: js.UndefOr[String] = js.native
-  var numberFormat: js.UndefOr[Currency] = js.native
+  var calendar: js.UndefOr[_empty] = js.undefined
+  var calendars: js.UndefOr[`0`] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var numberFormat: js.UndefOr[Currency] = js.undefined
 }
 
 object Calendars {
   @scala.inline
-  def apply(): Calendars = {
+  def apply(calendar: _empty = null, calendars: `0` = null, name: String = null, numberFormat: Currency = null): Calendars = {
     val __obj = js.Dynamic.literal()
+    if (calendar != null) __obj.updateDynamic("calendar")(calendar.asInstanceOf[js.Any])
+    if (calendars != null) __obj.updateDynamic("calendars")(calendars.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (numberFormat != null) __obj.updateDynamic("numberFormat")(numberFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[Calendars]
   }
-  @scala.inline
-  implicit class CalendarsOps[Self <: Calendars] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalendar(value: _empty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendars(value: `0`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

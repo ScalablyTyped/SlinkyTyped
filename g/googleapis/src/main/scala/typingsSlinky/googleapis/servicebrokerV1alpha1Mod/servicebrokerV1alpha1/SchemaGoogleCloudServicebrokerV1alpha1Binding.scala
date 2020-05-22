@@ -43,89 +43,22 @@ trait SchemaGoogleCloudServicebrokerV1alpha1Binding extends js.Object {
 
 object SchemaGoogleCloudServicebrokerV1alpha1Binding {
   @scala.inline
-  def apply(): SchemaGoogleCloudServicebrokerV1alpha1Binding = {
+  def apply(
+    bind_resource: StringDictionary[js.Any] = null,
+    binding_id: String = null,
+    createTime: String = null,
+    parameters: StringDictionary[js.Any] = null,
+    plan_id: String = null,
+    service_id: String = null
+  ): SchemaGoogleCloudServicebrokerV1alpha1Binding = {
     val __obj = js.Dynamic.literal()
+    if (bind_resource != null) __obj.updateDynamic("bind_resource")(bind_resource.asInstanceOf[js.Any])
+    if (binding_id != null) __obj.updateDynamic("binding_id")(binding_id.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (plan_id != null) __obj.updateDynamic("plan_id")(plan_id.asInstanceOf[js.Any])
+    if (service_id != null) __obj.updateDynamic("service_id")(service_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudServicebrokerV1alpha1Binding]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudServicebrokerV1alpha1BindingOps[Self <: SchemaGoogleCloudServicebrokerV1alpha1Binding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBind_resource(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bind_resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBind_resource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bind_resource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinding_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binding_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinding_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binding_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlan_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plan_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlan_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plan_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

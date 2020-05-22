@@ -39,7 +39,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents a view of a spreadsheet document. */
-@js.native
 trait SpreadsheetView
   extends XController
      with XDispatchProvider

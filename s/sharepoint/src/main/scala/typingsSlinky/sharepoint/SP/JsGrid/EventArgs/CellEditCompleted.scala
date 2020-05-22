@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellEditCompleted extends IEventArgs {
-  var bCancelled: Boolean = js.native
-  var changeKey: IChangeKey = js.native
-  var fieldKey: String = js.native
-  var recordKey: Double = js.native
+  var bCancelled: Boolean
+  var changeKey: IChangeKey
+  var fieldKey: String
+  var recordKey: Double
 }
 
 object CellEditCompleted {
@@ -20,37 +19,5 @@ object CellEditCompleted {
     val __obj = js.Dynamic.literal(bCancelled = bCancelled.asInstanceOf[js.Any], changeKey = changeKey.asInstanceOf[js.Any], fieldKey = fieldKey.asInstanceOf[js.Any], recordKey = recordKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellEditCompleted]
   }
-  @scala.inline
-  implicit class CellEditCompletedOps[Self <: CellEditCompleted] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBCancelled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bCancelled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangeKey(value: IChangeKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecordKey(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

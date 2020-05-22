@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.echarts.echartsStrings.right
   - typingsSlinky.echarts.echartsStrings.bottom
 */
-trait Str extends Type
+trait Str extends _Type
 
 object Str {
   @scala.inline

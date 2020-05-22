@@ -8,101 +8,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bind extends js.Object {
-  var bind: js.UndefOr[any | container | none] = js.native
-  var defaults: js.UndefOr[DefaultsConfig] = js.native
-  var selector: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var timer: js.UndefOr[Boolean] = js.native
-  var view: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var window: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var bind: js.UndefOr[any | container | none] = js.undefined
+  var defaults: js.UndefOr[DefaultsConfig] = js.undefined
+  var selector: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var timer: js.UndefOr[Boolean] = js.undefined
+  var view: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var window: js.UndefOr[Boolean | js.Array[String]] = js.undefined
 }
 
 object Bind {
   @scala.inline
-  def apply(): Bind = {
+  def apply(
+    bind: any | container | none = null,
+    defaults: DefaultsConfig = null,
+    selector: Boolean | js.Array[String] = null,
+    timer: js.UndefOr[Boolean] = js.undefined,
+    view: Boolean | js.Array[String] = null,
+    window: Boolean | js.Array[String] = null
+  ): Bind = {
     val __obj = js.Dynamic.literal()
+    if (bind != null) __obj.updateDynamic("bind")(bind.asInstanceOf[js.Any])
+    if (defaults != null) __obj.updateDynamic("defaults")(defaults.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (!js.isUndefined(timer)) __obj.updateDynamic("timer")(timer.get.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bind]
   }
-  @scala.inline
-  implicit class BindOps[Self <: Bind] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBind(value: any | container | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaults(value: DefaultsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindow(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

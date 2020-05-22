@@ -12,6 +12,5 @@ import scala.scalajs.js.annotation._
   app.notAuthenticated
   app.closeDialogs
   */
-@js.native
 trait IEventService extends js.Object
 

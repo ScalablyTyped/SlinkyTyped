@@ -92,6 +92,11 @@ class SpinButton protected ()
   def UNSAFE_componentWillReceiveProps_MSpinButton(newProps: ISpinButtonProps): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MSpinButton(): Unit = js.native
+  /**
+    * Sets focus to the control.
+    */
+  /* CompleteClass */
+  override def focus(): Unit = js.native
 }
 
 /* static members */

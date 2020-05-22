@@ -564,7 +564,7 @@ trait IApp
   def getEmptyScript(qLocalizedMainSection: String): js.Promise[String] = js.native
   /**
     * Retrieves the variables that are tagged as favorite.
-    * @returns - return a Promise 	Array of String
+    * @returns - return a Promise     Array of String
     */
   def getFavoriteVariables(): js.Promise[js.Array[String]] = js.native
   /**

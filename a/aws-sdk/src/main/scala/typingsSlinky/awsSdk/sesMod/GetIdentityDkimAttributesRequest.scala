@@ -18,19 +18,5 @@ object GetIdentityDkimAttributesRequest {
     val __obj = js.Dynamic.literal(Identities = Identities.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIdentityDkimAttributesRequest]
   }
-  @scala.inline
-  implicit class GetIdentityDkimAttributesRequestOps[Self <: GetIdentityDkimAttributesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentities(value: IdentityList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identities")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

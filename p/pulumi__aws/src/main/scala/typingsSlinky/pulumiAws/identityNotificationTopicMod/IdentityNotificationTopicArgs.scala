@@ -27,53 +27,16 @@ trait IdentityNotificationTopicArgs extends js.Object {
 
 object IdentityNotificationTopicArgs {
   @scala.inline
-  def apply(identity: Input[String], notificationType: Input[String]): IdentityNotificationTopicArgs = {
+  def apply(
+    identity: Input[String],
+    notificationType: Input[String],
+    includeOriginalHeaders: Input[Boolean] = null,
+    topicArn: Input[String] = null
+  ): IdentityNotificationTopicArgs = {
     val __obj = js.Dynamic.literal(identity = identity.asInstanceOf[js.Any], notificationType = notificationType.asInstanceOf[js.Any])
+    if (includeOriginalHeaders != null) __obj.updateDynamic("includeOriginalHeaders")(includeOriginalHeaders.asInstanceOf[js.Any])
+    if (topicArn != null) __obj.updateDynamic("topicArn")(topicArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityNotificationTopicArgs]
   }
-  @scala.inline
-  implicit class IdentityNotificationTopicArgsOps[Self <: IdentityNotificationTopicArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentity(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotificationType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeOriginalHeaders(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeOriginalHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeOriginalHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeOriginalHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

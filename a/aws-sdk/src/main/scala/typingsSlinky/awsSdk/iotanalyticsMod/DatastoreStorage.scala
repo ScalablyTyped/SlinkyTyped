@@ -18,41 +18,14 @@ trait DatastoreStorage extends js.Object {
 
 object DatastoreStorage {
   @scala.inline
-  def apply(): DatastoreStorage = {
+  def apply(
+    customerManagedS3: CustomerManagedDatastoreS3Storage = null,
+    serviceManagedS3: ServiceManagedDatastoreS3Storage = null
+  ): DatastoreStorage = {
     val __obj = js.Dynamic.literal()
+    if (customerManagedS3 != null) __obj.updateDynamic("customerManagedS3")(customerManagedS3.asInstanceOf[js.Any])
+    if (serviceManagedS3 != null) __obj.updateDynamic("serviceManagedS3")(serviceManagedS3.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatastoreStorage]
   }
-  @scala.inline
-  implicit class DatastoreStorageOps[Self <: DatastoreStorage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomerManagedS3(value: CustomerManagedDatastoreS3Storage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerManagedS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerManagedS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerManagedS3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceManagedS3(value: ServiceManagedDatastoreS3Storage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceManagedS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceManagedS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceManagedS3")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

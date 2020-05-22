@@ -1,11 +1,11 @@
 package typingsSlinky.puppeteer.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.puppeteer.anon.DeviceScaleFactor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LaunchOptions
   extends ChromeArgOptions
      with BrowserOptions
@@ -15,154 +15,91 @@ trait LaunchOptions
     * process.stderr.
     * @default false
     */
-  var dumpio: js.UndefOr[Boolean] = js.native
+  var dumpio: js.UndefOr[Boolean] = js.undefined
   /**
     * Specify environment variables that will be visible to Chromium.
     * @default `process.env`.
     */
-  var env: js.UndefOr[StringDictionary[String | Boolean | Double]] = js.native
+  var env: js.UndefOr[StringDictionary[String | Boolean | Double]] = js.undefined
   /**
     * Path to a Chromium executable to run instead of bundled Chromium. If
     * executablePath is a relative path, then it is resolved relative to current
     * working directory.
     */
-  var executablePath: js.UndefOr[String] = js.native
+  var executablePath: js.UndefOr[String] = js.undefined
   /**
     * Close chrome process on SIGHUP.
     * @default true
     */
-  var handleSIGHUP: js.UndefOr[Boolean] = js.native
+  var handleSIGHUP: js.UndefOr[Boolean] = js.undefined
   /**
     * Close chrome process on Ctrl-C.
     * @default true
     */
-  var handleSIGINT: js.UndefOr[Boolean] = js.native
+  var handleSIGINT: js.UndefOr[Boolean] = js.undefined
   /**
     * Close chrome process on SIGTERM.
     * @default true
     */
-  var handleSIGTERM: js.UndefOr[Boolean] = js.native
+  var handleSIGTERM: js.UndefOr[Boolean] = js.undefined
   /**
     * Do not use `puppeteer.defaultArgs()` for launching Chromium.
     * @default false
     */
-  var ignoreDefaultArgs: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var ignoreDefaultArgs: js.UndefOr[Boolean | js.Array[String]] = js.undefined
   /**
     * Connects to the browser over a pipe instead of a WebSocket.
     * @default false
     */
-  var pipe: js.UndefOr[Boolean] = js.native
+  var pipe: js.UndefOr[Boolean] = js.undefined
+  /**
+    * Which browser to launch.
+    * At this time, this is either `chrome` or `firefox`. See also `PUPPETEER_PRODUCT`.
+    * @default 'chrome'
+    */
+  var product: js.UndefOr[Product] = js.undefined
 }
 
 object LaunchOptions {
   @scala.inline
-  def apply(): LaunchOptions = {
+  def apply(
+    args: js.Array[String] = null,
+    defaultViewport: js.UndefOr[Null | DeviceScaleFactor] = js.undefined,
+    devtools: js.UndefOr[Boolean] = js.undefined,
+    dumpio: js.UndefOr[Boolean] = js.undefined,
+    env: StringDictionary[String | Boolean | Double] = null,
+    executablePath: String = null,
+    handleSIGHUP: js.UndefOr[Boolean] = js.undefined,
+    handleSIGINT: js.UndefOr[Boolean] = js.undefined,
+    handleSIGTERM: js.UndefOr[Boolean] = js.undefined,
+    headless: js.UndefOr[Boolean] = js.undefined,
+    ignoreDefaultArgs: Boolean | js.Array[String] = null,
+    ignoreHTTPSErrors: js.UndefOr[Boolean] = js.undefined,
+    pipe: js.UndefOr[Boolean] = js.undefined,
+    product: Product = null,
+    slowMo: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    userDataDir: String = null
+  ): LaunchOptions = {
     val __obj = js.Dynamic.literal()
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultViewport)) __obj.updateDynamic("defaultViewport")(defaultViewport.asInstanceOf[js.Any])
+    if (!js.isUndefined(devtools)) __obj.updateDynamic("devtools")(devtools.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dumpio)) __obj.updateDynamic("dumpio")(dumpio.get.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (executablePath != null) __obj.updateDynamic("executablePath")(executablePath.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleSIGHUP)) __obj.updateDynamic("handleSIGHUP")(handleSIGHUP.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleSIGINT)) __obj.updateDynamic("handleSIGINT")(handleSIGINT.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleSIGTERM)) __obj.updateDynamic("handleSIGTERM")(handleSIGTERM.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headless)) __obj.updateDynamic("headless")(headless.get.asInstanceOf[js.Any])
+    if (ignoreDefaultArgs != null) __obj.updateDynamic("ignoreDefaultArgs")(ignoreDefaultArgs.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreHTTPSErrors)) __obj.updateDynamic("ignoreHTTPSErrors")(ignoreHTTPSErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pipe)) __obj.updateDynamic("pipe")(pipe.get.asInstanceOf[js.Any])
+    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
+    if (!js.isUndefined(slowMo)) __obj.updateDynamic("slowMo")(slowMo.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (userDataDir != null) __obj.updateDynamic("userDataDir")(userDataDir.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchOptions]
   }
-  @scala.inline
-  implicit class LaunchOptionsOps[Self <: LaunchOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDumpio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dumpio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDumpio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dumpio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: StringDictionary[String | Boolean | Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutablePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executablePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutablePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executablePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleSIGHUP(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSIGHUP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleSIGHUP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSIGHUP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleSIGINT(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSIGINT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleSIGINT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSIGINT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleSIGTERM(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSIGTERM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleSIGTERM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSIGTERM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreDefaultArgs(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDefaultArgs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreDefaultArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDefaultArgs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipe")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

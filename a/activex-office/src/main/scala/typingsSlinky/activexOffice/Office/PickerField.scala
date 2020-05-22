@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PickerField extends js.Object {
-  val Application: js.Any = js.native
-  val Creator: Double = js.native
-  val IsHidden: Boolean = js.native
-  val Name: String = js.native
+  val Application: js.Any
+  val Creator: Double
+  val IsHidden: Boolean
+  val Name: String
   @JSName("Office.PickerField_typekey")
-  var OfficeDotPickerField_typekey: PickerField = js.native
-  val Type: MsoPickerField = js.native
+  var OfficeDotPickerField_typekey: PickerField
+  val Type: MsoPickerField
 }
 
 object PickerField {
@@ -29,49 +28,5 @@ object PickerField {
     __obj.updateDynamic("Office.PickerField_typekey")(OfficeDotPickerField_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickerField]
   }
-  @scala.inline
-  implicit class PickerFieldOps[Self <: PickerField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfficeDotPickerField_typekey(value: PickerField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Office.PickerField_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: MsoPickerField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

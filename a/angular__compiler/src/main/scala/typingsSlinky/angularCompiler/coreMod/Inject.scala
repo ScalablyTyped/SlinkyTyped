@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Inject extends js.Object {
-  var token: js.Any = js.native
+  var token: js.Any
 }
 
 object Inject {
@@ -15,19 +14,5 @@ object Inject {
     val __obj = js.Dynamic.literal(token = token.asInstanceOf[js.Any])
     __obj.asInstanceOf[Inject]
   }
-  @scala.inline
-  implicit class InjectOps[Self <: Inject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToken(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

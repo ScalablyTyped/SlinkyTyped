@@ -4,100 +4,38 @@ import typingsSlinky.elasticElasticsearch.anon.Data
 import typingsSlinky.elasticElasticsearch.connectionMod.AgentOptions
 import typingsSlinky.node.tlsMod.ConnectionOptions
 import typingsSlinky.node.urlMod.URL_
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // /Extend API
-@js.native
 trait NodeOptions extends js.Object {
-  var agent: js.UndefOr[AgentOptions] = js.native
-  var headers: js.UndefOr[anyObject] = js.native
-  var id: js.UndefOr[String] = js.native
-  var roles: js.UndefOr[Data] = js.native
-  var ssl: js.UndefOr[ConnectionOptions] = js.native
-  var url: URL_ = js.native
+  var agent: js.UndefOr[AgentOptions] = js.undefined
+  var headers: js.UndefOr[Record[String, _]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var roles: js.UndefOr[Data] = js.undefined
+  var ssl: js.UndefOr[ConnectionOptions] = js.undefined
+  var url: URL_
 }
 
 object NodeOptions {
   @scala.inline
-  def apply(url: URL_): NodeOptions = {
+  def apply(
+    url: URL_,
+    agent: AgentOptions = null,
+    headers: Record[String, _] = null,
+    id: String = null,
+    roles: Data = null,
+    ssl: ConnectionOptions = null
+  ): NodeOptions = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (roles != null) __obj.updateDynamic("roles")(roles.asInstanceOf[js.Any])
+    if (ssl != null) __obj.updateDynamic("ssl")(ssl.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeOptions]
   }
-  @scala.inline
-  implicit class NodeOptionsOps[Self <: NodeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: URL_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAgent(value: AgentOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: anyObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoles(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsl(value: ConnectionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

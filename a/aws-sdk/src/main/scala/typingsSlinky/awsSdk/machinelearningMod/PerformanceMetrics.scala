@@ -11,29 +11,10 @@ trait PerformanceMetrics extends js.Object {
 
 object PerformanceMetrics {
   @scala.inline
-  def apply(): PerformanceMetrics = {
+  def apply(Properties: PerformanceMetricsProperties = null): PerformanceMetrics = {
     val __obj = js.Dynamic.literal()
+    if (Properties != null) __obj.updateDynamic("Properties")(Properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerformanceMetrics]
   }
-  @scala.inline
-  implicit class PerformanceMetricsOps[Self <: PerformanceMetrics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProperties(value: PerformanceMetricsProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Properties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

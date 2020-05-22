@@ -64,161 +64,34 @@ trait SchemaGoogleCloudDialogflowV2IntentMessage extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2IntentMessage {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2IntentMessage = {
+  def apply(
+    basicCard: SchemaGoogleCloudDialogflowV2IntentMessageBasicCard = null,
+    card: SchemaGoogleCloudDialogflowV2IntentMessageCard = null,
+    carouselSelect: SchemaGoogleCloudDialogflowV2IntentMessageCarouselSelect = null,
+    image: SchemaGoogleCloudDialogflowV2IntentMessageImage = null,
+    linkOutSuggestion: SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestion = null,
+    listSelect: SchemaGoogleCloudDialogflowV2IntentMessageListSelect = null,
+    payload: StringDictionary[js.Any] = null,
+    platform: String = null,
+    quickReplies: SchemaGoogleCloudDialogflowV2IntentMessageQuickReplies = null,
+    simpleResponses: SchemaGoogleCloudDialogflowV2IntentMessageSimpleResponses = null,
+    suggestions: SchemaGoogleCloudDialogflowV2IntentMessageSuggestions = null,
+    text: SchemaGoogleCloudDialogflowV2IntentMessageText = null
+  ): SchemaGoogleCloudDialogflowV2IntentMessage = {
     val __obj = js.Dynamic.literal()
+    if (basicCard != null) __obj.updateDynamic("basicCard")(basicCard.asInstanceOf[js.Any])
+    if (card != null) __obj.updateDynamic("card")(card.asInstanceOf[js.Any])
+    if (carouselSelect != null) __obj.updateDynamic("carouselSelect")(carouselSelect.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (linkOutSuggestion != null) __obj.updateDynamic("linkOutSuggestion")(linkOutSuggestion.asInstanceOf[js.Any])
+    if (listSelect != null) __obj.updateDynamic("listSelect")(listSelect.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (quickReplies != null) __obj.updateDynamic("quickReplies")(quickReplies.asInstanceOf[js.Any])
+    if (simpleResponses != null) __obj.updateDynamic("simpleResponses")(simpleResponses.asInstanceOf[js.Any])
+    if (suggestions != null) __obj.updateDynamic("suggestions")(suggestions.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2IntentMessage]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2IntentMessageOps[Self <: SchemaGoogleCloudDialogflowV2IntentMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBasicCard(value: SchemaGoogleCloudDialogflowV2IntentMessageBasicCard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicCard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasicCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicCard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCard(value: SchemaGoogleCloudDialogflowV2IntentMessageCard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCarouselSelect(value: SchemaGoogleCloudDialogflowV2IntentMessageCarouselSelect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carouselSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCarouselSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carouselSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: SchemaGoogleCloudDialogflowV2IntentMessageImage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkOutSuggestion(value: SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOutSuggestion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkOutSuggestion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOutSuggestion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListSelect(value: SchemaGoogleCloudDialogflowV2IntentMessageListSelect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayload(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuickReplies(value: SchemaGoogleCloudDialogflowV2IntentMessageQuickReplies): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quickReplies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuickReplies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quickReplies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimpleResponses(value: SchemaGoogleCloudDialogflowV2IntentMessageSimpleResponses): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleResponses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimpleResponses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleResponses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestions(value: SchemaGoogleCloudDialogflowV2IntentMessageSuggestions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: SchemaGoogleCloudDialogflowV2IntentMessageText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

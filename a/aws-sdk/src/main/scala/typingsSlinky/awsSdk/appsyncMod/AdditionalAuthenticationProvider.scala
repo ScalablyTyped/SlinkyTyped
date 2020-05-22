@@ -22,53 +22,16 @@ trait AdditionalAuthenticationProvider extends js.Object {
 
 object AdditionalAuthenticationProvider {
   @scala.inline
-  def apply(): AdditionalAuthenticationProvider = {
+  def apply(
+    authenticationType: AuthenticationType = null,
+    openIDConnectConfig: OpenIDConnectConfig = null,
+    userPoolConfig: CognitoUserPoolConfig = null
+  ): AdditionalAuthenticationProvider = {
     val __obj = js.Dynamic.literal()
+    if (authenticationType != null) __obj.updateDynamic("authenticationType")(authenticationType.asInstanceOf[js.Any])
+    if (openIDConnectConfig != null) __obj.updateDynamic("openIDConnectConfig")(openIDConnectConfig.asInstanceOf[js.Any])
+    if (userPoolConfig != null) __obj.updateDynamic("userPoolConfig")(userPoolConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdditionalAuthenticationProvider]
   }
-  @scala.inline
-  implicit class AdditionalAuthenticationProviderOps[Self <: AdditionalAuthenticationProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationType(value: AuthenticationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenIDConnectConfig(value: OpenIDConnectConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIDConnectConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenIDConnectConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIDConnectConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserPoolConfig(value: CognitoUserPoolConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserPoolConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

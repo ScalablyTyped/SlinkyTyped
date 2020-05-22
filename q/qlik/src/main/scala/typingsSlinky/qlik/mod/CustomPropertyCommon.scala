@@ -10,83 +10,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomPropertyCommon extends js.Object {
-  var label: js.UndefOr[String] = js.native
-  var ref: js.UndefOr[String] = js.native
-  var show: js.UndefOr[Boolean | ShowFunction] = js.native
-  var `type`: js.UndefOr[string | integer | number | array | boolean | items] = js.native
+  var label: js.UndefOr[String] = js.undefined
+  var ref: js.UndefOr[String] = js.undefined
+  var show: js.UndefOr[Boolean | ShowFunction] = js.undefined
+  var `type`: js.UndefOr[string | integer | number | array | boolean | items] = js.undefined
 }
 
 object CustomPropertyCommon {
   @scala.inline
-  def apply(): CustomPropertyCommon = {
+  def apply(
+    label: String = null,
+    ref: String = null,
+    show: Boolean | ShowFunction = null,
+    `type`: string | integer | number | array | boolean | items = null
+  ): CustomPropertyCommon = {
     val __obj = js.Dynamic.literal()
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomPropertyCommon]
   }
-  @scala.inline
-  implicit class CustomPropertyCommonOps[Self <: CustomPropertyCommon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowFunction3(
-      value: (/* layout */ Layout, /* cls */ js.Any, /* obj */ js.Any) => Boolean | (js.Function1[/* measure */ NxMeasure, Boolean])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean | ShowFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: string | integer | number | array | boolean | items): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

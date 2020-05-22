@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-form.SemanticUI.Form.PromptSettings._Impl, 'notExactly'> */
-@js.native
 trait PickImplnotExactly extends js.Object {
-  var notExactly: String = js.native
+  var notExactly: String
 }
 
 object PickImplnotExactly {
@@ -16,19 +15,5 @@ object PickImplnotExactly {
     val __obj = js.Dynamic.literal(notExactly = notExactly.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplnotExactly]
   }
-  @scala.inline
-  implicit class PickImplnotExactlyOps[Self <: PickImplnotExactly] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotExactly(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notExactly")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

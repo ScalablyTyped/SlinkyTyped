@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AuthOptions extends js.Object {
   /**
   		 * A function which is called when a new token is required.
@@ -22,177 +21,58 @@ trait AuthOptions extends js.Object {
       ], 
       Unit
     ]
-  ] = js.native
-  var authHeaders: js.UndefOr[StringDictionary[String]] = js.native
-  var authMethod: js.UndefOr[HTTPMethods] = js.native
-  var authParams: js.UndefOr[StringDictionary[String]] = js.native
+  ] = js.undefined
+  var authHeaders: js.UndefOr[StringDictionary[String]] = js.undefined
+  var authMethod: js.UndefOr[HTTPMethods] = js.undefined
+  var authParams: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
   		 * A URL that the library may use to obtain a token string (in plain text format), or a signed TokenRequest or TokenDetails (in JSON format).
   		 **/
-  var authUrl: js.UndefOr[String] = js.native
+  var authUrl: js.UndefOr[String] = js.undefined
   /**
   		 * Optional clientId that can be used to specify the identity for this client. In most cases
   		 * it is preferable to instead specift a clientId in the token issued to this client.
   		 */
-  var clientId: js.UndefOr[String] = js.native
-  var key: js.UndefOr[String] = js.native
-  var queryTime: js.UndefOr[Boolean] = js.native
-  var token: js.UndefOr[TokenDetails | String] = js.native
-  var tokenDetails: js.UndefOr[TokenDetails] = js.native
-  var useTokenAuth: js.UndefOr[Boolean] = js.native
+  var clientId: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String] = js.undefined
+  var queryTime: js.UndefOr[Boolean] = js.undefined
+  var token: js.UndefOr[TokenDetails | String] = js.undefined
+  var tokenDetails: js.UndefOr[TokenDetails] = js.undefined
+  var useTokenAuth: js.UndefOr[Boolean] = js.undefined
 }
 
 object AuthOptions {
   @scala.inline
-  def apply(): AuthOptions = {
+  def apply(
+    authCallback: (/* data */ TokenParams, /* callback */ js.Function2[
+      /* error */ ErrorInfo | String, 
+      /* tokenRequestOrDetails */ TokenDetails | TokenRequest | String, 
+      Unit
+    ]) => Unit = null,
+    authHeaders: StringDictionary[String] = null,
+    authMethod: HTTPMethods = null,
+    authParams: StringDictionary[String] = null,
+    authUrl: String = null,
+    clientId: String = null,
+    key: String = null,
+    queryTime: js.UndefOr[Boolean] = js.undefined,
+    token: TokenDetails | String = null,
+    tokenDetails: TokenDetails = null,
+    useTokenAuth: js.UndefOr[Boolean] = js.undefined
+  ): AuthOptions = {
     val __obj = js.Dynamic.literal()
+    if (authCallback != null) __obj.updateDynamic("authCallback")(js.Any.fromFunction2(authCallback))
+    if (authHeaders != null) __obj.updateDynamic("authHeaders")(authHeaders.asInstanceOf[js.Any])
+    if (authMethod != null) __obj.updateDynamic("authMethod")(authMethod.asInstanceOf[js.Any])
+    if (authParams != null) __obj.updateDynamic("authParams")(authParams.asInstanceOf[js.Any])
+    if (authUrl != null) __obj.updateDynamic("authUrl")(authUrl.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(queryTime)) __obj.updateDynamic("queryTime")(queryTime.get.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
+    if (tokenDetails != null) __obj.updateDynamic("tokenDetails")(tokenDetails.asInstanceOf[js.Any])
+    if (!js.isUndefined(useTokenAuth)) __obj.updateDynamic("useTokenAuth")(useTokenAuth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthOptions]
   }
-  @scala.inline
-  implicit class AuthOptionsOps[Self <: AuthOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthCallback(
-      value: (/* data */ TokenParams, /* callback */ js.Function2[
-          /* error */ ErrorInfo | String, 
-          /* tokenRequestOrDetails */ TokenDetails | TokenRequest | String, 
-          Unit
-        ]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutAuthCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthHeaders(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthMethod(value: HTTPMethods): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthParams(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryTime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: TokenDetails | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenDetails(value: TokenDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseTokenAuth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useTokenAuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseTokenAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useTokenAuth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

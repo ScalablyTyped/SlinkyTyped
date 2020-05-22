@@ -14,29 +14,10 @@ trait ListGroupCertificateAuthoritiesResponse extends js.Object {
 
 object ListGroupCertificateAuthoritiesResponse {
   @scala.inline
-  def apply(): ListGroupCertificateAuthoritiesResponse = {
+  def apply(GroupCertificateAuthorities: listOfGroupCertificateAuthorityProperties = null): ListGroupCertificateAuthoritiesResponse = {
     val __obj = js.Dynamic.literal()
+    if (GroupCertificateAuthorities != null) __obj.updateDynamic("GroupCertificateAuthorities")(GroupCertificateAuthorities.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListGroupCertificateAuthoritiesResponse]
   }
-  @scala.inline
-  implicit class ListGroupCertificateAuthoritiesResponseOps[Self <: ListGroupCertificateAuthoritiesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupCertificateAuthorities(value: listOfGroupCertificateAuthorityProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupCertificateAuthorities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupCertificateAuthorities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupCertificateAuthorities")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

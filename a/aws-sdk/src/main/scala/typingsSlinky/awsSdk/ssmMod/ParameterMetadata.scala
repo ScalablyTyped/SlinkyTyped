@@ -11,6 +11,10 @@ trait ParameterMetadata extends js.Object {
     */
   var AllowedPattern: js.UndefOr[typingsSlinky.awsSdk.ssmMod.AllowedPattern] = js.native
   /**
+    * The data type of the parameter, such as text or aws:ec2:image. The default is text.
+    */
+  var DataType: js.UndefOr[ParameterDataType] = js.native
+  /**
     * Description of the parameter actions.
     */
   var Description: js.UndefOr[ParameterDescription] = js.native
@@ -39,7 +43,7 @@ trait ParameterMetadata extends js.Object {
     */
   var Tier: js.UndefOr[ParameterTier] = js.native
   /**
-    * The type of parameter. Valid parameter types include the following: String, String list, Secure string.
+    * The type of parameter. Valid parameter types include the following: String, StringList, and SecureString.
     */
   var Type: js.UndefOr[ParameterType] = js.native
   /**
@@ -50,137 +54,32 @@ trait ParameterMetadata extends js.Object {
 
 object ParameterMetadata {
   @scala.inline
-  def apply(): ParameterMetadata = {
+  def apply(
+    AllowedPattern: AllowedPattern = null,
+    DataType: ParameterDataType = null,
+    Description: ParameterDescription = null,
+    KeyId: ParameterKeyId = null,
+    LastModifiedDate: js.Date = null,
+    LastModifiedUser: String = null,
+    Name: PSParameterName = null,
+    Policies: ParameterPolicyList = null,
+    Tier: ParameterTier = null,
+    Type: ParameterType = null,
+    Version: js.UndefOr[PSParameterVersion] = js.undefined
+  ): ParameterMetadata = {
     val __obj = js.Dynamic.literal()
+    if (AllowedPattern != null) __obj.updateDynamic("AllowedPattern")(AllowedPattern.asInstanceOf[js.Any])
+    if (DataType != null) __obj.updateDynamic("DataType")(DataType.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
+    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
+    if (LastModifiedUser != null) __obj.updateDynamic("LastModifiedUser")(LastModifiedUser.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Policies != null) __obj.updateDynamic("Policies")(Policies.asInstanceOf[js.Any])
+    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
+    if (!js.isUndefined(Version)) __obj.updateDynamic("Version")(Version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParameterMetadata]
   }
-  @scala.inline
-  implicit class ParameterMetadataOps[Self <: ParameterMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedPattern(value: AllowedPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedPattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: ParameterDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyId(value: ParameterKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: PSParameterName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicies(value: ParameterPolicyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTier(value: ParameterTier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ParameterType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: PSParameterVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

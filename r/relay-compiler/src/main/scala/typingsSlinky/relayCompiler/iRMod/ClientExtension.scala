@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientExtension
   extends IR
      with Node
      with Selection
      with VisitNode {
-  var kind: typingsSlinky.relayCompiler.relayCompilerStrings.ClientExtension = js.native
-  var loc: Location = js.native
-  var metadata: Metadata = js.native
-  var selections: js.Array[Selection] = js.native
+  var kind: typingsSlinky.relayCompiler.relayCompilerStrings.ClientExtension
+  var loc: Location
+  var metadata: Metadata
+  var selections: js.Array[Selection]
 }
 
 object ClientExtension {
@@ -22,48 +21,12 @@ object ClientExtension {
   def apply(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.ClientExtension,
     loc: Location,
-    selections: js.Array[Selection]
+    selections: js.Array[Selection],
+    metadata: Metadata = null
   ): ClientExtension = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientExtension]
   }
-  @scala.inline
-  implicit class ClientExtensionOps[Self <: ClientExtension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: typingsSlinky.relayCompiler.relayCompilerStrings.ClientExtension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoc(value: Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelections(value: js.Array[Selection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Metadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

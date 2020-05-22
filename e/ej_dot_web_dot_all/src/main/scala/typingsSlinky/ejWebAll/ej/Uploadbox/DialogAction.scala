@@ -4,83 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DialogAction extends js.Object {
   /** Once uploaded successfully, the dialog popup closes immediately.
     */
-  var closeOnComplete: js.UndefOr[Boolean] = js.native
+  var closeOnComplete: js.UndefOr[Boolean] = js.undefined
   /** Sets the content container option to the Uploadbox dialog popup.
     */
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[String] = js.undefined
   /** Enables the drag option to the dialog popup.
     */
-  var drag: js.UndefOr[Boolean] = js.native
+  var drag: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables the Uploadbox dialogâ€™s modal property to the dialog popup.
     */
-  var modal: js.UndefOr[Boolean] = js.native
+  var modal: js.UndefOr[Boolean] = js.undefined
 }
 
 object DialogAction {
   @scala.inline
-  def apply(): DialogAction = {
+  def apply(
+    closeOnComplete: js.UndefOr[Boolean] = js.undefined,
+    content: String = null,
+    drag: js.UndefOr[Boolean] = js.undefined,
+    modal: js.UndefOr[Boolean] = js.undefined
+  ): DialogAction = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(closeOnComplete)) __obj.updateDynamic("closeOnComplete")(closeOnComplete.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(drag)) __obj.updateDynamic("drag")(drag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogAction]
   }
-  @scala.inline
-  implicit class DialogActionOps[Self <: DialogAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloseOnComplete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

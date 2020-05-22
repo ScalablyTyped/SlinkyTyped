@@ -4,116 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocumentType extends js.Object {
-  var documentType: String = js.native
-  var documentURL: String = js.native
-  var isEditable: Boolean = js.native
-  var linkURL: js.UndefOr[String] = js.native
-  var selectionText: js.UndefOr[String] = js.native
-  var srcURL: js.UndefOr[String] = js.native
-  var targetID: js.UndefOr[String] = js.native
-  var targetName: String = js.native
-  var value: js.UndefOr[String] = js.native
+  var documentType: String
+  var documentURL: String
+  var isEditable: Boolean
+  var linkURL: js.UndefOr[String] = js.undefined
+  var selectionText: js.UndefOr[String] = js.undefined
+  var srcURL: js.UndefOr[String] = js.undefined
+  var targetID: js.UndefOr[String] = js.undefined
+  var targetName: String
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object DocumentType {
   @scala.inline
-  def apply(documentType: String, documentURL: String, isEditable: Boolean, targetName: String): DocumentType = {
+  def apply(
+    documentType: String,
+    documentURL: String,
+    isEditable: Boolean,
+    targetName: String,
+    linkURL: String = null,
+    selectionText: String = null,
+    srcURL: String = null,
+    targetID: String = null,
+    value: String = null
+  ): DocumentType = {
     val __obj = js.Dynamic.literal(documentType = documentType.asInstanceOf[js.Any], documentURL = documentURL.asInstanceOf[js.Any], isEditable = isEditable.asInstanceOf[js.Any], targetName = targetName.asInstanceOf[js.Any])
+    if (linkURL != null) __obj.updateDynamic("linkURL")(linkURL.asInstanceOf[js.Any])
+    if (selectionText != null) __obj.updateDynamic("selectionText")(selectionText.asInstanceOf[js.Any])
+    if (srcURL != null) __obj.updateDynamic("srcURL")(srcURL.asInstanceOf[js.Any])
+    if (targetID != null) __obj.updateDynamic("targetID")(targetID.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentType]
   }
-  @scala.inline
-  implicit class DocumentTypeOps[Self <: DocumentType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEditable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEditable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

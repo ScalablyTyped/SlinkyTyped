@@ -17,29 +17,10 @@ trait SchemaLinkedContentReference extends js.Object {
 
 object SchemaLinkedContentReference {
   @scala.inline
-  def apply(): SchemaLinkedContentReference = {
+  def apply(sheetsChartReference: SchemaSheetsChartReference = null): SchemaLinkedContentReference = {
     val __obj = js.Dynamic.literal()
+    if (sheetsChartReference != null) __obj.updateDynamic("sheetsChartReference")(sheetsChartReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLinkedContentReference]
   }
-  @scala.inline
-  implicit class SchemaLinkedContentReferenceOps[Self <: SchemaLinkedContentReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSheetsChartReference(value: SchemaSheetsChartReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsChartReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetsChartReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsChartReference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

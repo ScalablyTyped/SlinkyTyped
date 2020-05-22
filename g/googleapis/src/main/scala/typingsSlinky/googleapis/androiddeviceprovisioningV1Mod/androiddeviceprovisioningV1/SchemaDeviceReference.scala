@@ -27,41 +27,11 @@ trait SchemaDeviceReference extends js.Object {
 
 object SchemaDeviceReference {
   @scala.inline
-  def apply(): SchemaDeviceReference = {
+  def apply(deviceId: String = null, deviceIdentifier: SchemaDeviceIdentifier = null): SchemaDeviceReference = {
     val __obj = js.Dynamic.literal()
+    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
+    if (deviceIdentifier != null) __obj.updateDynamic("deviceIdentifier")(deviceIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceReference]
   }
-  @scala.inline
-  implicit class SchemaDeviceReferenceOps[Self <: SchemaDeviceReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceIdentifier(value: SchemaDeviceIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

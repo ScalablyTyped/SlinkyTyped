@@ -1331,13 +1331,8 @@ trait Tilemap extends js.Object {
     * place the debug representation wherever you want on the screen.
     * @param graphics The target Graphics object to draw upon.
     * @param styleConfig An object specifying the colors to use for the debug drawing.
-    * @param layer The tile layer to use. If not given the current layer is used.
     */
   def renderDebugFull(graphics: Graphics, styleConfig: StyleConfig): Tilemap = js.native
-  def renderDebugFull(graphics: Graphics, styleConfig: StyleConfig, layer: String): Tilemap = js.native
-  def renderDebugFull(graphics: Graphics, styleConfig: StyleConfig, layer: DynamicTilemapLayer): Tilemap = js.native
-  def renderDebugFull(graphics: Graphics, styleConfig: StyleConfig, layer: StaticTilemapLayer): Tilemap = js.native
-  def renderDebugFull(graphics: Graphics, styleConfig: StyleConfig, layer: integer): Tilemap = js.native
   /**
     * Scans the given rectangular area (given in tile coordinates) for tiles with an index matching
     * `findIndex` and updates their index to match `newIndex`. This only modifies the index and does

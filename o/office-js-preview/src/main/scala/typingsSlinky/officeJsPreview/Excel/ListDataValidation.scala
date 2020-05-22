@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@js.native
 trait ListDataValidation extends js.Object {
   /**
     *
@@ -18,7 +17,7 @@ trait ListDataValidation extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var inCellDropDown: Boolean = js.native
+  var inCellDropDown: Boolean
   /**
     *
     * Source of the list for data validation
@@ -26,7 +25,7 @@ trait ListDataValidation extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var source: String | Range = js.native
+  var source: String | Range
 }
 
 object ListDataValidation {
@@ -35,25 +34,5 @@ object ListDataValidation {
     val __obj = js.Dynamic.literal(inCellDropDown = inCellDropDown.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDataValidation]
   }
-  @scala.inline
-  implicit class ListDataValidationOps[Self <: ListDataValidation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInCellDropDown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inCellDropDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: String | Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

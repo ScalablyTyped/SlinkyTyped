@@ -6,94 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Altitude extends js.Object {
   /**
-    * 传入 true 会返回高度信息，由于获取高度需要较高精确度，会减慢接口返回速度	>= 1.6.0
+    * 传入 true 会返回高度信息，由于获取高度需要较高精确度，会减慢接口返回速度    >= 1.6.0
     */
-  var altitude: js.UndefOr[Boolean] = js.native
-  var complete: js.UndefOr[js.Function0[Unit]] = js.native
-  var fail: js.UndefOr[js.Function0[Unit]] = js.native
-  var success: js.UndefOr[js.Function1[/* res */ Accuracy, Unit]] = js.native
+  var altitude: js.UndefOr[Boolean] = js.undefined
+  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var fail: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var success: js.UndefOr[js.Function1[/* res */ Accuracy, Unit]] = js.undefined
   /**
     * wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
     */
-  var `type`: js.UndefOr[wgs84 | gcj02] = js.native
+  var `type`: js.UndefOr[wgs84 | gcj02] = js.undefined
 }
 
 object Altitude {
   @scala.inline
-  def apply(): Altitude = {
+  def apply(
+    altitude: js.UndefOr[Boolean] = js.undefined,
+    complete: () => Unit = null,
+    fail: () => Unit = null,
+    success: /* res */ Accuracy => Unit = null,
+    `type`: wgs84 | gcj02 = null
+  ): Altitude = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(altitude)) __obj.updateDynamic("altitude")(altitude.get.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Altitude]
   }
-  @scala.inline
-  implicit class AltitudeOps[Self <: Altitude] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltitude(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ Accuracy => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: wgs84 | gcj02): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

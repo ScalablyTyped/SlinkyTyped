@@ -23,41 +23,11 @@ trait SchemaListAlertPoliciesResponse extends js.Object {
 
 object SchemaListAlertPoliciesResponse {
   @scala.inline
-  def apply(): SchemaListAlertPoliciesResponse = {
+  def apply(alertPolicies: js.Array[SchemaAlertPolicy] = null, nextPageToken: String = null): SchemaListAlertPoliciesResponse = {
     val __obj = js.Dynamic.literal()
+    if (alertPolicies != null) __obj.updateDynamic("alertPolicies")(alertPolicies.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListAlertPoliciesResponse]
   }
-  @scala.inline
-  implicit class SchemaListAlertPoliciesResponseOps[Self <: SchemaListAlertPoliciesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlertPolicies(value: js.Array[SchemaAlertPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlertPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertPolicies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

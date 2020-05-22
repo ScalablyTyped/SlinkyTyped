@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MemberAccess
   extends Expression
      with BaseASTNode {
-  var expression: Expression = js.native
-  var memberName: String = js.native
+  var expression: Expression
+  var memberName: String
   @JSName("type")
-  var type_MemberAccess: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.MemberAccess = js.native
+  var type_MemberAccess: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.MemberAccess
 }
 
 object MemberAccess {
@@ -19,37 +18,15 @@ object MemberAccess {
   def apply(
     expression: Expression,
     memberName: String,
-    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.MemberAccess
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.MemberAccess,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
   ): MemberAccess = {
     val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], memberName = memberName.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemberAccess]
   }
-  @scala.inline
-  implicit class MemberAccessOps[Self <: MemberAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMemberName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.MemberAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

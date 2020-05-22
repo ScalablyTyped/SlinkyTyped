@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LUPP extends js.Object {
-  var L: SparseMatrix = js.native
-  var P: Vector = js.native
-  var Pinv: Vector = js.native
-  var U: SparseMatrix = js.native
+  var L: SparseMatrix
+  var P: Vector
+  var Pinv: Vector
+  var U: SparseMatrix
 }
 
 object LUPP {
@@ -18,37 +17,5 @@ object LUPP {
     val __obj = js.Dynamic.literal(L = L.asInstanceOf[js.Any], P = P.asInstanceOf[js.Any], Pinv = Pinv.asInstanceOf[js.Any], U = U.asInstanceOf[js.Any])
     __obj.asInstanceOf[LUPP]
   }
-  @scala.inline
-  implicit class LUPPOps[Self <: LUPP] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withL(value: SparseMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("L")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP(value: Vector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPinv(value: Vector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pinv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withU(value: SparseMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("U")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

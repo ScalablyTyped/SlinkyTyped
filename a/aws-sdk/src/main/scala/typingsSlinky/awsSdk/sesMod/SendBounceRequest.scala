@@ -37,72 +37,16 @@ object SendBounceRequest {
   def apply(
     BounceSender: Address,
     BouncedRecipientInfoList: BouncedRecipientInfoList,
-    OriginalMessageId: MessageId
+    OriginalMessageId: MessageId,
+    BounceSenderArn: AmazonResourceName = null,
+    Explanation: Explanation = null,
+    MessageDsn: MessageDsn = null
   ): SendBounceRequest = {
     val __obj = js.Dynamic.literal(BounceSender = BounceSender.asInstanceOf[js.Any], BouncedRecipientInfoList = BouncedRecipientInfoList.asInstanceOf[js.Any], OriginalMessageId = OriginalMessageId.asInstanceOf[js.Any])
+    if (BounceSenderArn != null) __obj.updateDynamic("BounceSenderArn")(BounceSenderArn.asInstanceOf[js.Any])
+    if (Explanation != null) __obj.updateDynamic("Explanation")(Explanation.asInstanceOf[js.Any])
+    if (MessageDsn != null) __obj.updateDynamic("MessageDsn")(MessageDsn.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendBounceRequest]
   }
-  @scala.inline
-  implicit class SendBounceRequestOps[Self <: SendBounceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBounceSender(value: Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BounceSender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBouncedRecipientInfoList(value: BouncedRecipientInfoList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BouncedRecipientInfoList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOriginalMessageId(value: MessageId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalMessageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBounceSenderArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BounceSenderArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounceSenderArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BounceSenderArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExplanation(value: Explanation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Explanation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplanation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Explanation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageDsn(value: MessageDsn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageDsn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageDsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageDsn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

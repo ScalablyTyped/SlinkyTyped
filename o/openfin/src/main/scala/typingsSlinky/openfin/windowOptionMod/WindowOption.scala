@@ -1,588 +1,161 @@
 package typingsSlinky.openfin.windowOptionMod
 
+import typingsSlinky.openfin.GoldenLayout.Config
 import typingsSlinky.openfin.downloadPreloadMod.DownloadPreloadOption
 import typingsSlinky.openfin.shapesMod.ContextMenuSettings
+import typingsSlinky.openfin.shapesMod.Hotkey
 import typingsSlinky.openfin.shapesMod.RGB
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WindowOption extends js.Object {
-  var accelerator: js.UndefOr[Accelerator] = js.native
-  var alphaMask: js.UndefOr[RGB] = js.native
-  var alwaysOnTop: js.UndefOr[Boolean] = js.native
-  var api: js.UndefOr[Api] = js.native
-  var applicationIcon: js.UndefOr[String] = js.native
-  var aspectRatio: js.UndefOr[Double] = js.native
-  var autoShow: js.UndefOr[Boolean] = js.native
-  var backgroundColor: js.UndefOr[String] = js.native
-  var contentNavigation: js.UndefOr[ContentNavigation] = js.native
-  var contextMenu: js.UndefOr[Boolean] = js.native
-  var contextMenuSettings: js.UndefOr[ContextMenuSettings] = js.native
-  var cornerRounding: js.UndefOr[CornerRounding] = js.native
-  var customContext: js.UndefOr[js.Any] = js.native
-  var customData: js.UndefOr[js.Any] = js.native
-  var customRequestHeaders: js.UndefOr[js.Array[CustomRequestHeaders]] = js.native
-  var defaultCentered: js.UndefOr[Boolean] = js.native
-  var defaultHeight: js.UndefOr[Double] = js.native
-  var defaultLeft: js.UndefOr[Double] = js.native
-  var defaultTop: js.UndefOr[Double] = js.native
-  var defaultWidth: js.UndefOr[Double] = js.native
-  var frame: js.UndefOr[Boolean] = js.native
-  var hideOnClose: js.UndefOr[Boolean] = js.native
-  var icon: js.UndefOr[String] = js.native
-  var maxHeight: js.UndefOr[Double] = js.native
-  var maxWidth: js.UndefOr[Double] = js.native
-  var maximizable: js.UndefOr[Boolean] = js.native
-  var minHeight: js.UndefOr[Double] = js.native
-  var minWidth: js.UndefOr[Double] = js.native
-  var minimizable: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var preloadScripts: js.UndefOr[js.Array[DownloadPreloadOption]] = js.native
-  var resizable: js.UndefOr[Boolean] = js.native
-  var resizeRegion: js.UndefOr[ResizeRegion] = js.native
-  var saveWindowState: js.UndefOr[Boolean] = js.native
-  var shadow: js.UndefOr[Boolean] = js.native
-  var showTaskbarIcon: js.UndefOr[Boolean] = js.native
-  var smallWindow: js.UndefOr[Boolean] = js.native
-  var state: js.UndefOr[String] = js.native
-  var taskbarIconGroup: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
-  var uuid: js.UndefOr[String] = js.native
-  var waitForPageLoad: js.UndefOr[Boolean] = js.native
+  var accelerator: js.UndefOr[Accelerator] = js.undefined
+  var alphaMask: js.UndefOr[RGB] = js.undefined
+  var alwaysOnTop: js.UndefOr[Boolean] = js.undefined
+  var api: js.UndefOr[Api] = js.undefined
+  var applicationIcon: js.UndefOr[String] = js.undefined
+  var aspectRatio: js.UndefOr[Double] = js.undefined
+  var autoShow: js.UndefOr[Boolean] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.undefined
+  var contentNavigation: js.UndefOr[ContentNavigation] = js.undefined
+  var contentRedirect: js.UndefOr[ContentRedirect] = js.undefined
+  var contextMenu: js.UndefOr[Boolean] = js.undefined
+  var contextMenuSettings: js.UndefOr[ContextMenuSettings] = js.undefined
+  var cornerRounding: js.UndefOr[CornerRounding] = js.undefined
+  var customContext: js.UndefOr[js.Any] = js.undefined
+  var customData: js.UndefOr[js.Any] = js.undefined
+  var customRequestHeaders: js.UndefOr[js.Array[CustomRequestHeaders]] = js.undefined
+  var defaultCentered: js.UndefOr[Boolean] = js.undefined
+  var defaultHeight: js.UndefOr[Double] = js.undefined
+  var defaultLeft: js.UndefOr[Double] = js.undefined
+  var defaultTop: js.UndefOr[Double] = js.undefined
+  var defaultWidth: js.UndefOr[Double] = js.undefined
+  var frame: js.UndefOr[Boolean] = js.undefined
+  var hideOnClose: js.UndefOr[Boolean] = js.undefined
+  var hotkeys: js.UndefOr[js.Array[Hotkey]] = js.undefined
+  var icon: js.UndefOr[String] = js.undefined
+  var layout: js.UndefOr[Config] = js.undefined
+  var maxHeight: js.UndefOr[Double] = js.undefined
+  var maxWidth: js.UndefOr[Double] = js.undefined
+  var maximizable: js.UndefOr[Boolean] = js.undefined
+  var minHeight: js.UndefOr[Double] = js.undefined
+  var minWidth: js.UndefOr[Double] = js.undefined
+  var minimizable: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var preloadScripts: js.UndefOr[js.Array[DownloadPreloadOption]] = js.undefined
+  var resizable: js.UndefOr[Boolean] = js.undefined
+  var resizeRegion: js.UndefOr[ResizeRegion] = js.undefined
+  var saveWindowState: js.UndefOr[Boolean] = js.undefined
+  var shadow: js.UndefOr[Boolean] = js.undefined
+  var showTaskbarIcon: js.UndefOr[Boolean] = js.undefined
+  var smallWindow: js.UndefOr[Boolean] = js.undefined
+  var state: js.UndefOr[String] = js.undefined
+  var taskbarIconGroup: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
+  var uuid: js.UndefOr[String] = js.undefined
+  var waitForPageLoad: js.UndefOr[Boolean] = js.undefined
 }
 
 object WindowOption {
   @scala.inline
-  def apply(): WindowOption = {
+  def apply(
+    accelerator: Accelerator = null,
+    alphaMask: RGB = null,
+    alwaysOnTop: js.UndefOr[Boolean] = js.undefined,
+    api: Api = null,
+    applicationIcon: String = null,
+    aspectRatio: js.UndefOr[Double] = js.undefined,
+    autoShow: js.UndefOr[Boolean] = js.undefined,
+    backgroundColor: String = null,
+    contentNavigation: ContentNavigation = null,
+    contentRedirect: ContentRedirect = null,
+    contextMenu: js.UndefOr[Boolean] = js.undefined,
+    contextMenuSettings: ContextMenuSettings = null,
+    cornerRounding: CornerRounding = null,
+    customContext: js.Any = null,
+    customData: js.Any = null,
+    customRequestHeaders: js.Array[CustomRequestHeaders] = null,
+    defaultCentered: js.UndefOr[Boolean] = js.undefined,
+    defaultHeight: js.UndefOr[Double] = js.undefined,
+    defaultLeft: js.UndefOr[Double] = js.undefined,
+    defaultTop: js.UndefOr[Double] = js.undefined,
+    defaultWidth: js.UndefOr[Double] = js.undefined,
+    frame: js.UndefOr[Boolean] = js.undefined,
+    hideOnClose: js.UndefOr[Boolean] = js.undefined,
+    hotkeys: js.Array[Hotkey] = null,
+    icon: String = null,
+    layout: Config = null,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    maximizable: js.UndefOr[Boolean] = js.undefined,
+    minHeight: js.UndefOr[Double] = js.undefined,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    minimizable: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    preloadScripts: js.Array[DownloadPreloadOption] = null,
+    resizable: js.UndefOr[Boolean] = js.undefined,
+    resizeRegion: ResizeRegion = null,
+    saveWindowState: js.UndefOr[Boolean] = js.undefined,
+    shadow: js.UndefOr[Boolean] = js.undefined,
+    showTaskbarIcon: js.UndefOr[Boolean] = js.undefined,
+    smallWindow: js.UndefOr[Boolean] = js.undefined,
+    state: String = null,
+    taskbarIconGroup: String = null,
+    url: String = null,
+    uuid: String = null,
+    waitForPageLoad: js.UndefOr[Boolean] = js.undefined
+  ): WindowOption = {
     val __obj = js.Dynamic.literal()
+    if (accelerator != null) __obj.updateDynamic("accelerator")(accelerator.asInstanceOf[js.Any])
+    if (alphaMask != null) __obj.updateDynamic("alphaMask")(alphaMask.asInstanceOf[js.Any])
+    if (!js.isUndefined(alwaysOnTop)) __obj.updateDynamic("alwaysOnTop")(alwaysOnTop.get.asInstanceOf[js.Any])
+    if (api != null) __obj.updateDynamic("api")(api.asInstanceOf[js.Any])
+    if (applicationIcon != null) __obj.updateDynamic("applicationIcon")(applicationIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(aspectRatio)) __obj.updateDynamic("aspectRatio")(aspectRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoShow)) __obj.updateDynamic("autoShow")(autoShow.get.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (contentNavigation != null) __obj.updateDynamic("contentNavigation")(contentNavigation.asInstanceOf[js.Any])
+    if (contentRedirect != null) __obj.updateDynamic("contentRedirect")(contentRedirect.asInstanceOf[js.Any])
+    if (!js.isUndefined(contextMenu)) __obj.updateDynamic("contextMenu")(contextMenu.get.asInstanceOf[js.Any])
+    if (contextMenuSettings != null) __obj.updateDynamic("contextMenuSettings")(contextMenuSettings.asInstanceOf[js.Any])
+    if (cornerRounding != null) __obj.updateDynamic("cornerRounding")(cornerRounding.asInstanceOf[js.Any])
+    if (customContext != null) __obj.updateDynamic("customContext")(customContext.asInstanceOf[js.Any])
+    if (customData != null) __obj.updateDynamic("customData")(customData.asInstanceOf[js.Any])
+    if (customRequestHeaders != null) __obj.updateDynamic("customRequestHeaders")(customRequestHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultCentered)) __obj.updateDynamic("defaultCentered")(defaultCentered.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultHeight)) __obj.updateDynamic("defaultHeight")(defaultHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultLeft)) __obj.updateDynamic("defaultLeft")(defaultLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultTop)) __obj.updateDynamic("defaultTop")(defaultTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultWidth)) __obj.updateDynamic("defaultWidth")(defaultWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frame)) __obj.updateDynamic("frame")(frame.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideOnClose)) __obj.updateDynamic("hideOnClose")(hideOnClose.get.asInstanceOf[js.Any])
+    if (hotkeys != null) __obj.updateDynamic("hotkeys")(hotkeys.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximizable)) __obj.updateDynamic("maximizable")(maximizable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minHeight)) __obj.updateDynamic("minHeight")(minHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimizable)) __obj.updateDynamic("minimizable")(minimizable.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (preloadScripts != null) __obj.updateDynamic("preloadScripts")(preloadScripts.asInstanceOf[js.Any])
+    if (!js.isUndefined(resizable)) __obj.updateDynamic("resizable")(resizable.get.asInstanceOf[js.Any])
+    if (resizeRegion != null) __obj.updateDynamic("resizeRegion")(resizeRegion.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveWindowState)) __obj.updateDynamic("saveWindowState")(saveWindowState.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadow)) __obj.updateDynamic("shadow")(shadow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTaskbarIcon)) __obj.updateDynamic("showTaskbarIcon")(showTaskbarIcon.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smallWindow)) __obj.updateDynamic("smallWindow")(smallWindow.get.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (taskbarIconGroup != null) __obj.updateDynamic("taskbarIconGroup")(taskbarIconGroup.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitForPageLoad)) __obj.updateDynamic("waitForPageLoad")(waitForPageLoad.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowOption]
   }
-  @scala.inline
-  implicit class WindowOptionOps[Self <: WindowOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccelerator(value: Accelerator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccelerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlphaMask(value: RGB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlphaMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaMask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlwaysOnTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysOnTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysOnTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysOnTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApi(value: Api): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAspectRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoShow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentNavigation(value: ContentNavigation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextMenuSettings(value: ContextMenuSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextMenuSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCornerRounding(value: CornerRounding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRounding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCornerRounding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRounding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomRequestHeaders(value: js.Array[CustomRequestHeaders]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRequestHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomRequestHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRequestHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultCentered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCentered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultCentered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCentered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrame(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideOnClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximizable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximizable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimizable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimizable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreloadScripts(value: js.Array[DownloadPreloadOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadScripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreloadScripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadScripts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeRegion(value: ResizeRegion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveWindowState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveWindowState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveWindowState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveWindowState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTaskbarIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTaskbarIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTaskbarIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTaskbarIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmallWindow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmallWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskbarIconGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskbarIconGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskbarIconGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskbarIconGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForPageLoad(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForPageLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForPageLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForPageLoad")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

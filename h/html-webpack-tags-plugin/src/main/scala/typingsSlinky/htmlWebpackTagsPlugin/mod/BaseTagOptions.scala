@@ -4,75 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseTagOptions extends CommonOptions {
-  var glob: js.UndefOr[String] = js.native
-  var globFlatten: js.UndefOr[Boolean] = js.native
-  var globPath: js.UndefOr[String] = js.native
-  var sourcePath: js.UndefOr[String] = js.native
+  var glob: js.UndefOr[String] = js.undefined
+  var globFlatten: js.UndefOr[Boolean] = js.undefined
+  var globPath: js.UndefOr[String] = js.undefined
+  var sourcePath: js.UndefOr[String] = js.undefined
 }
 
 object BaseTagOptions {
   @scala.inline
-  def apply(): BaseTagOptions = {
+  def apply(
+    addHash: (/* assetPath */ String, /* hash */ String) => String = null,
+    addPublicPath: (/* assetPath */ String, /* publicPath */ String) => String = null,
+    append: js.UndefOr[Boolean] = js.undefined,
+    glob: String = null,
+    globFlatten: js.UndefOr[Boolean] = js.undefined,
+    globPath: String = null,
+    hash: Boolean | String | AddHashFunction = null,
+    publicPath: Boolean | String | AddPublicPathFunction = null,
+    sourcePath: String = null,
+    useHash: js.UndefOr[Boolean] = js.undefined,
+    usePublicPath: js.UndefOr[Boolean] = js.undefined
+  ): BaseTagOptions = {
     val __obj = js.Dynamic.literal()
+    if (addHash != null) __obj.updateDynamic("addHash")(js.Any.fromFunction2(addHash))
+    if (addPublicPath != null) __obj.updateDynamic("addPublicPath")(js.Any.fromFunction2(addPublicPath))
+    if (!js.isUndefined(append)) __obj.updateDynamic("append")(append.get.asInstanceOf[js.Any])
+    if (glob != null) __obj.updateDynamic("glob")(glob.asInstanceOf[js.Any])
+    if (!js.isUndefined(globFlatten)) __obj.updateDynamic("globFlatten")(globFlatten.get.asInstanceOf[js.Any])
+    if (globPath != null) __obj.updateDynamic("globPath")(globPath.asInstanceOf[js.Any])
+    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
+    if (publicPath != null) __obj.updateDynamic("publicPath")(publicPath.asInstanceOf[js.Any])
+    if (sourcePath != null) __obj.updateDynamic("sourcePath")(sourcePath.asInstanceOf[js.Any])
+    if (!js.isUndefined(useHash)) __obj.updateDynamic("useHash")(useHash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePublicPath)) __obj.updateDynamic("usePublicPath")(usePublicPath.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseTagOptions]
   }
-  @scala.inline
-  implicit class BaseTagOptionsOps[Self <: BaseTagOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlob(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobFlatten(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globFlatten")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobFlatten: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globFlatten")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourcePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourcePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcePath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

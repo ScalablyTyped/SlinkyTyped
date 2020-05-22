@@ -7,103 +7,50 @@ import scala.scalajs.js.annotation._
 /**
   * Base charge properties.
   */
-@js.native
 trait BaseCharge extends js.Object {
   /**
     * Redirect the user to this URL on cancel.
     */
-  var cancel_url: js.UndefOr[String] = js.native
+  var cancel_url: js.UndefOr[String] = js.undefined
   /**
     * More detailed description of the charge.
     * 200 characters or less.
     */
-  var description: String = js.native
+  var description: String
   /**
     * Optional key value pairs for your own use.
     */
-  var metadata: js.UndefOr[KeyVal] = js.native
+  var metadata: js.UndefOr[KeyVal] = js.undefined
   /**
     * Charge name.
     * 100 characters or less.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Charge pricing type.
     */
-  var pricing_type: PricingType = js.native
+  var pricing_type: PricingType
   /**
     * Redirect the user to this URL on completion.
     */
-  var redirect_url: js.UndefOr[String] = js.native
+  var redirect_url: js.UndefOr[String] = js.undefined
 }
 
 object BaseCharge {
   @scala.inline
-  def apply(description: String, name: String, pricing_type: PricingType): BaseCharge = {
+  def apply(
+    description: String,
+    name: String,
+    pricing_type: PricingType,
+    cancel_url: String = null,
+    metadata: KeyVal = null,
+    redirect_url: String = null
+  ): BaseCharge = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], pricing_type = pricing_type.asInstanceOf[js.Any])
+    if (cancel_url != null) __obj.updateDynamic("cancel_url")(cancel_url.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (redirect_url != null) __obj.updateDynamic("redirect_url")(redirect_url.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseCharge]
   }
-  @scala.inline
-  implicit class BaseChargeOps[Self <: BaseCharge] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPricing_type(value: PricingType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricing_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCancel_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: KeyVal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirect_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirect_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect_url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

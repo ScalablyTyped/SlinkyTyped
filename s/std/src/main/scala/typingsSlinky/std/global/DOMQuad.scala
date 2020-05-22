@@ -20,6 +20,18 @@ class DOMQuad ()
   def this(p1: DOMPointInit, p2: DOMPointInit) = this()
   def this(p1: DOMPointInit, p2: DOMPointInit, p3: DOMPointInit) = this()
   def this(p1: DOMPointInit, p2: DOMPointInit, p3: DOMPointInit, p4: DOMPointInit) = this()
+  /* CompleteClass */
+  override val p1: typingsSlinky.std.DOMPoint = js.native
+  /* CompleteClass */
+  override val p2: typingsSlinky.std.DOMPoint = js.native
+  /* CompleteClass */
+  override val p3: typingsSlinky.std.DOMPoint = js.native
+  /* CompleteClass */
+  override val p4: typingsSlinky.std.DOMPoint = js.native
+  /* CompleteClass */
+  override def getBounds(): typingsSlinky.std.DOMRect = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
 }
 
 @JSGlobal("DOMQuad")

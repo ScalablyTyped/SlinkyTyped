@@ -20,35 +20,10 @@ trait InputVpcRequest extends js.Object {
 
 object InputVpcRequest {
   @scala.inline
-  def apply(SubnetIds: listOfString): InputVpcRequest = {
+  def apply(SubnetIds: listOfString, SecurityGroupIds: listOfString = null): InputVpcRequest = {
     val __obj = js.Dynamic.literal(SubnetIds = SubnetIds.asInstanceOf[js.Any])
+    if (SecurityGroupIds != null) __obj.updateDynamic("SecurityGroupIds")(SecurityGroupIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputVpcRequest]
   }
-  @scala.inline
-  implicit class InputVpcRequestOps[Self <: InputVpcRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubnetIds(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupIds(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

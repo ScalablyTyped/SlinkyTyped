@@ -24,6 +24,40 @@ class ^[R] protected () extends Bluebird[R] {
         /* onCancel */ js.UndefOr[js.Function1[/* callback */ js.Function0[Unit], Unit]], 
         Unit
       ]) = this()
+  /**
+    * See if the underlying promise was cancelled at the creation time of this inspection object.
+    */
+  /* CompleteClass */
+  override def isCancelled(): Boolean = js.native
+  /**
+    * See if the underlying promise was fulfilled at the creation time of this inspection object.
+    */
+  /* CompleteClass */
+  override def isFulfilled(): Boolean = js.native
+  /**
+    * See if the underlying promise was defer at the creation time of this inspection object.
+    */
+  /* CompleteClass */
+  override def isPending(): Boolean = js.native
+  /**
+    * See if the underlying promise was rejected at the creation time of this inspection object.
+    */
+  /* CompleteClass */
+  override def isRejected(): Boolean = js.native
+  /**
+    * Get the rejection reason for the underlying promise. Throws if the promise wasn't rejected at the creation time of this inspection object.
+    *
+    * throws `TypeError`
+    */
+  /* CompleteClass */
+  override def reason(): js.Any = js.native
+  /**
+    * Get the fulfillment value of the underlying promise. Throws if the promise wasn't fulfilled at the creation time of this inspection object.
+    *
+    * throws `TypeError`
+    */
+  /* CompleteClass */
+  override def value(): R = js.native
 }
 
 @JSImport("cypress/types/bluebird", JSImport.Namespace)

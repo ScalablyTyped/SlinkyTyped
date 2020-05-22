@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StopBluetoothDevicesDiscoverySuccess extends js.Object {
   /**
     * 成功：ok，错误：详细信息
     */
-  var errMsg: js.UndefOr[String] = js.native
+  var errMsg: js.UndefOr[String] = js.undefined
 }
 
 object StopBluetoothDevicesDiscoverySuccess {
   @scala.inline
-  def apply(): StopBluetoothDevicesDiscoverySuccess = {
+  def apply(errMsg: String = null): StopBluetoothDevicesDiscoverySuccess = {
     val __obj = js.Dynamic.literal()
+    if (errMsg != null) __obj.updateDynamic("errMsg")(errMsg.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopBluetoothDevicesDiscoverySuccess]
   }
-  @scala.inline
-  implicit class StopBluetoothDevicesDiscoverySuccessOps[Self <: StopBluetoothDevicesDiscoverySuccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrMsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

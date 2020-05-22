@@ -5,179 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpreadsheetSheet extends js.Object {
-  var activeCell: js.UndefOr[String] = js.native
-  var columns: js.UndefOr[js.Array[SpreadsheetSheetColumn]] = js.native
-  var dataSource: js.UndefOr[DataSource] = js.native
-  var filter: js.UndefOr[SpreadsheetSheetFilter] = js.native
-  var frozenColumns: js.UndefOr[Double] = js.native
-  var frozenRows: js.UndefOr[Double] = js.native
-  var mergedCells: js.UndefOr[js.Any] = js.native
-  var name: js.UndefOr[String] = js.native
-  var rows: js.UndefOr[js.Array[SpreadsheetSheetRow]] = js.native
-  var selection: js.UndefOr[String] = js.native
-  var showGridLines: js.UndefOr[Boolean] = js.native
-  var sort: js.UndefOr[SpreadsheetSheetSort] = js.native
+  var activeCell: js.UndefOr[String] = js.undefined
+  var columns: js.UndefOr[js.Array[SpreadsheetSheetColumn]] = js.undefined
+  var dataSource: js.UndefOr[DataSource] = js.undefined
+  var filter: js.UndefOr[SpreadsheetSheetFilter] = js.undefined
+  var frozenColumns: js.UndefOr[Double] = js.undefined
+  var frozenRows: js.UndefOr[Double] = js.undefined
+  var mergedCells: js.UndefOr[js.Any] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var rows: js.UndefOr[js.Array[SpreadsheetSheetRow]] = js.undefined
+  var selection: js.UndefOr[String] = js.undefined
+  var showGridLines: js.UndefOr[Boolean] = js.undefined
+  var sort: js.UndefOr[SpreadsheetSheetSort] = js.undefined
 }
 
 object SpreadsheetSheet {
   @scala.inline
-  def apply(): SpreadsheetSheet = {
+  def apply(
+    activeCell: String = null,
+    columns: js.Array[SpreadsheetSheetColumn] = null,
+    dataSource: DataSource = null,
+    filter: SpreadsheetSheetFilter = null,
+    frozenColumns: js.UndefOr[Double] = js.undefined,
+    frozenRows: js.UndefOr[Double] = js.undefined,
+    mergedCells: js.Any = null,
+    name: String = null,
+    rows: js.Array[SpreadsheetSheetRow] = null,
+    selection: String = null,
+    showGridLines: js.UndefOr[Boolean] = js.undefined,
+    sort: SpreadsheetSheetSort = null
+  ): SpreadsheetSheet = {
     val __obj = js.Dynamic.literal()
+    if (activeCell != null) __obj.updateDynamic("activeCell")(activeCell.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (!js.isUndefined(frozenColumns)) __obj.updateDynamic("frozenColumns")(frozenColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frozenRows)) __obj.updateDynamic("frozenRows")(frozenRows.get.asInstanceOf[js.Any])
+    if (mergedCells != null) __obj.updateDynamic("mergedCells")(mergedCells.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
+    if (!js.isUndefined(showGridLines)) __obj.updateDynamic("showGridLines")(showGridLines.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpreadsheetSheet]
   }
-  @scala.inline
-  implicit class SpreadsheetSheetOps[Self <: SpreadsheetSheet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveCell(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: js.Array[SpreadsheetSheetColumn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: SpreadsheetSheetFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrozenColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrozenColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrozenRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrozenRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergedCells(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergedCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergedCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergedCells")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[SpreadsheetSheetRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowGridLines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowGridLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: SpreadsheetSheetSort): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

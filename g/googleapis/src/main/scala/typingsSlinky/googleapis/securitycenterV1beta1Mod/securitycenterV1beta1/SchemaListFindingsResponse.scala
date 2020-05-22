@@ -30,65 +30,18 @@ trait SchemaListFindingsResponse extends js.Object {
 
 object SchemaListFindingsResponse {
   @scala.inline
-  def apply(): SchemaListFindingsResponse = {
+  def apply(
+    findings: js.Array[SchemaFinding] = null,
+    nextPageToken: String = null,
+    readTime: String = null,
+    totalSize: js.UndefOr[Double] = js.undefined
+  ): SchemaListFindingsResponse = {
     val __obj = js.Dynamic.literal()
+    if (findings != null) __obj.updateDynamic("findings")(findings.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (readTime != null) __obj.updateDynamic("readTime")(readTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalSize)) __obj.updateDynamic("totalSize")(totalSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListFindingsResponse]
   }
-  @scala.inline
-  implicit class SchemaListFindingsResponseOps[Self <: SchemaListFindingsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFindings(value: js.Array[SchemaFinding]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

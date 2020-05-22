@@ -58,155 +58,33 @@ trait TableInput extends js.Object {
 
 object TableInput {
   @scala.inline
-  def apply(Name: NameString): TableInput = {
+  def apply(
+    Name: NameString,
+    Description: DescriptionString = null,
+    LastAccessTime: js.Date = null,
+    LastAnalyzedTime: js.Date = null,
+    Owner: NameString = null,
+    Parameters: ParametersMap = null,
+    PartitionKeys: ColumnList = null,
+    Retention: js.UndefOr[NonNegativeInteger] = js.undefined,
+    StorageDescriptor: StorageDescriptor = null,
+    TableType: TableTypeString = null,
+    ViewExpandedText: ViewTextString = null,
+    ViewOriginalText: ViewTextString = null
+  ): TableInput = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (LastAccessTime != null) __obj.updateDynamic("LastAccessTime")(LastAccessTime.asInstanceOf[js.Any])
+    if (LastAnalyzedTime != null) __obj.updateDynamic("LastAnalyzedTime")(LastAnalyzedTime.asInstanceOf[js.Any])
+    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
+    if (PartitionKeys != null) __obj.updateDynamic("PartitionKeys")(PartitionKeys.asInstanceOf[js.Any])
+    if (!js.isUndefined(Retention)) __obj.updateDynamic("Retention")(Retention.get.asInstanceOf[js.Any])
+    if (StorageDescriptor != null) __obj.updateDynamic("StorageDescriptor")(StorageDescriptor.asInstanceOf[js.Any])
+    if (TableType != null) __obj.updateDynamic("TableType")(TableType.asInstanceOf[js.Any])
+    if (ViewExpandedText != null) __obj.updateDynamic("ViewExpandedText")(ViewExpandedText.asInstanceOf[js.Any])
+    if (ViewOriginalText != null) __obj.updateDynamic("ViewOriginalText")(ViewOriginalText.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableInput]
   }
-  @scala.inline
-  implicit class TableInputOps[Self <: TableInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: DescriptionString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAccessTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAccessTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAccessTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAccessTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAnalyzedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAnalyzedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAnalyzedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAnalyzedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: ParametersMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionKeys(value: ColumnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetention(value: NonNegativeInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Retention")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetention: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Retention")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageDescriptor(value: StorageDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageDescriptor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageDescriptor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableType(value: TableTypeString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewExpandedText(value: ViewTextString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewExpandedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewExpandedText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewExpandedText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewOriginalText(value: ViewTextString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewOriginalText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewOriginalText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewOriginalText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

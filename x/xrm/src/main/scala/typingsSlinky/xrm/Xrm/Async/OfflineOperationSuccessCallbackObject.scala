@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Object passed to OfflineOperationSuccessCallbackDelegate;
   */
-@js.native
 trait OfflineOperationSuccessCallbackObject extends js.Object {
   /**
     * GUID of the record;
     */
-  var id: String = js.native
+  var id: String
   /**
     * Logical name of the entity.
     */
-  var logicalName: String = js.native
+  var logicalName: String
 }
 
 object OfflineOperationSuccessCallbackObject {
@@ -25,25 +24,5 @@ object OfflineOperationSuccessCallbackObject {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], logicalName = logicalName.asInstanceOf[js.Any])
     __obj.asInstanceOf[OfflineOperationSuccessCallbackObject]
   }
-  @scala.inline
-  implicit class OfflineOperationSuccessCallbackObjectOps[Self <: OfflineOperationSuccessCallbackObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLogicalName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logicalName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

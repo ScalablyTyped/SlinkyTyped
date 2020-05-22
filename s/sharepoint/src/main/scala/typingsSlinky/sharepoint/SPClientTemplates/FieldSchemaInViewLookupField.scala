@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldSchemaInViewLookupField extends FieldSchemaInView {
   /** Either "TRUE" or "FALSE" */
-  var AllowMultipleValues: String = js.native
+  var AllowMultipleValues: String
   /** Target lookup list display form URL, including PageType and List attributes. */
-  var DispFormUrl: String = js.native
+  var DispFormUrl: String
   /** Either "TRUE" or "FALSE" */
-  var HasPrefix: String = js.native
+  var HasPrefix: String
 }
 
 object FieldSchemaInViewLookupField {
@@ -44,31 +43,5 @@ object FieldSchemaInViewLookupField {
     val __obj = js.Dynamic.literal(AllowGridEditing = AllowGridEditing.asInstanceOf[js.Any], AllowMultipleValues = AllowMultipleValues.asInstanceOf[js.Any], CalloutMenu = CalloutMenu.asInstanceOf[js.Any], ClassInfo = ClassInfo.asInstanceOf[js.Any], DispFormUrl = DispFormUrl.asInstanceOf[js.Any], DisplayName = DisplayName.asInstanceOf[js.Any], Explicit = Explicit.asInstanceOf[js.Any], FieldTitle = FieldTitle.asInstanceOf[js.Any], FieldType = FieldType.asInstanceOf[js.Any], Filterable = Filterable.asInstanceOf[js.Any], GridActiveAndReadOnly = GridActiveAndReadOnly.asInstanceOf[js.Any], GroupField = GroupField.asInstanceOf[js.Any], HasPrefix = HasPrefix.asInstanceOf[js.Any], ID = ID.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], ReadOnly = ReadOnly.asInstanceOf[js.Any], RealFieldName = RealFieldName.asInstanceOf[js.Any], ResultType = ResultType.asInstanceOf[js.Any], Sortable = Sortable.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], css = css.asInstanceOf[js.Any], fieldRenderer = fieldRenderer.asInstanceOf[js.Any], listItemMenu = listItemMenu.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldSchemaInViewLookupField]
   }
-  @scala.inline
-  implicit class FieldSchemaInViewLookupFieldOps[Self <: FieldSchemaInViewLookupField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowMultipleValues(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowMultipleValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDispFormUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DispFormUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

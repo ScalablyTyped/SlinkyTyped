@@ -19,41 +19,11 @@ trait VpcEndpointServiceAllowedPrincipleState extends js.Object {
 
 object VpcEndpointServiceAllowedPrincipleState {
   @scala.inline
-  def apply(): VpcEndpointServiceAllowedPrincipleState = {
+  def apply(principalArn: Input[String] = null, vpcEndpointServiceId: Input[String] = null): VpcEndpointServiceAllowedPrincipleState = {
     val __obj = js.Dynamic.literal()
+    if (principalArn != null) __obj.updateDynamic("principalArn")(principalArn.asInstanceOf[js.Any])
+    if (vpcEndpointServiceId != null) __obj.updateDynamic("vpcEndpointServiceId")(vpcEndpointServiceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcEndpointServiceAllowedPrincipleState]
   }
-  @scala.inline
-  implicit class VpcEndpointServiceAllowedPrincipleStateOps[Self <: VpcEndpointServiceAllowedPrincipleState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrincipalArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principalArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipalArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principalArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcEndpointServiceId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcEndpointServiceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcEndpointServiceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcEndpointServiceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

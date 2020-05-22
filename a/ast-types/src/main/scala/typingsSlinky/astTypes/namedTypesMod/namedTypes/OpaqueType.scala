@@ -16,20 +16,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
-@js.native
 trait OpaqueType
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var id: IdentifierKind = js.native
-  var impltype: FlowTypeKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var supertype: FlowTypeKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.OpaqueType = js.native
-  var typeParameters: TypeParameterDeclarationKind | Null = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var id: IdentifierKind
+  var impltype: FlowTypeKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var supertype: FlowTypeKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.OpaqueType
+  var typeParameters: TypeParameterDeclarationKind | Null
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.OpaqueType")

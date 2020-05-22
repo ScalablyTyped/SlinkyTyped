@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OpenPageMarginsDialogCommand")
 @js.native
 class OpenPageMarginsDialogCommand ()
-  extends typingsSlinky.devexpressWeb.OpenPageMarginsDialogCommand
+  extends typingsSlinky.devexpressWeb.OpenPageMarginsDialogCommand {
+  /**
+    * Executes the OpenPageMarginsDialogCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

@@ -19,29 +19,10 @@ trait SchemaGooglePrivacyDlpV2WordList extends js.Object {
 
 object SchemaGooglePrivacyDlpV2WordList {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2WordList = {
+  def apply(words: js.Array[String] = null): SchemaGooglePrivacyDlpV2WordList = {
     val __obj = js.Dynamic.literal()
+    if (words != null) __obj.updateDynamic("words")(words.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2WordList]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2WordListOps[Self <: SchemaGooglePrivacyDlpV2WordList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWords(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

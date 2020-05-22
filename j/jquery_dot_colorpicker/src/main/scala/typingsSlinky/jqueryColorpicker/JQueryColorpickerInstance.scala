@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JQueryColorpickerInstance extends js.Object {
-  def close(): Unit = js.native
-  def destroy(): Unit = js.native
-  def open(): Unit = js.native
-  def setColor(color: js.Any): Unit = js.native
+  def close(): Unit
+  def destroy(): Unit
+  def open(): Unit
+  def setColor(color: js.Any): Unit
 }
 
 object JQueryColorpickerInstance {
@@ -18,37 +17,5 @@ object JQueryColorpickerInstance {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), destroy = js.Any.fromFunction0(destroy), open = js.Any.fromFunction0(open), setColor = js.Any.fromFunction1(setColor))
     __obj.asInstanceOf[JQueryColorpickerInstance]
   }
-  @scala.inline
-  implicit class JQueryColorpickerInstanceOps[Self <: JQueryColorpickerInstance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOpen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetColor(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setColor")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

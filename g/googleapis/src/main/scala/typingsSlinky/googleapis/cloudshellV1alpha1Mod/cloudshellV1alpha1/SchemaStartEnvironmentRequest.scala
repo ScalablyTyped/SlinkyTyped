@@ -20,29 +20,10 @@ trait SchemaStartEnvironmentRequest extends js.Object {
 
 object SchemaStartEnvironmentRequest {
   @scala.inline
-  def apply(): SchemaStartEnvironmentRequest = {
+  def apply(accessToken: String = null): SchemaStartEnvironmentRequest = {
     val __obj = js.Dynamic.literal()
+    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStartEnvironmentRequest]
   }
-  @scala.inline
-  implicit class SchemaStartEnvironmentRequestOps[Self <: SchemaStartEnvironmentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

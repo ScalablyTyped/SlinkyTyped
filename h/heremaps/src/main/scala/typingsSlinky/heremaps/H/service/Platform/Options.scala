@@ -12,69 +12,26 @@ import scala.scalajs.js.annotation._
   * @property useCIT {boolean=} - Indicates whether the Customer Integration Testing should be used, default is false
   * @property useHTTPS {boolean=} - Indicates whether secure communication should be used, default is false
   */
-@js.native
 trait Options extends js.Object {
-  var apikey: String = js.native
-  var baseUrl: js.UndefOr[Url] = js.native
-  var useCIT: js.UndefOr[Boolean] = js.native
-  var useHTTPS: js.UndefOr[Boolean] = js.native
+  var apikey: String
+  var baseUrl: js.UndefOr[Url] = js.undefined
+  var useCIT: js.UndefOr[Boolean] = js.undefined
+  var useHTTPS: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(apikey: String): Options = {
+  def apply(
+    apikey: String,
+    baseUrl: Url = null,
+    useCIT: js.UndefOr[Boolean] = js.undefined,
+    useHTTPS: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal(apikey = apikey.asInstanceOf[js.Any])
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(useCIT)) __obj.updateDynamic("useCIT")(useCIT.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useHTTPS)) __obj.updateDynamic("useHTTPS")(useHTTPS.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApikey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apikey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseUrl(value: Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseCIT(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCIT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseCIT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCIT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseHTTPS(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useHTTPS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseHTTPS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useHTTPS")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

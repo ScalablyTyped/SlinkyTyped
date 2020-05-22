@@ -24,41 +24,11 @@ trait SchemaGooglePrivacyDlpV2Regex extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Regex {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2Regex = {
+  def apply(groupIndexes: js.Array[Double] = null, pattern: String = null): SchemaGooglePrivacyDlpV2Regex = {
     val __obj = js.Dynamic.literal()
+    if (groupIndexes != null) __obj.updateDynamic("groupIndexes")(groupIndexes.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Regex]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2RegexOps[Self <: SchemaGooglePrivacyDlpV2Regex] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupIndexes(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

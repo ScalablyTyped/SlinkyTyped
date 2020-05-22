@@ -4,203 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellSelectedEventArgs extends js.Object {
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Returns the cell index on the selection.
     */
-  var cellIndex: js.UndefOr[Double] = js.native
+  var cellIndex: js.UndefOr[Double] = js.undefined
   /** Returns the selecting record object
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /** Returns the Gantt object Model
     */
-  var model: js.UndefOr[js.Any] = js.native
+  var model: js.UndefOr[js.Any] = js.undefined
   /** Returns the previously selected cell index
     */
-  var previousCellIndex: js.UndefOr[js.Any] = js.native
+  var previousCellIndex: js.UndefOr[js.Any] = js.undefined
   /** Returns the previously selected row data
     */
-  var previousData: js.UndefOr[js.Any] = js.native
+  var previousData: js.UndefOr[js.Any] = js.undefined
   /** Returns the previously selected row index
     */
-  var previousRowIndex: js.UndefOr[js.Any] = js.native
+  var previousRowIndex: js.UndefOr[js.Any] = js.undefined
   /** Returns the previously selected cell element
     */
-  var previousTargetCell: js.UndefOr[js.Any] = js.native
+  var previousTargetCell: js.UndefOr[js.Any] = js.undefined
   /** Returns the previously selected row element
     */
-  var previousTargetRow: js.UndefOr[js.Any] = js.native
+  var previousTargetRow: js.UndefOr[js.Any] = js.undefined
   /** Returns the row index on the selection
     */
-  var rowIndex: js.UndefOr[Double] = js.native
+  var rowIndex: js.UndefOr[Double] = js.undefined
   /** Returns the selecting cell element
     */
-  var targetCell: js.UndefOr[js.Any] = js.native
+  var targetCell: js.UndefOr[js.Any] = js.undefined
   /** Returns the selecting row element
     */
-  var targetRow: js.UndefOr[js.Any] = js.native
+  var targetRow: js.UndefOr[js.Any] = js.undefined
 }
 
 object CellSelectedEventArgs {
   @scala.inline
-  def apply(): CellSelectedEventArgs = {
+  def apply(
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    cellIndex: js.UndefOr[Double] = js.undefined,
+    data: js.Any = null,
+    model: js.Any = null,
+    previousCellIndex: js.Any = null,
+    previousData: js.Any = null,
+    previousRowIndex: js.Any = null,
+    previousTargetCell: js.Any = null,
+    previousTargetRow: js.Any = null,
+    rowIndex: js.UndefOr[Double] = js.undefined,
+    targetCell: js.Any = null,
+    targetRow: js.Any = null
+  ): CellSelectedEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellIndex)) __obj.updateDynamic("cellIndex")(cellIndex.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (previousCellIndex != null) __obj.updateDynamic("previousCellIndex")(previousCellIndex.asInstanceOf[js.Any])
+    if (previousData != null) __obj.updateDynamic("previousData")(previousData.asInstanceOf[js.Any])
+    if (previousRowIndex != null) __obj.updateDynamic("previousRowIndex")(previousRowIndex.asInstanceOf[js.Any])
+    if (previousTargetCell != null) __obj.updateDynamic("previousTargetCell")(previousTargetCell.asInstanceOf[js.Any])
+    if (previousTargetRow != null) __obj.updateDynamic("previousTargetRow")(previousTargetRow.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowIndex)) __obj.updateDynamic("rowIndex")(rowIndex.get.asInstanceOf[js.Any])
+    if (targetCell != null) __obj.updateDynamic("targetCell")(targetCell.asInstanceOf[js.Any])
+    if (targetRow != null) __obj.updateDynamic("targetRow")(targetRow.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellSelectedEventArgs]
   }
-  @scala.inline
-  implicit class CellSelectedEventArgsOps[Self <: CellSelectedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousCellIndex(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousCellIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousCellIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousCellIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousRowIndex(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousRowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousRowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousTargetCell(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousTargetCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousTargetCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousTargetCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousTargetRow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousTargetRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousTargetRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousTargetRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetCell(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetRow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

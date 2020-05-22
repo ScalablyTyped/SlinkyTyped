@@ -27,41 +27,11 @@ trait SchemaSchemaConfig extends js.Object {
 
 object SchemaSchemaConfig {
   @scala.inline
-  def apply(): SchemaSchemaConfig = {
+  def apply(recursiveStructureDepth: String = null, schemaType: String = null): SchemaSchemaConfig = {
     val __obj = js.Dynamic.literal()
+    if (recursiveStructureDepth != null) __obj.updateDynamic("recursiveStructureDepth")(recursiveStructureDepth.asInstanceOf[js.Any])
+    if (schemaType != null) __obj.updateDynamic("schemaType")(schemaType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSchemaConfig]
   }
-  @scala.inline
-  implicit class SchemaSchemaConfigOps[Self <: SchemaSchemaConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRecursiveStructureDepth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveStructureDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursiveStructureDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveStructureDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

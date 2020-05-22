@@ -23,29 +23,10 @@ trait SchemaDisplayedProperty extends js.Object {
 
 object SchemaDisplayedProperty {
   @scala.inline
-  def apply(): SchemaDisplayedProperty = {
+  def apply(propertyName: String = null): SchemaDisplayedProperty = {
     val __obj = js.Dynamic.literal()
+    if (propertyName != null) __obj.updateDynamic("propertyName")(propertyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDisplayedProperty]
   }
-  @scala.inline
-  implicit class SchemaDisplayedPropertyOps[Self <: SchemaDisplayedProperty] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPropertyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPropertyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

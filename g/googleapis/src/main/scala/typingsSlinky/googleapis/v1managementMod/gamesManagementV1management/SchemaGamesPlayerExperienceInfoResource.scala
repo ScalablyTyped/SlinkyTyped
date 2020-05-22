@@ -32,65 +32,18 @@ trait SchemaGamesPlayerExperienceInfoResource extends js.Object {
 
 object SchemaGamesPlayerExperienceInfoResource {
   @scala.inline
-  def apply(): SchemaGamesPlayerExperienceInfoResource = {
+  def apply(
+    currentExperiencePoints: String = null,
+    currentLevel: SchemaGamesPlayerLevelResource = null,
+    lastLevelUpTimestampMillis: String = null,
+    nextLevel: SchemaGamesPlayerLevelResource = null
+  ): SchemaGamesPlayerExperienceInfoResource = {
     val __obj = js.Dynamic.literal()
+    if (currentExperiencePoints != null) __obj.updateDynamic("currentExperiencePoints")(currentExperiencePoints.asInstanceOf[js.Any])
+    if (currentLevel != null) __obj.updateDynamic("currentLevel")(currentLevel.asInstanceOf[js.Any])
+    if (lastLevelUpTimestampMillis != null) __obj.updateDynamic("lastLevelUpTimestampMillis")(lastLevelUpTimestampMillis.asInstanceOf[js.Any])
+    if (nextLevel != null) __obj.updateDynamic("nextLevel")(nextLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGamesPlayerExperienceInfoResource]
   }
-  @scala.inline
-  implicit class SchemaGamesPlayerExperienceInfoResourceOps[Self <: SchemaGamesPlayerExperienceInfoResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentExperiencePoints(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentExperiencePoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentExperiencePoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentExperiencePoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentLevel(value: SchemaGamesPlayerLevelResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastLevelUpTimestampMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastLevelUpTimestampMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastLevelUpTimestampMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastLevelUpTimestampMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextLevel(value: SchemaGamesPlayerLevelResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextLevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

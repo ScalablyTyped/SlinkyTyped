@@ -12,10 +12,9 @@ import scala.scalajs.js.annotation._
   * service are Abort and Approve.
   * @since OOo 3.2
   */
-@js.native
 trait DocumentMSPasswordRequest extends PasswordRequest {
   /** the name of the document (more properly, the URL of the document) */
-  var Name: String = js.native
+  var Name: String
 }
 
 object DocumentMSPasswordRequest {
@@ -30,19 +29,5 @@ object DocumentMSPasswordRequest {
     val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], Mode = Mode.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentMSPasswordRequest]
   }
-  @scala.inline
-  implicit class DocumentMSPasswordRequestOps[Self <: DocumentMSPasswordRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

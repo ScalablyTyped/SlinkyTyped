@@ -18,29 +18,10 @@ trait SchemaDebugOptions extends js.Object {
 
 object SchemaDebugOptions {
   @scala.inline
-  def apply(): SchemaDebugOptions = {
+  def apply(enableDebugging: js.UndefOr[Boolean] = js.undefined): SchemaDebugOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableDebugging)) __obj.updateDynamic("enableDebugging")(enableDebugging.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDebugOptions]
   }
-  @scala.inline
-  implicit class SchemaDebugOptionsOps[Self <: SchemaDebugOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableDebugging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDebugging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableDebugging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDebugging")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

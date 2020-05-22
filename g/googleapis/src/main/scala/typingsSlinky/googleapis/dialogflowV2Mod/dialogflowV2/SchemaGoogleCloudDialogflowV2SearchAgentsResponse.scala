@@ -23,41 +23,11 @@ trait SchemaGoogleCloudDialogflowV2SearchAgentsResponse extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2SearchAgentsResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2SearchAgentsResponse = {
+  def apply(agents: js.Array[SchemaGoogleCloudDialogflowV2Agent] = null, nextPageToken: String = null): SchemaGoogleCloudDialogflowV2SearchAgentsResponse = {
     val __obj = js.Dynamic.literal()
+    if (agents != null) __obj.updateDynamic("agents")(agents.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2SearchAgentsResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2SearchAgentsResponseOps[Self <: SchemaGoogleCloudDialogflowV2SearchAgentsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgents(value: js.Array[SchemaGoogleCloudDialogflowV2Agent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

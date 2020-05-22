@@ -20,29 +20,10 @@ trait SchemaCreateCustomerRequest extends js.Object {
 
 object SchemaCreateCustomerRequest {
   @scala.inline
-  def apply(): SchemaCreateCustomerRequest = {
+  def apply(customer: SchemaCompany = null): SchemaCreateCustomerRequest = {
     val __obj = js.Dynamic.literal()
+    if (customer != null) __obj.updateDynamic("customer")(customer.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateCustomerRequest]
   }
-  @scala.inline
-  implicit class SchemaCreateCustomerRequestOps[Self <: SchemaCreateCustomerRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomer(value: SchemaCompany): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.anon.EventItem
+import typingsSlinky.baseui.anon.EventSyntheticEvent
 import typingsSlinky.baseui.sideNavigationMod.Item
 import typingsSlinky.baseui.sideNavigationMod.NavigationOverrides
 import typingsSlinky.baseui.sideNavigationMod.NavigationProps
@@ -26,7 +26,7 @@ object Navigation {
     @scala.inline
     def mapItem(value: /* item */ Item => Item): this.type = set("mapItem", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* args */ EventItem => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* args */ EventSyntheticEvent => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: NavigationOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   }

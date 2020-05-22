@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientReportDesigner.CustomizeFieldListActions event.
   */
-@js.native
 trait ASPxClientReportDesignerCustomizeFieldListActionsEventArgs extends ASPxClientEventArgs {
   /**
     * Provides access to the current item's available actions.
     */
-  var Actions: js.Array[_] = js.native
+  var Actions: js.Array[_]
   /**
     * Specifies the Field List's item that is currently being processed.
     */
-  var Item: js.Any = js.native
+  var Item: js.Any
 }
 
 object ASPxClientReportDesignerCustomizeFieldListActionsEventArgs {
@@ -25,25 +24,5 @@ object ASPxClientReportDesignerCustomizeFieldListActionsEventArgs {
     val __obj = js.Dynamic.literal(Actions = Actions.asInstanceOf[js.Any], Item = Item.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientReportDesignerCustomizeFieldListActionsEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientReportDesignerCustomizeFieldListActionsEventArgsOps[Self <: ASPxClientReportDesignerCustomizeFieldListActionsEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

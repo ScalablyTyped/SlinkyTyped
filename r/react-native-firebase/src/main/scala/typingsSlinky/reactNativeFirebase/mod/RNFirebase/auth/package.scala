@@ -9,4 +9,6 @@ package object auth {
     /* user */ typingsSlinky.reactNativeFirebase.mod.RNFirebase.auth.OrNull[typingsSlinky.reactNativeFirebase.mod.RNFirebase.User], 
     scala.Unit
   ]
+  type AuthResult = typingsSlinky.reactNativeFirebase.anon.Authenticated | scala.Null
+  type OrNull[T] = T | scala.Null
 }

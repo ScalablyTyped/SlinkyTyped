@@ -4,75 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleActionsV2Conversation extends js.Object {
   /**
     * Unique ID for the multi-turn conversation. It's assigned for the first
     * turn. After that it remains the same for subsequent conversation turns
     * until the conversation is terminated.
     */
-  var conversationId: js.UndefOr[String] = js.native
+  var conversationId: js.UndefOr[String] = js.undefined
   /**
     * Opaque token specified by the Action in the last conversation turn. It can
     * be used by an Action to track the conversation or to store conversation
     * related data.
     */
-  var conversationToken: js.UndefOr[String] = js.native
+  var conversationToken: js.UndefOr[String] = js.undefined
   /**
     * Type indicates the state of the conversation in its lifecycle.
     */
-  var `type`: js.UndefOr[GoogleActionsV2ConversationType] = js.native
+  var `type`: js.UndefOr[GoogleActionsV2ConversationType] = js.undefined
 }
 
 object GoogleActionsV2Conversation {
   @scala.inline
-  def apply(): GoogleActionsV2Conversation = {
+  def apply(
+    conversationId: String = null,
+    conversationToken: String = null,
+    `type`: GoogleActionsV2ConversationType = null
+  ): GoogleActionsV2Conversation = {
     val __obj = js.Dynamic.literal()
+    if (conversationId != null) __obj.updateDynamic("conversationId")(conversationId.asInstanceOf[js.Any])
+    if (conversationToken != null) __obj.updateDynamic("conversationToken")(conversationToken.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2Conversation]
   }
-  @scala.inline
-  implicit class GoogleActionsV2ConversationOps[Self <: GoogleActionsV2Conversation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConversationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConversationToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: GoogleActionsV2ConversationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

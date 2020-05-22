@@ -8,12 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to access the {@link FootnoteSettings} within the context (e.g. document). */
-@js.native
 trait XEndnotesSettingsSupplier extends XInterface {
   /** @returns {@link EndnoteSettings} of the object. */
-  val EndnotesSettings: XPropertySet = js.native
+  val EndnotesSettings: XPropertySet
   /** @returns {@link EndnoteSettings} of the object. */
-  def getEndnotesSettings(): XPropertySet = js.native
+  def getEndnotesSettings(): XPropertySet
 }
 
 object XEndnotesSettingsSupplier {
@@ -28,25 +27,5 @@ object XEndnotesSettingsSupplier {
     val __obj = js.Dynamic.literal(EndnotesSettings = EndnotesSettings.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getEndnotesSettings = js.Any.fromFunction0(getEndnotesSettings), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XEndnotesSettingsSupplier]
   }
-  @scala.inline
-  implicit class XEndnotesSettingsSupplierOps[Self <: XEndnotesSettingsSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndnotesSettings(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndnotesSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetEndnotesSettings(value: () => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEndnotesSettings")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,6 @@ import typingsSlinky.rcTable.anon.Children
 import typingsSlinky.rcTable.bodyRowMod.BodyRowProps
 import typingsSlinky.rcTable.interfaceMod.CustomizeComponent
 import typingsSlinky.rcTable.interfaceMod.Key
-import typingsSlinky.rcTable.interfaceMod.StickyOffsets
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.std.Set
@@ -45,10 +44,9 @@ object BodyRow {
     recordKey: Key,
     rowComponent: CustomizeComponent,
     rowExpandable: RecordType => Boolean,
-    rowKey: typingsSlinky.react.mod.Key,
-    stickyOffsets: StickyOffsets
+    rowKey: typingsSlinky.react.mod.Key
   ): Builder[RecordType] = {
-    val __props = js.Dynamic.literal(cellComponent = cellComponent.asInstanceOf[js.Any], childrenColumnName = childrenColumnName.asInstanceOf[js.Any], expandedKeys = expandedKeys.asInstanceOf[js.Any], getRowKey = js.Any.fromFunction2(getRowKey), index = index.asInstanceOf[js.Any], onRow = js.Any.fromFunction2(onRow), record = record.asInstanceOf[js.Any], recordKey = recordKey.asInstanceOf[js.Any], rowComponent = rowComponent.asInstanceOf[js.Any], rowExpandable = js.Any.fromFunction1(rowExpandable), rowKey = rowKey.asInstanceOf[js.Any], stickyOffsets = stickyOffsets.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(cellComponent = cellComponent.asInstanceOf[js.Any], childrenColumnName = childrenColumnName.asInstanceOf[js.Any], expandedKeys = expandedKeys.asInstanceOf[js.Any], getRowKey = js.Any.fromFunction2(getRowKey), index = index.asInstanceOf[js.Any], onRow = js.Any.fromFunction2(onRow), record = record.asInstanceOf[js.Any], recordKey = recordKey.asInstanceOf[js.Any], rowComponent = rowComponent.asInstanceOf[js.Any], rowExpandable = js.Any.fromFunction1(rowExpandable), rowKey = rowKey.asInstanceOf[js.Any])
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[BodyRowProps[RecordType]]))
   }
 }

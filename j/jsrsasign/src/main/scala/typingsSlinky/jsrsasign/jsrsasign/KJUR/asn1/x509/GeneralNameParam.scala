@@ -1,12 +1,5 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.anon.CertissuerString
-import typingsSlinky.jsrsasign.anon.Certsubj
-import typingsSlinky.jsrsasign.anon.Dn
-import typingsSlinky.jsrsasign.anon.Dns
-import typingsSlinky.jsrsasign.anon.Ldapdn
-import typingsSlinky.jsrsasign.anon.Rfc822
-import typingsSlinky.jsrsasign.anon.UriString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,18 +17,39 @@ trait GeneralNameParam extends js.Object
 
 object GeneralNameParam {
   @scala.inline
-  implicit def apply(value: CertissuerString): GeneralNameParam = value.asInstanceOf[GeneralNameParam]
+  def Rfc822(rfc822: String): GeneralNameParam = {
+    val __obj = js.Dynamic.literal(rfc822 = rfc822.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeneralNameParam]
+  }
   @scala.inline
-  implicit def apply(value: Certsubj): GeneralNameParam = value.asInstanceOf[GeneralNameParam]
+  def Certsubj(certsubj: String): GeneralNameParam = {
+    val __obj = js.Dynamic.literal(certsubj = certsubj.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeneralNameParam]
+  }
   @scala.inline
-  implicit def apply(value: Dn): GeneralNameParam = value.asInstanceOf[GeneralNameParam]
+  def CertissuerString(certissuer: String): GeneralNameParam = {
+    val __obj = js.Dynamic.literal(certissuer = certissuer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeneralNameParam]
+  }
   @scala.inline
-  implicit def apply(value: Dns): GeneralNameParam = value.asInstanceOf[GeneralNameParam]
+  def Ldapdn(ldapdn: String): GeneralNameParam = {
+    val __obj = js.Dynamic.literal(ldapdn = ldapdn.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeneralNameParam]
+  }
   @scala.inline
-  implicit def apply(value: Ldapdn): GeneralNameParam = value.asInstanceOf[GeneralNameParam]
+  def Dns(dns: String): GeneralNameParam = {
+    val __obj = js.Dynamic.literal(dns = dns.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeneralNameParam]
+  }
   @scala.inline
-  implicit def apply(value: Rfc822): GeneralNameParam = value.asInstanceOf[GeneralNameParam]
+  def UriString(uri: String): GeneralNameParam = {
+    val __obj = js.Dynamic.literal(uri = uri.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeneralNameParam]
+  }
   @scala.inline
-  implicit def apply(value: UriString): GeneralNameParam = value.asInstanceOf[GeneralNameParam]
+  def Dn(dn: String): GeneralNameParam = {
+    val __obj = js.Dynamic.literal(dn = dn.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeneralNameParam]
+  }
 }
 

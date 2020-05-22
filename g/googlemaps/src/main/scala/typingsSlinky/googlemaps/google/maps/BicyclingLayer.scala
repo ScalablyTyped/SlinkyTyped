@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** Layers *****/
 @js.native
 trait BicyclingLayer extends MVCObject {
   def getMap(): Map[Element] = js.native

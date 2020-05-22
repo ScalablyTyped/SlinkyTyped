@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PointAssignment extends js.Object {
-  var configuration: ShallowReference = js.native
-  var tester: IdentityRef = js.native
+  var configuration: ShallowReference
+  var tester: IdentityRef
 }
 
 object PointAssignment {
@@ -17,25 +16,5 @@ object PointAssignment {
     val __obj = js.Dynamic.literal(configuration = configuration.asInstanceOf[js.Any], tester = tester.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointAssignment]
   }
-  @scala.inline
-  implicit class PointAssignmentOps[Self <: PointAssignment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfiguration(value: ShallowReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTester(value: IdentityRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tester")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

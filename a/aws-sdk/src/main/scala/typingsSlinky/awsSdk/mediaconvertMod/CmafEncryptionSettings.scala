@@ -34,89 +34,22 @@ trait CmafEncryptionSettings extends js.Object {
 
 object CmafEncryptionSettings {
   @scala.inline
-  def apply(): CmafEncryptionSettings = {
+  def apply(
+    ConstantInitializationVector: stringMin32Max32Pattern09aFAF32 = null,
+    EncryptionMethod: CmafEncryptionType = null,
+    InitializationVectorInManifest: CmafInitializationVectorInManifest = null,
+    SpekeKeyProvider: SpekeKeyProviderCmaf = null,
+    StaticKeyProvider: StaticKeyProvider = null,
+    Type: CmafKeyProviderType = null
+  ): CmafEncryptionSettings = {
     val __obj = js.Dynamic.literal()
+    if (ConstantInitializationVector != null) __obj.updateDynamic("ConstantInitializationVector")(ConstantInitializationVector.asInstanceOf[js.Any])
+    if (EncryptionMethod != null) __obj.updateDynamic("EncryptionMethod")(EncryptionMethod.asInstanceOf[js.Any])
+    if (InitializationVectorInManifest != null) __obj.updateDynamic("InitializationVectorInManifest")(InitializationVectorInManifest.asInstanceOf[js.Any])
+    if (SpekeKeyProvider != null) __obj.updateDynamic("SpekeKeyProvider")(SpekeKeyProvider.asInstanceOf[js.Any])
+    if (StaticKeyProvider != null) __obj.updateDynamic("StaticKeyProvider")(StaticKeyProvider.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[CmafEncryptionSettings]
   }
-  @scala.inline
-  implicit class CmafEncryptionSettingsOps[Self <: CmafEncryptionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConstantInitializationVector(value: stringMin32Max32Pattern09aFAF32): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantInitializationVector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstantInitializationVector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantInitializationVector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionMethod(value: CmafEncryptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitializationVectorInManifest(value: CmafInitializationVectorInManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVectorInManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitializationVectorInManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVectorInManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpekeKeyProvider(value: SpekeKeyProviderCmaf): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpekeKeyProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticKeyProvider(value: StaticKeyProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticKeyProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticKeyProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticKeyProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: CmafKeyProviderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

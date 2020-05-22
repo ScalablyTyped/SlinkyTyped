@@ -7,309 +7,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CoreOptions extends js.Object {
-  var activeButtonClass: js.UndefOr[String] = js.native
-  var allowMultiParagraphSelection: js.UndefOr[Boolean] = js.native
-  var anchor: js.UndefOr[AnchorFormOptions] = js.native
-  var anchorPreview: js.UndefOr[AnchorPreviewOptions | Boolean] = js.native
-  var autoLink: js.UndefOr[Boolean] = js.native
-  var buttonLabels: js.UndefOr[String | Boolean] = js.native
-  var contentWindow: js.UndefOr[Window] = js.native
-  var delay: js.UndefOr[Double] = js.native
-  var disableDoubleReturn: js.UndefOr[Boolean] = js.native
-  var disableEditing: js.UndefOr[Boolean] = js.native
-  var disableExtraSpaces: js.UndefOr[Boolean] = js.native
-  var disableReturn: js.UndefOr[Boolean] = js.native
-  var elementsContainer: js.UndefOr[HTMLElement] = js.native
-  var extensions: js.UndefOr[js.Any] = js.native
-  var imageDragging: js.UndefOr[Boolean] = js.native
-  var keyboardCommands: js.UndefOr[KeyboardCommandsOptions | Boolean] = js.native
-  var ownerDocument: js.UndefOr[Document] = js.native
-  var paste: js.UndefOr[PasteOptions] = js.native
-  var placeholder: js.UndefOr[PlaceholderOptions | Boolean] = js.native
-  var spellcheck: js.UndefOr[Boolean] = js.native
-  var targetBlank: js.UndefOr[Boolean] = js.native
-  var toolbar: js.UndefOr[ToolbarOptions | Boolean] = js.native
+  var activeButtonClass: js.UndefOr[String] = js.undefined
+  var allowMultiParagraphSelection: js.UndefOr[Boolean] = js.undefined
+  var anchor: js.UndefOr[AnchorFormOptions] = js.undefined
+  var anchorPreview: js.UndefOr[AnchorPreviewOptions | Boolean] = js.undefined
+  var autoLink: js.UndefOr[Boolean] = js.undefined
+  var buttonLabels: js.UndefOr[String | Boolean] = js.undefined
+  var contentWindow: js.UndefOr[Window] = js.undefined
+  var delay: js.UndefOr[Double] = js.undefined
+  var disableDoubleReturn: js.UndefOr[Boolean] = js.undefined
+  var disableEditing: js.UndefOr[Boolean] = js.undefined
+  var disableExtraSpaces: js.UndefOr[Boolean] = js.undefined
+  var disableReturn: js.UndefOr[Boolean] = js.undefined
+  var elementsContainer: js.UndefOr[HTMLElement] = js.undefined
+  var extensions: js.UndefOr[js.Any] = js.undefined
+  var imageDragging: js.UndefOr[Boolean] = js.undefined
+  var keyboardCommands: js.UndefOr[KeyboardCommandsOptions | Boolean] = js.undefined
+  var ownerDocument: js.UndefOr[Document] = js.undefined
+  var paste: js.UndefOr[PasteOptions] = js.undefined
+  var placeholder: js.UndefOr[PlaceholderOptions | Boolean] = js.undefined
+  var spellcheck: js.UndefOr[Boolean] = js.undefined
+  var targetBlank: js.UndefOr[Boolean] = js.undefined
+  var toolbar: js.UndefOr[ToolbarOptions | Boolean] = js.undefined
 }
 
 object CoreOptions {
   @scala.inline
-  def apply(): CoreOptions = {
+  def apply(
+    activeButtonClass: String = null,
+    allowMultiParagraphSelection: js.UndefOr[Boolean] = js.undefined,
+    anchor: AnchorFormOptions = null,
+    anchorPreview: AnchorPreviewOptions | Boolean = null,
+    autoLink: js.UndefOr[Boolean] = js.undefined,
+    buttonLabels: String | Boolean = null,
+    contentWindow: Window = null,
+    delay: js.UndefOr[Double] = js.undefined,
+    disableDoubleReturn: js.UndefOr[Boolean] = js.undefined,
+    disableEditing: js.UndefOr[Boolean] = js.undefined,
+    disableExtraSpaces: js.UndefOr[Boolean] = js.undefined,
+    disableReturn: js.UndefOr[Boolean] = js.undefined,
+    elementsContainer: HTMLElement = null,
+    extensions: js.Any = null,
+    imageDragging: js.UndefOr[Boolean] = js.undefined,
+    keyboardCommands: KeyboardCommandsOptions | Boolean = null,
+    ownerDocument: Document = null,
+    paste: PasteOptions = null,
+    placeholder: PlaceholderOptions | Boolean = null,
+    spellcheck: js.UndefOr[Boolean] = js.undefined,
+    targetBlank: js.UndefOr[Boolean] = js.undefined,
+    toolbar: ToolbarOptions | Boolean = null
+  ): CoreOptions = {
     val __obj = js.Dynamic.literal()
+    if (activeButtonClass != null) __obj.updateDynamic("activeButtonClass")(activeButtonClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowMultiParagraphSelection)) __obj.updateDynamic("allowMultiParagraphSelection")(allowMultiParagraphSelection.get.asInstanceOf[js.Any])
+    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
+    if (anchorPreview != null) __obj.updateDynamic("anchorPreview")(anchorPreview.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoLink)) __obj.updateDynamic("autoLink")(autoLink.get.asInstanceOf[js.Any])
+    if (buttonLabels != null) __obj.updateDynamic("buttonLabels")(buttonLabels.asInstanceOf[js.Any])
+    if (contentWindow != null) __obj.updateDynamic("contentWindow")(contentWindow.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableDoubleReturn)) __obj.updateDynamic("disableDoubleReturn")(disableDoubleReturn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableEditing)) __obj.updateDynamic("disableEditing")(disableEditing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableExtraSpaces)) __obj.updateDynamic("disableExtraSpaces")(disableExtraSpaces.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableReturn)) __obj.updateDynamic("disableReturn")(disableReturn.get.asInstanceOf[js.Any])
+    if (elementsContainer != null) __obj.updateDynamic("elementsContainer")(elementsContainer.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(imageDragging)) __obj.updateDynamic("imageDragging")(imageDragging.get.asInstanceOf[js.Any])
+    if (keyboardCommands != null) __obj.updateDynamic("keyboardCommands")(keyboardCommands.asInstanceOf[js.Any])
+    if (ownerDocument != null) __obj.updateDynamic("ownerDocument")(ownerDocument.asInstanceOf[js.Any])
+    if (paste != null) __obj.updateDynamic("paste")(paste.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(spellcheck)) __obj.updateDynamic("spellcheck")(spellcheck.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetBlank)) __obj.updateDynamic("targetBlank")(targetBlank.get.asInstanceOf[js.Any])
+    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoreOptions]
   }
-  @scala.inline
-  implicit class CoreOptionsOps[Self <: CoreOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveButtonClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeButtonClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveButtonClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeButtonClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowMultiParagraphSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultiParagraphSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowMultiParagraphSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultiParagraphSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnchor(value: AnchorFormOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnchorPreview(value: AnchorPreviewOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorPreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchorPreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorPreview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoLink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonLabels(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentWindow(value: Window): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableDoubleReturn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDoubleReturn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableDoubleReturn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDoubleReturn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableEditing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEditing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableEditing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEditing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableExtraSpaces(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableExtraSpaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableExtraSpaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableExtraSpaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableReturn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableReturn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableReturn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableReturn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementsContainer(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementsContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElementsContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementsContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageDragging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDragging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageDragging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDragging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardCommands(value: KeyboardCommandsOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardCommands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardCommands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardCommands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerDocument(value: Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaste(value: PasteOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: PlaceholderOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpellcheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpellcheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetBlank(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetBlank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetBlank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetBlank")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbar(value: ToolbarOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,114 +8,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Align extends js.Object {
-  var align: js.UndefOr[left | right] = js.native
-  var event: js.UndefOr[js.Any] = js.native
-  var items: js.UndefOr[js.Array[_]] = js.native
-  var multi: js.UndefOr[Boolean] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var tpl: js.UndefOr[js.Any] = js.native
-  var valign: js.UndefOr[top | bottom] = js.native
+  var align: js.UndefOr[left | right] = js.undefined
+  var event: js.UndefOr[js.Any] = js.undefined
+  var items: js.UndefOr[js.Array[_]] = js.undefined
+  var multi: js.UndefOr[Boolean] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var tpl: js.UndefOr[js.Any] = js.undefined
+  var valign: js.UndefOr[top | bottom] = js.undefined
 }
 
 object Align {
   @scala.inline
-  def apply(): Align = {
+  def apply(
+    align: left | right = null,
+    event: js.Any = null,
+    items: js.Array[_] = null,
+    multi: js.UndefOr[Boolean] = js.undefined,
+    placeholder: String = null,
+    tpl: js.Any = null,
+    valign: top | bottom = null
+  ): Align = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (tpl != null) __obj.updateDynamic("tpl")(tpl.asInstanceOf[js.Any])
+    if (valign != null) __obj.updateDynamic("valign")(valign.asInstanceOf[js.Any])
     __obj.asInstanceOf[Align]
   }
-  @scala.inline
-  implicit class AlignOps[Self <: Align] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMulti(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulti: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTpl(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTpl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValign(value: top | bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valign")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

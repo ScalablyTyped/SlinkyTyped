@@ -23,6 +23,8 @@ import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefCallback
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -253,7 +255,9 @@ object InputGroup {
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def inputRef(value: /* ref */ HTMLInputElement | Null => _): this.type = set("inputRef", js.Any.fromFunction1(value))
+    def inputRefFunction1(value: /* ref */ HTMLInputElement | Null => js.Any): this.type = set("inputRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def inputRef(value: IRefCallback[HTMLInputElement] | IRefObject[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     @scala.inline
     def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -272,6 +276,8 @@ object InputGroup {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
     def large(value: Boolean): this.type = set("large", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftElement(value: ReactElement): this.type = set("leftElement", value.asInstanceOf[js.Any])
     @scala.inline
     def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     @scala.inline

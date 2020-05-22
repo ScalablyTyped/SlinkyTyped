@@ -8,26 +8,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextEffectFormat extends js.Object {
-  var Alignment: MsoTextEffectAlignment = js.native
-  val Application: js.Any = js.native
-  val Creator: Double = js.native
-  var FontBold: MsoTriState = js.native
-  var FontItalic: MsoTriState = js.native
-  var FontName: String = js.native
-  var FontSize: Double = js.native
-  var KernedPairs: MsoTriState = js.native
-  var NormalizedHeight: MsoTriState = js.native
-  val Parent: js.Any = js.native
+  var Alignment: MsoTextEffectAlignment
+  val Application: js.Any
+  val Creator: Double
+  var FontBold: MsoTriState
+  var FontItalic: MsoTriState
+  var FontName: String
+  var FontSize: Double
+  var KernedPairs: MsoTriState
+  var NormalizedHeight: MsoTriState
+  val Parent: js.Any
   @JSName("PowerPoint.TextEffectFormat_typekey")
-  var PowerPointDotTextEffectFormat_typekey: TextEffectFormat = js.native
-  var PresetShape: MsoPresetTextEffectShape = js.native
-  var PresetTextEffect: MsoPresetTextEffect = js.native
-  var RotatedChars: MsoTriState = js.native
-  var Text: String = js.native
-  var Tracking: Double = js.native
-  def ToggleVerticalText(): Unit = js.native
+  var PowerPointDotTextEffectFormat_typekey: TextEffectFormat
+  var PresetShape: MsoPresetTextEffectShape
+  var PresetTextEffect: MsoPresetTextEffect
+  var RotatedChars: MsoTriState
+  var Text: String
+  var Tracking: Double
+  def ToggleVerticalText(): Unit
 }
 
 object TextEffectFormat {
@@ -55,115 +54,5 @@ object TextEffectFormat {
     __obj.updateDynamic("PowerPoint.TextEffectFormat_typekey")(PowerPointDotTextEffectFormat_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextEffectFormat]
   }
-  @scala.inline
-  implicit class TextEffectFormatOps[Self <: TextEffectFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: MsoTextEffectAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontBold(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontBold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontItalic(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontItalic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKernedPairs(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KernedPairs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormalizedHeight(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NormalizedHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotTextEffectFormat_typekey(value: TextEffectFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.TextEffectFormat_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPresetShape(value: MsoPresetTextEffectShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPresetTextEffect(value: MsoPresetTextEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetTextEffect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRotatedChars(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RotatedChars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToggleVerticalText(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToggleVerticalText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTracking(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tracking")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Serializable[T] extends js.Object {
   /**
     * Returns either this instance's serialized represention, if immediately
@@ -15,7 +14,7 @@ trait Serializable[T] extends js.Object {
     *
     * @return {!(T|IThenable.<!T>)} This instance's serialized wire format.
     */
-  def serialize(): T | js.Promise[T] = js.native
+  def serialize(): T | js.Promise[T]
 }
 
 object Serializable {
@@ -24,19 +23,5 @@ object Serializable {
     val __obj = js.Dynamic.literal(serialize = js.Any.fromFunction0(serialize))
     __obj.asInstanceOf[Serializable[T]]
   }
-  @scala.inline
-  implicit class SerializableOps[Self[t] <: Serializable[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withSerialize(value: () => T | js.Promise[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

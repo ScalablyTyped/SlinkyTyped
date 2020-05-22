@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 // API: http://vitaly-t.github.io/pg-promise/helpers.ColumnSet.html
 @JSImport("pg-promise", "ColumnSet")
 @js.native
-class ColumnSet protected () extends QueryColumns {
+class ColumnSet protected () extends _QueryColumns {
   def this(columns: js.Array[String | IColumnConfig | Column]) = this()
   def this(columns: js.Object) = this()
   def this(columns: Column) = this()

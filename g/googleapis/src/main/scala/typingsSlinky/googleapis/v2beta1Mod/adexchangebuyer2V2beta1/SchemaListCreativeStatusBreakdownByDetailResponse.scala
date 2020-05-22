@@ -30,53 +30,16 @@ trait SchemaListCreativeStatusBreakdownByDetailResponse extends js.Object {
 
 object SchemaListCreativeStatusBreakdownByDetailResponse {
   @scala.inline
-  def apply(): SchemaListCreativeStatusBreakdownByDetailResponse = {
+  def apply(
+    detailType: String = null,
+    filteredBidDetailRows: js.Array[SchemaFilteredBidDetailRow] = null,
+    nextPageToken: String = null
+  ): SchemaListCreativeStatusBreakdownByDetailResponse = {
     val __obj = js.Dynamic.literal()
+    if (detailType != null) __obj.updateDynamic("detailType")(detailType.asInstanceOf[js.Any])
+    if (filteredBidDetailRows != null) __obj.updateDynamic("filteredBidDetailRows")(filteredBidDetailRows.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListCreativeStatusBreakdownByDetailResponse]
   }
-  @scala.inline
-  implicit class SchemaListCreativeStatusBreakdownByDetailResponseOps[Self <: SchemaListCreativeStatusBreakdownByDetailResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetailType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetailType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilteredBidDetailRows(value: js.Array[SchemaFilteredBidDetailRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredBidDetailRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilteredBidDetailRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredBidDetailRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.task.InteractionHandler
   * @since OOo 2.0
   */
-@js.native
 trait InteractionHandler
   extends XInteractionHandler
      with XInitialization

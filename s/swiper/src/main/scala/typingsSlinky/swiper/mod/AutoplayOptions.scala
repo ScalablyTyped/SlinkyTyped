@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoplayOptions extends js.Object {
   /**
     * Delay between transitions (in ms). If this parameter is not specified, auto play will be disabled
@@ -18,7 +17,7 @@ trait AutoplayOptions extends js.Object {
     *
     * @default 3000
     */
-  var delay: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
   /**
     * Set to false and autoplay will not be disabled after
     * user interactions (swipes), it will be restarted
@@ -26,19 +25,19 @@ trait AutoplayOptions extends js.Object {
     *
     * @default true
     */
-  var disableOnInteraction: js.UndefOr[Boolean] = js.native
+  var disableOnInteraction: js.UndefOr[Boolean] = js.undefined
   /**
     * Enables autoplay in reverse direction
     *
     * @default false
     */
-  var reverseDirection: js.UndefOr[Boolean] = js.native
+  var reverseDirection: js.UndefOr[Boolean] = js.undefined
   /**
     * Enable this parameter and autoplay will be stopped when it reaches last slide (has no effect in loop mode)
     *
     * @default false
     */
-  var stopOnLastSlide: js.UndefOr[Boolean] = js.native
+  var stopOnLastSlide: js.UndefOr[Boolean] = js.undefined
   /**
     * When enabled autoplay will wait for wrapper transition to continue.
     * Can be disabled in case of using Virtual Translate when your
@@ -46,82 +45,25 @@ trait AutoplayOptions extends js.Object {
     *
     * @default true
     */
-  var waitForTransition: js.UndefOr[Boolean] = js.native
+  var waitForTransition: js.UndefOr[Boolean] = js.undefined
 }
 
 object AutoplayOptions {
   @scala.inline
-  def apply(): AutoplayOptions = {
+  def apply(
+    delay: js.UndefOr[Double] = js.undefined,
+    disableOnInteraction: js.UndefOr[Boolean] = js.undefined,
+    reverseDirection: js.UndefOr[Boolean] = js.undefined,
+    stopOnLastSlide: js.UndefOr[Boolean] = js.undefined,
+    waitForTransition: js.UndefOr[Boolean] = js.undefined
+  ): AutoplayOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableOnInteraction)) __obj.updateDynamic("disableOnInteraction")(disableOnInteraction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverseDirection)) __obj.updateDynamic("reverseDirection")(reverseDirection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stopOnLastSlide)) __obj.updateDynamic("stopOnLastSlide")(stopOnLastSlide.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitForTransition)) __obj.updateDynamic("waitForTransition")(waitForTransition.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoplayOptions]
   }
-  @scala.inline
-  implicit class AutoplayOptionsOps[Self <: AutoplayOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableOnInteraction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOnInteraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableOnInteraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOnInteraction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverseDirection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverseDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopOnLastSlide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopOnLastSlide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopOnLastSlide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopOnLastSlide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForTransition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTransition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

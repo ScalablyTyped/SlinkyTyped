@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GriddleInitialState
   extends /* x */ StringDictionary[js.Any] {
-  var enableSettings: js.UndefOr[Boolean] = js.native
-  var pageProperties: js.UndefOr[GriddlePageProperties] = js.native
+  var enableSettings: js.UndefOr[Boolean] = js.undefined
+  var pageProperties: js.UndefOr[GriddlePageProperties] = js.undefined
   var sortMethod: js.UndefOr[
     js.Function3[
       /* data */ js.Array[_], 
@@ -18,86 +17,29 @@ trait GriddleInitialState
       /* sortAscending */ js.UndefOr[Boolean], 
       Double
     ]
-  ] = js.native
-  var sortProperties: js.UndefOr[js.Array[GriddleSortKey]] = js.native
-  var textProperties: js.UndefOr[FilterPlaceholder] = js.native
+  ] = js.undefined
+  var sortProperties: js.UndefOr[js.Array[GriddleSortKey]] = js.undefined
+  var textProperties: js.UndefOr[FilterPlaceholder] = js.undefined
 }
 
 object GriddleInitialState {
   @scala.inline
-  def apply(): GriddleInitialState = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    enableSettings: js.UndefOr[Boolean] = js.undefined,
+    pageProperties: GriddlePageProperties = null,
+    sortMethod: (/* data */ js.Array[_], /* column */ String, /* sortAscending */ js.UndefOr[Boolean]) => Double = null,
+    sortProperties: js.Array[GriddleSortKey] = null,
+    textProperties: FilterPlaceholder = null
+  ): GriddleInitialState = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(enableSettings)) __obj.updateDynamic("enableSettings")(enableSettings.get.asInstanceOf[js.Any])
+    if (pageProperties != null) __obj.updateDynamic("pageProperties")(pageProperties.asInstanceOf[js.Any])
+    if (sortMethod != null) __obj.updateDynamic("sortMethod")(js.Any.fromFunction3(sortMethod))
+    if (sortProperties != null) __obj.updateDynamic("sortProperties")(sortProperties.asInstanceOf[js.Any])
+    if (textProperties != null) __obj.updateDynamic("textProperties")(textProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GriddleInitialState]
   }
-  @scala.inline
-  implicit class GriddleInitialStateOps[Self <: GriddleInitialState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableSettings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageProperties(value: GriddlePageProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortMethod(
-      value: (/* data */ js.Array[_], /* column */ String, /* sortAscending */ js.UndefOr[Boolean]) => Double
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortMethod")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutSortMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortProperties(value: js.Array[GriddleSortKey]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextProperties(value: FilterPlaceholder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

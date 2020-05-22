@@ -1,43 +1,32 @@
 package typingsSlinky.stripe.mod.disputes
 
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
+import typingsSlinky.stripe.mod.IOptionsMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDisputeUpdateOptions extends IDataOptionsWithMetadata {
   /**
     * Evidence to upload to respond to a dispute. Updating any field in the hash will submit all fields in the hash for review.
     */
-  var evidence: js.UndefOr[IDisputeEvidence] = js.native
+  var evidence: js.UndefOr[IDisputeEvidence] = js.undefined
 }
 
 object IDisputeUpdateOptions {
   @scala.inline
-  def apply(): IDisputeUpdateOptions = {
+  def apply(
+    evidence: IDisputeEvidence = null,
+    expand: js.Array[String] = null,
+    include: js.Array[String] = null,
+    metadata: IOptionsMetadata = null
+  ): IDisputeUpdateOptions = {
     val __obj = js.Dynamic.literal()
+    if (evidence != null) __obj.updateDynamic("evidence")(evidence.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDisputeUpdateOptions]
   }
-  @scala.inline
-  implicit class IDisputeUpdateOptionsOps[Self <: IDisputeUpdateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvidence(value: IDisputeEvidence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evidence")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,108 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait culture extends js.Object {
-  var calendars: js.UndefOr[calendarsSettings] = js.native
-  var englishName: js.UndefOr[String] = js.native
-  var isRTL: Boolean = js.native
-  var language: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var namtiveName: js.UndefOr[String] = js.native
-  var numberFormat: js.UndefOr[formatSettings] = js.native
+  var calendars: js.UndefOr[calendarsSettings] = js.undefined
+  var englishName: js.UndefOr[String] = js.undefined
+  var isRTL: Boolean
+  var language: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var namtiveName: js.UndefOr[String] = js.undefined
+  var numberFormat: js.UndefOr[formatSettings] = js.undefined
 }
 
 object culture {
   @scala.inline
-  def apply(isRTL: Boolean): culture = {
+  def apply(
+    isRTL: Boolean,
+    calendars: calendarsSettings = null,
+    englishName: String = null,
+    language: String = null,
+    name: String = null,
+    namtiveName: String = null,
+    numberFormat: formatSettings = null
+  ): culture = {
     val __obj = js.Dynamic.literal(isRTL = isRTL.asInstanceOf[js.Any])
+    if (calendars != null) __obj.updateDynamic("calendars")(calendars.asInstanceOf[js.Any])
+    if (englishName != null) __obj.updateDynamic("englishName")(englishName.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namtiveName != null) __obj.updateDynamic("namtiveName")(namtiveName.asInstanceOf[js.Any])
+    if (numberFormat != null) __obj.updateDynamic("numberFormat")(numberFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[culture]
   }
-  @scala.inline
-  implicit class cultureOps[Self <: culture] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsRTL(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRTL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCalendars(value: calendarsSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnglishName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("englishName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnglishName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("englishName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamtiveName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namtiveName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamtiveName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namtiveName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: formatSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

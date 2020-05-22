@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * @see IFileWriteBufferOption
   * @see IFileWriteStringOption
   */
-@js.native
 trait IFileWriteOptions extends IFileEncodedOption {
   /**
     * These optional globbing patterns will be matched against the filepath
@@ -20,34 +19,15 @@ trait IFileWriteOptions extends IFileEncodedOption {
     */
   // noProcess?: string[]
   // noProcess?: boolean
-  var noProcess: js.UndefOr[js.Any] = js.native
+  var noProcess: js.UndefOr[js.Any] = js.undefined
 }
 
 object IFileWriteOptions {
   @scala.inline
-  def apply(encoding: String): IFileWriteOptions = {
+  def apply(encoding: String, noProcess: js.Any = null): IFileWriteOptions = {
     val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
+    if (noProcess != null) __obj.updateDynamic("noProcess")(noProcess.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFileWriteOptions]
   }
-  @scala.inline
-  implicit class IFileWriteOptionsOps[Self <: IFileWriteOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNoProcess(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noProcess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoProcess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noProcess")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

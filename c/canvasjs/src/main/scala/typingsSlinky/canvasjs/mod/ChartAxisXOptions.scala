@@ -5,38 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartAxisXOptions extends ChartAxisOptions {
   /**
     * Sets the Color of Grid Lines. Value of gridColor can be a "HTML Color Name" or "hex" code .
     * Default: "#BBBBBB"
     * Example: "red", "#FEFDDF" ..
     */
-  var gridColor: js.UndefOr[String] = js.native
+  var gridColor: js.UndefOr[String] = js.undefined
   /**
     * Sets the Dash Type for grid lines on axisX.
     * Default: solid
     */
-  var gridDashType: js.UndefOr[DashType] = js.native
+  var gridDashType: js.UndefOr[DashType] = js.undefined
   /**
     * Sets the Thickness of Grid Lines. To display grid on Axis X, set the Grid Thickness to a number greater than zero.
     * Default: 0
     * Example: 2,4 ..
     */
-  var gridThickness: js.UndefOr[Double] = js.native
+  var gridThickness: js.UndefOr[Double] = js.undefined
   /**
     * Sets the Interlacing Color that alternates between the set interval.
     * If the interval is not set explicitly, then the auto calculated interval is considered. The value of interlacedColor can be a “HTML Color Name” or “hex” code.
     * Default: null
     * Example: "#F8F1E4", "#FEFDDF"...
     */
-  var interlacedColor: js.UndefOr[String] = js.native
+  var interlacedColor: js.UndefOr[String] = js.undefined
   /**
     * Sets the distance between Tick Marks, Grid Lines and Interlaced Colors.
     * Default: Automatically Calculated
     * Example: 50, 75..
     */
-  var interval: js.UndefOr[Double] = js.native
+  var interval: js.UndefOr[Double] = js.undefined
   /**
     * intervalType is the unit of interval property.
     *  intervalType is by default set to "number" and hence you need to specify the interval type (eg "week", "month", etc) depending on the type of interval you intend to set.
@@ -45,7 +44,7 @@ trait ChartAxisXOptions extends ChartAxisOptions {
     * Option: "number","millisecond" ,"second"," minute", "hour", "day", "month" ,"year"
     * Example: for interval as 15 minutes, set interval as 15, and set intervalType as "minute",
     */
-  var intervalType: js.UndefOr[String] = js.native
+  var intervalType: js.UndefOr[String] = js.undefined
   /**
     * Sets the angle for Axis Labels.
     * Notes:
@@ -54,503 +53,234 @@ trait ChartAxisXOptions extends ChartAxisOptions {
     * Default: null;
     * Example: 20, 45, -30..
     */
-  var labelAngle: js.UndefOr[Double] = js.native
+  var labelAngle: js.UndefOr[Double] = js.undefined
   /**
     * Setting labelAutoFit to true automatically wraps and/or rotates and/or reduces font size of label when they are too long and overlaps,
     * finds the best-fit and automatically manages label overlapping.
     * Default: true
     * Options: true, false
     */
-  var labelAutoFit: js.UndefOr[Boolean] = js.native
+  var labelAutoFit: js.UndefOr[Boolean] = js.undefined
   /**
     * Sets the Axis Label background color. The value of labelBackgroundColor can be a “HTML Color Name” or “hex” code.
     * Default: “transparent”
     * Example: “red”,”#fabd76″
     */
-  var labelBackgroundColor: js.UndefOr[String] = js.native
+  var labelBackgroundColor: js.UndefOr[String] = js.undefined
   /**
     * Sets the Axis Label color. The value of labelFontColor can be a "HTML Color Name" or "hex" code .
     * Default: "grey"
     * Example: "red", "#FAC003" ..
     */
-  var labelFontColor: js.UndefOr[String] = js.native
+  var labelFontColor: js.UndefOr[String] = js.undefined
   /**
     * Sets the Font Family of Axis labels.
     * Default: “calibri, optima, Candara, Verdana, Geneva, sans-serif”
     * Example: “calibri”, “tahoma”, “verdana” ..
     */
-  var labelFontFamily: js.UndefOr[String] = js.native
+  var labelFontFamily: js.UndefOr[String] = js.undefined
   /**
     * Sets the Axis Label Font Size in pixels.
     * Default: Automatically Calculated based on Chart Size
     * Example: 16, 18, 22..
     */
-  var labelFontSize: js.UndefOr[Double] = js.native
+  var labelFontSize: js.UndefOr[Double] = js.undefined
   /**
     * Sets the Font Style of Axis Labels. It can be set to one of the below options.
     * Default: "normal"
     * Options: "italic", "oblique", "normal"
     */
-  var labelFontStyle: js.UndefOr[String] = js.native
+  var labelFontStyle: js.UndefOr[String] = js.undefined
   /**
     * Set the font Weight used in Axis Labels. It can be set to one of the options below.
     * Default: "normal"
     * Options: "lighter", "normal", "bold" , "bolder"
     */
-  var labelFontWeight: js.UndefOr[String] = js.native
+  var labelFontWeight: js.UndefOr[String] = js.undefined
   /**
     * A custom formatter function that returns label to be displayed on axisX.
     * Notes:
     * 1.labelFormatter function should return a string.
     * 2.You can use formatNumber and formatDate functions to format number/date values inside the formatter function.
     */
-  var labelFormatter: js.UndefOr[js.Function1[/* e */ Label, String]] = js.native
+  var labelFormatter: js.UndefOr[js.Function1[/* e */ Label, String]] = js.undefined
   /**
     * Sets the maximum width of label after which it gets wrapped or clipped depending on whether labelWrap is set to true (default) or false.
     * Default: Automatically calculated based on the length of label.
     * Example: 4, 20, 100 etc.
     */
-  var labelMaxWidth: js.UndefOr[Double] = js.native
+  var labelMaxWidth: js.UndefOr[Double] = js.undefined
   /**
     * labelWrap specifies whether to wrap or clip label once its width crosses labelMaxWidth.
     * Default: true
     * Example: true, false
     */
-  var labelWrap: js.UndefOr[Boolean] = js.native
+  var labelWrap: js.UndefOr[Boolean] = js.undefined
   /**
     * Sets the logarithm base for Axis X. Works only when logarithm property is set to true.
     * Default: 10
     * Options: 2, 16, Math.E, ..
     */
-  var logarithmBase: js.UndefOr[Double] = js.native
+  var logarithmBase: js.UndefOr[Double] = js.undefined
   /**
     * Setting logarithmic property to true changes axis scale to logarithmic scale. Default Logarithm Base is 10 – which you can customize using logarithmBase property.
     * Default: false
     * Options: true, false
     */
-  var logarithmic: js.UndefOr[Boolean] = js.native
+  var logarithmic: js.UndefOr[Boolean] = js.undefined
   /**
     * A string that prepends all the labels on axisX.
     * Default: null
     * Example: "$","cat"..
     */
-  var prefix: js.UndefOr[String] = js.native
+  var prefix: js.UndefOr[String] = js.undefined
   /**
     * Setting reversed property to true shows axis in reverse order.
     * Default: false
     * Options: true, false
     */
-  var reversed: js.UndefOr[Boolean] = js.native
+  var reversed: js.UndefOr[Boolean] = js.undefined
   /**
     * Strip Lines / Trend Lines are vertical or horizontal lines used to highlight/mark a certain region on the plot area.
     * You can choose whether to draw a line at a specific position or shade a region on the plot area. Strip Lines are also referred to as Trend Lines.
     */
-  var stripLines: js.UndefOr[ChartStripLinesOptions | js.Array[ChartStripLinesOptions]] = js.native
+  var stripLines: js.UndefOr[ChartStripLinesOptions | js.Array[ChartStripLinesOptions]] = js.undefined
   /**
     * A string that appends all the labels on axisX.
     * Default: null
     * Example: "$","cat"..
     */
-  var suffix: js.UndefOr[String] = js.native
+  var suffix: js.UndefOr[String] = js.undefined
   /**
     * Sets the color of Tick Marks drawn on the axis. The value of tickColor can be a "HTML Color Name" or "hex" code .
     * Default: "#BBBBBB"
     * Example: "red", "#006400".
     */
-  var tickColor: js.UndefOr[String] = js.native
+  var tickColor: js.UndefOr[String] = js.undefined
   /**
     * Sets the length of Tick Marks that are drawn on the Axis.
     * Default: 5
     * Example: 10, 14..
     */
-  var tickLength: js.UndefOr[Double] = js.native
+  var tickLength: js.UndefOr[Double] = js.undefined
   /**
     * Sets the thickness of the Tick Marks in pixels.
     * Default: 2
     * Example: 3, 4..
     */
-  var tickThickness: js.UndefOr[Double] = js.native
+  var tickThickness: js.UndefOr[Double] = js.undefined
   /**
     * Sets the maximum width of title after which it gets wrapped or clipped depending on whether titleWrap is set to true (default) or false.
     * Default: Automatically calculated based on the length of axis.
     * Example: 100, 200...
     */
-  var titleMaxWidth: js.UndefOr[Double] = js.native
+  var titleMaxWidth: js.UndefOr[Double] = js.undefined
   /**
     * TitleWrap specifies whether to wrap or clip axis title once its width crosses titleMaxWidth.
     * Default: true
     * Options: true, false
     */
-  var titleWrap: js.UndefOr[Boolean] = js.native
+  var titleWrap: js.UndefOr[Boolean] = js.undefined
   /**
     * Defines how values must be formatted before they appear on Axis X.
     * You can format numbers and date time values using this property.
     * More Detail: https://canvasjs.com/docs/charts/chart-options/axisx/valueformatstring/
     */
-  var valueFormatString: js.UndefOr[String] = js.native
+  var valueFormatString: js.UndefOr[String] = js.undefined
 }
 
 object ChartAxisXOptions {
   @scala.inline
-  def apply(): ChartAxisXOptions = {
+  def apply(
+    gridColor: String = null,
+    gridDashType: DashType = null,
+    gridThickness: js.UndefOr[Double] = js.undefined,
+    interlacedColor: String = null,
+    interval: js.UndefOr[Double] = js.undefined,
+    intervalType: String = null,
+    labelAngle: js.UndefOr[Double] = js.undefined,
+    labelAutoFit: js.UndefOr[Boolean] = js.undefined,
+    labelBackgroundColor: String = null,
+    labelFontColor: String = null,
+    labelFontFamily: String = null,
+    labelFontSize: js.UndefOr[Double] = js.undefined,
+    labelFontStyle: String = null,
+    labelFontWeight: String = null,
+    labelFormatter: /* e */ Label => String = null,
+    labelMaxWidth: js.UndefOr[Double] = js.undefined,
+    labelWrap: js.UndefOr[Boolean] = js.undefined,
+    lineColor: String = null,
+    lineDashType: DashType = null,
+    lineThickness: js.UndefOr[Double] = js.undefined,
+    logarithmBase: js.UndefOr[Double] = js.undefined,
+    logarithmic: js.UndefOr[Boolean] = js.undefined,
+    margin: js.UndefOr[Double] = js.undefined,
+    maximum: js.UndefOr[Double] = js.undefined,
+    minimum: js.UndefOr[Double] = js.undefined,
+    prefix: String = null,
+    reversed: js.UndefOr[Boolean] = js.undefined,
+    stripLines: ChartStripLinesOptions | js.Array[ChartStripLinesOptions] = null,
+    suffix: String = null,
+    tickColor: String = null,
+    tickLength: js.UndefOr[Double] = js.undefined,
+    tickThickness: js.UndefOr[Double] = js.undefined,
+    title: String = null,
+    titleFontColor: String = null,
+    titleFontFamily: String = null,
+    titleFontSize: js.UndefOr[Double] = js.undefined,
+    titleFontStyle: String = null,
+    titleFontWeight: String = null,
+    titleMaxWidth: js.UndefOr[Double] = js.undefined,
+    titleWrap: js.UndefOr[Boolean] = js.undefined,
+    valueFormatString: String = null,
+    viewportMaximum: js.UndefOr[Double] = js.undefined,
+    viewportMinimum: js.UndefOr[Double] = js.undefined
+  ): ChartAxisXOptions = {
     val __obj = js.Dynamic.literal()
+    if (gridColor != null) __obj.updateDynamic("gridColor")(gridColor.asInstanceOf[js.Any])
+    if (gridDashType != null) __obj.updateDynamic("gridDashType")(gridDashType.asInstanceOf[js.Any])
+    if (!js.isUndefined(gridThickness)) __obj.updateDynamic("gridThickness")(gridThickness.get.asInstanceOf[js.Any])
+    if (interlacedColor != null) __obj.updateDynamic("interlacedColor")(interlacedColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (intervalType != null) __obj.updateDynamic("intervalType")(intervalType.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelAngle)) __obj.updateDynamic("labelAngle")(labelAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelAutoFit)) __obj.updateDynamic("labelAutoFit")(labelAutoFit.get.asInstanceOf[js.Any])
+    if (labelBackgroundColor != null) __obj.updateDynamic("labelBackgroundColor")(labelBackgroundColor.asInstanceOf[js.Any])
+    if (labelFontColor != null) __obj.updateDynamic("labelFontColor")(labelFontColor.asInstanceOf[js.Any])
+    if (labelFontFamily != null) __obj.updateDynamic("labelFontFamily")(labelFontFamily.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelFontSize)) __obj.updateDynamic("labelFontSize")(labelFontSize.get.asInstanceOf[js.Any])
+    if (labelFontStyle != null) __obj.updateDynamic("labelFontStyle")(labelFontStyle.asInstanceOf[js.Any])
+    if (labelFontWeight != null) __obj.updateDynamic("labelFontWeight")(labelFontWeight.asInstanceOf[js.Any])
+    if (labelFormatter != null) __obj.updateDynamic("labelFormatter")(js.Any.fromFunction1(labelFormatter))
+    if (!js.isUndefined(labelMaxWidth)) __obj.updateDynamic("labelMaxWidth")(labelMaxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelWrap)) __obj.updateDynamic("labelWrap")(labelWrap.get.asInstanceOf[js.Any])
+    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
+    if (lineDashType != null) __obj.updateDynamic("lineDashType")(lineDashType.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineThickness)) __obj.updateDynamic("lineThickness")(lineThickness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logarithmBase)) __obj.updateDynamic("logarithmBase")(logarithmBase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logarithmic)) __obj.updateDynamic("logarithmic")(logarithmic.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(margin)) __obj.updateDynamic("margin")(margin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximum)) __obj.updateDynamic("maximum")(maximum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimum)) __obj.updateDynamic("minimum")(minimum.get.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(reversed)) __obj.updateDynamic("reversed")(reversed.get.asInstanceOf[js.Any])
+    if (stripLines != null) __obj.updateDynamic("stripLines")(stripLines.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
+    if (tickColor != null) __obj.updateDynamic("tickColor")(tickColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickLength)) __obj.updateDynamic("tickLength")(tickLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickThickness)) __obj.updateDynamic("tickThickness")(tickThickness.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titleFontColor != null) __obj.updateDynamic("titleFontColor")(titleFontColor.asInstanceOf[js.Any])
+    if (titleFontFamily != null) __obj.updateDynamic("titleFontFamily")(titleFontFamily.asInstanceOf[js.Any])
+    if (!js.isUndefined(titleFontSize)) __obj.updateDynamic("titleFontSize")(titleFontSize.get.asInstanceOf[js.Any])
+    if (titleFontStyle != null) __obj.updateDynamic("titleFontStyle")(titleFontStyle.asInstanceOf[js.Any])
+    if (titleFontWeight != null) __obj.updateDynamic("titleFontWeight")(titleFontWeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(titleMaxWidth)) __obj.updateDynamic("titleMaxWidth")(titleMaxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(titleWrap)) __obj.updateDynamic("titleWrap")(titleWrap.get.asInstanceOf[js.Any])
+    if (valueFormatString != null) __obj.updateDynamic("valueFormatString")(valueFormatString.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewportMaximum)) __obj.updateDynamic("viewportMaximum")(viewportMaximum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewportMinimum)) __obj.updateDynamic("viewportMinimum")(viewportMinimum.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartAxisXOptions]
   }
-  @scala.inline
-  implicit class ChartAxisXOptionsOps[Self <: ChartAxisXOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGridColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridDashType(value: DashType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridDashType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridDashType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridDashType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridThickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridThickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridThickness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridThickness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterlacedColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interlacedColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterlacedColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interlacedColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntervalType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntervalType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelAutoFit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAutoFit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelAutoFit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAutoFit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelBackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelBackgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFontColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFontColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFontStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFontStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFontWeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFontWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFormatter(value: /* e */ Label => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLabelFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelWrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogarithmBase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogarithmBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogarithmic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogarithmic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReversed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReversed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripLines(value: ChartStripLinesOptions | js.Array[ChartStripLinesOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickThickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickThickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickThickness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickThickness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleWrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueFormatString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormatString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueFormatString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormatString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

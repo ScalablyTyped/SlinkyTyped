@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 /**
   * Adapter for authentication and authorization service
   */
-@js.native
 trait AuthStore extends js.Object {
   /**
     * Responsible for instantiating keycloak using provided config and authentication. It also creates hooks for refreshing token when
@@ -23,20 +22,20 @@ trait AuthStore extends js.Object {
     * @return {{ keycloak, authenticated }} json which contains keycloak instance and authenticated which is promise after
     * initializing keycloak
     */
-  def authenticate(config: AuthContextConfig, url: String, redirect: Boolean): AuthenticateResult = js.native
+  def authenticate(config: AuthContextConfig, url: String, redirect: Boolean): AuthenticateResult
   /**
     * Create instance of TMTAuth from keycloak.
     *
     * @param keycloak keycloak instance instantiated using keyclok-js
     */
-  def from(keycloak: KeycloakInstance[js.UndefOr[scala.Nothing]]): Auth = js.native
+  def from(keycloak: KeycloakInstance[js.UndefOr[scala.Nothing]]): Auth
   /**
     * Responsible for resolving AAS Server using location service. If not found returns AAS-server-url specified in
     * config
     *
     * @return url string which is AAS server url
     */
-  def getAASUrl(): js.Promise[String] = js.native
+  def getAASUrl(): js.Promise[String]
 }
 
 object AuthStore {
@@ -49,31 +48,5 @@ object AuthStore {
     val __obj = js.Dynamic.literal(authenticate = js.Any.fromFunction3(authenticate), from = js.Any.fromFunction1(from), getAASUrl = js.Any.fromFunction0(getAASUrl))
     __obj.asInstanceOf[AuthStore]
   }
-  @scala.inline
-  implicit class AuthStoreOps[Self <: AuthStore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticate(value: (AuthContextConfig, String, Boolean) => AuthenticateResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFrom(value: KeycloakInstance[js.UndefOr[scala.Nothing]] => Auth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAASUrl(value: () => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAASUrl")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMsoUpBars extends js.Object {
-  val Application: js.Any = js.native
-  val Border: IMsoBorder = js.native
-  val Creator: Double = js.native
-  val Fill: ChartFillFormat = js.native
-  val Format: IMsoChartFormat = js.native
-  val Interior: IMsoInterior = js.native
-  val Name: String = js.native
+  val Application: js.Any
+  val Border: IMsoBorder
+  val Creator: Double
+  val Fill: ChartFillFormat
+  val Format: IMsoChartFormat
+  val Interior: IMsoInterior
+  val Name: String
   @JSName("Office.IMsoUpBars_typekey")
-  var OfficeDotIMsoUpBars_typekey: IMsoUpBars = js.native
-  val Parent: js.Any = js.native
-  def Delete(): js.Any = js.native
-  def Select(): js.Any = js.native
+  var OfficeDotIMsoUpBars_typekey: IMsoUpBars
+  val Parent: js.Any
+  def Delete(): js.Any
+  def Select(): js.Any
 }
 
 object IMsoUpBars {
@@ -39,79 +38,5 @@ object IMsoUpBars {
     __obj.updateDynamic("Office.IMsoUpBars_typekey")(OfficeDotIMsoUpBars_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMsoUpBars]
   }
-  @scala.inline
-  implicit class IMsoUpBarsOps[Self <: IMsoUpBars] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorder(value: IMsoBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFill(value: ChartFillFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: IMsoChartFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInterior(value: IMsoInterior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Interior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfficeDotIMsoUpBars_typekey(value: IMsoUpBars): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Office.IMsoUpBars_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -17,6 +17,11 @@ class WebXRControllerPhysics protected ()
     _xrSessionManager: typingsSlinky.babylonjs.BABYLON.WebXRSessionManager,
     _options: typingsSlinky.babylonjs.BABYLON.IWebXRControllerPhysicsOptions
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

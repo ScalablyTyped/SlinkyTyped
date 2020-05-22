@@ -14,7 +14,14 @@ object Profile extends js.Object {
   
   @js.native
   class HardwareToken ()
-    extends typingsSlinky.winrt.Windows.System.Profile.HardwareToken
+    extends typingsSlinky.winrt.Windows.System.Profile.HardwareToken {
+    /* CompleteClass */
+    override var certificate: IBuffer = js.native
+    /* CompleteClass */
+    override var id: IBuffer = js.native
+    /* CompleteClass */
+    override var signature: IBuffer = js.native
+  }
   
   /* static members */
   @js.native

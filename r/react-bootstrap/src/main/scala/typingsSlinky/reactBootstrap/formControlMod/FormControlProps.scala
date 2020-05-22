@@ -9,89 +9,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormControlProps
   extends AllHTMLAttributes[FormControl]
      with ClassAttributes[FormControl] {
-  var bsClass: js.UndefOr[String] = js.native
-  var bsSize: js.UndefOr[Sizes] = js.native
-  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.native
-  var inputRef: js.UndefOr[js.Function1[/* instance */ HTMLInputElement, Unit]] = js.native
+  var bsClass: js.UndefOr[String] = js.undefined
+  var bsSize: js.UndefOr[Sizes] = js.undefined
+  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var inputRef: js.UndefOr[js.Function1[/* instance */ HTMLInputElement, Unit]] = js.undefined
 }
 
 object FormControlProps {
   @scala.inline
-  def apply(): FormControlProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[FormControl] = null,
+    ClassAttributes: ClassAttributes[FormControl] = null,
+    bsClass: String = null,
+    bsSize: Sizes = null,
+    componentClass: ReactComponentClass[_] = null,
+    inputRef: /* instance */ HTMLInputElement => Unit = null
+  ): FormControlProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
+    if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
+    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
+    if (inputRef != null) __obj.updateDynamic("inputRef")(js.Any.fromFunction1(inputRef))
     __obj.asInstanceOf[FormControlProps]
   }
-  @scala.inline
-  implicit class FormControlPropsOps[Self <: FormControlProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBsClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsSize(value: Sizes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentClassFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentClassComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputRef(value: /* instance */ HTMLInputElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInputRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

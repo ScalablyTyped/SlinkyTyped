@@ -62,12 +62,12 @@ trait SageMaker extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreateAlgorithmOutput, Unit]
   ): Request[CreateAlgorithmOutput, AWSError] = js.native
   /**
-    * Creates a running App for the specified UserProfile. Supported Apps are JupyterServer and KernelGateway. This operation is automatically invoked by Amazon SageMaker Amazon SageMaker Studio (Studio) upon access to the associated Studio Domain, and when new kernel configurations are selected by the user. A user may have multiple Apps active simultaneously. Apps will automatically terminate and be deleted when stopped from within Studio, or when the DeleteApp API is manually called. UserProfiles are limited to 5 concurrently running Apps at a time.
+    * Creates a running App for the specified UserProfile. Supported Apps are JupyterServer, KernelGateway, and TensorBoard. This operation is automatically invoked by Amazon SageMaker Studio upon access to the associated Studio Domain, and when new kernel configurations are selected by the user. A user may have multiple Apps active simultaneously. Apps will automatically terminate and be deleted when stopped from within Studio, or when the DeleteApp API is manually called. UserProfiles are limited to 5 concurrently running Apps at a time.
     */
   def createApp(): Request[CreateAppResponse, AWSError] = js.native
   def createApp(callback: js.Function2[/* err */ AWSError, /* data */ CreateAppResponse, Unit]): Request[CreateAppResponse, AWSError] = js.native
   /**
-    * Creates a running App for the specified UserProfile. Supported Apps are JupyterServer and KernelGateway. This operation is automatically invoked by Amazon SageMaker Amazon SageMaker Studio (Studio) upon access to the associated Studio Domain, and when new kernel configurations are selected by the user. A user may have multiple Apps active simultaneously. Apps will automatically terminate and be deleted when stopped from within Studio, or when the DeleteApp API is manually called. UserProfiles are limited to 5 concurrently running Apps at a time.
+    * Creates a running App for the specified UserProfile. Supported Apps are JupyterServer, KernelGateway, and TensorBoard. This operation is automatically invoked by Amazon SageMaker Studio upon access to the associated Studio Domain, and when new kernel configurations are selected by the user. A user may have multiple Apps active simultaneously. Apps will automatically terminate and be deleted when stopped from within Studio, or when the DeleteApp API is manually called. UserProfiles are limited to 5 concurrently running Apps at a time.
     */
   def createApp(params: CreateAppRequest): Request[CreateAppResponse, AWSError] = js.native
   def createApp(
@@ -75,12 +75,12 @@ trait SageMaker extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreateAppResponse, Unit]
   ): Request[CreateAppResponse, AWSError] = js.native
   /**
-    * Creates an AutoPilot job.
+    * Creates an AutoPilot job. After you run an AutoPilot job, you can find the best performing model by calling , and then deploy that model by following the steps described in Step 6.1: Deploy the Model to Amazon SageMaker Hosting Services. For information about how to use AutoPilot, see Use AutoPilot to Automate Model Development.
     */
   def createAutoMLJob(): Request[CreateAutoMLJobResponse, AWSError] = js.native
   def createAutoMLJob(callback: js.Function2[/* err */ AWSError, /* data */ CreateAutoMLJobResponse, Unit]): Request[CreateAutoMLJobResponse, AWSError] = js.native
   /**
-    * Creates an AutoPilot job.
+    * Creates an AutoPilot job. After you run an AutoPilot job, you can find the best performing model by calling , and then deploy that model by following the steps described in Step 6.1: Deploy the Model to Amazon SageMaker Hosting Services. For information about how to use AutoPilot, see Use AutoPilot to Automate Model Development.
     */
   def createAutoMLJob(params: CreateAutoMLJobRequest): Request[CreateAutoMLJobResponse, AWSError] = js.native
   def createAutoMLJob(
@@ -114,12 +114,12 @@ trait SageMaker extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreateCompilationJobResponse, Unit]
   ): Request[CreateCompilationJobResponse, AWSError] = js.native
   /**
-    * Creates a Domain for Amazon SageMaker Amazon SageMaker Studio (Studio), which can be accessed by end-users in a web browser. A Domain has an associated directory, list of authorized users, and a variety of security, application, policies, and Amazon Virtual Private Cloud configurations. An AWS account is limited to one Domain, per region. Users within a domain can share notebook files and other artifacts with each other. When a Domain is created, an Amazon Elastic File System (EFS) is also created for use by all of the users within the Domain. Each user receives a private home directory within the EFS for notebooks, Git repositories, and data files. 
+    * Creates a Domain for Amazon SageMaker Studio, which can be accessed by end-users in a web browser. A Domain has an associated directory, list of authorized users, and a variety of security, application, policies, and Amazon Virtual Private Cloud configurations. An AWS account is limited to one Domain, per region. Users within a domain can share notebook files and other artifacts with each other. When a Domain is created, an Amazon Elastic File System (EFS) is also created for use by all of the users within the Domain. Each user receives a private home directory within the EFS for notebooks, Git repositories, and data files. 
     */
   def createDomain(): Request[CreateDomainResponse, AWSError] = js.native
   def createDomain(callback: js.Function2[/* err */ AWSError, /* data */ CreateDomainResponse, Unit]): Request[CreateDomainResponse, AWSError] = js.native
   /**
-    * Creates a Domain for Amazon SageMaker Amazon SageMaker Studio (Studio), which can be accessed by end-users in a web browser. A Domain has an associated directory, list of authorized users, and a variety of security, application, policies, and Amazon Virtual Private Cloud configurations. An AWS account is limited to one Domain, per region. Users within a domain can share notebook files and other artifacts with each other. When a Domain is created, an Amazon Elastic File System (EFS) is also created for use by all of the users within the Domain. Each user receives a private home directory within the EFS for notebooks, Git repositories, and data files. 
+    * Creates a Domain for Amazon SageMaker Studio, which can be accessed by end-users in a web browser. A Domain has an associated directory, list of authorized users, and a variety of security, application, policies, and Amazon Virtual Private Cloud configurations. An AWS account is limited to one Domain, per region. Users within a domain can share notebook files and other artifacts with each other. When a Domain is created, an Amazon Elastic File System (EFS) is also created for use by all of the users within the Domain. Each user receives a private home directory within the EFS for notebooks, Git repositories, and data files. 
     */
   def createDomain(params: CreateDomainRequest): Request[CreateDomainResponse, AWSError] = js.native
   def createDomain(
@@ -285,12 +285,12 @@ trait SageMaker extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreateNotebookInstanceLifecycleConfigOutput, Unit]
   ): Request[CreateNotebookInstanceLifecycleConfigOutput, AWSError] = js.native
   /**
-    * Creates a URL for a specified UserProfile in a Domain. When accessed in a web browser, the user will be automatically signed in to Amazon SageMaker Amazon SageMaker Studio (Studio), and granted access to all of the Apps and files associated with that Amazon Elastic File System (EFS). This operation can only be called when AuthMode equals IAM. 
+    * Creates a URL for a specified UserProfile in a Domain. When accessed in a web browser, the user will be automatically signed in to Amazon SageMaker Studio, and granted access to all of the Apps and files associated with that Amazon Elastic File System (EFS). This operation can only be called when AuthMode equals IAM. 
     */
   def createPresignedDomainUrl(): Request[CreatePresignedDomainUrlResponse, AWSError] = js.native
   def createPresignedDomainUrl(callback: js.Function2[/* err */ AWSError, /* data */ CreatePresignedDomainUrlResponse, Unit]): Request[CreatePresignedDomainUrlResponse, AWSError] = js.native
   /**
-    * Creates a URL for a specified UserProfile in a Domain. When accessed in a web browser, the user will be automatically signed in to Amazon SageMaker Amazon SageMaker Studio (Studio), and granted access to all of the Apps and files associated with that Amazon Elastic File System (EFS). This operation can only be called when AuthMode equals IAM. 
+    * Creates a URL for a specified UserProfile in a Domain. When accessed in a web browser, the user will be automatically signed in to Amazon SageMaker Studio, and granted access to all of the Apps and files associated with that Amazon Elastic File System (EFS). This operation can only be called when AuthMode equals IAM. 
     */
   def createPresignedDomainUrl(params: CreatePresignedDomainUrlRequest): Request[CreatePresignedDomainUrlResponse, AWSError] = js.native
   def createPresignedDomainUrl(
@@ -298,14 +298,14 @@ trait SageMaker extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreatePresignedDomainUrlResponse, Unit]
   ): Request[CreatePresignedDomainUrlResponse, AWSError] = js.native
   /**
-    * Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the Amazon SageMaker console, when you choose Open next to a notebook instance, Amazon SageMaker opens a new tab showing the Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page. IAM authorization policies for this API are also enforced for every HTTP request and WebSocket frame that attempts to connect to the notebook instance.For example, you can restrict access to this API and to the URL that it returns to a list of IP addresses that you specify. Use the NotIpAddress condition operator and the aws:SourceIP condition context key to specify the list of IP addresses that you want to have access to the notebook instance. For more information, see Limit Access to a Notebook Instance by IP Address.  The URL that you get from a call to is valid only for 5 minutes. If you try to use the URL after the 5-minute limit expires, you are directed to the AWS console sign-in page. 
+    * Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the Amazon SageMaker console, when you choose Open next to a notebook instance, Amazon SageMaker opens a new tab showing the Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page. IAM authorization policies for this API are also enforced for every HTTP request and WebSocket frame that attempts to connect to the notebook instance.For example, you can restrict access to this API and to the URL that it returns to a list of IP addresses that you specify. Use the NotIpAddress condition operator and the aws:SourceIP condition context key to specify the list of IP addresses that you want to have access to the notebook instance. For more information, see Limit Access to a Notebook Instance by IP Address.  The URL that you get from a call to CreatePresignedNotebookInstanceUrl is valid only for 5 minutes. If you try to use the URL after the 5-minute limit expires, you are directed to the AWS console sign-in page. 
     */
   def createPresignedNotebookInstanceUrl(): Request[CreatePresignedNotebookInstanceUrlOutput, AWSError] = js.native
   def createPresignedNotebookInstanceUrl(
     callback: js.Function2[/* err */ AWSError, /* data */ CreatePresignedNotebookInstanceUrlOutput, Unit]
   ): Request[CreatePresignedNotebookInstanceUrlOutput, AWSError] = js.native
   /**
-    * Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the Amazon SageMaker console, when you choose Open next to a notebook instance, Amazon SageMaker opens a new tab showing the Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page. IAM authorization policies for this API are also enforced for every HTTP request and WebSocket frame that attempts to connect to the notebook instance.For example, you can restrict access to this API and to the URL that it returns to a list of IP addresses that you specify. Use the NotIpAddress condition operator and the aws:SourceIP condition context key to specify the list of IP addresses that you want to have access to the notebook instance. For more information, see Limit Access to a Notebook Instance by IP Address.  The URL that you get from a call to is valid only for 5 minutes. If you try to use the URL after the 5-minute limit expires, you are directed to the AWS console sign-in page. 
+    * Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the Amazon SageMaker console, when you choose Open next to a notebook instance, Amazon SageMaker opens a new tab showing the Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page. IAM authorization policies for this API are also enforced for every HTTP request and WebSocket frame that attempts to connect to the notebook instance.For example, you can restrict access to this API and to the URL that it returns to a list of IP addresses that you specify. Use the NotIpAddress condition operator and the aws:SourceIP condition context key to specify the list of IP addresses that you want to have access to the notebook instance. For more information, see Limit Access to a Notebook Instance by IP Address.  The URL that you get from a call to CreatePresignedNotebookInstanceUrl is valid only for 5 minutes. If you try to use the URL after the 5-minute limit expires, you are directed to the AWS console sign-in page. 
     */
   def createPresignedNotebookInstanceUrl(params: CreatePresignedNotebookInstanceUrlInput): Request[CreatePresignedNotebookInstanceUrlOutput, AWSError] = js.native
   def createPresignedNotebookInstanceUrl(
@@ -378,12 +378,12 @@ trait SageMaker extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreateTrialComponentResponse, Unit]
   ): Request[CreateTrialComponentResponse, AWSError] = js.native
   /**
-    * Creates a new user profile. A user profile represents a single user within a Domain, and is the main way to reference a "person" for the purposes of sharing, reporting and other user-oriented features. This entity is created during on-boarding. If an administrator invites a person by email or imports them from SSO, a new UserProfile is automatically created. This entity is the primary holder of settings for an individual user and has a reference to the user's private Amazon Elastic File System (EFS) home directory. 
+    * Creates a user profile. A user profile represents a single user within a Domain, and is the main way to reference a "person" for the purposes of sharing, reporting and other user-oriented features. This entity is created during on-boarding to Amazon SageMaker Studio. If an administrator invites a person by email or imports them from SSO, a UserProfile is automatically created.   This entity is the primary holder of settings for an individual user and, through the domain, has a reference to the user's private Amazon Elastic File System (EFS) home directory. 
     */
   def createUserProfile(): Request[CreateUserProfileResponse, AWSError] = js.native
   def createUserProfile(callback: js.Function2[/* err */ AWSError, /* data */ CreateUserProfileResponse, Unit]): Request[CreateUserProfileResponse, AWSError] = js.native
   /**
-    * Creates a new user profile. A user profile represents a single user within a Domain, and is the main way to reference a "person" for the purposes of sharing, reporting and other user-oriented features. This entity is created during on-boarding. If an administrator invites a person by email or imports them from SSO, a new UserProfile is automatically created. This entity is the primary holder of settings for an individual user and has a reference to the user's private Amazon Elastic File System (EFS) home directory. 
+    * Creates a user profile. A user profile represents a single user within a Domain, and is the main way to reference a "person" for the purposes of sharing, reporting and other user-oriented features. This entity is created during on-boarding to Amazon SageMaker Studio. If an administrator invites a person by email or imports them from SSO, a UserProfile is automatically created.   This entity is the primary holder of settings for an individual user and, through the domain, has a reference to the user's private Amazon Elastic File System (EFS) home directory. 
     */
   def createUserProfile(params: CreateUserProfileRequest): Request[CreateUserProfileResponse, AWSError] = js.native
   def createUserProfile(
@@ -440,12 +440,12 @@ trait SageMaker extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   /**
-    * Used to delete a domain. If you on-boarded with IAM mode, you will need to delete your domain to on-board again using SSO. Use with caution. All of the members of the domain will lose access to their EFS volume, including data, notebooks, and other artifacts. 
+    * Used to delete a domain. Use with caution. If RetentionPolicy is set to Delete, all of the members of the domain will lose access to their EFS volume, including data, notebooks, and other artifacts. 
     */
   def deleteDomain(): Request[js.Object, AWSError] = js.native
   def deleteDomain(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Used to delete a domain. If you on-boarded with IAM mode, you will need to delete your domain to on-board again using SSO. Use with caution. All of the members of the domain will lose access to their EFS volume, including data, notebooks, and other artifacts. 
+    * Used to delete a domain. Use with caution. If RetentionPolicy is set to Delete, all of the members of the domain will lose access to their EFS volume, including data, notebooks, and other artifacts. 
     */
   def deleteDomain(params: DeleteDomainRequest): Request[js.Object, AWSError] = js.native
   def deleteDomain(
@@ -1438,12 +1438,12 @@ trait SageMaker extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ RenderUiTemplateResponse, Unit]
   ): Request[RenderUiTemplateResponse, AWSError] = js.native
   /**
-    * Finds Amazon SageMaker resources that match a search query. Matching resource objects are returned as a list of SearchResult objects in the response. You can sort the search results by any resource property in a ascending or descending order. You can query against the following value types: numeric, text, Boolean, and timestamp.
+    * Finds Amazon SageMaker resources that match a search query. Matching resources are returned as a list of SearchRecord objects in the response. You can sort the search results by any resource property in a ascending or descending order. You can query against the following value types: numeric, text, Boolean, and timestamp.
     */
   def search(): Request[SearchResponse, AWSError] = js.native
   def search(callback: js.Function2[/* err */ AWSError, /* data */ SearchResponse, Unit]): Request[SearchResponse, AWSError] = js.native
   /**
-    * Finds Amazon SageMaker resources that match a search query. Matching resource objects are returned as a list of SearchResult objects in the response. You can sort the search results by any resource property in a ascending or descending order. You can query against the following value types: numeric, text, Boolean, and timestamp.
+    * Finds Amazon SageMaker resources that match a search query. Matching resources are returned as a list of SearchRecord objects in the response. You can sort the search results by any resource property in a ascending or descending order. You can query against the following value types: numeric, text, Boolean, and timestamp.
     */
   def search(params: SearchRequest): Request[SearchResponse, AWSError] = js.native
   def search(params: SearchRequest, callback: js.Function2[/* err */ AWSError, /* data */ SearchResponse, Unit]): Request[SearchResponse, AWSError] = js.native

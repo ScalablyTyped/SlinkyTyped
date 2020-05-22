@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdbc.XStatement
   * @see com.sun.star.sdbc.XPreparedStatement
   */
-@js.native
 trait XMultipleResults extends XInterface {
   /**
     * moves to a {@link Statement} 's next result. It returns `TRUE` if this result is a {@link ResultSet} . This method also implicitly closes any current
@@ -26,13 +25,13 @@ trait XMultipleResults extends XInterface {
     * @returns `TRUE` if there exists more {@link ResultSet} objects
     * @throws SQLException if a database access error occurs.
     */
-  val MoreResults: Boolean = js.native
+  val MoreResults: Boolean
   /**
     * returns the current result as a {@link com.sun.star.sdbc.ResultSet} object. This method should be called only once per result.
     * @returns the {@link ResultSet} object
     * @throws SQLException if a database access error occurs.
     */
-  val ResultSet: XResultSet = js.native
+  val ResultSet: XResultSet
   /**
     * returns the current result as an update count.
     *
@@ -40,7 +39,7 @@ trait XMultipleResults extends XInterface {
     * @returns the current result as an update count.
     * @throws SQLException if a database access error occurs.
     */
-  val UpdateCount: Double = js.native
+  val UpdateCount: Double
   /**
     * moves to a {@link Statement} 's next result. It returns `TRUE` if this result is a {@link ResultSet} . This method also implicitly closes any current
     * {@link ResultSet} obtained with getResultSet.
@@ -49,13 +48,13 @@ trait XMultipleResults extends XInterface {
     * @returns `TRUE` if there exists more {@link ResultSet} objects
     * @throws SQLException if a database access error occurs.
     */
-  def getMoreResults(): Boolean = js.native
+  def getMoreResults(): Boolean
   /**
     * returns the current result as a {@link com.sun.star.sdbc.ResultSet} object. This method should be called only once per result.
     * @returns the {@link ResultSet} object
     * @throws SQLException if a database access error occurs.
     */
-  def getResultSet(): XResultSet = js.native
+  def getResultSet(): XResultSet
   /**
     * returns the current result as an update count.
     *
@@ -63,7 +62,7 @@ trait XMultipleResults extends XInterface {
     * @returns the current result as an update count.
     * @throws SQLException if a database access error occurs.
     */
-  def getUpdateCount(): Double = js.native
+  def getUpdateCount(): Double
 }
 
 object XMultipleResults {
@@ -82,49 +81,5 @@ object XMultipleResults {
     val __obj = js.Dynamic.literal(MoreResults = MoreResults.asInstanceOf[js.Any], ResultSet = ResultSet.asInstanceOf[js.Any], UpdateCount = UpdateCount.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getMoreResults = js.Any.fromFunction0(getMoreResults), getResultSet = js.Any.fromFunction0(getResultSet), getUpdateCount = js.Any.fromFunction0(getUpdateCount), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XMultipleResults]
   }
-  @scala.inline
-  implicit class XMultipleResultsOps[Self <: XMultipleResults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMoreResults(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoreResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResultSet(value: XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetMoreResults(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMoreResults")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetResultSet(value: () => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResultSet")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUpdateCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUpdateCount")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,10 @@ trait PutEventsInput extends js.Object {
 
 object PutEventsInput {
   @scala.inline
-  def apply(clientContext: String, events: EventListDefinition): PutEventsInput = {
+  def apply(clientContext: String, events: EventListDefinition, clientContextEncoding: String = null): PutEventsInput = {
     val __obj = js.Dynamic.literal(clientContext = clientContext.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any])
+    if (clientContextEncoding != null) __obj.updateDynamic("clientContextEncoding")(clientContextEncoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEventsInput]
   }
-  @scala.inline
-  implicit class PutEventsInputOps[Self <: PutEventsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvents(value: EventListDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientContextEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientContextEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientContextEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientContextEncoding")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

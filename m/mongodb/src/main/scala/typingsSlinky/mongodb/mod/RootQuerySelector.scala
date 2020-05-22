@@ -6,116 +6,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RootQuerySelector[T]
   extends // we could not find a proper TypeScript generic to support nested queries e.g. 'user.friends.name'
 // this will mark all unrecognized properties as any (including nested queries)
 /* key */ StringDictionary[js.Any] {
   /** https://docs.mongodb.com/manual/reference/operator/query/and/#op._S_and */
   @JSName("$and")
-  var $and: js.UndefOr[js.Array[FilterQuery[T]]] = js.native
+  var $and: js.UndefOr[js.Array[FilterQuery[T]]] = js.undefined
   /** https://docs.mongodb.com/manual/reference/operator/query/comment/#op._S_comment */
   @JSName("$comment")
-  var $comment: js.UndefOr[String] = js.native
+  var $comment: js.UndefOr[String] = js.undefined
   /** https://docs.mongodb.com/manual/reference/operator/query/nor/#op._S_nor */
   @JSName("$nor")
-  var $nor: js.UndefOr[js.Array[FilterQuery[T]]] = js.native
+  var $nor: js.UndefOr[js.Array[FilterQuery[T]]] = js.undefined
   /** https://docs.mongodb.com/manual/reference/operator/query/or/#op._S_or */
   @JSName("$or")
-  var $or: js.UndefOr[js.Array[FilterQuery[T]]] = js.native
+  var $or: js.UndefOr[js.Array[FilterQuery[T]]] = js.undefined
   /** https://docs.mongodb.com/manual/reference/operator/query/text */
   @JSName("$text")
-  var $text: js.UndefOr[CaseSensitive] = js.native
+  var $text: js.UndefOr[CaseSensitive] = js.undefined
   /** https://docs.mongodb.com/manual/reference/operator/query/where/#op._S_where */
   @JSName("$where")
-  var $where: js.UndefOr[String | js.Function] = js.native
+  var $where: js.UndefOr[String | js.Function] = js.undefined
 }
 
 object RootQuerySelector {
   @scala.inline
-  def apply[T](): RootQuerySelector[T] = {
+  def apply[T](
+    $and: js.Array[FilterQuery[T]] = null,
+    $comment: String = null,
+    $nor: js.Array[FilterQuery[T]] = null,
+    $or: js.Array[FilterQuery[T]] = null,
+    $text: CaseSensitive = null,
+    $where: String | js.Function = null,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null
+  ): RootQuerySelector[T] = {
     val __obj = js.Dynamic.literal()
+    if ($and != null) __obj.updateDynamic("$and")($and.asInstanceOf[js.Any])
+    if ($comment != null) __obj.updateDynamic("$comment")($comment.asInstanceOf[js.Any])
+    if ($nor != null) __obj.updateDynamic("$nor")($nor.asInstanceOf[js.Any])
+    if ($or != null) __obj.updateDynamic("$or")($or.asInstanceOf[js.Any])
+    if ($text != null) __obj.updateDynamic("$text")($text.asInstanceOf[js.Any])
+    if ($where != null) __obj.updateDynamic("$where")($where.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[RootQuerySelector[T]]
   }
-  @scala.inline
-  implicit class RootQuerySelectorOps[Self[t] <: RootQuerySelector[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def with$and(value: js.Array[FilterQuery[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$and: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$comment(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$comment: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$nor(value: js.Array[FilterQuery[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$nor: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$or(value: js.Array[FilterQuery[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$or: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$text(value: CaseSensitive): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$text: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$where(value: String | js.Function): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$where: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

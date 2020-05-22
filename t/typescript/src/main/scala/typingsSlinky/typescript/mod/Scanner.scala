@@ -26,7 +26,8 @@ trait Scanner extends js.Object {
   def reScanLessThanToken(): SyntaxKind = js.native
   def reScanQuestionToken(): SyntaxKind = js.native
   def reScanSlashToken(): SyntaxKind = js.native
-  def reScanTemplateToken(): SyntaxKind = js.native
+  def reScanTemplateHeadOrNoSubstitutionTemplate(): SyntaxKind = js.native
+  def reScanTemplateToken(isTaggedTemplate: Boolean): SyntaxKind = js.native
   def scan(): SyntaxKind = js.native
   def scanJsDocToken(): JSDocSyntaxKind = js.native
   def scanJsxAttributeValue(): SyntaxKind = js.native

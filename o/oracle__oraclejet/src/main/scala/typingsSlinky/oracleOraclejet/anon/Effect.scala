@@ -6,31 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Effect
   extends /* key */ StringDictionary[js.Any] {
-  var effect: AnimationMethods = js.native
+  var effect: AnimationMethods
 }
 
 object Effect {
   @scala.inline
-  def apply(effect: AnimationMethods): Effect = {
+  def apply(effect: AnimationMethods, StringDictionary: /* name */ StringDictionary[js.Any] = null): Effect = {
     val __obj = js.Dynamic.literal(effect = effect.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Effect]
   }
-  @scala.inline
-  implicit class EffectOps[Self <: Effect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEffect(value: AnimationMethods): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

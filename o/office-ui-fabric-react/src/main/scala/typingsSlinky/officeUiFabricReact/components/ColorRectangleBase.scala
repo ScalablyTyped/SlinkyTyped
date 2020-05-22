@@ -11,7 +11,7 @@ import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangleP
 import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangleStyleProps
 import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangleStyles
 import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -52,7 +52,7 @@ object ColorRectangleBase {
       value: (/* ev */ SyntheticMouseEvent[Element] | SyntheticKeyboardEvent[Element], /* color */ IColor) => Unit
     ): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
-    def stylesFunction1(value: IColorRectangleStyleProps => Partial[IColorRectangleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IColorRectangleStyleProps => DeepPartial[IColorRectangleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IColorRectangleStyleProps, IColorRectangleStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

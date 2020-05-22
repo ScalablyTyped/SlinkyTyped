@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseFirestore.coreQueryMod
 
+import typingsSlinky.firebaseFirestore.firestoreProtoApiMod.Value
 import typingsSlinky.firebaseFirestore.modelDocumentMod.Document
-import typingsSlinky.firebaseFirestore.srcModelFieldValueMod.FieldValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/firestore/dist/src/core/query", "Bound")
 @js.native
 class Bound protected () extends js.Object {
-  def this(position: js.Array[FieldValue], before: Boolean) = this()
+  def this(position: js.Array[Value], before: Boolean) = this()
   val before: Boolean = js.native
-  val position: js.Array[FieldValue] = js.native
+  val position: js.Array[Value] = js.native
   def canonicalId(): String = js.native
   def isEqual(): Boolean = js.native
   def isEqual(other: Bound): Boolean = js.native

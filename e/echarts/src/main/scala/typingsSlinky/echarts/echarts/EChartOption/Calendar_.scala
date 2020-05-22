@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#calendar
   */
-@js.native
 trait Calendar_ extends js.Object {
   /**
     * Distance between calendar component and the bottom side of the container.
@@ -26,7 +25,7 @@ trait Calendar_ extends js.Object {
     *
     * @default 'auto'
     */
-  var bottom: js.UndefOr[Double | String] = js.native
+  var bottom: js.UndefOr[Double | String] = js.undefined
   /**
     * The size of each rect of calendar coordinates,
     * can be set to a single value or array,
@@ -35,29 +34,29 @@ trait Calendar_ extends js.Object {
     *
     * @default 20
     */
-  var cellSize: js.UndefOr[Double | auto | (js.Array[auto | Double])] = js.native
+  var cellSize: js.UndefOr[Double | auto | (js.Array[auto | Double])] = js.undefined
   /**
     * Day style in calendar coordinates.
     * @see https://echarts.apache.org/en/option.html#calendar.dayLabel
     */
-  var dayLabel: js.UndefOr[DayLabel] = js.native
+  var dayLabel: js.UndefOr[DayLabel] = js.undefined
   /**
     * The height of calendar coordinates.
     * Note: cellSize is 20 by default.
     * If height is set, cellSize[1] will be forced to auto;
     */
-  var height: js.UndefOr[Double | String] = js.native
+  var height: js.UndefOr[Double | String] = js.undefined
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option or API.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Every rect style in calendar coordinates.
     *
     * @see https://echarts.apache.org/en/option.html#calendar.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderColor] = js.native
+  var itemStyle: js.UndefOr[BorderColor] = js.undefined
   /**
     * Distance between calendar component and the left side of the container.
     * left value can be instant pixel value like 20;
@@ -68,22 +67,22 @@ trait Calendar_ extends js.Object {
     *
     * @default 80
     */
-  var left: js.UndefOr[Double | String] = js.native
+  var left: js.UndefOr[Double | String] = js.undefined
   /**
     * Month label in calendar coordinates.
     * @see https://echarts.apache.org/en/option.html#calendar.monthLabel
     */
-  var monthLabel: js.UndefOr[MonthLabel] = js.native
+  var monthLabel: js.UndefOr[MonthLabel] = js.undefined
   /**
     * The layout orientation of calendar.
     */
-  var orient: js.UndefOr[horizontal | vertical] = js.native
+  var orient: js.UndefOr[horizontal | vertical] = js.undefined
   /**
     * Required, range of Calendar coordinates, support multiple formats.
     *
     * @see https://echarts.apache.org/en/option.html#calendar
     */
-  var range: js.UndefOr[Double | String | (js.Array[Double | String])] = js.native
+  var range: js.UndefOr[Double | String | (js.Array[Double | String])] = js.undefined
   /**
     * Distance between calendar component and the right side of the container.
     * right value can be instant pixel value like 20;
@@ -92,18 +91,18 @@ trait Calendar_ extends js.Object {
     *
     * @default 'auto'
     */
-  var right: js.UndefOr[Double | String] = js.native
+  var right: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse events.
     *
     * @default false
     */
-  var silent: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.undefined
   /**
     * Calendar coordinates splitLine style.
     */
-  var splitLine: js.UndefOr[typingsSlinky.echarts.anon.LineStyle] = js.native
+  var splitLine: js.UndefOr[typingsSlinky.echarts.anon.LineStyle] = js.undefined
   /**
     * Distance between calendar component and the top side of the container.
     * top value can be instant pixel value like 20;
@@ -114,7 +113,7 @@ trait Calendar_ extends js.Object {
     *
     * @default 60
     */
-  var top: js.UndefOr[Double | String] = js.native
+  var top: js.UndefOr[Double | String] = js.undefined
   /**
     * The height of calendar coordinates.
     * Note: cellSize is 20 by default.
@@ -122,12 +121,12 @@ trait Calendar_ extends js.Object {
     *
     * @default 'auto'
     */
-  var width: js.UndefOr[Double | String] = js.native
+  var width: js.UndefOr[Double | String] = js.undefined
   /**
     * Year label in calendar coordinates.
     * @see https://echarts.apache.org/en/option.html#calendar.yearLabel
     */
-  var yearLabel: js.UndefOr[YearLabel] = js.native
+  var yearLabel: js.UndefOr[YearLabel] = js.undefined
   /**
     * z value of all graphical elements in, which controls order of drawing graphical components.
     * Components with smaller z values may be overwritten by those with larger z values.
@@ -135,7 +134,7 @@ trait Calendar_ extends js.Object {
     *
     * @default 2
     */
-  var z: js.UndefOr[Double] = js.native
+  var z: js.UndefOr[Double] = js.undefined
   /**
     * zlevel value of all graphical elements in.
     * zlevel is used to make layers with Canvas.
@@ -146,238 +145,51 @@ trait Calendar_ extends js.Object {
     *
     * @default 0
     */
-  var zlevel: js.UndefOr[Double] = js.native
+  var zlevel: js.UndefOr[Double] = js.undefined
 }
 
 object Calendar_ {
   @scala.inline
-  def apply(): Calendar_ = {
+  def apply(
+    bottom: Double | String = null,
+    cellSize: Double | auto | (js.Array[auto | Double]) = null,
+    dayLabel: DayLabel = null,
+    height: Double | String = null,
+    id: String = null,
+    itemStyle: BorderColor = null,
+    left: Double | String = null,
+    monthLabel: MonthLabel = null,
+    orient: horizontal | vertical = null,
+    range: Double | String | (js.Array[Double | String]) = null,
+    right: Double | String = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    splitLine: typingsSlinky.echarts.anon.LineStyle = null,
+    top: Double | String = null,
+    width: Double | String = null,
+    yearLabel: YearLabel = null,
+    z: js.UndefOr[Double] = js.undefined,
+    zlevel: js.UndefOr[Double] = js.undefined
+  ): Calendar_ = {
     val __obj = js.Dynamic.literal()
+    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
+    if (cellSize != null) __obj.updateDynamic("cellSize")(cellSize.asInstanceOf[js.Any])
+    if (dayLabel != null) __obj.updateDynamic("dayLabel")(dayLabel.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (monthLabel != null) __obj.updateDynamic("monthLabel")(monthLabel.asInstanceOf[js.Any])
+    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (splitLine != null) __obj.updateDynamic("splitLine")(splitLine.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (yearLabel != null) __obj.updateDynamic("yearLabel")(yearLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zlevel)) __obj.updateDynamic("zlevel")(zlevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Calendar_]
   }
-  @scala.inline
-  implicit class Calendar_Ops[Self <: Calendar_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottom(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellSize(value: Double | auto | (js.Array[auto | Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayLabel(value: DayLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: BorderColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthLabel(value: MonthLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrient(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: Double | String | (js.Array[Double | String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSplitLine(value: typingsSlinky.echarts.anon.LineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSplitLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYearLabel(value: YearLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYearLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZlevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZlevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

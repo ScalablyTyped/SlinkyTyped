@@ -14,29 +14,10 @@ trait DescribeLayersResult extends js.Object {
 
 object DescribeLayersResult {
   @scala.inline
-  def apply(): DescribeLayersResult = {
+  def apply(Layers: Layers = null): DescribeLayersResult = {
     val __obj = js.Dynamic.literal()
+    if (Layers != null) __obj.updateDynamic("Layers")(Layers.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLayersResult]
   }
-  @scala.inline
-  implicit class DescribeLayersResultOps[Self <: DescribeLayersResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayers(value: Layers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Layers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Layers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

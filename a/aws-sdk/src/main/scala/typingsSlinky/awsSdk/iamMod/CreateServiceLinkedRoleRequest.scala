@@ -22,47 +22,15 @@ trait CreateServiceLinkedRoleRequest extends js.Object {
 
 object CreateServiceLinkedRoleRequest {
   @scala.inline
-  def apply(AWSServiceName: groupNameType): CreateServiceLinkedRoleRequest = {
+  def apply(
+    AWSServiceName: groupNameType,
+    CustomSuffix: customSuffixType = null,
+    Description: roleDescriptionType = null
+  ): CreateServiceLinkedRoleRequest = {
     val __obj = js.Dynamic.literal(AWSServiceName = AWSServiceName.asInstanceOf[js.Any])
+    if (CustomSuffix != null) __obj.updateDynamic("CustomSuffix")(CustomSuffix.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateServiceLinkedRoleRequest]
   }
-  @scala.inline
-  implicit class CreateServiceLinkedRoleRequestOps[Self <: CreateServiceLinkedRoleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAWSServiceName(value: groupNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AWSServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomSuffix(value: customSuffixType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomSuffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: roleDescriptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

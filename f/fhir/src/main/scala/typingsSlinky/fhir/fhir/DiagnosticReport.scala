@@ -8,363 +8,171 @@ import scala.scalajs.js.annotation._
   * A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
-trait DiagnosticReport extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait DiagnosticReport extends DomainResource {
   /**
     * Contains extended information for property 'conclusion'.
     */
-  var _conclusion: js.UndefOr[Element] = js.native
+  var _conclusion: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'effectiveDateTime'.
     */
-  var _effectiveDateTime: js.UndefOr[Element] = js.native
+  var _effectiveDateTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'issued'.
     */
-  var _issued: js.UndefOr[Element] = js.native
+  var _issued: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.native
+  var _status: js.UndefOr[Element] = js.undefined
   /**
     * What was requested
     */
-  var basedOn: js.UndefOr[js.Array[Reference]] = js.native
+  var basedOn: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Service category
     */
-  var category: js.UndefOr[CodeableConcept] = js.native
+  var category: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Name/Code for this diagnostic report
     */
-  var code: CodeableConcept = js.native
+  var code: CodeableConcept
   /**
     * Codes for the conclusion
     */
-  var codedDiagnosis: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var codedDiagnosis: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Clinical Interpretation of test results
     */
-  var conclusion: js.UndefOr[String] = js.native
+  var conclusion: js.UndefOr[String] = js.undefined
   /**
     * Health care event when test ordered
     */
-  var context: js.UndefOr[Reference] = js.native
+  var context: js.UndefOr[Reference] = js.undefined
   /**
     * Clinically relevant time/time-period for report
     */
-  var effectiveDateTime: js.UndefOr[dateTime] = js.native
+  var effectiveDateTime: js.UndefOr[dateTime] = js.undefined
   /**
     * Clinically relevant time/time-period for report
     */
-  var effectivePeriod: js.UndefOr[Period] = js.native
+  var effectivePeriod: js.UndefOr[Period] = js.undefined
   /**
     * Business identifier for report
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
   /**
     * Key images associated with this report
     */
-  var image: js.UndefOr[js.Array[DiagnosticReportImage]] = js.native
+  var image: js.UndefOr[js.Array[DiagnosticReportImage]] = js.undefined
   /**
     * Reference to full details of imaging associated with the diagnostic report
     */
-  var imagingStudy: js.UndefOr[js.Array[Reference]] = js.native
+  var imagingStudy: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * DateTime this version was released
     */
-  var issued: js.UndefOr[instant] = js.native
+  var issued: js.UndefOr[instant] = js.undefined
   /**
     * Participants in producing the report
     */
-  var performer: js.UndefOr[js.Array[DiagnosticReportPerformer]] = js.native
+  var performer: js.UndefOr[js.Array[DiagnosticReportPerformer]] = js.undefined
   /**
     * Entire report as issued
     */
-  var presentedForm: js.UndefOr[js.Array[Attachment]] = js.native
+  var presentedForm: js.UndefOr[js.Array[Attachment]] = js.undefined
   /**
     * Observations - simple, or complex nested groups
     */
-  var result: js.UndefOr[js.Array[Reference]] = js.native
+  var result: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Specimens this report is based on
     */
-  var specimen: js.UndefOr[js.Array[Reference]] = js.native
+  var specimen: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * registered | partial | preliminary | final +
     */
-  var status: code = js.native
+  var status: code
   /**
     * The subject of the report - usually, but not always, the patient
     */
-  var subject: js.UndefOr[Reference] = js.native
+  var subject: js.UndefOr[Reference] = js.undefined
 }
 
 object DiagnosticReport {
   @scala.inline
-  def apply(code: CodeableConcept, status: code): DiagnosticReport = {
+  def apply(
+    code: CodeableConcept,
+    status: code,
+    _conclusion: Element = null,
+    _effectiveDateTime: Element = null,
+    _id: Element = null,
+    _implicitRules: Element = null,
+    _issued: Element = null,
+    _language: Element = null,
+    _resourceType: Element = null,
+    _status: Element = null,
+    basedOn: js.Array[Reference] = null,
+    category: CodeableConcept = null,
+    codedDiagnosis: js.Array[CodeableConcept] = null,
+    conclusion: String = null,
+    contained: js.Array[Resource] = null,
+    context: Reference = null,
+    effectiveDateTime: dateTime = null,
+    effectivePeriod: Period = null,
+    extension: js.Array[Extension] = null,
+    id: id = null,
+    identifier: js.Array[Identifier] = null,
+    image: js.Array[DiagnosticReportImage] = null,
+    imagingStudy: js.Array[Reference] = null,
+    implicitRules: uri = null,
+    issued: instant = null,
+    language: code = null,
+    meta: Meta = null,
+    modifierExtension: js.Array[Extension] = null,
+    performer: js.Array[DiagnosticReportPerformer] = null,
+    presentedForm: js.Array[Attachment] = null,
+    resourceType: code = null,
+    result: js.Array[Reference] = null,
+    specimen: js.Array[Reference] = null,
+    subject: Reference = null,
+    text: Narrative = null
+  ): DiagnosticReport = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    if (_conclusion != null) __obj.updateDynamic("_conclusion")(_conclusion.asInstanceOf[js.Any])
+    if (_effectiveDateTime != null) __obj.updateDynamic("_effectiveDateTime")(_effectiveDateTime.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
+    if (_issued != null) __obj.updateDynamic("_issued")(_issued.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
+    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
+    if (basedOn != null) __obj.updateDynamic("basedOn")(basedOn.asInstanceOf[js.Any])
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (codedDiagnosis != null) __obj.updateDynamic("codedDiagnosis")(codedDiagnosis.asInstanceOf[js.Any])
+    if (conclusion != null) __obj.updateDynamic("conclusion")(conclusion.asInstanceOf[js.Any])
+    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (effectiveDateTime != null) __obj.updateDynamic("effectiveDateTime")(effectiveDateTime.asInstanceOf[js.Any])
+    if (effectivePeriod != null) __obj.updateDynamic("effectivePeriod")(effectivePeriod.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (imagingStudy != null) __obj.updateDynamic("imagingStudy")(imagingStudy.asInstanceOf[js.Any])
+    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
+    if (issued != null) __obj.updateDynamic("issued")(issued.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (performer != null) __obj.updateDynamic("performer")(performer.asInstanceOf[js.Any])
+    if (presentedForm != null) __obj.updateDynamic("presentedForm")(presentedForm.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (specimen != null) __obj.updateDynamic("specimen")(specimen.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagnosticReport]
   }
-  @scala.inline
-  implicit class DiagnosticReportOps[Self <: DiagnosticReport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_conclusion(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_conclusion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_conclusion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_conclusion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_effectiveDateTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_effectiveDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_effectiveDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_effectiveDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_issued(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_issued")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_issued: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_issued")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_status(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasedOn(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategory(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodedDiagnosis(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codedDiagnosis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodedDiagnosis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codedDiagnosis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConclusion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conclusion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConclusion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conclusion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectiveDateTime(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectiveDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectivePeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectivePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectivePeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectivePeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: js.Array[Identifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: js.Array[DiagnosticReportImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImagingStudy(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagingStudy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImagingStudy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagingStudy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssued(value: instant): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issued")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssued: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issued")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformer(value: js.Array[DiagnosticReportPerformer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPresentedForm(value: js.Array[Attachment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("presentedForm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPresentedForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("presentedForm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpecimen(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specimen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpecimen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specimen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

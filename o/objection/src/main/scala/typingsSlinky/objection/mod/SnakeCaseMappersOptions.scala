@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SnakeCaseMappersOptions extends js.Object {
-  var underscoreBeforeDigits: js.UndefOr[Boolean] = js.native
-  var upperCase: js.UndefOr[Boolean] = js.native
+  var underscoreBeforeDigits: js.UndefOr[Boolean] = js.undefined
+  var upperCase: js.UndefOr[Boolean] = js.undefined
 }
 
 object SnakeCaseMappersOptions {
   @scala.inline
-  def apply(): SnakeCaseMappersOptions = {
+  def apply(
+    underscoreBeforeDigits: js.UndefOr[Boolean] = js.undefined,
+    upperCase: js.UndefOr[Boolean] = js.undefined
+  ): SnakeCaseMappersOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(underscoreBeforeDigits)) __obj.updateDynamic("underscoreBeforeDigits")(underscoreBeforeDigits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(upperCase)) __obj.updateDynamic("upperCase")(upperCase.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnakeCaseMappersOptions]
   }
-  @scala.inline
-  implicit class SnakeCaseMappersOptionsOps[Self <: SnakeCaseMappersOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUnderscoreBeforeDigits(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underscoreBeforeDigits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnderscoreBeforeDigits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underscoreBeforeDigits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperCase")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 class ClassBufferedStream protected ()
   extends typingsSlinky.fibjs.ClassBufferedStream {
   /**
-  	 * 
-  	 * @brief BufferedStream 构造函数
-  	 * @param stm BufferedStream 的二进制基础流对象
-  	 * 
-  	 * 
-  	 * 
-  	 */
+    * 
+    * @brief BufferedStream 构造函数
+    * @param stm BufferedStream 的二进制基础流对象
+    * 
+    * 
+    * 
+    */
   def this(stm: typingsSlinky.fibjs.ClassStream) = this()
 }
 

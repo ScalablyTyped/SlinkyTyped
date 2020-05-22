@@ -1,7 +1,9 @@
 package typingsSlinky.expressValidator
 
 import typingsSlinky.expressValidator.baseMod.CustomValidator
+import typingsSlinky.expressValidator.baseMod.Meta
 import typingsSlinky.expressValidator.contextItemMod.ContextItem
+import typingsSlinky.expressValidator.contextMod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +17,8 @@ object customValidationMod extends js.Object {
     var message: js.Any = js.native
     val negated: js.Any = js.native
     val validator: js.Any = js.native
+    /* CompleteClass */
+    override def run(context: Context, value: js.Any, meta: Meta): js.Promise[Unit] = js.native
   }
   
 }

@@ -21,4 +21,12 @@ package object es5Mod {
     /* context */ typingsSlinky.csvParse.es5Mod.CastingContext, 
     js.Any
   ]
+  /* Rewritten from type alias, can be one of: 
+    - java.lang.String
+    - js.UndefOr[scala.Nothing]
+    - scala.Null
+    - typingsSlinky.csvParse.csvParseBooleans.`false`
+    - typingsSlinky.csvParse.anon.Name
+  */
+  type ColumnOption = js.UndefOr[typingsSlinky.csvParse.es5Mod._ColumnOption | java.lang.String | scala.Null]
 }

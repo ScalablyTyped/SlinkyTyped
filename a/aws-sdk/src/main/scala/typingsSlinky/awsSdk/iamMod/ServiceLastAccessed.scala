@@ -30,65 +30,18 @@ trait ServiceLastAccessed extends js.Object {
 
 object ServiceLastAccessed {
   @scala.inline
-  def apply(ServiceName: serviceNameType, ServiceNamespace: serviceNamespaceType): ServiceLastAccessed = {
+  def apply(
+    ServiceName: serviceNameType,
+    ServiceNamespace: serviceNamespaceType,
+    LastAuthenticated: js.Date = null,
+    LastAuthenticatedEntity: arnType = null,
+    TotalAuthenticatedEntities: js.UndefOr[integerType] = js.undefined
+  ): ServiceLastAccessed = {
     val __obj = js.Dynamic.literal(ServiceName = ServiceName.asInstanceOf[js.Any], ServiceNamespace = ServiceNamespace.asInstanceOf[js.Any])
+    if (LastAuthenticated != null) __obj.updateDynamic("LastAuthenticated")(LastAuthenticated.asInstanceOf[js.Any])
+    if (LastAuthenticatedEntity != null) __obj.updateDynamic("LastAuthenticatedEntity")(LastAuthenticatedEntity.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalAuthenticatedEntities)) __obj.updateDynamic("TotalAuthenticatedEntities")(TotalAuthenticatedEntities.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceLastAccessed]
   }
-  @scala.inline
-  implicit class ServiceLastAccessedOps[Self <: ServiceLastAccessed] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceName(value: serviceNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceNamespace(value: serviceNamespaceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastAuthenticated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAuthenticated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAuthenticated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAuthenticated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAuthenticatedEntity(value: arnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAuthenticatedEntity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAuthenticatedEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAuthenticatedEntity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalAuthenticatedEntities(value: integerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalAuthenticatedEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalAuthenticatedEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalAuthenticatedEntities")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

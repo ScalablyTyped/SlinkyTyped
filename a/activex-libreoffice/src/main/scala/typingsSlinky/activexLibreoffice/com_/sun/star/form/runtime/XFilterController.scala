@@ -37,34 +37,33 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdb.SQLFilterOperator
   * @since OOo 3.3
   */
-@js.native
 trait XFilterController extends js.Object {
   /** denotes the [**active term**]{@link url="#active_term"} of the filter controller. */
-  var ActiveTerm: Double = js.native
+  var ActiveTerm: Double
   /** is the number of **disjunctive terms** of the filter expression represented by the form based filter. */
-  var DisjunctiveTerms: Double = js.native
+  var DisjunctiveTerms: Double
   /**
     * is the number of **filter components** , or filter controls, which the filter controller is responsible for.
     *
     * This number is constant during one session of the form based filter.
     */
-  var FilterComponents: Double = js.native
+  var FilterComponents: Double
   /**
     * retrieves the entirety of the **predicate expressions** represented by the filter controller.
     *
     * Each element of the returned sequence is a **disjunctive term** , having exactly {@link FilterComponents} elements, which denote the single
     * **predicate expressions** of this term.
     */
-  val PredicateExpressions: SafeArray[SafeArray[String]] = js.native
+  val PredicateExpressions: SafeArray[SafeArray[String]]
   /**
     * registers a listener to be notified of certain changes in the form based filter.
     *
     * Registering the same listener multiple times results in multiple notifications of the same event, and also requires multiple revocations of the
     * listener.
     */
-  def addFilterControllerListener(Listener: XFilterControllerListener): Unit = js.native
+  def addFilterControllerListener(Listener: XFilterControllerListener): Unit
   /** appends an empty disjunctive term to the list of terms. */
-  def appendEmptyDisjunctiveTerm(): Unit = js.native
+  def appendEmptyDisjunctiveTerm(): Unit
   /**
     * retrieves the filter component with the given index.
     *
@@ -74,22 +73,22 @@ trait XFilterController extends js.Object {
     * @see com.sun.star.form.DataAwareControlModel.BoundField
     * @throws com::sun::star::lang::IndexOutOfBoundsException if Component is out of the allowed range.
     */
-  def getFilterComponent(Component: Double): XControl = js.native
+  def getFilterComponent(Component: Double): XControl
   /**
     * retrieves the entirety of the **predicate expressions** represented by the filter controller.
     *
     * Each element of the returned sequence is a **disjunctive term** , having exactly {@link FilterComponents} elements, which denote the single
     * **predicate expressions** of this term.
     */
-  def getPredicateExpressions(): SafeArray[SafeArray[String]] = js.native
+  def getPredicateExpressions(): SafeArray[SafeArray[String]]
   /**
     * removes a given **disjunctive term**
     * @param Term the index of the term to remove. Must be greater than or equal to 0, and smaller than {@link DisjunctiveTerms} .
     * @throws com::sun::star::lang::IndexOutOfBoundsException if Term is out of the allowed range.
     */
-  def removeDisjunctiveTerm(Term: Double): Unit = js.native
+  def removeDisjunctiveTerm(Term: Double): Unit
   /** revokes a listener which was previously registered to be notified of certain changes in the form based filter. */
-  def removeFilterControllerListener(Listener: XFilterControllerListener): Unit = js.native
+  def removeFilterControllerListener(Listener: XFilterControllerListener): Unit
   /**
     * sets a given **predicate expression**
     * @param Component denotes the filter component whose expression is to be set. Must be greater than or equal to 0, and smaller than {@link FilterComponents} .
@@ -97,7 +96,7 @@ trait XFilterController extends js.Object {
     * @param PredicateExpression denotes the **predicate expression** to set for the given filter component in the given term.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if one of the indexes is out of the allowed range
     */
-  def setPredicateExpression(Component: Double, Term: Double, PredicateExpression: String): Unit = js.native
+  def setPredicateExpression(Component: Double, Term: Double, PredicateExpression: String): Unit
 }
 
 object XFilterController {
@@ -118,79 +117,5 @@ object XFilterController {
     val __obj = js.Dynamic.literal(ActiveTerm = ActiveTerm.asInstanceOf[js.Any], DisjunctiveTerms = DisjunctiveTerms.asInstanceOf[js.Any], FilterComponents = FilterComponents.asInstanceOf[js.Any], PredicateExpressions = PredicateExpressions.asInstanceOf[js.Any], addFilterControllerListener = js.Any.fromFunction1(addFilterControllerListener), appendEmptyDisjunctiveTerm = js.Any.fromFunction0(appendEmptyDisjunctiveTerm), getFilterComponent = js.Any.fromFunction1(getFilterComponent), getPredicateExpressions = js.Any.fromFunction0(getPredicateExpressions), removeDisjunctiveTerm = js.Any.fromFunction1(removeDisjunctiveTerm), removeFilterControllerListener = js.Any.fromFunction1(removeFilterControllerListener), setPredicateExpression = js.Any.fromFunction3(setPredicateExpression))
     __obj.asInstanceOf[XFilterController]
   }
-  @scala.inline
-  implicit class XFilterControllerOps[Self <: XFilterController] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveTerm(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveTerm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisjunctiveTerms(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisjunctiveTerms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilterComponents(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterComponents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPredicateExpressions(value: SafeArray[SafeArray[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredicateExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddFilterControllerListener(value: XFilterControllerListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilterControllerListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAppendEmptyDisjunctiveTerm(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendEmptyDisjunctiveTerm")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFilterComponent(value: Double => XControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterComponent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPredicateExpressions(value: () => SafeArray[SafeArray[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPredicateExpressions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveDisjunctiveTerm(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDisjunctiveTerm")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveFilterControllerListener(value: XFilterControllerListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFilterControllerListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPredicateExpression(value: (Double, Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPredicateExpression")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

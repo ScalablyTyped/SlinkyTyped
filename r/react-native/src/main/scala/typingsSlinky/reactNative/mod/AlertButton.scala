@@ -7,62 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AlertButton extends js.Object {
-  var onPress: js.UndefOr[js.Function1[/* value */ js.UndefOr[String], Unit]] = js.native
-  var style: js.UndefOr[default | cancel | destructive] = js.native
-  var text: js.UndefOr[String] = js.native
+  var onPress: js.UndefOr[js.Function1[/* value */ js.UndefOr[String], Unit]] = js.undefined
+  var style: js.UndefOr[default | cancel | destructive] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
 }
 
 object AlertButton {
   @scala.inline
-  def apply(): AlertButton = {
+  def apply(
+    onPress: /* value */ js.UndefOr[String] => Unit = null,
+    style: default | cancel | destructive = null,
+    text: String = null
+  ): AlertButton = {
     val __obj = js.Dynamic.literal()
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlertButton]
   }
-  @scala.inline
-  implicit class AlertButtonOps[Self <: AlertButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnPress(value: /* value */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: default | cancel | destructive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

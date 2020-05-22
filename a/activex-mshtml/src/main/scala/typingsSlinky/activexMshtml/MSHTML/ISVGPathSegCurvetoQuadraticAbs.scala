@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISVGPathSegCurvetoQuadraticAbs extends js.Object {
   @JSName("MSHTML.ISVGPathSegCurvetoQuadraticAbs_typekey")
-  var MSHTMLDotISVGPathSegCurvetoQuadraticAbs_typekey: ISVGPathSegCurvetoQuadraticAbs = js.native
-  var x: Double = js.native
-  var x1: Double = js.native
-  var y: Double = js.native
-  var y1: Double = js.native
+  var MSHTMLDotISVGPathSegCurvetoQuadraticAbs_typekey: ISVGPathSegCurvetoQuadraticAbs
+  var x: Double
+  var x1: Double
+  var y: Double
+  var y1: Double
 }
 
 object ISVGPathSegCurvetoQuadraticAbs {
@@ -27,43 +26,5 @@ object ISVGPathSegCurvetoQuadraticAbs {
     __obj.updateDynamic("MSHTML.ISVGPathSegCurvetoQuadraticAbs_typekey")(MSHTMLDotISVGPathSegCurvetoQuadraticAbs_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISVGPathSegCurvetoQuadraticAbs]
   }
-  @scala.inline
-  implicit class ISVGPathSegCurvetoQuadraticAbsOps[Self <: ISVGPathSegCurvetoQuadraticAbs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotISVGPathSegCurvetoQuadraticAbs_typekey(value: ISVGPathSegCurvetoQuadraticAbs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.ISVGPathSegCurvetoQuadraticAbs_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX1(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY1(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

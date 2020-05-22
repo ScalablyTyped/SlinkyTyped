@@ -14,4 +14,5 @@ package object validateMod {
     /* error */ typingsSlinky.schemaUtils.anon.ErrorObjectchildrenArrayE, 
     java.lang.String
   ]
+  type Schema = typingsSlinky.jsonSchema.mod.JSONSchema4 | typingsSlinky.jsonSchema.mod.JSONSchema6 | typingsSlinky.jsonSchema.mod.JSONSchema7
 }

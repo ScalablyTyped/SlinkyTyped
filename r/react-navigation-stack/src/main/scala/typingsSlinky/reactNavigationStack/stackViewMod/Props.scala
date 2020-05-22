@@ -9,16 +9,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props extends js.Object {
-  var descriptors: SceneDescriptorMap = js.native
-  var navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams] = js.native
-  var navigationConfig: NavigationStackConfig = js.native
-  var onGestureBegin: js.UndefOr[js.Function0[Unit]] = js.native
-  var onGestureCanceled: js.UndefOr[js.Function0[Unit]] = js.native
-  var onGestureEnd: js.UndefOr[js.Function0[Unit]] = js.native
-  var onTransitionStart: js.UndefOr[js.Function0[Unit]] = js.native
-  var screenProps: js.UndefOr[js.Any] = js.native
+  var descriptors: SceneDescriptorMap
+  var navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]
+  var navigationConfig: NavigationStackConfig
+  var onGestureBegin: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onGestureCanceled: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onGestureEnd: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onTransitionStart: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var screenProps: js.UndefOr[js.Any] = js.undefined
 }
 
 object Props {
@@ -26,96 +25,20 @@ object Props {
   def apply(
     descriptors: SceneDescriptorMap,
     navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams],
-    navigationConfig: NavigationStackConfig
+    navigationConfig: NavigationStackConfig,
+    onGestureBegin: () => Unit = null,
+    onGestureCanceled: () => Unit = null,
+    onGestureEnd: () => Unit = null,
+    onTransitionStart: () => Unit = null,
+    screenProps: js.Any = null
   ): Props = {
     val __obj = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], navigationConfig = navigationConfig.asInstanceOf[js.Any])
+    if (onGestureBegin != null) __obj.updateDynamic("onGestureBegin")(js.Any.fromFunction0(onGestureBegin))
+    if (onGestureCanceled != null) __obj.updateDynamic("onGestureCanceled")(js.Any.fromFunction0(onGestureCanceled))
+    if (onGestureEnd != null) __obj.updateDynamic("onGestureEnd")(js.Any.fromFunction0(onGestureEnd))
+    if (onTransitionStart != null) __obj.updateDynamic("onTransitionStart")(js.Any.fromFunction0(onTransitionStart))
+    if (screenProps != null) __obj.updateDynamic("screenProps")(screenProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescriptors(value: SceneDescriptorMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavigation(value: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavigationConfig(value: NavigationStackConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnGestureBegin(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureBegin")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGestureBegin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureBegin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnGestureCanceled(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureCanceled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGestureCanceled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureCanceled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnGestureEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGestureEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTransitionStart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTransitionStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenProps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenProps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

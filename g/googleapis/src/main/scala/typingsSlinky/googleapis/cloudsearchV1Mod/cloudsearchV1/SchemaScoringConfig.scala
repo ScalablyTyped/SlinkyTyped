@@ -25,41 +25,14 @@ trait SchemaScoringConfig extends js.Object {
 
 object SchemaScoringConfig {
   @scala.inline
-  def apply(): SchemaScoringConfig = {
+  def apply(
+    disableFreshness: js.UndefOr[Boolean] = js.undefined,
+    disablePersonalization: js.UndefOr[Boolean] = js.undefined
+  ): SchemaScoringConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableFreshness)) __obj.updateDynamic("disableFreshness")(disableFreshness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePersonalization)) __obj.updateDynamic("disablePersonalization")(disablePersonalization.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScoringConfig]
   }
-  @scala.inline
-  implicit class SchemaScoringConfigOps[Self <: SchemaScoringConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableFreshness(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFreshness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableFreshness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFreshness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePersonalization(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePersonalization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePersonalization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePersonalization")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

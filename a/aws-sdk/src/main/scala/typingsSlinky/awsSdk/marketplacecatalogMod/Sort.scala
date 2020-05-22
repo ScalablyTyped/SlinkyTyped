@@ -18,41 +18,11 @@ trait Sort extends js.Object {
 
 object Sort {
   @scala.inline
-  def apply(): Sort = {
+  def apply(SortBy: SortBy = null, SortOrder: SortOrder = null): Sort = {
     val __obj = js.Dynamic.literal()
+    if (SortBy != null) __obj.updateDynamic("SortBy")(SortBy.asInstanceOf[js.Any])
+    if (SortOrder != null) __obj.updateDynamic("SortOrder")(SortOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[Sort]
   }
-  @scala.inline
-  implicit class SortOps[Self <: Sort] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSortBy(value: SortBy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortOrder(value: SortOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

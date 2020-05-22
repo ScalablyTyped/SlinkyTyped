@@ -23,41 +23,11 @@ trait SchemaGamesAchievementSetStepsAtLeast extends js.Object {
 
 object SchemaGamesAchievementSetStepsAtLeast {
   @scala.inline
-  def apply(): SchemaGamesAchievementSetStepsAtLeast = {
+  def apply(kind: String = null, steps: js.UndefOr[Double] = js.undefined): SchemaGamesAchievementSetStepsAtLeast = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(steps)) __obj.updateDynamic("steps")(steps.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGamesAchievementSetStepsAtLeast]
   }
-  @scala.inline
-  implicit class SchemaGamesAchievementSetStepsAtLeastOps[Self <: SchemaGamesAchievementSetStepsAtLeast] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSteps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

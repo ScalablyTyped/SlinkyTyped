@@ -3,13 +3,14 @@ package typingsSlinky.officeUiFabricReact.anon
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPicker
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStrings
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStyleProps
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStyles
 import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
-import typingsSlinky.std.Partial
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.alpha
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.none
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.transparency
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -18,219 +19,61 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Readonly<office-ui-fabric-react.office-ui-fabric-react/lib/components/ColorPicker/ColorPicker.types.IColorPickerProps> */
-@js.native
 trait ReadonlyIColorPickerProps extends js.Object {
-  val alphaLabel: js.UndefOr[String] = js.native
-  val alphaSliderHidden: js.UndefOr[Boolean] = js.native
-  val blueLabel: js.UndefOr[String] = js.native
-  val className: js.UndefOr[String] = js.native
-  val color: IColor | String = js.native
-  val componentRef: js.UndefOr[IRefObject[IColorPicker]] = js.native
-  val greenLabel: js.UndefOr[String] = js.native
-  val hexLabel: js.UndefOr[String] = js.native
+  val alphaLabel: js.UndefOr[String] = js.undefined
+  val alphaSliderHidden: js.UndefOr[Boolean] = js.undefined
+  val alphaType: js.UndefOr[alpha | transparency | none] = js.undefined
+  val blueLabel: js.UndefOr[String] = js.undefined
+  val className: js.UndefOr[String] = js.undefined
+  val color: IColor | String
+  val componentRef: js.UndefOr[IRefObject[IColorPicker]] = js.undefined
+  val greenLabel: js.UndefOr[String] = js.undefined
+  val hexLabel: js.UndefOr[String] = js.undefined
   val onChange: js.UndefOr[
     js.Function2[/* ev */ SyntheticEvent[Event, HTMLElement], /* color */ IColor, scala.Unit]
-  ] = js.native
-  val redLabel: js.UndefOr[String] = js.native
-  val showPreview: js.UndefOr[Boolean] = js.native
-  val strings: js.UndefOr[IColorPickerStrings] = js.native
-  val styles: js.UndefOr[IStyleFunctionOrObject[IColorPickerStyleProps, IColorPickerStyles]] = js.native
-  val theme: js.UndefOr[ITheme] = js.native
+  ] = js.undefined
+  val redLabel: js.UndefOr[String] = js.undefined
+  val showPreview: js.UndefOr[Boolean] = js.undefined
+  val strings: js.UndefOr[IColorPickerStrings] = js.undefined
+  val styles: js.UndefOr[IStyleFunctionOrObject[IColorPickerStyleProps, IColorPickerStyles]] = js.undefined
+  val theme: js.UndefOr[ITheme] = js.undefined
 }
 
 object ReadonlyIColorPickerProps {
   @scala.inline
-  def apply(color: IColor | String): ReadonlyIColorPickerProps = {
+  def apply(
+    color: IColor | String,
+    alphaLabel: String = null,
+    alphaSliderHidden: js.UndefOr[Boolean] = js.undefined,
+    alphaType: alpha | transparency | none = null,
+    blueLabel: String = null,
+    className: String = null,
+    componentRef: IRefObject[IColorPicker] = null,
+    greenLabel: String = null,
+    hexLabel: String = null,
+    onChange: (/* ev */ SyntheticEvent[Event, HTMLElement], /* color */ IColor) => scala.Unit = null,
+    redLabel: String = null,
+    showPreview: js.UndefOr[Boolean] = js.undefined,
+    strings: IColorPickerStrings = null,
+    styles: IStyleFunctionOrObject[IColorPickerStyleProps, IColorPickerStyles] = null,
+    theme: ITheme = null
+  ): ReadonlyIColorPickerProps = {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
+    if (alphaLabel != null) __obj.updateDynamic("alphaLabel")(alphaLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(alphaSliderHidden)) __obj.updateDynamic("alphaSliderHidden")(alphaSliderHidden.get.asInstanceOf[js.Any])
+    if (alphaType != null) __obj.updateDynamic("alphaType")(alphaType.asInstanceOf[js.Any])
+    if (blueLabel != null) __obj.updateDynamic("blueLabel")(blueLabel.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
+    if (greenLabel != null) __obj.updateDynamic("greenLabel")(greenLabel.asInstanceOf[js.Any])
+    if (hexLabel != null) __obj.updateDynamic("hexLabel")(hexLabel.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (redLabel != null) __obj.updateDynamic("redLabel")(redLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(showPreview)) __obj.updateDynamic("showPreview")(showPreview.get.asInstanceOf[js.Any])
+    if (strings != null) __obj.updateDynamic("strings")(strings.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadonlyIColorPickerProps]
   }
-  @scala.inline
-  implicit class ReadonlyIColorPickerPropsOps[Self <: ReadonlyIColorPickerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: IColor | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlphaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlphaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlphaSliderHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaSliderHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlphaSliderHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaSliderHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlueLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blueLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlueLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blueLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentRefFunction1(value: /* ref */ IColorPicker | Null => scala.Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withComponentRefRefObject(value: ReactRef[IColorPicker]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentRef(value: IRefObject[IColorPicker]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGreenLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greenLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGreenLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greenLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHexLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHexLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: (/* ev */ SyntheticEvent[Event, HTMLElement], /* color */ IColor) => scala.Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowPreview(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowPreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPreview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrings(value: IColorPickerStrings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStylesFunction1(value: IColorPickerStyleProps => Partial[IColorPickerStyles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStyles(value: IStyleFunctionOrObject[IColorPickerStyleProps, IColorPickerStyles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

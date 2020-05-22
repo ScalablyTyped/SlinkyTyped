@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OldPlugin extends Plugin {
-  var test: Test = js.native
-  def print(`val`: js.Any, print: Print, indent: Indent, options: PluginOptions, colors: Colors): String = js.native
+  var test: Test
+  def print(`val`: js.Any, print: Print, indent: Indent, options: PluginOptions, colors: Colors): String
 }
 
 object OldPlugin {
@@ -19,25 +18,5 @@ object OldPlugin {
     val __obj = js.Dynamic.literal(print = js.Any.fromFunction5(print), test = js.Any.fromFunction1(test))
     __obj.asInstanceOf[OldPlugin]
   }
-  @scala.inline
-  implicit class OldPluginOps[Self <: OldPlugin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrint(value: (js.Any, Print, Indent, PluginOptions, Colors) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withTest(value: /* arg0 */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

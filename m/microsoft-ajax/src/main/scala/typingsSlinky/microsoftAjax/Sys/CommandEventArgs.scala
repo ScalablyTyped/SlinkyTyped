@@ -9,22 +9,21 @@ import scala.scalajs.js.annotation._
   * Event handlers can use the cancel property to cancel the operation in progress. The semantics of canceling an event depend on the event source.
   * @see {@link http://msdn.microsoft.com/en-us/library/dd393715(v=vs.100).aspx
   */
-@js.native
 trait CommandEventArgs extends EventArgs {
   /**
     * Gets a value that represents the command argument.
     */
-  def get_commandArgument(): js.Any = js.native
+  def get_commandArgument(): js.Any
   //#endregion
   //#region Properties
   /**
     * Gets a string that specifies the command name.
     */
-  def get_commandName(): String = js.native
+  def get_commandName(): String
   /**
     * Gets a value that represents the command source.
     */
-  def get_commandSource(): js.Any = js.native
+  def get_commandSource(): js.Any
 }
 
 object CommandEventArgs {
@@ -38,31 +37,5 @@ object CommandEventArgs {
     val __obj = js.Dynamic.literal(Empty = Empty.asInstanceOf[js.Any], get_commandArgument = js.Any.fromFunction0(get_commandArgument), get_commandName = js.Any.fromFunction0(get_commandName), get_commandSource = js.Any.fromFunction0(get_commandSource))
     __obj.asInstanceOf[CommandEventArgs]
   }
-  @scala.inline
-  implicit class CommandEventArgsOps[Self <: CommandEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_commandArgument(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_commandArgument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_commandName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_commandName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_commandSource(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_commandSource")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

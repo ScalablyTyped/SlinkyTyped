@@ -5,36 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // DatePicker
-@js.native
 trait DatePickerIcons extends js.Object {
-  var rightIcon: js.UndefOr[String] = js.native
+  var rightIcon: js.UndefOr[String] = js.undefined
 }
 
 object DatePickerIcons {
   @scala.inline
-  def apply(): DatePickerIcons = {
+  def apply(rightIcon: String = null): DatePickerIcons = {
     val __obj = js.Dynamic.literal()
+    if (rightIcon != null) __obj.updateDynamic("rightIcon")(rightIcon.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatePickerIcons]
   }
-  @scala.inline
-  implicit class DatePickerIconsOps[Self <: DatePickerIcons] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRightIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

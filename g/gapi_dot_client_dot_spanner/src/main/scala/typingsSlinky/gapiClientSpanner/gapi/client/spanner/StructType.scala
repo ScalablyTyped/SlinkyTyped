@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StructType extends js.Object {
   /**
     * The list of fields that make up this struct. Order is
@@ -14,34 +13,15 @@ trait StructType extends js.Object {
     * matches the order of columns in a read request, or the order of
     * fields in the `SELECT` clause of a query.
     */
-  var fields: js.UndefOr[js.Array[Field]] = js.native
+  var fields: js.UndefOr[js.Array[Field]] = js.undefined
 }
 
 object StructType {
   @scala.inline
-  def apply(): StructType = {
+  def apply(fields: js.Array[Field] = null): StructType = {
     val __obj = js.Dynamic.literal()
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructType]
   }
-  @scala.inline
-  implicit class StructTypeOps[Self <: StructType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: js.Array[Field]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

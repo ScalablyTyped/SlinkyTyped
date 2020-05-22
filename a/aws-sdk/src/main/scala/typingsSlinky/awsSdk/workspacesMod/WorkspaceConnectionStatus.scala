@@ -26,65 +26,18 @@ trait WorkspaceConnectionStatus extends js.Object {
 
 object WorkspaceConnectionStatus {
   @scala.inline
-  def apply(): WorkspaceConnectionStatus = {
+  def apply(
+    ConnectionState: ConnectionState = null,
+    ConnectionStateCheckTimestamp: js.Date = null,
+    LastKnownUserConnectionTimestamp: js.Date = null,
+    WorkspaceId: WorkspaceId = null
+  ): WorkspaceConnectionStatus = {
     val __obj = js.Dynamic.literal()
+    if (ConnectionState != null) __obj.updateDynamic("ConnectionState")(ConnectionState.asInstanceOf[js.Any])
+    if (ConnectionStateCheckTimestamp != null) __obj.updateDynamic("ConnectionStateCheckTimestamp")(ConnectionStateCheckTimestamp.asInstanceOf[js.Any])
+    if (LastKnownUserConnectionTimestamp != null) __obj.updateDynamic("LastKnownUserConnectionTimestamp")(LastKnownUserConnectionTimestamp.asInstanceOf[js.Any])
+    if (WorkspaceId != null) __obj.updateDynamic("WorkspaceId")(WorkspaceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkspaceConnectionStatus]
   }
-  @scala.inline
-  implicit class WorkspaceConnectionStatusOps[Self <: WorkspaceConnectionStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionState(value: ConnectionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionStateCheckTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionStateCheckTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionStateCheckTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionStateCheckTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastKnownUserConnectionTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastKnownUserConnectionTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastKnownUserConnectionTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastKnownUserConnectionTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkspaceId(value: WorkspaceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkspaceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

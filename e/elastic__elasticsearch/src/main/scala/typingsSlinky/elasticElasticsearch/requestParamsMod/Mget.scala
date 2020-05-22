@@ -4,186 +4,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Mget[T] extends Generic {
-  var _source: js.UndefOr[String | js.Array[String]] = js.native
-  var _source_exclude: js.UndefOr[String | js.Array[String]] = js.native
-  var _source_excludes: js.UndefOr[String | js.Array[String]] = js.native
-  var _source_include: js.UndefOr[String | js.Array[String]] = js.native
-  var _source_includes: js.UndefOr[String | js.Array[String]] = js.native
-  var body: T = js.native
-  var index: js.UndefOr[String] = js.native
-  var preference: js.UndefOr[String] = js.native
-  var realtime: js.UndefOr[Boolean] = js.native
-  var refresh: js.UndefOr[Boolean] = js.native
-  var routing: js.UndefOr[String] = js.native
-  var stored_fields: js.UndefOr[String | js.Array[String]] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var _source: js.UndefOr[String | js.Array[String]] = js.undefined
+  var _source_exclude: js.UndefOr[String | js.Array[String]] = js.undefined
+  var _source_excludes: js.UndefOr[String | js.Array[String]] = js.undefined
+  var _source_include: js.UndefOr[String | js.Array[String]] = js.undefined
+  var _source_includes: js.UndefOr[String | js.Array[String]] = js.undefined
+  var body: T
+  var index: js.UndefOr[String] = js.undefined
+  var preference: js.UndefOr[String] = js.undefined
+  var realtime: js.UndefOr[Boolean] = js.undefined
+  var refresh: js.UndefOr[Boolean] = js.undefined
+  var routing: js.UndefOr[String] = js.undefined
+  var stored_fields: js.UndefOr[String | js.Array[String]] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object Mget {
   @scala.inline
-  def apply[T](body: T): Mget[T] = {
+  def apply[T](
+    body: T,
+    _source: String | js.Array[String] = null,
+    _source_exclude: String | js.Array[String] = null,
+    _source_excludes: String | js.Array[String] = null,
+    _source_include: String | js.Array[String] = null,
+    _source_includes: String | js.Array[String] = null,
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    filter_path: String | js.Array[String] = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    index: String = null,
+    method: String = null,
+    preference: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    realtime: js.UndefOr[Boolean] = js.undefined,
+    refresh: js.UndefOr[Boolean] = js.undefined,
+    routing: String = null,
+    source: String = null,
+    stored_fields: String | js.Array[String] = null,
+    `type`: String = null
+  ): Mget[T] = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
+    if (_source != null) __obj.updateDynamic("_source")(_source.asInstanceOf[js.Any])
+    if (_source_exclude != null) __obj.updateDynamic("_source_exclude")(_source_exclude.asInstanceOf[js.Any])
+    if (_source_excludes != null) __obj.updateDynamic("_source_excludes")(_source_excludes.asInstanceOf[js.Any])
+    if (_source_include != null) __obj.updateDynamic("_source_include")(_source_include.asInstanceOf[js.Any])
+    if (_source_includes != null) __obj.updateDynamic("_source_includes")(_source_includes.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (preference != null) __obj.updateDynamic("preference")(preference.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(realtime)) __obj.updateDynamic("realtime")(realtime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refresh)) __obj.updateDynamic("refresh")(refresh.get.asInstanceOf[js.Any])
+    if (routing != null) __obj.updateDynamic("routing")(routing.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (stored_fields != null) __obj.updateDynamic("stored_fields")(stored_fields.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mget[T]]
   }
-  @scala.inline
-  implicit class MgetOps[Self[t] <: Mget[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withBody(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_source(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_source_exclude(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source_exclude: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_source_excludes(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_excludes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source_excludes: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_excludes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_source_include(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source_include: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_include")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_source_includes(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_includes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source_includes: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_includes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreference(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreference: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRealtime(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRealtime: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realtime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefresh: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouting(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouting: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStored_fields(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stored_fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStored_fields: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stored_fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

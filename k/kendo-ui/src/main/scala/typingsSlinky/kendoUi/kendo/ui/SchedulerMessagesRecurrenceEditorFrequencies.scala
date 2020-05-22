@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SchedulerMessagesRecurrenceEditorFrequencies extends js.Object {
-  var daily: js.UndefOr[String] = js.native
-  var monthly: js.UndefOr[String] = js.native
-  var never: js.UndefOr[String] = js.native
-  var weekly: js.UndefOr[String] = js.native
-  var yearly: js.UndefOr[String] = js.native
+  var daily: js.UndefOr[String] = js.undefined
+  var monthly: js.UndefOr[String] = js.undefined
+  var never: js.UndefOr[String] = js.undefined
+  var weekly: js.UndefOr[String] = js.undefined
+  var yearly: js.UndefOr[String] = js.undefined
 }
 
 object SchedulerMessagesRecurrenceEditorFrequencies {
   @scala.inline
-  def apply(): SchedulerMessagesRecurrenceEditorFrequencies = {
+  def apply(
+    daily: String = null,
+    monthly: String = null,
+    never: String = null,
+    weekly: String = null,
+    yearly: String = null
+  ): SchedulerMessagesRecurrenceEditorFrequencies = {
     val __obj = js.Dynamic.literal()
+    if (daily != null) __obj.updateDynamic("daily")(daily.asInstanceOf[js.Any])
+    if (monthly != null) __obj.updateDynamic("monthly")(monthly.asInstanceOf[js.Any])
+    if (never != null) __obj.updateDynamic("never")(never.asInstanceOf[js.Any])
+    if (weekly != null) __obj.updateDynamic("weekly")(weekly.asInstanceOf[js.Any])
+    if (yearly != null) __obj.updateDynamic("yearly")(yearly.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchedulerMessagesRecurrenceEditorFrequencies]
   }
-  @scala.inline
-  implicit class SchedulerMessagesRecurrenceEditorFrequenciesOps[Self <: SchedulerMessagesRecurrenceEditorFrequencies] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDaily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("daily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDaily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("daily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthly(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNever(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("never")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNever: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("never")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeekly(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeekly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYearly(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYearly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

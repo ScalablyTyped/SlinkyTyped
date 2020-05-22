@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ErrorHandlerObject extends js.Object {
-  var error: js.UndefOr[js.Function1[/* msg */ js.Any, _]] = js.native
-  var fatalError: js.UndefOr[js.Function1[/* msg */ js.Any, _]] = js.native
-  var warning: js.UndefOr[js.Function1[/* msg */ js.Any, _]] = js.native
+  var error: js.UndefOr[js.Function1[/* msg */ js.Any, _]] = js.undefined
+  var fatalError: js.UndefOr[js.Function1[/* msg */ js.Any, _]] = js.undefined
+  var warning: js.UndefOr[js.Function1[/* msg */ js.Any, _]] = js.undefined
 }
 
 object ErrorHandlerObject {
   @scala.inline
-  def apply(): ErrorHandlerObject = {
+  def apply(
+    error: /* msg */ js.Any => _ = null,
+    fatalError: /* msg */ js.Any => _ = null,
+    warning: /* msg */ js.Any => _ = null
+  ): ErrorHandlerObject = {
     val __obj = js.Dynamic.literal()
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
+    if (fatalError != null) __obj.updateDynamic("fatalError")(js.Any.fromFunction1(fatalError))
+    if (warning != null) __obj.updateDynamic("warning")(js.Any.fromFunction1(warning))
     __obj.asInstanceOf[ErrorHandlerObject]
   }
-  @scala.inline
-  implicit class ErrorHandlerObjectOps[Self <: ErrorHandlerObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: /* msg */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFatalError(value: /* msg */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatalError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFatalError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatalError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarning(value: /* msg */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

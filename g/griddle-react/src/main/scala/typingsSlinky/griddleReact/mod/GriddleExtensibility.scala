@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GriddleExtensibility extends js.Object {
-  var components: js.UndefOr[GriddleComponents] = js.native
-  var events: js.UndefOr[GriddleEvents] = js.native
-  var listeners: js.UndefOr[PropertyBag[Listener]] = js.native
-  var reducer: js.UndefOr[PropertyBag[Reducer]] = js.native
-  var renderProperties: js.UndefOr[GriddleRenderProperties] = js.native
-  var selectors: js.UndefOr[PropertyBag[Selector]] = js.native
-  var settingsComponentObjects: js.UndefOr[PropertyBag[SettingsComponentObject]] = js.native
-  var styleConfig: js.UndefOr[GriddleStyleConfig] = js.native
+  var components: js.UndefOr[GriddleComponents] = js.undefined
+  var events: js.UndefOr[GriddleEvents] = js.undefined
+  var listeners: js.UndefOr[PropertyBag[Listener]] = js.undefined
+  var reducer: js.UndefOr[PropertyBag[Reducer]] = js.undefined
+  var renderProperties: js.UndefOr[GriddleRenderProperties] = js.undefined
+  var selectors: js.UndefOr[PropertyBag[Selector]] = js.undefined
+  var settingsComponentObjects: js.UndefOr[PropertyBag[SettingsComponentObject]] = js.undefined
+  var styleConfig: js.UndefOr[GriddleStyleConfig] = js.undefined
 }
 
 object GriddleExtensibility {
   @scala.inline
-  def apply(): GriddleExtensibility = {
+  def apply(
+    components: GriddleComponents = null,
+    events: GriddleEvents = null,
+    listeners: PropertyBag[Listener] = null,
+    reducer: PropertyBag[Reducer] = null,
+    renderProperties: GriddleRenderProperties = null,
+    selectors: PropertyBag[Selector] = null,
+    settingsComponentObjects: PropertyBag[SettingsComponentObject] = null,
+    styleConfig: GriddleStyleConfig = null
+  ): GriddleExtensibility = {
     val __obj = js.Dynamic.literal()
+    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (listeners != null) __obj.updateDynamic("listeners")(listeners.asInstanceOf[js.Any])
+    if (reducer != null) __obj.updateDynamic("reducer")(reducer.asInstanceOf[js.Any])
+    if (renderProperties != null) __obj.updateDynamic("renderProperties")(renderProperties.asInstanceOf[js.Any])
+    if (selectors != null) __obj.updateDynamic("selectors")(selectors.asInstanceOf[js.Any])
+    if (settingsComponentObjects != null) __obj.updateDynamic("settingsComponentObjects")(settingsComponentObjects.asInstanceOf[js.Any])
+    if (styleConfig != null) __obj.updateDynamic("styleConfig")(styleConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[GriddleExtensibility]
   }
-  @scala.inline
-  implicit class GriddleExtensibilityOps[Self <: GriddleExtensibility] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponents(value: GriddleComponents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: GriddleEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListeners(value: PropertyBag[Listener]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listeners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListeners: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listeners")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReducer(value: PropertyBag[Reducer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reducer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReducer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reducer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderProperties(value: GriddleRenderProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectors(value: PropertyBag[Selector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingsComponentObjects(value: PropertyBag[SettingsComponentObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsComponentObjects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingsComponentObjects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsComponentObjects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleConfig(value: GriddleStyleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyleConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

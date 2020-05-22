@@ -7,179 +7,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PushData extends js.Object {
-  var alert: js.UndefOr[String] = js.native
-  var badge: js.UndefOr[String] = js.native
-  var channels: js.UndefOr[js.Array[String]] = js.native
-  var content_available: js.UndefOr[js.Any] = js.native
-  var data: js.UndefOr[js.Any] = js.native
-  var expiration_interval: js.UndefOr[Double] = js.native
-  var expiration_time: js.UndefOr[js.Date] = js.native
-  var notification: js.UndefOr[js.Any] = js.native
-  var push_time: js.UndefOr[js.Date] = js.native
-  var sound: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var where: js.UndefOr[Query[Installation[Attributes]]] = js.native
+  var alert: js.UndefOr[String] = js.undefined
+  var badge: js.UndefOr[String] = js.undefined
+  var channels: js.UndefOr[js.Array[String]] = js.undefined
+  var content_available: js.UndefOr[js.Any] = js.undefined
+  var data: js.UndefOr[js.Any] = js.undefined
+  var expiration_interval: js.UndefOr[Double] = js.undefined
+  var expiration_time: js.UndefOr[js.Date] = js.undefined
+  var notification: js.UndefOr[js.Any] = js.undefined
+  var push_time: js.UndefOr[js.Date] = js.undefined
+  var sound: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var where: js.UndefOr[Query[Installation[Attributes]]] = js.undefined
 }
 
 object PushData {
   @scala.inline
-  def apply(): PushData = {
+  def apply(
+    alert: String = null,
+    badge: String = null,
+    channels: js.Array[String] = null,
+    content_available: js.Any = null,
+    data: js.Any = null,
+    expiration_interval: js.UndefOr[Double] = js.undefined,
+    expiration_time: js.Date = null,
+    notification: js.Any = null,
+    push_time: js.Date = null,
+    sound: String = null,
+    title: String = null,
+    where: Query[Installation[Attributes]] = null
+  ): PushData = {
     val __obj = js.Dynamic.literal()
+    if (alert != null) __obj.updateDynamic("alert")(alert.asInstanceOf[js.Any])
+    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
+    if (channels != null) __obj.updateDynamic("channels")(channels.asInstanceOf[js.Any])
+    if (content_available != null) __obj.updateDynamic("content_available")(content_available.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(expiration_interval)) __obj.updateDynamic("expiration_interval")(expiration_interval.get.asInstanceOf[js.Any])
+    if (expiration_time != null) __obj.updateDynamic("expiration_time")(expiration_time.asInstanceOf[js.Any])
+    if (notification != null) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
+    if (push_time != null) __obj.updateDynamic("push_time")(push_time.asInstanceOf[js.Any])
+    if (sound != null) __obj.updateDynamic("sound")(sound.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[PushData]
   }
-  @scala.inline
-  implicit class PushDataOps[Self <: PushData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlert(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent_available(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_available")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent_available: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_available")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiration_interval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration_interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration_interval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration_interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiration_time(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotification(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPush_time(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPush_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSound(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhere(value: Query[Installation[Attributes]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhere: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

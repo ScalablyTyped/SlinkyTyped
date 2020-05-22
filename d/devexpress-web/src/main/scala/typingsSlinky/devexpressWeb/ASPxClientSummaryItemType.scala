@@ -7,28 +7,27 @@ import scala.scalajs.js.annotation._
 /**
   * Lists values that specify the summary item's aggregate function types.
   */
-@js.native
 trait ASPxClientSummaryItemType extends js.Object {
   /**
     * The column's average value.
     */
-  var Average: Double = js.native
+  var Average: Double
   /**
     * The record count.
     */
-  var Count: Double = js.native
+  var Count: Double
   /**
     * The maximum value in the column.
     */
-  var Max: Double = js.native
+  var Max: Double
   /**
     * The minimum value in the column.
     */
-  var Min: Double = js.native
+  var Min: Double
   /**
     * The sum of all values in a column.
     */
-  var Sum: Double = js.native
+  var Sum: Double
 }
 
 object ASPxClientSummaryItemType {
@@ -37,43 +36,5 @@ object ASPxClientSummaryItemType {
     val __obj = js.Dynamic.literal(Average = Average.asInstanceOf[js.Any], Count = Count.asInstanceOf[js.Any], Max = Max.asInstanceOf[js.Any], Min = Min.asInstanceOf[js.Any], Sum = Sum.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientSummaryItemType]
   }
-  @scala.inline
-  implicit class ASPxClientSummaryItemTypeOps[Self <: ASPxClientSummaryItemType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAverage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Average")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sum")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

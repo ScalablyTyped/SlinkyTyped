@@ -4,135 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SeriesMouseLeftButtonUpEventUIParam extends js.Object {
   /**
-  	 * Used to get item brush.
-  	 */
-  var actualItemBrush: js.UndefOr[js.Any] = js.native
+    * Used to get item brush.
+    */
+  var actualItemBrush: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get series brush.
-  	 */
-  var actualSeriesBrush: js.UndefOr[js.Any] = js.native
+    * Used to get series brush.
+    */
+  var actualSeriesBrush: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get reference to chart object.
-  	 */
-  var chart: js.UndefOr[js.Any] = js.native
+    * Used to get reference to chart object.
+    */
+  var chart: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get reference to current series item object.
-  	 */
-  var item: js.UndefOr[js.Any] = js.native
+    * Used to get reference to current series item object.
+    */
+  var item: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get mouse X position.
-  	 */
-  var positionX: js.UndefOr[js.Any] = js.native
+    * Used to get mouse X position.
+    */
+  var positionX: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get mouse Y position.
-  	 */
-  var positionY: js.UndefOr[js.Any] = js.native
+    * Used to get mouse Y position.
+    */
+  var positionY: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get reference to current series object.
-  	 */
-  var series: js.UndefOr[js.Any] = js.native
+    * Used to get reference to current series object.
+    */
+  var series: js.UndefOr[js.Any] = js.undefined
 }
 
 object SeriesMouseLeftButtonUpEventUIParam {
   @scala.inline
-  def apply(): SeriesMouseLeftButtonUpEventUIParam = {
+  def apply(
+    actualItemBrush: js.Any = null,
+    actualSeriesBrush: js.Any = null,
+    chart: js.Any = null,
+    item: js.Any = null,
+    positionX: js.Any = null,
+    positionY: js.Any = null,
+    series: js.Any = null
+  ): SeriesMouseLeftButtonUpEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (actualItemBrush != null) __obj.updateDynamic("actualItemBrush")(actualItemBrush.asInstanceOf[js.Any])
+    if (actualSeriesBrush != null) __obj.updateDynamic("actualSeriesBrush")(actualSeriesBrush.asInstanceOf[js.Any])
+    if (chart != null) __obj.updateDynamic("chart")(chart.asInstanceOf[js.Any])
+    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
+    if (positionX != null) __obj.updateDynamic("positionX")(positionX.asInstanceOf[js.Any])
+    if (positionY != null) __obj.updateDynamic("positionY")(positionY.asInstanceOf[js.Any])
+    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesMouseLeftButtonUpEventUIParam]
   }
-  @scala.inline
-  implicit class SeriesMouseLeftButtonUpEventUIParamOps[Self <: SeriesMouseLeftButtonUpEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualItemBrush(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualItemBrush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActualItemBrush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualItemBrush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActualSeriesBrush(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualSeriesBrush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActualSeriesBrush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualSeriesBrush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChart(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeries(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

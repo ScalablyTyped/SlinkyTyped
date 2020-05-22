@@ -7,50 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DescribeKeyOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */
   @JSName("$metadata")
-  var $metadata: ResponseMetadata = js.native
+  var $metadata: ResponseMetadata
   /**
     * <p>Metadata associated with the key.</p>
     */
-  var KeyMetadata: js.UndefOr[UnmarshalledKeyMetadata] = js.native
+  var KeyMetadata: js.UndefOr[UnmarshalledKeyMetadata] = js.undefined
 }
 
 object DescribeKeyOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): DescribeKeyOutput = {
+  def apply($metadata: ResponseMetadata, KeyMetadata: UnmarshalledKeyMetadata = null): DescribeKeyOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (KeyMetadata != null) __obj.updateDynamic("KeyMetadata")(KeyMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeKeyOutput]
   }
-  @scala.inline
-  implicit class DescribeKeyOutputOps[Self <: DescribeKeyOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$metadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyMetadata(value: UnmarshalledKeyMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

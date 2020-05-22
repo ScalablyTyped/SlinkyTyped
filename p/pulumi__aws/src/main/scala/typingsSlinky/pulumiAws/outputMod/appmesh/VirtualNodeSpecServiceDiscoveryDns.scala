@@ -18,19 +18,5 @@ object VirtualNodeSpecServiceDiscoveryDns {
     val __obj = js.Dynamic.literal(hostname = hostname.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualNodeSpecServiceDiscoveryDns]
   }
-  @scala.inline
-  implicit class VirtualNodeSpecServiceDiscoveryDnsOps[Self <: VirtualNodeSpecServiceDiscoveryDns] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommitResponse extends js.Object {
-  var indexUpdates: Double = js.native
-  var mutationResults: js.Array[MutationResult] = js.native
+  var indexUpdates: Double
+  var mutationResults: js.Array[MutationResult]
 }
 
 object CommitResponse {
@@ -16,25 +15,5 @@ object CommitResponse {
     val __obj = js.Dynamic.literal(indexUpdates = indexUpdates.asInstanceOf[js.Any], mutationResults = mutationResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommitResponse]
   }
-  @scala.inline
-  implicit class CommitResponseOps[Self <: CommitResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexUpdates(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMutationResults(value: js.Array[MutationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutationResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

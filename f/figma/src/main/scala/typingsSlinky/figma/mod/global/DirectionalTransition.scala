@@ -13,13 +13,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectionalTransition extends Transition {
-  val direction: LEFT | RIGHT | TOP | BOTTOM = js.native
-  val duration: Double = js.native
-  val easing: Easing = js.native
-  val matchLayers: Boolean = js.native
-  val `type`: MOVE_IN | MOVE_OUT | PUSH | SLIDE_IN | SLIDE_OUT = js.native
+  val direction: LEFT | RIGHT | TOP | BOTTOM
+  val duration: Double
+  val easing: Easing
+  val matchLayers: Boolean
+  val `type`: MOVE_IN | MOVE_OUT | PUSH | SLIDE_IN | SLIDE_OUT
 }
 
 object DirectionalTransition {
@@ -35,43 +34,5 @@ object DirectionalTransition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionalTransition]
   }
-  @scala.inline
-  implicit class DirectionalTransitionOps[Self <: DirectionalTransition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirection(value: LEFT | RIGHT | TOP | BOTTOM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEasing(value: Easing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatchLayers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchLayers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: MOVE_IN | MOVE_OUT | PUSH | SLIDE_IN | SLIDE_OUT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -11,19 +11,18 @@ import scala.scalajs.js.annotation._
   * XPackage} object created by that call still exist.
   * @since OOo 3.3
   */
-@js.native
 trait InvalidRemovedParameterException extends Exception {
   /**
     * the {@link XPackage} that was already bound to the provided `url` parameter during {@link XPackageRegistry.bindPackage()} .
     *
     * Must not be `NULL` .
     */
-  var Extension: XPackage = js.native
+  var Extension: XPackage
   /**
     * the value of the `removed` parameter which was used in {@link XPackageRegistry.bindPackage()} to create the currently existing {@link XPackage}
     * object.
     */
-  var PreviousValue: Boolean = js.native
+  var PreviousValue: Boolean
 }
 
 object InvalidRemovedParameterException {
@@ -32,25 +31,5 @@ object InvalidRemovedParameterException {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], Extension = Extension.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], PreviousValue = PreviousValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidRemovedParameterException]
   }
-  @scala.inline
-  implicit class InvalidRemovedParameterExceptionOps[Self <: InvalidRemovedParameterException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtension(value: XPackage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreviousValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

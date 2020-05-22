@@ -4,36 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsIntOptions extends MinMaxExtendedOptions {
-  var allow_leading_zeroes: js.UndefOr[Boolean] = js.native
+  var allow_leading_zeroes: js.UndefOr[Boolean] = js.undefined
 }
 
 object IsIntOptions {
   @scala.inline
-  def apply(): IsIntOptions = {
+  def apply(
+    allow_leading_zeroes: js.UndefOr[Boolean] = js.undefined,
+    gt: js.UndefOr[Double] = js.undefined,
+    lt: js.UndefOr[Double] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined
+  ): IsIntOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allow_leading_zeroes)) __obj.updateDynamic("allow_leading_zeroes")(allow_leading_zeroes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gt)) __obj.updateDynamic("gt")(gt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lt)) __obj.updateDynamic("lt")(lt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsIntOptions]
   }
-  @scala.inline
-  implicit class IsIntOptionsOps[Self <: IsIntOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllow_leading_zeroes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_leading_zeroes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_leading_zeroes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_leading_zeroes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

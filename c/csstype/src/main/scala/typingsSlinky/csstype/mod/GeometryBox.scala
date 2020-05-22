@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`padding-box`
 */
 trait GeometryBox
-  extends MaskLayer[js.Any]
-     with ClipPathProperty
-     with MaskClipProperty
-     with MaskOriginProperty
-     with OffsetPathProperty
-     with OffsetProperty[js.Any]
+  extends _MaskLayer[js.Any]
+     with _ClipPathProperty
+     with _MaskClipProperty
+     with _MaskOriginProperty
+     with _OffsetPathProperty
+     with _OffsetProperty[js.Any]
 
 object GeometryBox {
   @scala.inline

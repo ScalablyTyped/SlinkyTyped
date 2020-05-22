@@ -6,10 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @constant
-  * @name pc.BLEND_NONE
-  * @type {number}
-  * @description Disable blending.
+  * Disable blending.
   */
 @JSGlobal("pc.BLEND_NONE")
 @js.native

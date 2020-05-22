@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GlParentAny extends js.Object {
-  var glParent: js.Any = js.native
+  var glParent: js.Any
 }
 
 object GlParentAny {
@@ -15,19 +14,5 @@ object GlParentAny {
     val __obj = js.Dynamic.literal(glParent = glParent.asInstanceOf[js.Any])
     __obj.asInstanceOf[GlParentAny]
   }
-  @scala.inline
-  implicit class GlParentAnyOps[Self <: GlParentAny] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

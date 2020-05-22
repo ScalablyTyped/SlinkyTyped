@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KmlScreenOverlay extends KmlOverlay {
   /**
     * Specifies a point relative to the screen origin that the overlay image is mapped to.
@@ -17,16 +16,16 @@ trait KmlScreenOverlay extends KmlOverlay {
     *  screenXY and overlayXY behave opposite to their corresponding behaviors in KML.
     *  This is due to a bug in the Earth API that will intentionally remain unfixed until a major version change.
     */
-  def getOverlayXY(): KmlVec2 = js.native
+  def getOverlayXY(): KmlVec2
   /**
     * Adjusts how the image is placed inside the field of view.
     * This element is useful if your image has been rotated and deviates slightly from a desired horizontal view.
     */
-  def getRotation(): Double = js.native
+  def getRotation(): Double
   /**
     * Point relative to the screen about which the screen overlay is rotated.
     */
-  def getRotationXY(): KmlVec2 = js.native
+  def getRotationXY(): KmlVec2
   /**
     * Specifies a point on (or outside of) the overlay image that is mapped to the screen coordinate.
     * It requires x and y values, and the units for those values.
@@ -36,7 +35,7 @@ trait KmlScreenOverlay extends KmlOverlay {
     *  screenXY and overlayXY behave opposite to their corresponding behaviors in KML.
     *  This is due to a bug in the Earth API that will intentionally remain unfixed until a major version change.
     */
-  def getScreenXY(): KmlVec2 = js.native
+  def getScreenXY(): KmlVec2
   /**
     * Specifies the size of the image for the screen overlay, as follows:
     *
@@ -44,12 +43,12 @@ trait KmlScreenOverlay extends KmlOverlay {
     * * A value of 0 indicates to maintain the aspect ratio
     * * A value of n sets the value of the dimension
     */
-  def getSize(): KmlVec2 = js.native
+  def getSize(): KmlVec2
   /**
     * Adjusts how the image is placed inside the field of view.
     * This element is useful if your image has been rotated and deviates slightly from a desired horizontal view.
     */
-  def setRotation(rotation: Double): Unit = js.native
+  def setRotation(rotation: Double): Unit
 }
 
 object KmlScreenOverlay {
@@ -114,49 +113,5 @@ object KmlScreenOverlay {
     val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getAbstractView = js.Any.fromFunction0(getAbstractView), getAddress = js.Any.fromFunction0(getAddress), getBalloonHtml = js.Any.fromFunction0(getBalloonHtml), getBalloonHtmlUnsafe = js.Any.fromFunction0(getBalloonHtmlUnsafe), getColor = js.Any.fromFunction0(getColor), getComputedStyle = js.Any.fromFunction0(getComputedStyle), getDescription = js.Any.fromFunction0(getDescription), getDrawOrder = js.Any.fromFunction0(getDrawOrder), getIcon = js.Any.fromFunction0(getIcon), getId = js.Any.fromFunction0(getId), getKml = js.Any.fromFunction0(getKml), getName = js.Any.fromFunction0(getName), getNextSibling = js.Any.fromFunction0(getNextSibling), getOpacity = js.Any.fromFunction0(getOpacity), getOpen = js.Any.fromFunction0(getOpen), getOverlayXY = js.Any.fromFunction0(getOverlayXY), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getPreviousSibling = js.Any.fromFunction0(getPreviousSibling), getRegion = js.Any.fromFunction0(getRegion), getRotation = js.Any.fromFunction0(getRotation), getRotationXY = js.Any.fromFunction0(getRotationXY), getScreenXY = js.Any.fromFunction0(getScreenXY), getSize = js.Any.fromFunction0(getSize), getSnippet = js.Any.fromFunction0(getSnippet), getStyleSelector = js.Any.fromFunction0(getStyleSelector), getStyleUrl = js.Any.fromFunction0(getStyleUrl), getTimePrimitive = js.Any.fromFunction0(getTimePrimitive), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), getVisibility = js.Any.fromFunction0(getVisibility), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setAbstractView = js.Any.fromFunction1(setAbstractView), setAddress = js.Any.fromFunction1(setAddress), setDescription = js.Any.fromFunction1(setDescription), setDrawOrder = js.Any.fromFunction1(setDrawOrder), setIcon = js.Any.fromFunction1(setIcon), setName = js.Any.fromFunction1(setName), setOpacity = js.Any.fromFunction1(setOpacity), setOpen = js.Any.fromFunction1(setOpen), setRegion = js.Any.fromFunction1(setRegion), setRotation = js.Any.fromFunction1(setRotation), setSnippet = js.Any.fromFunction1(setSnippet), setStyleSelector = js.Any.fromFunction1(setStyleSelector), setStyleUrl = js.Any.fromFunction1(setStyleUrl), setTimePrimitive = js.Any.fromFunction1(setTimePrimitive), setVisibility = js.Any.fromFunction1(setVisibility))
     __obj.asInstanceOf[KmlScreenOverlay]
   }
-  @scala.inline
-  implicit class KmlScreenOverlayOps[Self <: KmlScreenOverlay] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetOverlayXY(value: () => KmlVec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOverlayXY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRotation(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRotation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRotationXY(value: () => KmlVec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRotationXY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetScreenXY(value: () => KmlVec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScreenXY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSize(value: () => KmlVec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetRotation(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRotation")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

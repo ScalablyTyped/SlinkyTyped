@@ -26,7 +26,6 @@ import scala.scalajs.js.annotation._
   * @see TransientDocumentsStreamContent
   * @since OOo 2.0
   */
-@js.native
 trait TransientDocumentsFolderContent
   extends XCommandProcessor2
      with XComponent

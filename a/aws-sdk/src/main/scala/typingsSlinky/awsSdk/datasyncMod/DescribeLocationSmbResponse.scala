@@ -38,101 +38,24 @@ trait DescribeLocationSmbResponse extends js.Object {
 
 object DescribeLocationSmbResponse {
   @scala.inline
-  def apply(): DescribeLocationSmbResponse = {
+  def apply(
+    AgentArns: AgentArnList = null,
+    CreationTime: js.Date = null,
+    Domain: SmbDomain = null,
+    LocationArn: LocationArn = null,
+    LocationUri: LocationUri = null,
+    MountOptions: SmbMountOptions = null,
+    User: SmbUser = null
+  ): DescribeLocationSmbResponse = {
     val __obj = js.Dynamic.literal()
+    if (AgentArns != null) __obj.updateDynamic("AgentArns")(AgentArns.asInstanceOf[js.Any])
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (Domain != null) __obj.updateDynamic("Domain")(Domain.asInstanceOf[js.Any])
+    if (LocationArn != null) __obj.updateDynamic("LocationArn")(LocationArn.asInstanceOf[js.Any])
+    if (LocationUri != null) __obj.updateDynamic("LocationUri")(LocationUri.asInstanceOf[js.Any])
+    if (MountOptions != null) __obj.updateDynamic("MountOptions")(MountOptions.asInstanceOf[js.Any])
+    if (User != null) __obj.updateDynamic("User")(User.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLocationSmbResponse]
   }
-  @scala.inline
-  implicit class DescribeLocationSmbResponseOps[Self <: DescribeLocationSmbResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentArns(value: AgentArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: SmbDomain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationArn(value: LocationArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationUri(value: LocationUri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountOptions(value: SmbMountOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: SmbUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait ImageBitmapSource extends js.Object
 
-object ImageBitmapSource {
-  @scala.inline
-  implicit def apply(value: org.scalajs.dom.raw.Blob): ImageBitmapSource = value.asInstanceOf[ImageBitmapSource]
-  @scala.inline
-  implicit def apply(value: CanvasImageSource): ImageBitmapSource = value.asInstanceOf[ImageBitmapSource]
-  @scala.inline
-  implicit def apply(value: org.scalajs.dom.raw.ImageData): ImageBitmapSource = value.asInstanceOf[ImageBitmapSource]
-}
-

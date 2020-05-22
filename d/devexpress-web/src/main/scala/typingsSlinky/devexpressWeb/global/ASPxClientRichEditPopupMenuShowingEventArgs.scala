@@ -16,5 +16,15 @@ class ASPxClientRichEditPopupMenuShowingEventArgs protected ()
     * @param menuItems Provides access to the context menu's item collection.
     */
   def this(menuItems: typingsSlinky.devexpressWeb.ASPxClientRichEditPopupMenuItemCollection) = this()
+  /**
+    * Gets or sets a value indicating whether the action which raised the event should be canceled.
+    */
+  /* CompleteClass */
+  override var cancel: Boolean = js.native
+  /**
+    * Provides access to a collection of menu items in the context menu being invoked.
+    */
+  /* CompleteClass */
+  override var menuItems: typingsSlinky.devexpressWeb.ASPxClientRichEditPopupMenuItemCollection = js.native
 }
 

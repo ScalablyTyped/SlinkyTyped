@@ -6,36 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProvidedIn extends js.Object {
-  var providedIn: Type[_] | root | Null = js.native
+  var providedIn: Type[_] | root | Null
 }
 
 object ProvidedIn {
   @scala.inline
-  def apply(): ProvidedIn = {
-    val __obj = js.Dynamic.literal()
+  def apply(providedIn: Type[_] | root = null): ProvidedIn = {
+    val __obj = js.Dynamic.literal(providedIn = providedIn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvidedIn]
   }
-  @scala.inline
-  implicit class ProvidedInOps[Self <: ProvidedIn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvidedIn(value: Type[_] | root): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providedIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProvidedInNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providedIn")(null)
-        ret
-    }
-  }
-  
 }
 

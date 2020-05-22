@@ -7,28 +7,27 @@ import scala.scalajs.js.annotation._
 /**
   * Information about a copy paste
   */
-@js.native
 trait CellCopyPasteEvent extends js.Object {
   /**
     * The key of the column where the copy paste occurred.
     */
-  var cellKey: String = js.native
+  var cellKey: String
   /**
     * The row that was copied from.
     */
-  var fromRow: Double = js.native
+  var fromRow: Double
   /**
     * The row that was pasted to.
     */
-  var rowIdx: Double = js.native
+  var rowIdx: Double
   /**
     * The row that was pasted to.
     */
-  var toRow: Double = js.native
+  var toRow: Double
   /**
     * The value that was pasted.
     */
-  var value: js.Any = js.native
+  var value: js.Any
 }
 
 object CellCopyPasteEvent {
@@ -37,43 +36,5 @@ object CellCopyPasteEvent {
     val __obj = js.Dynamic.literal(cellKey = cellKey.asInstanceOf[js.Any], fromRow = fromRow.asInstanceOf[js.Any], rowIdx = rowIdx.asInstanceOf[js.Any], toRow = toRow.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellCopyPasteEvent]
   }
-  @scala.inline
-  implicit class CellCopyPasteEventOps[Self <: CellCopyPasteEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCellKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFromRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowIdx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIdx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

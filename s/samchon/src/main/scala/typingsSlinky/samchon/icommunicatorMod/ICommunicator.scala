@@ -6,16 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICommunicator extends IProtocol {
   /**
     * Callback function for connection closed.
     */
-  var onClose: js.Function = js.native
+  var onClose: js.Function
   /**
     * Close connection.
     */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Test connection.
     *
@@ -25,7 +24,7 @@ trait ICommunicator extends IProtocol {
     *
     * @return true if connected, otherwise false.
     */
-  def isConnected(): Boolean = js.native
+  def isConnected(): Boolean
 }
 
 object ICommunicator {
@@ -40,31 +39,5 @@ object ICommunicator {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), isConnected = js.Any.fromFunction0(isConnected), onClose = onClose.asInstanceOf[js.Any], replyData = js.Any.fromFunction1(replyData), sendData = js.Any.fromFunction1(sendData))
     __obj.asInstanceOf[ICommunicator]
   }
-  @scala.inline
-  implicit class ICommunicatorOps[Self <: ICommunicator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsConnected(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConnected")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

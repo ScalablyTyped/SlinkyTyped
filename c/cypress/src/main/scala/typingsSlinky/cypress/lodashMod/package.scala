@@ -5,6 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object lodashMod {
+  // Crazy typedef needed get _.omit to work properly with Dictionary and NumericDictionary
+  type AnyKindOfDictionary = (typingsSlinky.cypress.lodashMod.Dictionary[js.UndefOr[js.Object | scala.Null]]) | (typingsSlinky.cypress.lodashMod.NumericDictionary[js.UndefOr[js.Object | scala.Null]])
   type ArrayIterator[T, TResult] = js.Function3[/* value */ T, /* index */ scala.Double, /* collection */ js.Array[T], TResult]
   // assignInWith
   type AssignCustomizer = js.Function5[
@@ -57,8 +59,11 @@ package object lodashMod {
     /* stack */ js.Any, 
     js.UndefOr[scala.Boolean]
   ]
+  type IterateeShorthand[T] = typingsSlinky.cypress.lodashMod.PropertyName | (js.Tuple2[typingsSlinky.cypress.lodashMod.PropertyName, js.Any]) | typingsSlinky.cypress.lodashMod.PartialDeep[T]
   /** Common interface between Arrays and jQuery objects */
   type List[T] = typingsSlinky.std.ArrayLike[T]
+  type ListIteratee[T] = (typingsSlinky.cypress.lodashMod.ListIterator[T, typingsSlinky.cypress.lodashMod.NotVoid]) | typingsSlinky.cypress.lodashMod.IterateeShorthand[T]
+  type ListIterateeCustom[T, TResult] = (typingsSlinky.cypress.lodashMod.ListIterator[T, TResult]) | typingsSlinky.cypress.lodashMod.IterateeShorthand[T]
   type ListIterator[T, TResult] = js.Function3[
     /* value */ T, 
     /* index */ scala.Double, 
@@ -85,6 +90,7 @@ package object lodashMod {
   type LoDashImplicitNumberArrayWrapper = typingsSlinky.cypress.lodashMod.LoDashImplicitWrapper[js.Array[scala.Double]]
   type LoDashImplicitObjectWrapper[T] = typingsSlinky.cypress.lodashMod.LoDashImplicitWrapper[T]
   type LoDashImplicitStringWrapper = typingsSlinky.cypress.lodashMod.LoDashImplicitWrapper[java.lang.String]
+  type Many[T] = T | js.Array[T]
   /** @deprecated Use MemoListIterator or MemoObjectIterator instead. */
   type MemoIterator[T, TResult] = js.Function4[
     /* prev */ TResult, 
@@ -129,7 +135,10 @@ package object lodashMod {
     /* source */ js.Any, 
     js.Any
   ]
+  type NotVoid = js.UndefOr[js.Object | scala.Null]
   type NumericDictionary[T] = org.scalablytyped.runtime.NumberDictionary[T]
+  type NumericDictionaryIteratee[T] = (typingsSlinky.cypress.lodashMod.NumericDictionaryIterator[T, typingsSlinky.cypress.lodashMod.NotVoid]) | typingsSlinky.cypress.lodashMod.IterateeShorthand[T]
+  type NumericDictionaryIterateeCustom[T, TResult] = (typingsSlinky.cypress.lodashMod.NumericDictionaryIterator[T, TResult]) | typingsSlinky.cypress.lodashMod.IterateeShorthand[T]
   // NOTE: keys of objects at run time are always strings, even when a NumericDictionary is being iterated.
   type NumericDictionaryIterator[T, TResult] = js.Function3[
     /* value */ T, 
@@ -137,6 +146,12 @@ package object lodashMod {
     /* collection */ typingsSlinky.cypress.lodashMod.NumericDictionary[T], 
     TResult
   ]
+  type ObjectIteratee[TObject] = (typingsSlinky.cypress.lodashMod.ObjectIterator[TObject, typingsSlinky.cypress.lodashMod.NotVoid]) | (typingsSlinky.cypress.lodashMod.IterateeShorthand[
+    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
+  ])
+  type ObjectIterateeCustom[TObject, TResult] = (typingsSlinky.cypress.lodashMod.ObjectIterator[TObject, TResult]) | (typingsSlinky.cypress.lodashMod.IterateeShorthand[
+    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
+  ])
   // Note: key should be string, not keyof T, because the actual object may contain extra properties that were not specified in the type.
   type ObjectIterator[TObject, TResult] = js.Function3[
     /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ /* value */ js.Any, 
@@ -158,6 +173,7 @@ package object lodashMod {
   {[ P in keyof T ]:? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias cypress.cypress/types/lodash.PartialDeep<T[P]> * / object}
     */ typingsSlinky.cypress.cypressStrings.PartialDeep with org.scalablytyped.runtime.TopLevel[js.Any]
   type PartialObject[T] = typingsSlinky.cypress.GlobalPartial[T]
+  type PropertyName = java.lang.String | scala.Double | js.Symbol
   type PropertyPath = typingsSlinky.cypress.lodashMod.Many[typingsSlinky.cypress.lodashMod.PropertyName]
   type ReplaceFunction = js.Function2[/* match */ java.lang.String, /* repeated */ js.Any, java.lang.String]
   // setWith
@@ -168,7 +184,10 @@ package object lodashMod {
     /* string */ java.lang.String, 
     TResult
   ]
+  type ValueIteratee[T] = (js.Function1[/* value */ T, typingsSlinky.cypress.lodashMod.NotVoid]) | typingsSlinky.cypress.lodashMod.IterateeShorthand[T]
+  type ValueIterateeCustom[T, TResult] = (js.Function1[/* value */ T, TResult]) | typingsSlinky.cypress.lodashMod.IterateeShorthand[T]
   type ValueIteratorTypeGuard[T, S /* <: T */] = js.Function1[/* value */ T, /* is S */ scala.Boolean]
+  type ValueKeyIteratee[T] = (js.Function2[/* value */ T, /* key */ java.lang.String, typingsSlinky.cypress.lodashMod.NotVoid]) | typingsSlinky.cypress.lodashMod.IterateeShorthand[T]
   type ValueKeyIterateeTypeGuard[T, S /* <: T */] = js.Function2[/* value */ T, /* key */ java.lang.String, /* is S */ scala.Boolean]
   /** The placeholder, to be used in curried functions */
   type __ = typingsSlinky.cypress.lodashMod.LoDashStatic

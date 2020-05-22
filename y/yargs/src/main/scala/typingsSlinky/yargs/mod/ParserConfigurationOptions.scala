@@ -5,40 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined yargs-parser.yargs-parser.Configuration & {  sort-commands  :boolean} */
-@js.native
 trait ParserConfigurationOptions extends js.Object {
   /** Should variables prefixed with --no be treated as negations? Default is `true` */
-  var `boolean-negation`: Boolean = js.native
+  var `boolean-negation`: Boolean
   /** Should hyphenated arguments be expanded into camel-case aliases? Default is `true` */
-  var `camel-case-expansion`: Boolean = js.native
+  var `camel-case-expansion`: Boolean
   /** Should arrays be combined when provided by both command line arguments and a configuration file. Default is `false`  */
-  var `combine-arrays`: Boolean = js.native
+  var `combine-arrays`: Boolean
   /** Should keys that contain . be treated as objects? Default is `true` */
-  var `dot-notation`: Boolean = js.native
+  var `dot-notation`: Boolean
   /** Should arguments be coerced into an array when duplicated. Default is `true` */
-  var `duplicate-arguments-array`: Boolean = js.native
+  var `duplicate-arguments-array`: Boolean
   /** Should array arguments be coerced into a single array when duplicated. Default is `true` */
-  var `flatten-duplicate-arrays`: Boolean = js.native
+  var `flatten-duplicate-arrays`: Boolean
   /** Should parsing stop at the first text argument? This is similar to how e.g. ssh parses its command line. Default is `false` */
-  var `halt-at-non-option`: Boolean = js.native
+  var `halt-at-non-option`: Boolean
   /** The prefix to use for negated boolean variables. Default is `'no-'` */
-  var `negation-prefix`: String = js.native
+  var `negation-prefix`: String
   /** Should keys that look like numbers be treated as such? Default is `true` */
-  var `parse-numbers`: Boolean = js.native
+  var `parse-numbers`: Boolean
   /** Should unparsed flags be stored in -- or _. Default is `false` */
-  var `populate--`: Boolean = js.native
+  var `populate--`: Boolean
   /** Should a placeholder be added for keys not set via the corresponding CLI argument? Default is `false` */
-  var `set-placeholder-key`: Boolean = js.native
+  var `set-placeholder-key`: Boolean
   /** Should a group of short-options be treated as boolean flags? Default is `true` */
-  var `short-option-groups`: Boolean = js.native
+  var `short-option-groups`: Boolean
   /** Sort commands alphabetically. Default is `false` */
-  var `sort-commands`: Boolean = js.native
+  var `sort-commands`: Boolean
   /** Should aliases be removed before returning results? Default is `false` */
-  var `strip-aliased`: Boolean = js.native
+  var `strip-aliased`: Boolean
   /** Should dashed keys be removed before returning results? This option has no effect if camel-case-expansion is disabled. Default is `false` */
-  var `strip-dashed`: Boolean = js.native
+  var `strip-dashed`: Boolean
   /** Should unknown options be treated like regular arguments? An unknown option is one that is not configured in opts. Default is `false` */
-  var `unknown-options-as-args`: Boolean = js.native
+  var `unknown-options-as-args`: Boolean
 }
 
 object ParserConfigurationOptions {
@@ -80,109 +79,5 @@ object ParserConfigurationOptions {
     __obj.updateDynamic("unknown-options-as-args")(`unknown-options-as-args`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParserConfigurationOptions]
   }
-  @scala.inline
-  implicit class ParserConfigurationOptionsOps[Self <: ParserConfigurationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withBoolean-negation`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean-negation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCamel-case-expansion`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camel-case-expansion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCombine-arrays`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("combine-arrays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDot-notation`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot-notation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDuplicate-arguments-array`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicate-arguments-array")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withFlatten-duplicate-arrays`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten-duplicate-arrays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withHalt-at-non-option`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("halt-at-non-option")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withNegation-prefix`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negation-prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withParse-numbers`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse-numbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPopulate--`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populate--")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSet-placeholder-key`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set-placeholder-key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withShort-option-groups`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short-option-groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSort-commands`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort-commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withStrip-aliased`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strip-aliased")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withStrip-dashed`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strip-dashed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withUnknown-options-as-args`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown-options-as-args")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

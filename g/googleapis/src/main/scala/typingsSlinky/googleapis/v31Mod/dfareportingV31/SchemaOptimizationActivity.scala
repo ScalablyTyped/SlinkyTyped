@@ -29,53 +29,16 @@ trait SchemaOptimizationActivity extends js.Object {
 
 object SchemaOptimizationActivity {
   @scala.inline
-  def apply(): SchemaOptimizationActivity = {
+  def apply(
+    floodlightActivityId: String = null,
+    floodlightActivityIdDimensionValue: SchemaDimensionValue = null,
+    weight: js.UndefOr[Double] = js.undefined
+  ): SchemaOptimizationActivity = {
     val __obj = js.Dynamic.literal()
+    if (floodlightActivityId != null) __obj.updateDynamic("floodlightActivityId")(floodlightActivityId.asInstanceOf[js.Any])
+    if (floodlightActivityIdDimensionValue != null) __obj.updateDynamic("floodlightActivityIdDimensionValue")(floodlightActivityIdDimensionValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOptimizationActivity]
   }
-  @scala.inline
-  implicit class SchemaOptimizationActivityOps[Self <: SchemaOptimizationActivity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFloodlightActivityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightActivityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightActivityIdDimensionValue(value: SchemaDimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightActivityIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

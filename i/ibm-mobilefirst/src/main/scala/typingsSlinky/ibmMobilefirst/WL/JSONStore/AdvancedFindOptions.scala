@@ -1,52 +1,35 @@
 package typingsSlinky.ibmMobilefirst.WL.JSONStore
 
+import typingsSlinky.ibmMobilefirst.WL.IResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AdvancedFindOptions extends BasicFindOptions {
-  var limit: js.UndefOr[Double] = js.native
-  var offset: js.UndefOr[Double] = js.native
+  var limit: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.undefined
 }
 
 object AdvancedFindOptions {
   @scala.inline
-  def apply(): AdvancedFindOptions = {
+  def apply(
+    filter: js.Array[String] = null,
+    invocationContext: js.Any = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    onFailure: /* response */ IResponse => Unit = null,
+    onSuccess: /* response */ IResponse => Unit = null,
+    sort: js.Array[String] = null
+  ): AdvancedFindOptions = {
     val __obj = js.Dynamic.literal()
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (invocationContext != null) __obj.updateDynamic("invocationContext")(invocationContext.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (onFailure != null) __obj.updateDynamic("onFailure")(js.Any.fromFunction1(onFailure))
+    if (onSuccess != null) __obj.updateDynamic("onSuccess")(js.Any.fromFunction1(onSuccess))
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdvancedFindOptions]
   }
-  @scala.inline
-  implicit class AdvancedFindOptionsOps[Self <: AdvancedFindOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,29 +18,10 @@ trait SchemaImpersonation extends js.Object {
 
 object SchemaImpersonation {
   @scala.inline
-  def apply(): SchemaImpersonation = {
+  def apply(impersonatedUser: SchemaUser = null): SchemaImpersonation = {
     val __obj = js.Dynamic.literal()
+    if (impersonatedUser != null) __obj.updateDynamic("impersonatedUser")(impersonatedUser.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImpersonation]
   }
-  @scala.inline
-  implicit class SchemaImpersonationOps[Self <: SchemaImpersonation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImpersonatedUser(value: SchemaUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impersonatedUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpersonatedUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impersonatedUser")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,5 +10,7 @@ import scala.scalajs.js.annotation._
 class UnavailablePicker () extends Picker {
   def this(status: StatusObject) = this()
   var status: js.Any = js.native
+  /* CompleteClass */
+  override def pick(pickArgs: PickArgs): PickResult = js.native
 }
 

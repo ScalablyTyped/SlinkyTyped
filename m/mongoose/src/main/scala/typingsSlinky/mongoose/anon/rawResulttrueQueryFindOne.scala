@@ -7,124 +7,46 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  rawResult  :true} & mongoose.mongoose.QueryFindOneAndRemoveOptions */
-@js.native
 trait rawResulttrueQueryFindOne extends js.Object {
   /** puts a time limit on the query - requires mongodb >= 2.6.0 */
-  var maxTimeMS: js.UndefOr[Double] = js.native
+  var maxTimeMS: js.UndefOr[Double] = js.undefined
   /** like select, it determines which fields to return */
-  var projection: js.UndefOr[js.Any] = js.native
+  var projection: js.UndefOr[js.Any] = js.undefined
   /** if true, returns the raw result from the MongoDB driver */
-  var rawResult: js.UndefOr[`true` with Boolean] = js.native
+  var rawResult: js.UndefOr[`true` with Boolean] = js.undefined
   /** sets the document fields to return */
-  var select: js.UndefOr[js.Any] = js.native
+  var select: js.UndefOr[js.Any] = js.undefined
   /** use client session for transaction */
-  var session: js.UndefOr[ClientSession] = js.native
+  var session: js.UndefOr[ClientSession] = js.undefined
   /**
     * if multiple docs are found by the conditions, sets the sort order to choose
     * which doc to update
     */
-  var sort: js.UndefOr[js.Any] = js.native
+  var sort: js.UndefOr[js.Any] = js.undefined
   /** overwrites the schema's strict mode option for this update */
-  var strict: js.UndefOr[Boolean | String] = js.native
+  var strict: js.UndefOr[Boolean | String] = js.undefined
 }
 
 object rawResulttrueQueryFindOne {
   @scala.inline
-  def apply(): rawResulttrueQueryFindOne = {
+  def apply(
+    maxTimeMS: js.UndefOr[Double] = js.undefined,
+    projection: js.Any = null,
+    rawResult: js.UndefOr[`true` with Boolean] = js.undefined,
+    select: js.Any = null,
+    session: ClientSession = null,
+    sort: js.Any = null,
+    strict: Boolean | String = null
+  ): rawResulttrueQueryFindOne = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxTimeMS)) __obj.updateDynamic("maxTimeMS")(maxTimeMS.get.asInstanceOf[js.Any])
+    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
+    if (!js.isUndefined(rawResult)) __obj.updateDynamic("rawResult")(rawResult.get.asInstanceOf[js.Any])
+    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
+    if (strict != null) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
     __obj.asInstanceOf[rawResulttrueQueryFindOne]
   }
-  @scala.inline
-  implicit class rawResulttrueQueryFindOneOps[Self <: rawResulttrueQueryFindOne] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxTimeMS(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeMS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTimeMS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeMS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawResult(value: `true` with Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSession(value: ClientSession): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

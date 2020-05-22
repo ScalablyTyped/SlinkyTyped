@@ -11,26 +11,26 @@ sealed trait AutohideBehavior extends js.Object
 @js.native
 object AutohideBehavior extends js.Object {
   /**
-  		* All behaviors are applied to the autohide feature.
-  		**/
+    * All behaviors are applied to the autohide feature.
+    **/
   @js.native
   sealed trait all extends AutohideBehavior
   
   /**
-  		* Autohide is allowed during media playback only.
-  		**/
+    * Autohide is allowed during media playback only.
+    **/
   @js.native
   sealed trait allowDuringPlaybackOnly extends AutohideBehavior
   
   /**
-  		* No behaviors are applied to the autohide feature.
-  		**/
+    * No behaviors are applied to the autohide feature.
+    **/
   @js.native
   sealed trait none extends AutohideBehavior
   
   /**
-  		* Autohide is prevented when the pointer is over interactive components such as the control panel.
-  		**/
+    * Autohide is prevented when the pointer is over interactive components such as the control panel.
+    **/
   @js.native
   sealed trait preventDuringInteractiveHover extends AutohideBehavior
   

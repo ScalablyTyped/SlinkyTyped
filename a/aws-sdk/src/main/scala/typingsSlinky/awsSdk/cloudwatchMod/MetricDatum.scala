@@ -46,119 +46,27 @@ trait MetricDatum extends js.Object {
 
 object MetricDatum {
   @scala.inline
-  def apply(MetricName: MetricName): MetricDatum = {
+  def apply(
+    MetricName: MetricName,
+    Counts: Counts = null,
+    Dimensions: Dimensions = null,
+    StatisticValues: StatisticSet = null,
+    StorageResolution: js.UndefOr[StorageResolution] = js.undefined,
+    Timestamp: js.Date = null,
+    Unit: StandardUnit = null,
+    Value: js.UndefOr[DatapointValue] = js.undefined,
+    Values: Values = null
+  ): MetricDatum = {
     val __obj = js.Dynamic.literal(MetricName = MetricName.asInstanceOf[js.Any])
+    if (Counts != null) __obj.updateDynamic("Counts")(Counts.asInstanceOf[js.Any])
+    if (Dimensions != null) __obj.updateDynamic("Dimensions")(Dimensions.asInstanceOf[js.Any])
+    if (StatisticValues != null) __obj.updateDynamic("StatisticValues")(StatisticValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(StorageResolution)) __obj.updateDynamic("StorageResolution")(StorageResolution.get.asInstanceOf[js.Any])
+    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
+    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
+    if (!js.isUndefined(Value)) __obj.updateDynamic("Value")(Value.get.asInstanceOf[js.Any])
+    if (Values != null) __obj.updateDynamic("Values")(Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricDatum]
   }
-  @scala.inline
-  implicit class MetricDatumOps[Self <: MetricDatum] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricName(value: MetricName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCounts(value: Counts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Counts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Counts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: Dimensions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatisticValues(value: StatisticSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatisticValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatisticValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatisticValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageResolution(value: StorageResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: StandardUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: DatapointValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: Values): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

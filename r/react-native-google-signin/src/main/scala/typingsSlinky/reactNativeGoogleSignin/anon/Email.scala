@@ -4,101 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Email extends js.Object {
-  var email: String | Null = js.native
-  var familyName: String | Null = js.native
-  var givenName: String | Null = js.native
-  var id: String | Null = js.native
-  var name: String | Null = js.native
-  var photo: String | Null = js.native
+  var email: String | Null
+  var familyName: String | Null
+  var givenName: String | Null
+  var id: String | Null
+  var name: String | Null
+  var photo: String | Null
 }
 
 object Email {
   @scala.inline
-  def apply(): Email = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    email: String = null,
+    familyName: String = null,
+    givenName: String = null,
+    id: String = null,
+    name: String = null,
+    photo: String = null
+  ): Email = {
+    val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any], familyName = familyName.asInstanceOf[js.Any], givenName = givenName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], photo = photo.asInstanceOf[js.Any])
     __obj.asInstanceOf[Email]
   }
-  @scala.inline
-  implicit class EmailOps[Self <: Email] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmailNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(null)
-        ret
-    }
-    @scala.inline
-    def withFamilyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFamilyNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(null)
-        ret
-    }
-    @scala.inline
-    def withGivenName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGivenNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(null)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withPhoto(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhotoNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(null)
-        ret
-    }
-  }
-  
 }
 

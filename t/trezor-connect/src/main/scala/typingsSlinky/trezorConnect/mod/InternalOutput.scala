@@ -4,50 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InternalOutput extends Output {
-  var address_n: js.Array[Double] = js.native
-  var amount: String = js.native
-  var script_type: js.UndefOr[String] = js.native
+  var address_n: js.Array[Double]
+  var amount: String
+  var script_type: js.UndefOr[String] = js.undefined
 }
 
 object InternalOutput {
   @scala.inline
-  def apply(address_n: js.Array[Double], amount: String): InternalOutput = {
+  def apply(address_n: js.Array[Double], amount: String, script_type: String = null): InternalOutput = {
     val __obj = js.Dynamic.literal(address_n = address_n.asInstanceOf[js.Any], amount = amount.asInstanceOf[js.Any])
+    if (script_type != null) __obj.updateDynamic("script_type")(script_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[InternalOutput]
   }
-  @scala.inline
-  implicit class InternalOutputOps[Self <: InternalOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress_n(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScript_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScript_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script_type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

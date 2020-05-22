@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReportCompatibleFields extends js.Object {
-  var dimensionFilters: js.UndefOr[js.Array[Dimension]] = js.native
-  var dimensions: js.UndefOr[js.Array[Dimension]] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var metrics: js.UndefOr[js.Array[Metric]] = js.native
-  var pivotedActivityMetrics: js.UndefOr[js.Array[Metric]] = js.native
+  var dimensionFilters: js.UndefOr[js.Array[Dimension]] = js.undefined
+  var dimensions: js.UndefOr[js.Array[Dimension]] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var metrics: js.UndefOr[js.Array[Metric]] = js.undefined
+  var pivotedActivityMetrics: js.UndefOr[js.Array[Metric]] = js.undefined
 }
 
 object ReportCompatibleFields {
   @scala.inline
-  def apply(): ReportCompatibleFields = {
+  def apply(
+    dimensionFilters: js.Array[Dimension] = null,
+    dimensions: js.Array[Dimension] = null,
+    kind: String = null,
+    metrics: js.Array[Metric] = null,
+    pivotedActivityMetrics: js.Array[Metric] = null
+  ): ReportCompatibleFields = {
     val __obj = js.Dynamic.literal()
+    if (dimensionFilters != null) __obj.updateDynamic("dimensionFilters")(dimensionFilters.asInstanceOf[js.Any])
+    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
+    if (pivotedActivityMetrics != null) __obj.updateDynamic("pivotedActivityMetrics")(pivotedActivityMetrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportCompatibleFields]
   }
-  @scala.inline
-  implicit class ReportCompatibleFieldsOps[Self <: ReportCompatibleFields] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionFilters(value: js.Array[Dimension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: js.Array[Dimension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: js.Array[Metric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotedActivityMetrics(value: js.Array[Metric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotedActivityMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotedActivityMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotedActivityMetrics")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

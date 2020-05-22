@@ -9,6 +9,5 @@ import scala.scalajs.js.annotation._
   *
   * @class Bounds
   */
-@js.native
 trait Bounds extends js.Object
 

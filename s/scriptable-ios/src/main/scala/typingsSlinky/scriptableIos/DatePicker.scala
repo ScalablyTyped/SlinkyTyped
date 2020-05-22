@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * The date picker can be configured towards picking a date with or without time, just a time or picking hours and minutes for a timer.
   * @see https://docs.scriptable.app/datepicker/#-new-datepicker
   */
-@js.native
 trait DatePicker extends js.Object {
   /**
     * _Countdown duration displayed by the date picker._
@@ -21,7 +20,7 @@ trait DatePicker extends js.Object {
     * value is 23:59 (86,399 seconds).
     * @see https://docs.scriptable.app/datepicker/#countdownduration
     */
-  var countdownDuration: Double = js.native
+  var countdownDuration: Double
   /**
     * _The initially selected date._
     *
@@ -32,7 +31,7 @@ trait DatePicker extends js.Object {
     * carries the selected date.
     * @see https://docs.scriptable.app/datepicker/#initialdate
     */
-  var initialDate: js.Date = js.native
+  var initialDate: js.Date
   /**
     * _Maximum date that is selected in the picker._
     *
@@ -40,7 +39,7 @@ trait DatePicker extends js.Object {
     * dates are also ignored in countdown-timer mode.
     * @see https://docs.scriptable.app/datepicker/#maximumdate
     */
-  var maximumDate: js.Date = js.native
+  var maximumDate: js.Date
   /**
     * _Minimum date that is selected in the picker._
     *
@@ -48,14 +47,14 @@ trait DatePicker extends js.Object {
     * dates are also ignored in countdown-timer mode.
     * @see https://docs.scriptable.app/datepicker/#minimumdate
     */
-  var minimumDate: js.Date = js.native
+  var minimumDate: js.Date
   /**
     * _Interval at which the date picker displays minutes._
     *
     * Use the property to set the interval of the minute wheel. The default and minimum value is 1 and the maximum value is 30.
     * @see https://docs.scriptable.app/datepicker/#minuteinterval
     */
-  var minuteInterval: Double = js.native
+  var minuteInterval: Double
   /**
     * _Presents the date picker for selecting the duration of a countdown._
     *
@@ -63,14 +62,14 @@ trait DatePicker extends js.Object {
     * duration.
     * @see https://docs.scriptable.app/datepicker/#-pickcountdownduration
     */
-  def pickCountdownDuration(): js.Promise[Double] = js.native
+  def pickCountdownDuration(): js.Promise[Double]
   /**
     * _Presents the date picker displaying day, month and year._
     *
     * Use the method to pick a date. The date picker will display the a day, month and year. Use the `initialDate` property to set the initially selected date.
     * @see https://docs.scriptable.app/datepicker/#-pickdate
     */
-  def pickDate(): js.Promise[js.Date] = js.native
+  def pickDate(): js.Promise[js.Date]
   /**
     * _Presents the date picker displaying date and time._
     *
@@ -78,7 +77,7 @@ trait DatePicker extends js.Object {
     * `initialDate` property to set the initially selected date.
     * @see https://docs.scriptable.app/datepicker/#-pickdateandtime
     */
-  def pickDateAndTime(): js.Promise[js.Date] = js.native
+  def pickDateAndTime(): js.Promise[js.Date]
   /**
     * _Presents the date picker displaying hours and minutes._
     *
@@ -87,7 +86,7 @@ trait DatePicker extends js.Object {
     * The returned date will be the current date with the hour and minute set to the selected values. Use the `initialDate` property to set the initially selected date.
     * @see https://docs.scriptable.app/datepicker/#-picktime
     */
-  def pickTime(): js.Promise[js.Date] = js.native
+  def pickTime(): js.Promise[js.Date]
 }
 
 object DatePicker {
@@ -106,67 +105,5 @@ object DatePicker {
     val __obj = js.Dynamic.literal(countdownDuration = countdownDuration.asInstanceOf[js.Any], initialDate = initialDate.asInstanceOf[js.Any], maximumDate = maximumDate.asInstanceOf[js.Any], minimumDate = minimumDate.asInstanceOf[js.Any], minuteInterval = minuteInterval.asInstanceOf[js.Any], pickCountdownDuration = js.Any.fromFunction0(pickCountdownDuration), pickDate = js.Any.fromFunction0(pickDate), pickDateAndTime = js.Any.fromFunction0(pickDateAndTime), pickTime = js.Any.fromFunction0(pickTime))
     __obj.asInstanceOf[DatePicker]
   }
-  @scala.inline
-  implicit class DatePickerOps[Self <: DatePicker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountdownDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countdownDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaximumDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinimumDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinuteInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPickCountdownDuration(value: () => js.Promise[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickCountdownDuration")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPickDate(value: () => js.Promise[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickDate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPickDateAndTime(value: () => js.Promise[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickDateAndTime")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPickTime(value: () => js.Promise[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickTime")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

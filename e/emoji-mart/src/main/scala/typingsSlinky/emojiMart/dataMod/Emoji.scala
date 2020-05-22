@@ -5,478 +5,120 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Emoji extends js.Object {
-  var a: js.UndefOr[String] = js.native
-  var added_in: js.UndefOr[Double] = js.native
-  var b: js.UndefOr[String] = js.native
-  var c: js.UndefOr[String] = js.native
-  var d: js.UndefOr[Boolean] = js.native
-  var e: js.UndefOr[Boolean] = js.native
-  var emoticons: js.UndefOr[js.Array[String]] = js.native
-  var f: js.UndefOr[Boolean] = js.native
-  var g: js.UndefOr[Boolean] = js.native
-  var h: js.UndefOr[Boolean] = js.native
-  var has_img_apple: js.UndefOr[Boolean] = js.native
-  var has_img_emojione: js.UndefOr[Boolean] = js.native
-  var has_img_facebook: js.UndefOr[Boolean] = js.native
-  var has_img_google: js.UndefOr[Boolean] = js.native
-  var has_img_messenger: js.UndefOr[Boolean] = js.native
-  var has_img_twitter: js.UndefOr[Boolean] = js.native
-  var i: js.UndefOr[Boolean] = js.native
-  var j: js.UndefOr[js.Array[String]] = js.native
-  var k: js.UndefOr[js.Array[Double]] = js.native
-  var keywords: js.UndefOr[js.Array[String]] = js.native
-  var l: js.UndefOr[js.Array[String]] = js.native
-  var m: js.UndefOr[String] = js.native
-  var n: js.UndefOr[js.Array[String]] = js.native
-  var name: js.UndefOr[String] = js.native
-  var non_qualified: js.UndefOr[String] = js.native
-  var o: js.UndefOr[Double] = js.native
-  var obsoleted_by: js.UndefOr[String] = js.native
-  var obsoletes: js.UndefOr[String] = js.native
-  var sheet: js.UndefOr[js.Array[Double]] = js.native
-  var sheet_x: js.UndefOr[Double] = js.native
-  var sheet_y: js.UndefOr[Double] = js.native
-  var short_names: js.UndefOr[js.Array[String]] = js.native
-  var skin_variations: js.UndefOr[StringDictionary[SkinVariation]] = js.native
-  var text: js.UndefOr[String] = js.native
-  var unified: js.UndefOr[String] = js.native
+  var a: js.UndefOr[String] = js.undefined
+  var added_in: js.UndefOr[Double] = js.undefined
+  var b: js.UndefOr[String] = js.undefined
+  var c: js.UndefOr[String] = js.undefined
+  var d: js.UndefOr[Boolean] = js.undefined
+  var e: js.UndefOr[Boolean] = js.undefined
+  var emoticons: js.UndefOr[js.Array[String]] = js.undefined
+  var f: js.UndefOr[Boolean] = js.undefined
+  var g: js.UndefOr[Boolean] = js.undefined
+  var h: js.UndefOr[Boolean] = js.undefined
+  var has_img_apple: js.UndefOr[Boolean] = js.undefined
+  var has_img_emojione: js.UndefOr[Boolean] = js.undefined
+  var has_img_facebook: js.UndefOr[Boolean] = js.undefined
+  var has_img_google: js.UndefOr[Boolean] = js.undefined
+  var has_img_messenger: js.UndefOr[Boolean] = js.undefined
+  var has_img_twitter: js.UndefOr[Boolean] = js.undefined
+  var i: js.UndefOr[Boolean] = js.undefined
+  var j: js.UndefOr[js.Array[String]] = js.undefined
+  var k: js.UndefOr[js.Array[Double]] = js.undefined
+  var keywords: js.UndefOr[js.Array[String]] = js.undefined
+  var l: js.UndefOr[js.Array[String]] = js.undefined
+  var m: js.UndefOr[String] = js.undefined
+  var n: js.UndefOr[js.Array[String]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var non_qualified: js.UndefOr[String] = js.undefined
+  var o: js.UndefOr[Double] = js.undefined
+  var obsoleted_by: js.UndefOr[String] = js.undefined
+  var obsoletes: js.UndefOr[String] = js.undefined
+  var sheet: js.UndefOr[js.Array[Double]] = js.undefined
+  var sheet_x: js.UndefOr[Double] = js.undefined
+  var sheet_y: js.UndefOr[Double] = js.undefined
+  var short_names: js.UndefOr[js.Array[String]] = js.undefined
+  var skin_variations: js.UndefOr[StringDictionary[SkinVariation]] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
+  var unified: js.UndefOr[String] = js.undefined
 }
 
 object Emoji {
   @scala.inline
-  def apply(): Emoji = {
+  def apply(
+    a: String = null,
+    added_in: js.UndefOr[Double] = js.undefined,
+    b: String = null,
+    c: String = null,
+    d: js.UndefOr[Boolean] = js.undefined,
+    e: js.UndefOr[Boolean] = js.undefined,
+    emoticons: js.Array[String] = null,
+    f: js.UndefOr[Boolean] = js.undefined,
+    g: js.UndefOr[Boolean] = js.undefined,
+    h: js.UndefOr[Boolean] = js.undefined,
+    has_img_apple: js.UndefOr[Boolean] = js.undefined,
+    has_img_emojione: js.UndefOr[Boolean] = js.undefined,
+    has_img_facebook: js.UndefOr[Boolean] = js.undefined,
+    has_img_google: js.UndefOr[Boolean] = js.undefined,
+    has_img_messenger: js.UndefOr[Boolean] = js.undefined,
+    has_img_twitter: js.UndefOr[Boolean] = js.undefined,
+    i: js.UndefOr[Boolean] = js.undefined,
+    j: js.Array[String] = null,
+    k: js.Array[Double] = null,
+    keywords: js.Array[String] = null,
+    l: js.Array[String] = null,
+    m: String = null,
+    n: js.Array[String] = null,
+    name: String = null,
+    non_qualified: String = null,
+    o: js.UndefOr[Double] = js.undefined,
+    obsoleted_by: String = null,
+    obsoletes: String = null,
+    sheet: js.Array[Double] = null,
+    sheet_x: js.UndefOr[Double] = js.undefined,
+    sheet_y: js.UndefOr[Double] = js.undefined,
+    short_names: js.Array[String] = null,
+    skin_variations: StringDictionary[SkinVariation] = null,
+    text: String = null,
+    unified: String = null
+  ): Emoji = {
     val __obj = js.Dynamic.literal()
+    if (a != null) __obj.updateDynamic("a")(a.asInstanceOf[js.Any])
+    if (!js.isUndefined(added_in)) __obj.updateDynamic("added_in")(added_in.get.asInstanceOf[js.Any])
+    if (b != null) __obj.updateDynamic("b")(b.asInstanceOf[js.Any])
+    if (c != null) __obj.updateDynamic("c")(c.asInstanceOf[js.Any])
+    if (!js.isUndefined(d)) __obj.updateDynamic("d")(d.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(e)) __obj.updateDynamic("e")(e.get.asInstanceOf[js.Any])
+    if (emoticons != null) __obj.updateDynamic("emoticons")(emoticons.asInstanceOf[js.Any])
+    if (!js.isUndefined(f)) __obj.updateDynamic("f")(f.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(g)) __obj.updateDynamic("g")(g.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(h)) __obj.updateDynamic("h")(h.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_img_apple)) __obj.updateDynamic("has_img_apple")(has_img_apple.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_img_emojione)) __obj.updateDynamic("has_img_emojione")(has_img_emojione.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_img_facebook)) __obj.updateDynamic("has_img_facebook")(has_img_facebook.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_img_google)) __obj.updateDynamic("has_img_google")(has_img_google.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_img_messenger)) __obj.updateDynamic("has_img_messenger")(has_img_messenger.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_img_twitter)) __obj.updateDynamic("has_img_twitter")(has_img_twitter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(i)) __obj.updateDynamic("i")(i.get.asInstanceOf[js.Any])
+    if (j != null) __obj.updateDynamic("j")(j.asInstanceOf[js.Any])
+    if (k != null) __obj.updateDynamic("k")(k.asInstanceOf[js.Any])
+    if (keywords != null) __obj.updateDynamic("keywords")(keywords.asInstanceOf[js.Any])
+    if (l != null) __obj.updateDynamic("l")(l.asInstanceOf[js.Any])
+    if (m != null) __obj.updateDynamic("m")(m.asInstanceOf[js.Any])
+    if (n != null) __obj.updateDynamic("n")(n.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (non_qualified != null) __obj.updateDynamic("non_qualified")(non_qualified.asInstanceOf[js.Any])
+    if (!js.isUndefined(o)) __obj.updateDynamic("o")(o.get.asInstanceOf[js.Any])
+    if (obsoleted_by != null) __obj.updateDynamic("obsoleted_by")(obsoleted_by.asInstanceOf[js.Any])
+    if (obsoletes != null) __obj.updateDynamic("obsoletes")(obsoletes.asInstanceOf[js.Any])
+    if (sheet != null) __obj.updateDynamic("sheet")(sheet.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheet_x)) __obj.updateDynamic("sheet_x")(sheet_x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheet_y)) __obj.updateDynamic("sheet_y")(sheet_y.get.asInstanceOf[js.Any])
+    if (short_names != null) __obj.updateDynamic("short_names")(short_names.asInstanceOf[js.Any])
+    if (skin_variations != null) __obj.updateDynamic("skin_variations")(skin_variations.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (unified != null) __obj.updateDynamic("unified")(unified.asInstanceOf[js.Any])
     __obj.asInstanceOf[Emoji]
   }
-  @scala.inline
-  implicit class EmojiOps[Self <: Emoji] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdded_in(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("added_in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdded_in: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("added_in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withB(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutB: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withC(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("c")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("c")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withD(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutD: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withE(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmoticons(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emoticons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmoticons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emoticons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withF(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutF: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withG(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutG: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withH(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutH: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_img_apple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_apple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_img_apple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_apple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_img_emojione(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_emojione")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_img_emojione: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_emojione")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_img_facebook(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_facebook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_img_facebook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_facebook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_img_google(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_google")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_img_google: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_google")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_img_messenger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_messenger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_img_messenger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_messenger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_img_twitter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_twitter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_img_twitter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_img_twitter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withI(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJ(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("j")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("j")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withK(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutK: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeywords(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeywords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withL(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withM(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withN(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNon_qualified(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("non_qualified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNon_qualified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("non_qualified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withO(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutO: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObsoleted_by(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obsoleted_by")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObsoleted_by: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obsoleted_by")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObsoletes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obsoletes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObsoletes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obsoletes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheet(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheet_x(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheet_x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheet_x: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheet_x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheet_y(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheet_y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheet_y: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheet_y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShort_names(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short_names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShort_names: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short_names")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkin_variations(value: StringDictionary[SkinVariation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin_variations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkin_variations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin_variations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnified(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unified")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

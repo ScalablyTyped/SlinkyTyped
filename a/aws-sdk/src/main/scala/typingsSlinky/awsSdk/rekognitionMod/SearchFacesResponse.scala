@@ -22,53 +22,12 @@ trait SearchFacesResponse extends js.Object {
 
 object SearchFacesResponse {
   @scala.inline
-  def apply(): SearchFacesResponse = {
+  def apply(FaceMatches: FaceMatchList = null, FaceModelVersion: String = null, SearchedFaceId: FaceId = null): SearchFacesResponse = {
     val __obj = js.Dynamic.literal()
+    if (FaceMatches != null) __obj.updateDynamic("FaceMatches")(FaceMatches.asInstanceOf[js.Any])
+    if (FaceModelVersion != null) __obj.updateDynamic("FaceModelVersion")(FaceModelVersion.asInstanceOf[js.Any])
+    if (SearchedFaceId != null) __obj.updateDynamic("SearchedFaceId")(SearchedFaceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchFacesResponse]
   }
-  @scala.inline
-  implicit class SearchFacesResponseOps[Self <: SearchFacesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFaceMatches(value: FaceMatchList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceMatches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceMatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceMatches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaceModelVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceModelVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceModelVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceModelVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchedFaceId(value: FaceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchedFaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchedFaceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchedFaceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object setUserAgent extends js.Object {
   /**
-  	 * Sets the value of the <Titanium.userAgent> property.
-  	 * @deprecated Set the value using <Titanium.userAgent> instead.
-  	 */
+    * Sets the value of the <Titanium.userAgent> property.
+    * @deprecated Set the value using <Titanium.userAgent> instead.
+    */
   def apply(userAgent: String): Unit = js.native
 }
 

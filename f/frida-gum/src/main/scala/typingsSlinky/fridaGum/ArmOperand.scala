@@ -1,5 +1,15 @@
 package typingsSlinky.fridaGum
 
+import typingsSlinky.fridaGum.anon.Disp
+import typingsSlinky.fridaGum.anon.Type
+import typingsSlinky.fridaGum.fridaGumStrings.cimm
+import typingsSlinky.fridaGum.fridaGumStrings.fp
+import typingsSlinky.fridaGum.fridaGumStrings.imm
+import typingsSlinky.fridaGum.fridaGumStrings.mem
+import typingsSlinky.fridaGum.fridaGumStrings.pimm
+import typingsSlinky.fridaGum.fridaGumStrings.reg
+import typingsSlinky.fridaGum.fridaGumStrings.setend
+import typingsSlinky.fridaGum.fridaGumStrings.sysreg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,20 +28,116 @@ trait ArmOperand extends js.Object
 
 object ArmOperand {
   @scala.inline
-  implicit def apply(value: ArmCimmOperand): ArmOperand = value.asInstanceOf[ArmOperand]
+  def ArmPimmOperand(
+    subtracted: Boolean,
+    `type`: pimm,
+    value: Double,
+    shift: Type = null,
+    vectorIndex: js.UndefOr[Double] = js.undefined
+  ): ArmOperand = {
+    val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(vectorIndex)) __obj.updateDynamic("vectorIndex")(vectorIndex.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArmOperand]
+  }
   @scala.inline
-  implicit def apply(value: ArmFpOperand): ArmOperand = value.asInstanceOf[ArmOperand]
+  def ArmRegOperand(
+    subtracted: Boolean,
+    `type`: reg,
+    value: ArmRegister,
+    shift: Type = null,
+    vectorIndex: js.UndefOr[Double] = js.undefined
+  ): ArmOperand = {
+    val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(vectorIndex)) __obj.updateDynamic("vectorIndex")(vectorIndex.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArmOperand]
+  }
   @scala.inline
-  implicit def apply(value: ArmImmOperand): ArmOperand = value.asInstanceOf[ArmOperand]
+  def ArmSysregOperand(
+    subtracted: Boolean,
+    `type`: sysreg,
+    value: ArmRegister,
+    shift: Type = null,
+    vectorIndex: js.UndefOr[Double] = js.undefined
+  ): ArmOperand = {
+    val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(vectorIndex)) __obj.updateDynamic("vectorIndex")(vectorIndex.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArmOperand]
+  }
   @scala.inline
-  implicit def apply(value: ArmMemOperand): ArmOperand = value.asInstanceOf[ArmOperand]
+  def ArmMemOperand(
+    subtracted: Boolean,
+    `type`: mem,
+    value: Disp,
+    shift: Type = null,
+    vectorIndex: js.UndefOr[Double] = js.undefined
+  ): ArmOperand = {
+    val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(vectorIndex)) __obj.updateDynamic("vectorIndex")(vectorIndex.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArmOperand]
+  }
   @scala.inline
-  implicit def apply(value: ArmPimmOperand): ArmOperand = value.asInstanceOf[ArmOperand]
+  def ArmImmOperand(
+    subtracted: Boolean,
+    `type`: imm,
+    value: Double,
+    shift: Type = null,
+    vectorIndex: js.UndefOr[Double] = js.undefined
+  ): ArmOperand = {
+    val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(vectorIndex)) __obj.updateDynamic("vectorIndex")(vectorIndex.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArmOperand]
+  }
   @scala.inline
-  implicit def apply(value: ArmRegOperand): ArmOperand = value.asInstanceOf[ArmOperand]
+  def ArmFpOperand(
+    subtracted: Boolean,
+    `type`: fp,
+    value: Double,
+    shift: Type = null,
+    vectorIndex: js.UndefOr[Double] = js.undefined
+  ): ArmOperand = {
+    val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(vectorIndex)) __obj.updateDynamic("vectorIndex")(vectorIndex.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArmOperand]
+  }
   @scala.inline
-  implicit def apply(value: ArmSetendOperand): ArmOperand = value.asInstanceOf[ArmOperand]
+  def ArmCimmOperand(
+    subtracted: Boolean,
+    `type`: cimm,
+    value: Double,
+    shift: Type = null,
+    vectorIndex: js.UndefOr[Double] = js.undefined
+  ): ArmOperand = {
+    val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(vectorIndex)) __obj.updateDynamic("vectorIndex")(vectorIndex.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArmOperand]
+  }
   @scala.inline
-  implicit def apply(value: ArmSysregOperand): ArmOperand = value.asInstanceOf[ArmOperand]
+  def ArmSetendOperand(
+    subtracted: Boolean,
+    `type`: setend,
+    value: Endian,
+    shift: Type = null,
+    vectorIndex: js.UndefOr[Double] = js.undefined
+  ): ArmOperand = {
+    val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(vectorIndex)) __obj.updateDynamic("vectorIndex")(vectorIndex.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArmOperand]
+  }
 }
 

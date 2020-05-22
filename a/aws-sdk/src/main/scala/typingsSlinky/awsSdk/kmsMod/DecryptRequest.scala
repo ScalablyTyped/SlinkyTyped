@@ -30,77 +30,19 @@ trait DecryptRequest extends js.Object {
 
 object DecryptRequest {
   @scala.inline
-  def apply(CiphertextBlob: CiphertextType): DecryptRequest = {
+  def apply(
+    CiphertextBlob: CiphertextType,
+    EncryptionAlgorithm: EncryptionAlgorithmSpec = null,
+    EncryptionContext: EncryptionContextType = null,
+    GrantTokens: GrantTokenList = null,
+    KeyId: KeyIdType = null
+  ): DecryptRequest = {
     val __obj = js.Dynamic.literal(CiphertextBlob = CiphertextBlob.asInstanceOf[js.Any])
+    if (EncryptionAlgorithm != null) __obj.updateDynamic("EncryptionAlgorithm")(EncryptionAlgorithm.asInstanceOf[js.Any])
+    if (EncryptionContext != null) __obj.updateDynamic("EncryptionContext")(EncryptionContext.asInstanceOf[js.Any])
+    if (GrantTokens != null) __obj.updateDynamic("GrantTokens")(GrantTokens.asInstanceOf[js.Any])
+    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecryptRequest]
   }
-  @scala.inline
-  implicit class DecryptRequestOps[Self <: DecryptRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CiphertextBlob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCiphertextBlob(value: CiphertextType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CiphertextBlob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncryptionAlgorithm(value: EncryptionAlgorithmSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionContext(value: EncryptionContextType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrantTokens(value: GrantTokenList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTokens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantTokens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTokens")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyId(value: KeyIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

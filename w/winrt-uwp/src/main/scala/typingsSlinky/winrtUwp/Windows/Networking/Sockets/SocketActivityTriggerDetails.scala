@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A object instantiated by the background broker infrastructure and used by an app to retrieve details when a SocketActivityTrigger occurs. */
-@js.native
 trait SocketActivityTriggerDetails extends js.Object {
   /** Get the reason the SocketActivityTrigger occurred. */
-  var reason: SocketActivityTriggerReason = js.native
+  var reason: SocketActivityTriggerReason
   /** Get the SocketActivityInformation object for socket that caused the SocketActivityTrigger to occur. */
-  var socketInformation: SocketActivityInformation = js.native
+  var socketInformation: SocketActivityInformation
 }
 
 object SocketActivityTriggerDetails {
@@ -19,25 +18,5 @@ object SocketActivityTriggerDetails {
     val __obj = js.Dynamic.literal(reason = reason.asInstanceOf[js.Any], socketInformation = socketInformation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketActivityTriggerDetails]
   }
-  @scala.inline
-  implicit class SocketActivityTriggerDetailsOps[Self <: SocketActivityTriggerDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: SocketActivityTriggerReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSocketInformation(value: SocketActivityInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

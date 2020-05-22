@@ -8,64 +8,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpectrogramOptions extends js.Object {
-  var audio: js.UndefOr[Enable] = js.native
-  var canvas: js.UndefOr[Height] = js.native
+  var audio: js.UndefOr[Enable] = js.undefined
+  var canvas: js.UndefOr[Height] = js.undefined
   var colors: js.UndefOr[
     js.Function1[/* steps */ Double, js.Array[String | CanvasGradient | CanvasPattern]]
-  ] = js.native
+  ] = js.undefined
 }
 
 object SpectrogramOptions {
   @scala.inline
-  def apply(): SpectrogramOptions = {
+  def apply(
+    audio: Enable = null,
+    canvas: Height = null,
+    colors: /* steps */ Double => js.Array[String | CanvasGradient | CanvasPattern] = null
+  ): SpectrogramOptions = {
     val __obj = js.Dynamic.literal()
+    if (audio != null) __obj.updateDynamic("audio")(audio.asInstanceOf[js.Any])
+    if (canvas != null) __obj.updateDynamic("canvas")(canvas.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(js.Any.fromFunction1(colors))
     __obj.asInstanceOf[SpectrogramOptions]
   }
-  @scala.inline
-  implicit class SpectrogramOptionsOps[Self <: SpectrogramOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudio(value: Enable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanvas(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColors(value: /* steps */ Double => js.Array[String | CanvasGradient | CanvasPattern]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

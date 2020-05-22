@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RulesetsResource extends js.Object {
   /**
     * Create a `Ruleset` from `Source`.
@@ -17,15 +16,15 @@ trait RulesetsResource extends js.Object {
     * error response indicating the first error encountered. For a detailed view
     * of `Source` issues, use TestRuleset.
     */
-  def create(request: Accesstoken): Request[Ruleset] = js.native
+  def create(request: Accesstoken): Request[Ruleset]
   /**
     * Delete a `Ruleset` by resource name.
     *
     * If the `Ruleset` is referenced by a `Release` the operation will fail.
     */
-  def delete(request: Accesstoken): Request[js.Object] = js.native
+  def delete(request: Accesstoken): Request[js.Object]
   /** Get a `Ruleset` by name including the full `Source` contents. */
-  def get(request: Accesstoken): Request[Ruleset] = js.native
+  def get(request: Accesstoken): Request[Ruleset]
   /**
     * List `Ruleset` metadata only and optionally filter the results by `Ruleset`
     * name.
@@ -33,7 +32,7 @@ trait RulesetsResource extends js.Object {
     * The full `Source` contents of a `Ruleset` may be retrieved with
     * GetRuleset.
     */
-  def list(request: Bearertoken): Request[ListRulesetsResponse] = js.native
+  def list(request: Bearertoken): Request[ListRulesetsResponse]
 }
 
 object RulesetsResource {
@@ -47,37 +46,5 @@ object RulesetsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[RulesetsResource]
   }
-  @scala.inline
-  implicit class RulesetsResourceOps[Self <: RulesetsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Accesstoken => Request[Ruleset]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Accesstoken => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Accesstoken => Request[Ruleset]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Bearertoken => Request[ListRulesetsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

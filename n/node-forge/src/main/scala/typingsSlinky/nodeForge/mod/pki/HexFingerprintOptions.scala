@@ -1,37 +1,33 @@
 package typingsSlinky.nodeForge.mod.pki
 
+import typingsSlinky.nodeForge.mod.md.MessageDigest
+import typingsSlinky.nodeForge.nodeForgeStrings.RSAPublicKey
+import typingsSlinky.nodeForge.nodeForgeStrings.SubjectPublicKeyInfo
 import typingsSlinky.nodeForge.nodeForgeStrings.hex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HexFingerprintOptions extends ByteBufferFingerprintOptions {
   /**
     * @description if not specified, the function will return `ByteStringBuffer`
     */
-  var encoding: hex = js.native
+  var encoding: hex
 }
 
 object HexFingerprintOptions {
   @scala.inline
-  def apply(encoding: hex): HexFingerprintOptions = {
+  def apply(
+    encoding: hex,
+    delimiter: String = null,
+    md: MessageDigest = null,
+    `type`: SubjectPublicKeyInfo | RSAPublicKey = null
+  ): HexFingerprintOptions = {
     val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
+    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
+    if (md != null) __obj.updateDynamic("md")(md.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HexFingerprintOptions]
   }
-  @scala.inline
-  implicit class HexFingerprintOptionsOps[Self <: HexFingerprintOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncoding(value: hex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

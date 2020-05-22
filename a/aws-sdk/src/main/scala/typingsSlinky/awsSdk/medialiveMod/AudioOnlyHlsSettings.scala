@@ -35,65 +35,18 @@ trait AudioOnlyHlsSettings extends js.Object {
 
 object AudioOnlyHlsSettings {
   @scala.inline
-  def apply(): AudioOnlyHlsSettings = {
+  def apply(
+    AudioGroupId: string = null,
+    AudioOnlyImage: InputLocation = null,
+    AudioTrackType: AudioOnlyHlsTrackType = null,
+    SegmentType: AudioOnlyHlsSegmentType = null
+  ): AudioOnlyHlsSettings = {
     val __obj = js.Dynamic.literal()
+    if (AudioGroupId != null) __obj.updateDynamic("AudioGroupId")(AudioGroupId.asInstanceOf[js.Any])
+    if (AudioOnlyImage != null) __obj.updateDynamic("AudioOnlyImage")(AudioOnlyImage.asInstanceOf[js.Any])
+    if (AudioTrackType != null) __obj.updateDynamic("AudioTrackType")(AudioTrackType.asInstanceOf[js.Any])
+    if (SegmentType != null) __obj.updateDynamic("SegmentType")(SegmentType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioOnlyHlsSettings]
   }
-  @scala.inline
-  implicit class AudioOnlyHlsSettingsOps[Self <: AudioOnlyHlsSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioGroupId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioOnlyImage(value: InputLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioOnlyImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioOnlyImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioOnlyImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioTrackType(value: AudioOnlyHlsTrackType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioTrackType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioTrackType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioTrackType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentType(value: AudioOnlyHlsSegmentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

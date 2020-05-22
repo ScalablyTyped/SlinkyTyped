@@ -5,9 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @namespace
-  * @name pc.string
-  * @description Extended String API.
+  * Extended String API.
   */
 @JSGlobal("pc.string")
 @js.native

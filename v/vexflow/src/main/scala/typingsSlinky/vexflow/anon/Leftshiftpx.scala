@@ -4,57 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Leftshiftpx extends js.Object {
-  var height: js.UndefOr[Double] = js.native
-  var left_shift_px: Double = js.native
-  var right_shift_px: Double = js.native
-  var y_shift: Double = js.native
+  var height: js.UndefOr[Double] = js.undefined
+  var left_shift_px: Double
+  var right_shift_px: Double
+  var y_shift: Double
 }
 
 object Leftshiftpx {
   @scala.inline
-  def apply(left_shift_px: Double, right_shift_px: Double, y_shift: Double): Leftshiftpx = {
+  def apply(
+    left_shift_px: Double,
+    right_shift_px: Double,
+    y_shift: Double,
+    height: js.UndefOr[Double] = js.undefined
+  ): Leftshiftpx = {
     val __obj = js.Dynamic.literal(left_shift_px = left_shift_px.asInstanceOf[js.Any], right_shift_px = right_shift_px.asInstanceOf[js.Any], y_shift = y_shift.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Leftshiftpx]
   }
-  @scala.inline
-  implicit class LeftshiftpxOps[Self <: Leftshiftpx] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLeft_shift_px(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left_shift_px")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRight_shift_px(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right_shift_px")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY_shift(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_shift")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

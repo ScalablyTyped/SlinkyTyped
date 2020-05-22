@@ -10,16 +10,16 @@ object global extends js.Object {
   @js.native
   object ComponentFramework extends js.Object {
     /**
-    	 * Helper of Device API interface
-    	 */
+      * Helper of Device API interface
+      */
     @js.native
     object DeviceApi extends js.Object
     
     @js.native
     object FactoryApi extends js.Object {
       /**
-      	 * Helper of Factory Pop API interface
-      	 */
+        * Helper of Factory Pop API interface
+        */
       @js.native
       object Popup extends js.Object
       
@@ -28,16 +28,16 @@ object global extends js.Object {
     @js.native
     object FormattingApi extends js.Object {
       /**
-      	 * Helper of Formatting API interface
-      	 */
+        * Helper of Formatting API interface
+        */
       @js.native
       object Types extends js.Object
       
     }
     
     /**
-    	 * Helper of Navigation API interface
-    	 */
+      * Helper of Navigation API interface
+      */
     @js.native
     object NavigationApi extends js.Object
     
@@ -46,20 +46,20 @@ object global extends js.Object {
     object PropertyTypes extends js.Object
     
     /**
-    	 * Helper of UserSettings API interface
-    	 */
+      * Helper of UserSettings API interface
+      */
     @js.native
     object UserSettingApi extends js.Object
     
     /**
-    	 * Helper of Utils API interface
-    	 */
+      * Helper of Utils API interface
+      */
     @js.native
     object UtilityApi extends js.Object
     
     /**
-    	 * Objects related to interacting with the Web API.
-    	 */
+      * Objects related to interacting with the Web API.
+      */
     @js.native
     object WebApi extends js.Object
     

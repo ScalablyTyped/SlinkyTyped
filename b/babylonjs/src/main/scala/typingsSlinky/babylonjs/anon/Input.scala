@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Input extends js.Object {
-  var input: js.UndefOr[String] = js.native
-  var output: js.UndefOr[String] = js.native
-  var outputSwizzle: js.UndefOr[String] = js.native
+  var input: js.UndefOr[String] = js.undefined
+  var output: js.UndefOr[String] = js.undefined
+  var outputSwizzle: js.UndefOr[String] = js.undefined
 }
 
 object Input {
   @scala.inline
-  def apply(): Input = {
+  def apply(input: String = null, output: String = null, outputSwizzle: String = null): Input = {
     val __obj = js.Dynamic.literal()
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (outputSwizzle != null) __obj.updateDynamic("outputSwizzle")(outputSwizzle.asInstanceOf[js.Any])
     __obj.asInstanceOf[Input]
   }
-  @scala.inline
-  implicit class InputOps[Self <: Input] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputSwizzle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputSwizzle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputSwizzle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputSwizzle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

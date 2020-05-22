@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileSaverOptions extends js.Object {
   /**
     * Automatically provide Unicode text encoding hints
     * @default false
     */
-  var autoBom: Boolean = js.native
+  var autoBom: Boolean
 }
 
 object FileSaverOptions {
@@ -19,19 +18,5 @@ object FileSaverOptions {
     val __obj = js.Dynamic.literal(autoBom = autoBom.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileSaverOptions]
   }
-  @scala.inline
-  implicit class FileSaverOptionsOps[Self <: FileSaverOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoBom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBom")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

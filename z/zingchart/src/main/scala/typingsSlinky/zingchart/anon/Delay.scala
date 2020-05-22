@@ -4,137 +4,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Delay extends js.Object {
   /**
     * Sets the delay in milliseconds between each step of the animation. 5 | 10 | ...
     */
-  var delay: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
   /**
     * Sets the type of animation effect. ANIMATION_FADE_IN | ANIMATION_EXPAND_VERTICAL | 1 | 2 | ...
     */
-  var effect: js.UndefOr[Double] = js.native
+  var effect: js.UndefOr[Double] = js.undefined
   /**
     * Sets the method used for each animation effect. ANIMATION_LINEAR | ANIMATION_BACK_EASE_OUT | 0 | 1 | ...
     */
-  var method: js.UndefOr[Double] = js.native
+  var method: js.UndefOr[Double] = js.undefined
   /**
     * Determines whether or not animation occurs when a change is made to the chart via an API event (e.g., adding node, adding plot, re
     * moving node). true (default) | false | 1 | 0
     */
-  var `on-change`: js.UndefOr[Boolean] = js.native
+  var `on-change`: js.UndefOr[Boolean] = js.undefined
   /**
     * Determines whether or not animation occurs when users toggle legend items on and off. Note that in the "legend" object, the "toggl
     * e-action" attribute must be set to "remove". true (default) | false | 1 | 0
     */
-  var `on-legend-toggle`: js.UndefOr[Boolean] = js.native
+  var `on-legend-toggle`: js.UndefOr[Boolean] = js.undefined
   /**
     * Determines animation groups. ANIMATION_NO_SEQUENCE | ANIMATION_BY_PLOT | 0 | 1 | ...
     */
-  var sequence: js.UndefOr[Double] = js.native
+  var sequence: js.UndefOr[Double] = js.undefined
   /**
     * Sets the length of the animation in milliseconds. ANIMATION_SLOW | ANIMATION_FAST | 1000 | 4000 | ...
     */
-  var speed: js.UndefOr[Double] = js.native
+  var speed: js.UndefOr[Double] = js.undefined
 }
 
 object Delay {
   @scala.inline
-  def apply(): Delay = {
+  def apply(
+    delay: js.UndefOr[Double] = js.undefined,
+    effect: js.UndefOr[Double] = js.undefined,
+    method: js.UndefOr[Double] = js.undefined,
+    `on-change`: js.UndefOr[Boolean] = js.undefined,
+    `on-legend-toggle`: js.UndefOr[Boolean] = js.undefined,
+    sequence: js.UndefOr[Double] = js.undefined,
+    speed: js.UndefOr[Double] = js.undefined
+  ): Delay = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(effect)) __obj.updateDynamic("effect")(effect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(method)) __obj.updateDynamic("method")(method.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`on-change`)) __obj.updateDynamic("on-change")(`on-change`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`on-legend-toggle`)) __obj.updateDynamic("on-legend-toggle")(`on-legend-toggle`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sequence)) __obj.updateDynamic("sequence")(sequence.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(speed)) __obj.updateDynamic("speed")(speed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Delay]
   }
-  @scala.inline
-  implicit class DelayOps[Self <: Delay] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffect(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withOn-change`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on-change")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutOn-change`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on-change")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withOn-legend-toggle`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on-legend-toggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutOn-legend-toggle`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on-legend-toggle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSequence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSequence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

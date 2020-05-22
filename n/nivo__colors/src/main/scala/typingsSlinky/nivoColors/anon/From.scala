@@ -1,49 +1,23 @@
 package typingsSlinky.nivoColors.anon
 
 import typingsSlinky.nivoColors.mod.ColorModifier
-import typingsSlinky.nivoColors.mod.InheritedColorProp
+import typingsSlinky.nivoColors.mod._InheritedColorProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait From
-  extends InheritedColorProp[js.Any] {
-  var from: String = js.native
-  var modifiers: js.UndefOr[js.Array[ColorModifier]] = js.native
+  extends _InheritedColorProp[js.Any] {
+  var from: String
+  var modifiers: js.UndefOr[js.Array[ColorModifier]] = js.undefined
 }
 
 object From {
   @scala.inline
-  def apply(from: String): From = {
+  def apply(from: String, modifiers: js.Array[ColorModifier] = null): From = {
     val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any])
+    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
     __obj.asInstanceOf[From]
   }
-  @scala.inline
-  implicit class FromOps[Self <: From] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModifiers(value: js.Array[ColorModifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifiers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

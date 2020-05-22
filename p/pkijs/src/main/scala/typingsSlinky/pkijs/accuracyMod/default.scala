@@ -6,7 +6,14 @@ import scala.scalajs.js.annotation._
 
 @JSImport("pkijs/src/Accuracy", JSImport.Default)
 @js.native
-class default () extends Accuracy
+class default () extends Accuracy {
+  /* CompleteClass */
+  override var micros: Double = js.native
+  /* CompleteClass */
+  override var millis: Double = js.native
+  /* CompleteClass */
+  override var seconds: Double = js.native
+}
 
 /* static members */
 @JSImport("pkijs/src/Accuracy", JSImport.Default)

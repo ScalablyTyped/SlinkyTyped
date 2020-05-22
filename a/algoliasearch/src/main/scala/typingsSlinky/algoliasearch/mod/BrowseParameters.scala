@@ -20,699 +20,171 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined algoliasearch.algoliasearch.Omit<algoliasearch.algoliasearch.QueryParameters, 'typoTolerance' | 'distinct' | 'facets' | 'getRankingInfo' | 'attributesToHighlight' | 'attributesToSnippet'> */
-@js.native
 trait BrowseParameters extends js.Object {
-  var advancedSyntax: js.UndefOr[Boolean] = js.native
-  var allowTyposOnNumericTokens: js.UndefOr[Boolean] = js.native
-  var alternativesAsExact: js.UndefOr[js.Array[ignorePlurals | singleWordSynonym | multiWordsSynonym]] = js.native
-  var analytics: js.UndefOr[Boolean] = js.native
-  var analyticsTags: js.UndefOr[js.Array[String]] = js.native
-  var aroundLatLng: js.UndefOr[String] = js.native
-  var aroundLatLngViaIP: js.UndefOr[Boolean] = js.native
-  var aroundPrecision: js.UndefOr[Double] = js.native
-  var aroundRadius: js.UndefOr[Double | all] = js.native
-  var attributesToRetrieve: js.UndefOr[js.Array[String]] = js.native
-  var clickAnalytics: js.UndefOr[Boolean] = js.native
-  var disableExactOnAttributes: js.UndefOr[js.Array[String]] = js.native
-  var disableTypoToleranceOnAttributes: js.UndefOr[js.Array[String]] = js.native
-  var enableABTest: js.UndefOr[Boolean] = js.native
-  var exactOnSingleWordQuery: js.UndefOr[attribute | none | word] = js.native
-  var facetFilters: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
-  var facetingAfterDistinct: js.UndefOr[Boolean] = js.native
-  var filters: js.UndefOr[String] = js.native
-  var highlightPostTag: js.UndefOr[String] = js.native
-  var highlightPreTag: js.UndefOr[String] = js.native
-  var hitsPerPage: js.UndefOr[Double] = js.native
-  var ignorePlurals: js.UndefOr[Boolean] = js.native
-  var insideBoundingBox: js.UndefOr[js.Array[js.Array[Double]]] = js.native
-  var insidePolygon: js.UndefOr[js.Array[js.Array[Double]]] = js.native
-  var length: js.UndefOr[Double] = js.native
-  var maxValuesPerFacet: js.UndefOr[Double] = js.native
-  var minProximity: js.UndefOr[Double] = js.native
-  var minWordSizefor1Typo: js.UndefOr[Double] = js.native
-  var minWordSizefor2Typos: js.UndefOr[Double] = js.native
-  var minimumAroundRadius: js.UndefOr[Double] = js.native
-  var nbShards: js.UndefOr[Double] = js.native
-  var numericAttributesForFiltering: js.UndefOr[js.Array[String]] = js.native
-  var numericAttributesToIndex: js.UndefOr[js.Array[String]] = js.native
-  var numericFilters: js.UndefOr[js.Array[String]] = js.native
-  var offset: js.UndefOr[Double] = js.native
-  var optionalWords: js.UndefOr[js.Array[String]] = js.native
-  var page: js.UndefOr[Double] = js.native
-  var query: js.UndefOr[String] = js.native
-  var queryType: js.UndefOr[prefixAll | prefixLast | prefixNone] = js.native
-  var removeStopWords: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var removeWordsIfNoResults: js.UndefOr[none | lastWords | firstWords | allOptional] = js.native
-  var replaceSynonymsInHighlight: js.UndefOr[Boolean] = js.native
-  var restrictHighlightAndSnippetArrays: js.UndefOr[Boolean] = js.native
-  var restrictSearchableAttributes: js.UndefOr[js.Array[String]] = js.native
-  var ruleContexts: js.UndefOr[js.Array[String]] = js.native
-  var snippetEllipsisText: js.UndefOr[String] = js.native
-  var sortFacetValuesBy: js.UndefOr[count | alpha] = js.native
-  var sumOrFiltersScores: js.UndefOr[Boolean] = js.native
-  var synonyms: js.UndefOr[Boolean] = js.native
-  var tagFilters: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
-  var userData: js.UndefOr[String | js.Object] = js.native
-  var userToken: js.UndefOr[String] = js.native
+  var advancedSyntax: js.UndefOr[Boolean] = js.undefined
+  var allowTyposOnNumericTokens: js.UndefOr[Boolean] = js.undefined
+  var alternativesAsExact: js.UndefOr[js.Array[ignorePlurals | singleWordSynonym | multiWordsSynonym]] = js.undefined
+  var analytics: js.UndefOr[Boolean] = js.undefined
+  var analyticsTags: js.UndefOr[js.Array[String]] = js.undefined
+  var aroundLatLng: js.UndefOr[String] = js.undefined
+  var aroundLatLngViaIP: js.UndefOr[Boolean] = js.undefined
+  var aroundPrecision: js.UndefOr[Double] = js.undefined
+  var aroundRadius: js.UndefOr[Double | all] = js.undefined
+  var attributesToRetrieve: js.UndefOr[js.Array[String]] = js.undefined
+  var clickAnalytics: js.UndefOr[Boolean] = js.undefined
+  var disableExactOnAttributes: js.UndefOr[js.Array[String]] = js.undefined
+  var disableTypoToleranceOnAttributes: js.UndefOr[js.Array[String]] = js.undefined
+  var enableABTest: js.UndefOr[Boolean] = js.undefined
+  var exactOnSingleWordQuery: js.UndefOr[attribute | none | word] = js.undefined
+  var facetFilters: js.UndefOr[js.Array[String | js.Array[String]]] = js.undefined
+  var facetingAfterDistinct: js.UndefOr[Boolean] = js.undefined
+  var filters: js.UndefOr[String] = js.undefined
+  var highlightPostTag: js.UndefOr[String] = js.undefined
+  var highlightPreTag: js.UndefOr[String] = js.undefined
+  var hitsPerPage: js.UndefOr[Double] = js.undefined
+  var ignorePlurals: js.UndefOr[Boolean] = js.undefined
+  var insideBoundingBox: js.UndefOr[js.Array[js.Array[Double]]] = js.undefined
+  var insidePolygon: js.UndefOr[js.Array[js.Array[Double]]] = js.undefined
+  var length: js.UndefOr[Double] = js.undefined
+  var maxValuesPerFacet: js.UndefOr[Double] = js.undefined
+  var minProximity: js.UndefOr[Double] = js.undefined
+  var minWordSizefor1Typo: js.UndefOr[Double] = js.undefined
+  var minWordSizefor2Typos: js.UndefOr[Double] = js.undefined
+  var minimumAroundRadius: js.UndefOr[Double] = js.undefined
+  var nbShards: js.UndefOr[Double] = js.undefined
+  var numericAttributesForFiltering: js.UndefOr[js.Array[String]] = js.undefined
+  var numericAttributesToIndex: js.UndefOr[js.Array[String]] = js.undefined
+  var numericFilters: js.UndefOr[js.Array[String]] = js.undefined
+  var offset: js.UndefOr[Double] = js.undefined
+  var optionalWords: js.UndefOr[js.Array[String]] = js.undefined
+  var page: js.UndefOr[Double] = js.undefined
+  var query: js.UndefOr[String] = js.undefined
+  var queryType: js.UndefOr[prefixAll | prefixLast | prefixNone] = js.undefined
+  var removeStopWords: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var removeWordsIfNoResults: js.UndefOr[none | lastWords | firstWords | allOptional] = js.undefined
+  var replaceSynonymsInHighlight: js.UndefOr[Boolean] = js.undefined
+  var restrictHighlightAndSnippetArrays: js.UndefOr[Boolean] = js.undefined
+  var restrictSearchableAttributes: js.UndefOr[js.Array[String]] = js.undefined
+  var ruleContexts: js.UndefOr[js.Array[String]] = js.undefined
+  var snippetEllipsisText: js.UndefOr[String] = js.undefined
+  var sortFacetValuesBy: js.UndefOr[count | alpha] = js.undefined
+  var sumOrFiltersScores: js.UndefOr[Boolean] = js.undefined
+  var synonyms: js.UndefOr[Boolean] = js.undefined
+  var tagFilters: js.UndefOr[js.Array[String | js.Array[String]]] = js.undefined
+  var userData: js.UndefOr[String | js.Object] = js.undefined
+  var userToken: js.UndefOr[String] = js.undefined
 }
 
 object BrowseParameters {
   @scala.inline
-  def apply(): BrowseParameters = {
+  def apply(
+    advancedSyntax: js.UndefOr[Boolean] = js.undefined,
+    allowTyposOnNumericTokens: js.UndefOr[Boolean] = js.undefined,
+    alternativesAsExact: js.Array[ignorePlurals | singleWordSynonym | multiWordsSynonym] = null,
+    analytics: js.UndefOr[Boolean] = js.undefined,
+    analyticsTags: js.Array[String] = null,
+    aroundLatLng: String = null,
+    aroundLatLngViaIP: js.UndefOr[Boolean] = js.undefined,
+    aroundPrecision: js.UndefOr[Double] = js.undefined,
+    aroundRadius: Double | all = null,
+    attributesToRetrieve: js.Array[String] = null,
+    clickAnalytics: js.UndefOr[Boolean] = js.undefined,
+    disableExactOnAttributes: js.Array[String] = null,
+    disableTypoToleranceOnAttributes: js.Array[String] = null,
+    enableABTest: js.UndefOr[Boolean] = js.undefined,
+    exactOnSingleWordQuery: attribute | none | word = null,
+    facetFilters: js.Array[String | js.Array[String]] = null,
+    facetingAfterDistinct: js.UndefOr[Boolean] = js.undefined,
+    filters: String = null,
+    highlightPostTag: String = null,
+    highlightPreTag: String = null,
+    hitsPerPage: js.UndefOr[Double] = js.undefined,
+    ignorePlurals: js.UndefOr[Boolean] = js.undefined,
+    insideBoundingBox: js.Array[js.Array[Double]] = null,
+    insidePolygon: js.Array[js.Array[Double]] = null,
+    length: js.UndefOr[Double] = js.undefined,
+    maxValuesPerFacet: js.UndefOr[Double] = js.undefined,
+    minProximity: js.UndefOr[Double] = js.undefined,
+    minWordSizefor1Typo: js.UndefOr[Double] = js.undefined,
+    minWordSizefor2Typos: js.UndefOr[Double] = js.undefined,
+    minimumAroundRadius: js.UndefOr[Double] = js.undefined,
+    nbShards: js.UndefOr[Double] = js.undefined,
+    numericAttributesForFiltering: js.Array[String] = null,
+    numericAttributesToIndex: js.Array[String] = null,
+    numericFilters: js.Array[String] = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    optionalWords: js.Array[String] = null,
+    page: js.UndefOr[Double] = js.undefined,
+    query: String = null,
+    queryType: prefixAll | prefixLast | prefixNone = null,
+    removeStopWords: Boolean | js.Array[String] = null,
+    removeWordsIfNoResults: none | lastWords | firstWords | allOptional = null,
+    replaceSynonymsInHighlight: js.UndefOr[Boolean] = js.undefined,
+    restrictHighlightAndSnippetArrays: js.UndefOr[Boolean] = js.undefined,
+    restrictSearchableAttributes: js.Array[String] = null,
+    ruleContexts: js.Array[String] = null,
+    snippetEllipsisText: String = null,
+    sortFacetValuesBy: count | alpha = null,
+    sumOrFiltersScores: js.UndefOr[Boolean] = js.undefined,
+    synonyms: js.UndefOr[Boolean] = js.undefined,
+    tagFilters: js.Array[String | js.Array[String]] = null,
+    userData: String | js.Object = null,
+    userToken: String = null
+  ): BrowseParameters = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(advancedSyntax)) __obj.updateDynamic("advancedSyntax")(advancedSyntax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowTyposOnNumericTokens)) __obj.updateDynamic("allowTyposOnNumericTokens")(allowTyposOnNumericTokens.get.asInstanceOf[js.Any])
+    if (alternativesAsExact != null) __obj.updateDynamic("alternativesAsExact")(alternativesAsExact.asInstanceOf[js.Any])
+    if (!js.isUndefined(analytics)) __obj.updateDynamic("analytics")(analytics.get.asInstanceOf[js.Any])
+    if (analyticsTags != null) __obj.updateDynamic("analyticsTags")(analyticsTags.asInstanceOf[js.Any])
+    if (aroundLatLng != null) __obj.updateDynamic("aroundLatLng")(aroundLatLng.asInstanceOf[js.Any])
+    if (!js.isUndefined(aroundLatLngViaIP)) __obj.updateDynamic("aroundLatLngViaIP")(aroundLatLngViaIP.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(aroundPrecision)) __obj.updateDynamic("aroundPrecision")(aroundPrecision.get.asInstanceOf[js.Any])
+    if (aroundRadius != null) __obj.updateDynamic("aroundRadius")(aroundRadius.asInstanceOf[js.Any])
+    if (attributesToRetrieve != null) __obj.updateDynamic("attributesToRetrieve")(attributesToRetrieve.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickAnalytics)) __obj.updateDynamic("clickAnalytics")(clickAnalytics.get.asInstanceOf[js.Any])
+    if (disableExactOnAttributes != null) __obj.updateDynamic("disableExactOnAttributes")(disableExactOnAttributes.asInstanceOf[js.Any])
+    if (disableTypoToleranceOnAttributes != null) __obj.updateDynamic("disableTypoToleranceOnAttributes")(disableTypoToleranceOnAttributes.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableABTest)) __obj.updateDynamic("enableABTest")(enableABTest.get.asInstanceOf[js.Any])
+    if (exactOnSingleWordQuery != null) __obj.updateDynamic("exactOnSingleWordQuery")(exactOnSingleWordQuery.asInstanceOf[js.Any])
+    if (facetFilters != null) __obj.updateDynamic("facetFilters")(facetFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(facetingAfterDistinct)) __obj.updateDynamic("facetingAfterDistinct")(facetingAfterDistinct.get.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (highlightPostTag != null) __obj.updateDynamic("highlightPostTag")(highlightPostTag.asInstanceOf[js.Any])
+    if (highlightPreTag != null) __obj.updateDynamic("highlightPreTag")(highlightPreTag.asInstanceOf[js.Any])
+    if (!js.isUndefined(hitsPerPage)) __obj.updateDynamic("hitsPerPage")(hitsPerPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignorePlurals)) __obj.updateDynamic("ignorePlurals")(ignorePlurals.get.asInstanceOf[js.Any])
+    if (insideBoundingBox != null) __obj.updateDynamic("insideBoundingBox")(insideBoundingBox.asInstanceOf[js.Any])
+    if (insidePolygon != null) __obj.updateDynamic("insidePolygon")(insidePolygon.asInstanceOf[js.Any])
+    if (!js.isUndefined(length)) __obj.updateDynamic("length")(length.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxValuesPerFacet)) __obj.updateDynamic("maxValuesPerFacet")(maxValuesPerFacet.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minProximity)) __obj.updateDynamic("minProximity")(minProximity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWordSizefor1Typo)) __obj.updateDynamic("minWordSizefor1Typo")(minWordSizefor1Typo.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWordSizefor2Typos)) __obj.updateDynamic("minWordSizefor2Typos")(minWordSizefor2Typos.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumAroundRadius)) __obj.updateDynamic("minimumAroundRadius")(minimumAroundRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nbShards)) __obj.updateDynamic("nbShards")(nbShards.get.asInstanceOf[js.Any])
+    if (numericAttributesForFiltering != null) __obj.updateDynamic("numericAttributesForFiltering")(numericAttributesForFiltering.asInstanceOf[js.Any])
+    if (numericAttributesToIndex != null) __obj.updateDynamic("numericAttributesToIndex")(numericAttributesToIndex.asInstanceOf[js.Any])
+    if (numericFilters != null) __obj.updateDynamic("numericFilters")(numericFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (optionalWords != null) __obj.updateDynamic("optionalWords")(optionalWords.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (queryType != null) __obj.updateDynamic("queryType")(queryType.asInstanceOf[js.Any])
+    if (removeStopWords != null) __obj.updateDynamic("removeStopWords")(removeStopWords.asInstanceOf[js.Any])
+    if (removeWordsIfNoResults != null) __obj.updateDynamic("removeWordsIfNoResults")(removeWordsIfNoResults.asInstanceOf[js.Any])
+    if (!js.isUndefined(replaceSynonymsInHighlight)) __obj.updateDynamic("replaceSynonymsInHighlight")(replaceSynonymsInHighlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restrictHighlightAndSnippetArrays)) __obj.updateDynamic("restrictHighlightAndSnippetArrays")(restrictHighlightAndSnippetArrays.get.asInstanceOf[js.Any])
+    if (restrictSearchableAttributes != null) __obj.updateDynamic("restrictSearchableAttributes")(restrictSearchableAttributes.asInstanceOf[js.Any])
+    if (ruleContexts != null) __obj.updateDynamic("ruleContexts")(ruleContexts.asInstanceOf[js.Any])
+    if (snippetEllipsisText != null) __obj.updateDynamic("snippetEllipsisText")(snippetEllipsisText.asInstanceOf[js.Any])
+    if (sortFacetValuesBy != null) __obj.updateDynamic("sortFacetValuesBy")(sortFacetValuesBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(sumOrFiltersScores)) __obj.updateDynamic("sumOrFiltersScores")(sumOrFiltersScores.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(synonyms)) __obj.updateDynamic("synonyms")(synonyms.get.asInstanceOf[js.Any])
+    if (tagFilters != null) __obj.updateDynamic("tagFilters")(tagFilters.asInstanceOf[js.Any])
+    if (userData != null) __obj.updateDynamic("userData")(userData.asInstanceOf[js.Any])
+    if (userToken != null) __obj.updateDynamic("userToken")(userToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrowseParameters]
   }
-  @scala.inline
-  implicit class BrowseParametersOps[Self <: BrowseParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvancedSyntax(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advancedSyntax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvancedSyntax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advancedSyntax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowTyposOnNumericTokens(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTyposOnNumericTokens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowTyposOnNumericTokens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTyposOnNumericTokens")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlternativesAsExact(value: js.Array[ignorePlurals | singleWordSynonym | multiWordsSynonym]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternativesAsExact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternativesAsExact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternativesAsExact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalytics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analytics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalytics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analytics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyticsTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyticsTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAroundLatLng(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroundLatLng")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAroundLatLng: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroundLatLng")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAroundLatLngViaIP(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroundLatLngViaIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAroundLatLngViaIP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroundLatLngViaIP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAroundPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroundPrecision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAroundPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroundPrecision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAroundRadius(value: Double | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroundRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAroundRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroundRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributesToRetrieve(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributesToRetrieve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributesToRetrieve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributesToRetrieve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickAnalytics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickAnalytics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickAnalytics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickAnalytics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableExactOnAttributes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableExactOnAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableExactOnAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableExactOnAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableTypoToleranceOnAttributes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTypoToleranceOnAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableTypoToleranceOnAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTypoToleranceOnAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableABTest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableABTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableABTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableABTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExactOnSingleWordQuery(value: attribute | none | word): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exactOnSingleWordQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExactOnSingleWordQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exactOnSingleWordQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacetFilters(value: js.Array[String | js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facetFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacetFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facetFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacetingAfterDistinct(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facetingAfterDistinct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacetingAfterDistinct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facetingAfterDistinct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightPostTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightPostTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightPostTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightPostTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightPreTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightPreTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightPreTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightPreTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHitsPerPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitsPerPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHitsPerPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitsPerPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnorePlurals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePlurals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnorePlurals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePlurals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsideBoundingBox(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideBoundingBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsideBoundingBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideBoundingBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsidePolygon(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insidePolygon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsidePolygon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insidePolygon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValuesPerFacet(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValuesPerFacet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValuesPerFacet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValuesPerFacet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinProximity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minProximity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinProximity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minProximity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWordSizefor1Typo(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWordSizefor1Typo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWordSizefor1Typo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWordSizefor1Typo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWordSizefor2Typos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWordSizefor2Typos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWordSizefor2Typos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWordSizefor2Typos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumAroundRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumAroundRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumAroundRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumAroundRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNbShards(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nbShards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNbShards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nbShards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumericAttributesForFiltering(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericAttributesForFiltering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumericAttributesForFiltering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericAttributesForFiltering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumericAttributesToIndex(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericAttributesToIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumericAttributesToIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericAttributesToIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumericFilters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumericFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionalWords(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalWords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionalWords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalWords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryType(value: prefixAll | prefixLast | prefixNone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveStopWords(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeStopWords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveStopWords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeStopWords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveWordsIfNoResults(value: none | lastWords | firstWords | allOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeWordsIfNoResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveWordsIfNoResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeWordsIfNoResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceSynonymsInHighlight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceSynonymsInHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceSynonymsInHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceSynonymsInHighlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestrictHighlightAndSnippetArrays(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictHighlightAndSnippetArrays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestrictHighlightAndSnippetArrays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictHighlightAndSnippetArrays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestrictSearchableAttributes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictSearchableAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestrictSearchableAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictSearchableAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleContexts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleContexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleContexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnippetEllipsisText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snippetEllipsisText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnippetEllipsisText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snippetEllipsisText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortFacetValuesBy(value: count | alpha): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortFacetValuesBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortFacetValuesBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortFacetValuesBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSumOrFiltersScores(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sumOrFiltersScores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSumOrFiltersScores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sumOrFiltersScores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSynonyms(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synonyms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSynonyms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synonyms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagFilters(value: js.Array[String | js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserData(value: String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

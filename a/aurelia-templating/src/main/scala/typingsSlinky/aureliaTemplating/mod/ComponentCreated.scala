@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ComponentCreated extends js.Object {
   /**
     * Implement this hook if you want to perform custom logic after the constructor has been called.
@@ -13,7 +12,7 @@ trait ComponentCreated extends js.Object {
     * This is the view that the component is declared inside of. If the component itself has a view,
     * this will be passed second.
     */
-  def created(owningView: View_, myView: View_): Unit = js.native
+  def created(owningView: View_, myView: View_): Unit
 }
 
 object ComponentCreated {
@@ -22,19 +21,5 @@ object ComponentCreated {
     val __obj = js.Dynamic.literal(created = js.Any.fromFunction2(created))
     __obj.asInstanceOf[ComponentCreated]
   }
-  @scala.inline
-  implicit class ComponentCreatedOps[Self <: ComponentCreated] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreated(value: (View_, View_) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

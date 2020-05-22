@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * This class describes all the methods that apply at generic variable level.
   * The handle member in the JSON request for all methods listed in this section is the handle of the generic variable.
   */
-@js.native
 trait IGenericVariable extends IGeneratedAPI {
   /**
     * Applies a patch to the properties of a variable. Allows an update to some of the properties.
@@ -17,24 +16,24 @@ trait IGenericVariable extends IGeneratedAPI {
     * Note: Applying a patch takes less time than resetting all the properties.
     * @param qPatches - Array of NxPatch
     */
-  def applyPatches(qPatches: js.Array[INxPatch]): js.Promise[Unit] = js.native
+  def applyPatches(qPatches: js.Array[INxPatch]): js.Promise[Unit]
   /**
     * Returns the type and identifier of the object.
     */
-  def getInfo(): js.Promise[INxInfo] = js.native
+  def getInfo(): js.Promise[INxInfo]
   /**
     * Evaluates an object and displays its properties including the dynamic properties.
     * If the member delta is set to true in the request object, only the delta is evaluated.
     * @returns GenericVariableLayout Information on the object
     */
-  def getLayout(): js.Promise[IGenericVariableLayout] = js.native
+  def getLayout(): js.Promise[IGenericVariableLayout]
   /**
     * Shows the properties of an object.
     *
     * Note: If the member delta is set to true in the request, only the delta is retrieved.
     * @returns GenericVariableProperties Information about the generic object
     */
-  def getProperties(): js.Promise[IGenericVariableProperties] = js.native
+  def getProperties(): js.Promise[IGenericVariableProperties]
   /**
     * Sets the value of a dual variable.
     *
@@ -45,14 +44,14 @@ trait IGenericVariable extends IGeneratedAPI {
     * @param qNum - Numeric representation of a dual value.
     * >> This parameter is mandatory.
     */
-  def setDualValue(qText: String, qNum: Double): js.Promise[Unit] = js.native
+  def setDualValue(qText: String, qNum: Double): js.Promise[Unit]
   /**
     * Sets a numerical value to a variable.
     *
     * Note: These changes are not persistent. They only last the duration of the engine session.
     * @param qVal - Value of the variable.
     */
-  def setNumValue(qVal: Double): js.Promise[Unit] = js.native
+  def setNumValue(qVal: Double): js.Promise[Unit]
   /**
     * Sets some properties for a variable.
     *
@@ -61,13 +60,13 @@ trait IGenericVariable extends IGeneratedAPI {
     * @param - Information about the variable.
     * >> This parameter is mandatory.
     */
-  def setProperties(qProp: IGenericVariableProperties): js.Promise[Unit] = js.native
+  def setProperties(qProp: IGenericVariableProperties): js.Promise[Unit]
   /**
     * Sets a string value to a variable.
     * Note: These changes are not persistent. They only last the duration of the engine session.
     * @param qVal - Value of the variable. The string can contain an expression.
     */
-  def setStringValue(qVal: String): js.Promise[Unit] = js.native
+  def setStringValue(qVal: String): js.Promise[Unit]
 }
 
 object IGenericVariable {
@@ -85,61 +84,5 @@ object IGenericVariable {
     val __obj = js.Dynamic.literal(applyPatches = js.Any.fromFunction1(applyPatches), getInfo = js.Any.fromFunction0(getInfo), getLayout = js.Any.fromFunction0(getLayout), getProperties = js.Any.fromFunction0(getProperties), setDualValue = js.Any.fromFunction2(setDualValue), setNumValue = js.Any.fromFunction1(setNumValue), setProperties = js.Any.fromFunction1(setProperties), setStringValue = js.Any.fromFunction1(setStringValue))
     __obj.asInstanceOf[IGenericVariable]
   }
-  @scala.inline
-  implicit class IGenericVariableOps[Self <: IGenericVariable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyPatches(value: js.Array[INxPatch] => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyPatches")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetInfo(value: () => js.Promise[INxInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLayout(value: () => js.Promise[IGenericVariableLayout]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLayout")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetProperties(value: () => js.Promise[IGenericVariableProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetDualValue(value: (String, Double) => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDualValue")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetNumValue(value: Double => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNumValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetProperties(value: IGenericVariableProperties => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setProperties")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetStringValue(value: String => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStringValue")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

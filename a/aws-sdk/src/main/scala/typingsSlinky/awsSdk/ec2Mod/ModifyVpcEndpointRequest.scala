@@ -54,143 +54,31 @@ trait ModifyVpcEndpointRequest extends js.Object {
 
 object ModifyVpcEndpointRequest {
   @scala.inline
-  def apply(VpcEndpointId: VpcEndpointId): ModifyVpcEndpointRequest = {
+  def apply(
+    VpcEndpointId: VpcEndpointId,
+    AddRouteTableIds: VpcEndpointRouteTableIdList = null,
+    AddSecurityGroupIds: VpcEndpointSecurityGroupIdList = null,
+    AddSubnetIds: VpcEndpointSubnetIdList = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    PolicyDocument: String = null,
+    PrivateDnsEnabled: js.UndefOr[Boolean] = js.undefined,
+    RemoveRouteTableIds: VpcEndpointRouteTableIdList = null,
+    RemoveSecurityGroupIds: VpcEndpointSecurityGroupIdList = null,
+    RemoveSubnetIds: VpcEndpointSubnetIdList = null,
+    ResetPolicy: js.UndefOr[Boolean] = js.undefined
+  ): ModifyVpcEndpointRequest = {
     val __obj = js.Dynamic.literal(VpcEndpointId = VpcEndpointId.asInstanceOf[js.Any])
+    if (AddRouteTableIds != null) __obj.updateDynamic("AddRouteTableIds")(AddRouteTableIds.asInstanceOf[js.Any])
+    if (AddSecurityGroupIds != null) __obj.updateDynamic("AddSecurityGroupIds")(AddSecurityGroupIds.asInstanceOf[js.Any])
+    if (AddSubnetIds != null) __obj.updateDynamic("AddSubnetIds")(AddSubnetIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (PolicyDocument != null) __obj.updateDynamic("PolicyDocument")(PolicyDocument.asInstanceOf[js.Any])
+    if (!js.isUndefined(PrivateDnsEnabled)) __obj.updateDynamic("PrivateDnsEnabled")(PrivateDnsEnabled.get.asInstanceOf[js.Any])
+    if (RemoveRouteTableIds != null) __obj.updateDynamic("RemoveRouteTableIds")(RemoveRouteTableIds.asInstanceOf[js.Any])
+    if (RemoveSecurityGroupIds != null) __obj.updateDynamic("RemoveSecurityGroupIds")(RemoveSecurityGroupIds.asInstanceOf[js.Any])
+    if (RemoveSubnetIds != null) __obj.updateDynamic("RemoveSubnetIds")(RemoveSubnetIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(ResetPolicy)) __obj.updateDynamic("ResetPolicy")(ResetPolicy.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyVpcEndpointRequest]
   }
-  @scala.inline
-  implicit class ModifyVpcEndpointRequestOps[Self <: ModifyVpcEndpointRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpcEndpointId(value: VpcEndpointId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddRouteTableIds(value: VpcEndpointRouteTableIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddRouteTableIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddRouteTableIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddRouteTableIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddSecurityGroupIds(value: VpcEndpointSecurityGroupIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddSecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddSecurityGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddSecurityGroupIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddSubnetIds(value: VpcEndpointSubnetIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddSubnetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddSubnetIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddSubnetIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyDocument(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyDocument")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateDnsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateDnsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveRouteTableIds(value: VpcEndpointRouteTableIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveRouteTableIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveRouteTableIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveRouteTableIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveSecurityGroupIds(value: VpcEndpointSecurityGroupIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveSecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveSecurityGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveSecurityGroupIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveSubnetIds(value: VpcEndpointSubnetIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveSubnetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveSubnetIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveSubnetIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetPolicy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

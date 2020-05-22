@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents common functionality for inplace embedded objects. */
-@js.native
 trait XInplaceObject extends XInterface {
   /**
     * enables or disables modeless dialogs of the object.
@@ -21,7 +20,7 @@ trait XInplaceObject extends XInterface {
     * @throws com::sun::star::embed::WrongStateException the object is in wrong state
     * @throws com::sun::star::uno::Exception in case of other problems
     */
-  def enableModeless(bEnable: Boolean): Unit = js.native
+  def enableModeless(bEnable: Boolean): Unit
   /**
     * sets the visible part of the inplace object.
     *
@@ -34,13 +33,13 @@ trait XInplaceObject extends XInterface {
     * @throws com::sun::star::embed::WrongStateException the object is in invalid state
     * @throws com::sun::star::uno::Exception in case of other problems
     */
-  def setObjectRectangles(aPosRect: Rectangle, aClipRect: Rectangle): Unit = js.native
+  def setObjectRectangles(aPosRect: Rectangle, aClipRect: Rectangle): Unit
   /**
     * provides accelerator table the container wants to use during inplace editing.
     * @returns an accelerator table from container
     * @throws com::sun::star::embed::WrongStateException the object is in unexpected state
     */
-  def translateAccelerators(aKeys: SeqEquiv[KeyEvent]): Unit = js.native
+  def translateAccelerators(aKeys: SeqEquiv[KeyEvent]): Unit
 }
 
 object XInplaceObject {
@@ -56,31 +55,5 @@ object XInplaceObject {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), enableModeless = js.Any.fromFunction1(enableModeless), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setObjectRectangles = js.Any.fromFunction2(setObjectRectangles), translateAccelerators = js.Any.fromFunction1(translateAccelerators))
     __obj.asInstanceOf[XInplaceObject]
   }
-  @scala.inline
-  implicit class XInplaceObjectOps[Self <: XInplaceObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableModeless(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableModeless")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetObjectRectangles(value: (Rectangle, Rectangle) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setObjectRectangles")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTranslateAccelerators(value: SeqEquiv[KeyEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateAccelerators")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -31,77 +31,20 @@ trait DeleteObjectRequest extends js.Object {
 
 object DeleteObjectRequest {
   @scala.inline
-  def apply(Bucket: BucketName, Key: ObjectKey): DeleteObjectRequest = {
+  def apply(
+    Bucket: BucketName,
+    Key: ObjectKey,
+    BypassGovernanceRetention: js.UndefOr[BypassGovernanceRetention] = js.undefined,
+    MFA: MFA = null,
+    RequestPayer: RequestPayer = null,
+    VersionId: ObjectVersionId = null
+  ): DeleteObjectRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Key = Key.asInstanceOf[js.Any])
+    if (!js.isUndefined(BypassGovernanceRetention)) __obj.updateDynamic("BypassGovernanceRetention")(BypassGovernanceRetention.get.asInstanceOf[js.Any])
+    if (MFA != null) __obj.updateDynamic("MFA")(MFA.asInstanceOf[js.Any])
+    if (RequestPayer != null) __obj.updateDynamic("RequestPayer")(RequestPayer.asInstanceOf[js.Any])
+    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteObjectRequest]
   }
-  @scala.inline
-  implicit class DeleteObjectRequestOps[Self <: DeleteObjectRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: ObjectKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBypassGovernanceRetention(value: BypassGovernanceRetention): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BypassGovernanceRetention")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBypassGovernanceRetention: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BypassGovernanceRetention")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMFA(value: MFA): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MFA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMFA: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MFA")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestPayer(value: RequestPayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestPayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: ObjectVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

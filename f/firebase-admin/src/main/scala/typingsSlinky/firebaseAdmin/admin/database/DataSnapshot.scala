@@ -18,10 +18,9 @@ import scala.scalajs.js.annotation._
   * a Database location. It cannot be modified and will never change (to modify
   * data, you always call the `set()` method on a `Reference` directly).
   */
-@js.native
 trait DataSnapshot extends js.Object {
-  var key: String | Null = js.native
-  var ref: Reference = js.native
+  var key: String | Null
+  var ref: Reference
   /**
     * Gets another `DataSnapshot` for the location at the specified relative path.
     *
@@ -56,7 +55,7 @@ trait DataSnapshot extends js.Object {
     * @param path A relative path to the location of child data.
     * @return `DataSnapshot` for the location at the specified relative path.
     */
-  def child(path: String): DataSnapshot = js.native
+  def child(path: String): DataSnapshot
   /**
     * Returns true if this `DataSnapshot` contains any data. It is slightly more
     * efficient than using `snapshot.val() !== null`.
@@ -84,7 +83,7 @@ trait DataSnapshot extends js.Object {
     *
     * @return Whether this `DataSnapshot` contains any data.
     */
-  def exists(): Boolean = js.native
+  def exists(): Boolean
   /**
     * Exports the entire contents of the DataSnapshot as a JavaScript object.
     *
@@ -94,7 +93,7 @@ trait DataSnapshot extends js.Object {
     * @return The DataSnapshot's contents as a JavaScript value (Object,
     *   Array, string, number, boolean, or `null`).
     */
-  def exportVal(): js.Any = js.native
+  def exportVal(): js.Any
   /**
     * Enumerates the top-level children in the `DataSnapshot`.
     *
@@ -163,7 +162,7 @@ trait DataSnapshot extends js.Object {
     * @return True if enumeration was canceled due to your callback
     *   returning true.
     */
-  def forEach(action: js.Function1[/* a */ this.type, Boolean | Unit]): Boolean = js.native
+  def forEach(action: js.Function1[/* a */ this.type, Boolean | Unit]): Boolean
   /**
     * Gets the priority value of the data in this `DataSnapshot`.
     *
@@ -175,7 +174,7 @@ trait DataSnapshot extends js.Object {
     *
     * @return The the priority value of the data in this `DataSnapshot`.
     */
-  def getPriority(): String | Double | Null = js.native
+  def getPriority(): String | Double | Null
   /**
     * Returns true if the specified child path has (non-null) data.
     *
@@ -202,7 +201,7 @@ trait DataSnapshot extends js.Object {
     * @return `true` if data exists at the specified child path; else
     *  `false`.
     */
-  def hasChild(path: String): Boolean = js.native
+  def hasChild(path: String): Boolean
   /**
     * Returns whether or not the `DataSnapshot` has any non-`null` child
     * properties.
@@ -234,7 +233,7 @@ trait DataSnapshot extends js.Object {
     *
     * @return True if this snapshot has any children; else false.
     */
-  def hasChildren(): Boolean = js.native
+  def hasChildren(): Boolean
   /**
     * Returns the number of child properties of this `DataSnapshot`.
     *
@@ -259,11 +258,11 @@ trait DataSnapshot extends js.Object {
     *
     * @return The number of child properties of this `DataSnapshot`.
     */
-  def numChildren(): Double = js.native
+  def numChildren(): Double
   /**
     * @return A JSON-serializable representation of this object.
     */
-  def toJSON(): js.Object | Null = js.native
+  def toJSON(): js.Object | Null
   /**
     * Extracts a JavaScript value from a `DataSnapshot`.
     *
@@ -301,7 +300,7 @@ trait DataSnapshot extends js.Object {
     * @return The DataSnapshot's contents as a JavaScript value (Object,
     *   Array, string, number, boolean, or `null`).
     */
-  def `val`(): js.Any = js.native
+  def `val`(): js.Any
 }
 
 object DataSnapshot {
@@ -317,97 +316,12 @@ object DataSnapshot {
     numChildren: () => Double,
     ref: Reference,
     toJSON: () => js.Object | Null,
-    `val`: () => js.Any
+    `val`: () => js.Any,
+    key: String = null
   ): DataSnapshot = {
-    val __obj = js.Dynamic.literal(child = js.Any.fromFunction1(child), exists = js.Any.fromFunction0(exists), exportVal = js.Any.fromFunction0(exportVal), forEach = js.Any.fromFunction1(forEach), getPriority = js.Any.fromFunction0(getPriority), hasChild = js.Any.fromFunction1(hasChild), hasChildren = js.Any.fromFunction0(hasChildren), numChildren = js.Any.fromFunction0(numChildren), ref = ref.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    val __obj = js.Dynamic.literal(child = js.Any.fromFunction1(child), exists = js.Any.fromFunction0(exists), exportVal = js.Any.fromFunction0(exportVal), forEach = js.Any.fromFunction1(forEach), getPriority = js.Any.fromFunction0(getPriority), hasChild = js.Any.fromFunction1(hasChild), hasChildren = js.Any.fromFunction0(hasChildren), numChildren = js.Any.fromFunction0(numChildren), ref = ref.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), key = key.asInstanceOf[js.Any])
     __obj.updateDynamic("val")(js.Any.fromFunction0(`val`))
     __obj.asInstanceOf[DataSnapshot]
   }
-  @scala.inline
-  implicit class DataSnapshotOps[Self <: DataSnapshot] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChild(value: String => DataSnapshot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("child")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExists(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exists")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExportVal(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportVal")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withForEach(value: js.Function1[DataSnapshot, Boolean | Unit] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forEach")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPriority(value: () => String | Double | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPriority")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasChild(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHasChildren(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildren")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNumChildren(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numChildren")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRef(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => js.Object | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withVal(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("val")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -37,6 +37,14 @@ class DataSetParameter protected ()
   var model_FDataSetParameter: IModel = js.native
   @JSName("name")
   val name_FDataSetParameter: String = js.native
+  /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
   def constraints: IList[DataSetParameterConstraint] = js.native
   def containerAsDataSet: DataSet = js.native
   def name: String = js.native

@@ -7,17 +7,16 @@ import scala.scalajs.js.annotation._
 /**
   * A command to resize the shape to fit the text in the text box.
   */
-@js.native
 trait ChangeTextBoxResizeShapeToFitTextCommand extends CommandBase {
   /**
     * Executes the ChangeTextBoxResizeShapeToFitTextCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param resizeShapeToFitText true, to resize the shape to fit the text; otherwise, false.
     */
-  def execute(resizeShapeToFitText: Boolean): Boolean = js.native
+  def execute(resizeShapeToFitText: Boolean): Boolean
   /**
     * Gets information about the command's state.
     */
-  def getState(): CommandState[Boolean] = js.native
+  def getState(): CommandState[Boolean]
 }
 
 object ChangeTextBoxResizeShapeToFitTextCommand {
@@ -26,25 +25,5 @@ object ChangeTextBoxResizeShapeToFitTextCommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
     __obj.asInstanceOf[ChangeTextBoxResizeShapeToFitTextCommand]
   }
-  @scala.inline
-  implicit class ChangeTextBoxResizeShapeToFitTextCommandOps[Self <: ChangeTextBoxResizeShapeToFitTextCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetState(value: () => CommandState[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

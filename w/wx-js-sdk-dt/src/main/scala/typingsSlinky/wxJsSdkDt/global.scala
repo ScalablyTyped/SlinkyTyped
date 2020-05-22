@@ -41,7 +41,12 @@ object global extends js.Object {
   object wx extends js.Object {
     @js.native
     class OpenCardObj ()
-      extends typingsSlinky.wxJsSdkDt.wx.OpenCardObj
+      extends typingsSlinky.wxJsSdkDt.wx.OpenCardObj {
+      /* CompleteClass */
+      override var cardId: String = js.native
+      /* CompleteClass */
+      override var code: String = js.native
+    }
     
     /**
       * 批量添加卡券接口

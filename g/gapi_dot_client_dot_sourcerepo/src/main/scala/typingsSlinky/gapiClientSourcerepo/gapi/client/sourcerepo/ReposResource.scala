@@ -9,7 +9,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReposResource extends js.Object {
   /**
     * Creates a repo in the given project with the given name.
@@ -17,33 +16,33 @@ trait ReposResource extends js.Object {
     * If the named repository already exists, `CreateRepo` returns
     * `ALREADY_EXISTS`.
     */
-  def create(request: Accesstoken): Request[Repo] = js.native
+  def create(request: Accesstoken): Request[Repo]
   /** Deletes a repo. */
-  def delete(request: Alt): Request[js.Object] = js.native
+  def delete(request: Alt): Request[js.Object]
   /** Returns information about a repo. */
-  def get(request: Alt): Request[Repo] = js.native
+  def get(request: Alt): Request[Repo]
   /**
     * Gets the access control policy for a resource.
     * Returns an empty policy if the resource exists and does not have a policy
     * set.
     */
-  def getIamPolicy(request: Bearertoken): Request[Policy] = js.native
+  def getIamPolicy(request: Bearertoken): Request[Policy]
   /**
     * Returns all repos belonging to a project. The sizes of the repos are
     * not set by ListRepos.  To get the size of a repo, use GetRepo.
     */
-  def list(request: Callback): Request[ListReposResponse] = js.native
+  def list(request: Callback): Request[ListReposResponse]
   /**
     * Sets the access control policy on the specified resource. Replaces any
     * existing policy.
     */
-  def setIamPolicy(request: Bearertoken): Request[Policy] = js.native
+  def setIamPolicy(request: Bearertoken): Request[Policy]
   /**
     * Returns permissions that a caller has on the specified resource.
     * If the resource does not exist, this will return an empty set of
     * permissions, not a NOT_FOUND error.
     */
-  def testIamPermissions(request: Bearertoken): Request[TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Bearertoken): Request[TestIamPermissionsResponse]
 }
 
 object ReposResource {
@@ -60,55 +59,5 @@ object ReposResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions))
     __obj.asInstanceOf[ReposResource]
   }
-  @scala.inline
-  implicit class ReposResourceOps[Self <: ReposResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Accesstoken => Request[Repo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Alt => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Alt => Request[Repo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetIamPolicy(value: Bearertoken => Request[Policy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Callback => Request[ListReposResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIamPolicy(value: Bearertoken => Request[Policy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTestIamPermissions(value: Bearertoken => Request[TestIamPermissionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

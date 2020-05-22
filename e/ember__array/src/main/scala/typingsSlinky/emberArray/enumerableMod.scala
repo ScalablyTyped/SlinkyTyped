@@ -8,6 +8,7 @@ import typingsSlinky.emberArray.anon.FnCallCallbackfnThisArg
 import typingsSlinky.emberArray.anon.FnCallPredicateThisArg
 import typingsSlinky.emberArray.nativeArrayMod.NativeArray
 import typingsSlinky.emberObject.computedMod.ComputedProperty
+import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +55,7 @@ object enumerableMod extends js.Object {
       * used by bindings and other parts of the framework to extract a single
       * object if the enumerable contains only one item.
       */
-    var firstObject: ComputedProperty[js.UndefOr[T], js.UndefOr[T]] = js.native
+    var firstObject: js.UndefOr[T] = js.native
     /**
       * Iterates through the enumerable, calling the passed function on each
       * item. This method corresponds to the `forEach()` method defined in
@@ -67,7 +68,7 @@ object enumerableMod extends js.Object {
       * contains only one object, this method should always return that object.
       * If your enumerable is empty, this method should return `undefined`.
       */
-    var lastObject: ComputedProperty[js.UndefOr[T], js.UndefOr[T]] = js.native
+    var lastObject: js.UndefOr[T] = js.native
     /**
       * Maps all of the items in the enumeration to another value, returning
       * a new array. This method corresponds to `map()` defined in JavaScript 1.6.
@@ -93,7 +94,7 @@ object enumerableMod extends js.Object {
     /**
       * Returns a copy of the array with all `null` and `undefined` elements removed.
       */
-    def compact(): NativeArray[T] = js.native
+    def compact(): NativeArray[NonNullable[T]] = js.native
     /**
       * @deprecated Use `Enumerable#includes` instead.
       */

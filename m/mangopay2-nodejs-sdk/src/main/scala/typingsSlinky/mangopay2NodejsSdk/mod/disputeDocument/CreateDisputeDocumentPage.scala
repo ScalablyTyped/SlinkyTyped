@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * Remember to change Status to "VALIDATION_ASKED" to submit KYC documents
   * The maximum size per page is about 7Mb (or 10Mb when base64encoded). The following formats are accepted for the documents : .pdf, .jpeg, .jpg, .gif and .png. The minimum size is 1Kb.
   */
-@js.native
 trait CreateDisputeDocumentPage extends js.Object {
   /**
     * The base64 encoded file which needs to be uploaded
@@ -26,7 +25,7 @@ trait CreateDisputeDocumentPage extends js.Object {
     * }
     * ```
     */
-  var File: String = js.native
+  var File: String
 }
 
 object CreateDisputeDocumentPage {
@@ -35,19 +34,5 @@ object CreateDisputeDocumentPage {
     val __obj = js.Dynamic.literal(File = File.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDisputeDocumentPage]
   }
-  @scala.inline
-  implicit class CreateDisputeDocumentPageOps[Self <: CreateDisputeDocumentPage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("File")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

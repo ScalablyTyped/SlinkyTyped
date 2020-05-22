@@ -7,7 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** base interface for all event listeners interfaces. */
-@js.native
 trait XEventListener extends XInterface {
   /**
     * gets called when the broadcaster is about to be disposed.
@@ -17,7 +16,7 @@ trait XEventListener extends XInterface {
     *
     * This method is called for every listener registration of derived listener interfaced, not only for registrations at {@link XComponent} .
     */
-  def disposing(Source: EventObject): Unit = js.native
+  def disposing(Source: EventObject): Unit
 }
 
 object XEventListener {
@@ -31,19 +30,5 @@ object XEventListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XEventListener]
   }
-  @scala.inline
-  implicit class XEventListenerOps[Self <: XEventListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisposing(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disposing")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

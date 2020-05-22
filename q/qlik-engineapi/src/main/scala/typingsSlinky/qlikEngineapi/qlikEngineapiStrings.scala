@@ -21,7 +21,6 @@ import typingsSlinky.qlikEngineapi.EngineAPI.MTType
 import typingsSlinky.qlikEngineapi.EngineAPI.MachineModeType
 import typingsSlinky.qlikEngineapi.EngineAPI.NxCellStateType
 import typingsSlinky.qlikEngineapi.EngineAPI.NxCellType
-import typingsSlinky.qlikEngineapi.EngineAPI.NxGrpType
 import typingsSlinky.qlikEngineapi.EngineAPI.NxHypercubeMode
 import typingsSlinky.qlikEngineapi.EngineAPI.NxPatchOpType
 import typingsSlinky.qlikEngineapi.EngineAPI.NxSelectionCellType
@@ -36,6 +35,7 @@ import typingsSlinky.qlikEngineapi.EngineAPI.SortIndicatorType
 import typingsSlinky.qlikEngineapi.EngineAPI.TableRecordKeyType
 import typingsSlinky.qlikEngineapi.EngineAPI.TotalModeType
 import typingsSlinky.qlikEngineapi.EngineAPI.TypeSortDirection
+import typingsSlinky.qlikEngineapi.EngineAPI._NxGrpType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -90,8 +90,8 @@ object qlikEngineapiStrings {
   
   @js.native
   sealed trait C
-    extends NxGrpType
-       with ReductionModeType
+    extends ReductionModeType
+       with _NxGrpType
   
   @js.native
   sealed trait CD_ROM extends DriveType
@@ -213,7 +213,7 @@ object qlikEngineapiStrings {
   sealed trait GetCustomCaption extends CommandType
   
   @js.native
-  sealed trait H extends NxGrpType
+  sealed trait H extends _NxGrpType
   
   @js.native
   sealed trait HTML extends FileDataFormatType
@@ -288,10 +288,10 @@ object qlikEngineapiStrings {
     extends DimensionType
        with MTType
        with NxCellType
-       with NxGrpType
        with NxTreeNodeType
        with ReductionModeType
        with SortIndicatorType
+       with _NxGrpType
   
   @js.native
   sealed trait NETWORK extends DriveType

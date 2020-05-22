@@ -1,8 +1,8 @@
 package typingsSlinky.moment
 
-import typingsSlinky.moment.mod.CalendarKey
 import typingsSlinky.moment.mod.LongDateFormatKey
 import typingsSlinky.moment.mod.RelativeTimeKey
+import typingsSlinky.moment.mod._CalendarKey
 import typingsSlinky.moment.mod.unitOfTime.All
 import typingsSlinky.moment.mod.unitOfTime.Base
 import typingsSlinky.moment.mod.unitOfTime.Diff
@@ -17,34 +17,55 @@ object momentStrings {
   sealed trait D
     extends typingsSlinky.moment.mod.unitOfTime.date
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.date
   
   @js.native
-  sealed trait DDD extends All
+  sealed trait DDD
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait E extends All
+  sealed trait E
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait GG extends All
+  sealed trait GG
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait L extends LongDateFormatKey
+  sealed trait L
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait LL extends LongDateFormatKey
+  sealed trait LL
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait LLL extends LongDateFormatKey
+  sealed trait LLL
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait LLLL extends LongDateFormatKey
+  sealed trait LLLL
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait LT extends LongDateFormatKey
+  sealed trait LT
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait LTS extends LongDateFormatKey
+  sealed trait LTS
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
   sealed trait LeftparenthesisRightparenthesis extends js.Object
@@ -56,25 +77,40 @@ object momentStrings {
   sealed trait M
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
        with RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
-  sealed trait MM extends RelativeTimeKey
+  sealed trait MM
+    extends RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
   sealed trait Q
     extends typingsSlinky.moment.mod.unitOfTime.quarter
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.quarter
   
   @js.native
   sealed trait W
     extends typingsSlinky.moment.mod.unitOfTime.isoWeek
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.isoWeek
   
   @js.native
   sealed trait `[Rightparenthesis` extends js.Object
@@ -86,313 +122,512 @@ object momentStrings {
   sealed trait d_
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
        with RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
   sealed trait date
     extends typingsSlinky.moment.mod.unitOfTime.date
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.date
   
   @js.native
   sealed trait dates
     extends typingsSlinky.moment.mod.unitOfTime.date
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.date
   
   @js.native
   sealed trait day
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
-  sealed trait dayOfYear extends All
+  sealed trait dayOfYear
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait dayOfYears extends All
+  sealed trait dayOfYears
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
   sealed trait days
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
-  sealed trait dd extends RelativeTimeKey
+  sealed trait dd
+    extends RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
-  sealed trait e_ extends All
+  sealed trait e_
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait gg_ extends All
+  sealed trait gg_
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
   sealed trait h
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
        with RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
-  sealed trait hh extends RelativeTimeKey
+  sealed trait hh
+    extends RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
   sealed trait hour
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait hours
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait isoWeek
     extends typingsSlinky.moment.mod.unitOfTime.isoWeek
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.isoWeek
   
   @js.native
-  sealed trait isoWeekYear extends All
+  sealed trait isoWeekYear
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait isoWeekYears extends All
+  sealed trait isoWeekYears
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait isoWeekday extends All
+  sealed trait isoWeekday
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait isoWeekdays extends All
+  sealed trait isoWeekdays
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
   sealed trait isoWeeks
     extends typingsSlinky.moment.mod.unitOfTime.isoWeek
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.isoWeek
   
   @js.native
-  sealed trait l_ extends LongDateFormatKey
+  sealed trait l_
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait lastDay extends CalendarKey
+  sealed trait lastDay
+    extends _CalendarKey
+       with typingsSlinky.moment.momentMod._CalendarKey
   
   @js.native
-  sealed trait lastWeek extends CalendarKey
+  sealed trait lastWeek
+    extends _CalendarKey
+       with typingsSlinky.moment.momentMod._CalendarKey
   
   @js.native
-  sealed trait ll_ extends LongDateFormatKey
+  sealed trait ll_
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait lll_ extends LongDateFormatKey
+  sealed trait lll_
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait llll_ extends LongDateFormatKey
+  sealed trait llll_
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait lt_ extends LongDateFormatKey
+  sealed trait lt_
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
-  sealed trait lts_ extends LongDateFormatKey
+  sealed trait lts_
+    extends LongDateFormatKey
+       with typingsSlinky.moment.momentMod.LongDateFormatKey
   
   @js.native
   sealed trait m_
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
        with RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
   sealed trait millisecond
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait milliseconds
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait minute
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait minutes
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
-  sealed trait mm_ extends RelativeTimeKey
+  sealed trait mm_
+    extends RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
   sealed trait month
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait months
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait ms
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
-  sealed trait nextDay extends CalendarKey
+  sealed trait nextDay
+    extends _CalendarKey
+       with typingsSlinky.moment.momentMod._CalendarKey
   
   @js.native
-  sealed trait nextWeek extends CalendarKey
+  sealed trait nextWeek
+    extends _CalendarKey
+       with typingsSlinky.moment.momentMod._CalendarKey
   
   @js.native
   sealed trait quarter
     extends typingsSlinky.moment.mod.unitOfTime.quarter
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.quarter
   
   @js.native
   sealed trait quarters
     extends typingsSlinky.moment.mod.unitOfTime.quarter
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.quarter
   
   @js.native
   sealed trait s
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
        with RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
-  sealed trait sameDay extends CalendarKey
+  sealed trait sameDay
+    extends _CalendarKey
+       with typingsSlinky.moment.momentMod._CalendarKey
   
   @js.native
-  sealed trait sameElse extends CalendarKey
+  sealed trait sameElse
+    extends _CalendarKey
+       with typingsSlinky.moment.momentMod._CalendarKey
   
   @js.native
   sealed trait second
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait seconds
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
-  sealed trait ss extends RelativeTimeKey
+  sealed trait ss
+    extends RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
   sealed trait w_
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
+       with RelativeTimeKey
   
   @js.native
   sealed trait week
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
-  sealed trait weekYear extends All
+  sealed trait weekYear
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait weekYears extends All
+  sealed trait weekYears
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait weekday extends All
+  sealed trait weekday
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
-  sealed trait weekdays extends All
+  sealed trait weekdays
+    extends All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
   
   @js.native
   sealed trait weeks
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait y
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
        with RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
   sealed trait year
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
   sealed trait years
     extends Base
        with All
+       with typingsSlinky.moment.momentMod.unitOfTime.All
+       with typingsSlinky.moment.momentMod.unitOfTime.Base
        with Diff
+       with typingsSlinky.moment.momentMod.unitOfTime.Diff
        with DurationConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
+       with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
   
   @js.native
-  sealed trait yy extends RelativeTimeKey
+  sealed trait yy
+    extends RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @scala.inline
   def D: D = "D".asInstanceOf[D]

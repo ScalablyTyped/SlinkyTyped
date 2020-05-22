@@ -38,101 +38,24 @@ trait InstanceInfo extends js.Object {
 
 object InstanceInfo {
   @scala.inline
-  def apply(): InstanceInfo = {
+  def apply(
+    deregisterTime: js.Date = null,
+    iamSessionArn: IamSessionArn = null,
+    iamUserArn: IamUserArn = null,
+    instanceArn: InstanceArn = null,
+    instanceName: InstanceName = null,
+    registerTime: js.Date = null,
+    tags: TagList = null
+  ): InstanceInfo = {
     val __obj = js.Dynamic.literal()
+    if (deregisterTime != null) __obj.updateDynamic("deregisterTime")(deregisterTime.asInstanceOf[js.Any])
+    if (iamSessionArn != null) __obj.updateDynamic("iamSessionArn")(iamSessionArn.asInstanceOf[js.Any])
+    if (iamUserArn != null) __obj.updateDynamic("iamUserArn")(iamUserArn.asInstanceOf[js.Any])
+    if (instanceArn != null) __obj.updateDynamic("instanceArn")(instanceArn.asInstanceOf[js.Any])
+    if (instanceName != null) __obj.updateDynamic("instanceName")(instanceName.asInstanceOf[js.Any])
+    if (registerTime != null) __obj.updateDynamic("registerTime")(registerTime.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceInfo]
   }
-  @scala.inline
-  implicit class InstanceInfoOps[Self <: InstanceInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeregisterTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deregisterTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeregisterTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deregisterTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamSessionArn(value: IamSessionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamSessionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamSessionArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamSessionArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamUserArn(value: IamUserArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamUserArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamUserArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamUserArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceArn(value: InstanceArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceName(value: InstanceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegisterTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegisterTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

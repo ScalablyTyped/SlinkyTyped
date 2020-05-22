@@ -11,18 +11,17 @@ import scala.scalajs.js.annotation._
   * provides access to the collection of dimensions of a data pilot source.
   * @see com.sun.star.sheet.DataPilotSource
   */
-@js.native
 trait XDimensionsSupplier extends XInterface {
   /**
     * returns the collection of dimensions.
     * @see com.sun.star.sheet.DataPilotSourceDimensions
     */
-  val Dimensions: XNameAccess = js.native
+  val Dimensions: XNameAccess
   /**
     * returns the collection of dimensions.
     * @see com.sun.star.sheet.DataPilotSourceDimensions
     */
-  def getDimensions(): XNameAccess = js.native
+  def getDimensions(): XNameAccess
 }
 
 object XDimensionsSupplier {
@@ -37,25 +36,5 @@ object XDimensionsSupplier {
     val __obj = js.Dynamic.literal(Dimensions = Dimensions.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getDimensions = js.Any.fromFunction0(getDimensions), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDimensionsSupplier]
   }
-  @scala.inline
-  implicit class XDimensionsSupplierOps[Self <: XDimensionsSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensions(value: XNameAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDimensions(value: () => XNameAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDimensions")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

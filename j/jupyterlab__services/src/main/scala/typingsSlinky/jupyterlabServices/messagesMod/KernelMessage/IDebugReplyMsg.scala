@@ -18,12 +18,11 @@ import scala.scalajs.js.annotation._
   * kernel message specification. As such, this is *NOT* considered
   * part of the public API, and may change without notice.
   */
-@js.native
 trait IDebugReplyMsg
   extends IControlMessage[debug_reply]
-     with Message {
+     with _Message {
   @JSName("content")
-  var content_IDebugReplyMsg: Body = js.native
+  var content_IDebugReplyMsg: Body
 }
 
 object IDebugReplyMsg {
@@ -33,24 +32,12 @@ object IDebugReplyMsg {
     content: Body,
     header: IHeader[debug_reply],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object
+    parent_header: IHeader[MessageType] | js.Object,
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView] = null
   ): IDebugReplyMsg = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
+    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDebugReplyMsg]
   }
-  @scala.inline
-  implicit class IDebugReplyMsgOps[Self <: IDebugReplyMsg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

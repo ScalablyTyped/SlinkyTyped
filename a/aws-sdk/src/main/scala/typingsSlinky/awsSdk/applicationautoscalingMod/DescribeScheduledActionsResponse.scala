@@ -18,41 +18,11 @@ trait DescribeScheduledActionsResponse extends js.Object {
 
 object DescribeScheduledActionsResponse {
   @scala.inline
-  def apply(): DescribeScheduledActionsResponse = {
+  def apply(NextToken: XmlString = null, ScheduledActions: ScheduledActions = null): DescribeScheduledActionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ScheduledActions != null) __obj.updateDynamic("ScheduledActions")(ScheduledActions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeScheduledActionsResponse]
   }
-  @scala.inline
-  implicit class DescribeScheduledActionsResponseOps[Self <: DescribeScheduledActionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduledActions(value: ScheduledActions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

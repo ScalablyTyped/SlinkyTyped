@@ -6,7 +6,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RaxNodeArray
-  extends Array[RaxNode]
-     with RaxFragment
+trait RaxNodeArray extends Array[RaxNode]
 

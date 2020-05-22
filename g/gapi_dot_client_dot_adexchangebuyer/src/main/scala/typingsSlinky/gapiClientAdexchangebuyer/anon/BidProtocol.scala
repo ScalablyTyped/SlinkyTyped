@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BidProtocol extends js.Object {
   /**
     * The protocol that the bidder endpoint is using. OpenRTB protocols with prefix PROTOCOL_OPENRTB_PROTOBUF use proto buffer, otherwise use JSON.  Allowed
@@ -18,9 +17,9 @@ trait BidProtocol extends js.Object {
     * - PROTOCOL_OPENRTB_PROTOBUF_2_4
     * - PROTOCOL_OPENRTB_PROTOBUF_2_5
     */
-  var bidProtocol: js.UndefOr[String] = js.native
+  var bidProtocol: js.UndefOr[String] = js.undefined
   /** The maximum queries per second the Ad Exchange will send. */
-  var maximumQps: js.UndefOr[Double] = js.native
+  var maximumQps: js.UndefOr[Double] = js.undefined
   /**
     * The geographical region the Ad Exchange should send requests from. Only used by some quota systems, but always setting the value is recommended.
     * Allowed values:
@@ -29,72 +28,25 @@ trait BidProtocol extends js.Object {
     * - US_EAST
     * - US_WEST
     */
-  var region: js.UndefOr[String] = js.native
+  var region: js.UndefOr[String] = js.undefined
   /** The URL to which the Ad Exchange will send bid requests. */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object BidProtocol {
   @scala.inline
-  def apply(): BidProtocol = {
+  def apply(
+    bidProtocol: String = null,
+    maximumQps: js.UndefOr[Double] = js.undefined,
+    region: String = null,
+    url: String = null
+  ): BidProtocol = {
     val __obj = js.Dynamic.literal()
+    if (bidProtocol != null) __obj.updateDynamic("bidProtocol")(bidProtocol.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumQps)) __obj.updateDynamic("maximumQps")(maximumQps.get.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[BidProtocol]
   }
-  @scala.inline
-  implicit class BidProtocolOps[Self <: BidProtocol] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBidProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bidProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBidProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bidProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumQps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumQps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumQps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumQps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

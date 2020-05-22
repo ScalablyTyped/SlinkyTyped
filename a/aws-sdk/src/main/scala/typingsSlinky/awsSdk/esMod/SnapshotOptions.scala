@@ -14,29 +14,10 @@ trait SnapshotOptions extends js.Object {
 
 object SnapshotOptions {
   @scala.inline
-  def apply(): SnapshotOptions = {
+  def apply(AutomatedSnapshotStartHour: js.UndefOr[IntegerClass] = js.undefined): SnapshotOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AutomatedSnapshotStartHour)) __obj.updateDynamic("AutomatedSnapshotStartHour")(AutomatedSnapshotStartHour.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapshotOptions]
   }
-  @scala.inline
-  implicit class SnapshotOptionsOps[Self <: SnapshotOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomatedSnapshotStartHour(value: IntegerClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomatedSnapshotStartHour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomatedSnapshotStartHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomatedSnapshotStartHour")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadOnlyRecordSourceProxy extends js.Object {
-  def get(dataID: DataID): js.UndefOr[ReadOnlyRecordProxy | Null] = js.native
-  def getRoot(): ReadOnlyRecordProxy = js.native
+  def get(dataID: DataID): js.UndefOr[ReadOnlyRecordProxy | Null]
+  def getRoot(): ReadOnlyRecordProxy
 }
 
 object ReadOnlyRecordSourceProxy {
@@ -17,25 +16,5 @@ object ReadOnlyRecordSourceProxy {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), getRoot = js.Any.fromFunction0(getRoot))
     __obj.asInstanceOf[ReadOnlyRecordSourceProxy]
   }
-  @scala.inline
-  implicit class ReadOnlyRecordSourceProxyOps[Self <: ReadOnlyRecordSourceProxy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: DataID => js.UndefOr[ReadOnlyRecordProxy | Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetRoot(value: () => ReadOnlyRecordProxy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRoot")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Swagger extends js.Object {
-  var swagger: Path = js.native
+  var swagger: Path
 }
 
 object Swagger {
@@ -15,19 +14,5 @@ object Swagger {
     val __obj = js.Dynamic.literal(swagger = swagger.asInstanceOf[js.Any])
     __obj.asInstanceOf[Swagger]
   }
-  @scala.inline
-  implicit class SwaggerOps[Self <: Swagger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSwagger(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swagger")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

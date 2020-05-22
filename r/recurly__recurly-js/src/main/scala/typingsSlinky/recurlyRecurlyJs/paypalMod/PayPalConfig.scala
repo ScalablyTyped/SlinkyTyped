@@ -1,5 +1,7 @@
 package typingsSlinky.recurlyRecurlyJs.paypalMod
 
+import typingsSlinky.recurlyRecurlyJs.anon.ClientAuthorization
+import typingsSlinky.recurlyRecurlyJs.anon.DisplayName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,15 @@ trait PayPalConfig extends js.Object
 
 object PayPalConfig {
   @scala.inline
-  implicit def apply(value: BraintreeConfig): PayPalConfig = value.asInstanceOf[PayPalConfig]
+  def BraintreeConfig(braintree: ClientAuthorization): PayPalConfig = {
+    val __obj = js.Dynamic.literal(braintree = braintree.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PayPalConfig]
+  }
   @scala.inline
-  implicit def apply(value: DirectConfig): PayPalConfig = value.asInstanceOf[PayPalConfig]
+  def DirectConfig(display: DisplayName = null): PayPalConfig = {
+    val __obj = js.Dynamic.literal()
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PayPalConfig]
+  }
 }
 

@@ -34,54 +34,12 @@ object ModelPackageSummary {
     CreationTime: js.Date,
     ModelPackageArn: ModelPackageArn,
     ModelPackageName: EntityName,
-    ModelPackageStatus: ModelPackageStatus
+    ModelPackageStatus: ModelPackageStatus,
+    ModelPackageDescription: EntityDescription = null
   ): ModelPackageSummary = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], ModelPackageArn = ModelPackageArn.asInstanceOf[js.Any], ModelPackageName = ModelPackageName.asInstanceOf[js.Any], ModelPackageStatus = ModelPackageStatus.asInstanceOf[js.Any])
+    if (ModelPackageDescription != null) __obj.updateDynamic("ModelPackageDescription")(ModelPackageDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelPackageSummary]
   }
-  @scala.inline
-  implicit class ModelPackageSummaryOps[Self <: ModelPackageSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelPackageArn(value: ModelPackageArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelPackageName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelPackageStatus(value: ModelPackageStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelPackageDescription(value: EntityDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelPackageDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

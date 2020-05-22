@@ -11,6 +11,8 @@ object data extends js.Object {
   - typingsSlinky.yandexMaps.mod.IFreezable because var conflicts: events. Inlined freeze, isFrozen, unfreeze */ @js.native
   class Manager () extends IDataManager {
     def this(data: js.Object) = this()
+    /* CompleteClass */
+    override var events: IEventManager = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit], context: js.Object): this.type = js.native
     def add(
@@ -34,6 +36,8 @@ object data extends js.Object {
     def fire(`type`: String, eventobject: js.Object): this.type = js.native
     def fire(`type`: String, eventobject: IEvent): this.type = js.native
     def freeze(): IFreezable = js.native
+    /* CompleteClass */
+    override def get(path: String, defaultValue: js.Object): js.Object = js.native
     def getAll(): js.Object = js.native
     def getParent(): IEventManager | Null = js.native
     def group(): IEventGroup = js.native

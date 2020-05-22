@@ -2,6 +2,8 @@ package typingsSlinky.makerJs.global.MakerJs.models
 
 import typingsSlinky.makerJs.MakerJs.IMeasure
 import typingsSlinky.makerJs.MakerJs.IModel
+import typingsSlinky.makerJs.MakerJs.IPathMap
+import typingsSlinky.makerJs.MakerJs.IPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,5 +63,11 @@ class Rectangle protected ()
     * @param height Height of the rectangle.
     */
   def this(width: Double, height: Double) = this()
+  /* CompleteClass */
+  @JSName("origin")
+  override var origin_Rectangle: IPoint = js.native
+  /* CompleteClass */
+  @JSName("paths")
+  override var paths_Rectangle: IPathMap = js.native
 }
 

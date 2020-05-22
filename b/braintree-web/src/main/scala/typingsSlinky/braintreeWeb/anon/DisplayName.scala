@@ -4,56 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisplayName extends js.Object {
-  var displayName: js.UndefOr[String] = js.native
-  var merchantIdentifier: js.UndefOr[String] = js.native
-  var validationURL: String = js.native
+  var displayName: js.UndefOr[String] = js.undefined
+  var merchantIdentifier: js.UndefOr[String] = js.undefined
+  var validationURL: String
 }
 
 object DisplayName {
   @scala.inline
-  def apply(validationURL: String): DisplayName = {
+  def apply(validationURL: String, displayName: String = null, merchantIdentifier: String = null): DisplayName = {
     val __obj = js.Dynamic.literal(validationURL = validationURL.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (merchantIdentifier != null) __obj.updateDynamic("merchantIdentifier")(merchantIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisplayName]
   }
-  @scala.inline
-  implicit class DisplayNameOps[Self <: DisplayName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValidationURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMerchantIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMerchantIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

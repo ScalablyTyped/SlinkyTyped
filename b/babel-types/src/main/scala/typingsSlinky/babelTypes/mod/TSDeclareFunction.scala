@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSDeclareFunction
   extends Node
      with Declaration
      with Statement {
-  var async: Boolean = js.native
-  var declare: Boolean | Null = js.native
-  var generator: Boolean = js.native
-  var id: Identifier_ | Null = js.native
-  var params: js.Array[LVal] = js.native
-  var returnType: TypeAnnotation_ | TSTypeAnnotation | Noop_ | Null = js.native
-  var typeParameters: TypeParameterDeclaration_ | Noop_ | Null = js.native
+  var async: Boolean
+  var declare: Boolean | Null
+  var generator: Boolean
+  var id: Identifier_ | Null
+  var params: js.Array[LVal]
+  var returnType: TypeAnnotation_ | TSTypeAnnotation | Noop_ | Null
+  var typeParameters: TypeParameterDeclaration_ | Noop_ | Null
   @JSName("type")
-  var type_TSDeclareFunction: typingsSlinky.babelTypes.babelTypesStrings.TSDeclareFunction = js.native
+  var type_TSDeclareFunction: typingsSlinky.babelTypes.babelTypesStrings.TSDeclareFunction
 }
 
 @JSImport("babel-types", "TSDeclareFunction")

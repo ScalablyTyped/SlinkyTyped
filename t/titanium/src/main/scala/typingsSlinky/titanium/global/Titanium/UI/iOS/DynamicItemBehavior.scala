@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Base dynamic configuration for an item.
-			 */
+  * Base dynamic configuration for an item.
+  */
 @JSGlobal("Titanium.UI.iOS.DynamicItemBehavior")
 @js.native
 class DynamicItemBehavior ()

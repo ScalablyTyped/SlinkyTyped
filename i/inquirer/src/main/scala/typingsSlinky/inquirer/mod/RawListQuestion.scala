@@ -11,35 +11,42 @@ import scala.scalajs.js.annotation._
   * @template T
   * The type of the answers.
   */
-@js.native
 trait RawListQuestion[T /* <: Answers */] extends ListQuestionOptionsBase[T, ListChoiceMap[T]] {
   /**
     * @inheritdoc
     */
   @JSName("type")
-  var type_RawListQuestion: rawlist = js.native
+  var type_RawListQuestion: rawlist
 }
 
 object RawListQuestion {
   @scala.inline
-  def apply[T](`type`: rawlist): RawListQuestion[T] = {
+  def apply[T](
+    `type`: rawlist,
+    choices: AsyncDynamicQuestionProperty[js.Array[DistinctChoice[ListChoiceMap[T]]], T] = null,
+    default: AsyncDynamicQuestionProperty[_, T] = null,
+    filter: /* input */ js.Any => _ = null,
+    message: AsyncDynamicQuestionProperty[String, T] = null,
+    name: KeyUnion[T] = null,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    prefix: String = null,
+    suffix: String = null,
+    validate: (/* input */ js.Any, /* answers */ js.UndefOr[T]) => Boolean | String | (js.Promise[Boolean | String]) = null,
+    when: AsyncDynamicQuestionProperty[Boolean, T] = null
+  ): RawListQuestion[T] = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (choices != null) __obj.updateDynamic("choices")(choices.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction2(validate))
+    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[RawListQuestion[T]]
   }
-  @scala.inline
-  implicit class RawListQuestionOps[Self[t] <: RawListQuestion[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withType(value: rawlist): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

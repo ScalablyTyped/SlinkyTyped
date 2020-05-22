@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief 内存 profiler 模块
-	* @detail 使用方法：,```JavaScript,var profiler = require('profiler');,```
-	*/
+  * @brief 内存 profiler 模块
+  * @detail 使用方法：,```JavaScript,var profiler = require('profiler');,```
+  */
 @JSImport("profiler", JSImport.Namespace)
 @js.native
 object profilerMod extends js.Object {

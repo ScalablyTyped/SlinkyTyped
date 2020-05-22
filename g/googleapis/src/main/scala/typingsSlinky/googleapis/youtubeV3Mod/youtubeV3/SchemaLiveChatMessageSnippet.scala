@@ -69,221 +69,44 @@ trait SchemaLiveChatMessageSnippet extends js.Object {
 
 object SchemaLiveChatMessageSnippet {
   @scala.inline
-  def apply(): SchemaLiveChatMessageSnippet = {
+  def apply(
+    authorChannelId: String = null,
+    displayMessage: String = null,
+    fanFundingEventDetails: SchemaLiveChatFanFundingEventDetails = null,
+    hasDisplayContent: js.UndefOr[Boolean] = js.undefined,
+    liveChatId: String = null,
+    messageDeletedDetails: SchemaLiveChatMessageDeletedDetails = null,
+    messageRetractedDetails: SchemaLiveChatMessageRetractedDetails = null,
+    pollClosedDetails: SchemaLiveChatPollClosedDetails = null,
+    pollEditedDetails: SchemaLiveChatPollEditedDetails = null,
+    pollOpenedDetails: SchemaLiveChatPollOpenedDetails = null,
+    pollVotedDetails: SchemaLiveChatPollVotedDetails = null,
+    publishedAt: String = null,
+    superChatDetails: SchemaLiveChatSuperChatDetails = null,
+    superStickerDetails: SchemaLiveChatSuperStickerDetails = null,
+    textMessageDetails: SchemaLiveChatTextMessageDetails = null,
+    `type`: String = null,
+    userBannedDetails: SchemaLiveChatUserBannedMessageDetails = null
+  ): SchemaLiveChatMessageSnippet = {
     val __obj = js.Dynamic.literal()
+    if (authorChannelId != null) __obj.updateDynamic("authorChannelId")(authorChannelId.asInstanceOf[js.Any])
+    if (displayMessage != null) __obj.updateDynamic("displayMessage")(displayMessage.asInstanceOf[js.Any])
+    if (fanFundingEventDetails != null) __obj.updateDynamic("fanFundingEventDetails")(fanFundingEventDetails.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasDisplayContent)) __obj.updateDynamic("hasDisplayContent")(hasDisplayContent.get.asInstanceOf[js.Any])
+    if (liveChatId != null) __obj.updateDynamic("liveChatId")(liveChatId.asInstanceOf[js.Any])
+    if (messageDeletedDetails != null) __obj.updateDynamic("messageDeletedDetails")(messageDeletedDetails.asInstanceOf[js.Any])
+    if (messageRetractedDetails != null) __obj.updateDynamic("messageRetractedDetails")(messageRetractedDetails.asInstanceOf[js.Any])
+    if (pollClosedDetails != null) __obj.updateDynamic("pollClosedDetails")(pollClosedDetails.asInstanceOf[js.Any])
+    if (pollEditedDetails != null) __obj.updateDynamic("pollEditedDetails")(pollEditedDetails.asInstanceOf[js.Any])
+    if (pollOpenedDetails != null) __obj.updateDynamic("pollOpenedDetails")(pollOpenedDetails.asInstanceOf[js.Any])
+    if (pollVotedDetails != null) __obj.updateDynamic("pollVotedDetails")(pollVotedDetails.asInstanceOf[js.Any])
+    if (publishedAt != null) __obj.updateDynamic("publishedAt")(publishedAt.asInstanceOf[js.Any])
+    if (superChatDetails != null) __obj.updateDynamic("superChatDetails")(superChatDetails.asInstanceOf[js.Any])
+    if (superStickerDetails != null) __obj.updateDynamic("superStickerDetails")(superStickerDetails.asInstanceOf[js.Any])
+    if (textMessageDetails != null) __obj.updateDynamic("textMessageDetails")(textMessageDetails.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (userBannedDetails != null) __obj.updateDynamic("userBannedDetails")(userBannedDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiveChatMessageSnippet]
   }
-  @scala.inline
-  implicit class SchemaLiveChatMessageSnippetOps[Self <: SchemaLiveChatMessageSnippet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorChannelId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorChannelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorChannelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorChannelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFanFundingEventDetails(value: SchemaLiveChatFanFundingEventDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fanFundingEventDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFanFundingEventDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fanFundingEventDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasDisplayContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasDisplayContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasDisplayContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasDisplayContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveChatId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveChatId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveChatId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveChatId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageDeletedDetails(value: SchemaLiveChatMessageDeletedDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDeletedDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageDeletedDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDeletedDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageRetractedDetails(value: SchemaLiveChatMessageRetractedDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetractedDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageRetractedDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetractedDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPollClosedDetails(value: SchemaLiveChatPollClosedDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollClosedDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPollClosedDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollClosedDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPollEditedDetails(value: SchemaLiveChatPollEditedDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollEditedDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPollEditedDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollEditedDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPollOpenedDetails(value: SchemaLiveChatPollOpenedDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollOpenedDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPollOpenedDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollOpenedDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPollVotedDetails(value: SchemaLiveChatPollVotedDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollVotedDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPollVotedDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollVotedDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublishedAt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublishedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuperChatDetails(value: SchemaLiveChatSuperChatDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superChatDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuperChatDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superChatDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuperStickerDetails(value: SchemaLiveChatSuperStickerDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superStickerDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuperStickerDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superStickerDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextMessageDetails(value: SchemaLiveChatTextMessageDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textMessageDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextMessageDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textMessageDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserBannedDetails(value: SchemaLiveChatUserBannedMessageDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userBannedDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserBannedDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userBannedDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectionsViewModelSelectedTravelMode extends TravelMode {
   /**
     * The description explaining the selected travel mode. A listing of these descriptions can be found in the [ArcGIS Online documentation](https://doc.arcgis.com/en/arcgis-online/reference/travel-modes.htm#GUID-96DF7F50-E0B2-4BF3-8271-EB515D3F0107).
@@ -13,35 +12,35 @@ trait DirectionsViewModelSelectedTravelMode extends TravelMode {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#selectedTravelMode)
     */
   @JSName("description")
-  var description_DirectionsViewModelSelectedTravelMode: String = js.native
+  var description_DirectionsViewModelSelectedTravelMode: String
   /**
     * The unique identifier specific for this travel mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#selectedTravelMode)
     */
   @JSName("id")
-  var id_DirectionsViewModelSelectedTravelMode: String = js.native
+  var id_DirectionsViewModelSelectedTravelMode: String
   /**
     * The cost attribute on which to optimize the analysis. For example `Miles`, `Minutes`, `Travel Time`, `Kilometers`, `TimeAt1KPH`, `WalkTime`, and `TruckTravelTime`. Take note that attribute names are specific to the network dataset. They may be different if using another Network Analysis service besides the one hosted via ArcGIS Online.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#selectedTravelMode)
     */
   @JSName("impedanceAttributeName")
-  var impedanceAttributeName_DirectionsViewModelSelectedTravelMode: String = js.native
+  var impedanceAttributeName_DirectionsViewModelSelectedTravelMode: String
   /**
     * Name of the travel mode. Users of ArcGIS Online or ArcGIS Enterprise can define custom travel modes inside their Organization settings. Authors of stand alone Network Analysis Services can define their own travel modes inside a network dataset.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#selectedTravelMode)
     */
   @JSName("name")
-  var name_DirectionsViewModelSelectedTravelMode: String = js.native
+  var name_DirectionsViewModelSelectedTravelMode: String
   /**
     * The time-based cost attribute for reporting directions. For example, `Minutes`, `Travel Time`, `TimeAt1KPH`, `WalkTime`, and `TruckTravelTime`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#selectedTravelMode)
     */
   @JSName("timeAttributeName")
-  var timeAttributeName_DirectionsViewModelSelectedTravelMode: String = js.native
+  var timeAttributeName_DirectionsViewModelSelectedTravelMode: String
 }
 
 object DirectionsViewModelSelectedTravelMode {
@@ -59,43 +58,5 @@ object DirectionsViewModelSelectedTravelMode {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), id = id.asInstanceOf[js.Any], impedanceAttributeName = impedanceAttributeName.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), timeAttributeName = timeAttributeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionsViewModelSelectedTravelMode]
   }
-  @scala.inline
-  implicit class DirectionsViewModelSelectedTravelModeOps[Self <: DirectionsViewModelSelectedTravelMode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImpedanceAttributeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impedanceAttributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeAttributeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeAttributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

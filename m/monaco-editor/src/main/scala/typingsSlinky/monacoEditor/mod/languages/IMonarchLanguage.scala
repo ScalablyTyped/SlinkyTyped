@@ -5,113 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMonarchLanguage extends js.Object {
   /**
     * for example [['{','}','delimiter.curly']]
     */
-  var brackets: js.UndefOr[js.Array[IMonarchLanguageBracket]] = js.native
+  var brackets: js.UndefOr[js.Array[IMonarchLanguageBracket]] = js.undefined
   /**
     * if no match in the tokenizer assign this token class (default 'source')
     */
-  var defaultToken: js.UndefOr[String] = js.native
+  var defaultToken: js.UndefOr[String] = js.undefined
   /**
     * is the language case insensitive?
     */
-  var ignoreCase: js.UndefOr[Boolean] = js.native
+  var ignoreCase: js.UndefOr[Boolean] = js.undefined
   /**
     * start symbol in the tokenizer (by default the first entry is used)
     */
-  var start: js.UndefOr[String] = js.native
+  var start: js.UndefOr[String] = js.undefined
   /**
     * attach this to every token class (by default '.' + name)
     */
-  var tokenPostfix: js.UndefOr[String] = js.native
+  var tokenPostfix: js.UndefOr[String] = js.undefined
   /**
     * map from string to ILanguageRule[]
     */
-  var tokenizer: StringDictionary[js.Array[IMonarchLanguageRule]] = js.native
+  var tokenizer: StringDictionary[js.Array[IMonarchLanguageRule]]
 }
 
 object IMonarchLanguage {
   @scala.inline
-  def apply(tokenizer: StringDictionary[js.Array[IMonarchLanguageRule]]): IMonarchLanguage = {
+  def apply(
+    tokenizer: StringDictionary[js.Array[IMonarchLanguageRule]],
+    brackets: js.Array[IMonarchLanguageBracket] = null,
+    defaultToken: String = null,
+    ignoreCase: js.UndefOr[Boolean] = js.undefined,
+    start: String = null,
+    tokenPostfix: String = null
+  ): IMonarchLanguage = {
     val __obj = js.Dynamic.literal(tokenizer = tokenizer.asInstanceOf[js.Any])
+    if (brackets != null) __obj.updateDynamic("brackets")(brackets.asInstanceOf[js.Any])
+    if (defaultToken != null) __obj.updateDynamic("defaultToken")(defaultToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreCase)) __obj.updateDynamic("ignoreCase")(ignoreCase.get.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+    if (tokenPostfix != null) __obj.updateDynamic("tokenPostfix")(tokenPostfix.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMonarchLanguage]
   }
-  @scala.inline
-  implicit class IMonarchLanguageOps[Self <: IMonarchLanguage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTokenizer(value: StringDictionary[js.Array[IMonarchLanguageRule]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenizer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrackets(value: js.Array[IMonarchLanguageBracket]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brackets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrackets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brackets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenPostfix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenPostfix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenPostfix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenPostfix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

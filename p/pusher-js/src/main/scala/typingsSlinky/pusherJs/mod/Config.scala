@@ -7,335 +7,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
   /**
     * After this time (in miliseconds) without any messages received from the server,
     * a ping message will be sent to check if the connection is still working.
     * Default value is is supplied by the server, low values will result in unnecessary traffic.
     */
-  var activityTimeout: js.UndefOr[Double] = js.native
+  var activityTimeout: js.UndefOr[Double] = js.undefined
   /**
     * Allows passing additional data to authorizers. Supports query string params and headers (AJAX only).
     * For example, following will pass foo=bar via the query string and baz: boo via headers:
     */
-  var auth: js.UndefOr[AuthConfig] = js.native
+  var auth: js.UndefOr[AuthConfig] = js.undefined
   /**
     * Endpoint on your server that will return the authentication signature needed for private channels.
     */
-  var authEndpoint: js.UndefOr[String] = js.native
+  var authEndpoint: js.UndefOr[String] = js.undefined
   /**
     * Defines how the authentication endpoint, defined using authEndpoint, will be called.
     * There are two options available: ajax and jsonp.
     */
-  var authTransport: js.UndefOr[ajax | jsonp] = js.native
+  var authTransport: js.UndefOr[ajax | jsonp] = js.undefined
   /**
     * If you need custom authorization behavior you can provide your own authorizer function as follows:
     */
-  var authorizer: js.UndefOr[Authorizer] = js.native
+  var authorizer: js.UndefOr[Authorizer] = js.undefined
   /**
     * Allows connecting to a different datacenter by setting up correct hostnames and ports for the connection.
     */
-  var cluster: js.UndefOr[String] = js.native
+  var cluster: js.UndefOr[String] = js.undefined
   /**
     * Disables stats collection, so that connection metrics are not submitted to Pusher’s servers. These stats
     * are used for internal monitoring only and they do not affect the account stats.
     */
-  var disableStats: js.UndefOr[Boolean] = js.native
+  var disableStats: js.UndefOr[Boolean] = js.undefined
   /**
     * Specified which transports must not be used by Pusher to establish a connection.
     * This settings overwrites transports whitelisted via the enabledTransports options.
     * Available transports: ws, wss, xhr_streaming, xhr_polling, sockjs.
     * Additional transports may be added in the future and without adding them to this list, they will be enabled.
     */
-  var disabledTransports: js.UndefOr[js.Array[Transport]] = js.native
+  var disabledTransports: js.UndefOr[js.Array[Transport]] = js.undefined
   /**
     * Specifies which transports should be used by Pusher to establish a connection.
     * Useful for applications running in controlled, well-behaving environments.
     * Available transports: ws, wss, xhr_streaming, xhr_polling, sockjs.
     * Additional transports may be added in the future and without adding them to this list, they will be disabled.
     */
-  var enabledTransports: js.UndefOr[js.Array[Transport]] = js.native
+  var enabledTransports: js.UndefOr[js.Array[Transport]] = js.undefined
   /**
     * Forces the connection to use encrypted transports.
     * @deprecated
     */
-  var encrypted: js.UndefOr[Boolean] = js.native
+  var encrypted: js.UndefOr[Boolean] = js.undefined
   /**
     * Forces the connection to use encrypted transports.
     */
-  var forceTLS: js.UndefOr[Boolean] = js.native
-  var httpHost: js.UndefOr[String] = js.native
-  var httpPort: js.UndefOr[Double] = js.native
-  var httpsPort: js.UndefOr[Double] = js.native
+  var forceTLS: js.UndefOr[Boolean] = js.undefined
+  var httpHost: js.UndefOr[String] = js.undefined
+  var httpPort: js.UndefOr[Double] = js.undefined
+  var httpsPort: js.UndefOr[Double] = js.undefined
   /**
     * Ignores null origin checks for HTTP fallbacks. Use with care, it should be disabled only if necessary (i.e. PhoneGap).
     */
-  var ignoreNullOrigin: js.UndefOr[Boolean] = js.native
+  var ignoreNullOrigin: js.UndefOr[Boolean] = js.undefined
   /**
     * Time before the connection is terminated after sending a ping message.
     * Default is 30000 (30s). Low values will cause false disconnections, if latency is high.
     */
-  var pongTimeout: js.UndefOr[Double] = js.native
-  var wsHost: js.UndefOr[String] = js.native
-  var wsPath: js.UndefOr[String] = js.native
-  var wsPort: js.UndefOr[Double] = js.native
-  var wssPort: js.UndefOr[Double] = js.native
+  var pongTimeout: js.UndefOr[Double] = js.undefined
+  var wsHost: js.UndefOr[String] = js.undefined
+  var wsPath: js.UndefOr[String] = js.undefined
+  var wsPort: js.UndefOr[Double] = js.undefined
+  var wssPort: js.UndefOr[Double] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    activityTimeout: js.UndefOr[Double] = js.undefined,
+    auth: AuthConfig = null,
+    authEndpoint: String = null,
+    authTransport: ajax | jsonp = null,
+    authorizer: (/* channel */ Channel, /* options */ Config) => Authorize = null,
+    cluster: String = null,
+    disableStats: js.UndefOr[Boolean] = js.undefined,
+    disabledTransports: js.Array[Transport] = null,
+    enabledTransports: js.Array[Transport] = null,
+    encrypted: js.UndefOr[Boolean] = js.undefined,
+    forceTLS: js.UndefOr[Boolean] = js.undefined,
+    httpHost: String = null,
+    httpPort: js.UndefOr[Double] = js.undefined,
+    httpsPort: js.UndefOr[Double] = js.undefined,
+    ignoreNullOrigin: js.UndefOr[Boolean] = js.undefined,
+    pongTimeout: js.UndefOr[Double] = js.undefined,
+    wsHost: String = null,
+    wsPath: String = null,
+    wsPort: js.UndefOr[Double] = js.undefined,
+    wssPort: js.UndefOr[Double] = js.undefined
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activityTimeout)) __obj.updateDynamic("activityTimeout")(activityTimeout.get.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (authEndpoint != null) __obj.updateDynamic("authEndpoint")(authEndpoint.asInstanceOf[js.Any])
+    if (authTransport != null) __obj.updateDynamic("authTransport")(authTransport.asInstanceOf[js.Any])
+    if (authorizer != null) __obj.updateDynamic("authorizer")(js.Any.fromFunction2(authorizer))
+    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableStats)) __obj.updateDynamic("disableStats")(disableStats.get.asInstanceOf[js.Any])
+    if (disabledTransports != null) __obj.updateDynamic("disabledTransports")(disabledTransports.asInstanceOf[js.Any])
+    if (enabledTransports != null) __obj.updateDynamic("enabledTransports")(enabledTransports.asInstanceOf[js.Any])
+    if (!js.isUndefined(encrypted)) __obj.updateDynamic("encrypted")(encrypted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceTLS)) __obj.updateDynamic("forceTLS")(forceTLS.get.asInstanceOf[js.Any])
+    if (httpHost != null) __obj.updateDynamic("httpHost")(httpHost.asInstanceOf[js.Any])
+    if (!js.isUndefined(httpPort)) __obj.updateDynamic("httpPort")(httpPort.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(httpsPort)) __obj.updateDynamic("httpsPort")(httpsPort.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreNullOrigin)) __obj.updateDynamic("ignoreNullOrigin")(ignoreNullOrigin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pongTimeout)) __obj.updateDynamic("pongTimeout")(pongTimeout.get.asInstanceOf[js.Any])
+    if (wsHost != null) __obj.updateDynamic("wsHost")(wsHost.asInstanceOf[js.Any])
+    if (wsPath != null) __obj.updateDynamic("wsPath")(wsPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(wsPort)) __obj.updateDynamic("wsPort")(wsPort.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wssPort)) __obj.updateDynamic("wssPort")(wssPort.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuth(value: AuthConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthTransport(value: ajax | jsonp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authTransport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthTransport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authTransport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizer(value: (/* channel */ Channel, /* options */ Config) => Authorize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCluster(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCluster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableStats(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledTransports(value: js.Array[Transport]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTransports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledTransports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTransports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabledTransports(value: js.Array[Transport]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledTransports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabledTransports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledTransports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceTLS(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceTLS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceTLS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceTLS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpsPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpsPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreNullOrigin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreNullOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreNullOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreNullOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPongTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pongTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPongTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pongTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWsHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wsHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWsHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wsHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWsPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wsPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWsPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wsPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWsPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wsPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWsPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wsPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWssPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wssPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWssPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wssPort")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,82 +17,29 @@ import scala.scalajs.js.annotation._
   * @property crossOrigin {boolean} - Specifies whether to use anonynous Cross-Origin Resource Sharing (CORS) when fetching an image to prevent resulting canvas from tainting, default is
   * false. The option is ignored by IE9-10.
   */
-@js.native
 trait Options extends js.Object {
-  var anchor: js.UndefOr[IPoint] = js.native
-  var asCanvas: js.UndefOr[HitArea] = js.native
-  var crossOrigin: Boolean = js.native
-  var hitArea: js.UndefOr[HitArea] = js.native
-  var size: js.UndefOr[ISize | Double] = js.native
+  var anchor: js.UndefOr[IPoint] = js.undefined
+  var asCanvas: js.UndefOr[HitArea] = js.undefined
+  var crossOrigin: Boolean
+  var hitArea: js.UndefOr[HitArea] = js.undefined
+  var size: js.UndefOr[ISize | Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(crossOrigin: Boolean): Options = {
+  def apply(
+    crossOrigin: Boolean,
+    anchor: IPoint = null,
+    asCanvas: HitArea = null,
+    hitArea: HitArea = null,
+    size: ISize | Double = null
+  ): Options = {
     val __obj = js.Dynamic.literal(crossOrigin = crossOrigin.asInstanceOf[js.Any])
+    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
+    if (asCanvas != null) __obj.updateDynamic("asCanvas")(asCanvas.asInstanceOf[js.Any])
+    if (hitArea != null) __obj.updateDynamic("hitArea")(hitArea.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCrossOrigin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnchor(value: IPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsCanvas(value: HitArea): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asCanvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asCanvas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHitArea(value: HitArea): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHitArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: ISize | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

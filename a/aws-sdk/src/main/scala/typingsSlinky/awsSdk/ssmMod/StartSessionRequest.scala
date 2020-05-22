@@ -22,47 +22,15 @@ trait StartSessionRequest extends js.Object {
 
 object StartSessionRequest {
   @scala.inline
-  def apply(Target: SessionTarget): StartSessionRequest = {
+  def apply(
+    Target: SessionTarget,
+    DocumentName: DocumentARN = null,
+    Parameters: SessionManagerParameters = null
+  ): StartSessionRequest = {
     val __obj = js.Dynamic.literal(Target = Target.asInstanceOf[js.Any])
+    if (DocumentName != null) __obj.updateDynamic("DocumentName")(DocumentName.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartSessionRequest]
   }
-  @scala.inline
-  implicit class StartSessionRequestOps[Self <: StartSessionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTarget(value: SessionTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentName(value: DocumentARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: SessionManagerParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

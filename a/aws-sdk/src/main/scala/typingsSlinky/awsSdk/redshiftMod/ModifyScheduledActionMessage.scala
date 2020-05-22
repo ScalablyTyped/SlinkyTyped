@@ -42,107 +42,25 @@ trait ModifyScheduledActionMessage extends js.Object {
 
 object ModifyScheduledActionMessage {
   @scala.inline
-  def apply(ScheduledActionName: String): ModifyScheduledActionMessage = {
+  def apply(
+    ScheduledActionName: String,
+    Enable: js.UndefOr[BooleanOptional] = js.undefined,
+    EndTime: js.Date = null,
+    IamRole: String = null,
+    Schedule: String = null,
+    ScheduledActionDescription: String = null,
+    StartTime: js.Date = null,
+    TargetAction: ScheduledActionType = null
+  ): ModifyScheduledActionMessage = {
     val __obj = js.Dynamic.literal(ScheduledActionName = ScheduledActionName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enable)) __obj.updateDynamic("Enable")(Enable.get.asInstanceOf[js.Any])
+    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
+    if (IamRole != null) __obj.updateDynamic("IamRole")(IamRole.asInstanceOf[js.Any])
+    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
+    if (ScheduledActionDescription != null) __obj.updateDynamic("ScheduledActionDescription")(ScheduledActionDescription.asInstanceOf[js.Any])
+    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
+    if (TargetAction != null) __obj.updateDynamic("TargetAction")(TargetAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyScheduledActionMessage]
   }
-  @scala.inline
-  implicit class ModifyScheduledActionMessageOps[Self <: ModifyScheduledActionMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScheduledActionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnable(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduledActionDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActionDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledActionDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActionDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetAction(value: ScheduledActionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetAction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

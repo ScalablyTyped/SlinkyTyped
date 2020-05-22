@@ -35,7 +35,7 @@ class Network protected () extends js.Object {
     */
   def addEdgeMode(): Unit = js.native
   /**
-    * 	Go into addNode mode. Having edit mode or manipulation enabled is not required.
+    *     Go into addNode mode. Having edit mode or manipulation enabled is not required.
     * To get out of this mode, call disableEditMode().
     * The callback functions defined in handlerFunctions still apply.
     * To use these methods without having the manipulation GUI, make sure you set enabled to false.
@@ -56,7 +56,7 @@ class Network protected () extends js.Object {
   def cluster(): Unit = js.native
   def cluster(options: ClusterOptions): Unit = js.native
   /**
-    * 	This method looks at the provided node and makes a cluster of it and all it's connected nodes.
+    *     This method looks at the provided node and makes a cluster of it and all it's connected nodes.
     * The behaviour can be customized by proving the options object.
     * All options of this object are explained below.
     * The joinCondition is only presented with the connected nodes.
@@ -93,7 +93,7 @@ class Network protected () extends js.Object {
     */
   def deleteSelected(): Unit = js.native
   /**
-    * 	Remove the network from the DOM and remove all Hammer bindings and references.
+    *     Remove the network from the DOM and remove all Hammer bindings and references.
     */
   def destroy(): Unit = js.native
   /**
@@ -112,7 +112,7 @@ class Network protected () extends js.Object {
     */
   def editNode(): Unit = js.native
   /**
-    * 	Programatically enable the edit mode.
+    *     Programatically enable the edit mode.
     * Similar effect to pressing the edit button.
     */
   def enableEditMode(): Unit = js.native
@@ -399,7 +399,7 @@ class Network protected () extends js.Object {
     */
   def stopSimulation(): Unit = js.native
   /**
-    * 	When using the vis.DataSet to load your nodes into the network,
+    *     When using the vis.DataSet to load your nodes into the network,
     * this method will put the X and Y positions of all nodes into that dataset.
     * If you're loading your nodes from a database and have this dynamically coupled with the DataSet,
     * you can use this to stablize your network once, then save the positions in that database

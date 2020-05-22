@@ -3,6 +3,7 @@ package typingsSlinky.uiBox
 import typingsSlinky.uiBox.anon.Cache
 import typingsSlinky.uiBox.boxTypesMod.BoxComponent
 import typingsSlinky.uiBox.cacheMod.CacheEntry
+import typingsSlinky.uiBox.safeHrefMod.SafeHrefConfigObj
 import typingsSlinky.uiBox.splitBoxPropsMod.SplitBoxProps
 import typingsSlinky.uiBox.splitPropsMod.Dictionary
 import typingsSlinky.uiBox.splitPropsMod.SplitProps
@@ -25,6 +26,7 @@ object mod extends js.Object {
   val propNames: js.Array[String] = js.native
   val propTypes: PropTypesMapping = js.native
   def clearStyles(): Unit = js.native
+  def configureSafeHref(configObject: SafeHrefConfigObj): Unit = js.native
   def extractStyles(): Cache = js.native
   def setClassNamePrefix(prefix: String): Unit = js.native
   def splitBoxProps[P /* <: EnhancerProps */](props: P): SplitBoxProps[P] = js.native

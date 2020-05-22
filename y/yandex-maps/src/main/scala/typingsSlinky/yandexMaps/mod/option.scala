@@ -12,6 +12,8 @@ object option extends js.Object {
     def this(options: js.Object) = this()
     def this(options: js.Object, parent: IOptionManager) = this()
     def this(options: js.Object, parent: IOptionManager, name: String) = this()
+    /* CompleteClass */
+    override var events: IEventManager = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit], context: js.Object): this.type = js.native
     def add(

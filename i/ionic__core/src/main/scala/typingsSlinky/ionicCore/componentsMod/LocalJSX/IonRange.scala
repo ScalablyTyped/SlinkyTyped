@@ -9,279 +9,111 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IonRange extends js.Object {
   /**
     * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
     */
-  var color: js.UndefOr[Color] = js.native
+  var color: js.UndefOr[Color] = js.undefined
   /**
     * How long, in milliseconds, to wait to trigger the `ionChange` event after each change in the range value.
     */
-  var debounce: js.UndefOr[Double] = js.native
+  var debounce: js.UndefOr[Double] = js.undefined
   /**
     * If `true`, the user cannot interact with the range.
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Show two knobs.
     */
-  var dualKnobs: js.UndefOr[Boolean] = js.native
+  var dualKnobs: js.UndefOr[Boolean] = js.undefined
   /**
     * Maximum integer value of the range.
     */
-  var max: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[Double] = js.undefined
   /**
     * Minimum integer value of the range.
     */
-  var min: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.undefined
   /**
     * The mode determines which platform styles to use.
     */
-  var mode: js.UndefOr[ios | md] = js.native
+  var mode: js.UndefOr[ios | md] = js.undefined
   /**
     * The name of the control, which is submitted with the form data.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Emitted when the range loses focus.
     */
-  var onIonBlur: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonBlur: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the value property has changed.
     */
-  var onIonChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the range has focus.
     */
-  var onIonFocus: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonFocus: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * If `true`, a pin with integer value is shown when the knob is pressed.
     */
-  var pin: js.UndefOr[Boolean] = js.native
+  var pin: js.UndefOr[Boolean] = js.undefined
   /**
     * If `true`, the knob snaps to tick marks evenly spaced based on the step property value.
     */
-  var snaps: js.UndefOr[Boolean] = js.native
+  var snaps: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies the value granularity.
     */
-  var step: js.UndefOr[Double] = js.native
+  var step: js.UndefOr[Double] = js.undefined
   /**
     * If `true`, tick marks are displayed based on the step value. Only applies when `snaps` is `true`.
     */
-  var ticks: js.UndefOr[Boolean] = js.native
+  var ticks: js.UndefOr[Boolean] = js.undefined
   /**
     * the value of the range.
     */
-  var value: js.UndefOr[RangeValue] = js.native
+  var value: js.UndefOr[RangeValue] = js.undefined
 }
 
 object IonRange {
   @scala.inline
-  def apply(): IonRange = {
+  def apply(
+    color: Color = null,
+    debounce: js.UndefOr[Double] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    dualKnobs: js.UndefOr[Boolean] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    mode: ios | md = null,
+    name: String = null,
+    onIonBlur: /* event */ CustomEvent => Unit = null,
+    onIonChange: /* event */ CustomEvent => Unit = null,
+    onIonFocus: /* event */ CustomEvent => Unit = null,
+    pin: js.UndefOr[Boolean] = js.undefined,
+    snaps: js.UndefOr[Boolean] = js.undefined,
+    step: js.UndefOr[Double] = js.undefined,
+    ticks: js.UndefOr[Boolean] = js.undefined,
+    value: RangeValue = null
+  ): IonRange = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(debounce)) __obj.updateDynamic("debounce")(debounce.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dualKnobs)) __obj.updateDynamic("dualKnobs")(dualKnobs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onIonBlur != null) __obj.updateDynamic("onIonBlur")(js.Any.fromFunction1(onIonBlur))
+    if (onIonChange != null) __obj.updateDynamic("onIonChange")(js.Any.fromFunction1(onIonChange))
+    if (onIonFocus != null) __obj.updateDynamic("onIonFocus")(js.Any.fromFunction1(onIonFocus))
+    if (!js.isUndefined(pin)) __obj.updateDynamic("pin")(pin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(snaps)) __obj.updateDynamic("snaps")(snaps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ticks)) __obj.updateDynamic("ticks")(ticks.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonRange]
   }
-  @scala.inline
-  implicit class IonRangeOps[Self <: IonRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebounce(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebounce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDualKnobs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dualKnobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDualKnobs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dualKnobs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ios | md): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonBlur(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonChange(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonFocus(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTicks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: RangeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

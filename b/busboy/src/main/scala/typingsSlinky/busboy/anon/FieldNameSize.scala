@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldNameSize extends js.Object {
-  var fieldNameSize: js.UndefOr[Double] = js.native
-  var fieldSize: js.UndefOr[Double] = js.native
-  var fields: js.UndefOr[Double] = js.native
-  var fileSize: js.UndefOr[Double] = js.native
-  var files: js.UndefOr[Double] = js.native
-  var headerPairs: js.UndefOr[Double] = js.native
-  var parts: js.UndefOr[Double] = js.native
+  var fieldNameSize: js.UndefOr[Double] = js.undefined
+  var fieldSize: js.UndefOr[Double] = js.undefined
+  var fields: js.UndefOr[Double] = js.undefined
+  var fileSize: js.UndefOr[Double] = js.undefined
+  var files: js.UndefOr[Double] = js.undefined
+  var headerPairs: js.UndefOr[Double] = js.undefined
+  var parts: js.UndefOr[Double] = js.undefined
 }
 
 object FieldNameSize {
   @scala.inline
-  def apply(): FieldNameSize = {
+  def apply(
+    fieldNameSize: js.UndefOr[Double] = js.undefined,
+    fieldSize: js.UndefOr[Double] = js.undefined,
+    fields: js.UndefOr[Double] = js.undefined,
+    fileSize: js.UndefOr[Double] = js.undefined,
+    files: js.UndefOr[Double] = js.undefined,
+    headerPairs: js.UndefOr[Double] = js.undefined,
+    parts: js.UndefOr[Double] = js.undefined
+  ): FieldNameSize = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fieldNameSize)) __obj.updateDynamic("fieldNameSize")(fieldNameSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fieldSize)) __obj.updateDynamic("fieldSize")(fieldSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fields)) __obj.updateDynamic("fields")(fields.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fileSize)) __obj.updateDynamic("fileSize")(fileSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(files)) __obj.updateDynamic("files")(files.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headerPairs)) __obj.updateDynamic("headerPairs")(headerPairs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(parts)) __obj.updateDynamic("parts")(parts.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldNameSize]
   }
-  @scala.inline
-  implicit class FieldNameSizeOps[Self <: FieldNameSize] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFieldNameSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldNameSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldNameSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldNameSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiles(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderPairs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerPairs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderPairs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerPairs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -20,41 +20,14 @@ trait RetryDelayOptions extends js.Object {
 
 object RetryDelayOptions {
   @scala.inline
-  def apply(): RetryDelayOptions = {
+  def apply(
+    base: js.UndefOr[Double] = js.undefined,
+    customBackoff: (/* retryCount */ Double, /* err */ js.UndefOr[js.Error]) => Double = null
+  ): RetryDelayOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(base)) __obj.updateDynamic("base")(base.get.asInstanceOf[js.Any])
+    if (customBackoff != null) __obj.updateDynamic("customBackoff")(js.Any.fromFunction2(customBackoff))
     __obj.asInstanceOf[RetryDelayOptions]
   }
-  @scala.inline
-  implicit class RetryDelayOptionsOps[Self <: RetryDelayOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomBackoff(value: (/* retryCount */ Double, /* err */ js.UndefOr[js.Error]) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customBackoff")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomBackoff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customBackoff")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

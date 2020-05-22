@@ -9,6 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class Text protected () extends Node {
   def this(value: String, sourceSpan: ParseSourceSpan) = this()
+  /* CompleteClass */
+  override var sourceSpan: ParseSourceSpan = js.native
   var value: String = js.native
+  /* CompleteClass */
+  override def visit[Result](visitor: Visitor[Result]): Result = js.native
 }
 

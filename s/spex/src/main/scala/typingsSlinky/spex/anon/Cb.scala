@@ -4,38 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cb extends js.Object {
   var cb: js.UndefOr[
     js.Function4[/* index */ Double, /* success */ Boolean, /* result */ js.Any, /* delay */ Double, _]
-  ] = js.native
+  ] = js.undefined
 }
 
 object Cb {
   @scala.inline
-  def apply(): Cb = {
+  def apply(
+    cb: (/* index */ Double, /* success */ Boolean, /* result */ js.Any, /* delay */ Double) => _ = null
+  ): Cb = {
     val __obj = js.Dynamic.literal()
+    if (cb != null) __obj.updateDynamic("cb")(js.Any.fromFunction4(cb))
     __obj.asInstanceOf[Cb]
   }
-  @scala.inline
-  implicit class CbOps[Self <: Cb] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCb(value: (/* index */ Double, /* success */ Boolean, /* result */ js.Any, /* delay */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cb")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutCb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cb")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * //     extnValue   OCTET STRING  }
   * ```
   */
-@js.native
 trait Extension extends ASN1Object
 
 object Extension {

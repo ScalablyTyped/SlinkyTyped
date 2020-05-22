@@ -1,5 +1,7 @@
 package typingsSlinky.reduxPersist.typesMod
 
+import typingsSlinky.reduxPersist.reduxPersistStrings.persistSlashREGISTER
+import typingsSlinky.reduxPersist.reduxPersistStrings.persistSlashREHYDRATE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,23 @@ trait PersistorAction extends js.Object
 
 object PersistorAction {
   @scala.inline
-  implicit def apply(value: RegisterAction): PersistorAction = value.asInstanceOf[PersistorAction]
+  def RehydrateAction(
+    key: String,
+    `type`: persistSlashREHYDRATE,
+    err: js.UndefOr[Null | RehydrateErrorType] = js.undefined,
+    payload: js.UndefOr[Null | js.Object] = js.undefined
+  ): PersistorAction = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(err)) __obj.updateDynamic("err")(err.asInstanceOf[js.Any])
+    if (!js.isUndefined(payload)) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PersistorAction]
+  }
   @scala.inline
-  implicit def apply(value: RehydrateAction): PersistorAction = value.asInstanceOf[PersistorAction]
+  def RegisterAction(key: String, `type`: persistSlashREGISTER): PersistorAction = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PersistorAction]
+  }
 }
 

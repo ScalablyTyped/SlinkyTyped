@@ -14,29 +14,10 @@ trait BatchDetachObjectResponse extends js.Object {
 
 object BatchDetachObjectResponse {
   @scala.inline
-  def apply(): BatchDetachObjectResponse = {
+  def apply(detachedObjectIdentifier: ObjectIdentifier = null): BatchDetachObjectResponse = {
     val __obj = js.Dynamic.literal()
+    if (detachedObjectIdentifier != null) __obj.updateDynamic("detachedObjectIdentifier")(detachedObjectIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDetachObjectResponse]
   }
-  @scala.inline
-  implicit class BatchDetachObjectResponseOps[Self <: BatchDetachObjectResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetachedObjectIdentifier(value: ObjectIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detachedObjectIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetachedObjectIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detachedObjectIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

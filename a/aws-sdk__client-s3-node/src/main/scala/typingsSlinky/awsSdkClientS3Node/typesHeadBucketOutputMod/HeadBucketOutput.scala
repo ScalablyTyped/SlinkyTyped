@@ -1,16 +1,15 @@
 package typingsSlinky.awsSdkClientS3Node.typesHeadBucketOutputMod
 
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HeadBucketOutput
   extends MetadataBearer
-     with OutputTypesUnion
+     with _OutputTypesUnion
 
 object HeadBucketOutput {
   @scala.inline

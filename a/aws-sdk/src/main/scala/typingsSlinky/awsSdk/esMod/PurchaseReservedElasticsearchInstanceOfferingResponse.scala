@@ -18,41 +18,11 @@ trait PurchaseReservedElasticsearchInstanceOfferingResponse extends js.Object {
 
 object PurchaseReservedElasticsearchInstanceOfferingResponse {
   @scala.inline
-  def apply(): PurchaseReservedElasticsearchInstanceOfferingResponse = {
+  def apply(ReservationName: ReservationToken = null, ReservedElasticsearchInstanceId: GUID = null): PurchaseReservedElasticsearchInstanceOfferingResponse = {
     val __obj = js.Dynamic.literal()
+    if (ReservationName != null) __obj.updateDynamic("ReservationName")(ReservationName.asInstanceOf[js.Any])
+    if (ReservedElasticsearchInstanceId != null) __obj.updateDynamic("ReservedElasticsearchInstanceId")(ReservedElasticsearchInstanceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurchaseReservedElasticsearchInstanceOfferingResponse]
   }
-  @scala.inline
-  implicit class PurchaseReservedElasticsearchInstanceOfferingResponseOps[Self <: PurchaseReservedElasticsearchInstanceOfferingResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReservationName(value: ReservationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedElasticsearchInstanceId(value: GUID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedElasticsearchInstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedElasticsearchInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedElasticsearchInstanceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

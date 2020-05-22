@@ -10,56 +10,25 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.1]
   */
-@js.native
 trait SectionCollectionLoadOptions extends js.Object {
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the body object of the section. This does not include the header/footer and other section metadata.
     *
     * [Api set: WordApi 1.1]
     */
-  var body: js.UndefOr[BodyLoadOptions] = js.native
+  var body: js.UndefOr[BodyLoadOptions] = js.undefined
 }
 
 object SectionCollectionLoadOptions {
   @scala.inline
-  def apply(): SectionCollectionLoadOptions = {
+  def apply($all: js.UndefOr[Boolean] = js.undefined, body: BodyLoadOptions = null): SectionCollectionLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
     __obj.asInstanceOf[SectionCollectionLoadOptions]
   }
-  @scala.inline
-  implicit class SectionCollectionLoadOptionsOps[Self <: SectionCollectionLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: BodyLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

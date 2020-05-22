@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PullsCreateFromIssueResponseLinksComments extends js.Object {
-  var href: String = js.native
+  var href: String
 }
 
 object PullsCreateFromIssueResponseLinksComments {
@@ -15,19 +14,5 @@ object PullsCreateFromIssueResponseLinksComments {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullsCreateFromIssueResponseLinksComments]
   }
-  @scala.inline
-  implicit class PullsCreateFromIssueResponseLinksCommentsOps[Self <: PullsCreateFromIssueResponseLinksComments] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

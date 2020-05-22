@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 // see https://docs.angularjs.org/api/ngMock/service/$interval
 // Augments the original service
 ///////////////////////////////////////////////////////////////////////////
-@js.native
 trait IIntervalService extends js.Object {
   /**
     * Runs interval tasks scheduled to be run in the next `millis` milliseconds.
@@ -17,7 +16,7 @@ trait IIntervalService extends js.Object {
     * @param millis - The maximum timeout amount to flush up until.
     * @return The amount of time moved forward.
     */
-  def flush(millis: Double): Double = js.native
+  def flush(millis: Double): Double
 }
 
 object IIntervalService {
@@ -26,19 +25,5 @@ object IIntervalService {
     val __obj = js.Dynamic.literal(flush = js.Any.fromFunction1(flush))
     __obj.asInstanceOf[IIntervalService]
   }
-  @scala.inline
-  implicit class IIntervalServiceOps[Self <: IIntervalService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlush(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

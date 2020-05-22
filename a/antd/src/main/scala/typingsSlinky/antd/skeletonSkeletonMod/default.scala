@@ -1,24 +1,21 @@
 package typingsSlinky.antd.skeletonSkeletonMod
 
-import typingsSlinky.antd.anon.PartialSkeletonProps
-import typingsSlinky.antd.anon.TypeofSkeletonAvatar
-import typingsSlinky.antd.anon.TypeofSkeletonButton
-import typingsSlinky.antd.anon.TypeofSkeletonInput
+import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.Avatar
+import typingsSlinky.antd.anon.Call
+import typingsSlinky.antd.anon.CallDefaultProps
+import typingsSlinky.antd.anon.DefaultProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("antd/lib/skeleton/Skeleton", JSImport.Default)
 @js.native
-class default () extends Skeleton
-
-/* static members */
-@JSImport("antd/lib/skeleton/Skeleton", JSImport.Default)
-@js.native
 object default extends js.Object {
-  var Avatar: TypeofSkeletonAvatar = js.native
-  var Button: TypeofSkeletonButton = js.native
-  var Input: TypeofSkeletonInput = js.native
-  var defaultProps: PartialSkeletonProps = js.native
+  var Avatar: DefaultProps = js.native
+  var Button: Call = js.native
+  var Input: CallDefaultProps = js.native
+  var defaultProps: Avatar = js.native
+  def apply(props: SkeletonProps): ReactElement = js.native
 }
 

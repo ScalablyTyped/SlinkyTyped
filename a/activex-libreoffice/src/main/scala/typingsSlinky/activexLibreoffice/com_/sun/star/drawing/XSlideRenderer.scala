@@ -8,14 +8,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Create preview bitmaps for single slides. */
-@js.native
 trait XSlideRenderer extends js.Object {
   /**
     * Return a size that has the given aspect ratio and shares either the width or the height with the given maximum size.
     * @param nSlideAspectRatio The aspect ratio must not be 0.
     * @param aMaximumPreviewPixelSize The maximum size of the returned preview size.
     */
-  def calculatePreviewSize(nSlideAspectRatio: Double, aMaximumPreviewPixelSize: Size): Size = js.native
+  def calculatePreviewSize(nSlideAspectRatio: Double, aMaximumPreviewPixelSize: Size): Size
   /**
     * Create a preview for the given slide that has the same aspect ratio as the page and is as large as possible but not larger than the specified size.
     *
@@ -26,7 +25,7 @@ trait XSlideRenderer extends js.Object {
     * @param aMaximumPreviewPixelSize The maximum size of the preview measured in pixels. When the aspect ratios of this size and of the given slide differ, t
     * @param nSuperSampleFactor When larger than the default 1 then internally a larger preview is created which, before it is returned, is scaled down to the
     */
-  def createPreview(xSlide: XDrawPage, aMaximumPreviewPixelSize: Size, nSuperSampleFactor: Double): XBitmap = js.native
+  def createPreview(xSlide: XDrawPage, aMaximumPreviewPixelSize: Size, nSuperSampleFactor: Double): XBitmap
   /**
     * Exactly the same functionality as {@link createPreview()} , only a different return type: {@link com.sun.star.rendering.XBitmap} instead of {@link
     * com.sun.star.awt.XBitmap} .
@@ -36,7 +35,7 @@ trait XSlideRenderer extends js.Object {
     * @param xCanvas This canvas is used create a canvas specific bitmap.
     * @see createPreview
     */
-  def createPreviewForCanvas(xSlide: XDrawPage, aMaximumPreviewPixelSize: Size, nSuperSampleFactor: Double, xCanvas: XCanvas): typingsSlinky.activexLibreoffice.com_.sun.star.rendering.XBitmap = js.native
+  def createPreviewForCanvas(xSlide: XDrawPage, aMaximumPreviewPixelSize: Size, nSuperSampleFactor: Double, xCanvas: XCanvas): typingsSlinky.activexLibreoffice.com_.sun.star.rendering.XBitmap
 }
 
 object XSlideRenderer {
@@ -49,33 +48,5 @@ object XSlideRenderer {
     val __obj = js.Dynamic.literal(calculatePreviewSize = js.Any.fromFunction2(calculatePreviewSize), createPreview = js.Any.fromFunction3(createPreview), createPreviewForCanvas = js.Any.fromFunction4(createPreviewForCanvas))
     __obj.asInstanceOf[XSlideRenderer]
   }
-  @scala.inline
-  implicit class XSlideRendererOps[Self <: XSlideRenderer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalculatePreviewSize(value: (Double, Size) => Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatePreviewSize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreatePreview(value: (XDrawPage, Size, Double) => XBitmap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createPreview")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withCreatePreviewForCanvas(
-      value: (XDrawPage, Size, Double, XCanvas) => typingsSlinky.activexLibreoffice.com_.sun.star.rendering.XBitmap
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createPreviewForCanvas")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

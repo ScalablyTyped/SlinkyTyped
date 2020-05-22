@@ -18,11 +18,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadSnapshotsContext extends BaseContext {
-  var collection: String = js.native
-  var snapshotType: SnapshotType = js.native
-  var snapshots: js.Array[Snapshot] = js.native
+  var collection: String
+  var snapshotType: SnapshotType
+  var snapshots: js.Array[Snapshot]
 }
 
 object ReadSnapshotsContext {
@@ -38,31 +37,5 @@ object ReadSnapshotsContext {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], agent = agent.asInstanceOf[js.Any], backend = backend.asInstanceOf[js.Any], collection = collection.asInstanceOf[js.Any], snapshotType = snapshotType.asInstanceOf[js.Any], snapshots = snapshots.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadSnapshotsContext]
   }
-  @scala.inline
-  implicit class ReadSnapshotsContextOps[Self <: ReadSnapshotsContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnapshotType(value: SnapshotType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnapshots(value: js.Array[Snapshot]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import typingsSlinky.node.childProcessMod.ExecOptions
 import typingsSlinky.shipitCli.mod.EmptyCallback
 import typingsSlinky.shipitCli.mod.ShipitLocal
 import typingsSlinky.shipitCli.mod.Tasks_
-import typingsSlinky.shipitUtils.mod.GruntOrShipit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object anon extends js.Object {
   @js.native
-  trait Typeofshipit extends GruntOrShipit {
+  trait Typeofshipit extends js.Object {
     val domain: js.Any = js.native
     val doneCallback: js.Any = js.native
     val environment: String = js.native

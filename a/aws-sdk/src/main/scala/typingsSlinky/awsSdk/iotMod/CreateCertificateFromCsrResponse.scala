@@ -22,53 +22,16 @@ trait CreateCertificateFromCsrResponse extends js.Object {
 
 object CreateCertificateFromCsrResponse {
   @scala.inline
-  def apply(): CreateCertificateFromCsrResponse = {
+  def apply(
+    certificateArn: CertificateArn = null,
+    certificateId: CertificateId = null,
+    certificatePem: CertificatePem = null
+  ): CreateCertificateFromCsrResponse = {
     val __obj = js.Dynamic.literal()
+    if (certificateArn != null) __obj.updateDynamic("certificateArn")(certificateArn.asInstanceOf[js.Any])
+    if (certificateId != null) __obj.updateDynamic("certificateId")(certificateId.asInstanceOf[js.Any])
+    if (certificatePem != null) __obj.updateDynamic("certificatePem")(certificatePem.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCertificateFromCsrResponse]
   }
-  @scala.inline
-  implicit class CreateCertificateFromCsrResponseOps[Self <: CreateCertificateFromCsrResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateArn(value: CertificateArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateId(value: CertificateId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificatePem(value: CertificatePem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificatePem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePem")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

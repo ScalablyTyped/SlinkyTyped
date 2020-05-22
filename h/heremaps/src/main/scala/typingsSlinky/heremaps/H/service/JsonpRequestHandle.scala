@@ -8,10 +8,9 @@ import scala.scalajs.js.annotation._
   * @property id {number} - the ID associated internally with this request
   * @property cancel {function()} - this function cancels the request and invokes the errback function
   */
-@js.native
 trait JsonpRequestHandle extends js.Object {
-  var id: Double = js.native
-  def cancel(): Unit = js.native
+  var id: Double
+  def cancel(): Unit
 }
 
 object JsonpRequestHandle {
@@ -20,25 +19,5 @@ object JsonpRequestHandle {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction0(cancel), id = id.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsonpRequestHandle]
   }
-  @scala.inline
-  implicit class JsonpRequestHandleOps[Self <: JsonpRequestHandle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

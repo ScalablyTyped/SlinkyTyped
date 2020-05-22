@@ -16,54 +16,53 @@ import scala.scalajs.js.annotation._
   * @memberof PIXI.systems
   * @extends PIXI.System
   */
-@js.native
 trait TextureGCSystem extends System {
   /**
     * Check count
     * @member {number} PIXI.systems.TextureGCSystem#checkCount
     * @readonly
     */
-  val checkCount: Double = js.native
+  val checkCount: Double
   /**
     * Maximum number of item to check
     * @member {number} PIXI.systems.TextureGCSystem#checkCountMax
     * @see PIXI.settings.GC_MAX_CHECK_COUNT
     */
-  var checkCountMax: Double = js.native
+  var checkCountMax: Double
   /**
     * Count
     * @member {number} PIXI.systems.TextureGCSystem#count
     * @readonly
     */
-  val count: Double = js.native
+  val count: Double
   /**
     * Maximum idle time, in seconds
     * @member {number} PIXI.systems.TextureGCSystem#maxIdle
     * @see PIXI.settings.GC_MAX_IDLE
     */
-  var maxIdle: Double = js.native
+  var maxIdle: Double
   /**
     * Current garabage collection mode
     * @member {PIXI.GC_MODES} PIXI.systems.TextureGCSystem#mode
     * @see PIXI.settings.GC_MODE
     */
-  var mode: GC_MODES = js.native
+  var mode: GC_MODES
   /**
     * Checks to see when the last time a texture was used
     * if the texture has not been used for a specified amount of time it will be removed from the GPU
     */
-  def postrender(): Unit = js.native
+  def postrender(): Unit
   /**
     * Checks to see when the last time a texture was used
     * if the texture has not been used for a specified amount of time it will be removed from the GPU
     */
-  def run(): Unit = js.native
+  def run(): Unit
   /**
     * Removes all the textures within the specified displayObject and its children from the GPU
     *
     * @param {PIXI.DisplayObject} displayObject - the displayObject to remove the textures from.
     */
-  def unload(displayObject: DisplayObject): Unit = js.native
+  def unload(displayObject: DisplayObject): Unit
 }
 
 object TextureGCSystem {
@@ -83,61 +82,5 @@ object TextureGCSystem {
     val __obj = js.Dynamic.literal(checkCount = checkCount.asInstanceOf[js.Any], checkCountMax = checkCountMax.asInstanceOf[js.Any], count = count.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), maxIdle = maxIdle.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], postrender = js.Any.fromFunction0(postrender), renderer = renderer.asInstanceOf[js.Any], run = js.Any.fromFunction0(run), unload = js.Any.fromFunction1(unload))
     __obj.asInstanceOf[TextureGCSystem]
   }
-  @scala.inline
-  implicit class TextureGCSystemOps[Self <: TextureGCSystem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCheckCountMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkCountMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxIdle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIdle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMode(value: GC_MODES): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPostrender(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postrender")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRun(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUnload(value: DisplayObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unload")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

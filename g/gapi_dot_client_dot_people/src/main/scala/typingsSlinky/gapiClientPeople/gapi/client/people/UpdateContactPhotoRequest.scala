@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateContactPhotoRequest extends js.Object {
   /**
     * Optional. A field mask to restrict which fields on the person are returned. Multiple
@@ -41,48 +40,18 @@ trait UpdateContactPhotoRequest extends js.Object {
     * &#42; urls
     * &#42; userDefined
     */
-  var personFields: js.UndefOr[String] = js.native
+  var personFields: js.UndefOr[String] = js.undefined
   /** Required. Raw photo bytes */
-  var photoBytes: js.UndefOr[String] = js.native
+  var photoBytes: js.UndefOr[String] = js.undefined
 }
 
 object UpdateContactPhotoRequest {
   @scala.inline
-  def apply(): UpdateContactPhotoRequest = {
+  def apply(personFields: String = null, photoBytes: String = null): UpdateContactPhotoRequest = {
     val __obj = js.Dynamic.literal()
+    if (personFields != null) __obj.updateDynamic("personFields")(personFields.asInstanceOf[js.Any])
+    if (photoBytes != null) __obj.updateDynamic("photoBytes")(photoBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateContactPhotoRequest]
   }
-  @scala.inline
-  implicit class UpdateContactPhotoRequestOps[Self <: UpdateContactPhotoRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPersonFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersonFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhotoBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhotoBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoBytes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

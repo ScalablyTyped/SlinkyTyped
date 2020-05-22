@@ -5,112 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CacheConfig extends js.Object {
-  var force: js.UndefOr[Boolean | Null] = js.native
-  var liveConfigId: js.UndefOr[String | Null] = js.native
-  var metadata: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var poll: js.UndefOr[Double | Null] = js.native
-  var transactionId: js.UndefOr[String | Null] = js.native
+  var force: js.UndefOr[Boolean | Null] = js.undefined
+  var liveConfigId: js.UndefOr[String | Null] = js.undefined
+  var metadata: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var poll: js.UndefOr[Double | Null] = js.undefined
+  var transactionId: js.UndefOr[String | Null] = js.undefined
 }
 
 object CacheConfig {
   @scala.inline
-  def apply(): CacheConfig = {
+  def apply(
+    force: js.UndefOr[Null | Boolean] = js.undefined,
+    liveConfigId: js.UndefOr[Null | String] = js.undefined,
+    metadata: StringDictionary[js.Any] = null,
+    poll: js.UndefOr[Null | Double] = js.undefined,
+    transactionId: js.UndefOr[Null | String] = js.undefined
+  ): CacheConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
+    if (!js.isUndefined(liveConfigId)) __obj.updateDynamic("liveConfigId")(liveConfigId.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(poll)) __obj.updateDynamic("poll")(poll.asInstanceOf[js.Any])
+    if (!js.isUndefined(transactionId)) __obj.updateDynamic("transactionId")(transactionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheConfig]
   }
-  @scala.inline
-  implicit class CacheConfigOps[Self <: CacheConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(null)
-        ret
-    }
-    @scala.inline
-    def withLiveConfigId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveConfigId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveConfigId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveConfigId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveConfigIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveConfigId")(null)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoll(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPollNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poll")(null)
-        ret
-    }
-    @scala.inline
-    def withTransactionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(null)
-        ret
-    }
-  }
-  
 }
 

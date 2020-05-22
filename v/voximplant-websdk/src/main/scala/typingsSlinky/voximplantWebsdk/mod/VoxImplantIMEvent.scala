@@ -1,38 +1,5 @@
 package typingsSlinky.voximplantWebsdk.mod
 
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatHistoryReceived
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomBanList
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomCreated
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomError
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomHistoryReceived
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomInvitation
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomInviteDeclined
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomMessageModified
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomMessageNotModified
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomMessageReceived
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomMessageRemoved
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomNewParticipant
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomOperation
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomParticipantExit
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomParticipants
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomPresenceUpdate
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomStateUpdate
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomSubjectChange
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomsDataReceived
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatStateUpdate
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.MessageModified
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.MessageNotModified
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.MessageReceived
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.MessageRemoved
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.MessageStatus
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.PresenceUpdate
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.RosterItemChange
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.RosterPresenceUpdate
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.RosterReceived
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.SubscriptionRequest
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.SystemError
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.UCConnected
-import typingsSlinky.voximplantWebsdk.mod.IMEventTypes.UCDisconnected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -77,72 +44,210 @@ trait VoxImplantIMEvent extends js.Object
 
 object VoxImplantIMEvent {
   @scala.inline
-  implicit def apply(value: ChatHistoryReceived): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatHistoryReceived(id: String, message_id: String, messages: js.Array[IMHistoryMessage]): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], messages = messages.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomBanList): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomError(code: String, operation: String, room: String, text: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomCreated): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomMessageModified(
+    content: String,
+    from: String,
+    message_id: String,
+    private_message: String,
+    resource: String,
+    room: String,
+    timestamp: String
+  ): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], private_message = private_message.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomError): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomMessageNotModified(code: Double, message_id: String, private_message: String, room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], private_message = private_message.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomHistoryReceived): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomOperation(operation: ChatRoomOperationType, result: Boolean, room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(operation = operation.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomInfo): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def MessageStatus(id: String, message_id: String, `type`: MessageEventType, resource: String = null): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomInvitation): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomMessageReceived(
+    content: String,
+    from: String,
+    message_id: String,
+    private_message: String,
+    resource: String,
+    room: String,
+    timestamp: String
+  ): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], private_message = private_message.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomInviteDeclined): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatStateUpdate(id: String, state: ChatStateType, resource: String = null): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomMessageModified): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomParticipantExit(participant: String, room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(participant = participant.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomMessageNotModified): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def SystemError(errorData: js.Object, errorType: IMErrorType): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(errorData = errorData.asInstanceOf[js.Any], errorType = errorType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomMessageReceived): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def PresenceUpdate(id: String, message: String, presence: UserStatuses, resource: String = null): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], presence = presence.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomMessageRemoved): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomBanList(participants: js.Array[ChatRoomParticipant], room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(participants = participants.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomNewParticipant): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomParticipants(participants: js.Array[ChatRoomParticipant], room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(participants = participants.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomOperation): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def MessageModified(content: String, id: String, message_id: String, to: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomParticipantExit): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomSubjectChange(id: String, resource: String, room: String, subject: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomParticipants): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomInviteDeclined(invitee: String, reason: String, room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(invitee = invitee.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomPresenceUpdate): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomStateUpdate(from: String, resource: String, room: String, state: ChatStateType): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomStateUpdate): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomPresenceUpdate(message: String, participant: ParticipantInfo, presence: UserStatuses, room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], participant = participant.asInstanceOf[js.Any], presence = presence.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomSubjectChange): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def MessageNotModified(code: Double, message_id: String, to: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatRoomsDataReceived): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomInfo(
+    features: Double,
+    info: typingsSlinky.voximplantWebsdk.mod.IMEventTypes.ChatRoomInfo,
+    room: String,
+    room_name: String
+  ): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(features = features.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], room_name = room_name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: ChatStateUpdate): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def SubscriptionRequest(id: String, `type`: SubscriptionRequestType, message: String = null, resource: String = null): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: MessageModified): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomMessageRemoved(
+    from: String,
+    message_id: String,
+    private_message: String,
+    resource: String,
+    room: String,
+    timestamp: String
+  ): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], private_message = private_message.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: MessageNotModified): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomHistoryReceived(message_id: String, messages: js.Array[IMHistoryMessage], room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(message_id = message_id.asInstanceOf[js.Any], messages = messages.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: MessageReceived): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def RosterReceived(id: String, roster: js.Array[RosterItem]): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], roster = roster.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: MessageRemoved): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def MessageRemoved(id: String, message_id: String, to: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: MessageStatus): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomsDataReceived(rooms: js.Array[ChatRoom]): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(rooms = rooms.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: PresenceUpdate): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomNewParticipant(displayName: String, participant: String, room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], participant = participant.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: RosterItemChange): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def MessageReceived(content: String, id: String, message_id: String, to: String, resource: String = null): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: RosterPresenceUpdate): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def RosterPresenceUpdate(id: String, presence: UserStatuses, message: String = null, resource: String = null): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], presence = presence.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: RosterReceived): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomCreated(room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: SubscriptionRequest): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def ChatRoomInvitation(body: String, from: String, password: String, reason: String, room: String): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
   @scala.inline
-  implicit def apply(value: SystemError): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
-  @scala.inline
-  implicit def apply(value: UCConnected): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
-  @scala.inline
-  implicit def apply(value: UCDisconnected): VoxImplantIMEvent = value.asInstanceOf[VoxImplantIMEvent]
+  def RosterItemChange(
+    displayName: String,
+    groups: js.Array[String],
+    id: String,
+    `type`: RosterItemEvent,
+    resource: String = null
+  ): VoxImplantIMEvent = {
+    val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], groups = groups.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantIMEvent]
+  }
 }
 

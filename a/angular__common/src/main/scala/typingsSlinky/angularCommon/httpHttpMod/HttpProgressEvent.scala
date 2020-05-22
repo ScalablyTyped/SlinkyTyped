@@ -6,62 +6,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpProgressEvent
   extends HttpEvent[js.Any] {
   /**
     * Number of bytes uploaded or downloaded.
     */
-  var loaded: Double = js.native
+  var loaded: Double
   /**
     * Total number of bytes to upload or download. Depending on the request or
     * response, this may not be computable and thus may not be present.
     */
-  var total: js.UndefOr[Double] = js.native
+  var total: js.UndefOr[Double] = js.undefined
   /**
     * Progress event type is either upload or download.
     */
-  var `type`: DownloadProgress | UploadProgress = js.native
+  var `type`: DownloadProgress | UploadProgress
 }
 
 object HttpProgressEvent {
   @scala.inline
-  def apply(loaded: Double, `type`: DownloadProgress | UploadProgress): HttpProgressEvent = {
+  def apply(
+    loaded: Double,
+    `type`: DownloadProgress | UploadProgress,
+    total: js.UndefOr[Double] = js.undefined
+  ): HttpProgressEvent = {
     val __obj = js.Dynamic.literal(loaded = loaded.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(total)) __obj.updateDynamic("total")(total.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpProgressEvent]
   }
-  @scala.inline
-  implicit class HttpProgressEventOps[Self <: HttpProgressEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoaded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: DownloadProgress | UploadProgress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

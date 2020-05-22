@@ -22,53 +22,16 @@ trait Subscription extends js.Object {
 
 object Subscription {
   @scala.inline
-  def apply(): Subscription = {
+  def apply(
+    EndPoint: SubscriptionEndPointType = null,
+    Protocol: SubscriptionProtocolType = null,
+    SubscriptionId: IdType = null
+  ): Subscription = {
     val __obj = js.Dynamic.literal()
+    if (EndPoint != null) __obj.updateDynamic("EndPoint")(EndPoint.asInstanceOf[js.Any])
+    if (Protocol != null) __obj.updateDynamic("Protocol")(Protocol.asInstanceOf[js.Any])
+    if (SubscriptionId != null) __obj.updateDynamic("SubscriptionId")(SubscriptionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Subscription]
   }
-  @scala.inline
-  implicit class SubscriptionOps[Self <: Subscription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndPoint(value: SubscriptionEndPointType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: SubscriptionProtocolType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscriptionId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscriptionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

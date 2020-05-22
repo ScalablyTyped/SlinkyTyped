@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the event arguments for the CastingDeviceSelected event on the CastingDevicePicker object. */
-@js.native
 trait CastingDeviceSelectedEventArgs extends js.Object {
   /** Represents the CastingDevice that has been selected by the user in a casting device picker. */
-  var selectedCastingDevice: CastingDevice = js.native
+  var selectedCastingDevice: CastingDevice
 }
 
 object CastingDeviceSelectedEventArgs {
@@ -17,19 +16,5 @@ object CastingDeviceSelectedEventArgs {
     val __obj = js.Dynamic.literal(selectedCastingDevice = selectedCastingDevice.asInstanceOf[js.Any])
     __obj.asInstanceOf[CastingDeviceSelectedEventArgs]
   }
-  @scala.inline
-  implicit class CastingDeviceSelectedEventArgsOps[Self <: CastingDeviceSelectedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelectedCastingDevice(value: CastingDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedCastingDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

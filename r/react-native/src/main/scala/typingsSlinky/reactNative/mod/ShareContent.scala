@@ -1,7 +1,5 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.anon.Message
-import typingsSlinky.reactNative.anon.Title
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,16 @@ trait ShareContent extends js.Object
 
 object ShareContent {
   @scala.inline
-  implicit def apply(value: Message): ShareContent = value.asInstanceOf[ShareContent]
+  def Message(message: String, title: String = null): ShareContent = {
+    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ShareContent]
+  }
   @scala.inline
-  implicit def apply(value: Title): ShareContent = value.asInstanceOf[ShareContent]
+  def Title(url: String, title: String = null): ShareContent = {
+    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ShareContent]
+  }
 }
 

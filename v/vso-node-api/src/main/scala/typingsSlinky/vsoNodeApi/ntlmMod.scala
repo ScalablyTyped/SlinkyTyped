@@ -1,5 +1,6 @@
 package typingsSlinky.vsoNodeApi
 
+import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IHttpResponse
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +18,12 @@ object ntlmMod extends js.Object {
     var password: String = js.native
     var username: String = js.native
     var workstation: String = js.native
+    /* CompleteClass */
+    override def canHandleAuthentication(res: IHttpResponse): Boolean = js.native
+    /* CompleteClass */
+    override def handleAuthentication(httpClient: js.Any, protocol: js.Any, options: js.Any, objs: js.Any, finalCallback: js.Any): Unit = js.native
+    /* CompleteClass */
+    override def prepareRequest(options: js.Any): Unit = js.native
     /* private */ def sendType1Message(
       httpClient: js.Any,
       protocol: js.Any,

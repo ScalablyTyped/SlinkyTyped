@@ -72,5 +72,10 @@ class SpritePackedManager protected ()
     epsilon: Double,
     samplingMode: Double
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

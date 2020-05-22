@@ -5,114 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProducerMessage extends js.Object {
   /**
     * The actual data payload of the message.
     */
-  var data: Buffer = js.native
+  var data: Buffer
   /**
     * The timestamp associated with the message.
     */
-  var eventTimestamp: js.UndefOr[Double] = js.native
+  var eventTimestamp: js.UndefOr[Double] = js.undefined
   /**
     * The optional key associated with the message (particularly useful for things like topic compaction).
     */
-  var partitionKey: js.UndefOr[String] = js.native
+  var partitionKey: js.UndefOr[String] = js.undefined
   /**
     * A Object for any application-specific metadata attached to the message.
     */
-  var properties: js.UndefOr[MessageProperties] = js.native
+  var properties: js.UndefOr[MessageProperties] = js.undefined
   /**
     * The clusters to which this message will be replicated. Pulsar brokers handle message replication automatically;
     * you should only change this setting if you want to override the broker default.
     */
-  var replicationClusters: js.UndefOr[js.Array[String]] = js.native
+  var replicationClusters: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The sequence ID of the message.
     */
-  var sequenceId: js.UndefOr[Double] = js.native
+  var sequenceId: js.UndefOr[Double] = js.undefined
 }
 
 object ProducerMessage {
   @scala.inline
-  def apply(data: Buffer): ProducerMessage = {
+  def apply(
+    data: Buffer,
+    eventTimestamp: js.UndefOr[Double] = js.undefined,
+    partitionKey: String = null,
+    properties: MessageProperties = null,
+    replicationClusters: js.Array[String] = null,
+    sequenceId: js.UndefOr[Double] = js.undefined
+  ): ProducerMessage = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (!js.isUndefined(eventTimestamp)) __obj.updateDynamic("eventTimestamp")(eventTimestamp.get.asInstanceOf[js.Any])
+    if (partitionKey != null) __obj.updateDynamic("partitionKey")(partitionKey.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (replicationClusters != null) __obj.updateDynamic("replicationClusters")(replicationClusters.asInstanceOf[js.Any])
+    if (!js.isUndefined(sequenceId)) __obj.updateDynamic("sequenceId")(sequenceId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProducerMessage]
   }
-  @scala.inline
-  implicit class ProducerMessageOps[Self <: ProducerMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventTimestamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: MessageProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicationClusters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationClusters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationClusters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationClusters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSequenceId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequenceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSequenceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequenceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

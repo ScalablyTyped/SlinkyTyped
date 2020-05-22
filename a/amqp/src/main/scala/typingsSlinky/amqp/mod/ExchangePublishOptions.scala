@@ -14,43 +14,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExchangePublishOptions extends js.Object {
   /**
     * Default: null
     *
     * Creating application id
     */
-  var appId: js.UndefOr[String] = js.native
+  var appId: js.UndefOr[String] = js.undefined
   /**
     * Default: null
     */
-  var contentEncoding: js.UndefOr[String] = js.native
+  var contentEncoding: js.UndefOr[String] = js.undefined
   /**
     * Default: 'application/octet-stream'
     */
-  var contentType: js.UndefOr[String] = js.native
+  var contentType: js.UndefOr[String] = js.undefined
   /**
     * Application correlation identifier
     */
-  var correlationId: js.UndefOr[String] = js.native
+  var correlationId: js.UndefOr[String] = js.undefined
   /**
     * 1: Non-persistent
     * 2: Persistent
     */
-  var deliveryMode: js.UndefOr[`1` | `2`] = js.native
+  var deliveryMode: js.UndefOr[`1` | `2`] = js.undefined
   /**
     * Default: null
     *
     * Message expiration specification -- ISO date string?
     */
-  var expiration: js.UndefOr[String] = js.native
+  var expiration: js.UndefOr[String] = js.undefined
   /**
     * Default: {}
     *
     * Arbitrary application-specific message headers
     */
-  var headers: js.UndefOr[js.Any] = js.native
+  var headers: js.UndefOr[js.Any] = js.undefined
   /**
     * Default: false
     *
@@ -60,7 +59,7 @@ trait ExchangePublishOptions extends js.Object {
     *
     * If this flag is false, the server will queue the message, but with no guarantee that it will ever be consumed
     */
-  var immediate: js.UndefOr[Boolean] = js.native
+  var immediate: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: false
     *
@@ -70,18 +69,18 @@ trait ExchangePublishOptions extends js.Object {
     *
     * If this flag is false, the server silently drops the message
     */
-  var mandatory: js.UndefOr[Boolean] = js.native
+  var mandatory: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: null
     *
     * Application message identifier
     */
-  var messageId: js.UndefOr[String] = js.native
-  var priority: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9`] = js.native
+  var messageId: js.UndefOr[String] = js.undefined
+  var priority: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9`] = js.undefined
   /**
     * Usually used to name a reply queue for a request message
     */
-  var replyTo: js.UndefOr[String] = js.native
+  var replyTo: js.UndefOr[String] = js.undefined
   /**
     * Default: null
     *
@@ -89,214 +88,57 @@ trait ExchangePublishOptions extends js.Object {
     *
     * ISO date string?
     */
-  var timestamp: js.UndefOr[String] = js.native
+  var timestamp: js.UndefOr[String] = js.undefined
   /**
     * Default: null
     *
     * Message type name
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * Default: null
     *
     * Creating user id
     */
-  var userId: js.UndefOr[String] = js.native
+  var userId: js.UndefOr[String] = js.undefined
 }
 
 object ExchangePublishOptions {
   @scala.inline
-  def apply(): ExchangePublishOptions = {
+  def apply(
+    appId: String = null,
+    contentEncoding: String = null,
+    contentType: String = null,
+    correlationId: String = null,
+    deliveryMode: `1` | `2` = null,
+    expiration: String = null,
+    headers: js.Any = null,
+    immediate: js.UndefOr[Boolean] = js.undefined,
+    mandatory: js.UndefOr[Boolean] = js.undefined,
+    messageId: String = null,
+    priority: `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` = null,
+    replyTo: String = null,
+    timestamp: String = null,
+    `type`: String = null,
+    userId: String = null
+  ): ExchangePublishOptions = {
     val __obj = js.Dynamic.literal()
+    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
+    if (contentEncoding != null) __obj.updateDynamic("contentEncoding")(contentEncoding.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (correlationId != null) __obj.updateDynamic("correlationId")(correlationId.asInstanceOf[js.Any])
+    if (deliveryMode != null) __obj.updateDynamic("deliveryMode")(deliveryMode.asInstanceOf[js.Any])
+    if (expiration != null) __obj.updateDynamic("expiration")(expiration.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mandatory)) __obj.updateDynamic("mandatory")(mandatory.get.asInstanceOf[js.Any])
+    if (messageId != null) __obj.updateDynamic("messageId")(messageId.asInstanceOf[js.Any])
+    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
+    if (replyTo != null) __obj.updateDynamic("replyTo")(replyTo.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExchangePublishOptions]
   }
-  @scala.inline
-  implicit class ExchangePublishOptionsOps[Self <: ExchangePublishOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCorrelationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCorrelationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeliveryMode(value: `1` | `2`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeliveryMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImmediate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("immediate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImmediate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("immediate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMandatory(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mandatory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMandatory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mandatory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplyTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

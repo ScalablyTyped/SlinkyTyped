@@ -18,41 +18,11 @@ trait ListTypeRegistrationsOutput extends js.Object {
 
 object ListTypeRegistrationsOutput {
   @scala.inline
-  def apply(): ListTypeRegistrationsOutput = {
+  def apply(NextToken: NextToken = null, RegistrationTokenList: RegistrationTokenList = null): ListTypeRegistrationsOutput = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (RegistrationTokenList != null) __obj.updateDynamic("RegistrationTokenList")(RegistrationTokenList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTypeRegistrationsOutput]
   }
-  @scala.inline
-  implicit class ListTypeRegistrationsOutputOps[Self <: ListTypeRegistrationsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrationTokenList(value: RegistrationTokenList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationTokenList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationTokenList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationTokenList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

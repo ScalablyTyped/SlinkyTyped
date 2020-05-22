@@ -28,116 +28,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InputModifierProps extends js.Object {
   var color: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link
-  ] = js.native
-  var readOnly: js.UndefOr[Boolean] = js.native
-  var rounded: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[small | medium | large] = js.native
-  var state: js.UndefOr[focused | hovered] = js.native
-  var static: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[text | email | tel | password | number | search | color | date | time] = js.native
+  ] = js.undefined
+  var readOnly: js.UndefOr[Boolean] = js.undefined
+  var rounded: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[small | medium | large] = js.undefined
+  var state: js.UndefOr[focused | hovered] = js.undefined
+  var static: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[text | email | tel | password | number | search | color | date | time] = js.undefined
 }
 
 object InputModifierProps {
   @scala.inline
-  def apply(): InputModifierProps = {
+  def apply(
+    color: primary | success | info | warning | danger | light | dark | white | black | link = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    rounded: js.UndefOr[Boolean] = js.undefined,
+    size: small | medium | large = null,
+    state: focused | hovered = null,
+    static: js.UndefOr[Boolean] = js.undefined,
+    `type`: text | email | tel | password | number | search | color | date | time = null
+  ): InputModifierProps = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rounded)) __obj.updateDynamic("rounded")(rounded.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (!js.isUndefined(static)) __obj.updateDynamic("static")(static.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputModifierProps]
   }
-  @scala.inline
-  implicit class InputModifierPropsOps[Self <: InputModifierProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: primary | success | info | warning | danger | light | dark | white | black | link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRounded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRounded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: small | medium | large): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: focused | hovered): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: text | email | tel | password | number | search | color | date | time): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,70 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceAndDestination extends js.Object {
   /** The dimension that data should be filled into. */
-  var dimension: js.UndefOr[String] = js.native
+  var dimension: js.UndefOr[String] = js.undefined
   /**
     * The number of rows or columns that data should be filled into.
     * Positive numbers expand beyond the last row or last column
     * of the source.  Negative numbers expand before the first row
     * or first column of the source.
     */
-  var fillLength: js.UndefOr[Double] = js.native
+  var fillLength: js.UndefOr[Double] = js.undefined
   /** The location of the data to use as the source of the autofill. */
-  var source: js.UndefOr[GridRange] = js.native
+  var source: js.UndefOr[GridRange] = js.undefined
 }
 
 object SourceAndDestination {
   @scala.inline
-  def apply(): SourceAndDestination = {
+  def apply(dimension: String = null, fillLength: js.UndefOr[Double] = js.undefined, source: GridRange = null): SourceAndDestination = {
     val __obj = js.Dynamic.literal()
+    if (dimension != null) __obj.updateDynamic("dimension")(dimension.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillLength)) __obj.updateDynamic("fillLength")(fillLength.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceAndDestination]
   }
-  @scala.inline
-  implicit class SourceAndDestinationOps[Self <: SourceAndDestination] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: GridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

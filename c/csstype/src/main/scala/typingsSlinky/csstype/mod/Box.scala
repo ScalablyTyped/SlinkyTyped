@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`padding-box`
 */
 trait Box
-  extends FinalBgLayer[js.Any]
-     with BackgroundClipProperty
-     with BackgroundOriginProperty
-     with ShapeOutsideProperty
-     with WebkitMaskClipProperty
-     with WebkitMaskOriginProperty
-     with WebkitMaskProperty[js.Any]
+  extends _FinalBgLayer[js.Any]
+     with _BackgroundClipProperty
+     with _BackgroundOriginProperty
+     with _ShapeOutsideProperty
+     with _WebkitMaskClipProperty
+     with _WebkitMaskOriginProperty
+     with _WebkitMaskProperty[js.Any]
 
 object Box {
   @scala.inline

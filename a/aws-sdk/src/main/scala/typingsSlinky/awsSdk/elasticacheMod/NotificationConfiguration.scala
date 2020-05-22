@@ -18,41 +18,11 @@ trait NotificationConfiguration extends js.Object {
 
 object NotificationConfiguration {
   @scala.inline
-  def apply(): NotificationConfiguration = {
+  def apply(TopicArn: String = null, TopicStatus: String = null): NotificationConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (TopicArn != null) __obj.updateDynamic("TopicArn")(TopicArn.asInstanceOf[js.Any])
+    if (TopicStatus != null) __obj.updateDynamic("TopicStatus")(TopicStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationConfiguration]
   }
-  @scala.inline
-  implicit class NotificationConfigurationOps[Self <: NotificationConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTopicArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

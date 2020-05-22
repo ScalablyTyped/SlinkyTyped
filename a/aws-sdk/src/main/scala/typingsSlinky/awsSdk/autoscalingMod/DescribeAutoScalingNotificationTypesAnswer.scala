@@ -14,29 +14,10 @@ trait DescribeAutoScalingNotificationTypesAnswer extends js.Object {
 
 object DescribeAutoScalingNotificationTypesAnswer {
   @scala.inline
-  def apply(): DescribeAutoScalingNotificationTypesAnswer = {
+  def apply(AutoScalingNotificationTypes: AutoScalingNotificationTypes = null): DescribeAutoScalingNotificationTypesAnswer = {
     val __obj = js.Dynamic.literal()
+    if (AutoScalingNotificationTypes != null) __obj.updateDynamic("AutoScalingNotificationTypes")(AutoScalingNotificationTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAutoScalingNotificationTypesAnswer]
   }
-  @scala.inline
-  implicit class DescribeAutoScalingNotificationTypesAnswerOps[Self <: DescribeAutoScalingNotificationTypesAnswer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingNotificationTypes(value: AutoScalingNotificationTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingNotificationTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingNotificationTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingNotificationTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

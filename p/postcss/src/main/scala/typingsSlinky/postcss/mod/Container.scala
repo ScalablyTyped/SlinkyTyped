@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait Container extends js.Object
 
-object Container {
-  @scala.inline
-  implicit def apply(value: AtRule_): Container = value.asInstanceOf[Container]
-  @scala.inline
-  implicit def apply(value: Root_): Container = value.asInstanceOf[Container]
-  @scala.inline
-  implicit def apply(value: Rule_): Container = value.asInstanceOf[Container]
-}
-

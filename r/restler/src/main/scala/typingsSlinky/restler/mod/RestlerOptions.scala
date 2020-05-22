@@ -8,313 +8,135 @@ import scala.scalajs.js.annotation._
   * Interface for restler options.
   * @interface
   */
-@js.native
 trait RestlerOptions extends js.Object {
   /**
     * OAuth Bearer Token.
     * @type {string}
     */
-  var accessToken: js.UndefOr[String] = js.native
+  var accessToken: js.UndefOr[String] = js.undefined
   /**
     *  HTTP Agent instance to use. If not defined globalAgent will be used. If false opts out of connection pooling with an Agent, defaults request to Connection: close.
     * @type {any}
     */
-  var agent: js.UndefOr[js.Any] = js.native
+  var agent: js.UndefOr[js.Any] = js.undefined
   /**
     * A http.Client instance if you want to reuse or implement some kind of connection pooling.
     * @type {any}
     */
-  var client: js.UndefOr[js.Any] = js.native
+  var client: js.UndefOr[js.Any] = js.undefined
   /**
     * Data to be added to the body of the request.
     * @type {any}
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /**
     * Encoding of the response body
     * @type {string}
     */
-  var decoding: js.UndefOr[String] = js.native
+  var decoding: js.UndefOr[String] = js.undefined
   /**
     * Encoding of the request body.
     * @type {string}
     */
-  var encoding: js.UndefOr[String] = js.native
+  var encoding: js.UndefOr[String] = js.undefined
   /**
     * If set will recursively follow redirects.
     * @type {boolean}
     */
-  var followRedirects: js.UndefOr[Boolean] = js.native
+  var followRedirects: js.UndefOr[Boolean] = js.undefined
   /**
     * A hash of HTTP headers to be sent.
     * @type {RestlerOptionsHeader}
     */
-  var headers: js.UndefOr[RestlerOptionsHeader] = js.native
+  var headers: js.UndefOr[RestlerOptionsHeader] = js.undefined
   /**
     * Request method
     * @type {string}
     */
-  var method: js.UndefOr[String] = js.native
+  var method: js.UndefOr[String] = js.undefined
   /**
     * If set the data passed will be formatted as <code>multipart/form-encoded</code>.
     * @type {boolean}
     */
-  var multipart: js.UndefOr[Boolean] = js.native
+  var multipart: js.UndefOr[Boolean] = js.undefined
   /**
     * A function that will be called on the returned data. Use any of predefined <code>restler.parsers</code>.
     * @type {any}
     */
-  var parser: js.UndefOr[js.Any] = js.native
+  var parser: js.UndefOr[js.Any] = js.undefined
   /**
     * Basic auth password.
     * @type {string}
     */
-  var password: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String] = js.undefined
   /**
     * Query string variables as a javascript object, will override the querystring in the URL.
     * @type {any}
     */
-  var query: js.UndefOr[js.Any] = js.native
+  var query: js.UndefOr[js.Any] = js.undefined
   /**
     * If true, the server certificate is verified against the list of supplied CAs.
     * An 'error' event is emitted if verification fails. Verification happens at the connection level, before the HTTP request is sent.
     * @type {boolean}
     */
-  var rejectUnauthorized: js.UndefOr[Boolean] = js.native
+  var rejectUnauthorized: js.UndefOr[Boolean] = js.undefined
   /**
     * Emit the timeout event when the response does not return within the said value (in ms).
     * @type {number}
     */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
   /**
     * Basic auth username.
     * @type {string}
     */
-  var username: js.UndefOr[String] = js.native
+  var username: js.UndefOr[String] = js.undefined
   /**
     * Options for xml2js.
     * @type {any}
     */
-  var xml2js: js.UndefOr[js.Any] = js.native
+  var xml2js: js.UndefOr[js.Any] = js.undefined
 }
 
 object RestlerOptions {
   @scala.inline
-  def apply(): RestlerOptions = {
+  def apply(
+    accessToken: String = null,
+    agent: js.Any = null,
+    client: js.Any = null,
+    data: js.Any = null,
+    decoding: String = null,
+    encoding: String = null,
+    followRedirects: js.UndefOr[Boolean] = js.undefined,
+    headers: RestlerOptionsHeader = null,
+    method: String = null,
+    multipart: js.UndefOr[Boolean] = js.undefined,
+    parser: js.Any = null,
+    password: String = null,
+    query: js.Any = null,
+    rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    username: String = null,
+    xml2js: js.Any = null
+  ): RestlerOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
+    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (decoding != null) __obj.updateDynamic("decoding")(decoding.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(followRedirects)) __obj.updateDynamic("followRedirects")(followRedirects.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(multipart)) __obj.updateDynamic("multipart")(multipart.get.asInstanceOf[js.Any])
+    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
+    if (xml2js != null) __obj.updateDynamic("xml2js")(xml2js.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestlerOptions]
   }
-  @scala.inline
-  implicit class RestlerOptionsOps[Self <: RestlerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowRedirects(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowRedirects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: RestlerOptionsHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultipart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultipart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParser(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRejectUnauthorized(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectUnauthorized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRejectUnauthorized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectUnauthorized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXml2js(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml2js")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXml2js: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml2js")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

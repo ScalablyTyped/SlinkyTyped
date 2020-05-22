@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetRightsizingRecommendationResponse extends js.Object {
   /**
+    * Enables you to customize recommendations across two attributes. You can choose to view recommendations for instances within the same instance families or across different instance families. You can also choose to view your estimated savings associated with recommendations with consideration of existing Savings Plans or RI benefits, or niether. 
+    */
+  var Configuration: js.UndefOr[RightsizingRecommendationConfiguration] = js.native
+  /**
     * Information regarding this specific recommendation set.
     */
   var Metadata: js.UndefOr[RightsizingRecommendationMetadata] = js.native
@@ -26,65 +30,20 @@ trait GetRightsizingRecommendationResponse extends js.Object {
 
 object GetRightsizingRecommendationResponse {
   @scala.inline
-  def apply(): GetRightsizingRecommendationResponse = {
+  def apply(
+    Configuration: RightsizingRecommendationConfiguration = null,
+    Metadata: RightsizingRecommendationMetadata = null,
+    NextPageToken: NextPageToken = null,
+    RightsizingRecommendations: RightsizingRecommendationList = null,
+    Summary: RightsizingRecommendationSummary = null
+  ): GetRightsizingRecommendationResponse = {
     val __obj = js.Dynamic.literal()
+    if (Configuration != null) __obj.updateDynamic("Configuration")(Configuration.asInstanceOf[js.Any])
+    if (Metadata != null) __obj.updateDynamic("Metadata")(Metadata.asInstanceOf[js.Any])
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
+    if (RightsizingRecommendations != null) __obj.updateDynamic("RightsizingRecommendations")(RightsizingRecommendations.asInstanceOf[js.Any])
+    if (Summary != null) __obj.updateDynamic("Summary")(Summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRightsizingRecommendationResponse]
   }
-  @scala.inline
-  implicit class GetRightsizingRecommendationResponseOps[Self <: GetRightsizingRecommendationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetadata(value: RightsizingRecommendationMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: NextPageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightsizingRecommendations(value: RightsizingRecommendationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RightsizingRecommendations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightsizingRecommendations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RightsizingRecommendations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: RightsizingRecommendationSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

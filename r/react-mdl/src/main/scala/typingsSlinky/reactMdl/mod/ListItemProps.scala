@@ -6,51 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListItemProps
   extends AllHTMLAttributes[js.Any]
      with ClassAttributes[js.Any] {
-  var threeLine: js.UndefOr[Boolean] = js.native
-  var twoLine: js.UndefOr[Boolean] = js.native
+  var threeLine: js.UndefOr[Boolean] = js.undefined
+  var twoLine: js.UndefOr[Boolean] = js.undefined
 }
 
 object ListItemProps {
   @scala.inline
-  def apply(): ListItemProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[js.Any] = null,
+    ClassAttributes: ClassAttributes[js.Any] = null,
+    threeLine: js.UndefOr[Boolean] = js.undefined,
+    twoLine: js.UndefOr[Boolean] = js.undefined
+  ): ListItemProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (!js.isUndefined(threeLine)) __obj.updateDynamic("threeLine")(threeLine.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(twoLine)) __obj.updateDynamic("twoLine")(twoLine.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItemProps]
   }
-  @scala.inline
-  implicit class ListItemPropsOps[Self <: ListItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withThreeLine(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threeLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreeLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threeLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTwoLine(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twoLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTwoLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twoLine")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

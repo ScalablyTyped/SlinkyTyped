@@ -1,5 +1,6 @@
 package typingsSlinky.fortawesomeFontawesomeSvgCore.mod
 
+import org.scalajs.dom.raw.HTMLCollection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +13,16 @@ trait IconOrText extends js.Object
 
 object IconOrText {
   @scala.inline
-  implicit def apply(value: Icon_): IconOrText = value.asInstanceOf[IconOrText]
-  @scala.inline
-  implicit def apply(value: Text_): IconOrText = value.asInstanceOf[IconOrText]
+  def Text_(
+    `abstract`: js.Array[AbstractElement],
+    html: js.Array[String],
+    node: HTMLCollection,
+    `type`: typingsSlinky.fortawesomeFontawesomeSvgCore.fortawesomeFontawesomeSvgCoreStrings.text
+  ): IconOrText = {
+    val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
+    __obj.updateDynamic("abstract")(`abstract`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IconOrText]
+  }
 }
 

@@ -5,264 +5,71 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined amqplib.amqplib.Options.Publish & {  key  :string,   reply ? :@pager/jackrabbit.@pager/jackrabbit.AckCallback} */
-@js.native
 trait PublishOptions extends js.Object {
-  var BCC: js.UndefOr[String | js.Array[String]] = js.native
-  var CC: js.UndefOr[String | js.Array[String]] = js.native
-  var appId: js.UndefOr[String] = js.native
-  var contentEncoding: js.UndefOr[String] = js.native
-  var contentType: js.UndefOr[String] = js.native
-  var correlationId: js.UndefOr[String] = js.native
-  var deliveryMode: js.UndefOr[Boolean | Double] = js.native
-  var expiration: js.UndefOr[String | Double] = js.native
-  var headers: js.UndefOr[js.Any] = js.native
-  var key: String = js.native
-  var mandatory: js.UndefOr[Boolean] = js.native
-  var messageId: js.UndefOr[String] = js.native
-  var persistent: js.UndefOr[Boolean] = js.native
-  var priority: js.UndefOr[Double] = js.native
-  var reply: js.UndefOr[AckCallback] = js.native
-  var replyTo: js.UndefOr[String] = js.native
-  var timestamp: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var userId: js.UndefOr[String] = js.native
+  var BCC: js.UndefOr[String | js.Array[String]] = js.undefined
+  var CC: js.UndefOr[String | js.Array[String]] = js.undefined
+  var appId: js.UndefOr[String] = js.undefined
+  var contentEncoding: js.UndefOr[String] = js.undefined
+  var contentType: js.UndefOr[String] = js.undefined
+  var correlationId: js.UndefOr[String] = js.undefined
+  var deliveryMode: js.UndefOr[Boolean | Double] = js.undefined
+  var expiration: js.UndefOr[String | Double] = js.undefined
+  var headers: js.UndefOr[js.Any] = js.undefined
+  var key: String
+  var mandatory: js.UndefOr[Boolean] = js.undefined
+  var messageId: js.UndefOr[String] = js.undefined
+  var persistent: js.UndefOr[Boolean] = js.undefined
+  var priority: js.UndefOr[Double] = js.undefined
+  var reply: js.UndefOr[AckCallback] = js.undefined
+  var replyTo: js.UndefOr[String] = js.undefined
+  var timestamp: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var userId: js.UndefOr[String] = js.undefined
 }
 
 object PublishOptions {
   @scala.inline
-  def apply(key: String): PublishOptions = {
+  def apply(
+    key: String,
+    BCC: String | js.Array[String] = null,
+    CC: String | js.Array[String] = null,
+    appId: String = null,
+    contentEncoding: String = null,
+    contentType: String = null,
+    correlationId: String = null,
+    deliveryMode: Boolean | Double = null,
+    expiration: String | Double = null,
+    headers: js.Any = null,
+    mandatory: js.UndefOr[Boolean] = js.undefined,
+    messageId: String = null,
+    persistent: js.UndefOr[Boolean] = js.undefined,
+    priority: js.UndefOr[Double] = js.undefined,
+    reply: /* data */ js.UndefOr[js.Any] => Unit = null,
+    replyTo: String = null,
+    timestamp: js.UndefOr[Double] = js.undefined,
+    `type`: String = null,
+    userId: String = null
+  ): PublishOptions = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    if (BCC != null) __obj.updateDynamic("BCC")(BCC.asInstanceOf[js.Any])
+    if (CC != null) __obj.updateDynamic("CC")(CC.asInstanceOf[js.Any])
+    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
+    if (contentEncoding != null) __obj.updateDynamic("contentEncoding")(contentEncoding.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (correlationId != null) __obj.updateDynamic("correlationId")(correlationId.asInstanceOf[js.Any])
+    if (deliveryMode != null) __obj.updateDynamic("deliveryMode")(deliveryMode.asInstanceOf[js.Any])
+    if (expiration != null) __obj.updateDynamic("expiration")(expiration.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (!js.isUndefined(mandatory)) __obj.updateDynamic("mandatory")(mandatory.get.asInstanceOf[js.Any])
+    if (messageId != null) __obj.updateDynamic("messageId")(messageId.asInstanceOf[js.Any])
+    if (!js.isUndefined(persistent)) __obj.updateDynamic("persistent")(persistent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
+    if (reply != null) __obj.updateDynamic("reply")(js.Any.fromFunction1(reply))
+    if (replyTo != null) __obj.updateDynamic("replyTo")(replyTo.asInstanceOf[js.Any])
+    if (!js.isUndefined(timestamp)) __obj.updateDynamic("timestamp")(timestamp.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublishOptions]
   }
-  @scala.inline
-  implicit class PublishOptionsOps[Self <: PublishOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBCC(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BCC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBCC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BCC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCC(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCorrelationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCorrelationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeliveryMode(value: Boolean | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeliveryMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiration(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMandatory(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mandatory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMandatory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mandatory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReply(value: /* data */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reply")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReply: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reply")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplyTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

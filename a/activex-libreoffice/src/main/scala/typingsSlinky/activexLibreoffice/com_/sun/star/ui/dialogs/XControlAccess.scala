@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.ui.dialogs.FilePicker
   * @since OOo 1.1.2
   */
-@js.native
 trait XControlAccess extends XInterface {
   /**
     * Query for a control property.
@@ -24,7 +23,7 @@ trait XControlAccess extends XInterface {
     * @returns the requested value.
     * @throws com::sun::star::lang::IllegalArgumentException when the control is not supported or the control property is invalid.
     */
-  def getControlProperty(aControlName: String, aControlProperty: String): js.Any = js.native
+  def getControlProperty(aControlName: String, aControlProperty: String): js.Any
   /**
     * Change a control property.
     * @param aControlName The name of the control. Common control names are for instance "OkButton" or "CancelButton".
@@ -32,7 +31,7 @@ trait XControlAccess extends XInterface {
     * @param aValue A value appropriated for the property.
     * @throws com::sun::star::lang::IllegalArgumentException when the control is not supported, the control property is invalid or the value fits not the contr
     */
-  def setControlProperty(aControlName: String, aControlProperty: String, aValue: js.Any): Unit = js.native
+  def setControlProperty(aControlName: String, aControlProperty: String, aValue: js.Any): Unit
 }
 
 object XControlAccess {
@@ -47,25 +46,5 @@ object XControlAccess {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getControlProperty = js.Any.fromFunction2(getControlProperty), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setControlProperty = js.Any.fromFunction3(setControlProperty))
     __obj.asInstanceOf[XControlAccess]
   }
-  @scala.inline
-  implicit class XControlAccessOps[Self <: XControlAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetControlProperty(value: (String, String) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getControlProperty")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetControlProperty(value: (String, String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setControlProperty")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -44,101 +44,24 @@ trait SchemaGoogleDevtoolsRemotebuildbotCommandDurations extends js.Object {
 
 object SchemaGoogleDevtoolsRemotebuildbotCommandDurations {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemotebuildbotCommandDurations = {
+  def apply(
+    dockerPrep: String = null,
+    download: String = null,
+    execution: String = null,
+    isoPrepDone: String = null,
+    overall: String = null,
+    stdout: String = null,
+    upload: String = null
+  ): SchemaGoogleDevtoolsRemotebuildbotCommandDurations = {
     val __obj = js.Dynamic.literal()
+    if (dockerPrep != null) __obj.updateDynamic("dockerPrep")(dockerPrep.asInstanceOf[js.Any])
+    if (download != null) __obj.updateDynamic("download")(download.asInstanceOf[js.Any])
+    if (execution != null) __obj.updateDynamic("execution")(execution.asInstanceOf[js.Any])
+    if (isoPrepDone != null) __obj.updateDynamic("isoPrepDone")(isoPrepDone.asInstanceOf[js.Any])
+    if (overall != null) __obj.updateDynamic("overall")(overall.asInstanceOf[js.Any])
+    if (stdout != null) __obj.updateDynamic("stdout")(stdout.asInstanceOf[js.Any])
+    if (upload != null) __obj.updateDynamic("upload")(upload.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemotebuildbotCommandDurations]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemotebuildbotCommandDurationsOps[Self <: SchemaGoogleDevtoolsRemotebuildbotCommandDurations] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDockerPrep(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerPrep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDockerPrep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerPrep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecution(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsoPrepDone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isoPrepDone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsoPrepDone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isoPrepDone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverall(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overall")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overall")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStdout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStdout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

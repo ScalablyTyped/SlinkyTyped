@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs")
 @js.native
 abstract class PerceptionColorFrameSourceAddedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs {
+  /** Gets the color frame source that was added. */
+  /* CompleteClass */
+  override var frameSource: typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionColorFrameSource = js.native
+}
 

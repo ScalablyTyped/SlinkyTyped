@@ -15,29 +15,10 @@ trait SchemaTargetTcpProxiesSetProxyHeaderRequest extends js.Object {
 
 object SchemaTargetTcpProxiesSetProxyHeaderRequest {
   @scala.inline
-  def apply(): SchemaTargetTcpProxiesSetProxyHeaderRequest = {
+  def apply(proxyHeader: String = null): SchemaTargetTcpProxiesSetProxyHeaderRequest = {
     val __obj = js.Dynamic.literal()
+    if (proxyHeader != null) __obj.updateDynamic("proxyHeader")(proxyHeader.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetTcpProxiesSetProxyHeaderRequest]
   }
-  @scala.inline
-  implicit class SchemaTargetTcpProxiesSetProxyHeaderRequestOps[Self <: SchemaTargetTcpProxiesSetProxyHeaderRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProxyHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyHeader")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

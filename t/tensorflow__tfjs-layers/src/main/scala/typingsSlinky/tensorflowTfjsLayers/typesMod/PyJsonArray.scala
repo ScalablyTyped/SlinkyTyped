@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PyJsonArray
   extends Array[PyJsonValue]
-     with PyJsonValue
+     with _PyJsonValue
 

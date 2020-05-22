@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait TemplateLiteralToken extends js.Object
 
-object TemplateLiteralToken {
-  @scala.inline
-  implicit def apply(value: NoSubstitutionTemplateLiteral): TemplateLiteralToken = value.asInstanceOf[TemplateLiteralToken]
-  @scala.inline
-  implicit def apply(value: TemplateHead): TemplateLiteralToken = value.asInstanceOf[TemplateLiteralToken]
-  @scala.inline
-  implicit def apply(value: TemplateMiddle): TemplateLiteralToken = value.asInstanceOf[TemplateLiteralToken]
-  @scala.inline
-  implicit def apply(value: TemplateTail): TemplateLiteralToken = value.asInstanceOf[TemplateLiteralToken]
-}
-

@@ -4,121 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextStyleConfig extends js.Object {
-  var backgroundColor: js.UndefOr[SkColor] = js.native
-  var color: js.UndefOr[SkColor] = js.native
-  var decoration: js.UndefOr[SkDecoration] = js.native
-  var decorationThickness: js.UndefOr[Double] = js.native
-  var fontFamilies: js.Array[String] = js.native
-  var fontSize: js.UndefOr[Double] = js.native
-  var fontStyle: js.UndefOr[FontStyleConfig] = js.native
-  var foregroundColor: js.UndefOr[SkColor] = js.native
+  var backgroundColor: js.UndefOr[SkColor] = js.undefined
+  var color: js.UndefOr[SkColor] = js.undefined
+  var decoration: js.UndefOr[SkDecoration] = js.undefined
+  var decorationThickness: js.UndefOr[Double] = js.undefined
+  var fontFamilies: js.Array[String]
+  var fontSize: js.UndefOr[Double] = js.undefined
+  var fontStyle: js.UndefOr[FontStyleConfig] = js.undefined
+  var foregroundColor: js.UndefOr[SkColor] = js.undefined
 }
 
 object TextStyleConfig {
   @scala.inline
-  def apply(fontFamilies: js.Array[String]): TextStyleConfig = {
+  def apply(
+    fontFamilies: js.Array[String],
+    backgroundColor: js.UndefOr[SkColor] = js.undefined,
+    color: js.UndefOr[SkColor] = js.undefined,
+    decoration: js.UndefOr[SkDecoration] = js.undefined,
+    decorationThickness: js.UndefOr[Double] = js.undefined,
+    fontSize: js.UndefOr[Double] = js.undefined,
+    fontStyle: FontStyleConfig = null,
+    foregroundColor: js.UndefOr[SkColor] = js.undefined
+  ): TextStyleConfig = {
     val __obj = js.Dynamic.literal(fontFamilies = fontFamilies.asInstanceOf[js.Any])
+    if (!js.isUndefined(backgroundColor)) __obj.updateDynamic("backgroundColor")(backgroundColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(decoration)) __obj.updateDynamic("decoration")(decoration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(decorationThickness)) __obj.updateDynamic("decorationThickness")(decorationThickness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
+    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(foregroundColor)) __obj.updateDynamic("foregroundColor")(foregroundColor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextStyleConfig]
   }
-  @scala.inline
-  implicit class TextStyleConfigOps[Self <: TextStyleConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFontFamilies(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamilies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: SkColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: SkColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecoration(value: SkDecoration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decoration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecoration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decoration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecorationThickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorationThickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecorationThickness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorationThickness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontStyle(value: FontStyleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForegroundColor(value: SkColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForegroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

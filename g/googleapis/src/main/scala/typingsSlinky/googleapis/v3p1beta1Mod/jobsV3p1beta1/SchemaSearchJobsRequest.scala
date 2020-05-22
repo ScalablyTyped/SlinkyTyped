@@ -150,197 +150,40 @@ trait SchemaSearchJobsRequest extends js.Object {
 
 object SchemaSearchJobsRequest {
   @scala.inline
-  def apply(): SchemaSearchJobsRequest = {
+  def apply(
+    customRankingInfo: SchemaCustomRankingInfo = null,
+    disableKeywordMatch: js.UndefOr[Boolean] = js.undefined,
+    diversificationLevel: String = null,
+    enableBroadening: js.UndefOr[Boolean] = js.undefined,
+    histogramFacets: SchemaHistogramFacets = null,
+    histogramQueries: js.Array[SchemaHistogramQuery] = null,
+    jobQuery: SchemaJobQuery = null,
+    jobView: String = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    orderBy: String = null,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    pageToken: String = null,
+    requestMetadata: SchemaRequestMetadata = null,
+    requirePreciseResultSize: js.UndefOr[Boolean] = js.undefined,
+    searchMode: String = null
+  ): SchemaSearchJobsRequest = {
     val __obj = js.Dynamic.literal()
+    if (customRankingInfo != null) __obj.updateDynamic("customRankingInfo")(customRankingInfo.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableKeywordMatch)) __obj.updateDynamic("disableKeywordMatch")(disableKeywordMatch.get.asInstanceOf[js.Any])
+    if (diversificationLevel != null) __obj.updateDynamic("diversificationLevel")(diversificationLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableBroadening)) __obj.updateDynamic("enableBroadening")(enableBroadening.get.asInstanceOf[js.Any])
+    if (histogramFacets != null) __obj.updateDynamic("histogramFacets")(histogramFacets.asInstanceOf[js.Any])
+    if (histogramQueries != null) __obj.updateDynamic("histogramQueries")(histogramQueries.asInstanceOf[js.Any])
+    if (jobQuery != null) __obj.updateDynamic("jobQuery")(jobQuery.asInstanceOf[js.Any])
+    if (jobView != null) __obj.updateDynamic("jobView")(jobView.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (orderBy != null) __obj.updateDynamic("orderBy")(orderBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (requestMetadata != null) __obj.updateDynamic("requestMetadata")(requestMetadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(requirePreciseResultSize)) __obj.updateDynamic("requirePreciseResultSize")(requirePreciseResultSize.get.asInstanceOf[js.Any])
+    if (searchMode != null) __obj.updateDynamic("searchMode")(searchMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSearchJobsRequest]
   }
-  @scala.inline
-  implicit class SchemaSearchJobsRequestOps[Self <: SchemaSearchJobsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomRankingInfo(value: SchemaCustomRankingInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRankingInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomRankingInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRankingInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableKeywordMatch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableKeywordMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableKeywordMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableKeywordMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiversificationLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diversificationLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiversificationLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diversificationLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableBroadening(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBroadening")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableBroadening: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBroadening")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistogramFacets(value: SchemaHistogramFacets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramFacets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistogramFacets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramFacets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistogramQueries(value: js.Array[SchemaHistogramQuery]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramQueries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistogramQueries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramQueries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobQuery(value: SchemaJobQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobView(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestMetadata(value: SchemaRequestMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequirePreciseResultSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requirePreciseResultSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequirePreciseResultSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requirePreciseResultSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

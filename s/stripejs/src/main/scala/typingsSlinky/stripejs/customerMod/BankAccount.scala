@@ -13,59 +13,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BankAccount extends js.Object {
   /**
     * The name of the person or business that owns the bank account.
     */
-  var account_holder_name: String = js.native
+  var account_holder_name: String
   /**
     * The type of entity that holds the account.
     */
-  var account_holder_type: individual | company = js.native
+  var account_holder_type: individual | company
   /**
     * Name of the bank associated with the routing number
     * @example 'STRIPE TEST BANK'
     */
-  var bank_name: String = js.native
+  var bank_name: String
   /**
     * Two-letter ISO code representing the country the bank account is located in
     * @example 'US'
     */
-  var country: String = js.native
+  var country: String
   /**
     * Three-letter ISO code for the currency paid out to the bank account
     * @example 'usd'
     */
-  var currency: String = js.native
-  var customer: String = js.native
+  var currency: String
+  var customer: String
   /**
     * Uniquely identifies this particular bank account.
     * NOTE: You can use this attribute to check whether two bank accounts are the same
     */
-  var fingerprint: String = js.native
+  var fingerprint: String
   /**
     * The unique identifier of the bank account
     */
-  var id: String = js.native
+  var id: String
   /**
     * The last 4 digits of the bank number
     */
-  var last4: String = js.native
+  var last4: String
   /**
     * Your own saved information with this bank account
     */
-  var metadata: StringDictionary[String] = js.native
-  var `object`: bank_account = js.native
+  var metadata: StringDictionary[String]
+  var `object`: bank_account
   /**
     * The routing transit number for the bank account
     */
-  var routing_number: String = js.native
+  var routing_number: String
   /**
     * The status of the bank account
     * @see https://stripe.com/docs/api#customer_bank_account_object-status
     */
-  var status: `new` | validated | verified | verification_failed | errored = js.native
+  var status: `new` | validated | verified | verification_failed | errored
 }
 
 object BankAccount {
@@ -89,91 +88,5 @@ object BankAccount {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BankAccount]
   }
-  @scala.inline
-  implicit class BankAccountOps[Self <: BankAccount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccount_holder_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account_holder_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccount_holder_type(value: individual | company): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account_holder_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBank_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bank_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: bank_account): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRouting_number(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: `new` | validated | verified | verification_failed | errored): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

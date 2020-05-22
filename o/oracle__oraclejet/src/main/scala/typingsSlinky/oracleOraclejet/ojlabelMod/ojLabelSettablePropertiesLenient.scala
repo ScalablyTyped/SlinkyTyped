@@ -8,89 +8,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojlabel.ojLabelSettableProperties> */
-@js.native
 trait ojLabelSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var `for`: js.UndefOr[String] = js.native
-  var help: js.UndefOr[DefinitionSource] = js.native
-  var labelId: js.UndefOr[String] = js.native
-  var showRequired: js.UndefOr[Boolean] = js.native
-  var translations: js.UndefOr[TooltipHelp] = js.native
+  var `for`: js.UndefOr[String] = js.undefined
+  var help: js.UndefOr[DefinitionSource] = js.undefined
+  var labelId: js.UndefOr[String] = js.undefined
+  var showRequired: js.UndefOr[Boolean] = js.undefined
+  var translations: js.UndefOr[TooltipHelp] = js.undefined
 }
 
 object ojLabelSettablePropertiesLenient {
   @scala.inline
-  def apply(): ojLabelSettablePropertiesLenient = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    `for`: String = null,
+    help: DefinitionSource = null,
+    labelId: String = null,
+    showRequired: js.UndefOr[Boolean] = js.undefined,
+    translations: TooltipHelp = null
+  ): ojLabelSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (`for` != null) __obj.updateDynamic("for")(`for`.asInstanceOf[js.Any])
+    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
+    if (labelId != null) __obj.updateDynamic("labelId")(labelId.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRequired)) __obj.updateDynamic("showRequired")(showRequired.get.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojLabelSettablePropertiesLenient]
   }
-  @scala.inline
-  implicit class ojLabelSettablePropertiesLenientOps[Self <: ojLabelSettablePropertiesLenient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("for")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("for")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelp(value: DefinitionSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: TooltipHelp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

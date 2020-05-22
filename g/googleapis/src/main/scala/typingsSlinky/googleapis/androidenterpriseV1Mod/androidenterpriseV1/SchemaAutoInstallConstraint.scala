@@ -26,53 +26,16 @@ trait SchemaAutoInstallConstraint extends js.Object {
 
 object SchemaAutoInstallConstraint {
   @scala.inline
-  def apply(): SchemaAutoInstallConstraint = {
+  def apply(
+    chargingStateConstraint: String = null,
+    deviceIdleStateConstraint: String = null,
+    networkTypeConstraint: String = null
+  ): SchemaAutoInstallConstraint = {
     val __obj = js.Dynamic.literal()
+    if (chargingStateConstraint != null) __obj.updateDynamic("chargingStateConstraint")(chargingStateConstraint.asInstanceOf[js.Any])
+    if (deviceIdleStateConstraint != null) __obj.updateDynamic("deviceIdleStateConstraint")(deviceIdleStateConstraint.asInstanceOf[js.Any])
+    if (networkTypeConstraint != null) __obj.updateDynamic("networkTypeConstraint")(networkTypeConstraint.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoInstallConstraint]
   }
-  @scala.inline
-  implicit class SchemaAutoInstallConstraintOps[Self <: SchemaAutoInstallConstraint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChargingStateConstraint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chargingStateConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChargingStateConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chargingStateConstraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceIdleStateConstraint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdleStateConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceIdleStateConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdleStateConstraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkTypeConstraint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTypeConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkTypeConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTypeConstraint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

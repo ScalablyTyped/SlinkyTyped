@@ -12,7 +12,7 @@ object DislikeButton {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ActivityButtonProps with HTMLAttributes[HTMLButtonElement]): `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.DislikeButton] = new `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.DislikeButton](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DislikeButton.type): `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.DislikeButton] = new `SharedBuilder_<intersection>307943597`[typingsSlinky.solidReact.mod.DislikeButton](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: ActivityButtonProps with HTMLAttributes[HTMLButtonElement]): SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.DislikeButton] = new SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.DislikeButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DislikeButton.type): SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.DislikeButton] = new SharedBuilder_ActivityButtonPropsHTMLAttributes307943597[typingsSlinky.solidReact.mod.DislikeButton](js.Array(this.component, js.Dictionary.empty))()
 }
 

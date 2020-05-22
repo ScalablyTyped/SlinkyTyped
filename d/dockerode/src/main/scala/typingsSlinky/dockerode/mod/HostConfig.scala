@@ -5,816 +5,198 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HostConfig extends js.Object {
-  var AutoRemove: js.UndefOr[Boolean] = js.native
-  var Binds: js.UndefOr[js.Array[String]] = js.native
-  var BlkioDeviceReadBps: js.UndefOr[js.Any] = js.native
-  var BlkioDeviceReadIOps: js.UndefOr[js.Any] = js.native
-  var BlkioDeviceWriteBps: js.UndefOr[js.Any] = js.native
-  var BlkioDeviceWriteIOps: js.UndefOr[js.Any] = js.native
-  var BlkioWeight: js.UndefOr[Double] = js.native
-  var BlkioWeightDevice: js.UndefOr[js.Any] = js.native
-  var CapAdd: js.UndefOr[js.Any] = js.native
-  var CapDrop: js.UndefOr[js.Any] = js.native
-  var Cgroup: js.UndefOr[String] = js.native
-  var CgroupParent: js.UndefOr[String] = js.native
-  var ConsoleSize: js.UndefOr[js.Array[Double]] = js.native
-  var ContainerIDFile: js.UndefOr[String] = js.native
-  var CpuPeriod: js.UndefOr[Double] = js.native
-  var CpuQuota: js.UndefOr[Double] = js.native
-  var CpuShares: js.UndefOr[Double] = js.native
-  var CpusetCpus: js.UndefOr[String] = js.native
-  var CpusetMems: js.UndefOr[String] = js.native
-  var DeviceCgroupRules: js.UndefOr[js.Array[String]] = js.native
-  var DeviceRequests: js.UndefOr[js.Array[DeviceRequest]] = js.native
-  var Devices: js.UndefOr[js.Any] = js.native
-  var DiskQuota: js.UndefOr[Double] = js.native
-  var Dns: js.UndefOr[js.Array[_]] = js.native
-  var DnsOptions: js.UndefOr[js.Array[_]] = js.native
-  var DnsSearch: js.UndefOr[js.Array[_]] = js.native
-  var ExtraHosts: js.UndefOr[js.Any] = js.native
-  var GroupAdd: js.UndefOr[js.Array[String]] = js.native
-  var IpcMode: js.UndefOr[String] = js.native
-  var Isolation: js.UndefOr[String] = js.native
-  var KernelMemory: js.UndefOr[Double] = js.native
-  var Links: js.UndefOr[js.Any] = js.native
-  var LogConfig: js.UndefOr[typingsSlinky.dockerode.anon.Config] = js.native
-  var MaskedPaths: js.UndefOr[js.Array[String]] = js.native
-  var Memory: js.UndefOr[Double] = js.native
-  var MemoryReservation: js.UndefOr[Double] = js.native
-  var MemorySwap: js.UndefOr[Double] = js.native
-  var MemorySwappiness: js.UndefOr[Double] = js.native
-  var Mounts: js.UndefOr[MountConfig] = js.native
-  var NetworkMode: js.UndefOr[String] = js.native
-  var OomKillDisable: js.UndefOr[Boolean] = js.native
-  var OomScoreAdj: js.UndefOr[Double] = js.native
-  var PidMode: js.UndefOr[String] = js.native
-  var PidsLimit: js.UndefOr[Double] = js.native
-  var PortBindings: js.UndefOr[js.Any] = js.native
-  var Privileged: js.UndefOr[Boolean] = js.native
-  var PublishAllPorts: js.UndefOr[Boolean] = js.native
-  var ReadonlyPaths: js.UndefOr[js.Array[String]] = js.native
-  var ReadonlyRootfs: js.UndefOr[Boolean] = js.native
-  var RestartPolicy: js.UndefOr[typingsSlinky.dockerode.mod.RestartPolicy] = js.native
-  var Runtime: js.UndefOr[String] = js.native
-  var SecurityOpt: js.UndefOr[js.Any] = js.native
-  var ShmSize: js.UndefOr[Double] = js.native
-  var StorageOpt: js.UndefOr[StringDictionary[String]] = js.native
-  var Sysctls: js.UndefOr[StringDictionary[String]] = js.native
-  var Tmpfs: js.UndefOr[StringDictionary[String]] = js.native
-  var UTSMode: js.UndefOr[String] = js.native
-  var Ulimits: js.UndefOr[js.Any] = js.native
-  var UsernsMode: js.UndefOr[String] = js.native
-  var VolumeDriver: js.UndefOr[String] = js.native
-  var VolumesFrom: js.UndefOr[js.Any] = js.native
+  var AutoRemove: js.UndefOr[Boolean] = js.undefined
+  var Binds: js.UndefOr[js.Array[String]] = js.undefined
+  var BlkioDeviceReadBps: js.UndefOr[js.Any] = js.undefined
+  var BlkioDeviceReadIOps: js.UndefOr[js.Any] = js.undefined
+  var BlkioDeviceWriteBps: js.UndefOr[js.Any] = js.undefined
+  var BlkioDeviceWriteIOps: js.UndefOr[js.Any] = js.undefined
+  var BlkioWeight: js.UndefOr[Double] = js.undefined
+  var BlkioWeightDevice: js.UndefOr[js.Any] = js.undefined
+  var CapAdd: js.UndefOr[js.Any] = js.undefined
+  var CapDrop: js.UndefOr[js.Any] = js.undefined
+  var Cgroup: js.UndefOr[String] = js.undefined
+  var CgroupParent: js.UndefOr[String] = js.undefined
+  var ConsoleSize: js.UndefOr[js.Array[Double]] = js.undefined
+  var ContainerIDFile: js.UndefOr[String] = js.undefined
+  var CpuPeriod: js.UndefOr[Double] = js.undefined
+  var CpuQuota: js.UndefOr[Double] = js.undefined
+  var CpuShares: js.UndefOr[Double] = js.undefined
+  var CpusetCpus: js.UndefOr[String] = js.undefined
+  var CpusetMems: js.UndefOr[String] = js.undefined
+  var DeviceCgroupRules: js.UndefOr[js.Array[String]] = js.undefined
+  var DeviceRequests: js.UndefOr[js.Array[DeviceRequest]] = js.undefined
+  var Devices: js.UndefOr[js.Any] = js.undefined
+  var DiskQuota: js.UndefOr[Double] = js.undefined
+  var Dns: js.UndefOr[js.Array[_]] = js.undefined
+  var DnsOptions: js.UndefOr[js.Array[_]] = js.undefined
+  var DnsSearch: js.UndefOr[js.Array[_]] = js.undefined
+  var ExtraHosts: js.UndefOr[js.Any] = js.undefined
+  var GroupAdd: js.UndefOr[js.Array[String]] = js.undefined
+  var IpcMode: js.UndefOr[String] = js.undefined
+  var Isolation: js.UndefOr[String] = js.undefined
+  var KernelMemory: js.UndefOr[Double] = js.undefined
+  var Links: js.UndefOr[js.Any] = js.undefined
+  var LogConfig: js.UndefOr[typingsSlinky.dockerode.anon.Config] = js.undefined
+  var MaskedPaths: js.UndefOr[js.Array[String]] = js.undefined
+  var Memory: js.UndefOr[Double] = js.undefined
+  var MemoryReservation: js.UndefOr[Double] = js.undefined
+  var MemorySwap: js.UndefOr[Double] = js.undefined
+  var MemorySwappiness: js.UndefOr[Double] = js.undefined
+  var Mounts: js.UndefOr[MountConfig] = js.undefined
+  var NetworkMode: js.UndefOr[String] = js.undefined
+  var OomKillDisable: js.UndefOr[Boolean] = js.undefined
+  var OomScoreAdj: js.UndefOr[Double] = js.undefined
+  var PidMode: js.UndefOr[String] = js.undefined
+  var PidsLimit: js.UndefOr[Double] = js.undefined
+  var PortBindings: js.UndefOr[js.Any] = js.undefined
+  var Privileged: js.UndefOr[Boolean] = js.undefined
+  var PublishAllPorts: js.UndefOr[Boolean] = js.undefined
+  var ReadonlyPaths: js.UndefOr[js.Array[String]] = js.undefined
+  var ReadonlyRootfs: js.UndefOr[Boolean] = js.undefined
+  var RestartPolicy: js.UndefOr[typingsSlinky.dockerode.mod.RestartPolicy] = js.undefined
+  var Runtime: js.UndefOr[String] = js.undefined
+  var SecurityOpt: js.UndefOr[js.Any] = js.undefined
+  var ShmSize: js.UndefOr[Double] = js.undefined
+  var StorageOpt: js.UndefOr[StringDictionary[String]] = js.undefined
+  var Sysctls: js.UndefOr[StringDictionary[String]] = js.undefined
+  var Tmpfs: js.UndefOr[StringDictionary[String]] = js.undefined
+  var UTSMode: js.UndefOr[String] = js.undefined
+  var Ulimits: js.UndefOr[js.Any] = js.undefined
+  var UsernsMode: js.UndefOr[String] = js.undefined
+  var VolumeDriver: js.UndefOr[String] = js.undefined
+  var VolumesFrom: js.UndefOr[js.Any] = js.undefined
 }
 
 object HostConfig {
   @scala.inline
-  def apply(): HostConfig = {
+  def apply(
+    AutoRemove: js.UndefOr[Boolean] = js.undefined,
+    Binds: js.Array[String] = null,
+    BlkioDeviceReadBps: js.Any = null,
+    BlkioDeviceReadIOps: js.Any = null,
+    BlkioDeviceWriteBps: js.Any = null,
+    BlkioDeviceWriteIOps: js.Any = null,
+    BlkioWeight: js.UndefOr[Double] = js.undefined,
+    BlkioWeightDevice: js.Any = null,
+    CapAdd: js.Any = null,
+    CapDrop: js.Any = null,
+    Cgroup: String = null,
+    CgroupParent: String = null,
+    ConsoleSize: js.Array[Double] = null,
+    ContainerIDFile: String = null,
+    CpuPeriod: js.UndefOr[Double] = js.undefined,
+    CpuQuota: js.UndefOr[Double] = js.undefined,
+    CpuShares: js.UndefOr[Double] = js.undefined,
+    CpusetCpus: String = null,
+    CpusetMems: String = null,
+    DeviceCgroupRules: js.Array[String] = null,
+    DeviceRequests: js.Array[DeviceRequest] = null,
+    Devices: js.Any = null,
+    DiskQuota: js.UndefOr[Double] = js.undefined,
+    Dns: js.Array[_] = null,
+    DnsOptions: js.Array[_] = null,
+    DnsSearch: js.Array[_] = null,
+    ExtraHosts: js.Any = null,
+    GroupAdd: js.Array[String] = null,
+    IpcMode: String = null,
+    Isolation: String = null,
+    KernelMemory: js.UndefOr[Double] = js.undefined,
+    Links: js.Any = null,
+    LogConfig: typingsSlinky.dockerode.anon.Config = null,
+    MaskedPaths: js.Array[String] = null,
+    Memory: js.UndefOr[Double] = js.undefined,
+    MemoryReservation: js.UndefOr[Double] = js.undefined,
+    MemorySwap: js.UndefOr[Double] = js.undefined,
+    MemorySwappiness: js.UndefOr[Double] = js.undefined,
+    Mounts: MountConfig = null,
+    NetworkMode: String = null,
+    OomKillDisable: js.UndefOr[Boolean] = js.undefined,
+    OomScoreAdj: js.UndefOr[Double] = js.undefined,
+    PidMode: String = null,
+    PidsLimit: js.UndefOr[Double] = js.undefined,
+    PortBindings: js.Any = null,
+    Privileged: js.UndefOr[Boolean] = js.undefined,
+    PublishAllPorts: js.UndefOr[Boolean] = js.undefined,
+    ReadonlyPaths: js.Array[String] = null,
+    ReadonlyRootfs: js.UndefOr[Boolean] = js.undefined,
+    RestartPolicy: RestartPolicy = null,
+    Runtime: String = null,
+    SecurityOpt: js.Any = null,
+    ShmSize: js.UndefOr[Double] = js.undefined,
+    StorageOpt: StringDictionary[String] = null,
+    Sysctls: StringDictionary[String] = null,
+    Tmpfs: StringDictionary[String] = null,
+    UTSMode: String = null,
+    Ulimits: js.Any = null,
+    UsernsMode: String = null,
+    VolumeDriver: String = null,
+    VolumesFrom: js.Any = null
+  ): HostConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AutoRemove)) __obj.updateDynamic("AutoRemove")(AutoRemove.get.asInstanceOf[js.Any])
+    if (Binds != null) __obj.updateDynamic("Binds")(Binds.asInstanceOf[js.Any])
+    if (BlkioDeviceReadBps != null) __obj.updateDynamic("BlkioDeviceReadBps")(BlkioDeviceReadBps.asInstanceOf[js.Any])
+    if (BlkioDeviceReadIOps != null) __obj.updateDynamic("BlkioDeviceReadIOps")(BlkioDeviceReadIOps.asInstanceOf[js.Any])
+    if (BlkioDeviceWriteBps != null) __obj.updateDynamic("BlkioDeviceWriteBps")(BlkioDeviceWriteBps.asInstanceOf[js.Any])
+    if (BlkioDeviceWriteIOps != null) __obj.updateDynamic("BlkioDeviceWriteIOps")(BlkioDeviceWriteIOps.asInstanceOf[js.Any])
+    if (!js.isUndefined(BlkioWeight)) __obj.updateDynamic("BlkioWeight")(BlkioWeight.get.asInstanceOf[js.Any])
+    if (BlkioWeightDevice != null) __obj.updateDynamic("BlkioWeightDevice")(BlkioWeightDevice.asInstanceOf[js.Any])
+    if (CapAdd != null) __obj.updateDynamic("CapAdd")(CapAdd.asInstanceOf[js.Any])
+    if (CapDrop != null) __obj.updateDynamic("CapDrop")(CapDrop.asInstanceOf[js.Any])
+    if (Cgroup != null) __obj.updateDynamic("Cgroup")(Cgroup.asInstanceOf[js.Any])
+    if (CgroupParent != null) __obj.updateDynamic("CgroupParent")(CgroupParent.asInstanceOf[js.Any])
+    if (ConsoleSize != null) __obj.updateDynamic("ConsoleSize")(ConsoleSize.asInstanceOf[js.Any])
+    if (ContainerIDFile != null) __obj.updateDynamic("ContainerIDFile")(ContainerIDFile.asInstanceOf[js.Any])
+    if (!js.isUndefined(CpuPeriod)) __obj.updateDynamic("CpuPeriod")(CpuPeriod.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CpuQuota)) __obj.updateDynamic("CpuQuota")(CpuQuota.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CpuShares)) __obj.updateDynamic("CpuShares")(CpuShares.get.asInstanceOf[js.Any])
+    if (CpusetCpus != null) __obj.updateDynamic("CpusetCpus")(CpusetCpus.asInstanceOf[js.Any])
+    if (CpusetMems != null) __obj.updateDynamic("CpusetMems")(CpusetMems.asInstanceOf[js.Any])
+    if (DeviceCgroupRules != null) __obj.updateDynamic("DeviceCgroupRules")(DeviceCgroupRules.asInstanceOf[js.Any])
+    if (DeviceRequests != null) __obj.updateDynamic("DeviceRequests")(DeviceRequests.asInstanceOf[js.Any])
+    if (Devices != null) __obj.updateDynamic("Devices")(Devices.asInstanceOf[js.Any])
+    if (!js.isUndefined(DiskQuota)) __obj.updateDynamic("DiskQuota")(DiskQuota.get.asInstanceOf[js.Any])
+    if (Dns != null) __obj.updateDynamic("Dns")(Dns.asInstanceOf[js.Any])
+    if (DnsOptions != null) __obj.updateDynamic("DnsOptions")(DnsOptions.asInstanceOf[js.Any])
+    if (DnsSearch != null) __obj.updateDynamic("DnsSearch")(DnsSearch.asInstanceOf[js.Any])
+    if (ExtraHosts != null) __obj.updateDynamic("ExtraHosts")(ExtraHosts.asInstanceOf[js.Any])
+    if (GroupAdd != null) __obj.updateDynamic("GroupAdd")(GroupAdd.asInstanceOf[js.Any])
+    if (IpcMode != null) __obj.updateDynamic("IpcMode")(IpcMode.asInstanceOf[js.Any])
+    if (Isolation != null) __obj.updateDynamic("Isolation")(Isolation.asInstanceOf[js.Any])
+    if (!js.isUndefined(KernelMemory)) __obj.updateDynamic("KernelMemory")(KernelMemory.get.asInstanceOf[js.Any])
+    if (Links != null) __obj.updateDynamic("Links")(Links.asInstanceOf[js.Any])
+    if (LogConfig != null) __obj.updateDynamic("LogConfig")(LogConfig.asInstanceOf[js.Any])
+    if (MaskedPaths != null) __obj.updateDynamic("MaskedPaths")(MaskedPaths.asInstanceOf[js.Any])
+    if (!js.isUndefined(Memory)) __obj.updateDynamic("Memory")(Memory.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MemoryReservation)) __obj.updateDynamic("MemoryReservation")(MemoryReservation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MemorySwap)) __obj.updateDynamic("MemorySwap")(MemorySwap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MemorySwappiness)) __obj.updateDynamic("MemorySwappiness")(MemorySwappiness.get.asInstanceOf[js.Any])
+    if (Mounts != null) __obj.updateDynamic("Mounts")(Mounts.asInstanceOf[js.Any])
+    if (NetworkMode != null) __obj.updateDynamic("NetworkMode")(NetworkMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(OomKillDisable)) __obj.updateDynamic("OomKillDisable")(OomKillDisable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(OomScoreAdj)) __obj.updateDynamic("OomScoreAdj")(OomScoreAdj.get.asInstanceOf[js.Any])
+    if (PidMode != null) __obj.updateDynamic("PidMode")(PidMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(PidsLimit)) __obj.updateDynamic("PidsLimit")(PidsLimit.get.asInstanceOf[js.Any])
+    if (PortBindings != null) __obj.updateDynamic("PortBindings")(PortBindings.asInstanceOf[js.Any])
+    if (!js.isUndefined(Privileged)) __obj.updateDynamic("Privileged")(Privileged.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PublishAllPorts)) __obj.updateDynamic("PublishAllPorts")(PublishAllPorts.get.asInstanceOf[js.Any])
+    if (ReadonlyPaths != null) __obj.updateDynamic("ReadonlyPaths")(ReadonlyPaths.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReadonlyRootfs)) __obj.updateDynamic("ReadonlyRootfs")(ReadonlyRootfs.get.asInstanceOf[js.Any])
+    if (RestartPolicy != null) __obj.updateDynamic("RestartPolicy")(RestartPolicy.asInstanceOf[js.Any])
+    if (Runtime != null) __obj.updateDynamic("Runtime")(Runtime.asInstanceOf[js.Any])
+    if (SecurityOpt != null) __obj.updateDynamic("SecurityOpt")(SecurityOpt.asInstanceOf[js.Any])
+    if (!js.isUndefined(ShmSize)) __obj.updateDynamic("ShmSize")(ShmSize.get.asInstanceOf[js.Any])
+    if (StorageOpt != null) __obj.updateDynamic("StorageOpt")(StorageOpt.asInstanceOf[js.Any])
+    if (Sysctls != null) __obj.updateDynamic("Sysctls")(Sysctls.asInstanceOf[js.Any])
+    if (Tmpfs != null) __obj.updateDynamic("Tmpfs")(Tmpfs.asInstanceOf[js.Any])
+    if (UTSMode != null) __obj.updateDynamic("UTSMode")(UTSMode.asInstanceOf[js.Any])
+    if (Ulimits != null) __obj.updateDynamic("Ulimits")(Ulimits.asInstanceOf[js.Any])
+    if (UsernsMode != null) __obj.updateDynamic("UsernsMode")(UsernsMode.asInstanceOf[js.Any])
+    if (VolumeDriver != null) __obj.updateDynamic("VolumeDriver")(VolumeDriver.asInstanceOf[js.Any])
+    if (VolumesFrom != null) __obj.updateDynamic("VolumesFrom")(VolumesFrom.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostConfig]
   }
-  @scala.inline
-  implicit class HostConfigOps[Self <: HostConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoRemove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Binds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Binds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlkioDeviceReadBps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioDeviceReadBps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlkioDeviceReadBps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioDeviceReadBps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlkioDeviceReadIOps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioDeviceReadIOps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlkioDeviceReadIOps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioDeviceReadIOps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlkioDeviceWriteBps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioDeviceWriteBps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlkioDeviceWriteBps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioDeviceWriteBps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlkioDeviceWriteIOps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioDeviceWriteIOps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlkioDeviceWriteIOps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioDeviceWriteIOps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlkioWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlkioWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlkioWeightDevice(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioWeightDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlkioWeightDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlkioWeightDevice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapAdd(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapDrop(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapDrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCgroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCgroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cgroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCgroupParent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CgroupParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCgroupParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CgroupParent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsoleSize(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsoleSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsoleSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsoleSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerIDFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerIDFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerIDFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerIDFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpuPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpuPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpuPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpuPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpuQuota(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpuQuota")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpuQuota: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpuQuota")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpuShares(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpuShares")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpuShares: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpuShares")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpusetCpus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpusetCpus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpusetCpus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpusetCpus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpusetMems(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpusetMems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpusetMems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CpusetMems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceCgroupRules(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceCgroupRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceCgroupRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceCgroupRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceRequests(value: js.Array[DeviceRequest]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceRequests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevices(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Devices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Devices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskQuota(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskQuota")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskQuota: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskQuota")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDns(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsOptions(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsSearch(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsSearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsSearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtraHosts(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtraHosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtraHosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtraHosts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupAdd(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpcMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpcMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpcMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpcMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsolation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Isolation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsolation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Isolation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKernelMemory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelMemory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKernelMemory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelMemory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogConfig(value: typingsSlinky.dockerode.anon.Config): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaskedPaths(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaskedPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaskedPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaskedPaths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Memory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Memory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemoryReservation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemoryReservation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemoryReservation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemoryReservation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemorySwap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySwap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemorySwap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySwap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemorySwappiness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySwappiness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemorySwappiness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySwappiness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMounts(value: MountConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOomKillDisable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OomKillDisable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOomKillDisable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OomKillDisable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOomScoreAdj(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OomScoreAdj")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOomScoreAdj: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OomScoreAdj")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPidMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PidMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPidMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PidMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPidsLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PidsLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPidsLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PidsLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPortBindings(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortBindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortBindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortBindings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivileged(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Privileged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivileged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Privileged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublishAllPorts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublishAllPorts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublishAllPorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublishAllPorts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadonlyPaths(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadonlyPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonlyPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadonlyPaths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadonlyRootfs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadonlyRootfs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonlyRootfs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadonlyRootfs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestartPolicy(value: RestartPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RestartPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestartPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RestartPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Runtime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityOpt(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityOpt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityOpt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityOpt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShmSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShmSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShmSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShmSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageOpt(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageOpt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageOpt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageOpt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSysctls(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sysctls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSysctls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sysctls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTmpfs(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tmpfs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTmpfs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tmpfs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUTSMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UTSMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUTSMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UTSMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUlimits(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ulimits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUlimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ulimits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsernsMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsernsMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsernsMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsernsMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeDriver(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeDriver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeDriver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeDriver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumesFrom(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumesFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumesFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumesFrom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

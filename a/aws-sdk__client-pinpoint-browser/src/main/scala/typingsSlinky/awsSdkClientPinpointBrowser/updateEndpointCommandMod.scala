@@ -26,9 +26,16 @@ object updateEndpointCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateEndpointInput) = this()
+    /* CompleteClass */
+    override val input: UpdateEndpointInput = js.native
     val middlewareStack: MiddlewareStack[UpdateEndpointInput, UpdateEndpointOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[UpdateEndpointInput, UpdateEndpointOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[UpdateEndpointInput, UpdateEndpointOutput] = js.native
   }

@@ -4,166 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TouchBackendOptions extends js.Object {
-  var delay: js.UndefOr[Double] = js.native
-  var delayMouseStart: js.UndefOr[Double] = js.native
-  var delayTouchStart: js.UndefOr[Double] = js.native
-  var enableHoverOutsideTarget: js.UndefOr[Boolean] = js.native
-  var enableKeyboardEvents: js.UndefOr[Boolean] = js.native
-  var enableMouseEvents: js.UndefOr[Boolean] = js.native
-  var enableTouchEvents: js.UndefOr[Boolean] = js.native
-  var getDropTargetElementsAtPoint: js.UndefOr[js.Function] = js.native
-  var ignoreContextMenu: js.UndefOr[Boolean] = js.native
-  var scrollAngleRanges: js.UndefOr[js.Array[AngleRange]] = js.native
-  var touchSlop: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
+  var delayMouseStart: js.UndefOr[Double] = js.undefined
+  var delayTouchStart: js.UndefOr[Double] = js.undefined
+  var enableHoverOutsideTarget: js.UndefOr[Boolean] = js.undefined
+  var enableKeyboardEvents: js.UndefOr[Boolean] = js.undefined
+  var enableMouseEvents: js.UndefOr[Boolean] = js.undefined
+  var enableTouchEvents: js.UndefOr[Boolean] = js.undefined
+  var getDropTargetElementsAtPoint: js.UndefOr[js.Function] = js.undefined
+  var ignoreContextMenu: js.UndefOr[Boolean] = js.undefined
+  var scrollAngleRanges: js.UndefOr[js.Array[AngleRange]] = js.undefined
+  var touchSlop: js.UndefOr[Double] = js.undefined
 }
 
 object TouchBackendOptions {
   @scala.inline
-  def apply(): TouchBackendOptions = {
+  def apply(
+    delay: js.UndefOr[Double] = js.undefined,
+    delayMouseStart: js.UndefOr[Double] = js.undefined,
+    delayTouchStart: js.UndefOr[Double] = js.undefined,
+    enableHoverOutsideTarget: js.UndefOr[Boolean] = js.undefined,
+    enableKeyboardEvents: js.UndefOr[Boolean] = js.undefined,
+    enableMouseEvents: js.UndefOr[Boolean] = js.undefined,
+    enableTouchEvents: js.UndefOr[Boolean] = js.undefined,
+    getDropTargetElementsAtPoint: js.Function = null,
+    ignoreContextMenu: js.UndefOr[Boolean] = js.undefined,
+    scrollAngleRanges: js.Array[AngleRange] = null,
+    touchSlop: js.UndefOr[Double] = js.undefined
+  ): TouchBackendOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayMouseStart)) __obj.updateDynamic("delayMouseStart")(delayMouseStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayTouchStart)) __obj.updateDynamic("delayTouchStart")(delayTouchStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableHoverOutsideTarget)) __obj.updateDynamic("enableHoverOutsideTarget")(enableHoverOutsideTarget.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableKeyboardEvents)) __obj.updateDynamic("enableKeyboardEvents")(enableKeyboardEvents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableMouseEvents)) __obj.updateDynamic("enableMouseEvents")(enableMouseEvents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableTouchEvents)) __obj.updateDynamic("enableTouchEvents")(enableTouchEvents.get.asInstanceOf[js.Any])
+    if (getDropTargetElementsAtPoint != null) __obj.updateDynamic("getDropTargetElementsAtPoint")(getDropTargetElementsAtPoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreContextMenu)) __obj.updateDynamic("ignoreContextMenu")(ignoreContextMenu.get.asInstanceOf[js.Any])
+    if (scrollAngleRanges != null) __obj.updateDynamic("scrollAngleRanges")(scrollAngleRanges.asInstanceOf[js.Any])
+    if (!js.isUndefined(touchSlop)) __obj.updateDynamic("touchSlop")(touchSlop.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchBackendOptions]
   }
-  @scala.inline
-  implicit class TouchBackendOptionsOps[Self <: TouchBackendOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelayMouseStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayMouseStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayMouseStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayMouseStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelayTouchStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayTouchStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayTouchStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayTouchStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableHoverOutsideTarget(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHoverOutsideTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableHoverOutsideTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHoverOutsideTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableKeyboardEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKeyboardEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableKeyboardEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKeyboardEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableMouseEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMouseEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableMouseEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMouseEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableTouchEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTouchEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableTouchEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTouchEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetDropTargetElementsAtPoint(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDropTargetElementsAtPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetDropTargetElementsAtPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDropTargetElementsAtPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreContextMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreContextMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollAngleRanges(value: js.Array[AngleRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollAngleRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollAngleRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollAngleRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchSlop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchSlop")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

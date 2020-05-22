@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EncodingObject extends js.Object {
-  var allowReserved: js.UndefOr[Boolean] = js.native
-  var contentType: js.UndefOr[String] = js.native
-  var explode: js.UndefOr[Boolean] = js.native
-  var headers: js.UndefOr[StringDictionary[ReferenceObject | HeaderObject]] = js.native
-  var style: js.UndefOr[String] = js.native
+  var allowReserved: js.UndefOr[Boolean] = js.undefined
+  var contentType: js.UndefOr[String] = js.undefined
+  var explode: js.UndefOr[Boolean] = js.undefined
+  var headers: js.UndefOr[StringDictionary[ReferenceObject | HeaderObject]] = js.undefined
+  var style: js.UndefOr[String] = js.undefined
 }
 
 object EncodingObject {
   @scala.inline
-  def apply(): EncodingObject = {
+  def apply(
+    allowReserved: js.UndefOr[Boolean] = js.undefined,
+    contentType: String = null,
+    explode: js.UndefOr[Boolean] = js.undefined,
+    headers: StringDictionary[ReferenceObject | HeaderObject] = null,
+    style: String = null
+  ): EncodingObject = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowReserved)) __obj.updateDynamic("allowReserved")(allowReserved.get.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(explode)) __obj.updateDynamic("explode")(explode.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncodingObject]
   }
-  @scala.inline
-  implicit class EncodingObjectOps[Self <: EncodingObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowReserved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowReserved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowReserved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowReserved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExplode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: StringDictionary[ReferenceObject | HeaderObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

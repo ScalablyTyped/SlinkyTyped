@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SortRangeRequest extends js.Object {
-  var range: js.UndefOr[GridRange] = js.native
-  var sortSpecs: js.UndefOr[js.Array[SortSpec]] = js.native
+  var range: js.UndefOr[GridRange] = js.undefined
+  var sortSpecs: js.UndefOr[js.Array[SortSpec]] = js.undefined
 }
 
 object SortRangeRequest {
   @scala.inline
-  def apply(): SortRangeRequest = {
+  def apply(range: GridRange = null, sortSpecs: js.Array[SortSpec] = null): SortRangeRequest = {
     val __obj = js.Dynamic.literal()
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (sortSpecs != null) __obj.updateDynamic("sortSpecs")(sortSpecs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SortRangeRequest]
   }
-  @scala.inline
-  implicit class SortRangeRequestOps[Self <: SortRangeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRange(value: GridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortSpecs(value: js.Array[SortSpec]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSpecs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortSpecs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSpecs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief 全局对象，所有脚本均可以访问的基础对象
-	* @detail 
-	*/
+  * @brief 全局对象，所有脚本均可以访问的基础对象
+  * @detail 
+  */
 @JSImport("global", JSImport.Namespace)
 @js.native
 object globalMod extends js.Object {

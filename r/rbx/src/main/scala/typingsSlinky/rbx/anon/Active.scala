@@ -5,15 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Active extends js.Object {
-  var active: Requireable[Boolean] = js.native
-  var clipped: Requireable[Boolean] = js.native
-  var closeOnBlur: Requireable[Boolean] = js.native
-  var closeOnEsc: Requireable[Boolean] = js.native
-  var containerClassName: Requireable[String] = js.native
-  var document: Requireable[js.Object] = js.native
-  var onClose: Requireable[js.Function1[/* repeated */ _, _]] = js.native
+  var active: Requireable[Boolean]
+  var clipped: Requireable[Boolean]
+  var closeOnBlur: Requireable[Boolean]
+  var closeOnEsc: Requireable[Boolean]
+  var containerClassName: Requireable[String]
+  var document: Requireable[js.Object]
+  var onClose: Requireable[js.Function1[/* repeated */ _, _]]
 }
 
 object Active {
@@ -30,55 +29,5 @@ object Active {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], clipped = clipped.asInstanceOf[js.Any], closeOnBlur = closeOnBlur.asInstanceOf[js.Any], closeOnEsc = closeOnEsc.asInstanceOf[js.Any], containerClassName = containerClassName.asInstanceOf[js.Any], document = document.asInstanceOf[js.Any], onClose = onClose.asInstanceOf[js.Any])
     __obj.asInstanceOf[Active]
   }
-  @scala.inline
-  implicit class ActiveOps[Self <: Active] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Requireable[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClipped(value: Requireable[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloseOnBlur(value: Requireable[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloseOnEsc(value: Requireable[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEsc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainerClassName(value: Requireable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocument(value: Requireable[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: Requireable[js.Function1[/* repeated */ _, _]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

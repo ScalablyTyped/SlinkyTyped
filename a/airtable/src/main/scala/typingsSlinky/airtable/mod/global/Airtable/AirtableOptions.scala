@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AirtableOptions extends js.Object {
-  var allowUnauthorizedSsl: js.UndefOr[Boolean] = js.native
-  var apiKey: js.UndefOr[String] = js.native
-  var apiVersion: js.UndefOr[String] = js.native
-  var endpointUrl: js.UndefOr[String] = js.native
-  var noRetryIfRateLimited: js.UndefOr[Boolean] = js.native
-  var requestTimeout: js.UndefOr[Double] = js.native
+  var allowUnauthorizedSsl: js.UndefOr[Boolean] = js.undefined
+  var apiKey: js.UndefOr[String] = js.undefined
+  var apiVersion: js.UndefOr[String] = js.undefined
+  var endpointUrl: js.UndefOr[String] = js.undefined
+  var noRetryIfRateLimited: js.UndefOr[Boolean] = js.undefined
+  var requestTimeout: js.UndefOr[Double] = js.undefined
 }
 
 object AirtableOptions {
   @scala.inline
-  def apply(): AirtableOptions = {
+  def apply(
+    allowUnauthorizedSsl: js.UndefOr[Boolean] = js.undefined,
+    apiKey: String = null,
+    apiVersion: String = null,
+    endpointUrl: String = null,
+    noRetryIfRateLimited: js.UndefOr[Boolean] = js.undefined,
+    requestTimeout: js.UndefOr[Double] = js.undefined
+  ): AirtableOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowUnauthorizedSsl)) __obj.updateDynamic("allowUnauthorizedSsl")(allowUnauthorizedSsl.get.asInstanceOf[js.Any])
+    if (apiKey != null) __obj.updateDynamic("apiKey")(apiKey.asInstanceOf[js.Any])
+    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+    if (endpointUrl != null) __obj.updateDynamic("endpointUrl")(endpointUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(noRetryIfRateLimited)) __obj.updateDynamic("noRetryIfRateLimited")(noRetryIfRateLimited.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AirtableOptions]
   }
-  @scala.inline
-  implicit class AirtableOptionsOps[Self <: AirtableOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowUnauthorizedSsl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnauthorizedSsl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUnauthorizedSsl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnauthorizedSsl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpointUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoRetryIfRateLimited(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRetryIfRateLimited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoRetryIfRateLimited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRetryIfRateLimited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

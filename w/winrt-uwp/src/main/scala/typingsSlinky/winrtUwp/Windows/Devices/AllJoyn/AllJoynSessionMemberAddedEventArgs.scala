@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains information about a peer that was added to a session. */
-@js.native
 trait AllJoynSessionMemberAddedEventArgs extends js.Object {
   /** The unique bus name of the remote app new to the session. */
-  var uniqueName: String = js.native
+  var uniqueName: String
 }
 
 object AllJoynSessionMemberAddedEventArgs {
@@ -17,19 +16,5 @@ object AllJoynSessionMemberAddedEventArgs {
     val __obj = js.Dynamic.literal(uniqueName = uniqueName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllJoynSessionMemberAddedEventArgs]
   }
-  @scala.inline
-  implicit class AllJoynSessionMemberAddedEventArgsOps[Self <: AllJoynSessionMemberAddedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUniqueName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

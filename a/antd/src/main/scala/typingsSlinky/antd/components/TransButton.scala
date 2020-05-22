@@ -186,6 +186,8 @@ object TransButton {
     @scala.inline
     def autoCorrect(value: String): this.type = set("autoCorrect", value.asInstanceOf[js.Any])
     @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])

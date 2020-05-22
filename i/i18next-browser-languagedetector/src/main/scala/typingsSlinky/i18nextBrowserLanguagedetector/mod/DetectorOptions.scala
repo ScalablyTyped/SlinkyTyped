@@ -10,166 +10,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DetectorOptions extends js.Object {
   /**
     * cache user language on
     */
-  var caches: js.UndefOr[js.Array[String]] = js.native
-  var cookieDomain: js.UndefOr[String] = js.native
+  var caches: js.UndefOr[js.Array[String]] = js.undefined
+  var cookieDomain: js.UndefOr[String] = js.undefined
   /**
     * optional expire and domain for set cookie
     * @default 10
     */
-  var cookieMinutes: js.UndefOr[Double] = js.native
+  var cookieMinutes: js.UndefOr[Double] = js.undefined
   /**
     * languages to not persist (cookie, localStorage)
     */
-  var excludeCacheFor: js.UndefOr[js.Array[String]] = js.native
+  var excludeCacheFor: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * optional htmlTag with lang attribute
     * @default document.documentElement
     */
-  var htmlTag: js.UndefOr[HTMLElement | Null] = js.native
-  var lookupCookie: js.UndefOr[String] = js.native
-  var lookupLocalStorage: js.UndefOr[String] = js.native
+  var htmlTag: js.UndefOr[HTMLElement | Null] = js.undefined
+  var lookupCookie: js.UndefOr[String] = js.undefined
+  var lookupLocalStorage: js.UndefOr[String] = js.undefined
   /**
     * keys or params to lookup language from
     */
-  var lookupQuerystring: js.UndefOr[String] = js.native
+  var lookupQuerystring: js.UndefOr[String] = js.undefined
   /**
     * order and from where user language should be detected
     */
-  var order: js.UndefOr[js.Array[querystring | cookie | localStorage | navigator | htmlTag | String]] = js.native
+  var order: js.UndefOr[js.Array[querystring | cookie | localStorage | navigator | htmlTag | String]] = js.undefined
 }
 
 object DetectorOptions {
   @scala.inline
-  def apply(): DetectorOptions = {
+  def apply(
+    caches: js.Array[String] = null,
+    cookieDomain: String = null,
+    cookieMinutes: js.UndefOr[Double] = js.undefined,
+    excludeCacheFor: js.Array[String] = null,
+    htmlTag: js.UndefOr[Null | HTMLElement] = js.undefined,
+    lookupCookie: String = null,
+    lookupLocalStorage: String = null,
+    lookupQuerystring: String = null,
+    order: js.Array[querystring | cookie | localStorage | navigator | htmlTag | String] = null
+  ): DetectorOptions = {
     val __obj = js.Dynamic.literal()
+    if (caches != null) __obj.updateDynamic("caches")(caches.asInstanceOf[js.Any])
+    if (cookieDomain != null) __obj.updateDynamic("cookieDomain")(cookieDomain.asInstanceOf[js.Any])
+    if (!js.isUndefined(cookieMinutes)) __obj.updateDynamic("cookieMinutes")(cookieMinutes.get.asInstanceOf[js.Any])
+    if (excludeCacheFor != null) __obj.updateDynamic("excludeCacheFor")(excludeCacheFor.asInstanceOf[js.Any])
+    if (!js.isUndefined(htmlTag)) __obj.updateDynamic("htmlTag")(htmlTag.asInstanceOf[js.Any])
+    if (lookupCookie != null) __obj.updateDynamic("lookupCookie")(lookupCookie.asInstanceOf[js.Any])
+    if (lookupLocalStorage != null) __obj.updateDynamic("lookupLocalStorage")(lookupLocalStorage.asInstanceOf[js.Any])
+    if (lookupQuerystring != null) __obj.updateDynamic("lookupQuerystring")(lookupQuerystring.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectorOptions]
   }
-  @scala.inline
-  implicit class DetectorOptionsOps[Self <: DetectorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaches(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCookieDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookieDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieDomain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCookieMinutes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookieMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeCacheFor(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeCacheFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeCacheFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeCacheFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlTag(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlTagNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlTag")(null)
-        ret
-    }
-    @scala.inline
-    def withLookupCookie(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupCookie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookupCookie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupCookie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookupLocalStorage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupLocalStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookupLocalStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupLocalStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookupQuerystring(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupQuerystring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookupQuerystring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupQuerystring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: js.Array[querystring | cookie | localStorage | navigator | htmlTag | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

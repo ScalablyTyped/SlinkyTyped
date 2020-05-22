@@ -5,123 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INodeDef extends js.Object {
   /** NodeDef attr */
-  var attr: js.UndefOr[StringDictionary[IAttrValue] | Null] = js.native
+  var attr: js.UndefOr[StringDictionary[IAttrValue] | Null] = js.undefined
   /** NodeDef device */
-  var device: js.UndefOr[String | Null] = js.native
+  var device: js.UndefOr[String | Null] = js.undefined
   /** NodeDef input */
-  var input: js.UndefOr[js.Array[String] | Null] = js.native
+  var input: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** NodeDef name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
   /** NodeDef op */
-  var op: js.UndefOr[String | Null] = js.native
+  var op: js.UndefOr[String | Null] = js.undefined
 }
 
 object INodeDef {
   @scala.inline
-  def apply(): INodeDef = {
+  def apply(
+    attr: js.UndefOr[Null | StringDictionary[IAttrValue]] = js.undefined,
+    device: js.UndefOr[Null | String] = js.undefined,
+    input: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined,
+    op: js.UndefOr[Null | String] = js.undefined
+  ): INodeDef = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(attr)) __obj.updateDynamic("attr")(attr.asInstanceOf[js.Any])
+    if (!js.isUndefined(device)) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
+    if (!js.isUndefined(input)) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(op)) __obj.updateDynamic("op")(op.asInstanceOf[js.Any])
     __obj.asInstanceOf[INodeDef]
   }
-  @scala.inline
-  implicit class INodeDefOps[Self <: INodeDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttr(value: StringDictionary[IAttrValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttrNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(null)
-        ret
-    }
-    @scala.inline
-    def withDevice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(null)
-        ret
-    }
-    @scala.inline
-    def withInput(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withOp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("op")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("op")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("op")(null)
-        ret
-    }
-  }
-  
 }
 

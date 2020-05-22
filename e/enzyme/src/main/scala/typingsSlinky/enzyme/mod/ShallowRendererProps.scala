@@ -1,236 +1,91 @@
 package typingsSlinky.enzyme.mod
 
-import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShallowRendererProps extends js.Object {
-  var PROVIDER_VALUES: js.UndefOr[js.Any] = js.native
-  var adapter: js.UndefOr[EnzymeAdapter] = js.native
+  var PROVIDER_VALUES: js.UndefOr[js.Any] = js.undefined
+  var adapter: js.UndefOr[EnzymeAdapter] = js.undefined
   /* TODO what are these doing??? */
-  var attachTo: js.UndefOr[js.Any] = js.native
+  var attachTo: js.UndefOr[js.Any] = js.undefined
   /**
     * Context to be passed into the component
     */
-  var context: js.UndefOr[js.Any] = js.native
+  var context: js.UndefOr[js.Any] = js.undefined
   // See https://github.com/airbnb/enzyme/blob/enzyme@3.10.0/docs/api/shallow.md#arguments
   /**
     * If set to true, componentDidMount is not called on the component, and componentDidUpdate is not called after
     * setProps and setContext. Default to false.
     */
-  var disableLifecycleMethods: js.UndefOr[Boolean] = js.native
+  var disableLifecycleMethods: js.UndefOr[Boolean] = js.undefined
   /**
     * The legacy enableComponentDidUpdateOnSetState option should be matched by
     * `lifecycles: { componentDidUpdate: { onSetState: true } }`, for compatibility
     */
-  var enableComponentDidUpdateOnSetState: js.UndefOr[Boolean] = js.native
-  var hydrateIn: js.UndefOr[js.Any] = js.native
+  var enableComponentDidUpdateOnSetState: js.UndefOr[Boolean] = js.undefined
+  var hydrateIn: js.UndefOr[js.Any] = js.undefined
   /**
     * Enable experimental support for full react lifecycle methods
     */
-  var lifecycleExperimental: js.UndefOr[Boolean] = js.native
-  var lifecycles: js.UndefOr[Lifecycles] = js.native
+  var lifecycleExperimental: js.UndefOr[Boolean] = js.undefined
+  var lifecycles: js.UndefOr[Lifecycles] = js.undefined
   /**
     * the legacy supportPrevContextArgumentOfComponentDidUpdate option should be matched by
     * `lifecycles: { componentDidUpdate: { prevContext: true } }`, for compatibility
     */
-  var supportPrevContextArgumentOfComponentDidUpdate: js.UndefOr[Boolean] = js.native
+  var supportPrevContextArgumentOfComponentDidUpdate: js.UndefOr[Boolean] = js.undefined
   /**
     * If set to true, when rendering Suspense enzyme will replace all the lazy components in children
     * with fallback element prop. Otherwise it won't handle fallback of lazy component.
     * Default to true. Note: not supported in React < 16.6.
     */
-  var suspenseFallback: js.UndefOr[Boolean] = js.native
+  var suspenseFallback: js.UndefOr[Boolean] = js.undefined
   /**
     * A component that will render as a parent of the node.
     * It can be used to provide context to the `node`, among other things.
     * See the [getWrappingComponent() docs](https://airbnb.io/enzyme/docs/api/ShallowWrapper/getWrappingComponent.html) for an example.
     * **Note**: `wrappingComponent` must render its children.
     */
-  var wrappingComponent: js.UndefOr[ComponentType[_]] = js.native
+  var wrappingComponent: js.UndefOr[ComponentType[_]] = js.undefined
   /**
     * Initial props to pass to the `wrappingComponent` if it is specified.
     */
-  var wrappingComponentProps: js.UndefOr[js.Object] = js.native
+  var wrappingComponentProps: js.UndefOr[js.Object] = js.undefined
 }
 
 object ShallowRendererProps {
   @scala.inline
-  def apply(): ShallowRendererProps = {
+  def apply(
+    PROVIDER_VALUES: js.Any = null,
+    adapter: EnzymeAdapter = null,
+    attachTo: js.Any = null,
+    context: js.Any = null,
+    disableLifecycleMethods: js.UndefOr[Boolean] = js.undefined,
+    enableComponentDidUpdateOnSetState: js.UndefOr[Boolean] = js.undefined,
+    hydrateIn: js.Any = null,
+    lifecycleExperimental: js.UndefOr[Boolean] = js.undefined,
+    lifecycles: Lifecycles = null,
+    supportPrevContextArgumentOfComponentDidUpdate: js.UndefOr[Boolean] = js.undefined,
+    suspenseFallback: js.UndefOr[Boolean] = js.undefined,
+    wrappingComponent: ComponentType[_] = null,
+    wrappingComponentProps: js.Object = null
+  ): ShallowRendererProps = {
     val __obj = js.Dynamic.literal()
+    if (PROVIDER_VALUES != null) __obj.updateDynamic("PROVIDER_VALUES")(PROVIDER_VALUES.asInstanceOf[js.Any])
+    if (adapter != null) __obj.updateDynamic("adapter")(adapter.asInstanceOf[js.Any])
+    if (attachTo != null) __obj.updateDynamic("attachTo")(attachTo.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableLifecycleMethods)) __obj.updateDynamic("disableLifecycleMethods")(disableLifecycleMethods.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableComponentDidUpdateOnSetState)) __obj.updateDynamic("enableComponentDidUpdateOnSetState")(enableComponentDidUpdateOnSetState.get.asInstanceOf[js.Any])
+    if (hydrateIn != null) __obj.updateDynamic("hydrateIn")(hydrateIn.asInstanceOf[js.Any])
+    if (!js.isUndefined(lifecycleExperimental)) __obj.updateDynamic("lifecycleExperimental")(lifecycleExperimental.get.asInstanceOf[js.Any])
+    if (lifecycles != null) __obj.updateDynamic("lifecycles")(lifecycles.asInstanceOf[js.Any])
+    if (!js.isUndefined(supportPrevContextArgumentOfComponentDidUpdate)) __obj.updateDynamic("supportPrevContextArgumentOfComponentDidUpdate")(supportPrevContextArgumentOfComponentDidUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suspenseFallback)) __obj.updateDynamic("suspenseFallback")(suspenseFallback.get.asInstanceOf[js.Any])
+    if (wrappingComponent != null) __obj.updateDynamic("wrappingComponent")(wrappingComponent.asInstanceOf[js.Any])
+    if (wrappingComponentProps != null) __obj.updateDynamic("wrappingComponentProps")(wrappingComponentProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShallowRendererProps]
   }
-  @scala.inline
-  implicit class ShallowRendererPropsOps[Self <: ShallowRendererProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPROVIDER_VALUES(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PROVIDER_VALUES")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPROVIDER_VALUES: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PROVIDER_VALUES")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdapter(value: EnzymeAdapter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdapter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachTo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableLifecycleMethods(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableLifecycleMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableLifecycleMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableLifecycleMethods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableComponentDidUpdateOnSetState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableComponentDidUpdateOnSetState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableComponentDidUpdateOnSetState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableComponentDidUpdateOnSetState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHydrateIn(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hydrateIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHydrateIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hydrateIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycleExperimental(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleExperimental")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleExperimental: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleExperimental")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycles(value: Lifecycles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportPrevContextArgumentOfComponentDidUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportPrevContextArgumentOfComponentDidUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportPrevContextArgumentOfComponentDidUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportPrevContextArgumentOfComponentDidUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspenseFallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspenseFallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspenseFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspenseFallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrappingComponentFunction2(value: (_, /* context */ js.UndefOr[js.Any]) => ReactElement | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappingComponent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withWrappingComponent(value: ComponentType[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappingComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrappingComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappingComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrappingComponentProps(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappingComponentProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrappingComponentProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappingComponentProps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

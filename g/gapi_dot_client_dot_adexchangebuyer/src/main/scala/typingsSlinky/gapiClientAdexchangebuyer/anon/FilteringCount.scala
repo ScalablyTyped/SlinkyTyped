@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilteringCount extends js.Object {
   /** The number of times the creative was filtered for the status. The count is aggregated across all publishers on the exchange. */
-  var filteringCount: js.UndefOr[String] = js.native
+  var filteringCount: js.UndefOr[String] = js.undefined
   /** The filtering status code as defined in  creative-status-codes.txt. */
-  var filteringStatus: js.UndefOr[Double] = js.native
+  var filteringStatus: js.UndefOr[Double] = js.undefined
 }
 
 object FilteringCount {
   @scala.inline
-  def apply(): FilteringCount = {
+  def apply(filteringCount: String = null, filteringStatus: js.UndefOr[Double] = js.undefined): FilteringCount = {
     val __obj = js.Dynamic.literal()
+    if (filteringCount != null) __obj.updateDynamic("filteringCount")(filteringCount.asInstanceOf[js.Any])
+    if (!js.isUndefined(filteringStatus)) __obj.updateDynamic("filteringStatus")(filteringStatus.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilteringCount]
   }
-  @scala.inline
-  implicit class FilteringCountOps[Self <: FilteringCount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilteringCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteringCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilteringCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteringCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilteringStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteringStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilteringStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteringStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

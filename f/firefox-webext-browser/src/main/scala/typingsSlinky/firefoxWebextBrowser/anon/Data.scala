@@ -7,72 +7,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Data extends js.Object {
-  var data: Args = js.native
+  var data: Args
   /** The name of the api call or event, or the script url if this is a content or user script event. */
-  var name: String = js.native
+  var name: String
   /** The date string when this call is triggered. */
-  var timeStamp: Date = js.native
+  var timeStamp: Date
   /**
     * The type of log entry. api_call is a function call made by the extension and api_event is an event callback
     * to the extension. content_script is logged when a content script is injected.
     */
-  var `type`: UndefinedType = js.native
+  var `type`: UndefinedType
   /** The type of view where the activity occurred. Content scripts will not have a viewType. */
-  var viewType: js.UndefOr[UndefinedViewType] = js.native
+  var viewType: js.UndefOr[UndefinedViewType] = js.undefined
 }
 
 object Data {
   @scala.inline
-  def apply(data: Args, name: String, timeStamp: Date, `type`: UndefinedType): Data = {
+  def apply(
+    data: Args,
+    name: String,
+    timeStamp: Date,
+    `type`: UndefinedType,
+    viewType: UndefinedViewType = null
+  ): Data = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (viewType != null) __obj.updateDynamic("viewType")(viewType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }
-  @scala.inline
-  implicit class DataOps[Self <: Data] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: Args): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: UndefinedType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewType(value: UndefinedViewType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

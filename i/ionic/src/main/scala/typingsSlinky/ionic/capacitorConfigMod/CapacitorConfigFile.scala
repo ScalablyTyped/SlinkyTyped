@@ -5,75 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CapacitorConfigFile extends js.Object {
-  var appId: js.UndefOr[String] = js.native
-  var appName: js.UndefOr[String] = js.native
-  var server: js.UndefOr[OriginalUrl] = js.native
-  var webDir: js.UndefOr[String] = js.native
+  var appId: js.UndefOr[String] = js.undefined
+  var appName: js.UndefOr[String] = js.undefined
+  var server: js.UndefOr[OriginalUrl] = js.undefined
+  var webDir: js.UndefOr[String] = js.undefined
 }
 
 object CapacitorConfigFile {
   @scala.inline
-  def apply(): CapacitorConfigFile = {
+  def apply(appId: String = null, appName: String = null, server: OriginalUrl = null, webDir: String = null): CapacitorConfigFile = {
     val __obj = js.Dynamic.literal()
+    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
+    if (appName != null) __obj.updateDynamic("appName")(appName.asInstanceOf[js.Any])
+    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
+    if (webDir != null) __obj.updateDynamic("webDir")(webDir.asInstanceOf[js.Any])
     __obj.asInstanceOf[CapacitorConfigFile]
   }
-  @scala.inline
-  implicit class CapacitorConfigFileOps[Self <: CapacitorConfigFile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: OriginalUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webDir")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object baseErrorMod extends js.Object {
   @js.native
-  abstract class BaseError () extends Error
+  abstract class BaseError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   /* static members */
   @js.native

@@ -3,7 +3,6 @@ package typingsSlinky.ionicCore
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
-import typingsSlinky.ionicCore.navInterfaceMod.NavComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object viewControllerMod extends js.Object {
   @js.native
-  class ViewController protected () extends NavComponent {
+  class ViewController protected () extends js.Object {
     def this(component: js.Any) = this()
     def this(component: js.Any, params: ComponentProps[Null]) = this()
     var component: js.Any = js.native

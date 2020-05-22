@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the .NET instance passed by reference to JavaScript.
   */
-@js.native
 trait DotNetObject extends js.Object {
   /**
     * Invokes the specified .NET instance public method synchronously. Not all hosting scenarios support
@@ -17,7 +16,7 @@ trait DotNetObject extends js.Object {
     * @param args Arguments to pass to the method, each of which must be JSON-serializable.
     * @returns The result of the operation.
     */
-  def invokeMethod[T](methodIdentifier: String, args: js.Any*): T = js.native
+  def invokeMethod[T](methodIdentifier: String, args: js.Any*): T
   /**
     * Invokes the specified .NET instance public method asynchronously.
     *
@@ -25,7 +24,7 @@ trait DotNetObject extends js.Object {
     * @param args Arguments to pass to the method, each of which must be JSON-serializable.
     * @returns A promise representing the result of the operation.
     */
-  def invokeMethodAsync[T](methodIdentifier: String, args: js.Any*): js.Promise[T] = js.native
+  def invokeMethodAsync[T](methodIdentifier: String, args: js.Any*): js.Promise[T]
 }
 
 object DotNetObject {
@@ -37,25 +36,5 @@ object DotNetObject {
     val __obj = js.Dynamic.literal(invokeMethod = js.Any.fromFunction2(invokeMethod), invokeMethodAsync = js.Any.fromFunction2(invokeMethodAsync))
     __obj.asInstanceOf[DotNetObject]
   }
-  @scala.inline
-  implicit class DotNetObjectOps[Self <: DotNetObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvokeMethod(value: (String, /* repeated */ js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokeMethod")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInvokeMethodAsync(value: (String, /* repeated */ js.Any) => js.Promise[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invokeMethodAsync")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

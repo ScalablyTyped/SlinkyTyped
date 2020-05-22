@@ -4,135 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnnotationsTunnelTypeOptions extends js.Object {
   /**
     * (Highstock) Background options.
     */
-  var background: js.UndefOr[js.Object | AnnotationsTunnelTypeBackgroundOptions] = js.native
+  var background: js.UndefOr[js.Object | AnnotationsTunnelTypeBackgroundOptions] = js.undefined
   /**
     * (Highstock) The height of the annotation in terms of yAxis.
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * (Highstock) Options for the control point which controls the annotation's
     * height.
     */
-  var heightControlPoint: js.UndefOr[AnnotationsTunnelTypeHeightControlPointOptions] = js.native
+  var heightControlPoint: js.UndefOr[AnnotationsTunnelTypeHeightControlPointOptions] = js.undefined
   /**
     * (Highstock) Line options.
     */
-  var line: js.UndefOr[AnnotationsTunnelTypeLineOptions] = js.native
-  var points: js.UndefOr[js.Array[AnnotationsTunnelTypePointsOptions]] = js.native
+  var line: js.UndefOr[AnnotationsTunnelTypeLineOptions] = js.undefined
+  var points: js.UndefOr[js.Array[AnnotationsTunnelTypePointsOptions]] = js.undefined
   /**
     * (Highstock) This number defines which xAxis the point is connected to. It
     * refers to either the axis id or the index of the axis in the xAxis array.
     */
-  var xAxis: js.UndefOr[Double] = js.native
+  var xAxis: js.UndefOr[Double] = js.undefined
   /**
     * (Highstock) This number defines which yAxis the point is connected to. It
     * refers to either the axis id or the index of the axis in the xAxis array.
     */
-  var yAxis: js.UndefOr[Double] = js.native
+  var yAxis: js.UndefOr[Double] = js.undefined
 }
 
 object AnnotationsTunnelTypeOptions {
   @scala.inline
-  def apply(): AnnotationsTunnelTypeOptions = {
+  def apply(
+    background: js.Object | AnnotationsTunnelTypeBackgroundOptions = null,
+    height: js.UndefOr[Double] = js.undefined,
+    heightControlPoint: AnnotationsTunnelTypeHeightControlPointOptions = null,
+    line: AnnotationsTunnelTypeLineOptions = null,
+    points: js.Array[AnnotationsTunnelTypePointsOptions] = null,
+    xAxis: js.UndefOr[Double] = js.undefined,
+    yAxis: js.UndefOr[Double] = js.undefined
+  ): AnnotationsTunnelTypeOptions = {
     val __obj = js.Dynamic.literal()
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (heightControlPoint != null) __obj.updateDynamic("heightControlPoint")(heightControlPoint.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
+    if (!js.isUndefined(xAxis)) __obj.updateDynamic("xAxis")(xAxis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yAxis)) __obj.updateDynamic("yAxis")(yAxis.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationsTunnelTypeOptions]
   }
-  @scala.inline
-  implicit class AnnotationsTunnelTypeOptionsOps[Self <: AnnotationsTunnelTypeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackground(value: js.Object | AnnotationsTunnelTypeBackgroundOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightControlPoint(value: AnnotationsTunnelTypeHeightControlPointOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightControlPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightControlPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightControlPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: AnnotationsTunnelTypeLineOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoints(value: js.Array[AnnotationsTunnelTypePointsOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXAxis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYAxis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

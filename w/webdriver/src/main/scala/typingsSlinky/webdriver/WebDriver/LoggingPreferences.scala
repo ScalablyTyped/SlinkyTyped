@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoggingPreferences extends js.Object {
-  var browser: js.UndefOr[LoggingPreferenceType] = js.native
-  var client: js.UndefOr[LoggingPreferenceType] = js.native
-  var driver: js.UndefOr[LoggingPreferenceType] = js.native
-  var server: js.UndefOr[LoggingPreferenceType] = js.native
+  var browser: js.UndefOr[LoggingPreferenceType] = js.undefined
+  var client: js.UndefOr[LoggingPreferenceType] = js.undefined
+  var driver: js.UndefOr[LoggingPreferenceType] = js.undefined
+  var server: js.UndefOr[LoggingPreferenceType] = js.undefined
 }
 
 object LoggingPreferences {
   @scala.inline
-  def apply(): LoggingPreferences = {
+  def apply(
+    browser: LoggingPreferenceType = null,
+    client: LoggingPreferenceType = null,
+    driver: LoggingPreferenceType = null,
+    server: LoggingPreferenceType = null
+  ): LoggingPreferences = {
     val __obj = js.Dynamic.literal()
+    if (browser != null) __obj.updateDynamic("browser")(browser.asInstanceOf[js.Any])
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    if (driver != null) __obj.updateDynamic("driver")(driver.asInstanceOf[js.Any])
+    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggingPreferences]
   }
-  @scala.inline
-  implicit class LoggingPreferencesOps[Self <: LoggingPreferences] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrowser(value: LoggingPreferenceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClient(value: LoggingPreferenceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriver(value: LoggingPreferenceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: LoggingPreferenceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

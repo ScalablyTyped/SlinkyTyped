@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.braintree.braintreeStrings.subscription_went_active
   - typingsSlinky.braintree.braintreeStrings.subscription_went_past_due
 */
-trait SubscriptionNotificationKind extends WebhookNotificationKind
+trait SubscriptionNotificationKind extends _WebhookNotificationKind
 
 object SubscriptionNotificationKind {
   @scala.inline

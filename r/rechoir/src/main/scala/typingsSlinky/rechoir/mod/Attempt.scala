@@ -4,50 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Attempt extends js.Object {
-  var error: js.Error | Null = js.native
-  var module: js.Any = js.native
-  var moduleName: String = js.native
+  var error: js.Error | Null
+  var module: js.Any
+  var moduleName: String
 }
 
 object Attempt {
   @scala.inline
-  def apply(module: js.Any, moduleName: String): Attempt = {
-    val __obj = js.Dynamic.literal(module = module.asInstanceOf[js.Any], moduleName = moduleName.asInstanceOf[js.Any])
+  def apply(module: js.Any, moduleName: String, error: js.Error = null): Attempt = {
+    val __obj = js.Dynamic.literal(module = module.asInstanceOf[js.Any], moduleName = moduleName.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any])
     __obj.asInstanceOf[Attempt]
   }
-  @scala.inline
-  implicit class AttemptOps[Self <: Attempt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModule(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModuleName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: js.Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(null)
-        ret
-    }
-  }
-  
 }
 

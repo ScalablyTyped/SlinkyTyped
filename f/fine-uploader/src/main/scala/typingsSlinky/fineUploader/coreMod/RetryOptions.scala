@@ -4,95 +4,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RetryOptions extends js.Object {
   /**
     * The number of seconds to wait between auto retry attempts
     *
     * @default `5`
     */
-  var autoAttemptDelay: js.UndefOr[Double] = js.native
+  var autoAttemptDelay: js.UndefOr[Double] = js.undefined
   /**
     * Enable or disable retrying uploads that receive any error response
     *
     * @default `false`
     */
-  var enableAuto: js.UndefOr[Boolean] = js.native
+  var enableAuto: js.UndefOr[Boolean] = js.undefined
   /**
     * The maximum number of times to attempt to retry a failed upload
     *
     * @default `3`
     */
-  var maxAutoAttempts: js.UndefOr[Double] = js.native
+  var maxAutoAttempts: js.UndefOr[Double] = js.undefined
   /**
     * This property will be looked for in the server response and, if found and `true`, will indicate that no more retries should be attempted for this item
     *
     * @default `'preventRetry'`
     */
-  var preventRetryResponseProperty: js.UndefOr[String] = js.native
+  var preventRetryResponseProperty: js.UndefOr[String] = js.undefined
 }
 
 object RetryOptions {
   @scala.inline
-  def apply(): RetryOptions = {
+  def apply(
+    autoAttemptDelay: js.UndefOr[Double] = js.undefined,
+    enableAuto: js.UndefOr[Boolean] = js.undefined,
+    maxAutoAttempts: js.UndefOr[Double] = js.undefined,
+    preventRetryResponseProperty: String = null
+  ): RetryOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoAttemptDelay)) __obj.updateDynamic("autoAttemptDelay")(autoAttemptDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAuto)) __obj.updateDynamic("enableAuto")(enableAuto.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAutoAttempts)) __obj.updateDynamic("maxAutoAttempts")(maxAutoAttempts.get.asInstanceOf[js.Any])
+    if (preventRetryResponseProperty != null) __obj.updateDynamic("preventRetryResponseProperty")(preventRetryResponseProperty.asInstanceOf[js.Any])
     __obj.asInstanceOf[RetryOptions]
   }
-  @scala.inline
-  implicit class RetryOptionsOps[Self <: RetryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoAttemptDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAttemptDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAttemptDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAttemptDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAuto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAuto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAuto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAutoAttempts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAutoAttempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAutoAttempts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAutoAttempts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventRetryResponseProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventRetryResponseProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventRetryResponseProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventRetryResponseProperty")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

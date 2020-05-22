@@ -10,71 +10,29 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to create a service manager.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * The default drive for the contents manager.
     */
-  val defaultDrive: js.UndefOr[IDrive] = js.native
+  val defaultDrive: js.UndefOr[IDrive] = js.undefined
   /**
     * The server settings of the manager.
     */
-  val serverSettings: js.UndefOr[ISettings] = js.native
+  val serverSettings: js.UndefOr[ISettings] = js.undefined
   /**
     * When the manager stops polling the API. Defaults to `when-hidden`.
     */
-  var standby: js.UndefOr[Standby] = js.native
+  var standby: js.UndefOr[Standby] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(): IOptions = {
+  def apply(defaultDrive: IDrive = null, serverSettings: ISettings = null, standby: Standby = null): IOptions = {
     val __obj = js.Dynamic.literal()
+    if (defaultDrive != null) __obj.updateDynamic("defaultDrive")(defaultDrive.asInstanceOf[js.Any])
+    if (serverSettings != null) __obj.updateDynamic("serverSettings")(serverSettings.asInstanceOf[js.Any])
+    if (standby != null) __obj.updateDynamic("standby")(standby.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultDrive(value: IDrive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDrive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultDrive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDrive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerSettings(value: ISettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandby(value: Standby): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandby: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standby")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

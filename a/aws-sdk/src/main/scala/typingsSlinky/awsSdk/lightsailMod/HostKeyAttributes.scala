@@ -38,101 +38,24 @@ trait HostKeyAttributes extends js.Object {
 
 object HostKeyAttributes {
   @scala.inline
-  def apply(): HostKeyAttributes = {
+  def apply(
+    algorithm: String = null,
+    fingerprintSHA1: String = null,
+    fingerprintSHA256: String = null,
+    notValidAfter: js.Date = null,
+    notValidBefore: js.Date = null,
+    publicKey: String = null,
+    witnessedAt: js.Date = null
+  ): HostKeyAttributes = {
     val __obj = js.Dynamic.literal()
+    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
+    if (fingerprintSHA1 != null) __obj.updateDynamic("fingerprintSHA1")(fingerprintSHA1.asInstanceOf[js.Any])
+    if (fingerprintSHA256 != null) __obj.updateDynamic("fingerprintSHA256")(fingerprintSHA256.asInstanceOf[js.Any])
+    if (notValidAfter != null) __obj.updateDynamic("notValidAfter")(notValidAfter.asInstanceOf[js.Any])
+    if (notValidBefore != null) __obj.updateDynamic("notValidBefore")(notValidBefore.asInstanceOf[js.Any])
+    if (publicKey != null) __obj.updateDynamic("publicKey")(publicKey.asInstanceOf[js.Any])
+    if (witnessedAt != null) __obj.updateDynamic("witnessedAt")(witnessedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostKeyAttributes]
   }
-  @scala.inline
-  implicit class HostKeyAttributesOps[Self <: HostKeyAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFingerprintSHA1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintSHA1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprintSHA1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintSHA1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFingerprintSHA256(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintSHA256")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprintSHA256: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintSHA256")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotValidAfter(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notValidAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotValidAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notValidAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotValidBefore(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notValidBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotValidBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notValidBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWitnessedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("witnessedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWitnessedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("witnessedAt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,20 +9,19 @@ import scala.scalajs.js.annotation._
 /**
   * An interface for using a RenderMime.IRenderer for output and read-only documents.
   */
-@js.native
 trait IExtension extends js.Object {
   /**
     * Preferred data type from the model.  Defaults to `string`.
     */
-  val dataType: js.UndefOr[string | json] = js.native
+  val dataType: js.UndefOr[string | json] = js.undefined
   /**
     * The options used to open a document with the renderer factory.
     */
-  val documentWidgetFactoryOptions: js.UndefOr[IDocumentWidgetFactoryOptions | js.Array[IDocumentWidgetFactoryOptions]] = js.native
+  val documentWidgetFactoryOptions: js.UndefOr[IDocumentWidgetFactoryOptions | js.Array[IDocumentWidgetFactoryOptions]] = js.undefined
   /**
     * The optional file type associated with the extension.
     */
-  val fileTypes: js.UndefOr[js.Array[IFileType]] = js.native
+  val fileTypes: js.UndefOr[js.Array[IFileType]] = js.undefined
   /**
     * The ID of the extension.
     *
@@ -31,107 +30,40 @@ trait IExtension extends js.Object {
     * name followed by a colon and a unique string token, e.g.
     * `'@jupyterlab/apputils-extension:settings'` or `'foo-extension:bar'`.
     */
-  val id: String = js.native
+  val id: String
   /**
     * The rank passed to `RenderMime.addFactory`.  If not given,
     * defaults to the `defaultRank` of the factory.
     */
-  val rank: js.UndefOr[Double] = js.native
+  val rank: js.UndefOr[Double] = js.undefined
   /**
     * The timeout after user activity to re-render the data.
     */
-  val renderTimeout: js.UndefOr[Double] = js.native
+  val renderTimeout: js.UndefOr[Double] = js.undefined
   /**
     * A renderer factory to be registered to render the MIME type.
     */
-  val rendererFactory: IRendererFactory = js.native
+  val rendererFactory: IRendererFactory
 }
 
 object IExtension {
   @scala.inline
-  def apply(id: String, rendererFactory: IRendererFactory): IExtension = {
+  def apply(
+    id: String,
+    rendererFactory: IRendererFactory,
+    dataType: string | json = null,
+    documentWidgetFactoryOptions: IDocumentWidgetFactoryOptions | js.Array[IDocumentWidgetFactoryOptions] = null,
+    fileTypes: js.Array[IFileType] = null,
+    rank: js.UndefOr[Double] = js.undefined,
+    renderTimeout: js.UndefOr[Double] = js.undefined
+  ): IExtension = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], rendererFactory = rendererFactory.asInstanceOf[js.Any])
+    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
+    if (documentWidgetFactoryOptions != null) __obj.updateDynamic("documentWidgetFactoryOptions")(documentWidgetFactoryOptions.asInstanceOf[js.Any])
+    if (fileTypes != null) __obj.updateDynamic("fileTypes")(fileTypes.asInstanceOf[js.Any])
+    if (!js.isUndefined(rank)) __obj.updateDynamic("rank")(rank.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderTimeout)) __obj.updateDynamic("renderTimeout")(renderTimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExtension]
   }
-  @scala.inline
-  implicit class IExtensionOps[Self <: IExtension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRendererFactory(value: IRendererFactory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rendererFactory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataType(value: string | json): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentWidgetFactoryOptions(value: IDocumentWidgetFactoryOptions | js.Array[IDocumentWidgetFactoryOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentWidgetFactoryOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentWidgetFactoryOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentWidgetFactoryOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileTypes(value: js.Array[IFileType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRank(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

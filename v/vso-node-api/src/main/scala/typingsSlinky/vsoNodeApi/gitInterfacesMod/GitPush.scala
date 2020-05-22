@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GitPush extends GitPushRef {
-  var commits: js.Array[GitCommitRef] = js.native
-  var refUpdates: js.Array[GitRefUpdate] = js.native
-  var repository: GitRepository = js.native
+  var commits: js.Array[GitCommitRef]
+  var refUpdates: js.Array[GitRefUpdate]
+  var repository: GitRepository
 }
 
 object GitPush {
@@ -28,31 +27,5 @@ object GitPush {
     val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], commits = commits.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], pushCorrelationId = pushCorrelationId.asInstanceOf[js.Any], pushId = pushId.asInstanceOf[js.Any], pushedBy = pushedBy.asInstanceOf[js.Any], refUpdates = refUpdates.asInstanceOf[js.Any], repository = repository.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitPush]
   }
-  @scala.inline
-  implicit class GitPushOps[Self <: GitPush] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommits(value: js.Array[GitCommitRef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefUpdates(value: js.Array[GitRefUpdate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepository(value: GitRepository): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

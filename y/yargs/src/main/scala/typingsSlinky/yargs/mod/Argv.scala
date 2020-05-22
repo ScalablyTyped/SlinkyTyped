@@ -604,6 +604,11 @@ trait Argv[T] extends js.Object {
   def showHelp(): Argv[T] = js.native
   def showHelp(consoleLevel: String): Argv[T] = js.native
   /**
+    * Provide the usage data as a string.
+    * @param printCallback a function with a single argument.
+    */
+  def showHelp(printCallback: js.Function1[/* s */ String, Unit]): Argv[T] = js.native
+  /**
     * By default, yargs outputs a usage string if any error is detected.
     * Use the `.showHelpOnFail()` method to customize this behavior.
     * @param enable If `false`, the usage string is not output.

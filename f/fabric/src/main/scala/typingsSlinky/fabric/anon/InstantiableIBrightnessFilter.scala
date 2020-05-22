@@ -12,9 +12,9 @@ trait InstantiableIBrightnessFilter
   extends Instantiable0[IBrightnessFilter]
      with Instantiable1[/* options */ Brightness, IBrightnessFilter] {
   /**
-  		 * Returns filter instance from an object representation
-  		 * @param object Object to create an instance from
-  		 */
+    * Returns filter instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): IBrightnessFilter = js.native
 }
 

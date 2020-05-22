@@ -30,65 +30,18 @@ trait CaptionDescription extends js.Object {
 
 object CaptionDescription {
   @scala.inline
-  def apply(CaptionSelectorName: string, Name: string): CaptionDescription = {
+  def apply(
+    CaptionSelectorName: string,
+    Name: string,
+    DestinationSettings: CaptionDestinationSettings = null,
+    LanguageCode: string = null,
+    LanguageDescription: string = null
+  ): CaptionDescription = {
     val __obj = js.Dynamic.literal(CaptionSelectorName = CaptionSelectorName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (DestinationSettings != null) __obj.updateDynamic("DestinationSettings")(DestinationSettings.asInstanceOf[js.Any])
+    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
+    if (LanguageDescription != null) __obj.updateDynamic("LanguageDescription")(LanguageDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionDescription]
   }
-  @scala.inline
-  implicit class CaptionDescriptionOps[Self <: CaptionDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptionSelectorName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSelectorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestinationSettings(value: CaptionDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageDescription(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

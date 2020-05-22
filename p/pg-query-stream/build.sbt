@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "pg-query-stream"
-version := "1.0-dt-20190904Z-a557d0"
+version := "1.0-dt-20200515Z-ed58f8"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
-  "org.scalablytyped.slinky" %%% "pg" % "7.14-dt-20200314Z-f16605",
-  "org.scalablytyped.slinky" %%% "pg-types" % "1.11-dt-20191101Z-864239",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
+  "org.scalablytyped.slinky" %%% "pg" % "7.14-dt-20200515Z-ae7710",
+  "org.scalablytyped.slinky" %%% "pg-types" % "1.11-dt-20200515Z-aacfb3",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

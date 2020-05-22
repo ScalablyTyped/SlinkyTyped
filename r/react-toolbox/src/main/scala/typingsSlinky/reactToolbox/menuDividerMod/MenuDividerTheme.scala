@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MenuDividerTheme extends js.Object {
   /**
     *
     */
-  var menuDivider: js.UndefOr[String] = js.native
+  var menuDivider: js.UndefOr[String] = js.undefined
 }
 
 object MenuDividerTheme {
   @scala.inline
-  def apply(): MenuDividerTheme = {
+  def apply(menuDivider: String = null): MenuDividerTheme = {
     val __obj = js.Dynamic.literal()
+    if (menuDivider != null) __obj.updateDynamic("menuDivider")(menuDivider.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuDividerTheme]
   }
-  @scala.inline
-  implicit class MenuDividerThemeOps[Self <: MenuDividerTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMenuDivider(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuDivider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuDivider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuDivider")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

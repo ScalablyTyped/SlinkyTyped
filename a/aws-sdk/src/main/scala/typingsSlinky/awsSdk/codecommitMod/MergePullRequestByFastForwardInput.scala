@@ -22,41 +22,10 @@ trait MergePullRequestByFastForwardInput extends js.Object {
 
 object MergePullRequestByFastForwardInput {
   @scala.inline
-  def apply(pullRequestId: PullRequestId, repositoryName: RepositoryName): MergePullRequestByFastForwardInput = {
+  def apply(pullRequestId: PullRequestId, repositoryName: RepositoryName, sourceCommitId: ObjectId = null): MergePullRequestByFastForwardInput = {
     val __obj = js.Dynamic.literal(pullRequestId = pullRequestId.asInstanceOf[js.Any], repositoryName = repositoryName.asInstanceOf[js.Any])
+    if (sourceCommitId != null) __obj.updateDynamic("sourceCommitId")(sourceCommitId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MergePullRequestByFastForwardInput]
   }
-  @scala.inline
-  implicit class MergePullRequestByFastForwardInputOps[Self <: MergePullRequestByFastForwardInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPullRequestId(value: PullRequestId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceCommitId(value: ObjectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceCommitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceCommitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceCommitId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

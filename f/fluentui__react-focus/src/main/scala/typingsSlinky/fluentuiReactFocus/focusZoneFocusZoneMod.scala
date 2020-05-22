@@ -19,7 +19,6 @@ object focusZoneFocusZoneMod extends js.Object {
     var _activeElement: js.Any = js.native
     /** The child element with tabindex=0. */
     var _defaultFocusElement: js.Any = js.native
-    var _disposables: js.Any = js.native
     var _evaluateFocusBeforeRender: js.Any = js.native
     var _focusAlignment: js.Any = js.native
     var _getDocument: js.Any = js.native
@@ -30,6 +29,7 @@ object focusZoneFocusZoneMod extends js.Object {
     var _getHorizontalDistanceFromCenter: js.Any = js.native
     var _getOwnerZone: js.Any = js.native
     var _id: js.Any = js.native
+    var _isContentEditableElement: js.Any = js.native
     var _isElementInput: js.Any = js.native
     var _isImmediateDescendantOfZone: js.Any = js.native
     var _isInnerZone: js.Any = js.native
@@ -64,6 +64,7 @@ object focusZoneFocusZoneMod extends js.Object {
       * Returns true if the element is a descendant of the FocusZone through a React portal.
       */
     var _portalContainsElement: js.Any = js.native
+    var _preventDefaultWhenHandled: js.Any = js.native
     /** Used to allow moving to next focusable element even when we're focusing on a input element when pressing tab */
     var _processingTabKey: js.Any = js.native
     var _root: js.Any = js.native
@@ -83,6 +84,7 @@ object focusZoneFocusZoneMod extends js.Object {
       */
     var _tryInvokeClickForFocusable: js.Any = js.native
     var _updateTabIndexes: js.Any = js.native
+    var _windowElement: js.Any = js.native
     @JSName("componentDidMount")
     def componentDidMount_MFocusZone(): Unit = js.native
     @JSName("componentDidUpdate")

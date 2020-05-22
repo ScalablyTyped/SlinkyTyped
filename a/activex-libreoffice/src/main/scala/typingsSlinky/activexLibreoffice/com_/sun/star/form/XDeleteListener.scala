@@ -15,12 +15,11 @@ import scala.scalajs.js.annotation._
   * Please do **not** use anymore, this interface is superseded by {@link com.sun.star.form.XConfirmDeleteListener} .
   * @deprecated Deprecated
   */
-@js.native
 trait XDeleteListener extends XEventListener {
   /** is invoked when the current record of the database form will be deleted. */
-  def approveDelete(aEvent: EventObject): Boolean = js.native
+  def approveDelete(aEvent: EventObject): Boolean
   /** is invoked when a database form has finished the delete processing and the data has been successfully deleted from the datasource. */
-  def deleted(aEvent: EventObject): Unit = js.native
+  def deleted(aEvent: EventObject): Unit
 }
 
 object XDeleteListener {
@@ -36,25 +35,5 @@ object XDeleteListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), approveDelete = js.Any.fromFunction1(approveDelete), deleted = js.Any.fromFunction1(deleted), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDeleteListener]
   }
-  @scala.inline
-  implicit class XDeleteListenerOps[Self <: XDeleteListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApproveDelete(value: EventObject => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approveDelete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDeleted(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

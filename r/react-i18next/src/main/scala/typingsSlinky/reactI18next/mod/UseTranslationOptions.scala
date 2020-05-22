@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UseTranslationOptions extends js.Object {
-  var i18n: js.UndefOr[typingsSlinky.i18next.mod.i18n] = js.native
-  var useSuspense: js.UndefOr[Boolean] = js.native
+  var i18n: js.UndefOr[typingsSlinky.i18next.mod.i18n] = js.undefined
+  var useSuspense: js.UndefOr[Boolean] = js.undefined
 }
 
 object UseTranslationOptions {
   @scala.inline
-  def apply(): UseTranslationOptions = {
+  def apply(i18n: i18n = null, useSuspense: js.UndefOr[Boolean] = js.undefined): UseTranslationOptions = {
     val __obj = js.Dynamic.literal()
+    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
+    if (!js.isUndefined(useSuspense)) __obj.updateDynamic("useSuspense")(useSuspense.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseTranslationOptions]
   }
-  @scala.inline
-  implicit class UseTranslationOptionsOps[Self <: UseTranslationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withI18n(value: i18n): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutI18n: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseSuspense(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSuspense")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseSuspense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSuspense")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

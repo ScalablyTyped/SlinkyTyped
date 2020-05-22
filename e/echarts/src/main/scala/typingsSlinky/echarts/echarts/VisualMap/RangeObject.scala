@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeObject extends js.Object {
-  var color: js.UndefOr[String | js.Array[String]] = js.native
-  var colorAlpha: js.UndefOr[Double | js.Array[Double]] = js.native
-  var colorHue: js.UndefOr[Double | js.Array[Double]] = js.native
-  var colorLightness: js.UndefOr[Double | js.Array[Double]] = js.native
-  var colorSaturation: js.UndefOr[Double | js.Array[Double]] = js.native
-  var opacity: js.UndefOr[Double | js.Array[Double]] = js.native
-  var symbol: js.UndefOr[String | js.Array[String]] = js.native
-  var symbolSize: js.UndefOr[Double | js.Array[Double]] = js.native
+  var color: js.UndefOr[String | js.Array[String]] = js.undefined
+  var colorAlpha: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var colorHue: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var colorLightness: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var colorSaturation: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var opacity: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var symbol: js.UndefOr[String | js.Array[String]] = js.undefined
+  var symbolSize: js.UndefOr[Double | js.Array[Double]] = js.undefined
 }
 
 object RangeObject {
   @scala.inline
-  def apply(): RangeObject = {
+  def apply(
+    color: String | js.Array[String] = null,
+    colorAlpha: Double | js.Array[Double] = null,
+    colorHue: Double | js.Array[Double] = null,
+    colorLightness: Double | js.Array[Double] = null,
+    colorSaturation: Double | js.Array[Double] = null,
+    opacity: Double | js.Array[Double] = null,
+    symbol: String | js.Array[String] = null,
+    symbolSize: Double | js.Array[Double] = null
+  ): RangeObject = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (colorAlpha != null) __obj.updateDynamic("colorAlpha")(colorAlpha.asInstanceOf[js.Any])
+    if (colorHue != null) __obj.updateDynamic("colorHue")(colorHue.asInstanceOf[js.Any])
+    if (colorLightness != null) __obj.updateDynamic("colorLightness")(colorLightness.asInstanceOf[js.Any])
+    if (colorSaturation != null) __obj.updateDynamic("colorSaturation")(colorSaturation.asInstanceOf[js.Any])
+    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeObject]
   }
-  @scala.inline
-  implicit class RangeObjectOps[Self <: RangeObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorAlpha(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorHue(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorHue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorHue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorHue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorLightness(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorLightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorLightness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorLightness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSaturation(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSaturation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSaturation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSaturation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolSize(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

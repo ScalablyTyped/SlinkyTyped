@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientDashboardParameterValue")
 @js.native
 class ASPxClientDashboardParameterValue ()
-  extends typingsSlinky.devexpressWeb.ASPxClientDashboardParameterValue
+  extends typingsSlinky.devexpressWeb.ASPxClientDashboardParameterValue {
+  /**
+    * Returns the parameter display text.
+    */
+  /* CompleteClass */
+  override def GetDisplayText(): String = js.native
+  /**
+    * Returns a parameter value.
+    */
+  /* CompleteClass */
+  override def GetValue(): js.Any = js.native
+}
 

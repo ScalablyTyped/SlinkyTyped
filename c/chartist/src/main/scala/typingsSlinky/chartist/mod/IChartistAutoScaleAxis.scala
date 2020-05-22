@@ -1,104 +1,49 @@
 package typingsSlinky.chartist.mod
 
+import typingsSlinky.chartist.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IChartistAutoScaleAxis extends ILineChartAxis {
-  var high: js.UndefOr[Double] = js.native
-  var low: js.UndefOr[Double] = js.native
-  var onlyInteger: js.UndefOr[Boolean] = js.native
-  var referenceValue: js.UndefOr[Double] = js.native
-  var scaleMinSpace: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[IAutoScaleAxisStatic] = js.native
+  var high: js.UndefOr[Double] = js.undefined
+  var low: js.UndefOr[Double] = js.undefined
+  var onlyInteger: js.UndefOr[Boolean] = js.undefined
+  var referenceValue: js.UndefOr[Double] = js.undefined
+  var scaleMinSpace: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[IAutoScaleAxisStatic] = js.undefined
 }
 
 object IChartistAutoScaleAxis {
   @scala.inline
-  def apply(): IChartistAutoScaleAxis = {
+  def apply(
+    high: js.UndefOr[Double] = js.undefined,
+    labelInterpolationFnc: js.Function = null,
+    labelOffset: Y = null,
+    low: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    onlyInteger: js.UndefOr[Boolean] = js.undefined,
+    position: String = null,
+    referenceValue: js.UndefOr[Double] = js.undefined,
+    scaleMinSpace: js.UndefOr[Double] = js.undefined,
+    showGrid: js.UndefOr[Boolean] = js.undefined,
+    showLabel: js.UndefOr[Boolean] = js.undefined,
+    `type`: IAutoScaleAxisStatic = null
+  ): IChartistAutoScaleAxis = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(high)) __obj.updateDynamic("high")(high.get.asInstanceOf[js.Any])
+    if (labelInterpolationFnc != null) __obj.updateDynamic("labelInterpolationFnc")(labelInterpolationFnc.asInstanceOf[js.Any])
+    if (labelOffset != null) __obj.updateDynamic("labelOffset")(labelOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(low)) __obj.updateDynamic("low")(low.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlyInteger)) __obj.updateDynamic("onlyInteger")(onlyInteger.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(referenceValue)) __obj.updateDynamic("referenceValue")(referenceValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleMinSpace)) __obj.updateDynamic("scaleMinSpace")(scaleMinSpace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showGrid)) __obj.updateDynamic("showGrid")(showGrid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLabel)) __obj.updateDynamic("showLabel")(showLabel.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IChartistAutoScaleAxis]
   }
-  @scala.inline
-  implicit class IChartistAutoScaleAxisOps[Self <: IChartistAutoScaleAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHigh(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHigh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlyInteger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyInteger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlyInteger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyInteger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleMinSpace(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMinSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleMinSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMinSpace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: IAutoScaleAxisStatic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

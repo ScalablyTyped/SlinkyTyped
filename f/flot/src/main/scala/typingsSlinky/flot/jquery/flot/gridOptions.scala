@@ -4,264 +4,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait gridOptions extends js.Object {
-  var aboveData: js.UndefOr[Boolean] = js.native
-  var autoHighlight: js.UndefOr[Boolean] = js.native
-  var axisMargin: js.UndefOr[Double] = js.native
+  var aboveData: js.UndefOr[Boolean] = js.undefined
+  var autoHighlight: js.UndefOr[Boolean] = js.undefined
+  var axisMargin: js.UndefOr[Double] = js.undefined
                   // color
-  var backgroundColor: js.UndefOr[js.Any] = js.native
+  var backgroundColor: js.UndefOr[js.Any] = js.undefined
             // number or width object
-  var borderColor: js.UndefOr[js.Any] = js.native
+  var borderColor: js.UndefOr[js.Any] = js.undefined
                //array of markings or (fn: axes -> array of markings)
-  var borderWidth: js.UndefOr[js.Any] = js.native
+  var borderWidth: js.UndefOr[js.Any] = js.undefined
          // or null
-  var clickable: js.UndefOr[Boolean] = js.native
-  var color: js.UndefOr[js.Any] = js.native
-  var hoverable: js.UndefOr[Boolean] = js.native
+  var clickable: js.UndefOr[Boolean] = js.undefined
+  var color: js.UndefOr[js.Any] = js.undefined
+  var hoverable: js.UndefOr[Boolean] = js.undefined
                   // number or margin object
-  var labelMargin: js.UndefOr[Double] = js.native
+  var labelMargin: js.UndefOr[Double] = js.undefined
         //color/gradient or null
-  var margin: js.UndefOr[js.Any] = js.native
-  var markings: js.UndefOr[js.Any] = js.native
-  var markingsColor: js.UndefOr[js.Any] = js.native
-  var markingsLineWidth: js.UndefOr[Double] = js.native
+  var margin: js.UndefOr[js.Any] = js.undefined
+  var markings: js.UndefOr[js.Any] = js.undefined
+  var markingsColor: js.UndefOr[js.Any] = js.undefined
+  var markingsLineWidth: js.UndefOr[Double] = js.undefined
             // color or null
-  var minBorderMargin: js.UndefOr[Double] = js.native
-  var mouseActiveRadius: js.UndefOr[Double] = js.native
-  var show: js.UndefOr[Boolean] = js.native
-  var tickColor: js.UndefOr[js.Any] = js.native
+  var minBorderMargin: js.UndefOr[Double] = js.undefined
+  var mouseActiveRadius: js.UndefOr[Double] = js.undefined
+  var show: js.UndefOr[Boolean] = js.undefined
+  var tickColor: js.UndefOr[js.Any] = js.undefined
 }
 
 object gridOptions {
   @scala.inline
-  def apply(): gridOptions = {
+  def apply(
+    aboveData: js.UndefOr[Boolean] = js.undefined,
+    autoHighlight: js.UndefOr[Boolean] = js.undefined,
+    axisMargin: js.UndefOr[Double] = js.undefined,
+    backgroundColor: js.Any = null,
+    borderColor: js.Any = null,
+    borderWidth: js.Any = null,
+    clickable: js.UndefOr[Boolean] = js.undefined,
+    color: js.Any = null,
+    hoverable: js.UndefOr[Boolean] = js.undefined,
+    labelMargin: js.UndefOr[Double] = js.undefined,
+    margin: js.Any = null,
+    markings: js.Any = null,
+    markingsColor: js.Any = null,
+    markingsLineWidth: js.UndefOr[Double] = js.undefined,
+    minBorderMargin: js.UndefOr[Double] = js.undefined,
+    mouseActiveRadius: js.UndefOr[Double] = js.undefined,
+    show: js.UndefOr[Boolean] = js.undefined,
+    tickColor: js.Any = null
+  ): gridOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(aboveData)) __obj.updateDynamic("aboveData")(aboveData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoHighlight)) __obj.updateDynamic("autoHighlight")(autoHighlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisMargin)) __obj.updateDynamic("axisMargin")(axisMargin.get.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverable)) __obj.updateDynamic("hoverable")(hoverable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelMargin)) __obj.updateDynamic("labelMargin")(labelMargin.get.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (markings != null) __obj.updateDynamic("markings")(markings.asInstanceOf[js.Any])
+    if (markingsColor != null) __obj.updateDynamic("markingsColor")(markingsColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(markingsLineWidth)) __obj.updateDynamic("markingsLineWidth")(markingsLineWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minBorderMargin)) __obj.updateDynamic("minBorderMargin")(minBorderMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseActiveRadius)) __obj.updateDynamic("mouseActiveRadius")(mouseActiveRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (tickColor != null) __obj.updateDynamic("tickColor")(tickColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[gridOptions]
   }
-  @scala.inline
-  implicit class gridOptionsOps[Self <: gridOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAboveData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aboveData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAboveData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aboveData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoHighlight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHighlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkings(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkingsColor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markingsColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkingsColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markingsColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkingsLineWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markingsLineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkingsLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markingsLineWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinBorderMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minBorderMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinBorderMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minBorderMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseActiveRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseActiveRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseActiveRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseActiveRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickColor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,33 +11,32 @@ import scala.scalajs.js.annotation._
   * [Api set: Mailbox 1.8]
   *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
-@js.native
 trait AttachmentContent extends js.Object {
   /**
     * The content of an attachment as a string.
     */
-  var content: String = js.native
+  var content: String
   /**
     * The string format to use for an attachment's content.
-    * 
+    *
     * For file attachments, the formatting is a base64-encoded string.
-    * 
+    *
     * For item attachments that represent messages and were attached by drag-and-drop or "Attach Item",
     * the formatting is a string representing an .eml formatted file.
     * **Important**: If a message item was attached by drag-and-drop in Outlook on the web, then `getAttachmentContentAsync` throws an error.
-    * 
+    *
     * For item attachments that represent calendar items and were attached by drag-and-drop or "Attach Item",
     * the formatting is a string representing an .icalendar file.
     * **Important**: If a calendar item was attached by drag-and-drop in Outlook on the web, then `getAttachmentContentAsync` throws an error.
-    * 
+    *
     * For cloud attachments, the formatting is a URL string.
     */
-  var format: AttachmentContentFormat | String = js.native
+  var format: AttachmentContentFormat | String
 }
 
 object AttachmentContent {
@@ -46,25 +45,5 @@ object AttachmentContent {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentContent]
   }
-  @scala.inline
-  implicit class AttachmentContentOps[Self <: AttachmentContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: AttachmentContentFormat | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

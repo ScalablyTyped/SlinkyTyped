@@ -2,13 +2,23 @@ package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.mfiles.IIndirectPropertyIDLevel
+import typingsSlinky.mfiles.MFiles.MFIndirectPropertyIDLevelType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.IndirectPropertyIDLevel")
 @js.native
-class IndirectPropertyIDLevel () extends IIndirectPropertyIDLevel
+class IndirectPropertyIDLevel () extends IIndirectPropertyIDLevel {
+  /* CompleteClass */
+  override var ID: Double = js.native
+  /* CompleteClass */
+  override var LevelType: MFIndirectPropertyIDLevelType = js.native
+  /* CompleteClass */
+  override def Clone(): IIndirectPropertyIDLevel = js.native
+  /* CompleteClass */
+  override def ToJSON(): String = js.native
+}
 
 @JSGlobal("MFiles.IndirectPropertyIDLevel")
 @js.native

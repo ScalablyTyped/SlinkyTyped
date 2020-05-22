@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SparkVerticalAxis extends js.Object {
-  val Application: typingsSlinky.activexExcel.Excel.Application = js.native
-  val Creator: XlCreator = js.native
-  var CustomMaxScaleValue: js.Any = js.native
-  var CustomMinScaleValue: js.Any = js.native
+  val Application: typingsSlinky.activexExcel.Excel.Application
+  val Creator: XlCreator
+  var CustomMaxScaleValue: js.Any
+  var CustomMinScaleValue: js.Any
   @JSName("Excel.SparkVerticalAxis_typekey")
-  var ExcelDotSparkVerticalAxis_typekey: SparkVerticalAxis = js.native
-  var MaxScaleType: XlSparkScale = js.native
-  var MinScaleType: XlSparkScale = js.native
-  val Parent: js.Any = js.native
+  var ExcelDotSparkVerticalAxis_typekey: SparkVerticalAxis
+  var MaxScaleType: XlSparkScale
+  var MinScaleType: XlSparkScale
+  val Parent: js.Any
 }
 
 object SparkVerticalAxis {
@@ -33,61 +32,5 @@ object SparkVerticalAxis {
     __obj.updateDynamic("Excel.SparkVerticalAxis_typekey")(ExcelDotSparkVerticalAxis_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SparkVerticalAxis]
   }
-  @scala.inline
-  implicit class SparkVerticalAxisOps[Self <: SparkVerticalAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: XlCreator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomMaxScaleValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomMaxScaleValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomMinScaleValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomMinScaleValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcelDotSparkVerticalAxis_typekey(value: SparkVerticalAxis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.SparkVerticalAxis_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxScaleType(value: XlSparkScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxScaleType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinScaleType(value: XlSparkScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinScaleType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

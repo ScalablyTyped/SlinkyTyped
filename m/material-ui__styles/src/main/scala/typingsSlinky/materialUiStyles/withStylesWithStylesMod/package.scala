@@ -5,6 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object withStylesWithStylesMod {
+  type ClassKeyInferable[Theme, Props /* <: js.Object */] = java.lang.String | (typingsSlinky.materialUiStyles.withStylesWithStylesMod.Styles[Theme, Props, java.lang.String])
+  type ClassKeyOfStyles[StylesOrClassKey] = js.Any | StylesOrClassKey
   type ClassNameMap[ClassKey /* <: java.lang.String */] = typingsSlinky.std.Record[ClassKey, java.lang.String]
   type PropsOfStyles[StylesType] = js.Object
   type StyleRules[Props /* <: js.Object */, ClassKey /* <: java.lang.String */] = typingsSlinky.std.Record[
@@ -18,6 +20,7 @@ package object withStylesWithStylesMod {
     /* theme */ Theme, 
     typingsSlinky.materialUiStyles.withStylesWithStylesMod.StyleRules[Props, ClassKey]
   ]
+  type Styles[Theme, Props /* <: js.Object */, ClassKey /* <: java.lang.String */] = (typingsSlinky.materialUiStyles.withStylesWithStylesMod.StyleRules[Props, ClassKey]) | (typingsSlinky.materialUiStyles.withStylesWithStylesMod.StyleRulesCallback[Theme, Props, ClassKey])
   type ThemeOfStyles[StylesType] = js.Object
   type WithStyles[StylesType /* <: typingsSlinky.materialUiStyles.withStylesWithStylesMod.ClassKeyInferable[_, _] */, IncludeTheme /* <: js.UndefOr[scala.Boolean] */] = (js.Object | typingsSlinky.materialUiStyles.anon.Theme[StylesType]) with typingsSlinky.materialUiStyles.anon.Classes[StylesType] with typingsSlinky.materialUiStyles.withStylesWithStylesMod.PropsOfStyles[StylesType]
 }

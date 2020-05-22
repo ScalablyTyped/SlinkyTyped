@@ -15,7 +15,6 @@ import org.scalajs.dom.raw.ApplicationCache
 import org.scalajs.dom.raw.BeforeUnloadEvent
 import org.scalajs.dom.raw.CSSRuleList
 import org.scalajs.dom.raw.CSSStyleDeclaration
-import org.scalajs.dom.raw.Console
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
@@ -195,6 +194,7 @@ import typingsSlinky.jestTypes.globalMod.ItConcurrent
 import typingsSlinky.jestTypes.globalMod.Jasmine
 import typingsSlinky.jestTypes.globalMod.TestFn
 import typingsSlinky.jestTypes.globalMod.TestName
+import typingsSlinky.node.Console
 import typingsSlinky.node.NodeJS.Global
 import typingsSlinky.node.NodeJS.Immediate
 import typingsSlinky.node.NodeJS.Process
@@ -222,6 +222,7 @@ import typingsSlinky.std.FocusNavigationOrigin
 import typingsSlinky.std.FrameRequestCallback
 import typingsSlinky.std.FunctionConstructor
 import typingsSlinky.std.ImageBitmap
+import typingsSlinky.std.ImageBitmapOptions
 import typingsSlinky.std.ImageBitmapSource
 import typingsSlinky.std.Int16ArrayConstructor
 import typingsSlinky.std.Int32ArrayConstructor
@@ -296,7 +297,6 @@ trait Win
   var Float64Array: Float64ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Float64Array]) = js.native
   @JSName("Function")
   var Function_Original: FunctionConstructor with (Instantiable1[/* args (repeated) */ String, Function]) = js.native
-  var GLOBAL: Global = js.native
   var Infinity: Double = js.native
   var Int16Array: Int16ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Int16Array]) = js.native
   var Int32Array: Int32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Int32Array]) = js.native
@@ -350,7 +350,7 @@ trait Win
   val caches: CacheStorage = js.native
   val clientInformation: Navigator = js.native
   val closed: scala.Boolean = js.native
-  val console: Console with typingsSlinky.node.Console = js.native
+  var console: Console = js.native
   val crypto: Crypto = js.native
   var customElements: CustomElementRegistry = js.native
   @JSName("decodeURIComponent")
@@ -733,10 +733,6 @@ trait Win
   var process: Process = js.native
   @JSName("queueMicrotask")
   var queueMicrotask_Original: js.Function1[/* callback */ js.Function0[Unit], Unit] = js.native
-  /**
-    * @deprecated Use `global`.
-    */
-  var root: Global = js.native
   val screen: Screen = js.native
   val screenLeft: Double = js.native
   val screenTop: Double = js.native
@@ -2808,7 +2804,16 @@ trait Win
   def confirm(): scala.Boolean = js.native
   def confirm(message: String): scala.Boolean = js.native
   def createImageBitmap(image: ImageBitmapSource): js.Promise[ImageBitmap] = js.native
+  def createImageBitmap(image: ImageBitmapSource, options: ImageBitmapOptions): js.Promise[ImageBitmap] = js.native
   def createImageBitmap(image: ImageBitmapSource, sx: Double, sy: Double, sw: Double, sh: Double): js.Promise[ImageBitmap] = js.native
+  def createImageBitmap(
+    image: ImageBitmapSource,
+    sx: Double,
+    sy: Double,
+    sw: Double,
+    sh: Double,
+    options: ImageBitmapOptions
+  ): js.Promise[ImageBitmap] = js.native
   def decodeURI(encodedURI: String): String = js.native
   def decodeURIComponent(encodedURIComponent: String): String = js.native
   def departFocus(navigationReason: NavigationReason, origin: FocusNavigationOrigin): Unit = js.native

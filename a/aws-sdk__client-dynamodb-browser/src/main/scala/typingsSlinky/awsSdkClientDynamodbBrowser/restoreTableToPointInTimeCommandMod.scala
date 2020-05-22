@@ -26,9 +26,16 @@ object restoreTableToPointInTimeCommandMod extends js.Object {
           Blob
         ] {
     def this(input: RestoreTableToPointInTimeInput) = this()
+    /* CompleteClass */
+    override val input: RestoreTableToPointInTimeInput = js.native
     val middlewareStack: MiddlewareStack[RestoreTableToPointInTimeInput, RestoreTableToPointInTimeOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[RestoreTableToPointInTimeInput, RestoreTableToPointInTimeOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[RestoreTableToPointInTimeInput, RestoreTableToPointInTimeOutput] = js.native
   }

@@ -14,5 +14,13 @@ class EndpointPair protected ()
     remoteHostName: typingsSlinky.winrt.Windows.Networking.HostName,
     remoteServiceName: String
   ) = this()
+  /* CompleteClass */
+  override var localHostName: typingsSlinky.winrt.Windows.Networking.HostName = js.native
+  /* CompleteClass */
+  override var localServiceName: String = js.native
+  /* CompleteClass */
+  override var remoteHostName: typingsSlinky.winrt.Windows.Networking.HostName = js.native
+  /* CompleteClass */
+  override var remoteServiceName: String = js.native
 }
 

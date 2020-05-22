@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFilter extends js.Object {
   /** If using React or Angular 2, returns the underlying component instance, so you can call methods
     * on it if you want. */
-  var getFrameworkComponentInstance: js.UndefOr[js.Function0[_]] = js.native
+  var getFrameworkComponentInstance: js.UndefOr[js.Function0[_]] = js.undefined
   /**
     * Optional method used by ag-Grid when rendering floating filters and there isn't a floating filter
     * associated for this filter, this will happen if you create a custom filter and NOT a custom floating
     * filter.
     */
-  var getModelAsString: js.UndefOr[js.Function1[/* model */ js.Any, String]] = js.native
+  var getModelAsString: js.UndefOr[js.Function1[/* model */ js.Any, String]] = js.undefined
   /**
     * Optional method used by ag-Grid when rendering floating filters.
     *
@@ -29,21 +28,21 @@ trait IFilter extends js.Object {
     *
     *     change: The exact same object passed on FloatingFilter.onFloatingFilterChanged
     */
-  var onFloatingFilterChanged: js.UndefOr[js.Function1[/* change */ js.Any, Unit]] = js.native
+  var onFloatingFilterChanged: js.UndefOr[js.Function1[/* change */ js.Any, Unit]] = js.undefined
   /** Gets called when new rows are inserted into the grid. If the filter needs to change it's state
     after rows are loaded, it can do it here. */
-  var onNewRowsLoaded: js.UndefOr[js.Function0[Unit]] = js.native
+  var onNewRowsLoaded: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** The grid will ask each active filter, in turn, whether each row in the grid passes. If any
     filter fails, then the row will be excluded from the final set. The method is provided a
     params object with attributes node (the rodNode the grid creates that wraps the data) and data
     (the data object that you provided to the grid for that row). */
-  def doesFilterPass(params: IDoesFilterPassParams): Boolean = js.native
+  def doesFilterPass(params: IDoesFilterPassParams): Boolean
   /** Gets the filter state for storing */
-  def getModel(): js.Any = js.native
+  def getModel(): js.Any
   /** This is used to show the filter icon in the header. If true, the filter icon will be shown. */
-  def isFilterActive(): Boolean = js.native
+  def isFilterActive(): Boolean
   /** Restores the filter state. */
-  def setModel(model: js.Any): Unit = js.native
+  def setModel(model: js.Any): Unit
 }
 
 object IFilter {
@@ -52,90 +51,18 @@ object IFilter {
     doesFilterPass: IDoesFilterPassParams => Boolean,
     getModel: () => js.Any,
     isFilterActive: () => Boolean,
-    setModel: js.Any => Unit
+    setModel: js.Any => Unit,
+    getFrameworkComponentInstance: () => _ = null,
+    getModelAsString: /* model */ js.Any => String = null,
+    onFloatingFilterChanged: /* change */ js.Any => Unit = null,
+    onNewRowsLoaded: () => Unit = null
   ): IFilter = {
     val __obj = js.Dynamic.literal(doesFilterPass = js.Any.fromFunction1(doesFilterPass), getModel = js.Any.fromFunction0(getModel), isFilterActive = js.Any.fromFunction0(isFilterActive), setModel = js.Any.fromFunction1(setModel))
+    if (getFrameworkComponentInstance != null) __obj.updateDynamic("getFrameworkComponentInstance")(js.Any.fromFunction0(getFrameworkComponentInstance))
+    if (getModelAsString != null) __obj.updateDynamic("getModelAsString")(js.Any.fromFunction1(getModelAsString))
+    if (onFloatingFilterChanged != null) __obj.updateDynamic("onFloatingFilterChanged")(js.Any.fromFunction1(onFloatingFilterChanged))
+    if (onNewRowsLoaded != null) __obj.updateDynamic("onNewRowsLoaded")(js.Any.fromFunction0(onNewRowsLoaded))
     __obj.asInstanceOf[IFilter]
   }
-  @scala.inline
-  implicit class IFilterOps[Self <: IFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDoesFilterPass(value: IDoesFilterPassParams => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doesFilterPass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetModel(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getModel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsFilterActive(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFilterActive")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetModel(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setModel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetFrameworkComponentInstance(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFrameworkComponentInstance")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetFrameworkComponentInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFrameworkComponentInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetModelAsString(value: /* model */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getModelAsString")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetModelAsString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getModelAsString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFloatingFilterChanged(value: /* change */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFloatingFilterChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFloatingFilterChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFloatingFilterChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNewRowsLoaded(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNewRowsLoaded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNewRowsLoaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNewRowsLoaded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

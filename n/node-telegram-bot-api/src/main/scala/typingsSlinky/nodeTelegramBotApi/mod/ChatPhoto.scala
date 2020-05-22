@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChatPhoto extends js.Object {
-  var big_file_id: String = js.native
-  var small_file_id: String = js.native
+  var big_file_id: String
+  var small_file_id: String
 }
 
 object ChatPhoto {
@@ -16,25 +15,5 @@ object ChatPhoto {
     val __obj = js.Dynamic.literal(big_file_id = big_file_id.asInstanceOf[js.Any], small_file_id = small_file_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChatPhoto]
   }
-  @scala.inline
-  implicit class ChatPhotoOps[Self <: ChatPhoto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBig_file_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("big_file_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSmall_file_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small_file_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

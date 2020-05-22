@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledRulesConfigurationType extends RulesConfigurationType {
   /**
     * <p>An array of rules. You can specify up to 25 rules per identity provider.</p> <p>Rules are evaluated in order. The first one to match specifies the role.</p>
     */
   @JSName("Rules")
-  var Rules_UnmarshalledRulesConfigurationType: js.Array[UnmarshalledMappingRule] = js.native
+  var Rules_UnmarshalledRulesConfigurationType: js.Array[UnmarshalledMappingRule]
 }
 
 object UnmarshalledRulesConfigurationType {
@@ -20,19 +19,5 @@ object UnmarshalledRulesConfigurationType {
     val __obj = js.Dynamic.literal(Rules = Rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledRulesConfigurationType]
   }
-  @scala.inline
-  implicit class UnmarshalledRulesConfigurationTypeOps[Self <: UnmarshalledRulesConfigurationType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRules(value: js.Array[UnmarshalledMappingRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

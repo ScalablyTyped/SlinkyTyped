@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequiredProps extends js.Object {
   // height of the viewer displayed on screen
-  var height: Double = js.native
+  var height: Double
   // current active tool (TOOL_NONE, TOOL_PAN, TOOL_ZOOM_IN, TOOL_ZOOM_OUT)
-  var tool: Tool = js.native
+  var tool: Tool
   // value of the viewer (current point of view)
-  var value: Value | Null = js.native
+  var value: Value | Null
   // width of the viewer displayed on screen
-  var width: Double = js.native
+  var width: Double
   // handler tool changed
-  def onChangeTool(tool: Tool): Unit = js.native
+  def onChangeTool(tool: Tool): Unit
   // handler something changed
-  def onChangeValue(value: Value): Unit = js.native
+  def onChangeValue(value: Value): Unit
 }
 
 object RequiredProps {
@@ -27,60 +26,11 @@ object RequiredProps {
     onChangeTool: Tool => Unit,
     onChangeValue: Value => Unit,
     tool: Tool,
-    width: Double
+    width: Double,
+    value: Value = null
   ): RequiredProps = {
-    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], onChangeTool = js.Any.fromFunction1(onChangeTool), onChangeValue = js.Any.fromFunction1(onChangeValue), tool = tool.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], onChangeTool = js.Any.fromFunction1(onChangeTool), onChangeValue = js.Any.fromFunction1(onChangeValue), tool = tool.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequiredProps]
   }
-  @scala.inline
-  implicit class RequiredPropsOps[Self <: RequiredProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnChangeTool(value: Tool => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeTool")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnChangeValue(value: Value => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTool(value: Tool): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
-  }
-  
 }
 

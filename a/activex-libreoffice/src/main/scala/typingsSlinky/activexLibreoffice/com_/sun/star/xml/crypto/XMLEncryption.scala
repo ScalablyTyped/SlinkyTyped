@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Service of {@link XMLEncryption} */
-@js.native
 trait XMLEncryption
   extends XXMLEncryption
      with XInitialization

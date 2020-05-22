@@ -4,68 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileBrowser extends js.Object {
   /** This API is used to receive the server-side handler for file related operations.
     */
-  var ajaxAction: js.UndefOr[String] = js.native
+  var ajaxAction: js.UndefOr[String] = js.undefined
   /** Specifies the file type extension shown in the file browser window.
     */
-  var extensionAllow: js.UndefOr[String] = js.native
+  var extensionAllow: js.UndefOr[String] = js.undefined
   /** Specifies the directory to perform operations like create, delete and rename folder and files, and upload the selected files to the current directory.
     */
-  var filePath: js.UndefOr[String] = js.native
+  var filePath: js.UndefOr[String] = js.undefined
 }
 
 object FileBrowser {
   @scala.inline
-  def apply(): FileBrowser = {
+  def apply(ajaxAction: String = null, extensionAllow: String = null, filePath: String = null): FileBrowser = {
     val __obj = js.Dynamic.literal()
+    if (ajaxAction != null) __obj.updateDynamic("ajaxAction")(ajaxAction.asInstanceOf[js.Any])
+    if (extensionAllow != null) __obj.updateDynamic("extensionAllow")(extensionAllow.asInstanceOf[js.Any])
+    if (filePath != null) __obj.updateDynamic("filePath")(filePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileBrowser]
   }
-  @scala.inline
-  implicit class FileBrowserOps[Self <: FileBrowser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAjaxAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensionAllow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAllow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensionAllow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAllow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

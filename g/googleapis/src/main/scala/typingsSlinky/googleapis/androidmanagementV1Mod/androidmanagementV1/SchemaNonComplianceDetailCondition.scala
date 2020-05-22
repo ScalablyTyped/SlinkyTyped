@@ -33,53 +33,12 @@ trait SchemaNonComplianceDetailCondition extends js.Object {
 
 object SchemaNonComplianceDetailCondition {
   @scala.inline
-  def apply(): SchemaNonComplianceDetailCondition = {
+  def apply(nonComplianceReason: String = null, packageName: String = null, settingName: String = null): SchemaNonComplianceDetailCondition = {
     val __obj = js.Dynamic.literal()
+    if (nonComplianceReason != null) __obj.updateDynamic("nonComplianceReason")(nonComplianceReason.asInstanceOf[js.Any])
+    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
+    if (settingName != null) __obj.updateDynamic("settingName")(settingName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNonComplianceDetailCondition]
   }
-  @scala.inline
-  implicit class SchemaNonComplianceDetailConditionOps[Self <: SchemaNonComplianceDetailCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNonComplianceReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonComplianceReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonComplianceReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonComplianceReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settingName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

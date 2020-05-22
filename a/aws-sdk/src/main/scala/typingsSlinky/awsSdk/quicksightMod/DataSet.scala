@@ -58,161 +58,34 @@ trait DataSet extends js.Object {
 
 object DataSet {
   @scala.inline
-  def apply(): DataSet = {
+  def apply(
+    Arn: Arn = null,
+    ColumnGroups: ColumnGroupList = null,
+    ConsumedSpiceCapacityInBytes: js.UndefOr[Long_] = js.undefined,
+    CreatedTime: js.Date = null,
+    DataSetId: ResourceId = null,
+    ImportMode: DataSetImportMode = null,
+    LastUpdatedTime: js.Date = null,
+    LogicalTableMap: LogicalTableMap = null,
+    Name: ResourceName = null,
+    OutputColumns: OutputColumnList = null,
+    PhysicalTableMap: PhysicalTableMap = null,
+    RowLevelPermissionDataSet: RowLevelPermissionDataSet = null
+  ): DataSet = {
     val __obj = js.Dynamic.literal()
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (ColumnGroups != null) __obj.updateDynamic("ColumnGroups")(ColumnGroups.asInstanceOf[js.Any])
+    if (!js.isUndefined(ConsumedSpiceCapacityInBytes)) __obj.updateDynamic("ConsumedSpiceCapacityInBytes")(ConsumedSpiceCapacityInBytes.get.asInstanceOf[js.Any])
+    if (CreatedTime != null) __obj.updateDynamic("CreatedTime")(CreatedTime.asInstanceOf[js.Any])
+    if (DataSetId != null) __obj.updateDynamic("DataSetId")(DataSetId.asInstanceOf[js.Any])
+    if (ImportMode != null) __obj.updateDynamic("ImportMode")(ImportMode.asInstanceOf[js.Any])
+    if (LastUpdatedTime != null) __obj.updateDynamic("LastUpdatedTime")(LastUpdatedTime.asInstanceOf[js.Any])
+    if (LogicalTableMap != null) __obj.updateDynamic("LogicalTableMap")(LogicalTableMap.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (OutputColumns != null) __obj.updateDynamic("OutputColumns")(OutputColumns.asInstanceOf[js.Any])
+    if (PhysicalTableMap != null) __obj.updateDynamic("PhysicalTableMap")(PhysicalTableMap.asInstanceOf[js.Any])
+    if (RowLevelPermissionDataSet != null) __obj.updateDynamic("RowLevelPermissionDataSet")(RowLevelPermissionDataSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSet]
   }
-  @scala.inline
-  implicit class DataSetOps[Self <: DataSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnGroups(value: ColumnGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsumedSpiceCapacityInBytes(value: Long_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedSpiceCapacityInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumedSpiceCapacityInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedSpiceCapacityInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSetId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportMode(value: DataSetImportMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogicalTableMap(value: LogicalTableMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalTableMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogicalTableMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalTableMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputColumns(value: OutputColumnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhysicalTableMap(value: PhysicalTableMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalTableMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhysicalTableMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalTableMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowLevelPermissionDataSet(value: RowLevelPermissionDataSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowLevelPermissionDataSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowLevelPermissionDataSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowLevelPermissionDataSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

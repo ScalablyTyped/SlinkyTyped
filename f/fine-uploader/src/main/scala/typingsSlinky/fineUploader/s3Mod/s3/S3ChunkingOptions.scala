@@ -1,11 +1,13 @@
 package typingsSlinky.fineUploader.s3Mod.s3
 
 import typingsSlinky.fineUploader.coreMod.ChunkingOptions
+import typingsSlinky.fineUploader.coreMod.ConcurrentOptions
+import typingsSlinky.fineUploader.coreMod.ParamNamesOptions
+import typingsSlinky.fineUploader.coreMod.SuccessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait S3ChunkingOptions extends ChunkingOptions {
   /**
     * The maximum size of each part, in bytes
@@ -13,34 +15,27 @@ trait S3ChunkingOptions extends ChunkingOptions {
     * @default `5242880`
     */
   @JSName("partSize")
-  var partSize_S3ChunkingOptions: js.UndefOr[Double] = js.native
+  var partSize_S3ChunkingOptions: js.UndefOr[Double] = js.undefined
 }
 
 object S3ChunkingOptions {
   @scala.inline
-  def apply(): S3ChunkingOptions = {
+  def apply(
+    concurrent: ConcurrentOptions = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    mandatory: js.UndefOr[Boolean] = js.undefined,
+    paramNames: ParamNamesOptions = null,
+    partSize: js.UndefOr[Double] = js.undefined,
+    success: SuccessOptions = null
+  ): S3ChunkingOptions = {
     val __obj = js.Dynamic.literal()
+    if (concurrent != null) __obj.updateDynamic("concurrent")(concurrent.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mandatory)) __obj.updateDynamic("mandatory")(mandatory.get.asInstanceOf[js.Any])
+    if (paramNames != null) __obj.updateDynamic("paramNames")(paramNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(partSize)) __obj.updateDynamic("partSize")(partSize.get.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3ChunkingOptions]
   }
-  @scala.inline
-  implicit class S3ChunkingOptionsOps[Self <: S3ChunkingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPartSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

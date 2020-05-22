@@ -134,7 +134,7 @@ trait EmitterOp extends js.Object {
     * Change the current value of the property and update its callback methods.
     * @param value The value of the property.
     */
-  def onChange(value: Double): EmitterOp = js.native
+  def onChange(value: Double): this.type = js.native
   /**
     * The callback to run for Particles when they are emitted from the Particle Emitter.
     */
@@ -159,7 +159,7 @@ trait EmitterOp extends js.Object {
     * {@link Phaser.GameObjects.Particles.EmitterOp#onUpdate} callbacks based on the type of the current
     * {@link Phaser.GameObjects.Particles.EmitterOp#propertyValue}.
     */
-  def setMethods(): EmitterOp = js.native
+  def setMethods(): this.type = js.native
   /**
     * An `onEmit` callback that returns the current value of the property.
     */

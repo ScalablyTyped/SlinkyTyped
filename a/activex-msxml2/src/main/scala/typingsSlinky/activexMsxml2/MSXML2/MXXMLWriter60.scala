@@ -5,28 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Microsoft XML Writer 6.0 */
-@js.native
 trait MXXMLWriter60 extends js.Object {
   @JSName("MSXML2.MXXMLWriter60_typekey")
-  var MSXML2DotMXXMLWriter60_typekey: MXXMLWriter60 = js.native
+  var MSXML2DotMXXMLWriter60_typekey: MXXMLWriter60
   /** Determine whether or not to write the byte order mark */
-  var byteOrderMark: Boolean = js.native
+  var byteOrderMark: Boolean
   /** When enabled, the writer no longer escapes out its input when writing it out. */
-  var disableOutputEscaping: Boolean = js.native
+  var disableOutputEscaping: Boolean
   /** Set or get the output encoding. */
-  var encoding: String = js.native
+  var encoding: String
   /** Enable or disable auto indent mode. */
-  var indent: Boolean = js.native
+  var indent: Boolean
   /** Determine whether or not to omit the XML declaration. */
-  var omitXMLDeclaration: Boolean = js.native
+  var omitXMLDeclaration: Boolean
   /** Set or get the output. */
-  var output: js.Any = js.native
+  var output: js.Any
   /** Set or get the standalone document declaration. */
-  var standalone: Boolean = js.native
+  var standalone: Boolean
   /** Set or get the xml version info. */
-  var version: String = js.native
+  var version: String
   /** Flushes all writer buffers forcing the writer to write to the underlying output object */
-  def flush(): Unit = js.native
+  def flush(): Unit
 }
 
 object MXXMLWriter60 {
@@ -47,73 +46,5 @@ object MXXMLWriter60 {
     __obj.updateDynamic("MSXML2.MXXMLWriter60_typekey")(MSXML2DotMXXMLWriter60_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[MXXMLWriter60]
   }
-  @scala.inline
-  implicit class MXXMLWriter60Ops[Self <: MXXMLWriter60] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSXML2DotMXXMLWriter60_typekey(value: MXXMLWriter60): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSXML2.MXXMLWriter60_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withByteOrderMark(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("byteOrderMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisableOutputEscaping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOutputEscaping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlush(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIndent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOmitXMLDeclaration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omitXMLDeclaration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutput(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStandalone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

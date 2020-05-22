@@ -4,7 +4,7 @@ import typingsSlinky.firebaseFirestore.apiTimestampMod.Timestamp
 import typingsSlinky.firebaseFirestore.coreSnapshotVersionMod.SnapshotVersion
 import typingsSlinky.firebaseFirestore.modelDocumentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.modelDocumentMod.MaybeDocument
-import typingsSlinky.firebaseFirestore.srcModelFieldValueMod.ObjectValue
+import typingsSlinky.firebaseFirestore.modelObjectValueMod.ObjectValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -81,7 +81,7 @@ object Mutation extends js.Object {
     * Returns the version from the given document for use as the result of a
     * mutation. Mutations are defined to return the version of the base document
     * only if it is an existing document. Deleted and unknown documents have a
-    * post-mutation version of SnapshotVersion.MIN.
+    * post-mutation version of SnapshotVersion.min().
     */
   /* protected */ def getPostMutationVersion(maybeDoc: MaybeDocument): SnapshotVersion = js.native
 }

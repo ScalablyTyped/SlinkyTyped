@@ -4,37 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SjclCipherEncryptParams extends SjclCipherParams {
-  var iv: BitArray_ = js.native
-  var salt: BitArray_ = js.native
+  var iv: BitArray_
+  var salt: BitArray_
 }
 
 object SjclCipherEncryptParams {
   @scala.inline
-  def apply(iv: BitArray_, salt: BitArray_): SjclCipherEncryptParams = {
+  def apply(
+    iv: BitArray_,
+    salt: BitArray_,
+    adata: String = null,
+    cipher: String = null,
+    iter: js.UndefOr[Double] = js.undefined,
+    ks: js.UndefOr[Double] = js.undefined,
+    mode: String = null,
+    ts: js.UndefOr[Double] = js.undefined,
+    v: js.UndefOr[Double] = js.undefined
+  ): SjclCipherEncryptParams = {
     val __obj = js.Dynamic.literal(iv = iv.asInstanceOf[js.Any], salt = salt.asInstanceOf[js.Any])
+    if (adata != null) __obj.updateDynamic("adata")(adata.asInstanceOf[js.Any])
+    if (cipher != null) __obj.updateDynamic("cipher")(cipher.asInstanceOf[js.Any])
+    if (!js.isUndefined(iter)) __obj.updateDynamic("iter")(iter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ks)) __obj.updateDynamic("ks")(ks.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(ts)) __obj.updateDynamic("ts")(ts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SjclCipherEncryptParams]
   }
-  @scala.inline
-  implicit class SjclCipherEncryptParamsOps[Self <: SjclCipherEncryptParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIv(value: BitArray_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSalt(value: BitArray_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salt")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

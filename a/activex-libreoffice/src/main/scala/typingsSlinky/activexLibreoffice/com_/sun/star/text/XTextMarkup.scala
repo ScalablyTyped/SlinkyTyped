@@ -9,13 +9,12 @@ import scala.scalajs.js.annotation._
   * provides functionality to markup text.
   * @since OOo 2.3
   */
-@js.native
 trait XTextMarkup extends js.Object {
   /**
     * obtains a container to store additional user defined text markup information.
     * @returns a container to store additional user defined text markup information.
     */
-  val MarkupInfoContainer: XStringKeyMap = js.native
+  val MarkupInfoContainer: XStringKeyMap
   /**
     * submits a new markup range.
     * @param nType Type of text markup see {@link TextMarkupType} .
@@ -30,13 +29,13 @@ trait XTextMarkup extends js.Object {
     nStart: Double,
     nLength: Double,
     xMarkupInfoContainer: XStringKeyMap
-  ): Unit = js.native
-  def commitTextRangeMarkup(nType: Double, aIdentifier: String, xRange: XTextRange, xMarkupInfoContainer: XStringKeyMap): Unit = js.native
+  ): Unit
+  def commitTextRangeMarkup(nType: Double, aIdentifier: String, xRange: XTextRange, xMarkupInfoContainer: XStringKeyMap): Unit
   /**
     * obtains a container to store additional user defined text markup information.
     * @returns a container to store additional user defined text markup information.
     */
-  def getMarkupInfoContainer(): XStringKeyMap = js.native
+  def getMarkupInfoContainer(): XStringKeyMap
 }
 
 object XTextMarkup {
@@ -50,37 +49,5 @@ object XTextMarkup {
     val __obj = js.Dynamic.literal(MarkupInfoContainer = MarkupInfoContainer.asInstanceOf[js.Any], commitStringMarkup = js.Any.fromFunction5(commitStringMarkup), commitTextRangeMarkup = js.Any.fromFunction4(commitTextRangeMarkup), getMarkupInfoContainer = js.Any.fromFunction0(getMarkupInfoContainer))
     __obj.asInstanceOf[XTextMarkup]
   }
-  @scala.inline
-  implicit class XTextMarkupOps[Self <: XTextMarkup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarkupInfoContainer(value: XStringKeyMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarkupInfoContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommitStringMarkup(value: (Double, String, Double, Double, XStringKeyMap) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitStringMarkup")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withCommitTextRangeMarkup(value: (Double, String, XTextRange, XStringKeyMap) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTextRangeMarkup")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetMarkupInfoContainer(value: () => XStringKeyMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMarkupInfoContainer")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

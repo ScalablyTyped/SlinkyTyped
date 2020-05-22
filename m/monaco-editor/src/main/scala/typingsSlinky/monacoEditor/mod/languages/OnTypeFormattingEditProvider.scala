@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnTypeFormattingEditProvider extends js.Object {
-  var autoFormatTriggerCharacters: js.Array[String] = js.native
+  var autoFormatTriggerCharacters: js.Array[String]
   /**
     * Provide formatting edits after a character has been typed.
     *
@@ -23,7 +22,7 @@ trait OnTypeFormattingEditProvider extends js.Object {
     ch: String,
     options: FormattingOptions,
     token: CancellationToken
-  ): ProviderResult[js.Array[TextEdit]] = js.native
+  ): ProviderResult[js.Array[TextEdit]]
 }
 
 object OnTypeFormattingEditProvider {
@@ -35,27 +34,5 @@ object OnTypeFormattingEditProvider {
     val __obj = js.Dynamic.literal(autoFormatTriggerCharacters = autoFormatTriggerCharacters.asInstanceOf[js.Any], provideOnTypeFormattingEdits = js.Any.fromFunction5(provideOnTypeFormattingEdits))
     __obj.asInstanceOf[OnTypeFormattingEditProvider]
   }
-  @scala.inline
-  implicit class OnTypeFormattingEditProviderOps[Self <: OnTypeFormattingEditProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoFormatTriggerCharacters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFormatTriggerCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProvideOnTypeFormattingEdits(
-      value: (ITextModel, Position, String, FormattingOptions, CancellationToken) => ProviderResult[js.Array[TextEdit]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provideOnTypeFormattingEdits")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

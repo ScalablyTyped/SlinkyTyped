@@ -7,390 +7,142 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseProjection extends js.Object {
   /**
     * The projection's center, a two-element array of longitude and latitude in degrees.
     *
     * __Default value:__ `[0, 0]`
     */
-  var center: js.UndefOr[(Vector2[Double | SignalRef]) | SignalRef] = js.native
+  var center: js.UndefOr[(Vector2[Double | SignalRef]) | SignalRef] = js.undefined
   /**
     * The projection's clipping circle radius to the specified angle in degrees. If `null`, switches to [antimeridian](http://bl.ocks.org/mbostock/3788999) cutting rather than small-circle clipping.
     */
-  var clipAngle: js.UndefOr[Double | SignalRef] = js.native
+  var clipAngle: js.UndefOr[Double | SignalRef] = js.undefined
   /**
     * The projection's viewport clip extent to the specified bounds in pixels. The extent bounds are specified as an array `[[x0, y0], [x1, y1]]`, where `x0` is the left-side of the viewport, `y0` is the top, `x1` is the right and `y1` is the bottom. If `null`, no viewport clipping is performed.
     */
-  var clipExtent: js.UndefOr[(Vector2[Vector2[Double | SignalRef]]) | SignalRef] = js.native
+  var clipExtent: js.UndefOr[(Vector2[Vector2[Double | SignalRef]]) | SignalRef] = js.undefined
   // TODO: use a union tagged by the projection type to determine which of the following is applicable
   /* The following properties are all supported for specific types of projections. Consult the d3-geo-projection library for more information: https://github.com/d3/d3-geo-projection */
-  var coefficient: js.UndefOr[Double | SignalRef] = js.native
-  var distance: js.UndefOr[Double | SignalRef] = js.native
+  var coefficient: js.UndefOr[Double | SignalRef] = js.undefined
+  var distance: js.UndefOr[Double | SignalRef] = js.undefined
   /*
     * Used in conjunction with fit, provides the pixel area to which the projection should be automatically fit.
     */
-  var extent: js.UndefOr[(Vector2[Vector2[Double | SignalRef]]) | SignalRef] = js.native
+  var extent: js.UndefOr[(Vector2[Vector2[Double | SignalRef]]) | SignalRef] = js.undefined
   /*
     * GeoJSON data to which the projection should attempt to automatically fit the `translate` and `scale` parameters. If object-valued, this parameter should be a GeoJSON Feature or FeatureCollection. If array-valued, each array member may be a GeoJSON Feature, FeatureCollection, or a sub-array of GeoJSON Features.
     */
-  var fit: js.UndefOr[Fit | js.Array[Fit] | SignalRef] = js.native
-  var fraction: js.UndefOr[Double | SignalRef] = js.native
-  var lobes: js.UndefOr[Double | SignalRef] = js.native
-  var parallel: js.UndefOr[Double | SignalRef] = js.native
+  var fit: js.UndefOr[Fit | js.Array[Fit] | SignalRef] = js.undefined
+  var fraction: js.UndefOr[Double | SignalRef] = js.undefined
+  var lobes: js.UndefOr[Double | SignalRef] = js.undefined
+  var parallel: js.UndefOr[Double | SignalRef] = js.undefined
   /**
     * For conic projections, the [two standard parallels](https://en.wikipedia.org/wiki/Map_projection#Conic) that define the map layout. The default depends on the specific conic projection used.
     */
-  var parallels: js.UndefOr[(js.Array[Double | SignalRef]) | SignalRef] = js.native
+  var parallels: js.UndefOr[(js.Array[Double | SignalRef]) | SignalRef] = js.undefined
   /**
     * The default radius (in pixels) to use when drawing GeoJSON `Point` and `MultiPoint` geometries. This parameter sets a constant default value. To modify the point radius in response to data, see the corresponding parameter of the GeoPath and GeoShape transforms.
     *
     * __Default value:__ `4.5`
     */
-  var pointRadius: js.UndefOr[Double | SignalRef] = js.native
+  var pointRadius: js.UndefOr[Double | SignalRef] = js.undefined
   /**
     * The threshold for the projection's [adaptive resampling](http://bl.ocks.org/mbostock/3795544) to the specified value in pixels. This value corresponds to the [Douglas–Peucker distance](http://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm). If precision is not specified, returns the projection's current resampling precision which defaults to `√0.5 ≅ 0.70710…`.
     */
-  var precision: js.UndefOr[Double | SignalRef] = js.native
-  var radius: js.UndefOr[Double | SignalRef] = js.native
-  var ratio: js.UndefOr[Double | SignalRef] = js.native
+  var precision: js.UndefOr[Double | SignalRef] = js.undefined
+  var radius: js.UndefOr[Double | SignalRef] = js.undefined
+  var ratio: js.UndefOr[Double | SignalRef] = js.undefined
   /*
     * Sets whether or not the x-dimension is reflected (negated) in the output.
     */
-  var reflectX: js.UndefOr[Boolean | SignalRef] = js.native
+  var reflectX: js.UndefOr[Boolean | SignalRef] = js.undefined
   /*
     * Sets whether or not the y-dimension is reflected (negated) in the output.
     */
-  var reflectY: js.UndefOr[Boolean | SignalRef] = js.native
+  var reflectY: js.UndefOr[Boolean | SignalRef] = js.undefined
   /**
     * The projection's three-axis rotation to the specified angles, which must be a two- or three-element array of numbers [`lambda`, `phi`, `gamma`] specifying the rotation angles in degrees about each spherical axis. (These correspond to yaw, pitch and roll.)
     *
     * __Default value:__ `[0, 0, 0]`
     */
-  var rotate: js.UndefOr[(Vector2[Double | SignalRef]) | (Vector3[Double | SignalRef]) | SignalRef] = js.native
+  var rotate: js.UndefOr[(Vector2[Double | SignalRef]) | (Vector3[Double | SignalRef]) | SignalRef] = js.undefined
   /**
     * The projection’s scale factor. The default scale is projection-specific. The scale factor corresponds linearly to the distance between projected points; however, scale factor values are not equivalent across projections.
     */
-  var scale: js.UndefOr[Double | SignalRef] = js.native
+  var scale: js.UndefOr[Double | SignalRef] = js.undefined
   /*
     * Used in conjunction with fit, provides the width and height in pixels of the area to which the projection should be automatically fit.
     */
-  var size: js.UndefOr[(Vector2[Double | SignalRef]) | SignalRef] = js.native
-  var spacing: js.UndefOr[Double | SignalRef] = js.native
-  var tilt: js.UndefOr[Double | SignalRef] = js.native
+  var size: js.UndefOr[(Vector2[Double | SignalRef]) | SignalRef] = js.undefined
+  var spacing: js.UndefOr[Double | SignalRef] = js.undefined
+  var tilt: js.UndefOr[Double | SignalRef] = js.undefined
   /*
     * The projection's translation offset as a two-element array `[tx, ty]`, defaults to `[480, 250]`. The translation offset determines the pixel coordinates of the projection's center. The default translation offset places (0°,0°) at the center of a 960×500 area.
     */
-  var translate: js.UndefOr[(Vector2[Double | SignalRef]) | SignalRef] = js.native
+  var translate: js.UndefOr[(Vector2[Double | SignalRef]) | SignalRef] = js.undefined
   /*
     * The cartographic projection to use. This value is case-insensitive, for example `"albers"` and `"Albers"` indicate the same projection type.
     *
     * __Default value:__ `mercator`
     */
-  var `type`: js.UndefOr[ProjectionType | SignalRef] = js.native
+  var `type`: js.UndefOr[ProjectionType | SignalRef] = js.undefined
 }
 
 object BaseProjection {
   @scala.inline
-  def apply(): BaseProjection = {
+  def apply(
+    center: (Vector2[Double | SignalRef]) | SignalRef = null,
+    clipAngle: Double | SignalRef = null,
+    clipExtent: (Vector2[Vector2[Double | SignalRef]]) | SignalRef = null,
+    coefficient: Double | SignalRef = null,
+    distance: Double | SignalRef = null,
+    extent: (Vector2[Vector2[Double | SignalRef]]) | SignalRef = null,
+    fit: Fit | js.Array[Fit] | SignalRef = null,
+    fraction: Double | SignalRef = null,
+    lobes: Double | SignalRef = null,
+    parallel: Double | SignalRef = null,
+    parallels: (js.Array[Double | SignalRef]) | SignalRef = null,
+    pointRadius: Double | SignalRef = null,
+    precision: Double | SignalRef = null,
+    radius: Double | SignalRef = null,
+    ratio: Double | SignalRef = null,
+    reflectX: Boolean | SignalRef = null,
+    reflectY: Boolean | SignalRef = null,
+    rotate: (Vector2[Double | SignalRef]) | (Vector3[Double | SignalRef]) | SignalRef = null,
+    scale: Double | SignalRef = null,
+    size: (Vector2[Double | SignalRef]) | SignalRef = null,
+    spacing: Double | SignalRef = null,
+    tilt: Double | SignalRef = null,
+    translate: (Vector2[Double | SignalRef]) | SignalRef = null,
+    `type`: ProjectionType | SignalRef = null
+  ): BaseProjection = {
     val __obj = js.Dynamic.literal()
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (clipAngle != null) __obj.updateDynamic("clipAngle")(clipAngle.asInstanceOf[js.Any])
+    if (clipExtent != null) __obj.updateDynamic("clipExtent")(clipExtent.asInstanceOf[js.Any])
+    if (coefficient != null) __obj.updateDynamic("coefficient")(coefficient.asInstanceOf[js.Any])
+    if (distance != null) __obj.updateDynamic("distance")(distance.asInstanceOf[js.Any])
+    if (extent != null) __obj.updateDynamic("extent")(extent.asInstanceOf[js.Any])
+    if (fit != null) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
+    if (fraction != null) __obj.updateDynamic("fraction")(fraction.asInstanceOf[js.Any])
+    if (lobes != null) __obj.updateDynamic("lobes")(lobes.asInstanceOf[js.Any])
+    if (parallel != null) __obj.updateDynamic("parallel")(parallel.asInstanceOf[js.Any])
+    if (parallels != null) __obj.updateDynamic("parallels")(parallels.asInstanceOf[js.Any])
+    if (pointRadius != null) __obj.updateDynamic("pointRadius")(pointRadius.asInstanceOf[js.Any])
+    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
+    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
+    if (ratio != null) __obj.updateDynamic("ratio")(ratio.asInstanceOf[js.Any])
+    if (reflectX != null) __obj.updateDynamic("reflectX")(reflectX.asInstanceOf[js.Any])
+    if (reflectY != null) __obj.updateDynamic("reflectY")(reflectY.asInstanceOf[js.Any])
+    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
+    if (tilt != null) __obj.updateDynamic("tilt")(tilt.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseProjection]
   }
-  @scala.inline
-  implicit class BaseProjectionOps[Self <: BaseProjection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCenter(value: (Vector2[Double | SignalRef]) | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClipAngle(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClipAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClipExtent(value: (Vector2[Vector2[Double | SignalRef]]) | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipExtent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClipExtent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipExtent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoefficient(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coefficient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoefficient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coefficient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistance(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtent(value: (Vector2[Vector2[Double | SignalRef]]) | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFit(value: Fit | js.Array[Fit] | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFraction(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fraction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLobes(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lobes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLobes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lobes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallel(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallels(value: (js.Array[Double | SignalRef]) | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointRadius(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRatio(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ratio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ratio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReflectX(value: Boolean | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reflectX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReflectX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reflectX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReflectY(value: Boolean | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reflectY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReflectY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reflectY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotate(value: (Vector2[Double | SignalRef]) | (Vector3[Double | SignalRef]) | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: (Vector2[Double | SignalRef]) | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTilt(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTilt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslate(value: (Vector2[Double | SignalRef]) | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ProjectionType | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

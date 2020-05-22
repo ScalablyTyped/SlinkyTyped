@@ -23,7 +23,7 @@ trait TableColumnCollection extends ClientObject {
   var context_TableColumnCollection: RequestContext = js.native
   /**
     *
-    * Returns the number of columns in the table. Read-only.
+    * Returns the number of columns in the table.
     *
     * [Api set: ExcelApi 1.1]
     */

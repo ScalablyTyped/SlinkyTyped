@@ -14,7 +14,7 @@ object uploadMod extends js.Object {
   @js.native
   class default protected ()
     extends typingsSlinky.antd.uploadUploadMod.default {
-    def this(props: UploadProps) = this()
+    def this(props: UploadProps[_]) = this()
   }
   
   /* static members */
@@ -22,7 +22,7 @@ object uploadMod extends js.Object {
   object default extends js.Object {
     var Dragger: Instantiable0[typingsSlinky.antd.draggerMod.default] = js.native
     var defaultProps: Accept = js.native
-    def getDerivedStateFromProps(nextProps: UploadProps): FileList | Null = js.native
+    def getDerivedStateFromProps(nextProps: UploadProps[_]): FileList | Null = js.native
   }
   
 }

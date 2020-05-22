@@ -38,95 +38,23 @@ trait ModifySnapshotAttributeRequest extends js.Object {
 
 object ModifySnapshotAttributeRequest {
   @scala.inline
-  def apply(SnapshotId: SnapshotId): ModifySnapshotAttributeRequest = {
+  def apply(
+    SnapshotId: SnapshotId,
+    Attribute: SnapshotAttributeName = null,
+    CreateVolumePermission: CreateVolumePermissionModifications = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    GroupNames: GroupNameStringList = null,
+    OperationType: OperationType = null,
+    UserIds: UserIdStringList = null
+  ): ModifySnapshotAttributeRequest = {
     val __obj = js.Dynamic.literal(SnapshotId = SnapshotId.asInstanceOf[js.Any])
+    if (Attribute != null) __obj.updateDynamic("Attribute")(Attribute.asInstanceOf[js.Any])
+    if (CreateVolumePermission != null) __obj.updateDynamic("CreateVolumePermission")(CreateVolumePermission.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (GroupNames != null) __obj.updateDynamic("GroupNames")(GroupNames.asInstanceOf[js.Any])
+    if (OperationType != null) __obj.updateDynamic("OperationType")(OperationType.asInstanceOf[js.Any])
+    if (UserIds != null) __obj.updateDynamic("UserIds")(UserIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifySnapshotAttributeRequest]
   }
-  @scala.inline
-  implicit class ModifySnapshotAttributeRequestOps[Self <: ModifySnapshotAttributeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSnapshotId(value: SnapshotId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttribute(value: SnapshotAttributeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateVolumePermission(value: CreateVolumePermissionModifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateVolumePermission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateVolumePermission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateVolumePermission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupNames(value: GroupNameStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationType(value: OperationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserIds(value: UserIdStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

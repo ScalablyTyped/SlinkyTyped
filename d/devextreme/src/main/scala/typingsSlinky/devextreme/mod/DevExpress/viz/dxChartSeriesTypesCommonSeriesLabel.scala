@@ -12,232 +12,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** Configures point labels. */
-@js.native
+/** @name dxChartSeriesTypes.CommonSeries.label */
 trait dxChartSeriesTypesCommonSeriesLabel extends js.Object {
-  /** Aligns point labels in relation to their points. */
-  var alignment: js.UndefOr[center | left | right] = js.native
-  /** Formats the point argument before it is displayed in the point label. To format the point value, use the format option. */
-  var argumentFormat: js.UndefOr[format] = js.native
-  /** Colors the point labels' background. The default color is inherited from the points. */
-  var backgroundColor: js.UndefOr[String] = js.native
-  /** Configures the borders of point labels. */
-  var border: js.UndefOr[ColorDashStyle] = js.native
-  /** Configures the label connectors. */
-  var connector: js.UndefOr[ColorVisible] = js.native
-  /** Customizes the text displayed by point labels. */
-  var customizeText: js.UndefOr[js.Function1[/* pointInfo */ js.Any, String]] = js.native
-  /** Specifies font options for point labels. */
-  var font: js.UndefOr[Font] = js.native
-  /** Formats the point value before it will be displayed in the point label. */
-  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
-  /** Along with verticalOffset, shifts point labels from their initial positions. */
-  var horizontalOffset: js.UndefOr[Double] = js.native
-  /** Specifies whether to display point labels inside or outside of series points. Applies only to bubble, range-like and bar-like series. */
-  var position: js.UndefOr[inside | outside] = js.native
-  /** Rotates point labels. */
-  var rotationAngle: js.UndefOr[Double] = js.native
-  /** Specifies whether or not to show labels for points with zero value. Applies only to bar-like series. */
-  var showForZeroValues: js.UndefOr[Boolean] = js.native
-  /** Along with horizontalOffset, shifts point labels from their initial positions. */
-  var verticalOffset: js.UndefOr[Double] = js.native
-  /** Makes the point labels visible. */
-  var visible: js.UndefOr[Boolean] = js.native
+  /** @name dxChartSeriesTypes.CommonSeries.label.alignment */
+  var alignment: js.UndefOr[center | left | right] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.argumentFormat */
+  var argumentFormat: js.UndefOr[format] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.backgroundColor */
+  var backgroundColor: js.UndefOr[String] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.border */
+  var border: js.UndefOr[ColorDashStyle] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.connector */
+  var connector: js.UndefOr[ColorVisible] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.customizeText */
+  var customizeText: js.UndefOr[js.Function1[/* pointInfo */ js.Any, String]] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.font */
+  var font: js.UndefOr[Font] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.format */
+  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.horizontalOffset */
+  var horizontalOffset: js.UndefOr[Double] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.position */
+  var position: js.UndefOr[inside | outside] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.rotationAngle */
+  var rotationAngle: js.UndefOr[Double] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.showForZeroValues */
+  var showForZeroValues: js.UndefOr[Boolean] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.verticalOffset */
+  var verticalOffset: js.UndefOr[Double] = js.undefined
+  /** @name dxChartSeriesTypes.CommonSeries.label.visible */
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object dxChartSeriesTypesCommonSeriesLabel {
   @scala.inline
-  def apply(): dxChartSeriesTypesCommonSeriesLabel = {
+  def apply(
+    alignment: center | left | right = null,
+    argumentFormat: format = null,
+    backgroundColor: String = null,
+    border: ColorDashStyle = null,
+    connector: ColorVisible = null,
+    customizeText: /* pointInfo */ js.Any => String = null,
+    font: Font = null,
+    format: format = null,
+    horizontalOffset: js.UndefOr[Double] = js.undefined,
+    position: inside | outside = null,
+    rotationAngle: js.UndefOr[Double] = js.undefined,
+    showForZeroValues: js.UndefOr[Boolean] = js.undefined,
+    verticalOffset: js.UndefOr[Double] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): dxChartSeriesTypesCommonSeriesLabel = {
     val __obj = js.Dynamic.literal()
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (argumentFormat != null) __obj.updateDynamic("argumentFormat")(argumentFormat.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (connector != null) __obj.updateDynamic("connector")(connector.asInstanceOf[js.Any])
+    if (customizeText != null) __obj.updateDynamic("customizeText")(js.Any.fromFunction1(customizeText))
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalOffset)) __obj.updateDynamic("horizontalOffset")(horizontalOffset.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotationAngle)) __obj.updateDynamic("rotationAngle")(rotationAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showForZeroValues)) __obj.updateDynamic("showForZeroValues")(showForZeroValues.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalOffset)) __obj.updateDynamic("verticalOffset")(verticalOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartSeriesTypesCommonSeriesLabel]
   }
-  @scala.inline
-  implicit class dxChartSeriesTypesCommonSeriesLabelOps[Self <: dxChartSeriesTypesCommonSeriesLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: center | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArgumentFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withArgumentFormat(value: format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgumentFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: ColorDashStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnector(value: ColorVisible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeText(value: /* pointInfo */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: inside | outside): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotationAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotationAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowForZeroValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showForZeroValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowForZeroValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showForZeroValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

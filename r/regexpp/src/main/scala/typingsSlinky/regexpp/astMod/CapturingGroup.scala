@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CapturingGroup
   extends BranchNode
      with NodeBase
      with QuantifiableElement {
-  var alternatives: js.Array[Alternative] = js.native
-  var name: String | Null = js.native
+  var alternatives: js.Array[Alternative]
+  var name: String | Null
   @JSName("parent")
-  var parent_CapturingGroup: Alternative | Quantifier = js.native
-  var references: js.Array[Backreference] = js.native
+  var parent_CapturingGroup: Alternative | Quantifier
+  var references: js.Array[Backreference]
   @JSName("type")
-  var type_CapturingGroup: typingsSlinky.regexpp.regexppStrings.CapturingGroup = js.native
+  var type_CapturingGroup: typingsSlinky.regexpp.regexppStrings.CapturingGroup
 }
 
 object CapturingGroup {
@@ -27,55 +26,12 @@ object CapturingGroup {
     raw: String,
     references: js.Array[Backreference],
     start: Double,
-    `type`: typingsSlinky.regexpp.regexppStrings.CapturingGroup
+    `type`: typingsSlinky.regexpp.regexppStrings.CapturingGroup,
+    name: String = null
   ): CapturingGroup = {
-    val __obj = js.Dynamic.literal(alternatives = alternatives.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], references = references.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(alternatives = alternatives.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], references = references.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CapturingGroup]
   }
-  @scala.inline
-  implicit class CapturingGroupOps[Self <: CapturingGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlternatives(value: js.Array[Alternative]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: Alternative | Quantifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferences(value: js.Array[Backreference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("references")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.regexpp.regexppStrings.CapturingGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-  }
-  
 }
 

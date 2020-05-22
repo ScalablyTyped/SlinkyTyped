@@ -8,25 +8,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OperationsResource extends js.Object {
   /** Cancels an operation. Use the `inspect.operations.get` to check whether the cancellation succeeded or the operation completed despite cancellation. */
-  def cancel(request: Alt): Request[js.Object] = js.native
+  def cancel(request: Alt): Request[js.Object]
   /**
     * Schedules a job scanning content in a Google Cloud Platform data
     * repository.
     */
-  def create(request: Accesstoken): Request[GoogleLongrunningOperation] = js.native
+  def create(request: Accesstoken): Request[GoogleLongrunningOperation]
   /** This method is not supported and the server returns `UNIMPLEMENTED`. */
-  def delete(request: Alt): Request[js.Object] = js.native
+  def delete(request: Alt): Request[js.Object]
   /**
     * Gets the latest state of a long-running operation.  Clients can use this
     * method to poll the operation result at intervals as recommended by the API
     * service.
     */
-  def get(request: Alt): Request[GoogleLongrunningOperation] = js.native
+  def get(request: Alt): Request[GoogleLongrunningOperation]
   /** Fetches the list of long running operations. */
-  def list(request: Bearertoken): Request[GoogleLongrunningListOperationsResponse] = js.native
+  def list(request: Bearertoken): Request[GoogleLongrunningListOperationsResponse]
 }
 
 object OperationsResource {
@@ -41,43 +40,5 @@ object OperationsResource {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OperationsResource]
   }
-  @scala.inline
-  implicit class OperationsResourceOps[Self <: OperationsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Alt => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreate(value: Accesstoken => Request[GoogleLongrunningOperation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Alt => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Alt => Request[GoogleLongrunningOperation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Bearertoken => Request[GoogleLongrunningListOperationsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

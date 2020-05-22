@@ -1,5 +1,6 @@
 package typingsSlinky.contractProxyKit.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +13,25 @@ trait CPKConfig extends js.Object
 
 object CPKConfig {
   @scala.inline
-  implicit def apply(value: EthersSpecificConfig): CPKConfig = value.asInstanceOf[CPKConfig]
+  def Web3SpecificConfig(
+    web3: js.Object,
+    networks: StringDictionary[NetworkConfigEntry] = null,
+    ownerAccount: String = null
+  ): CPKConfig = {
+    val __obj = js.Dynamic.literal(web3 = web3.asInstanceOf[js.Any])
+    if (networks != null) __obj.updateDynamic("networks")(networks.asInstanceOf[js.Any])
+    if (ownerAccount != null) __obj.updateDynamic("ownerAccount")(ownerAccount.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CPKConfig]
+  }
   @scala.inline
-  implicit def apply(value: Web3SpecificConfig): CPKConfig = value.asInstanceOf[CPKConfig]
+  def EthersSpecificConfig(
+    ethers: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ethers */ js.Any,
+    signer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ethers.Signer */ js.Any,
+    networks: StringDictionary[NetworkConfigEntry] = null
+  ): CPKConfig = {
+    val __obj = js.Dynamic.literal(ethers = ethers.asInstanceOf[js.Any], signer = signer.asInstanceOf[js.Any])
+    if (networks != null) __obj.updateDynamic("networks")(networks.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CPKConfig]
+  }
 }
 

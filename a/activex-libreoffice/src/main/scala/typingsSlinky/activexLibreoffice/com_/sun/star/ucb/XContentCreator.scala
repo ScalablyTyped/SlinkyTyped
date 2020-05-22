@@ -19,19 +19,18 @@ import scala.scalajs.js.annotation._
   * @see XCommandProcessor
   * @version 1.0
   */
-@js.native
 trait XContentCreator extends XInterface {
   /**
     * creates a new content of given type.
     * @param Info the content information.
     * @returns the new content, if operation was successful.
     */
-  def createNewContent(Info: ContentInfo): XContent = js.native
+  def createNewContent(Info: ContentInfo): XContent
   /**
     * returns a list with information about the creatable contents.
     * @returns the list with information about the creatable contents.
     */
-  def queryCreatableContentsInfo(): SafeArray[ContentInfo] = js.native
+  def queryCreatableContentsInfo(): SafeArray[ContentInfo]
 }
 
 object XContentCreator {
@@ -46,25 +45,5 @@ object XContentCreator {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createNewContent = js.Any.fromFunction1(createNewContent), queryCreatableContentsInfo = js.Any.fromFunction0(queryCreatableContentsInfo), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XContentCreator]
   }
-  @scala.inline
-  implicit class XContentCreatorOps[Self <: XContentCreator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateNewContent(value: ContentInfo => XContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createNewContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQueryCreatableContentsInfo(value: () => SafeArray[ContentInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryCreatableContentsInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -6,18 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represent a Wi-Fi Direct advertisement and allows the app to control the listen state and custom information elements in the advertisement. */
-@js.native
 trait WiFiDirectAdvertisement extends js.Object {
   /** Information elements to advertise in the Wi-Fi Direct advertisement. */
-  var informationElements: IVector[WiFiDirectInformationElement] = js.native
+  var informationElements: IVector[WiFiDirectInformationElement]
   /** Whether autonomous group owner will be enabled. */
-  var isAutonomousGroupOwnerEnabled: Boolean = js.native
+  var isAutonomousGroupOwnerEnabled: Boolean
   /** Gets the settings object for "legacy" (non-Wi-Fi Direct) connections. */
-  var legacySettings: WiFiDirectLegacySettings = js.native
+  var legacySettings: WiFiDirectLegacySettings
   /** Gets or sets the listen state and whether the Wi-Fi Direct device is discoverable. */
-  var listenStateDiscoverability: WiFiDirectAdvertisementListenStateDiscoverability = js.native
+  var listenStateDiscoverability: WiFiDirectAdvertisementListenStateDiscoverability
   /** Gets a device's supported configuration methods. */
-  var supportedConfigurationMethods: IVector[WiFiDirectConfigurationMethod] = js.native
+  var supportedConfigurationMethods: IVector[WiFiDirectConfigurationMethod]
 }
 
 object WiFiDirectAdvertisement {
@@ -32,43 +31,5 @@ object WiFiDirectAdvertisement {
     val __obj = js.Dynamic.literal(informationElements = informationElements.asInstanceOf[js.Any], isAutonomousGroupOwnerEnabled = isAutonomousGroupOwnerEnabled.asInstanceOf[js.Any], legacySettings = legacySettings.asInstanceOf[js.Any], listenStateDiscoverability = listenStateDiscoverability.asInstanceOf[js.Any], supportedConfigurationMethods = supportedConfigurationMethods.asInstanceOf[js.Any])
     __obj.asInstanceOf[WiFiDirectAdvertisement]
   }
-  @scala.inline
-  implicit class WiFiDirectAdvertisementOps[Self <: WiFiDirectAdvertisement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInformationElements(value: IVector[WiFiDirectInformationElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("informationElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsAutonomousGroupOwnerEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAutonomousGroupOwnerEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLegacySettings(value: WiFiDirectLegacySettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legacySettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListenStateDiscoverability(value: WiFiDirectAdvertisementListenStateDiscoverability): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listenStateDiscoverability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedConfigurationMethods(value: IVector[WiFiDirectConfigurationMethod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedConfigurationMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

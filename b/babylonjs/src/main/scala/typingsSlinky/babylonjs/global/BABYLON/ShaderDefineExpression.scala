@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("BABYLON.ShaderDefineExpression")
 @js.native
 class ShaderDefineExpression ()
-  extends typingsSlinky.babylonjs.BABYLON.ShaderDefineExpression
+  extends typingsSlinky.babylonjs.BABYLON.ShaderDefineExpression {
+  /* CompleteClass */
+  override def isTrue(preprocessors: org.scalablytyped.runtime.StringDictionary[String]): Boolean = js.native
+}
 

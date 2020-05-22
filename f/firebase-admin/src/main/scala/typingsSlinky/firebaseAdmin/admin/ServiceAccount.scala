@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServiceAccount extends js.Object {
-  var clientEmail: js.UndefOr[String] = js.native
-  var privateKey: js.UndefOr[String] = js.native
-  var projectId: js.UndefOr[String] = js.native
+  var clientEmail: js.UndefOr[String] = js.undefined
+  var privateKey: js.UndefOr[String] = js.undefined
+  var projectId: js.UndefOr[String] = js.undefined
 }
 
 object ServiceAccount {
   @scala.inline
-  def apply(): ServiceAccount = {
+  def apply(clientEmail: String = null, privateKey: String = null, projectId: String = null): ServiceAccount = {
     val __obj = js.Dynamic.literal()
+    if (clientEmail != null) __obj.updateDynamic("clientEmail")(clientEmail.asInstanceOf[js.Any])
+    if (privateKey != null) __obj.updateDynamic("privateKey")(privateKey.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceAccount]
   }
-  @scala.inline
-  implicit class ServiceAccountOps[Self <: ServiceAccount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

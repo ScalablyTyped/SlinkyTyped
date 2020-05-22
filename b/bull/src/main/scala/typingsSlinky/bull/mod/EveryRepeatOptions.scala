@@ -4,33 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EveryRepeatOptions extends RepeatOptions {
   /**
     * Repeat every millis (cron setting cannot be used together with this setting.)
     */
-  var every: Double = js.native
+  var every: Double
 }
 
 object EveryRepeatOptions {
   @scala.inline
-  def apply(every: Double): EveryRepeatOptions = {
+  def apply(
+    every: Double,
+    endDate: js.Date | String | Double = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    tz: String = null
+  ): EveryRepeatOptions = {
     val __obj = js.Dynamic.literal(every = every.asInstanceOf[js.Any])
+    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (tz != null) __obj.updateDynamic("tz")(tz.asInstanceOf[js.Any])
     __obj.asInstanceOf[EveryRepeatOptions]
   }
-  @scala.inline
-  implicit class EveryRepeatOptionsOps[Self <: EveryRepeatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvery(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("every")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -10,11 +10,12 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.Target
+import typingsSlinky.officeUiFabricReact.focusTrapZoneTypesMod.IFocusTrapZoneProps
 import typingsSlinky.officeUiFabricReact.imageTypesMod.IImageProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleStyleProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -47,6 +48,8 @@ class SharedBuilder_ITeachingBubbleProps_1595191623[R <: js.Object] (val args: j
   @scala.inline
   def firstFocusableSelector(value: String | js.Function0[String]): this.type = set("firstFocusableSelector", value.asInstanceOf[js.Any])
   @scala.inline
+  def focusTrapZoneProps(value: IFocusTrapZoneProps): this.type = set("focusTrapZoneProps", value.asInstanceOf[js.Any])
+  @scala.inline
   def footerContentReactElement(value: ReactElement): this.type = set("footerContent", value.asInstanceOf[js.Any])
   @scala.inline
   def footerContent(value: String | ReactElement): this.type = set("footerContent", value.asInstanceOf[js.Any])
@@ -77,7 +80,7 @@ class SharedBuilder_ITeachingBubbleProps_1595191623[R <: js.Object] (val args: j
   @scala.inline
   def secondaryButtonProps(value: IButtonProps): this.type = set("secondaryButtonProps", value.asInstanceOf[js.Any])
   @scala.inline
-  def stylesFunction1(value: ITeachingBubbleStyleProps => Partial[ITeachingBubbleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def stylesFunction1(value: ITeachingBubbleStyleProps => DeepPartial[ITeachingBubbleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   @scala.inline
   def styles(value: IStyleFunctionOrObject[ITeachingBubbleStyleProps, ITeachingBubbleStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   @scala.inline

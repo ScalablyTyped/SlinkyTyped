@@ -1,79 +1,50 @@
 package typingsSlinky.streamBuffers.mod
 
+import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.ReadableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadableStreamBufferOptions extends ReadableOptions {
-  var chunkSize: js.UndefOr[Double] = js.native
-  var frequency: js.UndefOr[Double] = js.native
-  var incrementAmount: js.UndefOr[Double] = js.native
-  var initialSize: js.UndefOr[Double] = js.native
+  var chunkSize: js.UndefOr[Double] = js.undefined
+  var frequency: js.UndefOr[Double] = js.undefined
+  var incrementAmount: js.UndefOr[Double] = js.undefined
+  var initialSize: js.UndefOr[Double] = js.undefined
 }
 
 object ReadableStreamBufferOptions {
   @scala.inline
-  def apply(): ReadableStreamBufferOptions = {
+  def apply(
+    autoDestroy: js.UndefOr[Boolean] = js.undefined,
+    chunkSize: js.UndefOr[Double] = js.undefined,
+    destroy: js.ThisFunction2[
+      /* this */ Readable, 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
+      Unit
+    ] = null,
+    encoding: BufferEncoding = null,
+    frequency: js.UndefOr[Double] = js.undefined,
+    highWaterMark: js.UndefOr[Double] = js.undefined,
+    incrementAmount: js.UndefOr[Double] = js.undefined,
+    initialSize: js.UndefOr[Double] = js.undefined,
+    objectMode: js.UndefOr[Boolean] = js.undefined,
+    read: js.ThisFunction1[/* this */ Readable, /* size */ Double, Unit] = null
+  ): ReadableStreamBufferOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoDestroy)) __obj.updateDynamic("autoDestroy")(autoDestroy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(chunkSize)) __obj.updateDynamic("chunkSize")(chunkSize.get.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(frequency)) __obj.updateDynamic("frequency")(frequency.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highWaterMark)) __obj.updateDynamic("highWaterMark")(highWaterMark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(incrementAmount)) __obj.updateDynamic("incrementAmount")(incrementAmount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialSize)) __obj.updateDynamic("initialSize")(initialSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.get.asInstanceOf[js.Any])
+    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadableStreamBufferOptions]
   }
-  @scala.inline
-  implicit class ReadableStreamBufferOptionsOps[Self <: ReadableStreamBufferOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChunkSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrequency(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncrementAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncrementAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementAmount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

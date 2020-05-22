@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-transition.SemanticUI.TransitionSettings._Impl, 'reverse'> */
-@js.native
 trait PickImplreverse extends js.Object {
-  var reverse: auto | Boolean = js.native
+  var reverse: auto | Boolean
 }
 
 object PickImplreverse {
@@ -17,19 +16,5 @@ object PickImplreverse {
     val __obj = js.Dynamic.literal(reverse = reverse.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplreverse]
   }
-  @scala.inline
-  implicit class PickImplreverseOps[Self <: PickImplreverse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReverse(value: auto | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -34,83 +34,21 @@ trait InstanceTypeConfig extends js.Object {
 
 object InstanceTypeConfig {
   @scala.inline
-  def apply(InstanceType: InstanceType): InstanceTypeConfig = {
+  def apply(
+    InstanceType: InstanceType,
+    BidPrice: XmlStringMaxLen256 = null,
+    BidPriceAsPercentageOfOnDemandPrice: js.UndefOr[NonNegativeDouble] = js.undefined,
+    Configurations: ConfigurationList = null,
+    EbsConfiguration: EbsConfiguration = null,
+    WeightedCapacity: js.UndefOr[WholeNumber] = js.undefined
+  ): InstanceTypeConfig = {
     val __obj = js.Dynamic.literal(InstanceType = InstanceType.asInstanceOf[js.Any])
+    if (BidPrice != null) __obj.updateDynamic("BidPrice")(BidPrice.asInstanceOf[js.Any])
+    if (!js.isUndefined(BidPriceAsPercentageOfOnDemandPrice)) __obj.updateDynamic("BidPriceAsPercentageOfOnDemandPrice")(BidPriceAsPercentageOfOnDemandPrice.get.asInstanceOf[js.Any])
+    if (Configurations != null) __obj.updateDynamic("Configurations")(Configurations.asInstanceOf[js.Any])
+    if (EbsConfiguration != null) __obj.updateDynamic("EbsConfiguration")(EbsConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(WeightedCapacity)) __obj.updateDynamic("WeightedCapacity")(WeightedCapacity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceTypeConfig]
   }
-  @scala.inline
-  implicit class InstanceTypeConfigOps[Self <: InstanceTypeConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceType(value: InstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBidPrice(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BidPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBidPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BidPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBidPriceAsPercentageOfOnDemandPrice(value: NonNegativeDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BidPriceAsPercentageOfOnDemandPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBidPriceAsPercentageOfOnDemandPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BidPriceAsPercentageOfOnDemandPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigurations(value: ConfigurationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Configurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Configurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbsConfiguration(value: EbsConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbsConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeightedCapacity(value: WholeNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeightedCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeightedCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeightedCapacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

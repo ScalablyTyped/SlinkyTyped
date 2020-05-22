@@ -22,41 +22,10 @@ trait UpdateStageRequest extends js.Object {
 
 object UpdateStageRequest {
   @scala.inline
-  def apply(restApiId: String, stageName: String): UpdateStageRequest = {
+  def apply(restApiId: String, stageName: String, patchOperations: ListOfPatchOperation = null): UpdateStageRequest = {
     val __obj = js.Dynamic.literal(restApiId = restApiId.asInstanceOf[js.Any], stageName = stageName.asInstanceOf[js.Any])
+    if (patchOperations != null) __obj.updateDynamic("patchOperations")(patchOperations.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateStageRequest]
   }
-  @scala.inline
-  implicit class UpdateStageRequestOps[Self <: UpdateStageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRestApiId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restApiId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatchOperations(value: ListOfPatchOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patchOperations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatchOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patchOperations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

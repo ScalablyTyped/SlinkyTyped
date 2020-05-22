@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Generic extends js.Object {
-  var error_trace: js.UndefOr[Boolean] = js.native
-  var filter_path: js.UndefOr[String | js.Array[String]] = js.native
-  var human: js.UndefOr[Boolean] = js.native
-  var ignore: js.UndefOr[Double | js.Array[Double]] = js.native
-  var method: js.UndefOr[String] = js.native
-  var pretty: js.UndefOr[Boolean] = js.native
-  var source: js.UndefOr[String] = js.native
+  var error_trace: js.UndefOr[Boolean] = js.undefined
+  var filter_path: js.UndefOr[String | js.Array[String]] = js.undefined
+  var human: js.UndefOr[Boolean] = js.undefined
+  var ignore: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
+  var pretty: js.UndefOr[Boolean] = js.undefined
+  var source: js.UndefOr[String] = js.undefined
 }
 
 object Generic {
   @scala.inline
-  def apply(): Generic = {
+  def apply(
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    filter_path: String | js.Array[String] = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    method: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    source: String = null
+  ): Generic = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[Generic]
   }
-  @scala.inline
-  implicit class GenericOps[Self <: Generic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError_trace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_trace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError_trace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_trace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter_path(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter_path: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter_path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHuman(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("human")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHuman: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("human")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPretty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPretty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

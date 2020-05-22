@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * Provides methods used for getting and setting the size of a Game Object.
   */
-@js.native
 trait Size extends js.Object {
   /**
     * The displayed height of this Game Object.
@@ -17,7 +16,7 @@ trait Size extends js.Object {
     * 
     * Setting this value will adjust the Game Object's scale property.
     */
-  var displayHeight: Double = js.native
+  var displayHeight: Double
   /**
     * The displayed width of this Game Object.
     * 
@@ -25,7 +24,7 @@ trait Size extends js.Object {
     * 
     * Setting this value will adjust the Game Object's scale property.
     */
-  var displayWidth: Double = js.native
+  var displayWidth: Double
   /**
     * The native (un-scaled) height of this Game Object.
     * 
@@ -33,7 +32,7 @@ trait Size extends js.Object {
     * For that you need to either set the scale of the Game Object (`setScale`) or use
     * the `displayHeight` property.
     */
-  var height: Double = js.native
+  var height: Double
   /**
     * The native (un-scaled) width of this Game Object.
     * 
@@ -41,7 +40,7 @@ trait Size extends js.Object {
     * For that you need to either set the scale of the Game Object (`setScale`) or use
     * the `displayWidth` property.
     */
-  var width: Double = js.native
+  var width: Double
   /**
     * Sets the display size of this Game Object.
     * 
@@ -49,7 +48,7 @@ trait Size extends js.Object {
     * @param width The width of this Game Object.
     * @param height The height of this Game Object.
     */
-  def setDisplaySize(width: Double, height: Double): this.type = js.native
+  def setDisplaySize(width: Double, height: Double): this.type
   /**
     * Sets the internal size of this Game Object, as used for frame or physics body creation.
     * 
@@ -63,7 +62,7 @@ trait Size extends js.Object {
     * @param width The width of this Game Object.
     * @param height The height of this Game Object.
     */
-  def setSize(width: Double, height: Double): this.type = js.native
+  def setSize(width: Double, height: Double): this.type
   /**
     * Sets the size of this Game Object to be that of the given Frame.
     * 
@@ -76,7 +75,7 @@ trait Size extends js.Object {
     * size of the hit area. To do this you should adjust the `input.hitArea` object directly.
     * @param frame The frame to base the size of this Game Object on.
     */
-  def setSizeToFrame(frame: Frame): this.type = js.native
+  def setSizeToFrame(frame: Frame): this.type
 }
 
 object Size {
@@ -93,55 +92,5 @@ object Size {
     val __obj = js.Dynamic.literal(displayHeight = displayHeight.asInstanceOf[js.Any], displayWidth = displayWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], setDisplaySize = js.Any.fromFunction2(setDisplaySize), setSize = js.Any.fromFunction2(setSize), setSizeToFrame = js.Any.fromFunction1(setSizeToFrame), width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Size]
   }
-  @scala.inline
-  implicit class SizeOps[Self <: Size] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetDisplaySize(value: (Double, Double) => Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDisplaySize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetSize(value: (Double, Double) => Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetSizeToFrame(value: Frame => Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSizeToFrame")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

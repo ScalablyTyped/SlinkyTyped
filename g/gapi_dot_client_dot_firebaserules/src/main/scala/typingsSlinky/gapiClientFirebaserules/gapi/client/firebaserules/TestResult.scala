@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestResult extends js.Object {
   /**
     * Debug messages related to test execution issues encountered during
@@ -15,7 +14,7 @@ trait TestResult extends js.Object {
     *
     * For example: ```Unable to read variable [name: "resource"]```
     */
-  var debugMessages: js.UndefOr[js.Array[String]] = js.native
+  var debugMessages: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Position in the `Source` or `Ruleset` where the principle runtime error
     * occurs.
@@ -26,7 +25,7 @@ trait TestResult extends js.Object {
     *
     * E.g. `error_position { line: 19 column: 37 }`
     */
-  var errorPosition: js.UndefOr[SourcePosition] = js.native
+  var errorPosition: js.UndefOr[SourcePosition] = js.undefined
   /**
     * The set of function calls made to service-defined methods.
     *
@@ -34,72 +33,25 @@ trait TestResult extends js.Object {
     * during evaluation, are provided for both mocked and unmocked functions,
     * and included on the response regardless of the test `state`.
     */
-  var functionCalls: js.UndefOr[js.Array[FunctionCall]] = js.native
+  var functionCalls: js.UndefOr[js.Array[FunctionCall]] = js.undefined
   /** State of the test. */
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[String] = js.undefined
 }
 
 object TestResult {
   @scala.inline
-  def apply(): TestResult = {
+  def apply(
+    debugMessages: js.Array[String] = null,
+    errorPosition: SourcePosition = null,
+    functionCalls: js.Array[FunctionCall] = null,
+    state: String = null
+  ): TestResult = {
     val __obj = js.Dynamic.literal()
+    if (debugMessages != null) __obj.updateDynamic("debugMessages")(debugMessages.asInstanceOf[js.Any])
+    if (errorPosition != null) __obj.updateDynamic("errorPosition")(errorPosition.asInstanceOf[js.Any])
+    if (functionCalls != null) __obj.updateDynamic("functionCalls")(functionCalls.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestResult]
   }
-  @scala.inline
-  implicit class TestResultOps[Self <: TestResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebugMessages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorPosition(value: SourcePosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionCalls(value: js.Array[FunctionCall]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionCalls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionCalls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionCalls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.winrt.Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails because Already inherited
-- typingsSlinky.winrt.Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails because var conflicts: errorText, optionId, optionType, state, value. Inlined displayName */ @js.native
-trait IPrintCustomItemListOptionDetails extends IPrintItemListOptionDetails {
-  var displayName: String = js.native
-  def addItem(itemId: String, displayName: String): Unit = js.native
+- typingsSlinky.winrt.Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails because var conflicts: errorText, optionId, optionType, state, value. Inlined displayName */ trait IPrintCustomItemListOptionDetails extends IPrintItemListOptionDetails {
+  var displayName: String
+  def addItem(itemId: String, displayName: String): Unit
 }
 
 object IPrintCustomItemListOptionDetails {
@@ -29,25 +28,5 @@ object IPrintCustomItemListOptionDetails {
     val __obj = js.Dynamic.literal(addItem = js.Any.fromFunction2(addItem), displayName = displayName.asInstanceOf[js.Any], errorText = errorText.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], optionId = optionId.asInstanceOf[js.Any], optionType = optionType.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], trySetValue = js.Any.fromFunction1(trySetValue), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPrintCustomItemListOptionDetails]
   }
-  @scala.inline
-  implicit class IPrintCustomItemListOptionDetailsOps[Self <: IPrintCustomItemListOptionDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddItem(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addItem")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

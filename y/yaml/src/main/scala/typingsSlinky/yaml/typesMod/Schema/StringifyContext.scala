@@ -5,89 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StringifyContext
   extends /* key */ StringDictionary[js.Any] {
-  var forceBlockIndent: js.UndefOr[Boolean] = js.native
-  var implicitKey: js.UndefOr[Boolean] = js.native
-  var inFlow: js.UndefOr[Boolean] = js.native
-  var indent: js.UndefOr[String] = js.native
-  var indentAtStart: js.UndefOr[Double] = js.native
+  var forceBlockIndent: js.UndefOr[Boolean] = js.undefined
+  var implicitKey: js.UndefOr[Boolean] = js.undefined
+  var inFlow: js.UndefOr[Boolean] = js.undefined
+  var indent: js.UndefOr[String] = js.undefined
+  var indentAtStart: js.UndefOr[Double] = js.undefined
 }
 
 object StringifyContext {
   @scala.inline
-  def apply(): StringifyContext = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    forceBlockIndent: js.UndefOr[Boolean] = js.undefined,
+    implicitKey: js.UndefOr[Boolean] = js.undefined,
+    inFlow: js.UndefOr[Boolean] = js.undefined,
+    indent: String = null,
+    indentAtStart: js.UndefOr[Double] = js.undefined
+  ): StringifyContext = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(forceBlockIndent)) __obj.updateDynamic("forceBlockIndent")(forceBlockIndent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(implicitKey)) __obj.updateDynamic("implicitKey")(implicitKey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inFlow)) __obj.updateDynamic("inFlow")(inFlow.get.asInstanceOf[js.Any])
+    if (indent != null) __obj.updateDynamic("indent")(indent.asInstanceOf[js.Any])
+    if (!js.isUndefined(indentAtStart)) __obj.updateDynamic("indentAtStart")(indentAtStart.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StringifyContext]
   }
-  @scala.inline
-  implicit class StringifyContextOps[Self <: StringifyContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForceBlockIndent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceBlockIndent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceBlockIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceBlockIndent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImplicitKey(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implicitKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImplicitKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implicitKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInFlow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inFlow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInFlow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inFlow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndentAtStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentAtStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndentAtStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentAtStart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

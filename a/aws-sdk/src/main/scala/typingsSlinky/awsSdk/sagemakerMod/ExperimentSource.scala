@@ -18,35 +18,10 @@ trait ExperimentSource extends js.Object {
 
 object ExperimentSource {
   @scala.inline
-  def apply(SourceArn: ExperimentSourceArn): ExperimentSource = {
+  def apply(SourceArn: ExperimentSourceArn, SourceType: SourceType = null): ExperimentSource = {
     val __obj = js.Dynamic.literal(SourceArn = SourceArn.asInstanceOf[js.Any])
+    if (SourceType != null) __obj.updateDynamic("SourceType")(SourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExperimentSource]
   }
-  @scala.inline
-  implicit class ExperimentSourceOps[Self <: ExperimentSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceArn(value: ExperimentSourceArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: SourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

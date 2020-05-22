@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICompleteReplyMsg extends IShellMessage {
   @JSName("content")
-  var content_ICompleteReplyMsg: ICompletionContent = js.native
+  var content_ICompleteReplyMsg: ICompletionContent
 }
 
 object ICompleteReplyMsg {
@@ -24,19 +23,5 @@ object ICompleteReplyMsg {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICompleteReplyMsg]
   }
-  @scala.inline
-  implicit class ICompleteReplyMsgOps[Self <: ICompleteReplyMsg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: ICompletionContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

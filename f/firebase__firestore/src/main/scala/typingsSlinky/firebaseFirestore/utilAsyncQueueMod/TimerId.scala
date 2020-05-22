@@ -1,12 +1,13 @@
 package typingsSlinky.firebaseFirestore.utilAsyncQueueMod
 
 import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.all
+import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.async_queue_retry
 import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.client_metadata_refresh
 import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.listen_stream_connection_backoff
 import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.listen_stream_idle
 import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.lru_garbage_collection
 import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.online_state_timeout
-import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.retry_transaction
+import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.transaction_retry
 import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.write_stream_connection_backoff
 import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.write_stream_idle
 import scala.scalajs.js
@@ -22,7 +23,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.online_state_timeout
   - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.client_metadata_refresh
   - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.lru_garbage_collection
-  - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.retry_transaction
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.transaction_retry
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.async_queue_retry
 */
 trait TimerId extends js.Object
 
@@ -30,6 +32,12 @@ object TimerId {
   /** All can be used with runDelayedOperationsEarly() to run all timers. */
   @scala.inline
   def All: all = "all".asInstanceOf[all]
+  /**
+    * A timer used to retry operations scheduled via retryable AsyncQueue
+    * operations.
+    */
+  @scala.inline
+  def AsyncQueueRetry: async_queue_retry = "async_queue_retry".asInstanceOf[async_queue_retry]
   /**
     * A timer used to update the client metadata in IndexedDb, which is used
     * to determine the primary leaseholder.
@@ -61,7 +69,7 @@ object TimerId {
     * transactions, multiple of these may be in the queue at a given time.
     */
   @scala.inline
-  def RetryTransaction: retry_transaction = "retry_transaction".asInstanceOf[retry_transaction]
+  def TransactionRetry: transaction_retry = "transaction_retry".asInstanceOf[transaction_retry]
   @scala.inline
   def WriteStreamConnectionBackoff: write_stream_connection_backoff = "write_stream_connection_backoff".asInstanceOf[write_stream_connection_backoff]
   @scala.inline

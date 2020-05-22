@@ -30,41 +30,11 @@ trait SchemaObjectDisplayOptions extends js.Object {
 
 object SchemaObjectDisplayOptions {
   @scala.inline
-  def apply(): SchemaObjectDisplayOptions = {
+  def apply(metalines: js.Array[SchemaMetaline] = null, objectDisplayLabel: String = null): SchemaObjectDisplayOptions = {
     val __obj = js.Dynamic.literal()
+    if (metalines != null) __obj.updateDynamic("metalines")(metalines.asInstanceOf[js.Any])
+    if (objectDisplayLabel != null) __obj.updateDynamic("objectDisplayLabel")(objectDisplayLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaObjectDisplayOptions]
   }
-  @scala.inline
-  implicit class SchemaObjectDisplayOptionsOps[Self <: SchemaObjectDisplayOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetalines(value: js.Array[SchemaMetaline]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metalines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetalines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metalines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectDisplayLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectDisplayLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectDisplayLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectDisplayLabel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

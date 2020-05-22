@@ -30,6 +30,8 @@ package object srcPubsubMod {
     typingsSlinky.googleCloudPubsub.snapshotMod.Snapshot, 
     typingsSlinky.googleCloudPubsub.pubsubMod.google.pubsub.v1.IListSnapshotsResponse
   ]
+  type GetSubscriptionsCallback = typingsSlinky.googleCloudPubsub.srcPubsubMod.GetAllSubscriptionsCallback | typingsSlinky.googleCloudPubsub.topicMod.GetTopicSubscriptionsCallback
+  type GetSubscriptionsResponse = typingsSlinky.googleCloudPubsub.srcPubsubMod.GetAllSubscriptionsResponse | typingsSlinky.googleCloudPubsub.topicMod.GetTopicSubscriptionsResponse
   type GetTopicsCallback = typingsSlinky.googleCloudPubsub.srcPubsubMod.RequestCallback[
     typingsSlinky.googleCloudPubsub.topicMod.Topic, 
     typingsSlinky.googleCloudPubsub.pubsubMod.google.pubsub.v1.IListTopicsResponse
@@ -51,6 +53,8 @@ package object srcPubsubMod {
     /* response */ js.UndefOr[Response | scala.Null], 
     scala.Unit
   ]
+  type PagedResponse[Item, Response] = js.Array[js.Array[Item]] | (js.Tuple3[js.Array[Item], js.Object | scala.Null, Response])
+  type RequestCallback[T, R] = (typingsSlinky.googleCloudPubsub.srcPubsubMod.PagedCallback[T, R]) | typingsSlinky.googleCloudPubsub.srcPubsubMod.NormalCallback[T]
   type ResourceCallback[Resource, Response] = js.Function3[
     /* err */ typingsSlinky.grpcGrpcJs.callMod.ServiceError | scala.Null, 
     /* resource */ js.UndefOr[Resource | scala.Null], 

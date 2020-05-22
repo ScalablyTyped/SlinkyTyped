@@ -4,231 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Materials extends js.Object {
-  var `material-amount`: js.UndefOr[Double] = js.native
-  var `material-amount-units`: js.UndefOr[MaterialAmountUnits] = js.native
-  var `material-color`: js.UndefOr[String] = js.native
-  var `material-diameter`: js.UndefOr[Double] = js.native
-  var `material-diameter-tolerance`: js.UndefOr[Double] = js.native
-  var `material-fill-density`: js.UndefOr[Double] = js.native
-  var `material-key`: js.UndefOr[String] = js.native
-  var `material-name`: js.UndefOr[String] = js.native
-  var `material-nozzle-diameter`: js.UndefOr[Double] = js.native
-  var `material-purpose`: js.UndefOr[js.Array[MaterialPurpose]] = js.native
-  var `material-rate`: js.UndefOr[Double] = js.native
-  var `material-rate-units`: js.UndefOr[MaterialRateUnits] = js.native
-  var `material-retraction`: js.UndefOr[Boolean] = js.native
-  var `material-shell-thickness`: js.UndefOr[Double] = js.native
-  var `material-temperature`: js.UndefOr[Double] = js.native
-  var `material-type`: js.UndefOr[MaterialType] = js.native
+  var `material-amount`: js.UndefOr[Double] = js.undefined
+  var `material-amount-units`: js.UndefOr[MaterialAmountUnits] = js.undefined
+  var `material-color`: js.UndefOr[String] = js.undefined
+  var `material-diameter`: js.UndefOr[Double] = js.undefined
+  var `material-diameter-tolerance`: js.UndefOr[Double] = js.undefined
+  var `material-fill-density`: js.UndefOr[Double] = js.undefined
+  var `material-key`: js.UndefOr[String] = js.undefined
+  var `material-name`: js.UndefOr[String] = js.undefined
+  var `material-nozzle-diameter`: js.UndefOr[Double] = js.undefined
+  var `material-purpose`: js.UndefOr[js.Array[MaterialPurpose]] = js.undefined
+  var `material-rate`: js.UndefOr[Double] = js.undefined
+  var `material-rate-units`: js.UndefOr[MaterialRateUnits] = js.undefined
+  var `material-retraction`: js.UndefOr[Boolean] = js.undefined
+  var `material-shell-thickness`: js.UndefOr[Double] = js.undefined
+  var `material-temperature`: js.UndefOr[Double] = js.undefined
+  var `material-type`: js.UndefOr[MaterialType] = js.undefined
 }
 
 object Materials {
   @scala.inline
-  def apply(): Materials = {
+  def apply(
+    `material-amount`: js.UndefOr[Double] = js.undefined,
+    `material-amount-units`: MaterialAmountUnits = null,
+    `material-color`: String = null,
+    `material-diameter`: js.UndefOr[Double] = js.undefined,
+    `material-diameter-tolerance`: js.UndefOr[Double] = js.undefined,
+    `material-fill-density`: js.UndefOr[Double] = js.undefined,
+    `material-key`: String = null,
+    `material-name`: String = null,
+    `material-nozzle-diameter`: js.UndefOr[Double] = js.undefined,
+    `material-purpose`: js.Array[MaterialPurpose] = null,
+    `material-rate`: js.UndefOr[Double] = js.undefined,
+    `material-rate-units`: MaterialRateUnits = null,
+    `material-retraction`: js.UndefOr[Boolean] = js.undefined,
+    `material-shell-thickness`: js.UndefOr[Double] = js.undefined,
+    `material-temperature`: js.UndefOr[Double] = js.undefined,
+    `material-type`: MaterialType = null
+  ): Materials = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(`material-amount`)) __obj.updateDynamic("material-amount")(`material-amount`.get.asInstanceOf[js.Any])
+    if (`material-amount-units` != null) __obj.updateDynamic("material-amount-units")(`material-amount-units`.asInstanceOf[js.Any])
+    if (`material-color` != null) __obj.updateDynamic("material-color")(`material-color`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`material-diameter`)) __obj.updateDynamic("material-diameter")(`material-diameter`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`material-diameter-tolerance`)) __obj.updateDynamic("material-diameter-tolerance")(`material-diameter-tolerance`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`material-fill-density`)) __obj.updateDynamic("material-fill-density")(`material-fill-density`.get.asInstanceOf[js.Any])
+    if (`material-key` != null) __obj.updateDynamic("material-key")(`material-key`.asInstanceOf[js.Any])
+    if (`material-name` != null) __obj.updateDynamic("material-name")(`material-name`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`material-nozzle-diameter`)) __obj.updateDynamic("material-nozzle-diameter")(`material-nozzle-diameter`.get.asInstanceOf[js.Any])
+    if (`material-purpose` != null) __obj.updateDynamic("material-purpose")(`material-purpose`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`material-rate`)) __obj.updateDynamic("material-rate")(`material-rate`.get.asInstanceOf[js.Any])
+    if (`material-rate-units` != null) __obj.updateDynamic("material-rate-units")(`material-rate-units`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`material-retraction`)) __obj.updateDynamic("material-retraction")(`material-retraction`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`material-shell-thickness`)) __obj.updateDynamic("material-shell-thickness")(`material-shell-thickness`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`material-temperature`)) __obj.updateDynamic("material-temperature")(`material-temperature`.get.asInstanceOf[js.Any])
+    if (`material-type` != null) __obj.updateDynamic("material-type")(`material-type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Materials]
   }
-  @scala.inline
-  implicit class MaterialsOps[Self <: Materials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withMaterial-amount`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-amount`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-amount-units`(value: MaterialAmountUnits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-amount-units")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-amount-units`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-amount-units")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-color`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-color`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-diameter`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-diameter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-diameter`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-diameter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-diameter-tolerance`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-diameter-tolerance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-diameter-tolerance`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-diameter-tolerance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-fill-density`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-fill-density")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-fill-density`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-fill-density")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-key`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-key`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-nozzle-diameter`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-nozzle-diameter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-nozzle-diameter`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-nozzle-diameter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-purpose`(value: js.Array[MaterialPurpose]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-purpose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-purpose`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-purpose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-rate`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-rate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-rate`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-rate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-rate-units`(value: MaterialRateUnits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-rate-units")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-rate-units`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-rate-units")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-retraction`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-retraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-retraction`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-retraction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-shell-thickness`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-shell-thickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-shell-thickness`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-shell-thickness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-temperature`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-temperature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-temperature`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-temperature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMaterial-type`(value: MaterialType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMaterial-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("material-type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

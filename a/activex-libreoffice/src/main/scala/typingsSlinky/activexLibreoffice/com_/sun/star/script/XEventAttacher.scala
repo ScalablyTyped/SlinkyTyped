@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to attach script events given by a sequence of {@link ScriptEventDescriptor} structures to a given interface. */
-@js.native
 trait XEventAttacher extends XInterface {
   /**
     * registers the given "AllListener" object as a listener at the given interface by creating a suitable listener adapter and calling the "addListener"
@@ -20,7 +19,7 @@ trait XEventAttacher extends XInterface {
     aHelper: js.Any,
     aListenerType: String,
     aAddListenerParam: String
-  ): XEventListener = js.native
+  ): XEventListener
   /**
     * registers an object as a listener at the given interface by creating a suitable listener adapter and calling the method which corresponds to the
     * listener type.
@@ -34,7 +33,7 @@ trait XEventAttacher extends XInterface {
     aListenerType: String,
     aAddListenerParam: String,
     aEventMethod: String
-  ): XEventListener = js.native
+  ): XEventListener
   /**
     * removes a listener object as a listener from the given interface.
     *
@@ -45,7 +44,7 @@ trait XEventAttacher extends XInterface {
     aListenerType: String,
     aRemoveListenerParam: String,
     xToRemoveListener: XEventListener
-  ): Unit = js.native
+  ): Unit
 }
 
 object XEventAttacher {
@@ -61,31 +60,5 @@ object XEventAttacher {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), attachListener = js.Any.fromFunction5(attachListener), attachSingleEventListener = js.Any.fromFunction6(attachSingleEventListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeListener = js.Any.fromFunction4(removeListener))
     __obj.asInstanceOf[XEventAttacher]
   }
-  @scala.inline
-  implicit class XEventAttacherOps[Self <: XEventAttacher] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachListener(value: (XInterface, XAllListener, js.Any, String, String) => XEventListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachListener")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withAttachSingleEventListener(value: (XInterface, XAllListener, js.Any, String, String, String) => XEventListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachSingleEventListener")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveListener(value: (XInterface, String, String, XEventListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeListener")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

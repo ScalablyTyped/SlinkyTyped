@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PfopOptions extends js.Object {
   /**
     * 结果是否强制覆盖已有的同名文件
     */
-  var force: js.UndefOr[Boolean] = js.native
+  var force: js.UndefOr[Boolean] = js.undefined
   /**
     * 回调业务服务器，通知处理结果
     */
-  var notifyURL: js.UndefOr[String] = js.native
+  var notifyURL: js.UndefOr[String] = js.undefined
 }
 
 object PfopOptions {
   @scala.inline
-  def apply(): PfopOptions = {
+  def apply(force: js.UndefOr[Boolean] = js.undefined, notifyURL: String = null): PfopOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (notifyURL != null) __obj.updateDynamic("notifyURL")(notifyURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[PfopOptions]
   }
-  @scala.inline
-  implicit class PfopOptionsOps[Self <: PfopOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotifyURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotifyURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyURL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

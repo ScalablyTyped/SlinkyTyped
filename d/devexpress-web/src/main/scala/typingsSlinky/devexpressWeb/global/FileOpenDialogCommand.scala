@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FileOpenDialogCommand")
 @js.native
 class FileOpenDialogCommand ()
-  extends typingsSlinky.devexpressWeb.FileOpenDialogCommand
+  extends typingsSlinky.devexpressWeb.FileOpenDialogCommand {
+  /**
+    * Executes the FileOpenDialogCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

@@ -5,6 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object SourceCode {
+  type CursorWithCountOptions = scala.Double | typingsSlinky.eslint.mod.SourceCode.FilterPredicate | typingsSlinky.eslint.anon.Count
+  type CursorWithSkipOptions = scala.Double | typingsSlinky.eslint.mod.SourceCode.FilterPredicate | typingsSlinky.eslint.anon.Filter
   type FilterPredicate = js.Function1[
     /* tokenOrComment */ typingsSlinky.eslint.mod.AST.Token | typingsSlinky.estree.mod.Comment, 
     scala.Boolean

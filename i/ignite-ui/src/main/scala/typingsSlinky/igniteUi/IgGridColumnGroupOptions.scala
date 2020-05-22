@@ -5,84 +5,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgGridColumnGroupOptions
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Sets whether expansion indicators are visible in the group header.
-  	 *
-  	 */
-  var allowGroupCollapsing: js.UndefOr[Boolean] = js.native
+    * Sets whether expansion indicators are visible in the group header.
+    *
+    */
+  var allowGroupCollapsing: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Sets whether the group is expanded or collapsed. Applied only if the allowGroupCollapsing is set to true.
-  	 *
-  	 */
-  var expanded: js.UndefOr[Boolean] = js.native
+    * Sets whether the group is expanded or collapsed. Applied only if the allowGroupCollapsing is set to true.
+    *
+    */
+  var expanded: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Sets when should the group be hidden. Applied only if the allowGroupCollapsing is set to true.
-  	 *
-  	 *
-  	 * Valid values:
-  	 * "never" never hide the group
-  	 * "always" always hide the group
-  	 * "parentcollapsed" hide the group when its parent group is collapsed
-  	 * "parentexpanded" hide the group when its parent group is expanded
-  	 */
-  var hidden: js.UndefOr[String] = js.native
+    * Sets when should the group be hidden. Applied only if the allowGroupCollapsing is set to true.
+    *
+    *
+    * Valid values:
+    * "never" never hide the group
+    * "always" always hide the group
+    * "parentcollapsed" hide the group when its parent group is collapsed
+    * "parentexpanded" hide the group when its parent group is expanded
+    */
+  var hidden: js.UndefOr[String] = js.undefined
 }
 
 object IgGridColumnGroupOptions {
   @scala.inline
-  def apply(): IgGridColumnGroupOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    allowGroupCollapsing: js.UndefOr[Boolean] = js.undefined,
+    expanded: js.UndefOr[Boolean] = js.undefined,
+    hidden: String = null
+  ): IgGridColumnGroupOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(allowGroupCollapsing)) __obj.updateDynamic("allowGroupCollapsing")(allowGroupCollapsing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expanded)) __obj.updateDynamic("expanded")(expanded.get.asInstanceOf[js.Any])
+    if (hidden != null) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgGridColumnGroupOptions]
   }
-  @scala.inline
-  implicit class IgGridColumnGroupOptionsOps[Self <: IgGridColumnGroupOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowGroupCollapsing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowGroupCollapsing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowGroupCollapsing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowGroupCollapsing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

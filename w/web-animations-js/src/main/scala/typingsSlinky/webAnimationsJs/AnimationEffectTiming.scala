@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnimationEffectTiming extends js.Object {
-  var delay: js.UndefOr[Double] = js.native
-  var direction: js.UndefOr[AnimationEffectTimingPlaybackDirection] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var easing: js.UndefOr[String] = js.native
-  var endDelay: js.UndefOr[Double] = js.native
-  var fill: js.UndefOr[AnimationEffectTimingFillMode] = js.native
-  var iterationStart: js.UndefOr[Double] = js.native
-  var iterations: js.UndefOr[Double] = js.native
-  var playbackRate: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
+  var direction: js.UndefOr[AnimationEffectTimingPlaybackDirection] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var easing: js.UndefOr[String] = js.undefined
+  var endDelay: js.UndefOr[Double] = js.undefined
+  var fill: js.UndefOr[AnimationEffectTimingFillMode] = js.undefined
+  var iterationStart: js.UndefOr[Double] = js.undefined
+  var iterations: js.UndefOr[Double] = js.undefined
+  var playbackRate: js.UndefOr[Double] = js.undefined
 }
 
 object AnimationEffectTiming {
   @scala.inline
-  def apply(): AnimationEffectTiming = {
+  def apply(
+    delay: js.UndefOr[Double] = js.undefined,
+    direction: AnimationEffectTimingPlaybackDirection = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    easing: String = null,
+    endDelay: js.UndefOr[Double] = js.undefined,
+    fill: AnimationEffectTimingFillMode = null,
+    iterationStart: js.UndefOr[Double] = js.undefined,
+    iterations: js.UndefOr[Double] = js.undefined,
+    playbackRate: js.UndefOr[Double] = js.undefined
+  ): AnimationEffectTiming = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (!js.isUndefined(endDelay)) __obj.updateDynamic("endDelay")(endDelay.get.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (!js.isUndefined(iterationStart)) __obj.updateDynamic("iterationStart")(iterationStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iterations)) __obj.updateDynamic("iterations")(iterations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(playbackRate)) __obj.updateDynamic("playbackRate")(playbackRate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationEffectTiming]
   }
-  @scala.inline
-  implicit class AnimationEffectTimingOps[Self <: AnimationEffectTiming] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: AnimationEffectTimingPlaybackDirection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: AnimationEffectTimingFillMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIterationStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIterationStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iterations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaybackRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playbackRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaybackRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playbackRate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

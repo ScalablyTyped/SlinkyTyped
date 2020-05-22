@@ -21,65 +21,18 @@ trait SchemaSurveysListResponse extends js.Object {
 
 object SchemaSurveysListResponse {
   @scala.inline
-  def apply(): SchemaSurveysListResponse = {
+  def apply(
+    pageInfo: SchemaPageInfo = null,
+    requestId: String = null,
+    resources: js.Array[SchemaSurvey] = null,
+    tokenPagination: SchemaTokenPagination = null
+  ): SchemaSurveysListResponse = {
     val __obj = js.Dynamic.literal()
+    if (pageInfo != null) __obj.updateDynamic("pageInfo")(pageInfo.asInstanceOf[js.Any])
+    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
+    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
+    if (tokenPagination != null) __obj.updateDynamic("tokenPagination")(tokenPagination.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSurveysListResponse]
   }
-  @scala.inline
-  implicit class SchemaSurveysListResponseOps[Self <: SchemaSurveysListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPageInfo(value: SchemaPageInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: js.Array[SchemaSurvey]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenPagination(value: SchemaTokenPagination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenPagination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenPagination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenPagination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

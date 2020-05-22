@@ -4,27 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CalloutFormat extends js.Object {
-  var Accent: MsoTriState = js.native
-  var Angle: MsoCalloutAngleType = js.native
-  val Application: js.Any = js.native
-  var AutoAttach: MsoTriState = js.native
-  val AutoLength: MsoTriState = js.native
-  var Border: MsoTriState = js.native
-  val Creator: Double = js.native
-  val Drop: Double = js.native
-  val DropType: MsoCalloutDropType = js.native
-  var Gap: Double = js.native
-  val Length: Double = js.native
+  var Accent: MsoTriState
+  var Angle: MsoCalloutAngleType
+  val Application: js.Any
+  var AutoAttach: MsoTriState
+  val AutoLength: MsoTriState
+  var Border: MsoTriState
+  val Creator: Double
+  val Drop: Double
+  val DropType: MsoCalloutDropType
+  var Gap: Double
+  val Length: Double
   @JSName("Office.CalloutFormat_typekey")
-  var OfficeDotCalloutFormat_typekey: CalloutFormat = js.native
-  val Parent: js.Any = js.native
-  var Type: MsoCalloutType = js.native
-  def AutomaticLength(): Unit = js.native
-  def CustomDrop(Drop: Double): Unit = js.native
-  def CustomLength(Length: Double): Unit = js.native
-  def PresetDrop(DropType: MsoCalloutDropType): Unit = js.native
+  var OfficeDotCalloutFormat_typekey: CalloutFormat
+  val Parent: js.Any
+  var Type: MsoCalloutType
+  def AutomaticLength(): Unit
+  def CustomDrop(Drop: Double): Unit
+  def CustomLength(Length: Double): Unit
+  def PresetDrop(DropType: MsoCalloutDropType): Unit
 }
 
 object CalloutFormat {
@@ -53,121 +52,5 @@ object CalloutFormat {
     __obj.updateDynamic("Office.CalloutFormat_typekey")(OfficeDotCalloutFormat_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalloutFormat]
   }
-  @scala.inline
-  implicit class CalloutFormatOps[Self <: CalloutFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccent(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Accent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngle(value: MsoCalloutAngleType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoAttach(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAttach")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoLength(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutomaticLength(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withBorder(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomDrop(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomDrop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCustomLength(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLength")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDrop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Drop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDropType(value: MsoCalloutDropType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DropType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfficeDotCalloutFormat_typekey(value: CalloutFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Office.CalloutFormat_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPresetDrop(value: MsoCalloutDropType => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetDrop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: MsoCalloutType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

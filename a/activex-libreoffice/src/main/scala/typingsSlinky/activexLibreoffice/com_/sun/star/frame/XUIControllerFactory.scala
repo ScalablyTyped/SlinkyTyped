@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   * @see ToolbarControllerFactory
   * @since LibreOffice 4.1
   */
-@js.native
 trait XUIControllerFactory
   extends XMultiComponentFactory
      with XUIControllerRegistration

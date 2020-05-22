@@ -4,56 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteRangeRequest extends js.Object {
   /** The range of cells to delete. */
-  var range: js.UndefOr[GridRange] = js.native
+  var range: js.UndefOr[GridRange] = js.undefined
   /**
     * The dimension from which deleted cells will be replaced with.
     * If ROWS, existing cells will be shifted upward to
     * replace the deleted cells. If COLUMNS, existing cells
     * will be shifted left to replace the deleted cells.
     */
-  var shiftDimension: js.UndefOr[String] = js.native
+  var shiftDimension: js.UndefOr[String] = js.undefined
 }
 
 object DeleteRangeRequest {
   @scala.inline
-  def apply(): DeleteRangeRequest = {
+  def apply(range: GridRange = null, shiftDimension: String = null): DeleteRangeRequest = {
     val __obj = js.Dynamic.literal()
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (shiftDimension != null) __obj.updateDynamic("shiftDimension")(shiftDimension.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteRangeRequest]
   }
-  @scala.inline
-  implicit class DeleteRangeRequestOps[Self <: DeleteRangeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRange(value: GridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShiftDimension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftDimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShiftDimension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftDimension")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

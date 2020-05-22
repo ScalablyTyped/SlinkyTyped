@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling "pageContent.toJSON()". */
-@js.native
 trait PageContentData extends js.Object {
   /**
     *
@@ -18,148 +17,71 @@ trait PageContentData extends js.Object {
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     *
     * Gets the Image in the PageContent object. Throws an exception if PageContentType is not Image.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var image: js.UndefOr[ImageData] = js.native
+  var image: js.UndefOr[ImageData] = js.undefined
   /**
     *
     * Gets the ink in the PageContent object. Throws an exception if PageContentType is not Ink.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var ink: js.UndefOr[FloatingInkData] = js.native
+  var ink: js.UndefOr[FloatingInkData] = js.undefined
   /**
     *
     * Gets or sets the left (X-axis) position of the PageContent object.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var left: js.UndefOr[Double] = js.native
+  var left: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets the Outline in the PageContent object. Throws an exception if PageContentType is not Outline.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var outline: js.UndefOr[OutlineData] = js.native
+  var outline: js.UndefOr[OutlineData] = js.undefined
   /**
     *
     * Gets or sets the top (Y-axis) position of the PageContent object.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var top: js.UndefOr[Double] = js.native
+  var top: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets the type of the PageContent object. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var `type`: js.UndefOr[PageContentType | Outline | Image | Ink | Other] = js.native
+  var `type`: js.UndefOr[PageContentType | Outline | Image | Ink | Other] = js.undefined
 }
 
 object PageContentData {
   @scala.inline
-  def apply(): PageContentData = {
+  def apply(
+    id: String = null,
+    image: ImageData = null,
+    ink: FloatingInkData = null,
+    left: js.UndefOr[Double] = js.undefined,
+    outline: OutlineData = null,
+    top: js.UndefOr[Double] = js.undefined,
+    `type`: PageContentType | Outline | Image | Ink | Other = null
+  ): PageContentData = {
     val __obj = js.Dynamic.literal()
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (ink != null) __obj.updateDynamic("ink")(ink.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageContentData]
   }
-  @scala.inline
-  implicit class PageContentDataOps[Self <: PageContentData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: ImageData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInk(value: FloatingInkData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutline(value: OutlineData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: PageContentType | Outline | Image | Ink | Other): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait predominanceCreateRendererParams extends Object {
   /**
     * The [named string](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) or basemap object of the Esri basemap that will be paired with the output visualization. Determines optimal colors for the output renderer.
@@ -16,7 +15,7 @@ trait predominanceCreateRendererParams extends Object {
     *
     * @default gray
     */
-  var basemap: js.UndefOr[String | Basemap] = js.native
+  var basemap: js.UndefOr[String | Basemap] = js.undefined
   /**
     * **This option only applies to generating renderers for mesh SceneLayers**. Specifies how the symbol's color is applied to the geometry color/texture. See the documentation in [FillSymbol3DLayer.material](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-FillSymbol3DLayer.html#material) for more context. See the table below for possible values.
     *
@@ -31,7 +30,7 @@ trait predominanceCreateRendererParams extends Object {
     *
     * @default replace
     */
-  var colorMixMode: js.UndefOr[String] = js.native
+  var colorMixMode: js.UndefOr[String] = js.undefined
   /**
     * Enables the `defaultSymbol` on the renderer and assigns it to features with no value.
     *
@@ -39,7 +38,7 @@ trait predominanceCreateRendererParams extends Object {
     *
     * @default true
     */
-  var defaultSymbolEnabled: js.UndefOr[Boolean] = js.native
+  var defaultSymbolEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether to add edges to the output renderer. This setting only applies to mesh SceneLayers.
     *
@@ -47,37 +46,37 @@ trait predominanceCreateRendererParams extends Object {
     *
     * @default none
     */
-  var edgesType: js.UndefOr[String] = js.native
+  var edgesType: js.UndefOr[String] = js.undefined
   /**
     * A set of competing numeric fields used as the basis of the predominance visualization. For example, if creating an election map, you would indicate the names of each field representing the candidate or political party where total votes are stored.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html#createRenderer)
     */
-  var fields: js.Array[predominanceCreateRendererParamsFields] = js.native
+  var fields: js.Array[predominanceCreateRendererParamsFields]
   /**
     * Indicates whether to include data-driven opacity in the final renderer. If `true`, features where the predominant value beats all others by a large margin are given a high opacity. Features where the predominant value beats others by a small margin will be assigned a low opacity, indicating that while the feature has a winning value, it doesn't win by much.  ![predominance-opacity](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/smartmapping/predominance-opacity.png)
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html#createRenderer)
     */
-  var includeOpacityVariable: js.UndefOr[Boolean] = js.native
+  var includeOpacityVariable: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether to include data-driven size in the final renderer. If `true`, features will be assigned a sized based on the sum of all competing values in the `fields` param. Features with small total counts will be sized with small icons or lines depending on the geometry type of the layer, and features with large total counts will be sized with large icons or lines. Enabling this option is good for visualizing how influential a particular feature is compared to the dataset as a whole. It removes bias introduced by features with large geographic areas, but relatively small data values.  ![predominance-size](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/smartmapping/predominance-size.png)
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html#createRenderer)
     */
-  var includeSizeVariable: js.UndefOr[Boolean] = js.native
+  var includeSizeVariable: js.UndefOr[Boolean] = js.undefined
   /**
     * The layer for which the visualization is generated.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html#createRenderer)
     */
-  var layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer = js.native
+  var layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer
   /**
     * Provides options for modifying [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) properties describing the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html#createRenderer)
     */
-  var legendOptions: js.UndefOr[predominanceCreateRendererParamsLegendOptions] = js.native
+  var legendOptions: js.UndefOr[predominanceCreateRendererParamsLegendOptions] = js.undefined
   /**
     * Only for polygon layers. Indicates whether the polygon outline width should vary based on view scale. When set, a valid [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance must be provided in the `view` parameter. This option is not supported for 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
@@ -85,19 +84,19 @@ trait predominanceCreateRendererParams extends Object {
     *
     * @default false
     */
-  var outlineOptimizationEnabled: js.UndefOr[Boolean] = js.native
+  var outlineOptimizationEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * In authoring apps, the user may select a pre-defined predominance scheme. Pass the scheme object to this property to avoid getting one based on the `basemap`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html#createRenderer)
     */
-  var predominanceScheme: js.UndefOr[PredominanceScheme] = js.native
+  var predominanceScheme: js.UndefOr[PredominanceScheme] = js.undefined
   /**
     * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html#createRenderer)
     */
-  var signal: js.UndefOr[AbortSignal] = js.native
+  var signal: js.UndefOr[AbortSignal] = js.undefined
   /**
     * Indicates whether symbol sizes should vary based on view scale. When set, a valid [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance must be provided in the `view` parameter. This option is not supported for 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
@@ -105,7 +104,7 @@ trait predominanceCreateRendererParams extends Object {
     *
     * @default false
     */
-  var sizeOptimizationEnabled: js.UndefOr[Boolean] = js.native
+  var sizeOptimizationEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates how values should be sorted in the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html). See the table below for information about values that may be passed to this parameter.
     *
@@ -121,13 +120,13 @@ trait predominanceCreateRendererParams extends Object {
     *
     * @default count
     */
-  var sortBy: js.UndefOr[String] = js.native
+  var sortBy: js.UndefOr[String] = js.undefined
   /**
     * A statistics object generated from the [summaryStatistics](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-summaryStatistics.html) function. The `createAgeRenderer()` method generates an Arcade expression and executes a statistics query against the layer for the result of the expression. If statistics for the expression have already been generated, then pass the object here to avoid making a second statistics query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html#createRenderer)
     */
-  var statistics: js.UndefOr[SummaryStatisticsResult] = js.native
+  var statistics: js.UndefOr[SummaryStatisticsResult] = js.undefined
   /**
     * The type of symbol to generate. This depends on the view in which you are working and the desired visualization. This parameter does not need to be specified for layers with a `mesh` geometry type. Possible values are described below.
     *
@@ -142,13 +141,13 @@ trait predominanceCreateRendererParams extends Object {
     *
     * @default 2d
     */
-  var symbolType: js.UndefOr[String] = js.native
+  var symbolType: js.UndefOr[String] = js.undefined
   /**
     * The view instance in which the visualization will be rendered.
     *
     * [Read more...](global.html)
     */
-  var view: View = js.native
+  var view: View
 }
 
 object predominanceCreateRendererParams {
@@ -159,204 +158,38 @@ object predominanceCreateRendererParams {
     hasOwnProperty: PropertyKey => Boolean,
     layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer,
     propertyIsEnumerable: PropertyKey => Boolean,
-    view: View
+    view: View,
+    basemap: String | Basemap = null,
+    colorMixMode: String = null,
+    defaultSymbolEnabled: js.UndefOr[Boolean] = js.undefined,
+    edgesType: String = null,
+    includeOpacityVariable: js.UndefOr[Boolean] = js.undefined,
+    includeSizeVariable: js.UndefOr[Boolean] = js.undefined,
+    legendOptions: predominanceCreateRendererParamsLegendOptions = null,
+    outlineOptimizationEnabled: js.UndefOr[Boolean] = js.undefined,
+    predominanceScheme: PredominanceScheme = null,
+    signal: AbortSignal = null,
+    sizeOptimizationEnabled: js.UndefOr[Boolean] = js.undefined,
+    sortBy: String = null,
+    statistics: SummaryStatisticsResult = null,
+    symbolType: String = null
   ): predominanceCreateRendererParams = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], fields = fields.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), layer = layer.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), view = view.asInstanceOf[js.Any])
+    if (basemap != null) __obj.updateDynamic("basemap")(basemap.asInstanceOf[js.Any])
+    if (colorMixMode != null) __obj.updateDynamic("colorMixMode")(colorMixMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultSymbolEnabled)) __obj.updateDynamic("defaultSymbolEnabled")(defaultSymbolEnabled.get.asInstanceOf[js.Any])
+    if (edgesType != null) __obj.updateDynamic("edgesType")(edgesType.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeOpacityVariable)) __obj.updateDynamic("includeOpacityVariable")(includeOpacityVariable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeSizeVariable)) __obj.updateDynamic("includeSizeVariable")(includeSizeVariable.get.asInstanceOf[js.Any])
+    if (legendOptions != null) __obj.updateDynamic("legendOptions")(legendOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(outlineOptimizationEnabled)) __obj.updateDynamic("outlineOptimizationEnabled")(outlineOptimizationEnabled.get.asInstanceOf[js.Any])
+    if (predominanceScheme != null) __obj.updateDynamic("predominanceScheme")(predominanceScheme.asInstanceOf[js.Any])
+    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeOptimizationEnabled)) __obj.updateDynamic("sizeOptimizationEnabled")(sizeOptimizationEnabled.get.asInstanceOf[js.Any])
+    if (sortBy != null) __obj.updateDynamic("sortBy")(sortBy.asInstanceOf[js.Any])
+    if (statistics != null) __obj.updateDynamic("statistics")(statistics.asInstanceOf[js.Any])
+    if (symbolType != null) __obj.updateDynamic("symbolType")(symbolType.asInstanceOf[js.Any])
     __obj.asInstanceOf[predominanceCreateRendererParams]
   }
-  @scala.inline
-  implicit class predominanceCreateRendererParamsOps[Self <: predominanceCreateRendererParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: js.Array[predominanceCreateRendererParamsFields]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayer(value: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasemap(value: String | Basemap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorMixMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMixMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorMixMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMixMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSymbolEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSymbolEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSymbolEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSymbolEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgesType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgesType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgesType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgesType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeOpacityVariable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeOpacityVariable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeOpacityVariable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeOpacityVariable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeSizeVariable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeSizeVariable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeSizeVariable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeSizeVariable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendOptions(value: predominanceCreateRendererParamsLegendOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineOptimizationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOptimizationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineOptimizationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOptimizationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredominanceScheme(value: PredominanceScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predominanceScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredominanceScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predominanceScheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignal(value: AbortSignal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeOptimizationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeOptimizationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeOptimizationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeOptimizationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatistics(value: SummaryStatisticsResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

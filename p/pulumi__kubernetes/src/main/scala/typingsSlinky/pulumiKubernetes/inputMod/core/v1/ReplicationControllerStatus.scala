@@ -8,117 +8,54 @@ import scala.scalajs.js.annotation._
 /**
   * ReplicationControllerStatus represents the current status of a replication controller.
   */
-@js.native
 trait ReplicationControllerStatus extends js.Object {
   /**
     * The number of available replicas (ready for at least minReadySeconds) for this replication
     * controller.
     */
-  var availableReplicas: js.UndefOr[Input[Double]] = js.native
+  var availableReplicas: js.UndefOr[Input[Double]] = js.undefined
   /**
     * Represents the latest available observations of a replication controller's current state.
     */
-  var conditions: js.UndefOr[Input[js.Array[Input[ReplicationControllerCondition]]]] = js.native
+  var conditions: js.UndefOr[Input[js.Array[Input[ReplicationControllerCondition]]]] = js.undefined
   /**
     * The number of pods that have labels matching the labels of the pod template of the
     * replication controller.
     */
-  var fullyLabeledReplicas: js.UndefOr[Input[Double]] = js.native
+  var fullyLabeledReplicas: js.UndefOr[Input[Double]] = js.undefined
   /**
     * ObservedGeneration reflects the generation of the most recently observed replication
     * controller.
     */
-  var observedGeneration: js.UndefOr[Input[Double]] = js.native
+  var observedGeneration: js.UndefOr[Input[Double]] = js.undefined
   /**
     * The number of ready replicas for this replication controller.
     */
-  var readyReplicas: js.UndefOr[Input[Double]] = js.native
+  var readyReplicas: js.UndefOr[Input[Double]] = js.undefined
   /**
     * Replicas is the most recently oberved number of replicas. More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
     */
-  var replicas: Input[Double] = js.native
+  var replicas: Input[Double]
 }
 
 object ReplicationControllerStatus {
   @scala.inline
-  def apply(replicas: Input[Double]): ReplicationControllerStatus = {
+  def apply(
+    replicas: Input[Double],
+    availableReplicas: Input[Double] = null,
+    conditions: Input[js.Array[Input[ReplicationControllerCondition]]] = null,
+    fullyLabeledReplicas: Input[Double] = null,
+    observedGeneration: Input[Double] = null,
+    readyReplicas: Input[Double] = null
+  ): ReplicationControllerStatus = {
     val __obj = js.Dynamic.literal(replicas = replicas.asInstanceOf[js.Any])
+    if (availableReplicas != null) __obj.updateDynamic("availableReplicas")(availableReplicas.asInstanceOf[js.Any])
+    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
+    if (fullyLabeledReplicas != null) __obj.updateDynamic("fullyLabeledReplicas")(fullyLabeledReplicas.asInstanceOf[js.Any])
+    if (observedGeneration != null) __obj.updateDynamic("observedGeneration")(observedGeneration.asInstanceOf[js.Any])
+    if (readyReplicas != null) __obj.updateDynamic("readyReplicas")(readyReplicas.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationControllerStatus]
   }
-  @scala.inline
-  implicit class ReplicationControllerStatusOps[Self <: ReplicationControllerStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplicas(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAvailableReplicas(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableReplicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableReplicas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableReplicas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: Input[js.Array[Input[ReplicationControllerCondition]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullyLabeledReplicas(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullyLabeledReplicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullyLabeledReplicas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullyLabeledReplicas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObservedGeneration(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObservedGeneration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadyReplicas(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyReplicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadyReplicas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyReplicas")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

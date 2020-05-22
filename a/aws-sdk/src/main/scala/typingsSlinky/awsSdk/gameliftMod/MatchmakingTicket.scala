@@ -54,149 +54,32 @@ trait MatchmakingTicket extends js.Object {
 
 object MatchmakingTicket {
   @scala.inline
-  def apply(): MatchmakingTicket = {
+  def apply(
+    ConfigurationArn: MatchmakingConfigurationArn = null,
+    ConfigurationName: MatchmakingIdStringModel = null,
+    EndTime: js.Date = null,
+    EstimatedWaitTime: js.UndefOr[WholeNumber] = js.undefined,
+    GameSessionConnectionInfo: GameSessionConnectionInfo = null,
+    Players: PlayerList = null,
+    StartTime: js.Date = null,
+    Status: MatchmakingConfigurationStatus = null,
+    StatusMessage: StringModel = null,
+    StatusReason: StringModel = null,
+    TicketId: MatchmakingIdStringModel = null
+  ): MatchmakingTicket = {
     val __obj = js.Dynamic.literal()
+    if (ConfigurationArn != null) __obj.updateDynamic("ConfigurationArn")(ConfigurationArn.asInstanceOf[js.Any])
+    if (ConfigurationName != null) __obj.updateDynamic("ConfigurationName")(ConfigurationName.asInstanceOf[js.Any])
+    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(EstimatedWaitTime)) __obj.updateDynamic("EstimatedWaitTime")(EstimatedWaitTime.get.asInstanceOf[js.Any])
+    if (GameSessionConnectionInfo != null) __obj.updateDynamic("GameSessionConnectionInfo")(GameSessionConnectionInfo.asInstanceOf[js.Any])
+    if (Players != null) __obj.updateDynamic("Players")(Players.asInstanceOf[js.Any])
+    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
+    if (StatusReason != null) __obj.updateDynamic("StatusReason")(StatusReason.asInstanceOf[js.Any])
+    if (TicketId != null) __obj.updateDynamic("TicketId")(TicketId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchmakingTicket]
   }
-  @scala.inline
-  implicit class MatchmakingTicketOps[Self <: MatchmakingTicket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationArn(value: MatchmakingConfigurationArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigurationName(value: MatchmakingIdStringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedWaitTime(value: WholeNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedWaitTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedWaitTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedWaitTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGameSessionConnectionInfo(value: GameSessionConnectionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionConnectionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameSessionConnectionInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionConnectionInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayers(value: PlayerList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Players")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Players")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: MatchmakingConfigurationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: StringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusReason(value: StringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTicketId(value: MatchmakingIdStringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TicketId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTicketId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TicketId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

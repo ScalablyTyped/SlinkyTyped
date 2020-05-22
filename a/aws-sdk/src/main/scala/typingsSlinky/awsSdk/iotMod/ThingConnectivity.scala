@@ -18,41 +18,14 @@ trait ThingConnectivity extends js.Object {
 
 object ThingConnectivity {
   @scala.inline
-  def apply(): ThingConnectivity = {
+  def apply(
+    connected: js.UndefOr[Boolean] = js.undefined,
+    timestamp: js.UndefOr[ConnectivityTimestamp] = js.undefined
+  ): ThingConnectivity = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(connected)) __obj.updateDynamic("connected")(connected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timestamp)) __obj.updateDynamic("timestamp")(timestamp.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThingConnectivity]
   }
-  @scala.inline
-  implicit class ThingConnectivityOps[Self <: ThingConnectivity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: ConnectivityTimestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

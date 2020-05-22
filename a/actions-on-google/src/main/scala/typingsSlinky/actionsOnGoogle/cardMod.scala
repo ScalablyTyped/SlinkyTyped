@@ -2,7 +2,7 @@ package typingsSlinky.actionsOnGoogle
 
 import typingsSlinky.actionsOnGoogle.basicMod.BasicCardOptions
 import typingsSlinky.actionsOnGoogle.buttonMod.ButtonOptions
-import typingsSlinky.actionsOnGoogle.richMod.RichResponseItem
+import typingsSlinky.actionsOnGoogle.richMod._RichResponseItem
 import typingsSlinky.actionsOnGoogle.tableMod.TableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ object cardMod extends js.Object {
   @js.native
   class BasicCard protected ()
     extends typingsSlinky.actionsOnGoogle.basicMod.BasicCard
-       with RichResponseItem {
+       with _RichResponseItem {
     /** @public */
     def this(options: BasicCardOptions) = this()
   }
@@ -32,7 +32,7 @@ object cardMod extends js.Object {
   @js.native
   class Table protected ()
     extends typingsSlinky.actionsOnGoogle.tableMod.Table
-       with RichResponseItem {
+       with _RichResponseItem {
     /** @public */
     def this(options: TableOptions) = this()
   }

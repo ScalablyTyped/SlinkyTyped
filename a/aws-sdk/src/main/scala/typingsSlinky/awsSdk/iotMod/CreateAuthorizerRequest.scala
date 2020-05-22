@@ -23,6 +23,10 @@ trait CreateAuthorizerRequest extends js.Object {
     */
   var status: js.UndefOr[AuthorizerStatus] = js.native
   /**
+    * Metadata which can be used to manage the custom authorizer.  For URI Request parameters use format: ...key1=value1&amp;key2=value2... For the CLI command-line parameter use format: &amp;&amp;tags "key1=value1&amp;key2=value2..." For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..." 
+    */
+  var tags: js.UndefOr[TagList] = js.native
+  /**
     * The name of the token key used to extract the token from the HTTP headers.
     */
   var tokenKeyName: js.UndefOr[TokenKeyName] = js.native
@@ -34,77 +38,22 @@ trait CreateAuthorizerRequest extends js.Object {
 
 object CreateAuthorizerRequest {
   @scala.inline
-  def apply(authorizerFunctionArn: AuthorizerFunctionArn, authorizerName: AuthorizerName): CreateAuthorizerRequest = {
+  def apply(
+    authorizerFunctionArn: AuthorizerFunctionArn,
+    authorizerName: AuthorizerName,
+    signingDisabled: js.UndefOr[BooleanKey] = js.undefined,
+    status: AuthorizerStatus = null,
+    tags: TagList = null,
+    tokenKeyName: TokenKeyName = null,
+    tokenSigningPublicKeys: PublicKeyMap = null
+  ): CreateAuthorizerRequest = {
     val __obj = js.Dynamic.literal(authorizerFunctionArn = authorizerFunctionArn.asInstanceOf[js.Any], authorizerName = authorizerName.asInstanceOf[js.Any])
+    if (!js.isUndefined(signingDisabled)) __obj.updateDynamic("signingDisabled")(signingDisabled.get.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (tokenKeyName != null) __obj.updateDynamic("tokenKeyName")(tokenKeyName.asInstanceOf[js.Any])
+    if (tokenSigningPublicKeys != null) __obj.updateDynamic("tokenSigningPublicKeys")(tokenSigningPublicKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAuthorizerRequest]
   }
-  @scala.inline
-  implicit class CreateAuthorizerRequestOps[Self <: CreateAuthorizerRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorizerFunctionArn(value: AuthorizerFunctionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerFunctionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthorizerName(value: AuthorizerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSigningDisabled(value: BooleanKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: AuthorizerStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenKeyName(value: TokenKeyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenKeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenKeyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenSigningPublicKeys(value: PublicKeyMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenSigningPublicKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenSigningPublicKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenSigningPublicKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

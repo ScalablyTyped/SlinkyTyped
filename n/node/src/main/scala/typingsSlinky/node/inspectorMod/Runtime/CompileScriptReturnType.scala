@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompileScriptReturnType extends js.Object {
   /**
     * Exception details.
     */
-  var exceptionDetails: js.UndefOr[ExceptionDetails] = js.native
+  var exceptionDetails: js.UndefOr[ExceptionDetails] = js.undefined
   /**
     * Id of the script.
     */
-  var scriptId: js.UndefOr[ScriptId] = js.native
+  var scriptId: js.UndefOr[ScriptId] = js.undefined
 }
 
 object CompileScriptReturnType {
   @scala.inline
-  def apply(): CompileScriptReturnType = {
+  def apply(exceptionDetails: ExceptionDetails = null, scriptId: ScriptId = null): CompileScriptReturnType = {
     val __obj = js.Dynamic.literal()
+    if (exceptionDetails != null) __obj.updateDynamic("exceptionDetails")(exceptionDetails.asInstanceOf[js.Any])
+    if (scriptId != null) __obj.updateDynamic("scriptId")(scriptId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompileScriptReturnType]
   }
-  @scala.inline
-  implicit class CompileScriptReturnTypeOps[Self <: CompileScriptReturnType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExceptionDetails(value: ExceptionDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exceptionDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExceptionDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exceptionDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptId(value: ScriptId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,12 +10,11 @@ import scala.scalajs.js.annotation._
   * 3986, this resource will be used to match against everything after the last '/' and before
   * the first '?' or '#'.
   */
-@js.native
 trait HTTPIngressRuleValue extends js.Object {
   /**
     * A collection of paths that map requests to backends.
     */
-  val paths: js.Array[HTTPIngressPath] = js.native
+  val paths: js.Array[HTTPIngressPath]
 }
 
 object HTTPIngressRuleValue {
@@ -24,19 +23,5 @@ object HTTPIngressRuleValue {
     val __obj = js.Dynamic.literal(paths = paths.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTTPIngressRuleValue]
   }
-  @scala.inline
-  implicit class HTTPIngressRuleValueOps[Self <: HTTPIngressRuleValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPaths(value: js.Array[HTTPIngressPath]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

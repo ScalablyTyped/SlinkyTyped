@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StorageConfig extends js.Object {
-  var dbKey: js.UndefOr[String] = js.native
-  var description: js.UndefOr[String] = js.native
-  var driverOrder: js.UndefOr[js.Array[String]] = js.native
-  var name: js.UndefOr[String] = js.native
-  var size: js.UndefOr[Double] = js.native
-  var storeName: js.UndefOr[String] = js.native
-  var version: js.UndefOr[Double] = js.native
+  var dbKey: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var driverOrder: js.UndefOr[js.Array[String]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var size: js.UndefOr[Double] = js.undefined
+  var storeName: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[Double] = js.undefined
 }
 
 object StorageConfig {
   @scala.inline
-  def apply(): StorageConfig = {
+  def apply(
+    dbKey: String = null,
+    description: String = null,
+    driverOrder: js.Array[String] = null,
+    name: String = null,
+    size: js.UndefOr[Double] = js.undefined,
+    storeName: String = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): StorageConfig = {
     val __obj = js.Dynamic.literal()
+    if (dbKey != null) __obj.updateDynamic("dbKey")(dbKey.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (driverOrder != null) __obj.updateDynamic("driverOrder")(driverOrder.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (storeName != null) __obj.updateDynamic("storeName")(storeName.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageConfig]
   }
-  @scala.inline
-  implicit class StorageConfigOps[Self <: StorageConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDbKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dbKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDbKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dbKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriverOrder(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driverOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriverOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driverOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoreName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoreName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,18 +13,17 @@ import scala.scalajs.js.annotation._
   * over feedback.
   * @see com.sun.star.datatransfer.dnd.XDragSourceListener
   */
-@js.native
 trait DragSourceDragEvent extends DragSourceEvent {
   /**
     * The drag action selected by the current drop target.
     * @see com.sun.star.datatransfer.dnd.DNDConstants
     */
-  var DropAction: Double = js.native
+  var DropAction: Double
   /**
     * The user's currently selected drop action.
     * @see com.sun.star.datatransfer.dnd.DNDConstants
     */
-  var UserAction: Double = js.native
+  var UserAction: Double
 }
 
 object DragSourceDragEvent {
@@ -39,25 +38,5 @@ object DragSourceDragEvent {
     val __obj = js.Dynamic.literal(DragSource = DragSource.asInstanceOf[js.Any], DragSourceContext = DragSourceContext.asInstanceOf[js.Any], DropAction = DropAction.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any], UserAction = UserAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[DragSourceDragEvent]
   }
-  @scala.inline
-  implicit class DragSourceDragEventOps[Self <: DragSourceDragEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDropAction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DropAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserAction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Import.PhotoImportItemImportedEventArgs")
 @js.native
 abstract class PhotoImportItemImportedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Import.PhotoImportItemImportedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.Import.PhotoImportItemImportedEventArgs {
+  /** Gets the imported item associated with the PhotoImportFindItemsResult::ItemImported event. */
+  /* CompleteClass */
+  override var importedItem: typingsSlinky.winrtUwp.Windows.Media.Import.PhotoImportItem = js.native
+}
 

@@ -4,93 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Sheet2CSVOpts extends DateNFOption {
   /** Field Separator ("delimiter") */
-  var FS: js.UndefOr[String] = js.native
+  var FS: js.UndefOr[String] = js.undefined
   /** Record Separator ("row separator") */
-  var RS: js.UndefOr[String] = js.native
+  var RS: js.UndefOr[String] = js.undefined
   /** Include blank lines in the CSV output */
-  var blankrows: js.UndefOr[Boolean] = js.native
+  var blankrows: js.UndefOr[Boolean] = js.undefined
   /** Skip hidden rows and columns in the CSV output */
-  var skipHidden: js.UndefOr[Boolean] = js.native
+  var skipHidden: js.UndefOr[Boolean] = js.undefined
   /** Remove trailing field separators in each record */
-  var strip: js.UndefOr[Boolean] = js.native
+  var strip: js.UndefOr[Boolean] = js.undefined
 }
 
 object Sheet2CSVOpts {
   @scala.inline
-  def apply(): Sheet2CSVOpts = {
+  def apply(
+    FS: String = null,
+    RS: String = null,
+    blankrows: js.UndefOr[Boolean] = js.undefined,
+    dateNF: NumberFormat = null,
+    skipHidden: js.UndefOr[Boolean] = js.undefined,
+    strip: js.UndefOr[Boolean] = js.undefined
+  ): Sheet2CSVOpts = {
     val __obj = js.Dynamic.literal()
+    if (FS != null) __obj.updateDynamic("FS")(FS.asInstanceOf[js.Any])
+    if (RS != null) __obj.updateDynamic("RS")(RS.asInstanceOf[js.Any])
+    if (!js.isUndefined(blankrows)) __obj.updateDynamic("blankrows")(blankrows.get.asInstanceOf[js.Any])
+    if (dateNF != null) __obj.updateDynamic("dateNF")(dateNF.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipHidden)) __obj.updateDynamic("skipHidden")(skipHidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strip)) __obj.updateDynamic("strip")(strip.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Sheet2CSVOpts]
   }
-  @scala.inline
-  implicit class Sheet2CSVOptsOps[Self <: Sheet2CSVOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFS(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRS(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlankrows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blankrows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlankrows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blankrows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

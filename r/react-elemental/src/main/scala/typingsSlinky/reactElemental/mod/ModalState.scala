@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModalState extends js.Object {
-  val modal: HTMLDivElement = js.native
-  val windowHeight: Double = js.native
-  val windowWidth: Double = js.native
+  val modal: HTMLDivElement
+  val windowHeight: Double
+  val windowWidth: Double
 }
 
 object ModalState {
@@ -18,31 +17,5 @@ object ModalState {
     val __obj = js.Dynamic.literal(modal = modal.asInstanceOf[js.Any], windowHeight = windowHeight.asInstanceOf[js.Any], windowWidth = windowWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalState]
   }
-  @scala.inline
-  implicit class ModalStateOps[Self <: ModalState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModal(value: HTMLDivElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindowHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindowWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

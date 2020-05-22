@@ -30,77 +30,20 @@ trait LaunchTemplateSpotMarketOptionsRequest extends js.Object {
 
 object LaunchTemplateSpotMarketOptionsRequest {
   @scala.inline
-  def apply(): LaunchTemplateSpotMarketOptionsRequest = {
+  def apply(
+    BlockDurationMinutes: js.UndefOr[Integer] = js.undefined,
+    InstanceInterruptionBehavior: InstanceInterruptionBehavior = null,
+    MaxPrice: String = null,
+    SpotInstanceType: SpotInstanceType = null,
+    ValidUntil: js.Date = null
+  ): LaunchTemplateSpotMarketOptionsRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(BlockDurationMinutes)) __obj.updateDynamic("BlockDurationMinutes")(BlockDurationMinutes.get.asInstanceOf[js.Any])
+    if (InstanceInterruptionBehavior != null) __obj.updateDynamic("InstanceInterruptionBehavior")(InstanceInterruptionBehavior.asInstanceOf[js.Any])
+    if (MaxPrice != null) __obj.updateDynamic("MaxPrice")(MaxPrice.asInstanceOf[js.Any])
+    if (SpotInstanceType != null) __obj.updateDynamic("SpotInstanceType")(SpotInstanceType.asInstanceOf[js.Any])
+    if (ValidUntil != null) __obj.updateDynamic("ValidUntil")(ValidUntil.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateSpotMarketOptionsRequest]
   }
-  @scala.inline
-  implicit class LaunchTemplateSpotMarketOptionsRequestOps[Self <: LaunchTemplateSpotMarketOptionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockDurationMinutes(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDurationMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockDurationMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDurationMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceInterruptionBehavior(value: InstanceInterruptionBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInterruptionBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceInterruptionBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInterruptionBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPrice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotInstanceType(value: SpotInstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotInstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotInstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidUntil(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUntil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUntil")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

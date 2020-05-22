@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SHAPE extends js.Object {
-  var default: default_ = js.native
-  var pill: typingsSlinky.baseui.baseuiStrings.pill = js.native
-  var round: typingsSlinky.baseui.baseuiStrings.round = js.native
-  var square: typingsSlinky.baseui.baseuiStrings.square = js.native
+  var default: default_
+  var pill: typingsSlinky.baseui.baseuiStrings.pill
+  var round: typingsSlinky.baseui.baseuiStrings.round
+  var square: typingsSlinky.baseui.baseuiStrings.square
 }
 
 @JSImport("baseui/button", "SHAPE")

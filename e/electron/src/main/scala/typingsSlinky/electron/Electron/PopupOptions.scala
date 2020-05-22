@@ -4,104 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PopupOptions extends js.Object {
   /**
     * Called when menu is closed.
     */
-  var callback: js.UndefOr[js.Function0[Unit]] = js.native
+  var callback: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * The index of the menu item to be positioned under the mouse cursor at the
     * specified coordinates. Default is -1.
     */
-  var positioningItem: js.UndefOr[Double] = js.native
+  var positioningItem: js.UndefOr[Double] = js.undefined
   /**
     * Default is the focused window.
     */
-  var window: js.UndefOr[BrowserWindow] = js.native
+  var window: js.UndefOr[BrowserWindow] = js.undefined
   /**
     * Default is the current mouse cursor position. Must be declared if y is declared.
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * Default is the current mouse cursor position. Must be declared if x is declared.
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object PopupOptions {
   @scala.inline
-  def apply(): PopupOptions = {
+  def apply(
+    callback: () => Unit = null,
+    positioningItem: js.UndefOr[Double] = js.undefined,
+    window: BrowserWindow = null,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): PopupOptions = {
     val __obj = js.Dynamic.literal()
+    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction0(callback))
+    if (!js.isUndefined(positioningItem)) __obj.updateDynamic("positioningItem")(positioningItem.get.asInstanceOf[js.Any])
+    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PopupOptions]
   }
-  @scala.inline
-  implicit class PopupOptionsOps[Self <: PopupOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositioningItem(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioningItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositioningItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioningItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindow(value: BrowserWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

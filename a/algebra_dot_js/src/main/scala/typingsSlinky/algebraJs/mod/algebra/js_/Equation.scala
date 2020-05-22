@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Equation extends js.Object {
-  var lhs: Expression = js.native
-  var rhs: Expression = js.native
-  def solveFor(variable: String): Fraction | (js.Array[Double | Fraction]) = js.native
+  var lhs: Expression
+  var rhs: Expression
+  def solveFor(variable: String): Fraction | (js.Array[Double | Fraction])
 }
 
 object Equation {
@@ -17,31 +16,5 @@ object Equation {
     val __obj = js.Dynamic.literal(lhs = lhs.asInstanceOf[js.Any], rhs = rhs.asInstanceOf[js.Any], solveFor = js.Any.fromFunction1(solveFor))
     __obj.asInstanceOf[Equation]
   }
-  @scala.inline
-  implicit class EquationOps[Self <: Equation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLhs(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lhs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRhs(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rhs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSolveFor(value: String => Fraction | (js.Array[Double | Fraction])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solveFor")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -14,12 +14,11 @@ import scala.scalajs.js.annotation._
   * **ShellFolderViewOC** object by calling **SetFolderView**. Then, when an **EnumDone** or **SelectionChanged** event is fired, the **ShellFolderViewOC** object
   * forwards the event to its own handler for processing.
   */
-@js.native
 trait ShellFolderViewOC extends js.Object {
   @JSName("Shell32.ShellFolderViewOC_typekey")
-  var Shell32DotShellFolderViewOC_typekey: ShellFolderViewOC = js.native
+  var Shell32DotShellFolderViewOC_typekey: ShellFolderViewOC
   /** Set the ShellFolderView object to monitor events of. */
-  def SetFolderView(pdisp: ShellFolderView): Unit = js.native
+  def SetFolderView(pdisp: ShellFolderView): Unit
 }
 
 object ShellFolderViewOC {
@@ -29,25 +28,5 @@ object ShellFolderViewOC {
     __obj.updateDynamic("Shell32.ShellFolderViewOC_typekey")(Shell32DotShellFolderViewOC_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShellFolderViewOC]
   }
-  @scala.inline
-  implicit class ShellFolderViewOCOps[Self <: ShellFolderViewOC] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetFolderView(value: ShellFolderView => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetFolderView")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withShell32DotShellFolderViewOC_typekey(value: ShellFolderViewOC): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shell32.ShellFolderViewOC_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

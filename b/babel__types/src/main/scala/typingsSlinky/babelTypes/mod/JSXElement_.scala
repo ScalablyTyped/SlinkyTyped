@@ -6,20 +6,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait JSXElement_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait JSXElement_
   extends Expression
      with BaseNode
      with Immutable
      with JSX {
   var children: js.Array[
     JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | JSXFragment_
-  ] = js.native
-  var closingElement: JSXClosingElement_ | Null = js.native
-  var openingElement: JSXOpeningElement_ = js.native
-  var selfClosing: js.Any = js.native
+  ]
+  var closingElement: JSXClosingElement_ | Null
+  var openingElement: JSXOpeningElement_
+  var selfClosing: js.Any
   @JSName("type")
-  var type_JSXElement_ : JSXElement = js.native
+  var type_JSXElement_ : JSXElement
 }
 
 object JSXElement_ {
@@ -30,59 +29,18 @@ object JSXElement_ {
     ],
     openingElement: JSXOpeningElement_,
     selfClosing: js.Any,
-    `type`: JSXElement
+    `type`: JSXElement,
+    closingElement: JSXClosingElement_ = null,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
   ): JSXElement_ = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], openingElement = openingElement.asInstanceOf[js.Any], selfClosing = selfClosing.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], openingElement = openingElement.asInstanceOf[js.Any], selfClosing = selfClosing.asInstanceOf[js.Any], closingElement = closingElement.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSXElement_]
   }
-  @scala.inline
-  implicit class JSXElement_Ops[Self <: JSXElement_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(
-      value: js.Array[
-          JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | JSXFragment_
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpeningElement(value: JSXOpeningElement_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openingElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelfClosing(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfClosing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: JSXElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClosingElement(value: JSXClosingElement_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closingElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClosingElementNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closingElement")(null)
-        ret
-    }
-  }
-  
 }
 

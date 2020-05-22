@@ -5,36 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // https://www.w3.org/TR/webrtc/#idl-def-rtcofferansweroptions
-@js.native
 trait RTCOfferAnswerOptions extends js.Object {
-  var voiceActivityDetection: js.UndefOr[Boolean] = js.native
+  var voiceActivityDetection: js.UndefOr[Boolean] = js.undefined
 }
 
 object RTCOfferAnswerOptions {
   @scala.inline
-  def apply(): RTCOfferAnswerOptions = {
+  def apply(voiceActivityDetection: js.UndefOr[Boolean] = js.undefined): RTCOfferAnswerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(voiceActivityDetection)) __obj.updateDynamic("voiceActivityDetection")(voiceActivityDetection.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCOfferAnswerOptions]
   }
-  @scala.inline
-  implicit class RTCOfferAnswerOptionsOps[Self <: RTCOfferAnswerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVoiceActivityDetection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceActivityDetection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoiceActivityDetection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceActivityDetection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

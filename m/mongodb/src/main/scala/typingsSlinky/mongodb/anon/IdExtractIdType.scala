@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IdExtractIdType[TSchema /* <: /* import warning: importer.ImportType#apply Failed type conversion: {  _id ? :any} */ js.Any */] extends js.Object {
-  var _id: js.UndefOr[ExtractIdType[TSchema]] = js.native
+  var _id: js.UndefOr[ExtractIdType[TSchema]] = js.undefined
 }
 
 object IdExtractIdType {
   @scala.inline
-  def apply[TSchema](): IdExtractIdType[TSchema] = {
+  def apply[TSchema](_id: ExtractIdType[TSchema] = null): IdExtractIdType[TSchema] = {
     val __obj = js.Dynamic.literal()
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdExtractIdType[TSchema]]
   }
-  @scala.inline
-  implicit class IdExtractIdTypeOps[Self[tschema] <: IdExtractIdType[tschema], TSchema] (val x: Self[TSchema]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TSchema] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TSchema]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TSchema] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TSchema] with Other]
-    @scala.inline
-    def with_id(value: ExtractIdType[TSchema]): Self[TSchema] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_id: Self[TSchema] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

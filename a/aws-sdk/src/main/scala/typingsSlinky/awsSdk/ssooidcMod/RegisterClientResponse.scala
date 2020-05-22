@@ -34,89 +34,22 @@ trait RegisterClientResponse extends js.Object {
 
 object RegisterClientResponse {
   @scala.inline
-  def apply(): RegisterClientResponse = {
+  def apply(
+    authorizationEndpoint: URI = null,
+    clientId: ClientId = null,
+    clientIdIssuedAt: js.UndefOr[LongTimeStampType] = js.undefined,
+    clientSecret: ClientSecret = null,
+    clientSecretExpiresAt: js.UndefOr[LongTimeStampType] = js.undefined,
+    tokenEndpoint: URI = null
+  ): RegisterClientResponse = {
     val __obj = js.Dynamic.literal()
+    if (authorizationEndpoint != null) __obj.updateDynamic("authorizationEndpoint")(authorizationEndpoint.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientIdIssuedAt)) __obj.updateDynamic("clientIdIssuedAt")(clientIdIssuedAt.get.asInstanceOf[js.Any])
+    if (clientSecret != null) __obj.updateDynamic("clientSecret")(clientSecret.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientSecretExpiresAt)) __obj.updateDynamic("clientSecretExpiresAt")(clientSecretExpiresAt.get.asInstanceOf[js.Any])
+    if (tokenEndpoint != null) __obj.updateDynamic("tokenEndpoint")(tokenEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterClientResponse]
   }
-  @scala.inline
-  implicit class RegisterClientResponseOps[Self <: RegisterClientResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorizationEndpoint(value: URI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizationEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientId(value: ClientId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientIdIssuedAt(value: LongTimeStampType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientIdIssuedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientIdIssuedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientIdIssuedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientSecret(value: ClientSecret): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientSecretExpiresAt(value: LongTimeStampType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecretExpiresAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientSecretExpiresAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecretExpiresAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenEndpoint(value: URI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenEndpoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

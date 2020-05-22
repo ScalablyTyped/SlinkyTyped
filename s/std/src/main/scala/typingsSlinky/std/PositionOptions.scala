@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PositionOptions extends js.Object {
-  var enableHighAccuracy: js.UndefOr[scala.Boolean] = js.native
-  var maximumAge: js.UndefOr[Double] = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  var enableHighAccuracy: js.UndefOr[scala.Boolean] = js.undefined
+  var maximumAge: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object PositionOptions {
   @scala.inline
-  def apply(): PositionOptions = {
+  def apply(
+    enableHighAccuracy: js.UndefOr[scala.Boolean] = js.undefined,
+    maximumAge: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): PositionOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableHighAccuracy)) __obj.updateDynamic("enableHighAccuracy")(enableHighAccuracy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumAge)) __obj.updateDynamic("maximumAge")(maximumAge.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PositionOptions]
   }
-  @scala.inline
-  implicit class PositionOptionsOps[Self <: org.scalajs.dom.raw.PositionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableHighAccuracy(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHighAccuracy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableHighAccuracy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHighAccuracy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumAge(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

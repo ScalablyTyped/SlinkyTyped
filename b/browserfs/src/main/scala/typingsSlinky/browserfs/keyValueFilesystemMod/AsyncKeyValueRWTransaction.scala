@@ -8,21 +8,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AsyncKeyValueRWTransaction extends AsyncKeyValueROTransaction {
   /**
     * Aborts and rolls back the transaction.
     */
-  def abort(cb: BFSOneArgCallback): Unit = js.native
+  def abort(cb: BFSOneArgCallback): Unit
   /**
     * Commits the transaction.
     */
-  def commit(cb: BFSOneArgCallback): Unit = js.native
+  def commit(cb: BFSOneArgCallback): Unit
   /**
     * Deletes the data at the given key.
     * @param key The key to delete from the store.
     */
-  def del(key: String, cb: BFSOneArgCallback): Unit = js.native
+  def del(key: String, cb: BFSOneArgCallback): Unit
   /**
     * Adds the data to the store under the given key. Overwrites any existing
     * data.
@@ -38,7 +37,7 @@ trait AsyncKeyValueRWTransaction extends AsyncKeyValueROTransaction {
     data: Buffer,
     overwrite: Boolean,
     cb: js.Function2[/* e */ ApiError, /* committed */ js.UndefOr[Boolean], Unit]
-  ): Unit = js.native
+  ): Unit
 }
 
 object AsyncKeyValueRWTransaction {
@@ -53,39 +52,5 @@ object AsyncKeyValueRWTransaction {
     val __obj = js.Dynamic.literal(abort = js.Any.fromFunction1(abort), commit = js.Any.fromFunction1(commit), del = js.Any.fromFunction2(del), get = js.Any.fromFunction2(get), put = js.Any.fromFunction4(put))
     __obj.asInstanceOf[AsyncKeyValueRWTransaction]
   }
-  @scala.inline
-  implicit class AsyncKeyValueRWTransactionOps[Self <: AsyncKeyValueRWTransaction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbort(value: BFSOneArgCallback => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCommit(value: BFSOneArgCallback => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDel(value: (String, BFSOneArgCallback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPut(
-      value: (String, Buffer, Boolean, js.Function2[/* e */ ApiError, /* committed */ js.UndefOr[Boolean], Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

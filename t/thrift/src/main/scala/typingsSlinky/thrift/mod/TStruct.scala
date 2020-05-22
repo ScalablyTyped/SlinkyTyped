@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TStruct extends js.Object {
-  var fname: String = js.native
+  var fname: String
 }
 
 object TStruct {
@@ -15,19 +14,5 @@ object TStruct {
     val __obj = js.Dynamic.literal(fname = fname.asInstanceOf[js.Any])
     __obj.asInstanceOf[TStruct]
   }
-  @scala.inline
-  implicit class TStructOps[Self <: TStruct] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fname")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

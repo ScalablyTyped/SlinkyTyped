@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSImport("typescript-services", "PullAdditionalObjectLiteralResolutionData")
 @js.native
 class PullAdditionalObjectLiteralResolutionData ()
-  extends typingsSlinky.typescriptServices.TypeScript.PullAdditionalObjectLiteralResolutionData
+  extends typingsSlinky.typescriptServices.TypeScript.PullAdditionalObjectLiteralResolutionData {
+  /* CompleteClass */
+  override var membersContextTypeSymbols: js.Array[typingsSlinky.typescriptServices.TypeScript.PullTypeSymbol] = js.native
+}
 

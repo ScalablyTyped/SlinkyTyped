@@ -4,166 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InitOptions extends js.Object {
-  var branch_match_id: js.UndefOr[String] = js.native
-  var branch_view_id: js.UndefOr[String] = js.native
-  var disable_entry_animation: js.UndefOr[Boolean] = js.native
-  var disable_exit_animation: js.UndefOr[Boolean] = js.native
-  var metadata: js.UndefOr[js.Object] = js.native
-  var no_journeys: js.UndefOr[Boolean] = js.native
-  var nonce: js.UndefOr[String] = js.native
-  var retries: js.UndefOr[Double] = js.native
-  var retry_delay: js.UndefOr[Double] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var tracking_disabled: js.UndefOr[Boolean] = js.native
+  var branch_match_id: js.UndefOr[String] = js.undefined
+  var branch_view_id: js.UndefOr[String] = js.undefined
+  var disable_entry_animation: js.UndefOr[Boolean] = js.undefined
+  var disable_exit_animation: js.UndefOr[Boolean] = js.undefined
+  var metadata: js.UndefOr[js.Object] = js.undefined
+  var no_journeys: js.UndefOr[Boolean] = js.undefined
+  var nonce: js.UndefOr[String] = js.undefined
+  var retries: js.UndefOr[Double] = js.undefined
+  var retry_delay: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var tracking_disabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object InitOptions {
   @scala.inline
-  def apply(): InitOptions = {
+  def apply(
+    branch_match_id: String = null,
+    branch_view_id: String = null,
+    disable_entry_animation: js.UndefOr[Boolean] = js.undefined,
+    disable_exit_animation: js.UndefOr[Boolean] = js.undefined,
+    metadata: js.Object = null,
+    no_journeys: js.UndefOr[Boolean] = js.undefined,
+    nonce: String = null,
+    retries: js.UndefOr[Double] = js.undefined,
+    retry_delay: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    tracking_disabled: js.UndefOr[Boolean] = js.undefined
+  ): InitOptions = {
     val __obj = js.Dynamic.literal()
+    if (branch_match_id != null) __obj.updateDynamic("branch_match_id")(branch_match_id.asInstanceOf[js.Any])
+    if (branch_view_id != null) __obj.updateDynamic("branch_view_id")(branch_view_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(disable_entry_animation)) __obj.updateDynamic("disable_entry_animation")(disable_entry_animation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disable_exit_animation)) __obj.updateDynamic("disable_exit_animation")(disable_exit_animation.get.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(no_journeys)) __obj.updateDynamic("no_journeys")(no_journeys.get.asInstanceOf[js.Any])
+    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
+    if (!js.isUndefined(retries)) __obj.updateDynamic("retries")(retries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retry_delay)) __obj.updateDynamic("retry_delay")(retry_delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tracking_disabled)) __obj.updateDynamic("tracking_disabled")(tracking_disabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitOptions]
   }
-  @scala.inline
-  implicit class InitOptionsOps[Self <: InitOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBranch_match_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch_match_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranch_match_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch_match_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBranch_view_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch_view_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranch_view_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch_view_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisable_entry_animation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable_entry_animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisable_entry_animation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable_entry_animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisable_exit_animation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable_exit_animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisable_exit_animation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable_exit_animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNo_journeys(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no_journeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNo_journeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no_journeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry_delay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry_delay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracking_disabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracking_disabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking_disabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

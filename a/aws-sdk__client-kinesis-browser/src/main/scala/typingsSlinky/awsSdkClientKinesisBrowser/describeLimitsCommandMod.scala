@@ -26,9 +26,16 @@ object describeLimitsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DescribeLimitsInput) = this()
+    /* CompleteClass */
+    override val input: DescribeLimitsInput = js.native
     val middlewareStack: MiddlewareStack[DescribeLimitsInput, DescribeLimitsOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: KinesisResolvedConfiguration
+    ): Handler[DescribeLimitsInput, DescribeLimitsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KinesisResolvedConfiguration
     ): Handler[DescribeLimitsInput, DescribeLimitsOutput] = js.native
   }

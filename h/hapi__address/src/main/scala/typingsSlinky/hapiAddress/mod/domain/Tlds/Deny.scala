@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Deny extends js.Object {
-  val deny: Set[String] = js.native
+  val deny: Set[String]
 }
 
 object Deny {
@@ -16,19 +15,5 @@ object Deny {
     val __obj = js.Dynamic.literal(deny = deny.asInstanceOf[js.Any])
     __obj.asInstanceOf[Deny]
   }
-  @scala.inline
-  implicit class DenyOps[Self <: Deny] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeny(value: Set[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deny")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

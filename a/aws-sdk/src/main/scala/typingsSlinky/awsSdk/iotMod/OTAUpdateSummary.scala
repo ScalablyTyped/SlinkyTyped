@@ -22,53 +22,12 @@ trait OTAUpdateSummary extends js.Object {
 
 object OTAUpdateSummary {
   @scala.inline
-  def apply(): OTAUpdateSummary = {
+  def apply(creationDate: js.Date = null, otaUpdateArn: OTAUpdateArn = null, otaUpdateId: OTAUpdateId = null): OTAUpdateSummary = {
     val __obj = js.Dynamic.literal()
+    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
+    if (otaUpdateArn != null) __obj.updateDynamic("otaUpdateArn")(otaUpdateArn.asInstanceOf[js.Any])
+    if (otaUpdateId != null) __obj.updateDynamic("otaUpdateId")(otaUpdateId.asInstanceOf[js.Any])
     __obj.asInstanceOf[OTAUpdateSummary]
   }
-  @scala.inline
-  implicit class OTAUpdateSummaryOps[Self <: OTAUpdateSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtaUpdateArn(value: OTAUpdateArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtaUpdateArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtaUpdateId(value: OTAUpdateId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtaUpdateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

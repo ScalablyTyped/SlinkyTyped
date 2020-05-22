@@ -14,29 +14,10 @@ trait RegisterWebhookWithThirdPartyInput extends js.Object {
 
 object RegisterWebhookWithThirdPartyInput {
   @scala.inline
-  def apply(): RegisterWebhookWithThirdPartyInput = {
+  def apply(webhookName: WebhookName = null): RegisterWebhookWithThirdPartyInput = {
     val __obj = js.Dynamic.literal()
+    if (webhookName != null) __obj.updateDynamic("webhookName")(webhookName.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterWebhookWithThirdPartyInput]
   }
-  @scala.inline
-  implicit class RegisterWebhookWithThirdPartyInputOps[Self <: RegisterWebhookWithThirdPartyInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWebhookName(value: WebhookName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebhookName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

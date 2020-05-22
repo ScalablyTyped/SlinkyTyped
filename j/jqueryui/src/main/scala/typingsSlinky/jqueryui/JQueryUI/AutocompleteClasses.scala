@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutocompleteClasses extends js.Object {
-  var `ui-autocomplete`: js.UndefOr[String] = js.native
-  var `ui-autocomplete-input`: js.UndefOr[String] = js.native
+  var `ui-autocomplete`: js.UndefOr[String] = js.undefined
+  var `ui-autocomplete-input`: js.UndefOr[String] = js.undefined
 }
 
 object AutocompleteClasses {
   @scala.inline
-  def apply(): AutocompleteClasses = {
+  def apply(`ui-autocomplete`: String = null, `ui-autocomplete-input`: String = null): AutocompleteClasses = {
     val __obj = js.Dynamic.literal()
+    if (`ui-autocomplete` != null) __obj.updateDynamic("ui-autocomplete")(`ui-autocomplete`.asInstanceOf[js.Any])
+    if (`ui-autocomplete-input` != null) __obj.updateDynamic("ui-autocomplete-input")(`ui-autocomplete-input`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutocompleteClasses]
   }
-  @scala.inline
-  implicit class AutocompleteClassesOps[Self <: AutocompleteClasses] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withUi-autocomplete`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUi-autocomplete`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-autocomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUi-autocomplete-input`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-autocomplete-input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUi-autocomplete-input`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-autocomplete-input")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

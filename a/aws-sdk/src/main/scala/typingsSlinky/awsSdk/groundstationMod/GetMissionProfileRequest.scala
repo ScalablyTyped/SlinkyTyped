@@ -18,19 +18,5 @@ object GetMissionProfileRequest {
     val __obj = js.Dynamic.literal(missionProfileId = missionProfileId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMissionProfileRequest]
   }
-  @scala.inline
-  implicit class GetMissionProfileRequestOps[Self <: GetMissionProfileRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMissionProfileId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missionProfileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

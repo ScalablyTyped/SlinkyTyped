@@ -18,35 +18,10 @@ trait IpAddressRequest extends js.Object {
 
 object IpAddressRequest {
   @scala.inline
-  def apply(SubnetId: SubnetId): IpAddressRequest = {
+  def apply(SubnetId: SubnetId, Ip: Ip = null): IpAddressRequest = {
     val __obj = js.Dynamic.literal(SubnetId = SubnetId.asInstanceOf[js.Any])
+    if (Ip != null) __obj.updateDynamic("Ip")(Ip.asInstanceOf[js.Any])
     __obj.asInstanceOf[IpAddressRequest]
   }
-  @scala.inline
-  implicit class IpAddressRequestOps[Self <: IpAddressRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubnetId(value: SubnetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIp(value: Ip): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

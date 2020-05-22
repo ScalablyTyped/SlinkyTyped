@@ -16,5 +16,10 @@ class ASPxClientReportDesignerCustomizeToolboxEventArgs protected ()
     * @param controlsFactory An object that provides information about all controls available in the Toolbox. This object is assigned to the ASPxClientReportDesignerCustomizeToolboxEventArgs.ControlsFactory property.
     */
   def this(controlsFactory: typingsSlinky.devexpressWeb.ASPxDesignerControlsFactory) = this()
+  /**
+    * Provides information about all controls available in the Toolbox.
+    */
+  /* CompleteClass */
+  override var ControlsFactory: typingsSlinky.devexpressWeb.ASPxDesignerControlsFactory = js.native
 }
 

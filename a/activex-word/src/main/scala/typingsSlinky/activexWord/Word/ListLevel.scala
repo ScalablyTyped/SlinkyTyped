@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListLevel extends js.Object {
-  var Alignment: WdListLevelAlignment = js.native
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  var Font: typingsSlinky.activexWord.Word.Font = js.native
-  val Index: Double = js.native
-  var LinkedStyle: String = js.native
-  var NumberFormat: String = js.native
-  var NumberPosition: Double = js.native
-  var NumberStyle: WdListNumberStyle = js.native
-  val Parent: js.Any = js.native
-  val PictureBullet: InlineShape = js.native
-  var ResetOnHigher: Double = js.native
-  var ResetOnHigherOld: Boolean = js.native
-  var StartAt: Double = js.native
-  var TabPosition: Double = js.native
-  var TextPosition: Double = js.native
-  var TrailingCharacter: WdTrailingCharacter = js.native
+  var Alignment: WdListLevelAlignment
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  var Font: typingsSlinky.activexWord.Word.Font
+  val Index: Double
+  var LinkedStyle: String
+  var NumberFormat: String
+  var NumberPosition: Double
+  var NumberStyle: WdListNumberStyle
+  val Parent: js.Any
+  val PictureBullet: InlineShape
+  var ResetOnHigher: Double
+  var ResetOnHigherOld: Boolean
+  var StartAt: Double
+  var TabPosition: Double
+  var TextPosition: Double
+  var TrailingCharacter: WdTrailingCharacter
   @JSName("Word.ListLevel_typekey")
-  var WordDotListLevel_typekey: ListLevel = js.native
-  def ApplyPictureBullet(FileName: String): InlineShape = js.native
+  var WordDotListLevel_typekey: ListLevel
+  def ApplyPictureBullet(FileName: String): InlineShape
 }
 
 object ListLevel {
@@ -55,127 +54,5 @@ object ListLevel {
     __obj.updateDynamic("Word.ListLevel_typekey")(WordDotListLevel_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListLevel]
   }
-  @scala.inline
-  implicit class ListLevelOps[Self <: ListLevel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: WdListLevelAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplyPictureBullet(value: String => InlineShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyPictureBullet")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkedStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberStyle(value: WdListNumberStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPictureBullet(value: InlineShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PictureBullet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResetOnHigher(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetOnHigher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResetOnHigherOld(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetOnHigherOld")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TabPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrailingCharacter(value: WdTrailingCharacter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailingCharacter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotListLevel_typekey(value: ListLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.ListLevel_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

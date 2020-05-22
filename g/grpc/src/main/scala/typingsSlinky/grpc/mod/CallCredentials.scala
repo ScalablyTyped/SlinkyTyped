@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CallCredentials extends js.Object {
   /**
     * Creates a new CallCredentials object from properties of both this and
@@ -12,12 +11,12 @@ trait CallCredentials extends js.Object {
     * called first.
     * @param callCredentials The other CallCredentials object.
     */
-  def compose(callCredentials: CallCredentials): CallCredentials = js.native
+  def compose(callCredentials: CallCredentials): CallCredentials
   /**
     * Asynchronously generates a new Metadata object.
     * @param options Options used in generating the Metadata object.
     */
-  def generateMetadata(options: js.Object): js.Promise[Metadata] = js.native
+  def generateMetadata(options: js.Object): js.Promise[Metadata]
 }
 
 object CallCredentials {
@@ -26,25 +25,5 @@ object CallCredentials {
     val __obj = js.Dynamic.literal(compose = js.Any.fromFunction1(compose), generateMetadata = js.Any.fromFunction1(generateMetadata))
     __obj.asInstanceOf[CallCredentials]
   }
-  @scala.inline
-  implicit class CallCredentialsOps[Self <: CallCredentials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompose(value: CallCredentials => CallCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGenerateMetadata(value: js.Object => js.Promise[Metadata]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateMetadata")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

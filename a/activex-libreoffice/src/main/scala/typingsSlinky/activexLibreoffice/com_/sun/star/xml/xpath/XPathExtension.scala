@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XPathExtension extends XXPathExtension {
-  def createWithModel(Model: XModel, ContextNode: XNode): Unit = js.native
+  def createWithModel(Model: XModel, ContextNode: XNode): Unit
 }
 
 object XPathExtension {
@@ -25,19 +24,5 @@ object XPathExtension {
     val __obj = js.Dynamic.literal(Libxml2ExtensionHandle = Libxml2ExtensionHandle.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), createWithModel = js.Any.fromFunction2(createWithModel), getLibxml2ExtensionHandle = js.Any.fromFunction0(getLibxml2ExtensionHandle), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XPathExtension]
   }
-  @scala.inline
-  implicit class XPathExtensionOps[Self <: XPathExtension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateWithModel(value: (XModel, XNode) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithModel")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

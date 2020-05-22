@@ -24,41 +24,14 @@ trait SchemaSuggestedDocumentStyle extends js.Object {
 
 object SchemaSuggestedDocumentStyle {
   @scala.inline
-  def apply(): SchemaSuggestedDocumentStyle = {
+  def apply(
+    documentStyle: SchemaDocumentStyle = null,
+    documentStyleSuggestionState: SchemaDocumentStyleSuggestionState = null
+  ): SchemaSuggestedDocumentStyle = {
     val __obj = js.Dynamic.literal()
+    if (documentStyle != null) __obj.updateDynamic("documentStyle")(documentStyle.asInstanceOf[js.Any])
+    if (documentStyleSuggestionState != null) __obj.updateDynamic("documentStyleSuggestionState")(documentStyleSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSuggestedDocumentStyle]
   }
-  @scala.inline
-  implicit class SchemaSuggestedDocumentStyleOps[Self <: SchemaSuggestedDocumentStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentStyle(value: SchemaDocumentStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentStyleSuggestionState(value: SchemaDocumentStyleSuggestionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentStyleSuggestionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentStyleSuggestionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentStyleSuggestionState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

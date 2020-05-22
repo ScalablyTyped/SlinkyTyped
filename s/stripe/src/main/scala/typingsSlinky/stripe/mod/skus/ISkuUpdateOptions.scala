@@ -1,139 +1,68 @@
 package typingsSlinky.stripe.mod.skus
 
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
+import typingsSlinky.stripe.mod.IOptionsMetadata
 import typingsSlinky.stripe.mod.products.IPackageDimensions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISkuUpdateOptions extends IDataOptionsWithMetadata {
   /**
     * Whether or not the SKU is available for purchase.
     */
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /**
     * 3-letter ISO code for currency.
     */
-  var currency: js.UndefOr[String] = js.native
+  var currency: js.UndefOr[String] = js.undefined
   /**
     * The URL of an image for this SKU, meant to be displayable to the customer.
     * This can be unset by updating the value to null and then saving.
     */
-  var image: js.UndefOr[String] = js.native
-  var inventory: js.UndefOr[IInventory] = js.native
+  var image: js.UndefOr[String] = js.undefined
+  var inventory: js.UndefOr[IInventory] = js.undefined
   /**
     * The dimensions of this SKU for shipping purposes.
     */
-  var package_dimensions: js.UndefOr[IPackageDimensions] = js.native
+  var package_dimensions: js.UndefOr[IPackageDimensions] = js.undefined
   /**
     * The cost of the item as a nonnegative integer in the smallest currency unit (that is, 100 cents to charge $1.00, or 1 to charge ¥1,
     * Japanese Yen being a 0-decimal currency).
     */
-  var price: js.UndefOr[Double] = js.native
+  var price: js.UndefOr[Double] = js.undefined
   /**
     * The ID of the product this SKU is associated with.
     */
-  var product: js.UndefOr[String] = js.native
+  var product: js.UndefOr[String] = js.undefined
 }
 
 object ISkuUpdateOptions {
   @scala.inline
-  def apply(): ISkuUpdateOptions = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    currency: String = null,
+    expand: js.Array[String] = null,
+    image: String = null,
+    include: js.Array[String] = null,
+    inventory: IInventory = null,
+    metadata: IOptionsMetadata = null,
+    package_dimensions: IPackageDimensions = null,
+    price: js.UndefOr[Double] = js.undefined,
+    product: String = null
+  ): ISkuUpdateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (inventory != null) __obj.updateDynamic("inventory")(inventory.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (package_dimensions != null) __obj.updateDynamic("package_dimensions")(package_dimensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(price)) __obj.updateDynamic("price")(price.get.asInstanceOf[js.Any])
+    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISkuUpdateOptions]
   }
-  @scala.inline
-  implicit class ISkuUpdateOptionsOps[Self <: ISkuUpdateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInventory(value: IInventory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackage_dimensions(value: IPackageDimensions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("package_dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackage_dimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("package_dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrice(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduct(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

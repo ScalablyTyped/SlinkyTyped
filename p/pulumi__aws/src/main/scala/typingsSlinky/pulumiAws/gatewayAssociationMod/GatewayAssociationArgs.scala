@@ -41,83 +41,21 @@ trait GatewayAssociationArgs extends js.Object {
 
 object GatewayAssociationArgs {
   @scala.inline
-  def apply(dxGatewayId: Input[String]): GatewayAssociationArgs = {
+  def apply(
+    dxGatewayId: Input[String],
+    allowedPrefixes: Input[js.Array[Input[String]]] = null,
+    associatedGatewayId: Input[String] = null,
+    associatedGatewayOwnerAccountId: Input[String] = null,
+    proposalId: Input[String] = null,
+    vpnGatewayId: Input[String] = null
+  ): GatewayAssociationArgs = {
     val __obj = js.Dynamic.literal(dxGatewayId = dxGatewayId.asInstanceOf[js.Any])
+    if (allowedPrefixes != null) __obj.updateDynamic("allowedPrefixes")(allowedPrefixes.asInstanceOf[js.Any])
+    if (associatedGatewayId != null) __obj.updateDynamic("associatedGatewayId")(associatedGatewayId.asInstanceOf[js.Any])
+    if (associatedGatewayOwnerAccountId != null) __obj.updateDynamic("associatedGatewayOwnerAccountId")(associatedGatewayOwnerAccountId.asInstanceOf[js.Any])
+    if (proposalId != null) __obj.updateDynamic("proposalId")(proposalId.asInstanceOf[js.Any])
+    if (vpnGatewayId != null) __obj.updateDynamic("vpnGatewayId")(vpnGatewayId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GatewayAssociationArgs]
   }
-  @scala.inline
-  implicit class GatewayAssociationArgsOps[Self <: GatewayAssociationArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDxGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dxGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowedPrefixes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedPrefixes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedPrefixes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedPrefixes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssociatedGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociatedGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssociatedGatewayOwnerAccountId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedGatewayOwnerAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociatedGatewayOwnerAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedGatewayOwnerAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProposalId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProposalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpnGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpnGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnGatewayId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

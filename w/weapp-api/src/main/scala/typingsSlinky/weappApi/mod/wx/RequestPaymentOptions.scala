@@ -4,25 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestPaymentOptions extends js.Object {
   /** 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=* */
   @JSName("package")
-  var _package: String = js.native
+  var _package: String
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[ResponseCallback] = js.native
+  var complete: js.UndefOr[ResponseCallback] = js.undefined
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[ResponseCallback] = js.native
+  var fail: js.UndefOr[ResponseCallback] = js.undefined
   /** 随机字符串，长度为32个字符以下。 */
-  var nonceStr: String = js.native
+  var nonceStr: String
   /** 签名,具体签名方案参见微信公众号支付帮助文档; */
-  var paySign: String = js.native
+  var paySign: String
   /** 签名算法，暂支持 MD5 */
-  var signType: PaymentSignType = js.native
+  var signType: PaymentSignType
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[ResponseCallback] = js.native
+  var success: js.UndefOr[ResponseCallback] = js.undefined
   /** 时间戳从1970年1月1日00:00:00至今的秒数,即当前的时间 */
-  var timeStamp: String | Double = js.native
+  var timeStamp: String | Double
 }
 
 object RequestPaymentOptions {
@@ -32,85 +31,17 @@ object RequestPaymentOptions {
     nonceStr: String,
     paySign: String,
     signType: PaymentSignType,
-    timeStamp: String | Double
+    timeStamp: String | Double,
+    complete: /* res */ js.Any => Unit = null,
+    fail: /* res */ js.Any => Unit = null,
+    success: /* res */ js.Any => Unit = null
   ): RequestPaymentOptions = {
     val __obj = js.Dynamic.literal(nonceStr = nonceStr.asInstanceOf[js.Any], paySign = paySign.asInstanceOf[js.Any], signType = signType.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
     __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[RequestPaymentOptions]
   }
-  @scala.inline
-  implicit class RequestPaymentOptionsOps[Self <: RequestPaymentOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_package(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("package")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNonceStr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonceStr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaySign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paySign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSignType(value: PaymentSignType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* res */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* res */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

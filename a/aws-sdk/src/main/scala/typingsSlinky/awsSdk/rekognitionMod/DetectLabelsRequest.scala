@@ -22,47 +22,15 @@ trait DetectLabelsRequest extends js.Object {
 
 object DetectLabelsRequest {
   @scala.inline
-  def apply(Image: Image): DetectLabelsRequest = {
+  def apply(
+    Image: Image,
+    MaxLabels: js.UndefOr[UInteger] = js.undefined,
+    MinConfidence: js.UndefOr[Percent] = js.undefined
+  ): DetectLabelsRequest = {
     val __obj = js.Dynamic.literal(Image = Image.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxLabels)) __obj.updateDynamic("MaxLabels")(MaxLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinConfidence)) __obj.updateDynamic("MinConfidence")(MinConfidence.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectLabelsRequest]
   }
-  @scala.inline
-  implicit class DetectLabelsRequestOps[Self <: DetectLabelsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxLabels(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinConfidence(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinConfidence")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

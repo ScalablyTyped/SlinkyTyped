@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
   * @param comp
   *        The component class
   *
-  * @return	The newly registered component
+  * @return    The newly registered component
   */
 @JSImport("video.js/dist/alt/video.core.novtt", "registerComponent")
 @js.native

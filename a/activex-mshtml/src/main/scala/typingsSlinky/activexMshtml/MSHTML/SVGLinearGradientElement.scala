@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SVGLinearGradientElement extends js.Object {
   @JSName("MSHTML.SVGLinearGradientElement_typekey")
-  var MSHTMLDotSVGLinearGradientElement_typekey: SVGLinearGradientElement = js.native
-  val className: SVGAnimatedString = js.native
-  val externalResourcesRequired: SVGAnimatedBoolean = js.native
-  var focusable: SVGAnimatedEnumeration = js.native
-  var gradientTransform: SVGAnimatedTransformList = js.native
-  var gradientUnits: SVGAnimatedEnumeration = js.native
-  val href: SVGAnimatedString = js.native
-  var ownerSVGElement: ISVGSVGElement = js.native
-  var spreadMethod: SVGAnimatedEnumeration = js.native
-  var viewportElement: ISVGElement = js.native
-  var x1: SVGAnimatedLength = js.native
-  var x2: SVGAnimatedLength = js.native
-  var xmlbase: String = js.native
-  var y1: SVGAnimatedLength = js.native
-  var y2: SVGAnimatedLength = js.native
+  var MSHTMLDotSVGLinearGradientElement_typekey: SVGLinearGradientElement
+  val className: SVGAnimatedString
+  val externalResourcesRequired: SVGAnimatedBoolean
+  var focusable: SVGAnimatedEnumeration
+  var gradientTransform: SVGAnimatedTransformList
+  var gradientUnits: SVGAnimatedEnumeration
+  val href: SVGAnimatedString
+  var ownerSVGElement: ISVGSVGElement
+  var spreadMethod: SVGAnimatedEnumeration
+  var viewportElement: ISVGElement
+  var x1: SVGAnimatedLength
+  var x2: SVGAnimatedLength
+  var xmlbase: String
+  var y1: SVGAnimatedLength
+  var y2: SVGAnimatedLength
 }
 
 object SVGLinearGradientElement {
@@ -47,103 +46,5 @@ object SVGLinearGradientElement {
     __obj.updateDynamic("MSHTML.SVGLinearGradientElement_typekey")(MSHTMLDotSVGLinearGradientElement_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGLinearGradientElement]
   }
-  @scala.inline
-  implicit class SVGLinearGradientElementOps[Self <: SVGLinearGradientElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotSVGLinearGradientElement_typekey(value: SVGLinearGradientElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.SVGLinearGradientElement_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: SVGAnimatedString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalResourcesRequired(value: SVGAnimatedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalResourcesRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFocusable(value: SVGAnimatedEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGradientTransform(value: SVGAnimatedTransformList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGradientUnits(value: SVGAnimatedEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHref(value: SVGAnimatedString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwnerSVGElement(value: ISVGSVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerSVGElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpreadMethod(value: SVGAnimatedEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewportElement(value: ISVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX1(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX2(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXmlbase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlbase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY1(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY2(value: SVGAnimatedLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y2")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

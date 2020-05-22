@@ -1,5 +1,8 @@
 package typingsSlinky.reactBootstrapTable2Toolkit.components
 
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactBootstrapTable2Toolkit.mod.ExportCSVButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,11 +13,21 @@ object CSVExportToggleList {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ExportCSVButtonProps): SharedBuilder_ExportCSVButtonProps_1769251381 = new SharedBuilder_ExportCSVButtonProps_1769251381(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onExport: () => Unit): SharedBuilder_ExportCSVButtonProps_1769251381 = {
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ExportCSVButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onExport: () => Unit): Builder = {
     val __props = js.Dynamic.literal(onExport = js.Any.fromFunction0(onExport))
-    new SharedBuilder_ExportCSVButtonProps_1769251381(js.Array(this.component, __props.asInstanceOf[ExportCSVButtonProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ExportCSVButtonProps]))
   }
 }
 

@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@js.native
 trait CellPropertiesProtection extends js.Object {
   /**
     *
@@ -18,53 +17,23 @@ trait CellPropertiesProtection extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var formulaHidden: js.UndefOr[Boolean] = js.native
+  var formulaHidden: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the `format.protection.locked` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var locked: js.UndefOr[Boolean] = js.native
+  var locked: js.UndefOr[Boolean] = js.undefined
 }
 
 object CellPropertiesProtection {
   @scala.inline
-  def apply(): CellPropertiesProtection = {
+  def apply(formulaHidden: js.UndefOr[Boolean] = js.undefined, locked: js.UndefOr[Boolean] = js.undefined): CellPropertiesProtection = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(formulaHidden)) __obj.updateDynamic("formulaHidden")(formulaHidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(locked)) __obj.updateDynamic("locked")(locked.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellPropertiesProtection]
   }
-  @scala.inline
-  implicit class CellPropertiesProtectionOps[Self <: CellPropertiesProtection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormulaHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormulaHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locked")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

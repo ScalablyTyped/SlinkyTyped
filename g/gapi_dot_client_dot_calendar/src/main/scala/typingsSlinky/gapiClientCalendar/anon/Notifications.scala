@@ -5,37 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Notifications extends js.Object {
   /** The list of notifications set for this calendar. */
-  var notifications: js.UndefOr[js.Array[CalendarNotification]] = js.native
+  var notifications: js.UndefOr[js.Array[CalendarNotification]] = js.undefined
 }
 
 object Notifications {
   @scala.inline
-  def apply(): Notifications = {
+  def apply(notifications: js.Array[CalendarNotification] = null): Notifications = {
     val __obj = js.Dynamic.literal()
+    if (notifications != null) __obj.updateDynamic("notifications")(notifications.asInstanceOf[js.Any])
     __obj.asInstanceOf[Notifications]
   }
-  @scala.inline
-  implicit class NotificationsOps[Self <: Notifications] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotifications(value: js.Array[CalendarNotification]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

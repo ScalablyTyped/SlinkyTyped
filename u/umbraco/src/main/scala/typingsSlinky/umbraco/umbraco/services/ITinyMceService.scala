@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * @description
   * A service containing all logic for all of the Umbraco TinyMCE plugins
   */
-@js.native
 trait ITinyMceService extends js.Object {
   /**
     * @ngdoc method
@@ -24,7 +23,7 @@ trait ITinyMceService extends js.Object {
     * Returns a collection of plugins available to the tinyMCE editor
     *
     */
-  def configuration(): js.Array[ITinyMcePlugin] = js.native
+  def configuration(): js.Array[ITinyMcePlugin]
   /**
     * @ngdoc method
     * @name umbraco.services.tinyMceService#createInsertEmbeddedMedia
@@ -36,7 +35,7 @@ trait ITinyMceService extends js.Object {
     * @param {Object} editor the TinyMCE editor instance
     * @param {Object} $scope the current controller scope
     */
-  def createInsertEmbeddedMedia(editor: js.Object, $scope: IScope): Unit = js.native
+  def createInsertEmbeddedMedia(editor: js.Object, $scope: IScope): Unit
   /**
     * @ngdoc method
     * @name umbraco.services.tinyMceService#createUmbracoMacro
@@ -48,7 +47,7 @@ trait ITinyMceService extends js.Object {
     * @param {Object} editor the TinyMCE editor instance
     * @param {Object} $scope the current controller scope
     */
-  def createInsertMacro(editor: js.Object, $scope: IScope): Unit = js.native
+  def createInsertMacro(editor: js.Object, $scope: IScope): Unit
   /**
     * @ngdoc method
     * @name umbraco.services.tinyMceService#createMediaPicker
@@ -60,7 +59,7 @@ trait ITinyMceService extends js.Object {
     * @param {Object} editor the TinyMCE editor instance
     * @param {Object} $scope the current controller scope
     */
-  def createMediaPicker(editor: js.Object): Unit = js.native
+  def createMediaPicker(editor: js.Object): Unit
   /**
     * @ngdoc method
     * @name umbraco.services.tinyMceService#defaultPrevalues
@@ -70,7 +69,7 @@ trait ITinyMceService extends js.Object {
     * Returns a default configration to fallback on in case none is provided
     *
     */
-  def defaultPrevalues(): IConfiguration = js.native
+  def defaultPrevalues(): IConfiguration
 }
 
 object ITinyMceService {
@@ -85,43 +84,5 @@ object ITinyMceService {
     val __obj = js.Dynamic.literal(configuration = js.Any.fromFunction0(configuration), createInsertEmbeddedMedia = js.Any.fromFunction2(createInsertEmbeddedMedia), createInsertMacro = js.Any.fromFunction2(createInsertMacro), createMediaPicker = js.Any.fromFunction1(createMediaPicker), defaultPrevalues = js.Any.fromFunction0(defaultPrevalues))
     __obj.asInstanceOf[ITinyMceService]
   }
-  @scala.inline
-  implicit class ITinyMceServiceOps[Self <: ITinyMceService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfiguration(value: () => js.Array[ITinyMcePlugin]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateInsertEmbeddedMedia(value: (js.Object, IScope) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInsertEmbeddedMedia")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateInsertMacro(value: (js.Object, IScope) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInsertMacro")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateMediaPicker(value: js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createMediaPicker")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDefaultPrevalues(value: () => IConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPrevalues")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -45,89 +45,22 @@ trait SchemaGooglePlayAnalytics extends js.Object {
 
 object SchemaGooglePlayAnalytics {
   @scala.inline
-  def apply(): SchemaGooglePlayAnalytics = {
+  def apply(
+    gclid: String = null,
+    utmCampaign: String = null,
+    utmContent: String = null,
+    utmMedium: String = null,
+    utmSource: String = null,
+    utmTerm: String = null
+  ): SchemaGooglePlayAnalytics = {
     val __obj = js.Dynamic.literal()
+    if (gclid != null) __obj.updateDynamic("gclid")(gclid.asInstanceOf[js.Any])
+    if (utmCampaign != null) __obj.updateDynamic("utmCampaign")(utmCampaign.asInstanceOf[js.Any])
+    if (utmContent != null) __obj.updateDynamic("utmContent")(utmContent.asInstanceOf[js.Any])
+    if (utmMedium != null) __obj.updateDynamic("utmMedium")(utmMedium.asInstanceOf[js.Any])
+    if (utmSource != null) __obj.updateDynamic("utmSource")(utmSource.asInstanceOf[js.Any])
+    if (utmTerm != null) __obj.updateDynamic("utmTerm")(utmTerm.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePlayAnalytics]
   }
-  @scala.inline
-  implicit class SchemaGooglePlayAnalyticsOps[Self <: SchemaGooglePlayAnalytics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGclid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gclid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGclid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gclid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtmCampaign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmCampaign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtmCampaign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmCampaign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtmContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtmContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtmMedium(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmMedium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtmMedium: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmMedium")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtmSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtmSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtmTerm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmTerm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtmTerm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmTerm")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

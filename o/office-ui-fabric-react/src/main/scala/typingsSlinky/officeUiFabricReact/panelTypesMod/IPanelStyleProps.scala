@@ -5,226 +5,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPanelStyleProps extends js.Object {
   /**
     * Accept custom classNames
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * Classname for FocusTrapZone element
     */
-  var focusTrapZoneClassName: js.UndefOr[String] = js.native
+  var focusTrapZoneClassName: js.UndefOr[String] = js.undefined
   /**
     * Panel has close button
     */
-  var hasCloseButton: js.UndefOr[Boolean] = js.native
+  var hasCloseButton: js.UndefOr[Boolean] = js.undefined
   /**
     * Determines where the header is rendered based on whether the user
     * has passed in a custom onRenderNavigation or onRenderNavigationContent render callback
     */
-  var hasCustomNavigation: js.UndefOr[Boolean] = js.native
+  var hasCustomNavigation: js.UndefOr[Boolean] = js.undefined
   /**
     * Optional parameter to provider the class name for header text
     */
-  var headerClassName: js.UndefOr[String] = js.native
+  var headerClassName: js.UndefOr[String] = js.undefined
   /**
     * Is animation currently running
     */
-  var isAnimating: js.UndefOr[Boolean] = js.native
+  var isAnimating: js.UndefOr[Boolean] = js.undefined
   /**
     * Determines if content should stretch to fill available space putting footer at the bottom of the page
     */
-  var isFooterAtBottom: js.UndefOr[Boolean] = js.native
+  var isFooterAtBottom: js.UndefOr[Boolean] = js.undefined
   /**
     * Based on state value setting footer to sticky or not
     */
-  var isFooterSticky: js.UndefOr[Boolean] = js.native
+  var isFooterSticky: js.UndefOr[Boolean] = js.undefined
   /**
     * Is panel hidden on dismiss
     */
-  var isHiddenOnDismiss: js.UndefOr[Boolean] = js.native
+  var isHiddenOnDismiss: js.UndefOr[Boolean] = js.undefined
   /**
     * Is panel on right side
     */
-  var isOnRightSide: js.UndefOr[Boolean] = js.native
+  var isOnRightSide: js.UndefOr[Boolean] = js.undefined
   /**
     * Is Panel open
     */
-  var isOpen: js.UndefOr[Boolean] = js.native
+  var isOpen: js.UndefOr[Boolean] = js.undefined
   /**
     * Theme provided by High-Order Component.
     */
-  var theme: ITheme = js.native
+  var theme: ITheme
   /**
     * Type of the panel.
     */
-  var `type`: js.UndefOr[PanelType] = js.native
+  var `type`: js.UndefOr[PanelType] = js.undefined
 }
 
 object IPanelStyleProps {
   @scala.inline
-  def apply(theme: ITheme): IPanelStyleProps = {
+  def apply(
+    theme: ITheme,
+    className: String = null,
+    focusTrapZoneClassName: String = null,
+    hasCloseButton: js.UndefOr[Boolean] = js.undefined,
+    hasCustomNavigation: js.UndefOr[Boolean] = js.undefined,
+    headerClassName: String = null,
+    isAnimating: js.UndefOr[Boolean] = js.undefined,
+    isFooterAtBottom: js.UndefOr[Boolean] = js.undefined,
+    isFooterSticky: js.UndefOr[Boolean] = js.undefined,
+    isHiddenOnDismiss: js.UndefOr[Boolean] = js.undefined,
+    isOnRightSide: js.UndefOr[Boolean] = js.undefined,
+    isOpen: js.UndefOr[Boolean] = js.undefined,
+    `type`: PanelType = null
+  ): IPanelStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (focusTrapZoneClassName != null) __obj.updateDynamic("focusTrapZoneClassName")(focusTrapZoneClassName.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasCloseButton)) __obj.updateDynamic("hasCloseButton")(hasCloseButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasCustomNavigation)) __obj.updateDynamic("hasCustomNavigation")(hasCustomNavigation.get.asInstanceOf[js.Any])
+    if (headerClassName != null) __obj.updateDynamic("headerClassName")(headerClassName.asInstanceOf[js.Any])
+    if (!js.isUndefined(isAnimating)) __obj.updateDynamic("isAnimating")(isAnimating.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFooterAtBottom)) __obj.updateDynamic("isFooterAtBottom")(isFooterAtBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFooterSticky)) __obj.updateDynamic("isFooterSticky")(isFooterSticky.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isHiddenOnDismiss)) __obj.updateDynamic("isHiddenOnDismiss")(isHiddenOnDismiss.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isOnRightSide)) __obj.updateDynamic("isOnRightSide")(isOnRightSide.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPanelStyleProps]
   }
-  @scala.inline
-  implicit class IPanelStylePropsOps[Self <: IPanelStyleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusTrapZoneClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusTrapZoneClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusTrapZoneClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusTrapZoneClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasCloseButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCloseButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasCloseButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCloseButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasCustomNavigation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCustomNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasCustomNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCustomNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAnimating(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAnimating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAnimating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAnimating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFooterAtBottom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFooterAtBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFooterAtBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFooterAtBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFooterSticky(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFooterSticky")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFooterSticky: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFooterSticky")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHiddenOnDismiss(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHiddenOnDismiss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHiddenOnDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHiddenOnDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOnRightSide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOnRightSide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOnRightSide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOnRightSide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: PanelType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,13 +14,12 @@ import scala.scalajs.js.annotation._
   * Scripting engines might not be able to use such objects as normal property sets, giving direct access to the properties. In this case, use the methods
   * like {@link XPropertySet.getPropertyValue()} .
   */
-@js.native
 trait PropertyBag
   extends XPropertySet
      with XPropertyContainer
      with XPropertyAccess {
-  def createDefault(): Unit = js.native
-  def createWithTypes(AllowedTypes: SeqEquiv[`type`], AllowEmptyPropertyName: Boolean, AutomaticAddition: Boolean): Unit = js.native
+  def createDefault(): Unit
+  def createWithTypes(AllowedTypes: SeqEquiv[`type`], AllowEmptyPropertyName: Boolean, AutomaticAddition: Boolean): Unit
 }
 
 object PropertyBag {
@@ -48,25 +47,5 @@ object PropertyBag {
     val __obj = js.Dynamic.literal(PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], PropertyValues = PropertyValues.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addProperty = js.Any.fromFunction3(addProperty), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createDefault = js.Any.fromFunction0(createDefault), createWithTypes = js.Any.fromFunction3(createWithTypes), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getPropertyValues = js.Any.fromFunction0(getPropertyValues), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeProperty = js.Any.fromFunction1(removeProperty), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setPropertyValues = js.Any.fromFunction1(setPropertyValues))
     __obj.asInstanceOf[PropertyBag]
   }
-  @scala.inline
-  implicit class PropertyBagOps[Self <: PropertyBag] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateDefault(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDefault")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateWithTypes(value: (SeqEquiv[`type`], Boolean, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithTypes")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

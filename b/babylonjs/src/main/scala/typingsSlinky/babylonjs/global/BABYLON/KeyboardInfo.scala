@@ -25,5 +25,15 @@ class KeyboardInfo protected ()
     */
   event: KeyboardEvent
   ) = this()
+  /**
+    * Defines the related dom event
+    */
+  /* CompleteClass */
+  override var event: KeyboardEvent = js.native
+  /**
+    * Defines the type of event (KeyboardEventTypes)
+    */
+  /* CompleteClass */
+  override var `type`: Double = js.native
 }
 

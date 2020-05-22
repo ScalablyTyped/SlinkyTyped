@@ -19,35 +19,10 @@ trait BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefa
 
 object BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault {
   @scala.inline
-  def apply(sseAlgorithm: Input[String]): BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault = {
+  def apply(sseAlgorithm: Input[String], kmsMasterKeyId: Input[String] = null): BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault = {
     val __obj = js.Dynamic.literal(sseAlgorithm = sseAlgorithm.asInstanceOf[js.Any])
+    if (kmsMasterKeyId != null) __obj.updateDynamic("kmsMasterKeyId")(kmsMasterKeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault]
   }
-  @scala.inline
-  implicit class BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultOps[Self <: BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSseAlgorithm(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sseAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKmsMasterKeyId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsMasterKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsMasterKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsMasterKeyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,10 +14,9 @@ import scala.scalajs.js.annotation._
   * @see Content
   * @version 1.0
   */
-@js.native
 trait UnsupportedDataSinkException extends Exception {
   /** contains the data sink that is not supported. */
-  var Sink: XInterface = js.native
+  var Sink: XInterface
 }
 
 object UnsupportedDataSinkException {
@@ -26,19 +25,5 @@ object UnsupportedDataSinkException {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], Sink = Sink.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnsupportedDataSinkException]
   }
-  @scala.inline
-  implicit class UnsupportedDataSinkExceptionOps[Self <: UnsupportedDataSinkException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSink(value: XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sink")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

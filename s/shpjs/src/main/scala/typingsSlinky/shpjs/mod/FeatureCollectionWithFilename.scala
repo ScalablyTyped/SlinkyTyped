@@ -1,5 +1,6 @@
 package typingsSlinky.shpjs.mod
 
+import typingsSlinky.geojson.mod.BBox
 import typingsSlinky.geojson.mod.Feature
 import typingsSlinky.geojson.mod.FeatureCollection
 import typingsSlinky.geojson.mod.GeoJsonProperties
@@ -8,40 +9,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FeatureCollectionWithFilename extends FeatureCollection[Geometry, GeoJsonProperties] {
-  var fileName: js.UndefOr[String] = js.native
+  var fileName: js.UndefOr[String] = js.undefined
 }
 
 object FeatureCollectionWithFilename {
   @scala.inline
   def apply(
     features: js.Array[Feature[Geometry, GeoJsonProperties]],
-    `type`: typingsSlinky.geojson.geojsonStrings.FeatureCollection
+    `type`: typingsSlinky.geojson.geojsonStrings.FeatureCollection,
+    bbox: BBox = null,
+    fileName: String = null
   ): FeatureCollectionWithFilename = {
     val __obj = js.Dynamic.literal(features = features.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeatureCollectionWithFilename]
   }
-  @scala.inline
-  implicit class FeatureCollectionWithFilenameOps[Self <: FeatureCollectionWithFilename] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

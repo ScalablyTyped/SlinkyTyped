@@ -26,9 +26,16 @@ object updateTimeToLiveCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UpdateTimeToLiveInput) = this()
+    /* CompleteClass */
+    override val input: UpdateTimeToLiveInput = js.native
     val middlewareStack: MiddlewareStack[UpdateTimeToLiveInput, UpdateTimeToLiveOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[UpdateTimeToLiveInput, UpdateTimeToLiveOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[UpdateTimeToLiveInput, UpdateTimeToLiveOutput] = js.native
   }

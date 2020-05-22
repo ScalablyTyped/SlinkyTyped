@@ -1,386 +1,115 @@
 package typingsSlinky.reactDaterangePicker.mod
 
 import slinky.core.ReactComponentClass
+import slinky.core.TagMod
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.momentRange.mod.DateRange
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactDaterangePicker.anon.MomentRangeNoneinpMomentI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseProps[T]
   extends typingsSlinky.react.mod.Props[T] {
-  var bemBlock: js.UndefOr[String] = js.native
-  var bemNamespace: js.UndefOr[String] = js.native
-  var className: js.UndefOr[String] = js.native
-  var dateStates: js.UndefOr[js.Array[DateState]] = js.native
-  var defaultState: js.UndefOr[String] = js.native
-  var disableNavigation: js.UndefOr[Boolean] = js.native
+  var bemBlock: js.UndefOr[String] = js.undefined
+  var bemNamespace: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var dateStates: js.UndefOr[js.Array[DateState]] = js.undefined
+  var defaultState: js.UndefOr[String] = js.undefined
+  var disableNavigation: js.UndefOr[Boolean] = js.undefined
   // Use Number Literal Types after TypeScript 2.0 GA released.
-  var firstOfWeek: js.UndefOr[Double] = js.native
+  var firstOfWeek: js.UndefOr[Double] = js.undefined
    // React.PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6])
-  var helpMessage: js.UndefOr[String] = js.native
-  var initialDate: js.UndefOr[js.Date] = js.native
-  var initialFromValue: js.UndefOr[Boolean] = js.native
-  var initialMonth: js.UndefOr[Double] = js.native
-  var initialRange: js.UndefOr[js.Object] = js.native
-  var initialYear: js.UndefOr[Double] = js.native
+  var helpMessage: js.UndefOr[String] = js.undefined
+  var initialDate: js.UndefOr[js.Date] = js.undefined
+  var initialFromValue: js.UndefOr[Boolean] = js.undefined
+  var initialMonth: js.UndefOr[Double] = js.undefined
+  var initialRange: js.UndefOr[js.Object] = js.undefined
+  var initialYear: js.UndefOr[Double] = js.undefined
   /**
     * @default moment().locale()
     */
-  var locale: js.UndefOr[String] = js.native
-  var maximumDate: js.UndefOr[js.Date] = js.native
-  var minimumDate: js.UndefOr[js.Date] = js.native
-  var numberOfCalendars: js.UndefOr[Double] = js.native
-  var onHighlightDate: js.UndefOr[js.Function1[/* date */ js.Date, Unit]] = js.native
-  var onHighlightRange: js.UndefOr[js.Function1[/* date */ js.Date, Unit]] = js.native
-  var onSelectStart: js.UndefOr[js.Function1[/* value */ MomentRangeNoneinpMomentI, Unit]] = js.native
-  var paginationArrowComponent: js.UndefOr[ReactComponentClass[PaginationArrowProps[js.Object]]] = js.native
-  var selectedLabel: js.UndefOr[String] = js.native
-  var showLegend: js.UndefOr[Boolean] = js.native
-  var singleDateRange: js.UndefOr[Boolean] = js.native
-  var stateDefinitions: js.UndefOr[StateDefinitions] = js.native
-  var value: js.UndefOr[MomentRangeNoneinpMomentI | DateRange | Moment] = js.native
+  var locale: js.UndefOr[String] = js.undefined
+  var maximumDate: js.UndefOr[js.Date] = js.undefined
+  var minimumDate: js.UndefOr[js.Date] = js.undefined
+  var numberOfCalendars: js.UndefOr[Double] = js.undefined
+  var onHighlightDate: js.UndefOr[js.Function1[/* date */ js.Date, Unit]] = js.undefined
+  var onHighlightRange: js.UndefOr[js.Function1[/* date */ js.Date, Unit]] = js.undefined
+  var onSelectStart: js.UndefOr[js.Function1[/* value */ MomentRangeNoneinpMomentI, Unit]] = js.undefined
+  var paginationArrowComponent: js.UndefOr[ReactComponentClass[PaginationArrowProps[js.Object]]] = js.undefined
+  var selectedLabel: js.UndefOr[String] = js.undefined
+  var showLegend: js.UndefOr[Boolean] = js.undefined
+  var singleDateRange: js.UndefOr[Boolean] = js.undefined
+  var stateDefinitions: js.UndefOr[StateDefinitions] = js.undefined
+  var value: js.UndefOr[MomentRangeNoneinpMomentI | DateRange | Moment] = js.undefined
 }
 
 object BaseProps {
   @scala.inline
-  def apply[T](): BaseProps[T] = {
+  def apply[T](
+    bemBlock: String = null,
+    bemNamespace: String = null,
+    children: TagMod[Any] = null,
+    className: String = null,
+    dateStates: js.Array[DateState] = null,
+    defaultState: String = null,
+    disableNavigation: js.UndefOr[Boolean] = js.undefined,
+    firstOfWeek: js.UndefOr[Double] = js.undefined,
+    helpMessage: String = null,
+    initialDate: js.Date = null,
+    initialFromValue: js.UndefOr[Boolean] = js.undefined,
+    initialMonth: js.UndefOr[Double] = js.undefined,
+    initialRange: js.Object = null,
+    initialYear: js.UndefOr[Double] = js.undefined,
+    key: Key = null,
+    locale: String = null,
+    maximumDate: js.Date = null,
+    minimumDate: js.Date = null,
+    numberOfCalendars: js.UndefOr[Double] = js.undefined,
+    onHighlightDate: /* date */ js.Date => Unit = null,
+    onHighlightRange: /* date */ js.Date => Unit = null,
+    onSelectStart: /* value */ MomentRangeNoneinpMomentI => Unit = null,
+    paginationArrowComponent: ReactComponentClass[PaginationArrowProps[js.Object]] = null,
+    ref: js.UndefOr[Null | LegacyRef[T]] = js.undefined,
+    selectedLabel: String = null,
+    showLegend: js.UndefOr[Boolean] = js.undefined,
+    singleDateRange: js.UndefOr[Boolean] = js.undefined,
+    stateDefinitions: StateDefinitions = null,
+    value: MomentRangeNoneinpMomentI | DateRange | Moment = null
+  ): BaseProps[T] = {
     val __obj = js.Dynamic.literal()
+    if (bemBlock != null) __obj.updateDynamic("bemBlock")(bemBlock.asInstanceOf[js.Any])
+    if (bemNamespace != null) __obj.updateDynamic("bemNamespace")(bemNamespace.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (dateStates != null) __obj.updateDynamic("dateStates")(dateStates.asInstanceOf[js.Any])
+    if (defaultState != null) __obj.updateDynamic("defaultState")(defaultState.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableNavigation)) __obj.updateDynamic("disableNavigation")(disableNavigation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstOfWeek)) __obj.updateDynamic("firstOfWeek")(firstOfWeek.get.asInstanceOf[js.Any])
+    if (helpMessage != null) __obj.updateDynamic("helpMessage")(helpMessage.asInstanceOf[js.Any])
+    if (initialDate != null) __obj.updateDynamic("initialDate")(initialDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialFromValue)) __obj.updateDynamic("initialFromValue")(initialFromValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialMonth)) __obj.updateDynamic("initialMonth")(initialMonth.get.asInstanceOf[js.Any])
+    if (initialRange != null) __obj.updateDynamic("initialRange")(initialRange.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialYear)) __obj.updateDynamic("initialYear")(initialYear.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (maximumDate != null) __obj.updateDynamic("maximumDate")(maximumDate.asInstanceOf[js.Any])
+    if (minimumDate != null) __obj.updateDynamic("minimumDate")(minimumDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfCalendars)) __obj.updateDynamic("numberOfCalendars")(numberOfCalendars.get.asInstanceOf[js.Any])
+    if (onHighlightDate != null) __obj.updateDynamic("onHighlightDate")(js.Any.fromFunction1(onHighlightDate))
+    if (onHighlightRange != null) __obj.updateDynamic("onHighlightRange")(js.Any.fromFunction1(onHighlightRange))
+    if (onSelectStart != null) __obj.updateDynamic("onSelectStart")(js.Any.fromFunction1(onSelectStart))
+    if (paginationArrowComponent != null) __obj.updateDynamic("paginationArrowComponent")(paginationArrowComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (selectedLabel != null) __obj.updateDynamic("selectedLabel")(selectedLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLegend)) __obj.updateDynamic("showLegend")(showLegend.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleDateRange)) __obj.updateDynamic("singleDateRange")(singleDateRange.get.asInstanceOf[js.Any])
+    if (stateDefinitions != null) __obj.updateDynamic("stateDefinitions")(stateDefinitions.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseProps[T]]
   }
-  @scala.inline
-  implicit class BasePropsOps[Self[t] <: BaseProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withBemBlock(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bemBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBemBlock: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bemBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBemNamespace(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bemNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBemNamespace: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bemNamespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateStates(value: js.Array[DateState]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateStates: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateStates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultState(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultState: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableNavigation(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableNavigation: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstOfWeek(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstOfWeek: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstOfWeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelpMessage(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelpMessage: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialDate(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialDate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialFromValue(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFromValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialFromValue: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFromValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialMonth(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialMonth: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialRange(value: js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialRange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialYear(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialYear: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumDate(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumDate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumDate(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumDate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfCalendars(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfCalendars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfCalendars: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfCalendars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHighlightDate(value: /* date */ js.Date => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHighlightDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHighlightDate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHighlightDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHighlightRange(value: /* date */ js.Date => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHighlightRange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHighlightRange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHighlightRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectStart(value: /* value */ MomentRangeNoneinpMomentI => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaginationArrowComponentFunctionComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationArrowComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaginationArrowComponentComponentClass(value: ReactComponentClass[PaginationArrowProps[js.Object]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationArrowComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaginationArrowComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationArrowComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaginationArrowComponent: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationArrowComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedLabel(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedLabel: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLegend(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLegend: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleDateRange(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleDateRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleDateRange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleDateRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateDefinitions(value: StateDefinitions): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateDefinitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateDefinitions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateDefinitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: MomentRangeNoneinpMomentI | DateRange | Moment): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

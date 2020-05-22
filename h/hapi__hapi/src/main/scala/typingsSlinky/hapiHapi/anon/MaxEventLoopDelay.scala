@@ -4,84 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MaxEventLoopDelay extends js.Object {
   /**
     * maximum event loop delay duration in milliseconds over which incoming requests are rejected with an HTTP Server Timeout (503) response.
     * Defaults to 0 (no limit).
     */
-  var maxEventLoopDelay: js.UndefOr[Double] = js.native
+  var maxEventLoopDelay: js.UndefOr[Double] = js.undefined
   /** maximum V8 heap size over which incoming requests are rejected with an HTTP Server Timeout (503) response. Defaults to 0 (no limit). */
-  var maxHeapUsedBytes: js.UndefOr[Double] = js.native
+  var maxHeapUsedBytes: js.UndefOr[Double] = js.undefined
   /**
     * maximum process RSS size over which incoming requests are rejected with an HTTP Server Timeout (503) response. Defaults to 0 (no limit).
     */
-  var maxRssBytes: js.UndefOr[Double] = js.native
+  var maxRssBytes: js.UndefOr[Double] = js.undefined
   /** the frequency of sampling in milliseconds. When set to 0, the other load options are ignored. Defaults to 0 (no sampling). */
-  var sampleInterval: js.UndefOr[Double] = js.native
+  var sampleInterval: js.UndefOr[Double] = js.undefined
 }
 
 object MaxEventLoopDelay {
   @scala.inline
-  def apply(): MaxEventLoopDelay = {
+  def apply(
+    maxEventLoopDelay: js.UndefOr[Double] = js.undefined,
+    maxHeapUsedBytes: js.UndefOr[Double] = js.undefined,
+    maxRssBytes: js.UndefOr[Double] = js.undefined,
+    sampleInterval: js.UndefOr[Double] = js.undefined
+  ): MaxEventLoopDelay = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxEventLoopDelay)) __obj.updateDynamic("maxEventLoopDelay")(maxEventLoopDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeapUsedBytes)) __obj.updateDynamic("maxHeapUsedBytes")(maxHeapUsedBytes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRssBytes)) __obj.updateDynamic("maxRssBytes")(maxRssBytes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sampleInterval)) __obj.updateDynamic("sampleInterval")(sampleInterval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaxEventLoopDelay]
   }
-  @scala.inline
-  implicit class MaxEventLoopDelayOps[Self <: MaxEventLoopDelay] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxEventLoopDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEventLoopDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxEventLoopDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEventLoopDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeapUsedBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeapUsedBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeapUsedBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeapUsedBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRssBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRssBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRssBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRssBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleInterval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

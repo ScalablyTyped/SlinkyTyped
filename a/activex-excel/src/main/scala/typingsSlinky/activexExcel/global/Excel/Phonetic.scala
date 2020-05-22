@@ -1,5 +1,6 @@
 package typingsSlinky.activexExcel.global.Excel
 
+import typingsSlinky.activexExcel.Excel.XlCreator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,5 +8,25 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.Phonetic")
 @js.native
 class Phonetic protected ()
-  extends typingsSlinky.activexExcel.Excel.Phonetic
+  extends typingsSlinky.activexExcel.Excel.Phonetic {
+  /* CompleteClass */
+  override var Alignment: Double = js.native
+  /* CompleteClass */
+  override val Application: typingsSlinky.activexExcel.Excel.Application = js.native
+  /* CompleteClass */
+  override var CharacterType: Double = js.native
+  /* CompleteClass */
+  override val Creator: XlCreator = js.native
+  /* CompleteClass */
+  @JSName("Excel.Phonetic_typekey")
+  override var ExcelDotPhonetic_typekey: typingsSlinky.activexExcel.Excel.Phonetic = js.native
+  /* CompleteClass */
+  override val Font: typingsSlinky.activexExcel.Excel.Font = js.native
+  /* CompleteClass */
+  override val Parent: js.Any = js.native
+  /* CompleteClass */
+  override var Text: String = js.native
+  /* CompleteClass */
+  override var Visible: Boolean = js.native
+}
 

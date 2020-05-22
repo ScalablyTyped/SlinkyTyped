@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.Connectivity.ConnectivityInterval")
 @js.native
 abstract class ConnectivityInterval ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.Connectivity.ConnectivityInterval
+  extends typingsSlinky.winrtUwp.Windows.Networking.Connectivity.ConnectivityInterval {
+  /** Indicates the duration of connectivity. */
+  /* CompleteClass */
+  override var connectionDuration: Double = js.native
+  /** Indicates when the connection was initially established. */
+  /* CompleteClass */
+  override var startTime: js.Date = js.native
+}
 

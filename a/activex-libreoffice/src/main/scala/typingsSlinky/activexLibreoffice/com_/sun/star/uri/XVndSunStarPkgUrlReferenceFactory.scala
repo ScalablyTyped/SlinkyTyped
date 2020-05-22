@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
   * creates " vnd.sun.star.pkg " URL references.
   * @since OOo 2.0
   */
-@js.native
 trait XVndSunStarPkgUrlReferenceFactory extends js.Object {
   /**
     * creates a new " vnd.sun.star.pkg " URL reference.
@@ -17,7 +16,7 @@ trait XVndSunStarPkgUrlReferenceFactory extends js.Object {
     * @param authority the authority of the created URL reference; must not be `NULL` , and should be an absolute URI reference with no fragment
     * @returns a new " vnd.sun.star.pkg " URL reference, or `NULL` if the given authority is either not an absolute URI reference or has a fragment
     */
-  def createVndSunStarPkgUrlReference(authority: XUriReference): XUriReference = js.native
+  def createVndSunStarPkgUrlReference(authority: XUriReference): XUriReference
 }
 
 object XVndSunStarPkgUrlReferenceFactory {
@@ -26,19 +25,5 @@ object XVndSunStarPkgUrlReferenceFactory {
     val __obj = js.Dynamic.literal(createVndSunStarPkgUrlReference = js.Any.fromFunction1(createVndSunStarPkgUrlReference))
     __obj.asInstanceOf[XVndSunStarPkgUrlReferenceFactory]
   }
-  @scala.inline
-  implicit class XVndSunStarPkgUrlReferenceFactoryOps[Self <: XVndSunStarPkgUrlReferenceFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateVndSunStarPkgUrlReference(value: XUriReference => XUriReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createVndSunStarPkgUrlReference")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

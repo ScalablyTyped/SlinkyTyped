@@ -11,35 +11,38 @@ import scala.scalajs.js.annotation._
   * @template T
   * The type of the answers.
   */
-@js.native
 trait ConfirmQuestion[T /* <: Answers */] extends Question[T] {
   /**
     * @inheritdoc
     */
   @JSName("type")
-  var type_ConfirmQuestion: confirm = js.native
+  var type_ConfirmQuestion: confirm
 }
 
 object ConfirmQuestion {
   @scala.inline
-  def apply[T](`type`: confirm): ConfirmQuestion[T] = {
+  def apply[T](
+    `type`: confirm,
+    default: AsyncDynamicQuestionProperty[_, T] = null,
+    filter: /* input */ js.Any => _ = null,
+    message: AsyncDynamicQuestionProperty[String, T] = null,
+    name: KeyUnion[T] = null,
+    prefix: String = null,
+    suffix: String = null,
+    validate: (/* input */ js.Any, /* answers */ js.UndefOr[T]) => Boolean | String | (js.Promise[Boolean | String]) = null,
+    when: AsyncDynamicQuestionProperty[Boolean, T] = null
+  ): ConfirmQuestion[T] = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction2(validate))
+    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmQuestion[T]]
   }
-  @scala.inline
-  implicit class ConfirmQuestionOps[Self[t] <: ConfirmQuestion[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withType(value: confirm): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

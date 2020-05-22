@@ -15,35 +15,10 @@ trait StandardHlsSettings extends js.Object {
 
 object StandardHlsSettings {
   @scala.inline
-  def apply(M3u8Settings: M3u8Settings): StandardHlsSettings = {
+  def apply(M3u8Settings: M3u8Settings, AudioRenditionSets: string = null): StandardHlsSettings = {
     val __obj = js.Dynamic.literal(M3u8Settings = M3u8Settings.asInstanceOf[js.Any])
+    if (AudioRenditionSets != null) __obj.updateDynamic("AudioRenditionSets")(AudioRenditionSets.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardHlsSettings]
   }
-  @scala.inline
-  implicit class StandardHlsSettingsOps[Self <: StandardHlsSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withM3u8Settings(value: M3u8Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("M3u8Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudioRenditionSets(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioRenditionSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioRenditionSets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioRenditionSets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

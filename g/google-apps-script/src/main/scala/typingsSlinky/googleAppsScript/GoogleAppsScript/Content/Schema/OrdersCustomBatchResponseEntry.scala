@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrdersCustomBatchResponseEntry extends js.Object {
-  var batchId: js.UndefOr[Double] = js.native
-  var errors: js.UndefOr[Errors] = js.native
-  var executionStatus: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var order: js.UndefOr[Order] = js.native
+  var batchId: js.UndefOr[Double] = js.undefined
+  var errors: js.UndefOr[Errors] = js.undefined
+  var executionStatus: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var order: js.UndefOr[Order] = js.undefined
 }
 
 object OrdersCustomBatchResponseEntry {
   @scala.inline
-  def apply(): OrdersCustomBatchResponseEntry = {
+  def apply(
+    batchId: js.UndefOr[Double] = js.undefined,
+    errors: Errors = null,
+    executionStatus: String = null,
+    kind: String = null,
+    order: Order = null
+  ): OrdersCustomBatchResponseEntry = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batchId)) __obj.updateDynamic("batchId")(batchId.get.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
+    if (executionStatus != null) __obj.updateDynamic("executionStatus")(executionStatus.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrdersCustomBatchResponseEntry]
   }
-  @scala.inline
-  implicit class OrdersCustomBatchResponseEntryOps[Self <: OrdersCustomBatchResponseEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: Errors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: Order): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,924 +1,209 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.moment.mod.Moment
-import typingsSlinky.moment.mod.MomentFormatSpecification
-import typingsSlinky.moment.mod.MomentInput
 import typingsSlinky.vis.anon.Template
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimelineOptions extends js.Object {
-  var align: js.UndefOr[TimelineAlignType] = js.native
-  var autoResize: js.UndefOr[Boolean] = js.native
-  var clickToUse: js.UndefOr[Boolean] = js.native
-  var configure: js.UndefOr[TimelineOptionsConfigureType] = js.native
-  var dataAttributes: js.UndefOr[TimelineOptionsDataAttributesType] = js.native
-  var editable: js.UndefOr[TimelineOptionsEditableType] = js.native
-  var end: js.UndefOr[DateType] = js.native
-  var format: js.UndefOr[TimelineFormatOption] = js.native
-  var groupEditable: js.UndefOr[TimelineOptionsGroupEditableType] = js.native
-  var groupOrder: js.UndefOr[TimelineOptionsGroupOrderType] = js.native
-  var groupOrderSwap: js.UndefOr[TimelineOptionsGroupOrderSwapFunction] = js.native
-  var groupTemplate: js.UndefOr[TimelineOptionsTemplateFunction] = js.native
-  var height: js.UndefOr[HeightWidthType] = js.native
-  var hiddenDates: js.UndefOr[TimelineOptionsHiddenDatesType] = js.native
-  var horizontalScroll: js.UndefOr[Boolean] = js.native
-  var itemsAlwaysDraggable: js.UndefOr[TimelineOptionsItemsAlwaysDraggableType] = js.native
-  var locale: js.UndefOr[String] = js.native
-  var locales: js.UndefOr[js.Any] = js.native
-  var margin: js.UndefOr[TimelineOptionsMarginType] = js.native
-  var max: js.UndefOr[DateType] = js.native
-  var maxHeight: js.UndefOr[HeightWidthType] = js.native
-  var maxMinorChars: js.UndefOr[Double] = js.native
-  var min: js.UndefOr[DateType] = js.native
-  var minHeight: js.UndefOr[HeightWidthType] = js.native
+  var align: js.UndefOr[TimelineAlignType] = js.undefined
+  var autoResize: js.UndefOr[Boolean] = js.undefined
+  var clickToUse: js.UndefOr[Boolean] = js.undefined
+  var configure: js.UndefOr[TimelineOptionsConfigureType] = js.undefined
+  var dataAttributes: js.UndefOr[TimelineOptionsDataAttributesType] = js.undefined
+  var editable: js.UndefOr[TimelineOptionsEditableType] = js.undefined
+  var end: js.UndefOr[DateType] = js.undefined
+  var format: js.UndefOr[TimelineFormatOption] = js.undefined
+  var groupEditable: js.UndefOr[TimelineOptionsGroupEditableType] = js.undefined
+  var groupOrder: js.UndefOr[TimelineOptionsGroupOrderType] = js.undefined
+  var groupOrderSwap: js.UndefOr[TimelineOptionsGroupOrderSwapFunction] = js.undefined
+  var groupTemplate: js.UndefOr[TimelineOptionsTemplateFunction] = js.undefined
+  var height: js.UndefOr[HeightWidthType] = js.undefined
+  var hiddenDates: js.UndefOr[TimelineOptionsHiddenDatesType] = js.undefined
+  var horizontalScroll: js.UndefOr[Boolean] = js.undefined
+  var itemsAlwaysDraggable: js.UndefOr[TimelineOptionsItemsAlwaysDraggableType] = js.undefined
+  var locale: js.UndefOr[String] = js.undefined
+  var locales: js.UndefOr[js.Any] = js.undefined
+  var margin: js.UndefOr[TimelineOptionsMarginType] = js.undefined
+  var max: js.UndefOr[DateType] = js.undefined
+  var maxHeight: js.UndefOr[HeightWidthType] = js.undefined
+  var maxMinorChars: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[DateType] = js.undefined
+  var minHeight: js.UndefOr[HeightWidthType] = js.undefined
    // TODO
-  var moment: js.UndefOr[MomentConstructor] = js.native
-  var moveable: js.UndefOr[Boolean] = js.native
-  var multiselect: js.UndefOr[Boolean] = js.native
-  var multiselectPerGroup: js.UndefOr[Boolean] = js.native
-  var onAdd: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.native
-  var onAddGroup: js.UndefOr[TimelineOptionsGroupCallbackFunction] = js.native
-  var onInitialDrawComplete: js.UndefOr[js.Function0[Unit]] = js.native
-  var onMove: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.native
-  var onMoveGroup: js.UndefOr[TimelineOptionsGroupCallbackFunction] = js.native
-  var onMoving: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.native
-  var onRemove: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.native
-  var onRemoveGroup: js.UndefOr[TimelineOptionsGroupCallbackFunction] = js.native
-  var onUpdate: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.native
-  var order: js.UndefOr[TimelineOptionsComparisonFunction] = js.native
-  var orientation: js.UndefOr[TimelineOptionsOrientationType] = js.native
-  var rollingMode: js.UndefOr[TimelineRollingModeOption] = js.native
-  var rtl: js.UndefOr[Boolean] = js.native
-  var selectable: js.UndefOr[Boolean] = js.native
-  var showCurrentTime: js.UndefOr[Boolean] = js.native
-  var showMajorLabels: js.UndefOr[Boolean] = js.native
-  var showMinorLabels: js.UndefOr[Boolean] = js.native
-  var showTooltips: js.UndefOr[Boolean] = js.native
-  var snap: js.UndefOr[TimelineOptionsSnapFunction] = js.native
-  var stack: js.UndefOr[Boolean] = js.native
-  var stackSubgroups: js.UndefOr[Boolean] = js.native
-  var start: js.UndefOr[DateType] = js.native
-  var template: js.UndefOr[TimelineOptionsTemplateFunction] = js.native
-  var throttleRedraw: js.UndefOr[Double] = js.native
-  var timeAxis: js.UndefOr[TimelineTimeAxisOption] = js.native
-  var tooltip: js.UndefOr[TimelineTooltipOption] = js.native
-  var tooltipOnItemUpdateTime: js.UndefOr[Boolean | Template] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var verticalScroll: js.UndefOr[Boolean] = js.native
-  var visibleFrameTemplate: js.UndefOr[TimelineOptionsTemplateFunction] = js.native
-  var width: js.UndefOr[HeightWidthType] = js.native
-  var zoomKey: js.UndefOr[String] = js.native
-  var zoomMax: js.UndefOr[Double] = js.native
-  var zoomMin: js.UndefOr[Double] = js.native
-  var zoomable: js.UndefOr[Boolean] = js.native
+  var moment: js.UndefOr[MomentConstructor] = js.undefined
+  var moveable: js.UndefOr[Boolean] = js.undefined
+  var multiselect: js.UndefOr[Boolean] = js.undefined
+  var multiselectPerGroup: js.UndefOr[Boolean] = js.undefined
+  var onAdd: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.undefined
+  var onAddGroup: js.UndefOr[TimelineOptionsGroupCallbackFunction] = js.undefined
+  var onInitialDrawComplete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onMove: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.undefined
+  var onMoveGroup: js.UndefOr[TimelineOptionsGroupCallbackFunction] = js.undefined
+  var onMoving: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.undefined
+  var onRemove: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.undefined
+  var onRemoveGroup: js.UndefOr[TimelineOptionsGroupCallbackFunction] = js.undefined
+  var onUpdate: js.UndefOr[TimelineOptionsItemCallbackFunction] = js.undefined
+  var order: js.UndefOr[TimelineOptionsComparisonFunction] = js.undefined
+  var orientation: js.UndefOr[TimelineOptionsOrientationType] = js.undefined
+  var rollingMode: js.UndefOr[TimelineRollingModeOption] = js.undefined
+  var rtl: js.UndefOr[Boolean] = js.undefined
+  var selectable: js.UndefOr[Boolean] = js.undefined
+  var showCurrentTime: js.UndefOr[Boolean] = js.undefined
+  var showMajorLabels: js.UndefOr[Boolean] = js.undefined
+  var showMinorLabels: js.UndefOr[Boolean] = js.undefined
+  var showTooltips: js.UndefOr[Boolean] = js.undefined
+  var snap: js.UndefOr[TimelineOptionsSnapFunction] = js.undefined
+  var stack: js.UndefOr[Boolean] = js.undefined
+  var stackSubgroups: js.UndefOr[Boolean] = js.undefined
+  var start: js.UndefOr[DateType] = js.undefined
+  var template: js.UndefOr[TimelineOptionsTemplateFunction] = js.undefined
+  var throttleRedraw: js.UndefOr[Double] = js.undefined
+  var timeAxis: js.UndefOr[TimelineTimeAxisOption] = js.undefined
+  var tooltip: js.UndefOr[TimelineTooltipOption] = js.undefined
+  var tooltipOnItemUpdateTime: js.UndefOr[Boolean | Template] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var verticalScroll: js.UndefOr[Boolean] = js.undefined
+  var visibleFrameTemplate: js.UndefOr[TimelineOptionsTemplateFunction] = js.undefined
+  var width: js.UndefOr[HeightWidthType] = js.undefined
+  var zoomKey: js.UndefOr[String] = js.undefined
+  var zoomMax: js.UndefOr[Double] = js.undefined
+  var zoomMin: js.UndefOr[Double] = js.undefined
+  var zoomable: js.UndefOr[Boolean] = js.undefined
 }
 
 object TimelineOptions {
   @scala.inline
-  def apply(): TimelineOptions = {
+  def apply(
+    align: TimelineAlignType = null,
+    autoResize: js.UndefOr[Boolean] = js.undefined,
+    clickToUse: js.UndefOr[Boolean] = js.undefined,
+    configure: TimelineOptionsConfigureType = null,
+    dataAttributes: TimelineOptionsDataAttributesType = null,
+    editable: TimelineOptionsEditableType = null,
+    end: DateType = null,
+    format: TimelineFormatOption = null,
+    groupEditable: TimelineOptionsGroupEditableType = null,
+    groupOrder: TimelineOptionsGroupOrderType = null,
+    groupOrderSwap: (/* fromGroup */ js.Any, /* toGroup */ js.Any, /* groups */ DataSet[DataGroup]) => Unit = null,
+    groupTemplate: (/* item */ js.UndefOr[js.Any], /* element */ js.UndefOr[js.Any], /* data */ js.UndefOr[js.Any]) => String = null,
+    height: HeightWidthType = null,
+    hiddenDates: TimelineOptionsHiddenDatesType = null,
+    horizontalScroll: js.UndefOr[Boolean] = js.undefined,
+    itemsAlwaysDraggable: TimelineOptionsItemsAlwaysDraggableType = null,
+    locale: String = null,
+    locales: js.Any = null,
+    margin: TimelineOptionsMarginType = null,
+    max: DateType = null,
+    maxHeight: HeightWidthType = null,
+    maxMinorChars: js.UndefOr[Double] = js.undefined,
+    min: DateType = null,
+    minHeight: HeightWidthType = null,
+    moment: MomentConstructor = null,
+    moveable: js.UndefOr[Boolean] = js.undefined,
+    multiselect: js.UndefOr[Boolean] = js.undefined,
+    multiselectPerGroup: js.UndefOr[Boolean] = js.undefined,
+    onAdd: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit = null,
+    onAddGroup: (/* group */ TimelineGroup, /* callback */ js.Function1[/* group */ TimelineGroup | Null, Unit]) => Unit = null,
+    onInitialDrawComplete: () => Unit = null,
+    onMove: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit = null,
+    onMoveGroup: (/* group */ TimelineGroup, /* callback */ js.Function1[/* group */ TimelineGroup | Null, Unit]) => Unit = null,
+    onMoving: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit = null,
+    onRemove: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit = null,
+    onRemoveGroup: (/* group */ TimelineGroup, /* callback */ js.Function1[/* group */ TimelineGroup | Null, Unit]) => Unit = null,
+    onUpdate: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit = null,
+    order: (/* a */ js.Any, /* b */ js.Any) => Double = null,
+    orientation: TimelineOptionsOrientationType = null,
+    rollingMode: TimelineRollingModeOption = null,
+    rtl: js.UndefOr[Boolean] = js.undefined,
+    selectable: js.UndefOr[Boolean] = js.undefined,
+    showCurrentTime: js.UndefOr[Boolean] = js.undefined,
+    showMajorLabels: js.UndefOr[Boolean] = js.undefined,
+    showMinorLabels: js.UndefOr[Boolean] = js.undefined,
+    showTooltips: js.UndefOr[Boolean] = js.undefined,
+    snap: (/* date */ js.Date, /* scale */ String, /* step */ Double) => js.Date | Double = null,
+    stack: js.UndefOr[Boolean] = js.undefined,
+    stackSubgroups: js.UndefOr[Boolean] = js.undefined,
+    start: DateType = null,
+    template: (/* item */ js.UndefOr[js.Any], /* element */ js.UndefOr[js.Any], /* data */ js.UndefOr[js.Any]) => String = null,
+    throttleRedraw: js.UndefOr[Double] = js.undefined,
+    timeAxis: TimelineTimeAxisOption = null,
+    tooltip: TimelineTooltipOption = null,
+    tooltipOnItemUpdateTime: Boolean | Template = null,
+    `type`: String = null,
+    verticalScroll: js.UndefOr[Boolean] = js.undefined,
+    visibleFrameTemplate: (/* item */ js.UndefOr[js.Any], /* element */ js.UndefOr[js.Any], /* data */ js.UndefOr[js.Any]) => String = null,
+    width: HeightWidthType = null,
+    zoomKey: String = null,
+    zoomMax: js.UndefOr[Double] = js.undefined,
+    zoomMin: js.UndefOr[Double] = js.undefined,
+    zoomable: js.UndefOr[Boolean] = js.undefined
+  ): TimelineOptions = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoResize)) __obj.updateDynamic("autoResize")(autoResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickToUse)) __obj.updateDynamic("clickToUse")(clickToUse.get.asInstanceOf[js.Any])
+    if (configure != null) __obj.updateDynamic("configure")(configure.asInstanceOf[js.Any])
+    if (dataAttributes != null) __obj.updateDynamic("dataAttributes")(dataAttributes.asInstanceOf[js.Any])
+    if (editable != null) __obj.updateDynamic("editable")(editable.asInstanceOf[js.Any])
+    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (groupEditable != null) __obj.updateDynamic("groupEditable")(groupEditable.asInstanceOf[js.Any])
+    if (groupOrder != null) __obj.updateDynamic("groupOrder")(groupOrder.asInstanceOf[js.Any])
+    if (groupOrderSwap != null) __obj.updateDynamic("groupOrderSwap")(js.Any.fromFunction3(groupOrderSwap))
+    if (groupTemplate != null) __obj.updateDynamic("groupTemplate")(js.Any.fromFunction3(groupTemplate))
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hiddenDates != null) __obj.updateDynamic("hiddenDates")(hiddenDates.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalScroll)) __obj.updateDynamic("horizontalScroll")(horizontalScroll.get.asInstanceOf[js.Any])
+    if (itemsAlwaysDraggable != null) __obj.updateDynamic("itemsAlwaysDraggable")(itemsAlwaysDraggable.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (locales != null) __obj.updateDynamic("locales")(locales.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxMinorChars)) __obj.updateDynamic("maxMinorChars")(maxMinorChars.get.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
+    if (moment != null) __obj.updateDynamic("moment")(moment.asInstanceOf[js.Any])
+    if (!js.isUndefined(moveable)) __obj.updateDynamic("moveable")(moveable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiselect)) __obj.updateDynamic("multiselect")(multiselect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiselectPerGroup)) __obj.updateDynamic("multiselectPerGroup")(multiselectPerGroup.get.asInstanceOf[js.Any])
+    if (onAdd != null) __obj.updateDynamic("onAdd")(js.Any.fromFunction2(onAdd))
+    if (onAddGroup != null) __obj.updateDynamic("onAddGroup")(js.Any.fromFunction2(onAddGroup))
+    if (onInitialDrawComplete != null) __obj.updateDynamic("onInitialDrawComplete")(js.Any.fromFunction0(onInitialDrawComplete))
+    if (onMove != null) __obj.updateDynamic("onMove")(js.Any.fromFunction2(onMove))
+    if (onMoveGroup != null) __obj.updateDynamic("onMoveGroup")(js.Any.fromFunction2(onMoveGroup))
+    if (onMoving != null) __obj.updateDynamic("onMoving")(js.Any.fromFunction2(onMoving))
+    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction2(onRemove))
+    if (onRemoveGroup != null) __obj.updateDynamic("onRemoveGroup")(js.Any.fromFunction2(onRemoveGroup))
+    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction2(onUpdate))
+    if (order != null) __obj.updateDynamic("order")(js.Any.fromFunction2(order))
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (rollingMode != null) __obj.updateDynamic("rollingMode")(rollingMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCurrentTime)) __obj.updateDynamic("showCurrentTime")(showCurrentTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMajorLabels)) __obj.updateDynamic("showMajorLabels")(showMajorLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMinorLabels)) __obj.updateDynamic("showMinorLabels")(showMinorLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTooltips)) __obj.updateDynamic("showTooltips")(showTooltips.get.asInstanceOf[js.Any])
+    if (snap != null) __obj.updateDynamic("snap")(js.Any.fromFunction3(snap))
+    if (!js.isUndefined(stack)) __obj.updateDynamic("stack")(stack.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stackSubgroups)) __obj.updateDynamic("stackSubgroups")(stackSubgroups.get.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(js.Any.fromFunction3(template))
+    if (!js.isUndefined(throttleRedraw)) __obj.updateDynamic("throttleRedraw")(throttleRedraw.get.asInstanceOf[js.Any])
+    if (timeAxis != null) __obj.updateDynamic("timeAxis")(timeAxis.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (tooltipOnItemUpdateTime != null) __obj.updateDynamic("tooltipOnItemUpdateTime")(tooltipOnItemUpdateTime.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalScroll)) __obj.updateDynamic("verticalScroll")(verticalScroll.get.asInstanceOf[js.Any])
+    if (visibleFrameTemplate != null) __obj.updateDynamic("visibleFrameTemplate")(js.Any.fromFunction3(visibleFrameTemplate))
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (zoomKey != null) __obj.updateDynamic("zoomKey")(zoomKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomMax)) __obj.updateDynamic("zoomMax")(zoomMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomMin)) __obj.updateDynamic("zoomMin")(zoomMin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomable)) __obj.updateDynamic("zoomable")(zoomable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimelineOptions]
   }
-  @scala.inline
-  implicit class TimelineOptionsOps[Self <: TimelineOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: TimelineAlignType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickToUse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickToUse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickToUse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickToUse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigureFunction2(value: (/* option */ String, /* path */ js.Array[String]) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configure")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withConfigure(value: TimelineOptionsConfigureType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataAttributes(value: TimelineOptionsDataAttributesType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditable(value: TimelineOptionsEditableType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnd(value: DateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: TimelineFormatOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupEditable(value: TimelineOptionsGroupEditableType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupEditable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupEditable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupOrderFunction2(value: (/* a */ js.Any, /* b */ js.Any) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOrder")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGroupOrder(value: TimelineOptionsGroupOrderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupOrderSwap(value: (/* fromGroup */ js.Any, /* toGroup */ js.Any, /* groups */ DataSet[DataGroup]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOrderSwap")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutGroupOrderSwap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOrderSwap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupTemplate(
-      value: (/* item */ js.UndefOr[js.Any], /* element */ js.UndefOr[js.Any], /* data */ js.UndefOr[js.Any]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutGroupTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: HeightWidthType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenDates(value: TimelineOptionsHiddenDatesType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemsAlwaysDraggable(value: TimelineOptionsItemsAlwaysDraggableType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsAlwaysDraggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemsAlwaysDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsAlwaysDraggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocales(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocales: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: TimelineOptionsMarginType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax(value: DateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: HeightWidthType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMinorChars(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMinorChars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMinorChars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMinorChars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMin(value: DateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: HeightWidthType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMomentFunction4(
-      value: (/* inp */ js.UndefOr[MomentInput], /* format */ js.UndefOr[MomentFormatSpecification], /* language */ js.UndefOr[String], /* strict */ js.UndefOr[Boolean]) => Moment
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moment")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withMomentFunction3(
-      value: (/* inp */ js.UndefOr[MomentInput], /* format */ js.UndefOr[MomentFormatSpecification], /* strict */ js.UndefOr[Boolean]) => Moment
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moment")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withMoment(value: MomentConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMoveable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoveable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiselect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiselectPerGroup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselectPerGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiselectPerGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselectPerGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAdd(
-      value: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAddGroup(
-      value: (/* group */ TimelineGroup, /* callback */ js.Function1[/* group */ TimelineGroup | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAddGroup")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAddGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAddGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInitialDrawComplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialDrawComplete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInitialDrawComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialDrawComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMove(
-      value: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMove")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMoveGroup(
-      value: (/* group */ TimelineGroup, /* callback */ js.Function1[/* group */ TimelineGroup | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveGroup")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMoveGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMoving(
-      value: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoving")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMoving: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoving")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRemove(
-      value: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRemoveGroup(
-      value: (/* group */ TimelineGroup, /* callback */ js.Function1[/* group */ TimelineGroup | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemoveGroup")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRemoveGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemoveGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdate(
-      value: (/* item */ TimelineItem, /* callback */ js.Function1[/* item */ TimelineItem | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: (/* a */ js.Any, /* b */ js.Any) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: TimelineOptionsOrientationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRollingMode(value: TimelineRollingModeOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRollingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollingMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRtl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rtl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCurrentTime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCurrentTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCurrentTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCurrentTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMajorLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMajorLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMajorLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMajorLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMinorLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinorLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMinorLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinorLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTooltips(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTooltips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnap(value: (/* date */ js.Date, /* scale */ String, /* step */ Double) => js.Date | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutSnap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStack(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackSubgroups(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackSubgroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackSubgroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackSubgroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: DateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(
-      value: (/* item */ js.UndefOr[js.Any], /* element */ js.UndefOr[js.Any], /* data */ js.UndefOr[js.Any]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottleRedraw(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleRedraw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottleRedraw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleRedraw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeAxis(value: TimelineTimeAxisOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: TimelineTooltipOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipOnItemUpdateTime(value: Boolean | Template): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOnItemUpdateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipOnItemUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOnItemUpdateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleFrameTemplate(
-      value: (/* item */ js.UndefOr[js.Any], /* element */ js.UndefOr[js.Any], /* data */ js.UndefOr[js.Any]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleFrameTemplate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutVisibleFrameTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleFrameTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: HeightWidthType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -3,25 +3,26 @@ package typingsSlinky.vegaTypings
 import typingsSlinky.vegaTypings.autosizeMod.AutoSizeType
 import typingsSlinky.vegaTypings.axisMod.AxisOrient
 import typingsSlinky.vegaTypings.axisMod.FormatType
-import typingsSlinky.vegaTypings.axisMod.LabelOverlap
+import typingsSlinky.vegaTypings.axisMod._LabelOverlap
 import typingsSlinky.vegaTypings.colorMod.ColorName
 import typingsSlinky.vegaTypings.configMod.AxisConfigKeys
 import typingsSlinky.vegaTypings.configMod.Cursor
 import typingsSlinky.vegaTypings.configMod.MarkConfigKeys
+import typingsSlinky.vegaTypings.configMod.StrokeCap
+import typingsSlinky.vegaTypings.configMod.StrokeJoin
 import typingsSlinky.vegaTypings.dataMod.DataType
-import typingsSlinky.vegaTypings.dataMod.Parse
 import typingsSlinky.vegaTypings.encodeMod.Align
 import typingsSlinky.vegaTypings.encodeMod.Baseline
-import typingsSlinky.vegaTypings.encodeMod.Blend
 import typingsSlinky.vegaTypings.encodeMod.EncodeEntryName
-import typingsSlinky.vegaTypings.encodeMod.FontStyle
 import typingsSlinky.vegaTypings.encodeMod.FontWeight
 import typingsSlinky.vegaTypings.encodeMod.Interpolate
 import typingsSlinky.vegaTypings.encodeMod.Orient
 import typingsSlinky.vegaTypings.encodeMod.Orientation
-import typingsSlinky.vegaTypings.encodeMod.SymbolShape
 import typingsSlinky.vegaTypings.encodeMod.TextBaseline
 import typingsSlinky.vegaTypings.encodeMod.TextDirection
+import typingsSlinky.vegaTypings.encodeMod._Blend
+import typingsSlinky.vegaTypings.encodeMod._FontStyle
+import typingsSlinky.vegaTypings.encodeMod._SymbolShape
 import typingsSlinky.vegaTypings.layoutMod.LayoutAlign
 import typingsSlinky.vegaTypings.layoutMod.LayoutBounds
 import typingsSlinky.vegaTypings.layoutMod.LayoutTitleAnchor
@@ -48,9 +49,9 @@ import typingsSlinky.vegaTypings.schemeMod.Diverging
 import typingsSlinky.vegaTypings.schemeMod.SequentialMultiHue
 import typingsSlinky.vegaTypings.schemeMod.SequentialSingleHue
 import typingsSlinky.vegaTypings.streamMod.EventType
-import typingsSlinky.vegaTypings.titleMod.TitleAnchor
 import typingsSlinky.vegaTypings.titleMod.TitleFrame
 import typingsSlinky.vegaTypings.titleMod.TitleOrient
+import typingsSlinky.vegaTypings.titleMod._TitleAnchor
 import typingsSlinky.vegaTypings.transformMod.AggregateOp
 import typingsSlinky.vegaTypings.transformMod.DensityMethod
 import typingsSlinky.vegaTypings.transformMod.ImputeMethod
@@ -135,15 +136,13 @@ object vegaTypingsStrings {
   sealed trait argmin extends AggregateOp
   
   @js.native
-  sealed trait arrow extends SymbolShape
+  sealed trait arrow extends _SymbolShape
   
   @js.native
   sealed trait ascending extends SortOrder
   
   @js.native
-  sealed trait auto
-    extends Cursor
-       with Parse
+  sealed trait auto extends Cursor
   
   @js.native
   sealed trait average extends AggregateOp
@@ -203,6 +202,9 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait beige extends ColorName
+  
+  @js.native
+  sealed trait bevel extends StrokeJoin
   
   @js.native
   sealed trait bin extends js.Object
@@ -376,10 +378,10 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait bottom
-    extends Orient
-       with AxisOrient
+    extends AxisOrient
        with Baseline
        with LegendOrient
+       with Orient
        with SceneTextBaseline
        with TextBaseline
        with TitleOrient
@@ -447,10 +449,18 @@ object vegaTypingsStrings {
        with Diverging
   
   @js.native
+  sealed trait browns
+    extends ColorScheme
+       with SequentialSingleHue
+  
+  @js.native
   sealed trait bundle extends Interpolate
   
   @js.native
   sealed trait burlywood extends ColorName
+  
+  @js.native
+  sealed trait butt extends StrokeCap
   
   @js.native
   sealed trait cadetblue extends ColorName
@@ -521,7 +531,7 @@ object vegaTypingsStrings {
   sealed trait ci1 extends AggregateOp
   
   @js.native
-  sealed trait circle extends SymbolShape
+  sealed trait circle extends _SymbolShape
   
   @js.native
   sealed trait click extends EventType
@@ -539,13 +549,13 @@ object vegaTypingsStrings {
   sealed trait collide extends js.Object
   
   @js.native
-  sealed trait color extends Blend
+  sealed trait color extends _Blend
   
   @js.native
-  sealed trait `color-burn` extends Blend
+  sealed trait `color-burn` extends _Blend
   
   @js.native
-  sealed trait `color-dodge` extends Blend
+  sealed trait `color-dodge` extends _Blend
   
   @js.native
   sealed trait conicConformal extends ProjectionType
@@ -590,7 +600,7 @@ object vegaTypingsStrings {
   sealed trait crimson extends ColorName
   
   @js.native
-  sealed trait cross extends SymbolShape
+  sealed trait cross extends _SymbolShape
   
   @js.native
   sealed trait crossfilter extends js.Object
@@ -622,13 +632,91 @@ object vegaTypingsStrings {
        with ColorScheme
   
   @js.native
-  sealed trait darkblue extends ColorName
+  sealed trait darkblue
+    extends ColorName
+       with ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkblue-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkblue-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkblue-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkblue-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkblue-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkblue-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkblue-9`
+    extends ColorScheme
+       with SequentialMultiHue
   
   @js.native
   sealed trait darkcyan extends ColorName
   
   @js.native
-  sealed trait darken extends Blend
+  sealed trait darken extends _Blend
+  
+  @js.native
+  sealed trait darkgold
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgold-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgold-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgold-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgold-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgold-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgold-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgold-9`
+    extends ColorScheme
+       with SequentialMultiHue
   
   @js.native
   sealed trait darkgoldenrod extends ColorName
@@ -637,7 +725,45 @@ object vegaTypingsStrings {
   sealed trait darkgray extends ColorName
   
   @js.native
-  sealed trait darkgreen extends ColorName
+  sealed trait darkgreen
+    extends ColorName
+       with ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgreen-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgreen-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgreen-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgreen-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgreen-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgreen-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkgreen-9`
+    extends ColorScheme
+       with SequentialMultiHue
   
   @js.native
   sealed trait darkgrey extends ColorName
@@ -649,6 +775,46 @@ object vegaTypingsStrings {
   sealed trait darkmagenta extends ColorName
   
   @js.native
+  sealed trait darkmulti
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkmulti-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkmulti-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkmulti-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkmulti-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkmulti-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkmulti-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkmulti-9`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
   sealed trait darkolivegreen extends ColorName
   
   @js.native
@@ -658,7 +824,45 @@ object vegaTypingsStrings {
   sealed trait darkorchid extends ColorName
   
   @js.native
-  sealed trait darkred extends ColorName
+  sealed trait darkred
+    extends ColorName
+       with ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkred-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkred-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkred-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkred-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkred-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkred-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `darkred-9`
+    extends ColorScheme
+       with SequentialMultiHue
   
   @js.native
   sealed trait darksalmon extends ColorName
@@ -692,6 +896,9 @@ object vegaTypingsStrings {
        with TimeUnit
   
   @js.native
+  sealed trait dayofyear extends TimeUnit
+  
+  @js.native
   sealed trait dblclick extends EventType
   
   @js.native
@@ -716,13 +923,13 @@ object vegaTypingsStrings {
   sealed trait diagonal extends LinkPathShape
   
   @js.native
-  sealed trait diamond extends SymbolShape
+  sealed trait diamond extends _SymbolShape
   
   @js.native
   sealed trait dice extends TreemapMethod
   
   @js.native
-  sealed trait difference extends Blend
+  sealed trait difference extends _Blend
   
   @js.native
   sealed trait dimgray extends ColorName
@@ -762,8 +969,8 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait end
-    extends TitleAnchor
-       with LayoutTitleAnchor
+    extends LayoutTitleAnchor
+       with _TitleAnchor
   
   @js.native
   sealed trait enter extends EncodeEntryName
@@ -778,7 +985,7 @@ object vegaTypingsStrings {
   sealed trait `ew-resize` extends Cursor
   
   @js.native
-  sealed trait exclusion extends Blend
+  sealed trait exclusion extends _Blend
   
   @js.native
   sealed trait exit extends EncodeEntryName
@@ -868,6 +1075,126 @@ object vegaTypingsStrings {
   sealed trait goldenrod extends ColorName
   
   @js.native
+  sealed trait goldgreen
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldgreen-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldgreen-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldgreen-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldgreen-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldgreen-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldgreen-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldgreen-9`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait goldorange
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldorange-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldorange-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldorange-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldorange-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldorange-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldorange-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldorange-9`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait goldred
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldred-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldred-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldred-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldred-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldred-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldred-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `goldred-9`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
   sealed trait grab extends Cursor
   
   @js.native
@@ -883,7 +1210,7 @@ object vegaTypingsStrings {
   sealed trait gray extends ColorName
   
   @js.native
-  sealed trait greedy extends LabelOverlap
+  sealed trait greedy extends _LabelOverlap
   
   @js.native
   sealed trait green extends ColorName
@@ -951,7 +1278,7 @@ object vegaTypingsStrings {
        with TitleFrame
   
   @js.native
-  sealed trait `hard-light` extends Blend
+  sealed trait `hard-light` extends _Blend
   
   @js.native
   sealed trait hcl extends ScaleInterpolateEnum
@@ -1001,7 +1328,7 @@ object vegaTypingsStrings {
   sealed trait https extends js.Object
   
   @js.native
-  sealed trait hue extends Blend
+  sealed trait hue extends _Blend
   
   @js.native
   sealed trait identifier extends js.Object
@@ -1043,7 +1370,7 @@ object vegaTypingsStrings {
   sealed trait isocontour extends js.Object
   
   @js.native
-  sealed trait italic extends FontStyle
+  sealed trait italic extends _FontStyle
   
   @js.native
   sealed trait ivory extends ColorName
@@ -1127,7 +1454,7 @@ object vegaTypingsStrings {
   sealed trait lightcyan extends ColorName
   
   @js.native
-  sealed trait lighten extends Blend
+  sealed trait lighten extends _Blend
   
   @js.native
   sealed trait lighter extends FontWeight
@@ -1143,6 +1470,166 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait lightgrey extends ColorName
+  
+  @js.native
+  sealed trait lightgreyred
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyred-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyred-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyred-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyred-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyred-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyred-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyred-9`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait lightgreyteal
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyteal-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyteal-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyteal-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyteal-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyteal-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyteal-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightgreyteal-9`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait lightmulti
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightmulti-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightmulti-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightmulti-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightmulti-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightmulti-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightmulti-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightmulti-9`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait lightorange
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightorange-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightorange-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightorange-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightorange-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightorange-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightorange-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lightorange-9`
+    extends ColorScheme
+       with SequentialMultiHue
   
   @js.native
   sealed trait lightpink extends ColorName
@@ -1164,6 +1651,46 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait lightsteelblue extends ColorName
+  
+  @js.native
+  sealed trait lighttealblue
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lighttealblue-3`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lighttealblue-4`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lighttealblue-5`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lighttealblue-6`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lighttealblue-7`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lighttealblue-8`
+    extends ColorScheme
+       with SequentialMultiHue
+  
+  @js.native
+  sealed trait `lighttealblue-9`
+    extends ColorScheme
+       with SequentialMultiHue
   
   @js.native
   sealed trait lightyellow extends ColorName
@@ -1227,7 +1754,7 @@ object vegaTypingsStrings {
   sealed trait ltr extends TextDirection
   
   @js.native
-  sealed trait luminosity extends Blend
+  sealed trait luminosity extends _Blend
   
   @js.native
   sealed trait magenta extends ColorName
@@ -1290,10 +1817,10 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait middle
-    extends TextBaseline
-       with Baseline
+    extends Baseline
        with SceneTextBaseline
-       with TitleAnchor
+       with TextBaseline
+       with _TitleAnchor
   
   @js.native
   sealed trait midnightblue extends ColorName
@@ -1323,6 +1850,9 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait mistyrose extends ColorName
+  
+  @js.native
+  sealed trait miter extends StrokeJoin
   
   @js.native
   sealed trait mixture extends js.Object
@@ -1360,7 +1890,7 @@ object vegaTypingsStrings {
   sealed trait move extends Cursor
   
   @js.native
-  sealed trait multiply extends Blend
+  sealed trait multiply extends _Blend
   
   @js.native
   sealed trait `n-resize` extends Cursor
@@ -1406,8 +1936,8 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait normal
-    extends FontStyle
-       with FontWeight
+    extends FontWeight
+       with _FontStyle
   
   @js.native
   sealed trait normalize extends StackOffset
@@ -1436,7 +1966,7 @@ object vegaTypingsStrings {
   sealed trait `nwse-resize` extends Cursor
   
   @js.native
-  sealed trait oblique extends FontStyle
+  sealed trait oblique extends _FontStyle
   
   @js.native
   sealed trait oldlace extends ColorName
@@ -1515,7 +2045,7 @@ object vegaTypingsStrings {
   sealed trait outer extends js.Object
   
   @js.native
-  sealed trait overlay extends Blend
+  sealed trait overlay extends _Blend
   
   @js.native
   sealed trait pack extends js.Object
@@ -1547,7 +2077,7 @@ object vegaTypingsStrings {
   sealed trait papayawhip extends ColorName
   
   @js.native
-  sealed trait parity extends LabelOverlap
+  sealed trait parity extends _LabelOverlap
   
   @js.native
   sealed trait partition extends js.Object
@@ -2235,6 +2765,11 @@ object vegaTypingsStrings {
   sealed trait rosybrown extends ColorName
   
   @js.native
+  sealed trait round
+    extends StrokeCap
+       with StrokeJoin
+  
+  @js.native
   sealed trait `row-resize` extends Cursor
   
   @js.native
@@ -2267,13 +2802,13 @@ object vegaTypingsStrings {
   sealed trait sandybrown extends ColorName
   
   @js.native
-  sealed trait saturation extends Blend
+  sealed trait saturation extends _Blend
   
   @js.native
   sealed trait scope extends js.Object
   
   @js.native
-  sealed trait screen extends Blend
+  sealed trait screen extends _Blend
   
   @js.native
   sealed trait `se-resize` extends Cursor
@@ -2357,7 +2892,7 @@ object vegaTypingsStrings {
   sealed trait snow extends ColorName
   
   @js.native
-  sealed trait `soft-light` extends Blend
+  sealed trait `soft-light` extends _Blend
   
   @js.native
   sealed trait spectral
@@ -2418,7 +2953,9 @@ object vegaTypingsStrings {
        with ScaleType
   
   @js.native
-  sealed trait square extends SymbolShape
+  sealed trait square
+    extends StrokeCap
+       with _SymbolShape
   
   @js.native
   sealed trait squarify extends TreemapMethod
@@ -2428,8 +2965,8 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait start
-    extends TitleAnchor
-       with LayoutTitleAnchor
+    extends LayoutTitleAnchor
+       with _TitleAnchor
   
   @js.native
   sealed trait stderr extends AggregateOp
@@ -2462,7 +2999,7 @@ object vegaTypingsStrings {
   sealed trait string extends DataType
   
   @js.native
-  sealed trait stroke extends SymbolShape
+  sealed trait stroke extends _SymbolShape
   
   @js.native
   sealed trait sum extends AggregateOp
@@ -2502,6 +3039,16 @@ object vegaTypingsStrings {
   sealed trait teal extends ColorName
   
   @js.native
+  sealed trait tealblues
+    extends ColorScheme
+       with SequentialSingleHue
+  
+  @js.native
+  sealed trait teals
+    extends ColorScheme
+       with SequentialSingleHue
+  
+  @js.native
   sealed trait text
     extends Cursor
        with MarkConfigKeys
@@ -2535,10 +3082,10 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait top
-    extends Orient
-       with AxisOrient
+    extends AxisOrient
        with Baseline
        with LegendOrient
+       with Orient
        with SceneTextBaseline
        with TextBaseline
        with TitleOrient
@@ -2579,19 +3126,19 @@ object vegaTypingsStrings {
   sealed trait treemap extends js.Object
   
   @js.native
-  sealed trait triangle extends SymbolShape
+  sealed trait triangle extends _SymbolShape
   
   @js.native
-  sealed trait `triangle-down` extends SymbolShape
+  sealed trait `triangle-down` extends _SymbolShape
   
   @js.native
-  sealed trait `triangle-left` extends SymbolShape
+  sealed trait `triangle-left` extends _SymbolShape
   
   @js.native
-  sealed trait `triangle-right` extends SymbolShape
+  sealed trait `triangle-right` extends _SymbolShape
   
   @js.native
-  sealed trait `triangle-up` extends SymbolShape
+  sealed trait `triangle-up` extends _SymbolShape
   
   @js.native
   sealed trait tsv extends js.Object
@@ -2656,7 +3203,12 @@ object vegaTypingsStrings {
   sealed trait wait extends Cursor
   
   @js.native
-  sealed trait wedge extends SymbolShape
+  sealed trait warmgreys
+    extends ColorScheme
+       with SequentialSingleHue
+  
+  @js.native
+  sealed trait wedge extends _SymbolShape
   
   @js.native
   sealed trait week
@@ -2951,6 +3503,8 @@ object vegaTypingsStrings {
   @scala.inline
   def beige: beige = "beige".asInstanceOf[beige]
   @scala.inline
+  def bevel: bevel = "bevel".asInstanceOf[bevel]
+  @scala.inline
   def bin: bin = "bin".asInstanceOf[bin]
   @scala.inline
   def `bin-ordinal`: `bin-ordinal` = "bin-ordinal".asInstanceOf[`bin-ordinal`]
@@ -3057,9 +3611,13 @@ object vegaTypingsStrings {
   @scala.inline
   def `brownbluegreen-9`: `brownbluegreen-9` = "brownbluegreen-9".asInstanceOf[`brownbluegreen-9`]
   @scala.inline
+  def browns: browns = "browns".asInstanceOf[browns]
+  @scala.inline
   def bundle: bundle = "bundle".asInstanceOf[bundle]
   @scala.inline
   def burlywood: burlywood = "burlywood".asInstanceOf[burlywood]
+  @scala.inline
+  def butt: butt = "butt".asInstanceOf[butt]
   @scala.inline
   def cadetblue: cadetblue = "cadetblue".asInstanceOf[cadetblue]
   @scala.inline
@@ -3167,9 +3725,39 @@ object vegaTypingsStrings {
   @scala.inline
   def darkblue: darkblue = "darkblue".asInstanceOf[darkblue]
   @scala.inline
+  def `darkblue-3`: `darkblue-3` = "darkblue-3".asInstanceOf[`darkblue-3`]
+  @scala.inline
+  def `darkblue-4`: `darkblue-4` = "darkblue-4".asInstanceOf[`darkblue-4`]
+  @scala.inline
+  def `darkblue-5`: `darkblue-5` = "darkblue-5".asInstanceOf[`darkblue-5`]
+  @scala.inline
+  def `darkblue-6`: `darkblue-6` = "darkblue-6".asInstanceOf[`darkblue-6`]
+  @scala.inline
+  def `darkblue-7`: `darkblue-7` = "darkblue-7".asInstanceOf[`darkblue-7`]
+  @scala.inline
+  def `darkblue-8`: `darkblue-8` = "darkblue-8".asInstanceOf[`darkblue-8`]
+  @scala.inline
+  def `darkblue-9`: `darkblue-9` = "darkblue-9".asInstanceOf[`darkblue-9`]
+  @scala.inline
   def darkcyan: darkcyan = "darkcyan".asInstanceOf[darkcyan]
   @scala.inline
   def darken: darken = "darken".asInstanceOf[darken]
+  @scala.inline
+  def darkgold: darkgold = "darkgold".asInstanceOf[darkgold]
+  @scala.inline
+  def `darkgold-3`: `darkgold-3` = "darkgold-3".asInstanceOf[`darkgold-3`]
+  @scala.inline
+  def `darkgold-4`: `darkgold-4` = "darkgold-4".asInstanceOf[`darkgold-4`]
+  @scala.inline
+  def `darkgold-5`: `darkgold-5` = "darkgold-5".asInstanceOf[`darkgold-5`]
+  @scala.inline
+  def `darkgold-6`: `darkgold-6` = "darkgold-6".asInstanceOf[`darkgold-6`]
+  @scala.inline
+  def `darkgold-7`: `darkgold-7` = "darkgold-7".asInstanceOf[`darkgold-7`]
+  @scala.inline
+  def `darkgold-8`: `darkgold-8` = "darkgold-8".asInstanceOf[`darkgold-8`]
+  @scala.inline
+  def `darkgold-9`: `darkgold-9` = "darkgold-9".asInstanceOf[`darkgold-9`]
   @scala.inline
   def darkgoldenrod: darkgoldenrod = "darkgoldenrod".asInstanceOf[darkgoldenrod]
   @scala.inline
@@ -3177,11 +3765,41 @@ object vegaTypingsStrings {
   @scala.inline
   def darkgreen: darkgreen = "darkgreen".asInstanceOf[darkgreen]
   @scala.inline
+  def `darkgreen-3`: `darkgreen-3` = "darkgreen-3".asInstanceOf[`darkgreen-3`]
+  @scala.inline
+  def `darkgreen-4`: `darkgreen-4` = "darkgreen-4".asInstanceOf[`darkgreen-4`]
+  @scala.inline
+  def `darkgreen-5`: `darkgreen-5` = "darkgreen-5".asInstanceOf[`darkgreen-5`]
+  @scala.inline
+  def `darkgreen-6`: `darkgreen-6` = "darkgreen-6".asInstanceOf[`darkgreen-6`]
+  @scala.inline
+  def `darkgreen-7`: `darkgreen-7` = "darkgreen-7".asInstanceOf[`darkgreen-7`]
+  @scala.inline
+  def `darkgreen-8`: `darkgreen-8` = "darkgreen-8".asInstanceOf[`darkgreen-8`]
+  @scala.inline
+  def `darkgreen-9`: `darkgreen-9` = "darkgreen-9".asInstanceOf[`darkgreen-9`]
+  @scala.inline
   def darkgrey: darkgrey = "darkgrey".asInstanceOf[darkgrey]
   @scala.inline
   def darkkhaki: darkkhaki = "darkkhaki".asInstanceOf[darkkhaki]
   @scala.inline
   def darkmagenta: darkmagenta = "darkmagenta".asInstanceOf[darkmagenta]
+  @scala.inline
+  def darkmulti: darkmulti = "darkmulti".asInstanceOf[darkmulti]
+  @scala.inline
+  def `darkmulti-3`: `darkmulti-3` = "darkmulti-3".asInstanceOf[`darkmulti-3`]
+  @scala.inline
+  def `darkmulti-4`: `darkmulti-4` = "darkmulti-4".asInstanceOf[`darkmulti-4`]
+  @scala.inline
+  def `darkmulti-5`: `darkmulti-5` = "darkmulti-5".asInstanceOf[`darkmulti-5`]
+  @scala.inline
+  def `darkmulti-6`: `darkmulti-6` = "darkmulti-6".asInstanceOf[`darkmulti-6`]
+  @scala.inline
+  def `darkmulti-7`: `darkmulti-7` = "darkmulti-7".asInstanceOf[`darkmulti-7`]
+  @scala.inline
+  def `darkmulti-8`: `darkmulti-8` = "darkmulti-8".asInstanceOf[`darkmulti-8`]
+  @scala.inline
+  def `darkmulti-9`: `darkmulti-9` = "darkmulti-9".asInstanceOf[`darkmulti-9`]
   @scala.inline
   def darkolivegreen: darkolivegreen = "darkolivegreen".asInstanceOf[darkolivegreen]
   @scala.inline
@@ -3190,6 +3808,20 @@ object vegaTypingsStrings {
   def darkorchid: darkorchid = "darkorchid".asInstanceOf[darkorchid]
   @scala.inline
   def darkred: darkred = "darkred".asInstanceOf[darkred]
+  @scala.inline
+  def `darkred-3`: `darkred-3` = "darkred-3".asInstanceOf[`darkred-3`]
+  @scala.inline
+  def `darkred-4`: `darkred-4` = "darkred-4".asInstanceOf[`darkred-4`]
+  @scala.inline
+  def `darkred-5`: `darkred-5` = "darkred-5".asInstanceOf[`darkred-5`]
+  @scala.inline
+  def `darkred-6`: `darkred-6` = "darkred-6".asInstanceOf[`darkred-6`]
+  @scala.inline
+  def `darkred-7`: `darkred-7` = "darkred-7".asInstanceOf[`darkred-7`]
+  @scala.inline
+  def `darkred-8`: `darkred-8` = "darkred-8".asInstanceOf[`darkred-8`]
+  @scala.inline
+  def `darkred-9`: `darkred-9` = "darkred-9".asInstanceOf[`darkred-9`]
   @scala.inline
   def darksalmon: darksalmon = "darksalmon".asInstanceOf[darksalmon]
   @scala.inline
@@ -3208,6 +3840,8 @@ object vegaTypingsStrings {
   def date: date = "date".asInstanceOf[date]
   @scala.inline
   def day: day = "day".asInstanceOf[day]
+  @scala.inline
+  def dayofyear: dayofyear = "dayofyear".asInstanceOf[dayofyear]
   @scala.inline
   def dblclick: dblclick = "dblclick".asInstanceOf[dblclick]
   @scala.inline
@@ -3324,6 +3958,54 @@ object vegaTypingsStrings {
   def gold: gold = "gold".asInstanceOf[gold]
   @scala.inline
   def goldenrod: goldenrod = "goldenrod".asInstanceOf[goldenrod]
+  @scala.inline
+  def goldgreen: goldgreen = "goldgreen".asInstanceOf[goldgreen]
+  @scala.inline
+  def `goldgreen-3`: `goldgreen-3` = "goldgreen-3".asInstanceOf[`goldgreen-3`]
+  @scala.inline
+  def `goldgreen-4`: `goldgreen-4` = "goldgreen-4".asInstanceOf[`goldgreen-4`]
+  @scala.inline
+  def `goldgreen-5`: `goldgreen-5` = "goldgreen-5".asInstanceOf[`goldgreen-5`]
+  @scala.inline
+  def `goldgreen-6`: `goldgreen-6` = "goldgreen-6".asInstanceOf[`goldgreen-6`]
+  @scala.inline
+  def `goldgreen-7`: `goldgreen-7` = "goldgreen-7".asInstanceOf[`goldgreen-7`]
+  @scala.inline
+  def `goldgreen-8`: `goldgreen-8` = "goldgreen-8".asInstanceOf[`goldgreen-8`]
+  @scala.inline
+  def `goldgreen-9`: `goldgreen-9` = "goldgreen-9".asInstanceOf[`goldgreen-9`]
+  @scala.inline
+  def goldorange: goldorange = "goldorange".asInstanceOf[goldorange]
+  @scala.inline
+  def `goldorange-3`: `goldorange-3` = "goldorange-3".asInstanceOf[`goldorange-3`]
+  @scala.inline
+  def `goldorange-4`: `goldorange-4` = "goldorange-4".asInstanceOf[`goldorange-4`]
+  @scala.inline
+  def `goldorange-5`: `goldorange-5` = "goldorange-5".asInstanceOf[`goldorange-5`]
+  @scala.inline
+  def `goldorange-6`: `goldorange-6` = "goldorange-6".asInstanceOf[`goldorange-6`]
+  @scala.inline
+  def `goldorange-7`: `goldorange-7` = "goldorange-7".asInstanceOf[`goldorange-7`]
+  @scala.inline
+  def `goldorange-8`: `goldorange-8` = "goldorange-8".asInstanceOf[`goldorange-8`]
+  @scala.inline
+  def `goldorange-9`: `goldorange-9` = "goldorange-9".asInstanceOf[`goldorange-9`]
+  @scala.inline
+  def goldred: goldred = "goldred".asInstanceOf[goldred]
+  @scala.inline
+  def `goldred-3`: `goldred-3` = "goldred-3".asInstanceOf[`goldred-3`]
+  @scala.inline
+  def `goldred-4`: `goldred-4` = "goldred-4".asInstanceOf[`goldred-4`]
+  @scala.inline
+  def `goldred-5`: `goldred-5` = "goldred-5".asInstanceOf[`goldred-5`]
+  @scala.inline
+  def `goldred-6`: `goldred-6` = "goldred-6".asInstanceOf[`goldred-6`]
+  @scala.inline
+  def `goldred-7`: `goldred-7` = "goldred-7".asInstanceOf[`goldred-7`]
+  @scala.inline
+  def `goldred-8`: `goldred-8` = "goldred-8".asInstanceOf[`goldred-8`]
+  @scala.inline
+  def `goldred-9`: `goldred-9` = "goldred-9".asInstanceOf[`goldred-9`]
   @scala.inline
   def grab: grab = "grab".asInstanceOf[grab]
   @scala.inline
@@ -3485,6 +4167,70 @@ object vegaTypingsStrings {
   @scala.inline
   def lightgrey: lightgrey = "lightgrey".asInstanceOf[lightgrey]
   @scala.inline
+  def lightgreyred: lightgreyred = "lightgreyred".asInstanceOf[lightgreyred]
+  @scala.inline
+  def `lightgreyred-3`: `lightgreyred-3` = "lightgreyred-3".asInstanceOf[`lightgreyred-3`]
+  @scala.inline
+  def `lightgreyred-4`: `lightgreyred-4` = "lightgreyred-4".asInstanceOf[`lightgreyred-4`]
+  @scala.inline
+  def `lightgreyred-5`: `lightgreyred-5` = "lightgreyred-5".asInstanceOf[`lightgreyred-5`]
+  @scala.inline
+  def `lightgreyred-6`: `lightgreyred-6` = "lightgreyred-6".asInstanceOf[`lightgreyred-6`]
+  @scala.inline
+  def `lightgreyred-7`: `lightgreyred-7` = "lightgreyred-7".asInstanceOf[`lightgreyred-7`]
+  @scala.inline
+  def `lightgreyred-8`: `lightgreyred-8` = "lightgreyred-8".asInstanceOf[`lightgreyred-8`]
+  @scala.inline
+  def `lightgreyred-9`: `lightgreyred-9` = "lightgreyred-9".asInstanceOf[`lightgreyred-9`]
+  @scala.inline
+  def lightgreyteal: lightgreyteal = "lightgreyteal".asInstanceOf[lightgreyteal]
+  @scala.inline
+  def `lightgreyteal-3`: `lightgreyteal-3` = "lightgreyteal-3".asInstanceOf[`lightgreyteal-3`]
+  @scala.inline
+  def `lightgreyteal-4`: `lightgreyteal-4` = "lightgreyteal-4".asInstanceOf[`lightgreyteal-4`]
+  @scala.inline
+  def `lightgreyteal-5`: `lightgreyteal-5` = "lightgreyteal-5".asInstanceOf[`lightgreyteal-5`]
+  @scala.inline
+  def `lightgreyteal-6`: `lightgreyteal-6` = "lightgreyteal-6".asInstanceOf[`lightgreyteal-6`]
+  @scala.inline
+  def `lightgreyteal-7`: `lightgreyteal-7` = "lightgreyteal-7".asInstanceOf[`lightgreyteal-7`]
+  @scala.inline
+  def `lightgreyteal-8`: `lightgreyteal-8` = "lightgreyteal-8".asInstanceOf[`lightgreyteal-8`]
+  @scala.inline
+  def `lightgreyteal-9`: `lightgreyteal-9` = "lightgreyteal-9".asInstanceOf[`lightgreyteal-9`]
+  @scala.inline
+  def lightmulti: lightmulti = "lightmulti".asInstanceOf[lightmulti]
+  @scala.inline
+  def `lightmulti-3`: `lightmulti-3` = "lightmulti-3".asInstanceOf[`lightmulti-3`]
+  @scala.inline
+  def `lightmulti-4`: `lightmulti-4` = "lightmulti-4".asInstanceOf[`lightmulti-4`]
+  @scala.inline
+  def `lightmulti-5`: `lightmulti-5` = "lightmulti-5".asInstanceOf[`lightmulti-5`]
+  @scala.inline
+  def `lightmulti-6`: `lightmulti-6` = "lightmulti-6".asInstanceOf[`lightmulti-6`]
+  @scala.inline
+  def `lightmulti-7`: `lightmulti-7` = "lightmulti-7".asInstanceOf[`lightmulti-7`]
+  @scala.inline
+  def `lightmulti-8`: `lightmulti-8` = "lightmulti-8".asInstanceOf[`lightmulti-8`]
+  @scala.inline
+  def `lightmulti-9`: `lightmulti-9` = "lightmulti-9".asInstanceOf[`lightmulti-9`]
+  @scala.inline
+  def lightorange: lightorange = "lightorange".asInstanceOf[lightorange]
+  @scala.inline
+  def `lightorange-3`: `lightorange-3` = "lightorange-3".asInstanceOf[`lightorange-3`]
+  @scala.inline
+  def `lightorange-4`: `lightorange-4` = "lightorange-4".asInstanceOf[`lightorange-4`]
+  @scala.inline
+  def `lightorange-5`: `lightorange-5` = "lightorange-5".asInstanceOf[`lightorange-5`]
+  @scala.inline
+  def `lightorange-6`: `lightorange-6` = "lightorange-6".asInstanceOf[`lightorange-6`]
+  @scala.inline
+  def `lightorange-7`: `lightorange-7` = "lightorange-7".asInstanceOf[`lightorange-7`]
+  @scala.inline
+  def `lightorange-8`: `lightorange-8` = "lightorange-8".asInstanceOf[`lightorange-8`]
+  @scala.inline
+  def `lightorange-9`: `lightorange-9` = "lightorange-9".asInstanceOf[`lightorange-9`]
+  @scala.inline
   def lightpink: lightpink = "lightpink".asInstanceOf[lightpink]
   @scala.inline
   def lightsalmon: lightsalmon = "lightsalmon".asInstanceOf[lightsalmon]
@@ -3498,6 +4244,22 @@ object vegaTypingsStrings {
   def lightslategrey: lightslategrey = "lightslategrey".asInstanceOf[lightslategrey]
   @scala.inline
   def lightsteelblue: lightsteelblue = "lightsteelblue".asInstanceOf[lightsteelblue]
+  @scala.inline
+  def lighttealblue: lighttealblue = "lighttealblue".asInstanceOf[lighttealblue]
+  @scala.inline
+  def `lighttealblue-3`: `lighttealblue-3` = "lighttealblue-3".asInstanceOf[`lighttealblue-3`]
+  @scala.inline
+  def `lighttealblue-4`: `lighttealblue-4` = "lighttealblue-4".asInstanceOf[`lighttealblue-4`]
+  @scala.inline
+  def `lighttealblue-5`: `lighttealblue-5` = "lighttealblue-5".asInstanceOf[`lighttealblue-5`]
+  @scala.inline
+  def `lighttealblue-6`: `lighttealblue-6` = "lighttealblue-6".asInstanceOf[`lighttealblue-6`]
+  @scala.inline
+  def `lighttealblue-7`: `lighttealblue-7` = "lighttealblue-7".asInstanceOf[`lighttealblue-7`]
+  @scala.inline
+  def `lighttealblue-8`: `lighttealblue-8` = "lighttealblue-8".asInstanceOf[`lighttealblue-8`]
+  @scala.inline
+  def `lighttealblue-9`: `lighttealblue-9` = "lighttealblue-9".asInstanceOf[`lighttealblue-9`]
   @scala.inline
   def lightyellow: lightyellow = "lightyellow".asInstanceOf[lightyellow]
   @scala.inline
@@ -3588,6 +4350,8 @@ object vegaTypingsStrings {
   def missing: missing = "missing".asInstanceOf[missing]
   @scala.inline
   def mistyrose: mistyrose = "mistyrose".asInstanceOf[mistyrose]
+  @scala.inline
+  def miter: miter = "miter".asInstanceOf[miter]
   @scala.inline
   def mixture: mixture = "mixture".asInstanceOf[mixture]
   @scala.inline
@@ -4015,6 +4779,8 @@ object vegaTypingsStrings {
   @scala.inline
   def rosybrown: rosybrown = "rosybrown".asInstanceOf[rosybrown]
   @scala.inline
+  def round: round = "round".asInstanceOf[round]
+  @scala.inline
   def `row-resize`: `row-resize` = "row-resize".asInstanceOf[`row-resize`]
   @scala.inline
   def row_number: row_number = "row_number".asInstanceOf[row_number]
@@ -4161,6 +4927,10 @@ object vegaTypingsStrings {
   @scala.inline
   def teal: teal = "teal".asInstanceOf[teal]
   @scala.inline
+  def tealblues: tealblues = "tealblues".asInstanceOf[tealblues]
+  @scala.inline
+  def teals: teals = "teals".asInstanceOf[teals]
+  @scala.inline
   def text: text = "text".asInstanceOf[text]
   @scala.inline
   def thistle: thistle = "thistle".asInstanceOf[thistle]
@@ -4244,6 +5014,8 @@ object vegaTypingsStrings {
   def voronoi: voronoi = "voronoi".asInstanceOf[voronoi]
   @scala.inline
   def `w-resize`: `w-resize` = "w-resize".asInstanceOf[`w-resize`]
+  @scala.inline
+  def warmgreys: warmgreys = "warmgreys".asInstanceOf[warmgreys]
   @scala.inline
   def wedge: wedge = "wedge".asInstanceOf[wedge]
   @scala.inline

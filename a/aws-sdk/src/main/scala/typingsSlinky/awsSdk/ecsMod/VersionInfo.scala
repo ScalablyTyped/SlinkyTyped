@@ -22,53 +22,12 @@ trait VersionInfo extends js.Object {
 
 object VersionInfo {
   @scala.inline
-  def apply(): VersionInfo = {
+  def apply(agentHash: String = null, agentVersion: String = null, dockerVersion: String = null): VersionInfo = {
     val __obj = js.Dynamic.literal()
+    if (agentHash != null) __obj.updateDynamic("agentHash")(agentHash.asInstanceOf[js.Any])
+    if (agentVersion != null) __obj.updateDynamic("agentVersion")(agentVersion.asInstanceOf[js.Any])
+    if (dockerVersion != null) __obj.updateDynamic("dockerVersion")(dockerVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[VersionInfo]
   }
-  @scala.inline
-  implicit class VersionInfoOps[Self <: VersionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgentVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDockerVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDockerVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

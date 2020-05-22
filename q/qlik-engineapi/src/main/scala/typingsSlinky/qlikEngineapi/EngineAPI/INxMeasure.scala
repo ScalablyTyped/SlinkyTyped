@@ -15,116 +15,53 @@ import scala.scalajs.js.annotation._
   * For example, you can decide to change the background color of a visualization depending on the values of the measure.
   * Attribute expressions do not affect the layout of an object. The sorting order is unchanged.
   */
-@js.native
 trait INxMeasure extends js.Object {
   /**
     * List of attribute dimensions.
     */
-  var qAttributeDimensions: js.UndefOr[js.Array[INxAttrDimDef]] = js.native
+  var qAttributeDimensions: js.UndefOr[js.Array[INxAttrDimDef]] = js.undefined
   /**
     * List of attribute expressions.
     */
-  var qAttributeExpressions: js.UndefOr[js.Array[INxAttrExprDef]] = js.native
+  var qAttributeExpressions: js.UndefOr[js.Array[INxAttrExprDef]] = js.undefined
   /**
     * Specifies a calculation condition, which must be fulfilled for the measure to be calculated.
     * If the calculation condition is not met, the measure is excluded from the calculation.
     * This property is optional. By default, there is no calculation condition.
     */
-  var qCalcCond: js.UndefOr[IValueExpr] = js.native
+  var qCalcCond: js.UndefOr[IValueExpr] = js.undefined
   /**
     * Refers to a measure stored in the hypercube.
     */
-  var qDef: INxInlineMeasureDef = js.native
+  var qDef: INxInlineMeasureDef
   /**
     * Refers to a measure stored in the library.
     */
-  var qLibraryId: js.UndefOr[String] = js.native
+  var qLibraryId: js.UndefOr[String] = js.undefined
   /**
     * Defines the sort criteria.
     * This property is optional. The default value is sort by ascending alphabetic order.
     */
-  var qSortBy: js.UndefOr[ISortCriteria] = js.native
+  var qSortBy: js.UndefOr[ISortCriteria] = js.undefined
 }
 
 object INxMeasure {
   @scala.inline
-  def apply(qDef: INxInlineMeasureDef): INxMeasure = {
+  def apply(
+    qDef: INxInlineMeasureDef,
+    qAttributeDimensions: js.Array[INxAttrDimDef] = null,
+    qAttributeExpressions: js.Array[INxAttrExprDef] = null,
+    qCalcCond: IValueExpr = null,
+    qLibraryId: String = null,
+    qSortBy: ISortCriteria = null
+  ): INxMeasure = {
     val __obj = js.Dynamic.literal(qDef = qDef.asInstanceOf[js.Any])
+    if (qAttributeDimensions != null) __obj.updateDynamic("qAttributeDimensions")(qAttributeDimensions.asInstanceOf[js.Any])
+    if (qAttributeExpressions != null) __obj.updateDynamic("qAttributeExpressions")(qAttributeExpressions.asInstanceOf[js.Any])
+    if (qCalcCond != null) __obj.updateDynamic("qCalcCond")(qCalcCond.asInstanceOf[js.Any])
+    if (qLibraryId != null) __obj.updateDynamic("qLibraryId")(qLibraryId.asInstanceOf[js.Any])
+    if (qSortBy != null) __obj.updateDynamic("qSortBy")(qSortBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[INxMeasure]
   }
-  @scala.inline
-  implicit class INxMeasureOps[Self <: INxMeasure] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQDef(value: INxInlineMeasureDef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQAttributeDimensions(value: js.Array[INxAttrDimDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributeDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQAttributeDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributeDimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQAttributeExpressions(value: js.Array[INxAttrExprDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributeExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQAttributeExpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributeExpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQCalcCond(value: IValueExpr): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qCalcCond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQCalcCond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qCalcCond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQLibraryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qLibraryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQLibraryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qLibraryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQSortBy(value: ISortCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSortBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQSortBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSortBy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

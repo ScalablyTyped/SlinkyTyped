@@ -59,102 +59,18 @@ object TrafficMirrorFilterRuleArgs {
     ruleNumber: Input[Double],
     sourceCidrBlock: Input[String],
     trafficDirection: Input[String],
-    trafficMirrorFilterId: Input[String]
+    trafficMirrorFilterId: Input[String],
+    description: Input[String] = null,
+    destinationPortRange: Input[TrafficMirrorFilterRuleDestinationPortRange] = null,
+    protocol: Input[Double] = null,
+    sourcePortRange: Input[TrafficMirrorFilterRuleSourcePortRange] = null
   ): TrafficMirrorFilterRuleArgs = {
     val __obj = js.Dynamic.literal(destinationCidrBlock = destinationCidrBlock.asInstanceOf[js.Any], ruleAction = ruleAction.asInstanceOf[js.Any], ruleNumber = ruleNumber.asInstanceOf[js.Any], sourceCidrBlock = sourceCidrBlock.asInstanceOf[js.Any], trafficDirection = trafficDirection.asInstanceOf[js.Any], trafficMirrorFilterId = trafficMirrorFilterId.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (destinationPortRange != null) __obj.updateDynamic("destinationPortRange")(destinationPortRange.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (sourcePortRange != null) __obj.updateDynamic("sourcePortRange")(sourcePortRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrafficMirrorFilterRuleArgs]
   }
-  @scala.inline
-  implicit class TrafficMirrorFilterRuleArgsOps[Self <: TrafficMirrorFilterRuleArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationCidrBlock(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationCidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuleAction(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuleNumber(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceCidrBlock(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceCidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficDirection(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficMirrorFilterId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficMirrorFilterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationPortRange(value: Input[TrafficMirrorFilterRuleDestinationPortRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationPortRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationPortRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationPortRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourcePortRange(value: Input[TrafficMirrorFilterRuleSourcePortRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcePortRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourcePortRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcePortRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

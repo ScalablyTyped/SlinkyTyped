@@ -8,39 +8,25 @@ import scala.scalajs.js.annotation._
 
 // fake intermediate interface to remove typing on size, as the typing
 // is overrided by react-fa
-@js.native
 trait SizeOverrideHTMLProps[T]
   extends AllHTMLAttributes[T]
      with ClassAttributes[T] {
   @JSName("size")
-  var size_SizeOverrideHTMLProps: js.UndefOr[js.Any] = js.native
+  var size_SizeOverrideHTMLProps: js.UndefOr[js.Any] = js.undefined
 }
 
 object SizeOverrideHTMLProps {
   @scala.inline
-  def apply[T](): SizeOverrideHTMLProps[T] = {
+  def apply[T](
+    AllHTMLAttributes: AllHTMLAttributes[T] = null,
+    ClassAttributes: ClassAttributes[T] = null,
+    size: js.Any = null
+  ): SizeOverrideHTMLProps[T] = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[SizeOverrideHTMLProps[T]]
   }
-  @scala.inline
-  implicit class SizeOverrideHTMLPropsOps[Self[t] <: SizeOverrideHTMLProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withSize(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

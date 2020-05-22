@@ -18,41 +18,11 @@ trait DeploymentStyle extends js.Object {
 
 object DeploymentStyle {
   @scala.inline
-  def apply(): DeploymentStyle = {
+  def apply(deploymentOption: DeploymentOption = null, deploymentType: DeploymentType = null): DeploymentStyle = {
     val __obj = js.Dynamic.literal()
+    if (deploymentOption != null) __obj.updateDynamic("deploymentOption")(deploymentOption.asInstanceOf[js.Any])
+    if (deploymentType != null) __obj.updateDynamic("deploymentType")(deploymentType.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentStyle]
   }
-  @scala.inline
-  implicit class DeploymentStyleOps[Self <: DeploymentStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentOption(value: DeploymentOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentType(value: DeploymentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

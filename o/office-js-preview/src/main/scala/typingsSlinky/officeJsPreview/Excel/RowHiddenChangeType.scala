@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation._
 sealed trait RowHiddenChangeType extends js.Object
 
 /**
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.11]
   */
 @JSGlobal("Excel.RowHiddenChangeType")
 @js.native

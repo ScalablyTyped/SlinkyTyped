@@ -4,128 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OracleDbConnectionConfig extends js.Object {
-  var connectString: js.UndefOr[String] = js.native
-  var database: js.UndefOr[String] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var domain: js.UndefOr[String] = js.native
-  var host: String = js.native
-  var instanceName: js.UndefOr[String] = js.native
-  var password: js.UndefOr[String] = js.native
-  var requestTimeout: js.UndefOr[Double] = js.native
-  var user: String = js.native
+  var connectString: js.UndefOr[String] = js.undefined
+  var database: js.UndefOr[String] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var domain: js.UndefOr[String] = js.undefined
+  var host: String
+  var instanceName: js.UndefOr[String] = js.undefined
+  var password: js.UndefOr[String] = js.undefined
+  var requestTimeout: js.UndefOr[Double] = js.undefined
+  var user: String
 }
 
 object OracleDbConnectionConfig {
   @scala.inline
-  def apply(host: String, user: String): OracleDbConnectionConfig = {
+  def apply(
+    host: String,
+    user: String,
+    connectString: String = null,
+    database: String = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    domain: String = null,
+    instanceName: String = null,
+    password: String = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined
+  ): OracleDbConnectionConfig = {
     val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
+    if (connectString != null) __obj.updateDynamic("connectString")(connectString.asInstanceOf[js.Any])
+    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (instanceName != null) __obj.updateDynamic("instanceName")(instanceName.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OracleDbConnectionConfig]
   }
-  @scala.inline
-  implicit class OracleDbConnectionConfigOps[Self <: OracleDbConnectionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnectString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -25,14 +25,14 @@ import scala.scalajs.js.annotation._
 trait NamedItem extends ClientObject {
   /**
     *
-    * Returns an object containing values and types of the named item. Read-only.
+    * Returns an object containing values and types of the named item.
     *
     * [Api set: ExcelApi 1.7]
     */
   val arrayValues: NamedItemArrayValues = js.native
   /**
     *
-    * Represents the comment associated with this name.
+    * Specifies the comment associated with this name.
     *
     * [Api set: ExcelApi 1.4]
     */
@@ -42,42 +42,42 @@ trait NamedItem extends ClientObject {
   var context_NamedItem: RequestContext = js.native
   /**
     *
-    * Gets or sets the formula of the named item.  Formula always starts with a '=' sign.
+    * The formula of the named item. Formula always starts with a '=' sign.
     *
     * [Api set: ExcelApi 1.7]
     */
   var formula: js.Any = js.native
   /**
     *
-    * The name of the object. Read-only.
+    * The name of the object.
     *
     * [Api set: ExcelApi 1.1]
     */
   val name: String = js.native
   /**
     *
-    * Indicates whether the name is scoped to the workbook or to a specific worksheet. Possible values are: Worksheet, Workbook. Read-only.
+    * Specifies if the name is scoped to the workbook or to a specific worksheet. Possible values are: Worksheet, Workbook.
     *
     * [Api set: ExcelApi 1.4]
     */
   val scope: NamedItemScope | typingsSlinky.officeJs.officeJsStrings.Worksheet | typingsSlinky.officeJs.officeJsStrings.Workbook = js.native
   /**
     *
-    * Indicates the type of the value returned by the name's formula. See Excel.NamedItemType for details. Read-only.
+    * Specifies the type of the value returned by the name's formula. See Excel.NamedItemType for details.
     *
     * [Api set: ExcelApi 1.1 for String,Integer,Double,Boolean,Range,Error; 1.7 for Array]
     */
   val `type`: NamedItemType | typingsSlinky.officeJs.officeJsStrings.String | Integer | Double | Boolean | typingsSlinky.officeJs.officeJsStrings.Range | Error | Array = js.native
   /**
     *
-    * Represents the value computed by the name's formula. For a named range, will return the range address. Read-only.
+    * Represents the value computed by the name's formula. For a named range, will return the range address.
     *
     * [Api set: ExcelApi 1.1]
     */
   val value: js.Any = js.native
   /**
     *
-    * Specifies whether the object is visible or not.
+    * Specifies if the object is visible.
     *
     * [Api set: ExcelApi 1.1]
     */

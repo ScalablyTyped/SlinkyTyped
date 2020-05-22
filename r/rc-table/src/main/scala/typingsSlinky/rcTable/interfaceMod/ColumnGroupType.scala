@@ -1,33 +1,37 @@
 package typingsSlinky.rcTable.interfaceMod
 
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.TagMod
+import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnGroupType[RecordType] extends ColumnSharedType[RecordType] {
-  var children: ColumnsType[RecordType] = js.native
+  var children: ColumnsType[RecordType]
 }
 
 object ColumnGroupType {
   @scala.inline
-  def apply[RecordType](children: ColumnsType[RecordType]): ColumnGroupType[RecordType] = {
+  def apply[RecordType](
+    children: ColumnsType[RecordType],
+    align: AlignType = null,
+    className: String = null,
+    ellipsis: js.UndefOr[Boolean] = js.undefined,
+    fixed: FixedType = null,
+    key: Key = null,
+    onHeaderCell: (/* import warning: importer.ImportType#apply Failed type conversion: rc-table.rc-table/lib/interface.ColumnsType<RecordType>[number] */ js.Any, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
+    title: TagMod[Any] = null
+  ): ColumnGroupType[RecordType] = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(ellipsis)) __obj.updateDynamic("ellipsis")(ellipsis.get.asInstanceOf[js.Any])
+    if (fixed != null) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (onHeaderCell != null) __obj.updateDynamic("onHeaderCell")(js.Any.fromFunction2(onHeaderCell))
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnGroupType[RecordType]]
   }
-  @scala.inline
-  implicit class ColumnGroupTypeOps[Self[recordtype] <: ColumnGroupType[recordtype], RecordType] (val x: Self[RecordType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[RecordType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[RecordType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[RecordType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[RecordType] with Other]
-    @scala.inline
-    def withChildren(value: ColumnsType[RecordType]): Self[RecordType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

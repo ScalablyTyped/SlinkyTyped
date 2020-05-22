@@ -7,76 +7,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISerializableCipherCfg extends js.Object {
-  var format: js.UndefOr[IFormatter] = js.native
+  var format: js.UndefOr[IFormatter] = js.undefined
   //default OpenSSLFormatter
-  var iv: js.UndefOr[WordArray] = js.native
-  var mode: js.UndefOr[IBlockCipherModeImpl] = js.native
-  var padding: js.UndefOr[IPaddingImpl] = js.native
+  var iv: js.UndefOr[WordArray] = js.undefined
+  var mode: js.UndefOr[IBlockCipherModeImpl] = js.undefined
+  var padding: js.UndefOr[IPaddingImpl] = js.undefined
 }
 
 object ISerializableCipherCfg {
   @scala.inline
-  def apply(): ISerializableCipherCfg = {
+  def apply(
+    format: IFormatter = null,
+    iv: WordArray = null,
+    mode: IBlockCipherModeImpl = null,
+    padding: IPaddingImpl = null
+  ): ISerializableCipherCfg = {
     val __obj = js.Dynamic.literal()
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (iv != null) __obj.updateDynamic("iv")(iv.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISerializableCipherCfg]
   }
-  @scala.inline
-  implicit class ISerializableCipherCfgOps[Self <: ISerializableCipherCfg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: IFormatter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIv(value: WordArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: IBlockCipherModeImpl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: IPaddingImpl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

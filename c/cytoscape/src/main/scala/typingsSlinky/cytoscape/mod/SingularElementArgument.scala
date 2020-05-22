@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cytoscape.mod.EdgeSingular
   - typingsSlinky.cytoscape.mod.NodeSingular
 */
-trait SingularElementArgument extends CollectionArgument
-
-object SingularElementArgument {
-  @scala.inline
-  implicit def apply(value: EdgeSingular): SingularElementArgument = value.asInstanceOf[SingularElementArgument]
-  @scala.inline
-  implicit def apply(value: NodeSingular): SingularElementArgument = value.asInstanceOf[SingularElementArgument]
-}
+trait SingularElementArgument extends _CollectionArgument
 

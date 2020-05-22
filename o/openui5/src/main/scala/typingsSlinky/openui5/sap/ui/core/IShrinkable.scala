@@ -13,6 +13,5 @@ import scala.scalajs.js.annotation._
   * shrink relativeto the rest of the items in the container when negative free space is distributed.
   * @resource sap/ui/core/library.js
   */
-@js.native
 trait IShrinkable extends js.Object
 

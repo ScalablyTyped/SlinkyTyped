@@ -6,8 +6,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ChildArray
-  extends Array[Children]
-     with ChildArrayOrPrimitive
-     with Children
+trait ChildArray extends Array[Children]
 

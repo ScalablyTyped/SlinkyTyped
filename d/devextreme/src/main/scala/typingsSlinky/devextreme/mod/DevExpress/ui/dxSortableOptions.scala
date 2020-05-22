@@ -6,6 +6,10 @@ import typingsSlinky.devextreme.anon.DropInsideItemElement
 import typingsSlinky.devextreme.anon.FromComponentFromData
 import typingsSlinky.devextreme.anon.FromDataFromIndex
 import typingsSlinky.devextreme.anon.FromIndexItemData
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
+import typingsSlinky.devextreme.anon.Y
+import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.horizontal
 import typingsSlinky.devextreme.devextremeStrings.indicate
 import typingsSlinky.devextreme.devextremeStrings.push
@@ -16,245 +20,117 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxSortableOptions extends DraggableBaseOptions[dxSortable] {
-  /** Allows a user to drop an item inside another item. */
-  var allowDropInsideItem: js.UndefOr[Boolean] = js.native
-  /** Allows a user to reorder sortable items. */
-  var allowReordering: js.UndefOr[Boolean] = js.native
-  /** Specifies custom markup to be shown instead of the item being dragged. */
+  /** @name dxSortable.Options.allowDropInsideItem */
+  var allowDropInsideItem: js.UndefOr[Boolean] = js.undefined
+  /** @name dxSortable.Options.allowReordering */
+  var allowReordering: js.UndefOr[Boolean] = js.undefined
+  /** @name dxSortable.Options.dragTemplate */
   var dragTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
       /* dragInfo */ FromIndexItemData, 
       /* containerElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.native
-  /** Specifies how to highlight the item's drop position. */
-  var dropFeedbackMode: js.UndefOr[push | indicate] = js.native
-  /** Specifies a CSS selector for the items that can be dragged. */
-  var filter: js.UndefOr[String] = js.native
-  /** Notifies the widget of the items' orientation. */
-  var itemOrientation: js.UndefOr[horizontal | vertical] = js.native
-  /** Moves an element in the HTML markup when it is dropped. */
-  var moveItemOnDrop: js.UndefOr[Boolean] = js.native
-  /** A function that is called when a new item is added. */
-  var onAdd: js.UndefOr[js.Function1[/* e */ ComponentDropInsideItem, _]] = js.native
-  /** A function that is called when the dragged item's position in the list is changed. */
-  var onDragChange: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
-  /** A function that is called when the drag gesture is finished. */
-  var onDragEnd: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
-  /** A function that is called every time a draggable item is moved. */
-  var onDragMove: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
-  /** A function that is called when drag gesture is initialized. */
-  var onDragStart: js.UndefOr[js.Function1[/* e */ FromDataFromIndex, _]] = js.native
-  /** A function that is called when a draggable item is removed. */
-  var onRemove: js.UndefOr[js.Function1[/* e */ FromComponentFromData, _]] = js.native
-  /** A function that is called when the draggable items are reordered. */
-  var onReorder: js.UndefOr[js.Function1[/* e */ ComponentDropInsideItem, _]] = js.native
+  ] = js.undefined
+  /** @name dxSortable.Options.dropFeedbackMode */
+  var dropFeedbackMode: js.UndefOr[push | indicate] = js.undefined
+  /** @name dxSortable.Options.filter */
+  var filter: js.UndefOr[String] = js.undefined
+  /** @name dxSortable.Options.itemOrientation */
+  var itemOrientation: js.UndefOr[horizontal | vertical] = js.undefined
+  /** @name dxSortable.Options.moveItemOnDrop */
+  var moveItemOnDrop: js.UndefOr[Boolean] = js.undefined
+  /** @name dxSortable.Options.onAdd */
+  var onAdd: js.UndefOr[js.Function1[/* e */ ComponentDropInsideItem, _]] = js.undefined
+  /** @name dxSortable.Options.onDragChange */
+  var onDragChange: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.undefined
+  /** @name dxSortable.Options.onDragEnd */
+  var onDragEnd: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.undefined
+  /** @name dxSortable.Options.onDragMove */
+  var onDragMove: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.undefined
+  /** @name dxSortable.Options.onDragStart */
+  var onDragStart: js.UndefOr[js.Function1[/* e */ FromDataFromIndex, _]] = js.undefined
+  /** @name dxSortable.Options.onRemove */
+  var onRemove: js.UndefOr[js.Function1[/* e */ FromComponentFromData, _]] = js.undefined
+  /** @name dxSortable.Options.onReorder */
+  var onReorder: js.UndefOr[js.Function1[/* e */ ComponentDropInsideItem, _]] = js.undefined
 }
 
 object dxSortableOptions {
   @scala.inline
-  def apply(): dxSortableOptions = {
+  def apply(
+    allowDropInsideItem: js.UndefOr[Boolean] = js.undefined,
+    allowReordering: js.UndefOr[Boolean] = js.undefined,
+    autoScroll: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    boundary: String | Element | JQuery = null,
+    container: String | Element | JQuery = null,
+    cursorOffset: String | Y = null,
+    data: js.Any = null,
+    dragDirection: both | horizontal | vertical = null,
+    dragTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
+      /* dragInfo */ FromIndexItemData, 
+      /* containerElement */ dxElement, 
+      String | Element | JQuery
+    ]) = null,
+    dropFeedbackMode: push | indicate = null,
+    elementAttr: js.Any = null,
+    filter: String = null,
+    group: String = null,
+    handle: String = null,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    itemOrientation: horizontal | vertical = null,
+    moveItemOnDrop: js.UndefOr[Boolean] = js.undefined,
+    onAdd: /* e */ ComponentDropInsideItem => _ = null,
+    onDisposing: /* e */ Model[dxSortable] => _ = null,
+    onDragChange: /* e */ DropInsideItemElement => _ = null,
+    onDragEnd: /* e */ DropInsideItemElement => _ = null,
+    onDragMove: /* e */ DropInsideItemElement => _ = null,
+    onDragStart: /* e */ FromDataFromIndex => _ = null,
+    onInitialized: /* e */ typingsSlinky.devextreme.anon.Element[dxSortable] => _ = null,
+    onOptionChanged: /* e */ Name[dxSortable] => _ = null,
+    onRemove: /* e */ FromComponentFromData => _ = null,
+    onReorder: /* e */ ComponentDropInsideItem => _ = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    scrollSensitivity: js.UndefOr[Double] = js.undefined,
+    scrollSpeed: js.UndefOr[Double] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxSortableOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowDropInsideItem)) __obj.updateDynamic("allowDropInsideItem")(allowDropInsideItem.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowReordering)) __obj.updateDynamic("allowReordering")(allowReordering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoScroll)) __obj.updateDynamic("autoScroll")(autoScroll.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (boundary != null) __obj.updateDynamic("boundary")(boundary.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (cursorOffset != null) __obj.updateDynamic("cursorOffset")(cursorOffset.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dragDirection != null) __obj.updateDynamic("dragDirection")(dragDirection.asInstanceOf[js.Any])
+    if (dragTemplate != null) __obj.updateDynamic("dragTemplate")(dragTemplate.asInstanceOf[js.Any])
+    if (dropFeedbackMode != null) __obj.updateDynamic("dropFeedbackMode")(dropFeedbackMode.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (itemOrientation != null) __obj.updateDynamic("itemOrientation")(itemOrientation.asInstanceOf[js.Any])
+    if (!js.isUndefined(moveItemOnDrop)) __obj.updateDynamic("moveItemOnDrop")(moveItemOnDrop.get.asInstanceOf[js.Any])
+    if (onAdd != null) __obj.updateDynamic("onAdd")(js.Any.fromFunction1(onAdd))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onDragChange != null) __obj.updateDynamic("onDragChange")(js.Any.fromFunction1(onDragChange))
+    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
+    if (onDragMove != null) __obj.updateDynamic("onDragMove")(js.Any.fromFunction1(onDragMove))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction1(onRemove))
+    if (onReorder != null) __obj.updateDynamic("onReorder")(js.Any.fromFunction1(onReorder))
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollSensitivity)) __obj.updateDynamic("scrollSensitivity")(scrollSensitivity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollSpeed)) __obj.updateDynamic("scrollSpeed")(scrollSpeed.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxSortableOptions]
   }
-  @scala.inline
-  implicit class dxSortableOptionsOps[Self <: dxSortableOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowDropInsideItem(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDropInsideItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDropInsideItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDropInsideItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowReordering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowReordering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowReordering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowReordering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragTemplateFunction2(
-      value: (/* dragInfo */ FromIndexItemData, /* containerElement */ dxElement) => String | Element | JQuery
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragTemplate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDragTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDragTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-          /* dragInfo */ FromIndexItemData, 
-          /* containerElement */ dxElement, 
-          String | Element | JQuery
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropFeedbackMode(value: push | indicate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropFeedbackMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropFeedbackMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropFeedbackMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemOrientation(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMoveItemOnDrop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveItemOnDrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoveItemOnDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveItemOnDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAdd(value: /* e */ ComponentDropInsideItem => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragChange(value: /* e */ DropInsideItemElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragEnd(value: /* e */ DropInsideItemElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragMove(value: /* e */ DropInsideItemElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragStart(value: /* e */ FromDataFromIndex => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRemove(value: /* e */ FromComponentFromData => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReorder(value: /* e */ ComponentDropInsideItem => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReorder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnReorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReorder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

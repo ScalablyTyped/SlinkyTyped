@@ -14,6 +14,10 @@ object transporterrorMod extends js.Object {
     val body: js.Any = js.native
     val code: Double = js.native
     val headers: js.Any = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     val status: String = js.native
   }
   

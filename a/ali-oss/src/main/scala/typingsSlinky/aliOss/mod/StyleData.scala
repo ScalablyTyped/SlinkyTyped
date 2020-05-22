@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyleData extends js.Object {
    // style name
-  var Content: String = js.native
+  var Content: String
    // style content
-  var CreateTime: String = js.native
+  var CreateTime: String
    // style create time
-  var LastModifyTime: String = js.native
-  var Name: String = js.native
+  var LastModifyTime: String
+  var Name: String
 }
 
 object StyleData {
@@ -21,37 +20,5 @@ object StyleData {
     val __obj = js.Dynamic.literal(Content = Content.asInstanceOf[js.Any], CreateTime = CreateTime.asInstanceOf[js.Any], LastModifyTime = LastModifyTime.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleData]
   }
-  @scala.inline
-  implicit class StyleDataOps[Self <: StyleData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastModifyTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifyTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -45,725 +45,177 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MuiTheme extends js.Object {
-  var appBar: js.UndefOr[Color] = js.native
-  var avatar: js.UndefOr[BackgroundColor] = js.native
-  var badge: js.UndefOr[FontWeight] = js.native
-  var baseTheme: js.UndefOr[RawTheme] = js.native
-  var button: js.UndefOr[Height] = js.native
-  var card: js.UndefOr[SubtitleColor] = js.native
-  var cardMedia: js.UndefOr[OverlayContentBackground] = js.native
-  var cardText: js.UndefOr[TextColor] = js.native
-  var checkbox: js.UndefOr[BoxColor] = js.native
-  var chip: js.UndefOr[DeleteIconColor] = js.native
-  var datePicker: js.UndefOr[CalendarTextColor] = js.native
-  var dialog: js.UndefOr[BodyColor] = js.native
-  var drawer: js.UndefOr[Width] = js.native
-  var dropDownMenu: js.UndefOr[AccentColor] = js.native
-  var enhancedButton: js.UndefOr[TapHighlightColor] = js.native
-  var flatButton: js.UndefOr[ButtonFilterColor] = js.native
-  var floatingActionButton: js.UndefOr[ButtonSize] = js.native
-  var fontFamily: js.UndefOr[String] = js.native
-  var gridTile: js.UndefOr[TextColor] = js.native
-  var icon: js.UndefOr[BackgroundColorColor] = js.native
-  var inkBar: js.UndefOr[BackgroundColorString] = js.native
-  var isRtl: js.UndefOr[Boolean] = js.native
-  var listItem: js.UndefOr[LeftIconColor] = js.native
-  var menu: js.UndefOr[ContainerBackgroundColor] = js.native
-  var menuItem: js.UndefOr[DataHeight] = js.native
-  var menuSubheader: js.UndefOr[BorderColor] = js.native
-  var overlay: js.UndefOr[BackgroundColorString] = js.native
-  var palette: js.UndefOr[ThemePalette] = js.native
-  var paper: js.UndefOr[ZDepthShadows] = js.native
-  var radioButton: js.UndefOr[CheckedColor] = js.native
-  var raisedButton: js.UndefOr[DisabledColor] = js.native
-  var rawTheme: js.UndefOr[RawTheme] = js.native
-  var refreshIndicator: js.UndefOr[LoadingStrokeColor] = js.native
-  var ripple: js.UndefOr[ColorString] = js.native
-  var slider: js.UndefOr[HandleColorZero] = js.native
-  var snackbar: js.UndefOr[ActionColor] = js.native
-  var spacing: js.UndefOr[Spacing] = js.native
-  var stepper: js.UndefOr[ConnectorLineColor] = js.native
-  var subheader: js.UndefOr[ColorFontWeight] = js.native
-  var svgIcon: js.UndefOr[ColorString] = js.native
-  var table: js.UndefOr[BackgroundColorString] = js.native
-  var tableFooter: js.UndefOr[BorderColorTextColor] = js.native
-  var tableHeader: js.UndefOr[BorderColorString] = js.native
-  var tableHeaderColumn: js.UndefOr[typingsSlinky.materialUi.anon.Spacing] = js.native
-  var tableRow: js.UndefOr[HoverColor] = js.native
-  var tableRowColumn: js.UndefOr[HeightSpacing] = js.native
-  var tabs: js.UndefOr[SelectedTextColor] = js.native
-  var textField: js.UndefOr[DisabledTextColor] = js.native
-  var timePicker: js.UndefOr[ClockCircleColor] = js.native
-  var toggle: js.UndefOr[LabelColor] = js.native
-  var toolbar: js.UndefOr[IconColor] = js.native
-  var tooltip: js.UndefOr[RippleBackgroundColor] = js.native
-  var userAgent: js.UndefOr[String | Boolean] = js.native
-  var zIndex: js.UndefOr[typingsSlinky.materialUi.MaterialUI.Styles.zIndex] = js.native
+  var appBar: js.UndefOr[Color] = js.undefined
+  var avatar: js.UndefOr[BackgroundColor] = js.undefined
+  var badge: js.UndefOr[FontWeight] = js.undefined
+  var baseTheme: js.UndefOr[RawTheme] = js.undefined
+  var button: js.UndefOr[Height] = js.undefined
+  var card: js.UndefOr[SubtitleColor] = js.undefined
+  var cardMedia: js.UndefOr[OverlayContentBackground] = js.undefined
+  var cardText: js.UndefOr[TextColor] = js.undefined
+  var checkbox: js.UndefOr[BoxColor] = js.undefined
+  var chip: js.UndefOr[DeleteIconColor] = js.undefined
+  var datePicker: js.UndefOr[CalendarTextColor] = js.undefined
+  var dialog: js.UndefOr[BodyColor] = js.undefined
+  var drawer: js.UndefOr[Width] = js.undefined
+  var dropDownMenu: js.UndefOr[AccentColor] = js.undefined
+  var enhancedButton: js.UndefOr[TapHighlightColor] = js.undefined
+  var flatButton: js.UndefOr[ButtonFilterColor] = js.undefined
+  var floatingActionButton: js.UndefOr[ButtonSize] = js.undefined
+  var fontFamily: js.UndefOr[String] = js.undefined
+  var gridTile: js.UndefOr[TextColor] = js.undefined
+  var icon: js.UndefOr[BackgroundColorColor] = js.undefined
+  var inkBar: js.UndefOr[BackgroundColorString] = js.undefined
+  var isRtl: js.UndefOr[Boolean] = js.undefined
+  var listItem: js.UndefOr[LeftIconColor] = js.undefined
+  var menu: js.UndefOr[ContainerBackgroundColor] = js.undefined
+  var menuItem: js.UndefOr[DataHeight] = js.undefined
+  var menuSubheader: js.UndefOr[BorderColor] = js.undefined
+  var overlay: js.UndefOr[BackgroundColorString] = js.undefined
+  var palette: js.UndefOr[ThemePalette] = js.undefined
+  var paper: js.UndefOr[ZDepthShadows] = js.undefined
+  var radioButton: js.UndefOr[CheckedColor] = js.undefined
+  var raisedButton: js.UndefOr[DisabledColor] = js.undefined
+  var rawTheme: js.UndefOr[RawTheme] = js.undefined
+  var refreshIndicator: js.UndefOr[LoadingStrokeColor] = js.undefined
+  var ripple: js.UndefOr[ColorString] = js.undefined
+  var slider: js.UndefOr[HandleColorZero] = js.undefined
+  var snackbar: js.UndefOr[ActionColor] = js.undefined
+  var spacing: js.UndefOr[Spacing] = js.undefined
+  var stepper: js.UndefOr[ConnectorLineColor] = js.undefined
+  var subheader: js.UndefOr[ColorFontWeight] = js.undefined
+  var svgIcon: js.UndefOr[ColorString] = js.undefined
+  var table: js.UndefOr[BackgroundColorString] = js.undefined
+  var tableFooter: js.UndefOr[BorderColorTextColor] = js.undefined
+  var tableHeader: js.UndefOr[BorderColorString] = js.undefined
+  var tableHeaderColumn: js.UndefOr[typingsSlinky.materialUi.anon.Spacing] = js.undefined
+  var tableRow: js.UndefOr[HoverColor] = js.undefined
+  var tableRowColumn: js.UndefOr[HeightSpacing] = js.undefined
+  var tabs: js.UndefOr[SelectedTextColor] = js.undefined
+  var textField: js.UndefOr[DisabledTextColor] = js.undefined
+  var timePicker: js.UndefOr[ClockCircleColor] = js.undefined
+  var toggle: js.UndefOr[LabelColor] = js.undefined
+  var toolbar: js.UndefOr[IconColor] = js.undefined
+  var tooltip: js.UndefOr[RippleBackgroundColor] = js.undefined
+  var userAgent: js.UndefOr[String | Boolean] = js.undefined
+  var zIndex: js.UndefOr[typingsSlinky.materialUi.MaterialUI.Styles.zIndex] = js.undefined
 }
 
 object MuiTheme {
   @scala.inline
-  def apply(): MuiTheme = {
+  def apply(
+    appBar: Color = null,
+    avatar: BackgroundColor = null,
+    badge: FontWeight = null,
+    baseTheme: RawTheme = null,
+    button: Height = null,
+    card: SubtitleColor = null,
+    cardMedia: OverlayContentBackground = null,
+    cardText: TextColor = null,
+    checkbox: BoxColor = null,
+    chip: DeleteIconColor = null,
+    datePicker: CalendarTextColor = null,
+    dialog: BodyColor = null,
+    drawer: Width = null,
+    dropDownMenu: AccentColor = null,
+    enhancedButton: TapHighlightColor = null,
+    flatButton: ButtonFilterColor = null,
+    floatingActionButton: ButtonSize = null,
+    fontFamily: String = null,
+    gridTile: TextColor = null,
+    icon: BackgroundColorColor = null,
+    inkBar: BackgroundColorString = null,
+    isRtl: js.UndefOr[Boolean] = js.undefined,
+    listItem: LeftIconColor = null,
+    menu: ContainerBackgroundColor = null,
+    menuItem: DataHeight = null,
+    menuSubheader: BorderColor = null,
+    overlay: BackgroundColorString = null,
+    palette: ThemePalette = null,
+    paper: ZDepthShadows = null,
+    radioButton: CheckedColor = null,
+    raisedButton: DisabledColor = null,
+    rawTheme: RawTheme = null,
+    refreshIndicator: LoadingStrokeColor = null,
+    ripple: ColorString = null,
+    slider: HandleColorZero = null,
+    snackbar: ActionColor = null,
+    spacing: Spacing = null,
+    stepper: ConnectorLineColor = null,
+    subheader: ColorFontWeight = null,
+    svgIcon: ColorString = null,
+    table: BackgroundColorString = null,
+    tableFooter: BorderColorTextColor = null,
+    tableHeader: BorderColorString = null,
+    tableHeaderColumn: typingsSlinky.materialUi.anon.Spacing = null,
+    tableRow: HoverColor = null,
+    tableRowColumn: HeightSpacing = null,
+    tabs: SelectedTextColor = null,
+    textField: DisabledTextColor = null,
+    timePicker: ClockCircleColor = null,
+    toggle: LabelColor = null,
+    toolbar: IconColor = null,
+    tooltip: RippleBackgroundColor = null,
+    userAgent: String | Boolean = null,
+    zIndex: zIndex = null
+  ): MuiTheme = {
     val __obj = js.Dynamic.literal()
+    if (appBar != null) __obj.updateDynamic("appBar")(appBar.asInstanceOf[js.Any])
+    if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
+    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
+    if (baseTheme != null) __obj.updateDynamic("baseTheme")(baseTheme.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (card != null) __obj.updateDynamic("card")(card.asInstanceOf[js.Any])
+    if (cardMedia != null) __obj.updateDynamic("cardMedia")(cardMedia.asInstanceOf[js.Any])
+    if (cardText != null) __obj.updateDynamic("cardText")(cardText.asInstanceOf[js.Any])
+    if (checkbox != null) __obj.updateDynamic("checkbox")(checkbox.asInstanceOf[js.Any])
+    if (chip != null) __obj.updateDynamic("chip")(chip.asInstanceOf[js.Any])
+    if (datePicker != null) __obj.updateDynamic("datePicker")(datePicker.asInstanceOf[js.Any])
+    if (dialog != null) __obj.updateDynamic("dialog")(dialog.asInstanceOf[js.Any])
+    if (drawer != null) __obj.updateDynamic("drawer")(drawer.asInstanceOf[js.Any])
+    if (dropDownMenu != null) __obj.updateDynamic("dropDownMenu")(dropDownMenu.asInstanceOf[js.Any])
+    if (enhancedButton != null) __obj.updateDynamic("enhancedButton")(enhancedButton.asInstanceOf[js.Any])
+    if (flatButton != null) __obj.updateDynamic("flatButton")(flatButton.asInstanceOf[js.Any])
+    if (floatingActionButton != null) __obj.updateDynamic("floatingActionButton")(floatingActionButton.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (gridTile != null) __obj.updateDynamic("gridTile")(gridTile.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (inkBar != null) __obj.updateDynamic("inkBar")(inkBar.asInstanceOf[js.Any])
+    if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.get.asInstanceOf[js.Any])
+    if (listItem != null) __obj.updateDynamic("listItem")(listItem.asInstanceOf[js.Any])
+    if (menu != null) __obj.updateDynamic("menu")(menu.asInstanceOf[js.Any])
+    if (menuItem != null) __obj.updateDynamic("menuItem")(menuItem.asInstanceOf[js.Any])
+    if (menuSubheader != null) __obj.updateDynamic("menuSubheader")(menuSubheader.asInstanceOf[js.Any])
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
+    if (palette != null) __obj.updateDynamic("palette")(palette.asInstanceOf[js.Any])
+    if (paper != null) __obj.updateDynamic("paper")(paper.asInstanceOf[js.Any])
+    if (radioButton != null) __obj.updateDynamic("radioButton")(radioButton.asInstanceOf[js.Any])
+    if (raisedButton != null) __obj.updateDynamic("raisedButton")(raisedButton.asInstanceOf[js.Any])
+    if (rawTheme != null) __obj.updateDynamic("rawTheme")(rawTheme.asInstanceOf[js.Any])
+    if (refreshIndicator != null) __obj.updateDynamic("refreshIndicator")(refreshIndicator.asInstanceOf[js.Any])
+    if (ripple != null) __obj.updateDynamic("ripple")(ripple.asInstanceOf[js.Any])
+    if (slider != null) __obj.updateDynamic("slider")(slider.asInstanceOf[js.Any])
+    if (snackbar != null) __obj.updateDynamic("snackbar")(snackbar.asInstanceOf[js.Any])
+    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
+    if (stepper != null) __obj.updateDynamic("stepper")(stepper.asInstanceOf[js.Any])
+    if (subheader != null) __obj.updateDynamic("subheader")(subheader.asInstanceOf[js.Any])
+    if (svgIcon != null) __obj.updateDynamic("svgIcon")(svgIcon.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
+    if (tableFooter != null) __obj.updateDynamic("tableFooter")(tableFooter.asInstanceOf[js.Any])
+    if (tableHeader != null) __obj.updateDynamic("tableHeader")(tableHeader.asInstanceOf[js.Any])
+    if (tableHeaderColumn != null) __obj.updateDynamic("tableHeaderColumn")(tableHeaderColumn.asInstanceOf[js.Any])
+    if (tableRow != null) __obj.updateDynamic("tableRow")(tableRow.asInstanceOf[js.Any])
+    if (tableRowColumn != null) __obj.updateDynamic("tableRowColumn")(tableRowColumn.asInstanceOf[js.Any])
+    if (tabs != null) __obj.updateDynamic("tabs")(tabs.asInstanceOf[js.Any])
+    if (textField != null) __obj.updateDynamic("textField")(textField.asInstanceOf[js.Any])
+    if (timePicker != null) __obj.updateDynamic("timePicker")(timePicker.asInstanceOf[js.Any])
+    if (toggle != null) __obj.updateDynamic("toggle")(toggle.asInstanceOf[js.Any])
+    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
+    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[MuiTheme]
   }
-  @scala.inline
-  implicit class MuiThemeOps[Self <: MuiTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppBar(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvatar(value: BackgroundColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadge(value: FontWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseTheme(value: RawTheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseTheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButton(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCard(value: SubtitleColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCardMedia(value: OverlayContentBackground): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardMedia")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCardMedia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardMedia")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCardText(value: TextColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCardText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckbox(value: BoxColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckbox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkbox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChip(value: DeleteIconColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatePicker(value: CalendarTextColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datePicker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatePicker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datePicker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialog(value: BodyColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawer(value: Width): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropDownMenu(value: AccentColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropDownMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnhancedButton(value: TapHighlightColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enhancedButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnhancedButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enhancedButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlatButton(value: ButtonFilterColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlatButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatingActionButton(value: ButtonSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingActionButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatingActionButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingActionButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridTile(value: TextColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridTile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: BackgroundColorColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInkBar(value: BackgroundColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inkBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInkBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inkBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsRtl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsRtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRtl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListItem(value: LeftIconColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenu(value: ContainerBackgroundColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItem(value: DataHeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuSubheader(value: BorderColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuSubheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuSubheader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuSubheader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: BackgroundColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPalette(value: ThemePalette): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPalette: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaper(value: ZDepthShadows): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadioButton(value: CheckedColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radioButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadioButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radioButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaisedButton(value: DisabledColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raisedButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaisedButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raisedButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawTheme(value: RawTheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshIndicator(value: LoadingStrokeColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshIndicator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRipple(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ripple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRipple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ripple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlider(value: HandleColorZero): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnackbar(value: ActionColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snackbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnackbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snackbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: Spacing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepper(value: ConnectorLineColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubheader(value: ColorFontWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubheader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgIcon(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: BackgroundColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableFooter(value: BorderColorTextColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableFooter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableFooter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeader(value: BorderColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeaderColumn(value: typingsSlinky.materialUi.anon.Spacing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeaderColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableRow(value: HoverColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableRowColumn(value: HeightSpacing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRowColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRowColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRowColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabs(value: SelectedTextColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextField(value: DisabledTextColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimePicker(value: ClockCircleColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimePicker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggle(value: LabelColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbar(value: IconColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: RippleBackgroundColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAgent(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: zIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,34 +6,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** FaxDeviceProvider Class */
-@js.native
 trait FaxDeviceProvider extends js.Object {
   /** Is device provider built in debug environment */
-  val Debug: Boolean = js.native
+  val Debug: Boolean
   /** Array of device IDs exposed by the provider */
-  val DeviceIds: SafeArray[Double] = js.native
+  val DeviceIds: SafeArray[Double]
   @JSName("FAXCOMEXLib.FaxDeviceProvider_typekey")
-  var FAXCOMEXLibDotFaxDeviceProvider_typekey: FaxDeviceProvider = js.native
+  var FAXCOMEXLibDotFaxDeviceProvider_typekey: FaxDeviceProvider
   /** Provider's friendly name */
-  val FriendlyName: String = js.native
+  val FriendlyName: String
   /** Full path and file name of the provider DLL */
-  val ImageName: String = js.native
+  val ImageName: String
   /** Last error code at load or initialization */
-  val InitErrorCode: Double = js.native
+  val InitErrorCode: Double
   /** The major part of the device provider's build number */
-  val MajorBuild: Double = js.native
+  val MajorBuild: Double
   /** The major part of the device provider's version number */
-  val MajorVersion: Double = js.native
+  val MajorVersion: Double
   /** The minor part of the device provider's build number */
-  val MinorBuild: Double = js.native
+  val MinorBuild: Double
   /** The minor part of the device provider's version number */
-  val MinorVersion: Double = js.native
+  val MinorVersion: Double
   /** Status of the device provider */
-  val Status: FAX_PROVIDER_STATUS_ENUM = js.native
+  val Status: FAX_PROVIDER_STATUS_ENUM
   /** TSP name used by the provider */
-  val TapiProviderName: String = js.native
+  val TapiProviderName: String
   /** Unique name of the provider */
-  val UniqueName: String = js.native
+  val UniqueName: String
 }
 
 object FaxDeviceProvider {
@@ -57,91 +56,5 @@ object FaxDeviceProvider {
     __obj.updateDynamic("FAXCOMEXLib.FaxDeviceProvider_typekey")(FAXCOMEXLibDotFaxDeviceProvider_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaxDeviceProvider]
   }
-  @scala.inline
-  implicit class FaxDeviceProviderOps[Self <: FaxDeviceProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceIds(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFAXCOMEXLibDotFaxDeviceProvider_typekey(value: FaxDeviceProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAXCOMEXLib.FaxDeviceProvider_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFriendlyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FriendlyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitErrorCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitErrorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMajorBuild(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MajorBuild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMajorVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MajorVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinorBuild(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinorBuild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinorVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinorVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: FAX_PROVIDER_STATUS_ENUM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTapiProviderName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapiProviderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUniqueName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

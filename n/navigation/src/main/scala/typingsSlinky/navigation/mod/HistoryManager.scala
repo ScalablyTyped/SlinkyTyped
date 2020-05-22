@@ -16,9 +16,10 @@ trait HistoryManager extends js.Object {
     * Adds browser history
     * @param url The current url
     * @param replace A value indicating whether to replace the current
+    * @param stateContext The current StateContext
     * browser history entry
     */
-  def addHistory(url: String, replace: Boolean): Unit = js.native
+  def addHistory(url: String, replace: Boolean, stateContext: StateContext): Unit = js.native
   /**
     * Gets the current location
     */

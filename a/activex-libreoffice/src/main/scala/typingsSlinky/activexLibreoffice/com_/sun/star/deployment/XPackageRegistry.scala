@@ -10,13 +10,12 @@ import scala.scalajs.js.annotation._
   * Interface to bind an UNO package.
   * @since OOo 2.0
   */
-@js.native
 trait XPackageRegistry extends js.Object {
   /**
     * gets the supported XPackageTypeInfos.
     * @returns supported XPackageTypeInfos.
     */
-  val SupportedPackageTypes: SafeArray[XPackageTypeInfo] = js.native
+  val SupportedPackageTypes: SafeArray[XPackageTypeInfo]
   /**
     * binds a package URL to a {@link XPackage} handle. The returned UNO package handle ought to late-initialize itself, thus the process of binding must
     * not be an expensive operation, because it is not abortable.
@@ -43,13 +42,13 @@ trait XPackageRegistry extends js.Object {
     * @param xCmdEnv command environment for error and progress handling
     * @returns {@link XPackage} handle
     */
-  def bindPackage(url: String, mediaType: String, removed: Boolean, identifier: String, xCmdEnv: XCommandEnvironment): XPackage = js.native
+  def bindPackage(url: String, mediaType: String, removed: Boolean, identifier: String, xCmdEnv: XCommandEnvironment): XPackage
   /**
     * gets the supported XPackageTypeInfos.
     * @returns supported XPackageTypeInfos.
     */
-  def getSupportedPackageTypes(): SafeArray[XPackageTypeInfo] = js.native
-  def packageRemoved(url: String, mediaType: String): Unit = js.native
+  def getSupportedPackageTypes(): SafeArray[XPackageTypeInfo]
+  def packageRemoved(url: String, mediaType: String): Unit
 }
 
 object XPackageRegistry {
@@ -63,37 +62,5 @@ object XPackageRegistry {
     val __obj = js.Dynamic.literal(SupportedPackageTypes = SupportedPackageTypes.asInstanceOf[js.Any], bindPackage = js.Any.fromFunction5(bindPackage), getSupportedPackageTypes = js.Any.fromFunction0(getSupportedPackageTypes), packageRemoved = js.Any.fromFunction2(packageRemoved))
     __obj.asInstanceOf[XPackageRegistry]
   }
-  @scala.inline
-  implicit class XPackageRegistryOps[Self <: XPackageRegistry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSupportedPackageTypes(value: SafeArray[XPackageTypeInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedPackageTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBindPackage(value: (String, String, Boolean, String, XCommandEnvironment) => XPackage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindPackage")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupportedPackageTypes(value: () => SafeArray[XPackageTypeInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedPackageTypes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPackageRemoved(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageRemoved")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

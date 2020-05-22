@@ -11,46 +11,20 @@ import scala.scalajs.js.annotation._
   * The language service will unconditionally attempt to provide a result.
   * `triggerCharacter` can be `undefined` for a retrigger caused by a cursor move.
   */
-@js.native
 trait SignatureHelpRetriggeredReason extends SignatureHelpTriggerReason {
-  var kind: retrigger = js.native
+  var kind: retrigger
   /**
     * Character that was responsible for triggering signature help.
     */
-  var triggerCharacter: js.UndefOr[SignatureHelpRetriggerCharacter] = js.native
+  var triggerCharacter: js.UndefOr[SignatureHelpRetriggerCharacter] = js.undefined
 }
 
 object SignatureHelpRetriggeredReason {
   @scala.inline
-  def apply(kind: retrigger): SignatureHelpRetriggeredReason = {
+  def apply(kind: retrigger, triggerCharacter: SignatureHelpRetriggerCharacter = null): SignatureHelpRetriggeredReason = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    if (triggerCharacter != null) __obj.updateDynamic("triggerCharacter")(triggerCharacter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureHelpRetriggeredReason]
   }
-  @scala.inline
-  implicit class SignatureHelpRetriggeredReasonOps[Self <: SignatureHelpRetriggeredReason] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: retrigger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTriggerCharacter(value: SignatureHelpRetriggerCharacter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerCharacter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

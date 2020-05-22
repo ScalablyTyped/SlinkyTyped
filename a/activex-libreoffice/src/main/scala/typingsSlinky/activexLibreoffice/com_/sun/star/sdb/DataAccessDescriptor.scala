@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * which ones optional. Additionally, it's free to specify any additional requirements about the relations of properties.
   * @since OOo 1.1.2
   */
-@js.native
 trait DataAccessDescriptor extends js.Object {
   /**
     * is a connection to use.
@@ -33,7 +32,7 @@ trait DataAccessDescriptor extends js.Object {
     * If no ActiveConnection is given, then a {@link DataSourceName} is required.
     * @see DataSourceName
     */
-  var ActiveConnection: XConnection = js.native
+  var ActiveConnection: XConnection
   /**
     * specifies how to interpret {@link Selection}
     *
@@ -46,7 +45,7 @@ trait DataAccessDescriptor extends js.Object {
     * @see com.sun.star.sdbc.XResultSet
     * @see com.sun.star.sdb.XResultSetAccess
     */
-  var BookmarkSelection: Boolean = js.native
+  var BookmarkSelection: Boolean
   /**
     * specifies a column object
     *
@@ -56,21 +55,21 @@ trait DataAccessDescriptor extends js.Object {
     * The object will at least support the {@link com.sun.star.sdbcx.Column} service, but more often it will even be a {@link Column} from the {@link
     * com.sun.star.sdb} module.
     */
-  var Column: XPropertySet = js.native
+  var Column: XPropertySet
   /**
     * specifies a column name.
     *
     * This property is usually used together with the {@link Command} and {@link CommandType} properties.
     * @see Column
     */
-  var ColumnName: String = js.native
+  var ColumnName: String
   /**
     * specifies the command to execute to retrieve a result set.
     *
     * This property is only meaningful together with the {@link CommandType} property, thus either **both** or **none** of them are present.
     * @see CommandType
     */
-  var Command: String = js.native
+  var Command: String
   /**
     * specifies the type of the command to be executed to retrieve a result set.
     *
@@ -79,7 +78,7 @@ trait DataAccessDescriptor extends js.Object {
     * This property is only meaningful together with the {@link Command} property, thus either **both** or **none** of them are present.
     * @see com.sun.star.sdb.CommandType
     */
-  var CommandType: Double = js.native
+  var CommandType: Double
   /**
     * specifies additional info to use when creating a connection from a `ConnectionResource`
     *
@@ -88,7 +87,7 @@ trait DataAccessDescriptor extends js.Object {
     *
     * If the sequence is empty, it is ignored.
     */
-  var ConnectionInfo: SafeArray[PropertyValue] = js.native
+  var ConnectionInfo: SafeArray[PropertyValue]
   /**
     * specifies the database URL which locates a database driver.
     *
@@ -96,7 +95,7 @@ trait DataAccessDescriptor extends js.Object {
     * @see com.sun.star.sdb.DatabaseContext
     * @see ActiveConnection
     */
-  var ConnectionResource: String = js.native
+  var ConnectionResource: String
   /**
     * specifies the name of the datasource to access.
     *
@@ -105,7 +104,7 @@ trait DataAccessDescriptor extends js.Object {
     * @see com.sun.star.sdb.DatabaseContext
     * @see ActiveConnection
     */
-  var DataSourceName: String = js.native
+  var DataSourceName: String
   /**
     * specifies the URL of the database file.
     *
@@ -114,7 +113,7 @@ trait DataAccessDescriptor extends js.Object {
     * @see com.sun.star.sdb.DatabaseContext
     * @see ActiveConnection
     */
-  var DatabaseLocation: String = js.native
+  var DatabaseLocation: String
   /**
     * specifies if the {@link Command} should be analyzed on the client side before sending it to the database server.
     *
@@ -124,7 +123,7 @@ trait DataAccessDescriptor extends js.Object {
     * This property is usually present together with the {@link Command} and {@link CommandType} properties, and is evaluated if and only if {@link
     * CommandType} equals {@link CommandType.COMMAND} .
     */
-  var EscapeProcessing: Boolean = js.native
+  var EscapeProcessing: Boolean
   /**
     * specifies an additional filter to optionally use.
     *
@@ -137,25 +136,25 @@ trait DataAccessDescriptor extends js.Object {
     * @see com.sun.star.sdb.RowSet
     * @see ResultSet
     */
-  var Filter: String = js.native
+  var Filter: String
   /**
     * specifies an additional `GROUP BY` clause which should be applied on top of the given {@link Command} .
     *
     * The keyword `GROUP BY` itself is not part of this property.
     */
-  var GroupBy: String = js.native
+  var GroupBy: String
   /**
     * specifies an additional `HAVING` clause which should be applied on top of the given {@link Command} .
     *
     * The keyword `HAVING` itself is not part of this property.
     */
-  var HavingClause: String = js.native
+  var HavingClause: String
   /**
     * specifies an additional `ORDER BY` clause which should be applied on top of the given {@link Command} .
     *
     * The keyword `ORDER BY` itself is not part of this property.
     */
-  var Order: String = js.native
+  var Order: String
   /**
     * specifies an already existent result set to use.
     *
@@ -170,7 +169,7 @@ trait DataAccessDescriptor extends js.Object {
     * com.sun.star.sdb.RowSet} . This becomes important in conjunction with the {@link Selection} property.
     * @see com.sun.star.sdb.XResultSetAccess
     */
-  var ResultSet: XResultSet = js.native
+  var ResultSet: XResultSet
   /**
     * specifies a selection to confine the records in a result set.
     *
@@ -184,7 +183,7 @@ trait DataAccessDescriptor extends js.Object {
     * If the elements specify bookmarks, and a {@link ResultSet} has been specified, then this result set is required to support the {@link
     * com.sun.star.sdbcx.XRowLocate} interface.
     */
-  var Selection: SafeArray[_] = js.native
+  var Selection: SafeArray[_]
 }
 
 object DataAccessDescriptor {
@@ -211,115 +210,5 @@ object DataAccessDescriptor {
     val __obj = js.Dynamic.literal(ActiveConnection = ActiveConnection.asInstanceOf[js.Any], BookmarkSelection = BookmarkSelection.asInstanceOf[js.Any], Column = Column.asInstanceOf[js.Any], ColumnName = ColumnName.asInstanceOf[js.Any], Command = Command.asInstanceOf[js.Any], CommandType = CommandType.asInstanceOf[js.Any], ConnectionInfo = ConnectionInfo.asInstanceOf[js.Any], ConnectionResource = ConnectionResource.asInstanceOf[js.Any], DataSourceName = DataSourceName.asInstanceOf[js.Any], DatabaseLocation = DatabaseLocation.asInstanceOf[js.Any], EscapeProcessing = EscapeProcessing.asInstanceOf[js.Any], Filter = Filter.asInstanceOf[js.Any], GroupBy = GroupBy.asInstanceOf[js.Any], HavingClause = HavingClause.asInstanceOf[js.Any], Order = Order.asInstanceOf[js.Any], ResultSet = ResultSet.asInstanceOf[js.Any], Selection = Selection.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataAccessDescriptor]
   }
-  @scala.inline
-  implicit class DataAccessDescriptorOps[Self <: DataAccessDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveConnection(value: XConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveConnection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBookmarkSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BookmarkSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumn(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommandType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommandType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnectionInfo(value: SafeArray[PropertyValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnectionResource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionResource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataSourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatabaseLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEscapeProcessing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EscapeProcessing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHavingClause(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HavingClause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResultSet(value: XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelection(value: SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

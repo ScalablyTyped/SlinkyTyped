@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait Coord extends js.Object
 
-object Coord {
-  @scala.inline
-  implicit def apply(value: LatLng): Coord = value.asInstanceOf[Coord]
-  @scala.inline
-  implicit def apply(value: Point): Coord = value.asInstanceOf[Coord]
-}
-

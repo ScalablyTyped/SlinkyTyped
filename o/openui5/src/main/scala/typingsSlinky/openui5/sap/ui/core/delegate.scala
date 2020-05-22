@@ -99,8 +99,8 @@ object delegate extends js.Object {
       * (navigation in a grid).
       * @param bTableMode Set to true if table mode should be used, else false
       * @param bTableList This sets a different behavior for table mode.In this mode we keep using table
-      * navigation but there are some differences. e.g.<ul>	<li>Page-up moves focus to the first row, not to
-      * the first cell like in table mode</li>	<li>Page-down moves focus to the last row, not to the last
+      * navigation but there are some differences. e.g.<ul>    <li>Page-up moves focus to the first row, not to
+      * the first cell like in table mode</li>    <li>Page-down moves focus to the last row, not to the last
       * cell like in table mode</li></ul>
       * @returns <code>this</code> to allow method chaining
       */

@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs")
 @js.native
 abstract class SystemMediaTransportControlsPropertyChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs {
+  /** The property that was changed on the SystemMediaTransportControls . */
+  /* CompleteClass */
+  override var property: typingsSlinky.winrtUwp.Windows.Media.SystemMediaTransportControlsProperty = js.native
+}
 

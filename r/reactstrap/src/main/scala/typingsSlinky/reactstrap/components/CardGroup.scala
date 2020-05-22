@@ -437,6 +437,11 @@ object CardGroup {
   }
   
   def withProps[T](p: CardGroupProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[CardGroupProps]))
+  }
   implicit def make[T](companion: CardGroup.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

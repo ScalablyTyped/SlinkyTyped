@@ -6,62 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapShapeClickEvent extends MapEvent {
-  var layer: js.UndefOr[Shape] = js.native
-  var originalEvent: js.UndefOr[js.Any] = js.native
-  var shape: js.UndefOr[Element] = js.native
+  var layer: js.UndefOr[Shape] = js.undefined
+  var originalEvent: js.UndefOr[js.Any] = js.undefined
+  var shape: js.UndefOr[Element] = js.undefined
 }
 
 object MapShapeClickEvent {
   @scala.inline
-  def apply(isDefaultPrevented: () => Boolean, preventDefault: js.Function, sender: Map): MapShapeClickEvent = {
+  def apply(
+    isDefaultPrevented: () => Boolean,
+    preventDefault: js.Function,
+    sender: Map,
+    layer: Shape = null,
+    originalEvent: js.Any = null,
+    shape: Element = null
+  ): MapShapeClickEvent = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), preventDefault = preventDefault.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
+    if (layer != null) __obj.updateDynamic("layer")(layer.asInstanceOf[js.Any])
+    if (originalEvent != null) __obj.updateDynamic("originalEvent")(originalEvent.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapShapeClickEvent]
   }
-  @scala.inline
-  implicit class MapShapeClickEventOps[Self <: MapShapeClickEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayer(value: Shape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

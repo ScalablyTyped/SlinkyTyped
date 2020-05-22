@@ -25,41 +25,11 @@ trait SchemaGooglePrivacyDlpV2InfoTypeLimit extends js.Object {
 
 object SchemaGooglePrivacyDlpV2InfoTypeLimit {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2InfoTypeLimit = {
+  def apply(infoType: SchemaGooglePrivacyDlpV2InfoType = null, maxFindings: js.UndefOr[Double] = js.undefined): SchemaGooglePrivacyDlpV2InfoTypeLimit = {
     val __obj = js.Dynamic.literal()
+    if (infoType != null) __obj.updateDynamic("infoType")(infoType.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFindings)) __obj.updateDynamic("maxFindings")(maxFindings.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2InfoTypeLimit]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2InfoTypeLimitOps[Self <: SchemaGooglePrivacyDlpV2InfoTypeLimit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfoType(value: SchemaGooglePrivacyDlpV2InfoType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfoType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFindings(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFindings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

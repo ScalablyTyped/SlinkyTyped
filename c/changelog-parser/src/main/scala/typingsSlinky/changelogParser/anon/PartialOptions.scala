@@ -5,49 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<changelog-parser.changelog-parser.Options> */
-@js.native
 trait PartialOptions extends js.Object {
-  var filePath: js.UndefOr[String] = js.native
-  var removeMarkdown: js.UndefOr[Boolean] = js.native
+  var filePath: js.UndefOr[String] = js.undefined
+  var removeMarkdown: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialOptions {
   @scala.inline
-  def apply(): PartialOptions = {
+  def apply(filePath: String = null, removeMarkdown: js.UndefOr[Boolean] = js.undefined): PartialOptions = {
     val __obj = js.Dynamic.literal()
+    if (filePath != null) __obj.updateDynamic("filePath")(filePath.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeMarkdown)) __obj.updateDynamic("removeMarkdown")(removeMarkdown.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialOptions]
   }
-  @scala.inline
-  implicit class PartialOptionsOps[Self <: PartialOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveMarkdown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMarkdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveMarkdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMarkdown")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,4 +10,8 @@ package object mod {
     ObjectType, 
     typingsSlinky.std.Exclude[/* keyof ObjectType */ java.lang.String, KeysType]
   ]
+  type MDXProviderComponentsProp = typingsSlinky.mdxJsReact.mod.MDXProviderComponents | (js.Function1[
+    /* components */ typingsSlinky.mdxJsReact.mod.MDXProviderComponents, 
+    typingsSlinky.mdxJsReact.mod.MDXProviderComponents
+  ])
 }

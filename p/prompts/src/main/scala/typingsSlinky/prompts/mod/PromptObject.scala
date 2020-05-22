@@ -1,329 +1,88 @@
 package typingsSlinky.prompts.mod
 
+import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.node.streamMod.Writable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PromptObject[T /* <: String */] extends js.Object {
-  var active: js.UndefOr[String] = js.native
-  var choices: js.UndefOr[js.Array[Choice]] = js.native
-  var float: js.UndefOr[Boolean] = js.native
-  var format: js.UndefOr[PrevCaller[T, Unit]] = js.native
-  var hint: js.UndefOr[String] = js.native
-  var inactive: js.UndefOr[String] = js.native
-  var increment: js.UndefOr[Double] = js.native
-  var initial: js.UndefOr[String | Double | Boolean | js.Date] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var mask: js.UndefOr[String] = js.native
-  var max: js.UndefOr[Double] = js.native
-  var message: js.UndefOr[ValueOrFunc[String]] = js.native
-  var min: js.UndefOr[Double] = js.native
-  var name: ValueOrFunc[T] = js.native
-  var onState: js.UndefOr[PrevCaller[T, Unit]] = js.native
-  var round: js.UndefOr[Double] = js.native
-  var separator: js.UndefOr[String] = js.native
-  var style: js.UndefOr[String] = js.native
-  var suggest: js.UndefOr[js.Function2[/* input */ js.Any, /* choices */ js.Array[Choice], js.Promise[_]]] = js.native
-  var `type`: PromptType | Falsy | (PrevCaller[T, PromptType | Falsy]) = js.native
-  var validate: js.UndefOr[PrevCaller[T, Boolean | String | (js.Promise[Boolean | String])]] = js.native
+  var active: js.UndefOr[String] = js.undefined
+  var choices: js.UndefOr[js.Array[Choice]] = js.undefined
+  var float: js.UndefOr[Boolean] = js.undefined
+  var format: js.UndefOr[PrevCaller[T, Unit]] = js.undefined
+  var hint: js.UndefOr[String] = js.undefined
+  var inactive: js.UndefOr[String] = js.undefined
+  var increment: js.UndefOr[Double] = js.undefined
+  var initial: js.UndefOr[String | Double | Boolean | js.Date] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var mask: js.UndefOr[String] = js.undefined
+  var max: js.UndefOr[Double] = js.undefined
+  var message: js.UndefOr[ValueOrFunc[String]] = js.undefined
+  var min: js.UndefOr[Double] = js.undefined
+  var name: ValueOrFunc[T]
+  var onState: js.UndefOr[PrevCaller[T, Unit]] = js.undefined
+  var round: js.UndefOr[Double] = js.undefined
+  var separator: js.UndefOr[String] = js.undefined
+  var stdin: js.UndefOr[Readable] = js.undefined
+  var stdout: js.UndefOr[Writable] = js.undefined
+  var style: js.UndefOr[String] = js.undefined
+  var suggest: js.UndefOr[js.Function2[/* input */ js.Any, /* choices */ js.Array[Choice], js.Promise[_]]] = js.undefined
+  var `type`: PromptType | Falsy | (PrevCaller[T, PromptType | Falsy])
+  var validate: js.UndefOr[PrevCaller[T, Boolean | String | (js.Promise[Boolean | String])]] = js.undefined
 }
 
 object PromptObject {
   @scala.inline
-  def apply[T](name: ValueOrFunc[T]): PromptObject[T] = {
+  def apply[T](
+    name: ValueOrFunc[T],
+    active: String = null,
+    choices: js.Array[Choice] = null,
+    float: js.UndefOr[Boolean] = js.undefined,
+    format: (/* prev */ js.Any, /* values */ Answers[T], /* prompt */ PromptObject[String]) => Unit = null,
+    hint: String = null,
+    inactive: String = null,
+    increment: js.UndefOr[Double] = js.undefined,
+    initial: String | Double | Boolean | js.Date = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    mask: String = null,
+    max: js.UndefOr[Double] = js.undefined,
+    message: ValueOrFunc[String] = null,
+    min: js.UndefOr[Double] = js.undefined,
+    onState: (/* prev */ js.Any, /* values */ Answers[T], /* prompt */ PromptObject[String]) => Unit = null,
+    round: js.UndefOr[Double] = js.undefined,
+    separator: String = null,
+    stdin: Readable = null,
+    stdout: Writable = null,
+    style: String = null,
+    suggest: (/* input */ js.Any, /* choices */ js.Array[Choice]) => js.Promise[_] = null,
+    `type`: js.UndefOr[Null | PromptType | Falsy | (PrevCaller[T, PromptType | Falsy])] = js.undefined,
+    validate: (/* prev */ js.Any, /* values */ Answers[T], /* prompt */ PromptObject[String]) => Boolean | String | (js.Promise[Boolean | String]) = null
+  ): PromptObject[T] = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+    if (choices != null) __obj.updateDynamic("choices")(choices.asInstanceOf[js.Any])
+    if (!js.isUndefined(float)) __obj.updateDynamic("float")(float.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(js.Any.fromFunction3(format))
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (inactive != null) __obj.updateDynamic("inactive")(inactive.asInstanceOf[js.Any])
+    if (!js.isUndefined(increment)) __obj.updateDynamic("increment")(increment.get.asInstanceOf[js.Any])
+    if (initial != null) __obj.updateDynamic("initial")(initial.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (onState != null) __obj.updateDynamic("onState")(js.Any.fromFunction3(onState))
+    if (!js.isUndefined(round)) __obj.updateDynamic("round")(round.get.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
+    if (stdin != null) __obj.updateDynamic("stdin")(stdin.asInstanceOf[js.Any])
+    if (stdout != null) __obj.updateDynamic("stdout")(stdout.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (suggest != null) __obj.updateDynamic("suggest")(js.Any.fromFunction2(suggest))
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction3(validate))
     __obj.asInstanceOf[PromptObject[T]]
   }
-  @scala.inline
-  implicit class PromptObjectOps[Self[t] <: PromptObject[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withNameFunction3(value: (/* prev */ js.Any, /* values */ Answers[T], /* prompt */ PromptObject[String]) => T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withName(value: ValueOrFunc[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActive(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChoices(value: js.Array[Choice]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChoices: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloat(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloat: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: (/* prev */ js.Any, /* values */ Answers[T], /* prompt */ PromptObject[String]) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHint(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHint: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInactive(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inactive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInactive: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inactive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncrement(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncrement: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialDate(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitial(value: String | Double | Boolean | js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitial: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMask(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMask: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageFunction3(
-      value: (/* prev */ js.Any, /* values */ Answers[String], /* prompt */ PromptObject[String]) => String
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withMessage(value: ValueOrFunc[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnState(value: (/* prev */ js.Any, /* values */ Answers[T], /* prompt */ PromptObject[String]) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onState")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnState: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRound(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRound: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggest(value: (/* input */ js.Any, /* choices */ js.Array[Choice]) => js.Promise[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuggest: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeFunction3(
-      value: (/* prev */ js.Any, /* values */ Answers[T], /* prompt */ PromptObject[String]) => PromptType | Falsy
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: PromptType | Falsy | (PrevCaller[T, PromptType | Falsy])): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(null)
-        ret
-    }
-    @scala.inline
-    def withValidate(
-      value: (/* prev */ js.Any, /* values */ Answers[T], /* prompt */ PromptObject[String]) => Boolean | String | (js.Promise[Boolean | String])
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutValidate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

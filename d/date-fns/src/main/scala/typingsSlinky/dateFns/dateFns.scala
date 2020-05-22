@@ -1,6 +1,7 @@
 package typingsSlinky.dateFns
 
 import typingsSlinky.dateFns.anon.AdditionalDigits
+import typingsSlinky.dateFns.anon.Delimiter
 import typingsSlinky.dateFns.anon.Format
 import typingsSlinky.dateFns.anon.FractionDigits
 import typingsSlinky.dateFns.anon.Hours
@@ -145,7 +146,10 @@ trait dateFns extends js.Object {
   def differenceInYears(dateLeft: js.Date, dateRight: js.Date): Double = js.native
   def eachDayOfInterval(interval: Interval): js.Array[js.Date] = js.native
   def eachDayOfInterval(interval: Interval, options: Step): js.Array[js.Date] = js.native
+  def eachHourOfInterval(interval: Interval): js.Array[js.Date] = js.native
+  def eachHourOfInterval(interval: Interval, options: Step): js.Array[js.Date] = js.native
   def eachMonthOfInterval(interval: Interval): js.Array[js.Date] = js.native
+  def eachQuarterOfInterval(interval: Interval): js.Array[js.Date] = js.native
   def eachWeekOfInterval(interval: Interval): js.Array[js.Date] = js.native
   def eachWeekOfInterval(interval: Interval, options: WeekStartsOn): js.Array[js.Date] = js.native
   def eachWeekendOfInterval(interval: Interval): js.Array[js.Date] = js.native
@@ -207,6 +211,12 @@ trait dateFns extends js.Object {
   def formatDistanceToNow(date: Double, options: IncludeSeconds): String = js.native
   def formatDistanceToNow(date: js.Date): String = js.native
   def formatDistanceToNow(date: js.Date, options: IncludeSeconds): String = js.native
+  def formatDistanceToNowStrict(date: Double): String = js.native
+  def formatDistanceToNowStrict(date: Double, options: Unit): String = js.native
+  def formatDistanceToNowStrict(date: js.Date): String = js.native
+  def formatDistanceToNowStrict(date: js.Date, options: Unit): String = js.native
+  def formatDuration(duration: Duration): String = js.native
+  def formatDuration(duration: Duration, options: Delimiter): String = js.native
   def formatISO(date: Double): String = js.native
   def formatISO(date: Double, options: Format): String = js.native
   def formatISO(date: js.Date): String = js.native
@@ -215,6 +225,7 @@ trait dateFns extends js.Object {
   def formatISO9075(date: Double, options: Format): String = js.native
   def formatISO9075(date: js.Date): String = js.native
   def formatISO9075(date: js.Date, options: Format): String = js.native
+  def formatISODuration(duration: Duration): String = js.native
   def formatRFC3339(date: Double): String = js.native
   def formatRFC3339(date: Double, options: FractionDigits): String = js.native
   def formatRFC3339(date: js.Date): String = js.native
@@ -285,6 +296,7 @@ trait dateFns extends js.Object {
   def getWeeksInMonth(date: js.Date, options: WeekStartsOn): Double = js.native
   def getYear(date: Double): Double = js.native
   def getYear(date: js.Date): Double = js.native
+  def intervalToDuration(interval: Interval): Duration = js.native
   def isAfter(date: Double, dateToCompare: Double): Boolean = js.native
   def isAfter(date: Double, dateToCompare: js.Date): Boolean = js.native
   def isAfter(date: js.Date, dateToCompare: Double): Boolean = js.native

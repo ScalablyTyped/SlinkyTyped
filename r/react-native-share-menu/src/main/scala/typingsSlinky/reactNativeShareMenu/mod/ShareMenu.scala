@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShareMenu extends js.Object {
-  def clearSharedText(): Unit = js.native
-  def getSharedText(callback: js.Function1[/* text */ String, Unit]): Unit = js.native
+  def clearSharedText(): Unit
+  def getSharedText(callback: js.Function1[/* text */ String, Unit]): Unit
 }
 
 @JSImport("react-native-share-menu", "ShareMenu")

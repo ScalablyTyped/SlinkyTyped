@@ -22,41 +22,14 @@ trait SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingFrame extends js.Ob
 
 object SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingFrame {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingFrame = {
+  def apply(
+    normalizedBoundingBox: SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingBox = null,
+    timeOffset: String = null
+  ): SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingFrame = {
     val __obj = js.Dynamic.literal()
+    if (normalizedBoundingBox != null) __obj.updateDynamic("normalizedBoundingBox")(normalizedBoundingBox.asInstanceOf[js.Any])
+    if (timeOffset != null) __obj.updateDynamic("timeOffset")(timeOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingFrame]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingFrameOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingFrame] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNormalizedBoundingBox(value: SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizedBoundingBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalizedBoundingBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizedBoundingBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeOffset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

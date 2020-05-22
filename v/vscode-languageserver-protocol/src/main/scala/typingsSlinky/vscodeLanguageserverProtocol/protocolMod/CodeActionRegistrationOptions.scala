@@ -1,18 +1,19 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolMod
 
+import typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CodeActionRegistrationOptions
   extends TextDocumentRegistrationOptions
      with CodeActionOptions
 
 object CodeActionRegistrationOptions {
   @scala.inline
-  def apply(): CodeActionRegistrationOptions = {
-    val __obj = js.Dynamic.literal()
+  def apply(codeActionKinds: js.Array[CodeActionKind] = null, documentSelector: DocumentSelector = null): CodeActionRegistrationOptions = {
+    val __obj = js.Dynamic.literal(documentSelector = documentSelector.asInstanceOf[js.Any])
+    if (codeActionKinds != null) __obj.updateDynamic("codeActionKinds")(codeActionKinds.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeActionRegistrationOptions]
   }
 }

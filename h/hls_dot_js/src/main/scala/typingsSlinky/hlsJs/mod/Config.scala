@@ -7,20 +7,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
   /**
     * (default: 0.8)
     * Scale factor to be applied against measured bandwidth average, to determine whether we can stay on current or lower quality level.
     * If abrBandWidthFactor * bandwidth average < level.bitrate then ABR can switch to that level providing that it is equal or less than current level.
     */
-  var abrBandWidthFactor: Double = js.native
+  var abrBandWidthFactor: Double
   /**
     * (default: 0.7)
     * Scale factor to be applied against measured bandwidth average, to determine whether we can switch up to a higher quality level.
     * If abrBandWidthUpFactor * bandwidth average < level.bitrate then ABR can switch up to that quality level.
     */
-  var abrBandWidthUpFactor: Double = js.native
+  var abrBandWidthUpFactor: Double
   /**
     * (default: internal ABR controller)
     * Customized Adaptive Bitrate Streaming Controller.
@@ -29,91 +28,91 @@ trait Config extends js.Object {
     * get/set autoLevelCapping: capping/max level value that could be used by ABR Controller
     * destroy(): should clean-up all used resources
     */
-  var abrController: AbrController = js.native
+  var abrController: AbrController
   /**
     * (default: 500000)
     * Default bandwidth estimate in bits/second prior to collecting fragment bandwidth samples.
     * parameter should be a float
     */
-  var abrEwmaDefaultEstimate: Double = js.native
+  var abrEwmaDefaultEstimate: Double
   /**
     * (default: 5.0)
     * Fast bitrate Exponential moving average half-life, used to compute average bitrate for Live streams.
     * Half of the estimate is based on the last abrEwmaFastLive seconds of sample history. Each of the sample is weighted by the fragment loading duration.
     * parameter should be a float greater than 0
     */
-  var abrEwmaFastLive: Double = js.native
+  var abrEwmaFastLive: Double
   /**
     * (default: 4.0)
     * Fast bitrate Exponential moving average half-life, used to compute average bitrate for VoD streams.
     * Half of the estimate is based on the last abrEwmaFastVoD seconds of sample history. Each of the sample is weighted by the fragment loading duration.
     * parameter should be a float greater than 0
     */
-  var abrEwmaFastVod: Double = js.native
+  var abrEwmaFastVod: Double
   /**
     * (default: 9.0)
     * Slow bitrate Exponential moving average half-life, used to compute average bitrate for Live streams.
     * Half of the estimate is based on the last abrEwmaSlowLive seconds of sample history. Each of the sample is weighted by the fragment loading duration.
     * parameter should be a float greater than abrEwmaFastLive
     */
-  var abrEwmaSlowLive: Double = js.native
+  var abrEwmaSlowLive: Double
   /**
     * (default: 15.0)
     * Slow bitrate Exponential moving average half-life, used to compute average bitrate for VoD streams.
     * Half of the estimate is based on the last abrEwmaSlowVoD seconds of sample history. Each of the sample is weighted by the fragment loading duration.
     * parameter should be a float greater than abrEwmaFastVoD
     */
-  var abrEwmaSlowVod: Double = js.native
+  var abrEwmaSlowVod: Double
   /**
     * (default: false)
     * max bitrate used in ABR by avg measured bitrate i.e. if bitrate signaled in variant manifest for a given level is 2Mb/s but average bitrate measured on this level is 2.5Mb/s,
     * then if config value is set to true, ABR will use 2.5 Mb/s for this quality level.
     */
-  var abrMaxWithRealBitrate: Boolean = js.native
+  var abrMaxWithRealBitrate: Boolean
   /**
     * (default: 3)
     * Max number of sourceBuffer.appendBuffer() retry upon error. Such error could happen in loop with UHD streams, when internal buffer is full. (Quota Exceeding Error will be triggered).
     * In that case we need to wait for the browser to evict some data before being able to append buffer correctly.
     */
-  var appendErrorMaxRetry: Double = js.native
+  var appendErrorMaxRetry: Double
   /**
     * (default: true)
     * if set to true, start level playlist and first fragments will be loaded automatically, after triggering of Hls.Events.MANIFEST_PARSED event
     * if set to false, an explicit API call (hls.startLoad(startPosition=-1)) will be needed to start quality level/fragment loading.
     */
-  var autoStartLoad: Boolean = js.native
+  var autoStartLoad: Boolean
   /**
     * (default: false)
     * if set to true, the adaptive algorithm with limit levels usable in auto-quality by the HTML video element dimensions (width and height)
     * if set to false, levels will not be limited. All available levels could be used in auto-quality mode taking only bandwidth into consideration.
     */
-  var capLevelToPlayerSize: Boolean = js.native
+  var capLevelToPlayerSize: Boolean
   /**
     * (default: English)
     * Label for the text track generated for CEA-708 captions track 1. This is how it will appear in the browser's native menu for subtitles and captions.
     */
-  var captionsTextTrack1Label: String = js.native
+  var captionsTextTrack1Label: String
   /**
     * (default: en)
     * RFC 3066 language code for the text track generated for CEA-708 captions track 1.
     */
-  var captionsTextTrack1LanguagedCode: String = js.native
+  var captionsTextTrack1LanguagedCode: String
   /**
     * (default: Spanish)
     * Label for the text track generated for CEA-708 captions track 2. This is how it will appear in the browser's native menu for subtitles and captions.
     */
-  var captionsTextTrack2Label: String = js.native
+  var captionsTextTrack2Label: String
   /**
     * (default: es)
     * RFC 3066 language code for the text track generated for CEA-708 captions track 2.
     */
-  var captionsTextTrack2LanguageCode: String = js.native
+  var captionsTextTrack2LanguageCode: String
   /**
     * (default: false)
     * setting config.debug = true; will turn on debug logs on JS console.
     * a logger object could also be provided for custom logging: config.debug = customLogger;
     */
-  var debug: Boolean | CustomLoggerObject = js.native
+  var debug: Boolean | CustomLoggerObject
   /**
     * (default: undefined)
     * if audio codec is not signaled in variant manifest, or if only a stream manifest is provided, hls.js tries to guess audio codec by parsing audio sampling rate in ADTS header.
@@ -124,40 +123,40 @@ trait Config extends js.Object {
     * mp4a.40.5 (HE-AAC) or
     * undefined (guess based on sampling rate)
     */
-  var defaultAudioCodec: String = js.native
+  var defaultAudioCodec: String
   /**
     * (default: true)
     * whether or not to enable CEA-708 captions
     */
-  var enableCEA708Captions: Boolean = js.native
+  var enableCEA708Captions: Boolean
   /**
     * (default: true)
     * Enable to use JavaScript version AES decryption for fallback of WebCrypto API.
     */
-  var enableSoftwareAES: Boolean = js.native
+  var enableSoftwareAES: Boolean
   /**
     * (default: true)
     * Whether or not to enable WebVTT captions on HLS
     */
-  var enableWebVTT: js.UndefOr[Boolean] = js.native
+  var enableWebVTT: js.UndefOr[Boolean] = js.undefined
   /**
     * (default: true)
     * Enable WebWorker (if available on browser) for TS demuxing/MP4 remuxing, to improve performance and avoid lag/frame drops.
     */
-  var enableWorker: Boolean = js.native
+  var enableWorker: Boolean
   /**
     * (default: undefined)
     * This enables the manipulation of the fragment loader.
     * Note: This will overwrite the default loader, as well as your own loader function.
     */
-  var fLoader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.native
+  var fLoader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.undefined
   /**
     * (default: undefined)
     * Fetch customization callback for Fetch based loader.
     * Parameter should be a function with two arguments (context and Request Init Params).
     * If fetchSetup is specified and Fetch loader is used, fetchSetup will be triggered to instantiate Request Object. This allows user to easily tweak Fetch loader.
     */
-  var fetchSetup: js.UndefOr[js.Function2[/* context */ js.Any, /* initParams */ js.Any, Request]] = js.native
+  var fetchSetup: js.UndefOr[js.Function2[/* context */ js.Any, /* initParams */ js.Any, Request]] = js.undefined
   /**
     * (default: true)
     * Whether or not to force having a key frame in the first AVC sample after a discontinuity.
@@ -165,17 +164,17 @@ trait Config extends js.Object {
     * If set to false, all AVC samples will be kept, which can help avoid holes in the stream.
     * Setting this parameter to false can also generate decoding weirdness when switching level or seeking.
     */
-  var forceKeyFrameOnDiscontinuity: Boolean = js.native
+  var forceKeyFrameOnDiscontinuity: Boolean
   /**
     * (default: 3)
     * Max number of load retries.
     */
-  var fragLoadingMaxRetry: Double = js.native
+  var fragLoadingMaxRetry: Double
   /**
     * (default: 64000 ms)
     * Maximum frag/manifest/key retry timeout (in milliseconds) in case I/O errors are met.
     */
-  var fragLoadingMaxRetryDelay: Double = js.native
+  var fragLoadingMaxRetryDelay: Double
   /**
     * (default: 1000 ms)
     * Initial delay between XMLHttpRequest error and first load retry (in ms).
@@ -183,34 +182,34 @@ trait Config extends js.Object {
     * capped to fragLoadingMaxRetryTimeout / manifestLoadingMaxRetryTimeout / levelLoadingMaxRetryTimeout value (exponential backoff).
     * Prefetch start fragment although media not attached.
     */
-  var fragLoadingRetryDelay: Double = js.native
+  var fragLoadingRetryDelay: Double
   /**
     * (default: 60000ms for fragment)
     * URL Loader timeout. A timeout callback will be triggered if loading duration exceeds this timeout. no further action will be done : the load operation will not be cancelled/aborted.
     * It is up to the application to catch this event and treat it as needed.
     */
-  var fragLoadingTimeOut: Double = js.native
+  var fragLoadingTimeOut: Double
   /**
     * (default: 3s)
     * if media element is expected to play and if currentTime has not moved for more than highBufferWatchdogPeriod and if there are more than maxBufferHole seconds buffered upfront,
     * hls.js will try to nudge playhead to recover playback
     */
-  var highBufferWatchdogPeriod: Double = js.native
+  var highBufferWatchdogPeriod: Double
   /**
     * (default: 1)
     * number of segments needed to start a playback of Live stream.
     */
-  var initialLiveManifestSize: Double = js.native
+  var initialLiveManifestSize: Double
   /**
     * (default: 3)
     * Max number of load retries.
     */
-  var levelLoadingMaxRetry: Double = js.native
+  var levelLoadingMaxRetry: Double
   /**
     * (default: 64000 ms)
     * Maximum frag/manifest/key retry timeout (in milliseconds) in case I/O errors are met.
     */
-  var levelLoadingMaxRetryTimeout: Double = js.native
+  var levelLoadingMaxRetryTimeout: Double
   /**
     * (default: 1000 ms)
     * Initial delay between XMLHttpRequest error and first load retry (in ms).
@@ -218,13 +217,13 @@ trait Config extends js.Object {
     * capped to fragLoadingMaxRetryTimeout / manifestLoadingMaxRetryTimeout / levelLoadingMaxRetryTimeout value (exponential backoff).
     * Prefetch start fragment although media not attached.
     */
-  var levelLoadingRetryDelay: Double = js.native
+  var levelLoadingRetryDelay: Double
   /**
     * (default: 60000ms for fragment)
     * URL Loader timeout. A timeout callback will be triggered if loading duration exceeds this timeout. no further action will be done : the load operation will not be cancelled/aborted.
     * It is up to the application to catch this event and treat it as needed.
     */
-  var levelLoadingTimeOut: Double = js.native
+  var levelLoadingTimeOut: Double
   /**
     * (default: Infinity)
     * Sets the maximum length of the buffer, in seconds, to keep during a live stream. Any video
@@ -232,14 +231,14 @@ trait Config extends js.Object {
     * 0 keeps the minimum amount. The minimum amount is equal to the target duration of a segment
     * to ensure that current playback is not interrupted.
     */
-  var liveBackBufferLength: Double = js.native
+  var liveBackBufferLength: Double
   /**
     * (default: false)
     * Override current Media Source duration to Infinity for a live broadcast. Useful, if you are building a player which relies
     * on native UI capabilities in modern browsers. If you want to have a native Live UI in environments like iOS Safari, Safari,
     * Android Google Chrome, etc. set this value to true.
     */
-  var liveDurationInfinity: Boolean = js.native
+  var liveDurationInfinity: Boolean
   /**
     * (default: undefined)
     * Alternative parameter to liveMaxLatencyDurationCount, expressed in seconds vs number of segments.
@@ -248,14 +247,14 @@ trait Config extends js.Object {
     * You can't define this parameter and either liveSyncDurationCount or liveMaxLatencyDurationCount in your configuration object at the same time.
     * A value too close from liveSyncDuration is likely to cause playback stalls.
     */
-  var liveMaxLatencyDuration: Double = js.native
+  var liveMaxLatencyDuration: Double
   /**
     * (default: Infinity)
     * maximum delay allowed from edge of live, expressed in multiple of EXT-X-TARGETDURATION.
     * If set to 10, the player will seek back to liveSyncDurationCount whenever the next fragment to be loaded is older than N-10, N being the last fragment of the live playlist.
     * If set, this value must be stricly superior to liveSyncDurationCount a value too close from liveSyncDurationCount is likely to cause playback stalls.
     */
-  var liveMaxLatencyDurationCount: Double = js.native
+  var liveMaxLatencyDurationCount: Double
   /**
     * (default: undefined)
     * Alternative parameter to liveSyncDurationCount, expressed in seconds vs number of segments.
@@ -263,36 +262,36 @@ trait Config extends js.Object {
     * You can't define this parameter and either liveSyncDurationCount or liveMaxLatencyDurationCount in your configuration object at the same time.
     * A value too low (inferior to ~3 segment durations) is likely to cause playback stalls.
     */
-  var liveSyncDuration: Double = js.native
+  var liveSyncDuration: Double
   /**
     * (default: 3)
     * edge of live delay, expressed in multiple of EXT-X-TARGETDURATION. if set to 3, playback will start from fragment N-3, N being the last fragment of the live playlist.
     * Decreasing this value is likely to cause playback stalls.
     */
-  var liveSyncDurationCount: Double = js.native
+  var liveSyncDurationCount: Double
   /**
     * (default: standard XMLHttpRequest-based URL loader)
     * Override standard URL loader by a custom one. Could be useful for P2P or stubbing (testing).
     * Use this, if you want to overwrite both the fragment and the playlist loader.
     * Note: If fLoader or pLoader are used, they overwrite loader!
     */
-  var loader: Instantiable1[/* config */ LoaderConfig, Loader] = js.native
+  var loader: Instantiable1[/* config */ LoaderConfig, Loader]
   /**
     * (default: 0.5s)
     * media element is expected to play and if currentTime has not moved for more than lowBufferWatchdogPeriod and if there are less than maxBufferHole seconds buffered upfront,
     * hls.js will try to nudge playhead to recover playback
     */
-  var lowBufferWatchdogPeriod: Double = js.native
+  var lowBufferWatchdogPeriod: Double
   /**
     * (default: 3)
     * Max number of load retries.
     */
-  var manifestLoadingMaxRetry: Double = js.native
+  var manifestLoadingMaxRetry: Double
   /**
     * (default: 64000 ms)
     * Maximum frag/manifest/key retry timeout (in milliseconds) in case I/O errors are met.
     */
-  var manifestLoadingMaxRetryTimeout: Double = js.native
+  var manifestLoadingMaxRetryTimeout: Double
   /**
     * (default: 1000 ms)
     * Initial delay between XMLHttpRequest error and first load retry (in ms).
@@ -300,13 +299,13 @@ trait Config extends js.Object {
     * capped to fragLoadingMaxRetryTimeout / manifestLoadingMaxRetryTimeout / levelLoadingMaxRetryTimeout value (exponential backoff).
     * Prefetch start fragment although media not attached.
     */
-  var manifestLoadingRetryDelay: Double = js.native
+  var manifestLoadingRetryDelay: Double
   /**
     * (default: 10000ms for level and manifest)
     * URL Loader timeout. A timeout callback will be triggered if loading duration exceeds this timeout. no further action will be done : the load operation will not be cancelled/aborted.
     * It is up to the application to catch this event and treat it as needed.
     */
-  var manifestLoadingTimeOut: Double = js.native
+  var manifestLoadingTimeOut: Double
   /**
     * (default: 1)
     * Browsers are really strict about audio frames timings. They usually play audio frames one after the other, regardless of
@@ -320,25 +319,25 @@ trait Config extends js.Object {
     * Parameter should be an integer representing the max number of audio frames allowed to drifter. Keep in mind that one
     * audio frame is 1024 audio samples (if using AAC), at 44.1 kHz, it gives 1024/44100 = 23ms.
     */
-  var maxAudioFramesDrift: Double = js.native
+  var maxAudioFramesDrift: Double
   /**
     * (default: 0.5 seconds)
     * 'Maximum' inter-fragment buffer hole tolerance that hls.js can cope with when searching for the next fragment to load. When switching between quality level,
     * fragments might not be perfectly aligned.
     * This could result in small overlapping or hole in media buffer. This tolerance factor helps cope with this.
     */
-  var maxBufferHole: Double = js.native
+  var maxBufferHole: Double
   /**
     * (default: 30 seconds)
     * Maximum buffer length in seconds. If buffer length is/become less than this value, a new fragment will be loaded.
     * This is the guaranteed buffer length hls.js will try to reach, regardless of maxBufferSize.
     */
-  var maxBufferLength: Double = js.native
+  var maxBufferLength: Double
   /**
     * (default: 60 MB)
     * 'Minimum' maximum buffer size in bytes. If buffer size upfront is bigger than this value, no fragment will be loaded
     */
-  var maxBufferSize: Double = js.native
+  var maxBufferSize: Double
   /**
     * (default 4s)
     *
@@ -346,7 +345,7 @@ trait Config extends js.Object {
     * the time to fetch the first fragment at lowest quality level + the time to fetch the fragment at the appropriate quality level is less
     * than maxLoadingDelay )
     */
-  var maxFragLookUpTolerance: Double = js.native
+  var maxFragLookUpTolerance: Double
   /**
     * (default 0.2s)
     * This tolerance factor is used during fragment lookup.
@@ -361,7 +360,7 @@ trait Config extends js.Object {
     *      frag[1] : [9.8,19.8]
     *  This time, buffered.end is within frag[1] range, and frag[1] will be the next fragment to be loaded, as expected
     */
-  var maxLoadingDelay: Double = js.native
+  var maxLoadingDelay: Double
   /**
     * (default 600s)
     * Maximum buffer length in seconds. Hls.js will never exceed this value, even if maxBufferSize is not reached yet.
@@ -370,14 +369,14 @@ trait Config extends js.Object {
     * maxBufferLength is the minimum guaranteed buffer length that hls.js will try to achieve, even if that value exceeds the amount of bytes 60 MB of memory.
     * maxMaxBufferLength acts as a capping value, as if bitrate is really low, you could need more than one hour of buffer to fill 60 MB.
     */
-  var maxMaxBufferLength: Double = js.native
+  var maxMaxBufferLength: Double
   /**
     * (default: 2s)
     * In case playback is stalled, and a buffered range is available upfront, less than maxSeekHole seconds from current media position,
     * hls.js will jump over this buffer hole to reach the beginning of this following buffered range.
     * maxSeekHole allows to configure this jumpable threshold.
     */
-  var maxSeekHole: Double = js.native
+  var maxSeekHole: Double
   /**
     * (default: 4s)
     *
@@ -386,68 +385,68 @@ trait Config extends js.Object {
     * ie we can forecast around 1s of rebuffering ...) then ABR algorithm will try to find a level that should guarantee less than
     * maxStarvationDelay of buffering.
     */
-  var maxStarvationDelay: Double = js.native
+  var maxStarvationDelay: Double
   /**
     * (default: 0)
     * Return the capping/min bandwidth value that could be used by automatic level selection algorithm.
     * Useful when browser or tab of the browser is not in the focus and bandwidth drops
     */
-  var minAutoBitrate: Double = js.native
+  var minAutoBitrate: Double
   /**
     * (default: 3s)
     * In case playback continues to stall after first playhead nudging, currentTime will be nudged evenmore following nudgeOffset to try to restore playback.
     * media.currentTime += (nb nudge retry -1)*nudgeOffset
     */
-  var nudgeMaxRetry: Double = js.native
+  var nudgeMaxRetry: Double
   /**
     * (default: 0.1s)
     * In case playback continues to stall after first playhead nudging, currentTime will be nudged evenmore following nudgeOffset to try to restore playback.
     * media.currentTime += (nb nudge retry -1)*nudgeOffset
     */
-  var nudgeOffset: Double = js.native
+  var nudgeOffset: Double
   /**
     * (default: undefined)
     * This enables the manipulation of the playlist loader.
     * Note: This will overwrite the default loader, as well as your own loader function.
     */
-  var pLoader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.native
+  var pLoader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.undefined
   /**
     * (default: false)
     * Start prefetching start fragment although media not attached yet. Max number of append retries.
     */
-  var startFragPrefetch: Boolean = js.native
+  var startFragPrefetch: Boolean
   /**
     * (default: undefined)
     * When set, use this level as the default hls.startLevel. Keep in mind that the startLevel set with the API takes precedence over
     * config.startLevel configuration parameter.
     */
-  var startLevel: Double = js.native
+  var startLevel: Double
   /**
     * (default -1)
     * if set to -1, playback will start from initialTime=0 for VoD and according to liveSyncDuration/liveSyncDurationCount config params for Live
     * otherwise, playback will start from predefined value. (unless stated otherwise in autoStartLoad=false mode : in that case startPosition can be overrided using hls.startLoad(startPosition)).
     */
-  var startPosition: Double = js.native
+  var startPosition: Double
   /**
     * (default: false)
     * If a segment's video track is shorter than its audio track by > min(maxSeekHole, maxBufferHole), extend the final video frame's duration to match the audio track's duration.
     * This helps playback continue in certain cases that might otherwise get stuck.
     */
-  var stretchShortVideoTrack: Boolean = js.native
+  var stretchShortVideoTrack: Boolean
   /**
     * (default: internal track timeline controller)
     * Customized text track syncronization controller.
     * Parameter should be a class with a destroy() method:
     * destroy() : should clean-up all used resources
     */
-  var timelineController: TimelineController = js.native
+  var timelineController: TimelineController
   /**
     * (default: undefined)
     * XMLHttpRequest customization callback for default XHR based loader.
     * Parameter should be a function with two arguments (xhr: XMLHttpRequest, url: string).
     * If xhrSetup is specified, default loader will invoke it before calling xhr.send(). This allows user to easily modify/setup XHR.
     */
-  var xhrSetup: js.UndefOr[js.Function2[/* xhr */ XMLHttpRequest, /* url */ String, Unit]] = js.native
+  var xhrSetup: js.UndefOr[js.Function2[/* xhr */ XMLHttpRequest, /* url */ String, Unit]] = js.undefined
 }
 
 object Config {
@@ -513,444 +512,20 @@ object Config {
     startLevel: Double,
     startPosition: Double,
     stretchShortVideoTrack: Boolean,
-    timelineController: TimelineController
+    timelineController: TimelineController,
+    enableWebVTT: js.UndefOr[Boolean] = js.undefined,
+    fLoader: Instantiable1[/* config */ LoaderConfig, Loader] = null,
+    fetchSetup: (/* context */ js.Any, /* initParams */ js.Any) => Request = null,
+    pLoader: Instantiable1[/* config */ LoaderConfig, Loader] = null,
+    xhrSetup: (/* xhr */ XMLHttpRequest, /* url */ String) => Unit = null
   ): Config = {
     val __obj = js.Dynamic.literal(abrBandWidthFactor = abrBandWidthFactor.asInstanceOf[js.Any], abrBandWidthUpFactor = abrBandWidthUpFactor.asInstanceOf[js.Any], abrController = abrController.asInstanceOf[js.Any], abrEwmaDefaultEstimate = abrEwmaDefaultEstimate.asInstanceOf[js.Any], abrEwmaFastLive = abrEwmaFastLive.asInstanceOf[js.Any], abrEwmaFastVod = abrEwmaFastVod.asInstanceOf[js.Any], abrEwmaSlowLive = abrEwmaSlowLive.asInstanceOf[js.Any], abrEwmaSlowVod = abrEwmaSlowVod.asInstanceOf[js.Any], abrMaxWithRealBitrate = abrMaxWithRealBitrate.asInstanceOf[js.Any], appendErrorMaxRetry = appendErrorMaxRetry.asInstanceOf[js.Any], autoStartLoad = autoStartLoad.asInstanceOf[js.Any], capLevelToPlayerSize = capLevelToPlayerSize.asInstanceOf[js.Any], captionsTextTrack1Label = captionsTextTrack1Label.asInstanceOf[js.Any], captionsTextTrack1LanguagedCode = captionsTextTrack1LanguagedCode.asInstanceOf[js.Any], captionsTextTrack2Label = captionsTextTrack2Label.asInstanceOf[js.Any], captionsTextTrack2LanguageCode = captionsTextTrack2LanguageCode.asInstanceOf[js.Any], debug = debug.asInstanceOf[js.Any], defaultAudioCodec = defaultAudioCodec.asInstanceOf[js.Any], enableCEA708Captions = enableCEA708Captions.asInstanceOf[js.Any], enableSoftwareAES = enableSoftwareAES.asInstanceOf[js.Any], enableWorker = enableWorker.asInstanceOf[js.Any], forceKeyFrameOnDiscontinuity = forceKeyFrameOnDiscontinuity.asInstanceOf[js.Any], fragLoadingMaxRetry = fragLoadingMaxRetry.asInstanceOf[js.Any], fragLoadingMaxRetryDelay = fragLoadingMaxRetryDelay.asInstanceOf[js.Any], fragLoadingRetryDelay = fragLoadingRetryDelay.asInstanceOf[js.Any], fragLoadingTimeOut = fragLoadingTimeOut.asInstanceOf[js.Any], highBufferWatchdogPeriod = highBufferWatchdogPeriod.asInstanceOf[js.Any], initialLiveManifestSize = initialLiveManifestSize.asInstanceOf[js.Any], levelLoadingMaxRetry = levelLoadingMaxRetry.asInstanceOf[js.Any], levelLoadingMaxRetryTimeout = levelLoadingMaxRetryTimeout.asInstanceOf[js.Any], levelLoadingRetryDelay = levelLoadingRetryDelay.asInstanceOf[js.Any], levelLoadingTimeOut = levelLoadingTimeOut.asInstanceOf[js.Any], liveBackBufferLength = liveBackBufferLength.asInstanceOf[js.Any], liveDurationInfinity = liveDurationInfinity.asInstanceOf[js.Any], liveMaxLatencyDuration = liveMaxLatencyDuration.asInstanceOf[js.Any], liveMaxLatencyDurationCount = liveMaxLatencyDurationCount.asInstanceOf[js.Any], liveSyncDuration = liveSyncDuration.asInstanceOf[js.Any], liveSyncDurationCount = liveSyncDurationCount.asInstanceOf[js.Any], loader = loader.asInstanceOf[js.Any], lowBufferWatchdogPeriod = lowBufferWatchdogPeriod.asInstanceOf[js.Any], manifestLoadingMaxRetry = manifestLoadingMaxRetry.asInstanceOf[js.Any], manifestLoadingMaxRetryTimeout = manifestLoadingMaxRetryTimeout.asInstanceOf[js.Any], manifestLoadingRetryDelay = manifestLoadingRetryDelay.asInstanceOf[js.Any], manifestLoadingTimeOut = manifestLoadingTimeOut.asInstanceOf[js.Any], maxAudioFramesDrift = maxAudioFramesDrift.asInstanceOf[js.Any], maxBufferHole = maxBufferHole.asInstanceOf[js.Any], maxBufferLength = maxBufferLength.asInstanceOf[js.Any], maxBufferSize = maxBufferSize.asInstanceOf[js.Any], maxFragLookUpTolerance = maxFragLookUpTolerance.asInstanceOf[js.Any], maxLoadingDelay = maxLoadingDelay.asInstanceOf[js.Any], maxMaxBufferLength = maxMaxBufferLength.asInstanceOf[js.Any], maxSeekHole = maxSeekHole.asInstanceOf[js.Any], maxStarvationDelay = maxStarvationDelay.asInstanceOf[js.Any], minAutoBitrate = minAutoBitrate.asInstanceOf[js.Any], nudgeMaxRetry = nudgeMaxRetry.asInstanceOf[js.Any], nudgeOffset = nudgeOffset.asInstanceOf[js.Any], startFragPrefetch = startFragPrefetch.asInstanceOf[js.Any], startLevel = startLevel.asInstanceOf[js.Any], startPosition = startPosition.asInstanceOf[js.Any], stretchShortVideoTrack = stretchShortVideoTrack.asInstanceOf[js.Any], timelineController = timelineController.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableWebVTT)) __obj.updateDynamic("enableWebVTT")(enableWebVTT.get.asInstanceOf[js.Any])
+    if (fLoader != null) __obj.updateDynamic("fLoader")(fLoader.asInstanceOf[js.Any])
+    if (fetchSetup != null) __obj.updateDynamic("fetchSetup")(js.Any.fromFunction2(fetchSetup))
+    if (pLoader != null) __obj.updateDynamic("pLoader")(pLoader.asInstanceOf[js.Any])
+    if (xhrSetup != null) __obj.updateDynamic("xhrSetup")(js.Any.fromFunction2(xhrSetup))
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbrBandWidthFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrBandWidthFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbrBandWidthUpFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrBandWidthUpFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbrController(value: AbrController): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrController")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbrEwmaDefaultEstimate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaDefaultEstimate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbrEwmaFastLive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaFastLive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbrEwmaFastVod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaFastVod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbrEwmaSlowLive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaSlowLive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbrEwmaSlowVod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaSlowVod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbrMaxWithRealBitrate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abrMaxWithRealBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppendErrorMaxRetry(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendErrorMaxRetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoStartLoad(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStartLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCapLevelToPlayerSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capLevelToPlayerSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionsTextTrack1Label(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack1Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionsTextTrack1LanguagedCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack1LanguagedCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionsTextTrack2Label(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack2Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptionsTextTrack2LanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack2LanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean | CustomLoggerObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultAudioCodec(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAudioCodec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableCEA708Captions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCEA708Captions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableSoftwareAES(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSoftwareAES")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableWorker(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWorker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForceKeyFrameOnDiscontinuity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceKeyFrameOnDiscontinuity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFragLoadingMaxRetry(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingMaxRetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFragLoadingMaxRetryDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingMaxRetryDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFragLoadingRetryDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingRetryDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFragLoadingTimeOut(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingTimeOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHighBufferWatchdogPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highBufferWatchdogPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialLiveManifestSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLiveManifestSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLevelLoadingMaxRetry(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingMaxRetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLevelLoadingMaxRetryTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingMaxRetryTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLevelLoadingRetryDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingRetryDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLevelLoadingTimeOut(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingTimeOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLiveBackBufferLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveBackBufferLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLiveDurationInfinity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveDurationInfinity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLiveMaxLatencyDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveMaxLatencyDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLiveMaxLatencyDurationCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveMaxLatencyDurationCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLiveSyncDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSyncDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLiveSyncDurationCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSyncDurationCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoader(value: Instantiable1[/* config */ LoaderConfig, Loader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLowBufferWatchdogPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowBufferWatchdogPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManifestLoadingMaxRetry(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingMaxRetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManifestLoadingMaxRetryTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingMaxRetryTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManifestLoadingRetryDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingRetryDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManifestLoadingTimeOut(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingTimeOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxAudioFramesDrift(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAudioFramesDrift")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxBufferHole(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferHole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxBufferLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxBufferSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxFragLookUpTolerance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFragLookUpTolerance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxLoadingDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLoadingDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxMaxBufferLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMaxBufferLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxSeekHole(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSeekHole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxStarvationDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStarvationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinAutoBitrate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minAutoBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNudgeMaxRetry(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeMaxRetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNudgeOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartFragPrefetch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startFragPrefetch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStretchShortVideoTrack(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stretchShortVideoTrack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimelineController(value: TimelineController): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineController")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableWebVTT(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWebVTT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableWebVTT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWebVTT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFLoader(value: Instantiable1[/* config */ LoaderConfig, Loader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fLoader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFLoader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fLoader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchSetup(value: (/* context */ js.Any, /* initParams */ js.Any) => Request): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchSetup")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFetchSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchSetup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPLoader(value: Instantiable1[/* config */ LoaderConfig, Loader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pLoader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPLoader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pLoader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXhrSetup(value: (/* xhr */ XMLHttpRequest, /* url */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSetup")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutXhrSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSetup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

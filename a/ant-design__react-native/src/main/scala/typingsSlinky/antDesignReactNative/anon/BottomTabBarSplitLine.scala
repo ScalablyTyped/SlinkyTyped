@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BottomTabBarSplitLine extends js.Object {
-  var bottomTabBarSplitLine: RegisteredStyle[ViewStyle] = js.native
-  var container: RegisteredStyle[ViewStyle] = js.native
-  var topTabBarSplitLine: RegisteredStyle[ViewStyle] = js.native
+  var bottomTabBarSplitLine: RegisteredStyle[ViewStyle]
+  var container: RegisteredStyle[ViewStyle]
+  var topTabBarSplitLine: RegisteredStyle[ViewStyle]
 }
 
 object BottomTabBarSplitLine {
@@ -23,31 +22,5 @@ object BottomTabBarSplitLine {
     val __obj = js.Dynamic.literal(bottomTabBarSplitLine = bottomTabBarSplitLine.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], topTabBarSplitLine = topTabBarSplitLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[BottomTabBarSplitLine]
   }
-  @scala.inline
-  implicit class BottomTabBarSplitLineOps[Self <: BottomTabBarSplitLine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottomTabBarSplitLine(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomTabBarSplitLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopTabBarSplitLine(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topTabBarSplitLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -18,35 +18,10 @@ trait StateExitedEventDetails extends js.Object {
 
 object StateExitedEventDetails {
   @scala.inline
-  def apply(name: Name): StateExitedEventDetails = {
+  def apply(name: Name, output: SensitiveData = null): StateExitedEventDetails = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
     __obj.asInstanceOf[StateExitedEventDetails]
   }
-  @scala.inline
-  implicit class StateExitedEventDetailsOps[Self <: StateExitedEventDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutput(value: SensitiveData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

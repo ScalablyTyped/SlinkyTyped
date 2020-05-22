@@ -26,47 +26,15 @@ trait CreateDatasetImportJobRequest extends js.Object {
 
 object CreateDatasetImportJobRequest {
   @scala.inline
-  def apply(DataSource: DataSource, DatasetArn: Arn, DatasetImportJobName: Name): CreateDatasetImportJobRequest = {
+  def apply(
+    DataSource: DataSource,
+    DatasetArn: Arn,
+    DatasetImportJobName: Name,
+    TimestampFormat: TimestampFormat = null
+  ): CreateDatasetImportJobRequest = {
     val __obj = js.Dynamic.literal(DataSource = DataSource.asInstanceOf[js.Any], DatasetArn = DatasetArn.asInstanceOf[js.Any], DatasetImportJobName = DatasetImportJobName.asInstanceOf[js.Any])
+    if (TimestampFormat != null) __obj.updateDynamic("TimestampFormat")(TimestampFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDatasetImportJobRequest]
   }
-  @scala.inline
-  implicit class CreateDatasetImportJobRequestOps[Self <: CreateDatasetImportJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSource(value: DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatasetArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatasetImportJobName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetImportJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimestampFormat(value: TimestampFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

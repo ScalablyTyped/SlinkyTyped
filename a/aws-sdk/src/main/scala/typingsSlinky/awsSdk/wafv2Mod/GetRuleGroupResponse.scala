@@ -18,41 +18,11 @@ trait GetRuleGroupResponse extends js.Object {
 
 object GetRuleGroupResponse {
   @scala.inline
-  def apply(): GetRuleGroupResponse = {
+  def apply(LockToken: LockToken = null, RuleGroup: RuleGroup = null): GetRuleGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (LockToken != null) __obj.updateDynamic("LockToken")(LockToken.asInstanceOf[js.Any])
+    if (RuleGroup != null) __obj.updateDynamic("RuleGroup")(RuleGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRuleGroupResponse]
   }
-  @scala.inline
-  implicit class GetRuleGroupResponseOps[Self <: GetRuleGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLockToken(value: LockToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LockToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LockToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleGroup(value: RuleGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

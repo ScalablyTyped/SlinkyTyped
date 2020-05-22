@@ -22,25 +22,5 @@ object StartProjectVersionRequest {
     val __obj = js.Dynamic.literal(MinInferenceUnits = MinInferenceUnits.asInstanceOf[js.Any], ProjectVersionArn = ProjectVersionArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartProjectVersionRequest]
   }
-  @scala.inline
-  implicit class StartProjectVersionRequestOps[Self <: StartProjectVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMinInferenceUnits(value: InferenceUnits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinInferenceUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjectVersionArn(value: ProjectVersionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectVersionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

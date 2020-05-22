@@ -1,5 +1,9 @@
 package typingsSlinky.amapJsApiDriving.AMap.Driving
 
+import typingsSlinky.amapJsApi.AMap.LngLat
+import typingsSlinky.amapJsApiDriving.anon.IsWaypoint
+import typingsSlinky.amapJsApiDriving.anon.PoiisWaypointboolean
+import typingsSlinky.amapJsApiPlaceSearch.AMap.PlaceSearch.PoiExt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +16,36 @@ trait SearchResult extends js.Object
 
 object SearchResult {
   @scala.inline
-  implicit def apply(value: SearchResultBase): SearchResult = value.asInstanceOf[SearchResult]
+  def SearchResultBase(
+    destination: LngLat,
+    end: Poi,
+    info: String,
+    origin: LngLat,
+    routes: js.Array[DriveRoute],
+    start: Poi,
+    waypoints: js.Array[PoiisWaypointboolean],
+    taxi_cost: js.UndefOr[Double] = js.undefined
+  ): SearchResult = {
+    val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], routes = routes.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], waypoints = waypoints.asInstanceOf[js.Any])
+    if (!js.isUndefined(taxi_cost)) __obj.updateDynamic("taxi_cost")(taxi_cost.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SearchResult]
+  }
   @scala.inline
-  implicit def apply(value: SearchResultExt): SearchResult = value.asInstanceOf[SearchResult]
+  def SearchResultExt(
+    destination: LngLat,
+    destinationName: String,
+    end: PoiExt,
+    info: String,
+    origin: LngLat,
+    originName: String,
+    routes: js.Array[DriveRoute],
+    start: PoiExt,
+    waypoints: js.Array[PoiExt with IsWaypoint],
+    taxi_cost: js.UndefOr[Double] = js.undefined
+  ): SearchResult = {
+    val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], destinationName = destinationName.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], originName = originName.asInstanceOf[js.Any], routes = routes.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], waypoints = waypoints.asInstanceOf[js.Any])
+    if (!js.isUndefined(taxi_cost)) __obj.updateDynamic("taxi_cost")(taxi_cost.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SearchResult]
+  }
 }
 

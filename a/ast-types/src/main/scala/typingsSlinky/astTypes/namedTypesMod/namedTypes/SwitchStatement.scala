@@ -14,18 +14,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Statement, 'type'> */
-@js.native
 trait SwitchStatement
   extends ASTNode
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var cases: js.Array[SwitchCaseKind] = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var discriminant: ExpressionKind = js.native
-  var lexical: js.UndefOr[Boolean] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.SwitchStatement = js.native
+  var cases: js.Array[SwitchCaseKind]
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var discriminant: ExpressionKind
+  var lexical: js.UndefOr[Boolean] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.SwitchStatement
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.SwitchStatement")

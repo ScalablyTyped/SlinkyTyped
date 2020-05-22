@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   *
   * @class MouseConstraint
   */
-@js.native
 trait MouseConstraint extends js.Object {
   /**
     * The `Body` that is currently being moved by the user, or `null` if no body.
@@ -21,7 +20,7 @@ trait MouseConstraint extends js.Object {
     * @type body
     * @default null
     */
-  var body: BodyType = js.native
+  var body: BodyType
   /**
     * An `Object` that specifies the collision filter properties.
     * The collision filter allows the user to define which types of body this mouse constraint can interact with.
@@ -30,14 +29,14 @@ trait MouseConstraint extends js.Object {
     * @property collisionFilter
     * @type object
     */
-  var collisionFilter: ICollisionFilter = js.native
+  var collisionFilter: ICollisionFilter
   /**
     * The `Constraint` object that is used to move the body during interaction.
     *
     * @property constraint
     * @type constraint
     */
-  var constraint: ConstraintType = js.native
+  var constraint: ConstraintType
   /**
     * A `String` denoting the type of object.
     *
@@ -45,7 +44,7 @@ trait MouseConstraint extends js.Object {
     * @type string
     * @default "constraint"
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object MouseConstraint {
@@ -55,37 +54,5 @@ object MouseConstraint {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MouseConstraint]
   }
-  @scala.inline
-  implicit class MouseConstraintOps[Self <: MouseConstraint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: BodyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCollisionFilter(value: ICollisionFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collisionFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConstraint(value: ConstraintType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -11,83 +11,40 @@ import scala.scalajs.js.annotation._
   * object (for example length of queue in cloud messaging service, or QPS from loadbalancer
   * running outside of cluster). Exactly one "target" type should be set.
   */
-@js.native
 trait ExternalMetricSource extends js.Object {
   /**
     * metricName is the name of the metric in question.
     */
-  var metricName: Input[String] = js.native
+  var metricName: Input[String]
   /**
     * metricSelector is used to identify a specific time series within a given metric.
     */
-  var metricSelector: js.UndefOr[Input[LabelSelector]] = js.native
+  var metricSelector: js.UndefOr[Input[LabelSelector]] = js.undefined
   /**
     * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually
     * exclusive with TargetValue.
     */
-  var targetAverageValue: js.UndefOr[Input[String]] = js.native
+  var targetAverageValue: js.UndefOr[Input[String]] = js.undefined
   /**
     * targetValue is the target value of the metric (as a quantity). Mutually exclusive with
     * TargetAverageValue.
     */
-  var targetValue: js.UndefOr[Input[String]] = js.native
+  var targetValue: js.UndefOr[Input[String]] = js.undefined
 }
 
 object ExternalMetricSource {
   @scala.inline
-  def apply(metricName: Input[String]): ExternalMetricSource = {
+  def apply(
+    metricName: Input[String],
+    metricSelector: Input[LabelSelector] = null,
+    targetAverageValue: Input[String] = null,
+    targetValue: Input[String] = null
+  ): ExternalMetricSource = {
     val __obj = js.Dynamic.literal(metricName = metricName.asInstanceOf[js.Any])
+    if (metricSelector != null) __obj.updateDynamic("metricSelector")(metricSelector.asInstanceOf[js.Any])
+    if (targetAverageValue != null) __obj.updateDynamic("targetAverageValue")(targetAverageValue.asInstanceOf[js.Any])
+    if (targetValue != null) __obj.updateDynamic("targetValue")(targetValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExternalMetricSource]
   }
-  @scala.inline
-  implicit class ExternalMetricSourceOps[Self <: ExternalMetricSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetricSelector(value: Input[LabelSelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetAverageValue(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetAverageValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetAverageValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetAverageValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetValue(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

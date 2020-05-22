@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 class ClassChain protected ()
   extends typingsSlinky.fibjs.ClassChain {
   /**
-  	 * 
-  	 * @brief 构造一个消息处理器链处理对象
-  	 * @param hdlrs 处理器数组
-  	 * 
-  	 * 
-  	 * 
-  	 */
+    * 
+    * @brief 构造一个消息处理器链处理对象
+    * @param hdlrs 处理器数组
+    * 
+    * 
+    * 
+    */
   def this(hdlrs: js.Array[_]) = this()
 }
 

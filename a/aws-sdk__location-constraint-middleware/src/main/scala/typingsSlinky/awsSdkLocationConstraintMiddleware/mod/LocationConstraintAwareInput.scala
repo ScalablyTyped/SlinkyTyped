@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LocationConstraintAwareInput extends js.Object {
-  var CreateBucketConfiguration: js.UndefOr[LocationConstraint] = js.native
+  var CreateBucketConfiguration: js.UndefOr[LocationConstraint] = js.undefined
 }
 
 object LocationConstraintAwareInput {
   @scala.inline
-  def apply(): LocationConstraintAwareInput = {
+  def apply(CreateBucketConfiguration: LocationConstraint = null): LocationConstraintAwareInput = {
     val __obj = js.Dynamic.literal()
+    if (CreateBucketConfiguration != null) __obj.updateDynamic("CreateBucketConfiguration")(CreateBucketConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationConstraintAwareInput]
   }
-  @scala.inline
-  implicit class LocationConstraintAwareInputOps[Self <: LocationConstraintAwareInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateBucketConfiguration(value: LocationConstraint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateBucketConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateBucketConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateBucketConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

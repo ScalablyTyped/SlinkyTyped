@@ -10,153 +10,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScheduleLocalNotificationDetails extends js.Object {
-  var alertAction: js.UndefOr[String] = js.native
-  var alertBody: js.UndefOr[String] = js.native
-  var alertTitle: js.UndefOr[String] = js.native
-  var applicationIconBadgeNumber: js.UndefOr[Double] = js.native
-  var category: js.UndefOr[String] = js.native
-  var fireDate: js.UndefOr[Double | String] = js.native
-  var isSilent: js.UndefOr[Boolean] = js.native
-  var repeatInterval: js.UndefOr[year | month | week | day | hour | minute] = js.native
-  var soundName: js.UndefOr[String] = js.native
-  var userInfo: js.UndefOr[js.Object] = js.native
+  var alertAction: js.UndefOr[String] = js.undefined
+  var alertBody: js.UndefOr[String] = js.undefined
+  var alertTitle: js.UndefOr[String] = js.undefined
+  var applicationIconBadgeNumber: js.UndefOr[Double] = js.undefined
+  var category: js.UndefOr[String] = js.undefined
+  var fireDate: js.UndefOr[Double | String] = js.undefined
+  var isSilent: js.UndefOr[Boolean] = js.undefined
+  var repeatInterval: js.UndefOr[year | month | week | day | hour | minute] = js.undefined
+  var soundName: js.UndefOr[String] = js.undefined
+  var userInfo: js.UndefOr[js.Object] = js.undefined
 }
 
 object ScheduleLocalNotificationDetails {
   @scala.inline
-  def apply(): ScheduleLocalNotificationDetails = {
+  def apply(
+    alertAction: String = null,
+    alertBody: String = null,
+    alertTitle: String = null,
+    applicationIconBadgeNumber: js.UndefOr[Double] = js.undefined,
+    category: String = null,
+    fireDate: Double | String = null,
+    isSilent: js.UndefOr[Boolean] = js.undefined,
+    repeatInterval: year | month | week | day | hour | minute = null,
+    soundName: String = null,
+    userInfo: js.Object = null
+  ): ScheduleLocalNotificationDetails = {
     val __obj = js.Dynamic.literal()
+    if (alertAction != null) __obj.updateDynamic("alertAction")(alertAction.asInstanceOf[js.Any])
+    if (alertBody != null) __obj.updateDynamic("alertBody")(alertBody.asInstanceOf[js.Any])
+    if (alertTitle != null) __obj.updateDynamic("alertTitle")(alertTitle.asInstanceOf[js.Any])
+    if (!js.isUndefined(applicationIconBadgeNumber)) __obj.updateDynamic("applicationIconBadgeNumber")(applicationIconBadgeNumber.get.asInstanceOf[js.Any])
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (fireDate != null) __obj.updateDynamic("fireDate")(fireDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSilent)) __obj.updateDynamic("isSilent")(isSilent.get.asInstanceOf[js.Any])
+    if (repeatInterval != null) __obj.updateDynamic("repeatInterval")(repeatInterval.asInstanceOf[js.Any])
+    if (soundName != null) __obj.updateDynamic("soundName")(soundName.asInstanceOf[js.Any])
+    if (userInfo != null) __obj.updateDynamic("userInfo")(userInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduleLocalNotificationDetails]
   }
-  @scala.inline
-  implicit class ScheduleLocalNotificationDetailsOps[Self <: ScheduleLocalNotificationDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlertAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlertAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlertBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlertBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlertTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlertTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationIconBadgeNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationIconBadgeNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationIconBadgeNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationIconBadgeNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFireDate(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fireDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFireDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fireDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSilent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSilent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepeatInterval(value: year | month | week | day | hour | minute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepeatInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSoundName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("soundName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSoundName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("soundName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserInfo(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

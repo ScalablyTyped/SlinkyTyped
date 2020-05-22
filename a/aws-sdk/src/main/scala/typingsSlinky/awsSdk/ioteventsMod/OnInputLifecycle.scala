@@ -18,41 +18,11 @@ trait OnInputLifecycle extends js.Object {
 
 object OnInputLifecycle {
   @scala.inline
-  def apply(): OnInputLifecycle = {
+  def apply(events: Events = null, transitionEvents: TransitionEvents = null): OnInputLifecycle = {
     val __obj = js.Dynamic.literal()
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (transitionEvents != null) __obj.updateDynamic("transitionEvents")(transitionEvents.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnInputLifecycle]
   }
-  @scala.inline
-  implicit class OnInputLifecycleOps[Self <: OnInputLifecycle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvents(value: Events): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionEvents(value: TransitionEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitionEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEvents")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,65 +7,44 @@ import scala.scalajs.js.annotation._
 /**
   * The reference to a TestScript.ruleset
   */
-@js.native
 trait TestScriptSetupActionAssertRuleset extends BackboneElement {
   /**
     * Contains extended information for property 'rulesetId'.
     */
-  var _rulesetId: js.UndefOr[Element] = js.native
+  var _rulesetId: js.UndefOr[Element] = js.undefined
   /**
     * The referenced rule within the ruleset
     */
-  var rule: js.UndefOr[js.Array[TestScriptSetupActionAssertRulesetRule]] = js.native
+  var rule: js.UndefOr[js.Array[TestScriptSetupActionAssertRulesetRule]] = js.undefined
   /**
     * Id of the TestScript.ruleset
     */
-  var rulesetId: id = js.native
+  var rulesetId: id
 }
 
 object TestScriptSetupActionAssertRuleset {
   @scala.inline
-  def apply(rulesetId: id): TestScriptSetupActionAssertRuleset = {
+  def apply(
+    rulesetId: id,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _rulesetId: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    rule: js.Array[TestScriptSetupActionAssertRulesetRule] = null
+  ): TestScriptSetupActionAssertRuleset = {
     val __obj = js.Dynamic.literal(rulesetId = rulesetId.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_rulesetId != null) __obj.updateDynamic("_rulesetId")(_rulesetId.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestScriptSetupActionAssertRuleset]
   }
-  @scala.inline
-  implicit class TestScriptSetupActionAssertRulesetOps[Self <: TestScriptSetupActionAssertRuleset] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRulesetId(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_rulesetId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_rulesetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_rulesetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_rulesetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRule(value: js.Array[TestScriptSetupActionAssertRulesetRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

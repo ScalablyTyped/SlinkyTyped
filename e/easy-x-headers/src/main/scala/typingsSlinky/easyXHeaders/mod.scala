@@ -15,6 +15,10 @@ object mod extends js.Object {
     var actual: js.Any = js.native
     var expected: js.Any = js.native
     var generatedMessage: Boolean = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     var operator: String = js.native
   }
   

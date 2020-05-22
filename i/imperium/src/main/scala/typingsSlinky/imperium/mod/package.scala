@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type Actions = js.Array[java.lang.String] | java.lang.String
   type Context_ = js.Array[
     typingsSlinky.imperium.imperiumStrings.params | typingsSlinky.imperium.imperiumStrings.query | typingsSlinky.imperium.imperiumStrings.headers | typingsSlinky.imperium.imperiumStrings.body
   ]

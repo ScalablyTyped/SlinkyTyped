@@ -18,35 +18,10 @@ trait UpdateContainerAgentRequest extends js.Object {
 
 object UpdateContainerAgentRequest {
   @scala.inline
-  def apply(containerInstance: String): UpdateContainerAgentRequest = {
+  def apply(containerInstance: String, cluster: String = null): UpdateContainerAgentRequest = {
     val __obj = js.Dynamic.literal(containerInstance = containerInstance.asInstanceOf[js.Any])
+    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateContainerAgentRequest]
   }
-  @scala.inline
-  implicit class UpdateContainerAgentRequestOps[Self <: UpdateContainerAgentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerInstance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCluster(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCluster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ToggleTableCellRightBorderCommand")
 @js.native
 class ToggleTableCellRightBorderCommand ()
-  extends typingsSlinky.devexpressWeb.ToggleTableCellRightBorderCommand
+  extends typingsSlinky.devexpressWeb.ToggleTableCellRightBorderCommand {
+  /**
+    * Executes the ToggleTableCellRightBorderCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[Boolean] = js.native
+}
 

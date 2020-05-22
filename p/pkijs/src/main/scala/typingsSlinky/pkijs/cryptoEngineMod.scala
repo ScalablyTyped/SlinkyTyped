@@ -7,6 +7,7 @@ import org.scalajs.dom.crypto.AesCtrParams
 import org.scalajs.dom.crypto.AesGcmParams
 import org.scalajs.dom.crypto.Algorithm
 import org.scalajs.dom.crypto.CryptoKey
+import org.scalajs.dom.crypto.CryptoKeyPair
 import org.scalajs.dom.crypto.DhImportKeyParams
 import org.scalajs.dom.crypto.EcKeyImportParams
 import org.scalajs.dom.crypto.EcdsaParams
@@ -66,6 +67,7 @@ object cryptoEngineMod extends js.Object {
     def decrypt(algorithm: AesCtrParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def decrypt(algorithm: AesGcmParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def decrypt(algorithm: RsaOaepParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def deriveBits(algorithm: String, baseKey: CryptoKey, length: Double): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def digest(algorithm: AlgorithmIdentifier, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def encrypt(algorithm: String, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def encrypt(algorithm: AesCbcParams, key: CryptoKey, data: BufferSource): js.Thenable[js.typedarray.ArrayBuffer] = js.native
@@ -82,6 +84,7 @@ object cryptoEngineMod extends js.Object {
     def exportKey_raw(format: raw, key: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     @JSName("exportKey")
     def exportKey_spki(format: spki, key: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def generateKey(algorithm: String, extractable: Boolean, keyUsages: js.Array[String]): js.Thenable[CryptoKeyPair | CryptoKey] = js.native
     def importKey(
       format: String,
       keyData: BufferSource,

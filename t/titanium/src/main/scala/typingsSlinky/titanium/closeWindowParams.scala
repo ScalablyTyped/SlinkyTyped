@@ -7,103 +7,45 @@ import scala.scalajs.js.annotation._
 /**
   * Dictionary of options for the <Titanium.UI.Window.close> method.
   */
-@js.native
 trait closeWindowParams extends js.Object {
   /**
-  	 * Animation resource to use for the incoming activity.
-  	 */
-  var activityEnterAnimation: js.UndefOr[Double] = js.native
+    * Animation resource to use for the incoming activity.
+    */
+  var activityEnterAnimation: js.UndefOr[Double] = js.undefined
   /**
-  	 * Animation resource to use for the outgoing activity.
-  	 */
-  var activityExitAnimation: js.UndefOr[Double] = js.native
+    * Animation resource to use for the outgoing activity.
+    */
+  var activityExitAnimation: js.UndefOr[Double] = js.undefined
   /**
-  	 * Determines whether to use an animated effect when the window is closed. Defaults to `true` on Android, `false` on iOS.
-  	 */
-  var animated: js.UndefOr[Boolean] = js.native
+    * Determines whether to use an animated effect when the window is closed. Defaults to `true` on Android, `false` on iOS.
+    */
+  var animated: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * duration of the animation in milliseconds
-  	 */
-  var animationDuration: js.UndefOr[Double] = js.native
+    * duration of the animation in milliseconds
+    */
+  var animationDuration: js.UndefOr[Double] = js.undefined
   /**
-  	 * Transition type to use during a transition animation.
-  	 */
-  var animationStyle: js.UndefOr[Double] = js.native
+    * Transition type to use during a transition animation.
+    */
+  var animationStyle: js.UndefOr[Double] = js.undefined
 }
 
 object closeWindowParams {
   @scala.inline
-  def apply(): closeWindowParams = {
+  def apply(
+    activityEnterAnimation: js.UndefOr[Double] = js.undefined,
+    activityExitAnimation: js.UndefOr[Double] = js.undefined,
+    animated: js.UndefOr[Boolean] = js.undefined,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    animationStyle: js.UndefOr[Double] = js.undefined
+  ): closeWindowParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activityEnterAnimation)) __obj.updateDynamic("activityEnterAnimation")(activityEnterAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(activityExitAnimation)) __obj.updateDynamic("activityExitAnimation")(activityExitAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationStyle)) __obj.updateDynamic("animationStyle")(animationStyle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[closeWindowParams]
   }
-  @scala.inline
-  implicit class closeWindowParamsOps[Self <: closeWindowParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityEnterAnimation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityEnterAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityEnterAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityEnterAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivityExitAnimation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityExitAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityExitAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityExitAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationStyle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

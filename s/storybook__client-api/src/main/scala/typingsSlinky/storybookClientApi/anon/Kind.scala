@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Kind extends js.Object {
-  var kind: String = js.native
-  var name: String = js.native
-  var parameters: typingsSlinky.storybookAddons.typesMod.Parameters = js.native
-  var storyFn: StoryFn[_] = js.native
+  var kind: String
+  var name: String
+  var parameters: typingsSlinky.storybookAddons.typesMod.Parameters
+  var storyFn: StoryFn[_]
 }
 
 object Kind {
@@ -25,37 +24,5 @@ object Kind {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any], storyFn = js.Any.fromFunction1(storyFn))
     __obj.asInstanceOf[Kind]
   }
-  @scala.inline
-  implicit class KindOps[Self <: Kind] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParameters(value: typingsSlinky.storybookAddons.typesMod.Parameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStoryFn(value: /* p */ js.UndefOr[StoryContext] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storyFn")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

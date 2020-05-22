@@ -14,29 +14,10 @@ trait UpdateRoomMembershipResponse extends js.Object {
 
 object UpdateRoomMembershipResponse {
   @scala.inline
-  def apply(): UpdateRoomMembershipResponse = {
+  def apply(RoomMembership: RoomMembership = null): UpdateRoomMembershipResponse = {
     val __obj = js.Dynamic.literal()
+    if (RoomMembership != null) __obj.updateDynamic("RoomMembership")(RoomMembership.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRoomMembershipResponse]
   }
-  @scala.inline
-  implicit class UpdateRoomMembershipResponseOps[Self <: UpdateRoomMembershipResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoomMembership(value: RoomMembership): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomMembership")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoomMembership: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomMembership")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

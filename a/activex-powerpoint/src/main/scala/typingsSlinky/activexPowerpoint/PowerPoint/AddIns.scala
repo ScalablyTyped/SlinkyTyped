@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddIns extends js.Object {
-  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
-  val Count: Double = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application
+  val Count: Double
+  val Parent: js.Any
   @JSName("PowerPoint.AddIns_typekey")
-  var PowerPointDotAddIns_typekey: AddIns = js.native
-  def Add(FileName: String): AddIn = js.native
-  def Item(Index: js.Any): AddIn = js.native
-  def Remove(Index: js.Any): Unit = js.native
+  var PowerPointDotAddIns_typekey: AddIns
+  def Add(FileName: String): AddIn
+  def Item(Index: js.Any): AddIn
+  def Remove(Index: js.Any): Unit
 }
 
 object AddIns {
@@ -31,55 +30,5 @@ object AddIns {
     __obj.updateDynamic("PowerPoint.AddIns_typekey")(PowerPointDotAddIns_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddIns]
   }
-  @scala.inline
-  implicit class AddInsOps[Self <: AddIns] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd(value: String => AddIn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Add")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: js.Any => AddIn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotAddIns_typekey(value: AddIns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.AddIns_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemove(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

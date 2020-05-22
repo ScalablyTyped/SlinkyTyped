@@ -26,41 +26,11 @@ trait SchemaCloudPubsubTopic extends js.Object {
 
 object SchemaCloudPubsubTopic {
   @scala.inline
-  def apply(): SchemaCloudPubsubTopic = {
+  def apply(payloadFormat: String = null, topicName: String = null): SchemaCloudPubsubTopic = {
     val __obj = js.Dynamic.literal()
+    if (payloadFormat != null) __obj.updateDynamic("payloadFormat")(payloadFormat.asInstanceOf[js.Any])
+    if (topicName != null) __obj.updateDynamic("topicName")(topicName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCloudPubsubTopic]
   }
-  @scala.inline
-  implicit class SchemaCloudPubsubTopicOps[Self <: SchemaCloudPubsubTopic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPayloadFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

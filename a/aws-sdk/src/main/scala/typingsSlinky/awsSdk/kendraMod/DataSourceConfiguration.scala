@@ -11,9 +11,21 @@ trait DataSourceConfiguration extends js.Object {
     */
   var DatabaseConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.DatabaseConfiguration] = js.native
   /**
+    * Provided configuration for data sources that connect to Microsoft OneDrive.
+    */
+  var OneDriveConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.OneDriveConfiguration] = js.native
+  /**
     * Provides information to create a connector for a document repository in an Amazon S3 bucket.
     */
   var S3Configuration: js.UndefOr[S3DataSourceConfiguration] = js.native
+  /**
+    * Provides configuration information for data sources that connect to a Salesforce site.
+    */
+  var SalesforceConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.SalesforceConfiguration] = js.native
+  /**
+    * Provides configuration for data sources that connect to ServiceNow instances.
+    */
+  var ServiceNowConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.ServiceNowConfiguration] = js.native
   /**
     * Provides information necessary to create a connector for a Microsoft SharePoint site.
     */
@@ -22,53 +34,22 @@ trait DataSourceConfiguration extends js.Object {
 
 object DataSourceConfiguration {
   @scala.inline
-  def apply(): DataSourceConfiguration = {
+  def apply(
+    DatabaseConfiguration: DatabaseConfiguration = null,
+    OneDriveConfiguration: OneDriveConfiguration = null,
+    S3Configuration: S3DataSourceConfiguration = null,
+    SalesforceConfiguration: SalesforceConfiguration = null,
+    ServiceNowConfiguration: ServiceNowConfiguration = null,
+    SharePointConfiguration: SharePointConfiguration = null
+  ): DataSourceConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (DatabaseConfiguration != null) __obj.updateDynamic("DatabaseConfiguration")(DatabaseConfiguration.asInstanceOf[js.Any])
+    if (OneDriveConfiguration != null) __obj.updateDynamic("OneDriveConfiguration")(OneDriveConfiguration.asInstanceOf[js.Any])
+    if (S3Configuration != null) __obj.updateDynamic("S3Configuration")(S3Configuration.asInstanceOf[js.Any])
+    if (SalesforceConfiguration != null) __obj.updateDynamic("SalesforceConfiguration")(SalesforceConfiguration.asInstanceOf[js.Any])
+    if (ServiceNowConfiguration != null) __obj.updateDynamic("ServiceNowConfiguration")(ServiceNowConfiguration.asInstanceOf[js.Any])
+    if (SharePointConfiguration != null) __obj.updateDynamic("SharePointConfiguration")(SharePointConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSourceConfiguration]
   }
-  @scala.inline
-  implicit class DataSourceConfigurationOps[Self <: DataSourceConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseConfiguration(value: DatabaseConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3Configuration(value: S3DataSourceConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Configuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Configuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharePointConfiguration(value: SharePointConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharePointConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharePointConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharePointConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

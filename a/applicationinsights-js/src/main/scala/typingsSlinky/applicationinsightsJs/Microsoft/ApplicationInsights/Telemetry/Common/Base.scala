@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Base
   extends typingsSlinky.applicationinsightsJs.Microsoft.Telemetry.Base
      with ISerializable

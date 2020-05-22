@@ -62,173 +62,36 @@ trait DescribeSavingsPlansOfferingsRequest extends js.Object {
 
 object DescribeSavingsPlansOfferingsRequest {
   @scala.inline
-  def apply(): DescribeSavingsPlansOfferingsRequest = {
+  def apply(
+    currencies: CurrencyList = null,
+    descriptions: SavingsPlanDescriptionsList = null,
+    durations: DurationsList = null,
+    filters: SavingsPlanOfferingFiltersList = null,
+    maxResults: js.UndefOr[PageSize] = js.undefined,
+    nextToken: PaginationToken = null,
+    offeringIds: UUIDs = null,
+    operations: SavingsPlanOperationList = null,
+    paymentOptions: SavingsPlanPaymentOptionList = null,
+    planTypes: SavingsPlanTypeList = null,
+    productType: SavingsPlanProductType = null,
+    serviceCodes: SavingsPlanServiceCodeList = null,
+    usageTypes: SavingsPlanUsageTypeList = null
+  ): DescribeSavingsPlansOfferingsRequest = {
     val __obj = js.Dynamic.literal()
+    if (currencies != null) __obj.updateDynamic("currencies")(currencies.asInstanceOf[js.Any])
+    if (descriptions != null) __obj.updateDynamic("descriptions")(descriptions.asInstanceOf[js.Any])
+    if (durations != null) __obj.updateDynamic("durations")(durations.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (offeringIds != null) __obj.updateDynamic("offeringIds")(offeringIds.asInstanceOf[js.Any])
+    if (operations != null) __obj.updateDynamic("operations")(operations.asInstanceOf[js.Any])
+    if (paymentOptions != null) __obj.updateDynamic("paymentOptions")(paymentOptions.asInstanceOf[js.Any])
+    if (planTypes != null) __obj.updateDynamic("planTypes")(planTypes.asInstanceOf[js.Any])
+    if (productType != null) __obj.updateDynamic("productType")(productType.asInstanceOf[js.Any])
+    if (serviceCodes != null) __obj.updateDynamic("serviceCodes")(serviceCodes.asInstanceOf[js.Any])
+    if (usageTypes != null) __obj.updateDynamic("usageTypes")(usageTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSavingsPlansOfferingsRequest]
   }
-  @scala.inline
-  implicit class DescribeSavingsPlansOfferingsRequestOps[Self <: DescribeSavingsPlansOfferingsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrencies(value: CurrencyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescriptions(value: SavingsPlanDescriptionsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDurations(value: DurationsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: SavingsPlanOfferingFiltersList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: PageSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferingIds(value: UUIDs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offeringIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferingIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offeringIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperations(value: SavingsPlanOperationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentOptions(value: SavingsPlanPaymentOptionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlanTypes(value: SavingsPlanTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlanTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductType(value: SavingsPlanProductType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceCodes(value: SavingsPlanServiceCodeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsageTypes(value: SavingsPlanUsageTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usageTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsageTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usageTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,65 +30,18 @@ trait CreateUserRequest extends js.Object {
 
 object CreateUserRequest {
   @scala.inline
-  def apply(AuthenticationType: AuthenticationType, UserName: Username): CreateUserRequest = {
+  def apply(
+    AuthenticationType: AuthenticationType,
+    UserName: Username,
+    FirstName: UserAttributeValue = null,
+    LastName: UserAttributeValue = null,
+    MessageAction: MessageAction = null
+  ): CreateUserRequest = {
     val __obj = js.Dynamic.literal(AuthenticationType = AuthenticationType.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any])
+    if (FirstName != null) __obj.updateDynamic("FirstName")(FirstName.asInstanceOf[js.Any])
+    if (LastName != null) __obj.updateDynamic("LastName")(LastName.asInstanceOf[js.Any])
+    if (MessageAction != null) __obj.updateDynamic("MessageAction")(MessageAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateUserRequest]
   }
-  @scala.inline
-  implicit class CreateUserRequestOps[Self <: CreateUserRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationType(value: AuthenticationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserName(value: Username): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstName(value: UserAttributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastName(value: UserAttributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageAction(value: MessageAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

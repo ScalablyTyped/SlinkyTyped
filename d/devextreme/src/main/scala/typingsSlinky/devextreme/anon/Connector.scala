@@ -15,198 +15,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Connector extends js.Object {
-  var backgroundColor: js.UndefOr[String] = js.native
-  var border: js.UndefOr[ColorDashStyle] = js.native
-  var connector: js.UndefOr[ColorOpacity] = js.native
-  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ Percent, String]] = js.native
-  var font: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.viz.Font] = js.native
-  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
-  var horizontalAlignment: js.UndefOr[left | right] = js.native
-  var horizontalOffset: js.UndefOr[Double] = js.native
-  var position: js.UndefOr[columns | inside | outside] = js.native
-  var showForZeroValues: js.UndefOr[Boolean] = js.native
-  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var wordWrap: js.UndefOr[normal | breakWord | none] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
+  var border: js.UndefOr[ColorDashStyle] = js.undefined
+  var connector: js.UndefOr[ColorOpacity] = js.undefined
+  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ Percent, String]] = js.undefined
+  var font: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.viz.Font] = js.undefined
+  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.undefined
+  var horizontalAlignment: js.UndefOr[left | right] = js.undefined
+  var horizontalOffset: js.UndefOr[Double] = js.undefined
+  var position: js.UndefOr[columns | inside | outside] = js.undefined
+  var showForZeroValues: js.UndefOr[Boolean] = js.undefined
+  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var wordWrap: js.UndefOr[normal | breakWord | none] = js.undefined
 }
 
 object Connector {
   @scala.inline
-  def apply(): Connector = {
+  def apply(
+    backgroundColor: String = null,
+    border: ColorDashStyle = null,
+    connector: ColorOpacity = null,
+    customizeText: /* itemInfo */ Percent => String = null,
+    font: typingsSlinky.devextreme.mod.DevExpress.viz.Font = null,
+    format: format = null,
+    horizontalAlignment: left | right = null,
+    horizontalOffset: js.UndefOr[Double] = js.undefined,
+    position: columns | inside | outside = null,
+    showForZeroValues: js.UndefOr[Boolean] = js.undefined,
+    textOverflow: ellipsis | hide | none = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    wordWrap: normal | breakWord | none = null
+  ): Connector = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (connector != null) __obj.updateDynamic("connector")(connector.asInstanceOf[js.Any])
+    if (customizeText != null) __obj.updateDynamic("customizeText")(js.Any.fromFunction1(customizeText))
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalOffset)) __obj.updateDynamic("horizontalOffset")(horizontalOffset.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(showForZeroValues)) __obj.updateDynamic("showForZeroValues")(showForZeroValues.get.asInstanceOf[js.Any])
+    if (textOverflow != null) __obj.updateDynamic("textOverflow")(textOverflow.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (wordWrap != null) __obj.updateDynamic("wordWrap")(wordWrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[Connector]
   }
-  @scala.inline
-  implicit class ConnectorOps[Self <: Connector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: ColorDashStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnector(value: ColorOpacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeText(value: /* itemInfo */ Percent => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: typingsSlinky.devextreme.mod.DevExpress.viz.Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalAlignment(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: columns | inside | outside): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowForZeroValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showForZeroValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowForZeroValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showForZeroValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextOverflow(value: ellipsis | hide | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWordWrap(value: normal | breakWord | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWordWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,135 +14,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridBaseEditing extends js.Object {
-  /** Configures the form. Used only if editing.mode is "form" or "popup". */
-  var form: js.UndefOr[dxFormOptions] = js.native
-  /** Specifies how a user edits data. */
-  var mode: js.UndefOr[batch | cell | row | form | popup] = js.native
-  /** Configures the popup. Used only if editing.mode is "popup". */
-  var popup: js.UndefOr[dxPopupOptions[dxPopup]] = js.native
-  /** Specifies operations that are performed after saving changes. */
-  var refreshMode: js.UndefOr[full | reshape | repaint] = js.native
-  /** Specifies whether to select text in a cell when a user starts editing. */
-  var selectTextOnEditStart: js.UndefOr[Boolean] = js.native
-  /** Specifies whether a single or double click should switch a cell to the editing state. Applies if editing.mode is "cell" or "batch". */
-  var startEditAction: js.UndefOr[click | dblClick] = js.native
-  /** Contains options that specify texts for editing-related UI elements. */
-  var texts: js.UndefOr[GridBaseEditingTexts] = js.native
-  /** Specifies whether the editing column uses icons instead of links. */
-  var useIcons: js.UndefOr[Boolean] = js.native
+  /** @name GridBase.Options.editing.form */
+  var form: js.UndefOr[dxFormOptions] = js.undefined
+  /** @name GridBase.Options.editing.mode */
+  var mode: js.UndefOr[batch | cell | row | form | popup] = js.undefined
+  /** @name GridBase.Options.editing.popup */
+  var popup: js.UndefOr[dxPopupOptions[dxPopup]] = js.undefined
+  /** @name GridBase.Options.editing.refreshMode */
+  var refreshMode: js.UndefOr[full | reshape | repaint] = js.undefined
+  /** @name GridBase.Options.editing.selectTextOnEditStart */
+  var selectTextOnEditStart: js.UndefOr[Boolean] = js.undefined
+  /** @name GridBase.Options.editing.startEditAction */
+  var startEditAction: js.UndefOr[click | dblClick] = js.undefined
+  /** @name GridBase.Options.editing.texts */
+  var texts: js.UndefOr[GridBaseEditingTexts] = js.undefined
+  /** @name GridBase.Options.editing.useIcons */
+  var useIcons: js.UndefOr[Boolean] = js.undefined
 }
 
 object GridBaseEditing {
   @scala.inline
-  def apply(): GridBaseEditing = {
+  def apply(
+    form: dxFormOptions = null,
+    mode: batch | cell | row | form | popup = null,
+    popup: dxPopupOptions[dxPopup] = null,
+    refreshMode: full | reshape | repaint = null,
+    selectTextOnEditStart: js.UndefOr[Boolean] = js.undefined,
+    startEditAction: click | dblClick = null,
+    texts: GridBaseEditingTexts = null,
+    useIcons: js.UndefOr[Boolean] = js.undefined
+  ): GridBaseEditing = {
     val __obj = js.Dynamic.literal()
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (popup != null) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
+    if (refreshMode != null) __obj.updateDynamic("refreshMode")(refreshMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectTextOnEditStart)) __obj.updateDynamic("selectTextOnEditStart")(selectTextOnEditStart.get.asInstanceOf[js.Any])
+    if (startEditAction != null) __obj.updateDynamic("startEditAction")(startEditAction.asInstanceOf[js.Any])
+    if (texts != null) __obj.updateDynamic("texts")(texts.asInstanceOf[js.Any])
+    if (!js.isUndefined(useIcons)) __obj.updateDynamic("useIcons")(useIcons.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridBaseEditing]
   }
-  @scala.inline
-  implicit class GridBaseEditingOps[Self <: GridBaseEditing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForm(value: dxFormOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: batch | cell | row | form | popup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopup(value: dxPopupOptions[dxPopup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshMode(value: full | reshape | repaint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectTextOnEditStart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectTextOnEditStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectTextOnEditStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectTextOnEditStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartEditAction(value: click | dblClick): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startEditAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartEditAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startEditAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTexts(value: GridBaseEditingTexts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseIcons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useIcons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useIcons")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

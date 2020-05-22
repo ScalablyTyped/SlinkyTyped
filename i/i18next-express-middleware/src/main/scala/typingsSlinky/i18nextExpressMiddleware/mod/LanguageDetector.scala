@@ -4,8 +4,13 @@ import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
+import typingsSlinky.i18next.i18nextStrings.`3rdParty`
+import typingsSlinky.i18next.i18nextStrings.backend
+import typingsSlinky.i18next.i18nextStrings.i18nFormat
+import typingsSlinky.i18next.i18nextStrings.languageDetector
+import typingsSlinky.i18next.i18nextStrings.logger
+import typingsSlinky.i18next.i18nextStrings.postProcessor
 import typingsSlinky.i18next.mod.Module
-import typingsSlinky.i18nextExpressMiddleware.i18nextExpressMiddlewareStrings.languageDetector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,8 +27,10 @@ class LanguageDetector () extends Module {
     options: LanguageDetectorOptions,
     allOptions: LanguageDetectorAllOptions
   ) = this()
+  /* CompleteClass */
+  override var `type`: backend | logger | languageDetector | postProcessor | i18nFormat | `3rdParty` = js.native
   @JSName("type")
-  var type_LanguageDetector: languageDetector = js.native
+  var type_LanguageDetector: typingsSlinky.i18nextExpressMiddleware.i18nextExpressMiddlewareStrings.languageDetector = js.native
   def addDetector(detector: LanguageDetectorInterface): Unit = js.native
   def cacheUserLanguage(
     req: Request_[ParamsDictionary, _, _, Query],

@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShortRepresentation extends js.Object {
   /** A string representation of the expression subtree rooted at this node. */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * A mapping of (subquery variable name) -> (subquery node id) for cases
     * where the `description` string of this node references a `SCALAR`
@@ -16,46 +15,16 @@ trait ShortRepresentation extends js.Object {
     * referenced `SCALAR` subquery may not necessarily be a direct child of
     * this node.
     */
-  var subqueries: js.UndefOr[Record[String, Double]] = js.native
+  var subqueries: js.UndefOr[Record[String, Double]] = js.undefined
 }
 
 object ShortRepresentation {
   @scala.inline
-  def apply(): ShortRepresentation = {
+  def apply(description: String = null, subqueries: Record[String, Double] = null): ShortRepresentation = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (subqueries != null) __obj.updateDynamic("subqueries")(subqueries.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShortRepresentation]
   }
-  @scala.inline
-  implicit class ShortRepresentationOps[Self <: ShortRepresentation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubqueries(value: Record[String, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subqueries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubqueries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subqueries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

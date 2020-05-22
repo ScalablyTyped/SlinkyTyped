@@ -7,30 +7,29 @@ import scala.scalajs.js.annotation._
 /**
   * JSONSchemaProps is a JSON-Schema following Specification Draft 4 (http://json-schema.org/).
   */
-@js.native
 trait JSONSchemaProps extends js.Object {
   @JSName("$ref")
-  val $ref: String = js.native
+  val $ref: String
   @JSName("$schema")
-  val $schema: String = js.native
-  val additionalItems: JSONSchemaProps | Boolean = js.native
-  val additionalProperties: JSONSchemaProps | Boolean = js.native
-  val allOf: js.Array[JSONSchemaProps] = js.native
-  val anyOf: js.Array[JSONSchemaProps] = js.native
+  val $schema: String
+  val additionalItems: JSONSchemaProps | Boolean
+  val additionalProperties: JSONSchemaProps | Boolean
+  val allOf: js.Array[JSONSchemaProps]
+  val anyOf: js.Array[JSONSchemaProps]
   /**
     * default is a default value for undefined object fields. Defaulting is a beta feature under
     * the CustomResourceDefaulting feature gate. Defaulting requires spec.preserveUnknownFields
     * to be false.
     */
-  val default: js.Any = js.native
-  val definitions: js.Object = js.native
-  val dependencies: js.Object = js.native
-  val description: String = js.native
-  val enum: js.Array[_] = js.native
-  val example: js.Any = js.native
-  val exclusiveMaximum: Boolean = js.native
-  val exclusiveMinimum: Boolean = js.native
-  val externalDocs: ExternalDocumentation = js.native
+  val default: js.Any
+  val definitions: js.Object
+  val dependencies: js.Object
+  val description: String
+  val enum: js.Array[_]
+  val example: js.Any
+  val exclusiveMaximum: Boolean
+  val exclusiveMinimum: Boolean
+  val externalDocs: ExternalDocumentation
   /**
     * format is an OpenAPI v3 format string. Unknown formats are ignored. The following formats
     * are validated:
@@ -62,28 +61,28 @@ trait JSONSchemaProps extends js.Object {
     * compatible with Scala duration format - datetime: a date time string like
     * "2014-12-15T19:30:20.000Z" as defined by date-time in RFC3339.
     */
-  val format: String = js.native
-  val id: String = js.native
-  val items: JSONSchemaProps | js.Array[_] = js.native
-  val maxItems: Double = js.native
-  val maxLength: Double = js.native
-  val maxProperties: Double = js.native
-  val maximum: Double = js.native
-  val minItems: Double = js.native
-  val minLength: Double = js.native
-  val minProperties: Double = js.native
-  val minimum: Double = js.native
-  val multipleOf: Double = js.native
-  val not: JSONSchemaProps = js.native
-  val nullable: Boolean = js.native
-  val oneOf: js.Array[JSONSchemaProps] = js.native
-  val pattern: String = js.native
-  val patternProperties: js.Object = js.native
-  val properties: js.Object = js.native
-  val required: js.Array[String] = js.native
-  val title: String = js.native
-  val `type`: String = js.native
-  val uniqueItems: Boolean = js.native
+  val format: String
+  val id: String
+  val items: JSONSchemaProps | js.Array[_]
+  val maxItems: Double
+  val maxLength: Double
+  val maxProperties: Double
+  val maximum: Double
+  val minItems: Double
+  val minLength: Double
+  val minProperties: Double
+  val minimum: Double
+  val multipleOf: Double
+  val not: JSONSchemaProps
+  val nullable: Boolean
+  val oneOf: js.Array[JSONSchemaProps]
+  val pattern: String
+  val patternProperties: js.Object
+  val properties: js.Object
+  val required: js.Array[String]
+  val title: String
+  val `type`: String
+  val uniqueItems: Boolean
   /**
     * x-kubernetes-embedded-resource defines that the value is an embedded Kubernetes
     * runtime.Object, with TypeMeta and ObjectMeta. The type must be object. It is allowed to
@@ -91,7 +90,7 @@ trait JSONSchemaProps extends js.Object {
     * automatically. x-kubernetes-preserve-unknown-fields is allowed to be true, but does not
     * have to be if the object is fully specified (up to kind, apiVersion, metadata).
     */
-  val x_kubernetes_embedded_resource: Boolean = js.native
+  val x_kubernetes_embedded_resource: Boolean
   /**
     * x-kubernetes-int-or-string specifies that this value is either an integer or a string. If
     * this is true, an empty type is allowed and type as child of anyOf is permitted if following
@@ -106,7 +105,7 @@ trait JSONSchemaProps extends js.Object {
     *      - type: string
     *    - ... zero or more
     */
-  val x_kubernetes_int_or_string: Boolean = js.native
+  val x_kubernetes_int_or_string: Boolean
   /**
     * x-kubernetes-list-map-keys annotates an array with the x-kubernetes-list-type `map` by
     * specifying the keys used as the index of the map.
@@ -114,8 +113,11 @@ trait JSONSchemaProps extends js.Object {
     * This tag MUST only be used on lists that have the "x-kubernetes-list-type" extension set to
     * "map". Also, the values specified for this attribute must be a scalar typed field of the
     * child structure (no nesting is supported).
+    *
+    * The properties specified must either be required or have a default value, to ensure those
+    * properties are present for all list items.
     */
-  val x_kubernetes_list_map_keys: js.Array[String] = js.native
+  val x_kubernetes_list_map_keys: js.Array[String]
   /**
     * x-kubernetes-list-type annotates an array to further describe its topology. This extension
     * must only be used on lists and may have 3 possible values:
@@ -133,7 +135,7 @@ trait JSONSchemaProps extends js.Object {
     *      must only be used on a list with elements of type object.
     * Defaults to atomic for arrays.
     */
-  val x_kubernetes_list_type: String = js.native
+  val x_kubernetes_list_type: String
   /**
     * x-kubernetes-map-type annotates an object to further describe its topology. This extension
     * must only be used when type is object and may have 2 possible values:
@@ -145,14 +147,14 @@ trait JSONSchemaProps extends js.Object {
     * 2) `atomic`: the list is treated as a single entity, like a scalar.
     *      Atomic maps will be entirely replaced when updated.
     */
-  val x_kubernetes_map_type: String = js.native
+  val x_kubernetes_map_type: String
   /**
     * x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields
     * which are not specified in the validation schema. This affects fields recursively, but
     * switches back to normal pruning behaviour if nested properties or additionalProperties are
     * specified in the schema. This can either be true or undefined. False is forbidden.
     */
-  val x_kubernetes_preserve_unknown_fields: Boolean = js.native
+  val x_kubernetes_preserve_unknown_fields: Boolean
 }
 
 object JSONSchemaProps {
@@ -206,271 +208,5 @@ object JSONSchemaProps {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSONSchemaProps]
   }
-  @scala.inline
-  implicit class JSONSchemaPropsOps[Self <: JSONSchemaProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$ref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$schema(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdditionalItems(value: JSONSchemaProps | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdditionalProperties(value: JSONSchemaProps | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllOf(value: js.Array[JSONSchemaProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnyOf(value: js.Array[JSONSchemaProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anyOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefault(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefinitions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnum(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExample(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("example")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExclusiveMaximum(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveMaximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExclusiveMinimum(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveMinimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalDocs(value: ExternalDocumentation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDocs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItems(value: JSONSchemaProps | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxProperties(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaximum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinProperties(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinimum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMultipleOf(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNot(value: JSONSchemaProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNullable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOneOf(value: js.Array[JSONSchemaProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatternProperties(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patternProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequired(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUniqueItems(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX_kubernetes_embedded_resource(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_kubernetes_embedded_resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX_kubernetes_int_or_string(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_kubernetes_int_or_string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX_kubernetes_list_map_keys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_kubernetes_list_map_keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX_kubernetes_list_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_kubernetes_list_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX_kubernetes_map_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_kubernetes_map_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX_kubernetes_preserve_unknown_fields(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_kubernetes_preserve_unknown_fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

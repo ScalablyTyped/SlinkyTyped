@@ -22,41 +22,11 @@ trait SchemaStackFrames extends js.Object {
 
 object SchemaStackFrames {
   @scala.inline
-  def apply(): SchemaStackFrames = {
+  def apply(droppedFramesCount: js.UndefOr[Double] = js.undefined, frame: js.Array[SchemaStackFrame] = null): SchemaStackFrames = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(droppedFramesCount)) __obj.updateDynamic("droppedFramesCount")(droppedFramesCount.get.asInstanceOf[js.Any])
+    if (frame != null) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStackFrames]
   }
-  @scala.inline
-  implicit class SchemaStackFramesOps[Self <: SchemaStackFrames] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDroppedFramesCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedFramesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDroppedFramesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedFramesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrame(value: js.Array[SchemaStackFrame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,20 +8,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TargetTcpProxiesResource extends js.Object {
   /** Deletes the specified TargetTcpProxy resource. */
-  def delete(request: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy): Request[Operation] = js.native
+  def delete(request: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy): Request[Operation]
   /** Returns the specified TargetTcpProxy resource. Get a list of available target TCP proxies by making a list() request. */
-  def get(request: QuotaUserTargetTcpProxy): Request[TargetTcpProxy] = js.native
+  def get(request: QuotaUserTargetTcpProxy): Request[TargetTcpProxy]
   /** Creates a TargetTcpProxy resource in the specified project using the data included in the request. */
-  def insert(request: AltFields): Request[Operation] = js.native
+  def insert(request: AltFields): Request[Operation]
   /** Retrieves the list of TargetTcpProxy resources available to the specified project. */
-  def list(request: Alt): Request[TargetTcpProxyList] = js.native
+  def list(request: Alt): Request[TargetTcpProxyList]
   /** Changes the BackendService for TargetTcpProxy. */
-  def setBackendService(request: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy): Request[Operation] = js.native
+  def setBackendService(request: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy): Request[Operation]
   /** Changes the ProxyHeaderType for TargetTcpProxy. */
-  def setProxyHeader(request: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy): Request[Operation] = js.native
+  def setProxyHeader(request: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy): Request[Operation]
 }
 
 object TargetTcpProxiesResource {
@@ -37,49 +36,5 @@ object TargetTcpProxiesResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), setBackendService = js.Any.fromFunction1(setBackendService), setProxyHeader = js.Any.fromFunction1(setProxyHeader))
     __obj.asInstanceOf[TargetTcpProxiesResource]
   }
-  @scala.inline
-  implicit class TargetTcpProxiesResourceOps[Self <: TargetTcpProxiesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: QuotaUserTargetTcpProxy => Request[TargetTcpProxy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: AltFields => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Alt => Request[TargetTcpProxyList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetBackendService(value: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBackendService")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetProxyHeader(value: typingsSlinky.gapiClientCompute.anon.TargetTcpProxy => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setProxyHeader")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

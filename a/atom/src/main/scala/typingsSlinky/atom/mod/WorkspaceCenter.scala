@@ -4,69 +4,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkspaceCenter extends js.Object {
   /** Make the next pane active. */
-  def activateNextPane(): Unit = js.native
+  def activateNextPane(): Unit
   /** Make the previous pane active. */
-  def activatePreviousPane(): Unit = js.native
+  def activatePreviousPane(): Unit
   /** Destroy (close) the active pane. */
-  def destroyActivePane(): Unit = js.native
+  def destroyActivePane(): Unit
   /** Get the active Pane. */
-  def getActivePane(): Pane = js.native
+  def getActivePane(): Pane
   /** Get the active Pane's active item. */
-  def getActivePaneItem(): js.UndefOr[js.Object] = js.native
+  def getActivePaneItem(): js.UndefOr[js.Object]
   /** Get the active item if it is an TextEditor. */
-  def getActiveTextEditor(): js.UndefOr[TextEditor] = js.native
+  def getActiveTextEditor(): js.UndefOr[TextEditor]
   // Pane Items
   /** Get all pane items in the workspace center. */
-  def getPaneItems(): js.Array[js.Object] = js.native
+  def getPaneItems(): js.Array[js.Object]
   // Panes
   /** Get all panes in the workspace center. */
-  def getPanes(): js.Array[Pane] = js.native
+  def getPanes(): js.Array[Pane]
   /** Get all text editors in the workspace center. */
-  def getTextEditors(): js.Array[TextEditor] = js.native
+  def getTextEditors(): js.Array[TextEditor]
   /**
     *  Invoke the given callback with the current active pane and when the active pane
     *  changes.
     */
-  def observeActivePane(callback: js.Function1[/* pane */ Pane, Unit]): Disposable = js.native
+  def observeActivePane(callback: js.Function1[/* pane */ Pane, Unit]): Disposable
   /**
     *  Invoke the given callback with the current active pane item and with all future
     *  active pane items in the workspace center.
     */
-  def observeActivePaneItem(callback: js.Function1[/* item */ js.Object, Unit]): Disposable = js.native
+  def observeActivePaneItem(callback: js.Function1[/* item */ js.Object, Unit]): Disposable
   /**
     *  Invoke the given callback with all current and future panes items in the
     *  workspace center.
     */
-  def observePaneItems(callback: js.Function1[/* item */ js.Object, Unit]): Disposable = js.native
+  def observePaneItems(callback: js.Function1[/* item */ js.Object, Unit]): Disposable
   /** Invoke the given callback with all current and future panes in the workspace center. */
-  def observePanes(callback: js.Function1[/* pane */ Pane, Unit]): Disposable = js.native
+  def observePanes(callback: js.Function1[/* pane */ Pane, Unit]): Disposable
   // Event Subscription
   /**
     *  Invoke the given callback with all current and future text editors in the
     *  workspace center.
     */
-  def observeTextEditors(callback: js.Function1[/* editor */ TextEditor, Unit]): Disposable = js.native
+  def observeTextEditors(callback: js.Function1[/* editor */ TextEditor, Unit]): Disposable
   /** Invoke the given callback when a pane is added to the workspace center. */
-  def onDidAddPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable = js.native
+  def onDidAddPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable
   /** Invoke the given callback when a pane item is added to the workspace center. */
-  def onDidAddPaneItem(callback: js.Function1[/* event */ PaneItemObservedEvent, Unit]): Disposable = js.native
+  def onDidAddPaneItem(callback: js.Function1[/* event */ PaneItemObservedEvent, Unit]): Disposable
   /** Invoke the given callback when a text editor is added to the workspace center. */
-  def onDidAddTextEditor(callback: js.Function1[/* event */ TextEditorObservedEvent, Unit]): Disposable = js.native
+  def onDidAddTextEditor(callback: js.Function1[/* event */ TextEditorObservedEvent, Unit]): Disposable
   /** Invoke the given callback when the active pane changes. */
-  def onDidChangeActivePane(callback: js.Function1[/* pane */ Pane, Unit]): Disposable = js.native
+  def onDidChangeActivePane(callback: js.Function1[/* pane */ Pane, Unit]): Disposable
   /** Invoke the given callback when the active pane item changes. */
-  def onDidChangeActivePaneItem(callback: js.Function1[/* item */ js.Object, Unit]): Disposable = js.native
+  def onDidChangeActivePaneItem(callback: js.Function1[/* item */ js.Object, Unit]): Disposable
   /** Invoke the given callback when a pane is destroyed in the workspace center. */
-  def onDidDestroyPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable = js.native
+  def onDidDestroyPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable
   /** Invoke the given callback when a pane item is destroyed. */
-  def onDidDestroyPaneItem(callback: js.Function1[/* event */ PaneItemObservedEvent, Unit]): Disposable = js.native
+  def onDidDestroyPaneItem(callback: js.Function1[/* event */ PaneItemObservedEvent, Unit]): Disposable
   /** Invoke the given callback when the active pane item stops changing. */
-  def onDidStopChangingActivePaneItem(callback: js.Function1[/* item */ js.Object, Unit]): Disposable = js.native
+  def onDidStopChangingActivePaneItem(callback: js.Function1[/* item */ js.Object, Unit]): Disposable
   /** Invoke the given callback before a pane is destroyed in the workspace center. */
-  def onWillDestroyPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable = js.native
+  def onWillDestroyPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable
   /**
     *  Invoke the given callback when a pane item is about to be destroyed, before the user
     *  is prompted to save it.
@@ -74,13 +73,13 @@ trait WorkspaceCenter extends js.Object {
     *      If this function returns a Promise, then the item will not be destroyed
     *      until the promise resolves.
     */
-  def onWillDestroyPaneItem(callback: js.Function1[/* event */ PaneItemObservedEvent, Unit | js.Promise[Unit]]): Disposable = js.native
+  def onWillDestroyPaneItem(callback: js.Function1[/* event */ PaneItemObservedEvent, Unit | js.Promise[Unit]]): Disposable
   /** Retrieve the Pane associated with the given item. */
-  def paneForItem(item: js.Object): js.UndefOr[Pane] = js.native
+  def paneForItem(item: js.Object): js.UndefOr[Pane]
   /** Retrieve the Pane associated with the given URI. */
-  def paneForURI(uri: String): js.UndefOr[Pane] = js.native
+  def paneForURI(uri: String): js.UndefOr[Pane]
   /** Save all pane items. */
-  def saveAll(): Unit = js.native
+  def saveAll(): Unit
 }
 
 object WorkspaceCenter {
@@ -117,175 +116,5 @@ object WorkspaceCenter {
     val __obj = js.Dynamic.literal(activateNextPane = js.Any.fromFunction0(activateNextPane), activatePreviousPane = js.Any.fromFunction0(activatePreviousPane), destroyActivePane = js.Any.fromFunction0(destroyActivePane), getActivePane = js.Any.fromFunction0(getActivePane), getActivePaneItem = js.Any.fromFunction0(getActivePaneItem), getActiveTextEditor = js.Any.fromFunction0(getActiveTextEditor), getPaneItems = js.Any.fromFunction0(getPaneItems), getPanes = js.Any.fromFunction0(getPanes), getTextEditors = js.Any.fromFunction0(getTextEditors), observeActivePane = js.Any.fromFunction1(observeActivePane), observeActivePaneItem = js.Any.fromFunction1(observeActivePaneItem), observePaneItems = js.Any.fromFunction1(observePaneItems), observePanes = js.Any.fromFunction1(observePanes), observeTextEditors = js.Any.fromFunction1(observeTextEditors), onDidAddPane = js.Any.fromFunction1(onDidAddPane), onDidAddPaneItem = js.Any.fromFunction1(onDidAddPaneItem), onDidAddTextEditor = js.Any.fromFunction1(onDidAddTextEditor), onDidChangeActivePane = js.Any.fromFunction1(onDidChangeActivePane), onDidChangeActivePaneItem = js.Any.fromFunction1(onDidChangeActivePaneItem), onDidDestroyPane = js.Any.fromFunction1(onDidDestroyPane), onDidDestroyPaneItem = js.Any.fromFunction1(onDidDestroyPaneItem), onDidStopChangingActivePaneItem = js.Any.fromFunction1(onDidStopChangingActivePaneItem), onWillDestroyPane = js.Any.fromFunction1(onWillDestroyPane), onWillDestroyPaneItem = js.Any.fromFunction1(onWillDestroyPaneItem), paneForItem = js.Any.fromFunction1(paneForItem), paneForURI = js.Any.fromFunction1(paneForURI), saveAll = js.Any.fromFunction0(saveAll))
     __obj.asInstanceOf[WorkspaceCenter]
   }
-  @scala.inline
-  implicit class WorkspaceCenterOps[Self <: WorkspaceCenter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivateNextPane(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activateNextPane")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withActivatePreviousPane(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activatePreviousPane")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDestroyActivePane(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyActivePane")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetActivePane(value: () => Pane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActivePane")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetActivePaneItem(value: () => js.UndefOr[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActivePaneItem")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetActiveTextEditor(value: () => js.UndefOr[TextEditor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveTextEditor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPaneItems(value: () => js.Array[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPaneItems")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPanes(value: () => js.Array[Pane]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPanes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextEditors(value: () => js.Array[TextEditor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextEditors")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withObserveActivePane(value: js.Function1[/* pane */ Pane, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observeActivePane")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withObserveActivePaneItem(value: js.Function1[/* item */ js.Object, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observeActivePaneItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withObservePaneItems(value: js.Function1[/* item */ js.Object, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observePaneItems")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withObservePanes(value: js.Function1[/* pane */ Pane, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observePanes")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withObserveTextEditors(value: js.Function1[/* editor */ TextEditor, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observeTextEditors")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnDidAddPane(value: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidAddPane")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnDidAddPaneItem(value: js.Function1[/* event */ PaneItemObservedEvent, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidAddPaneItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnDidAddTextEditor(value: js.Function1[/* event */ TextEditorObservedEvent, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidAddTextEditor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnDidChangeActivePane(value: js.Function1[/* pane */ Pane, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidChangeActivePane")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnDidChangeActivePaneItem(value: js.Function1[/* item */ js.Object, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidChangeActivePaneItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnDidDestroyPane(value: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidDestroyPane")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnDidDestroyPaneItem(value: js.Function1[/* event */ PaneItemObservedEvent, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidDestroyPaneItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnDidStopChangingActivePaneItem(value: js.Function1[/* item */ js.Object, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidStopChangingActivePaneItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnWillDestroyPane(value: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWillDestroyPane")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnWillDestroyPaneItem(value: js.Function1[/* event */ PaneItemObservedEvent, Unit | js.Promise[Unit]] => Disposable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWillDestroyPaneItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPaneForItem(value: js.Object => js.UndefOr[Pane]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paneForItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPaneForURI(value: String => js.UndefOr[Pane]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paneForURI")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSaveAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveAll")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

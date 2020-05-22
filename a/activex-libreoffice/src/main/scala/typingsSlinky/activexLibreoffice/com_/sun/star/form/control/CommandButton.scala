@@ -39,7 +39,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.awt.UnoControlModel
   * @see com.sun.star.form.component.CommandButton.ButtonType
   */
-@js.native
 trait CommandButton
   extends XControl
      with XWindow

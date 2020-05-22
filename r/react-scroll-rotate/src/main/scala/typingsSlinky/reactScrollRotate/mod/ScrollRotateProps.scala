@@ -7,127 +7,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScrollRotateProps extends js.Object {
-  var animationDuration: js.UndefOr[Double] = js.native
-  var children: TagMod[Any] = js.native
-  var from: js.UndefOr[Double] = js.native
-  var loops: js.UndefOr[Double] = js.native
-  var method: js.UndefOr[px | prec] = js.native
-  var target: js.UndefOr[String] = js.native
-  var throttle: js.UndefOr[Double] = js.native
-  var to: js.UndefOr[Double] = js.native
+  var animationDuration: js.UndefOr[Double] = js.undefined
+  var children: TagMod[Any]
+  var from: js.UndefOr[Double] = js.undefined
+  var loops: js.UndefOr[Double] = js.undefined
+  var method: js.UndefOr[px | prec] = js.undefined
+  var target: js.UndefOr[String] = js.undefined
+  var throttle: js.UndefOr[Double] = js.undefined
+  var to: js.UndefOr[Double] = js.undefined
 }
 
 object ScrollRotateProps {
   @scala.inline
-  def apply(): ScrollRotateProps = {
+  def apply(
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    children: TagMod[Any] = null,
+    from: js.UndefOr[Double] = js.undefined,
+    loops: js.UndefOr[Double] = js.undefined,
+    method: px | prec = null,
+    target: String = null,
+    throttle: js.UndefOr[Double] = js.undefined,
+    to: js.UndefOr[Double] = js.undefined
+  ): ScrollRotateProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(from)) __obj.updateDynamic("from")(from.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loops)) __obj.updateDynamic("loops")(loops.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(throttle)) __obj.updateDynamic("throttle")(throttle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(to)) __obj.updateDynamic("to")(to.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollRotateProps]
   }
-  @scala.inline
-  implicit class ScrollRotatePropsOps[Self <: ScrollRotateProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoops(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: px | prec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

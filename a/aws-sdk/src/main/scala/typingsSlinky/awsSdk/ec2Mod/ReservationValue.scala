@@ -22,53 +22,16 @@ trait ReservationValue extends js.Object {
 
 object ReservationValue {
   @scala.inline
-  def apply(): ReservationValue = {
+  def apply(
+    HourlyPrice: String = null,
+    RemainingTotalValue: String = null,
+    RemainingUpfrontValue: String = null
+  ): ReservationValue = {
     val __obj = js.Dynamic.literal()
+    if (HourlyPrice != null) __obj.updateDynamic("HourlyPrice")(HourlyPrice.asInstanceOf[js.Any])
+    if (RemainingTotalValue != null) __obj.updateDynamic("RemainingTotalValue")(RemainingTotalValue.asInstanceOf[js.Any])
+    if (RemainingUpfrontValue != null) __obj.updateDynamic("RemainingUpfrontValue")(RemainingUpfrontValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservationValue]
   }
-  @scala.inline
-  implicit class ReservationValueOps[Self <: ReservationValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHourlyPrice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHourlyPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemainingTotalValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemainingTotalValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemainingTotalValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemainingTotalValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemainingUpfrontValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemainingUpfrontValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemainingUpfrontValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemainingUpfrontValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,14 @@ trait SessionManagerOutputUrl extends js.Object {
 
 object SessionManagerOutputUrl {
   @scala.inline
-  def apply(): SessionManagerOutputUrl = {
+  def apply(
+    CloudWatchOutputUrl: SessionManagerCloudWatchOutputUrl = null,
+    S3OutputUrl: SessionManagerS3OutputUrl = null
+  ): SessionManagerOutputUrl = {
     val __obj = js.Dynamic.literal()
+    if (CloudWatchOutputUrl != null) __obj.updateDynamic("CloudWatchOutputUrl")(CloudWatchOutputUrl.asInstanceOf[js.Any])
+    if (S3OutputUrl != null) __obj.updateDynamic("S3OutputUrl")(S3OutputUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SessionManagerOutputUrl]
   }
-  @scala.inline
-  implicit class SessionManagerOutputUrlOps[Self <: SessionManagerOutputUrl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudWatchOutputUrl(value: SessionManagerCloudWatchOutputUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchOutputUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchOutputUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchOutputUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3OutputUrl(value: SessionManagerS3OutputUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3OutputUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3OutputUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3OutputUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait StartQueryExecutionOutput extends js.Object {
 
 object StartQueryExecutionOutput {
   @scala.inline
-  def apply(): StartQueryExecutionOutput = {
+  def apply(QueryExecutionId: QueryExecutionId = null): StartQueryExecutionOutput = {
     val __obj = js.Dynamic.literal()
+    if (QueryExecutionId != null) __obj.updateDynamic("QueryExecutionId")(QueryExecutionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartQueryExecutionOutput]
   }
-  @scala.inline
-  implicit class StartQueryExecutionOutputOps[Self <: StartQueryExecutionOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryExecutionId(value: QueryExecutionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecutionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

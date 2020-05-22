@@ -22,53 +22,16 @@ trait DescribeVpnGatewaysRequest extends js.Object {
 
 object DescribeVpnGatewaysRequest {
   @scala.inline
-  def apply(): DescribeVpnGatewaysRequest = {
+  def apply(
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    Filters: FilterList = null,
+    VpnGatewayIds: VpnGatewayIdStringList = null
+  ): DescribeVpnGatewaysRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (VpnGatewayIds != null) __obj.updateDynamic("VpnGatewayIds")(VpnGatewayIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVpnGatewaysRequest]
   }
-  @scala.inline
-  implicit class DescribeVpnGatewaysRequestOps[Self <: DescribeVpnGatewaysRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: FilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpnGatewayIds(value: VpnGatewayIdStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnGatewayIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpnGatewayIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnGatewayIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

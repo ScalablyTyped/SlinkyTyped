@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateWorkspaceProposalRequest extends js.Object {
   /** When provided, this fingerprint must match the fingerprint of the proposal in storage. */
-  var fingerprint: js.UndefOr[String] = js.native
+  var fingerprint: js.UndefOr[String] = js.undefined
   /** If present, a new comment is added to the workspace proposal history. */
-  var newComment: js.UndefOr[WorkspaceProposalHistoryComment] = js.native
+  var newComment: js.UndefOr[WorkspaceProposalHistoryComment] = js.undefined
   /** If present, the list of reviewers of the workspace proposal is updated. */
-  var reviewers: js.UndefOr[js.Array[WorkspaceProposalUser]] = js.native
+  var reviewers: js.UndefOr[js.Array[WorkspaceProposalUser]] = js.undefined
   /** If present, the status of the workspace proposal is updated. */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[String] = js.undefined
 }
 
 object UpdateWorkspaceProposalRequest {
   @scala.inline
-  def apply(): UpdateWorkspaceProposalRequest = {
+  def apply(
+    fingerprint: String = null,
+    newComment: WorkspaceProposalHistoryComment = null,
+    reviewers: js.Array[WorkspaceProposalUser] = null,
+    status: String = null
+  ): UpdateWorkspaceProposalRequest = {
     val __obj = js.Dynamic.literal()
+    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
+    if (newComment != null) __obj.updateDynamic("newComment")(newComment.asInstanceOf[js.Any])
+    if (reviewers != null) __obj.updateDynamic("reviewers")(reviewers.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateWorkspaceProposalRequest]
   }
-  @scala.inline
-  implicit class UpdateWorkspaceProposalRequestOps[Self <: UpdateWorkspaceProposalRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewComment(value: WorkspaceProposalHistoryComment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newComment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newComment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReviewers(value: js.Array[WorkspaceProposalUser]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReviewers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

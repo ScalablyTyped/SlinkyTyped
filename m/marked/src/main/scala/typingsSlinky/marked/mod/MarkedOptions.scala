@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MarkedOptions extends js.Object {
   /**
     * A prefix URL for any relative link.
     */
-  var baseUrl: js.UndefOr[String] = js.native
+  var baseUrl: js.UndefOr[String] = js.undefined
   /**
     * Enable GFM line breaks. This option requires the gfm option to be true.
     */
-  var breaks: js.UndefOr[Boolean] = js.native
+  var breaks: js.UndefOr[Boolean] = js.undefined
   /**
     * Enable GitHub flavored markdown.
     */
-  var gfm: js.UndefOr[Boolean] = js.native
+  var gfm: js.UndefOr[Boolean] = js.undefined
   /**
     * Include an id attribute when emitting headings.
     */
-  var headerIds: js.UndefOr[Boolean] = js.native
+  var headerIds: js.UndefOr[Boolean] = js.undefined
   /**
     * Set the prefix for header tag ids.
     */
-  var headerPrefix: js.UndefOr[String] = js.native
+  var headerPrefix: js.UndefOr[String] = js.undefined
   /**
     * A function to highlight code blocks. The function can either be
     * synchronous (returning a string) or asynchronous (callback invoked
@@ -41,260 +40,91 @@ trait MarkedOptions extends js.Object {
       ], 
       String | Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Set the prefix for code block classes.
     */
-  var langPrefix: js.UndefOr[String] = js.native
+  var langPrefix: js.UndefOr[String] = js.undefined
   /**
     * Mangle autolinks (<email@domain.com>).
     */
-  var mangle: js.UndefOr[Boolean] = js.native
+  var mangle: js.UndefOr[Boolean] = js.undefined
   /**
     * Conform to obscure parts of markdown.pl as much as possible. Don't fix any of the original markdown bugs or poor behavior.
     */
-  var pedantic: js.UndefOr[Boolean] = js.native
+  var pedantic: js.UndefOr[Boolean] = js.undefined
   /**
     * Type: object Default: new Renderer()
     *
     * An object containing functions to render tokens to HTML.
     */
-  var renderer: js.UndefOr[Renderer] = js.native
+  var renderer: js.UndefOr[Renderer] = js.undefined
   /**
     * Sanitize the output. Ignore any HTML that has been input.
     */
-  var sanitize: js.UndefOr[Boolean] = js.native
+  var sanitize: js.UndefOr[Boolean] = js.undefined
   /**
     * Optionally sanitize found HTML with a sanitizer function.
     */
-  var sanitizer: js.UndefOr[js.Function1[/* html */ String, String]] = js.native
+  var sanitizer: js.UndefOr[js.Function1[/* html */ String, String]] = js.undefined
   /**
     * Shows an HTML error message when rendering fails.
     */
-  var silent: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.undefined
   /**
     * Use smarter list behavior than the original markdown. May eventually be default with the old behavior moved into pedantic.
     */
-  var smartLists: js.UndefOr[Boolean] = js.native
+  var smartLists: js.UndefOr[Boolean] = js.undefined
   /**
     * Use "smart" typograhic punctuation for things like quotes and dashes.
     */
-  var smartypants: js.UndefOr[Boolean] = js.native
+  var smartypants: js.UndefOr[Boolean] = js.undefined
   /**
     * Generate closing slash for self-closing tags (<br/> instead of <br>)
     */
-  var xhtml: js.UndefOr[Boolean] = js.native
+  var xhtml: js.UndefOr[Boolean] = js.undefined
 }
 
 object MarkedOptions {
   @scala.inline
-  def apply(): MarkedOptions = {
+  def apply(
+    baseUrl: String = null,
+    breaks: js.UndefOr[Boolean] = js.undefined,
+    gfm: js.UndefOr[Boolean] = js.undefined,
+    headerIds: js.UndefOr[Boolean] = js.undefined,
+    headerPrefix: String = null,
+    highlight: (/* code */ String, /* lang */ String, /* callback */ js.UndefOr[
+      js.Function2[/* error */ js.UndefOr[js.Any], /* code */ js.UndefOr[String], Unit]
+    ]) => String | Unit = null,
+    langPrefix: String = null,
+    mangle: js.UndefOr[Boolean] = js.undefined,
+    pedantic: js.UndefOr[Boolean] = js.undefined,
+    renderer: Renderer = null,
+    sanitize: js.UndefOr[Boolean] = js.undefined,
+    sanitizer: /* html */ String => String = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    smartLists: js.UndefOr[Boolean] = js.undefined,
+    smartypants: js.UndefOr[Boolean] = js.undefined,
+    xhtml: js.UndefOr[Boolean] = js.undefined
+  ): MarkedOptions = {
     val __obj = js.Dynamic.literal()
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(breaks)) __obj.updateDynamic("breaks")(breaks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gfm)) __obj.updateDynamic("gfm")(gfm.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headerIds)) __obj.updateDynamic("headerIds")(headerIds.get.asInstanceOf[js.Any])
+    if (headerPrefix != null) __obj.updateDynamic("headerPrefix")(headerPrefix.asInstanceOf[js.Any])
+    if (highlight != null) __obj.updateDynamic("highlight")(js.Any.fromFunction3(highlight))
+    if (langPrefix != null) __obj.updateDynamic("langPrefix")(langPrefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(mangle)) __obj.updateDynamic("mangle")(mangle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pedantic)) __obj.updateDynamic("pedantic")(pedantic.get.asInstanceOf[js.Any])
+    if (renderer != null) __obj.updateDynamic("renderer")(renderer.asInstanceOf[js.Any])
+    if (!js.isUndefined(sanitize)) __obj.updateDynamic("sanitize")(sanitize.get.asInstanceOf[js.Any])
+    if (sanitizer != null) __obj.updateDynamic("sanitizer")(js.Any.fromFunction1(sanitizer))
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smartLists)) __obj.updateDynamic("smartLists")(smartLists.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smartypants)) __obj.updateDynamic("smartypants")(smartypants.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xhtml)) __obj.updateDynamic("xhtml")(xhtml.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MarkedOptions]
   }
-  @scala.inline
-  implicit class MarkedOptionsOps[Self <: MarkedOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreaks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreaks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGfm(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gfm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGfm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gfm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderIds(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlight(
-      value: (/* code */ String, /* lang */ String, /* callback */ js.UndefOr[
-          js.Function2[/* error */ js.UndefOr[js.Any], /* code */ js.UndefOr[String], Unit]
-        ]) => String | Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLangPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("langPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLangPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("langPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMangle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mangle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMangle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mangle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPedantic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pedantic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPedantic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pedantic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: Renderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSanitize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSanitize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSanitizer(value: /* html */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitizer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSanitizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartLists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartLists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartLists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartLists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartypants(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartypants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartypants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartypants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXhtml(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhtml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXhtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhtml")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

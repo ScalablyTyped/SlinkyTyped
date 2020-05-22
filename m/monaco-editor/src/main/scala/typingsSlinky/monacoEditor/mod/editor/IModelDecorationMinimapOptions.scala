@@ -4,33 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IModelDecorationMinimapOptions extends IDecorationOptions {
   /**
     * The position in the overview ruler.
     */
-  var position: MinimapPosition = js.native
+  var position: MinimapPosition
 }
 
 object IModelDecorationMinimapOptions {
   @scala.inline
-  def apply(position: MinimapPosition): IModelDecorationMinimapOptions = {
+  def apply(
+    position: MinimapPosition,
+    color: String | ThemeColor = null,
+    darkColor: String | ThemeColor = null
+  ): IModelDecorationMinimapOptions = {
     val __obj = js.Dynamic.literal(position = position.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (darkColor != null) __obj.updateDynamic("darkColor")(darkColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[IModelDecorationMinimapOptions]
   }
-  @scala.inline
-  implicit class IModelDecorationMinimapOptionsOps[Self <: IModelDecorationMinimapOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPosition(value: MinimapPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

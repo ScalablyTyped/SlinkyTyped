@@ -12,122 +12,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options[TValue]
   extends /* key */ StringDictionary[js.Any] {
   /** Specify an adapter to use. e.g `'redis'` or `'mongodb'`. */
-  var adapter: js.UndefOr[redis | mongodb | mongo | sqlite | postgresql | postgres | mysql] = js.native
+  var adapter: js.UndefOr[redis | mongodb | mongo | sqlite | postgresql | postgres | mysql] = js.undefined
   /** A custom deserialization function. */
-  var deserialize: js.UndefOr[js.Function1[/* data */ String, TValue]] = js.native
+  var deserialize: js.UndefOr[js.Function1[/* data */ String, TValue]] = js.undefined
   /** Namespace for the current instance. */
-  var namespace: js.UndefOr[String] = js.native
+  var namespace: js.UndefOr[String] = js.undefined
   /** A custom serialization function. */
-  var serialize: js.UndefOr[js.Function1[/* data */ TValue, String]] = js.native
+  var serialize: js.UndefOr[js.Function1[/* data */ TValue, String]] = js.undefined
   /** The storage adapter instance to be used by Keyv. */
-  var store: js.UndefOr[Store[TValue]] = js.native
+  var store: js.UndefOr[Store[TValue]] = js.undefined
   /** Default TTL. Can be overridden by specififying a TTL on `.set()`. */
-  var ttl: js.UndefOr[Double] = js.native
+  var ttl: js.UndefOr[Double] = js.undefined
   /** The connection string URI. */
-  var uri: js.UndefOr[String] = js.native
+  var uri: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply[TValue](): Options[TValue] = {
+  def apply[TValue](
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    adapter: redis | mongodb | mongo | sqlite | postgresql | postgres | mysql = null,
+    deserialize: /* data */ String => TValue = null,
+    namespace: String = null,
+    serialize: /* data */ TValue => String = null,
+    store: Store[TValue] = null,
+    ttl: js.UndefOr[Double] = js.undefined,
+    uri: String = null
+  ): Options[TValue] = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (adapter != null) __obj.updateDynamic("adapter")(adapter.asInstanceOf[js.Any])
+    if (deserialize != null) __obj.updateDynamic("deserialize")(js.Any.fromFunction1(deserialize))
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (serialize != null) __obj.updateDynamic("serialize")(js.Any.fromFunction1(serialize))
+    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
+    if (!js.isUndefined(ttl)) __obj.updateDynamic("ttl")(ttl.get.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options[TValue]]
   }
-  @scala.inline
-  implicit class OptionsOps[Self[tvalue] <: Options[tvalue], TValue] (val x: Self[TValue]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TValue] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TValue]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TValue] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TValue] with Other]
-    @scala.inline
-    def withAdapter(value: redis | mongodb | mongo | sqlite | postgresql | postgres | mysql): Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdapter: Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeserialize(value: /* data */ String => TValue): Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deserialize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDeserialize: Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deserialize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerialize(value: /* data */ TValue => String): Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSerialize: Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStore(value: Store[TValue]): Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStore: Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTtl(value: Double): Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTtl: Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self[TValue] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

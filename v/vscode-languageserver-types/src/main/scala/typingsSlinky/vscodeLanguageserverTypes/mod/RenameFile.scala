@@ -5,25 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RenameFile extends ResourceOperation {
   /**
     * A rename
     */
   @JSName("kind")
-  var kind_RenameFile: rename = js.native
+  var kind_RenameFile: rename
   /**
     * The new location.
     */
-  var newUri: DocumentUri = js.native
+  var newUri: DocumentUri
   /**
     * The old (existing) location.
     */
-  var oldUri: DocumentUri = js.native
+  var oldUri: DocumentUri
   /**
     * Rename options.
     */
-  var options: js.UndefOr[RenameFileOptions] = js.native
+  var options: js.UndefOr[RenameFileOptions] = js.undefined
 }
 
 @JSImport("vscode-languageserver-types", "RenameFile")

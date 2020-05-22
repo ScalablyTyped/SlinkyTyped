@@ -4,32 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SimpleBindingData
   extends BaseBindingData
      with BindingData {
-  var expressions: js.Array[ExpressionData] = js.native
+  var expressions: js.Array[ExpressionData]
 }
 
 object SimpleBindingData {
   @scala.inline
-  def apply(expressions: js.Array[ExpressionData]): SimpleBindingData = {
+  def apply(
+    expressions: js.Array[ExpressionData],
+    evaluate: /* scope */ js.Any => _ = null,
+    redundantAttribute: String = null,
+    selector: String = null,
+    `type`: BindingType = null
+  ): SimpleBindingData = {
     val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any])
+    if (evaluate != null) __obj.updateDynamic("evaluate")(js.Any.fromFunction1(evaluate))
+    if (redundantAttribute != null) __obj.updateDynamic("redundantAttribute")(redundantAttribute.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleBindingData]
   }
-  @scala.inline
-  implicit class SimpleBindingDataOps[Self <: SimpleBindingData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpressions(value: js.Array[ExpressionData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

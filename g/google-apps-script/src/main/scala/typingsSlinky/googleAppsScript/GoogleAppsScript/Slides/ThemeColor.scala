@@ -8,10 +8,9 @@ import scala.scalajs.js.annotation._
 /**
   * A color that refers to an entry in the page's ColorScheme.
   */
-@js.native
 trait ThemeColor extends js.Object {
-  def getColorType(): ColorType = js.native
-  def getThemeColorType(): ThemeColorType = js.native
+  def getColorType(): ColorType
+  def getThemeColorType(): ThemeColorType
 }
 
 object ThemeColor {
@@ -20,25 +19,5 @@ object ThemeColor {
     val __obj = js.Dynamic.literal(getColorType = js.Any.fromFunction0(getColorType), getThemeColorType = js.Any.fromFunction0(getThemeColorType))
     __obj.asInstanceOf[ThemeColor]
   }
-  @scala.inline
-  implicit class ThemeColorOps[Self <: ThemeColor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetColorType(value: () => ColorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColorType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetThemeColorType(value: () => ThemeColorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getThemeColorType")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

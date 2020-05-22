@@ -12,7 +12,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollectionProps
   extends /**
   * PLEASE NOTE
@@ -22,16 +21,16 @@ trait CollectionProps
   * https://github.com/bvaughn/react-virtualized#pass-thru-props
   */
 /* key */ StringDictionary[js.Any] {
-  var `aria-label`: js.UndefOr[String] = js.native
+  var `aria-label`: js.UndefOr[String] = js.undefined
   /**
     * Outer height of Collection is set to "auto". This property should only be
     * used in conjunction with the WindowScroller HOC.
     */
-  var autoHeight: js.UndefOr[Boolean] = js.native
+  var autoHeight: js.UndefOr[Boolean] = js.undefined
   /**
     * Number of cells in Collection.
     */
-  var cellCount: Double = js.native
+  var cellCount: Double
   /**
     * Responsible for rendering a group of cells given their indices.
     * Should implement the following interface: ({
@@ -40,42 +39,42 @@ trait CollectionProps
     *   cellRenderer: Function
     * }): Array<PropTypes.node>
     */
-  var cellGroupRenderer: js.UndefOr[CollectionCellGroupRenderer] = js.native
+  var cellGroupRenderer: js.UndefOr[CollectionCellGroupRenderer] = js.undefined
   /**
     * Responsible for rendering a cell given an row and column index.
     * Should implement the following interface: ({ index: number, key: string, style: object }): PropTypes.element
     */
-  var cellRenderer: CollectionCellRenderer = js.native
+  var cellRenderer: CollectionCellRenderer
   /**
     * Callback responsible for returning size and offset/position information for a given cell (index).
     * ({ index: number }): { height: number, width: number, x: number, y: number }
     */
-  var cellSizeAndPositionGetter: CollectionCellSizeAndPositionGetter = js.native
+  var cellSizeAndPositionGetter: CollectionCellSizeAndPositionGetter
   /**
     * Optional custom CSS class name to attach to root Collection element.
     */
-  var className: js.UndefOr[String] = js.native
-  var height: Double = js.native
-  var horizontalOverscanSize: js.UndefOr[Double] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var height: Double
+  var horizontalOverscanSize: js.UndefOr[Double] = js.undefined
   /**
     * Optional custom id to attach to root Collection element.
     */
-  var id: js.UndefOr[String] = js.native
-  var noContentRenderer: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var id: js.UndefOr[String] = js.undefined
+  var noContentRenderer: js.UndefOr[js.Function0[ReactElement]] = js.undefined
   /**
     * Callback invoked whenever the scroll offset changes within the inner
     * scrollable region: ({ clientHeight, clientWidth, scrollHeight, scrollLeft, scrollTop, scrollWidth }): void
     */
-  var onScroll: js.UndefOr[js.Function1[/* params */ ScrollParams, _]] = js.native
+  var onScroll: js.UndefOr[js.Function1[/* params */ ScrollParams, _]] = js.undefined
   /**
     * Callback invoked with information about the section of the Collection
     * that was just rendered: ({ indices: Array<number> }): void
     */
-  var onSectionRendered: js.UndefOr[js.Function1[/* params */ SectionRenderedParams, _]] = js.native
+  var onSectionRendered: js.UndefOr[js.Function1[/* params */ SectionRenderedParams, _]] = js.undefined
   /**
     * Horizontal offset
     */
-  var scrollLeft: js.UndefOr[Double] = js.native
+  var scrollLeft: js.UndefOr[Double] = js.undefined
   /**
     * Controls the alignment of scrolled-to-cells. The default ("auto") scrolls
     * the least amount possible to ensure that the specified cell is fully
@@ -83,26 +82,26 @@ trait CollectionProps
     * Collection and "end" to align them bottom/right. Use "center" to align
     * specified cell in the middle of container.
     */
-  var scrollToAlignment: js.UndefOr[Alignment] = js.native
-  var scrollToCell: js.UndefOr[Double] = js.native
+  var scrollToAlignment: js.UndefOr[Alignment] = js.undefined
+  var scrollToCell: js.UndefOr[Double] = js.undefined
   /**
     * Vertical Offset
     */
-  var scrollTop: js.UndefOr[Double] = js.native
+  var scrollTop: js.UndefOr[Double] = js.undefined
   /**
     * Optionally override the size of the sections a Collection's cells are split into.
     */
-  var sectionSize: js.UndefOr[Double] = js.native
+  var sectionSize: js.UndefOr[Double] = js.undefined
   /**
     * Optional custom inline style to attach to root Collection element.
     */
-  var style: js.UndefOr[CSSProperties] = js.native
-  var verticalOverscanSize: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var verticalOverscanSize: js.UndefOr[Double] = js.undefined
   /**
     * Width of Collection; this property determines the number of visible
     * (vs virtualized) columns.
     */
-  var width: Double = js.native
+  var width: Double
 }
 
 object CollectionProps {
@@ -112,240 +111,44 @@ object CollectionProps {
     cellRenderer: /* params */ CollectionCellRendererParams => TagMod[Any],
     cellSizeAndPositionGetter: /* params */ Index => CollectionCellSizeAndPosition,
     height: Double,
-    width: Double
+    width: Double,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    `aria-label`: String = null,
+    autoHeight: js.UndefOr[Boolean] = js.undefined,
+    cellGroupRenderer: /* params */ CollectionCellGroupRendererParams => js.Array[TagMod[Any]] = null,
+    className: String = null,
+    horizontalOverscanSize: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    noContentRenderer: () => ReactElement = null,
+    onScroll: /* params */ ScrollParams => _ = null,
+    onSectionRendered: /* params */ SectionRenderedParams => _ = null,
+    scrollLeft: js.UndefOr[Double] = js.undefined,
+    scrollToAlignment: Alignment = null,
+    scrollToCell: js.UndefOr[Double] = js.undefined,
+    scrollTop: js.UndefOr[Double] = js.undefined,
+    sectionSize: js.UndefOr[Double] = js.undefined,
+    style: CSSProperties = null,
+    verticalOverscanSize: js.UndefOr[Double] = js.undefined
   ): CollectionProps = {
     val __obj = js.Dynamic.literal(cellCount = cellCount.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), cellSizeAndPositionGetter = js.Any.fromFunction1(cellSizeAndPositionGetter), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoHeight)) __obj.updateDynamic("autoHeight")(autoHeight.get.asInstanceOf[js.Any])
+    if (cellGroupRenderer != null) __obj.updateDynamic("cellGroupRenderer")(js.Any.fromFunction1(cellGroupRenderer))
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalOverscanSize)) __obj.updateDynamic("horizontalOverscanSize")(horizontalOverscanSize.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (noContentRenderer != null) __obj.updateDynamic("noContentRenderer")(js.Any.fromFunction0(noContentRenderer))
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (onSectionRendered != null) __obj.updateDynamic("onSectionRendered")(js.Any.fromFunction1(onSectionRendered))
+    if (!js.isUndefined(scrollLeft)) __obj.updateDynamic("scrollLeft")(scrollLeft.get.asInstanceOf[js.Any])
+    if (scrollToAlignment != null) __obj.updateDynamic("scrollToAlignment")(scrollToAlignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollToCell)) __obj.updateDynamic("scrollToCell")(scrollToCell.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollTop)) __obj.updateDynamic("scrollTop")(scrollTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sectionSize)) __obj.updateDynamic("sectionSize")(sectionSize.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalOverscanSize)) __obj.updateDynamic("verticalOverscanSize")(verticalOverscanSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionProps]
   }
-  @scala.inline
-  implicit class CollectionPropsOps[Self <: CollectionProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCellCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCellRenderer(value: /* params */ CollectionCellRendererParams => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCellSizeAndPositionGetter(value: /* params */ Index => CollectionCellSizeAndPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSizeAndPositionGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAria-label`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-label`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellGroupRenderer(value: /* params */ CollectionCellGroupRendererParams => js.Array[TagMod[Any]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellGroupRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellGroupRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellGroupRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalOverscanSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOverscanSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalOverscanSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOverscanSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoContentRenderer(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noContentRenderer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutNoContentRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noContentRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScroll(value: /* params */ ScrollParams => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSectionRendered(value: /* params */ SectionRenderedParams => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSectionRendered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSectionRendered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSectionRendered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollToAlignment(value: Alignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollToAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollToCell(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollToCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSectionSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSectionSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalOverscanSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalOverscanSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalOverscanSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalOverscanSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

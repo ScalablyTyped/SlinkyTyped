@@ -258,12 +258,12 @@ trait View extends Control {
     * @param vPreprocessor module path of the preprocessor implementation or a preprocessor function
     * @param sViewType type of the calling view, e.g. <code>XML</code>
     * @param bSyncSupport declares if the vPreprocessor ensures safe sync processing. This means the
-    * preprocessor will be executed		also for sync views. Please be aware that any kind of async
-    * processing (like Promises, XHR, etc) may		break the view initialization and lead to unexpected
+    * preprocessor will be executed        also for sync views. Please be aware that any kind of async
+    * processing (like Promises, XHR, etc) may        break the view initialization and lead to unexpected
     * results.
     * @param bOnDemand on-demand preprocessor which enables developers to quickly activate the
-    * preprocessor for a view,		by setting <code>preprocessors : { xml }</code>, for example. This should
-    * be false except for very special		cases. There can only be one on-demand preprocessor per content
+    * preprocessor for a view,        by setting <code>preprocessors : { xml }</code>, for example. This should
+    * be false except for very special        cases. There can only be one on-demand preprocessor per content
     * type.
     * @param mSettings optional configuration for preprocessor
     */
@@ -373,7 +373,7 @@ object View extends js.Object {
       * @param oViewInfo identification information about the calling instance
       * @param mSettings settings object containing the settings provided with the preprocessor
       * @returns the processed resource or a promise which resolves with the processed resource or an error
-      * according to the		declared preprocessor sync capability
+      * according to the        declared preprocessor sync capability
       */
     def process(vSource: js.Any, oViewInfo: js.Any): js.Any | JQueryPromise[_] = js.native
     def process(vSource: js.Any, oViewInfo: js.Any, mSettings: js.Any): js.Any | JQueryPromise[_] = js.native

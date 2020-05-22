@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait RGBA extends Color {
-  var alpha: js.UndefOr[Double] = js.native
-  var b: js.UndefOr[Double] = js.native
-  var g: js.UndefOr[Double] = js.native
-  var r: js.UndefOr[Double] = js.native
+trait RGBA extends js.Object {
+  var alpha: js.UndefOr[Double] = js.undefined
+  var b: js.UndefOr[Double] = js.undefined
+  var g: js.UndefOr[Double] = js.undefined
+  var r: js.UndefOr[Double] = js.undefined
 }
 
 object RGBA {
   @scala.inline
-  def apply(): RGBA = {
+  def apply(
+    alpha: js.UndefOr[Double] = js.undefined,
+    b: js.UndefOr[Double] = js.undefined,
+    g: js.UndefOr[Double] = js.undefined,
+    r: js.UndefOr[Double] = js.undefined
+  ): RGBA = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alpha)) __obj.updateDynamic("alpha")(alpha.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(b)) __obj.updateDynamic("b")(b.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(g)) __obj.updateDynamic("g")(g.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(r)) __obj.updateDynamic("r")(r.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RGBA]
   }
-  @scala.inline
-  implicit class RGBAOps[Self <: RGBA] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withB(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutB: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withG(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutG: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withR(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutR: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

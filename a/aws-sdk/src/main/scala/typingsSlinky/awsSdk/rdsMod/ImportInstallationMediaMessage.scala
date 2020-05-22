@@ -40,43 +40,5 @@ object ImportInstallationMediaMessage {
     val __obj = js.Dynamic.literal(CustomAvailabilityZoneId = CustomAvailabilityZoneId.asInstanceOf[js.Any], Engine = Engine.asInstanceOf[js.Any], EngineInstallationMediaPath = EngineInstallationMediaPath.asInstanceOf[js.Any], EngineVersion = EngineVersion.asInstanceOf[js.Any], OSInstallationMediaPath = OSInstallationMediaPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportInstallationMediaMessage]
   }
-  @scala.inline
-  implicit class ImportInstallationMediaMessageOps[Self <: ImportInstallationMediaMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomAvailabilityZoneId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEngine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEngineInstallationMediaPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineInstallationMediaPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEngineVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOSInstallationMediaPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OSInstallationMediaPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,44 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait fileButton extends js.Object {
-  var `for`: String = js.native
-  var validate: js.UndefOr[js.Function0[Boolean]] = js.native
+  var `for`: String
+  var validate: js.UndefOr[js.Function0[Boolean]] = js.undefined
 }
 
 object fileButton {
   @scala.inline
-  def apply(`for`: String): fileButton = {
+  def apply(`for`: String, validate: () => Boolean = null): fileButton = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("for")(`for`.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction0(validate))
     __obj.asInstanceOf[fileButton]
   }
-  @scala.inline
-  implicit class fileButtonOps[Self <: fileButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("for")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValidate(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutValidate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

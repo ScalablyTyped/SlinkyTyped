@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * }
   * ```
   */
-@js.native
 trait IsReadyToPayResponse extends js.Object {
   /**
     * The current user's ability to pay with one or more of the payment
@@ -32,7 +31,7 @@ trait IsReadyToPayResponse extends js.Object {
     * [[PaymentsClient|`PaymentsClient`]] is configured for a test
     * environment.
     */
-  var paymentMethodPresent: js.UndefOr[`false` | `true`] = js.native
+  var paymentMethodPresent: js.UndefOr[`false` | `true`] = js.undefined
   /**
     * Whether the user is able to provide payment information through the
     * Google Pay payment sheet.
@@ -43,40 +42,15 @@ trait IsReadyToPayResponse extends js.Object {
     * Account and providing one of the payment methods specified in
     * [[IsReadyToPayRequest.allowedPaymentMethods|`IsReadyToPayRequest.allowedPaymentMethods`]].
     */
-  var result: Boolean = js.native
+  var result: Boolean
 }
 
 object IsReadyToPayResponse {
   @scala.inline
-  def apply(result: Boolean): IsReadyToPayResponse = {
+  def apply(result: Boolean, paymentMethodPresent: `false` | `true` = null): IsReadyToPayResponse = {
     val __obj = js.Dynamic.literal(result = result.asInstanceOf[js.Any])
+    if (paymentMethodPresent != null) __obj.updateDynamic("paymentMethodPresent")(paymentMethodPresent.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsReadyToPayResponse]
   }
-  @scala.inline
-  implicit class IsReadyToPayResponseOps[Self <: IsReadyToPayResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResult(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaymentMethodPresent(value: `false` | `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentMethodPresent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentMethodPresent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentMethodPresent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UseThemeContextProps extends js.Object {
-  var theme: js.UndefOr[PartialTheme] = js.native
+  var theme: js.UndefOr[PartialTheme] = js.undefined
 }
 
 object UseThemeContextProps {
   @scala.inline
-  def apply(): UseThemeContextProps = {
+  def apply(theme: PartialTheme = null): UseThemeContextProps = {
     val __obj = js.Dynamic.literal()
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseThemeContextProps]
   }
-  @scala.inline
-  implicit class UseThemeContextPropsOps[Self <: UseThemeContextProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTheme(value: PartialTheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

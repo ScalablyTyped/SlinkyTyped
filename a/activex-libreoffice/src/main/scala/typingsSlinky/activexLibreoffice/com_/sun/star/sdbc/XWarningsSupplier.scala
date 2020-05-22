@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * should be implemented of objects which may report warnings or non critical errors.
   * @see com.sun.star.sdbc.SQLWarning
   */
-@js.native
 trait XWarningsSupplier extends XInterface {
   /**
     * returns the first warning reported by calls on an object that supports the usage of warnings.
@@ -19,13 +18,13 @@ trait XWarningsSupplier extends XInterface {
     * @returns the warnings
     * @throws SQLException if a database access error occurs.
     */
-  val Warnings: js.Any = js.native
+  val Warnings: js.Any
   /**
     * clears all warnings reported for the object implementing the interface. After a call to this method, the method {@link
     * com.sun.star.sdbc.XWarningsSupplier.getWarnings()} returns `VOID` until a new warning is reported for the object.
     * @throws SQLException if a database access error occurs.
     */
-  def clearWarnings(): Unit = js.native
+  def clearWarnings(): Unit
   /**
     * returns the first warning reported by calls on an object that supports the usage of warnings.
     *
@@ -33,7 +32,7 @@ trait XWarningsSupplier extends XInterface {
     * @returns the warnings
     * @throws SQLException if a database access error occurs.
     */
-  def getWarnings(): js.Any = js.native
+  def getWarnings(): js.Any
 }
 
 object XWarningsSupplier {
@@ -49,31 +48,5 @@ object XWarningsSupplier {
     val __obj = js.Dynamic.literal(Warnings = Warnings.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), clearWarnings = js.Any.fromFunction0(clearWarnings), getWarnings = js.Any.fromFunction0(getWarnings), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XWarningsSupplier]
   }
-  @scala.inline
-  implicit class XWarningsSupplierOps[Self <: XWarningsSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWarnings(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClearWarnings(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearWarnings")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetWarnings(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWarnings")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

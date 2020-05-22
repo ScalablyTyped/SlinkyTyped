@@ -5,26 +5,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Fired when the user activity was continued on another device.
-			 */
-@js.native
+  * Fired when the user activity was continued on another device.
+  */
 trait UserActivityUseractivitywascontinuedEvent extends UserActivityBaseEvent {
   /**
-  				 * The activityType of the User Activity triggering the event.
-  				 */
-  var activityType: String = js.native
+    * The activityType of the User Activity triggering the event.
+    */
+  var activityType: String
   /**
-  				 * The title of the User Activity if defined.
-  				 */
-  var title: String = js.native
+    * The title of the User Activity if defined.
+    */
+  var title: String
   /**
-  				 * Dictionary object containing the userInfo data of the User Activity.
-  				 */
-  var userInfo: js.Any = js.native
+    * Dictionary object containing the userInfo data of the User Activity.
+    */
+  var userInfo: js.Any
   /**
-  				 * The webpageURL of the User Activity if defined.
-  				 */
-  var webpageURL: String = js.native
+    * The webpageURL of the User Activity if defined.
+    */
+  var webpageURL: String
 }
 
 object UserActivityUseractivitywascontinuedEvent {
@@ -33,37 +32,5 @@ object UserActivityUseractivitywascontinuedEvent {
     val __obj = js.Dynamic.literal(activityType = activityType.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], userInfo = userInfo.asInstanceOf[js.Any], webpageURL = webpageURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserActivityUseractivitywascontinuedEvent]
   }
-  @scala.inline
-  implicit class UserActivityUseractivitywascontinuedEventOps[Self <: UserActivityUseractivitywascontinuedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserInfo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebpageURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpageURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

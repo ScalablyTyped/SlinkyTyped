@@ -29,10 +29,10 @@ trait WebpackAssetsManifest extends Plugin {
   /** Get the file system path to the manifest */
   def getOutputPath(): String = js.native
   /**
-  	 * Get a [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) for the manifest
-  	 *
-  	 * @param raw - Use `setRaw` instead of `set`
-  	 */
+    * Get a [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) for the manifest
+    *
+    * @param raw - Use `setRaw` instead of `set`
+    */
   def getProxy(): ProxyHandler[WebpackAssetsManifest] = js.native
   def getProxy(raw: Boolean): ProxyHandler[WebpackAssetsManifest] = js.native
   /** Get the public path for the filename */

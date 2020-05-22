@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XRWebGLLayerOptions extends js.Object {
-  var alpha: js.UndefOr[Boolean] = js.native
-  var antialias: js.UndefOr[Boolean] = js.native
-  var depth: js.UndefOr[Boolean] = js.native
-  var framebufferScaleFactor: js.UndefOr[Double] = js.native
-  var multiview: js.UndefOr[Boolean] = js.native
-  var stencil: js.UndefOr[Boolean] = js.native
+  var alpha: js.UndefOr[Boolean] = js.undefined
+  var antialias: js.UndefOr[Boolean] = js.undefined
+  var depth: js.UndefOr[Boolean] = js.undefined
+  var framebufferScaleFactor: js.UndefOr[Double] = js.undefined
+  var multiview: js.UndefOr[Boolean] = js.undefined
+  var stencil: js.UndefOr[Boolean] = js.undefined
 }
 
 object XRWebGLLayerOptions {
   @scala.inline
-  def apply(): XRWebGLLayerOptions = {
+  def apply(
+    alpha: js.UndefOr[Boolean] = js.undefined,
+    antialias: js.UndefOr[Boolean] = js.undefined,
+    depth: js.UndefOr[Boolean] = js.undefined,
+    framebufferScaleFactor: js.UndefOr[Double] = js.undefined,
+    multiview: js.UndefOr[Boolean] = js.undefined,
+    stencil: js.UndefOr[Boolean] = js.undefined
+  ): XRWebGLLayerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alpha)) __obj.updateDynamic("alpha")(alpha.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(antialias)) __obj.updateDynamic("antialias")(antialias.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(depth)) __obj.updateDynamic("depth")(depth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(framebufferScaleFactor)) __obj.updateDynamic("framebufferScaleFactor")(framebufferScaleFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiview)) __obj.updateDynamic("multiview")(multiview.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stencil)) __obj.updateDynamic("stencil")(stencil.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[XRWebGLLayerOptions]
   }
-  @scala.inline
-  implicit class XRWebGLLayerOptionsOps[Self <: XRWebGLLayerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlpha(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAntialias(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antialias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAntialias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antialias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramebufferScaleFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framebufferScaleFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramebufferScaleFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framebufferScaleFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiview(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStencil(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stencil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStencil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stencil")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

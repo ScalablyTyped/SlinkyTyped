@@ -5,88 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnionTypeDescription extends IDLTypeDescription {
   /** String indicating the generic type (e.g. "Promise", "sequence"). null otherwise. */
-  var generic: String | Null = js.native
+  var generic: String | Null
   /**
     * In most cases, this will just be a string with the type name.
     * If the type is a union, then this contains an array of the types it unites.
     * If it is a generic type, it contains the IDL type description for the type in the sequence,
     * the eventual value of the promise, etc.
     */
-  var idlType: js.Array[IDLTypeDescription] = js.native
+  var idlType: js.Array[IDLTypeDescription]
   /** Boolean indicating whether this is nullable or not. */
-  var nullable: Boolean = js.native
+  var nullable: Boolean
   /** Boolean indicating if it is a sequence. Same as generic === "sequence" */
-  var sequence: Boolean = js.native
+  var sequence: Boolean
   /** String indicating where this type is used. Can be null if not applicable. */
-  var `type`: String | Null = js.native
+  var `type`: String | Null
   /** Boolean indicating whether this is a union type or not. */
-  var union: `true` = js.native
+  var union: `true`
 }
 
 object UnionTypeDescription {
   @scala.inline
-  def apply(idlType: js.Array[IDLTypeDescription], nullable: Boolean, sequence: Boolean, union: `true`): UnionTypeDescription = {
-    val __obj = js.Dynamic.literal(idlType = idlType.asInstanceOf[js.Any], nullable = nullable.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any], union = union.asInstanceOf[js.Any])
+  def apply(
+    idlType: js.Array[IDLTypeDescription],
+    nullable: Boolean,
+    sequence: Boolean,
+    union: `true`,
+    generic: String = null,
+    `type`: String = null
+  ): UnionTypeDescription = {
+    val __obj = js.Dynamic.literal(idlType = idlType.asInstanceOf[js.Any], nullable = nullable.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any], union = union.asInstanceOf[js.Any], generic = generic.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnionTypeDescription]
   }
-  @scala.inline
-  implicit class UnionTypeDescriptionOps[Self <: UnionTypeDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdlType(value: js.Array[IDLTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idlType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNullable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSequence(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnion(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("union")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeneric(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGenericNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generic")(null)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LobbyEventDtoWrapper extends js.Object {
-  var eventList: js.Array[LobbyEventDto] = js.native
+  var eventList: js.Array[LobbyEventDto]
 }
 
 object LobbyEventDtoWrapper {
@@ -15,19 +14,5 @@ object LobbyEventDtoWrapper {
     val __obj = js.Dynamic.literal(eventList = eventList.asInstanceOf[js.Any])
     __obj.asInstanceOf[LobbyEventDtoWrapper]
   }
-  @scala.inline
-  implicit class LobbyEventDtoWrapperOps[Self <: LobbyEventDtoWrapper] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventList(value: js.Array[LobbyEventDto]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventList")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

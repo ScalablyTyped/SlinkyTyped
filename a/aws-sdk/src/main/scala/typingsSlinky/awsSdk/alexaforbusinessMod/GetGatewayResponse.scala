@@ -14,29 +14,10 @@ trait GetGatewayResponse extends js.Object {
 
 object GetGatewayResponse {
   @scala.inline
-  def apply(): GetGatewayResponse = {
+  def apply(Gateway: Gateway = null): GetGatewayResponse = {
     val __obj = js.Dynamic.literal()
+    if (Gateway != null) __obj.updateDynamic("Gateway")(Gateway.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetGatewayResponse]
   }
-  @scala.inline
-  implicit class GetGatewayResponseOps[Self <: GetGatewayResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGateway(value: Gateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGateway: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gateway")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

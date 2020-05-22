@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReporterConfig extends js.Object {
-  var agentHost: js.UndefOr[String] = js.native
-  var agentPort: js.UndefOr[Double] = js.native
-  var collectorEndpoint: js.UndefOr[String] = js.native
-  var flushIntervalMs: js.UndefOr[Double] = js.native
-  var logSpans: js.UndefOr[Boolean] = js.native
-  var password: js.UndefOr[String] = js.native
-  var username: js.UndefOr[String] = js.native
+  var agentHost: js.UndefOr[String] = js.undefined
+  var agentPort: js.UndefOr[Double] = js.undefined
+  var collectorEndpoint: js.UndefOr[String] = js.undefined
+  var flushIntervalMs: js.UndefOr[Double] = js.undefined
+  var logSpans: js.UndefOr[Boolean] = js.undefined
+  var password: js.UndefOr[String] = js.undefined
+  var username: js.UndefOr[String] = js.undefined
 }
 
 object ReporterConfig {
   @scala.inline
-  def apply(): ReporterConfig = {
+  def apply(
+    agentHost: String = null,
+    agentPort: js.UndefOr[Double] = js.undefined,
+    collectorEndpoint: String = null,
+    flushIntervalMs: js.UndefOr[Double] = js.undefined,
+    logSpans: js.UndefOr[Boolean] = js.undefined,
+    password: String = null,
+    username: String = null
+  ): ReporterConfig = {
     val __obj = js.Dynamic.literal()
+    if (agentHost != null) __obj.updateDynamic("agentHost")(agentHost.asInstanceOf[js.Any])
+    if (!js.isUndefined(agentPort)) __obj.updateDynamic("agentPort")(agentPort.get.asInstanceOf[js.Any])
+    if (collectorEndpoint != null) __obj.updateDynamic("collectorEndpoint")(collectorEndpoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(flushIntervalMs)) __obj.updateDynamic("flushIntervalMs")(flushIntervalMs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logSpans)) __obj.updateDynamic("logSpans")(logSpans.get.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReporterConfig]
   }
-  @scala.inline
-  implicit class ReporterConfigOps[Self <: ReporterConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgentPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollectorEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectorEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollectorEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectorEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlushIntervalMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flushIntervalMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlushIntervalMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flushIntervalMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogSpans(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logSpans")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogSpans: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logSpans")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

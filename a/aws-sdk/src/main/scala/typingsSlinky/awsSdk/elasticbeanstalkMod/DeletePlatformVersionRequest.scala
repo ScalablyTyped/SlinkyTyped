@@ -14,29 +14,10 @@ trait DeletePlatformVersionRequest extends js.Object {
 
 object DeletePlatformVersionRequest {
   @scala.inline
-  def apply(): DeletePlatformVersionRequest = {
+  def apply(PlatformArn: PlatformArn = null): DeletePlatformVersionRequest = {
     val __obj = js.Dynamic.literal()
+    if (PlatformArn != null) __obj.updateDynamic("PlatformArn")(PlatformArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeletePlatformVersionRequest]
   }
-  @scala.inline
-  implicit class DeletePlatformVersionRequestOps[Self <: DeletePlatformVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlatformArn(value: PlatformArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

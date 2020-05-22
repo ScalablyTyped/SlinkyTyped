@@ -23,14 +23,14 @@ trait ChartSeriesFormat extends ClientObject {
   var context_ChartSeriesFormat: RequestContext = js.native
   /**
     *
-    * Represents the fill format of a chart series, which includes background formatting information. Read-only.
+    * Represents the fill format of a chart series, which includes background formatting information.
     *
     * [Api set: ExcelApi 1.1]
     */
   val fill: ChartFill = js.native
   /**
     *
-    * Represents line formatting. Read-only.
+    * Represents line formatting.
     *
     * [Api set: ExcelApi 1.1]
     */

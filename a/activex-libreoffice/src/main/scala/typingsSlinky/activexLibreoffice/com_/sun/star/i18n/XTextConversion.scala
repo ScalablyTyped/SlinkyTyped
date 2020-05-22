@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * Method to convert text from one type to another
   * @since OOo 1.1.2
   */
-@js.native
 trait XTextConversion extends XInterface {
   /**
     * Method to search dictionaries for the conversion candidate, if there are multiple candidates, it will return first one. This is for the conversion in
@@ -32,7 +31,7 @@ trait XTextConversion extends XInterface {
     Locale: Locale,
     nTextConversionType: Double,
     nTextConversionOptions: Double
-  ): String = js.native
+  ): String
   /**
     * Method to search dictionaries for the conversion candidates.
     * @param aText Text string to be converted.
@@ -51,7 +50,7 @@ trait XTextConversion extends XInterface {
     Locale: Locale,
     nTextConversionType: Double,
     nTextConversionOptions: Double
-  ): TextConversionResult = js.native
+  ): TextConversionResult
   /**
     * Method to query if the conversion type should be interactive or non-interactive mode.
     * @param Locale Locale the conversion is referring to.
@@ -60,7 +59,7 @@ trait XTextConversion extends XInterface {
     * @returns `TRUE` if the entry is a valid entry for the dictionary `FALSE` otherwise.
     * @throws NoSupportException when **nConversionDictionaryType** is not known by the implementation, or when the locale is not supported.
     */
-  def interactiveConversion(Locale: Locale, nTextConversionType: Double, nTextConversionOptions: Double): Boolean = js.native
+  def interactiveConversion(Locale: Locale, nTextConversionType: Double, nTextConversionOptions: Double): Boolean
 }
 
 object XTextConversion {
@@ -76,31 +75,5 @@ object XTextConversion {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getConversion = js.Any.fromFunction6(getConversion), getConversions = js.Any.fromFunction6(getConversions), interactiveConversion = js.Any.fromFunction3(interactiveConversion), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTextConversion]
   }
-  @scala.inline
-  implicit class XTextConversionOps[Self <: XTextConversion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetConversion(value: (String, Double, Double, Locale, Double, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConversion")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withGetConversions(value: (String, Double, Double, Locale, Double, Double) => TextConversionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConversions")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withInteractiveConversion(value: (Locale, Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactiveConversion")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

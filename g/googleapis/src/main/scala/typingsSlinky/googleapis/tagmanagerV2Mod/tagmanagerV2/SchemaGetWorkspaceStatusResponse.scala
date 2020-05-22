@@ -22,41 +22,14 @@ trait SchemaGetWorkspaceStatusResponse extends js.Object {
 
 object SchemaGetWorkspaceStatusResponse {
   @scala.inline
-  def apply(): SchemaGetWorkspaceStatusResponse = {
+  def apply(
+    mergeConflict: js.Array[SchemaMergeConflict] = null,
+    workspaceChange: js.Array[SchemaEntity] = null
+  ): SchemaGetWorkspaceStatusResponse = {
     val __obj = js.Dynamic.literal()
+    if (mergeConflict != null) __obj.updateDynamic("mergeConflict")(mergeConflict.asInstanceOf[js.Any])
+    if (workspaceChange != null) __obj.updateDynamic("workspaceChange")(workspaceChange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetWorkspaceStatusResponse]
   }
-  @scala.inline
-  implicit class SchemaGetWorkspaceStatusResponseOps[Self <: SchemaGetWorkspaceStatusResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMergeConflict(value: js.Array[SchemaMergeConflict]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeConflict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkspaceChange(value: js.Array[SchemaEntity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkspaceChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceChange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

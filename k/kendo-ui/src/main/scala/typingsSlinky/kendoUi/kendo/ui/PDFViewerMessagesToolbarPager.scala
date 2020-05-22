@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PDFViewerMessagesToolbarPager extends js.Object {
-  var first: js.UndefOr[String] = js.native
-  var last: js.UndefOr[String] = js.native
-  var next: js.UndefOr[String] = js.native
-  var of: js.UndefOr[String] = js.native
-  var page: js.UndefOr[String] = js.native
-  var pages: js.UndefOr[String] = js.native
-  var previous: js.UndefOr[String] = js.native
+  var first: js.UndefOr[String] = js.undefined
+  var last: js.UndefOr[String] = js.undefined
+  var next: js.UndefOr[String] = js.undefined
+  var of: js.UndefOr[String] = js.undefined
+  var page: js.UndefOr[String] = js.undefined
+  var pages: js.UndefOr[String] = js.undefined
+  var previous: js.UndefOr[String] = js.undefined
 }
 
 object PDFViewerMessagesToolbarPager {
   @scala.inline
-  def apply(): PDFViewerMessagesToolbarPager = {
+  def apply(
+    first: String = null,
+    last: String = null,
+    next: String = null,
+    of: String = null,
+    page: String = null,
+    pages: String = null,
+    previous: String = null
+  ): PDFViewerMessagesToolbarPager = {
     val __obj = js.Dynamic.literal()
+    if (first != null) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
+    if (last != null) __obj.updateDynamic("last")(last.asInstanceOf[js.Any])
+    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
+    if (of != null) __obj.updateDynamic("of")(of.asInstanceOf[js.Any])
+    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
+    if (pages != null) __obj.updateDynamic("pages")(pages.asInstanceOf[js.Any])
+    if (previous != null) __obj.updateDynamic("previous")(previous.asInstanceOf[js.Any])
     __obj.asInstanceOf[PDFViewerMessagesToolbarPager]
   }
-  @scala.inline
-  implicit class PDFViewerMessagesToolbarPagerOps[Self <: PDFViewerMessagesToolbarPager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFirst(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLast(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOf(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("of")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("of")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPages(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevious(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevious: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

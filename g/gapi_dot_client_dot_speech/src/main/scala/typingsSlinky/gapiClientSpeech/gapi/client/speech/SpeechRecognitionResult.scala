@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpeechRecognitionResult extends js.Object {
   /**
     * &#42;Output-only&#42; May contain one or more recognition hypotheses (up to the
@@ -12,34 +11,15 @@ trait SpeechRecognitionResult extends js.Object {
     * These alternatives are ordered in terms of accuracy, with the top (first)
     * alternative being the most probable, as ranked by the recognizer.
     */
-  var alternatives: js.UndefOr[js.Array[SpeechRecognitionAlternative]] = js.native
+  var alternatives: js.UndefOr[js.Array[SpeechRecognitionAlternative]] = js.undefined
 }
 
 object SpeechRecognitionResult {
   @scala.inline
-  def apply(): SpeechRecognitionResult = {
+  def apply(alternatives: js.Array[SpeechRecognitionAlternative] = null): SpeechRecognitionResult = {
     val __obj = js.Dynamic.literal()
+    if (alternatives != null) __obj.updateDynamic("alternatives")(alternatives.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpeechRecognitionResult]
   }
-  @scala.inline
-  implicit class SpeechRecognitionResultOps[Self <: SpeechRecognitionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlternatives(value: js.Array[SpeechRecognitionAlternative]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

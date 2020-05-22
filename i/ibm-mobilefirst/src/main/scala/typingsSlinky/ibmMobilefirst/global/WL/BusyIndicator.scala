@@ -10,5 +10,9 @@ class BusyIndicator ()
   extends typingsSlinky.ibmMobilefirst.WL.BusyIndicator {
   def this(containerId: String) = this()
   def this(containerId: String, options: typingsSlinky.ibmMobilefirst.WL.BusyIndicator) = this()
+  /* CompleteClass */
+  override def hide(): Unit = js.native
+  /* CompleteClass */
+  override def show(): Unit = js.native
 }
 

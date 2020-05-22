@@ -4,32 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchOptionsWithQuery
   extends SharedSearchOptions
      with SearchOptions {
-  var query: String = js.native
+  var query: String
 }
 
 object SearchOptionsWithQuery {
   @scala.inline
-  def apply(query: String): SearchOptionsWithQuery = {
+  def apply(
+    query: String,
+    from: String = null,
+    rows: js.UndefOr[Double] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    until: String = null
+  ): SearchOptionsWithQuery = {
     val __obj = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (until != null) __obj.updateDynamic("until")(until.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchOptionsWithQuery]
   }
-  @scala.inline
-  implicit class SearchOptionsWithQueryOps[Self <: SearchOptionsWithQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuery(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

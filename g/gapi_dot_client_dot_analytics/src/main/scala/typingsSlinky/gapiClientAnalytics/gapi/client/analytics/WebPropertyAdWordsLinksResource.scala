@@ -8,20 +8,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebPropertyAdWordsLinksResource extends js.Object {
   /** Deletes a web property-AdWords link. */
-  def delete(request: WebPropertyAdWordsLinkId): Request[Unit] = js.native
+  def delete(request: WebPropertyAdWordsLinkId): Request[Unit]
   /** Returns a web property-AdWords link to which the user has access. */
-  def get(request: WebPropertyAdWordsLinkId): Request[EntityAdWordsLink] = js.native
+  def get(request: WebPropertyAdWordsLinkId): Request[EntityAdWordsLink]
   /** Creates a webProperty-AdWords link. */
-  def insert(request: QuotaUser): Request[EntityAdWordsLink] = js.native
+  def insert(request: QuotaUser): Request[EntityAdWordsLink]
   /** Lists webProperty-AdWords links for a given web property. */
-  def list(request: PrettyPrint): Request[EntityAdWordsLinks] = js.native
+  def list(request: PrettyPrint): Request[EntityAdWordsLinks]
   /** Updates an existing webProperty-AdWords link. This method supports patch semantics. */
-  def patch(request: WebPropertyAdWordsLinkId): Request[EntityAdWordsLink] = js.native
+  def patch(request: WebPropertyAdWordsLinkId): Request[EntityAdWordsLink]
   /** Updates an existing webProperty-AdWords link. */
-  def update(request: WebPropertyAdWordsLinkId): Request[EntityAdWordsLink] = js.native
+  def update(request: WebPropertyAdWordsLinkId): Request[EntityAdWordsLink]
 }
 
 object WebPropertyAdWordsLinksResource {
@@ -37,49 +36,5 @@ object WebPropertyAdWordsLinksResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[WebPropertyAdWordsLinksResource]
   }
-  @scala.inline
-  implicit class WebPropertyAdWordsLinksResourceOps[Self <: WebPropertyAdWordsLinksResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: WebPropertyAdWordsLinkId => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: WebPropertyAdWordsLinkId => Request[EntityAdWordsLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: QuotaUser => Request[EntityAdWordsLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: PrettyPrint => Request[EntityAdWordsLinks]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: WebPropertyAdWordsLinkId => Request[EntityAdWordsLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: WebPropertyAdWordsLinkId => Request[EntityAdWordsLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -13,16 +13,15 @@ import scala.scalajs.js.annotation._
   * available to normal per-pod metrics using the "pods" source.  Only one "target" type should
   * be set.
   */
-@js.native
 trait ResourceMetricSource extends js.Object {
   /**
     * name is the name of the resource in question.
     */
-  var name: Input[String] = js.native
+  var name: Input[String]
   /**
     * target specifies the target value for the given metric
     */
-  var target: Input[MetricTarget] = js.native
+  var target: Input[MetricTarget]
 }
 
 object ResourceMetricSource {
@@ -31,25 +30,5 @@ object ResourceMetricSource {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceMetricSource]
   }
-  @scala.inline
-  implicit class ResourceMetricSourceOps[Self <: ResourceMetricSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Input[MetricTarget]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

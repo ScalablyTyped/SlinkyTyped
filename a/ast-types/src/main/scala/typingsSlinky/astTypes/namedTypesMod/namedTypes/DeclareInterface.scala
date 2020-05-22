@@ -18,7 +18,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.InterfaceDeclaration, 'type'> */
-@js.native
 trait DeclareInterface
   extends ASTNode
      with DeclarationKind
@@ -26,13 +25,13 @@ trait DeclareInterface
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var body: ObjectTypeAnnotationKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var `extends`: js.Array[InterfaceExtendsKind] = js.native
-  var id: IdentifierKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.DeclareInterface = js.native
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind] = js.native
+  var body: ObjectTypeAnnotationKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var `extends`: js.Array[InterfaceExtendsKind]
+  var id: IdentifierKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.DeclareInterface
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind] = js.undefined
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.DeclareInterface")

@@ -18,41 +18,11 @@ trait GetOpenIdTokenForDeveloperIdentityResponse extends js.Object {
 
 object GetOpenIdTokenForDeveloperIdentityResponse {
   @scala.inline
-  def apply(): GetOpenIdTokenForDeveloperIdentityResponse = {
+  def apply(IdentityId: IdentityId = null, Token: OIDCToken = null): GetOpenIdTokenForDeveloperIdentityResponse = {
     val __obj = js.Dynamic.literal()
+    if (IdentityId != null) __obj.updateDynamic("IdentityId")(IdentityId.asInstanceOf[js.Any])
+    if (Token != null) __obj.updateDynamic("Token")(Token.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOpenIdTokenForDeveloperIdentityResponse]
   }
-  @scala.inline
-  implicit class GetOpenIdTokenForDeveloperIdentityResponseOps[Self <: GetOpenIdTokenForDeveloperIdentityResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentityId(value: IdentityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: OIDCToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

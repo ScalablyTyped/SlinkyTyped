@@ -4,46 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateKycDocument extends js.Object {
-  var Tag: js.UndefOr[String] = js.native
+  var Tag: js.UndefOr[String] = js.undefined
   /**
     * Gives the type of the KYC document
     */
-  var Type: KycDocumentType = js.native
+  var Type: KycDocumentType
 }
 
 object CreateKycDocument {
   @scala.inline
-  def apply(Type: KycDocumentType): CreateKycDocument = {
+  def apply(Type: KycDocumentType, Tag: String = null): CreateKycDocument = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
+    if (Tag != null) __obj.updateDynamic("Tag")(Tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateKycDocument]
   }
-  @scala.inline
-  implicit class CreateKycDocumentOps[Self <: CreateKycDocument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: KycDocumentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

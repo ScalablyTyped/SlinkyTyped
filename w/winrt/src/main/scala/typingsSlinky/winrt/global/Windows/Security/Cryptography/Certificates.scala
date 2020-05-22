@@ -2,6 +2,7 @@ package typingsSlinky.winrt.global.Windows.Security.Cryptography
 
 import typingsSlinky.winrt.Windows.Foundation.IAsyncAction
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import typingsSlinky.winrt.Windows.Security.Cryptography.Certificates.EnrollKeyUsages
 import typingsSlinky.winrt.Windows.Security.Cryptography.Certificates.ExportOption
 import typingsSlinky.winrt.Windows.Security.Cryptography.Certificates.InstallOptions
 import typingsSlinky.winrt.Windows.Security.Cryptography.Certificates.KeyProtectionLevel
@@ -18,7 +19,26 @@ object Certificates extends js.Object {
   
   @js.native
   class CertificateRequestProperties ()
-    extends typingsSlinky.winrt.Windows.Security.Cryptography.Certificates.CertificateRequestProperties
+    extends typingsSlinky.winrt.Windows.Security.Cryptography.Certificates.CertificateRequestProperties {
+    /* CompleteClass */
+    override var exportable: ExportOption = js.native
+    /* CompleteClass */
+    override var friendlyName: String = js.native
+    /* CompleteClass */
+    override var hashAlgorithmName: String = js.native
+    /* CompleteClass */
+    override var keyAlgorithmName: String = js.native
+    /* CompleteClass */
+    override var keyProtectionLevel: KeyProtectionLevel = js.native
+    /* CompleteClass */
+    override var keySize: Double = js.native
+    /* CompleteClass */
+    override var keyStorageProviderName: String = js.native
+    /* CompleteClass */
+    override var keyUsages: EnrollKeyUsages = js.native
+    /* CompleteClass */
+    override var subject: String = js.native
+  }
   
   @js.native
   class KeyAlgorithmNames ()

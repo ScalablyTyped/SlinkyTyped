@@ -1,6 +1,8 @@
 package typingsSlinky.mongooseDelete.anon
 
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindOpti
 import typingsSlinky.mongoose.mod.FilterQuery
+import typingsSlinky.mongoose.mod.QueryFindOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,25 +11,26 @@ import scala.scalajs.js.annotation._
 trait FnCallConditionsProjectionOptionsCallback extends js.Object {
   def apply(): DocumentQueryArrayanyanyAll = js.native
   def apply(callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): DocumentQueryArrayanyanyAll = js.native
-  def apply(conditions: FilterQuery[_]): DocumentQueryArrayanyanyAll = js.native
+  def apply(conditions: FilterQuery[_]): QueryArrayDocumentDefinit = js.native
   def apply(conditions: FilterQuery[_], callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): DocumentQueryArrayanyanyAll = js.native
-  def apply(conditions: FilterQuery[_], projection: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def apply(conditions: FilterQuery[_], projection: js.Any): QueryArrayDocumentDefinit = js.native
   def apply(
     conditions: FilterQuery[_],
     projection: js.Any,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
-  def apply(conditions: FilterQuery[_], projection: js.Any, options: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def apply(conditions: FilterQuery[_], projection: js.Any, options: leantrueOmitQueryFindOpti): QueryArrayDocumentDefinit = js.native
   def apply(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: js.Any,
+    options: leantrueOmitQueryFindOpti,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
-  ): DocumentQueryArrayanyanyAll = js.native
+  ): QueryArrayDocumentDefinit = js.native
+  def apply(conditions: FilterQuery[_], projection: js.Any, options: QueryFindOptions): DocumentQueryArrayanyanyAll = js.native
   def apply(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: Null,
+    options: QueryFindOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
   def apply(
@@ -35,17 +38,18 @@ trait FnCallConditionsProjectionOptionsCallback extends js.Object {
     projection: Null,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
-  def apply(conditions: FilterQuery[_], projection: Null, options: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def apply(conditions: FilterQuery[_], projection: Null, options: leantrueOmitQueryFindOpti): QueryArrayDocumentDefinit = js.native
   def apply(
     conditions: FilterQuery[_],
     projection: Null,
-    options: js.Any,
+    options: leantrueOmitQueryFindOpti,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
-  ): DocumentQueryArrayanyanyAll = js.native
+  ): QueryArrayDocumentDefinit = js.native
+  def apply(conditions: FilterQuery[_], projection: Null, options: QueryFindOptions): DocumentQueryArrayanyanyAll = js.native
   def apply(
     conditions: FilterQuery[_],
     projection: Null,
-    options: Null,
+    options: QueryFindOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
 }

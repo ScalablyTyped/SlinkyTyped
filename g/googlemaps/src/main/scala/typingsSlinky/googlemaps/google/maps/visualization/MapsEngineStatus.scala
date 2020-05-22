@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 sealed trait MapsEngineStatus extends js.Object
 
+// TODO find source documentation
 @JSGlobal("google.maps.visualization.MapsEngineStatus")
 @js.native
 object MapsEngineStatus extends js.Object {

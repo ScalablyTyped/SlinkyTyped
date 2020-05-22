@@ -1,5 +1,8 @@
 package typingsSlinky.activexPowerpoint.global.PowerPoint
 
+import typingsSlinky.activexOffice.Office.MsoTriState
+import typingsSlinky.activexPowerpoint.PowerPoint.PpBulletType
+import typingsSlinky.activexPowerpoint.PowerPoint.PpNumberedBulletStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,5 +10,35 @@ import scala.scalajs.js.annotation._
 @JSGlobal("PowerPoint.BulletFormat")
 @js.native
 class BulletFormat protected ()
-  extends typingsSlinky.activexPowerpoint.PowerPoint.BulletFormat
+  extends typingsSlinky.activexPowerpoint.PowerPoint.BulletFormat {
+  /* CompleteClass */
+  override val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
+  /* CompleteClass */
+  override var Character: Double = js.native
+  /* CompleteClass */
+  override val Font: typingsSlinky.activexPowerpoint.PowerPoint.Font = js.native
+  /* CompleteClass */
+  override val Number: Double = js.native
+  /* CompleteClass */
+  override val Parent: js.Any = js.native
+  /* CompleteClass */
+  @JSName("PowerPoint.BulletFormat_typekey")
+  override var PowerPointDotBulletFormat_typekey: typingsSlinky.activexPowerpoint.PowerPoint.BulletFormat = js.native
+  /* CompleteClass */
+  override var RelativeSize: Double = js.native
+  /* CompleteClass */
+  override var StartValue: Double = js.native
+  /* CompleteClass */
+  override var Style: PpNumberedBulletStyle = js.native
+  /* CompleteClass */
+  override var Type: PpBulletType = js.native
+  /* CompleteClass */
+  override var UseTextColor: MsoTriState = js.native
+  /* CompleteClass */
+  override var UseTextFont: MsoTriState = js.native
+  /* CompleteClass */
+  override var Visible: MsoTriState = js.native
+  /* CompleteClass */
+  override def Picture(Picture: String): Unit = js.native
+}
 

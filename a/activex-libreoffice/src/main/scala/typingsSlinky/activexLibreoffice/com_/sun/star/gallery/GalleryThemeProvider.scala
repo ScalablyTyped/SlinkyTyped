@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * provides access to a container of GalleryThemes and makes it possible for you to manipulate them.
   * @see XGalleryThemeProvider
   */
-@js.native
 trait GalleryThemeProvider
   extends XGalleryThemeProvider
      with XInitialization

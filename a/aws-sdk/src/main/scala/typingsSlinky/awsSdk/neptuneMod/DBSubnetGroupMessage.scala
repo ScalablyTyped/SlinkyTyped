@@ -18,41 +18,11 @@ trait DBSubnetGroupMessage extends js.Object {
 
 object DBSubnetGroupMessage {
   @scala.inline
-  def apply(): DBSubnetGroupMessage = {
+  def apply(DBSubnetGroups: DBSubnetGroups = null, Marker: String = null): DBSubnetGroupMessage = {
     val __obj = js.Dynamic.literal()
+    if (DBSubnetGroups != null) __obj.updateDynamic("DBSubnetGroups")(DBSubnetGroups.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBSubnetGroupMessage]
   }
-  @scala.inline
-  implicit class DBSubnetGroupMessageOps[Self <: DBSubnetGroupMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBSubnetGroups(value: DBSubnetGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSubnetGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBSubnetGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSubnetGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

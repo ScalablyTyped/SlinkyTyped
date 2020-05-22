@@ -4,66 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Result extends js.Object {
   @JSName("article:author")
-  var articleColonauthor: js.UndefOr[String] = js.native
+  var articleColonauthor: js.UndefOr[String] = js.undefined
   @JSName("article:expiration_time")
-  var articleColonexpiration_time: js.UndefOr[String] = js.native
+  var articleColonexpiration_time: js.UndefOr[String] = js.undefined
   @JSName("article:modified_time")
-  var articleColonmodified_time: js.UndefOr[String] = js.native
+  var articleColonmodified_time: js.UndefOr[String] = js.undefined
   @JSName("article:published_time")
-  var articleColonpublished_time: js.UndefOr[String] = js.native
+  var articleColonpublished_time: js.UndefOr[String] = js.undefined
   @JSName("article:section")
-  var articleColonsection: js.UndefOr[String] = js.native
+  var articleColonsection: js.UndefOr[String] = js.undefined
   @JSName("article:tag")
-  var articleColontag: js.UndefOr[String] = js.native
-  var author: String = js.native
-  var canonical: String = js.native
-  var description: String = js.native
-  var image: String = js.native
-  var keywords: String = js.native
+  var articleColontag: js.UndefOr[String] = js.undefined
+  var author: String
+  var canonical: String
+  var description: String
+  var image: String
+  var keywords: String
   @JSName("og:article:author")
-  var ogColonarticleColonauthor: js.UndefOr[String] = js.native
+  var ogColonarticleColonauthor: js.UndefOr[String] = js.undefined
   @JSName("og:article:expiration_time")
-  var ogColonarticleColonexpiration_time: js.UndefOr[String] = js.native
+  var ogColonarticleColonexpiration_time: js.UndefOr[String] = js.undefined
   @JSName("og:article:modified_time")
-  var ogColonarticleColonmodified_time: js.UndefOr[String] = js.native
+  var ogColonarticleColonmodified_time: js.UndefOr[String] = js.undefined
   @JSName("og:article:published_time")
-  var ogColonarticleColonpublished_time: js.UndefOr[String] = js.native
+  var ogColonarticleColonpublished_time: js.UndefOr[String] = js.undefined
   @JSName("og:article:section")
-  var ogColonarticleColonsection: js.UndefOr[String] = js.native
+  var ogColonarticleColonsection: js.UndefOr[String] = js.undefined
   @JSName("og:article:tag")
-  var ogColonarticleColontag: js.UndefOr[String] = js.native
+  var ogColonarticleColontag: js.UndefOr[String] = js.undefined
   @JSName("og:description")
-  var ogColondescription: String = js.native
+  var ogColondescription: String
   @JSName("og:determiner")
-  var ogColondeterminer: String = js.native
+  var ogColondeterminer: String
   @JSName("og:image")
-  var ogColonimage: String = js.native
+  var ogColonimage: String
   @JSName("og:image:height")
-  var ogColonimageColonheight: String = js.native
+  var ogColonimageColonheight: String
   @JSName("og:image:secure_url")
-  var ogColonimageColonsecure_url: String = js.native
+  var ogColonimageColonsecure_url: String
   @JSName("og:image:type")
-  var ogColonimageColontype: String = js.native
+  var ogColonimageColontype: String
   @JSName("og:image:width")
-  var ogColonimageColonwidth: String = js.native
+  var ogColonimageColonwidth: String
   @JSName("og:locale")
-  var ogColonlocale: String = js.native
+  var ogColonlocale: String
   @JSName("og:locale:alternate")
-  var ogColonlocaleColonalternate: String = js.native
+  var ogColonlocaleColonalternate: String
   @JSName("og:site_name")
-  var ogColonsite_name: String = js.native
+  var ogColonsite_name: String
   @JSName("og:title")
-  var ogColontitle: String = js.native
+  var ogColontitle: String
   @JSName("og:type")
-  var ogColontype: String = js.native
+  var ogColontype: String
   @JSName("og:url")
-  var ogColonurl: String = js.native
-  var source: String = js.native
-  var title: String = js.native
-  var url: String = js.native
+  var ogColonurl: String
+  var source: String
+  var title: String
+  var url: String
 }
 
 object Result {
@@ -89,7 +88,19 @@ object Result {
     ogColonurl: String,
     source: String,
     title: String,
-    url: String
+    url: String,
+    articleColonauthor: String = null,
+    articleColonexpiration_time: String = null,
+    articleColonmodified_time: String = null,
+    articleColonpublished_time: String = null,
+    articleColonsection: String = null,
+    articleColontag: String = null,
+    ogColonarticleColonauthor: String = null,
+    ogColonarticleColonexpiration_time: String = null,
+    ogColonarticleColonmodified_time: String = null,
+    ogColonarticleColonpublished_time: String = null,
+    ogColonarticleColonsection: String = null,
+    ogColonarticleColontag: String = null
   ): Result = {
     val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], canonical = canonical.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], keywords = keywords.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("og:description")(ogColondescription.asInstanceOf[js.Any])
@@ -105,285 +116,19 @@ object Result {
     __obj.updateDynamic("og:title")(ogColontitle.asInstanceOf[js.Any])
     __obj.updateDynamic("og:type")(ogColontype.asInstanceOf[js.Any])
     __obj.updateDynamic("og:url")(ogColonurl.asInstanceOf[js.Any])
+    if (articleColonauthor != null) __obj.updateDynamic("article:author")(articleColonauthor.asInstanceOf[js.Any])
+    if (articleColonexpiration_time != null) __obj.updateDynamic("article:expiration_time")(articleColonexpiration_time.asInstanceOf[js.Any])
+    if (articleColonmodified_time != null) __obj.updateDynamic("article:modified_time")(articleColonmodified_time.asInstanceOf[js.Any])
+    if (articleColonpublished_time != null) __obj.updateDynamic("article:published_time")(articleColonpublished_time.asInstanceOf[js.Any])
+    if (articleColonsection != null) __obj.updateDynamic("article:section")(articleColonsection.asInstanceOf[js.Any])
+    if (articleColontag != null) __obj.updateDynamic("article:tag")(articleColontag.asInstanceOf[js.Any])
+    if (ogColonarticleColonauthor != null) __obj.updateDynamic("og:article:author")(ogColonarticleColonauthor.asInstanceOf[js.Any])
+    if (ogColonarticleColonexpiration_time != null) __obj.updateDynamic("og:article:expiration_time")(ogColonarticleColonexpiration_time.asInstanceOf[js.Any])
+    if (ogColonarticleColonmodified_time != null) __obj.updateDynamic("og:article:modified_time")(ogColonarticleColonmodified_time.asInstanceOf[js.Any])
+    if (ogColonarticleColonpublished_time != null) __obj.updateDynamic("og:article:published_time")(ogColonarticleColonpublished_time.asInstanceOf[js.Any])
+    if (ogColonarticleColonsection != null) __obj.updateDynamic("og:article:section")(ogColonarticleColonsection.asInstanceOf[js.Any])
+    if (ogColonarticleColontag != null) __obj.updateDynamic("og:article:tag")(ogColonarticleColontag.asInstanceOf[js.Any])
     __obj.asInstanceOf[Result]
   }
-  @scala.inline
-  implicit class ResultOps[Self <: Result] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanonical(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canonical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeywords(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColondescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColondeterminer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:determiner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonimage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonimageColonheight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:image:height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonimageColonsecure_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:image:secure_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonimageColontype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:image:type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonimageColonwidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:image:width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonlocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonlocaleColonalternate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:locale:alternate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonsite_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:site_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColontitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColontype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOgColonurl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArticleColonauthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArticleColonauthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArticleColonexpiration_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:expiration_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArticleColonexpiration_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:expiration_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArticleColonmodified_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:modified_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArticleColonmodified_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:modified_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArticleColonpublished_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:published_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArticleColonpublished_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:published_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArticleColonsection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:section")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArticleColonsection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:section")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArticleColontag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArticleColontag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article:tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOgColonarticleColonauthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOgColonarticleColonauthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOgColonarticleColonexpiration_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:expiration_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOgColonarticleColonexpiration_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:expiration_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOgColonarticleColonmodified_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:modified_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOgColonarticleColonmodified_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:modified_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOgColonarticleColonpublished_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:published_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOgColonarticleColonpublished_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:published_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOgColonarticleColonsection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:section")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOgColonarticleColonsection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:section")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOgColonarticleColontag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOgColonarticleColontag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("og:article:tag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

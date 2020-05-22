@@ -4,41 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGridRow extends js.Object {
   /**
     * Enable focus on a cell within this row. If set to false then no cells in this row can be focused
     * Group header rows, for example, would set this to false.
     * Defaults to true
     */
-  var allowCellFocus: js.UndefOr[Boolean] = js.native
+  var allowCellFocus: js.UndefOr[Boolean] = js.undefined
 }
 
 object IGridRow {
   @scala.inline
-  def apply(): IGridRow = {
+  def apply(allowCellFocus: js.UndefOr[Boolean] = js.undefined): IGridRow = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowCellFocus)) __obj.updateDynamic("allowCellFocus")(allowCellFocus.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGridRow]
   }
-  @scala.inline
-  implicit class IGridRowOps[Self <: IGridRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowCellFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCellFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowCellFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCellFocus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

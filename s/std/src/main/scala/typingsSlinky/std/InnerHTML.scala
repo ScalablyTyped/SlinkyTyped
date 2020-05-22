@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InnerHTML extends js.Object {
-  var innerHTML: java.lang.String = js.native
+  var innerHTML: java.lang.String
 }
 
 object InnerHTML {
@@ -15,19 +14,5 @@ object InnerHTML {
     val __obj = js.Dynamic.literal(innerHTML = innerHTML.asInstanceOf[js.Any])
     __obj.asInstanceOf[InnerHTML]
   }
-  @scala.inline
-  implicit class InnerHTMLOps[Self <: InnerHTML] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInnerHTML(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

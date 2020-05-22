@@ -13,515 +13,119 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined @nivo/core.@nivo/core.MotionProps & std.Partial<{  margin  :@nivo/core.@nivo/core.Box,   sortByValue  :boolean,   innerRadius  :number,   padAngle  :number,   cornerRadius  :number,   startAngle  :number,   endAngle  :number,   fit  :boolean,   colors  :@nivo/colors.@nivo/colors.OrdinalColorsInstruction<@nivo/pie.@nivo/pie.PieDatum>,   theme  :@nivo/core.@nivo/core.Theme,   borderWidth  :number,   borderColor  :@nivo/colors.@nivo/colors.InheritedColorProp<@nivo/pie.@nivo/pie.PieDatum>,   enableRadialLabels  :boolean,   radialLabel  :string | @nivo/pie.@nivo/pie.AccessorFunc,   radialLabelsSkipAngle  :number,   radialLabelsTextXOffset  :number,   radialLabelsTextColor  :@nivo/colors.@nivo/colors.InheritedColorProp<@nivo/pie.@nivo/pie.PieDatumWithColor>,   radialLabelsLinkOffset  :number,   radialLabelsLinkDiagonalLength  :number,   radialLabelsLinkHorizontalLength  :number,   radialLabelsLinkStrokeWidth  :number,   radialLabelsLinkColor  :@nivo/colors.@nivo/colors.InheritedColorProp<@nivo/pie.@nivo/pie.PieDatumWithColor>,   enableSlicesLabels  :boolean,   sliceLabel  :string | @nivo/pie.@nivo/pie.AccessorFunc,   slicesLabelsSkipAngle  :number,   slicesLabelsTextColor  :@nivo/colors.@nivo/colors.InheritedColorProp<@nivo/pie.@nivo/pie.PieDatumWithColor>,   isInteractive  :boolean, onClick (datum : @nivo/pie.@nivo/pie.PieDatum, event : react.react.MouseEvent<std.SVGPathElement, react.react.NativeMouseEvent>): void,   tooltipFormat  :string | @nivo/pie.@nivo/pie.ValueFormatter,   tooltip  :react.react.StatelessComponent<@nivo/pie.@nivo/pie.PieDatumWithColor>,   legends  :std.Array<@nivo/legends.@nivo/legends.LegendProps>}> */
-@js.native
 trait CommonPieProps extends js.Object {
-  var animate: js.UndefOr[Boolean] = js.native
-  var borderColor: js.UndefOr[InheritedColorProp[PieDatum]] = js.native
-  var borderWidth: js.UndefOr[Double] = js.native
-  var colors: js.UndefOr[OrdinalColorsInstruction[PieDatum]] = js.native
-  var cornerRadius: js.UndefOr[Double] = js.native
-  var enableRadialLabels: js.UndefOr[Boolean] = js.native
-  var enableSlicesLabels: js.UndefOr[Boolean] = js.native
-  var endAngle: js.UndefOr[Double] = js.native
-  var fit: js.UndefOr[Boolean] = js.native
-  var innerRadius: js.UndefOr[Double] = js.native
-  var isInteractive: js.UndefOr[Boolean] = js.native
-  var legends: js.UndefOr[js.Array[LegendProps]] = js.native
-  var margin: js.UndefOr[Box] = js.native
-  var motionDamping: js.UndefOr[Double] = js.native
-  var motionStiffness: js.UndefOr[Double] = js.native
+  var animate: js.UndefOr[Boolean] = js.undefined
+  var borderColor: js.UndefOr[InheritedColorProp[PieDatum]] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.undefined
+  var colors: js.UndefOr[OrdinalColorsInstruction[PieDatum]] = js.undefined
+  var cornerRadius: js.UndefOr[Double] = js.undefined
+  var enableRadialLabels: js.UndefOr[Boolean] = js.undefined
+  var enableSlicesLabels: js.UndefOr[Boolean] = js.undefined
+  var endAngle: js.UndefOr[Double] = js.undefined
+  var fit: js.UndefOr[Boolean] = js.undefined
+  var innerRadius: js.UndefOr[Double] = js.undefined
+  var isInteractive: js.UndefOr[Boolean] = js.undefined
+  var legends: js.UndefOr[js.Array[LegendProps]] = js.undefined
+  var margin: js.UndefOr[Box] = js.undefined
+  var motionDamping: js.UndefOr[Double] = js.undefined
+  var motionStiffness: js.UndefOr[Double] = js.undefined
   var onClick: js.UndefOr[
     js.Function2[/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement], Unit]
-  ] = js.native
-  var padAngle: js.UndefOr[Double] = js.native
-  var radialLabel: js.UndefOr[String | AccessorFunc] = js.native
-  var radialLabelsLinkColor: js.UndefOr[InheritedColorProp[PieDatumWithColor]] = js.native
-  var radialLabelsLinkDiagonalLength: js.UndefOr[Double] = js.native
-  var radialLabelsLinkHorizontalLength: js.UndefOr[Double] = js.native
-  var radialLabelsLinkOffset: js.UndefOr[Double] = js.native
-  var radialLabelsLinkStrokeWidth: js.UndefOr[Double] = js.native
-  var radialLabelsSkipAngle: js.UndefOr[Double] = js.native
-  var radialLabelsTextColor: js.UndefOr[InheritedColorProp[PieDatumWithColor]] = js.native
-  var radialLabelsTextXOffset: js.UndefOr[Double] = js.native
-  var sliceLabel: js.UndefOr[String | AccessorFunc] = js.native
-  var slicesLabelsSkipAngle: js.UndefOr[Double] = js.native
-  var slicesLabelsTextColor: js.UndefOr[InheritedColorProp[PieDatumWithColor]] = js.native
-  var sortByValue: js.UndefOr[Boolean] = js.native
-  var startAngle: js.UndefOr[Double] = js.native
-  var theme: js.UndefOr[Theme] = js.native
-  var tooltip: js.UndefOr[ReactComponentClass[PieDatumWithColor]] = js.native
-  var tooltipFormat: js.UndefOr[String | ValueFormatter] = js.native
+  ] = js.undefined
+  var padAngle: js.UndefOr[Double] = js.undefined
+  var radialLabel: js.UndefOr[String | AccessorFunc] = js.undefined
+  var radialLabelsLinkColor: js.UndefOr[InheritedColorProp[PieDatumWithColor]] = js.undefined
+  var radialLabelsLinkDiagonalLength: js.UndefOr[Double] = js.undefined
+  var radialLabelsLinkHorizontalLength: js.UndefOr[Double] = js.undefined
+  var radialLabelsLinkOffset: js.UndefOr[Double] = js.undefined
+  var radialLabelsLinkStrokeWidth: js.UndefOr[Double] = js.undefined
+  var radialLabelsSkipAngle: js.UndefOr[Double] = js.undefined
+  var radialLabelsTextColor: js.UndefOr[InheritedColorProp[PieDatumWithColor]] = js.undefined
+  var radialLabelsTextXOffset: js.UndefOr[Double] = js.undefined
+  var sliceLabel: js.UndefOr[String | AccessorFunc] = js.undefined
+  var slicesLabelsSkipAngle: js.UndefOr[Double] = js.undefined
+  var slicesLabelsTextColor: js.UndefOr[InheritedColorProp[PieDatumWithColor]] = js.undefined
+  var sortByValue: js.UndefOr[Boolean] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.undefined
+  var theme: js.UndefOr[Theme] = js.undefined
+  var tooltip: js.UndefOr[ReactComponentClass[PieDatumWithColor]] = js.undefined
+  var tooltipFormat: js.UndefOr[String | ValueFormatter] = js.undefined
 }
 
 object CommonPieProps {
   @scala.inline
-  def apply(): CommonPieProps = {
+  def apply(
+    animate: js.UndefOr[Boolean] = js.undefined,
+    borderColor: InheritedColorProp[PieDatum] = null,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    colors: OrdinalColorsInstruction[PieDatum] = null,
+    cornerRadius: js.UndefOr[Double] = js.undefined,
+    enableRadialLabels: js.UndefOr[Boolean] = js.undefined,
+    enableSlicesLabels: js.UndefOr[Boolean] = js.undefined,
+    endAngle: js.UndefOr[Double] = js.undefined,
+    fit: js.UndefOr[Boolean] = js.undefined,
+    innerRadius: js.UndefOr[Double] = js.undefined,
+    isInteractive: js.UndefOr[Boolean] = js.undefined,
+    legends: js.Array[LegendProps] = null,
+    margin: Box = null,
+    motionDamping: js.UndefOr[Double] = js.undefined,
+    motionStiffness: js.UndefOr[Double] = js.undefined,
+    onClick: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement]) => Unit = null,
+    padAngle: js.UndefOr[Double] = js.undefined,
+    radialLabel: String | AccessorFunc = null,
+    radialLabelsLinkColor: InheritedColorProp[PieDatumWithColor] = null,
+    radialLabelsLinkDiagonalLength: js.UndefOr[Double] = js.undefined,
+    radialLabelsLinkHorizontalLength: js.UndefOr[Double] = js.undefined,
+    radialLabelsLinkOffset: js.UndefOr[Double] = js.undefined,
+    radialLabelsLinkStrokeWidth: js.UndefOr[Double] = js.undefined,
+    radialLabelsSkipAngle: js.UndefOr[Double] = js.undefined,
+    radialLabelsTextColor: InheritedColorProp[PieDatumWithColor] = null,
+    radialLabelsTextXOffset: js.UndefOr[Double] = js.undefined,
+    sliceLabel: String | AccessorFunc = null,
+    slicesLabelsSkipAngle: js.UndefOr[Double] = js.undefined,
+    slicesLabelsTextColor: InheritedColorProp[PieDatumWithColor] = null,
+    sortByValue: js.UndefOr[Boolean] = js.undefined,
+    startAngle: js.UndefOr[Double] = js.undefined,
+    theme: Theme = null,
+    tooltip: ReactComponentClass[PieDatumWithColor] = null,
+    tooltipFormat: String | ValueFormatter = null
+  ): CommonPieProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.get.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (!js.isUndefined(cornerRadius)) __obj.updateDynamic("cornerRadius")(cornerRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableRadialLabels)) __obj.updateDynamic("enableRadialLabels")(enableRadialLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableSlicesLabels)) __obj.updateDynamic("enableSlicesLabels")(enableSlicesLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(endAngle)) __obj.updateDynamic("endAngle")(endAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fit)) __obj.updateDynamic("fit")(fit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerRadius)) __obj.updateDynamic("innerRadius")(innerRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.get.asInstanceOf[js.Any])
+    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (!js.isUndefined(motionDamping)) __obj.updateDynamic("motionDamping")(motionDamping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(motionStiffness)) __obj.updateDynamic("motionStiffness")(motionStiffness.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (!js.isUndefined(padAngle)) __obj.updateDynamic("padAngle")(padAngle.get.asInstanceOf[js.Any])
+    if (radialLabel != null) __obj.updateDynamic("radialLabel")(radialLabel.asInstanceOf[js.Any])
+    if (radialLabelsLinkColor != null) __obj.updateDynamic("radialLabelsLinkColor")(radialLabelsLinkColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(radialLabelsLinkDiagonalLength)) __obj.updateDynamic("radialLabelsLinkDiagonalLength")(radialLabelsLinkDiagonalLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radialLabelsLinkHorizontalLength)) __obj.updateDynamic("radialLabelsLinkHorizontalLength")(radialLabelsLinkHorizontalLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radialLabelsLinkOffset)) __obj.updateDynamic("radialLabelsLinkOffset")(radialLabelsLinkOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radialLabelsLinkStrokeWidth)) __obj.updateDynamic("radialLabelsLinkStrokeWidth")(radialLabelsLinkStrokeWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radialLabelsSkipAngle)) __obj.updateDynamic("radialLabelsSkipAngle")(radialLabelsSkipAngle.get.asInstanceOf[js.Any])
+    if (radialLabelsTextColor != null) __obj.updateDynamic("radialLabelsTextColor")(radialLabelsTextColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(radialLabelsTextXOffset)) __obj.updateDynamic("radialLabelsTextXOffset")(radialLabelsTextXOffset.get.asInstanceOf[js.Any])
+    if (sliceLabel != null) __obj.updateDynamic("sliceLabel")(sliceLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(slicesLabelsSkipAngle)) __obj.updateDynamic("slicesLabelsSkipAngle")(slicesLabelsSkipAngle.get.asInstanceOf[js.Any])
+    if (slicesLabelsTextColor != null) __obj.updateDynamic("slicesLabelsTextColor")(slicesLabelsTextColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(sortByValue)) __obj.updateDynamic("sortByValue")(sortByValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startAngle)) __obj.updateDynamic("startAngle")(startAngle.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonPieProps]
   }
-  @scala.inline
-  implicit class CommonPiePropsOps[Self <: CommonPieProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColorFunction1(value: PieDatum => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: InheritedColorProp[PieDatum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorsFunction1(value: PieDatum => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withColors(value: OrdinalColorsInstruction[PieDatum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCornerRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCornerRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableRadialLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRadialLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableRadialLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRadialLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSlicesLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSlicesLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSlicesLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSlicesLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsInteractive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsInteractive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegends(value: js.Array[LegendProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegends: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Box): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotionDamping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionDamping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotionDamping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionDamping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotionStiffness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionStiffness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotionStiffness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionStiffness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelFunction1(value: /* datum */ PieDatum => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRadialLabel(value: String | AccessorFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsLinkColorFunction1(value: PieDatumWithColor => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsLinkColor(value: InheritedColorProp[PieDatumWithColor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabelsLinkColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsLinkDiagonalLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkDiagonalLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabelsLinkDiagonalLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkDiagonalLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsLinkHorizontalLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkHorizontalLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabelsLinkHorizontalLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkHorizontalLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsLinkOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabelsLinkOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsLinkStrokeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkStrokeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabelsLinkStrokeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsLinkStrokeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsSkipAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsSkipAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabelsSkipAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsSkipAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsTextColorFunction1(value: PieDatumWithColor => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsTextColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsTextColor(value: InheritedColorProp[PieDatumWithColor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabelsTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsTextColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialLabelsTextXOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsTextXOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialLabelsTextXOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialLabelsTextXOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSliceLabelFunction1(value: /* datum */ PieDatum => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSliceLabel(value: String | AccessorFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSliceLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlicesLabelsSkipAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicesLabelsSkipAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlicesLabelsSkipAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicesLabelsSkipAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlicesLabelsTextColorFunction1(value: PieDatumWithColor => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicesLabelsTextColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSlicesLabelsTextColor(value: InheritedColorProp[PieDatumWithColor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicesLabelsTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlicesLabelsTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicesLabelsTextColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortByValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortByValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortByValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortByValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: Theme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: ReactComponentClass[PieDatumWithColor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipFormatFunction1(value: /* value */ Double => String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTooltipFormat(value: String | ValueFormatter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

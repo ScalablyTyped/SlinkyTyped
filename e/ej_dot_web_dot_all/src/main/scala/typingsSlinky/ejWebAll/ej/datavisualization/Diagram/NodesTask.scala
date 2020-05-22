@@ -4,102 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodesTask extends js.Object {
   /** To set whether the task is a global task or not
     * @Default {false}
     */
-  var call: js.UndefOr[Boolean] = js.native
+  var call: js.UndefOr[Boolean] = js.undefined
   /** Sets whether the task is triggered as a compensation of another specific activity
     * @Default {false}
     */
-  var compensation: js.UndefOr[Boolean] = js.native
+  var compensation: js.UndefOr[Boolean] = js.undefined
   /** Defines the collection of events that need to be appended with BPMN tasks
     */
-  var events: js.UndefOr[js.Array[_]] = js.native
+  var events: js.UndefOr[js.Array[_]] = js.undefined
   /** Sets the loop type of a BPMN task.
     * @Default {ej.datavisualization.Diagram.BPMNLoops.None}
     */
-  var loop: js.UndefOr[BPMNLoops | String] = js.native
+  var loop: js.UndefOr[BPMNLoops | String] = js.undefined
   /** Sets the type of the BPMN task.
     * @Default {ej.datavisualization.Diagram.BPMNTasks.None}
     */
-  var `type`: js.UndefOr[BPMNTasks | String] = js.native
+  var `type`: js.UndefOr[BPMNTasks | String] = js.undefined
 }
 
 object NodesTask {
   @scala.inline
-  def apply(): NodesTask = {
+  def apply(
+    call: js.UndefOr[Boolean] = js.undefined,
+    compensation: js.UndefOr[Boolean] = js.undefined,
+    events: js.Array[_] = null,
+    loop: BPMNLoops | String = null,
+    `type`: BPMNTasks | String = null
+  ): NodesTask = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(call)) __obj.updateDynamic("call")(call.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compensation)) __obj.updateDynamic("compensation")(compensation.get.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (loop != null) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodesTask]
   }
-  @scala.inline
-  implicit class NodesTaskOps[Self <: NodesTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCall(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("call")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("call")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompensation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompensation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: BPMNLoops | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: BPMNTasks | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

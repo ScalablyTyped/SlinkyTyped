@@ -23,41 +23,11 @@ trait SchemaAppRestrictionsSchema extends js.Object {
 
 object SchemaAppRestrictionsSchema {
   @scala.inline
-  def apply(): SchemaAppRestrictionsSchema = {
+  def apply(kind: String = null, restrictions: js.Array[SchemaAppRestrictionsSchemaRestriction] = null): SchemaAppRestrictionsSchema = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (restrictions != null) __obj.updateDynamic("restrictions")(restrictions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppRestrictionsSchema]
   }
-  @scala.inline
-  implicit class SchemaAppRestrictionsSchemaOps[Self <: SchemaAppRestrictionsSchema] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestrictions(value: js.Array[SchemaAppRestrictionsSchemaRestriction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestrictions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

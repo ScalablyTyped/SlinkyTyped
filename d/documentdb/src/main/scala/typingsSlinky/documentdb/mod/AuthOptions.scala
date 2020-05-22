@@ -5,65 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AuthOptions extends js.Object {
   /** The authorization master key to use to create the client. */
-  var masterKey: js.UndefOr[String] = js.native
+  var masterKey: js.UndefOr[String] = js.undefined
   /** An array of {@link Permission} objects. */
-  var permissionFeed: js.UndefOr[js.Array[Permission]] = js.native
+  var permissionFeed: js.UndefOr[js.Array[Permission]] = js.undefined
   /** An object that contains resources tokens. Keys for the object are resource Ids and values are the resource tokens. */
-  var resourceTokens: js.UndefOr[StringDictionary[String]] = js.native
+  var resourceTokens: js.UndefOr[StringDictionary[String]] = js.undefined
 }
 
 object AuthOptions {
   @scala.inline
-  def apply(): AuthOptions = {
+  def apply(
+    masterKey: String = null,
+    permissionFeed: js.Array[Permission] = null,
+    resourceTokens: StringDictionary[String] = null
+  ): AuthOptions = {
     val __obj = js.Dynamic.literal()
+    if (masterKey != null) __obj.updateDynamic("masterKey")(masterKey.asInstanceOf[js.Any])
+    if (permissionFeed != null) __obj.updateDynamic("permissionFeed")(permissionFeed.asInstanceOf[js.Any])
+    if (resourceTokens != null) __obj.updateDynamic("resourceTokens")(resourceTokens.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthOptions]
   }
-  @scala.inline
-  implicit class AuthOptionsOps[Self <: AuthOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMasterKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionFeed(value: js.Array[Permission]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionFeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionFeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionFeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceTokens(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTokens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceTokens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTokens")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

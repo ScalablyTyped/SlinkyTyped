@@ -22,53 +22,12 @@ trait GroundStationData extends js.Object {
 
 object GroundStationData {
   @scala.inline
-  def apply(): GroundStationData = {
+  def apply(groundStationId: String = null, groundStationName: String = null, region: String = null): GroundStationData = {
     val __obj = js.Dynamic.literal()
+    if (groundStationId != null) __obj.updateDynamic("groundStationId")(groundStationId.asInstanceOf[js.Any])
+    if (groundStationName != null) __obj.updateDynamic("groundStationName")(groundStationName.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroundStationData]
   }
-  @scala.inline
-  implicit class GroundStationDataOps[Self <: GroundStationData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroundStationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundStationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundStationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundStationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroundStationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundStationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundStationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundStationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

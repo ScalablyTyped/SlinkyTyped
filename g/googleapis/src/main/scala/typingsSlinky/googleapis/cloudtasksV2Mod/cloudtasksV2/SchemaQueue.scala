@@ -80,89 +80,22 @@ trait SchemaQueue extends js.Object {
 
 object SchemaQueue {
   @scala.inline
-  def apply(): SchemaQueue = {
+  def apply(
+    appEngineRoutingOverride: SchemaAppEngineRouting = null,
+    name: String = null,
+    purgeTime: String = null,
+    rateLimits: SchemaRateLimits = null,
+    retryConfig: SchemaRetryConfig = null,
+    state: String = null
+  ): SchemaQueue = {
     val __obj = js.Dynamic.literal()
+    if (appEngineRoutingOverride != null) __obj.updateDynamic("appEngineRoutingOverride")(appEngineRoutingOverride.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (purgeTime != null) __obj.updateDynamic("purgeTime")(purgeTime.asInstanceOf[js.Any])
+    if (rateLimits != null) __obj.updateDynamic("rateLimits")(rateLimits.asInstanceOf[js.Any])
+    if (retryConfig != null) __obj.updateDynamic("retryConfig")(retryConfig.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueue]
   }
-  @scala.inline
-  implicit class SchemaQueueOps[Self <: SchemaQueue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppEngineRoutingOverride(value: SchemaAppEngineRouting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRoutingOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppEngineRoutingOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRoutingOverride")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurgeTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purgeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurgeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purgeTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateLimits(value: SchemaRateLimits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryConfig(value: SchemaRetryConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

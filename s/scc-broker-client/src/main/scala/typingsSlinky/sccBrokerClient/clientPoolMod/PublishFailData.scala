@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PublishFailData extends js.Object {
-  var channel: String = js.native
-  var error: js.Error = js.native
-  var poolIndex: Double = js.native
-  var targetURI: String = js.native
+  var channel: String
+  var error: js.Error
+  var poolIndex: Double
+  var targetURI: String
 }
 
 object PublishFailData {
@@ -18,37 +17,5 @@ object PublishFailData {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], poolIndex = poolIndex.asInstanceOf[js.Any], targetURI = targetURI.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublishFailData]
   }
-  @scala.inline
-  implicit class PublishFailDataOps[Self <: PublishFailData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: js.Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPoolIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poolIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetURI(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetURI")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

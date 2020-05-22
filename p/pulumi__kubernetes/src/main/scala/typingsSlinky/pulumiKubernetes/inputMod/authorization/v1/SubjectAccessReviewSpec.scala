@@ -9,121 +9,53 @@ import scala.scalajs.js.annotation._
   * SubjectAccessReviewSpec is a description of the access request.  Exactly one of
   * ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
   */
-@js.native
 trait SubjectAccessReviewSpec extends js.Object {
   /**
     * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is
     * input to the authorizer it needs a reflection here.
     */
-  var extra: js.UndefOr[Input[js.Object]] = js.native
+  var extra: js.UndefOr[Input[js.Object]] = js.undefined
   /**
     * Groups is the groups you're testing for.
     */
-  var groups: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  var groups: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
   /**
     * NonResourceAttributes describes information for a non-resource access request
     */
-  var nonResourceAttributes: js.UndefOr[Input[NonResourceAttributes]] = js.native
+  var nonResourceAttributes: js.UndefOr[Input[NonResourceAttributes]] = js.undefined
   /**
     * ResourceAuthorizationAttributes describes information for a resource access request
     */
-  var resourceAttributes: js.UndefOr[Input[ResourceAttributes]] = js.native
+  var resourceAttributes: js.UndefOr[Input[ResourceAttributes]] = js.undefined
   /**
     * UID information about the requesting user.
     */
-  var uid: js.UndefOr[Input[String]] = js.native
+  var uid: js.UndefOr[Input[String]] = js.undefined
   /**
     * User is the user you're testing for. If you specify "User" but not "Groups", then is it
     * interpreted as "What if User were not a member of any groups
     */
-  var user: js.UndefOr[Input[String]] = js.native
+  var user: js.UndefOr[Input[String]] = js.undefined
 }
 
 object SubjectAccessReviewSpec {
   @scala.inline
-  def apply(): SubjectAccessReviewSpec = {
+  def apply(
+    extra: Input[js.Object] = null,
+    groups: Input[js.Array[Input[String]]] = null,
+    nonResourceAttributes: Input[NonResourceAttributes] = null,
+    resourceAttributes: Input[ResourceAttributes] = null,
+    uid: Input[String] = null,
+    user: Input[String] = null
+  ): SubjectAccessReviewSpec = {
     val __obj = js.Dynamic.literal()
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (nonResourceAttributes != null) __obj.updateDynamic("nonResourceAttributes")(nonResourceAttributes.asInstanceOf[js.Any])
+    if (resourceAttributes != null) __obj.updateDynamic("resourceAttributes")(resourceAttributes.asInstanceOf[js.Any])
+    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubjectAccessReviewSpec]
   }
-  @scala.inline
-  implicit class SubjectAccessReviewSpecOps[Self <: SubjectAccessReviewSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtra(value: Input[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonResourceAttributes(value: Input[NonResourceAttributes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonResourceAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonResourceAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonResourceAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAttributes(value: Input[ResourceAttributes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

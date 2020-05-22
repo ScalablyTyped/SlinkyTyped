@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains methods that a stream parser plug-in uses to send notifications to a PlayReady-ND client. */
-@js.native
 trait NDStreamParserNotifier extends js.Object {
   /**
     * Called by the stream parser when it requests a setup decryptor.
@@ -18,12 +17,12 @@ trait NDStreamParserNotifier extends js.Object {
     * @param keyID The key identifier used for decryption.
     * @param proBytes The data for the setup decryptor.
     */
-  def onBeginSetupDecryptor(descriptor: IMediaStreamDescriptor, keyID: String, proBytes: js.Array[Double]): Unit = js.native
+  def onBeginSetupDecryptor(descriptor: IMediaStreamDescriptor, keyID: String, proBytes: js.Array[Double]): Unit
   /**
     * Called by a stream parser when it receives the content identifier.
     * @param licenseFetchDescriptor The license fetch descriptor containing the content identifier.
     */
-  def onContentIDReceived(licenseFetchDescriptor: INDLicenseFetchDescriptor): Unit = js.native
+  def onContentIDReceived(licenseFetchDescriptor: INDLicenseFetchDescriptor): Unit
   /**
     * Called by the stream parser when the media stream descriptor is created.
     * @param audioStreamDescriptors An array of audio stream descriptors that are part of the media stream descriptor.
@@ -32,7 +31,7 @@ trait NDStreamParserNotifier extends js.Object {
   def onMediaStreamDescriptorCreated(
     audioStreamDescriptors: IVector[AudioStreamDescriptor],
     videoStreamDescriptors: IVector[VideoStreamDescriptor]
-  ): Unit = js.native
+  ): Unit
   /**
     * Called when the stream parser parses a sample from the media stream.
     * @param streamID The identifier for the media stream that is being parsed.
@@ -49,7 +48,7 @@ trait NDStreamParserNotifier extends js.Object {
     pts: Double,
     ccFormat: NDClosedCaptionFormat,
     ccDataBytes: js.Array[Double]
-  ): Unit = js.native
+  ): Unit
 }
 
 object NDStreamParserNotifier {
@@ -63,39 +62,5 @@ object NDStreamParserNotifier {
     val __obj = js.Dynamic.literal(onBeginSetupDecryptor = js.Any.fromFunction3(onBeginSetupDecryptor), onContentIDReceived = js.Any.fromFunction1(onContentIDReceived), onMediaStreamDescriptorCreated = js.Any.fromFunction2(onMediaStreamDescriptorCreated), onSampleParsed = js.Any.fromFunction6(onSampleParsed))
     __obj.asInstanceOf[NDStreamParserNotifier]
   }
-  @scala.inline
-  implicit class NDStreamParserNotifierOps[Self <: NDStreamParserNotifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnBeginSetupDecryptor(value: (IMediaStreamDescriptor, String, js.Array[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeginSetupDecryptor")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withOnContentIDReceived(value: INDLicenseFetchDescriptor => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContentIDReceived")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnMediaStreamDescriptorCreated(value: (IVector[AudioStreamDescriptor], IVector[VideoStreamDescriptor]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMediaStreamDescriptorCreated")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOnSampleParsed(
-      value: (Double, NDMediaStreamType, MediaStreamSample, Double, NDClosedCaptionFormat, js.Array[Double]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSampleParsed")(js.Any.fromFunction6(value))
-        ret
-    }
-  }
-  
 }
 

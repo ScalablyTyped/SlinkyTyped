@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InputEventObject extends AbstractEventObject {
   /** originalEvent : the original user input device event object */
-  var originalEvent: MouseEvent = js.native
+  var originalEvent: MouseEvent
   /** position : indicates the model position of the event */
-  var position: Position = js.native
+  var position: Position
   /** renderedPosition : indicates the rendered position of the event */
-  var renderedPosition: Position = js.native
+  var renderedPosition: Position
 }
 
 object InputEventObject {
@@ -37,31 +36,5 @@ object InputEventObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputEventObject]
   }
-  @scala.inline
-  implicit class InputEventObjectOps[Self <: InputEventObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOriginalEvent(value: MouseEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderedPosition(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderedPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

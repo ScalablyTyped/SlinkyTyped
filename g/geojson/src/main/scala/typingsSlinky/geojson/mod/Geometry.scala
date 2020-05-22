@@ -13,22 +13,81 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.geojson.mod.MultiPolygon
   - typingsSlinky.geojson.mod.GeometryCollection
 */
-trait Geometry extends GeoJSON
+trait Geometry extends js.Object
 
 object Geometry {
   @scala.inline
-  implicit def apply(value: GeometryCollection): Geometry = value.asInstanceOf[Geometry]
+  def LineString(
+    coordinates: js.Array[Position],
+    `type`: typingsSlinky.geojson.geojsonStrings.LineString,
+    bbox: BBox = null
+  ): Geometry = {
+    val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Geometry]
+  }
   @scala.inline
-  implicit def apply(value: LineString): Geometry = value.asInstanceOf[Geometry]
+  def MultiPoint(
+    coordinates: js.Array[Position],
+    `type`: typingsSlinky.geojson.geojsonStrings.MultiPoint,
+    bbox: BBox = null
+  ): Geometry = {
+    val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Geometry]
+  }
   @scala.inline
-  implicit def apply(value: MultiLineString): Geometry = value.asInstanceOf[Geometry]
+  def Polygon(
+    coordinates: js.Array[js.Array[Position]],
+    `type`: typingsSlinky.geojson.geojsonStrings.Polygon,
+    bbox: BBox = null
+  ): Geometry = {
+    val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Geometry]
+  }
   @scala.inline
-  implicit def apply(value: MultiPoint): Geometry = value.asInstanceOf[Geometry]
+  def GeometryCollection(
+    geometries: js.Array[Geometry],
+    `type`: typingsSlinky.geojson.geojsonStrings.GeometryCollection,
+    bbox: BBox = null
+  ): Geometry = {
+    val __obj = js.Dynamic.literal(geometries = geometries.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Geometry]
+  }
   @scala.inline
-  implicit def apply(value: MultiPolygon): Geometry = value.asInstanceOf[Geometry]
+  def MultiPolygon(
+    coordinates: js.Array[js.Array[js.Array[Position]]],
+    `type`: typingsSlinky.geojson.geojsonStrings.MultiPolygon,
+    bbox: BBox = null
+  ): Geometry = {
+    val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Geometry]
+  }
   @scala.inline
-  implicit def apply(value: Point): Geometry = value.asInstanceOf[Geometry]
+  def MultiLineString(
+    coordinates: js.Array[js.Array[Position]],
+    `type`: typingsSlinky.geojson.geojsonStrings.MultiLineString,
+    bbox: BBox = null
+  ): Geometry = {
+    val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Geometry]
+  }
   @scala.inline
-  implicit def apply(value: Polygon): Geometry = value.asInstanceOf[Geometry]
+  def Point(coordinates: Position, `type`: typingsSlinky.geojson.geojsonStrings.Point, bbox: BBox = null): Geometry = {
+    val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Geometry]
+  }
 }
 

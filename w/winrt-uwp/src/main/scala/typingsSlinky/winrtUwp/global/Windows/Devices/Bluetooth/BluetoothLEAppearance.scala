@@ -8,7 +8,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Bluetooth.BluetoothLEAppearance")
 @js.native
 abstract class BluetoothLEAppearance ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Bluetooth.BluetoothLEAppearance
+  extends typingsSlinky.winrtUwp.Windows.Devices.Bluetooth.BluetoothLEAppearance {
+  /** Gets the appearance category value of the Bluetooth LE device. */
+  /* CompleteClass */
+  override var category: Double = js.native
+  /** Gets the appearance raw value of the Bluetooth LE device. */
+  /* CompleteClass */
+  override var rawValue: Double = js.native
+  /** Gets the appearance subcategory value of the Bluetooth LE device. */
+  /* CompleteClass */
+  override var subCategory: Double = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Devices.Bluetooth.BluetoothLEAppearance")

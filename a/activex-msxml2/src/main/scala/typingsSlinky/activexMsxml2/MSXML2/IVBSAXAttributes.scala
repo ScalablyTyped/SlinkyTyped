@@ -5,34 +5,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** IVBSAXAttributes interface */
-@js.native
 trait IVBSAXAttributes extends js.Object {
   @JSName("MSXML2.IVBSAXAttributes_typekey")
-  var MSXML2DotIVBSAXAttributes_typekey: IVBSAXAttributes = js.native
+  var MSXML2DotIVBSAXAttributes_typekey: IVBSAXAttributes
   /** Get the number of attributes in the list. */
-  val length: Double = js.native
+  val length: Double
   /** Look up the index of an attribute by Namespace name. */
-  def getIndexFromName(strURI: String, strLocalName: String): Double = js.native
+  def getIndexFromName(strURI: String, strLocalName: String): Double
   /** Look up the index of an attribute by XML 1.0 qualified name. */
-  def getIndexFromQName(strQName: String): Double = js.native
+  def getIndexFromQName(strQName: String): Double
   /** Look up an attribute's local name by index. */
-  def getLocalName(nIndex: Double): String = js.native
+  def getLocalName(nIndex: Double): String
   /** Look up an attribute's XML 1.0 qualified name by index. */
-  def getQName(nIndex: Double): String = js.native
+  def getQName(nIndex: Double): String
   /** Look up an attribute's type by index. */
-  def getType(nIndex: Double): String = js.native
+  def getType(nIndex: Double): String
   /** Look up an attribute's type by Namespace name. */
-  def getTypeFromName(strURI: String, strLocalName: String): String = js.native
+  def getTypeFromName(strURI: String, strLocalName: String): String
   /** Look up an attribute's type by XML 1.0 qualified name. */
-  def getTypeFromQName(strQName: String): String = js.native
+  def getTypeFromQName(strQName: String): String
   /** Look up an attribute's Namespace URI by index. */
-  def getURI(nIndex: Double): String = js.native
+  def getURI(nIndex: Double): String
   /** Look up an attribute's value by index. */
-  def getValue(nIndex: Double): String = js.native
+  def getValue(nIndex: Double): String
   /** Look up an attribute's value by Namespace name. */
-  def getValueFromName(strURI: String, strLocalName: String): String = js.native
+  def getValueFromName(strURI: String, strLocalName: String): String
   /** Look up an attribute's value by XML 1.0 qualified name. */
-  def getValueFromQName(strQName: String): String = js.native
+  def getValueFromQName(strQName: String): String
 }
 
 object IVBSAXAttributes {
@@ -56,91 +55,5 @@ object IVBSAXAttributes {
     __obj.updateDynamic("MSXML2.IVBSAXAttributes_typekey")(MSXML2DotIVBSAXAttributes_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IVBSAXAttributes]
   }
-  @scala.inline
-  implicit class IVBSAXAttributesOps[Self <: IVBSAXAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSXML2DotIVBSAXAttributes_typekey(value: IVBSAXAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSXML2.IVBSAXAttributes_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetIndexFromName(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndexFromName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetIndexFromQName(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndexFromQName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetLocalName(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocalName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetQName(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getQName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetType(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeFromName(value: (String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeFromName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeFromQName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeFromQName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetURI(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getURI")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetValue(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetValueFromName(value: (String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValueFromName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetValueFromQName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValueFromQName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,23 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "apollo-engine-reporting"
-version := "1.7.0-638b12"
+version := "1.8.1-alpha.0-a443d0"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "apollo-engine-reporting-protobuf" % "0.4.4-eaf7d8",
-  "org.scalablytyped.slinky" %%% "apollo-server-caching" % "0.5.1-55a6c4",
-  "org.scalablytyped.slinky" %%% "apollo-server-env" % "2.4.3-d10ad3",
-  "org.scalablytyped.slinky" %%% "apollo-server-types" % "0.3.0-000103",
-  "org.scalablytyped.slinky" %%% "apollo__protobufjs" % "1.0.3-618529",
-  "org.scalablytyped.slinky" %%% "graphql" % "14.6.0-5be153",
-  "org.scalablytyped.slinky" %%% "graphql-extensions" % "0.11.0-7c8205",
-  "org.scalablytyped.slinky" %%% "long" % "4.0.0-dt-20200226Z-da0575",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "apollo-engine-reporting-protobuf" % "0.5.1-alpha.1-0f9eef",
+  "org.scalablytyped.slinky" %%% "apollo-server-caching" % "0.5.1-95fbe2",
+  "org.scalablytyped.slinky" %%% "apollo-server-env" % "2.4.4-alpha.0-39c1fb",
+  "org.scalablytyped.slinky" %%% "apollo-server-types" % "0.4.1-alpha.0-d79ed0",
+  "org.scalablytyped.slinky" %%% "apollo__protobufjs" % "1.0.3-d4c0fa",
+  "org.scalablytyped.slinky" %%% "graphql" % "14.6.0-19956e",
+  "org.scalablytyped.slinky" %%% "graphql-extensions" % "0.12.1-alpha.0-1a24a2",
+  "org.scalablytyped.slinky" %%% "long" % "4.0.0-dt-20200515Z-ced51c",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

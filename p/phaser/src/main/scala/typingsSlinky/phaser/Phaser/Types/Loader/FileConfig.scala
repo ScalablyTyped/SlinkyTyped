@@ -6,140 +6,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileConfig extends js.Object {
   /**
     * A config object that can be used by file types to store transitional data.
     */
-  var config: js.UndefOr[js.Any] = js.native
+  var config: js.UndefOr[js.Any] = js.undefined
   /**
     * The default extension this file uses.
     */
-  var extension: js.UndefOr[String] = js.native
+  var extension: js.UndefOr[String] = js.undefined
   /**
     * Unique cache key (unique within its file type)
     */
-  var key: String = js.native
+  var key: String
   /**
     * The path of the file, not including the baseURL.
     */
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.undefined
   /**
     * The responseType to be used by the XHR request.
     */
-  var responseType: js.UndefOr[XMLHttpRequestResponseType] = js.native
+  var responseType: js.UndefOr[XMLHttpRequestResponseType] = js.undefined
   /**
     * The file type string (image, json, etc) for sorting within the Loader.
     */
-  var `type`: String = js.native
+  var `type`: String
   /**
     * The URL of the file, not including baseURL.
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
   /**
     * Custom XHR Settings specific to this file and merged with the Loader defaults.
     */
-  var xhrSettings: js.UndefOr[XHRSettingsObject | `false`] = js.native
+  var xhrSettings: js.UndefOr[XHRSettingsObject | `false`] = js.undefined
 }
 
 object FileConfig {
   @scala.inline
-  def apply(key: String, `type`: String): FileConfig = {
+  def apply(
+    key: String,
+    `type`: String,
+    config: js.Any = null,
+    extension: String = null,
+    path: String = null,
+    responseType: XMLHttpRequestResponseType = null,
+    url: String = null,
+    xhrSettings: XHRSettingsObject | `false` = null
+  ): FileConfig = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (xhrSettings != null) __obj.updateDynamic("xhrSettings")(xhrSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileConfig]
   }
-  @scala.inline
-  implicit class FileConfigOps[Self <: FileConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfig(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseType(value: XMLHttpRequestResponseType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXhrSettings(value: XHRSettingsObject | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXhrSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

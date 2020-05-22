@@ -21,7 +21,7 @@ class PolylineGraphics () extends js.Object {
   var positions: Property = js.native
   var shadows: Property = js.native
   var show: Property = js.native
-  var width: Property = js.native
+  var width: Property | Double = js.native
   var zIndex: ConstantProperty = js.native
   def clone(result: PolylineGraphics): PolylineGraphics = js.native
   def merge(source: PolylineGraphics): PolylineGraphics = js.native

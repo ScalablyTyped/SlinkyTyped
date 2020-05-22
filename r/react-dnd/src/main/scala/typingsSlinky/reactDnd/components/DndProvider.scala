@@ -9,19 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DndProvider {
-  object Manager {
-    @JSImport("react-dnd", "DndProvider")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: typingsSlinky.reactDnd.anon.Manager): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-    @scala.inline
-    def apply(manager: DragDropManager): Default[tag.type, js.Object] = {
-        val __props = js.Dynamic.literal(manager = manager.asInstanceOf[js.Any])
-        new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactDnd.anon.Manager]))
-    }
-  }
-  
   object Backend {
     @JSImport("react-dnd", "DndProvider")
     @js.native
@@ -46,6 +33,19 @@ object DndProvider {
     ): Builder = {
         val __props = js.Dynamic.literal(backend = js.Any.fromFunction3(backend))
         new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactDnd.anon.Backend[js.Any, js.Any]]))
+    }
+  }
+  
+  object Manager {
+    @JSImport("react-dnd", "DndProvider")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: typingsSlinky.reactDnd.anon.Manager): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(manager: DragDropManager): Default[tag.type, js.Object] = {
+        val __props = js.Dynamic.literal(manager = manager.asInstanceOf[js.Any])
+        new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactDnd.anon.Manager]))
     }
   }
   

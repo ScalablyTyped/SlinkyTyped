@@ -42,113 +42,26 @@ trait RuleCondition extends js.Object {
 
 object RuleCondition {
   @scala.inline
-  def apply(): RuleCondition = {
+  def apply(
+    Field: ConditionFieldName = null,
+    HostHeaderConfig: HostHeaderConditionConfig = null,
+    HttpHeaderConfig: HttpHeaderConditionConfig = null,
+    HttpRequestMethodConfig: HttpRequestMethodConditionConfig = null,
+    PathPatternConfig: PathPatternConditionConfig = null,
+    QueryStringConfig: QueryStringConditionConfig = null,
+    SourceIpConfig: SourceIpConditionConfig = null,
+    Values: ListOfString = null
+  ): RuleCondition = {
     val __obj = js.Dynamic.literal()
+    if (Field != null) __obj.updateDynamic("Field")(Field.asInstanceOf[js.Any])
+    if (HostHeaderConfig != null) __obj.updateDynamic("HostHeaderConfig")(HostHeaderConfig.asInstanceOf[js.Any])
+    if (HttpHeaderConfig != null) __obj.updateDynamic("HttpHeaderConfig")(HttpHeaderConfig.asInstanceOf[js.Any])
+    if (HttpRequestMethodConfig != null) __obj.updateDynamic("HttpRequestMethodConfig")(HttpRequestMethodConfig.asInstanceOf[js.Any])
+    if (PathPatternConfig != null) __obj.updateDynamic("PathPatternConfig")(PathPatternConfig.asInstanceOf[js.Any])
+    if (QueryStringConfig != null) __obj.updateDynamic("QueryStringConfig")(QueryStringConfig.asInstanceOf[js.Any])
+    if (SourceIpConfig != null) __obj.updateDynamic("SourceIpConfig")(SourceIpConfig.asInstanceOf[js.Any])
+    if (Values != null) __obj.updateDynamic("Values")(Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleCondition]
   }
-  @scala.inline
-  implicit class RuleConditionOps[Self <: RuleCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField(value: ConditionFieldName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostHeaderConfig(value: HostHeaderConditionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostHeaderConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostHeaderConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostHeaderConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpHeaderConfig(value: HttpHeaderConditionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpHeaderConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpHeaderConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpHeaderConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpRequestMethodConfig(value: HttpRequestMethodConditionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpRequestMethodConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpRequestMethodConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpRequestMethodConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathPatternConfig(value: PathPatternConditionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PathPatternConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathPatternConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PathPatternConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryStringConfig(value: QueryStringConditionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryStringConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryStringConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryStringConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceIpConfig(value: SourceIpConditionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceIpConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: ListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

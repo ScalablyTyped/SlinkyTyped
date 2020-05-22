@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Services.Store
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Services.Store.StoreImage")
 @js.native
 abstract class StoreImage ()
-  extends typingsSlinky.winrtUwp.Windows.Services.Store.StoreImage
+  extends typingsSlinky.winrtUwp.Windows.Services.Store.StoreImage {
+  /** Gets the caption for the image. */
+  /* CompleteClass */
+  override var caption: String = js.native
+  /** Gets the height of the image, in pixels. */
+  /* CompleteClass */
+  override var height: Double = js.native
+  /** Gets the tag for the image. */
+  /* CompleteClass */
+  override var imagePurposeTag: String = js.native
+  /** Gets the URI of the image. */
+  /* CompleteClass */
+  override var uri: Uri = js.native
+  /** Gets the width of the image, in pixels. */
+  /* CompleteClass */
+  override var width: Double = js.native
+}
 

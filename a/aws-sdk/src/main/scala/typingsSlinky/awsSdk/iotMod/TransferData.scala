@@ -30,77 +30,20 @@ trait TransferData extends js.Object {
 
 object TransferData {
   @scala.inline
-  def apply(): TransferData = {
+  def apply(
+    acceptDate: js.Date = null,
+    rejectDate: js.Date = null,
+    rejectReason: Message = null,
+    transferDate: js.Date = null,
+    transferMessage: Message = null
+  ): TransferData = {
     val __obj = js.Dynamic.literal()
+    if (acceptDate != null) __obj.updateDynamic("acceptDate")(acceptDate.asInstanceOf[js.Any])
+    if (rejectDate != null) __obj.updateDynamic("rejectDate")(rejectDate.asInstanceOf[js.Any])
+    if (rejectReason != null) __obj.updateDynamic("rejectReason")(rejectReason.asInstanceOf[js.Any])
+    if (transferDate != null) __obj.updateDynamic("transferDate")(transferDate.asInstanceOf[js.Any])
+    if (transferMessage != null) __obj.updateDynamic("transferMessage")(transferMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransferData]
   }
-  @scala.inline
-  implicit class TransferDataOps[Self <: TransferData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRejectDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRejectDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRejectReason(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRejectReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransferDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransferDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransferMessage(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransferMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

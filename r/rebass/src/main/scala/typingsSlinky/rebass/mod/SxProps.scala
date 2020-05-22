@@ -4,45 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SxProps extends js.Object {
   /**
     * The sx prop lets you style elements inline, using values from your theme.
     */
-  var sx: js.UndefOr[SxStyleProp] = js.native
+  var sx: js.UndefOr[SxStyleProp] = js.undefined
 }
 
 object SxProps {
   @scala.inline
-  def apply(): SxProps = {
+  def apply(sx: js.UndefOr[Null | SxStyleProp] = js.undefined): SxProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(sx)) __obj.updateDynamic("sx")(sx.asInstanceOf[js.Any])
     __obj.asInstanceOf[SxProps]
   }
-  @scala.inline
-  implicit class SxPropsOps[Self <: SxProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSx(value: SxStyleProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSxNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sx")(null)
-        ret
-    }
-  }
-  
 }
 

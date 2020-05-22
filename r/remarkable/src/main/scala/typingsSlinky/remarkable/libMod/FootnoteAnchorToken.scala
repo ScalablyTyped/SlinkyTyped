@@ -6,32 +6,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
-trait FootnoteAnchorToken extends FootnoteGenericToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait FootnoteAnchorToken extends FootnoteGenericToken {
   @JSName("type")
-  var type_FootnoteAnchorToken: footnote_anchor = js.native
+  var type_FootnoteAnchorToken: footnote_anchor
 }
 
 object FootnoteAnchorToken {
   @scala.inline
-  def apply(id: Double, level: Double, `type`: footnote_anchor): FootnoteAnchorToken = {
+  def apply(
+    id: Double,
+    level: Double,
+    `type`: footnote_anchor,
+    lines: js.Tuple2[Double, Double] = null,
+    subId: js.UndefOr[Double] = js.undefined
+  ): FootnoteAnchorToken = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
+    if (!js.isUndefined(subId)) __obj.updateDynamic("subId")(subId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FootnoteAnchorToken]
   }
-  @scala.inline
-  implicit class FootnoteAnchorTokenOps[Self <: FootnoteAnchorToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: footnote_anchor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,54 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RestElement_
   extends Node
      with LVal {
-  var argument: LVal = js.native
-  var typeAnnotation: js.UndefOr[TypeAnnotation_] = js.native
+  var argument: LVal
+  var typeAnnotation: js.UndefOr[TypeAnnotation_] = js.undefined
   @JSName("type")
-  var type_RestElement_ : RestElement = js.native
+  var type_RestElement_ : RestElement
 }
 
 object RestElement_ {
   @scala.inline
-  def apply(argument: LVal, end: Double, loc: SourceLocation, start: Double, `type`: RestElement): RestElement_ = {
+  def apply(
+    argument: LVal,
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: RestElement,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TypeAnnotation_ = null
+  ): RestElement_ = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    if (typeAnnotation != null) __obj.updateDynamic("typeAnnotation")(typeAnnotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestElement_]
   }
-  @scala.inline
-  implicit class RestElement_Ops[Self <: RestElement_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgument(value: LVal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: RestElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotation(value: TypeAnnotation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeAnnotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Tooltip
   extends Component[TooltipOptions]
      with Openable {
   /**
     * If tooltip is hovered.
     */
-  var isHovered: Boolean = js.native
+  var isHovered: Boolean
 }
 
 object Tooltip {
@@ -29,19 +28,5 @@ object Tooltip {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), destroy = js.Any.fromFunction0(destroy), el = el.asInstanceOf[js.Any], isHovered = isHovered.asInstanceOf[js.Any], isOpen = isOpen.asInstanceOf[js.Any], open = js.Any.fromFunction0(open), options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tooltip]
   }
-  @scala.inline
-  implicit class TooltipOps[Self <: Tooltip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsHovered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHovered")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

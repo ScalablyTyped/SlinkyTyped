@@ -1,6 +1,7 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IPropertyDef
 import typingsSlinky.mfiles.IPropertyDefs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,14 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.PropertyDefs")
 @js.native
-class PropertyDefs () extends IPropertyDefs
+class PropertyDefs () extends IPropertyDefs {
+  /* CompleteClass */
+  override val Count: Double = js.native
+  /* CompleteClass */
+  override def Clone(): IPropertyDefs = js.native
+  /* CompleteClass */
+  override def Item(Index: Double): IPropertyDef = js.native
+}
 
 @JSGlobal("MFiles.PropertyDefs")
 @js.native

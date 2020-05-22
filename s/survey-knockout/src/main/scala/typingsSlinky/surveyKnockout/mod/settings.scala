@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object settings extends js.Object {
   /**
+    * Set to false to hide empty page title in design mode
+    */
+  var allowShowEmptyTitleInDesignMode: Boolean = js.native
+  /**
     * The prefix that uses to store the question comment, as {questionName} + {commentPrefix}.
     * The default
     */
@@ -20,6 +24,10 @@ object settings extends js.Object {
     * Disable the question while choices are getting from the web service
     */
   var disableOnGettingChoicesFromWeb: Boolean = js.native
+  /**
+    * Set this property to true to execute the complete trigger on value change instead of on next page.
+    */
+  var executeCompleteTriggerOnValueChanged: Boolean = js.native
   /**
     * separator that can allow to set value and text of ItemValue object in one string as: "value|text"
     */
@@ -48,6 +56,10 @@ object settings extends js.Object {
     * Maximum rate value count in rating question
     */
   var ratingMaximumRateValueCount: Double = js.native
+  /**
+    * Set to true to always serialize the localization string as object even if there is only one value for default locale. Instead of string "MyStr" serialize as {default: "MyStr"}
+    */
+  var serializeLocalizableStringAsObject: Boolean = js.native
   /**
     * SurveyJS web service API url
     */

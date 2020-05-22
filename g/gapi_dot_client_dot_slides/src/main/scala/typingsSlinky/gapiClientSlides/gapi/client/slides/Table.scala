@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Table extends js.Object {
   /** Number of columns in the table. */
-  var columns: js.UndefOr[Double] = js.native
+  var columns: js.UndefOr[Double] = js.undefined
   /** Number of rows in the table. */
-  var rows: js.UndefOr[Double] = js.native
+  var rows: js.UndefOr[Double] = js.undefined
   /** Properties of each column. */
-  var tableColumns: js.UndefOr[js.Array[TableColumnProperties]] = js.native
+  var tableColumns: js.UndefOr[js.Array[TableColumnProperties]] = js.undefined
   /**
     * Properties and contents of each row.
     *
@@ -19,70 +18,23 @@ trait Table extends js.Object {
     * have a row_span greater
     * than 1.
     */
-  var tableRows: js.UndefOr[js.Array[TableRow]] = js.native
+  var tableRows: js.UndefOr[js.Array[TableRow]] = js.undefined
 }
 
 object Table {
   @scala.inline
-  def apply(): Table = {
+  def apply(
+    columns: js.UndefOr[Double] = js.undefined,
+    rows: js.UndefOr[Double] = js.undefined,
+    tableColumns: js.Array[TableColumnProperties] = null,
+    tableRows: js.Array[TableRow] = null
+  ): Table = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(columns)) __obj.updateDynamic("columns")(columns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
+    if (tableColumns != null) __obj.updateDynamic("tableColumns")(tableColumns.asInstanceOf[js.Any])
+    if (tableRows != null) __obj.updateDynamic("tableRows")(tableRows.asInstanceOf[js.Any])
     __obj.asInstanceOf[Table]
   }
-  @scala.inline
-  implicit class TableOps[Self <: Table] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableColumns(value: js.Array[TableColumnProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableRows(value: js.Array[TableRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

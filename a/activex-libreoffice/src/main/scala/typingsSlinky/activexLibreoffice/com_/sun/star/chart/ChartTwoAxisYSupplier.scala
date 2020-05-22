@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** a helper service for chart documents which supply primary and secondary y-axes. */
-@js.native
 trait ChartTwoAxisYSupplier
   extends XTwoAxisYSupplier
      with ChartAxisYSupplier {
@@ -16,15 +15,15 @@ trait ChartTwoAxisYSupplier
     * determines if the secondary y-axis is shown or hidden.
     * @see ChartAxis
     */
-  var HasSecondaryYAxis: Boolean = js.native
+  var HasSecondaryYAxis: Boolean
   /** determines for the secondary y-axis if the labels at the tick marks are shown or hidden. */
-  var HasSecondaryYAxisDescription: Boolean = js.native
+  var HasSecondaryYAxisDescription: Boolean
   /**
     * determines if the title of the secondary y-axis is shown or hidden.
     * @see ChartTitle
     * @since OOo 3.0
     */
-  var HasSecondaryYAxisTitle: Boolean = js.native
+  var HasSecondaryYAxisTitle: Boolean
 }
 
 object ChartTwoAxisYSupplier {
@@ -55,31 +54,5 @@ object ChartTwoAxisYSupplier {
     val __obj = js.Dynamic.literal(HasSecondaryYAxis = HasSecondaryYAxis.asInstanceOf[js.Any], HasSecondaryYAxisDescription = HasSecondaryYAxisDescription.asInstanceOf[js.Any], HasSecondaryYAxisTitle = HasSecondaryYAxisTitle.asInstanceOf[js.Any], HasYAxis = HasYAxis.asInstanceOf[js.Any], HasYAxisDescription = HasYAxisDescription.asInstanceOf[js.Any], HasYAxisGrid = HasYAxisGrid.asInstanceOf[js.Any], HasYAxisHelpGrid = HasYAxisHelpGrid.asInstanceOf[js.Any], HasYAxisTitle = HasYAxisTitle.asInstanceOf[js.Any], SecondaryYAxis = SecondaryYAxis.asInstanceOf[js.Any], YAxis = YAxis.asInstanceOf[js.Any], YAxisTitle = YAxisTitle.asInstanceOf[js.Any], YHelpGrid = YHelpGrid.asInstanceOf[js.Any], YMainGrid = YMainGrid.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getSecondaryYAxis = js.Any.fromFunction0(getSecondaryYAxis), getYAxis = js.Any.fromFunction0(getYAxis), getYAxisTitle = js.Any.fromFunction0(getYAxisTitle), getYHelpGrid = js.Any.fromFunction0(getYHelpGrid), getYMainGrid = js.Any.fromFunction0(getYMainGrid), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[ChartTwoAxisYSupplier]
   }
-  @scala.inline
-  implicit class ChartTwoAxisYSupplierOps[Self <: ChartTwoAxisYSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasSecondaryYAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasSecondaryYAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasSecondaryYAxisDescription(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasSecondaryYAxisDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasSecondaryYAxisTitle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasSecondaryYAxisTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

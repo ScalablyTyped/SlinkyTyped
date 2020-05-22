@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `chartFont.toJSON()`. */
-@js.native
 trait ChartFontData extends js.Object {
   /**
     *
@@ -16,129 +15,62 @@ trait ChartFontData extends js.Object {
     *
     * [Api set: ExcelApi 1.1]
     */
-  var bold: js.UndefOr[Boolean] = js.native
+  var bold: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+    * HTML color code representation of the text color (e.g., #FF0000 represents Red).
     *
     * [Api set: ExcelApi 1.1]
     */
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.undefined
   /**
     *
     * Represents the italic status of the font.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var italic: js.UndefOr[Boolean] = js.native
+  var italic: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Font name (e.g. "Calibri")
+    * Font name (e.g., "Calibri")
     *
     * [Api set: ExcelApi 1.1]
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     *
-    * Size of the font (e.g. 11)
+    * Size of the font (e.g., 11)
     *
     * [Api set: ExcelApi 1.1]
     */
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.undefined
   /**
     *
     * Type of underline applied to the font. See Excel.ChartUnderlineStyle for details.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var underline: js.UndefOr[ChartUnderlineStyle | None | Single] = js.native
+  var underline: js.UndefOr[ChartUnderlineStyle | None | Single] = js.undefined
 }
 
 object ChartFontData {
   @scala.inline
-  def apply(): ChartFontData = {
+  def apply(
+    bold: js.UndefOr[Boolean] = js.undefined,
+    color: String = null,
+    italic: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    size: js.UndefOr[Double] = js.undefined,
+    underline: ChartUnderlineStyle | None | Single = null
+  ): ChartFontData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (underline != null) __obj.updateDynamic("underline")(underline.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartFontData]
   }
-  @scala.inline
-  implicit class ChartFontDataOps[Self <: ChartFontData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBold(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItalic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItalic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnderline(value: ChartUnderlineStyle | None | Single): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnderline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

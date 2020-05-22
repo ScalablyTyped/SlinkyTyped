@@ -4,663 +4,245 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Model extends js.Object {
   /** Specifies the animationSpeed
     * @Default {500}
     */
-  var animationSpeed: js.UndefOr[Double] = js.native
+  var animationSpeed: js.UndefOr[Double] = js.undefined
   /** Specifies the backgroundColor for Linear gauge.
     * @Default {null}
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
   /** Specifies the borderColor for Linear gauge.
     * @Default {null}
     */
-  var borderColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[String] = js.undefined
   /** Fires, on double clicking the gauge.
     */
-  var doubleClick: js.UndefOr[js.Function1[/* e */ DoubleClickEventArgs, Unit]] = js.native
+  var doubleClick: js.UndefOr[js.Function1[/* e */ DoubleClickEventArgs, Unit]] = js.undefined
   /** Triggers while the bar pointer are being drawn on the gauge.
     */
-  var drawBarPointers: js.UndefOr[js.Function1[/* e */ DrawBarPointersEventArgs, Unit]] = js.native
+  var drawBarPointers: js.UndefOr[js.Function1[/* e */ DrawBarPointersEventArgs, Unit]] = js.undefined
   /** Triggers while the customLabel are being drawn on the gauge.
     */
-  var drawCustomLabel: js.UndefOr[js.Function1[/* e */ DrawCustomLabelEventArgs, Unit]] = js.native
+  var drawCustomLabel: js.UndefOr[js.Function1[/* e */ DrawCustomLabelEventArgs, Unit]] = js.undefined
   /** Triggers while the Indicator are being drawn on the gauge.
     */
-  var drawIndicators: js.UndefOr[js.Function1[/* e */ DrawIndicatorsEventArgs, Unit]] = js.native
+  var drawIndicators: js.UndefOr[js.Function1[/* e */ DrawIndicatorsEventArgs, Unit]] = js.undefined
   /** Triggers while the label are being drawn on the gauge.
     */
-  var drawLabels: js.UndefOr[js.Function1[/* e */ DrawLabelsEventArgs, Unit]] = js.native
+  var drawLabels: js.UndefOr[js.Function1[/* e */ DrawLabelsEventArgs, Unit]] = js.undefined
   /** Triggers while the marker are being drawn on the gauge.
     */
-  var drawMarkerPointers: js.UndefOr[js.Function1[/* e */ DrawMarkerPointersEventArgs, Unit]] = js.native
+  var drawMarkerPointers: js.UndefOr[js.Function1[/* e */ DrawMarkerPointersEventArgs, Unit]] = js.undefined
   /** Triggers while the range are being drawn on the gauge.
     */
-  var drawRange: js.UndefOr[js.Function1[/* e */ DrawRangeEventArgs, Unit]] = js.native
+  var drawRange: js.UndefOr[js.Function1[/* e */ DrawRangeEventArgs, Unit]] = js.undefined
   /** Triggers while the ticks are being drawn on the gauge.
     */
-  var drawTicks: js.UndefOr[js.Function1[/* e */ DrawTicksEventArgs, Unit]] = js.native
+  var drawTicks: js.UndefOr[js.Function1[/* e */ DrawTicksEventArgs, Unit]] = js.undefined
   /** Specifies the animate state
     * @Default {true}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.native
+  var enableAnimation: js.UndefOr[Boolean] = js.undefined
   /** Used to Convert the date object to  string while using the  locale settings
     * @Default {false}
     */
-  var enableGroupSeparator: js.UndefOr[Boolean] = js.native
+  var enableGroupSeparator: js.UndefOr[Boolean] = js.undefined
   /** Specifies the animate state for marker pointer
     * @Default {true}
     */
-  var enableMarkerPointerAnimation: js.UndefOr[Boolean] = js.native
+  var enableMarkerPointerAnimation: js.UndefOr[Boolean] = js.undefined
   /** Responsiveness of the linear gauge is controlled
     * @Default {false}
     */
-  var enableResize: js.UndefOr[Boolean] = js.native
+  var enableResize: js.UndefOr[Boolean] = js.undefined
   /** This provides options for customizing export settings
     */
-  var exportSettings: js.UndefOr[ExportSettings] = js.native
+  var exportSettings: js.UndefOr[ExportSettings] = js.undefined
   /** Specify frame of linear gauge
     * @Default {null}
     */
-  var frame: js.UndefOr[Frame] = js.native
+  var frame: js.UndefOr[Frame] = js.undefined
   /** Specifies the height of Linear gauge.
     * @Default {400}
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /** Triggers when the gauge is initialized.
     */
-  var init: js.UndefOr[js.Function1[/* e */ InitEventArgs, Unit]] = js.native
+  var init: js.UndefOr[js.Function1[/* e */ InitEventArgs, Unit]] = js.undefined
   /** Specifies the can resize state.
     * @Default {false}
     */
-  var isResponsive: js.UndefOr[Boolean] = js.native
+  var isResponsive: js.UndefOr[Boolean] = js.undefined
   /** Specifies the labelColor for Linear gauge.
     * @Default {null}
     */
-  var labelColor: js.UndefOr[String] = js.native
+  var labelColor: js.UndefOr[String] = js.undefined
   /** Triggers while the gauge start to Load.
     */
-  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.native
+  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.undefined
   /** Set the  localization culture  for the Linear gauge
     * @Default {en-US}
     */
-  var locale: js.UndefOr[String] = js.native
+  var locale: js.UndefOr[String] = js.undefined
   /** Specifies the maximum value of Linear gauge.
     * @Default {100}
     */
-  var maximum: js.UndefOr[Double] = js.native
+  var maximum: js.UndefOr[Double] = js.undefined
   /** Specifies the minimum value of Linear gauge.
     * @Default {0}
     */
-  var minimum: js.UndefOr[Double] = js.native
+  var minimum: js.UndefOr[Double] = js.undefined
   /** Triggers when the left mouse button is clicked.
     */
-  var mouseClick: js.UndefOr[js.Function1[/* e */ MouseClickEventArgs, Unit]] = js.native
+  var mouseClick: js.UndefOr[js.Function1[/* e */ MouseClickEventArgs, Unit]] = js.undefined
   /** Triggers when clicking and dragging the mouse pointer over the gauge pointer.
     */
-  var mouseClickMove: js.UndefOr[js.Function1[/* e */ MouseClickMoveEventArgs, Unit]] = js.native
+  var mouseClickMove: js.UndefOr[js.Function1[/* e */ MouseClickMoveEventArgs, Unit]] = js.undefined
   /** Triggers when the mouse click is released.
     */
-  var mouseClickUp: js.UndefOr[js.Function1[/* e */ MouseClickUpEventArgs, Unit]] = js.native
+  var mouseClickUp: js.UndefOr[js.Function1[/* e */ MouseClickUpEventArgs, Unit]] = js.undefined
   /** Specifies the orientation for Linear gauge.
     * @Default {Vertical}
     */
-  var orientation: js.UndefOr[String] = js.native
+  var orientation: js.UndefOr[String] = js.undefined
   /** Specify labelPosition value of Linear gauge See
     * @Default {bottom}
     */
-  var outerCustomLabelPosition: js.UndefOr[OuterCustomLabelPosition | String] = js.native
+  var outerCustomLabelPosition: js.UndefOr[OuterCustomLabelPosition | String] = js.undefined
   /** Specifies the pointerGradient1 for Linear gauge.
     * @Default {null}
     */
-  var pointerGradient1: js.UndefOr[js.Any] = js.native
+  var pointerGradient1: js.UndefOr[js.Any] = js.undefined
   /** Specifies the pointerGradient2 for Linear gauge.
     * @Default {null}
     */
-  var pointerGradient2: js.UndefOr[js.Any] = js.native
+  var pointerGradient2: js.UndefOr[js.Any] = js.undefined
   /** Specifies the read only state.
     * @Default {true}
     */
-  var readOnly: js.UndefOr[Boolean] = js.native
+  var readOnly: js.UndefOr[Boolean] = js.undefined
   /** Triggers while the rendering of the gauge completed.
     */
-  var renderComplete: js.UndefOr[js.Function1[/* e */ RenderCompleteEventArgs, Unit]] = js.native
+  var renderComplete: js.UndefOr[js.Function1[/* e */ RenderCompleteEventArgs, Unit]] = js.undefined
   /** Fires, on right clicking the gauge.
     */
-  var rightClick: js.UndefOr[js.Function1[/* e */ RightClickEventArgs, Unit]] = js.native
+  var rightClick: js.UndefOr[js.Function1[/* e */ RightClickEventArgs, Unit]] = js.undefined
   /** Specifies the scales
     * @Default {null}
     */
-  var scales: js.UndefOr[js.Array[Scale]] = js.native
+  var scales: js.UndefOr[js.Array[Scale]] = js.undefined
   /** Specifies the theme for Linear gauge. See LinearGauge.Themes
     * @Default {flatlight}
     */
-  var theme: js.UndefOr[Themes | String] = js.native
+  var theme: js.UndefOr[Themes | String] = js.undefined
   /** Specifies the tick Color for Linear gauge.
     * @Default {null}
     */
-  var tickColor: js.UndefOr[String] = js.native
+  var tickColor: js.UndefOr[String] = js.undefined
   /** Specify tooltip options of linear gauge
     * @Default {false}
     */
-  var tooltip: js.UndefOr[Tooltip] = js.native
+  var tooltip: js.UndefOr[Tooltip] = js.undefined
   /** Specifies the value of the Gauge.
     * @Default {0}
     */
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.undefined
   /** Specifies the width of Linear gauge.
     * @Default {150}
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object Model {
   @scala.inline
-  def apply(): Model = {
+  def apply(
+    animationSpeed: js.UndefOr[Double] = js.undefined,
+    backgroundColor: String = null,
+    borderColor: String = null,
+    doubleClick: /* e */ DoubleClickEventArgs => Unit = null,
+    drawBarPointers: /* e */ DrawBarPointersEventArgs => Unit = null,
+    drawCustomLabel: /* e */ DrawCustomLabelEventArgs => Unit = null,
+    drawIndicators: /* e */ DrawIndicatorsEventArgs => Unit = null,
+    drawLabels: /* e */ DrawLabelsEventArgs => Unit = null,
+    drawMarkerPointers: /* e */ DrawMarkerPointersEventArgs => Unit = null,
+    drawRange: /* e */ DrawRangeEventArgs => Unit = null,
+    drawTicks: /* e */ DrawTicksEventArgs => Unit = null,
+    enableAnimation: js.UndefOr[Boolean] = js.undefined,
+    enableGroupSeparator: js.UndefOr[Boolean] = js.undefined,
+    enableMarkerPointerAnimation: js.UndefOr[Boolean] = js.undefined,
+    enableResize: js.UndefOr[Boolean] = js.undefined,
+    exportSettings: ExportSettings = null,
+    frame: Frame = null,
+    height: js.UndefOr[Double] = js.undefined,
+    init: /* e */ InitEventArgs => Unit = null,
+    isResponsive: js.UndefOr[Boolean] = js.undefined,
+    labelColor: String = null,
+    load: /* e */ LoadEventArgs => Unit = null,
+    locale: String = null,
+    maximum: js.UndefOr[Double] = js.undefined,
+    minimum: js.UndefOr[Double] = js.undefined,
+    mouseClick: /* e */ MouseClickEventArgs => Unit = null,
+    mouseClickMove: /* e */ MouseClickMoveEventArgs => Unit = null,
+    mouseClickUp: /* e */ MouseClickUpEventArgs => Unit = null,
+    orientation: String = null,
+    outerCustomLabelPosition: OuterCustomLabelPosition | String = null,
+    pointerGradient1: js.Any = null,
+    pointerGradient2: js.Any = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    renderComplete: /* e */ RenderCompleteEventArgs => Unit = null,
+    rightClick: /* e */ RightClickEventArgs => Unit = null,
+    scales: js.Array[Scale] = null,
+    theme: Themes | String = null,
+    tickColor: String = null,
+    tooltip: Tooltip = null,
+    value: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): Model = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animationSpeed)) __obj.updateDynamic("animationSpeed")(animationSpeed.get.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (doubleClick != null) __obj.updateDynamic("doubleClick")(js.Any.fromFunction1(doubleClick))
+    if (drawBarPointers != null) __obj.updateDynamic("drawBarPointers")(js.Any.fromFunction1(drawBarPointers))
+    if (drawCustomLabel != null) __obj.updateDynamic("drawCustomLabel")(js.Any.fromFunction1(drawCustomLabel))
+    if (drawIndicators != null) __obj.updateDynamic("drawIndicators")(js.Any.fromFunction1(drawIndicators))
+    if (drawLabels != null) __obj.updateDynamic("drawLabels")(js.Any.fromFunction1(drawLabels))
+    if (drawMarkerPointers != null) __obj.updateDynamic("drawMarkerPointers")(js.Any.fromFunction1(drawMarkerPointers))
+    if (drawRange != null) __obj.updateDynamic("drawRange")(js.Any.fromFunction1(drawRange))
+    if (drawTicks != null) __obj.updateDynamic("drawTicks")(js.Any.fromFunction1(drawTicks))
+    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableGroupSeparator)) __obj.updateDynamic("enableGroupSeparator")(enableGroupSeparator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableMarkerPointerAnimation)) __obj.updateDynamic("enableMarkerPointerAnimation")(enableMarkerPointerAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableResize)) __obj.updateDynamic("enableResize")(enableResize.get.asInstanceOf[js.Any])
+    if (exportSettings != null) __obj.updateDynamic("exportSettings")(exportSettings.asInstanceOf[js.Any])
+    if (frame != null) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction1(init))
+    if (!js.isUndefined(isResponsive)) __obj.updateDynamic("isResponsive")(isResponsive.get.asInstanceOf[js.Any])
+    if (labelColor != null) __obj.updateDynamic("labelColor")(labelColor.asInstanceOf[js.Any])
+    if (load != null) __obj.updateDynamic("load")(js.Any.fromFunction1(load))
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximum)) __obj.updateDynamic("maximum")(maximum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimum)) __obj.updateDynamic("minimum")(minimum.get.asInstanceOf[js.Any])
+    if (mouseClick != null) __obj.updateDynamic("mouseClick")(js.Any.fromFunction1(mouseClick))
+    if (mouseClickMove != null) __obj.updateDynamic("mouseClickMove")(js.Any.fromFunction1(mouseClickMove))
+    if (mouseClickUp != null) __obj.updateDynamic("mouseClickUp")(js.Any.fromFunction1(mouseClickUp))
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (outerCustomLabelPosition != null) __obj.updateDynamic("outerCustomLabelPosition")(outerCustomLabelPosition.asInstanceOf[js.Any])
+    if (pointerGradient1 != null) __obj.updateDynamic("pointerGradient1")(pointerGradient1.asInstanceOf[js.Any])
+    if (pointerGradient2 != null) __obj.updateDynamic("pointerGradient2")(pointerGradient2.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (renderComplete != null) __obj.updateDynamic("renderComplete")(js.Any.fromFunction1(renderComplete))
+    if (rightClick != null) __obj.updateDynamic("rightClick")(js.Any.fromFunction1(rightClick))
+    if (scales != null) __obj.updateDynamic("scales")(scales.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (tickColor != null) __obj.updateDynamic("tickColor")(tickColor.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
-  @scala.inline
-  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoubleClick(value: /* e */ DoubleClickEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDoubleClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawBarPointers(value: /* e */ DrawBarPointersEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBarPointers")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrawBarPointers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBarPointers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawCustomLabel(value: /* e */ DrawCustomLabelEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawCustomLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrawCustomLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawCustomLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawIndicators(value: /* e */ DrawIndicatorsEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawIndicators")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrawIndicators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawIndicators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawLabels(value: /* e */ DrawLabelsEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLabels")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrawLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawMarkerPointers(value: /* e */ DrawMarkerPointersEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawMarkerPointers")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrawMarkerPointers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawMarkerPointers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawRange(value: /* e */ DrawRangeEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawRange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrawRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawTicks(value: /* e */ DrawTicksEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawTicks")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrawTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawTicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableGroupSeparator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroupSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableGroupSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroupSeparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableMarkerPointerAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMarkerPointerAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableMarkerPointerAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMarkerPointerAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportSettings(value: ExportSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrame(value: Frame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInit(value: /* e */ InitEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoad(value: /* e */ LoadEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseClick(value: /* e */ MouseClickEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseClickMove(value: /* e */ MouseClickMoveEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseClickMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseClickMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseClickMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseClickUp(value: /* e */ MouseClickUpEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseClickUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseClickUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseClickUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuterCustomLabelPosition(value: OuterCustomLabelPosition | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerCustomLabelPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuterCustomLabelPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerCustomLabelPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointerGradient1(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerGradient1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointerGradient1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerGradient1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointerGradient2(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerGradient2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointerGradient2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerGradient2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderComplete(value: /* e */ RenderCompleteEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderComplete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightClick(value: /* e */ RightClickEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRightClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScales(value: js.Array[Scale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scales")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScales: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scales")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: Themes | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: Tooltip): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

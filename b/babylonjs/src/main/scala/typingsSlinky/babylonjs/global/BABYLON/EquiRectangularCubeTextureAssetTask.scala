@@ -74,5 +74,10 @@ class EquiRectangularCubeTextureAssetTask protected ()
     */
   gammaSpace: Boolean
   ) = this()
+  /**
+    * Gets the loaded texture
+    */
+  /* CompleteClass */
+  override var texture: typingsSlinky.babylonjs.BABYLON.EquiRectangularCubeTexture = js.native
 }
 

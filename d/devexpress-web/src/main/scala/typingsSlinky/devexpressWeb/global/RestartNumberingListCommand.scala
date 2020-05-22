@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("RestartNumberingListCommand")
 @js.native
 class RestartNumberingListCommand ()
-  extends typingsSlinky.devexpressWeb.RestartNumberingListCommand
+  extends typingsSlinky.devexpressWeb.RestartNumberingListCommand {
+  /**
+    * Executes the RestartNumberingListCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

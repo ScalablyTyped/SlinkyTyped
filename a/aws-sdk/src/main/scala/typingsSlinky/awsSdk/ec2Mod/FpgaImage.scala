@@ -70,197 +70,40 @@ trait FpgaImage extends js.Object {
 
 object FpgaImage {
   @scala.inline
-  def apply(): FpgaImage = {
+  def apply(
+    CreateTime: js.Date = null,
+    DataRetentionSupport: js.UndefOr[Boolean] = js.undefined,
+    Description: String = null,
+    FpgaImageGlobalId: String = null,
+    FpgaImageId: String = null,
+    Name: String = null,
+    OwnerAlias: String = null,
+    OwnerId: String = null,
+    PciId: PciId = null,
+    ProductCodes: ProductCodeList = null,
+    Public: js.UndefOr[Boolean] = js.undefined,
+    ShellVersion: String = null,
+    State: FpgaImageState = null,
+    Tags: TagList = null,
+    UpdateTime: js.Date = null
+  ): FpgaImage = {
     val __obj = js.Dynamic.literal()
+    if (CreateTime != null) __obj.updateDynamic("CreateTime")(CreateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(DataRetentionSupport)) __obj.updateDynamic("DataRetentionSupport")(DataRetentionSupport.get.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (FpgaImageGlobalId != null) __obj.updateDynamic("FpgaImageGlobalId")(FpgaImageGlobalId.asInstanceOf[js.Any])
+    if (FpgaImageId != null) __obj.updateDynamic("FpgaImageId")(FpgaImageId.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (OwnerAlias != null) __obj.updateDynamic("OwnerAlias")(OwnerAlias.asInstanceOf[js.Any])
+    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
+    if (PciId != null) __obj.updateDynamic("PciId")(PciId.asInstanceOf[js.Any])
+    if (ProductCodes != null) __obj.updateDynamic("ProductCodes")(ProductCodes.asInstanceOf[js.Any])
+    if (!js.isUndefined(Public)) __obj.updateDynamic("Public")(Public.get.asInstanceOf[js.Any])
+    if (ShellVersion != null) __obj.updateDynamic("ShellVersion")(ShellVersion.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (UpdateTime != null) __obj.updateDynamic("UpdateTime")(UpdateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[FpgaImage]
   }
-  @scala.inline
-  implicit class FpgaImageOps[Self <: FpgaImage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataRetentionSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRetentionSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataRetentionSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRetentionSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFpgaImageGlobalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageGlobalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFpgaImageGlobalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageGlobalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFpgaImageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFpgaImageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAlias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPciId(value: PciId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PciId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPciId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PciId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductCodes(value: ProductCodeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Public")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Public")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShellVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShellVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShellVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShellVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: FpgaImageState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

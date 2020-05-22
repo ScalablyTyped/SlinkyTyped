@@ -4,172 +4,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Query extends js.Object {
   /**
     * The properties to make distinct. The query results will contain the first
     * result for each distinct combination of values for the given properties
     * (if empty, all results are returned).
     */
-  var distinctOn: js.UndefOr[js.Array[PropertyReference]] = js.native
+  var distinctOn: js.UndefOr[js.Array[PropertyReference]] = js.undefined
   /**
     * An ending point for the query results. Query cursors are
     * returned in query result batches and
     * [can only be used to limit the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
     */
-  var endCursor: js.UndefOr[String] = js.native
+  var endCursor: js.UndefOr[String] = js.undefined
   /** The filter to apply. */
-  var filter: js.UndefOr[Filter] = js.native
+  var filter: js.UndefOr[Filter] = js.undefined
   /**
     * The kinds to query (if empty, returns entities of all kinds).
     * Currently at most 1 kind may be specified.
     */
-  var kind: js.UndefOr[js.Array[KindExpression]] = js.native
+  var kind: js.UndefOr[js.Array[KindExpression]] = js.undefined
   /**
     * The maximum number of results to return. Applies after all other
     * constraints. Optional.
     * Unspecified is interpreted as no limit.
     * Must be >= 0 if specified.
     */
-  var limit: js.UndefOr[Double] = js.native
+  var limit: js.UndefOr[Double] = js.undefined
   /**
     * The number of results to skip. Applies before limit, but after all other
     * constraints. Optional. Must be >= 0 if specified.
     */
-  var offset: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
   /** The order to apply to the query results (if empty, order is unspecified). */
-  var order: js.UndefOr[js.Array[PropertyOrder]] = js.native
+  var order: js.UndefOr[js.Array[PropertyOrder]] = js.undefined
   /** The projection to return. Defaults to returning all properties. */
-  var projection: js.UndefOr[js.Array[Projection]] = js.native
+  var projection: js.UndefOr[js.Array[Projection]] = js.undefined
   /**
     * A starting point for the query results. Query cursors are
     * returned in query result batches and
     * [can only be used to continue the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
     */
-  var startCursor: js.UndefOr[String] = js.native
+  var startCursor: js.UndefOr[String] = js.undefined
 }
 
 object Query {
   @scala.inline
-  def apply(): Query = {
+  def apply(
+    distinctOn: js.Array[PropertyReference] = null,
+    endCursor: String = null,
+    filter: Filter = null,
+    kind: js.Array[KindExpression] = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    order: js.Array[PropertyOrder] = null,
+    projection: js.Array[Projection] = null,
+    startCursor: String = null
+  ): Query = {
     val __obj = js.Dynamic.literal()
+    if (distinctOn != null) __obj.updateDynamic("distinctOn")(distinctOn.asInstanceOf[js.Any])
+    if (endCursor != null) __obj.updateDynamic("endCursor")(endCursor.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
+    if (startCursor != null) __obj.updateDynamic("startCursor")(startCursor.asInstanceOf[js.Any])
     __obj.asInstanceOf[Query]
   }
-  @scala.inline
-  implicit class QueryOps[Self <: Query] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDistinctOn(value: js.Array[PropertyReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distinctOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistinctOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distinctOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: Filter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: js.Array[KindExpression]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: js.Array[PropertyOrder]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: js.Array[Projection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCursor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

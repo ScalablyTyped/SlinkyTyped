@@ -1,6 +1,7 @@
 package typingsSlinky.antd.affixMod
 
-import typingsSlinky.antd.anon.Target
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
+import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,6 @@ class default () extends Affix
 @JSImport("antd/lib/affix", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: Target = js.native
+  var contextType: Context[ConfigConsumerProps] = js.native
 }
 

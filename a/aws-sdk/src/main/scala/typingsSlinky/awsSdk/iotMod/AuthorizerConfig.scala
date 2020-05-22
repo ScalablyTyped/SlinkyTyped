@@ -18,41 +18,14 @@ trait AuthorizerConfig extends js.Object {
 
 object AuthorizerConfig {
   @scala.inline
-  def apply(): AuthorizerConfig = {
+  def apply(
+    allowAuthorizerOverride: js.UndefOr[AllowAuthorizerOverride] = js.undefined,
+    defaultAuthorizerName: AuthorizerName = null
+  ): AuthorizerConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowAuthorizerOverride)) __obj.updateDynamic("allowAuthorizerOverride")(allowAuthorizerOverride.get.asInstanceOf[js.Any])
+    if (defaultAuthorizerName != null) __obj.updateDynamic("defaultAuthorizerName")(defaultAuthorizerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthorizerConfig]
   }
-  @scala.inline
-  implicit class AuthorizerConfigOps[Self <: AuthorizerConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowAuthorizerOverride(value: AllowAuthorizerOverride): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAuthorizerOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowAuthorizerOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAuthorizerOverride")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultAuthorizerName(value: AuthorizerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAuthorizerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultAuthorizerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAuthorizerName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

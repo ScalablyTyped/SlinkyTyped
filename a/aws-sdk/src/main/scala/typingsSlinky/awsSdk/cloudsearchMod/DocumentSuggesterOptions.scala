@@ -22,47 +22,15 @@ trait DocumentSuggesterOptions extends js.Object {
 
 object DocumentSuggesterOptions {
   @scala.inline
-  def apply(SourceField: FieldName): DocumentSuggesterOptions = {
+  def apply(
+    SourceField: FieldName,
+    FuzzyMatching: SuggesterFuzzyMatching = null,
+    SortExpression: String = null
+  ): DocumentSuggesterOptions = {
     val __obj = js.Dynamic.literal(SourceField = SourceField.asInstanceOf[js.Any])
+    if (FuzzyMatching != null) __obj.updateDynamic("FuzzyMatching")(FuzzyMatching.asInstanceOf[js.Any])
+    if (SortExpression != null) __obj.updateDynamic("SortExpression")(SortExpression.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentSuggesterOptions]
   }
-  @scala.inline
-  implicit class DocumentSuggesterOptionsOps[Self <: DocumentSuggesterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceField(value: FieldName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFuzzyMatching(value: SuggesterFuzzyMatching): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FuzzyMatching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFuzzyMatching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FuzzyMatching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortExpression")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

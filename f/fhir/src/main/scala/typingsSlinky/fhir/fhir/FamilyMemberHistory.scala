@@ -8,613 +8,266 @@ import scala.scalajs.js.annotation._
   * Information about patient's relatives, relevant for patient
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
-trait FamilyMemberHistory extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait FamilyMemberHistory extends DomainResource {
   /**
     * Contains extended information for property 'ageString'.
     */
-  var _ageString: js.UndefOr[Element] = js.native
+  var _ageString: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'bornDate'.
     */
-  var _bornDate: js.UndefOr[Element] = js.native
+  var _bornDate: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'bornString'.
     */
-  var _bornString: js.UndefOr[Element] = js.native
+  var _bornString: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.native
+  var _date: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'deceasedBoolean'.
     */
-  var _deceasedBoolean: js.UndefOr[Element] = js.native
+  var _deceasedBoolean: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'deceasedDate'.
     */
-  var _deceasedDate: js.UndefOr[Element] = js.native
+  var _deceasedDate: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'deceasedString'.
     */
-  var _deceasedString: js.UndefOr[Element] = js.native
+  var _deceasedString: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'estimatedAge'.
     */
-  var _estimatedAge: js.UndefOr[Element] = js.native
+  var _estimatedAge: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'gender'.
     */
-  var _gender: js.UndefOr[Element] = js.native
+  var _gender: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.native
+  var _name: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'notDone'.
     */
-  var _notDone: js.UndefOr[Element] = js.native
+  var _notDone: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.native
+  var _status: js.UndefOr[Element] = js.undefined
   /**
     * (approximate) age
     */
-  var ageAge: js.UndefOr[Age] = js.native
+  var ageAge: js.UndefOr[Age] = js.undefined
   /**
     * (approximate) age
     */
-  var ageRange: js.UndefOr[Range] = js.native
+  var ageRange: js.UndefOr[Range] = js.undefined
   /**
     * (approximate) age
     */
-  var ageString: js.UndefOr[String] = js.native
+  var ageString: js.UndefOr[String] = js.undefined
   /**
     * (approximate) date of birth
     */
-  var bornDate: js.UndefOr[date] = js.native
+  var bornDate: js.UndefOr[date] = js.undefined
   /**
     * (approximate) date of birth
     */
-  var bornPeriod: js.UndefOr[Period] = js.native
+  var bornPeriod: js.UndefOr[Period] = js.undefined
   /**
     * (approximate) date of birth
     */
-  var bornString: js.UndefOr[String] = js.native
+  var bornString: js.UndefOr[String] = js.undefined
   /**
     * Condition that the related person had
     */
-  var condition: js.UndefOr[js.Array[FamilyMemberHistoryCondition]] = js.native
+  var condition: js.UndefOr[js.Array[FamilyMemberHistoryCondition]] = js.undefined
   /**
     * When history was captured/updated
     */
-  var date: js.UndefOr[dateTime] = js.native
+  var date: js.UndefOr[dateTime] = js.undefined
   /**
     * Dead? How old/when?
     */
-  var deceasedAge: js.UndefOr[Age] = js.native
+  var deceasedAge: js.UndefOr[Age] = js.undefined
   /**
     * Dead? How old/when?
     */
-  var deceasedBoolean: js.UndefOr[Boolean] = js.native
+  var deceasedBoolean: js.UndefOr[Boolean] = js.undefined
   /**
     * Dead? How old/when?
     */
-  var deceasedDate: js.UndefOr[date] = js.native
+  var deceasedDate: js.UndefOr[date] = js.undefined
   /**
     * Dead? How old/when?
     */
-  var deceasedRange: js.UndefOr[Range] = js.native
+  var deceasedRange: js.UndefOr[Range] = js.undefined
   /**
     * Dead? How old/when?
     */
-  var deceasedString: js.UndefOr[String] = js.native
+  var deceasedString: js.UndefOr[String] = js.undefined
   /**
     * Instantiates protocol or definition
     */
-  var definition: js.UndefOr[js.Array[Reference]] = js.native
+  var definition: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Age is estimated?
     */
-  var estimatedAge: js.UndefOr[Boolean] = js.native
+  var estimatedAge: js.UndefOr[Boolean] = js.undefined
   /**
     * male | female | other | unknown
     */
-  var gender: js.UndefOr[code] = js.native
+  var gender: js.UndefOr[code] = js.undefined
   /**
     * External Id(s) for this record
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
   /**
     * The family member described
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The taking of a family member's history did not occur
     */
-  var notDone: js.UndefOr[Boolean] = js.native
+  var notDone: js.UndefOr[Boolean] = js.undefined
   /**
     * subject-unknown | withheld | unable-to-obtain | deferred
     */
-  var notDoneReason: js.UndefOr[CodeableConcept] = js.native
+  var notDoneReason: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * General note about related person
     */
-  var note: js.UndefOr[js.Array[Annotation]] = js.native
+  var note: js.UndefOr[js.Array[Annotation]] = js.undefined
   /**
     * Patient history is about
     */
-  var patient: Reference = js.native
+  var patient: Reference
   /**
     * Why was family member history performed?
     */
-  var reasonCode: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var reasonCode: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Why was family member history performed?
     */
-  var reasonReference: js.UndefOr[js.Array[Reference]] = js.native
+  var reasonReference: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Relationship to the subject
     */
-  var relationship: CodeableConcept = js.native
+  var relationship: CodeableConcept
   /**
     * partial | completed | entered-in-error | health-unknown
     */
-  var status: code = js.native
+  var status: code
 }
 
 object FamilyMemberHistory {
   @scala.inline
-  def apply(patient: Reference, relationship: CodeableConcept, status: code): FamilyMemberHistory = {
+  def apply(
+    patient: Reference,
+    relationship: CodeableConcept,
+    status: code,
+    _ageString: Element = null,
+    _bornDate: Element = null,
+    _bornString: Element = null,
+    _date: Element = null,
+    _deceasedBoolean: Element = null,
+    _deceasedDate: Element = null,
+    _deceasedString: Element = null,
+    _estimatedAge: Element = null,
+    _gender: Element = null,
+    _id: Element = null,
+    _implicitRules: Element = null,
+    _language: Element = null,
+    _name: Element = null,
+    _notDone: Element = null,
+    _resourceType: Element = null,
+    _status: Element = null,
+    ageAge: Age = null,
+    ageRange: Range = null,
+    ageString: String = null,
+    bornDate: date = null,
+    bornPeriod: Period = null,
+    bornString: String = null,
+    condition: js.Array[FamilyMemberHistoryCondition] = null,
+    contained: js.Array[Resource] = null,
+    date: dateTime = null,
+    deceasedAge: Age = null,
+    deceasedBoolean: js.UndefOr[Boolean] = js.undefined,
+    deceasedDate: date = null,
+    deceasedRange: Range = null,
+    deceasedString: String = null,
+    definition: js.Array[Reference] = null,
+    estimatedAge: js.UndefOr[Boolean] = js.undefined,
+    extension: js.Array[Extension] = null,
+    gender: code = null,
+    id: id = null,
+    identifier: js.Array[Identifier] = null,
+    implicitRules: uri = null,
+    language: code = null,
+    meta: Meta = null,
+    modifierExtension: js.Array[Extension] = null,
+    name: String = null,
+    notDone: js.UndefOr[Boolean] = js.undefined,
+    notDoneReason: CodeableConcept = null,
+    note: js.Array[Annotation] = null,
+    reasonCode: js.Array[CodeableConcept] = null,
+    reasonReference: js.Array[Reference] = null,
+    resourceType: code = null,
+    text: Narrative = null
+  ): FamilyMemberHistory = {
     val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any], relationship = relationship.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    if (_ageString != null) __obj.updateDynamic("_ageString")(_ageString.asInstanceOf[js.Any])
+    if (_bornDate != null) __obj.updateDynamic("_bornDate")(_bornDate.asInstanceOf[js.Any])
+    if (_bornString != null) __obj.updateDynamic("_bornString")(_bornString.asInstanceOf[js.Any])
+    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
+    if (_deceasedBoolean != null) __obj.updateDynamic("_deceasedBoolean")(_deceasedBoolean.asInstanceOf[js.Any])
+    if (_deceasedDate != null) __obj.updateDynamic("_deceasedDate")(_deceasedDate.asInstanceOf[js.Any])
+    if (_deceasedString != null) __obj.updateDynamic("_deceasedString")(_deceasedString.asInstanceOf[js.Any])
+    if (_estimatedAge != null) __obj.updateDynamic("_estimatedAge")(_estimatedAge.asInstanceOf[js.Any])
+    if (_gender != null) __obj.updateDynamic("_gender")(_gender.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
+    if (_notDone != null) __obj.updateDynamic("_notDone")(_notDone.asInstanceOf[js.Any])
+    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
+    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
+    if (ageAge != null) __obj.updateDynamic("ageAge")(ageAge.asInstanceOf[js.Any])
+    if (ageRange != null) __obj.updateDynamic("ageRange")(ageRange.asInstanceOf[js.Any])
+    if (ageString != null) __obj.updateDynamic("ageString")(ageString.asInstanceOf[js.Any])
+    if (bornDate != null) __obj.updateDynamic("bornDate")(bornDate.asInstanceOf[js.Any])
+    if (bornPeriod != null) __obj.updateDynamic("bornPeriod")(bornPeriod.asInstanceOf[js.Any])
+    if (bornString != null) __obj.updateDynamic("bornString")(bornString.asInstanceOf[js.Any])
+    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
+    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (deceasedAge != null) __obj.updateDynamic("deceasedAge")(deceasedAge.asInstanceOf[js.Any])
+    if (!js.isUndefined(deceasedBoolean)) __obj.updateDynamic("deceasedBoolean")(deceasedBoolean.get.asInstanceOf[js.Any])
+    if (deceasedDate != null) __obj.updateDynamic("deceasedDate")(deceasedDate.asInstanceOf[js.Any])
+    if (deceasedRange != null) __obj.updateDynamic("deceasedRange")(deceasedRange.asInstanceOf[js.Any])
+    if (deceasedString != null) __obj.updateDynamic("deceasedString")(deceasedString.asInstanceOf[js.Any])
+    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
+    if (!js.isUndefined(estimatedAge)) __obj.updateDynamic("estimatedAge")(estimatedAge.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(notDone)) __obj.updateDynamic("notDone")(notDone.get.asInstanceOf[js.Any])
+    if (notDoneReason != null) __obj.updateDynamic("notDoneReason")(notDoneReason.asInstanceOf[js.Any])
+    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
+    if (reasonCode != null) __obj.updateDynamic("reasonCode")(reasonCode.asInstanceOf[js.Any])
+    if (reasonReference != null) __obj.updateDynamic("reasonReference")(reasonReference.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[FamilyMemberHistory]
   }
-  @scala.inline
-  implicit class FamilyMemberHistoryOps[Self <: FamilyMemberHistory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPatient(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelationship(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationship")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_ageString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_ageString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_ageString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_ageString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_bornDate(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_bornDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_bornDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_bornDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_bornString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_bornString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_bornString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_bornString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_date(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_deceasedBoolean(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deceasedBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_deceasedBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deceasedBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_deceasedDate(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deceasedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_deceasedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deceasedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_deceasedString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deceasedString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_deceasedString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deceasedString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_estimatedAge(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_estimatedAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_estimatedAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_estimatedAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_gender(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_gender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_gender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_name(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_notDone(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_notDone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_notDone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_notDone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_status(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgeAge(value: Age): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgeAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgeRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgeRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgeString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgeString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBornDate(value: date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bornDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBornDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bornDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBornPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bornPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBornPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bornPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBornString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bornString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBornString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bornString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCondition(value: js.Array[FamilyMemberHistoryCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeceasedAge(value: Age): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeceasedAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeceasedBoolean(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeceasedBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeceasedDate(value: date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeceasedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeceasedRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeceasedRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeceasedString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeceasedString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceasedString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefinition(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedAge(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGender(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: js.Array[Identifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotDone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notDone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotDone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notDone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotDoneReason(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notDoneReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotDoneReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notDoneReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNote(value: js.Array[Annotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonCode(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonReference(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonReference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

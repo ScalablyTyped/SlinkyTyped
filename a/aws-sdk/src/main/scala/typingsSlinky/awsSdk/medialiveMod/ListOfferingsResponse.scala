@@ -18,41 +18,11 @@ trait ListOfferingsResponse extends js.Object {
 
 object ListOfferingsResponse {
   @scala.inline
-  def apply(): ListOfferingsResponse = {
+  def apply(NextToken: string = null, Offerings: listOfOffering = null): ListOfferingsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Offerings != null) __obj.updateDynamic("Offerings")(Offerings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOfferingsResponse]
   }
-  @scala.inline
-  implicit class ListOfferingsResponseOps[Self <: ListOfferingsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferings(value: listOfOffering): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Offerings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Offerings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

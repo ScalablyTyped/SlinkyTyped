@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartData extends js.Object {
-  val IsLinked: Boolean = js.native
+  val IsLinked: Boolean
   @JSName("Word.ChartData_typekey")
-  var WordDotChartData_typekey: ChartData = js.native
-  val Workbook: js.Any = js.native
-  def Activate(): Unit = js.native
-  def BreakLink(): Unit = js.native
+  var WordDotChartData_typekey: ChartData
+  val Workbook: js.Any
+  def Activate(): Unit
+  def BreakLink(): Unit
 }
 
 object ChartData {
@@ -27,43 +26,5 @@ object ChartData {
     __obj.updateDynamic("Word.ChartData_typekey")(WordDotChartData_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartData]
   }
-  @scala.inline
-  implicit class ChartDataOps[Self <: ChartData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Activate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withBreakLink(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BreakLink")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsLinked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLinked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotChartData_typekey(value: ChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.ChartData_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkbook(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Workbook")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

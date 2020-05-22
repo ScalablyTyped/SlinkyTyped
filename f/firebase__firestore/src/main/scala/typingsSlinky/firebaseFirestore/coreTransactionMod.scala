@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseFirestore
 
-import typingsSlinky.firebaseFirestore.apiUserDataConverterMod.ParsedSetData
-import typingsSlinky.firebaseFirestore.apiUserDataConverterMod.ParsedUpdateData
+import typingsSlinky.firebaseFirestore.apiUserDataReaderMod.ParsedSetData
+import typingsSlinky.firebaseFirestore.apiUserDataReaderMod.ParsedUpdateData
 import typingsSlinky.firebaseFirestore.modelDocumentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.modelDocumentMod.MaybeDocument
 import typingsSlinky.firebaseFirestore.remoteDatastoreMod.Datastore

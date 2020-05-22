@@ -111,233 +111,46 @@ trait SchemaVideo extends js.Object {
 
 object SchemaVideo {
   @scala.inline
-  def apply(): SchemaVideo = {
+  def apply(
+    ageGating: SchemaVideoAgeGating = null,
+    contentDetails: SchemaVideoContentDetails = null,
+    etag: String = null,
+    fileDetails: SchemaVideoFileDetails = null,
+    id: String = null,
+    kind: String = null,
+    liveStreamingDetails: SchemaVideoLiveStreamingDetails = null,
+    localizations: StringDictionary[SchemaVideoLocalization] = null,
+    monetizationDetails: SchemaVideoMonetizationDetails = null,
+    player: SchemaVideoPlayer = null,
+    processingDetails: SchemaVideoProcessingDetails = null,
+    projectDetails: SchemaVideoProjectDetails = null,
+    recordingDetails: SchemaVideoRecordingDetails = null,
+    snippet: SchemaVideoSnippet = null,
+    statistics: SchemaVideoStatistics = null,
+    status: SchemaVideoStatus = null,
+    suggestions: SchemaVideoSuggestions = null,
+    topicDetails: SchemaVideoTopicDetails = null
+  ): SchemaVideo = {
     val __obj = js.Dynamic.literal()
+    if (ageGating != null) __obj.updateDynamic("ageGating")(ageGating.asInstanceOf[js.Any])
+    if (contentDetails != null) __obj.updateDynamic("contentDetails")(contentDetails.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (fileDetails != null) __obj.updateDynamic("fileDetails")(fileDetails.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (liveStreamingDetails != null) __obj.updateDynamic("liveStreamingDetails")(liveStreamingDetails.asInstanceOf[js.Any])
+    if (localizations != null) __obj.updateDynamic("localizations")(localizations.asInstanceOf[js.Any])
+    if (monetizationDetails != null) __obj.updateDynamic("monetizationDetails")(monetizationDetails.asInstanceOf[js.Any])
+    if (player != null) __obj.updateDynamic("player")(player.asInstanceOf[js.Any])
+    if (processingDetails != null) __obj.updateDynamic("processingDetails")(processingDetails.asInstanceOf[js.Any])
+    if (projectDetails != null) __obj.updateDynamic("projectDetails")(projectDetails.asInstanceOf[js.Any])
+    if (recordingDetails != null) __obj.updateDynamic("recordingDetails")(recordingDetails.asInstanceOf[js.Any])
+    if (snippet != null) __obj.updateDynamic("snippet")(snippet.asInstanceOf[js.Any])
+    if (statistics != null) __obj.updateDynamic("statistics")(statistics.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (suggestions != null) __obj.updateDynamic("suggestions")(suggestions.asInstanceOf[js.Any])
+    if (topicDetails != null) __obj.updateDynamic("topicDetails")(topicDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVideo]
   }
-  @scala.inline
-  implicit class SchemaVideoOps[Self <: SchemaVideo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgeGating(value: SchemaVideoAgeGating): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageGating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgeGating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ageGating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentDetails(value: SchemaVideoContentDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileDetails(value: SchemaVideoFileDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveStreamingDetails(value: SchemaVideoLiveStreamingDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveStreamingDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveStreamingDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveStreamingDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizations(value: StringDictionary[SchemaVideoLocalization]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalizations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonetizationDetails(value: SchemaVideoMonetizationDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monetizationDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonetizationDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monetizationDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayer(value: SchemaVideoPlayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingDetails(value: SchemaVideoProcessingDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessingDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectDetails(value: SchemaVideoProjectDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordingDetails(value: SchemaVideoRecordingDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordingDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnippet(value: SchemaVideoSnippet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnippet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatistics(value: SchemaVideoStatistics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SchemaVideoStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestions(value: SchemaVideoSuggestions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicDetails(value: SchemaVideoTopicDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

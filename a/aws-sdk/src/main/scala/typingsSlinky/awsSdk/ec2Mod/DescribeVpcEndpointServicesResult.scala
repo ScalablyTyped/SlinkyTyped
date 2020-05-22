@@ -22,53 +22,16 @@ trait DescribeVpcEndpointServicesResult extends js.Object {
 
 object DescribeVpcEndpointServicesResult {
   @scala.inline
-  def apply(): DescribeVpcEndpointServicesResult = {
+  def apply(
+    NextToken: String = null,
+    ServiceDetails: ServiceDetailSet = null,
+    ServiceNames: ValueStringList = null
+  ): DescribeVpcEndpointServicesResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ServiceDetails != null) __obj.updateDynamic("ServiceDetails")(ServiceDetails.asInstanceOf[js.Any])
+    if (ServiceNames != null) __obj.updateDynamic("ServiceNames")(ServiceNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVpcEndpointServicesResult]
   }
-  @scala.inline
-  implicit class DescribeVpcEndpointServicesResultOps[Self <: DescribeVpcEndpointServicesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceDetails(value: ServiceDetailSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceNames(value: ValueStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

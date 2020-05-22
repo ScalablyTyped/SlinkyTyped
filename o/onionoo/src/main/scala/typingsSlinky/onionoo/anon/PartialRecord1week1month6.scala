@@ -6,88 +6,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Record<'1_week' | '1_month' | '6_months' | '1_year' | '5_years', onionoo.onionoo.Onionoo.Histogram>> */
-@js.native
 trait PartialRecord1week1month6 extends js.Object {
-  var `1_month`: js.UndefOr[Histogram] = js.native
-  var `1_week`: js.UndefOr[Histogram] = js.native
-  var `1_year`: js.UndefOr[Histogram] = js.native
-  var `5_years`: js.UndefOr[Histogram] = js.native
-  var `6_months`: js.UndefOr[Histogram] = js.native
+  var `1_month`: js.UndefOr[Histogram] = js.undefined
+  var `1_week`: js.UndefOr[Histogram] = js.undefined
+  var `1_year`: js.UndefOr[Histogram] = js.undefined
+  var `5_years`: js.UndefOr[Histogram] = js.undefined
+  var `6_months`: js.UndefOr[Histogram] = js.undefined
 }
 
 object PartialRecord1week1month6 {
   @scala.inline
-  def apply(): PartialRecord1week1month6 = {
+  def apply(
+    `1_month`: Histogram = null,
+    `1_week`: Histogram = null,
+    `1_year`: Histogram = null,
+    `5_years`: Histogram = null,
+    `6_months`: Histogram = null
+  ): PartialRecord1week1month6 = {
     val __obj = js.Dynamic.literal()
+    if (`1_month` != null) __obj.updateDynamic("1_month")(`1_month`.asInstanceOf[js.Any])
+    if (`1_week` != null) __obj.updateDynamic("1_week")(`1_week`.asInstanceOf[js.Any])
+    if (`1_year` != null) __obj.updateDynamic("1_year")(`1_year`.asInstanceOf[js.Any])
+    if (`5_years` != null) __obj.updateDynamic("5_years")(`5_years`.asInstanceOf[js.Any])
+    if (`6_months` != null) __obj.updateDynamic("6_months")(`6_months`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRecord1week1month6]
   }
-  @scala.inline
-  implicit class PartialRecord1week1month6Ops[Self <: PartialRecord1week1month6] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with1_month(value: Histogram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1_month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without1_month: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1_month")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with1_week(value: Histogram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1_week")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without1_week: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1_week")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with1_year(value: Histogram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1_year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without1_year: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1_year")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with5_years(value: Histogram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("5_years")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without5_years: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("5_years")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with6_months(value: Histogram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("6_months")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without6_months: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("6_months")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

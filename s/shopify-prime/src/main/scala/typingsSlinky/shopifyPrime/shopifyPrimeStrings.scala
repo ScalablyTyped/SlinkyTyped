@@ -1,18 +1,17 @@
 package typingsSlinky.shopifyPrime
 
-import typingsSlinky.shopifyPrime.authGrantMod.AuthGrant
-import typingsSlinky.shopifyPrime.authScopeMod.AuthScope
-import typingsSlinky.shopifyPrime.blogCommentableMod.BlogCommentable
-import typingsSlinky.shopifyPrime.financialStatusMod.FinancialStatus
-import typingsSlinky.shopifyPrime.fulfillmentStatusMod.FulfillmentStatus
-import typingsSlinky.shopifyPrime.inventoryBehaviorMod.InventoryBehavior
-import typingsSlinky.shopifyPrime.orderCancelReasonMod.OrderCancelReason
-import typingsSlinky.shopifyPrime.orderStatusMod.OrderStatus
-import typingsSlinky.shopifyPrime.publishedStatusMod.PublishedStatus
-import typingsSlinky.shopifyPrime.scriptTagDisplayScopeMod.ScriptTagDisplayScope
-import typingsSlinky.shopifyPrime.transactionKindMod.TransactionKind
-import typingsSlinky.shopifyPrime.transactionStatusMod.TransactionStatus
-import typingsSlinky.shopifyPrime.webhookTopicMod.WebhookTopic
+import typingsSlinky.shopifyPrime.authScopeMod._AuthScope
+import typingsSlinky.shopifyPrime.blogCommentableMod._BlogCommentable
+import typingsSlinky.shopifyPrime.financialStatusMod._FinancialStatus
+import typingsSlinky.shopifyPrime.fulfillmentStatusMod._FulfillmentStatus
+import typingsSlinky.shopifyPrime.inventoryBehaviorMod._InventoryBehavior
+import typingsSlinky.shopifyPrime.orderCancelReasonMod._OrderCancelReason
+import typingsSlinky.shopifyPrime.orderStatusMod._OrderStatus
+import typingsSlinky.shopifyPrime.publishedStatusMod._PublishedStatus
+import typingsSlinky.shopifyPrime.scriptTagDisplayScopeMod._ScriptTagDisplayScope
+import typingsSlinky.shopifyPrime.transactionKindMod._TransactionKind
+import typingsSlinky.shopifyPrime.transactionStatusMod._TransactionStatus
+import typingsSlinky.shopifyPrime.webhookTopicMod._WebhookTopic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,110 +39,110 @@ object shopifyPrimeStrings {
   sealed trait active extends js.Object
   
   @js.native
-  sealed trait all extends ScriptTagDisplayScope
+  sealed trait all extends _ScriptTagDisplayScope
   
   @js.native
   sealed trait any
-    extends FinancialStatus
-       with FulfillmentStatus
-       with OrderStatus
-       with PublishedStatus
+    extends _FinancialStatus
+       with _FulfillmentStatus
+       with _OrderStatus
+       with _PublishedStatus
   
   @js.native
-  sealed trait appSlashuninstalled extends WebhookTopic
+  sealed trait appSlashuninstalled extends _WebhookTopic
   
   @js.native
   sealed trait applies_to_resource extends js.Object
   
   @js.native
-  sealed trait authorization extends TransactionKind
+  sealed trait authorization extends _TransactionKind
   
   @js.native
-  sealed trait authorized extends FinancialStatus
+  sealed trait authorized extends _FinancialStatus
   
   @js.native
-  sealed trait bypass extends InventoryBehavior
+  sealed trait bypass extends _InventoryBehavior
   
   @js.native
-  sealed trait cancelled extends OrderStatus
+  sealed trait cancelled extends _OrderStatus
   
   @js.native
-  sealed trait capture extends TransactionKind
+  sealed trait capture extends _TransactionKind
   
   @js.native
-  sealed trait cartsSlashcreate extends WebhookTopic
+  sealed trait cartsSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait cartsSlashupdate extends WebhookTopic
+  sealed trait cartsSlashupdate extends _WebhookTopic
   
   @js.native
-  sealed trait checkoutsSlashcreate extends WebhookTopic
+  sealed trait checkoutsSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait checkoutsSlashdelete extends WebhookTopic
+  sealed trait checkoutsSlashdelete extends _WebhookTopic
   
   @js.native
-  sealed trait checkoutsSlashupdate extends WebhookTopic
+  sealed trait checkoutsSlashupdate extends _WebhookTopic
   
   @js.native
-  sealed trait closed extends OrderStatus
+  sealed trait closed extends _OrderStatus
   
   @js.native
-  sealed trait collectionsSlashcreate extends WebhookTopic
+  sealed trait collectionsSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait collectionsSlashdelete extends WebhookTopic
+  sealed trait collectionsSlashdelete extends _WebhookTopic
   
   @js.native
-  sealed trait collectionsSlashupdate extends WebhookTopic
+  sealed trait collectionsSlashupdate extends _WebhookTopic
   
   @js.native
   sealed trait custom_collection extends js.Object
   
   @js.native
-  sealed trait customer extends OrderCancelReason
+  sealed trait customer extends _OrderCancelReason
   
   @js.native
-  sealed trait customer_groupsSlashcreate extends WebhookTopic
+  sealed trait customer_groupsSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait customer_groupsSlashdelete extends WebhookTopic
+  sealed trait customer_groupsSlashdelete extends _WebhookTopic
   
   @js.native
-  sealed trait customer_groupsSlashupdate extends WebhookTopic
+  sealed trait customer_groupsSlashupdate extends _WebhookTopic
   
   @js.native
-  sealed trait customersSlashcreate extends WebhookTopic
+  sealed trait customersSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait customersSlashdelete extends WebhookTopic
+  sealed trait customersSlashdelete extends _WebhookTopic
   
   @js.native
-  sealed trait customersSlashdisable extends WebhookTopic
+  sealed trait customersSlashdisable extends _WebhookTopic
   
   @js.native
-  sealed trait customersSlashenable extends WebhookTopic
+  sealed trait customersSlashenable extends _WebhookTopic
   
   @js.native
-  sealed trait customersSlashupdate extends WebhookTopic
+  sealed trait customersSlashupdate extends _WebhookTopic
   
   @js.native
   sealed trait declined extends js.Object
   
   @js.native
-  sealed trait decrement_ignoring_policy extends InventoryBehavior
+  sealed trait decrement_ignoring_policy extends _InventoryBehavior
   
   @js.native
-  sealed trait decrement_obeying_policy extends InventoryBehavior
+  sealed trait decrement_obeying_policy extends _InventoryBehavior
   
   @js.native
   sealed trait demo extends js.Object
   
   @js.native
-  sealed trait disputesSlashcreate extends WebhookTopic
+  sealed trait disputesSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait disputesSlashupdate extends WebhookTopic
+  sealed trait disputesSlashupdate extends _WebhookTopic
   
   @js.native
   sealed trait each extends js.Object
@@ -152,34 +151,34 @@ object shopifyPrimeStrings {
   sealed trait entitled extends js.Object
   
   @js.native
-  sealed trait error extends TransactionStatus
+  sealed trait error extends _TransactionStatus
   
   @js.native
   sealed trait expired extends js.Object
   
   @js.native
-  sealed trait failure extends TransactionStatus
+  sealed trait failure extends _TransactionStatus
   
   @js.native
   sealed trait fixed_amount extends js.Object
   
   @js.native
-  sealed trait fraud extends OrderCancelReason
+  sealed trait fraud extends _OrderCancelReason
   
   @js.native
   sealed trait fulfilled extends js.Object
   
   @js.native
-  sealed trait fulfillmentsSlashcreate extends WebhookTopic
+  sealed trait fulfillmentsSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait fulfillmentsSlashupdate extends WebhookTopic
+  sealed trait fulfillmentsSlashupdate extends _WebhookTopic
   
   @js.native
   sealed trait integer extends js.Object
   
   @js.native
-  sealed trait inventory extends OrderCancelReason
+  sealed trait inventory extends _OrderCancelReason
   
   @js.native
   sealed trait json extends js.Object
@@ -191,69 +190,69 @@ object shopifyPrimeStrings {
   sealed trait main extends js.Object
   
   @js.native
-  sealed trait moderate extends BlogCommentable
+  sealed trait moderate extends _BlogCommentable
   
   @js.native
-  sealed trait no extends BlogCommentable
+  sealed trait no extends _BlogCommentable
   
   @js.native
-  sealed trait online_store extends ScriptTagDisplayScope
+  sealed trait online_store extends _ScriptTagDisplayScope
   
   @js.native
   sealed trait onload extends js.Object
   
   @js.native
-  sealed trait open extends OrderStatus
+  sealed trait open extends _OrderStatus
   
   @js.native
-  sealed trait order_status extends ScriptTagDisplayScope
+  sealed trait order_status extends _ScriptTagDisplayScope
   
   @js.native
-  sealed trait order_transationsSlashcreate extends WebhookTopic
+  sealed trait order_transationsSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait ordersSlashcancelled extends WebhookTopic
+  sealed trait ordersSlashcancelled extends _WebhookTopic
   
   @js.native
-  sealed trait ordersSlashcreate extends WebhookTopic
+  sealed trait ordersSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait ordersSlashdelete extends WebhookTopic
+  sealed trait ordersSlashdelete extends _WebhookTopic
   
   @js.native
-  sealed trait ordersSlashfulfilled extends WebhookTopic
+  sealed trait ordersSlashfulfilled extends _WebhookTopic
   
   @js.native
-  sealed trait ordersSlashpaid extends WebhookTopic
+  sealed trait ordersSlashpaid extends _WebhookTopic
   
   @js.native
-  sealed trait ordersSlashpartially_fulfilled extends WebhookTopic
+  sealed trait ordersSlashpartially_fulfilled extends _WebhookTopic
   
   @js.native
-  sealed trait ordersSlashupdated extends WebhookTopic
+  sealed trait ordersSlashupdated extends _WebhookTopic
   
   @js.native
-  sealed trait other extends OrderCancelReason
+  sealed trait other extends _OrderCancelReason
   
   @js.native
-  sealed trait paid extends FinancialStatus
+  sealed trait paid extends _FinancialStatus
   
   @js.native
-  sealed trait partial extends FulfillmentStatus
+  sealed trait partial extends _FulfillmentStatus
   
   @js.native
-  sealed trait partially_paid extends FinancialStatus
+  sealed trait partially_paid extends _FinancialStatus
   
   @js.native
-  sealed trait partially_refunded extends FinancialStatus
+  sealed trait partially_refunded extends _FinancialStatus
   
   @js.native
   sealed trait pending
-    extends FinancialStatus
-       with TransactionStatus
+    extends _FinancialStatus
+       with _TransactionStatus
   
   @js.native
-  sealed trait `per-user` extends AuthGrant
+  sealed trait `per-user` extends js.Object
   
   @js.native
   sealed trait percentage extends js.Object
@@ -262,61 +261,61 @@ object shopifyPrimeStrings {
   sealed trait prerequisite extends js.Object
   
   @js.native
-  sealed trait productsSlashcreate extends WebhookTopic
+  sealed trait productsSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait productsSlashdelete extends WebhookTopic
+  sealed trait productsSlashdelete extends _WebhookTopic
   
   @js.native
-  sealed trait productsSlashupdate extends WebhookTopic
+  sealed trait productsSlashupdate extends _WebhookTopic
   
   @js.native
-  sealed trait published extends PublishedStatus
+  sealed trait published extends _PublishedStatus
   
   @js.native
-  sealed trait read_analytics extends AuthScope
+  sealed trait read_analytics extends _AuthScope
   
   @js.native
-  sealed trait read_content extends AuthScope
+  sealed trait read_content extends _AuthScope
   
   @js.native
-  sealed trait read_customers extends AuthScope
+  sealed trait read_customers extends _AuthScope
   
   @js.native
-  sealed trait read_fulfillments extends AuthScope
+  sealed trait read_fulfillments extends _AuthScope
   
   @js.native
-  sealed trait read_orders extends AuthScope
+  sealed trait read_orders extends _AuthScope
   
   @js.native
-  sealed trait read_products extends AuthScope
+  sealed trait read_products extends _AuthScope
   
   @js.native
-  sealed trait read_script_tags extends AuthScope
+  sealed trait read_script_tags extends _AuthScope
   
   @js.native
-  sealed trait read_shipping extends AuthScope
+  sealed trait read_shipping extends _AuthScope
   
   @js.native
-  sealed trait read_themes extends AuthScope
+  sealed trait read_themes extends _AuthScope
   
   @js.native
-  sealed trait read_users extends AuthScope
+  sealed trait read_users extends _AuthScope
   
   @js.native
-  sealed trait refund extends TransactionKind
+  sealed trait refund extends _TransactionKind
   
   @js.native
-  sealed trait refunded extends FinancialStatus
+  sealed trait refunded extends _FinancialStatus
   
   @js.native
-  sealed trait refundsSlashcreate extends WebhookTopic
+  sealed trait refundsSlashcreate extends _WebhookTopic
   
   @js.native
-  sealed trait sale extends TransactionKind
+  sealed trait sale extends _TransactionKind
   
   @js.native
-  sealed trait shipped extends FulfillmentStatus
+  sealed trait shipped extends _FulfillmentStatus
   
   @js.native
   sealed trait shipping extends js.Object
@@ -325,64 +324,64 @@ object shopifyPrimeStrings {
   sealed trait shipping_line extends js.Object
   
   @js.native
-  sealed trait shopSlashupdate extends WebhookTopic
+  sealed trait shopSlashupdate extends _WebhookTopic
   
   @js.native
   sealed trait string extends js.Object
   
   @js.native
-  sealed trait success extends TransactionStatus
+  sealed trait success extends _TransactionStatus
   
   @js.native
-  sealed trait themesSlashpublish extends WebhookTopic
+  sealed trait themesSlashpublish extends _WebhookTopic
   
   @js.native
-  sealed trait unpaid extends FinancialStatus
+  sealed trait unpaid extends _FinancialStatus
   
   @js.native
-  sealed trait unpublished extends PublishedStatus
+  sealed trait unpublished extends _PublishedStatus
   
   @js.native
-  sealed trait unshipped extends FulfillmentStatus
+  sealed trait unshipped extends _FulfillmentStatus
   
   @js.native
-  sealed trait void extends TransactionKind
+  sealed trait void extends _TransactionKind
   
   @js.native
-  sealed trait voided extends FinancialStatus
+  sealed trait voided extends _FinancialStatus
   
   @js.native
-  sealed trait write_content extends AuthScope
+  sealed trait write_content extends _AuthScope
   
   @js.native
-  sealed trait write_customers extends AuthScope
+  sealed trait write_customers extends _AuthScope
   
   @js.native
-  sealed trait write_fulfillments extends AuthScope
+  sealed trait write_fulfillments extends _AuthScope
   
   @js.native
-  sealed trait write_orders extends AuthScope
+  sealed trait write_orders extends _AuthScope
   
   @js.native
-  sealed trait write_products extends AuthScope
+  sealed trait write_products extends _AuthScope
   
   @js.native
-  sealed trait write_script_tags extends AuthScope
+  sealed trait write_script_tags extends _AuthScope
   
   @js.native
-  sealed trait write_shipping extends AuthScope
+  sealed trait write_shipping extends _AuthScope
   
   @js.native
-  sealed trait write_themes extends AuthScope
+  sealed trait write_themes extends _AuthScope
   
   @js.native
-  sealed trait write_users extends AuthScope
+  sealed trait write_users extends _AuthScope
   
   @js.native
   sealed trait xml extends js.Object
   
   @js.native
-  sealed trait yes extends BlogCommentable
+  sealed trait yes extends _BlogCommentable
   
   @scala.inline
   def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]

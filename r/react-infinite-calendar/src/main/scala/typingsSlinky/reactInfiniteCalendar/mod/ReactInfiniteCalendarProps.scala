@@ -21,329 +21,83 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactInfiniteCalendarProps extends js.Object {
-  var Component: js.UndefOr[ReactComponentClass[ReactInfiniteCalendarProps]] = js.native
-  var autoFocus: js.UndefOr[Boolean] = js.native
-  var className: js.UndefOr[String] = js.native
-  var disabledDates: js.UndefOr[js.Array[DateType]] = js.native
-  var disabledDays: js.UndefOr[js.Array[`0` | `1` | `2` | `3` | `4` | `5` | `6`]] = js.native
-  var display: js.UndefOr[days | years] = js.native
-  var displayOptions: js.UndefOr[HideYearsOnSelect] = js.native
-  var height: js.UndefOr[Double | auto] = js.native
+  var Component: js.UndefOr[ReactComponentClass[ReactInfiniteCalendarProps]] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var disabledDates: js.UndefOr[js.Array[DateType]] = js.undefined
+  var disabledDays: js.UndefOr[js.Array[`0` | `1` | `2` | `3` | `4` | `5` | `6`]] = js.undefined
+  var display: js.UndefOr[days | years] = js.undefined
+  var displayOptions: js.UndefOr[HideYearsOnSelect] = js.undefined
+  var height: js.UndefOr[Double | auto] = js.undefined
   var interpolateSelection: js.UndefOr[
     js.Function2[/* date */ js.Date, /* selected */ js.Array[js.Date], js.Array[js.Date]]
-  ] = js.native
-  var locale: js.UndefOr[Blank] = js.native
-  var max: js.UndefOr[DateType] = js.native
-  var maxDate: js.UndefOr[DateType] = js.native
-  var min: js.UndefOr[DateType] = js.native
-  var minDate: js.UndefOr[DateType] = js.native
-  var onScroll: js.UndefOr[js.Function1[/* scrollTop */ Double, Unit]] = js.native
-  var onScrollEnd: js.UndefOr[js.Function1[/* scrollTop */ Double, Unit]] = js.native
-  var onSelect: js.UndefOr[DateSelectFunction | RangedSelectFunction] = js.native
-  var rowHeight: js.UndefOr[Double] = js.native
-  var selected: js.UndefOr[DateType | `false` | End] = js.native
-  var tabIndex: js.UndefOr[Double] = js.native
-  var theme: js.UndefOr[AccentColor] = js.native
-  var width: js.UndefOr[Double | auto | `100Percentsign`] = js.native
+  ] = js.undefined
+  var locale: js.UndefOr[Blank] = js.undefined
+  var max: js.UndefOr[DateType] = js.undefined
+  var maxDate: js.UndefOr[DateType] = js.undefined
+  var min: js.UndefOr[DateType] = js.undefined
+  var minDate: js.UndefOr[DateType] = js.undefined
+  var onScroll: js.UndefOr[js.Function1[/* scrollTop */ Double, Unit]] = js.undefined
+  var onScrollEnd: js.UndefOr[js.Function1[/* scrollTop */ Double, Unit]] = js.undefined
+  var onSelect: js.UndefOr[DateSelectFunction | RangedSelectFunction] = js.undefined
+  var rowHeight: js.UndefOr[Double] = js.undefined
+  var selected: js.UndefOr[DateType | `false` | End] = js.undefined
+  var tabIndex: js.UndefOr[Double] = js.undefined
+  var theme: js.UndefOr[AccentColor] = js.undefined
+  var width: js.UndefOr[Double | auto | `100Percentsign`] = js.undefined
 }
 
 object ReactInfiniteCalendarProps {
   @scala.inline
-  def apply(): ReactInfiniteCalendarProps = {
+  def apply(
+    Component: ReactComponentClass[ReactInfiniteCalendarProps] = null,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    disabledDates: js.Array[DateType] = null,
+    disabledDays: js.Array[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = null,
+    display: days | years = null,
+    displayOptions: HideYearsOnSelect = null,
+    height: Double | auto = null,
+    interpolateSelection: (/* date */ js.Date, /* selected */ js.Array[js.Date]) => js.Array[js.Date] = null,
+    locale: Blank = null,
+    max: DateType = null,
+    maxDate: DateType = null,
+    min: DateType = null,
+    minDate: DateType = null,
+    onScroll: /* scrollTop */ Double => Unit = null,
+    onScrollEnd: /* scrollTop */ Double => Unit = null,
+    onSelect: (/* date */ js.Date) | (/* rangedDate */ RangedSelection) => Unit = null,
+    rowHeight: js.UndefOr[Double] = js.undefined,
+    selected: DateType | `false` | End = null,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    theme: AccentColor = null,
+    width: Double | auto | `100Percentsign` = null
+  ): ReactInfiniteCalendarProps = {
     val __obj = js.Dynamic.literal()
+    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (disabledDates != null) __obj.updateDynamic("disabledDates")(disabledDates.asInstanceOf[js.Any])
+    if (disabledDays != null) __obj.updateDynamic("disabledDays")(disabledDays.asInstanceOf[js.Any])
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    if (displayOptions != null) __obj.updateDynamic("displayOptions")(displayOptions.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (interpolateSelection != null) __obj.updateDynamic("interpolateSelection")(js.Any.fromFunction2(interpolateSelection))
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (onScrollEnd != null) __obj.updateDynamic("onScrollEnd")(js.Any.fromFunction1(onScrollEnd))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (!js.isUndefined(rowHeight)) __obj.updateDynamic("rowHeight")(rowHeight.get.asInstanceOf[js.Any])
+    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactInfiniteCalendarProps]
   }
-  @scala.inline
-  implicit class ReactInfiniteCalendarPropsOps[Self <: ReactInfiniteCalendarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponent(value: ReactComponentClass[ReactInfiniteCalendarProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledDates(value: js.Array[DateType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledDays(value: js.Array[`0` | `1` | `2` | `3` | `4` | `5` | `6`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplay(value: days | years): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayOptions(value: HideYearsOnSelect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterpolateSelection(value: (/* date */ js.Date, /* selected */ js.Array[js.Date]) => js.Array[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolateSelection")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInterpolateSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolateSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: Blank): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax(value: DateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMin(value: DateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScroll(value: /* scrollTop */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScrollEnd(value: /* scrollTop */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScrollEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: (/* date */ js.Date) | (/* rangedDate */ RangedSelection) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelected(value: DateType | `false` | End): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: AccentColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | auto | `100Percentsign`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,47 +26,10 @@ trait MetricStat extends js.Object {
 
 object MetricStat {
   @scala.inline
-  def apply(Metric: Metric, Period: Period, Stat: Stat): MetricStat = {
+  def apply(Metric: Metric, Period: Period, Stat: Stat, Unit: StandardUnit = null): MetricStat = {
     val __obj = js.Dynamic.literal(Metric = Metric.asInstanceOf[js.Any], Period = Period.asInstanceOf[js.Any], Stat = Stat.asInstanceOf[js.Any])
+    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricStat]
   }
-  @scala.inline
-  implicit class MetricStatOps[Self <: MetricStat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetric(value: Metric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStat(value: Stat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnit(value: StandardUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

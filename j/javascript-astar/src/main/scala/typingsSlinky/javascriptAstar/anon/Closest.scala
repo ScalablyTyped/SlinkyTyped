@@ -5,49 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Closest extends js.Object {
-  var closest: js.UndefOr[Boolean] = js.native
-  var heuristic: js.UndefOr[Heuristic] = js.native
+  var closest: js.UndefOr[Boolean] = js.undefined
+  var heuristic: js.UndefOr[Heuristic] = js.undefined
 }
 
 object Closest {
   @scala.inline
-  def apply(): Closest = {
+  def apply(
+    closest: js.UndefOr[Boolean] = js.undefined,
+    heuristic: (/* pos0 */ X, /* pos1 */ X) => Double = null
+  ): Closest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(closest)) __obj.updateDynamic("closest")(closest.get.asInstanceOf[js.Any])
+    if (heuristic != null) __obj.updateDynamic("heuristic")(js.Any.fromFunction2(heuristic))
     __obj.asInstanceOf[Closest]
   }
-  @scala.inline
-  implicit class ClosestOps[Self <: Closest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClosest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClosest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeuristic(value: (/* pos0 */ X, /* pos1 */ X) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heuristic")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutHeuristic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heuristic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

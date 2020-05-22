@@ -12,7 +12,7 @@ object DialogContainer {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ContainerProps with ViewProps with reactNativeModalContainerProps): `SharedBuilder_<intersection>890884832`[typingsSlinky.reactNativeDialog.mod.Dialog.Container] = new `SharedBuilder_<intersection>890884832`[typingsSlinky.reactNativeDialog.mod.Dialog.Container](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DialogContainer.type): `SharedBuilder_<intersection>890884832`[typingsSlinky.reactNativeDialog.mod.Dialog.Container] = new `SharedBuilder_<intersection>890884832`[typingsSlinky.reactNativeDialog.mod.Dialog.Container](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: ContainerProps with ViewProps with reactNativeModalContainerProps): SharedBuilder_ContainerPropsViewPropsreactNativeModalContainerProps890884832[typingsSlinky.reactNativeDialog.mod.Dialog.Container] = new SharedBuilder_ContainerPropsViewPropsreactNativeModalContainerProps890884832[typingsSlinky.reactNativeDialog.mod.Dialog.Container](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DialogContainer.type): SharedBuilder_ContainerPropsViewPropsreactNativeModalContainerProps890884832[typingsSlinky.reactNativeDialog.mod.Dialog.Container] = new SharedBuilder_ContainerPropsViewPropsreactNativeModalContainerProps890884832[typingsSlinky.reactNativeDialog.mod.Dialog.Container](js.Array(this.component, js.Dictionary.empty))()
 }
 

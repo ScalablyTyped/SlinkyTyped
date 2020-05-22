@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NewAppSchema
   extends BaseAppSchema
      with AppSchema {
-  var cloned: `false` = js.native
-  var name: String = js.native
-  var template: String = js.native
-  var `type`: ProjectType = js.native
+  var cloned: `false`
+  var name: String
+  var template: String
+  var `type`: ProjectType
 }
 
 object NewAppSchema {
@@ -24,43 +23,15 @@ object NewAppSchema {
     projectDir: String,
     projectId: String,
     template: String,
-    `type`: ProjectType
+    `type`: ProjectType,
+    appflowId: String = null,
+    packageId: String = null
   ): NewAppSchema = {
     val __obj = js.Dynamic.literal(cloned = cloned.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], projectDir = projectDir.asInstanceOf[js.Any], projectId = projectId.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (appflowId != null) __obj.updateDynamic("appflowId")(appflowId.asInstanceOf[js.Any])
+    if (packageId != null) __obj.updateDynamic("packageId")(packageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewAppSchema]
   }
-  @scala.inline
-  implicit class NewAppSchemaOps[Self <: NewAppSchema] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloned(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ProjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

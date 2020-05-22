@@ -7,63 +7,62 @@ import scala.scalajs.js.annotation._
 /**
   * Serves as the base object for all the editors that support validation.
   */
-@js.native
 trait ASPxClientEdit extends ASPxClientEditBase {
   /**
     * Fires on the client side when the editor receives input focus.
     */
-  var GotFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]] = js.native
+  var GotFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]]
   /**
     * Fires on the client side when the editor loses input focus.
     */
-  var LostFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]] = js.native
+  var LostFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]]
   /**
     * Allows you to specify whether the value entered into the editor is valid, and whether the editor is allowed to lose focus.
     */
-  var Validation: ASPxClientEvent[ASPxClientEditValidationEventHandler[ASPxClientEdit]] = js.native
+  var Validation: ASPxClientEvent[ASPxClientEditValidationEventHandler[ASPxClientEdit]]
   /**
     * Fires after the editor's value has been changed by end-user interactions.
     */
-  var ValueChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientEdit]] = js.native
+  var ValueChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientEdit]]
   /**
     * Sets input focus to the editor.
     */
-  def Focus(): Unit = js.native
+  def Focus(): Unit
   /**
     * Gets the error text to be displayed within the editor's error frame if the editor's validation fails.
     */
-  def GetErrorText(): String = js.native
+  def GetErrorText(): String
   /**
     * Returns an HTML element that represents the control's input element.
     */
-  def GetInputElement(): js.Any = js.native
+  def GetInputElement(): js.Any
   /**
     * Gets a value that indicates whether the editor's value passes validation.
     */
-  def GetIsValid(): Boolean = js.native
+  def GetIsValid(): Boolean
   /**
     * Returns a value indicating whether the editor's state is read-only on the client-side.
     */
-  def GetReadOnly(): Boolean = js.native
+  def GetReadOnly(): Boolean
   /**
     * Sets the error text to be displayed within the editor's error frame if the editor's validation fails.
     * @param errorText A string value representing the error text.
     */
-  def SetErrorText(errorText: String): Unit = js.native
+  def SetErrorText(errorText: String): Unit
   /**
     * Sets a value that specifies whether the editor's value is valid.
     * @param isValid True if the editor's value is valid; otherwise, False.
     */
-  def SetIsValid(isValid: Boolean): Unit = js.native
+  def SetIsValid(isValid: Boolean): Unit
   /**
     * Specifies whether the control's state is read-only on the client side.
     * @param readOnly true, to make the control read-only on the client side; otherwise, false.
     */
-  def SetReadOnly(readOnly: Boolean): Unit = js.native
+  def SetReadOnly(readOnly: Boolean): Unit
   /**
     * Performs the editor's validation.
     */
-  def Validate(): Unit = js.native
+  def Validate(): Unit
 }
 
 object ASPxClientEdit {
@@ -107,91 +106,5 @@ object ASPxClientEdit {
     val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), Focus = js.Any.fromFunction0(Focus), GetCaption = js.Any.fromFunction0(GetCaption), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEnabled = js.Any.fromFunction0(GetEnabled), GetErrorText = js.Any.fromFunction0(GetErrorText), GetHeight = js.Any.fromFunction0(GetHeight), GetInputElement = js.Any.fromFunction0(GetInputElement), GetIsValid = js.Any.fromFunction0(GetIsValid), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetReadOnly = js.Any.fromFunction0(GetReadOnly), GetValue = js.Any.fromFunction0(GetValue), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), GotFocus = GotFocus.asInstanceOf[js.Any], InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], LostFocus = LostFocus.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetCaption = js.Any.fromFunction1(SetCaption), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetEnabled = js.Any.fromFunction1(SetEnabled), SetErrorText = js.Any.fromFunction1(SetErrorText), SetHeight = js.Any.fromFunction1(SetHeight), SetIsValid = js.Any.fromFunction1(SetIsValid), SetReadOnly = js.Any.fromFunction1(SetReadOnly), SetValue = js.Any.fromFunction1(SetValue), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), Validate = js.Any.fromFunction0(Validate), Validation = Validation.asInstanceOf[js.Any], ValueChanged = ValueChanged.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientEdit]
   }
-  @scala.inline
-  implicit class ASPxClientEditOps[Self <: ASPxClientEdit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocus(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Focus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetErrorText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetErrorText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInputElement(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetInputElement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIsValid(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIsValid")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetReadOnly(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetReadOnly")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGotFocus(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GotFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLostFocus(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LostFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetErrorText(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetErrorText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIsValid(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIsValid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetReadOnly(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetReadOnly")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValidate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Validate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withValidation(value: ASPxClientEvent[ASPxClientEditValidationEventHandler[ASPxClientEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Validation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueChanged(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientEdit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

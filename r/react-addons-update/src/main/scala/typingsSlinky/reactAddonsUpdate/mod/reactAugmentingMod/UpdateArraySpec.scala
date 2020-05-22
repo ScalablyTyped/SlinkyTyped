@@ -4,65 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateArraySpec extends UpdateSpecCommand {
   @JSName("$push")
-  var $push: js.UndefOr[js.Array[_]] = js.native
+  var $push: js.UndefOr[js.Array[_]] = js.undefined
   @JSName("$splice")
-  var $splice: js.UndefOr[js.Array[js.Array[_]]] = js.native
+  var $splice: js.UndefOr[js.Array[js.Array[_]]] = js.undefined
   @JSName("$unshift")
-  var $unshift: js.UndefOr[js.Array[_]] = js.native
+  var $unshift: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object UpdateArraySpec {
   @scala.inline
-  def apply(): UpdateArraySpec = {
+  def apply(
+    $apply: /* value */ js.Any => _ = null,
+    $merge: js.Object = null,
+    $push: js.Array[_] = null,
+    $set: js.Any = null,
+    $splice: js.Array[js.Array[_]] = null,
+    $unshift: js.Array[_] = null
+  ): UpdateArraySpec = {
     val __obj = js.Dynamic.literal()
+    if ($apply != null) __obj.updateDynamic("$apply")(js.Any.fromFunction1($apply))
+    if ($merge != null) __obj.updateDynamic("$merge")($merge.asInstanceOf[js.Any])
+    if ($push != null) __obj.updateDynamic("$push")($push.asInstanceOf[js.Any])
+    if ($set != null) __obj.updateDynamic("$set")($set.asInstanceOf[js.Any])
+    if ($splice != null) __obj.updateDynamic("$splice")($splice.asInstanceOf[js.Any])
+    if ($unshift != null) __obj.updateDynamic("$unshift")($unshift.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateArraySpec]
   }
-  @scala.inline
-  implicit class UpdateArraySpecOps[Self <: UpdateArraySpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$push(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$push")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$push: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$push")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$splice(value: js.Array[js.Array[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$splice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$splice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$splice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$unshift(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$unshift")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$unshift: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$unshift")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

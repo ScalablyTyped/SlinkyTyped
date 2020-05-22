@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAbstractUnitJson extends IStructureJson {
-  var containerId: String = js.native
-  var containmentName: String = js.native
-  var contents: IAbstractElementJson = js.native
+  var containerId: String
+  var containmentName: String
+  var contents: IAbstractElementJson
 }
 
 object IAbstractUnitJson {
@@ -23,31 +22,5 @@ object IAbstractUnitJson {
     val __obj = js.Dynamic.literal($ID = $ID.asInstanceOf[js.Any], $Type = $Type.asInstanceOf[js.Any], containerId = containerId.asInstanceOf[js.Any], containmentName = containmentName.asInstanceOf[js.Any], contents = contents.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAbstractUnitJson]
   }
-  @scala.inline
-  implicit class IAbstractUnitJsonOps[Self <: IAbstractUnitJson] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainmentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContents(value: IAbstractElementJson): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

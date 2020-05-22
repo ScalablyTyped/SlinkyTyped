@@ -15,29 +15,10 @@ trait SchemaInstancesSetMachineResourcesRequest extends js.Object {
 
 object SchemaInstancesSetMachineResourcesRequest {
   @scala.inline
-  def apply(): SchemaInstancesSetMachineResourcesRequest = {
+  def apply(guestAccelerators: js.Array[SchemaAcceleratorConfig] = null): SchemaInstancesSetMachineResourcesRequest = {
     val __obj = js.Dynamic.literal()
+    if (guestAccelerators != null) __obj.updateDynamic("guestAccelerators")(guestAccelerators.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesSetMachineResourcesRequest]
   }
-  @scala.inline
-  implicit class SchemaInstancesSetMachineResourcesRequestOps[Self <: SchemaInstancesSetMachineResourcesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGuestAccelerators(value: js.Array[SchemaAcceleratorConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guestAccelerators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuestAccelerators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guestAccelerators")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

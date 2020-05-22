@@ -4,8 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** MVC *****/
-/** Base class implementing KVO. */
 @js.native
 trait MVCObject extends js.Object {
   /**

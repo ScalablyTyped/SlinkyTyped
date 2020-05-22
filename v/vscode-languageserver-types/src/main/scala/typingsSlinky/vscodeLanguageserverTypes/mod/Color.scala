@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Color extends js.Object {
   /**
     * The alpha component of this color in the range [0-1].
     */
-  val alpha: Double = js.native
+  val alpha: Double
   /**
     * The blue component of this color in the range [0-1].
     */
-  val blue: Double = js.native
+  val blue: Double
   /**
     * The green component of this color in the range [0-1].
     */
-  val green: Double = js.native
+  val green: Double
   /**
     * The red component of this color in the range [0-1].
     */
-  val red: Double = js.native
+  val red: Double
 }
 
 @JSImport("vscode-languageserver-types", "Color")

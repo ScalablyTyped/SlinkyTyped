@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class NodeList ()
   extends Iterable[Node]
-     with NodeSet {
+     with _NodeSet {
   val length: Double = js.native
   val maxOffset: Double = js.native
   def getNode(index: Double): Node | Null = js.native

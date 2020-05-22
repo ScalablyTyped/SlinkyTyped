@@ -24,41 +24,11 @@ trait SchemaSourceReference extends js.Object {
 
 object SchemaSourceReference {
   @scala.inline
-  def apply(): SchemaSourceReference = {
+  def apply(repository: String = null, revisionId: String = null): SchemaSourceReference = {
     val __obj = js.Dynamic.literal()
+    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
+    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceReference]
   }
-  @scala.inline
-  implicit class SchemaSourceReferenceOps[Self <: SchemaSourceReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRepository(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepository: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

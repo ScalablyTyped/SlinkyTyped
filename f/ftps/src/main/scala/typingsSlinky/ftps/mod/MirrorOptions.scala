@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MirrorOptions extends js.Object {
-  var filter: js.UndefOr[js.Any] = js.native
-  var localDir: js.UndefOr[String] = js.native
-  var options: js.UndefOr[String] = js.native
-  var parallel: js.UndefOr[Boolean | Double] = js.native
-  var remoteDir: js.UndefOr[String] = js.native
-  var upload: js.UndefOr[Boolean] = js.native
+  var filter: js.UndefOr[js.Any] = js.undefined
+  var localDir: js.UndefOr[String] = js.undefined
+  var options: js.UndefOr[String] = js.undefined
+  var parallel: js.UndefOr[Boolean | Double] = js.undefined
+  var remoteDir: js.UndefOr[String] = js.undefined
+  var upload: js.UndefOr[Boolean] = js.undefined
 }
 
 object MirrorOptions {
   @scala.inline
-  def apply(): MirrorOptions = {
+  def apply(
+    filter: js.Any = null,
+    localDir: String = null,
+    options: String = null,
+    parallel: Boolean | Double = null,
+    remoteDir: String = null,
+    upload: js.UndefOr[Boolean] = js.undefined
+  ): MirrorOptions = {
     val __obj = js.Dynamic.literal()
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (localDir != null) __obj.updateDynamic("localDir")(localDir.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (parallel != null) __obj.updateDynamic("parallel")(parallel.asInstanceOf[js.Any])
+    if (remoteDir != null) __obj.updateDynamic("remoteDir")(remoteDir.asInstanceOf[js.Any])
+    if (!js.isUndefined(upload)) __obj.updateDynamic("upload")(upload.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MirrorOptions]
   }
-  @scala.inline
-  implicit class MirrorOptionsOps[Self <: MirrorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallel(value: Boolean | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

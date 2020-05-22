@@ -4,94 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Vcard extends js.Object {
   /** The street address of the entity. */
-  var adr: js.UndefOr[VcardAddress] = js.native
+  var adr: js.UndefOr[VcardAddress] = js.undefined
   /** An email address that can be used to reach the contact. */
-  var email: js.UndefOr[VcardTypedText] = js.native
+  var email: js.UndefOr[VcardTypedText] = js.undefined
   /** The full name of the contact person. For example: John A. Smith. */
-  var fn: js.UndefOr[String] = js.native
+  var fn: js.UndefOr[String] = js.undefined
   /** The organization associated with the registering entity. */
   @JSName("org")
-  var org_ : js.UndefOr[VcardTypedText] = js.native
+  var org_ : js.UndefOr[VcardTypedText] = js.undefined
   /** A telephone number that can be used to call the contact. */
-  var tel: js.UndefOr[VcardTelephone] = js.native
+  var tel: js.UndefOr[VcardTelephone] = js.undefined
 }
 
 object Vcard {
   @scala.inline
-  def apply(): Vcard = {
+  def apply(
+    adr: VcardAddress = null,
+    email: VcardTypedText = null,
+    fn: String = null,
+    org_ : VcardTypedText = null,
+    tel: VcardTelephone = null
+  ): Vcard = {
     val __obj = js.Dynamic.literal()
+    if (adr != null) __obj.updateDynamic("adr")(adr.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (fn != null) __obj.updateDynamic("fn")(fn.asInstanceOf[js.Any])
+    if (org_ != null) __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
+    if (tel != null) __obj.updateDynamic("tel")(tel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Vcard]
   }
-  @scala.inline
-  implicit class VcardOps[Self <: Vcard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdr(value: VcardAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: VcardTypedText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrg_(value: VcardTypedText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrg_ : Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTel(value: VcardTelephone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

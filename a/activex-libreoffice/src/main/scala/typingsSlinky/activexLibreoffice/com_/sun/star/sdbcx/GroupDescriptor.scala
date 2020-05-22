@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * is used to create a new group in a database.
   * @see com.sun.star.sdbcx.Group
   */
-@js.native
 trait GroupDescriptor extends Descriptor
 
 object GroupDescriptor {

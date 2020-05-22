@@ -22,53 +22,16 @@ trait AdminCreateUserConfigType extends js.Object {
 
 object AdminCreateUserConfigType {
   @scala.inline
-  def apply(): AdminCreateUserConfigType = {
+  def apply(
+    AllowAdminCreateUserOnly: js.UndefOr[BooleanType] = js.undefined,
+    InviteMessageTemplate: MessageTemplateType = null,
+    UnusedAccountValidityDays: js.UndefOr[AdminCreateUserUnusedAccountValidityDaysType] = js.undefined
+  ): AdminCreateUserConfigType = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AllowAdminCreateUserOnly)) __obj.updateDynamic("AllowAdminCreateUserOnly")(AllowAdminCreateUserOnly.get.asInstanceOf[js.Any])
+    if (InviteMessageTemplate != null) __obj.updateDynamic("InviteMessageTemplate")(InviteMessageTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(UnusedAccountValidityDays)) __obj.updateDynamic("UnusedAccountValidityDays")(UnusedAccountValidityDays.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdminCreateUserConfigType]
   }
-  @scala.inline
-  implicit class AdminCreateUserConfigTypeOps[Self <: AdminCreateUserConfigType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowAdminCreateUserOnly(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowAdminCreateUserOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowAdminCreateUserOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowAdminCreateUserOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInviteMessageTemplate(value: MessageTemplateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InviteMessageTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInviteMessageTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InviteMessageTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnusedAccountValidityDays(value: AdminCreateUserUnusedAccountValidityDaysType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnusedAccountValidityDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnusedAccountValidityDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnusedAccountValidityDays")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

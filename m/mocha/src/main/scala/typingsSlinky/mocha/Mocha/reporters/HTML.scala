@@ -16,26 +16,25 @@ import scala.scalajs.js.annotation._
   *
   * @see https://mochajs.org/api/Mocha.reporters.HTML.html
   */
-@js.native
 trait HTML extends Base {
   /**
     * Adds code toggle functionality for the provided test's list element.
     *
     * @see https://mochajs.org/api/Mocha.reporters.HTML.html#addCodeToggle
     */
-  def addCodeToggle(el: HTMLLIElement, contents: String): Unit = js.native
+  def addCodeToggle(el: HTMLLIElement, contents: String): Unit
   /**
     * Provide suite URL.
     *
     * @see https://mochajs.org/api/Mocha.reporters.HTML.html#suiteURL
     */
-  def suiteURL(suite: Suite): String = js.native
+  def suiteURL(suite: Suite): String
   /**
     * Provide test URL.
     *
     * @see https://mochajs.org/api/Mocha.reporters.HTML.html#testURL
     */
-  def testURL(test: Test): String = js.native
+  def testURL(test: Test): String
 }
 
 object HTML {
@@ -47,36 +46,12 @@ object HTML {
     runner: Runner,
     stats: Stats,
     suiteURL: Suite => String,
-    testURL: Test => String
+    testURL: Test => String,
+    done: (/* failures */ Double, /* fn */ js.UndefOr[js.Function1[/* failures */ Double, Unit]]) => Unit = null
   ): HTML = {
     val __obj = js.Dynamic.literal(addCodeToggle = js.Any.fromFunction2(addCodeToggle), epilogue = js.Any.fromFunction0(epilogue), failures = failures.asInstanceOf[js.Any], runner = runner.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any], suiteURL = js.Any.fromFunction1(suiteURL), testURL = js.Any.fromFunction1(testURL))
+    if (done != null) __obj.updateDynamic("done")(js.Any.fromFunction2(done))
     __obj.asInstanceOf[HTML]
   }
-  @scala.inline
-  implicit class HTMLOps[Self <: HTML] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddCodeToggle(value: (HTMLLIElement, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addCodeToggle")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSuiteURL(value: Suite => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suiteURL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTestURL(value: Test => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testURL")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

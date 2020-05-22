@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FirebaseApp extends js.Object {
-  def installations(): FirebaseInstallations = js.native
+  def installations(): FirebaseInstallations
 }
 
 object FirebaseApp {
@@ -16,19 +15,5 @@ object FirebaseApp {
     val __obj = js.Dynamic.literal(installations = js.Any.fromFunction0(installations))
     __obj.asInstanceOf[FirebaseApp]
   }
-  @scala.inline
-  implicit class FirebaseAppOps[Self <: FirebaseApp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstallations(value: () => FirebaseInstallations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installations")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

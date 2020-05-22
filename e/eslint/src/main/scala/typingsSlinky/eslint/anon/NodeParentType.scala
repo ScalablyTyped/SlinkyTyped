@@ -9,11 +9,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodeParentType extends DefinitionType {
-  var node: FunctionDeclaration | FunctionExpression | ArrowFunctionExpression = js.native
-  var parent: Null = js.native
-  var `type`: Parameter = js.native
+  var node: FunctionDeclaration | FunctionExpression | ArrowFunctionExpression
+  var parent: Null
+  var `type`: Parameter
 }
 
 object NodeParentType {
@@ -27,31 +26,5 @@ object NodeParentType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeParentType]
   }
-  @scala.inline
-  implicit class NodeParentTypeOps[Self <: NodeParentType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNode(value: FunctionDeclaration | FunctionExpression | ArrowFunctionExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Parameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

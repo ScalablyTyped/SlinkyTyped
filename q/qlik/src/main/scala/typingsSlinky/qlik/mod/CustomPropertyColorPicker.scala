@@ -6,54 +6,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomPropertyColorPicker
   extends CustomPropertyCommon
      with CustomProperty {
-  var component: `color-picker` = js.native
-  var defaultValue: js.UndefOr[Double] = js.native
+  var component: `color-picker`
+  var defaultValue: js.UndefOr[Double] = js.undefined
   @JSName("type")
-  var type_CustomPropertyColorPicker: integer = js.native
+  var type_CustomPropertyColorPicker: integer
 }
 
 object CustomPropertyColorPicker {
   @scala.inline
-  def apply(component: `color-picker`, `type`: integer): CustomPropertyColorPicker = {
+  def apply(
+    component: `color-picker`,
+    `type`: integer,
+    defaultValue: js.UndefOr[Double] = js.undefined,
+    label: String = null,
+    ref: String = null,
+    show: Boolean | ShowFunction = null
+  ): CustomPropertyColorPicker = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultValue)) __obj.updateDynamic("defaultValue")(defaultValue.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomPropertyColorPicker]
   }
-  @scala.inline
-  implicit class CustomPropertyColorPickerOps[Self <: CustomPropertyColorPicker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponent(value: `color-picker`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

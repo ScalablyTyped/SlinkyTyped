@@ -1,79 +1,41 @@
 package typingsSlinky.fancybox
 
+import typingsSlinky.fancybox.fancyboxStrings.`inline`
+import typingsSlinky.fancybox.fancyboxStrings.ajax
+import typingsSlinky.fancybox.fancyboxStrings.html
+import typingsSlinky.fancybox.fancyboxStrings.iframe
+import typingsSlinky.fancybox.fancyboxStrings.image
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FancyBoxGroupItemWithFilledProps extends FancyBoxGroupItem {
   @JSName("$thumb")
-  var $thumb: js.UndefOr[JQuery] = js.native
-  var contentType: js.UndefOr[String] = js.native
-  var index: js.UndefOr[Double] = js.native
-  var thumb: js.UndefOr[js.Any] = js.native
+  var $thumb: js.UndefOr[JQuery] = js.undefined
+  var contentType: js.UndefOr[String] = js.undefined
+  var index: js.UndefOr[Double] = js.undefined
+  var thumb: js.UndefOr[js.Any] = js.undefined
 }
 
 object FancyBoxGroupItemWithFilledProps {
   @scala.inline
-  def apply(src: String): FancyBoxGroupItemWithFilledProps = {
+  def apply(
+    src: String,
+    $thumb: JQuery = null,
+    contentType: String = null,
+    index: js.UndefOr[Double] = js.undefined,
+    opts: FancyBoxOptions = null,
+    thumb: js.Any = null,
+    `type`: image | `inline` | ajax | iframe | html = null
+  ): FancyBoxGroupItemWithFilledProps = {
     val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    if ($thumb != null) __obj.updateDynamic("$thumb")($thumb.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (opts != null) __obj.updateDynamic("opts")(opts.asInstanceOf[js.Any])
+    if (thumb != null) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FancyBoxGroupItemWithFilledProps]
   }
-  @scala.inline
-  implicit class FancyBoxGroupItemWithFilledPropsOps[Self <: FancyBoxGroupItemWithFilledProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$thumb(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$thumb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$thumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumb(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

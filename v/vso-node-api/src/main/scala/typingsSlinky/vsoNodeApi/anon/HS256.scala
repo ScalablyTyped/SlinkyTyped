@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HS256 extends js.Object {
-  var hS256: scala.Double = js.native
-  var none: scala.Double = js.native
-  var rS256: scala.Double = js.native
+  var hS256: scala.Double
+  var none: scala.Double
+  var rS256: scala.Double
 }
 
 object HS256 {
@@ -17,31 +16,5 @@ object HS256 {
     val __obj = js.Dynamic.literal(hS256 = hS256.asInstanceOf[js.Any], none = none.asInstanceOf[js.Any], rS256 = rS256.asInstanceOf[js.Any])
     __obj.asInstanceOf[HS256]
   }
-  @scala.inline
-  implicit class HS256Ops[Self <: HS256] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHS256(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hS256")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNone(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("none")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRS256(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rS256")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

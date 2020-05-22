@@ -18,41 +18,11 @@ trait CreateVpcEndpointResult extends js.Object {
 
 object CreateVpcEndpointResult {
   @scala.inline
-  def apply(): CreateVpcEndpointResult = {
+  def apply(ClientToken: String = null, VpcEndpoint: VpcEndpoint = null): CreateVpcEndpointResult = {
     val __obj = js.Dynamic.literal()
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (VpcEndpoint != null) __obj.updateDynamic("VpcEndpoint")(VpcEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVpcEndpointResult]
   }
-  @scala.inline
-  implicit class CreateVpcEndpointResultOps[Self <: CreateVpcEndpointResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcEndpoint(value: VpcEndpoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

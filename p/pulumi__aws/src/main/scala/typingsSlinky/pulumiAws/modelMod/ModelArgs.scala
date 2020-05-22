@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.modelMod
 
-import typingsSlinky.pulumiAws.restApiMod.RestApi
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,88 +8,40 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ModelArgs extends js.Object {
   /**
-    * The content type of the model
+    * The API identifier.
+    */
+  val apiId: Input[String] = js.native
+  /**
+    * The content-type for the model, for example, `application/json`.
     */
   val contentType: Input[String] = js.native
   /**
-    * The description of the model
+    * The description of the model.
     */
   val description: js.UndefOr[Input[String]] = js.native
   /**
-    * The name of the model
+    * The name of the model. Must be alphanumeric.
     */
   val name: js.UndefOr[Input[String]] = js.native
   /**
-    * The ID of the associated REST API
+    * The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
     */
-  val restApi: Input[String | RestApi] = js.native
-  /**
-    * The schema of the model in a JSON form
-    */
-  val schema: js.UndefOr[Input[String]] = js.native
+  val schema: Input[String] = js.native
 }
 
 object ModelArgs {
   @scala.inline
-  def apply(contentType: Input[String], restApi: Input[String | RestApi]): ModelArgs = {
-    val __obj = js.Dynamic.literal(contentType = contentType.asInstanceOf[js.Any], restApi = restApi.asInstanceOf[js.Any])
+  def apply(
+    apiId: Input[String],
+    contentType: Input[String],
+    schema: Input[String],
+    description: Input[String] = null,
+    name: Input[String] = null
+  ): ModelArgs = {
+    val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelArgs]
   }
-  @scala.inline
-  implicit class ModelArgsOps[Self <: ModelArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRestApi(value: Input[String | RestApi]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restApi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchema(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

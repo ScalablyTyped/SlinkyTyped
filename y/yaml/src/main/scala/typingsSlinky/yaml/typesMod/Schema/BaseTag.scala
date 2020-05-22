@@ -1,7 +1,7 @@
 package typingsSlinky.yaml.typesMod.Schema
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.yaml.typesMod.AST.Node
+import typingsSlinky.yaml.typesMod.Node
 import typingsSlinky.yaml.typesMod.Scalar
 import typingsSlinky.yaml.typesMod.YAMLMap
 import typingsSlinky.yaml.typesMod.YAMLSeq
@@ -9,7 +9,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseTag extends js.Object {
   /**
     * An optional factory function, used e.g. by collections when wrapping JS objects as AST nodes.
@@ -21,19 +20,19 @@ trait BaseTag extends js.Object {
       /* ctx */ CreateNodeContext, 
       YAMLMap | YAMLSeq | Scalar
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * If a tag has multiple forms that should be parsed and/or stringified differently, use `format` to identify them.
     */
-  var format: js.UndefOr[String] = js.native
+  var format: js.UndefOr[String] = js.undefined
   /**
     * The `Node` child class that implements this tag. Required for collections and tags that have overlapping JS representations.
     */
-  var nodeClass: js.UndefOr[Instantiable0[js.Any]] = js.native
+  var nodeClass: js.UndefOr[Instantiable0[js.Any]] = js.undefined
   /**
     * Used by some tags to configure their stringification, where applicable.
     */
-  var options: js.UndefOr[js.Object] = js.native
+  var options: js.UndefOr[js.Object] = js.undefined
   /**
     * Optional function stringifying the AST node in the current context. If your
     * data includes a suitable `.toString()` method, you can probably leave this
@@ -54,109 +53,38 @@ trait BaseTag extends js.Object {
       /* onChompKeep */ js.UndefOr[js.Function0[Unit]], 
       String
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * The identifier for your data type, with which its stringified form will be
     * prefixed. Should either be a !-prefixed local `!tag`, or a fully qualified
     * `tag:domain,date:foo`.
     */
-  var tag: String = js.native
+  var tag: String
   /**
     * Used by `YAML.createNode` to detect your data type, e.g. using `typeof` or
     * `instanceof`.
     */
-  def identify(value: js.Any): Boolean = js.native
+  def identify(value: js.Any): Boolean
 }
 
 object BaseTag {
   @scala.inline
-  def apply(identify: js.Any => Boolean, tag: String): BaseTag = {
+  def apply(
+    identify: js.Any => Boolean,
+    tag: String,
+    createNode: (/* schema */ typingsSlinky.yaml.typesMod.Schema, /* value */ js.Any, /* ctx */ CreateNodeContext) => YAMLMap | YAMLSeq | Scalar = null,
+    format: String = null,
+    nodeClass: Instantiable0[js.Any] = null,
+    options: js.Object = null,
+    stringify: (/* item */ Node, /* ctx */ StringifyContext, /* onComment */ js.UndefOr[js.Function0[Unit]], /* onChompKeep */ js.UndefOr[js.Function0[Unit]]) => String = null
+  ): BaseTag = {
     val __obj = js.Dynamic.literal(identify = js.Any.fromFunction1(identify), tag = tag.asInstanceOf[js.Any])
+    if (createNode != null) __obj.updateDynamic("createNode")(js.Any.fromFunction3(createNode))
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (nodeClass != null) __obj.updateDynamic("nodeClass")(nodeClass.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (stringify != null) __obj.updateDynamic("stringify")(js.Any.fromFunction4(stringify))
     __obj.asInstanceOf[BaseTag]
   }
-  @scala.inline
-  implicit class BaseTagOps[Self <: BaseTag] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentify(value: js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identify")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateNode(
-      value: (/* schema */ typingsSlinky.yaml.typesMod.Schema, /* value */ js.Any, /* ctx */ CreateNodeContext) => YAMLMap | YAMLSeq | Scalar
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createNode")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeClass(value: Instantiable0[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringify(
-      value: (/* item */ Node, /* ctx */ StringifyContext, /* onComment */ js.UndefOr[js.Function0[Unit]], /* onChompKeep */ js.UndefOr[js.Function0[Unit]]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutStringify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

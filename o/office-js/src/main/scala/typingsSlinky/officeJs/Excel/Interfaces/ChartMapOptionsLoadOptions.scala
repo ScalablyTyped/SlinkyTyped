@@ -10,97 +10,49 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@js.native
 trait ChartMapOptionsLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns or sets the series map labels strategy of a region map chart. Read/Write.
+    * Specifies the series map labels strategy of a region map chart.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var labelStrategy: js.UndefOr[Boolean] = js.native
+  var labelStrategy: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns or sets the series mapping level of a region map chart. Read/Write.
+    * Specifies the series mapping level of a region map chart.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var level: js.UndefOr[Boolean] = js.native
+  var level: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns or sets the series projection type of a region map chart. Read/Write.
+    * Specifies the series projection type of a region map chart.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var projectionType: js.UndefOr[Boolean] = js.native
+  var projectionType: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChartMapOptionsLoadOptions {
   @scala.inline
-  def apply(): ChartMapOptionsLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    labelStrategy: js.UndefOr[Boolean] = js.undefined,
+    level: js.UndefOr[Boolean] = js.undefined,
+    projectionType: js.UndefOr[Boolean] = js.undefined
+  ): ChartMapOptionsLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelStrategy)) __obj.updateDynamic("labelStrategy")(labelStrategy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(projectionType)) __obj.updateDynamic("projectionType")(projectionType.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartMapOptionsLoadOptions]
   }
-  @scala.inline
-  implicit class ChartMapOptionsLoadOptionsOps[Self <: ChartMapOptionsLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelStrategy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectionType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

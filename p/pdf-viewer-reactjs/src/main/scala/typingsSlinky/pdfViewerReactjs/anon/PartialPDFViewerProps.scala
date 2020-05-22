@@ -1,8 +1,6 @@
 package typingsSlinky.pdfViewerReactjs.anon
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
-import slinky.core.facade.ReactRef
 import typingsSlinky.pdfViewerReactjs.mod.AlertHandler
 import typingsSlinky.pdfViewerReactjs.mod.BtnClickHandler
 import typingsSlinky.pdfViewerReactjs.mod.DocClickHandler
@@ -19,404 +17,96 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<pdf-viewer-reactjs.pdf-viewer-reactjs.PDFViewerProps> */
-@js.native
 trait PartialPDFViewerProps extends js.Object {
-  var alert: js.UndefOr[AlertHandler] = js.native
-  var canvasCss: js.UndefOr[String] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var css: js.UndefOr[String] = js.native
-  var defaultScale: js.UndefOr[Double] = js.native
-  var document: js.UndefOr[Document] = js.native
-  var hideNavbar: js.UndefOr[Boolean] = js.native
-  var hideRotation: js.UndefOr[Boolean] = js.native
-  var hideZoom: js.UndefOr[Boolean] = js.native
-  var key: js.UndefOr[Key] = js.native
-  var loader: js.UndefOr[TagMod[Any]] = js.native
-  var maxScale: js.UndefOr[Double] = js.native
-  var minScale: js.UndefOr[Double] = js.native
-  var navbarOnTop: js.UndefOr[Boolean] = js.native
-  var navigation: js.UndefOr[js.Any] = js.native
-  var onDocumentClick: js.UndefOr[DocClickHandler] = js.native
-  var onNextBtnClick: js.UndefOr[BtnClickHandler] = js.native
-  var onPrevBtnClick: js.UndefOr[BtnClickHandler] = js.native
-  var onRotation: js.UndefOr[RotationClickHandler] = js.native
-  var onZoom: js.UndefOr[ZoomClickHandler] = js.native
-  var page: js.UndefOr[Double] = js.native
-  var protectContent: js.UndefOr[Boolean] = js.native
-  var ref: js.UndefOr[LegacyRef[PDFViewer]] = js.native
-  var rotationAngle: js.UndefOr[Double] = js.native
-  var scale: js.UndefOr[Double] = js.native
-  var scaleStep: js.UndefOr[Double] = js.native
-  var watermark: js.UndefOr[Watermark] = js.native
+  var alert: js.UndefOr[AlertHandler] = js.undefined
+  var canvasCss: js.UndefOr[String] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var css: js.UndefOr[String] = js.undefined
+  var defaultScale: js.UndefOr[Double] = js.undefined
+  var document: js.UndefOr[Document] = js.undefined
+  var hideNavbar: js.UndefOr[Boolean] = js.undefined
+  var hideRotation: js.UndefOr[Boolean] = js.undefined
+  var hideZoom: js.UndefOr[Boolean] = js.undefined
+  var key: js.UndefOr[Key] = js.undefined
+  var loader: js.UndefOr[TagMod[Any]] = js.undefined
+  var maxScale: js.UndefOr[Double] = js.undefined
+  var minScale: js.UndefOr[Double] = js.undefined
+  var navbarOnTop: js.UndefOr[Boolean] = js.undefined
+  var navigation: js.UndefOr[js.Any] = js.undefined
+  var onDocumentClick: js.UndefOr[DocClickHandler] = js.undefined
+  var onNextBtnClick: js.UndefOr[BtnClickHandler] = js.undefined
+  var onPrevBtnClick: js.UndefOr[BtnClickHandler] = js.undefined
+  var onRotation: js.UndefOr[RotationClickHandler] = js.undefined
+  var onZoom: js.UndefOr[ZoomClickHandler] = js.undefined
+  var page: js.UndefOr[Double] = js.undefined
+  var protectContent: js.UndefOr[Boolean] = js.undefined
+  var ref: js.UndefOr[LegacyRef[PDFViewer]] = js.undefined
+  var rotationAngle: js.UndefOr[Double] = js.undefined
+  var scale: js.UndefOr[Double] = js.undefined
+  var scaleStep: js.UndefOr[Double] = js.undefined
+  var watermark: js.UndefOr[Watermark] = js.undefined
 }
 
 object PartialPDFViewerProps {
   @scala.inline
-  def apply(): PartialPDFViewerProps = {
+  def apply(
+    alert: /* err */ Err => TagMod[Any] = null,
+    canvasCss: String = null,
+    children: TagMod[Any] = null,
+    css: String = null,
+    defaultScale: js.UndefOr[Double] = js.undefined,
+    document: Document = null,
+    hideNavbar: js.UndefOr[Boolean] = js.undefined,
+    hideRotation: js.UndefOr[Boolean] = js.undefined,
+    hideZoom: js.UndefOr[Boolean] = js.undefined,
+    key: Key = null,
+    loader: TagMod[Any] = null,
+    maxScale: js.UndefOr[Double] = js.undefined,
+    minScale: js.UndefOr[Double] = js.undefined,
+    navbarOnTop: js.UndefOr[Boolean] = js.undefined,
+    navigation: js.Any = null,
+    onDocumentClick: () => Unit = null,
+    onNextBtnClick: /* page */ Double => Unit = null,
+    onPrevBtnClick: /* page */ Double => Unit = null,
+    onRotation: /* angle */ Double => Unit = null,
+    onZoom: /* scale */ Double => Unit = null,
+    page: js.UndefOr[Double] = js.undefined,
+    protectContent: js.UndefOr[Boolean] = js.undefined,
+    ref: js.UndefOr[Null | LegacyRef[PDFViewer]] = js.undefined,
+    rotationAngle: js.UndefOr[Double] = js.undefined,
+    scale: js.UndefOr[Double] = js.undefined,
+    scaleStep: js.UndefOr[Double] = js.undefined,
+    watermark: Watermark = null
+  ): PartialPDFViewerProps = {
     val __obj = js.Dynamic.literal()
+    if (alert != null) __obj.updateDynamic("alert")(js.Any.fromFunction1(alert))
+    if (canvasCss != null) __obj.updateDynamic("canvasCss")(canvasCss.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultScale)) __obj.updateDynamic("defaultScale")(defaultScale.get.asInstanceOf[js.Any])
+    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideNavbar)) __obj.updateDynamic("hideNavbar")(hideNavbar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideRotation)) __obj.updateDynamic("hideRotation")(hideRotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideZoom)) __obj.updateDynamic("hideZoom")(hideZoom.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxScale)) __obj.updateDynamic("maxScale")(maxScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minScale)) __obj.updateDynamic("minScale")(minScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(navbarOnTop)) __obj.updateDynamic("navbarOnTop")(navbarOnTop.get.asInstanceOf[js.Any])
+    if (navigation != null) __obj.updateDynamic("navigation")(navigation.asInstanceOf[js.Any])
+    if (onDocumentClick != null) __obj.updateDynamic("onDocumentClick")(js.Any.fromFunction0(onDocumentClick))
+    if (onNextBtnClick != null) __obj.updateDynamic("onNextBtnClick")(js.Any.fromFunction1(onNextBtnClick))
+    if (onPrevBtnClick != null) __obj.updateDynamic("onPrevBtnClick")(js.Any.fromFunction1(onPrevBtnClick))
+    if (onRotation != null) __obj.updateDynamic("onRotation")(js.Any.fromFunction1(onRotation))
+    if (onZoom != null) __obj.updateDynamic("onZoom")(js.Any.fromFunction1(onZoom))
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(protectContent)) __obj.updateDynamic("protectContent")(protectContent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotationAngle)) __obj.updateDynamic("rotationAngle")(rotationAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleStep)) __obj.updateDynamic("scaleStep")(scaleStep.get.asInstanceOf[js.Any])
+    if (watermark != null) __obj.updateDynamic("watermark")(watermark.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPDFViewerProps]
   }
-  @scala.inline
-  implicit class PartialPDFViewerPropsOps[Self <: PartialPDFViewerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlert(value: /* err */ Err => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAlert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanvasCss(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasCss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanvasCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasCss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCss(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocument(value: Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideNavbar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideNavbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideNavbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideNavbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideRotation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideRotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoaderReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoader(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavbarOnTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navbarOnTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavbarOnTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navbarOnTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigation(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDocumentClick(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDocumentClick")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDocumentClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDocumentClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNextBtnClick(value: /* page */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNextBtnClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNextBtnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNextBtnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPrevBtnClick(value: /* page */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrevBtnClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPrevBtnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrevBtnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRotation(value: /* angle */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnZoom(value: /* scale */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoom")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtectContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protectContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtectContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protectContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefRefObject(value: ReactRef[PDFViewer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefFunction1(value: /* instance */ PDFViewer | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRef(value: LegacyRef[PDFViewer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(null)
-        ret
-    }
-    @scala.inline
-    def withRotationAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotationAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatermark(value: Watermark): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watermark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatermark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watermark")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

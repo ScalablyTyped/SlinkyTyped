@@ -7,16 +7,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommandRegistryTargetMap
   extends HTMLElementTagNameMap
      with /* key */ StringDictionary[EventTarget]
 
 object CommandRegistryTargetMap {
   @scala.inline
-  def apply(`atom-text-editor`: TextEditorElement): CommandRegistryTargetMap = {
+  def apply(
+    `atom-text-editor`: TextEditorElement,
+    StringDictionary: /* key */ StringDictionary[EventTarget] = null
+  ): CommandRegistryTargetMap = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("atom-text-editor")(`atom-text-editor`.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[CommandRegistryTargetMap]
   }
 }

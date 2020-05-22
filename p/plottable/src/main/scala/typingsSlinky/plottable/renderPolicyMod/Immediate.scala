@@ -6,5 +6,8 @@ import scala.scalajs.js.annotation._
 
 @JSImport("plottable/build/src/core/renderPolicy", "Immediate")
 @js.native
-class Immediate () extends IRenderPolicy
+class Immediate () extends IRenderPolicy {
+  /* CompleteClass */
+  override def render(): js.Any = js.native
+}
 

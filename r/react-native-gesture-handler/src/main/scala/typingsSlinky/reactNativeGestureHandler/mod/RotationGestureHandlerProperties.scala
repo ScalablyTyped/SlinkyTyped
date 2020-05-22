@@ -1,52 +1,42 @@
 package typingsSlinky.reactNativeGestureHandler.mod
 
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.reactNativeGestureHandler.anon.Bottom
+import typingsSlinky.reactNativeGestureHandler.anon.BottomHeight
+import typingsSlinky.reactNativeGestureHandler.anon.Height
+import typingsSlinky.reactNativeGestureHandler.anon.Left
+import typingsSlinky.reactNativeGestureHandler.anon.Right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RotationGestureHandlerProperties extends GestureHandlerProperties {
-  var onGestureEvent: js.UndefOr[js.Function1[/* event */ RotationGestureHandlerGestureEvent, Unit]] = js.native
-  var onHandlerStateChange: js.UndefOr[js.Function1[/* event */ RotationGestureHandlerStateChangeEvent, Unit]] = js.native
+  var onGestureEvent: js.UndefOr[js.Function1[/* event */ RotationGestureHandlerGestureEvent, Unit]] = js.undefined
+  var onHandlerStateChange: js.UndefOr[js.Function1[/* event */ RotationGestureHandlerStateChangeEvent, Unit]] = js.undefined
 }
 
 object RotationGestureHandlerProperties {
   @scala.inline
-  def apply(): RotationGestureHandlerProperties = {
+  def apply(
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: Double | Bottom | Left | Right | Height | BottomHeight = null,
+    id: String = null,
+    onGestureEvent: /* event */ RotationGestureHandlerGestureEvent => Unit = null,
+    onHandlerStateChange: /* event */ RotationGestureHandlerStateChangeEvent => Unit = null,
+    shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
+    simultaneousHandlers: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined,
+    waitFor: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined
+  ): RotationGestureHandlerProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (onGestureEvent != null) __obj.updateDynamic("onGestureEvent")(js.Any.fromFunction1(onGestureEvent))
+    if (onHandlerStateChange != null) __obj.updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(onHandlerStateChange))
+    if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(simultaneousHandlers)) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitFor)) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[RotationGestureHandlerProperties]
   }
-  @scala.inline
-  implicit class RotationGestureHandlerPropertiesOps[Self <: RotationGestureHandlerProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnGestureEvent(value: /* event */ RotationGestureHandlerGestureEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGestureEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHandlerStateChange(value: /* event */ RotationGestureHandlerStateChangeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHandlerStateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandlerStateChange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

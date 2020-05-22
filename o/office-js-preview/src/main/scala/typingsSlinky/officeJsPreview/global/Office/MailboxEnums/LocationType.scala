@@ -6,11 +6,11 @@ import scala.scalajs.js.annotation._
 
 /**
   * Specifies an appointment location's type.
-  * 
+  *
   * [Api set: Mailbox 1.8]
-  * 
+  *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
 @JSGlobal("Office.MailboxEnums.LocationType")

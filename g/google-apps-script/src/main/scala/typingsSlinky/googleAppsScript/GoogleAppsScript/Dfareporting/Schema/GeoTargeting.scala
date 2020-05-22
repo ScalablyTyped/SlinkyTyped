@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeoTargeting extends js.Object {
-  var cities: js.UndefOr[js.Array[City]] = js.native
-  var countries: js.UndefOr[js.Array[Country]] = js.native
-  var excludeCountries: js.UndefOr[Boolean] = js.native
-  var metros: js.UndefOr[js.Array[Metro]] = js.native
-  var postalCodes: js.UndefOr[js.Array[PostalCode]] = js.native
-  var regions: js.UndefOr[js.Array[Region]] = js.native
+  var cities: js.UndefOr[js.Array[City]] = js.undefined
+  var countries: js.UndefOr[js.Array[Country]] = js.undefined
+  var excludeCountries: js.UndefOr[Boolean] = js.undefined
+  var metros: js.UndefOr[js.Array[Metro]] = js.undefined
+  var postalCodes: js.UndefOr[js.Array[PostalCode]] = js.undefined
+  var regions: js.UndefOr[js.Array[Region]] = js.undefined
 }
 
 object GeoTargeting {
   @scala.inline
-  def apply(): GeoTargeting = {
+  def apply(
+    cities: js.Array[City] = null,
+    countries: js.Array[Country] = null,
+    excludeCountries: js.UndefOr[Boolean] = js.undefined,
+    metros: js.Array[Metro] = null,
+    postalCodes: js.Array[PostalCode] = null,
+    regions: js.Array[Region] = null
+  ): GeoTargeting = {
     val __obj = js.Dynamic.literal()
+    if (cities != null) __obj.updateDynamic("cities")(cities.asInstanceOf[js.Any])
+    if (countries != null) __obj.updateDynamic("countries")(countries.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludeCountries)) __obj.updateDynamic("excludeCountries")(excludeCountries.get.asInstanceOf[js.Any])
+    if (metros != null) __obj.updateDynamic("metros")(metros.asInstanceOf[js.Any])
+    if (postalCodes != null) __obj.updateDynamic("postalCodes")(postalCodes.asInstanceOf[js.Any])
+    if (regions != null) __obj.updateDynamic("regions")(regions.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoTargeting]
   }
-  @scala.inline
-  implicit class GeoTargetingOps[Self <: GeoTargeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCities(value: js.Array[City]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountries(value: js.Array[Country]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeCountries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeCountries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeCountries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeCountries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetros(value: js.Array[Metro]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metros")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetros: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metros")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostalCodes(value: js.Array[PostalCode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostalCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegions(value: js.Array[Region]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

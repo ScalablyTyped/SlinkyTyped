@@ -1,13 +1,13 @@
 package typingsSlinky.bpmnModdle.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MessageFlowAssociation extends BaseElement {
-  var innerMessageFlowRef: MessageFlow = js.native
-  var outerMessageFlowRef: MessageFlow = js.native
+  var innerMessageFlowRef: MessageFlow
+  var outerMessageFlowRef: MessageFlow
 }
 
 object MessageFlowAssociation {
@@ -17,30 +17,18 @@ object MessageFlowAssociation {
     $type: ElementType,
     id: String,
     innerMessageFlowRef: MessageFlow,
-    outerMessageFlowRef: MessageFlow
+    outerMessageFlowRef: MessageFlow,
+    $attrs: StringDictionary[js.Any] = null,
+    documentation: js.Array[Documentation] = null,
+    extensionDefinitions: js.Array[ExtensionDefinition] = null,
+    extensionElements: ExtensionElements = null
   ): MessageFlowAssociation = {
     val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], innerMessageFlowRef = innerMessageFlowRef.asInstanceOf[js.Any], outerMessageFlowRef = outerMessageFlowRef.asInstanceOf[js.Any])
+    if ($attrs != null) __obj.updateDynamic("$attrs")($attrs.asInstanceOf[js.Any])
+    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
+    if (extensionDefinitions != null) __obj.updateDynamic("extensionDefinitions")(extensionDefinitions.asInstanceOf[js.Any])
+    if (extensionElements != null) __obj.updateDynamic("extensionElements")(extensionElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageFlowAssociation]
   }
-  @scala.inline
-  implicit class MessageFlowAssociationOps[Self <: MessageFlowAssociation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInnerMessageFlowRef(value: MessageFlow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerMessageFlowRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOuterMessageFlowRef(value: MessageFlow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerMessageFlowRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

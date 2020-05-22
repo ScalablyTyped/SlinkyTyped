@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapValue extends js.Object {
   /**
     * The map's fields.
@@ -15,34 +14,15 @@ trait MapValue extends js.Object {
     * in certain documented contexts. The map keys, represented as UTF-8, must
     * not exceed 1,500 bytes and cannot be empty.
     */
-  var fields: js.UndefOr[Record[String, Value]] = js.native
+  var fields: js.UndefOr[Record[String, Value]] = js.undefined
 }
 
 object MapValue {
   @scala.inline
-  def apply(): MapValue = {
+  def apply(fields: Record[String, Value] = null): MapValue = {
     val __obj = js.Dynamic.literal()
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapValue]
   }
-  @scala.inline
-  implicit class MapValueOps[Self <: MapValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: Record[String, Value]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

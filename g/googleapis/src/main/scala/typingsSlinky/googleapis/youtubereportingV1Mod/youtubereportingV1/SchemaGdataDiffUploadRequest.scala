@@ -25,53 +25,16 @@ trait SchemaGdataDiffUploadRequest extends js.Object {
 
 object SchemaGdataDiffUploadRequest {
   @scala.inline
-  def apply(): SchemaGdataDiffUploadRequest = {
+  def apply(
+    checksumsInfo: SchemaGdataCompositeMedia = null,
+    objectInfo: SchemaGdataCompositeMedia = null,
+    objectVersion: String = null
+  ): SchemaGdataDiffUploadRequest = {
     val __obj = js.Dynamic.literal()
+    if (checksumsInfo != null) __obj.updateDynamic("checksumsInfo")(checksumsInfo.asInstanceOf[js.Any])
+    if (objectInfo != null) __obj.updateDynamic("objectInfo")(objectInfo.asInstanceOf[js.Any])
+    if (objectVersion != null) __obj.updateDynamic("objectVersion")(objectVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGdataDiffUploadRequest]
   }
-  @scala.inline
-  implicit class SchemaGdataDiffUploadRequestOps[Self <: SchemaGdataDiffUploadRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChecksumsInfo(value: SchemaGdataCompositeMedia): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksumsInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecksumsInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksumsInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectInfo(value: SchemaGdataCompositeMedia): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

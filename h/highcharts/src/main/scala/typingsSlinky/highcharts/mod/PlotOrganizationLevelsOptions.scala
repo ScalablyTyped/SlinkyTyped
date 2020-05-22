@@ -4,158 +4,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotOrganizationLevelsOptions extends js.Object {
   /**
     * (Highcharts) Can set `borderColor` on all nodes which lay on the same
     * level.
     */
-  var borderColor: js.UndefOr[ColorString] = js.native
+  var borderColor: js.UndefOr[ColorString] = js.undefined
   /**
     * (Highcharts) Can set `borderWidth` on all nodes which lay on the same
     * level.
     */
-  var borderWidth: js.UndefOr[Double] = js.native
+  var borderWidth: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Can set `color` on all nodes which lay on the same level.
     */
-  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
   /**
     * (Highcharts) Can set `colorByPoint` on all nodes which lay on the same
     * level.
     */
-  var colorByPoint: js.UndefOr[Boolean] = js.native
+  var colorByPoint: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts) Can set `dataLabels` on all points which lay on the same
     * level.
     */
-  var dataLabels: js.UndefOr[SeriesSankeyDataLabelsOptionsObject] = js.native
+  var dataLabels: js.UndefOr[SeriesSankeyDataLabelsOptionsObject] = js.undefined
   /**
     * (Highcharts) Decides which level takes effect from the options set in the
     * levels object.
     */
-  var level: js.UndefOr[Double] = js.native
+  var level: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Can set `linkOpacity` on all points which lay on the same
     * level.
     */
-  var linkOpacity: js.UndefOr[Double] = js.native
+  var linkOpacity: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Can set `states` on all nodes and points which lay on the
     * same level.
     */
-  var states: js.UndefOr[PointStatesOptionsObject] = js.native
+  var states: js.UndefOr[PointStatesOptionsObject] = js.undefined
 }
 
 object PlotOrganizationLevelsOptions {
   @scala.inline
-  def apply(): PlotOrganizationLevelsOptions = {
+  def apply(
+    borderColor: ColorString = null,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    color: ColorString | GradientColorObject | PatternObject = null,
+    colorByPoint: js.UndefOr[Boolean] = js.undefined,
+    dataLabels: SeriesSankeyDataLabelsOptionsObject = null,
+    level: js.UndefOr[Double] = js.undefined,
+    linkOpacity: js.UndefOr[Double] = js.undefined,
+    states: PointStatesOptionsObject = null
+  ): PlotOrganizationLevelsOptions = {
     val __obj = js.Dynamic.literal()
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorByPoint)) __obj.updateDynamic("colorByPoint")(colorByPoint.get.asInstanceOf[js.Any])
+    if (dataLabels != null) __obj.updateDynamic("dataLabels")(dataLabels.asInstanceOf[js.Any])
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(linkOpacity)) __obj.updateDynamic("linkOpacity")(linkOpacity.get.asInstanceOf[js.Any])
+    if (states != null) __obj.updateDynamic("states")(states.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotOrganizationLevelsOptions]
   }
-  @scala.inline
-  implicit class PlotOrganizationLevelsOptionsOps[Self <: PlotOrganizationLevelsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorderColor(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: ColorString | GradientColorObject | PatternObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorByPoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorByPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorByPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorByPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLabels(value: SeriesSankeyDataLabelsOptionsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStates(value: PointStatesOptionsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

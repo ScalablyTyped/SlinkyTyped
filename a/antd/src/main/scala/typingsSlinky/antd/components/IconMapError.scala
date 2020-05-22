@@ -1,21 +1,17 @@
 package typingsSlinky.antd.components
 
-import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.web.html.`*`.tag
-import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.antd.anon.Pickanychildrensizeciteda
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for (/ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_AntdIcon.AntdIconProps * / js.Any) with typingsSlinky.react.mod.RefAttributes[typingsSlinky.std.HTMLSpanElement] because: IArray(Could't extract props from / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_AntdIcon.AntdIconProps * / js.Any because couldn't resolve ClassTree.) */
 object IconMapError {
   @JSImport("antd/lib/result", "IconMap.error")
   @js.native
   object component extends js.Object
   
-  def apply(
-    p: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_AntdIcon.AntdIconProps */ js.Any) with RefAttributes[HTMLSpanElement]
-  ): typingsSlinky.StBuildingComponent.Default[tag.type, js.Object] = new typingsSlinky.StBuildingComponent.Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: IconMapError.type): typingsSlinky.StBuildingComponent.Default[tag.type, js.Object] = new typingsSlinky.StBuildingComponent.Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Pickanychildrensizeciteda): SharedBuilder_Pickanychildrensizeciteda1894765969[Ref[js.Any] with js.Object] = new SharedBuilder_Pickanychildrensizeciteda1894765969[Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: IconMapError.type): SharedBuilder_Pickanychildrensizeciteda1894765969[Ref[js.Any] with js.Object] = new SharedBuilder_Pickanychildrensizeciteda1894765969[Ref[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

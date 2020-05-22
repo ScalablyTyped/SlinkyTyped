@@ -35,7 +35,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.awt.UnoControl
   * @see com.sun.star.awt.UnoControlModel
   */
-@js.native
 trait CheckBox
   extends XControl
      with XWindow

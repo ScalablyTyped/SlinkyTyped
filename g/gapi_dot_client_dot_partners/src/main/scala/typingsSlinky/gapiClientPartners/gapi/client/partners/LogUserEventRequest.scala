@@ -4,121 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LogUserEventRequest extends js.Object {
   /** The action that occurred. */
-  var eventAction: js.UndefOr[String] = js.native
+  var eventAction: js.UndefOr[String] = js.undefined
   /** The category the action belongs to. */
-  var eventCategory: js.UndefOr[String] = js.native
+  var eventCategory: js.UndefOr[String] = js.undefined
   /** List of event data for the event. */
-  var eventDatas: js.UndefOr[js.Array[EventData]] = js.native
+  var eventDatas: js.UndefOr[js.Array[EventData]] = js.undefined
   /** The scope of the event. */
-  var eventScope: js.UndefOr[String] = js.native
+  var eventScope: js.UndefOr[String] = js.undefined
   /** Advertiser lead information. */
-  var lead: js.UndefOr[Lead] = js.native
+  var lead: js.UndefOr[Lead] = js.undefined
   /** Current request metadata. */
-  var requestMetadata: js.UndefOr[RequestMetadata] = js.native
+  var requestMetadata: js.UndefOr[RequestMetadata] = js.undefined
   /** The URL where the event occurred. */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object LogUserEventRequest {
   @scala.inline
-  def apply(): LogUserEventRequest = {
+  def apply(
+    eventAction: String = null,
+    eventCategory: String = null,
+    eventDatas: js.Array[EventData] = null,
+    eventScope: String = null,
+    lead: Lead = null,
+    requestMetadata: RequestMetadata = null,
+    url: String = null
+  ): LogUserEventRequest = {
     val __obj = js.Dynamic.literal()
+    if (eventAction != null) __obj.updateDynamic("eventAction")(eventAction.asInstanceOf[js.Any])
+    if (eventCategory != null) __obj.updateDynamic("eventCategory")(eventCategory.asInstanceOf[js.Any])
+    if (eventDatas != null) __obj.updateDynamic("eventDatas")(eventDatas.asInstanceOf[js.Any])
+    if (eventScope != null) __obj.updateDynamic("eventScope")(eventScope.asInstanceOf[js.Any])
+    if (lead != null) __obj.updateDynamic("lead")(lead.asInstanceOf[js.Any])
+    if (requestMetadata != null) __obj.updateDynamic("requestMetadata")(requestMetadata.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogUserEventRequest]
   }
-  @scala.inline
-  implicit class LogUserEventRequestOps[Self <: LogUserEventRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventDatas(value: js.Array[EventData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventDatas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventDatas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventDatas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLead(value: Lead): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestMetadata(value: RequestMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // compatibility with older typings
-@js.native
 trait Timer extends RefCounted {
-  def hasRef(): Boolean = js.native
-  def refresh(): this.type = js.native
+  def hasRef(): Boolean
+  def refresh(): this.type
 }
 
 object Timer {
@@ -17,25 +16,5 @@ object Timer {
     val __obj = js.Dynamic.literal(hasRef = js.Any.fromFunction0(hasRef), ref = js.Any.fromFunction0(ref), refresh = js.Any.fromFunction0(refresh), unref = js.Any.fromFunction0(unref))
     __obj.asInstanceOf[Timer]
   }
-  @scala.inline
-  implicit class TimerOps[Self <: Timer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasRef(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasRef")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: () => Timer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,36 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceOptions * / any */ @js.native
-trait GeocodeServiceOptions extends js.Object {
-  var supportsSuggest: js.UndefOr[Boolean] = js.native
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceOptions * / any */ trait GeocodeServiceOptions extends js.Object {
+  var supportsSuggest: js.UndefOr[Boolean] = js.undefined
 }
 
 object GeocodeServiceOptions {
   @scala.inline
-  def apply(): GeocodeServiceOptions = {
+  def apply(supportsSuggest: js.UndefOr[Boolean] = js.undefined): GeocodeServiceOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(supportsSuggest)) __obj.updateDynamic("supportsSuggest")(supportsSuggest.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeocodeServiceOptions]
   }
-  @scala.inline
-  implicit class GeocodeServiceOptionsOps[Self <: GeocodeServiceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSupportsSuggest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSuggest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsSuggest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSuggest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

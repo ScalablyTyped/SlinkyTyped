@@ -11,46 +11,19 @@ trait ContainerPolicyState extends js.Object {
     * The name of the container.
     */
   val containerName: js.UndefOr[Input[String]] = js.native
+  /**
+    * The contents of the policy.
+    */
   val policy: js.UndefOr[Input[String]] = js.native
 }
 
 object ContainerPolicyState {
   @scala.inline
-  def apply(): ContainerPolicyState = {
+  def apply(containerName: Input[String] = null, policy: Input[String] = null): ContainerPolicyState = {
     val __obj = js.Dynamic.literal()
+    if (containerName != null) __obj.updateDynamic("containerName")(containerName.asInstanceOf[js.Any])
+    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerPolicyState]
   }
-  @scala.inline
-  implicit class ContainerPolicyStateOps[Self <: ContainerPolicyState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

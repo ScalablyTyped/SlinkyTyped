@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RouterBgp extends js.Object {
   /**
     * Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource.
     * All VPN tunnels that link to this router will have the same local ASN.
     */
-  var asn: js.UndefOr[Double] = js.native
+  var asn: js.UndefOr[Double] = js.undefined
 }
 
 object RouterBgp {
   @scala.inline
-  def apply(): RouterBgp = {
+  def apply(asn: js.UndefOr[Double] = js.undefined): RouterBgp = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(asn)) __obj.updateDynamic("asn")(asn.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouterBgp]
   }
-  @scala.inline
-  implicit class RouterBgpOps[Self <: RouterBgp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

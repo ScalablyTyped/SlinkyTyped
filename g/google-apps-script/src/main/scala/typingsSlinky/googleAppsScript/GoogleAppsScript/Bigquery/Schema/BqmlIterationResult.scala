@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BqmlIterationResult extends js.Object {
-  var durationMs: js.UndefOr[String] = js.native
-  var evalLoss: js.UndefOr[Double] = js.native
-  var index: js.UndefOr[Double] = js.native
-  var learnRate: js.UndefOr[Double] = js.native
-  var trainingLoss: js.UndefOr[Double] = js.native
+  var durationMs: js.UndefOr[String] = js.undefined
+  var evalLoss: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.undefined
+  var learnRate: js.UndefOr[Double] = js.undefined
+  var trainingLoss: js.UndefOr[Double] = js.undefined
 }
 
 object BqmlIterationResult {
   @scala.inline
-  def apply(): BqmlIterationResult = {
+  def apply(
+    durationMs: String = null,
+    evalLoss: js.UndefOr[Double] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    learnRate: js.UndefOr[Double] = js.undefined,
+    trainingLoss: js.UndefOr[Double] = js.undefined
+  ): BqmlIterationResult = {
     val __obj = js.Dynamic.literal()
+    if (durationMs != null) __obj.updateDynamic("durationMs")(durationMs.asInstanceOf[js.Any])
+    if (!js.isUndefined(evalLoss)) __obj.updateDynamic("evalLoss")(evalLoss.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(learnRate)) __obj.updateDynamic("learnRate")(learnRate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trainingLoss)) __obj.updateDynamic("trainingLoss")(trainingLoss.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BqmlIterationResult]
   }
-  @scala.inline
-  implicit class BqmlIterationResultOps[Self <: BqmlIterationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDurationMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvalLoss(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evalLoss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvalLoss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evalLoss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLearnRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("learnRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLearnRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("learnRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrainingLoss(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingLoss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrainingLoss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingLoss")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

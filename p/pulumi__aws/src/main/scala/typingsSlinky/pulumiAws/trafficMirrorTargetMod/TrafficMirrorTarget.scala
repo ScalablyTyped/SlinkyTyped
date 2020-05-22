@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.trafficMirrorTargetMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -34,6 +35,10 @@ class TrafficMirrorTarget protected () extends CustomResource {
     * The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
     */
   val networkLoadBalancerArn: Output_[js.UndefOr[String]] = js.native
+  /**
+    * Key-value mapping of resource tags.
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[_]]] = js.native
 }
 
 /* static members */

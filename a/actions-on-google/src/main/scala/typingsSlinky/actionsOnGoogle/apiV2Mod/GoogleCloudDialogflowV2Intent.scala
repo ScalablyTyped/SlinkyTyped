@@ -4,257 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleCloudDialogflowV2Intent extends js.Object {
-  var action: js.UndefOr[String] = js.native
-  var defaultResponsePlatforms: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentDefaultResponsePlatforms]] = js.native
-  var displayName: js.UndefOr[String] = js.native
-  var events: js.UndefOr[js.Array[String]] = js.native
-  var followupIntentInfo: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentFollowupIntentInfo]] = js.native
-  var inputContextNames: js.UndefOr[js.Array[String]] = js.native
-  var isFallback: js.UndefOr[Boolean] = js.native
-  var messages: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentMessage]] = js.native
-  var mlDisabled: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var outputContexts: js.UndefOr[js.Array[GoogleCloudDialogflowV2Context]] = js.native
-  var parameters: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentParameter]] = js.native
-  var parentFollowupIntentName: js.UndefOr[String] = js.native
-  var priority: js.UndefOr[Double] = js.native
-  var resetContexts: js.UndefOr[Boolean] = js.native
-  var rootFollowupIntentName: js.UndefOr[String] = js.native
-  var trainingPhrases: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentTrainingPhrase]] = js.native
-  var webhookState: js.UndefOr[GoogleCloudDialogflowV2IntentWebhookState] = js.native
+  var action: js.UndefOr[String] = js.undefined
+  var defaultResponsePlatforms: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentDefaultResponsePlatforms]] = js.undefined
+  var displayName: js.UndefOr[String] = js.undefined
+  var events: js.UndefOr[js.Array[String]] = js.undefined
+  var followupIntentInfo: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentFollowupIntentInfo]] = js.undefined
+  var inputContextNames: js.UndefOr[js.Array[String]] = js.undefined
+  var isFallback: js.UndefOr[Boolean] = js.undefined
+  var messages: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentMessage]] = js.undefined
+  var mlDisabled: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var outputContexts: js.UndefOr[js.Array[GoogleCloudDialogflowV2Context]] = js.undefined
+  var parameters: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentParameter]] = js.undefined
+  var parentFollowupIntentName: js.UndefOr[String] = js.undefined
+  var priority: js.UndefOr[Double] = js.undefined
+  var resetContexts: js.UndefOr[Boolean] = js.undefined
+  var rootFollowupIntentName: js.UndefOr[String] = js.undefined
+  var trainingPhrases: js.UndefOr[js.Array[GoogleCloudDialogflowV2IntentTrainingPhrase]] = js.undefined
+  var webhookState: js.UndefOr[GoogleCloudDialogflowV2IntentWebhookState] = js.undefined
 }
 
 object GoogleCloudDialogflowV2Intent {
   @scala.inline
-  def apply(): GoogleCloudDialogflowV2Intent = {
+  def apply(
+    action: String = null,
+    defaultResponsePlatforms: js.Array[GoogleCloudDialogflowV2IntentDefaultResponsePlatforms] = null,
+    displayName: String = null,
+    events: js.Array[String] = null,
+    followupIntentInfo: js.Array[GoogleCloudDialogflowV2IntentFollowupIntentInfo] = null,
+    inputContextNames: js.Array[String] = null,
+    isFallback: js.UndefOr[Boolean] = js.undefined,
+    messages: js.Array[GoogleCloudDialogflowV2IntentMessage] = null,
+    mlDisabled: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    outputContexts: js.Array[GoogleCloudDialogflowV2Context] = null,
+    parameters: js.Array[GoogleCloudDialogflowV2IntentParameter] = null,
+    parentFollowupIntentName: String = null,
+    priority: js.UndefOr[Double] = js.undefined,
+    resetContexts: js.UndefOr[Boolean] = js.undefined,
+    rootFollowupIntentName: String = null,
+    trainingPhrases: js.Array[GoogleCloudDialogflowV2IntentTrainingPhrase] = null,
+    webhookState: GoogleCloudDialogflowV2IntentWebhookState = null
+  ): GoogleCloudDialogflowV2Intent = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (defaultResponsePlatforms != null) __obj.updateDynamic("defaultResponsePlatforms")(defaultResponsePlatforms.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (followupIntentInfo != null) __obj.updateDynamic("followupIntentInfo")(followupIntentInfo.asInstanceOf[js.Any])
+    if (inputContextNames != null) __obj.updateDynamic("inputContextNames")(inputContextNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFallback)) __obj.updateDynamic("isFallback")(isFallback.get.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (!js.isUndefined(mlDisabled)) __obj.updateDynamic("mlDisabled")(mlDisabled.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (outputContexts != null) __obj.updateDynamic("outputContexts")(outputContexts.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (parentFollowupIntentName != null) __obj.updateDynamic("parentFollowupIntentName")(parentFollowupIntentName.asInstanceOf[js.Any])
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resetContexts)) __obj.updateDynamic("resetContexts")(resetContexts.get.asInstanceOf[js.Any])
+    if (rootFollowupIntentName != null) __obj.updateDynamic("rootFollowupIntentName")(rootFollowupIntentName.asInstanceOf[js.Any])
+    if (trainingPhrases != null) __obj.updateDynamic("trainingPhrases")(trainingPhrases.asInstanceOf[js.Any])
+    if (webhookState != null) __obj.updateDynamic("webhookState")(webhookState.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleCloudDialogflowV2Intent]
   }
-  @scala.inline
-  implicit class GoogleCloudDialogflowV2IntentOps[Self <: GoogleCloudDialogflowV2Intent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultResponsePlatforms(value: js.Array[GoogleCloudDialogflowV2IntentDefaultResponsePlatforms]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultResponsePlatforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultResponsePlatforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultResponsePlatforms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowupIntentInfo(value: js.Array[GoogleCloudDialogflowV2IntentFollowupIntentInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followupIntentInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowupIntentInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followupIntentInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputContextNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputContextNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputContextNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputContextNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: js.Array[GoogleCloudDialogflowV2IntentMessage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMlDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mlDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMlDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mlDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputContexts(value: js.Array[GoogleCloudDialogflowV2Context]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputContexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputContexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Array[GoogleCloudDialogflowV2IntentParameter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentFollowupIntentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFollowupIntentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentFollowupIntentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFollowupIntentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetContexts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetContexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetContexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootFollowupIntentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootFollowupIntentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootFollowupIntentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootFollowupIntentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrainingPhrases(value: js.Array[GoogleCloudDialogflowV2IntentTrainingPhrase]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingPhrases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrainingPhrases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingPhrases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebhookState(value: GoogleCloudDialogflowV2IntentWebhookState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebhookState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

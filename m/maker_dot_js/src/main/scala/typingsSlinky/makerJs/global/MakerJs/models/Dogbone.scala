@@ -1,5 +1,6 @@
 package typingsSlinky.makerJs.global.MakerJs.models
 
+import typingsSlinky.makerJs.MakerJs.IPathMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,5 +26,8 @@ class Dogbone protected ()
   def this(width: Double, height: Double, radius: Double) = this()
   def this(width: Double, height: Double, radius: Double, style: Double) = this()
   def this(width: Double, height: Double, radius: Double, style: Double, bottomless: Boolean) = this()
+  /* CompleteClass */
+  @JSName("paths")
+  override var paths_Dogbone: IPathMap = js.native
 }
 

@@ -18,35 +18,10 @@ trait GetDatasetContentRequest extends js.Object {
 
 object GetDatasetContentRequest {
   @scala.inline
-  def apply(datasetName: DatasetName): GetDatasetContentRequest = {
+  def apply(datasetName: DatasetName, versionId: DatasetContentVersion = null): GetDatasetContentRequest = {
     val __obj = js.Dynamic.literal(datasetName = datasetName.asInstanceOf[js.Any])
+    if (versionId != null) __obj.updateDynamic("versionId")(versionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDatasetContentRequest]
   }
-  @scala.inline
-  implicit class GetDatasetContentRequestOps[Self <: GetDatasetContentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatasetName(value: DatasetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: DatasetContentVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

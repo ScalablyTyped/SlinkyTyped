@@ -9,20 +9,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait notification_ extends js.Object {
-  val area: typingsSlinky.ckeditor.CKEDITOR.plugins.notification.area = js.native
-  val duration: Double = js.native
-  val editor: typingsSlinky.ckeditor.CKEDITOR.editor = js.native
-  val element: typingsSlinky.ckeditor.CKEDITOR.dom.element = js.native
-  val id: Double = js.native
-  val message: String = js.native
-  val progress: Double = js.native
-  val `type`: typingsSlinky.ckeditor.CKEDITOR.plugins.notification.`type` = js.native
-  def hide(): Unit = js.native
-  def isVisible(): Boolean = js.native
-  def show(): Unit = js.native
-  def update(options: updateOptions): Unit = js.native
+  val area: typingsSlinky.ckeditor.CKEDITOR.plugins.notification.area
+  val duration: Double
+  val editor: typingsSlinky.ckeditor.CKEDITOR.editor
+  val element: typingsSlinky.ckeditor.CKEDITOR.dom.element
+  val id: Double
+  val message: String
+  val progress: Double
+  val `type`: typingsSlinky.ckeditor.CKEDITOR.plugins.notification.`type`
+  def hide(): Unit
+  def isVisible(): Boolean
+  def show(): Unit
+  def update(options: updateOptions): Unit
 }
 
 object notification_ {
@@ -45,85 +44,5 @@ object notification_ {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[notification_]
   }
-  @scala.inline
-  implicit class notification_Ops[Self <: notification_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArea(value: area): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEditor(value: editor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElement(value: element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProgress(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: `type`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: updateOptions => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

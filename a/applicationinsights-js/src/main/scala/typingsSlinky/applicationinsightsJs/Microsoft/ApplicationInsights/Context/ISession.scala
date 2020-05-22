@@ -4,27 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISession extends js.Object {
   /**
     * The date at which this guid was genereated.
     * Per the spec the ID will be regenerated if more than acquisitionSpan milliseconds ellapse from this time.
     */
-  var acquisitionDate: Double = js.native
+  var acquisitionDate: Double
   /**
     * The session ID.
     */
-  var id: String = js.native
+  var id: String
   /**
     * The true if this is the first session
     */
-  var isFirst: Boolean = js.native
+  var isFirst: Boolean
   /**
     * The date at which this session ID was last reported.
     * This value should be updated whenever telemetry is sent using this ID.
     * Per the spec the ID will be regenerated if more than renewalSpan milliseconds elapse from this time with no activity.
     */
-  var renewalDate: Double = js.native
+  var renewalDate: Double
 }
 
 object ISession {
@@ -33,37 +32,5 @@ object ISession {
     val __obj = js.Dynamic.literal(acquisitionDate = acquisitionDate.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isFirst = isFirst.asInstanceOf[js.Any], renewalDate = renewalDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISession]
   }
-  @scala.inline
-  implicit class ISessionOps[Self <: ISession] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcquisitionDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquisitionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsFirst(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFirst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenewalDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renewalDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

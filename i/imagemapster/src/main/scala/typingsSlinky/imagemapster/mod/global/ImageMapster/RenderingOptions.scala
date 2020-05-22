@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RenderingOptions extends js.Object {
   /**
     * Use an alternate image of the same size as the imagemap as the
@@ -27,39 +26,39 @@ trait RenderingOptions extends js.Object {
     * fill/stroke effect, which may be different from when you're using an
     * alternate image.
     */
-  var altImage: js.UndefOr[String] = js.native
-  var altImageFill: js.UndefOr[Boolean] = js.native
-  var altImageOpacity: js.UndefOr[Double] = js.native
-  var altImageStroke: js.UndefOr[Boolean] = js.native
+  var altImage: js.UndefOr[String] = js.undefined
+  var altImageFill: js.UndefOr[Boolean] = js.undefined
+  var altImageOpacity: js.UndefOr[Double] = js.undefined
+  var altImageStroke: js.UndefOr[Boolean] = js.undefined
   /**
     * fade effect - can only be applied to "render_highlight".
     *
     * Use a fade effect when highlighting areas on mouseover.
     */
-  var fade: js.UndefOr[Boolean] = js.native
+  var fade: js.UndefOr[Boolean] = js.undefined
   /**
     * The duration of the fade-in effect, in milliseconds.
     */
-  var fadeDuration: js.UndefOr[Double] = js.native
+  var fadeDuration: js.UndefOr[Double] = js.undefined
   /**
     * Areas should be flood-filled when moused over or highlighted.
     */
-  var fill: js.UndefOr[Boolean] = js.native
+  var fill: js.UndefOr[Boolean] = js.undefined
   /**
     * The color used for flood fill.
     */
-  var fillColor: js.UndefOr[String] = js.native
-  var fillColorMask: js.UndefOr[String] = js.native
+  var fillColor: js.UndefOr[String] = js.undefined
+  var fillColorMask: js.UndefOr[String] = js.undefined
   /**
     * The opacity of the fill. This is a number from 0 to 1.
     */
-  var fillOpacity: js.UndefOr[Double] = js.native
+  var fillOpacity: js.UndefOr[Double] = js.undefined
   /**
     * highlight areas on mouseover. When null (default), the behavior is
     * disabled for mobile browsers. You can explicitly enable or disable
     * it by setting this option to a boolean value.
     */
-  var highlight: js.UndefOr[Boolean] = js.native
+  var highlight: js.UndefOr[Boolean] = js.undefined
   /**
     * the map or area on the map can be deselected.
     *
@@ -71,7 +70,7 @@ trait RenderingOptions extends js.Object {
     * items to be selected if this is the default state (or the only
     * selected item is deselected programatically).
     */
-  var isDeselectable: js.UndefOr[Boolean] = js.native
+  var isDeselectable: js.UndefOr[Boolean] = js.undefined
   /**
     * the map or an area on the map can be selected (or deselected).
     *
@@ -82,7 +81,7 @@ trait RenderingOptions extends js.Object {
     * whether that individual area (or group) can be selected. By default,
     * the map and all areas are selectable.
     */
-  var isSelectable: js.UndefOr[Boolean] = js.native
+  var isSelectable: js.UndefOr[Boolean] = js.undefined
   /**
     * The options below control the way highlighted areas are rendered.
     * Each can be applied globally to the map, or to each element, using
@@ -94,8 +93,8 @@ trait RenderingOptions extends js.Object {
     * object. They can also be applied to one or the other situations
     * specifically using the render_highlight and render_select options.
     */
-  var render_highlight: js.UndefOr[String | RenderingOptions] = js.native
-  var render_select: js.UndefOr[String | RenderingOptions] = js.native
+  var render_highlight: js.UndefOr[String | RenderingOptions] = js.undefined
+  var render_select: js.UndefOr[String | RenderingOptions] = js.undefined
   /**
     * initial selection state of an area.
     *
@@ -103,7 +102,7 @@ trait RenderingOptions extends js.Object {
     * creating a new mapster, use this option for a specific area (see
     * above).
     */
-  var selected: js.UndefOr[Boolean] = js.native
+  var selected: js.UndefOr[Boolean] = js.undefined
   /**
     * only one area can be selected at a time
     *
@@ -114,7 +113,7 @@ trait RenderingOptions extends js.Object {
     * programatically, only one (or zero) areas can ever be selected when
     * this option is true.
     */
-  var singleSelect: js.UndefOr[Boolean] = js.native
+  var singleSelect: js.UndefOr[Boolean] = js.undefined
   /**
     * the map or area is permanently in a selected or deselected state.
     *
@@ -129,302 +128,75 @@ trait RenderingOptions extends js.Object {
     * Note that when setting states programatically, this option will not
     * be honored; it only affects user interaction.
     */
-  var staticState: js.UndefOr[Boolean] = js.native
+  var staticState: js.UndefOr[Boolean] = js.undefined
   /**
     * Areas should be outlined when moused over or highlighted.
     */
-  var stroke: js.UndefOr[Boolean] = js.native
+  var stroke: js.UndefOr[Boolean] = js.undefined
   /**
     * The color of the outline.
     */
-  var strokeColor: js.UndefOr[String] = js.native
+  var strokeColor: js.UndefOr[String] = js.undefined
   /**
     * The opacity of the outline.
     */
-  var strokeOpacity: js.UndefOr[Double] = js.native
+  var strokeOpacity: js.UndefOr[Double] = js.undefined
   /**
     * The width of the outline.
     */
-  var strokeWidth: js.UndefOr[Double] = js.native
+  var strokeWidth: js.UndefOr[Double] = js.undefined
 }
 
 object RenderingOptions {
   @scala.inline
-  def apply(): RenderingOptions = {
+  def apply(
+    altImage: String = null,
+    altImageFill: js.UndefOr[Boolean] = js.undefined,
+    altImageOpacity: js.UndefOr[Double] = js.undefined,
+    altImageStroke: js.UndefOr[Boolean] = js.undefined,
+    fade: js.UndefOr[Boolean] = js.undefined,
+    fadeDuration: js.UndefOr[Double] = js.undefined,
+    fill: js.UndefOr[Boolean] = js.undefined,
+    fillColor: String = null,
+    fillColorMask: String = null,
+    fillOpacity: js.UndefOr[Double] = js.undefined,
+    highlight: js.UndefOr[Boolean] = js.undefined,
+    isDeselectable: js.UndefOr[Boolean] = js.undefined,
+    isSelectable: js.UndefOr[Boolean] = js.undefined,
+    render_highlight: String | RenderingOptions = null,
+    render_select: String | RenderingOptions = null,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    singleSelect: js.UndefOr[Boolean] = js.undefined,
+    staticState: js.UndefOr[Boolean] = js.undefined,
+    stroke: js.UndefOr[Boolean] = js.undefined,
+    strokeColor: String = null,
+    strokeOpacity: js.UndefOr[Double] = js.undefined,
+    strokeWidth: js.UndefOr[Double] = js.undefined
+  ): RenderingOptions = {
     val __obj = js.Dynamic.literal()
+    if (altImage != null) __obj.updateDynamic("altImage")(altImage.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageFill)) __obj.updateDynamic("altImageFill")(altImageFill.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageOpacity)) __obj.updateDynamic("altImageOpacity")(altImageOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageStroke)) __obj.updateDynamic("altImageStroke")(altImageStroke.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fade)) __obj.updateDynamic("fade")(fade.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fadeDuration)) __obj.updateDynamic("fadeDuration")(fadeDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.get.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (fillColorMask != null) __obj.updateDynamic("fillColorMask")(fillColorMask.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillOpacity)) __obj.updateDynamic("fillOpacity")(fillOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlight)) __obj.updateDynamic("highlight")(highlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDeselectable)) __obj.updateDynamic("isDeselectable")(isDeselectable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSelectable)) __obj.updateDynamic("isSelectable")(isSelectable.get.asInstanceOf[js.Any])
+    if (render_highlight != null) __obj.updateDynamic("render_highlight")(render_highlight.asInstanceOf[js.Any])
+    if (render_select != null) __obj.updateDynamic("render_select")(render_select.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleSelect)) __obj.updateDynamic("singleSelect")(singleSelect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(staticState)) __obj.updateDynamic("staticState")(staticState.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stroke)) __obj.updateDynamic("stroke")(stroke.get.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeOpacity)) __obj.updateDynamic("strokeOpacity")(strokeOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeWidth)) __obj.updateDynamic("strokeWidth")(strokeWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenderingOptions]
   }
-  @scala.inline
-  implicit class RenderingOptionsOps[Self <: RenderingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAltImageFill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altImageFill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltImageFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altImageFill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAltImageOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altImageOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltImageOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altImageOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAltImageStroke(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altImageStroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltImageStroke: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altImageStroke")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFadeDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fadeDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFadeDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fadeDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillColorMask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColorMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillColorMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColorMask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDeselectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeselectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDeselectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeselectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSelectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSelectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRender_highlight(value: String | RenderingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render_highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRender_highlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render_highlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRender_select(value: String | RenderingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render_select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRender_select: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render_select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStroke(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStroke: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

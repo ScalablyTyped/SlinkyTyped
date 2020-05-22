@@ -1,7 +1,5 @@
 package typingsSlinky.grpc.mod
 
-import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.node.anon.End
 import typingsSlinky.node.streamMod.Duplex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,9 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("grpc", "ClientDuplexStream")
 @js.native
-class ClientDuplexStream[RequestType, ResponseType] protected ()
-  extends Duplex
-     with Call {
+class ClientDuplexStream[RequestType, ResponseType] protected () extends Duplex {
   /**
     * Cancel the ongoing call. Results in the call ending with a CANCELLED status,
     * unless it has already ended with some other status.
@@ -22,10 +18,6 @@ class ClientDuplexStream[RequestType, ResponseType] protected ()
     * @return The URI of the endpoint
     */
   def getPeer(): String = js.native
-  /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T): T = js.native
-  /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   /**
     * Write a message to the request stream. If serializing the argument fails,
     * the call will be cancelled and the stream will end with an error.

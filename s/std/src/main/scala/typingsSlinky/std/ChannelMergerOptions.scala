@@ -4,36 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChannelMergerOptions extends AudioNodeOptions {
-  var numberOfInputs: js.UndefOr[Double] = js.native
+  var numberOfInputs: js.UndefOr[Double] = js.undefined
 }
 
 object ChannelMergerOptions {
   @scala.inline
-  def apply(): ChannelMergerOptions = {
+  def apply(
+    channelCount: js.UndefOr[Double] = js.undefined,
+    channelCountMode: ChannelCountMode = null,
+    channelInterpretation: ChannelInterpretation = null,
+    numberOfInputs: js.UndefOr[Double] = js.undefined
+  ): ChannelMergerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(channelCount)) __obj.updateDynamic("channelCount")(channelCount.get.asInstanceOf[js.Any])
+    if (channelCountMode != null) __obj.updateDynamic("channelCountMode")(channelCountMode.asInstanceOf[js.Any])
+    if (channelInterpretation != null) __obj.updateDynamic("channelInterpretation")(channelInterpretation.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfInputs)) __obj.updateDynamic("numberOfInputs")(numberOfInputs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelMergerOptions]
   }
-  @scala.inline
-  implicit class ChannelMergerOptionsOps[Self <: ChannelMergerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumberOfInputs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfInputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfInputs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,4 +12,6 @@ package object mod {
     /* target */ js.UndefOr[typingsSlinky.httpProxy.mod.ProxyTargetUrl], 
     scala.Unit
   ]
+  type ProxyTarget = typingsSlinky.httpProxy.mod.ProxyTargetUrl | typingsSlinky.httpProxy.mod.ProxyTargetDetailed
+  type ProxyTargetUrl = java.lang.String | typingsSlinky.httpProxy.anon.PartialUrl
 }

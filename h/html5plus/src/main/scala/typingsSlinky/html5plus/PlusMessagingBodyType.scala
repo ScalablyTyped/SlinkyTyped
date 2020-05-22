@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/messaging.html](http://www.html5plus.org/doc/zh_cn/messaging.html)
   */
-@js.native
 trait PlusMessagingBodyType extends js.Object {
   /**
     * Html类型
@@ -19,7 +18,7 @@ trait PlusMessagingBodyType extends js.Object {
     * 参考: [http://www.html5plus.org/doc/zh_cn/messaging.html](http://www.html5plus.org/doc/zh_cn/messaging.html)
     */
   @JSName("text/html")
-  var textSlashhtml: js.UndefOr[String] = js.native
+  var textSlashhtml: js.UndefOr[String] = js.undefined
   /**
     * 文本类型
     * 纯文本类型消息体内容，默认消息体内容类型。
@@ -27,46 +26,16 @@ trait PlusMessagingBodyType extends js.Object {
     * 参考: [http://www.html5plus.org/doc/zh_cn/messaging.html](http://www.html5plus.org/doc/zh_cn/messaging.html)
     */
   @JSName("text/plain")
-  var textSlashplain: js.UndefOr[String] = js.native
+  var textSlashplain: js.UndefOr[String] = js.undefined
 }
 
 object PlusMessagingBodyType {
   @scala.inline
-  def apply(): PlusMessagingBodyType = {
+  def apply(textSlashhtml: String = null, textSlashplain: String = null): PlusMessagingBodyType = {
     val __obj = js.Dynamic.literal()
+    if (textSlashhtml != null) __obj.updateDynamic("text/html")(textSlashhtml.asInstanceOf[js.Any])
+    if (textSlashplain != null) __obj.updateDynamic("text/plain")(textSlashplain.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusMessagingBodyType]
   }
-  @scala.inline
-  implicit class PlusMessagingBodyTypeOps[Self <: PlusMessagingBodyType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTextSlashhtml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text/html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextSlashhtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text/html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextSlashplain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text/plain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextSlashplain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text/plain")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

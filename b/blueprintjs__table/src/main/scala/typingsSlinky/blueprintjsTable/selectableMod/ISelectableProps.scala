@@ -3,13 +3,12 @@ package typingsSlinky.blueprintjsTable.selectableMod
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.blueprintjsTable.commonCellMod.IFocusedCellCoordinates
-import typingsSlinky.blueprintjsTable.draggableMod.ICoordinateData
+import typingsSlinky.blueprintjsTable.dragTypesMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISelectableProps extends js.Object {
   /**
     * If `false`, only a single region of a single column/row/cell may be
@@ -17,17 +16,17 @@ trait ISelectableProps extends js.Object {
     * and a mouse drag will select the current column/row/cell only.
     * @default false
     */
-  var enableMultipleSelection: js.UndefOr[Boolean] = js.native
+  var enableMultipleSelection: js.UndefOr[Boolean] = js.undefined
   /**
     * The currently focused cell.
     */
-  var focusedCell: js.UndefOr[IFocusedCellCoordinates] = js.native
+  var focusedCell: js.UndefOr[IFocusedCellCoordinates] = js.undefined
   /**
     * An additional convenience callback invoked when the user releases the
     * mouse from either a click or a drag, indicating that the selection
     * interaction has ended.
     */
-  var onSelectionEnd: js.UndefOr[js.Function1[/* regions */ js.Array[IRegion], Unit]] = js.native
+  var onSelectionEnd: js.UndefOr[js.Function1[/* regions */ js.Array[IRegion], Unit]] = js.undefined
   /**
     * An optional transform function that will be applied to the located
     * `Region`.
@@ -36,113 +35,44 @@ trait ISelectableProps extends js.Object {
     * `Region`s while maintaining the existing multi-select and meta-click
     * functionality.
     */
-  var selectedRegionTransform: js.UndefOr[ISelectedRegionTransform] = js.native
+  var selectedRegionTransform: js.UndefOr[ISelectedRegionTransform] = js.undefined
   /**
     * An array containing the table's selection Regions.
     * @default []
     */
-  var selectedRegions: js.UndefOr[js.Array[IRegion]] = js.native
+  var selectedRegions: js.UndefOr[js.Array[IRegion]] = js.undefined
   /**
     * When the user focuses something, this callback is called with new
     * focused cell coordinates. This should be considered the new focused cell
     * state for the entire table.
     */
-  def onFocusedCell(focusedCell: IFocusedCellCoordinates): Unit = js.native
+  def onFocusedCell(focusedCell: IFocusedCellCoordinates): Unit
   /**
     * When the user selects something, this callback is called with a new
     * array of `Region`s. This array should be considered the new selection
     * state for the entire table.
     */
-  def onSelection(regions: js.Array[IRegion]): Unit = js.native
+  def onSelection(regions: js.Array[IRegion]): Unit
 }
 
 object ISelectableProps {
   @scala.inline
-  def apply(onFocusedCell: IFocusedCellCoordinates => Unit, onSelection: js.Array[IRegion] => Unit): ISelectableProps = {
+  def apply(
+    onFocusedCell: IFocusedCellCoordinates => Unit,
+    onSelection: js.Array[IRegion] => Unit,
+    enableMultipleSelection: js.UndefOr[Boolean] = js.undefined,
+    focusedCell: IFocusedCellCoordinates = null,
+    onSelectionEnd: /* regions */ js.Array[IRegion] => Unit = null,
+    selectedRegionTransform: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion = null,
+    selectedRegions: js.Array[IRegion] = null
+  ): ISelectableProps = {
     val __obj = js.Dynamic.literal(onFocusedCell = js.Any.fromFunction1(onFocusedCell), onSelection = js.Any.fromFunction1(onSelection))
+    if (!js.isUndefined(enableMultipleSelection)) __obj.updateDynamic("enableMultipleSelection")(enableMultipleSelection.get.asInstanceOf[js.Any])
+    if (focusedCell != null) __obj.updateDynamic("focusedCell")(focusedCell.asInstanceOf[js.Any])
+    if (onSelectionEnd != null) __obj.updateDynamic("onSelectionEnd")(js.Any.fromFunction1(onSelectionEnd))
+    if (selectedRegionTransform != null) __obj.updateDynamic("selectedRegionTransform")(js.Any.fromFunction3(selectedRegionTransform))
+    if (selectedRegions != null) __obj.updateDynamic("selectedRegions")(selectedRegions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISelectableProps]
   }
-  @scala.inline
-  implicit class ISelectablePropsOps[Self <: ISelectableProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnFocusedCell(value: IFocusedCellCoordinates => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCell")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnSelection(value: js.Array[IRegion] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEnableMultipleSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMultipleSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableMultipleSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMultipleSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusedCell(value: IFocusedCellCoordinates): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusedCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectionEnd(value: /* regions */ js.Array[IRegion] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectionEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedRegionTransform(
-      value: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRegionTransform")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelectedRegionTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRegionTransform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedRegions(value: js.Array[IRegion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRegions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRegions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

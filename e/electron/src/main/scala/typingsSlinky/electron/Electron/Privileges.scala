@@ -4,119 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Privileges extends js.Object {
   /**
     * Default false.
     */
-  var allowServiceWorkers: js.UndefOr[Boolean] = js.native
+  var allowServiceWorkers: js.UndefOr[Boolean] = js.undefined
   /**
     * Default false.
     */
-  var bypassCSP: js.UndefOr[Boolean] = js.native
+  var bypassCSP: js.UndefOr[Boolean] = js.undefined
   /**
     * Default false.
     */
-  var corsEnabled: js.UndefOr[Boolean] = js.native
+  var corsEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Default false.
     */
-  var secure: js.UndefOr[Boolean] = js.native
+  var secure: js.UndefOr[Boolean] = js.undefined
   /**
     * Default false.
     */
-  var standard: js.UndefOr[Boolean] = js.native
+  var standard: js.UndefOr[Boolean] = js.undefined
   /**
     * Default false.
     */
-  var supportFetchAPI: js.UndefOr[Boolean] = js.native
+  var supportFetchAPI: js.UndefOr[Boolean] = js.undefined
 }
 
 object Privileges {
   @scala.inline
-  def apply(): Privileges = {
+  def apply(
+    allowServiceWorkers: js.UndefOr[Boolean] = js.undefined,
+    bypassCSP: js.UndefOr[Boolean] = js.undefined,
+    corsEnabled: js.UndefOr[Boolean] = js.undefined,
+    secure: js.UndefOr[Boolean] = js.undefined,
+    standard: js.UndefOr[Boolean] = js.undefined,
+    supportFetchAPI: js.UndefOr[Boolean] = js.undefined
+  ): Privileges = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowServiceWorkers)) __obj.updateDynamic("allowServiceWorkers")(allowServiceWorkers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bypassCSP)) __obj.updateDynamic("bypassCSP")(bypassCSP.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(corsEnabled)) __obj.updateDynamic("corsEnabled")(corsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(standard)) __obj.updateDynamic("standard")(standard.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(supportFetchAPI)) __obj.updateDynamic("supportFetchAPI")(supportFetchAPI.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Privileges]
   }
-  @scala.inline
-  implicit class PrivilegesOps[Self <: Privileges] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowServiceWorkers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowServiceWorkers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowServiceWorkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowServiceWorkers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBypassCSP(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassCSP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBypassCSP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassCSP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCorsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("corsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCorsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("corsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportFetchAPI(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportFetchAPI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportFetchAPI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportFetchAPI")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,128 +7,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataProvider extends ClientControl {
-  def add_queryIssuing(value: js.Any): Unit = js.native
-  def add_queryStateChanged(value: js.Any): Unit = js.native
-  def add_resultReady(value: js.Any): Unit = js.native
-  def displayControlMessages(): Unit = js.native
-  def displayControl_QueryReady(sender: js.Any, e: js.Any): Unit = js.native
-  def getSortName(): String = js.native
-  def getSortRankName(): String = js.native
-  def get_active(): Boolean = js.native
-  def get_availableSorts(): js.Any = js.native
-  def get_batched(): Boolean = js.native
-  def get_bypassResultTypes(): Boolean = js.native
-  def get_clientType(): String = js.native
-  def get_collapseSpecification(): String = js.native
-  def get_contextualScopeUrl(): String = js.native
-  def get_currentQueryState(): js.Any = js.native
-  def get_desiredSnippetLength(): Double = js.native
-  def get_effectiveQueryLanguage(): js.Any = js.native
-  def get_enableInterleaving(): Boolean = js.native
-  def get_enableNicknames(): Boolean = js.native
-  def get_enableOrderingHitHighlightedProperty(): Boolean = js.native
-  def get_enablePhonetic(): Boolean = js.native
-  def get_enableQueryRules(): Boolean = js.native
-  def get_enableStemming(): Boolean = js.native
-  def get_entityInfo(): js.Any = js.native
-  def get_fallbackLanguage(): js.Any = js.native
-  def get_fallbackRankingModelID(): String = js.native
-  def get_fallbackRefinementFilters(): js.Any = js.native
-  def get_fallbackSort(): js.Any = js.native
-  def get_hitHighlightedMultivaluePropertyLimit(): Double = js.native
-  def get_hitHighlightedProperties(): js.Any = js.native
-  def get_initialQueryState(): js.Any = js.native
-  def get_initialResult(): String = js.native
-  def get_initialResultObject(): js.Any = js.native
-  def get_initialResultRef(): js.Any = js.native
-  def get_maxPagesAfterCurrent(): Double = js.native
-  def get_parentImpressionID(): js.Any = js.native
-  def get_personalizedQuery(): Boolean = js.native
-  def get_processBestBets(): Boolean = js.native
-  def get_processPersonalFavorites(): Boolean = js.native
-  def get_properties(): js.Any = js.native
-  def get_queryCount(): Double = js.native
-  def get_queryGroupName(): String = js.native
-  def get_queryPropertiesTemplateUrl(): String = js.native
-  def get_queryTemplate(): js.Any = js.native
-  def get_rankRules(): js.Any = js.native
-  def get_refinementInfo(): StringDictionary[js.Array[RefinementInfo]] = js.native
+  def add_queryIssuing(value: js.Any): Unit
+  def add_queryStateChanged(value: js.Any): Unit
+  def add_resultReady(value: js.Any): Unit
+  def displayControlMessages(): Unit
+  def displayControl_QueryReady(sender: js.Any, e: js.Any): Unit
+  def getSortName(): String
+  def getSortRankName(): String
+  def get_active(): Boolean
+  def get_availableSorts(): js.Any
+  def get_batched(): Boolean
+  def get_bypassResultTypes(): Boolean
+  def get_clientType(): String
+  def get_collapseSpecification(): String
+  def get_contextualScopeUrl(): String
+  def get_currentQueryState(): js.Any
+  def get_desiredSnippetLength(): Double
+  def get_effectiveQueryLanguage(): js.Any
+  def get_enableInterleaving(): Boolean
+  def get_enableNicknames(): Boolean
+  def get_enableOrderingHitHighlightedProperty(): Boolean
+  def get_enablePhonetic(): Boolean
+  def get_enableQueryRules(): Boolean
+  def get_enableStemming(): Boolean
+  def get_entityInfo(): js.Any
+  def get_fallbackLanguage(): js.Any
+  def get_fallbackRankingModelID(): String
+  def get_fallbackRefinementFilters(): js.Any
+  def get_fallbackSort(): js.Any
+  def get_hitHighlightedMultivaluePropertyLimit(): Double
+  def get_hitHighlightedProperties(): js.Any
+  def get_initialQueryState(): js.Any
+  def get_initialResult(): String
+  def get_initialResultObject(): js.Any
+  def get_initialResultRef(): js.Any
+  def get_maxPagesAfterCurrent(): Double
+  def get_parentImpressionID(): js.Any
+  def get_personalizedQuery(): Boolean
+  def get_processBestBets(): Boolean
+  def get_processPersonalFavorites(): Boolean
+  def get_properties(): js.Any
+  def get_queryCount(): Double
+  def get_queryGroupName(): String
+  def get_queryPropertiesTemplateUrl(): String
+  def get_queryTemplate(): js.Any
+  def get_rankRules(): js.Any
+  def get_refinementInfo(): StringDictionary[js.Array[RefinementInfo]]
   /** Number of results displayed per page. 10 by default */
-  def get_resultsPerPage(): Double = js.native
-  def get_resultsUrl(): js.Any = js.native
-  def get_rowCount(): Double = js.native
-  def get_selectedProperties(): js.Any = js.native
-  def get_selectedRefiners(): js.Any = js.native
-  def get_sourceID(): String = js.native
-  def get_sourceLevel(): String = js.native
-  def get_sourceName(): String = js.native
-  def get_summaryLength(): Double = js.native
-  def get_totalRows(): Double = js.native
-  def get_trimDuplicates(): Boolean = js.native
-  def get_upScopeUrl(): js.Any = js.native
-  def get_updateAjaxNavigate(): Boolean = js.native
-  def get_userAction(): js.Any = js.native
-  def issueQuery(): Unit = js.native
-  def processInitial(): Unit = js.native
-  def raiseEmptyResultReadyEvent(): Unit = js.native
-  def raiseQueryIssuingEvent(arg: js.Any): Unit = js.native
-  def raiseQueryStateChangedEvent(arg: js.Any): Unit = js.native
-  def raiseResultReadyEvent(arg: js.Any): Unit = js.native
-  def remove_queryIssuing(value: js.Any): Unit = js.native
-  def remove_resultReady(value: js.Any): Unit = js.native
-  def searchBox_BatchQueryIssuing(sender: js.Any, e: js.Any): Unit = js.native
-  def searchBox_BatchResultReady(sender: js.Any, e: js.Any): Unit = js.native
-  def searchBox_QueryReady(sender: js.Any, e: js.Any): Unit = js.native
-  def set_active(value: Boolean): Boolean = js.native
-  def set_availableSorts(value: js.Any): js.Any = js.native
-  def set_batched(value: Boolean): Boolean = js.native
-  def set_bypassResultTypes(value: Boolean): Boolean = js.native
-  def set_clientType(value: String): String = js.native
-  def set_collapseSpecification(value: String): String = js.native
-  def set_contextualScopeUrl(value: String): String = js.native
-  def set_desiredSnippetLength(value: Double): Double = js.native
-  def set_enableInterleaving(value: Boolean): Boolean = js.native
-  def set_enableNicknames(value: Boolean): Boolean = js.native
-  def set_enableOrderingHitHighlightedProperty(value: Boolean): Boolean = js.native
-  def set_enablePhonetic(value: Boolean): Boolean = js.native
-  def set_enableQueryRules(value: Boolean): Boolean = js.native
-  def set_enableStemming(value: Boolean): Boolean = js.native
-  def set_fallbackLanguage(value: js.Any): js.Any = js.native
-  def set_fallbackRankingModelID(value: String): String = js.native
-  def set_fallbackRefinementFilters(value: js.Any): js.Any = js.native
-  def set_fallbackSort(value: js.Any): js.Any = js.native
-  def set_hitHighlightedMultivaluePropertyLimit(value: Double): Double = js.native
-  def set_hitHighlightedProperties(value: js.Any): js.Any = js.native
-  def set_initialQueryState(value: js.Any): js.Any = js.native
-  def set_initialResult(value: String): String = js.native
-  def set_initialResultRef(value: js.Any): js.Any = js.native
-  def set_maxPagesAfterCurrent(value: Double): Double = js.native
-  def set_parentImpressionID(value: js.Any): js.Any = js.native
-  def set_personalizedQuery(value: Boolean): Boolean = js.native
-  def set_processBestBets(value: Boolean): Boolean = js.native
-  def set_processPersonalFavorites(value: Boolean): Boolean = js.native
-  def set_properties(value: js.Any): js.Any = js.native
-  def set_queryCount(value: Double): Double = js.native
-  def set_queryGroupName(value: String): String = js.native
-  def set_queryPropertiesTemplateUrl(value: String): String = js.native
-  def set_queryTemplate(value: js.Any): js.Any = js.native
-  def set_rankRules(value: js.Any): js.Any = js.native
+  def get_resultsPerPage(): Double
+  def get_resultsUrl(): js.Any
+  def get_rowCount(): Double
+  def get_selectedProperties(): js.Any
+  def get_selectedRefiners(): js.Any
+  def get_sourceID(): String
+  def get_sourceLevel(): String
+  def get_sourceName(): String
+  def get_summaryLength(): Double
+  def get_totalRows(): Double
+  def get_trimDuplicates(): Boolean
+  def get_upScopeUrl(): js.Any
+  def get_updateAjaxNavigate(): Boolean
+  def get_userAction(): js.Any
+  def issueQuery(): Unit
+  def processInitial(): Unit
+  def raiseEmptyResultReadyEvent(): Unit
+  def raiseQueryIssuingEvent(arg: js.Any): Unit
+  def raiseQueryStateChangedEvent(arg: js.Any): Unit
+  def raiseResultReadyEvent(arg: js.Any): Unit
+  def remove_queryIssuing(value: js.Any): Unit
+  def remove_resultReady(value: js.Any): Unit
+  def searchBox_BatchQueryIssuing(sender: js.Any, e: js.Any): Unit
+  def searchBox_BatchResultReady(sender: js.Any, e: js.Any): Unit
+  def searchBox_QueryReady(sender: js.Any, e: js.Any): Unit
+  def set_active(value: Boolean): Boolean
+  def set_availableSorts(value: js.Any): js.Any
+  def set_batched(value: Boolean): Boolean
+  def set_bypassResultTypes(value: Boolean): Boolean
+  def set_clientType(value: String): String
+  def set_collapseSpecification(value: String): String
+  def set_contextualScopeUrl(value: String): String
+  def set_desiredSnippetLength(value: Double): Double
+  def set_enableInterleaving(value: Boolean): Boolean
+  def set_enableNicknames(value: Boolean): Boolean
+  def set_enableOrderingHitHighlightedProperty(value: Boolean): Boolean
+  def set_enablePhonetic(value: Boolean): Boolean
+  def set_enableQueryRules(value: Boolean): Boolean
+  def set_enableStemming(value: Boolean): Boolean
+  def set_fallbackLanguage(value: js.Any): js.Any
+  def set_fallbackRankingModelID(value: String): String
+  def set_fallbackRefinementFilters(value: js.Any): js.Any
+  def set_fallbackSort(value: js.Any): js.Any
+  def set_hitHighlightedMultivaluePropertyLimit(value: Double): Double
+  def set_hitHighlightedProperties(value: js.Any): js.Any
+  def set_initialQueryState(value: js.Any): js.Any
+  def set_initialResult(value: String): String
+  def set_initialResultRef(value: js.Any): js.Any
+  def set_maxPagesAfterCurrent(value: Double): Double
+  def set_parentImpressionID(value: js.Any): js.Any
+  def set_personalizedQuery(value: Boolean): Boolean
+  def set_processBestBets(value: Boolean): Boolean
+  def set_processPersonalFavorites(value: Boolean): Boolean
+  def set_properties(value: js.Any): js.Any
+  def set_queryCount(value: Double): Double
+  def set_queryGroupName(value: String): String
+  def set_queryPropertiesTemplateUrl(value: String): String
+  def set_queryTemplate(value: js.Any): js.Any
+  def set_rankRules(value: js.Any): js.Any
   /** Number of results displayed per page. 10 by default */
-  def set_resultsPerPage(value: Double): Double = js.native
-  def set_resultsUrl(value: js.Any): js.Any = js.native
-  def set_rowCount(value: Double): Double = js.native
-  def set_selectedProperties(value: js.Any): js.Any = js.native
-  def set_selectedRefiners(value: js.Any): js.Any = js.native
-  def set_sourceID(value: String): String = js.native
-  def set_sourceLevel(value: String): String = js.native
-  def set_sourceName(value: String): String = js.native
-  def set_summaryLength(value: Double): Double = js.native
-  def set_totalRows(value: Double): Double = js.native
-  def set_trimDuplicates(value: Boolean): Boolean = js.native
-  def set_updateAjaxNavigate(value: Boolean): Boolean = js.native
-  def set_userAction(value: js.Any): js.Any = js.native
+  def set_resultsPerPage(value: Double): Double
+  def set_resultsUrl(value: js.Any): js.Any
+  def set_rowCount(value: Double): Double
+  def set_selectedProperties(value: js.Any): js.Any
+  def set_selectedRefiners(value: js.Any): js.Any
+  def set_sourceID(value: String): String
+  def set_sourceLevel(value: String): String
+  def set_sourceName(value: String): String
+  def set_summaryLength(value: Double): Double
+  def set_totalRows(value: Double): Double
+  def set_trimDuplicates(value: Boolean): Boolean
+  def set_updateAjaxNavigate(value: Boolean): Boolean
+  def set_userAction(value: js.Any): js.Any
 }
 
 object DataProvider {
@@ -311,721 +310,5 @@ object DataProvider {
     val __obj = js.Dynamic.literal(addCssClass = js.Any.fromFunction1(addCssClass), add_disposing = js.Any.fromFunction1(add_disposing), add_propertyChanged = js.Any.fromFunction1(add_propertyChanged), add_queryIssuing = js.Any.fromFunction1(add_queryIssuing), add_queryStateChanged = js.Any.fromFunction1(add_queryStateChanged), add_resultReady = js.Any.fromFunction1(add_resultReady), alternateRenderContext = alternateRenderContext.asInstanceOf[js.Any], alternateRenderer = alternateRenderer.asInstanceOf[js.Any], beginUpdate = js.Any.fromFunction0(beginUpdate), clickHandler = js.Any.fromFunction1(clickHandler), displayControlMessages = js.Any.fromFunction0(displayControlMessages), displayControl_QueryReady = js.Any.fromFunction2(displayControl_QueryReady), dispose = js.Any.fromFunction0(dispose), endUpdate = js.Any.fromFunction0(endUpdate), getSortName = js.Any.fromFunction0(getSortName), getSortRankName = js.Any.fromFunction0(getSortRankName), get_active = js.Any.fromFunction0(get_active), get_alternateErrorMessage = js.Any.fromFunction0(get_alternateErrorMessage), get_availableSorts = js.Any.fromFunction0(get_availableSorts), get_batched = js.Any.fromFunction0(get_batched), get_bypassResultTypes = js.Any.fromFunction0(get_bypassResultTypes), get_clientType = js.Any.fromFunction0(get_clientType), get_collapseSpecification = js.Any.fromFunction0(get_collapseSpecification), get_contextualScopeUrl = js.Any.fromFunction0(get_contextualScopeUrl), get_currentQueryState = js.Any.fromFunction0(get_currentQueryState), get_delayLoadTemplateScripts = js.Any.fromFunction0(get_delayLoadTemplateScripts), get_desiredSnippetLength = js.Any.fromFunction0(get_desiredSnippetLength), get_effectiveQueryLanguage = js.Any.fromFunction0(get_effectiveQueryLanguage), get_element = js.Any.fromFunction0(get_element), get_enableInterleaving = js.Any.fromFunction0(get_enableInterleaving), get_enableNicknames = js.Any.fromFunction0(get_enableNicknames), get_enableOrderingHitHighlightedProperty = js.Any.fromFunction0(get_enableOrderingHitHighlightedProperty), get_enablePhonetic = js.Any.fromFunction0(get_enablePhonetic), get_enableQueryRules = js.Any.fromFunction0(get_enableQueryRules), get_enableStemming = js.Any.fromFunction0(get_enableStemming), get_entityInfo = js.Any.fromFunction0(get_entityInfo), get_events = js.Any.fromFunction0(get_events), get_fallbackLanguage = js.Any.fromFunction0(get_fallbackLanguage), get_fallbackRankingModelID = js.Any.fromFunction0(get_fallbackRankingModelID), get_fallbackRefinementFilters = js.Any.fromFunction0(get_fallbackRefinementFilters), get_fallbackSort = js.Any.fromFunction0(get_fallbackSort), get_hitHighlightedMultivaluePropertyLimit = js.Any.fromFunction0(get_hitHighlightedMultivaluePropertyLimit), get_hitHighlightedProperties = js.Any.fromFunction0(get_hitHighlightedProperties), get_id = js.Any.fromFunction0(get_id), get_initialQueryState = js.Any.fromFunction0(get_initialQueryState), get_initialResult = js.Any.fromFunction0(get_initialResult), get_initialResultObject = js.Any.fromFunction0(get_initialResultObject), get_initialResultRef = js.Any.fromFunction0(get_initialResultRef), get_isInitialLoad = js.Any.fromFunction0(get_isInitialLoad), get_isInitialized = js.Any.fromFunction0(get_isInitialized), get_isUpdating = js.Any.fromFunction0(get_isUpdating), get_maxPagesAfterCurrent = js.Any.fromFunction0(get_maxPagesAfterCurrent), get_messages = js.Any.fromFunction0(get_messages), get_nextUniqueId = js.Any.fromFunction0(get_nextUniqueId), get_parentImpressionID = js.Any.fromFunction0(get_parentImpressionID), get_personalizedQuery = js.Any.fromFunction0(get_personalizedQuery), get_processBestBets = js.Any.fromFunction0(get_processBestBets), get_processPersonalFavorites = js.Any.fromFunction0(get_processPersonalFavorites), get_properties = js.Any.fromFunction0(get_properties), get_queryCount = js.Any.fromFunction0(get_queryCount), get_queryGroupName = js.Any.fromFunction0(get_queryGroupName), get_queryPropertiesTemplateUrl = js.Any.fromFunction0(get_queryPropertiesTemplateUrl), get_queryTemplate = js.Any.fromFunction0(get_queryTemplate), get_rankRules = js.Any.fromFunction0(get_rankRules), get_refinementInfo = js.Any.fromFunction0(get_refinementInfo), get_renderTemplateId = js.Any.fromFunction0(get_renderTemplateId), get_resultsPerPage = js.Any.fromFunction0(get_resultsPerPage), get_resultsUrl = js.Any.fromFunction0(get_resultsUrl), get_rowCount = js.Any.fromFunction0(get_rowCount), get_selectedProperties = js.Any.fromFunction0(get_selectedProperties), get_selectedRefiners = js.Any.fromFunction0(get_selectedRefiners), get_showDataErrors = js.Any.fromFunction0(get_showDataErrors), get_sourceID = js.Any.fromFunction0(get_sourceID), get_sourceLevel = js.Any.fromFunction0(get_sourceLevel), get_sourceName = js.Any.fromFunction0(get_sourceName), get_states = js.Any.fromFunction0(get_states), get_summaryLength = js.Any.fromFunction0(get_summaryLength), get_totalRows = js.Any.fromFunction0(get_totalRows), get_trimDuplicates = js.Any.fromFunction0(get_trimDuplicates), get_upScopeUrl = js.Any.fromFunction0(get_upScopeUrl), get_updateAjaxNavigate = js.Any.fromFunction0(get_updateAjaxNavigate), get_userAction = js.Any.fromFunction0(get_userAction), hasMessages = js.Any.fromFunction0(hasMessages), initialize = js.Any.fromFunction0(initialize), invokeAlternateRender = js.Any.fromFunction3(invokeAlternateRender), invokeClientRenderer = js.Any.fromFunction2(invokeClientRenderer), issueQuery = js.Any.fromFunction0(issueQuery), loadRenderTemplateScripts = js.Any.fromFunction5(loadRenderTemplateScripts), loadServerTemplateScripts = js.Any.fromFunction0(loadServerTemplateScripts), loaded = loaded.asInstanceOf[js.Any], onBubbleEvent = js.Any.fromFunction2(onBubbleEvent), processDataErrorMessages = js.Any.fromFunction1(processDataErrorMessages), processDataProviderErrors = js.Any.fromFunction1(processDataProviderErrors), processInitial = js.Any.fromFunction0(processInitial), processRenderingErrorMessages = js.Any.fromFunction1(processRenderingErrorMessages), raiseBubbleEvent = js.Any.fromFunction2(raiseBubbleEvent), raiseEmptyResultReadyEvent = js.Any.fromFunction0(raiseEmptyResultReadyEvent), raisePropertyChanged = js.Any.fromFunction1(raisePropertyChanged), raiseQueryIssuingEvent = js.Any.fromFunction1(raiseQueryIssuingEvent), raiseQueryStateChangedEvent = js.Any.fromFunction1(raiseQueryStateChangedEvent), raiseResultReadyEvent = js.Any.fromFunction1(raiseResultReadyEvent), removeCssClass = js.Any.fromFunction1(removeCssClass), remove_disposing = js.Any.fromFunction1(remove_disposing), remove_propertyChanged = js.Any.fromFunction1(remove_propertyChanged), remove_queryIssuing = js.Any.fromFunction1(remove_queryIssuing), remove_resultReady = js.Any.fromFunction1(remove_resultReady), renderControl = js.Any.fromFunction2(renderControl), scriptApplication_Load = js.Any.fromFunction2(scriptApplication_Load), scriptApplication_PostLoad = js.Any.fromFunction2(scriptApplication_PostLoad), scriptApplication_PreLoad = js.Any.fromFunction2(scriptApplication_PreLoad), searchBox_BatchQueryIssuing = js.Any.fromFunction2(searchBox_BatchQueryIssuing), searchBox_BatchResultReady = js.Any.fromFunction2(searchBox_BatchResultReady), searchBox_QueryReady = js.Any.fromFunction2(searchBox_QueryReady), serverTemplateScriptsCallback = js.Any.fromFunction0(serverTemplateScriptsCallback), serverTemplateScriptsToLoad = serverTemplateScriptsToLoad.asInstanceOf[js.Any], setControlElementVisibility = js.Any.fromFunction1(setControlElementVisibility), set_active = js.Any.fromFunction1(set_active), set_alternateErrorMessage = js.Any.fromFunction1(set_alternateErrorMessage), set_availableSorts = js.Any.fromFunction1(set_availableSorts), set_batched = js.Any.fromFunction1(set_batched), set_bypassResultTypes = js.Any.fromFunction1(set_bypassResultTypes), set_clientType = js.Any.fromFunction1(set_clientType), set_collapseSpecification = js.Any.fromFunction1(set_collapseSpecification), set_contextualScopeUrl = js.Any.fromFunction1(set_contextualScopeUrl), set_delayLoadTemplateScripts = js.Any.fromFunction1(set_delayLoadTemplateScripts), set_desiredSnippetLength = js.Any.fromFunction1(set_desiredSnippetLength), set_enableInterleaving = js.Any.fromFunction1(set_enableInterleaving), set_enableNicknames = js.Any.fromFunction1(set_enableNicknames), set_enableOrderingHitHighlightedProperty = js.Any.fromFunction1(set_enableOrderingHitHighlightedProperty), set_enablePhonetic = js.Any.fromFunction1(set_enablePhonetic), set_enableQueryRules = js.Any.fromFunction1(set_enableQueryRules), set_enableStemming = js.Any.fromFunction1(set_enableStemming), set_fallbackLanguage = js.Any.fromFunction1(set_fallbackLanguage), set_fallbackRankingModelID = js.Any.fromFunction1(set_fallbackRankingModelID), set_fallbackRefinementFilters = js.Any.fromFunction1(set_fallbackRefinementFilters), set_fallbackSort = js.Any.fromFunction1(set_fallbackSort), set_hitHighlightedMultivaluePropertyLimit = js.Any.fromFunction1(set_hitHighlightedMultivaluePropertyLimit), set_hitHighlightedProperties = js.Any.fromFunction1(set_hitHighlightedProperties), set_id = js.Any.fromFunction1(set_id), set_initialQueryState = js.Any.fromFunction1(set_initialQueryState), set_initialResult = js.Any.fromFunction1(set_initialResult), set_initialResultRef = js.Any.fromFunction1(set_initialResultRef), set_maxPagesAfterCurrent = js.Any.fromFunction1(set_maxPagesAfterCurrent), set_messages = js.Any.fromFunction1(set_messages), set_parentImpressionID = js.Any.fromFunction1(set_parentImpressionID), set_personalizedQuery = js.Any.fromFunction1(set_personalizedQuery), set_processBestBets = js.Any.fromFunction1(set_processBestBets), set_processPersonalFavorites = js.Any.fromFunction1(set_processPersonalFavorites), set_properties = js.Any.fromFunction1(set_properties), set_queryCount = js.Any.fromFunction1(set_queryCount), set_queryGroupName = js.Any.fromFunction1(set_queryGroupName), set_queryPropertiesTemplateUrl = js.Any.fromFunction1(set_queryPropertiesTemplateUrl), set_queryTemplate = js.Any.fromFunction1(set_queryTemplate), set_rankRules = js.Any.fromFunction1(set_rankRules), set_renderTemplateId = js.Any.fromFunction1(set_renderTemplateId), set_resultsPerPage = js.Any.fromFunction1(set_resultsPerPage), set_resultsUrl = js.Any.fromFunction1(set_resultsUrl), set_rowCount = js.Any.fromFunction1(set_rowCount), set_selectedProperties = js.Any.fromFunction1(set_selectedProperties), set_selectedRefiners = js.Any.fromFunction1(set_selectedRefiners), set_showDataErrors = js.Any.fromFunction1(set_showDataErrors), set_sourceID = js.Any.fromFunction1(set_sourceID), set_sourceLevel = js.Any.fromFunction1(set_sourceLevel), set_sourceName = js.Any.fromFunction1(set_sourceName), set_states = js.Any.fromFunction1(set_states), set_summaryLength = js.Any.fromFunction1(set_summaryLength), set_totalRows = js.Any.fromFunction1(set_totalRows), set_trimDuplicates = js.Any.fromFunction1(set_trimDuplicates), set_updateAjaxNavigate = js.Any.fromFunction1(set_updateAjaxNavigate), set_userAction = js.Any.fromFunction1(set_userAction), toggleCssClass = js.Any.fromFunction1(toggleCssClass), updateDisplayControlWithNewMessages = js.Any.fromFunction0(updateDisplayControlWithNewMessages), updated = js.Any.fromFunction0(updated))
     __obj.asInstanceOf[DataProvider]
   }
-  @scala.inline
-  implicit class DataProviderOps[Self <: DataProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd_queryIssuing(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add_queryIssuing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAdd_queryStateChanged(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add_queryStateChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAdd_resultReady(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add_resultReady")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDisplayControlMessages(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayControlMessages")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDisplayControl_QueryReady(value: (js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayControl_QueryReady")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetSortName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSortName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSortRankName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSortRankName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_active(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_active")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_availableSorts(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_availableSorts")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_batched(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_batched")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_bypassResultTypes(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_bypassResultTypes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_clientType(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_clientType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_collapseSpecification(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_collapseSpecification")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_contextualScopeUrl(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_contextualScopeUrl")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_currentQueryState(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_currentQueryState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_desiredSnippetLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_desiredSnippetLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_effectiveQueryLanguage(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_effectiveQueryLanguage")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_enableInterleaving(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_enableInterleaving")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_enableNicknames(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_enableNicknames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_enableOrderingHitHighlightedProperty(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_enableOrderingHitHighlightedProperty")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_enablePhonetic(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_enablePhonetic")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_enableQueryRules(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_enableQueryRules")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_enableStemming(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_enableStemming")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_entityInfo(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_entityInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_fallbackLanguage(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_fallbackLanguage")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_fallbackRankingModelID(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_fallbackRankingModelID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_fallbackRefinementFilters(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_fallbackRefinementFilters")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_fallbackSort(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_fallbackSort")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_hitHighlightedMultivaluePropertyLimit(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_hitHighlightedMultivaluePropertyLimit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_hitHighlightedProperties(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_hitHighlightedProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_initialQueryState(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_initialQueryState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_initialResult(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_initialResult")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_initialResultObject(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_initialResultObject")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_initialResultRef(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_initialResultRef")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_maxPagesAfterCurrent(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_maxPagesAfterCurrent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_parentImpressionID(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_parentImpressionID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_personalizedQuery(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_personalizedQuery")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_processBestBets(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_processBestBets")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_processPersonalFavorites(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_processPersonalFavorites")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_properties(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_properties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_queryCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_queryCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_queryGroupName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_queryGroupName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_queryPropertiesTemplateUrl(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_queryPropertiesTemplateUrl")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_queryTemplate(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_queryTemplate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_rankRules(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_rankRules")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_refinementInfo(value: () => StringDictionary[js.Array[RefinementInfo]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_refinementInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_resultsPerPage(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_resultsPerPage")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_resultsUrl(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_resultsUrl")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_rowCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_rowCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_selectedProperties(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_selectedProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_selectedRefiners(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_selectedRefiners")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_sourceID(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_sourceID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_sourceLevel(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_sourceLevel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_sourceName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_sourceName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_summaryLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_summaryLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_totalRows(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_totalRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_trimDuplicates(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_trimDuplicates")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_upScopeUrl(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_upScopeUrl")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_updateAjaxNavigate(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_updateAjaxNavigate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_userAction(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_userAction")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIssueQuery(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issueQuery")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withProcessInitial(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processInitial")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRaiseEmptyResultReadyEvent(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raiseEmptyResultReadyEvent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRaiseQueryIssuingEvent(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raiseQueryIssuingEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRaiseQueryStateChangedEvent(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raiseQueryStateChangedEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRaiseResultReadyEvent(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raiseResultReadyEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove_queryIssuing(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_queryIssuing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove_resultReady(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_resultReady")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSearchBox_BatchQueryIssuing(value: (js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBox_BatchQueryIssuing")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSearchBox_BatchResultReady(value: (js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBox_BatchResultReady")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSearchBox_QueryReady(value: (js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchBox_QueryReady")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSet_active(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_active")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_availableSorts(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_availableSorts")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_batched(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_batched")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_bypassResultTypes(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_bypassResultTypes")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_clientType(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_clientType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_collapseSpecification(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_collapseSpecification")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_contextualScopeUrl(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_contextualScopeUrl")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_desiredSnippetLength(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_desiredSnippetLength")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_enableInterleaving(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_enableInterleaving")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_enableNicknames(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_enableNicknames")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_enableOrderingHitHighlightedProperty(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_enableOrderingHitHighlightedProperty")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_enablePhonetic(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_enablePhonetic")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_enableQueryRules(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_enableQueryRules")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_enableStemming(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_enableStemming")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_fallbackLanguage(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_fallbackLanguage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_fallbackRankingModelID(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_fallbackRankingModelID")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_fallbackRefinementFilters(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_fallbackRefinementFilters")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_fallbackSort(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_fallbackSort")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_hitHighlightedMultivaluePropertyLimit(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_hitHighlightedMultivaluePropertyLimit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_hitHighlightedProperties(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_hitHighlightedProperties")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_initialQueryState(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_initialQueryState")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_initialResult(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_initialResult")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_initialResultRef(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_initialResultRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_maxPagesAfterCurrent(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_maxPagesAfterCurrent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_parentImpressionID(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_parentImpressionID")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_personalizedQuery(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_personalizedQuery")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_processBestBets(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_processBestBets")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_processPersonalFavorites(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_processPersonalFavorites")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_properties(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_properties")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_queryCount(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_queryCount")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_queryGroupName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_queryGroupName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_queryPropertiesTemplateUrl(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_queryPropertiesTemplateUrl")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_queryTemplate(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_queryTemplate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_rankRules(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_rankRules")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_resultsPerPage(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_resultsPerPage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_resultsUrl(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_resultsUrl")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_rowCount(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_rowCount")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_selectedProperties(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_selectedProperties")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_selectedRefiners(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_selectedRefiners")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_sourceID(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_sourceID")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_sourceLevel(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_sourceLevel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_sourceName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_sourceName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_summaryLength(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_summaryLength")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_totalRows(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_totalRows")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_trimDuplicates(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_trimDuplicates")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_updateAjaxNavigate(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_updateAjaxNavigate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_userAction(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_userAction")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

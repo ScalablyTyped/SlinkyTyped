@@ -4,127 +4,126 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HTMLElementTagNameMap extends js.Object {
-  var a: org.scalajs.dom.raw.HTMLAnchorElement = js.native
-  var abbr: org.scalajs.dom.raw.HTMLElement = js.native
-  var address: org.scalajs.dom.raw.HTMLElement = js.native
-  var applet: HTMLAppletElement = js.native
-  var area: org.scalajs.dom.raw.HTMLAreaElement = js.native
-  var article: org.scalajs.dom.raw.HTMLElement = js.native
-  var aside: org.scalajs.dom.raw.HTMLElement = js.native
-  var audio: org.scalajs.dom.raw.HTMLAudioElement = js.native
-  var b: org.scalajs.dom.raw.HTMLElement = js.native
-  var base: org.scalajs.dom.raw.HTMLBaseElement = js.native
-  var basefont: HTMLBaseFontElement = js.native
-  var bdi: org.scalajs.dom.raw.HTMLElement = js.native
-  var bdo: org.scalajs.dom.raw.HTMLElement = js.native
-  var blockquote: org.scalajs.dom.raw.HTMLQuoteElement = js.native
-  var body: org.scalajs.dom.raw.HTMLBodyElement = js.native
-  var br: org.scalajs.dom.raw.HTMLBRElement = js.native
-  var button: org.scalajs.dom.raw.HTMLButtonElement = js.native
-  var canvas: org.scalajs.dom.raw.HTMLCanvasElement = js.native
-  var caption: org.scalajs.dom.raw.HTMLTableCaptionElement = js.native
-  var cite: org.scalajs.dom.raw.HTMLElement = js.native
-  var code: org.scalajs.dom.raw.HTMLElement = js.native
-  var col: org.scalajs.dom.raw.HTMLTableColElement = js.native
-  var colgroup: org.scalajs.dom.raw.HTMLTableColElement = js.native
-  var data: HTMLDataElement = js.native
-  var datalist: org.scalajs.dom.raw.HTMLDataListElement = js.native
-  var dd: org.scalajs.dom.raw.HTMLElement = js.native
-  var del: org.scalajs.dom.raw.HTMLModElement = js.native
-  var details: HTMLDetailsElement = js.native
-  var dfn: org.scalajs.dom.raw.HTMLElement = js.native
-  var dialog: HTMLDialogElement = js.native
-  var dir: HTMLDirectoryElement = js.native
-  var div: org.scalajs.dom.raw.HTMLDivElement = js.native
-  var dl: org.scalajs.dom.raw.HTMLDListElement = js.native
-  var dt: org.scalajs.dom.raw.HTMLElement = js.native
-  var em: org.scalajs.dom.raw.HTMLElement = js.native
-  var embed: org.scalajs.dom.raw.HTMLEmbedElement = js.native
-  var fieldset: org.scalajs.dom.raw.HTMLFieldSetElement = js.native
-  var figcaption: org.scalajs.dom.raw.HTMLElement = js.native
-  var figure: org.scalajs.dom.raw.HTMLElement = js.native
-  var font: HTMLFontElement = js.native
-  var footer: org.scalajs.dom.raw.HTMLElement = js.native
-  var form: org.scalajs.dom.raw.HTMLFormElement = js.native
-  var frame: HTMLFrameElement = js.native
-  var frameset: HTMLFrameSetElement = js.native
-  var h1: org.scalajs.dom.raw.HTMLHeadingElement = js.native
-  var h2: org.scalajs.dom.raw.HTMLHeadingElement = js.native
-  var h3: org.scalajs.dom.raw.HTMLHeadingElement = js.native
-  var h4: org.scalajs.dom.raw.HTMLHeadingElement = js.native
-  var h5: org.scalajs.dom.raw.HTMLHeadingElement = js.native
-  var h6: org.scalajs.dom.raw.HTMLHeadingElement = js.native
-  var head: org.scalajs.dom.raw.HTMLHeadElement = js.native
-  var header: org.scalajs.dom.raw.HTMLElement = js.native
-  var hgroup: org.scalajs.dom.raw.HTMLElement = js.native
-  var hr: org.scalajs.dom.raw.HTMLHRElement = js.native
-  var html: org.scalajs.dom.raw.HTMLHtmlElement = js.native
-  var i: org.scalajs.dom.raw.HTMLElement = js.native
-  var iframe: org.scalajs.dom.raw.HTMLIFrameElement = js.native
-  var img: org.scalajs.dom.raw.HTMLImageElement = js.native
-  var input: org.scalajs.dom.raw.HTMLInputElement = js.native
-  var ins: org.scalajs.dom.raw.HTMLModElement = js.native
-  var kbd: org.scalajs.dom.raw.HTMLElement = js.native
-  var label: org.scalajs.dom.raw.HTMLLabelElement = js.native
-  var legend: org.scalajs.dom.raw.HTMLLegendElement = js.native
-  var li: org.scalajs.dom.raw.HTMLLIElement = js.native
-  var link: org.scalajs.dom.raw.HTMLLinkElement = js.native
-  var main: org.scalajs.dom.raw.HTMLElement = js.native
-  var map: org.scalajs.dom.raw.HTMLMapElement = js.native
-  var mark: org.scalajs.dom.raw.HTMLElement = js.native
-  var marquee: HTMLMarqueeElement = js.native
-  var menu: org.scalajs.dom.raw.HTMLMenuElement = js.native
-  var meta: org.scalajs.dom.raw.HTMLMetaElement = js.native
-  var meter: HTMLMeterElement = js.native
-  var nav: org.scalajs.dom.raw.HTMLElement = js.native
-  var noscript: org.scalajs.dom.raw.HTMLElement = js.native
-  var `object`: org.scalajs.dom.raw.HTMLObjectElement = js.native
-  var ol: org.scalajs.dom.raw.HTMLOListElement = js.native
-  var optgroup: org.scalajs.dom.raw.HTMLOptGroupElement = js.native
-  var option: org.scalajs.dom.raw.HTMLOptionElement = js.native
-  var output: HTMLOutputElement = js.native
-  var p: org.scalajs.dom.raw.HTMLParagraphElement = js.native
-  var param: org.scalajs.dom.raw.HTMLParamElement = js.native
-  var picture: HTMLPictureElement = js.native
-  var pre: org.scalajs.dom.raw.HTMLPreElement = js.native
-  var progress: org.scalajs.dom.raw.HTMLProgressElement = js.native
-  var q: org.scalajs.dom.raw.HTMLQuoteElement = js.native
-  var rp: org.scalajs.dom.raw.HTMLElement = js.native
-  var rt: org.scalajs.dom.raw.HTMLElement = js.native
-  var ruby: org.scalajs.dom.raw.HTMLElement = js.native
-  var s: org.scalajs.dom.raw.HTMLElement = js.native
-  var samp: org.scalajs.dom.raw.HTMLElement = js.native
-  var script: org.scalajs.dom.raw.HTMLScriptElement = js.native
-  var section: org.scalajs.dom.raw.HTMLElement = js.native
-  var select: org.scalajs.dom.raw.HTMLSelectElement = js.native
-  var slot: HTMLSlotElement = js.native
-  var small: org.scalajs.dom.raw.HTMLElement = js.native
-  var source: org.scalajs.dom.raw.HTMLSourceElement = js.native
-  var span: org.scalajs.dom.raw.HTMLSpanElement = js.native
-  var strong: org.scalajs.dom.raw.HTMLElement = js.native
-  var style: org.scalajs.dom.raw.HTMLStyleElement = js.native
-  var sub: org.scalajs.dom.raw.HTMLElement = js.native
-  var summary: org.scalajs.dom.raw.HTMLElement = js.native
-  var sup: org.scalajs.dom.raw.HTMLElement = js.native
-  var table: org.scalajs.dom.raw.HTMLTableElement = js.native
-  var tbody: org.scalajs.dom.raw.HTMLTableSectionElement = js.native
-  var td: HTMLTableDataCellElement = js.native
-  var template: HTMLTemplateElement = js.native
-  var textarea: org.scalajs.dom.raw.HTMLTextAreaElement = js.native
-  var tfoot: org.scalajs.dom.raw.HTMLTableSectionElement = js.native
-  var th: HTMLTableHeaderCellElement = js.native
-  var thead: org.scalajs.dom.raw.HTMLTableSectionElement = js.native
-  var time: HTMLTimeElement = js.native
-  var title: org.scalajs.dom.raw.HTMLTitleElement = js.native
-  var tr: org.scalajs.dom.raw.HTMLTableRowElement = js.native
-  var track: org.scalajs.dom.raw.HTMLTrackElement = js.native
-  var u: org.scalajs.dom.raw.HTMLElement = js.native
-  var ul: org.scalajs.dom.raw.HTMLUListElement = js.native
-  var `var`: org.scalajs.dom.raw.HTMLElement = js.native
-  var video: org.scalajs.dom.raw.HTMLVideoElement = js.native
-  var wbr: org.scalajs.dom.raw.HTMLElement = js.native
+  var a: org.scalajs.dom.raw.HTMLAnchorElement
+  var abbr: org.scalajs.dom.raw.HTMLElement
+  var address: org.scalajs.dom.raw.HTMLElement
+  var applet: HTMLAppletElement
+  var area: org.scalajs.dom.raw.HTMLAreaElement
+  var article: org.scalajs.dom.raw.HTMLElement
+  var aside: org.scalajs.dom.raw.HTMLElement
+  var audio: org.scalajs.dom.raw.HTMLAudioElement
+  var b: org.scalajs.dom.raw.HTMLElement
+  var base: org.scalajs.dom.raw.HTMLBaseElement
+  var basefont: HTMLBaseFontElement
+  var bdi: org.scalajs.dom.raw.HTMLElement
+  var bdo: org.scalajs.dom.raw.HTMLElement
+  var blockquote: org.scalajs.dom.raw.HTMLQuoteElement
+  var body: org.scalajs.dom.raw.HTMLBodyElement
+  var br: org.scalajs.dom.raw.HTMLBRElement
+  var button: org.scalajs.dom.raw.HTMLButtonElement
+  var canvas: org.scalajs.dom.raw.HTMLCanvasElement
+  var caption: org.scalajs.dom.raw.HTMLTableCaptionElement
+  var cite: org.scalajs.dom.raw.HTMLElement
+  var code: org.scalajs.dom.raw.HTMLElement
+  var col: org.scalajs.dom.raw.HTMLTableColElement
+  var colgroup: org.scalajs.dom.raw.HTMLTableColElement
+  var data: HTMLDataElement
+  var datalist: org.scalajs.dom.raw.HTMLDataListElement
+  var dd: org.scalajs.dom.raw.HTMLElement
+  var del: org.scalajs.dom.raw.HTMLModElement
+  var details: HTMLDetailsElement
+  var dfn: org.scalajs.dom.raw.HTMLElement
+  var dialog: HTMLDialogElement
+  var dir: HTMLDirectoryElement
+  var div: org.scalajs.dom.raw.HTMLDivElement
+  var dl: org.scalajs.dom.raw.HTMLDListElement
+  var dt: org.scalajs.dom.raw.HTMLElement
+  var em: org.scalajs.dom.raw.HTMLElement
+  var embed: org.scalajs.dom.raw.HTMLEmbedElement
+  var fieldset: org.scalajs.dom.raw.HTMLFieldSetElement
+  var figcaption: org.scalajs.dom.raw.HTMLElement
+  var figure: org.scalajs.dom.raw.HTMLElement
+  var font: HTMLFontElement
+  var footer: org.scalajs.dom.raw.HTMLElement
+  var form: org.scalajs.dom.raw.HTMLFormElement
+  var frame: HTMLFrameElement
+  var frameset: HTMLFrameSetElement
+  var h1: org.scalajs.dom.raw.HTMLHeadingElement
+  var h2: org.scalajs.dom.raw.HTMLHeadingElement
+  var h3: org.scalajs.dom.raw.HTMLHeadingElement
+  var h4: org.scalajs.dom.raw.HTMLHeadingElement
+  var h5: org.scalajs.dom.raw.HTMLHeadingElement
+  var h6: org.scalajs.dom.raw.HTMLHeadingElement
+  var head: org.scalajs.dom.raw.HTMLHeadElement
+  var header: org.scalajs.dom.raw.HTMLElement
+  var hgroup: org.scalajs.dom.raw.HTMLElement
+  var hr: org.scalajs.dom.raw.HTMLHRElement
+  var html: org.scalajs.dom.raw.HTMLHtmlElement
+  var i: org.scalajs.dom.raw.HTMLElement
+  var iframe: org.scalajs.dom.raw.HTMLIFrameElement
+  var img: org.scalajs.dom.raw.HTMLImageElement
+  var input: org.scalajs.dom.raw.HTMLInputElement
+  var ins: org.scalajs.dom.raw.HTMLModElement
+  var kbd: org.scalajs.dom.raw.HTMLElement
+  var label: org.scalajs.dom.raw.HTMLLabelElement
+  var legend: org.scalajs.dom.raw.HTMLLegendElement
+  var li: org.scalajs.dom.raw.HTMLLIElement
+  var link: org.scalajs.dom.raw.HTMLLinkElement
+  var main: org.scalajs.dom.raw.HTMLElement
+  var map: org.scalajs.dom.raw.HTMLMapElement
+  var mark: org.scalajs.dom.raw.HTMLElement
+  var marquee: HTMLMarqueeElement
+  var menu: org.scalajs.dom.raw.HTMLMenuElement
+  var meta: org.scalajs.dom.raw.HTMLMetaElement
+  var meter: HTMLMeterElement
+  var nav: org.scalajs.dom.raw.HTMLElement
+  var noscript: org.scalajs.dom.raw.HTMLElement
+  var `object`: org.scalajs.dom.raw.HTMLObjectElement
+  var ol: org.scalajs.dom.raw.HTMLOListElement
+  var optgroup: org.scalajs.dom.raw.HTMLOptGroupElement
+  var option: org.scalajs.dom.raw.HTMLOptionElement
+  var output: HTMLOutputElement
+  var p: org.scalajs.dom.raw.HTMLParagraphElement
+  var param: org.scalajs.dom.raw.HTMLParamElement
+  var picture: HTMLPictureElement
+  var pre: org.scalajs.dom.raw.HTMLPreElement
+  var progress: org.scalajs.dom.raw.HTMLProgressElement
+  var q: org.scalajs.dom.raw.HTMLQuoteElement
+  var rp: org.scalajs.dom.raw.HTMLElement
+  var rt: org.scalajs.dom.raw.HTMLElement
+  var ruby: org.scalajs.dom.raw.HTMLElement
+  var s: org.scalajs.dom.raw.HTMLElement
+  var samp: org.scalajs.dom.raw.HTMLElement
+  var script: org.scalajs.dom.raw.HTMLScriptElement
+  var section: org.scalajs.dom.raw.HTMLElement
+  var select: org.scalajs.dom.raw.HTMLSelectElement
+  var slot: HTMLSlotElement
+  var small: org.scalajs.dom.raw.HTMLElement
+  var source: org.scalajs.dom.raw.HTMLSourceElement
+  var span: org.scalajs.dom.raw.HTMLSpanElement
+  var strong: org.scalajs.dom.raw.HTMLElement
+  var style: org.scalajs.dom.raw.HTMLStyleElement
+  var sub: org.scalajs.dom.raw.HTMLElement
+  var summary: org.scalajs.dom.raw.HTMLElement
+  var sup: org.scalajs.dom.raw.HTMLElement
+  var table: org.scalajs.dom.raw.HTMLTableElement
+  var tbody: org.scalajs.dom.raw.HTMLTableSectionElement
+  var td: HTMLTableDataCellElement
+  var template: HTMLTemplateElement
+  var textarea: org.scalajs.dom.raw.HTMLTextAreaElement
+  var tfoot: org.scalajs.dom.raw.HTMLTableSectionElement
+  var th: HTMLTableHeaderCellElement
+  var thead: org.scalajs.dom.raw.HTMLTableSectionElement
+  var time: HTMLTimeElement
+  var title: org.scalajs.dom.raw.HTMLTitleElement
+  var tr: org.scalajs.dom.raw.HTMLTableRowElement
+  var track: org.scalajs.dom.raw.HTMLTrackElement
+  var u: org.scalajs.dom.raw.HTMLElement
+  var ul: org.scalajs.dom.raw.HTMLUListElement
+  var `var`: org.scalajs.dom.raw.HTMLElement
+  var video: org.scalajs.dom.raw.HTMLVideoElement
+  var wbr: org.scalajs.dom.raw.HTMLElement
 }
 
 object HTMLElementTagNameMap {
@@ -255,727 +254,5 @@ object HTMLElementTagNameMap {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLElementTagNameMap]
   }
-  @scala.inline
-  implicit class HTMLElementTagNameMapOps[Self <: HTMLElementTagNameMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA(value: org.scalajs.dom.raw.HTMLAnchorElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbbr(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplet(value: HTMLAppletElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArea(value: org.scalajs.dom.raw.HTMLAreaElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArticle(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAside(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudio(value: org.scalajs.dom.raw.HTMLAudioElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withB(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBase(value: org.scalajs.dom.raw.HTMLBaseElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasefont(value: HTMLBaseFontElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basefont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBdi(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bdi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBdo(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bdo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockquote(value: org.scalajs.dom.raw.HTMLQuoteElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: org.scalajs.dom.raw.HTMLBodyElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBr(value: org.scalajs.dom.raw.HTMLBRElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withButton(value: org.scalajs.dom.raw.HTMLButtonElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanvas(value: org.scalajs.dom.raw.HTMLCanvasElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: org.scalajs.dom.raw.HTMLTableCaptionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCite(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCode(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCol(value: org.scalajs.dom.raw.HTMLTableColElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColgroup(value: org.scalajs.dom.raw.HTMLTableColElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: HTMLDataElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatalist(value: org.scalajs.dom.raw.HTMLDataListElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datalist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDd(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDel(value: org.scalajs.dom.raw.HTMLModElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetails(value: HTMLDetailsElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDfn(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dfn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDialog(value: HTMLDialogElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDir(value: HTMLDirectoryElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiv(value: org.scalajs.dom.raw.HTMLDivElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDl(value: org.scalajs.dom.raw.HTMLDListElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDt(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEm(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmbed(value: org.scalajs.dom.raw.HTMLEmbedElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldset(value: org.scalajs.dom.raw.HTMLFieldSetElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFigcaption(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("figcaption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFigure(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("figure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: HTMLFontElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFooter(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForm(value: org.scalajs.dom.raw.HTMLFormElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrame(value: HTMLFrameElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrameset(value: HTMLFrameSetElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH1(value: org.scalajs.dom.raw.HTMLHeadingElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH2(value: org.scalajs.dom.raw.HTMLHeadingElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH3(value: org.scalajs.dom.raw.HTMLHeadingElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH4(value: org.scalajs.dom.raw.HTMLHeadingElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH5(value: org.scalajs.dom.raw.HTMLHeadingElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH6(value: org.scalajs.dom.raw.HTMLHeadingElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHead(value: org.scalajs.dom.raw.HTMLHeadElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeader(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHgroup(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHr(value: org.scalajs.dom.raw.HTMLHRElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtml(value: org.scalajs.dom.raw.HTMLHtmlElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withI(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIframe(value: org.scalajs.dom.raw.HTMLIFrameElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImg(value: org.scalajs.dom.raw.HTMLImageElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInput(value: org.scalajs.dom.raw.HTMLInputElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIns(value: org.scalajs.dom.raw.HTMLModElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKbd(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kbd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: org.scalajs.dom.raw.HTMLLabelElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLegend(value: org.scalajs.dom.raw.HTMLLegendElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLi(value: org.scalajs.dom.raw.HTMLLIElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLink(value: org.scalajs.dom.raw.HTMLLinkElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMain(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMap(value: org.scalajs.dom.raw.HTMLMapElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMark(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarquee(value: HTMLMarqueeElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marquee")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMenu(value: org.scalajs.dom.raw.HTMLMenuElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeta(value: org.scalajs.dom.raw.HTMLMetaElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeter(value: HTMLMeterElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNav(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoscript(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noscript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: org.scalajs.dom.raw.HTMLObjectElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOl(value: org.scalajs.dom.raw.HTMLOListElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptgroup(value: org.scalajs.dom.raw.HTMLOptGroupElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOption(value: org.scalajs.dom.raw.HTMLOptionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutput(value: HTMLOutputElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP(value: org.scalajs.dom.raw.HTMLParagraphElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParam(value: org.scalajs.dom.raw.HTMLParamElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPicture(value: HTMLPictureElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPre(value: org.scalajs.dom.raw.HTMLPreElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProgress(value: org.scalajs.dom.raw.HTMLProgressElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQ(value: org.scalajs.dom.raw.HTMLQuoteElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRp(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRt(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuby(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSamp(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScript(value: org.scalajs.dom.raw.HTMLScriptElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSection(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: org.scalajs.dom.raw.HTMLSelectElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSlot(value: HTMLSlotElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSmall(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: org.scalajs.dom.raw.HTMLSourceElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpan(value: org.scalajs.dom.raw.HTMLSpanElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrong(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyle(value: org.scalajs.dom.raw.HTMLStyleElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSub(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummary(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSup(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTable(value: org.scalajs.dom.raw.HTMLTableElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTbody(value: org.scalajs.dom.raw.HTMLTableSectionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTd(value: HTMLTableDataCellElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: HTMLTemplateElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextarea(value: org.scalajs.dom.raw.HTMLTextAreaElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTfoot(value: org.scalajs.dom.raw.HTMLTableSectionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tfoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTh(value: HTMLTableHeaderCellElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThead(value: org.scalajs.dom.raw.HTMLTableSectionElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTime(value: HTMLTimeElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: org.scalajs.dom.raw.HTMLTitleElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTr(value: org.scalajs.dom.raw.HTMLTableRowElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrack(value: org.scalajs.dom.raw.HTMLTrackElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withU(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("u")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUl(value: org.scalajs.dom.raw.HTMLUListElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVar(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("var")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideo(value: org.scalajs.dom.raw.HTMLVideoElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWbr(value: org.scalajs.dom.raw.HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wbr")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

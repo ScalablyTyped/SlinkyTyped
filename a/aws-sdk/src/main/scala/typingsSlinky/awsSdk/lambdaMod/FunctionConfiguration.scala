@@ -95,7 +95,7 @@ trait FunctionConfiguration extends js.Object {
     */
   var StateReasonCode: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.StateReasonCode] = js.native
   /**
-    * The amount of time that Lambda allows a function to run before stopping it.
+    * The amount of time in seconds that Lambda allows a function to run before stopping it.
     */
   var Timeout: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.Timeout] = js.native
   /**
@@ -114,329 +114,62 @@ trait FunctionConfiguration extends js.Object {
 
 object FunctionConfiguration {
   @scala.inline
-  def apply(): FunctionConfiguration = {
+  def apply(
+    CodeSha256: String = null,
+    CodeSize: js.UndefOr[Long] = js.undefined,
+    DeadLetterConfig: DeadLetterConfig = null,
+    Description: Description = null,
+    Environment: EnvironmentResponse = null,
+    FunctionArn: NameSpacedFunctionArn = null,
+    FunctionName: NamespacedFunctionName = null,
+    Handler: Handler = null,
+    KMSKeyArn: KMSKeyArn = null,
+    LastModified: Timestamp = null,
+    LastUpdateStatus: LastUpdateStatus = null,
+    LastUpdateStatusReason: LastUpdateStatusReason = null,
+    LastUpdateStatusReasonCode: LastUpdateStatusReasonCode = null,
+    Layers: LayersReferenceList = null,
+    MasterArn: FunctionArn = null,
+    MemorySize: js.UndefOr[MemorySize] = js.undefined,
+    RevisionId: String = null,
+    Role: RoleArn = null,
+    Runtime: Runtime = null,
+    State: State = null,
+    StateReason: StateReason = null,
+    StateReasonCode: StateReasonCode = null,
+    Timeout: js.UndefOr[Timeout] = js.undefined,
+    TracingConfig: TracingConfigResponse = null,
+    Version: Version = null,
+    VpcConfig: VpcConfigResponse = null
+  ): FunctionConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (CodeSha256 != null) __obj.updateDynamic("CodeSha256")(CodeSha256.asInstanceOf[js.Any])
+    if (!js.isUndefined(CodeSize)) __obj.updateDynamic("CodeSize")(CodeSize.get.asInstanceOf[js.Any])
+    if (DeadLetterConfig != null) __obj.updateDynamic("DeadLetterConfig")(DeadLetterConfig.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (Environment != null) __obj.updateDynamic("Environment")(Environment.asInstanceOf[js.Any])
+    if (FunctionArn != null) __obj.updateDynamic("FunctionArn")(FunctionArn.asInstanceOf[js.Any])
+    if (FunctionName != null) __obj.updateDynamic("FunctionName")(FunctionName.asInstanceOf[js.Any])
+    if (Handler != null) __obj.updateDynamic("Handler")(Handler.asInstanceOf[js.Any])
+    if (KMSKeyArn != null) __obj.updateDynamic("KMSKeyArn")(KMSKeyArn.asInstanceOf[js.Any])
+    if (LastModified != null) __obj.updateDynamic("LastModified")(LastModified.asInstanceOf[js.Any])
+    if (LastUpdateStatus != null) __obj.updateDynamic("LastUpdateStatus")(LastUpdateStatus.asInstanceOf[js.Any])
+    if (LastUpdateStatusReason != null) __obj.updateDynamic("LastUpdateStatusReason")(LastUpdateStatusReason.asInstanceOf[js.Any])
+    if (LastUpdateStatusReasonCode != null) __obj.updateDynamic("LastUpdateStatusReasonCode")(LastUpdateStatusReasonCode.asInstanceOf[js.Any])
+    if (Layers != null) __obj.updateDynamic("Layers")(Layers.asInstanceOf[js.Any])
+    if (MasterArn != null) __obj.updateDynamic("MasterArn")(MasterArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(MemorySize)) __obj.updateDynamic("MemorySize")(MemorySize.get.asInstanceOf[js.Any])
+    if (RevisionId != null) __obj.updateDynamic("RevisionId")(RevisionId.asInstanceOf[js.Any])
+    if (Role != null) __obj.updateDynamic("Role")(Role.asInstanceOf[js.Any])
+    if (Runtime != null) __obj.updateDynamic("Runtime")(Runtime.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (StateReason != null) __obj.updateDynamic("StateReason")(StateReason.asInstanceOf[js.Any])
+    if (StateReasonCode != null) __obj.updateDynamic("StateReasonCode")(StateReasonCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(Timeout)) __obj.updateDynamic("Timeout")(Timeout.get.asInstanceOf[js.Any])
+    if (TracingConfig != null) __obj.updateDynamic("TracingConfig")(TracingConfig.asInstanceOf[js.Any])
+    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
+    if (VpcConfig != null) __obj.updateDynamic("VpcConfig")(VpcConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionConfiguration]
   }
-  @scala.inline
-  implicit class FunctionConfigurationOps[Self <: FunctionConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodeSha256(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSha256")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeSha256: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSha256")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodeSize(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadLetterConfig(value: DeadLetterConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetterConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadLetterConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetterConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: EnvironmentResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionArn(value: NameSpacedFunctionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionName(value: NamespacedFunctionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandler(value: Handler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Handler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Handler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKMSKeyArn(value: KMSKeyArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKeyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKMSKeyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKeyArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModified(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateStatus(value: LastUpdateStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateStatusReason(value: LastUpdateStatusReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateStatusReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateStatusReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateStatusReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateStatusReasonCode(value: LastUpdateStatusReasonCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateStatusReasonCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateStatusReasonCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateStatusReasonCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayers(value: LayersReferenceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Layers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Layers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterArn(value: FunctionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemorySize(value: MemorySize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemorySize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntime(value: Runtime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Runtime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: State): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateReason(value: StateReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateReasonCode(value: StateReasonCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReasonCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateReasonCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReasonCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Timeout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracingConfig(value: TracingConfigResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TracingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TracingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcConfig(value: VpcConfigResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

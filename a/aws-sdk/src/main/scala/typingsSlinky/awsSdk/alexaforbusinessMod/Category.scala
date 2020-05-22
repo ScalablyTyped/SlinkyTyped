@@ -18,41 +18,11 @@ trait Category extends js.Object {
 
 object Category {
   @scala.inline
-  def apply(): Category = {
+  def apply(CategoryId: js.UndefOr[CategoryId] = js.undefined, CategoryName: CategoryName = null): Category = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CategoryId)) __obj.updateDynamic("CategoryId")(CategoryId.get.asInstanceOf[js.Any])
+    if (CategoryName != null) __obj.updateDynamic("CategoryName")(CategoryName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Category]
   }
-  @scala.inline
-  implicit class CategoryOps[Self <: Category] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategoryId(value: CategoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategoryName(value: CategoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategoryName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoryName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArrayBufferView extends BufferSource {
   /**
     * The ArrayBuffer instance referenced by the array.
     */
-  var buffer: ArrayBufferLike = js.native
+  var buffer: ArrayBufferLike
   /**
     * The length in bytes of the array.
     */
-  var byteLength: Double = js.native
+  var byteLength: Double
   /**
     * The offset in bytes of the array.
     */
-  var byteOffset: Double = js.native
+  var byteOffset: Double
 }
 
 object ArrayBufferView {
@@ -26,37 +25,5 @@ object ArrayBufferView {
     val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any], byteLength = byteLength.asInstanceOf[js.Any], byteOffset = byteOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayBufferView]
   }
-  @scala.inline
-  implicit class ArrayBufferViewOps[Self <: js.typedarray.ArrayBufferView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBufferArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuffer(value: ArrayBufferLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withByteLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("byteLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withByteOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("byteOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AuthenticationTypeLogin extends AuthenticationType {
-  var credentials: Credentials = js.native
-  var method: String | `false` = js.native
-  var `type`: LOGIN = js.native
-  var user: String = js.native
+  var credentials: Credentials
+  var method: String | `false`
+  var `type`: LOGIN
+  var user: String
 }
 
 object AuthenticationTypeLogin {
@@ -22,37 +21,5 @@ object AuthenticationTypeLogin {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthenticationTypeLogin]
   }
-  @scala.inline
-  implicit class AuthenticationTypeLoginOps[Self <: AuthenticationTypeLogin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredentials(value: Credentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: LOGIN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Impersonation extends js.Object {
-  var impersonatedUser: js.UndefOr[User] = js.native
+  var impersonatedUser: js.UndefOr[User] = js.undefined
 }
 
 object Impersonation {
   @scala.inline
-  def apply(): Impersonation = {
+  def apply(impersonatedUser: User = null): Impersonation = {
     val __obj = js.Dynamic.literal()
+    if (impersonatedUser != null) __obj.updateDynamic("impersonatedUser")(impersonatedUser.asInstanceOf[js.Any])
     __obj.asInstanceOf[Impersonation]
   }
-  @scala.inline
-  implicit class ImpersonationOps[Self <: Impersonation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImpersonatedUser(value: User): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impersonatedUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpersonatedUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impersonatedUser")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

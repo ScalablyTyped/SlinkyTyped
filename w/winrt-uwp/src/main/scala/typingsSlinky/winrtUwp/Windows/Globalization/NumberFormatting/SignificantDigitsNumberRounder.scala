@@ -5,48 +5,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Rounds numbers to a specified number of significant digits. */
-@js.native
 trait SignificantDigitsNumberRounder extends js.Object {
   /** Gets or sets the rounding strategy value for this SignificantDigitsNumberRounder object. */
-  var roundingAlgorithm: RoundingAlgorithm = js.native
+  var roundingAlgorithm: RoundingAlgorithm
   /** Gets or sets the number of significant digits this SignificantDigitsNumberRounder object uses for rounding. */
-  var significantDigits: Double = js.native
+  var significantDigits: Double
   /**
     * Rounds a Double number to the specified number of significant digits.
     * @param value The Double value to be rounded.
     * @return The rounded number. This result is a double precision floating point number, which is not necessarily an integer.
     */
-  def roundDouble(value: Double): Double = js.native
+  def roundDouble(value: Double): Double
   /**
     * Rounds an Int32 number to the specified number of significant digits.
     * @param value The Int32 value to be rounded.
     * @return The rounded 32 bit integer.
     */
-  def roundInt32(value: Double): Double = js.native
+  def roundInt32(value: Double): Double
   /**
     * Rounds an Int64 number to the specified number of significant digits.
     * @param value The Int64 value to be rounded.
     * @return The rounded 64 bit integer.
     */
-  def roundInt64(value: Double): Double = js.native
+  def roundInt64(value: Double): Double
   /**
     * Rounds a Single number to the specified number of significant digits.
     * @param value The Single value to be rounded.
     * @return The rounded number. This result is a single precision floating point number, which is not necessarily an integer.
     */
-  def roundSingle(value: Double): Double = js.native
+  def roundSingle(value: Double): Double
   /**
     * Rounds a UInt32 number to the specified number of significant digits.
     * @param value The UInt32 value to be rounded.
     * @return The rounded unsigned 32 bit integer.
     */
-  def roundUInt32(value: Double): Double = js.native
+  def roundUInt32(value: Double): Double
   /**
     * Rounds a UInt64 number to the specified number of significant digits.
     * @param value The UInt64 value to be rounded.
     * @return The rounded unsigned 64 bit integer.
     */
-  def roundUInt64(value: Double): Double = js.native
+  def roundUInt64(value: Double): Double
 }
 
 object SignificantDigitsNumberRounder {
@@ -64,61 +63,5 @@ object SignificantDigitsNumberRounder {
     val __obj = js.Dynamic.literal(roundDouble = js.Any.fromFunction1(roundDouble), roundInt32 = js.Any.fromFunction1(roundInt32), roundInt64 = js.Any.fromFunction1(roundInt64), roundSingle = js.Any.fromFunction1(roundSingle), roundUInt32 = js.Any.fromFunction1(roundUInt32), roundUInt64 = js.Any.fromFunction1(roundUInt64), roundingAlgorithm = roundingAlgorithm.asInstanceOf[js.Any], significantDigits = significantDigits.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignificantDigitsNumberRounder]
   }
-  @scala.inline
-  implicit class SignificantDigitsNumberRounderOps[Self <: SignificantDigitsNumberRounder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoundDouble(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundDouble")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRoundInt32(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundInt32")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRoundInt64(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundInt64")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRoundSingle(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundSingle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRoundUInt32(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundUInt32")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRoundUInt64(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundUInt64")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRoundingAlgorithm(value: RoundingAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundingAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSignificantDigits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("significantDigits")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

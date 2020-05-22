@@ -4,156 +4,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait line extends common {
-  var arrowAngle: js.UndefOr[Double] = js.native
-  var arrowRadius: js.UndefOr[Double] = js.native
-  var endArrow: js.UndefOr[Boolean] = js.native
-  var lineCap: js.UndefOr[String] = js.native
+  var arrowAngle: js.UndefOr[Double] = js.undefined
+  var arrowRadius: js.UndefOr[Double] = js.undefined
+  var endArrow: js.UndefOr[Boolean] = js.undefined
+  var lineCap: js.UndefOr[String] = js.undefined
   /**
     * 虚线的设置
     */
-  var lineDash: js.UndefOr[js.Array[Double]] = js.native
-  var lineJoin: js.UndefOr[String] = js.native
-  var lineWidth: js.UndefOr[String | Double] = js.native
-  var miterLimit: js.UndefOr[String | Double] = js.native
-  var startArrow: js.UndefOr[Boolean] = js.native
-  var strokeOpacity: js.UndefOr[String | Double] = js.native
+  var lineDash: js.UndefOr[js.Array[Double]] = js.undefined
+  var lineJoin: js.UndefOr[String] = js.undefined
+  var lineWidth: js.UndefOr[String | Double] = js.undefined
+  var miterLimit: js.UndefOr[String | Double] = js.undefined
+  var startArrow: js.UndefOr[Boolean] = js.undefined
+  var strokeOpacity: js.UndefOr[String | Double] = js.undefined
 }
 
 object line {
   @scala.inline
-  def apply(): line = {
+  def apply(
+    arrowAngle: js.UndefOr[Double] = js.undefined,
+    arrowRadius: js.UndefOr[Double] = js.undefined,
+    endArrow: js.UndefOr[Boolean] = js.undefined,
+    fill: String = null,
+    globalCompositeOperation: String = null,
+    lineCap: String = null,
+    lineDash: js.Array[Double] = null,
+    lineJoin: String = null,
+    lineWidth: String | Double = null,
+    miterLimit: String | Double = null,
+    opacity: String | Double = null,
+    shadowBlur: String | Double = null,
+    shadowColor: String = null,
+    shadowOffsetX: String | Double = null,
+    shadowOffsetY: String | Double = null,
+    startArrow: js.UndefOr[Boolean] = js.undefined,
+    stroke: String | Double = null,
+    strokeOpacity: String | Double = null
+  ): line = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arrowAngle)) __obj.updateDynamic("arrowAngle")(arrowAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(arrowRadius)) __obj.updateDynamic("arrowRadius")(arrowRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(endArrow)) __obj.updateDynamic("endArrow")(endArrow.get.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (globalCompositeOperation != null) __obj.updateDynamic("globalCompositeOperation")(globalCompositeOperation.asInstanceOf[js.Any])
+    if (lineCap != null) __obj.updateDynamic("lineCap")(lineCap.asInstanceOf[js.Any])
+    if (lineDash != null) __obj.updateDynamic("lineDash")(lineDash.asInstanceOf[js.Any])
+    if (lineJoin != null) __obj.updateDynamic("lineJoin")(lineJoin.asInstanceOf[js.Any])
+    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
+    if (miterLimit != null) __obj.updateDynamic("miterLimit")(miterLimit.asInstanceOf[js.Any])
+    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+    if (shadowBlur != null) __obj.updateDynamic("shadowBlur")(shadowBlur.asInstanceOf[js.Any])
+    if (shadowColor != null) __obj.updateDynamic("shadowColor")(shadowColor.asInstanceOf[js.Any])
+    if (shadowOffsetX != null) __obj.updateDynamic("shadowOffsetX")(shadowOffsetX.asInstanceOf[js.Any])
+    if (shadowOffsetY != null) __obj.updateDynamic("shadowOffsetY")(shadowOffsetY.asInstanceOf[js.Any])
+    if (!js.isUndefined(startArrow)) __obj.updateDynamic("startArrow")(startArrow.get.asInstanceOf[js.Any])
+    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
+    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[line]
   }
-  @scala.inline
-  implicit class lineOps[Self <: line] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrowAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrowAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArrowRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrowRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndArrow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndArrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineCap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineCap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDash(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineJoin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineJoin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineJoin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineJoin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMiterLimit(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("miterLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMiterLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("miterLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartArrow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startArrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartArrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startArrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeOpacity(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

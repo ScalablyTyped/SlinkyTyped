@@ -35,65 +35,18 @@ trait SchemaNetworksAddPeeringRequest extends js.Object {
 
 object SchemaNetworksAddPeeringRequest {
   @scala.inline
-  def apply(): SchemaNetworksAddPeeringRequest = {
+  def apply(
+    autoCreateRoutes: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    networkPeering: SchemaNetworkPeering = null,
+    peerNetwork: String = null
+  ): SchemaNetworksAddPeeringRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoCreateRoutes)) __obj.updateDynamic("autoCreateRoutes")(autoCreateRoutes.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (networkPeering != null) __obj.updateDynamic("networkPeering")(networkPeering.asInstanceOf[js.Any])
+    if (peerNetwork != null) __obj.updateDynamic("peerNetwork")(peerNetwork.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetworksAddPeeringRequest]
   }
-  @scala.inline
-  implicit class SchemaNetworksAddPeeringRequestOps[Self <: SchemaNetworksAddPeeringRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoCreateRoutes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreateRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCreateRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreateRoutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkPeering(value: SchemaNetworkPeering): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkPeering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkPeering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkPeering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeerNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerNetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeerNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerNetwork")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

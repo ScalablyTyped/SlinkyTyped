@@ -6,67 +6,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TSTypePredicate_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSTypePredicate_
   extends TSType
      with BaseNode {
-  var asserts: Boolean | Null = js.native
-  var parameterName: Identifier_ | TSThisType_ = js.native
-  var typeAnnotation: TSTypeAnnotation_ | Null = js.native
+  var asserts: Boolean | Null
+  var parameterName: Identifier_ | TSThisType_
+  var typeAnnotation: TSTypeAnnotation_ | Null
   @JSName("type")
-  var type_TSTypePredicate_ : TSTypePredicate = js.native
+  var type_TSTypePredicate_ : TSTypePredicate
 }
 
 object TSTypePredicate_ {
   @scala.inline
-  def apply(parameterName: Identifier_ | TSThisType_, `type`: TSTypePredicate): TSTypePredicate_ = {
-    val __obj = js.Dynamic.literal(parameterName = parameterName.asInstanceOf[js.Any])
+  def apply(
+    parameterName: Identifier_ | TSThisType_,
+    `type`: TSTypePredicate,
+    asserts: Boolean = null.asInstanceOf[Boolean],
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TSTypeAnnotation_ = null
+  ): TSTypePredicate_ = {
+    val __obj = js.Dynamic.literal(parameterName = parameterName.asInstanceOf[js.Any], asserts = asserts.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSTypePredicate_]
   }
-  @scala.inline
-  implicit class TSTypePredicate_Ops[Self <: TSTypePredicate_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameterName(value: Identifier_ | TSThisType_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSTypePredicate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAsserts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asserts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssertsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asserts")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotation(value: TSTypeAnnotation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(null)
-        ret
-    }
-  }
-  
 }
 

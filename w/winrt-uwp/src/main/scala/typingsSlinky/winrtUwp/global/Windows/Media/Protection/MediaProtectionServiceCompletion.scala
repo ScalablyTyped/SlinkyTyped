@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Protection.MediaProtectionServiceCompletion")
 @js.native
 abstract class MediaProtectionServiceCompletion ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Protection.MediaProtectionServiceCompletion
+  extends typingsSlinky.winrtUwp.Windows.Media.Protection.MediaProtectionServiceCompletion {
+  /**
+    * Indicates whether a protection service has completed successfully.
+    * @param success Indicates the successful completion of a protection service.
+    */
+  /* CompleteClass */
+  override def complete(success: Boolean): Unit = js.native
+}
 

@@ -8,32 +8,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SortedIndex extends js.Object {
-  var field: String = js.native
-  var keys: js.Array[_] = js.native
-  var values: js.Array[_] = js.native
-  def bs(): js.Function2[/* array */ js.Array[_], /* item */ js.Any, Found] = js.native
+  var field: String
+  var keys: js.Array[_]
+  var values: js.Array[_]
+  def bs(): js.Function2[/* array */ js.Array[_], /* item */ js.Any, Found]
   // clear will zap the index
-  def clear(): Unit = js.native
+  def clear(): Unit
   // get all values which have a key == the given key
-  def get(key: js.Any): js.Array[_] = js.native
+  def get(key: js.Any): js.Array[_]
   // get all vals from start to end
-  def getAll(key: js.Any, start: Double, end: Double): js.Array[_] = js.native
+  def getAll(key: js.Any, start: Double, end: Double): js.Array[_]
   // get all values which have a key > the given key
-  def getGt(key: js.Any): js.Array[_] = js.native
+  def getGt(key: js.Any): js.Array[_]
   // get all values which have a key < the given key
-  def getLt(key: js.Any): js.Array[_] = js.native
+  def getLt(key: js.Any): js.Array[_]
   // just in case someone wants to do something smart with ranges
-  def getPos(key: js.Any): Found = js.native
+  def getPos(key: js.Any): Found
   // remove the value from the index, if the value was the last one, remove the key
-  def remove(key: js.Any, value: js.Any): Unit = js.native
+  def remove(key: js.Any, value: js.Any): Unit
   // add the value you want returned  to the key in the index
-  def set(key: js.Any, value: js.Any): Unit = js.native
+  def set(key: js.Any, value: js.Any): Unit
   // and allow override of the default sort
-  def setSort(fun: js.Function2[/* target */ js.Any, /* test */ js.Any, Double]): Unit = js.native
+  def setSort(fun: js.Function2[/* target */ js.Any, /* test */ js.Any, Double]): Unit
   // set the default sort
-  def sort(a: js.Any, b: js.Any): `-1` | `0` | `1` = js.native
+  def sort(a: js.Any, b: js.Any): `-1` | `0` | `1`
 }
 
 object SortedIndex {
@@ -57,97 +56,5 @@ object SortedIndex {
     val __obj = js.Dynamic.literal(bs = js.Any.fromFunction0(bs), clear = js.Any.fromFunction0(clear), field = field.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), getAll = js.Any.fromFunction3(getAll), getGt = js.Any.fromFunction1(getGt), getLt = js.Any.fromFunction1(getLt), getPos = js.Any.fromFunction1(getPos), keys = keys.asInstanceOf[js.Any], remove = js.Any.fromFunction2(remove), set = js.Any.fromFunction2(set), setSort = js.Any.fromFunction1(setSort), sort = js.Any.fromFunction2(sort), values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[SortedIndex]
   }
-  @scala.inline
-  implicit class SortedIndexOps[Self <: SortedIndex] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBs(value: () => js.Function2[/* array */ js.Array[_], /* item */ js.Any, Found]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGet(value: js.Any => js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAll(value: (js.Any, Double, Double) => js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAll")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetGt(value: js.Any => js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGt")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetLt(value: js.Any => js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLt")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPos(value: js.Any => Found): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPos")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withKeys(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemove(value: (js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSet(value: (js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetSort(value: js.Function2[/* target */ js.Any, /* test */ js.Any, Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSort")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSort(value: (js.Any, js.Any) => `-1` | `0` | `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

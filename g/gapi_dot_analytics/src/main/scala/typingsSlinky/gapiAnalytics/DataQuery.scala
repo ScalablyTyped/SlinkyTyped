@@ -4,205 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataQuery extends js.Object {
-  var `30daysAgo`: js.UndefOr[String] = js.native
-  var dimensions: js.UndefOr[String] = js.native
-  var `end-date`: js.UndefOr[String] = js.native
-  var filters: js.UndefOr[String] = js.native
-  var ids: js.UndefOr[String] = js.native
-  var `include-empty-rows`: js.UndefOr[String] = js.native
-  var `max-results`: js.UndefOr[String] = js.native
-  var metrics: js.UndefOr[String] = js.native
-  var samplingLevel: js.UndefOr[String] = js.native
-  var segment: js.UndefOr[String] = js.native
-  var sort: js.UndefOr[String] = js.native
-  var `start-date`: js.UndefOr[String] = js.native
-  var `start-index`: js.UndefOr[String] = js.native
-  var yesterday: js.UndefOr[String] = js.native
+  var `30daysAgo`: js.UndefOr[String] = js.undefined
+  var dimensions: js.UndefOr[String] = js.undefined
+  var `end-date`: js.UndefOr[String] = js.undefined
+  var filters: js.UndefOr[String] = js.undefined
+  var ids: js.UndefOr[String] = js.undefined
+  var `include-empty-rows`: js.UndefOr[String] = js.undefined
+  var `max-results`: js.UndefOr[String] = js.undefined
+  var metrics: js.UndefOr[String] = js.undefined
+  var samplingLevel: js.UndefOr[String] = js.undefined
+  var segment: js.UndefOr[String] = js.undefined
+  var sort: js.UndefOr[String] = js.undefined
+  var `start-date`: js.UndefOr[String] = js.undefined
+  var `start-index`: js.UndefOr[String] = js.undefined
+  var yesterday: js.UndefOr[String] = js.undefined
 }
 
 object DataQuery {
   @scala.inline
-  def apply(): DataQuery = {
+  def apply(
+    `30daysAgo`: String = null,
+    dimensions: String = null,
+    `end-date`: String = null,
+    filters: String = null,
+    ids: String = null,
+    `include-empty-rows`: String = null,
+    `max-results`: String = null,
+    metrics: String = null,
+    samplingLevel: String = null,
+    segment: String = null,
+    sort: String = null,
+    `start-date`: String = null,
+    `start-index`: String = null,
+    yesterday: String = null
+  ): DataQuery = {
     val __obj = js.Dynamic.literal()
+    if (`30daysAgo` != null) __obj.updateDynamic("30daysAgo")(`30daysAgo`.asInstanceOf[js.Any])
+    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
+    if (`end-date` != null) __obj.updateDynamic("end-date")(`end-date`.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (ids != null) __obj.updateDynamic("ids")(ids.asInstanceOf[js.Any])
+    if (`include-empty-rows` != null) __obj.updateDynamic("include-empty-rows")(`include-empty-rows`.asInstanceOf[js.Any])
+    if (`max-results` != null) __obj.updateDynamic("max-results")(`max-results`.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
+    if (samplingLevel != null) __obj.updateDynamic("samplingLevel")(samplingLevel.asInstanceOf[js.Any])
+    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
+    if (`start-date` != null) __obj.updateDynamic("start-date")(`start-date`.asInstanceOf[js.Any])
+    if (`start-index` != null) __obj.updateDynamic("start-index")(`start-index`.asInstanceOf[js.Any])
+    if (yesterday != null) __obj.updateDynamic("yesterday")(yesterday.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataQuery]
   }
-  @scala.inline
-  implicit class DataQueryOps[Self <: DataQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with30daysAgo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("30daysAgo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without30daysAgo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("30daysAgo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withEnd-date`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end-date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutEnd-date`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end-date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withInclude-empty-rows`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include-empty-rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutInclude-empty-rows`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include-empty-rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMax-results`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max-results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMax-results`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max-results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplingLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplingLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withStart-date`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start-date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutStart-date`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start-date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withStart-index`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start-index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutStart-index`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start-index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYesterday(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yesterday")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYesterday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yesterday")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * Describes the configuration options supported by conventional-config for
   * upstream tooling.
   */
-@js.native
 trait Config_ extends js.Object {
   /**
     * A URL representing a specific commit at a hash.
@@ -17,14 +16,14 @@ trait Config_ extends js.Object {
     * @default
     * "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}"
     */
-  var commitUrlFormat: js.UndefOr[String] = js.native
+  var commitUrlFormat: js.UndefOr[String] = js.undefined
   /**
     * A URL representing the comparison between two git SHAs.
     *
     * @default
     * "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}"
     */
-  var compareUrlFormat: js.UndefOr[String] = js.native
+  var compareUrlFormat: js.UndefOr[String] = js.undefined
   /**
     * A URL representing the issue format (allowing a different URL format to be
     * swapped in for Gitlab, Bitbucket, etc).
@@ -32,7 +31,7 @@ trait Config_ extends js.Object {
     * @default
     * "{{host}}/{{owner}}/{{repository}}/issues/{{id}}"
     */
-  var issueUrlFormat: js.UndefOr[String] = js.native
+  var issueUrlFormat: js.UndefOr[String] = js.undefined
   /**
     * Boolean indicating whether or not the action being run (generating CHANGELOG,
     * recommendedBump, etc.) is being performed for a pre-major release (<1.0.0).
@@ -42,14 +41,14 @@ trait Config_ extends js.Object {
     * @default
     * false
     */
-  var preMajor: js.UndefOr[Boolean] = js.native
+  var preMajor: js.UndefOr[Boolean] = js.undefined
   /**
     * A string to be used to format the auto-generated release commit message.
     *
     * @default
     * "chore(release): {{currentTag}}"
     */
-  var releaseCommitMessageFormat: js.UndefOr[String] = js.native
+  var releaseCommitMessageFormat: js.UndefOr[String] = js.undefined
   /**
     * An array of `type` objects representing the explicitly supported commit
     * message types, and whether they should show up in generated `CHANGELOG`s.
@@ -63,7 +62,7 @@ trait Config_ extends js.Object {
     *     { "type": "ci", "hidden": true }
     * ]
     */
-  var types: js.UndefOr[js.Array[Type]] = js.native
+  var types: js.UndefOr[js.Array[Type]] = js.undefined
   /**
     * A URL representing the a user's profile URL on GitHub, Gitlab, etc. This URL
     * is used for substituting @bcoe with https://github.com/bcoe in commit
@@ -72,106 +71,29 @@ trait Config_ extends js.Object {
     * @default
     * "{{host}}/{{user}}"
     */
-  var userUrlFormat: js.UndefOr[String] = js.native
+  var userUrlFormat: js.UndefOr[String] = js.undefined
 }
 
 object Config_ {
   @scala.inline
-  def apply(): Config_ = {
+  def apply(
+    commitUrlFormat: String = null,
+    compareUrlFormat: String = null,
+    issueUrlFormat: String = null,
+    preMajor: js.UndefOr[Boolean] = js.undefined,
+    releaseCommitMessageFormat: String = null,
+    types: js.Array[Type] = null,
+    userUrlFormat: String = null
+  ): Config_ = {
     val __obj = js.Dynamic.literal()
+    if (commitUrlFormat != null) __obj.updateDynamic("commitUrlFormat")(commitUrlFormat.asInstanceOf[js.Any])
+    if (compareUrlFormat != null) __obj.updateDynamic("compareUrlFormat")(compareUrlFormat.asInstanceOf[js.Any])
+    if (issueUrlFormat != null) __obj.updateDynamic("issueUrlFormat")(issueUrlFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(preMajor)) __obj.updateDynamic("preMajor")(preMajor.get.asInstanceOf[js.Any])
+    if (releaseCommitMessageFormat != null) __obj.updateDynamic("releaseCommitMessageFormat")(releaseCommitMessageFormat.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
+    if (userUrlFormat != null) __obj.updateDynamic("userUrlFormat")(userUrlFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config_]
   }
-  @scala.inline
-  implicit class Config_Ops[Self <: Config_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitUrlFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitUrlFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitUrlFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitUrlFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompareUrlFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareUrlFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompareUrlFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareUrlFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssueUrlFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issueUrlFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssueUrlFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issueUrlFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreMajor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preMajor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreMajor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preMajor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseCommitMessageFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseCommitMessageFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseCommitMessageFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseCommitMessageFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[Type]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserUrlFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userUrlFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserUrlFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userUrlFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

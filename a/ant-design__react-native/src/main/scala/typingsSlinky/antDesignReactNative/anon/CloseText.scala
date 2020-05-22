@@ -8,18 +8,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CloseText extends js.Object {
-  var closeText: RegisteredStyle[TextStyle] = js.native
-  var closeWrap: RegisteredStyle[ViewStyle] = js.native
-  var container: RegisteredStyle[ViewStyle] = js.native
-  var image: RegisteredStyle[ImageStyle] = js.native
-  var item: RegisteredStyle[ViewStyle] = js.native
-  var plusText: RegisteredStyle[TextStyle] = js.native
-  var plusWrap: RegisteredStyle[ViewStyle] = js.native
-  var plusWrapHighlight: RegisteredStyle[ViewStyle] = js.native
-  var plusWrapNormal: RegisteredStyle[ViewStyle] = js.native
-  var size: RegisteredStyle[ImageStyle] = js.native
+  var closeText: RegisteredStyle[TextStyle]
+  var closeWrap: RegisteredStyle[ViewStyle]
+  var container: RegisteredStyle[ViewStyle]
+  var image: RegisteredStyle[ImageStyle]
+  var item: RegisteredStyle[ViewStyle]
+  var plusText: RegisteredStyle[TextStyle]
+  var plusWrap: RegisteredStyle[ViewStyle]
+  var plusWrapHighlight: RegisteredStyle[ViewStyle]
+  var plusWrapNormal: RegisteredStyle[ViewStyle]
+  var size: RegisteredStyle[ImageStyle]
 }
 
 object CloseText {
@@ -39,73 +38,5 @@ object CloseText {
     val __obj = js.Dynamic.literal(closeText = closeText.asInstanceOf[js.Any], closeWrap = closeWrap.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], plusText = plusText.asInstanceOf[js.Any], plusWrap = plusWrap.asInstanceOf[js.Any], plusWrapHighlight = plusWrapHighlight.asInstanceOf[js.Any], plusWrapNormal = plusWrapNormal.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloseText]
   }
-  @scala.inline
-  implicit class CloseTextOps[Self <: CloseText] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloseText(value: RegisteredStyle[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloseWrap(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: RegisteredStyle[ImageStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlusText(value: RegisteredStyle[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plusText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlusWrap(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plusWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlusWrapHighlight(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plusWrapHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlusWrapNormal(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plusWrapNormal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: RegisteredStyle[ImageStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

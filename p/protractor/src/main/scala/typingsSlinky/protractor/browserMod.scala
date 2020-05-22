@@ -12,7 +12,6 @@ import typingsSlinky.protractor.locatorsMod.ProtractorBy
 import typingsSlinky.protractor.pluginsMod.Plugins
 import typingsSlinky.seleniumWebdriver.mod.WebDriver
 import typingsSlinky.seleniumWebdriver.mod.WebElement
-import typingsSlinky.seleniumWebdriver.mod.WebElementPromise
 import typingsSlinky.webdriverJsExtender.mod.ExtendedWebDriver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -335,20 +334,6 @@ object browserMod extends js.Object {
       */
     def explore(): Unit = js.native
     def explore(opt_debugPort: Double): Unit = js.native
-    /**
-      * Waits for Angular to finish rendering before searching for elements.
-      * @see webdriver.WebDriver.findElement
-      * @returns {!webdriver.WebElementPromise} A promise that will be resolved to
-      *      the located {@link webdriver.WebElement}.
-      */
-    def findElement(locator: Locator): WebElementPromise = js.native
-    /**
-      * Waits for Angular to finish rendering before searching for elements.
-      * @see webdriver.WebDriver.findElements
-      * @returns {!webdriver.promise.Promise} A promise that will be resolved to an
-      *     array of the located {@link webdriver.WebElement}s.
-      */
-    def findElements(locator: Locator): js.Promise[js.Array[WebElement]] = js.native
     /**
       * Fork another instance of browser for use in interactive tests.
       *

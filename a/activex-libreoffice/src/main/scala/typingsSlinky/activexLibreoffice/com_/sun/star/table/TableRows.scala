@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * represents a collection of all rows of a table or spreadsheet.
   * @see com.sun.star.table.TableRow
   */
-@js.native
 trait TableRows
   extends XTableRows
      with XEnumerationAccess

@@ -26,47 +26,15 @@ trait Device extends js.Object {
 
 object Device {
   @scala.inline
-  def apply(CertificateArn: string, Id: string, ThingArn: string): Device = {
+  def apply(
+    CertificateArn: string,
+    Id: string,
+    ThingArn: string,
+    SyncShadow: js.UndefOr[boolean] = js.undefined
+  ): Device = {
     val __obj = js.Dynamic.literal(CertificateArn = CertificateArn.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], ThingArn = ThingArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(SyncShadow)) __obj.updateDynamic("SyncShadow")(SyncShadow.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Device]
   }
-  @scala.inline
-  implicit class DeviceOps[Self <: Device] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThingArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThingArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSyncShadow(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyncShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyncShadow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

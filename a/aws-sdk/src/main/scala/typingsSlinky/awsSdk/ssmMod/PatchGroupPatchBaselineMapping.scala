@@ -18,41 +18,11 @@ trait PatchGroupPatchBaselineMapping extends js.Object {
 
 object PatchGroupPatchBaselineMapping {
   @scala.inline
-  def apply(): PatchGroupPatchBaselineMapping = {
+  def apply(BaselineIdentity: PatchBaselineIdentity = null, PatchGroup: PatchGroup = null): PatchGroupPatchBaselineMapping = {
     val __obj = js.Dynamic.literal()
+    if (BaselineIdentity != null) __obj.updateDynamic("BaselineIdentity")(BaselineIdentity.asInstanceOf[js.Any])
+    if (PatchGroup != null) __obj.updateDynamic("PatchGroup")(PatchGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[PatchGroupPatchBaselineMapping]
   }
-  @scala.inline
-  implicit class PatchGroupPatchBaselineMappingOps[Self <: PatchGroupPatchBaselineMapping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaselineIdentity(value: PatchBaselineIdentity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaselineIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineIdentity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatchGroup(value: PatchGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatchGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,59 +26,17 @@ trait S3DataSpec extends js.Object {
 
 object S3DataSpec {
   @scala.inline
-  def apply(DataLocationS3: S3Url): S3DataSpec = {
+  def apply(
+    DataLocationS3: S3Url,
+    DataRearrangement: DataRearrangement = null,
+    DataSchema: DataSchema = null,
+    DataSchemaLocationS3: S3Url = null
+  ): S3DataSpec = {
     val __obj = js.Dynamic.literal(DataLocationS3 = DataLocationS3.asInstanceOf[js.Any])
+    if (DataRearrangement != null) __obj.updateDynamic("DataRearrangement")(DataRearrangement.asInstanceOf[js.Any])
+    if (DataSchema != null) __obj.updateDynamic("DataSchema")(DataSchema.asInstanceOf[js.Any])
+    if (DataSchemaLocationS3 != null) __obj.updateDynamic("DataSchemaLocationS3")(DataSchemaLocationS3.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3DataSpec]
   }
-  @scala.inline
-  implicit class S3DataSpecOps[Self <: S3DataSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataLocationS3(value: S3Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLocationS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataRearrangement(value: DataRearrangement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRearrangement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataRearrangement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRearrangement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSchema(value: DataSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSchemaLocationS3(value: S3Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchemaLocationS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSchemaLocationS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchemaLocationS3")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

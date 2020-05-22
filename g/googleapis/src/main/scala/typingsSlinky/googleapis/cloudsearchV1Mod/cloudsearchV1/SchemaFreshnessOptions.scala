@@ -33,41 +33,11 @@ trait SchemaFreshnessOptions extends js.Object {
 
 object SchemaFreshnessOptions {
   @scala.inline
-  def apply(): SchemaFreshnessOptions = {
+  def apply(freshnessDuration: String = null, freshnessProperty: String = null): SchemaFreshnessOptions = {
     val __obj = js.Dynamic.literal()
+    if (freshnessDuration != null) __obj.updateDynamic("freshnessDuration")(freshnessDuration.asInstanceOf[js.Any])
+    if (freshnessProperty != null) __obj.updateDynamic("freshnessProperty")(freshnessProperty.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFreshnessOptions]
   }
-  @scala.inline
-  implicit class SchemaFreshnessOptionsOps[Self <: SchemaFreshnessOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFreshnessDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freshnessDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreshnessDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freshnessDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFreshnessProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freshnessProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreshnessProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freshnessProperty")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

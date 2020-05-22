@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait ChartLegendFormat extends ClientObject {
   /**
     *
-    * Represents the border format, which includes color, linestyle, and weight. Read-only.
+    * Represents the border format, which includes color, linestyle, and weight.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -30,14 +30,14 @@ trait ChartLegendFormat extends ClientObject {
   var context_ChartLegendFormat: RequestContext = js.native
   /**
     *
-    * Represents the fill format of an object, which includes background formatting information. Read-only.
+    * Represents the fill format of an object, which includes background formatting information.
     *
     * [Api set: ExcelApi 1.1]
     */
   val fill: ChartFill = js.native
   /**
     *
-    * Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
+    * Represents the font attributes such as font name, font size, color, etc. of a chart legend.
     *
     * [Api set: ExcelApi 1.1]
     */

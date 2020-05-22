@@ -14,29 +14,10 @@ trait EncryptionConfiguration extends js.Object {
 
 object EncryptionConfiguration {
   @scala.inline
-  def apply(): EncryptionConfiguration = {
+  def apply(ReplicaKmsKeyID: ReplicaKmsKeyID = null): EncryptionConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (ReplicaKmsKeyID != null) __obj.updateDynamic("ReplicaKmsKeyID")(ReplicaKmsKeyID.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptionConfiguration]
   }
-  @scala.inline
-  implicit class EncryptionConfigurationOps[Self <: EncryptionConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplicaKmsKeyID(value: ReplicaKmsKeyID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaKmsKeyID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicaKmsKeyID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaKmsKeyID")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

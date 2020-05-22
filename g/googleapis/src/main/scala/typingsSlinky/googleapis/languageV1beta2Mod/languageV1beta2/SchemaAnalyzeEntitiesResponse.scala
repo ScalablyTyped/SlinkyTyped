@@ -23,41 +23,11 @@ trait SchemaAnalyzeEntitiesResponse extends js.Object {
 
 object SchemaAnalyzeEntitiesResponse {
   @scala.inline
-  def apply(): SchemaAnalyzeEntitiesResponse = {
+  def apply(entities: js.Array[SchemaEntity] = null, language: String = null): SchemaAnalyzeEntitiesResponse = {
     val __obj = js.Dynamic.literal()
+    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnalyzeEntitiesResponse]
   }
-  @scala.inline
-  implicit class SchemaAnalyzeEntitiesResponseOps[Self <: SchemaAnalyzeEntitiesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntities(value: js.Array[SchemaEntity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

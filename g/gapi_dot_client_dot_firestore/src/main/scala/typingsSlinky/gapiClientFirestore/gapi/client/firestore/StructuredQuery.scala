@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StructuredQuery extends js.Object {
   /** A end point for the query results. */
-  var endAt: js.UndefOr[Cursor] = js.native
+  var endAt: js.UndefOr[Cursor] = js.undefined
   /** The collections to query. */
-  var from: js.UndefOr[js.Array[CollectionSelector]] = js.native
+  var from: js.UndefOr[js.Array[CollectionSelector]] = js.undefined
   /**
     * The maximum number of results to return.
     *
     * Applies after all other constraints.
     * Must be >= 0 if specified.
     */
-  var limit: js.UndefOr[Double] = js.native
+  var limit: js.UndefOr[Double] = js.undefined
   /**
     * The number of results to skip.
     *
     * Applies before limit, but after all other constraints. Must be >= 0 if
     * specified.
     */
-  var offset: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
   /**
     * The order to apply to the query results.
     *
@@ -44,124 +43,37 @@ trait StructuredQuery extends js.Object {
     * &#42; `SELECT &#42; FROM Foo WHERE A > 1` becomes
     * `SELECT &#42; FROM Foo WHERE A > 1 ORDER BY A, __name__`
     */
-  var orderBy: js.UndefOr[js.Array[Order]] = js.native
+  var orderBy: js.UndefOr[js.Array[Order]] = js.undefined
   /** The projection to return. */
-  var select: js.UndefOr[Projection] = js.native
+  var select: js.UndefOr[Projection] = js.undefined
   /** A starting point for the query results. */
-  var startAt: js.UndefOr[Cursor] = js.native
+  var startAt: js.UndefOr[Cursor] = js.undefined
   /** The filter to apply. */
-  var where: js.UndefOr[Filter] = js.native
+  var where: js.UndefOr[Filter] = js.undefined
 }
 
 object StructuredQuery {
   @scala.inline
-  def apply(): StructuredQuery = {
+  def apply(
+    endAt: Cursor = null,
+    from: js.Array[CollectionSelector] = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    orderBy: js.Array[Order] = null,
+    select: Projection = null,
+    startAt: Cursor = null,
+    where: Filter = null
+  ): StructuredQuery = {
     val __obj = js.Dynamic.literal()
+    if (endAt != null) __obj.updateDynamic("endAt")(endAt.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (orderBy != null) __obj.updateDynamic("orderBy")(orderBy.asInstanceOf[js.Any])
+    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
+    if (startAt != null) __obj.updateDynamic("startAt")(startAt.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructuredQuery]
   }
-  @scala.inline
-  implicit class StructuredQueryOps[Self <: StructuredQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndAt(value: Cursor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: js.Array[CollectionSelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderBy(value: js.Array[Order]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: Projection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAt(value: Cursor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhere(value: Filter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhere: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IVehicleSpec extends js.Object {
   /**
     * The unit of measurement of width, height, length. Can be one of the following values:
     * •	meter or m [default]
     * •	foot or ft
     */
-  var dimensionUnit: js.UndefOr[String] = js.native
+  var dimensionUnit: js.UndefOr[String] = js.undefined
   /** Indicates if the vehicle shall avoid crosswinds. */
-  var vehicleAvoidCrossWind: js.UndefOr[Boolean] = js.native
+  var vehicleAvoidCrossWind: js.UndefOr[Boolean] = js.undefined
   /** Indicates if the route shall avoid the risk of grounding. */
-  var vehicleAvoidGroundingRisk: js.UndefOr[Boolean] = js.native
+  var vehicleAvoidGroundingRisk: js.UndefOr[Boolean] = js.undefined
   /** The number of axles. */
-  var vehicleAxles: js.UndefOr[Double] = js.native
+  var vehicleAxles: js.UndefOr[Double] = js.undefined
   /**
     * A comma separated and case-sensitive list of one or more hazardous materials for which the vehicle is transporting. Possible values and their aliases are:
     *
@@ -37,7 +36,7 @@ trait IVehicleSpec extends js.Object {
     * 
     * Example: "WH,R,Poison"
     */
-  var vehicleHazardousMaterials: js.UndefOr[String] = js.native
+  var vehicleHazardousMaterials: js.UndefOr[String] = js.undefined
   /** 
     * A comma separated and case-sensitive list of one or more hazardous materials for which the vehicle has a permit. Possible values and their aliases are: 
     * 
@@ -56,224 +55,67 @@ trait IVehicleSpec extends js.Object {
     * 
     * Example: "C,Explosive,Corrosive" 
     */
-  var vehicleHazardousPermits: js.UndefOr[String] = js.native
+  var vehicleHazardousPermits: js.UndefOr[String] = js.undefined
   /** The height of the vehicle in the specified dimension units. */
-  var vehicleHeight: js.UndefOr[Double] = js.native
+  var vehicleHeight: js.UndefOr[Double] = js.undefined
   /** The length of the vehicle in the specified dimension units. */
-  var vehicleLength: js.UndefOr[Double] = js.native
+  var vehicleLength: js.UndefOr[Double] = js.undefined
   /** The maximum gradient the vehicle can drive measured in degrees. */
-  var vehicleMaxGradient: js.UndefOr[Boolean] = js.native
+  var vehicleMaxGradient: js.UndefOr[Boolean] = js.undefined
   /** The minimum required radius for the vehicle to turn in the specified dimension units. */
-  var vehicleMinTurnRadius: js.UndefOr[Double] = js.native
+  var vehicleMinTurnRadius: js.UndefOr[Double] = js.undefined
   /** Indicates if the truck is pulling a semi-trailer. Semi-trailer restrictions are mostly used in North America. */
-  var vehicleSemi: js.UndefOr[Boolean] = js.native
+  var vehicleSemi: js.UndefOr[Boolean] = js.undefined
   /** The number of trailers. */
-  var vehicleTrailers: js.UndefOr[Double] = js.native
+  var vehicleTrailers: js.UndefOr[Double] = js.undefined
   /** The weight of the vehicle in the specified weight units. */
-  var vehicleWeight: js.UndefOr[Double] = js.native
+  var vehicleWeight: js.UndefOr[Double] = js.undefined
   /** The width of the vehicle in the specified dimension units. */
-  var vehicleWidth: js.UndefOr[Double] = js.native
+  var vehicleWidth: js.UndefOr[Double] = js.undefined
   /**
     * The unit of measurement of weight. Can be one of the following values:
     * •	kilogram or kg [default]
     * •	pound or lb
     */
-  var weightUnit: js.UndefOr[String] = js.native
+  var weightUnit: js.UndefOr[String] = js.undefined
 }
 
 object IVehicleSpec {
   @scala.inline
-  def apply(): IVehicleSpec = {
+  def apply(
+    dimensionUnit: String = null,
+    vehicleAvoidCrossWind: js.UndefOr[Boolean] = js.undefined,
+    vehicleAvoidGroundingRisk: js.UndefOr[Boolean] = js.undefined,
+    vehicleAxles: js.UndefOr[Double] = js.undefined,
+    vehicleHazardousMaterials: String = null,
+    vehicleHazardousPermits: String = null,
+    vehicleHeight: js.UndefOr[Double] = js.undefined,
+    vehicleLength: js.UndefOr[Double] = js.undefined,
+    vehicleMaxGradient: js.UndefOr[Boolean] = js.undefined,
+    vehicleMinTurnRadius: js.UndefOr[Double] = js.undefined,
+    vehicleSemi: js.UndefOr[Boolean] = js.undefined,
+    vehicleTrailers: js.UndefOr[Double] = js.undefined,
+    vehicleWeight: js.UndefOr[Double] = js.undefined,
+    vehicleWidth: js.UndefOr[Double] = js.undefined,
+    weightUnit: String = null
+  ): IVehicleSpec = {
     val __obj = js.Dynamic.literal()
+    if (dimensionUnit != null) __obj.updateDynamic("dimensionUnit")(dimensionUnit.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleAvoidCrossWind)) __obj.updateDynamic("vehicleAvoidCrossWind")(vehicleAvoidCrossWind.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleAvoidGroundingRisk)) __obj.updateDynamic("vehicleAvoidGroundingRisk")(vehicleAvoidGroundingRisk.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleAxles)) __obj.updateDynamic("vehicleAxles")(vehicleAxles.get.asInstanceOf[js.Any])
+    if (vehicleHazardousMaterials != null) __obj.updateDynamic("vehicleHazardousMaterials")(vehicleHazardousMaterials.asInstanceOf[js.Any])
+    if (vehicleHazardousPermits != null) __obj.updateDynamic("vehicleHazardousPermits")(vehicleHazardousPermits.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleHeight)) __obj.updateDynamic("vehicleHeight")(vehicleHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleLength)) __obj.updateDynamic("vehicleLength")(vehicleLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleMaxGradient)) __obj.updateDynamic("vehicleMaxGradient")(vehicleMaxGradient.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleMinTurnRadius)) __obj.updateDynamic("vehicleMinTurnRadius")(vehicleMinTurnRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleSemi)) __obj.updateDynamic("vehicleSemi")(vehicleSemi.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleTrailers)) __obj.updateDynamic("vehicleTrailers")(vehicleTrailers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleWeight)) __obj.updateDynamic("vehicleWeight")(vehicleWeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vehicleWidth)) __obj.updateDynamic("vehicleWidth")(vehicleWidth.get.asInstanceOf[js.Any])
+    if (weightUnit != null) __obj.updateDynamic("weightUnit")(weightUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[IVehicleSpec]
   }
-  @scala.inline
-  implicit class IVehicleSpecOps[Self <: IVehicleSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleAvoidCrossWind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleAvoidCrossWind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleAvoidCrossWind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleAvoidCrossWind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleAvoidGroundingRisk(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleAvoidGroundingRisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleAvoidGroundingRisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleAvoidGroundingRisk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleAxles(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleAxles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleAxles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleAxles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleHazardousMaterials(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleHazardousMaterials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleHazardousMaterials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleHazardousMaterials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleHazardousPermits(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleHazardousPermits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleHazardousPermits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleHazardousPermits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleMaxGradient(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleMaxGradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleMaxGradient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleMaxGradient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleMinTurnRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleMinTurnRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleMinTurnRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleMinTurnRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleSemi(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleSemi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleSemi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleSemi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleTrailers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleTrailers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleTrailers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleTrailers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVehicleWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVehicleWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vehicleWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeightUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weightUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeightUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weightUnit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

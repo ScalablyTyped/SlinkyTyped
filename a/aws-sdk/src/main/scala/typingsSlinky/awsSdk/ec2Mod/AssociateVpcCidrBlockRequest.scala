@@ -34,83 +34,21 @@ trait AssociateVpcCidrBlockRequest extends js.Object {
 
 object AssociateVpcCidrBlockRequest {
   @scala.inline
-  def apply(VpcId: VpcId): AssociateVpcCidrBlockRequest = {
+  def apply(
+    VpcId: VpcId,
+    AmazonProvidedIpv6CidrBlock: js.UndefOr[Boolean] = js.undefined,
+    CidrBlock: String = null,
+    Ipv6CidrBlock: String = null,
+    Ipv6CidrBlockNetworkBorderGroup: String = null,
+    Ipv6Pool: Ipv6PoolEc2Id = null
+  ): AssociateVpcCidrBlockRequest = {
     val __obj = js.Dynamic.literal(VpcId = VpcId.asInstanceOf[js.Any])
+    if (!js.isUndefined(AmazonProvidedIpv6CidrBlock)) __obj.updateDynamic("AmazonProvidedIpv6CidrBlock")(AmazonProvidedIpv6CidrBlock.get.asInstanceOf[js.Any])
+    if (CidrBlock != null) __obj.updateDynamic("CidrBlock")(CidrBlock.asInstanceOf[js.Any])
+    if (Ipv6CidrBlock != null) __obj.updateDynamic("Ipv6CidrBlock")(Ipv6CidrBlock.asInstanceOf[js.Any])
+    if (Ipv6CidrBlockNetworkBorderGroup != null) __obj.updateDynamic("Ipv6CidrBlockNetworkBorderGroup")(Ipv6CidrBlockNetworkBorderGroup.asInstanceOf[js.Any])
+    if (Ipv6Pool != null) __obj.updateDynamic("Ipv6Pool")(Ipv6Pool.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateVpcCidrBlockRequest]
   }
-  @scala.inline
-  implicit class AssociateVpcCidrBlockRequestOps[Self <: AssociateVpcCidrBlockRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpcId(value: VpcId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmazonProvidedIpv6CidrBlock(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonProvidedIpv6CidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmazonProvidedIpv6CidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonProvidedIpv6CidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCidrBlock(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpv6CidrBlock(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpv6CidrBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpv6CidrBlockNetworkBorderGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlockNetworkBorderGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpv6CidrBlockNetworkBorderGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlockNetworkBorderGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpv6Pool(value: Ipv6PoolEc2Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Pool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpv6Pool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Pool")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

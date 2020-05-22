@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ViewportOptions extends js.Object {
-  var height: js.UndefOr[Double] = js.native
-  var projectionMatrix: js.UndefOr[ViewMatrix] = js.native
-  var viewMatrix: js.UndefOr[ViewMatrix] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
+  var projectionMatrix: js.UndefOr[ViewMatrix] = js.undefined
+  var viewMatrix: js.UndefOr[ViewMatrix] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ViewportOptions {
   @scala.inline
-  def apply(): ViewportOptions = {
+  def apply(
+    height: js.UndefOr[Double] = js.undefined,
+    projectionMatrix: ViewMatrix = null,
+    viewMatrix: ViewMatrix = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ViewportOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (projectionMatrix != null) __obj.updateDynamic("projectionMatrix")(projectionMatrix.asInstanceOf[js.Any])
+    if (viewMatrix != null) __obj.updateDynamic("viewMatrix")(viewMatrix.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewportOptions]
   }
-  @scala.inline
-  implicit class ViewportOptionsOps[Self <: ViewportOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectionMatrix(value: ViewMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectionMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewMatrix(value: ViewMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

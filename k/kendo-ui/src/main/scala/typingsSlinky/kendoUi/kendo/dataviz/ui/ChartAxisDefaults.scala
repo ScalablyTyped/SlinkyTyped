@@ -4,231 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartAxisDefaults extends js.Object {
-  var background: js.UndefOr[String] = js.native
-  var color: js.UndefOr[String] = js.native
-  var crosshair: js.UndefOr[ChartAxisDefaultsCrosshair] = js.native
-  var labels: js.UndefOr[ChartAxisDefaultsLabels] = js.native
-  var line: js.UndefOr[ChartAxisDefaultsLine] = js.native
-  var majorGridLines: js.UndefOr[ChartAxisDefaultsMajorGridLines] = js.native
-  var majorTicks: js.UndefOr[ChartAxisDefaultsMajorTicks] = js.native
-  var minorGridLines: js.UndefOr[ChartAxisDefaultsMinorGridLines] = js.native
-  var minorTicks: js.UndefOr[ChartAxisDefaultsMinorTicks] = js.native
-  var narrowRange: js.UndefOr[Boolean] = js.native
-  var pane: js.UndefOr[String] = js.native
-  var plotBands: js.UndefOr[js.Array[ChartAxisDefaultsPlotBand]] = js.native
-  var reverse: js.UndefOr[Boolean] = js.native
-  var startAngle: js.UndefOr[Double] = js.native
-  var title: js.UndefOr[ChartAxisDefaultsTitle] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
+  var background: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var crosshair: js.UndefOr[ChartAxisDefaultsCrosshair] = js.undefined
+  var labels: js.UndefOr[ChartAxisDefaultsLabels] = js.undefined
+  var line: js.UndefOr[ChartAxisDefaultsLine] = js.undefined
+  var majorGridLines: js.UndefOr[ChartAxisDefaultsMajorGridLines] = js.undefined
+  var majorTicks: js.UndefOr[ChartAxisDefaultsMajorTicks] = js.undefined
+  var minorGridLines: js.UndefOr[ChartAxisDefaultsMinorGridLines] = js.undefined
+  var minorTicks: js.UndefOr[ChartAxisDefaultsMinorTicks] = js.undefined
+  var narrowRange: js.UndefOr[Boolean] = js.undefined
+  var pane: js.UndefOr[String] = js.undefined
+  var plotBands: js.UndefOr[js.Array[ChartAxisDefaultsPlotBand]] = js.undefined
+  var reverse: js.UndefOr[Boolean] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.undefined
+  var title: js.UndefOr[ChartAxisDefaultsTitle] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChartAxisDefaults {
   @scala.inline
-  def apply(): ChartAxisDefaults = {
+  def apply(
+    background: String = null,
+    color: String = null,
+    crosshair: ChartAxisDefaultsCrosshair = null,
+    labels: ChartAxisDefaultsLabels = null,
+    line: ChartAxisDefaultsLine = null,
+    majorGridLines: ChartAxisDefaultsMajorGridLines = null,
+    majorTicks: ChartAxisDefaultsMajorTicks = null,
+    minorGridLines: ChartAxisDefaultsMinorGridLines = null,
+    minorTicks: ChartAxisDefaultsMinorTicks = null,
+    narrowRange: js.UndefOr[Boolean] = js.undefined,
+    pane: String = null,
+    plotBands: js.Array[ChartAxisDefaultsPlotBand] = null,
+    reverse: js.UndefOr[Boolean] = js.undefined,
+    startAngle: js.UndefOr[Double] = js.undefined,
+    title: ChartAxisDefaultsTitle = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): ChartAxisDefaults = {
     val __obj = js.Dynamic.literal()
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (crosshair != null) __obj.updateDynamic("crosshair")(crosshair.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (majorGridLines != null) __obj.updateDynamic("majorGridLines")(majorGridLines.asInstanceOf[js.Any])
+    if (majorTicks != null) __obj.updateDynamic("majorTicks")(majorTicks.asInstanceOf[js.Any])
+    if (minorGridLines != null) __obj.updateDynamic("minorGridLines")(minorGridLines.asInstanceOf[js.Any])
+    if (minorTicks != null) __obj.updateDynamic("minorTicks")(minorTicks.asInstanceOf[js.Any])
+    if (!js.isUndefined(narrowRange)) __obj.updateDynamic("narrowRange")(narrowRange.get.asInstanceOf[js.Any])
+    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
+    if (plotBands != null) __obj.updateDynamic("plotBands")(plotBands.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startAngle)) __obj.updateDynamic("startAngle")(startAngle.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartAxisDefaults]
   }
-  @scala.inline
-  implicit class ChartAxisDefaultsOps[Self <: ChartAxisDefaults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrosshair(value: ChartAxisDefaultsCrosshair): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrosshair: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: ChartAxisDefaultsLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: ChartAxisDefaultsLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMajorGridLines(value: ChartAxisDefaultsMajorGridLines): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorGridLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMajorGridLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorGridLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMajorTicks(value: ChartAxisDefaultsMajorTicks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMajorTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorGridLines(value: ChartAxisDefaultsMinorGridLines): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorGridLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTicks(value: ChartAxisDefaultsMinorTicks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNarrowRange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("narrowRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNarrowRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("narrowRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPane(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPane: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotBands(value: js.Array[ChartAxisDefaultsPlotBand]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotBands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: ChartAxisDefaultsTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

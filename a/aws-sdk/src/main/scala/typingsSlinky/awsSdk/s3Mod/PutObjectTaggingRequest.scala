@@ -30,59 +30,17 @@ trait PutObjectTaggingRequest extends js.Object {
 
 object PutObjectTaggingRequest {
   @scala.inline
-  def apply(Bucket: BucketName, Key: ObjectKey, Tagging: Tagging): PutObjectTaggingRequest = {
+  def apply(
+    Bucket: BucketName,
+    Key: ObjectKey,
+    Tagging: Tagging,
+    ContentMD5: ContentMD5 = null,
+    VersionId: ObjectVersionId = null
+  ): PutObjectTaggingRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Key = Key.asInstanceOf[js.Any], Tagging = Tagging.asInstanceOf[js.Any])
+    if (ContentMD5 != null) __obj.updateDynamic("ContentMD5")(ContentMD5.asInstanceOf[js.Any])
+    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutObjectTaggingRequest]
   }
-  @scala.inline
-  implicit class PutObjectTaggingRequestOps[Self <: PutObjectTaggingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: ObjectKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTagging(value: Tagging): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tagging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentMD5(value: ContentMD5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: ObjectVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

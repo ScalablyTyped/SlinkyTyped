@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimePickerMinutes extends js.Object {
   /** last displayed minute */
-  var ends: js.UndefOr[Double] = js.native
+  var ends: js.UndefOr[Double] = js.undefined
   /** interval of displayed minutes */
-  var interval: js.UndefOr[Double] = js.native
+  var interval: js.UndefOr[Double] = js.undefined
   /** first displayed minute */
-  var starts: js.UndefOr[Double] = js.native
+  var starts: js.UndefOr[Double] = js.undefined
 }
 
 object TimePickerMinutes {
   @scala.inline
-  def apply(): TimePickerMinutes = {
+  def apply(
+    ends: js.UndefOr[Double] = js.undefined,
+    interval: js.UndefOr[Double] = js.undefined,
+    starts: js.UndefOr[Double] = js.undefined
+  ): TimePickerMinutes = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ends)) __obj.updateDynamic("ends")(ends.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(starts)) __obj.updateDynamic("starts")(starts.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimePickerMinutes]
   }
-  @scala.inline
-  implicit class TimePickerMinutesOps[Self <: TimePickerMinutes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ends")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ends")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStarts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("starts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStarts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("starts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

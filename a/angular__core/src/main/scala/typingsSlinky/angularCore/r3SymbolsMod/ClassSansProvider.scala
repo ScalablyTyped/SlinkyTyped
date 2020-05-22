@@ -12,12 +12,11 @@ import scala.scalajs.js.annotation._
   *
   * @publicApi
   */
-@js.native
 trait ClassSansProvider extends js.Object {
   /**
     * Class to instantiate for the `token`.
     */
-  var useClass: Type[_] = js.native
+  var useClass: Type[_]
 }
 
 object ClassSansProvider {
@@ -26,19 +25,5 @@ object ClassSansProvider {
     val __obj = js.Dynamic.literal(useClass = useClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassSansProvider]
   }
-  @scala.inline
-  implicit class ClassSansProviderOps[Self <: ClassSansProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUseClass(value: Type[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

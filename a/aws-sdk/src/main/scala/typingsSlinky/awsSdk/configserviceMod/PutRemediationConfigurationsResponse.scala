@@ -14,29 +14,10 @@ trait PutRemediationConfigurationsResponse extends js.Object {
 
 object PutRemediationConfigurationsResponse {
   @scala.inline
-  def apply(): PutRemediationConfigurationsResponse = {
+  def apply(FailedBatches: FailedRemediationBatches = null): PutRemediationConfigurationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (FailedBatches != null) __obj.updateDynamic("FailedBatches")(FailedBatches.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutRemediationConfigurationsResponse]
   }
-  @scala.inline
-  implicit class PutRemediationConfigurationsResponseOps[Self <: PutRemediationConfigurationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedBatches(value: FailedRemediationBatches): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedBatches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedBatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedBatches")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

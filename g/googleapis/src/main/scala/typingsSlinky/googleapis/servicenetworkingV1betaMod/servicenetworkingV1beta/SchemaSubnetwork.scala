@@ -33,65 +33,18 @@ trait SchemaSubnetwork extends js.Object {
 
 object SchemaSubnetwork {
   @scala.inline
-  def apply(): SchemaSubnetwork = {
+  def apply(
+    ipCidrRange: String = null,
+    name: String = null,
+    network: String = null,
+    outsideAllocation: js.UndefOr[Boolean] = js.undefined
+  ): SchemaSubnetwork = {
     val __obj = js.Dynamic.literal()
+    if (ipCidrRange != null) __obj.updateDynamic("ipCidrRange")(ipCidrRange.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (!js.isUndefined(outsideAllocation)) __obj.updateDynamic("outsideAllocation")(outsideAllocation.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubnetwork]
   }
-  @scala.inline
-  implicit class SchemaSubnetworkOps[Self <: SchemaSubnetwork] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIpCidrRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipCidrRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpCidrRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipCidrRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutsideAllocation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outsideAllocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutsideAllocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outsideAllocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,5 +16,10 @@ class ASPxClientBeginCallbackEventArgs protected ()
     * @param command A string value that specifies the command.
     */
   def this(command: String) = this()
+  /**
+    * Gets a command name that identifies which client action forced a callback to occur.
+    */
+  /* CompleteClass */
+  override var command: String = js.native
 }
 

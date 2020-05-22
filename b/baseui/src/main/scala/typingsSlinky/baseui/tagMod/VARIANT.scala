@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VARIANT extends js.Object {
-  var light: typingsSlinky.baseui.baseuiStrings.light = js.native
-  var outlined: typingsSlinky.baseui.baseuiStrings.outlined = js.native
-  var solid: typingsSlinky.baseui.baseuiStrings.solid = js.native
+  var light: typingsSlinky.baseui.baseuiStrings.light
+  var outlined: typingsSlinky.baseui.baseuiStrings.outlined
+  var solid: typingsSlinky.baseui.baseuiStrings.solid
 }
 
 @JSImport("baseui/tag", "VARIANT")

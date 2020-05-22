@@ -18,35 +18,10 @@ trait DeleteDeliveryStreamInput extends js.Object {
 
 object DeleteDeliveryStreamInput {
   @scala.inline
-  def apply(DeliveryStreamName: DeliveryStreamName): DeleteDeliveryStreamInput = {
+  def apply(DeliveryStreamName: DeliveryStreamName, AllowForceDelete: js.UndefOr[BooleanObject] = js.undefined): DeleteDeliveryStreamInput = {
     val __obj = js.Dynamic.literal(DeliveryStreamName = DeliveryStreamName.asInstanceOf[js.Any])
+    if (!js.isUndefined(AllowForceDelete)) __obj.updateDynamic("AllowForceDelete")(AllowForceDelete.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteDeliveryStreamInput]
   }
-  @scala.inline
-  implicit class DeleteDeliveryStreamInputOps[Self <: DeleteDeliveryStreamInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeliveryStreamName(value: DeliveryStreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowForceDelete(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowForceDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowForceDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowForceDelete")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

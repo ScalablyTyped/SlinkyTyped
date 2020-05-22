@@ -30,77 +30,20 @@ trait NodeGroupConfiguration extends js.Object {
 
 object NodeGroupConfiguration {
   @scala.inline
-  def apply(): NodeGroupConfiguration = {
+  def apply(
+    NodeGroupId: AllowedNodeGroupId = null,
+    PrimaryAvailabilityZone: String = null,
+    ReplicaAvailabilityZones: AvailabilityZonesList = null,
+    ReplicaCount: js.UndefOr[IntegerOptional] = js.undefined,
+    Slots: String = null
+  ): NodeGroupConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (NodeGroupId != null) __obj.updateDynamic("NodeGroupId")(NodeGroupId.asInstanceOf[js.Any])
+    if (PrimaryAvailabilityZone != null) __obj.updateDynamic("PrimaryAvailabilityZone")(PrimaryAvailabilityZone.asInstanceOf[js.Any])
+    if (ReplicaAvailabilityZones != null) __obj.updateDynamic("ReplicaAvailabilityZones")(ReplicaAvailabilityZones.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReplicaCount)) __obj.updateDynamic("ReplicaCount")(ReplicaCount.get.asInstanceOf[js.Any])
+    if (Slots != null) __obj.updateDynamic("Slots")(Slots.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeGroupConfiguration]
   }
-  @scala.inline
-  implicit class NodeGroupConfigurationOps[Self <: NodeGroupConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodeGroupId(value: AllowedNodeGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryAvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryAvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicaAvailabilityZones(value: AvailabilityZonesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaAvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicaAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaAvailabilityZones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicaCount(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicaCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlots(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Slots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Slots")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

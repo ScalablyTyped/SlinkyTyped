@@ -29,53 +29,16 @@ trait SchemaTimeEvents extends js.Object {
 
 object SchemaTimeEvents {
   @scala.inline
-  def apply(): SchemaTimeEvents = {
+  def apply(
+    droppedAnnotationsCount: js.UndefOr[Double] = js.undefined,
+    droppedMessageEventsCount: js.UndefOr[Double] = js.undefined,
+    timeEvent: js.Array[SchemaTimeEvent] = null
+  ): SchemaTimeEvents = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(droppedAnnotationsCount)) __obj.updateDynamic("droppedAnnotationsCount")(droppedAnnotationsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(droppedMessageEventsCount)) __obj.updateDynamic("droppedMessageEventsCount")(droppedMessageEventsCount.get.asInstanceOf[js.Any])
+    if (timeEvent != null) __obj.updateDynamic("timeEvent")(timeEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTimeEvents]
   }
-  @scala.inline
-  implicit class SchemaTimeEventsOps[Self <: SchemaTimeEvents] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDroppedAnnotationsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedAnnotationsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDroppedAnnotationsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedAnnotationsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDroppedMessageEventsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedMessageEventsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDroppedMessageEventsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedMessageEventsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeEvent(value: js.Array[SchemaTimeEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeEvent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

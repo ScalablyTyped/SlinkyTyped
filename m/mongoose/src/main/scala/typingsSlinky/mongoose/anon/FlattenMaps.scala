@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FlattenMaps extends js.Object {
-  var flattenMaps: `true` = js.native
+  var flattenMaps: `true`
 }
 
 object FlattenMaps {
@@ -16,19 +15,5 @@ object FlattenMaps {
     val __obj = js.Dynamic.literal(flattenMaps = flattenMaps.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlattenMaps]
   }
-  @scala.inline
-  implicit class FlattenMapsOps[Self <: FlattenMaps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlattenMaps(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flattenMaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

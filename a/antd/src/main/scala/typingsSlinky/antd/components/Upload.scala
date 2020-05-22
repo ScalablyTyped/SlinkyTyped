@@ -47,23 +47,25 @@ object Upload {
     @scala.inline
     def customRequest(value: /* options */ RcCustomRequestOptions => Unit): this.type = set("customRequest", js.Any.fromFunction1(value))
     @scala.inline
-    def dataFunction1(value: /* file */ UploadFile[_] => js.Object): this.type = set("data", js.Any.fromFunction1(value))
+    def dataFunction1(value: /* file */ UploadFile[js.Any] => js.Object): this.type = set("data", js.Any.fromFunction1(value))
     @scala.inline
-    def data(value: js.Object | (js.Function1[/* file */ UploadFile[_], js.Object])): this.type = set("data", value.asInstanceOf[js.Any])
+    def data(value: js.Object | (js.Function1[/* file */ UploadFile[js.Any], js.Object])): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultFileList(value: js.Array[UploadFile[_]]): this.type = set("defaultFileList", value.asInstanceOf[js.Any])
+    def defaultFileList(value: js.Array[UploadFile[js.Any]]): this.type = set("defaultFileList", value.asInstanceOf[js.Any])
     @scala.inline
     def directory(value: Boolean): this.type = set("directory", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def fileList(value: js.Array[UploadFile[_]]): this.type = set("fileList", value.asInstanceOf[js.Any])
+    def fileList(value: js.Array[UploadFile[js.Any]]): this.type = set("fileList", value.asInstanceOf[js.Any])
     @scala.inline
     def headers(value: HttpRequestHeader): this.type = set("headers", value.asInstanceOf[js.Any])
     @scala.inline
-    def iconRender(value: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): this.type = set("iconRender", js.Any.fromFunction2(value))
+    def iconRender(value: (/* file */ UploadFile[js.Any], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): this.type = set("iconRender", js.Any.fromFunction2(value))
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isImageUrl(value: /* file */ UploadFile[_] => Boolean): this.type = set("isImageUrl", js.Any.fromFunction1(value))
     @scala.inline
     def listType(value: UploadListType): this.type = set("listType", value.asInstanceOf[js.Any])
     @scala.inline
@@ -77,11 +79,11 @@ object Upload {
     @scala.inline
     def onChange(value: /* info */ UploadChangeParam[UploadFile[_]] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onDownload(value: /* file */ UploadFile[_] => Unit): this.type = set("onDownload", js.Any.fromFunction1(value))
+    def onDownload(value: /* file */ UploadFile[js.Any] => Unit): this.type = set("onDownload", js.Any.fromFunction1(value))
     @scala.inline
-    def onPreview(value: /* file */ UploadFile[_] => Unit): this.type = set("onPreview", js.Any.fromFunction1(value))
+    def onPreview(value: /* file */ UploadFile[js.Any] => Unit): this.type = set("onPreview", js.Any.fromFunction1(value))
     @scala.inline
-    def onRemove(value: /* file */ UploadFile[_] => Unit | Boolean | (js.Promise[Unit | Boolean])): this.type = set("onRemove", js.Any.fromFunction1(value))
+    def onRemove(value: /* file */ UploadFile[js.Any] => Unit | Boolean | (js.Promise[Unit | Boolean])): this.type = set("onRemove", js.Any.fromFunction1(value))
     @scala.inline
     def openFileDialogOnClick(value: Boolean): this.type = set("openFileDialogOnClick", value.asInstanceOf[js.Any])
     @scala.inline
@@ -102,7 +104,7 @@ object Upload {
     def withCredentials(value: Boolean): this.type = set("withCredentials", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: UploadProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: UploadProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Upload.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

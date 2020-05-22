@@ -13,17 +13,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Statement, 'type'> */
-@js.native
 trait BlockStatement
   extends ASTNode
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var body: js.Array[StatementKind] = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var directives: js.UndefOr[js.Array[DirectiveKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.BlockStatement = js.native
+  var body: js.Array[StatementKind]
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var directives: js.UndefOr[js.Array[DirectiveKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.BlockStatement
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.BlockStatement")

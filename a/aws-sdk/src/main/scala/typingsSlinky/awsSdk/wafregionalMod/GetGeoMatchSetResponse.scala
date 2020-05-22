@@ -14,29 +14,10 @@ trait GetGeoMatchSetResponse extends js.Object {
 
 object GetGeoMatchSetResponse {
   @scala.inline
-  def apply(): GetGeoMatchSetResponse = {
+  def apply(GeoMatchSet: GeoMatchSet = null): GetGeoMatchSetResponse = {
     val __obj = js.Dynamic.literal()
+    if (GeoMatchSet != null) __obj.updateDynamic("GeoMatchSet")(GeoMatchSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetGeoMatchSetResponse]
   }
-  @scala.inline
-  implicit class GetGeoMatchSetResponseOps[Self <: GetGeoMatchSetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeoMatchSet(value: GeoMatchSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoMatchSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoMatchSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoMatchSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,8 +12,32 @@ trait SimpleStatement extends Statement
 
 object SimpleStatement {
   @scala.inline
-  implicit def apply(value: ExpressionStatement): SimpleStatement = value.asInstanceOf[SimpleStatement]
+  def VariableDeclarationStatement(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.VariableDeclarationStatement,
+    variables: js.Array[ASTNode],
+    initialValue: Expression = null,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): SimpleStatement = {
+    val __obj = js.Dynamic.literal(variables = variables.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SimpleStatement]
+  }
   @scala.inline
-  implicit def apply(value: VariableDeclarationStatement): SimpleStatement = value.asInstanceOf[SimpleStatement]
+  def ExpressionStatement(
+    expression: Expression,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ExpressionStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): SimpleStatement = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SimpleStatement]
+  }
 }
 

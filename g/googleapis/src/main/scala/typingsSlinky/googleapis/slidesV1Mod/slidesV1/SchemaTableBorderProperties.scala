@@ -25,53 +25,16 @@ trait SchemaTableBorderProperties extends js.Object {
 
 object SchemaTableBorderProperties {
   @scala.inline
-  def apply(): SchemaTableBorderProperties = {
+  def apply(
+    dashStyle: String = null,
+    tableBorderFill: SchemaTableBorderFill = null,
+    weight: SchemaDimension = null
+  ): SchemaTableBorderProperties = {
     val __obj = js.Dynamic.literal()
+    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
+    if (tableBorderFill != null) __obj.updateDynamic("tableBorderFill")(tableBorderFill.asInstanceOf[js.Any])
+    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableBorderProperties]
   }
-  @scala.inline
-  implicit class SchemaTableBorderPropertiesOps[Self <: SchemaTableBorderProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDashStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableBorderFill(value: SchemaTableBorderFill): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBorderFill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableBorderFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBorderFill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: SchemaDimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,104 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabBarProps extends js.Object {
   /** default: false */
-  var animated: js.UndefOr[Boolean] = js.native
-  var barTintColor: js.UndefOr[String] = js.native
+  var animated: js.UndefOr[Boolean] = js.undefined
+  var barTintColor: js.UndefOr[String] = js.undefined
   /** rn android only**/
-  var styles: js.UndefOr[js.Any] = js.native
+  var styles: js.UndefOr[js.Any] = js.undefined
   /** default: false */
-  var swipeable: js.UndefOr[Boolean] = js.native
-  var tintColor: js.UndefOr[String] = js.native
-  var unselectedTintColor: js.UndefOr[String] = js.native
+  var swipeable: js.UndefOr[Boolean] = js.undefined
+  var tintColor: js.UndefOr[String] = js.undefined
+  var unselectedTintColor: js.UndefOr[String] = js.undefined
 }
 
 object TabBarProps {
   @scala.inline
-  def apply(): TabBarProps = {
+  def apply(
+    animated: js.UndefOr[Boolean] = js.undefined,
+    barTintColor: String = null,
+    styles: js.Any = null,
+    swipeable: js.UndefOr[Boolean] = js.undefined,
+    tintColor: String = null,
+    unselectedTintColor: String = null
+  ): TabBarProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.get.asInstanceOf[js.Any])
+    if (barTintColor != null) __obj.updateDynamic("barTintColor")(barTintColor.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (!js.isUndefined(swipeable)) __obj.updateDynamic("swipeable")(swipeable.get.asInstanceOf[js.Any])
+    if (tintColor != null) __obj.updateDynamic("tintColor")(tintColor.asInstanceOf[js.Any])
+    if (unselectedTintColor != null) __obj.updateDynamic("unselectedTintColor")(unselectedTintColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabBarProps]
   }
-  @scala.inline
-  implicit class TabBarPropsOps[Self <: TabBarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarTintColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barTintColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarTintColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barTintColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwipeable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwipeable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTintColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tintColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTintColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tintColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnselectedTintColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedTintColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnselectedTintColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedTintColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

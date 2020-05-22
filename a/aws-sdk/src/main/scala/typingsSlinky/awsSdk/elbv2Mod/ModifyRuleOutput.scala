@@ -14,29 +14,10 @@ trait ModifyRuleOutput extends js.Object {
 
 object ModifyRuleOutput {
   @scala.inline
-  def apply(): ModifyRuleOutput = {
+  def apply(Rules: Rules = null): ModifyRuleOutput = {
     val __obj = js.Dynamic.literal()
+    if (Rules != null) __obj.updateDynamic("Rules")(Rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyRuleOutput]
   }
-  @scala.inline
-  implicit class ModifyRuleOutputOps[Self <: ModifyRuleOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRules(value: Rules): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

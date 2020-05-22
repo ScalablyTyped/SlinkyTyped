@@ -34,83 +34,21 @@ trait CreateUsagePlanRequest extends js.Object {
 
 object CreateUsagePlanRequest {
   @scala.inline
-  def apply(name: String): CreateUsagePlanRequest = {
+  def apply(
+    name: String,
+    apiStages: ListOfApiStage = null,
+    description: String = null,
+    quota: QuotaSettings = null,
+    tags: MapOfStringToString = null,
+    throttle: ThrottleSettings = null
+  ): CreateUsagePlanRequest = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (apiStages != null) __obj.updateDynamic("apiStages")(apiStages.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (quota != null) __obj.updateDynamic("quota")(quota.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (throttle != null) __obj.updateDynamic("throttle")(throttle.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateUsagePlanRequest]
   }
-  @scala.inline
-  implicit class CreateUsagePlanRequestOps[Self <: CreateUsagePlanRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApiStages(value: ListOfApiStage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiStages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiStages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiStages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuota(value: QuotaSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quota")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuota: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quota")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: MapOfStringToString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottle(value: ThrottleSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

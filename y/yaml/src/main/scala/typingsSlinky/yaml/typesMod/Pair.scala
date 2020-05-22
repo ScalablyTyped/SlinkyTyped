@@ -2,10 +2,10 @@ package typingsSlinky.yaml.typesMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Map
-import typingsSlinky.yaml.typesMod.AST.Node
 import typingsSlinky.yaml.typesMod.AST.NodeToJsonContext
 import typingsSlinky.yaml.typesMod.Pair.Type.MERGE_PAIR
 import typingsSlinky.yaml.typesMod.Pair.Type.PAIR
+import typingsSlinky.yaml.typesMod.Schema.StringifyContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +22,9 @@ class Pair protected () extends Node {
   /** Always Node or null when parsed, but can be set to anything. */
   var value: js.Any = js.native
   def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Object | (Map[_, _]) = js.native
+  def toString(ctx: StringifyContext): String = js.native
+  def toString(ctx: StringifyContext, onComment: js.Function0[Unit]): String = js.native
+  def toString(ctx: StringifyContext, onComment: js.Function0[Unit], onChompKeep: js.Function0[Unit]): String = js.native
 }
 
 @JSImport("yaml/types", "Pair")

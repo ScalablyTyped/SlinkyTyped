@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientFileManager.ErrorAlertDisplaying event.
   */
-@js.native
 trait ASPxClientFileManagerErrorAlertDisplayingEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name of the processed command.
     */
-  var commandName: String = js.native
+  var commandName: String
   /**
     * Gets or sets the errors description.
     */
-  var errorText: String = js.native
+  var errorText: String
   /**
     * Gets or sets a value specifying whether an alert message is displayed when the event fires.
     */
-  var showAlert: Boolean = js.native
+  var showAlert: Boolean
 }
 
 object ASPxClientFileManagerErrorAlertDisplayingEventArgs {
@@ -29,31 +28,5 @@ object ASPxClientFileManagerErrorAlertDisplayingEventArgs {
     val __obj = js.Dynamic.literal(commandName = commandName.asInstanceOf[js.Any], errorText = errorText.asInstanceOf[js.Any], showAlert = showAlert.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientFileManagerErrorAlertDisplayingEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientFileManagerErrorAlertDisplayingEventArgsOps[Self <: ASPxClientFileManagerErrorAlertDisplayingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommandName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commandName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowAlert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAlert")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait ValidDBInstanceModificationsMessage extends js.Object {
 
 object ValidDBInstanceModificationsMessage {
   @scala.inline
-  def apply(): ValidDBInstanceModificationsMessage = {
+  def apply(Storage: ValidStorageOptionsList = null): ValidDBInstanceModificationsMessage = {
     val __obj = js.Dynamic.literal()
+    if (Storage != null) __obj.updateDynamic("Storage")(Storage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidDBInstanceModificationsMessage]
   }
-  @scala.inline
-  implicit class ValidDBInstanceModificationsMessageOps[Self <: ValidDBInstanceModificationsMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStorage(value: ValidStorageOptionsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Storage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Storage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

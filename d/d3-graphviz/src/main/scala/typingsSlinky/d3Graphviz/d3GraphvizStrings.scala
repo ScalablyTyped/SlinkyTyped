@@ -2,7 +2,7 @@ package typingsSlinky.d3Graphviz
 
 import typingsSlinky.d3Graphviz.mod.Engine
 import typingsSlinky.d3Graphviz.mod.KeyMode
-import typingsSlinky.d3Graphviz.mod.TypeNames
+import typingsSlinky.d3Graphviz.mod._TypeNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,22 +12,22 @@ object d3GraphvizStrings {
   sealed trait circo extends Engine
   
   @js.native
-  sealed trait dataExtractEnd extends TypeNames
+  sealed trait dataExtractEnd extends _TypeNames
   
   @js.native
-  sealed trait dataProcessEnd extends TypeNames
+  sealed trait dataProcessEnd extends _TypeNames
   
   @js.native
-  sealed trait dataProcessPass1End extends TypeNames
+  sealed trait dataProcessPass1End extends _TypeNames
   
   @js.native
-  sealed trait dataProcessPass2End extends TypeNames
+  sealed trait dataProcessPass2End extends _TypeNames
   
   @js.native
   sealed trait dot extends Engine
   
   @js.native
-  sealed trait end extends TypeNames
+  sealed trait end extends _TypeNames
   
   @js.native
   sealed trait fdp extends Engine
@@ -39,13 +39,13 @@ object d3GraphvizStrings {
   sealed trait index extends KeyMode
   
   @js.native
-  sealed trait initEnd extends TypeNames
+  sealed trait initEnd extends _TypeNames
   
   @js.native
-  sealed trait layoutEnd extends TypeNames
+  sealed trait layoutEnd extends _TypeNames
   
   @js.native
-  sealed trait layoutStart extends TypeNames
+  sealed trait layoutStart extends _TypeNames
   
   @js.native
   sealed trait neato extends Engine
@@ -57,16 +57,16 @@ object d3GraphvizStrings {
   sealed trait patchwork extends Engine
   
   @js.native
-  sealed trait renderEnd extends TypeNames
+  sealed trait renderEnd extends _TypeNames
   
   @js.native
-  sealed trait renderStart extends TypeNames
+  sealed trait renderStart extends _TypeNames
   
   @js.native
-  sealed trait restoreEnd extends TypeNames
+  sealed trait restoreEnd extends _TypeNames
   
   @js.native
-  sealed trait start extends TypeNames
+  sealed trait start extends _TypeNames
   
   @js.native
   sealed trait `tag-index` extends KeyMode
@@ -75,10 +75,10 @@ object d3GraphvizStrings {
   sealed trait title extends KeyMode
   
   @js.native
-  sealed trait transitionEnd extends TypeNames
+  sealed trait transitionEnd extends _TypeNames
   
   @js.native
-  sealed trait transitionStart extends TypeNames
+  sealed trait transitionStart extends _TypeNames
   
   @js.native
   sealed trait twopi extends Engine

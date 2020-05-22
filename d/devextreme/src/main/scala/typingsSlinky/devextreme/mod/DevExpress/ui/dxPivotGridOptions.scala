@@ -7,10 +7,14 @@ import typingsSlinky.devextreme.anon.Cell
 import typingsSlinky.devextreme.anon.CollapseAll
 import typingsSlinky.devextreme.anon.ColumnFields
 import typingsSlinky.devextreme.anon.ComponentDxPivotGrid
+import typingsSlinky.devextreme.anon.ComponentElement
 import typingsSlinky.devextreme.anon.CustomLoad
+import typingsSlinky.devextreme.anon.Element
 import typingsSlinky.devextreme.anon.FileNameFormat
 import typingsSlinky.devextreme.anon.FileNameModel
 import typingsSlinky.devextreme.anon.IgnoreExcelErrors
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
 import typingsSlinky.devextreme.anon.SearchTimeout
 import typingsSlinky.devextreme.anon.ShowIndicator
 import typingsSlinky.devextreme.anon.UseNative
@@ -28,429 +32,165 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxPivotGridOptions extends WidgetOptions[dxPivotGrid] {
-  /** Allows an end-user to expand/collapse all header items within a header level. */
-  var allowExpandAll: js.UndefOr[Boolean] = js.native
-  /** Allows a user to filter fields by selecting or deselecting values in the popup menu. */
-  var allowFiltering: js.UndefOr[Boolean] = js.native
-  /** Allows an end-user to change sorting options. */
-  var allowSorting: js.UndefOr[Boolean] = js.native
-  /** Allows an end-user to sort columns by summary values. */
-  var allowSortingBySummary: js.UndefOr[Boolean] = js.native
-  /** Specifies the area to which data field headers must belong. */
-  var dataFieldArea: js.UndefOr[column | row] = js.native
-  /** Binds the widget to data. */
-  var dataSource: js.UndefOr[js.Array[_] | PivotGridDataSource | PivotGridDataSourceOptions] = js.native
-  /** Configures client-side exporting. */
-  var export: js.UndefOr[IgnoreExcelErrors] = js.native
-  /** The Field Chooser configuration options. */
-  var fieldChooser: js.UndefOr[ApplyChangesMode] = js.native
-  /** Configures the field panel. */
-  var fieldPanel: js.UndefOr[AllowFieldDragging] = js.native
-  /** Configures the header filter feature. */
-  var headerFilter: js.UndefOr[SearchTimeout] = js.native
-  /** Specifies whether or not to hide rows and columns with no data. */
-  var hideEmptySummaryCells: js.UndefOr[Boolean] = js.native
-  /** Specifies options configuring the load panel. */
-  var loadPanel: js.UndefOr[ShowIndicator] = js.native
-  /** A function that is executed when a pivot grid cell is clicked or tapped. */
-  var onCellClick: js.UndefOr[js.Function1[/* e */ Area, _]] = js.native
-  /** A function that is executed after a pivot grid cell is created. */
-  var onCellPrepared: js.UndefOr[js.Function1[/* e */ Cell, _]] = js.native
-  /** A function that is executed before the context menu is rendered. */
-  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ ColumnFields, _]] = js.native
-  /** A function that is executed after data is exported. */
-  var onExported: js.UndefOr[js.Function1[/* e */ ComponentDxPivotGrid, _]] = js.native
-  /** A function that is executed before data is exported. */
-  var onExporting: js.UndefOr[js.Function1[/* e */ FileNameModel, _]] = js.native
-  /** A function that is executed before a file with exported data is saved to the user's local storage. */
-  var onFileSaving: js.UndefOr[js.Function1[/* e */ FileNameFormat, _]] = js.native
-  /** Specifies the layout of items in the row header. */
-  var rowHeaderLayout: js.UndefOr[standard | tree] = js.native
-  /** A configuration object specifying scrolling options. */
-  var scrolling: js.UndefOr[UseNative] = js.native
-  /** Specifies whether the outer borders of the grid are visible or not. */
-  var showBorders: js.UndefOr[Boolean] = js.native
-  /** Specifies whether to display the Grand Total column. */
-  var showColumnGrandTotals: js.UndefOr[Boolean] = js.native
-  /** Specifies whether to display the Total columns. */
-  var showColumnTotals: js.UndefOr[Boolean] = js.native
-  /** Specifies whether to display the Grand Total row. */
-  var showRowGrandTotals: js.UndefOr[Boolean] = js.native
-  /** Specifies whether to display the Total rows. Applies only if rowHeaderLayout is "standard". */
-  var showRowTotals: js.UndefOr[Boolean] = js.native
-  /** Specifies where to show the total rows or columns. Applies only if rowHeaderLayout is "standard". */
-  var showTotalsPrior: js.UndefOr[both | columns | none | rows] = js.native
-  /** A configuration object specifying options related to state storing. */
-  var stateStoring: js.UndefOr[CustomLoad] = js.native
-  /** Strings that can be changed or localized in the PivotGrid widget. */
-  var texts: js.UndefOr[CollapseAll] = js.native
-  /** Specifies whether long text in header items should be wrapped. */
-  var wordWrapEnabled: js.UndefOr[Boolean] = js.native
+  /** @name dxPivotGrid.Options.allowExpandAll */
+  var allowExpandAll: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.allowFiltering */
+  var allowFiltering: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.allowSorting */
+  var allowSorting: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.allowSortingBySummary */
+  var allowSortingBySummary: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.dataFieldArea */
+  var dataFieldArea: js.UndefOr[column | row] = js.undefined
+  /** @name dxPivotGrid.Options.dataSource */
+  var dataSource: js.UndefOr[js.Array[_] | PivotGridDataSource | PivotGridDataSourceOptions] = js.undefined
+  /** @name dxPivotGrid.Options.export */
+  var export: js.UndefOr[IgnoreExcelErrors] = js.undefined
+  /** @name dxPivotGrid.Options.fieldChooser */
+  var fieldChooser: js.UndefOr[ApplyChangesMode] = js.undefined
+  /** @name dxPivotGrid.Options.fieldPanel */
+  var fieldPanel: js.UndefOr[AllowFieldDragging] = js.undefined
+  /** @name dxPivotGrid.Options.headerFilter */
+  var headerFilter: js.UndefOr[SearchTimeout] = js.undefined
+  /** @name dxPivotGrid.Options.hideEmptySummaryCells */
+  var hideEmptySummaryCells: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.loadPanel */
+  var loadPanel: js.UndefOr[ShowIndicator] = js.undefined
+  /** @name dxPivotGrid.Options.onCellClick */
+  var onCellClick: js.UndefOr[js.Function1[/* e */ Area, _]] = js.undefined
+  /** @name dxPivotGrid.Options.onCellPrepared */
+  var onCellPrepared: js.UndefOr[js.Function1[/* e */ Cell, _]] = js.undefined
+  /** @name dxPivotGrid.Options.onContextMenuPreparing */
+  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ ColumnFields, _]] = js.undefined
+  /** @name dxPivotGrid.Options.onExported */
+  var onExported: js.UndefOr[js.Function1[/* e */ ComponentDxPivotGrid, _]] = js.undefined
+  /** @name dxPivotGrid.Options.onExporting */
+  var onExporting: js.UndefOr[js.Function1[/* e */ FileNameModel, _]] = js.undefined
+  /** @name dxPivotGrid.Options.onFileSaving */
+  var onFileSaving: js.UndefOr[js.Function1[/* e */ FileNameFormat, _]] = js.undefined
+  /** @name dxPivotGrid.Options.rowHeaderLayout */
+  var rowHeaderLayout: js.UndefOr[standard | tree] = js.undefined
+  /** @name dxPivotGrid.Options.scrolling */
+  var scrolling: js.UndefOr[UseNative] = js.undefined
+  /** @name dxPivotGrid.Options.showBorders */
+  var showBorders: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.showColumnGrandTotals */
+  var showColumnGrandTotals: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.showColumnTotals */
+  var showColumnTotals: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.showRowGrandTotals */
+  var showRowGrandTotals: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.showRowTotals */
+  var showRowTotals: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPivotGrid.Options.showTotalsPrior */
+  var showTotalsPrior: js.UndefOr[both | columns | none | rows] = js.undefined
+  /** @name dxPivotGrid.Options.stateStoring */
+  var stateStoring: js.UndefOr[CustomLoad] = js.undefined
+  /** @name dxPivotGrid.Options.texts */
+  var texts: js.UndefOr[CollapseAll] = js.undefined
+  /** @name dxPivotGrid.Options.wordWrapEnabled */
+  var wordWrapEnabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object dxPivotGridOptions {
   @scala.inline
-  def apply(): dxPivotGridOptions = {
+  def apply(
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    allowExpandAll: js.UndefOr[Boolean] = js.undefined,
+    allowFiltering: js.UndefOr[Boolean] = js.undefined,
+    allowSorting: js.UndefOr[Boolean] = js.undefined,
+    allowSortingBySummary: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    dataFieldArea: column | row = null,
+    dataSource: js.Array[_] | PivotGridDataSource | PivotGridDataSourceOptions = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementAttr: js.Any = null,
+    export: IgnoreExcelErrors = null,
+    fieldChooser: ApplyChangesMode = null,
+    fieldPanel: AllowFieldDragging = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    headerFilter: SearchTimeout = null,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    hideEmptySummaryCells: js.UndefOr[Boolean] = js.undefined,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    loadPanel: ShowIndicator = null,
+    onCellClick: /* e */ Area => _ = null,
+    onCellPrepared: /* e */ Cell => _ = null,
+    onContentReady: /* e */ ComponentElement[dxPivotGrid] => _ = null,
+    onContextMenuPreparing: /* e */ ColumnFields => _ = null,
+    onDisposing: /* e */ Model[dxPivotGrid] => _ = null,
+    onExported: /* e */ ComponentDxPivotGrid => _ = null,
+    onExporting: /* e */ FileNameModel => _ = null,
+    onFileSaving: /* e */ FileNameFormat => _ = null,
+    onInitialized: /* e */ Element[dxPivotGrid] => _ = null,
+    onOptionChanged: /* e */ Name[dxPivotGrid] => _ = null,
+    rowHeaderLayout: standard | tree = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    scrolling: UseNative = null,
+    showBorders: js.UndefOr[Boolean] = js.undefined,
+    showColumnGrandTotals: js.UndefOr[Boolean] = js.undefined,
+    showColumnTotals: js.UndefOr[Boolean] = js.undefined,
+    showRowGrandTotals: js.UndefOr[Boolean] = js.undefined,
+    showRowTotals: js.UndefOr[Boolean] = js.undefined,
+    showTotalsPrior: both | columns | none | rows = null,
+    stateStoring: CustomLoad = null,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    texts: CollapseAll = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null,
+    wordWrapEnabled: js.UndefOr[Boolean] = js.undefined
+  ): dxPivotGridOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowExpandAll)) __obj.updateDynamic("allowExpandAll")(allowExpandAll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowFiltering)) __obj.updateDynamic("allowFiltering")(allowFiltering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSorting)) __obj.updateDynamic("allowSorting")(allowSorting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSortingBySummary)) __obj.updateDynamic("allowSortingBySummary")(allowSortingBySummary.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (dataFieldArea != null) __obj.updateDynamic("dataFieldArea")(dataFieldArea.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
+    if (fieldChooser != null) __obj.updateDynamic("fieldChooser")(fieldChooser.asInstanceOf[js.Any])
+    if (fieldPanel != null) __obj.updateDynamic("fieldPanel")(fieldPanel.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (headerFilter != null) __obj.updateDynamic("headerFilter")(headerFilter.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideEmptySummaryCells)) __obj.updateDynamic("hideEmptySummaryCells")(hideEmptySummaryCells.get.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (loadPanel != null) __obj.updateDynamic("loadPanel")(loadPanel.asInstanceOf[js.Any])
+    if (onCellClick != null) __obj.updateDynamic("onCellClick")(js.Any.fromFunction1(onCellClick))
+    if (onCellPrepared != null) __obj.updateDynamic("onCellPrepared")(js.Any.fromFunction1(onCellPrepared))
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onContextMenuPreparing != null) __obj.updateDynamic("onContextMenuPreparing")(js.Any.fromFunction1(onContextMenuPreparing))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onExported != null) __obj.updateDynamic("onExported")(js.Any.fromFunction1(onExported))
+    if (onExporting != null) __obj.updateDynamic("onExporting")(js.Any.fromFunction1(onExporting))
+    if (onFileSaving != null) __obj.updateDynamic("onFileSaving")(js.Any.fromFunction1(onFileSaving))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (rowHeaderLayout != null) __obj.updateDynamic("rowHeaderLayout")(rowHeaderLayout.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (scrolling != null) __obj.updateDynamic("scrolling")(scrolling.asInstanceOf[js.Any])
+    if (!js.isUndefined(showBorders)) __obj.updateDynamic("showBorders")(showBorders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showColumnGrandTotals)) __obj.updateDynamic("showColumnGrandTotals")(showColumnGrandTotals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showColumnTotals)) __obj.updateDynamic("showColumnTotals")(showColumnTotals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRowGrandTotals)) __obj.updateDynamic("showRowGrandTotals")(showRowGrandTotals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRowTotals)) __obj.updateDynamic("showRowTotals")(showRowTotals.get.asInstanceOf[js.Any])
+    if (showTotalsPrior != null) __obj.updateDynamic("showTotalsPrior")(showTotalsPrior.asInstanceOf[js.Any])
+    if (stateStoring != null) __obj.updateDynamic("stateStoring")(stateStoring.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (texts != null) __obj.updateDynamic("texts")(texts.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(wordWrapEnabled)) __obj.updateDynamic("wordWrapEnabled")(wordWrapEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPivotGridOptions]
   }
-  @scala.inline
-  implicit class dxPivotGridOptionsOps[Self <: dxPivotGridOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowExpandAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExpandAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowExpandAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExpandAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowFiltering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFiltering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowFiltering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFiltering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSortingBySummary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSortingBySummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSortingBySummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSortingBySummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataFieldArea(value: column | row): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFieldArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataFieldArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFieldArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Array[_] | PivotGridDataSource | PivotGridDataSourceOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExport(value: IgnoreExcelErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldChooser(value: ApplyChangesMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldChooser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldChooser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldChooser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldPanel(value: AllowFieldDragging): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldPanel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldPanel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldPanel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderFilter(value: SearchTimeout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideEmptySummaryCells(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideEmptySummaryCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideEmptySummaryCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideEmptySummaryCells")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadPanel(value: ShowIndicator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadPanel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadPanel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadPanel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellClick(value: /* e */ Area => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellPrepared(value: /* e */ Cell => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellPrepared")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellPrepared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellPrepared")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContextMenuPreparing(value: /* e */ ColumnFields => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuPreparing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContextMenuPreparing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuPreparing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExported(value: /* e */ ComponentDxPivotGrid => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExported")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExported: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExporting(value: /* e */ FileNameModel => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExporting")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExporting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExporting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFileSaving(value: /* e */ FileNameFormat => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFileSaving")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFileSaving: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFileSaving")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowHeaderLayout(value: standard | tree): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeaderLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowHeaderLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeaderLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrolling(value: UseNative): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowBorders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowBorders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowColumnGrandTotals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnGrandTotals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowColumnGrandTotals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnGrandTotals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowColumnTotals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnTotals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowColumnTotals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnTotals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRowGrandTotals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowGrandTotals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRowGrandTotals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowGrandTotals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRowTotals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowTotals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRowTotals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowTotals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTotalsPrior(value: both | columns | none | rows): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotalsPrior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTotalsPrior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotalsPrior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateStoring(value: CustomLoad): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateStoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateStoring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateStoring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTexts(value: CollapseAll): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWordWrapEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrapEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWordWrapEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrapEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

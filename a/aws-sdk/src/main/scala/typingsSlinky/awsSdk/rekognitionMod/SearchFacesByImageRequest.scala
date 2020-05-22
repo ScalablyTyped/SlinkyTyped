@@ -30,65 +30,18 @@ trait SearchFacesByImageRequest extends js.Object {
 
 object SearchFacesByImageRequest {
   @scala.inline
-  def apply(CollectionId: CollectionId, Image: Image): SearchFacesByImageRequest = {
+  def apply(
+    CollectionId: CollectionId,
+    Image: Image,
+    FaceMatchThreshold: js.UndefOr[Percent] = js.undefined,
+    MaxFaces: js.UndefOr[MaxFaces] = js.undefined,
+    QualityFilter: QualityFilter = null
+  ): SearchFacesByImageRequest = {
     val __obj = js.Dynamic.literal(CollectionId = CollectionId.asInstanceOf[js.Any], Image = Image.asInstanceOf[js.Any])
+    if (!js.isUndefined(FaceMatchThreshold)) __obj.updateDynamic("FaceMatchThreshold")(FaceMatchThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxFaces)) __obj.updateDynamic("MaxFaces")(MaxFaces.get.asInstanceOf[js.Any])
+    if (QualityFilter != null) __obj.updateDynamic("QualityFilter")(QualityFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchFacesByImageRequest]
   }
-  @scala.inline
-  implicit class SearchFacesByImageRequestOps[Self <: SearchFacesByImageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollectionId(value: CollectionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CollectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFaceMatchThreshold(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceMatchThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceMatchThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceMatchThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFaces(value: MaxFaces): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxFaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxFaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualityFilter(value: QualityFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualityFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualityFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualityFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

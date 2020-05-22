@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking.NetworkOperators
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails")
 @js.native
 abstract class MobileBroadbandRadioStateChangeTriggerDetails ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails {
+  /** Gets the collection of radio state change details associated with a notification. */
+  /* CompleteClass */
+  override var radioStateChanges: IVectorView[
+    typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange
+  ] = js.native
+}
 

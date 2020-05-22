@@ -2,14 +2,13 @@ package typingsSlinky.firebaseFirestore
 
 import typingsSlinky.firebaseFirestore.coreViewSnapshotMod.ChangeType
 import typingsSlinky.firebaseFirestore.coreViewSnapshotMod.SyncState
-import typingsSlinky.firebaseFirestore.logMod.LogLevel
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.ServerTimestampBehavior
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.TypeOrder
 import typingsSlinky.firebaseFirestore.modelMutationMod.MutationType
+import typingsSlinky.firebaseFirestore.objectValueMod.TypeOrder
 import typingsSlinky.firebaseFirestore.remoteConnectivityMonitorMod.NetworkStatus
 import typingsSlinky.firebaseFirestore.remoteWatchChangeMod.WatchTargetChangeState
 import typingsSlinky.firebaseFirestore.targetDataMod.TargetPurpose
 import typingsSlinky.firebaseFirestore.typesMod.OnlineStateSource
+import typingsSlinky.firebaseFirestore.userDataReaderMod.UserDataSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,22 +18,20 @@ object firebaseFirestoreNumbers {
   sealed trait `0`
     extends ChangeType
        with typingsSlinky.firebaseFirestore.viewSnapshotMod.ChangeType
-       with LogLevel
-       with typingsSlinky.firebaseFirestore.utilLogMod.LogLevel
        with MutationType
        with typingsSlinky.firebaseFirestore.mutationMod.MutationType
        with NetworkStatus
        with typingsSlinky.firebaseFirestore.connectivityMonitorMod.NetworkStatus
        with OnlineStateSource
        with typingsSlinky.firebaseFirestore.coreTypesMod.OnlineStateSource
-       with ServerTimestampBehavior
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.ServerTimestampBehavior
        with SyncState
        with typingsSlinky.firebaseFirestore.viewSnapshotMod.SyncState
        with TargetPurpose
        with typingsSlinky.firebaseFirestore.localTargetDataMod.TargetPurpose
        with TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
+       with UserDataSource
+       with typingsSlinky.firebaseFirestore.apiUserDataReaderMod.UserDataSource
        with WatchTargetChangeState
        with typingsSlinky.firebaseFirestore.watchChangeMod.WatchTargetChangeState
   
@@ -42,39 +39,40 @@ object firebaseFirestoreNumbers {
   sealed trait `1`
     extends ChangeType
        with typingsSlinky.firebaseFirestore.viewSnapshotMod.ChangeType
-       with LogLevel
-       with typingsSlinky.firebaseFirestore.utilLogMod.LogLevel
        with MutationType
        with typingsSlinky.firebaseFirestore.mutationMod.MutationType
        with NetworkStatus
        with typingsSlinky.firebaseFirestore.connectivityMonitorMod.NetworkStatus
        with OnlineStateSource
        with typingsSlinky.firebaseFirestore.coreTypesMod.OnlineStateSource
-       with ServerTimestampBehavior
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.ServerTimestampBehavior
        with SyncState
        with typingsSlinky.firebaseFirestore.viewSnapshotMod.SyncState
        with TargetPurpose
        with typingsSlinky.firebaseFirestore.localTargetDataMod.TargetPurpose
        with TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
+       with UserDataSource
+       with typingsSlinky.firebaseFirestore.apiUserDataReaderMod.UserDataSource
        with WatchTargetChangeState
        with typingsSlinky.firebaseFirestore.watchChangeMod.WatchTargetChangeState
+  
+  @js.native
+  sealed trait `10`
+    extends TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
   
   @js.native
   sealed trait `2`
     extends ChangeType
        with typingsSlinky.firebaseFirestore.viewSnapshotMod.ChangeType
-       with LogLevel
-       with typingsSlinky.firebaseFirestore.utilLogMod.LogLevel
        with MutationType
        with typingsSlinky.firebaseFirestore.mutationMod.MutationType
-       with ServerTimestampBehavior
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.ServerTimestampBehavior
        with TargetPurpose
        with typingsSlinky.firebaseFirestore.localTargetDataMod.TargetPurpose
        with TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
+       with UserDataSource
+       with typingsSlinky.firebaseFirestore.apiUserDataReaderMod.UserDataSource
        with WatchTargetChangeState
        with typingsSlinky.firebaseFirestore.watchChangeMod.WatchTargetChangeState
   
@@ -85,7 +83,9 @@ object firebaseFirestoreNumbers {
        with MutationType
        with typingsSlinky.firebaseFirestore.mutationMod.MutationType
        with TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
+       with UserDataSource
+       with typingsSlinky.firebaseFirestore.apiUserDataReaderMod.UserDataSource
        with WatchTargetChangeState
        with typingsSlinky.firebaseFirestore.watchChangeMod.WatchTargetChangeState
   
@@ -94,39 +94,43 @@ object firebaseFirestoreNumbers {
     extends MutationType
        with typingsSlinky.firebaseFirestore.mutationMod.MutationType
        with TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
+       with UserDataSource
+       with typingsSlinky.firebaseFirestore.apiUserDataReaderMod.UserDataSource
        with WatchTargetChangeState
        with typingsSlinky.firebaseFirestore.watchChangeMod.WatchTargetChangeState
   
   @js.native
   sealed trait `5`
     extends TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
   
   @js.native
   sealed trait `6`
     extends TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
   
   @js.native
   sealed trait `7`
     extends TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
   
   @js.native
   sealed trait `8`
     extends TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
   
   @js.native
   sealed trait `9`
     extends TypeOrder
-       with typingsSlinky.firebaseFirestore.srcModelFieldValueMod.TypeOrder
+       with typingsSlinky.firebaseFirestore.modelObjectValueMod.TypeOrder
   
   @scala.inline
   def `0`: `0` = 0.asInstanceOf[`0`]
   @scala.inline
   def `1`: `1` = 1.asInstanceOf[`1`]
+  @scala.inline
+  def `10`: `10` = 10.asInstanceOf[`10`]
   @scala.inline
   def `2`: `2` = 2.asInstanceOf[`2`]
   @scala.inline

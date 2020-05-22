@@ -8,12 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransformError extends Error {
-  var cause: js.Any = js.native
-  var error: js.Any = js.native
-  var options: Options = js.native
-  var response: IncomingMessage = js.native
+  var cause: js.Any
+  var error: js.Any
+  var options: Options
+  var response: IncomingMessage
 }
 
 @JSImport("request-promise/errors", "TransformError")

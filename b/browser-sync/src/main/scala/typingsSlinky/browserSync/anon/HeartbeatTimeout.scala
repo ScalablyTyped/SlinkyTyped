@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HeartbeatTimeout extends js.Object {
-  var heartbeatTimeout: js.UndefOr[Double] = js.native
+  var heartbeatTimeout: js.UndefOr[Double] = js.undefined
 }
 
 object HeartbeatTimeout {
   @scala.inline
-  def apply(): HeartbeatTimeout = {
+  def apply(heartbeatTimeout: js.UndefOr[Double] = js.undefined): HeartbeatTimeout = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(heartbeatTimeout)) __obj.updateDynamic("heartbeatTimeout")(heartbeatTimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeartbeatTimeout]
   }
-  @scala.inline
-  implicit class HeartbeatTimeoutOps[Self <: HeartbeatTimeout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeartbeatTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeatTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeartbeatTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeatTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

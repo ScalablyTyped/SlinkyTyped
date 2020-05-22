@@ -1,94 +1,39 @@
 package typingsSlinky.sipJs.libWebSessionDescriptionHandlerMod
 
 import org.scalajs.dom.experimental.mediastream.MediaStreamConstraints
+import typingsSlinky.sipJs.libSessionDescriptionHandlerMod.SessionDescriptionHandlerModifiers
 import typingsSlinky.sipJs.libSessionDescriptionHandlerMod.SessionDescriptionHandlerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebSessionDescriptionHandlerOptions extends SessionDescriptionHandlerOptions {
-  var RTCOfferOptions: js.UndefOr[js.Any] = js.native
-  var alwaysAcquireMediaFirst: js.UndefOr[Boolean] = js.native
+  var RTCOfferOptions: js.UndefOr[js.Any] = js.undefined
+  var alwaysAcquireMediaFirst: js.UndefOr[Boolean] = js.undefined
   @JSName("constraints")
-  var constraints_WebSessionDescriptionHandlerOptions: js.UndefOr[MediaStreamConstraints] = js.native
-  var disableAudioFallback: js.UndefOr[Boolean] = js.native
-  var peerConnectionOptions: js.UndefOr[PeerConnectionOptions] = js.native
+  var constraints_WebSessionDescriptionHandlerOptions: js.UndefOr[MediaStreamConstraints] = js.undefined
+  var disableAudioFallback: js.UndefOr[Boolean] = js.undefined
+  var peerConnectionOptions: js.UndefOr[PeerConnectionOptions] = js.undefined
 }
 
 object WebSessionDescriptionHandlerOptions {
   @scala.inline
-  def apply(): WebSessionDescriptionHandlerOptions = {
+  def apply(
+    RTCOfferOptions: js.Any = null,
+    alwaysAcquireMediaFirst: js.UndefOr[Boolean] = js.undefined,
+    constraints: MediaStreamConstraints = null,
+    disableAudioFallback: js.UndefOr[Boolean] = js.undefined,
+    modifiers: SessionDescriptionHandlerModifiers = null,
+    peerConnectionOptions: PeerConnectionOptions = null
+  ): WebSessionDescriptionHandlerOptions = {
     val __obj = js.Dynamic.literal()
+    if (RTCOfferOptions != null) __obj.updateDynamic("RTCOfferOptions")(RTCOfferOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(alwaysAcquireMediaFirst)) __obj.updateDynamic("alwaysAcquireMediaFirst")(alwaysAcquireMediaFirst.get.asInstanceOf[js.Any])
+    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableAudioFallback)) __obj.updateDynamic("disableAudioFallback")(disableAudioFallback.get.asInstanceOf[js.Any])
+    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
+    if (peerConnectionOptions != null) __obj.updateDynamic("peerConnectionOptions")(peerConnectionOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebSessionDescriptionHandlerOptions]
   }
-  @scala.inline
-  implicit class WebSessionDescriptionHandlerOptionsOps[Self <: WebSessionDescriptionHandlerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRTCOfferOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTCOfferOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRTCOfferOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTCOfferOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlwaysAcquireMediaFirst(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysAcquireMediaFirst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysAcquireMediaFirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysAcquireMediaFirst")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraints(value: MediaStreamConstraints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAudioFallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAudioFallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAudioFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAudioFallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeerConnectionOptions(value: PeerConnectionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerConnectionOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeerConnectionOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerConnectionOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

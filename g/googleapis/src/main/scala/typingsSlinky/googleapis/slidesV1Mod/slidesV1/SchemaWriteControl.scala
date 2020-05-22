@@ -20,29 +20,10 @@ trait SchemaWriteControl extends js.Object {
 
 object SchemaWriteControl {
   @scala.inline
-  def apply(): SchemaWriteControl = {
+  def apply(requiredRevisionId: String = null): SchemaWriteControl = {
     val __obj = js.Dynamic.literal()
+    if (requiredRevisionId != null) __obj.updateDynamic("requiredRevisionId")(requiredRevisionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWriteControl]
   }
-  @scala.inline
-  implicit class SchemaWriteControlOps[Self <: SchemaWriteControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequiredRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredRevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredRevisionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,7 +26,18 @@ object global extends js.Object {
       
       @js.native
       class SigninOptionsBuilder ()
-        extends typingsSlinky.gapiAuth2.gapi.auth2.SigninOptionsBuilder
+        extends typingsSlinky.gapiAuth2.gapi.auth2.SigninOptionsBuilder {
+        /* CompleteClass */
+        override def setAppPackageName(name: String): js.Any = js.native
+        /* CompleteClass */
+        override def setFetchBasicProfile(fetch: Boolean): js.Any = js.native
+        /* CompleteClass */
+        override def setLoginHint(hint: String): js.Any = js.native
+        /* CompleteClass */
+        override def setPrompt(prompt: String): js.Any = js.native
+        /* CompleteClass */
+        override def setScope(scope: String): js.Any = js.native
+      }
       
       /**
         * Performs a one time OAuth 2.0 authorization.

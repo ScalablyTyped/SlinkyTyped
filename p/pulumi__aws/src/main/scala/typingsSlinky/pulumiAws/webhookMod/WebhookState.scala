@@ -36,89 +36,22 @@ trait WebhookState extends js.Object {
 
 object WebhookState {
   @scala.inline
-  def apply(): WebhookState = {
+  def apply(
+    branchFilter: Input[String] = null,
+    filterGroups: Input[js.Array[Input[WebhookFilterGroup]]] = null,
+    payloadUrl: Input[String] = null,
+    projectName: Input[String] = null,
+    secret: Input[String] = null,
+    url: Input[String] = null
+  ): WebhookState = {
     val __obj = js.Dynamic.literal()
+    if (branchFilter != null) __obj.updateDynamic("branchFilter")(branchFilter.asInstanceOf[js.Any])
+    if (filterGroups != null) __obj.updateDynamic("filterGroups")(filterGroups.asInstanceOf[js.Any])
+    if (payloadUrl != null) __obj.updateDynamic("payloadUrl")(payloadUrl.asInstanceOf[js.Any])
+    if (projectName != null) __obj.updateDynamic("projectName")(projectName.asInstanceOf[js.Any])
+    if (secret != null) __obj.updateDynamic("secret")(secret.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebhookState]
   }
-  @scala.inline
-  implicit class WebhookStateOps[Self <: WebhookState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBranchFilter(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranchFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterGroups(value: Input[js.Array[Input[WebhookFilterGroup]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadUrl(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecret(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

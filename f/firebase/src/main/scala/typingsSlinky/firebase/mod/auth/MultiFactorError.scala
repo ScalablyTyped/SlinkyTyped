@@ -32,33 +32,30 @@ import scala.scalajs.js.annotation._
   *     });
   * ```
   */
-@js.native
 trait MultiFactorError extends AuthError {
   /**
     * The multi-factor resolver to complete second factor sign-in.
     */
-  var resolver: MultiFactorResolver = js.native
+  var resolver: MultiFactorResolver
 }
 
 object MultiFactorError {
   @scala.inline
-  def apply(code: String, message: String, resolver: MultiFactorResolver): MultiFactorError = {
+  def apply(
+    code: String,
+    message: String,
+    resolver: MultiFactorResolver,
+    credential: AuthCredential = null,
+    email: String = null,
+    phoneNumber: String = null,
+    tenantId: String = null
+  ): MultiFactorError = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], resolver = resolver.asInstanceOf[js.Any])
+    if (credential != null) __obj.updateDynamic("credential")(credential.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (phoneNumber != null) __obj.updateDynamic("phoneNumber")(phoneNumber.asInstanceOf[js.Any])
+    if (tenantId != null) __obj.updateDynamic("tenantId")(tenantId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiFactorError]
   }
-  @scala.inline
-  implicit class MultiFactorErrorOps[Self <: MultiFactorError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResolver(value: MultiFactorResolver): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolver")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

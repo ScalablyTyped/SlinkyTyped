@@ -12,15 +12,14 @@ trait SpotInstanceRequestRootBlockDevice extends js.Object {
     */
   var deleteOnTermination: js.UndefOr[Boolean] = js.native
   /**
-    * Enables [EBS
-    * encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
-    * on the volume (Default: `false`). Cannot be used with `snapshotId`. Must be configured to perform drift detection.
+    * Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
     */
   var encrypted: Boolean = js.native
   /**
     * The amount of provisioned
     * [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-    * This must be set with a `volumeType` of `"io1"`.
+    * This is only valid for `volumeType` of `"io1"`, and must be specified if
+    * using that type
     */
   var iops: Double = js.native
   /**
@@ -33,8 +32,7 @@ trait SpotInstanceRequestRootBlockDevice extends js.Object {
     */
   var volumeSize: Double = js.native
   /**
-    * The type of volume. Can be `"standard"`, `"gp2"`,
-    * or `"io1"`. (Default: `"gp2"`).
+    * The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
     */
   var volumeType: String = js.native
 }
@@ -47,66 +45,12 @@ object SpotInstanceRequestRootBlockDevice {
     kmsKeyId: String,
     volumeId: String,
     volumeSize: Double,
-    volumeType: String
+    volumeType: String,
+    deleteOnTermination: js.UndefOr[Boolean] = js.undefined
   ): SpotInstanceRequestRootBlockDevice = {
     val __obj = js.Dynamic.literal(encrypted = encrypted.asInstanceOf[js.Any], iops = iops.asInstanceOf[js.Any], kmsKeyId = kmsKeyId.asInstanceOf[js.Any], volumeId = volumeId.asInstanceOf[js.Any], volumeSize = volumeSize.asInstanceOf[js.Any], volumeType = volumeType.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleteOnTermination)) __obj.updateDynamic("deleteOnTermination")(deleteOnTermination.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpotInstanceRequestRootBlockDevice]
   }
-  @scala.inline
-  implicit class SpotInstanceRequestRootBlockDeviceOps[Self <: SpotInstanceRequestRootBlockDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIops(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKmsKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteOnTermination(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnTermination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteOnTermination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnTermination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

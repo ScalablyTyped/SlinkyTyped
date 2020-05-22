@@ -8,101 +8,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@wordpress/notices.@wordpress/notices.Options> */
-@js.native
 trait PartialOptions extends js.Object {
-  var actions: js.UndefOr[js.Array[Action]] = js.native
-  var context: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var isDismissible: js.UndefOr[Boolean] = js.native
-  var speak: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[default | snackbar] = js.native
+  var actions: js.UndefOr[js.Array[Action]] = js.undefined
+  var context: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var isDismissible: js.UndefOr[Boolean] = js.undefined
+  var speak: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[default | snackbar] = js.undefined
 }
 
 object PartialOptions {
   @scala.inline
-  def apply(): PartialOptions = {
+  def apply(
+    actions: js.Array[Action] = null,
+    context: String = null,
+    id: String = null,
+    isDismissible: js.UndefOr[Boolean] = js.undefined,
+    speak: js.UndefOr[Boolean] = js.undefined,
+    `type`: default | snackbar = null
+  ): PartialOptions = {
     val __obj = js.Dynamic.literal()
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDismissible)) __obj.updateDynamic("isDismissible")(isDismissible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(speak)) __obj.updateDynamic("speak")(speak.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialOptions]
   }
-  @scala.inline
-  implicit class PartialOptionsOps[Self <: PartialOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: js.Array[Action]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDismissible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDismissible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDismissible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDismissible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeak(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speak")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speak")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: default | snackbar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

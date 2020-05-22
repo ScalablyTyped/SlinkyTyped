@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DictunknownPropertyBorderColor
   extends /**
   * Some properties like "normal" or "emphasis" are not documented.
@@ -20,7 +19,7 @@ trait DictunknownPropertyBorderColor
     * "#000"
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.borderColor
     */
-  var borderColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[String] = js.undefined
   /**
     * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
     * `'solid'` by default.
@@ -30,14 +29,14 @@ trait DictunknownPropertyBorderColor
     * "solid"
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.borderType
     */
-  var borderType: js.UndefOr[String] = js.native
+  var borderType: js.UndefOr[String] = js.undefined
   /**
     * border width. No border when it is set to be 0.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.borderWidth
     */
-  var borderWidth: js.UndefOr[Double] = js.native
+  var borderWidth: js.UndefOr[Double] = js.undefined
   /**
     * color. Color is taken from
     * [option.color Palette](https://echarts.apache.org/en/option.html#color)
@@ -66,7 +65,7 @@ trait DictunknownPropertyBorderColor
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.color
     */
-  var color: js.UndefOr[String | js.Function] = js.native
+  var color: js.UndefOr[String | js.Function] = js.undefined
   /**
     * Opacity of the component.
     * Supports value from 0 to 1, and the component will not be
@@ -75,7 +74,7 @@ trait DictunknownPropertyBorderColor
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.opacity
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /**
     * Size of shadow blur.
     * This attribute should be used along with `shadowColor`,`shadowOffsetX`,
@@ -88,151 +87,56 @@ trait DictunknownPropertyBorderColor
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.shadowBlur
     */
-  var shadowBlur: js.UndefOr[Double] = js.native
+  var shadowBlur: js.UndefOr[Double] = js.undefined
   /**
     * Shadow color. Support same format as `color`.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.shadowColor
     */
-  var shadowColor: js.UndefOr[String] = js.native
+  var shadowColor: js.UndefOr[String] = js.undefined
   /**
     * Offset distance on the horizontal direction of shadow.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.shadowOffsetX
     */
-  var shadowOffsetX: js.UndefOr[Double] = js.native
+  var shadowOffsetX: js.UndefOr[Double] = js.undefined
   /**
     * Offset distance on the vertical direction of shadow.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.shadowOffsetY
     */
-  var shadowOffsetY: js.UndefOr[Double] = js.native
+  var shadowOffsetY: js.UndefOr[Double] = js.undefined
 }
 
 object DictunknownPropertyBorderColor {
   @scala.inline
-  def apply(): DictunknownPropertyBorderColor = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    borderColor: String = null,
+    borderType: String = null,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    color: String | js.Function = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    shadowBlur: js.UndefOr[Double] = js.undefined,
+    shadowColor: String = null,
+    shadowOffsetX: js.UndefOr[Double] = js.undefined,
+    shadowOffsetY: js.UndefOr[Double] = js.undefined
+  ): DictunknownPropertyBorderColor = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (borderType != null) __obj.updateDynamic("borderType")(borderType.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowBlur)) __obj.updateDynamic("shadowBlur")(shadowBlur.get.asInstanceOf[js.Any])
+    if (shadowColor != null) __obj.updateDynamic("shadowColor")(shadowColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowOffsetX)) __obj.updateDynamic("shadowOffsetX")(shadowOffsetX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowOffsetY)) __obj.updateDynamic("shadowOffsetY")(shadowOffsetY.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DictunknownPropertyBorderColor]
   }
-  @scala.inline
-  implicit class DictunknownPropertyBorderColorOps[Self <: DictunknownPropertyBorderColor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowBlur(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowOffsetX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowOffsetX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowOffsetY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowOffsetY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetY")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

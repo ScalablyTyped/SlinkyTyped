@@ -14,9 +14,9 @@ import scala.scalajs.js.annotation._
 trait MethodDeclaration
   extends FunctionLikeDeclarationBase
      with FunctionLikeDeclaration
-     with HasJSDoc
      with ObjectLiteralElementLike
-     with SignatureDeclaration {
+     with SignatureDeclaration
+     with _HasJSDoc {
   var _classElementBrand: js.Any = js.native
   var _objectLiteralBrand: js.Any = js.native
   @JSName("body")

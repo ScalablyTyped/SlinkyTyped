@@ -1,66 +1,69 @@
 package typingsSlinky.elasticElasticsearch.connectionMod
 
+import typingsSlinky.node.Buffer
+import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequestArgs
+import typingsSlinky.node.httpMod.OutgoingHttpHeaders
+import typingsSlinky.node.netMod.Socket
+import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestOptions extends ClientRequestArgs {
-  var asStream: js.UndefOr[Boolean] = js.native
-  var body: js.UndefOr[js.Any] = js.native
-  var querystring: js.UndefOr[String] = js.native
+  var asStream: js.UndefOr[Boolean] = js.undefined
+  var body: js.UndefOr[String | Buffer | Readable] = js.undefined
+  var querystring: js.UndefOr[String] = js.undefined
 }
 
 object RequestOptions {
   @scala.inline
-  def apply(): RequestOptions = {
+  def apply(
+    _defaultAgent: Agent = null,
+    agent: Agent | Boolean = null,
+    asStream: js.UndefOr[Boolean] = js.undefined,
+    auth: js.UndefOr[Null | String] = js.undefined,
+    body: String | Buffer | Readable = null,
+    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
+    defaultPort: Double | String = null,
+    family: js.UndefOr[Double] = js.undefined,
+    headers: OutgoingHttpHeaders = null,
+    host: js.UndefOr[Null | String] = js.undefined,
+    hostname: js.UndefOr[Null | String] = js.undefined,
+    localAddress: String = null,
+    maxHeaderSize: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    path: js.UndefOr[Null | String] = js.undefined,
+    port: js.UndefOr[Null | Double | String] = js.undefined,
+    protocol: js.UndefOr[Null | String] = js.undefined,
+    querystring: String = null,
+    setHost: js.UndefOr[Boolean] = js.undefined,
+    socketPath: String = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): RequestOptions = {
     val __obj = js.Dynamic.literal()
+    if (_defaultAgent != null) __obj.updateDynamic("_defaultAgent")(_defaultAgent.asInstanceOf[js.Any])
+    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
+    if (!js.isUndefined(asStream)) __obj.updateDynamic("asStream")(asStream.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(auth)) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (createConnection != null) __obj.updateDynamic("createConnection")(js.Any.fromFunction2(createConnection))
+    if (defaultPort != null) __obj.updateDynamic("defaultPort")(defaultPort.asInstanceOf[js.Any])
+    if (!js.isUndefined(family)) __obj.updateDynamic("family")(family.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (!js.isUndefined(host)) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (!js.isUndefined(hostname)) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
+    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeaderSize)) __obj.updateDynamic("maxHeaderSize")(maxHeaderSize.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(path)) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (!js.isUndefined(protocol)) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (querystring != null) __obj.updateDynamic("querystring")(querystring.asInstanceOf[js.Any])
+    if (!js.isUndefined(setHost)) __obj.updateDynamic("setHost")(setHost.get.asInstanceOf[js.Any])
+    if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
-  @scala.inline
-  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsStream(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuerystring(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querystring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuerystring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querystring")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

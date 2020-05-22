@@ -23,6 +23,10 @@ trait RegisterCACertificateRequest extends js.Object {
     */
   var setAsActive: js.UndefOr[SetAsActive] = js.native
   /**
+    * Metadata which can be used to manage the CA certificate.  For URI Request parameters use format: ...key1=value1&amp;key2=value2... For the CLI command-line parameter use format: &amp;&amp;tags "key1=value1&amp;key2=value2..." For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..." 
+    */
+  var tags: js.UndefOr[TagList] = js.native
+  /**
     * The private key verification certificate.
     */
   var verificationCertificate: CertificatePem = js.native
@@ -30,65 +34,20 @@ trait RegisterCACertificateRequest extends js.Object {
 
 object RegisterCACertificateRequest {
   @scala.inline
-  def apply(caCertificate: CertificatePem, verificationCertificate: CertificatePem): RegisterCACertificateRequest = {
+  def apply(
+    caCertificate: CertificatePem,
+    verificationCertificate: CertificatePem,
+    allowAutoRegistration: js.UndefOr[AllowAutoRegistration] = js.undefined,
+    registrationConfig: RegistrationConfig = null,
+    setAsActive: js.UndefOr[SetAsActive] = js.undefined,
+    tags: TagList = null
+  ): RegisterCACertificateRequest = {
     val __obj = js.Dynamic.literal(caCertificate = caCertificate.asInstanceOf[js.Any], verificationCertificate = verificationCertificate.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowAutoRegistration)) __obj.updateDynamic("allowAutoRegistration")(allowAutoRegistration.get.asInstanceOf[js.Any])
+    if (registrationConfig != null) __obj.updateDynamic("registrationConfig")(registrationConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(setAsActive)) __obj.updateDynamic("setAsActive")(setAsActive.get.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterCACertificateRequest]
   }
-  @scala.inline
-  implicit class RegisterCACertificateRequestOps[Self <: RegisterCACertificateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaCertificate(value: CertificatePem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerificationCertificate(value: CertificatePem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowAutoRegistration(value: AllowAutoRegistration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAutoRegistration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowAutoRegistration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAutoRegistration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrationConfig(value: RegistrationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetAsActive(value: SetAsActive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetAsActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsActive")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

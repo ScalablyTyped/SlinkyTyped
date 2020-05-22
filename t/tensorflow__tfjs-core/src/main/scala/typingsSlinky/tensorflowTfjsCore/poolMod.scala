@@ -4,6 +4,7 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor5D
+import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCDHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NDHWC
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.avg
@@ -120,6 +121,23 @@ object poolMod extends js.Object {
       dataFormat: NDHWC | NCDHW,
       dilations: (js.Tuple3[Double, Double, Double]) | Double
     ): T = js.native
+  }
+  
+  @js.native
+  object maxPoolWithArgmax extends js.Object {
+    def apply[T /* <: Tensor4D */](
+      x: T | TensorLike,
+      filterSize: (js.Tuple2[Double, Double]) | Double,
+      strides: (js.Tuple2[Double, Double]) | Double,
+      pad: valid_ | same_ | Double
+    ): NamedTensorMap = js.native
+    def apply[T /* <: Tensor4D */](
+      x: T | TensorLike,
+      filterSize: (js.Tuple2[Double, Double]) | Double,
+      strides: (js.Tuple2[Double, Double]) | Double,
+      pad: valid_ | same_ | Double,
+      includeBatchInIndex: Boolean
+    ): NamedTensorMap = js.native
   }
   
   @js.native

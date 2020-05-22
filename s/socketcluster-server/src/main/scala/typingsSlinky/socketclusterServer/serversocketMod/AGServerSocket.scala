@@ -1,7 +1,6 @@
 package typingsSlinky.socketclusterServer.serversocketMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.agSimpleBroker.mod.SimpleExchange
 import typingsSlinky.asyncStreamEmitter.mod.AsyncStreamEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.scErrors.mod.SocketProtocolErrorStatuses_
@@ -52,7 +51,7 @@ trait AGServerSocket
   var channelSubscriptionsCount: Double = js.native
   var cloneData: Boolean = js.native
   val errorStatuses: SocketProtocolErrorStatuses_ = js.native
-  var exchange: SimpleExchange = js.native
+  var exchange: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGSimpleBroker.SimpleExchange */ js.Any = js.native
   var forwardedForAddress: js.UndefOr[String] = js.native
   var id: String = js.native
   val ignoreStatuses: SocketProtocolIgnoreStatuses_ = js.native

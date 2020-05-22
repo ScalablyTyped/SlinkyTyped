@@ -13,41 +13,11 @@ trait PartialCommonColors extends js.Object {
 
 object PartialCommonColors {
   @scala.inline
-  def apply(): PartialCommonColors = {
+  def apply(black: String = null, white: String = null): PartialCommonColors = {
     val __obj = js.Dynamic.literal()
+    if (black != null) __obj.updateDynamic("black")(black.asInstanceOf[js.Any])
+    if (white != null) __obj.updateDynamic("white")(white.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialCommonColors]
   }
-  @scala.inline
-  implicit class PartialCommonColorsOps[Self <: PartialCommonColors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlack(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("black")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("black")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhite(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("white")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("white")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

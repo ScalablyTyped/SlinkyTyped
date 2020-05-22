@@ -11,20 +11,19 @@ import scala.scalajs.js.annotation._
 /**
   * The interface for a document model.
   */
-@js.native
 trait IModel extends IDisposable {
   /**
     * A signal emitted when the document content changes.
     */
-  var contentChanged: ISignal[this.type, Unit] = js.native
+  var contentChanged: ISignal[this.type, Unit]
   /**
     * The default kernel language of the document.
     */
-  val defaultKernelLanguage: String = js.native
+  val defaultKernelLanguage: String
   /**
     * The default kernel name of the document.
     */
-  val defaultKernelName: String = js.native
+  val defaultKernelName: String
   /**
     * The dirty state of the model.
     *
@@ -32,7 +31,7 @@ trait IModel extends IDisposable {
     * This should be cleared when the document is loaded from
     * or saved to disk.
     */
-  var dirty: Boolean = js.native
+  var dirty: Boolean
   /**
     * The underlying `IModelDB` instance in which model
     * data is stored.
@@ -41,29 +40,29 @@ trait IModel extends IDisposable {
     * Making direct edits to the values stored in the`IModelDB`
     * is not recommended, and may produce unpredictable results.
     */
-  val modelDB: IModelDB = js.native
+  val modelDB: IModelDB
   /**
     * The read-only state of the model.
     */
-  var readOnly: Boolean = js.native
+  var readOnly: Boolean
   /**
     * A signal emitted when the model state changes.
     */
-  var stateChanged: ISignal[this.type, typingsSlinky.jupyterlabCoreutils.interfacesMod.IChangedArgs[_, String]] = js.native
+  var stateChanged: ISignal[this.type, typingsSlinky.jupyterlabCoreutils.interfacesMod.IChangedArgs[_, String]]
   /**
     * Deserialize the model from JSON.
     *
     * #### Notes
     * Should emit a [contentChanged] signal.
     */
-  def fromJSON(value: js.Any): Unit = js.native
+  def fromJSON(value: js.Any): Unit
   /**
     * Deserialize the model from a string.
     *
     * #### Notes
     * Should emit a [contentChanged] signal.
     */
-  def fromString(value: String): Unit = js.native
+  def fromString(value: String): Unit
   /**
     * Initialize model state after initial data load.
     *
@@ -71,11 +70,11 @@ trait IModel extends IDisposable {
     * This function must be called after the initial data is loaded to set up
     * initial model state, such as an initial undo stack, etc.
     */
-  def initialize(): Unit = js.native
+  def initialize(): Unit
   /**
     * Serialize the model to JSON.
     */
-  def toJSON(): JSONValue = js.native
+  def toJSON(): JSONValue
 }
 
 object IModel {
@@ -98,79 +97,5 @@ object IModel {
     val __obj = js.Dynamic.literal(contentChanged = contentChanged.asInstanceOf[js.Any], defaultKernelLanguage = defaultKernelLanguage.asInstanceOf[js.Any], defaultKernelName = defaultKernelName.asInstanceOf[js.Any], dirty = dirty.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), fromJSON = js.Any.fromFunction1(fromJSON), fromString = js.Any.fromFunction1(fromString), initialize = js.Any.fromFunction0(initialize), isDisposed = isDisposed.asInstanceOf[js.Any], modelDB = modelDB.asInstanceOf[js.Any], readOnly = readOnly.asInstanceOf[js.Any], stateChanged = stateChanged.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[IModel]
   }
-  @scala.inline
-  implicit class IModelOps[Self <: IModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentChanged(value: ISignal[IModel, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultKernelLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultKernelLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultKernelName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultKernelName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dirty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFromJSON(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromJSON")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFromString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromString")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInitialize(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withModelDB(value: IModelDB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelDB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStateChanged(value: ISignal[IModel, typingsSlinky.jupyterlabCoreutils.interfacesMod.IChangedArgs[_, String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => JSONValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

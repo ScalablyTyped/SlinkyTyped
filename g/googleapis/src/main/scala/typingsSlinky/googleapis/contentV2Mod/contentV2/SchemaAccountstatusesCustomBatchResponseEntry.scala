@@ -26,53 +26,16 @@ trait SchemaAccountstatusesCustomBatchResponseEntry extends js.Object {
 
 object SchemaAccountstatusesCustomBatchResponseEntry {
   @scala.inline
-  def apply(): SchemaAccountstatusesCustomBatchResponseEntry = {
+  def apply(
+    accountStatus: SchemaAccountStatus = null,
+    batchId: js.UndefOr[Double] = js.undefined,
+    errors: SchemaErrors = null
+  ): SchemaAccountstatusesCustomBatchResponseEntry = {
     val __obj = js.Dynamic.literal()
+    if (accountStatus != null) __obj.updateDynamic("accountStatus")(accountStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(batchId)) __obj.updateDynamic("batchId")(batchId.get.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountstatusesCustomBatchResponseEntry]
   }
-  @scala.inline
-  implicit class SchemaAccountstatusesCustomBatchResponseEntryOps[Self <: SchemaAccountstatusesCustomBatchResponseEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountStatus(value: SchemaAccountStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatchId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: SchemaErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

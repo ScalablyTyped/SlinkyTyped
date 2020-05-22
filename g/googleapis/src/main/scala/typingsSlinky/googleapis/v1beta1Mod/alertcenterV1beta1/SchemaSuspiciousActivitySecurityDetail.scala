@@ -49,125 +49,28 @@ trait SchemaSuspiciousActivitySecurityDetail extends js.Object {
 
 object SchemaSuspiciousActivitySecurityDetail {
   @scala.inline
-  def apply(): SchemaSuspiciousActivitySecurityDetail = {
+  def apply(
+    deviceId: String = null,
+    deviceModel: String = null,
+    deviceProperty: String = null,
+    deviceType: String = null,
+    iosVendorId: String = null,
+    newValue: String = null,
+    oldValue: String = null,
+    resourceId: String = null,
+    serialNumber: String = null
+  ): SchemaSuspiciousActivitySecurityDetail = {
     val __obj = js.Dynamic.literal()
+    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
+    if (deviceModel != null) __obj.updateDynamic("deviceModel")(deviceModel.asInstanceOf[js.Any])
+    if (deviceProperty != null) __obj.updateDynamic("deviceProperty")(deviceProperty.asInstanceOf[js.Any])
+    if (deviceType != null) __obj.updateDynamic("deviceType")(deviceType.asInstanceOf[js.Any])
+    if (iosVendorId != null) __obj.updateDynamic("iosVendorId")(iosVendorId.asInstanceOf[js.Any])
+    if (newValue != null) __obj.updateDynamic("newValue")(newValue.asInstanceOf[js.Any])
+    if (oldValue != null) __obj.updateDynamic("oldValue")(oldValue.asInstanceOf[js.Any])
+    if (resourceId != null) __obj.updateDynamic("resourceId")(resourceId.asInstanceOf[js.Any])
+    if (serialNumber != null) __obj.updateDynamic("serialNumber")(serialNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSuspiciousActivitySecurityDetail]
   }
-  @scala.inline
-  implicit class SchemaSuspiciousActivitySecurityDetailOps[Self <: SchemaSuspiciousActivitySecurityDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosVendorId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosVendorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosVendorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosVendorId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerialNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerialNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

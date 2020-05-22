@@ -22,41 +22,10 @@ trait PutRecordOutput extends js.Object {
 
 object PutRecordOutput {
   @scala.inline
-  def apply(SequenceNumber: SequenceNumber, ShardId: ShardId): PutRecordOutput = {
+  def apply(SequenceNumber: SequenceNumber, ShardId: ShardId, EncryptionType: EncryptionType = null): PutRecordOutput = {
     val __obj = js.Dynamic.literal(SequenceNumber = SequenceNumber.asInstanceOf[js.Any], ShardId = ShardId.asInstanceOf[js.Any])
+    if (EncryptionType != null) __obj.updateDynamic("EncryptionType")(EncryptionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutRecordOutput]
   }
-  @scala.inline
-  implicit class PutRecordOutputOps[Self <: PutRecordOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSequenceNumber(value: SequenceNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShardId(value: ShardId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncryptionType(value: EncryptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

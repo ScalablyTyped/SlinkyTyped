@@ -19,43 +19,14 @@ trait Logger extends js.Object {
 
 object Logger {
   @scala.inline
-  def apply(): Logger = {
+  def apply(
+    log: /* repeated */ js.Any => Unit = null,
+    write: (/* chunk */ js.Any, /* encoding */ js.UndefOr[String], /* callback */ js.UndefOr[js.Function0[Unit]]) => Unit = null
+  ): Logger = {
     val __obj = js.Dynamic.literal()
+    if (log != null) __obj.updateDynamic("log")(js.Any.fromFunction1(log))
+    if (write != null) __obj.updateDynamic("write")(js.Any.fromFunction3(write))
     __obj.asInstanceOf[Logger]
   }
-  @scala.inline
-  implicit class LoggerOps[Self <: Logger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLog(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrite(
-      value: (/* chunk */ js.Any, /* encoding */ js.UndefOr[String], /* callback */ js.UndefOr[js.Function0[Unit]]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutWrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

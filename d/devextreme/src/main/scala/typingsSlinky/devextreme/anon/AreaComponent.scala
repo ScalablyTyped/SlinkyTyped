@@ -9,127 +9,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AreaComponent extends js.Object {
-  var area: js.UndefOr[String] = js.native
-  var component: js.UndefOr[dxPivotGridFieldChooser] = js.native
-  var element: js.UndefOr[dxElement] = js.native
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
-  var field: js.UndefOr[PivotGridDataSourceField] = js.native
-  var items: js.UndefOr[js.Array[_]] = js.native
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
-  var model: js.UndefOr[js.Any] = js.native
+  var area: js.UndefOr[String] = js.undefined
+  var component: js.UndefOr[dxPivotGridFieldChooser] = js.undefined
+  var element: js.UndefOr[dxElement] = js.undefined
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
+  var field: js.UndefOr[PivotGridDataSourceField] = js.undefined
+  var items: js.UndefOr[js.Array[_]] = js.undefined
+  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.undefined
+  var model: js.UndefOr[js.Any] = js.undefined
 }
 
 object AreaComponent {
   @scala.inline
-  def apply(): AreaComponent = {
+  def apply(
+    area: String = null,
+    component: dxPivotGridFieldChooser = null,
+    element: dxElement = null,
+    event: event = null,
+    field: PivotGridDataSourceField = null,
+    items: js.Array[_] = null,
+    jQueryEvent: JQueryEventObject = null,
+    model: js.Any = null
+  ): AreaComponent = {
     val __obj = js.Dynamic.literal()
+    if (area != null) __obj.updateDynamic("area")(area.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (jQueryEvent != null) __obj.updateDynamic("jQueryEvent")(jQueryEvent.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
     __obj.asInstanceOf[AreaComponent]
   }
-  @scala.inline
-  implicit class AreaComponentOps[Self <: AreaComponent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArea(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: dxPivotGridFieldChooser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: PivotGridDataSourceField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJQueryEvent(value: JQueryEventObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJQueryEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,89 +7,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PolylinePositions extends js.Object {
-  var cornerType: js.UndefOr[typingsSlinky.cesium.mod.CornerType] = js.native
-  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.native
-  var granularity: js.UndefOr[Double] = js.native
-  var polylinePositions: js.Array[Cartesian3] = js.native
-  var shapePositions: js.Array[Cartesian2] = js.native
-  var vertexFormat: js.UndefOr[VertexFormat] = js.native
+  var cornerType: js.UndefOr[typingsSlinky.cesium.mod.CornerType] = js.undefined
+  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.undefined
+  var granularity: js.UndefOr[Double] = js.undefined
+  var polylinePositions: js.Array[Cartesian3]
+  var shapePositions: js.Array[Cartesian2]
+  var vertexFormat: js.UndefOr[VertexFormat] = js.undefined
 }
 
 object PolylinePositions {
   @scala.inline
-  def apply(polylinePositions: js.Array[Cartesian3], shapePositions: js.Array[Cartesian2]): PolylinePositions = {
+  def apply(
+    polylinePositions: js.Array[Cartesian3],
+    shapePositions: js.Array[Cartesian2],
+    cornerType: typingsSlinky.cesium.mod.CornerType = null,
+    ellipsoid: typingsSlinky.cesium.mod.Ellipsoid = null,
+    granularity: js.UndefOr[Double] = js.undefined,
+    vertexFormat: VertexFormat = null
+  ): PolylinePositions = {
     val __obj = js.Dynamic.literal(polylinePositions = polylinePositions.asInstanceOf[js.Any], shapePositions = shapePositions.asInstanceOf[js.Any])
+    if (cornerType != null) __obj.updateDynamic("cornerType")(cornerType.asInstanceOf[js.Any])
+    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
+    if (!js.isUndefined(granularity)) __obj.updateDynamic("granularity")(granularity.get.asInstanceOf[js.Any])
+    if (vertexFormat != null) __obj.updateDynamic("vertexFormat")(vertexFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolylinePositions]
   }
-  @scala.inline
-  implicit class PolylinePositionsOps[Self <: PolylinePositions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolylinePositions(value: js.Array[Cartesian3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polylinePositions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShapePositions(value: js.Array[Cartesian2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapePositions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCornerType(value: typingsSlinky.cesium.mod.CornerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCornerType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEllipsoid(value: typingsSlinky.cesium.mod.Ellipsoid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEllipsoid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGranularity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGranularity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertexFormat(value: VertexFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertexFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

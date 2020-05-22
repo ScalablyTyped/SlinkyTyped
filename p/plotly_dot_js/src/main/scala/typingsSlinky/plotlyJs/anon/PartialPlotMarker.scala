@@ -9,309 +9,81 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.PlotMarker> */
-@js.native
 trait PartialPlotMarker extends js.Object {
-  var autocolorscale: js.UndefOr[Boolean] = js.native
-  var cauto: js.UndefOr[Boolean] = js.native
-  var cmax: js.UndefOr[Double] = js.native
-  var cmin: js.UndefOr[Double] = js.native
-  var color: js.UndefOr[typingsSlinky.plotlyJs.mod.Color | js.Array[typingsSlinky.plotlyJs.mod.Color]] = js.native
-  var colorbar: js.UndefOr[PartialColorBar] = js.native
-  var colors: js.UndefOr[js.Array[typingsSlinky.plotlyJs.mod.Color]] = js.native
-  var colorscale: js.UndefOr[ColorScale] = js.native
-  var gradient: js.UndefOr[Colorsrc] = js.native
-  var line: js.UndefOr[PartialScatterMarkerLine] = js.native
-  var maxdisplayed: js.UndefOr[Double] = js.native
-  var opacity: js.UndefOr[Double | js.Array[Double]] = js.native
-  var pad: js.UndefOr[PartialPadding] = js.native
-  var reversescale: js.UndefOr[Boolean] = js.native
-  var showscale: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[Double | js.Array[Double]] = js.native
-  var sizemax: js.UndefOr[Double] = js.native
-  var sizemin: js.UndefOr[Double] = js.native
-  var sizemode: js.UndefOr[diameter | area] = js.native
-  var sizeref: js.UndefOr[Double] = js.native
-  var symbol: js.UndefOr[MarkerSymbol] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var autocolorscale: js.UndefOr[Boolean] = js.undefined
+  var cauto: js.UndefOr[Boolean] = js.undefined
+  var cmax: js.UndefOr[Double] = js.undefined
+  var cmin: js.UndefOr[Double] = js.undefined
+  var color: js.UndefOr[typingsSlinky.plotlyJs.mod.Color | js.Array[typingsSlinky.plotlyJs.mod.Color]] = js.undefined
+  var colorbar: js.UndefOr[PartialColorBar] = js.undefined
+  var colors: js.UndefOr[js.Array[typingsSlinky.plotlyJs.mod.Color]] = js.undefined
+  var colorscale: js.UndefOr[ColorScale] = js.undefined
+  var gradient: js.UndefOr[Colorsrc] = js.undefined
+  var line: js.UndefOr[PartialScatterMarkerLine] = js.undefined
+  var maxdisplayed: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var pad: js.UndefOr[PartialPadding] = js.undefined
+  var reversescale: js.UndefOr[Boolean] = js.undefined
+  var showscale: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var sizemax: js.UndefOr[Double] = js.undefined
+  var sizemin: js.UndefOr[Double] = js.undefined
+  var sizemode: js.UndefOr[diameter | area] = js.undefined
+  var sizeref: js.UndefOr[Double] = js.undefined
+  var symbol: js.UndefOr[MarkerSymbol] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object PartialPlotMarker {
   @scala.inline
-  def apply(): PartialPlotMarker = {
+  def apply(
+    autocolorscale: js.UndefOr[Boolean] = js.undefined,
+    cauto: js.UndefOr[Boolean] = js.undefined,
+    cmax: js.UndefOr[Double] = js.undefined,
+    cmin: js.UndefOr[Double] = js.undefined,
+    color: typingsSlinky.plotlyJs.mod.Color | js.Array[typingsSlinky.plotlyJs.mod.Color] = null,
+    colorbar: PartialColorBar = null,
+    colors: js.Array[typingsSlinky.plotlyJs.mod.Color] = null,
+    colorscale: ColorScale = null,
+    gradient: Colorsrc = null,
+    line: PartialScatterMarkerLine = null,
+    maxdisplayed: js.UndefOr[Double] = js.undefined,
+    opacity: Double | js.Array[Double] = null,
+    pad: PartialPadding = null,
+    reversescale: js.UndefOr[Boolean] = js.undefined,
+    showscale: js.UndefOr[Boolean] = js.undefined,
+    size: Double | js.Array[Double] = null,
+    sizemax: js.UndefOr[Double] = js.undefined,
+    sizemin: js.UndefOr[Double] = js.undefined,
+    sizemode: diameter | area = null,
+    sizeref: js.UndefOr[Double] = js.undefined,
+    symbol: MarkerSymbol = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): PartialPlotMarker = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autocolorscale)) __obj.updateDynamic("autocolorscale")(autocolorscale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cauto)) __obj.updateDynamic("cauto")(cauto.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cmax)) __obj.updateDynamic("cmax")(cmax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cmin)) __obj.updateDynamic("cmin")(cmin.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (colorbar != null) __obj.updateDynamic("colorbar")(colorbar.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (colorscale != null) __obj.updateDynamic("colorscale")(colorscale.asInstanceOf[js.Any])
+    if (gradient != null) __obj.updateDynamic("gradient")(gradient.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxdisplayed)) __obj.updateDynamic("maxdisplayed")(maxdisplayed.get.asInstanceOf[js.Any])
+    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+    if (pad != null) __obj.updateDynamic("pad")(pad.asInstanceOf[js.Any])
+    if (!js.isUndefined(reversescale)) __obj.updateDynamic("reversescale")(reversescale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showscale)) __obj.updateDynamic("showscale")(showscale.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizemax)) __obj.updateDynamic("sizemax")(sizemax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizemin)) __obj.updateDynamic("sizemin")(sizemin.get.asInstanceOf[js.Any])
+    if (sizemode != null) __obj.updateDynamic("sizemode")(sizemode.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeref)) __obj.updateDynamic("sizeref")(sizeref.get.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPlotMarker]
   }
-  @scala.inline
-  implicit class PartialPlotMarkerOps[Self <: PartialPlotMarker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutocolorscale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocolorscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutocolorscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocolorscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCauto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cauto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCauto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cauto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCmax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCmax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCmin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCmin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: typingsSlinky.plotlyJs.mod.Color | js.Array[typingsSlinky.plotlyJs.mod.Color]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorbar(value: PartialColorBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColors(value: js.Array[typingsSlinky.plotlyJs.mod.Color]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorscale(value: ColorScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGradient(value: Colorsrc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGradient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: PartialScatterMarkerLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxdisplayed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxdisplayed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxdisplayed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxdisplayed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPad(value: PartialPadding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReversescale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversescale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReversescale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversescale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowscale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizemax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizemax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizemax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizemax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizemin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizemin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizemin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizemin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizemode(value: diameter | area): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizemode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizemode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeref(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: MarkerSymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

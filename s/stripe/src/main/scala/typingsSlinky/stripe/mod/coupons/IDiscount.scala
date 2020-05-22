@@ -10,31 +10,30 @@ import scala.scalajs.js.annotation._
   * A discount represents the actual application of a coupon to a particular customer. It contains information
   * about when the discount began and when it will end.
   */
-@js.native
 trait IDiscount extends IObject {
   /**
     * Hash describing the coupon applied to create this discount
     */
-  var coupon: ICoupon = js.native
-  var customer: String = js.native
+  var coupon: ICoupon
+  var customer: String
   /**
     * If the coupon has a duration of once or repeating, the date that this discount will end. If the coupon
     * used has a forever duration, this attribute will be null.
     */
-  var end: Double = js.native
+  var end: Double
   /**
     * Value is 'discount'
     */
   @JSName("object")
-  var object_IDiscount: discount = js.native
+  var object_IDiscount: discount
   /**
     * Date that the coupon was applied
     */
-  var start: Double = js.native
+  var start: Double
   /**
     * The subscription that this coupon is applied to, if it is applied to a particular subscription
     */
-  var subscription: String = js.native
+  var subscription: String
 }
 
 object IDiscount {
@@ -51,49 +50,5 @@ object IDiscount {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDiscount]
   }
-  @scala.inline
-  implicit class IDiscountOps[Self <: IDiscount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoupon(value: ICoupon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coupon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: discount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

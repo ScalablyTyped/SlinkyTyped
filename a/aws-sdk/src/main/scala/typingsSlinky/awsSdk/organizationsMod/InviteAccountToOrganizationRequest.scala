@@ -18,35 +18,10 @@ trait InviteAccountToOrganizationRequest extends js.Object {
 
 object InviteAccountToOrganizationRequest {
   @scala.inline
-  def apply(Target: HandshakeParty): InviteAccountToOrganizationRequest = {
+  def apply(Target: HandshakeParty, Notes: HandshakeNotes = null): InviteAccountToOrganizationRequest = {
     val __obj = js.Dynamic.literal(Target = Target.asInstanceOf[js.Any])
+    if (Notes != null) __obj.updateDynamic("Notes")(Notes.asInstanceOf[js.Any])
     __obj.asInstanceOf[InviteAccountToOrganizationRequest]
   }
-  @scala.inline
-  implicit class InviteAccountToOrganizationRequestOps[Self <: InviteAccountToOrganizationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTarget(value: HandshakeParty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotes(value: HandshakeNotes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Notes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

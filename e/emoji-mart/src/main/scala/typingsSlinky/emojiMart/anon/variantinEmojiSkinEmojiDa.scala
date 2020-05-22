@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ variant in emoji-mart.emoji-mart/dist-es/utils/emoji-index/nimble-emoji-index.EmojiSkin ]: emoji-mart.emoji-mart/dist-es/utils/emoji-index/nimble-emoji-index.EmojiData} */
-@js.native
 trait variantinEmojiSkinEmojiDa extends EmojiEntry {
-  var `1`: EmojiData = js.native
-  var `2`: EmojiData = js.native
-  var `3`: EmojiData = js.native
-  var `4`: EmojiData = js.native
-  var `5`: EmojiData = js.native
-  var `6`: EmojiData = js.native
+  var `1`: EmojiData
+  var `2`: EmojiData
+  var `3`: EmojiData
+  var `4`: EmojiData
+  var `5`: EmojiData
+  var `6`: EmojiData
 }
 
 object variantinEmojiSkinEmojiDa {
@@ -29,49 +28,5 @@ object variantinEmojiSkinEmojiDa {
     __obj.updateDynamic("6")(`6`.asInstanceOf[js.Any])
     __obj.asInstanceOf[variantinEmojiSkinEmojiDa]
   }
-  @scala.inline
-  implicit class variantinEmojiSkinEmojiDaOps[Self <: variantinEmojiSkinEmojiDa] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with1(value: EmojiData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with2(value: EmojiData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with3(value: EmojiData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with4(value: EmojiData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with5(value: EmojiData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with6(value: EmojiData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("6")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,8 +7,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait FunctionComponent[P]
-  extends AnyComponent[P, js.Any]
-     with ComponentType[P] {
+  extends AnyComponent[P, js.Any] {
   var defaultProps: js.UndefOr[Partial[P]] = js.native
   var displayName: js.UndefOr[String] = js.native
   def apply(props: RenderableProps[P, _]): VNode[_] | Null = js.native

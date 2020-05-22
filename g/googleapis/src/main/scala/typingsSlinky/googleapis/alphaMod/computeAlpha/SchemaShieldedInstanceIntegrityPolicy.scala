@@ -19,29 +19,10 @@ trait SchemaShieldedInstanceIntegrityPolicy extends js.Object {
 
 object SchemaShieldedInstanceIntegrityPolicy {
   @scala.inline
-  def apply(): SchemaShieldedInstanceIntegrityPolicy = {
+  def apply(updateAutoLearnPolicy: js.UndefOr[Boolean] = js.undefined): SchemaShieldedInstanceIntegrityPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(updateAutoLearnPolicy)) __obj.updateDynamic("updateAutoLearnPolicy")(updateAutoLearnPolicy.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaShieldedInstanceIntegrityPolicy]
   }
-  @scala.inline
-  implicit class SchemaShieldedInstanceIntegrityPolicyOps[Self <: SchemaShieldedInstanceIntegrityPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUpdateAutoLearnPolicy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateAutoLearnPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateAutoLearnPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateAutoLearnPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,6 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+// TODO find source documentation
 trait MapsEventListener extends js.Object
 

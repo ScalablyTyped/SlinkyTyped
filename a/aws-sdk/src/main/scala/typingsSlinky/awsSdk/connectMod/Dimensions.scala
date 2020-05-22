@@ -18,41 +18,11 @@ trait Dimensions extends js.Object {
 
 object Dimensions {
   @scala.inline
-  def apply(): Dimensions = {
+  def apply(Channel: Channel = null, Queue: QueueReference = null): Dimensions = {
     val __obj = js.Dynamic.literal()
+    if (Channel != null) __obj.updateDynamic("Channel")(Channel.asInstanceOf[js.Any])
+    if (Queue != null) __obj.updateDynamic("Queue")(Queue.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dimensions]
   }
-  @scala.inline
-  implicit class DimensionsOps[Self <: Dimensions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannel(value: Channel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Channel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueue(value: QueueReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

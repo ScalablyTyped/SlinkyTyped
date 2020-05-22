@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-heuristics-scaleRange.html)
   */
-@js.native
 trait scaleRange extends js.Object {
   /**
     * Generates a suggested scale range (i.e. [minScale](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#minScale) and [maxScale](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#maxScale)) to apply to the input `layer`. These values suggest the best scale range for viewing the input layer.
@@ -23,7 +22,7 @@ trait scaleRange extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def scaleRange(params: scaleRangeScaleRangeParams): js.Promise[ScaleRangeResult] = js.native
+  def scaleRange(params: scaleRangeScaleRangeParams): js.Promise[ScaleRangeResult]
 }
 
 object scaleRange {
@@ -32,19 +31,5 @@ object scaleRange {
     val __obj = js.Dynamic.literal(scaleRange = js.Any.fromFunction1(scaleRange))
     __obj.asInstanceOf[scaleRange]
   }
-  @scala.inline
-  implicit class scaleRangeOps[Self <: scaleRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScaleRange(value: scaleRangeScaleRangeParams => js.Promise[ScaleRangeResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleRange")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

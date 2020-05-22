@@ -22,41 +22,11 @@ trait SchemaDateRangeValues extends js.Object {
 
 object SchemaDateRangeValues {
   @scala.inline
-  def apply(): SchemaDateRangeValues = {
+  def apply(pivotValueRegions: js.Array[SchemaPivotValueRegion] = null, values: js.Array[String] = null): SchemaDateRangeValues = {
     val __obj = js.Dynamic.literal()
+    if (pivotValueRegions != null) __obj.updateDynamic("pivotValueRegions")(pivotValueRegions.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDateRangeValues]
   }
-  @scala.inline
-  implicit class SchemaDateRangeValuesOps[Self <: SchemaDateRangeValues] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPivotValueRegions(value: js.Array[SchemaPivotValueRegion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotValueRegions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotValueRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotValueRegions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

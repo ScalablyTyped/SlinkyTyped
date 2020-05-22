@@ -8,7 +8,7 @@ import typingsSlinky.firebaseFirestore.databaseMod.DocumentSnapshot
 import typingsSlinky.firebaseFirestore.databaseMod.Firestore
 import typingsSlinky.firebaseFirestore.databaseMod.Query
 import typingsSlinky.firebaseFirestore.databaseMod.QuerySnapshot
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.JsonObject
+import typingsSlinky.firebaseFirestore.objectValueMod.JsonObject
 import typingsSlinky.firebaseFirestoreTypes.mod.DocumentData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

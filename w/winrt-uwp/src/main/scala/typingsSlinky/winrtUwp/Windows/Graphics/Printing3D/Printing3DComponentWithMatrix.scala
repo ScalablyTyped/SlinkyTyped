@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a 3D Manufacturing Format (3MF) component that's applied to the object definition with a matrix transform. */
-@js.native
 trait Printing3DComponentWithMatrix extends js.Object {
   /** Gets or sets the 3D Manufacturing Format (3MF) primitive component that's applied to the object definition with a matrix transform. */
-  var component: Printing3DComponent = js.native
+  var component: Printing3DComponent
   /** Gets or sets the matrix transform that's applied to the 3D Manufacturing Format (3MF) primitive component. */
-  var matrix: Matrix4x4 = js.native
+  var matrix: Matrix4x4
 }
 
 object Printing3DComponentWithMatrix {
@@ -20,25 +19,5 @@ object Printing3DComponentWithMatrix {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any], matrix = matrix.asInstanceOf[js.Any])
     __obj.asInstanceOf[Printing3DComponentWithMatrix]
   }
-  @scala.inline
-  implicit class Printing3DComponentWithMatrixOps[Self <: Printing3DComponentWithMatrix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponent(value: Printing3DComponent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatrix(value: Matrix4x4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

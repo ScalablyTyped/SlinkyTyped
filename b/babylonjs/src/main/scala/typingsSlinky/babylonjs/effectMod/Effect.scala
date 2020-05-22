@@ -218,6 +218,11 @@ class Effect protected () extends IDisposable {
     */
   def bindUniformBuffer(buffer: DataBuffer, name: String): Unit = js.native
   /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
     * Adds a callback to the onCompiled observable and call the callback imediatly if already ready.
     * @param func The callback to be used.
     */

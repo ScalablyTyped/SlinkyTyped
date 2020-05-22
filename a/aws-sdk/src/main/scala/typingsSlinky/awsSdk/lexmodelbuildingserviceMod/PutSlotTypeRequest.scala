@@ -42,107 +42,25 @@ trait PutSlotTypeRequest extends js.Object {
 
 object PutSlotTypeRequest {
   @scala.inline
-  def apply(name: SlotTypeName): PutSlotTypeRequest = {
+  def apply(
+    name: SlotTypeName,
+    checksum: String = null,
+    createVersion: js.UndefOr[Boolean] = js.undefined,
+    description: Description = null,
+    enumerationValues: EnumerationValues = null,
+    parentSlotTypeSignature: CustomOrBuiltinSlotTypeName = null,
+    slotTypeConfigurations: SlotTypeConfigurations = null,
+    valueSelectionStrategy: SlotValueSelectionStrategy = null
+  ): PutSlotTypeRequest = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (checksum != null) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
+    if (!js.isUndefined(createVersion)) __obj.updateDynamic("createVersion")(createVersion.get.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (enumerationValues != null) __obj.updateDynamic("enumerationValues")(enumerationValues.asInstanceOf[js.Any])
+    if (parentSlotTypeSignature != null) __obj.updateDynamic("parentSlotTypeSignature")(parentSlotTypeSignature.asInstanceOf[js.Any])
+    if (slotTypeConfigurations != null) __obj.updateDynamic("slotTypeConfigurations")(slotTypeConfigurations.asInstanceOf[js.Any])
+    if (valueSelectionStrategy != null) __obj.updateDynamic("valueSelectionStrategy")(valueSelectionStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutSlotTypeRequest]
   }
-  @scala.inline
-  implicit class PutSlotTypeRequestOps[Self <: PutSlotTypeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: SlotTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChecksum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecksum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateVersion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnumerationValues(value: EnumerationValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enumerationValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnumerationValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enumerationValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentSlotTypeSignature(value: CustomOrBuiltinSlotTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSlotTypeSignature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentSlotTypeSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSlotTypeSignature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlotTypeConfigurations(value: SlotTypeConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotTypeConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlotTypeConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotTypeConfigurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueSelectionStrategy(value: SlotValueSelectionStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSelectionStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSelectionStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSelectionStrategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

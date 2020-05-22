@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResizeRegion extends js.Object {
-  var bottomRightCorner: js.UndefOr[Double] = js.native
-  var sides: js.UndefOr[Bottom] = js.native
-  var size: js.UndefOr[Double] = js.native
+  var bottomRightCorner: js.UndefOr[Double] = js.undefined
+  var sides: js.UndefOr[Bottom] = js.undefined
+  var size: js.UndefOr[Double] = js.undefined
 }
 
 object ResizeRegion {
   @scala.inline
-  def apply(): ResizeRegion = {
+  def apply(
+    bottomRightCorner: js.UndefOr[Double] = js.undefined,
+    sides: Bottom = null,
+    size: js.UndefOr[Double] = js.undefined
+  ): ResizeRegion = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bottomRightCorner)) __obj.updateDynamic("bottomRightCorner")(bottomRightCorner.get.asInstanceOf[js.Any])
+    if (sides != null) __obj.updateDynamic("sides")(sides.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResizeRegion]
   }
-  @scala.inline
-  implicit class ResizeRegionOps[Self <: ResizeRegion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottomRightCorner(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomRightCorner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottomRightCorner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomRightCorner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSides(value: Bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

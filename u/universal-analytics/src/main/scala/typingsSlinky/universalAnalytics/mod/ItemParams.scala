@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ItemParams
   extends /* key */ StringDictionary[js.Any] {
   /**
@@ -17,7 +16,7 @@ trait ItemParams
     *
     * Example value: `SKU47`
     */
-  var ic: js.UndefOr[String] = js.native
+  var ic: js.UndefOr[String] = js.undefined
   /**
     * Item Name
     *
@@ -29,7 +28,7 @@ trait ItemParams
     *
     * Example value: `Shoe`
     */
-  var in: js.UndefOr[String] = js.native
+  var in: js.UndefOr[String] = js.undefined
   /**
     * Item Price
     *
@@ -37,7 +36,7 @@ trait ItemParams
     *
     * Example value: `3.50`
     */
-  var ip: js.UndefOr[String | Double] = js.native
+  var ip: js.UndefOr[String | Double] = js.undefined
   /**
     * Item Quantity
     *
@@ -45,7 +44,7 @@ trait ItemParams
     *
     * Example value: `4`
     */
-  var iq: js.UndefOr[String | Double] = js.native
+  var iq: js.UndefOr[String | Double] = js.undefined
   /**
     * Item Category
     *
@@ -55,8 +54,8 @@ trait ItemParams
     *
     * Example value: `Blue`
     */
-  var iv: js.UndefOr[String] = js.native
-  var p: js.UndefOr[String] = js.native
+  var iv: js.UndefOr[String] = js.undefined
+  var p: js.UndefOr[String] = js.undefined
   /**
     * Transaction ID
     *
@@ -69,106 +68,31 @@ trait ItemParams
     *
     * Example value: `OD564`
     */
-  var ti: js.UndefOr[String] = js.native
+  var ti: js.UndefOr[String] = js.undefined
 }
 
 object ItemParams {
   @scala.inline
-  def apply(): ItemParams = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    ic: String = null,
+    in: String = null,
+    ip: String | Double = null,
+    iq: String | Double = null,
+    iv: String = null,
+    p: String = null,
+    ti: String = null
+  ): ItemParams = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (ic != null) __obj.updateDynamic("ic")(ic.asInstanceOf[js.Any])
+    if (in != null) __obj.updateDynamic("in")(in.asInstanceOf[js.Any])
+    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
+    if (iq != null) __obj.updateDynamic("iq")(iq.asInstanceOf[js.Any])
+    if (iv != null) __obj.updateDynamic("iv")(iv.asInstanceOf[js.Any])
+    if (p != null) __obj.updateDynamic("p")(p.asInstanceOf[js.Any])
+    if (ti != null) __obj.updateDynamic("ti")(ti.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemParams]
   }
-  @scala.inline
-  implicit class ItemParamsOps[Self <: ItemParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIp(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIq(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iq")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iq")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIv(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTi(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ti")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ti")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

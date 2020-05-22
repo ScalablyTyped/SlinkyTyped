@@ -8,75 +8,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Center extends js.Object {
-  var center: js.UndefOr[LngLat] = js.native
-  var crs: js.UndefOr[EPSG3857 | EPSG3395 | EPSG4326] = js.native
-  var rotation: js.UndefOr[Double] = js.native
-  var zoom: js.UndefOr[Double] = js.native
+  var center: js.UndefOr[LngLat] = js.undefined
+  var crs: js.UndefOr[EPSG3857 | EPSG3395 | EPSG4326] = js.undefined
+  var rotation: js.UndefOr[Double] = js.undefined
+  var zoom: js.UndefOr[Double] = js.undefined
 }
 
 object Center {
   @scala.inline
-  def apply(): Center = {
+  def apply(
+    center: LngLat = null,
+    crs: EPSG3857 | EPSG3395 | EPSG4326 = null,
+    rotation: js.UndefOr[Double] = js.undefined,
+    zoom: js.UndefOr[Double] = js.undefined
+  ): Center = {
     val __obj = js.Dynamic.literal()
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (crs != null) __obj.updateDynamic("crs")(crs.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Center]
   }
-  @scala.inline
-  implicit class CenterOps[Self <: Center] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCenter(value: LngLat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrs(value: EPSG3857 | EPSG3395 | EPSG4326): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

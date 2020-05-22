@@ -4,102 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CacheKeyPolicy extends js.Object {
   /** If true, requests to different hosts will be cached separately. */
-  var includeHost: js.UndefOr[Boolean] = js.native
+  var includeHost: js.UndefOr[Boolean] = js.undefined
   /** If true, http and https requests will be cached separately. */
-  var includeProtocol: js.UndefOr[Boolean] = js.native
+  var includeProtocol: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire
     * query string will be included. If false, the query string will be excluded from the cache key entirely.
     */
-  var includeQueryString: js.UndefOr[Boolean] = js.native
+  var includeQueryString: js.UndefOr[Boolean] = js.undefined
   /**
     * Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or
     * query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
     */
-  var queryStringBlacklist: js.UndefOr[js.Array[String]] = js.native
+  var queryStringBlacklist: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or
     * query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
     */
-  var queryStringWhitelist: js.UndefOr[js.Array[String]] = js.native
+  var queryStringWhitelist: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object CacheKeyPolicy {
   @scala.inline
-  def apply(): CacheKeyPolicy = {
+  def apply(
+    includeHost: js.UndefOr[Boolean] = js.undefined,
+    includeProtocol: js.UndefOr[Boolean] = js.undefined,
+    includeQueryString: js.UndefOr[Boolean] = js.undefined,
+    queryStringBlacklist: js.Array[String] = null,
+    queryStringWhitelist: js.Array[String] = null
+  ): CacheKeyPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeHost)) __obj.updateDynamic("includeHost")(includeHost.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeProtocol)) __obj.updateDynamic("includeProtocol")(includeProtocol.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeQueryString)) __obj.updateDynamic("includeQueryString")(includeQueryString.get.asInstanceOf[js.Any])
+    if (queryStringBlacklist != null) __obj.updateDynamic("queryStringBlacklist")(queryStringBlacklist.asInstanceOf[js.Any])
+    if (queryStringWhitelist != null) __obj.updateDynamic("queryStringWhitelist")(queryStringWhitelist.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheKeyPolicy]
   }
-  @scala.inline
-  implicit class CacheKeyPolicyOps[Self <: CacheKeyPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeHost(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeProtocol(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeQueryString(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeQueryString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeQueryString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeQueryString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryStringBlacklist(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStringBlacklist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryStringBlacklist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStringBlacklist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryStringWhitelist(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStringWhitelist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryStringWhitelist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStringWhitelist")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about the SourceRequested event. */
-@js.native
 trait PlayToSourceRequestedEventArgs extends js.Object {
   /** Gets the media object to connect to a Play To target. */
-  var sourceRequest: PlayToSourceRequest = js.native
+  var sourceRequest: PlayToSourceRequest
 }
 
 object PlayToSourceRequestedEventArgs {
@@ -17,19 +16,5 @@ object PlayToSourceRequestedEventArgs {
     val __obj = js.Dynamic.literal(sourceRequest = sourceRequest.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayToSourceRequestedEventArgs]
   }
-  @scala.inline
-  implicit class PlayToSourceRequestedEventArgsOps[Self <: PlayToSourceRequestedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceRequest(value: PlayToSourceRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

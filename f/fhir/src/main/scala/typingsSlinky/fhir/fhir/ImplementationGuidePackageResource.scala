@@ -7,209 +7,98 @@ import scala.scalajs.js.annotation._
 /**
   * Resource in the implementation guide
   */
-@js.native
 trait ImplementationGuidePackageResource extends BackboneElement {
   /**
     * Contains extended information for property 'acronym'.
     */
-  var _acronym: js.UndefOr[Element] = js.native
+  var _acronym: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.native
+  var _description: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'example'.
     */
-  var _example: js.UndefOr[Element] = js.native
+  var _example: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.native
+  var _name: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'sourceUri'.
     */
-  var _sourceUri: js.UndefOr[Element] = js.native
+  var _sourceUri: js.UndefOr[Element] = js.undefined
   /**
     * Short code to identify the resource
     */
-  var acronym: js.UndefOr[String] = js.native
+  var acronym: js.UndefOr[String] = js.undefined
   /**
     * Reason why included in guide
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * If not an example, has its normal meaning
     */
-  var example: Boolean = js.native
+  var example: Boolean
   /**
     * Resource this is an example of (if applicable)
     */
-  var exampleFor: js.UndefOr[Reference] = js.native
+  var exampleFor: js.UndefOr[Reference] = js.undefined
   /**
     * Human Name for the resource
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Location of the resource
     */
-  var sourceReference: js.UndefOr[Reference] = js.native
+  var sourceReference: js.UndefOr[Reference] = js.undefined
   /**
     * Location of the resource
     */
-  var sourceUri: js.UndefOr[uri] = js.native
+  var sourceUri: js.UndefOr[uri] = js.undefined
 }
 
 object ImplementationGuidePackageResource {
   @scala.inline
-  def apply(example: Boolean): ImplementationGuidePackageResource = {
+  def apply(
+    example: Boolean,
+    _acronym: Element = null,
+    _description: Element = null,
+    _example: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _name: Element = null,
+    _sourceUri: Element = null,
+    acronym: String = null,
+    description: String = null,
+    exampleFor: Reference = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    name: String = null,
+    sourceReference: Reference = null,
+    sourceUri: uri = null
+  ): ImplementationGuidePackageResource = {
     val __obj = js.Dynamic.literal(example = example.asInstanceOf[js.Any])
+    if (_acronym != null) __obj.updateDynamic("_acronym")(_acronym.asInstanceOf[js.Any])
+    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
+    if (_example != null) __obj.updateDynamic("_example")(_example.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
+    if (_sourceUri != null) __obj.updateDynamic("_sourceUri")(_sourceUri.asInstanceOf[js.Any])
+    if (acronym != null) __obj.updateDynamic("acronym")(acronym.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (exampleFor != null) __obj.updateDynamic("exampleFor")(exampleFor.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (sourceReference != null) __obj.updateDynamic("sourceReference")(sourceReference.asInstanceOf[js.Any])
+    if (sourceUri != null) __obj.updateDynamic("sourceUri")(sourceUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImplementationGuidePackageResource]
   }
-  @scala.inline
-  implicit class ImplementationGuidePackageResourceOps[Self <: ImplementationGuidePackageResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExample(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("example")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_acronym(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_acronym")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_acronym: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_acronym")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_description(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_example(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_example")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_example: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_example")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_name(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sourceUri(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sourceUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAcronym(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acronym")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcronym: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acronym")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExampleFor(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exampleFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExampleFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exampleFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUri(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

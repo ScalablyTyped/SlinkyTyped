@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BuildDefinitionChangedEvent extends js.Object {
-  var changeType: AuditAction = js.native
-  var definition: BuildDefinition = js.native
+  var changeType: AuditAction
+  var definition: BuildDefinition
 }
 
 object BuildDefinitionChangedEvent {
@@ -16,25 +15,5 @@ object BuildDefinitionChangedEvent {
     val __obj = js.Dynamic.literal(changeType = changeType.asInstanceOf[js.Any], definition = definition.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildDefinitionChangedEvent]
   }
-  @scala.inline
-  implicit class BuildDefinitionChangedEventOps[Self <: BuildDefinitionChangedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangeType(value: AuditAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefinition(value: BuildDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

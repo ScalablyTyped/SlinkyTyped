@@ -22,53 +22,16 @@ trait ListServerCertificatesRequest extends js.Object {
 
 object ListServerCertificatesRequest {
   @scala.inline
-  def apply(): ListServerCertificatesRequest = {
+  def apply(
+    Marker: markerType = null,
+    MaxItems: js.UndefOr[maxItemsType] = js.undefined,
+    PathPrefix: pathPrefixType = null
+  ): ListServerCertificatesRequest = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxItems)) __obj.updateDynamic("MaxItems")(MaxItems.get.asInstanceOf[js.Any])
+    if (PathPrefix != null) __obj.updateDynamic("PathPrefix")(PathPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListServerCertificatesRequest]
   }
-  @scala.inline
-  implicit class ListServerCertificatesRequestOps[Self <: ListServerCertificatesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: markerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: maxItemsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathPrefix(value: pathPrefixType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PathPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PathPrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

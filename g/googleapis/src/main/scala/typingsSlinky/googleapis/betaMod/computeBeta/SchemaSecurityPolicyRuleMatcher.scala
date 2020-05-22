@@ -33,53 +33,16 @@ trait SchemaSecurityPolicyRuleMatcher extends js.Object {
 
 object SchemaSecurityPolicyRuleMatcher {
   @scala.inline
-  def apply(): SchemaSecurityPolicyRuleMatcher = {
+  def apply(
+    config: SchemaSecurityPolicyRuleMatcherConfig = null,
+    expr: SchemaExpr = null,
+    versionedExpr: String = null
+  ): SchemaSecurityPolicyRuleMatcher = {
     val __obj = js.Dynamic.literal()
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (expr != null) __obj.updateDynamic("expr")(expr.asInstanceOf[js.Any])
+    if (versionedExpr != null) __obj.updateDynamic("versionedExpr")(versionedExpr.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecurityPolicyRuleMatcher]
   }
-  @scala.inline
-  implicit class SchemaSecurityPolicyRuleMatcherOps[Self <: SchemaSecurityPolicyRuleMatcher] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: SchemaSecurityPolicyRuleMatcherConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpr(value: SchemaExpr): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionedExpr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionedExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionedExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionedExpr")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

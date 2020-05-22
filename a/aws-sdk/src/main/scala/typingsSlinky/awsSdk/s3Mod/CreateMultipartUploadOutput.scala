@@ -51,149 +51,32 @@ trait CreateMultipartUploadOutput extends js.Object {
 
 object CreateMultipartUploadOutput {
   @scala.inline
-  def apply(): CreateMultipartUploadOutput = {
+  def apply(
+    AbortDate: js.Date = null,
+    AbortRuleId: AbortRuleId = null,
+    Bucket: BucketName = null,
+    Key: ObjectKey = null,
+    RequestCharged: RequestCharged = null,
+    SSECustomerAlgorithm: SSECustomerAlgorithm = null,
+    SSECustomerKeyMD5: SSECustomerKeyMD5 = null,
+    SSEKMSEncryptionContext: SSEKMSEncryptionContext = null,
+    SSEKMSKeyId: SSEKMSKeyId = null,
+    ServerSideEncryption: ServerSideEncryption = null,
+    UploadId: MultipartUploadId = null
+  ): CreateMultipartUploadOutput = {
     val __obj = js.Dynamic.literal()
+    if (AbortDate != null) __obj.updateDynamic("AbortDate")(AbortDate.asInstanceOf[js.Any])
+    if (AbortRuleId != null) __obj.updateDynamic("AbortRuleId")(AbortRuleId.asInstanceOf[js.Any])
+    if (Bucket != null) __obj.updateDynamic("Bucket")(Bucket.asInstanceOf[js.Any])
+    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
+    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
+    if (SSECustomerAlgorithm != null) __obj.updateDynamic("SSECustomerAlgorithm")(SSECustomerAlgorithm.asInstanceOf[js.Any])
+    if (SSECustomerKeyMD5 != null) __obj.updateDynamic("SSECustomerKeyMD5")(SSECustomerKeyMD5.asInstanceOf[js.Any])
+    if (SSEKMSEncryptionContext != null) __obj.updateDynamic("SSEKMSEncryptionContext")(SSEKMSEncryptionContext.asInstanceOf[js.Any])
+    if (SSEKMSKeyId != null) __obj.updateDynamic("SSEKMSKeyId")(SSEKMSKeyId.asInstanceOf[js.Any])
+    if (ServerSideEncryption != null) __obj.updateDynamic("ServerSideEncryption")(ServerSideEncryption.asInstanceOf[js.Any])
+    if (UploadId != null) __obj.updateDynamic("UploadId")(UploadId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateMultipartUploadOutput]
   }
-  @scala.inline
-  implicit class CreateMultipartUploadOutputOps[Self <: CreateMultipartUploadOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbortDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbortDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbortRuleId(value: AbortRuleId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortRuleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbortRuleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortRuleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: ObjectKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCharged(value: RequestCharged): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCharged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerAlgorithm(value: SSECustomerAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerKeyMD5(value: SSECustomerKeyMD5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerKeyMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSEKMSEncryptionContext(value: SSEKMSEncryptionContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSEncryptionContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSEKMSEncryptionContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSEncryptionContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSEKMSKeyId(value: SSEKMSKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSEKMSKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerSideEncryption(value: ServerSideEncryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadId(value: MultipartUploadId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

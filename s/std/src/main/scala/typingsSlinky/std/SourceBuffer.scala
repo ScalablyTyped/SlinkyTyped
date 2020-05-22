@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
 trait SourceBuffer extends EventTarget {
   var appendWindowEnd: Double = js.native
   var appendWindowStart: Double = js.native
-  val audioTracks: org.scalajs.dom.raw.AudioTrackList = js.native
   val buffered: org.scalajs.dom.raw.TimeRanges = js.native
   var mode: AppendMode = js.native
   var onabort: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
@@ -22,10 +21,8 @@ trait SourceBuffer extends EventTarget {
   var onupdate: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var onupdateend: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var onupdatestart: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  val textTracks: org.scalajs.dom.raw.TextTrackList = js.native
   var timestampOffset: Double = js.native
   val updating: scala.Boolean = js.native
-  val videoTracks: VideoTrackList = js.native
   def abort(): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_abort(

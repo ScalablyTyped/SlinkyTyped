@@ -8,56 +8,43 @@ import scala.scalajs.js.annotation._
   * Interface representing the properties to set on a new user record to be
   * created.
   */
-@js.native
-trait CreateRequest extends UpdateRequest {
+trait CreateRequest
+  extends typingsSlinky.firebaseAdmin.authMod.admin.auth.UpdateRequest {
   /**
     * The user's multi-factor related properties.
     */
   @JSName("multiFactor")
-  var multiFactor_CreateRequest: js.UndefOr[MultiFactorCreateSettings] = js.native
+  var multiFactor_CreateRequest: js.UndefOr[typingsSlinky.firebaseAdmin.authMod.admin.auth.MultiFactorCreateSettings] = js.undefined
   /**
     * The user's `uid`.
     */
-  var uid: js.UndefOr[String] = js.native
+  var uid: js.UndefOr[String] = js.undefined
 }
 
 object CreateRequest {
   @scala.inline
-  def apply(): CreateRequest = {
+  def apply(
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    displayName: js.UndefOr[Null | String] = js.undefined,
+    email: String = null,
+    emailVerified: js.UndefOr[Boolean] = js.undefined,
+    multiFactor: typingsSlinky.firebaseAdmin.authMod.admin.auth.MultiFactorCreateSettings = null,
+    password: String = null,
+    phoneNumber: js.UndefOr[Null | String] = js.undefined,
+    photoURL: js.UndefOr[Null | String] = js.undefined,
+    uid: String = null
+  ): CreateRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayName)) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (!js.isUndefined(emailVerified)) __obj.updateDynamic("emailVerified")(emailVerified.get.asInstanceOf[js.Any])
+    if (multiFactor != null) __obj.updateDynamic("multiFactor")(multiFactor.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(phoneNumber)) __obj.updateDynamic("phoneNumber")(phoneNumber.asInstanceOf[js.Any])
+    if (!js.isUndefined(photoURL)) __obj.updateDynamic("photoURL")(photoURL.asInstanceOf[js.Any])
+    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRequest]
   }
-  @scala.inline
-  implicit class CreateRequestOps[Self <: CreateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMultiFactor(value: MultiFactorCreateSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

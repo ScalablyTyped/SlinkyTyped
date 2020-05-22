@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SparqlGenerator extends js.Object {
-  def stringify(query: SparqlQuery): String = js.native
+  def stringify(query: SparqlQuery): String
 }
 
 object SparqlGenerator {
@@ -15,19 +14,5 @@ object SparqlGenerator {
     val __obj = js.Dynamic.literal(stringify = js.Any.fromFunction1(stringify))
     __obj.asInstanceOf[SparqlGenerator]
   }
-  @scala.inline
-  implicit class SparqlGeneratorOps[Self <: SparqlGenerator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStringify(value: SparqlQuery => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

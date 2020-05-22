@@ -19,29 +19,10 @@ trait SchemaRemixInfo extends js.Object {
 
 object SchemaRemixInfo {
   @scala.inline
-  def apply(): SchemaRemixInfo = {
+  def apply(sourceAsset: js.Array[String] = null): SchemaRemixInfo = {
     val __obj = js.Dynamic.literal()
+    if (sourceAsset != null) __obj.updateDynamic("sourceAsset")(sourceAsset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRemixInfo]
   }
-  @scala.inline
-  implicit class SchemaRemixInfoOps[Self <: SchemaRemixInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceAsset(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAsset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceAsset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAsset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

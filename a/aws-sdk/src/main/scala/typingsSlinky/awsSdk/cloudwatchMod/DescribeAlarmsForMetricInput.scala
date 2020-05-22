@@ -38,89 +38,22 @@ trait DescribeAlarmsForMetricInput extends js.Object {
 
 object DescribeAlarmsForMetricInput {
   @scala.inline
-  def apply(MetricName: MetricName, Namespace: Namespace): DescribeAlarmsForMetricInput = {
+  def apply(
+    MetricName: MetricName,
+    Namespace: Namespace,
+    Dimensions: Dimensions = null,
+    ExtendedStatistic: ExtendedStatistic = null,
+    Period: js.UndefOr[Period] = js.undefined,
+    Statistic: Statistic = null,
+    Unit: StandardUnit = null
+  ): DescribeAlarmsForMetricInput = {
     val __obj = js.Dynamic.literal(MetricName = MetricName.asInstanceOf[js.Any], Namespace = Namespace.asInstanceOf[js.Any])
+    if (Dimensions != null) __obj.updateDynamic("Dimensions")(Dimensions.asInstanceOf[js.Any])
+    if (ExtendedStatistic != null) __obj.updateDynamic("ExtendedStatistic")(ExtendedStatistic.asInstanceOf[js.Any])
+    if (!js.isUndefined(Period)) __obj.updateDynamic("Period")(Period.get.asInstanceOf[js.Any])
+    if (Statistic != null) __obj.updateDynamic("Statistic")(Statistic.asInstanceOf[js.Any])
+    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAlarmsForMetricInput]
   }
-  @scala.inline
-  implicit class DescribeAlarmsForMetricInputOps[Self <: DescribeAlarmsForMetricInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricName(value: MetricName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: Namespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: Dimensions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtendedStatistic(value: ExtendedStatistic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedStatistic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtendedStatistic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedStatistic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatistic(value: Statistic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatistic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: StandardUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

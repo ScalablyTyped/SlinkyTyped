@@ -2,23 +2,23 @@ package typingsSlinky.senchaTouch.Ext.draw
 
 import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.IBase
+import typingsSlinky.senchaTouch.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMatrix extends IBase {
   /** [Property] (Number) */
-  var a: js.UndefOr[Double] = js.native
+  var a: js.UndefOr[Double] = js.undefined
   /** [Method] Postpend a matrix onto the current
-  		* @param xx Number Coefficient from x to x.
-  		* @param xy Number Coefficient from x to y.
-  		* @param yx Number Coefficient from y to x.
-  		* @param yy Number Coefficient from y to y.
-  		* @param dx Number Offset of x.
-  		* @param dy Number Offset of y.
-  		* @returns Ext.draw.Matrix this
-  		*/
+    * @param xx Number Coefficient from x to x.
+    * @param xy Number Coefficient from x to y.
+    * @param yx Number Coefficient from y to x.
+    * @param yy Number Coefficient from y to y.
+    * @param dx Number Offset of x.
+    * @param dy Number Offset of y.
+    * @returns Ext.draw.Matrix this
+    */
   var append: js.UndefOr[
     js.Function6[
       /* xx */ js.UndefOr[Double], 
@@ -29,86 +29,86 @@ trait IMatrix extends IBase {
       /* dy */ js.UndefOr[Double], 
       this.type
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Postpend a matrix onto the current
-  		* @param matrix Ext.draw.Matrix
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var appendMatrix: js.UndefOr[js.Function1[/* matrix */ js.UndefOr[this.type], this.type]] = js.native
+    * @param matrix Ext.draw.Matrix
+    * @returns Ext.draw.Matrix this
+    */
+  var appendMatrix: js.UndefOr[js.Function1[/* matrix */ js.UndefOr[this.type], this.type]] = js.undefined
   /** [Method] Clone this matrix
-  		* @returns Ext.draw.Matrix
-  		*/
+    * @returns Ext.draw.Matrix
+    */
   @JSName("clone")
-  var clone_FIMatrix: js.UndefOr[js.Function0[this.type]] = js.native
+  var clone_FIMatrix: js.UndefOr[js.Function0[this.type]] = js.undefined
   /** [Method] Determines if this matrix has the same values as another matrix
-  		* @param matrix Ext.draw.Matrix
-  		* @returns Boolean
-  		*/
+    * @param matrix Ext.draw.Matrix
+    * @returns Boolean
+    */
   @JSName("equals")
-  var equals_FIMatrix: js.UndefOr[js.Function1[/* matrix */ js.UndefOr[this.type], Boolean]] = js.native
+  var equals_FIMatrix: js.UndefOr[js.Function1[/* matrix */ js.UndefOr[this.type], Boolean]] = js.undefined
   /** [Method] Horizontally flip the matrix
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var flipX: js.UndefOr[js.Function0[this.type]] = js.native
+    * @returns Ext.draw.Matrix this
+    */
+  var flipX: js.UndefOr[js.Function0[this.type]] = js.undefined
   /** [Method] Vertically flip the matrix
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var flipY: js.UndefOr[js.Function0[this.type]] = js.native
+    * @returns Ext.draw.Matrix this
+    */
+  var flipY: js.UndefOr[js.Function0[this.type]] = js.undefined
   /** [Method] Get offset x component of the matrix
-  		* @returns Number
-  		*/
-  var getDX: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getDX: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Get offset y component of the matrix
-  		* @returns Number
-  		*/
-  var getDY: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getDY: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Get the x scale of the matrix
-  		* @returns Number
-  		*/
-  var getScaleX: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getScaleX: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Get the y scale of the matrix
-  		* @returns Number
-  		*/
-  var getScaleY: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getScaleY: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Get x to x component of the matrix
-  		* @returns Number
-  		*/
-  var getXX: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getXX: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Get x to y component of the matrix
-  		* @returns Number
-  		*/
-  var getXY: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getXY: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Get y to x component of the matrix
-  		* @returns Number
-  		*/
-  var getYX: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getYX: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Get y to y component of the matrix
-  		* @returns Number
-  		*/
-  var getYY: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getYY: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Return a new matrix represents the opposite transformation of the current one
-  		* @param target Ext.draw.Matrix A target matrix. If present, it will receive the result of inversion to avoid creating a new object.
-  		* @returns Ext.draw.Matrix
-  		*/
-  var inverse: js.UndefOr[js.Function1[/* target */ js.UndefOr[this.type], this.type]] = js.native
+    * @param target Ext.draw.Matrix A target matrix. If present, it will receive the result of inversion to avoid creating a new object.
+    * @returns Ext.draw.Matrix
+    */
+  var inverse: js.UndefOr[js.Function1[/* target */ js.UndefOr[this.type], this.type]] = js.undefined
   /** [Method] Determines whether this matrix is an identity matrix no transform
-  		* @returns Boolean
-  		*/
-  var isIdentity: js.UndefOr[js.Function0[Boolean]] = js.native
+    * @returns Boolean
+    */
+  var isIdentity: js.UndefOr[js.Function0[Boolean]] = js.undefined
   /** [Method] Postpend a matrix onto the current
-  		* @param matrix Ext.draw.Matrix
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var multiply: js.UndefOr[js.Function1[/* matrix */ js.UndefOr[this.type], this.type]] = js.native
+    * @param matrix Ext.draw.Matrix
+    * @returns Ext.draw.Matrix this
+    */
+  var multiply: js.UndefOr[js.Function1[/* matrix */ js.UndefOr[this.type], this.type]] = js.undefined
   /** [Method] Prepend a matrix onto the current
-  		* @param xx Number Coefficient from x to x.
-  		* @param xy Number Coefficient from x to y.
-  		* @param yx Number Coefficient from y to x.
-  		* @param yy Number Coefficient from y to y.
-  		* @param dx Number Offset of x.
-  		* @param dy Number Offset of y.
-  		* @returns Ext.draw.Matrix this
-  		*/
+    * @param xx Number Coefficient from x to x.
+    * @param xy Number Coefficient from x to y.
+    * @param yx Number Coefficient from y to x.
+    * @param yy Number Coefficient from y to y.
+    * @param dx Number Offset of x.
+    * @param dy Number Offset of y.
+    * @returns Ext.draw.Matrix this
+    */
   var prepend: js.UndefOr[
     js.Function6[
       /* xx */ js.UndefOr[Double], 
@@ -119,23 +119,23 @@ trait IMatrix extends IBase {
       /* dy */ js.UndefOr[Double], 
       this.type
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Prepend a matrix onto the current
-  		* @param matrix Ext.draw.Matrix
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var prependMatrix: js.UndefOr[js.Function1[/* matrix */ js.UndefOr[this.type], this.type]] = js.native
+    * @param matrix Ext.draw.Matrix
+    * @returns Ext.draw.Matrix this
+    */
+  var prependMatrix: js.UndefOr[js.Function1[/* matrix */ js.UndefOr[this.type], this.type]] = js.undefined
   /** [Method] Reset the matrix to identical
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var reset: js.UndefOr[js.Function0[this.type]] = js.native
+    * @returns Ext.draw.Matrix this
+    */
+  var reset: js.UndefOr[js.Function0[this.type]] = js.undefined
   /** [Method] Rotate the matrix
-  		* @param angle Number Radians to rotate
-  		* @param rcx Number|null Center of rotation.
-  		* @param rcy Number|null Center of rotation.
-  		* @param prepend Boolean If true, this will transformation be prepended to the matrix.
-  		* @returns Ext.draw.Matrix this
-  		*/
+    * @param angle Number Radians to rotate
+    * @param rcx Number|null Center of rotation.
+    * @param rcy Number|null Center of rotation.
+    * @param prepend Boolean If true, this will transformation be prepended to the matrix.
+    * @returns Ext.draw.Matrix this
+    */
   var rotate: js.UndefOr[
     js.Function4[
       /* angle */ js.UndefOr[Double], 
@@ -144,13 +144,13 @@ trait IMatrix extends IBase {
       /* prepend */ js.UndefOr[Boolean], 
       this.type
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Rotate the matrix by the angle of a vector
-  		* @param x Number
-  		* @param y Number
-  		* @param prepend Boolean If true, this will transformation be prepended to the matrix.
-  		* @returns Ext.draw.Matrix this
-  		*/
+    * @param x Number
+    * @param y Number
+    * @param prepend Boolean If true, this will transformation be prepended to the matrix.
+    * @returns Ext.draw.Matrix this
+    */
   var rotateFromVector: js.UndefOr[
     js.Function3[
       /* x */ js.UndefOr[Double], 
@@ -158,15 +158,15 @@ trait IMatrix extends IBase {
       /* prepend */ js.UndefOr[Boolean], 
       this.type
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Scale the matrix
-  		* @param sx Number
-  		* @param sy Number
-  		* @param scx Number
-  		* @param scy Number
-  		* @param prepend Boolean If true, this will transformation be prepended to the matrix.
-  		* @returns Ext.draw.Matrix this
-  		*/
+    * @param sx Number
+    * @param sy Number
+    * @param scx Number
+    * @param scy Number
+    * @param prepend Boolean If true, this will transformation be prepended to the matrix.
+    * @returns Ext.draw.Matrix this
+    */
   var scale: js.UndefOr[
     js.Function5[
       /* sx */ js.UndefOr[Double], 
@@ -176,16 +176,16 @@ trait IMatrix extends IBase {
       /* prepend */ js.UndefOr[Boolean], 
       this.type
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Set the elements of a Matrix
-  		* @param xx Number
-  		* @param xy Number
-  		* @param yx Number
-  		* @param yy Number
-  		* @param dx Number
-  		* @param dy Number
-  		* @returns Ext.draw.Matrix this
-  		*/
+    * @param xx Number
+    * @param xy Number
+    * @param yx Number
+    * @param yy Number
+    * @param dx Number
+    * @param dy Number
+    * @returns Ext.draw.Matrix this
+    */
   var set: js.UndefOr[
     js.Function6[
       /* xx */ js.UndefOr[Double], 
@@ -196,49 +196,49 @@ trait IMatrix extends IBase {
       /* dy */ js.UndefOr[Double], 
       this.type
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Skew the matrix
-  		* @param angle Number
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var skewX: js.UndefOr[js.Function1[/* angle */ js.UndefOr[Double], this.type]] = js.native
+    * @param angle Number
+    * @returns Ext.draw.Matrix this
+    */
+  var skewX: js.UndefOr[js.Function1[/* angle */ js.UndefOr[Double], this.type]] = js.undefined
   /** [Method] Skew the matrix
-  		* @param angle Number
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var skewY: js.UndefOr[js.Function1[/* angle */ js.UndefOr[Double], this.type]] = js.native
+    * @param angle Number
+    * @returns Ext.draw.Matrix this
+    */
+  var skewY: js.UndefOr[js.Function1[/* angle */ js.UndefOr[Double], this.type]] = js.undefined
   /** [Method] Split matrix into Translate Scale Shear and Rotate
-  		* @returns Object
-  		*/
-  var split: js.UndefOr[js.Function0[_]] = js.native
+    * @returns Object
+    */
+  var split: js.UndefOr[js.Function0[_]] = js.undefined
   /** [Method] Create an array of elements by horizontal order xx yx dx yx yy dy
-  		* @returns Array
-  		*/
-  var toArray: js.UndefOr[js.Function0[Array]] = js.native
+    * @returns Array
+    */
+  var toArray: js.UndefOr[js.Function0[Array]] = js.undefined
   /** [Method] Apply the matrix to a drawing context
-  		* @param ctx Object
-  		* @returns Ext.draw.Matrix this
-  		*/
-  var toContext: js.UndefOr[js.Function1[/* ctx */ js.UndefOr[js.Any], this.type]] = js.native
+    * @param ctx Object
+    * @returns Ext.draw.Matrix this
+    */
+  var toContext: js.UndefOr[js.Function1[/* ctx */ js.UndefOr[js.Any], this.type]] = js.undefined
   /** [Method] Get an array of elements
-  		* @returns Array
-  		*/
+    * @returns Array
+    */
   @JSName("toString")
-  var toString_FIMatrix: js.UndefOr[js.Function0[Array]] = js.native
+  var toString_FIMatrix: js.UndefOr[js.Function0[Array]] = js.undefined
   /** [Method] Return a string that can be used as transform attribute in SVG
-  		* @returns String
-  		*/
-  var toSvg: js.UndefOr[js.Function0[String]] = js.native
+    * @returns String
+    */
+  var toSvg: js.UndefOr[js.Function0[String]] = js.undefined
   /** [Method] Create an array of elements by vertical order xx xy yx yy dx dy
-  		* @returns Array|String
-  		*/
-  var toVerticalArray: js.UndefOr[js.Function0[_]] = js.native
+    * @returns Array|String
+    */
+  var toVerticalArray: js.UndefOr[js.Function0[_]] = js.undefined
   /** [Method]
-  		* @param bbox Object Given as {x: Number, y: Number, width: Number, height: Number}.
-  		* @param radius Number
-  		* @param target Object Optional target object to recieve the result. Recommended to use it for better gc.
-  		* @returns Object Object with x, y, width and height.
-  		*/
+    * @param bbox Object Given as {x: Number, y: Number, width: Number, height: Number}.
+    * @param radius Number
+    * @param target Object Optional target object to recieve the result. Recommended to use it for better gc.
+    * @returns Object Object with x, y, width and height.
+    */
   var transformBBox: js.UndefOr[
     js.Function3[
       /* bbox */ js.UndefOr[js.Any], 
@@ -246,23 +246,23 @@ trait IMatrix extends IBase {
       /* target */ js.UndefOr[js.Any], 
       _
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Transform a list for points
-  		* @param list Array
-  		* @returns Array list
-  		*/
-  var transformList: js.UndefOr[js.Function1[/* list */ js.UndefOr[Array], Array]] = js.native
+    * @param list Array
+    * @returns Array list
+    */
+  var transformList: js.UndefOr[js.Function1[/* list */ js.UndefOr[Array], Array]] = js.undefined
   /** [Method] Transform a point to a new array
-  		* @param point Array
-  		* @returns Array
-  		*/
-  var transformPoint: js.UndefOr[js.Function1[/* point */ js.UndefOr[Array], Array]] = js.native
+    * @param point Array
+    * @returns Array
+    */
+  var transformPoint: js.UndefOr[js.Function1[/* point */ js.UndefOr[Array], Array]] = js.undefined
   /** [Method] Translate the matrix
-  		* @param x Number
-  		* @param y Number
-  		* @param prepend Boolean If true, this will transformation be prepended to the matrix.
-  		* @returns Ext.draw.Matrix this
-  		*/
+    * @param x Number
+    * @param y Number
+    * @param prepend Boolean If true, this will transformation be prepended to the matrix.
+    * @returns Ext.draw.Matrix this
+    */
   var translate: js.UndefOr[
     js.Function3[
       /* x */ js.UndefOr[Double], 
@@ -270,518 +270,139 @@ trait IMatrix extends IBase {
       /* prepend */ js.UndefOr[Boolean], 
       this.type
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Transform point returning the x component of the result
-  		* @param x Number
-  		* @param y Number
-  		* @returns Number x component of the result.
-  		*/
-  var x: js.UndefOr[js.Function2[/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Double]] = js.native
+    * @param x Number
+    * @param y Number
+    * @returns Number x component of the result.
+    */
+  var x: js.UndefOr[js.Function2[/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Double]] = js.undefined
   /** [Method] Transform point returning the y component of the result
-  		* @param x Number
-  		* @param y Number
-  		* @returns Number y component of the result.
-  		*/
-  var y: js.UndefOr[js.Function2[/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Double]] = js.native
+    * @param x Number
+    * @param y Number
+    * @returns Number y component of the result.
+    */
+  var y: js.UndefOr[js.Function2[/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Double]] = js.undefined
 }
 
 object IMatrix {
   @scala.inline
-  def apply(): IMatrix = {
+  def apply(
+    a: js.UndefOr[Double] = js.undefined,
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    append: (/* xx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => IMatrix = null,
+    appendMatrix: /* matrix */ js.UndefOr[IMatrix] => IMatrix = null,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    clone: () => IMatrix = null,
+    config: js.Any = null,
+    destroy: () => Unit = null,
+    equals: /* matrix */ js.UndefOr[IMatrix] => Boolean = null,
+    extend: String = null,
+    flipX: () => IMatrix = null,
+    flipY: () => IMatrix = null,
+    getDX: () => Double = null,
+    getDY: () => Double = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    getScaleX: () => Double = null,
+    getScaleY: () => Double = null,
+    getXX: () => Double = null,
+    getXY: () => Double = null,
+    getYX: () => Double = null,
+    getYY: () => Double = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
+    inverse: /* target */ js.UndefOr[IMatrix] => IMatrix = null,
+    isIdentity: () => Boolean = null,
+    mixins: js.Any = null,
+    multiply: /* matrix */ js.UndefOr[IMatrix] => IMatrix = null,
+    platformConfig: js.Any = null,
+    prepend: (/* xx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => IMatrix = null,
+    prependMatrix: /* matrix */ js.UndefOr[IMatrix] => IMatrix = null,
+    reset: () => IMatrix = null,
+    rotate: (/* angle */ js.UndefOr[Double], /* rcx */ js.UndefOr[js.Any], /* rcy */ js.UndefOr[js.Any], /* prepend */ js.UndefOr[Boolean]) => IMatrix = null,
+    rotateFromVector: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* prepend */ js.UndefOr[Boolean]) => IMatrix = null,
+    scale: (/* sx */ js.UndefOr[Double], /* sy */ js.UndefOr[Double], /* scx */ js.UndefOr[Double], /* scy */ js.UndefOr[Double], /* prepend */ js.UndefOr[Boolean]) => IMatrix = null,
+    self: IClass = null,
+    set: (/* xx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => IMatrix = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    skewX: /* angle */ js.UndefOr[Double] => IMatrix = null,
+    skewY: /* angle */ js.UndefOr[Double] => IMatrix = null,
+    split: () => _ = null,
+    statics: js.Any = null,
+    toArray: () => Array = null,
+    toContext: /* ctx */ js.UndefOr[js.Any] => IMatrix = null,
+    toString: () => Array = null,
+    toSvg: () => String = null,
+    toVerticalArray: () => _ = null,
+    transformBBox: (/* bbox */ js.UndefOr[js.Any], /* radius */ js.UndefOr[Double], /* target */ js.UndefOr[js.Any]) => _ = null,
+    transformList: /* list */ js.UndefOr[Array] => Array = null,
+    transformPoint: /* point */ js.UndefOr[Array] => Array = null,
+    translate: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* prepend */ js.UndefOr[Boolean]) => IMatrix = null,
+    uses: Array = null,
+    x: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Double = null,
+    y: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Double = null
+  ): IMatrix = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(a)) __obj.updateDynamic("a")(a.get.asInstanceOf[js.Any])
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (append != null) __obj.updateDynamic("append")(js.Any.fromFunction6(append))
+    if (appendMatrix != null) __obj.updateDynamic("appendMatrix")(js.Any.fromFunction1(appendMatrix))
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (clone != null) __obj.updateDynamic("clone")(js.Any.fromFunction0(clone))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
+    if (equals != null) __obj.updateDynamic("equals")(js.Any.fromFunction1(equals))
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (flipX != null) __obj.updateDynamic("flipX")(js.Any.fromFunction0(flipX))
+    if (flipY != null) __obj.updateDynamic("flipY")(js.Any.fromFunction0(flipY))
+    if (getDX != null) __obj.updateDynamic("getDX")(js.Any.fromFunction0(getDX))
+    if (getDY != null) __obj.updateDynamic("getDY")(js.Any.fromFunction0(getDY))
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (getScaleX != null) __obj.updateDynamic("getScaleX")(js.Any.fromFunction0(getScaleX))
+    if (getScaleY != null) __obj.updateDynamic("getScaleY")(js.Any.fromFunction0(getScaleY))
+    if (getXX != null) __obj.updateDynamic("getXX")(js.Any.fromFunction0(getXX))
+    if (getXY != null) __obj.updateDynamic("getXY")(js.Any.fromFunction0(getXY))
+    if (getYX != null) __obj.updateDynamic("getYX")(js.Any.fromFunction0(getYX))
+    if (getYY != null) __obj.updateDynamic("getYY")(js.Any.fromFunction0(getYY))
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (inverse != null) __obj.updateDynamic("inverse")(js.Any.fromFunction1(inverse))
+    if (isIdentity != null) __obj.updateDynamic("isIdentity")(js.Any.fromFunction0(isIdentity))
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (multiply != null) __obj.updateDynamic("multiply")(js.Any.fromFunction1(multiply))
+    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
+    if (prepend != null) __obj.updateDynamic("prepend")(js.Any.fromFunction6(prepend))
+    if (prependMatrix != null) __obj.updateDynamic("prependMatrix")(js.Any.fromFunction1(prependMatrix))
+    if (reset != null) __obj.updateDynamic("reset")(js.Any.fromFunction0(reset))
+    if (rotate != null) __obj.updateDynamic("rotate")(js.Any.fromFunction4(rotate))
+    if (rotateFromVector != null) __obj.updateDynamic("rotateFromVector")(js.Any.fromFunction3(rotateFromVector))
+    if (scale != null) __obj.updateDynamic("scale")(js.Any.fromFunction5(scale))
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (set != null) __obj.updateDynamic("set")(js.Any.fromFunction6(set))
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (skewX != null) __obj.updateDynamic("skewX")(js.Any.fromFunction1(skewX))
+    if (skewY != null) __obj.updateDynamic("skewY")(js.Any.fromFunction1(skewY))
+    if (split != null) __obj.updateDynamic("split")(js.Any.fromFunction0(split))
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (toArray != null) __obj.updateDynamic("toArray")(js.Any.fromFunction0(toArray))
+    if (toContext != null) __obj.updateDynamic("toContext")(js.Any.fromFunction1(toContext))
+    if (toString != null) __obj.updateDynamic("toString")(js.Any.fromFunction0(toString))
+    if (toSvg != null) __obj.updateDynamic("toSvg")(js.Any.fromFunction0(toSvg))
+    if (toVerticalArray != null) __obj.updateDynamic("toVerticalArray")(js.Any.fromFunction0(toVerticalArray))
+    if (transformBBox != null) __obj.updateDynamic("transformBBox")(js.Any.fromFunction3(transformBBox))
+    if (transformList != null) __obj.updateDynamic("transformList")(js.Any.fromFunction1(transformList))
+    if (transformPoint != null) __obj.updateDynamic("transformPoint")(js.Any.fromFunction1(transformPoint))
+    if (translate != null) __obj.updateDynamic("translate")(js.Any.fromFunction3(translate))
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
+    if (x != null) __obj.updateDynamic("x")(js.Any.fromFunction2(x))
+    if (y != null) __obj.updateDynamic("y")(js.Any.fromFunction2(y))
     __obj.asInstanceOf[IMatrix]
   }
-  @scala.inline
-  implicit class IMatrixOps[Self <: IMatrix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppend(
-      value: (/* xx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => IMatrix
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withoutAppend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppendMatrix(value: /* matrix */ js.UndefOr[IMatrix] => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendMatrix")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAppendMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClone(value: () => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clone")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutClone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEquals(value: /* matrix */ js.UndefOr[IMatrix] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlipX(value: () => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipX")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFlipX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlipY(value: () => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFlipY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetDX(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDX")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetDX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetDY(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetDY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetScaleX(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaleX")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetScaleX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaleX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetScaleY(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaleY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetScaleY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaleY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetXX(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getXX")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetXX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getXX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetXY(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getXY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetXY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getXY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetYX(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYX")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetYX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetYY(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetYY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverse(value: /* target */ js.UndefOr[IMatrix] => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsIdentity(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIdentity")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIdentity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiply(value: /* matrix */ js.UndefOr[IMatrix] => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiply")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMultiply: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiply")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrepend(
-      value: (/* xx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => IMatrix
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepend")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrepend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrependMatrix(value: /* matrix */ js.UndefOr[IMatrix] => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prependMatrix")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrependMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prependMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReset(value: () => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotate(
-      value: (/* angle */ js.UndefOr[Double], /* rcx */ js.UndefOr[js.Any], /* rcy */ js.UndefOr[js.Any], /* prepend */ js.UndefOr[Boolean]) => IMatrix
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotateFromVector(
-      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* prepend */ js.UndefOr[Boolean]) => IMatrix
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateFromVector")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutRotateFromVector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateFromVector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(
-      value: (/* sx */ js.UndefOr[Double], /* sy */ js.UndefOr[Double], /* scx */ js.UndefOr[Double], /* scy */ js.UndefOr[Double], /* prepend */ js.UndefOr[Boolean]) => IMatrix
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSet(
-      value: (/* xx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => IMatrix
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withoutSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkewX(value: /* angle */ js.UndefOr[Double] => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewX")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSkewX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkewY(value: /* angle */ js.UndefOr[Double] => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewY")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSkewY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSplit(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("split")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSplit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("split")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToArray(value: () => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toArray")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutToArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toArray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToContext(value: /* ctx */ js.UndefOr[js.Any] => IMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toContext")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutToContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToString(value: () => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutToString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToSvg(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toSvg")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutToSvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toSvg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToVerticalArray(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toVerticalArray")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutToVerticalArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toVerticalArray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformBBox(
-      value: (/* bbox */ js.UndefOr[js.Any], /* radius */ js.UndefOr[Double], /* target */ js.UndefOr[js.Any]) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformBBox")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransformBBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformBBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformList(value: /* list */ js.UndefOr[Array] => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransformList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformPoint(value: /* point */ js.UndefOr[Array] => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPoint")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransformPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslate(
-      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* prepend */ js.UndefOr[Boolean]) => IMatrix
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutTranslate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

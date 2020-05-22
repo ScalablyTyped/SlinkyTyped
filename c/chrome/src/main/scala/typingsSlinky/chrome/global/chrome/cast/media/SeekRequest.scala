@@ -11,5 +11,12 @@ import scala.scalajs.js.annotation._
   * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.media.SeekRequest
   */
 class SeekRequest ()
-  extends typingsSlinky.chrome.chrome.cast.media.SeekRequest
+  extends typingsSlinky.chrome.chrome.cast.media.SeekRequest {
+  /* CompleteClass */
+  override var currentTime: Double = js.native
+  /* CompleteClass */
+  override var customData: js.Object = js.native
+  /* CompleteClass */
+  override var resumeState: typingsSlinky.chrome.chrome.cast.media.ResumeState = js.native
+}
 

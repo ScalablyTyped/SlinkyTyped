@@ -1,8 +1,10 @@
 package typingsSlinky.expressValidator
 
 import typingsSlinky.expressValidator.baseMod.CustomSanitizer
+import typingsSlinky.expressValidator.baseMod.Meta
 import typingsSlinky.expressValidator.baseMod.StandardSanitizer
 import typingsSlinky.expressValidator.contextItemMod.ContextItem
+import typingsSlinky.expressValidator.contextMod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +19,8 @@ object sanitizationMod extends js.Object {
     val custom: js.Any = js.native
     val options: js.Any = js.native
     val sanitizer: js.Any = js.native
+    /* CompleteClass */
+    override def run(context: Context, value: js.Any, meta: Meta): js.Promise[Unit] = js.native
   }
   
 }

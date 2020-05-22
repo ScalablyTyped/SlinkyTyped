@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@js.native
 trait TableDeletedEventArgs extends js.Object {
   /**
     *
@@ -21,35 +20,35 @@ trait TableDeletedEventArgs extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var source: EventSource | Local | Remote = js.native
+  var source: EventSource | Local | Remote
   /**
     *
     * Gets the id of the table that is deleted.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var tableId: String = js.native
+  var tableId: String
   /**
     *
     * Gets the name of the table that is deleted.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var tableName: String = js.native
+  var tableName: String
   /**
     *
     * Gets the type of the event. See Excel.EventType for details.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var `type`: TableDeleted = js.native
+  var `type`: TableDeleted
   /**
     *
     * Gets the id of the worksheet in which the table is deleted.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var worksheetId: String = js.native
+  var worksheetId: String
 }
 
 object TableDeletedEventArgs {
@@ -65,43 +64,5 @@ object TableDeletedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableDeletedEventArgs]
   }
-  @scala.inline
-  implicit class TableDeletedEventArgsOps[Self <: TableDeletedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: EventSource | Local | Remote): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TableDeleted): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorksheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

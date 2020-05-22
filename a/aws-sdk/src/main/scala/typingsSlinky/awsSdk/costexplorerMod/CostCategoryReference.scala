@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CostCategoryReference extends js.Object {
   /**
-    *  The unique identifier for your Cost Category Reference. 
+    *  The unique identifier for your Cost Category. 
     */
   var CostCategoryArn: js.UndefOr[Arn] = js.native
   /**
@@ -19,69 +19,28 @@ trait CostCategoryReference extends js.Object {
     */
   var EffectiveStart: js.UndefOr[ZonedDateTime] = js.native
   var Name: js.UndefOr[CostCategoryName] = js.native
+  /**
+    *  The number of rules associated with a specific Cost Category. 
+    */
+  var NumberOfRules: js.UndefOr[NonNegativeInteger] = js.native
 }
 
 object CostCategoryReference {
   @scala.inline
-  def apply(): CostCategoryReference = {
+  def apply(
+    CostCategoryArn: Arn = null,
+    EffectiveEnd: ZonedDateTime = null,
+    EffectiveStart: ZonedDateTime = null,
+    Name: CostCategoryName = null,
+    NumberOfRules: js.UndefOr[NonNegativeInteger] = js.undefined
+  ): CostCategoryReference = {
     val __obj = js.Dynamic.literal()
+    if (CostCategoryArn != null) __obj.updateDynamic("CostCategoryArn")(CostCategoryArn.asInstanceOf[js.Any])
+    if (EffectiveEnd != null) __obj.updateDynamic("EffectiveEnd")(EffectiveEnd.asInstanceOf[js.Any])
+    if (EffectiveStart != null) __obj.updateDynamic("EffectiveStart")(EffectiveStart.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfRules)) __obj.updateDynamic("NumberOfRules")(NumberOfRules.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CostCategoryReference]
   }
-  @scala.inline
-  implicit class CostCategoryReferenceOps[Self <: CostCategoryReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCostCategoryArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostCategoryArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCostCategoryArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostCategoryArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectiveEnd(value: ZonedDateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectiveEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectiveEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectiveEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectiveStart(value: ZonedDateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectiveStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectiveStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectiveStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: CostCategoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HTMLCollection extends HTMLCollectionBase {
   /**
-  		 * Retrieves a select object or an object from an options collection.
-  		 */
+    * Retrieves a select object or an object from an options collection.
+    */
   def namedItem(name: String): Element | (Entity[ObjectMap[Component[_, System[_]]]]) | Null = js.native
 }
 

@@ -9,7 +9,7 @@ import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentC
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationProps
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -44,7 +44,7 @@ object DocumentCardLocationBase {
     @scala.inline
     def onClick(value: /* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def stylesFunction1(value: IDocumentCardLocationStyleProps => Partial[IDocumentCardLocationStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDocumentCardLocationStyleProps => DeepPartial[IDocumentCardLocationStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardLocationStyleProps, IDocumentCardLocationStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

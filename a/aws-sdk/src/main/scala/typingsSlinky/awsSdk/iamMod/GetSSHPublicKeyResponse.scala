@@ -14,29 +14,10 @@ trait GetSSHPublicKeyResponse extends js.Object {
 
 object GetSSHPublicKeyResponse {
   @scala.inline
-  def apply(): GetSSHPublicKeyResponse = {
+  def apply(SSHPublicKey: SSHPublicKey = null): GetSSHPublicKeyResponse = {
     val __obj = js.Dynamic.literal()
+    if (SSHPublicKey != null) __obj.updateDynamic("SSHPublicKey")(SSHPublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSSHPublicKeyResponse]
   }
-  @scala.inline
-  implicit class GetSSHPublicKeyResponseOps[Self <: GetSSHPublicKeyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSSHPublicKey(value: SSHPublicKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSHPublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSHPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSHPublicKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

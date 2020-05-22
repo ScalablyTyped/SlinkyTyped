@@ -14,6 +14,7 @@ package object relayStoreTypesMod {
   type FragmentSpecResults = org.scalablytyped.runtime.StringDictionary[js.Any]
   type LogFunction = js.Function1[/* logEvent */ typingsSlinky.relayRuntime.relayStoreTypesMod.LogEvent, scala.Unit]
   type OperationTracker = typingsSlinky.relayRuntime.relayOperationTrackerMod.RelayOperationTracker
+  type Primitive = js.UndefOr[java.lang.String | scala.Double | scala.Boolean | scala.Null]
   type Props = org.scalablytyped.runtime.StringDictionary[js.Any]
   type Record = org.scalablytyped.runtime.StringDictionary[js.Any]
   type RecordMap = // theoretically, this should be `[dataID: DataID]`, but `DataID` is a string.

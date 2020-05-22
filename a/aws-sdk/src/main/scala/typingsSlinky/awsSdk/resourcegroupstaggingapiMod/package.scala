@@ -8,10 +8,23 @@ package object resourcegroupstaggingapiMod {
   type AmazonResourceType = java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.resourcegroupstaggingapiMod.ClientApiVersions
   type ComplianceStatus = scala.Boolean
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.InternalServiceException
+    - typingsSlinky.awsSdk.awsSdkStrings.InvalidParameterException
+    - java.lang.String
+  */
+  type ErrorCode = typingsSlinky.awsSdk.resourcegroupstaggingapiMod._ErrorCode | java.lang.String
   type ErrorMessage = java.lang.String
   type ExcludeCompliantResources = scala.Boolean
   type FailedResourcesMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.resourcegroupstaggingapiMod.FailureInfo]
   type GroupBy = js.Array[typingsSlinky.awsSdk.resourcegroupstaggingapiMod.GroupByAttribute]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.TARGET_ID
+    - typingsSlinky.awsSdk.awsSdkStrings.REGION
+    - typingsSlinky.awsSdk.awsSdkStrings.RESOURCE_TYPE
+    - java.lang.String
+  */
+  type GroupByAttribute = typingsSlinky.awsSdk.resourcegroupstaggingapiMod._GroupByAttribute | java.lang.String
   type IncludeComplianceDetails = scala.Boolean
   type LastUpdated = java.lang.String
   type MaxResultsGetComplianceSummary = scala.Double
@@ -42,4 +55,17 @@ package object resourcegroupstaggingapiMod {
   type TagsPerPage = scala.Double
   type TargetId = java.lang.String
   type TargetIdFilterList = js.Array[typingsSlinky.awsSdk.resourcegroupstaggingapiMod.TargetId]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACCOUNT
+    - typingsSlinky.awsSdk.awsSdkStrings.OU
+    - typingsSlinky.awsSdk.awsSdkStrings.ROOT
+    - java.lang.String
+  */
+  type TargetIdType = typingsSlinky.awsSdk.resourcegroupstaggingapiMod._TargetIdType | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2017-01-26`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.resourcegroupstaggingapiMod._apiVersion | java.lang.String
 }

@@ -14,29 +14,10 @@ trait DeregisterTransitGatewayMulticastGroupSourcesResult extends js.Object {
 
 object DeregisterTransitGatewayMulticastGroupSourcesResult {
   @scala.inline
-  def apply(): DeregisterTransitGatewayMulticastGroupSourcesResult = {
+  def apply(DeregisteredMulticastGroupSources: TransitGatewayMulticastDeregisteredGroupSources = null): DeregisterTransitGatewayMulticastGroupSourcesResult = {
     val __obj = js.Dynamic.literal()
+    if (DeregisteredMulticastGroupSources != null) __obj.updateDynamic("DeregisteredMulticastGroupSources")(DeregisteredMulticastGroupSources.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeregisterTransitGatewayMulticastGroupSourcesResult]
   }
-  @scala.inline
-  implicit class DeregisterTransitGatewayMulticastGroupSourcesResultOps[Self <: DeregisterTransitGatewayMulticastGroupSourcesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeregisteredMulticastGroupSources(value: TransitGatewayMulticastDeregisteredGroupSources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeregisteredMulticastGroupSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeregisteredMulticastGroupSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeregisteredMulticastGroupSources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,65 +26,18 @@ trait LocalGatewayVirtualInterfaceGroup extends js.Object {
 
 object LocalGatewayVirtualInterfaceGroup {
   @scala.inline
-  def apply(): LocalGatewayVirtualInterfaceGroup = {
+  def apply(
+    LocalGatewayId: String = null,
+    LocalGatewayVirtualInterfaceGroupId: LocalGatewayVirtualInterfaceGroupId = null,
+    LocalGatewayVirtualInterfaceIds: LocalGatewayVirtualInterfaceIdSet = null,
+    Tags: TagList = null
+  ): LocalGatewayVirtualInterfaceGroup = {
     val __obj = js.Dynamic.literal()
+    if (LocalGatewayId != null) __obj.updateDynamic("LocalGatewayId")(LocalGatewayId.asInstanceOf[js.Any])
+    if (LocalGatewayVirtualInterfaceGroupId != null) __obj.updateDynamic("LocalGatewayVirtualInterfaceGroupId")(LocalGatewayVirtualInterfaceGroupId.asInstanceOf[js.Any])
+    if (LocalGatewayVirtualInterfaceIds != null) __obj.updateDynamic("LocalGatewayVirtualInterfaceIds")(LocalGatewayVirtualInterfaceIds.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalGatewayVirtualInterfaceGroup]
   }
-  @scala.inline
-  implicit class LocalGatewayVirtualInterfaceGroupOps[Self <: LocalGatewayVirtualInterfaceGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocalGatewayId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalGatewayVirtualInterfaceGroupId(value: LocalGatewayVirtualInterfaceGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayVirtualInterfaceGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalGatewayVirtualInterfaceGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayVirtualInterfaceGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalGatewayVirtualInterfaceIds(value: LocalGatewayVirtualInterfaceIdSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayVirtualInterfaceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalGatewayVirtualInterfaceIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayVirtualInterfaceIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -2,21 +2,21 @@ package typingsSlinky.fixedDataTable2.mod
 
 import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import slinky.core.facade.ReactElement
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.auto
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.hidden
 import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableProps extends ClassAttributes[Table] {
   /**
     * The number of rows outside the viewport to prerender. Defaults to roughly
     * half of the number of visible rows.
     */
-  var bufferRowCount: js.UndefOr[Double] = js.native
+  var bufferRowCount: js.UndefOr[Double] = js.undefined
   /**
     * Pixel height of fixedDataTableCellGroupLayout/cellGroupWrapper.
     * Default is headerHeight and groupHeaderHeight.
@@ -35,49 +35,49 @@ trait TableProps extends ClassAttributes[Table] {
     *  - CellLayout/main needs overflow-y: visible
     *  - cellGroup needs overflow: visible
     */
-  var cellGroupWrapperHeight: js.UndefOr[Double] = js.native
+  var cellGroupWrapperHeight: js.UndefOr[Double] = js.undefined
   /**
     * Class name to be passed into parent container
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * Pixel height of footer.
     */
-  var footerHeight: js.UndefOr[Double] = js.native
+  var footerHeight: js.UndefOr[Double] = js.undefined
   /**
     * Pixel height of the column group header.
     */
-  var groupHeaderHeight: js.UndefOr[Double] = js.native
+  var groupHeaderHeight: js.UndefOr[Double] = js.undefined
   /**
     * Pixel height of header.
     */
-  var headerHeight: Double = js.native
+  var headerHeight: Double
   /**
     * Pixel height of table. If all rows do not fit,
     * a vertical scrollbar will appear.
     *
     * Either `height` or `maxHeight` must be specified.
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * Whether columns are currently being reordered.
     */
-  var isColumnReordering: js.UndefOr[Boolean] = js.native
+  var isColumnReordering: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether a column is currently being resized.
     */
-  var isColumnResizing: js.UndefOr[Boolean] = js.native
+  var isColumnResizing: js.UndefOr[Boolean] = js.undefined
   /** Boolean flags to control if scrolling with keys is enabled */
-  var keyboardPageEnabled: js.UndefOr[Boolean] = js.native
+  var keyboardPageEnabled: js.UndefOr[Boolean] = js.undefined
   /** Boolean flags to control if scrolling with keys is enabled */
-  var keyboardScrollEnabled: js.UndefOr[Boolean] = js.native
+  var keyboardScrollEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Maximum pixel height of table. If all rows do not fit,
     * a vertical scrollbar will appear.
     *
     * Either `height` or `maxHeight` must be specified.
     */
-  var maxHeight: js.UndefOr[Double] = js.native
+  var maxHeight: js.UndefOr[Double] = js.undefined
   /**
     * Callback that is called when reordering has been completed
     * and columns need to be updated.
@@ -92,7 +92,7 @@ trait TableProps extends ClassAttributes[Table] {
     * )
     * ```
     */
-  var onColumnReorderEndCallback: js.UndefOr[js.Function1[/* event */ ColumnReorderEndEvent, Unit]] = js.native
+  var onColumnReorderEndCallback: js.UndefOr[js.Function1[/* event */ ColumnReorderEndEvent, Unit]] = js.undefined
   /**
     * Callback that is called when resizer has been released
     * and column needs to be updated.
@@ -106,73 +106,73 @@ trait TableProps extends ClassAttributes[Table] {
     * )
     * ```
     */
-  var onColumnResizeEndCallback: js.UndefOr[js.Function2[/* newColumnWidth */ Double, /* columnKey */ String, Unit]] = js.native
+  var onColumnResizeEndCallback: js.UndefOr[js.Function2[/* newColumnWidth */ Double, /* columnKey */ String, Unit]] = js.undefined
   /**
     * Callback that is called when `rowHeightGetter` returns a different height
     * for a row than the `rowHeight` prop. This is necessary because initially
     * table estimates heights of some parts of the content.
     */
-  var onContentHeightChange: js.UndefOr[js.Function1[/* newHeight */ Double, Unit]] = js.native
+  var onContentHeightChange: js.UndefOr[js.Function1[/* newHeight */ Double, Unit]] = js.undefined
   /**
     * Callback when horizontally scrolling the grid.
     *
     * Return false to stop propagation.
     */
-  var onHorizontalScroll: js.UndefOr[js.Function1[/* scrollPos */ Double, Boolean]] = js.native
+  var onHorizontalScroll: js.UndefOr[js.Function1[/* scrollPos */ Double, Boolean]] = js.undefined
   /**
     * Callback that is called when a row is clicked.
     */
-  var onRowClick: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowClick: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when a row is double clicked.
     */
-  var onRowDoubleClick: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowDoubleClick: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when a mouse-down event happens on a row.
     */
-  var onRowMouseDown: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowMouseDown: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when a mouse-enter event happens on a row.
     */
-  var onRowMouseEnter: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowMouseEnter: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when a mouse-leave event happens on a row.
     */
-  var onRowMouseLeave: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowMouseLeave: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when a mouse-up event happens on a row.
     */
-  var onRowMouseUp: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowMouseUp: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when a touch-end event happens on a row.
     */
-  var onRowTouchEnd: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowTouchEnd: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when a touch-move event happens on a row.
     */
-  var onRowTouchMove: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowTouchMove: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when a touch-start event happens on a row.
     */
-  var onRowTouchStart: js.UndefOr[TableRowEventHandler] = js.native
+  var onRowTouchStart: js.UndefOr[TableRowEventHandler] = js.undefined
   /**
     * Callback that is called when scrolling ends or stops with new horizontal
     * and vertical scroll values.
     */
-  var onScrollEnd: js.UndefOr[js.Function2[/* x */ Double, /* y */ Double, Unit]] = js.native
+  var onScrollEnd: js.UndefOr[js.Function2[/* x */ Double, /* y */ Double, Unit]] = js.undefined
   /**
     * Callback that is called when scrolling starts with current horizontal
     * and vertical scroll values.
     */
-  var onScrollStart: js.UndefOr[js.Function2[/* x */ Double, /* y */ Double, Unit]] = js.native
+  var onScrollStart: js.UndefOr[js.Function2[/* x */ Double, /* y */ Double, Unit]] = js.undefined
   /**
     * Callback when vertically scrolling the grid.
     *
     * Return false to stop propagation.
     */
-  var onVerticalScroll: js.UndefOr[js.Function1[/* scrollPos */ Double, Boolean]] = js.native
-  var overflowX: js.UndefOr[hidden | auto] = js.native
-  var overflowY: js.UndefOr[hidden | auto] = js.native
+  var onVerticalScroll: js.UndefOr[js.Function1[/* scrollPos */ Double, Boolean]] = js.undefined
+  var overflowX: js.UndefOr[hidden | auto] = js.undefined
+  var overflowY: js.UndefOr[hidden | auto] = js.undefined
   /**
     * Pixel height of table's owner, this is used in a managed scrolling
     * situation when you want to slide the table up from below the fold
@@ -186,12 +186,12 @@ trait TableProps extends ClassAttributes[Table] {
     *
     * This is used if `ownerHeight < height` (or `maxHeight`).
     */
-  var ownerHeight: js.UndefOr[Double] = js.native
+  var ownerHeight: js.UndefOr[Double] = js.undefined
   /**
     * To get any additional CSS classes that should be added to a row,
     * `rowClassNameGetter(index)` is called.
     */
-  var rowClassNameGetter: js.UndefOr[js.Function1[/* index */ Double, String]] = js.native
+  var rowClassNameGetter: js.UndefOr[js.Function1[/* index */ Double, String]] = js.undefined
   /**
     * The row expanded for table row.
     * This can either be a React element, or a function that generates
@@ -212,649 +212,174 @@ trait TableProps extends ClassAttributes[Table] {
     * If you pass in a function, you will receive the same props object as the
     * first argument.
     */
-  var rowExpanded: js.UndefOr[ElementOrFunc[RowProps]] = js.native
+  var rowExpanded: js.UndefOr[ElementOrFunc[RowProps]] = js.undefined
   /**
     * Pixel height of rows unless `rowHeightGetter` is specified and returns
     * different value.
     */
-  var rowHeight: Double = js.native
+  var rowHeight: Double
   /**
     * If specified, `rowHeightGetter(index)` is called for each row and the
     * returned value overrides `rowHeight` for particular row.
     */
-  var rowHeightGetter: js.UndefOr[js.Function1[/* index */ Double, Double]] = js.native
+  var rowHeightGetter: js.UndefOr[js.Function1[/* index */ Double, Double]] = js.undefined
   /**
     * If specified, `rowKeyGetter(index)` is called for each row and the
     * returned value overrides `key` for the particular row.
     */
-  var rowKeyGetter: js.UndefOr[js.Function1[/* index */ Double, String]] = js.native
+  var rowKeyGetter: js.UndefOr[js.Function1[/* index */ Double, String]] = js.undefined
   /**
     * Number of rows in the table.
     */
-  var rowsCount: Double = js.native
+  var rowsCount: Double
   /**
     * Value of horizontal scroll.
     */
-  var scrollLeft: js.UndefOr[Double] = js.native
+  var scrollLeft: js.UndefOr[Double] = js.undefined
   /**
     * Index of column to scroll to.
     */
-  var scrollToColumn: js.UndefOr[Double] = js.native
+  var scrollToColumn: js.UndefOr[Double] = js.undefined
   /**
     * Index of row to scroll to.
     */
-  var scrollToRow: js.UndefOr[Double] = js.native
+  var scrollToRow: js.UndefOr[Double] = js.undefined
   /**
     * Value of vertical scroll.
     */
-  var scrollTop: js.UndefOr[Double] = js.native
+  var scrollTop: js.UndefOr[Double] = js.undefined
   /** Hide the scrollbar but still enable scroll functionality */
-  var showScrollbarX: js.UndefOr[Boolean] = js.native
+  var showScrollbarX: js.UndefOr[Boolean] = js.undefined
   /** Hide the scrollbar but still enable scroll functionality */
-  var showScrollbarY: js.UndefOr[Boolean] = js.native
+  var showScrollbarY: js.UndefOr[Boolean] = js.undefined
   /**
     * If enabled scroll events will not be propagated outside of the table.
     */
-  var stopScrollPropagation: js.UndefOr[Boolean] = js.native
+  var stopScrollPropagation: js.UndefOr[Boolean] = js.undefined
   /**
     * Pixel height of sub-row unless `subRowHeightGetter` is specified and returns
     * different value.  Defaults to 0 and no sub-row being displayed.
     */
-  var subRowHeight: js.UndefOr[Double] = js.native
+  var subRowHeight: js.UndefOr[Double] = js.undefined
   /**
     * If specified, `subRowHeightGetter(index)` is called for each row and the
     * returned value overrides `subRowHeight` for particular row.
     */
-  var subRowHeightGetter: js.UndefOr[js.Function1[/* index */ Double, Double]] = js.native
+  var subRowHeightGetter: js.UndefOr[js.Function1[/* index */ Double, Double]] = js.undefined
   /**
     * Boolean flag indicating of touch scrolling should be enabled
     * This feature is current in beta and may have bugs
     */
-  var touchScrollEnabled: js.UndefOr[Boolean] = js.native
+  var touchScrollEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Pixel width of table. If all columns do not fit,
     * a horizontal scrollbar will appear.
     */
-  var width: Double = js.native
+  var width: Double
 }
 
 object TableProps {
   @scala.inline
-  def apply(headerHeight: Double, rowHeight: Double, rowsCount: Double, width: Double): TableProps = {
+  def apply(
+    headerHeight: Double,
+    rowHeight: Double,
+    rowsCount: Double,
+    width: Double,
+    bufferRowCount: js.UndefOr[Double] = js.undefined,
+    cellGroupWrapperHeight: js.UndefOr[Double] = js.undefined,
+    className: String = null,
+    footerHeight: js.UndefOr[Double] = js.undefined,
+    groupHeaderHeight: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    isColumnReordering: js.UndefOr[Boolean] = js.undefined,
+    isColumnResizing: js.UndefOr[Boolean] = js.undefined,
+    key: Key = null,
+    keyboardPageEnabled: js.UndefOr[Boolean] = js.undefined,
+    keyboardScrollEnabled: js.UndefOr[Boolean] = js.undefined,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    onColumnReorderEndCallback: /* event */ ColumnReorderEndEvent => Unit = null,
+    onColumnResizeEndCallback: (/* newColumnWidth */ Double, /* columnKey */ String) => Unit = null,
+    onContentHeightChange: /* newHeight */ Double => Unit = null,
+    onHorizontalScroll: /* scrollPos */ Double => Boolean = null,
+    onRowClick: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onRowDoubleClick: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onRowMouseDown: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onRowMouseEnter: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onRowMouseLeave: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onRowMouseUp: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onRowTouchEnd: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onRowTouchMove: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onRowTouchStart: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit = null,
+    onScrollEnd: (/* x */ Double, /* y */ Double) => Unit = null,
+    onScrollStart: (/* x */ Double, /* y */ Double) => Unit = null,
+    onVerticalScroll: /* scrollPos */ Double => Boolean = null,
+    overflowX: hidden | auto = null,
+    overflowY: hidden | auto = null,
+    ownerHeight: js.UndefOr[Double] = js.undefined,
+    ref: js.UndefOr[Null | LegacyRef[Table]] = js.undefined,
+    rowClassNameGetter: /* index */ Double => String = null,
+    rowExpanded: ElementOrFunc[RowProps] = null,
+    rowHeightGetter: /* index */ Double => Double = null,
+    rowKeyGetter: /* index */ Double => String = null,
+    scrollLeft: js.UndefOr[Double] = js.undefined,
+    scrollToColumn: js.UndefOr[Double] = js.undefined,
+    scrollToRow: js.UndefOr[Double] = js.undefined,
+    scrollTop: js.UndefOr[Double] = js.undefined,
+    showScrollbarX: js.UndefOr[Boolean] = js.undefined,
+    showScrollbarY: js.UndefOr[Boolean] = js.undefined,
+    stopScrollPropagation: js.UndefOr[Boolean] = js.undefined,
+    subRowHeight: js.UndefOr[Double] = js.undefined,
+    subRowHeightGetter: /* index */ Double => Double = null,
+    touchScrollEnabled: js.UndefOr[Boolean] = js.undefined
+  ): TableProps = {
     val __obj = js.Dynamic.literal(headerHeight = headerHeight.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], rowsCount = rowsCount.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    if (!js.isUndefined(bufferRowCount)) __obj.updateDynamic("bufferRowCount")(bufferRowCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellGroupWrapperHeight)) __obj.updateDynamic("cellGroupWrapperHeight")(cellGroupWrapperHeight.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(footerHeight)) __obj.updateDynamic("footerHeight")(footerHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupHeaderHeight)) __obj.updateDynamic("groupHeaderHeight")(groupHeaderHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isColumnReordering)) __obj.updateDynamic("isColumnReordering")(isColumnReordering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isColumnResizing)) __obj.updateDynamic("isColumnResizing")(isColumnResizing.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboardPageEnabled)) __obj.updateDynamic("keyboardPageEnabled")(keyboardPageEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboardScrollEnabled)) __obj.updateDynamic("keyboardScrollEnabled")(keyboardScrollEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (onColumnReorderEndCallback != null) __obj.updateDynamic("onColumnReorderEndCallback")(js.Any.fromFunction1(onColumnReorderEndCallback))
+    if (onColumnResizeEndCallback != null) __obj.updateDynamic("onColumnResizeEndCallback")(js.Any.fromFunction2(onColumnResizeEndCallback))
+    if (onContentHeightChange != null) __obj.updateDynamic("onContentHeightChange")(js.Any.fromFunction1(onContentHeightChange))
+    if (onHorizontalScroll != null) __obj.updateDynamic("onHorizontalScroll")(js.Any.fromFunction1(onHorizontalScroll))
+    if (onRowClick != null) __obj.updateDynamic("onRowClick")(js.Any.fromFunction2(onRowClick))
+    if (onRowDoubleClick != null) __obj.updateDynamic("onRowDoubleClick")(js.Any.fromFunction2(onRowDoubleClick))
+    if (onRowMouseDown != null) __obj.updateDynamic("onRowMouseDown")(js.Any.fromFunction2(onRowMouseDown))
+    if (onRowMouseEnter != null) __obj.updateDynamic("onRowMouseEnter")(js.Any.fromFunction2(onRowMouseEnter))
+    if (onRowMouseLeave != null) __obj.updateDynamic("onRowMouseLeave")(js.Any.fromFunction2(onRowMouseLeave))
+    if (onRowMouseUp != null) __obj.updateDynamic("onRowMouseUp")(js.Any.fromFunction2(onRowMouseUp))
+    if (onRowTouchEnd != null) __obj.updateDynamic("onRowTouchEnd")(js.Any.fromFunction2(onRowTouchEnd))
+    if (onRowTouchMove != null) __obj.updateDynamic("onRowTouchMove")(js.Any.fromFunction2(onRowTouchMove))
+    if (onRowTouchStart != null) __obj.updateDynamic("onRowTouchStart")(js.Any.fromFunction2(onRowTouchStart))
+    if (onScrollEnd != null) __obj.updateDynamic("onScrollEnd")(js.Any.fromFunction2(onScrollEnd))
+    if (onScrollStart != null) __obj.updateDynamic("onScrollStart")(js.Any.fromFunction2(onScrollStart))
+    if (onVerticalScroll != null) __obj.updateDynamic("onVerticalScroll")(js.Any.fromFunction1(onVerticalScroll))
+    if (overflowX != null) __obj.updateDynamic("overflowX")(overflowX.asInstanceOf[js.Any])
+    if (overflowY != null) __obj.updateDynamic("overflowY")(overflowY.asInstanceOf[js.Any])
+    if (!js.isUndefined(ownerHeight)) __obj.updateDynamic("ownerHeight")(ownerHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (rowClassNameGetter != null) __obj.updateDynamic("rowClassNameGetter")(js.Any.fromFunction1(rowClassNameGetter))
+    if (rowExpanded != null) __obj.updateDynamic("rowExpanded")(rowExpanded.asInstanceOf[js.Any])
+    if (rowHeightGetter != null) __obj.updateDynamic("rowHeightGetter")(js.Any.fromFunction1(rowHeightGetter))
+    if (rowKeyGetter != null) __obj.updateDynamic("rowKeyGetter")(js.Any.fromFunction1(rowKeyGetter))
+    if (!js.isUndefined(scrollLeft)) __obj.updateDynamic("scrollLeft")(scrollLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollToColumn)) __obj.updateDynamic("scrollToColumn")(scrollToColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollToRow)) __obj.updateDynamic("scrollToRow")(scrollToRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollTop)) __obj.updateDynamic("scrollTop")(scrollTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showScrollbarX)) __obj.updateDynamic("showScrollbarX")(showScrollbarX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showScrollbarY)) __obj.updateDynamic("showScrollbarY")(showScrollbarY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stopScrollPropagation)) __obj.updateDynamic("stopScrollPropagation")(stopScrollPropagation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subRowHeight)) __obj.updateDynamic("subRowHeight")(subRowHeight.get.asInstanceOf[js.Any])
+    if (subRowHeightGetter != null) __obj.updateDynamic("subRowHeightGetter")(js.Any.fromFunction1(subRowHeightGetter))
+    if (!js.isUndefined(touchScrollEnabled)) __obj.updateDynamic("touchScrollEnabled")(touchScrollEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableProps]
   }
-  @scala.inline
-  implicit class TablePropsOps[Self <: TableProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeaderHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBufferRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferRowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBufferRowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferRowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellGroupWrapperHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellGroupWrapperHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellGroupWrapperHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellGroupWrapperHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupHeaderHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupHeaderHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupHeaderHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupHeaderHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsColumnReordering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumnReordering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsColumnReordering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumnReordering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsColumnResizing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumnResizing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsColumnResizing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumnResizing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardPageEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardPageEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardPageEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardPageEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardScrollEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardScrollEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardScrollEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardScrollEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnColumnReorderEndCallback(value: /* event */ ColumnReorderEndEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnReorderEndCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnColumnReorderEndCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnReorderEndCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnColumnResizeEndCallback(value: (/* newColumnWidth */ Double, /* columnKey */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnResizeEndCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnColumnResizeEndCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnResizeEndCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContentHeightChange(value: /* newHeight */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContentHeightChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContentHeightChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContentHeightChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHorizontalScroll(value: /* scrollPos */ Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHorizontalScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHorizontalScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHorizontalScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowClick(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowDoubleClick(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDoubleClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowDoubleClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDoubleClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowMouseDown(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseDown")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowMouseDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowMouseEnter(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseEnter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowMouseLeave(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowMouseUp(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseUp")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowMouseUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowTouchEnd(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchEnd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowTouchEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowTouchMove(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchMove")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowTouchMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowTouchStart(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchStart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowTouchStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScrollEnd(value: (/* x */ Double, /* y */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollEnd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScrollEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScrollStart(value: (/* x */ Double, /* y */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollStart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScrollStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnVerticalScroll(value: /* scrollPos */ Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVerticalScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnVerticalScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVerticalScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverflowX(value: hidden | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflowX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverflowY(value: hidden | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflowY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowClassNameGetter(value: /* index */ Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowClassNameGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowClassNameGetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowClassNameGetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowExpandedReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowExpandedFunction1(value: RowProps => String | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRowExpanded(value: ElementOrFunc[RowProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowHeightGetter(value: /* index */ Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeightGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowHeightGetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeightGetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowKeyGetter(value: /* index */ Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowKeyGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowKeyGetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowKeyGetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollToColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollToColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollToRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollToRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowScrollbarX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScrollbarX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowScrollbarX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScrollbarX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowScrollbarY(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScrollbarY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowScrollbarY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScrollbarY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopScrollPropagation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopScrollPropagation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopScrollPropagation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopScrollPropagation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubRowHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subRowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubRowHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subRowHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubRowHeightGetter(value: /* index */ Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subRowHeightGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSubRowHeightGetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subRowHeightGetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchScrollEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchScrollEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchScrollEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchScrollEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

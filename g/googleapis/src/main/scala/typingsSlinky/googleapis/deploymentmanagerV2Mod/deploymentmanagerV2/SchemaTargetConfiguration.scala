@@ -20,41 +20,11 @@ trait SchemaTargetConfiguration extends js.Object {
 
 object SchemaTargetConfiguration {
   @scala.inline
-  def apply(): SchemaTargetConfiguration = {
+  def apply(config: SchemaConfigFile = null, imports: js.Array[SchemaImportFile] = null): SchemaTargetConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (imports != null) __obj.updateDynamic("imports")(imports.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetConfiguration]
   }
-  @scala.inline
-  implicit class SchemaTargetConfigurationOps[Self <: SchemaTargetConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: SchemaConfigFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImports(value: js.Array[SchemaImportFile]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imports")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

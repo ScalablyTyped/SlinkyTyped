@@ -18,35 +18,10 @@ trait PutConfigurationSetSuppressionOptionsRequest extends js.Object {
 
 object PutConfigurationSetSuppressionOptionsRequest {
   @scala.inline
-  def apply(ConfigurationSetName: ConfigurationSetName): PutConfigurationSetSuppressionOptionsRequest = {
+  def apply(ConfigurationSetName: ConfigurationSetName, SuppressedReasons: SuppressionListReasons = null): PutConfigurationSetSuppressionOptionsRequest = {
     val __obj = js.Dynamic.literal(ConfigurationSetName = ConfigurationSetName.asInstanceOf[js.Any])
+    if (SuppressedReasons != null) __obj.updateDynamic("SuppressedReasons")(SuppressedReasons.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutConfigurationSetSuppressionOptionsRequest]
   }
-  @scala.inline
-  implicit class PutConfigurationSetSuppressionOptionsRequestOps[Self <: PutConfigurationSetSuppressionOptionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationSetName(value: ConfigurationSetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuppressedReasons(value: SuppressionListReasons): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuppressedReasons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressedReasons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuppressedReasons")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

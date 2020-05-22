@@ -4,66 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** Specifies adaptive layout options. */
-@js.native
+/** @name BaseChart.Options.adaptiveLayout */
 trait BaseChartAdaptiveLayout extends js.Object {
-  /** Specifies the minimum container height at which the layout begins to adapt. */
-  var height: js.UndefOr[Double] = js.native
-  /** Specifies whether point labels should be kept when the widget adapts the layout. */
-  var keepLabels: js.UndefOr[Boolean] = js.native
-  /** Specifies the minimum container width at which the layout begins to adapt. */
-  var width: js.UndefOr[Double] = js.native
+  /** @name BaseChart.Options.adaptiveLayout.height */
+  var height: js.UndefOr[Double] = js.undefined
+  /** @name BaseChart.Options.adaptiveLayout.keepLabels */
+  var keepLabels: js.UndefOr[Boolean] = js.undefined
+  /** @name BaseChart.Options.adaptiveLayout.width */
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object BaseChartAdaptiveLayout {
   @scala.inline
-  def apply(): BaseChartAdaptiveLayout = {
+  def apply(
+    height: js.UndefOr[Double] = js.undefined,
+    keepLabels: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): BaseChartAdaptiveLayout = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepLabels)) __obj.updateDynamic("keepLabels")(keepLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseChartAdaptiveLayout]
   }
-  @scala.inline
-  implicit class BaseChartAdaptiveLayoutOps[Self <: BaseChartAdaptiveLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

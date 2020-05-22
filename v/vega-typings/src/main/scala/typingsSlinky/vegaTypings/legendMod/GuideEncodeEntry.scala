@@ -4,120 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GuideEncodeEntry[T] extends js.Object {
-  var enter: js.UndefOr[T] = js.native
-  var exit: js.UndefOr[T] = js.native
-  var hover: js.UndefOr[T] = js.native
+  var enter: js.UndefOr[T] = js.undefined
+  var exit: js.UndefOr[T] = js.undefined
+  var hover: js.UndefOr[T] = js.undefined
   /**
     * A boolean flag indicating if the guide element should respond to input events such as mouse hover.
     */
-  var interactive: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
+  var interactive: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
   /**
     * A mark style property to apply to the guide group mark.
     */
-  var style: js.UndefOr[String | js.Array[String]] = js.native
-  var update: js.UndefOr[T] = js.native
+  var style: js.UndefOr[String | js.Array[String]] = js.undefined
+  var update: js.UndefOr[T] = js.undefined
 }
 
 object GuideEncodeEntry {
   @scala.inline
-  def apply[T](): GuideEncodeEntry[T] = {
+  def apply[T](
+    enter: T = null,
+    exit: T = null,
+    hover: T = null,
+    interactive: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    style: String | js.Array[String] = null,
+    update: T = null
+  ): GuideEncodeEntry[T] = {
     val __obj = js.Dynamic.literal()
+    if (enter != null) __obj.updateDynamic("enter")(enter.asInstanceOf[js.Any])
+    if (exit != null) __obj.updateDynamic("exit")(exit.asInstanceOf[js.Any])
+    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
+    if (!js.isUndefined(interactive)) __obj.updateDynamic("interactive")(interactive.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
     __obj.asInstanceOf[GuideEncodeEntry[T]]
   }
-  @scala.inline
-  implicit class GuideEncodeEntryOps[Self[t] <: GuideEncodeEntry[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withEnter(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnter: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExit: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHover(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHover: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInteractive(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInteractive: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.actionsOnGoogle.actionssdkMod
 
 import typingsSlinky.actionsOnGoogle.imageMod.ImageOptions
-import typingsSlinky.actionsOnGoogle.incomingMod.IncomingMessage
+import typingsSlinky.actionsOnGoogle.incomingMod._IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Image protected ()
   extends typingsSlinky.actionsOnGoogle.conversationMod.Image
-     with IncomingMessage {
+     with _IncomingMessage {
   /**
     * @param options Image options
     * @public

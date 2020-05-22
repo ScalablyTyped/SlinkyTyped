@@ -1,157 +1,45 @@
 package typingsSlinky.chartJs.mod
 
-import org.scalajs.dom.raw.CanvasGradient
-import org.scalajs.dom.raw.CanvasPattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartLegendLabelOptions extends js.Object {
-  var boxWidth: js.UndefOr[Double] = js.native
-  var filter: js.UndefOr[js.Function2[/* legendItem */ ChartLegendLabelItem, /* data */ ChartData, _]] = js.native
-  var fontColor: js.UndefOr[ChartColor] = js.native
-  var fontFamily: js.UndefOr[String] = js.native
-  var fontSize: js.UndefOr[Double] = js.native
-  var fontStyle: js.UndefOr[String] = js.native
-  var generateLabels: js.UndefOr[js.Function1[/* chart */ Chart, js.Array[ChartLegendLabelItem]]] = js.native
-  var padding: js.UndefOr[Double] = js.native
-  var usePointStyle: js.UndefOr[Boolean] = js.native
+  var boxWidth: js.UndefOr[Double] = js.undefined
+  var filter: js.UndefOr[js.Function2[/* legendItem */ ChartLegendLabelItem, /* data */ ChartData, _]] = js.undefined
+  var fontColor: js.UndefOr[ChartColor] = js.undefined
+  var fontFamily: js.UndefOr[String] = js.undefined
+  var fontSize: js.UndefOr[Double] = js.undefined
+  var fontStyle: js.UndefOr[String] = js.undefined
+  var generateLabels: js.UndefOr[js.Function1[/* chart */ Chart, js.Array[ChartLegendLabelItem]]] = js.undefined
+  var padding: js.UndefOr[Double] = js.undefined
+  var usePointStyle: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChartLegendLabelOptions {
   @scala.inline
-  def apply(): ChartLegendLabelOptions = {
+  def apply(
+    boxWidth: js.UndefOr[Double] = js.undefined,
+    filter: (/* legendItem */ ChartLegendLabelItem, /* data */ ChartData) => _ = null,
+    fontColor: ChartColor = null,
+    fontFamily: String = null,
+    fontSize: js.UndefOr[Double] = js.undefined,
+    fontStyle: String = null,
+    generateLabels: /* chart */ Chart => js.Array[ChartLegendLabelItem] = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    usePointStyle: js.UndefOr[Boolean] = js.undefined
+  ): ChartLegendLabelOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(boxWidth)) __obj.updateDynamic("boxWidth")(boxWidth.get.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction2(filter))
+    if (fontColor != null) __obj.updateDynamic("fontColor")(fontColor.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
+    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
+    if (generateLabels != null) __obj.updateDynamic("generateLabels")(js.Any.fromFunction1(generateLabels))
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePointStyle)) __obj.updateDynamic("usePointStyle")(usePointStyle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartLegendLabelOptions]
   }
-  @scala.inline
-  implicit class ChartLegendLabelOptionsOps[Self <: ChartLegendLabelOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: (/* legendItem */ ChartLegendLabelItem, /* data */ ChartData) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontColorCanvasPattern(value: CanvasPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontColorCanvasGradient(value: CanvasGradient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontColor(value: ChartColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateLabels(value: /* chart */ Chart => js.Array[ChartLegendLabelItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateLabels")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGenerateLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsePointStyle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePointStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsePointStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePointStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

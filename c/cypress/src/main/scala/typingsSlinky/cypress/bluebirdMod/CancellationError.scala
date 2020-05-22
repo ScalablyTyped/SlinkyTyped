@@ -10,5 +10,10 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("cypress/types/bluebird", "CancellationError")
 @js.native
-class CancellationError () extends Error
+class CancellationError () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

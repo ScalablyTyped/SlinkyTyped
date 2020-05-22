@@ -89,6 +89,11 @@ class WebXRControllerComponent protected () extends IDisposable {
     */
   def changes: IWebXRMotionControllerComponentChanges = js.native
   /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
     * Return whether or not the component changed the last frame
     */
   def hasChanges: Boolean = js.native

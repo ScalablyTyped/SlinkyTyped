@@ -14,29 +14,10 @@ trait ResourceDefinitionVersion extends js.Object {
 
 object ResourceDefinitionVersion {
   @scala.inline
-  def apply(): ResourceDefinitionVersion = {
+  def apply(Resources: listOfResource = null): ResourceDefinitionVersion = {
     val __obj = js.Dynamic.literal()
+    if (Resources != null) __obj.updateDynamic("Resources")(Resources.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceDefinitionVersion]
   }
-  @scala.inline
-  implicit class ResourceDefinitionVersionOps[Self <: ResourceDefinitionVersion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResources(value: listOfResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

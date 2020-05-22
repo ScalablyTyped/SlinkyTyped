@@ -19,35 +19,10 @@ trait DescribeProcessingJobRequ extends js.Object {
 
 object DescribeProcessingJobRequ {
   @scala.inline
-  def apply(ProcessingJobName: ProcessingJobName): DescribeProcessingJobRequ = {
+  def apply(ProcessingJobName: ProcessingJobName, $waiter: WaiterConfiguration = null): DescribeProcessingJobRequ = {
     val __obj = js.Dynamic.literal(ProcessingJobName = ProcessingJobName.asInstanceOf[js.Any])
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProcessingJobRequ]
   }
-  @scala.inline
-  implicit class DescribeProcessingJobRequOps[Self <: DescribeProcessingJobRequ] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProcessingJobName(value: ProcessingJobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

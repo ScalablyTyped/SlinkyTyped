@@ -11,29 +11,10 @@ trait DescribeEngineDefaultClusterParametersResult extends js.Object {
 
 object DescribeEngineDefaultClusterParametersResult {
   @scala.inline
-  def apply(): DescribeEngineDefaultClusterParametersResult = {
+  def apply(EngineDefaults: EngineDefaults = null): DescribeEngineDefaultClusterParametersResult = {
     val __obj = js.Dynamic.literal()
+    if (EngineDefaults != null) __obj.updateDynamic("EngineDefaults")(EngineDefaults.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEngineDefaultClusterParametersResult]
   }
-  @scala.inline
-  implicit class DescribeEngineDefaultClusterParametersResultOps[Self <: DescribeEngineDefaultClusterParametersResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEngineDefaults(value: EngineDefaults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineDefaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineDefaults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

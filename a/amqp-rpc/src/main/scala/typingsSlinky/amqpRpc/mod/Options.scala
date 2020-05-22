@@ -6,114 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var conn_options: js.UndefOr[js.Any] = js.native
-  var connection: js.UndefOr[js.Any] = js.native
-  var exchange: js.UndefOr[String] = js.native
-  var exchangeInstance: js.UndefOr[js.Any] = js.native
-  var exchange_options: js.UndefOr[AutoDelete] = js.native
-  var ipml_options: js.UndefOr[DefaultExchangeName] = js.native
-  var url: js.UndefOr[String] = js.native
+  var conn_options: js.UndefOr[js.Any] = js.undefined
+  var connection: js.UndefOr[js.Any] = js.undefined
+  var exchange: js.UndefOr[String] = js.undefined
+  var exchangeInstance: js.UndefOr[js.Any] = js.undefined
+  var exchange_options: js.UndefOr[AutoDelete] = js.undefined
+  var ipml_options: js.UndefOr[DefaultExchangeName] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    conn_options: js.Any = null,
+    connection: js.Any = null,
+    exchange: String = null,
+    exchangeInstance: js.Any = null,
+    exchange_options: AutoDelete = null,
+    ipml_options: DefaultExchangeName = null,
+    url: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (conn_options != null) __obj.updateDynamic("conn_options")(conn_options.asInstanceOf[js.Any])
+    if (connection != null) __obj.updateDynamic("connection")(connection.asInstanceOf[js.Any])
+    if (exchange != null) __obj.updateDynamic("exchange")(exchange.asInstanceOf[js.Any])
+    if (exchangeInstance != null) __obj.updateDynamic("exchangeInstance")(exchangeInstance.asInstanceOf[js.Any])
+    if (exchange_options != null) __obj.updateDynamic("exchange_options")(exchange_options.asInstanceOf[js.Any])
+    if (ipml_options != null) __obj.updateDynamic("ipml_options")(ipml_options.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConn_options(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conn_options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConn_options: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conn_options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExchange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exchange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExchange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exchange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExchangeInstance(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exchangeInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExchangeInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exchangeInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExchange_options(value: AutoDelete): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exchange_options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExchange_options: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exchange_options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpml_options(value: DefaultExchangeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipml_options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpml_options: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipml_options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

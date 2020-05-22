@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InsertTableOfFiguresCommand")
 @js.native
 class InsertTableOfFiguresCommand ()
-  extends typingsSlinky.devexpressWeb.InsertTableOfFiguresCommand
+  extends typingsSlinky.devexpressWeb.InsertTableOfFiguresCommand {
+  /**
+    * Executes the InsertTableOfFiguresCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

@@ -22,6 +22,8 @@ object subjectMod extends js.Object {
   class Subject[T] ()
     extends Observable[T]
        with SubscriptionLike {
+    /* CompleteClass */
+    override val closed: Boolean = js.native
     var hasError: Boolean = js.native
     var isStopped: Boolean = js.native
     var observers: js.Array[Observer[T]] = js.native
@@ -37,6 +39,8 @@ object subjectMod extends js.Object {
     def error(err: js.Any): Unit = js.native
     def next(): Unit = js.native
     def next(value: T): Unit = js.native
+    /* CompleteClass */
+    override def unsubscribe(): Unit = js.native
   }
   
   @js.native

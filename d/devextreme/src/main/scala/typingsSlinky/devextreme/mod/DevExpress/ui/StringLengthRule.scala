@@ -13,109 +13,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StringLengthRule extends js.Object {
-  /** If set to true, empty values are valid. */
-  var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
-  /** Specifies the maximum length allowed for the validated value. */
-  var max: js.UndefOr[Double] = js.native
-  /** Specifies the message that is shown if the rule is broken. */
-  var message: js.UndefOr[String] = js.native
-  /** Specifies the minimum length allowed for the validated value. */
-  var min: js.UndefOr[Double] = js.native
-  /** Indicates whether or not to remove the Space characters from the validated value. */
-  var trim: js.UndefOr[Boolean] = js.native
-  /** Specifies the rule type. Set it to "stringLength" to use the StringLengthRule. */
+  /** @name StringLengthRule.ignoreEmptyValue */
+  var ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined
+  /** @name StringLengthRule.max */
+  var max: js.UndefOr[Double] = js.undefined
+  /** @name StringLengthRule.message */
+  var message: js.UndefOr[String] = js.undefined
+  /** @name StringLengthRule.min */
+  var min: js.UndefOr[Double] = js.undefined
+  /** @name StringLengthRule.trim */
+  var trim: js.UndefOr[Boolean] = js.undefined
+  /** @name StringLengthRule.type */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
-  ] = js.native
+  ] = js.undefined
 }
 
 object StringLengthRule {
   @scala.inline
-  def apply(): StringLengthRule = {
+  def apply(
+    ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    message: String = null,
+    min: js.UndefOr[Double] = js.undefined,
+    trim: js.UndefOr[Boolean] = js.undefined,
+    `type`: required | numeric | range | stringLength | custom | compare | pattern | email | async = null
+  ): StringLengthRule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ignoreEmptyValue)) __obj.updateDynamic("ignoreEmptyValue")(ignoreEmptyValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trim)) __obj.updateDynamic("trim")(trim.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[StringLengthRule]
   }
-  @scala.inline
-  implicit class StringLengthRuleOps[Self <: StringLengthRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoreEmptyValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreEmptyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrim(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrim: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: required | numeric | range | stringLength | custom | compare | pattern | email | async): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

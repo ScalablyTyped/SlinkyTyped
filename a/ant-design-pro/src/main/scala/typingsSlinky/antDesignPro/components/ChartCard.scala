@@ -69,6 +69,7 @@ import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.antd.cardMod.CardSize
 import typingsSlinky.antd.cardMod.CardTabListType
 import typingsSlinky.antd.cardMod.CardType
+import typingsSlinky.antd.tabsMod.TabsProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -472,6 +473,8 @@ object ChartCard {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def tabList(value: js.Array[CardTabListType]): this.type = set("tabList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabProps(value: TabsProps): this.type = set("tabProps", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline

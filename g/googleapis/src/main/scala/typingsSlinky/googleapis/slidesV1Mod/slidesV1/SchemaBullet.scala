@@ -29,65 +29,18 @@ trait SchemaBullet extends js.Object {
 
 object SchemaBullet {
   @scala.inline
-  def apply(): SchemaBullet = {
+  def apply(
+    bulletStyle: SchemaTextStyle = null,
+    glyph: String = null,
+    listId: String = null,
+    nestingLevel: js.UndefOr[Double] = js.undefined
+  ): SchemaBullet = {
     val __obj = js.Dynamic.literal()
+    if (bulletStyle != null) __obj.updateDynamic("bulletStyle")(bulletStyle.asInstanceOf[js.Any])
+    if (glyph != null) __obj.updateDynamic("glyph")(glyph.asInstanceOf[js.Any])
+    if (listId != null) __obj.updateDynamic("listId")(listId.asInstanceOf[js.Any])
+    if (!js.isUndefined(nestingLevel)) __obj.updateDynamic("nestingLevel")(nestingLevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBullet]
   }
-  @scala.inline
-  implicit class SchemaBulletOps[Self <: SchemaBullet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBulletStyle(value: SchemaTextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBulletStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlyph(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glyph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlyph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glyph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNestingLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestingLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNestingLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestingLevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,6 +13,10 @@ object errorsMod extends js.Object {
     def this(message: String) = this()
     var code: String = js.native
     var hostname: String = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     var region: String = js.native
     var retryable: Boolean = js.native
     var statusCode: Double = js.native
@@ -22,6 +26,10 @@ object errorsMod extends js.Object {
   @js.native
   class TimeoutError () extends Error {
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
 }

@@ -15,29 +15,10 @@ trait MemberAccountAssociationState extends js.Object {
 
 object MemberAccountAssociationState {
   @scala.inline
-  def apply(): MemberAccountAssociationState = {
+  def apply(memberAccountId: Input[String] = null): MemberAccountAssociationState = {
     val __obj = js.Dynamic.literal()
+    if (memberAccountId != null) __obj.updateDynamic("memberAccountId")(memberAccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemberAccountAssociationState]
   }
-  @scala.inline
-  implicit class MemberAccountAssociationStateOps[Self <: MemberAccountAssociationState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMemberAccountId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemberAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberAccountId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

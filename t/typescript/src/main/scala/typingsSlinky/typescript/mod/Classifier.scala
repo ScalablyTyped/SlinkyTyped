@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Classifier extends js.Object {
   /**
     * Gives lexical classifications of tokens on a line without any syntactic context.
@@ -26,8 +25,8 @@ trait Classifier extends js.Object {
     *                                  subsume the classification.
     * @deprecated Use getLexicalClassifications instead.
     */
-  def getClassificationsForLine(text: java.lang.String, lexState: EndOfLineState, syntacticClassifierAbsent: Boolean): ClassificationResult = js.native
-  def getEncodedLexicalClassifications(text: java.lang.String, endOfLineState: EndOfLineState, syntacticClassifierAbsent: Boolean): Classifications = js.native
+  def getClassificationsForLine(text: java.lang.String, lexState: EndOfLineState, syntacticClassifierAbsent: Boolean): ClassificationResult
+  def getEncodedLexicalClassifications(text: java.lang.String, endOfLineState: EndOfLineState, syntacticClassifierAbsent: Boolean): Classifications
 }
 
 object Classifier {
@@ -39,25 +38,5 @@ object Classifier {
     val __obj = js.Dynamic.literal(getClassificationsForLine = js.Any.fromFunction3(getClassificationsForLine), getEncodedLexicalClassifications = js.Any.fromFunction3(getEncodedLexicalClassifications))
     __obj.asInstanceOf[Classifier]
   }
-  @scala.inline
-  implicit class ClassifierOps[Self <: Classifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetClassificationsForLine(value: (java.lang.String, EndOfLineState, Boolean) => ClassificationResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassificationsForLine")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetEncodedLexicalClassifications(value: (java.lang.String, EndOfLineState, Boolean) => Classifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEncodedLexicalClassifications")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

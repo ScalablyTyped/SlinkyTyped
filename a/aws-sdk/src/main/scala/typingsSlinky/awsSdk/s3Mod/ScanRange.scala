@@ -18,41 +18,11 @@ trait ScanRange extends js.Object {
 
 object ScanRange {
   @scala.inline
-  def apply(): ScanRange = {
+  def apply(End: js.UndefOr[End] = js.undefined, Start: js.UndefOr[Start] = js.undefined): ScanRange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(End)) __obj.updateDynamic("End")(End.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Start)) __obj.updateDynamic("Start")(Start.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScanRange]
   }
-  @scala.inline
-  implicit class ScanRangeOps[Self <: ScanRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: End): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Start): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

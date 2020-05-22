@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ObservableStatic extends js.Object {
-  def when[TR](plan: Plan[TR]): Observable[TR] = js.native
+  def when[TR](plan: Plan[TR]): Observable[TR]
 }
 
 object ObservableStatic {
@@ -15,19 +14,5 @@ object ObservableStatic {
     val __obj = js.Dynamic.literal(when = js.Any.fromFunction1(when))
     __obj.asInstanceOf[ObservableStatic]
   }
-  @scala.inline
-  implicit class ObservableStaticOps[Self <: ObservableStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWhen(value: Plan[js.Any] => Observable[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

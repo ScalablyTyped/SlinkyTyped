@@ -14,29 +14,10 @@ trait GetComplianceSummaryByResourceTypeResponse extends js.Object {
 
 object GetComplianceSummaryByResourceTypeResponse {
   @scala.inline
-  def apply(): GetComplianceSummaryByResourceTypeResponse = {
+  def apply(ComplianceSummariesByResourceType: ComplianceSummariesByResourceType = null): GetComplianceSummaryByResourceTypeResponse = {
     val __obj = js.Dynamic.literal()
+    if (ComplianceSummariesByResourceType != null) __obj.updateDynamic("ComplianceSummariesByResourceType")(ComplianceSummariesByResourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetComplianceSummaryByResourceTypeResponse]
   }
-  @scala.inline
-  implicit class GetComplianceSummaryByResourceTypeResponseOps[Self <: GetComplianceSummaryByResourceTypeResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplianceSummariesByResourceType(value: ComplianceSummariesByResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSummariesByResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceSummariesByResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSummariesByResourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

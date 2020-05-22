@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait pemEncodingOptions extends js.Object {
-  var cipher: js.UndefOr[String] = js.native
-  var passphrase: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var cipher: js.UndefOr[String] = js.undefined
+  var passphrase: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object pemEncodingOptions {
   @scala.inline
-  def apply(): pemEncodingOptions = {
+  def apply(cipher: String = null, passphrase: String = null, `type`: String = null): pemEncodingOptions = {
     val __obj = js.Dynamic.literal()
+    if (cipher != null) __obj.updateDynamic("cipher")(cipher.asInstanceOf[js.Any])
+    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[pemEncodingOptions]
   }
-  @scala.inline
-  implicit class pemEncodingOptionsOps[Self <: pemEncodingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCipher(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cipher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCipher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cipher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassphrase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passphrase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassphrase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passphrase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

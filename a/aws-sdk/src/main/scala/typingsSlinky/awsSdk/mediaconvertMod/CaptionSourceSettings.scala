@@ -38,101 +38,24 @@ trait CaptionSourceSettings extends js.Object {
 
 object CaptionSourceSettings {
   @scala.inline
-  def apply(): CaptionSourceSettings = {
+  def apply(
+    AncillarySourceSettings: AncillarySourceSettings = null,
+    DvbSubSourceSettings: DvbSubSourceSettings = null,
+    EmbeddedSourceSettings: EmbeddedSourceSettings = null,
+    FileSourceSettings: FileSourceSettings = null,
+    SourceType: CaptionSourceType = null,
+    TeletextSourceSettings: TeletextSourceSettings = null,
+    TrackSourceSettings: TrackSourceSettings = null
+  ): CaptionSourceSettings = {
     val __obj = js.Dynamic.literal()
+    if (AncillarySourceSettings != null) __obj.updateDynamic("AncillarySourceSettings")(AncillarySourceSettings.asInstanceOf[js.Any])
+    if (DvbSubSourceSettings != null) __obj.updateDynamic("DvbSubSourceSettings")(DvbSubSourceSettings.asInstanceOf[js.Any])
+    if (EmbeddedSourceSettings != null) __obj.updateDynamic("EmbeddedSourceSettings")(EmbeddedSourceSettings.asInstanceOf[js.Any])
+    if (FileSourceSettings != null) __obj.updateDynamic("FileSourceSettings")(FileSourceSettings.asInstanceOf[js.Any])
+    if (SourceType != null) __obj.updateDynamic("SourceType")(SourceType.asInstanceOf[js.Any])
+    if (TeletextSourceSettings != null) __obj.updateDynamic("TeletextSourceSettings")(TeletextSourceSettings.asInstanceOf[js.Any])
+    if (TrackSourceSettings != null) __obj.updateDynamic("TrackSourceSettings")(TrackSourceSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionSourceSettings]
   }
-  @scala.inline
-  implicit class CaptionSourceSettingsOps[Self <: CaptionSourceSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAncillarySourceSettings(value: AncillarySourceSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AncillarySourceSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAncillarySourceSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AncillarySourceSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDvbSubSourceSettings(value: DvbSubSourceSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubSourceSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDvbSubSourceSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubSourceSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmbeddedSourceSettings(value: EmbeddedSourceSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedSourceSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmbeddedSourceSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedSourceSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileSourceSettings(value: FileSourceSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSourceSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSourceSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSourceSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: CaptionSourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeletextSourceSettings(value: TeletextSourceSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextSourceSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeletextSourceSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextSourceSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackSourceSettings(value: TrackSourceSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackSourceSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackSourceSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackSourceSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

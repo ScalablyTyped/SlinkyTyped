@@ -26,9 +26,16 @@ object describePullRequestEventsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DescribePullRequestEventsInput) = this()
+    /* CompleteClass */
+    override val input: DescribePullRequestEventsInput = js.native
     val middlewareStack: MiddlewareStack[DescribePullRequestEventsInput, DescribePullRequestEventsOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: CodeCommitResolvedConfiguration
+    ): Handler[DescribePullRequestEventsInput, DescribePullRequestEventsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[DescribePullRequestEventsInput, DescribePullRequestEventsOutput] = js.native
   }

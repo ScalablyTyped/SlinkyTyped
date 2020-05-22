@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ControllerMetadata extends js.Object {
-  var controllerMetadata: typingsSlinky.inversifyExpressUtils.interfacesMod.interfaces.ControllerMetadata = js.native
-  var methodMetadata: js.Array[ControllerMethodMetadata] = js.native
-  var parameterMetadata: ControllerParameterMetadata = js.native
+  var controllerMetadata: typingsSlinky.inversifyExpressUtils.interfacesMod.interfaces.ControllerMetadata
+  var methodMetadata: js.Array[ControllerMethodMetadata]
+  var parameterMetadata: ControllerParameterMetadata
 }
 
 object ControllerMetadata {
@@ -23,31 +22,5 @@ object ControllerMetadata {
     val __obj = js.Dynamic.literal(controllerMetadata = controllerMetadata.asInstanceOf[js.Any], methodMetadata = methodMetadata.asInstanceOf[js.Any], parameterMetadata = parameterMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[ControllerMetadata]
   }
-  @scala.inline
-  implicit class ControllerMetadataOps[Self <: ControllerMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withControllerMetadata(value: typingsSlinky.inversifyExpressUtils.interfacesMod.interfaces.ControllerMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMethodMetadata(value: js.Array[ControllerMethodMetadata]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methodMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParameterMetadata(value: ControllerParameterMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

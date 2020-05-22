@@ -18,41 +18,11 @@ trait BrokerEngineType extends js.Object {
 
 object BrokerEngineType {
   @scala.inline
-  def apply(): BrokerEngineType = {
+  def apply(EngineType: EngineType = null, EngineVersions: listOfEngineVersion = null): BrokerEngineType = {
     val __obj = js.Dynamic.literal()
+    if (EngineType != null) __obj.updateDynamic("EngineType")(EngineType.asInstanceOf[js.Any])
+    if (EngineVersions != null) __obj.updateDynamic("EngineVersions")(EngineVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrokerEngineType]
   }
-  @scala.inline
-  implicit class BrokerEngineTypeOps[Self <: BrokerEngineType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEngineType(value: EngineType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineVersions(value: listOfEngineVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

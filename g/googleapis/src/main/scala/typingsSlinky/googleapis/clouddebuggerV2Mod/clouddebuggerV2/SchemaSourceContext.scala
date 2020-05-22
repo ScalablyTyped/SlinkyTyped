@@ -30,65 +30,18 @@ trait SchemaSourceContext extends js.Object {
 
 object SchemaSourceContext {
   @scala.inline
-  def apply(): SchemaSourceContext = {
+  def apply(
+    cloudRepo: SchemaCloudRepoSourceContext = null,
+    cloudWorkspace: SchemaCloudWorkspaceSourceContext = null,
+    gerrit: SchemaGerritSourceContext = null,
+    git: SchemaGitSourceContext = null
+  ): SchemaSourceContext = {
     val __obj = js.Dynamic.literal()
+    if (cloudRepo != null) __obj.updateDynamic("cloudRepo")(cloudRepo.asInstanceOf[js.Any])
+    if (cloudWorkspace != null) __obj.updateDynamic("cloudWorkspace")(cloudWorkspace.asInstanceOf[js.Any])
+    if (gerrit != null) __obj.updateDynamic("gerrit")(gerrit.asInstanceOf[js.Any])
+    if (git != null) __obj.updateDynamic("git")(git.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceContext]
   }
-  @scala.inline
-  implicit class SchemaSourceContextOps[Self <: SchemaSourceContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudRepo(value: SchemaCloudRepoSourceContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudRepo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudRepo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudRepo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudWorkspace(value: SchemaCloudWorkspaceSourceContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudWorkspace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWorkspace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudWorkspace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGerrit(value: SchemaGerritSourceContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gerrit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGerrit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gerrit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGit(value: SchemaGitSourceContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

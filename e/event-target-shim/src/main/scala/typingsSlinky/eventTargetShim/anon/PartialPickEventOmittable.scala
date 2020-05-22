@@ -6,20 +6,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<event-target-shim.event-target-shim.Event, event-target-shim.event-target-shim.EventTarget.OmittableEventKeys>> */
-@js.native
 trait PartialPickEventOmittable[TEvents /* <: EventDefinition */] extends js.Object {
-  var AT_TARGET: js.UndefOr[Double] = js.native
-  var BUBBLING_PHASE: js.UndefOr[Double] = js.native
-  var CAPTURING_PHASE: js.UndefOr[Double] = js.native
-  var NONE: js.UndefOr[Double] = js.native
-  var bubbles: js.UndefOr[Boolean] = js.native
-  var cancelBubble: js.UndefOr[Boolean] = js.native
-  var cancelable: js.UndefOr[Boolean] = js.native
-  var composed: js.UndefOr[Boolean] = js.native
-  var composedPath: js.UndefOr[js.Function0[js.Array[EventTargetstandardAddEventListener[TEvents]]]] = js.native
-  var currentTarget: js.UndefOr[EventTargetstandardAddEventListener[TEvents]] = js.native
-  var defaultPrevented: js.UndefOr[Boolean] = js.native
-  var eventPhase: js.UndefOr[Double] = js.native
+  var AT_TARGET: js.UndefOr[Double] = js.undefined
+  var BUBBLING_PHASE: js.UndefOr[Double] = js.undefined
+  var CAPTURING_PHASE: js.UndefOr[Double] = js.undefined
+  var NONE: js.UndefOr[Double] = js.undefined
+  var bubbles: js.UndefOr[Boolean] = js.undefined
+  var cancelBubble: js.UndefOr[Boolean] = js.undefined
+  var cancelable: js.UndefOr[Boolean] = js.undefined
+  var composed: js.UndefOr[Boolean] = js.undefined
+  var composedPath: js.UndefOr[js.Function0[js.Array[EventTargetstandardAddEventListener[TEvents]]]] = js.undefined
+  var currentTarget: js.UndefOr[EventTargetstandardAddEventListener[TEvents]] = js.undefined
+  var defaultPrevented: js.UndefOr[Boolean] = js.undefined
+  var eventPhase: js.UndefOr[Double] = js.undefined
   var initEvent: js.UndefOr[
     js.Function3[
       /* type */ String, 
@@ -27,284 +26,65 @@ trait PartialPickEventOmittable[TEvents /* <: EventDefinition */] extends js.Obj
       /* cancelable */ js.UndefOr[Boolean], 
       Unit
     ]
-  ] = js.native
-  var isTrusted: js.UndefOr[Boolean] = js.native
-  var preventDefault: js.UndefOr[js.Function0[Unit]] = js.native
-  var returnValue: js.UndefOr[Boolean] = js.native
-  var srcElement: js.UndefOr[js.Any] = js.native
-  var stopImmediatePropagation: js.UndefOr[js.Function0[Unit]] = js.native
-  var stopPropagation: js.UndefOr[js.Function0[Unit]] = js.native
-  var target: js.UndefOr[EventTargetstandardAddEventListener[TEvents]] = js.native
-  var timeStamp: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var isTrusted: js.UndefOr[Boolean] = js.undefined
+  var preventDefault: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var returnValue: js.UndefOr[Boolean] = js.undefined
+  var srcElement: js.UndefOr[js.Any] = js.undefined
+  var stopImmediatePropagation: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var stopPropagation: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var target: js.UndefOr[EventTargetstandardAddEventListener[TEvents]] = js.undefined
+  var timeStamp: js.UndefOr[Double] = js.undefined
 }
 
 object PartialPickEventOmittable {
   @scala.inline
-  def apply[TEvents](): PartialPickEventOmittable[TEvents] = {
+  def apply[TEvents](
+    AT_TARGET: js.UndefOr[Double] = js.undefined,
+    BUBBLING_PHASE: js.UndefOr[Double] = js.undefined,
+    CAPTURING_PHASE: js.UndefOr[Double] = js.undefined,
+    NONE: js.UndefOr[Double] = js.undefined,
+    bubbles: js.UndefOr[Boolean] = js.undefined,
+    cancelBubble: js.UndefOr[Boolean] = js.undefined,
+    cancelable: js.UndefOr[Boolean] = js.undefined,
+    composed: js.UndefOr[Boolean] = js.undefined,
+    composedPath: () => js.Array[EventTargetstandardAddEventListener[TEvents]] = null,
+    currentTarget: EventTargetstandardAddEventListener[TEvents] = null,
+    defaultPrevented: js.UndefOr[Boolean] = js.undefined,
+    eventPhase: js.UndefOr[Double] = js.undefined,
+    initEvent: (/* type */ String, /* bubbles */ js.UndefOr[Boolean], /* cancelable */ js.UndefOr[Boolean]) => Unit = null,
+    isTrusted: js.UndefOr[Boolean] = js.undefined,
+    preventDefault: () => Unit = null,
+    returnValue: js.UndefOr[Boolean] = js.undefined,
+    srcElement: js.Any = null,
+    stopImmediatePropagation: () => Unit = null,
+    stopPropagation: () => Unit = null,
+    target: EventTargetstandardAddEventListener[TEvents] = null,
+    timeStamp: js.UndefOr[Double] = js.undefined
+  ): PartialPickEventOmittable[TEvents] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AT_TARGET)) __obj.updateDynamic("AT_TARGET")(AT_TARGET.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(BUBBLING_PHASE)) __obj.updateDynamic("BUBBLING_PHASE")(BUBBLING_PHASE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CAPTURING_PHASE)) __obj.updateDynamic("CAPTURING_PHASE")(CAPTURING_PHASE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NONE)) __obj.updateDynamic("NONE")(NONE.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelBubble)) __obj.updateDynamic("cancelBubble")(cancelBubble.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
+    if (composedPath != null) __obj.updateDynamic("composedPath")(js.Any.fromFunction0(composedPath))
+    if (currentTarget != null) __obj.updateDynamic("currentTarget")(currentTarget.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultPrevented)) __obj.updateDynamic("defaultPrevented")(defaultPrevented.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(eventPhase)) __obj.updateDynamic("eventPhase")(eventPhase.get.asInstanceOf[js.Any])
+    if (initEvent != null) __obj.updateDynamic("initEvent")(js.Any.fromFunction3(initEvent))
+    if (!js.isUndefined(isTrusted)) __obj.updateDynamic("isTrusted")(isTrusted.get.asInstanceOf[js.Any])
+    if (preventDefault != null) __obj.updateDynamic("preventDefault")(js.Any.fromFunction0(preventDefault))
+    if (!js.isUndefined(returnValue)) __obj.updateDynamic("returnValue")(returnValue.get.asInstanceOf[js.Any])
+    if (srcElement != null) __obj.updateDynamic("srcElement")(srcElement.asInstanceOf[js.Any])
+    if (stopImmediatePropagation != null) __obj.updateDynamic("stopImmediatePropagation")(js.Any.fromFunction0(stopImmediatePropagation))
+    if (stopPropagation != null) __obj.updateDynamic("stopPropagation")(js.Any.fromFunction0(stopPropagation))
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeStamp)) __obj.updateDynamic("timeStamp")(timeStamp.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickEventOmittable[TEvents]]
   }
-  @scala.inline
-  implicit class PartialPickEventOmittableOps[Self[tevents] <: PartialPickEventOmittable[tevents], TEvents] (val x: Self[TEvents]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEvents] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEvents]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEvents] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEvents] with Other]
-    @scala.inline
-    def withAT_TARGET(value: Double): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AT_TARGET")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAT_TARGET: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AT_TARGET")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBUBBLING_PHASE(value: Double): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BUBBLING_PHASE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBUBBLING_PHASE: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BUBBLING_PHASE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCAPTURING_PHASE(value: Double): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CAPTURING_PHASE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCAPTURING_PHASE: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CAPTURING_PHASE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNONE(value: Double): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NONE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNONE: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NONE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBubbles(value: Boolean): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBubbles: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancelBubble(value: Boolean): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelBubble")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancelBubble: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelBubble")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancelable(value: Boolean): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancelable: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComposed(value: Boolean): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComposed: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComposedPath(value: () => js.Array[EventTargetstandardAddEventListener[TEvents]]): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composedPath")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComposedPath: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composedPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentTarget(value: EventTargetstandardAddEventListener[TEvents]): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentTarget: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultPrevented(value: Boolean): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPrevented")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultPrevented: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPrevented")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventPhase(value: Double): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPhase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventPhase: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPhase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitEvent(
-      value: (/* type */ String, /* bubbles */ js.UndefOr[Boolean], /* cancelable */ js.UndefOr[Boolean]) => Unit
-    ): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initEvent")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutInitEvent: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTrusted(value: Boolean): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrusted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTrusted: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrusted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventDefault(value: () => Unit): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutPreventDefault: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnValue(value: Boolean): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnValue: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcElement(value: js.Any): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcElement: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopImmediatePropagation(value: () => Unit): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopImmediatePropagation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutStopImmediatePropagation: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopImmediatePropagation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopPropagation(value: () => Unit): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutStopPropagation: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: EventTargetstandardAddEventListener[TEvents]): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: Double): Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeStamp: Self[TEvents] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

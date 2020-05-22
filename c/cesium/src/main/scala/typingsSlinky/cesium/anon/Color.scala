@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Color extends js.Object {
-  var color: js.UndefOr[Property] = js.native
-  var image: js.UndefOr[Property] = js.native
-  var repeat: js.UndefOr[Property] = js.native
-  var transparent: js.UndefOr[Property] = js.native
+  var color: js.UndefOr[Property] = js.undefined
+  var image: js.UndefOr[Property] = js.undefined
+  var repeat: js.UndefOr[Property] = js.undefined
+  var transparent: js.UndefOr[Property] = js.undefined
 }
 
 object Color {
   @scala.inline
-  def apply(): Color = {
+  def apply(
+    color: Property = null,
+    image: Property = null,
+    repeat: Property = null,
+    transparent: Property = null
+  ): Color = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (repeat != null) __obj.updateDynamic("repeat")(repeat.asInstanceOf[js.Any])
+    if (transparent != null) __obj.updateDynamic("transparent")(transparent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Color]
   }
-  @scala.inline
-  implicit class ColorOps[Self <: Color] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepeat(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepeat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransparent(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transparent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransparent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transparent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

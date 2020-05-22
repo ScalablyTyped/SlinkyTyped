@@ -14,5 +14,6 @@ package object CbServer {
   type KeyValuePair = org.scalablytyped.runtime.StringDictionary[js.Any]
   type QueryFilter = org.scalablytyped.runtime.StringDictionary[typingsSlinky.clearbladejsServer.CbServer.QueryFilterValue]
   type QueryFilterValue = org.scalablytyped.runtime.StringDictionary[typingsSlinky.clearbladejsServer.CbServer.QueryValue]
+  type QueryValue = java.lang.String | scala.Double | scala.Boolean
   type ReqTypes = typingsSlinky.clearbladejsServer.CbServer.BasicReq
 }

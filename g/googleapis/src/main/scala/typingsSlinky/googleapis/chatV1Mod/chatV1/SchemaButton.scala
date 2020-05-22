@@ -21,41 +21,11 @@ trait SchemaButton extends js.Object {
 
 object SchemaButton {
   @scala.inline
-  def apply(): SchemaButton = {
+  def apply(imageButton: SchemaImageButton = null, textButton: SchemaTextButton = null): SchemaButton = {
     val __obj = js.Dynamic.literal()
+    if (imageButton != null) __obj.updateDynamic("imageButton")(imageButton.asInstanceOf[js.Any])
+    if (textButton != null) __obj.updateDynamic("textButton")(textButton.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaButton]
   }
-  @scala.inline
-  implicit class SchemaButtonOps[Self <: SchemaButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageButton(value: SchemaImageButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextButton(value: SchemaTextButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textButton")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

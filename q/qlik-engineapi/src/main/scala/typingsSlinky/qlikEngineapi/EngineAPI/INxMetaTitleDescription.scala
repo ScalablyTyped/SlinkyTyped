@@ -7,43 +7,23 @@ import scala.scalajs.js.annotation._
 /**
   * NxMetaTitleDescription width extend NxMeta
   */
-@js.native
 trait INxMetaTitleDescription extends INxMeta {
   /**
     * Set a description.
     */
-  var description: String = js.native
+  var description: String
   /**
     * Set a title.
     */
-  var title: String = js.native
+  var title: String
 }
 
 object INxMetaTitleDescription {
   @scala.inline
-  def apply(description: String, title: String): INxMetaTitleDescription = {
+  def apply(description: String, title: String, qName: String = null): INxMetaTitleDescription = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    if (qName != null) __obj.updateDynamic("qName")(qName.asInstanceOf[js.Any])
     __obj.asInstanceOf[INxMetaTitleDescription]
   }
-  @scala.inline
-  implicit class INxMetaTitleDescriptionOps[Self <: INxMetaTitleDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

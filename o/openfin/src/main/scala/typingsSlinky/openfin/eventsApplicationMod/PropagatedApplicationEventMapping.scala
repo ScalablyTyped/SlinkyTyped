@@ -8,26 +8,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PropagatedApplicationEventMapping[Topic, Type] extends js.Object {
-  var `application-closed`: ApplicationEvent[Topic, Type] = js.native
-  var `application-connected`: ApplicationEvent[Topic, Type] = js.native
-  var `application-crashed`: CrashedEvent with (ApplicationEvent[Topic, Type]) = js.native
-  var `application-initialized`: ApplicationEvent[Topic, Type] = js.native
-  var `application-manifest-changed`: ApplicationEvent[Topic, Type] = js.native
-  var `application-not-responding`: ApplicationEvent[Topic, Type] = js.native
-  var `application-responding`: ApplicationEvent[Topic, Type] = js.native
-  var `application-started`: ApplicationEvent[Topic, Type] = js.native
-  var `application-tray-icon-clicked`: TrayIconClicked[Topic, Type] = js.native
-  var `window-created`: WindowEvent[Topic, Type] = js.native
-  var `window-did-change-theme-color`: WindowEvent[Topic, Type] = js.native
-  var `window-end-load`: WindowEndLoadEvent[Topic, Type] = js.native
-  var `window-not-responding`: WindowEvent[Topic, Type] = js.native
-  var `window-page-favicon-updated`: WindowEvent[Topic, Type] = js.native
-  var `window-page-title-updated`: WindowEvent[Topic, Type] = js.native
-  var `window-performance-report`: WindowPerformanceReport[Topic, Type] = js.native
-  var `window-responding`: WindowEvent[Topic, Type] = js.native
-  var `window-start-load`: WindowEvent[Topic, Type] = js.native
+  var `application-closed`: ApplicationEvent[Topic, Type]
+  var `application-connected`: ApplicationEvent[Topic, Type]
+  var `application-crashed`: CrashedEvent with (ApplicationEvent[Topic, Type])
+  var `application-initialized`: ApplicationEvent[Topic, Type]
+  var `application-manifest-changed`: ApplicationEvent[Topic, Type]
+  var `application-not-responding`: ApplicationEvent[Topic, Type]
+  var `application-responding`: ApplicationEvent[Topic, Type]
+  var `application-started`: ApplicationEvent[Topic, Type]
+  var `application-tray-icon-clicked`: TrayIconClicked[Topic, Type]
+  var `window-created`: WindowEvent[Topic, Type]
+  var `window-did-change-theme-color`: WindowEvent[Topic, Type]
+  var `window-end-load`: WindowEndLoadEvent[Topic, Type]
+  var `window-not-responding`: WindowEvent[Topic, Type]
+  var `window-page-favicon-updated`: WindowEvent[Topic, Type]
+  var `window-page-title-updated`: WindowEvent[Topic, Type]
+  var `window-performance-report`: WindowPerformanceReport[Topic, Type]
+  var `window-responding`: WindowEvent[Topic, Type]
+  var `window-start-load`: WindowEvent[Topic, Type]
 }
 
 object PropagatedApplicationEventMapping {
@@ -73,121 +72,5 @@ object PropagatedApplicationEventMapping {
     __obj.updateDynamic("window-start-load")(`window-start-load`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropagatedApplicationEventMapping[Topic, Type]]
   }
-  @scala.inline
-  implicit class PropagatedApplicationEventMappingOps[Self[topic, `type`] <: PropagatedApplicationEventMapping[topic, `type`], Topic, Type] (val x: Self[Topic, Type]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Topic, Type] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Topic, Type]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[Topic, Type]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Topic, Type]) with Other]
-    @scala.inline
-    def `withApplication-closed`(value: ApplicationEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-closed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withApplication-connected`(value: ApplicationEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-connected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withApplication-crashed`(value: CrashedEvent with (ApplicationEvent[Topic, Type])): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-crashed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withApplication-initialized`(value: ApplicationEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-initialized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withApplication-manifest-changed`(value: ApplicationEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-manifest-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withApplication-not-responding`(value: ApplicationEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-not-responding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withApplication-responding`(value: ApplicationEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-responding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withApplication-started`(value: ApplicationEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-started")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withApplication-tray-icon-clicked`(value: TrayIconClicked[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application-tray-icon-clicked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-created`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-did-change-theme-color`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-did-change-theme-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-end-load`(value: WindowEndLoadEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-end-load")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-not-responding`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-not-responding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-page-favicon-updated`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-page-favicon-updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-page-title-updated`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-page-title-updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-performance-report`(value: WindowPerformanceReport[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-performance-report")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-responding`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-responding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWindow-start-load`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window-start-load")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

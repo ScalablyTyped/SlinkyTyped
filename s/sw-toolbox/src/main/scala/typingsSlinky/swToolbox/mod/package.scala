@@ -9,4 +9,7 @@ package object mod {
     /* request */ typingsSlinky.swToolbox.mod.Request, 
     js.Promise[typingsSlinky.swToolbox.mod.Response]
   ]
+  type PrecacheURL = typingsSlinky.swToolbox.mod.Request | java.lang.String
+  type PrecacheURLs = js.Promise[js.Array[typingsSlinky.swToolbox.mod.PrecacheURL]] | js.Array[typingsSlinky.swToolbox.mod.PrecacheURL]
+  type URLPattern = java.lang.String | js.RegExp
 }

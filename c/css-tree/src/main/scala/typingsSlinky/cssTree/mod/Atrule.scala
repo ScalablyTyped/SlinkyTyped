@@ -4,67 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Atrule
   extends CssNodeCommon
      with CssNode {
-  var block: Block | Null = js.native
-  var name: String = js.native
-  var prelude: AtrulePrelude | Raw | Null = js.native
+  var block: Block | Null
+  var name: String
+  var prelude: AtrulePrelude | Raw | Null
   @JSName("type")
-  var type_Atrule: typingsSlinky.cssTree.cssTreeStrings.Atrule = js.native
+  var type_Atrule: typingsSlinky.cssTree.cssTreeStrings.Atrule
 }
 
 object Atrule {
   @scala.inline
-  def apply(name: String, `type`: typingsSlinky.cssTree.cssTreeStrings.Atrule): Atrule = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+  def apply(
+    name: String,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Atrule,
+    block: Block = null,
+    loc: CssLocation = null,
+    prelude: AtrulePrelude | Raw = null
+  ): Atrule = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], block = block.asInstanceOf[js.Any], prelude = prelude.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[Atrule]
   }
-  @scala.inline
-  implicit class AtruleOps[Self <: Atrule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.cssTree.cssTreeStrings.Atrule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlock(value: Block): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(null)
-        ret
-    }
-    @scala.inline
-    def withPrelude(value: AtrulePrelude | Raw): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prelude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreludeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prelude")(null)
-        ret
-    }
-  }
-  
 }
 

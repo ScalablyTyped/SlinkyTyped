@@ -7,71 +7,45 @@ import scala.scalajs.js.annotation._
 /**
   * The designation to be included
   */
-@js.native
 trait ExpansionProfileDesignationIncludeDesignation extends BackboneElement {
   /**
     * Contains extended information for property 'language'.
     */
-  var _language: js.UndefOr[Element] = js.native
+  var _language: js.UndefOr[Element] = js.undefined
   /**
     * Human language of the designation to be included
     */
-  var language: js.UndefOr[code] = js.native
+  var language: js.UndefOr[code] = js.undefined
   /**
     * What kind of Designation to include
     */
-  var use: js.UndefOr[Coding] = js.native
+  var use: js.UndefOr[Coding] = js.undefined
 }
 
 object ExpansionProfileDesignationIncludeDesignation {
   @scala.inline
-  def apply(): ExpansionProfileDesignationIncludeDesignation = {
+  def apply(
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _language: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    language: code = null,
+    modifierExtension: js.Array[Extension] = null,
+    use: Coding = null
+  ): ExpansionProfileDesignationIncludeDesignation = {
     val __obj = js.Dynamic.literal()
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpansionProfileDesignationIncludeDesignation]
   }
-  @scala.inline
-  implicit class ExpansionProfileDesignationIncludeDesignationOps[Self <: ExpansionProfileDesignationIncludeDesignation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_language(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_language: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse(value: Coding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

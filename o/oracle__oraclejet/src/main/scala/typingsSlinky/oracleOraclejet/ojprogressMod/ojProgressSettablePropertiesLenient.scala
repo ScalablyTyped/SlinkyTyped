@@ -9,76 +9,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojprogress.ojProgressSettableProperties> */
-@js.native
 trait ojProgressSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var max: js.UndefOr[Double] = js.native
-  var translations: js.UndefOr[AriaIndeterminateProgressText] = js.native
-  var `type`: js.UndefOr[bar | circle] = js.native
-  var value: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[Double] = js.undefined
+  var translations: js.UndefOr[AriaIndeterminateProgressText] = js.undefined
+  var `type`: js.UndefOr[bar | circle] = js.undefined
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object ojProgressSettablePropertiesLenient {
   @scala.inline
-  def apply(): ojProgressSettablePropertiesLenient = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    max: js.UndefOr[Double] = js.undefined,
+    translations: AriaIndeterminateProgressText = null,
+    `type`: bar | circle = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): ojProgressSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojProgressSettablePropertiesLenient]
   }
-  @scala.inline
-  implicit class ojProgressSettablePropertiesLenientOps[Self <: ojProgressSettablePropertiesLenient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: AriaIndeterminateProgressText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: bar | circle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

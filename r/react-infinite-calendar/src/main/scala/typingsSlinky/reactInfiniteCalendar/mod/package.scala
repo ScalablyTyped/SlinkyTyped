@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 package object mod {
   type CalendarClass = slinky.core.ReactComponentClass[typingsSlinky.reactInfiniteCalendar.mod.ReactInfiniteCalendarProps]
   type DateSelectFunction = js.Function1[/* date */ js.Date, scala.Unit]
+  type DateType = js.Date | java.lang.String | scala.Double
   type RangedSelectFunction = js.Function1[
     /* rangedDate */ typingsSlinky.reactInfiniteCalendar.mod.RangedSelection, 
     scala.Unit

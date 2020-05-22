@@ -5,509 +5,181 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Version extends js.Object {
   /**
     * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL
     * is set.
     */
-  var apiConfig: js.UndefOr[ApiConfigHandler] = js.native
+  var apiConfig: js.UndefOr[ApiConfigHandler] = js.undefined
   /** Automatic scaling is based on request rate, response latencies, and other application metrics. */
-  var automaticScaling: js.UndefOr[AutomaticScaling] = js.native
+  var automaticScaling: js.UndefOr[AutomaticScaling] = js.undefined
   /**
     * A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes
     * idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
     */
-  var basicScaling: js.UndefOr[BasicScaling] = js.native
+  var basicScaling: js.UndefOr[BasicScaling] = js.undefined
   /** Metadata settings that are supplied to this version to enable beta runtime features. */
-  var betaSettings: js.UndefOr[Record[String, String]] = js.native
+  var betaSettings: js.UndefOr[Record[String, String]] = js.undefined
   /** Time that this version was created.@OutputOnly */
-  var createTime: js.UndefOr[String] = js.native
+  var createTime: js.UndefOr[String] = js.undefined
   /** Email address of the user who created this version.@OutputOnly */
-  var createdBy: js.UndefOr[String] = js.native
+  var createdBy: js.UndefOr[String] = js.undefined
   /**
     * Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler
     * (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#staticfileshandler) does not specify its own expiration
     * time.Only returned in GET requests if view=FULL is set.
     */
-  var defaultExpiration: js.UndefOr[String] = js.native
+  var defaultExpiration: js.UndefOr[String] = js.undefined
   /** Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set. */
-  var deployment: js.UndefOr[Deployment] = js.native
+  var deployment: js.UndefOr[Deployment] = js.undefined
   /** Total size in bytes of all the files that are included in this version and curerntly hosted on the App Engine disk.@OutputOnly */
-  var diskUsageBytes: js.UndefOr[String] = js.native
+  var diskUsageBytes: js.UndefOr[String] = js.undefined
   /**
     * Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API
     * implemented by the app.
     */
-  var endpointsApiService: js.UndefOr[EndpointsApiService] = js.native
+  var endpointsApiService: js.UndefOr[EndpointsApiService] = js.undefined
   /** App Engine execution environment for this version.Defaults to standard. */
-  var env: js.UndefOr[String] = js.native
+  var env: js.UndefOr[String] = js.undefined
   /** Environment variables available to the application.Only returned in GET requests if view=FULL is set. */
-  var envVariables: js.UndefOr[Record[String, String]] = js.native
+  var envVariables: js.UndefOr[Record[String, String]] = js.undefined
   /** Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set. */
-  var errorHandlers: js.UndefOr[js.Array[ErrorHandler]] = js.native
+  var errorHandlers: js.UndefOr[js.Array[ErrorHandler]] = js.undefined
   /**
     * An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request
     * handlers are not attempted.Only returned in GET requests if view=FULL is set.
     */
-  var handlers: js.UndefOr[js.Array[UrlMap]] = js.native
+  var handlers: js.UndefOr[js.Array[UrlMap]] = js.undefined
   /**
     * Configures health checking for VM instances. Unhealthy instances are stopped and replaced with new instances. Only applicable for VM runtimes.Only
     * returned in GET requests if view=FULL is set.
     */
-  var healthCheck: js.UndefOr[HealthCheck] = js.native
+  var healthCheck: js.UndefOr[HealthCheck] = js.undefined
   /**
     * Relative name of the version within the service. Example: v1. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names:
     * "default", "latest", and any name with the prefix "ah-".
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Before an application can receive email or XMPP messages, the application must be configured to enable the service. */
-  var inboundServices: js.UndefOr[js.Array[String]] = js.native
+  var inboundServices: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Instance class that is used to run this version. Valid values are:
     * AutomaticScaling: F1, F2, F4, F4_1G
     * ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
     */
-  var instanceClass: js.UndefOr[String] = js.native
+  var instanceClass: js.UndefOr[String] = js.undefined
   /** Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set. */
-  var libraries: js.UndefOr[js.Array[Library]] = js.native
+  var libraries: js.UndefOr[js.Array[Library]] = js.undefined
   /**
     * Configures liveness health checking for VM instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if
     * view=FULL is set.
     */
-  var livenessCheck: js.UndefOr[LivenessCheck] = js.native
+  var livenessCheck: js.UndefOr[LivenessCheck] = js.undefined
   /** A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. */
-  var manualScaling: js.UndefOr[ManualScaling] = js.native
+  var manualScaling: js.UndefOr[ManualScaling] = js.undefined
   /** Full path to the Version resource in the API. Example: apps/myapp/services/default/versions/v1.@OutputOnly */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** Extra network settings. Only applicable for App Engine flexible environment versions. */
-  var network: js.UndefOr[Network] = js.native
+  var network: js.UndefOr[Network] = js.undefined
   /** Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set. */
-  var nobuildFilesRegex: js.UndefOr[String] = js.native
+  var nobuildFilesRegex: js.UndefOr[String] = js.undefined
   /**
     * Configures readiness health checking for VM instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests
     * if view=FULL is set.
     */
-  var readinessCheck: js.UndefOr[ReadinessCheck] = js.native
+  var readinessCheck: js.UndefOr[ReadinessCheck] = js.undefined
   /** Machine resources for this version. Only applicable for VM runtimes. */
-  var resources: js.UndefOr[Resources] = js.native
+  var resources: js.UndefOr[Resources] = js.undefined
   /** Desired runtime. Example: python27. */
-  var runtime: js.UndefOr[String] = js.native
+  var runtime: js.UndefOr[String] = js.undefined
   /**
     * The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
     * https://cloud.google.com/appengine/docs/standard/<language>/config/appref
     */
-  var runtimeApiVersion: js.UndefOr[String] = js.native
+  var runtimeApiVersion: js.UndefOr[String] = js.undefined
   /**
     * Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an
     * invalid value. Defaults to SERVING.
     */
-  var servingStatus: js.UndefOr[String] = js.native
+  var servingStatus: js.UndefOr[String] = js.undefined
   /** Whether multiple requests can be dispatched to this version at once. */
-  var threadsafe: js.UndefOr[Boolean] = js.native
+  var threadsafe: js.UndefOr[Boolean] = js.undefined
   /** Serving URL for this version. Example: "https://myversion-dot-myservice-dot-myapp.appspot.com"@OutputOnly */
-  var versionUrl: js.UndefOr[String] = js.native
+  var versionUrl: js.UndefOr[String] = js.undefined
   /** Whether to deploy this version in a container on a virtual machine. */
-  var vm: js.UndefOr[Boolean] = js.native
+  var vm: js.UndefOr[Boolean] = js.undefined
 }
 
 object Version {
   @scala.inline
-  def apply(): Version = {
+  def apply(
+    apiConfig: ApiConfigHandler = null,
+    automaticScaling: AutomaticScaling = null,
+    basicScaling: BasicScaling = null,
+    betaSettings: Record[String, String] = null,
+    createTime: String = null,
+    createdBy: String = null,
+    defaultExpiration: String = null,
+    deployment: Deployment = null,
+    diskUsageBytes: String = null,
+    endpointsApiService: EndpointsApiService = null,
+    env: String = null,
+    envVariables: Record[String, String] = null,
+    errorHandlers: js.Array[ErrorHandler] = null,
+    handlers: js.Array[UrlMap] = null,
+    healthCheck: HealthCheck = null,
+    id: String = null,
+    inboundServices: js.Array[String] = null,
+    instanceClass: String = null,
+    libraries: js.Array[Library] = null,
+    livenessCheck: LivenessCheck = null,
+    manualScaling: ManualScaling = null,
+    name: String = null,
+    network: Network = null,
+    nobuildFilesRegex: String = null,
+    readinessCheck: ReadinessCheck = null,
+    resources: Resources = null,
+    runtime: String = null,
+    runtimeApiVersion: String = null,
+    servingStatus: String = null,
+    threadsafe: js.UndefOr[Boolean] = js.undefined,
+    versionUrl: String = null,
+    vm: js.UndefOr[Boolean] = js.undefined
+  ): Version = {
     val __obj = js.Dynamic.literal()
+    if (apiConfig != null) __obj.updateDynamic("apiConfig")(apiConfig.asInstanceOf[js.Any])
+    if (automaticScaling != null) __obj.updateDynamic("automaticScaling")(automaticScaling.asInstanceOf[js.Any])
+    if (basicScaling != null) __obj.updateDynamic("basicScaling")(basicScaling.asInstanceOf[js.Any])
+    if (betaSettings != null) __obj.updateDynamic("betaSettings")(betaSettings.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (createdBy != null) __obj.updateDynamic("createdBy")(createdBy.asInstanceOf[js.Any])
+    if (defaultExpiration != null) __obj.updateDynamic("defaultExpiration")(defaultExpiration.asInstanceOf[js.Any])
+    if (deployment != null) __obj.updateDynamic("deployment")(deployment.asInstanceOf[js.Any])
+    if (diskUsageBytes != null) __obj.updateDynamic("diskUsageBytes")(diskUsageBytes.asInstanceOf[js.Any])
+    if (endpointsApiService != null) __obj.updateDynamic("endpointsApiService")(endpointsApiService.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (envVariables != null) __obj.updateDynamic("envVariables")(envVariables.asInstanceOf[js.Any])
+    if (errorHandlers != null) __obj.updateDynamic("errorHandlers")(errorHandlers.asInstanceOf[js.Any])
+    if (handlers != null) __obj.updateDynamic("handlers")(handlers.asInstanceOf[js.Any])
+    if (healthCheck != null) __obj.updateDynamic("healthCheck")(healthCheck.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inboundServices != null) __obj.updateDynamic("inboundServices")(inboundServices.asInstanceOf[js.Any])
+    if (instanceClass != null) __obj.updateDynamic("instanceClass")(instanceClass.asInstanceOf[js.Any])
+    if (libraries != null) __obj.updateDynamic("libraries")(libraries.asInstanceOf[js.Any])
+    if (livenessCheck != null) __obj.updateDynamic("livenessCheck")(livenessCheck.asInstanceOf[js.Any])
+    if (manualScaling != null) __obj.updateDynamic("manualScaling")(manualScaling.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (nobuildFilesRegex != null) __obj.updateDynamic("nobuildFilesRegex")(nobuildFilesRegex.asInstanceOf[js.Any])
+    if (readinessCheck != null) __obj.updateDynamic("readinessCheck")(readinessCheck.asInstanceOf[js.Any])
+    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
+    if (runtime != null) __obj.updateDynamic("runtime")(runtime.asInstanceOf[js.Any])
+    if (runtimeApiVersion != null) __obj.updateDynamic("runtimeApiVersion")(runtimeApiVersion.asInstanceOf[js.Any])
+    if (servingStatus != null) __obj.updateDynamic("servingStatus")(servingStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(threadsafe)) __obj.updateDynamic("threadsafe")(threadsafe.get.asInstanceOf[js.Any])
+    if (versionUrl != null) __obj.updateDynamic("versionUrl")(versionUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(vm)) __obj.updateDynamic("vm")(vm.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Version]
   }
-  @scala.inline
-  implicit class VersionOps[Self <: Version] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiConfig(value: ApiConfigHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomaticScaling(value: AutomaticScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasicScaling(value: BasicScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasicScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBetaSettings(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("betaSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBetaSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("betaSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultExpiration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultExpiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultExpiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeployment(value: Deployment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deployment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeployment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deployment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskUsageBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskUsageBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskUsageBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskUsageBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpointsApiService(value: EndpointsApiService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointsApiService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointsApiService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointsApiService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvVariables(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envVariables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorHandlers(value: js.Array[ErrorHandler]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandlers(value: js.Array[UrlMap]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheck(value: HealthCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInboundServices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inboundServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInboundServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inboundServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLibraries(value: js.Array[Library]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libraries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLibraries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libraries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLivenessCheck(value: LivenessCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livenessCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLivenessCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livenessCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManualScaling(value: ManualScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManualScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: Network): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNobuildFilesRegex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nobuildFilesRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNobuildFilesRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nobuildFilesRegex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadinessCheck(value: ReadinessCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readinessCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadinessCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readinessCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: Resources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntimeApiVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeApiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntimeApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeApiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServingStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servingStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServingStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servingStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreadsafe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadsafe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreadsafe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadsafe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVm(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vm")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

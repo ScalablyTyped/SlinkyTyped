@@ -25,41 +25,11 @@ trait SchemaHeader extends js.Object {
 
 object SchemaHeader {
   @scala.inline
-  def apply(): SchemaHeader = {
+  def apply(glob: String = null, headers: StringDictionary[String] = null): SchemaHeader = {
     val __obj = js.Dynamic.literal()
+    if (glob != null) __obj.updateDynamic("glob")(glob.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHeader]
   }
-  @scala.inline
-  implicit class SchemaHeaderOps[Self <: SchemaHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlob(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

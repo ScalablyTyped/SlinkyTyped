@@ -8,12 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** contains the settings of the line numbering in a text document. */
-@js.native
 trait XLineNumberingProperties extends XInterface {
   /** @returns the {@link LineNumberingProperties} of the object. */
-  val LineNumberingProperties: XPropertySet = js.native
+  val LineNumberingProperties: XPropertySet
   /** @returns the {@link LineNumberingProperties} of the object. */
-  def getLineNumberingProperties(): XPropertySet = js.native
+  def getLineNumberingProperties(): XPropertySet
 }
 
 object XLineNumberingProperties {
@@ -28,25 +27,5 @@ object XLineNumberingProperties {
     val __obj = js.Dynamic.literal(LineNumberingProperties = LineNumberingProperties.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getLineNumberingProperties = js.Any.fromFunction0(getLineNumberingProperties), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XLineNumberingProperties]
   }
-  @scala.inline
-  implicit class XLineNumberingPropertiesOps[Self <: XLineNumberingProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLineNumberingProperties(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineNumberingProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetLineNumberingProperties(value: () => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLineNumberingProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

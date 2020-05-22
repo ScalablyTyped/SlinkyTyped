@@ -83,203 +83,41 @@ trait LoadBalancerArgs extends js.Object {
 
 object LoadBalancerArgs {
   @scala.inline
-  def apply(listeners: Input[js.Array[Input[LoadBalancerListener]]]): LoadBalancerArgs = {
+  def apply(
+    listeners: Input[js.Array[Input[LoadBalancerListener]]],
+    accessLogs: Input[LoadBalancerAccessLogs] = null,
+    availabilityZones: Input[js.Array[Input[String]]] = null,
+    connectionDraining: Input[Boolean] = null,
+    connectionDrainingTimeout: Input[Double] = null,
+    crossZoneLoadBalancing: Input[Boolean] = null,
+    healthCheck: Input[LoadBalancerHealthCheck] = null,
+    idleTimeout: Input[Double] = null,
+    instances: Input[js.Array[Input[String]]] = null,
+    internal: Input[Boolean] = null,
+    name: Input[String] = null,
+    namePrefix: Input[String] = null,
+    securityGroups: Input[js.Array[Input[String]]] = null,
+    sourceSecurityGroup: Input[String] = null,
+    subnets: Input[js.Array[Input[String]]] = null,
+    tags: Input[StringDictionary[_]] = null
+  ): LoadBalancerArgs = {
     val __obj = js.Dynamic.literal(listeners = listeners.asInstanceOf[js.Any])
+    if (accessLogs != null) __obj.updateDynamic("accessLogs")(accessLogs.asInstanceOf[js.Any])
+    if (availabilityZones != null) __obj.updateDynamic("availabilityZones")(availabilityZones.asInstanceOf[js.Any])
+    if (connectionDraining != null) __obj.updateDynamic("connectionDraining")(connectionDraining.asInstanceOf[js.Any])
+    if (connectionDrainingTimeout != null) __obj.updateDynamic("connectionDrainingTimeout")(connectionDrainingTimeout.asInstanceOf[js.Any])
+    if (crossZoneLoadBalancing != null) __obj.updateDynamic("crossZoneLoadBalancing")(crossZoneLoadBalancing.asInstanceOf[js.Any])
+    if (healthCheck != null) __obj.updateDynamic("healthCheck")(healthCheck.asInstanceOf[js.Any])
+    if (idleTimeout != null) __obj.updateDynamic("idleTimeout")(idleTimeout.asInstanceOf[js.Any])
+    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
+    if (internal != null) __obj.updateDynamic("internal")(internal.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namePrefix != null) __obj.updateDynamic("namePrefix")(namePrefix.asInstanceOf[js.Any])
+    if (securityGroups != null) __obj.updateDynamic("securityGroups")(securityGroups.asInstanceOf[js.Any])
+    if (sourceSecurityGroup != null) __obj.updateDynamic("sourceSecurityGroup")(sourceSecurityGroup.asInstanceOf[js.Any])
+    if (subnets != null) __obj.updateDynamic("subnets")(subnets.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerArgs]
   }
-  @scala.inline
-  implicit class LoadBalancerArgsOps[Self <: LoadBalancerArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withListeners(value: Input[js.Array[Input[LoadBalancerListener]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listeners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessLogs(value: Input[LoadBalancerAccessLogs]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessLogs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessLogs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessLogs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailabilityZones(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionDraining(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionDraining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionDraining: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionDraining")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionDrainingTimeout(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionDrainingTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionDrainingTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionDrainingTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossZoneLoadBalancing(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossZoneLoadBalancing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossZoneLoadBalancing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossZoneLoadBalancing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheck(value: Input[LoadBalancerHealthCheck]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdleTimeout(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdleTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstances(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInternal(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInternal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamePrefix(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroups(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSecurityGroup(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSecurityGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSecurityGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSecurityGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnets(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

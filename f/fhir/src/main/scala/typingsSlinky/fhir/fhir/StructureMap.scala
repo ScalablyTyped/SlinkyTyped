@@ -8,479 +8,217 @@ import scala.scalajs.js.annotation._
   * A Map of relationships between 2 structures that can be used to transform data
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
-trait StructureMap extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait StructureMap extends DomainResource {
   /**
     * Contains extended information for property 'copyright'.
     */
-  var _copyright: js.UndefOr[Element] = js.native
+  var _copyright: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.native
+  var _date: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.native
+  var _description: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'experimental'.
     */
-  var _experimental: js.UndefOr[Element] = js.native
+  var _experimental: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'import'.
     */
-  var _import: js.UndefOr[js.Array[Element]] = js.native
+  var _import: js.UndefOr[js.Array[Element]] = js.undefined
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.native
+  var _name: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'publisher'.
     */
-  var _publisher: js.UndefOr[Element] = js.native
+  var _publisher: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'purpose'.
     */
-  var _purpose: js.UndefOr[Element] = js.native
+  var _purpose: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.native
+  var _status: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'title'.
     */
-  var _title: js.UndefOr[Element] = js.native
+  var _title: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'url'.
     */
-  var _url: js.UndefOr[Element] = js.native
+  var _url: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'version'.
     */
-  var _version: js.UndefOr[Element] = js.native
+  var _version: js.UndefOr[Element] = js.undefined
   /**
     * Contact details for the publisher
     */
-  var contact: js.UndefOr[js.Array[ContactDetail]] = js.native
+  var contact: js.UndefOr[js.Array[ContactDetail]] = js.undefined
   /**
     * Use and/or publishing restrictions
     */
-  var copyright: js.UndefOr[markdown] = js.native
+  var copyright: js.UndefOr[markdown] = js.undefined
   /**
     * Date this was last changed
     */
-  var date: js.UndefOr[dateTime] = js.native
+  var date: js.UndefOr[dateTime] = js.undefined
   /**
     * Natural language description of the structure map
     */
-  var description: js.UndefOr[markdown] = js.native
+  var description: js.UndefOr[markdown] = js.undefined
   /**
     * For testing purposes, not real usage
     */
-  var experimental: js.UndefOr[Boolean] = js.native
+  var experimental: js.UndefOr[Boolean] = js.undefined
   /**
     * Named sections for reader convenience
     */
-  var group: js.Array[StructureMapGroup] = js.native
+  var group: js.Array[StructureMapGroup]
   /**
     * Additional identifier for the structure map
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
   /**
     * Other maps used by this map (canonical URLs)
     */
-  var `import`: js.UndefOr[js.Array[uri]] = js.native
+  var `import`: js.UndefOr[js.Array[uri]] = js.undefined
   /**
     * Intended jurisdiction for structure map (if applicable)
     */
-  var jurisdiction: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var jurisdiction: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Name for this structure map (computer friendly)
     */
-  var name: String = js.native
+  var name: String
   /**
     * Name of the publisher (organization or individual)
     */
-  var publisher: js.UndefOr[String] = js.native
+  var publisher: js.UndefOr[String] = js.undefined
   /**
     * Why this structure map is defined
     */
-  var purpose: js.UndefOr[markdown] = js.native
+  var purpose: js.UndefOr[markdown] = js.undefined
   /**
     * draft | active | retired | unknown
     */
-  var status: code = js.native
+  var status: code
   /**
     * Structure Definition used by this map
     */
-  var structure: js.UndefOr[js.Array[StructureMapStructure]] = js.native
+  var structure: js.UndefOr[js.Array[StructureMapStructure]] = js.undefined
   /**
     * Name for this structure map (human friendly)
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * Logical URI to reference this structure map (globally unique)
     */
-  var url: uri = js.native
+  var url: uri
   /**
     * Context the content is intended to support
     */
-  var useContext: js.UndefOr[js.Array[UsageContext]] = js.native
+  var useContext: js.UndefOr[js.Array[UsageContext]] = js.undefined
   /**
     * Business version of the structure map
     */
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object StructureMap {
   @scala.inline
-  def apply(group: js.Array[StructureMapGroup], name: String, status: code, url: uri): StructureMap = {
+  def apply(
+    group: js.Array[StructureMapGroup],
+    name: String,
+    status: code,
+    url: uri,
+    _copyright: Element = null,
+    _date: Element = null,
+    _description: Element = null,
+    _experimental: Element = null,
+    _id: Element = null,
+    _implicitRules: Element = null,
+    _import: js.Array[Element] = null,
+    _language: Element = null,
+    _name: Element = null,
+    _publisher: Element = null,
+    _purpose: Element = null,
+    _resourceType: Element = null,
+    _status: Element = null,
+    _title: Element = null,
+    _url: Element = null,
+    _version: Element = null,
+    contact: js.Array[ContactDetail] = null,
+    contained: js.Array[Resource] = null,
+    copyright: markdown = null,
+    date: dateTime = null,
+    description: markdown = null,
+    experimental: js.UndefOr[Boolean] = js.undefined,
+    extension: js.Array[Extension] = null,
+    id: id = null,
+    identifier: js.Array[Identifier] = null,
+    implicitRules: uri = null,
+    `import`: js.Array[uri] = null,
+    jurisdiction: js.Array[CodeableConcept] = null,
+    language: code = null,
+    meta: Meta = null,
+    modifierExtension: js.Array[Extension] = null,
+    publisher: String = null,
+    purpose: markdown = null,
+    resourceType: code = null,
+    structure: js.Array[StructureMapStructure] = null,
+    text: Narrative = null,
+    title: String = null,
+    useContext: js.Array[UsageContext] = null,
+    version: String = null
+  ): StructureMap = {
     val __obj = js.Dynamic.literal(group = group.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (_copyright != null) __obj.updateDynamic("_copyright")(_copyright.asInstanceOf[js.Any])
+    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
+    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
+    if (_experimental != null) __obj.updateDynamic("_experimental")(_experimental.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
+    if (_import != null) __obj.updateDynamic("_import")(_import.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
+    if (_publisher != null) __obj.updateDynamic("_publisher")(_publisher.asInstanceOf[js.Any])
+    if (_purpose != null) __obj.updateDynamic("_purpose")(_purpose.asInstanceOf[js.Any])
+    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
+    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
+    if (_title != null) __obj.updateDynamic("_title")(_title.asInstanceOf[js.Any])
+    if (_url != null) __obj.updateDynamic("_url")(_url.asInstanceOf[js.Any])
+    if (_version != null) __obj.updateDynamic("_version")(_version.asInstanceOf[js.Any])
+    if (contact != null) __obj.updateDynamic("contact")(contact.asInstanceOf[js.Any])
+    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
+    if (copyright != null) __obj.updateDynamic("copyright")(copyright.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(experimental)) __obj.updateDynamic("experimental")(experimental.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
+    if (`import` != null) __obj.updateDynamic("import")(`import`.asInstanceOf[js.Any])
+    if (jurisdiction != null) __obj.updateDynamic("jurisdiction")(jurisdiction.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (publisher != null) __obj.updateDynamic("publisher")(publisher.asInstanceOf[js.Any])
+    if (purpose != null) __obj.updateDynamic("purpose")(purpose.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (structure != null) __obj.updateDynamic("structure")(structure.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (useContext != null) __obj.updateDynamic("useContext")(useContext.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructureMap]
   }
-  @scala.inline
-  implicit class StructureMapOps[Self <: StructureMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroup(value: js.Array[StructureMapGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_copyright(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_copyright")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_copyright: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_copyright")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_date(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_description(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_experimental(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_experimental")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_experimental: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_experimental")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_import(value: js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_import")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_import: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_import")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_name(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_publisher(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_publisher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_publisher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_publisher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_purpose(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_purpose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_purpose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_purpose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_status(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_title(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_title: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_url(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_version(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContact(value: js.Array[ContactDetail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyright(value: markdown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyright: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: markdown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperimental(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimental: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: js.Array[Identifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImport(value: js.Array[uri]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJurisdiction(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJurisdiction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublisher(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublisher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurpose(value: markdown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurpose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStructure(value: js.Array[StructureMapStructure]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStructure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseContext(value: js.Array[UsageContext]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

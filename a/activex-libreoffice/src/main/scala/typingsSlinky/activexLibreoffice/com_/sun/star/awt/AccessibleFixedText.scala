@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
   * specifies accessibility support for a fixed text.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleFixedText
   extends XAccessibleExtendedComponent
      with XAccessibleContext

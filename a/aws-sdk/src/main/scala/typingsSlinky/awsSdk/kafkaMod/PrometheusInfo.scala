@@ -22,41 +22,11 @@ trait PrometheusInfo extends js.Object {
 
 object PrometheusInfo {
   @scala.inline
-  def apply(): PrometheusInfo = {
+  def apply(JmxExporter: JmxExporterInfo = null, NodeExporter: NodeExporterInfo = null): PrometheusInfo = {
     val __obj = js.Dynamic.literal()
+    if (JmxExporter != null) __obj.updateDynamic("JmxExporter")(JmxExporter.asInstanceOf[js.Any])
+    if (NodeExporter != null) __obj.updateDynamic("NodeExporter")(NodeExporter.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrometheusInfo]
   }
-  @scala.inline
-  implicit class PrometheusInfoOps[Self <: PrometheusInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJmxExporter(value: JmxExporterInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JmxExporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJmxExporter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JmxExporter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeExporter(value: NodeExporterInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeExporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeExporter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeExporter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

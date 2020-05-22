@@ -1,6 +1,7 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IAccessControlList
 import typingsSlinky.mfiles.IActionSetPermissions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,14 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.ActionSetPermissions")
 @js.native
-class ActionSetPermissions () extends IActionSetPermissions
+class ActionSetPermissions () extends IActionSetPermissions {
+  /* CompleteClass */
+  override var DiscardsAutomaticPermissions: Boolean = js.native
+  /* CompleteClass */
+  override var Permissions: IAccessControlList = js.native
+  /* CompleteClass */
+  override def Clone(): IActionSetPermissions = js.native
+}
 
 @JSGlobal("MFiles.ActionSetPermissions")
 @js.native

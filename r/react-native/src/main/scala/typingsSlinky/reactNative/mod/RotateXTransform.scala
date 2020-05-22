@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RotateXTransform extends js.Object {
-  var rotateX: String = js.native
+  var rotateX: String
 }
 
 object RotateXTransform {
@@ -15,19 +14,5 @@ object RotateXTransform {
     val __obj = js.Dynamic.literal(rotateX = rotateX.asInstanceOf[js.Any])
     __obj.asInstanceOf[RotateXTransform]
   }
-  @scala.inline
-  implicit class RotateXTransformOps[Self <: RotateXTransform] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRotateX(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateX")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

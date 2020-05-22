@@ -22,53 +22,16 @@ trait SavingsPlansDetails extends js.Object {
 
 object SavingsPlansDetails {
   @scala.inline
-  def apply(): SavingsPlansDetails = {
+  def apply(
+    InstanceFamily: GenericString = null,
+    OfferingId: GenericString = null,
+    Region: GenericString = null
+  ): SavingsPlansDetails = {
     val __obj = js.Dynamic.literal()
+    if (InstanceFamily != null) __obj.updateDynamic("InstanceFamily")(InstanceFamily.asInstanceOf[js.Any])
+    if (OfferingId != null) __obj.updateDynamic("OfferingId")(OfferingId.asInstanceOf[js.Any])
+    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansDetails]
   }
-  @scala.inline
-  implicit class SavingsPlansDetailsOps[Self <: SavingsPlansDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceFamily(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferingId(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

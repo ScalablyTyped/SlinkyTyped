@@ -83,10 +83,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JQuery
-  extends Target
-     with Text
-     with Title {
+trait JQuery extends js.Object {
   @JSName("qtip")
   var qtip_Original: Plugin = js.native
   def qtip(): JQuery = js.native

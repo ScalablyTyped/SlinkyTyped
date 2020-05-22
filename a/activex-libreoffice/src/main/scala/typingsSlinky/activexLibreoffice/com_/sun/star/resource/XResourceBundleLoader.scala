@@ -16,12 +16,11 @@ import scala.scalajs.js.annotation._
   * @see XResourceBundle
   * @see Locale
   */
-@js.native
 trait XResourceBundleLoader extends XInterface {
   /** loads the appropriate resource bundle subclass. */
-  def loadBundle(abaseName: String, aLocale: Locale): XResourceBundle = js.native
+  def loadBundle(abaseName: String, aLocale: Locale): XResourceBundle
   /** loads the appropriate resource bundle. */
-  def loadBundle_Default(aBaseName: String): XResourceBundle = js.native
+  def loadBundle_Default(aBaseName: String): XResourceBundle
 }
 
 object XResourceBundleLoader {
@@ -36,25 +35,5 @@ object XResourceBundleLoader {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), loadBundle = js.Any.fromFunction2(loadBundle), loadBundle_Default = js.Any.fromFunction1(loadBundle_Default), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XResourceBundleLoader]
   }
-  @scala.inline
-  implicit class XResourceBundleLoaderOps[Self <: XResourceBundleLoader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadBundle(value: (String, Locale) => XResourceBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBundle")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLoadBundle_Default(value: String => XResourceBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBundle_Default")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

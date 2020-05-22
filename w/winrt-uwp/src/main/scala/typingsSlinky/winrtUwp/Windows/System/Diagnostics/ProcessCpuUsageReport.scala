@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data about the CPU usage of the process. */
-@js.native
 trait ProcessCpuUsageReport extends js.Object {
   /** Gets the amount of CPU kernel time consumed by the process. */
-  var kernelTime: Double = js.native
+  var kernelTime: Double
   /** Gets the amount of CPU user time consumed by the process. */
-  var userTime: Double = js.native
+  var userTime: Double
 }
 
 object ProcessCpuUsageReport {
@@ -19,25 +18,5 @@ object ProcessCpuUsageReport {
     val __obj = js.Dynamic.literal(kernelTime = kernelTime.asInstanceOf[js.Any], userTime = userTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessCpuUsageReport]
   }
-  @scala.inline
-  implicit class ProcessCpuUsageReportOps[Self <: ProcessCpuUsageReport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKernelTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -26,9 +26,16 @@ object listTagsOfResourceCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListTagsOfResourceInput) = this()
+    /* CompleteClass */
+    override val input: ListTagsOfResourceInput = js.native
     val middlewareStack: MiddlewareStack[ListTagsOfResourceInput, ListTagsOfResourceOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[ListTagsOfResourceInput, ListTagsOfResourceOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[ListTagsOfResourceInput, ListTagsOfResourceOutput] = js.native
   }

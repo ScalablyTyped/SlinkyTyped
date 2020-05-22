@@ -10,21 +10,20 @@ import scala.scalajs.js.annotation._
   * "&key=value".
   * @see {@link http://msdn.microsoft.com/en-us/library/gg328483.aspx External Link: Open forms, views, dialogs, and reports with a URL}
   */
-@js.native
 trait DialogOpenParameters extends js.Object {
   /**
     * The unique identifier of the dialog, in Guid format, which is valid for the entity described
     * by: {@link EntityName}
     */
-  var DialogId: String = js.native
+  var DialogId: String
   /**
     * The logical name of the entity.
     */
-  var EntityName: String = js.native
+  var EntityName: String
   /**
     * The unique identifier for the targeted record.
     */
-  var ObjectId: String = js.native
+  var ObjectId: String
 }
 
 object DialogOpenParameters {
@@ -33,31 +32,5 @@ object DialogOpenParameters {
     val __obj = js.Dynamic.literal(DialogId = DialogId.asInstanceOf[js.Any], EntityName = EntityName.asInstanceOf[js.Any], ObjectId = ObjectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogOpenParameters]
   }
-  @scala.inline
-  implicit class DialogOpenParametersOps[Self <: DialogOpenParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDialogId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DialogId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntityName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

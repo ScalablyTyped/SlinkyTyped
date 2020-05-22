@@ -9,16 +9,15 @@ import scala.scalajs.js.annotation._
   * This is the generic interface for supporting the insertion and removal of indexed elements.
   * @see XContainer
   */
-@js.native
 trait XIndexContainer extends XIndexReplace {
   /**
     * inserts the given element at the specified index.
     *
     * To append an element, use the index "last index +1".
     */
-  def insertByIndex(Index: Double, Element: js.Any): Unit = js.native
+  def insertByIndex(Index: Double, Element: js.Any): Unit
   /** removes the element at the specified index. */
-  def removeByIndex(Index: Double): Unit = js.native
+  def removeByIndex(Index: Double): Unit
 }
 
 object XIndexContainer {
@@ -40,25 +39,5 @@ object XIndexContainer {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getByIndex = js.Any.fromFunction1(getByIndex), getCount = js.Any.fromFunction0(getCount), getElementType = js.Any.fromFunction0(getElementType), hasElements = js.Any.fromFunction0(hasElements), insertByIndex = js.Any.fromFunction2(insertByIndex), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByIndex = js.Any.fromFunction1(removeByIndex), replaceByIndex = js.Any.fromFunction2(replaceByIndex))
     __obj.asInstanceOf[XIndexContainer]
   }
-  @scala.inline
-  implicit class XIndexContainerOps[Self <: XIndexContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsertByIndex(value: (Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertByIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByIndex(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -20,5 +20,20 @@ class TexturePackerFrame protected ()
     scale: typingsSlinky.babylonjs.BABYLON.Vector2,
     offset: typingsSlinky.babylonjs.BABYLON.Vector2
   ) = this()
+  /**
+    * The frame ID
+    */
+  /* CompleteClass */
+  override var id: Double = js.native
+  /**
+    * The Frames offset
+    */
+  /* CompleteClass */
+  override var offset: typingsSlinky.babylonjs.BABYLON.Vector2 = js.native
+  /**
+    * The frames Scale
+    */
+  /* CompleteClass */
+  override var scale: typingsSlinky.babylonjs.BABYLON.Vector2 = js.native
 }
 

@@ -4,149 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PermissionChange extends js.Object {
-  var createdAt: js.Date = js.native
-  var id: String = js.native
-  var mayManage: js.UndefOr[Boolean] = js.native
-  var mayRead: js.UndefOr[Boolean] = js.native
-  var mayWrite: js.UndefOr[Boolean] = js.native
-  var metadataKey: js.UndefOr[String] = js.native
-  var metadataValue: js.UndefOr[String] = js.native
-  var realmUrl: String = js.native
-  var statusCode: js.UndefOr[Double] = js.native
-  var statusMessage: js.UndefOr[String] = js.native
-  var updatedAt: js.Date = js.native
-  var userId: String = js.native
+  var createdAt: js.Date
+  var id: String
+  var mayManage: js.UndefOr[Boolean] = js.undefined
+  var mayRead: js.UndefOr[Boolean] = js.undefined
+  var mayWrite: js.UndefOr[Boolean] = js.undefined
+  var metadataKey: js.UndefOr[String] = js.undefined
+  var metadataValue: js.UndefOr[String] = js.undefined
+  var realmUrl: String
+  var statusCode: js.UndefOr[Double] = js.undefined
+  var statusMessage: js.UndefOr[String] = js.undefined
+  var updatedAt: js.Date
+  var userId: String
 }
 
 object PermissionChange {
   @scala.inline
-  def apply(createdAt: js.Date, id: String, realmUrl: String, updatedAt: js.Date, userId: String): PermissionChange = {
+  def apply(
+    createdAt: js.Date,
+    id: String,
+    realmUrl: String,
+    updatedAt: js.Date,
+    userId: String,
+    mayManage: js.UndefOr[Boolean] = js.undefined,
+    mayRead: js.UndefOr[Boolean] = js.undefined,
+    mayWrite: js.UndefOr[Boolean] = js.undefined,
+    metadataKey: String = null,
+    metadataValue: String = null,
+    statusCode: js.UndefOr[Double] = js.undefined,
+    statusMessage: String = null
+  ): PermissionChange = {
     val __obj = js.Dynamic.literal(createdAt = createdAt.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], realmUrl = realmUrl.asInstanceOf[js.Any], updatedAt = updatedAt.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any])
+    if (!js.isUndefined(mayManage)) __obj.updateDynamic("mayManage")(mayManage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mayRead)) __obj.updateDynamic("mayRead")(mayRead.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mayWrite)) __obj.updateDynamic("mayWrite")(mayWrite.get.asInstanceOf[js.Any])
+    if (metadataKey != null) __obj.updateDynamic("metadataKey")(metadataKey.asInstanceOf[js.Any])
+    if (metadataValue != null) __obj.updateDynamic("metadataValue")(metadataValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(statusCode)) __obj.updateDynamic("statusCode")(statusCode.get.asInstanceOf[js.Any])
+    if (statusMessage != null) __obj.updateDynamic("statusMessage")(statusMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[PermissionChange]
   }
-  @scala.inline
-  implicit class PermissionChangeOps[Self <: PermissionChange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRealmUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realmUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMayManage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mayManage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMayManage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mayManage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMayRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mayRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMayRead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mayRead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMayWrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mayWrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMayWrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mayWrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

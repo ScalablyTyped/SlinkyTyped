@@ -7,114 +7,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabContentProps
   extends AllHTMLAttributes[TabContent]
      with ClassAttributes[TabContent] {
-  var animation: js.UndefOr[Boolean | ReactComponentClass[_]] = js.native
-  var bsClass: js.UndefOr[String] = js.native
-  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.native
-  var mountOnEnter: js.UndefOr[Boolean] = js.native
-  var unmountOnExit: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[Boolean | ReactComponentClass[_]] = js.undefined
+  var bsClass: js.UndefOr[String] = js.undefined
+  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var mountOnEnter: js.UndefOr[Boolean] = js.undefined
+  var unmountOnExit: js.UndefOr[Boolean] = js.undefined
 }
 
 object TabContentProps {
   @scala.inline
-  def apply(): TabContentProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[TabContent] = null,
+    ClassAttributes: ClassAttributes[TabContent] = null,
+    animation: Boolean | ReactComponentClass[_] = null,
+    bsClass: String = null,
+    componentClass: ReactComponentClass[_] = null,
+    mountOnEnter: js.UndefOr[Boolean] = js.undefined,
+    unmountOnExit: js.UndefOr[Boolean] = js.undefined
+  ): TabContentProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
+    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(mountOnEnter)) __obj.updateDynamic("mountOnEnter")(mountOnEnter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unmountOnExit)) __obj.updateDynamic("unmountOnExit")(unmountOnExit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabContentProps]
   }
-  @scala.inline
-  implicit class TabContentPropsOps[Self <: TabContentProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimationComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: Boolean | ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentClassFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentClassComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountOnEnter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountOnEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountOnEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountOnEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmountOnExit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountOnExit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmountOnExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountOnExit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

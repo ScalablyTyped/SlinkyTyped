@@ -1,5 +1,9 @@
 package typingsSlinky.victory.mod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.victory.anon.XBoolean
+import typingsSlinky.victory.anon.Y
+import typingsSlinky.victory.anon.`1`
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.labels
 import typingsSlinky.victory.victoryStrings.parent
@@ -7,7 +11,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VictoryScatterProps
   extends VictoryMultiLabeableProps
      with VictoryCommonProps
@@ -16,12 +19,12 @@ trait VictoryScatterProps
     * The bubbleProperty prop indicates which property of the data object should be used
     * to scale data points in a bubble chart
     */
-  var bubbleProperty: js.UndefOr[String] = js.native
+  var bubbleProperty: js.UndefOr[String] = js.undefined
   /**
     * Similar to data accessor props `x` and `y`, this prop may be used to functionally
     * assign eventKeys to data
     */
-  var eventKey: js.UndefOr[StringOrNumberOrCallback] = js.native
+  var eventKey: js.UndefOr[StringOrNumberOrCallback] = js.undefined
   /**
     * The event prop take an array of event objects. Event objects are composed of
     * a target, an eventKey, and eventHandlers. Targets may be any valid style namespace
@@ -64,20 +67,20 @@ trait VictoryScatterProps
     */
   var events: js.UndefOr[
     js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]]
-  ] = js.native
+  ] = js.undefined
   /**
     * The maxBubbleSize prop sets an upper limit for scaling data points in a bubble chart
     */
-  var maxBubbleSize: js.UndefOr[Double] = js.native
+  var maxBubbleSize: js.UndefOr[Double] = js.undefined
   /**
     * The samples prop specifies how many individual points to plot when plotting
     * y as a function of x. Samples is ignored if x props are provided instead.
     */
-  var samples: js.UndefOr[Double] = js.native
+  var samples: js.UndefOr[Double] = js.undefined
   /**
     * The size prop determines how to scale each data point
     */
-  var size: js.UndefOr[Double | (js.Function1[/* data */ js.Any, Double])] = js.native
+  var size: js.UndefOr[Double | (js.Function1[/* data */ js.Any, Double])] = js.undefined
   /**
     * The style prop specifies styles for your VictoryScatter. Any valid inline style properties
     * will be applied. Height, width, and padding should be specified via the height,
@@ -87,140 +90,81 @@ trait VictoryScatterProps
     * VictoryLabel, or any custom labelComponent.
     * @example {data: {fill: "red"}, labels: {fontSize: 12}}
     */
-  var style: js.UndefOr[VictoryStyleInterface] = js.native
+  var style: js.UndefOr[VictoryStyleInterface] = js.undefined
   /**
     * The symbol prop determines which symbol should be drawn to represent data points.
     */
-  var symbol: js.UndefOr[ScatterSymbolType | (js.Function1[/* data */ js.Any, ScatterSymbolType])] = js.native
+  var symbol: js.UndefOr[ScatterSymbolType | (js.Function1[/* data */ js.Any, ScatterSymbolType])] = js.undefined
 }
 
 object VictoryScatterProps {
   @scala.inline
-  def apply(): VictoryScatterProps = {
+  def apply(
+    animate: Boolean | AnimatePropTypeInterface = null,
+    bubbleProperty: String = null,
+    categories: CategoryPropType = null,
+    containerComponent: ReactElement = null,
+    data: js.Array[_] = null,
+    dataComponent: ReactElement = null,
+    domain: DomainPropType = null,
+    eventKey: StringOrNumberOrCallback = null,
+    events: js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]] = null,
+    groupComponent: ReactElement = null,
+    height: js.UndefOr[Double] = js.undefined,
+    horizontal: js.UndefOr[Boolean] = js.undefined,
+    labelComponent: ReactElement = null,
+    labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null,
+    maxBubbleSize: js.UndefOr[Double] = js.undefined,
+    maxDomain: Double | Y = null,
+    minDomain: Double | Y = null,
+    name: String = null,
+    padding: PaddingProps = null,
+    samples: js.UndefOr[Double] = js.undefined,
+    scale: ScalePropType | D3Scale | `1` = null,
+    singleQuadrantDomainPadding: Boolean | XBoolean = null,
+    size: Double | (js.Function1[/* data */ js.Any, Double]) = null,
+    standalone: js.UndefOr[Boolean] = js.undefined,
+    style: VictoryStyleInterface = null,
+    symbol: ScatterSymbolType | (js.Function1[/* data */ js.Any, ScatterSymbolType]) = null,
+    theme: VictoryThemeDefinition = null,
+    width: js.UndefOr[Double] = js.undefined,
+    x: DataGetterPropType = null,
+    y: DataGetterPropType = null,
+    y0: DataGetterPropType = null
+  ): VictoryScatterProps = {
     val __obj = js.Dynamic.literal()
+    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
+    if (bubbleProperty != null) __obj.updateDynamic("bubbleProperty")(bubbleProperty.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dataComponent != null) __obj.updateDynamic("dataComponent")(dataComponent.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.get.asInstanceOf[js.Any])
+    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBubbleSize)) __obj.updateDynamic("maxBubbleSize")(maxBubbleSize.get.asInstanceOf[js.Any])
+    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
+    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (!js.isUndefined(samples)) __obj.updateDynamic("samples")(samples.get.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
+    if (y0 != null) __obj.updateDynamic("y0")(y0.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryScatterProps]
   }
-  @scala.inline
-  implicit class VictoryScatterPropsOps[Self <: VictoryScatterProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBubbleProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBubbleProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventKeyFunction1(value: /* args */ CallbackArgs => String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEventKey(value: StringOrNumberOrCallback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBubbleSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBubbleSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBubbleSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBubbleSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamples(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamples: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samples")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeFunction1(value: /* data */ js.Any => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double | (js.Function1[/* data */ js.Any, Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: VictoryStyleInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolFunction1(value: /* data */ js.Any => ScatterSymbolType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: ScatterSymbolType | (js.Function1[/* data */ js.Any, ScatterSymbolType])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

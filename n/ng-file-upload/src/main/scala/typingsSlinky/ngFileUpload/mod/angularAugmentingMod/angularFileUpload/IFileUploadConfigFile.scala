@@ -1,12 +1,17 @@
 package typingsSlinky.ngFileUpload.mod.angularAugmentingMod.angularFileUpload
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.angular.mod.IHttpRequestConfigHeaders
+import typingsSlinky.angular.mod.IHttpRequestTransformer
+import typingsSlinky.angular.mod.IHttpResponseTransformer
+import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.angular.mod.IRequestConfig
 import typingsSlinky.angular.mod.global.Function
+import typingsSlinky.std.EventListenerOrEventListenerObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFileUploadConfigFile extends IRequestConfig {
   /**
     * This is to accommodate server implementations expecting array data object keys in '[i]' or '[]' or
@@ -15,138 +20,93 @@ trait IFileUploadConfigFile extends IRequestConfig {
     * data: {rec: {rec: [f[0], f[1], ...], arrayKey: '[]'} sent as: rec[] -> f[0], rec[] -> f[1],...
     * @type {string}
     */
-  var arrayKey: js.UndefOr[String] = js.native
+  var arrayKey: js.UndefOr[String] = js.undefined
   /**
     * Default false, experimental as hotfix for potential library conflicts with other plugins
     * @type {boolean}
     */
-  var disableProgress: js.UndefOr[Boolean] = js.native
+  var disableProgress: js.UndefOr[Boolean] = js.undefined
   /**
     * This is to accommodate server implementations expecting nested data object keys in .key or [key] format.
     * Example: data: {rec: {name: 'N', pic: file}} sent as: rec[name] -> N, rec[pic] -> file
     * data: {rec: {name: 'N', pic: file}, objectKey: '.k'} sent as: rec.name -> N, rec.pic -> file
     * @type {string}
     */
-  var objectKey: js.UndefOr[String] = js.native
+  var objectKey: js.UndefOr[String] = js.undefined
   /**
     * Upload in chunks of specified size
     * @type {(number|string)}
     */
-  var resumeChunkSize: js.UndefOr[Double | String] = js.native
+  var resumeChunkSize: js.UndefOr[Double | String] = js.undefined
   /**
     * Function that returns a prommise which will be resolved to the upload file size on the server.
     * @type {[type]}
     */
-  var resumeSize: js.UndefOr[Function] = js.native
+  var resumeSize: js.UndefOr[Function] = js.undefined
   /**
     * Reads the uploaded file size from resumeSizeUrl GET response
     * @type {Function}
     */
-  var resumeSizeResponseReader: js.UndefOr[Function] = js.native
+  var resumeSizeResponseReader: js.UndefOr[Function] = js.undefined
   /**
     * Uploaded file size so far on the server
     * @type {string}
     */
-  var resumeSizeUrl: js.UndefOr[String] = js.native
+  var resumeSizeUrl: js.UndefOr[String] = js.undefined
 }
 
 object IFileUploadConfigFile {
   @scala.inline
-  def apply(method: String, url: String): IFileUploadConfigFile = {
+  def apply(
+    method: String,
+    url: String,
+    arrayKey: String = null,
+    cache: js.Any = null,
+    data: js.Any = null,
+    disableProgress: js.UndefOr[Boolean] = js.undefined,
+    eventHandlers: StringDictionary[EventListenerOrEventListenerObject] = null,
+    headers: IHttpRequestConfigHeaders = null,
+    jsonpCallbackParam: String = null,
+    objectKey: String = null,
+    paramSerializer: String | (js.Function1[/* obj */ js.Any, String]) = null,
+    params: js.Any = null,
+    responseType: String = null,
+    resumeChunkSize: Double | String = null,
+    resumeSize: Function = null,
+    resumeSizeResponseReader: Function = null,
+    resumeSizeUrl: String = null,
+    timeout: Double | IPromise[_] = null,
+    transformRequest: IHttpRequestTransformer | js.Array[IHttpRequestTransformer] = null,
+    transformResponse: IHttpResponseTransformer | js.Array[IHttpResponseTransformer] = null,
+    uploadEventHandlers: StringDictionary[EventListenerOrEventListenerObject] = null,
+    withCredentials: js.UndefOr[Boolean] = js.undefined,
+    xsrfCookieName: String = null,
+    xsrfHeaderName: String = null
+  ): IFileUploadConfigFile = {
     val __obj = js.Dynamic.literal(method = method.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (arrayKey != null) __obj.updateDynamic("arrayKey")(arrayKey.asInstanceOf[js.Any])
+    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableProgress)) __obj.updateDynamic("disableProgress")(disableProgress.get.asInstanceOf[js.Any])
+    if (eventHandlers != null) __obj.updateDynamic("eventHandlers")(eventHandlers.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (jsonpCallbackParam != null) __obj.updateDynamic("jsonpCallbackParam")(jsonpCallbackParam.asInstanceOf[js.Any])
+    if (objectKey != null) __obj.updateDynamic("objectKey")(objectKey.asInstanceOf[js.Any])
+    if (paramSerializer != null) __obj.updateDynamic("paramSerializer")(paramSerializer.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
+    if (resumeChunkSize != null) __obj.updateDynamic("resumeChunkSize")(resumeChunkSize.asInstanceOf[js.Any])
+    if (resumeSize != null) __obj.updateDynamic("resumeSize")(resumeSize.asInstanceOf[js.Any])
+    if (resumeSizeResponseReader != null) __obj.updateDynamic("resumeSizeResponseReader")(resumeSizeResponseReader.asInstanceOf[js.Any])
+    if (resumeSizeUrl != null) __obj.updateDynamic("resumeSizeUrl")(resumeSizeUrl.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (transformRequest != null) __obj.updateDynamic("transformRequest")(transformRequest.asInstanceOf[js.Any])
+    if (transformResponse != null) __obj.updateDynamic("transformResponse")(transformResponse.asInstanceOf[js.Any])
+    if (uploadEventHandlers != null) __obj.updateDynamic("uploadEventHandlers")(uploadEventHandlers.asInstanceOf[js.Any])
+    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.get.asInstanceOf[js.Any])
+    if (xsrfCookieName != null) __obj.updateDynamic("xsrfCookieName")(xsrfCookieName.asInstanceOf[js.Any])
+    if (xsrfHeaderName != null) __obj.updateDynamic("xsrfHeaderName")(xsrfHeaderName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFileUploadConfigFile]
   }
-  @scala.inline
-  implicit class IFileUploadConfigFileOps[Self <: IFileUploadConfigFile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrayKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableProgress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResumeChunkSize(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeChunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResumeChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeChunkSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResumeSize(value: Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResumeSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResumeSizeResponseReader(value: Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeSizeResponseReader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResumeSizeResponseReader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeSizeResponseReader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResumeSizeUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeSizeUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResumeSizeUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeSizeUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

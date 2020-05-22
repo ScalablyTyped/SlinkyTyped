@@ -27,41 +27,14 @@ trait SchemaSpeechRecognitionResult extends js.Object {
 
 object SchemaSpeechRecognitionResult {
   @scala.inline
-  def apply(): SchemaSpeechRecognitionResult = {
+  def apply(
+    alternatives: js.Array[SchemaSpeechRecognitionAlternative] = null,
+    channelTag: js.UndefOr[Double] = js.undefined
+  ): SchemaSpeechRecognitionResult = {
     val __obj = js.Dynamic.literal()
+    if (alternatives != null) __obj.updateDynamic("alternatives")(alternatives.asInstanceOf[js.Any])
+    if (!js.isUndefined(channelTag)) __obj.updateDynamic("channelTag")(channelTag.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSpeechRecognitionResult]
   }
-  @scala.inline
-  implicit class SchemaSpeechRecognitionResultOps[Self <: SchemaSpeechRecognitionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlternatives(value: js.Array[SchemaSpeechRecognitionAlternative]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelTag(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelTag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

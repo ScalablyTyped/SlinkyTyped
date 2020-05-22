@@ -72,161 +72,34 @@ trait SchemaPasswordRequirements extends js.Object {
 
 object SchemaPasswordRequirements {
   @scala.inline
-  def apply(): SchemaPasswordRequirements = {
+  def apply(
+    maximumFailedPasswordsForWipe: js.UndefOr[Double] = js.undefined,
+    passwordExpirationTimeout: String = null,
+    passwordHistoryLength: js.UndefOr[Double] = js.undefined,
+    passwordMinimumLength: js.UndefOr[Double] = js.undefined,
+    passwordMinimumLetters: js.UndefOr[Double] = js.undefined,
+    passwordMinimumLowerCase: js.UndefOr[Double] = js.undefined,
+    passwordMinimumNonLetter: js.UndefOr[Double] = js.undefined,
+    passwordMinimumNumeric: js.UndefOr[Double] = js.undefined,
+    passwordMinimumSymbols: js.UndefOr[Double] = js.undefined,
+    passwordMinimumUpperCase: js.UndefOr[Double] = js.undefined,
+    passwordQuality: String = null,
+    passwordScope: String = null
+  ): SchemaPasswordRequirements = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maximumFailedPasswordsForWipe)) __obj.updateDynamic("maximumFailedPasswordsForWipe")(maximumFailedPasswordsForWipe.get.asInstanceOf[js.Any])
+    if (passwordExpirationTimeout != null) __obj.updateDynamic("passwordExpirationTimeout")(passwordExpirationTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordHistoryLength)) __obj.updateDynamic("passwordHistoryLength")(passwordHistoryLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumLength)) __obj.updateDynamic("passwordMinimumLength")(passwordMinimumLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumLetters)) __obj.updateDynamic("passwordMinimumLetters")(passwordMinimumLetters.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumLowerCase)) __obj.updateDynamic("passwordMinimumLowerCase")(passwordMinimumLowerCase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumNonLetter)) __obj.updateDynamic("passwordMinimumNonLetter")(passwordMinimumNonLetter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumNumeric)) __obj.updateDynamic("passwordMinimumNumeric")(passwordMinimumNumeric.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumSymbols)) __obj.updateDynamic("passwordMinimumSymbols")(passwordMinimumSymbols.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumUpperCase)) __obj.updateDynamic("passwordMinimumUpperCase")(passwordMinimumUpperCase.get.asInstanceOf[js.Any])
+    if (passwordQuality != null) __obj.updateDynamic("passwordQuality")(passwordQuality.asInstanceOf[js.Any])
+    if (passwordScope != null) __obj.updateDynamic("passwordScope")(passwordScope.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPasswordRequirements]
   }
-  @scala.inline
-  implicit class SchemaPasswordRequirementsOps[Self <: SchemaPasswordRequirements] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaximumFailedPasswordsForWipe(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFailedPasswordsForWipe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumFailedPasswordsForWipe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFailedPasswordsForWipe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordExpirationTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordExpirationTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordHistoryLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordHistoryLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordHistoryLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordHistoryLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumLetters(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLetters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumLetters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLetters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumLowerCase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLowerCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumLowerCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLowerCase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumNonLetter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumNonLetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumNonLetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumNonLetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumNumeric(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumNumeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumNumeric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumNumeric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumSymbols(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumSymbols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumSymbols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumSymbols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumUpperCase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumUpperCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumUpperCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumUpperCase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordQuality(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordQuality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordQuality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordScope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

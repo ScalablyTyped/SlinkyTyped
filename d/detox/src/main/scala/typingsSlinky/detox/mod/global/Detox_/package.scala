@@ -9,6 +9,7 @@ package object Detox_ {
   type CameraPermission = typingsSlinky.detox.mod.global.Detox_.PermissionState
   type ContactsPermission = typingsSlinky.detox.mod.global.Detox_.PermissionState
   type DetoxAny = typingsSlinky.detox.mod.global.Detox_.Element with typingsSlinky.detox.mod.global.Detox_.Actions[_] with typingsSlinky.detox.mod.global.Detox_.WaitFor
+  type FaceIDPermission = typingsSlinky.detox.mod.global.Detox_.PermissionState
   type HealthPermission = typingsSlinky.detox.mod.global.Detox_.PermissionState
   type HomekitPermission = typingsSlinky.detox.mod.global.Detox_.PermissionState
   type MediaLibraryPermission = typingsSlinky.detox.mod.global.Detox_.PermissionState

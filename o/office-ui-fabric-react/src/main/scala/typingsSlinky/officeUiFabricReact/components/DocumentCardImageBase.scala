@@ -9,7 +9,7 @@ import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCard
 import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCardImageStyles
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.imageTypesMod.ImageFit
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -46,7 +46,7 @@ object DocumentCardImageBase {
     @scala.inline
     def imageSrc(value: String): this.type = set("imageSrc", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDocumentCardImageStyleProps => Partial[IDocumentCardImageStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDocumentCardImageStyleProps => DeepPartial[IDocumentCardImageStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardImageStyleProps, IDocumentCardImageStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

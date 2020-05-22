@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AgentBasedDeployPhase extends DeployPhase {
-  var deploymentInput: AgentDeploymentInput = js.native
+  var deploymentInput: AgentDeploymentInput
 }
 
 object AgentBasedDeployPhase {
@@ -21,19 +20,5 @@ object AgentBasedDeployPhase {
     val __obj = js.Dynamic.literal(deploymentInput = deploymentInput.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], phaseType = phaseType.asInstanceOf[js.Any], rank = rank.asInstanceOf[js.Any], workflowTasks = workflowTasks.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgentBasedDeployPhase]
   }
-  @scala.inline
-  implicit class AgentBasedDeployPhaseOps[Self <: AgentBasedDeployPhase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentInput(value: AgentDeploymentInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

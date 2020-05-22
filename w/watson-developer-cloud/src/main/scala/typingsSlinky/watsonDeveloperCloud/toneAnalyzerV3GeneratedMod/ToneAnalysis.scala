@@ -5,45 +5,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** ToneAnalysis. */
-@js.native
 trait ToneAnalysis extends js.Object {
   /** An object of type `DocumentAnalysis` that provides the results of the analysis for the full input document. */
-  var document_tone: DocumentAnalysis = js.native
+  var document_tone: DocumentAnalysis
   /** An array of `SentenceAnalysis` objects that provides the results of the analysis for the individual sentences of the input content. The service returns results only for the first 100 sentences of the input. The field is omitted if the `sentences` parameter of the request is set to `false`. */
-  var sentences_tone: js.UndefOr[js.Array[SentenceAnalysis]] = js.native
+  var sentences_tone: js.UndefOr[js.Array[SentenceAnalysis]] = js.undefined
 }
 
 object ToneAnalysis {
   @scala.inline
-  def apply(document_tone: DocumentAnalysis): ToneAnalysis = {
+  def apply(document_tone: DocumentAnalysis, sentences_tone: js.Array[SentenceAnalysis] = null): ToneAnalysis = {
     val __obj = js.Dynamic.literal(document_tone = document_tone.asInstanceOf[js.Any])
+    if (sentences_tone != null) __obj.updateDynamic("sentences_tone")(sentences_tone.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToneAnalysis]
   }
-  @scala.inline
-  implicit class ToneAnalysisOps[Self <: ToneAnalysis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocument_tone(value: DocumentAnalysis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_tone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSentences_tone(value: js.Array[SentenceAnalysis]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences_tone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentences_tone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences_tone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

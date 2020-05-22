@@ -13,28 +13,27 @@ import scala.scalajs.js.annotation._
   * @see XShapeEventListener
   * @since OOo 3.0
   */
-@js.native
 trait XSlideShowListener extends XAnimationListener {
   /**
     * Notifies that a hyperlink has been clicked.
     * @param hyperLink hyperlink URL
     */
-  def hyperLinkClicked(hyperLink: String): Unit = js.native
+  def hyperLinkClicked(hyperLink: String): Unit
   /** Notify that the slide show is paused */
-  def paused(): Unit = js.native
+  def paused(): Unit
   /** Notify that the slide show is resumed from a paused state */
-  def resumed(): Unit = js.native
+  def resumed(): Unit
   /** Notify that the last animation from the main sequence of the current slide has ended. */
-  def slideAnimationsEnded(): Unit = js.native
+  def slideAnimationsEnded(): Unit
   /**
     * Notify that the current slide has ended, e.g. the user has clicked on the slide. Calling displaySlide() twice will not issue this event.
     * @param reverse For the default order (forward) this flag is `FALSE` . When the main sequence was traversed in reverse order then this flag is `TRUE` .
     */
-  def slideEnded(reverse: Boolean): Unit = js.native
+  def slideEnded(reverse: Boolean): Unit
   /** Notify that the slide transition of the current slide ended. */
-  def slideTransitionEnded(): Unit = js.native
+  def slideTransitionEnded(): Unit
   /** Notify that a new slide starts to become visible. */
-  def slideTransitionStarted(): Unit = js.native
+  def slideTransitionStarted(): Unit
 }
 
 object XSlideShowListener {
@@ -58,55 +57,5 @@ object XSlideShowListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), beginEvent = js.Any.fromFunction1(beginEvent), disposing = js.Any.fromFunction1(disposing), endEvent = js.Any.fromFunction1(endEvent), hyperLinkClicked = js.Any.fromFunction1(hyperLinkClicked), paused = js.Any.fromFunction0(paused), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), repeat = js.Any.fromFunction2(repeat), resumed = js.Any.fromFunction0(resumed), slideAnimationsEnded = js.Any.fromFunction0(slideAnimationsEnded), slideEnded = js.Any.fromFunction1(slideEnded), slideTransitionEnded = js.Any.fromFunction0(slideTransitionEnded), slideTransitionStarted = js.Any.fromFunction0(slideTransitionStarted))
     __obj.asInstanceOf[XSlideShowListener]
   }
-  @scala.inline
-  implicit class XSlideShowListenerOps[Self <: XSlideShowListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHyperLinkClicked(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperLinkClicked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPaused(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResumed(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSlideAnimationsEnded(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideAnimationsEnded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSlideEnded(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideEnded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSlideTransitionEnded(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideTransitionEnded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSlideTransitionStarted(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideTransitionStarted")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

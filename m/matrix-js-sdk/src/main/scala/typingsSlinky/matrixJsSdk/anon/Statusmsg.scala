@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Statusmsg extends js.Object {
-  var presence: String = js.native
+  var presence: String
   // One of "online", "offline" or "unavailable"
-  var status_msg: String = js.native
+  var status_msg: String
 }
 
 object Statusmsg {
@@ -17,25 +16,5 @@ object Statusmsg {
     val __obj = js.Dynamic.literal(presence = presence.asInstanceOf[js.Any], status_msg = status_msg.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statusmsg]
   }
-  @scala.inline
-  implicit class StatusmsgOps[Self <: Statusmsg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPresence(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("presence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus_msg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status_msg")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.winrt.global.Windows.Globalization
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Globalization.DateTimeFormatting.DayFormat
 import typingsSlinky.winrt.Windows.Globalization.DateTimeFormatting.DayOfWeekFormat
 import typingsSlinky.winrt.Windows.Globalization.DateTimeFormatting.HourFormat
@@ -57,6 +58,40 @@ object DateTimeFormatting extends js.Object {
       calendar: String,
       clock: String
     ) = this()
+    /* CompleteClass */
+    override var calendar: String = js.native
+    /* CompleteClass */
+    override var clock: String = js.native
+    /* CompleteClass */
+    override var geographicRegion: String = js.native
+    /* CompleteClass */
+    override var includeDay: DayFormat = js.native
+    /* CompleteClass */
+    override var includeDayOfWeek: DayOfWeekFormat = js.native
+    /* CompleteClass */
+    override var includeHour: HourFormat = js.native
+    /* CompleteClass */
+    override var includeMinute: MinuteFormat = js.native
+    /* CompleteClass */
+    override var includeMonth: MonthFormat = js.native
+    /* CompleteClass */
+    override var includeSecond: SecondFormat = js.native
+    /* CompleteClass */
+    override var includeYear: YearFormat = js.native
+    /* CompleteClass */
+    override var languages: IVectorView[String] = js.native
+    /* CompleteClass */
+    override var numeralSystem: String = js.native
+    /* CompleteClass */
+    override var patterns: IVectorView[String] = js.native
+    /* CompleteClass */
+    override var resolvedGeographicRegion: String = js.native
+    /* CompleteClass */
+    override var resolvedLanguage: String = js.native
+    /* CompleteClass */
+    override var template: String = js.native
+    /* CompleteClass */
+    override def format(value: js.Date): String = js.native
   }
   
   /* static members */

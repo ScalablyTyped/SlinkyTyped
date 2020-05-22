@@ -1,139 +1,75 @@
 package typingsSlinky.reactMic.mod
 
 import org.scalajs.dom.raw.Blob
+import typingsSlinky.reactMic.reactMicNumbers.`1`
+import typingsSlinky.reactMic.reactMicNumbers.`2`
+import typingsSlinky.reactMic.reactMicStrings.audioSlashwav
+import typingsSlinky.reactMic.reactMicStrings.audioSlashwebm
 import typingsSlinky.reactMic.reactMicStrings.frequencyBars
 import typingsSlinky.reactMic.reactMicStrings.sinewave
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactMicProps extends js.Object {
+  /** Enables/disables auto gain control, defaults -> false */
+  var autoGainControl: js.UndefOr[Boolean] = js.undefined
   /** Background color */
-  var backgroundColor: js.UndefOr[String] = js.native
-  var className: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
+  /** Specify 1 for mono, defaults -> 2 (stereo) */
+  var channelCount: js.UndefOr[`1` | `2`] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  /** Enables/disables echo cancellation, defaults -> false */
+  var echoCancellation: js.UndefOr[Boolean] = js.undefined
+  /** defaults -> "audio/webm".  Set to "audio/wav" for WAV or "audio/mp3" for MP3 audio format (available in React-Mic-Gold) */
+  var mimeType: js.UndefOr[audioSlashwebm | audioSlashwav] = js.undefined
+  /** Enables/disables background noise suppression, defaults -> false */
+  var noiseSuppression: js.UndefOr[Boolean] = js.undefined
   /** Callback that is executed when chunk of audio is available */
-  var onData: js.UndefOr[js.Function1[/* recordedData */ Blob, Unit]] = js.native
+  var onData: js.UndefOr[js.Function1[/* recordedData */ Blob, Unit]] = js.undefined
   /** Callback that is executed when audio stops recording */
-  var onStop: js.UndefOr[js.Function1[/* recordedData */ ReactMicStopEvent, Unit]] = js.native
+  var onStop: js.UndefOr[js.Function1[/* recordedData */ ReactMicStopEvent, Unit]] = js.undefined
   /** Available in React-Mic-Plus upgrade only */
-  var pause: js.UndefOr[Boolean] = js.native
+  var pause: js.UndefOr[Boolean] = js.undefined
   /** Set to true to begin recording */
-  var record: js.UndefOr[Boolean] = js.native
+  var record: js.UndefOr[Boolean] = js.undefined
   /** Sound wave color */
-  var strokeColor: js.UndefOr[String] = js.native
-  var visualSetting: js.UndefOr[sinewave | frequencyBars] = js.native
+  var strokeColor: js.UndefOr[String] = js.undefined
+  var visualSetting: js.UndefOr[sinewave | frequencyBars] = js.undefined
 }
 
 object ReactMicProps {
   @scala.inline
-  def apply(): ReactMicProps = {
+  def apply(
+    autoGainControl: js.UndefOr[Boolean] = js.undefined,
+    backgroundColor: String = null,
+    channelCount: `1` | `2` = null,
+    className: String = null,
+    echoCancellation: js.UndefOr[Boolean] = js.undefined,
+    mimeType: audioSlashwebm | audioSlashwav = null,
+    noiseSuppression: js.UndefOr[Boolean] = js.undefined,
+    onData: /* recordedData */ Blob => Unit = null,
+    onStop: /* recordedData */ ReactMicStopEvent => Unit = null,
+    pause: js.UndefOr[Boolean] = js.undefined,
+    record: js.UndefOr[Boolean] = js.undefined,
+    strokeColor: String = null,
+    visualSetting: sinewave | frequencyBars = null
+  ): ReactMicProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoGainControl)) __obj.updateDynamic("autoGainControl")(autoGainControl.get.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (channelCount != null) __obj.updateDynamic("channelCount")(channelCount.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(echoCancellation)) __obj.updateDynamic("echoCancellation")(echoCancellation.get.asInstanceOf[js.Any])
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
+    if (!js.isUndefined(noiseSuppression)) __obj.updateDynamic("noiseSuppression")(noiseSuppression.get.asInstanceOf[js.Any])
+    if (onData != null) __obj.updateDynamic("onData")(js.Any.fromFunction1(onData))
+    if (onStop != null) __obj.updateDynamic("onStop")(js.Any.fromFunction1(onStop))
+    if (!js.isUndefined(pause)) __obj.updateDynamic("pause")(pause.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(record)) __obj.updateDynamic("record")(record.get.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (visualSetting != null) __obj.updateDynamic("visualSetting")(visualSetting.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactMicProps]
   }
-  @scala.inline
-  implicit class ReactMicPropsOps[Self <: ReactMicProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnData(value: /* recordedData */ Blob => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onData")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStop(value: /* recordedData */ ReactMicStopEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPause(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecord(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("record")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecord: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("record")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualSetting(value: sinewave | frequencyBars): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualSetting")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

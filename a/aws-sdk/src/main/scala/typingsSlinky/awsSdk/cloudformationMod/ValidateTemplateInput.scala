@@ -18,41 +18,11 @@ trait ValidateTemplateInput extends js.Object {
 
 object ValidateTemplateInput {
   @scala.inline
-  def apply(): ValidateTemplateInput = {
+  def apply(TemplateBody: TemplateBody = null, TemplateURL: TemplateURL = null): ValidateTemplateInput = {
     val __obj = js.Dynamic.literal()
+    if (TemplateBody != null) __obj.updateDynamic("TemplateBody")(TemplateBody.asInstanceOf[js.Any])
+    if (TemplateURL != null) __obj.updateDynamic("TemplateURL")(TemplateURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidateTemplateInput]
   }
-  @scala.inline
-  implicit class ValidateTemplateInputOps[Self <: ValidateTemplateInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTemplateBody(value: TemplateBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateURL(value: TemplateURL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateURL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

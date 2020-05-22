@@ -18,41 +18,14 @@ trait AnomalyDetectorConfiguration extends js.Object {
 
 object AnomalyDetectorConfiguration {
   @scala.inline
-  def apply(): AnomalyDetectorConfiguration = {
+  def apply(
+    ExcludedTimeRanges: AnomalyDetectorExcludedTimeRanges = null,
+    MetricTimezone: AnomalyDetectorMetricTimezone = null
+  ): AnomalyDetectorConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (ExcludedTimeRanges != null) __obj.updateDynamic("ExcludedTimeRanges")(ExcludedTimeRanges.asInstanceOf[js.Any])
+    if (MetricTimezone != null) __obj.updateDynamic("MetricTimezone")(MetricTimezone.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnomalyDetectorConfiguration]
   }
-  @scala.inline
-  implicit class AnomalyDetectorConfigurationOps[Self <: AnomalyDetectorConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExcludedTimeRanges(value: AnomalyDetectorExcludedTimeRanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedTimeRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedTimeRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedTimeRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricTimezone(value: AnomalyDetectorMetricTimezone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricTimezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricTimezone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricTimezone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.Foundation.Diagnostics
 
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Foundation.Diagnostics.ErrorDetails")
 @js.native
 abstract class ErrorDetails ()
-  extends typingsSlinky.winrtUwp.Windows.Foundation.Diagnostics.ErrorDetails
+  extends typingsSlinky.winrtUwp.Windows.Foundation.Diagnostics.ErrorDetails {
+  /** Gets a short description of the error. */
+  /* CompleteClass */
+  override var description: String = js.native
+  /** Gets the address to a help page about the error. */
+  /* CompleteClass */
+  override var helpUri: Uri = js.native
+  /** Gets a detailed description of the error. */
+  /* CompleteClass */
+  override var longDescription: String = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Foundation.Diagnostics.ErrorDetails")

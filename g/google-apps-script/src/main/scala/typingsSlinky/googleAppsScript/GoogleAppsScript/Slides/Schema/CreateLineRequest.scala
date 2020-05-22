@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateLineRequest extends js.Object {
-  var category: js.UndefOr[String] = js.native
-  var elementProperties: js.UndefOr[PageElementProperties] = js.native
-  var lineCategory: js.UndefOr[String] = js.native
-  var objectId: js.UndefOr[String] = js.native
+  var category: js.UndefOr[String] = js.undefined
+  var elementProperties: js.UndefOr[PageElementProperties] = js.undefined
+  var lineCategory: js.UndefOr[String] = js.undefined
+  var objectId: js.UndefOr[String] = js.undefined
 }
 
 object CreateLineRequest {
   @scala.inline
-  def apply(): CreateLineRequest = {
+  def apply(
+    category: String = null,
+    elementProperties: PageElementProperties = null,
+    lineCategory: String = null,
+    objectId: String = null
+  ): CreateLineRequest = {
     val __obj = js.Dynamic.literal()
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (elementProperties != null) __obj.updateDynamic("elementProperties")(elementProperties.asInstanceOf[js.Any])
+    if (lineCategory != null) __obj.updateDynamic("lineCategory")(lineCategory.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLineRequest]
   }
-  @scala.inline
-  implicit class CreateLineRequestOps[Self <: CreateLineRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementProperties(value: PageElementProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElementProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

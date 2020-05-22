@@ -1,40 +1,61 @@
 package typingsSlinky.hopscotch
 
+import typingsSlinky.hopscotch.anon.CloseTooltip
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TourDefinition extends HopscotchConfiguration {
-  var id: String = js.native
-  var steps: js.Array[StepDefinition] = js.native
+  var id: String
+  var steps: js.Array[StepDefinition]
 }
 
 object TourDefinition {
   @scala.inline
-  def apply(id: String, steps: js.Array[StepDefinition]): TourDefinition = {
+  def apply(
+    id: String,
+    steps: js.Array[StepDefinition],
+    arrowWidth: js.UndefOr[Double] = js.undefined,
+    bubbleWidth: js.UndefOr[Double] = js.undefined,
+    buddleHeight: js.UndefOr[Double] = js.undefined,
+    i18n: CloseTooltip = null,
+    nextOnTargetClick: js.UndefOr[Boolean] = js.undefined,
+    onClose: CallbackNameNamesOrDefinition = null,
+    onEnd: CallbackNameNamesOrDefinition = null,
+    onError: CallbackNameNamesOrDefinition = null,
+    onNext: CallbackNameNamesOrDefinition = null,
+    onPrev: CallbackNameNamesOrDefinition = null,
+    onShow: CallbackNameNamesOrDefinition = null,
+    onStart: CallbackNameNamesOrDefinition = null,
+    scrollDuration: js.UndefOr[Double] = js.undefined,
+    scrollTopMargin: js.UndefOr[Double] = js.undefined,
+    showCloseButton: js.UndefOr[Boolean] = js.undefined,
+    showNextButton: js.UndefOr[Boolean] = js.undefined,
+    showPrevButton: js.UndefOr[Boolean] = js.undefined,
+    skipIfNoElement: js.UndefOr[Boolean] = js.undefined,
+    smoothScroll: js.UndefOr[Boolean] = js.undefined
+  ): TourDefinition = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], steps = steps.asInstanceOf[js.Any])
+    if (!js.isUndefined(arrowWidth)) __obj.updateDynamic("arrowWidth")(arrowWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bubbleWidth)) __obj.updateDynamic("bubbleWidth")(bubbleWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(buddleHeight)) __obj.updateDynamic("buddleHeight")(buddleHeight.get.asInstanceOf[js.Any])
+    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
+    if (!js.isUndefined(nextOnTargetClick)) __obj.updateDynamic("nextOnTargetClick")(nextOnTargetClick.get.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(onClose.asInstanceOf[js.Any])
+    if (onEnd != null) __obj.updateDynamic("onEnd")(onEnd.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(onError.asInstanceOf[js.Any])
+    if (onNext != null) __obj.updateDynamic("onNext")(onNext.asInstanceOf[js.Any])
+    if (onPrev != null) __obj.updateDynamic("onPrev")(onPrev.asInstanceOf[js.Any])
+    if (onShow != null) __obj.updateDynamic("onShow")(onShow.asInstanceOf[js.Any])
+    if (onStart != null) __obj.updateDynamic("onStart")(onStart.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollDuration)) __obj.updateDynamic("scrollDuration")(scrollDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollTopMargin)) __obj.updateDynamic("scrollTopMargin")(scrollTopMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCloseButton)) __obj.updateDynamic("showCloseButton")(showCloseButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showNextButton)) __obj.updateDynamic("showNextButton")(showNextButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showPrevButton)) __obj.updateDynamic("showPrevButton")(showPrevButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipIfNoElement)) __obj.updateDynamic("skipIfNoElement")(skipIfNoElement.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smoothScroll)) __obj.updateDynamic("smoothScroll")(smoothScroll.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TourDefinition]
   }
-  @scala.inline
-  implicit class TourDefinitionOps[Self <: TourDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSteps(value: js.Array[StepDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryAutocompleteResponse extends js.Object {
   /**
     * When the Places service returns a status code other than `OK`, there may be an additional `error_message` field
     * within the response object. This field contains more detailed information about the reasons behind the given status code.
     */
-  var error_message: String = js.native
+  var error_message: String
   /** containing information about a single query prediction. */
-  var predictions: js.Array[QueryAutocompleteResult] = js.native
+  var predictions: js.Array[QueryAutocompleteResult]
   /** contains metadata on the request. */
-  var status: QueryAutocompleteResponseStatus = js.native
+  var status: QueryAutocompleteResponseStatus
 }
 
 object QueryAutocompleteResponse {
@@ -27,31 +26,5 @@ object QueryAutocompleteResponse {
     val __obj = js.Dynamic.literal(error_message = error_message.asInstanceOf[js.Any], predictions = predictions.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryAutocompleteResponse]
   }
-  @scala.inline
-  implicit class QueryAutocompleteResponseOps[Self <: QueryAutocompleteResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError_message(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPredictions(value: js.Array[QueryAutocompleteResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: QueryAutocompleteResponseStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

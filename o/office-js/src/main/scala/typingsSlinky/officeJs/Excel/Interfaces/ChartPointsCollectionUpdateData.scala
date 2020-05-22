@@ -5,36 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the ChartPointsCollection object, for use in `chartPointsCollection.set({ ... })`. */
-@js.native
 trait ChartPointsCollectionUpdateData extends js.Object {
-  var items: js.UndefOr[js.Array[ChartPointData]] = js.native
+  var items: js.UndefOr[js.Array[ChartPointData]] = js.undefined
 }
 
 object ChartPointsCollectionUpdateData {
   @scala.inline
-  def apply(): ChartPointsCollectionUpdateData = {
+  def apply(items: js.Array[ChartPointData] = null): ChartPointsCollectionUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartPointsCollectionUpdateData]
   }
-  @scala.inline
-  implicit class ChartPointsCollectionUpdateDataOps[Self <: ChartPointsCollectionUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[ChartPointData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

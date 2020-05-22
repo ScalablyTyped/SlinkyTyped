@@ -23,9 +23,13 @@ trait CreateDomainConfigurationRequest extends js.Object {
     */
   var serverCertificateArns: js.UndefOr[ServerCertificateArns] = js.native
   /**
-    * The type of service delivered by the endpoint.
+    * The type of service delivered by the endpoint.  AWS IoT Core currently supports only the DATA service type. 
     */
   var serviceType: js.UndefOr[ServiceType] = js.native
+  /**
+    * Metadata which can be used to manage the domain configuration.  For URI Request parameters use format: ...key1=value1&amp;key2=value2... For the CLI command-line parameter use format: &amp;&amp;tags "key1=value1&amp;key2=value2..." For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..." 
+    */
+  var tags: js.UndefOr[TagList] = js.native
   /**
     * The certificate used to validate the server certificate and prove domain name ownership. This certificate must be signed by a public certificate authority. This value is not required for AWS-managed domains.
     */
@@ -34,83 +38,23 @@ trait CreateDomainConfigurationRequest extends js.Object {
 
 object CreateDomainConfigurationRequest {
   @scala.inline
-  def apply(domainConfigurationName: DomainConfigurationName): CreateDomainConfigurationRequest = {
+  def apply(
+    domainConfigurationName: DomainConfigurationName,
+    authorizerConfig: AuthorizerConfig = null,
+    domainName: DomainName = null,
+    serverCertificateArns: ServerCertificateArns = null,
+    serviceType: ServiceType = null,
+    tags: TagList = null,
+    validationCertificateArn: AcmCertificateArn = null
+  ): CreateDomainConfigurationRequest = {
     val __obj = js.Dynamic.literal(domainConfigurationName = domainConfigurationName.asInstanceOf[js.Any])
+    if (authorizerConfig != null) __obj.updateDynamic("authorizerConfig")(authorizerConfig.asInstanceOf[js.Any])
+    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
+    if (serverCertificateArns != null) __obj.updateDynamic("serverCertificateArns")(serverCertificateArns.asInstanceOf[js.Any])
+    if (serviceType != null) __obj.updateDynamic("serviceType")(serviceType.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (validationCertificateArn != null) __obj.updateDynamic("validationCertificateArn")(validationCertificateArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDomainConfigurationRequest]
   }
-  @scala.inline
-  implicit class CreateDomainConfigurationRequestOps[Self <: CreateDomainConfigurationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainConfigurationName(value: DomainConfigurationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainConfigurationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthorizerConfig(value: AuthorizerConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizerConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainName(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerCertificateArns(value: ServerCertificateArns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCertificateArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerCertificateArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCertificateArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceType(value: ServiceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationCertificateArn(value: AcmCertificateArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationCertificateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationCertificateArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationCertificateArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,9 @@
 package typingsSlinky.winrt.global.Windows.ApplicationModel.Resources
 
+import typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceType
+import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Foundation.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,16 +14,44 @@ import scala.scalajs.js.annotation._
 object Management extends js.Object {
   @js.native
   class IndexedResourceCandidate ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate {
+    /* CompleteClass */
+    override var metadata: IMapView[String, String] = js.native
+    /* CompleteClass */
+    override var qualifiers: IVectorView[
+        typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier
+      ] = js.native
+    /* CompleteClass */
+    override var `type`: IndexedResourceType = js.native
+    /* CompleteClass */
+    override var uri: Uri = js.native
+    /* CompleteClass */
+    override var valueAsString: String = js.native
+    /* CompleteClass */
+    override def getQualifierValue(qualifierName: String): String = js.native
+  }
   
   @js.native
   class IndexedResourceQualifier ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier {
+    /* CompleteClass */
+    override var qualifierName: String = js.native
+    /* CompleteClass */
+    override var qualifierValue: String = js.native
+  }
   
   @js.native
   class ResourceIndexer protected ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.ResourceIndexer {
     def this(projectRoot: Uri) = this()
+    /* CompleteClass */
+    override def indexFileContentsAsync(file: Uri): IAsyncOperation[
+        IVectorView[
+          typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate
+        ]
+      ] = js.native
+    /* CompleteClass */
+    override def indexFilePath(filePath: Uri): typingsSlinky.winrt.Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate = js.native
   }
   
   @js.native

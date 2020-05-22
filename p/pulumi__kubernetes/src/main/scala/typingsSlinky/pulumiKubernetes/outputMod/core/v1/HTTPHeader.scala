@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * HTTPHeader describes a custom header to be used in HTTP probes
   */
-@js.native
 trait HTTPHeader extends js.Object {
   /**
     * The header field name
     */
-  val name: String = js.native
+  val name: String
   /**
     * The header field value
     */
-  val value: String = js.native
+  val value: String
 }
 
 object HTTPHeader {
@@ -25,25 +24,5 @@ object HTTPHeader {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTTPHeader]
   }
-  @scala.inline
-  implicit class HTTPHeaderOps[Self <: HTTPHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

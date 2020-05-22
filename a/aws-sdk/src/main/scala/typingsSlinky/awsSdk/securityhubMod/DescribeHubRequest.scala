@@ -14,29 +14,10 @@ trait DescribeHubRequest extends js.Object {
 
 object DescribeHubRequest {
   @scala.inline
-  def apply(): DescribeHubRequest = {
+  def apply(HubArn: NonEmptyString = null): DescribeHubRequest = {
     val __obj = js.Dynamic.literal()
+    if (HubArn != null) __obj.updateDynamic("HubArn")(HubArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHubRequest]
   }
-  @scala.inline
-  implicit class DescribeHubRequestOps[Self <: DescribeHubRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHubArn(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HubArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHubArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HubArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

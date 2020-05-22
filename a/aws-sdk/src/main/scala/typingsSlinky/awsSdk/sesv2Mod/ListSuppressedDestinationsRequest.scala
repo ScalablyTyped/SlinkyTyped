@@ -30,77 +30,20 @@ trait ListSuppressedDestinationsRequest extends js.Object {
 
 object ListSuppressedDestinationsRequest {
   @scala.inline
-  def apply(): ListSuppressedDestinationsRequest = {
+  def apply(
+    EndDate: js.Date = null,
+    NextToken: NextToken = null,
+    PageSize: js.UndefOr[MaxItems] = js.undefined,
+    Reasons: SuppressionListReasons = null,
+    StartDate: js.Date = null
+  ): ListSuppressedDestinationsRequest = {
     val __obj = js.Dynamic.literal()
+    if (EndDate != null) __obj.updateDynamic("EndDate")(EndDate.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(PageSize)) __obj.updateDynamic("PageSize")(PageSize.get.asInstanceOf[js.Any])
+    if (Reasons != null) __obj.updateDynamic("Reasons")(Reasons.asInstanceOf[js.Any])
+    if (StartDate != null) __obj.updateDynamic("StartDate")(StartDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSuppressedDestinationsRequest]
   }
-  @scala.inline
-  implicit class ListSuppressedDestinationsRequestOps[Self <: ListSuppressedDestinationsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: MaxItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasons(value: SuppressionListReasons): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reasons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reasons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

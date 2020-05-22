@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabsStyle extends js.Object {
-  var bottomTabBarSplitLine: ViewStyle = js.native
-  var container: ViewStyle = js.native
-  var topTabBarSplitLine: ViewStyle = js.native
+  var bottomTabBarSplitLine: ViewStyle
+  var container: ViewStyle
+  var topTabBarSplitLine: ViewStyle
 }
 
 object TabsStyle {
@@ -18,31 +17,5 @@ object TabsStyle {
     val __obj = js.Dynamic.literal(bottomTabBarSplitLine = bottomTabBarSplitLine.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], topTabBarSplitLine = topTabBarSplitLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabsStyle]
   }
-  @scala.inline
-  implicit class TabsStyleOps[Self <: TabsStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottomTabBarSplitLine(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomTabBarSplitLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopTabBarSplitLine(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topTabBarSplitLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

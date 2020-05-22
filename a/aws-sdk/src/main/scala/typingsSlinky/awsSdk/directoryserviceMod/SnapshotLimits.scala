@@ -22,53 +22,16 @@ trait SnapshotLimits extends js.Object {
 
 object SnapshotLimits {
   @scala.inline
-  def apply(): SnapshotLimits = {
+  def apply(
+    ManualSnapshotsCurrentCount: js.UndefOr[Limit] = js.undefined,
+    ManualSnapshotsLimit: js.UndefOr[Limit] = js.undefined,
+    ManualSnapshotsLimitReached: js.UndefOr[ManualSnapshotsLimitReached] = js.undefined
+  ): SnapshotLimits = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ManualSnapshotsCurrentCount)) __obj.updateDynamic("ManualSnapshotsCurrentCount")(ManualSnapshotsCurrentCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ManualSnapshotsLimit)) __obj.updateDynamic("ManualSnapshotsLimit")(ManualSnapshotsLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ManualSnapshotsLimitReached)) __obj.updateDynamic("ManualSnapshotsLimitReached")(ManualSnapshotsLimitReached.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapshotLimits]
   }
-  @scala.inline
-  implicit class SnapshotLimitsOps[Self <: SnapshotLimits] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManualSnapshotsCurrentCount(value: Limit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotsCurrentCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManualSnapshotsCurrentCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotsCurrentCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManualSnapshotsLimit(value: Limit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotsLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManualSnapshotsLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotsLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManualSnapshotsLimitReached(value: ManualSnapshotsLimitReached): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotsLimitReached")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManualSnapshotsLimitReached: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotsLimitReached")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

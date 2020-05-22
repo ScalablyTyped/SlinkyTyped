@@ -10,6 +10,7 @@ import typingsSlinky.mongoose.anon.Length
 import typingsSlinky.mongoose.mongooseStrings._id
 import typingsSlinky.mongoose.mongooseStrings.`throw`
 import typingsSlinky.mongoose.mongooseStrings.aggregate
+import typingsSlinky.mongoose.mongooseStrings.autoCreate
 import typingsSlinky.mongoose.mongooseStrings.autoIndex
 import typingsSlinky.mongoose.mongooseStrings.bufferCommands
 import typingsSlinky.mongoose.mongooseStrings.capped
@@ -36,6 +37,7 @@ import typingsSlinky.mongoose.mongooseStrings.shardKey
 import typingsSlinky.mongoose.mongooseStrings.skipVersioning
 import typingsSlinky.mongoose.mongooseStrings.storeSubdocValidationError
 import typingsSlinky.mongoose.mongooseStrings.strict
+import typingsSlinky.mongoose.mongooseStrings.strictQuery
 import typingsSlinky.mongoose.mongooseStrings.timestamps
 import typingsSlinky.mongoose.mongooseStrings.toJSON
 import typingsSlinky.mongoose.mongooseStrings.toObject
@@ -327,6 +329,10 @@ trait Schema[T] extends EventEmitter {
   def requiredPaths(): js.Array[String] = js.native
   def requiredPaths(invalidate: Boolean): js.Array[String] = js.native
   def set(key: strict, value: `throw`): this.type = js.native
+  @JSName("set")
+  def set_autoCreate(key: autoCreate): Boolean = js.native
+  @JSName("set")
+  def set_autoCreate(key: autoCreate, value: Boolean): this.type = js.native
   /**
     * Sets/gets a schema option.
     * @param key option name
@@ -410,6 +416,10 @@ trait Schema[T] extends EventEmitter {
   def set_strict(key: strict): Boolean | `throw` = js.native
   @JSName("set")
   def set_strict(key: strict, value: Boolean): this.type = js.native
+  @JSName("set")
+  def set_strictQuery(key: strictQuery): Boolean = js.native
+  @JSName("set")
+  def set_strictQuery(key: strictQuery, value: Boolean): this.type = js.native
   @JSName("set")
   def set_timestamps(key: timestamps): Boolean | SchemaTimestampsConfig = js.native
   @JSName("set")

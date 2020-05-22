@@ -4,380 +4,162 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * What class prefix for the elements?
     * (default: `ptr--`)
     */
-  var classPrefix: js.UndefOr[String] = js.native
+  var classPrefix: js.UndefOr[String] = js.undefined
   /**
     * What property will be used to calculate the element's proportions?
     * (default: `min-height`)
     */
-  var cssProp: js.UndefOr[String] = js.native
+  var cssProp: js.UndefOr[String] = js.undefined
   /**
     * After which distance should we start pulling.
     * (Default: `0`)
     */
-  var distIgnore: js.UndefOr[Double] = js.native
+  var distIgnore: js.UndefOr[Double] = js.undefined
   /**
     * Maximum distance possible for the element.
     * (default: `80`)
     */
-  var distMax: js.UndefOr[Double] = js.native
+  var distMax: js.UndefOr[Double] = js.undefined
   /**
     * After the `distThreshold` is reached and released, the element will have this height.
     * (default: `50`)
     */
-  var distReload: js.UndefOr[Double] = js.native
+  var distReload: js.UndefOr[Double] = js.undefined
   /**
     * Minimum distance required to trigger the refresh.
     * (default: `60`)
     */
-  var distThreshold: js.UndefOr[Double] = js.native
+  var distThreshold: js.UndefOr[Double] = js.undefined
   /**
     * It returns the default HTML for the widget, __PREFIX__ is replaced.
     */
-  var getMarkup: js.UndefOr[js.Function0[String]] = js.native
+  var getMarkup: js.UndefOr[js.Function0[String]] = js.undefined
   /**
     * It returns the default CSS for the widget, __PREFIX__ is replaced.
     */
-  var getStyles: js.UndefOr[js.Function0[String]] = js.native
+  var getStyles: js.UndefOr[js.Function0[String]] = js.undefined
   /**
     * The icon for both `instructionsPullToRefresh` and `instructionsReleaseToRefresh`
     * (default: `&#8675;`)
     */
-  var iconArrow: js.UndefOr[String] = js.native
+  var iconArrow: js.UndefOr[String] = js.undefined
   /**
     * The icon when the refresh is in progress.
     * (default: `&hellip;`)
     */
-  var iconRefreshing: js.UndefOr[String] = js.native
+  var iconRefreshing: js.UndefOr[String] = js.undefined
   /**
     * The initial instructions string.
     * (default: `Pull down to refresh`)
     */
-  var instructionsPullToRefresh: js.UndefOr[String] = js.native
+  var instructionsPullToRefresh: js.UndefOr[String] = js.undefined
   /**
     * The refreshing text.
     * (default: `Refreshing`)
     */
-  var instructionsRefreshing: js.UndefOr[String] = js.native
+  var instructionsRefreshing: js.UndefOr[String] = js.undefined
   /**
     * The instructions string when the `distThreshold` has been reached.
     * (default: `Release to refresh`)
     */
-  var instructionsReleaseToRefresh: js.UndefOr[String] = js.native
+  var instructionsReleaseToRefresh: js.UndefOr[String] = js.undefined
   /**
     * Before which element the pull to refresh elements will be?
     * (default: `body`)
     */
-  var mainElement: js.UndefOr[String] = js.native
+  var mainElement: js.UndefOr[String] = js.undefined
   /**
     * The initialize function.
     */
-  var onInit: js.UndefOr[js.Function0[Unit]] = js.native
+  var onInit: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * What will the pull to refresh trigger? You can return a promise.
     *
     * Defaults to `window.location.reload()`
     */
-  var onRefresh: js.UndefOr[js.Function0[js.Thenable[Unit] | Unit]] = js.native
+  var onRefresh: js.UndefOr[js.Function0[js.Thenable[Unit] | Unit]] = js.undefined
   /**
     * What class will the main element have?
     * (default: `.ptr`)
     */
-  var ptrElement: js.UndefOr[String] = js.native
+  var ptrElement: js.UndefOr[String] = js.undefined
   /**
     * The delay, in milliseconds before the `onRefresh` is triggered.
     * (default: `500`)
     */
-  var refreshTimeout: js.UndefOr[Double] = js.native
+  var refreshTimeout: js.UndefOr[Double] = js.undefined
   /**
     * The resistance function, accepts one parameter, must return a number, capping at 1.
     *
     * Defaults to `t => Math.min(1, t / 2.5)`
     */
-  var resistanceFunction: js.UndefOr[js.Function1[/* input */ Double, Double]] = js.native
+  var resistanceFunction: js.UndefOr[js.Function1[/* input */ Double, Double]] = js.undefined
   /**
     * Which condition should be met for pullToRefresh to trigger?
     *
     * Defaults to `!window.scrollY`
     */
-  var shouldPullToRefresh: js.UndefOr[js.Function0[Boolean]] = js.native
+  var shouldPullToRefresh: js.UndefOr[js.Function0[Boolean]] = js.undefined
   /**
     * Which element should trigger the pull to refresh?
     * (default: `body`)
     */
-  var triggerElement: js.UndefOr[String] = js.native
+  var triggerElement: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    classPrefix: String = null,
+    cssProp: String = null,
+    distIgnore: js.UndefOr[Double] = js.undefined,
+    distMax: js.UndefOr[Double] = js.undefined,
+    distReload: js.UndefOr[Double] = js.undefined,
+    distThreshold: js.UndefOr[Double] = js.undefined,
+    getMarkup: () => String = null,
+    getStyles: () => String = null,
+    iconArrow: String = null,
+    iconRefreshing: String = null,
+    instructionsPullToRefresh: String = null,
+    instructionsRefreshing: String = null,
+    instructionsReleaseToRefresh: String = null,
+    mainElement: String = null,
+    onInit: () => Unit = null,
+    onRefresh: () => js.Thenable[Unit] | Unit = null,
+    ptrElement: String = null,
+    refreshTimeout: js.UndefOr[Double] = js.undefined,
+    resistanceFunction: /* input */ Double => Double = null,
+    shouldPullToRefresh: () => Boolean = null,
+    triggerElement: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (classPrefix != null) __obj.updateDynamic("classPrefix")(classPrefix.asInstanceOf[js.Any])
+    if (cssProp != null) __obj.updateDynamic("cssProp")(cssProp.asInstanceOf[js.Any])
+    if (!js.isUndefined(distIgnore)) __obj.updateDynamic("distIgnore")(distIgnore.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(distMax)) __obj.updateDynamic("distMax")(distMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(distReload)) __obj.updateDynamic("distReload")(distReload.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(distThreshold)) __obj.updateDynamic("distThreshold")(distThreshold.get.asInstanceOf[js.Any])
+    if (getMarkup != null) __obj.updateDynamic("getMarkup")(js.Any.fromFunction0(getMarkup))
+    if (getStyles != null) __obj.updateDynamic("getStyles")(js.Any.fromFunction0(getStyles))
+    if (iconArrow != null) __obj.updateDynamic("iconArrow")(iconArrow.asInstanceOf[js.Any])
+    if (iconRefreshing != null) __obj.updateDynamic("iconRefreshing")(iconRefreshing.asInstanceOf[js.Any])
+    if (instructionsPullToRefresh != null) __obj.updateDynamic("instructionsPullToRefresh")(instructionsPullToRefresh.asInstanceOf[js.Any])
+    if (instructionsRefreshing != null) __obj.updateDynamic("instructionsRefreshing")(instructionsRefreshing.asInstanceOf[js.Any])
+    if (instructionsReleaseToRefresh != null) __obj.updateDynamic("instructionsReleaseToRefresh")(instructionsReleaseToRefresh.asInstanceOf[js.Any])
+    if (mainElement != null) __obj.updateDynamic("mainElement")(mainElement.asInstanceOf[js.Any])
+    if (onInit != null) __obj.updateDynamic("onInit")(js.Any.fromFunction0(onInit))
+    if (onRefresh != null) __obj.updateDynamic("onRefresh")(js.Any.fromFunction0(onRefresh))
+    if (ptrElement != null) __obj.updateDynamic("ptrElement")(ptrElement.asInstanceOf[js.Any])
+    if (!js.isUndefined(refreshTimeout)) __obj.updateDynamic("refreshTimeout")(refreshTimeout.get.asInstanceOf[js.Any])
+    if (resistanceFunction != null) __obj.updateDynamic("resistanceFunction")(js.Any.fromFunction1(resistanceFunction))
+    if (shouldPullToRefresh != null) __obj.updateDynamic("shouldPullToRefresh")(js.Any.fromFunction0(shouldPullToRefresh))
+    if (triggerElement != null) __obj.updateDynamic("triggerElement")(triggerElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssProp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssProp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssProp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssProp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistIgnore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distIgnore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distIgnore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistReload(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distReload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistReload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distReload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetMarkup(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMarkup")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetMarkup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMarkup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetStyles(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStyles")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconArrow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconArrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconArrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconArrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconRefreshing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconRefreshing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconRefreshing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconRefreshing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstructionsPullToRefresh(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionsPullToRefresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstructionsPullToRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionsPullToRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstructionsRefreshing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionsRefreshing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstructionsRefreshing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionsRefreshing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstructionsReleaseToRefresh(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionsReleaseToRefresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstructionsReleaseToRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionsReleaseToRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMainElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRefresh(value: () => js.Thenable[Unit] | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPtrElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ptrElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPtrElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ptrElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResistanceFunction(value: /* input */ Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resistanceFunction")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutResistanceFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resistanceFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldPullToRefresh(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldPullToRefresh")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutShouldPullToRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldPullToRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerElement")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

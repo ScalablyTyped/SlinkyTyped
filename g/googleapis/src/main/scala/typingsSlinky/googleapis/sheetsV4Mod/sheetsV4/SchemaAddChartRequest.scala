@@ -20,29 +20,10 @@ trait SchemaAddChartRequest extends js.Object {
 
 object SchemaAddChartRequest {
   @scala.inline
-  def apply(): SchemaAddChartRequest = {
+  def apply(chart: SchemaEmbeddedChart = null): SchemaAddChartRequest = {
     val __obj = js.Dynamic.literal()
+    if (chart != null) __obj.updateDynamic("chart")(chart.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddChartRequest]
   }
-  @scala.inline
-  implicit class SchemaAddChartRequestOps[Self <: SchemaAddChartRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChart(value: SchemaEmbeddedChart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

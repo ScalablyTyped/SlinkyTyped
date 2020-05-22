@@ -108,6 +108,14 @@ class DSVModel_ protected ()
   var _rowOffsets: js.Any = js.native
   var _startedParsing: js.Any = js.native
   /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
+  /**
     * A promise that resolves when the model has parsed all of its data.
     */
   val ready: js.Promise[Unit] = js.native
@@ -139,6 +147,19 @@ class DSVModel_ protected ()
     */
   /* InferMemberOverrides */
   override def data(region: CellRegion, row: Double, column: Double): js.Any = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Emit the `changed` signal for the data model.
     *

@@ -8,10 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A network error specifying a write failure. */
-@js.native
 trait InteractiveNetworkWriteException extends ClassifiedInteractionRequest {
   /** Any diagnostic message about the failure (which will typically be an English phrase or sentence). */
-  var Diagnostic: String = js.native
+  var Diagnostic: String
 }
 
 object InteractiveNetworkWriteException {
@@ -25,19 +24,5 @@ object InteractiveNetworkWriteException {
     val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], Diagnostic = Diagnostic.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[InteractiveNetworkWriteException]
   }
-  @scala.inline
-  implicit class InteractiveNetworkWriteExceptionOps[Self <: InteractiveNetworkWriteException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiagnostic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Diagnostic")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

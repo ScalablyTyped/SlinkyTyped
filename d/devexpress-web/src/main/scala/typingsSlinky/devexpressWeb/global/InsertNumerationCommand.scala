@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InsertNumerationCommand")
 @js.native
 class InsertNumerationCommand ()
-  extends typingsSlinky.devexpressWeb.InsertNumerationCommand
+  extends typingsSlinky.devexpressWeb.InsertNumerationCommand {
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

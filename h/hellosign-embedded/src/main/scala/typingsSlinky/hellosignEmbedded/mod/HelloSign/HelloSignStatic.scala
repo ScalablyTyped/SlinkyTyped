@@ -4,64 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HelloSignStatic extends js.Object {
   /**
     * The available client UI cultures
     */
-  var CULTURES: ClientCultures = js.native
+  var CULTURES: ClientCultures
   /**
     * The user closed the iFrame before completing
     *
     * @default signature_request_canceled
     */
-  var EVENT_CANCELED: String = js.native
+  var EVENT_CANCELED: String
   /**
     * The signature request was declined
     *
     * @default signature_request_declined
     */
-  var EVENT_DECLINED: String = js.native
+  var EVENT_DECLINED: String
   /**
     * An error occurred in the iFrame
     *
     * @default error
     */
-  var EVENT_ERROR: String = js.native
+  var EVENT_ERROR: String
   /**
     * The user sent a signature request
     *
     * @default signature_request_sent
     */
-  var EVENT_SENT: String = js.native
+  var EVENT_SENT: String
   /**
     * The signature request was signed
     *
     * @default signature_request_signed
     */
-  var EVENT_SIGNED: String = js.native
+  var EVENT_SIGNED: String
   /**
     * The template was created or edited
     *
     * @default template_created
     */
-  var EVENT_TEMPLATE_CREATED: String = js.native
+  var EVENT_TEMPLATE_CREATED: String
   /**
     * Close the signing window.
     */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Initialize using your HelloSign API client ID.
     *
     * @param appClientId The API client ID the request is for.
     */
-  def init(appClientId: String): Unit = js.native
+  def init(appClientId: String): Unit
   /**
     * Open the signing window.
     *
     * @param params The options to use when opening the signing window.
     */
-  def open(params: OpenParameters): Unit = js.native
+  def open(params: OpenParameters): Unit
 }
 
 object HelloSignStatic {
@@ -81,73 +80,5 @@ object HelloSignStatic {
     val __obj = js.Dynamic.literal(CULTURES = CULTURES.asInstanceOf[js.Any], EVENT_CANCELED = EVENT_CANCELED.asInstanceOf[js.Any], EVENT_DECLINED = EVENT_DECLINED.asInstanceOf[js.Any], EVENT_ERROR = EVENT_ERROR.asInstanceOf[js.Any], EVENT_SENT = EVENT_SENT.asInstanceOf[js.Any], EVENT_SIGNED = EVENT_SIGNED.asInstanceOf[js.Any], EVENT_TEMPLATE_CREATED = EVENT_TEMPLATE_CREATED.asInstanceOf[js.Any], close = js.Any.fromFunction0(close), init = js.Any.fromFunction1(init), open = js.Any.fromFunction1(open))
     __obj.asInstanceOf[HelloSignStatic]
   }
-  @scala.inline
-  implicit class HelloSignStaticOps[Self <: HelloSignStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCULTURES(value: ClientCultures): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CULTURES")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEVENT_CANCELED(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EVENT_CANCELED")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEVENT_DECLINED(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EVENT_DECLINED")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEVENT_ERROR(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EVENT_ERROR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEVENT_SENT(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EVENT_SENT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEVENT_SIGNED(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EVENT_SIGNED")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEVENT_TEMPLATE_CREATED(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EVENT_TEMPLATE_CREATED")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInit(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOpen(value: OpenParameters => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

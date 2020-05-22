@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PrintHandlers extends js.Object {
   /**
     * A hook used by the Printer when generating unique names to avoid collisions with
     * globally defined names that exist outside of the current source file.
     */
-  var hasGlobalName: js.UndefOr[js.Function1[/* name */ java.lang.String, Boolean]] = js.native
+  var hasGlobalName: js.UndefOr[js.Function1[/* name */ java.lang.String, Boolean]] = js.undefined
   /**
     * A hook used to check if an emit notification is required for a node.
     * @param node The node to emit.
     */
-  var isEmitNotificationEnabled: js.UndefOr[js.Function1[/* node */ js.UndefOr[Node], Boolean]] = js.native
+  var isEmitNotificationEnabled: js.UndefOr[js.Function1[/* node */ js.UndefOr[Node], Boolean]] = js.undefined
   /**
     * A hook used by the Printer to provide notifications prior to emitting a node. A
     * compatible implementation **must** invoke `emitCallback` with the provided `hint` and
@@ -41,7 +40,7 @@ trait PrintHandlers extends js.Object {
       /* emitCallback */ js.Function2[/* hint */ EmitHint, /* node */ js.UndefOr[Node], Unit], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * A hook used by the Printer to perform just-in-time substitution of a node. This is
     * primarily used by node transformations that need to substitute one node for another,
@@ -58,72 +57,23 @@ trait PrintHandlers extends js.Object {
     * });
     * ```
     */
-  var substituteNode: js.UndefOr[js.Function2[/* hint */ EmitHint, /* node */ Node, Node]] = js.native
+  var substituteNode: js.UndefOr[js.Function2[/* hint */ EmitHint, /* node */ Node, Node]] = js.undefined
 }
 
 object PrintHandlers {
   @scala.inline
-  def apply(): PrintHandlers = {
+  def apply(
+    hasGlobalName: /* name */ java.lang.String => Boolean = null,
+    isEmitNotificationEnabled: /* node */ js.UndefOr[Node] => Boolean = null,
+    onEmitNode: (/* hint */ EmitHint, /* node */ js.UndefOr[Node], /* emitCallback */ js.Function2[/* hint */ EmitHint, /* node */ js.UndefOr[Node], Unit]) => Unit = null,
+    substituteNode: (/* hint */ EmitHint, /* node */ Node) => Node = null
+  ): PrintHandlers = {
     val __obj = js.Dynamic.literal()
+    if (hasGlobalName != null) __obj.updateDynamic("hasGlobalName")(js.Any.fromFunction1(hasGlobalName))
+    if (isEmitNotificationEnabled != null) __obj.updateDynamic("isEmitNotificationEnabled")(js.Any.fromFunction1(isEmitNotificationEnabled))
+    if (onEmitNode != null) __obj.updateDynamic("onEmitNode")(js.Any.fromFunction3(onEmitNode))
+    if (substituteNode != null) __obj.updateDynamic("substituteNode")(js.Any.fromFunction2(substituteNode))
     __obj.asInstanceOf[PrintHandlers]
   }
-  @scala.inline
-  implicit class PrintHandlersOps[Self <: PrintHandlers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasGlobalName(value: /* name */ java.lang.String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasGlobalName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutHasGlobalName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasGlobalName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEmitNotificationEnabled(value: /* node */ js.UndefOr[Node] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmitNotificationEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsEmitNotificationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmitNotificationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEmitNode(
-      value: (/* hint */ EmitHint, /* node */ js.UndefOr[Node], /* emitCallback */ js.Function2[/* hint */ EmitHint, /* node */ js.UndefOr[Node], Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmitNode")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEmitNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmitNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubstituteNode(value: (/* hint */ EmitHint, /* node */ Node) => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("substituteNode")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSubstituteNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("substituteNode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -289,7 +289,12 @@ object global extends js.Object {
     object errors extends js.Object {
       @js.native
       class ExpectationFailed ()
-        extends typingsSlinky.jasmine.jasmine.errors.ExpectationFailed
+        extends typingsSlinky.jasmine.jasmine.errors.ExpectationFailed {
+        /* CompleteClass */
+        override var message: String = js.native
+        /* CompleteClass */
+        override var name: String = js.native
+      }
       
     }
     

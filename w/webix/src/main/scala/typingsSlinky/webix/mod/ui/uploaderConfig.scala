@@ -7,549 +7,135 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait uploaderConfig extends js.Object {
-  var accept: js.UndefOr[String] = js.native
-  var align: js.UndefOr[String] = js.native
-  var animate: js.UndefOr[js.Any] = js.native
-  var apiOnly: js.UndefOr[Boolean] = js.native
-  var autosend: js.UndefOr[Boolean] = js.native
-  var autowidth: js.UndefOr[Boolean] = js.native
-  var borderless: js.UndefOr[Boolean] = js.native
-  var click: js.UndefOr[WebixCallback] = js.native
-  var container: js.UndefOr[String | HTMLElement] = js.native
-  var css: js.UndefOr[js.Any] = js.native
-  var datatype: js.UndefOr[String] = js.native
-  var directory: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var formData: js.UndefOr[js.Any] = js.native
-  var gravity: js.UndefOr[Double] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var hidden: js.UndefOr[Boolean] = js.native
-  var hotkey: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String | Double] = js.native
-  var inputHeight: js.UndefOr[Double] = js.native
-  var inputName: js.UndefOr[String] = js.native
-  var inputWidth: js.UndefOr[Double] = js.native
-  var keyPressTimeout: js.UndefOr[Double] = js.native
-  var label: js.UndefOr[String] = js.native
-  var link: js.UndefOr[String] = js.native
-  var maxHeight: js.UndefOr[Double] = js.native
-  var maxWidth: js.UndefOr[Double] = js.native
-  var minHeight: js.UndefOr[Double] = js.native
-  var minWidth: js.UndefOr[Double] = js.native
-  var multiple: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var on: js.UndefOr[EventHash] = js.native
-  var popup: js.UndefOr[String] = js.native
-  var tooltip: js.UndefOr[js.Any] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var upload: js.UndefOr[String] = js.native
-  var urlData: js.UndefOr[js.Any] = js.native
-  var value: js.UndefOr[String | Double] = js.native
-  var view: js.UndefOr[String] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var accept: js.UndefOr[String] = js.undefined
+  var align: js.UndefOr[String] = js.undefined
+  var animate: js.UndefOr[js.Any] = js.undefined
+  var apiOnly: js.UndefOr[Boolean] = js.undefined
+  var autosend: js.UndefOr[Boolean] = js.undefined
+  var autowidth: js.UndefOr[Boolean] = js.undefined
+  var borderless: js.UndefOr[Boolean] = js.undefined
+  var click: js.UndefOr[WebixCallback] = js.undefined
+  var container: js.UndefOr[String | HTMLElement] = js.undefined
+  var css: js.UndefOr[js.Any] = js.undefined
+  var datatype: js.UndefOr[String] = js.undefined
+  var directory: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var formData: js.UndefOr[js.Any] = js.undefined
+  var gravity: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
+  var hotkey: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String | Double] = js.undefined
+  var inputHeight: js.UndefOr[Double] = js.undefined
+  var inputName: js.UndefOr[String] = js.undefined
+  var inputWidth: js.UndefOr[Double] = js.undefined
+  var keyPressTimeout: js.UndefOr[Double] = js.undefined
+  var label: js.UndefOr[String] = js.undefined
+  var link: js.UndefOr[String] = js.undefined
+  var maxHeight: js.UndefOr[Double] = js.undefined
+  var maxWidth: js.UndefOr[Double] = js.undefined
+  var minHeight: js.UndefOr[Double] = js.undefined
+  var minWidth: js.UndefOr[Double] = js.undefined
+  var multiple: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var on: js.UndefOr[EventHash] = js.undefined
+  var popup: js.UndefOr[String] = js.undefined
+  var tooltip: js.UndefOr[js.Any] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var upload: js.UndefOr[String] = js.undefined
+  var urlData: js.UndefOr[js.Any] = js.undefined
+  var value: js.UndefOr[String | Double] = js.undefined
+  var view: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object uploaderConfig {
   @scala.inline
-  def apply(): uploaderConfig = {
+  def apply(
+    accept: String = null,
+    align: String = null,
+    animate: js.Any = null,
+    apiOnly: js.UndefOr[Boolean] = js.undefined,
+    autosend: js.UndefOr[Boolean] = js.undefined,
+    autowidth: js.UndefOr[Boolean] = js.undefined,
+    borderless: js.UndefOr[Boolean] = js.undefined,
+    click: /* repeated */ js.Any => js.Any = null,
+    container: String | HTMLElement = null,
+    css: js.Any = null,
+    datatype: String = null,
+    directory: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    formData: js.Any = null,
+    gravity: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    hotkey: String = null,
+    id: String | Double = null,
+    inputHeight: js.UndefOr[Double] = js.undefined,
+    inputName: String = null,
+    inputWidth: js.UndefOr[Double] = js.undefined,
+    keyPressTimeout: js.UndefOr[Double] = js.undefined,
+    label: String = null,
+    link: String = null,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    minHeight: js.UndefOr[Double] = js.undefined,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    on: EventHash = null,
+    popup: String = null,
+    tooltip: js.Any = null,
+    `type`: String = null,
+    upload: String = null,
+    urlData: js.Any = null,
+    value: String | Double = null,
+    view: String = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): uploaderConfig = {
     val __obj = js.Dynamic.literal()
+    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
+    if (!js.isUndefined(apiOnly)) __obj.updateDynamic("apiOnly")(apiOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autosend)) __obj.updateDynamic("autosend")(autosend.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autowidth)) __obj.updateDynamic("autowidth")(autowidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderless)) __obj.updateDynamic("borderless")(borderless.get.asInstanceOf[js.Any])
+    if (click != null) __obj.updateDynamic("click")(js.Any.fromFunction1(click))
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (directory != null) __obj.updateDynamic("directory")(directory.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (formData != null) __obj.updateDynamic("formData")(formData.asInstanceOf[js.Any])
+    if (!js.isUndefined(gravity)) __obj.updateDynamic("gravity")(gravity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (hotkey != null) __obj.updateDynamic("hotkey")(hotkey.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputHeight)) __obj.updateDynamic("inputHeight")(inputHeight.get.asInstanceOf[js.Any])
+    if (inputName != null) __obj.updateDynamic("inputName")(inputName.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputWidth)) __obj.updateDynamic("inputWidth")(inputWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyPressTimeout)) __obj.updateDynamic("keyPressTimeout")(keyPressTimeout.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minHeight)) __obj.updateDynamic("minHeight")(minHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+    if (popup != null) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (upload != null) __obj.updateDynamic("upload")(upload.asInstanceOf[js.Any])
+    if (urlData != null) __obj.updateDynamic("urlData")(urlData.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[uploaderConfig]
   }
-  @scala.inline
-  implicit class uploaderConfigOps[Self <: uploaderConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccept(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutosend(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutosend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutowidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autowidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutowidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autowidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClick(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCss(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatatype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatatype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHotkey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotkey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHotkey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotkey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyPressTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPressTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyPressTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPressTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOn(value: EventHash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

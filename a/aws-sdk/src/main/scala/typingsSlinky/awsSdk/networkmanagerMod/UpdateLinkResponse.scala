@@ -14,29 +14,10 @@ trait UpdateLinkResponse extends js.Object {
 
 object UpdateLinkResponse {
   @scala.inline
-  def apply(): UpdateLinkResponse = {
+  def apply(Link: Link = null): UpdateLinkResponse = {
     val __obj = js.Dynamic.literal()
+    if (Link != null) __obj.updateDynamic("Link")(Link.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateLinkResponse]
   }
-  @scala.inline
-  implicit class UpdateLinkResponseOps[Self <: UpdateLinkResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLink(value: Link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Link")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

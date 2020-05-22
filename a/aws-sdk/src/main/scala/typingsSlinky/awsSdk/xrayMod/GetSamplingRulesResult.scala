@@ -18,41 +18,11 @@ trait GetSamplingRulesResult extends js.Object {
 
 object GetSamplingRulesResult {
   @scala.inline
-  def apply(): GetSamplingRulesResult = {
+  def apply(NextToken: String = null, SamplingRuleRecords: SamplingRuleRecordList = null): GetSamplingRulesResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (SamplingRuleRecords != null) __obj.updateDynamic("SamplingRuleRecords")(SamplingRuleRecords.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSamplingRulesResult]
   }
-  @scala.inline
-  implicit class GetSamplingRulesResultOps[Self <: GetSamplingRulesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplingRuleRecords(value: SamplingRuleRecordList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SamplingRuleRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplingRuleRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SamplingRuleRecords")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

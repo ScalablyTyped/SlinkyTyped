@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGridSaveStateApi extends js.Object {
   // Methods
   /**
@@ -13,12 +12,12 @@ trait IGridSaveStateApi extends js.Object {
     * @param {ng.IScope} $scope A scope we can broadcast on
     * @param {IGridSavedState} state The state that should ve restored into the grid
     */
-  def restore($scope: IScope, state: IGridSavedState): Unit = js.native
+  def restore($scope: IScope, state: IGridSavedState): Unit
   /**
     * Packages the current state of the grid into an object, and provides it to the user for saving
     * @returns {IGridSavedState} Current grid state as a POJO
     */
-  def save(): IGridSavedState = js.native
+  def save(): IGridSavedState
 }
 
 object IGridSaveStateApi {
@@ -27,25 +26,5 @@ object IGridSaveStateApi {
     val __obj = js.Dynamic.literal(restore = js.Any.fromFunction2(restore), save = js.Any.fromFunction0(save))
     __obj.asInstanceOf[IGridSaveStateApi]
   }
-  @scala.inline
-  implicit class IGridSaveStateApiOps[Self <: IGridSaveStateApi] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRestore(value: (IScope, IGridSavedState) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSave(value: () => IGridSavedState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

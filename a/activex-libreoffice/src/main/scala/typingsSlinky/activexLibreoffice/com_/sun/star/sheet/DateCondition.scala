@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DateCondition extends XConditionEntry {
   /** See {@link com.sun.star.sheet.DateType} for possible values */
-  var DateType: Double = js.native
-  var StyleName: String = js.native
+  var DateType: Double
+  var StyleName: String
 }
 
 object DateCondition {
@@ -26,25 +25,5 @@ object DateCondition {
     val __obj = js.Dynamic.literal(DateType = DateType.asInstanceOf[js.Any], StyleName = StyleName.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getType = js.Any.fromFunction0(getType), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[DateCondition]
   }
-  @scala.inline
-  implicit class DateConditionOps[Self <: DateCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyleName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StyleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

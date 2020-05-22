@@ -21,6 +21,11 @@ class WebXRHTCViveMotionController protected ()
     gamepadObject: IMinimalMotionControllerObject,
     handness: MotionControllerHandness
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

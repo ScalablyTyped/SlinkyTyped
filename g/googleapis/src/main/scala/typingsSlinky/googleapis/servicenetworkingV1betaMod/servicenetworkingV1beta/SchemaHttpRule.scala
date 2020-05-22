@@ -217,137 +217,30 @@ trait SchemaHttpRule extends js.Object {
 
 object SchemaHttpRule {
   @scala.inline
-  def apply(): SchemaHttpRule = {
+  def apply(
+    additionalBindings: js.Array[SchemaHttpRule] = null,
+    body: String = null,
+    custom: SchemaCustomHttpPattern = null,
+    delete: String = null,
+    get: String = null,
+    patch: String = null,
+    post: String = null,
+    put: String = null,
+    responseBody: String = null,
+    selector: String = null
+  ): SchemaHttpRule = {
     val __obj = js.Dynamic.literal()
+    if (additionalBindings != null) __obj.updateDynamic("additionalBindings")(additionalBindings.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
+    if (get != null) __obj.updateDynamic("get")(get.asInstanceOf[js.Any])
+    if (patch != null) __obj.updateDynamic("patch")(patch.asInstanceOf[js.Any])
+    if (post != null) __obj.updateDynamic("post")(post.asInstanceOf[js.Any])
+    if (put != null) __obj.updateDynamic("put")(put.asInstanceOf[js.Any])
+    if (responseBody != null) __obj.updateDynamic("responseBody")(responseBody.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpRule]
   }
-  @scala.inline
-  implicit class SchemaHttpRuleOps[Self <: SchemaHttpRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalBindings(value: js.Array[SchemaHttpRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalBindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalBindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalBindings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom(value: SchemaCustomHttpPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelete(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

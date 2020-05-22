@@ -5,55 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IonTabs extends js.Object {
   /**
     * Emitted when the navigation has finished transitioning to a new component.
     */
-  var onIonTabsDidChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonTabsDidChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the navigation is about to transition to a new component.
     */
-  var onIonTabsWillChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonTabsWillChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
 }
 
 object IonTabs {
   @scala.inline
-  def apply(): IonTabs = {
+  def apply(
+    onIonTabsDidChange: /* event */ CustomEvent => Unit = null,
+    onIonTabsWillChange: /* event */ CustomEvent => Unit = null
+  ): IonTabs = {
     val __obj = js.Dynamic.literal()
+    if (onIonTabsDidChange != null) __obj.updateDynamic("onIonTabsDidChange")(js.Any.fromFunction1(onIonTabsDidChange))
+    if (onIonTabsWillChange != null) __obj.updateDynamic("onIonTabsWillChange")(js.Any.fromFunction1(onIonTabsWillChange))
     __obj.asInstanceOf[IonTabs]
   }
-  @scala.inline
-  implicit class IonTabsOps[Self <: IonTabs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnIonTabsDidChange(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonTabsDidChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonTabsDidChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonTabsDidChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonTabsWillChange(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonTabsWillChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonTabsWillChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonTabsWillChange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

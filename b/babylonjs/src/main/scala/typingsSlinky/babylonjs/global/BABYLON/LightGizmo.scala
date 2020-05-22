@@ -13,6 +13,11 @@ import scala.scalajs.js.annotation._
 class LightGizmo ()
   extends typingsSlinky.babylonjs.BABYLON.LightGizmo {
   def this(gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

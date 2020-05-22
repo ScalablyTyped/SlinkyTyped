@@ -4,68 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PreviewReportEventArgs extends js.Object {
   /** Specifies whether to show or hide preview data dialog.
     */
-  var cancelDataInputDialog: js.UndefOr[Boolean] = js.native
+  var cancelDataInputDialog: js.UndefOr[Boolean] = js.undefined
   /** Contains the required data to load the report.
     */
-  var dataSets: js.UndefOr[js.Array[_]] = js.native
+  var dataSets: js.UndefOr[js.Array[_]] = js.undefined
   /** Contains the instance of Report Viewer component.
     */
-  var reportViewer: js.UndefOr[js.Any] = js.native
+  var reportViewer: js.UndefOr[js.Any] = js.undefined
 }
 
 object PreviewReportEventArgs {
   @scala.inline
-  def apply(): PreviewReportEventArgs = {
+  def apply(
+    cancelDataInputDialog: js.UndefOr[Boolean] = js.undefined,
+    dataSets: js.Array[_] = null,
+    reportViewer: js.Any = null
+  ): PreviewReportEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancelDataInputDialog)) __obj.updateDynamic("cancelDataInputDialog")(cancelDataInputDialog.get.asInstanceOf[js.Any])
+    if (dataSets != null) __obj.updateDynamic("dataSets")(dataSets.asInstanceOf[js.Any])
+    if (reportViewer != null) __obj.updateDynamic("reportViewer")(reportViewer.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreviewReportEventArgs]
   }
-  @scala.inline
-  implicit class PreviewReportEventArgsOps[Self <: PreviewReportEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancelDataInputDialog(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelDataInputDialog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancelDataInputDialog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelDataInputDialog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSets(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportViewer(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportViewer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportViewer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportViewer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

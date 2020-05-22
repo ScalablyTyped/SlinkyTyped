@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NineColorScheme extends EightColorScheme {
-  var `9`: js.Tuple9[String, String, String, String, String, String, String, String, String] = js.native
+  var `9`: js.Tuple9[String, String, String, String, String, String, String, String, String]
 }
 
 object NineColorScheme {
@@ -30,19 +29,5 @@ object NineColorScheme {
     __obj.updateDynamic("9")(`9`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NineColorScheme]
   }
-  @scala.inline
-  implicit class NineColorSchemeOps[Self <: NineColorScheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with9(value: js.Tuple9[String, String, String, String, String, String, String, String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("9")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

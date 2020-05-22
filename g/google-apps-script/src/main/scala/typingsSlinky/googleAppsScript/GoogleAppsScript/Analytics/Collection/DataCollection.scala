@@ -7,62 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataCollection extends js.Object {
-  var Ga: js.UndefOr[GaCollection] = js.native
-  var Mcf: js.UndefOr[McfCollection] = js.native
-  var Realtime: js.UndefOr[RealtimeCollection] = js.native
+  var Ga: js.UndefOr[GaCollection] = js.undefined
+  var Mcf: js.UndefOr[McfCollection] = js.undefined
+  var Realtime: js.UndefOr[RealtimeCollection] = js.undefined
 }
 
 object DataCollection {
   @scala.inline
-  def apply(): DataCollection = {
+  def apply(Ga: GaCollection = null, Mcf: McfCollection = null, Realtime: RealtimeCollection = null): DataCollection = {
     val __obj = js.Dynamic.literal()
+    if (Ga != null) __obj.updateDynamic("Ga")(Ga.asInstanceOf[js.Any])
+    if (Mcf != null) __obj.updateDynamic("Mcf")(Mcf.asInstanceOf[js.Any])
+    if (Realtime != null) __obj.updateDynamic("Realtime")(Realtime.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataCollection]
   }
-  @scala.inline
-  implicit class DataCollectionOps[Self <: DataCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGa(value: GaCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ga")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGa: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ga")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMcf(value: McfCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mcf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMcf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mcf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRealtime(value: RealtimeCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Realtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRealtime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Realtime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

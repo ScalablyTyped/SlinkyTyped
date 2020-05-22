@@ -8,72 +8,71 @@ import scala.scalajs.js.annotation._
 /**
   * The database record associated with a job.
   */
-@js.native
 trait JobAttributes[T /* <: JobAttributesData */] extends js.Object {
   /**
     * The record identity.
     */
-  var _id: ObjectID_ = js.native
+  var _id: ObjectID_
   /**
     * The job details.
     */
-  var data: T = js.native
+  var data: T
   /**
     * Job's state
     */
-  var disabled: Boolean = js.native
+  var disabled: Boolean
   /**
     * The number of times the job has failed.
     */
-  var failCount: Double = js.native
+  var failCount: Double
   /**
     * The reason the job failed.
     */
-  var failReason: String = js.native
+  var failReason: String
   /**
     * The date/time the job last failed.
     */
-  var failedAt: js.Date = js.native
+  var failedAt: js.Date
   /**
     * Date/time the job last finished running.
     */
-  var lastFinishedAt: js.Date = js.native
+  var lastFinishedAt: js.Date
   /**
     * Date/time the job was las modified.
     */
-  var lastModifiedBy: String = js.native
+  var lastModifiedBy: String
   /**
     * Date/time the job was last run.
     */
-  var lastRunAt: js.Date = js.native
+  var lastRunAt: js.Date
   /**
     * Date/time the job was locked.
     */
-  var lockedAt: js.Date = js.native
+  var lockedAt: js.Date
   /**
     * The name of the job.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Date/time the job will run next.
     */
-  var nextRunAt: js.Date = js.native
+  var nextRunAt: js.Date
   /**
     * The priority of the job.
     */
-  var priority: Double = js.native
+  var priority: Double
   /**
     * How often the job is repeated using a human-readable or cron format.
     */
-  var repeatInterval: String | Double = js.native
+  var repeatInterval: String | Double
   /**
     * The timezone that conforms to [moment-timezone](http://momentjs.com/timezone/).
     */
-  var repeatTimezone: String = js.native
+  var repeatTimezone: String
   /**
     * The type of the job (single|normal).
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object JobAttributes {
@@ -100,109 +99,5 @@ object JobAttributes {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobAttributes[T]]
   }
-  @scala.inline
-  implicit class JobAttributesOps[Self[t] <: JobAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def with_id(value: ObjectID_): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailCount(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailReason(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailedAt(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastFinishedAt(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastFinishedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastModifiedBy(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastRunAt(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastRunAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLockedAt(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextRunAt(value: js.Date): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextRunAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatInterval(value: String | Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatTimezone(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatTimezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

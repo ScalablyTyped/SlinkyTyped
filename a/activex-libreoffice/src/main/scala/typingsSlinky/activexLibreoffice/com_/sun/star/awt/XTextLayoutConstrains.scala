@@ -7,12 +7,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies the layout constraints for a text field. */
-@js.native
 trait XTextLayoutConstrains extends XInterface {
   /** returns the ideal number of columns and lines for displaying this text. */
-  def getColumnsAndLines(nCols: js.Array[Double], nLines: js.Array[Double]): Unit = js.native
+  def getColumnsAndLines(nCols: js.Array[Double], nLines: js.Array[Double]): Unit
   /** returns the minimum size for a given number of columns and lines. */
-  def getMinimumSize(nCols: Double, nLines: Double): Size = js.native
+  def getMinimumSize(nCols: Double, nLines: Double): Size
 }
 
 object XTextLayoutConstrains {
@@ -27,25 +26,5 @@ object XTextLayoutConstrains {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getColumnsAndLines = js.Any.fromFunction2(getColumnsAndLines), getMinimumSize = js.Any.fromFunction2(getMinimumSize), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTextLayoutConstrains]
   }
-  @scala.inline
-  implicit class XTextLayoutConstrainsOps[Self <: XTextLayoutConstrains] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetColumnsAndLines(value: (js.Array[Double], js.Array[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumnsAndLines")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetMinimumSize(value: (Double, Double) => Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinimumSize")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

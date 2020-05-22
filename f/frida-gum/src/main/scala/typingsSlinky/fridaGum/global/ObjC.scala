@@ -14,6 +14,8 @@ import typingsSlinky.fridaGum.ObjC.EnumerateLoadedClassesResult
 import typingsSlinky.fridaGum.ObjC.InstanceData
 import typingsSlinky.fridaGum.ObjC.MethodSpec
 import typingsSlinky.fridaGum.ObjC.ObjectMethod
+import typingsSlinky.fridaGum.ObjC.ProtocolMethodDescription
+import typingsSlinky.fridaGum.ObjC.ProtocolPropertyAttributes
 import typingsSlinky.fridaGum.ObjC.ProtocolSpec
 import typingsSlinky.fridaGum.ObjC.ProxyConstructor
 import typingsSlinky.fridaGum.ObjC.ProxyData
@@ -38,6 +40,8 @@ object ObjC extends js.Object {
     def this(target: MethodSpec[BlockMethodImplementation]) = this()
     def this(target: typingsSlinky.fridaGum.NativePointer, options: NativeFunctionOptions) = this()
     def this(target: MethodSpec[BlockMethodImplementation], options: NativeFunctionOptions) = this()
+    /* CompleteClass */
+    override var handle: typingsSlinky.fridaGum.NativePointer = js.native
   }
   
   /**
@@ -48,6 +52,8 @@ object ObjC extends js.Object {
     extends typingsSlinky.fridaGum.ObjC.Object {
     def this(handle: typingsSlinky.fridaGum.NativePointer) = this()
     def this(handle: typingsSlinky.fridaGum.NativePointer, protocol: typingsSlinky.fridaGum.ObjC.Protocol) = this()
+    /* CompleteClass */
+    override var handle: typingsSlinky.fridaGum.NativePointer = js.native
   }
   
   /**
@@ -57,6 +63,28 @@ object ObjC extends js.Object {
   class Protocol protected ()
     extends typingsSlinky.fridaGum.ObjC.Protocol {
     def this(handle: typingsSlinky.fridaGum.NativePointer) = this()
+    /* CompleteClass */
+    override var handle: typingsSlinky.fridaGum.NativePointer = js.native
+    /**
+      * Methods declared by this protocol.
+      */
+    /* CompleteClass */
+    override var methods: StringDictionary[ProtocolMethodDescription] = js.native
+    /**
+      * Name visible to the Objective-C runtime.
+      */
+    /* CompleteClass */
+    override var name: String = js.native
+    /**
+      * Properties declared by this protocol.
+      */
+    /* CompleteClass */
+    override var properties: StringDictionary[ProtocolPropertyAttributes] = js.native
+    /**
+      * Protocols that this protocol conforms to.
+      */
+    /* CompleteClass */
+    override var protocols: StringDictionary[typingsSlinky.fridaGum.ObjC.Protocol] = js.native
   }
   
   // tslint:disable:no-unnecessary-qualifier

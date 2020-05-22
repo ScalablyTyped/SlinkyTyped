@@ -5,21 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnShowToolTipData extends js.Object {
-  var areaOptions: AreaRenderingOptions = js.native
+  var areaOptions: AreaRenderingOptions
   /**
     * map key for this area
     */
-  var key: String = js.native
+  var key: String
   /**
     * current state of the area
     */
-  var selected: Boolean = js.native
+  var selected: Boolean
   /**
     * jQuery object of the tooltip container
     */
-  var toolTip: JQuery = js.native
+  var toolTip: JQuery
 }
 
 object OnShowToolTipData {
@@ -28,37 +27,5 @@ object OnShowToolTipData {
     val __obj = js.Dynamic.literal(areaOptions = areaOptions.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any], toolTip = toolTip.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnShowToolTipData]
   }
-  @scala.inline
-  implicit class OnShowToolTipDataOps[Self <: OnShowToolTipData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAreaOptions(value: AreaRenderingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToolTip(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTip")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

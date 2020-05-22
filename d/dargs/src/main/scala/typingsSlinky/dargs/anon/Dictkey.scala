@@ -5,51 +5,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictkey
   extends /* key */ StringDictionary[String | Boolean | Double | js.Array[String]] {
-  var `--`: js.UndefOr[js.Array[String]] = js.native
+  var `--`: js.UndefOr[js.Array[String]] = js.undefined
   @JSName("_")
-  var _underscore: js.UndefOr[js.Array[String]] = js.native
+  var _underscore: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object Dictkey {
   @scala.inline
-  def apply(): Dictkey = {
+  def apply(
+    `--`: js.Array[String] = null,
+    StringDictionary: /* key */ StringDictionary[String | Boolean | Double | js.Array[String]] = null,
+    _underscore: js.Array[String] = null
+  ): Dictkey = {
     val __obj = js.Dynamic.literal()
+    if (`--` != null) __obj.updateDynamic("--")(`--`.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (_underscore != null) __obj.updateDynamic("_")(_underscore.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dictkey]
   }
-  @scala.inline
-  implicit class DictkeyOps[Self <: Dictkey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `with--`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("--")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `without--`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("--")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_underscore(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_underscore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

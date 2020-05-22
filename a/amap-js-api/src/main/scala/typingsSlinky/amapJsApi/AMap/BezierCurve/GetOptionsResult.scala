@@ -9,7 +9,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetOptionsResult[ExtraData]
   extends typingsSlinky.amapJsApi.AMap.Polyline.GetOptionsResult[ExtraData]
 

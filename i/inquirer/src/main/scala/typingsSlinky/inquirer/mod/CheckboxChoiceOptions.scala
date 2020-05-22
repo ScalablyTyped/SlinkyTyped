@@ -1,5 +1,6 @@
 package typingsSlinky.inquirer.mod
 
+import typingsSlinky.inquirer.inquirerStrings.choice
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,39 +11,33 @@ import scala.scalajs.js.annotation._
   * @template T
   * The type of the answers.
   */
-@js.native
 trait CheckboxChoiceOptions[T /* <: Answers */] extends ListChoiceOptions[T] {
   /**
     * A value indicating whether the choice should be initially checked.
     */
-  var checked: js.UndefOr[Boolean] = js.native
+  var checked: js.UndefOr[Boolean] = js.undefined
 }
 
 object CheckboxChoiceOptions {
   @scala.inline
-  def apply[T](): CheckboxChoiceOptions[T] = {
+  def apply[T](
+    checked: js.UndefOr[Boolean] = js.undefined,
+    disabled: DynamicQuestionProperty[Boolean | String, T] = null,
+    extra: js.Any = null,
+    name: String = null,
+    short: String = null,
+    `type`: choice = null,
+    value: js.Any = null
+  ): CheckboxChoiceOptions[T] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
+    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (short != null) __obj.updateDynamic("short")(short.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckboxChoiceOptions[T]]
   }
-  @scala.inline
-  implicit class CheckboxChoiceOptionsOps[Self[t] <: CheckboxChoiceOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withChecked(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecked: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExportingCsvOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Formatter callback for the
@@ -30,18 +29,18 @@ trait ExportingCsvOptions extends js.Object {
     *
     * Return `false` to use Highcharts' proposed header.
     */
-  var columnHeaderFormatter: js.UndefOr[js.Function | Null] = js.native
+  var columnHeaderFormatter: js.UndefOr[js.Function | Null] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Which date format to use for
     * exported dates on a datetime X axis. See `Highcharts.dateFormat`.
     */
-  var dateFormat: js.UndefOr[String] = js.native
+  var dateFormat: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Which decimal point to use for
     * exported CSV. Defaults to the same as the browser locale, typically `.`
     * (English) or `,` (German, French etc).
     */
-  var decimalPoint: js.UndefOr[String | Null] = js.native
+  var decimalPoint: js.UndefOr[String | Null] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The item delimiter in the
     * exported data. Use `;` for direct exporting to Excel. Defaults to a best
@@ -49,105 +48,30 @@ trait ExportingCsvOptions extends js.Object {
     * the `itemDelimiter` defaults to `;`, otherwise the `itemDelimiter`
     * defaults to `,`.
     */
-  var itemDelimiter: js.UndefOr[String | Null] = js.native
+  var itemDelimiter: js.UndefOr[String | Null] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The line delimiter in the
     * exported data, defaults to a newline.
     */
-  var lineDelimiter: js.UndefOr[String] = js.native
+  var lineDelimiter: js.UndefOr[String] = js.undefined
 }
 
 object ExportingCsvOptions {
   @scala.inline
-  def apply(): ExportingCsvOptions = {
+  def apply(
+    columnHeaderFormatter: js.UndefOr[Null | js.Function] = js.undefined,
+    dateFormat: String = null,
+    decimalPoint: js.UndefOr[Null | String] = js.undefined,
+    itemDelimiter: js.UndefOr[Null | String] = js.undefined,
+    lineDelimiter: String = null
+  ): ExportingCsvOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(columnHeaderFormatter)) __obj.updateDynamic("columnHeaderFormatter")(columnHeaderFormatter.asInstanceOf[js.Any])
+    if (dateFormat != null) __obj.updateDynamic("dateFormat")(dateFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(decimalPoint)) __obj.updateDynamic("decimalPoint")(decimalPoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemDelimiter)) __obj.updateDynamic("itemDelimiter")(itemDelimiter.asInstanceOf[js.Any])
+    if (lineDelimiter != null) __obj.updateDynamic("lineDelimiter")(lineDelimiter.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportingCsvOptions]
   }
-  @scala.inline
-  implicit class ExportingCsvOptionsOps[Self <: ExportingCsvOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnHeaderFormatter(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaderFormatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnHeaderFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaderFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnHeaderFormatterNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaderFormatter")(null)
-        ret
-    }
-    @scala.inline
-    def withDateFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimalPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalPointNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPoint")(null)
-        ret
-    }
-    @scala.inline
-    def withItemDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemDelimiterNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemDelimiter")(null)
-        ret
-    }
-    @scala.inline
-    def withLineDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDelimiter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

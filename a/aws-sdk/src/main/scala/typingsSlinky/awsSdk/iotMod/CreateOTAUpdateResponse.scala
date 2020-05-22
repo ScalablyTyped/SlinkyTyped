@@ -30,77 +30,20 @@ trait CreateOTAUpdateResponse extends js.Object {
 
 object CreateOTAUpdateResponse {
   @scala.inline
-  def apply(): CreateOTAUpdateResponse = {
+  def apply(
+    awsIotJobArn: AwsIotJobArn = null,
+    awsIotJobId: AwsIotJobId = null,
+    otaUpdateArn: OTAUpdateArn = null,
+    otaUpdateId: OTAUpdateId = null,
+    otaUpdateStatus: OTAUpdateStatus = null
+  ): CreateOTAUpdateResponse = {
     val __obj = js.Dynamic.literal()
+    if (awsIotJobArn != null) __obj.updateDynamic("awsIotJobArn")(awsIotJobArn.asInstanceOf[js.Any])
+    if (awsIotJobId != null) __obj.updateDynamic("awsIotJobId")(awsIotJobId.asInstanceOf[js.Any])
+    if (otaUpdateArn != null) __obj.updateDynamic("otaUpdateArn")(otaUpdateArn.asInstanceOf[js.Any])
+    if (otaUpdateId != null) __obj.updateDynamic("otaUpdateId")(otaUpdateId.asInstanceOf[js.Any])
+    if (otaUpdateStatus != null) __obj.updateDynamic("otaUpdateStatus")(otaUpdateStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateOTAUpdateResponse]
   }
-  @scala.inline
-  implicit class CreateOTAUpdateResponseOps[Self <: CreateOTAUpdateResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsIotJobArn(value: AwsIotJobArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsIotJobArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsIotJobArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsIotJobArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsIotJobId(value: AwsIotJobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsIotJobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsIotJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsIotJobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtaUpdateArn(value: OTAUpdateArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtaUpdateArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtaUpdateId(value: OTAUpdateId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtaUpdateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtaUpdateStatus(value: OTAUpdateStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtaUpdateStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

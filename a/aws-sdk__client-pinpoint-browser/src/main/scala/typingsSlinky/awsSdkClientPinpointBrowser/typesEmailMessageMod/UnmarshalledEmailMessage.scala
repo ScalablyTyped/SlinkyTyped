@@ -7,91 +7,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledEmailMessage extends EmailMessage {
   /**
     * An email represented as a raw MIME message.
     */
   @JSName("RawEmail")
-  var RawEmail_UnmarshalledEmailMessage: js.UndefOr[UnmarshalledRawEmail] = js.native
+  var RawEmail_UnmarshalledEmailMessage: js.UndefOr[UnmarshalledRawEmail] = js.undefined
   /**
     * The reply-to email address(es) for the email. If the recipient replies to the email, each reply-to address will receive the reply.
     */
   @JSName("ReplyToAddresses")
-  var ReplyToAddresses_UnmarshalledEmailMessage: js.UndefOr[js.Array[String]] = js.native
+  var ReplyToAddresses_UnmarshalledEmailMessage: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * An email composed of a subject, a text part and a html part.
     */
   @JSName("SimpleEmail")
-  var SimpleEmail_UnmarshalledEmailMessage: js.UndefOr[UnmarshalledSimpleEmail] = js.native
+  var SimpleEmail_UnmarshalledEmailMessage: js.UndefOr[UnmarshalledSimpleEmail] = js.undefined
   /**
     * Default message substitutions. Can be overridden by individual address substitutions.
     */
   @JSName("Substitutions")
-  var Substitutions_UnmarshalledEmailMessage: js.UndefOr[StringDictionary[js.Array[String]]] = js.native
+  var Substitutions_UnmarshalledEmailMessage: js.UndefOr[StringDictionary[js.Array[String]]] = js.undefined
 }
 
 object UnmarshalledEmailMessage {
   @scala.inline
-  def apply(): UnmarshalledEmailMessage = {
+  def apply(
+    Body: String = null,
+    FeedbackForwardingAddress: String = null,
+    FromAddress: String = null,
+    RawEmail: UnmarshalledRawEmail = null,
+    ReplyToAddresses: js.Array[String] = null,
+    SimpleEmail: UnmarshalledSimpleEmail = null,
+    Substitutions: StringDictionary[js.Array[String]] = null
+  ): UnmarshalledEmailMessage = {
     val __obj = js.Dynamic.literal()
+    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
+    if (FeedbackForwardingAddress != null) __obj.updateDynamic("FeedbackForwardingAddress")(FeedbackForwardingAddress.asInstanceOf[js.Any])
+    if (FromAddress != null) __obj.updateDynamic("FromAddress")(FromAddress.asInstanceOf[js.Any])
+    if (RawEmail != null) __obj.updateDynamic("RawEmail")(RawEmail.asInstanceOf[js.Any])
+    if (ReplyToAddresses != null) __obj.updateDynamic("ReplyToAddresses")(ReplyToAddresses.asInstanceOf[js.Any])
+    if (SimpleEmail != null) __obj.updateDynamic("SimpleEmail")(SimpleEmail.asInstanceOf[js.Any])
+    if (Substitutions != null) __obj.updateDynamic("Substitutions")(Substitutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledEmailMessage]
   }
-  @scala.inline
-  implicit class UnmarshalledEmailMessageOps[Self <: UnmarshalledEmailMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRawEmail(value: UnmarshalledRawEmail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RawEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RawEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplyToAddresses(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplyToAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyToAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplyToAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimpleEmail(value: UnmarshalledSimpleEmail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SimpleEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimpleEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SimpleEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubstitutions(value: StringDictionary[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubstitutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,5 +10,26 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FloatingObjectAlignmentPositionSettings")
 @js.native
 class FloatingObjectAlignmentPositionSettings ()
-  extends typingsSlinky.devexpressWeb.FloatingObjectAlignmentPositionSettings
+  extends typingsSlinky.devexpressWeb.FloatingObjectAlignmentPositionSettings {
+  /**
+    * Gets or sets a value specifying how a floating object is horizontally aligned relative to an element specified by the FloatingObjectAlignmentPositionSettings.horizontalPositionAlignment property.
+    */
+  /* CompleteClass */
+  override var horizontalPositionAlignment: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment = js.native
+  /**
+    * Gets or sets a value specifying to what element the horizontal alignment of a floating object is relative.
+    */
+  /* CompleteClass */
+  override var horizontalPositionType: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionType = js.native
+  /**
+    * Gets or sets a value specifying how a floating object is vertically aligned relative to an element specified by the FloatingObjectAlignmentPositionSettings.verticalPositionAlignment property.
+    */
+  /* CompleteClass */
+  override var verticalPositionAlignment: typingsSlinky.devexpressWeb.FloatingObjectVerticalPositionAlignment = js.native
+  /**
+    * Gets or sets a value specifying to what element the vertical alignment of a floating object is relative.
+    */
+  /* CompleteClass */
+  override var verticalPositionType: typingsSlinky.devexpressWeb.FloatingObjectVerticalPositionType = js.native
+}
 

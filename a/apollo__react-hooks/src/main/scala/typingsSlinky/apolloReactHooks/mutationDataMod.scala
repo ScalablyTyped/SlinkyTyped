@@ -1,10 +1,9 @@
 package typingsSlinky.apolloReactHooks
 
-import typingsSlinky.apolloReactCommon.typesMod.ExecutionResult
-import typingsSlinky.apolloReactCommon.typesMod.MutationFunctionOptions
 import typingsSlinky.apolloReactCommon.typesMod.MutationResult
 import typingsSlinky.apolloReactHooks.anon.Context
 import typingsSlinky.apolloReactHooks.operationDataMod.OperationData
+import typingsSlinky.apolloReactHooks.typesMod.MutationTuple
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,13 +28,7 @@ object mutationDataMod extends js.Object {
     var setResult: js.Any = js.native
     var updateResult: js.Any = js.native
     def afterExecute(): js.Function0[Unit] = js.native
-    def execute(result: MutationResult[TData]): js.Tuple2[
-        js.Function1[
-          /* options */ js.UndefOr[MutationFunctionOptions[TData, TVariables]], 
-          js.Promise[ExecutionResult[TData]]
-        ], 
-        MutationResult[TData]
-      ] = js.native
+    def execute(result: MutationResult[TData]): MutationTuple[TData, TVariables] = js.native
   }
   
 }

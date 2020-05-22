@@ -16,5 +16,9 @@ class SharedVolumeCls protected () extends SharedVolume {
     */
   def this(name: String) = this()
   def this(name: String, opts: ResourceOptions) = this()
+  /* CompleteClass */
+  override var kind: typingsSlinky.pulumiCloud.pulumiCloudStrings.SharedVolume = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

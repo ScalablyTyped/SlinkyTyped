@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientCalendar.CustomDisabledDate event.
   */
-@js.native
 trait ASPxClientCalendarCustomDisabledDateEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the date processed in the calendar.
     */
-  var date: js.Date = js.native
+  var date: js.Date
   /**
     * Gets or sets a value specifying whether selection of the processed calendar date is disabled.
     */
-  var isDisabled: Boolean = js.native
+  var isDisabled: Boolean
 }
 
 object ASPxClientCalendarCustomDisabledDateEventArgs {
@@ -25,25 +24,5 @@ object ASPxClientCalendarCustomDisabledDateEventArgs {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientCalendarCustomDisabledDateEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientCalendarCustomDisabledDateEventArgsOps[Self <: ASPxClientCalendarCustomDisabledDateEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

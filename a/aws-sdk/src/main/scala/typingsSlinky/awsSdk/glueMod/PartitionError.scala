@@ -18,41 +18,11 @@ trait PartitionError extends js.Object {
 
 object PartitionError {
   @scala.inline
-  def apply(): PartitionError = {
+  def apply(ErrorDetail: ErrorDetail = null, PartitionValues: ValueStringList = null): PartitionError = {
     val __obj = js.Dynamic.literal()
+    if (ErrorDetail != null) __obj.updateDynamic("ErrorDetail")(ErrorDetail.asInstanceOf[js.Any])
+    if (PartitionValues != null) __obj.updateDynamic("PartitionValues")(PartitionValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartitionError]
   }
-  @scala.inline
-  implicit class PartitionErrorOps[Self <: PartitionError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorDetail(value: ErrorDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionValues(value: ValueStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

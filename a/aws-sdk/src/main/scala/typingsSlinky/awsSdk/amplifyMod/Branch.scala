@@ -131,228 +131,28 @@ object Branch {
     stage: Stage,
     totalNumberOfJobs: TotalNumberOfJobs,
     ttl: TTL,
-    updateTime: js.Date
+    updateTime: js.Date,
+    associatedResources: AssociatedResources = null,
+    backendEnvironmentArn: BackendEnvironmentArn = null,
+    basicAuthCredentials: BasicAuthCredentials = null,
+    buildSpec: BuildSpec = null,
+    destinationBranch: BranchName = null,
+    pullRequestEnvironmentName: PullRequestEnvironmentName = null,
+    sourceBranch: BranchName = null,
+    tags: TagMap = null,
+    thumbnailUrl: ThumbnailUrl = null
   ): Branch = {
     val __obj = js.Dynamic.literal(activeJobId = activeJobId.asInstanceOf[js.Any], branchArn = branchArn.asInstanceOf[js.Any], branchName = branchName.asInstanceOf[js.Any], createTime = createTime.asInstanceOf[js.Any], customDomains = customDomains.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], enableAutoBuild = enableAutoBuild.asInstanceOf[js.Any], enableBasicAuth = enableBasicAuth.asInstanceOf[js.Any], enableNotification = enableNotification.asInstanceOf[js.Any], enablePullRequestPreview = enablePullRequestPreview.asInstanceOf[js.Any], environmentVariables = environmentVariables.asInstanceOf[js.Any], framework = framework.asInstanceOf[js.Any], stage = stage.asInstanceOf[js.Any], totalNumberOfJobs = totalNumberOfJobs.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any], updateTime = updateTime.asInstanceOf[js.Any])
+    if (associatedResources != null) __obj.updateDynamic("associatedResources")(associatedResources.asInstanceOf[js.Any])
+    if (backendEnvironmentArn != null) __obj.updateDynamic("backendEnvironmentArn")(backendEnvironmentArn.asInstanceOf[js.Any])
+    if (basicAuthCredentials != null) __obj.updateDynamic("basicAuthCredentials")(basicAuthCredentials.asInstanceOf[js.Any])
+    if (buildSpec != null) __obj.updateDynamic("buildSpec")(buildSpec.asInstanceOf[js.Any])
+    if (destinationBranch != null) __obj.updateDynamic("destinationBranch")(destinationBranch.asInstanceOf[js.Any])
+    if (pullRequestEnvironmentName != null) __obj.updateDynamic("pullRequestEnvironmentName")(pullRequestEnvironmentName.asInstanceOf[js.Any])
+    if (sourceBranch != null) __obj.updateDynamic("sourceBranch")(sourceBranch.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (thumbnailUrl != null) __obj.updateDynamic("thumbnailUrl")(thumbnailUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Branch]
   }
-  @scala.inline
-  implicit class BranchOps[Self <: Branch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveJobId(value: ActiveJobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeJobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBranchArn(value: BranchArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBranchName(value: BranchName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomDomains(value: CustomDomains): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDomains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: DisplayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableAutoBuild(value: EnableAutoBuild): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoBuild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableBasicAuth(value: EnableBasicAuth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBasicAuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableNotification(value: EnableNotification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableNotification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnablePullRequestPreview(value: EnablePullRequestPreview): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePullRequestPreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironmentVariables(value: EnvironmentVariables): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFramework(value: Framework): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStage(value: Stage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalNumberOfJobs(value: TotalNumberOfJobs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalNumberOfJobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTtl(value: TTL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssociatedResources(value: AssociatedResources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociatedResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedResources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackendEnvironmentArn(value: BackendEnvironmentArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backendEnvironmentArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackendEnvironmentArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backendEnvironmentArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasicAuthCredentials(value: BasicAuthCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuthCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasicAuthCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuthCredentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuildSpec(value: BuildSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildSpec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuildSpec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildSpec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationBranch(value: BranchName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationBranch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationBranch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationBranch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPullRequestEnvironmentName(value: PullRequestEnvironmentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestEnvironmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPullRequestEnvironmentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestEnvironmentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceBranch(value: BranchName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceBranch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceBranch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceBranch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailUrl(value: ThumbnailUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

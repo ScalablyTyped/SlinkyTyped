@@ -7,401 +7,170 @@ import scala.scalajs.js.annotation._
 /**
   * Only allow data when
   */
-@js.native
 trait QuestionnaireItemEnableWhen extends BackboneElement {
   /**
     * Contains extended information for property 'answerBoolean'.
     */
-  var _answerBoolean: js.UndefOr[Element] = js.native
+  var _answerBoolean: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'answerDate'.
     */
-  var _answerDate: js.UndefOr[Element] = js.native
+  var _answerDate: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'answerDateTime'.
     */
-  var _answerDateTime: js.UndefOr[Element] = js.native
+  var _answerDateTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'answerDecimal'.
     */
-  var _answerDecimal: js.UndefOr[Element] = js.native
+  var _answerDecimal: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'answerInteger'.
     */
-  var _answerInteger: js.UndefOr[Element] = js.native
+  var _answerInteger: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'answerString'.
     */
-  var _answerString: js.UndefOr[Element] = js.native
+  var _answerString: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'answerTime'.
     */
-  var _answerTime: js.UndefOr[Element] = js.native
+  var _answerTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'answerUri'.
     */
-  var _answerUri: js.UndefOr[Element] = js.native
+  var _answerUri: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'hasAnswer'.
     */
-  var _hasAnswer: js.UndefOr[Element] = js.native
+  var _hasAnswer: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'question'.
     */
-  var _question: js.UndefOr[Element] = js.native
+  var _question: js.UndefOr[Element] = js.undefined
   /**
     * Value question must have
     */
-  var answerAttachment: js.UndefOr[Attachment] = js.native
+  var answerAttachment: js.UndefOr[Attachment] = js.undefined
   /**
     * Value question must have
     */
-  var answerBoolean: js.UndefOr[Boolean] = js.native
+  var answerBoolean: js.UndefOr[Boolean] = js.undefined
   /**
     * Value question must have
     */
-  var answerCoding: js.UndefOr[Coding] = js.native
+  var answerCoding: js.UndefOr[Coding] = js.undefined
   /**
     * Value question must have
     */
-  var answerDate: js.UndefOr[date] = js.native
+  var answerDate: js.UndefOr[date] = js.undefined
   /**
     * Value question must have
     */
-  var answerDateTime: js.UndefOr[dateTime] = js.native
+  var answerDateTime: js.UndefOr[dateTime] = js.undefined
   /**
     * Value question must have
     */
-  var answerDecimal: js.UndefOr[decimal] = js.native
+  var answerDecimal: js.UndefOr[decimal] = js.undefined
   /**
     * Value question must have
     */
-  var answerInteger: js.UndefOr[integer] = js.native
+  var answerInteger: js.UndefOr[integer] = js.undefined
   /**
     * Value question must have
     */
-  var answerQuantity: js.UndefOr[Quantity] = js.native
+  var answerQuantity: js.UndefOr[Quantity] = js.undefined
   /**
     * Value question must have
     */
-  var answerReference: js.UndefOr[Reference] = js.native
+  var answerReference: js.UndefOr[Reference] = js.undefined
   /**
     * Value question must have
     */
-  var answerString: js.UndefOr[String] = js.native
+  var answerString: js.UndefOr[String] = js.undefined
   /**
     * Value question must have
     */
-  var answerTime: js.UndefOr[time] = js.native
+  var answerTime: js.UndefOr[time] = js.undefined
   /**
     * Value question must have
     */
-  var answerUri: js.UndefOr[uri] = js.native
+  var answerUri: js.UndefOr[uri] = js.undefined
   /**
     * Enable when answered or not
     */
-  var hasAnswer: js.UndefOr[Boolean] = js.native
+  var hasAnswer: js.UndefOr[Boolean] = js.undefined
   /**
     * Question that determines whether item is enabled
     */
-  var question: String = js.native
+  var question: String
 }
 
 object QuestionnaireItemEnableWhen {
   @scala.inline
-  def apply(question: String): QuestionnaireItemEnableWhen = {
+  def apply(
+    question: String,
+    _answerBoolean: Element = null,
+    _answerDate: Element = null,
+    _answerDateTime: Element = null,
+    _answerDecimal: Element = null,
+    _answerInteger: Element = null,
+    _answerString: Element = null,
+    _answerTime: Element = null,
+    _answerUri: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _hasAnswer: Element = null,
+    _id: Element = null,
+    _question: Element = null,
+    answerAttachment: Attachment = null,
+    answerBoolean: js.UndefOr[Boolean] = js.undefined,
+    answerCoding: Coding = null,
+    answerDate: date = null,
+    answerDateTime: dateTime = null,
+    answerDecimal: js.UndefOr[decimal] = js.undefined,
+    answerInteger: js.UndefOr[integer] = js.undefined,
+    answerQuantity: Quantity = null,
+    answerReference: Reference = null,
+    answerString: String = null,
+    answerTime: time = null,
+    answerUri: uri = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    hasAnswer: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null
+  ): QuestionnaireItemEnableWhen = {
     val __obj = js.Dynamic.literal(question = question.asInstanceOf[js.Any])
+    if (_answerBoolean != null) __obj.updateDynamic("_answerBoolean")(_answerBoolean.asInstanceOf[js.Any])
+    if (_answerDate != null) __obj.updateDynamic("_answerDate")(_answerDate.asInstanceOf[js.Any])
+    if (_answerDateTime != null) __obj.updateDynamic("_answerDateTime")(_answerDateTime.asInstanceOf[js.Any])
+    if (_answerDecimal != null) __obj.updateDynamic("_answerDecimal")(_answerDecimal.asInstanceOf[js.Any])
+    if (_answerInteger != null) __obj.updateDynamic("_answerInteger")(_answerInteger.asInstanceOf[js.Any])
+    if (_answerString != null) __obj.updateDynamic("_answerString")(_answerString.asInstanceOf[js.Any])
+    if (_answerTime != null) __obj.updateDynamic("_answerTime")(_answerTime.asInstanceOf[js.Any])
+    if (_answerUri != null) __obj.updateDynamic("_answerUri")(_answerUri.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_hasAnswer != null) __obj.updateDynamic("_hasAnswer")(_hasAnswer.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_question != null) __obj.updateDynamic("_question")(_question.asInstanceOf[js.Any])
+    if (answerAttachment != null) __obj.updateDynamic("answerAttachment")(answerAttachment.asInstanceOf[js.Any])
+    if (!js.isUndefined(answerBoolean)) __obj.updateDynamic("answerBoolean")(answerBoolean.get.asInstanceOf[js.Any])
+    if (answerCoding != null) __obj.updateDynamic("answerCoding")(answerCoding.asInstanceOf[js.Any])
+    if (answerDate != null) __obj.updateDynamic("answerDate")(answerDate.asInstanceOf[js.Any])
+    if (answerDateTime != null) __obj.updateDynamic("answerDateTime")(answerDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(answerDecimal)) __obj.updateDynamic("answerDecimal")(answerDecimal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(answerInteger)) __obj.updateDynamic("answerInteger")(answerInteger.get.asInstanceOf[js.Any])
+    if (answerQuantity != null) __obj.updateDynamic("answerQuantity")(answerQuantity.asInstanceOf[js.Any])
+    if (answerReference != null) __obj.updateDynamic("answerReference")(answerReference.asInstanceOf[js.Any])
+    if (answerString != null) __obj.updateDynamic("answerString")(answerString.asInstanceOf[js.Any])
+    if (answerTime != null) __obj.updateDynamic("answerTime")(answerTime.asInstanceOf[js.Any])
+    if (answerUri != null) __obj.updateDynamic("answerUri")(answerUri.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasAnswer)) __obj.updateDynamic("hasAnswer")(hasAnswer.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[QuestionnaireItemEnableWhen]
   }
-  @scala.inline
-  implicit class QuestionnaireItemEnableWhenOps[Self <: QuestionnaireItemEnableWhen] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuestion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("question")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_answerBoolean(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_answerBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_answerDate(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_answerDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_answerDateTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_answerDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_answerDecimal(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerDecimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_answerDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerDecimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_answerInteger(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerInteger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_answerInteger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerInteger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_answerString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_answerString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_answerTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_answerTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_answerUri(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_answerUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_answerUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_hasAnswer(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_hasAnswer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_hasAnswer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_hasAnswer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_question(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_question")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_question: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_question")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerAttachment(value: Attachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerAttachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerAttachment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerAttachment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerBoolean(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerCoding(value: Coding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerCoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerCoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerCoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerDate(value: date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerDateTime(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerDecimal(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerDecimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerDecimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerInteger(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerInteger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerInteger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerInteger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerQuantity(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerQuantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerQuantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerTime(value: time): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswerUri(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswerUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answerUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasAnswer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAnswer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasAnswer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAnswer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

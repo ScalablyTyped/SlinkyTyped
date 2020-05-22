@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMathGroupChar extends js.Object {
-  var AlignTop: Boolean = js.native
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  var Char: Double = js.native
-  var CharTop: Boolean = js.native
-  val Creator: Double = js.native
-  val E: OMath = js.native
-  val Parent: js.Any = js.native
+  var AlignTop: Boolean
+  val Application: typingsSlinky.activexWord.Word.Application
+  var Char: Double
+  var CharTop: Boolean
+  val Creator: Double
+  val E: OMath
+  val Parent: js.Any
   @JSName("Word.OMathGroupChar_typekey")
-  var WordDotOMathGroupChar_typekey: OMathGroupChar = js.native
+  var WordDotOMathGroupChar_typekey: OMathGroupChar
 }
 
 object OMathGroupChar {
@@ -33,61 +32,5 @@ object OMathGroupChar {
     __obj.updateDynamic("Word.OMathGroupChar_typekey")(WordDotOMathGroupChar_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMathGroupChar]
   }
-  @scala.inline
-  implicit class OMathGroupCharOps[Self <: OMathGroupChar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChar(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Char")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CharTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withE(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotOMathGroupChar_typekey(value: OMathGroupChar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMathGroupChar_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

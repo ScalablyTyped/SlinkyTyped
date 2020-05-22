@@ -5,43 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WriteObject extends js.Object {
-  var flags: js.UndefOr[Double] = js.native
-  var message: Buffer = js.native
+  var flags: js.UndefOr[Double] = js.undefined
+  var message: Buffer
 }
 
 object WriteObject {
   @scala.inline
-  def apply(message: Buffer): WriteObject = {
+  def apply(message: Buffer, flags: js.UndefOr[Double] = js.undefined): WriteObject = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    if (!js.isUndefined(flags)) __obj.updateDynamic("flags")(flags.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteObject]
   }
-  @scala.inline
-  implicit class WriteObjectOps[Self <: WriteObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

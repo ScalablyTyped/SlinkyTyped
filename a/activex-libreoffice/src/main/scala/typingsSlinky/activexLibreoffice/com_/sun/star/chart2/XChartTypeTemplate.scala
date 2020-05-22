@@ -9,9 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XChartTypeTemplate extends XInterface {
-  val DataInterpreter: XDataInterpreter = js.native
+  val DataInterpreter: XDataInterpreter
   /**
     * Applies a chart-type specific style (e.g. symbols) to all series in the sequence aSeries.
     * @param xSeries a single data series to which a style will be applied
@@ -19,14 +18,14 @@ trait XChartTypeTemplate extends XInterface {
     * @param nSeriesIndex The index of the series inside the current chart-type group. nSeriesIndex does not uniquely identify a data series alone, but only t
     * @param nSeriesCount The number of series in the current chart-type group.
     */
-  def applyStyle(xSeries: XDataSeries, nChartTypeGroupIndex: Double, nSeriesIndex: Double, nSeriesCount: Double): Unit = js.native
+  def applyStyle(xSeries: XDataSeries, nChartTypeGroupIndex: Double, nSeriesIndex: Double, nSeriesCount: Double): Unit
   /**
     * Analyses the given diagram and reinterprets its {@link DataSeries} and Categories and creates a new diagram based on these series.
     *
     * Note, that if {@link matchesTemplate()} returns `TRUE` for the given {@link XDiagram} , the latter should not be changed.
     * @param xDiagram The diagram given will be modified such that it represents this {@link ChartTypeTemplate} .
     */
-  def changeDiagram(xDiagram: XDiagram): Unit = js.native
+  def changeDiagram(xDiagram: XDiagram): Unit
   /**
     * Changes the given diagram `xDiagram` by using the new data given in `xDataSource` .
     *
@@ -38,20 +37,20 @@ trait XChartTypeTemplate extends XInterface {
     * @param xDataSource This data source will be interpreted in a chart-type specific way and the {@link DataSeries} found in `xDiagram` will be adapted to t
     * @param aArguments Arguments that tell the template how to slice the given range. The properties should be defined in a separate service.  For standard p
     */
-  def changeDiagramData(xDiagram: XDiagram, xDataSource: XDataSource, aArguments: SeqEquiv[PropertyValue]): Unit = js.native
+  def changeDiagramData(xDiagram: XDiagram, xDataSource: XDataSource, aArguments: SeqEquiv[PropertyValue]): Unit
   /**
     * Creates a new diagram based upon the given data .
     * @param xDataSource This data source will be interpreted in a chart-type specific way and appropriate {@link DataSeries} will be created which serve as i
     * @param aArguments Arguments that tell the template how to slice the given range. The properties should be defined in a separate service.  For standard p
     * @returns The new diagram which represents this {@link ChartTypeTemplate} .
     */
-  def createDiagramByDataSource(xDataSource: XDataSource, aArguments: SeqEquiv[PropertyValue]): XDiagram = js.native
+  def createDiagramByDataSource(xDataSource: XDataSource, aArguments: SeqEquiv[PropertyValue]): XDiagram
   /**
     * Provides a chart type object that can be used to create new series.
     * @param aFormerlyUsedChartTypes The list can be used to copy some aspects from old chart types during the creation of a new chart type. The list might be
     */
-  def getChartTypeForNewSeries(aFormerlyUsedChartTypes: SeqEquiv[XChartType]): XChartType = js.native
-  def getDataInterpreter(): XDataInterpreter = js.native
+  def getChartTypeForNewSeries(aFormerlyUsedChartTypes: SeqEquiv[XChartType]): XChartType
+  def getDataInterpreter(): XDataInterpreter
   /**
     * States whether the given diagram could have been created by the template.
     *
@@ -63,7 +62,7 @@ trait XChartTypeTemplate extends XInterface {
     * @param bAdaptProperties If `TRUE` the properties of the template are set, such that the template matches more accurately. E.g. for a line-chart with sym
     * @returns `TRUE` if the diagram given is structurally identical to a diagram that was created using {@link createDiagramByDataSource()} or {@link changeDia
     */
-  def matchesTemplate(xDiagram: XDiagram, bAdaptProperties: Boolean): Boolean = js.native
+  def matchesTemplate(xDiagram: XDiagram, bAdaptProperties: Boolean): Boolean
   /**
     * Resets all styles that were changed from the default at any object in the chart and have not been later modified.
     *
@@ -73,9 +72,9 @@ trait XChartTypeTemplate extends XInterface {
     * If for example the template changed the {@link com.sun.star.drawing.LineStyle} of all series to NONE, this method should reset all series with
     * LineStyle NONE back to SOLID. If a series has a style DASH, it must not be changed.
     */
-  def resetStyles(xDiagram: XDiagram): Unit = js.native
+  def resetStyles(xDiagram: XDiagram): Unit
   /** @returns `TRUE` if the template does support categories */
-  def supportsCategories(): Boolean = js.native
+  def supportsCategories(): Boolean
 }
 
 object XChartTypeTemplate {
@@ -98,73 +97,5 @@ object XChartTypeTemplate {
     val __obj = js.Dynamic.literal(DataInterpreter = DataInterpreter.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), applyStyle = js.Any.fromFunction4(applyStyle), changeDiagram = js.Any.fromFunction1(changeDiagram), changeDiagramData = js.Any.fromFunction3(changeDiagramData), createDiagramByDataSource = js.Any.fromFunction2(createDiagramByDataSource), getChartTypeForNewSeries = js.Any.fromFunction1(getChartTypeForNewSeries), getDataInterpreter = js.Any.fromFunction0(getDataInterpreter), matchesTemplate = js.Any.fromFunction2(matchesTemplate), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), resetStyles = js.Any.fromFunction1(resetStyles), supportsCategories = js.Any.fromFunction0(supportsCategories))
     __obj.asInstanceOf[XChartTypeTemplate]
   }
-  @scala.inline
-  implicit class XChartTypeTemplateOps[Self <: XChartTypeTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataInterpreter(value: XDataInterpreter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataInterpreter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplyStyle(value: (XDataSeries, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyStyle")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withChangeDiagram(value: XDiagram => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeDiagram")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withChangeDiagramData(value: (XDiagram, XDataSource, SeqEquiv[PropertyValue]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeDiagramData")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withCreateDiagramByDataSource(value: (XDataSource, SeqEquiv[PropertyValue]) => XDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDiagramByDataSource")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetChartTypeForNewSeries(value: SeqEquiv[XChartType] => XChartType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChartTypeForNewSeries")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDataInterpreter(value: () => XDataInterpreter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataInterpreter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMatchesTemplate(value: (XDiagram, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchesTemplate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withResetStyles(value: XDiagram => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetStyles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsCategories(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCategories")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

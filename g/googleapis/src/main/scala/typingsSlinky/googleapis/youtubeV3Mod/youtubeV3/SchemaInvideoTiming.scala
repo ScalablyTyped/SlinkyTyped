@@ -32,53 +32,12 @@ trait SchemaInvideoTiming extends js.Object {
 
 object SchemaInvideoTiming {
   @scala.inline
-  def apply(): SchemaInvideoTiming = {
+  def apply(durationMs: String = null, offsetMs: String = null, `type`: String = null): SchemaInvideoTiming = {
     val __obj = js.Dynamic.literal()
+    if (durationMs != null) __obj.updateDynamic("durationMs")(durationMs.asInstanceOf[js.Any])
+    if (offsetMs != null) __obj.updateDynamic("offsetMs")(offsetMs.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInvideoTiming]
   }
-  @scala.inline
-  implicit class SchemaInvideoTimingOps[Self <: SchemaInvideoTiming] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDurationMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

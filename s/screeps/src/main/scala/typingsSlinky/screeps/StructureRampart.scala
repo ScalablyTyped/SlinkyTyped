@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
   * Blocks movement of hostile creeps, and defends your creeps and structures on
   * the same tile. Can be used as a controllable gate.
   */
-@js.native
 trait StructureRampart
   extends OwnedStructure[STRUCTURE_RAMPART]
      with AnyOwnedStructure
@@ -16,16 +15,16 @@ trait StructureRampart
   /**
     * If false (default), only your creeps can step on the same square. If true, any hostile creeps can pass through.
     */
-  var isPublic: Boolean = js.native
+  var isPublic: Boolean
   /**
     * The amount of game ticks when this rampart will lose some hit points.
     */
-  var ticksToDecay: Double = js.native
+  var ticksToDecay: Double
   /**
     * Make this rampart public to allow other players' creeps to pass through.
     * @param isPublic Whether this rampart should be public or non-public
     */
-  def setPublic(isPublic: Boolean): js.UndefOr[scala.Nothing] = js.native
+  def setPublic(isPublic: Boolean): js.UndefOr[scala.Nothing]
 }
 
 object StructureRampart {
@@ -38,41 +37,18 @@ object StructureRampart {
     id: Id[StructureRampart],
     isActive: () => Boolean,
     isPublic: Boolean,
+    my: Boolean,
     notifyWhenAttacked: Boolean => ScreepsReturnCode,
     pos: RoomPosition,
     room: Room,
     setPublic: Boolean => js.UndefOr[scala.Nothing],
     structureType: STRUCTURE_RAMPART,
-    ticksToDecay: Double
+    ticksToDecay: Double,
+    owner: Owner = null
   ): StructureRampart = {
-    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), isPublic = isPublic.asInstanceOf[js.Any], notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], setPublic = js.Any.fromFunction1(setPublic), structureType = structureType.asInstanceOf[js.Any], ticksToDecay = ticksToDecay.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), isPublic = isPublic.asInstanceOf[js.Any], my = my.asInstanceOf[js.Any], notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], setPublic = js.Any.fromFunction1(setPublic), structureType = structureType.asInstanceOf[js.Any], ticksToDecay = ticksToDecay.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructureRampart]
   }
-  @scala.inline
-  implicit class StructureRampartOps[Self <: StructureRampart] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsPublic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPublic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetPublic(value: Boolean => js.UndefOr[scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPublic")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTicksToDecay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksToDecay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

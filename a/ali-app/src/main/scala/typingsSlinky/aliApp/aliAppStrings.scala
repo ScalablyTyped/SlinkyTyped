@@ -3,10 +3,10 @@ package typingsSlinky.aliApp
 import typingsSlinky.aliApp.my.EventType
 import typingsSlinky.aliApp.my.ImageSourceType
 import typingsSlinky.aliApp.my.NetworkType
-import typingsSlinky.aliApp.my.TextRiskIdentificationType
 import typingsSlinky.aliApp.my.TimingFunction
 import typingsSlinky.aliApp.my.TouchEventType
 import typingsSlinky.aliApp.my.TransitionEventType
+import typingsSlinky.aliApp.my._TextRiskIdentificationType
 import typingsSlinky.aliApp.my.scanType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,19 +14,19 @@ import scala.scalajs.js.annotation._
 
 object aliAppStrings {
   @js.native
-  sealed trait `0` extends TextRiskIdentificationType
+  sealed trait `0` extends _TextRiskIdentificationType
   
   @js.native
-  sealed trait `1` extends TextRiskIdentificationType
+  sealed trait `1` extends _TextRiskIdentificationType
   
   @js.native
-  sealed trait `2` extends TextRiskIdentificationType
+  sealed trait `2` extends _TextRiskIdentificationType
   
   @js.native
   sealed trait `2G` extends NetworkType
   
   @js.native
-  sealed trait `3` extends TextRiskIdentificationType
+  sealed trait `3` extends _TextRiskIdentificationType
   
   @js.native
   sealed trait `3G` extends NetworkType
@@ -218,7 +218,7 @@ object aliAppStrings {
   sealed trait json extends js.Object
   
   @js.native
-  sealed trait keyword extends TextRiskIdentificationType
+  sealed trait keyword extends _TextRiskIdentificationType
   
   @js.native
   sealed trait known extends js.Object

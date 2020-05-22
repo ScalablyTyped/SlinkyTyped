@@ -8,55 +8,24 @@ import scala.scalajs.js.annotation._
 /**
   * Interface representing the properties to update on the provided tenant.
   */
-@js.native
 trait UpdateTenantRequest extends js.Object {
   /**
     * The tenant display name.
     */
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   /**
     * The email sign in configuration.
     */
-  var emailSignInConfig: js.UndefOr[Enabled] = js.native
+  var emailSignInConfig: js.UndefOr[Enabled] = js.undefined
 }
 
 object UpdateTenantRequest {
   @scala.inline
-  def apply(): UpdateTenantRequest = {
+  def apply(displayName: String = null, emailSignInConfig: Enabled = null): UpdateTenantRequest = {
     val __obj = js.Dynamic.literal()
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (emailSignInConfig != null) __obj.updateDynamic("emailSignInConfig")(emailSignInConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTenantRequest]
   }
-  @scala.inline
-  implicit class UpdateTenantRequestOps[Self <: UpdateTenantRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailSignInConfig(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailSignInConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailSignInConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailSignInConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

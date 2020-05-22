@@ -17,5 +17,11 @@ class Rule protected ()
     Operation: typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleOperation,
     Flag: typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleFlags
   ) = this()
+  /* CompleteClass */
+  override var Descriptor: typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleDescriptor = js.native
+  /* CompleteClass */
+  override var Flag: typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleFlags = js.native
+  /* CompleteClass */
+  override var Operation: typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleOperation = js.native
 }
 

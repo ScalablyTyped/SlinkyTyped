@@ -11,236 +11,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MenuProps extends js.Object {
   // <List/> is the element that get the 'other' properties
-  var autoWidth: js.UndefOr[Boolean] = js.native
-  var desktop: js.UndefOr[Boolean] = js.native
-  var disableAutoFocus: js.UndefOr[Boolean] = js.native
-  var initiallyKeyboardFocused: js.UndefOr[Boolean] = js.native
-  var listStyle: js.UndefOr[CSSProperties] = js.native
-  var maxHeight: js.UndefOr[Double] = js.native
-  var multiple: js.UndefOr[Boolean] = js.native
+  var autoWidth: js.UndefOr[Boolean] = js.undefined
+  var desktop: js.UndefOr[Boolean] = js.undefined
+  var disableAutoFocus: js.UndefOr[Boolean] = js.undefined
+  var initiallyKeyboardFocused: js.UndefOr[Boolean] = js.undefined
+  var listStyle: js.UndefOr[CSSProperties] = js.undefined
+  var maxHeight: js.UndefOr[Double] = js.undefined
+  var multiple: js.UndefOr[Boolean] = js.undefined
   var onChange: js.UndefOr[
     js.Function2[/* e */ SyntheticEvent[Event, js.Object], /* itemValue */ js.Any | js.Array[_], Unit]
-  ] = js.native
-  var onEscKeyDown: js.UndefOr[KeyboardEventHandler[js.Object]] = js.native
+  ] = js.undefined
+  var onEscKeyDown: js.UndefOr[KeyboardEventHandler[js.Object]] = js.undefined
   var onItemClick: js.UndefOr[
     js.Function2[/* e */ SyntheticEvent[Event, js.Object], ReactComponentClass[MenuItemProps], Unit]
-  ] = js.native
-  var onKeyDown: js.UndefOr[KeyboardEventHandler[js.Object]] = js.native
-  var selectedMenuItemStyle: js.UndefOr[CSSProperties] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var value: js.UndefOr[js.Any | js.Array[_]] = js.native
-  var valueLink: js.UndefOr[ReactLink[_ | js.Array[_]]] = js.native
-  var width: js.UndefOr[String | Double] = js.native
+  ] = js.undefined
+  var onKeyDown: js.UndefOr[KeyboardEventHandler[js.Object]] = js.undefined
+  var selectedMenuItemStyle: js.UndefOr[CSSProperties] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var value: js.UndefOr[js.Any | js.Array[_]] = js.undefined
+  var valueLink: js.UndefOr[ReactLink[_ | js.Array[_]]] = js.undefined
+  var width: js.UndefOr[String | Double] = js.undefined
 }
 
 object MenuProps {
   @scala.inline
-  def apply(): MenuProps = {
+  def apply(
+    autoWidth: js.UndefOr[Boolean] = js.undefined,
+    desktop: js.UndefOr[Boolean] = js.undefined,
+    disableAutoFocus: js.UndefOr[Boolean] = js.undefined,
+    initiallyKeyboardFocused: js.UndefOr[Boolean] = js.undefined,
+    listStyle: CSSProperties = null,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    onChange: (/* e */ SyntheticEvent[Event, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit = null,
+    onEscKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
+    onItemClick: (/* e */ SyntheticEvent[Event, js.Object], ReactComponentClass[MenuItemProps]) => Unit = null,
+    onKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
+    selectedMenuItemStyle: CSSProperties = null,
+    style: CSSProperties = null,
+    value: js.Any | js.Array[_] = null,
+    valueLink: ReactLink[_ | js.Array[_]] = null,
+    width: String | Double = null
+  ): MenuProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoWidth)) __obj.updateDynamic("autoWidth")(autoWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(desktop)) __obj.updateDynamic("desktop")(desktop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableAutoFocus)) __obj.updateDynamic("disableAutoFocus")(disableAutoFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initiallyKeyboardFocused)) __obj.updateDynamic("initiallyKeyboardFocused")(initiallyKeyboardFocused.get.asInstanceOf[js.Any])
+    if (listStyle != null) __obj.updateDynamic("listStyle")(listStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onEscKeyDown != null) __obj.updateDynamic("onEscKeyDown")(js.Any.fromFunction1(onEscKeyDown))
+    if (onItemClick != null) __obj.updateDynamic("onItemClick")(js.Any.fromFunction2(onItemClick))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+    if (selectedMenuItemStyle != null) __obj.updateDynamic("selectedMenuItemStyle")(selectedMenuItemStyle.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (valueLink != null) __obj.updateDynamic("valueLink")(valueLink.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuProps]
   }
-  @scala.inline
-  implicit class MenuPropsOps[Self <: MenuProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesktop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesktop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAutoFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAutoFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitiallyKeyboardFocused(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiallyKeyboardFocused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitiallyKeyboardFocused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiallyKeyboardFocused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: (/* e */ SyntheticEvent[Event, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEscKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscKeyDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEscKeyDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscKeyDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemClick(value: (/* e */ SyntheticEvent[Event, js.Object], ReactComponentClass[MenuItemProps]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedMenuItemStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMenuItemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedMenuItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMenuItemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueLink(value: ReactLink[_ | js.Array[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

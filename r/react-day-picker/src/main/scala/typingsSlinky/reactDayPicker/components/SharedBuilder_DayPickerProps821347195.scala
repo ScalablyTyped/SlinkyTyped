@@ -15,9 +15,10 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactDayPicker.anon.NextMonth
 import typingsSlinky.reactDayPicker.anon.PartialModifiers
-import typingsSlinky.reactDayPicker.commonMod.ClassNames
-import typingsSlinky.reactDayPicker.commonMod.DayModifiers
-import typingsSlinky.reactDayPicker.commonMod.Modifier
+import typingsSlinky.reactDayPicker.classNamesMod.ClassNames
+import typingsSlinky.reactDayPicker.localeUtilsMod.LocaleUtils
+import typingsSlinky.reactDayPicker.modifiersMod.DayModifiers
+import typingsSlinky.reactDayPicker.modifiersMod.Modifier
 import typingsSlinky.reactDayPicker.propsMod.CaptionElementProps
 import typingsSlinky.reactDayPicker.propsMod.NavbarElementProps
 import typingsSlinky.reactDayPicker.propsMod.WeekdayElementProps
@@ -68,7 +69,7 @@ class SharedBuilder_DayPickerProps821347195[R <: js.Object] (val args: js.Array[
   @scala.inline
   def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
   @scala.inline
-  def localeUtils(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any): this.type = set("localeUtils", value.asInstanceOf[js.Any])
+  def localeUtils(value: LocaleUtils): this.type = set("localeUtils", value.asInstanceOf[js.Any])
   @scala.inline
   def modifiers(value: PartialModifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
   @scala.inline

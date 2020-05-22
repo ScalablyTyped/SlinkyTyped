@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait ModuleReference extends js.Object
 
-object ModuleReference {
-  @scala.inline
-  implicit def apply(value: EntityName): ModuleReference = value.asInstanceOf[ModuleReference]
-  @scala.inline
-  implicit def apply(value: ExternalModuleReference): ModuleReference = value.asInstanceOf[ModuleReference]
-}
-

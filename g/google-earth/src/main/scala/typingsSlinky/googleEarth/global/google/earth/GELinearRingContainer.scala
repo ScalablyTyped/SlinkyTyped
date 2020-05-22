@@ -7,5 +7,55 @@ import scala.scalajs.js.annotation._
 @JSGlobal("google.earth.GELinearRingContainer")
 @js.native
 class GELinearRingContainer ()
-  extends typingsSlinky.googleEarth.google.earth.GESchemaObjectContainer[typingsSlinky.googleEarth.google.earth.KmlLinearRing]
+  extends typingsSlinky.googleEarth.google.earth.GESchemaObjectContainer[typingsSlinky.googleEarth.google.earth.KmlLinearRing] {
+  /**
+    * Adds a node to the end of the list of children of a specified feature.
+    * Returns the appended object.
+    */
+  /* CompleteClass */
+  override def appendChild(`object`: typingsSlinky.googleEarth.google.earth.KmlLinearRing): Unit = js.native
+  /**
+    * List of features (for KmlContainer), or list of features, styles, and schemas (for KmlDocument).
+    * Returns true if there are any child nodes.
+    */
+  /* CompleteClass */
+  override def getChildNodes(): typingsSlinky.googleEarth.google.earth.KmlObjectList[typingsSlinky.googleEarth.google.earth.KmlLinearRing] = js.native
+  /**
+    * First child in the list of objects.
+    */
+  /* CompleteClass */
+  override def getFirstChild(): typingsSlinky.googleEarth.google.earth.KmlLinearRing = js.native
+  /**
+    * Last child in the list of objects.
+    */
+  /* CompleteClass */
+  override def getLastChild(): typingsSlinky.googleEarth.google.earth.KmlLinearRing = js.native
+  /**
+    * Returns true if the container is not empty.
+    */
+  /* CompleteClass */
+  override def hasChildNodes(): Boolean = js.native
+  /**
+    * Inserts a child before the referenced child in the list of objects.
+    */
+  /* CompleteClass */
+  override def insertBefore(
+    newChild: typingsSlinky.googleEarth.google.earth.KmlLinearRing,
+    refChild: typingsSlinky.googleEarth.google.earth.KmlLinearRing
+  ): Unit = js.native
+  /**
+    * Removes a node from the list of children of a specified object.
+    */
+  /* CompleteClass */
+  override def removeChild(oldChild: typingsSlinky.googleEarth.google.earth.KmlLinearRing): Unit = js.native
+  /**
+    * Replaces existing child in the list of features.
+    * Returns the old child.
+    */
+  /* CompleteClass */
+  override def replaceChild(
+    newChild: typingsSlinky.googleEarth.google.earth.KmlLinearRing,
+    oldChild: typingsSlinky.googleEarth.google.earth.KmlLinearRing
+  ): Unit = js.native
+}
 

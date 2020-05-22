@@ -18,41 +18,11 @@ trait ResourceEndpointListItem extends js.Object {
 
 object ResourceEndpointListItem {
   @scala.inline
-  def apply(): ResourceEndpointListItem = {
+  def apply(Protocol: ChannelProtocol = null, ResourceEndpoint: ResourceEndpoint = null): ResourceEndpointListItem = {
     val __obj = js.Dynamic.literal()
+    if (Protocol != null) __obj.updateDynamic("Protocol")(Protocol.asInstanceOf[js.Any])
+    if (ResourceEndpoint != null) __obj.updateDynamic("ResourceEndpoint")(ResourceEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceEndpointListItem]
   }
-  @scala.inline
-  implicit class ResourceEndpointListItemOps[Self <: ResourceEndpointListItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProtocol(value: ChannelProtocol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceEndpoint(value: ResourceEndpoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceEndpoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

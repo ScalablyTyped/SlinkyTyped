@@ -9,19 +9,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectionOptions
   extends SecureContextOptions
      with CommonConnectionOptions {
    // Establish secure connection on a given socket rather than creating a new socket
   var checkServerIdentity: js.UndefOr[
     js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]
-  ] = js.native
-  var host: js.UndefOr[String] = js.native
-  var lookup: js.UndefOr[LookupFunction] = js.native
-  var minDHSize: js.UndefOr[Double] = js.native
-  var path: js.UndefOr[String] = js.native
-  var port: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var lookup: js.UndefOr[LookupFunction] = js.undefined
+  var minDHSize: js.UndefOr[Double] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
   /**
     * When negotiating TLS-PSK (pre-shared keys), this function is called
     * with optional identity `hint` provided by the server or `null`
@@ -39,162 +38,93 @@ trait ConnectionOptions
     * compatible with the selected cipher's digest.
     * `identity` must use UTF-8 encoding.
     */
-  var pskCallback: js.UndefOr[js.Function1[/* hint */ String | Null, PSKCallbackNegotation | Null]] = js.native
-  var servername: js.UndefOr[String] = js.native
+  var pskCallback: js.UndefOr[js.Function1[/* hint */ String | Null, PSKCallbackNegotation | Null]] = js.undefined
+  var servername: js.UndefOr[String] = js.undefined
    // SNI TLS Extension
-  var session: js.UndefOr[Buffer] = js.native
+  var session: js.UndefOr[Buffer] = js.undefined
    // Creates unix socket connection to path. If this option is specified, `host` and `port` are ignored.
-  var socket: js.UndefOr[Socket] = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  var socket: js.UndefOr[Socket] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object ConnectionOptions {
   @scala.inline
-  def apply(): ConnectionOptions = {
+  def apply(
+    ALPNProtocols: (js.Array[String | js.typedarray.Uint8Array]) | js.typedarray.Uint8Array = null,
+    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
+    ca: String | Buffer | (js.Array[String | Buffer]) = null,
+    cert: String | Buffer | (js.Array[String | Buffer]) = null,
+    checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error] = null,
+    ciphers: String = null,
+    clientCertEngine: String = null,
+    crl: String | Buffer | (js.Array[String | Buffer]) = null,
+    dhparam: String | Buffer = null,
+    ecdhCurve: String = null,
+    enableTrace: js.UndefOr[Boolean] = js.undefined,
+    honorCipherOrder: js.UndefOr[Boolean] = js.undefined,
+    host: String = null,
+    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
+    lookup: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit = null,
+    maxVersion: SecureVersion = null,
+    minDHSize: js.UndefOr[Double] = js.undefined,
+    minVersion: SecureVersion = null,
+    passphrase: String = null,
+    path: String = null,
+    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
+    port: js.UndefOr[Double] = js.undefined,
+    privateKeyEngine: String = null,
+    privateKeyIdentifier: String = null,
+    pskCallback: /* hint */ String | Null => PSKCallbackNegotation | Null = null,
+    rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
+    requestCert: js.UndefOr[Boolean] = js.undefined,
+    secureContext: SecureContext = null,
+    secureOptions: js.UndefOr[Double] = js.undefined,
+    secureProtocol: String = null,
+    servername: String = null,
+    session: Buffer = null,
+    sessionIdContext: String = null,
+    sigalgs: String = null,
+    socket: Socket = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): ConnectionOptions = {
     val __obj = js.Dynamic.literal()
+    if (ALPNProtocols != null) __obj.updateDynamic("ALPNProtocols")(ALPNProtocols.asInstanceOf[js.Any])
+    if (SNICallback != null) __obj.updateDynamic("SNICallback")(js.Any.fromFunction2(SNICallback))
+    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
+    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
+    if (checkServerIdentity != null) __obj.updateDynamic("checkServerIdentity")(js.Any.fromFunction2(checkServerIdentity))
+    if (ciphers != null) __obj.updateDynamic("ciphers")(ciphers.asInstanceOf[js.Any])
+    if (clientCertEngine != null) __obj.updateDynamic("clientCertEngine")(clientCertEngine.asInstanceOf[js.Any])
+    if (crl != null) __obj.updateDynamic("crl")(crl.asInstanceOf[js.Any])
+    if (dhparam != null) __obj.updateDynamic("dhparam")(dhparam.asInstanceOf[js.Any])
+    if (ecdhCurve != null) __obj.updateDynamic("ecdhCurve")(ecdhCurve.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableTrace)) __obj.updateDynamic("enableTrace")(enableTrace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(honorCipherOrder)) __obj.updateDynamic("honorCipherOrder")(honorCipherOrder.get.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (lookup != null) __obj.updateDynamic("lookup")(js.Any.fromFunction3(lookup))
+    if (maxVersion != null) __obj.updateDynamic("maxVersion")(maxVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(minDHSize)) __obj.updateDynamic("minDHSize")(minDHSize.get.asInstanceOf[js.Any])
+    if (minVersion != null) __obj.updateDynamic("minVersion")(minVersion.asInstanceOf[js.Any])
+    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
+    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
+    if (pskCallback != null) __obj.updateDynamic("pskCallback")(js.Any.fromFunction1(pskCallback))
+    if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.get.asInstanceOf[js.Any])
+    if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])
+    if (!js.isUndefined(secureOptions)) __obj.updateDynamic("secureOptions")(secureOptions.get.asInstanceOf[js.Any])
+    if (secureProtocol != null) __obj.updateDynamic("secureProtocol")(secureProtocol.asInstanceOf[js.Any])
+    if (servername != null) __obj.updateDynamic("servername")(servername.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
+    if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
+    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
+    if (socket != null) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionOptions]
   }
-  @scala.inline
-  implicit class ConnectionOptionsOps[Self <: ConnectionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckServerIdentity(value: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkServerIdentity")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCheckServerIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkServerIdentity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookup(
-      value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutLookup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDHSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDHSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDHSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDHSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPskCallback(value: /* hint */ String | Null => PSKCallbackNegotation | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pskCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPskCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pskCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servername")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servername")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSession(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocket(value: Socket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CastingContext extends js.Object {
-  val column: Double | String = js.native
-  val empty_lines: Double = js.native
-  val header: Boolean = js.native
-  val index: Double = js.native
-  val invalid_field_length: Double = js.native
-  val lines: Double = js.native
-  val quoting: Boolean = js.native
-  val records: Double = js.native
+  val column: Double | String
+  val empty_lines: Double
+  val header: Boolean
+  val index: Double
+  val invalid_field_length: Double
+  val lines: Double
+  val quoting: Boolean
+  val records: Double
 }
 
 object CastingContext {
@@ -31,61 +30,5 @@ object CastingContext {
     val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], empty_lines = empty_lines.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], invalid_field_length = invalid_field_length.asInstanceOf[js.Any], lines = lines.asInstanceOf[js.Any], quoting = quoting.asInstanceOf[js.Any], records = records.asInstanceOf[js.Any])
     __obj.asInstanceOf[CastingContext]
   }
-  @scala.inline
-  implicit class CastingContextOps[Self <: CastingContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmpty_lines(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty_lines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInvalid_field_length(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid_field_length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLines(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuoting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quoting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecords(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("records")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

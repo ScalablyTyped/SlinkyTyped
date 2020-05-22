@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILanguageFontGroup extends js.Object {
-  var documentAlternate1Font: LanguageFont = js.native
-  var documentAlternate2Font: LanguageFont = js.native
-  var documentHeadingFont: LanguageFont = js.native
-  var fixedWidthTextFont: LanguageFont = js.native
-  var modernDocumentFont: LanguageFont = js.native
-  var traditionalDocumentFont: LanguageFont = js.native
-  var uICaptionFont: LanguageFont = js.native
-  var uIHeadingFont: LanguageFont = js.native
-  var uINotificationHeadingFont: LanguageFont = js.native
-  var uITextFont: LanguageFont = js.native
-  var uITitleFont: LanguageFont = js.native
+  var documentAlternate1Font: LanguageFont
+  var documentAlternate2Font: LanguageFont
+  var documentHeadingFont: LanguageFont
+  var fixedWidthTextFont: LanguageFont
+  var modernDocumentFont: LanguageFont
+  var traditionalDocumentFont: LanguageFont
+  var uICaptionFont: LanguageFont
+  var uIHeadingFont: LanguageFont
+  var uINotificationHeadingFont: LanguageFont
+  var uITextFont: LanguageFont
+  var uITitleFont: LanguageFont
 }
 
 object ILanguageFontGroup {
@@ -37,79 +36,5 @@ object ILanguageFontGroup {
     val __obj = js.Dynamic.literal(documentAlternate1Font = documentAlternate1Font.asInstanceOf[js.Any], documentAlternate2Font = documentAlternate2Font.asInstanceOf[js.Any], documentHeadingFont = documentHeadingFont.asInstanceOf[js.Any], fixedWidthTextFont = fixedWidthTextFont.asInstanceOf[js.Any], modernDocumentFont = modernDocumentFont.asInstanceOf[js.Any], traditionalDocumentFont = traditionalDocumentFont.asInstanceOf[js.Any], uICaptionFont = uICaptionFont.asInstanceOf[js.Any], uIHeadingFont = uIHeadingFont.asInstanceOf[js.Any], uINotificationHeadingFont = uINotificationHeadingFont.asInstanceOf[js.Any], uITextFont = uITextFont.asInstanceOf[js.Any], uITitleFont = uITitleFont.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILanguageFontGroup]
   }
-  @scala.inline
-  implicit class ILanguageFontGroupOps[Self <: ILanguageFontGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentAlternate1Font(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentAlternate1Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentAlternate2Font(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentAlternate2Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentHeadingFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentHeadingFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFixedWidthTextFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedWidthTextFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModernDocumentFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modernDocumentFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTraditionalDocumentFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traditionalDocumentFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUICaptionFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uICaptionFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUIHeadingFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uIHeadingFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUINotificationHeadingFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uINotificationHeadingFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUITextFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uITextFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUITitleFont(value: LanguageFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uITitleFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

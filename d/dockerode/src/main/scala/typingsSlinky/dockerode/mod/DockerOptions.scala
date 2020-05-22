@@ -11,7 +11,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DockerOptions extends js.Object {
   var Promise: js.UndefOr[
     PromiseConstructor with (Instantiable1[
@@ -27,191 +26,62 @@ trait DockerOptions extends js.Object {
       ], 
       typingsSlinky.std.global.Promise[js.Object]
     ])
-  ] = js.native
-  var ca: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.native
-  var cert: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.native
-  var host: js.UndefOr[String] = js.native
-  var key: js.UndefOr[String | (js.Array[Buffer | KeyObject | String]) | Buffer] = js.native
-  var port: js.UndefOr[Double | String] = js.native
-  var protocol: js.UndefOr[https | http | ssh] = js.native
-  var socketPath: js.UndefOr[String] = js.native
-  var sshAuthAgent: js.UndefOr[String] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var username: js.UndefOr[String] = js.native
-  var version: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var ca: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.undefined
+  var cert: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String | (js.Array[Buffer | KeyObject | String]) | Buffer] = js.undefined
+  var port: js.UndefOr[Double | String] = js.undefined
+  var protocol: js.UndefOr[https | http | ssh] = js.undefined
+  var socketPath: js.UndefOr[String] = js.undefined
+  var sshAuthAgent: js.UndefOr[String] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var username: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object DockerOptions {
   @scala.inline
-  def apply(): DockerOptions = {
+  def apply(
+    Promise: PromiseConstructor with (Instantiable1[
+      /* executor */ js.Function2[
+        /* resolve */ js.Function1[
+          /* value */ js.UndefOr[
+            (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
+          ], 
+          Unit
+        ], 
+        /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+        Unit
+      ], 
+      Promise[js.Object]
+    ]) = null,
+    ca: String | (js.Array[Buffer | String]) | Buffer = null,
+    cert: String | (js.Array[Buffer | String]) | Buffer = null,
+    host: String = null,
+    key: String | (js.Array[Buffer | KeyObject | String]) | Buffer = null,
+    port: Double | String = null,
+    protocol: https | http | ssh = null,
+    socketPath: String = null,
+    sshAuthAgent: String = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    username: String = null,
+    version: String = null
+  ): DockerOptions = {
     val __obj = js.Dynamic.literal()
+    if (Promise != null) __obj.updateDynamic("Promise")(Promise.asInstanceOf[js.Any])
+    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
+    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
+    if (sshAuthAgent != null) __obj.updateDynamic("sshAuthAgent")(sshAuthAgent.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[DockerOptions]
   }
-  @scala.inline
-  implicit class DockerOptionsOps[Self <: DockerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPromise(
-      value: PromiseConstructor with (Instantiable1[
-          /* executor */ js.Function2[
-            /* resolve */ js.Function1[
-              /* value */ js.UndefOr[
-                (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
-              ], 
-              Unit
-            ], 
-            /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
-            Unit
-          ], 
-          Promise[js.Object]
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCa(value: String | (js.Array[Buffer | String]) | Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCa: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCert(value: String | (js.Array[Buffer | String]) | Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String | (js.Array[Buffer | KeyObject | String]) | Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: https | http | ssh): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocketPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocketPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSshAuthAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sshAuthAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSshAuthAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sshAuthAgent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

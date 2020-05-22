@@ -9,13 +9,13 @@ sealed trait ComposeType extends js.Object
 
 /**
   * Compose type.
-  * 
+  *
   * [Api set: Mailbox Preview]
-  * 
+  *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose
-  * 
+  *
   * @beta
   */
 @JSGlobal("Office.MailboxEnums.ComposeType")
@@ -23,7 +23,7 @@ sealed trait ComposeType extends js.Object
 object ComposeType extends js.Object {
   /**
     * Forward.
-    * 
+    *
     * [Api set: Mailbox Preview]
     */
   @js.native
@@ -31,7 +31,7 @@ object ComposeType extends js.Object {
   
   /**
     * New mail.
-    * 
+    *
     * [Api set: Mailbox Preview]
     */
   @js.native
@@ -39,7 +39,7 @@ object ComposeType extends js.Object {
   
   /**
     * Reply.
-    * 
+    *
     * [Api set: Mailbox Preview]
     */
   @js.native

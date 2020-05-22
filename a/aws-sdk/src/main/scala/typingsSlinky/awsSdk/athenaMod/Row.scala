@@ -14,29 +14,10 @@ trait Row extends js.Object {
 
 object Row {
   @scala.inline
-  def apply(): Row = {
+  def apply(Data: datumList = null): Row = {
     val __obj = js.Dynamic.literal()
+    if (Data != null) __obj.updateDynamic("Data")(Data.asInstanceOf[js.Any])
     __obj.asInstanceOf[Row]
   }
-  @scala.inline
-  implicit class RowOps[Self <: Row] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: datumList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FramebufferHeight extends js.Object {
-  var framebufferHeight: Double = js.native
-  var framebufferWidth: Double = js.native
+  var framebufferHeight: Double
+  var framebufferWidth: Double
 }
 
 object FramebufferHeight {
@@ -16,25 +15,5 @@ object FramebufferHeight {
     val __obj = js.Dynamic.literal(framebufferHeight = framebufferHeight.asInstanceOf[js.Any], framebufferWidth = framebufferWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[FramebufferHeight]
   }
-  @scala.inline
-  implicit class FramebufferHeightOps[Self <: FramebufferHeight] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFramebufferHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framebufferHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFramebufferWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framebufferWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

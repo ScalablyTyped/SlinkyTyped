@@ -4,38 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CategoryAxesSettings extends js.Object {
   /**
     * Specifies whether number of gridCount is specified automatically, according to the axis size.
     * @default true
     */
-  var autoGridCount: Boolean = js.native
+  var autoGridCount: Boolean
   /**
     * Axis opacity.
     */
-  var axisAlpha: Double = js.native
+  var axisAlpha: Double
   /**
     * Axis color.
     */
-  var axisColor: String = js.native
+  var axisColor: String
   /**
     * Height of category axes. Set it to 0 if you set inside property to true.
     * @default 28
     */
-  var axisHeight: Double = js.native
+  var axisHeight: Double
   /**
     * Thickness of the axis.
     */
-  var axisThickness: Double = js.native
+  var axisThickness: Double
   /**
     * Text color.
     */
-  var color: String = js.native
+  var color: String
   /**
     * Length of a dash.
     */
-  var dashLength: Double = js.native
+  var dashLength: Double
   /**
     * Date formats of different periods.
     * Possible period values:
@@ -49,57 +48,57 @@ trait CategoryAxesSettings extends js.Object {
     * YYYY - years
     * Check this page for date formatting strings.
     */
-  var dateFormats: js.Array[_] = js.native
+  var dateFormats: js.Array[_]
   /**
     * If you want data points to be placed at equal intervals (omiting dates with no data),
     * set equalSpacing to true.
     */
-  var equalSpacing: Boolean = js.native
+  var equalSpacing: Boolean
   /**
     * Fill opacity. Every second space between grid lines can be filled with fillColor.
     */
-  var fillAlpha: Double = js.native
+  var fillAlpha: Double
   /**
     * Fill color. Every second space between grid lines can be filled with color.
     * Set fillAlpha to a value greater than 0 to see the fills.
     */
-  var fillColor: String = js.native
+  var fillColor: String
   /**
     * Text size.
     */
-  var fontSize: String = js.native
+  var fontSize: String
   /**
     * Opacity of grid lines.
     */
-  var gridAlpha: Double = js.native
+  var gridAlpha: Double
   /**
     * Color of grid lines.
     */
-  var gridColor: String = js.native
+  var gridColor: String
   /**
     * Approximate number of grid lines.
     * You should set autoGridCount to false in order this property not to be ignored.
     * @default 10
     */
-  var gridCount: Double = js.native
+  var gridCount: Double
   /**
     * Thickness of grid lines.
     */
-  var gridThickness: Double = js.native
+  var gridThickness: Double
   /**
     * Periods to which data will be gruoped in case there are more data items in
     * the selected period than specified in maxSeries property.
     * ["ss", "10ss", "30ss", "mm", "10mm", "30mm", "hh", "DD", "WW", "MM", "YYYY"]
     */
-  var groupToPeriods: js.Array[_] = js.native
+  var groupToPeriods: js.Array[_]
   /**
     * Specifies whether values should be placed inside or outside of plot area.
     */
-  var inside: Boolean = js.native
+  var inside: Boolean
   /**
     * Rotation angle of a label.
     */
-  var labelRotation: Double = js.native
+  var labelRotation: Double
   /**
     * Maximum series shown at a time.
     * In case there are more data points in the selection than maxSeries,
@@ -107,7 +106,7 @@ trait CategoryAxesSettings extends js.Object {
     * and maxSeries is 150 - the chart will group data to weeks.
     * @default 150
     */
-  var maxSeries: Double = js.native
+  var maxSeries: Double
   /**
     * Specifies the shortest period of your data.
     * fff - millisecond,
@@ -119,21 +118,21 @@ trait CategoryAxesSettings extends js.Object {
     * YYYY - year
     * @default "DD"
     */
-  var minPeriod: String = js.native
+  var minPeriod: String
   /**
     * top or "bottom".
     */
-  var position: String = js.native
+  var position: String
   /**
     * Specifies whether the graph should start on axis or not.
     * In case you display columns, it is recommended to set this to false.
     * startOnAxis can be set to true only if equalSpacing is set to true.
     */
-  var startOnAxis: Boolean = js.native
+  var startOnAxis: Boolean
   /**
     * Tick length.
     */
-  var tickLength: Double = js.native
+  var tickLength: Double
 }
 
 object CategoryAxesSettings {
@@ -167,157 +166,5 @@ object CategoryAxesSettings {
     val __obj = js.Dynamic.literal(autoGridCount = autoGridCount.asInstanceOf[js.Any], axisAlpha = axisAlpha.asInstanceOf[js.Any], axisColor = axisColor.asInstanceOf[js.Any], axisHeight = axisHeight.asInstanceOf[js.Any], axisThickness = axisThickness.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], dashLength = dashLength.asInstanceOf[js.Any], dateFormats = dateFormats.asInstanceOf[js.Any], equalSpacing = equalSpacing.asInstanceOf[js.Any], fillAlpha = fillAlpha.asInstanceOf[js.Any], fillColor = fillColor.asInstanceOf[js.Any], fontSize = fontSize.asInstanceOf[js.Any], gridAlpha = gridAlpha.asInstanceOf[js.Any], gridColor = gridColor.asInstanceOf[js.Any], gridCount = gridCount.asInstanceOf[js.Any], gridThickness = gridThickness.asInstanceOf[js.Any], groupToPeriods = groupToPeriods.asInstanceOf[js.Any], inside = inside.asInstanceOf[js.Any], labelRotation = labelRotation.asInstanceOf[js.Any], maxSeries = maxSeries.asInstanceOf[js.Any], minPeriod = minPeriod.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], startOnAxis = startOnAxis.asInstanceOf[js.Any], tickLength = tickLength.asInstanceOf[js.Any])
     __obj.asInstanceOf[CategoryAxesSettings]
   }
-  @scala.inline
-  implicit class CategoryAxesSettingsOps[Self <: CategoryAxesSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoGridCount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGridCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxisAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxisColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxisHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxisThickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisThickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDashLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateFormats(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEqualSpacing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equalSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFillAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFillColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridThickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridThickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupToPeriods(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupToPeriods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInside(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxSeries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSeries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinPeriod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartOnAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startOnAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -18,19 +18,5 @@ object StopWorkspacesRequest {
     val __obj = js.Dynamic.literal(StopWorkspaceRequests = StopWorkspaceRequests.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopWorkspacesRequest]
   }
-  @scala.inline
-  implicit class StopWorkspacesRequestOps[Self <: StopWorkspacesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStopWorkspaceRequests(value: StopWorkspaceRequests): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StopWorkspaceRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

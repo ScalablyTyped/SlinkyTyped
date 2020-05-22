@@ -18,41 +18,11 @@ trait OptionGroups extends js.Object {
 
 object OptionGroups {
   @scala.inline
-  def apply(): OptionGroups = {
+  def apply(Marker: String = null, OptionGroupsList: OptionGroupsList = null): OptionGroups = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (OptionGroupsList != null) __obj.updateDynamic("OptionGroupsList")(OptionGroupsList.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionGroups]
   }
-  @scala.inline
-  implicit class OptionGroupsOps[Self <: OptionGroups] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionGroupsList(value: OptionGroupsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupsList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionGroupsList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupsList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

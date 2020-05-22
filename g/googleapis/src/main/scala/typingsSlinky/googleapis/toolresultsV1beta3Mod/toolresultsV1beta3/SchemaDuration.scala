@@ -54,41 +54,11 @@ trait SchemaDuration extends js.Object {
 
 object SchemaDuration {
   @scala.inline
-  def apply(): SchemaDuration = {
+  def apply(nanos: js.UndefOr[Double] = js.undefined, seconds: String = null): SchemaDuration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(nanos)) __obj.updateDynamic("nanos")(nanos.get.asInstanceOf[js.Any])
+    if (seconds != null) __obj.updateDynamic("seconds")(seconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDuration]
   }
-  @scala.inline
-  implicit class SchemaDurationOps[Self <: SchemaDuration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNanos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nanos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNanos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nanos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeconds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

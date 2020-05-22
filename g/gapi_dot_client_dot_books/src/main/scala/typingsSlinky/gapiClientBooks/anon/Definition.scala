@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Definition extends js.Object {
-  var definition: js.UndefOr[String] = js.native
-  var examples: js.UndefOr[js.Array[Source]] = js.native
+  var definition: js.UndefOr[String] = js.undefined
+  var examples: js.UndefOr[js.Array[Source]] = js.undefined
 }
 
 object Definition {
   @scala.inline
-  def apply(): Definition = {
+  def apply(definition: String = null, examples: js.Array[Source] = null): Definition = {
     val __obj = js.Dynamic.literal()
+    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
+    if (examples != null) __obj.updateDynamic("examples")(examples.asInstanceOf[js.Any])
     __obj.asInstanceOf[Definition]
   }
-  @scala.inline
-  implicit class DefinitionOps[Self <: Definition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefinition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExamples(value: js.Array[Source]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("examples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExamples: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("examples")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

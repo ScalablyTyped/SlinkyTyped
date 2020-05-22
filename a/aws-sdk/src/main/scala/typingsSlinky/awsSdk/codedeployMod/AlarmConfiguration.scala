@@ -15,60 +15,23 @@ trait AlarmConfiguration extends js.Object {
     */
   var enabled: js.UndefOr[Boolean] = js.native
   /**
-    * Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from Amazon CloudWatch. The default value is false.   true: The deployment proceeds even if alarm status information can't be retrieved from Amazon CloudWatch.   false: The deployment stops if alarm status information can't be retrieved from Amazon CloudWatch.  
+    * Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from Amazon CloudWatch. The default value is false.    true: The deployment proceeds even if alarm status information can't be retrieved from Amazon CloudWatch.    false: The deployment stops if alarm status information can't be retrieved from Amazon CloudWatch.  
     */
   var ignorePollAlarmFailure: js.UndefOr[Boolean] = js.native
 }
 
 object AlarmConfiguration {
   @scala.inline
-  def apply(): AlarmConfiguration = {
+  def apply(
+    alarms: AlarmList = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    ignorePollAlarmFailure: js.UndefOr[Boolean] = js.undefined
+  ): AlarmConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (alarms != null) __obj.updateDynamic("alarms")(alarms.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignorePollAlarmFailure)) __obj.updateDynamic("ignorePollAlarmFailure")(ignorePollAlarmFailure.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlarmConfiguration]
   }
-  @scala.inline
-  implicit class AlarmConfigurationOps[Self <: AlarmConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlarms(value: AlarmList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnorePollAlarmFailure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePollAlarmFailure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnorePollAlarmFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePollAlarmFailure")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

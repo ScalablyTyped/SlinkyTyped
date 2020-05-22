@@ -4,31 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabBarAnimationOptions extends CommonCallbackOptions {
   //  是否需要动画效果
-  var animation: Boolean = js.native
+  var animation: Boolean
 }
 
 object TabBarAnimationOptions {
   @scala.inline
-  def apply(animation: Boolean): TabBarAnimationOptions = {
+  def apply(
+    animation: Boolean,
+    complete: /* res */ js.Any => Unit = null,
+    fail: /* res */ js.Any => Unit = null,
+    success: /* res */ js.Any => Unit = null
+  ): TabBarAnimationOptions = {
     val __obj = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[TabBarAnimationOptions]
   }
-  @scala.inline
-  implicit class TabBarAnimationOptionsOps[Self <: TabBarAnimationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

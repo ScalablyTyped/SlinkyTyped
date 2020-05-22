@@ -18,41 +18,11 @@ trait BatchGetDevEndpointsResponse extends js.Object {
 
 object BatchGetDevEndpointsResponse {
   @scala.inline
-  def apply(): BatchGetDevEndpointsResponse = {
+  def apply(DevEndpoints: DevEndpointList = null, DevEndpointsNotFound: DevEndpointNames = null): BatchGetDevEndpointsResponse = {
     val __obj = js.Dynamic.literal()
+    if (DevEndpoints != null) __obj.updateDynamic("DevEndpoints")(DevEndpoints.asInstanceOf[js.Any])
+    if (DevEndpointsNotFound != null) __obj.updateDynamic("DevEndpointsNotFound")(DevEndpointsNotFound.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetDevEndpointsResponse]
   }
-  @scala.inline
-  implicit class BatchGetDevEndpointsResponseOps[Self <: BatchGetDevEndpointsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDevEndpoints(value: DevEndpointList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DevEndpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DevEndpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevEndpointsNotFound(value: DevEndpointNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DevEndpointsNotFound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevEndpointsNotFound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DevEndpointsNotFound")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

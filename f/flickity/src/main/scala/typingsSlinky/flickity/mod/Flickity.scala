@@ -80,13 +80,13 @@ trait Flickity extends js.Object {
   def next(isWrapped: Boolean): Unit = js.native
   /**
     * Remove event listener
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def off(eventname: FlickityEvents, callback: js.Function1[js.UndefOr[Boolean | Double], _]): Unit = js.native
   /**
     * Remove event listener
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def off(
@@ -95,7 +95,7 @@ trait Flickity extends js.Object {
   ): Unit = js.native
   /**
     * Remove event listener
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def off(
@@ -109,7 +109,7 @@ trait Flickity extends js.Object {
   ): Unit = js.native
   /**
     * Remove event listener
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def off(
@@ -124,13 +124,13 @@ trait Flickity extends js.Object {
   ): Unit = js.native
   /**
     * bind event listener
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def on(eventname: FlickityEvents, callback: js.Function1[js.UndefOr[Boolean | Double], _]): Unit = js.native
   /**
     * bind event listener
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def on(
@@ -139,7 +139,7 @@ trait Flickity extends js.Object {
   ): Unit = js.native
   /**
     * bind event listener
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def on(
@@ -153,7 +153,7 @@ trait Flickity extends js.Object {
   ): Unit = js.native
   /**
     * bind event listener
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def on(
@@ -168,13 +168,13 @@ trait Flickity extends js.Object {
   ): Unit = js.native
   /**
     * one time event handler
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def once(eventname: String, callback: js.Function2[js.UndefOr[Event], js.UndefOr[Element | Touch], _]): Unit = js.native
   /**
     * one time event handl`er
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def once(
@@ -188,7 +188,7 @@ trait Flickity extends js.Object {
   ): Unit = js.native
   /**
     * one time event handler
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def once(
@@ -203,7 +203,7 @@ trait Flickity extends js.Object {
   ): Unit = js.native
   /**
     * one time event handler
-    * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
+    * @param eventName name of event  (@see Flickity.FlickityEvents class for flickity supported events)
     * @param callback callback funtion to execute when event fires
     */
   def once(eventname: FlickityEvents, callback: js.Function1[js.UndefOr[Boolean | Double], _]): Unit = js.native

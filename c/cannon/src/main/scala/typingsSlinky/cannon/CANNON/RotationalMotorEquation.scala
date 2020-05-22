@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RotationalMotorEquation extends Equation {
-  var axisA: Vec3 = js.native
-  var axisB: Vec3 = js.native
-  var invIj: Mat3 = js.native
-  var invLi: Mat3 = js.native
-  var targetVelocity: Double = js.native
+  var axisA: Vec3
+  var axisB: Vec3
+  var invIj: Mat3
+  var invLi: Mat3
+  var targetVelocity: Double
 }
 
 object RotationalMotorEquation {
@@ -45,43 +44,5 @@ object RotationalMotorEquation {
     val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], addToWlamda = js.Any.fromFunction1(addToWlamda), axisA = axisA.asInstanceOf[js.Any], axisB = axisB.asInstanceOf[js.Any], b = b.asInstanceOf[js.Any], bi = bi.asInstanceOf[js.Any], bj = bj.asInstanceOf[js.Any], computeB = js.Any.fromFunction3(computeB), computeC = js.Any.fromFunction0(computeC), computeGW = js.Any.fromFunction0(computeGW), computeGWlamda = js.Any.fromFunction0(computeGWlamda), computeGiMGt = js.Any.fromFunction0(computeGiMGt), computeGiMf = js.Any.fromFunction0(computeGiMf), computeGq = js.Any.fromFunction0(computeGq), enabled = enabled.asInstanceOf[js.Any], eps = eps.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], invIj = invIj.asInstanceOf[js.Any], invLi = invLi.asInstanceOf[js.Any], jacobianElementA = jacobianElementA.asInstanceOf[js.Any], jacobianElementB = jacobianElementB.asInstanceOf[js.Any], maxForce = maxForce.asInstanceOf[js.Any], minForce = minForce.asInstanceOf[js.Any], setSpookParams = js.Any.fromFunction3(setSpookParams), targetVelocity = targetVelocity.asInstanceOf[js.Any])
     __obj.asInstanceOf[RotationalMotorEquation]
   }
-  @scala.inline
-  implicit class RotationalMotorEquationOps[Self <: RotationalMotorEquation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxisA(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxisB(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInvIj(value: Mat3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invIj")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInvLi(value: Mat3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invLi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -38,6 +38,12 @@ trait InputSettings extends js.Object {
     */
   var NetworkInputSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.NetworkInputSettings] = js.native
   /**
+    * Specifies whether to extract applicable ancillary data from a SMPTE-2038 source in this input. Applicable data types are captions, timecode, AFD, and SCTE-104 messages.
+  - PREFER: Extract from SMPTE-2038 if present in this input, otherwise extract from another source (if any).
+  - IGNORE: Never extract any ancillary data from SMPTE-2038.
+    */
+  var Smpte2038DataPreference: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.Smpte2038DataPreference] = js.native
+  /**
     * Loop input if it is a file. This allows a file input to be streamed indefinitely.
     */
   var SourceEndBehavior: js.UndefOr[InputSourceEndBehavior] = js.native
@@ -49,125 +55,30 @@ trait InputSettings extends js.Object {
 
 object InputSettings {
   @scala.inline
-  def apply(): InputSettings = {
+  def apply(
+    AudioSelectors: listOfAudioSelector = null,
+    CaptionSelectors: listOfCaptionSelector = null,
+    DeblockFilter: InputDeblockFilter = null,
+    DenoiseFilter: InputDenoiseFilter = null,
+    FilterStrength: js.UndefOr[integerMin1Max5] = js.undefined,
+    InputFilter: InputFilter = null,
+    NetworkInputSettings: NetworkInputSettings = null,
+    Smpte2038DataPreference: Smpte2038DataPreference = null,
+    SourceEndBehavior: InputSourceEndBehavior = null,
+    VideoSelector: VideoSelector = null
+  ): InputSettings = {
     val __obj = js.Dynamic.literal()
+    if (AudioSelectors != null) __obj.updateDynamic("AudioSelectors")(AudioSelectors.asInstanceOf[js.Any])
+    if (CaptionSelectors != null) __obj.updateDynamic("CaptionSelectors")(CaptionSelectors.asInstanceOf[js.Any])
+    if (DeblockFilter != null) __obj.updateDynamic("DeblockFilter")(DeblockFilter.asInstanceOf[js.Any])
+    if (DenoiseFilter != null) __obj.updateDynamic("DenoiseFilter")(DenoiseFilter.asInstanceOf[js.Any])
+    if (!js.isUndefined(FilterStrength)) __obj.updateDynamic("FilterStrength")(FilterStrength.get.asInstanceOf[js.Any])
+    if (InputFilter != null) __obj.updateDynamic("InputFilter")(InputFilter.asInstanceOf[js.Any])
+    if (NetworkInputSettings != null) __obj.updateDynamic("NetworkInputSettings")(NetworkInputSettings.asInstanceOf[js.Any])
+    if (Smpte2038DataPreference != null) __obj.updateDynamic("Smpte2038DataPreference")(Smpte2038DataPreference.asInstanceOf[js.Any])
+    if (SourceEndBehavior != null) __obj.updateDynamic("SourceEndBehavior")(SourceEndBehavior.asInstanceOf[js.Any])
+    if (VideoSelector != null) __obj.updateDynamic("VideoSelector")(VideoSelector.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputSettings]
   }
-  @scala.inline
-  implicit class InputSettingsOps[Self <: InputSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioSelectors(value: listOfAudioSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSelectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSelectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptionSelectors(value: listOfCaptionSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSelectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptionSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSelectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeblockFilter(value: InputDeblockFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeblockFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeblockFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeblockFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDenoiseFilter(value: InputDenoiseFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DenoiseFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDenoiseFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DenoiseFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterStrength(value: integerMin1Max5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterStrength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterStrength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterStrength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputFilter(value: InputFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkInputSettings(value: NetworkInputSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInputSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkInputSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInputSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceEndBehavior(value: InputSourceEndBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceEndBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceEndBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceEndBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoSelector(value: VideoSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSelector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

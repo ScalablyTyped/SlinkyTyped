@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+// TODO: replace to interface https://developers.google.com/maps/documentation/javascript/reference/overlay-view#MapCanvasProjection
 @js.native
 trait MapCanvasProjection extends MVCObject {
   def fromContainerPixelToLatLng(pixel: Point): LatLng = js.native

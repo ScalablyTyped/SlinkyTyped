@@ -22,53 +22,12 @@ trait CreateScriptRequest extends js.Object {
 
 object CreateScriptRequest {
   @scala.inline
-  def apply(): CreateScriptRequest = {
+  def apply(DagEdges: DagEdges = null, DagNodes: DagNodes = null, Language: Language = null): CreateScriptRequest = {
     val __obj = js.Dynamic.literal()
+    if (DagEdges != null) __obj.updateDynamic("DagEdges")(DagEdges.asInstanceOf[js.Any])
+    if (DagNodes != null) __obj.updateDynamic("DagNodes")(DagNodes.asInstanceOf[js.Any])
+    if (Language != null) __obj.updateDynamic("Language")(Language.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateScriptRequest]
   }
-  @scala.inline
-  implicit class CreateScriptRequestOps[Self <: CreateScriptRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDagEdges(value: DagEdges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DagEdges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDagEdges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DagEdges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDagNodes(value: DagNodes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DagNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDagNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DagNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: Language): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Language")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

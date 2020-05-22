@@ -5,43 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Accesstoken extends KiiSocialConnectOptions {
-  var access_token: String = js.native
-  var openID: js.UndefOr[String] = js.native
+  var access_token: String
+  var openID: js.UndefOr[String] = js.undefined
 }
 
 object Accesstoken {
   @scala.inline
-  def apply(access_token: String): Accesstoken = {
+  def apply(access_token: String, openID: String = null): Accesstoken = {
     val __obj = js.Dynamic.literal(access_token = access_token.asInstanceOf[js.Any])
+    if (openID != null) __obj.updateDynamic("openID")(openID.asInstanceOf[js.Any])
     __obj.asInstanceOf[Accesstoken]
   }
-  @scala.inline
-  implicit class AccesstokenOps[Self <: Accesstoken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccess_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openID")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

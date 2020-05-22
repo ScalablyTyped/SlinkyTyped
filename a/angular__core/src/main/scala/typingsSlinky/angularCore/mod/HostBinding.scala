@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HostBinding extends js.Object {
   /**
     * The DOM property that is bound to a data property.
     */
-  var hostPropertyName: js.UndefOr[String] = js.native
+  var hostPropertyName: js.UndefOr[String] = js.undefined
 }
 
 @JSImport("@angular/core", "HostBinding")

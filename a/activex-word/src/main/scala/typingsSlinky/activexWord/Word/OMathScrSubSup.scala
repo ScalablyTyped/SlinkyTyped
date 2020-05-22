@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMathScrSubSup extends js.Object {
-  var AlignScripts: Boolean = js.native
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  val E: OMath = js.native
-  val Parent: js.Any = js.native
-  val Sub: OMath = js.native
-  val Sup: OMath = js.native
+  var AlignScripts: Boolean
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  val E: OMath
+  val Parent: js.Any
+  val Sub: OMath
+  val Sup: OMath
   @JSName("Word.OMathScrSubSup_typekey")
-  var WordDotOMathScrSubSup_typekey: OMathScrSubSup = js.native
-  def RemoveSub(): OMathFunction = js.native
-  def RemoveSup(): OMathFunction = js.native
-  def ToScrPre(): OMathFunction = js.native
+  var WordDotOMathScrSubSup_typekey: OMathScrSubSup
+  def RemoveSub(): OMathFunction
+  def RemoveSup(): OMathFunction
+  def ToScrPre(): OMathFunction
 }
 
 object OMathScrSubSup {
@@ -39,79 +38,5 @@ object OMathScrSubSup {
     __obj.updateDynamic("Word.OMathScrSubSup_typekey")(WordDotOMathScrSubSup_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMathScrSubSup]
   }
-  @scala.inline
-  implicit class OMathScrSubSupOps[Self <: OMathScrSubSup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignScripts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignScripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withE(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoveSub(value: () => OMathFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveSub")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveSup(value: () => OMathFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveSup")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSub(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSup(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToScrPre(value: () => OMathFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToScrPre")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withWordDotOMathScrSubSup_typekey(value: OMathScrSubSup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMathScrSubSup_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

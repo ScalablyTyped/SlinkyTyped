@@ -16,14 +16,13 @@ import scala.scalajs.js.annotation._
   * @property type {string} - Name of the dispatched event
   * @property defaultPrevented {boolean} - Indicates if preventDefault was called on the current event
   */
-@js.native
 trait Event
   extends typingsSlinky.heremaps.H.util.Event {
-  var changedPointers: js.Array[Pointer] = js.native
-  var currentPointer: Pointer = js.native
-  var originalEvent: Event = js.native
-  var pointers: js.Array[Pointer] = js.native
-  var targetPointers: js.Array[Pointer] = js.native
+  var changedPointers: js.Array[Pointer]
+  var currentPointer: Pointer
+  var originalEvent: Event
+  var pointers: js.Array[Pointer]
+  var targetPointers: js.Array[Pointer]
 }
 
 object Event {
@@ -45,43 +44,5 @@ object Event {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Event]
   }
-  @scala.inline
-  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangedPointers(value: js.Array[Pointer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedPointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentPointer(value: Pointer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOriginalEvent(value: Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointers(value: js.Array[Pointer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetPointers(value: js.Array[Pointer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -23,41 +23,11 @@ trait SchemaGoogleDatastoreAdminV1beta1Progress extends js.Object {
 
 object SchemaGoogleDatastoreAdminV1beta1Progress {
   @scala.inline
-  def apply(): SchemaGoogleDatastoreAdminV1beta1Progress = {
+  def apply(workCompleted: String = null, workEstimated: String = null): SchemaGoogleDatastoreAdminV1beta1Progress = {
     val __obj = js.Dynamic.literal()
+    if (workCompleted != null) __obj.updateDynamic("workCompleted")(workCompleted.asInstanceOf[js.Any])
+    if (workEstimated != null) __obj.updateDynamic("workEstimated")(workEstimated.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDatastoreAdminV1beta1Progress]
   }
-  @scala.inline
-  implicit class SchemaGoogleDatastoreAdminV1beta1ProgressOps[Self <: SchemaGoogleDatastoreAdminV1beta1Progress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWorkCompleted(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workCompleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkCompleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workCompleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkEstimated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workEstimated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkEstimated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workEstimated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

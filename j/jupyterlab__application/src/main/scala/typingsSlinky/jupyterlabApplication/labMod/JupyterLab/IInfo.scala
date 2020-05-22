@@ -11,28 +11,27 @@ import scala.scalajs.js.annotation._
 /**
   * The information about a JupyterLab application.
   */
-@js.native
 trait IInfo extends js.Object {
   /**
     * The collection of deferred extension patterns and matched extensions.
     */
-  val deferred: Matches = js.native
+  val deferred: Matches
   /**
     * Whether the application is in dev mode.
     */
-  val devMode: Boolean = js.native
+  val devMode: Boolean
   /**
     * The collection of disabled extension patterns and matched extensions.
     */
-  val disabled: Matches = js.native
+  val disabled: Matches
   /**
     * Whether files are cached on the server.
     */
-  val filesCached: Boolean = js.native
+  val filesCached: Boolean
   /**
     * The mime renderer extensions.
     */
-  val mimeExtensions: js.Array[IExtensionModule] = js.native
+  val mimeExtensions: js.Array[IExtensionModule]
 }
 
 /**

@@ -14,29 +14,10 @@ trait ColumnGroup extends js.Object {
 
 object ColumnGroup {
   @scala.inline
-  def apply(): ColumnGroup = {
+  def apply(GeoSpatialColumnGroup: GeoSpatialColumnGroup = null): ColumnGroup = {
     val __obj = js.Dynamic.literal()
+    if (GeoSpatialColumnGroup != null) __obj.updateDynamic("GeoSpatialColumnGroup")(GeoSpatialColumnGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnGroup]
   }
-  @scala.inline
-  implicit class ColumnGroupOps[Self <: ColumnGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeoSpatialColumnGroup(value: GeoSpatialColumnGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoSpatialColumnGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoSpatialColumnGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoSpatialColumnGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

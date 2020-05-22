@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListTargetingExpression extends js.Object {
   /** Expression describing which lists are being targeted by the ad. */
-  var expression: js.UndefOr[String] = js.native
+  var expression: js.UndefOr[String] = js.undefined
 }
 
 object ListTargetingExpression {
   @scala.inline
-  def apply(): ListTargetingExpression = {
+  def apply(expression: String = null): ListTargetingExpression = {
     val __obj = js.Dynamic.literal()
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTargetingExpression]
   }
-  @scala.inline
-  implicit class ListTargetingExpressionOps[Self <: ListTargetingExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,205 +7,57 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@material/tab-scroller.@material/tab-scroller/adapter.MDCTabScrollerAdapter> */
-@js.native
 trait PartialMDCTabScrollerAdap extends js.Object {
-  var addClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
-  var addScrollAreaClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
-  var computeHorizontalScrollbarHeight: js.UndefOr[js.Function0[Double]] = js.native
-  var computeScrollAreaClientRect: js.UndefOr[js.Function0[ClientRect]] = js.native
-  var computeScrollContentClientRect: js.UndefOr[js.Function0[ClientRect]] = js.native
-  var eventTargetMatchesSelector: js.UndefOr[js.Function2[/* evtTarget */ EventTarget, /* selector */ String, Boolean]] = js.native
-  var getScrollAreaOffsetWidth: js.UndefOr[js.Function0[Double]] = js.native
-  var getScrollAreaScrollLeft: js.UndefOr[js.Function0[Double]] = js.native
-  var getScrollContentOffsetWidth: js.UndefOr[js.Function0[Double]] = js.native
-  var getScrollContentStyleValue: js.UndefOr[js.Function1[/* propertyName */ String, String]] = js.native
-  var removeClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
-  var setScrollAreaScrollLeft: js.UndefOr[js.Function1[/* scrollLeft */ Double, Unit]] = js.native
-  var setScrollAreaStyleProperty: js.UndefOr[js.Function2[/* propName */ String, /* value */ String, Unit]] = js.native
-  var setScrollContentStyleProperty: js.UndefOr[js.Function2[/* propName */ String, /* value */ String, Unit]] = js.native
+  var addClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.undefined
+  var addScrollAreaClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.undefined
+  var computeHorizontalScrollbarHeight: js.UndefOr[js.Function0[Double]] = js.undefined
+  var computeScrollAreaClientRect: js.UndefOr[js.Function0[ClientRect]] = js.undefined
+  var computeScrollContentClientRect: js.UndefOr[js.Function0[ClientRect]] = js.undefined
+  var eventTargetMatchesSelector: js.UndefOr[js.Function2[/* evtTarget */ EventTarget, /* selector */ String, Boolean]] = js.undefined
+  var getScrollAreaOffsetWidth: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getScrollAreaScrollLeft: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getScrollContentOffsetWidth: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getScrollContentStyleValue: js.UndefOr[js.Function1[/* propertyName */ String, String]] = js.undefined
+  var removeClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.undefined
+  var setScrollAreaScrollLeft: js.UndefOr[js.Function1[/* scrollLeft */ Double, Unit]] = js.undefined
+  var setScrollAreaStyleProperty: js.UndefOr[js.Function2[/* propName */ String, /* value */ String, Unit]] = js.undefined
+  var setScrollContentStyleProperty: js.UndefOr[js.Function2[/* propName */ String, /* value */ String, Unit]] = js.undefined
 }
 
 object PartialMDCTabScrollerAdap {
   @scala.inline
-  def apply(): PartialMDCTabScrollerAdap = {
+  def apply(
+    addClass: /* className */ String => Unit = null,
+    addScrollAreaClass: /* className */ String => Unit = null,
+    computeHorizontalScrollbarHeight: () => Double = null,
+    computeScrollAreaClientRect: () => ClientRect = null,
+    computeScrollContentClientRect: () => ClientRect = null,
+    eventTargetMatchesSelector: (/* evtTarget */ EventTarget, /* selector */ String) => Boolean = null,
+    getScrollAreaOffsetWidth: () => Double = null,
+    getScrollAreaScrollLeft: () => Double = null,
+    getScrollContentOffsetWidth: () => Double = null,
+    getScrollContentStyleValue: /* propertyName */ String => String = null,
+    removeClass: /* className */ String => Unit = null,
+    setScrollAreaScrollLeft: /* scrollLeft */ Double => Unit = null,
+    setScrollAreaStyleProperty: (/* propName */ String, /* value */ String) => Unit = null,
+    setScrollContentStyleProperty: (/* propName */ String, /* value */ String) => Unit = null
+  ): PartialMDCTabScrollerAdap = {
     val __obj = js.Dynamic.literal()
+    if (addClass != null) __obj.updateDynamic("addClass")(js.Any.fromFunction1(addClass))
+    if (addScrollAreaClass != null) __obj.updateDynamic("addScrollAreaClass")(js.Any.fromFunction1(addScrollAreaClass))
+    if (computeHorizontalScrollbarHeight != null) __obj.updateDynamic("computeHorizontalScrollbarHeight")(js.Any.fromFunction0(computeHorizontalScrollbarHeight))
+    if (computeScrollAreaClientRect != null) __obj.updateDynamic("computeScrollAreaClientRect")(js.Any.fromFunction0(computeScrollAreaClientRect))
+    if (computeScrollContentClientRect != null) __obj.updateDynamic("computeScrollContentClientRect")(js.Any.fromFunction0(computeScrollContentClientRect))
+    if (eventTargetMatchesSelector != null) __obj.updateDynamic("eventTargetMatchesSelector")(js.Any.fromFunction2(eventTargetMatchesSelector))
+    if (getScrollAreaOffsetWidth != null) __obj.updateDynamic("getScrollAreaOffsetWidth")(js.Any.fromFunction0(getScrollAreaOffsetWidth))
+    if (getScrollAreaScrollLeft != null) __obj.updateDynamic("getScrollAreaScrollLeft")(js.Any.fromFunction0(getScrollAreaScrollLeft))
+    if (getScrollContentOffsetWidth != null) __obj.updateDynamic("getScrollContentOffsetWidth")(js.Any.fromFunction0(getScrollContentOffsetWidth))
+    if (getScrollContentStyleValue != null) __obj.updateDynamic("getScrollContentStyleValue")(js.Any.fromFunction1(getScrollContentStyleValue))
+    if (removeClass != null) __obj.updateDynamic("removeClass")(js.Any.fromFunction1(removeClass))
+    if (setScrollAreaScrollLeft != null) __obj.updateDynamic("setScrollAreaScrollLeft")(js.Any.fromFunction1(setScrollAreaScrollLeft))
+    if (setScrollAreaStyleProperty != null) __obj.updateDynamic("setScrollAreaStyleProperty")(js.Any.fromFunction2(setScrollAreaStyleProperty))
+    if (setScrollContentStyleProperty != null) __obj.updateDynamic("setScrollContentStyleProperty")(js.Any.fromFunction2(setScrollContentStyleProperty))
     __obj.asInstanceOf[PartialMDCTabScrollerAdap]
   }
-  @scala.inline
-  implicit class PartialMDCTabScrollerAdapOps[Self <: PartialMDCTabScrollerAdap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddClass(value: /* className */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddScrollAreaClass(value: /* className */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addScrollAreaClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddScrollAreaClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addScrollAreaClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeHorizontalScrollbarHeight(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeHorizontalScrollbarHeight")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComputeHorizontalScrollbarHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeHorizontalScrollbarHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeScrollAreaClientRect(value: () => ClientRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeScrollAreaClientRect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComputeScrollAreaClientRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeScrollAreaClientRect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputeScrollContentClientRect(value: () => ClientRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeScrollContentClientRect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComputeScrollContentClientRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeScrollContentClientRect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventTargetMatchesSelector(value: (/* evtTarget */ EventTarget, /* selector */ String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTargetMatchesSelector")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutEventTargetMatchesSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTargetMatchesSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetScrollAreaOffsetWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollAreaOffsetWidth")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetScrollAreaOffsetWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollAreaOffsetWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetScrollAreaScrollLeft(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollAreaScrollLeft")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetScrollAreaScrollLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollAreaScrollLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetScrollContentOffsetWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollContentOffsetWidth")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetScrollContentOffsetWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollContentOffsetWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetScrollContentStyleValue(value: /* propertyName */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollContentStyleValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetScrollContentStyleValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollContentStyleValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveClass(value: /* className */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRemoveClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetScrollAreaScrollLeft(value: /* scrollLeft */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollAreaScrollLeft")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetScrollAreaScrollLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollAreaScrollLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetScrollAreaStyleProperty(value: (/* propName */ String, /* value */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollAreaStyleProperty")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetScrollAreaStyleProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollAreaStyleProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetScrollContentStyleProperty(value: (/* propName */ String, /* value */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollContentStyleProperty")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetScrollContentStyleProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollContentStyleProperty")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

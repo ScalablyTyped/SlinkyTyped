@@ -4,68 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeOptions extends js.Object {
   /** Pass the datasource object values as settings
     */
-  var dataSource: js.UndefOr[js.Any] = js.native
+  var dataSource: js.UndefOr[js.Any] = js.undefined
   /** Pass the showheader condition as settings
     */
-  var showHeader: js.UndefOr[Boolean] = js.native
+  var showHeader: js.UndefOr[Boolean] = js.undefined
   /** Pass the startcell values as settings
     */
-  var startCell: js.UndefOr[String] = js.native
+  var startCell: js.UndefOr[String] = js.undefined
 }
 
 object RangeOptions {
   @scala.inline
-  def apply(): RangeOptions = {
+  def apply(
+    dataSource: js.Any = null,
+    showHeader: js.UndefOr[Boolean] = js.undefined,
+    startCell: String = null
+  ): RangeOptions = {
     val __obj = js.Dynamic.literal()
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHeader)) __obj.updateDynamic("showHeader")(showHeader.get.asInstanceOf[js.Any])
+    if (startCell != null) __obj.updateDynamic("startCell")(startCell.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeOptions]
   }
-  @scala.inline
-  implicit class RangeOptionsOps[Self <: RangeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartCell(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCell")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

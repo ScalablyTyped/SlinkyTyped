@@ -5,35 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NthChild
   extends NthSelectorAtom
      with NthSelector
      with Selector {
   @JSName("type")
-  var type_NthChild: `nth-child` = js.native
+  var type_NthChild: `nth-child`
 }
 
 object NthChild {
   @scala.inline
-  def apply(index: NumericLiteral, `type`: `nth-child`): NthChild = {
+  def apply(index: NumericLiteral, `type`: `nth-child`, subject: js.UndefOr[Boolean] = js.undefined): NthChild = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NthChild]
   }
-  @scala.inline
-  implicit class NthChildOps[Self <: NthChild] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: `nth-child`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

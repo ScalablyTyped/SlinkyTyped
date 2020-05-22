@@ -47,6 +47,8 @@ trait DataSource extends Observable {
   def pushCreate(models: js.Array[_]): Unit = js.native
   def pushDestroy(model: js.Object): Unit = js.native
   def pushDestroy(models: js.Array[_]): Unit = js.native
+  def pushInsert(index: Double, model: js.Object): Unit = js.native
+  def pushInsert(index: Double, models: js.Array[_]): Unit = js.native
   def pushUpdate(model: js.Object): Unit = js.native
   def pushUpdate(models: js.Array[_]): Unit = js.native
   def query(): JQueryPromise[_] = js.native

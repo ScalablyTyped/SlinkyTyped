@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * An iOS button bar component.
-		 */
+  * An iOS button bar component.
+  */
 @JSGlobal("Titanium.UI.ButtonBar")
 @js.native
 class ButtonBar ()

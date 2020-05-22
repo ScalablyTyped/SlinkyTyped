@@ -1,7 +1,7 @@
 package typingsSlinky.antd.collapsePanelMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

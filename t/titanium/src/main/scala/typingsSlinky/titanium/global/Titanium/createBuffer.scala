@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object createBuffer extends js.Object {
   /**
-  	 * Creates a new buffer based on the params.
-  	 */
+    * Creates a new buffer based on the params.
+    */
   def apply(params: CreateBufferArgs): typingsSlinky.titanium.Titanium.Buffer = js.native
 }
 

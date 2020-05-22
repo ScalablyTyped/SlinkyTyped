@@ -41,101 +41,24 @@ trait SchemaEmailLinkSigninResponse extends js.Object {
 
 object SchemaEmailLinkSigninResponse {
   @scala.inline
-  def apply(): SchemaEmailLinkSigninResponse = {
+  def apply(
+    email: String = null,
+    expiresIn: String = null,
+    idToken: String = null,
+    isNewUser: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    localId: String = null,
+    refreshToken: String = null
+  ): SchemaEmailLinkSigninResponse = {
     val __obj = js.Dynamic.literal()
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (expiresIn != null) __obj.updateDynamic("expiresIn")(expiresIn.asInstanceOf[js.Any])
+    if (idToken != null) __obj.updateDynamic("idToken")(idToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(isNewUser)) __obj.updateDynamic("isNewUser")(isNewUser.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (localId != null) __obj.updateDynamic("localId")(localId.asInstanceOf[js.Any])
+    if (refreshToken != null) __obj.updateDynamic("refreshToken")(refreshToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEmailLinkSigninResponse]
   }
-  @scala.inline
-  implicit class SchemaEmailLinkSigninResponseOps[Self <: SchemaEmailLinkSigninResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiresIn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiresIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsNewUser(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNewUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsNewUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNewUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

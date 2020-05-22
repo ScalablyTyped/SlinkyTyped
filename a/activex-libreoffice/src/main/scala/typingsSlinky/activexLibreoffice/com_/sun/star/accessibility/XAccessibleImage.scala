@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * AccessibleIcon. This interface lets you retrieve an image's size and description.
   * @since OOo 1.1.2
   */
-@js.native
 trait XAccessibleImage extends XInterface {
   /**
     * Returns the localized description of the image.
@@ -22,21 +21,21 @@ trait XAccessibleImage extends XInterface {
     * (e.g. for image maps or non-iconic images embedded into a document.)
     * @returns Returns a localized string that describes the image's function or content.
     */
-  val AccessibleImageDescription: String = js.native
+  val AccessibleImageDescription: String
   /**
     * Returns the height of the image.
     *
     * The height is returned in units specified by the parents coordinate system.
     * @returns Returns the image's height with respect to the parent's coordinate system.
     */
-  val AccessibleImageHeight: Double = js.native
+  val AccessibleImageHeight: Double
   /**
     * Returns the width of the image.
     *
     * The width is returned in units specified by the parents coordinate system.
     * @returns Returns the image's width with respect to the parent's coordinate system.
     */
-  val AccessibleImageWidth: Double = js.native
+  val AccessibleImageWidth: Double
   /**
     * Returns the localized description of the image.
     *
@@ -44,21 +43,21 @@ trait XAccessibleImage extends XInterface {
     * (e.g. for image maps or non-iconic images embedded into a document.)
     * @returns Returns a localized string that describes the image's function or content.
     */
-  def getAccessibleImageDescription(): String = js.native
+  def getAccessibleImageDescription(): String
   /**
     * Returns the height of the image.
     *
     * The height is returned in units specified by the parents coordinate system.
     * @returns Returns the image's height with respect to the parent's coordinate system.
     */
-  def getAccessibleImageHeight(): Double = js.native
+  def getAccessibleImageHeight(): Double
   /**
     * Returns the width of the image.
     *
     * The width is returned in units specified by the parents coordinate system.
     * @returns Returns the image's width with respect to the parent's coordinate system.
     */
-  def getAccessibleImageWidth(): Double = js.native
+  def getAccessibleImageWidth(): Double
 }
 
 object XAccessibleImage {
@@ -77,49 +76,5 @@ object XAccessibleImage {
     val __obj = js.Dynamic.literal(AccessibleImageDescription = AccessibleImageDescription.asInstanceOf[js.Any], AccessibleImageHeight = AccessibleImageHeight.asInstanceOf[js.Any], AccessibleImageWidth = AccessibleImageWidth.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getAccessibleImageDescription = js.Any.fromFunction0(getAccessibleImageDescription), getAccessibleImageHeight = js.Any.fromFunction0(getAccessibleImageHeight), getAccessibleImageWidth = js.Any.fromFunction0(getAccessibleImageWidth), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAccessibleImage]
   }
-  @scala.inline
-  implicit class XAccessibleImageOps[Self <: XAccessibleImage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessibleImageDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleImageDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessibleImageHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleImageHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessibleImageWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleImageWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleImageDescription(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleImageDescription")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleImageHeight(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleImageHeight")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleImageWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleImageWidth")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

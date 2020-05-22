@@ -14,29 +14,10 @@ trait BatchExecuteStatementResponse extends js.Object {
 
 object BatchExecuteStatementResponse {
   @scala.inline
-  def apply(): BatchExecuteStatementResponse = {
+  def apply(updateResults: UpdateResults = null): BatchExecuteStatementResponse = {
     val __obj = js.Dynamic.literal()
+    if (updateResults != null) __obj.updateDynamic("updateResults")(updateResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchExecuteStatementResponse]
   }
-  @scala.inline
-  implicit class BatchExecuteStatementResponseOps[Self <: BatchExecuteStatementResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUpdateResults(value: UpdateResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,7 +30,7 @@ trait PivotTableStyle extends ClientObject {
   var name: String = js.native
   /**
     *
-    * Specifies whether this PivotTableStyle object is read-only. Read-only.
+    * Specifies if this PivotTableStyle object is read-only.
     *
     * [Api set: ExcelApi 1.10]
     */

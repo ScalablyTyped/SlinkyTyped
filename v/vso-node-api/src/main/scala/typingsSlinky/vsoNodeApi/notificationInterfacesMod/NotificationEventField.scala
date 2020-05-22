@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NotificationEventField extends js.Object {
   /**
     * Gets or sets the type of this field.
     */
-  var fieldType: NotificationEventFieldType = js.native
+  var fieldType: NotificationEventFieldType
   /**
     * Gets or sets the unique identifier of this field.
     */
-  var id: String = js.native
+  var id: String
   /**
     * Gets or sets the name of this field.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Gets or sets the path to the field in the event object. This path can be either Json Path or XPath, depending on if the event will be serialized into Json or XML
     */
-  var path: String = js.native
+  var path: String
   /**
     * Gets or sets the scopes that this field supports. If not specified then the event type scopes apply.
     */
-  var supportedScopes: js.Array[String] = js.native
+  var supportedScopes: js.Array[String]
 }
 
 object NotificationEventField {
@@ -40,43 +39,5 @@ object NotificationEventField {
     val __obj = js.Dynamic.literal(fieldType = fieldType.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], supportedScopes = supportedScopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationEventField]
   }
-  @scala.inline
-  implicit class NotificationEventFieldOps[Self <: NotificationEventField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFieldType(value: NotificationEventFieldType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedScopes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

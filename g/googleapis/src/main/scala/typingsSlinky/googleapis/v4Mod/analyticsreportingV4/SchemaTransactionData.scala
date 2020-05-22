@@ -31,65 +31,18 @@ trait SchemaTransactionData extends js.Object {
 
 object SchemaTransactionData {
   @scala.inline
-  def apply(): SchemaTransactionData = {
+  def apply(
+    transactionId: String = null,
+    transactionRevenue: js.UndefOr[Double] = js.undefined,
+    transactionShipping: js.UndefOr[Double] = js.undefined,
+    transactionTax: js.UndefOr[Double] = js.undefined
+  ): SchemaTransactionData = {
     val __obj = js.Dynamic.literal()
+    if (transactionId != null) __obj.updateDynamic("transactionId")(transactionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(transactionRevenue)) __obj.updateDynamic("transactionRevenue")(transactionRevenue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transactionShipping)) __obj.updateDynamic("transactionShipping")(transactionShipping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transactionTax)) __obj.updateDynamic("transactionTax")(transactionTax.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTransactionData]
   }
-  @scala.inline
-  implicit class SchemaTransactionDataOps[Self <: SchemaTransactionData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransactionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionRevenue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionRevenue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionRevenue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionRevenue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionShipping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionShipping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionShipping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionShipping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionTax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionTax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionTax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionTax")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

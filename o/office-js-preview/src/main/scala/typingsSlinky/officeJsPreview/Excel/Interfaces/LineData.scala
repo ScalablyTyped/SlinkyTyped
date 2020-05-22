@@ -23,7 +23,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `line.toJSON()`. */
-@js.native
 trait LineData extends js.Object {
   /**
     *
@@ -31,243 +30,116 @@ trait LineData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var beginArrowheadLength: js.UndefOr[ArrowheadLength | Short | Medium | Long] = js.native
+  var beginArrowheadLength: js.UndefOr[ArrowheadLength | Short | Medium | Long] = js.undefined
   /**
     *
     * Represents the style of the arrowhead at the beginning of the specified line.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var beginArrowheadStyle: js.UndefOr[ArrowheadStyle | None | Triangle | Stealth | Diamond | Oval | Open] = js.native
+  var beginArrowheadStyle: js.UndefOr[ArrowheadStyle | None | Triangle | Stealth | Diamond | Oval | Open] = js.undefined
   /**
     *
     * Represents the width of the arrowhead at the beginning of the specified line.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var beginArrowheadWidth: js.UndefOr[ArrowheadWidth | Narrow | Medium | Wide] = js.native
+  var beginArrowheadWidth: js.UndefOr[ArrowheadWidth | Narrow | Medium | Wide] = js.undefined
   /**
     *
-    * Represents the connection site to which the beginning of a connector is connected. Read-only. Returns null when the beginning of the line is not attached to any shape.
+    * Represents the connection site to which the beginning of a connector is connected. Returns null when the beginning of the line is not attached to any shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var beginConnectedSite: js.UndefOr[Double] = js.native
+  var beginConnectedSite: js.UndefOr[Double] = js.undefined
   /**
     *
     * Represents the connector type for the line.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var connectorType: js.UndefOr[ConnectorType | Straight | Elbow | Curve] = js.native
+  var connectorType: js.UndefOr[ConnectorType | Straight | Elbow | Curve] = js.undefined
   /**
     *
     * Represents the length of the arrowhead at the end of the specified line.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var endArrowheadLength: js.UndefOr[ArrowheadLength | Short | Medium | Long] = js.native
+  var endArrowheadLength: js.UndefOr[ArrowheadLength | Short | Medium | Long] = js.undefined
   /**
     *
     * Represents the style of the arrowhead at the end of the specified line.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var endArrowheadStyle: js.UndefOr[ArrowheadStyle | None | Triangle | Stealth | Diamond | Oval | Open] = js.native
+  var endArrowheadStyle: js.UndefOr[ArrowheadStyle | None | Triangle | Stealth | Diamond | Oval | Open] = js.undefined
   /**
     *
     * Represents the width of the arrowhead at the end of the specified line.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var endArrowheadWidth: js.UndefOr[ArrowheadWidth | Narrow | Medium | Wide] = js.native
+  var endArrowheadWidth: js.UndefOr[ArrowheadWidth | Narrow | Medium | Wide] = js.undefined
   /**
     *
-    * Represents the connection site to which the end of a connector is connected. Read-only. Returns null when the end of the line is not attached to any shape.
+    * Represents the connection site to which the end of a connector is connected. Returns null when the end of the line is not attached to any shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var endConnectedSite: js.UndefOr[Double] = js.native
+  var endConnectedSite: js.UndefOr[Double] = js.undefined
   /**
     *
-    * Represents the shape identifier. Read-only.
+    * Specifies the shape identifier.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     *
-    * Specifies whether or not the beginning of the specified line is connected to a shape. Read-only.
+    * Specifies if the beginning of the specified line is connected to a shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var isBeginConnected: js.UndefOr[Boolean] = js.native
+  var isBeginConnected: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Specifies whether or not the end of the specified line is connected to a shape. Read-only.
+    * Specifies if the end of the specified line is connected to a shape.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var isEndConnected: js.UndefOr[Boolean] = js.native
+  var isEndConnected: js.UndefOr[Boolean] = js.undefined
 }
 
 object LineData {
   @scala.inline
-  def apply(): LineData = {
+  def apply(
+    beginArrowheadLength: ArrowheadLength | Short | Medium | Long = null,
+    beginArrowheadStyle: ArrowheadStyle | None | Triangle | Stealth | Diamond | Oval | Open = null,
+    beginArrowheadWidth: ArrowheadWidth | Narrow | Medium | Wide = null,
+    beginConnectedSite: js.UndefOr[Double] = js.undefined,
+    connectorType: ConnectorType | Straight | Elbow | Curve = null,
+    endArrowheadLength: ArrowheadLength | Short | Medium | Long = null,
+    endArrowheadStyle: ArrowheadStyle | None | Triangle | Stealth | Diamond | Oval | Open = null,
+    endArrowheadWidth: ArrowheadWidth | Narrow | Medium | Wide = null,
+    endConnectedSite: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    isBeginConnected: js.UndefOr[Boolean] = js.undefined,
+    isEndConnected: js.UndefOr[Boolean] = js.undefined
+  ): LineData = {
     val __obj = js.Dynamic.literal()
+    if (beginArrowheadLength != null) __obj.updateDynamic("beginArrowheadLength")(beginArrowheadLength.asInstanceOf[js.Any])
+    if (beginArrowheadStyle != null) __obj.updateDynamic("beginArrowheadStyle")(beginArrowheadStyle.asInstanceOf[js.Any])
+    if (beginArrowheadWidth != null) __obj.updateDynamic("beginArrowheadWidth")(beginArrowheadWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(beginConnectedSite)) __obj.updateDynamic("beginConnectedSite")(beginConnectedSite.get.asInstanceOf[js.Any])
+    if (connectorType != null) __obj.updateDynamic("connectorType")(connectorType.asInstanceOf[js.Any])
+    if (endArrowheadLength != null) __obj.updateDynamic("endArrowheadLength")(endArrowheadLength.asInstanceOf[js.Any])
+    if (endArrowheadStyle != null) __obj.updateDynamic("endArrowheadStyle")(endArrowheadStyle.asInstanceOf[js.Any])
+    if (endArrowheadWidth != null) __obj.updateDynamic("endArrowheadWidth")(endArrowheadWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(endConnectedSite)) __obj.updateDynamic("endConnectedSite")(endConnectedSite.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isBeginConnected)) __obj.updateDynamic("isBeginConnected")(isBeginConnected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEndConnected)) __obj.updateDynamic("isEndConnected")(isEndConnected.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineData]
   }
-  @scala.inline
-  implicit class LineDataOps[Self <: LineData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBeginArrowheadLength(value: ArrowheadLength | Short | Medium | Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginArrowheadLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeginArrowheadLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginArrowheadLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeginArrowheadStyle(value: ArrowheadStyle | None | Triangle | Stealth | Diamond | Oval | Open): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginArrowheadStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeginArrowheadStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginArrowheadStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeginArrowheadWidth(value: ArrowheadWidth | Narrow | Medium | Wide): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginArrowheadWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeginArrowheadWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginArrowheadWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeginConnectedSite(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginConnectedSite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeginConnectedSite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginConnectedSite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectorType(value: ConnectorType | Straight | Elbow | Curve): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndArrowheadLength(value: ArrowheadLength | Short | Medium | Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrowheadLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndArrowheadLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrowheadLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndArrowheadStyle(value: ArrowheadStyle | None | Triangle | Stealth | Diamond | Oval | Open): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrowheadStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndArrowheadStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrowheadStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndArrowheadWidth(value: ArrowheadWidth | Narrow | Medium | Wide): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrowheadWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndArrowheadWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrowheadWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndConnectedSite(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endConnectedSite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndConnectedSite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endConnectedSite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBeginConnected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBeginConnected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBeginConnected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBeginConnected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEndConnected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEndConnected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEndConnected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEndConnected")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

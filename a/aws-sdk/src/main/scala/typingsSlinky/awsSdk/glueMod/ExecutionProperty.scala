@@ -14,29 +14,10 @@ trait ExecutionProperty extends js.Object {
 
 object ExecutionProperty {
   @scala.inline
-  def apply(): ExecutionProperty = {
+  def apply(MaxConcurrentRuns: js.UndefOr[MaxConcurrentRuns] = js.undefined): ExecutionProperty = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MaxConcurrentRuns)) __obj.updateDynamic("MaxConcurrentRuns")(MaxConcurrentRuns.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionProperty]
   }
-  @scala.inline
-  implicit class ExecutionPropertyOps[Self <: ExecutionProperty] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxConcurrentRuns(value: MaxConcurrentRuns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentRuns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrentRuns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentRuns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -50,89 +50,22 @@ trait SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage extend
 
 object SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage {
   @scala.inline
-  def apply(): SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage = {
+  def apply(
+    claimReviewAuthor: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor = null,
+    claimReviewMarkups: js.Array[SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup] = null,
+    name: String = null,
+    pageUrl: String = null,
+    publishDate: String = null,
+    versionId: String = null
+  ): SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage = {
     val __obj = js.Dynamic.literal()
+    if (claimReviewAuthor != null) __obj.updateDynamic("claimReviewAuthor")(claimReviewAuthor.asInstanceOf[js.Any])
+    if (claimReviewMarkups != null) __obj.updateDynamic("claimReviewMarkups")(claimReviewMarkups.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (pageUrl != null) __obj.updateDynamic("pageUrl")(pageUrl.asInstanceOf[js.Any])
+    if (publishDate != null) __obj.updateDynamic("publishDate")(publishDate.asInstanceOf[js.Any])
+    if (versionId != null) __obj.updateDynamic("versionId")(versionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage]
   }
-  @scala.inline
-  implicit class SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPageOps[Self <: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClaimReviewAuthor(value: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimReviewAuthor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimReviewAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimReviewAuthor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClaimReviewMarkups(value: js.Array[SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimReviewMarkups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimReviewMarkups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimReviewMarkups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublishDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublishDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

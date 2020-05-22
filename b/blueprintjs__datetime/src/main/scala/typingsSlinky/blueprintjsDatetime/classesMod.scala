@@ -23,6 +23,7 @@ object classesMod extends js.Object {
   val DATEPICKER_FOOTER: String = js.native
   val DATEPICKER_MONTH_SELECT: String = js.native
   val DATEPICKER_NAVBAR: String = js.native
+  val DATEPICKER_TIMEPICKER_WRAPPER: String = js.native
   val DATEPICKER_YEAR_SELECT: String = js.native
   val DATERANGEPICKER: String = js.native
   val DATERANGEPICKER_CONTIGUOUS: String = js.native

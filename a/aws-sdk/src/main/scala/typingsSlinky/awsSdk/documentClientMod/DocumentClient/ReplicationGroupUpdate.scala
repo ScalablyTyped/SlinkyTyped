@@ -22,53 +22,16 @@ trait ReplicationGroupUpdate extends js.Object {
 
 object ReplicationGroupUpdate {
   @scala.inline
-  def apply(): ReplicationGroupUpdate = {
+  def apply(
+    Create: CreateReplicationGroupMemberAction = null,
+    Delete: DeleteReplicationGroupMemberAction = null,
+    Update: UpdateReplicationGroupMemberAction = null
+  ): ReplicationGroupUpdate = {
     val __obj = js.Dynamic.literal()
+    if (Create != null) __obj.updateDynamic("Create")(Create.asInstanceOf[js.Any])
+    if (Delete != null) __obj.updateDynamic("Delete")(Delete.asInstanceOf[js.Any])
+    if (Update != null) __obj.updateDynamic("Update")(Update.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationGroupUpdate]
   }
-  @scala.inline
-  implicit class ReplicationGroupUpdateOps[Self <: ReplicationGroupUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: CreateReplicationGroupMemberAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Create")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelete(value: DeleteReplicationGroupMemberAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: UpdateReplicationGroupMemberAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

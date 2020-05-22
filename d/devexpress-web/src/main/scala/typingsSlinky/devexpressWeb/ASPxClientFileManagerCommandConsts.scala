@@ -7,6 +7,5 @@ import scala.scalajs.js.annotation._
 /**
   * Declares client constants that contain the names of ASPxFileManager's commands.
   */
-@js.native
 trait ASPxClientFileManagerCommandConsts extends js.Object
 

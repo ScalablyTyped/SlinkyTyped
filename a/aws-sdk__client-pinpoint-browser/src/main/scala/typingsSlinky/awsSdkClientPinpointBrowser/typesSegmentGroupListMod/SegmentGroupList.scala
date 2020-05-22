@@ -8,61 +8,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SegmentGroupList extends js.Object {
   /**
     * A set of segment criteria to evaluate.
     */
-  var Groups: js.UndefOr[js.Array[SegmentGroup] | js.Iterable[SegmentGroup]] = js.native
+  var Groups: js.UndefOr[js.Array[SegmentGroup] | js.Iterable[SegmentGroup]] = js.undefined
   /**
     * Specify how to handle multiple segment groups. For example, if the segment includes three segment groups, should the resulting segment include endpoints that are matched by all, any, or none of the segment groups you created. Acceptable values: ALL, ANY, or NONE.
     */
-  var Include: js.UndefOr[ALL | ANY | NONE | String] = js.native
+  var Include: js.UndefOr[ALL | ANY | NONE | String] = js.undefined
 }
 
 object SegmentGroupList {
   @scala.inline
-  def apply(): SegmentGroupList = {
+  def apply(
+    Groups: js.Array[SegmentGroup] | js.Iterable[SegmentGroup] = null,
+    Include: ALL | ANY | NONE | String = null
+  ): SegmentGroupList = {
     val __obj = js.Dynamic.literal()
+    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
+    if (Include != null) __obj.updateDynamic("Include")(Include.asInstanceOf[js.Any])
     __obj.asInstanceOf[SegmentGroupList]
   }
-  @scala.inline
-  implicit class SegmentGroupListOps[Self <: SegmentGroupList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupsIterable(value: js.Iterable[SegmentGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroups(value: js.Array[SegmentGroup] | js.Iterable[SegmentGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude(value: ALL | ANY | NONE | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Include")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service is for a {@link CustomShape} */
-@js.native
 trait CustomShapeEngine
   extends XInitialization
      with XCustomShapeEngine

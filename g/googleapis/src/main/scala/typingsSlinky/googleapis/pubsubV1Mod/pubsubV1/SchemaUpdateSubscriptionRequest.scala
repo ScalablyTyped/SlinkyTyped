@@ -22,41 +22,11 @@ trait SchemaUpdateSubscriptionRequest extends js.Object {
 
 object SchemaUpdateSubscriptionRequest {
   @scala.inline
-  def apply(): SchemaUpdateSubscriptionRequest = {
+  def apply(subscription: SchemaSubscription = null, updateMask: String = null): SchemaUpdateSubscriptionRequest = {
     val __obj = js.Dynamic.literal()
+    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
+    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateSubscriptionRequest]
   }
-  @scala.inline
-  implicit class SchemaUpdateSubscriptionRequestOps[Self <: SchemaUpdateSubscriptionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubscription(value: SchemaSubscription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateMask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FullScreen extends js.Object {
-  def cancel(`type`: FullScreenType): Unit = js.native
-  def request(`type`: FullScreenType): Unit = js.native
+  def cancel(`type`: FullScreenType): Unit
+  def request(`type`: FullScreenType): Unit
 }
 
 object FullScreen {
@@ -16,25 +15,5 @@ object FullScreen {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), request = js.Any.fromFunction1(request))
     __obj.asInstanceOf[FullScreen]
   }
-  @scala.inline
-  implicit class FullScreenOps[Self <: FullScreen] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: FullScreenType => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRequest(value: FullScreenType => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Payments extends js.Object {
   /**
     * Consumes a specific purchase belonging to the current player. Before provisioning a product's effects to the player,
@@ -17,7 +16,7 @@ trait Payments extends js.Object {
     * @throws INVALID_PARAM
     * @throws NETWORK_FAILURE
     */
-  def consumePurchaseAsync(purchaseToken: String): js.Promise[Unit] = js.native
+  def consumePurchaseAsync(purchaseToken: String): js.Promise[Unit]
   /**
     * Fetches the game's product catalog.
     *
@@ -26,7 +25,7 @@ trait Payments extends js.Object {
     * @throws PAYMENTS_NOT_INITIALIZED
     * @throws NETWORK_FAILURE
     */
-  def getCatalogAsync(): js.Promise[js.Array[Product]] = js.native
+  def getCatalogAsync(): js.Promise[js.Array[Product]]
   /**
     * Fetches all of the player's unconsumed purchases. As a best practice, the game should fetch the current player's purchases
     * as soon as the client indicates that it is ready to perform payments-related operations. The game can then process and consume
@@ -37,12 +36,12 @@ trait Payments extends js.Object {
     * @throws PAYMENTS_NOT_INITIALIZED
     * @throws NETWORK_FAILURE
     */
-  def getPurchasesAsync(): js.Promise[js.Array[Purchase]] = js.native
+  def getPurchasesAsync(): js.Promise[js.Array[Purchase]]
   /**
     * Sets a callback to be triggered when Payments operations are available.
     * @param callback The callback function to be executed when Payments are available.
     */
-  def onReady(callback: js.Function0[Unit]): Unit = js.native
+  def onReady(callback: js.Function0[Unit]): Unit
   /**
     * Begins the purchase flow for a specific product. Will immediately reject if called before FBInstant.startGameAsync() has resolved.
     *
@@ -54,7 +53,7 @@ trait Payments extends js.Object {
     * @throws NETWORK_FAILURE
     * @throws INVALID_OPERATION
     */
-  def purchaseAsync(purchaseConfig: PurchaseConfig): js.Promise[Purchase] = js.native
+  def purchaseAsync(purchaseConfig: PurchaseConfig): js.Promise[Purchase]
 }
 
 object Payments {
@@ -69,43 +68,5 @@ object Payments {
     val __obj = js.Dynamic.literal(consumePurchaseAsync = js.Any.fromFunction1(consumePurchaseAsync), getCatalogAsync = js.Any.fromFunction0(getCatalogAsync), getPurchasesAsync = js.Any.fromFunction0(getPurchasesAsync), onReady = js.Any.fromFunction1(onReady), purchaseAsync = js.Any.fromFunction1(purchaseAsync))
     __obj.asInstanceOf[Payments]
   }
-  @scala.inline
-  implicit class PaymentsOps[Self <: Payments] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumePurchaseAsync(value: String => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumePurchaseAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCatalogAsync(value: () => js.Promise[js.Array[Product]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCatalogAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPurchasesAsync(value: () => js.Promise[js.Array[Purchase]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPurchasesAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnReady(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPurchaseAsync(value: PurchaseConfig => js.Promise[Purchase]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

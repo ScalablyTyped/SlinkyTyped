@@ -6,1063 +6,255 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var URLhashListener: js.UndefOr[Boolean] = js.native
-  var animateIn: js.UndefOr[String | Boolean] = js.native
-  var animateOut: js.UndefOr[String | Boolean] = js.native
-  var autoHeightClass: js.UndefOr[String] = js.native
-  var autoWidth: js.UndefOr[Boolean] = js.native
-  var autoplay: js.UndefOr[Boolean] = js.native
-  var autoplayHoverPause: js.UndefOr[Boolean] = js.native
-  var autoplaySpeed: js.UndefOr[Double | Boolean] = js.native
-  var autoplayTimeout: js.UndefOr[Double] = js.native
-  var callbacks: js.UndefOr[Boolean] = js.native
-  var center: js.UndefOr[Boolean] = js.native
-  var controlsClass: js.UndefOr[String] = js.native
-  var dotClass: js.UndefOr[String] = js.native
-  var dotData: js.UndefOr[Boolean] = js.native
-  var dots: js.UndefOr[Boolean] = js.native
-  var dotsClass: js.UndefOr[String] = js.native
-  var dotsContainer: js.UndefOr[String | Boolean] = js.native
-  var dotsEach: js.UndefOr[Double | Boolean] = js.native
-  var dotsSpeed: js.UndefOr[Double | Boolean] = js.native
-  var dragClass: js.UndefOr[String] = js.native
-  var dragEndSpeed: js.UndefOr[Double | Boolean] = js.native
-  var fallbackEasing: js.UndefOr[String] = js.native
-  var fluidSpeed: js.UndefOr[Double | Boolean] = js.native
-  var freeDrag: js.UndefOr[Boolean] = js.native
-  var grabClass: js.UndefOr[String] = js.native
-  var info: js.UndefOr[HandlerCallback] = js.native
-  var itemElement: js.UndefOr[String] = js.native
-  var items: js.UndefOr[Double] = js.native
-  var lazyContent: js.UndefOr[Boolean] = js.native
-  var lazyLoad: js.UndefOr[Boolean] = js.native
-  var loadedClass: js.UndefOr[String] = js.native
-  var loadingClass: js.UndefOr[String] = js.native
-  var loop: js.UndefOr[Boolean] = js.native
-  var margin: js.UndefOr[Double] = js.native
-  var merge: js.UndefOr[Boolean] = js.native
-  var mergeFit: js.UndefOr[Boolean] = js.native
-  var mouseDrag: js.UndefOr[Boolean] = js.native
-  var nav: js.UndefOr[Boolean] = js.native
-  var navClass: js.UndefOr[js.Array[String]] = js.native
-  var navContainer: js.UndefOr[String | Boolean] = js.native
-  var navContainerClass: js.UndefOr[String] = js.native
-  var navElement: js.UndefOr[String] = js.native
-  var navSpeed: js.UndefOr[Double | Boolean] = js.native
-  var navText: js.UndefOr[js.Array[String]] = js.native
-  var nestedItemSelector: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[HandlerCallback] = js.native
-  var onChanged: js.UndefOr[HandlerCallback] = js.native
-  var onDrag: js.UndefOr[HandlerCallback] = js.native
-  var onDragged: js.UndefOr[HandlerCallback] = js.native
-  var onInitialize: js.UndefOr[HandlerCallback] = js.native
-  var onInitialized: js.UndefOr[HandlerCallback] = js.native
-  var onLoadLazy: js.UndefOr[HandlerCallback] = js.native
-  var onLoadedLazy: js.UndefOr[HandlerCallback] = js.native
-  var onPlayVideo: js.UndefOr[HandlerCallback] = js.native
-  var onRefresh: js.UndefOr[HandlerCallback] = js.native
-  var onRefreshed: js.UndefOr[HandlerCallback] = js.native
-  var onResize: js.UndefOr[HandlerCallback] = js.native
-  var onResized: js.UndefOr[HandlerCallback] = js.native
-  var onStopVideo: js.UndefOr[HandlerCallback] = js.native
-  var onTranslate: js.UndefOr[HandlerCallback] = js.native
-  var onTranslated: js.UndefOr[HandlerCallback] = js.native
-  var pullDrag: js.UndefOr[Boolean] = js.native
-  var refreshClass: js.UndefOr[String] = js.native
-  var responsive: js.UndefOr[StringDictionary[Options]] = js.native
-  var responsiveBaseElement: js.UndefOr[Element] = js.native
-  var responsiveClass: js.UndefOr[String | Boolean] = js.native
-  var responsiveRefreshRate: js.UndefOr[Double] = js.native
-  var rewind: js.UndefOr[Boolean] = js.native
-  var rtlClass: js.UndefOr[String] = js.native
-  var slideBy: js.UndefOr[Double | String] = js.native
-  var smartSpeed: js.UndefOr[Double | Boolean] = js.native
-  var stageClass: js.UndefOr[String] = js.native
-  var stageElement: js.UndefOr[String] = js.native
-  var stageOuterClass: js.UndefOr[String] = js.native
-  var stagePadding: js.UndefOr[Double] = js.native
-  var startPosition: js.UndefOr[Double | String] = js.native
-  var touchDrag: js.UndefOr[Boolean] = js.native
-  var video: js.UndefOr[Boolean] = js.native
-  var videoHeight: js.UndefOr[Double | Boolean] = js.native
-  var videoWidth: js.UndefOr[Double | Boolean] = js.native
+  var URLhashListener: js.UndefOr[Boolean] = js.undefined
+  var animateIn: js.UndefOr[String | Boolean] = js.undefined
+  var animateOut: js.UndefOr[String | Boolean] = js.undefined
+  var autoHeightClass: js.UndefOr[String] = js.undefined
+  var autoWidth: js.UndefOr[Boolean] = js.undefined
+  var autoplay: js.UndefOr[Boolean] = js.undefined
+  var autoplayHoverPause: js.UndefOr[Boolean] = js.undefined
+  var autoplaySpeed: js.UndefOr[Double | Boolean] = js.undefined
+  var autoplayTimeout: js.UndefOr[Double] = js.undefined
+  var callbacks: js.UndefOr[Boolean] = js.undefined
+  var center: js.UndefOr[Boolean] = js.undefined
+  var controlsClass: js.UndefOr[String] = js.undefined
+  var dotClass: js.UndefOr[String] = js.undefined
+  var dotData: js.UndefOr[Boolean] = js.undefined
+  var dots: js.UndefOr[Boolean] = js.undefined
+  var dotsClass: js.UndefOr[String] = js.undefined
+  var dotsContainer: js.UndefOr[String | Boolean] = js.undefined
+  var dotsEach: js.UndefOr[Double | Boolean] = js.undefined
+  var dotsSpeed: js.UndefOr[Double | Boolean] = js.undefined
+  var dragClass: js.UndefOr[String] = js.undefined
+  var dragEndSpeed: js.UndefOr[Double | Boolean] = js.undefined
+  var fallbackEasing: js.UndefOr[String] = js.undefined
+  var fluidSpeed: js.UndefOr[Double | Boolean] = js.undefined
+  var freeDrag: js.UndefOr[Boolean] = js.undefined
+  var grabClass: js.UndefOr[String] = js.undefined
+  var info: js.UndefOr[HandlerCallback] = js.undefined
+  var itemElement: js.UndefOr[String] = js.undefined
+  var items: js.UndefOr[Double] = js.undefined
+  var lazyContent: js.UndefOr[Boolean] = js.undefined
+  var lazyLoad: js.UndefOr[Boolean] = js.undefined
+  var loadedClass: js.UndefOr[String] = js.undefined
+  var loadingClass: js.UndefOr[String] = js.undefined
+  var loop: js.UndefOr[Boolean] = js.undefined
+  var margin: js.UndefOr[Double] = js.undefined
+  var merge: js.UndefOr[Boolean] = js.undefined
+  var mergeFit: js.UndefOr[Boolean] = js.undefined
+  var mouseDrag: js.UndefOr[Boolean] = js.undefined
+  var nav: js.UndefOr[Boolean] = js.undefined
+  var navClass: js.UndefOr[js.Array[String]] = js.undefined
+  var navContainer: js.UndefOr[String | Boolean] = js.undefined
+  var navContainerClass: js.UndefOr[String] = js.undefined
+  var navElement: js.UndefOr[String] = js.undefined
+  var navSpeed: js.UndefOr[Double | Boolean] = js.undefined
+  var navText: js.UndefOr[js.Array[String]] = js.undefined
+  var nestedItemSelector: js.UndefOr[String] = js.undefined
+  var onChange: js.UndefOr[HandlerCallback] = js.undefined
+  var onChanged: js.UndefOr[HandlerCallback] = js.undefined
+  var onDrag: js.UndefOr[HandlerCallback] = js.undefined
+  var onDragged: js.UndefOr[HandlerCallback] = js.undefined
+  var onInitialize: js.UndefOr[HandlerCallback] = js.undefined
+  var onInitialized: js.UndefOr[HandlerCallback] = js.undefined
+  var onLoadLazy: js.UndefOr[HandlerCallback] = js.undefined
+  var onLoadedLazy: js.UndefOr[HandlerCallback] = js.undefined
+  var onPlayVideo: js.UndefOr[HandlerCallback] = js.undefined
+  var onRefresh: js.UndefOr[HandlerCallback] = js.undefined
+  var onRefreshed: js.UndefOr[HandlerCallback] = js.undefined
+  var onResize: js.UndefOr[HandlerCallback] = js.undefined
+  var onResized: js.UndefOr[HandlerCallback] = js.undefined
+  var onStopVideo: js.UndefOr[HandlerCallback] = js.undefined
+  var onTranslate: js.UndefOr[HandlerCallback] = js.undefined
+  var onTranslated: js.UndefOr[HandlerCallback] = js.undefined
+  var pullDrag: js.UndefOr[Boolean] = js.undefined
+  var refreshClass: js.UndefOr[String] = js.undefined
+  var responsive: js.UndefOr[StringDictionary[Options]] = js.undefined
+  var responsiveBaseElement: js.UndefOr[Element] = js.undefined
+  var responsiveClass: js.UndefOr[String | Boolean] = js.undefined
+  var responsiveRefreshRate: js.UndefOr[Double] = js.undefined
+  var rewind: js.UndefOr[Boolean] = js.undefined
+  var rtlClass: js.UndefOr[String] = js.undefined
+  var slideBy: js.UndefOr[Double | String] = js.undefined
+  var smartSpeed: js.UndefOr[Double | Boolean] = js.undefined
+  var stageClass: js.UndefOr[String] = js.undefined
+  var stageElement: js.UndefOr[String] = js.undefined
+  var stageOuterClass: js.UndefOr[String] = js.undefined
+  var stagePadding: js.UndefOr[Double] = js.undefined
+  var startPosition: js.UndefOr[Double | String] = js.undefined
+  var touchDrag: js.UndefOr[Boolean] = js.undefined
+  var video: js.UndefOr[Boolean] = js.undefined
+  var videoHeight: js.UndefOr[Double | Boolean] = js.undefined
+  var videoWidth: js.UndefOr[Double | Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    URLhashListener: js.UndefOr[Boolean] = js.undefined,
+    animateIn: String | Boolean = null,
+    animateOut: String | Boolean = null,
+    autoHeightClass: String = null,
+    autoWidth: js.UndefOr[Boolean] = js.undefined,
+    autoplay: js.UndefOr[Boolean] = js.undefined,
+    autoplayHoverPause: js.UndefOr[Boolean] = js.undefined,
+    autoplaySpeed: Double | Boolean = null,
+    autoplayTimeout: js.UndefOr[Double] = js.undefined,
+    callbacks: js.UndefOr[Boolean] = js.undefined,
+    center: js.UndefOr[Boolean] = js.undefined,
+    controlsClass: String = null,
+    dotClass: String = null,
+    dotData: js.UndefOr[Boolean] = js.undefined,
+    dots: js.UndefOr[Boolean] = js.undefined,
+    dotsClass: String = null,
+    dotsContainer: String | Boolean = null,
+    dotsEach: Double | Boolean = null,
+    dotsSpeed: Double | Boolean = null,
+    dragClass: String = null,
+    dragEndSpeed: Double | Boolean = null,
+    fallbackEasing: String = null,
+    fluidSpeed: Double | Boolean = null,
+    freeDrag: js.UndefOr[Boolean] = js.undefined,
+    grabClass: String = null,
+    info: /* repeated */ js.Any => Unit = null,
+    itemElement: String = null,
+    items: js.UndefOr[Double] = js.undefined,
+    lazyContent: js.UndefOr[Boolean] = js.undefined,
+    lazyLoad: js.UndefOr[Boolean] = js.undefined,
+    loadedClass: String = null,
+    loadingClass: String = null,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    margin: js.UndefOr[Double] = js.undefined,
+    merge: js.UndefOr[Boolean] = js.undefined,
+    mergeFit: js.UndefOr[Boolean] = js.undefined,
+    mouseDrag: js.UndefOr[Boolean] = js.undefined,
+    nav: js.UndefOr[Boolean] = js.undefined,
+    navClass: js.Array[String] = null,
+    navContainer: String | Boolean = null,
+    navContainerClass: String = null,
+    navElement: String = null,
+    navSpeed: Double | Boolean = null,
+    navText: js.Array[String] = null,
+    nestedItemSelector: String = null,
+    onChange: /* repeated */ js.Any => Unit = null,
+    onChanged: /* repeated */ js.Any => Unit = null,
+    onDrag: /* repeated */ js.Any => Unit = null,
+    onDragged: /* repeated */ js.Any => Unit = null,
+    onInitialize: /* repeated */ js.Any => Unit = null,
+    onInitialized: /* repeated */ js.Any => Unit = null,
+    onLoadLazy: /* repeated */ js.Any => Unit = null,
+    onLoadedLazy: /* repeated */ js.Any => Unit = null,
+    onPlayVideo: /* repeated */ js.Any => Unit = null,
+    onRefresh: /* repeated */ js.Any => Unit = null,
+    onRefreshed: /* repeated */ js.Any => Unit = null,
+    onResize: /* repeated */ js.Any => Unit = null,
+    onResized: /* repeated */ js.Any => Unit = null,
+    onStopVideo: /* repeated */ js.Any => Unit = null,
+    onTranslate: /* repeated */ js.Any => Unit = null,
+    onTranslated: /* repeated */ js.Any => Unit = null,
+    pullDrag: js.UndefOr[Boolean] = js.undefined,
+    refreshClass: String = null,
+    responsive: StringDictionary[Options] = null,
+    responsiveBaseElement: Element = null,
+    responsiveClass: String | Boolean = null,
+    responsiveRefreshRate: js.UndefOr[Double] = js.undefined,
+    rewind: js.UndefOr[Boolean] = js.undefined,
+    rtlClass: String = null,
+    slideBy: Double | String = null,
+    smartSpeed: Double | Boolean = null,
+    stageClass: String = null,
+    stageElement: String = null,
+    stageOuterClass: String = null,
+    stagePadding: js.UndefOr[Double] = js.undefined,
+    startPosition: Double | String = null,
+    touchDrag: js.UndefOr[Boolean] = js.undefined,
+    video: js.UndefOr[Boolean] = js.undefined,
+    videoHeight: Double | Boolean = null,
+    videoWidth: Double | Boolean = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(URLhashListener)) __obj.updateDynamic("URLhashListener")(URLhashListener.get.asInstanceOf[js.Any])
+    if (animateIn != null) __obj.updateDynamic("animateIn")(animateIn.asInstanceOf[js.Any])
+    if (animateOut != null) __obj.updateDynamic("animateOut")(animateOut.asInstanceOf[js.Any])
+    if (autoHeightClass != null) __obj.updateDynamic("autoHeightClass")(autoHeightClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoWidth)) __obj.updateDynamic("autoWidth")(autoWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplayHoverPause)) __obj.updateDynamic("autoplayHoverPause")(autoplayHoverPause.get.asInstanceOf[js.Any])
+    if (autoplaySpeed != null) __obj.updateDynamic("autoplaySpeed")(autoplaySpeed.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplayTimeout)) __obj.updateDynamic("autoplayTimeout")(autoplayTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(callbacks)) __obj.updateDynamic("callbacks")(callbacks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.get.asInstanceOf[js.Any])
+    if (controlsClass != null) __obj.updateDynamic("controlsClass")(controlsClass.asInstanceOf[js.Any])
+    if (dotClass != null) __obj.updateDynamic("dotClass")(dotClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(dotData)) __obj.updateDynamic("dotData")(dotData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.get.asInstanceOf[js.Any])
+    if (dotsClass != null) __obj.updateDynamic("dotsClass")(dotsClass.asInstanceOf[js.Any])
+    if (dotsContainer != null) __obj.updateDynamic("dotsContainer")(dotsContainer.asInstanceOf[js.Any])
+    if (dotsEach != null) __obj.updateDynamic("dotsEach")(dotsEach.asInstanceOf[js.Any])
+    if (dotsSpeed != null) __obj.updateDynamic("dotsSpeed")(dotsSpeed.asInstanceOf[js.Any])
+    if (dragClass != null) __obj.updateDynamic("dragClass")(dragClass.asInstanceOf[js.Any])
+    if (dragEndSpeed != null) __obj.updateDynamic("dragEndSpeed")(dragEndSpeed.asInstanceOf[js.Any])
+    if (fallbackEasing != null) __obj.updateDynamic("fallbackEasing")(fallbackEasing.asInstanceOf[js.Any])
+    if (fluidSpeed != null) __obj.updateDynamic("fluidSpeed")(fluidSpeed.asInstanceOf[js.Any])
+    if (!js.isUndefined(freeDrag)) __obj.updateDynamic("freeDrag")(freeDrag.get.asInstanceOf[js.Any])
+    if (grabClass != null) __obj.updateDynamic("grabClass")(grabClass.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(js.Any.fromFunction1(info))
+    if (itemElement != null) __obj.updateDynamic("itemElement")(itemElement.asInstanceOf[js.Any])
+    if (!js.isUndefined(items)) __obj.updateDynamic("items")(items.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lazyContent)) __obj.updateDynamic("lazyContent")(lazyContent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lazyLoad)) __obj.updateDynamic("lazyLoad")(lazyLoad.get.asInstanceOf[js.Any])
+    if (loadedClass != null) __obj.updateDynamic("loadedClass")(loadedClass.asInstanceOf[js.Any])
+    if (loadingClass != null) __obj.updateDynamic("loadingClass")(loadingClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(margin)) __obj.updateDynamic("margin")(margin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(merge)) __obj.updateDynamic("merge")(merge.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mergeFit)) __obj.updateDynamic("mergeFit")(mergeFit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseDrag)) __obj.updateDynamic("mouseDrag")(mouseDrag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nav)) __obj.updateDynamic("nav")(nav.get.asInstanceOf[js.Any])
+    if (navClass != null) __obj.updateDynamic("navClass")(navClass.asInstanceOf[js.Any])
+    if (navContainer != null) __obj.updateDynamic("navContainer")(navContainer.asInstanceOf[js.Any])
+    if (navContainerClass != null) __obj.updateDynamic("navContainerClass")(navContainerClass.asInstanceOf[js.Any])
+    if (navElement != null) __obj.updateDynamic("navElement")(navElement.asInstanceOf[js.Any])
+    if (navSpeed != null) __obj.updateDynamic("navSpeed")(navSpeed.asInstanceOf[js.Any])
+    if (navText != null) __obj.updateDynamic("navText")(navText.asInstanceOf[js.Any])
+    if (nestedItemSelector != null) __obj.updateDynamic("nestedItemSelector")(nestedItemSelector.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onChanged != null) __obj.updateDynamic("onChanged")(js.Any.fromFunction1(onChanged))
+    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
+    if (onDragged != null) __obj.updateDynamic("onDragged")(js.Any.fromFunction1(onDragged))
+    if (onInitialize != null) __obj.updateDynamic("onInitialize")(js.Any.fromFunction1(onInitialize))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onLoadLazy != null) __obj.updateDynamic("onLoadLazy")(js.Any.fromFunction1(onLoadLazy))
+    if (onLoadedLazy != null) __obj.updateDynamic("onLoadedLazy")(js.Any.fromFunction1(onLoadedLazy))
+    if (onPlayVideo != null) __obj.updateDynamic("onPlayVideo")(js.Any.fromFunction1(onPlayVideo))
+    if (onRefresh != null) __obj.updateDynamic("onRefresh")(js.Any.fromFunction1(onRefresh))
+    if (onRefreshed != null) __obj.updateDynamic("onRefreshed")(js.Any.fromFunction1(onRefreshed))
+    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction1(onResize))
+    if (onResized != null) __obj.updateDynamic("onResized")(js.Any.fromFunction1(onResized))
+    if (onStopVideo != null) __obj.updateDynamic("onStopVideo")(js.Any.fromFunction1(onStopVideo))
+    if (onTranslate != null) __obj.updateDynamic("onTranslate")(js.Any.fromFunction1(onTranslate))
+    if (onTranslated != null) __obj.updateDynamic("onTranslated")(js.Any.fromFunction1(onTranslated))
+    if (!js.isUndefined(pullDrag)) __obj.updateDynamic("pullDrag")(pullDrag.get.asInstanceOf[js.Any])
+    if (refreshClass != null) __obj.updateDynamic("refreshClass")(refreshClass.asInstanceOf[js.Any])
+    if (responsive != null) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
+    if (responsiveBaseElement != null) __obj.updateDynamic("responsiveBaseElement")(responsiveBaseElement.asInstanceOf[js.Any])
+    if (responsiveClass != null) __obj.updateDynamic("responsiveClass")(responsiveClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(responsiveRefreshRate)) __obj.updateDynamic("responsiveRefreshRate")(responsiveRefreshRate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rewind)) __obj.updateDynamic("rewind")(rewind.get.asInstanceOf[js.Any])
+    if (rtlClass != null) __obj.updateDynamic("rtlClass")(rtlClass.asInstanceOf[js.Any])
+    if (slideBy != null) __obj.updateDynamic("slideBy")(slideBy.asInstanceOf[js.Any])
+    if (smartSpeed != null) __obj.updateDynamic("smartSpeed")(smartSpeed.asInstanceOf[js.Any])
+    if (stageClass != null) __obj.updateDynamic("stageClass")(stageClass.asInstanceOf[js.Any])
+    if (stageElement != null) __obj.updateDynamic("stageElement")(stageElement.asInstanceOf[js.Any])
+    if (stageOuterClass != null) __obj.updateDynamic("stageOuterClass")(stageOuterClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(stagePadding)) __obj.updateDynamic("stagePadding")(stagePadding.get.asInstanceOf[js.Any])
+    if (startPosition != null) __obj.updateDynamic("startPosition")(startPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(touchDrag)) __obj.updateDynamic("touchDrag")(touchDrag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(video)) __obj.updateDynamic("video")(video.get.asInstanceOf[js.Any])
+    if (videoHeight != null) __obj.updateDynamic("videoHeight")(videoHeight.asInstanceOf[js.Any])
+    if (videoWidth != null) __obj.updateDynamic("videoWidth")(videoWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withURLhashListener(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URLhashListener")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutURLhashListener: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URLhashListener")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimateIn(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimateIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimateOut(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimateOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoHeightClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeightClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHeightClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeightClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplayHoverPause(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayHoverPause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplayHoverPause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayHoverPause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplaySpeed(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplaySpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplaySpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplaySpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplayTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplayTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbacks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbacks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlsClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlsClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDotClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDotClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDotData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDotData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDots(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDotsClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDotsClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDotsContainer(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDotsContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDotsEach(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsEach")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDotsEach: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsEach")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDotsSpeed(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDotsSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragEndSpeed(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEndSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragEndSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEndSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallbackEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackEasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFluidSpeed(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fluidSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFluidSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fluidSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFreeDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreeDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrabClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grabClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrabClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grabClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazyContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazyContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazyLoad(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazyLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadedClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadedClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadedClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadedClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadingClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMerge(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMerge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergeFit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeFit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeFit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeFit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNav(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNav: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavClass(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavContainer(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavContainerClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainerClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavContainerClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainerClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavSpeed(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavText(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNestedItemSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedItemSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNestedItemSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedItemSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChanged(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDrag(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragged(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInitialize(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInitialize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInitialized(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialized")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInitialized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadLazy(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadLazy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadLazy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadLazy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadedLazy(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedLazy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadedLazy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedLazy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlayVideo(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayVideo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlayVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayVideo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRefresh(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRefreshed(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefreshed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRefreshed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefreshed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResize(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResized(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResized")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStopVideo(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStopVideo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStopVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStopVideo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTranslate(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTranslate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTranslate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTranslate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTranslated(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTranslated")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTranslated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTranslated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPullDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPullDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: StringDictionary[Options]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsiveBaseElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveBaseElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsiveBaseElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveBaseElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsiveClass(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsiveClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsiveRefreshRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveRefreshRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsiveRefreshRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveRefreshRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRewind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRewind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRtlClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rtlClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRtlClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rtlClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlideBy(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlideBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartSpeed(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageOuterClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageOuterClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageOuterClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageOuterClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStagePadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stagePadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStagePadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stagePadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartPosition(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoHeight(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoWidth(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

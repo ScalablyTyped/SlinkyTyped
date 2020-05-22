@@ -22,29 +22,10 @@ trait SchemaTenantProjectPolicy extends js.Object {
 
 object SchemaTenantProjectPolicy {
   @scala.inline
-  def apply(): SchemaTenantProjectPolicy = {
+  def apply(policyBindings: js.Array[SchemaPolicyBinding] = null): SchemaTenantProjectPolicy = {
     val __obj = js.Dynamic.literal()
+    if (policyBindings != null) __obj.updateDynamic("policyBindings")(policyBindings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTenantProjectPolicy]
   }
-  @scala.inline
-  implicit class SchemaTenantProjectPolicyOps[Self <: SchemaTenantProjectPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyBindings(value: js.Array[SchemaPolicyBinding]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyBindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyBindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyBindings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

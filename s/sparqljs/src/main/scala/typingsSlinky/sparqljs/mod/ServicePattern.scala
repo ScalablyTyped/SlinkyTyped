@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.sparqljs.mod.Pattern because Already inherited */ @js.native
-trait ServicePattern extends BlockPattern {
-  var name: Term = js.native
-  var silent: Boolean = js.native
+- typingsSlinky.sparqljs.mod.Pattern because Already inherited */ trait ServicePattern extends BlockPattern {
+  var name: Term
+  var silent: Boolean
   @JSName("type")
-  var type_ServicePattern: service = js.native
+  var type_ServicePattern: service
 }
 
 object ServicePattern {
@@ -21,31 +20,5 @@ object ServicePattern {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServicePattern]
   }
-  @scala.inline
-  implicit class ServicePatternOps[Self <: ServicePattern] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: Term): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: service): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

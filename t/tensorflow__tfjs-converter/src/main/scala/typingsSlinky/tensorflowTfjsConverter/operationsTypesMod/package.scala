@@ -33,4 +33,7 @@ package object operationsTypesMod {
       ])
     ])
   ]
+  type ValueType = java.lang.String | (js.Array[
+    js.Array[scala.Double] | scala.Boolean | scala.Double | java.lang.String | typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+  ]) | scala.Double | scala.Boolean | typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
 }

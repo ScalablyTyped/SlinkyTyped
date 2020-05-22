@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   * The special thing about X/Y diagrams is that the first series of data contains **x** -values. The other series contain **y** -values. Together both
   * form two-dimensional coordinates, at which data points are placed.
   */
-@js.native
 trait XYDiagram extends LineDiagram
 
 object XYDiagram {

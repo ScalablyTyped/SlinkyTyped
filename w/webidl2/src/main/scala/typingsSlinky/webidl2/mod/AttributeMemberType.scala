@@ -7,25 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AttributeMemberType
   extends IDLInterfaceMemberType
      with IDLNamespaceMemberType {
   /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
+  var extAttrs: js.Array[ExtendedAttribute]
   /** An IDL Type for the attribute. */
-  var idlType: IDLTypeDescription = js.native
+  var idlType: IDLTypeDescription
   /** True if it's an inherit attribute. */
-  var inherit: Boolean = js.native
+  var inherit: Boolean
   /** The attribute's name. */
-  var name: String = js.native
+  var name: String
   /** The container of this type. */
-  var parent: InterfaceType | InterfaceMixinType | NamespaceType = js.native
+  var parent: InterfaceType | InterfaceMixinType | NamespaceType
   /** True if it's a read-only attribute. */
-  var readonly: Boolean = js.native
+  var readonly: Boolean
   /** Special modifier if exists */
-  var special: static | stringifier = js.native
-  var `type`: attribute = js.native
+  var special: static | stringifier
+  var `type`: attribute
 }
 
 object AttributeMemberType {
@@ -44,61 +43,5 @@ object AttributeMemberType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeMemberType]
   }
-  @scala.inline
-  implicit class AttributeMemberTypeOps[Self <: AttributeMemberType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtAttrs(value: js.Array[ExtendedAttribute]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extAttrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdlType(value: IDLTypeDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idlType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInherit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: InterfaceType | InterfaceMixinType | NamespaceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpecial(value: static | stringifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("special")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: attribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

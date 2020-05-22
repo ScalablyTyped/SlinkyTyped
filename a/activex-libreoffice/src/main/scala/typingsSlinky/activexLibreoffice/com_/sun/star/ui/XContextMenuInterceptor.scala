@@ -7,13 +7,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This interface enables the object to be registered as interceptor to change context menus or prevent them from being executed. */
-@js.native
 trait XContextMenuInterceptor extends XInterface {
   /**
     * notifies the interceptor about the request to execute a ContextMenu. The interceptor has to decide whether the menu should be executed with or without
     * being modified or may ignore the call.
     */
-  def notifyContextMenuExecute(aEvent: ContextMenuExecuteEvent): ContextMenuInterceptorAction = js.native
+  def notifyContextMenuExecute(aEvent: ContextMenuExecuteEvent): ContextMenuInterceptorAction
 }
 
 object XContextMenuInterceptor {
@@ -27,19 +26,5 @@ object XContextMenuInterceptor {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), notifyContextMenuExecute = js.Any.fromFunction1(notifyContextMenuExecute), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XContextMenuInterceptor]
   }
-  @scala.inline
-  implicit class XContextMenuInterceptorOps[Self <: XContextMenuInterceptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotifyContextMenuExecute(value: ContextMenuExecuteEvent => ContextMenuInterceptorAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyContextMenuExecute")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

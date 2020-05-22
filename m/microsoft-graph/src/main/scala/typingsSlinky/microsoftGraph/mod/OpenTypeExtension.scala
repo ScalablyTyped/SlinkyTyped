@@ -4,37 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenTypeExtension extends Entity {
   // A unique text identifier for an open type open extension. Required.
-  var extensionName: js.UndefOr[String] = js.native
+  var extensionName: js.UndefOr[String] = js.undefined
 }
 
 object OpenTypeExtension {
   @scala.inline
-  def apply(): OpenTypeExtension = {
+  def apply(extensionName: String = null, id: String = null): OpenTypeExtension = {
     val __obj = js.Dynamic.literal()
+    if (extensionName != null) __obj.updateDynamic("extensionName")(extensionName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenTypeExtension]
   }
-  @scala.inline
-  implicit class OpenTypeExtensionOps[Self <: OpenTypeExtension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtensionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,340 +10,88 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Pick</ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TriggerProps * / any, 'getPopupContainer'> */
-@js.native
 trait CascaderProps extends js.Object {
   var builtinPlacements: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any
-  ] = js.native
-  var changeOnSelect: js.UndefOr[Boolean] = js.native
-  var children: js.UndefOr[ReactElement] = js.native
-  var defaultValue: js.UndefOr[js.Array[String]] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var dropdownMenuColumnStyle: js.UndefOr[CSSProperties] = js.native
-  var expandIcon: js.UndefOr[TagMod[Any]] = js.native
-  var expandTrigger: js.UndefOr[String] = js.native
-  var fieldNames: js.UndefOr[CascaderFieldNames] = js.native
-  var filedNames: js.UndefOr[CascaderFieldNames] = js.native
-  var getPopupContainer: js.UndefOr[js.Any] = js.native
-  var loadData: js.UndefOr[js.Function1[/* selectOptions */ js.Array[CascaderOption], Unit]] = js.native
-  var loadingIcon: js.UndefOr[TagMod[Any]] = js.native
+  ] = js.undefined
+  var changeOnSelect: js.UndefOr[Boolean] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
+  var defaultValue: js.UndefOr[js.Array[String]] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var dropdownMenuColumnStyle: js.UndefOr[CSSProperties] = js.undefined
+  var expandIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var expandTrigger: js.UndefOr[String] = js.undefined
+  var fieldNames: js.UndefOr[CascaderFieldNames] = js.undefined
+  var filedNames: js.UndefOr[CascaderFieldNames] = js.undefined
+  var getPopupContainer: js.UndefOr[js.Any] = js.undefined
+  var loadData: js.UndefOr[js.Function1[/* selectOptions */ js.Array[CascaderOption], Unit]] = js.undefined
+  var loadingIcon: js.UndefOr[TagMod[Any]] = js.undefined
   var onChange: js.UndefOr[
     js.Function2[/* value */ js.Array[String], /* selectOptions */ js.Array[CascaderOption], Unit]
-  ] = js.native
-  var onKeyDown: js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLElement], Unit]] = js.native
-  var onPopupVisibleChange: js.UndefOr[js.Function1[/* popupVisible */ Boolean, Unit]] = js.native
-  var options: js.UndefOr[js.Array[CascaderOption]] = js.native
-  var popupClassName: js.UndefOr[String] = js.native
-  var popupPlacement: js.UndefOr[String] = js.native
-  var popupVisible: js.UndefOr[Boolean] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var transitionName: js.UndefOr[String] = js.native
-  var value: js.UndefOr[js.Array[String]] = js.native
+  ] = js.undefined
+  var onKeyDown: js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLElement], Unit]] = js.undefined
+  var onPopupVisibleChange: js.UndefOr[js.Function1[/* popupVisible */ Boolean, Unit]] = js.undefined
+  var options: js.UndefOr[js.Array[CascaderOption]] = js.undefined
+  var popupClassName: js.UndefOr[String] = js.undefined
+  var popupPlacement: js.UndefOr[String] = js.undefined
+  var popupVisible: js.UndefOr[Boolean] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var transitionName: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object CascaderProps {
   @scala.inline
-  def apply(): CascaderProps = {
+  def apply(
+    builtinPlacements: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any = null,
+    changeOnSelect: js.UndefOr[Boolean] = js.undefined,
+    children: ReactElement = null,
+    defaultValue: js.Array[String] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    dropdownMenuColumnStyle: CSSProperties = null,
+    expandIcon: TagMod[Any] = null,
+    expandTrigger: String = null,
+    fieldNames: CascaderFieldNames = null,
+    filedNames: CascaderFieldNames = null,
+    getPopupContainer: js.Any = null,
+    loadData: /* selectOptions */ js.Array[CascaderOption] => Unit = null,
+    loadingIcon: TagMod[Any] = null,
+    onChange: (/* value */ js.Array[String], /* selectOptions */ js.Array[CascaderOption]) => Unit = null,
+    onKeyDown: /* e */ SyntheticKeyboardEvent[HTMLElement] => Unit = null,
+    onPopupVisibleChange: /* popupVisible */ Boolean => Unit = null,
+    options: js.Array[CascaderOption] = null,
+    popupClassName: String = null,
+    popupPlacement: String = null,
+    popupVisible: js.UndefOr[Boolean] = js.undefined,
+    prefixCls: String = null,
+    transitionName: String = null,
+    value: js.Array[String] = null
+  ): CascaderProps = {
     val __obj = js.Dynamic.literal()
+    if (builtinPlacements != null) __obj.updateDynamic("builtinPlacements")(builtinPlacements.asInstanceOf[js.Any])
+    if (!js.isUndefined(changeOnSelect)) __obj.updateDynamic("changeOnSelect")(changeOnSelect.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (dropdownMenuColumnStyle != null) __obj.updateDynamic("dropdownMenuColumnStyle")(dropdownMenuColumnStyle.asInstanceOf[js.Any])
+    if (expandIcon != null) __obj.updateDynamic("expandIcon")(expandIcon.asInstanceOf[js.Any])
+    if (expandTrigger != null) __obj.updateDynamic("expandTrigger")(expandTrigger.asInstanceOf[js.Any])
+    if (fieldNames != null) __obj.updateDynamic("fieldNames")(fieldNames.asInstanceOf[js.Any])
+    if (filedNames != null) __obj.updateDynamic("filedNames")(filedNames.asInstanceOf[js.Any])
+    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(getPopupContainer.asInstanceOf[js.Any])
+    if (loadData != null) __obj.updateDynamic("loadData")(js.Any.fromFunction1(loadData))
+    if (loadingIcon != null) __obj.updateDynamic("loadingIcon")(loadingIcon.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+    if (onPopupVisibleChange != null) __obj.updateDynamic("onPopupVisibleChange")(js.Any.fromFunction1(onPopupVisibleChange))
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (popupClassName != null) __obj.updateDynamic("popupClassName")(popupClassName.asInstanceOf[js.Any])
+    if (popupPlacement != null) __obj.updateDynamic("popupPlacement")(popupPlacement.asInstanceOf[js.Any])
+    if (!js.isUndefined(popupVisible)) __obj.updateDynamic("popupVisible")(popupVisible.get.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CascaderProps]
   }
-  @scala.inline
-  implicit class CascaderPropsOps[Self <: CascaderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuiltinPlacements(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("builtinPlacements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuiltinPlacements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("builtinPlacements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChangeOnSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeOnSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangeOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeOnSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildren(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownMenuColumnStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownMenuColumnStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownMenuColumnStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownMenuColumnStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpandIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandTrigger(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandTrigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandTrigger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldNames(value: CascaderFieldNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiledNames(value: CascaderFieldNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filedNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiledNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filedNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetPopupContainer(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetPopupContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadData(value: /* selectOptions */ js.Array[CascaderOption] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadData")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoadData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadingIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadingIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: (/* value */ js.Array[String], /* selectOptions */ js.Array[CascaderOption]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyDown(value: /* e */ SyntheticKeyboardEvent[HTMLElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPopupVisibleChange(value: /* popupVisible */ Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPopupVisibleChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPopupVisibleChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPopupVisibleChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Array[CascaderOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupPlacement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupPlacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

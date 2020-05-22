@@ -14,29 +14,10 @@ trait AwsEc2SecurityGroupPrefixListId extends js.Object {
 
 object AwsEc2SecurityGroupPrefixListId {
   @scala.inline
-  def apply(): AwsEc2SecurityGroupPrefixListId = {
+  def apply(PrefixListId: NonEmptyString = null): AwsEc2SecurityGroupPrefixListId = {
     val __obj = js.Dynamic.literal()
+    if (PrefixListId != null) __obj.updateDynamic("PrefixListId")(PrefixListId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsEc2SecurityGroupPrefixListId]
   }
-  @scala.inline
-  implicit class AwsEc2SecurityGroupPrefixListIdOps[Self <: AwsEc2SecurityGroupPrefixListId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrefixListId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixListId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

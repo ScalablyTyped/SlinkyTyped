@@ -42,78 +42,16 @@ object UpdateRecordsRequest {
     DatasetName: DatasetName,
     IdentityId: IdentityId,
     IdentityPoolId: IdentityPoolId,
-    SyncSessionToken: SyncSessionToken
+    SyncSessionToken: SyncSessionToken,
+    ClientContext: ClientContext = null,
+    DeviceId: DeviceId = null,
+    RecordPatches: RecordPatchList = null
   ): UpdateRecordsRequest = {
     val __obj = js.Dynamic.literal(DatasetName = DatasetName.asInstanceOf[js.Any], IdentityId = IdentityId.asInstanceOf[js.Any], IdentityPoolId = IdentityPoolId.asInstanceOf[js.Any], SyncSessionToken = SyncSessionToken.asInstanceOf[js.Any])
+    if (ClientContext != null) __obj.updateDynamic("ClientContext")(ClientContext.asInstanceOf[js.Any])
+    if (DeviceId != null) __obj.updateDynamic("DeviceId")(DeviceId.asInstanceOf[js.Any])
+    if (RecordPatches != null) __obj.updateDynamic("RecordPatches")(RecordPatches.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRecordsRequest]
   }
-  @scala.inline
-  implicit class UpdateRecordsRequestOps[Self <: UpdateRecordsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatasetName(value: DatasetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentityId(value: IdentityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentityPoolId(value: IdentityPoolId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSyncSessionToken(value: SyncSessionToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyncSessionToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientContext(value: ClientContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceId(value: DeviceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordPatches(value: RecordPatchList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordPatches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordPatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordPatches")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

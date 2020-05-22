@@ -14,7 +14,6 @@ import org.scalajs.dom.raw.ApplicationCache
 import org.scalajs.dom.raw.BeforeUnloadEvent
 import org.scalajs.dom.raw.CSSRuleList
 import org.scalajs.dom.raw.CSSStyleDeclaration
-import org.scalajs.dom.raw.Console
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
@@ -563,7 +562,6 @@ trait DOMWindow
   var closed: scala.Boolean = js.native
   @JSName("confirm")
   var confirm_Original: js.Function0[scala.Boolean] = js.native
-  var console: Console = js.native
   @JSName("createImageBitmap")
   var createImageBitmap_Original: js.Function1[/* image */ ImageBitmapSource, js.Promise[ImageBitmap]] = js.native
   var crypto: Crypto = js.native

@@ -1,41 +1,37 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import typingsSlinky.devextreme.devextremeStrings.dash
+import typingsSlinky.devextreme.devextremeStrings.dot
+import typingsSlinky.devextreme.devextremeStrings.longDash
+import typingsSlinky.devextreme.devextremeStrings.solid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxChartValueAxisConstantLineStyle extends dxChartCommonAxisSettingsConstantLineStyle {
-  /** Specifies the appearance of the labels of those constant lines that belong to the value axis. */
+  /** @name dxChart.Options.valueAxis.constantLineStyle.label */
   @JSName("label")
-  var label_dxChartValueAxisConstantLineStyle: js.UndefOr[dxChartValueAxisConstantLineStyleLabel] = js.native
+  var label_dxChartValueAxisConstantLineStyle: js.UndefOr[dxChartValueAxisConstantLineStyleLabel] = js.undefined
 }
 
 object dxChartValueAxisConstantLineStyle {
   @scala.inline
-  def apply(): dxChartValueAxisConstantLineStyle = {
+  def apply(
+    color: String = null,
+    dashStyle: dash | dot | longDash | solid = null,
+    label: dxChartValueAxisConstantLineStyleLabel = null,
+    paddingLeftRight: js.UndefOr[Double] = js.undefined,
+    paddingTopBottom: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): dxChartValueAxisConstantLineStyle = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingLeftRight)) __obj.updateDynamic("paddingLeftRight")(paddingLeftRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingTopBottom)) __obj.updateDynamic("paddingTopBottom")(paddingTopBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartValueAxisConstantLineStyle]
   }
-  @scala.inline
-  implicit class dxChartValueAxisConstantLineStyleOps[Self <: dxChartValueAxisConstantLineStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabel(value: dxChartValueAxisConstantLineStyleLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

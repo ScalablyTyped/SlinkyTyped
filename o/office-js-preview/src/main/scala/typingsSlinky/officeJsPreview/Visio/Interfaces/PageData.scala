@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling "page.toJSON()". */
-@js.native
 trait PageData extends js.Object {
   /**
     *
@@ -13,186 +12,89 @@ trait PageData extends js.Object {
     *
     * [Api set:  1.1]
     */
-  var allShapes: js.UndefOr[js.Array[ShapeData]] = js.native
+  var allShapes: js.UndefOr[js.Array[ShapeData]] = js.undefined
   /**
     *
     * Returns the Comments Collection.  Read-only.
     *
     * [Api set:  1.1]
     */
-  var comments: js.UndefOr[js.Array[CommentData]] = js.native
+  var comments: js.UndefOr[js.Array[CommentData]] = js.undefined
   /**
     *
     * Returns the height of the page. Read-only.
     *
     * [Api set:  1.1]
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     *
     * Index of the Page. Read-only.
     *
     * [Api set:  1.1]
     */
-  var index: js.UndefOr[Double] = js.native
+  var index: js.UndefOr[Double] = js.undefined
   /**
     *
     * Whether the page is a background page or not. Read-only.
     *
     * [Api set:  1.1]
     */
-  var isBackground: js.UndefOr[Boolean] = js.native
+  var isBackground: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Page name. Read-only.
     *
     * [Api set:  1.1]
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     *
     * All top-level shapes in the Page.Read-only.
     *
     * [Api set:  1.1]
     */
-  var shapes: js.UndefOr[js.Array[ShapeData]] = js.native
+  var shapes: js.UndefOr[js.Array[ShapeData]] = js.undefined
   /**
     *
     * Returns the view of the page. Read-only.
     *
     * [Api set:  1.1]
     */
-  var view: js.UndefOr[PageViewData] = js.native
+  var view: js.UndefOr[PageViewData] = js.undefined
   /**
     *
     * Returns the width of the page. Read-only.
     *
     * [Api set:  1.1]
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object PageData {
   @scala.inline
-  def apply(): PageData = {
+  def apply(
+    allShapes: js.Array[ShapeData] = null,
+    comments: js.Array[CommentData] = null,
+    height: js.UndefOr[Double] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    isBackground: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    shapes: js.Array[ShapeData] = null,
+    view: PageViewData = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): PageData = {
     val __obj = js.Dynamic.literal()
+    if (allShapes != null) __obj.updateDynamic("allShapes")(allShapes.asInstanceOf[js.Any])
+    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isBackground)) __obj.updateDynamic("isBackground")(isBackground.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (shapes != null) __obj.updateDynamic("shapes")(shapes.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageData]
   }
-  @scala.inline
-  implicit class PageDataOps[Self <: PageData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllShapes(value: js.Array[ShapeData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allShapes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllShapes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allShapes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBackground(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapes(value: js.Array[ShapeData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: PageViewData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,107 +7,61 @@ import scala.scalajs.js.annotation._
 /**
   * Relationship to another action
   */
-@js.native
 trait RequestGroupActionRelatedAction extends BackboneElement {
   /**
     * Contains extended information for property 'actionId'.
     */
-  var _actionId: js.UndefOr[Element] = js.native
+  var _actionId: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'relationship'.
     */
-  var _relationship: js.UndefOr[Element] = js.native
+  var _relationship: js.UndefOr[Element] = js.undefined
   /**
     * What action this is related to
     */
-  var actionId: id = js.native
+  var actionId: id
   /**
     * Time offset for the relationship
     */
-  var offsetDuration: js.UndefOr[Duration] = js.native
+  var offsetDuration: js.UndefOr[Duration] = js.undefined
   /**
     * Time offset for the relationship
     */
-  var offsetRange: js.UndefOr[Range] = js.native
+  var offsetRange: js.UndefOr[Range] = js.undefined
   /**
     * before-start | before | before-end | concurrent-with-start | concurrent | concurrent-with-end | after-start | after | after-end
     */
-  var relationship: code = js.native
+  var relationship: code
 }
 
 object RequestGroupActionRelatedAction {
   @scala.inline
-  def apply(actionId: id, relationship: code): RequestGroupActionRelatedAction = {
+  def apply(
+    actionId: id,
+    relationship: code,
+    _actionId: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _relationship: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    offsetDuration: Duration = null,
+    offsetRange: Range = null
+  ): RequestGroupActionRelatedAction = {
     val __obj = js.Dynamic.literal(actionId = actionId.asInstanceOf[js.Any], relationship = relationship.asInstanceOf[js.Any])
+    if (_actionId != null) __obj.updateDynamic("_actionId")(_actionId.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_relationship != null) __obj.updateDynamic("_relationship")(_relationship.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (offsetDuration != null) __obj.updateDynamic("offsetDuration")(offsetDuration.asInstanceOf[js.Any])
+    if (offsetRange != null) __obj.updateDynamic("offsetRange")(offsetRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestGroupActionRelatedAction]
   }
-  @scala.inline
-  implicit class RequestGroupActionRelatedActionOps[Self <: RequestGroupActionRelatedAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionId(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelationship(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationship")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_actionId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_actionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_actionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_actionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_relationship(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_relationship")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_relationship: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_relationship")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetDuration(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

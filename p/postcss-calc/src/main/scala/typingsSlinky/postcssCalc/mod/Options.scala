@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var mediaQueries: js.UndefOr[Boolean] = js.native
-  var precision: js.UndefOr[Double] = js.native
-  var preserve: js.UndefOr[Boolean] = js.native
-  var selectors: js.UndefOr[Boolean] = js.native
-  var warnWhenCannotResolve: js.UndefOr[Boolean] = js.native
+  var mediaQueries: js.UndefOr[Boolean] = js.undefined
+  var precision: js.UndefOr[Double] = js.undefined
+  var preserve: js.UndefOr[Boolean] = js.undefined
+  var selectors: js.UndefOr[Boolean] = js.undefined
+  var warnWhenCannotResolve: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    mediaQueries: js.UndefOr[Boolean] = js.undefined,
+    precision: js.UndefOr[Double] = js.undefined,
+    preserve: js.UndefOr[Boolean] = js.undefined,
+    selectors: js.UndefOr[Boolean] = js.undefined,
+    warnWhenCannotResolve: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(mediaQueries)) __obj.updateDynamic("mediaQueries")(mediaQueries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserve)) __obj.updateDynamic("preserve")(preserve.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectors)) __obj.updateDynamic("selectors")(selectors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(warnWhenCannotResolve)) __obj.updateDynamic("warnWhenCannotResolve")(warnWhenCannotResolve.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMediaQueries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaQueries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaQueries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaQueries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserve(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnWhenCannotResolve(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnWhenCannotResolve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnWhenCannotResolve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnWhenCannotResolve")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

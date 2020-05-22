@@ -1,5 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking.NetworkOperators
 
+import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +10,29 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession")
 @js.native
 abstract class MobileBroadbandDeviceServiceCommandSession ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession {
+  /** Closes the command session on a mobile broadband device service. */
+  /* CompleteClass */
+  override def closeSession(): Unit = js.native
+  /**
+    * Starts an asynchronous operation on a mobile broadband device service to send a query command to the command session.
+    * @param commandId The command identifier for the query command to be executed.
+    * @param data The data to be submitted as part of the command.
+    * @return An asynchronous operation that returns the result of the command.
+    */
+  /* CompleteClass */
+  override def sendQueryCommandAsync(commandId: Double, data: IBuffer): IPromiseWithIAsyncOperation[
+    typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult
+  ] = js.native
+  /**
+    * Starts an asynchronous operation on a mobile broadband device service to send a set command to the command session.
+    * @param commandId The command identifier for the set command to be executed.
+    * @param data The data to be submitted as part of the command.
+    * @return An asynchronous operation that returns the result of the command.
+    */
+  /* CompleteClass */
+  override def sendSetCommandAsync(commandId: Double, data: IBuffer): IPromiseWithIAsyncOperation[
+    typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult
+  ] = js.native
+}
 

@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArtifactFilter extends BaseSubscriptionFilter {
-  var artifactId: String = js.native
-  var artifactType: String = js.native
-  var artifactUri: String = js.native
+  var artifactId: String
+  var artifactType: String
+  var artifactUri: String
 }
 
 object ArtifactFilter {
@@ -18,31 +17,5 @@ object ArtifactFilter {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArtifactFilter]
   }
-  @scala.inline
-  implicit class ArtifactFilterOps[Self <: ArtifactFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArtifactId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArtifactType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArtifactUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

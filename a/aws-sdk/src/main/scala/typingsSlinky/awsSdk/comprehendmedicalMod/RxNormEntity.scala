@@ -50,137 +50,30 @@ trait RxNormEntity extends js.Object {
 
 object RxNormEntity {
   @scala.inline
-  def apply(): RxNormEntity = {
+  def apply(
+    Attributes: RxNormAttributeList = null,
+    BeginOffset: js.UndefOr[Integer] = js.undefined,
+    Category: RxNormEntityCategory = null,
+    EndOffset: js.UndefOr[Integer] = js.undefined,
+    Id: js.UndefOr[Integer] = js.undefined,
+    RxNormConcepts: RxNormConceptList = null,
+    Score: js.UndefOr[Float] = js.undefined,
+    Text: OntologyLinkingBoundedLengthString = null,
+    Traits: RxNormTraitList = null,
+    Type: RxNormEntityType = null
+  ): RxNormEntity = {
     val __obj = js.Dynamic.literal()
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
+    if (!js.isUndefined(BeginOffset)) __obj.updateDynamic("BeginOffset")(BeginOffset.get.asInstanceOf[js.Any])
+    if (Category != null) __obj.updateDynamic("Category")(Category.asInstanceOf[js.Any])
+    if (!js.isUndefined(EndOffset)) __obj.updateDynamic("EndOffset")(EndOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Id)) __obj.updateDynamic("Id")(Id.get.asInstanceOf[js.Any])
+    if (RxNormConcepts != null) __obj.updateDynamic("RxNormConcepts")(RxNormConcepts.asInstanceOf[js.Any])
+    if (!js.isUndefined(Score)) __obj.updateDynamic("Score")(Score.get.asInstanceOf[js.Any])
+    if (Text != null) __obj.updateDynamic("Text")(Text.asInstanceOf[js.Any])
+    if (Traits != null) __obj.updateDynamic("Traits")(Traits.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[RxNormEntity]
   }
-  @scala.inline
-  implicit class RxNormEntityOps[Self <: RxNormEntity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: RxNormAttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeginOffset(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeginOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategory(value: RxNormEntityCategory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndOffset(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRxNormConcepts(value: RxNormConceptList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RxNormConcepts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRxNormConcepts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RxNormConcepts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScore(value: Float): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Score")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: OntologyLinkingBoundedLengthString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTraits(value: RxNormTraitList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Traits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTraits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Traits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: RxNormEntityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,53 +26,16 @@ trait GetAttributesRequest extends js.Object {
 
 object GetAttributesRequest {
   @scala.inline
-  def apply(DomainName: String, ItemName: String): GetAttributesRequest = {
+  def apply(
+    DomainName: String,
+    ItemName: String,
+    AttributeNames: AttributeNameList = null,
+    ConsistentRead: js.UndefOr[Boolean] = js.undefined
+  ): GetAttributesRequest = {
     val __obj = js.Dynamic.literal(DomainName = DomainName.asInstanceOf[js.Any], ItemName = ItemName.asInstanceOf[js.Any])
+    if (AttributeNames != null) __obj.updateDynamic("AttributeNames")(AttributeNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(ConsistentRead)) __obj.updateDynamic("ConsistentRead")(ConsistentRead.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAttributesRequest]
   }
-  @scala.inline
-  implicit class GetAttributesRequestOps[Self <: GetAttributesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeNames(value: AttributeNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsistentRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistentRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsistentRead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistentRead")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

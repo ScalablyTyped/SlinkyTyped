@@ -5,20 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContributionType extends ContributionBase {
   /**
     * Controls whether or not contributions of this type have the type indexed for queries. This allows clients to find all extensions that have a contribution of this type.  NOTE: Only TrustedPartners are allowed to specify indexed contribution types.
     */
-  var indexed: Boolean = js.native
+  var indexed: Boolean
   /**
     * Friendly name of the contribution/type
     */
-  var name: String = js.native
+  var name: String
   /**
     * Describes the allowed properties for this contribution type
     */
-  var properties: StringDictionary[ContributionPropertyDescription] = js.native
+  var properties: StringDictionary[ContributionPropertyDescription]
 }
 
 object ContributionType {
@@ -34,31 +33,5 @@ object ContributionType {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], indexed = indexed.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], visibleTo = visibleTo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContributionType]
   }
-  @scala.inline
-  implicit class ContributionTypeOps[Self <: ContributionType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: StringDictionary[ContributionPropertyDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

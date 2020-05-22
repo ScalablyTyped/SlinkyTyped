@@ -4,60 +4,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModelShape extends js.Object {
   /**
     * indices array of the model
     * @hidden
     */
-  var _indices: js.Array[Double] = js.native
+  var _indices: js.Array[Double]
   /**
     * length of the shape in the model indices array (internal use)
     * @hidden
     */
-  var _indicesLength: Double = js.native
+  var _indicesLength: Double
   /**
     * Model material (internal use)
     * @hidden
     */
-  var _material: Nullable[Material] = js.native
+  var _material: Nullable[Material]
   /**
     * normals array of the model
     * @hidden
     */
-  var _normals: js.Array[Double] = js.native
+  var _normals: js.Array[Double]
   /**
     * Custom position function (internal use)
     * @hidden
     */
-  var _positionFunction: Nullable[js.Function3[/* particle */ SolidParticle, /* i */ Double, /* s */ Double, Unit]] = js.native
+  var _positionFunction: Nullable[js.Function3[/* particle */ SolidParticle, /* i */ Double, /* s */ Double, Unit]]
   /**
     * flat array of model positions (internal use)
     * @hidden
     */
-  var _shape: js.Array[Vector3] = js.native
+  var _shape: js.Array[Vector3]
   /**
     * color array of the model
     * @hidden
     */
-  var _shapeColors: js.Array[Double] = js.native
+  var _shapeColors: js.Array[Double]
   /**
     * flat array of model UVs (internal use)
     * @hidden
     */
-  var _shapeUV: js.Array[Double] = js.native
+  var _shapeUV: js.Array[Double]
   /**
     * Custom vertex function (internal use)
     * @hidden
     */
   var _vertexFunction: Nullable[
     js.Function3[/* particle */ SolidParticle, /* vertex */ Vector3, /* i */ Double, Unit]
-  ] = js.native
+  ]
   /**
     * The shape id
     * @hidden
     */
-  var shapeID: Double = js.native
+  var shapeID: Double
 }
 
 object ModelShape {
@@ -69,96 +68,13 @@ object ModelShape {
     _shape: js.Array[Vector3],
     _shapeColors: js.Array[Double],
     _shapeUV: js.Array[Double],
-    shapeID: Double
+    shapeID: Double,
+    _material: Nullable[Material] = null,
+    _positionFunction: (/* particle */ SolidParticle, /* i */ Double, /* s */ Double) => Unit = null,
+    _vertexFunction: (/* particle */ SolidParticle, /* vertex */ Vector3, /* i */ Double) => Unit = null
   ): ModelShape = {
-    val __obj = js.Dynamic.literal(_indices = _indices.asInstanceOf[js.Any], _indicesLength = _indicesLength.asInstanceOf[js.Any], _normals = _normals.asInstanceOf[js.Any], _shape = _shape.asInstanceOf[js.Any], _shapeColors = _shapeColors.asInstanceOf[js.Any], _shapeUV = _shapeUV.asInstanceOf[js.Any], shapeID = shapeID.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(_indices = _indices.asInstanceOf[js.Any], _indicesLength = _indicesLength.asInstanceOf[js.Any], _normals = _normals.asInstanceOf[js.Any], _shape = _shape.asInstanceOf[js.Any], _shapeColors = _shapeColors.asInstanceOf[js.Any], _shapeUV = _shapeUV.asInstanceOf[js.Any], shapeID = shapeID.asInstanceOf[js.Any], _material = _material.asInstanceOf[js.Any], _positionFunction = js.Any.fromFunction3(_positionFunction), _vertexFunction = js.Any.fromFunction3(_vertexFunction))
     __obj.asInstanceOf[ModelShape]
   }
-  @scala.inline
-  implicit class ModelShapeOps[Self <: ModelShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_indices(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_indicesLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_indicesLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_normals(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_normals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_shape(value: js.Array[Vector3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_shapeColors(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_shapeColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_shapeUV(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_shapeUV")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShapeID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_material(value: Nullable[Material]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_material")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_materialNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_material")(null)
-        ret
-    }
-    @scala.inline
-    def with_positionFunction(value: (/* particle */ SolidParticle, /* i */ Double, /* s */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_positionFunction")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def with_positionFunctionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_positionFunction")(null)
-        ret
-    }
-    @scala.inline
-    def with_vertexFunction(value: (/* particle */ SolidParticle, /* vertex */ Vector3, /* i */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_vertexFunction")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def with_vertexFunctionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_vertexFunction")(null)
-        ret
-    }
-  }
-  
 }
 

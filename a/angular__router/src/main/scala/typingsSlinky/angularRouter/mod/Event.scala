@@ -16,22 +16,3 @@ import scala.scalajs.js.annotation._
 */
 trait Event extends js.Object
 
-object Event {
-  @scala.inline
-  implicit def apply(value: ActivationEnd): Event = value.asInstanceOf[Event]
-  @scala.inline
-  implicit def apply(value: ActivationStart): Event = value.asInstanceOf[Event]
-  @scala.inline
-  implicit def apply(value: ChildActivationEnd): Event = value.asInstanceOf[Event]
-  @scala.inline
-  implicit def apply(value: ChildActivationStart): Event = value.asInstanceOf[Event]
-  @scala.inline
-  implicit def apply(value: RouteConfigLoadEnd): Event = value.asInstanceOf[Event]
-  @scala.inline
-  implicit def apply(value: RouteConfigLoadStart): Event = value.asInstanceOf[Event]
-  @scala.inline
-  implicit def apply(value: RouterEvent): Event = value.asInstanceOf[Event]
-  @scala.inline
-  implicit def apply(value: Scroll): Event = value.asInstanceOf[Event]
-}
-

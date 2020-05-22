@@ -24,53 +24,16 @@ trait SchemaCreativeRestrictions extends js.Object {
 
 object SchemaCreativeRestrictions {
   @scala.inline
-  def apply(): SchemaCreativeRestrictions = {
+  def apply(
+    creativeFormat: String = null,
+    creativeSpecifications: js.Array[SchemaCreativeSpecification] = null,
+    skippableAdType: String = null
+  ): SchemaCreativeRestrictions = {
     val __obj = js.Dynamic.literal()
+    if (creativeFormat != null) __obj.updateDynamic("creativeFormat")(creativeFormat.asInstanceOf[js.Any])
+    if (creativeSpecifications != null) __obj.updateDynamic("creativeSpecifications")(creativeSpecifications.asInstanceOf[js.Any])
+    if (skippableAdType != null) __obj.updateDynamic("skippableAdType")(skippableAdType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreativeRestrictions]
   }
-  @scala.inline
-  implicit class SchemaCreativeRestrictionsOps[Self <: SchemaCreativeRestrictions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreativeFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreativeSpecifications(value: js.Array[SchemaCreativeSpecification]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeSpecifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeSpecifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeSpecifications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippableAdType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippableAdType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippableAdType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippableAdType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

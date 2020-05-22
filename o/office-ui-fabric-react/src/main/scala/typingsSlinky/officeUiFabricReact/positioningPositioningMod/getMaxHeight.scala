@@ -3,7 +3,7 @@ package typingsSlinky.officeUiFabricReact.positioningPositioningMod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
-import typingsSlinky.officeUiFabricReact.positioningTypesMod.IPoint
+import typingsSlinky.officeUiFabricReact.positioningTypesMod.Point
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/utilities/positioning/positioning", "getMaxHeight")
 @js.native
 object getMaxHeight extends js.Object {
-  def apply(target: IPoint, targetEdge: DirectionalHint): Double = js.native
-  def apply(target: IPoint, targetEdge: DirectionalHint, gapSpace: Double): Double = js.native
-  def apply(target: IPoint, targetEdge: DirectionalHint, gapSpace: Double, bounds: IRectangle): Double = js.native
+  def apply(target: Point, targetEdge: DirectionalHint): Double = js.native
+  def apply(target: Point, targetEdge: DirectionalHint, gapSpace: Double): Double = js.native
+  def apply(target: Point, targetEdge: DirectionalHint, gapSpace: Double, bounds: IRectangle): Double = js.native
   def apply(
-    target: IPoint,
+    target: Point,
     targetEdge: DirectionalHint,
     gapSpace: Double,
     bounds: IRectangle,

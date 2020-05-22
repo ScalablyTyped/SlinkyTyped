@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Pipe extends js.Object {
   /**
     * The pipe name to use in template bindings.
     * Typically uses [lowerCamelCase](guide/glossary#case-types)
     * because the name cannot contain hyphens.
     */
-  var name: String = js.native
+  var name: String
   /**
     * When true, the pipe is pure, meaning that the
     * `transform()` method is invoked only when its input arguments
@@ -23,7 +22,7 @@ trait Pipe extends js.Object {
     * In this case, the pipe is invoked on each change-detection cycle,
     * even if the arguments have not changed.
     */
-  var pure: js.UndefOr[Boolean] = js.native
+  var pure: js.UndefOr[Boolean] = js.undefined
 }
 
 @JSImport("@angular/core", "Pipe")

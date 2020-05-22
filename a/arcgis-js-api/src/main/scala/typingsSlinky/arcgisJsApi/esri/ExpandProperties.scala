@@ -1,11 +1,11 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExpandProperties extends WidgetProperties {
   /**
     * Automatically collapses the expand widget instance when the view's viewpoint updates.
@@ -14,13 +14,13 @@ trait ExpandProperties extends WidgetProperties {
     *
     * @default false
     */
-  var autoCollapse: js.UndefOr[Boolean] = js.native
+  var autoCollapse: js.UndefOr[Boolean] = js.undefined
   /**
     * Icon font used to style the Expand button.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html#collapseIconClass)
     */
-  var collapseIconClass: js.UndefOr[String] = js.native
+  var collapseIconClass: js.UndefOr[String] = js.undefined
   /**
     * Tooltip to display to indicate Expand widget can be collapsed.
     *
@@ -28,19 +28,19 @@ trait ExpandProperties extends WidgetProperties {
     *
     * @default "Collapse" (English locale)
     */
-  var collapseTooltip: js.UndefOr[String] = js.native
+  var collapseTooltip: js.UndefOr[String] = js.undefined
   /**
     * The content to display within the expanded Expand widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html#content)
     */
-  var content: js.UndefOr[Node | String | WidgetProperties] = js.native
+  var content: js.UndefOr[Node | String | WidgetProperties] = js.undefined
   /**
     * Icon font used to style the Expand button. Will automatically use the [content's](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html#content) iconClass if it has one.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html#expandIconClass)
     */
-  var expandIconClass: js.UndefOr[String] = js.native
+  var expandIconClass: js.UndefOr[String] = js.undefined
   /**
     * Tooltip to display to indicate Expand widget can be expanded.
     *
@@ -48,7 +48,7 @@ trait ExpandProperties extends WidgetProperties {
     *
     * @default "Expand" (English locale)
     */
-  var expandTooltip: js.UndefOr[String] = js.native
+  var expandTooltip: js.UndefOr[String] = js.undefined
   /**
     * Indicates whether the widget is currently expanded or not.
     *
@@ -56,19 +56,19 @@ trait ExpandProperties extends WidgetProperties {
     *
     * @default false
     */
-  var expanded: js.UndefOr[Boolean] = js.native
+  var expanded: js.UndefOr[Boolean] = js.undefined
   /**
     * This value associates two or more Expand widget instances with each other, allowing one instance to auto collapse when another instance in the same group is expanded. For auto collapsing to take effect, all instances of the group must be included in the [view.ui](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#ui).  For example, if you place multiple Expand instances in the top-left of the view's ui, you can assign them to a group called `top-left`. If one Expand instance is expanded and the user clicks on a different instance in the `top-left` group, then the first instance is collapsed, allowing the content of the second instance to be fully visible.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html#group)
     */
-  var group: js.UndefOr[String] = js.native
+  var group: js.UndefOr[String] = js.undefined
   /**
     * A number to display at the corner of the widget to indicate the number of, for example, open issues or unread notices.  ![expand widget icon number](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/expand-with-iconnumber.png)
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html#iconNumber)
     */
-  var iconNumber: js.UndefOr[Double] = js.native
+  var iconNumber: js.UndefOr[Double] = js.undefined
   /**
     * The mode in which the widget displays. These modes are listed below.
     *
@@ -83,184 +83,59 @@ trait ExpandProperties extends WidgetProperties {
     *
     * @default "auto"
     */
-  var mode: js.UndefOr[String] = js.native
+  var mode: js.UndefOr[String] = js.undefined
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html#view)
     */
-  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.undefined
   /**
     * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [ExpandViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand-ExpandViewModel.html) class to access all properties and methods on the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html#viewModel)
     */
-  var viewModel: js.UndefOr[ExpandViewModelProperties] = js.native
+  var viewModel: js.UndefOr[ExpandViewModelProperties] = js.undefined
 }
 
 object ExpandProperties {
   @scala.inline
-  def apply(): ExpandProperties = {
+  def apply(
+    autoCollapse: js.UndefOr[Boolean] = js.undefined,
+    collapseIconClass: String = null,
+    collapseTooltip: String = null,
+    container: String | HTMLElement = null,
+    content: Node | String | WidgetProperties = null,
+    destroyed: js.UndefOr[Boolean] = js.undefined,
+    expandIconClass: String = null,
+    expandTooltip: String = null,
+    expanded: js.UndefOr[Boolean] = js.undefined,
+    group: String = null,
+    iconNumber: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    label: String = null,
+    mode: String = null,
+    view: MapViewProperties | SceneViewProperties = null,
+    viewModel: ExpandViewModelProperties = null
+  ): ExpandProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoCollapse)) __obj.updateDynamic("autoCollapse")(autoCollapse.get.asInstanceOf[js.Any])
+    if (collapseIconClass != null) __obj.updateDynamic("collapseIconClass")(collapseIconClass.asInstanceOf[js.Any])
+    if (collapseTooltip != null) __obj.updateDynamic("collapseTooltip")(collapseTooltip.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyed)) __obj.updateDynamic("destroyed")(destroyed.get.asInstanceOf[js.Any])
+    if (expandIconClass != null) __obj.updateDynamic("expandIconClass")(expandIconClass.asInstanceOf[js.Any])
+    if (expandTooltip != null) __obj.updateDynamic("expandTooltip")(expandTooltip.asInstanceOf[js.Any])
+    if (!js.isUndefined(expanded)) __obj.updateDynamic("expanded")(expanded.get.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconNumber)) __obj.updateDynamic("iconNumber")(iconNumber.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpandProperties]
   }
-  @scala.inline
-  implicit class ExpandPropertiesOps[Self <: ExpandProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoCollapse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCollapse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCollapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseIconClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseIconClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseIconClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseIconClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseTooltip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentNode(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: Node | String | WidgetProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandIconClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIconClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandIconClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIconClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandTooltip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: MapViewProperties | SceneViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: ExpandViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

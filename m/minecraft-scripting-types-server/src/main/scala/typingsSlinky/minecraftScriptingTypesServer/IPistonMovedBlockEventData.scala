@@ -8,20 +8,19 @@ import scala.scalajs.js.annotation._
 /**
   * This event is triggered whenever a piston moves a block.
   */
-@js.native
 trait IPistonMovedBlockEventData extends js.Object {
   /**
     * The position of the block that was moved
     */
-  var block_position: VectorXYZ = js.native
+  var block_position: VectorXYZ
   /**
     * The action the piston took, "extended" or "retracted"
     */
-  var piston_action: String = js.native
+  var piston_action: String
   /**
     * The position of the piston that moved the block
     */
-  var piston_position: VectorXYZ = js.native
+  var piston_position: VectorXYZ
 }
 
 object IPistonMovedBlockEventData {
@@ -30,31 +29,5 @@ object IPistonMovedBlockEventData {
     val __obj = js.Dynamic.literal(block_position = block_position.asInstanceOf[js.Any], piston_action = piston_action.asInstanceOf[js.Any], piston_position = piston_position.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPistonMovedBlockEventData]
   }
-  @scala.inline
-  implicit class IPistonMovedBlockEventDataOps[Self <: IPistonMovedBlockEventData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlock_position(value: VectorXYZ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("block_position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPiston_action(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("piston_action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPiston_position(value: VectorXYZ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("piston_position")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

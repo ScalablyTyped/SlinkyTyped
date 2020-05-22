@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait rules extends js.Object {
-  def isChecked(): Boolean = js.native
-  def isEmail(): Boolean = js.native
-  def isNotEmpty(): Boolean = js.native
-  def isNumber(): Boolean = js.native
+  def isChecked(): Boolean
+  def isEmail(): Boolean
+  def isNotEmpty(): Boolean
+  def isNumber(): Boolean
 }
 
 object rules {
@@ -23,37 +22,5 @@ object rules {
     val __obj = js.Dynamic.literal(isChecked = js.Any.fromFunction0(isChecked), isEmail = js.Any.fromFunction0(isEmail), isNotEmpty = js.Any.fromFunction0(isNotEmpty), isNumber = js.Any.fromFunction0(isNumber))
     __obj.asInstanceOf[rules]
   }
-  @scala.inline
-  implicit class rulesOps[Self <: rules] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsChecked(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isChecked")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsEmail(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmail")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsNotEmpty(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNotEmpty")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsNumber(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNumber")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

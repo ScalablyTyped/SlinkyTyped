@@ -8,23 +8,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HealthChecksResource extends js.Object {
   /** Deletes the specified HealthCheck resource. */
-  def delete(request: typingsSlinky.gapiClientCompute.anon.HealthCheck): Request[Operation] = js.native
+  def delete(request: typingsSlinky.gapiClientCompute.anon.HealthCheck): Request[Operation]
   /** Returns the specified HealthCheck resource. Get a list of available health checks by making a list() request. */
-  def get(request: FieldsHealthCheck): Request[HealthCheck] = js.native
+  def get(request: FieldsHealthCheck): Request[HealthCheck]
   /** Creates a HealthCheck resource in the specified project using the data included in the request. */
-  def insert(request: AltFields): Request[Operation] = js.native
+  def insert(request: AltFields): Request[Operation]
   /** Retrieves the list of HealthCheck resources available to the specified project. */
-  def list(request: Alt): Request[HealthCheckList] = js.native
+  def list(request: Alt): Request[HealthCheckList]
   /**
     * Updates a HealthCheck resource in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON
     * merge patch format and processing rules.
     */
-  def patch(request: typingsSlinky.gapiClientCompute.anon.HealthCheck): Request[Operation] = js.native
+  def patch(request: typingsSlinky.gapiClientCompute.anon.HealthCheck): Request[Operation]
   /** Updates a HealthCheck resource in the specified project using the data included in the request. */
-  def update(request: typingsSlinky.gapiClientCompute.anon.HealthCheck): Request[Operation] = js.native
+  def update(request: typingsSlinky.gapiClientCompute.anon.HealthCheck): Request[Operation]
 }
 
 object HealthChecksResource {
@@ -40,49 +39,5 @@ object HealthChecksResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[HealthChecksResource]
   }
-  @scala.inline
-  implicit class HealthChecksResourceOps[Self <: HealthChecksResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: typingsSlinky.gapiClientCompute.anon.HealthCheck => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: FieldsHealthCheck => Request[HealthCheck]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: AltFields => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Alt => Request[HealthCheckList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: typingsSlinky.gapiClientCompute.anon.HealthCheck => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: typingsSlinky.gapiClientCompute.anon.HealthCheck => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

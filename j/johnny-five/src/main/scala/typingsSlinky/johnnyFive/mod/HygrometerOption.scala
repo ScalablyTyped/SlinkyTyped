@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HygrometerOption extends js.Object {
-  var controller: js.UndefOr[String] = js.native
-  var freq: js.UndefOr[Double] = js.native
+  var controller: js.UndefOr[String] = js.undefined
+  var freq: js.UndefOr[Double] = js.undefined
 }
 
 object HygrometerOption {
   @scala.inline
-  def apply(): HygrometerOption = {
+  def apply(controller: String = null, freq: js.UndefOr[Double] = js.undefined): HygrometerOption = {
     val __obj = js.Dynamic.literal()
+    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
+    if (!js.isUndefined(freq)) __obj.updateDynamic("freq")(freq.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HygrometerOption]
   }
-  @scala.inline
-  implicit class HygrometerOptionOps[Self <: HygrometerOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withController(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutController: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFreq(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freq")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freq")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

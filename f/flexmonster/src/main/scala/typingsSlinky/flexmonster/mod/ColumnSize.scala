@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnSize extends js.Object {
-  var idx: js.UndefOr[Double] = js.native
-  var measure: js.UndefOr[MeasureObject] = js.native
-  var tuple: js.UndefOr[js.Array[String]] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var idx: js.UndefOr[Double] = js.undefined
+  var measure: js.UndefOr[MeasureObject] = js.undefined
+  var tuple: js.UndefOr[js.Array[String]] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ColumnSize {
   @scala.inline
-  def apply(): ColumnSize = {
+  def apply(
+    idx: js.UndefOr[Double] = js.undefined,
+    measure: MeasureObject = null,
+    tuple: js.Array[String] = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ColumnSize = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(idx)) __obj.updateDynamic("idx")(idx.get.asInstanceOf[js.Any])
+    if (measure != null) __obj.updateDynamic("measure")(measure.asInstanceOf[js.Any])
+    if (tuple != null) __obj.updateDynamic("tuple")(tuple.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnSize]
   }
-  @scala.inline
-  implicit class ColumnSizeOps[Self <: ColumnSize] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasure(value: MeasureObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTuple(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tuple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTuple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tuple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

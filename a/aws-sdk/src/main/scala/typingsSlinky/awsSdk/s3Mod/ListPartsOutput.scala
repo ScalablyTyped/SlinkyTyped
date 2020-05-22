@@ -63,185 +63,38 @@ trait ListPartsOutput extends js.Object {
 
 object ListPartsOutput {
   @scala.inline
-  def apply(): ListPartsOutput = {
+  def apply(
+    AbortDate: js.Date = null,
+    AbortRuleId: AbortRuleId = null,
+    Bucket: BucketName = null,
+    Initiator: Initiator = null,
+    IsTruncated: js.UndefOr[IsTruncated] = js.undefined,
+    Key: ObjectKey = null,
+    MaxParts: js.UndefOr[MaxParts] = js.undefined,
+    NextPartNumberMarker: js.UndefOr[NextPartNumberMarker] = js.undefined,
+    Owner: Owner = null,
+    PartNumberMarker: js.UndefOr[PartNumberMarker] = js.undefined,
+    Parts: Parts = null,
+    RequestCharged: RequestCharged = null,
+    StorageClass: StorageClass = null,
+    UploadId: MultipartUploadId = null
+  ): ListPartsOutput = {
     val __obj = js.Dynamic.literal()
+    if (AbortDate != null) __obj.updateDynamic("AbortDate")(AbortDate.asInstanceOf[js.Any])
+    if (AbortRuleId != null) __obj.updateDynamic("AbortRuleId")(AbortRuleId.asInstanceOf[js.Any])
+    if (Bucket != null) __obj.updateDynamic("Bucket")(Bucket.asInstanceOf[js.Any])
+    if (Initiator != null) __obj.updateDynamic("Initiator")(Initiator.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsTruncated)) __obj.updateDynamic("IsTruncated")(IsTruncated.get.asInstanceOf[js.Any])
+    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxParts)) __obj.updateDynamic("MaxParts")(MaxParts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NextPartNumberMarker)) __obj.updateDynamic("NextPartNumberMarker")(NextPartNumberMarker.get.asInstanceOf[js.Any])
+    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartNumberMarker)) __obj.updateDynamic("PartNumberMarker")(PartNumberMarker.get.asInstanceOf[js.Any])
+    if (Parts != null) __obj.updateDynamic("Parts")(Parts.asInstanceOf[js.Any])
+    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
+    if (UploadId != null) __obj.updateDynamic("UploadId")(UploadId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPartsOutput]
   }
-  @scala.inline
-  implicit class ListPartsOutputOps[Self <: ListPartsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbortDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbortDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbortRuleId(value: AbortRuleId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortRuleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbortRuleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortRuleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitiator(value: Initiator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Initiator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitiator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Initiator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTruncated(value: IsTruncated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTruncated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: ObjectKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxParts(value: MaxParts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxParts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPartNumberMarker(value: NextPartNumberMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPartNumberMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPartNumberMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPartNumberMarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: Owner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartNumberMarker(value: PartNumberMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumberMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartNumberMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumberMarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParts(value: Parts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCharged(value: RequestCharged): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCharged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageClass(value: StorageClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadId(value: MultipartUploadId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,77 +30,20 @@ trait ScheduledAuditMetadata extends js.Object {
 
 object ScheduledAuditMetadata {
   @scala.inline
-  def apply(): ScheduledAuditMetadata = {
+  def apply(
+    dayOfMonth: DayOfMonth = null,
+    dayOfWeek: DayOfWeek = null,
+    frequency: AuditFrequency = null,
+    scheduledAuditArn: ScheduledAuditArn = null,
+    scheduledAuditName: ScheduledAuditName = null
+  ): ScheduledAuditMetadata = {
     val __obj = js.Dynamic.literal()
+    if (dayOfMonth != null) __obj.updateDynamic("dayOfMonth")(dayOfMonth.asInstanceOf[js.Any])
+    if (dayOfWeek != null) __obj.updateDynamic("dayOfWeek")(dayOfWeek.asInstanceOf[js.Any])
+    if (frequency != null) __obj.updateDynamic("frequency")(frequency.asInstanceOf[js.Any])
+    if (scheduledAuditArn != null) __obj.updateDynamic("scheduledAuditArn")(scheduledAuditArn.asInstanceOf[js.Any])
+    if (scheduledAuditName != null) __obj.updateDynamic("scheduledAuditName")(scheduledAuditName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduledAuditMetadata]
   }
-  @scala.inline
-  implicit class ScheduledAuditMetadataOps[Self <: ScheduledAuditMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDayOfMonth(value: DayOfMonth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayOfMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayOfWeek(value: DayOfWeek): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayOfWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrequency(value: AuditFrequency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduledAuditArn(value: ScheduledAuditArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledAuditArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledAuditArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledAuditArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduledAuditName(value: ScheduledAuditName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledAuditName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledAuditName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledAuditName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

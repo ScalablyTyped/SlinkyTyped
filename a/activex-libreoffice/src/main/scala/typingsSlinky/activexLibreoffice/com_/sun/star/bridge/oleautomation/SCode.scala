@@ -14,9 +14,8 @@ import scala.scalajs.js.annotation._
   * When calling Automation objects from UNO the distinction between error type and `long` is important. Therefore the Scode is declared as struct.
   * @since OOo 1.1.2
   */
-@js.native
 trait SCode extends js.Object {
-  var Value: Double = js.native
+  var Value: Double
 }
 
 object SCode {
@@ -25,19 +24,5 @@ object SCode {
     val __obj = js.Dynamic.literal(Value = Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SCode]
   }
-  @scala.inline
-  implicit class SCodeOps[Self <: SCode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

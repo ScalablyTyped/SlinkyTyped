@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISelectionZoneState extends js.Object {
-  var isModal: js.UndefOr[Boolean] = js.native
+  var isModal: js.UndefOr[Boolean] = js.undefined
 }
 
 object ISelectionZoneState {
   @scala.inline
-  def apply(): ISelectionZoneState = {
+  def apply(isModal: js.UndefOr[Boolean] = js.undefined): ISelectionZoneState = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isModal)) __obj.updateDynamic("isModal")(isModal.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISelectionZoneState]
   }
-  @scala.inline
-  implicit class ISelectionZoneStateOps[Self <: ISelectionZoneState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsModal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isModal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isModal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

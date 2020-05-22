@@ -1,5 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +13,18 @@ trait IEditorViewState extends js.Object
 
 object IEditorViewState {
   @scala.inline
-  implicit def apply(value: ICodeEditorViewState): IEditorViewState = value.asInstanceOf[IEditorViewState]
+  def ICodeEditorViewState(
+    contributionsState: StringDictionary[js.Any],
+    cursorState: js.Array[ICursorState],
+    viewState: IViewState
+  ): IEditorViewState = {
+    val __obj = js.Dynamic.literal(contributionsState = contributionsState.asInstanceOf[js.Any], cursorState = cursorState.asInstanceOf[js.Any], viewState = viewState.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IEditorViewState]
+  }
   @scala.inline
-  implicit def apply(value: IDiffEditorViewState): IEditorViewState = value.asInstanceOf[IEditorViewState]
+  def IDiffEditorViewState(modified: ICodeEditorViewState = null, original: ICodeEditorViewState = null): IEditorViewState = {
+    val __obj = js.Dynamic.literal(modified = modified.asInstanceOf[js.Any], original = original.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IEditorViewState]
+  }
 }
 

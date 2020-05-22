@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResolverFactory extends js.Object {
   /**
     * Apply position resolution.
     * @method postSolvePosition
     * @param {body[]} bodies
     */
-  def postSolvePosition(bodies: js.Array[BodyType]): Unit = js.native
+  def postSolvePosition(bodies: js.Array[BodyType]): Unit
   /**
     * Prepare pairs for position solving.
     * @method preSolvePosition
     * @param {pair[]} pairs
     */
-  def preSolvePosition(pairs: js.Array[IPair]): Unit = js.native
+  def preSolvePosition(pairs: js.Array[IPair]): Unit
   /**
     * Prepare pairs for velocity solving.
     * @method preSolveVelocity
     * @param {pair[]} pairs
     */
-  def preSolveVelocity(pairs: js.Array[IPair]): Unit = js.native
+  def preSolveVelocity(pairs: js.Array[IPair]): Unit
   /**
     * Find a solution for pair positions.
     * @method solvePosition
@@ -31,14 +30,14 @@ trait ResolverFactory extends js.Object {
     * @param {body[]} bodies
     * @param {number} timeScale
     */
-  def solvePosition(pairs: js.Array[IPair], bodies: js.Array[BodyType], timeScale: Double): Unit = js.native
+  def solvePosition(pairs: js.Array[IPair], bodies: js.Array[BodyType], timeScale: Double): Unit
   /**
     * Find a solution for pair velocities.
     * @method solveVelocity
     * @param {pair[]} pairs
     * @param {number} timeScale
     */
-  def solveVelocity(pairs: js.Array[IPair], timeScale: Double): Unit = js.native
+  def solveVelocity(pairs: js.Array[IPair], timeScale: Double): Unit
 }
 
 object ResolverFactory {
@@ -53,43 +52,5 @@ object ResolverFactory {
     val __obj = js.Dynamic.literal(postSolvePosition = js.Any.fromFunction1(postSolvePosition), preSolvePosition = js.Any.fromFunction1(preSolvePosition), preSolveVelocity = js.Any.fromFunction1(preSolveVelocity), solvePosition = js.Any.fromFunction3(solvePosition), solveVelocity = js.Any.fromFunction2(solveVelocity))
     __obj.asInstanceOf[ResolverFactory]
   }
-  @scala.inline
-  implicit class ResolverFactoryOps[Self <: ResolverFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPostSolvePosition(value: js.Array[BodyType] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postSolvePosition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPreSolvePosition(value: js.Array[IPair] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preSolvePosition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPreSolveVelocity(value: js.Array[IPair] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preSolveVelocity")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSolvePosition(value: (js.Array[IPair], js.Array[BodyType], Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solvePosition")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSolveVelocity(value: (js.Array[IPair], Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solveVelocity")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -45,96 +45,20 @@ object AuthenticateCognitoActionConfig {
   def apply(
     UserPoolArn: AuthenticateCognitoActionUserPoolArn,
     UserPoolClientId: AuthenticateCognitoActionUserPoolClientId,
-    UserPoolDomain: AuthenticateCognitoActionUserPoolDomain
+    UserPoolDomain: AuthenticateCognitoActionUserPoolDomain,
+    AuthenticationRequestExtraParams: AuthenticateCognitoActionAuthenticationRequestExtraParams = null,
+    OnUnauthenticatedRequest: AuthenticateCognitoActionConditionalBehaviorEnum = null,
+    Scope: AuthenticateCognitoActionScope = null,
+    SessionCookieName: AuthenticateCognitoActionSessionCookieName = null,
+    SessionTimeout: js.UndefOr[AuthenticateCognitoActionSessionTimeout] = js.undefined
   ): AuthenticateCognitoActionConfig = {
     val __obj = js.Dynamic.literal(UserPoolArn = UserPoolArn.asInstanceOf[js.Any], UserPoolClientId = UserPoolClientId.asInstanceOf[js.Any], UserPoolDomain = UserPoolDomain.asInstanceOf[js.Any])
+    if (AuthenticationRequestExtraParams != null) __obj.updateDynamic("AuthenticationRequestExtraParams")(AuthenticationRequestExtraParams.asInstanceOf[js.Any])
+    if (OnUnauthenticatedRequest != null) __obj.updateDynamic("OnUnauthenticatedRequest")(OnUnauthenticatedRequest.asInstanceOf[js.Any])
+    if (Scope != null) __obj.updateDynamic("Scope")(Scope.asInstanceOf[js.Any])
+    if (SessionCookieName != null) __obj.updateDynamic("SessionCookieName")(SessionCookieName.asInstanceOf[js.Any])
+    if (!js.isUndefined(SessionTimeout)) __obj.updateDynamic("SessionTimeout")(SessionTimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthenticateCognitoActionConfig]
   }
-  @scala.inline
-  implicit class AuthenticateCognitoActionConfigOps[Self <: AuthenticateCognitoActionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserPoolArn(value: AuthenticateCognitoActionUserPoolArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserPoolClientId(value: AuthenticateCognitoActionUserPoolClientId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserPoolDomain(value: AuthenticateCognitoActionUserPoolDomain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthenticationRequestExtraParams(value: AuthenticateCognitoActionAuthenticationRequestExtraParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationRequestExtraParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationRequestExtraParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationRequestExtraParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUnauthenticatedRequest(value: AuthenticateCognitoActionConditionalBehaviorEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUnauthenticatedRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnUnauthenticatedRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUnauthenticatedRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: AuthenticateCognitoActionScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionCookieName(value: AuthenticateCognitoActionSessionCookieName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionCookieName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionCookieName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionCookieName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionTimeout(value: AuthenticateCognitoActionSessionTimeout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

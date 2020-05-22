@@ -4,57 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ItemOptions extends js.Object {
-  var badge: js.UndefOr[String] = js.native
-  var image: String = js.native
+  var badge: js.UndefOr[String] = js.undefined
+  var image: String
    // for iOS
-  var imageSelected: js.UndefOr[String] = js.native
+  var imageSelected: js.UndefOr[String] = js.undefined
 }
 
 object ItemOptions {
   @scala.inline
-  def apply(image: String): ItemOptions = {
+  def apply(image: String, badge: String = null, imageSelected: String = null): ItemOptions = {
     val __obj = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
+    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
+    if (imageSelected != null) __obj.updateDynamic("imageSelected")(imageSelected.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemOptions]
   }
-  @scala.inline
-  implicit class ItemOptionsOps[Self <: ItemOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBadge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageSelected(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSelected")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

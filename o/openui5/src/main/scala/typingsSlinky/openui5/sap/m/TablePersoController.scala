@@ -12,14 +12,14 @@ trait TablePersoController extends ManagedObject {
     * TablePersoDialog for the associatedtable and attaches a close handler to apply the personalizations
     * tothe table and persist them.This method should be called when the table to be personalized knowsits
     * columns. Usually, this is when that table's view has set its model,which is typically done in the
-    * corresponding controller's init method.For example<pre><code> onInit: function () {		// set explored
-    * app's demo model on this sample		var oModel = new
-    * JSONModel(jQuery.sap.getModulePath("sap.ui.demo.mock", "/products.json"));		var oGroupingModel = new
-    * JSONModel({ hasGrouping: false});		this.getView().setModel(oModel);	
-    * this.getView().setModel(oGroupingModel, 'Grouping');		// init and activate controller		this._oTPC =
-    * new TablePersoController({			table: this.getView().byId("productsTable"),			//specify the first part
-    * of persistence ids e.g. 'demoApp-productsTable-dimensionsCol'			componentName: "demoApp",		
-    * persoService: DemoPersoService,		}).activate();	}</code></pre>
+    * corresponding controller's init method.For example<pre><code> onInit: function () {        // set explored
+    * app's demo model on this sample        var oModel = new
+    * JSONModel(jQuery.sap.getModulePath("sap.ui.demo.mock", "/products.json"));        var oGroupingModel = new
+    * JSONModel({ hasGrouping: false});        this.getView().setModel(oModel);    
+    * this.getView().setModel(oGroupingModel, 'Grouping');        // init and activate controller        this._oTPC =
+    * new TablePersoController({            table: this.getView().byId("productsTable"),            //specify the first part
+    * of persistence ids e.g. 'demoApp-productsTable-dimensionsCol'            componentName: "demoApp",        
+    * persoService: DemoPersoService,        }).activate();    }</code></pre>
     * @returns the TablePersoController instance.
     */
   def activate(): TablePersoController = js.native

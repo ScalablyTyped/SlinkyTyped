@@ -5,19 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ObjectExplorerNodeProvider extends ObjectExplorerProviderBase {
   /**
-  		 * Optional group name used to sort nodes in the tree. If not defined, the node order will be added in order based on provider ID, with
-  		 * nodes from the main ObjectExplorerProvider for this provider type added first
-  		 */
-  val group: js.UndefOr[String] = js.native
+    * Optional group name used to sort nodes in the tree. If not defined, the node order will be added in order based on provider ID, with
+    * nodes from the main ObjectExplorerProvider for this provider type added first
+    */
+  val group: js.UndefOr[String] = js.undefined
   /**
-  		 * The providerId for whichever type of ObjectExplorer connection this can add folders and objects to
-  		 */
-  val supportedProviderId: String = js.native
-  def handleSessionClose(closeSessionInfo: ObjectExplorerCloseSessionInfo): Unit = js.native
-  def handleSessionOpen(session: ObjectExplorerSession): Thenable[Boolean] = js.native
+    * The providerId for whichever type of ObjectExplorer connection this can add folders and objects to
+    */
+  val supportedProviderId: String
+  def handleSessionClose(closeSessionInfo: ObjectExplorerCloseSessionInfo): Unit
+  def handleSessionOpen(session: ObjectExplorerSession): Thenable[Boolean]
 }
 
 object ObjectExplorerNodeProvider {
@@ -30,48 +29,14 @@ object ObjectExplorerNodeProvider {
     providerId: String,
     refreshNode: ExpandNodeInfo => Thenable[Boolean],
     registerOnExpandCompleted: js.Function1[/* response */ ObjectExplorerExpandInfo, _] => Unit,
-    supportedProviderId: String
+    supportedProviderId: String,
+    group: String = null,
+    handle: js.UndefOr[Double] = js.undefined
   ): ObjectExplorerNodeProvider = {
     val __obj = js.Dynamic.literal(expandNode = js.Any.fromFunction1(expandNode), findNodes = js.Any.fromFunction1(findNodes), handleSessionClose = js.Any.fromFunction1(handleSessionClose), handleSessionOpen = js.Any.fromFunction1(handleSessionOpen), providerId = providerId.asInstanceOf[js.Any], refreshNode = js.Any.fromFunction1(refreshNode), registerOnExpandCompleted = js.Any.fromFunction1(registerOnExpandCompleted), supportedProviderId = supportedProviderId.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (!js.isUndefined(handle)) __obj.updateDynamic("handle")(handle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectExplorerNodeProvider]
   }
-  @scala.inline
-  implicit class ObjectExplorerNodeProviderOps[Self <: ObjectExplorerNodeProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandleSessionClose(value: ObjectExplorerCloseSessionInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSessionClose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHandleSessionOpen(value: ObjectExplorerSession => Thenable[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSessionOpen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSupportedProviderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedProviderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

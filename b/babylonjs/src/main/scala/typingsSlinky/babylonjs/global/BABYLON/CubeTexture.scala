@@ -46,6 +46,11 @@ class CubeTexture protected ()
     lodScale: js.UndefOr[Double],
     lodOffset: js.UndefOr[Double]
   ) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

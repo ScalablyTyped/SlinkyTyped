@@ -18,41 +18,11 @@ trait ListPortfoliosOutput extends js.Object {
 
 object ListPortfoliosOutput {
   @scala.inline
-  def apply(): ListPortfoliosOutput = {
+  def apply(NextPageToken: PageToken = null, PortfolioDetails: PortfolioDetails = null): ListPortfoliosOutput = {
     val __obj = js.Dynamic.literal()
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
+    if (PortfolioDetails != null) __obj.updateDynamic("PortfolioDetails")(PortfolioDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPortfoliosOutput]
   }
-  @scala.inline
-  implicit class ListPortfoliosOutputOps[Self <: ListPortfoliosOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: PageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPortfolioDetails(value: PortfolioDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortfolioDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

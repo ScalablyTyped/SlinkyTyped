@@ -11,28 +11,27 @@ import scala.scalajs.js.annotation._
   * interface may for instance show a dialog to query the user for the necessary data.
   * @since OOo 2.0
   */
-@js.native
 trait XAuthenticator extends XInterface {
   /**
     * Will be called when the password of the user is needed.
     * @returns the password of the user.
     */
-  val Password: String = js.native
+  val Password: String
   /**
     * Will be called when the user name is needed.
     * @returns the user name.
     */
-  val UserName: String = js.native
+  val UserName: String
   /**
     * Will be called when the password of the user is needed.
     * @returns the password of the user.
     */
-  def getPassword(): String = js.native
+  def getPassword(): String
   /**
     * Will be called when the user name is needed.
     * @returns the user name.
     */
-  def getUserName(): String = js.native
+  def getUserName(): String
 }
 
 object XAuthenticator {
@@ -49,37 +48,5 @@ object XAuthenticator {
     val __obj = js.Dynamic.literal(Password = Password.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getPassword = js.Any.fromFunction0(getPassword), getUserName = js.Any.fromFunction0(getUserName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAuthenticator]
   }
-  @scala.inline
-  implicit class XAuthenticatorOps[Self <: XAuthenticator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetPassword(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPassword")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUserName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserName")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

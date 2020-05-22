@@ -20,6 +20,10 @@ class ValidationError protected () extends Error {
     * In the case of aggregate errors, inner is an array of ValidationErrors throw earlier in the validation chain.
     */
   var inner: js.Array[ValidationError] = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
   var params: js.UndefOr[js.Object] = js.native
   /**
     * A string, indicating where there error was thrown. path is empty at the root level.

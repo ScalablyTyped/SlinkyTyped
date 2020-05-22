@@ -2,6 +2,8 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 
 import typingsSlinky.appleMapkitJs.anon.Automobile
 import typingsSlinky.appleMapkitJs.mapkit.DirectionsConstructorOptions
+import typingsSlinky.appleMapkitJs.mapkit.DirectionsRequest
+import typingsSlinky.appleMapkitJs.mapkit.DirectionsResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +22,28 @@ import scala.scalajs.js.annotation._
 class Directions ()
   extends typingsSlinky.appleMapkitJs.mapkit.Directions {
   def this(options: DirectionsConstructorOptions) = this()
+  /**
+    * Cancels a previous request for route directions.
+    *
+    * @param id The ID returned by a call to route.
+    */
+  /* CompleteClass */
+  override def cancel(id: Double): Boolean = js.native
+  /**
+    * Retrieves directions and estimated travel time for the specified start
+    * and end points.
+    *
+    * @param request DirectionsRequest object that specifies details for the
+    * directions you want to retrieve.
+    * @param callback A callback function that receives the directions,
+    * returned asynchronously.
+    * @return A request ID, which you can pass to cancel to abort a pending request.
+    */
+  /* CompleteClass */
+  override def route(
+    request: DirectionsRequest,
+    callback: js.Function2[/* error */ js.Error | Null, /* data */ DirectionsResponse, Unit]
+  ): Double = js.native
 }
 
 /* static members */

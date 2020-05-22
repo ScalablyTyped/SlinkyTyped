@@ -22,25 +22,5 @@ object UpdateEvaluationInput {
     val __obj = js.Dynamic.literal(EvaluationId = EvaluationId.asInstanceOf[js.Any], EvaluationName = EvaluationName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateEvaluationInput]
   }
-  @scala.inline
-  implicit class UpdateEvaluationInputOps[Self <: UpdateEvaluationInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvaluationId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvaluationName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

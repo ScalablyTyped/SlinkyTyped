@@ -17,36 +17,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies the standard model of an {@link UnoControlScrollBar} . */
-@js.native
 trait UnoControlScrollBarModel extends UnoControlModel {
   /**
     * specifies the RGB color to be used for the control.
     * @since OOo 2.0
     */
-  var BackgroundColor: Color = js.native
+  var BackgroundColor: Color
   /** specifies the increment for a block move. */
-  var BlockIncrement: Double = js.native
+  var BlockIncrement: Double
   /**
     * specifies the border style of the control.
     *
     * `; 0: No border; 1: 3D border; 2: simple border; `
     */
-  var Border: Double = js.native
+  var Border: Double
   /**
     * specifies the color of the border, if present
     *
     * Not every border style (see {@link Border} ) may support coloring. For instance, usually a border with 3D effect will ignore the BorderColor setting.
     * @since OOo 2.0
     */
-  var BorderColor: Double = js.native
+  var BorderColor: Double
   /** determines whether the control is enabled or disabled. */
-  var Enabled: Boolean = js.native
+  var Enabled: Boolean
   /** specifies the help text of the control. */
-  var HelpText: String = js.native
+  var HelpText: String
   /** specifies the help URL of the control. */
-  var HelpURL: String = js.native
+  var HelpURL: String
   /** specifies the increment for a single line move. */
-  var LineIncrement: Double = js.native
+  var LineIncrement: Double
   /**
     * specifies the scrolling behavior of the control.
     *
@@ -54,11 +53,11 @@ trait UnoControlScrollBarModel extends UnoControlModel {
     * is only updated after the user has released the mouse button.
     * @since OOo 2.0
     */
-  var LiveScroll: Boolean = js.native
+  var LiveScroll: Boolean
   /** specifies the {@link ScrollBarOrientation} of the control. */
-  var Orientation: Double = js.native
+  var Orientation: Double
   /** specifies that the control will be printed with the document. */
-  var Printable: Boolean = js.native
+  var Printable: Boolean
   /**
     * specifies the mouse repeat delay, in milliseconds.
     *
@@ -67,29 +66,29 @@ trait UnoControlScrollBarModel extends UnoControlModel {
     * specified with this property.
     * @since OOo 2.0
     */
-  var RepeatDelay: Double = js.native
+  var RepeatDelay: Double
   /** specifies the scroll value of the control. */
-  var ScrollValue: Double = js.native
+  var ScrollValue: Double
   /** specifies the maximum scroll value of the control. */
-  var ScrollValueMax: Double = js.native
+  var ScrollValueMax: Double
   /**
     * specifies the minimum scroll value of the control.
     *
     * If this optional property is not present, clients of the component should assume a minimal scroll value of 0.
     */
-  var ScrollValueMin: Double = js.native
+  var ScrollValueMin: Double
   /**
     * specifies the RGB color to be used when painting symbols which are part of the control's appearance, such as the arrow buttons.
     * @since OOo 2.0
     */
-  var SymbolColor: Color = js.native
+  var SymbolColor: Color
   /**
     * specifies that the control can be reached with the TAB key.
     * @since OOo 2.0
     */
-  var Tabstop: Boolean = js.native
+  var Tabstop: Boolean
   /** specifies the visible size of the scroll bar. */
-  var VisibleSize: Double = js.native
+  var VisibleSize: Double
 }
 
 object UnoControlScrollBarModel {
@@ -150,121 +149,5 @@ object UnoControlScrollBarModel {
     val __obj = js.Dynamic.literal(BackgroundColor = BackgroundColor.asInstanceOf[js.Any], BlockIncrement = BlockIncrement.asInstanceOf[js.Any], Border = Border.asInstanceOf[js.Any], BorderColor = BorderColor.asInstanceOf[js.Any], DefaultControl = DefaultControl.asInstanceOf[js.Any], Enabled = Enabled.asInstanceOf[js.Any], Height = Height.asInstanceOf[js.Any], HelpText = HelpText.asInstanceOf[js.Any], HelpURL = HelpURL.asInstanceOf[js.Any], LineIncrement = LineIncrement.asInstanceOf[js.Any], LiveScroll = LiveScroll.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Orientation = Orientation.asInstanceOf[js.Any], PositionX = PositionX.asInstanceOf[js.Any], PositionY = PositionY.asInstanceOf[js.Any], Printable = Printable.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], RepeatDelay = RepeatDelay.asInstanceOf[js.Any], ScrollValue = ScrollValue.asInstanceOf[js.Any], ScrollValueMax = ScrollValueMax.asInstanceOf[js.Any], ScrollValueMin = ScrollValueMin.asInstanceOf[js.Any], ServiceName = ServiceName.asInstanceOf[js.Any], Step = Step.asInstanceOf[js.Any], SymbolColor = SymbolColor.asInstanceOf[js.Any], TabIndex = TabIndex.asInstanceOf[js.Any], Tabstop = Tabstop.asInstanceOf[js.Any], Tag = Tag.asInstanceOf[js.Any], VisibleSize = VisibleSize.asInstanceOf[js.Any], Width = Width.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertiesChangeListener = js.Any.fromFunction2(addPropertiesChangeListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createClone = js.Any.fromFunction0(createClone), dispose = js.Any.fromFunction0(dispose), firePropertiesChangeEvent = js.Any.fromFunction2(firePropertiesChangeEvent), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getPropertyValues = js.Any.fromFunction1(getPropertyValues), getServiceName = js.Any.fromFunction0(getServiceName), queryInterface = js.Any.fromFunction1(queryInterface), read = js.Any.fromFunction1(read), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertiesChangeListener = js.Any.fromFunction1(removePropertiesChangeListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setPropertyValues = js.Any.fromFunction2(setPropertyValues), write = js.Any.fromFunction1(write))
     __obj.asInstanceOf[UnoControlScrollBarModel]
   }
-  @scala.inline
-  implicit class UnoControlScrollBarModelOps[Self <: UnoControlScrollBarModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockIncrement(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BorderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineIncrement(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLiveScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LiveScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrintable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Printable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScrollValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollValueMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScrollValueMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollValueMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScrollValueMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbolColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SymbolColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabstop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tabstop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisibleSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibleSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

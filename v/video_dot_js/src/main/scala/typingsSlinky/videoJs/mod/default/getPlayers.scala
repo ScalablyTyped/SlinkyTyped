@@ -11,7 +11,7 @@ object getPlayers extends js.Object {
   /**
     * Get an object with the currently created players, keyed by player ID
     *
-    * @return	The created players
+    * @return    The created players
     */
   def apply(): StringDictionary[typingsSlinky.videoJs.mod.videojs.Player] = js.native
 }

@@ -2,53 +2,32 @@ package typingsSlinky.uifabricStyling.iconsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.facade.ReactElement
+import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.IFontFace
+import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IIconSubsetRecord extends IIconSubset {
-  var className: js.UndefOr[String] = js.native
-  var isRegistered: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var isRegistered: js.UndefOr[Boolean] = js.undefined
 }
 
 object IIconSubsetRecord {
   @scala.inline
-  def apply(icons: StringDictionary[String | ReactElement]): IIconSubsetRecord = {
+  def apply(
+    icons: StringDictionary[String | ReactElement],
+    className: String = null,
+    fontFace: IFontFace = null,
+    isRegistered: js.UndefOr[Boolean] = js.undefined,
+    style: IRawStyle = null
+  ): IIconSubsetRecord = {
     val __obj = js.Dynamic.literal(icons = icons.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (fontFace != null) __obj.updateDynamic("fontFace")(fontFace.asInstanceOf[js.Any])
+    if (!js.isUndefined(isRegistered)) __obj.updateDynamic("isRegistered")(isRegistered.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIconSubsetRecord]
   }
-  @scala.inline
-  implicit class IIconSubsetRecordOps[Self <: IIconSubsetRecord] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsRegistered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRegistered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsRegistered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRegistered")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

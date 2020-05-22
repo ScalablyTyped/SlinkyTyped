@@ -2,6 +2,7 @@ package typingsSlinky.through2
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.anon.End
 import typingsSlinky.node.streamMod.DuplexOptions
@@ -33,9 +34,9 @@ object mod extends js.Object {
   def apply(transform: TransformFunction): Transform = js.native
   def apply(transform: TransformFunction, flush: FlushCallback): Transform = js.native
   /**
-  	 * Creates a constructor for a custom Transform. This is useful when you
-  	 * want to use the same transform logic in multiple instances.
-  	 */
+    * Creates a constructor for a custom Transform. This is useful when you
+    * want to use the same transform logic in multiple instances.
+    */
   def ctor(): Through2Constructor = js.native
   def ctor(opts: DuplexOptions): Through2Constructor = js.native
   def ctor(opts: DuplexOptions, transform: TransformFunction): Through2Constructor = js.native
@@ -43,8 +44,8 @@ object mod extends js.Object {
   def ctor(transform: TransformFunction): Through2Constructor = js.native
   def ctor(transform: TransformFunction, flush: FlushCallback): Through2Constructor = js.native
   /**
-  	 * Convenvience method for creating object streams
-  	 */
+    * Convenvience method for creating object streams
+    */
   def obj(): Transform = js.native
   def obj(transform: TransformFunction): Transform = js.native
   def obj(transform: TransformFunction, flush: FlushCallback): Transform = js.native
@@ -53,7 +54,7 @@ object mod extends js.Object {
   type TransformFunction = js.ThisFunction3[
     /* this */ Transform, 
     /* chunk */ js.Any, 
-    /* enc */ String, 
+    /* enc */ BufferEncoding, 
     /* callback */ TransformCallback, 
     Unit
   ]

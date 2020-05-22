@@ -8,79 +8,41 @@ import scala.scalajs.js.annotation._
 /**
   * A schema validation error definition.
   */
-@js.native
 trait IError extends js.Object {
   /**
     * The path in the data where the error occurred.
     */
-  var dataPath: String = js.native
+  var dataPath: String
   /**
     * The keyword whose validation failed.
     */
-  var keyword: String = js.native
+  var keyword: String
   /**
     * The error message.
     */
-  var message: String = js.native
+  var message: String
   /**
     * Optional parameter metadata that might be included in an error.
     */
-  var params: js.UndefOr[ReadonlyJSONObject] = js.native
+  var params: js.UndefOr[ReadonlyJSONObject] = js.undefined
   /**
     * The path in the schema where the error occurred.
     */
-  var schemaPath: String = js.native
+  var schemaPath: String
 }
 
 object IError {
   @scala.inline
-  def apply(dataPath: String, keyword: String, message: String, schemaPath: String): IError = {
+  def apply(
+    dataPath: String,
+    keyword: String,
+    message: String,
+    schemaPath: String,
+    params: ReadonlyJSONObject = null
+  ): IError = {
     val __obj = js.Dynamic.literal(dataPath = dataPath.asInstanceOf[js.Any], keyword = keyword.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], schemaPath = schemaPath.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
     __obj.asInstanceOf[IError]
   }
-  @scala.inline
-  implicit class IErrorOps[Self <: IError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchemaPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParams(value: ReadonlyJSONObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

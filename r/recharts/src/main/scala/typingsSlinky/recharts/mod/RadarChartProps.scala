@@ -1,7 +1,6 @@
 package typingsSlinky.recharts.mod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.recharts.anon.PartialMargin
 import typingsSlinky.recharts.rechartsStrings.centric
 import scala.scalajs.js
@@ -9,341 +8,111 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.recharts.mod.CategoricalChartWrapper because var conflicts: onClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseUp. Inlined syncId, compact, width, height, data, layout, stackOffset, throttleDelay, margin, barCategoryGap, barGap, barSize, baseValue, maxBarSize, style, className, children, reverseStackOrder */ @js.native
-trait RadarChartProps extends EventAttributes {
-  var barCategoryGap: js.UndefOr[Double | String] = js.native
-  var barGap: js.UndefOr[Double | String] = js.native
-  var barSize: js.UndefOr[Double | String] = js.native
-  var baseValue: js.UndefOr[BaseValueType] = js.native
-  var children: js.UndefOr[TagMod[Any] | js.Array[TagMod[Any]]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var compact: js.UndefOr[Boolean] = js.native
-  var cx: js.UndefOr[Double | String] = js.native
-  var cy: js.UndefOr[Double | String] = js.native
-  var data: js.UndefOr[js.Array[js.Object]] = js.native
-  var endAngle: js.UndefOr[Double] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var innerRadius: js.UndefOr[Double | String] = js.native
-  var layout: js.UndefOr[centric] = js.native
-  var margin: js.UndefOr[PartialMargin] = js.native
-  var maxBarSize: js.UndefOr[Double] = js.native
-  var outerRadius: js.UndefOr[Double | String] = js.native
-  var reverseStackOrder: js.UndefOr[Boolean] = js.native
-  var stackOffset: js.UndefOr[StackOffsetType] = js.native
-  var startAngle: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var syncId: js.UndefOr[String | Double] = js.native
-  var throttleDelay: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[Double] = js.native
+- typingsSlinky.recharts.mod.CategoricalChartWrapper because var conflicts: onClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseUp. Inlined syncId, compact, width, height, data, layout, stackOffset, throttleDelay, margin, barCategoryGap, barGap, barSize, baseValue, maxBarSize, style, className, children, reverseStackOrder */ trait RadarChartProps extends EventAttributes {
+  var barCategoryGap: js.UndefOr[Double | String] = js.undefined
+  var barGap: js.UndefOr[Double | String] = js.undefined
+  var barSize: js.UndefOr[Double | String] = js.undefined
+  var baseValue: js.UndefOr[BaseValueType] = js.undefined
+  var children: js.UndefOr[TagMod[Any] | js.Array[TagMod[Any]]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var compact: js.UndefOr[Boolean] = js.undefined
+  var cx: js.UndefOr[Double | String] = js.undefined
+  var cy: js.UndefOr[Double | String] = js.undefined
+  var data: js.UndefOr[js.Array[js.Object]] = js.undefined
+  var endAngle: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var innerRadius: js.UndefOr[Double | String] = js.undefined
+  var layout: js.UndefOr[centric] = js.undefined
+  var margin: js.UndefOr[PartialMargin] = js.undefined
+  var maxBarSize: js.UndefOr[Double] = js.undefined
+  var outerRadius: js.UndefOr[Double | String] = js.undefined
+  var reverseStackOrder: js.UndefOr[Boolean] = js.undefined
+  var stackOffset: js.UndefOr[StackOffsetType] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var syncId: js.UndefOr[String | Double] = js.undefined
+  var throttleDelay: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object RadarChartProps {
   @scala.inline
-  def apply(): RadarChartProps = {
+  def apply(
+    barCategoryGap: Double | String = null,
+    barGap: Double | String = null,
+    barSize: Double | String = null,
+    baseValue: BaseValueType = null,
+    children: TagMod[Any] | js.Array[TagMod[Any]] = null,
+    className: String = null,
+    compact: js.UndefOr[Boolean] = js.undefined,
+    cx: Double | String = null,
+    cy: Double | String = null,
+    data: js.Array[js.Object] = null,
+    endAngle: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    innerRadius: Double | String = null,
+    layout: centric = null,
+    margin: PartialMargin = null,
+    maxBarSize: js.UndefOr[Double] = js.undefined,
+    onClick: /* repeated */ js.Any => Unit = null,
+    onMouseDown: /* repeated */ js.Any => Unit = null,
+    onMouseEnter: /* repeated */ js.Any => Unit = null,
+    onMouseLeave: /* repeated */ js.Any => Unit = null,
+    onMouseMove: /* repeated */ js.Any => Unit = null,
+    onMouseOut: /* repeated */ js.Any => Unit = null,
+    onMouseOver: /* repeated */ js.Any => Unit = null,
+    onMouseUp: /* repeated */ js.Any => Unit = null,
+    onTouchCancel: /* repeated */ js.Any => Unit = null,
+    onTouchEnd: /* repeated */ js.Any => Unit = null,
+    onTouchMove: /* repeated */ js.Any => Unit = null,
+    onTouchStart: /* repeated */ js.Any => Unit = null,
+    outerRadius: Double | String = null,
+    reverseStackOrder: js.UndefOr[Boolean] = js.undefined,
+    stackOffset: StackOffsetType = null,
+    startAngle: js.UndefOr[Double] = js.undefined,
+    style: js.Object = null,
+    syncId: String | Double = null,
+    throttleDelay: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): RadarChartProps = {
     val __obj = js.Dynamic.literal()
+    if (barCategoryGap != null) __obj.updateDynamic("barCategoryGap")(barCategoryGap.asInstanceOf[js.Any])
+    if (barGap != null) __obj.updateDynamic("barGap")(barGap.asInstanceOf[js.Any])
+    if (barSize != null) __obj.updateDynamic("barSize")(barSize.asInstanceOf[js.Any])
+    if (baseValue != null) __obj.updateDynamic("baseValue")(baseValue.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
+    if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(endAngle)) __obj.updateDynamic("endAngle")(endAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBarSize)) __obj.updateDynamic("maxBarSize")(maxBarSize.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
+    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (outerRadius != null) __obj.updateDynamic("outerRadius")(outerRadius.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverseStackOrder)) __obj.updateDynamic("reverseStackOrder")(reverseStackOrder.get.asInstanceOf[js.Any])
+    if (stackOffset != null) __obj.updateDynamic("stackOffset")(stackOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(startAngle)) __obj.updateDynamic("startAngle")(startAngle.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (syncId != null) __obj.updateDynamic("syncId")(syncId.asInstanceOf[js.Any])
+    if (!js.isUndefined(throttleDelay)) __obj.updateDynamic("throttleDelay")(throttleDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadarChartProps]
   }
-  @scala.inline
-  implicit class RadarChartPropsOps[Self <: RadarChartProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBarCategoryGap(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barCategoryGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarCategoryGap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barCategoryGap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarGap(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarGap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barGap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarSize(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseValue(value: BaseValueType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any] | js.Array[TagMod[Any]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCx(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCy(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRadius(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: centric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: PartialMargin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBarSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBarSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBarSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBarSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuterRadius(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuterRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverseStackOrder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseStackOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverseStackOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseStackOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackOffset(value: StackOffsetType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncId(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottleDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottleDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

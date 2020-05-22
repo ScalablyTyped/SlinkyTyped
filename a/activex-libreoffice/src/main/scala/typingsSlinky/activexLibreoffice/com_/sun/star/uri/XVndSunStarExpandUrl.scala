@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * url="http://www.ietf.org/rfc/rfc2234.txt"} for details.
   * @since OOo 2.3
   */
-@js.native
 trait XVndSunStarExpandUrl extends js.Object {
   /**
     * returns the expanded content of this URL.
@@ -22,7 +21,7 @@ trait XVndSunStarExpandUrl extends js.Object {
     * @returns the expanded content of this URL.
     * @throws com::sun::star::lang::IllegalArgumentException if calling {@link com.sun.star.util.XMacroExpander.expandMacros()} on `expander` raises any such e
     */
-  def expand(expander: XMacroExpander): String = js.native
+  def expand(expander: XMacroExpander): String
 }
 
 object XVndSunStarExpandUrl {
@@ -31,19 +30,5 @@ object XVndSunStarExpandUrl {
     val __obj = js.Dynamic.literal(expand = js.Any.fromFunction1(expand))
     __obj.asInstanceOf[XVndSunStarExpandUrl]
   }
-  @scala.inline
-  implicit class XVndSunStarExpandUrlOps[Self <: XVndSunStarExpandUrl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpand(value: XMacroExpander => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait ConditionalDataBarPositiveFormat extends ClientObject {
   /**
     *
-    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
+    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g., "FFA500") or as a named HTML color (e.g., "orange").
     "" (empty string) if no border is present or set.
     *
     * [Api set: ExcelApi 1.6]
@@ -31,14 +31,14 @@ trait ConditionalDataBarPositiveFormat extends ClientObject {
   var context_ConditionalDataBarPositiveFormat: RequestContext = js.native
   /**
     *
-    * HTML color code representing the fill color, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
+    * HTML color code representing the fill color, of the form #RRGGBB (e.g., "FFA500") or as a named HTML color (e.g., "orange").
     *
     * [Api set: ExcelApi 1.6]
     */
   var fillColor: String = js.native
   /**
     *
-    * Boolean representation of whether or not the DataBar has a gradient.
+    * Specifies if the DataBar has a gradient.
     *
     * [Api set: ExcelApi 1.6]
     */

@@ -6,5 +6,17 @@ import scala.scalajs.js.annotation._
 
 @JSImport("got", "ParseError")
 @js.native
-class ParseErrorCls () extends ParseError
+class ParseErrorCls () extends ParseError {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+  /* CompleteClass */
+  @JSName("name")
+  override var name_ParseError: typingsSlinky.got.gotStrings.ParseError = js.native
+  /* CompleteClass */
+  override var statusCode: Double = js.native
+  /* CompleteClass */
+  override var statusMessage: String = js.native
+}
 

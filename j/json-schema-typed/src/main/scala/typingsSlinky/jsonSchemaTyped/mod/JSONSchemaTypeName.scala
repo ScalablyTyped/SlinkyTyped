@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.`object`
   - typingsSlinky.jsonSchemaTyped.jsonSchemaTypedStrings.string
 */
-trait JSONSchemaTypeName extends JSONSchemaTypeValue
+trait JSONSchemaTypeName extends _JSONSchemaTypeValue
 
 object JSONSchemaTypeName {
   @scala.inline

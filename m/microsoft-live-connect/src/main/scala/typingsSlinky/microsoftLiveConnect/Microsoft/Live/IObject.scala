@@ -9,12 +9,11 @@ import scala.scalajs.js.annotation._
   * types in a single collection. You discriminate between them using their
   * 'type' field.
   */
-@js.native
 trait IObject extends js.Object {
   /**
     * The object's type.
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object IObject {
@@ -24,19 +23,5 @@ object IObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IObject]
   }
-  @scala.inline
-  implicit class IObjectOps[Self <: IObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -10,5 +10,6 @@ package object sketchapp {
   type SketchMSPagesAndArtboards = org.scalablytyped.runtime.StringDictionary[typingsSlinky.sketchapp.SketchMSArtboards]
   type SketchMSPoint = typingsSlinky.sketchapp.SketchMSCurvePoint
   type SketchMSPointString = java.lang.String
+  type SketchMSUser = typingsSlinky.sketchapp.SketchMSUserPages | typingsSlinky.sketchapp.SketchMSUserDocument
   type SketchMSUserPages = org.scalablytyped.runtime.StringDictionary[typingsSlinky.sketchapp.anon.ScrollOrigin]
 }

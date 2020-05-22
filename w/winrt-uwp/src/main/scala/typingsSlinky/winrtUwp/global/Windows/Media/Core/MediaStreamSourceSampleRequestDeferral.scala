@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Core.MediaStreamSourceSampleRequestDeferral")
 @js.native
 abstract class MediaStreamSourceSampleRequestDeferral ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSampleRequestDeferral
+  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSampleRequestDeferral {
+  /** Reports that the application has completed retrieving the MediaStreamSample . */
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

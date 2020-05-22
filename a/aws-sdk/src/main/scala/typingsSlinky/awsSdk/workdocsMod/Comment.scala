@@ -46,119 +46,27 @@ trait Comment extends js.Object {
 
 object Comment {
   @scala.inline
-  def apply(CommentId: CommentIdType): Comment = {
+  def apply(
+    CommentId: CommentIdType,
+    Contributor: User = null,
+    CreatedTimestamp: js.Date = null,
+    ParentId: CommentIdType = null,
+    RecipientId: IdType = null,
+    Status: CommentStatusType = null,
+    Text: CommentTextType = null,
+    ThreadId: CommentIdType = null,
+    Visibility: CommentVisibilityType = null
+  ): Comment = {
     val __obj = js.Dynamic.literal(CommentId = CommentId.asInstanceOf[js.Any])
+    if (Contributor != null) __obj.updateDynamic("Contributor")(Contributor.asInstanceOf[js.Any])
+    if (CreatedTimestamp != null) __obj.updateDynamic("CreatedTimestamp")(CreatedTimestamp.asInstanceOf[js.Any])
+    if (ParentId != null) __obj.updateDynamic("ParentId")(ParentId.asInstanceOf[js.Any])
+    if (RecipientId != null) __obj.updateDynamic("RecipientId")(RecipientId.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (Text != null) __obj.updateDynamic("Text")(Text.asInstanceOf[js.Any])
+    if (ThreadId != null) __obj.updateDynamic("ThreadId")(ThreadId.asInstanceOf[js.Any])
+    if (Visibility != null) __obj.updateDynamic("Visibility")(Visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[Comment]
   }
-  @scala.inline
-  implicit class CommentOps[Self <: Comment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommentId(value: CommentIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContributor(value: User): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Contributor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContributor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Contributor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentId(value: CommentIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipientId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: CommentStatusType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: CommentTextType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreadId(value: CommentIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreadId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibility(value: CommentVisibilityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Visibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Visibility")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

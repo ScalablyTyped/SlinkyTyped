@@ -8,75 +8,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<exceljs.exceljs.AddWorksheetOptions> */
-@js.native
 trait PartialAddWorksheetOption extends js.Object {
-  var pageSetup: js.UndefOr[PartialPageSetup] = js.native
-  var properties: js.UndefOr[PartialWorksheetPropertie] = js.native
-  var state: js.UndefOr[WorksheetState] = js.native
-  var views: js.UndefOr[js.Array[Partial[WorksheetView]]] = js.native
+  var pageSetup: js.UndefOr[PartialPageSetup] = js.undefined
+  var properties: js.UndefOr[PartialWorksheetPropertie] = js.undefined
+  var state: js.UndefOr[WorksheetState] = js.undefined
+  var views: js.UndefOr[js.Array[Partial[WorksheetView]]] = js.undefined
 }
 
 object PartialAddWorksheetOption {
   @scala.inline
-  def apply(): PartialAddWorksheetOption = {
+  def apply(
+    pageSetup: PartialPageSetup = null,
+    properties: PartialWorksheetPropertie = null,
+    state: WorksheetState = null,
+    views: js.Array[Partial[WorksheetView]] = null
+  ): PartialAddWorksheetOption = {
     val __obj = js.Dynamic.literal()
+    if (pageSetup != null) __obj.updateDynamic("pageSetup")(pageSetup.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialAddWorksheetOption]
   }
-  @scala.inline
-  implicit class PartialAddWorksheetOptionOps[Self <: PartialAddWorksheetOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPageSetup(value: PartialPageSetup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSetup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSetup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: PartialWorksheetPropertie): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: WorksheetState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViews(value: js.Array[Partial[WorksheetView]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

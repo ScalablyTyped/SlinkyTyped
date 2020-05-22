@@ -4,32 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISessionAppConfig extends js.Object {
   /**
     * Optional Qlik host.
     */
-  var host: js.UndefOr[String] = js.native
+  var host: js.UndefOr[String] = js.undefined
   /**
     * Optional. Unique identity for the session. If omitted, the session will be shared.
     */
-  var identity: String = js.native
+  var identity: String
   /**
     * Optional. Use SSL.
     */
-  var isSecure: Boolean = js.native
+  var isSecure: Boolean
   /**
     * Optional. Open app without loading data.
     */
-  var openWithoutData: Boolean = js.native
+  var openWithoutData: Boolean
   /**
     * Port number.
     */
-  var port: String | Double = js.native
+  var port: String | Double
   /**
     * Optional. Qlik virtual proxy. "/" if no proxy.
     */
-  var prefix: String = js.native
+  var prefix: String
 }
 
 object ISessionAppConfig {
@@ -39,60 +38,12 @@ object ISessionAppConfig {
     isSecure: Boolean,
     openWithoutData: Boolean,
     port: String | Double,
-    prefix: String
+    prefix: String,
+    host: String = null
   ): ISessionAppConfig = {
     val __obj = js.Dynamic.literal(identity = identity.asInstanceOf[js.Any], isSecure = isSecure.asInstanceOf[js.Any], openWithoutData = openWithoutData.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISessionAppConfig]
   }
-  @scala.inline
-  implicit class ISessionAppConfigOps[Self <: ISessionAppConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsSecure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSecure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenWithoutData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openWithoutData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPort(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

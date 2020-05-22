@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChangesMeta extends js.Object {
-  var _attachments: js.UndefOr[Attachments] = js.native
-  var _conflicts: js.UndefOr[js.Array[RevisionId]] = js.native
-  var _deleted: js.UndefOr[Boolean] = js.native
+  var _attachments: js.UndefOr[Attachments] = js.undefined
+  var _conflicts: js.UndefOr[js.Array[RevisionId]] = js.undefined
+  var _deleted: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChangesMeta {
   @scala.inline
-  def apply(): ChangesMeta = {
+  def apply(
+    _attachments: Attachments = null,
+    _conflicts: js.Array[RevisionId] = null,
+    _deleted: js.UndefOr[Boolean] = js.undefined
+  ): ChangesMeta = {
     val __obj = js.Dynamic.literal()
+    if (_attachments != null) __obj.updateDynamic("_attachments")(_attachments.asInstanceOf[js.Any])
+    if (_conflicts != null) __obj.updateDynamic("_conflicts")(_conflicts.asInstanceOf[js.Any])
+    if (!js.isUndefined(_deleted)) __obj.updateDynamic("_deleted")(_deleted.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangesMeta]
   }
-  @scala.inline
-  implicit class ChangesMetaOps[Self <: ChangesMeta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_attachments(value: Attachments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_attachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_attachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_conflicts(value: js.Array[RevisionId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_conflicts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_conflicts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_conflicts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_deleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_deleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deleted")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

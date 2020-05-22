@@ -4,75 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Expire extends js.Object {
-  var expire: js.UndefOr[Double] = js.native
-  var multisign: js.UndefOr[Boolean] = js.native
-  var return_url: js.UndefOr[App] = js.native
-  var submit: js.UndefOr[Boolean] = js.native
+  var expire: js.UndefOr[Double] = js.undefined
+  var forceAccount: js.UndefOr[Boolean] = js.undefined
+  var immutable: js.UndefOr[Boolean] = js.undefined
+  var multisign: js.UndefOr[Boolean] = js.undefined
+  var return_url: js.UndefOr[App] = js.undefined
+  var submit: js.UndefOr[Boolean] = js.undefined
 }
 
 object Expire {
   @scala.inline
-  def apply(): Expire = {
+  def apply(
+    expire: js.UndefOr[Double] = js.undefined,
+    forceAccount: js.UndefOr[Boolean] = js.undefined,
+    immutable: js.UndefOr[Boolean] = js.undefined,
+    multisign: js.UndefOr[Boolean] = js.undefined,
+    return_url: App = null,
+    submit: js.UndefOr[Boolean] = js.undefined
+  ): Expire = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(expire)) __obj.updateDynamic("expire")(expire.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceAccount)) __obj.updateDynamic("forceAccount")(forceAccount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(immutable)) __obj.updateDynamic("immutable")(immutable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multisign)) __obj.updateDynamic("multisign")(multisign.get.asInstanceOf[js.Any])
+    if (return_url != null) __obj.updateDynamic("return_url")(return_url.asInstanceOf[js.Any])
+    if (!js.isUndefined(submit)) __obj.updateDynamic("submit")(submit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expire]
   }
-  @scala.inline
-  implicit class ExpireOps[Self <: Expire] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpire(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expire")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpire: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expire")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultisign(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multisign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultisign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multisign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturn_url(value: App): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturn_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

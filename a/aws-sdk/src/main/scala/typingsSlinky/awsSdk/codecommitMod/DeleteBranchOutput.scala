@@ -14,29 +14,10 @@ trait DeleteBranchOutput extends js.Object {
 
 object DeleteBranchOutput {
   @scala.inline
-  def apply(): DeleteBranchOutput = {
+  def apply(deletedBranch: BranchInfo = null): DeleteBranchOutput = {
     val __obj = js.Dynamic.literal()
+    if (deletedBranch != null) __obj.updateDynamic("deletedBranch")(deletedBranch.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteBranchOutput]
   }
-  @scala.inline
-  implicit class DeleteBranchOutputOps[Self <: DeleteBranchOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletedBranch(value: BranchInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedBranch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletedBranch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedBranch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

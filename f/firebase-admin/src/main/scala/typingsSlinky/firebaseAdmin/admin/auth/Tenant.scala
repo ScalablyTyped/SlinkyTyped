@@ -25,75 +25,37 @@ import scala.scalajs.js.annotation._
   * All other settings of a tenant will also be inherited. These will need to be managed
   * from the Cloud Console UI.
   */
-@js.native
 trait Tenant extends js.Object {
   /**
     * The tenant display name.
     */
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   /**
     * The email sign in provider configuration.
     */
-  var emailSignInConfig: js.UndefOr[Enabled] = js.native
+  var emailSignInConfig: js.UndefOr[Enabled] = js.undefined
   /**
     * The tenant identifier.
     */
-  var tenantId: String = js.native
+  var tenantId: String
   /**
     * @return A JSON-serializable representation of this object.
     */
-  def toJSON(): js.Object = js.native
+  def toJSON(): js.Object
 }
 
 object Tenant {
   @scala.inline
-  def apply(tenantId: String, toJSON: () => js.Object): Tenant = {
+  def apply(
+    tenantId: String,
+    toJSON: () => js.Object,
+    displayName: String = null,
+    emailSignInConfig: Enabled = null
+  ): Tenant = {
     val __obj = js.Dynamic.literal(tenantId = tenantId.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (emailSignInConfig != null) __obj.updateDynamic("emailSignInConfig")(emailSignInConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tenant]
   }
-  @scala.inline
-  implicit class TenantOps[Self <: Tenant] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTenantId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailSignInConfig(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailSignInConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailSignInConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailSignInConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

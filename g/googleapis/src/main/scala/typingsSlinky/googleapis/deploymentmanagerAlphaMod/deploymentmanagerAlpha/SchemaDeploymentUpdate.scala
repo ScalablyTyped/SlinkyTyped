@@ -34,65 +34,18 @@ trait SchemaDeploymentUpdate extends js.Object {
 
 object SchemaDeploymentUpdate {
   @scala.inline
-  def apply(): SchemaDeploymentUpdate = {
+  def apply(
+    credential: SchemaCredential = null,
+    description: String = null,
+    labels: js.Array[SchemaDeploymentUpdateLabelEntry] = null,
+    manifest: String = null
+  ): SchemaDeploymentUpdate = {
     val __obj = js.Dynamic.literal()
+    if (credential != null) __obj.updateDynamic("credential")(credential.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (manifest != null) __obj.updateDynamic("manifest")(manifest.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeploymentUpdate]
   }
-  @scala.inline
-  implicit class SchemaDeploymentUpdateOps[Self <: SchemaDeploymentUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredential(value: SchemaCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: js.Array[SchemaDeploymentUpdateLabelEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

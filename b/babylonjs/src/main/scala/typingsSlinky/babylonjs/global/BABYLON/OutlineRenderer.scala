@@ -13,6 +13,32 @@ class OutlineRenderer protected ()
     * @param scene Defines the scene it belongs to
     */
   def this(scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
+  /**
+    * The name of the component. Each component must have a unique name.
+    */
+  /* CompleteClass */
+  override var name: String = js.native
+  /**
+    * The scene the component belongs to.
+    */
+  /* CompleteClass */
+  override var scene: typingsSlinky.babylonjs.BABYLON.Scene = js.native
+  /**
+    * Disposes the component and the associated ressources.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
+    * Rebuilds the elements related to this component in case of
+    * context lost for instance.
+    */
+  /* CompleteClass */
+  override def rebuild(): Unit = js.native
+  /**
+    * Register the component to one instance of a scene.
+    */
+  /* CompleteClass */
+  override def register(): Unit = js.native
 }
 
 /* static members */

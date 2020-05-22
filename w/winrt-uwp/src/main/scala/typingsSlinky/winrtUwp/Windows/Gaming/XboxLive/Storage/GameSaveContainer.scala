@@ -10,30 +10,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-@js.native
 trait GameSaveContainer extends js.Object {
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-  var name: String = js.native
+  var name: String
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-  var provider: GameSaveProvider = js.native
+  var provider: GameSaveProvider
   /**
     * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @param blobNamePrefix This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     */
-  def createBlobInfoQuery(blobNamePrefix: String): GameSaveBlobInfoQuery = js.native
+  def createBlobInfoQuery(blobNamePrefix: String): GameSaveBlobInfoQuery
   /**
     * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @param blobsToRead This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     */
-  def getAsync(blobsToRead: IIterable[String]): IPromiseWithIAsyncOperation[GameSaveBlobGetResult] = js.native
+  def getAsync(blobsToRead: IIterable[String]): IPromiseWithIAsyncOperation[GameSaveBlobGetResult]
   /**
     * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @param blobsToRead This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     */
-  def readAsync(blobsToRead: IMapView[String, IBuffer]): IPromiseWithIAsyncOperation[GameSaveOperationResult] = js.native
+  def readAsync(blobsToRead: IMapView[String, IBuffer]): IPromiseWithIAsyncOperation[GameSaveOperationResult]
   /**
     * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @param blobsToWrite This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
@@ -41,7 +40,7 @@ trait GameSaveContainer extends js.Object {
     * @param displayName This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     */
-  def submitPropertySetUpdatesAsync(blobsToWrite: IPropertySet, blobsToDelete: IIterable[String], displayName: String): IPromiseWithIAsyncOperation[GameSaveOperationResult] = js.native
+  def submitPropertySetUpdatesAsync(blobsToWrite: IPropertySet, blobsToDelete: IIterable[String], displayName: String): IPromiseWithIAsyncOperation[GameSaveOperationResult]
   /**
     * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @param blobsToWrite This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
@@ -49,7 +48,7 @@ trait GameSaveContainer extends js.Object {
     * @param displayName This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
     */
-  def submitUpdatesAsync(blobsToWrite: IMapView[String, IBuffer], blobsToDelete: IIterable[String], displayName: String): IPromiseWithIAsyncOperation[GameSaveOperationResult] = js.native
+  def submitUpdatesAsync(blobsToWrite: IMapView[String, IBuffer], blobsToDelete: IIterable[String], displayName: String): IPromiseWithIAsyncOperation[GameSaveOperationResult]
 }
 
 object GameSaveContainer {
@@ -66,59 +65,5 @@ object GameSaveContainer {
     val __obj = js.Dynamic.literal(createBlobInfoQuery = js.Any.fromFunction1(createBlobInfoQuery), getAsync = js.Any.fromFunction1(getAsync), name = name.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any], readAsync = js.Any.fromFunction1(readAsync), submitPropertySetUpdatesAsync = js.Any.fromFunction3(submitPropertySetUpdatesAsync), submitUpdatesAsync = js.Any.fromFunction3(submitUpdatesAsync))
     __obj.asInstanceOf[GameSaveContainer]
   }
-  @scala.inline
-  implicit class GameSaveContainerOps[Self <: GameSaveContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateBlobInfoQuery(value: String => GameSaveBlobInfoQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createBlobInfoQuery")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAsync(value: IIterable[String] => IPromiseWithIAsyncOperation[GameSaveBlobGetResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProvider(value: GameSaveProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadAsync(value: IMapView[String, IBuffer] => IPromiseWithIAsyncOperation[GameSaveOperationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSubmitPropertySetUpdatesAsync(
-      value: (IPropertySet, IIterable[String], String) => IPromiseWithIAsyncOperation[GameSaveOperationResult]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitPropertySetUpdatesAsync")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSubmitUpdatesAsync(
-      value: (IMapView[String, IBuffer], IIterable[String], String) => IPromiseWithIAsyncOperation[GameSaveOperationResult]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitUpdatesAsync")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

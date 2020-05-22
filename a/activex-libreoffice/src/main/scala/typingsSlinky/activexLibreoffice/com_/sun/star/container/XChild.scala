@@ -11,17 +11,16 @@ import scala.scalajs.js.annotation._
   *
   * This interface normally is only supported if the objects all have exactly one dedicated parent container.
   */
-@js.native
 trait XChild extends XInterface {
   /** grants access to the object containing this content. */
-  var Parent: XInterface = js.native
+  var Parent: XInterface
   /** grants access to the object containing this content. */
-  def getParent(): XInterface = js.native
+  def getParent(): XInterface
   /**
     * sets the parent to this object.
     * @throws com::sun::star::lang::NoSupportException if the name of this object cannot be changed.
     */
-  def setParent(Parent: XInterface): Unit = js.native
+  def setParent(Parent: XInterface): Unit
 }
 
 object XChild {
@@ -37,31 +36,5 @@ object XChild {
     val __obj = js.Dynamic.literal(Parent = Parent.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getParent = js.Any.fromFunction0(getParent), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setParent = js.Any.fromFunction1(setParent))
     __obj.asInstanceOf[XChild]
   }
-  @scala.inline
-  implicit class XChildOps[Self <: XChild] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParent(value: XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetParent(value: () => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getParent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetParent(value: XInterface => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setParent")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -8,207 +8,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PollyConfig extends js.Object {
-  var adapterOptions: js.UndefOr[Dictkey] = js.native
+  var adapterOptions: js.UndefOr[Dictkey] = js.undefined
   var adapters: js.UndefOr[
     js.Array[
       String | (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ _)
     ]
-  ] = js.native
-  var expiresIn: js.UndefOr[String | Null] = js.native
-  var expiryStrategy: js.UndefOr[EXPIRY_STRATEGY] = js.native
-  var logging: js.UndefOr[Boolean] = js.native
-  var matchRequestsBy: js.UndefOr[Body] = js.native
-  var mode: js.UndefOr[MODE] = js.native
-  var persister: js.UndefOr[String | TypeofPersister] = js.native
-  var persisterOptions: js.UndefOr[Fs] = js.native
-  var recordFailedRequests: js.UndefOr[Boolean] = js.native
-  var recordIfMissing: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var expiresIn: js.UndefOr[String | Null] = js.undefined
+  var expiryStrategy: js.UndefOr[EXPIRY_STRATEGY] = js.undefined
+  var logging: js.UndefOr[Boolean] = js.undefined
+  var matchRequestsBy: js.UndefOr[Body] = js.undefined
+  var mode: js.UndefOr[MODE] = js.undefined
+  var persister: js.UndefOr[String | TypeofPersister] = js.undefined
+  var persisterOptions: js.UndefOr[Fs] = js.undefined
+  var recordFailedRequests: js.UndefOr[Boolean] = js.undefined
+  var recordIfMissing: js.UndefOr[Boolean] = js.undefined
   var timing: js.UndefOr[
     (js.Function1[/* ms */ Double, js.Promise[Unit]]) | js.Function0[js.Promise[Unit]]
-  ] = js.native
+  ] = js.undefined
 }
 
 object PollyConfig {
   @scala.inline
-  def apply(): PollyConfig = {
+  def apply(
+    adapterOptions: Dictkey = null,
+    adapters: js.Array[
+      String | (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ _)
+    ] = null,
+    expiresIn: js.UndefOr[Null | String] = js.undefined,
+    expiryStrategy: EXPIRY_STRATEGY = null,
+    logging: js.UndefOr[Boolean] = js.undefined,
+    matchRequestsBy: Body = null,
+    mode: MODE = null,
+    persister: String | TypeofPersister = null,
+    persisterOptions: Fs = null,
+    recordFailedRequests: js.UndefOr[Boolean] = js.undefined,
+    recordIfMissing: js.UndefOr[Boolean] = js.undefined,
+    timing: (js.Function1[/* ms */ Double, js.Promise[Unit]]) | js.Function0[js.Promise[Unit]] = null
+  ): PollyConfig = {
     val __obj = js.Dynamic.literal()
+    if (adapterOptions != null) __obj.updateDynamic("adapterOptions")(adapterOptions.asInstanceOf[js.Any])
+    if (adapters != null) __obj.updateDynamic("adapters")(adapters.asInstanceOf[js.Any])
+    if (!js.isUndefined(expiresIn)) __obj.updateDynamic("expiresIn")(expiresIn.asInstanceOf[js.Any])
+    if (expiryStrategy != null) __obj.updateDynamic("expiryStrategy")(expiryStrategy.asInstanceOf[js.Any])
+    if (!js.isUndefined(logging)) __obj.updateDynamic("logging")(logging.get.asInstanceOf[js.Any])
+    if (matchRequestsBy != null) __obj.updateDynamic("matchRequestsBy")(matchRequestsBy.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (persister != null) __obj.updateDynamic("persister")(persister.asInstanceOf[js.Any])
+    if (persisterOptions != null) __obj.updateDynamic("persisterOptions")(persisterOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(recordFailedRequests)) __obj.updateDynamic("recordFailedRequests")(recordFailedRequests.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recordIfMissing)) __obj.updateDynamic("recordIfMissing")(recordIfMissing.get.asInstanceOf[js.Any])
+    if (timing != null) __obj.updateDynamic("timing")(timing.asInstanceOf[js.Any])
     __obj.asInstanceOf[PollyConfig]
   }
-  @scala.inline
-  implicit class PollyConfigOps[Self <: PollyConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdapterOptions(value: Dictkey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapterOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdapterOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapterOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdapters(
-      value: js.Array[
-          String | (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ _)
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdapters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiresIn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiresIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiresInNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(null)
-        ret
-    }
-    @scala.inline
-    def withExpiryStrategy(value: EXPIRY_STRATEGY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiryStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiryStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiryStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchRequestsBy(value: Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchRequestsBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchRequestsBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchRequestsBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: MODE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersister(value: String | TypeofPersister): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persister")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersister: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persister")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersisterOptions(value: Fs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persisterOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersisterOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persisterOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordFailedRequests(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordFailedRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordFailedRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordFailedRequests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordIfMissing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordIfMissing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordIfMissing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordIfMissing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimingFunction1(value: /* ms */ Double => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTimingFunction0(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTiming(value: (js.Function1[/* ms */ Double, js.Promise[Unit]]) | js.Function0[js.Promise[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

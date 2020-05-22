@@ -4,75 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProcessorOptions extends IViewerOptions {
-  var verbose: js.UndefOr[Boolean] = js.native
-  var viewerheight: js.UndefOr[Double] = js.native
-  var viewerheightratio: js.UndefOr[Double] = js.native
-  var viewerwidth: js.UndefOr[Double] = js.native
+  var verbose: js.UndefOr[Boolean] = js.undefined
+  var viewerheight: js.UndefOr[Double] = js.undefined
+  var viewerheightratio: js.UndefOr[Double] = js.undefined
+  var viewerwidth: js.UndefOr[Double] = js.undefined
 }
 
 object ProcessorOptions {
   @scala.inline
-  def apply(): ProcessorOptions = {
+  def apply(
+    bgColor: js.UndefOr[Double] = js.undefined,
+    color: js.Array[Double] = null,
+    drawFaces: js.UndefOr[Boolean] = js.undefined,
+    drawLines: js.UndefOr[Boolean] = js.undefined,
+    noWebGL: js.UndefOr[Boolean] = js.undefined,
+    verbose: js.UndefOr[Boolean] = js.undefined,
+    viewerheight: js.UndefOr[Double] = js.undefined,
+    viewerheightratio: js.UndefOr[Double] = js.undefined,
+    viewerwidth: js.UndefOr[Double] = js.undefined
+  ): ProcessorOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bgColor)) __obj.updateDynamic("bgColor")(bgColor.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(drawFaces)) __obj.updateDynamic("drawFaces")(drawFaces.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(drawLines)) __obj.updateDynamic("drawLines")(drawLines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noWebGL)) __obj.updateDynamic("noWebGL")(noWebGL.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewerheight)) __obj.updateDynamic("viewerheight")(viewerheight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewerheightratio)) __obj.updateDynamic("viewerheightratio")(viewerheightratio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewerwidth)) __obj.updateDynamic("viewerwidth")(viewerwidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessorOptions]
   }
-  @scala.inline
-  implicit class ProcessorOptionsOps[Self <: ProcessorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewerheight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewerheight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewerheight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewerheight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewerheightratio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewerheightratio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewerheightratio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewerheightratio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewerwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewerwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewerwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewerwidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

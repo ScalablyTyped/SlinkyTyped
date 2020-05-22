@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.SuspendingDeferral")
 @js.native
 abstract class SuspendingDeferral ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.SuspendingDeferral
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.SuspendingDeferral {
+  /** Notifies the operating system that the app has saved its data and is ready to be suspended. */
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

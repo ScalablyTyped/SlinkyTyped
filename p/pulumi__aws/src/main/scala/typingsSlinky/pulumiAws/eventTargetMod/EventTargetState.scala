@@ -66,161 +66,34 @@ trait EventTargetState extends js.Object {
 
 object EventTargetState {
   @scala.inline
-  def apply(): EventTargetState = {
+  def apply(
+    arn: Input[String] = null,
+    batchTarget: Input[EventTargetBatchTarget] = null,
+    ecsTarget: Input[EventTargetEcsTarget] = null,
+    input: Input[String] = null,
+    inputPath: Input[String] = null,
+    inputTransformer: Input[EventTargetInputTransformer] = null,
+    kinesisTarget: Input[EventTargetKinesisTarget] = null,
+    roleArn: Input[String] = null,
+    rule: Input[String] = null,
+    runCommandTargets: Input[js.Array[Input[EventTargetRunCommandTarget]]] = null,
+    sqsTarget: Input[EventTargetSqsTarget] = null,
+    targetId: Input[String] = null
+  ): EventTargetState = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (batchTarget != null) __obj.updateDynamic("batchTarget")(batchTarget.asInstanceOf[js.Any])
+    if (ecsTarget != null) __obj.updateDynamic("ecsTarget")(ecsTarget.asInstanceOf[js.Any])
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (inputPath != null) __obj.updateDynamic("inputPath")(inputPath.asInstanceOf[js.Any])
+    if (inputTransformer != null) __obj.updateDynamic("inputTransformer")(inputTransformer.asInstanceOf[js.Any])
+    if (kinesisTarget != null) __obj.updateDynamic("kinesisTarget")(kinesisTarget.asInstanceOf[js.Any])
+    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
+    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
+    if (runCommandTargets != null) __obj.updateDynamic("runCommandTargets")(runCommandTargets.asInstanceOf[js.Any])
+    if (sqsTarget != null) __obj.updateDynamic("sqsTarget")(sqsTarget.asInstanceOf[js.Any])
+    if (targetId != null) __obj.updateDynamic("targetId")(targetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventTargetState]
   }
-  @scala.inline
-  implicit class EventTargetStateOps[Self <: EventTargetState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatchTarget(value: Input[EventTargetBatchTarget]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEcsTarget(value: Input[EventTargetEcsTarget]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecsTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcsTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecsTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputPath(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputTransformer(value: Input[EventTargetInputTransformer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputTransformer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputTransformer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputTransformer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKinesisTarget(value: Input[EventTargetKinesisTarget]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRule(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunCommandTargets(value: Input[js.Array[Input[EventTargetRunCommandTarget]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runCommandTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunCommandTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runCommandTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSqsTarget(value: Input[EventTargetSqsTarget]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqsTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSqsTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqsTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

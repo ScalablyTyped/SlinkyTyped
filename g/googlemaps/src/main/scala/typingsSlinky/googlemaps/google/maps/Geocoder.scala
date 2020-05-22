@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /***** Services *****/
-@js.native
 trait Geocoder extends js.Object {
   def geocode(
     request: GeocoderRequest,
     callback: js.Function2[/* results */ js.Array[GeocoderResult], /* status */ GeocoderStatus, Unit]
-  ): Unit = js.native
+  ): Unit
 }
 
 object Geocoder {
@@ -21,21 +20,5 @@ object Geocoder {
     val __obj = js.Dynamic.literal(geocode = js.Any.fromFunction2(geocode))
     __obj.asInstanceOf[Geocoder]
   }
-  @scala.inline
-  implicit class GeocoderOps[Self <: Geocoder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeocode(
-      value: (GeocoderRequest, js.Function2[/* results */ js.Array[GeocoderResult], /* status */ GeocoderStatus, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geocode")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,8 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Background
 
+import typingsSlinky.winrtUwp.Windows.Devices.Sensors.ActivityType
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,5 +17,17 @@ class ActivitySensorTrigger protected ()
     * @param reportIntervalInMilliseconds The initial report interval to use for MinimumReportInterval .
     */
   def this(reportIntervalInMilliseconds: Double) = this()
+  /** Gets the minimum supported report interval for the sensor trigger. */
+  /* CompleteClass */
+  override var minimumReportInterval: Double = js.native
+  /** Gets the report interval for the trigger. */
+  /* CompleteClass */
+  override var reportInterval: Double = js.native
+  /** Gets or sets the list of activities your trigger is subscribed to. */
+  /* CompleteClass */
+  override var subscribedActivities: IVector[ActivityType] = js.native
+  /** Gets the list of supported activities you can subscribe to. */
+  /* CompleteClass */
+  override var supportedActivities: IVectorView[ActivityType] = js.native
 }
 

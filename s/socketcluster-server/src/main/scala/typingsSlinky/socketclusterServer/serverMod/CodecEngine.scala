@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CodecEngine extends js.Object {
-  def decode(input: js.Any): js.Any = js.native
-  def encode(`object`: js.Any): js.Any = js.native
+  def decode(input: js.Any): js.Any
+  def encode(`object`: js.Any): js.Any
 }
 
 object CodecEngine {
@@ -16,25 +15,5 @@ object CodecEngine {
     val __obj = js.Dynamic.literal(decode = js.Any.fromFunction1(decode), encode = js.Any.fromFunction1(encode))
     __obj.asInstanceOf[CodecEngine]
   }
-  @scala.inline
-  implicit class CodecEngineOps[Self <: CodecEngine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecode(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEncode(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

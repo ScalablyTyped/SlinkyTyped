@@ -1,13 +1,77 @@
 package typingsSlinky.officeUiFabricReact.calendarTypesMod
 
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.SyntheticEvent
+import slinky.core.TagMod
+import slinky.web.SyntheticAnimationEvent
+import slinky.web.SyntheticClipboardEvent
+import slinky.web.SyntheticCompositionEvent
+import slinky.web.SyntheticFocusEvent
+import slinky.web.SyntheticKeyboardEvent
+import slinky.web.SyntheticMouseEvent
+import slinky.web.SyntheticPointerEvent
+import slinky.web.SyntheticTouchEvent
+import slinky.web.SyntheticTransitionEvent
+import slinky.web.SyntheticUIEvent
+import slinky.web.SyntheticWheelEvent
+import typingsSlinky.react.anon.Html
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.reactStrings.`additions text`
+import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.additions
+import typingsSlinky.react.reactStrings.all
+import typingsSlinky.react.reactStrings.ascending
+import typingsSlinky.react.reactStrings.assertive
+import typingsSlinky.react.reactStrings.both
+import typingsSlinky.react.reactStrings.copy
+import typingsSlinky.react.reactStrings.date
+import typingsSlinky.react.reactStrings.decimal
+import typingsSlinky.react.reactStrings.descending
+import typingsSlinky.react.reactStrings.dialog
+import typingsSlinky.react.reactStrings.email
+import typingsSlinky.react.reactStrings.execute
+import typingsSlinky.react.reactStrings.grammar
+import typingsSlinky.react.reactStrings.grid
+import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.inherit
+import typingsSlinky.react.reactStrings.link
+import typingsSlinky.react.reactStrings.list
+import typingsSlinky.react.reactStrings.listbox
+import typingsSlinky.react.reactStrings.location
+import typingsSlinky.react.reactStrings.menu
+import typingsSlinky.react.reactStrings.mixed
+import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.no
+import typingsSlinky.react.reactStrings.none
+import typingsSlinky.react.reactStrings.numeric
+import typingsSlinky.react.reactStrings.off
+import typingsSlinky.react.reactStrings.on
+import typingsSlinky.react.reactStrings.other
+import typingsSlinky.react.reactStrings.page
+import typingsSlinky.react.reactStrings.polite
+import typingsSlinky.react.reactStrings.popup
+import typingsSlinky.react.reactStrings.removals
+import typingsSlinky.react.reactStrings.search
+import typingsSlinky.react.reactStrings.spelling
+import typingsSlinky.react.reactStrings.step
+import typingsSlinky.react.reactStrings.tel
+import typingsSlinky.react.reactStrings.text
+import typingsSlinky.react.reactStrings.time
+import typingsSlinky.react.reactStrings.tree
+import typingsSlinky.react.reactStrings.url
+import typingsSlinky.react.reactStrings.vertical
+import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
+import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICalendarProps
   extends HTMLAttributes[HTMLElement]
      with IBaseProps[ICalendar] {
@@ -15,7 +79,7 @@ trait ICalendarProps
     * Allows all dates and buttons to be focused, including disabled ones
     * @defaultvalue false
     */
-  var allFocusable: js.UndefOr[Boolean] = js.native
+  var allFocusable: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the month view should automatically navigate to the next or previous date range
     * depending on the selected date. If this property is set to true and the currently displayed
@@ -23,64 +87,64 @@ trait ICalendarProps
     * picker will automatically navigate to the month of April.
     * @defaultvalue false
     */
-  var autoNavigateOnSelection: js.UndefOr[Boolean] = js.native
+  var autoNavigateOnSelection: js.UndefOr[Boolean] = js.undefined
   /**
     * The date range type indicating how  many days should be selected as the user
     * selects days
     * @defaultvalue DateRangeType.Day
     */
-  var dateRangeType: js.UndefOr[typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType] = js.native
+  var dateRangeType: js.UndefOr[typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType] = js.undefined
   /**
     * Apply additional formating to dates, for example localized date formatting.
     */
-  var dateTimeFormatter: js.UndefOr[ICalendarFormatDateCallbacks] = js.native
+  var dateTimeFormatter: js.UndefOr[ICalendarFormatDateCallbacks] = js.undefined
   /**
     * The first day of the week for your locale.
     * @defaultvalue DayOfWeek.Sunday
     */
-  var firstDayOfWeek: js.UndefOr[typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek] = js.native
+  var firstDayOfWeek: js.UndefOr[typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek] = js.undefined
   /**
     * Defines when the first week of the year should start, FirstWeekOfYear.FirstDay,
     * FirstWeekOfYear.FirstFullWeek or FirstWeekOfYear.FirstFourDayWeek are the possible values
     * @defaultvalue FirstWeekOfYear.FirstDay
     */
-  var firstWeekOfYear: js.UndefOr[typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear] = js.native
+  var firstWeekOfYear: js.UndefOr[typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear] = js.undefined
   /**
     * Whether the month picker should highlight the current month
     * @defaultvalue false
     */
-  var highlightCurrentMonth: js.UndefOr[Boolean] = js.native
+  var highlightCurrentMonth: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the month picker should highlight the selected month
     * @defaultvalue false
     */
-  var highlightSelectedMonth: js.UndefOr[Boolean] = js.native
+  var highlightSelectedMonth: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the day picker is shown beside the month picker or hidden.
     * @defaultvalue true
     */
-  var isDayPickerVisible: js.UndefOr[Boolean] = js.native
+  var isDayPickerVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the month picker is shown beside the day picker or hidden.
     * @defaultvalue true
     */
-  var isMonthPickerVisible: js.UndefOr[Boolean] = js.native
+  var isMonthPickerVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * If set the Calendar will not allow navigation to or selection of a date later than this value.
     */
-  var maxDate: js.UndefOr[js.Date] = js.native
+  var maxDate: js.UndefOr[js.Date] = js.undefined
   /**
     * If set the Calendar will not allow navigation to or selection of a date earlier than this value.
     */
-  var minDate: js.UndefOr[js.Date] = js.native
+  var minDate: js.UndefOr[js.Date] = js.undefined
   /**
     * Customize navigation icons using ICalendarIconStrings
     */
-  var navigationIcons: js.UndefOr[ICalendarIconStrings] = js.native
+  var navigationIcons: js.UndefOr[ICalendarIconStrings] = js.undefined
   /**
     * Callback issued when calendar is closed
     */
-  var onDismiss: js.UndefOr[js.Function0[Unit]] = js.native
+  var onDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback issued when a date is selected
     * @param date - The date the user selected
@@ -89,419 +153,479 @@ trait ICalendarProps
     */
   var onSelectDate: js.UndefOr[
     js.Function2[/* date */ js.Date, /* selectedDateRangeArray */ js.UndefOr[js.Array[js.Date]], Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * If set the Calendar will not allow selection of dates in this array.
     */
-  var restrictedDates: js.UndefOr[js.Array[js.Date]] = js.native
+  var restrictedDates: js.UndefOr[js.Array[js.Date]] = js.undefined
   /**
     * When clicking on "Today", select the date and close the calendar.
     * @defaultvalue false
     */
-  var selectDateOnClick: js.UndefOr[Boolean] = js.native
+  var selectDateOnClick: js.UndefOr[Boolean] = js.undefined
   /**
     * This property has been removed at 0.80.0 in place of the `focus` method, to be removed \@ 1.0.0.
     * @deprecated Replaced with the `focus` method.
     */
-  var shouldFocusOnMount: js.UndefOr[Boolean] = js.native
+  var shouldFocusOnMount: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the close button should be shown or not
     * @defaultvalue false
     */
-  var showCloseButton: js.UndefOr[Boolean] = js.native
+  var showCloseButton: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the "Go to today" link should be shown or not
     */
-  var showGoToToday: js.UndefOr[Boolean] = js.native
+  var showGoToToday: js.UndefOr[Boolean] = js.undefined
   /**
     * Show month picker on top of date picker when visible.
     * @defaultvalue false
     */
-  var showMonthPickerAsOverlay: js.UndefOr[Boolean] = js.native
+  var showMonthPickerAsOverlay: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the calendar should show 6 weeks by default.
     * @defaultvalue false
     */
-  var showSixWeeksByDefault: js.UndefOr[Boolean] = js.native
+  var showSixWeeksByDefault: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether the calendar should show the week number (weeks 1 to 53) before each week row
     * @defaultvalue false
     */
-  var showWeekNumbers: js.UndefOr[Boolean] = js.native
+  var showWeekNumbers: js.UndefOr[Boolean] = js.undefined
   /**
     * Localized strings to use in the Calendar
     */
-  var strings: ICalendarStrings | Null = js.native
+  var strings: ICalendarStrings | Null
   /**
     * Value of today. If null, current time in client machine will be used.
     */
-  var today: js.UndefOr[js.Date] = js.native
+  var today: js.UndefOr[js.Date] = js.undefined
   /**
     * Default value of the Calendar, if any
     */
-  var value: js.UndefOr[js.Date] = js.native
+  var value: js.UndefOr[js.Date] = js.undefined
   /**
     * The days that are selectable when dateRangeType is WorkWeek.
     * If dateRangeType is not WorkWeek this property does nothing.
     * @defaultvalue [Monday,Tuesday,Wednesday,Thursday,Friday]
     */
-  var workWeekDays: js.UndefOr[js.Array[typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek]] = js.native
+  var workWeekDays: js.UndefOr[js.Array[typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek]] = js.undefined
   /**
     * Whether the year picker is enabled
     * @defaultvalue false
     */
-  var yearPickerHidden: js.UndefOr[Boolean] = js.native
+  var yearPickerHidden: js.UndefOr[Boolean] = js.undefined
 }
 
 object ICalendarProps {
   @scala.inline
-  def apply(): ICalendarProps = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    about: String = null,
+    accessKey: String = null,
+    allFocusable: js.UndefOr[Boolean] = js.undefined,
+    `aria-activedescendant`: String = null,
+    `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
+    `aria-autocomplete`: none | `inline` | list | both = null,
+    `aria-busy`: js.UndefOr[Boolean] = js.undefined,
+    `aria-checked`: Boolean | mixed = null,
+    `aria-colcount`: js.UndefOr[Double] = js.undefined,
+    `aria-colindex`: js.UndefOr[Double] = js.undefined,
+    `aria-colspan`: js.UndefOr[Double] = js.undefined,
+    `aria-controls`: String = null,
+    `aria-current`: Boolean | page | step | location | date | time = null,
+    `aria-describedby`: String = null,
+    `aria-details`: String = null,
+    `aria-disabled`: js.UndefOr[Boolean] = js.undefined,
+    `aria-dropeffect`: none | copy | execute | link | move | popup = null,
+    `aria-errormessage`: String = null,
+    `aria-expanded`: js.UndefOr[Boolean] = js.undefined,
+    `aria-flowto`: String = null,
+    `aria-grabbed`: js.UndefOr[Boolean] = js.undefined,
+    `aria-haspopup`: Boolean | menu | listbox | tree | grid | dialog = null,
+    `aria-hidden`: js.UndefOr[Boolean] = js.undefined,
+    `aria-invalid`: Boolean | grammar | spelling = null,
+    `aria-keyshortcuts`: String = null,
+    `aria-label`: String = null,
+    `aria-labelledby`: String = null,
+    `aria-level`: js.UndefOr[Double] = js.undefined,
+    `aria-live`: off | assertive | polite = null,
+    `aria-modal`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiline`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined,
+    `aria-orientation`: horizontal | vertical = null,
+    `aria-owns`: String = null,
+    `aria-placeholder`: String = null,
+    `aria-posinset`: js.UndefOr[Double] = js.undefined,
+    `aria-pressed`: Boolean | mixed = null,
+    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
+    `aria-relevant`: additions | (`additions text`) | all | removals | text = null,
+    `aria-required`: js.UndefOr[Boolean] = js.undefined,
+    `aria-roledescription`: String = null,
+    `aria-rowcount`: js.UndefOr[Double] = js.undefined,
+    `aria-rowindex`: js.UndefOr[Double] = js.undefined,
+    `aria-rowspan`: js.UndefOr[Double] = js.undefined,
+    `aria-selected`: js.UndefOr[Boolean] = js.undefined,
+    `aria-setsize`: js.UndefOr[Double] = js.undefined,
+    `aria-sort`: none | ascending | descending | other = null,
+    `aria-valuemax`: js.UndefOr[Double] = js.undefined,
+    `aria-valuemin`: js.UndefOr[Double] = js.undefined,
+    `aria-valuenow`: js.UndefOr[Double] = js.undefined,
+    `aria-valuetext`: String = null,
+    autoCapitalize: String = null,
+    autoCorrect: String = null,
+    autoNavigateOnSelection: js.UndefOr[Boolean] = js.undefined,
+    autoSave: String = null,
+    children: TagMod[Any] = null,
+    className: String = null,
+    color: String = null,
+    componentRef: IRefObject[ICalendar] = null,
+    contentEditable: Booleanish | inherit = null,
+    contextMenu: String = null,
+    dangerouslySetInnerHTML: Html = null,
+    datatype: String = null,
+    dateRangeType: typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType = null,
+    dateTimeFormatter: ICalendarFormatDateCallbacks = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String | Double | js.Array[String] = null,
+    dir: String = null,
+    draggable: js.UndefOr[Booleanish] = js.undefined,
+    firstDayOfWeek: typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek = null,
+    firstWeekOfYear: typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear = null,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    highlightCurrentMonth: js.UndefOr[Boolean] = js.undefined,
+    highlightSelectedMonth: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    inlist: js.Any = null,
+    inputMode: none | text | tel | url | email | numeric | decimal | search = null,
+    is: String = null,
+    isDayPickerVisible: js.UndefOr[Boolean] = js.undefined,
+    isMonthPickerVisible: js.UndefOr[Boolean] = js.undefined,
+    itemID: String = null,
+    itemProp: String = null,
+    itemRef: String = null,
+    itemScope: js.UndefOr[Boolean] = js.undefined,
+    itemType: String = null,
+    lang: String = null,
+    maxDate: js.Date = null,
+    minDate: js.Date = null,
+    navigationIcons: ICalendarIconStrings = null,
+    onAbort: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onAnimationEnd: SyntheticAnimationEvent[HTMLElement] => Unit = null,
+    onAnimationIteration: SyntheticAnimationEvent[HTMLElement] => Unit = null,
+    onAnimationStart: SyntheticAnimationEvent[HTMLElement] => Unit = null,
+    onAuxClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
+    onBlur: SyntheticFocusEvent[HTMLElement] => Unit = null,
+    onCanPlay: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onCanPlayThrough: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
+    onClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onCompositionEnd: SyntheticCompositionEvent[HTMLElement] => Unit = null,
+    onCompositionStart: SyntheticCompositionEvent[HTMLElement] => Unit = null,
+    onCompositionUpdate: SyntheticCompositionEvent[HTMLElement] => Unit = null,
+    onContextMenu: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onCopy: SyntheticClipboardEvent[HTMLElement] => Unit = null,
+    onCut: SyntheticClipboardEvent[HTMLElement] => Unit = null,
+    onDismiss: () => Unit = null,
+    onDoubleClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onDrag: DragEvent[HTMLElement] => Unit = null,
+    onDragEnd: DragEvent[HTMLElement] => Unit = null,
+    onDragEnter: DragEvent[HTMLElement] => Unit = null,
+    onDragExit: DragEvent[HTMLElement] => Unit = null,
+    onDragLeave: DragEvent[HTMLElement] => Unit = null,
+    onDragOver: DragEvent[HTMLElement] => Unit = null,
+    onDragStart: DragEvent[HTMLElement] => Unit = null,
+    onDrop: DragEvent[HTMLElement] => Unit = null,
+    onDurationChange: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onEmptied: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onEncrypted: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onEnded: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onError: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onFocus: SyntheticFocusEvent[HTMLElement] => Unit = null,
+    onInput: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
+    onInvalid: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
+    onKeyDown: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
+    onKeyPress: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
+    onKeyUp: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
+    onLoad: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onLoadStart: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onLoadedData: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onLoadedMetadata: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onMouseDown: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onMouseEnter: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onMouseLeave: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onMouseMove: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onMouseOut: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onMouseOver: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onMouseUp: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onPaste: SyntheticClipboardEvent[HTMLElement] => Unit = null,
+    onPause: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onPlay: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onPlaying: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onPointerCancel: SyntheticPointerEvent[HTMLElement] => Unit = null,
+    onPointerDown: SyntheticPointerEvent[HTMLElement] => Unit = null,
+    onPointerEnter: SyntheticPointerEvent[HTMLElement] => Unit = null,
+    onPointerLeave: SyntheticPointerEvent[HTMLElement] => Unit = null,
+    onPointerMove: SyntheticPointerEvent[HTMLElement] => Unit = null,
+    onPointerOut: SyntheticPointerEvent[HTMLElement] => Unit = null,
+    onPointerOver: SyntheticPointerEvent[HTMLElement] => Unit = null,
+    onPointerUp: SyntheticPointerEvent[HTMLElement] => Unit = null,
+    onProgress: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onRateChange: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
+    onScroll: SyntheticUIEvent[HTMLElement] => Unit = null,
+    onSeeked: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onSeeking: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onSelect: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onSelectDate: (/* date */ js.Date, /* selectedDateRangeArray */ js.UndefOr[js.Array[js.Date]]) => Unit = null,
+    onStalled: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onSubmit: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit = null,
+    onSuspend: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onTimeUpdate: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onTouchCancel: SyntheticTouchEvent[HTMLElement] => Unit = null,
+    onTouchEnd: SyntheticTouchEvent[HTMLElement] => Unit = null,
+    onTouchMove: SyntheticTouchEvent[HTMLElement] => Unit = null,
+    onTouchStart: SyntheticTouchEvent[HTMLElement] => Unit = null,
+    onTransitionEnd: SyntheticTransitionEvent[HTMLElement] => Unit = null,
+    onVolumeChange: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onWaiting: SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onWheel: SyntheticWheelEvent[HTMLElement] => Unit = null,
+    placeholder: String = null,
+    prefix: String = null,
+    property: String = null,
+    radioGroup: String = null,
+    resource: String = null,
+    restrictedDates: js.Array[js.Date] = null,
+    results: js.UndefOr[Double] = js.undefined,
+    role: String = null,
+    security: String = null,
+    selectDateOnClick: js.UndefOr[Boolean] = js.undefined,
+    shouldFocusOnMount: js.UndefOr[Boolean] = js.undefined,
+    showCloseButton: js.UndefOr[Boolean] = js.undefined,
+    showGoToToday: js.UndefOr[Boolean] = js.undefined,
+    showMonthPickerAsOverlay: js.UndefOr[Boolean] = js.undefined,
+    showSixWeeksByDefault: js.UndefOr[Boolean] = js.undefined,
+    showWeekNumbers: js.UndefOr[Boolean] = js.undefined,
+    slot: String = null,
+    spellCheck: js.UndefOr[Booleanish] = js.undefined,
+    strings: ICalendarStrings = null,
+    style: CSSProperties = null,
+    suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined,
+    suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    title: String = null,
+    today: js.Date = null,
+    translate: yes | no = null,
+    typeof: String = null,
+    unselectable: on | off = null,
+    value: js.Date = null,
+    vocab: String = null,
+    workWeekDays: js.Array[typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek] = null,
+    yearPickerHidden: js.UndefOr[Boolean] = js.undefined
+  ): ICalendarProps = {
+    val __obj = js.Dynamic.literal(strings = strings.asInstanceOf[js.Any])
+    if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(allFocusable)) __obj.updateDynamic("allFocusable")(allFocusable.get.asInstanceOf[js.Any])
+    if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.get.asInstanceOf[js.Any])
+    if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-busy`)) __obj.updateDynamic("aria-busy")(`aria-busy`.get.asInstanceOf[js.Any])
+    if (`aria-checked` != null) __obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-colcount`)) __obj.updateDynamic("aria-colcount")(`aria-colcount`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-colindex`)) __obj.updateDynamic("aria-colindex")(`aria-colindex`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-colspan`)) __obj.updateDynamic("aria-colspan")(`aria-colspan`.get.asInstanceOf[js.Any])
+    if (`aria-controls` != null) __obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
+    if (`aria-current` != null) __obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
+    if (`aria-details` != null) __obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-disabled`)) __obj.updateDynamic("aria-disabled")(`aria-disabled`.get.asInstanceOf[js.Any])
+    if (`aria-dropeffect` != null) __obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+    if (`aria-errormessage` != null) __obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-expanded`)) __obj.updateDynamic("aria-expanded")(`aria-expanded`.get.asInstanceOf[js.Any])
+    if (`aria-flowto` != null) __obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-grabbed`)) __obj.updateDynamic("aria-grabbed")(`aria-grabbed`.get.asInstanceOf[js.Any])
+    if (`aria-haspopup` != null) __obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-hidden`)) __obj.updateDynamic("aria-hidden")(`aria-hidden`.get.asInstanceOf[js.Any])
+    if (`aria-invalid` != null) __obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+    if (`aria-keyshortcuts` != null) __obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-level`)) __obj.updateDynamic("aria-level")(`aria-level`.get.asInstanceOf[js.Any])
+    if (`aria-live` != null) __obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-modal`)) __obj.updateDynamic("aria-modal")(`aria-modal`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiline`)) __obj.updateDynamic("aria-multiline")(`aria-multiline`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiselectable`)) __obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.get.asInstanceOf[js.Any])
+    if (`aria-orientation` != null) __obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+    if (`aria-owns` != null) __obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+    if (`aria-placeholder` != null) __obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-posinset`)) __obj.updateDynamic("aria-posinset")(`aria-posinset`.get.asInstanceOf[js.Any])
+    if (`aria-pressed` != null) __obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.get.asInstanceOf[js.Any])
+    if (`aria-relevant` != null) __obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-required`)) __obj.updateDynamic("aria-required")(`aria-required`.get.asInstanceOf[js.Any])
+    if (`aria-roledescription` != null) __obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-rowcount`)) __obj.updateDynamic("aria-rowcount")(`aria-rowcount`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-rowindex`)) __obj.updateDynamic("aria-rowindex")(`aria-rowindex`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-rowspan`)) __obj.updateDynamic("aria-rowspan")(`aria-rowspan`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-selected`)) __obj.updateDynamic("aria-selected")(`aria-selected`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-setsize`)) __obj.updateDynamic("aria-setsize")(`aria-setsize`.get.asInstanceOf[js.Any])
+    if (`aria-sort` != null) __obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-valuemax`)) __obj.updateDynamic("aria-valuemax")(`aria-valuemax`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-valuemin`)) __obj.updateDynamic("aria-valuemin")(`aria-valuemin`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-valuenow`)) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.get.asInstanceOf[js.Any])
+    if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
+    if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
+    if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoNavigateOnSelection)) __obj.updateDynamic("autoNavigateOnSelection")(autoNavigateOnSelection.get.asInstanceOf[js.Any])
+    if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
+    if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
+    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (dateRangeType != null) __obj.updateDynamic("dateRangeType")(dateRangeType.asInstanceOf[js.Any])
+    if (dateTimeFormatter != null) __obj.updateDynamic("dateTimeFormatter")(dateTimeFormatter.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.get.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
+    if (firstWeekOfYear != null) __obj.updateDynamic("firstWeekOfYear")(firstWeekOfYear.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightCurrentMonth)) __obj.updateDynamic("highlightCurrentMonth")(highlightCurrentMonth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightSelectedMonth)) __obj.updateDynamic("highlightSelectedMonth")(highlightSelectedMonth.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
+    if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
+    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDayPickerVisible)) __obj.updateDynamic("isDayPickerVisible")(isDayPickerVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isMonthPickerVisible)) __obj.updateDynamic("isMonthPickerVisible")(isMonthPickerVisible.get.asInstanceOf[js.Any])
+    if (itemID != null) __obj.updateDynamic("itemID")(itemID.asInstanceOf[js.Any])
+    if (itemProp != null) __obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
+    if (itemRef != null) __obj.updateDynamic("itemRef")(itemRef.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.get.asInstanceOf[js.Any])
+    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
+    if (navigationIcons != null) __obj.updateDynamic("navigationIcons")(navigationIcons.asInstanceOf[js.Any])
+    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
+    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
+    if (onAnimationIteration != null) __obj.updateDynamic("onAnimationIteration")(js.Any.fromFunction1(onAnimationIteration))
+    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
+    if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
+    if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
+    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
+    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
+    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
+    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
+    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
+    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
+    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction1(onDoubleClick))
+    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
+    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
+    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
+    if (onDragExit != null) __obj.updateDynamic("onDragExit")(js.Any.fromFunction1(onDragExit))
+    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
+    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
+    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
+    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
+    if (onEmptied != null) __obj.updateDynamic("onEmptied")(js.Any.fromFunction1(onEmptied))
+    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
+    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
+    if (onInvalid != null) __obj.updateDynamic("onInvalid")(js.Any.fromFunction1(onInvalid))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
+    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
+    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
+    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction1(onLoadStart))
+    if (onLoadedData != null) __obj.updateDynamic("onLoadedData")(js.Any.fromFunction1(onLoadedData))
+    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
+    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
+    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
+    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
+    if (onPlaying != null) __obj.updateDynamic("onPlaying")(js.Any.fromFunction1(onPlaying))
+    if (onPointerCancel != null) __obj.updateDynamic("onPointerCancel")(js.Any.fromFunction1(onPointerCancel))
+    if (onPointerDown != null) __obj.updateDynamic("onPointerDown")(js.Any.fromFunction1(onPointerDown))
+    if (onPointerEnter != null) __obj.updateDynamic("onPointerEnter")(js.Any.fromFunction1(onPointerEnter))
+    if (onPointerLeave != null) __obj.updateDynamic("onPointerLeave")(js.Any.fromFunction1(onPointerLeave))
+    if (onPointerMove != null) __obj.updateDynamic("onPointerMove")(js.Any.fromFunction1(onPointerMove))
+    if (onPointerOut != null) __obj.updateDynamic("onPointerOut")(js.Any.fromFunction1(onPointerOut))
+    if (onPointerOver != null) __obj.updateDynamic("onPointerOver")(js.Any.fromFunction1(onPointerOver))
+    if (onPointerUp != null) __obj.updateDynamic("onPointerUp")(js.Any.fromFunction1(onPointerUp))
+    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+    if (onRateChange != null) __obj.updateDynamic("onRateChange")(js.Any.fromFunction1(onRateChange))
+    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (onSeeked != null) __obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))
+    if (onSeeking != null) __obj.updateDynamic("onSeeking")(js.Any.fromFunction1(onSeeking))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (onSelectDate != null) __obj.updateDynamic("onSelectDate")(js.Any.fromFunction2(onSelectDate))
+    if (onStalled != null) __obj.updateDynamic("onStalled")(js.Any.fromFunction1(onStalled))
+    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
+    if (onSuspend != null) __obj.updateDynamic("onSuspend")(js.Any.fromFunction1(onSuspend))
+    if (onTimeUpdate != null) __obj.updateDynamic("onTimeUpdate")(js.Any.fromFunction1(onTimeUpdate))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
+    if (onVolumeChange != null) __obj.updateDynamic("onVolumeChange")(js.Any.fromFunction1(onVolumeChange))
+    if (onWaiting != null) __obj.updateDynamic("onWaiting")(js.Any.fromFunction1(onWaiting))
+    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
+    if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (restrictedDates != null) __obj.updateDynamic("restrictedDates")(restrictedDates.asInstanceOf[js.Any])
+    if (!js.isUndefined(results)) __obj.updateDynamic("results")(results.get.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectDateOnClick)) __obj.updateDynamic("selectDateOnClick")(selectDateOnClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldFocusOnMount)) __obj.updateDynamic("shouldFocusOnMount")(shouldFocusOnMount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCloseButton)) __obj.updateDynamic("showCloseButton")(showCloseButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showGoToToday)) __obj.updateDynamic("showGoToToday")(showGoToToday.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMonthPickerAsOverlay)) __obj.updateDynamic("showMonthPickerAsOverlay")(showMonthPickerAsOverlay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSixWeeksByDefault)) __obj.updateDynamic("showSixWeeksByDefault")(showSixWeeksByDefault.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showWeekNumbers)) __obj.updateDynamic("showWeekNumbers")(showWeekNumbers.get.asInstanceOf[js.Any])
+    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+    if (!js.isUndefined(spellCheck)) __obj.updateDynamic("spellCheck")(spellCheck.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressContentEditableWarning)) __obj.updateDynamic("suppressContentEditableWarning")(suppressContentEditableWarning.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (today != null) __obj.updateDynamic("today")(today.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
+    if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
+    if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
+    if (workWeekDays != null) __obj.updateDynamic("workWeekDays")(workWeekDays.asInstanceOf[js.Any])
+    if (!js.isUndefined(yearPickerHidden)) __obj.updateDynamic("yearPickerHidden")(yearPickerHidden.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICalendarProps]
   }
-  @scala.inline
-  implicit class ICalendarPropsOps[Self <: ICalendarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllFocusable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allFocusable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllFocusable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allFocusable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoNavigateOnSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoNavigateOnSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoNavigateOnSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoNavigateOnSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateRangeType(value: typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRangeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateRangeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRangeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateTimeFormatter(value: ICalendarFormatDateCallbacks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeFormatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateTimeFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstDayOfWeek(value: typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstDayOfWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstWeekOfYear(value: typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstWeekOfYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstWeekOfYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstWeekOfYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightCurrentMonth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightCurrentMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightCurrentMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightCurrentMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightSelectedMonth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSelectedMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightSelectedMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSelectedMonth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDayPickerVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDayPickerVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDayPickerVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDayPickerVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMonthPickerVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMonthPickerVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMonthPickerVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMonthPickerVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigationIcons(value: ICalendarIconStrings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationIcons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigationIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationIcons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDismiss(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectDate(value: (/* date */ js.Date, /* selectedDateRangeArray */ js.UndefOr[js.Array[js.Date]]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectDate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestrictedDates(value: js.Array[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictedDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestrictedDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictedDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectDateOnClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectDateOnClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectDateOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectDateOnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldFocusOnMount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldFocusOnMount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldFocusOnMount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldFocusOnMount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCloseButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCloseButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCloseButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCloseButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowGoToToday(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGoToToday")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowGoToToday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGoToToday")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMonthPickerAsOverlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMonthPickerAsOverlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMonthPickerAsOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMonthPickerAsOverlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSixWeeksByDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSixWeeksByDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSixWeeksByDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSixWeeksByDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowWeekNumbers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWeekNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowWeekNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWeekNumbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrings(value: ICalendarStrings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strings")(null)
-        ret
-    }
-    @scala.inline
-    def withToday(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkWeekDays(value: js.Array[typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workWeekDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkWeekDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workWeekDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYearPickerHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearPickerHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYearPickerHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearPickerHidden")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

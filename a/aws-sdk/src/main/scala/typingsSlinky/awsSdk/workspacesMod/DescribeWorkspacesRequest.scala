@@ -34,89 +34,22 @@ trait DescribeWorkspacesRequest extends js.Object {
 
 object DescribeWorkspacesRequest {
   @scala.inline
-  def apply(): DescribeWorkspacesRequest = {
+  def apply(
+    BundleId: BundleId = null,
+    DirectoryId: DirectoryId = null,
+    Limit: js.UndefOr[Limit] = js.undefined,
+    NextToken: PaginationToken = null,
+    UserName: UserName = null,
+    WorkspaceIds: WorkspaceIdList = null
+  ): DescribeWorkspacesRequest = {
     val __obj = js.Dynamic.literal()
+    if (BundleId != null) __obj.updateDynamic("BundleId")(BundleId.asInstanceOf[js.Any])
+    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (UserName != null) __obj.updateDynamic("UserName")(UserName.asInstanceOf[js.Any])
+    if (WorkspaceIds != null) __obj.updateDynamic("WorkspaceIds")(WorkspaceIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeWorkspacesRequest]
   }
-  @scala.inline
-  implicit class DescribeWorkspacesRequestOps[Self <: DescribeWorkspacesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBundleId(value: BundleId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BundleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BundleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Limit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserName(value: UserName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkspaceIds(value: WorkspaceIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkspaceIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

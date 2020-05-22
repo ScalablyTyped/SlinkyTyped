@@ -4,103 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IConsensusPeerMessage extends js.Object {
   /** ConsensusPeerMessage content */
-  var content: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var content: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
   /** ConsensusPeerMessage messageType */
-  var messageType: js.UndefOr[String | Null] = js.native
+  var messageType: js.UndefOr[String | Null] = js.undefined
   /** ConsensusPeerMessage name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
   /** ConsensusPeerMessage version */
-  var version: js.UndefOr[String | Null] = js.native
+  var version: js.UndefOr[String | Null] = js.undefined
 }
 
 object IConsensusPeerMessage {
   @scala.inline
-  def apply(): IConsensusPeerMessage = {
+  def apply(
+    content: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined,
+    messageType: js.UndefOr[Null | String] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined,
+    version: js.UndefOr[Null | String] = js.undefined
+  ): IConsensusPeerMessage = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(content)) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageType)) __obj.updateDynamic("messageType")(messageType.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConsensusPeerMessage]
   }
-  @scala.inline
-  implicit class IConsensusPeerMessageOps[Self <: IConsensusPeerMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(null)
-        ret
-    }
-    @scala.inline
-    def withMessageType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageType")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(null)
-        ret
-    }
-  }
-  
 }
 

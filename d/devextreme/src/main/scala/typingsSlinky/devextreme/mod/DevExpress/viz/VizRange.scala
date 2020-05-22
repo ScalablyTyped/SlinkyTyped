@@ -13,81 +13,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VizRange extends js.Object {
-  /** The range's end value. */
-  var endValue: js.UndefOr[Double | js.Date | String] = js.native
-  /** The range's length. */
+  /** @name VizRange.endValue */
+  var endValue: js.UndefOr[Double | js.Date | String] = js.undefined
+  /** @name VizRange.length */
   var length: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.native
-  /** The range's start value. */
-  var startValue: js.UndefOr[Double | js.Date | String] = js.native
+  ] = js.undefined
+  /** @name VizRange.startValue */
+  var startValue: js.UndefOr[Double | js.Date | String] = js.undefined
 }
 
 object VizRange {
   @scala.inline
-  def apply(): VizRange = {
+  def apply(
+    endValue: Double | js.Date | String = null,
+    length: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
+    startValue: Double | js.Date | String = null
+  ): VizRange = {
     val __obj = js.Dynamic.literal()
+    if (endValue != null) __obj.updateDynamic("endValue")(endValue.asInstanceOf[js.Any])
+    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
+    if (startValue != null) __obj.updateDynamic("startValue")(startValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[VizRange]
   }
-  @scala.inline
-  implicit class VizRangeOps[Self <: VizRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndValue(value: Double | js.Date | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLength(
-      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartValue(value: Double | js.Date | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

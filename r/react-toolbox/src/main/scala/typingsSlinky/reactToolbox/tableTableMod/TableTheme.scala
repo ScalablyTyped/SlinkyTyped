@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableTheme extends js.Object {
   /**
     * Used for the `thead` element.
     */
-  var head: js.UndefOr[String] = js.native
+  var head: js.UndefOr[String] = js.undefined
   /**
     * Used for the root element of the component (`table`).
     */
-  var table: js.UndefOr[String] = js.native
+  var table: js.UndefOr[String] = js.undefined
 }
 
 object TableTheme {
   @scala.inline
-  def apply(): TableTheme = {
+  def apply(head: String = null, table: String = null): TableTheme = {
     val __obj = js.Dynamic.literal()
+    if (head != null) __obj.updateDynamic("head")(head.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableTheme]
   }
-  @scala.inline
-  implicit class TableThemeOps[Self <: TableTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

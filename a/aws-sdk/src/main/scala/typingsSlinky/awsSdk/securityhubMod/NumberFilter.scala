@@ -22,53 +22,16 @@ trait NumberFilter extends js.Object {
 
 object NumberFilter {
   @scala.inline
-  def apply(): NumberFilter = {
+  def apply(
+    Eq: js.UndefOr[Double] = js.undefined,
+    Gte: js.UndefOr[Double] = js.undefined,
+    Lte: js.UndefOr[Double] = js.undefined
+  ): NumberFilter = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Eq)) __obj.updateDynamic("Eq")(Eq.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Gte)) __obj.updateDynamic("Gte")(Gte.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Lte)) __obj.updateDynamic("Lte")(Lte.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberFilter]
   }
-  @scala.inline
-  implicit class NumberFilterOps[Self <: NumberFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEq(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Eq")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Eq")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGte(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gte")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGte: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gte")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLte(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Lte")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLte: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Lte")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

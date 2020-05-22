@@ -17,5 +17,15 @@ class ASPxClientRichEditContentRemovedEventArgs protected ()
     * @param interval An interval object that relates to the removed content.
     */
   def this(subDocumentId: Double, interval: typingsSlinky.devexpressWeb.Interval) = this()
+  /**
+    * Gets the text buffer interval related to the removed content.
+    */
+  /* CompleteClass */
+  override var interval: typingsSlinky.devexpressWeb.Interval = js.native
+  /**
+    * Gets the active sub-document's identifier.
+    */
+  /* CompleteClass */
+  override var subDocumentId: Double = js.native
 }
 

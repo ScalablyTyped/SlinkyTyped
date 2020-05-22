@@ -22,53 +22,16 @@ trait SchemaLiveStreamHealthStatus extends js.Object {
 
 object SchemaLiveStreamHealthStatus {
   @scala.inline
-  def apply(): SchemaLiveStreamHealthStatus = {
+  def apply(
+    configurationIssues: js.Array[SchemaLiveStreamConfigurationIssue] = null,
+    lastUpdateTimeSeconds: String = null,
+    status: String = null
+  ): SchemaLiveStreamHealthStatus = {
     val __obj = js.Dynamic.literal()
+    if (configurationIssues != null) __obj.updateDynamic("configurationIssues")(configurationIssues.asInstanceOf[js.Any])
+    if (lastUpdateTimeSeconds != null) __obj.updateDynamic("lastUpdateTimeSeconds")(lastUpdateTimeSeconds.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiveStreamHealthStatus]
   }
-  @scala.inline
-  implicit class SchemaLiveStreamHealthStatusOps[Self <: SchemaLiveStreamHealthStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationIssues(value: js.Array[SchemaLiveStreamConfigurationIssue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationIssues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationIssues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationIssues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateTimeSeconds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateTimeSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateTimeSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateTimeSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

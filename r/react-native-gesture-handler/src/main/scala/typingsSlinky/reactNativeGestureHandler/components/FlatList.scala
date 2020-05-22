@@ -15,7 +15,6 @@ import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
-import typingsSlinky.reactNative.mod.AccessibilityStates
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.FlatListProperties
@@ -80,6 +79,12 @@ object FlatList {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.FlatList[js.Any]] {
     @scala.inline
+    def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def CellRendererComponentComponentClass(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def CellRendererComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
+    @scala.inline
     def ItemSeparatorComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def ItemSeparatorComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
@@ -143,8 +148,6 @@ object FlatList {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
-    @scala.inline
-    def accessibilityStates(value: js.Array[AccessibilityStates]): this.type = set("accessibilityStates", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -456,6 +459,11 @@ object FlatList {
   }
   
   def withProps[ItemT](p: NativeViewGestureHandlerProperties with FlatListProperties[ItemT]): Builder[ItemT] = new Builder[ItemT](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[ItemT](): Builder[ItemT] = {
+    val __props = js.Dynamic.literal()
+    new Builder[ItemT](js.Array(this.component, __props.asInstanceOf[NativeViewGestureHandlerProperties with FlatListProperties[ItemT]]))
+  }
   implicit def make[ItemT](companion: FlatList.type): Builder[ItemT] = new Builder[ItemT](js.Array(this.component, js.Dictionary.empty))()
 }
 

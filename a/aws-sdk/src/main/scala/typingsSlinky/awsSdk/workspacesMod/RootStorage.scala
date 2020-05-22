@@ -14,29 +14,10 @@ trait RootStorage extends js.Object {
 
 object RootStorage {
   @scala.inline
-  def apply(): RootStorage = {
+  def apply(Capacity: NonEmptyString = null): RootStorage = {
     val __obj = js.Dynamic.literal()
+    if (Capacity != null) __obj.updateDynamic("Capacity")(Capacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[RootStorage]
   }
-  @scala.inline
-  implicit class RootStorageOps[Self <: RootStorage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacity(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

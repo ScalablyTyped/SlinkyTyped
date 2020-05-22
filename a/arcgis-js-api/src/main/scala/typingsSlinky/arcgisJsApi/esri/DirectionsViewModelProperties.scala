@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectionsViewModelProperties extends GoToProperties {
   /**
     * The network attribute name to be used as the impedance attribute in the analysis. The default is as defined in the specific routing network layer used in your [RouteTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-RouteTask.html). You can specify any attribute names listed in the Service Directory under `Network Dataset -> Network Attributes` as `Usage Type: esriNAUTCost`. You can also specify a value of `none` to indicate that no network attributes should be used for impedance. If you specify an empty array, it will default to the default of the service.  For example, set `impedanceAttribute = "Time"` for the quickest route and `impedanceAttribute = "Length"` for shortest drive, assuming the service has those two esriNAUTCost attributes.  For more information, see [Understanding the network attribute](http://resources.arcgis.com/en/help/main/10.2/index.html#//00470000000m000000).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#impedanceAttribute)
     */
-  var impedanceAttribute: js.UndefOr[String] = js.native
+  var impedanceAttribute: js.UndefOr[String] = js.undefined
   /**
     * The maximum number of stops allowed for routing.
     *
@@ -19,13 +18,13 @@ trait DirectionsViewModelProperties extends GoToProperties {
     *
     * @default 50
     */
-  var maxStops: js.UndefOr[Double] = js.native
+  var maxStops: js.UndefOr[Double] = js.undefined
   /**
     * Route Parameters object used to call the service. Please refer to the [RouteParameters](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RouteParameters.html) documentation for the list of available settings.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#routeParameters)
     */
-  var routeParameters: js.UndefOr[RouteParametersProperties] = js.native
+  var routeParameters: js.UndefOr[RouteParametersProperties] = js.undefined
   /**
     * The URL of the REST endpoint of the Route service.
     *
@@ -33,13 +32,13 @@ trait DirectionsViewModelProperties extends GoToProperties {
     *
     * @default "https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World"
     */
-  var routeServiceUrl: js.UndefOr[String] = js.native
+  var routeServiceUrl: js.UndefOr[String] = js.undefined
   /**
     * Defines the symbol used to draw the route on the map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#routeSymbol)
     */
-  var routeSymbol: js.UndefOr[SimpleLineSymbolProperties] = js.native
+  var routeSymbol: js.UndefOr[SimpleLineSymbolProperties] = js.undefined
   /**
     * The selected travel mode. More information can be found in the [ArcGIS Online documentation](https://doc.arcgis.com/en/arcgis-online/reference/travel-modes.htm#GUID-96DF7F50-E0B2-4BF3-8271-EB515D3F0107).
     *
@@ -47,148 +46,53 @@ trait DirectionsViewModelProperties extends GoToProperties {
     *
     * @default null | 'Driving Time'
     */
-  var selectedTravelMode: js.UndefOr[DirectionsViewModelSelectedTravelMode] = js.native
+  var selectedTravelMode: js.UndefOr[DirectionsViewModelSelectedTravelMode] = js.undefined
   /**
     * The default stop symbols used to display locations between the origin and final destination.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#stopSymbols)
     */
-  var stopSymbols: js.UndefOr[DirectionsViewModelStopSymbols] = js.native
+  var stopSymbols: js.UndefOr[DirectionsViewModelStopSymbols] = js.undefined
   /**
     * An array of graphics that define the stop locations along the route.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#stops)
     */
-  var stops: js.UndefOr[CollectionProperties[GraphicProperties]] = js.native
+  var stops: js.UndefOr[CollectionProperties[GraphicProperties]] = js.undefined
   /**
     * The view from which the widget will operate.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#view)
     */
-  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.undefined
 }
 
 object DirectionsViewModelProperties {
   @scala.inline
-  def apply(): DirectionsViewModelProperties = {
+  def apply(
+    goToOverride: (/* view */ MapView | SceneView, /* goToParameters */ js.Any) => Unit = null,
+    impedanceAttribute: String = null,
+    maxStops: js.UndefOr[Double] = js.undefined,
+    routeParameters: RouteParametersProperties = null,
+    routeServiceUrl: String = null,
+    routeSymbol: SimpleLineSymbolProperties = null,
+    selectedTravelMode: DirectionsViewModelSelectedTravelMode = null,
+    stopSymbols: DirectionsViewModelStopSymbols = null,
+    stops: CollectionProperties[GraphicProperties] = null,
+    view: MapViewProperties | SceneViewProperties = null
+  ): DirectionsViewModelProperties = {
     val __obj = js.Dynamic.literal()
+    if (goToOverride != null) __obj.updateDynamic("goToOverride")(js.Any.fromFunction2(goToOverride))
+    if (impedanceAttribute != null) __obj.updateDynamic("impedanceAttribute")(impedanceAttribute.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxStops)) __obj.updateDynamic("maxStops")(maxStops.get.asInstanceOf[js.Any])
+    if (routeParameters != null) __obj.updateDynamic("routeParameters")(routeParameters.asInstanceOf[js.Any])
+    if (routeServiceUrl != null) __obj.updateDynamic("routeServiceUrl")(routeServiceUrl.asInstanceOf[js.Any])
+    if (routeSymbol != null) __obj.updateDynamic("routeSymbol")(routeSymbol.asInstanceOf[js.Any])
+    if (selectedTravelMode != null) __obj.updateDynamic("selectedTravelMode")(selectedTravelMode.asInstanceOf[js.Any])
+    if (stopSymbols != null) __obj.updateDynamic("stopSymbols")(stopSymbols.asInstanceOf[js.Any])
+    if (stops != null) __obj.updateDynamic("stops")(stops.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionsViewModelProperties]
   }
-  @scala.inline
-  implicit class DirectionsViewModelPropertiesOps[Self <: DirectionsViewModelProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImpedanceAttribute(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impedanceAttribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpedanceAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impedanceAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxStops(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxStops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteParameters(value: RouteParametersProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteServiceUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeServiceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteServiceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeServiceUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteSymbol(value: SimpleLineSymbolProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeSymbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeSymbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedTravelMode(value: DirectionsViewModelSelectedTravelMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTravelMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedTravelMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTravelMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopSymbols(value: DirectionsViewModelStopSymbols): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopSymbols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopSymbols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopSymbols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStops(value: CollectionProperties[GraphicProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: MapViewProperties | SceneViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

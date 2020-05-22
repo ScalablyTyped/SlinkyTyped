@@ -6,62 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellMinWidth[S /* <: Schema[_, _] */] extends js.Object {
-  var View: js.UndefOr[NodeView[S]] = js.native
-  var cellMinWidth: js.UndefOr[Double] = js.native
-  var handleWidth: js.UndefOr[Double] = js.native
+  var View: js.UndefOr[NodeView[S]] = js.undefined
+  var cellMinWidth: js.UndefOr[Double] = js.undefined
+  var handleWidth: js.UndefOr[Double] = js.undefined
 }
 
 object CellMinWidth {
   @scala.inline
-  def apply[S](): CellMinWidth[S] = {
+  def apply[S](
+    View: NodeView[S] = null,
+    cellMinWidth: js.UndefOr[Double] = js.undefined,
+    handleWidth: js.UndefOr[Double] = js.undefined
+  ): CellMinWidth[S] = {
     val __obj = js.Dynamic.literal()
+    if (View != null) __obj.updateDynamic("View")(View.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellMinWidth)) __obj.updateDynamic("cellMinWidth")(cellMinWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleWidth)) __obj.updateDynamic("handleWidth")(handleWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellMinWidth[S]]
   }
-  @scala.inline
-  implicit class CellMinWidthOps[Self[s] <: CellMinWidth[s], S] (val x: Self[S]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[S]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
-    @scala.inline
-    def withView(value: NodeView[S]): Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("View")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("View")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellMinWidth(value: Double): Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMinWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellMinWidth: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMinWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleWidth(value: Double): Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleWidth: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

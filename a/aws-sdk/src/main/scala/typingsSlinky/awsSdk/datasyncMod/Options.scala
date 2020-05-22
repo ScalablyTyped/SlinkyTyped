@@ -58,161 +58,34 @@ trait Options extends js.Object {
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    Atime: Atime = null,
+    BytesPerSecond: js.UndefOr[BytesPerSecond] = js.undefined,
+    Gid: Gid = null,
+    LogLevel: LogLevel = null,
+    Mtime: Mtime = null,
+    OverwriteMode: OverwriteMode = null,
+    PosixPermissions: PosixPermissions = null,
+    PreserveDeletedFiles: PreserveDeletedFiles = null,
+    PreserveDevices: PreserveDevices = null,
+    TaskQueueing: TaskQueueing = null,
+    Uid: Uid = null,
+    VerifyMode: VerifyMode = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (Atime != null) __obj.updateDynamic("Atime")(Atime.asInstanceOf[js.Any])
+    if (!js.isUndefined(BytesPerSecond)) __obj.updateDynamic("BytesPerSecond")(BytesPerSecond.get.asInstanceOf[js.Any])
+    if (Gid != null) __obj.updateDynamic("Gid")(Gid.asInstanceOf[js.Any])
+    if (LogLevel != null) __obj.updateDynamic("LogLevel")(LogLevel.asInstanceOf[js.Any])
+    if (Mtime != null) __obj.updateDynamic("Mtime")(Mtime.asInstanceOf[js.Any])
+    if (OverwriteMode != null) __obj.updateDynamic("OverwriteMode")(OverwriteMode.asInstanceOf[js.Any])
+    if (PosixPermissions != null) __obj.updateDynamic("PosixPermissions")(PosixPermissions.asInstanceOf[js.Any])
+    if (PreserveDeletedFiles != null) __obj.updateDynamic("PreserveDeletedFiles")(PreserveDeletedFiles.asInstanceOf[js.Any])
+    if (PreserveDevices != null) __obj.updateDynamic("PreserveDevices")(PreserveDevices.asInstanceOf[js.Any])
+    if (TaskQueueing != null) __obj.updateDynamic("TaskQueueing")(TaskQueueing.asInstanceOf[js.Any])
+    if (Uid != null) __obj.updateDynamic("Uid")(Uid.asInstanceOf[js.Any])
+    if (VerifyMode != null) __obj.updateDynamic("VerifyMode")(VerifyMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAtime(value: Atime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Atime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAtime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Atime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBytesPerSecond(value: BytesPerSecond): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBytesPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGid(value: Gid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: LogLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMtime(value: Mtime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMtime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mtime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwriteMode(value: OverwriteMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OverwriteMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwriteMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OverwriteMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosixPermissions(value: PosixPermissions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PosixPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosixPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PosixPermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveDeletedFiles(value: PreserveDeletedFiles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreserveDeletedFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveDeletedFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreserveDeletedFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveDevices(value: PreserveDevices): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreserveDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreserveDevices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskQueueing(value: TaskQueueing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskQueueing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskQueueing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskQueueing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: Uid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Uid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifyMode(value: VerifyMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerifyMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerifyMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerifyMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

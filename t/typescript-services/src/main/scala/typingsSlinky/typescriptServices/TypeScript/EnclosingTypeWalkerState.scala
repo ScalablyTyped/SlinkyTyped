@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EnclosingTypeWalkerState extends js.Object {
-  var _currentSymbols: js.Array[PullSymbol] = js.native
-  var _hasSetEnclosingType: Boolean = js.native
+  var _currentSymbols: js.Array[PullSymbol]
+  var _hasSetEnclosingType: Boolean
 }
 
 object EnclosingTypeWalkerState {
@@ -16,25 +15,5 @@ object EnclosingTypeWalkerState {
     val __obj = js.Dynamic.literal(_currentSymbols = _currentSymbols.asInstanceOf[js.Any], _hasSetEnclosingType = _hasSetEnclosingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnclosingTypeWalkerState]
   }
-  @scala.inline
-  implicit class EnclosingTypeWalkerStateOps[Self <: EnclosingTypeWalkerState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_currentSymbols(value: js.Array[PullSymbol]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_currentSymbols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_hasSetEnclosingType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_hasSetEnclosingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,88 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddedItemsComponent extends js.Object {
-  var addedItems: js.UndefOr[js.Array[String | Double | _]] = js.native
-  var component: js.UndefOr[dxTagBox] = js.native
-  var element: js.UndefOr[dxElement] = js.native
-  var model: js.UndefOr[js.Any] = js.native
-  var removedItems: js.UndefOr[js.Array[String | Double | _]] = js.native
+  var addedItems: js.UndefOr[js.Array[String | Double | _]] = js.undefined
+  var component: js.UndefOr[dxTagBox] = js.undefined
+  var element: js.UndefOr[dxElement] = js.undefined
+  var model: js.UndefOr[js.Any] = js.undefined
+  var removedItems: js.UndefOr[js.Array[String | Double | _]] = js.undefined
 }
 
 object AddedItemsComponent {
   @scala.inline
-  def apply(): AddedItemsComponent = {
+  def apply(
+    addedItems: js.Array[String | Double | _] = null,
+    component: dxTagBox = null,
+    element: dxElement = null,
+    model: js.Any = null,
+    removedItems: js.Array[String | Double | _] = null
+  ): AddedItemsComponent = {
     val __obj = js.Dynamic.literal()
+    if (addedItems != null) __obj.updateDynamic("addedItems")(addedItems.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (removedItems != null) __obj.updateDynamic("removedItems")(removedItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddedItemsComponent]
   }
-  @scala.inline
-  implicit class AddedItemsComponentOps[Self <: AddedItemsComponent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddedItems(value: js.Array[String | Double | _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddedItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addedItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: dxTagBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemovedItems(value: js.Array[String | Double | _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemovedItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removedItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

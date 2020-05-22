@@ -16,5 +16,6 @@ package object arangodbGeneralGraphMod {
   type DiameterOptions = typingsSlinky.arangodb.arangodbGeneralGraphMod.BetweennessOptions
   type Eccentricity = org.scalablytyped.runtime.StringDictionary[js.UndefOr[scala.Double]]
   type EccentricityOptions = typingsSlinky.arangodb.arangodbGeneralGraphMod.ShortestPathOptions
+  type Example = (js.Array[js.Object | java.lang.String]) | js.Object | java.lang.String | scala.Null
   type RadiusOptions = typingsSlinky.arangodb.arangodbGeneralGraphMod.BetweennessOptions
 }

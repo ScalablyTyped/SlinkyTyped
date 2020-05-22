@@ -22,41 +22,14 @@ trait RenewDomainRequest extends js.Object {
 
 object RenewDomainRequest {
   @scala.inline
-  def apply(CurrentExpiryYear: CurrentExpiryYear, DomainName: DomainName): RenewDomainRequest = {
+  def apply(
+    CurrentExpiryYear: CurrentExpiryYear,
+    DomainName: DomainName,
+    DurationInYears: js.UndefOr[DurationInYears] = js.undefined
+  ): RenewDomainRequest = {
     val __obj = js.Dynamic.literal(CurrentExpiryYear = CurrentExpiryYear.asInstanceOf[js.Any], DomainName = DomainName.asInstanceOf[js.Any])
+    if (!js.isUndefined(DurationInYears)) __obj.updateDynamic("DurationInYears")(DurationInYears.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenewDomainRequest]
   }
-  @scala.inline
-  implicit class RenewDomainRequestOps[Self <: RenewDomainRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentExpiryYear(value: CurrentExpiryYear): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentExpiryYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomainName(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDurationInYears(value: DurationInYears): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationInYears")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationInYears: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationInYears")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -27,53 +27,16 @@ trait SchemaGooglePrivacyDlpV2FindingLimits extends js.Object {
 
 object SchemaGooglePrivacyDlpV2FindingLimits {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2FindingLimits = {
+  def apply(
+    maxFindingsPerInfoType: js.Array[SchemaGooglePrivacyDlpV2InfoTypeLimit] = null,
+    maxFindingsPerItem: js.UndefOr[Double] = js.undefined,
+    maxFindingsPerRequest: js.UndefOr[Double] = js.undefined
+  ): SchemaGooglePrivacyDlpV2FindingLimits = {
     val __obj = js.Dynamic.literal()
+    if (maxFindingsPerInfoType != null) __obj.updateDynamic("maxFindingsPerInfoType")(maxFindingsPerInfoType.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFindingsPerItem)) __obj.updateDynamic("maxFindingsPerItem")(maxFindingsPerItem.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFindingsPerRequest)) __obj.updateDynamic("maxFindingsPerRequest")(maxFindingsPerRequest.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2FindingLimits]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2FindingLimitsOps[Self <: SchemaGooglePrivacyDlpV2FindingLimits] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxFindingsPerInfoType(value: js.Array[SchemaGooglePrivacyDlpV2InfoTypeLimit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFindingsPerInfoType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFindingsPerInfoType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFindingsPerInfoType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFindingsPerItem(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFindingsPerItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFindingsPerItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFindingsPerItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFindingsPerRequest(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFindingsPerRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFindingsPerRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFindingsPerRequest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

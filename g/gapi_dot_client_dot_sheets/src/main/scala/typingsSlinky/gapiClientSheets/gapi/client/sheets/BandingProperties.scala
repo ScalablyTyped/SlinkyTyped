@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BandingProperties extends js.Object {
   /** The first color that is alternating. (Required) */
-  var firstBandColor: js.UndefOr[Color] = js.native
+  var firstBandColor: js.UndefOr[Color] = js.undefined
   /**
     * The first color that is alternating. (Required)
     * If first_band_color is also set, this field takes precedence.
     */
-  var firstBandColorStyle: js.UndefOr[ColorStyle] = js.native
+  var firstBandColorStyle: js.UndefOr[ColorStyle] = js.undefined
   /**
     * The color of the last row or column. If this field is not set, the last
     * row or column is filled with either first_band_color or
     * second_band_color, depending on the color of the previous row or
     * column.
     */
-  var footerColor: js.UndefOr[Color] = js.native
+  var footerColor: js.UndefOr[Color] = js.undefined
   /**
     * The color of the last row or column. If this field is not set, the last
     * row or column is filled with either first_band_color or
@@ -27,7 +26,7 @@ trait BandingProperties extends js.Object {
     * column.
     * If footer_color is also set, this field takes precedence.
     */
-  var footerColorStyle: js.UndefOr[ColorStyle] = js.native
+  var footerColorStyle: js.UndefOr[ColorStyle] = js.undefined
   /**
     * The color of the first row or column. If this field is set, the first row
     * or column is filled with this color and the colors alternate between
@@ -36,7 +35,7 @@ trait BandingProperties extends js.Object {
     * first_band_color and the colors proceed to alternate as they normally
     * would.
     */
-  var headerColor: js.UndefOr[Color] = js.native
+  var headerColor: js.UndefOr[Color] = js.undefined
   /**
     * The color of the first row or column. If this field is set, the first row
     * or column is filled with this color and the colors alternate between
@@ -45,125 +44,38 @@ trait BandingProperties extends js.Object {
     * first_band_color and the colors proceed to alternate as they normally
     * would. If header_color is also set, this field takes precedence.
     */
-  var headerColorStyle: js.UndefOr[ColorStyle] = js.native
+  var headerColorStyle: js.UndefOr[ColorStyle] = js.undefined
   /** The second color that is alternating. (Required) */
-  var secondBandColor: js.UndefOr[Color] = js.native
+  var secondBandColor: js.UndefOr[Color] = js.undefined
   /**
     * The second color that is alternating. (Required)
     * If second_band_color is also set, this field takes precedence.
     */
-  var secondBandColorStyle: js.UndefOr[ColorStyle] = js.native
+  var secondBandColorStyle: js.UndefOr[ColorStyle] = js.undefined
 }
 
 object BandingProperties {
   @scala.inline
-  def apply(): BandingProperties = {
+  def apply(
+    firstBandColor: Color = null,
+    firstBandColorStyle: ColorStyle = null,
+    footerColor: Color = null,
+    footerColorStyle: ColorStyle = null,
+    headerColor: Color = null,
+    headerColorStyle: ColorStyle = null,
+    secondBandColor: Color = null,
+    secondBandColorStyle: ColorStyle = null
+  ): BandingProperties = {
     val __obj = js.Dynamic.literal()
+    if (firstBandColor != null) __obj.updateDynamic("firstBandColor")(firstBandColor.asInstanceOf[js.Any])
+    if (firstBandColorStyle != null) __obj.updateDynamic("firstBandColorStyle")(firstBandColorStyle.asInstanceOf[js.Any])
+    if (footerColor != null) __obj.updateDynamic("footerColor")(footerColor.asInstanceOf[js.Any])
+    if (footerColorStyle != null) __obj.updateDynamic("footerColorStyle")(footerColorStyle.asInstanceOf[js.Any])
+    if (headerColor != null) __obj.updateDynamic("headerColor")(headerColor.asInstanceOf[js.Any])
+    if (headerColorStyle != null) __obj.updateDynamic("headerColorStyle")(headerColorStyle.asInstanceOf[js.Any])
+    if (secondBandColor != null) __obj.updateDynamic("secondBandColor")(secondBandColor.asInstanceOf[js.Any])
+    if (secondBandColorStyle != null) __obj.updateDynamic("secondBandColorStyle")(secondBandColorStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[BandingProperties]
   }
-  @scala.inline
-  implicit class BandingPropertiesOps[Self <: BandingProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFirstBandColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBandColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstBandColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBandColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstBandColorStyle(value: ColorStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBandColorStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstBandColorStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBandColorStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterColorStyle(value: ColorStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerColorStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterColorStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerColorStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderColorStyle(value: ColorStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColorStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderColorStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColorStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondBandColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondBandColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondBandColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondBandColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondBandColorStyle(value: ColorStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondBandColorStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondBandColorStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondBandColorStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

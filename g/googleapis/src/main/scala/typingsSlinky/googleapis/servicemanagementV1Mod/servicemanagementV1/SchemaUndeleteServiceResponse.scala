@@ -17,29 +17,10 @@ trait SchemaUndeleteServiceResponse extends js.Object {
 
 object SchemaUndeleteServiceResponse {
   @scala.inline
-  def apply(): SchemaUndeleteServiceResponse = {
+  def apply(service: SchemaManagedService = null): SchemaUndeleteServiceResponse = {
     val __obj = js.Dynamic.literal()
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUndeleteServiceResponse]
   }
-  @scala.inline
-  implicit class SchemaUndeleteServiceResponseOps[Self <: SchemaUndeleteServiceResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withService(value: SchemaManagedService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

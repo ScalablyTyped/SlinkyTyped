@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Contents extends js.Object {
-  var contents: js.UndefOr[String] = js.native
-  var path: String = js.native
+  var contents: js.UndefOr[String] = js.undefined
+  var path: String
 }
 
 object Contents {
   @scala.inline
-  def apply(path: String): Contents = {
+  def apply(path: String, contents: String = null): Contents = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    if (contents != null) __obj.updateDynamic("contents")(contents.asInstanceOf[js.Any])
     __obj.asInstanceOf[Contents]
   }
-  @scala.inline
-  implicit class ContentsOps[Self <: Contents] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContents(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contents")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

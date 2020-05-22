@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SetEffect extends js.Object {
-  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application
+  val Parent: js.Any
   @JSName("PowerPoint.SetEffect_typekey")
-  var PowerPointDotSetEffect_typekey: SetEffect = js.native
-  var Property: MsoAnimProperty = js.native
-  var To: js.Any = js.native
+  var PowerPointDotSetEffect_typekey: SetEffect
+  var Property: MsoAnimProperty
+  var To: js.Any
 }
 
 object SetEffect {
@@ -27,43 +26,5 @@ object SetEffect {
     __obj.updateDynamic("PowerPoint.SetEffect_typekey")(PowerPointDotSetEffect_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetEffect]
   }
-  @scala.inline
-  implicit class SetEffectOps[Self <: SetEffect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotSetEffect_typekey(value: SetEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.SetEffect_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperty(value: MsoAnimProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("To")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		*	Event dispatched in case of instant messaging subsystem error
-		*/
-@js.native
+  *    Event dispatched in case of instant messaging subsystem error
+  */
 trait SystemError extends VoxImplantIMEvent {
   /**
-  			*	Error data object, contains the error details
-  			*/
-  var errorData: js.Object = js.native
+    *    Error data object, contains the error details
+    */
+  var errorData: js.Object
   /**
-  			*	Error type
-  			*/
-  var errorType: IMErrorType = js.native
+    *    Error type
+    */
+  var errorType: IMErrorType
 }
 
 object SystemError {
@@ -27,25 +26,5 @@ object SystemError {
     val __obj = js.Dynamic.literal(errorData = errorData.asInstanceOf[js.Any], errorType = errorType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SystemError]
   }
-  @scala.inline
-  implicit class SystemErrorOps[Self <: SystemError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorData(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorType(value: IMErrorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

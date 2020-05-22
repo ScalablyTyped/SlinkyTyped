@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief Windows 注册表访问模块
-	* @detail 引用方式：,```JavaScript,var registry = require('registry');,var value = registry.get(registry.CLASSES_ROOT, "\node1\node2\value");,```
-	*/
+  * @brief Windows 注册表访问模块
+  * @detail 引用方式：,```JavaScript,var registry = require('registry');,var value = registry.get(registry.CLASSES_ROOT, "\node1\node2\value");,```
+  */
 @JSImport("registry", JSImport.Namespace)
 @js.native
 object registryMod extends js.Object {

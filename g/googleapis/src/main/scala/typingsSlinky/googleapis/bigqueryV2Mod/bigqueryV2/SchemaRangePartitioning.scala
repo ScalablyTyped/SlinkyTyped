@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.bigqueryV2Mod.bigqueryV2
 
-import typingsSlinky.googleapis.AnonEnd
+import typingsSlinky.googleapis.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,46 +16,16 @@ trait SchemaRangePartitioning extends js.Object {
   /**
     * [TrustedTester] [Required] Defines the ranges for range partitioning.
     */
-  var range: js.UndefOr[AnonEnd] = js.native
+  var range: js.UndefOr[End] = js.native
 }
 
 object SchemaRangePartitioning {
   @scala.inline
-  def apply(): SchemaRangePartitioning = {
+  def apply(field: String = null, range: End = null): SchemaRangePartitioning = {
     val __obj = js.Dynamic.literal()
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRangePartitioning]
   }
-  @scala.inline
-  implicit class SchemaRangePartitioningOps[Self <: SchemaRangePartitioning] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: AnonEnd): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

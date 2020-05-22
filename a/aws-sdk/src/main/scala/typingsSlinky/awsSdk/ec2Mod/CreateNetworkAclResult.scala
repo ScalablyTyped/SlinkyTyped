@@ -14,29 +14,10 @@ trait CreateNetworkAclResult extends js.Object {
 
 object CreateNetworkAclResult {
   @scala.inline
-  def apply(): CreateNetworkAclResult = {
+  def apply(NetworkAcl: NetworkAcl = null): CreateNetworkAclResult = {
     val __obj = js.Dynamic.literal()
+    if (NetworkAcl != null) __obj.updateDynamic("NetworkAcl")(NetworkAcl.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNetworkAclResult]
   }
-  @scala.inline
-  implicit class CreateNetworkAclResultOps[Self <: CreateNetworkAclResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNetworkAcl(value: NetworkAcl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkAcl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkAcl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkAcl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

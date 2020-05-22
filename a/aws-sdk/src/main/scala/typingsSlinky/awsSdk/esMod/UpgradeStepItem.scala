@@ -26,65 +26,18 @@ trait UpgradeStepItem extends js.Object {
 
 object UpgradeStepItem {
   @scala.inline
-  def apply(): UpgradeStepItem = {
+  def apply(
+    Issues: Issues = null,
+    ProgressPercent: js.UndefOr[Double] = js.undefined,
+    UpgradeStep: UpgradeStep = null,
+    UpgradeStepStatus: UpgradeStatus = null
+  ): UpgradeStepItem = {
     val __obj = js.Dynamic.literal()
+    if (Issues != null) __obj.updateDynamic("Issues")(Issues.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProgressPercent)) __obj.updateDynamic("ProgressPercent")(ProgressPercent.get.asInstanceOf[js.Any])
+    if (UpgradeStep != null) __obj.updateDynamic("UpgradeStep")(UpgradeStep.asInstanceOf[js.Any])
+    if (UpgradeStepStatus != null) __obj.updateDynamic("UpgradeStepStatus")(UpgradeStepStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpgradeStepItem]
   }
-  @scala.inline
-  implicit class UpgradeStepItemOps[Self <: UpgradeStepItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIssues(value: Issues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Issues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Issues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpgradeStep(value: UpgradeStep): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpgradeStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpgradeStepStatus(value: UpgradeStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeStepStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpgradeStepStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeStepStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,5 +15,11 @@ class ReadFileError protected ()
     * @param file defines the optional file
     */
   def this(message: String, file: File) = this()
+  /* CompleteClass */
+  override var file: File = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

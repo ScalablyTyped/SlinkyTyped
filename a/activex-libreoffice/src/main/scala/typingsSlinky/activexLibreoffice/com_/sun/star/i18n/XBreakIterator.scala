@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   *
   * Assumption: StartPos is inclusive and EndPos is exclusive.
   */
-@js.native
 trait XBreakIterator extends XInterface {
   /**
     * Traverses in Text from **nStartPos** to the beginning of the specified character type.
@@ -22,7 +21,7 @@ trait XBreakIterator extends XInterface {
     * @param nCharType One of {@link CharType}
     * @returns The position where the character type starts
     */
-  def beginOfCharBlock(aText: String, nStartPos: Double, aLocale: Locale, nCharType: Double): Double = js.native
+  def beginOfCharBlock(aText: String, nStartPos: Double, aLocale: Locale, nCharType: Double): Double
   /**
     * Traverses in Text from **nStartPos** to the beginning of the specified script type.
     * @param aText The input text.
@@ -30,7 +29,7 @@ trait XBreakIterator extends XInterface {
     * @param nScriptType One of {@link ScriptType} .
     * @returns The position where the script type starts.
     */
-  def beginOfScript(aText: String, nStartPos: Double, nScriptType: Double): Double = js.native
+  def beginOfScript(aText: String, nStartPos: Double, nScriptType: Double): Double
   /**
     * Traverses in Text from **nStartPos** to the start of a sentence.
     * @param aText The input text.
@@ -38,7 +37,7 @@ trait XBreakIterator extends XInterface {
     * @param aLocale The locale of the character preceding **nStartPos** .
     * @returns The position where the sentence starts.
     */
-  def beginOfSentence(aText: String, nStartPos: Double, aLocale: Locale): Double = js.native
+  def beginOfSentence(aText: String, nStartPos: Double, aLocale: Locale): Double
   /**
     * Traverses in Text from **nStartPos** to the end of the specified character type.
     * @param aText The input text.
@@ -47,7 +46,7 @@ trait XBreakIterator extends XInterface {
     * @param nCharType One of {@link CharType}
     * @returns The position where the character type ends.
     */
-  def endOfCharBlock(aText: String, nStartPos: Double, aLocale: Locale, nCharType: Double): Double = js.native
+  def endOfCharBlock(aText: String, nStartPos: Double, aLocale: Locale, nCharType: Double): Double
   /**
     * Traverses in Text from **nStartPos** to the end of the specified script type.
     * @param aText The input text.
@@ -55,7 +54,7 @@ trait XBreakIterator extends XInterface {
     * @param nScriptType One of {@link ScriptType} .
     * @returns The position where the script type ends.
     */
-  def endOfScript(aText: String, nStartPos: Double, nScriptType: Double): Double = js.native
+  def endOfScript(aText: String, nStartPos: Double, nScriptType: Double): Double
   /**
     * Traverses in Text from **nStartPos** to the end of a sentence.
     * @param aText The input text.
@@ -63,7 +62,7 @@ trait XBreakIterator extends XInterface {
     * @param aLocale The locale of the character preceding **nStartPos** .
     * @returns The position where the sentence ends.
     */
-  def endOfSentence(aText: String, nStartPos: Double, aLocale: Locale): Double = js.native
+  def endOfSentence(aText: String, nStartPos: Double, aLocale: Locale): Double
   /**
     * Calculate the line break position in the Text from the specified **nStartPos** .
     * @param aText The input text.
@@ -81,14 +80,14 @@ trait XBreakIterator extends XInterface {
     nMinBreakPos: Double,
     aHyphOptions: LineBreakHyphenationOptions,
     aUserOptions: LineBreakUserOptions
-  ): LineBreakResults = js.native
+  ): LineBreakResults
   /**
     * Get the script type of the character at position **nPos** .
     * @param aText The input text.
     * @param nPos The index in aText.
     * @returns One of {@link ScriptType} .
     */
-  def getScriptType(aText: String, nPos: Double): Double = js.native
+  def getScriptType(aText: String, nPos: Double): Double
   /**
     * Identifies StartPos and EndPos of current word.
     *
@@ -103,18 +102,18 @@ trait XBreakIterator extends XInterface {
     * @param bPreferForward If `TRUE` , nPos should be considered the start of the next word and search proceeds forwards. If `FALSE` , nPos should be conside
     * @returns The {@link Boundary} of the current word.
     */
-  def getWordBoundary(aText: String, nPos: Double, aLocale: Locale, nWordType: Double, bPreferForward: Boolean): Boundary = js.native
+  def getWordBoundary(aText: String, nPos: Double, aLocale: Locale, nWordType: Double, bPreferForward: Boolean): Boundary
   /** @deprecated DeprecatedGet the WordType of the word that starts at position nPos.  This method is mis-defined, since {@link WordType} is not an attribute of a */
-  def getWordType(aText: String, nPos: Double, aLocale: Locale): Double = js.native
+  def getWordType(aText: String, nPos: Double, aLocale: Locale): Double
   /**
     * If a word starts at position **nPos** .
     *
     * It is possible that both of this method and following method **isEndWord** all return `TRUE` , since StartPos of a word is inclusive while EndPos of a
     * word is exclusive.
     */
-  def isBeginWord(aText: String, nPos: Double, aLocale: Locale, nWordType: Double): Boolean = js.native
+  def isBeginWord(aText: String, nPos: Double, aLocale: Locale, nWordType: Double): Boolean
   /** If a word ends at position **nPos** . */
-  def isEndWord(aText: String, nPos: Double, aLocale: Locale, nWordType: Double): Boolean = js.native
+  def isEndWord(aText: String, nPos: Double, aLocale: Locale, nWordType: Double): Boolean
   /**
     * Traverses in Text from **nStartPos** to the next start of the specified character type.
     * @param aText The input text.
@@ -123,7 +122,7 @@ trait XBreakIterator extends XInterface {
     * @param nCharType One of {@link CharType}
     * @returns The position where the next character type starts.
     */
-  def nextCharBlock(aText: String, nStartPos: Double, aLocale: Locale, nCharType: Double): Double = js.native
+  def nextCharBlock(aText: String, nStartPos: Double, aLocale: Locale, nCharType: Double): Double
   /**
     * Traverses specified number of characters/cells in Text from **nStartPos** forwards. {@link CharacterIteratorMode} can be cell based or character
     * based. A cell is made of more than one character.
@@ -141,7 +140,7 @@ trait XBreakIterator extends XInterface {
     nCharacterIteratorMode: Double,
     nCount: Double,
     nDone: js.Array[Double]
-  ): Double = js.native
+  ): Double
   /**
     * Traverses in Text from **nStartPos** to the next start of the specified script type.
     * @param aText The input text.
@@ -149,7 +148,7 @@ trait XBreakIterator extends XInterface {
     * @param nScriptType One of {@link ScriptType} .
     * @returns The position where the next script type starts.
     */
-  def nextScript(aText: String, nStartPos: Double, nScriptType: Double): Double = js.native
+  def nextScript(aText: String, nStartPos: Double, nScriptType: Double): Double
   /**
     * Traverses one word in Text from **nStartPos** forwards.
     * @param aText The input text.
@@ -158,7 +157,7 @@ trait XBreakIterator extends XInterface {
     * @param nWordType One of {@link WordType} , specifies the type of traveling.
     * @returns The {@link Boundary} of the found word. Normally used for CTRL-Right.
     */
-  def nextWord(aText: String, nStartPos: Double, aLocale: Locale, nWordType: Double): Boundary = js.native
+  def nextWord(aText: String, nStartPos: Double, aLocale: Locale, nWordType: Double): Boundary
   /**
     * Traverses in Text from **nStartPos** to the previous start of the specified character type.
     * @param aText The input text.
@@ -167,7 +166,7 @@ trait XBreakIterator extends XInterface {
     * @param nCharType One of {@link CharType}
     * @returns The position where the previous character type starts.
     */
-  def previousCharBlock(aText: String, nStartPos: Double, aLocale: Locale, nCharType: Double): Double = js.native
+  def previousCharBlock(aText: String, nStartPos: Double, aLocale: Locale, nCharType: Double): Double
   /**
     * Traverses specified number of characters/cells in Text from **nStartPos** backwards. {@link CharacterIteratorMode} can be cell based or character
     * based. A cell is made of more than one character.
@@ -185,7 +184,7 @@ trait XBreakIterator extends XInterface {
     nCharacterIteratorMode: Double,
     nCount: Double,
     nDone: js.Array[Double]
-  ): Double = js.native
+  ): Double
   /**
     * Traverses in Text from **nStartPos** to the previous start of the specified script type.
     * @param aText The input text.
@@ -193,7 +192,7 @@ trait XBreakIterator extends XInterface {
     * @param nScriptType One of {@link ScriptType} .
     * @returns The position where the previous script type starts.
     */
-  def previousScript(aText: String, nStartPos: Double, nScriptType: Double): Double = js.native
+  def previousScript(aText: String, nStartPos: Double, nScriptType: Double): Double
   /**
     * Traverses one word in Text from **nStartPos** backwards.
     * @param aText The input text.
@@ -202,7 +201,7 @@ trait XBreakIterator extends XInterface {
     * @param nWordType One of {@link WordType} , specifies the type of traveling.
     * @returns The {@link Boundary} of the found word. Normally used for CTRL-Left.
     */
-  def previousWord(aText: String, nStartPos: Double, aLocale: Locale, nWordType: Double): Boundary = js.native
+  def previousWord(aText: String, nStartPos: Double, aLocale: Locale, nWordType: Double): Boundary
 }
 
 object XBreakIterator {
@@ -235,135 +234,5 @@ object XBreakIterator {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), beginOfCharBlock = js.Any.fromFunction4(beginOfCharBlock), beginOfScript = js.Any.fromFunction3(beginOfScript), beginOfSentence = js.Any.fromFunction3(beginOfSentence), endOfCharBlock = js.Any.fromFunction4(endOfCharBlock), endOfScript = js.Any.fromFunction3(endOfScript), endOfSentence = js.Any.fromFunction3(endOfSentence), getLineBreak = js.Any.fromFunction6(getLineBreak), getScriptType = js.Any.fromFunction2(getScriptType), getWordBoundary = js.Any.fromFunction5(getWordBoundary), getWordType = js.Any.fromFunction3(getWordType), isBeginWord = js.Any.fromFunction4(isBeginWord), isEndWord = js.Any.fromFunction4(isEndWord), nextCharBlock = js.Any.fromFunction4(nextCharBlock), nextCharacters = js.Any.fromFunction6(nextCharacters), nextScript = js.Any.fromFunction3(nextScript), nextWord = js.Any.fromFunction4(nextWord), previousCharBlock = js.Any.fromFunction4(previousCharBlock), previousCharacters = js.Any.fromFunction6(previousCharacters), previousScript = js.Any.fromFunction3(previousScript), previousWord = js.Any.fromFunction4(previousWord), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XBreakIterator]
   }
-  @scala.inline
-  implicit class XBreakIteratorOps[Self <: XBreakIterator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBeginOfCharBlock(value: (String, Double, Locale, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginOfCharBlock")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withBeginOfScript(value: (String, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginOfScript")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withBeginOfSentence(value: (String, Double, Locale) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginOfSentence")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withEndOfCharBlock(value: (String, Double, Locale, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOfCharBlock")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withEndOfScript(value: (String, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOfScript")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withEndOfSentence(value: (String, Double, Locale) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOfSentence")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetLineBreak(
-      value: (String, Double, Locale, Double, LineBreakHyphenationOptions, LineBreakUserOptions) => LineBreakResults
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLineBreak")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withGetScriptType(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScriptType")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetWordBoundary(value: (String, Double, Locale, Double, Boolean) => Boundary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWordBoundary")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withGetWordType(value: (String, Double, Locale) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWordType")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withIsBeginWord(value: (String, Double, Locale, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBeginWord")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withIsEndWord(value: (String, Double, Locale, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEndWord")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withNextCharBlock(value: (String, Double, Locale, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextCharBlock")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withNextCharacters(value: (String, Double, Locale, Double, Double, js.Array[Double]) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextCharacters")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withNextScript(value: (String, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextScript")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withNextWord(value: (String, Double, Locale, Double) => Boundary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextWord")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withPreviousCharBlock(value: (String, Double, Locale, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousCharBlock")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withPreviousCharacters(value: (String, Double, Locale, Double, Double, js.Array[Double]) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousCharacters")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withPreviousScript(value: (String, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousScript")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withPreviousWord(value: (String, Double, Locale, Double) => Boundary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousWord")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

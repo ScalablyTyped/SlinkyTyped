@@ -19,258 +19,72 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojgauge.ojRatingGaugeSettableProperties> */
-@js.native
 trait ojRatingGaugeSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var changed: js.UndefOr[Boolean] = js.native
-  var changedState: js.UndefOr[Source] = js.native
-  var hoverState: js.UndefOr[Source] = js.native
-  var max: js.UndefOr[Double] = js.native
-  var min: js.UndefOr[Double] = js.native
-  var orientation: js.UndefOr[vertical | horizontal] = js.native
-  var preserveAspectRatio: js.UndefOr[none | meet] = js.native
-  var readonly: js.UndefOr[Boolean] = js.native
-  var selectedState: js.UndefOr[Source] = js.native
-  var step: js.UndefOr[`0.5` | `1`] = js.native
-  var thresholds: js.UndefOr[js.Array[Threshold]] = js.native
-  var tooltip: js.UndefOr[`9`] = js.native
-  var trackResize: js.UndefOr[on | off] = js.native
-  var transientValue: js.UndefOr[Double] = js.native
-  var translations: js.UndefOr[LabelAndValue] = js.native
-  var unselectedState: js.UndefOr[Source] = js.native
-  var value: js.UndefOr[Double] = js.native
-  var visualEffects: js.UndefOr[none | auto] = js.native
+  var changed: js.UndefOr[Boolean] = js.undefined
+  var changedState: js.UndefOr[Source] = js.undefined
+  var hoverState: js.UndefOr[Source] = js.undefined
+  var max: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[Double] = js.undefined
+  var orientation: js.UndefOr[vertical | horizontal] = js.undefined
+  var preserveAspectRatio: js.UndefOr[none | meet] = js.undefined
+  var readonly: js.UndefOr[Boolean] = js.undefined
+  var selectedState: js.UndefOr[Source] = js.undefined
+  var step: js.UndefOr[`0.5` | `1`] = js.undefined
+  var thresholds: js.UndefOr[js.Array[Threshold]] = js.undefined
+  var tooltip: js.UndefOr[`9`] = js.undefined
+  var trackResize: js.UndefOr[on | off] = js.undefined
+  var transientValue: js.UndefOr[Double] = js.undefined
+  var translations: js.UndefOr[LabelAndValue] = js.undefined
+  var unselectedState: js.UndefOr[Source] = js.undefined
+  var value: js.UndefOr[Double] = js.undefined
+  var visualEffects: js.UndefOr[none | auto] = js.undefined
 }
 
 object ojRatingGaugeSettablePropertiesLenient {
   @scala.inline
-  def apply(): ojRatingGaugeSettablePropertiesLenient = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    changed: js.UndefOr[Boolean] = js.undefined,
+    changedState: Source = null,
+    hoverState: Source = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    orientation: vertical | horizontal = null,
+    preserveAspectRatio: none | meet = null,
+    readonly: js.UndefOr[Boolean] = js.undefined,
+    selectedState: Source = null,
+    step: `0.5` | `1` = null,
+    thresholds: js.Array[Threshold] = null,
+    tooltip: `9` = null,
+    trackResize: on | off = null,
+    transientValue: js.UndefOr[Double] = js.undefined,
+    translations: LabelAndValue = null,
+    unselectedState: Source = null,
+    value: js.UndefOr[Double] = js.undefined,
+    visualEffects: none | auto = null
+  ): ojRatingGaugeSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(changed)) __obj.updateDynamic("changed")(changed.get.asInstanceOf[js.Any])
+    if (changedState != null) __obj.updateDynamic("changedState")(changedState.asInstanceOf[js.Any])
+    if (hoverState != null) __obj.updateDynamic("hoverState")(hoverState.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
+    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.get.asInstanceOf[js.Any])
+    if (selectedState != null) __obj.updateDynamic("selectedState")(selectedState.asInstanceOf[js.Any])
+    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
+    if (thresholds != null) __obj.updateDynamic("thresholds")(thresholds.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (trackResize != null) __obj.updateDynamic("trackResize")(trackResize.asInstanceOf[js.Any])
+    if (!js.isUndefined(transientValue)) __obj.updateDynamic("transientValue")(transientValue.get.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
+    if (unselectedState != null) __obj.updateDynamic("unselectedState")(unselectedState.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (visualEffects != null) __obj.updateDynamic("visualEffects")(visualEffects.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojRatingGaugeSettablePropertiesLenient]
   }
-  @scala.inline
-  implicit class ojRatingGaugeSettablePropertiesLenientOps[Self <: ojRatingGaugeSettablePropertiesLenient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChanged(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChangedState(value: Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangedState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverState(value: Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: vertical | horizontal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveAspectRatio(value: none | meet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedState(value: Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: `0.5` | `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThresholds(value: js.Array[Threshold]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThresholds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: `9`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackResize(value: on | off): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransientValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transientValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransientValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transientValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: LabelAndValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnselectedState(value: Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnselectedState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualEffects(value: none | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualEffects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualEffects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualEffects")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

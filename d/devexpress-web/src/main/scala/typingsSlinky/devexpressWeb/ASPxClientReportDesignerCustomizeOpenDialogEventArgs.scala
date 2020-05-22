@@ -7,18 +7,17 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientReportDesigner.CustomizeOpenDialog event.
   */
-@js.native
 trait ASPxClientReportDesignerCustomizeOpenDialogEventArgs extends ASPxClientEventArgs {
   /**
     * Provides access to the Open Report dialog.
     */
-  var Popup: ASPxDesignerOpenDialog = js.native
+  var Popup: ASPxDesignerOpenDialog
   /**
     * Customizes the Open Report dialog based on the specified template and model.
     * @param template A string that specifies the name of an HTML template for the dialog.
     * @param model A model of the Open Report dialog.
     */
-  def Customize(template: String, model: ASPxDesignerDialogModel): Unit = js.native
+  def Customize(template: String, model: ASPxDesignerDialogModel): Unit
 }
 
 object ASPxClientReportDesignerCustomizeOpenDialogEventArgs {
@@ -27,25 +26,5 @@ object ASPxClientReportDesignerCustomizeOpenDialogEventArgs {
     val __obj = js.Dynamic.literal(Customize = js.Any.fromFunction2(Customize), Popup = Popup.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientReportDesignerCustomizeOpenDialogEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientReportDesignerCustomizeOpenDialogEventArgsOps[Self <: ASPxClientReportDesignerCustomizeOpenDialogEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomize(value: (String, ASPxDesignerDialogModel) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Customize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPopup(value: ASPxDesignerOpenDialog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Popup")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

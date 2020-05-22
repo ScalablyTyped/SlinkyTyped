@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Set the return key text to "Go".
-		 */
+  * Set the return key text to "Go".
+  */
 @JSGlobal("Titanium.UI.RETURNKEY_GO")
 @js.native
 object RETURNKEY_GO extends TopLevel[Double]

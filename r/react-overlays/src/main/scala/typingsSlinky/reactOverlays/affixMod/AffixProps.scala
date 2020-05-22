@@ -6,263 +6,105 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // put AffixProps inside the exported namespace so it's importable in AutoAffix
-@js.native
 trait AffixProps extends js.Object {
   /**
     * CSS class or classes to apply when affixed
     */
-  var affixClassName: js.UndefOr[String] = js.native
+  var affixClassName: js.UndefOr[String] = js.undefined
   /**
     * Style to apply when affixed
     */
-  var affixStyle: js.UndefOr[CSSProperties] = js.native
+  var affixStyle: js.UndefOr[CSSProperties] = js.undefined
   /**
     * CSS class or classes to apply when at bottom
     */
-  var bottomClassName: js.UndefOr[String] = js.native
+  var bottomClassName: js.UndefOr[String] = js.undefined
   /**
     * Style to apply when at bottom
     */
-  var bottomStyle: js.UndefOr[CSSProperties] = js.native
+  var bottomStyle: js.UndefOr[CSSProperties] = js.undefined
   /**
     * Pixels to offset from bottom of screen when calculating position
     */
-  var offsetBottom: js.UndefOr[Double] = js.native
+  var offsetBottom: js.UndefOr[Double] = js.undefined
   /**
     * Pixels to offset from top of screen when calculating position
     */
-  var offsetTop: js.UndefOr[Double] = js.native
+  var offsetTop: js.UndefOr[Double] = js.undefined
   /**
     * Callback fired when the right before the `affixStyle` and `affixStyle` props are rendered
     */
-  var onAffix: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAffix: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback fired when the right before the `bottomStyle` and `bottomClassName` props are rendered
     */
-  var onAffixBottom: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAffixBottom: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback fired when the right before the `topStyle` and `topClassName` props are rendered
     */
-  var onAffixTop: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAffixTop: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback fired after the component `affixStyle` and `affixClassName` props have been rendered.
     */
-  var onAffixed: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAffixed: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback fired after the component `bottomStyle` and `bottomClassName` props have been rendered.
     */
-  var onAffixedBottom: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAffixedBottom: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback fired after the component `topStyle` and `topClassName` props have been rendered.
     */
-  var onAffixedTop: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAffixedTop: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * CSS class or classes to apply when at top
     */
-  var topClassName: js.UndefOr[String] = js.native
+  var topClassName: js.UndefOr[String] = js.undefined
   /**
     * Style to apply when at top
     */
-  var topStyle: js.UndefOr[CSSProperties] = js.native
+  var topStyle: js.UndefOr[CSSProperties] = js.undefined
   /**
     * When affixed, pixels to offset from top of viewport
     */
-  var viewportOffsetTop: js.UndefOr[Double] = js.native
+  var viewportOffsetTop: js.UndefOr[Double] = js.undefined
 }
 
 object AffixProps {
   @scala.inline
-  def apply(): AffixProps = {
+  def apply(
+    affixClassName: String = null,
+    affixStyle: CSSProperties = null,
+    bottomClassName: String = null,
+    bottomStyle: CSSProperties = null,
+    offsetBottom: js.UndefOr[Double] = js.undefined,
+    offsetTop: js.UndefOr[Double] = js.undefined,
+    onAffix: () => Unit = null,
+    onAffixBottom: () => Unit = null,
+    onAffixTop: () => Unit = null,
+    onAffixed: () => Unit = null,
+    onAffixedBottom: () => Unit = null,
+    onAffixedTop: () => Unit = null,
+    topClassName: String = null,
+    topStyle: CSSProperties = null,
+    viewportOffsetTop: js.UndefOr[Double] = js.undefined
+  ): AffixProps = {
     val __obj = js.Dynamic.literal()
+    if (affixClassName != null) __obj.updateDynamic("affixClassName")(affixClassName.asInstanceOf[js.Any])
+    if (affixStyle != null) __obj.updateDynamic("affixStyle")(affixStyle.asInstanceOf[js.Any])
+    if (bottomClassName != null) __obj.updateDynamic("bottomClassName")(bottomClassName.asInstanceOf[js.Any])
+    if (bottomStyle != null) __obj.updateDynamic("bottomStyle")(bottomStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetBottom)) __obj.updateDynamic("offsetBottom")(offsetBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetTop)) __obj.updateDynamic("offsetTop")(offsetTop.get.asInstanceOf[js.Any])
+    if (onAffix != null) __obj.updateDynamic("onAffix")(js.Any.fromFunction0(onAffix))
+    if (onAffixBottom != null) __obj.updateDynamic("onAffixBottom")(js.Any.fromFunction0(onAffixBottom))
+    if (onAffixTop != null) __obj.updateDynamic("onAffixTop")(js.Any.fromFunction0(onAffixTop))
+    if (onAffixed != null) __obj.updateDynamic("onAffixed")(js.Any.fromFunction0(onAffixed))
+    if (onAffixedBottom != null) __obj.updateDynamic("onAffixedBottom")(js.Any.fromFunction0(onAffixedBottom))
+    if (onAffixedTop != null) __obj.updateDynamic("onAffixedTop")(js.Any.fromFunction0(onAffixedTop))
+    if (topClassName != null) __obj.updateDynamic("topClassName")(topClassName.asInstanceOf[js.Any])
+    if (topStyle != null) __obj.updateDynamic("topStyle")(topStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewportOffsetTop)) __obj.updateDynamic("viewportOffsetTop")(viewportOffsetTop.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AffixProps]
   }
-  @scala.inline
-  implicit class AffixPropsOps[Self <: AffixProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAffixClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affixClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAffixClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affixClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAffixStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affixStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAffixStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affixStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottomClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottomClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottomStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottomStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAffix(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffix")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAffixBottom(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixBottom")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAffixBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAffixTop(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixTop")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAffixTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAffixed(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAffixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAffixedBottom(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixedBottom")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAffixedBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixedBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAffixedTop(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixedTop")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAffixedTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAffixedTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewportOffsetTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportOffsetTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewportOffsetTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportOffsetTop")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

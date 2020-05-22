@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AsyncStorage extends js.Object {
-  def getItem[T](key: String): js.Promise[T] = js.native
-  def setItem[T](key: String, value: T): js.Promise[Unit] = js.native
+  def getItem[T](key: String): js.Promise[T]
+  def setItem[T](key: String, value: T): js.Promise[Unit]
 }
 
 object AsyncStorage {
@@ -16,25 +15,5 @@ object AsyncStorage {
     val __obj = js.Dynamic.literal(getItem = js.Any.fromFunction1(getItem), setItem = js.Any.fromFunction2(setItem))
     __obj.asInstanceOf[AsyncStorage]
   }
-  @scala.inline
-  implicit class AsyncStorageOps[Self <: AsyncStorage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetItem(value: String => js.Promise[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetItem(value: (String, js.Any) => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setItem")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

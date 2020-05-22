@@ -5,82 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MinimumHeights extends js.Object {
-  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.native
-  var granularity: js.UndefOr[Double] = js.native
-  var maximumHeights: js.UndefOr[js.Array[Double]] = js.native
-  var minimumHeights: js.UndefOr[js.Array[Double]] = js.native
-  var positions: js.Array[Cartesian3] = js.native
+  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.undefined
+  var granularity: js.UndefOr[Double] = js.undefined
+  var maximumHeights: js.UndefOr[js.Array[Double]] = js.undefined
+  var minimumHeights: js.UndefOr[js.Array[Double]] = js.undefined
+  var positions: js.Array[Cartesian3]
 }
 
 object MinimumHeights {
   @scala.inline
-  def apply(positions: js.Array[Cartesian3]): MinimumHeights = {
+  def apply(
+    positions: js.Array[Cartesian3],
+    ellipsoid: typingsSlinky.cesium.mod.Ellipsoid = null,
+    granularity: js.UndefOr[Double] = js.undefined,
+    maximumHeights: js.Array[Double] = null,
+    minimumHeights: js.Array[Double] = null
+  ): MinimumHeights = {
     val __obj = js.Dynamic.literal(positions = positions.asInstanceOf[js.Any])
+    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
+    if (!js.isUndefined(granularity)) __obj.updateDynamic("granularity")(granularity.get.asInstanceOf[js.Any])
+    if (maximumHeights != null) __obj.updateDynamic("maximumHeights")(maximumHeights.asInstanceOf[js.Any])
+    if (minimumHeights != null) __obj.updateDynamic("minimumHeights")(minimumHeights.asInstanceOf[js.Any])
     __obj.asInstanceOf[MinimumHeights]
   }
-  @scala.inline
-  implicit class MinimumHeightsOps[Self <: MinimumHeights] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPositions(value: js.Array[Cartesian3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEllipsoid(value: typingsSlinky.cesium.mod.Ellipsoid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEllipsoid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGranularity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGranularity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumHeights(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumHeights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumHeights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumHeights")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumHeights(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHeights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumHeights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHeights")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

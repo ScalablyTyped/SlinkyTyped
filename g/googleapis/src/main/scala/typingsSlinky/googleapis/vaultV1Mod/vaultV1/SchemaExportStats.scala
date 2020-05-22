@@ -25,53 +25,16 @@ trait SchemaExportStats extends js.Object {
 
 object SchemaExportStats {
   @scala.inline
-  def apply(): SchemaExportStats = {
+  def apply(
+    exportedArtifactCount: String = null,
+    sizeInBytes: String = null,
+    totalArtifactCount: String = null
+  ): SchemaExportStats = {
     val __obj = js.Dynamic.literal()
+    if (exportedArtifactCount != null) __obj.updateDynamic("exportedArtifactCount")(exportedArtifactCount.asInstanceOf[js.Any])
+    if (sizeInBytes != null) __obj.updateDynamic("sizeInBytes")(sizeInBytes.asInstanceOf[js.Any])
+    if (totalArtifactCount != null) __obj.updateDynamic("totalArtifactCount")(totalArtifactCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExportStats]
   }
-  @scala.inline
-  implicit class SchemaExportStatsOps[Self <: SchemaExportStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportedArtifactCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportedArtifactCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportedArtifactCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportedArtifactCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeInBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalArtifactCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalArtifactCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalArtifactCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalArtifactCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

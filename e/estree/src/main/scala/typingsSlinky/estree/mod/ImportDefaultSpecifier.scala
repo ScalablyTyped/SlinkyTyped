@@ -4,34 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ImportDefaultSpecifier
   extends BaseModuleSpecifier
      with ModuleSpecifier {
   @JSName("type")
-  var type_ImportDefaultSpecifier: typingsSlinky.estree.estreeStrings.ImportDefaultSpecifier = js.native
+  var type_ImportDefaultSpecifier: typingsSlinky.estree.estreeStrings.ImportDefaultSpecifier
 }
 
 object ImportDefaultSpecifier {
   @scala.inline
-  def apply(local: Identifier, `type`: typingsSlinky.estree.estreeStrings.ImportDefaultSpecifier): ImportDefaultSpecifier = {
+  def apply(
+    local: Identifier,
+    `type`: typingsSlinky.estree.estreeStrings.ImportDefaultSpecifier,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): ImportDefaultSpecifier = {
     val __obj = js.Dynamic.literal(local = local.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportDefaultSpecifier]
   }
-  @scala.inline
-  implicit class ImportDefaultSpecifierOps[Self <: ImportDefaultSpecifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.estree.estreeStrings.ImportDefaultSpecifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

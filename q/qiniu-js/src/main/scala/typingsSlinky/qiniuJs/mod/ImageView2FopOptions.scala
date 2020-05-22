@@ -14,9 +14,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ImageView2FopOptions extends ImageView2Options {
-  var fop: typingsSlinky.qiniuJs.qiniuJsStrings.imageView2 = js.native
+  var fop: typingsSlinky.qiniuJs.qiniuJsStrings.imageView2
 }
 
 object ImageView2FopOptions {
@@ -32,19 +31,5 @@ object ImageView2FopOptions {
     val __obj = js.Dynamic.literal(fop = fop.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], h = h.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], q = q.asInstanceOf[js.Any], w = w.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageView2FopOptions]
   }
-  @scala.inline
-  implicit class ImageView2FopOptionsOps[Self <: ImageView2FopOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFop(value: typingsSlinky.qiniuJs.qiniuJsStrings.imageView2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fop")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

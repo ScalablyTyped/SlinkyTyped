@@ -26,9 +26,16 @@ object deleteSegmentCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteSegmentInput) = this()
+    /* CompleteClass */
+    override val input: DeleteSegmentInput = js.native
     val middlewareStack: MiddlewareStack[DeleteSegmentInput, DeleteSegmentOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[DeleteSegmentInput, DeleteSegmentOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[DeleteSegmentInput, DeleteSegmentOutput] = js.native
   }

@@ -198,7 +198,7 @@ object screepsStrings {
   sealed trait controller extends js.Object
   
   @js.native
-  sealed trait creep extends EventDestroyType
+  sealed trait creep extends js.Object
   
   @js.native
   sealed trait crystal extends ResourceConstantSansEnergy

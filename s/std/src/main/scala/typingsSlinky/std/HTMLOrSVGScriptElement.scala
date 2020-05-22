@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait HTMLOrSVGScriptElement extends js.Object
 
-object HTMLOrSVGScriptElement {
-  @scala.inline
-  implicit def apply(value: org.scalajs.dom.raw.HTMLScriptElement): HTMLOrSVGScriptElement = value.asInstanceOf[HTMLOrSVGScriptElement]
-  @scala.inline
-  implicit def apply(value: org.scalajs.dom.raw.SVGScriptElement): HTMLOrSVGScriptElement = value.asInstanceOf[HTMLOrSVGScriptElement]
-}
-

@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * SearchGroupItemMatch...
   */
-@js.native
 trait ISearchGroupItemMatch extends js.Object {
   /**
     * Property of the search group item.
@@ -20,20 +19,20 @@ trait ISearchGroupItemMatch extends js.Object {
     *
     * For dimension values, the returned qProperty will be *.
     */
-  var qAttributes: js.Array[ISearchAttribute] = js.native
+  var qAttributes: js.Array[ISearchAttribute]
   /**
     * List of ranges.
     * For example, if the search terms are Price and Make, and the search group item value is Make by Price vs Mileage,
     * then there are two ranges: one for Price and one for Make.
     */
-  var qRanges: js.Array[ISearchCharRange] = js.native
+  var qRanges: js.Array[ISearchCharRange]
   /**
     * Search match value.
     * Value of the search group item.
     * If the match is found in a field, it corresponds to the value of the field.
     * If the match is found in a generic object property, it corresponds to the property value.
     */
-  var qText: String = js.native
+  var qText: String
 }
 
 object ISearchGroupItemMatch {
@@ -42,31 +41,5 @@ object ISearchGroupItemMatch {
     val __obj = js.Dynamic.literal(qAttributes = qAttributes.asInstanceOf[js.Any], qRanges = qRanges.asInstanceOf[js.Any], qText = qText.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISearchGroupItemMatch]
   }
-  @scala.inline
-  implicit class ISearchGroupItemMatchOps[Self <: ISearchGroupItemMatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQAttributes(value: js.Array[ISearchAttribute]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQRanges(value: js.Array[ISearchCharRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

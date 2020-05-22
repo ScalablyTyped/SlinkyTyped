@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Single extends js.Object {
-  var single: js.UndefOr[`false`] = js.native
-  var strict: js.UndefOr[Boolean] = js.native
+  var single: js.UndefOr[`false`] = js.undefined
+  var strict: js.UndefOr[Boolean] = js.undefined
 }
 
 object Single {
   @scala.inline
-  def apply(): Single = {
+  def apply(single: `false` = null, strict: js.UndefOr[Boolean] = js.undefined): Single = {
     val __obj = js.Dynamic.literal()
+    if (single != null) __obj.updateDynamic("single")(single.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Single]
   }
-  @scala.inline
-  implicit class SingleOps[Self <: Single] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSingle(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

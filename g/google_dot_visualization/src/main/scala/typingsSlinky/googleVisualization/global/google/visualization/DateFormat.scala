@@ -10,5 +10,18 @@ import scala.scalajs.js.annotation._
 class DateFormat protected ()
   extends typingsSlinky.googleVisualization.google.visualization.DateFormat {
   def this(options: DateFormatOptions) = this()
+  /**
+    * Reformats the data in the specified column.
+    *
+    * @param data - A DataTable containing the data to reformat. You cannot use a DataView here.
+    * @param columnIndex - The zero-based index of the column to format. To format multiple columns, you must call this method multiple times, with different colIndex values.
+    */
+  /* CompleteClass */
+  override def format(data: typingsSlinky.googleVisualization.google.visualization.DataTable, columnIndex: Double): Unit = js.native
+  /**
+    * Returns the formatted value of a given value. This method does not require a DataTable.
+    */
+  /* CompleteClass */
+  override def formatValue(value: js.Date): String = js.native
 }
 

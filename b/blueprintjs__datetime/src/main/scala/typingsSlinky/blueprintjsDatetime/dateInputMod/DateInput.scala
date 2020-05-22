@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 class DateInput ()
   extends AbstractPureComponent2[IDateInputProps, IDateInputState, js.Object] {
   var formatDate: js.Any = js.native
+  var getInputRefHandler: js.Any = js.native
   var handleClosePopover: js.Any = js.native
   var handleDateChange: js.Any = js.native
   var handleInputBlur: js.Any = js.native
@@ -23,11 +24,11 @@ class DateInput ()
   var hasMonthChanged: js.Any = js.native
   var hasTimeChanged: js.Any = js.native
   var inputEl: js.Any = js.native
-  var inputRef: js.Any = js.native
   var isDateInRange: js.Any = js.native
   var lastElementInPopover: js.Any = js.native
   var parseDate: js.Any = js.native
   var popoverContentEl: js.Any = js.native
+  var refHandlers: js.Any = js.native
   var registerPopoverBlurHandler: js.Any = js.native
   /** safe wrapper around invoking input props event handler (prop defaults to undefined) */
   var safeInvokeInputProp: js.Any = js.native

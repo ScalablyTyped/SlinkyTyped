@@ -11,10 +11,9 @@ import scala.scalajs.js.annotation._
   *
   * Is extended by any conditional format entry, e.g. color scale, data bar, icon set, date formats, condition formats
   */
-@js.native
 trait XConditionEntry extends XInterface {
-  val Type: Double = js.native
-  def getType(): Double = js.native
+  val Type: Double
+  def getType(): Double
 }
 
 object XConditionEntry {
@@ -29,25 +28,5 @@ object XConditionEntry {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getType = js.Any.fromFunction0(getType), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XConditionEntry]
   }
-  @scala.inline
-  implicit class XConditionEntryOps[Self <: XConditionEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetType(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

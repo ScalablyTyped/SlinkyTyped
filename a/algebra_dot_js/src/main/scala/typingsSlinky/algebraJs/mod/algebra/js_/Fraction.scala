@@ -1,12 +1,12 @@
 package typingsSlinky.algebraJs.mod.algebra.js_
 
-import typingsSlinky.algebraJs.mod.Union
+import typingsSlinky.algebraJs.mod._Union
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Fraction extends Union {
+trait Fraction extends _Union {
   var denom: Double = js.native
   var numer: Double = js.native
   def abs(): Fraction = js.native

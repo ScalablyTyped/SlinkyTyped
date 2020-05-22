@@ -43,7 +43,7 @@ trait ShapeFont extends ClientObject {
   var bold: Boolean = js.native
   /**
     *
-    * The HTML color code representation of the text color (e.g. "#FF0000" represents red). Returns null if the TextRange includes text fragments with different colors.
+    * HTML color code representation of the text color (e.g., "#FF0000" represents red). Returns null if the TextRange includes text fragments with different colors.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -60,14 +60,14 @@ trait ShapeFont extends ClientObject {
   var italic: Boolean = js.native
   /**
     *
-    * Represents font name (e.g. "Calibri"). If the text is Complex Script or East Asian language, this is the corresponding font name; otherwise it is the Latin font name.
+    * Represents font name (e.g., "Calibri"). If the text is Complex Script or East Asian language, this is the corresponding font name; otherwise it is the Latin font name.
     *
     * [Api set: ExcelApi 1.9]
     */
   var name: String = js.native
   /**
     *
-    * Represents font size in points (e.g. 11). Returns null if the TextRange includes text fragments with different font sizes.
+    * Represents font size in points (e.g., 11). Returns null if the TextRange includes text fragments with different font sizes.
     *
     * [Api set: ExcelApi 1.9]
     */

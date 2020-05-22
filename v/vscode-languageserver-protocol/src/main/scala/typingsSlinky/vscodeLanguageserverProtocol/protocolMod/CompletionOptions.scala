@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompletionOptions extends js.Object {
   /**
     * The server provides support to resolve additional
     * information for a completion item.
     */
-  var resolveProvider: js.UndefOr[Boolean] = js.native
+  var resolveProvider: js.UndefOr[Boolean] = js.undefined
   /**
     * Most tools trigger completion request automatically without explicitly requesting
     * it using a keyboard shortcut (e.g. Ctrl+Space). Typically they do so when the user
@@ -21,46 +20,16 @@ trait CompletionOptions extends js.Object {
     * If code complete should automatically be trigger on characters not being valid inside
     * an identifier (for example `.` in JavaScript) list them in `triggerCharacters`.
     */
-  var triggerCharacters: js.UndefOr[js.Array[String]] = js.native
+  var triggerCharacters: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object CompletionOptions {
   @scala.inline
-  def apply(): CompletionOptions = {
+  def apply(resolveProvider: js.UndefOr[Boolean] = js.undefined, triggerCharacters: js.Array[String] = null): CompletionOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(resolveProvider)) __obj.updateDynamic("resolveProvider")(resolveProvider.get.asInstanceOf[js.Any])
+    if (triggerCharacters != null) __obj.updateDynamic("triggerCharacters")(triggerCharacters.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompletionOptions]
   }
-  @scala.inline
-  implicit class CompletionOptionsOps[Self <: CompletionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResolveProvider(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolveProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerCharacters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerCharacters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

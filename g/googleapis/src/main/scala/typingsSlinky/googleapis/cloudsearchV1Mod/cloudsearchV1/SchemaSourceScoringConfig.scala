@@ -18,29 +18,10 @@ trait SchemaSourceScoringConfig extends js.Object {
 
 object SchemaSourceScoringConfig {
   @scala.inline
-  def apply(): SchemaSourceScoringConfig = {
+  def apply(sourceImportance: String = null): SchemaSourceScoringConfig = {
     val __obj = js.Dynamic.literal()
+    if (sourceImportance != null) __obj.updateDynamic("sourceImportance")(sourceImportance.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceScoringConfig]
   }
-  @scala.inline
-  implicit class SchemaSourceScoringConfigOps[Self <: SchemaSourceScoringConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceImportance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImportance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceImportance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImportance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

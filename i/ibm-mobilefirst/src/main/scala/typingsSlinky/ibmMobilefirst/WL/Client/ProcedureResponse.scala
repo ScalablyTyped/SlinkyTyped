@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProcedureResponse extends ResponseBase {
-  var invocationResult: js.UndefOr[ProcedureInvocationResult] = js.native
-  var parameters: js.UndefOr[js.Array[_]] = js.native
+  var invocationResult: js.UndefOr[ProcedureInvocationResult] = js.undefined
+  var parameters: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object ProcedureResponse {
@@ -25,42 +24,14 @@ object ProcedureResponse {
     responseText: String,
     responseXML: String,
     status: Double,
-    statusText: String
+    statusText: String,
+    invocationResult: ProcedureInvocationResult = null,
+    parameters: js.Array[_] = null
   ): ProcedureResponse = {
     val __obj = js.Dynamic.literal(errorCode = errorCode.asInstanceOf[js.Any], errorMsg = errorMsg.asInstanceOf[js.Any], headerJSON = headerJSON.asInstanceOf[js.Any], invocationContext = invocationContext.asInstanceOf[js.Any], readyState = readyState.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], responseJSON = responseJSON.asInstanceOf[js.Any], responseText = responseText.asInstanceOf[js.Any], responseXML = responseXML.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusText = statusText.asInstanceOf[js.Any])
+    if (invocationResult != null) __obj.updateDynamic("invocationResult")(invocationResult.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcedureResponse]
   }
-  @scala.inline
-  implicit class ProcedureResponseOps[Self <: ProcedureResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvocationResult(value: ProcedureInvocationResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invocationResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvocationResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invocationResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,13 +6,15 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.buttonButtonMod.ButtonType
+import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
 import typingsSlinky.antd.buttonButtonMod.NativeButtonProps
+import typingsSlinky.antd.getRenderPropValueMod.RenderFunction
 import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.antd.popconfirmMod.PopconfirmProps
-import typingsSlinky.antd.popconfirmMod.default
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +27,7 @@ object Popconfirm {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def arrowPointAtCenter(value: Boolean): this.type = set("arrowPointAtCenter", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,7 +59,7 @@ object Popconfirm {
     @scala.inline
     def okText(value: TagMod[Any]): this.type = set("okText", value.asInstanceOf[js.Any])
     @scala.inline
-    def okType(value: ButtonType): this.type = set("okType", value.asInstanceOf[js.Any])
+    def okType(value: LegacyButtonType): this.type = set("okType", value.asInstanceOf[js.Any])
     @scala.inline
     def onCancel(value: /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]] => Unit): this.type = set("onCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -71,10 +73,14 @@ object Popconfirm {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleFunction0(value: () => TagMod[Any]): this.type = set("title", js.Any.fromFunction0(value))
+    @scala.inline
+    def title(value: TagMod[Any] | RenderFunction): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PopconfirmProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: PopconfirmProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Popconfirm.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

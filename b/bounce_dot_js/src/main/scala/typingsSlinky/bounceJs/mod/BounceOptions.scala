@@ -4,102 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BounceOptions[T] extends js.Object {
-  var bounces: js.UndefOr[Double] = js.native
-  var delay: js.UndefOr[Double] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var easing: js.UndefOr[String] = js.native
-  var from: T = js.native
-  var stiffness: js.UndefOr[Double] = js.native
-  var to: T = js.native
+  var bounces: js.UndefOr[Double] = js.undefined
+  var delay: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var easing: js.UndefOr[String] = js.undefined
+  var from: T
+  var stiffness: js.UndefOr[Double] = js.undefined
+  var to: T
 }
 
 object BounceOptions {
   @scala.inline
-  def apply[T](from: T, to: T): BounceOptions[T] = {
+  def apply[T](
+    from: T,
+    to: T,
+    bounces: js.UndefOr[Double] = js.undefined,
+    delay: js.UndefOr[Double] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    easing: String = null,
+    stiffness: js.UndefOr[Double] = js.undefined
+  ): BounceOptions[T] = {
     val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    if (!js.isUndefined(bounces)) __obj.updateDynamic("bounces")(bounces.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (!js.isUndefined(stiffness)) __obj.updateDynamic("stiffness")(stiffness.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BounceOptions[T]]
   }
-  @scala.inline
-  implicit class BounceOptionsOps[Self[t] <: BounceOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withFrom(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTo(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBounces(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounces: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStiffness(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStiffness: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

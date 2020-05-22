@@ -26,65 +26,18 @@ trait PublicIpv4PoolRange extends js.Object {
 
 object PublicIpv4PoolRange {
   @scala.inline
-  def apply(): PublicIpv4PoolRange = {
+  def apply(
+    AddressCount: js.UndefOr[Integer] = js.undefined,
+    AvailableAddressCount: js.UndefOr[Integer] = js.undefined,
+    FirstAddress: String = null,
+    LastAddress: String = null
+  ): PublicIpv4PoolRange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AddressCount)) __obj.updateDynamic("AddressCount")(AddressCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(AvailableAddressCount)) __obj.updateDynamic("AvailableAddressCount")(AvailableAddressCount.get.asInstanceOf[js.Any])
+    if (FirstAddress != null) __obj.updateDynamic("FirstAddress")(FirstAddress.asInstanceOf[js.Any])
+    if (LastAddress != null) __obj.updateDynamic("LastAddress")(LastAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublicIpv4PoolRange]
   }
-  @scala.inline
-  implicit class PublicIpv4PoolRangeOps[Self <: PublicIpv4PoolRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddressCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddressCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailableAddressCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableAddressCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableAddressCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableAddressCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -112,7 +112,7 @@ object anon extends js.Object {
       * Suspense support will be added in a later release.
       */
     val Suspense: ReactComponentClass[SuspenseProps] = js.native
-    val SuspenseList: ReactComponentClass[SuspenseListProps] = js.native
+    val unstable_SuspenseList: ReactComponentClass[SuspenseListProps] = js.native
     val version: String = js.native
     // Custom components
     def cloneElement[P](element: FunctionComponentElement[P]): FunctionComponentElement[P] = js.native
@@ -241,6 +241,10 @@ object anon extends js.Object {
       Component: ReactComponentClass[P],
       propsAreEqual: js.Function2[/* prevProps */ PropsWithChildren[P], /* nextProps */ PropsWithChildren[P], Boolean]
     ): ReactComponentClass[P] = js.native
+    def unstable_useDeferredValue[T](value: T): T = js.native
+    def unstable_useDeferredValue[T](value: T, config: TimeoutConfig): T = js.native
+    def unstable_useTransition(): js.Tuple2[TransitionStartFunction, Boolean] = js.native
+    def unstable_useTransition(config: SuspenseConfig): js.Tuple2[TransitionStartFunction, Boolean] = js.native
     def unstable_withSuspenseConfig(scope: js.Function0[js.UndefOr[Unit]]): Unit = js.native
     def unstable_withSuspenseConfig(scope: js.Function0[js.UndefOr[Unit]], config: SuspenseConfig): Unit = js.native
     // I made 'inputs' required here and in useMemo as there's no point to memoizing without the memoization key
@@ -276,8 +280,6 @@ object anon extends js.Object {
     // it's just the function name without the "use" prefix.
     def useDebugValue[T](value: T): Unit = js.native
     def useDebugValue[T](value: T, format: js.Function1[/* value */ T, _]): Unit = js.native
-    def useDeferredValue[T](value: T): T = js.native
-    def useDeferredValue[T](value: T, config: TimeoutConfig): T = js.native
     /**
       * Accepts a function that contains imperative, possibly effectful code.
       *
@@ -465,8 +467,6 @@ object anon extends js.Object {
       */
     def useState[S](initialState: S): js.Tuple2[S, Dispatch[SetStateAction[S]]] = js.native
     def useState[S](initialState: js.Function0[S]): js.Tuple2[S, Dispatch[SetStateAction[S]]] = js.native
-    def useTransition(): js.Tuple2[TransitionStartFunction, Boolean] = js.native
-    def useTransition(config: SuspenseConfig): js.Tuple2[TransitionStartFunction, Boolean] = js.native
   }
   
 }

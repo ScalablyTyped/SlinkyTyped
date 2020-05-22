@@ -13,31 +13,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait ClassMethod_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait ClassMethod_
   extends BlockParent
      with BaseNode
      with Function
      with FunctionParent
      with Method
      with Scopable {
-  var `abstract`: Boolean | Null = js.native
-  var access: public | `private` | `protected` | Null = js.native
-  var accessibility: public | `private` | `protected` | Null = js.native
-  var async: Boolean = js.native
-  var body: BlockStatement_ = js.native
-  var computed: Boolean = js.native
-  var decorators: js.Array[Decorator_] | Null = js.native
-  var generator: Boolean = js.native
-  var key: Identifier_ | StringLiteral_ | NumericLiteral_ | Expression = js.native
-  var kind: get | set | method | constructor = js.native
-  var optional: Boolean | Null = js.native
-  var params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_] = js.native
-  var returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ | Null = js.native
-  var static: Boolean = js.native
-  var typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ | Null = js.native
+  var `abstract`: Boolean | Null
+  var access: public | `private` | `protected` | Null
+  var accessibility: public | `private` | `protected` | Null
+  var async: Boolean
+  var body: BlockStatement_
+  var computed: Boolean
+  var decorators: js.Array[Decorator_] | Null
+  var generator: Boolean
+  var key: Identifier_ | StringLiteral_ | NumericLiteral_ | Expression
+  var kind: get | set | method | constructor
+  var optional: Boolean | Null
+  var params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_]
+  var returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ | Null
+  var static: Boolean
+  var typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ | Null
   @JSName("type")
-  var type_ClassMethod_ : ClassMethod = js.native
+  var type_ClassMethod_ : ClassMethod
 }
 
 object ClassMethod_ {
@@ -51,157 +50,25 @@ object ClassMethod_ {
     kind: get | set | method | constructor,
     params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_],
     static: Boolean,
-    `type`: ClassMethod
+    `type`: ClassMethod,
+    `abstract`: Boolean = null.asInstanceOf[Boolean],
+    access: public | `private` | `protected` = null,
+    accessibility: public | `private` | `protected` = null,
+    decorators: js.Array[Decorator_] = null,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    optional: Boolean = null.asInstanceOf[Boolean],
+    returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ = null
   ): ClassMethod_ = {
-    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], computed = computed.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], computed = computed.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any], access = access.asInstanceOf[js.Any], accessibility = accessibility.asInstanceOf[js.Any], decorators = decorators.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("abstract")(`abstract`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassMethod_]
   }
-  @scala.inline
-  implicit class ClassMethod_Ops[Self <: ClassMethod_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: BlockStatement_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComputed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGenerator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: Identifier_ | StringLiteral_ | NumericLiteral_ | Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: get | set | method | constructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ClassMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbstract(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbstractNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(null)
-        ret
-    }
-    @scala.inline
-    def withAccess(value: public | `private` | `protected`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(null)
-        ret
-    }
-    @scala.inline
-    def withAccessibility(value: public | `private` | `protected`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessibilityNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(null)
-        ret
-    }
-    @scala.inline
-    def withDecorators(value: js.Array[Decorator_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDecoratorsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(null)
-        ret
-    }
-    @scala.inline
-    def withOptional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionalNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(null)
-        ret
-    }
-    @scala.inline
-    def withReturnType(value: TypeAnnotation_ | TSTypeAnnotation_ | Noop_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturnTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

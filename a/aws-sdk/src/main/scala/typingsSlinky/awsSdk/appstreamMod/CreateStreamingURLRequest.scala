@@ -34,71 +34,19 @@ trait CreateStreamingURLRequest extends js.Object {
 
 object CreateStreamingURLRequest {
   @scala.inline
-  def apply(FleetName: String, StackName: String, UserId: StreamingUrlUserId): CreateStreamingURLRequest = {
+  def apply(
+    FleetName: String,
+    StackName: String,
+    UserId: StreamingUrlUserId,
+    ApplicationId: String = null,
+    SessionContext: String = null,
+    Validity: js.UndefOr[Long] = js.undefined
+  ): CreateStreamingURLRequest = {
     val __obj = js.Dynamic.literal(FleetName = FleetName.asInstanceOf[js.Any], StackName = StackName.asInstanceOf[js.Any], UserId = UserId.asInstanceOf[js.Any])
+    if (ApplicationId != null) __obj.updateDynamic("ApplicationId")(ApplicationId.asInstanceOf[js.Any])
+    if (SessionContext != null) __obj.updateDynamic("SessionContext")(SessionContext.asInstanceOf[js.Any])
+    if (!js.isUndefined(Validity)) __obj.updateDynamic("Validity")(Validity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateStreamingURLRequest]
   }
-  @scala.inline
-  implicit class CreateStreamingURLRequestOps[Self <: CreateStreamingURLRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFleetName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStackName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserId(value: StreamingUrlUserId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplicationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidity(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Validity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Validity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

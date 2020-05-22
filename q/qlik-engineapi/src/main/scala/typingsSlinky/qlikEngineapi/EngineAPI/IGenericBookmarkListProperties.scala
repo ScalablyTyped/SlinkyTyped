@@ -7,11 +7,10 @@ import scala.scalajs.js.annotation._
 /**
   * GenericBookmarkListProperties width extend GenericProperties
   */
-@js.native
 trait IGenericBookmarkListProperties extends IGenericProperties {
-  var qBookmarkListDef: IBookmarkListDef = js.native
+  var qBookmarkListDef: IBookmarkListDef
   @JSName("qInfo")
-  var qInfo_IGenericBookmarkListProperties: IGenericBookmarkListNxInfo = js.native
+  var qInfo_IGenericBookmarkListProperties: IGenericBookmarkListNxInfo
 }
 
 object IGenericBookmarkListProperties {
@@ -20,25 +19,5 @@ object IGenericBookmarkListProperties {
     val __obj = js.Dynamic.literal(qBookmarkListDef = qBookmarkListDef.asInstanceOf[js.Any], qInfo = qInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGenericBookmarkListProperties]
   }
-  @scala.inline
-  implicit class IGenericBookmarkListPropertiesOps[Self <: IGenericBookmarkListProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQBookmarkListDef(value: IBookmarkListDef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qBookmarkListDef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQInfo(value: IGenericBookmarkListNxInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

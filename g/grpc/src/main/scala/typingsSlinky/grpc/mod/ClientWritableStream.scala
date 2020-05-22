@@ -7,9 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("grpc", "ClientWritableStream")
 @js.native
-class ClientWritableStream[RequestType] protected ()
-  extends Writable
-     with Call {
+class ClientWritableStream[RequestType] protected () extends Writable {
   /**
     * Cancel the ongoing call. Results in the call ending with a CANCELLED status,
     * unless it has already ended with some other status.

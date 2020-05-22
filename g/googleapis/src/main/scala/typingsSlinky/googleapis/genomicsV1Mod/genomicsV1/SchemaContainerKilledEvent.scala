@@ -19,29 +19,10 @@ trait SchemaContainerKilledEvent extends js.Object {
 
 object SchemaContainerKilledEvent {
   @scala.inline
-  def apply(): SchemaContainerKilledEvent = {
+  def apply(actionId: js.UndefOr[Double] = js.undefined): SchemaContainerKilledEvent = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(actionId)) __obj.updateDynamic("actionId")(actionId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContainerKilledEvent]
   }
-  @scala.inline
-  implicit class SchemaContainerKilledEventOps[Self <: SchemaContainerKilledEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

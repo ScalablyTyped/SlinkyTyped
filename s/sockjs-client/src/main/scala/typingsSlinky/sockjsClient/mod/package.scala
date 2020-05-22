@@ -11,4 +11,5 @@ package object mod {
   type OPEN = typingsSlinky.sockjsClient.sockjsClientNumbers.`1`
   type OpenEvent = typingsSlinky.sockjsClient.mod.BaseEvent
   type SessionGenerator = js.Function0[java.lang.String]
+  type State = typingsSlinky.sockjsClient.mod.CONNECTING | typingsSlinky.sockjsClient.mod.OPEN | typingsSlinky.sockjsClient.mod.CLOSING | typingsSlinky.sockjsClient.mod.CLOSED
 }

@@ -5,126 +5,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgGridRestSettings
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Specifies a custom function to serialize content sent to the server. It should accept a single object or an array of objects and return a string. If not specified, JSON.stringify() will be used.
-  	 *
-  	 */
-  var contentSerializer: js.UndefOr[js.Function] = js.native
+    * Specifies a custom function to serialize content sent to the server. It should accept a single object or an array of objects and return a string. If not specified, JSON.stringify() will be used.
+    *
+    */
+  var contentSerializer: js.UndefOr[js.Function] = js.undefined
   /**
-  	 * Specifies the content type of the request. See http://api.jquery.com/jQuery.ajax/ => contentType
-  	 *
-  	 */
-  var contentType: js.UndefOr[String] = js.native
+    * Specifies the content type of the request. See http://api.jquery.com/jQuery.ajax/ => contentType
+    *
+    */
+  var contentType: js.UndefOr[String] = js.undefined
   /**
-  	 * Settings for create requests
-  	 *
-  	 */
-  var create: js.UndefOr[IgGridRestSettingsCreate] = js.native
+    * Settings for create requests
+    *
+    */
+  var create: js.UndefOr[IgGridRestSettingsCreate] = js.undefined
   /**
-  	 * Specifies whether the ids of the removed resources are send through the request URI
-  	 */
-  var encodeRemoveInRequestUri: js.UndefOr[Boolean] = js.native
+    * Specifies whether the ids of the removed resources are send through the request URI
+    */
+  var encodeRemoveInRequestUri: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Settings for remove requests
-  	 */
-  var remove: js.UndefOr[IgGridRestSettingsRemove] = js.native
+    * Settings for remove requests
+    */
+  var remove: js.UndefOr[IgGridRestSettingsRemove] = js.undefined
   /**
-  	 * Settings for update requests
-  	 */
-  var update: js.UndefOr[IgGridRestSettingsUpdate] = js.native
+    * Settings for update requests
+    */
+  var update: js.UndefOr[IgGridRestSettingsUpdate] = js.undefined
 }
 
 object IgGridRestSettings {
   @scala.inline
-  def apply(): IgGridRestSettings = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    contentSerializer: js.Function = null,
+    contentType: String = null,
+    create: IgGridRestSettingsCreate = null,
+    encodeRemoveInRequestUri: js.UndefOr[Boolean] = js.undefined,
+    remove: IgGridRestSettingsRemove = null,
+    update: IgGridRestSettingsUpdate = null
+  ): IgGridRestSettings = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (contentSerializer != null) __obj.updateDynamic("contentSerializer")(contentSerializer.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (create != null) __obj.updateDynamic("create")(create.asInstanceOf[js.Any])
+    if (!js.isUndefined(encodeRemoveInRequestUri)) __obj.updateDynamic("encodeRemoveInRequestUri")(encodeRemoveInRequestUri.get.asInstanceOf[js.Any])
+    if (remove != null) __obj.updateDynamic("remove")(remove.asInstanceOf[js.Any])
+    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgGridRestSettings]
   }
-  @scala.inline
-  implicit class IgGridRestSettingsOps[Self <: IgGridRestSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentSerializer(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSerializer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentSerializer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSerializer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: IgGridRestSettingsCreate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodeRemoveInRequestUri(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeRemoveInRequestUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodeRemoveInRequestUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeRemoveInRequestUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: IgGridRestSettingsRemove): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: IgGridRestSettingsUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

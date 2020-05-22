@@ -1,13 +1,13 @@
 package typingsSlinky.bpmnModdle.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CorrelationPropertyRetrievalExpression extends BaseElement {
-  var messagePath: FormalExpression = js.native
-  var messageRef: Message = js.native
+  var messagePath: FormalExpression
+  var messageRef: Message
 }
 
 object CorrelationPropertyRetrievalExpression {
@@ -17,30 +17,18 @@ object CorrelationPropertyRetrievalExpression {
     $type: ElementType,
     id: String,
     messagePath: FormalExpression,
-    messageRef: Message
+    messageRef: Message,
+    $attrs: StringDictionary[js.Any] = null,
+    documentation: js.Array[Documentation] = null,
+    extensionDefinitions: js.Array[ExtensionDefinition] = null,
+    extensionElements: ExtensionElements = null
   ): CorrelationPropertyRetrievalExpression = {
     val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], messagePath = messagePath.asInstanceOf[js.Any], messageRef = messageRef.asInstanceOf[js.Any])
+    if ($attrs != null) __obj.updateDynamic("$attrs")($attrs.asInstanceOf[js.Any])
+    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
+    if (extensionDefinitions != null) __obj.updateDynamic("extensionDefinitions")(extensionDefinitions.asInstanceOf[js.Any])
+    if (extensionElements != null) __obj.updateDynamic("extensionElements")(extensionElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[CorrelationPropertyRetrievalExpression]
   }
-  @scala.inline
-  implicit class CorrelationPropertyRetrievalExpressionOps[Self <: CorrelationPropertyRetrievalExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessagePath(value: FormalExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessageRef(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

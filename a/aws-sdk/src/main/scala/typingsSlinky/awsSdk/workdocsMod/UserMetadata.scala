@@ -30,77 +30,20 @@ trait UserMetadata extends js.Object {
 
 object UserMetadata {
   @scala.inline
-  def apply(): UserMetadata = {
+  def apply(
+    EmailAddress: EmailAddressType = null,
+    GivenName: UserAttributeValueType = null,
+    Id: IdType = null,
+    Surname: UserAttributeValueType = null,
+    Username: UsernameType = null
+  ): UserMetadata = {
     val __obj = js.Dynamic.literal()
+    if (EmailAddress != null) __obj.updateDynamic("EmailAddress")(EmailAddress.asInstanceOf[js.Any])
+    if (GivenName != null) __obj.updateDynamic("GivenName")(GivenName.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Surname != null) __obj.updateDynamic("Surname")(Surname.asInstanceOf[js.Any])
+    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserMetadata]
   }
-  @scala.inline
-  implicit class UserMetadataOps[Self <: UserMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmailAddress(value: EmailAddressType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGivenName(value: UserAttributeValueType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GivenName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGivenName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GivenName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSurname(value: UserAttributeValueType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Surname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSurname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Surname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: UsernameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

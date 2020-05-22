@@ -7,151 +7,150 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEnvironmentHelperOptions extends js.Object {
   /**
     * The background rotation around the Y axis of the scene.
     * This helps aligning the key lights of your scene with the background.
     * 0 by default.
     */
-  var backgroundYRotation: Double = js.native
+  var backgroundYRotation: Double
   /**
     * The value of the contrast to apply to the scene.
     * 1.6 by default if setupImageProcessing is true.
     */
-  var cameraContrast: Double = js.native
+  var cameraContrast: Double
   /**
     * The value of the exposure to apply to the scene.
     * 0.6 by default if setupImageProcessing is true.
     */
-  var cameraExposure: Double = js.native
+  var cameraExposure: Double
   /**
     * Specifies whether or not to create a ground.
     * True by default.
     */
-  var createGround: Boolean = js.native
+  var createGround: Boolean
   /**
     * Specifies whether or not to create a skybox.
     * True by default.
     */
-  var createSkybox: Boolean = js.native
+  var createSkybox: Boolean
   /**
     * Creates a mirror texture attach to the ground.
     * false by default.
     */
-  var enableGroundMirror: Boolean = js.native
+  var enableGroundMirror: Boolean
   /**
     * Enables the ground to receive shadows.
     * True by default.
     */
-  var enableGroundShadow: Boolean = js.native
+  var enableGroundShadow: Boolean
   /**
     * The texture used as your environment texture in the scene.
     * Comes from the BabylonJS CDN by default and in use if setupImageProcessing is true.
     *
     * Remarks: Can be either a texture or a url.
     */
-  var environmentTexture: String | BaseTexture = js.native
+  var environmentTexture: String | BaseTexture
   /**
     * The color mixed in the ground texture by default.
     * BabylonJS clearColor by default.
     */
-  var groundColor: Color3 = js.native
+  var groundColor: Color3
   /**
     * Specifies the ground mirror visibility amount.
     * 1 by default
     */
-  var groundMirrorAmount: Double = js.native
+  var groundMirrorAmount: Double
   /**
     * Specifies the ground mirror blur kernel size.
     * 64 by default.
     */
-  var groundMirrorBlurKernel: Double = js.native
+  var groundMirrorBlurKernel: Double
   /**
     * Specifies the ground mirror Falloff distance.
     * This can helps reducing the size of the reflection.
     * 0 by Default.
     */
-  var groundMirrorFallOffDistance: Double = js.native
+  var groundMirrorFallOffDistance: Double
   /**
     * Specifies the ground mirror reflectance weight.
     * This uses the standard weight of the background material to setup the fresnel effect
     * of the mirror.
     * 1 by default.
     */
-  var groundMirrorFresnelWeight: Double = js.native
+  var groundMirrorFresnelWeight: Double
   /**
     * Specifies the ground mirror size ratio.
     * 0.3 by default as the default kernel is 64.
     */
-  var groundMirrorSizeRatio: Double = js.native
+  var groundMirrorSizeRatio: Double
   /**
     * Specifies the ground mirror texture type.
     * Unsigned Int by Default.
     */
-  var groundMirrorTextureType: Double = js.native
+  var groundMirrorTextureType: Double
   /**
     * Specifies the ground opacity.
     * 1 by default.
     */
-  var groundOpacity: Double = js.native
+  var groundOpacity: Double
   /**
     * Helps preventing the shadow to be fully black on the ground.
     * 0.5 by default.
     */
-  var groundShadowLevel: Double = js.native
+  var groundShadowLevel: Double
   /**
     * Specifies the ground size.
     * 15 by default.
     */
-  var groundSize: Double = js.native
+  var groundSize: Double
   /**
     * The texture used on the ground for the main color.
     * Comes from the BabylonJS CDN by default.
     *
     * Remarks: Can be either a texture or a url.
     */
-  var groundTexture: String | BaseTexture = js.native
+  var groundTexture: String | BaseTexture
   /**
     * Specifies a bias applied to the ground vertical position to prevent z-fighting with
     * the shown objects.
     */
-  var groundYBias: Double = js.native
+  var groundYBias: Double
   /**
     * Default position of the rootMesh if autoSize is not true.
     */
-  var rootPosition: Vector3 = js.native
+  var rootPosition: Vector3
   /**
     * Sets up the image processing in the scene.
     * true by default.
     */
-  var setupImageProcessing: Boolean = js.native
+  var setupImageProcessing: Boolean
   /**
     * Compute automatically the size of the elements to best fit with the scene.
     */
-  var sizeAuto: Boolean = js.native
+  var sizeAuto: Boolean
   /**
     * The color mixed in the skybox texture by default.
     * BabylonJS clearColor by default.
     */
-  var skyboxColor: Color3 = js.native
+  var skyboxColor: Color3
   /**
     * Specifies the skybox size.
     * 20 by default.
     */
-  var skyboxSize: Double = js.native
+  var skyboxSize: Double
   /**
     * The texture used on the skybox for the main color.
     * Comes from the BabylonJS CDN by default.
     *
     * Remarks: Can be either a texture or a url.
     */
-  var skyboxTexture: String | BaseTexture = js.native
+  var skyboxTexture: String | BaseTexture
   /**
     * Specifies whether or not tonemapping should be enabled in the scene.
     * true by default if setupImageProcessing is true.
     */
-  var toneMappingEnabled: Boolean = js.native
+  var toneMappingEnabled: Boolean
 }
 
 object IEnvironmentHelperOptions {
@@ -188,175 +187,5 @@ object IEnvironmentHelperOptions {
     val __obj = js.Dynamic.literal(backgroundYRotation = backgroundYRotation.asInstanceOf[js.Any], cameraContrast = cameraContrast.asInstanceOf[js.Any], cameraExposure = cameraExposure.asInstanceOf[js.Any], createGround = createGround.asInstanceOf[js.Any], createSkybox = createSkybox.asInstanceOf[js.Any], enableGroundMirror = enableGroundMirror.asInstanceOf[js.Any], enableGroundShadow = enableGroundShadow.asInstanceOf[js.Any], environmentTexture = environmentTexture.asInstanceOf[js.Any], groundColor = groundColor.asInstanceOf[js.Any], groundMirrorAmount = groundMirrorAmount.asInstanceOf[js.Any], groundMirrorBlurKernel = groundMirrorBlurKernel.asInstanceOf[js.Any], groundMirrorFallOffDistance = groundMirrorFallOffDistance.asInstanceOf[js.Any], groundMirrorFresnelWeight = groundMirrorFresnelWeight.asInstanceOf[js.Any], groundMirrorSizeRatio = groundMirrorSizeRatio.asInstanceOf[js.Any], groundMirrorTextureType = groundMirrorTextureType.asInstanceOf[js.Any], groundOpacity = groundOpacity.asInstanceOf[js.Any], groundShadowLevel = groundShadowLevel.asInstanceOf[js.Any], groundSize = groundSize.asInstanceOf[js.Any], groundTexture = groundTexture.asInstanceOf[js.Any], groundYBias = groundYBias.asInstanceOf[js.Any], rootPosition = rootPosition.asInstanceOf[js.Any], setupImageProcessing = setupImageProcessing.asInstanceOf[js.Any], sizeAuto = sizeAuto.asInstanceOf[js.Any], skyboxColor = skyboxColor.asInstanceOf[js.Any], skyboxSize = skyboxSize.asInstanceOf[js.Any], skyboxTexture = skyboxTexture.asInstanceOf[js.Any], toneMappingEnabled = toneMappingEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEnvironmentHelperOptions]
   }
-  @scala.inline
-  implicit class IEnvironmentHelperOptionsOps[Self <: IEnvironmentHelperOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundYRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundYRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCameraContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraContrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCameraExposure(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraExposure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateGround(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createGround")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateSkybox(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSkybox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableGroundMirror(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroundMirror")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableGroundShadow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroundShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironmentTexture(value: String | BaseTexture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentTexture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundColor(value: Color3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorBlurKernel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorBlurKernel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorFallOffDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorFallOffDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorFresnelWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorFresnelWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorSizeRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorSizeRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundMirrorTextureType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundMirrorTextureType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundShadowLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundShadowLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundTexture(value: String | BaseTexture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundTexture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroundYBias(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groundYBias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRootPosition(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetupImageProcessing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupImageProcessing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizeAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeAuto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkyboxColor(value: Color3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkyboxSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkyboxTexture(value: String | BaseTexture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skyboxTexture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToneMappingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toneMappingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

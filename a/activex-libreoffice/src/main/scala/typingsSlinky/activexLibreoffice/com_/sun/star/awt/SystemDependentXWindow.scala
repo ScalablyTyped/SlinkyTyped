@@ -11,12 +11,11 @@ import scala.scalajs.js.annotation._
   * com::sun::star::lang::SystemDependent::XWINDOW.
   * @deprecated Deprecated
   */
-@js.native
 trait SystemDependentXWindow extends js.Object {
   /** The display pointer. */
-  var DisplayPointer: Double = js.native
+  var DisplayPointer: Double
   /** The {@link XWindow} handle if possible, otherwise 0. */
-  var WindowHandle: Double = js.native
+  var WindowHandle: Double
 }
 
 object SystemDependentXWindow {
@@ -25,25 +24,5 @@ object SystemDependentXWindow {
     val __obj = js.Dynamic.literal(DisplayPointer = DisplayPointer.asInstanceOf[js.Any], WindowHandle = WindowHandle.asInstanceOf[js.Any])
     __obj.asInstanceOf[SystemDependentXWindow]
   }
-  @scala.inline
-  implicit class SystemDependentXWindowOps[Self <: SystemDependentXWindow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayPointer(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayPointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindowHandle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowHandle")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

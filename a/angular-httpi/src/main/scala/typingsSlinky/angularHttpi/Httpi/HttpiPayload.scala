@@ -1,94 +1,62 @@
 package typingsSlinky.angularHttpi.Httpi
 
+import typingsSlinky.angular.mod.IHttpRequestConfigHeaders
+import typingsSlinky.angular.mod.IHttpRequestTransformer
+import typingsSlinky.angular.mod.IHttpResponseTransformer
+import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.angular.mod.IRequestShortcutConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpiPayload extends IRequestShortcutConfig {
   @JSName("data")
-  var data_HttpiPayload: js.UndefOr[js.Object] = js.native
-  var keepTrailingSlash: js.UndefOr[Boolean] = js.native
-  var method: js.UndefOr[String] = js.native
+  var data_HttpiPayload: js.UndefOr[js.Object] = js.undefined
+  var keepTrailingSlash: js.UndefOr[Boolean] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
   @JSName("params")
-  var params_HttpiPayload: js.UndefOr[js.Object] = js.native
-  var url: js.UndefOr[String] = js.native
+  var params_HttpiPayload: js.UndefOr[js.Object] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object HttpiPayload {
   @scala.inline
-  def apply(): HttpiPayload = {
+  def apply(
+    cache: js.Any = null,
+    data: js.Object = null,
+    headers: IHttpRequestConfigHeaders = null,
+    jsonpCallbackParam: String = null,
+    keepTrailingSlash: js.UndefOr[Boolean] = js.undefined,
+    method: String = null,
+    paramSerializer: String | (js.Function1[/* obj */ js.Any, String]) = null,
+    params: js.Object = null,
+    responseType: String = null,
+    timeout: Double | IPromise[_] = null,
+    transformRequest: IHttpRequestTransformer | js.Array[IHttpRequestTransformer] = null,
+    transformResponse: IHttpResponseTransformer | js.Array[IHttpResponseTransformer] = null,
+    url: String = null,
+    withCredentials: js.UndefOr[Boolean] = js.undefined,
+    xsrfCookieName: String = null,
+    xsrfHeaderName: String = null
+  ): HttpiPayload = {
     val __obj = js.Dynamic.literal()
+    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (jsonpCallbackParam != null) __obj.updateDynamic("jsonpCallbackParam")(jsonpCallbackParam.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepTrailingSlash)) __obj.updateDynamic("keepTrailingSlash")(keepTrailingSlash.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (paramSerializer != null) __obj.updateDynamic("paramSerializer")(paramSerializer.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (transformRequest != null) __obj.updateDynamic("transformRequest")(transformRequest.asInstanceOf[js.Any])
+    if (transformResponse != null) __obj.updateDynamic("transformResponse")(transformResponse.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.get.asInstanceOf[js.Any])
+    if (xsrfCookieName != null) __obj.updateDynamic("xsrfCookieName")(xsrfCookieName.asInstanceOf[js.Any])
+    if (xsrfHeaderName != null) __obj.updateDynamic("xsrfHeaderName")(xsrfHeaderName.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpiPayload]
   }
-  @scala.inline
-  implicit class HttpiPayloadOps[Self <: HttpiPayload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepTrailingSlash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepTrailingSlash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepTrailingSlash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepTrailingSlash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

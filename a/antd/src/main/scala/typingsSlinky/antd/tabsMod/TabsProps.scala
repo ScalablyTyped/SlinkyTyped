@@ -16,305 +16,86 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabsProps extends js.Object {
-  var activeKey: js.UndefOr[String] = js.native
-  var animated: js.UndefOr[Boolean | InkBar] = js.native
-  var className: js.UndefOr[String] = js.native
-  var defaultActiveKey: js.UndefOr[String] = js.native
-  var destroyInactiveTabPane: js.UndefOr[Boolean] = js.native
-  var hideAdd: js.UndefOr[Boolean] = js.native
-  var onChange: js.UndefOr[js.Function1[/* activeKey */ String, Unit]] = js.native
+  var activeKey: js.UndefOr[String] = js.undefined
+  var animated: js.UndefOr[Boolean | InkBar] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var defaultActiveKey: js.UndefOr[String] = js.undefined
+  var destroyInactiveTabPane: js.UndefOr[Boolean] = js.undefined
+  var hideAdd: js.UndefOr[Boolean] = js.undefined
+  var keyboard: js.UndefOr[Boolean] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* activeKey */ String, Unit]] = js.undefined
   var onEdit: js.UndefOr[
     js.Function2[
       /* targetKey */ String | SyntheticMouseEvent[HTMLElement], 
       /* action */ add | remove, 
       Unit
     ]
-  ] = js.native
-  var onNextClick: js.UndefOr[MouseEventHandler[HTMLElement]] = js.native
-  var onPrevClick: js.UndefOr[MouseEventHandler[HTMLElement]] = js.native
-  var onTabClick: js.UndefOr[js.Function] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var onNextClick: js.UndefOr[MouseEventHandler[HTMLElement]] = js.undefined
+  var onPrevClick: js.UndefOr[MouseEventHandler[HTMLElement]] = js.undefined
+  var onTabClick: js.UndefOr[js.Function] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
   var renderTabBar: js.UndefOr[
     js.Function2[/* props */ TabsProps, /* DefaultTabBar */ ReactComponentClass[_], ReactElement]
-  ] = js.native
-  var size: js.UndefOr[large | typingsSlinky.antd.antdStrings.default | small] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var tabBarExtraContent: js.UndefOr[TagMod[Any] | Null] = js.native
-  var tabBarGutter: js.UndefOr[Double] = js.native
-  var tabBarStyle: js.UndefOr[CSSProperties] = js.native
-  var tabPosition: js.UndefOr[TabsPosition] = js.native
-  var `type`: js.UndefOr[TabsType] = js.native
+  ] = js.undefined
+  var size: js.UndefOr[large | typingsSlinky.antd.antdStrings.default | small] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var tabBarExtraContent: js.UndefOr[TagMod[Any] | Null] = js.undefined
+  var tabBarGutter: js.UndefOr[Double] = js.undefined
+  var tabBarStyle: js.UndefOr[CSSProperties] = js.undefined
+  var tabPosition: js.UndefOr[TabsPosition] = js.undefined
+  var `type`: js.UndefOr[TabsType] = js.undefined
 }
 
 object TabsProps {
   @scala.inline
-  def apply(): TabsProps = {
+  def apply(
+    activeKey: String = null,
+    animated: Boolean | InkBar = null,
+    className: String = null,
+    defaultActiveKey: String = null,
+    destroyInactiveTabPane: js.UndefOr[Boolean] = js.undefined,
+    hideAdd: js.UndefOr[Boolean] = js.undefined,
+    keyboard: js.UndefOr[Boolean] = js.undefined,
+    onChange: /* activeKey */ String => Unit = null,
+    onEdit: (/* targetKey */ String | SyntheticMouseEvent[HTMLElement], /* action */ add | remove) => Unit = null,
+    onNextClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onPrevClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onTabClick: js.Function = null,
+    prefixCls: String = null,
+    renderTabBar: (/* props */ TabsProps, /* DefaultTabBar */ ReactComponentClass[_]) => ReactElement = null,
+    size: large | typingsSlinky.antd.antdStrings.default | small = null,
+    style: CSSProperties = null,
+    tabBarExtraContent: js.UndefOr[Null | TagMod[Any]] = js.undefined,
+    tabBarGutter: js.UndefOr[Double] = js.undefined,
+    tabBarStyle: CSSProperties = null,
+    tabPosition: TabsPosition = null,
+    `type`: TabsType = null
+  ): TabsProps = {
     val __obj = js.Dynamic.literal()
+    if (activeKey != null) __obj.updateDynamic("activeKey")(activeKey.asInstanceOf[js.Any])
+    if (animated != null) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (defaultActiveKey != null) __obj.updateDynamic("defaultActiveKey")(defaultActiveKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyInactiveTabPane)) __obj.updateDynamic("destroyInactiveTabPane")(destroyInactiveTabPane.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideAdd)) __obj.updateDynamic("hideAdd")(hideAdd.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onEdit != null) __obj.updateDynamic("onEdit")(js.Any.fromFunction2(onEdit))
+    if (onNextClick != null) __obj.updateDynamic("onNextClick")(js.Any.fromFunction1(onNextClick))
+    if (onPrevClick != null) __obj.updateDynamic("onPrevClick")(js.Any.fromFunction1(onPrevClick))
+    if (onTabClick != null) __obj.updateDynamic("onTabClick")(onTabClick.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (renderTabBar != null) __obj.updateDynamic("renderTabBar")(js.Any.fromFunction2(renderTabBar))
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabBarExtraContent)) __obj.updateDynamic("tabBarExtraContent")(tabBarExtraContent.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabBarGutter)) __obj.updateDynamic("tabBarGutter")(tabBarGutter.get.asInstanceOf[js.Any])
+    if (tabBarStyle != null) __obj.updateDynamic("tabBarStyle")(tabBarStyle.asInstanceOf[js.Any])
+    if (tabPosition != null) __obj.updateDynamic("tabPosition")(tabPosition.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabsProps]
   }
-  @scala.inline
-  implicit class TabsPropsOps[Self <: TabsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimated(value: Boolean | InkBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultActiveKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultActiveKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestroyInactiveTabPane(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyInactiveTabPane")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestroyInactiveTabPane: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyInactiveTabPane")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideAdd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* activeKey */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEdit(
-      value: (/* targetKey */ String | SyntheticMouseEvent[HTMLElement], /* action */ add | remove) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEdit")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEdit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEdit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNextClick(value: SyntheticMouseEvent[HTMLElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNextClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNextClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNextClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPrevClick(value: SyntheticMouseEvent[HTMLElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrevClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPrevClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrevClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTabClick(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTabClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTabClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTabClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderTabBar(value: (/* props */ TabsProps, /* DefaultTabBar */ ReactComponentClass[_]) => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTabBar")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderTabBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTabBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: large | typingsSlinky.antd.antdStrings.default | small): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabBarExtraContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarExtraContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabBarExtraContent(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarExtraContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabBarExtraContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarExtraContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabBarExtraContentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarExtraContent")(null)
-        ret
-    }
-    @scala.inline
-    def withTabBarGutter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarGutter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabBarGutter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarGutter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabBarStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabBarStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabPosition(value: TabsPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: TabsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

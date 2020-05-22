@@ -34,65 +34,18 @@ trait PostTextRequest extends js.Object {
 
 object PostTextRequest {
   @scala.inline
-  def apply(botAlias: BotAlias, botName: BotName, inputText: Text, userId: UserId): PostTextRequest = {
+  def apply(
+    botAlias: BotAlias,
+    botName: BotName,
+    inputText: Text,
+    userId: UserId,
+    requestAttributes: StringMap = null,
+    sessionAttributes: StringMap = null
+  ): PostTextRequest = {
     val __obj = js.Dynamic.literal(botAlias = botAlias.asInstanceOf[js.Any], botName = botName.asInstanceOf[js.Any], inputText = inputText.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any])
+    if (requestAttributes != null) __obj.updateDynamic("requestAttributes")(requestAttributes.asInstanceOf[js.Any])
+    if (sessionAttributes != null) __obj.updateDynamic("sessionAttributes")(sessionAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostTextRequest]
   }
-  @scala.inline
-  implicit class PostTextRequestOps[Self <: PostTextRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBotAlias(value: BotAlias): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("botAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBotName(value: BotName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("botName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputText(value: Text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserId(value: UserId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestAttributes(value: StringMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionAttributes(value: StringMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

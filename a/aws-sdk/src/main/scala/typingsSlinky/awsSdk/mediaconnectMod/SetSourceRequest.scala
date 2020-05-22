@@ -43,6 +43,10 @@ trait SetSourceRequest extends js.Object {
     */
   var StreamId: js.UndefOr[string] = js.native
   /**
+    * The name of the VPC interface to use for this source.
+    */
+  var VpcInterfaceName: js.UndefOr[string] = js.native
+  /**
     * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
     */
   var WhitelistCidr: js.UndefOr[string] = js.native
@@ -50,137 +54,32 @@ trait SetSourceRequest extends js.Object {
 
 object SetSourceRequest {
   @scala.inline
-  def apply(): SetSourceRequest = {
+  def apply(
+    Decryption: Encryption = null,
+    Description: string = null,
+    EntitlementArn: string = null,
+    IngestPort: js.UndefOr[integer] = js.undefined,
+    MaxBitrate: js.UndefOr[integer] = js.undefined,
+    MaxLatency: js.UndefOr[integer] = js.undefined,
+    Name: string = null,
+    Protocol: Protocol = null,
+    StreamId: string = null,
+    VpcInterfaceName: string = null,
+    WhitelistCidr: string = null
+  ): SetSourceRequest = {
     val __obj = js.Dynamic.literal()
+    if (Decryption != null) __obj.updateDynamic("Decryption")(Decryption.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (EntitlementArn != null) __obj.updateDynamic("EntitlementArn")(EntitlementArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(IngestPort)) __obj.updateDynamic("IngestPort")(IngestPort.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxBitrate)) __obj.updateDynamic("MaxBitrate")(MaxBitrate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxLatency)) __obj.updateDynamic("MaxLatency")(MaxLatency.get.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Protocol != null) __obj.updateDynamic("Protocol")(Protocol.asInstanceOf[js.Any])
+    if (StreamId != null) __obj.updateDynamic("StreamId")(StreamId.asInstanceOf[js.Any])
+    if (VpcInterfaceName != null) __obj.updateDynamic("VpcInterfaceName")(VpcInterfaceName.asInstanceOf[js.Any])
+    if (WhitelistCidr != null) __obj.updateDynamic("WhitelistCidr")(WhitelistCidr.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetSourceRequest]
   }
-  @scala.inline
-  implicit class SetSourceRequestOps[Self <: SetSourceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecryption(value: Encryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Decryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Decryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntitlementArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitlementArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntitlementArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitlementArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIngestPort(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIngestPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBitrate(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxBitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLatency(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLatency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLatency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLatency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: Protocol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhitelistCidr(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitelistCidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhitelistCidr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitelistCidr")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

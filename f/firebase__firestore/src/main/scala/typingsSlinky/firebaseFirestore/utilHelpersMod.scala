@@ -8,6 +8,7 @@ import typingsSlinky.firebaseFirestore.byteStringMod.ByteString
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.collectionsMod.MaybeDocumentMap_
 import typingsSlinky.firebaseFirestore.databaseInfoMod.DatabaseId
+import typingsSlinky.firebaseFirestore.databaseMod.DocumentReference
 import typingsSlinky.firebaseFirestore.documentComparatorMod.DocumentComparator
 import typingsSlinky.firebaseFirestore.documentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.documentMod.Document
@@ -16,10 +17,8 @@ import typingsSlinky.firebaseFirestore.documentMod.MaybeDocument
 import typingsSlinky.firebaseFirestore.documentMod.NoDocument
 import typingsSlinky.firebaseFirestore.documentMod.UnknownDocument
 import typingsSlinky.firebaseFirestore.documentSetMod.DocumentSet
+import typingsSlinky.firebaseFirestore.errorMod.Code
 import typingsSlinky.firebaseFirestore.localViewChangesMod.LocalViewChanges
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.FieldValue
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.JsonObject
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.ObjectValue
 import typingsSlinky.firebaseFirestore.mutationMod.DeleteMutation
 import typingsSlinky.firebaseFirestore.mutationMod.FieldMask
 import typingsSlinky.firebaseFirestore.mutationMod.MutationResult
@@ -28,6 +27,8 @@ import typingsSlinky.firebaseFirestore.mutationMod.Precondition
 import typingsSlinky.firebaseFirestore.mutationMod.SetMutation
 import typingsSlinky.firebaseFirestore.mutationMod.TransformMutation
 import typingsSlinky.firebaseFirestore.objMod.Dict
+import typingsSlinky.firebaseFirestore.objectValueMod.JsonObject
+import typingsSlinky.firebaseFirestore.objectValueMod.ObjectValue
 import typingsSlinky.firebaseFirestore.pathMod.FieldPath
 import typingsSlinky.firebaseFirestore.pathMod.ResourcePath
 import typingsSlinky.firebaseFirestore.queryMod.Bound
@@ -41,10 +42,12 @@ import typingsSlinky.firebaseFirestore.sortedSetMod.SortedSet
 import typingsSlinky.firebaseFirestore.targetDataMod.TargetData
 import typingsSlinky.firebaseFirestore.targetDataMod.TargetPurpose
 import typingsSlinky.firebaseFirestore.typesMod.TargetId
-import typingsSlinky.firebaseFirestore.userDataConverterMod.DocumentKeyReference
+import typingsSlinky.firebaseFirestore.userDataReaderMod.UserDataReader
+import typingsSlinky.firebaseFirestore.userDataWriterMod.UserDataWriter
 import typingsSlinky.firebaseFirestore.viewMod.LimboDocumentChange
 import typingsSlinky.firebaseFirestore.viewMod.View
 import typingsSlinky.firebaseFirestore.viewMod.ViewChange
+import typingsSlinky.firebaseFirestoreTypes.mod.DocumentData
 import typingsSlinky.firebaseFirestoreTypes.mod.OrderByDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -56,7 +59,6 @@ object utilHelpersMod extends js.Object {
   @js.native
   class DocComparator () extends js.Object
   
-  val DELETE_SENTINEL: /* "<DELETE>" */ String = js.native
   def ackTarget(docsOrKeys: (Document | String)*): TargetChange = js.native
   def addTargetMapping(docsOrKeys: (Document | String)*): TargetChange = js.native
   def applyDocChanges(view: View, docsOrKeys: (Document | DocumentKey)*): ViewChange = js.native
@@ -116,12 +118,12 @@ object utilHelpersMod extends js.Object {
   def expectEqualArrays(left: js.Array[_], right: js.Array[_]): Unit = js.native
   def expectEqualArrays(left: js.Array[_], right: js.Array[_], message: String): Unit = js.native
   def expectEqualitySets[T](elems: js.Array[js.Array[T]], equalityFn: js.Function2[/* v1 */ T, /* v2 */ T, Boolean]): Unit = js.native
-  def expectFirestoreError(err: js.Error): Unit = js.native
   def expectNotEqual(left: js.Any, right: js.Any): Unit = js.native
   def expectNotEqual(left: js.Any, right: js.Any, message: String): Unit = js.native
   def expectSetToEqual[T](set: SortedSet[T], arr: js.Array[T]): Unit = js.native
   def field(path: String): FieldPath = js.native
   def filter(path: String, op: String, value: js.Any): FieldFilter = js.native
+  def forEachNumber[V](obj: Dict[V], fn: js.Function2[/* key */ Double, /* val */ V, Unit]): Unit = js.native
   def key(path: String): DocumentKey = js.native
   def keySet(keys: DocumentKey*): DocumentKeySet_ = js.native
   def keys(documents: (MaybeDocument | String)*): DocumentKeySet_ = js.native
@@ -138,13 +140,18 @@ object utilHelpersMod extends js.Object {
   def patchMutation(keyStr: String, json: JsonObject[_], precondition: Precondition): PatchMutation = js.native
   def path(path: String): ResourcePath = js.native
   def path(path: String, offset: Double): ResourcePath = js.native
-  def ref(dbIdStr: String, keyStr: String): DocumentKeyReference = js.native
-  def ref(dbIdStr: String, keyStr: String, offset: Double): DocumentKeyReference = js.native
+  def ref(key: String): DocumentReference[DocumentData] = js.native
+  def ref(key: String, offset: Double): DocumentReference[DocumentData] = js.native
   def removedDoc(keyStr: String): NoDocument = js.native
   def resumeTokenForSnapshot(snapshotVersion: SnapshotVersion): ByteString = js.native
   def setMutation(keyStr: String, json: JsonObject[_]): SetMutation = js.native
-  def size(obj: JsonObject[_]): Double = js.native
+  def stringFromBase64String(): String = js.native
+  def stringFromBase64String(value: String): String = js.native
+  def stringFromBase64String(value: js.typedarray.Uint8Array): String = js.native
   def targetData(targetId: TargetId, queryPurpose: TargetPurpose, path: String): TargetData = js.native
+  def testUserDataReader(): UserDataReader = js.native
+  def testUserDataReader(useProto3Json: Boolean): UserDataReader = js.native
+  def testUserDataWriter(): UserDataWriter[DocumentData] = js.native
   def transformMutation(keyStr: String, data: Dict[_]): TransformMutation = js.native
   def unknownDoc(keyStr: String, ver: TestSnapshotVersion): UnknownDocument = js.native
   def updateMapping(
@@ -160,8 +167,9 @@ object utilHelpersMod extends js.Object {
     removed: js.Array[MaybeDocument | String],
     current: Boolean
   ): TargetChange = js.native
+  def validateFirestoreError(expectedCode: Code, actualError: js.Error): Unit = js.native
   def version(v: TestSnapshotVersion): SnapshotVersion = js.native
-  def wrap(value: js.Any): FieldValue = js.native
+  def wrap(value: js.Any): js.Any = js.native
   def wrapObject(obj: JsonObject[_]): ObjectValue = js.native
   /* static members */
   @js.native

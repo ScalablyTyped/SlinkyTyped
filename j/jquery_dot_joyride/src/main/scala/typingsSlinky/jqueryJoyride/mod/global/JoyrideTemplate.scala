@@ -5,144 +5,66 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * HTML segments for tip layout
-	 */
-@js.native
+  * HTML segments for tip layout
+  */
 trait JoyrideTemplate extends js.Object {
   /**
-  		 * Button template
-  		 * @member {string}
-  		 */
-  var button: js.UndefOr[String] = js.native
+    * Button template
+    * @member {string}
+    */
+  var button: js.UndefOr[String] = js.undefined
   /**
-  		 * Exposed Cover template
-  		 * @member {string}
-  		 */
-  var exposeCover: js.UndefOr[String] = js.native
+    * Exposed Cover template
+    * @member {string}
+    */
+  var exposeCover: js.UndefOr[String] = js.undefined
   /**
-  		 * Link template
-  		 * @member {string}
-  		 */
-  var link: js.UndefOr[String] = js.native
+    * Link template
+    * @member {string}
+    */
+  var link: js.UndefOr[String] = js.undefined
   /**
-  		 * Modal template
-  		 * @member {string}
-  		 */
-  var modal: js.UndefOr[String] = js.native
+    * Modal template
+    * @member {string}
+    */
+  var modal: js.UndefOr[String] = js.undefined
   /**
-  		 * Timer template
-  		 * @member {string}
-  		 */
-  var timer: js.UndefOr[String] = js.native
+    * Timer template
+    * @member {string}
+    */
+  var timer: js.UndefOr[String] = js.undefined
   /**
-  		 * Tip template
-  		 * @member {string}
-  		 */
-  var tip: js.UndefOr[String] = js.native
+    * Tip template
+    * @member {string}
+    */
+  var tip: js.UndefOr[String] = js.undefined
   /**
-  		 * Wrapper template
-  		 * @member {string}
-  		 */
-  var wrapper: js.UndefOr[String] = js.native
+    * Wrapper template
+    * @member {string}
+    */
+  var wrapper: js.UndefOr[String] = js.undefined
 }
 
 object JoyrideTemplate {
   @scala.inline
-  def apply(): JoyrideTemplate = {
+  def apply(
+    button: String = null,
+    exposeCover: String = null,
+    link: String = null,
+    modal: String = null,
+    timer: String = null,
+    tip: String = null,
+    wrapper: String = null
+  ): JoyrideTemplate = {
     val __obj = js.Dynamic.literal()
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (exposeCover != null) __obj.updateDynamic("exposeCover")(exposeCover.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (modal != null) __obj.updateDynamic("modal")(modal.asInstanceOf[js.Any])
+    if (timer != null) __obj.updateDynamic("timer")(timer.asInstanceOf[js.Any])
+    if (tip != null) __obj.updateDynamic("tip")(tip.asInstanceOf[js.Any])
+    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[JoyrideTemplate]
   }
-  @scala.inline
-  implicit class JoyrideTemplateOps[Self <: JoyrideTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExposeCover(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeCover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExposeCover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeCover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

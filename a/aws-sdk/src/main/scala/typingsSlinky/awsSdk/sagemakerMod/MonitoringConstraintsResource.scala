@@ -14,29 +14,10 @@ trait MonitoringConstraintsResource extends js.Object {
 
 object MonitoringConstraintsResource {
   @scala.inline
-  def apply(): MonitoringConstraintsResource = {
+  def apply(S3Uri: S3Uri = null): MonitoringConstraintsResource = {
     val __obj = js.Dynamic.literal()
+    if (S3Uri != null) __obj.updateDynamic("S3Uri")(S3Uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[MonitoringConstraintsResource]
   }
-  @scala.inline
-  implicit class MonitoringConstraintsResourceOps[Self <: MonitoringConstraintsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3Uri(value: S3Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Uri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

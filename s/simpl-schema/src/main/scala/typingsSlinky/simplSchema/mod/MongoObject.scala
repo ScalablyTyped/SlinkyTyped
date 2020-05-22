@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MongoObject extends js.Object {
-  def expandKey(`val`: js.Any, key: String, obj: js.Any): Unit = js.native
+  def expandKey(`val`: js.Any, key: String, obj: js.Any): Unit
 }
 
 @JSImport("simpl-schema", "MongoObject")

@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataHeight extends js.Object {
-  var dataHeight: js.UndefOr[Double] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var hoverColor: js.UndefOr[String] = js.native
-  var padding: js.UndefOr[Double] = js.native
-  var rightIconDesktopFill: js.UndefOr[String] = js.native
-  var selectedTextColor: js.UndefOr[String] = js.native
+  var dataHeight: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var hoverColor: js.UndefOr[String] = js.undefined
+  var padding: js.UndefOr[Double] = js.undefined
+  var rightIconDesktopFill: js.UndefOr[String] = js.undefined
+  var selectedTextColor: js.UndefOr[String] = js.undefined
 }
 
 object DataHeight {
   @scala.inline
-  def apply(): DataHeight = {
+  def apply(
+    dataHeight: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    hoverColor: String = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    rightIconDesktopFill: String = null,
+    selectedTextColor: String = null
+  ): DataHeight = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dataHeight)) __obj.updateDynamic("dataHeight")(dataHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (hoverColor != null) __obj.updateDynamic("hoverColor")(hoverColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (rightIconDesktopFill != null) __obj.updateDynamic("rightIconDesktopFill")(rightIconDesktopFill.asInstanceOf[js.Any])
+    if (selectedTextColor != null) __obj.updateDynamic("selectedTextColor")(selectedTextColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataHeight]
   }
-  @scala.inline
-  implicit class DataHeightOps[Self <: DataHeight] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightIconDesktopFill(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIconDesktopFill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightIconDesktopFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIconDesktopFill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedTextColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

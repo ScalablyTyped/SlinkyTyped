@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BootStrapLoader extends js.Object {
   /**
     * BootStrapLoader load script files.
@@ -12,7 +11,7 @@ trait BootStrapLoader extends js.Object {
     * @param   idPaths
     * @api     public
     */
-  def load(idPaths: js.Array[String]): Unit = js.native
+  def load(idPaths: js.Array[String]): Unit
 }
 
 object BootStrapLoader {
@@ -21,19 +20,5 @@ object BootStrapLoader {
     val __obj = js.Dynamic.literal(load = js.Any.fromFunction1(load))
     __obj.asInstanceOf[BootStrapLoader]
   }
-  @scala.inline
-  implicit class BootStrapLoaderOps[Self <: BootStrapLoader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoad(value: js.Array[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

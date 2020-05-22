@@ -66,185 +66,38 @@ trait Interconnect extends js.Object {
 
 object Interconnect {
   @scala.inline
-  def apply(): Interconnect = {
+  def apply(
+    awsDevice: AwsDevice = null,
+    awsDeviceV2: AwsDeviceV2 = null,
+    bandwidth: Bandwidth = null,
+    hasLogicalRedundancy: HasLogicalRedundancy = null,
+    interconnectId: InterconnectId = null,
+    interconnectName: InterconnectName = null,
+    interconnectState: InterconnectState = null,
+    jumboFrameCapable: js.UndefOr[JumboFrameCapable] = js.undefined,
+    lagId: LagId = null,
+    loaIssueTime: js.Date = null,
+    location: LocationCode = null,
+    providerName: ProviderName = null,
+    region: Region = null,
+    tags: TagList = null
+  ): Interconnect = {
     val __obj = js.Dynamic.literal()
+    if (awsDevice != null) __obj.updateDynamic("awsDevice")(awsDevice.asInstanceOf[js.Any])
+    if (awsDeviceV2 != null) __obj.updateDynamic("awsDeviceV2")(awsDeviceV2.asInstanceOf[js.Any])
+    if (bandwidth != null) __obj.updateDynamic("bandwidth")(bandwidth.asInstanceOf[js.Any])
+    if (hasLogicalRedundancy != null) __obj.updateDynamic("hasLogicalRedundancy")(hasLogicalRedundancy.asInstanceOf[js.Any])
+    if (interconnectId != null) __obj.updateDynamic("interconnectId")(interconnectId.asInstanceOf[js.Any])
+    if (interconnectName != null) __obj.updateDynamic("interconnectName")(interconnectName.asInstanceOf[js.Any])
+    if (interconnectState != null) __obj.updateDynamic("interconnectState")(interconnectState.asInstanceOf[js.Any])
+    if (!js.isUndefined(jumboFrameCapable)) __obj.updateDynamic("jumboFrameCapable")(jumboFrameCapable.get.asInstanceOf[js.Any])
+    if (lagId != null) __obj.updateDynamic("lagId")(lagId.asInstanceOf[js.Any])
+    if (loaIssueTime != null) __obj.updateDynamic("loaIssueTime")(loaIssueTime.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (providerName != null) __obj.updateDynamic("providerName")(providerName.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[Interconnect]
   }
-  @scala.inline
-  implicit class InterconnectOps[Self <: Interconnect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsDevice(value: AwsDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDevice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsDeviceV2(value: AwsDeviceV2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDeviceV2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsDeviceV2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDeviceV2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBandwidth(value: Bandwidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBandwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasLogicalRedundancy(value: HasLogicalRedundancy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLogicalRedundancy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasLogicalRedundancy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLogicalRedundancy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterconnectId(value: InterconnectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterconnectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterconnectName(value: InterconnectName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterconnectName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterconnectState(value: InterconnectState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterconnectState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJumboFrameCapable(value: JumboFrameCapable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jumboFrameCapable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJumboFrameCapable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jumboFrameCapable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLagId(value: LagId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lagId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLagId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lagId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoaIssueTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaIssueTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoaIssueTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaIssueTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: LocationCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProviderName(value: ProviderName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProviderName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: Region): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

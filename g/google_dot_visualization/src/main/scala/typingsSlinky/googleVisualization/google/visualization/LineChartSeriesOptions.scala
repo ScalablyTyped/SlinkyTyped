@@ -6,153 +6,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LineChartSeriesOptions extends ChartSeriesOptionsBase {
-  var annotations: js.UndefOr[ChartAnnotations] = js.native
-  var curveType: js.UndefOr[none | function] = js.native
-  var labelInLegend: js.UndefOr[String] = js.native
-  var lineDashStyle: js.UndefOr[js.Array[Double]] = js.native
-  var lineWidth: js.UndefOr[Double] = js.native
-  var pointShape: js.UndefOr[ChartPointShape] = js.native
-  var pointSize: js.UndefOr[Double] = js.native
-  var pointsVisible: js.UndefOr[Boolean] = js.native
-  var targetAxisIndex: js.UndefOr[Double] = js.native
-  var visibleInLegend: js.UndefOr[Boolean] = js.native
+  var annotations: js.UndefOr[ChartAnnotations] = js.undefined
+  var curveType: js.UndefOr[none | function] = js.undefined
+  var labelInLegend: js.UndefOr[String] = js.undefined
+  var lineDashStyle: js.UndefOr[js.Array[Double]] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.undefined
+  var pointShape: js.UndefOr[ChartPointShape] = js.undefined
+  var pointSize: js.UndefOr[Double] = js.undefined
+  var pointsVisible: js.UndefOr[Boolean] = js.undefined
+  var targetAxisIndex: js.UndefOr[Double] = js.undefined
+  var visibleInLegend: js.UndefOr[Boolean] = js.undefined
 }
 
 object LineChartSeriesOptions {
   @scala.inline
-  def apply(): LineChartSeriesOptions = {
+  def apply(
+    annotations: ChartAnnotations = null,
+    color: String = null,
+    curveType: none | function = null,
+    labelInLegend: String = null,
+    lineDashStyle: js.Array[Double] = null,
+    lineWidth: js.UndefOr[Double] = js.undefined,
+    pointShape: ChartPointShape = null,
+    pointSize: js.UndefOr[Double] = js.undefined,
+    pointsVisible: js.UndefOr[Boolean] = js.undefined,
+    targetAxisIndex: js.UndefOr[Double] = js.undefined,
+    visibleInLegend: js.UndefOr[Boolean] = js.undefined
+  ): LineChartSeriesOptions = {
     val __obj = js.Dynamic.literal()
+    if (annotations != null) __obj.updateDynamic("annotations")(annotations.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (curveType != null) __obj.updateDynamic("curveType")(curveType.asInstanceOf[js.Any])
+    if (labelInLegend != null) __obj.updateDynamic("labelInLegend")(labelInLegend.asInstanceOf[js.Any])
+    if (lineDashStyle != null) __obj.updateDynamic("lineDashStyle")(lineDashStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineWidth)) __obj.updateDynamic("lineWidth")(lineWidth.get.asInstanceOf[js.Any])
+    if (pointShape != null) __obj.updateDynamic("pointShape")(pointShape.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointSize)) __obj.updateDynamic("pointSize")(pointSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointsVisible)) __obj.updateDynamic("pointsVisible")(pointsVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetAxisIndex)) __obj.updateDynamic("targetAxisIndex")(targetAxisIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibleInLegend)) __obj.updateDynamic("visibleInLegend")(visibleInLegend.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineChartSeriesOptions]
   }
-  @scala.inline
-  implicit class LineChartSeriesOptionsOps[Self <: LineChartSeriesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnotations(value: ChartAnnotations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurveType(value: none | function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curveType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurveType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curveType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelInLegend(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelInLegend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelInLegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelInLegend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDashStyle(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDashStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDashStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDashStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointShape(value: ChartPointShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointShape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointsVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointsVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointsVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetAxisIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetAxisIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetAxisIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetAxisIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleInLegend(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleInLegend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleInLegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleInLegend")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LicenseAssignment extends js.Object {
-  var etags: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var productId: js.UndefOr[String] = js.native
-  var productName: js.UndefOr[String] = js.native
-  var selfLink: js.UndefOr[String] = js.native
-  var skuId: js.UndefOr[String] = js.native
-  var skuName: js.UndefOr[String] = js.native
-  var userId: js.UndefOr[String] = js.native
+  var etags: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var productId: js.UndefOr[String] = js.undefined
+  var productName: js.UndefOr[String] = js.undefined
+  var selfLink: js.UndefOr[String] = js.undefined
+  var skuId: js.UndefOr[String] = js.undefined
+  var skuName: js.UndefOr[String] = js.undefined
+  var userId: js.UndefOr[String] = js.undefined
 }
 
 object LicenseAssignment {
   @scala.inline
-  def apply(): LicenseAssignment = {
+  def apply(
+    etags: String = null,
+    kind: String = null,
+    productId: String = null,
+    productName: String = null,
+    selfLink: String = null,
+    skuId: String = null,
+    skuName: String = null,
+    userId: String = null
+  ): LicenseAssignment = {
     val __obj = js.Dynamic.literal()
+    if (etags != null) __obj.updateDynamic("etags")(etags.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
+    if (productName != null) __obj.updateDynamic("productName")(productName.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (skuId != null) __obj.updateDynamic("skuId")(skuId.asInstanceOf[js.Any])
+    if (skuName != null) __obj.updateDynamic("skuName")(skuName.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[LicenseAssignment]
   }
-  @scala.inline
-  implicit class LicenseAssignmentOps[Self <: LicenseAssignment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEtags(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkuId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkuId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkuName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkuName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

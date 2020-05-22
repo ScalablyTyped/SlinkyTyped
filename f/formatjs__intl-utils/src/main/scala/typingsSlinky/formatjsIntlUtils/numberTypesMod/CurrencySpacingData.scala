@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CurrencySpacingData extends js.Object {
-  var afterInsertBetween: String = js.native
-  var beforeInsertBetween: String = js.native
+  var afterInsertBetween: String
+  var beforeInsertBetween: String
 }
 
 object CurrencySpacingData {
@@ -16,25 +15,5 @@ object CurrencySpacingData {
     val __obj = js.Dynamic.literal(afterInsertBetween = afterInsertBetween.asInstanceOf[js.Any], beforeInsertBetween = beforeInsertBetween.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrencySpacingData]
   }
-  @scala.inline
-  implicit class CurrencySpacingDataOps[Self <: CurrencySpacingData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterInsertBetween(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterInsertBetween")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBeforeInsertBetween(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeInsertBetween")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

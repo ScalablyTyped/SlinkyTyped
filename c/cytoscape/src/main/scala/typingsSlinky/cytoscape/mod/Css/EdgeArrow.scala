@@ -1,6 +1,5 @@
 package typingsSlinky.cytoscape.mod.Css
 
-import typingsSlinky.cytoscape.mod.EdgeSingular
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,283 +19,67 @@ import scala.scalajs.js.annotation._
   * Only mid arrows are supported on haystack edges.
   * http://js.cytoscape.org/#style/edge-arrow
   */
-@js.native
 trait EdgeArrow extends js.Object {
   /** The size of the arrow. */
-  var `arrow-scale`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  var `arrow-scale`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
   /** The colour of the edge’s "mid-source" arrow. */
-  var `mid-source-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
+  var `mid-source-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
   /** The fill state of the edge’s mid-source arrow. */
-  var `mid-source-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.native
+  var `mid-source-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.undefined
   /** The shape of the edge’s mid-source arrow. */
-  var `mid-source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
+  var `mid-source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.undefined
   /** The colour of the edge’s "mid-target" arrow. */
-  var `mid-target-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
+  var `mid-target-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
   /** The fill state of the edge’s mid-target arrow. */
-  var `mid-target-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.native
+  var `mid-target-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.undefined
   /** The shape of the edge’s mid-target arrow. */
-  var `mid-target-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
+  var `mid-target-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.undefined
   /** The colour of the edge’s source arrow. */
-  var `source-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
+  var `source-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
   /** The fill state of the edge’s source arrow. */
-  var `source-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.native
+  var `source-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.undefined
   /** The shape of the edge’s source arrow. */
-  var `source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
+  var `source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.undefined
   /** The colour of the edge’s target arrow. */
-  var `target-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
+  var `target-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
   /** The fill state of the edge’s target arrow. */
-  var `target-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.native
+  var `target-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.undefined
   /** The shape of the edge’s target arrow. */
-  var `target-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
+  var `target-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.undefined
 }
 
 object EdgeArrow {
   @scala.inline
-  def apply(): EdgeArrow = {
+  def apply(
+    `arrow-scale`: PropertyValueEdge[Double] = null,
+    `mid-source-arrow-color`: PropertyValueEdge[Colour] = null,
+    `mid-source-arrow-fill`: PropertyValueEdge[ArrowFill] = null,
+    `mid-source-arrow-shape`: PropertyValueEdge[ArrowShape] = null,
+    `mid-target-arrow-color`: PropertyValueEdge[Colour] = null,
+    `mid-target-arrow-fill`: PropertyValueEdge[ArrowFill] = null,
+    `mid-target-arrow-shape`: PropertyValueEdge[ArrowShape] = null,
+    `source-arrow-color`: PropertyValueEdge[Colour] = null,
+    `source-arrow-fill`: PropertyValueEdge[ArrowFill] = null,
+    `source-arrow-shape`: PropertyValueEdge[ArrowShape] = null,
+    `target-arrow-color`: PropertyValueEdge[Colour] = null,
+    `target-arrow-fill`: PropertyValueEdge[ArrowFill] = null,
+    `target-arrow-shape`: PropertyValueEdge[ArrowShape] = null
+  ): EdgeArrow = {
     val __obj = js.Dynamic.literal()
+    if (`arrow-scale` != null) __obj.updateDynamic("arrow-scale")(`arrow-scale`.asInstanceOf[js.Any])
+    if (`mid-source-arrow-color` != null) __obj.updateDynamic("mid-source-arrow-color")(`mid-source-arrow-color`.asInstanceOf[js.Any])
+    if (`mid-source-arrow-fill` != null) __obj.updateDynamic("mid-source-arrow-fill")(`mid-source-arrow-fill`.asInstanceOf[js.Any])
+    if (`mid-source-arrow-shape` != null) __obj.updateDynamic("mid-source-arrow-shape")(`mid-source-arrow-shape`.asInstanceOf[js.Any])
+    if (`mid-target-arrow-color` != null) __obj.updateDynamic("mid-target-arrow-color")(`mid-target-arrow-color`.asInstanceOf[js.Any])
+    if (`mid-target-arrow-fill` != null) __obj.updateDynamic("mid-target-arrow-fill")(`mid-target-arrow-fill`.asInstanceOf[js.Any])
+    if (`mid-target-arrow-shape` != null) __obj.updateDynamic("mid-target-arrow-shape")(`mid-target-arrow-shape`.asInstanceOf[js.Any])
+    if (`source-arrow-color` != null) __obj.updateDynamic("source-arrow-color")(`source-arrow-color`.asInstanceOf[js.Any])
+    if (`source-arrow-fill` != null) __obj.updateDynamic("source-arrow-fill")(`source-arrow-fill`.asInstanceOf[js.Any])
+    if (`source-arrow-shape` != null) __obj.updateDynamic("source-arrow-shape")(`source-arrow-shape`.asInstanceOf[js.Any])
+    if (`target-arrow-color` != null) __obj.updateDynamic("target-arrow-color")(`target-arrow-color`.asInstanceOf[js.Any])
+    if (`target-arrow-fill` != null) __obj.updateDynamic("target-arrow-fill")(`target-arrow-fill`.asInstanceOf[js.Any])
+    if (`target-arrow-shape` != null) __obj.updateDynamic("target-arrow-shape")(`target-arrow-shape`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EdgeArrow]
   }
-  @scala.inline
-  implicit class EdgeArrowOps[Self <: EdgeArrow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withArrow-scaleFunction1`(value: EdgeSingular => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrow-scale")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withArrow-scale`(value: PropertyValueEdge[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrow-scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutArrow-scale`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrow-scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMid-source-arrow-colorFunction1`(value: EdgeSingular => Colour): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-color")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withMid-source-arrow-color`(value: PropertyValueEdge[Colour]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMid-source-arrow-color`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMid-source-arrow-fillFunction1`(value: EdgeSingular => ArrowFill): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-fill")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withMid-source-arrow-fill`(value: PropertyValueEdge[ArrowFill]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMid-source-arrow-fill`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMid-source-arrow-shapeFunction1`(value: EdgeSingular => ArrowShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-shape")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withMid-source-arrow-shape`(value: PropertyValueEdge[ArrowShape]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMid-source-arrow-shape`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMid-target-arrow-colorFunction1`(value: EdgeSingular => Colour): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-color")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withMid-target-arrow-color`(value: PropertyValueEdge[Colour]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMid-target-arrow-color`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMid-target-arrow-fillFunction1`(value: EdgeSingular => ArrowFill): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-fill")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withMid-target-arrow-fill`(value: PropertyValueEdge[ArrowFill]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMid-target-arrow-fill`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMid-target-arrow-shapeFunction1`(value: EdgeSingular => ArrowShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-shape")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withMid-target-arrow-shape`(value: PropertyValueEdge[ArrowShape]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMid-target-arrow-shape`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withSource-arrow-colorFunction1`(value: EdgeSingular => Colour): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-color")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withSource-arrow-color`(value: PropertyValueEdge[Colour]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutSource-arrow-color`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withSource-arrow-fillFunction1`(value: EdgeSingular => ArrowFill): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-fill")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withSource-arrow-fill`(value: PropertyValueEdge[ArrowFill]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutSource-arrow-fill`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withSource-arrow-shapeFunction1`(value: EdgeSingular => ArrowShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-shape")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withSource-arrow-shape`(value: PropertyValueEdge[ArrowShape]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutSource-arrow-shape`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTarget-arrow-colorFunction1`(value: EdgeSingular => Colour): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-color")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withTarget-arrow-color`(value: PropertyValueEdge[Colour]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTarget-arrow-color`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTarget-arrow-fillFunction1`(value: EdgeSingular => ArrowFill): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-fill")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withTarget-arrow-fill`(value: PropertyValueEdge[ArrowFill]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTarget-arrow-fill`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTarget-arrow-shapeFunction1`(value: EdgeSingular => ArrowShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-shape")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withTarget-arrow-shape`(value: PropertyValueEdge[ArrowShape]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTarget-arrow-shape`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-shape")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

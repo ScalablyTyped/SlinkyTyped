@@ -9,20 +9,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VariablesResource extends js.Object {
   /** Creates a GTM Variable. */
-  def create(request: Alt): Request[Variable] = js.native
+  def create(request: Alt): Request[Variable]
   /** Deletes a GTM Variable. */
-  def delete(request: Fields): Request[Unit] = js.native
+  def delete(request: Fields): Request[Unit]
   /** Gets a GTM Variable. */
-  def get(request: Fields): Request[Variable] = js.native
+  def get(request: Fields): Request[Variable]
   /** Lists all GTM Variables of a Container. */
-  def list(request: Key): Request[ListVariablesResponse] = js.native
+  def list(request: Key): Request[ListVariablesResponse]
   /** Reverts changes to a GTM Variable in a GTM Workspace. */
-  def revert(request: Fingerprint): Request[RevertVariableResponse] = js.native
+  def revert(request: Fingerprint): Request[RevertVariableResponse]
   /** Updates a GTM Variable. */
-  def update(request: Fingerprint): Request[Variable] = js.native
+  def update(request: Fingerprint): Request[Variable]
 }
 
 object VariablesResource {
@@ -38,49 +37,5 @@ object VariablesResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), revert = js.Any.fromFunction1(revert), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[VariablesResource]
   }
-  @scala.inline
-  implicit class VariablesResourceOps[Self <: VariablesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Alt => Request[Variable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Fields => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Fields => Request[Variable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Key => Request[ListVariablesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRevert(value: Fingerprint => Request[RevertVariableResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Fingerprint => Request[Variable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

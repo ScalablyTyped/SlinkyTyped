@@ -38,95 +38,23 @@ trait ListInstancesInput extends js.Object {
 
 object ListInstancesInput {
   @scala.inline
-  def apply(ClusterId: ClusterId): ListInstancesInput = {
+  def apply(
+    ClusterId: ClusterId,
+    InstanceFleetId: InstanceFleetId = null,
+    InstanceFleetType: InstanceFleetType = null,
+    InstanceGroupId: InstanceGroupId = null,
+    InstanceGroupTypes: InstanceGroupTypeList = null,
+    InstanceStates: InstanceStateList = null,
+    Marker: Marker = null
+  ): ListInstancesInput = {
     val __obj = js.Dynamic.literal(ClusterId = ClusterId.asInstanceOf[js.Any])
+    if (InstanceFleetId != null) __obj.updateDynamic("InstanceFleetId")(InstanceFleetId.asInstanceOf[js.Any])
+    if (InstanceFleetType != null) __obj.updateDynamic("InstanceFleetType")(InstanceFleetType.asInstanceOf[js.Any])
+    if (InstanceGroupId != null) __obj.updateDynamic("InstanceGroupId")(InstanceGroupId.asInstanceOf[js.Any])
+    if (InstanceGroupTypes != null) __obj.updateDynamic("InstanceGroupTypes")(InstanceGroupTypes.asInstanceOf[js.Any])
+    if (InstanceStates != null) __obj.updateDynamic("InstanceStates")(InstanceStates.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListInstancesInput]
   }
-  @scala.inline
-  implicit class ListInstancesInputOps[Self <: ListInstancesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterId(value: ClusterId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceFleetId(value: InstanceFleetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFleetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceFleetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFleetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceFleetType(value: InstanceFleetType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFleetType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceFleetType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFleetType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceGroupId(value: InstanceGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceGroupTypes(value: InstanceGroupTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroupTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceGroupTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroupTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceStates(value: InstanceStateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceStates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

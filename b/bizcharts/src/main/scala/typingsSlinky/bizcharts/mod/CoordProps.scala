@@ -1,147 +1,58 @@
 package typingsSlinky.bizcharts.mod
 
+import slinky.core.TagMod
 import typingsSlinky.bizcharts.bizchartsStrings.x
 import typingsSlinky.bizcharts.bizchartsStrings.y
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CoordProps
   extends Props[js.Any] {
-  var endAngle: js.UndefOr[Double] = js.native
-  var innerRadius: js.UndefOr[Double] = js.native
-  var radius: js.UndefOr[Double] = js.native
-  var reflect: js.UndefOr[x | y] = js.native
-  var rotate: js.UndefOr[Double] = js.native
-  var scale: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var startAngle: js.UndefOr[Double] = js.native
-  var transpose: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[CoordType] = js.native
+  var endAngle: js.UndefOr[Double] = js.undefined
+  var innerRadius: js.UndefOr[Double] = js.undefined
+  var radius: js.UndefOr[Double] = js.undefined
+  var reflect: js.UndefOr[x | y] = js.undefined
+  var rotate: js.UndefOr[Double] = js.undefined
+  var scale: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.undefined
+  var transpose: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[CoordType] = js.undefined
 }
 
 object CoordProps {
   @scala.inline
-  def apply(): CoordProps = {
+  def apply(
+    children: TagMod[Any] = null,
+    endAngle: js.UndefOr[Double] = js.undefined,
+    innerRadius: js.UndefOr[Double] = js.undefined,
+    key: Key = null,
+    radius: js.UndefOr[Double] = js.undefined,
+    ref: js.UndefOr[Null | LegacyRef[js.Any]] = js.undefined,
+    reflect: x | y = null,
+    rotate: js.UndefOr[Double] = js.undefined,
+    scale: js.Tuple2[Double, Double] = null,
+    startAngle: js.UndefOr[Double] = js.undefined,
+    transpose: js.UndefOr[Boolean] = js.undefined,
+    `type`: CoordType = null
+  ): CoordProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(endAngle)) __obj.updateDynamic("endAngle")(endAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerRadius)) __obj.updateDynamic("innerRadius")(innerRadius.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (reflect != null) __obj.updateDynamic("reflect")(reflect.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotate)) __obj.updateDynamic("rotate")(rotate.get.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (!js.isUndefined(startAngle)) __obj.updateDynamic("startAngle")(startAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transpose)) __obj.updateDynamic("transpose")(transpose.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoordProps]
   }
-  @scala.inline
-  implicit class CoordPropsOps[Self <: CoordProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReflect(value: typingsSlinky.bizcharts.bizchartsStrings.x | y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reflect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReflect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reflect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranspose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transpose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranspose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transpose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: CoordType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,21 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMathNary extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  var Char: Double = js.native
-  val Creator: Double = js.native
-  val E: OMath = js.native
-  var Grow: Boolean = js.native
-  var HideSub: Boolean = js.native
-  var HideSup: Boolean = js.native
-  val Parent: js.Any = js.native
-  val Sub: OMath = js.native
-  var SubSupLim: Boolean = js.native
-  val Sup: OMath = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  var Char: Double
+  val Creator: Double
+  val E: OMath
+  var Grow: Boolean
+  var HideSub: Boolean
+  var HideSup: Boolean
+  val Parent: js.Any
+  val Sub: OMath
+  var SubSupLim: Boolean
+  val Sup: OMath
   @JSName("Word.OMathNary_typekey")
-  var WordDotOMathNary_typekey: OMathNary = js.native
+  var WordDotOMathNary_typekey: OMathNary
 }
 
 object OMathNary {
@@ -41,85 +40,5 @@ object OMathNary {
     __obj.updateDynamic("Word.OMathNary_typekey")(WordDotOMathNary_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMathNary]
   }
-  @scala.inline
-  implicit class OMathNaryOps[Self <: OMathNary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChar(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Char")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withE(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGrow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Grow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideSub(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideSub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideSup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideSup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSub(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubSupLim(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubSupLim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSup(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotOMathNary_typekey(value: OMathNary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMathNary_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

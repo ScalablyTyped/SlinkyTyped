@@ -11,29 +11,10 @@ trait PurchaseReservedDBInstancesOfferingResult extends js.Object {
 
 object PurchaseReservedDBInstancesOfferingResult {
   @scala.inline
-  def apply(): PurchaseReservedDBInstancesOfferingResult = {
+  def apply(ReservedDBInstance: ReservedDBInstance = null): PurchaseReservedDBInstancesOfferingResult = {
     val __obj = js.Dynamic.literal()
+    if (ReservedDBInstance != null) __obj.updateDynamic("ReservedDBInstance")(ReservedDBInstance.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurchaseReservedDBInstancesOfferingResult]
   }
-  @scala.inline
-  implicit class PurchaseReservedDBInstancesOfferingResultOps[Self <: PurchaseReservedDBInstancesOfferingResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReservedDBInstance(value: ReservedDBInstance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedDBInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedDBInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedDBInstance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

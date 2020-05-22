@@ -22,47 +22,11 @@ trait ListJobsByPipelineRequest extends js.Object {
 
 object ListJobsByPipelineRequest {
   @scala.inline
-  def apply(PipelineId: Id): ListJobsByPipelineRequest = {
+  def apply(PipelineId: Id, Ascending: Ascending = null, PageToken: Id = null): ListJobsByPipelineRequest = {
     val __obj = js.Dynamic.literal(PipelineId = PipelineId.asInstanceOf[js.Any])
+    if (Ascending != null) __obj.updateDynamic("Ascending")(Ascending.asInstanceOf[js.Any])
+    if (PageToken != null) __obj.updateDynamic("PageToken")(PageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListJobsByPipelineRequest]
   }
-  @scala.inline
-  implicit class ListJobsByPipelineRequestOps[Self <: ListJobsByPipelineRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPipelineId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PipelineId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAscending(value: Ascending): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ascending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAscending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ascending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

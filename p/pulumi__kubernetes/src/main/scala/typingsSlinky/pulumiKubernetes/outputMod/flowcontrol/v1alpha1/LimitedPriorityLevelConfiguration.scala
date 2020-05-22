@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   *  * How are requests for this priority level limited?
   *  * What should be done with requests that exceed the limit?
   */
-@js.native
 trait LimitedPriorityLevelConfiguration extends js.Object {
   /**
     * `assuredConcurrencyShares` (ACS) configures the execution limit, which is a limit on the
@@ -25,11 +24,11 @@ trait LimitedPriorityLevelConfiguration extends js.Object {
     * bigger numbers of ACS mean more reserved concurrent requests (at the expense of every other
     * PL). This field has a default value of 30.
     */
-  val assuredConcurrencyShares: Double = js.native
+  val assuredConcurrencyShares: Double
   /**
     * `limitResponse` indicates what to do with requests that can not be executed right now
     */
-  val limitResponse: LimitResponse = js.native
+  val limitResponse: LimitResponse
 }
 
 object LimitedPriorityLevelConfiguration {
@@ -38,25 +37,5 @@ object LimitedPriorityLevelConfiguration {
     val __obj = js.Dynamic.literal(assuredConcurrencyShares = assuredConcurrencyShares.asInstanceOf[js.Any], limitResponse = limitResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[LimitedPriorityLevelConfiguration]
   }
-  @scala.inline
-  implicit class LimitedPriorityLevelConfigurationOps[Self <: LimitedPriorityLevelConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssuredConcurrencyShares(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assuredConcurrencyShares")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLimitResponse(value: LimitResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limitResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

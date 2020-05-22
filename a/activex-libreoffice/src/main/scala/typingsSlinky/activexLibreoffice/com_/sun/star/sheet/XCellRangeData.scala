@@ -13,27 +13,26 @@ import scala.scalajs.js.annotation._
   *
   * The outer sequence represents the rows and the inner sequence the columns of the array.
   */
-@js.native
 trait XCellRangeData extends XInterface {
   /**
     * gets an array from the contents of the cell range.
     *
     * Each element of the result contains a `double` or a `string` .
     */
-  val DataArray: SafeArray[SafeArray[_]] = js.native
+  val DataArray: SafeArray[SafeArray[_]]
   /**
     * gets an array from the contents of the cell range.
     *
     * Each element of the result contains a `double` or a `string` .
     */
-  def getDataArray(): SafeArray[SafeArray[_]] = js.native
+  def getDataArray(): SafeArray[SafeArray[_]]
   /**
     * fills the cell range with values from an array.
     *
     * The size of the array must be the same as the size of the cell range. Each element of the array must contain a `double` or a `string` .
     * @throws com::sun::star::uno::RuntimeException If the size of the array is different from the current size.
     */
-  def setDataArray(aArray: SeqEquiv[SeqEquiv[_]]): Unit = js.native
+  def setDataArray(aArray: SeqEquiv[SeqEquiv[_]]): Unit
 }
 
 object XCellRangeData {
@@ -49,31 +48,5 @@ object XCellRangeData {
     val __obj = js.Dynamic.literal(DataArray = DataArray.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getDataArray = js.Any.fromFunction0(getDataArray), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setDataArray = js.Any.fromFunction1(setDataArray))
     __obj.asInstanceOf[XCellRangeData]
   }
-  @scala.inline
-  implicit class XCellRangeDataOps[Self <: XCellRangeData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataArray(value: SafeArray[SafeArray[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDataArray(value: () => SafeArray[SafeArray[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataArray")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetDataArray(value: SeqEquiv[SeqEquiv[_]] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDataArray")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

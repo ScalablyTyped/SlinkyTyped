@@ -22,47 +22,15 @@ trait MessageDsn extends js.Object {
 
 object MessageDsn {
   @scala.inline
-  def apply(ReportingMta: ReportingMta): MessageDsn = {
+  def apply(
+    ReportingMta: ReportingMta,
+    ArrivalDate: js.Date = null,
+    ExtensionFields: ExtensionFieldList = null
+  ): MessageDsn = {
     val __obj = js.Dynamic.literal(ReportingMta = ReportingMta.asInstanceOf[js.Any])
+    if (ArrivalDate != null) __obj.updateDynamic("ArrivalDate")(ArrivalDate.asInstanceOf[js.Any])
+    if (ExtensionFields != null) __obj.updateDynamic("ExtensionFields")(ExtensionFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageDsn]
   }
-  @scala.inline
-  implicit class MessageDsnOps[Self <: MessageDsn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReportingMta(value: ReportingMta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportingMta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrivalDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrivalDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrivalDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrivalDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensionFields(value: ExtensionFieldList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtensionFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensionFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtensionFields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

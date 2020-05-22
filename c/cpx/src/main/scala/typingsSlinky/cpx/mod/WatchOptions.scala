@@ -1,40 +1,35 @@
 package typingsSlinky.cpx.mod
 
+import typingsSlinky.node.streamMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WatchOptions extends AsyncOptions {
   /** Flag to not copy at the initial time of watch. */
-  var initialCopy: js.UndefOr[Boolean] = js.native
+  var initialCopy: js.UndefOr[Boolean] = js.undefined
 }
 
 object WatchOptions {
   @scala.inline
-  def apply(): WatchOptions = {
+  def apply(
+    clean: js.UndefOr[Boolean] = js.undefined,
+    dereference: js.UndefOr[Boolean] = js.undefined,
+    includeEmptyDirs: js.UndefOr[Boolean] = js.undefined,
+    initialCopy: js.UndefOr[Boolean] = js.undefined,
+    preserve: js.UndefOr[Boolean] = js.undefined,
+    transform: /* filepath */ String => js.Array[Transform] = null,
+    update: js.UndefOr[Boolean] = js.undefined
+  ): WatchOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clean)) __obj.updateDynamic("clean")(clean.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dereference)) __obj.updateDynamic("dereference")(dereference.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeEmptyDirs)) __obj.updateDynamic("includeEmptyDirs")(includeEmptyDirs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialCopy)) __obj.updateDynamic("initialCopy")(initialCopy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserve)) __obj.updateDynamic("preserve")(preserve.get.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
+    if (!js.isUndefined(update)) __obj.updateDynamic("update")(update.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WatchOptions]
   }
-  @scala.inline
-  implicit class WatchOptionsOps[Self <: WatchOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialCopy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialCopy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialCopy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.jestSnapshot
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.expect.anon.IterableEquality
+import typingsSlinky.expect.anon.readonlyprintExpectedvalu
 import typingsSlinky.expect.typesMod.Tester
 import typingsSlinky.jestSnapshot.anon.Expected
 import typingsSlinky.jestSnapshot.anon.FilesRemoved
@@ -37,7 +37,7 @@ object mod extends js.Object {
     var snapshotState: default = js.native
     var suppressedErrors: js.Array[js.Error] = js.native
     var testPath: js.UndefOr[Path] = js.native
-    var utils: (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof jestMatcherUtils */ js.Any) with IterableEquality = js.native
+    var utils: readonlyprintExpectedvalu = js.native
     def equals(a: js.Any, b: js.Any): Boolean = js.native
     def equals(a: js.Any, b: js.Any, customTesters: js.Array[Tester]): Boolean = js.native
     def equals(a: js.Any, b: js.Any, customTesters: js.Array[Tester], strictCheck: Boolean): Boolean = js.native

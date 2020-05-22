@@ -1,5 +1,7 @@
 package typingsSlinky.reactNative.mod
 
+import typingsSlinky.reactNative.reactNativeStrings.dismissedAction
+import typingsSlinky.reactNative.reactNativeStrings.sharedAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,15 @@ trait ShareAction extends js.Object
 
 object ShareAction {
   @scala.inline
-  implicit def apply(value: ShareDismissedAction): ShareAction = value.asInstanceOf[ShareAction]
+  def ShareSharedAction(action: sharedAction, activityType: String = null): ShareAction = {
+    val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any])
+    if (activityType != null) __obj.updateDynamic("activityType")(activityType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ShareAction]
+  }
   @scala.inline
-  implicit def apply(value: ShareSharedAction): ShareAction = value.asInstanceOf[ShareAction]
+  def ShareDismissedAction(action: dismissedAction): ShareAction = {
+    val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ShareAction]
+  }
 }
 

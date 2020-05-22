@@ -9,15 +9,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseOperationResponse[T /* <: OperationResponseType */, TI /* <: OperationResponseTypeI */] extends BaseResponse[succeeds | precedes | effects | transaction] {
-  var created_at: String = js.native
-  var id: String = js.native
-  var paging_token: String = js.native
-  var source_account: String = js.native
-  var transaction_hash: String = js.native
-  var `type`: T = js.native
-  var type_i: TI = js.native
+  var created_at: String
+  var id: String
+  var paging_token: String
+  var source_account: String
+  var transaction_hash: String
+  var `type`: T
+  var type_i: TI
 }
 
 object BaseOperationResponse {
@@ -38,55 +37,5 @@ object BaseOperationResponse {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseOperationResponse[T, TI]]
   }
-  @scala.inline
-  implicit class BaseOperationResponseOps[Self[t, ti] <: BaseOperationResponse[t, ti], T, TI] (val x: Self[T, TI]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T, TI] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, TI]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[T, TI]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, TI]) with Other]
-    @scala.inline
-    def withCreated_at(value: String): Self[T, TI] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self[T, TI] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaging_token(value: String): Self[T, TI] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paging_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource_account(value: String): Self[T, TI] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransaction_hash(value: String): Self[T, TI] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction_hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: T): Self[T, TI] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType_i(value: TI): Self[T, TI] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type_i")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.Management
 
+import typingsSlinky.winrtUwp.Windows.Management.Deployment.PackageInstallState
+import typingsSlinky.winrtUwp.Windows.WinRTError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +13,29 @@ object Deployment extends js.Object {
   /** Provides the result of a deployment request. */
   @js.native
   abstract class DeploymentResult ()
-    extends typingsSlinky.winrtUwp.Windows.Management.Deployment.DeploymentResult
+    extends typingsSlinky.winrtUwp.Windows.Management.Deployment.DeploymentResult {
+    /** Gets the activity identifier used to look up an event in Windows Event Viewer. Gets the activity identifier used to look up an event. All events of a deployment operation are logged with the same activityId. */
+    /* CompleteClass */
+    override var activityId: String = js.native
+    /** Gets extended error text for the error if the deployment operation is not successful. */
+    /* CompleteClass */
+    override var errorText: String = js.native
+    /** The extended error code can be used to distinguish a specific error condition which needs to be handled differently from the general error indicated by the return code. The extended error code may provide a more specific reason for the failure that caused the general error. Also, it usually corresponds directly to the specific message in the ErrorText . */
+    /* CompleteClass */
+    override var extendedErrorCode: WinRTError = js.native
+  }
   
   /** Provides information about the users of an installed package. */
   @js.native
   abstract class PackageUserInformation ()
-    extends typingsSlinky.winrtUwp.Windows.Management.Deployment.PackageUserInformation
+    extends typingsSlinky.winrtUwp.Windows.Management.Deployment.PackageUserInformation {
+    /** Gets the install state of the package for the user. */
+    /* CompleteClass */
+    override var installState: PackageInstallState = js.native
+    /** Gets the security identifier (SID) of the package user. */
+    /* CompleteClass */
+    override var userSecurityId: String = js.native
+  }
   
   /** Represents a package storage volume. */
   @js.native
@@ -106,7 +125,12 @@ object Deployment extends js.Object {
     
     @js.native
     abstract class InstalledClassicAppInfo ()
-      extends typingsSlinky.winrtUwp.Windows.Management.Deployment.Preview.InstalledClassicAppInfo
+      extends typingsSlinky.winrtUwp.Windows.Management.Deployment.Preview.InstalledClassicAppInfo {
+      /* CompleteClass */
+      override var displayName: js.Any = js.native
+       /* unmapped type */ /* CompleteClass */
+      override var displayVersion: js.Any = js.native
+    }
     
     /* static members */
     @js.native

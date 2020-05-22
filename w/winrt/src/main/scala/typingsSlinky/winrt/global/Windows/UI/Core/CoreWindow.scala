@@ -1,5 +1,9 @@
 package typingsSlinky.winrt.global.Windows.UI.Core
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
+import typingsSlinky.winrt.Windows.Foundation.Point
+import typingsSlinky.winrt.Windows.Foundation.Rect
+import typingsSlinky.winrt.Windows.System.VirtualKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +11,72 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Core.CoreWindow")
 @js.native
 class CoreWindow ()
-  extends typingsSlinky.winrt.Windows.UI.Core.CoreWindow
+  extends typingsSlinky.winrt.Windows.UI.Core.CoreWindow {
+  /* CompleteClass */
+  override var automationHostProvider: js.Any = js.native
+  /* CompleteClass */
+  override var bounds: Rect = js.native
+  /* CompleteClass */
+  override var customProperties: IPropertySet = js.native
+  /* CompleteClass */
+  override var dispatcher: typingsSlinky.winrt.Windows.UI.Core.CoreDispatcher = js.native
+  /* CompleteClass */
+  override var flowDirection: typingsSlinky.winrt.Windows.UI.Core.CoreWindowFlowDirection = js.native
+  /* CompleteClass */
+  override var isInputEnabled: Boolean = js.native
+  /* CompleteClass */
+  override var onactivated: js.Any = js.native
+  /* CompleteClass */
+  override var onautomationproviderrequested: js.Any = js.native
+  /* CompleteClass */
+  override var oncharacterreceived: js.Any = js.native
+  /* CompleteClass */
+  override var onclosed: js.Any = js.native
+  /* CompleteClass */
+  override var oninputenabled: js.Any = js.native
+  /* CompleteClass */
+  override var onkeydown: js.Any = js.native
+  /* CompleteClass */
+  override var onkeyup: js.Any = js.native
+  /* CompleteClass */
+  override var onpointercapturelost: js.Any = js.native
+  /* CompleteClass */
+  override var onpointerentered: js.Any = js.native
+  /* CompleteClass */
+  override var onpointerexited: js.Any = js.native
+  /* CompleteClass */
+  override var onpointermoved: js.Any = js.native
+  /* CompleteClass */
+  override var onpointerpressed: js.Any = js.native
+  /* CompleteClass */
+  override var onpointerreleased: js.Any = js.native
+  /* CompleteClass */
+  override var onpointerwheelchanged: js.Any = js.native
+  /* CompleteClass */
+  override var onsizechanged: js.Any = js.native
+  /* CompleteClass */
+  override var ontouchhittesting: js.Any = js.native
+  /* CompleteClass */
+  override var onvisibilitychanged: js.Any = js.native
+  /* CompleteClass */
+  override var pointerCursor: typingsSlinky.winrt.Windows.UI.Core.CoreCursor = js.native
+  /* CompleteClass */
+  override var pointerPosition: Point = js.native
+  /* CompleteClass */
+  override var visible: Boolean = js.native
+  /* CompleteClass */
+  override def activate(): Unit = js.native
+  /* CompleteClass */
+  override def close(): Unit = js.native
+  /* CompleteClass */
+  override def getAsyncKeyState(virtualKey: VirtualKey): typingsSlinky.winrt.Windows.UI.Core.CoreVirtualKeyStates = js.native
+  /* CompleteClass */
+  override def getKeyState(virtualKey: VirtualKey): typingsSlinky.winrt.Windows.UI.Core.CoreVirtualKeyStates = js.native
+  /* CompleteClass */
+  override def releasePointerCapture(): Unit = js.native
+  /* CompleteClass */
+  override def setPointerCapture(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.UI.Core.CoreWindow")

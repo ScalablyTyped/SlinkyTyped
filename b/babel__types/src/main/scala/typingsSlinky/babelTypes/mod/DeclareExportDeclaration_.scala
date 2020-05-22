@@ -6,89 +6,38 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait DeclareExportDeclaration_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait DeclareExportDeclaration_
   extends Declaration
      with BaseNode
      with Flow
      with FlowDeclaration
      with Statement {
-  var declaration: Flow | Null = js.native
-  var default: Boolean | Null = js.native
-  var source: StringLiteral_ | Null = js.native
-  var specifiers: (js.Array[ExportSpecifier_ | ExportNamespaceSpecifier_]) | Null = js.native
+  var declaration: Flow | Null
+  var default: Boolean | Null
+  var source: StringLiteral_ | Null
+  var specifiers: (js.Array[ExportSpecifier_ | ExportNamespaceSpecifier_]) | Null
   @JSName("type")
-  var type_DeclareExportDeclaration_ : DeclareExportDeclaration = js.native
+  var type_DeclareExportDeclaration_ : DeclareExportDeclaration
 }
 
 object DeclareExportDeclaration_ {
   @scala.inline
-  def apply(`type`: DeclareExportDeclaration): DeclareExportDeclaration_ = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    `type`: DeclareExportDeclaration,
+    declaration: Flow = null,
+    default: Boolean = null.asInstanceOf[Boolean],
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    source: StringLiteral_ = null,
+    specifiers: js.Array[ExportSpecifier_ | ExportNamespaceSpecifier_] = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): DeclareExportDeclaration_ = {
+    val __obj = js.Dynamic.literal(declaration = declaration.asInstanceOf[js.Any], default = default.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], specifiers = specifiers.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclareExportDeclaration_]
   }
-  @scala.inline
-  implicit class DeclareExportDeclaration_Ops[Self <: DeclareExportDeclaration_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: DeclareExportDeclaration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeclaration(value: Flow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeclarationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(null)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(null)
-        ret
-    }
-    @scala.inline
-    def withSource(value: StringLiteral_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(null)
-        ret
-    }
-    @scala.inline
-    def withSpecifiers(value: js.Array[ExportSpecifier_ | ExportNamespaceSpecifier_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpecifiersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specifiers")(null)
-        ret
-    }
-  }
-  
 }
 

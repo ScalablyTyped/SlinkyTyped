@@ -15,5 +15,7 @@ class ExponentialRetryPolicyFilter () extends Filter {
   var minRetryInterval: Double = js.native
   var retryCount: Double = js.native
   var retryInterval: Double = js.native
+  /* CompleteClass */
+  override def handle(requestOptions: js.Any, next: js.Function): Unit = js.native
 }
 

@@ -4,179 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenGraph extends js.Object {
-  var article: js.UndefOr[OpenGraphArticle] = js.native
-  var book: js.UndefOr[OpenGraphBook] = js.native
-  var defaultImageHeight: js.UndefOr[Double] = js.native
-  var defaultImageWidth: js.UndefOr[Double] = js.native
-  var description: js.UndefOr[String] = js.native
-  var images: js.UndefOr[js.Array[OpenGraphImages]] = js.native
-  var locale: js.UndefOr[String] = js.native
-  var profile: js.UndefOr[OpenGraphProfile] = js.native
-  var site_name: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
+  var article: js.UndefOr[OpenGraphArticle] = js.undefined
+  var book: js.UndefOr[OpenGraphBook] = js.undefined
+  var defaultImageHeight: js.UndefOr[Double] = js.undefined
+  var defaultImageWidth: js.UndefOr[Double] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var images: js.UndefOr[js.Array[OpenGraphImages]] = js.undefined
+  var locale: js.UndefOr[String] = js.undefined
+  var profile: js.UndefOr[OpenGraphProfile] = js.undefined
+  var site_name: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object OpenGraph {
   @scala.inline
-  def apply(): OpenGraph = {
+  def apply(
+    article: OpenGraphArticle = null,
+    book: OpenGraphBook = null,
+    defaultImageHeight: js.UndefOr[Double] = js.undefined,
+    defaultImageWidth: js.UndefOr[Double] = js.undefined,
+    description: String = null,
+    images: js.Array[OpenGraphImages] = null,
+    locale: String = null,
+    profile: OpenGraphProfile = null,
+    site_name: String = null,
+    title: String = null,
+    `type`: String = null,
+    url: String = null
+  ): OpenGraph = {
     val __obj = js.Dynamic.literal()
+    if (article != null) __obj.updateDynamic("article")(article.asInstanceOf[js.Any])
+    if (book != null) __obj.updateDynamic("book")(book.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultImageHeight)) __obj.updateDynamic("defaultImageHeight")(defaultImageHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultImageWidth)) __obj.updateDynamic("defaultImageWidth")(defaultImageWidth.get.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (images != null) __obj.updateDynamic("images")(images.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (profile != null) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
+    if (site_name != null) __obj.updateDynamic("site_name")(site_name.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenGraph]
   }
-  @scala.inline
-  implicit class OpenGraphOps[Self <: OpenGraph] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArticle(value: OpenGraphArticle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArticle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBook(value: OpenGraphBook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("book")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("book")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultImageHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultImageHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultImageHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultImageHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultImageWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultImageWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultImageWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultImageWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImages(value: js.Array[OpenGraphImages]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfile(value: OpenGraphProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSite_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("site_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSite_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("site_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

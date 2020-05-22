@@ -42,77 +42,20 @@ trait SchemaAndroidTestLoop extends js.Object {
 
 object SchemaAndroidTestLoop {
   @scala.inline
-  def apply(): SchemaAndroidTestLoop = {
+  def apply(
+    appApk: SchemaFileReference = null,
+    appBundle: SchemaAppBundle = null,
+    appPackageId: String = null,
+    scenarioLabels: js.Array[String] = null,
+    scenarios: js.Array[Double] = null
+  ): SchemaAndroidTestLoop = {
     val __obj = js.Dynamic.literal()
+    if (appApk != null) __obj.updateDynamic("appApk")(appApk.asInstanceOf[js.Any])
+    if (appBundle != null) __obj.updateDynamic("appBundle")(appBundle.asInstanceOf[js.Any])
+    if (appPackageId != null) __obj.updateDynamic("appPackageId")(appPackageId.asInstanceOf[js.Any])
+    if (scenarioLabels != null) __obj.updateDynamic("scenarioLabels")(scenarioLabels.asInstanceOf[js.Any])
+    if (scenarios != null) __obj.updateDynamic("scenarios")(scenarios.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidTestLoop]
   }
-  @scala.inline
-  implicit class SchemaAndroidTestLoopOps[Self <: SchemaAndroidTestLoop] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppApk(value: SchemaFileReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appApk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppApk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appApk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppBundle(value: SchemaAppBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBundle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppBundle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBundle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppPackageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appPackageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppPackageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appPackageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScenarioLabels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scenarioLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScenarioLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scenarioLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScenarios(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scenarios")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScenarios: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scenarios")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

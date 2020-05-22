@@ -9,7 +9,12 @@ import scala.scalajs.js.annotation._
 object GmeUtil extends js.Object {
   @js.native
   class Canon ()
-    extends typingsSlinky.webgme.GmeUtil.Canon
+    extends typingsSlinky.webgme.GmeUtil.Canon {
+    /* CompleteClass */
+    override def parse(thing: js.Any): String = js.native
+    /* CompleteClass */
+    override def stringify(thing: js.Any): String = js.native
+  }
   
   @JSName("CANON")
   var CANON_ : typingsSlinky.webgme.GmeUtil.Canon = js.native

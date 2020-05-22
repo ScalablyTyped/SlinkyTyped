@@ -5,61 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Plugins[S /* <: typingsSlinky.prosemirrorModel.mod.Schema[_, _] */] extends js.Object {
-  var plugins: js.UndefOr[(js.Array[Plugin[_, S]]) | Null] = js.native
-  var schema: js.UndefOr[S | Null] = js.native
+  var plugins: js.UndefOr[(js.Array[Plugin[_, S]]) | Null] = js.undefined
+  var schema: js.UndefOr[S | Null] = js.undefined
 }
 
 object Plugins {
   @scala.inline
-  def apply[S](): Plugins[S] = {
+  def apply[S](
+    plugins: js.UndefOr[Null | (js.Array[Plugin[_, S]])] = js.undefined,
+    schema: js.UndefOr[Null | S] = js.undefined
+  ): Plugins[S] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(plugins)) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
+    if (!js.isUndefined(schema)) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
     __obj.asInstanceOf[Plugins[S]]
   }
-  @scala.inline
-  implicit class PluginsOps[Self[s] <: Plugins[s], S] (val x: Self[S]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[S]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
-    @scala.inline
-    def withPlugins(value: js.Array[Plugin[_, S]]): Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPluginsNull: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(null)
-        ret
-    }
-    @scala.inline
-    def withSchema(value: S): Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchema: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaNull: Self[S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(null)
-        ret
-    }
-  }
-  
 }
 

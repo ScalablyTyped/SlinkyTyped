@@ -14,29 +14,10 @@ trait SchemaDetectionsListResponse extends js.Object {
 
 object SchemaDetectionsListResponse {
   @scala.inline
-  def apply(): SchemaDetectionsListResponse = {
+  def apply(detections: js.Array[SchemaDetectionsResource] = null): SchemaDetectionsListResponse = {
     val __obj = js.Dynamic.literal()
+    if (detections != null) __obj.updateDynamic("detections")(detections.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDetectionsListResponse]
   }
-  @scala.inline
-  implicit class SchemaDetectionsListResponseOps[Self <: SchemaDetectionsListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetections(value: js.Array[SchemaDetectionsResource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detections")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

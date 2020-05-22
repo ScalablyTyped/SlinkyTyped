@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about the Transferred event. */
-@js.native
 trait PlayToConnectionTransferredEventArgs extends js.Object {
   /** Gets the current Play To source that a connection was transferred to. */
-  var currentSource: PlayToSource = js.native
+  var currentSource: PlayToSource
   /** Gets the previous Play To source that a connection was transferred from. */
-  var previousSource: PlayToSource = js.native
+  var previousSource: PlayToSource
 }
 
 object PlayToConnectionTransferredEventArgs {
@@ -19,25 +18,5 @@ object PlayToConnectionTransferredEventArgs {
     val __obj = js.Dynamic.literal(currentSource = currentSource.asInstanceOf[js.Any], previousSource = previousSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayToConnectionTransferredEventArgs]
   }
-  @scala.inline
-  implicit class PlayToConnectionTransferredEventArgsOps[Self <: PlayToConnectionTransferredEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentSource(value: PlayToSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreviousSource(value: PlayToSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

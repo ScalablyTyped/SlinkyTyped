@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppEngineHttpTarget extends js.Object {
   /**
     * Overrides for the
@@ -14,34 +13,15 @@ trait AppEngineHttpTarget extends js.Object {
     * all tasks in the queue, no matter what the setting is for the
     * task-level app_engine_routing.
     */
-  var appEngineRoutingOverride: js.UndefOr[AppEngineRouting] = js.native
+  var appEngineRoutingOverride: js.UndefOr[AppEngineRouting] = js.undefined
 }
 
 object AppEngineHttpTarget {
   @scala.inline
-  def apply(): AppEngineHttpTarget = {
+  def apply(appEngineRoutingOverride: AppEngineRouting = null): AppEngineHttpTarget = {
     val __obj = js.Dynamic.literal()
+    if (appEngineRoutingOverride != null) __obj.updateDynamic("appEngineRoutingOverride")(appEngineRoutingOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppEngineHttpTarget]
   }
-  @scala.inline
-  implicit class AppEngineHttpTargetOps[Self <: AppEngineHttpTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppEngineRoutingOverride(value: AppEngineRouting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRoutingOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppEngineRoutingOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRoutingOverride")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,21 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseChartOpts extends js.Object {
   /**
     * The optional kubernetes api versions used for Capabilities.APIVersions.
     */
-  var apiVersions: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  var apiVersions: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
   /**
     * The optional namespace to install chart resources into.
     */
-  var namespace: js.UndefOr[Input[String]] = js.native
+  var namespace: js.UndefOr[Input[String]] = js.undefined
   /**
     * An optional prefix for the auto-generated resource names.
     * Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".
     */
-  var resourcePrefix: js.UndefOr[String] = js.native
+  var resourcePrefix: js.UndefOr[String] = js.undefined
   /**
     * Optional array of transformations to apply to resources that will be created by this chart prior to
     * creation. Allows customization of the chart behaviour without directly modifying the chart itself.
@@ -45,86 +44,29 @@ trait BaseChartOpts extends js.Object {
     * ]
     * ```
     */
-  var transformations: js.UndefOr[js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]]] = js.native
+  var transformations: js.UndefOr[js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]]] = js.undefined
   /**
     * Overrides for chart values.
     */
-  var values: js.UndefOr[Inputs] = js.native
+  var values: js.UndefOr[Inputs] = js.undefined
 }
 
 object BaseChartOpts {
   @scala.inline
-  def apply(): BaseChartOpts = {
+  def apply(
+    apiVersions: Input[js.Array[Input[String]]] = null,
+    namespace: Input[String] = null,
+    resourcePrefix: String = null,
+    transformations: js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]] = null,
+    values: Inputs = null
+  ): BaseChartOpts = {
     val __obj = js.Dynamic.literal()
+    if (apiVersions != null) __obj.updateDynamic("apiVersions")(apiVersions.asInstanceOf[js.Any])
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (resourcePrefix != null) __obj.updateDynamic("resourcePrefix")(resourcePrefix.asInstanceOf[js.Any])
+    if (transformations != null) __obj.updateDynamic("transformations")(transformations.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseChartOpts]
   }
-  @scala.inline
-  implicit class BaseChartOptsOps[Self <: BaseChartOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersions(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourcePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourcePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformations(value: js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: Inputs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

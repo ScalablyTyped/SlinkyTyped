@@ -10,173 +10,85 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@js.native
 trait DataPivotHierarchyLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Returns the PivotFields associated with the DataPivotHierarchy.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var field: js.UndefOr[PivotFieldLoadOptions] = js.native
+  var field: js.UndefOr[PivotFieldLoadOptions] = js.undefined
   /**
     *
     * Id of the DataPivotHierarchy.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Name of the DataPivotHierarchy.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var name: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Number format of the DataPivotHierarchy.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var numberFormat: js.UndefOr[Boolean] = js.native
+  var numberFormat: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Position of the DataPivotHierarchy.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var position: js.UndefOr[Boolean] = js.native
+  var position: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Determines whether the data should be shown as a specific summary calculation or not.
+    * Specifies if the data should be shown as a specific summary calculation.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var showAs: js.UndefOr[Boolean] = js.native
+  var showAs: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Determines whether to show all items of the DataPivotHierarchy.
+    * Specifies if all items of the DataPivotHierarchy are shown.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var summarizeBy: js.UndefOr[Boolean] = js.native
+  var summarizeBy: js.UndefOr[Boolean] = js.undefined
 }
 
 object DataPivotHierarchyLoadOptions {
   @scala.inline
-  def apply(): DataPivotHierarchyLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    field: PivotFieldLoadOptions = null,
+    id: js.UndefOr[Boolean] = js.undefined,
+    name: js.UndefOr[Boolean] = js.undefined,
+    numberFormat: js.UndefOr[Boolean] = js.undefined,
+    position: js.UndefOr[Boolean] = js.undefined,
+    showAs: js.UndefOr[Boolean] = js.undefined,
+    summarizeBy: js.UndefOr[Boolean] = js.undefined
+  ): DataPivotHierarchyLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberFormat)) __obj.updateDynamic("numberFormat")(numberFormat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(position)) __obj.updateDynamic("position")(position.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showAs)) __obj.updateDynamic("showAs")(showAs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(summarizeBy)) __obj.updateDynamic("summarizeBy")(summarizeBy.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataPivotHierarchyLoadOptions]
   }
-  @scala.inline
-  implicit class DataPivotHierarchyLoadOptionsOps[Self <: DataPivotHierarchyLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: PivotFieldLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummarizeBy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summarizeBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummarizeBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summarizeBy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

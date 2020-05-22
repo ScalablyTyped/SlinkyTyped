@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigOptions extends js.Object {
-  var awsConfig: js.UndefOr[Config_] = js.native
+  var awsConfig: js.UndefOr[Config_] = js.undefined
 }
 
 object ConfigOptions {
   @scala.inline
-  def apply(): ConfigOptions = {
+  def apply(awsConfig: Config_ = null): ConfigOptions = {
     val __obj = js.Dynamic.literal()
+    if (awsConfig != null) __obj.updateDynamic("awsConfig")(awsConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigOptions]
   }
-  @scala.inline
-  implicit class ConfigOptionsOps[Self <: ConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsConfig(value: Config_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

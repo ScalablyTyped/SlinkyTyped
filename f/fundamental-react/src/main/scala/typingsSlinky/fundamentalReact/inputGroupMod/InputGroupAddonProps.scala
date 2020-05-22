@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InputGroupAddonProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var compact: js.UndefOr[Boolean] = js.native
-  var isButton: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var compact: js.UndefOr[Boolean] = js.undefined
+  var isButton: js.UndefOr[Boolean] = js.undefined
 }
 
 object InputGroupAddonProps {
   @scala.inline
-  def apply(): InputGroupAddonProps = {
+  def apply(
+    className: String = null,
+    compact: js.UndefOr[Boolean] = js.undefined,
+    isButton: js.UndefOr[Boolean] = js.undefined
+  ): InputGroupAddonProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isButton)) __obj.updateDynamic("isButton")(isButton.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputGroupAddonProps]
   }
-  @scala.inline
-  implicit class InputGroupAddonPropsOps[Self <: InputGroupAddonProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isButton")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

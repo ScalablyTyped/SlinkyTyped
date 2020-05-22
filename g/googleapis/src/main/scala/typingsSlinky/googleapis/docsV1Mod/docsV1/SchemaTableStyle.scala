@@ -19,29 +19,10 @@ trait SchemaTableStyle extends js.Object {
 
 object SchemaTableStyle {
   @scala.inline
-  def apply(): SchemaTableStyle = {
+  def apply(tableColumnProperties: js.Array[SchemaTableColumnProperties] = null): SchemaTableStyle = {
     val __obj = js.Dynamic.literal()
+    if (tableColumnProperties != null) __obj.updateDynamic("tableColumnProperties")(tableColumnProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableStyle]
   }
-  @scala.inline
-  implicit class SchemaTableStyleOps[Self <: SchemaTableStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTableColumnProperties(value: js.Array[SchemaTableColumnProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableColumnProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableColumnProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableColumnProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

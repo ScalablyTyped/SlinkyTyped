@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -20,6 +21,8 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.listTypesMod.IList
+import typingsSlinky.officeUiFabricReact.listTypesMod.IListOnRenderRootProps
+import typingsSlinky.officeUiFabricReact.listTypesMod.IListOnRenderSurfaceProps
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.listTypesMod.IPage
 import typingsSlinky.officeUiFabricReact.listTypesMod.IPageProps
@@ -75,7 +78,6 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
-import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -517,8 +519,20 @@ object List {
     ): this.type = set("onRenderCell", js.Any.fromFunction3(value))
     @scala.inline
     def onRenderPage(
-      value: (/* pageProps */ IPageProps[T], /* defaultRender */ js.UndefOr[IRenderFunction[IPageProps[T]]]) => TagMod[Any]
+      value: (/* props */ js.UndefOr[IPageProps[T]], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IPageProps[T]], ReactElement | Null]]) => ReactElement | Null
     ): this.type = set("onRenderPage", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRenderRoot(
+      value: (/* props */ js.UndefOr[IListOnRenderRootProps[T]], /* defaultRender */ js.UndefOr[
+          js.Function1[/* props */ js.UndefOr[IListOnRenderRootProps[T]], ReactElement | Null]
+        ]) => ReactElement | Null
+    ): this.type = set("onRenderRoot", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRenderSurface(
+      value: (/* props */ js.UndefOr[IListOnRenderSurfaceProps[T]], /* defaultRender */ js.UndefOr[
+          js.Function1[/* props */ js.UndefOr[IListOnRenderSurfaceProps[T]], ReactElement | Null]
+        ]) => ReactElement | Null
+    ): this.type = set("onRenderSurface", js.Any.fromFunction2(value))
     @scala.inline
     def onReset(
       value: SyntheticEvent[
@@ -648,6 +662,11 @@ object List {
   }
   
   def withProps[T](p: IListProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[IListProps[T]]))
+  }
   implicit def make[T](companion: List.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

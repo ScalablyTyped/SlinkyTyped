@@ -18,41 +18,11 @@ trait ListNetworkProfilesResult extends js.Object {
 
 object ListNetworkProfilesResult {
   @scala.inline
-  def apply(): ListNetworkProfilesResult = {
+  def apply(networkProfiles: NetworkProfiles = null, nextToken: PaginationToken = null): ListNetworkProfilesResult = {
     val __obj = js.Dynamic.literal()
+    if (networkProfiles != null) __obj.updateDynamic("networkProfiles")(networkProfiles.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListNetworkProfilesResult]
   }
-  @scala.inline
-  implicit class ListNetworkProfilesResultOps[Self <: ListNetworkProfilesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNetworkProfiles(value: NetworkProfiles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProfiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

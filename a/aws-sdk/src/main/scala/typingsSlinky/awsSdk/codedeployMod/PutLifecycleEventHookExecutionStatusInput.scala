@@ -22,53 +22,16 @@ trait PutLifecycleEventHookExecutionStatusInput extends js.Object {
 
 object PutLifecycleEventHookExecutionStatusInput {
   @scala.inline
-  def apply(): PutLifecycleEventHookExecutionStatusInput = {
+  def apply(
+    deploymentId: DeploymentId = null,
+    lifecycleEventHookExecutionId: LifecycleEventHookExecutionId = null,
+    status: LifecycleEventStatus = null
+  ): PutLifecycleEventHookExecutionStatusInput = {
     val __obj = js.Dynamic.literal()
+    if (deploymentId != null) __obj.updateDynamic("deploymentId")(deploymentId.asInstanceOf[js.Any])
+    if (lifecycleEventHookExecutionId != null) __obj.updateDynamic("lifecycleEventHookExecutionId")(lifecycleEventHookExecutionId.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutLifecycleEventHookExecutionStatusInput]
   }
-  @scala.inline
-  implicit class PutLifecycleEventHookExecutionStatusInputOps[Self <: PutLifecycleEventHookExecutionStatusInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentId(value: DeploymentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycleEventHookExecutionId(value: LifecycleEventHookExecutionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleEventHookExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleEventHookExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleEventHookExecutionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: LifecycleEventStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

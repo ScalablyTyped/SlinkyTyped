@@ -50,137 +50,30 @@ trait AgentInfo extends js.Object {
 
 object AgentInfo {
   @scala.inline
-  def apply(): AgentInfo = {
+  def apply(
+    agentId: AgentId = null,
+    agentNetworkInfoList: AgentNetworkInfoList = null,
+    agentType: String = null,
+    collectionStatus: String = null,
+    connectorId: String = null,
+    health: AgentStatus = null,
+    hostName: String = null,
+    lastHealthPingTime: String = null,
+    registeredTime: String = null,
+    version: String = null
+  ): AgentInfo = {
     val __obj = js.Dynamic.literal()
+    if (agentId != null) __obj.updateDynamic("agentId")(agentId.asInstanceOf[js.Any])
+    if (agentNetworkInfoList != null) __obj.updateDynamic("agentNetworkInfoList")(agentNetworkInfoList.asInstanceOf[js.Any])
+    if (agentType != null) __obj.updateDynamic("agentType")(agentType.asInstanceOf[js.Any])
+    if (collectionStatus != null) __obj.updateDynamic("collectionStatus")(collectionStatus.asInstanceOf[js.Any])
+    if (connectorId != null) __obj.updateDynamic("connectorId")(connectorId.asInstanceOf[js.Any])
+    if (health != null) __obj.updateDynamic("health")(health.asInstanceOf[js.Any])
+    if (hostName != null) __obj.updateDynamic("hostName")(hostName.asInstanceOf[js.Any])
+    if (lastHealthPingTime != null) __obj.updateDynamic("lastHealthPingTime")(lastHealthPingTime.asInstanceOf[js.Any])
+    if (registeredTime != null) __obj.updateDynamic("registeredTime")(registeredTime.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgentInfo]
   }
-  @scala.inline
-  implicit class AgentInfoOps[Self <: AgentInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentId(value: AgentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgentNetworkInfoList(value: AgentNetworkInfoList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentNetworkInfoList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentNetworkInfoList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentNetworkInfoList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollectionStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollectionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectorId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealth(value: AgentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("health")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("health")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastHealthPingTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastHealthPingTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastHealthPingTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastHealthPingTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegisteredTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registeredTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegisteredTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registeredTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

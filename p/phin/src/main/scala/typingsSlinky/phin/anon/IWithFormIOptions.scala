@@ -8,180 +8,52 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined phin.phin.IWithForm<phin.phin.IOptions> */
-@js.native
 trait IWithFormIOptions extends js.Object {
-  var compression: js.UndefOr[Boolean] = js.native
-  var core: js.UndefOr[ClientRequestArgs] = js.native
-  var followRedirects: js.UndefOr[Boolean] = js.native
-  var form: StringDictionary[String] = js.native
-  var headers: js.UndefOr[js.Object] = js.native
-  var hostname: js.UndefOr[String] = js.native
-  var method: js.UndefOr[String] = js.native
-  var parse: js.UndefOr[none] = js.native
-  var path: js.UndefOr[String] = js.native
-  var port: js.UndefOr[Double] = js.native
-  var stream: js.UndefOr[Boolean] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var url: String = js.native
+  var compression: js.UndefOr[Boolean] = js.undefined
+  var core: js.UndefOr[ClientRequestArgs] = js.undefined
+  var followRedirects: js.UndefOr[Boolean] = js.undefined
+  var form: StringDictionary[String]
+  var headers: js.UndefOr[js.Object] = js.undefined
+  var hostname: js.UndefOr[String] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
+  var parse: js.UndefOr[none] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
+  var stream: js.UndefOr[Boolean] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var url: String
 }
 
 object IWithFormIOptions {
   @scala.inline
-  def apply(form: StringDictionary[String], url: String): IWithFormIOptions = {
+  def apply(
+    form: StringDictionary[String],
+    url: String,
+    compression: js.UndefOr[Boolean] = js.undefined,
+    core: ClientRequestArgs = null,
+    followRedirects: js.UndefOr[Boolean] = js.undefined,
+    headers: js.Object = null,
+    hostname: String = null,
+    method: String = null,
+    parse: none = null,
+    path: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    stream: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): IWithFormIOptions = {
     val __obj = js.Dynamic.literal(form = form.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (!js.isUndefined(compression)) __obj.updateDynamic("compression")(compression.get.asInstanceOf[js.Any])
+    if (core != null) __obj.updateDynamic("core")(core.asInstanceOf[js.Any])
+    if (!js.isUndefined(followRedirects)) __obj.updateDynamic("followRedirects")(followRedirects.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (parse != null) __obj.updateDynamic("parse")(parse.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stream)) __obj.updateDynamic("stream")(stream.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWithFormIOptions]
   }
-  @scala.inline
-  implicit class IWithFormIOptionsOps[Self <: IWithFormIOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForm(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCore(value: ClientRequestArgs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("core")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("core")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowRedirects(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowRedirects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParse(value: none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStream(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

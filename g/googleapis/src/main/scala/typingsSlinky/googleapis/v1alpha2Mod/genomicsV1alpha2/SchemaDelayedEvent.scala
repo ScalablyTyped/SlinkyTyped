@@ -27,41 +27,11 @@ trait SchemaDelayedEvent extends js.Object {
 
 object SchemaDelayedEvent {
   @scala.inline
-  def apply(): SchemaDelayedEvent = {
+  def apply(cause: String = null, metrics: js.Array[String] = null): SchemaDelayedEvent = {
     val __obj = js.Dynamic.literal()
+    if (cause != null) __obj.updateDynamic("cause")(cause.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDelayedEvent]
   }
-  @scala.inline
-  implicit class SchemaDelayedEventOps[Self <: SchemaDelayedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCause(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

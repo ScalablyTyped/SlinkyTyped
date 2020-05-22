@@ -9,7 +9,7 @@ import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorCellP
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellStyleProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
@@ -60,7 +60,7 @@ object ColorPickerGridCell {
     @scala.inline
     def onWheel(value: /* ev */ SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
-    def stylesFunction1(value: IColorPickerGridCellStyleProps => Partial[IColorPickerGridCellStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IColorPickerGridCellStyleProps => DeepPartial[IColorPickerGridCellStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IColorPickerGridCellStyleProps, IColorPickerGridCellStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

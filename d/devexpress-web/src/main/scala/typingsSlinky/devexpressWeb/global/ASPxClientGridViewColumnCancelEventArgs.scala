@@ -16,5 +16,15 @@ class ASPxClientGridViewColumnCancelEventArgs protected ()
     * @param column An ASPxClientGridViewColumn object that represents the processed column.
     */
   def this(column: typingsSlinky.devexpressWeb.ASPxClientGridViewColumn) = this()
+  /**
+    * Gets or sets a value indicating whether the action which raised the event should be canceled.
+    */
+  /* CompleteClass */
+  override var cancel: Boolean = js.native
+  /**
+    * Gets the processed client column.
+    */
+  /* CompleteClass */
+  override var column: typingsSlinky.devexpressWeb.ASPxClientGridViewColumn = js.native
 }
 

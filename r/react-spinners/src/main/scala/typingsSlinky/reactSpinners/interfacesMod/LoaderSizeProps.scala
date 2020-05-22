@@ -4,49 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoaderSizeProps extends CommonProps {
-  var size: js.UndefOr[Double] = js.native
-  var sizeUnit: js.UndefOr[String] = js.native
+  var size: js.UndefOr[Double] = js.undefined
+  var sizeUnit: js.UndefOr[String] = js.undefined
 }
 
 object LoaderSizeProps {
   @scala.inline
-  def apply(): LoaderSizeProps = {
+  def apply(
+    color: String = null,
+    css: String | PrecompiledCss = null,
+    loading: js.UndefOr[Boolean] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    sizeUnit: String = null
+  ): LoaderSizeProps = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (sizeUnit != null) __obj.updateDynamic("sizeUnit")(sizeUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoaderSizeProps]
   }
-  @scala.inline
-  implicit class LoaderSizePropsOps[Self <: LoaderSizeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeUnit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

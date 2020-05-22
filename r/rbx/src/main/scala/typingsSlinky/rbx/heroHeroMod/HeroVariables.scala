@@ -10,9 +10,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined rbx.rbx/types.Prefer<rbx.rbx/layout/hero/hero.HeroVariablesOverrides, rbx.rbx/layout/hero/hero.HeroVariablesDefaults> */
-@js.native
 trait HeroVariables extends js.Object {
-  var sizes: small | medium | large | fullheight | `fullheight-with-navbar` = js.native
+  var sizes: small | medium | large | fullheight | `fullheight-with-navbar`
 }
 
 object HeroVariables {
@@ -21,19 +20,5 @@ object HeroVariables {
     val __obj = js.Dynamic.literal(sizes = sizes.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeroVariables]
   }
-  @scala.inline
-  implicit class HeroVariablesOps[Self <: HeroVariables] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSizes(value: small | medium | large | fullheight | `fullheight-with-navbar`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,49 +1,38 @@
 package typingsSlinky.scrollIntoViewIfNeeded.mod
 
-import typingsSlinky.scrollIntoViewIfNeeded.typesMod.CustomScrollAction
 import typingsSlinky.scrollIntoViewIfNeeded.typesMod.CustomScrollBehaviorCallback
+import typingsSlinky.scrollIntoViewIfNeeded.typesMod.CustomScrollBoundary
 import typingsSlinky.scrollIntoViewIfNeeded.typesMod.ScrollBehavior
+import typingsSlinky.scrollIntoViewIfNeeded.typesMod.ScrollLogicalPosition
+import typingsSlinky.scrollIntoViewIfNeeded.typesMod.ScrollMode
+import typingsSlinky.scrollIntoViewIfNeeded.typesMod.SkipOverflowHiddenElements
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options[T]
   extends typingsSlinky.scrollIntoViewIfNeeded.typesMod.Options {
-  var behavior: js.UndefOr[ScrollBehavior | CustomScrollBehaviorCallback[T]] = js.native
+  var behavior: js.UndefOr[ScrollBehavior | CustomScrollBehaviorCallback[T]] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply[T](): Options[T] = {
+  def apply[T](
+    behavior: ScrollBehavior | CustomScrollBehaviorCallback[T] = null,
+    block: ScrollLogicalPosition = null,
+    boundary: js.UndefOr[Null | CustomScrollBoundary] = js.undefined,
+    `inline`: ScrollLogicalPosition = null,
+    scrollMode: ScrollMode = null,
+    skipOverflowHiddenElements: js.UndefOr[SkipOverflowHiddenElements] = js.undefined
+  ): Options[T] = {
     val __obj = js.Dynamic.literal()
+    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
+    if (block != null) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
+    if (!js.isUndefined(boundary)) __obj.updateDynamic("boundary")(boundary.asInstanceOf[js.Any])
+    if (`inline` != null) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
+    if (scrollMode != null) __obj.updateDynamic("scrollMode")(scrollMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipOverflowHiddenElements)) __obj.updateDynamic("skipOverflowHiddenElements")(skipOverflowHiddenElements.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options[T]]
   }
-  @scala.inline
-  implicit class OptionsOps[Self[t] <: Options[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withBehaviorFunction1(value: /* actions */ js.Array[CustomScrollAction] => T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withBehavior(value: ScrollBehavior | CustomScrollBehaviorCallback[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBehavior: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

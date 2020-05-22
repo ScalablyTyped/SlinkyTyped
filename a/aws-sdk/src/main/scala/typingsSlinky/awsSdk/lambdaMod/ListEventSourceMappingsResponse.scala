@@ -18,41 +18,11 @@ trait ListEventSourceMappingsResponse extends js.Object {
 
 object ListEventSourceMappingsResponse {
   @scala.inline
-  def apply(): ListEventSourceMappingsResponse = {
+  def apply(EventSourceMappings: EventSourceMappingsList = null, NextMarker: String = null): ListEventSourceMappingsResponse = {
     val __obj = js.Dynamic.literal()
+    if (EventSourceMappings != null) __obj.updateDynamic("EventSourceMappings")(EventSourceMappings.asInstanceOf[js.Any])
+    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListEventSourceMappingsResponse]
   }
-  @scala.inline
-  implicit class ListEventSourceMappingsResponseOps[Self <: ListEventSourceMappingsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventSourceMappings(value: EventSourceMappingsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSourceMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventSourceMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSourceMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

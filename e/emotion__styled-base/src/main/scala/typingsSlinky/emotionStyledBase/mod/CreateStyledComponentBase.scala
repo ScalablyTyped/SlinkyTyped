@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait CreateStyledComponentBase[InnerProps, ExtraProps, StyledInstanceTheme /* <: js.Object */] extends js.Object
 
-object CreateStyledComponentBase {
-  @scala.inline
-  implicit def apply[InnerProps, ExtraProps, StyledInstanceTheme](value: CreateStyledComponentBaseThemed[InnerProps, ExtraProps, StyledInstanceTheme]): CreateStyledComponentBase[InnerProps, ExtraProps, StyledInstanceTheme] = value.asInstanceOf[CreateStyledComponentBase[InnerProps, ExtraProps, StyledInstanceTheme]]
-  @scala.inline
-  implicit def apply[InnerProps, ExtraProps, StyledInstanceTheme](value: CreateStyledComponentBaseThemeless[InnerProps, ExtraProps]): CreateStyledComponentBase[InnerProps, ExtraProps, StyledInstanceTheme] = value.asInstanceOf[CreateStyledComponentBase[InnerProps, ExtraProps, StyledInstanceTheme]]
-}
-

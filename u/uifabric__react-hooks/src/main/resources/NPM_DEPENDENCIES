@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@uifabric/react-hooks" : "7.0.23"
+      "@uifabric/react-hooks" : "7.3.7"
     }
   ],
   "test-dependencies" : [
     {
-      "@uifabric/react-hooks" : "7.0.23"
+      "@uifabric/react-hooks" : "7.3.7"
     }
   ],
   "compile-devDependencies" : [

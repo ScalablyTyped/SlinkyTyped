@@ -5,56 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StreamHandlerOptions extends js.Object {
-  val filter: js.UndefOr[js.Function1[/* record */ LogRecord, Boolean]] = js.native
-  val formatter: js.UndefOr[LoggerFormatter] = js.native
-  val stream: WritableStream = js.native
+  val filter: js.UndefOr[js.Function1[/* record */ LogRecord, Boolean]] = js.undefined
+  val formatter: js.UndefOr[LoggerFormatter] = js.undefined
+  val stream: WritableStream
 }
 
 object StreamHandlerOptions {
   @scala.inline
-  def apply(stream: WritableStream): StreamHandlerOptions = {
+  def apply(
+    stream: WritableStream,
+    filter: /* record */ LogRecord => Boolean = null,
+    formatter: /* record */ LogRecord => String = null
+  ): StreamHandlerOptions = {
     val __obj = js.Dynamic.literal(stream = stream.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
+    if (formatter != null) __obj.updateDynamic("formatter")(js.Any.fromFunction1(formatter))
     __obj.asInstanceOf[StreamHandlerOptions]
   }
-  @scala.inline
-  implicit class StreamHandlerOptionsOps[Self <: StreamHandlerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStream(value: WritableStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: /* record */ LogRecord => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatter(value: /* record */ LogRecord => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

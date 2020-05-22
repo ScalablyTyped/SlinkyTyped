@@ -14,29 +14,10 @@ trait ListTagsResponse extends js.Object {
 
 object ListTagsResponse {
   @scala.inline
-  def apply(): ListTagsResponse = {
+  def apply(TagList: TagList = null): ListTagsResponse = {
     val __obj = js.Dynamic.literal()
+    if (TagList != null) __obj.updateDynamic("TagList")(TagList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTagsResponse]
   }
-  @scala.inline
-  implicit class ListTagsResponseOps[Self <: ListTagsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTagList(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,85 +9,42 @@ import scala.scalajs.js.annotation._
   * MetricTarget defines the target value, average value, or average utilization of a specific
   * metric
   */
-@js.native
 trait MetricTarget extends js.Object {
   /**
     * averageUtilization is the target value of the average of the resource metric across all
     * relevant pods, represented as a percentage of the requested value of the resource for the
     * pods. Currently only valid for Resource metric source type
     */
-  var averageUtilization: js.UndefOr[Input[Double]] = js.native
+  var averageUtilization: js.UndefOr[Input[Double]] = js.undefined
   /**
     * averageValue is the target value of the average of the metric across all relevant pods (as
     * a quantity)
     */
-  var averageValue: js.UndefOr[Input[String]] = js.native
+  var averageValue: js.UndefOr[Input[String]] = js.undefined
   /**
     * type represents whether the metric type is Utilization, Value, or AverageValue
     */
-  var `type`: Input[String] = js.native
+  var `type`: Input[String]
   /**
     * value is the target value of the metric (as a quantity).
     */
-  var value: js.UndefOr[Input[String]] = js.native
+  var value: js.UndefOr[Input[String]] = js.undefined
 }
 
 object MetricTarget {
   @scala.inline
-  def apply(`type`: Input[String]): MetricTarget = {
+  def apply(
+    `type`: Input[String],
+    averageUtilization: Input[Double] = null,
+    averageValue: Input[String] = null,
+    value: Input[String] = null
+  ): MetricTarget = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (averageUtilization != null) __obj.updateDynamic("averageUtilization")(averageUtilization.asInstanceOf[js.Any])
+    if (averageValue != null) __obj.updateDynamic("averageValue")(averageValue.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricTarget]
   }
-  @scala.inline
-  implicit class MetricTargetOps[Self <: MetricTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAverageUtilization(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("averageUtilization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAverageUtilization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("averageUtilization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAverageValue(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("averageValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAverageValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("averageValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

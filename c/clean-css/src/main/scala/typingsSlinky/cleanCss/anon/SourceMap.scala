@@ -4,49 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceMap extends js.Object {
   /**
     * The source map of the file, if needed
     */
-  var sourceMap: js.UndefOr[String] = js.native
+  var sourceMap: js.UndefOr[String] = js.undefined
   /**
     * The contents of the file, should be css
     */
-  var styles: String = js.native
+  var styles: String
 }
 
 object SourceMap {
   @scala.inline
-  def apply(styles: String): SourceMap = {
+  def apply(styles: String, sourceMap: String = null): SourceMap = {
     val __obj = js.Dynamic.literal(styles = styles.asInstanceOf[js.Any])
+    if (sourceMap != null) __obj.updateDynamic("sourceMap")(sourceMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceMap]
   }
-  @scala.inline
-  implicit class SourceMapOps[Self <: SourceMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyles(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceMap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

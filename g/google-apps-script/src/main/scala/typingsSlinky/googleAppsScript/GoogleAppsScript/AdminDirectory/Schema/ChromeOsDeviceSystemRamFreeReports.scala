@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChromeOsDeviceSystemRamFreeReports extends js.Object {
-  var reportTime: js.UndefOr[String] = js.native
-  var systemRamFreeInfo: js.UndefOr[js.Array[String]] = js.native
+  var reportTime: js.UndefOr[String] = js.undefined
+  var systemRamFreeInfo: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object ChromeOsDeviceSystemRamFreeReports {
   @scala.inline
-  def apply(): ChromeOsDeviceSystemRamFreeReports = {
+  def apply(reportTime: String = null, systemRamFreeInfo: js.Array[String] = null): ChromeOsDeviceSystemRamFreeReports = {
     val __obj = js.Dynamic.literal()
+    if (reportTime != null) __obj.updateDynamic("reportTime")(reportTime.asInstanceOf[js.Any])
+    if (systemRamFreeInfo != null) __obj.updateDynamic("systemRamFreeInfo")(systemRamFreeInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChromeOsDeviceSystemRamFreeReports]
   }
-  @scala.inline
-  implicit class ChromeOsDeviceSystemRamFreeReportsOps[Self <: ChromeOsDeviceSystemRamFreeReports] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReportTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemRamFreeInfo(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemRamFreeInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemRamFreeInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemRamFreeInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

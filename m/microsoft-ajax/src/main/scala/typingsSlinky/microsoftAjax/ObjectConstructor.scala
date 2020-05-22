@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ObjectConstructor extends js.Object {
   /**
     * Formats a number by using the invariant culture.
     */
-  def getType(instance: js.Any): Type = js.native
+  def getType(instance: js.Any): Type
   /**
     * Returns a string that identifies the run-time type name of an object.
     */
-  def getTypeName(instance: js.Any): java.lang.String = js.native
+  def getTypeName(instance: js.Any): java.lang.String
 }
 
 object ObjectConstructor {
@@ -22,25 +21,5 @@ object ObjectConstructor {
     val __obj = js.Dynamic.literal(getType = js.Any.fromFunction1(getType), getTypeName = js.Any.fromFunction1(getTypeName))
     __obj.asInstanceOf[ObjectConstructor]
   }
-  @scala.inline
-  implicit class ObjectConstructorOps[Self <: ObjectConstructor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetType(value: js.Any => Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeName(value: js.Any => java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

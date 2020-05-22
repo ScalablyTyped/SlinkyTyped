@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeofBindingMode extends js.Object {
   /**
     * BindingMode default means that the binding mode of the model is used
     */
-  var Default: js.Any = js.native
+  var Default: js.Any
   /**
     * BindingMode one time means value is only read from the model once
     */
-  var OneTime: js.Any = js.native
+  var OneTime: js.Any
   /**
     * BindingMode one way means from model to view
     */
-  var OneWay: js.Any = js.native
+  var OneWay: js.Any
   /**
     * BindingMode two way means from model to view and vice versa
     */
-  var TwoWay: js.Any = js.native
+  var TwoWay: js.Any
 }
 
 object TypeofBindingMode {
@@ -30,37 +29,5 @@ object TypeofBindingMode {
     val __obj = js.Dynamic.literal(Default = Default.asInstanceOf[js.Any], OneTime = OneTime.asInstanceOf[js.Any], OneWay = OneWay.asInstanceOf[js.Any], TwoWay = TwoWay.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeofBindingMode]
   }
-  @scala.inline
-  implicit class TypeofBindingModeOps[Self <: TypeofBindingMode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefault(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOneTime(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OneTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOneWay(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OneWay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTwoWay(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TwoWay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

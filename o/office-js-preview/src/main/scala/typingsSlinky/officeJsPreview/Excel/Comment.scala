@@ -36,7 +36,7 @@ trait Comment extends ClientObject {
   val authorName: String = js.native
   /**
     *
-    * Gets or sets the comment's content. The string is plain text.
+    * The comment's content. The string is plain text.
     *
     * [Api set: ExcelApi 1.10]
     */
@@ -61,38 +61,37 @@ trait Comment extends ClientObject {
   val creationDate: js.Date = js.native
   /**
     *
-    * Represents the comment identifier. Read-only.
+    * Specifies the comment identifier.
     *
     * [Api set: ExcelApi 1.10]
     */
   val id: String = js.native
   /**
     *
-    * Gets the entities (e.g. people) that are mentioned in comments.
+    * Gets the entities (e.g., people) that are mentioned in comments.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
     */
   val mentions: js.Array[CommentMention] = js.native
   /**
     *
-    * Represents a collection of reply objects associated with the comment. Read-only.
+    * Represents a collection of reply objects associated with the comment.
     *
     * [Api set: ExcelApi 1.10]
     */
   val replies: CommentReplyCollection = js.native
   /**
     *
-    * Gets or sets the comment thread status. A value of "true" means the comment thread is in the resolved state.
+    * The comment thread status. A value of "true" means the comment thread is resolved.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   var resolved: Boolean = js.native
   /**
     *
-    * Gets the rich comment content (e.g. mentions in comments). This string is not meant to be displayed to end-users. Your add-in should only use this to parse rich comment content.
+    * Gets the rich comment content (e.g., mentions in comments). This string is not meant to be displayed to end-users. Your add-in should only use this to parse rich comment content.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
     */
   val richContent: String = js.native
   /**
@@ -140,7 +139,7 @@ trait Comment extends ClientObject {
   /**
     * Updates the comment content with a specially formatted string and a list of mentions.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
     *
     * @param contentWithMentions The content for the comment. This contains a specially formatted string and a list of mentions that will be parsed into the string when displayed by Excel.
     */

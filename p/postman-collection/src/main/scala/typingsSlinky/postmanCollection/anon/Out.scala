@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Out extends js.Object {
-  def in[T](`val`: T): T = js.native
-  def out[T](`val`: T): T = js.native
+  def in[T](`val`: T): T
+  def out[T](`val`: T): T
 }
 
 object Out {
@@ -16,25 +15,5 @@ object Out {
     val __obj = js.Dynamic.literal(in = js.Any.fromFunction1(in), out = js.Any.fromFunction1(out))
     __obj.asInstanceOf[Out]
   }
-  @scala.inline
-  implicit class OutOps[Self <: Out] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIn(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOut(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

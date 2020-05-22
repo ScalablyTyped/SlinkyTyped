@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var autostart: js.UndefOr[Boolean] = js.native
-  var expose: js.UndefOr[typingsSlinky.avvio.anon.After] = js.native
+  var autostart: js.UndefOr[Boolean] = js.undefined
+  var expose: js.UndefOr[typingsSlinky.avvio.anon.After] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(autostart: js.UndefOr[Boolean] = js.undefined, expose: typingsSlinky.avvio.anon.After = null): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autostart)) __obj.updateDynamic("autostart")(autostart.get.asInstanceOf[js.Any])
+    if (expose != null) __obj.updateDynamic("expose")(expose.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutostart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autostart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutostart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autostart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpose(value: typingsSlinky.avvio.anon.After): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

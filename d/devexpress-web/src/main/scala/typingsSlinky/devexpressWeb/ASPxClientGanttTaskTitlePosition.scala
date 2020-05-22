@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Declares client constants that specify the task title position.
   */
-@js.native
 trait ASPxClientGanttTaskTitlePosition extends js.Object {
   /**
     * Displays the title inside the task.
     */
-  var Inside: Double = js.native
+  var Inside: Double
   /**
     * The title is hidden.
     */
-  var None: Double = js.native
+  var None: Double
   /**
     * Displays the title outside the task.
     */
-  var Outside: Double = js.native
+  var Outside: Double
 }
 
 object ASPxClientGanttTaskTitlePosition {
@@ -29,31 +28,5 @@ object ASPxClientGanttTaskTitlePosition {
     val __obj = js.Dynamic.literal(Inside = Inside.asInstanceOf[js.Any], None = None.asInstanceOf[js.Any], Outside = Outside.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientGanttTaskTitlePosition]
   }
-  @scala.inline
-  implicit class ASPxClientGanttTaskTitlePositionOps[Self <: ASPxClientGanttTaskTitlePosition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInside(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Inside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNone(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("None")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutside(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outside")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

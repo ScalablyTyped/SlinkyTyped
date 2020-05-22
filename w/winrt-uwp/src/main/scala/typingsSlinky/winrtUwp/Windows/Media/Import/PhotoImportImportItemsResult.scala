@@ -7,39 +7,38 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the result of a operation that imports media items from the source. */
-@js.native
 trait PhotoImportImportItemsResult extends js.Object {
   /** Gets a value indicating whether the import operation has succeeded. */
-  var hasSucceeded: Boolean = js.native
+  var hasSucceeded: Boolean
   /** Gets a list of items that were imported from the source. */
-  var importedItems: IVectorView[PhotoImportItem] = js.native
+  var importedItems: IVectorView[PhotoImportItem]
   /** Gets the number of photos imported in the operation. */
-  var photosCount: Double = js.native
+  var photosCount: Double
   /** Gets the size of the imported photos, in bytes. */
-  var photosSizeInBytes: Double = js.native
+  var photosSizeInBytes: Double
   /** Gets the photo import session associated with the import operation. */
-  var session: PhotoImportSession = js.native
+  var session: PhotoImportSession
   /** Gets the number of sibling files imported in the operation. */
-  var siblingsCount: Double = js.native
+  var siblingsCount: Double
   /** Gets the size of the imported sidecar files, in bytes. */
-  var siblingsSizeInBytes: Double = js.native
+  var siblingsSizeInBytes: Double
   /** Gets the number of sidecar files imported in the operation. */
-  var sidecarsCount: Double = js.native
+  var sidecarsCount: Double
   /** Gets the size of the imported sidecar files, in bytes. */
-  var sidecarsSizeInBytes: Double = js.native
+  var sidecarsSizeInBytes: Double
   /** Gets the total number of items imported in the operation. */
-  var totalCount: Double = js.native
+  var totalCount: Double
   /** Gets the total size of the all imported items, in bytes. */
-  var totalSizeInBytes: Double = js.native
+  var totalSizeInBytes: Double
   /** Gets the number of videos imported in the operation. */
-  var videosCount: Double = js.native
+  var videosCount: Double
   /** Gets the size of the imported videos, in bytes. */
-  var videosSizeInBytes: Double = js.native
+  var videosSizeInBytes: Double
   /**
     * Asynchronously deletes the items that were imported from the source.
     * @return An asynchronous operation that returns a PhotoImportDeleteImportedItemsFromSourceResult on successful completion.
     */
-  def deleteImportedItemsFromSourceAsync(): IPromiseWithIAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, Double] = js.native
+  def deleteImportedItemsFromSourceAsync(): IPromiseWithIAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, Double]
 }
 
 object PhotoImportImportItemsResult {
@@ -63,99 +62,5 @@ object PhotoImportImportItemsResult {
     val __obj = js.Dynamic.literal(deleteImportedItemsFromSourceAsync = js.Any.fromFunction0(deleteImportedItemsFromSourceAsync), hasSucceeded = hasSucceeded.asInstanceOf[js.Any], importedItems = importedItems.asInstanceOf[js.Any], photosCount = photosCount.asInstanceOf[js.Any], photosSizeInBytes = photosSizeInBytes.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any], siblingsCount = siblingsCount.asInstanceOf[js.Any], siblingsSizeInBytes = siblingsSizeInBytes.asInstanceOf[js.Any], sidecarsCount = sidecarsCount.asInstanceOf[js.Any], sidecarsSizeInBytes = sidecarsSizeInBytes.asInstanceOf[js.Any], totalCount = totalCount.asInstanceOf[js.Any], totalSizeInBytes = totalSizeInBytes.asInstanceOf[js.Any], videosCount = videosCount.asInstanceOf[js.Any], videosSizeInBytes = videosSizeInBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhotoImportImportItemsResult]
   }
-  @scala.inline
-  implicit class PhotoImportImportItemsResultOps[Self <: PhotoImportImportItemsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteImportedItemsFromSourceAsync(
-      value: () => IPromiseWithIAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, Double]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteImportedItemsFromSourceAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasSucceeded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasSucceeded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImportedItems(value: IVectorView[PhotoImportItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhotosCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photosCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhotosSizeInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photosSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSession(value: PhotoImportSession): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSiblingsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblingsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSiblingsSizeInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblingsSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSidecarsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sidecarsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSidecarsSizeInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sidecarsSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalSizeInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideosCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videosCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideosSizeInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videosSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,53 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Map extends js.Object {
-  var map: js.UndefOr[SourceMapOptions] = js.native
+  var map: js.UndefOr[SourceMapOptions] = js.undefined
   /**
     * The path where you'll put the output CSS file. You should always
     * set "to" to generate correct source maps.
     */
-  var to: js.UndefOr[String] = js.native
+  var to: js.UndefOr[String] = js.undefined
 }
 
 object Map {
   @scala.inline
-  def apply(): Map = {
+  def apply(map: SourceMapOptions = null, to: String = null): Map = {
     val __obj = js.Dynamic.literal()
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
     __obj.asInstanceOf[Map]
   }
-  @scala.inline
-  implicit class MapOps[Self <: Map] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMap(value: SourceMapOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

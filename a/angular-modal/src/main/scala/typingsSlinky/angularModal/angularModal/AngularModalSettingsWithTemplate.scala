@@ -4,30 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AngularModalSettingsWithTemplate extends AngularModalSettings {
-  var template: js.Any = js.native
+  var template: js.Any
 }
 
 object AngularModalSettingsWithTemplate {
   @scala.inline
-  def apply(template: js.Any): AngularModalSettingsWithTemplate = {
+  def apply(
+    template: js.Any,
+    container: AngularModalJQuerySelector = null,
+    controller: AngularModalControllerDefinition = null,
+    controllerAs: String = null
+  ): AngularModalSettingsWithTemplate = {
     val __obj = js.Dynamic.literal(template = template.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
+    if (controllerAs != null) __obj.updateDynamic("controllerAs")(controllerAs.asInstanceOf[js.Any])
     __obj.asInstanceOf[AngularModalSettingsWithTemplate]
   }
-  @scala.inline
-  implicit class AngularModalSettingsWithTemplateOps[Self <: AngularModalSettingsWithTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTemplate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

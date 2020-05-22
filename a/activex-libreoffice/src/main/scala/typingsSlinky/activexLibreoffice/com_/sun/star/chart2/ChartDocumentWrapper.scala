@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   * A component that implements the {@link com.sun.star.chart.ChartDocument} service and is initialized with a {@link com.sun.star.chart2.ChartDocument}
   * via the {@link com.sun.star.uno.XAggregation} interface.
   */
-@js.native
 trait ChartDocumentWrapper
   extends typingsSlinky.activexLibreoffice.com_.sun.star.chart.ChartDocument
      with XAggregation

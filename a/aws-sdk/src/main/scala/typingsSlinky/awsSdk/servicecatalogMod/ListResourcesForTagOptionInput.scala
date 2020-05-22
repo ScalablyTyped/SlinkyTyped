@@ -26,59 +26,17 @@ trait ListResourcesForTagOptionInput extends js.Object {
 
 object ListResourcesForTagOptionInput {
   @scala.inline
-  def apply(TagOptionId: TagOptionId): ListResourcesForTagOptionInput = {
+  def apply(
+    TagOptionId: TagOptionId,
+    PageSize: js.UndefOr[PageSize] = js.undefined,
+    PageToken: PageToken = null,
+    ResourceType: ResourceType = null
+  ): ListResourcesForTagOptionInput = {
     val __obj = js.Dynamic.literal(TagOptionId = TagOptionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(PageSize)) __obj.updateDynamic("PageSize")(PageSize.get.asInstanceOf[js.Any])
+    if (PageToken != null) __obj.updateDynamic("PageToken")(PageToken.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListResourcesForTagOptionInput]
   }
-  @scala.inline
-  implicit class ListResourcesForTagOptionInputOps[Self <: ListResourcesForTagOptionInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTagOptionId(value: TagOptionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagOptionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: PageSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: PageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

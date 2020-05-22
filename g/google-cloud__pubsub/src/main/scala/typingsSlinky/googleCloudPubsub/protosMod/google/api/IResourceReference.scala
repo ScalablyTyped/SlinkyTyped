@@ -5,63 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a ResourceReference. */
-@js.native
 trait IResourceReference extends js.Object {
   /** ResourceReference childType */
-  var childType: js.UndefOr[String | Null] = js.native
+  var childType: js.UndefOr[String | Null] = js.undefined
   /** ResourceReference type */
-  var `type`: js.UndefOr[String | Null] = js.native
+  var `type`: js.UndefOr[String | Null] = js.undefined
 }
 
 object IResourceReference {
   @scala.inline
-  def apply(): IResourceReference = {
+  def apply(
+    childType: js.UndefOr[Null | String] = js.undefined,
+    `type`: js.UndefOr[Null | String] = js.undefined
+  ): IResourceReference = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(childType)) __obj.updateDynamic("childType")(childType.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IResourceReference]
   }
-  @scala.inline
-  implicit class IResourceReferenceOps[Self <: IResourceReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childType")(null)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(null)
-        ret
-    }
-  }
-  
 }
 

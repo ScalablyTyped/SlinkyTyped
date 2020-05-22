@@ -1,6 +1,7 @@
 package typingsSlinky.agGrid.textFilterMod
 
 import typingsSlinky.agGrid.baseFilterMod.IScalarFilterParams
+import typingsSlinky.agGrid.baseFilterMod.NullComparator
 import typingsSlinky.agGrid.colDefMod.ColDef
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.iRowModelMod.IRowModel
@@ -9,9 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INumberFilterParams extends IScalarFilterParams {
-  var debounceMs: js.UndefOr[Double] = js.native
+  var debounceMs: js.UndefOr[Double] = js.undefined
 }
 
 object INumberFilterParams {
@@ -26,30 +26,28 @@ object INumberFilterParams {
     filterModifiedCallback: () => Unit,
     rowModel: IRowModel,
     suppressAndOrCondition: Boolean,
-    valueGetter: RowNode => js.Any
+    valueGetter: RowNode => js.Any,
+    applyButton: js.UndefOr[Boolean] = js.undefined,
+    clearButton: js.UndefOr[Boolean] = js.undefined,
+    debounceMs: js.UndefOr[Double] = js.undefined,
+    defaultOption: String = null,
+    filterOptions: js.Array[String] = null,
+    inRangeInclusive: js.UndefOr[Boolean] = js.undefined,
+    newRowsAction: String = null,
+    nullComparator: NullComparator = null,
+    textFormatter: /* from */ String => String = null
   ): INumberFilterParams = {
     val __obj = js.Dynamic.literal($scope = $scope.asInstanceOf[js.Any], colDef = colDef.asInstanceOf[js.Any], column = column.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], doesRowPassOtherFilter = js.Any.fromFunction1(doesRowPassOtherFilter), filterChangedCallback = js.Any.fromFunction0(filterChangedCallback), filterModifiedCallback = js.Any.fromFunction0(filterModifiedCallback), rowModel = rowModel.asInstanceOf[js.Any], suppressAndOrCondition = suppressAndOrCondition.asInstanceOf[js.Any], valueGetter = js.Any.fromFunction1(valueGetter))
+    if (!js.isUndefined(applyButton)) __obj.updateDynamic("applyButton")(applyButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearButton)) __obj.updateDynamic("clearButton")(clearButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debounceMs)) __obj.updateDynamic("debounceMs")(debounceMs.get.asInstanceOf[js.Any])
+    if (defaultOption != null) __obj.updateDynamic("defaultOption")(defaultOption.asInstanceOf[js.Any])
+    if (filterOptions != null) __obj.updateDynamic("filterOptions")(filterOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(inRangeInclusive)) __obj.updateDynamic("inRangeInclusive")(inRangeInclusive.get.asInstanceOf[js.Any])
+    if (newRowsAction != null) __obj.updateDynamic("newRowsAction")(newRowsAction.asInstanceOf[js.Any])
+    if (nullComparator != null) __obj.updateDynamic("nullComparator")(nullComparator.asInstanceOf[js.Any])
+    if (textFormatter != null) __obj.updateDynamic("textFormatter")(js.Any.fromFunction1(textFormatter))
     __obj.asInstanceOf[INumberFilterParams]
   }
-  @scala.inline
-  implicit class INumberFilterParamsOps[Self <: INumberFilterParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebounceMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounceMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebounceMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounceMs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

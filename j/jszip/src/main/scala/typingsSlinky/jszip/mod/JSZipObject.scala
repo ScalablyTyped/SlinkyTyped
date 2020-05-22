@@ -8,7 +8,6 @@ import typingsSlinky.jszip.jszipStrings.binarystring
 import typingsSlinky.jszip.jszipStrings.blob
 import typingsSlinky.jszip.jszipStrings.nodebuffer
 import typingsSlinky.jszip.jszipStrings.nodestream
-import typingsSlinky.jszip.jszipStrings.string
 import typingsSlinky.jszip.jszipStrings.text
 import typingsSlinky.jszip.jszipStrings.uint8array
 import typingsSlinky.node.Buffer
@@ -58,10 +57,6 @@ trait JSZipObject extends js.Object {
   def async_nodebuffer(`type`: nodebuffer): js.Promise[Buffer] = js.native
   @JSName("async")
   def async_nodebuffer(`type`: nodebuffer, onUpdate: OnUpdateCallback): js.Promise[Buffer] = js.native
-  @JSName("async")
-  def async_string(`type`: string): js.Promise[String] = js.native
-  @JSName("async")
-  def async_string(`type`: string, onUpdate: OnUpdateCallback): js.Promise[String] = js.native
   @JSName("async")
   def async_text(`type`: text): js.Promise[String] = js.native
   @JSName("async")

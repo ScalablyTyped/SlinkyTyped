@@ -11,58 +11,22 @@ trait BucketLifecycleRuleTransition extends js.Object {
     */
   var date: js.UndefOr[String] = js.native
   /**
-    * The number of days that you want to specify for the default retention period.
+    * Specifies the number of days after object creation when the specific rule action takes effect.
     */
   var days: js.UndefOr[Double] = js.native
   /**
-    * The class of storage used to store the object. Can be `STANDARD`, `REDUCED_REDUNDANCY`, `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
+    * Specifies the Amazon S3 storage class to which you want the object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
     */
   var storageClass: String = js.native
 }
 
 object BucketLifecycleRuleTransition {
   @scala.inline
-  def apply(storageClass: String): BucketLifecycleRuleTransition = {
+  def apply(storageClass: String, date: String = null, days: js.UndefOr[Double] = js.undefined): BucketLifecycleRuleTransition = {
     val __obj = js.Dynamic.literal(storageClass = storageClass.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (!js.isUndefined(days)) __obj.updateDynamic("days")(days.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketLifecycleRuleTransition]
   }
-  @scala.inline
-  implicit class BucketLifecycleRuleTransitionOps[Self <: BucketLifecycleRuleTransition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStorageClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("days")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("days")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

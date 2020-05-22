@@ -18,41 +18,11 @@ trait SchemaUnmappedIdentity extends js.Object {
 
 object SchemaUnmappedIdentity {
   @scala.inline
-  def apply(): SchemaUnmappedIdentity = {
+  def apply(externalIdentity: SchemaPrincipal = null, resolutionStatusCode: String = null): SchemaUnmappedIdentity = {
     val __obj = js.Dynamic.literal()
+    if (externalIdentity != null) __obj.updateDynamic("externalIdentity")(externalIdentity.asInstanceOf[js.Any])
+    if (resolutionStatusCode != null) __obj.updateDynamic("resolutionStatusCode")(resolutionStatusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUnmappedIdentity]
   }
-  @scala.inline
-  implicit class SchemaUnmappedIdentityOps[Self <: SchemaUnmappedIdentity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExternalIdentity(value: SchemaPrincipal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalIdentity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolutionStatusCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolutionStatusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolutionStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolutionStatusCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

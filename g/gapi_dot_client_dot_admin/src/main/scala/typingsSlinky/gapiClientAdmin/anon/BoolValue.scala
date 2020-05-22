@@ -4,107 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BoolValue extends js.Object {
   /** Boolean value of the parameter. */
-  var boolValue: js.UndefOr[Boolean] = js.native
+  var boolValue: js.UndefOr[Boolean] = js.undefined
   /** Integral value of the parameter. */
-  var intValue: js.UndefOr[String] = js.native
+  var intValue: js.UndefOr[String] = js.undefined
   /** Multi-int value of the parameter. */
-  var multiIntValue: js.UndefOr[js.Array[String]] = js.native
+  var multiIntValue: js.UndefOr[js.Array[String]] = js.undefined
   /** Multi-string value of the parameter. */
-  var multiValue: js.UndefOr[js.Array[String]] = js.native
+  var multiValue: js.UndefOr[js.Array[String]] = js.undefined
   /** The name of the parameter. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** String value of the parameter. */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object BoolValue {
   @scala.inline
-  def apply(): BoolValue = {
+  def apply(
+    boolValue: js.UndefOr[Boolean] = js.undefined,
+    intValue: String = null,
+    multiIntValue: js.Array[String] = null,
+    multiValue: js.Array[String] = null,
+    name: String = null,
+    value: String = null
+  ): BoolValue = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(boolValue)) __obj.updateDynamic("boolValue")(boolValue.get.asInstanceOf[js.Any])
+    if (intValue != null) __obj.updateDynamic("intValue")(intValue.asInstanceOf[js.Any])
+    if (multiIntValue != null) __obj.updateDynamic("multiIntValue")(multiIntValue.asInstanceOf[js.Any])
+    if (multiValue != null) __obj.updateDynamic("multiValue")(multiValue.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[BoolValue]
   }
-  @scala.inline
-  implicit class BoolValueOps[Self <: BoolValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoolValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoolValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiIntValue(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiIntValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiIntValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiIntValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiValue(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

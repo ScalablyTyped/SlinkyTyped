@@ -5,58 +5,41 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @class
-  * @name pc.Ray
-  * @classdesc An infinite ray.
-  * @description Creates a new infinite ray starting at a given origin and pointing in a given direction.
+  * Creates a new infinite ray starting at a given origin and pointing in a given direction.
   * @example
   * // Create a new ray starting at the position of this entity and pointing down
-  * // the entity's negative Z axis
-  * var ray = new pc.Ray(this.entity.getPosition(), this.entity.forward);
-  * @param {pc.Vec3} [origin] - The starting point of the ray. The constructor takes a reference of this parameter.
-  * Defaults to the origin (0, 0, 0).
-  * @param {pc.Vec3} [direction] - The direction of the ray. The constructor takes a reference of this parameter.
-  * Defaults to a direction down the world negative Z axis (0, 0, -1).
-  * @property {pc.Vec3} origin The starting point of the ray.
-  * @property {pc.Vec3} direction The direction of the ray.
+  // the entity's negative Z axis
+  var ray = new pc.Ray(this.entity.getPosition(), this.entity.forward);
+  * @property origin - The starting point of the ray.
+  * @property direction - The direction of the ray.
+  * @param [origin] - The starting point of the ray. The constructor takes a reference of this parameter.
+  Defaults to the origin (0, 0, 0).
+  * @param [direction] - The direction of the ray. The constructor takes a reference of this parameter.
+  Defaults to a direction down the world negative Z axis (0, 0, -1).
   */
-@js.native
 trait Ray extends js.Object {
   /**
     * The direction of the ray.
     */
-  var direction: Vec3 = js.native
+  var direction: Vec3
   /**
     * The starting point of the ray.
     */
-  var origin: Vec3 = js.native
+  var origin: Vec3
+  /**
+    * Sets origin and direction to the supplied vector values.
+    * @param origin - The starting point of the ray.
+    * @param direction - The direction of the ray.
+    * @returns Self for chaining.
+    */
+  def set(origin: Vec3, direction: Vec3): Ray
 }
 
 object Ray {
   @scala.inline
-  def apply(direction: Vec3, origin: Vec3): Ray = {
-    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any])
+  def apply(direction: Vec3, origin: Vec3, set: (Vec3, Vec3) => Ray): Ray = {
+    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], set = js.Any.fromFunction2(set))
     __obj.asInstanceOf[Ray]
   }
-  @scala.inline
-  implicit class RayOps[Self <: Ray] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirection(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

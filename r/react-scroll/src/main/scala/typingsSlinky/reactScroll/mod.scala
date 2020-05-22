@@ -1,12 +1,16 @@
 package typingsSlinky.reactScroll
 
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactScroll.anon.Smooth
 import typingsSlinky.reactScroll.buttonMod.ButtonProps
 import typingsSlinky.reactScroll.elementMod.ElementProps
 import typingsSlinky.reactScroll.linkMod.LinkProps
+import typingsSlinky.reactScroll.scrollElementMod.ScrollElementProps
 import typingsSlinky.reactScroll.scrollEventsMod.Events.ScrollEvent
+import typingsSlinky.reactScroll.scrollLinkMod.ScrollLinkProps
 import typingsSlinky.reactScroll.scrollSpyMod.ScrollSpy
+import typingsSlinky.reactScroll.scrollerMod.Scroller
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +31,9 @@ object mod extends js.Object {
     extends Component[LinkProps, js.Object, js.Any]
   
   val scrollSpy: ScrollSpy = js.native
+  def ScrollElement[P](component: ReactComponentClass[P]): ReactComponentClass[ScrollElementProps[P]] = js.native
+  def ScrollLink[P](component: ReactComponentClass[P]): ReactComponentClass[ScrollLinkProps[P]] = js.native
+  def ScrollLink[P](component: ReactComponentClass[P], customScroller: Scroller): ReactComponentClass[ScrollLinkProps[P]] = js.native
   @js.native
   object Events extends js.Object {
     val scrollEvent: ScrollEvent = js.native

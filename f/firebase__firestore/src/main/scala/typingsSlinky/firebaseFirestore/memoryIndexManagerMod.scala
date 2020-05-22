@@ -2,6 +2,8 @@ package typingsSlinky.firebaseFirestore
 
 import typingsSlinky.firebaseFirestore.indexManagerMod.IndexManager
 import typingsSlinky.firebaseFirestore.pathMod.ResourcePath
+import typingsSlinky.firebaseFirestore.persistenceMod.PersistenceTransaction
+import typingsSlinky.firebaseFirestore.persistencePromiseMod.PersistencePromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +22,24 @@ object memoryIndexManagerMod extends js.Object {
   @js.native
   class MemoryIndexManager () extends IndexManager {
     var collectionParentIndex: js.Any = js.native
+    /**
+      * Creates an index entry mapping the collectionId (last segment of the path)
+      * to the parent path (either the containing document location or the empty
+      * path for root-level collections). Index entries can be retrieved via
+      * getCollectionParents().
+      *
+      * NOTE: Currently we don't remove index entries. If this ends up being an
+      * issue we can devise some sort of GC strategy.
+      */
+    /* CompleteClass */
+    override def addToCollectionParentIndex(transaction: PersistenceTransaction, collectionPath: ResourcePath): PersistencePromise[Unit] = js.native
+    /**
+      * Retrieves all parent locations containing the given collectionId, as a
+      * list of paths (each path being either a document location or the empty
+      * path for a root-level collection).
+      */
+    /* CompleteClass */
+    override def getCollectionParents(transaction: PersistenceTransaction, collectionId: String): PersistencePromise[js.Array[ResourcePath]] = js.native
   }
   
 }

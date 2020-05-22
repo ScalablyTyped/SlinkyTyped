@@ -34,83 +34,20 @@ trait PutObjectRequest extends js.Object {
 
 object PutObjectRequest {
   @scala.inline
-  def apply(Body: PayloadBlob, Path: PathNaming): PutObjectRequest = {
+  def apply(
+    Body: PayloadBlob,
+    Path: PathNaming,
+    CacheControl: StringPrimitive = null,
+    ContentType: ContentType = null,
+    StorageClass: StorageClass = null,
+    UploadAvailability: UploadAvailability = null
+  ): PutObjectRequest = {
     val __obj = js.Dynamic.literal(Body = Body.asInstanceOf[js.Any], Path = Path.asInstanceOf[js.Any])
+    if (CacheControl != null) __obj.updateDynamic("CacheControl")(CacheControl.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
+    if (UploadAvailability != null) __obj.updateDynamic("UploadAvailability")(UploadAvailability.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutObjectRequest]
   }
-  @scala.inline
-  implicit class PutObjectRequestOps[Self <: PutObjectRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: PayloadBlob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: PathNaming): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCacheControl(value: StringPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: ContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageClass(value: StorageClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadAvailability(value: UploadAvailability): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadAvailability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadAvailability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadAvailability")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

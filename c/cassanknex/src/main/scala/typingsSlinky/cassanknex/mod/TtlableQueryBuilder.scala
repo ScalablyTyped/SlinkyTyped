@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TtlableQueryBuilder extends js.Object {
-  def usingTTL(ttl: Double): this.type = js.native
-  def usingTimestamp(timestamp: Double): this.type = js.native
+  def usingTTL(ttl: Double): this.type
+  def usingTimestamp(timestamp: Double): this.type
 }
 
 object TtlableQueryBuilder {
@@ -16,25 +15,5 @@ object TtlableQueryBuilder {
     val __obj = js.Dynamic.literal(usingTTL = js.Any.fromFunction1(usingTTL), usingTimestamp = js.Any.fromFunction1(usingTimestamp))
     __obj.asInstanceOf[TtlableQueryBuilder]
   }
-  @scala.inline
-  implicit class TtlableQueryBuilderOps[Self <: TtlableQueryBuilder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUsingTTL(value: Double => TtlableQueryBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usingTTL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUsingTimestamp(value: Double => TtlableQueryBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usingTimestamp")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,16 @@ trait DescribeBrokerInstanceOptionsResponse extends js.Object {
 
 object DescribeBrokerInstanceOptionsResponse {
   @scala.inline
-  def apply(): DescribeBrokerInstanceOptionsResponse = {
+  def apply(
+    BrokerInstanceOptions: listOfBrokerInstanceOption = null,
+    MaxResults: js.UndefOr[integerMin5Max100] = js.undefined,
+    NextToken: string = null
+  ): DescribeBrokerInstanceOptionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (BrokerInstanceOptions != null) __obj.updateDynamic("BrokerInstanceOptions")(BrokerInstanceOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeBrokerInstanceOptionsResponse]
   }
-  @scala.inline
-  implicit class DescribeBrokerInstanceOptionsResponseOps[Self <: DescribeBrokerInstanceOptionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrokerInstanceOptions(value: listOfBrokerInstanceOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerInstanceOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrokerInstanceOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerInstanceOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: integerMin5Max100): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

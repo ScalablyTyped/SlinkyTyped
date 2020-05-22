@@ -2,243 +2,110 @@ package typingsSlinky.stripe.mod.invoices
 
 import typingsSlinky.stripe.anon.Name
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
+import typingsSlinky.stripe.mod.IOptionsMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IInvoiceUpdateOptions extends IDataOptionsWithMetadata {
   /**
     * A fee in pence that will be applied to the invoice and transferred to the application owner’s Stripe account.
     * The request must be made with an OAuth key or the Stripe-Account header in order to take an application fee.
     * For more information, see the application fees documentation.
     */
-  var application_fee: js.UndefOr[Double] = js.native
+  var application_fee: js.UndefOr[Double] = js.undefined
   /**
     * Controls whether Stripe will perform
     * [automatic collection](https://stripe.com/docs/billing/invoices/workflow/#auto_advance)
     * of the invoice.
     */
-  var auto_advance: js.UndefOr[Boolean] = js.native
+  var auto_advance: js.UndefOr[Boolean] = js.undefined
   /**
     * Boolean representing whether an invoice is closed or not. To close an invoice, pass true.
     */
-  var closed: js.UndefOr[Boolean] = js.native
+  var closed: js.UndefOr[Boolean] = js.undefined
   /**
     * A list of up to 4 custom fields to be displayed on the invoice.
     */
-  var custom_fields: js.UndefOr[js.Array[Name]] = js.native
+  var custom_fields: js.UndefOr[js.Array[Name]] = js.undefined
   /**
     * The number of days from which the invoice is created until it is due. Only valid for
     * invoices where billing=send_invoice. This field can only be updated on draft
     * invoices.
     */
-  var days_until_due: js.UndefOr[Double] = js.native
+  var days_until_due: js.UndefOr[Double] = js.undefined
   /**
     * ID of the default payment source for the invoice. It must belong to the customer
     * associated with the invoice and be in a chargeable state. If not set, defaults to the
     * subscription’s default source, if any, or to the customer’s default source.
     */
-  var default_source: js.UndefOr[String] = js.native
-  var description: js.UndefOr[String] = js.native
+  var default_source: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
   /**
     * The date on which payment for this invoice is due. Only valid for invoices where
     * `billing=send_invoice`. This field can only be updated on draft invoices.
     */
-  var due_date: js.UndefOr[js.Date | Double] = js.native
+  var due_date: js.UndefOr[js.Date | Double] = js.undefined
   /**
     * Footer to be displayed on the invoice. This can be unset by updating the value to
     * `null` and then saving.
     */
-  var footer: js.UndefOr[String | Null] = js.native
+  var footer: js.UndefOr[String | Null] = js.undefined
   /**
     * Boolean representing whether an invoice is forgiven or not. To forgive an invoice, pass true. Forgiving an invoice
     * instructs us to update the subscription status as if the invoice were successfully paid. Once an invoice has been
     * forgiven, it cannot be unforgiven or reopened.
     */
-  var forgiven: js.UndefOr[Boolean] = js.native
+  var forgiven: js.UndefOr[Boolean] = js.undefined
   /**
     * Extra information about a charge for the customer’s credit card statement.
     */
-  var statement_descriptor: js.UndefOr[String] = js.native
+  var statement_descriptor: js.UndefOr[String] = js.undefined
   /**
     * The percent tax rate applied to the invoice, represented as a non-negative decimal
     * number (with at most four decimal places) between 0 and 100. To unset a
     * previously-set value, pass an empty string. This field can be updated only on draft
     * invoices.
     */
-  var tax_percent: js.UndefOr[Double] = js.native
+  var tax_percent: js.UndefOr[Double] = js.undefined
 }
 
 object IInvoiceUpdateOptions {
   @scala.inline
-  def apply(): IInvoiceUpdateOptions = {
+  def apply(
+    application_fee: js.UndefOr[Double] = js.undefined,
+    auto_advance: js.UndefOr[Boolean] = js.undefined,
+    closed: js.UndefOr[Boolean] = js.undefined,
+    custom_fields: js.Array[Name] = null,
+    days_until_due: js.UndefOr[Double] = js.undefined,
+    default_source: String = null,
+    description: String = null,
+    due_date: js.Date | Double = null,
+    expand: js.Array[String] = null,
+    footer: js.UndefOr[Null | String] = js.undefined,
+    forgiven: js.UndefOr[Boolean] = js.undefined,
+    include: js.Array[String] = null,
+    metadata: IOptionsMetadata = null,
+    statement_descriptor: String = null,
+    tax_percent: js.UndefOr[Double] = js.undefined
+  ): IInvoiceUpdateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(application_fee)) __obj.updateDynamic("application_fee")(application_fee.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(auto_advance)) __obj.updateDynamic("auto_advance")(auto_advance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closed)) __obj.updateDynamic("closed")(closed.get.asInstanceOf[js.Any])
+    if (custom_fields != null) __obj.updateDynamic("custom_fields")(custom_fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(days_until_due)) __obj.updateDynamic("days_until_due")(days_until_due.get.asInstanceOf[js.Any])
+    if (default_source != null) __obj.updateDynamic("default_source")(default_source.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (due_date != null) __obj.updateDynamic("due_date")(due_date.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (!js.isUndefined(footer)) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (!js.isUndefined(forgiven)) __obj.updateDynamic("forgiven")(forgiven.get.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (statement_descriptor != null) __obj.updateDynamic("statement_descriptor")(statement_descriptor.asInstanceOf[js.Any])
+    if (!js.isUndefined(tax_percent)) __obj.updateDynamic("tax_percent")(tax_percent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInvoiceUpdateOptions]
   }
-  @scala.inline
-  implicit class IInvoiceUpdateOptionsOps[Self <: IInvoiceUpdateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication_fee(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application_fee")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplication_fee: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application_fee")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuto_advance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auto_advance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuto_advance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auto_advance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClosed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClosed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom_fields(value: js.Array[Name]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom_fields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDays_until_due(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("days_until_due")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDays_until_due: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("days_until_due")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_source(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_source: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDue_dateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("due_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDue_date(value: js.Date | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("due_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDue_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("due_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(null)
-        ret
-    }
-    @scala.inline
-    def withForgiven(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forgiven")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForgiven: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forgiven")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatement_descriptor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_descriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatement_descriptor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_descriptor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTax_percent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax_percent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTax_percent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax_percent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

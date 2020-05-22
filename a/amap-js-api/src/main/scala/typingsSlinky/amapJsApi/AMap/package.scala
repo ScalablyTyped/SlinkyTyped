@@ -22,6 +22,7 @@ package object AMap {
   type LabelMarker[ExtraData] = typingsSlinky.amapJsApi.AMap.LabelMarker_[ExtraData]
   type LabelsLayer = typingsSlinky.amapJsApi.AMap.LabelsLayer_
   type Layer = typingsSlinky.amapJsApi.AMap.Layer_
+  type LocationValue = typingsSlinky.amapJsApi.AMap.LngLat | (js.Tuple2[scala.Double, scala.Double])
   type Map = typingsSlinky.amapJsApi.AMap.Map_
   type MapsEvent[N /* <: java.lang.String */, I] = typingsSlinky.amapJsApi.AMap.Event_[N, typingsSlinky.amapJsApi.anon.Lnglat[I]]
   type Marker[ExtraData] = typingsSlinky.amapJsApi.AMap.Marker_[ExtraData]
@@ -39,6 +40,7 @@ package object AMap {
   type Polyline[ExtraData] = typingsSlinky.amapJsApi.AMap.Polyline_[ExtraData]
   type Rectangle[ExtraData] = typingsSlinky.amapJsApi.AMap.Rectangle_[ExtraData]
   type ShapeOverlay[ExtraData] = typingsSlinky.amapJsApi.AMap.ShapeOverlay_[ExtraData]
+  type SizeValue = typingsSlinky.amapJsApi.AMap.Size | (js.Tuple2[scala.Double, scala.Double])
   type Text[ExtraData] = typingsSlinky.amapJsApi.AMap.Text_[ExtraData]
   type TileLayer = typingsSlinky.amapJsApi.AMap.TileLayer_
   type View2D = typingsSlinky.amapJsApi.AMap.EventEmitter

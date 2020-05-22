@@ -5,119 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DevicePose extends js.Object {
   /**
     * The angularAcceleration of the device, values in array are [x,y,z].
     */
-  val angularAcceleration: Nullable[js.typedarray.Float32Array] = js.native
+  val angularAcceleration: Nullable[js.typedarray.Float32Array]
   /**
     * The angularVelocity of the device, values in array are [x,y,z].
     */
-  val angularVelocity: Nullable[js.typedarray.Float32Array] = js.native
+  val angularVelocity: Nullable[js.typedarray.Float32Array]
   /**
     * The linearAcceleration of the device, values in array are [x,y,z].
     */
-  val linearAcceleration: Nullable[js.typedarray.Float32Array] = js.native
+  val linearAcceleration: Nullable[js.typedarray.Float32Array]
   /**
     * The linearVelocity of the device, values in array are [x,y,z].
     */
-  val linearVelocity: Nullable[js.typedarray.Float32Array] = js.native
+  val linearVelocity: Nullable[js.typedarray.Float32Array]
   /**
     * The orientation of the device in a quaternion array, values in array are [x,y,z,w].
     */
-  val orientation: Nullable[js.typedarray.Float32Array] = js.native
+  val orientation: Nullable[js.typedarray.Float32Array]
   /**
     * The position of the device, values in array are [x,y,z].
     */
-  val position: Nullable[js.typedarray.Float32Array] = js.native
+  val position: Nullable[js.typedarray.Float32Array]
 }
 
 object DevicePose {
   @scala.inline
-  def apply(): DevicePose = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    angularAcceleration: Nullable[js.typedarray.Float32Array] = null,
+    angularVelocity: Nullable[js.typedarray.Float32Array] = null,
+    linearAcceleration: Nullable[js.typedarray.Float32Array] = null,
+    linearVelocity: Nullable[js.typedarray.Float32Array] = null,
+    orientation: Nullable[js.typedarray.Float32Array] = null,
+    position: Nullable[js.typedarray.Float32Array] = null
+  ): DevicePose = {
+    val __obj = js.Dynamic.literal(angularAcceleration = angularAcceleration.asInstanceOf[js.Any], angularVelocity = angularVelocity.asInstanceOf[js.Any], linearAcceleration = linearAcceleration.asInstanceOf[js.Any], linearVelocity = linearVelocity.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
     __obj.asInstanceOf[DevicePose]
   }
-  @scala.inline
-  implicit class DevicePoseOps[Self <: DevicePose] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngularAcceleration(value: Nullable[js.typedarray.Float32Array]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularAcceleration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngularAccelerationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularAcceleration")(null)
-        ret
-    }
-    @scala.inline
-    def withAngularVelocity(value: Nullable[js.typedarray.Float32Array]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngularVelocityNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularVelocity")(null)
-        ret
-    }
-    @scala.inline
-    def withLinearAcceleration(value: Nullable[js.typedarray.Float32Array]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearAcceleration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinearAccelerationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearAcceleration")(null)
-        ret
-    }
-    @scala.inline
-    def withLinearVelocity(value: Nullable[js.typedarray.Float32Array]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinearVelocityNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearVelocity")(null)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: Nullable[js.typedarray.Float32Array]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrientationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(null)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Nullable[js.typedarray.Float32Array]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPositionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(null)
-        ret
-    }
-  }
-  
 }
 

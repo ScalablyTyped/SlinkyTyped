@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BlockedUser extends js.Object {
-  var blocked_id: Double = js.native
-  var blocked_url: String = js.native
+  var blocked_id: Double
+  var blocked_url: String
 }
 
 object BlockedUser {
@@ -16,25 +15,5 @@ object BlockedUser {
     val __obj = js.Dynamic.literal(blocked_id = blocked_id.asInstanceOf[js.Any], blocked_url = blocked_url.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockedUser]
   }
-  @scala.inline
-  implicit class BlockedUserOps[Self <: BlockedUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlocked_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocked_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlocked_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocked_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

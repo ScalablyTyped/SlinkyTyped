@@ -6,16 +6,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an ordered series of geographic points. */
-@js.native
 trait Geopath extends js.Object {
   /** Gets the altitude reference system used by the Geopath . */
-  var altitudeReferenceSystem: AltitudeReferenceSystem = js.native
+  var altitudeReferenceSystem: AltitudeReferenceSystem
   /** Gets the type of geographic shape represented by the Geopath . */
-  var geoshapeType: GeoshapeType = js.native
+  var geoshapeType: GeoshapeType
   /** Gets the collection of geographic points that define the Geopath . */
-  var positions: IVectorView[BasicGeoposition] = js.native
+  var positions: IVectorView[BasicGeoposition]
   /** Gets the spatial reference ID (SRID) used by the Geopath . */
-  var spatialReferenceId: Double = js.native
+  var spatialReferenceId: Double
 }
 
 object Geopath {
@@ -29,37 +28,5 @@ object Geopath {
     val __obj = js.Dynamic.literal(altitudeReferenceSystem = altitudeReferenceSystem.asInstanceOf[js.Any], geoshapeType = geoshapeType.asInstanceOf[js.Any], positions = positions.asInstanceOf[js.Any], spatialReferenceId = spatialReferenceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Geopath]
   }
-  @scala.inline
-  implicit class GeopathOps[Self <: Geopath] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltitudeReferenceSystem(value: AltitudeReferenceSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitudeReferenceSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeoshapeType(value: GeoshapeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoshapeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPositions(value: IVectorView[BasicGeoposition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpatialReferenceId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReferenceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

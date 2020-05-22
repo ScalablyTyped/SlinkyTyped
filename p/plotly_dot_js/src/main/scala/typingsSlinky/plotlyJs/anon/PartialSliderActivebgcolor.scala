@@ -18,296 +18,78 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.Slider> */
-@js.native
 trait PartialSliderActivebgcolor extends js.Object {
-  var active: js.UndefOr[Double] = js.native
-  var activebgcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
-  var bgcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
-  var bordercolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
-  var borderwidth: js.UndefOr[Double] = js.native
-  var currentvalue: js.UndefOr[Offset] = js.native
-  var font: js.UndefOr[typingsSlinky.plotlyJs.mod.Font] = js.native
-  var len: js.UndefOr[Double] = js.native
-  var lenmode: js.UndefOr[fraction | pixels] = js.native
-  var minorticklen: js.UndefOr[Double] = js.native
-  var pad: js.UndefOr[Partial[Padding]] = js.native
-  var steps: js.UndefOr[js.Array[Partial[SliderStep]]] = js.native
-  var tickcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
-  var ticklen: js.UndefOr[Double] = js.native
-  var tickwidth: js.UndefOr[Double] = js.native
-  var transition: js.UndefOr[Transition] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var x: js.UndefOr[Double] = js.native
-  var xanchor: js.UndefOr[auto | left | center | right] = js.native
-  var y: js.UndefOr[Double] = js.native
-  var yanchor: js.UndefOr[auto | top | middle | bottom] = js.native
+  var active: js.UndefOr[Double] = js.undefined
+  var activebgcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.undefined
+  var bgcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.undefined
+  var bordercolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.undefined
+  var borderwidth: js.UndefOr[Double] = js.undefined
+  var currentvalue: js.UndefOr[Offset] = js.undefined
+  var font: js.UndefOr[typingsSlinky.plotlyJs.mod.Font] = js.undefined
+  var len: js.UndefOr[Double] = js.undefined
+  var lenmode: js.UndefOr[fraction | pixels] = js.undefined
+  var minorticklen: js.UndefOr[Double] = js.undefined
+  var pad: js.UndefOr[Partial[Padding]] = js.undefined
+  var steps: js.UndefOr[js.Array[Partial[SliderStep]]] = js.undefined
+  var tickcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.undefined
+  var ticklen: js.UndefOr[Double] = js.undefined
+  var tickwidth: js.UndefOr[Double] = js.undefined
+  var transition: js.UndefOr[Transition] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var x: js.UndefOr[Double] = js.undefined
+  var xanchor: js.UndefOr[auto | left | center | right] = js.undefined
+  var y: js.UndefOr[Double] = js.undefined
+  var yanchor: js.UndefOr[auto | top | middle | bottom] = js.undefined
 }
 
 object PartialSliderActivebgcolor {
   @scala.inline
-  def apply(): PartialSliderActivebgcolor = {
+  def apply(
+    active: js.UndefOr[Double] = js.undefined,
+    activebgcolor: typingsSlinky.plotlyJs.mod.Color = null,
+    bgcolor: typingsSlinky.plotlyJs.mod.Color = null,
+    bordercolor: typingsSlinky.plotlyJs.mod.Color = null,
+    borderwidth: js.UndefOr[Double] = js.undefined,
+    currentvalue: Offset = null,
+    font: typingsSlinky.plotlyJs.mod.Font = null,
+    len: js.UndefOr[Double] = js.undefined,
+    lenmode: fraction | pixels = null,
+    minorticklen: js.UndefOr[Double] = js.undefined,
+    pad: Partial[Padding] = null,
+    steps: js.Array[Partial[SliderStep]] = null,
+    tickcolor: typingsSlinky.plotlyJs.mod.Color = null,
+    ticklen: js.UndefOr[Double] = js.undefined,
+    tickwidth: js.UndefOr[Double] = js.undefined,
+    transition: Transition = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    xanchor: auto | left | center | right = null,
+    y: js.UndefOr[Double] = js.undefined,
+    yanchor: auto | top | middle | bottom = null
+  ): PartialSliderActivebgcolor = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (activebgcolor != null) __obj.updateDynamic("activebgcolor")(activebgcolor.asInstanceOf[js.Any])
+    if (bgcolor != null) __obj.updateDynamic("bgcolor")(bgcolor.asInstanceOf[js.Any])
+    if (bordercolor != null) __obj.updateDynamic("bordercolor")(bordercolor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderwidth)) __obj.updateDynamic("borderwidth")(borderwidth.get.asInstanceOf[js.Any])
+    if (currentvalue != null) __obj.updateDynamic("currentvalue")(currentvalue.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (!js.isUndefined(len)) __obj.updateDynamic("len")(len.get.asInstanceOf[js.Any])
+    if (lenmode != null) __obj.updateDynamic("lenmode")(lenmode.asInstanceOf[js.Any])
+    if (!js.isUndefined(minorticklen)) __obj.updateDynamic("minorticklen")(minorticklen.get.asInstanceOf[js.Any])
+    if (pad != null) __obj.updateDynamic("pad")(pad.asInstanceOf[js.Any])
+    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
+    if (tickcolor != null) __obj.updateDynamic("tickcolor")(tickcolor.asInstanceOf[js.Any])
+    if (!js.isUndefined(ticklen)) __obj.updateDynamic("ticklen")(ticklen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickwidth)) __obj.updateDynamic("tickwidth")(tickwidth.get.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (xanchor != null) __obj.updateDynamic("xanchor")(xanchor.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
+    if (yanchor != null) __obj.updateDynamic("yanchor")(yanchor.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialSliderActivebgcolor]
   }
-  @scala.inline
-  implicit class PartialSliderActivebgcolorOps[Self <: PartialSliderActivebgcolor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivebgcolor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activebgcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivebgcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activebgcolor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgcolor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgcolor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBordercolor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bordercolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBordercolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bordercolor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentvalue(value: Offset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentvalue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentvalue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentvalue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: typingsSlinky.plotlyJs.mod.Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("len")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("len")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLenmode(value: fraction | pixels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lenmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLenmode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lenmode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorticklen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorticklen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorticklen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorticklen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPad(value: Partial[Padding]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSteps(value: js.Array[Partial[SliderStep]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickcolor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickcolor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTicklen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticklen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTicklen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticklen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: Transition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXanchor(value: auto | left | center | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xanchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXanchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xanchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYanchor(value: auto | top | middle | bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yanchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYanchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yanchor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

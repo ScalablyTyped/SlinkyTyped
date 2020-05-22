@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocumentHighlight extends js.Object {
   /**
     * The highlight kind, default is [text](#DocumentHighlightKind.Text).
     */
-  var kind: js.UndefOr[DocumentHighlightKind] = js.native
+  var kind: js.UndefOr[DocumentHighlightKind] = js.undefined
   /**
     * The range this highlight applies to.
     */
-  var range: Range = js.native
+  var range: Range
 }
 
 @JSImport("vscode-languageserver-types", "DocumentHighlight")

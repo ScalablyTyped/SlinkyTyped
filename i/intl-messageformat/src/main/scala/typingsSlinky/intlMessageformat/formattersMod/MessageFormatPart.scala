@@ -1,5 +1,7 @@
 package typingsSlinky.intlMessageformat.formattersMod
 
+import typingsSlinky.intlMessageformat.intlMessageformatNumbers.`0`
+import typingsSlinky.intlMessageformat.intlMessageformatNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,16 @@ trait MessageFormatPart extends js.Object
 
 object MessageFormatPart {
   @scala.inline
-  implicit def apply(value: ArgumentPart): MessageFormatPart = value.asInstanceOf[MessageFormatPart]
+  def LiteralPart(`type`: `0`, value: String): MessageFormatPart = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MessageFormatPart]
+  }
   @scala.inline
-  implicit def apply(value: LiteralPart): MessageFormatPart = value.asInstanceOf[MessageFormatPart]
+  def ArgumentPart(`type`: `1`, value: js.Any): MessageFormatPart = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MessageFormatPart]
+  }
 }
 

@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LiaInventorySettings extends js.Object {
-  var inventoryVerificationContactEmail: js.UndefOr[String] = js.native
-  var inventoryVerificationContactName: js.UndefOr[String] = js.native
-  var inventoryVerificationContactStatus: js.UndefOr[String] = js.native
-  var status: js.UndefOr[String] = js.native
+  var inventoryVerificationContactEmail: js.UndefOr[String] = js.undefined
+  var inventoryVerificationContactName: js.UndefOr[String] = js.undefined
+  var inventoryVerificationContactStatus: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
 }
 
 object LiaInventorySettings {
   @scala.inline
-  def apply(): LiaInventorySettings = {
+  def apply(
+    inventoryVerificationContactEmail: String = null,
+    inventoryVerificationContactName: String = null,
+    inventoryVerificationContactStatus: String = null,
+    status: String = null
+  ): LiaInventorySettings = {
     val __obj = js.Dynamic.literal()
+    if (inventoryVerificationContactEmail != null) __obj.updateDynamic("inventoryVerificationContactEmail")(inventoryVerificationContactEmail.asInstanceOf[js.Any])
+    if (inventoryVerificationContactName != null) __obj.updateDynamic("inventoryVerificationContactName")(inventoryVerificationContactName.asInstanceOf[js.Any])
+    if (inventoryVerificationContactStatus != null) __obj.updateDynamic("inventoryVerificationContactStatus")(inventoryVerificationContactStatus.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[LiaInventorySettings]
   }
-  @scala.inline
-  implicit class LiaInventorySettingsOps[Self <: LiaInventorySettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInventoryVerificationContactEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventoryVerificationContactEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventoryVerificationContactEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventoryVerificationContactEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInventoryVerificationContactName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventoryVerificationContactName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventoryVerificationContactName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventoryVerificationContactName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInventoryVerificationContactStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventoryVerificationContactStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventoryVerificationContactStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventoryVerificationContactStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

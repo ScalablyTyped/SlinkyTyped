@@ -33,65 +33,18 @@ trait SchemaSslCertsInsertResponse extends js.Object {
 
 object SchemaSslCertsInsertResponse {
   @scala.inline
-  def apply(): SchemaSslCertsInsertResponse = {
+  def apply(
+    clientCert: SchemaSslCertDetail = null,
+    kind: String = null,
+    operation: SchemaOperation = null,
+    serverCaCert: SchemaSslCert = null
+  ): SchemaSslCertsInsertResponse = {
     val __obj = js.Dynamic.literal()
+    if (clientCert != null) __obj.updateDynamic("clientCert")(clientCert.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
+    if (serverCaCert != null) __obj.updateDynamic("serverCaCert")(serverCaCert.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSslCertsInsertResponse]
   }
-  @scala.inline
-  implicit class SchemaSslCertsInsertResponseOps[Self <: SchemaSslCertsInsertResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientCert(value: SchemaSslCertDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientCert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperation(value: SchemaOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerCaCert(value: SchemaSslCert): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCaCert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerCaCert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCaCert")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

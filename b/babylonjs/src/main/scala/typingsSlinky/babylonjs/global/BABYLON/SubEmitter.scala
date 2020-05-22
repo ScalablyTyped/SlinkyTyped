@@ -16,6 +16,36 @@ class SubEmitter protected ()
     * the particle system to be used by the sub emitter
     */
   particleSystem: typingsSlinky.babylonjs.BABYLON.ParticleSystem) = this()
+  /**
+    * If the particle should inherit the direction from the particle it's attached to. (+Y will face the direction the particle is moving) (Default: false)
+    * Note: This only is supported when using an emitter of type Mesh
+    */
+  /* CompleteClass */
+  override var inheritDirection: Boolean = js.native
+  /**
+    * How much of the attached particles speed should be added to the sub emitted particle (default: 0)
+    */
+  /* CompleteClass */
+  override var inheritedVelocityAmount: Double = js.native
+  /**
+    * the particle system to be used by the sub emitter
+    */
+  /* CompleteClass */
+  override var particleSystem: typingsSlinky.babylonjs.BABYLON.ParticleSystem = js.native
+  /**
+    * Type of the submitter (Default: END)
+    */
+  /* CompleteClass */
+  override var `type`: typingsSlinky.babylonjs.BABYLON.SubEmitterType = js.native
+  /** Release associated resources */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
+    * Serialize current object to a JSON object
+    * @returns the serialized object
+    */
+  /* CompleteClass */
+  override def serialize(): js.Any = js.native
 }
 
 /* static members */

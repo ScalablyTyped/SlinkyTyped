@@ -22,47 +22,11 @@ trait CreateBackupPlanInput extends js.Object {
 
 object CreateBackupPlanInput {
   @scala.inline
-  def apply(BackupPlan: BackupPlanInput): CreateBackupPlanInput = {
+  def apply(BackupPlan: BackupPlanInput, BackupPlanTags: Tags = null, CreatorRequestId: String = null): CreateBackupPlanInput = {
     val __obj = js.Dynamic.literal(BackupPlan = BackupPlan.asInstanceOf[js.Any])
+    if (BackupPlanTags != null) __obj.updateDynamic("BackupPlanTags")(BackupPlanTags.asInstanceOf[js.Any])
+    if (CreatorRequestId != null) __obj.updateDynamic("CreatorRequestId")(CreatorRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBackupPlanInput]
   }
-  @scala.inline
-  implicit class CreateBackupPlanInputOps[Self <: CreateBackupPlanInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackupPlan(value: BackupPlanInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackupPlanTags(value: Tags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupPlanTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatorRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatorRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorRequestId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

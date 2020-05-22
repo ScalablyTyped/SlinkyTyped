@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSIndexSignature
   extends Node
      with TSTypeElement {
-  var parameters: js.Array[Identifier_] = js.native
-  var readonly: Boolean | Null = js.native
-  var typeAnnotation: TSTypeAnnotation | Null = js.native
+  var parameters: js.Array[Identifier_]
+  var readonly: Boolean | Null
+  var typeAnnotation: TSTypeAnnotation | Null
   @JSName("type")
-  var type_TSIndexSignature: typingsSlinky.babelTypes.babelTypesStrings.TSIndexSignature = js.native
+  var type_TSIndexSignature: typingsSlinky.babelTypes.babelTypesStrings.TSIndexSignature
 }
 
 @JSImport("babel-types", "TSIndexSignature")

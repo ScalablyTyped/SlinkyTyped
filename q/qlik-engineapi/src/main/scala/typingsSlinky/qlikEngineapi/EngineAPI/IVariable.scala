@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   *
   * The handle member in the JSON request for all methods listed in this section is the handle of the variable.
   */
-@js.native
 trait IVariable extends IGeneratedAPI {
   /**
     * Sets the value of a dual variable overriding any input constraints.
@@ -25,25 +24,25 @@ trait IVariable extends IGeneratedAPI {
     * @param qd - Numeric representation of a dual value.
     * >> This parameter is mandatory.
     */
-  def forceContent(qs: String, qd: Double): js.Promise[Unit] = js.native
+  def forceContent(qs: String, qd: Double): js.Promise[Unit]
   /**
     * Returns the calculated value of a variable.
     *
     * Note: This method is deprecated (not recommended to use). Use GetProperties method instead.
     */
-  def getContent(): js.Promise[IAlfaNumString] = js.native
+  def getContent(): js.Promise[IAlfaNumString]
   /**
     * Gets the properties of a variable.
     *
     * Note: This method is deprecated (not recommended to use). Use GetProperties method instead.
     */
-  def getNxProperties(): js.Promise[INxVariableProperties] = js.native
+  def getNxProperties(): js.Promise[INxVariableProperties]
   /**
     * Returns the raw value of a variable.
     *
     * Note: This method is deprecated (not recommended to use). Use GetProperties method instead.
     */
-  def getRawContent(): js.Promise[String] = js.native
+  def getRawContent(): js.Promise[String]
   /**
     * Sets a value to a variable.
     *
@@ -53,7 +52,7 @@ trait IVariable extends IGeneratedAPI {
     * @param qUpdateMRU - If set to true, the value is added to the Most Recently Used (MRU) list.
     * >> This parameter is mandatory.
     */
-  def setContent(qContent: String, qUpdateMRU: Boolean): js.Promise[Boolean] = js.native
+  def setContent(qContent: String, qUpdateMRU: Boolean): js.Promise[Boolean]
   /**
     * Sets some properties to a variable.
     *
@@ -62,7 +61,7 @@ trait IVariable extends IGeneratedAPI {
     * In addition to the properties described below, dynamic properties can be added.
     * @param qProperties - Information about the properties of the variable
     */
-  def setNxProperties(qProperties: INxVariableProperties): js.Promise[Unit] = js.native
+  def setNxProperties(qProperties: INxVariableProperties): js.Promise[Unit]
 }
 
 object IVariable {
@@ -78,49 +77,5 @@ object IVariable {
     val __obj = js.Dynamic.literal(forceContent = js.Any.fromFunction2(forceContent), getContent = js.Any.fromFunction0(getContent), getNxProperties = js.Any.fromFunction0(getNxProperties), getRawContent = js.Any.fromFunction0(getRawContent), setContent = js.Any.fromFunction2(setContent), setNxProperties = js.Any.fromFunction1(setNxProperties))
     __obj.asInstanceOf[IVariable]
   }
-  @scala.inline
-  implicit class IVariableOps[Self <: IVariable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForceContent(value: (String, Double) => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceContent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetContent(value: () => js.Promise[IAlfaNumString]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNxProperties(value: () => js.Promise[INxVariableProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNxProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRawContent(value: () => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRawContent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetContent(value: (String, Boolean) => js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetNxProperties(value: INxVariableProperties => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNxProperties")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

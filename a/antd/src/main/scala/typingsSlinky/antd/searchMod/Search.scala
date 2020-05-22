@@ -5,7 +5,8 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
+import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.MouseEventHandler
@@ -23,7 +24,7 @@ trait Search
   def onChange(e: ChangeEvent[HTMLInputElement]): Unit = js.native
   def onSearch(e: SyntheticKeyboardEvent[HTMLInputElement]): Unit = js.native
   def onSearch(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def renderAddonAfter(prefixCls: String): js.UndefOr[js.Object | Null] = js.native
+  def renderAddonAfter(prefixCls: String, size: SizeType): js.UndefOr[js.Object | Null] = js.native
   def renderLoading(prefixCls: String): ReactElement = js.native
   def renderSearch(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
   def renderSuffix(prefixCls: String): js.UndefOr[js.Object | Null] = js.native

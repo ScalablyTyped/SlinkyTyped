@@ -37,65 +37,18 @@ trait SchemaHttpRouteRule extends js.Object {
 
 object SchemaHttpRouteRule {
   @scala.inline
-  def apply(): SchemaHttpRouteRule = {
+  def apply(
+    headerAction: SchemaHttpHeaderAction = null,
+    matchRules: js.Array[SchemaHttpRouteRuleMatch] = null,
+    routeAction: SchemaHttpRouteAction = null,
+    urlRedirect: SchemaHttpRedirectAction = null
+  ): SchemaHttpRouteRule = {
     val __obj = js.Dynamic.literal()
+    if (headerAction != null) __obj.updateDynamic("headerAction")(headerAction.asInstanceOf[js.Any])
+    if (matchRules != null) __obj.updateDynamic("matchRules")(matchRules.asInstanceOf[js.Any])
+    if (routeAction != null) __obj.updateDynamic("routeAction")(routeAction.asInstanceOf[js.Any])
+    if (urlRedirect != null) __obj.updateDynamic("urlRedirect")(urlRedirect.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpRouteRule]
   }
-  @scala.inline
-  implicit class SchemaHttpRouteRuleOps[Self <: SchemaHttpRouteRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeaderAction(value: SchemaHttpHeaderAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchRules(value: js.Array[SchemaHttpRouteRuleMatch]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteAction(value: SchemaHttpRouteAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlRedirect(value: SchemaHttpRedirectAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlRedirect")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

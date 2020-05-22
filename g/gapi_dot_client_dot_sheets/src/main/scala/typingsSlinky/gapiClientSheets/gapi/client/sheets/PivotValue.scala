@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PivotValue extends js.Object {
   /**
     * If specified, indicates that pivot values should be displayed as
@@ -14,14 +13,14 @@ trait PivotValue extends js.Object {
     * the Sheets UI, this is referred to as "Show As" in the value section of a
     * pivot table.
     */
-  var calculatedDisplayType: js.UndefOr[String] = js.native
+  var calculatedDisplayType: js.UndefOr[String] = js.undefined
   /**
     * A custom formula to calculate the value.  The formula must start
     * with an `=` character.
     */
-  var formula: js.UndefOr[String] = js.native
+  var formula: js.UndefOr[String] = js.undefined
   /** A name to use for the value. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The column offset of the source range that this value reads from.
     *
@@ -29,7 +28,7 @@ trait PivotValue extends js.Object {
     * means this value refers to column `C`, whereas the offset `1` would
     * refer to column `D`.
     */
-  var sourceColumnOffset: js.UndefOr[Double] = js.native
+  var sourceColumnOffset: js.UndefOr[Double] = js.undefined
   /**
     * A function to summarize the value.
     * If formula is set, the only supported values are
@@ -38,82 +37,25 @@ trait PivotValue extends js.Object {
     * If sourceColumnOffset is set, then `CUSTOM`
     * is not supported.
     */
-  var summarizeFunction: js.UndefOr[String] = js.native
+  var summarizeFunction: js.UndefOr[String] = js.undefined
 }
 
 object PivotValue {
   @scala.inline
-  def apply(): PivotValue = {
+  def apply(
+    calculatedDisplayType: String = null,
+    formula: String = null,
+    name: String = null,
+    sourceColumnOffset: js.UndefOr[Double] = js.undefined,
+    summarizeFunction: String = null
+  ): PivotValue = {
     val __obj = js.Dynamic.literal()
+    if (calculatedDisplayType != null) __obj.updateDynamic("calculatedDisplayType")(calculatedDisplayType.asInstanceOf[js.Any])
+    if (formula != null) __obj.updateDynamic("formula")(formula.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceColumnOffset)) __obj.updateDynamic("sourceColumnOffset")(sourceColumnOffset.get.asInstanceOf[js.Any])
+    if (summarizeFunction != null) __obj.updateDynamic("summarizeFunction")(summarizeFunction.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotValue]
   }
-  @scala.inline
-  implicit class PivotValueOps[Self <: PivotValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalculatedDisplayType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedDisplayType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalculatedDisplayType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculatedDisplayType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormula(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormula: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceColumnOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceColumnOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceColumnOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceColumnOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummarizeFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summarizeFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummarizeFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summarizeFunction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

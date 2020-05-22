@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Mode extends js.Object {
   /**
     * * `all` option causes parser to go through all array items, finding
@@ -25,34 +24,15 @@ trait Mode extends js.Object {
     *
     * @default 'all'
     */
-  var mode: js.UndefOr[all | first | uniform | tuple] = js.native
+  var mode: js.UndefOr[all | first | uniform | tuple] = js.undefined
 }
 
 object Mode {
   @scala.inline
-  def apply(): Mode = {
+  def apply(mode: all | first | uniform | tuple = null): Mode = {
     val __obj = js.Dynamic.literal()
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mode]
   }
-  @scala.inline
-  implicit class ModeOps[Self <: Mode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: all | first | uniform | tuple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

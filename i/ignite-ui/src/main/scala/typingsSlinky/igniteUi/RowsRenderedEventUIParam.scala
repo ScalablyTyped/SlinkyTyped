@@ -5,55 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RowsRenderedEventUIParam extends js.Object {
   /**
-  	 * Gets a reference to the grid.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the grid.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets reference to the grid's table body.
-  	 */
-  var tbody: js.UndefOr[Element] = js.native
+    * Gets reference to the grid's table body.
+    */
+  var tbody: js.UndefOr[Element] = js.undefined
 }
 
 object RowsRenderedEventUIParam {
   @scala.inline
-  def apply(): RowsRenderedEventUIParam = {
+  def apply(owner: js.Any = null, tbody: Element = null): RowsRenderedEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (tbody != null) __obj.updateDynamic("tbody")(tbody.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowsRenderedEventUIParam]
   }
-  @scala.inline
-  implicit class RowsRenderedEventUIParamOps[Self <: RowsRenderedEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTbody(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTbody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -32,8 +32,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Range
-  extends PivotTableWizardSourceData[js.Any] {
+trait Range extends js.Object {
   var AddIndent: Boolean = js.native
   val AllowEdit: Boolean = js.native
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native

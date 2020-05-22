@@ -1,22 +1,22 @@
 package typingsSlinky.execa
 
-import typingsSlinky.execa.mod.StdioOption
+import typingsSlinky.execa.mod._StdioOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object execaStrings {
   @js.native
-  sealed trait ignore extends StdioOption
+  sealed trait ignore extends _StdioOption
   
   @js.native
-  sealed trait inherit extends StdioOption
+  sealed trait inherit extends _StdioOption
   
   @js.native
-  sealed trait ipc extends StdioOption
+  sealed trait ipc extends _StdioOption
   
   @js.native
-  sealed trait pipe extends StdioOption
+  sealed trait pipe extends _StdioOption
   
   @scala.inline
   def ignore: ignore = "ignore".asInstanceOf[ignore]

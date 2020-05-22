@@ -41,77 +41,20 @@ trait SchemaBatchGetDocumentsRequest extends js.Object {
 
 object SchemaBatchGetDocumentsRequest {
   @scala.inline
-  def apply(): SchemaBatchGetDocumentsRequest = {
+  def apply(
+    documents: js.Array[String] = null,
+    mask: SchemaDocumentMask = null,
+    newTransaction: SchemaTransactionOptions = null,
+    readTime: String = null,
+    transaction: String = null
+  ): SchemaBatchGetDocumentsRequest = {
     val __obj = js.Dynamic.literal()
+    if (documents != null) __obj.updateDynamic("documents")(documents.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (newTransaction != null) __obj.updateDynamic("newTransaction")(newTransaction.asInstanceOf[js.Any])
+    if (readTime != null) __obj.updateDynamic("readTime")(readTime.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchGetDocumentsRequest]
   }
-  @scala.inline
-  implicit class SchemaBatchGetDocumentsRequestOps[Self <: SchemaBatchGetDocumentsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocuments(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocuments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMask(value: SchemaDocumentMask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewTransaction(value: SchemaTransactionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTransaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTransaction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

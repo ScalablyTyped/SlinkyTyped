@@ -4,64 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BarDatasetConfig
   extends CommonDatasetConfig
      with BarLineScatterCandleBubbleConfig {
-  var barShadowColor: js.UndefOr[Color] = js.native
-  var highlightAlpha: js.UndefOr[Double] = js.native
-  var stackLabels: js.UndefOr[js.Array[String]] = js.native
+  var barShadowColor: js.UndefOr[Color] = js.undefined
+  var highlightAlpha: js.UndefOr[Double] = js.undefined
+  var stackLabels: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object BarDatasetConfig {
   @scala.inline
-  def apply(): BarDatasetConfig = {
+  def apply(
+    axisDependency: AxisDependency = null,
+    barShadowColor: js.UndefOr[Color] = js.undefined,
+    color: js.UndefOr[Color] = js.undefined,
+    colors: js.Array[Color] = null,
+    drawValues: js.UndefOr[Boolean] = js.undefined,
+    highlightAlpha: js.UndefOr[Double] = js.undefined,
+    highlightColor: js.UndefOr[Color] = js.undefined,
+    highlightEnabled: js.UndefOr[Boolean] = js.undefined,
+    stackLabels: js.Array[String] = null,
+    valueFormatter: ValueFormatter = null,
+    valueTextColor: js.UndefOr[Color] = js.undefined,
+    valueTextSize: js.UndefOr[Double] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): BarDatasetConfig = {
     val __obj = js.Dynamic.literal()
+    if (axisDependency != null) __obj.updateDynamic("axisDependency")(axisDependency.asInstanceOf[js.Any])
+    if (!js.isUndefined(barShadowColor)) __obj.updateDynamic("barShadowColor")(barShadowColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.get.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (!js.isUndefined(drawValues)) __obj.updateDynamic("drawValues")(drawValues.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightAlpha)) __obj.updateDynamic("highlightAlpha")(highlightAlpha.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightColor)) __obj.updateDynamic("highlightColor")(highlightColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightEnabled)) __obj.updateDynamic("highlightEnabled")(highlightEnabled.get.asInstanceOf[js.Any])
+    if (stackLabels != null) __obj.updateDynamic("stackLabels")(stackLabels.asInstanceOf[js.Any])
+    if (valueFormatter != null) __obj.updateDynamic("valueFormatter")(valueFormatter.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueTextColor)) __obj.updateDynamic("valueTextColor")(valueTextColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueTextSize)) __obj.updateDynamic("valueTextSize")(valueTextSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BarDatasetConfig]
   }
-  @scala.inline
-  implicit class BarDatasetConfigOps[Self <: BarDatasetConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBarShadowColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barShadowColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarShadowColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barShadowColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackLabels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackLabels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

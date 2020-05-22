@@ -4,323 +4,117 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INumber extends ISpinner {
   /** [Config Option] (Boolean) */
-  var allowDecimals: js.UndefOr[Boolean] = js.native
+  var allowDecimals: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var allowExponential: js.UndefOr[Boolean] = js.native
+  var allowExponential: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var autoStripChars: js.UndefOr[Boolean] = js.native
+  var autoStripChars: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (String) */
-  var baseChars: js.UndefOr[String] = js.native
+  var baseChars: js.UndefOr[String] = js.undefined
   /** [Method] Template method to do any pre blur processing  */
   @JSName("beforeBlur")
-  var beforeBlur_INumber: js.UndefOr[js.Function0[Unit]] = js.native
+  var beforeBlur_INumber: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Config Option] (Number) */
-  var decimalPrecision: js.UndefOr[Double] = js.native
+  var decimalPrecision: js.UndefOr[Double] = js.undefined
   /** [Config Option] (String) */
-  var decimalSeparator: js.UndefOr[String] = js.native
+  var decimalSeparator: js.UndefOr[String] = js.undefined
   /** [Method] Returns the value that would be included in a standard form submit for this field
-  		* @returns String The value to be submitted, or null.
-  		*/
+    * @returns String The value to be submitted, or null.
+    */
   @JSName("getSubmitValue")
-  var getSubmitValue_INumber: js.UndefOr[js.Function0[String]] = js.native
+  var getSubmitValue_INumber: js.UndefOr[js.Function0[String]] = js.undefined
   /** [Config Option] (String) */
-  var maxText: js.UndefOr[String] = js.native
+  var maxText: js.UndefOr[String] = js.undefined
   /** [Config Option] (Number) */
-  var maxValue: js.UndefOr[Double] = js.native
+  var maxValue: js.UndefOr[Double] = js.undefined
   /** [Config Option] (String) */
-  var minText: js.UndefOr[String] = js.native
+  var minText: js.UndefOr[String] = js.undefined
   /** [Config Option] (Number) */
-  var minValue: js.UndefOr[Double] = js.native
+  var minValue: js.UndefOr[Double] = js.undefined
   /** [Config Option] (String) */
-  var nanText: js.UndefOr[String] = js.native
+  var nanText: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var negativeText: js.UndefOr[String] = js.native
+  var negativeText: js.UndefOr[String] = js.undefined
   /** [Method] Replaces any existing maxValue with the new value
-  		* @param value Number The maximum value
-  		*/
-  var setMaxValue: js.UndefOr[js.Function1[/* value */ js.UndefOr[Double], Unit]] = js.native
+    * @param value Number The maximum value
+    */
+  var setMaxValue: js.UndefOr[js.Function1[/* value */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Method] Replaces any existing minValue with the new value
-  		* @param value Number The minimum value
-  		*/
-  var setMinValue: js.UndefOr[js.Function1[/* value */ js.UndefOr[Double], Unit]] = js.native
+    * @param value Number The minimum value
+    */
+  var setMinValue: js.UndefOr[js.Function1[/* value */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Method] Sets whether the spinner down button is enabled
-  		* @param enabled Object
-  		* @param internal Object
-  		*/
+    * @param enabled Object
+    * @param internal Object
+    */
   @JSName("setSpinDownEnabled")
   var setSpinDownEnabled_INumber: js.UndefOr[
     js.Function2[/* enabled */ js.UndefOr[js.Any], /* internal */ js.UndefOr[js.Any], Unit]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Sets whether the spinner up button is enabled
-  		* @param enabled Object
-  		* @param internal Object
-  		*/
+    * @param enabled Object
+    * @param internal Object
+    */
   @JSName("setSpinUpEnabled")
   var setSpinUpEnabled_INumber: js.UndefOr[
     js.Function2[/* enabled */ js.UndefOr[js.Any], /* internal */ js.UndefOr[js.Any], Unit]
-  ] = js.native
+  ] = js.undefined
   /** [Config Option] (Number) */
-  var step: js.UndefOr[Double] = js.native
+  var step: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Boolean) */
-  var submitLocaleSeparator: js.UndefOr[Boolean] = js.native
+  var submitLocaleSeparator: js.UndefOr[Boolean] = js.undefined
 }
 
 object INumber {
   @scala.inline
-  def apply(): INumber = {
+  def apply(
+    ISpinner: ISpinner = null,
+    allowDecimals: js.UndefOr[Boolean] = js.undefined,
+    allowExponential: js.UndefOr[Boolean] = js.undefined,
+    autoStripChars: js.UndefOr[Boolean] = js.undefined,
+    baseChars: String = null,
+    beforeBlur: () => Unit = null,
+    decimalPrecision: js.UndefOr[Double] = js.undefined,
+    decimalSeparator: String = null,
+    getSubmitValue: () => String = null,
+    maxText: String = null,
+    maxValue: js.UndefOr[Double] = js.undefined,
+    minText: String = null,
+    minValue: js.UndefOr[Double] = js.undefined,
+    nanText: String = null,
+    negativeText: String = null,
+    setMaxValue: /* value */ js.UndefOr[Double] => Unit = null,
+    setMinValue: /* value */ js.UndefOr[Double] => Unit = null,
+    setSpinDownEnabled: (/* enabled */ js.UndefOr[js.Any], /* internal */ js.UndefOr[js.Any]) => Unit = null,
+    setSpinUpEnabled: (/* enabled */ js.UndefOr[js.Any], /* internal */ js.UndefOr[js.Any]) => Unit = null,
+    step: js.UndefOr[Double] = js.undefined,
+    submitLocaleSeparator: js.UndefOr[Boolean] = js.undefined
+  ): INumber = {
     val __obj = js.Dynamic.literal()
+    if (ISpinner != null) js.Dynamic.global.Object.assign(__obj, ISpinner)
+    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowExponential)) __obj.updateDynamic("allowExponential")(allowExponential.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoStripChars)) __obj.updateDynamic("autoStripChars")(autoStripChars.get.asInstanceOf[js.Any])
+    if (baseChars != null) __obj.updateDynamic("baseChars")(baseChars.asInstanceOf[js.Any])
+    if (beforeBlur != null) __obj.updateDynamic("beforeBlur")(js.Any.fromFunction0(beforeBlur))
+    if (!js.isUndefined(decimalPrecision)) __obj.updateDynamic("decimalPrecision")(decimalPrecision.get.asInstanceOf[js.Any])
+    if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
+    if (getSubmitValue != null) __obj.updateDynamic("getSubmitValue")(js.Any.fromFunction0(getSubmitValue))
+    if (maxText != null) __obj.updateDynamic("maxText")(maxText.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxValue)) __obj.updateDynamic("maxValue")(maxValue.get.asInstanceOf[js.Any])
+    if (minText != null) __obj.updateDynamic("minText")(minText.asInstanceOf[js.Any])
+    if (!js.isUndefined(minValue)) __obj.updateDynamic("minValue")(minValue.get.asInstanceOf[js.Any])
+    if (nanText != null) __obj.updateDynamic("nanText")(nanText.asInstanceOf[js.Any])
+    if (negativeText != null) __obj.updateDynamic("negativeText")(negativeText.asInstanceOf[js.Any])
+    if (setMaxValue != null) __obj.updateDynamic("setMaxValue")(js.Any.fromFunction1(setMaxValue))
+    if (setMinValue != null) __obj.updateDynamic("setMinValue")(js.Any.fromFunction1(setMinValue))
+    if (setSpinDownEnabled != null) __obj.updateDynamic("setSpinDownEnabled")(js.Any.fromFunction2(setSpinDownEnabled))
+    if (setSpinUpEnabled != null) __obj.updateDynamic("setSpinUpEnabled")(js.Any.fromFunction2(setSpinUpEnabled))
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(submitLocaleSeparator)) __obj.updateDynamic("submitLocaleSeparator")(submitLocaleSeparator.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[INumber]
   }
-  @scala.inline
-  implicit class INumberOps[Self <: INumber] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowDecimals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDecimals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowExponential(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExponential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowExponential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExponential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoStripChars(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStripChars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoStripChars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStripChars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseChars(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseChars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeBlur(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeBlur")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPrecision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimalPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPrecision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimalSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalSeparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetSubmitValue(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSubmitValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetSubmitValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSubmitValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNanText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nanText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNanText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nanText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegativeText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegativeText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetMaxValue(value: /* value */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetMinValue(value: /* value */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetSpinDownEnabled(value: (/* enabled */ js.UndefOr[js.Any], /* internal */ js.UndefOr[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSpinDownEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetSpinDownEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSpinDownEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetSpinUpEnabled(value: (/* enabled */ js.UndefOr[js.Any], /* internal */ js.UndefOr[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSpinUpEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetSpinUpEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSpinUpEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmitLocaleSeparator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitLocaleSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmitLocaleSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitLocaleSeparator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

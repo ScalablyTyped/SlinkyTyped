@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-dimmer.SemanticUI.Dimmer.SelectorSettings._Impl, 'dimmer'> */
-@js.native
 trait PickImpldimmer extends js.Object {
-  var dimmer: String = js.native
+  var dimmer: String
 }
 
 object PickImpldimmer {
@@ -16,19 +15,5 @@ object PickImpldimmer {
     val __obj = js.Dynamic.literal(dimmer = dimmer.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImpldimmer]
   }
-  @scala.inline
-  implicit class PickImpldimmerOps[Self <: PickImpldimmer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimmer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimmer")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

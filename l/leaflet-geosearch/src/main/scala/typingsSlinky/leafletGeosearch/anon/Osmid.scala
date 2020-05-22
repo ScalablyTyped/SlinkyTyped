@@ -7,49 +7,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Osmid extends js.Object {
-  var osm_id: js.UndefOr[Double] = js.native
-  var osm_type: js.UndefOr[node | way | relation] = js.native
+  var osm_id: js.UndefOr[Double] = js.undefined
+  var osm_type: js.UndefOr[node | way | relation] = js.undefined
 }
 
 object Osmid {
   @scala.inline
-  def apply(): Osmid = {
+  def apply(osm_id: js.UndefOr[Double] = js.undefined, osm_type: node | way | relation = null): Osmid = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(osm_id)) __obj.updateDynamic("osm_id")(osm_id.get.asInstanceOf[js.Any])
+    if (osm_type != null) __obj.updateDynamic("osm_type")(osm_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[Osmid]
   }
-  @scala.inline
-  implicit class OsmidOps[Self <: Osmid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOsm_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osm_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOsm_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osm_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOsm_type(value: node | way | relation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osm_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOsm_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osm_type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

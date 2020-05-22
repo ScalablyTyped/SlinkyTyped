@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.io.XObjectOutputStream
   * @see com.sun.star.io.XObjectInputStream
   */
-@js.native
 trait XPersistObject extends XInterface {
   /**
     * gives the service name of the object
@@ -29,7 +28,7 @@ trait XPersistObject extends XInterface {
     * @returns the service name that specifies the behavior and the persistent data format of this implementation.
     * @see com.sun.star.lang.XMultiComponentFactory.getAvailableServiceNames()
     */
-  val ServiceName: String = js.native
+  val ServiceName: String
   /**
     * gives the service name of the object
     *
@@ -37,7 +36,7 @@ trait XPersistObject extends XInterface {
     * @returns the service name that specifies the behavior and the persistent data format of this implementation.
     * @see com.sun.star.lang.XMultiComponentFactory.getAvailableServiceNames()
     */
-  def getServiceName(): String = js.native
+  def getServiceName(): String
   /**
     * reads all the persistent data of the object from the stream.
     *
@@ -47,14 +46,14 @@ trait XPersistObject extends XInterface {
     * The implementation must read the data in the order documented at the service specification.
     * @param InStream the stream, the data shall be read from.
     */
-  def read(InStream: XObjectInputStream): Unit = js.native
+  def read(InStream: XObjectInputStream): Unit
   /**
     * writes all the persistent data of the object to the stream.
     *
     * The implementation must write the data in the order documented in the service specification.
     * @param OutStream the stream, the data shall be written to. The stream supports simple types and other {@link XPersistObject} implementations.
     */
-  def write(OutStream: XObjectOutputStream): Unit = js.native
+  def write(OutStream: XObjectOutputStream): Unit
 }
 
 object XPersistObject {
@@ -71,37 +70,5 @@ object XPersistObject {
     val __obj = js.Dynamic.literal(ServiceName = ServiceName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getServiceName = js.Any.fromFunction0(getServiceName), queryInterface = js.Any.fromFunction1(queryInterface), read = js.Any.fromFunction1(read), release = js.Any.fromFunction0(release), write = js.Any.fromFunction1(write))
     __obj.asInstanceOf[XPersistObject]
   }
-  @scala.inline
-  implicit class XPersistObjectOps[Self <: XPersistObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetServiceName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getServiceName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRead(value: XObjectInputStream => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWrite(value: XObjectOutputStream => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

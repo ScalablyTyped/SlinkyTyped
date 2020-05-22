@@ -5,101 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MarkdownToDraftOptions extends js.Object {
-  var blockEntities: js.UndefOr[BlockEntitiesParam] = js.native
-  var blockStyles: js.UndefOr[StringDictionary[String]] = js.native
-  var blockTypes: js.UndefOr[BlockTypesParam] = js.native
-  var remarkableOptions: js.UndefOr[StringDictionary[Boolean | js.Object]] = js.native
-  var remarkablePlugins: js.UndefOr[js.Array[_]] = js.native
-  var remarkablePreset: js.UndefOr[String] = js.native
+  var blockEntities: js.UndefOr[BlockEntitiesParam] = js.undefined
+  var blockStyles: js.UndefOr[StringDictionary[String]] = js.undefined
+  var blockTypes: js.UndefOr[BlockTypesParam] = js.undefined
+  var remarkableOptions: js.UndefOr[StringDictionary[Boolean | js.Object]] = js.undefined
+  var remarkablePlugins: js.UndefOr[js.Array[_]] = js.undefined
+  var remarkablePreset: js.UndefOr[String] = js.undefined
 }
 
 object MarkdownToDraftOptions {
   @scala.inline
-  def apply(): MarkdownToDraftOptions = {
+  def apply(
+    blockEntities: BlockEntitiesParam = null,
+    blockStyles: StringDictionary[String] = null,
+    blockTypes: BlockTypesParam = null,
+    remarkableOptions: StringDictionary[Boolean | js.Object] = null,
+    remarkablePlugins: js.Array[_] = null,
+    remarkablePreset: String = null
+  ): MarkdownToDraftOptions = {
     val __obj = js.Dynamic.literal()
+    if (blockEntities != null) __obj.updateDynamic("blockEntities")(blockEntities.asInstanceOf[js.Any])
+    if (blockStyles != null) __obj.updateDynamic("blockStyles")(blockStyles.asInstanceOf[js.Any])
+    if (blockTypes != null) __obj.updateDynamic("blockTypes")(blockTypes.asInstanceOf[js.Any])
+    if (remarkableOptions != null) __obj.updateDynamic("remarkableOptions")(remarkableOptions.asInstanceOf[js.Any])
+    if (remarkablePlugins != null) __obj.updateDynamic("remarkablePlugins")(remarkablePlugins.asInstanceOf[js.Any])
+    if (remarkablePreset != null) __obj.updateDynamic("remarkablePreset")(remarkablePreset.asInstanceOf[js.Any])
     __obj.asInstanceOf[MarkdownToDraftOptions]
   }
-  @scala.inline
-  implicit class MarkdownToDraftOptionsOps[Self <: MarkdownToDraftOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockEntities(value: BlockEntitiesParam): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockEntities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockStyles(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockTypes(value: BlockTypesParam): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemarkableOptions(value: StringDictionary[Boolean | js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remarkableOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemarkableOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remarkableOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemarkablePlugins(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remarkablePlugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemarkablePlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remarkablePlugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemarkablePreset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remarkablePreset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemarkablePreset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remarkablePreset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

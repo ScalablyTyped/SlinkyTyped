@@ -26,65 +26,18 @@ trait RoleCredentials extends js.Object {
 
 object RoleCredentials {
   @scala.inline
-  def apply(): RoleCredentials = {
+  def apply(
+    accessKeyId: AccessKeyType = null,
+    expiration: js.UndefOr[ExpirationTimestampType] = js.undefined,
+    secretAccessKey: SecretAccessKeyType = null,
+    sessionToken: SessionTokenType = null
+  ): RoleCredentials = {
     val __obj = js.Dynamic.literal()
+    if (accessKeyId != null) __obj.updateDynamic("accessKeyId")(accessKeyId.asInstanceOf[js.Any])
+    if (!js.isUndefined(expiration)) __obj.updateDynamic("expiration")(expiration.get.asInstanceOf[js.Any])
+    if (secretAccessKey != null) __obj.updateDynamic("secretAccessKey")(secretAccessKey.asInstanceOf[js.Any])
+    if (sessionToken != null) __obj.updateDynamic("sessionToken")(sessionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoleCredentials]
   }
-  @scala.inline
-  implicit class RoleCredentialsOps[Self <: RoleCredentials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessKeyId(value: AccessKeyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiration(value: ExpirationTimestampType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecretAccessKey(value: SecretAccessKeyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretAccessKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecretAccessKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretAccessKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionToken(value: SessionTokenType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

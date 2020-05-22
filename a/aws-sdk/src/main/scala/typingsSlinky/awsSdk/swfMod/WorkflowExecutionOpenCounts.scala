@@ -34,54 +34,12 @@ object WorkflowExecutionOpenCounts {
     openActivityTasks: Count,
     openChildWorkflowExecutions: Count,
     openDecisionTasks: OpenDecisionTasksCount,
-    openTimers: Count
+    openTimers: Count,
+    openLambdaFunctions: js.UndefOr[Count] = js.undefined
   ): WorkflowExecutionOpenCounts = {
     val __obj = js.Dynamic.literal(openActivityTasks = openActivityTasks.asInstanceOf[js.Any], openChildWorkflowExecutions = openChildWorkflowExecutions.asInstanceOf[js.Any], openDecisionTasks = openDecisionTasks.asInstanceOf[js.Any], openTimers = openTimers.asInstanceOf[js.Any])
+    if (!js.isUndefined(openLambdaFunctions)) __obj.updateDynamic("openLambdaFunctions")(openLambdaFunctions.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowExecutionOpenCounts]
   }
-  @scala.inline
-  implicit class WorkflowExecutionOpenCountsOps[Self <: WorkflowExecutionOpenCounts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOpenActivityTasks(value: Count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openActivityTasks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenChildWorkflowExecutions(value: Count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openChildWorkflowExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenDecisionTasks(value: OpenDecisionTasksCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openDecisionTasks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenTimers(value: Count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openTimers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenLambdaFunctions(value: Count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openLambdaFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenLambdaFunctions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openLambdaFunctions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

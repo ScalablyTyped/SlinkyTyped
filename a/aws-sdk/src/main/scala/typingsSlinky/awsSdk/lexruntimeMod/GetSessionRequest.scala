@@ -26,47 +26,15 @@ trait GetSessionRequest extends js.Object {
 
 object GetSessionRequest {
   @scala.inline
-  def apply(botAlias: BotAlias, botName: BotName, userId: UserId): GetSessionRequest = {
+  def apply(
+    botAlias: BotAlias,
+    botName: BotName,
+    userId: UserId,
+    checkpointLabelFilter: IntentSummaryCheckpointLabel = null
+  ): GetSessionRequest = {
     val __obj = js.Dynamic.literal(botAlias = botAlias.asInstanceOf[js.Any], botName = botName.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any])
+    if (checkpointLabelFilter != null) __obj.updateDynamic("checkpointLabelFilter")(checkpointLabelFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSessionRequest]
   }
-  @scala.inline
-  implicit class GetSessionRequestOps[Self <: GetSessionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBotAlias(value: BotAlias): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("botAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBotName(value: BotName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("botName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserId(value: UserId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCheckpointLabelFilter(value: IntentSummaryCheckpointLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkpointLabelFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckpointLabelFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkpointLabelFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

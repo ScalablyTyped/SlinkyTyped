@@ -18,41 +18,14 @@ trait CapacityReservationSpecificationResponse extends js.Object {
 
 object CapacityReservationSpecificationResponse {
   @scala.inline
-  def apply(): CapacityReservationSpecificationResponse = {
+  def apply(
+    CapacityReservationPreference: CapacityReservationPreference = null,
+    CapacityReservationTarget: CapacityReservationTargetResponse = null
+  ): CapacityReservationSpecificationResponse = {
     val __obj = js.Dynamic.literal()
+    if (CapacityReservationPreference != null) __obj.updateDynamic("CapacityReservationPreference")(CapacityReservationPreference.asInstanceOf[js.Any])
+    if (CapacityReservationTarget != null) __obj.updateDynamic("CapacityReservationTarget")(CapacityReservationTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[CapacityReservationSpecificationResponse]
   }
-  @scala.inline
-  implicit class CapacityReservationSpecificationResponseOps[Self <: CapacityReservationSpecificationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacityReservationPreference(value: CapacityReservationPreference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacityReservationPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapacityReservationTarget(value: CapacityReservationTargetResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacityReservationTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationTarget")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

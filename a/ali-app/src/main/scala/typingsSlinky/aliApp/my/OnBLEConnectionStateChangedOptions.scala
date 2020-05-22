@@ -5,38 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnBLEConnectionStateChangedOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_OnBLEConnectionStateChangedOptions: js.UndefOr[js.Function1[/* res */ Connected, Unit]] = js.native
+  var success_OnBLEConnectionStateChangedOptions: js.UndefOr[js.Function1[/* res */ Connected, Unit]] = js.undefined
 }
 
 object OnBLEConnectionStateChangedOptions {
   @scala.inline
-  def apply(): OnBLEConnectionStateChangedOptions = {
+  def apply(
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    success: /* res */ Connected => Unit = null
+  ): OnBLEConnectionStateChangedOptions = {
     val __obj = js.Dynamic.literal()
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[OnBLEConnectionStateChangedOptions]
   }
-  @scala.inline
-  implicit class OnBLEConnectionStateChangedOptionsOps[Self <: OnBLEConnectionStateChangedOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccess(value: /* res */ Connected => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

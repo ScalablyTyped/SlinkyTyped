@@ -16,29 +16,10 @@ trait SchemaRetrievalImportance extends js.Object {
 
 object SchemaRetrievalImportance {
   @scala.inline
-  def apply(): SchemaRetrievalImportance = {
+  def apply(importance: String = null): SchemaRetrievalImportance = {
     val __obj = js.Dynamic.literal()
+    if (importance != null) __obj.updateDynamic("importance")(importance.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRetrievalImportance]
   }
-  @scala.inline
-  implicit class SchemaRetrievalImportanceOps[Self <: SchemaRetrievalImportance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImportance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

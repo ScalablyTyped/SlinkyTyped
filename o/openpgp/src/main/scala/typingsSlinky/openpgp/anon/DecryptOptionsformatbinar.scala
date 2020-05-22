@@ -10,161 +10,68 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined openpgp.openpgp.DecryptOptions & {  format  :'binary'} */
-@js.native
 trait DecryptOptionsformatbinar extends js.Object {
   /**
     * (optional) use the given date for verification instead of the current time
     */
-  var date: js.UndefOr[js.Date] = js.native
+  var date: js.UndefOr[js.Date] = js.undefined
   /**
     * (optional) whether to return data as a string(Stream) or Uint8Array(Stream). If 'utf8' (the default), also normalize newlines.
     */
-  var format: js.UndefOr[(utf8 | binary) with binary] = js.native
+  var format: js.UndefOr[(utf8 | binary) with binary] = js.undefined
   /**
     * the message object with the encrypted data
     */
-  var message: typingsSlinky.openpgp.mod.message.Message = js.native
+  var message: typingsSlinky.openpgp.mod.message.Message
   /**
     * (optional) passwords to decrypt the message
     */
-  var passwords: js.UndefOr[String | js.Array[String]] = js.native
+  var passwords: js.UndefOr[String | js.Array[String]] = js.undefined
   /**
     * (optional) private keys with decrypted secret key data or session key
     */
-  var privateKeys: js.UndefOr[typingsSlinky.openpgp.mod.key.Key | js.Array[typingsSlinky.openpgp.mod.key.Key]] = js.native
+  var privateKeys: js.UndefOr[typingsSlinky.openpgp.mod.key.Key | js.Array[typingsSlinky.openpgp.mod.key.Key]] = js.undefined
   /**
     * (optional) array of public keys or single key, to verify signatures
     */
-  var publicKeys: js.UndefOr[typingsSlinky.openpgp.mod.key.Key | js.Array[typingsSlinky.openpgp.mod.key.Key]] = js.native
+  var publicKeys: js.UndefOr[typingsSlinky.openpgp.mod.key.Key | js.Array[typingsSlinky.openpgp.mod.key.Key]] = js.undefined
   /**
     * (optional) session keys in the form: { data:Uint8Array, algorithm:String }
     */
-  var sessionKeys: js.UndefOr[Algorithm | js.Array[Algorithm]] = js.native
+  var sessionKeys: js.UndefOr[Algorithm | js.Array[Algorithm]] = js.undefined
   /**
     * (optional) detached signature for verification
     */
-  var signature: js.UndefOr[typingsSlinky.openpgp.mod.signature.Signature] = js.native
+  var signature: js.UndefOr[typingsSlinky.openpgp.mod.signature.Signature] = js.undefined
   /**
     * (optional) whether to return data as a stream. Defaults to the type of stream `message` was created from, if any.
     */
-  var streaming: js.UndefOr[web | node | `false`] = js.native
+  var streaming: js.UndefOr[web | node | `false`] = js.undefined
 }
 
 object DecryptOptionsformatbinar {
   @scala.inline
-  def apply(message: typingsSlinky.openpgp.mod.message.Message): DecryptOptionsformatbinar = {
+  def apply(
+    message: typingsSlinky.openpgp.mod.message.Message,
+    date: js.Date = null,
+    format: (utf8 | binary) with binary = null,
+    passwords: String | js.Array[String] = null,
+    privateKeys: typingsSlinky.openpgp.mod.key.Key | js.Array[typingsSlinky.openpgp.mod.key.Key] = null,
+    publicKeys: typingsSlinky.openpgp.mod.key.Key | js.Array[typingsSlinky.openpgp.mod.key.Key] = null,
+    sessionKeys: Algorithm | js.Array[Algorithm] = null,
+    signature: typingsSlinky.openpgp.mod.signature.Signature = null,
+    streaming: web | node | `false` = null
+  ): DecryptOptionsformatbinar = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (passwords != null) __obj.updateDynamic("passwords")(passwords.asInstanceOf[js.Any])
+    if (privateKeys != null) __obj.updateDynamic("privateKeys")(privateKeys.asInstanceOf[js.Any])
+    if (publicKeys != null) __obj.updateDynamic("publicKeys")(publicKeys.asInstanceOf[js.Any])
+    if (sessionKeys != null) __obj.updateDynamic("sessionKeys")(sessionKeys.asInstanceOf[js.Any])
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
+    if (streaming != null) __obj.updateDynamic("streaming")(streaming.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecryptOptionsformatbinar]
   }
-  @scala.inline
-  implicit class DecryptOptionsformatbinarOps[Self <: DecryptOptionsformatbinar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: typingsSlinky.openpgp.mod.message.Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: (utf8 | binary) with binary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswords(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateKeys(value: typingsSlinky.openpgp.mod.key.Key | js.Array[typingsSlinky.openpgp.mod.key.Key]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKeys(value: typingsSlinky.openpgp.mod.key.Key | js.Array[typingsSlinky.openpgp.mod.key.Key]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionKeys(value: Algorithm | js.Array[Algorithm]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: typingsSlinky.openpgp.mod.signature.Signature): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreaming(value: web | node | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streaming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreaming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streaming")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

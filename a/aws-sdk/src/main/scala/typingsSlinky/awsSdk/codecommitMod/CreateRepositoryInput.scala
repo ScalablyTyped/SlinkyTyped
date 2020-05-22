@@ -22,47 +22,15 @@ trait CreateRepositoryInput extends js.Object {
 
 object CreateRepositoryInput {
   @scala.inline
-  def apply(repositoryName: RepositoryName): CreateRepositoryInput = {
+  def apply(
+    repositoryName: RepositoryName,
+    repositoryDescription: RepositoryDescription = null,
+    tags: TagsMap = null
+  ): CreateRepositoryInput = {
     val __obj = js.Dynamic.literal(repositoryName = repositoryName.asInstanceOf[js.Any])
+    if (repositoryDescription != null) __obj.updateDynamic("repositoryDescription")(repositoryDescription.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRepositoryInput]
   }
-  @scala.inline
-  implicit class CreateRepositoryInputOps[Self <: CreateRepositoryInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepositoryDescription(value: RepositoryDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepositoryDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

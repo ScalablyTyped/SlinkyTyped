@@ -24,7 +24,7 @@ trait TableCollection extends ClientObject {
   var context_TableCollection: RequestContext = js.native
   /**
     *
-    * Returns the number of tables in the workbook. Read-only.
+    * Returns the number of tables in the workbook.
     *
     * [Api set: ExcelApi 1.1]
     */

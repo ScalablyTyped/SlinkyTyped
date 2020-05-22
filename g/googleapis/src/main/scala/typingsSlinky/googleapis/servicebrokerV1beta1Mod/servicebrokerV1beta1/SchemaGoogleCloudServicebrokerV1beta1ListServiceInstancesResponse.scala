@@ -31,53 +31,16 @@ trait SchemaGoogleCloudServicebrokerV1beta1ListServiceInstancesResponse extends 
 
 object SchemaGoogleCloudServicebrokerV1beta1ListServiceInstancesResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudServicebrokerV1beta1ListServiceInstancesResponse = {
+  def apply(
+    description: String = null,
+    instances: js.Array[SchemaGoogleCloudServicebrokerV1beta1ServiceInstance] = null,
+    nextPageToken: String = null
+  ): SchemaGoogleCloudServicebrokerV1beta1ListServiceInstancesResponse = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudServicebrokerV1beta1ListServiceInstancesResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudServicebrokerV1beta1ListServiceInstancesResponseOps[Self <: SchemaGoogleCloudServicebrokerV1beta1ListServiceInstancesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstances(value: js.Array[SchemaGoogleCloudServicebrokerV1beta1ServiceInstance]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

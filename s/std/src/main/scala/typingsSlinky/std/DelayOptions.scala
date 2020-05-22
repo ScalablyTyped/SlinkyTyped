@@ -4,49 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DelayOptions extends AudioNodeOptions {
-  var delayTime: js.UndefOr[Double] = js.native
-  var maxDelayTime: js.UndefOr[Double] = js.native
+  var delayTime: js.UndefOr[Double] = js.undefined
+  var maxDelayTime: js.UndefOr[Double] = js.undefined
 }
 
 object DelayOptions {
   @scala.inline
-  def apply(): DelayOptions = {
+  def apply(
+    channelCount: js.UndefOr[Double] = js.undefined,
+    channelCountMode: ChannelCountMode = null,
+    channelInterpretation: ChannelInterpretation = null,
+    delayTime: js.UndefOr[Double] = js.undefined,
+    maxDelayTime: js.UndefOr[Double] = js.undefined
+  ): DelayOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(channelCount)) __obj.updateDynamic("channelCount")(channelCount.get.asInstanceOf[js.Any])
+    if (channelCountMode != null) __obj.updateDynamic("channelCountMode")(channelCountMode.asInstanceOf[js.Any])
+    if (channelInterpretation != null) __obj.updateDynamic("channelInterpretation")(channelInterpretation.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayTime)) __obj.updateDynamic("delayTime")(delayTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDelayTime)) __obj.updateDynamic("maxDelayTime")(maxDelayTime.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DelayOptions]
   }
-  @scala.inline
-  implicit class DelayOptionsOps[Self <: DelayOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelayTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDelayTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDelayTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDelayTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDelayTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

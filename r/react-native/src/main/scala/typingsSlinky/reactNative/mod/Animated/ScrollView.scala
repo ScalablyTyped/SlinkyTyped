@@ -1,6 +1,9 @@
 package typingsSlinky.reactNative.mod.Animated
 
+import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
+import typingsSlinky.react.mod.ComponentPropsWithRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +11,9 @@ import scala.scalajs.js.annotation._
 @JSImport("react-native", "Animated.ScrollView")
 @js.native
 object ScrollView
-  extends TopLevel[AnimatedComponent[typingsSlinky.reactNative.mod.ScrollView]]
+  extends TopLevel[
+      ReactComponentClass[
+        AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.ScrollView]]]
+      ]
+    ]
 

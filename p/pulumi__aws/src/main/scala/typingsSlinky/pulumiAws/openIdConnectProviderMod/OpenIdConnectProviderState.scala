@@ -27,65 +27,18 @@ trait OpenIdConnectProviderState extends js.Object {
 
 object OpenIdConnectProviderState {
   @scala.inline
-  def apply(): OpenIdConnectProviderState = {
+  def apply(
+    arn: Input[String] = null,
+    clientIdLists: Input[js.Array[Input[String]]] = null,
+    thumbprintLists: Input[js.Array[Input[String]]] = null,
+    url: Input[String] = null
+  ): OpenIdConnectProviderState = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (clientIdLists != null) __obj.updateDynamic("clientIdLists")(clientIdLists.asInstanceOf[js.Any])
+    if (thumbprintLists != null) __obj.updateDynamic("thumbprintLists")(thumbprintLists.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenIdConnectProviderState]
   }
-  @scala.inline
-  implicit class OpenIdConnectProviderStateOps[Self <: OpenIdConnectProviderState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientIdLists(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientIdLists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientIdLists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientIdLists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbprintLists(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbprintLists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbprintLists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbprintLists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

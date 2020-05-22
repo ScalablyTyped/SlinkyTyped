@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListSubHeaderTheme extends js.Object {
   /**
     * Used as a wrapper class for the subheader element.
     */
-  var subheader: js.UndefOr[String] = js.native
+  var subheader: js.UndefOr[String] = js.undefined
 }
 
 object ListSubHeaderTheme {
   @scala.inline
-  def apply(): ListSubHeaderTheme = {
+  def apply(subheader: String = null): ListSubHeaderTheme = {
     val __obj = js.Dynamic.literal()
+    if (subheader != null) __obj.updateDynamic("subheader")(subheader.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSubHeaderTheme]
   }
-  @scala.inline
-  implicit class ListSubHeaderThemeOps[Self <: ListSubHeaderTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubheader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubheader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

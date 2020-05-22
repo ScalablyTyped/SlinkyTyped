@@ -8,23 +8,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2TensorDampingController extends b2Controller {
   /**
-  		* Tensor to use in damping model.
-  		**/
-  var T: b2Mat22 = js.native
+    * Tensor to use in damping model.
+    **/
+  var T: b2Mat22
   /**
-  		* Set this to a positive number to clamp the maximum amount of damping done.
-  		* @default = 0
-  		**/
-  var maxTimeStep: Double = js.native
+    * Set this to a positive number to clamp the maximum amount of damping done.
+    * @default = 0
+    **/
+  var maxTimeStep: Double
   /**
-  		* Helper function to set T in a common case.
-  		* @param xDamping x
-  		* @param yDamping y
-  		**/
-  def SetAxisAligned(xDamping: Double, yDamping: Double): Unit = js.native
+    * Helper function to set T in a common case.
+    * @param xDamping x
+    * @param yDamping y
+    **/
+  def SetAxisAligned(xDamping: Double, yDamping: Double): Unit
 }
 
 object b2TensorDampingController {
@@ -47,31 +46,5 @@ object b2TensorDampingController {
     val __obj = js.Dynamic.literal(AddBody = js.Any.fromFunction1(AddBody), Clear = js.Any.fromFunction0(Clear), Draw = js.Any.fromFunction1(Draw), GetBodyList = js.Any.fromFunction0(GetBodyList), GetNext = js.Any.fromFunction0(GetNext), GetWorld = js.Any.fromFunction0(GetWorld), RemoveBody = js.Any.fromFunction1(RemoveBody), SetAxisAligned = js.Any.fromFunction2(SetAxisAligned), Step = js.Any.fromFunction1(Step), T = T.asInstanceOf[js.Any], m_bodyCount = m_bodyCount.asInstanceOf[js.Any], m_bodyList = m_bodyList.asInstanceOf[js.Any], maxTimeStep = maxTimeStep.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2TensorDampingController]
   }
-  @scala.inline
-  implicit class b2TensorDampingControllerOps[Self <: b2TensorDampingController] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetAxisAligned(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetAxisAligned")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withT(value: b2Mat22): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("T")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxTimeStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

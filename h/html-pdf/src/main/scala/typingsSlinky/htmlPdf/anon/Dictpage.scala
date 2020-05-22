@@ -5,62 +5,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictpage extends /* page */ NumberDictionary[String] {
-  var default: js.UndefOr[String] = js.native
-  var first: js.UndefOr[String] = js.native
-  var last: js.UndefOr[String] = js.native
+  var default: js.UndefOr[String] = js.undefined
+  var first: js.UndefOr[String] = js.undefined
+  var last: js.UndefOr[String] = js.undefined
 }
 
 object Dictpage {
   @scala.inline
-  def apply(): Dictpage = {
+  def apply(
+    NumberDictionary: /* page */ NumberDictionary[String] = null,
+    default: String = null,
+    first: String = null,
+    last: String = null
+  ): Dictpage = {
     val __obj = js.Dynamic.literal()
+    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (first != null) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
+    if (last != null) __obj.updateDynamic("last")(last.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dictpage]
   }
-  @scala.inline
-  implicit class DictpageOps[Self <: Dictpage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefault(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirst(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLast(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,5 +13,10 @@ class ASPxClientHtmlEditorCommandArguments protected ()
   extends typingsSlinky.devexpressWeb.ASPxClientHtmlEditorCommandArguments {
   def this(htmlEditor: typingsSlinky.devexpressWeb.ASPxClientHtmlEditor) = this()
   def this(htmlEditor: typingsSlinky.devexpressWeb.ASPxClientHtmlEditor, selectedElement: js.Any) = this()
+  /**
+    * Gets the currently selected element in the ASPxHtmlEditor.
+    */
+  /* CompleteClass */
+  override var selectedElement: js.Any = js.native
 }
 

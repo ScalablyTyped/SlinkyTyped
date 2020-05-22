@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Configuration extends js.Object {
   /**
     * The client supports `workspace/configuration` requests.
     */
-  var configuration: js.UndefOr[Boolean] = js.native
+  var configuration: js.UndefOr[Boolean] = js.undefined
 }
 
 object Configuration {
   @scala.inline
-  def apply(): Configuration = {
+  def apply(configuration: js.UndefOr[Boolean] = js.undefined): Configuration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(configuration)) __obj.updateDynamic("configuration")(configuration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Configuration]
   }
-  @scala.inline
-  implicit class ConfigurationOps[Self <: Configuration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfiguration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestIamPermissionsRequest extends js.Object {
   /**
     * REQUIRED: The set of permissions to check for the 'resource'.
@@ -19,34 +18,15 @@ trait TestIamPermissionsRequest extends js.Object {
     * &#42; `genomics.datasets.getIamPolicy`
     * &#42; `genomics.datasets.setIamPolicy`
     */
-  var permissions: js.UndefOr[js.Array[String]] = js.native
+  var permissions: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object TestIamPermissionsRequest {
   @scala.inline
-  def apply(): TestIamPermissionsRequest = {
+  def apply(permissions: js.Array[String] = null): TestIamPermissionsRequest = {
     val __obj = js.Dynamic.literal()
+    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestIamPermissionsRequest]
   }
-  @scala.inline
-  implicit class TestIamPermissionsRequestOps[Self <: TestIamPermissionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermissions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

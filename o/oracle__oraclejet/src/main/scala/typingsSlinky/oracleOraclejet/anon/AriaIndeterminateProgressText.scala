@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AriaIndeterminateProgressText extends js.Object {
-  var ariaIndeterminateProgressText: js.UndefOr[String] = js.native
+  var ariaIndeterminateProgressText: js.UndefOr[String] = js.undefined
 }
 
 object AriaIndeterminateProgressText {
   @scala.inline
-  def apply(): AriaIndeterminateProgressText = {
+  def apply(ariaIndeterminateProgressText: String = null): AriaIndeterminateProgressText = {
     val __obj = js.Dynamic.literal()
+    if (ariaIndeterminateProgressText != null) __obj.updateDynamic("ariaIndeterminateProgressText")(ariaIndeterminateProgressText.asInstanceOf[js.Any])
     __obj.asInstanceOf[AriaIndeterminateProgressText]
   }
-  @scala.inline
-  implicit class AriaIndeterminateProgressTextOps[Self <: AriaIndeterminateProgressText] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAriaIndeterminateProgressText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaIndeterminateProgressText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaIndeterminateProgressText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaIndeterminateProgressText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

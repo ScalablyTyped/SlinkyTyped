@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `16` extends js.Object {
-  var OH: typingsSlinky.screeps.screepsStrings.GH2O = js.native
+  var OH: typingsSlinky.screeps.screepsStrings.GH2O
 }
 
 object `16` {
@@ -15,19 +14,5 @@ object `16` {
     val __obj = js.Dynamic.literal(OH = OH.asInstanceOf[js.Any])
     __obj.asInstanceOf[`16`]
   }
-  @scala.inline
-  implicit class `16Ops`[Self <: `16`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOH(value: typingsSlinky.screeps.screepsStrings.GH2O): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OH")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,7 +6,7 @@ import typingsSlinky.awsLambda.codepipelineCloudwatchPipelineMod.CodePipelineSta
 import typingsSlinky.awsLambda.codepipelineCloudwatchStageMod.CodePipelineStageState
 import typingsSlinky.awsLambda.kinesisFirehoseTransformationMod.FirehoseRecordTransformationStatus
 import typingsSlinky.awsLambda.s3BatchMod.S3BatchResultResultCode
-import typingsSlinky.awsLambda.sqsMod.SQSMessageAttributeDataType
+import typingsSlinky.awsLambda.sqsMod._SQSMessageAttributeDataType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ object awsLambdaStrings {
   sealed trait Approval extends CodePipelineActionCategory
   
   @js.native
-  sealed trait Binary extends SQSMessageAttributeDataType
+  sealed trait Binary extends _SQSMessageAttributeDataType
   
   @js.native
   sealed trait Build extends CodePipelineActionCategory
@@ -169,7 +169,7 @@ object awsLambdaStrings {
   sealed trait None extends js.Object
   
   @js.native
-  sealed trait Number extends SQSMessageAttributeDataType
+  sealed trait Number extends _SQSMessageAttributeDataType
   
   @js.native
   sealed trait OLD_IMAGE extends js.Object
@@ -267,7 +267,7 @@ object awsLambdaStrings {
   sealed trait Source extends CodePipelineActionCategory
   
   @js.native
-  sealed trait String extends SQSMessageAttributeDataType
+  sealed trait String extends _SQSMessageAttributeDataType
   
   @js.native
   sealed trait Succeeded_ extends S3BatchResultResultCode

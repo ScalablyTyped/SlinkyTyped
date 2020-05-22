@@ -1,5 +1,7 @@
 package typingsSlinky.qs.mod
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.qs.anon.IParseOptionsdecodernever
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +9,8 @@ import scala.scalajs.js.annotation._
 @JSImport("qs", "parse")
 @js.native
 object parse extends js.Object {
-  def apply(str: String): js.Any = js.native
-  def apply(str: String, options: IParseOptions): js.Any = js.native
+  def apply(str: String): StringDictionary[PoorMansUnknown] = js.native
+  def apply(str: String, options: IParseOptionsdecodernever): ParsedQs = js.native
+  def apply(str: String, options: IParseOptions): StringDictionary[PoorMansUnknown] = js.native
 }
 

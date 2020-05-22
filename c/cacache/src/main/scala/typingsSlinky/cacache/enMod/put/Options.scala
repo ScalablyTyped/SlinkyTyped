@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * Default: `['sha512']`
@@ -18,7 +17,7 @@ trait Options extends js.Object {
     * Currently only supports one algorithm at a time (i.e., an array
     * length of exactly `1`). Has no effect if `opts.integrity` is present.
     */
-  var algorithms: js.UndefOr[js.Array[String]] = js.native
+  var algorithms: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * If present, the pre-calculated digest for the inserted content. If
     * this option if provided and does not match the post-insertion digest,
@@ -26,7 +25,7 @@ trait Options extends js.Object {
     *
     * `algorithms` has no effect if this option is present.
     */
-  var integrity: js.UndefOr[String] = js.native
+  var integrity: js.UndefOr[String] = js.undefined
   /**
     * Default: `null`
     *
@@ -43,96 +42,33 @@ trait Options extends js.Object {
     * `memoize: false` to the reader functions, but their default will be
     * to read from memory.
     */
-  var memoize: js.UndefOr[Null | Boolean] = js.native
+  var memoize: js.UndefOr[Null | Boolean] = js.undefined
   /** Arbitrary metadata to be attached to the inserted key. */
-  var metadata: js.UndefOr[js.Any] = js.native
+  var metadata: js.UndefOr[js.Any] = js.undefined
   /**
     * If provided, the data stream will be verified to check that enough
     * data was passed through. If there's more or less data than expected,
     * insertion will fail with an `EBADSIZE` error.
     */
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    algorithms: js.Array[String] = null,
+    integrity: String = null,
+    memoize: js.UndefOr[Null | Boolean] = js.undefined,
+    metadata: js.Any = null,
+    size: js.UndefOr[Double] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (algorithms != null) __obj.updateDynamic("algorithms")(algorithms.asInstanceOf[js.Any])
+    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
+    if (!js.isUndefined(memoize)) __obj.updateDynamic("memoize")(memoize.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithms(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemoize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemoize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemoizeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoize")(null)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

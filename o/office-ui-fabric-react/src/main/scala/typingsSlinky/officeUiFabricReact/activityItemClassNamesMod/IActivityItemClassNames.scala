@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IActivityItemClassNames extends js.Object {
-  var activityContent: js.UndefOr[String] = js.native
-  var activityPersona: js.UndefOr[String] = js.native
-  var activityText: js.UndefOr[String] = js.native
-  var activityTypeIcon: js.UndefOr[String] = js.native
-  var commentText: js.UndefOr[String] = js.native
-  var personaContainer: js.UndefOr[String] = js.native
-  var pulsingBeacon: js.UndefOr[String] = js.native
-  var root: js.UndefOr[String] = js.native
-  var timeStamp: js.UndefOr[String] = js.native
+  var activityContent: js.UndefOr[String] = js.undefined
+  var activityPersona: js.UndefOr[String] = js.undefined
+  var activityText: js.UndefOr[String] = js.undefined
+  var activityTypeIcon: js.UndefOr[String] = js.undefined
+  var commentText: js.UndefOr[String] = js.undefined
+  var personaContainer: js.UndefOr[String] = js.undefined
+  var pulsingBeacon: js.UndefOr[String] = js.undefined
+  var root: js.UndefOr[String] = js.undefined
+  var timeStamp: js.UndefOr[String] = js.undefined
 }
 
 object IActivityItemClassNames {
   @scala.inline
-  def apply(): IActivityItemClassNames = {
+  def apply(
+    activityContent: String = null,
+    activityPersona: String = null,
+    activityText: String = null,
+    activityTypeIcon: String = null,
+    commentText: String = null,
+    personaContainer: String = null,
+    pulsingBeacon: String = null,
+    root: String = null,
+    timeStamp: String = null
+  ): IActivityItemClassNames = {
     val __obj = js.Dynamic.literal()
+    if (activityContent != null) __obj.updateDynamic("activityContent")(activityContent.asInstanceOf[js.Any])
+    if (activityPersona != null) __obj.updateDynamic("activityPersona")(activityPersona.asInstanceOf[js.Any])
+    if (activityText != null) __obj.updateDynamic("activityText")(activityText.asInstanceOf[js.Any])
+    if (activityTypeIcon != null) __obj.updateDynamic("activityTypeIcon")(activityTypeIcon.asInstanceOf[js.Any])
+    if (commentText != null) __obj.updateDynamic("commentText")(commentText.asInstanceOf[js.Any])
+    if (personaContainer != null) __obj.updateDynamic("personaContainer")(personaContainer.asInstanceOf[js.Any])
+    if (pulsingBeacon != null) __obj.updateDynamic("pulsingBeacon")(pulsingBeacon.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (timeStamp != null) __obj.updateDynamic("timeStamp")(timeStamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[IActivityItemClassNames]
   }
-  @scala.inline
-  implicit class IActivityItemClassNamesOps[Self <: IActivityItemClassNames] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivityPersona(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityPersona")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityPersona: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityPersona")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivityText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivityTypeIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTypeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityTypeIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTypeIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommentText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commentText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommentText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commentText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersonaContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personaContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersonaContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personaContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPulsingBeacon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pulsingBeacon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPulsingBeacon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pulsingBeacon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeStamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

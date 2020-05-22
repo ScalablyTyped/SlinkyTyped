@@ -1,120 +1,86 @@
 package typingsSlinky.extjs.Ext.data
 
+import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
+import typingsSlinky.extjs.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IWriter extends IBase {
   /** [Config Option] (String) */
-  var dateFormat: js.UndefOr[String] = js.native
+  var dateFormat: js.UndefOr[String] = js.undefined
   /** [Method] Formats the data for each record before sending it to the server
-  		* @param record Ext.data.Model The record that we are writing to the server.
-  		* @param operation Ext.data.Operation An operation object.
-  		* @returns Object An object literal of name/value keys to be written to the server. By default this method returns the data property on the record.
-  		*/
+    * @param record Ext.data.Model The record that we are writing to the server.
+    * @param operation Ext.data.Operation An operation object.
+    * @returns Object An object literal of name/value keys to be written to the server. By default this method returns the data property on the record.
+    */
   var getRecordData: js.UndefOr[
     js.Function2[/* record */ js.UndefOr[IModel], /* operation */ js.UndefOr[IOperation], _]
-  ] = js.native
+  ] = js.undefined
   /** [Config Option] (String) */
-  var nameProperty: js.UndefOr[String] = js.native
+  var nameProperty: js.UndefOr[String] = js.undefined
   /** [Method] Prepares a Proxy s Ext data Request object
-  		* @param request Ext.data.Request The request object
-  		* @returns Ext.data.Request The modified request object
-  		*/
-  var write: js.UndefOr[js.Function1[/* request */ js.UndefOr[IRequest], IRequest]] = js.native
+    * @param request Ext.data.Request The request object
+    * @returns Ext.data.Request The modified request object
+    */
+  var write: js.UndefOr[js.Function1[/* request */ js.UndefOr[IRequest], IRequest]] = js.undefined
   /** [Config Option] (Boolean) */
-  var writeAllFields: js.UndefOr[Boolean] = js.native
+  var writeAllFields: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var writeRecordId: js.UndefOr[Boolean] = js.native
+  var writeRecordId: js.UndefOr[Boolean] = js.undefined
 }
 
 object IWriter {
   @scala.inline
-  def apply(): IWriter = {
+  def apply(
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    config: js.Any = null,
+    dateFormat: String = null,
+    extend: String = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    getRecordData: (/* record */ js.UndefOr[IModel], /* operation */ js.UndefOr[IOperation]) => _ = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* config */ js.UndefOr[js.Any] => IWriter = null,
+    mixins: js.Any = null,
+    nameProperty: String = null,
+    requires: Array = null,
+    self: IClass = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    statics: js.Any = null,
+    uses: Array = null,
+    write: /* request */ js.UndefOr[IRequest] => IRequest = null,
+    writeAllFields: js.UndefOr[Boolean] = js.undefined,
+    writeRecordId: js.UndefOr[Boolean] = js.undefined
+  ): IWriter = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (dateFormat != null) __obj.updateDynamic("dateFormat")(dateFormat.asInstanceOf[js.Any])
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (getRecordData != null) __obj.updateDynamic("getRecordData")(js.Any.fromFunction2(getRecordData))
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (nameProperty != null) __obj.updateDynamic("nameProperty")(nameProperty.asInstanceOf[js.Any])
+    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
+    if (write != null) __obj.updateDynamic("write")(js.Any.fromFunction1(write))
+    if (!js.isUndefined(writeAllFields)) __obj.updateDynamic("writeAllFields")(writeAllFields.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(writeRecordId)) __obj.updateDynamic("writeRecordId")(writeRecordId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWriter]
   }
-  @scala.inline
-  implicit class IWriterOps[Self <: IWriter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetRecordData(value: (/* record */ js.UndefOr[IModel], /* operation */ js.UndefOr[IOperation]) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRecordData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetRecordData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRecordData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrite(value: /* request */ js.UndefOr[IRequest] => IRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutWrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteAllFields(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAllFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteAllFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAllFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteRecordId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRecordId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteRecordId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRecordId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,109 +9,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config[V /* <: HTTPVersion */] extends js.Object {
-  var allowUnsafeRegex: js.UndefOr[Boolean] = js.native
-  var caseSensitive: js.UndefOr[Boolean] = js.native
+  var allowUnsafeRegex: js.UndefOr[Boolean] = js.undefined
+  var caseSensitive: js.UndefOr[Boolean] = js.undefined
   var defaultRoute: js.UndefOr[
     js.Function2[
       /* req */ Http2ServerRequest | IncomingMessage, 
       /* res */ Http2ServerResponse | ServerResponse, 
       Unit
     ]
-  ] = js.native
-  var ignoreTrailingSlash: js.UndefOr[Boolean] = js.native
-  var maxParamLength: js.UndefOr[Double] = js.native
-  var versioning: js.UndefOr[DeriveVersion[V]] = js.native
+  ] = js.undefined
+  var ignoreTrailingSlash: js.UndefOr[Boolean] = js.undefined
+  var maxParamLength: js.UndefOr[Double] = js.undefined
+  var versioning: js.UndefOr[DeriveVersion[V]] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply[V](): Config[V] = {
+  def apply[V](
+    allowUnsafeRegex: js.UndefOr[Boolean] = js.undefined,
+    caseSensitive: js.UndefOr[Boolean] = js.undefined,
+    defaultRoute: (/* req */ Http2ServerRequest | IncomingMessage, /* res */ Http2ServerResponse | ServerResponse) => Unit = null,
+    ignoreTrailingSlash: js.UndefOr[Boolean] = js.undefined,
+    maxParamLength: js.UndefOr[Double] = js.undefined,
+    versioning: DeriveVersion[V] = null
+  ): Config[V] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowUnsafeRegex)) __obj.updateDynamic("allowUnsafeRegex")(allowUnsafeRegex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.get.asInstanceOf[js.Any])
+    if (defaultRoute != null) __obj.updateDynamic("defaultRoute")(js.Any.fromFunction2(defaultRoute))
+    if (!js.isUndefined(ignoreTrailingSlash)) __obj.updateDynamic("ignoreTrailingSlash")(ignoreTrailingSlash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxParamLength)) __obj.updateDynamic("maxParamLength")(maxParamLength.get.asInstanceOf[js.Any])
+    if (versioning != null) __obj.updateDynamic("versioning")(versioning.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config[V]]
   }
-  @scala.inline
-  implicit class ConfigOps[Self[v] <: Config[v], V] (val x: Self[V]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[V] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[V]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[V] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[V] with Other]
-    @scala.inline
-    def withAllowUnsafeRegex(value: Boolean): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnsafeRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUnsafeRegex: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnsafeRegex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaseSensitive(value: Boolean): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaseSensitive: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultRoute(
-      value: (/* req */ Http2ServerRequest | IncomingMessage, /* res */ Http2ServerResponse | ServerResponse) => Unit
-    ): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRoute")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRoute: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRoute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreTrailingSlash(value: Boolean): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTrailingSlash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreTrailingSlash: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTrailingSlash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxParamLength(value: Double): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxParamLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxParamLength: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxParamLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersioning(value: DeriveVersion[V]): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersioning: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

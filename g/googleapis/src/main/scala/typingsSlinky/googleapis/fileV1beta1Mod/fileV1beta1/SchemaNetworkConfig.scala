@@ -39,65 +39,18 @@ trait SchemaNetworkConfig extends js.Object {
 
 object SchemaNetworkConfig {
   @scala.inline
-  def apply(): SchemaNetworkConfig = {
+  def apply(
+    ipAddresses: js.Array[String] = null,
+    modes: js.Array[String] = null,
+    network: String = null,
+    reservedIpRange: String = null
+  ): SchemaNetworkConfig = {
     val __obj = js.Dynamic.literal()
+    if (ipAddresses != null) __obj.updateDynamic("ipAddresses")(ipAddresses.asInstanceOf[js.Any])
+    if (modes != null) __obj.updateDynamic("modes")(modes.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (reservedIpRange != null) __obj.updateDynamic("reservedIpRange")(reservedIpRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetworkConfig]
   }
-  @scala.inline
-  implicit class SchemaNetworkConfigOps[Self <: SchemaNetworkConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIpAddresses(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedIpRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservedIpRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedIpRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservedIpRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

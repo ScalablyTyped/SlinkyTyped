@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestSpecification extends js.Object {
   /** An Android instrumentation test. */
-  var androidInstrumentationTest: js.UndefOr[AndroidInstrumentationTest] = js.native
+  var androidInstrumentationTest: js.UndefOr[AndroidInstrumentationTest] = js.undefined
   /** An Android robo test. */
-  var androidRoboTest: js.UndefOr[AndroidRoboTest] = js.native
+  var androidRoboTest: js.UndefOr[AndroidRoboTest] = js.undefined
   /** An Android Application with a Test Loop */
-  var androidTestLoop: js.UndefOr[AndroidTestLoop] = js.native
+  var androidTestLoop: js.UndefOr[AndroidTestLoop] = js.undefined
   /**
     * Enables automatic Google account login.
     * If set, the service will automatically generate a Google test account and
@@ -23,133 +22,46 @@ trait TestSpecification extends js.Object {
     * Default is false.
     * Optional
     */
-  var autoGoogleLogin: js.UndefOr[Boolean] = js.native
+  var autoGoogleLogin: js.UndefOr[Boolean] = js.undefined
   /** Disables performance metrics recording; may reduce test latency. */
-  var disablePerformanceMetrics: js.UndefOr[Boolean] = js.native
+  var disablePerformanceMetrics: js.UndefOr[Boolean] = js.undefined
   /** Disables video recording; may reduce test latency. */
-  var disableVideoRecording: js.UndefOr[Boolean] = js.native
+  var disableVideoRecording: js.UndefOr[Boolean] = js.undefined
   /**
     * Test setup requirements e.g. files to install, bootstrap scripts
     * Optional
     */
-  var testSetup: js.UndefOr[TestSetup] = js.native
+  var testSetup: js.UndefOr[TestSetup] = js.undefined
   /**
     * Max time a test execution is allowed to run before it is
     * automatically cancelled.
     * Optional, default is 5 min.
     */
-  var testTimeout: js.UndefOr[String] = js.native
+  var testTimeout: js.UndefOr[String] = js.undefined
 }
 
 object TestSpecification {
   @scala.inline
-  def apply(): TestSpecification = {
+  def apply(
+    androidInstrumentationTest: AndroidInstrumentationTest = null,
+    androidRoboTest: AndroidRoboTest = null,
+    androidTestLoop: AndroidTestLoop = null,
+    autoGoogleLogin: js.UndefOr[Boolean] = js.undefined,
+    disablePerformanceMetrics: js.UndefOr[Boolean] = js.undefined,
+    disableVideoRecording: js.UndefOr[Boolean] = js.undefined,
+    testSetup: TestSetup = null,
+    testTimeout: String = null
+  ): TestSpecification = {
     val __obj = js.Dynamic.literal()
+    if (androidInstrumentationTest != null) __obj.updateDynamic("androidInstrumentationTest")(androidInstrumentationTest.asInstanceOf[js.Any])
+    if (androidRoboTest != null) __obj.updateDynamic("androidRoboTest")(androidRoboTest.asInstanceOf[js.Any])
+    if (androidTestLoop != null) __obj.updateDynamic("androidTestLoop")(androidTestLoop.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoGoogleLogin)) __obj.updateDynamic("autoGoogleLogin")(autoGoogleLogin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePerformanceMetrics)) __obj.updateDynamic("disablePerformanceMetrics")(disablePerformanceMetrics.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableVideoRecording)) __obj.updateDynamic("disableVideoRecording")(disableVideoRecording.get.asInstanceOf[js.Any])
+    if (testSetup != null) __obj.updateDynamic("testSetup")(testSetup.asInstanceOf[js.Any])
+    if (testTimeout != null) __obj.updateDynamic("testTimeout")(testTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestSpecification]
   }
-  @scala.inline
-  implicit class TestSpecificationOps[Self <: TestSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidInstrumentationTest(value: AndroidInstrumentationTest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidInstrumentationTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidInstrumentationTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidInstrumentationTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidRoboTest(value: AndroidRoboTest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidRoboTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidRoboTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidRoboTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidTestLoop(value: AndroidTestLoop): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidTestLoop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidTestLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidTestLoop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoGoogleLogin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGoogleLogin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoGoogleLogin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGoogleLogin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePerformanceMetrics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePerformanceMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePerformanceMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePerformanceMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableVideoRecording(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableVideoRecording")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableVideoRecording: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableVideoRecording")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestSetup(value: TestSetup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSetup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSetup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

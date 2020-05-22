@@ -25,53 +25,16 @@ trait SchemaPowerManagementEvent extends js.Object {
 
 object SchemaPowerManagementEvent {
   @scala.inline
-  def apply(): SchemaPowerManagementEvent = {
+  def apply(
+    batteryLevel: js.UndefOr[Double] = js.undefined,
+    createTime: String = null,
+    eventType: String = null
+  ): SchemaPowerManagementEvent = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batteryLevel)) __obj.updateDynamic("batteryLevel")(batteryLevel.get.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (eventType != null) __obj.updateDynamic("eventType")(eventType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPowerManagementEvent]
   }
-  @scala.inline
-  implicit class SchemaPowerManagementEventOps[Self <: SchemaPowerManagementEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatteryLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batteryLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatteryLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batteryLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

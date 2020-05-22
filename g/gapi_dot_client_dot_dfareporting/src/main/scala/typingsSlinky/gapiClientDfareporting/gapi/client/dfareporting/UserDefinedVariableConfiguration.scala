@@ -4,68 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserDefinedVariableConfiguration extends js.Object {
   /** Data type for the variable. This is a required field. */
-  var dataType: js.UndefOr[String] = js.native
+  var dataType: js.UndefOr[String] = js.undefined
   /**
     * User-friendly name for the variable which will appear in reports. This is a required field, must be less than 64 characters long, and cannot contain
     * the following characters: ""<>".
     */
-  var reportName: js.UndefOr[String] = js.native
+  var reportName: js.UndefOr[String] = js.undefined
   /** Variable name in the tag. This is a required field. */
-  var variableType: js.UndefOr[String] = js.native
+  var variableType: js.UndefOr[String] = js.undefined
 }
 
 object UserDefinedVariableConfiguration {
   @scala.inline
-  def apply(): UserDefinedVariableConfiguration = {
+  def apply(dataType: String = null, reportName: String = null, variableType: String = null): UserDefinedVariableConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
+    if (reportName != null) __obj.updateDynamic("reportName")(reportName.asInstanceOf[js.Any])
+    if (variableType != null) __obj.updateDynamic("variableType")(variableType.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserDefinedVariableConfiguration]
   }
-  @scala.inline
-  implicit class UserDefinedVariableConfigurationOps[Self <: UserDefinedVariableConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariableType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,18 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // No static is available
-@js.native
 trait Transaction extends js.Object {
-  var amount: Double = js.native
-  var description: String = js.native
-  var from: String = js.native
-  var order: js.UndefOr[TransactionOrder] = js.native
-  var recipient: js.UndefOr[Username] = js.native
-  var resourceType: MarketResourceConstant = js.native
-  var sender: js.UndefOr[Username] = js.native
-  var time: Double = js.native
-  var to: String = js.native
-  var transactionId: String = js.native
+  var amount: Double
+  var description: String
+  var from: String
+  var order: js.UndefOr[TransactionOrder] = js.undefined
+  var recipient: js.UndefOr[Username] = js.undefined
+  var resourceType: MarketResourceConstant
+  var sender: js.UndefOr[Username] = js.undefined
+  var time: Double
+  var to: String
+  var transactionId: String
 }
 
 object Transaction {
@@ -29,96 +28,16 @@ object Transaction {
     resourceType: MarketResourceConstant,
     time: Double,
     to: String,
-    transactionId: String
+    transactionId: String,
+    order: TransactionOrder = null,
+    recipient: Username = null,
+    sender: Username = null
   ): Transaction = {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any], transactionId = transactionId.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (recipient != null) __obj.updateDynamic("recipient")(recipient.asInstanceOf[js.Any])
+    if (sender != null) __obj.updateDynamic("sender")(sender.asInstanceOf[js.Any])
     __obj.asInstanceOf[Transaction]
   }
-  @scala.inline
-  implicit class TransactionOps[Self <: Transaction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: MarketResourceConstant): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransactionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrder(value: TransactionOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipient(value: Username): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSender(value: Username): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,65 +26,18 @@ trait TextTranslationJobFilter extends js.Object {
 
 object TextTranslationJobFilter {
   @scala.inline
-  def apply(): TextTranslationJobFilter = {
+  def apply(
+    JobName: JobName = null,
+    JobStatus: JobStatus = null,
+    SubmittedAfterTime: js.Date = null,
+    SubmittedBeforeTime: js.Date = null
+  ): TextTranslationJobFilter = {
     val __obj = js.Dynamic.literal()
+    if (JobName != null) __obj.updateDynamic("JobName")(JobName.asInstanceOf[js.Any])
+    if (JobStatus != null) __obj.updateDynamic("JobStatus")(JobStatus.asInstanceOf[js.Any])
+    if (SubmittedAfterTime != null) __obj.updateDynamic("SubmittedAfterTime")(SubmittedAfterTime.asInstanceOf[js.Any])
+    if (SubmittedBeforeTime != null) __obj.updateDynamic("SubmittedBeforeTime")(SubmittedBeforeTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextTranslationJobFilter]
   }
-  @scala.inline
-  implicit class TextTranslationJobFilterOps[Self <: TextTranslationJobFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobName(value: JobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobStatus(value: JobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmittedAfterTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmittedAfterTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmittedAfterTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmittedAfterTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmittedBeforeTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmittedBeforeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmittedBeforeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmittedBeforeTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

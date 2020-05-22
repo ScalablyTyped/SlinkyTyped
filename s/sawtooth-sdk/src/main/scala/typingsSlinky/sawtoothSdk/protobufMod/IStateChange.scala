@@ -5,83 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IStateChange extends js.Object {
   /** StateChange address */
-  var address: js.UndefOr[String | Null] = js.native
+  var address: js.UndefOr[String | Null] = js.undefined
   /** StateChange type */
-  var `type`: js.UndefOr[Type | Null] = js.native
+  var `type`: js.UndefOr[Type | Null] = js.undefined
   /** StateChange value */
-  var value: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var value: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
 }
 
 object IStateChange {
   @scala.inline
-  def apply(): IStateChange = {
+  def apply(
+    address: js.UndefOr[Null | String] = js.undefined,
+    `type`: js.UndefOr[Null | Type] = js.undefined,
+    value: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined
+  ): IStateChange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(address)) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStateChange]
   }
-  @scala.inline
-  implicit class IStateChangeOps[Self <: IStateChange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddressNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(null)
-        ret
-    }
-    @scala.inline
-    def withType(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(null)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
-  }
-  
 }
 

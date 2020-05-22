@@ -1,79 +1,71 @@
 package typingsSlinky.antDesignReactNative.searchBarMod
 
+import slinky.core.SyntheticEvent
 import typingsSlinky.antDesignReactNative.anon.NativeEvent
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.antDesignReactNative.searchBarPropsTypeMod.SearchBarPropsType
 import typingsSlinky.antDesignReactNative.searchBarStyleMod.SearchBarStyle
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TextInputFocusEventData
 import typingsSlinky.reactNative.mod.TextStyle
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchBarProps
   extends SearchBarPropsType
      with WithThemeStyles[SearchBarStyle] {
-  var onChangeText: js.UndefOr[js.Function1[/* text */ String, Unit]] = js.native
-  var onSubmitEditing: js.UndefOr[js.Function1[/* event */ NativeEvent, Unit]] = js.native
-  var style: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var onChangeText: js.UndefOr[js.Function1[/* text */ String, Unit]] = js.undefined
+  var onSubmitEditing: js.UndefOr[js.Function1[/* event */ NativeEvent, Unit]] = js.undefined
+  var style: js.UndefOr[StyleProp[TextStyle]] = js.undefined
 }
 
 object SearchBarProps {
   @scala.inline
-  def apply(): SearchBarProps = {
+  def apply(
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    cancelText: String = null,
+    defaultValue: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    focused: js.UndefOr[Boolean] = js.undefined,
+    maxLength: js.UndefOr[Double] = js.undefined,
+    onBlur: SyntheticEvent[NodeHandle, TextInputFocusEventData] => Unit = null,
+    onCancel: /* value */ String => Unit = null,
+    onChange: /* value */ String => Unit = null,
+    onChangeText: /* text */ String => Unit = null,
+    onClear: /* value */ String => Unit = null,
+    onFocus: SyntheticEvent[NodeHandle, TextInputFocusEventData] => Unit = null,
+    onSubmit: /* value */ String => Unit = null,
+    onSubmitEditing: /* event */ NativeEvent => Unit = null,
+    placeholder: String = null,
+    showCancelButton: js.UndefOr[Boolean] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    styles: Partial[SearchBarStyle] = null,
+    value: String = null
+  ): SearchBarProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (cancelText != null) __obj.updateDynamic("cancelText")(cancelText.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(focused)) __obj.updateDynamic("focused")(focused.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLength)) __obj.updateDynamic("maxLength")(maxLength.get.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction1(onCancel))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onChangeText != null) __obj.updateDynamic("onChangeText")(js.Any.fromFunction1(onChangeText))
+    if (onClear != null) __obj.updateDynamic("onClear")(js.Any.fromFunction1(onClear))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
+    if (onSubmitEditing != null) __obj.updateDynamic("onSubmitEditing")(js.Any.fromFunction1(onSubmitEditing))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCancelButton)) __obj.updateDynamic("showCancelButton")(showCancelButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchBarProps]
   }
-  @scala.inline
-  implicit class SearchBarPropsOps[Self <: SearchBarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnChangeText(value: /* text */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChangeText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSubmitEditing(value: /* event */ NativeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitEditing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSubmitEditing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitEditing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-  }
-  
 }
 

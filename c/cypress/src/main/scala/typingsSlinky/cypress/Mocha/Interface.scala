@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait Interface extends js.Object
 
-object Interface {
-  @scala.inline
-  def bdd: typingsSlinky.cypress.cypressStrings.bdd = "bdd".asInstanceOf[typingsSlinky.cypress.cypressStrings.bdd]
-  @scala.inline
-  def tdd: typingsSlinky.cypress.cypressStrings.tdd = "tdd".asInstanceOf[typingsSlinky.cypress.cypressStrings.tdd]
-  @scala.inline
-  def qunit: typingsSlinky.cypress.cypressStrings.qunit = "qunit".asInstanceOf[typingsSlinky.cypress.cypressStrings.qunit]
-  @scala.inline
-  def exports: typingsSlinky.cypress.cypressStrings.exports = "exports".asInstanceOf[typingsSlinky.cypress.cypressStrings.exports]
-}
-

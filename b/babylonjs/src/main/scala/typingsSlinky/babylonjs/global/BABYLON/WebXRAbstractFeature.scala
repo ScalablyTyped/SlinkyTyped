@@ -13,5 +13,10 @@ abstract class WebXRAbstractFeature protected ()
     * @param _xrSessionManager the xr session manager for this feature
     */
   def this(_xrSessionManager: typingsSlinky.babylonjs.BABYLON.WebXRSessionManager) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

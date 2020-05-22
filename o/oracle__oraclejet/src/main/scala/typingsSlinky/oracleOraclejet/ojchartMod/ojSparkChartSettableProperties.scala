@@ -36,36 +36,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ojSparkChartSettableProperties[K, D] extends dvtBaseComponentSettableProperties {
-  var animationDuration: Double | Null = js.native
-  var animationOnDataChange: auto | none = js.native
-  var animationOnDisplay: auto | none = js.native
-  var areaColor: String = js.native
-  var areaSvgClassName: String = js.native
-  var areaSvgStyle: js.Object = js.native
-  var as: String = js.native
-  var barGapRatio: Double = js.native
-  var baselineScaling: zero | min = js.native
-  var color: String = js.native
-  var data: (DataProvider[K, D]) | Null = js.native
-  var firstColor: String = js.native
-  var highColor: String = js.native
-  var lastColor: String = js.native
-  var lineStyle: dotted | dashed | solid = js.native
-  var lineType: curved | stepped | centeredStepped | segmented | centeredSegmented | none | straight = js.native
-  var lineWidth: Double = js.native
-  var lowColor: String = js.native
-  var markerShape: auto | circle | diamond | human | plus | square | star | triangleDown | triangleUp | String = js.native
-  var markerSize: Double = js.native
-  var referenceObjects: js.Array[ReferenceObject] = js.native
-  var svgClassName: String = js.native
-  var svgStyle: js.Object = js.native
-  var tooltip: `0` = js.native
+  var animationDuration: Double | Null
+  var animationOnDataChange: auto | none
+  var animationOnDisplay: auto | none
+  var areaColor: String
+  var areaSvgClassName: String
+  var areaSvgStyle: js.Object
+  var as: String
+  var barGapRatio: Double
+  var baselineScaling: zero | min
+  var color: String
+  var data: (DataProvider[K, D]) | Null
+  var firstColor: String
+  var highColor: String
+  var lastColor: String
+  var lineStyle: dotted | dashed | solid
+  var lineType: curved | stepped | centeredStepped | segmented | centeredSegmented | none | straight
+  var lineWidth: Double
+  var lowColor: String
+  var markerShape: auto | circle | diamond | human | plus | square | star | triangleDown | triangleUp | String
+  var markerSize: Double
+  var referenceObjects: js.Array[ReferenceObject]
+  var svgClassName: String
+  var svgStyle: js.Object
+  var tooltip: `0`
   @JSName("translations")
-  var translations_ojSparkChartSettableProperties: LabelAndValue = js.native
-  var `type`: area | lineWithArea | bar | line = js.native
-  var visualEffects: none | auto = js.native
+  var translations_ojSparkChartSettableProperties: LabelAndValue
+  var `type`: area | lineWithArea | bar | line
+  var visualEffects: none | auto
 }
 
 object ojSparkChartSettableProperties {
@@ -96,193 +95,13 @@ object ojSparkChartSettableProperties {
     trackResize: on | off,
     translations: LabelAndValue,
     `type`: area | lineWithArea | bar | line,
-    visualEffects: none | auto
+    visualEffects: none | auto,
+    animationDuration: Double = null.asInstanceOf[Double],
+    data: DataProvider[K, D] = null
   ): ojSparkChartSettableProperties[K, D] = {
-    val __obj = js.Dynamic.literal(animationOnDataChange = animationOnDataChange.asInstanceOf[js.Any], animationOnDisplay = animationOnDisplay.asInstanceOf[js.Any], areaColor = areaColor.asInstanceOf[js.Any], areaSvgClassName = areaSvgClassName.asInstanceOf[js.Any], areaSvgStyle = areaSvgStyle.asInstanceOf[js.Any], as = as.asInstanceOf[js.Any], barGapRatio = barGapRatio.asInstanceOf[js.Any], baselineScaling = baselineScaling.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], firstColor = firstColor.asInstanceOf[js.Any], highColor = highColor.asInstanceOf[js.Any], lastColor = lastColor.asInstanceOf[js.Any], lineStyle = lineStyle.asInstanceOf[js.Any], lineType = lineType.asInstanceOf[js.Any], lineWidth = lineWidth.asInstanceOf[js.Any], lowColor = lowColor.asInstanceOf[js.Any], markerShape = markerShape.asInstanceOf[js.Any], markerSize = markerSize.asInstanceOf[js.Any], referenceObjects = referenceObjects.asInstanceOf[js.Any], svgClassName = svgClassName.asInstanceOf[js.Any], svgStyle = svgStyle.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], visualEffects = visualEffects.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(animationOnDataChange = animationOnDataChange.asInstanceOf[js.Any], animationOnDisplay = animationOnDisplay.asInstanceOf[js.Any], areaColor = areaColor.asInstanceOf[js.Any], areaSvgClassName = areaSvgClassName.asInstanceOf[js.Any], areaSvgStyle = areaSvgStyle.asInstanceOf[js.Any], as = as.asInstanceOf[js.Any], barGapRatio = barGapRatio.asInstanceOf[js.Any], baselineScaling = baselineScaling.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], firstColor = firstColor.asInstanceOf[js.Any], highColor = highColor.asInstanceOf[js.Any], lastColor = lastColor.asInstanceOf[js.Any], lineStyle = lineStyle.asInstanceOf[js.Any], lineType = lineType.asInstanceOf[js.Any], lineWidth = lineWidth.asInstanceOf[js.Any], lowColor = lowColor.asInstanceOf[js.Any], markerShape = markerShape.asInstanceOf[js.Any], markerSize = markerSize.asInstanceOf[js.Any], referenceObjects = referenceObjects.asInstanceOf[js.Any], svgClassName = svgClassName.asInstanceOf[js.Any], svgStyle = svgStyle.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], visualEffects = visualEffects.asInstanceOf[js.Any], animationDuration = animationDuration.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojSparkChartSettableProperties[K, D]]
   }
-  @scala.inline
-  implicit class ojSparkChartSettablePropertiesOps[Self[k, d] <: ojSparkChartSettableProperties[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
-    @scala.inline
-    def withAnimationOnDataChange(value: auto | none): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDataChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimationOnDisplay(value: auto | none): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAreaColor(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAreaSvgClassName(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaSvgClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAreaSvgStyle(value: js.Object): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaSvgStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAs(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBarGapRatio(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barGapRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaselineScaling(value: zero | min): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstColor(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHighColor(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastColor(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: dotted | dashed | solid): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineType(value: curved | stepped | centeredStepped | segmented | centeredSegmented | none | straight): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLowColor(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerShape(value: auto | circle | diamond | human | plus | square | star | triangleDown | triangleUp | String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerSize(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferenceObjects(value: js.Array[ReferenceObject]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceObjects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSvgClassName(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSvgStyle(value: js.Object): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: `0`): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: LabelAndValue): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: area | lineWithArea | bar | line): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisualEffects(value: none | auto): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualEffects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimationDurationNull: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(null)
-        ret
-    }
-    @scala.inline
-    def withData(value: DataProvider[K, D]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataNull: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(null)
-        ret
-    }
-  }
-  
 }
 

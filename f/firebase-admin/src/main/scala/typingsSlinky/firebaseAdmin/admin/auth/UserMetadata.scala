@@ -7,54 +7,38 @@ import scala.scalajs.js.annotation._
 /**
   * Interface representing a user's metadata.
   */
-@js.native
 trait UserMetadata extends js.Object {
   /**
     * The date the user was created, formatted as a UTC string.
-    *
     */
-  var creationTime: String = js.native
+  var creationTime: String
+  /**
+    * The time at which the user was last active (ID token refreshed),
+    * formatted as a UTC Date string (eg 'Sat, 03 Feb 2001 04:05:06 GMT').
+    * Returns null if the user was never active.
+    */
+  var lastRefreshTime: js.UndefOr[String | Null] = js.undefined
   /**
     * The date the user last signed in, formatted as a UTC string.
     */
-  var lastSignInTime: String = js.native
+  var lastSignInTime: String
   /**
     * @return A JSON-serializable representation of this object.
     */
-  def toJSON(): js.Object = js.native
+  def toJSON(): js.Object
 }
 
 object UserMetadata {
   @scala.inline
-  def apply(creationTime: String, lastSignInTime: String, toJSON: () => js.Object): UserMetadata = {
+  def apply(
+    creationTime: String,
+    lastSignInTime: String,
+    toJSON: () => js.Object,
+    lastRefreshTime: js.UndefOr[Null | String] = js.undefined
+  ): UserMetadata = {
     val __obj = js.Dynamic.literal(creationTime = creationTime.asInstanceOf[js.Any], lastSignInTime = lastSignInTime.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    if (!js.isUndefined(lastRefreshTime)) __obj.updateDynamic("lastRefreshTime")(lastRefreshTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserMetadata]
   }
-  @scala.inline
-  implicit class UserMetadataOps[Self <: UserMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastSignInTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSignInTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,8 @@
 package typingsSlinky.vexflow.mod.Flow
 
+import typingsSlinky.vexflow.Vex.IRenderContext
+import typingsSlinky.vexflow.anon.Family
+import typingsSlinky.vexflow.anon.Firstxpx
 import typingsSlinky.vexflow.anon.Lastindices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,5 +29,19 @@ class StaveTie protected ()
     **/
   def this(notes: Lastindices) = this()
   def this(notes: Lastindices, text: String) = this()
+  /* CompleteClass */
+  override def draw(): Boolean = js.native
+  /* CompleteClass */
+  override def isPartial(): Boolean = js.native
+  /* CompleteClass */
+  override def renderText(first_x_px: Double, last_x_px: Double): Unit = js.native
+  /* CompleteClass */
+  override def renderTie(params: Firstxpx): Unit = js.native
+  /* CompleteClass */
+  override def setContext(context: IRenderContext): typingsSlinky.vexflow.Vex.Flow.StaveTie = js.native
+  /* CompleteClass */
+  override def setFont(font: Family): typingsSlinky.vexflow.Vex.Flow.StaveTie = js.native
+  /* CompleteClass */
+  override def setNotes(notes: Lastindices): typingsSlinky.vexflow.Vex.Flow.StaveTie = js.native
 }
 

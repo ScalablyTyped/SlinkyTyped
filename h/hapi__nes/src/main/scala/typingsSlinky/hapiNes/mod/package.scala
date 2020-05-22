@@ -22,6 +22,7 @@ package object mod {
   type ClientRequestOptions = typingsSlinky.hapiNes.clientMod.Client.ClientRequestOptions
   type ClientSubscribeFlags = typingsSlinky.hapiNes.clientMod.Client.ClientSubscribeFlags
   type Handler = typingsSlinky.hapiNes.clientMod.Client.Handler
+  type ServerOnSubscribe = typingsSlinky.hapiNes.mod.ServerOnSubscribeWithParams | typingsSlinky.hapiNes.mod.ServerOnSubscribeWithoutParams
   type ServerOnSubscribeWithParams = js.Function3[
     /* socket */ typingsSlinky.hapiNes.mod.Socket, 
     /* path */ java.lang.String, 
@@ -33,6 +34,7 @@ package object mod {
     /* path */ java.lang.String, 
     js.Promise[js.Any]
   ]
+  type ServerOnUnSubscribe = typingsSlinky.hapiNes.mod.ServerOnUnSubscribeWithParams | typingsSlinky.hapiNes.mod.ServerOnUnSubscribeWithoutParams
   type ServerOnUnSubscribeWithParams = js.Function3[
     /* socket */ typingsSlinky.hapiNes.mod.Socket, 
     /* path */ java.lang.String, 

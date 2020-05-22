@@ -18,29 +18,10 @@ trait SchemaAcknowledgeRequest extends js.Object {
 
 object SchemaAcknowledgeRequest {
   @scala.inline
-  def apply(): SchemaAcknowledgeRequest = {
+  def apply(ackIds: js.Array[String] = null): SchemaAcknowledgeRequest = {
     val __obj = js.Dynamic.literal()
+    if (ackIds != null) __obj.updateDynamic("ackIds")(ackIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAcknowledgeRequest]
   }
-  @scala.inline
-  implicit class SchemaAcknowledgeRequestOps[Self <: SchemaAcknowledgeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAckIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAckIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

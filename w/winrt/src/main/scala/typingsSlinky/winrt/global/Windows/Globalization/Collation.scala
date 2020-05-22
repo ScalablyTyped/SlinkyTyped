@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.global.Windows.Globalization
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +10,19 @@ import scala.scalajs.js.annotation._
 object Collation extends js.Object {
   @js.native
   class CharacterGrouping ()
-    extends typingsSlinky.winrt.Windows.Globalization.Collation.CharacterGrouping
+    extends typingsSlinky.winrt.Windows.Globalization.Collation.CharacterGrouping {
+    /* CompleteClass */
+    override var first: String = js.native
+    /* CompleteClass */
+    override var label: String = js.native
+  }
   
   @js.native
   class CharacterGroupings ()
-    extends typingsSlinky.winrt.Windows.Globalization.Collation.CharacterGroupings
+    extends typingsSlinky.winrt.Windows.Globalization.Collation.CharacterGroupings {
+    /* CompleteClass */
+    override def first(): IIterator[typingsSlinky.winrt.Windows.Globalization.Collation.CharacterGrouping] = js.native
+  }
   
 }
 

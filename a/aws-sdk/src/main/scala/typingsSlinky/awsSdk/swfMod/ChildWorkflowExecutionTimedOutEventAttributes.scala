@@ -40,43 +40,5 @@ object ChildWorkflowExecutionTimedOutEventAttributes {
     val __obj = js.Dynamic.literal(initiatedEventId = initiatedEventId.asInstanceOf[js.Any], startedEventId = startedEventId.asInstanceOf[js.Any], timeoutType = timeoutType.asInstanceOf[js.Any], workflowExecution = workflowExecution.asInstanceOf[js.Any], workflowType = workflowType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChildWorkflowExecutionTimedOutEventAttributes]
   }
-  @scala.inline
-  implicit class ChildWorkflowExecutionTimedOutEventAttributesOps[Self <: ChildWorkflowExecutionTimedOutEventAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitiatedEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiatedEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartedEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startedEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeoutType(value: WorkflowExecutionTimeoutType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkflowExecution(value: WorkflowExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkflowType(value: WorkflowType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

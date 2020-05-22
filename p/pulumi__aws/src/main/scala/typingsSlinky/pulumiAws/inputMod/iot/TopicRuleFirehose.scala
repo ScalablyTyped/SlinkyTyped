@@ -12,7 +12,7 @@ trait TopicRuleFirehose extends js.Object {
     */
   var deliveryStreamName: Input[String] = js.native
   /**
-    * The ARN of the IAM role that grants access.
+    * The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
     */
   var roleArn: Input[String] = js.native
   /**
@@ -23,41 +23,10 @@ trait TopicRuleFirehose extends js.Object {
 
 object TopicRuleFirehose {
   @scala.inline
-  def apply(deliveryStreamName: Input[String], roleArn: Input[String]): TopicRuleFirehose = {
+  def apply(deliveryStreamName: Input[String], roleArn: Input[String], separator: Input[String] = null): TopicRuleFirehose = {
     val __obj = js.Dynamic.literal(deliveryStreamName = deliveryStreamName.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
     __obj.asInstanceOf[TopicRuleFirehose]
   }
-  @scala.inline
-  implicit class TopicRuleFirehoseOps[Self <: TopicRuleFirehose] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeliveryStreamName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

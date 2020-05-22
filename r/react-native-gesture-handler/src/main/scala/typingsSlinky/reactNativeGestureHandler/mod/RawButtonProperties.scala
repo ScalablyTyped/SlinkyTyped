@@ -1,65 +1,53 @@
 package typingsSlinky.reactNativeGestureHandler.mod
 
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.reactNativeGestureHandler.anon.Bottom
+import typingsSlinky.reactNativeGestureHandler.anon.BottomHeight
+import typingsSlinky.reactNativeGestureHandler.anon.Height
+import typingsSlinky.reactNativeGestureHandler.anon.Left
+import typingsSlinky.reactNativeGestureHandler.anon.Right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RawButtonProperties extends NativeViewGestureHandlerProperties {
-  var accessibilityLabel: js.UndefOr[String] = js.native
-  var exclusive: js.UndefOr[Boolean] = js.native
-  var testID: js.UndefOr[String] = js.native
+  var accessibilityLabel: js.UndefOr[String] = js.undefined
+  var exclusive: js.UndefOr[Boolean] = js.undefined
+  var testID: js.UndefOr[String] = js.undefined
 }
 
 object RawButtonProperties {
   @scala.inline
-  def apply(): RawButtonProperties = {
+  def apply(
+    accessibilityLabel: String = null,
+    disallowInterruption: js.UndefOr[Boolean] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    exclusive: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: Double | Bottom | Left | Right | Height | BottomHeight = null,
+    id: String = null,
+    onGestureEvent: /* event */ NativeViewGestureHandlerGestureEvent => Unit = null,
+    onHandlerStateChange: /* event */ NativeViewGestureHandlerStateChangeEvent => Unit = null,
+    shouldActivateOnStart: js.UndefOr[Boolean] = js.undefined,
+    shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
+    simultaneousHandlers: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined,
+    testID: String = null,
+    waitFor: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined
+  ): RawButtonProperties = {
     val __obj = js.Dynamic.literal()
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(disallowInterruption)) __obj.updateDynamic("disallowInterruption")(disallowInterruption.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (onGestureEvent != null) __obj.updateDynamic("onGestureEvent")(js.Any.fromFunction1(onGestureEvent))
+    if (onHandlerStateChange != null) __obj.updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(onHandlerStateChange))
+    if (!js.isUndefined(shouldActivateOnStart)) __obj.updateDynamic("shouldActivateOnStart")(shouldActivateOnStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(simultaneousHandlers)) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitFor)) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[RawButtonProperties]
   }
-  @scala.inline
-  implicit class RawButtonPropertiesOps[Self <: RawButtonProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessibilityLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibilityLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclusive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

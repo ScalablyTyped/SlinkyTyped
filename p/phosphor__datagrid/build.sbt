@@ -1,22 +1,22 @@
 organization := "org.scalablytyped.slinky"
 name := "phosphor__datagrid"
-version := "0.1.11-5bd0e6"
+version := "0.1.11-cb0510"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "phosphor__algorithm" % "1.2.0-cf55da",
-  "org.scalablytyped.slinky" %%% "phosphor__commands" % "1.7.2-549aa2",
-  "org.scalablytyped.slinky" %%% "phosphor__coreutils" % "1.3.1-c22335",
-  "org.scalablytyped.slinky" %%% "phosphor__disposable" % "1.3.1-0f9af2",
-  "org.scalablytyped.slinky" %%% "phosphor__messaging" % "1.3.0-5a4500",
-  "org.scalablytyped.slinky" %%% "phosphor__signaling" % "1.3.1-0ac0f6",
-  "org.scalablytyped.slinky" %%% "phosphor__virtualdom" % "1.2.0-a128a2",
-  "org.scalablytyped.slinky" %%% "phosphor__widgets" % "1.9.3-d66dd5",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "phosphor__algorithm" % "1.2.0-787f4c",
+  "org.scalablytyped.slinky" %%% "phosphor__commands" % "1.7.2-b6159b",
+  "org.scalablytyped.slinky" %%% "phosphor__coreutils" % "1.3.1-3c6f75",
+  "org.scalablytyped.slinky" %%% "phosphor__disposable" % "1.3.1-42e33c",
+  "org.scalablytyped.slinky" %%% "phosphor__messaging" % "1.3.0-3dd3f4",
+  "org.scalablytyped.slinky" %%% "phosphor__signaling" % "1.3.1-06b254",
+  "org.scalablytyped.slinky" %%% "phosphor__virtualdom" % "1.2.0-f01026",
+  "org.scalablytyped.slinky" %%% "phosphor__widgets" % "1.9.3-93a919",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

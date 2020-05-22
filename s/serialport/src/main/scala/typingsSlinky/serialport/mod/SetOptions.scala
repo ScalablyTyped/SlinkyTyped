@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SetOptions extends js.Object {
-  var brk: js.UndefOr[Boolean] = js.native
-  var cts: js.UndefOr[Boolean] = js.native
-  var dsr: js.UndefOr[Boolean] = js.native
-  var dtr: js.UndefOr[Boolean] = js.native
-  var rts: js.UndefOr[Boolean] = js.native
+  var brk: js.UndefOr[Boolean] = js.undefined
+  var cts: js.UndefOr[Boolean] = js.undefined
+  var dsr: js.UndefOr[Boolean] = js.undefined
+  var dtr: js.UndefOr[Boolean] = js.undefined
+  var rts: js.UndefOr[Boolean] = js.undefined
 }
 
 object SetOptions {
   @scala.inline
-  def apply(): SetOptions = {
+  def apply(
+    brk: js.UndefOr[Boolean] = js.undefined,
+    cts: js.UndefOr[Boolean] = js.undefined,
+    dsr: js.UndefOr[Boolean] = js.undefined,
+    dtr: js.UndefOr[Boolean] = js.undefined,
+    rts: js.UndefOr[Boolean] = js.undefined
+  ): SetOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(brk)) __obj.updateDynamic("brk")(brk.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cts)) __obj.updateDynamic("cts")(cts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dsr)) __obj.updateDynamic("dsr")(dsr.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dtr)) __obj.updateDynamic("dtr")(dtr.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rts)) __obj.updateDynamic("rts")(rts.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetOptions]
   }
-  @scala.inline
-  implicit class SetOptionsOps[Self <: SetOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrk(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDsr(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dsr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDsr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dsr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDtr(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDtr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,47 +26,15 @@ trait DeleteJobExecutionRequest extends js.Object {
 
 object DeleteJobExecutionRequest {
   @scala.inline
-  def apply(executionNumber: ExecutionNumber, jobId: JobId, thingName: ThingName): DeleteJobExecutionRequest = {
+  def apply(
+    executionNumber: ExecutionNumber,
+    jobId: JobId,
+    thingName: ThingName,
+    force: js.UndefOr[ForceFlag] = js.undefined
+  ): DeleteJobExecutionRequest = {
     val __obj = js.Dynamic.literal(executionNumber = executionNumber.asInstanceOf[js.Any], jobId = jobId.asInstanceOf[js.Any], thingName = thingName.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteJobExecutionRequest]
   }
-  @scala.inline
-  implicit class DeleteJobExecutionRequestOps[Self <: DeleteJobExecutionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionNumber(value: ExecutionNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobId(value: JobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThingName(value: ThingName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForce(value: ForceFlag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

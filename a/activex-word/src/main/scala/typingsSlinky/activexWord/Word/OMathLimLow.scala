@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMathLimLow extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  val E: OMath = js.native
-  val Lim: OMath = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  val E: OMath
+  val Lim: OMath
+  val Parent: js.Any
   @JSName("Word.OMathLimLow_typekey")
-  var WordDotOMathLimLow_typekey: OMathLimLow = js.native
-  def ToLimUpp(): OMathFunction = js.native
+  var WordDotOMathLimLow_typekey: OMathLimLow
+  def ToLimUpp(): OMathFunction
 }
 
 object OMathLimLow {
@@ -31,55 +30,5 @@ object OMathLimLow {
     __obj.updateDynamic("Word.OMathLimLow_typekey")(WordDotOMathLimLow_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMathLimLow]
   }
-  @scala.inline
-  implicit class OMathLimLowOps[Self <: OMathLimLow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withE(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLim(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Lim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToLimUpp(value: () => OMathFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToLimUpp")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withWordDotOMathLimLow_typekey(value: OMathLimLow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMathLimLow_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

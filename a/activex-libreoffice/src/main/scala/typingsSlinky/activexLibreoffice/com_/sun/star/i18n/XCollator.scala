@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides locale-sensitive collation algorithms for string comparison. */
-@js.native
 trait XCollator extends XInterface {
   /**
     * Compare 2 strings in specific locale and algorithm.
@@ -18,7 +17,7 @@ trait XCollator extends XInterface {
     * @param aStr2 Second string.
     * @returns 1 if the first string is greater than the second string ;  0 if the first string is equal to the second string ;  -1 if the first string is less
     */
-  def compareString(aStr1: String, aStr2: String): Double = js.native
+  def compareString(aStr1: String, aStr2: String): Double
   /**
     * Compare 2 substrings in specific locale and algorithm.
     * @param aStr1 First string.
@@ -29,19 +28,19 @@ trait XCollator extends XInterface {
     * @param nLen2 Length (from offset) of the second substring.
     * @returns 1 if the first string is greater than the second string ;  0 if the first string is equal to the second string ;  -1 if the first string is less
     */
-  def compareSubstring(aStr1: String, nOff1: Double, nLen1: Double, aStr2: String, nOff2: Double, nLen2: Double): Double = js.native
+  def compareSubstring(aStr1: String, nOff1: Double, nLen1: Double, aStr2: String, nOff2: Double, nLen2: Double): Double
   /**
     * List all collator algorithms for a given locale.
     * @param aLocale The locale for which to list algorithms.
     * @returns A sequence of algorithm names.
     */
-  def listCollatorAlgorithms(aLocale: Locale): SafeArray[String] = js.native
+  def listCollatorAlgorithms(aLocale: Locale): SafeArray[String]
   /**
     * List all end user collator options for a given algorithm.
     * @param aAlgorithmName The algorithm name for this collator.
     * @returns An array of end user options available for the algorithm.
     */
-  def listCollatorOptions(aAlgorithmName: String): SafeArray[Double] = js.native
+  def listCollatorOptions(aAlgorithmName: String): SafeArray[Double]
   /**
     * Load a particular collator algorithm for the locale.
     * @param aAlgorithmName The algorithm to load.
@@ -49,21 +48,21 @@ trait XCollator extends XInterface {
     * @param nCollatorOptions A mask of {@link CollatorOptions} .
     * @returns Returns 0 when loading was successful, otherwise throws runtime exception.
     */
-  def loadCollatorAlgorithm(aAlgorithmName: String, aLocale: Locale, nCollatorOptions: Double): Double = js.native
+  def loadCollatorAlgorithm(aAlgorithmName: String, aLocale: Locale, nCollatorOptions: Double): Double
   /**
     * Load a collator algorithm with options chosen by end user.
     * @param aAlgorithmName The algorithm name to load.
     * @param aLocale The locale for this collator.
     * @param aCollatorOptions A sequence of end user collator options like those returned by {@link XCollator.listCollatorOptions()} .
     */
-  def loadCollatorAlgorithmWithEndUserOption(aAlgorithmName: String, aLocale: Locale, aCollatorOptions: SeqEquiv[Double]): Unit = js.native
+  def loadCollatorAlgorithmWithEndUserOption(aAlgorithmName: String, aLocale: Locale, aCollatorOptions: SeqEquiv[Double]): Unit
   /**
     * Load the collator with default algorithm defined in locale data.
     * @param aLocale The locale for this collator.
     * @param nCollatorOptions A mask of {@link CollatorOptions} .
     * @returns Returns 0 when loading was successful, otherwise throws runtime exception. In fact the return value should be ignored and the exception be caught
     */
-  def loadDefaultCollator(aLocale: Locale, nCollatorOptions: Double): Double = js.native
+  def loadDefaultCollator(aLocale: Locale, nCollatorOptions: Double): Double
 }
 
 object XCollator {
@@ -83,55 +82,5 @@ object XCollator {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), compareString = js.Any.fromFunction2(compareString), compareSubstring = js.Any.fromFunction6(compareSubstring), listCollatorAlgorithms = js.Any.fromFunction1(listCollatorAlgorithms), listCollatorOptions = js.Any.fromFunction1(listCollatorOptions), loadCollatorAlgorithm = js.Any.fromFunction3(loadCollatorAlgorithm), loadCollatorAlgorithmWithEndUserOption = js.Any.fromFunction3(loadCollatorAlgorithmWithEndUserOption), loadDefaultCollator = js.Any.fromFunction2(loadDefaultCollator), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XCollator]
   }
-  @scala.inline
-  implicit class XCollatorOps[Self <: XCollator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompareString(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareString")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCompareSubstring(value: (String, Double, Double, String, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareSubstring")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withListCollatorAlgorithms(value: Locale => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listCollatorAlgorithms")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListCollatorOptions(value: String => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listCollatorOptions")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadCollatorAlgorithm(value: (String, Locale, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadCollatorAlgorithm")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withLoadCollatorAlgorithmWithEndUserOption(value: (String, Locale, SeqEquiv[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadCollatorAlgorithmWithEndUserOption")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withLoadDefaultCollator(value: (Locale, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadDefaultCollator")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

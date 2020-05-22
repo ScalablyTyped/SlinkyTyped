@@ -6,127 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<koa-session.koa-session.Session> & {  _expire ? :number,   _maxAge ? :number} */
-@js.native
 trait PartialSessionexpirenumbe extends js.Object {
-  var _expire: js.UndefOr[Double] = js.native
-  var _maxAge: js.UndefOr[Double] = js.native
-  var inspect: js.UndefOr[js.Function0[js.Object]] = js.native
-  var length: js.UndefOr[Double] = js.native
-  var maxAge: js.UndefOr[Double | session] = js.native
-  var populated: js.UndefOr[Boolean] = js.native
-  var save: js.UndefOr[js.Function0[Unit]] = js.native
-  var toJSON: js.UndefOr[js.Function0[js.Object]] = js.native
+  var _expire: js.UndefOr[Double] = js.undefined
+  var _maxAge: js.UndefOr[Double] = js.undefined
+  var inspect: js.UndefOr[js.Function0[js.Object]] = js.undefined
+  var length: js.UndefOr[Double] = js.undefined
+  var maxAge: js.UndefOr[Double | session] = js.undefined
+  var populated: js.UndefOr[Boolean] = js.undefined
+  var save: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var toJSON: js.UndefOr[js.Function0[js.Object]] = js.undefined
 }
 
 object PartialSessionexpirenumbe {
   @scala.inline
-  def apply(): PartialSessionexpirenumbe = {
+  def apply(
+    _expire: js.UndefOr[Double] = js.undefined,
+    _maxAge: js.UndefOr[Double] = js.undefined,
+    inspect: () => js.Object = null,
+    length: js.UndefOr[Double] = js.undefined,
+    maxAge: Double | session = null,
+    populated: js.UndefOr[Boolean] = js.undefined,
+    save: () => Unit = null,
+    toJSON: () => js.Object = null
+  ): PartialSessionexpirenumbe = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(_expire)) __obj.updateDynamic("_expire")(_expire.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(_maxAge)) __obj.updateDynamic("_maxAge")(_maxAge.get.asInstanceOf[js.Any])
+    if (inspect != null) __obj.updateDynamic("inspect")(js.Any.fromFunction0(inspect))
+    if (!js.isUndefined(length)) __obj.updateDynamic("length")(length.get.asInstanceOf[js.Any])
+    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
+    if (!js.isUndefined(populated)) __obj.updateDynamic("populated")(populated.get.asInstanceOf[js.Any])
+    if (save != null) __obj.updateDynamic("save")(js.Any.fromFunction0(save))
+    if (toJSON != null) __obj.updateDynamic("toJSON")(js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[PartialSessionexpirenumbe]
   }
-  @scala.inline
-  implicit class PartialSessionexpirenumbeOps[Self <: PartialSessionexpirenumbe] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_expire(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_expire")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_expire: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_expire")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_maxAge(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_maxAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInspect(value: () => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutInspect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAge(value: Double | session): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopulated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopulated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSave(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutToJSON: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

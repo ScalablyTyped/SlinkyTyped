@@ -2,7 +2,6 @@ package typingsSlinky.reactSketchapp
 
 import typingsSlinky.reactSketchapp.mod.ResizeMode
 import typingsSlinky.reactSketchapp.propsMod.AlignmentBaseline
-import typingsSlinky.reactSketchapp.propsMod.BaselineShift
 import typingsSlinky.reactSketchapp.propsMod.FontStretch
 import typingsSlinky.reactSketchapp.propsMod.FontStyle
 import typingsSlinky.reactSketchapp.propsMod.FontVariant
@@ -15,6 +14,7 @@ import typingsSlinky.reactSketchapp.propsMod.Side
 import typingsSlinky.reactSketchapp.propsMod.Spacing
 import typingsSlinky.reactSketchapp.propsMod.TextAnchor
 import typingsSlinky.reactSketchapp.propsMod.TextDecoration
+import typingsSlinky.reactSketchapp.propsMod._BaselineShift
 import typingsSlinky.reactSketchapp.typesMod.BorderStyle
 import typingsSlinky.reactSketchapp.typesMod.MeasureMode
 import typingsSlinky.reactSketchapp.typesMod.Overflow
@@ -74,7 +74,7 @@ object reactSketchappStrings {
   @js.native
   sealed trait baseline
     extends AlignmentBaseline
-       with BaselineShift
+       with _BaselineShift
   
   @js.native
   sealed trait `before-edge` extends AlignmentBaseline
@@ -298,10 +298,10 @@ object reactSketchappStrings {
        with ResizeMode
   
   @js.native
-  sealed trait sub extends BaselineShift
+  sealed trait sub extends _BaselineShift
   
   @js.native
-  sealed trait `super` extends BaselineShift
+  sealed trait `super` extends _BaselineShift
   
   @js.native
   sealed trait `text-after-edge` extends AlignmentBaseline

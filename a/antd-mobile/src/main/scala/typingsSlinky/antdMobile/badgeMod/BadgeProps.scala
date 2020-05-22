@@ -1,80 +1,44 @@
 package typingsSlinky.antdMobile.badgeMod
 
+import typingsSlinky.antdMobile.antdMobileStrings.large
+import typingsSlinky.antdMobile.antdMobileStrings.small
 import typingsSlinky.antdMobile.badgePropsTypeMod.BadgePropsTypes
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BadgeProps extends BadgePropsTypes {
-  var className: js.UndefOr[String] = js.native
-  var hot: js.UndefOr[Boolean] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var hot: js.UndefOr[Boolean] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object BadgeProps {
   @scala.inline
-  def apply(): BadgeProps = {
+  def apply(
+    className: String = null,
+    corner: js.UndefOr[Boolean] = js.undefined,
+    dot: js.UndefOr[Boolean] = js.undefined,
+    hot: js.UndefOr[Boolean] = js.undefined,
+    overflowCount: js.UndefOr[Double] = js.undefined,
+    prefixCls: String = null,
+    size: large | small = null,
+    style: CSSProperties = null,
+    text: js.Any = null
+  ): BadgeProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(corner)) __obj.updateDynamic("corner")(corner.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hot)) __obj.updateDynamic("hot")(hot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overflowCount)) __obj.updateDynamic("overflowCount")(overflowCount.get.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadgeProps]
   }
-  @scala.inline
-  implicit class BadgePropsOps[Self <: BadgeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

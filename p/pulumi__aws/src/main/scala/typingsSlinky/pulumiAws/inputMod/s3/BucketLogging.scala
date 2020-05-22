@@ -19,35 +19,10 @@ trait BucketLogging extends js.Object {
 
 object BucketLogging {
   @scala.inline
-  def apply(targetBucket: Input[String]): BucketLogging = {
+  def apply(targetBucket: Input[String], targetPrefix: Input[String] = null): BucketLogging = {
     val __obj = js.Dynamic.literal(targetBucket = targetBucket.asInstanceOf[js.Any])
+    if (targetPrefix != null) __obj.updateDynamic("targetPrefix")(targetPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketLogging]
   }
-  @scala.inline
-  implicit class BucketLoggingOps[Self <: BucketLogging] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetBucket(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetBucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetPrefix(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

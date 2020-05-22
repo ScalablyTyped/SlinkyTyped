@@ -50,55 +50,5 @@ object CustomerAgentInfo {
     val __obj = js.Dynamic.literal(activeAgents = activeAgents.asInstanceOf[js.Any], blackListedAgents = blackListedAgents.asInstanceOf[js.Any], healthyAgents = healthyAgents.asInstanceOf[js.Any], shutdownAgents = shutdownAgents.asInstanceOf[js.Any], totalAgents = totalAgents.asInstanceOf[js.Any], unhealthyAgents = unhealthyAgents.asInstanceOf[js.Any], unknownAgents = unknownAgents.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomerAgentInfo]
   }
-  @scala.inline
-  implicit class CustomerAgentInfoOps[Self <: CustomerAgentInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveAgents(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeAgents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlackListedAgents(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blackListedAgents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealthyAgents(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthyAgents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShutdownAgents(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shutdownAgents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalAgents(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalAgents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnhealthyAgents(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unhealthyAgents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnknownAgents(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownAgents")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

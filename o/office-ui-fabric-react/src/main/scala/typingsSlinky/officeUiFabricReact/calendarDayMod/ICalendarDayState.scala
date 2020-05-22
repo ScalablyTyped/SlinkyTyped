@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICalendarDayState extends js.Object {
-  var activeDescendantId: js.UndefOr[String] = js.native
-  var weeks: js.UndefOr[js.Array[js.Array[IDayInfo]]] = js.native
+  var activeDescendantId: js.UndefOr[String] = js.undefined
+  var weeks: js.UndefOr[js.Array[js.Array[IDayInfo]]] = js.undefined
 }
 
 object ICalendarDayState {
   @scala.inline
-  def apply(): ICalendarDayState = {
+  def apply(activeDescendantId: String = null, weeks: js.Array[js.Array[IDayInfo]] = null): ICalendarDayState = {
     val __obj = js.Dynamic.literal()
+    if (activeDescendantId != null) __obj.updateDynamic("activeDescendantId")(activeDescendantId.asInstanceOf[js.Any])
+    if (weeks != null) __obj.updateDynamic("weeks")(weeks.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICalendarDayState]
   }
-  @scala.inline
-  implicit class ICalendarDayStateOps[Self <: ICalendarDayState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveDescendantId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeDescendantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveDescendantId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeDescendantId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeeks(value: js.Array[js.Array[IDayInfo]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weeks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeeks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weeks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

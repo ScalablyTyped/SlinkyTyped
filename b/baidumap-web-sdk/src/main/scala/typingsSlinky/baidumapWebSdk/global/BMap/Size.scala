@@ -9,5 +9,11 @@ import scala.scalajs.js.annotation._
 class Size protected ()
   extends typingsSlinky.baidumapWebSdk.BMap.Size {
   def this(width: Double, height: Double) = this()
+  /* CompleteClass */
+  override var height: Double = js.native
+  /* CompleteClass */
+  override var width: Double = js.native
+  /* CompleteClass */
+  override def equals(other: typingsSlinky.baidumapWebSdk.BMap.Size): Boolean = js.native
 }
 

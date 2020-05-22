@@ -15,28 +15,27 @@ import scala.scalajs.js.annotation._
   * @see {@link https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/clientapi-execution-context External Link: Client API execution context}
   * @see {@link https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/execution-context External Link: Execution context (Client API reference)}
   */
-@js.native
 trait EventContext extends js.Object {
   /**
     * Gets the Xrm context.
     * @returns The Xrm context.
     */
-  def getContext(): GlobalContext = js.native
+  def getContext(): GlobalContext
   /**
     * Gets the handler's depth, which is the order in which the handler is executed.
     * @returns The depth, a 0-based index.
     */
-  def getDepth(): Double = js.native
+  def getDepth(): Double
   /**
     * Gets a reference to the object for which event occurred.
     * @returns The event source.
     */
-  def getEventSource(): Attribute | Control | Entity = js.native
+  def getEventSource(): Attribute | Control | Entity
   /**
     * Gets a reference to the currnet form context
     * @returns The {@link FormContext form context}
     */
-  def getFormContext(): FormContext = js.native
+  def getFormContext(): FormContext
   /**
     * @summary Gets the shared variable with the specified key.
     * @param T Generic type parameter.
@@ -45,7 +44,7 @@ trait EventContext extends js.Object {
     * @desc Gets the shared variable with the specified key.
     * Used to pass values between handlers of an event.
     */
-  def getSharedVariable[T](key: String): T = js.native
+  def getSharedVariable[T](key: String): T
   /**
     * @summary Sets a shared variable.
     * @param T Generic type parameter.
@@ -54,7 +53,7 @@ trait EventContext extends js.Object {
     * @desc Sets the shared variable with the specified key.
     * Used to pass values between handlers of an event.
     */
-  def setSharedVariable[T](key: String, value: T): Unit = js.native
+  def setSharedVariable[T](key: String, value: T): Unit
 }
 
 object EventContext {
@@ -70,49 +69,5 @@ object EventContext {
     val __obj = js.Dynamic.literal(getContext = js.Any.fromFunction0(getContext), getDepth = js.Any.fromFunction0(getDepth), getEventSource = js.Any.fromFunction0(getEventSource), getFormContext = js.Any.fromFunction0(getFormContext), getSharedVariable = js.Any.fromFunction1(getSharedVariable), setSharedVariable = js.Any.fromFunction2(setSharedVariable))
     __obj.asInstanceOf[EventContext]
   }
-  @scala.inline
-  implicit class EventContextOps[Self <: EventContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetContext(value: () => GlobalContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContext")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDepth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDepth")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetEventSource(value: () => Attribute | Control | Entity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEventSource")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFormContext(value: () => FormContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormContext")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSharedVariable(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSharedVariable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSharedVariable(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSharedVariable")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

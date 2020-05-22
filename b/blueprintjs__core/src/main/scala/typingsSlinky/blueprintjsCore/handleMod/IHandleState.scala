@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHandleState extends js.Object {
   /** whether slider handle is currently being dragged */
-  var isMoving: js.UndefOr[Boolean] = js.native
+  var isMoving: js.UndefOr[Boolean] = js.undefined
 }
 
 object IHandleState {
   @scala.inline
-  def apply(): IHandleState = {
+  def apply(isMoving: js.UndefOr[Boolean] = js.undefined): IHandleState = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isMoving)) __obj.updateDynamic("isMoving")(isMoving.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHandleState]
   }
-  @scala.inline
-  implicit class IHandleStateOps[Self <: IHandleState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsMoving(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMoving")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMoving: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMoving")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,7 +38,6 @@ import scala.scalajs.js.annotation._
   * // 2. construct by object
   * o = new KJUR.asn1.x509.X500Name({C: "US", O: "aaa", CN: "http://example.com/"});
   */
-@js.native
 trait X500Name extends ASN1Object {
   /**
     * set DN by LDAP(RFC 2253) distinguished name string
@@ -47,7 +46,7 @@ trait X500Name extends ASN1Object {
     * name = new KJUR.asn1.x509.X500Name();
     * name.setByLdapString("CN=foo@example.com,OU=bbb,O=aaa,C=US");
     */
-  def setByLdapString(dnStr: String): Unit = js.native
+  def setByLdapString(dnStr: String): Unit
   /**
     * set DN by associative array
     * @param dnObj associative array of DN (ex. {C: "US", O: "aaa"})
@@ -55,7 +54,7 @@ trait X500Name extends ASN1Object {
     * name = new KJUR.asn1.x509.X500Name();
     * name.setByObject({C: "US", O: "aaa", CN="http://example.com/"1});
     */
-  def setByObject(dnObj: X500NameParam): Unit = js.native
+  def setByObject(dnObj: X500NameParam): Unit
   /**
     * set DN by OpenSSL oneline distinguished name string
     * @param dnStr distinguished name by string (ex. /C=US/O=aaa)
@@ -63,7 +62,7 @@ trait X500Name extends ASN1Object {
     * name = new KJUR.asn1.x509.X500Name();
     * name.setByString("/C=US/O=aaa/OU=bbb/CN=foo@example.com");
     */
-  def setByString(dnStr: String): Unit = js.native
+  def setByString(dnStr: String): Unit
 }
 
 object X500Name {
@@ -85,31 +84,5 @@ object X500Name {
     val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], setByLdapString = js.Any.fromFunction1(setByLdapString), setByObject = js.Any.fromFunction1(setByObject), setByString = js.Any.fromFunction1(setByString))
     __obj.asInstanceOf[X500Name]
   }
-  @scala.inline
-  implicit class X500NameOps[Self <: X500Name] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetByLdapString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setByLdapString")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetByObject(value: X500NameParam => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setByObject")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetByString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setByString")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

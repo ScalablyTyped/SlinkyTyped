@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TweenDataGenConfig extends js.Object {
   /**
     * Time in ms/frames before tween will start.
     */
-  var delay: js.Function = js.native
+  var delay: js.Function
   /**
     * Duration of the tween in ms/frames, excludes time for yoyo or repeats.
     */
-  var duration: js.Function = js.native
+  var duration: js.Function
   /**
     * Time in ms/frames the tween will pause before running the yoyo or starting a repeat.
     */
-  var hold: js.Function = js.native
+  var hold: js.Function
   /**
     * Number of times to repeat the tween. The tween will always run once regardless, so a repeat value of '1' will play the tween twice.
     */
-  var repeat: js.Function = js.native
+  var repeat: js.Function
   /**
     * Time in ms/frames before the repeat will start.
     */
-  var repeatDelay: js.Function = js.native
+  var repeatDelay: js.Function
 }
 
 object TweenDataGenConfig {
@@ -40,43 +39,5 @@ object TweenDataGenConfig {
     val __obj = js.Dynamic.literal(delay = delay.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], hold = hold.asInstanceOf[js.Any], repeat = repeat.asInstanceOf[js.Any], repeatDelay = repeatDelay.asInstanceOf[js.Any])
     __obj.asInstanceOf[TweenDataGenConfig]
   }
-  @scala.inline
-  implicit class TweenDataGenConfigOps[Self <: TweenDataGenConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHold(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeat(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatDelay(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

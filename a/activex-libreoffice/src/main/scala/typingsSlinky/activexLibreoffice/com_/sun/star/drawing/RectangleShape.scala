@@ -29,7 +29,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service is for a rectangle {@link Shape} . */
-@js.native
 trait RectangleShape
   extends Shape
      with FillProperties
@@ -39,7 +38,7 @@ trait RectangleShape
      with ShadowProperties
      with RotationDescriptor {
   /** For {@link Shapes} with rounded corners, this is the radius of the corners. */
-  var CornerRadius: Double = js.native
+  var CornerRadius: Double
 }
 
 object RectangleShape {
@@ -156,19 +155,5 @@ object RectangleShape {
     js.Dynamic.global.Object.assign(__obj, TextProperties)
     __obj.asInstanceOf[RectangleShape]
   }
-  @scala.inline
-  implicit class RectangleShapeOps[Self <: RectangleShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCornerRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CornerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -38,101 +38,24 @@ trait NetworkProfileData extends js.Object {
 
 object NetworkProfileData {
   @scala.inline
-  def apply(): NetworkProfileData = {
+  def apply(
+    CertificateAuthorityArn: Arn = null,
+    Description: NetworkProfileDescription = null,
+    EapMethod: NetworkEapMethod = null,
+    NetworkProfileArn: Arn = null,
+    NetworkProfileName: NetworkProfileName = null,
+    SecurityType: NetworkSecurityType = null,
+    Ssid: NetworkSsid = null
+  ): NetworkProfileData = {
     val __obj = js.Dynamic.literal()
+    if (CertificateAuthorityArn != null) __obj.updateDynamic("CertificateAuthorityArn")(CertificateAuthorityArn.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (EapMethod != null) __obj.updateDynamic("EapMethod")(EapMethod.asInstanceOf[js.Any])
+    if (NetworkProfileArn != null) __obj.updateDynamic("NetworkProfileArn")(NetworkProfileArn.asInstanceOf[js.Any])
+    if (NetworkProfileName != null) __obj.updateDynamic("NetworkProfileName")(NetworkProfileName.asInstanceOf[js.Any])
+    if (SecurityType != null) __obj.updateDynamic("SecurityType")(SecurityType.asInstanceOf[js.Any])
+    if (Ssid != null) __obj.updateDynamic("Ssid")(Ssid.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkProfileData]
   }
-  @scala.inline
-  implicit class NetworkProfileDataOps[Self <: NetworkProfileData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateAuthorityArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateAuthorityArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: NetworkProfileDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEapMethod(value: NetworkEapMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EapMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEapMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EapMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProfileArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProfileArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProfileArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProfileArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProfileName(value: NetworkProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProfileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityType(value: NetworkSecurityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsid(value: NetworkSsid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ssid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ssid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

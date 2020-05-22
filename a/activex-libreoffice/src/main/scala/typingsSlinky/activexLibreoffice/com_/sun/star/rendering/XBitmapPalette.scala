@@ -11,23 +11,22 @@ import scala.scalajs.js.annotation._
   * Interface to access the palette of a color-indexed bitmap.
   * @since OOo 2.0
   */
-@js.native
 trait XBitmapPalette extends XInterface {
   /**
     * Query associated color space.
     * @returns the color space that is associated with this palette.
     */
-  val ColorSpace: XColorSpace = js.native
+  val ColorSpace: XColorSpace
   /**
     * Request the number of palette entries available.
     * @returns the number of entries in this palette.
     */
-  val NumberOfEntries: Double = js.native
+  val NumberOfEntries: Double
   /**
     * Query associated color space.
     * @returns the color space that is associated with this palette.
     */
-  def getColorSpace(): XColorSpace = js.native
+  def getColorSpace(): XColorSpace
   /**
     * Request the color for the given palette entry.
     * @param entry Output parameter for the color components at the given palette entry.
@@ -35,12 +34,12 @@ trait XBitmapPalette extends XInterface {
     * @returns `TRUE` , if the given palette entry should be displayed opaque, and `FALSE` if the entry should be displayed transparent. This is sometimes used
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is smaller than zero or larger than {@link XBitmapPalette.getNumberOfEntries()} -1.
     */
-  def getIndex(entry: js.Array[SeqEquiv[ColorComponent]], nIndex: Double): Boolean = js.native
+  def getIndex(entry: js.Array[SeqEquiv[ColorComponent]], nIndex: Double): Boolean
   /**
     * Request the number of palette entries available.
     * @returns the number of entries in this palette.
     */
-  def getNumberOfEntries(): Double = js.native
+  def getNumberOfEntries(): Double
   /**
     * Set the color for the given palette entry.
     * @param color Sequence of device color values in the associated bitmap's device color format.
@@ -50,7 +49,7 @@ trait XBitmapPalette extends XInterface {
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the index is smaller than zero or larger than {@link XBitmapPalette.getNumberOfEntries()} -1.
     * @throws com::sun::star::lang::IllegalArgumentException if the given sequence of color components does not match the associated bitmap's device color format.
     */
-  def setIndex(color: SeqEquiv[ColorComponent], transparency: Boolean, nIndex: Double): Boolean = js.native
+  def setIndex(color: SeqEquiv[ColorComponent], transparency: Boolean, nIndex: Double): Boolean
 }
 
 object XBitmapPalette {
@@ -69,49 +68,5 @@ object XBitmapPalette {
     val __obj = js.Dynamic.literal(ColorSpace = ColorSpace.asInstanceOf[js.Any], NumberOfEntries = NumberOfEntries.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getColorSpace = js.Any.fromFunction0(getColorSpace), getIndex = js.Any.fromFunction2(getIndex), getNumberOfEntries = js.Any.fromFunction0(getNumberOfEntries), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setIndex = js.Any.fromFunction3(setIndex))
     __obj.asInstanceOf[XBitmapPalette]
   }
-  @scala.inline
-  implicit class XBitmapPaletteOps[Self <: XBitmapPalette] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorSpace(value: XColorSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberOfEntries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetColorSpace(value: () => XColorSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColorSpace")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIndex(value: (js.Array[SeqEquiv[ColorComponent]], Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumberOfEntries(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberOfEntries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetIndex(value: (SeqEquiv[ColorComponent], Boolean, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIndex")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

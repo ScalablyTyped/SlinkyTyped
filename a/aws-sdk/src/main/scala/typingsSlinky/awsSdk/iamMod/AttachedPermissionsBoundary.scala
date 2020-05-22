@@ -18,41 +18,14 @@ trait AttachedPermissionsBoundary extends js.Object {
 
 object AttachedPermissionsBoundary {
   @scala.inline
-  def apply(): AttachedPermissionsBoundary = {
+  def apply(
+    PermissionsBoundaryArn: arnType = null,
+    PermissionsBoundaryType: PermissionsBoundaryAttachmentType = null
+  ): AttachedPermissionsBoundary = {
     val __obj = js.Dynamic.literal()
+    if (PermissionsBoundaryArn != null) __obj.updateDynamic("PermissionsBoundaryArn")(PermissionsBoundaryArn.asInstanceOf[js.Any])
+    if (PermissionsBoundaryType != null) __obj.updateDynamic("PermissionsBoundaryType")(PermissionsBoundaryType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachedPermissionsBoundary]
   }
-  @scala.inline
-  implicit class AttachedPermissionsBoundaryOps[Self <: AttachedPermissionsBoundary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermissionsBoundaryArn(value: arnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionsBoundaryArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionsBoundaryType(value: PermissionsBoundaryAttachmentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionsBoundaryType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

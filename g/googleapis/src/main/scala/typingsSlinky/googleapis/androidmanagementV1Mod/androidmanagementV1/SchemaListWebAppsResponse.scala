@@ -21,41 +21,11 @@ trait SchemaListWebAppsResponse extends js.Object {
 
 object SchemaListWebAppsResponse {
   @scala.inline
-  def apply(): SchemaListWebAppsResponse = {
+  def apply(nextPageToken: String = null, webApps: js.Array[SchemaWebApp] = null): SchemaListWebAppsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (webApps != null) __obj.updateDynamic("webApps")(webApps.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListWebAppsResponse]
   }
-  @scala.inline
-  implicit class SchemaListWebAppsResponseOps[Self <: SchemaListWebAppsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebApps(value: js.Array[SchemaWebApp]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webApps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebApps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webApps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

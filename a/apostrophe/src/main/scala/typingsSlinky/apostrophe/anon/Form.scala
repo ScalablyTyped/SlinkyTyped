@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Form extends js.Object {
   def form(
     req: js.Any,
@@ -14,7 +13,7 @@ trait Form extends js.Object {
     `object`: AposObject,
     field: js.Any,
     callback: js.Function0[_]
-  ): Unit = js.native
+  ): Unit
   def string(
     req: js.Any,
     data: js.Any,
@@ -22,7 +21,7 @@ trait Form extends js.Object {
     `object`: AposObject,
     field: js.Any,
     callback: js.Function0[_]
-  ): Unit = js.native
+  ): Unit
 }
 
 object Form {
@@ -34,25 +33,5 @@ object Form {
     val __obj = js.Dynamic.literal(form = js.Any.fromFunction6(form), string = js.Any.fromFunction6(string))
     __obj.asInstanceOf[Form]
   }
-  @scala.inline
-  implicit class FormOps[Self <: Form] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForm(value: (js.Any, js.Any, String, AposObject, js.Any, js.Function0[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withString(value: (js.Any, js.Any, String, AposObject, js.Any, js.Function0[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.Any.fromFunction6(value))
-        ret
-    }
-  }
-  
 }
 

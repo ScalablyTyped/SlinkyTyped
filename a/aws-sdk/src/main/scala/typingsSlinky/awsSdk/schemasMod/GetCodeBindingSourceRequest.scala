@@ -6,55 +6,30 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait GetCodeBindingSourceRequest extends js.Object {
+  /**
+    * The language of the code binding.
+    */
   var Language: string = js.native
+  /**
+    * The name of the registry.
+    */
   var RegistryName: string = js.native
+  /**
+    * The name of the schema.
+    */
   var SchemaName: string = js.native
+  /**
+    * Specifying this limits the results to only this schema version.
+    */
   var SchemaVersion: js.UndefOr[string] = js.native
 }
 
 object GetCodeBindingSourceRequest {
   @scala.inline
-  def apply(Language: string, RegistryName: string, SchemaName: string): GetCodeBindingSourceRequest = {
+  def apply(Language: string, RegistryName: string, SchemaName: string, SchemaVersion: string = null): GetCodeBindingSourceRequest = {
     val __obj = js.Dynamic.literal(Language = Language.asInstanceOf[js.Any], RegistryName = RegistryName.asInstanceOf[js.Any], SchemaName = SchemaName.asInstanceOf[js.Any])
+    if (SchemaVersion != null) __obj.updateDynamic("SchemaVersion")(SchemaVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCodeBindingSourceRequest]
   }
-  @scala.inline
-  implicit class GetCodeBindingSourceRequestOps[Self <: GetCodeBindingSourceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguage(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegistryName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchemaName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchemaVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

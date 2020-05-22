@@ -6,13 +6,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents methods common to all ADC providers. */
-@js.native
 trait IAdcProvider extends js.Object {
   /**
     * Gets the ADC controllers available on the system.
     * @return When this method completes it returns a list of all the available controllers on the system.
     */
-  def getControllers(): IVectorView[IAdcControllerProvider] = js.native
+  def getControllers(): IVectorView[IAdcControllerProvider]
 }
 
 object IAdcProvider {
@@ -21,19 +20,5 @@ object IAdcProvider {
     val __obj = js.Dynamic.literal(getControllers = js.Any.fromFunction0(getControllers))
     __obj.asInstanceOf[IAdcProvider]
   }
-  @scala.inline
-  implicit class IAdcProviderOps[Self <: IAdcProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetControllers(value: () => IVectorView[IAdcControllerProvider]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getControllers")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

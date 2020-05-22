@@ -31,59 +31,17 @@ trait TriggerTrigger extends js.Object {
 
 object TriggerTrigger {
   @scala.inline
-  def apply(destinationArn: Input[String], events: Input[js.Array[Input[String]]], name: Input[String]): TriggerTrigger = {
+  def apply(
+    destinationArn: Input[String],
+    events: Input[js.Array[Input[String]]],
+    name: Input[String],
+    branches: Input[js.Array[Input[String]]] = null,
+    customData: Input[String] = null
+  ): TriggerTrigger = {
     val __obj = js.Dynamic.literal(destinationArn = destinationArn.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (branches != null) __obj.updateDynamic("branches")(branches.asInstanceOf[js.Any])
+    if (customData != null) __obj.updateDynamic("customData")(customData.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggerTrigger]
   }
-  @scala.inline
-  implicit class TriggerTriggerOps[Self <: TriggerTrigger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvents(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBranches(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomData(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

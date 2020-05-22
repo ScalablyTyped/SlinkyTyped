@@ -19,41 +19,14 @@ trait VirtualServiceSpecProvider extends js.Object {
 
 object VirtualServiceSpecProvider {
   @scala.inline
-  def apply(): VirtualServiceSpecProvider = {
+  def apply(
+    virtualNode: Input[VirtualServiceSpecProviderVirtualNode] = null,
+    virtualRouter: Input[VirtualServiceSpecProviderVirtualRouter] = null
+  ): VirtualServiceSpecProvider = {
     val __obj = js.Dynamic.literal()
+    if (virtualNode != null) __obj.updateDynamic("virtualNode")(virtualNode.asInstanceOf[js.Any])
+    if (virtualRouter != null) __obj.updateDynamic("virtualRouter")(virtualRouter.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualServiceSpecProvider]
   }
-  @scala.inline
-  implicit class VirtualServiceSpecProviderOps[Self <: VirtualServiceSpecProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVirtualNode(value: Input[VirtualServiceSpecProviderVirtualNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualRouter(value: Input[VirtualServiceSpecProviderVirtualRouter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualRouter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualRouter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualRouter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

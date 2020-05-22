@@ -5,65 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccountRef extends js.Object {
   /** Account for this link. */
-  var accountRef: js.UndefOr[typingsSlinky.gapiClientAnalytics.gapi.client.analytics.AccountRef] = js.native
+  var accountRef: js.UndefOr[typingsSlinky.gapiClientAnalytics.gapi.client.analytics.AccountRef] = js.undefined
   /** View (Profile) for this link. */
-  var profileRef: js.UndefOr[ProfileRef] = js.native
+  var profileRef: js.UndefOr[ProfileRef] = js.undefined
   /** Web property for this link. */
-  var webPropertyRef: js.UndefOr[typingsSlinky.gapiClientAnalytics.gapi.client.analytics.WebPropertyRef] = js.native
+  var webPropertyRef: js.UndefOr[typingsSlinky.gapiClientAnalytics.gapi.client.analytics.WebPropertyRef] = js.undefined
 }
 
 object AccountRef {
   @scala.inline
-  def apply(): AccountRef = {
+  def apply(
+    accountRef: typingsSlinky.gapiClientAnalytics.gapi.client.analytics.AccountRef = null,
+    profileRef: ProfileRef = null,
+    webPropertyRef: typingsSlinky.gapiClientAnalytics.gapi.client.analytics.WebPropertyRef = null
+  ): AccountRef = {
     val __obj = js.Dynamic.literal()
+    if (accountRef != null) __obj.updateDynamic("accountRef")(accountRef.asInstanceOf[js.Any])
+    if (profileRef != null) __obj.updateDynamic("profileRef")(profileRef.asInstanceOf[js.Any])
+    if (webPropertyRef != null) __obj.updateDynamic("webPropertyRef")(webPropertyRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountRef]
   }
-  @scala.inline
-  implicit class AccountRefOps[Self <: AccountRef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountRef(value: typingsSlinky.gapiClientAnalytics.gapi.client.analytics.AccountRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileRef(value: ProfileRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebPropertyRef(value: typingsSlinky.gapiClientAnalytics.gapi.client.analytics.WebPropertyRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebPropertyRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyRef")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

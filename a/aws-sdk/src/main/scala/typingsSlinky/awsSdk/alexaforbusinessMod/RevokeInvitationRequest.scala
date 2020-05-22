@@ -18,41 +18,11 @@ trait RevokeInvitationRequest extends js.Object {
 
 object RevokeInvitationRequest {
   @scala.inline
-  def apply(): RevokeInvitationRequest = {
+  def apply(EnrollmentId: EnrollmentId = null, UserArn: Arn = null): RevokeInvitationRequest = {
     val __obj = js.Dynamic.literal()
+    if (EnrollmentId != null) __obj.updateDynamic("EnrollmentId")(EnrollmentId.asInstanceOf[js.Any])
+    if (UserArn != null) __obj.updateDynamic("UserArn")(UserArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevokeInvitationRequest]
   }
-  @scala.inline
-  implicit class RevokeInvitationRequestOps[Self <: RevokeInvitationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnrollmentId(value: EnrollmentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnrollmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnrollmentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnrollmentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

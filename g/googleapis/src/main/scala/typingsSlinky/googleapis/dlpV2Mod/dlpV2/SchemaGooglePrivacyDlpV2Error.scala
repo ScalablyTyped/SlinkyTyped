@@ -19,41 +19,11 @@ trait SchemaGooglePrivacyDlpV2Error extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Error {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2Error = {
+  def apply(details: SchemaGoogleRpcStatus = null, timestamps: js.Array[String] = null): SchemaGooglePrivacyDlpV2Error = {
     val __obj = js.Dynamic.literal()
+    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
+    if (timestamps != null) __obj.updateDynamic("timestamps")(timestamps.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Error]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2ErrorOps[Self <: SchemaGooglePrivacyDlpV2Error] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetails(value: SchemaGoogleRpcStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

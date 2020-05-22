@@ -5,44 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Perpage extends js.Object {
-  var per_page: js.UndefOr[Double] = js.native
-  var `type`: user = js.native
+  var per_page: js.UndefOr[Double] = js.undefined
+  var `type`: user
 }
 
 object Perpage {
   @scala.inline
-  def apply(`type`: user): Perpage = {
+  def apply(`type`: user, per_page: js.UndefOr[Double] = js.undefined): Perpage = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(per_page)) __obj.updateDynamic("per_page")(per_page.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Perpage]
   }
-  @scala.inline
-  implicit class PerpageOps[Self <: Perpage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: user): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPer_page(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPer_page: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

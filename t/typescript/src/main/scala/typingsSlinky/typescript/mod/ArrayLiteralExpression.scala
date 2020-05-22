@@ -9,8 +9,8 @@ trait ArrayLiteralExpression
   extends PrimaryExpression
      with ArrayBindingOrAssignmentPattern
      with AssignmentPattern
-     with BindingOrAssignmentElement
-     with DestructuringPattern {
+     with DestructuringPattern
+     with _BindingOrAssignmentElement {
   var elements: NodeArray[Expression] = js.native
   @JSName("kind")
   var kind_ArrayLiteralExpression: typingsSlinky.typescript.mod.SyntaxKind.ArrayLiteralExpression = js.native

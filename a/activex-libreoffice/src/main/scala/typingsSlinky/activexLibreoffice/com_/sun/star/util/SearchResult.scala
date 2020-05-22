@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchResult extends js.Object {
-  var endOffset: SafeArray[Double] = js.native
-  var startOffset: SafeArray[Double] = js.native
+  var endOffset: SafeArray[Double]
+  var startOffset: SafeArray[Double]
   /**
     * Number of subexpressions.
     *
@@ -29,7 +28,7 @@ trait SearchResult extends js.Object {
     * 1, still startoffset[0] and endoffset[0] points to the matching substring for whole regular expression startoffset[i] and endoffset[i] points to the
     * matching substring of i th matching substring.
     */
-  var subRegExpressions: Double = js.native
+  var subRegExpressions: Double
 }
 
 object SearchResult {
@@ -38,31 +37,5 @@ object SearchResult {
     val __obj = js.Dynamic.literal(endOffset = endOffset.asInstanceOf[js.Any], startOffset = startOffset.asInstanceOf[js.Any], subRegExpressions = subRegExpressions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchResult]
   }
-  @scala.inline
-  implicit class SearchResultOps[Self <: SearchResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndOffset(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartOffset(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubRegExpressions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subRegExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

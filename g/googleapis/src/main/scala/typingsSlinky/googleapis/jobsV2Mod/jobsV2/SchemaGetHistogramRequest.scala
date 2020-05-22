@@ -47,77 +47,20 @@ trait SchemaGetHistogramRequest extends js.Object {
 
 object SchemaGetHistogramRequest {
   @scala.inline
-  def apply(): SchemaGetHistogramRequest = {
+  def apply(
+    allowBroadening: js.UndefOr[Boolean] = js.undefined,
+    filters: SchemaJobFilters = null,
+    query: SchemaJobQuery = null,
+    requestMetadata: SchemaRequestMetadata = null,
+    searchTypes: js.Array[String] = null
+  ): SchemaGetHistogramRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowBroadening)) __obj.updateDynamic("allowBroadening")(allowBroadening.get.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (requestMetadata != null) __obj.updateDynamic("requestMetadata")(requestMetadata.asInstanceOf[js.Any])
+    if (searchTypes != null) __obj.updateDynamic("searchTypes")(searchTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetHistogramRequest]
   }
-  @scala.inline
-  implicit class SchemaGetHistogramRequestOps[Self <: SchemaGetHistogramRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowBroadening(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowBroadening")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowBroadening: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowBroadening")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: SchemaJobFilters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: SchemaJobQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestMetadata(value: SchemaRequestMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

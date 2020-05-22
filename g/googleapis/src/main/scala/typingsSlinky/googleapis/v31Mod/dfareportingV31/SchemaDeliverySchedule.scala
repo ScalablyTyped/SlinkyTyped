@@ -37,65 +37,18 @@ trait SchemaDeliverySchedule extends js.Object {
 
 object SchemaDeliverySchedule {
   @scala.inline
-  def apply(): SchemaDeliverySchedule = {
+  def apply(
+    frequencyCap: SchemaFrequencyCap = null,
+    hardCutoff: js.UndefOr[Boolean] = js.undefined,
+    impressionRatio: String = null,
+    priority: String = null
+  ): SchemaDeliverySchedule = {
     val __obj = js.Dynamic.literal()
+    if (frequencyCap != null) __obj.updateDynamic("frequencyCap")(frequencyCap.asInstanceOf[js.Any])
+    if (!js.isUndefined(hardCutoff)) __obj.updateDynamic("hardCutoff")(hardCutoff.get.asInstanceOf[js.Any])
+    if (impressionRatio != null) __obj.updateDynamic("impressionRatio")(impressionRatio.asInstanceOf[js.Any])
+    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeliverySchedule]
   }
-  @scala.inline
-  implicit class SchemaDeliveryScheduleOps[Self <: SchemaDeliverySchedule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrequencyCap(value: SchemaFrequencyCap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequencyCap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrequencyCap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequencyCap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHardCutoff(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardCutoff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHardCutoff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardCutoff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImpressionRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpressionRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

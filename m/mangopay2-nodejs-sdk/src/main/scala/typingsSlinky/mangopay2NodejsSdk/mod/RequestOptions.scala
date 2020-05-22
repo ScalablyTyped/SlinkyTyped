@@ -7,15 +7,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestOptions extends js.Object {
-  var headers: PartialHeaders = js.native
+  var headers: PartialHeaders
   /**
     * Path options are replacing the ${placeholders} from apiMethods
     */
-  var path: ApiVersion = js.native
-  var requestConfig: Timeout = js.native
-  var responseConfig: Timeout = js.native
+  var path: ApiVersion
+  var requestConfig: Timeout
+  var responseConfig: Timeout
 }
 
 object RequestOptions {
@@ -24,37 +23,5 @@ object RequestOptions {
     val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], requestConfig = requestConfig.asInstanceOf[js.Any], responseConfig = responseConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
-  @scala.inline
-  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeaders(value: PartialHeaders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: ApiVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestConfig(value: Timeout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResponseConfig(value: Timeout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

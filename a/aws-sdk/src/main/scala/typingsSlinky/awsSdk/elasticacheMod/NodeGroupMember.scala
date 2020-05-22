@@ -30,77 +30,20 @@ trait NodeGroupMember extends js.Object {
 
 object NodeGroupMember {
   @scala.inline
-  def apply(): NodeGroupMember = {
+  def apply(
+    CacheClusterId: String = null,
+    CacheNodeId: String = null,
+    CurrentRole: String = null,
+    PreferredAvailabilityZone: String = null,
+    ReadEndpoint: Endpoint = null
+  ): NodeGroupMember = {
     val __obj = js.Dynamic.literal()
+    if (CacheClusterId != null) __obj.updateDynamic("CacheClusterId")(CacheClusterId.asInstanceOf[js.Any])
+    if (CacheNodeId != null) __obj.updateDynamic("CacheNodeId")(CacheNodeId.asInstanceOf[js.Any])
+    if (CurrentRole != null) __obj.updateDynamic("CurrentRole")(CurrentRole.asInstanceOf[js.Any])
+    if (PreferredAvailabilityZone != null) __obj.updateDynamic("PreferredAvailabilityZone")(PreferredAvailabilityZone.asInstanceOf[js.Any])
+    if (ReadEndpoint != null) __obj.updateDynamic("ReadEndpoint")(ReadEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeGroupMember]
   }
-  @scala.inline
-  implicit class NodeGroupMemberOps[Self <: NodeGroupMember] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheClusterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheClusterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheClusterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheNodeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheNodeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredAvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredAvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadEndpoint(value: Endpoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadEndpoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

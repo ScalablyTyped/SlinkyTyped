@@ -10,55 +10,33 @@ import scala.scalajs.js.annotation._
   * [requestThumbnailImagesAtTimes](Titanium.Media.VideoPlayer.requestThumbnailImagesAtTimes)
   * method.
   */
-@js.native
 trait ThumbnailResponse extends ErrorResponse {
   /**
-  	 * Thumbnail image, as a `Blob`.
-  	 */
-  var image: js.UndefOr[Blob] = js.native
+    * Thumbnail image, as a `Blob`.
+    */
+  var image: js.UndefOr[Blob] = js.undefined
   /**
-  	 * Time offset for the thumbnail, in seconds.
-  	 */
-  var time: js.UndefOr[Double] = js.native
+    * Time offset for the thumbnail, in seconds.
+    */
+  var time: js.UndefOr[Double] = js.undefined
 }
 
 object ThumbnailResponse {
   @scala.inline
-  def apply(): ThumbnailResponse = {
+  def apply(
+    code: js.UndefOr[Double] = js.undefined,
+    error: java.lang.String = null,
+    image: Blob = null,
+    success: js.UndefOr[Boolean] = js.undefined,
+    time: js.UndefOr[Double] = js.undefined
+  ): ThumbnailResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(code)) __obj.updateDynamic("code")(code.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (!js.isUndefined(success)) __obj.updateDynamic("success")(success.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(time)) __obj.updateDynamic("time")(time.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThumbnailResponse]
   }
-  @scala.inline
-  implicit class ThumbnailResponseOps[Self <: ThumbnailResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: Blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

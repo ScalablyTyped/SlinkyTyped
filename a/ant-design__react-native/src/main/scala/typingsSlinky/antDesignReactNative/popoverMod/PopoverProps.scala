@@ -7,111 +7,40 @@ import typingsSlinky.antDesignReactNative.popoverStyleMod.PopoverStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeModalPopover.popoverGeometryMod.Placement
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PopoverProps extends WithThemeStyles[PopoverStyle] {
-  var disabled: js.UndefOr[Boolean] = js.native
-  var onSelect: js.UndefOr[js.Function2[/* node */ js.Any, /* index */ js.UndefOr[Double], Unit]] = js.native
-  var overlay: TagMod[Any] = js.native
-  var placement: js.UndefOr[Placement | auto] = js.native
-  var renderOverlayComponent: js.UndefOr[js.Function1[/* node */ TagMod[Any], TagMod[Any]]] = js.native
-  var triggerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var onSelect: js.UndefOr[js.Function2[/* node */ js.Any, /* index */ js.UndefOr[Double], Unit]] = js.undefined
+  var overlay: TagMod[Any]
+  var placement: js.UndefOr[Placement | auto] = js.undefined
+  var renderOverlayComponent: js.UndefOr[js.Function1[/* node */ TagMod[Any], TagMod[Any]]] = js.undefined
+  var triggerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
 }
 
 object PopoverProps {
   @scala.inline
-  def apply(): PopoverProps = {
+  def apply(
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    onSelect: (/* node */ js.Any, /* index */ js.UndefOr[Double]) => Unit = null,
+    overlay: TagMod[Any] = null,
+    placement: Placement | auto = null,
+    renderOverlayComponent: /* node */ TagMod[Any] => TagMod[Any] = null,
+    styles: Partial[PopoverStyle] = null,
+    triggerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined
+  ): PopoverProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (renderOverlayComponent != null) __obj.updateDynamic("renderOverlayComponent")(js.Any.fromFunction1(renderOverlayComponent))
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (!js.isUndefined(triggerStyle)) __obj.updateDynamic("triggerStyle")(triggerStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[PopoverProps]
   }
-  @scala.inline
-  implicit class PopoverPropsOps[Self <: PopoverProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: (/* node */ js.Any, /* index */ js.UndefOr[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacement(value: Placement | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderOverlayComponent(value: /* node */ TagMod[Any] => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOverlayComponent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderOverlayComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOverlayComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerStyle")(null)
-        ret
-    }
-  }
-  
 }
 

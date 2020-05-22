@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientFileManager.ToolbarUpdating event.
   */
-@js.native
 trait ASPxClientFileManagerToolbarUpdatingEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name of the currently active file manager area.
     */
-  var activeAreaName: String = js.native
+  var activeAreaName: String
 }
 
 object ASPxClientFileManagerToolbarUpdatingEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientFileManagerToolbarUpdatingEventArgs {
     val __obj = js.Dynamic.literal(activeAreaName = activeAreaName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientFileManagerToolbarUpdatingEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientFileManagerToolbarUpdatingEventArgsOps[Self <: ASPxClientFileManagerToolbarUpdatingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveAreaName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeAreaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

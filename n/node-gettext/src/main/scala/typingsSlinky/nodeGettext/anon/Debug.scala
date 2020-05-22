@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Debug extends js.Object {
-  var debug: js.UndefOr[Boolean] = js.native
-  var sourceLocale: js.UndefOr[String] = js.native
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var sourceLocale: js.UndefOr[String] = js.undefined
 }
 
 object Debug {
   @scala.inline
-  def apply(): Debug = {
+  def apply(debug: js.UndefOr[Boolean] = js.undefined, sourceLocale: String = null): Debug = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (sourceLocale != null) __obj.updateDynamic("sourceLocale")(sourceLocale.asInstanceOf[js.Any])
     __obj.asInstanceOf[Debug]
   }
-  @scala.inline
-  implicit class DebugOps[Self <: Debug] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

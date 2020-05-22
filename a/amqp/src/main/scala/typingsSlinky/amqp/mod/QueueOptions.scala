@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueueOptions extends js.Object {
   /**
     * a map of additional arguments to pass in when creating a queue
     */
-  var arguments: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var arguments: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   /**
     * Default: true
     *
@@ -20,13 +19,13 @@ trait QueueOptions extends js.Object {
     *
     * If there was no consumer ever on the queue, it won't be deleted
     */
-  var autoDelete: js.UndefOr[Boolean] = js.native
+  var autoDelete: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: false
     *
     * when true the channel will close on unsubscribe
     */
-  var closeChannelOnUnsubscribe: js.UndefOr[Boolean] = js.native
+  var closeChannelOnUnsubscribe: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: false
     *
@@ -37,7 +36,7 @@ trait QueueOptions extends js.Object {
     * Note that durable queues do not necessarily hold persistent messages,
     * although it does not make sense to send persistent messages to a transient queue
     */
-  var durable: js.UndefOr[Boolean] = js.native
+  var durable: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: false
     *
@@ -45,13 +44,13 @@ trait QueueOptions extends js.Object {
     *
     * Setting the 'exclusive' flag always implies 'autoDelete'
     */
-  var exclusive: js.UndefOr[Boolean] = js.native
+  var exclusive: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: false
     *
     * If set, the queue will not be declared, this will allow a queue to be deleted if you don't know its previous options
     */
-  var noDeclare: js.UndefOr[Boolean] = js.native
+  var noDeclare: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: false
     *
@@ -59,106 +58,29 @@ trait QueueOptions extends js.Object {
     *
     * The client can use this to check whether a queue exists without modifying the server state
     */
-  var passive: js.UndefOr[Boolean] = js.native
+  var passive: js.UndefOr[Boolean] = js.undefined
 }
 
 object QueueOptions {
   @scala.inline
-  def apply(): QueueOptions = {
+  def apply(
+    arguments: StringDictionary[js.Any] = null,
+    autoDelete: js.UndefOr[Boolean] = js.undefined,
+    closeChannelOnUnsubscribe: js.UndefOr[Boolean] = js.undefined,
+    durable: js.UndefOr[Boolean] = js.undefined,
+    exclusive: js.UndefOr[Boolean] = js.undefined,
+    noDeclare: js.UndefOr[Boolean] = js.undefined,
+    passive: js.UndefOr[Boolean] = js.undefined
+  ): QueueOptions = {
     val __obj = js.Dynamic.literal()
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoDelete)) __obj.updateDynamic("autoDelete")(autoDelete.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeChannelOnUnsubscribe)) __obj.updateDynamic("closeChannelOnUnsubscribe")(closeChannelOnUnsubscribe.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(durable)) __obj.updateDynamic("durable")(durable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noDeclare)) __obj.updateDynamic("noDeclare")(noDeclare.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passive)) __obj.updateDynamic("passive")(passive.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueueOptions]
   }
-  @scala.inline
-  implicit class QueueOptionsOps[Self <: QueueOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArguments(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoDelete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseChannelOnUnsubscribe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeChannelOnUnsubscribe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseChannelOnUnsubscribe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeChannelOnUnsubscribe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDurable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclusive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoDeclare(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDeclare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoDeclare: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDeclare")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

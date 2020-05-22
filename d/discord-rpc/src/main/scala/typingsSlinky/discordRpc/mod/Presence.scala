@@ -4,217 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Presence extends js.Object {
-  var details: js.UndefOr[String] = js.native
-  var endTimestamp: js.UndefOr[Double | js.Date] = js.native
-  var instance: js.UndefOr[Boolean] = js.native
-  var joinSecret: js.UndefOr[String] = js.native
-  var largeImageKey: js.UndefOr[String] = js.native
-  var largeImageText: js.UndefOr[String] = js.native
-  var matchSecret: js.UndefOr[String] = js.native
-  var partyMax: js.UndefOr[Double] = js.native
-  var partySize: js.UndefOr[Double] = js.native
-  var smallImageKey: js.UndefOr[String] = js.native
-  var smallImageText: js.UndefOr[String] = js.native
-  var spectateSecret: js.UndefOr[String] = js.native
-  var startTimestamp: js.UndefOr[Double | js.Date] = js.native
-  var state: js.UndefOr[String] = js.native
+  var details: js.UndefOr[String] = js.undefined
+  var endTimestamp: js.UndefOr[Double | js.Date] = js.undefined
+  var instance: js.UndefOr[Boolean] = js.undefined
+  var joinSecret: js.UndefOr[String] = js.undefined
+  var largeImageKey: js.UndefOr[String] = js.undefined
+  var largeImageText: js.UndefOr[String] = js.undefined
+  var matchSecret: js.UndefOr[String] = js.undefined
+  var partyMax: js.UndefOr[Double] = js.undefined
+  var partySize: js.UndefOr[Double] = js.undefined
+  var smallImageKey: js.UndefOr[String] = js.undefined
+  var smallImageText: js.UndefOr[String] = js.undefined
+  var spectateSecret: js.UndefOr[String] = js.undefined
+  var startTimestamp: js.UndefOr[Double | js.Date] = js.undefined
+  var state: js.UndefOr[String] = js.undefined
 }
 
 object Presence {
   @scala.inline
-  def apply(): Presence = {
+  def apply(
+    details: String = null,
+    endTimestamp: Double | js.Date = null,
+    instance: js.UndefOr[Boolean] = js.undefined,
+    joinSecret: String = null,
+    largeImageKey: String = null,
+    largeImageText: String = null,
+    matchSecret: String = null,
+    partyMax: js.UndefOr[Double] = js.undefined,
+    partySize: js.UndefOr[Double] = js.undefined,
+    smallImageKey: String = null,
+    smallImageText: String = null,
+    spectateSecret: String = null,
+    startTimestamp: Double | js.Date = null,
+    state: String = null
+  ): Presence = {
     val __obj = js.Dynamic.literal()
+    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
+    if (endTimestamp != null) __obj.updateDynamic("endTimestamp")(endTimestamp.asInstanceOf[js.Any])
+    if (!js.isUndefined(instance)) __obj.updateDynamic("instance")(instance.get.asInstanceOf[js.Any])
+    if (joinSecret != null) __obj.updateDynamic("joinSecret")(joinSecret.asInstanceOf[js.Any])
+    if (largeImageKey != null) __obj.updateDynamic("largeImageKey")(largeImageKey.asInstanceOf[js.Any])
+    if (largeImageText != null) __obj.updateDynamic("largeImageText")(largeImageText.asInstanceOf[js.Any])
+    if (matchSecret != null) __obj.updateDynamic("matchSecret")(matchSecret.asInstanceOf[js.Any])
+    if (!js.isUndefined(partyMax)) __obj.updateDynamic("partyMax")(partyMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(partySize)) __obj.updateDynamic("partySize")(partySize.get.asInstanceOf[js.Any])
+    if (smallImageKey != null) __obj.updateDynamic("smallImageKey")(smallImageKey.asInstanceOf[js.Any])
+    if (smallImageText != null) __obj.updateDynamic("smallImageText")(smallImageText.asInstanceOf[js.Any])
+    if (spectateSecret != null) __obj.updateDynamic("spectateSecret")(spectateSecret.asInstanceOf[js.Any])
+    if (startTimestamp != null) __obj.updateDynamic("startTimestamp")(startTimestamp.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[Presence]
   }
-  @scala.inline
-  implicit class PresenceOps[Self <: Presence] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTimestampDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndTimestamp(value: Double | js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJoinSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joinSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJoinSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joinSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLargeImageKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeImageKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLargeImageKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeImageKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLargeImageText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeImageText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLargeImageText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeImageText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartyMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partyMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartyMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partyMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartySize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partySize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartySize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partySize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmallImageKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallImageKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmallImageKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallImageKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmallImageText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallImageText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmallImageText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallImageText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpectateSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spectateSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpectateSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spectateSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTimestampDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTimestamp(value: Double | js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

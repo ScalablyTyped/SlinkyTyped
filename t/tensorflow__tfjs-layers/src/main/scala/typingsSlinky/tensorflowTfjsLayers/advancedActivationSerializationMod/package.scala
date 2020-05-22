@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object advancedActivationSerializationMod {
+  type AdvancedActivationLayerSerialization = typingsSlinky.tensorflowTfjsLayers.advancedActivationSerializationMod.ReLULayerSerialization | typingsSlinky.tensorflowTfjsLayers.advancedActivationSerializationMod.LeakyReLULayerSerialization | typingsSlinky.tensorflowTfjsLayers.advancedActivationSerializationMod.PReLULayerSerialization | typingsSlinky.tensorflowTfjsLayers.advancedActivationSerializationMod.ELULayerSerialization | typingsSlinky.tensorflowTfjsLayers.advancedActivationSerializationMod.ThresholdedReLULayerSerialization | typingsSlinky.tensorflowTfjsLayers.advancedActivationSerializationMod.SoftmaxLayerSerialization
   type ELULayerSerialization = typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.BaseLayerSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ELU, 
     typingsSlinky.tensorflowTfjsLayers.advancedActivationSerializationMod.ELULayerConfig

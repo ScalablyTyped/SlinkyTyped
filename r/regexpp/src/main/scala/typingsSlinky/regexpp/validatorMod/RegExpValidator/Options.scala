@@ -18,28 +18,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var ecmaVersion: js.UndefOr[`5` | `2015` | `2016` | `2017` | `2018`] = js.native
-  var onAlternativeEnter: js.UndefOr[js.Function2[/* start */ Double, /* index */ Double, Unit]] = js.native
-  var onAlternativeLeave: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, /* index */ Double, Unit]] = js.native
-  var onAnyCharacterSet: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, any, Unit]] = js.native
+  var ecmaVersion: js.UndefOr[`5` | `2015` | `2016` | `2017` | `2018`] = js.undefined
+  var onAlternativeEnter: js.UndefOr[js.Function2[/* start */ Double, /* index */ Double, Unit]] = js.undefined
+  var onAlternativeLeave: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, /* index */ Double, Unit]] = js.undefined
+  var onAnyCharacterSet: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, any, Unit]] = js.undefined
   var onBackreference: js.UndefOr[
     js.Function3[/* start */ Double, /* end */ Double, /* ref */ Double | String, Unit]
-  ] = js.native
-  var onCapturingGroupEnter: js.UndefOr[js.Function2[/* start */ Double, /* name */ String | Null, Unit]] = js.native
+  ] = js.undefined
+  var onCapturingGroupEnter: js.UndefOr[js.Function2[/* start */ Double, /* name */ String | Null, Unit]] = js.undefined
   var onCapturingGroupLeave: js.UndefOr[
     js.Function3[/* start */ Double, /* end */ Double, /* name */ String | Null, Unit]
-  ] = js.native
-  var onCharacter: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, /* value */ Double, Unit]] = js.native
-  var onCharacterClassEnter: js.UndefOr[js.Function2[/* start */ Double, /* negate */ Boolean, Unit]] = js.native
-  var onCharacterClassLeave: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, /* negate */ Boolean, Unit]] = js.native
+  ] = js.undefined
+  var onCharacter: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, /* value */ Double, Unit]] = js.undefined
+  var onCharacterClassEnter: js.UndefOr[js.Function2[/* start */ Double, /* negate */ Boolean, Unit]] = js.undefined
+  var onCharacterClassLeave: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, /* negate */ Boolean, Unit]] = js.undefined
   var onCharacterClassRange: js.UndefOr[
     js.Function4[/* start */ Double, /* end */ Double, /* min */ Double, /* max */ Double, Unit]
-  ] = js.native
-  var onDisjunctionEnter: js.UndefOr[js.Function1[/* start */ Double, Unit]] = js.native
-  var onDisjunctionLeave: js.UndefOr[js.Function2[/* start */ Double, /* end */ Double, Unit]] = js.native
-  var onEdgeAssertion: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, /* kind */ start | end, Unit]] = js.native
+  ] = js.undefined
+  var onDisjunctionEnter: js.UndefOr[js.Function1[/* start */ Double, Unit]] = js.undefined
+  var onDisjunctionLeave: js.UndefOr[js.Function2[/* start */ Double, /* end */ Double, Unit]] = js.undefined
+  var onEdgeAssertion: js.UndefOr[js.Function3[/* start */ Double, /* end */ Double, /* kind */ start | end, Unit]] = js.undefined
   var onEscapeCharacterSet: js.UndefOr[
     js.Function4[
       /* start */ Double, 
@@ -48,7 +47,7 @@ trait Options extends js.Object {
       /* negate */ Boolean, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   var onFlags: js.UndefOr[
     js.Function8[
       /* start */ Double, 
@@ -61,14 +60,14 @@ trait Options extends js.Object {
       /* dotAll */ Boolean, 
       Unit
     ]
-  ] = js.native
-  var onGroupEnter: js.UndefOr[js.Function1[/* start */ Double, Unit]] = js.native
-  var onGroupLeave: js.UndefOr[js.Function2[/* start */ Double, /* end */ Double, Unit]] = js.native
-  var onLiteralEnter: js.UndefOr[js.Function1[/* start */ Double, Unit]] = js.native
-  var onLiteralLeave: js.UndefOr[js.Function2[/* start */ Double, /* end */ Double, Unit]] = js.native
+  ] = js.undefined
+  var onGroupEnter: js.UndefOr[js.Function1[/* start */ Double, Unit]] = js.undefined
+  var onGroupLeave: js.UndefOr[js.Function2[/* start */ Double, /* end */ Double, Unit]] = js.undefined
+  var onLiteralEnter: js.UndefOr[js.Function1[/* start */ Double, Unit]] = js.undefined
+  var onLiteralLeave: js.UndefOr[js.Function2[/* start */ Double, /* end */ Double, Unit]] = js.undefined
   var onLookaroundAssertionEnter: js.UndefOr[
     js.Function3[/* start */ Double, /* kind */ lookahead | lookbehind, /* negate */ Boolean, Unit]
-  ] = js.native
+  ] = js.undefined
   var onLookaroundAssertionLeave: js.UndefOr[
     js.Function4[
       /* start */ Double, 
@@ -77,9 +76,9 @@ trait Options extends js.Object {
       /* negate */ Boolean, 
       Unit
     ]
-  ] = js.native
-  var onPatternEnter: js.UndefOr[js.Function1[/* start */ Double, Unit]] = js.native
-  var onPatternLeave: js.UndefOr[js.Function2[/* start */ Double, /* end */ Double, Unit]] = js.native
+  ] = js.undefined
+  var onPatternEnter: js.UndefOr[js.Function1[/* start */ Double, Unit]] = js.undefined
+  var onPatternLeave: js.UndefOr[js.Function2[/* start */ Double, /* end */ Double, Unit]] = js.undefined
   var onQuantifier: js.UndefOr[
     js.Function5[
       /* start */ Double, 
@@ -89,7 +88,7 @@ trait Options extends js.Object {
       /* greedy */ Boolean, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   var onUnicodePropertyCharacterSet: js.UndefOr[
     js.Function6[
       /* start */ Double, 
@@ -100,372 +99,75 @@ trait Options extends js.Object {
       /* negate */ Boolean, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   var onWordBoundaryAssertion: js.UndefOr[
     js.Function4[/* start */ Double, /* end */ Double, word, /* negate */ Boolean, Unit]
-  ] = js.native
-  var strict: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var strict: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    ecmaVersion: `5` | `2015` | `2016` | `2017` | `2018` = null,
+    onAlternativeEnter: (/* start */ Double, /* index */ Double) => Unit = null,
+    onAlternativeLeave: (/* start */ Double, /* end */ Double, /* index */ Double) => Unit = null,
+    onAnyCharacterSet: (/* start */ Double, /* end */ Double, any) => Unit = null,
+    onBackreference: (/* start */ Double, /* end */ Double, /* ref */ Double | String) => Unit = null,
+    onCapturingGroupEnter: (/* start */ Double, /* name */ String | Null) => Unit = null,
+    onCapturingGroupLeave: (/* start */ Double, /* end */ Double, /* name */ String | Null) => Unit = null,
+    onCharacter: (/* start */ Double, /* end */ Double, /* value */ Double) => Unit = null,
+    onCharacterClassEnter: (/* start */ Double, /* negate */ Boolean) => Unit = null,
+    onCharacterClassLeave: (/* start */ Double, /* end */ Double, /* negate */ Boolean) => Unit = null,
+    onCharacterClassRange: (/* start */ Double, /* end */ Double, /* min */ Double, /* max */ Double) => Unit = null,
+    onDisjunctionEnter: /* start */ Double => Unit = null,
+    onDisjunctionLeave: (/* start */ Double, /* end */ Double) => Unit = null,
+    onEdgeAssertion: (/* start */ Double, /* end */ Double, /* kind */ start | end) => Unit = null,
+    onEscapeCharacterSet: (/* start */ Double, /* end */ Double, /* kind */ digit | space | word, /* negate */ Boolean) => Unit = null,
+    onFlags: (/* start */ Double, /* end */ Double, /* global */ Boolean, /* ignoreCase */ Boolean, /* multiline */ Boolean, /* unicode */ Boolean, /* sticky */ Boolean, /* dotAll */ Boolean) => Unit = null,
+    onGroupEnter: /* start */ Double => Unit = null,
+    onGroupLeave: (/* start */ Double, /* end */ Double) => Unit = null,
+    onLiteralEnter: /* start */ Double => Unit = null,
+    onLiteralLeave: (/* start */ Double, /* end */ Double) => Unit = null,
+    onLookaroundAssertionEnter: (/* start */ Double, /* kind */ lookahead | lookbehind, /* negate */ Boolean) => Unit = null,
+    onLookaroundAssertionLeave: (/* start */ Double, /* end */ Double, /* kind */ lookahead | lookbehind, /* negate */ Boolean) => Unit = null,
+    onPatternEnter: /* start */ Double => Unit = null,
+    onPatternLeave: (/* start */ Double, /* end */ Double) => Unit = null,
+    onQuantifier: (/* start */ Double, /* end */ Double, /* min */ Double, /* max */ Double, /* greedy */ Boolean) => Unit = null,
+    onUnicodePropertyCharacterSet: (/* start */ Double, /* end */ Double, property, /* key */ String, /* value */ String | Null, /* negate */ Boolean) => Unit = null,
+    onWordBoundaryAssertion: (/* start */ Double, /* end */ Double, word, /* negate */ Boolean) => Unit = null,
+    strict: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (ecmaVersion != null) __obj.updateDynamic("ecmaVersion")(ecmaVersion.asInstanceOf[js.Any])
+    if (onAlternativeEnter != null) __obj.updateDynamic("onAlternativeEnter")(js.Any.fromFunction2(onAlternativeEnter))
+    if (onAlternativeLeave != null) __obj.updateDynamic("onAlternativeLeave")(js.Any.fromFunction3(onAlternativeLeave))
+    if (onAnyCharacterSet != null) __obj.updateDynamic("onAnyCharacterSet")(js.Any.fromFunction3(onAnyCharacterSet))
+    if (onBackreference != null) __obj.updateDynamic("onBackreference")(js.Any.fromFunction3(onBackreference))
+    if (onCapturingGroupEnter != null) __obj.updateDynamic("onCapturingGroupEnter")(js.Any.fromFunction2(onCapturingGroupEnter))
+    if (onCapturingGroupLeave != null) __obj.updateDynamic("onCapturingGroupLeave")(js.Any.fromFunction3(onCapturingGroupLeave))
+    if (onCharacter != null) __obj.updateDynamic("onCharacter")(js.Any.fromFunction3(onCharacter))
+    if (onCharacterClassEnter != null) __obj.updateDynamic("onCharacterClassEnter")(js.Any.fromFunction2(onCharacterClassEnter))
+    if (onCharacterClassLeave != null) __obj.updateDynamic("onCharacterClassLeave")(js.Any.fromFunction3(onCharacterClassLeave))
+    if (onCharacterClassRange != null) __obj.updateDynamic("onCharacterClassRange")(js.Any.fromFunction4(onCharacterClassRange))
+    if (onDisjunctionEnter != null) __obj.updateDynamic("onDisjunctionEnter")(js.Any.fromFunction1(onDisjunctionEnter))
+    if (onDisjunctionLeave != null) __obj.updateDynamic("onDisjunctionLeave")(js.Any.fromFunction2(onDisjunctionLeave))
+    if (onEdgeAssertion != null) __obj.updateDynamic("onEdgeAssertion")(js.Any.fromFunction3(onEdgeAssertion))
+    if (onEscapeCharacterSet != null) __obj.updateDynamic("onEscapeCharacterSet")(js.Any.fromFunction4(onEscapeCharacterSet))
+    if (onFlags != null) __obj.updateDynamic("onFlags")(js.Any.fromFunction8(onFlags))
+    if (onGroupEnter != null) __obj.updateDynamic("onGroupEnter")(js.Any.fromFunction1(onGroupEnter))
+    if (onGroupLeave != null) __obj.updateDynamic("onGroupLeave")(js.Any.fromFunction2(onGroupLeave))
+    if (onLiteralEnter != null) __obj.updateDynamic("onLiteralEnter")(js.Any.fromFunction1(onLiteralEnter))
+    if (onLiteralLeave != null) __obj.updateDynamic("onLiteralLeave")(js.Any.fromFunction2(onLiteralLeave))
+    if (onLookaroundAssertionEnter != null) __obj.updateDynamic("onLookaroundAssertionEnter")(js.Any.fromFunction3(onLookaroundAssertionEnter))
+    if (onLookaroundAssertionLeave != null) __obj.updateDynamic("onLookaroundAssertionLeave")(js.Any.fromFunction4(onLookaroundAssertionLeave))
+    if (onPatternEnter != null) __obj.updateDynamic("onPatternEnter")(js.Any.fromFunction1(onPatternEnter))
+    if (onPatternLeave != null) __obj.updateDynamic("onPatternLeave")(js.Any.fromFunction2(onPatternLeave))
+    if (onQuantifier != null) __obj.updateDynamic("onQuantifier")(js.Any.fromFunction5(onQuantifier))
+    if (onUnicodePropertyCharacterSet != null) __obj.updateDynamic("onUnicodePropertyCharacterSet")(js.Any.fromFunction6(onUnicodePropertyCharacterSet))
+    if (onWordBoundaryAssertion != null) __obj.updateDynamic("onWordBoundaryAssertion")(js.Any.fromFunction4(onWordBoundaryAssertion))
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEcmaVersion(value: `5` | `2015` | `2016` | `2017` | `2018`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcmaVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAlternativeEnter(value: (/* start */ Double, /* index */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlternativeEnter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAlternativeEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlternativeEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAlternativeLeave(value: (/* start */ Double, /* end */ Double, /* index */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlternativeLeave")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAlternativeLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlternativeLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAnyCharacterSet(value: (/* start */ Double, /* end */ Double, any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnyCharacterSet")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAnyCharacterSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnyCharacterSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBackreference(value: (/* start */ Double, /* end */ Double, /* ref */ Double | String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBackreference")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBackreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBackreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCapturingGroupEnter(value: (/* start */ Double, /* name */ String | Null) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCapturingGroupEnter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCapturingGroupEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCapturingGroupEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCapturingGroupLeave(value: (/* start */ Double, /* end */ Double, /* name */ String | Null) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCapturingGroupLeave")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCapturingGroupLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCapturingGroupLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCharacter(value: (/* start */ Double, /* end */ Double, /* value */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCharacter")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCharacter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCharacter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCharacterClassEnter(value: (/* start */ Double, /* negate */ Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCharacterClassEnter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCharacterClassEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCharacterClassEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCharacterClassLeave(value: (/* start */ Double, /* end */ Double, /* negate */ Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCharacterClassLeave")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCharacterClassLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCharacterClassLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCharacterClassRange(value: (/* start */ Double, /* end */ Double, /* min */ Double, /* max */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCharacterClassRange")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCharacterClassRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCharacterClassRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDisjunctionEnter(value: /* start */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDisjunctionEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDisjunctionEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDisjunctionEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDisjunctionLeave(value: (/* start */ Double, /* end */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDisjunctionLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDisjunctionLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDisjunctionLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEdgeAssertion(value: (/* start */ Double, /* end */ Double, /* kind */ start | end) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEdgeAssertion")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEdgeAssertion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEdgeAssertion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEscapeCharacterSet(
-      value: (/* start */ Double, /* end */ Double, /* kind */ digit | space | word, /* negate */ Boolean) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscapeCharacterSet")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEscapeCharacterSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscapeCharacterSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFlags(
-      value: (/* start */ Double, /* end */ Double, /* global */ Boolean, /* ignoreCase */ Boolean, /* multiline */ Boolean, /* unicode */ Boolean, /* sticky */ Boolean, /* dotAll */ Boolean) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFlags")(js.Any.fromFunction8(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFlags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnGroupEnter(value: /* start */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGroupEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnGroupLeave(value: (/* start */ Double, /* end */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGroupLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLiteralEnter(value: /* start */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLiteralEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLiteralEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLiteralEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLiteralLeave(value: (/* start */ Double, /* end */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLiteralLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLiteralLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLiteralLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLookaroundAssertionEnter(value: (/* start */ Double, /* kind */ lookahead | lookbehind, /* negate */ Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLookaroundAssertionEnter")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLookaroundAssertionEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLookaroundAssertionEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLookaroundAssertionLeave(
-      value: (/* start */ Double, /* end */ Double, /* kind */ lookahead | lookbehind, /* negate */ Boolean) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLookaroundAssertionLeave")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLookaroundAssertionLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLookaroundAssertionLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPatternEnter(value: /* start */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPatternEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPatternEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPatternEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPatternLeave(value: (/* start */ Double, /* end */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPatternLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPatternLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPatternLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnQuantifier(
-      value: (/* start */ Double, /* end */ Double, /* min */ Double, /* max */ Double, /* greedy */ Boolean) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onQuantifier")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnQuantifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onQuantifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUnicodePropertyCharacterSet(
-      value: (/* start */ Double, /* end */ Double, property, /* key */ String, /* value */ String | Null, /* negate */ Boolean) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnicodePropertyCharacterSet")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUnicodePropertyCharacterSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnicodePropertyCharacterSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnWordBoundaryAssertion(value: (/* start */ Double, /* end */ Double, word, /* negate */ Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWordBoundaryAssertion")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnWordBoundaryAssertion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWordBoundaryAssertion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

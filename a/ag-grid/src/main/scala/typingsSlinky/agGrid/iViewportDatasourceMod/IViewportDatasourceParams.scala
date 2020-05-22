@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IViewportDatasourceParams extends js.Object {
   /** datasource calls this when it wants a row node - typically used when it wants to update the row node */
-  def getRow(rowIndex: Double): RowNode = js.native
+  def getRow(rowIndex: Double): RowNode
   /** datasource calls this method when the total row count changes. This in turn sets the height of the grids vertical scroll. */
-  def setRowCount(count: Double): Unit = js.native
+  def setRowCount(count: Double): Unit
   /** datasource calls this when new data arrives. The grid then updates the provided rows. The rows are mapped [rowIndex]=>rowData].*/
-  def setRowData(rowData: NumberDictionary[js.Any]): Unit = js.native
+  def setRowData(rowData: NumberDictionary[js.Any]): Unit
 }
 
 object IViewportDatasourceParams {
@@ -26,31 +25,5 @@ object IViewportDatasourceParams {
     val __obj = js.Dynamic.literal(getRow = js.Any.fromFunction1(getRow), setRowCount = js.Any.fromFunction1(setRowCount), setRowData = js.Any.fromFunction1(setRowData))
     __obj.asInstanceOf[IViewportDatasourceParams]
   }
-  @scala.inline
-  implicit class IViewportDatasourceParamsOps[Self <: IViewportDatasourceParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetRow(value: Double => RowNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetRowCount(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRowCount")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetRowData(value: NumberDictionary[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRowData")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

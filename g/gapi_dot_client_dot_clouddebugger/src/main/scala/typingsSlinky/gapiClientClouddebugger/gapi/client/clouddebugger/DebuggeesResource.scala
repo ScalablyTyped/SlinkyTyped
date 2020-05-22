@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DebuggeesResource extends js.Object {
-  var breakpoints: BreakpointsResource = js.native
+  var breakpoints: BreakpointsResource
   /** Lists all the debuggees that the user has access to. */
-  def list(request: ClientVersion): Request[ListDebuggeesResponse] = js.native
+  def list(request: ClientVersion): Request[ListDebuggeesResponse]
   /**
     * Registers the debuggee with the controller service.
     *
@@ -24,7 +23,7 @@ trait DebuggeesResource extends js.Object {
     * from data loss, or change the `debuggee_id` format. Agents must handle
     * `debuggee_id` value changing upon re-registration.
     */
-  def register(request: Fields): Request[RegisterDebuggeeResponse] = js.native
+  def register(request: Fields): Request[RegisterDebuggeeResponse]
 }
 
 object DebuggeesResource {
@@ -37,31 +36,5 @@ object DebuggeesResource {
     val __obj = js.Dynamic.literal(breakpoints = breakpoints.asInstanceOf[js.Any], list = js.Any.fromFunction1(list), register = js.Any.fromFunction1(register))
     __obj.asInstanceOf[DebuggeesResource]
   }
-  @scala.inline
-  implicit class DebuggeesResourceOps[Self <: DebuggeesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBreakpoints(value: BreakpointsResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withList(value: ClientVersion => Request[ListDebuggeesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRegister(value: Fields => Request[RegisterDebuggeeResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

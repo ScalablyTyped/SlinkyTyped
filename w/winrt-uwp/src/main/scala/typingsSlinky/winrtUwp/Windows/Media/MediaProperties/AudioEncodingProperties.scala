@@ -5,32 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Describes the format of an audio stream. */
-@js.native
 trait AudioEncodingProperties extends js.Object {
   /** Gets or sets the audio bit rate. */
-  var bitrate: Double = js.native
+  var bitrate: Double
   /** Gets or sets the number of bits per audio sample. */
-  var bitsPerSample: Double = js.native
+  var bitsPerSample: Double
   /** Gets or sets the number of audio channels. */
-  var channelCount: Double = js.native
+  var channelCount: Double
   /** Gets additional format properties for the audio stream. */
-  var properties: MediaPropertySet = js.native
+  var properties: MediaPropertySet
   /** Gets or sets audio sampling rate. */
-  var sampleRate: Double = js.native
+  var sampleRate: Double
   /** Gets or sets the subtype of the format. */
-  var subtype: String = js.native
+  var subtype: String
   /** Gets the format type. */
-  var `type`: String = js.native
+  var `type`: String
   /**
     * Gets the media format user data.
     * @return Receives the media format data.
     */
-  def getFormatUserData(): js.Array[Double] = js.native
+  def getFormatUserData(): js.Array[Double]
   /**
     * Sets the media format user data.
     * @param value The media data to set.
     */
-  def setFormatUserData(value: js.Array[Double]): Unit = js.native
+  def setFormatUserData(value: js.Array[Double]): Unit
 }
 
 object AudioEncodingProperties {
@@ -50,67 +49,5 @@ object AudioEncodingProperties {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioEncodingProperties]
   }
-  @scala.inline
-  implicit class AudioEncodingPropertiesOps[Self <: AudioEncodingProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitrate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBitsPerSample(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitsPerSample")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChannelCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetFormatUserData(value: () => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormatUserData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withProperties(value: MediaPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSampleRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetFormatUserData(value: js.Array[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFormatUserData")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSubtype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 
